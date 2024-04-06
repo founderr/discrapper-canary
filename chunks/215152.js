@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return _
   }
 });
 var a = n("735250");
@@ -17,14 +17,14 @@ var s = n("442837"),
   f = n("981631"),
   E = n("457921");
 
-function h() {
+function _() {
   let {
     guildId: e
-  } = (0, o.default)(), t = (0, s.useStateFromStores)([c.default], () => c.default.getGuild(e)), n = (0, s.useStateFromStores)([d.default], () => d.default.getId()), h = (0, s.useStateFromStores)([i.default], () => i.default.getDownToPlay(n));
+  } = (0, o.default)(), t = (0, s.useStateFromStores)([c.default], () => c.default.getGuild(e)), n = (0, s.useStateFromStores)([d.default], () => d.default.getId()), _ = (0, s.useStateFromStores)([i.default], () => i.default.getDownToPlay(n));
   return (null == t ? void 0 : t.hasFeature(f.GuildFeatures.CLAN)) ? (0, a.jsx)("div", {
     className: E.container,
     children: (0, a.jsx)(l.FormSwitch, {
-      value: null != h,
+      value: null != _,
       hideBorder: !0,
       className: E.formSwitch,
       onChange: e => {

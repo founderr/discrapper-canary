@@ -23,13 +23,13 @@ var a = s("735250"),
 function g() {}
 let h = [f.AutocompleterResultTypes.VOICE_CHANNEL];
 
-function I(e) {
+function N(e) {
   e.setOptions({
     voiceChannelGuildFilter: null
   }), e.setLimit(1 / 0)
 }
 
-function N(e) {
+function I(e) {
   let {
     height: t
   } = e;
@@ -41,13 +41,13 @@ function N(e) {
 }
 
 function p() {
-  return (0, a.jsx)(N, {
+  return (0, a.jsx)(I, {
     height: 16
   }, "footer")
 }
 
 function C() {
-  return (0, a.jsx)(N, {
+  return (0, a.jsx)(I, {
     height: 8
   }, "header")
 }
@@ -111,7 +111,7 @@ function x(e) {
     onClose: s,
     onSelect: r
   } = e, E = n.useId(), g = n.useRef(null), {
-    mouseFocusEnabled: N,
+    mouseFocusEnabled: I,
     enableMouseFocus: O,
     disableMouseFocus: x
   } = function() {
@@ -134,7 +134,7 @@ function x(e) {
   } = (0, o.default)({
     visible: !0,
     autocompleterResultTypes: h,
-    autocompleterBeforeCreateSearchContext: I
+    autocompleterBeforeCreateSearchContext: N
   }), D = function(e) {
     let t = "" !== e,
       s = (0, l.useStateFromStoresArray)([u.default, d.default, S.default], () => {
@@ -241,7 +241,7 @@ function x(e) {
             channel: n,
             category: l,
             focused: L === t,
-            onMouseEnter: () => N.current && P(t),
+            onMouseEnter: () => I.current && P(t),
             onClick: () => {
               r(n.id), s()
             },

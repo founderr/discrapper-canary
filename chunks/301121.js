@@ -21,8 +21,8 @@ var a = s("735250"),
   _ = s("230711"),
   g = s("651530"),
   h = s("163268"),
-  I = s("294602"),
-  N = s("688465"),
+  N = s("294602"),
+  I = s("688465"),
   p = s("610697"),
   C = s("880257"),
   A = s("236289"),
@@ -42,12 +42,12 @@ var a = s("735250"),
   F = s("709054"),
   G = s("88658"),
   k = s("695346"),
-  w = s("3957"),
-  H = s("279743"),
+  H = s("3957"),
+  w = s("279743"),
   V = s("973005"),
   Y = s("526761"),
-  K = s("981631"),
-  W = s("800530"),
+  W = s("981631"),
+  K = s("800530"),
   z = s("689938"),
   Q = s("274430"),
   Z = s("794711");
@@ -68,7 +68,7 @@ function X() {
       location: "user_settings_web"
     }),
     n = (0, R.useSafetyAlertsSettingOrDefault)(),
-    l = (0, w.useScrollToSetting)(Y.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS);
+    l = (0, H.useScrollToSetting)(Y.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS);
   return t || !s ? null : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(E.FormDivider, {
       className: Z.marginBottom20
@@ -84,12 +84,12 @@ function X() {
         }), (0, a.jsx)(E.FormSwitch, {
           value: n,
           note: z.default.Messages.SAFETY_ALERTS_SETTING_DESCRIPTION.format({
-            learnMoreLink: y.default.getArticleURL(K.HelpdeskArticles.SAFETY_ALERTS)
+            learnMoreLink: y.default.getArticleURL(W.HelpdeskArticles.SAFETY_ALERTS)
           }),
           onChange: M.updateDmSafetyAlertsSetting,
           hideBorder: !0,
           children: z.default.Messages.SAFETY_ALERTS_SETTING_TITLE
-        }), (0, a.jsx)(H.default, {
+        }), (0, a.jsx)(w.default, {
           animationDelay: 1e3,
           scrollPosition: Y.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS
         })]
@@ -101,7 +101,7 @@ function X() {
 }
 
 function J(e, t) {
-  U.default.track(K.AnalyticEvents.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
+  U.default.track(W.AnalyticEvents.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
     default_guilds_restricted: e,
     applied_to_existing_guilds: t
   })
@@ -111,7 +111,7 @@ function $() {
   let e = (0, p.default)(),
     t = k.DefaultGuildsRestricted.useSetting(),
     s = k.MessageRequestRestrictedDefault.useSetting(),
-    n = (0, w.useScrollToSetting)(Y.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS);
+    n = (0, H.useScrollToSetting)(Y.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS);
   return e ? null : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: Q.settingsBackgroundFlashElement,
@@ -120,7 +120,7 @@ function $() {
         children: (0, a.jsx)(E.FormSwitch, {
           value: !s,
           note: z.default.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_CAPTION.format({
-            helpdeskArticle: y.default.getArticleURL(K.HelpdeskArticles.MESSAGE_REQUESTS)
+            helpdeskArticle: y.default.getArticleURL(W.HelpdeskArticles.MESSAGE_REQUESTS)
           }),
           disabled: t,
           onChange: () => {
@@ -142,7 +142,7 @@ function $() {
           hideBorder: !0,
           children: z.default.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_HEADER
         })
-      }), (0, a.jsx)(H.default, {
+      }), (0, a.jsx)(w.default, {
         animationDelay: 700,
         scrollPosition: Y.PrivacyAndSafetyScrollPositions.MESSAGE_REQUESTS
       })]
@@ -159,8 +159,8 @@ function ee() {
       explicitContentGuilds: s,
       explicitContentFriendDm: n,
       explicitContentNonFriendDm: l
-    } = (0, I.useExplicitContentSettingOrDefault)(),
-    r = (0, w.useScrollToSetting)(Y.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS),
+    } = (0, N.useExplicitContentSettingOrDefault)(),
+    r = (0, H.useScrollToSetting)(Y.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS),
     o = [{
       value: S.ExplicitContentRedaction.BLUR,
       label: z.default.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLUR
@@ -185,7 +185,7 @@ function ee() {
         className: Z.marginBottom8,
         children: (0, a.jsxs)("div", {
           className: i()(Q.betaTagContainer),
-          children: [z.default.Messages.OBSCURED_CONTENT_SETTINGS_HEADER, (0, a.jsx)(N.default, {
+          children: [z.default.Messages.OBSCURED_CONTENT_SETTINGS_HEADER, (0, a.jsx)(I.default, {
             className: Q.betaTagIcon
           })]
         })
@@ -193,7 +193,7 @@ function ee() {
         type: E.FormTextTypes.DESCRIPTION,
         className: Z.marginBottom8,
         children: z.default.Messages.OBSCURED_CONTENT_SETTINGS_DESC.format({
-          learnMoreLink: y.default.getArticleURL(K.HelpdeskArticles.EXPLICIT_MEDIA_REDACTION)
+          learnMoreLink: y.default.getArticleURL(W.HelpdeskArticles.EXPLICIT_MEDIA_REDACTION)
         })
       }), (0, a.jsx)(E.FormItem, {
         ref: r,
@@ -229,7 +229,7 @@ function ee() {
             explicitContentGuilds: e
           })
         })
-      }), (0, a.jsx)(H.default, {
+      }), (0, a.jsx)(w.default, {
         scrollPosition: Y.PrivacyAndSafetyScrollPositions.EXPLICIT_MEDIA_REDACTION
       })]
     }), (0, a.jsx)(E.FormDivider, {
@@ -298,7 +298,7 @@ class ea extends n.PureComponent {
     })
   }
   trackDefaultDmsUpdated(e, t) {
-    U.default.track(K.AnalyticEvents.GUILD_DEFAULT_DMS_UPDATED, {
+    U.default.track(W.AnalyticEvents.GUILD_DEFAULT_DMS_UPDATED, {
       default_guilds_restricted: e,
       applied_to_existing_guilds: t
     })
@@ -319,7 +319,7 @@ class ea extends n.PureComponent {
     })
   }
   trackDefaultMessageRequestUpdated(e, t) {
-    U.default.track(K.AnalyticEvents.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
+    U.default.track(W.AnalyticEvents.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
       default_guilds_restricted: e,
       applied_to_existing_guilds: t
     })
@@ -334,7 +334,7 @@ class ea extends n.PureComponent {
           type: E.FormTextTypes.DESCRIPTION,
           className: Z.marginBottom8,
           children: z.default.Messages.USER_EXPLICIT_CONTENT_FILTER_HELP_V3.format({
-            appealLink: y.default.getArticleURL(K.HelpdeskArticles.SAFE_DIRECT_MESSAGING)
+            appealLink: y.default.getArticleURL(W.HelpdeskArticles.SAFE_DIRECT_MESSAGING)
           })
         }), (0, a.jsx)(E.RadioGroup, {
           value: this.props.explicitContentFilter,
@@ -366,7 +366,7 @@ class ea extends n.PureComponent {
             type: E.FormTextTypes.DESCRIPTION,
             className: Z.marginBottom8,
             children: z.default.Messages.USER_DM_SPAM_FILTER_HELP.format({
-              appealLink: y.default.getArticleURL(K.HelpdeskArticles.SAFE_DIRECT_MESSAGING)
+              appealLink: y.default.getArticleURL(W.HelpdeskArticles.SAFE_DIRECT_MESSAGING)
             })
           }), (0, a.jsx)(E.RadioGroup, {
             value: t,
@@ -393,7 +393,7 @@ class ea extends n.PureComponent {
             type: E.FormTextTypes.DESCRIPTION,
             className: Z.marginBottom8,
             children: z.default.Messages.USER_DM_SPAM_FILTER_HELP.format({
-              appealLink: y.default.getArticleURL(K.HelpdeskArticles.SAFE_DIRECT_MESSAGING)
+              appealLink: y.default.getArticleURL(W.HelpdeskArticles.SAFE_DIRECT_MESSAGING)
             })
           }), (0, a.jsx)(E.RadioGroup, {
             value: t,
@@ -458,14 +458,14 @@ class ea extends n.PureComponent {
       }), (0, a.jsx)(E.FormSwitch, {
         value: e,
         note: z.default.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE.format({
-          helpdeskArticle: y.default.getArticleURL(K.HelpdeskArticles.DATA_USED_TO_IMPROVE_DISCORD)
+          helpdeskArticle: y.default.getArticleURL(W.HelpdeskArticles.DATA_USED_TO_IMPROVE_DISCORD)
         }),
         onChange: this.handleUsageStatisticsChange,
         children: z.default.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE
       }), (0, a.jsx)(E.FormSwitch, {
         value: t,
         note: z.default.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE.format({
-          helpdeskArticle: y.default.getArticleURL(K.HelpdeskArticles.DATA_USED_FOR_RECOMMENDED)
+          helpdeskArticle: y.default.getArticleURL(W.HelpdeskArticles.DATA_USED_FOR_RECOMMENDED)
         }),
         hideBorder: !0,
         onChange: this.handlePersonalizationChange,
@@ -473,7 +473,7 @@ class ea extends n.PureComponent {
       }), (0, a.jsx)(E.FormSwitch, {
         value: !s,
         note: z.default.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED.format({
-          helpdeskArticle: y.default.getArticleURL(K.HelpdeskArticles.DATA_PRIVACY_CONTROLS)
+          helpdeskArticle: y.default.getArticleURL(W.HelpdeskArticles.DATA_PRIVACY_CONTROLS)
         }),
         onChange: this.handleChangeDropsOptedOut,
         children: (0, a.jsx)("div", {
@@ -488,7 +488,7 @@ class ea extends n.PureComponent {
         className: Z.marginBottom20,
         children: z.default.Messages.DATA_PRIVACY_CONTROLS_BASIC_SERVICE_NOTE.format({
           onClick: () => {
-            _.default.setSection(K.UserSettingsSections.ACCOUNT)
+            _.default.setSection(W.UserSettingsSections.ACCOUNT)
           }
         })
       }), this.renderHarvestRequest()]
@@ -525,7 +525,7 @@ class ea extends n.PureComponent {
       children: (0, a.jsx)(E.Text, {
         variant: "text-md/normal",
         children: z.default.Messages.DATA_DOWNLOAD_REQUESTED_STATUS_NOTE.format({
-          date: u()(l.created_at).add(K.REQUEST_DATA_LIMIT_DAYS, "days").format("MMMM Do YYYY")
+          date: u()(l.created_at).add(W.REQUEST_DATA_LIMIT_DAYS, "days").format("MMMM Do YYYY")
         })
       })
     }), r = null), null != r && (r = (0, a.jsx)(j.default, {
@@ -540,7 +540,7 @@ class ea extends n.PureComponent {
         type: E.FormTextTypes.DESCRIPTION,
         className: Z.marginBottom20,
         children: z.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_NOTE.format({
-          helpdeskArticle: y.default.getArticleURL(K.HelpdeskArticles.GDPR_REQUEST_DATA)
+          helpdeskArticle: y.default.getArticleURL(W.HelpdeskArticles.GDPR_REQUEST_DATA)
         })
       }), e, r]
     })
@@ -551,8 +551,8 @@ class ea extends n.PureComponent {
       children: (0, a.jsx)(E.FormNotice, {
         type: E.FormNotice.Types.PRIMARY,
         body: z.default.Messages.USER_SETTINGS_PRIVACY_TERMS.format({
-          termsLink: K.MarketingURLs.TERMS,
-          privacyLink: K.MarketingURLs.PRIVACY
+          termsLink: W.MarketingURLs.TERMS,
+          privacyLink: W.MarketingURLs.PRIVACY
         })
       })
     })
@@ -612,7 +612,7 @@ class ea extends n.PureComponent {
     null != t && this.setState({
       selectedTab: t
     });
-    let n = s === W.SafetyHubView.ACCOUNT_STANDING && null != e;
+    let n = s === K.SafetyHubView.ACCOUNT_STANDING && null != e;
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)(E.TabBar, {
         className: Q.settingsTabBar,
@@ -623,12 +623,12 @@ class ea extends n.PureComponent {
         onItemSelect: this.handleTabSelect,
         children: [(0, a.jsx)(E.TabBar.Item, {
           className: Q.settingsTabBarItem,
-          id: W.SafetyHubView.SETTINGS,
+          id: K.SafetyHubView.SETTINGS,
           "aria-label": z.default.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SETTINGS,
           children: z.default.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SETTINGS
         }), (0, a.jsx)(E.TabBar.Item, {
           className: Q.settingsTabBarItem,
-          id: W.SafetyHubView.ACCOUNT_STANDING,
+          id: K.SafetyHubView.ACCOUNT_STANDING,
           "aria-label": z.default.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT_V2,
           children: z.default.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT_V2
         })]
@@ -646,8 +646,8 @@ class ea extends n.PureComponent {
   }
   constructor(e) {
     super(e), q(this, "SETTINGS_TABS", {
-      [W.SafetyHubView.SETTINGS]: () => this.renderSettingsBody(),
-      [W.SafetyHubView.ACCOUNT_STANDING]: () => (0, a.jsx)(O.default, {})
+      [K.SafetyHubView.SETTINGS]: () => this.renderSettingsBody(),
+      [K.SafetyHubView.ACCOUNT_STANDING]: () => (0, a.jsx)(O.default, {})
     }), q(this, "handleChangeDefaultGuildsRestricted", e => {
       this.setState({
         defaultGuildsRestricted: !e
@@ -660,18 +660,18 @@ class ea extends n.PureComponent {
         body: z.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_BODY,
         confirmText: z.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_CONFIRM,
         cancelText: z.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_CANCEL,
-        onConfirm: () => (0, f.setConsents)([], [K.Consents.USAGE_STATISTICS]).catch(es)
-      }) : (0, f.setConsents)([K.Consents.USAGE_STATISTICS], []).catch(es)
+        onConfirm: () => (0, f.setConsents)([], [W.Consents.USAGE_STATISTICS]).catch(es)
+      }) : (0, f.setConsents)([W.Consents.USAGE_STATISTICS], []).catch(es)
     }), q(this, "handlePersonalizationChange", () => {
       this.props.personalization ? et({
         header: z.default.Messages.PERSONALIZATION_DISABLE_MODAL_TITLE,
         confirmText: z.default.Messages.PERSONALIZATION_DISABLE_MODAL_CONFIRM,
         cancelText: z.default.Messages.PERSONALIZATION_DISABLE_MODAL_CANCEL,
         onConfirm: () => {
-          (0, f.setConsents)([], [K.Consents.PERSONALIZATION]).catch(es)
+          (0, f.setConsents)([], [W.Consents.PERSONALIZATION]).catch(es)
         },
         body: z.default.Messages.PERSONALIZATION_DISABLE_MODAL_BODY
-      }) : (0, f.setConsents)([K.Consents.PERSONALIZATION], []).catch(es)
+      }) : (0, f.setConsents)([W.Consents.PERSONALIZATION], []).catch(es)
     }), q(this, "handleDataDownloadRequest", () => {
       et({
         header: z.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_TITLE,
@@ -712,7 +712,7 @@ class ea extends n.PureComponent {
       defaultGuildsRestricted: t,
       currentHarvestRequest: null,
       requestingHarvest: !0,
-      selectedTab: W.SafetyHubView.SETTINGS
+      selectedTab: K.SafetyHubView.SETTINGS
     }
   }
 }
@@ -724,8 +724,8 @@ function en() {
     }),
     t = (0, c.useStateFromStoresObject)([v.default], () => ({
       fetchedConsents: v.default.fetchedConsents,
-      usageStatistics: v.default.hasConsented(K.Consents.USAGE_STATISTICS),
-      personalization: v.default.hasConsented(K.Consents.PERSONALIZATION)
+      usageStatistics: v.default.hasConsented(W.Consents.USAGE_STATISTICS),
+      personalization: v.default.hasConsented(W.Consents.PERSONALIZATION)
     })),
     s = (0, c.useStateFromStores)([A.default], () => A.default.getFetchError()),
     n = (0, c.useStateFromStores)([L.default], () => L.default.getSubsection()),

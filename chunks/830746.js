@@ -12,33 +12,33 @@ var s = n("399606"),
   c = n("780985"),
   f = n("631885"),
   E = n("552045"),
-  h = n("87792"),
-  _ = n("302289"),
+  _ = n("87792"),
+  h = n("302289"),
   C = n("946690"),
   m = n("456771"),
   S = n("292352"),
   I = n("689938"),
-  p = n("166267");
+  T = n("166267");
 t.default = () => {
   let e = (0, f.useUserForLinkStatus)(S.UserLinkStatus.ACTIVE),
     t = (0, c.useSelectedTeenUser)(),
     n = (0, s.useStateFromStores)([r.default], () => r.default.getCurrentUser()),
-    T = (0, d.useAgeSpecificText)(I.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_TEEN, I.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_PARENT),
+    p = (0, d.useAgeSpecificText)(I.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_TEEN, I.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_PARENT),
     g = (0, d.useAgeSpecificText)(I.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_TEEN, I.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_PARENT),
     A = (0, d.useAgeSpecificText)(I.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_TEEN, I.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_PARENT),
     N = (0, i.useRedesignIconContext)().enabled;
   return void 0 === n ? null : (0, a.jsxs)("div", {
-    className: p.container,
+    className: T.container,
     children: [(0, a.jsx)("div", {
-      className: p.banner,
+      className: T.banner,
       children: (0, a.jsx)(E.default, {})
     }), (0, a.jsxs)("div", {
-      className: p.featureCards,
+      className: T.featureCards,
       children: [(0, a.jsx)(C.default, {
-        iconClassName: p.chatCheckIcon,
+        iconClassName: T.chatCheckIcon,
         icon: o.default,
         header: I.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_HEADER,
-        description: T
+        description: p
       }), (0, a.jsx)(C.default, {
         icon: u.default,
         header: I.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_HEADER,
@@ -48,7 +48,7 @@ t.default = () => {
         header: I.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_HEADER,
         description: A
       })]
-    }), 0 === e.length ? (0, a.jsx)(_.default, {}) : null, void 0 !== t && e.length > 0 ? (0, a.jsx)(h.default, {
+    }), 0 === e.length ? (0, a.jsx)(h.default, {}) : null, void 0 !== t && e.length > 0 ? (0, a.jsx)(_.default, {
       user: t
     }) : null]
   })

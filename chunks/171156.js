@@ -13,8 +13,8 @@ var a, n, l, i, r = s("442837"),
   _ = s("42955"),
   g = s("399002"),
   h = s("369541"),
-  I = s("981631"),
-  N = s("65154");
+  N = s("981631"),
+  I = s("65154");
 new u.default("RTCSpeedTestStore");
 let p = [{
     clusterSize: 40,
@@ -74,7 +74,7 @@ let p = [{
   };
 
 function O(e, t, s) {
-  e === I.RTCConnectionStates.RTC_CONNECTED ? A.connected = !0 : (e === I.RTCConnectionStates.DISCONNECTED || e === I.RTCConnectionStates.RTC_DISCONNECTED) && (A.lifecycle === h.SpeedTestLifecycles.TESTING && (A.failed = !0, b(), U()), A.connected = !1)
+  e === N.RTCConnectionStates.RTC_CONNECTED ? A.connected = !0 : (e === N.RTCConnectionStates.DISCONNECTED || e === N.RTCConnectionStates.RTC_DISCONNECTED) && (A.lifecycle === h.SpeedTestLifecycles.TESTING && (A.failed = !0, b(), U()), A.connected = !1)
 }
 
 function x() {
@@ -163,14 +163,14 @@ async function U() {
     t.params = p[e], s.params = p[e], e < A.results.length && (t.results = A.results[e].summary, s.results = A.results[e].payload), n.tests.push(t), l.tests.push(s)
   }
   await Promise.all([o.HTTP.post({
-    url: I.Endpoints.DEBUG_LOG(I.DebugLogCategory.SPEED_TEST, "speed_test_summary_".concat(s, ".json")),
+    url: N.Endpoints.DEBUG_LOG(N.DebugLogCategory.SPEED_TEST, "speed_test_summary_".concat(s, ".json")),
     body: JSON.stringify(n, void 0, 2),
     retries: 3,
     headers: {
       "Content-Type": "text/plain"
     }
   }), o.HTTP.post({
-    url: I.Endpoints.DEBUG_LOG(I.DebugLogCategory.SPEED_TEST, "speed_test_results_".concat(s, ".json")),
+    url: N.Endpoints.DEBUG_LOG(N.DebugLogCategory.SPEED_TEST, "speed_test_results_".concat(s, ".json")),
     body: JSON.stringify(l, void 0, 2),
     retries: 3,
     headers: {
@@ -220,7 +220,7 @@ class y extends(a = r.default.Store) {
     A.notes = e
   }
   isSupported() {
-    return S.default.supports(N.Features.SPEED_TEST)
+    return S.default.supports(I.Features.SPEED_TEST)
   }
 }
 i = "RTCSpeedTestStore", (l = "displayName") in(n = y) ? Object.defineProperty(n, l, {

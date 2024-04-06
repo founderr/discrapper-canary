@@ -23,10 +23,10 @@ t.default = e => {
     } = e,
     m = (0, c.useIsInPremiumOfferExperience)();
   if (null == i) return null;
-  let A = null != i ? d.default.getPremiumPlanItem(i) : null;
-  if (d.default.isBoostOnlySubscription(i) ? t = T.default.Messages.PREMIUM_GUILD_SUBSCRIPTION : null != A && (t = d.default.getDisplayPremiumType(A.planId)), null == t) return null;
-  let N = () => l.default.open(E.UserSettingsSections.SUBSCRIPTIONS),
-    p = (null != A ? d.default.getSkuIdForPlan(A.planId) : null) === _.PremiumSubscriptionSKUs.TIER_1;
+  let N = null != i ? d.default.getPremiumPlanItem(i) : null;
+  if (d.default.isBoostOnlySubscription(i) ? t = T.default.Messages.PREMIUM_GUILD_SUBSCRIPTION : null != N && (t = d.default.getDisplayPremiumType(N.planId)), null == t) return null;
+  let A = () => l.default.open(E.UserSettingsSections.SUBSCRIPTIONS),
+    p = (null != N ? d.default.getSkuIdForPlan(N.planId) : null) === _.PremiumSubscriptionSKUs.TIER_1;
   return s = null != S ? S : m || R ? "always-white" : "text-normal", (0, a.jsxs)(n.Card, {
     className: r()(I.container, f, {
       [I.lightTextLink]: R,
@@ -42,10 +42,10 @@ t.default = e => {
       color: s,
       children: p ? T.default.Messages.PREMIUM_SUBSCRIPTION_TIER_1_DEPRECATION.format({
         helpdeskArticle: u.default.getArticleURL(E.HelpdeskArticles.PREMIUM_DETAILS),
-        onSubscriptionsClick: N
+        onSubscriptionsClick: A
       }) : T.default.Messages.PREMIUM_SUBSCRIPTION_MANAGE_YOURS_LINK.format({
         subscriptionName: t,
-        onSubscriptionsClick: N
+        onSubscriptionsClick: A
       })
     })]
   })

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return W
   },
   LinkButton: function() {
-    return z
+    return Z
   }
 }), n("47120");
 var l = n("735250"),
@@ -23,8 +23,8 @@ var l = n("735250"),
   m = n("420660"),
   g = n("201895"),
   E = n("43267"),
-  S = n("933557"),
-  _ = n("853856"),
+  _ = n("933557"),
+  S = n("853856"),
   I = n("93687"),
   N = n("276423"),
   T = n("878857"),
@@ -33,8 +33,8 @@ var l = n("735250"),
   v = n("158776"),
   x = n("306680"),
   R = n("111583"),
-  y = n("9156"),
-  M = n("594174"),
+  M = n("9156"),
+  y = n("594174"),
   O = n("467679"),
   D = n("514342"),
   b = n("28718"),
@@ -71,10 +71,10 @@ let Y = w.default.getEnableHardwareAcceleration() ? h.AnimatedAvatar : h.Avatar,
       className: k.closeIcon
     })
   }),
-  Z = () => (0, l.jsx)(U.default, {
+  z = () => (0, l.jsx)(U.default, {
     className: k.favoriteIcon
   });
-class z extends a.Component {
+class Z extends a.Component {
   render() {
     let {
       route: e,
@@ -142,10 +142,10 @@ function X(e) {
     applicationStream: L,
     isTyping: v,
     status: R,
-    isMobile: M,
+    isMobile: y,
     "aria-posinset": G,
     "aria-setsize": U
-  } = e, [P, w] = a.useState(!1), z = a.useRef(null), X = a.useRef(null), {
+  } = e, [P, w] = a.useState(!1), Z = a.useRef(null), X = a.useRef(null), {
     avatarSrc: Q,
     avatarDecorationSrc: q,
     eventHandlers: J
@@ -153,7 +153,7 @@ function X(e) {
     user: c,
     size: h.AvatarSizes.SIZE_32,
     animateOnHover: !(r || P)
-  }), $ = (0, f.useStateFromStores)([y.default], () => y.default.isChannelMuted(t.getGuildId(), t.id)), ee = (0, f.useStateFromStores)([x.default], () => x.default.getMentionCount(t.id) > 0), et = (0, S.default)(t), en = (0, f.useStateFromStores)([_.default], () => _.default.isFavorite(t.id)), el = () => {
+  }), $ = (0, f.useStateFromStores)([M.default], () => M.default.isChannelMuted(t.getGuildId(), t.id)), ee = (0, f.useStateFromStores)([x.default], () => x.default.getMentionCount(t.id) > 0), et = (0, _.default)(t), en = (0, f.useStateFromStores)([S.default], () => S.default.isFavorite(t.id)), el = () => {
     w(!0)
   }, ea = () => {
     w(!1)
@@ -167,7 +167,7 @@ function X(e) {
   }, eo = e => {
     if (e.target === e.currentTarget) {
       var t;
-      null === (t = z.current) || void 0 === t || t.click()
+      null === (t = Z.current) || void 0 === t || t.click()
     }
   }, eu = e => {
     t.isMultiUserDM() ? (0, C.openContextMenuLazy)(e, async () => {
@@ -256,7 +256,7 @@ function X(e) {
       src: Q,
       avatarDecoration: q,
       status: e,
-      isMobile: M,
+      isMobile: y,
       isTyping: v,
       className: k.__invalid_avatar,
       "aria-label": c.username,
@@ -275,7 +275,7 @@ function X(e) {
         role: n,
         focusProps: {
           ...K,
-          focusTarget: z,
+          focusTarget: Z,
           ringTarget: X
         },
         ref: X,
@@ -295,7 +295,7 @@ function X(e) {
           muted: $,
           selected: r,
           children: [(0, l.jsx)(u.Link, {
-            innerRef: z,
+            innerRef: Z,
             to: V.Routes.CHANNEL(V.ME, t.id),
             className: k.link,
             "aria-label": (0, g.default)({
@@ -318,7 +318,7 @@ function X(e) {
                 verified: !0
               }) : null
             })
-          }), en ? (0, l.jsx)(Z, {}) : null, !ep && (0, l.jsx)(W, {
+          }), en ? (0, l.jsx)(z, {}) : null, !ep && (0, l.jsx)(W, {
             "aria-label": eh ? H.default.Messages.LEAVE_GROUP_DM : H.default.Messages.CLOSE_DM,
             onClick: eh ? ed : es,
             onMouseDown: er
@@ -333,7 +333,7 @@ t.default = e => {
     channel: t,
     selected: n,
     ...a
-  } = e, s = (0, f.useStateFromStores)([M.default], () => M.default.getUser(t.getRecipientId())), {
+  } = e, s = (0, f.useStateFromStores)([y.default], () => y.default.getUser(t.getRecipientId())), {
     isStatusIndicatorEnabled: i,
     isTypingIndicatorEnabled: r,
     isFacepileEnabled: o
@@ -355,10 +355,10 @@ t.default = e => {
       applicationStream: null != u ? L.default.getAnyStreamForUser(u) : null,
       isMobile: null != u && v.default.isMobileOnline(u)
     }
-  }, [u, t, i]), c = (0, f.useStateFromStores)([M.default, R.default], () => {
+  }, [u, t, i]), c = (0, f.useStateFromStores)([y.default, R.default], () => {
     if (t.isMultiUserDM()) return !!r && P.default.keys(R.default.getTypingUsers(t.id)).some(e => {
       var t;
-      return e !== (null === (t = M.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
+      return e !== (null === (t = y.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
     });
     if (null != s) return R.default.isTyping(t.id, t.getRecipientId());
     return !1

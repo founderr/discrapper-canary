@@ -11,24 +11,24 @@ var a = n("570140"),
   c = n("351780"),
   f = n("843693"),
   E = n("981631");
-let h = (0, d.createSoundForPack)("poggermode_applause", l.default.getSoundpack()),
-  _ = !1,
+let _ = (0, d.createSoundForPack)("poggermode_applause", l.default.getSoundpack()),
+  h = !1,
   C = !1,
   m = [],
   S = null,
   I = () => {
-    !_ && (h.loop(), _ = !0)
-  },
-  p = () => {
-    h.stop(), _ = !1
+    !h && (_.loop(), h = !0)
   },
   T = () => {
+    _.stop(), h = !1
+  },
+  p = () => {
     let e = c.default.isEnabled(),
       t = c.default.comboSoundsEnabled;
     return !!e && !!t && null != o.default.getChannelId() || !1
   },
   g = () => {
-    if (0 === m.length || !T() || C) return;
+    if (0 === m.length || !p() || C) return;
     C = !0;
     let [e, t] = m[m.length - 1];
     (0, d.playSound)(e, t), S = setTimeout(A, 1e3)
@@ -52,30 +52,30 @@ class v extends s.default {
     let {
       state: t
     } = e;
-    t === E.RTCConnectionStates.RTC_CONNECTED ? h.volume = .1 : h.volume = 1
+    t === E.RTCConnectionStates.RTC_CONNECTED ? _.volume = .1 : _.volume = 1
   }
   handleTypingStop(e) {
     let {
       userId: t
     } = e;
-    i.default.getId() === t && p()
+    i.default.getId() === t && T()
   }
   stopAudio() {
-    p()
+    T()
   }
   startAudio() {
     var e;
-    if (!T()) return;
+    if (!p()) return;
     let t = o.default.getChannelId();
     if (null == t) return;
     let n = i.default.getId(),
       a = u.default.isTyping(t, n),
       s = f.default.getUserCombo(n, t),
       l = null !== (e = null == s ? void 0 : s.multiplier) && void 0 !== e ? e : 1;
-    a && l >= 7 ? I() : p()
+    a && l >= 7 ? I() : T()
   }
   playAchievementUnlockSound() {
-    T() && N("poggermode_achievement_unlock")
+    p() && N("poggermode_achievement_unlock")
   }
 }
 t.default = new v

@@ -15,14 +15,14 @@ var a = n("735250"),
   c = n("239091"),
   f = n("100527"),
   E = n("906732"),
-  h = n("706140"),
-  _ = n("294629"),
+  _ = n("706140"),
+  h = n("294629"),
   C = n("131951"),
   m = n("459273"),
   S = n("242291"),
   I = n("792165"),
-  p = n("603074"),
-  T = n("981631"),
+  T = n("603074"),
+  p = n("981631"),
   g = n("921944"),
   A = n("689938"),
   N = n("815668");
@@ -36,10 +36,10 @@ function v(e) {
     ...O
   } = e, {
     mute: L,
-    suppress: P
-  } = (0, _.default)(t), M = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), y = L || P || M, [D, x] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
+    suppress: M
+  } = (0, h.default)(t), P = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), y = L || M || P, [D, x] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
     isSoundboardButtonDisabled: y
-  }), [j, G] = (0, h.useGetDismissibleContent)(U), {
+  }), [j, G] = (0, _.useGetDismissibleContent)(U), {
     analyticsLocations: w
   } = (0, E.default)(f.default.SOUNDBOARD_BUTTON);
 
@@ -69,7 +69,7 @@ function v(e) {
       let {
         closePopout: n
       } = e;
-      return (0, a.jsx)(p.default, {
+      return (0, a.jsx)(T.default, {
         guildId: b,
         channel: t,
         onClose: n,
@@ -118,15 +118,15 @@ function v(e) {
     !y && x(!D)
   }, [y, D]);
   return (0, m.useComponentAction)({
-    event: T.ComponentActions.TOGGLE_SOUNDBOARD,
+    event: p.ComponentActions.TOGGLE_SOUNDBOARD,
     handler: W
   }), (0, a.jsx)(E.AnalyticsLocationProvider, {
     value: w,
     children: (0, a.jsx)(d.Tooltip, {
       text: function() {
         if (L) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
-        if (P) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
-        if (M) return A.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
+        if (M) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
+        if (P) return A.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
         return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD
       }(),
       children: e => Y(e)

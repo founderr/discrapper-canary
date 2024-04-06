@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   NonChannelCategory: function() {
-    return M
+    return y
   },
   ReadonlyCategoryChannel: function() {
     return b
@@ -29,8 +29,8 @@ var l = n("735250"),
   m = n("9156"),
   g = n("514342"),
   E = n("696202"),
-  S = n("605403"),
-  _ = n("908773"),
+  _ = n("605403"),
+  S = n("908773"),
   I = n("632184"),
   N = n("151827"),
   T = n("203818"),
@@ -42,7 +42,7 @@ var l = n("735250"),
 function R(e) {
   e.stopPropagation()
 }
-let y = a.memo(function(e) {
+let M = a.memo(function(e) {
   let t, {
       channel: s,
       connectChannelDragSource: f,
@@ -50,8 +50,8 @@ let y = a.memo(function(e) {
       disableManageChannels: I,
       position: T,
       sortingPosition: A,
-      hideIcon: y,
-      children: M
+      hideIcon: M,
+      children: y
     } = e,
     O = (0, o.useStateFromStores)([m.default], () => m.default.isChannelMuted(s.getGuildId(), s.id)),
     D = (0, o.useStateFromStores)([h.default], () => h.default.isCollapsed(s.id)),
@@ -128,7 +128,7 @@ let y = a.memo(function(e) {
             focusProps: {
               enabled: !1
             },
-            children: [y ? null : (0, l.jsx)(S.default, {
+            children: [M ? null : (0, l.jsx)(_.default, {
               className: x.icon
             }), (0, l.jsx)(N.default, {
               className: x.name,
@@ -163,7 +163,7 @@ let y = a.memo(function(e) {
                       left: -4
                     }
                   },
-                  children: (0, l.jsx)(_.default, {
+                  children: (0, l.jsx)(S.default, {
                     width: 18,
                     height: 18,
                     className: x.addButtonIcon
@@ -173,12 +173,12 @@ let y = a.memo(function(e) {
             }) : null
           })]
         })
-      }), M]
+      }), y]
     });
   return null != E && null != f ? E(f(H)) : H
 });
-t.default = (0, f.makeChannelSortable)(y);
-let M = a.memo(function(e) {
+t.default = (0, f.makeChannelSortable)(M);
+let y = a.memo(function(e) {
     let {
       name: t,
       onDismiss: n,

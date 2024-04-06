@@ -4,20 +4,20 @@ n.r(t), n.d(t, {
     return a
   },
   setNewUserFlowCompleted: function() {
-    return u
+    return i
   }
 });
-var l = n("570140");
+var s = n("570140");
 
 function a(e) {
-  l.default.wait(() => l.default.dispatch({
+  s.default.wait(() => s.default.dispatch({
     type: "NUF_NEW_USER",
     newUserType: e
   }))
 }
 
-function u() {
-  l.default.wait(() => l.default.dispatch({
+function i() {
+  s.default.wait(() => s.default.dispatch({
     type: "NUF_COMPLETE"
   }))
 }

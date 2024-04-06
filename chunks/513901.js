@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return N
   }
 });
 var a = s("735250"),
@@ -22,13 +22,13 @@ var a = s("735250"),
   g = s("689938"),
   h = s("600469");
 
-function I(e) {
+function N(e) {
   let {
     user: t,
     guild: s,
     className: l,
-    sectionTitle: I,
-    forcedDivider: N = !1,
+    sectionTitle: N,
+    forcedDivider: I = !1,
     withTutorial: p = !1,
     showBorder: C = !1,
     isTryItOutFlow: A = !1,
@@ -53,10 +53,10 @@ function I(e) {
     j = A || void 0 !== v ? null != v : null != x,
     b = p ? u.default : r.Button;
   return (0, a.jsx)(T.default, {
-    forcedDivider: N,
+    forcedDivider: I,
     borderType: f.FeatureBorderTypes.PREMIUM,
     hasBackground: !0,
-    title: I,
+    title: N,
     showBorder: C,
     errors: D,
     className: l,

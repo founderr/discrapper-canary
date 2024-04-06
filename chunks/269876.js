@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return I
   }
 }), s("47120");
 var a = s("735250"),
@@ -21,11 +21,11 @@ var a = s("735250"),
   _ = s("190103"),
   g = s("605094"),
   h = s("794711");
-let I = (0, T.uid)();
+let N = (0, T.uid)();
 
-function N() {
+function I() {
   let [e, t] = n.useState(-100), [s, l] = n.useState(!1), {
-    threshold: N,
+    threshold: I,
     autoThreshold: p
   } = (0, r.useStateFromStoresObject)([E.default], () => E.default.getModeOptions()), {
     inputMode: C,
@@ -58,7 +58,7 @@ function N() {
   let M = (0, a.jsx)("section", {
     className: i()(_.inputSensitivityToggle, _.manual),
     children: (0, a.jsx)(c.Slider, {
-      initialValue: N + 100,
+      initialValue: I + 100,
       onValueRender: e => "".concat((-((100 - e) * 1)).toFixed(0), "dB"),
       onValueChange: e => R(-((100 - e) * 1), p),
       barStyles: {
@@ -67,7 +67,7 @@ function N() {
       fillStyles: {
         background: u.default.unsafe_rawColors.YELLOW_300.css
       },
-      "aria-labelledby": I,
+      "aria-labelledby": N,
       children: (0, a.jsxs)("div", {
         className: i()(_.sliderBar, _.microphone, _.inputSensitivityBar),
         children: [(0, a.jsx)("div", {
@@ -98,7 +98,7 @@ function N() {
   })), (0, a.jsxs)(c.FormItem, {
     className: _.sensitivity,
     children: [(0, a.jsx)(c.FormTitle, {
-      id: I,
+      id: N,
       tag: c.FormTitleTags.H5,
       className: h.marginBottom8,
       children: m.default.Messages.FORM_LABEL_INPUT_SENSITIVTY
@@ -116,7 +116,7 @@ function N() {
           }), (0, a.jsx)(c.Switch, {
             id: e,
             checked: p,
-            onChange: e => R(N, e)
+            onChange: e => R(I, e)
           })]
         })
       }), M]

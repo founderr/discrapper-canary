@@ -11,14 +11,14 @@ var a = n("735250"),
   c = n("194359"),
   f = n("703656"),
   E = n("592125"),
-  h = n("131951"),
-  _ = n("974029"),
+  _ = n("131951"),
+  h = n("974029"),
   C = n("621113"),
   m = n("51144"),
   S = n("321488"),
   I = n("417183"),
-  p = n("825682"),
-  T = n("170245"),
+  T = n("825682"),
+  p = n("170245"),
   g = n("981631"),
   A = n("65154"),
   N = n("689938"),
@@ -41,7 +41,7 @@ function O(e) {
     c.default.removeFriend(t.id, {
       location: "Friends"
     })
-  }, l = (0, r.useStateFromStores)([h.default], () => h.default.supports(A.Features.VIDEO));
+  }, l = (0, r.useStateFromStores)([_.default], () => _.default.supports(A.Features.VIDEO));
   return (0, a.jsxs)(o.Menu, {
     navId: "friend-row",
     "aria-label": N.default.Messages.USER_ACTIONS_MENU_LABEL,
@@ -110,11 +110,11 @@ class L extends s.PureComponent {
       onClick: this.handleOpenPrivateChannel,
       children: t => (0, a.jsxs)("div", {
         className: v.listItemContents,
-        children: [(0, a.jsx)(T.default, {
+        children: [(0, a.jsx)(p.default, {
           user: e,
           status: l,
           isMobile: i,
-          subText: (0, a.jsx)(p.default, {
+          subText: (0, a.jsx)(T.default, {
             hovered: t,
             activities: n,
             applicationStream: s,
@@ -126,7 +126,7 @@ class L extends s.PureComponent {
         }), (0, a.jsxs)("div", {
           className: v.actions,
           children: [(0, a.jsx)(S.default, {
-            icon: _.default,
+            icon: h.default,
             tooltip: N.default.Messages.SEND_DM,
             onClick: this.handleOpenPrivateChannel,
             shouldHighlight: t

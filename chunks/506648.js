@@ -17,8 +17,8 @@ var a = s("735250"),
   R = s("417622"),
   S = s("981631"),
   m = s("689938"),
-  A = s("866887");
-let N = [{
+  N = s("866887");
+let A = [{
     feature: S.SKUFeatureTypes.SINGLE_PLAYER,
     getText: () => m.default.Messages.APPLICATION_STORE_SINGLE_PLAYER,
     getTooltip: () => m.default.Messages.APPLICATION_STORE_SINGLE_PLAYER_TOOLTIP,
@@ -91,18 +91,18 @@ let N = [{
       tooltip: i
     } = e;
     return (0, a.jsxs)("div", {
-      className: A.row,
+      className: N.row,
       children: [(0, a.jsx)(r.Tooltip, {
         text: i,
         children: e => (0, a.jsx)(t, {
-          className: A.featureIcon,
+          className: N.featureIcon,
           ...e
         })
       }), (0, a.jsx)("span", {
-        className: A.featureText,
+        className: N.featureText,
         children: s
       }), (0, a.jsx)(o.default, {
-        className: A.checkmarkIcon
+        className: N.checkmarkIcon
       })]
     })
   };
@@ -110,7 +110,7 @@ class g extends i.PureComponent {
   render() {
     let {
       sku: e
-    } = this.props, t = N.filter(t => {
+    } = this.props, t = A.filter(t => {
       let {
         feature: s
       } = t;
@@ -129,7 +129,7 @@ class g extends i.PureComponent {
       }, t)
     });
     return 0 === t.length ? null : (0, a.jsxs)("div", {
-      className: A.features,
+      className: N.features,
       children: [(0, a.jsx)(n.default, {
         children: m.default.Messages.APPLICATION_STORE_SECTION_TITLE_FEATURES
       }), t]

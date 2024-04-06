@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return S
   },
   getCustomConfettiDisplayOptions: function() {
-    return p
+    return T
   }
 }), n("627341");
 var a, s, l = n("278074"),
@@ -22,8 +22,8 @@ var a, s, l = n("278074"),
   c = n("22344"),
   f = n("165047"),
   E = n("167087"),
-  h = n("692797"),
-  _ = n("186077"),
+  _ = n("692797"),
+  h = n("186077"),
   C = n("376477");
 (s = a || (a = {}))[s.NONE = 0] = "NONE", s[s.TOOLTIP = 1] = "TOOLTIP", s[s.COACHTIP = 2] = "COACHTIP";
 let m = {
@@ -48,7 +48,7 @@ let m = {
       type: 2,
       title: () => o.default.Messages.COLLECTIBLES_ANIME_V2_COACHTIP_TITLE,
       body: () => o.default.Messages.COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION,
-      imageSrc: h,
+      imageSrc: _,
       assetIds: ["a_c3cffc19e9784f7d0b005eecdf1b566e", "a_f3af281c65cf0cf590e9e1f59e9c6cf6", "a_51d3bb502109eec26c76386ec980bc8b"]
     },
     [r.DismissibleContent.COLLECTIBLES_SHOP_SPRINGTOONS_COACHTIP]: {
@@ -76,7 +76,7 @@ let m = {
     backgroundColor: "rgba(255, 70, 85, 1)",
     boxShadow: "0 0 12px 0 rgba(255, 70, 85, 0.5)",
     labelColor: "rgba(15, 25, 35, 1)",
-    iconSrc: _
+    iconSrc: h
   })).otherwise(() => null),
   I = {
     SHY: {
@@ -87,4 +87,4 @@ let m = {
       }
     }
   },
-  p = e => (0, l.match)(e).with("1220513977683935373", () => I.SHY).with("1220432647453409384", () => I.SHY).with("1220432697718083614", () => I.SHY).otherwise(() => null)
+  T = e => (0, l.match)(e).with("1220513977683935373", () => I.SHY).with("1220432647453409384", () => I.SHY).with("1220432697718083614", () => I.SHY).otherwise(() => null)

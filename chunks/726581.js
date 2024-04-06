@@ -17,7 +17,7 @@ var a = s("735250"),
   R = s("4962"),
   S = s("689938"),
   m = s("466534");
-class A extends i.Component {
+class N extends i.Component {
   renderReasons(e, t, s) {
     return 0 === e.length && 0 === t.length ? null : (0, a.jsx)("div", {
       className: m.section,
@@ -78,4 +78,4 @@ t.default = l.default.connectStores([_.default, d.default, E.default, o.default,
     nonSocialReasons: (0, I.getNonSocialRecommendationReasons)(t.id, _.default, E.default),
     hidePersonalInformation: u.default.hidePersonalInformation
   }
-})(A)
+})(N)

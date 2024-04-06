@@ -11,14 +11,14 @@ var a = n("735250"),
   c = n("780384"),
   f = n("481060"),
   E = n("570140"),
-  h = n("239091"),
-  _ = n("51025"),
+  _ = n("239091"),
+  h = n("51025"),
   C = n("785547"),
   m = n("730749"),
   S = n("112724"),
   I = n("812206"),
-  p = n("44315"),
-  T = n("210887"),
+  T = n("44315"),
+  p = n("210887"),
   g = n("283595"),
   A = n("417363"),
   N = n("941128"),
@@ -26,8 +26,8 @@ var a = n("735250"),
   R = n("285952"),
   O = n("366695"),
   L = n("366966"),
-  P = n("151011"),
-  M = n("774832"),
+  M = n("151011"),
+  P = n("774832"),
   y = n("465670"),
   D = n("786048"),
   x = n("897353"),
@@ -279,8 +279,8 @@ class Z extends s.PureComponent {
       children: [(0, a.jsx)(f.Progress, {
         percent: t,
         size: f.Progress.Sizes.SMALL,
-        foregroundColor: (0, p.getColor)(n),
-        foregroundGradientColor: null != s ? [(0, p.getColor)(s[0]), (0, p.getColor)(s[1])] : void 0,
+        foregroundColor: (0, T.getColor)(n),
+        foregroundGradientColor: null != s ? [(0, T.getColor)(s[0]), (0, T.getColor)(s[1])] : void 0,
         animate: this.isFocused
       }), (0, a.jsx)("div", {
         className: F.progressCellText,
@@ -312,7 +312,7 @@ class Z extends s.PureComponent {
     } = this.props;
     return this.renderBody({
       message: k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_FINISHED.format({
-        remove: () => _.removeFinished(e.applicationId, e.branchId)
+        remove: () => h.removeFinished(e.applicationId, e.branchId)
       }),
       foregroundColor: (0, c.isThemeLight)(e.theme) ? w.Color.PRIMARY_300 : w.Color.PRIMARY_500,
       percent: 100
@@ -471,21 +471,21 @@ class Z extends s.PureComponent {
 let X = () => (0, a.jsx)(Y, {
     icon: x.default,
     tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_RESUME,
-    onClick: () => _.resume()
+    onClick: () => h.resume()
   }),
   J = () => (0, a.jsx)(Y, {
     icon: D.default,
     tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_PAUSE,
-    onClick: () => _.pause()
+    onClick: () => h.pause()
   }),
   $ = e => {
     let {
       item: t
     } = e;
     return (0, a.jsx)(Y, {
-      icon: M.default,
+      icon: P.default,
       tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_MOVE_UP,
-      onClick: () => _.moveUp(t.applicationId, t.branchId)
+      onClick: () => h.moveUp(t.applicationId, t.branchId)
     })
   },
   ee = e => {
@@ -495,7 +495,7 @@ let X = () => (0, a.jsx)(Y, {
     return (0, a.jsx)(Y, {
       icon: y.default,
       tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_REMOVE,
-      onClick: () => _.cancel(t.applicationId, t.branchId)
+      onClick: () => h.cancel(t.applicationId, t.branchId)
     })
   },
   et = [{
@@ -558,7 +558,7 @@ class en extends s.PureComponent {
     } = this.props;
     e.forEach(e => {
       e.finished && E.default.wait(() => {
-        _.removeFinished(e.applicationId, e.branchId)
+        h.removeFinished(e.applicationId, e.branchId)
       })
     }), window.removeEventListener("resize", this.throttledUpdateHeight), this.isUnmounted = !0
   }
@@ -587,7 +587,7 @@ class en extends s.PureComponent {
           color: w.Color.BLUE_345,
           animate: s
         })]
-      }), (0, a.jsx)(P.default, {
+      }), (0, a.jsx)(M.default, {
         hasHeader: !1,
         columns: et,
         data: e,
@@ -602,7 +602,7 @@ class en extends s.PureComponent {
         rowProps: {
           onContextMenu: (e, t) => {
             var s, l, i;
-            return s = e, l = t, i = r, void h.openContextMenuLazy(s, async () => {
+            return s = e, l = t, i = r, void _.openContextMenuLazy(s, async () => {
               let {
                 default: e
               } = await n.e("98335").then(n.bind(n, "485292"));
@@ -649,12 +649,12 @@ function ea(e, t, n, a) {
     }), e
   }, [])
 }
-t.default = (0, S.default)(u.default.connectStores([I.default, A.default, N.default, T.default, v.default], () => {
+t.default = (0, S.default)(u.default.connectStores([I.default, A.default, N.default, p.default, v.default], () => {
   let e = ea(N.default.activeItems, !1, I.default, A.default);
   return {
     applications: [...e, ...ea(N.default.finishedItems, !0, I.default, A.default)],
     paused: N.default.paused,
     isFocused: v.default.isFocused(),
-    theme: T.default.theme
+    theme: p.default.theme
   }
 })((0, m.default)(en)))

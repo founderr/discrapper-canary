@@ -62,14 +62,14 @@ var a, s = n("729594"),
   c = n("739566"),
   f = n("695346"),
   E = n("131704"),
-  h = n("598077"),
-  _ = n("592125"),
+  _ = n("598077"),
+  h = n("592125"),
   C = n("430824"),
   m = n("131951"),
   S = n("375954"),
   I = n("158776"),
-  p = n("594174"),
-  T = n("979651"),
+  T = n("594174"),
+  p = n("979651"),
   g = n("70956"),
   A = n("5192"),
   N = n("226951"),
@@ -77,15 +77,15 @@ var a, s = n("729594"),
   R = n("863141"),
   O = n("186901"),
   L = n("981631");
-let P = null !== (a = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== a ? a : "localhost",
-  M = function() {
-    let e = P.split(":")[0];
+let M = null !== (a = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== a ? a : "localhost",
+  P = function() {
+    let e = M.split(":")[0];
     if (!e.includes(".")) return e;
     let t = e.split("."),
       n = t[t.length - 1];
     return /^\d+$/.test(n) ? e : t.slice(-2).join(".")
   }(),
-  y = new RegExp("^".concat(N.default.escape("https://"), "(?:[a-z]+\\.)?(").concat(N.default.escape(M), "|discordapp.com|discord.com)$")),
+  y = new RegExp("^".concat(N.default.escape("https://"), "(?:[a-z]+\\.)?(").concat(N.default.escape(P), "|discordapp.com|discord.com)$")),
   D = 1 * g.default.Millis.MINUTE,
   x = {};
 
@@ -112,8 +112,8 @@ function G(e, t) {
     })
   })), Promise.all(n).then(() => {
     var n;
-    let s = (!e.isNSFW() || (null === (n = p.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? S.default.getMessages(e.id).toArray().map(w) : [],
-      l = Object.values(T.default.getVoiceStatesForChannel(e.id)).map(t => k(a, e.id, t));
+    let s = (!e.isNSFW() || (null === (n = T.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? S.default.getMessages(e.id).toArray().map(w) : [],
+      l = Object.values(p.default.getVoiceStatesForChannel(e.id)).map(t => k(a, e.id, t));
     return {
       id: e.id,
       name: e.name,
@@ -133,8 +133,8 @@ function w(e) {
   let t = d.default.parseToAST(e.content, !0, {
       channelId: e.channel_id
     }).map(b),
-    n = _.default.getChannel(e.channel_id),
-    a = null != e.author ? (0, c.getUserAuthor)(new h.default(e.author), n) : void 0;
+    n = h.default.getChannel(e.channel_id),
+    a = null != e.author ? (0, c.getUserAuthor)(new _.default(e.author), n) : void 0;
   return {
     id: e.id,
     blocked: e.blocked,
@@ -165,7 +165,7 @@ function k(e, t, n) {
     selfDeaf: i,
     suppress: r,
     userId: o
-  } = n, u = p.default.getUser(o);
+  } = n, u = T.default.getUser(o);
   if (null == u) throw Error("Invalid user id: ".concat(o));
   return {
     nick: A.default.getName(e, t, u),
@@ -184,7 +184,7 @@ function k(e, t, n) {
 }
 
 function F(e, t, n) {
-  let a = p.default.getUser(t);
+  let a = T.default.getUser(t);
   return {
     type: e,
     user: null != a ? (0, R.default)(a) : null,

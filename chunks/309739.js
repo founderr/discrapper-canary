@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return I
   }
 }), s("47120");
 var a = s("735250");
@@ -111,7 +111,7 @@ function h() {
   })
 }
 
-function I() {
+function N() {
   return (0, a.jsx)(n.FormSection, {
     className: m.marginBottom40,
     children: (0, a.jsx)(n.FormNotice, {
@@ -124,7 +124,7 @@ function I() {
   })
 }
 
-function N() {
+function I() {
   let {
     canBroadcast: e
   } = l.default.useExperiment({
@@ -135,6 +135,6 @@ function N() {
   return (0, a.jsxs)(n.FormSection, {
     tag: n.FormTitleTags.H1,
     title: T.default.Messages.ACTIVITY_PRIVACY,
-    children: [(0, a.jsx)(_, {}), (0, a.jsx)(g, {}), e && (0, a.jsx)(h, {}), (0, a.jsx)(I, {})]
+    children: [(0, a.jsx)(_, {}), (0, a.jsx)(g, {}), e && (0, a.jsx)(h, {}), (0, a.jsx)(N, {})]
   })
 }

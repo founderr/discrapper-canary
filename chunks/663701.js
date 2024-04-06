@@ -15,14 +15,14 @@ var a = n("735250"),
   c = n("524437"),
   f = n("952265"),
   E = n("481060"),
-  h = n("493683"),
-  _ = n("348600"),
+  _ = n("493683"),
+  h = n("348600"),
   C = n("257968"),
   m = n("367907"),
   S = n("770471"),
   I = n("158631"),
-  p = n("143614"),
-  T = n("463119"),
+  T = n("143614"),
+  p = n("463119"),
   g = n("377171"),
   A = n("243778"),
   N = n("922409"),
@@ -30,8 +30,8 @@ var a = n("735250"),
   R = n("28476"),
   O = n("880257"),
   L = n("631885"),
-  P = n("457396"),
-  M = n("51596"),
+  M = n("457396"),
+  P = n("51596"),
   y = n("905423"),
   D = n("155409"),
   x = n("210887"),
@@ -59,7 +59,7 @@ let ee = e => {
     let {
       selected: t,
       ...n
-    } = e, s = (0, o.useListItem)("friends"), l = (0, d.useStateFromStores)([j.default], () => j.default.getPendingCount()), i = (0, p.default)(), {
+    } = e, s = (0, o.useListItem)("friends"), l = (0, d.useStateFromStores)([j.default], () => j.default.getPendingCount()), i = (0, T.default)(), {
       canViewBroadcasts: r
     } = S.default.useExperiment({
       location: "friends_tab_no_track"
@@ -145,7 +145,7 @@ let ee = e => {
       channelId: l
     } = (0, N.useMessageRequestSidebarState)();
     if (!(0, R.useShouldShowMessageRequestsRow)()) return null;
-    let i = null == l ? void 0 : () => h.default.preload(X.ME, l);
+    let i = null == l ? void 0 : () => _.default.preload(X.ME, l);
     return (0, a.jsx)(q.LinkButton, {
       selected: t,
       route: X.Routes.MESSAGE_REQUESTS,
@@ -214,7 +214,7 @@ let ee = e => {
       }
     })
   },
-  ei = () => (0, M.show)("DM_SEARCH");
+  ei = () => (0, P.show)("DM_SEARCH");
 
 function er(e) {
   switch (e) {
@@ -243,7 +243,7 @@ let eo = e => {
     return [t, n]
   }, r.default), {
     enabled: f
-  } = _.BirthdayActivitiesExperiment.useExperiment({
+  } = h.BirthdayActivitiesExperiment.useExperiment({
     location: "a718d6_2"
   }, {
     autoTrackExposure: !0
@@ -278,7 +278,7 @@ let eo = e => {
       }, "friends"), n && t ? (0, a.jsx)(et, {
         selected: null == c ? null != s && s.startsWith(X.Routes.APPLICATION_LIBRARY) : c.startsWith(X.Routes.APPLICATION_LIBRARY),
         hideGameUpdateProgressIndicator: s === X.Routes.APPLICATION_LIBRARY
-      }, "library") : null, (0, a.jsx)(P.NitroTabButton, {
+      }, "library") : null, (0, a.jsx)(M.NitroTabButton, {
         selected: null == c ? o : c.startsWith(X.Routes.APPLICATION_STORE),
         route: null == l || location.pathname.startsWith(X.Routes.ACTIVITIES) || location.pathname.startsWith(X.Routes.APPLICATION_STORE) ? X.Routes.APPLICATION_STORE : l,
         locationState: {
@@ -300,7 +300,7 @@ let eo = e => {
         }
       }, "activities") : null, (0, a.jsx)(ea, {
         selected: null == c ? null != s && s.startsWith(X.Routes.MESSAGE_REQUESTS) : c === X.Routes.MESSAGE_REQUESTS
-      }, "message-requests"), (0, a.jsx)(T.CollectiblesShopButton, {
+      }, "message-requests"), (0, a.jsx)(p.CollectiblesShopButton, {
         selected: c === X.Routes.COLLECTIBLES_SHOP || (null == s ? void 0 : s.startsWith(X.Routes.COLLECTIBLES_SHOP)),
         locationState: {
           analyticsSource: {

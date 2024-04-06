@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return _
   }
 }), n("47120");
 var a = n("735250"),
@@ -20,22 +20,22 @@ let E = {
   friction: 140
 };
 
-function h(e) {
+function _(e) {
   let {
     className: t,
     pageMultiplier: n
-  } = e, l = (0, d.useStateFromStores)([c.default], () => c.default.useReducedMotion), [r, h] = s.useState({
+  } = e, l = (0, d.useStateFromStores)([c.default], () => c.default.useReducedMotion), [r, _] = s.useState({
     x: 0,
     y: 0
-  }), _ = s.useMemo(() => o().throttle(e => {
+  }), h = s.useMemo(() => o().throttle(e => {
     if (l) return;
     let t = (window.innerWidth - e.pageX * n) / 90;
-    h({
+    _({
       x: t,
       y: (window.innerHeight - e.pageY * n) / 90
     })
   }, 20), [n, l]);
-  s.useEffect(() => (window.addEventListener("mousemove", _), () => window.removeEventListener("mousemove", _)), [_]);
+  s.useEffect(() => (window.addEventListener("mousemove", h), () => window.removeEventListener("mousemove", h)), [h]);
   let [C, m] = (0, u.useSpring)(() => ({
     x: 0,
     y: 0,

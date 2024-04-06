@@ -24,16 +24,16 @@ class E extends i.default {
       var t;
       let {
         voiceStates: l
-      } = e, i = r.default.getId(), E = null === (t = u.default.getSession()) || void 0 === t ? void 0 : t.sessionId, h = l.find(e => e.userId === i && e.sessionId === E);
-      if (null == h) return;
-      let _ = h.channelId;
-      if (null == _) {
+      } = e, i = r.default.getId(), E = null === (t = u.default.getSession()) || void 0 === t ? void 0 : t.sessionId, _ = l.find(e => e.userId === i && e.sessionId === E);
+      if (null == _) return;
+      let h = _.channelId;
+      if (null == h) {
         (0, s.hasModalOpen)(f) && (0, s.closeModal)(f);
         return
       }
-      let C = o.default.getChannel(_);
+      let C = o.default.getChannel(h);
       if (!(null == C ? void 0 : C.isGuildStageVoice())) return;
-      let m = (0, d.getAudienceRequestToSpeakState)(h) === d.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+      let m = (0, d.getAudienceRequestToSpeakState)(_) === d.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
       if (null != C && m) {
         if ((0, s.hasModalOpen)(f)) return;
         (0, s.openModalLazy)(async () => {

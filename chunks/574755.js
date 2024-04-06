@@ -21,8 +21,8 @@ var a = s("735250"),
   _ = s("703288"),
   g = s("491758"),
   h = s("183632"),
-  I = s("689938"),
-  N = s("415996"),
+  N = s("689938"),
+  I = s("415996"),
   p = s("893427"),
   C = s("794711");
 
@@ -50,8 +50,8 @@ function A() {
     children: [(0, a.jsx)(r.FormSection, {
       tag: r.FormTitleTags.H1,
       title: (0, a.jsxs)("div", {
-        className: N.headerContainer,
-        children: [I.default.Messages.CLIPS, (0, a.jsx)(_.default, {})]
+        className: I.headerContainer,
+        children: [N.default.Messages.CLIPS, (0, a.jsx)(_.default, {})]
       }),
       children: A && (0, a.jsxs)("form", {
         onSubmit: e => e.preventDefault(),
@@ -63,21 +63,21 @@ function A() {
         hideBorder: !0,
         className: p.formItem,
         value: e,
-        note: I.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
+        note: N.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
         onChange: e => m.updateAllowVoiceRecording({
           allowVoiceRecording: e
         }),
-        children: I.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
+        children: N.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
       }), t && x && (0, a.jsx)(r.FormSwitch, {
         hideBorder: !0,
         className: p.formItem,
         value: O,
-        note: I.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
+        note: N.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
         onChange: e => m.updateViewerClipsEnabled({
           enabled: e,
           trackAnalytics: !0
         }),
-        children: I.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE
+        children: N.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE
       })]
     })]
   })

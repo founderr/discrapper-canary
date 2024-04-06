@@ -20,9 +20,9 @@ t.default = a.memo(function(e) {
   } = e, {
     id: g,
     name: E,
-    color: S,
-    children: _
-  } = t, I = _.map(e => e.id), N = (0, o.default)(e => e.guildId), T = (0, s.useStateFromStores)([u.default], () => u.default.isFolderExpanded(g)), A = function(e) {
+    color: _,
+    children: S
+  } = t, I = S.map(e => e.id), N = (0, o.default)(e => e.guildId), T = (0, s.useStateFromStores)([u.default], () => u.default.isFolderExpanded(g)), A = function(e) {
     let t = e.children.map(e => {
         let t = e.id,
           n = c.default.getGuild(t);
@@ -40,7 +40,7 @@ t.default = a.memo(function(e) {
     unread: I.some(e => d.default.hasUnread(e))
   })), R = a.useCallback(() => {
     r.default.toggleGuildFolderExpand(g)
-  }, [g]), y = a.useCallback(e => {
+  }, [g]), M = a.useCallback(e => {
     (0, i.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -49,11 +49,11 @@ t.default = a.memo(function(e) {
         ...t,
         folderId: g,
         folderName: E,
-        folderColor: S,
+        folderColor: _,
         unread: x || v > 0
       })
     })
-  }, [g, E, S, x, v]);
+  }, [g, E, _, x, v]);
   return (0, l.jsx)(h.default, {
     ...m,
     folderNode: t,
@@ -64,6 +64,6 @@ t.default = a.memo(function(e) {
     mediaState: L,
     defaultFolderName: A,
     onExpandCollapse: R,
-    onContextMenu: y
+    onContextMenu: M
   })
 })

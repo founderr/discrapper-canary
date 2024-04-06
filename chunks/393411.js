@@ -16,15 +16,15 @@ var n = s("803997"),
   c = s("906732"),
   E = s("710845"),
   f = s("963249"),
-  _ = s("301766"),
-  p = s("509545"),
-  m = s("931331"),
+  m = s("301766"),
+  _ = s("509545"),
+  p = s("931331"),
   I = s("754347"),
   N = s("122289"),
   S = s("74538"),
   P = s("212895"),
-  T = s("296848"),
-  C = s("140465"),
+  C = s("296848"),
+  T = s("140465"),
   R = s("879463"),
   A = s("104494"),
   M = s("987997"),
@@ -40,9 +40,9 @@ let U = new E.default("SubscriptionHeader.tsx"),
     section: y.AnalyticsSections.SETTINGS_PREMIUM,
     object: y.AnalyticsObjects.CARD
   },
-  b = [y.SubscriptionStatusTypes.PAUSED, y.SubscriptionStatusTypes.PAUSE_PENDING, y.SubscriptionStatusTypes.BILLING_RETRY];
+  v = [y.SubscriptionStatusTypes.PAUSED, y.SubscriptionStatusTypes.PAUSE_PENDING, y.SubscriptionStatusTypes.BILLING_RETRY];
 
-function v(e) {
+function b(e) {
   let {
     wordMark: t,
     subscriptionInfo: s,
@@ -137,7 +137,7 @@ function G() {
   let {
     analyticsLocations: e
   } = (0, c.default)(d.default.ACCOUNT_CREDIT_BANNER);
-  return (0, a.jsx)(v, {
+  return (0, a.jsx)(b, {
     wordMark: (0, a.jsx)(j, {}),
     subscriptionInfo: (0, a.jsx)("div", {
       className: D.planInfo,
@@ -164,19 +164,19 @@ t.default = function(e) {
     renewalInvoicePreview: E,
     paymentSource: L,
     busy: G,
-    analyticsLocation: F
+    analyticsLocation: k
   } = e, {
-    analyticsLocations: k
+    analyticsLocations: F
   } = (0, c.default)(d.default.SUBSCRIPTION_HEADER), {
     enabled: w
   } = (0, R.default)({
     location: "subscription_header"
   });
   !g.PAUSE_ELIGIBLE_PLANS.has(l.planId) && (w = !1);
-  let H = (0, A.usePremiumDiscountOffer)(),
-    Y = null == H ? void 0 : null === (t = H.discount) || void 0 === t ? void 0 : t.amount,
-    W = (0, C.useHasDiscountApplied)(),
-    V = (0, C.useActiveDiscountInfo)(),
+  let Y = (0, A.usePremiumDiscountOffer)(),
+    H = null == Y ? void 0 : null === (t = Y.discount) || void 0 === t ? void 0 : t.amount,
+    W = (0, T.useHasDiscountApplied)(),
+    V = (0, T.useActiveDiscountInfo)(),
     K = () => {
       (l.status === y.SubscriptionStatusTypes.ACTIVE || l.status === y.SubscriptionStatusTypes.PAST_DUE || l.status === y.SubscriptionStatusTypes.PAUSED) && Z(h.Steps.PAUSE_SELECT)
     },
@@ -191,15 +191,15 @@ t.default = function(e) {
         return s => (0, a.jsx)(t, {
           ...s,
           premiumSubscription: l,
-          analyticsLocation: F,
-          analyticsLocations: k,
+          analyticsLocation: k,
+          analyticsLocations: F,
           initialStep: e
         })
       })
     },
     X = () => {
       if (null != l && null != l.planIdFromItems) {
-        let e = p.default.get(l.planIdFromItems);
+        let e = _.default.get(l.planIdFromItems);
         if (null == e) {
           U.info("Plan not fetched for plan id: ".concat(l.planIdFromItems));
           return
@@ -207,17 +207,17 @@ t.default = function(e) {
         let t = (0, P.getCurrencies)(e, null == L ? void 0 : L.id, !1),
           s = t.length > 0 ? t[0] : l.currency,
           a = !1;
-        1 === t.length && (null == L ? void 0 : L.id) === l.paymentSourceId && (0, P.planHasCurrency)(e.id, s, null == L ? void 0 : L.id) && (a = !0), a ? o.resubscribe(l, k) : (0, f.default)({
+        1 === t.length && (null == L ? void 0 : L.id) === l.paymentSourceId && (0, P.planHasCurrency)(e.id, s, null == L ? void 0 : L.id) && (a = !0), a ? o.resubscribe(l, F) : (0, f.default)({
           initialPlanId: l.planIdFromItems,
-          analyticsLocations: k,
-          analyticsLocation: F,
+          analyticsLocations: F,
+          analyticsLocation: k,
           analyticsObject: O,
           subscription: l
         })
       }
     },
     q = () => {
-      if (!b.includes(l.status) || null == l.pauseEndsAt) {
+      if (!v.includes(l.status) || null == l.pauseEndsAt) {
         (0, N.captureBillingException)(Error("Invalid subscription to resume"), {
           extra: {
             subscriptionId: l.id,
@@ -229,12 +229,12 @@ t.default = function(e) {
       }
       l.status === y.SubscriptionStatusTypes.PAUSED ? (0, f.default)({
         initialPlanId: l.planIdFromItems,
-        analyticsLocations: k,
-        analyticsLocation: F,
+        analyticsLocations: F,
+        analyticsLocation: k,
         analyticsObject: O,
         subscription: l,
         skipConfirm: !0
-      }) : o.resume(l, k)
+      }) : o.resume(l, F)
     },
     J = () => {
       l.status === y.SubscriptionStatusTypes.PAUSED && Z(h.Steps.PAUSE_SELECT)
@@ -243,7 +243,7 @@ t.default = function(e) {
       Z(h.Steps.WHAT_YOU_LOSE)
     },
     $ = S.default.getPlanIdFromInvoice(l, E);
-  if ((0, _.isNoneSubscription)($)) return null;
+  if ((0, m.isNoneSubscription)($)) return null;
   let ee = S.default.getStatusFromInvoice(l, E),
     et = S.default.getPremiumType($),
     es = {
@@ -272,12 +272,12 @@ t.default = function(e) {
       ea = (0, a.jsx)(j, {});
       break;
     case g.PremiumTypes.TIER_2:
-      ea = (0, a.jsx)(m.default, {
+      ea = (0, a.jsx)(p.default, {
         className: D.planName,
         "aria-label": x.default.Messages.PREMIUM_TITLE
       })
   }
-  let en = b.includes(l.status) ? B : v;
+  let en = v.includes(l.status) ? B : b;
   return (0, a.jsx)(en, {
     wordMark: ea,
     subscriptionInfo: (n = $, r()(null != E, "Expected renewalInvoicePreview"), (0, a.jsx)("div", {
@@ -341,7 +341,7 @@ t.default = function(e) {
       if (e === y.SubscriptionStatusTypes.PAUSED) {
         let {
           durations: e
-        } = (0, T.getSubscriptionPauseDurations)(l);
+        } = (0, C.getSubscriptionPauseDurations)(l);
         return (0, a.jsxs)("div", {
           className: D.toolsButtons,
           children: [e.length > 0 ? (0, a.jsx)(u.Button, {
@@ -400,8 +400,8 @@ t.default = function(e) {
               className: D.toolsButton,
               onClick: () => {
                 (0, f.default)({
-                  analyticsLocations: k,
-                  analyticsLocation: F,
+                  analyticsLocations: F,
+                  analyticsLocation: k,
                   analyticsObject: O,
                   subscription: l
                 })
@@ -414,6 +414,6 @@ t.default = function(e) {
     })(),
     statusClasses: es,
     shouldUseDiscountMarketing: W,
-    discountAmount: Y
+    discountAmount: H
   })
 }

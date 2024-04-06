@@ -20,8 +20,8 @@ var l = n("735250"),
   m = n("158631"),
   g = n("143614"),
   E = n("787740"),
-  S = n("981631"),
-  _ = n("689938"),
+  _ = n("981631"),
+  S = n("689938"),
   I = n("161016");
 
 function N(e) {
@@ -46,9 +46,9 @@ function N(e) {
       }), (0, l.jsx)(r.Text, {
         variant: "text-xs/medium",
         color: "header-secondary",
-        children: (null == u ? void 0 : u.name) != null ? _.default.Messages.STREAMING.format({
+        children: (null == u ? void 0 : u.name) != null ? S.default.Messages.STREAMING.format({
           name: u.name
-        }) : _.default.Messages.STREAMING_A_GAME
+        }) : S.default.Messages.STREAMING_A_GAME
       })]
     }), (0, l.jsx)(h.default, {
       game: u
@@ -61,7 +61,7 @@ function T(e) {
     closePopout: t
   } = e, n = (0, g.default)(), s = n.slice(0, 3), d = (0, m.default)(), f = n.length - s.length;
   return a.useEffect(() => {
-    u.default.trackWithMetadata(S.AnalyticEvents.BROADCAST_POPOUT_VIEWED, {
+    u.default.trackWithMetadata(_.AnalyticEvents.BROADCAST_POPOUT_VIEWED, {
       num_broadcasts_shown: s.length,
       num_active_broadcasts: n.length,
       is_broadcasting: d
@@ -79,7 +79,7 @@ function T(e) {
         }), (0, l.jsx)(r.Heading, {
           variant: "heading-md/semibold",
           color: "header-primary",
-          children: _.default.Messages.LIVE_BROADCASTS
+          children: S.default.Messages.LIVE_BROADCASTS
         })]
       }), (0, l.jsx)(E.default, {})]
     }), s.map((e, t) => (0, l.jsxs)(l.Fragment, {
@@ -94,20 +94,20 @@ function T(e) {
       }), (0, l.jsx)(r.Text, {
         variant: "text-xs/medium",
         color: "header-secondary",
-        children: _.default.Messages.MORE_OPEN_BROADCASTS.format({
+        children: S.default.Messages.MORE_OPEN_BROADCASTS.format({
           count: f
         })
       })]
     }), (0, l.jsx)(r.Button, {
       onClick: () => {
-        (0, c.transitionTo)(S.Routes.ME), o.default.setSection(S.FriendsSections.ONLINE), u.default.trackWithMetadata(S.AnalyticEvents.BROADCAST_LIST_VISITED, {
+        (0, c.transitionTo)(_.Routes.ME), o.default.setSection(_.FriendsSections.ONLINE), u.default.trackWithMetadata(_.AnalyticEvents.BROADCAST_LIST_VISITED, {
           num_active_broadcasts: n.length,
           friends_tab_clicked: !1,
           is_broadcasting: d
         }), t()
       },
       className: I.button,
-      children: _.default.Messages.VIEW_OPEN_BROADCASTS
+      children: S.default.Messages.VIEW_OPEN_BROADCASTS
     })]
   })
 }

@@ -21,14 +21,14 @@ var a = s("735250"),
   _ = s("112863"),
   g = s("701157"),
   h = s("912152"),
-  I = s("615603"),
-  N = s("474936"),
+  N = s("615603"),
+  I = s("474936"),
   p = s("233754");
 
 function C(e) {
   let {
     premiumSubscription: t
-  } = e, s = (0, l.useStateFromStores)([E.default], () => E.default.boostSlots), C = n.useMemo(() => Object.values(s), [s]), A = (0, l.useStateFromStores)([S.default], () => S.default.getCurrentUser()), O = T.default.isPremium(A, N.PremiumTypes.TIER_2), x = (0, l.useStateFromStores)([u.default], () => u.default.affinities), R = (0, l.useStateFromStores)([c.default], () => c.default.getFlattenedGuildIds()), M = x.length > 0 || R.length > 0, v = C.length > 0, D = n.useMemo(() => C.some(e => null != e.premiumGuildSubscription), [C]);
+  } = e, s = (0, l.useStateFromStores)([E.default], () => E.default.boostSlots), C = n.useMemo(() => Object.values(s), [s]), A = (0, l.useStateFromStores)([S.default], () => S.default.getCurrentUser()), O = T.default.isPremium(A, I.PremiumTypes.TIER_2), x = (0, l.useStateFromStores)([u.default], () => u.default.affinities), R = (0, l.useStateFromStores)([c.default], () => c.default.getFlattenedGuildIds()), M = x.length > 0 || R.length > 0, v = C.length > 0, D = n.useMemo(() => C.some(e => null != e.premiumGuildSubscription), [C]);
   return (0, a.jsxs)("div", {
     children: [(0, a.jsx)(i.BlockedPaymentsWarning, {
       className: p.blockedPaymentsWarning
@@ -43,7 +43,7 @@ function C(e) {
     }), !M && (0, a.jsx)(_.default, {}), (0, a.jsx)(f.default, {
       guildBoostSlots: s,
       premiumSubscription: t
-    }), (0, a.jsx)(I.default, {
+    }), (0, a.jsx)(N.default, {
       guildBoostSlots: C
     }), (0, a.jsx)(g.default, {
       hasAppliedGuildBoosts: D

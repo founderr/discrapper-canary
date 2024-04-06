@@ -24,20 +24,20 @@ t.default = function(e) {
   let S = (0, n.useStateFromStores)([u.default], () => u.default.getPremiumTypeSubscription()),
     {
       localizedPricingBannerHeader: m,
-      localizedPricingBannerBody: A
+      localizedPricingBannerBody: N
     } = (0, d.getLocalizedPricingBannerStrings)({
       localizedPricingPromo: t,
       subscription: S,
       userLocale: R
     }),
-    N = i.toLowerCase() + "Banner";
+    A = i.toLowerCase() + "Banner";
   return (0, a.jsxs)("div", {
     className: r()(f.bannerContainer, {
       [f.smallGap]: s,
       [f.bigGap]: !s
     }),
     children: [(0, a.jsx)("div", {
-      className: r()(f[N], f.bannerImageContainer)
+      className: r()(f[A], f.bannerImageContainer)
     }), (0, a.jsx)(l.Heading, {
       className: f.bannerHeading,
       variant: "heading-xl/semibold",
@@ -48,7 +48,7 @@ t.default = function(e) {
         color: "none",
         variant: "text-md/normal",
         className: f.bannerBody,
-        children: A
+        children: N
       })
     }), (0, a.jsxs)("div", {
       className: f.ctaButtonContainer,

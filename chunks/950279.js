@@ -15,24 +15,24 @@ t.default = e => {
   let {
     handleUpdate: t,
     selectedGames: n
-  } = e, h = (0, l.useStateFromStores)([o.default], () => o.default.getId()), {
-    recentGames: _
-  } = (0, r.useUserRecentGames)(h), C = (0, l.useStateFromStores)([u.default], () => u.default.games, []), m = s.useMemo(() => C.map(e => ({
+  } = e, _ = (0, l.useStateFromStores)([o.default], () => o.default.getId()), {
+    recentGames: h
+  } = (0, r.useUserRecentGames)(_), C = (0, l.useStateFromStores)([u.default], () => u.default.games, []), m = s.useMemo(() => C.map(e => ({
     value: e.id,
     label: e.name
-  })), [C]), S = (0, i.useToken)(i.tokens.colors.WHITE), I = (0, l.useStateFromStoresArray)([u.default], () => null != _ ? _.map(e => {
+  })), [C]), S = (0, i.useToken)(i.tokens.colors.WHITE), I = (0, l.useStateFromStoresArray)([u.default], () => null != h ? h.map(e => {
     let t = u.default.getGameById(e.applicationId);
     return {
       ...e,
       name: null == t ? void 0 : t.name
     }
-  }) : []), p = e => {
+  }) : []), T = e => {
     if (!n.has(e)) return;
     let a = new Map(n);
     a.delete(e), t({
       selectedGames: a
     })
-  }, T = e => {
+  }, p = e => {
     if (n.size === c.MAX_NUM_SELECTED_GAMES || n.has(e)) return;
     let a = u.default.getGameById(e),
       s = new Map(n);
@@ -60,7 +60,7 @@ t.default = e => {
         options: m,
         value: "",
         placeholder: f.default.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
-        onChange: T,
+        onChange: p,
         isDisabled: n.size === c.MAX_NUM_SELECTED_GAMES
       })
     }), (0, a.jsxs)("div", {
@@ -78,7 +78,7 @@ t.default = e => {
             return (0, a.jsxs)("div", {
               className: E.selectedGame,
               children: [(0, a.jsx)(i.Clickable, {
-                onClick: () => p(t),
+                onClick: () => T(t),
                 className: E.gameImagePlaceholder,
                 children: (0, a.jsx)(d.default, {
                   backgroundColor: S.hex(),
@@ -104,7 +104,7 @@ t.default = e => {
             className: E.selectedGame,
             children: [(0, a.jsx)(i.Clickable, {
               "aria-label": e.name,
-              onClick: () => T(e.applicationId),
+              onClick: () => p(e.applicationId),
               className: E.gameImagePlaceholder
             }), (0, a.jsx)(i.Text, {
               variant: "text-xs/normal",

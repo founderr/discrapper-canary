@@ -11,8 +11,8 @@ var a = n("735250"),
   c = n("768419"),
   f = n("831506"),
   E = n("699516"),
-  h = n("594174"),
-  _ = n("643126"),
+  _ = n("594174"),
+  h = n("643126"),
   C = n("823379"),
   m = n("689938");
 
@@ -37,7 +37,7 @@ class I extends s.PureComponent {
       host: t,
       party: n
     } = this.props;
-    return this.hasParty(n) && null != e ? (0, a.jsx)(_.default, {
+    return this.hasParty(n) && null != e ? (0, a.jsx)(h.default, {
       currentUser: e,
       host: t,
       party: n,
@@ -70,15 +70,15 @@ class I extends s.PureComponent {
     })
   }
 }
-t.default = r.default.connectStores([c.default, h.default, E.default, f.default], () => {
+t.default = r.default.connectStores([c.default, _.default, E.default, f.default], () => {
   let e, t;
   let n = c.default.getSyncingWith(),
     a = c.default.getActivity(),
-    s = h.default.getCurrentUser(),
+    s = _.default.getCurrentUser(),
     l = [];
-  if (null != n ? (e = h.default.getUser(n.userId), t = n.partyId) : null != a && null != a.party && null != a.party.id && (e = s, t = a.party.id), null != t) {
+  if (null != n ? (e = _.default.getUser(n.userId), t = n.partyId) : null != a && null != a.party && null != a.party.id && (e = s, t = a.party.id), null != t) {
     var r;
-    l = i()(Array.from(null !== (r = f.default.getParty(t)) && void 0 !== r ? r : [])).map(e => h.default.getUser(e)).filter(C.isNotNullish).orderBy([t => null == e || e.id === t.id, e => E.default.isFriend(e.id)], ["desc", "desc"]).value()
+    l = i()(Array.from(null !== (r = f.default.getParty(t)) && void 0 !== r ? r : [])).map(e => _.default.getUser(e)).filter(C.isNotNullish).orderBy([t => null == e || e.id === t.id, e => E.default.isFriend(e.id)], ["desc", "desc"]).value()
   }
   return {
     currentUser: s,

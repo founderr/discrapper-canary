@@ -64,7 +64,7 @@ function y(e, t) {
   }
 }
 
-function I(e, t) {
+function O(e, t) {
   let {
     top: n,
     left: i,
@@ -148,7 +148,7 @@ class T extends(a = o.Component) {
       left: S,
       bottom: null,
       right: null
-    }, a, l, g, m)), T = u ? (0, c.getAnchorCoordsFromFullCoords)(v) : I("RESIZE_SOUTH_EAST", v);
+    }, a, l, g, m)), T = u ? (0, c.getAnchorCoordsFromFullCoords)(v) : O("RESIZE_SOUTH_EAST", v);
     this.setDOMPositions(T), !p && (null != r && r(), this.setState({
       operationStarted: !0
     })), null != d && d(i, "MOVE", this.anchor, this.size)
@@ -405,7 +405,7 @@ class T extends(a = o.Component) {
           offsetY: n - i
         }
       } else {
-        let i = I(e, d);
+        let i = O(e, d);
         this.setDOMPositions(i), this.dragState = {
           ...this.dragState,
           startX: t,

@@ -17,10 +17,10 @@ var a = s("735250"),
   R = s("626135"),
   S = s("881100"),
   m = s("474936"),
-  A = s("981631"),
-  N = s("689938"),
+  N = s("981631"),
+  A = s("689938"),
   p = s("213153");
-let g = (e, t) => t === m.PremiumTypes.TIER_0 ? N.default.Messages.NITRO_MARKETING_BASIC_PERKS : e ? N.default.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : N.default.Messages.PREMIUM_MARKETING_PERKS_TITLE,
+let g = (e, t) => t === m.PremiumTypes.TIER_0 ? A.default.Messages.NITRO_MARKETING_BASIC_PERKS : e ? A.default.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : A.default.Messages.PREMIUM_MARKETING_PERKS_TITLE,
   C = e => {
     let {
       isShowingAll: t,
@@ -29,7 +29,7 @@ let g = (e, t) => t === m.PremiumTypes.TIER_0 ? N.default.Messages.NITRO_MARKETI
     return (0, a.jsxs)(o.Clickable, {
       onClick: s,
       className: p.customButton,
-      children: [t ? N.default.Messages.PREMIUM_MARKETING_PERKS_SEE_LESS : N.default.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL, t ? (0, a.jsx)(f.default, {
+      children: [t ? A.default.Messages.PREMIUM_MARKETING_PERKS_SEE_LESS : A.default.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL, t ? (0, a.jsx)(f.default, {
         className: p.arrow
       }) : (0, a.jsx)(I.default, {
         className: p.arrow
@@ -90,7 +90,7 @@ t.default = e => {
     }),
     f = (0, l.useStateFromStores)([u.default], () => u.default.useReducedMotion),
     {
-      analyticsLocations: N
+      analyticsLocations: A
     } = (0, c.default)(),
     P = (0, T.useIsRemixANitroPerk)();
   return t = r !== m.PremiumTypes.TIER_0 ? [I.emoji, I.streaming, I.upload, I.customAppIcons, I.soundboard, P ? I.remix : I.videoBackground, I.superReactions, I.stickersPerkDiscoverability, I.badgeAlt] : [I.emoji, I.upload, I.customAppIcons, I.superReactions, I.stickersPerkDiscoverability, I.badgeAlt], (0, a.jsxs)("div", {
@@ -121,8 +121,8 @@ t.default = e => {
         }),
         children: (0, a.jsx)(C, {
           onClick: () => {
-            R.default.track(A.AnalyticEvents.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED, {
-              location_stack: N,
+            R.default.track(N.AnalyticEvents.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED, {
+              location_stack: A,
               was_expanded: _
             }), E(!_)
           },

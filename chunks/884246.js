@@ -16,26 +16,26 @@ t.default = n.forwardRef(function(e, t) {
     onChangePage: i,
     children: E,
     className: f,
-    showPageCount: _ = !0,
-    ...p
-  } = e, m = s <= 0, I = s >= n - 1;
+    showPageCount: m = !0,
+    ..._
+  } = e, p = s <= 0, I = s >= n - 1;
   return (0, a.jsxs)("div", {
     className: l()(c.__invalid_paginator, f),
     ref: t,
-    ...p,
+    ..._,
     children: [E, (0, a.jsxs)("div", {
       className: c.pageActions,
       children: [(0, a.jsx)(r.Clickable, {
         className: l()(c.pageButtonPrev, {
-          [c.disabled]: m
+          [c.disabled]: p
         }),
-        tabIndex: m ? -1 : 0,
-        onClick: m ? void 0 : () => i(s - 1),
+        tabIndex: p ? -1 : 0,
+        onClick: p ? void 0 : () => i(s - 1),
         children: (0, a.jsx)(u.default, {
           className: c.pageButtonIcon,
           "aria-label": d.default.Messages.PAGINATION_PREVIOUS
         })
-      }), _ ? (0, a.jsx)("div", {
+      }), m ? (0, a.jsx)("div", {
         className: c.pageIndicator,
         children: d.default.Messages.PAGINATOR_OF_PAGES.format({
           currentPage: s + 1,

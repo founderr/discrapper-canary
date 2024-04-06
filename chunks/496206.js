@@ -8,9 +8,9 @@ var a = s("735250");
 s("470079");
 var l = s("803997"),
   i = s.n(l),
-  r = s("481060"),
+  n = s("481060"),
   o = s("981631"),
-  n = s("689938"),
+  r = s("689938"),
   u = s("353491");
 
 function d(e) {
@@ -18,10 +18,10 @@ function d(e) {
     className: t,
     ...s
   } = e;
-  return (0, a.jsx)(r.Button, {
+  return (0, a.jsx)(n.Button, {
     ...s,
-    look: r.Button.Looks.FILLED,
-    size: r.Button.Sizes.SMALL,
+    look: n.Button.Looks.FILLED,
+    size: n.Button.Sizes.SMALL,
     className: i()(u.actionButton, t)
   })
 }
@@ -36,28 +36,28 @@ function c(e) {
     onSendMessage: f
   } = e;
   return t || l === o.RelationshipTypes.BLOCKED ? null : l === o.RelationshipTypes.FRIEND || s.bot ? (0, a.jsx)(d, {
-    color: r.Button.Colors.GREEN,
+    color: n.Button.Colors.GREEN,
     onClick: f,
-    children: n.default.Messages.SEND_MESSAGE
+    children: r.default.Messages.SEND_MESSAGE
   }) : l === o.RelationshipTypes.PENDING_OUTGOING ? (0, a.jsx)(d, {
-    color: r.Button.Colors.GREEN,
+    color: n.Button.Colors.GREEN,
     disabled: !0,
-    children: n.default.Messages.ADD_FRIEND_BUTTON_AFTER
+    children: r.default.Messages.ADD_FRIEND_BUTTON_AFTER
   }) : l === o.RelationshipTypes.PENDING_INCOMING ? (0, a.jsxs)("div", {
     className: u.pendingIncoming,
     children: [(0, a.jsx)(d, {
-      color: r.Button.Colors.GREEN,
+      color: n.Button.Colors.GREEN,
       onClick: i,
-      children: n.default.Messages.FRIEND_REQUEST_ACCEPT
+      children: r.default.Messages.FRIEND_REQUEST_ACCEPT
     }), (0, a.jsx)(d, {
-      color: r.Button.Colors.PRIMARY,
+      color: n.Button.Colors.PRIMARY,
       onClick: c,
       className: u.actionRightButton,
-      children: n.default.Messages.FRIEND_REQUEST_IGNORE
+      children: r.default.Messages.FRIEND_REQUEST_IGNORE
     })]
   }) : (0, a.jsx)(d, {
-    color: r.Button.Colors.GREEN,
+    color: n.Button.Colors.GREEN,
     onClick: i,
-    children: n.default.Messages.ADD_FRIEND_BUTTON
+    children: r.default.Messages.ADD_FRIEND_BUTTON
   })
 }

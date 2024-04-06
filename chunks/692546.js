@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return C
   }
 }), n("47120");
 var i, a = n("470079"),
@@ -40,7 +40,7 @@ function v(e) {
 }
 let y = new Map;
 
-function I(e, t) {
+function O(e, t) {
   if (null == t) y.delete(e), 0 === y.size && (window.removeEventListener("mousemove", v), S = !1);
   else {
     let n = y.get(e);
@@ -74,12 +74,12 @@ function I(e, t) {
   }()))
 }
 let T = !1;
-class N extends(i = a.PureComponent) {
+class C extends(i = a.PureComponent) {
   componentDidMount() {
     this.props.observe ? this.observeZone() : this.updateZone()
   }
   componentWillUnmount() {
-    this.interval.stop(), I(this.zone, null)
+    this.interval.stop(), O(this.zone, null)
   }
   componentDidUpdate(e) {
     let {
@@ -107,7 +107,7 @@ class N extends(i = a.PureComponent) {
           right: i,
           bottom: a
         } = e.getBoundingClientRect();
-        I(this.zone, {
+        O(this.zone, {
           instance: this,
           zone: {
             name: this.zone,
@@ -121,7 +121,7 @@ class N extends(i = a.PureComponent) {
     })
   }
 }
-m(N, "defaultProps", {
+m(C, "defaultProps", {
   observe: !0,
   observeInterval: 1e3
 })

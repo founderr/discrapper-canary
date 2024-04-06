@@ -11,14 +11,14 @@ var a = n("735250"),
   c = n("243778"),
   f = n("26323"),
   E = n("433280"),
-  h = n("34131"),
-  _ = n("434404"),
+  _ = n("34131"),
+  h = n("434404"),
   C = n("567458"),
   m = n("782959"),
   S = n("970731"),
   I = n("626135"),
-  p = n("267642"),
-  T = n("981631"),
+  T = n("267642"),
+  p = n("981631"),
   g = n("921944"),
   A = n("30513"),
   N = n("474936"),
@@ -26,26 +26,26 @@ var a = n("735250"),
   R = n("54449"),
   O = n("1006"),
   L = n("741160"),
-  P = n("829972"),
-  M = n("31932"),
+  M = n("829972"),
+  P = n("31932"),
   y = n("642301");
 
 function D(e) {
-  null != e && _.default.open(e.id, T.GuildSettingsSections.OVERVIEW, {
-    section: T.AnalyticsSections.PREMIUM_GUILD_PROGRESS_BAR
-  }, T.GuildSettingsSubsections.DISPLAY)
+  null != e && h.default.open(e.id, p.GuildSettingsSections.OVERVIEW, {
+    section: p.AnalyticsSections.PREMIUM_GUILD_PROGRESS_BAR
+  }, p.GuildSettingsSubsections.DISPLAY)
 }
 
 function x(e, t) {
-  t && _.default.open(e.id, T.GuildSettingsSections.DISCOVERY)
+  t && h.default.open(e.id, p.GuildSettingsSections.DISCOVERY)
 }
 
 function b(e, t) {
-  null != t && ((0, p.isTierUnlocked)(t, T.BoostedGuildTiers.TIER_1) ? _.default.open(t.id, T.GuildSettingsSections.OVERVIEW, {
-    section: T.AnalyticsSections.PREMIUM_GUILD_INVITE_SPLASH
-  }, T.GuildSettingsSubsections.INVITE) : (0, f.default)({
+  null != t && ((0, T.isTierUnlocked)(t, p.BoostedGuildTiers.TIER_1) ? h.default.open(t.id, p.GuildSettingsSections.OVERVIEW, {
+    section: p.AnalyticsSections.PREMIUM_GUILD_INVITE_SPLASH
+  }, p.GuildSettingsSubsections.INVITE) : (0, f.default)({
     analyticsLocations: e,
-    analyticsSourceLocation: T.AnalyticsSections.PREMIUM_GUILD_INVITE_SPLASH,
+    analyticsSourceLocation: p.AnalyticsSections.PREMIUM_GUILD_INVITE_SPLASH,
     guild: t,
     perks: (0, A.guildInviteUpsellPerks)()
   }))
@@ -77,21 +77,21 @@ t.default = s.memo(function(e) {
   } = e, {
     analyticsLocations: f
   } = (0, o.default)(), A = () => {
-    I.default.track(T.AnalyticEvents.TOOLTIP_VIEWED, {
+    I.default.track(p.AnalyticEvents.TOOLTIP_VIEWED, {
       type: N.PremiumUpsellTypes.PREMIUM_PROGRESS_BAR,
       location: {
-        page: T.AnalyticsPages.GUILD_CHANNEL
+        page: p.AnalyticsPages.GUILD_CHANNEL
       }
     })
   }, j = () => {
-    I.default.track(T.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    I.default.track(p.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: N.PremiumUpsellTypes.INVITE_SPLASH_UPSELL,
       location: {
-        page: T.AnalyticsPages.GUILD_CHANNEL
+        page: p.AnalyticsPages.GUILD_CHANNEL
       },
       location_stack: f
     })
-  }, G = (0, i.isThemeDark)(n) ? P : M, [w, k] = (0, c.useSelectedDismissibleContent)(t, g.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
+  }, G = (0, i.isThemeDark)(n) ? M : P, [w, k] = (0, c.useSelectedDismissibleContent)(t, g.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
   return (0, a.jsx)(a.Fragment, {
     children: (() => {
       switch (w) {
@@ -159,10 +159,10 @@ t.default = s.memo(function(e) {
             renderGuildHeaderDropdownButton: r
           });
         case l.DismissibleContent.GUILD_HEADER_INVITE_SPLASH:
-          let e = (0, p.isTierUnlocked)(s, T.BoostedGuildTiers.TIER_1) ? v.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT.format() : v.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT_LOCKED.format({
-              boostCount: (0, p.getNumberOfAppliedBoostsNeededForTier)(s, T.BoostedGuildTiers.TIER_1)
+          let e = (0, T.isTierUnlocked)(s, p.BoostedGuildTiers.TIER_1) ? v.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT.format() : v.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT_LOCKED.format({
+              boostCount: (0, T.getNumberOfAppliedBoostsNeededForTier)(s, p.BoostedGuildTiers.TIER_1)
             }),
-            t = (0, p.isTierUnlocked)(s, T.BoostedGuildTiers.TIER_1) ? v.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : v.default.Messages.LEARN_MORE;
+            t = (0, T.isTierUnlocked)(s, p.BoostedGuildTiers.TIER_1) ? v.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : v.default.Messages.LEARN_MORE;
           return (0, a.jsx)(U, {
             renderPopout: (0, a.jsx)(S.default, {
               onComponentMount: j,
@@ -213,7 +213,7 @@ t.default = s.memo(function(e) {
                 className: O.fullWidthImage
               }),
               onClick: () => {
-                _.default.open(s.id, T.GuildSettingsSections.ROLES), _.default.selectRole(s.getEveryoneRoleId(), v.default.Messages.USE_SOUNDBOARD)
+                h.default.open(s.id, p.GuildSettingsSections.ROLES), h.default.selectRole(s.getEveryoneRoleId(), v.default.Messages.USE_SOUNDBOARD)
               },
               markAsDismissed: k
             }),
@@ -229,7 +229,7 @@ t.default = s.memo(function(e) {
           });
         case l.DismissibleContent.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL:
           return (0, a.jsx)(U, {
-            renderPopout: (0, a.jsx)(h.default, {
+            renderPopout: (0, a.jsx)(_.default, {
               guildId: s.id,
               markAsDismissed: k
             }),

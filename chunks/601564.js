@@ -21,8 +21,8 @@ var a = s("735250"),
   R = s("628123"),
   S = s("703656"),
   m = s("108427"),
-  A = s("911314"),
-  N = s("429899"),
+  N = s("911314"),
+  A = s("429899"),
   p = s("843445"),
   g = s("981631"),
   C = s("689938"),
@@ -97,7 +97,7 @@ class L extends i.PureComponent {
       return (0, a.jsx)(d.default, {
         page: g.AnalyticsPages.STORE_LISTING,
         root: !0,
-        children: (0, a.jsx)(N.default, {
+        children: (0, a.jsx)(A.default, {
           skuId: t,
           applicationId: s,
           slug: i,
@@ -113,7 +113,7 @@ class L extends i.PureComponent {
         render: () => (0, a.jsx)(d.default, {
           page: g.AnalyticsPages.STORE_DIRECTORY_HOME,
           root: !0,
-          children: (0, a.jsx)(A.default, {})
+          children: (0, a.jsx)(N.default, {})
         })
       }), (0, a.jsx)(n.Route, {
         path: g.Routes.APPLICATION_STORE_LISTING_APPLICATION(":applicationId", ":slug"),

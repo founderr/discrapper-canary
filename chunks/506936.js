@@ -25,13 +25,13 @@ t.default = e => {
     guildId: l,
     closePopout: a
   } = e, E = (0, h.useUID)(), {
-    notClaimed: S,
-    notEmailVerified: _,
+    notClaimed: _,
+    notEmailVerified: S,
     notPhoneVerified: I,
     newAccount: N,
     newMember: T
   } = (0, i.useStateFromStores)([c.default], () => c.default.getCheck(l), [l]), A = 0 === t ? m.default.Messages.GUILD_VERIFICATION_VOICE_HEADER : null, L = null, v = null;
-  return (0 === t && (S ? (L = m.default.Messages.GUILD_VERIFICATION_VOICE_NOT_CLAIMED, v = m.default.Messages.CLAIM_ACCOUNT) : I ? (L = m.default.Messages.GUILD_VERIFICATION_VOICE_NOT_PHONE_VERIFIED, v = m.default.Messages.VERIFY_PHONE) : _ ? (L = m.default.Messages.GUILD_VERIFICATION_VOICE_NOT_VERIFIED, v = m.default.Messages.RESEND_VERIFICATION_EMAIL) : T ? (L = m.default.Messages.GUILD_VERIFICATION_VOICE_MEMBER_AGE.format({
+  return (0 === t && (_ ? (L = m.default.Messages.GUILD_VERIFICATION_VOICE_NOT_CLAIMED, v = m.default.Messages.CLAIM_ACCOUNT) : I ? (L = m.default.Messages.GUILD_VERIFICATION_VOICE_NOT_PHONE_VERIFIED, v = m.default.Messages.VERIFY_PHONE) : S ? (L = m.default.Messages.GUILD_VERIFICATION_VOICE_NOT_VERIFIED, v = m.default.Messages.RESEND_VERIFICATION_EMAIL) : T ? (L = m.default.Messages.GUILD_VERIFICATION_VOICE_MEMBER_AGE.format({
     min: p.VerificationCriteria.MEMBER_AGE
   }), v = m.default.Messages.OKAY) : N && (L = m.default.Messages.GUILD_VERIFICATION_VOICE_ACCOUNT_AGE.format({
     min: p.VerificationCriteria.ACCOUNT_AGE
@@ -56,7 +56,7 @@ t.default = e => {
         className: g.buttonContainer,
         children: [null != v ? (0, s.jsx)(r.Button, {
           onClick: () => {
-            S ? u.openClaimAccountModal() : I ? (0, r.openModalLazy)(async () => {
+            _ ? u.openClaimAccountModal() : I ? (0, r.openModalLazy)(async () => {
               let {
                 default: e
               } = await Promise.all([n.e("49237"), n.e("99387"), n.e("76540"), n.e("7954")]).then(n.bind(n, "607018"));
@@ -66,7 +66,7 @@ t.default = e => {
               })
             }, {
               modalKey: C.PHONE_VERIFICATION_MODAL_KEY
-            }) : _ && (o.default.verifyResend(), (0, r.openModal)(e => {
+            }) : S && (o.default.verifyResend(), (0, r.openModal)(e => {
               var t;
               return (0, s.jsx)(r.ConfirmModal, {
                 header: m.default.Messages.VERIFICATION_EMAIL_TITLE,
@@ -84,7 +84,7 @@ t.default = e => {
           },
           className: g.primaryButton,
           children: v
-        }) : null, S || I || _ ? (0, s.jsx)(r.Button, {
+        }) : null, _ || I || S ? (0, s.jsx)(r.Button, {
           onClick: a,
           look: r.Button.Looks.BLANK,
           className: g.cancel,

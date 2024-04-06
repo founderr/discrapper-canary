@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return _
   }
 }), n("47120"), n("773603");
 var s = n("735250"),
@@ -15,17 +15,17 @@ var s = n("735250"),
   c = n("703656"),
   f = n("314897"),
   h = n("781428"),
-  g = n("981631"),
-  E = n("176505");
+  E = n("981631"),
+  g = n("176505");
 
-function m(e) {
+function _(e) {
   let t = a.useCallback(t => {
       if (function(e) {
           var t;
           let n = (0, r.matchPath)(e, {
-            path: g.Routes.CHANNEL(":guildId", ":channelId")
+            path: E.Routes.CHANNEL(":guildId", ":channelId")
           });
-          return (null == n ? void 0 : null === (t = n.params) || void 0 === t ? void 0 : t.channelId) === E.StaticChannelRoute.ROLE_SUBSCRIPTIONS || !1
+          return (null == n ? void 0 : null === (t = n.params) || void 0 === t ? void 0 : t.channelId) === g.StaticChannelRoute.ROLE_SUBSCRIPTIONS || !1
         }(t)) c.replaceWith(t);
       else {
         var n;
@@ -34,18 +34,18 @@ function m(e) {
     }, [e.transitionTo]),
     {
       isAuthenticated: n,
-      loginStatus: m
+      loginStatus: _
     } = (0, l.useStateFromStoresObject)([f.default], () => ({
       isAuthenticated: f.default.isAuthenticated(),
       loginStatus: f.default.getLoginStatus()
     })),
     {
-      location: p,
-      redirectTo: _
+      location: m,
+      redirectTo: p
     } = e,
-    [S, R] = a.useState(n);
+    [T, A] = a.useState(n);
 
-  function A(e) {
+  function I(e) {
     let {
       handoffKey: t,
       handoffToken: n,
@@ -55,30 +55,30 @@ function m(e) {
       handoffKey: t,
       handoffToken: n,
       handoffSource: s
-    }), R(!1)
+    }), A(!1)
   }
   return (a.useEffect(() => {
-    if (null != p) {
+    if (null != m) {
       let {
         handoff_key: e,
         handoff_token: t
-      } = (0, i.parse)(p.search);
+      } = (0, i.parse)(m.search);
       if (null != e && null != t) {
-        let n = null != _ ? (0, d.getLoginHandoffSourceFromRedirectTo)(_) : void 0;
-        S ? o.default.logout(null).finally(() => {
-          A({
+        let n = null != p ? (0, d.getLoginHandoffSourceFromRedirectTo)(p) : void 0;
+        T ? o.default.logout(null).finally(() => {
+          I({
             handoffKey: e,
             handoffToken: t,
             handoffSource: n
           })
-        }) : A({
+        }) : I({
           handoffKey: e,
           handoffToken: t,
           handoffSource: n
         })
       }
     }
-  }, []), S || m === g.LoginStates.LOGGING_IN) ? (0, s.jsx)(h.LoginSpinner, {}) : (0, s.jsx)(h.default, {
+  }, []), T || _ === E.LoginStates.LOGGING_IN) ? (0, s.jsx)(h.LoginSpinner, {}) : (0, s.jsx)(h.default, {
     ...e,
     transitionTo: t
   })

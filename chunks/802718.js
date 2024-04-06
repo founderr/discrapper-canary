@@ -20,9 +20,9 @@ var l = n("735250"),
   m = n("678513"),
   g = n("981631"),
   E = n("689938"),
-  S = n("478011");
+  _ = n("478011");
 
-function _(e) {
+function S(e) {
   let {
     target: t
   } = e, o = (0, s.useTreeItem)("fakedoor"), m = a.useCallback(() => {
@@ -35,7 +35,7 @@ function _(e) {
         target: t
       })
     })
-  }, [t]), _ = a.useCallback(e => {
+  }, [t]), S = a.useCallback(e => {
     (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -46,9 +46,9 @@ function _(e) {
       })
     })
   }, [t]), I = "url(".concat(t.backgroundAssetUrl, ") black top / cover no-repeat"), N = (0, l.jsxs)("div", {
-    className: S.tooltipContainer,
+    className: _.tooltipContainer,
     children: [(0, l.jsx)("div", {
-      className: S.tooltipBackground,
+      className: _.tooltipBackground,
       style: {
         background: I
       }
@@ -65,8 +65,8 @@ function _(e) {
       theme: g.ThemeTypes.DARK,
       children: (0, l.jsx)(h.default, {
         text: N,
-        tooltipClass: S.tooltip,
-        tooltipContentClass: S.tooltipContent,
+        tooltipClass: _.tooltip,
+        tooltipContentClass: _.tooltipContent,
         children: (0, l.jsx)(r.ThemeContextProvider, {
           theme: T,
           children: (0, l.jsx)(r.BlobMask, {
@@ -77,7 +77,7 @@ function _(e) {
             children: (0, l.jsx)(C.default, {
               ...o,
               onClick: m,
-              onContextMenu: _,
+              onContextMenu: S,
               children: (0, l.jsx)(i.BellIcon, {
                 color: c.default.TEXT_NORMAL
               })
@@ -97,7 +97,7 @@ function _(e) {
 
 function I() {
   let e = (0, o.useStateFromStores)([m.default], () => m.default.getActiveUserSignUp());
-  return null == e ? null : (0, l.jsx)(_, {
+  return null == e ? null : (0, l.jsx)(S, {
     target: e
   })
 }

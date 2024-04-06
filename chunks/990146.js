@@ -11,27 +11,27 @@ var a = n("735250"),
   c = n("617136"),
   f = n("57655"),
   E = n("113434"),
-  h = n("569984"),
-  _ = n("497505"),
+  _ = n("569984"),
+  h = n("497505"),
   C = n("918701"),
   m = n("874137"),
   S = n("78826"),
   I = n("789563"),
-  p = n("164164"),
-  T = n("46140"),
+  T = n("164164"),
+  p = n("46140"),
   g = n("981631"),
   A = n("311676");
 t.default = function() {
   var e, t, n;
   let l = (0, f.useIsEligibleForQuests)({
-      location: T.QuestsExperimentLocations.QUESTS_BAR
+      location: p.QuestsExperimentLocations.QUESTS_BAR
     }),
     N = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion),
-    v = (0, o.useStateFromStores)([h.default], () => (0, C.getQuestForTargetedContent)(h.default.quests, _.QuestContent.QUEST_BAR)),
+    v = (0, o.useStateFromStores)([_.default], () => (0, C.getQuestForTargetedContent)(_.default.quests, h.QuestContent.QUEST_BAR)),
     R = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()),
     O = s.useRef(-1),
     L = s.useRef(!1),
-    [P, M] = s.useState(!1),
+    [M, P] = s.useState(!1),
     [y, D] = s.useState(!1),
     [x, b] = s.useState(!1),
     [U, j] = s.useState(!0),
@@ -41,7 +41,7 @@ t.default = function() {
     B = s.useRef(F),
     H = (null == v ? void 0 : null === (t = v.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
     V = (null == v ? void 0 : null === (n = v.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
-    Y = (null == v ? void 0 : v.userStatus) != null && (0, C.isDismissed)(null == v ? void 0 : v.userStatus, _.QuestContent.QUEST_BAR),
+    Y = (null == v ? void 0 : v.userStatus) != null && (0, C.isDismissed)(null == v ? void 0 : v.userStatus, h.QuestContent.QUEST_BAR),
     W = (0, E.useIsQuestExpired)(v),
     {
       hasError: K,
@@ -52,13 +52,13 @@ t.default = function() {
       w((null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 16), D(!0)
     }, []),
     Q = s.useCallback(() => {
-      M(!0)
+      P(!0)
     }, []),
     Z = s.useCallback(() => {
-      M(!1), !L.current && !H && D(!1)
+      P(!1), !L.current && !H && D(!1)
     }, [H]),
     X = s.useCallback(() => {
-      M(!1), !H && D(!1), L.current = !1
+      P(!1), !H && D(!1), L.current = !1
     }, [H]),
     J = s.useCallback(function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
@@ -68,8 +68,8 @@ t.default = function() {
       t ? O.current = window.setTimeout(q, 75) : q()
     }, [q]),
     $ = s.useCallback(() => {
-      if (window.clearTimeout(O.current), !H && !P) !L.current && D(!1)
-    }, [P, H]),
+      if (window.clearTimeout(O.current), !H && !M) !L.current && D(!1)
+    }, [M, H]),
     ee = s.useCallback(() => {
       null != v && (0, c.trackQuestEvent)({
         questId: v.id,
@@ -144,7 +144,7 @@ t.default = function() {
   });
   return l && null != v && (en || !U || z) && !K ? (0, a.jsx)(m.QuestContentImpressionTracker, {
     questId: v.id,
-    questContent: _.QuestContent.QUEST_BAR,
+    questContent: h.QuestContent.QUEST_BAR,
     overrideVisibility: !R && en,
     children: () => (0, a.jsx)(r.animated.div, {
       "aria-hidden": !en,
@@ -186,7 +186,7 @@ t.default = function() {
           isExpansionAnimationComplete: x,
           quest: v,
           useReducedMotion: N
-        }), (0, a.jsx)(p.default, {
+        }), (0, a.jsx)(T.default, {
           className: A.content,
           onCtxMenuOpen: Q,
           onCtxMenuClose: Z,

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return E
   },
   CHANNEL_NOTICE_STORES: function() {
-    return h
+    return _
   },
   LAST_HIDDEN_CHANNEL_NOTICE: function() {
     return f
@@ -48,4 +48,4 @@ let f = "lastHiddenChannelNotice",
     type: c.ChannelNoticeTypes.LINKED_ROLES_ADMIN,
     dismissibleContentType: a.DismissibleContent.LINKED_ROLE_ADMIN_GUILD
   }],
-  h = E.map(e => e.store).filter(d.isNotNullish)
+  _ = E.map(e => e.store).filter(d.isNotNullish)

@@ -15,14 +15,14 @@ var a = n("735250"),
   c = n("442837"),
   f = n("116061"),
   E = n("481060"),
-  h = n("232567"),
-  _ = n("2052"),
+  _ = n("232567"),
+  h = n("2052"),
   C = n("393238"),
   m = n("727637"),
   S = n("420660"),
   I = n("100527"),
-  p = n("906732"),
-  T = n("521868"),
+  T = n("906732"),
+  p = n("521868"),
   g = n("299206"),
   A = n("440051"),
   N = n("734934"),
@@ -30,8 +30,8 @@ var a = n("735250"),
   R = n("785717"),
   O = n("221292"),
   L = n("318661"),
-  P = n("747074"),
-  M = n("192133"),
+  M = n("747074"),
+  P = n("192133"),
   y = n("138394"),
   D = n("131640"),
   x = n("695346"),
@@ -153,11 +153,11 @@ function $(e) {
     guildId: l,
     isApplicationStreaming: r,
     onClose: o,
-    onSelect: h,
+    onSelect: _,
     closePopout: b
-  } = e, U = (0, _.useAnalyticsContext)(), {
+  } = e, U = (0, h.useAnalyticsContext)(), {
     analyticsLocations: G
-  } = (0, p.default)(I.default.ACCOUNT_PROFILE_POPOUT), B = (0, L.default)(t.id, l), [V, $, ee, et] = (0, c.useStateFromStoresArray)([j.default], () => {
+  } = (0, T.default)(I.default.ACCOUNT_PROFILE_POPOUT), B = (0, L.default)(t.id, l), [V, $, ee, et] = (0, c.useStateFromStoresArray)([j.default], () => {
     var e;
     let n = t.id;
     return "string" != typeof n ? [void 0, void 0, K.StatusTypes.UNKNOWN, !1] : [null !== (e = j.default.findActivity(n, e => e.type !== K.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, j.default.findActivity(t.id, e => e.type === K.ActivityTypes.CUSTOM_STATUS), j.default.getStatus(n), j.default.isMobileOnline(n)]
@@ -265,13 +265,13 @@ function $(e) {
   let el = (0, N.useFocusModeEnabled)(),
     ei = ee === K.StatusTypes.DND,
     er = (0, Y.useMultiAccountMenuItems)(),
-    eo = (0, T.useCustomStatusMenuItem)(null != n ? n : void 0, Q.menuItemFocused),
+    eo = (0, p.useCustomStatusMenuItem)(null != n ? n : void 0, Q.menuItemFocused),
     eu = (0, g.default)({
       id: t.id,
       label: q.default.Messages.COPY_ID_USER,
       showIconFirst: !0
     });
-  return (0, a.jsx)(p.AnalyticsLocationProvider, {
+  return (0, a.jsx)(T.AnalyticsLocationProvider, {
     value: G,
     children: (0, a.jsx)(R.UserProfileAnalyticsProvider, {
       layout: "ACCOUNT_POPOUT",
@@ -281,7 +281,7 @@ function $(e) {
         className: Q.popoutContainer,
         children: (0, a.jsx)("div", {
           ref: ea,
-          children: (0, a.jsxs)(P.default, {
+          children: (0, a.jsxs)(M.default, {
             user: t,
             profileType: z.UserProfileTypes.POPOUT,
             children: [(0, a.jsx)(D.default, {
@@ -294,8 +294,8 @@ function $(e) {
               disableUserProfileLink: __OVERLAY__,
               isHovering: es,
               showPremiumBadgeUpsell: !1
-            }), (0, a.jsxs)(P.default.Inner, {
-              children: [(0, a.jsx)(M.default, {
+            }), (0, a.jsxs)(M.default.Inner, {
+              children: [(0, a.jsx)(P.default, {
                 activity: V,
                 customStatusActivity: $,
                 displayProfile: B,
@@ -313,7 +313,7 @@ function $(e) {
                 hideScroller: !0,
                 className: Q.menu,
                 onClose: o,
-                onSelect: h,
+                onSelect: _,
                 children: [(0, a.jsxs)(E.MenuGroup, {
                   children: [(0, a.jsx)(E.MenuItem, {
                     id: "status-picker",
@@ -409,15 +409,15 @@ function ee(e) {
     guildId: l,
     onClose: i,
     onSelect: r
-  } = e, u = (0, c.useStateFromStores)([G.default], () => G.default.getUser(t), [t]), d = (0, c.useStateFromStores)([U.default], () => U.default.getCustomStatusActivity()), [f, E] = s.useState(!1), _ = null != u ? u : n, C = (0, c.useStateFromStores)([b.default], () => null != _ && null != b.default.getAnyStreamForUser(_.id));
+  } = e, u = (0, c.useStateFromStores)([G.default], () => G.default.getUser(t), [t]), d = (0, c.useStateFromStores)([U.default], () => U.default.getCustomStatusActivity()), [f, E] = s.useState(!1), h = null != u ? u : n, C = (0, c.useStateFromStores)([b.default], () => null != h && null != b.default.getAnyStreamForUser(h.id));
   return (s.useEffect(() => {
     null == u && e();
     async function e() {
-      "string" == typeof t && (await (0, h.getUser)(t), E(!0))
+      "string" == typeof t && (await (0, _.getUser)(t), E(!0))
     }
-  }, [u, t]), null == _) ? (f && o()(null != _, "Unexpected missing user"), null) : (0, a.jsx)($, {
+  }, [u, t]), null == h) ? (f && o()(null != h, "Unexpected missing user"), null) : (0, a.jsx)($, {
     closePopout: i,
-    user: _,
+    user: h,
     customStatus: d,
     guildId: l,
     isApplicationStreaming: C,

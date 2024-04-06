@@ -20,17 +20,17 @@ let h = a.forwardRef(function(e, t) {
     tooltip: m,
     upperBadge: g,
     lowerBadge: E,
-    lowerBadgeWidth: S,
-    showPill: _ = !0,
+    lowerBadgeWidth: _,
+    showPill: S = !0,
     className: I,
     "aria-label": N,
     children: T,
     onMouseEnter: A,
     onMouseLeave: L,
     onMouseDown: v
-  } = e, x = (0, r.useTreeItem)(n), [R, y] = a.useState(!1), M = "string" == typeof m && null == N ? m : N;
+  } = e, x = (0, r.useTreeItem)(n), [R, M] = a.useState(!1), y = "string" == typeof m && null == N ? m : N;
   return (0, l.jsxs)(d.ListItem, {
-    children: [_ ? (0, l.jsx)("div", {
+    children: [S ? (0, l.jsx)("div", {
       className: f.pill,
       children: (0, l.jsx)(u.default, {
         hovered: R,
@@ -44,21 +44,21 @@ let h = a.forwardRef(function(e, t) {
         selected: C || R,
         upperBadge: g,
         lowerBadge: E,
-        lowerBadgeWidth: S,
+        lowerBadgeWidth: _,
         children: (0, l.jsx)(o.Clickable, {
           innerRef: t,
           onMouseEnter: () => {
-            null == A || A(), y(!0)
+            null == A || A(), M(!0)
           },
           onMouseLeave: () => {
-            null == L || L(), y(!1)
+            null == L || L(), M(!1)
           },
           onMouseDown: v,
           className: i()(f.circleIconButton, I, {
             [f.selected]: C || R
           }),
           onClick: s,
-          "aria-label": M,
+          "aria-label": y,
           onContextMenu: h,
           focusProps: {
             enabled: !1

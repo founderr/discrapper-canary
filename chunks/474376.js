@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useMultiAccountMenuItems: function() {
-    return T
+    return p
   }
 }), n("653041");
 var a = n("735250");
@@ -16,56 +16,56 @@ var s = n("442837"),
   c = n("759231"),
   f = n("626135"),
   E = n("51144"),
-  h = n("480387"),
-  _ = n("726745"),
+  _ = n("480387"),
+  h = n("726745"),
   C = n("251423"),
   m = n("383832"),
   S = n("981631"),
   I = n("689938"),
-  p = n("319667");
+  T = n("319667");
 
-function T() {
+function p() {
   let e = (0, s.useStateFromStores)([u.default], () => u.default.getCurrentUser()),
     t = (0, s.useStateFromStores)([o.default], () => o.default.hidePersonalInformation),
     {
       multiAccountUsers: n
     } = (0, C.useMultiAccountUsers)(),
-    T = t => {
+    p = t => {
       t !== (null == e ? void 0 : e.id) && (f.default.track(S.AnalyticEvents.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
         location: {
           section: S.AnalyticsSections.PROFILE_POPOUT
         }
-      }), h.switchAccount(t))
+      }), _.switchAccount(t))
     },
     g = n.map(n => {
       let s = new r.default(n),
         o = s.id === (null == e ? void 0 : e.id),
-        u = n.tokenStatus === _.MultiAccountTokenStatus.INVALID,
+        u = n.tokenStatus === h.MultiAccountTokenStatus.INVALID,
         f = t ? null : "#".concat(s.discriminator);
       return (0, a.jsx)(l.MenuItem, {
         id: s.id,
-        focusedClassName: p.focused,
+        focusedClassName: T.focused,
         label: e => {
           let {
             isFocused: r
           } = e;
           return (0, a.jsxs)("div", {
-            className: p.userMenuItem,
+            className: T.userMenuItem,
             children: [(0, a.jsx)(l.Avatar, {
               src: s.getAvatarURL(void 0, 40),
               size: l.AvatarSizes.SIZE_24,
               "aria-label": n.username
             }), (0, a.jsxs)("div", {
-              className: p.userMenuUsername,
+              className: T.userMenuUsername,
               children: [(0, a.jsx)(l.Text, {
-                className: p.userMenuText,
+                className: T.userMenuText,
                 variant: "text-sm/normal",
                 children: E.default.getUserTag(s, {
                   mode: "username",
                   identifiable: t ? "never" : "always"
                 })
               }), !s.isPomelo() && (0, a.jsx)(l.Text, {
-                className: p.userMenuDiscriminator,
+                className: T.userMenuDiscriminator,
                 variant: "text-sm/normal",
                 children: f
               })]
@@ -74,18 +74,18 @@ function T() {
               backgroundColor: (0, i.getColor)(r ? S.Color.BRAND_500 : S.Color.WHITE_500),
               width: 18,
               height: 18,
-              className: p.activeIcon
+              className: T.activeIcon
             }), u && (0, a.jsx)(c.default, {
               color: (0, i.getColor)(S.Color.RED_400),
               backgroundColor: (0, i.getColor)(S.Color.WHITE_500),
               width: 15,
               height: 15,
-              className: p.activeIcon
+              className: T.activeIcon
             })]
           })
         },
         action: () => {
-          u ? (0, m.default)() : T(s.id)
+          u ? (0, m.default)() : p(s.id)
         }
       }, s.id)
     });

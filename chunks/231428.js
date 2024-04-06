@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return b
+    return v
   }
 }), s("47120");
 var a, n = s("735250"),
@@ -14,15 +14,15 @@ var a, n = s("735250"),
   c = s("442837"),
   E = s("481060"),
   f = s("570140"),
-  _ = s("355467"),
-  p = s("827837"),
-  m = s("821849"),
+  m = s("355467"),
+  _ = s("827837"),
+  p = s("821849"),
   I = s("724757"),
   N = s("818035"),
   S = s("509545"),
   P = s("78839"),
-  T = s("285952"),
-  C = s("884246"),
+  C = s("285952"),
+  T = s("884246"),
   R = s("74538"),
   A = s("807160"),
   M = s("474936"),
@@ -46,7 +46,7 @@ function D(e) {
     locale: s,
     compactMode: a,
     numPages: l
-  } = e, u = i.useRef(null), [o, c] = i.useState(0), [f, p] = i.useState(null), m = t.slice(10 * o, (o + 1) * 10);
+  } = e, u = i.useRef(null), [o, c] = i.useState(0), [f, _] = i.useState(null), p = t.slice(10 * o, (o + 1) * 10);
   i.useEffect(() => {
     var e;
     null === (e = u.current) || void 0 === e || e.scrollTo({
@@ -56,7 +56,7 @@ function D(e) {
   let N = i.useCallback(e => {
       c(e);
       let s = t[t.length - 1].id;
-      e === l - 1 && f !== s && ((0, _.fetchPayments)(10, s), p(s))
+      e === l - 1 && f !== s && ((0, m.fetchPayments)(10, s), _(s))
     }, [t, l, f]),
     S = (0, I.default)("billing-history", u);
   return (0, n.jsx)(d.ListNavigatorProvider, {
@@ -67,7 +67,7 @@ function D(e) {
           ref: t,
           ...i
         } = e;
-        return (0, n.jsx)(C.default, {
+        return (0, n.jsx)(T.default, {
           className: r()(g.verticalFit, g.paginator),
           currentPageIndex: o,
           onChangePage: N,
@@ -77,7 +77,7 @@ function D(e) {
           children: (0, n.jsx)(E.AdvancedScroller, {
             className: g.bottomDivider,
             ref: u,
-            children: m.map((e, t) => (0, n.jsx)(A.default, {
+            children: p.map((e, t) => (0, n.jsx)(A.default, {
               className: r()(g.paymentRow, g.bottomDivider),
               payment: e,
               locale: s,
@@ -95,7 +95,7 @@ class U extends(a = i.PureComponent) {
   }
   componentDidMount() {
     f.default.wait(() => {
-      (0, p.fetchActivityStatistics)(), (0, _.fetchPayments)(20)
+      (0, _.fetchActivityStatistics)(), (0, m.fetchPayments)(20)
     })
   }
   renderPremiumExternalSubscription(e) {
@@ -128,7 +128,7 @@ class U extends(a = i.PureComponent) {
         className: r()(g.paymentPane, g.verticalFit),
         children: [e ? null : (0, n.jsx)("div", {
           className: r()(g.paymentRow, g.bottomDivider),
-          children: (0, n.jsxs)(T.default, {
+          children: (0, n.jsxs)(C.default, {
             className: g.paymentRowHeader,
             children: [(0, n.jsx)("div", {
               className: y.date,
@@ -162,7 +162,7 @@ function O(e) {
   return !(null == s || null == a || Object.values(M.PremiumSubscriptionSKUs).includes(s) || (0, R.isPremiumSubscriptionPlan)(a))
 }
 
-function b(e) {
+function v(e) {
   let t = (0, c.useStateFromStores)([N.default], () => N.default.getPayments()),
     s = (0, c.useStateFromStores)([P.default], () => P.default.getPremiumTypeSubscription()),
     a = i.useMemo(() => new Set(t.filter(O).map(e => {
@@ -181,7 +181,7 @@ function b(e) {
     u = i.useCallback(() => r.length === a.size, [r, a]);
   return i.useEffect(() => {
     !u() && f.default.wait(() => {
-      l.forEach(e => (0, m.fetchSubscriptionPlansForSKU)(e, void 0, void 0, !0, void 0))
+      l.forEach(e => (0, p.fetchSubscriptionPlansForSKU)(e, void 0, void 0, !0, void 0))
     })
   }, [u, l]), (0, n.jsx)(U, {
     ...e,

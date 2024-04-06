@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return K
+    return W
   }
 }), s("47120"), s("724458");
 var a = s("735250"),
@@ -21,8 +21,8 @@ var a = s("735250"),
   _ = s("776980"),
   g = s("386346"),
   h = s("641826"),
-  I = s("875667"),
-  N = s("266983"),
+  N = s("875667"),
+  I = s("266983"),
   p = s("601469"),
   C = s("488269"),
   A = s("837060"),
@@ -139,7 +139,7 @@ function B() {
         },
         size: E.ButtonSizes.SMALL,
         color: E.ButtonColors.CUSTOM,
-        children: [(0, a.jsx)(N.default, {
+        children: [(0, a.jsx)(I.default, {
           className: b.buttonIcon,
           color: E.tokens.colors.WHITE
         }), j.default.Messages.USER_SETTINGS_PACKAGES_HEADER_CTA]
@@ -183,7 +183,7 @@ function F(e) {
 let G = D.default.Millis.SECOND,
   k = 2 * D.default.Millis.SECOND;
 
-function w() {
+function H() {
   let e = (0, P.getLootboxes)(),
     [t, s, l, i, r, S, E] = (0, u.useStateFromStoresArray)([g.default], () => [g.default.userDataFetchState, g.default.globalOpenedCountFetchState, g.default.openedItems, g.default.globalOpenedCount, g.default.lastGlobalOpenedCount, g.default.globalOpenedCountFetchTime, g.default.nextGlobalOpenedCountFetchTime]),
     T = n.useMemo(() => Object.values(l).reduce((e, t) => e + t, 0), [l]),
@@ -195,13 +195,13 @@ function w() {
     }, [S, E]),
     [m] = n.useState(() => new c.Timeout),
     [_, p] = n.useState(f()),
-    C = Math.floor((0, I.default)(r, i, _));
+    C = Math.floor((0, N.default)(r, i, _));
   return n.useEffect(() => (m.start((0, h.randomBetween)(G, k), () => {
     _ < 1 && p(f())
   }), () => m.stop()), [r, i, S, m, _, E, f]), (0, a.jsxs)("div", {
     className: b.stats,
     children: [(0, a.jsx)(F, {
-      icon: N.default,
+      icon: I.default,
       text: j.default.Messages.PACKAGES_PACKAGES_OPENED,
       count: T,
       fetchState: t
@@ -222,7 +222,7 @@ function w() {
   })
 }
 
-function H() {
+function w() {
   let [e, t] = n.useState(!1), [l, i] = (0, u.useStateFromStoresArray)([g.default], () => [g.default.openedItems, g.default.redeemedPrize]), r = (0, P.getLootboxes)(), o = n.useMemo(() => Object.keys(l).length === Object.keys(r).length && !Object.values(l).some(e => 0 === e), [l, r]), d = async () => {
     t(!0);
     try {
@@ -301,7 +301,7 @@ function Y() {
   })
 }
 
-function K() {
+function W() {
   let {
     analyticsLocations: e
   } = (0, m.default)(f.default.PACKAGES), t = (0, u.useStateFromStores)([g.default], () => g.default.nextGlobalOpenedCountFetchTime), [s] = n.useState(() => new c.Timeout);
@@ -312,6 +312,6 @@ function K() {
     return s.start(e, _.fetchCountStat), () => s.stop()
   }, [t, s]), (0, a.jsxs)(m.AnalyticsLocationProvider, {
     value: e,
-    children: [(0, a.jsx)(B, {}), (0, a.jsx)(w, {}), (0, a.jsx)(H, {}), (0, a.jsx)(V, {}), (0, a.jsx)(Y, {})]
+    children: [(0, a.jsx)(B, {}), (0, a.jsx)(H, {}), (0, a.jsx)(w, {}), (0, a.jsx)(V, {}), (0, a.jsx)(Y, {})]
   })
 }

@@ -22,7 +22,7 @@ function E(e, t) {
   let n = f[e];
   return !(null == n || n.has(t)) && (f[e] = new Set(n.add(t)), !0)
 }
-class h extends(a = s.default.PersistedStore) {
+class _ extends(a = s.default.PersistedStore) {
   initialize(e) {
     this.waitFor(i.default, o.default), f = {}, null != e && u.default.keys(e).forEach(t => {
       let n = e[t];
@@ -40,7 +40,7 @@ class h extends(a = s.default.PersistedStore) {
     return f
   }
 }
-c(h, "displayName", "GuildProgressStore"), c(h, "persistKey", "GuildProgressStore"), new h(l.default, {
+c(_, "displayName", "GuildProgressStore"), c(_, "persistKey", "GuildProgressStore"), new _(l.default, {
   CONNECTION_OPEN: function() {
     let e = [];
     u.default.keys(f).forEach(t => {

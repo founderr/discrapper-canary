@@ -12,8 +12,8 @@ var s = n("481060"),
   c = n("689938"),
   f = n("553196"),
   E = n("633488"),
-  h = n("361848");
-let _ = () => {
+  _ = n("361848");
+let h = () => {
   let e = (0, o.useUserForLinkStatus)(d.UserLinkStatus.ACTIVE),
     t = (0, r.default)(),
     {
@@ -54,11 +54,11 @@ t.default = () => {
             children: n
           })]
         })
-      }), (0, a.jsx)(_, {})]
+      }), (0, a.jsx)(h, {})]
     }), (0, a.jsx)("div", {
       className: f.headerImage,
       children: (0, a.jsx)("img", {
-        src: e ? E : h,
+        src: e ? E : _,
         alt: c.default.Messages.FAMILY_CENTER_ACTIVITY_BANNER_IMAGE_ALT
       })
     })]

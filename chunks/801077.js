@@ -12,8 +12,8 @@ var l, a, s, i, r = n("392711"),
   m = n("420660"),
   g = n("728345"),
   E = n("812206"),
-  S = n("710845"),
-  _ = n("38618"),
+  _ = n("710845"),
+  S = n("38618"),
   I = n("656063"),
   N = n("761282"),
   T = n("789407"),
@@ -22,8 +22,8 @@ var l, a, s, i, r = n("392711"),
   v = n("199902"),
   x = n("592125"),
   R = n("480294"),
-  y = n("831506"),
-  M = n("731290"),
+  M = n("831506"),
+  y = n("731290"),
   O = n("430824"),
   D = n("496675"),
   b = n("158776"),
@@ -40,9 +40,9 @@ let B = !1,
   Y = {},
   K = {},
   W = new Set,
-  Z = new Set;
+  z = new Set;
 
-function z() {
+function Z() {
   let e = j.default.getFriendIDs();
   return R.default.hasConsented(F.Consents.PERSONALIZATION) ? new Set([...G.default.getUserAffinitiesUserIds(), ...e]) : new Set(e)
 }
@@ -70,7 +70,7 @@ function q(e) {
 }
 
 function J(e) {
-  !Z.has(e) && W.add(e)
+  !z.has(e) && W.add(e)
 }
 
 function $(e) {
@@ -97,7 +97,7 @@ function en(e, t, n) {
     C = null !== (l = null == p ? void 0 : p.nsfwAllowed) && void 0 !== l && l,
     m = t.map(e => e.id),
     g = t.filter(t => e.has(t.id)),
-    _ = !1,
+    S = !1,
     R = [],
     j = new Set,
     G = !1,
@@ -105,7 +105,7 @@ function en(e, t, n) {
   for (let e of t) {
     let n = v.default.getAnyStreamForUser(e.id),
       l = x.default.getChannel(null == n ? void 0 : n.channelId);
-    if ((null == l ? void 0 : l.isNSFW()) && (!C || !M.default.didAgree(null == l ? void 0 : l.getGuildId()))) continue;
+    if ((null == l ? void 0 : l.isNSFW()) && (!C || !y.default.didAgree(null == l ? void 0 : l.getGuildId()))) continue;
     let r = X(e.id);
     if (null != n && F.push({
         stream: n,
@@ -117,7 +117,7 @@ function en(e, t, n) {
     G = u === T.SPOTIFY_APPLICATION_ID;
     let d = function(e) {
         let t = E.default.getApplication(e);
-        return null != t ? t : "string" != typeof e ? (new S.default("NowPlayingViewStore").error("Unknown type for applicationId: ".concat(typeof e, ", value: ").concat(e), {
+        return null != t ? t : "string" != typeof e ? (new _.default("NowPlayingViewStore").error("Unknown type for applicationId: ".concat(typeof e, ", value: ").concat(e), {
           tags: {
             source: "ACTIVITIES"
           }
@@ -143,14 +143,14 @@ function en(e, t, n) {
     let g = null != r ? $(r) : null;
     (null == g || g.id !== d.id) && (r = null);
     let b = [];
-    b = null != r && null != r.party && null != r.party.id ? Array.from(null !== (i = y.default.getParty(r.party.id)) && void 0 !== i ? i : []).reduce((e, t) => {
+    b = null != r && null != r.party && null != r.party.id ? Array.from(null !== (i = M.default.getParty(r.party.id)) && void 0 !== i ? i : []).reduce((e, t) => {
       let n = U.default.getUser(t);
       return null != n && e.push(n), e
     }, []) : t.filter(e => {
       let t = X(e.id),
         n = null != t ? $(t) : null;
       return null != n && n.id === d.id
-    }), (b = o().orderBy(b, [et], ["desc"])).length !== t.length && (_ = !0), j.add(d.id), R.push({
+    }), (b = o().orderBy(b, [et], ["desc"])).length !== t.length && (S = !0), j.add(d.id), R.push({
       game: d,
       activity: r,
       activityUser: e,
@@ -191,7 +191,7 @@ function en(e, t, n) {
       status: b.default.getStatus(e.id)
     })),
     partiedMembers: t,
-    showPlayingMembers: _,
+    showPlayingMembers: S,
     guildContext: d,
     currentActivities: (r = R, u = e => {
       var t;
@@ -202,17 +202,17 @@ function en(e, t, n) {
 }
 
 function el() {
-  return B && _.default.isConnected()
+  return B && S.default.isConnected()
 }
 let ea = o().throttle(() => {
   ! function() {
     var e;
     if (!el()) return;
     W.clear(), k = (H = (function(e) {
-      let t = z(),
+      let t = Z(),
         n = en.bind(null, t);
       return o()(e).mapValues(n)
-    })((e = Array.from(z()).reduce((e, t) => {
+    })((e = Array.from(Z()).reduce((e, t) => {
       let n = U.default.getUser(t);
       return null != n && !n.bot && e.push(n), e
     }, []), o()(e).groupBy(e => {
@@ -226,7 +226,7 @@ let ea = o().throttle(() => {
     })), ! function() {
       if (W.size > 0) {
         let e = Array.from(W);
-        g.default.fetchApplications(e), e.forEach(e => Z.add(e)), W.clear()
+        g.default.fetchApplications(e), e.forEach(e => z.add(e)), W.clear()
       }
     }(), V = !0
   }(), er.emitChange()
@@ -237,7 +237,7 @@ function es() {
 }
 class ei extends(l = u.default.Store) {
   initialize() {
-    this.syncWith([U.default, E.default, b.default, y.default, P.default, v.default, j.default, R.default, G.default], es), this.waitFor(_.default, O.default, E.default, U.default, G.default)
+    this.syncWith([U.default, E.default, b.default, M.default, P.default, v.default, j.default, R.default, G.default], es), this.waitFor(S.default, O.default, E.default, U.default, G.default)
   }
   get currentActivityParties() {
     return H

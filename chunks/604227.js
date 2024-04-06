@@ -17,8 +17,8 @@ var n = s("525654"),
 function c() {
   var e, t, s, n, c;
   let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-    E = "282261",
-    T = (e = "54f0f91fc618dde269b6134d40018f0d327afcfa", e.substring(0, 7)),
+    E = "282317",
+    T = (e = "295fc92ac6121e3950469a1ef228ff262e8514cd", e.substring(0, 7)),
     f = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
     m = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
     _ = null === r.default || void 0 === r.default ? void 0 : null === (n = (c = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(c),

@@ -16,8 +16,8 @@ var l = n("735250"),
   m = n("979651"),
   g = n("938475"),
   E = n("514342"),
-  S = n("714794"),
-  _ = n("135724"),
+  _ = n("714794"),
+  S = n("135724"),
   I = n("25601"),
   N = n("207055"),
   T = n("981631"),
@@ -27,7 +27,7 @@ var l = n("735250"),
   x = n("697908"),
   R = n("651483");
 
-function y(e) {
+function M(e) {
   let {
     style: t,
     withGuildIcon: n
@@ -53,7 +53,7 @@ t.default = a.memo(function(e) {
     thread: t,
     isSelectedChannel: s,
     isSelectedVoice: R,
-    isLast: M,
+    isLast: y,
     withGuildIcon: O
   } = e, D = (0, o.useStateFromStores)([g.default], () => g.default.getVoiceStatesForChannel(t), [t]), b = (0, o.useStateFromStores)([m.default], () => m.default.hasVideo(t.id)), {
     unread: j,
@@ -92,9 +92,9 @@ t.default = a.memo(function(e) {
     className: i()(v.containerDefault, {
       [v.selected]: s
     }),
-    children: [(0, l.jsx)(y, {
+    children: [(0, l.jsx)(M, {
       withGuildIcon: O
-    }), M ? null : (0, l.jsx)(y, {
+    }), y ? null : (0, l.jsx)(M, {
       withGuildIcon: O,
       style: {
         transform: "rotateX(180deg) translateY(-9px)"
@@ -135,11 +135,11 @@ t.default = a.memo(function(e) {
               children: t.name
             }), (0, l.jsxs)("div", {
               className: x.children,
-              children: [B > 0 && t.userLimit > 0 ? (0, l.jsx)(_.default, {
+              children: [B > 0 && t.userLimit > 0 ? (0, l.jsx)(S.default, {
                 userCount: B,
                 video: b,
                 channel: t
-              }) : null, (0, S.default)(G) ? (0, l.jsx)(I.default, {
+              }) : null, (0, _.default)(G) ? (0, l.jsx)(I.default, {
                 mentionsCount: G
               }) : null]
             })]

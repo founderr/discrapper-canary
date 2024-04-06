@@ -17,8 +17,8 @@ var a = s("735250"),
   _ = s("305342"),
   g = s("333867"),
   h = s("963249"),
-  I = s("87484"),
-  N = s("197115"),
+  N = s("87484"),
+  I = s("197115"),
   p = s("911367"),
   C = s("430824"),
   A = s("78839"),
@@ -59,9 +59,9 @@ t.default = function() {
     {
       analyticsLocations: k
     } = (0, S.default)(c.default.PAYMENT_FLOW_TEST_PAGE),
-    [w, H] = n.useState(""),
+    [H, w] = n.useState(""),
     [V, Y] = n.useState(O.EMPTY_STRING_SNOWFLAKE_ID),
-    [K, W] = n.useState(""),
+    [W, K] = n.useState(""),
     [z, Q] = n.useState(O.EMPTY_STRING_SNOWFLAKE_ID),
     [Z, q] = n.useState(O.EMPTY_STRING_SNOWFLAKE_ID);
   return (0, a.jsx)(S.AnalyticsLocationProvider, {
@@ -89,7 +89,7 @@ t.default = function() {
             label: "None"
           }],
           onChange: e => t(e)
-        }), (0, a.jsx)(N.default, {
+        }), (0, a.jsx)(I.default, {
           subscriptionTier: e,
           isGift: !0,
           premiumModalAnalyticsLocation: {}
@@ -257,15 +257,15 @@ t.default = function() {
         className: R.formItem,
         children: [(0, a.jsx)(r.TextInput, {
           placeholder: "Application Id",
-          value: w,
-          onChange: H
+          value: H,
+          onChange: w
         }), (0, a.jsx)(r.TextInput, {
           placeholder: "Sku Id",
           value: V,
           onChange: e => Y(e)
         }), (0, a.jsx)(r.Button, {
           onClick: () => (0, u.openIAPPurchaseModal)({
-            applicationId: w,
+            applicationId: H,
             skuId: V,
             openPremiumPaymentModal: () => !0,
             analyticsLocations: [],
@@ -284,15 +284,15 @@ t.default = function() {
         className: R.formItem,
         children: [(0, a.jsx)(r.TextInput, {
           placeholder: "Application Id",
-          value: K,
-          onChange: W
+          value: W,
+          onChange: K
         }), (0, a.jsx)(r.TextInput, {
           placeholder: "SKU ID",
           value: z,
           onChange: e => Q(e)
         }), (0, a.jsx)(r.Button, {
-          onClick: () => (0, I.default)({
-            applicationId: K,
+          onClick: () => (0, N.default)({
+            applicationId: W,
             skuId: z,
             analyticsLocations: k
           }),

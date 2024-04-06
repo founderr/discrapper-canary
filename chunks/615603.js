@@ -17,8 +17,8 @@ var a = s("735250"),
   _ = s("283029"),
   g = s("357956"),
   h = s("275909"),
-  I = s("981631"),
-  N = s("735825"),
+  N = s("981631"),
+  I = s("735825"),
   p = s("689938"),
   C = s("712968");
 
@@ -126,13 +126,13 @@ t.default = function(e) {
     return e
   }, [B, R]), G = null != v, k = n.useMemo(() => L.find(e => e.isAvailable()), [L]);
   if (0 === L.length) return null;
-  let w = L.length;
-  return t = y ? 1 === w && G ? p.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE : p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_INCLUDED_WITH_SUBSCRIPTION.format({
-    numUnappliedGuildBoostSlots: w
+  let H = L.length;
+  return t = y ? 1 === H && G ? p.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE : p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_INCLUDED_WITH_SUBSCRIPTION.format({
+    numUnappliedGuildBoostSlots: H
   }) : p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_V2.format({
-    numUnappliedGuildBoostSlots: w
-  }), m.default.isPremium(M) ? l = y && 1 === w && G ? v.skuId === N.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH ? p.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT : p.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT : p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION.format({
-    numUnappliedGuildBoostSlots: w,
+    numUnappliedGuildBoostSlots: H
+  }), m.default.isPremium(M) ? l = y && 1 === H && G ? v.skuId === I.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH ? p.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT : p.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT : p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION.format({
+    numUnappliedGuildBoostSlots: H,
     learnMoreHook: (e, t) => (0, a.jsx)(o.Clickable, {
       className: C.headerLearnMoreLink,
       tag: "span",
@@ -142,7 +142,7 @@ t.default = function(e) {
       children: e
     }, t)
   }) : p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING.format({
-    numUnappliedGuildBoostSlots: w
+    numUnappliedGuildBoostSlots: H
   }), (0, a.jsxs)("div", {
     className: C.wrapper,
     children: [G && (0, a.jsxs)("div", {
@@ -198,7 +198,7 @@ t.default = function(e) {
                   return s => (0, a.jsx)(t, {
                     ...s,
                     guildBoostSlots: [e],
-                    locationSection: I.AnalyticsSections.SETTINGS_PREMIUM
+                    locationSection: N.AnalyticsSections.SETTINGS_PREMIUM
                   })
                 })
               } : void 0,

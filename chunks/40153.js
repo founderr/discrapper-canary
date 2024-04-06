@@ -54,7 +54,7 @@ function E(e, t) {
   }
 }
 
-function S(e) {
+function _(e) {
   let {
     name: t,
     targetNode: n,
@@ -78,7 +78,7 @@ function S(e) {
   })
 }
 
-function _(e) {
+function S(e) {
   let {
     name: t,
     targetNode: n,
@@ -164,11 +164,11 @@ t.default = a.memo(function(e) {
   return (0, l.jsxs)("div", {
     className: m.wrapper,
     "aria-hidden": !0,
-    children: [(0, l.jsx)(S, {
+    children: [(0, l.jsx)(_, {
       name: t,
       targetNode: n,
       below: s
-    }), r ? (0, l.jsx)(_, {
+    }), r ? (0, l.jsx)(S, {
       name: t,
       targetNode: n,
       onDragOverChanged: i

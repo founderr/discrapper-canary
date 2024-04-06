@@ -15,14 +15,14 @@ var a = n("735250"),
   c = n("481060"),
   f = n("570140"),
   E = n("239091"),
-  h = n("269128"),
-  _ = n("711237"),
+  _ = n("269128"),
+  h = n("711237"),
   C = n("110924"),
   m = n("100527"),
   S = n("906732"),
   I = n("211242"),
-  p = n("536687"),
-  T = n("745837"),
+  T = n("536687"),
+  p = n("745837"),
   g = n("13228"),
   A = n("1259"),
   N = n("211644"),
@@ -30,8 +30,8 @@ var a = n("735250"),
   R = n("243778"),
   O = n("492162"),
   L = n("818634"),
-  P = n("596557"),
-  M = n("817520"),
+  M = n("596557"),
+  P = n("817520"),
   y = n("999309"),
   D = n("408987"),
   x = n("130734"),
@@ -77,8 +77,8 @@ function eE(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let eh = 64,
-  e_ = "server-settings",
+let e_ = 64,
+  eh = "server-settings",
   eC = {
     origin: {
       x: -8,
@@ -133,7 +133,7 @@ class em extends s.PureComponent {
     if (n) return (0, a.jsx)("div", {
       onClick: t => e ? null : t.stopPropagation(),
       children: (0, a.jsx)(k.default, {
-        tutorialId: e_,
+        tutorialId: eh,
         position: "bottom",
         inlineSpecs: eC,
         children: this.renderGuildHeaderDropdownButton(e)
@@ -180,7 +180,7 @@ class em extends s.PureComponent {
       bannerVisible: d,
       bannerVisibleHeight: f,
       communityInfoVisible: E
-    } = this.state, h = s || l || i;
+    } = this.state, _ = s || l || i;
     return null == t ? null : (0, a.jsx)(S.AnalyticsLocationProvider, {
       value: r,
       children: (0, a.jsx)(c.LazyPopout, {
@@ -207,7 +207,7 @@ class em extends s.PureComponent {
             guildBanner: this.getGuildBannerHash(),
             onClick: this.handleHeaderMenuToggle,
             onContextMenu: this.handleHeaderContextMenu,
-            disableBannerAnimation: h,
+            disableBannerAnimation: _,
             animationOverlayHeight: f,
             ...i,
             children: this.renderGuildHeaderNotices(n)
@@ -230,7 +230,7 @@ class em extends s.PureComponent {
       bannerVisibleHeight: s,
       controller: l
     } = this.state;
-    (e >= eh && a || e < eh && !a) && (a = !a), (e >= 88 && !t || e < 88 && t) && (t = !t), s = Math.max(88 - e, 0), n = a, (t !== this.state.renderBanner || a !== this.state.bannerVisible || s !== this.state.bannerVisibleHeight || n !== this.state.communityInfoVisible) && this.setState({
+    (e >= e_ && a || e < e_ && !a) && (a = !a), (e >= 88 && !t || e < 88 && t) && (t = !t), s = Math.max(88 - e, 0), n = a, (t !== this.state.renderBanner || a !== this.state.bannerVisible || s !== this.state.bannerVisibleHeight || n !== this.state.communityInfoVisible) && this.setState({
       renderBanner: t,
       bannerVisible: a,
       bannerVisibleHeight: s,
@@ -307,7 +307,7 @@ class em extends s.PureComponent {
               tutorialType: en.TutorialType.GAME_NIGHT
             });
           default:
-            if (t) return (0, a.jsx)(T.default, {});
+            if (t) return (0, a.jsx)(p.default, {});
             return (0, a.jsx)(a.Fragment, {})
         }
       }
@@ -429,18 +429,18 @@ class em extends s.PureComponent {
         showGuildSoundboardPermissionUpsell: c,
         showMediaChannelUpsell: f,
         showTierTemplatesUpsell: E,
-        guild: h,
-        theme: _
+        guild: _,
+        theme: h
       } = this.props;
-      if (null == h) return this.renderGuildHeaderDropdownButton(e);
+      if (null == _) return this.renderGuildHeaderDropdownButton(e);
       let C = [];
       return (o && C.push(u.DismissibleContent.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP), d && C.push(u.DismissibleContent.GUILD_HEADER_ACTIVE_THREADS_NOTICE), t && C.push(u.DismissibleContent.GUILD_HEADER_PREMIUM_GUILD_PROGRESS), n && C.push(u.DismissibleContent.GUILD_HEADER_PROGRESS_BAR_SIZE_COACH_MARK), s && C.push(u.DismissibleContent.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL), c && C.push(u.DismissibleContent.GUILD_HEADER_SOUNDBOARD_PERMISSION), i && C.push(u.DismissibleContent.GUILD_HEADER_INVITE_SPLASH), l && C.push(u.DismissibleContent.GUILD_HEADER_SERVER_DISCOVERY_TOOLTIP), r && C.push(u.DismissibleContent.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL), 0 === C.length) ? this.renderGuildHeaderDropdownButton(e) : (f && C.push(u.DismissibleContent.MEDIA_CHANNEL_UPSELL), E && C.push(u.DismissibleContent.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL), (0, a.jsx)(es.default, {
         contentTypes: C,
-        theme: _,
-        guild: h,
+        theme: h,
+        guild: _,
         renderGuildHeaderDropdownButton: () => this.renderGuildHeaderDropdownButton(e)
       }))
-    }), eE(this, "renderGuildHeaderDropdownButton", e => (0, a.jsx)(h.default, {
+    }), eE(this, "renderGuildHeaderDropdownButton", e => (0, a.jsx)(_.default, {
       open: e,
       className: ef.dropdownButton
     })), eE(this, "pinBannerOrGuildInfo", e => {
@@ -459,11 +459,11 @@ function eS(e) {
     hideSelectedChannel: l,
     selectedChannelId: r
   } = e, d = (0, o.useStateFromStores)([q.default], () => q.default.getGuild(n));
-  (0, _.useGlobalTriggerDebugging)(n);
+  (0, h.useGlobalTriggerDebugging)(n);
   let f = (0, O.default)(n),
     E = (0, o.useStateFromStores)([Y.default], () => Y.default.getGuildDimensions(n).scrollTo),
-    h = (0, o.useStateFromStores)([X.default], () => X.default.getChannelId()),
-    [T, R, D] = (0, o.useStateFromStoresArray)([Z.default], () => [Z.default.can(er.Permissions.MANAGE_GUILD, d), Z.default.can(er.Permissions.MANAGE_ROLES, d), Z.default.can(er.Permissions.MANAGE_THREADS, d)]),
+    _ = (0, o.useStateFromStores)([X.default], () => X.default.getChannelId()),
+    [p, R, D] = (0, o.useStateFromStoresArray)([Z.default], () => [Z.default.can(er.Permissions.MANAGE_GUILD, d), Z.default.can(er.Permissions.MANAGE_ROLES, d), Z.default.can(er.Permissions.MANAGE_THREADS, d)]),
     U = (0, o.useStateFromStores)([W.default], () => W.default.isUnavailable(n)),
     G = (0, o.useStateFromStores)([J.default], () => J.default.getCurrentUser()),
     k = (0, o.useStateFromStores)([H.default], () => H.default.darkSidebar ? er.ThemeTypes.DARK : H.default.theme),
@@ -482,13 +482,13 @@ function eS(e) {
   s.useEffect(() => {
     n !== ea && en(!K)
   }, [n, ea, K]);
-  let [ei, ed] = (0, N.default)(e => [eo.CHANNEL_NOTICES.some(t => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(eu.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS)]), ec = (0, p.default)(d), ef = (0, c.useModalsStore)(c.hasAnyModalOpenSelector), eE = (0, o.useStateFromStores)([Q.default], () => Q.default.hasLayers()), eh = (0, o.useStateFromStores)([F.default], () => F.default.shouldShow(e_)), eC = T && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !ee.ProcessArgs.isDisallowPopupsSet(), eS = (0, o.useStateFromStores)([z.default], () => z.default.getMemberCount(n)), eI = T && null != eS && eS >= 30 && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !ee.ProcessArgs.isDisallowPopupsSet(), ep = R && null != d && (d.hasFeature(er.GuildFeatures.COMMUNITY) || null != eS && eS > 50), eT = (0, y.default)(n), eg = (0, A.useLowerMemberCountRequirements)(n), eA = (null == d ? void 0 : d.hasFeature(er.GuildFeatures.HUB)) === !0, eN = T && (null == d ? void 0 : d.hasFeature(er.GuildFeatures.DISCOVERABLE)) === !0, ev = (0, I.useBlockedPaymentsConfig)(), eR = (T || (null == d ? void 0 : d.premiumTier) === er.BoostedGuildTiers.NONE) && !ee.ProcessArgs.isDisallowPopupsSet() && !ev, eO = (0, o.useStateFromStores)([x.default, Q.default], () => null != d && null != G && T && !Q.default.hasLayers() && x.default.shouldShowGuildTemplateDirtyTooltip(n)), eL = (0, o.useStateFromStores)([V.default], () => V.default.getChannel(r)), {
-    isPopoutOpen: eP
-  } = (0, L.useGuildHeaderPopoutStore)(), eM = null !== (t = null == d ? void 0 : d.hasFeature(er.GuildFeatures.COMMUNITY)) && void 0 !== t && t, ey = (0, o.useStateFromStores)([w.default], () => !i().isEmpty(w.default.getThreadsForGuild(n))), eD = $.default.isNewUser(G), ex = et && !eD, eb = (0, g.default)(G);
-  (0, P.default)(d);
+  let [ei, ed] = (0, N.default)(e => [eo.CHANNEL_NOTICES.some(t => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(eu.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS)]), ec = (0, T.default)(d), ef = (0, c.useModalsStore)(c.hasAnyModalOpenSelector), eE = (0, o.useStateFromStores)([Q.default], () => Q.default.hasLayers()), e_ = (0, o.useStateFromStores)([F.default], () => F.default.shouldShow(eh)), eC = p && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !ee.ProcessArgs.isDisallowPopupsSet(), eS = (0, o.useStateFromStores)([z.default], () => z.default.getMemberCount(n)), eI = p && null != eS && eS >= 30 && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !ee.ProcessArgs.isDisallowPopupsSet(), eT = R && null != d && (d.hasFeature(er.GuildFeatures.COMMUNITY) || null != eS && eS > 50), ep = (0, y.default)(n), eg = (0, A.useLowerMemberCountRequirements)(n), eA = (null == d ? void 0 : d.hasFeature(er.GuildFeatures.HUB)) === !0, eN = p && (null == d ? void 0 : d.hasFeature(er.GuildFeatures.DISCOVERABLE)) === !0, ev = (0, I.useBlockedPaymentsConfig)(), eR = (p || (null == d ? void 0 : d.premiumTier) === er.BoostedGuildTiers.NONE) && !ee.ProcessArgs.isDisallowPopupsSet() && !ev, eO = (0, o.useStateFromStores)([x.default, Q.default], () => null != d && null != G && p && !Q.default.hasLayers() && x.default.shouldShowGuildTemplateDirtyTooltip(n)), eL = (0, o.useStateFromStores)([V.default], () => V.default.getChannel(r)), {
+    isPopoutOpen: eM
+  } = (0, L.useGuildHeaderPopoutStore)(), eP = null !== (t = null == d ? void 0 : d.hasFeature(er.GuildFeatures.COMMUNITY)) && void 0 !== t && t, ey = (0, o.useStateFromStores)([w.default], () => !i().isEmpty(w.default.getThreadsForGuild(n))), eD = $.default.isNewUser(G), ex = et && !eD, eb = (0, g.default)(G);
+  (0, M.default)(d);
   let eU = (0, v.useIsDismissibleContentDismissed)(u.DismissibleContent.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
     ej = (0, j.default)(n),
-    eG = (0, M.default)(n);
+    eG = (0, P.default)(n);
   return (0, a.jsx)(em, {
     guildId: n,
     hideSelectedChannel: l,
@@ -496,7 +496,7 @@ function eS(e) {
     scrollToChannel: E,
     selectedChannelId: l ? null : r,
     selectedChannel: eL,
-    selectedVoiceChannelId: h,
+    selectedVoiceChannelId: _,
     voiceStates: f,
     isUnavailable: U,
     theme: k,
@@ -507,17 +507,17 @@ function eS(e) {
     showGuildBoostingProgressBarSizeUpsell: eI,
     showInviteSplashUpsell: eR,
     showDiscoveryLandingPageSettingsUpsell: eN,
-    showGuildHeaderTutorial: eh,
+    showGuildHeaderTutorial: e_,
     showGuildTemplateDirtyTooltip: eO,
-    showRoleSubscriptionUpsell: eT,
+    showRoleSubscriptionUpsell: ep,
     showDiscoveryTooltip: eg,
     showHubPrivacySettingsTooltip: eA,
-    showNewUnreadsBar: eM,
+    showNewUnreadsBar: eP,
     showActiveThreadsNotice: D && null != eS && eS >= 200 && ey,
-    showGuildSoundboardPermissionUpsell: ep,
+    showGuildSoundboardPermissionUpsell: eT,
     showMediaChannelUpsell: ej,
     showTierTemplatesUpsell: eG,
-    isHeaderPopoutOpen: eP,
+    isHeaderPopoutOpen: eM,
     enableStudyGroup: B,
     isGuildHeaderDismissibleTooltipShown: ed,
     canShowCoachMarkAtBottom: et,

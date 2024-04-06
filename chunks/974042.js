@@ -10,8 +10,8 @@ var a, s = n("392711"),
   c = n("199902"),
   f = n("271383"),
   E = n("430824"),
-  h = n("158776"),
-  _ = n("699516"),
+  _ = n("158776"),
+  h = n("699516"),
   C = n("594174"),
   m = n("981631");
 
@@ -32,16 +32,16 @@ function I(e) {
   }
 }
 
-function p(e) {
+function T(e) {
   return {
-    status: h.default.getStatus(e),
-    isMobile: h.default.isMobileOnline(e),
-    activities: h.default.getActivities(e),
+    status: _.default.getStatus(e),
+    isMobile: _.default.isMobileOnline(e),
+    activities: _.default.getActivities(e),
     applicationStream: c.default.getAnyStreamForUser(e)
   }
 }
 
-function T(e) {
+function p(e) {
   let t = [];
   return l()(f.default.memberOf(e)).map(E.default.getGuild).sortBy(e => null != e ? e.name.toLowerCase() : null).forEach(e => {
     null != e && t.push(e)
@@ -61,21 +61,21 @@ class g extends u.default {
 }
 class A {
   reset() {
-    let e = l().map(_.default.getRelationships(), (e, t) => new g({
+    let e = l().map(h.default.getRelationships(), (e, t) => new g({
         key: t,
         type: e,
-        nickname: _.default.getNickname(t),
+        nickname: h.default.getNickname(t),
         ...I(t),
-        ...p(t),
-        ...T(t)
+        ...T(t),
+        ...p(t)
       })),
       t = l().map(d.default.getSuggestions(), e => new g({
         key: e.key,
         type: 99,
         nickname: e.name,
         ...I(e.key),
-        ...p(e.key),
-        ...T(e.key)
+        ...T(e.key),
+        ...p(e.key)
       }));
     return new A(l().concat(e, t))
   }
@@ -136,15 +136,15 @@ let N = !0,
   R = m.FriendsSections.ONLINE,
   O = new A,
   L = !0,
-  P = !1;
+  M = !1;
 
-function M() {
+function P() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
   N && (e || R !== m.FriendsSections.ONLINE && R !== m.FriendsSections.ADD_FRIEND) && !v && (N = !1, v = !0, o.default.fetchRelationships())
 }
 
 function y() {
-  if (N = !0, L ? v = !1 : M(), O = O.reset(), P) return;
+  if (N = !0, L ? v = !1 : P(), O = O.reset(), M) return;
   let e = O.getRelationshipCounts();
   R = 0 === e[m.RelationshipTypes.FRIEND] ? 0 !== e[m.RelationshipTypes.PENDING_INCOMING] ? m.FriendsSections.PENDING : m.FriendsSections.ADD_FRIEND : m.FriendsSections.ONLINE
 }
@@ -160,13 +160,13 @@ function x(e) {
 }
 class b extends(a = i.default.Store) {
   initialize() {
-    this.waitFor(_.default, h.default, C.default, E.default, f.default, c.default, d.default), this.syncWith([_.default], D), this.syncWith([d.default], D), this.syncWith([C.default], x(I)), this.syncWith([h.default, c.default], x(p)), y()
+    this.waitFor(h.default, _.default, C.default, E.default, f.default, c.default, d.default), this.syncWith([h.default], D), this.syncWith([d.default], D), this.syncWith([C.default], x(I)), this.syncWith([_.default, c.default], x(T)), y()
   }
   getState() {
     return {
       fetching: v,
       section: R,
-      pendingCount: _.default.getPendingCount(),
+      pendingCount: h.default.getPendingCount(),
       rows: O
     }
   }
@@ -176,7 +176,7 @@ S(b, "displayName", "FriendsStore"), t.default = new b(r.default, {
     y()
   },
   FRIENDS_SET_SECTION: function(e) {
-    R = e.section, M()
+    R = e.section, P()
   },
   CHANNEL_SELECT: function(e) {
     let {
@@ -197,6 +197,6 @@ S(b, "displayName", "FriendsStore"), t.default = new b(r.default, {
     return L = t !== m.DrawerTabTypes.FRIENDS, D(), !L
   },
   FRIENDS_SET_INITIAL_SECTION: function(e) {
-    R = e.section, P = !0
+    R = e.section, M = !0
   }
 })

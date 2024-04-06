@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   ACTIVITY_ENCOURAGES_HW_ACCELERATION: function() {
-    return h
+    return _
   },
   default: function() {
-    return _
+    return h
   }
 }), n("47120");
 var a = n("735250"),
@@ -18,32 +18,32 @@ var a = n("735250"),
   c = n("981631"),
   f = n("689938"),
   E = n("381968");
-let h = "Activity Encourages Hardware Acceleration";
+let _ = "Activity Encourages Hardware Acceleration";
 
-function _(e) {
+function h(e) {
   var t;
   let {
     applicationId: n,
-    ..._
+    ...h
   } = e, [C, m] = s.useState(!1), [S] = (0, r.default)([n]), I = null !== (t = null == S ? void 0 : S.name) && void 0 !== t ? t : "This Activity";
   s.useEffect(() => {
     u.default.track(c.AnalyticEvents.OPEN_MODAL, {
-      type: h
+      type: _
     })
   }, []);
-  let p = () => {
+  let T = () => {
     let e = "temporary";
     C && (e = "permanent", i.default.updatedUnsyncedSettings({
       disableActivityHardwareAccelerationPrompt: !0
     })), u.default.track(c.AnalyticEvents.MODAL_DISMISSED, {
-      type: h,
+      type: _,
       dismiss_type: e
-    }), _.onClose()
+    }), h.onClose()
   };
   return (0, a.jsxs)(l.ModalRoot, {
     className: E.root,
     "aria-label": f.default.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_TITLE,
-    ..._,
+    ...h,
     children: [(0, a.jsxs)(l.ModalHeader, {
       separator: !1,
       children: [(0, a.jsx)(l.Text, {
@@ -51,7 +51,7 @@ function _(e) {
         variant: "text-lg/normal",
         children: f.default.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_TITLE
       }), (0, a.jsx)(l.ModalCloseButton, {
-        onClick: p,
+        onClick: T,
         className: E.closeButton
       })]
     }), (0, a.jsx)(l.ModalContent, {
@@ -77,7 +77,7 @@ function _(e) {
         })
       }), (0, a.jsx)(l.Button, {
         color: l.Button.Colors.PRIMARY,
-        onClick: p,
+        onClick: T,
         children: f.default.Messages.ACTIVITY_HARDWARE_ACCELERATION_NO_THANKS
       }), (0, a.jsx)(l.Button, {
         color: l.Button.Colors.BRAND,

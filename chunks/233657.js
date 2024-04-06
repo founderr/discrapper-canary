@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return S
   }
 });
 var l = n("735250");
@@ -22,7 +22,7 @@ var a = n("924826"),
   g = n("689938"),
   E = n("697908");
 
-function S(e) {
+function _(e) {
   let {
     selected: t,
     showUnread: n,
@@ -51,7 +51,7 @@ function S(e) {
   })
 }
 
-function _(e) {
+function S(e) {
   let {
     guild: t,
     selected: a
@@ -73,11 +73,11 @@ function _(e) {
       })
     }), (0, u.markDismissibleContentAsDismissed)(i.DismissibleContent.GUILD_HEADER_EVENT_UPSELL)
   }
-  let _ = (0, d.default)(t.id),
-    I = _.length > 0 ? g.default.Messages.GUILD_EVENTS_PLURAL.format({
-      number: _.length
+  let S = (0, d.default)(t.id),
+    I = S.length > 0 ? g.default.Messages.GUILD_EVENTS_PLURAL.format({
+      number: S.length
     }) : g.default.Messages.GUILD_EVENTS;
-  return (0, l.jsx)(S, {
+  return (0, l.jsx)(_, {
     selected: a,
     showUnread: h && !C,
     onClick: E,

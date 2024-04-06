@@ -47,8 +47,8 @@ t.default = e => {
     className: s,
     variant: r = T.PerksDiscoverabilityCardSection.PERKS_DISCOVERABILITY,
     noBackground: m = !1,
-    leftAlignHeaders: A = !1,
-    showAllPerksButton: N,
+    leftAlignHeaders: N = !1,
+    showAllPerksButton: A,
     headerClassname: p,
     isFullScreen: g = !0
   } = e, C = i.useRef(null), O = (0, _.useShouldScrollToWhatsNew)(), P = (0, u.default)("perks-discoverability"), M = (0, d.useMarketingOptimizationExperiment)({
@@ -84,29 +84,29 @@ t.default = e => {
     }), (0, a.jsxs)("div", {
       ref: C,
       className: n()(R.section, {
-        [R.centerAlignSection]: !A,
-        [R.leftAlignSection]: A
+        [R.centerAlignSection]: !N,
+        [R.leftAlignSection]: N
       }, s),
       children: [(0, a.jsx)(S, {
-        showAllPerksButton: N,
-        leftAlignHeaders: A,
+        showAllPerksButton: A,
+        leftAlignHeaders: N,
         title: x.title,
         headerClassname: p
       }), !M && (0, a.jsx)(o.Text, {
         variant: "text-lg/normal",
         color: "header-primary",
         className: n()(R.subtitle, {
-          [R.subtitle]: null == N || A,
-          [R.subtitleWithButton]: null != N && !A,
-          [R.fullWidth]: h || A,
+          [R.subtitle]: null == A || N,
+          [R.subtitleWithButton]: null != A && !N,
+          [R.fullWidth]: h || N,
           [R.moreSubtitleMargin]: U,
-          [R.leftAlignSubtitle]: A,
-          [R.centerAlignSubtitle]: !A
+          [R.leftAlignSubtitle]: N,
+          [R.centerAlignSubtitle]: !N
         }),
         children: x.subtitle
-      }), !A && null != N && (0, a.jsx)("div", {
+      }), !N && null != A && (0, a.jsx)("div", {
         className: n()(R.showAllPerksButtonCenter),
-        children: N
+        children: A
       }), (0, a.jsx)("div", {
         className: n()({
           [R.cardContainer]: g,

@@ -17,8 +17,8 @@ var a = s("735250"),
   R = s("224336"),
   S = s("730749"),
   m = s("666743"),
-  A = s("115130"),
-  N = s("812206"),
+  N = s("115130"),
+  A = s("812206"),
   p = s("252618"),
   g = s("100159"),
   C = s("646288"),
@@ -444,7 +444,7 @@ class eE extends i.PureComponent {
       null != e && null != t && (0, d.openModalLazy)(async () => {
         let {
           default: i
-        } = await Promise.all([s.e("49237"), s.e("99387"), s.e("43643"), s.e("7654"), s.e("61939")]).then(s.bind(s, "560114"));
+        } = await Promise.all([s.e("49237"), s.e("99387"), s.e("43643"), s.e("7654"), s.e("92893")]).then(s.bind(s, "560114"));
         return s => (0, a.jsx)(i, {
           ...s,
           guild: t,
@@ -584,7 +584,7 @@ class eE extends i.PureComponent {
     })
   }
 }
-t.default = (0, S.default)((0, m.default)(l.default.connectStores([v.default, M.default, P.default, y.default, U.default, b.default, j.default, A.default, N.default, x.default, h.default, D.default], e => {
+t.default = (0, S.default)((0, m.default)(l.default.connectStores([v.default, M.default, P.default, y.default, U.default, b.default, j.default, N.default, A.default, x.default, h.default, D.default], e => {
   let t, s, a, {
     inputSkuId: i,
     applicationId: r,
@@ -594,15 +594,15 @@ t.default = (0, S.default)((0, m.default)(l.default.connectStores([v.default, M.
   } = e;
   if (null == r) {
     if (null == i) throw Error("Needs applicationId or skuId");
-    t = i, null != (r = null != (s = b.default.get(i)) ? s.applicationId : null) && (a = N.default.getApplication(r))
+    t = i, null != (r = null != (s = b.default.get(i)) ? s.applicationId : null) && (a = A.default.getApplication(r))
   } else if (null == i) {
     if (null == r) throw Error("Needs applicationId or skuId");
-    null != (a = N.default.getApplication(r)) && (t = a.destinationSkuId), s = null != t ? b.default.get(t) : null
+    null != (a = A.default.getApplication(r)) && (t = a.destinationSkuId), s = null != t ? b.default.get(t) : null
   }(null == s ? void 0 : s.flags) != null && (0, V.hasFlag)(s.flags, eo.SKUFlags.STICKER_PACK) && (s = null);
-  let u = null != r && (j.default.inTestModeForApplication(r) || A.default.inDevModeForApplication(r));
+  let u = null != r && (j.default.inTestModeForApplication(r) || N.default.inDevModeForApplication(r));
   return {
     skuId: t,
-    application: null != r ? N.default.getApplication(r) : null,
+    application: null != r ? A.default.getApplication(r) : null,
     isFetchingEntitlements: null != r && D.default.applicationIdsFetching.has(r),
     didFetchEntitlements: null != r && D.default.applicationIdsFetched.has(r),
     shouldFetchStatistics: l && null != r && x.default.shouldFetchStatisticsForApplication(r),

@@ -26,9 +26,9 @@ function m() {
     _ = (0, i.useEnableClips)(),
     [g] = (0, r.useGetDismissibleContent)(_ ? [n.DismissibleContent.CLIPS_SETTINGS_BETA_TAG] : []),
     h = (0, a.useStateFromStores)([d.default], () => d.default.tempShowLootboxSettings),
-    I = (0, u.useShouldShowMainLootboxEntrypoint)("user_settings"),
+    N = (0, u.useShouldShowMainLootboxEntrypoint)("user_settings"),
     {
-      allowOpeningLootboxes: N
+      allowOpeningLootboxes: I
     } = o.default.useExperiment({
       location: "user_settings"
     }, {
@@ -47,7 +47,7 @@ function m() {
     impressionSource: s,
     numOfPendingFamilyRequests: m,
     isClipsBetaTagShowing: g === n.DismissibleContent.CLIPS_SETTINGS_BETA_TAG,
-    isLootboxesTabShowing: h || I,
-    isLootboxesEnabled: N
+    isLootboxesTabShowing: h || N,
+    isLootboxesEnabled: I
   })
 }

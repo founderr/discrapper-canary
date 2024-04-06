@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   NotchBackground: function() {
-    return h.NotchBackground
+    return _.NotchBackground
   }
 }), n("47120");
 var a = n("735250"),
@@ -15,8 +15,8 @@ var a = n("735250"),
   c = n("846027"),
   f = n("131951"),
   E = n("19780"),
-  h = n("233304"),
-  _ = n("626135"),
+  _ = n("233304"),
+  h = n("626135"),
   C = n("981631"),
   m = n("689938"),
   S = n("519161");
@@ -29,7 +29,7 @@ function I(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class p extends s.PureComponent {
+class T extends s.PureComponent {
   componentDidMount() {
     this._initTimeout.start(1e3, this.setupVoiceActivity)
   }
@@ -53,7 +53,7 @@ class p extends s.PureComponent {
       isMicTesting: !0,
       isDetectingInput: !0,
       didDeafenUser: d
-    }), _.default.track(C.AnalyticEvents.MIC_TESTING_STARTED, {
+    }), h.default.track(C.AnalyticEvents.MIC_TESTING_STARTED, {
       input_device_name: t,
       input_device_volume: n,
       output_device_name: a,
@@ -75,7 +75,7 @@ class p extends s.PureComponent {
     if (!!t) n && a && e && c.default.toggleSelfDeaf(), c.default.setLoopback(!1), this.setState({
       isMicTesting: !1,
       didDeafenUser: !1
-    }), null != this._micTestStartTime && _.default.track(C.AnalyticEvents.MIC_TESTING_STOPPED, {
+    }), null != this._micTestStartTime && h.default.track(C.AnalyticEvents.MIC_TESTING_STOPPED, {
       testing_duration: Math.round((Date.now() - this._micTestStartTime) / 1e3)
     })
   }
@@ -138,7 +138,7 @@ class p extends s.PureComponent {
               children: c ? i : l
             })
           }
-        }), (0, a.jsx)(h.default, {
+        }), (0, a.jsx)(_.default, {
           progress: c ? f + 100 : 0,
           notchBackground: s
         }), this.renderCaption()]
@@ -205,4 +205,4 @@ t.default = r.default.connectStores([E.default, f.default], () => {
     inputDeviceName: null != n ? n.name : "",
     outputDeviceName: null != l ? l.name : ""
   }
-})(p)
+})(T)

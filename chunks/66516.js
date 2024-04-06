@@ -21,8 +21,8 @@ var a = s("735250"),
   _ = s("296810"),
   g = s("621853"),
   h = s("246946"),
-  I = s("594174"),
-  N = s("626135"),
+  N = s("594174"),
+  I = s("626135"),
   p = s("63063"),
   C = s("74538"),
   A = s("18438"),
@@ -34,7 +34,7 @@ var a = s("735250"),
   D = s("689938");
 
 function L() {
-  N.default.track(v.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+  I.default.track(v.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
     location_page: v.AnalyticsPages.GUILD_MEMBER_PROFILE_SETTINGS,
     location_object: v.AnalyticsObjects.BADGE
   }), (0, A.closeGuildIdentitySettings)(), u.default.open(v.UserSettingsSections.PREMIUM)
@@ -60,10 +60,10 @@ function j(e) {
     selectedGuild: t
   } = e, {
     analyticsLocations: s
-  } = (0, T.default)(S.default.GUILD_PROFILE), l = (0, r.useStateFromStores)([I.default], () => {
-    let e = I.default.getCurrentUser();
+  } = (0, T.default)(S.default.GUILD_PROFILE), l = (0, r.useStateFromStores)([N.default], () => {
+    let e = N.default.getCurrentUser();
     return i()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e
-  }), u = (0, r.useStateFromStores)([g.default], () => !g.default.isFetchingProfile(l.id)), N = (0, r.useStateFromStores)([h.default], () => h.default.hidePersonalInformation), {
+  }), u = (0, r.useStateFromStores)([g.default], () => !g.default.isFetchingProfile(l.id)), I = (0, r.useStateFromStores)([h.default], () => h.default.hidePersonalInformation), {
     pendingAvatar: j,
     pendingAvatarDecoration: b,
     pendingProfileEffectId: U,
@@ -72,24 +72,24 @@ function j(e) {
     pendingBio: F,
     pendingPronouns: G,
     pendingThemeColors: k,
-    source: w
+    source: H
   } = (0, r.useStateFromStoresObject)([O.default], () => ({
     ...O.default.getAllPending(),
     source: O.default.getSource()
   }));
   if (n.useEffect(() => () => d.default.wait(A.resetAllPending), []), n.useEffect(() => {
-      null != w && E.default.trackWithMetadata(v.AnalyticEvents.SETTINGS_PANE_VIEWED, {
+      null != H && E.default.trackWithMetadata(v.AnalyticEvents.SETTINGS_PANE_VIEWED, {
         settings_type: "guild",
         destination_pane: v.AnalyticsSections.SETTINGS_CUSTOMIZE_PROFILE,
-        source: w
+        source: H
       })
-    }, [w]), N) return (0, a.jsx)(c.default, {});
+    }, [H]), I) return (0, a.jsx)(c.default, {});
   if (!u) return (0, a.jsx)(o.Spinner, {});
-  let H = C.default.canUsePremiumProfileCustomization(l),
+  let w = C.default.canUsePremiumProfileCustomization(l),
     V = {
       user: l,
       guild: t,
-      canUsePremiumCustomization: H,
+      canUsePremiumCustomization: w,
       onAvatarChange: A.setPendingAvatar,
       onBannerChange: A.setPendingBanner,
       onUpsellClick: P,

@@ -10,8 +10,8 @@ var a, s = n("735250"),
   c = n("63063"),
   f = n("285952"),
   E = n("672705"),
-  h = n("981631"),
-  _ = n("689938"),
+  _ = n("981631"),
+  h = n("689938"),
   C = n("804722"),
   m = n("794711");
 
@@ -23,8 +23,8 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let I = c.default.getArticleURL(h.HelpdeskArticles.VERIFICATION_FAQ);
-class p extends(a = l.PureComponent) {
+let I = c.default.getArticleURL(_.HelpdeskArticles.VERIFICATION_FAQ);
+class T extends(a = l.PureComponent) {
   renderFields() {
     let {
       types: e,
@@ -33,7 +33,7 @@ class p extends(a = l.PureComponent) {
       onCaptchaVerify: a
     } = this.props;
     return (0, s.jsx)(s.Fragment, {
-      children: e.map(e => e === h.VerificationTypes.CAPTCHA ? (0, s.jsx)(E.default, {
+      children: e.map(e => e === _.VerificationTypes.CAPTCHA ? (0, s.jsx)(E.default, {
         onVerify: a,
         theme: n
       }, t) : (0, s.jsx)(u.Button, {
@@ -59,10 +59,10 @@ class p extends(a = l.PureComponent) {
           className: C.image
         }), (0, s.jsx)("div", {
           className: r()(C.title, m.marginTop20),
-          children: _.default.Messages.VERIFICATION_TITLE
+          children: h.default.Messages.VERIFICATION_TITLE
         }), (0, s.jsx)("div", {
           className: r()(C.body, m.marginTop4, m.marginBottom20),
-          children: _.default.Messages.VERIFICATION_BODY_WITH_HELP_LINK.format({
+          children: h.default.Messages.VERIFICATION_BODY_WITH_HELP_LINK.format({
             helpCenterURL: I
           })
         }), (0, s.jsx)(f.default, {
@@ -73,13 +73,13 @@ class p extends(a = l.PureComponent) {
         })]
       }), (0, s.jsx)("div", {
         className: r()(C.footer, m.marginTop20),
-        children: _.default.Messages.VERIFICATION_FOOTER
+        children: h.default.Messages.VERIFICATION_FOOTER
       }), (0, s.jsxs)(f.default, {
         className: r()(m.marginTop4, m.marginBottom20),
         grow: 0,
         children: [(0, s.jsx)("div", {
           className: r()(C.footer, C.footerAction),
-          children: _.default.Messages.VERIFICATION_FOOTER_SUPPORT.format({
+          children: h.default.Messages.VERIFICATION_FOOTER_SUPPORT.format({
             supportURL: c.default.getSubmitRequestURL()
           })
         }), (0, s.jsx)("div", {
@@ -87,7 +87,7 @@ class p extends(a = l.PureComponent) {
           children: "•"
         }), (0, s.jsx)("div", {
           className: r()(C.footer, C.footerAction),
-          children: _.default.Messages.VERIFICATION_FOOTER_LOGOUT.format({
+          children: h.default.Messages.VERIFICATION_FOOTER_LOGOUT.format({
             logoutOnClick: this.props.onLogout
           })
         })]
@@ -103,8 +103,8 @@ class p extends(a = l.PureComponent) {
     })
   }
 }
-S(p, "defaultProps", {
-  types: [h.VerificationTypes.CAPTCHA],
-  onCaptchaVerify: h.NOOP,
-  onLogout: h.NOOP
-}), t.default = p
+S(T, "defaultProps", {
+  types: [_.VerificationTypes.CAPTCHA],
+  onCaptchaVerify: _.NOOP,
+  onLogout: _.NOOP
+}), t.default = T

@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return y
   },
   renderSubtleHint: function() {
-    return I
+    return O
   }
 });
 var i, a, l, s = n("735250"),
@@ -49,7 +49,7 @@ let E = e => e.stopPropagation(),
       }, n)
     })
   }),
-  I = (e, t) => (0, s.jsx)("div", {
+  O = (e, t) => (0, s.jsx)("div", {
     className: p.hintSubtleText,
     children: t
   });

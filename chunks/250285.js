@@ -16,8 +16,8 @@ t.default = e => {
     userId: t,
     children: n,
     isLast: l,
-    className: h
-  } = e, [_, C] = s.useState(!1), {
+    className: _
+  } = e, [h, C] = s.useState(!1), {
     analyticsLocations: m
   } = (0, d.default)(), S = s.useCallback(() => {
     (0, c.openUserProfileModal)({
@@ -29,7 +29,7 @@ t.default = e => {
     })
   }, [t, m]), I = () => {
     C(!0)
-  }, p = () => {
+  }, T = () => {
     C(!1)
   };
   return (0, a.jsx)(u.ListNavigatorItem, {
@@ -43,15 +43,15 @@ t.default = e => {
         style: {
           opacity: 1
         },
-        className: i()(E.rowItem, h, {
+        className: i()(E.rowItem, _, {
           [E.last]: l,
-          [E.active]: _
+          [E.active]: h
         }),
         onMouseEnter: I,
-        onMouseLeave: p,
+        onMouseLeave: T,
         onClick: S,
         ...e,
-        children: n(_)
+        children: n(h)
       })
     })
   })

@@ -19,7 +19,7 @@ function E(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class h extends s.PureComponent {
+class _ extends s.PureComponent {
   componentWillLeave(e) {
     r.default.parallel([r.default.timing(this.state.opacity, {
       toValue: 0,
@@ -117,4 +117,4 @@ class h extends s.PureComponent {
     })
   }
 }
-t.default = h
+t.default = _

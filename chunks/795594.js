@@ -17,8 +17,8 @@ var a = s("735250"),
   _ = s("713938"),
   g = s("881998"),
   h = s("246946"),
-  I = s("186095"),
-  N = s("285952"),
+  N = s("186095"),
+  I = s("285952"),
   p = s("6048"),
   C = s("507893"),
   A = s("768581"),
@@ -32,7 +32,7 @@ var a = s("735250"),
   P = s("794711");
 let j = d.default.connectStores([O.default], () => ({
   theme: O.default.theme
-}))(I.default);
+}))(N.default);
 
 function b(e) {
   let {
@@ -84,7 +84,7 @@ let U = e => {
             id: s.id,
             icon: s.icon
           }),
-          t = null != e ? (0, a.jsx)(N.default.Child, {
+          t = null != e ? (0, a.jsx)(I.default.Child, {
             className: L.appAvatar,
             grow: 0,
             children: (0, a.jsx)("img", {
@@ -92,17 +92,17 @@ let U = e => {
               alt: ""
             })
           }) : null;
-        return (0, a.jsxs)(N.default, {
+        return (0, a.jsxs)(I.default, {
           className: i()(L.__invalid_header, P.marginBottom20),
-          children: [(0, a.jsxs)(N.default, {
+          children: [(0, a.jsxs)(I.default, {
             className: L.headerInfo,
-            children: [t, (0, a.jsx)(N.default.Child, {
+            children: [t, (0, a.jsx)(I.default.Child, {
               children: (0, a.jsx)(u.Heading, {
                 variant: "text-sm/semibold",
                 children: s.name
               })
             })]
-          }), (0, a.jsx)(N.default.Child, {
+          }), (0, a.jsx)(I.default.Child, {
             wrap: !0,
             grow: 0,
             children: (0, a.jsx)(u.Button, {
@@ -174,7 +174,7 @@ t.default = () => {
     _ = () => {
       S("")
     },
-    N = () => (0, a.jsx)("div", {
+    I = () => (0, a.jsx)("div", {
       className: L.searchContainer,
       children: (0, a.jsx)(p.default, {
         size: p.default.Sizes.MEDIUM,
@@ -187,12 +187,12 @@ t.default = () => {
     }),
     C = (e, t) => (0, a.jsxs)(j, {
       className: L.__invalid_marginTop20,
-      children: [(0, a.jsx)(I.EmptyStateImage, {
+      children: [(0, a.jsx)(N.EmptyStateImage, {
         darkSrc: s("701972"),
         lightSrc: s("818658"),
         width: 380,
         height: 282
-      }), (0, a.jsx)(I.EmptyStateText, {
+      }), (0, a.jsx)(N.EmptyStateText, {
         note: e,
         children: t
       })]
@@ -215,9 +215,9 @@ t.default = () => {
         className: P.marginTop20,
         type: u.Spinner.Type.SPINNING_CIRCLE
       }) : 0 === t.length ? C(D.default.Messages.NO_AUTHORIZED_APPS_NOTE, D.default.Messages.NO_AUTHORIZED_APPS) : 0 === A.length ? (0, a.jsxs)(a.Fragment, {
-        children: [N(), C(null, D.default.Messages.INTEGRATIONS_SEARCH_NO_MATCH)]
+        children: [I(), C(null, D.default.Messages.INTEGRATIONS_SEARCH_NO_MATCH)]
       }) : (0, a.jsxs)(a.Fragment, {
-        children: [N(), A.sort((e, t) => e.application.name.localeCompare(t.application.name)).map(e => (0, a.jsx)(U, {
+        children: [I(), A.sort((e, t) => e.application.name.localeCompare(t.application.name)).map(e => (0, a.jsx)(U, {
           onDelete: () => i(e),
           ...e
         }, e.id))]

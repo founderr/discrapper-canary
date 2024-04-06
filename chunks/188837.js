@@ -11,23 +11,23 @@ var a = n("735250"),
   c = n("620929"),
   f = n("308083"),
   E = n("689938"),
-  h = n("653196");
+  _ = n("653196");
 t.default = e => {
   let {
     guildId: t,
     setPage: n,
-    onClose: _
+    onClose: h
   } = e, C = s.useRef(null), m = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), {
     selectedGames: S,
     playstyle: I,
-    interests: p,
-    description: T,
+    interests: T,
+    description: p,
     tag: g,
     primetime: A
   } = (0, i.useStateFromStoresObject)([d.default], () => {
     var e;
     return null !== (e = d.default.getState(t)) && void 0 !== e ? e : {}
-  }), N = s.useRef(null), v = s.useRef(null), R = s.useRef(null), [O, L] = s.useState(!1), P = (0, l.useSpring)({
+  }), N = s.useRef(null), v = s.useRef(null), R = s.useRef(null), [O, L] = s.useState(!1), M = (0, l.useSpring)({
     ref: N,
     config: l.config.slow,
     from: {
@@ -38,7 +38,7 @@ t.default = e => {
       flex: 1,
       paddingLeft: 120
     }
-  }), M = (0, l.useSpring)({
+  }), P = (0, l.useSpring)({
     ref: v,
     config: l.config.slow,
     from: {
@@ -62,11 +62,11 @@ t.default = e => {
     }
   });
   return (0, l.useChain)([N, v, R], [0, 0, 1]), (0, a.jsxs)("div", {
-    className: h.animationContainer,
+    className: _.animationContainer,
     children: [(0, a.jsxs)(l.animated.div, {
-      className: h.signTextLeft,
+      className: _.signTextLeft,
       style: {
-        ...P,
+        ...M,
         ...y
       },
       children: [(0, a.jsx)(r.Heading, {
@@ -78,7 +78,7 @@ t.default = e => {
         children: E.default.Messages.CLAN_SETUP_SIGN_SUBTITLE
       })]
     }), (0, a.jsx)("div", {
-      className: h.scrollContainer,
+      className: _.scrollContainer,
       children: (0, a.jsx)(c.default, {
         guildId: t,
         signed: O,
@@ -86,13 +86,13 @@ t.default = e => {
         signRef: C
       })
     }), (0, a.jsxs)(l.animated.div, {
-      className: h.signTextRight,
+      className: _.signTextRight,
       style: {
-        ...M,
+        ...P,
         ...y
       },
       children: [(0, a.jsx)(r.Button, {
-        className: h.signButton,
+        className: _.signButton,
         size: r.Button.Sizes.SMALL,
         onClick: () => {
           var e;
@@ -107,21 +107,21 @@ t.default = e => {
         children: E.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_HELP
       })]
     }), (0, a.jsx)(r.Button, {
-      className: h.closeButton,
+      className: _.closeButton,
       look: r.Button.Looks.OUTLINED,
       size: r.Button.Sizes.SMALL,
       color: r.Button.Colors.PRIMARY,
-      onClick: _,
+      onClick: h,
       children: E.default.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
     }), (0, a.jsx)(r.Button, {
-      className: h.previousButton,
+      className: _.previousButton,
       look: r.Button.Looks.OUTLINED,
       size: r.Button.Sizes.MEDIUM,
       color: r.Button.Colors.PRIMARY,
       onClick: () => n(f.ClanSetupModalPages.SETUP),
       children: E.default.Messages.PAGINATION_PREVIOUS
     }), (0, a.jsx)(r.Button, {
-      className: h.finishButton,
+      className: _.finishButton,
       look: r.Button.Looks.FILLED,
       size: r.Button.Sizes.MEDIUM,
       color: r.Button.Colors.BRAND,
@@ -130,11 +130,11 @@ t.default = e => {
         u.convertGuildToClan(t, {
           selectedGames: S,
           playstyle: I,
-          interests: p,
-          description: T,
+          interests: T,
+          description: p,
           tag: g,
           primetime: A
-        }), _()
+        }), h()
       },
       children: E.default.Messages.FINISH
     })]

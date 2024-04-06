@@ -62,8 +62,8 @@ t.default = a.memo(function(e) {
     selectedChannelId: g,
     disableManageChannels: E
   } = e, {
-    isFavoritesPerk: S
-  } = (0, s.useFavoritesServerExperiment)("ChannelListSection"), _ = a.useCallback(() => {
+    isFavoritesPerk: _
+  } = (0, s.useFavoritesServerExperiment)("ChannelListSection"), S = a.useCallback(() => {
     let e = C.getCategoryFromSection(C.recentsSectionNumber);
     if (null == e) return;
     let t = null,
@@ -86,12 +86,12 @@ t.default = a.memo(function(e) {
       });
     case u.SECTION_INDEX_FAVORITES:
       return (0, l.jsx)(d.NonChannelCategory, {
-        name: S ? h.default.Messages.PINNED_CHANNELS : h.default.Messages.FAVORITES
+        name: _ ? h.default.Messages.PINNED_CHANNELS : h.default.Messages.FAVORITES
       });
     case C.recentsSectionNumber:
       return (0, l.jsx)(d.NonChannelCategory, {
         name: h.default.Messages.RECENTS_CATEGORY_HEADER,
-        onDismiss: _
+        onDismiss: S
       });
     case C.voiceChannelsSectionNumber: {
       var I;

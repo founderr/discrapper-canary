@@ -30,21 +30,21 @@ var a = n("803997"),
   m = n("185403"),
   g = n("944581"),
   E = n("632184"),
-  S = n("170039"),
-  _ = n("26290"),
+  _ = n("170039"),
+  S = n("26290"),
   I = n("510601"),
   N = n("981631"),
   T = n("196581");
 
 function A(e, t) {
-  return (0, l.jsx)(_.NumberBadge, {
+  return (0, l.jsx)(S.NumberBadge, {
     count: e,
     color: t
   })
 }
 
 function L() {
-  return (0, l.jsx)(_.IconBadge, {
+  return (0, l.jsx)(S.IconBadge, {
     icon: o.default,
     disableColor: !0,
     className: T.unavailableBadge
@@ -66,7 +66,7 @@ function v(e) {
   if (!r && !i && !o && !a && !l && c && I.default.trackExposure({
       location: "Guild Icon"
     }), r) t = u.default;
-  else if (i) t = S.default;
+  else if (i) t = _.default;
   else if (o) t = g.default;
   else if (a) t = C.default;
   else if (l) t = d.default;
@@ -112,7 +112,7 @@ function R(e) {
   } : {
     color: (0, i.getColor)(n)
   };
-  return (0, l.jsx)(_.IconBadge, {
+  return (0, l.jsx)(S.IconBadge, {
     icon: t,
     className: s()(T.iconBadge, {
       [T.isCurrentUserConnected]: a
