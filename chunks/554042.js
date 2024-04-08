@@ -62,7 +62,7 @@ function C() {
   } = (0, r.useStateFromStoresObject)([_.default, E.default], () => ({
     theme: _.default.theme,
     platformZoom: E.default.zoom
-  })), [o, C] = n.useState(""), A = ["normal", "medium", "semibold", "bold", "extrabold"], O = new Map([
+  })), [o, C] = n.useState("upright"), A = ["normal", "medium", "semibold", "bold", "extrabold"], O = new Map([
     ["normal", 400],
     ["medium", 500],
     ["semibold", 600],
@@ -92,9 +92,10 @@ function C() {
     }, [v, L]);
   return (0, a.jsx)("div", {
     className: N.fullscreen,
-    style: "" !== o ? {
-      "--playground-font-family": o
-    } : {},
+    style: {
+      "--playground-font-family": "mono" === o ? "gg mono" : "gg sans",
+      "--playground-font-style": "italic" === o ? "italic" : "normal"
+    },
     children: (0, a.jsxs)(d.FormSection, {
       tag: d.FormTitleTags.H1,
       children: [(0, a.jsxs)("div", {
@@ -134,15 +135,6 @@ function C() {
             })
           })
         }), (0, a.jsx)(d.FormItem, {
-          children: (0, a.jsx)("div", {
-            className: N.input,
-            children: (0, a.jsx)(d.TextInput, {
-              placeholder: "Font family...",
-              value: o,
-              onChange: C
-            })
-          })
-        }), (0, a.jsx)(d.FormItem, {
           children: (0, a.jsx)(d.RadioGroup, {
             withTransparentBackground: !0,
             className: N.theme,
@@ -160,6 +152,26 @@ function C() {
               })
             },
             value: l
+          })
+        }), (0, a.jsx)(d.FormItem, {
+          children: (0, a.jsx)(d.RadioGroup, {
+            withTransparentBackground: !0,
+            className: N.theme,
+            orientation: "horizontal",
+            options: [{
+              name: "Upright",
+              value: "upright"
+            }, {
+              name: "Italic",
+              value: "italic"
+            }, {
+              name: "Mono",
+              value: "mono"
+            }],
+            onChange: e => {
+              C(e.value)
+            },
+            value: o
           })
         }), (0, a.jsx)(S.default, {
           closeAction: u.popLayer,
@@ -188,6 +200,7 @@ function C() {
             var s;
             let n = null !== (s = "custom" === D ? M : D) && void 0 !== s ? s : "";
             return (0, a.jsx)("div", {
+              className: N.textSample,
               children: (0, a.jsxs)("div", {
                 title: "".concat(e, "px at ").concat(t),
                 className: i()(N.text, {
