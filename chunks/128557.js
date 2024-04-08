@@ -269,9 +269,9 @@ function P(e) {
       onClick: V
     })
   }, "addapp")));
-  let X = T ? y.default.Messages.WELCOME_CTA_SUBTITLE_OWNER : y.default.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
-  f && (X = y.default.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
-  let q = "".concat(v.default.getArticleURL(R.HelpdeskArticles.GUILD_GETTING_STARTED), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm");
+  let q = T ? y.default.Messages.WELCOME_CTA_SUBTITLE_OWNER : y.default.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
+  f && (q = y.default.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
+  let X = "".concat(v.default.getArticleURL(R.HelpdeskArticles.GUILD_GETTING_STARTED), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm");
   return (0, a.jsx)(M.default, {
     channelId: t.id,
     children: (0, a.jsx)("div", {
@@ -293,8 +293,8 @@ function P(e) {
               [O.noChildren]: 0 === Z.length
             }),
             variant: "text-sm/normal",
-            children: [X, " ", Z.length > 0 ? y.default.Messages.WELCOME_CTA_SUBTITLE_ACTION_WITH_GUIDE.format({
-              guideURL: q
+            children: [q, " ", Z.length > 0 ? y.default.Messages.WELCOME_CTA_SUBTITLE_ACTION_WITH_GUIDE.format({
+              guideURL: X
             }) : null]
           })]
         }), Z]

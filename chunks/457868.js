@@ -142,7 +142,7 @@ let z = H.default.getEnableHardwareAcceleration(),
       }
     })
   }),
-  X = l.memo(function(e) {
+  q = l.memo(function(e) {
     let {
       id: t,
       label: n,
@@ -173,7 +173,7 @@ let z = H.default.getEnableHardwareAcceleration(),
       })]
     })
   }),
-  q = l.memo(function(e) {
+  X = l.memo(function(e) {
     let {
       channel: t
     } = e;
@@ -283,7 +283,7 @@ function Q(e) {
               let {
                 section: t
               } = e, l = d[t];
-              return (0, a.jsx)(X, {
+              return (0, a.jsx)(q, {
                 id: l.id,
                 label: l.label,
                 count: l.userIds.length,
@@ -307,7 +307,7 @@ function Q(e) {
               }, s[l])
             },
             footerHeight: e => d[e] === h && t.type === G.ChannelTypes.PRIVATE_THREAD ? 80 : 0,
-            renderFooter: e => d[e.section] === h ? (0, a.jsx)(q, {
+            renderFooter: e => d[e.section] === h ? (0, a.jsx)(X, {
               channel: t
             }, "footer") : null,
             innerAriaLabel: V.default.Messages.MEMBERS,

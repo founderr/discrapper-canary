@@ -51,8 +51,8 @@ var a, l, s = n("735250"),
   z = n("136995"),
   K = n("402113"),
   Z = n("197016"),
-  X = n("386000"),
-  q = n("698877"),
+  q = n("386000"),
+  X = n("698877"),
   Q = n("25827"),
   J = n("199902"),
   $ = n("523746"),
@@ -119,7 +119,7 @@ function e_(e) {
     } = null != e ? e : {
       onClick: void 0
     }, l = null != d && !C;
-    return (0, s.jsx)(q.StreamButton, {
+    return (0, s.jsx)(X.StreamButton, {
       ...a,
       centerButton: !0,
       disabled: o || !r,
@@ -235,7 +235,7 @@ let eI = i.memo(function(e) {
             onPopoutClick: S.length > 0 ? t : null
           });
         case "STREAM":
-          return (0, s.jsx)(q.StreamButton, {
+          return (0, s.jsx)(X.StreamButton, {
             ...i,
             hasPermission: !0,
             streamActive: !0,
@@ -460,7 +460,7 @@ t.default = function(e) {
             } = e, {
               isShown: a
             } = t;
-            return (0, s.jsx)(X.default, {
+            return (0, s.jsx)(q.default, {
               centerButton: !0,
               onPopoutClick: v ? null : n,
               className: eg.controlButton,

@@ -50,7 +50,7 @@ function P(e) {
     u.default.updatedUnsyncedSettings({
       activityPanelHeight: e
     })
-  }, []), K = l.useRef(null), [Z, X] = l.useState({
+  }, []), K = l.useRef(null), [Z, q] = l.useState({
     width: 0,
     height: 0
   });
@@ -58,21 +58,21 @@ function P(e) {
     if (null == K.current) return;
     let e = new ResizeObserver(() => {
       var e, t, n, a;
-      X({
+      q({
         width: null !== (n = null === (e = K.current) || void 0 === e ? void 0 : e.clientWidth) && void 0 !== n ? n : 0,
         height: null !== (a = null === (t = K.current) || void 0 === t ? void 0 : t.clientHeight) && void 0 !== a ? a : 0
       })
     });
     return e.observe(K.current), () => e.disconnect()
   }, []);
-  let q = Z.width / Math.max(Z.height, 1) < R.LANDSCAPE_ACTIVITY_ASPECT_RATIO,
+  let X = Z.width / Math.max(Z.height, 1) < R.LANDSCAPE_ACTIVITY_ASPECT_RATIO,
     Q = 0,
     J = 0,
     $ = (0, c.default)("activity_panel_iframe_fills_container");
   if (!$) {
     let e = Z.width,
       t = Z.height;
-    q ? ((t = Z.width / R.LANDSCAPE_ACTIVITY_ASPECT_RATIO) > Z.height && (e = (t = Z.height) * R.LANDSCAPE_ACTIVITY_ASPECT_RATIO), J = (Z.height - t) / 2) : ((e = Math.min(Z.height * R.LANDSCAPE_ACTIVITY_ASPECT_RATIO)) > Z.width && (t = (e = Z.width) / R.LANDSCAPE_ACTIVITY_ASPECT_RATIO), Q = (Z.width - e) / 2)
+    X ? ((t = Z.width / R.LANDSCAPE_ACTIVITY_ASPECT_RATIO) > Z.height && (e = (t = Z.height) * R.LANDSCAPE_ACTIVITY_ASPECT_RATIO), J = (Z.height - t) / 2) : ((e = Math.min(Z.height * R.LANDSCAPE_ACTIVITY_ASPECT_RATIO)) > Z.width && (t = (e = Z.width) / R.LANDSCAPE_ACTIVITY_ASPECT_RATIO), Q = (Z.width - e) / 2)
   }
   let ee = (0, r.useStateFromStores)([p.default], () => p.default.getChannelId());
   if (null == U) return null;

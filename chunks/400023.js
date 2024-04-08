@@ -143,14 +143,14 @@ let F = l.memo(function(e) {
       handler: a
     })
   }(B.ref);
-  let X = (0, u.useFocusJumpSection)(),
+  let q = (0, u.useFocusJumpSection)(),
     {
-      ref: q,
+      ref: X,
       ...Q
     } = (0, r.getContainerPropsFromNavigator)(G),
     J = l.useCallback(e => {
       var t;
-      B.ref.current = e, q.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
+      B.ref.current = e, X.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
     }, []);
   return (0, a.jsx)(r.ListNavigatorProvider, {
     navigator: G,
@@ -165,7 +165,7 @@ let F = l.memo(function(e) {
         onScroll: B.handleScroll,
         onMouseDown: B.handleMouseDown,
         onMouseUp: B.handleMouseUp,
-        ...X,
+        ...q,
         tabIndex: -1,
         role: "group",
         children: [K, (0, a.jsxs)("ol", {

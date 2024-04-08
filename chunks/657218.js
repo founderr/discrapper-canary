@@ -80,7 +80,7 @@ function Z(e) {
           }), (0, a.jsx)(D.default.Title, {
             children: W.default.Messages.NEW_THREAD
           })]
-        }), (0, a.jsx)(X, {
+        }), (0, a.jsx)(q, {
           parentChannel: s,
           parentMessageId: n,
           location: l
@@ -90,7 +90,7 @@ function Z(e) {
   })
 }
 
-function X(e) {
+function q(e) {
   let {
     parentChannel: t,
     parentMessageId: n,
@@ -237,7 +237,7 @@ function X(e) {
                 threadSettings: m,
                 updateThreadSettings: E,
                 error: v
-              }), t.type === V.ChannelTypes.GUILD_TEXT ? (0, a.jsx)(q, {
+              }), t.type === V.ChannelTypes.GUILD_TEXT ? (0, a.jsx)(X, {
                 startedFromMessage: null != n,
                 threadSettings: m,
                 updateThreadSettings: E,
@@ -266,7 +266,7 @@ function X(e) {
   })
 }
 
-function q(e) {
+function X(e) {
   let {
     startedFromMessage: t,
     threadSettings: n,

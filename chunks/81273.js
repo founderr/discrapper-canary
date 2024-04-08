@@ -53,9 +53,9 @@ t.default = (e, t, n, s) => {
     K = (null == B ? void 0 : B.trialId) != null,
     {
       loading: Z,
-      getTrialPurchaseEligibility: X
+      getTrialPurchaseEligibility: q
     } = (0, N.useGetTrialPurchaseEligibility)(),
-    q = (0, A.useSubscriptionTrial)(null == e ? void 0 : e.id),
+    X = (0, A.useSubscriptionTrial)(null == e ? void 0 : e.id),
     {
       analyticsLocations: Q
     } = (0, h.default)(),
@@ -71,17 +71,17 @@ t.default = (e, t, n, s) => {
   }, [w, k]);
   let ee = l.useCallback(async () => {
       let n, l;
-      if (i()(null != e, "No subscription listing"), i()(null != U, "No subscription plan"), i()(w, "Cannot purchase this unpublished plan"), (null == q ? void 0 : q.active_trial) != null) {
-        let a = await X(t, e.id, q.active_trial.id);
+      if (i()(null != e, "No subscription listing"), i()(null != U, "No subscription plan"), i()(w, "Cannot purchase this unpublished plan"), (null == X ? void 0 : X.active_trial) != null) {
+        let a = await q(t, e.id, X.active_trial.id);
         if ((null == a ? void 0 : a.is_eligible) === !0) {
           var r;
-          n = null == q ? void 0 : null === (r = q.active_trial) || void 0 === r ? void 0 : r.id
+          n = null == X ? void 0 : null === (r = X.active_trial) || void 0 === r ? void 0 : r.id
         } else l = O.default.Messages.GUILD_ROLE_SUBSCRIPTION_INELIGIBLE_TRIAL_DISCLAIMER
       }(0, S.default)({
         activeSubscription: B,
         analyticsSubscriptionType: y.SubscriptionTypes.GUILD,
         trialId: n,
-        trialFooterMessageOverride: (null == q ? void 0 : q.active_trial) != null ? O.default.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_RENEWAL_FOOTER_V2.format({
+        trialFooterMessageOverride: (null == X ? void 0 : X.active_trial) != null ? O.default.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_RENEWAL_FOOTER_V2.format({
           buttonText: O.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SUBSCRIBE,
           interval: (0, I.formatPlanIntervalDuration)(U),
           days: 1,
@@ -113,7 +113,7 @@ t.default = (e, t, n, s) => {
         }),
         reviewWarningMessage: l
       })
-    }, [w, e, U, B, W, t, Q, s, X, q, $]),
+    }, [w, e, U, B, W, t, Q, s, q, X, $]),
     et = l.useCallback(() => {
       (0, m.openMemberVerificationModal)(t)
     }, [t]);

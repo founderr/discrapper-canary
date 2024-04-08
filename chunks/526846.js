@@ -87,13 +87,13 @@ let j = "vc-activities-".concat((0, o.v4)()),
           analyticsLocations: V
         }), D(), b()
       }, [z, V, n, b, D, Y]),
-      X = l.useCallback(e => {
+      q = l.useCallback(e => {
         P(), _.default.track(M.AnalyticEvents.ACTIVITIES_MINI_SHELF_HOVERED, {
           channel_id: n.id,
           guild_id: n.getGuildId()
         })
       }, [P, n]),
-      q = F ? (0, a.jsxs)(r.Link, {
+      X = F ? (0, a.jsxs)(r.Link, {
         to: M.Routes.ACTIVITIES,
         children: [(0, a.jsx)("img", {
           alt: R.default.Messages.EMBEDDED_ACTIVITIES_BIRTHDAY_ACTIVITIES_HERO_ALT,
@@ -120,7 +120,7 @@ let j = "vc-activities-".concat((0, o.v4)()),
             })
           }), (0, a.jsxs)("div", {
             className: L.container,
-            onMouseEnter: X,
+            onMouseEnter: q,
             onMouseLeave: D,
             children: [(0, a.jsxs)("div", {
               className: L.titleContainer,
@@ -148,7 +148,7 @@ let j = "vc-activities-".concat((0, o.v4)()),
               })]
             }), (0, a.jsx)(p.AnalyticsLocationProvider, {
               value: W,
-              children: q
+              children: X
             }), (0, a.jsxs)("div", {
               className: L.activityContainer,
               children: [K.map(e => (0, a.jsx)(v.ActivitySuggestion, {

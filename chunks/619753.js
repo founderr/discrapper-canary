@@ -193,13 +193,13 @@ function D(e) {
     let e = z.current;
     null != e && null != e.offsetWidth && null != e.scrollWidth && Z(e.offsetWidth < e.scrollWidth)
   }, []);
-  let X = [w, B, k].filter(e => null != e).join(", ");
+  let q = [w, B, k].filter(e => null != e).join(", ");
   return (0, a.jsx)(N.ObscuredDisplayContext.Provider, {
     value: (0, m.default)(U, W),
     children: (0, a.jsxs)("ul", {
       role: "group",
       className: j.searchResultGroup,
-      "aria-label": X,
+      "aria-label": q,
       children: [(0, a.jsx)(i.Clickable, {
         onClick: () => F(s.id),
         children: (0, a.jsxs)("div", {

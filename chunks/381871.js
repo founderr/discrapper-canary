@@ -79,22 +79,22 @@ function k(e) {
         }
       })
     },
-    X = e => {
+    q = e => {
       G.current = e, e && f.default.trackWithMetadata(L.AnalyticEvents.VOICE_CHANNEL_EFFECT_EMOJI_PICKER_EXPANDED, {
-        channel_id: q,
+        channel_id: X,
         guild_id: Q
       })
     },
     {
-      id: q,
+      id: X,
       guild_id: Q
     } = n;
   l.useEffect(() => {
     f.default.trackWithMetadata(L.AnalyticEvents.VOICE_CHANNEL_EFFECT_BAR_VIEWED, {
-      channel_id: q,
+      channel_id: X,
       guild_id: Q
     })
-  }, [q, Q]);
+  }, [X, Q]);
   let J = O ? [r.DismissibleContent.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
     $ = B === R.VoiceChannelEffectAnimationType.PREMIUM;
   return (0, a.jsx)(h.default, {
@@ -132,7 +132,7 @@ function k(e) {
           onSelectEmoji: K,
           onSelectDisabledEmoji: Z,
           onFocus: S,
-          onExpandedToggle: X,
+          onExpandedToggle: q,
           analyticsOverride: F,
           emojiSearchProps: {
             accessory: (0, a.jsx)(x.default, {
@@ -140,7 +140,7 @@ function k(e) {
               value: $,
               onChange: () => {
                 if (H) return f.default.trackWithMetadata(L.AnalyticEvents.VOICE_CHANNEL_EFFECT_FANCY_ANIMATION_TOGGLED, {
-                  channel_id: q,
+                  channel_id: X,
                   guild_id: Q,
                   enabled: !$
                 }), u.default.dispatch({

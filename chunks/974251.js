@@ -47,8 +47,8 @@ t.default = l.memo(function(e) {
   let z, {
       className: K,
       channel: Z,
-      draftType: X,
-      editorTextContent: q,
+      draftType: q,
+      editorTextContent: X,
       setValue: Q,
       canOnlyUseTextCommands: J
     } = e,
@@ -77,7 +77,7 @@ t.default = l.memo(function(e) {
     eE = (0, f.default)(ea);
   (null == eE ? void 0 : eE.newClipIds.length) !== (null == ea ? void 0 : ea.newClipIds.length) && (null !== (t = null == ea ? void 0 : ea.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ec && er && es && !eo && !ei && !eu && ef("recentClips");
   let eC = (e, t, n) => {
-      null != t && "ETOOLARGE" === t.code ? (0, U.showUploadFileSizeExceededError)(Z, []) : (0, U.promptToUpload)(e, Z, X, {
+      null != t && "ETOOLARGE" === t.code ? (0, U.showUploadFileSizeExceededError)(Z, []) : (0, U.promptToUpload)(e, Z, q, {
         requireConfirm: !0,
         showLargeMessageDialog: n
       }), D.ComponentDispatch.dispatchToLastSubscribed(H.ComponentActions.TEXTAREA_FOCUS)
@@ -185,8 +185,8 @@ t.default = l.memo(function(e) {
               var e;
               return null === (e = ee.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
             },
-            draftType: X,
-            editorTextContent: q,
+            draftType: q,
+            editorTextContent: X,
             setValue: Q,
             openClips: eS
           });

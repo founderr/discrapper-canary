@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ThreadStarterChatMessage: function() {
-    return X
+    return q
   },
   getElementFromMessage: function() {
     return Z
@@ -57,7 +57,7 @@ function Z(e, t, n) {
   return e.getElementById((0, N.getMessageDOMId)(t, n))
 }
 
-function X(e) {
+function q(e) {
   var t;
   let {
     id: n,
@@ -75,7 +75,7 @@ function X(e) {
     popouts: m,
     setPopout: p
   } = (0, P.default)(l.id, W.DEFAULT_POPOUTS), E = (0, R.default)(l), g = (0, y.getMessageAriaLabelledBy)(l), S = (0, y.getMessageAriaDescribedBy)(l);
-  return l.type === Y.MessageTypes.THREAD_STARTER_MESSAGE && null != h && h.state === C.ReferencedMessageState.LOADED ? (0, a.jsx)(q, {
+  return l.type === Y.MessageTypes.THREAD_STARTER_MESSAGE && null != h && h.state === C.ReferencedMessageState.LOADED ? (0, a.jsx)(X, {
     ...e,
     message: h.message,
     groupId: h.message.id
@@ -104,7 +104,7 @@ function X(e) {
   })
 }
 
-function q(e) {
+function X(e) {
   var t, n;
   let {
     id: s,
@@ -129,8 +129,8 @@ function q(e) {
   } = (0, O.useFocusInside)(N), {
     popouts: B,
     selected: Z,
-    setPopout: X
-  } = (0, P.default)(r.id, W.DEFAULT_POPOUTS), q = S.InlineEmbedMedia.useSetting(), Q = S.RenderEmbeds.useSetting(), J = (0, d.useStateFromStores)([C.default], () => C.default.getMessageByReference(x)), $ = (0, p.isMessageNewerThanImprovedMarkdownEpoch)((null !== (n = r.editedTimestamp) && void 0 !== n ? n : r.timestamp).valueOf()), {
+    setPopout: q
+  } = (0, P.default)(r.id, W.DEFAULT_POPOUTS), X = S.InlineEmbedMedia.useSetting(), Q = S.RenderEmbeds.useSetting(), J = (0, d.useStateFromStores)([C.default], () => C.default.getMessageByReference(x)), $ = (0, p.isMessageNewerThanImprovedMarkdownEpoch)((null !== (n = r.editedTimestamp) && void 0 !== n ? n : r.timestamp).valueOf()), {
     handleMouseEnter: ee,
     handleMouseLeave: et,
     isHovered: en
@@ -138,7 +138,7 @@ function q(e) {
     content: ei,
     hasSpoilerEmbeds: er
   } = (0, D.default)(r, {
-    hideSimpleEmbedContent: q && Q,
+    hideSimpleEmbedContent: X && Q,
     isInteracting: es,
     formatInline: !1,
     allowList: $,
@@ -173,10 +173,10 @@ function q(e) {
       onKeyDown: eo,
       onFocus: F,
       onBlur: w,
-      childrenRepliedMessage: (0, G.default)(e, X, B, x, J),
+      childrenRepliedMessage: (0, G.default)(e, q, B, x, J),
       childrenHeader: (0, k.default)({
         messageProps: e,
-        setPopout: X,
+        setPopout: q,
         messagePopouts: B,
         replyReference: x,
         author: eu,
@@ -212,9 +212,9 @@ t.default = l.memo(function(e) {
     },
     channel: Z,
     channel: {
-      id: X
+      id: q
     },
-    compact: q = !1,
+    compact: X = !1,
     className: Q,
     flashKey: J,
     groupId: $,
@@ -248,7 +248,7 @@ t.default = l.memo(function(e) {
       handleFocus: eg,
       handleBlur: eS
     } = (0, O.useFocusInside)(en),
-    e_ = (0, d.useStateFromStores)([I.default], () => I.default.isEditing(X, N), [X, N]),
+    e_ = (0, d.useStateFromStores)([I.default], () => I.default.isEditing(q, N), [q, N]),
     eT = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled),
     eI = eo || e_ || eT && eE,
     eA = eI || ep,
@@ -269,9 +269,9 @@ t.default = l.memo(function(e) {
       allowDevLinks: eM,
       previewLinkTarget: !0
     }),
-    ey = (0, j.default)(N, X, eT),
+    ey = (0, j.default)(N, q, eT),
     eO = (0, R.default)(g),
-    ej = (0, d.useStateFromStores)([E.default], () => E.default.getPendingReply(X)),
+    ej = (0, d.useStateFromStores)([E.default], () => E.default.getPendingReply(q)),
     eP = function(e) {
       let t = l.useRef(e);
       return l.useEffect(() => void(t.current = null != e ? e : t.current)), null != e ? e : t.current
@@ -310,11 +310,11 @@ t.default = l.memo(function(e) {
           onContextMenu: ed,
           onKeyDown: ey,
           onClick: ec,
-          compact: q,
+          compact: X,
           contentOnly: ee,
           className: i()(Q, {
             [K.message]: !0,
-            [K.cozyMessage]: !q,
+            [K.cozyMessage]: !X,
             [K.mentioned]: g.mentioned && !(0, M.default)(g),
             [K.ephemeral]: (0, v.hasFlag)(g.flags, Y.MessageFlags.EPHEMERAL),
             [K.systemMessage]: (0, M.default)(g),
@@ -364,7 +364,7 @@ t.default = l.memo(function(e) {
     flashKey: eP,
     className: i()({
       [K.backgroundFlash]: !0,
-      [K.groupStart]: !q && g.id === $
+      [K.groupStart]: !X && g.id === $
     }),
     children: eB
   }, "bg-flash-".concat(r)) : eB

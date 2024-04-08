@@ -46,8 +46,8 @@ var a = n("735250"),
   z = n("19836"),
   K = n("538564"),
   Z = n("319300"),
-  X = n("591600"),
-  q = n("584045"),
+  q = n("591600"),
+  X = n("584045"),
   Q = n("58307"),
   J = n("664202"),
   $ = n("520858"),
@@ -187,8 +187,8 @@ t.default = e => {
     eZ = l.useCallback(() => {
       !eh.bot && !eF && null == ez && (0, c.fetchMutualFriends)(eh.id)
     }, [eF, ez, eh.id, eh.bot]),
-    eX = l.useCallback(() => eu(!0), []),
-    eq = l.useCallback(() => eu(!1), []),
+    eq = l.useCallback(() => eu(!0), []),
+    eX = l.useCallback(() => eu(!1), []),
     eQ = (0, u.useStateFromStores)([T.default], () => T.default.getId()),
     eJ = eh.id === eQ,
     e$ = eh.bot || eJ,
@@ -211,8 +211,8 @@ t.default = e => {
       channelId: n.id,
       children: (0, a.jsx)("aside", {
         className: er.profilePanel,
-        onMouseEnter: eX,
-        onMouseLeave: eq,
+        onMouseEnter: eq,
+        onMouseLeave: eX,
         children: (0, a.jsxs)(k.default, {
           user: eh,
           profileType: el.UserProfileTypes.PANEL,
@@ -231,7 +231,7 @@ t.default = e => {
               animateAssets: eo,
               forceShowPremiumBadge: eo
             }), (0, a.jsxs)(k.default.Inner, {
-              children: [(0, a.jsx)(q.default, {
+              children: [(0, a.jsx)(X.default, {
                 user: eh,
                 nickname: eO,
                 pronouns: null == ep ? void 0 : ep.pronouns
@@ -250,7 +250,7 @@ t.default = e => {
                 children: [(0, a.jsx)(Z.default, {
                   userId: r
                 }), (0, a.jsx)(W.default, {})]
-              }), (0, a.jsx)(X.default, {
+              }), (0, a.jsx)(q.default, {
                 user: eh,
                 setNote: !1
               })]

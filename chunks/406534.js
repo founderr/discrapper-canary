@@ -50,8 +50,8 @@ var a = n("735250"),
   z = n("226027"),
   K = n("959517"),
   Z = n("981631"),
-  X = n("134612"),
-  q = n("689938");
+  q = n("134612"),
+  X = n("689938");
 
 function Q(e) {
   return null != e && e.type === Z.ChannelStreamTypes.MESSAGE && e.content.id === e.groupId
@@ -109,8 +109,8 @@ function $(e) {
     ef = w.length > 0 && (null === (t = w.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(L)),
     eh = (0, o.useChannelSummariesExperiment)(L),
     em = (0, s.useStateFromStores)([T.default], () => T.default.shouldShowTopicsBar() && !eo),
-    ep = (0, S.useStrangerDangerWarning)(L.id, X.LOCATION_CONTEXT_WEB),
-    eE = (0, C.useInappropriateConversationBannerForChannel)(L.id, X.LOCATION_CONTEXT_WEB),
+    ep = (0, S.useStrangerDangerWarning)(L.id, q.LOCATION_CONTEXT_WEB),
+    eE = (0, C.useInappropriateConversationBannerForChannel)(L.id, q.LOCATION_CONTEXT_WEB),
     eC = (0, U.default)(),
     eg = null != ep ? ep : eE;
   L.isDM() && null != eg && (n = eg.type === E.SafetyWarningTypes.STRANGER_DANGER ? (0, a.jsx)(_.StrangerDangerWarningBanner, {
@@ -153,7 +153,7 @@ function $(e) {
       }, "forum-post-action-bar-".concat(L.id));
       if (e.type === Z.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED || e.type === Z.ChannelStreamTypes.MESSAGE_GROUP_SPAMMER) {
         let t;
-        return t = e.type === Z.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED ? q.default.Messages.BLOCKED_MESSAGE_COUNT : q.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT, (0, a.jsx)(H.default, {
+        return t = e.type === Z.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED ? X.default.Messages.BLOCKED_MESSAGE_COUNT : X.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT, (0, a.jsx)(H.default, {
           unreadId: K.NEW_MESSAGE_BAR_ID,
           messages: e,
           channel: L,
@@ -219,7 +219,7 @@ function $(e) {
     let n = N.default.getOldestUnreadTimestamp(L.id),
       s = 0 !== n ? n : j.default.extractTimestamp(L.id),
       i = (0, y.isSameDay)(new Date, new Date(s));
-    if (N.default.isEstimated(L.id) ? (e = i ? q.default.Messages.NEW_MESSAGES_ESTIMATED : q.default.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = i ? q.default.Messages.NEW_MESSAGES : q.default.Messages.NEW_MESSAGES_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_SUMMARIES), eh && (0, o.channelEligibleForSummaries)(L) && eC.includes(z.ChatOverlays.SUMMARIES)) {
+    if (N.default.isEstimated(L.id) ? (e = i ? X.default.Messages.NEW_MESSAGES_ESTIMATED : X.default.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = X.default.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = i ? X.default.Messages.NEW_MESSAGES : X.default.Messages.NEW_MESSAGES_WITH_DATE, t = X.default.Messages.NEW_MESSAGES_SUMMARIES), eh && (0, o.channelEligibleForSummaries)(L) && eC.includes(z.ChatOverlays.SUMMARIES)) {
       let n = N.default.ackMessageId(L.id),
         i = (0, I.getUnreadTopicsCount)(L.id, N.default.getOldestUnreadMessageId(L.id));
       if ((0, d.trackWithMetadata)(Z.AnalyticEvents.SUMMARIES_UNREAD_BAR_VIEWED, {
@@ -253,7 +253,7 @@ function $(e) {
               },
               height: 4,
               width: 4
-            }), q.default.Messages.NEW_SUMMARIES.format({
+            }), X.default.Messages.NEW_SUMMARIES.format({
               count: i
             })]
           }) : (0, a.jsx)("div", {
@@ -288,7 +288,7 @@ function $(e) {
                 },
                 height: 4,
                 width: 4
-              }), q.default.Messages.NEW_SUMMARIES.format({
+              }), X.default.Messages.NEW_SUMMARIES.format({
                 count: i
               })]
             }) : (0, a.jsx)(a.Fragment, {

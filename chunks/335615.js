@@ -58,7 +58,7 @@ function z(e, t, n) {
 }
 let K = G.default.getEnableHardwareAcceleration(),
   Z = 44 + C.AVATAR_DECORATION_PADDING,
-  X = {
+  q = {
     origin: {
       x: 38,
       y: 11
@@ -70,7 +70,7 @@ let K = G.default.getEnableHardwareAcceleration(),
       y: 0
     }
   };
-class q extends l.Component {
+class X extends l.Component {
   shouldComponentUpdate(e) {
     return !(0, f.default)(this.props, e, ["channelId"])
   }
@@ -192,7 +192,7 @@ let Q = l.memo(e => {
       var e;
       return null != t ? null === (e = P.default.getRole(l.guild_id, t)) || void 0 === e ? void 0 : e.name : void 0
     }, [l, t]);
-    return (0, a.jsx)(q, {
+    return (0, a.jsx)(X, {
       ...n,
       ...r,
       isTyping: o,
@@ -354,7 +354,7 @@ class ee extends l.Component {
       }) : 0 === t ? (0, a.jsx)(L.default, {
         tutorialId: "whos-online",
         position: "left",
-        inlineSpecs: X,
+        inlineSpecs: q,
         children: (0, a.jsx)(J, {
           ...i,
           guildId: s.guild_id

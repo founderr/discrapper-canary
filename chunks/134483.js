@@ -83,8 +83,8 @@ t.default = function(e) {
     z = (null === (n = b.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
     K = null != b.userStatus && (0, T.isDismissed)(b.userStatus, _.QuestContent.QUEST_LIVE_STREAM),
     Z = null != b.userStatus && (0, T.isDismissed)(b.userStatus, _.QuestContent.QUEST_BAR),
-    X = (0, T.isTargetedForContent)(b, _.QuestContent.QUEST_BAR) && !Z;
-  return K || W || X || !F ? null : (0, a.jsx)(I.QuestContentImpressionTracker, {
+    q = (0, T.isTargetedForContent)(b, _.QuestContent.QUEST_BAR) && !Z;
+  return K || W || q || !F ? null : (0, a.jsx)(I.QuestContentImpressionTracker, {
     questId: b.id,
     overrideVisibility: !j,
     questContent: _.QuestContent.QUEST_LIVE_STREAM,

@@ -49,8 +49,8 @@ var a, l = n("735250"),
   z = n("572004"),
   K = n("585483"),
   Z = n("823379"),
-  X = n("709054"),
-  q = n("51144"),
+  q = n("709054"),
+  X = n("51144"),
   Q = n("73752"),
   J = n("575464"),
   $ = n("981631"),
@@ -109,7 +109,7 @@ let eo = e => {
           children: s
         }), (0, l.jsx)("span", {
           className: et.lastActiveTimestamp,
-          children: c()(X.default.extractTimestamp(i)).fromNow()
+          children: c()(q.default.extractTimestamp(i)).fromNow()
         })]
       })
     })
@@ -139,7 +139,7 @@ let eo = e => {
           var n, a;
           let l = null !== (n = e.lastMessageId) && void 0 !== n ? n : e.id,
             s = null !== (a = t.lastMessageId) && void 0 !== a ? a : t.id;
-          return X.default.compare(s, l)
+          return q.default.compare(s, l)
         }).map(e => (0, l.jsx)(eo, {
           onClose: a.onClose,
           channel: e
@@ -275,7 +275,7 @@ class ed extends(a = s.PureComponent) {
     let o = [];
     return i.forEach(e => {
       let t = k.default.getUser(e);
-      null != t && o.push(q.default.getName(t))
+      null != t && o.push(X.default.getName(t))
     }), (0, l.jsxs)(H.default, {
       className: r()(et.searchBar, ea.marginTop20),
       children: [(0, l.jsx)(A.default, {
@@ -482,7 +482,7 @@ class ed extends(a = s.PureComponent) {
   }
   handleAddFriend(e) {
     this.props.onClose(), T.default.sendRequest({
-      discordTag: q.default.getUserTag(e, {
+      discordTag: X.default.getUserTag(e, {
         identifiable: "always"
       }),
       context: {

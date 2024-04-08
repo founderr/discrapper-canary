@@ -53,16 +53,16 @@ function A(e) {
     z = L.type === g.ParticipantTypes.ACTIVITY,
     K = !z && null != L.streamId,
     Z = K && null != H && H.width > 0 && H.height > 0 ? H.width / H.height : T,
-    X = D <= 2 * I + 144,
-    q = y && !X,
-    Q = (0, o.default)(q),
+    q = D <= 2 * I + 144,
+    X = y && !q,
+    Q = (0, o.default)(X),
     J = 0;
-  (z || q) && (J += 72), z && !q && (J += 48), q && (J += .5 * I + 8);
+  (z || X) && (J += 72), z && !X && (J += 48), X && (J += .5 * I + 8);
   let $ = D - 2 * J,
     ee = $ * Z,
     et = Math.floor(Math.min(P, ee) / Z),
     en = D > P / Z + 72 + I + 8;
-  t = q || z ? q ? -16 : -8 : 40 + Math.max(0, 72 - (D - et) / 2), l.useEffect(() => {
+  t = X || z ? X ? -16 : -8 : 40 + Math.max(0, 72 - (D - et) / 2), l.useEffect(() => {
     let e = setTimeout(() => {
       V(!1)
     }, 250);
@@ -71,8 +71,8 @@ function A(e) {
     }
   }, []);
   let ea = (0, r.useSpring)({
-      value: q ? 1 : 0,
-      delay: en || !q ? 0 : 100,
+      value: X ? 1 : 0,
+      delay: en || !X ? 0 : 100,
       config: {
         ...r.config.stiff,
         clamp: !0
@@ -84,7 +84,7 @@ function A(e) {
       }
     }),
     el = (0, r.useSpring)({
-      value: q ? 1 : 0,
+      value: X ? 1 : 0,
       config: {
         ...r.config.stiff,
         clamp: !0
@@ -96,7 +96,7 @@ function A(e) {
         ...r.config.stiff,
         clamp: !0
       },
-      immediate: Q === q && el.value.idle
+      immediate: Q === X && el.value.idle
     }),
     ei = (0, r.useSpring)({
       value: t,
@@ -125,7 +125,7 @@ function A(e) {
     eo = l.useCallback(e => {
       B(e), V(!1)
     }, []),
-    eu = q || j ? [] : (0, p.getPipParticipants)(v, L, k),
+    eu = X || j ? [] : (0, p.getPipParticipants)(v, L, k),
     {
       visibleParticipants: ed,
       participantTileWidth: ec
@@ -178,7 +178,7 @@ function A(e) {
               }, i) : null
             })
           })
-        }), X || b === C.ChannelLayouts.MINIMUM || b === C.ChannelLayouts.NORMAL ? null : (0, a.jsx)(r.animated.div, {
+        }), q || b === C.ChannelLayouts.MINIMUM || b === C.ChannelLayouts.NORMAL ? null : (0, a.jsx)(r.animated.div, {
           className: i()(_.actionRow, {
             [_.idle]: U
           }),

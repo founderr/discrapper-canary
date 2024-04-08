@@ -46,8 +46,8 @@ var a = n("735250"),
   z = n("618158"),
   K = n("880831"),
   Z = n("73563"),
-  X = n("751843"),
-  q = n("616286"),
+  q = n("751843"),
+  X = n("616286"),
   Q = n("268353"),
   J = n("786915"),
   $ = n("800965"),
@@ -488,7 +488,7 @@ class ek extends l.PureComponent {
         participants: d
       } = this.props;
       if (!u) return null;
-      let c = e === eP.ChannelLayouts.NO_CHAT ? X.default.Directions.UP : X.default.Directions.DOWN,
+      let c = e === eP.ChannelLayouts.NO_CHAT ? q.default.Directions.UP : q.default.Directions.DOWN,
         f = [eP.ChannelLayouts.FULL_SCREEN, eP.ChannelLayouts.NO_CHAT].includes(e),
         h = d.some(e => e.type === ej.ParticipantTypes.STREAM),
         m = e === eP.ChannelLayouts.FULL_SCREEN ? () => {
@@ -518,7 +518,7 @@ class ek extends l.PureComponent {
           className: eb.iconWrapper,
           align: eh.default.Align.CENTER,
           grow: 0,
-          children: [(0, a.jsx)(X.default, {
+          children: [(0, a.jsx)(q.default, {
             label: f ? eD.default.Messages.SHOW_CHAT : eD.default.Messages.HIDE_CHAT,
             direction: c,
             className: eb.leftTrayIcon,
@@ -593,7 +593,7 @@ class ek extends l.PureComponent {
         chatOpen: s,
         inCall: i
       } = this.props;
-      return s || this.popoutOpen && !this.inPopout && i ? null : (0, a.jsx)(q.ChatButton, {
+      return s || this.popoutOpen && !this.inPopout && i ? null : (0, a.jsx)(X.ChatButton, {
         channelId: l.id,
         className: t,
         showingClassName: n
@@ -698,8 +698,8 @@ t.default = function(e) {
   } = (0, u.useStateFromStoresObject)([ea.default], () => ({
     selectedStream: null != G ? ea.default.getActiveStreamForStreamKey(G.id) : null
   }), [G]), Y = (0, u.useStateFromStores)([er.default], () => er.default.getGuild(n.getGuildId())), z = (0, u.useStateFromStores)([ei.default], () => ei.default.getCall(n.id), [n.id]), K = (0, u.useStateFromStores)([eu.default], () => eu.default.getMentionCount(n.id), [n.id]), Z = (0, u.useStateFromStores)([el.default], () => el.default.getId()), {
-    popoutWindow: X,
-    popoutWindowAlwaysOnTop: q
+    popoutWindow: q,
+    popoutWindowAlwaysOnTop: X
   } = (0, u.useStateFromStoresObject)([k.default], () => ({
     popoutWindow: k.default.getWindow(eP.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
     popoutWindowAlwaysOnTop: k.default.getIsAlwaysOnTop(eP.PopoutWindowKeys.CHANNEL_CALL_POPOUT)
@@ -742,8 +742,8 @@ t.default = function(e) {
             renderExternalHeader: s,
             appContext: E,
             call: z,
-            popoutWindow: X,
-            popoutWindowAlwaysOnTop: q,
+            popoutWindow: q,
+            popoutWindowAlwaysOnTop: X,
             mentionCount: K,
             selectedStream: W,
             mode: U,
