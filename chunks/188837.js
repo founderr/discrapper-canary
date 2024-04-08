@@ -23,12 +23,12 @@ t.default = e => {
     interests: p,
     description: T,
     tag: g,
-    primetime: A
+    primetime: N
   } = (0, i.useStateFromStoresObject)([d.default], () => {
     var e;
-    return null !== (e = d.default.getState(t)) && void 0 !== e ? e : {}
-  }), N = s.useRef(null), v = s.useRef(null), R = s.useRef(null), [O, L] = s.useState(!1), P = (0, l.useSpring)({
-    ref: N,
+    return null !== (e = d.default.getStateForGuild(t)) && void 0 !== e ? e : {}
+  }), A = s.useRef(null), O = s.useRef(null), R = s.useRef(null), [v, L] = s.useState(!1), P = (0, l.useSpring)({
+    ref: A,
     config: l.config.slow,
     from: {
       flex: 1,
@@ -39,7 +39,7 @@ t.default = e => {
       paddingLeft: 120
     }
   }), M = (0, l.useSpring)({
-    ref: v,
+    ref: O,
     config: l.config.slow,
     from: {
       flex: m ? 1 : 0,
@@ -61,7 +61,7 @@ t.default = e => {
       opacity: 1
     }
   });
-  return (0, l.useChain)([N, v, R], [0, 0, 1]), (0, a.jsxs)("div", {
+  return (0, l.useChain)([A, O, R], [0, 0, 1]), (0, a.jsxs)("div", {
     className: h.animationContainer,
     children: [(0, a.jsxs)(l.animated.div, {
       className: h.signTextLeft,
@@ -81,7 +81,7 @@ t.default = e => {
       className: h.scrollContainer,
       children: (0, a.jsx)(c.default, {
         guildId: t,
-        signed: O,
+        signed: v,
         setSigned: L,
         signRef: C
       })
@@ -125,7 +125,7 @@ t.default = e => {
       look: r.Button.Looks.FILLED,
       size: r.Button.Sizes.MEDIUM,
       color: r.Button.Colors.BRAND,
-      disabled: !O,
+      disabled: !v,
       onClick: () => {
         u.convertGuildToClan(t, {
           selectedGames: S,
@@ -133,7 +133,7 @@ t.default = e => {
           interests: p,
           description: T,
           tag: g,
-          primetime: A
+          primetime: N
         }), _()
       },
       children: E.default.Messages.FINISH

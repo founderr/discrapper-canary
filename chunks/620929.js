@@ -40,21 +40,21 @@ t.default = e => {
     setSigned: r,
     animatedTextStyle: T,
     signRef: g
-  } = e, A = (0, d.useStateFromStores)([f.default], () => {
+  } = e, N = (0, d.useStateFromStores)([f.default], () => {
     var e, t;
     return null !== (t = null === (e = f.default.getGuild(n)) || void 0 === e ? void 0 : e.name) && void 0 !== t ? t : ""
   }), {
-    selectedGames: N,
-    playstyle: v,
+    selectedGames: A,
+    playstyle: O,
     interests: R,
-    primetime: O
+    primetime: v
   } = (0, d.useStateFromStoresObject)([_.default], () => {
     var e;
-    return null !== (e = _.default.getState(n)) && void 0 !== e ? e : {}
-  }), L = s.useMemo(() => (null == N ? void 0 : N.size) > 0 ? p(Array.from(N.values()).map(e => e.name)) : null, [N]), P = s.useMemo(() => (0, m.getPlaystyleTitle)(v), [v]), M = s.useMemo(() => (null == R ? void 0 : R.size) > 0 ? p(Array.from(R)) : null, [R]), y = s.useMemo(() => {
-    let e = (null == O ? void 0 : O.length) > 0 ? O.map(e => (0, C.primetimeToString)(e)).filter(h.isNotNullish) : [];
+    return null !== (e = _.default.getStateForGuild(n)) && void 0 !== e ? e : {}
+  }), L = s.useMemo(() => (null == A ? void 0 : A.size) > 0 ? p(Array.from(A.values()).map(e => e.name)) : null, [A]), P = s.useMemo(() => (0, m.getPlaystyleTitle)(O), [O]), M = s.useMemo(() => (null == R ? void 0 : R.size) > 0 ? p(Array.from(R)) : null, [R]), y = s.useMemo(() => {
+    let e = (null == v ? void 0 : v.length) > 0 ? v.map(e => (0, C.primetimeToString)(e)).filter(h.isNotNullish) : [];
     return (null == e ? void 0 : e.length) > 0 ? p(e) : null
-  }, [O]);
+  }, [v]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: I.scrollBg,
@@ -76,7 +76,7 @@ t.default = e => {
             color: "text-muted",
             className: I.overviewHeaderText,
             children: S.default.Messages.CLAN_SETUP_OVERVIEW_TITLE.format({
-              guildName: A
+              guildName: N
             })
           }), (0, a.jsx)(c.Text, {
             variant: "text-sm/normal",
