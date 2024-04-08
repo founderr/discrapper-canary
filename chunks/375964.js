@@ -7516,7 +7516,6 @@ e.exports = Object.freeze({
   BILLING_APPLICATION_REFUND_TEXT_UNABLE: "We're sorry, this purchase is not eligible for refunds. A refund can be requested if this purchase was made in the last {dateLimit, number} days and the game has been played for less than {playtimeLimit, number} hours.",
   BILLING_PREMIUM_REFUND_TEXT_UNABLE: "We're sorry, this purchase is not eligible for refunds. A refund can be requested if this purchase was made in the last {dateLimit, number} days.",
   BILLING_GIFT_REFUND_TEXT_UNABLE: "We're sorry, this purchase is not eligible for refunds. A refund can be requested if this purchase was made in the last {dateLimit, number} days and the gift has not been redeemed.",
-  BILLING_COLLECTIBLES_REFUND_TEXT_UNABLE: "We're sorry, this purchase is not eligible for refunds.",
   BILLING_REFUND_PURCHASE_DATE_SUBHEADER: "Purchase Date",
   BILLING_REFUND_RELEASE_DATE_SUBHEADER: "Release Date",
   BILLING_REFUND_PURCHASE_DATE: "{daysSincePurchase, plural, =0 {Today} =1 {{daysSincePurchase} day ago} other {{daysSincePurchase} days ago}}",
