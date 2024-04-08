@@ -73,8 +73,10 @@ let m = (0, I.createChannelRecord)({
       autoCompletePosition: l,
       renderAttachButton: u,
       onFocus: E
-    } = e, [I, T] = r.useState(""), [S, A] = r.useState((0, _.toRichValue)("")), N = d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT;
-    return o && (N.emojis = {
+    } = e, [I, T] = r.useState(""), [S, A] = r.useState((0, _.toRichValue)("")), N = () => {
+      T(""), A((0, _.toRichValue)(""))
+    }, O = d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT;
+    return o && (O.emojis = {
       button: !0
     }), (0, i.jsx)(c.default, {
       ref: t,
@@ -87,7 +89,7 @@ let m = (0, I.createChannelRecord)({
       onChange: (e, t, n) => {
         T(t), A(n)
       },
-      type: N,
+      type: O,
       textValue: I,
       richValue: S,
       onSubmit: e => {
@@ -97,7 +99,7 @@ let m = (0, I.createChannelRecord)({
         return t.length > f.MAX_CHAR_COUNT ? Promise.resolve({
           shouldClear: !1,
           shouldRefocus: !0
-        }) : (s(t), Promise.resolve({
+        }) : (s(t), N(), Promise.resolve({
           shouldClear: !0,
           shouldRefocus: !1
         }))
