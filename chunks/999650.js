@@ -113,6 +113,7 @@ function B(e) {
   let t = {
     [O.default.Messages.SEARCH_ANSWER_HAS_LINK]: "link",
     [O.default.Messages.SEARCH_ANSWER_HAS_EMBED]: "embed",
+    [O.default.Messages.SEARCH_ANSWER_HAS_POLL]: "poll",
     [O.default.Messages.SEARCH_ANSWER_HAS_ATTACHMENT]: "file",
     [O.default.Messages.SEARCH_ANSWER_HAS_VIDEO]: "video",
     [O.default.Messages.SEARCH_ANSWER_HAS_IMAGE]: "image",
@@ -202,7 +203,7 @@ let K = {};
 
 function z() {
   Object.assign(K, function() {
-    let e = [O.default.Messages.SEARCH_ANSWER_HAS_LINK, O.default.Messages.SEARCH_ANSWER_HAS_EMBED, O.default.Messages.SEARCH_ANSWER_HAS_ATTACHMENT, O.default.Messages.SEARCH_ANSWER_HAS_VIDEO, O.default.Messages.SEARCH_ANSWER_HAS_IMAGE, O.default.Messages.SEARCH_ANSWER_HAS_SOUND, O.default.Messages.SEARCH_ANSWER_HAS_STICKER];
+    let e = [O.default.Messages.SEARCH_ANSWER_HAS_LINK, O.default.Messages.SEARCH_ANSWER_HAS_EMBED, O.default.Messages.SEARCH_ANSWER_HAS_POLL, O.default.Messages.SEARCH_ANSWER_HAS_ATTACHMENT, O.default.Messages.SEARCH_ANSWER_HAS_VIDEO, O.default.Messages.SEARCH_ANSWER_HAS_IMAGE, O.default.Messages.SEARCH_ANSWER_HAS_SOUND, O.default.Messages.SEARCH_ANSWER_HAS_STICKER];
     return {
       [N.SearchTokenTypes.FILTER_FROM]: {
         regex: U(O.default.Messages.SEARCH_FILTER_FROM),

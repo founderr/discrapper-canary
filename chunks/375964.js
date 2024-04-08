@@ -6296,6 +6296,7 @@ e.exports = Object.freeze({
   SEARCH_ANSWER_HAS_ATTACHMENT: "file",
   SEARCH_ANSWER_HAS_EMBED: "embed",
   SEARCH_ANSWER_HAS_IMAGE: "image",
+  SEARCH_ANSWER_HAS_POLL: "poll",
   SEARCH_ANSWER_HAS_VIDEO: "video",
   SEARCH_ANSWER_HAS_SOUND: "sound",
   SEARCH_ANSWER_HAS_STICKER: "sticker",

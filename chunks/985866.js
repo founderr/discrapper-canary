@@ -232,12 +232,13 @@ function B(e) {
     ei = !eo && (q && null == T || ea),
     eu = D.default.Messages.QUESTS_REWARD_CODE_DONE;
   q ? eu = D.default.Messages.QUESTS_REWARD_CODE_GET_CODE : !q && V && (eu = D.default.Messages.QUESTS_REWARD_CODE_TRY_AGAIN);
-  let ed = (0, a.jsx)(h.Button, {
-    onClick: () => er(),
-    submitting: eo,
-    disabled: ei,
-    children: eu
-  });
+  let ed = !F && null != Q && !R && !V,
+    ec = (0, a.jsx)(h.Button, {
+      onClick: () => er(),
+      submitting: eo,
+      disabled: ei,
+      children: eu
+    });
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(n.ConfettiCanvas, {
       ref: k,
@@ -261,10 +262,10 @@ function B(e) {
             children: [Y, ee, es, el, en]
           })]
         }), (0, a.jsx)(h.ModalFooter, {
-          children: ed
+          children: ec
         })]
       })
-    }), !F && !R && null === el && !1 === V && (0, a.jsx)(S.default, {
+    }), ed && (0, a.jsx)(S.default, {
       confettiTarget: B.current,
       confettiCanvas: U,
       sprites: w.COMMON_CONFETTI_SPRITES,
