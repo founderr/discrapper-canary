@@ -89,6 +89,9 @@ class _ extends l.default {
     var e;
     return (null === (e = this.sku) || void 0 === e ? void 0 : e.deleted) === !0
   }
+  get isCollectible() {
+    return null != this.sku && this.sku.productLine === c.SKUProductLines.COLLECTIBLES
+  }
   constructor(e) {
     super(), f(this, "id", void 0), f(this, "createdAt", void 0), f(this, "currency", void 0), f(this, "tax", void 0), f(this, "taxInclusive", void 0), f(this, "amount", void 0), f(this, "amountRefunded", void 0), f(this, "status", void 0), f(this, "description", void 0), f(this, "downloadableInvoice", void 0), f(this, "downloadableRefundInvoices", void 0), f(this, "flags", void 0), f(this, "paymentSource", void 0), f(this, "paymentGateway", void 0), f(this, "paymentGatewayPaymentId", void 0), f(this, "subscription", void 0), f(this, "skuId", void 0), f(this, "skuPrice", void 0), f(this, "sku", void 0), f(this, "premiumRefundDisqualificationReasons", void 0), this.id = e.id, this.amount = e.amount, this.amountRefunded = e.amountRefunded, this.createdAt = e.createdAt, this.currency = e.currency, this.description = e.description, this.paymentSource = e.paymentSource, this.paymentGateway = e.paymentGateway, this.paymentGatewayPaymentId = e.paymentGatewayPaymentId, this.status = e.status, this.tax = e.tax, this.taxInclusive = e.taxInclusive, this.subscription = e.subscription, this.skuId = e.skuId, this.skuPrice = e.skuPrice, this.sku = e.sku, this.flags = e.flags, this.downloadableInvoice = e.downloadableInvoice, this.downloadableRefundInvoices = e.downloadableRefundInvoices, this.premiumRefundDisqualificationReasons = e.premiumRefundDisqualificationReasons
   }
