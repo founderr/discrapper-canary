@@ -217,7 +217,8 @@ function O(e) {
             let e = _.current.getBoundingClientRect(),
               t = window.innerHeight;
             return e.top < t / 2 ? "bottom" : "top"
-          })()
+          })(),
+          channel: f
         })]
       })]
     })]

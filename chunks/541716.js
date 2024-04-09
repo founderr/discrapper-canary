@@ -388,6 +388,9 @@ let o = {
       permissions: {
         requireSendMessages: !0
       },
+      users: {
+        allowMentioning: !0
+      },
       submit: {
         useDisabledStylesOnSubmit: !0,
         disableEnterToSubmit: !0
