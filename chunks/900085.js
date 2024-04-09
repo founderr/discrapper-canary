@@ -19,9 +19,9 @@ var l, a = n("735250"),
   m = n("592125"),
   g = n("888369"),
   E = n("430824"),
-  S = n("306680"),
-  _ = n("944486"),
-  I = n("938475"),
+  _ = n("306680"),
+  I = n("944486"),
+  S = n("938475"),
   N = n("387204"),
   T = n("107828"),
   A = n("153124"),
@@ -29,8 +29,8 @@ var l, a = n("735250"),
   v = n("63063"),
   x = n("51596"),
   R = n("823385"),
-  y = n("670512"),
-  M = n("981631"),
+  M = n("670512"),
+  y = n("981631"),
   O = n("689938"),
   D = n("13199");
 
@@ -53,7 +53,7 @@ let j = {
     }), (0, a.jsx)("div", {
       className: D.emptyStateCTA,
       children: (0, a.jsx)(d.Anchor, {
-        href: v.default.getArticleURL(M.HelpdeskArticles.QUICK_SWITCHER_TUTORIAL),
+        href: v.default.getArticleURL(y.HelpdeskArticles.QUICK_SWITCHER_TUTORIAL),
         children: O.default.Messages.QUICKSWITCHER_EMPTY_CTA
       })
     })]
@@ -73,23 +73,23 @@ class U extends(l = s.Component) {
 b(U, "defaultProps", {
   unread: !1
 });
-let P = u.default.connectStores([S.default, m.default], e => {
+let P = u.default.connectStores([_.default, m.default], e => {
     let {
       channel: t
     } = e;
     return {
-      unread: S.default.hasUnread(t.id),
-      mentions: S.default.getMentionCount(t.id),
+      unread: _.default.hasUnread(t.id),
+      mentions: _.default.getMentionCount(t.id),
       category: m.default.getChannel(t.parent_id)
     }
   })(U),
-  w = u.default.connectStores([I.default], e => {
+  w = u.default.connectStores([S.default], e => {
     let {
       channel: t
     } = e;
     if (null == t.guild_id) throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
     return {
-      voiceStates: I.default.getVoiceStates(t.guild_id)[t.id]
+      voiceStates: S.default.getVoiceStates(t.guild_id)[t.id]
     }
   })(U),
   F = u.default.connectStores([g.default], e => {
@@ -100,20 +100,20 @@ let P = u.default.connectStores([S.default, m.default], e => {
       unread: g.default.hasUnread(t.id)
     }
   })(T.Guild),
-  B = u.default.connectStores([S.default], e => {
+  B = u.default.connectStores([_.default], e => {
     let {
       channel: t
     } = e;
     return {
-      mentions: S.default.getMentionCount(t.id)
+      mentions: _.default.getMentionCount(t.id)
     }
   })(T.GroupDM),
-  V = u.default.connectStores([m.default, S.default], e => {
+  V = u.default.connectStores([m.default, _.default], e => {
     let {
       user: t
     } = e, n = m.default.getDMFromUserId(t.id);
     return {
-      mentions: null != n ? S.default.getMentionCount(n) : 0
+      mentions: null != n ? _.default.getMentionCount(n) : 0
     }
   })(T.User);
 
@@ -210,7 +210,7 @@ class k extends s.PureComponent {
     })
   }
   focusNode(e) {
-    L.ComponentDispatch.dispatch(M.ComponentActions.QUICKSWITCHER_RESULT_FOCUS, {
+    L.ComponentDispatch.dispatch(y.ComponentActions.QUICKSWITCHER_RESULT_FOCUS, {
       node: e
     })
   }
@@ -228,7 +228,7 @@ class k extends s.PureComponent {
         textChannelSymbolHook: (e, t) => H(t, p.AutocompleterQuerySymbols.TEXT_CHANNEL, O.default.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
         voiceChannelSymbolHook: (e, t) => H(t, p.AutocompleterQuerySymbols.VOICE_CHANNEL, O.default.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
         guildSymbolHook: (e, t) => H(t, p.AutocompleterQuerySymbols.GUILD, O.default.Messages.QUICKSWITCHER_PROTIP_GUILDS),
-        helpdeskArticle: v.default.getArticleURL(M.HelpdeskArticles.QUICK_SWITCHER_TUTORIAL)
+        helpdeskArticle: v.default.getArticleURL(y.HelpdeskArticles.QUICK_SWITCHER_TUTORIAL)
       })
     })
   }
@@ -239,7 +239,7 @@ class k extends s.PureComponent {
       seenTutorial: t,
       results: n
     } = this.props;
-    return t ? null : (0, a.jsx)(y.default, {
+    return t ? null : (0, a.jsx)(M.default, {
       hasQuery: e.length > 0 && n.length > 0
     })
   }
@@ -298,10 +298,10 @@ class k extends s.PureComponent {
             s = E.default.getGuild(l.getGuildId());
           if (null == s) return;
           switch (l.type) {
-            case M.ChannelTypes.GUILD_TEXT:
-            case M.ChannelTypes.GUILD_ANNOUNCEMENT:
-            case M.ChannelTypes.GUILD_FORUM:
-            case M.ChannelTypes.GUILD_MEDIA:
+            case y.ChannelTypes.GUILD_TEXT:
+            case y.ChannelTypes.GUILD_ANNOUNCEMENT:
+            case y.ChannelTypes.GUILD_FORUM:
+            case y.ChannelTypes.GUILD_MEDIA:
               return (0, c.openContextMenuLazy)(e, async () => {
                 let {
                   default: e
@@ -313,8 +313,8 @@ class k extends s.PureComponent {
                   onSelect: x.hide
                 })
               });
-            case M.ChannelTypes.GUILD_VOICE:
-            case M.ChannelTypes.GUILD_STAGE_VOICE:
+            case y.ChannelTypes.GUILD_VOICE:
+            case y.ChannelTypes.GUILD_STAGE_VOICE:
               return (0, c.openContextMenuLazy)(e, async () => {
                 let {
                   default: e
@@ -326,9 +326,9 @@ class k extends s.PureComponent {
                   onSelect: x.hide
                 })
               });
-            case M.ChannelTypes.ANNOUNCEMENT_THREAD:
-            case M.ChannelTypes.PUBLIC_THREAD:
-            case M.ChannelTypes.PRIVATE_THREAD:
+            case y.ChannelTypes.ANNOUNCEMENT_THREAD:
+            case y.ChannelTypes.PUBLIC_THREAD:
+            case y.ChannelTypes.PRIVATE_THREAD:
               return (0, c.openContextMenuLazy)(e, async () => {
                 let {
                   default: e
@@ -339,7 +339,7 @@ class k extends s.PureComponent {
                   onSelect: x.hide
                 })
               });
-            case M.ChannelTypes.GUILD_STORE:
+            case y.ChannelTypes.GUILD_STORE:
               return (0, c.openContextMenuLazy)(e, async () => {
                 let {
                   default: e
@@ -351,7 +351,7 @@ class k extends s.PureComponent {
                   onSelect: x.hide
                 })
               });
-            case M.ChannelTypes.GUILD_DIRECTORY:
+            case y.ChannelTypes.GUILD_DIRECTORY:
               return (0, c.openContextMenuLazy)(e, async () => {
                 let {
                   default: e
@@ -367,11 +367,11 @@ class k extends s.PureComponent {
           return (0, c.openContextMenuLazy)(e, async () => {
             let {
               default: e
-            } = await Promise.all([n.e("79695"), n.e("25421")]).then(n.bind(n, "354741"));
+            } = await Promise.all([n.e("99387"), n.e("79695"), n.e("25421")]).then(n.bind(n, "354741"));
             return n => (0, a.jsx)(e, {
               ...n,
               channel: t.record,
-              selected: _.default.getChannelId() === t.record.id,
+              selected: I.default.getChannelId() === t.record.id,
               onSelect: x.hide
             })
           });

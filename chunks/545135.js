@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return j
+    return C
   }
 });
 var s = i("735250");
@@ -15,67 +15,68 @@ var n = i("512722"),
   r = i("906732"),
   c = i("299206"),
   S = i("894059"),
-  E = i("423589"),
-  f = i("837949"),
-  g = i("314897"),
-  _ = i("984933"),
-  N = i("594174"),
-  M = i("241851"),
-  h = i("976192"),
-  I = i("904483"),
-  L = i("429824"),
-  A = i("919815"),
-  p = i("858822"),
+  f = i("423589"),
+  E = i("837949"),
+  g = i("122074"),
+  _ = i("314897"),
+  N = i("984933"),
+  M = i("594174"),
+  h = i("241851"),
+  I = i("976192"),
+  L = i("904483"),
+  A = i("429824"),
+  p = i("919815"),
+  m = i("858822"),
   T = i("993356"),
   G = i("58338"),
   O = i("422525"),
-  m = i("522762"),
-  b = i("466330"),
-  x = i("981631"),
-  R = i("689938");
+  b = i("522762"),
+  x = i("466330"),
+  R = i("981631"),
+  j = i("689938");
 
 function U(e) {
   let {
     guild: t,
     onSelect: n,
     hideSettings: d
-  } = e, r = t.id, U = _.default.getDefaultChannel(r), j = (0, l.useStateFromStores)([N.default], () => {
-    let e = N.default.getCurrentUser();
+  } = e, r = t.id, U = N.default.getDefaultChannel(r), C = (0, l.useStateFromStores)([M.default], () => {
+    let e = M.default.getCurrentUser();
     return a()(null != e, "GuildContextMenu: user cannot be undefined"), t.isOwner(e)
-  }, [t]), C = (0, b.default)({
+  }, [t]), P = (0, x.default)({
     guild: t,
-    source: x.InstantInviteSources.GUILD_CONTEXT_MENU,
+    source: R.InstantInviteSources.GUILD_CONTEXT_MENU,
     channel: U
-  }), P = (0, m.default)(r), v = (0, p.default)(t), F = (0, T.default)(t), y = (0, O.default)(t), D = (0, h.default)({
+  }), v = (0, b.default)(r), F = (0, m.default)(t), y = (0, T.default)(t), D = (0, O.default)(t), k = (0, I.default)({
     guildId: t.id,
-    userId: g.default.getId(),
+    userId: _.default.getId(),
     analyticsLocation: {
-      page: x.AnalyticsPages.GUILD_CHANNEL,
-      section: x.AnalyticsSections.CHAT_USERNAME,
-      object: x.AnalyticsObjects.CONTEXT_MENU_ITEM
+      page: R.AnalyticsPages.GUILD_CHANNEL,
+      section: R.AnalyticsSections.CHAT_USERNAME,
+      object: R.AnalyticsObjects.CONTEXT_MENU_ITEM
     }
-  }), k = (0, I.default)(t), H = (0, S.default)(t.id), B = (0, c.default)({
+  }), H = (0, L.default)(t), B = (0, S.default)(t.id), Y = (0, c.default)({
     id: t.id,
-    label: R.default.Messages.COPY_ID_GUILD
-  }), Y = (0, A.default)(t, {
-    section: x.AnalyticsSections.GUILD_LIST
-  }), w = (0, f.default)(t.id), V = (0, G.default)(t.id), z = (0, L.default)(t), X = (0, E.useShouldUseNewNotificationSystem)("GuildContextMenu");
+    label: j.default.Messages.COPY_ID_GUILD
+  }), w = (0, p.default)(t, {
+    section: R.AnalyticsSections.GUILD_LIST
+  }), V = (0, E.default)(t.id), z = (0, G.default)(t.id), X = (0, g.default)(), W = (0, A.default)(t), K = (0, f.useShouldUseNewNotificationSystem)("GuildContextMenu");
 
-  function W() {
-    (0, u.openModal)(e => (0, s.jsx)(M.GuildLeaveConfirmModalContents, {
+  function q() {
+    (0, u.openModal)(e => (0, s.jsx)(h.GuildLeaveConfirmModalContents, {
       ...e,
       guild: t
     }))
   }
-  return t.hasFeature(x.GuildFeatures.HUB) ? (0, s.jsxs)(u.Menu, {
+  return t.hasFeature(R.GuildFeatures.HUB) ? (0, s.jsxs)(u.Menu, {
     navId: "guild-context",
     onClose: o.closeContextMenu,
-    "aria-label": R.default.Messages.GUILD_ACTIONS_MENU_LABEL,
+    "aria-label": j.default.Messages.GUILD_ACTIONS_MENU_LABEL,
     onSelect: n,
     children: [(0, s.jsxs)(u.MenuGroup, {
-      children: [C, (0, s.jsx)(u.MenuItem, {
+      children: [P, (0, s.jsx)(u.MenuItem, {
         id: "privacy",
-        label: R.default.Messages.HUB_PRIVACY_SETTINGS,
+        label: j.default.Messages.HUB_PRIVACY_SETTINGS,
         action: () => (0, u.openModalLazy)(async () => {
           let {
             default: e
@@ -85,32 +86,32 @@ function U(e) {
             guild: t
           })
         })
-      }), D]
-    }), j ? null : (0, s.jsx)(u.MenuGroup, {
+      }), k]
+    }), C ? null : (0, s.jsx)(u.MenuGroup, {
       children: (0, s.jsx)(u.MenuItem, {
         id: "leave-guild",
-        label: R.default.Messages.LEAVE_HUB,
-        action: W,
+        label: j.default.Messages.LEAVE_HUB,
+        action: q,
         color: "danger"
       })
     }), (0, s.jsx)(u.MenuGroup, {
-      children: B
+      children: Y
     })]
   }) : (0, s.jsxs)(u.Menu, {
     navId: "guild-context",
     onClose: o.closeContextMenu,
-    "aria-label": R.default.Messages.GUILD_ACTIONS_MENU_LABEL,
+    "aria-label": j.default.Messages.GUILD_ACTIONS_MENU_LABEL,
     onSelect: n,
     children: [(0, s.jsx)(u.MenuGroup, {
-      children: Y
+      children: w
     }), (0, s.jsx)(u.MenuGroup, {
-      children: C
+      children: P
     }), (0, s.jsxs)(u.MenuGroup, {
-      children: [v, X || __OVERLAY__ ? null : F, X && !__OVERLAY__ ? V : null, P, w]
+      children: [F, K || __OVERLAY__ ? null : y, K && !__OVERLAY__ ? z : null, X, v, V]
     }), (0, s.jsxs)(u.MenuGroup, {
-      children: [d ? null : y, __OVERLAY__ ? null : (0, s.jsx)(u.MenuItem, {
+      children: [d ? null : D, __OVERLAY__ ? null : (0, s.jsx)(u.MenuItem, {
         id: "privacy",
-        label: R.default.Messages.PRIVACY_SETTINGS,
+        label: j.default.Messages.PRIVACY_SETTINGS,
         action: () => (0, u.openModalLazy)(async () => {
           let {
             default: e
@@ -120,23 +121,23 @@ function U(e) {
             guild: t
           })
         })
-      }), D]
+      }), k]
     }), (0, s.jsxs)(u.MenuGroup, {
-      children: [k, H]
+      children: [H, B]
     }), (0, s.jsxs)(u.MenuGroup, {
-      children: [z, !j && (0, s.jsx)(u.MenuItem, {
+      children: [W, !C && (0, s.jsx)(u.MenuItem, {
         id: "leave-guild",
-        label: R.default.Messages.LEAVE_SERVER,
-        action: W,
+        label: j.default.Messages.LEAVE_SERVER,
+        action: q,
         color: "danger"
       })]
     }), (0, s.jsx)(u.MenuGroup, {
-      children: B
+      children: Y
     })]
   })
 }
 
-function j(e) {
+function C(e) {
   let {
     analyticsLocations: t
   } = (0, r.default)(d.default.CONTEXT_MENU);

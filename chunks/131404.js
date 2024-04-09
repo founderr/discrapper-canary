@@ -3,107 +3,108 @@ n.r(t);
 var a = n("735250");
 n("470079");
 var u = n("481060"),
-  l = n("239091"),
+  i = n("239091"),
   r = n("883385"),
-  s = n("108843"),
-  i = n("911969"),
+  l = n("108843"),
+  s = n("911969"),
   d = n("947440"),
   o = n("100527"),
   f = n("441061"),
   c = n("167675"),
-  M = n("737013"),
-  _ = n("461535"),
-  E = n("776568"),
-  I = n("299206"),
-  S = n("895563"),
-  p = n("212205"),
-  g = n("62420"),
-  T = n("455395"),
-  A = n("581052"),
-  m = n("875252"),
-  h = n("819403"),
-  C = n("777658"),
+  _ = n("737013"),
+  p = n("461535"),
+  M = n("776568"),
+  S = n("299206"),
+  E = n("895563"),
+  m = n("212205"),
+  I = n("62420"),
+  g = n("455395"),
+  h = n("581052"),
+  T = n("875252"),
+  A = n("122074"),
+  C = n("819403"),
+  v = n("777658"),
   R = n("858488"),
-  v = n("185457"),
-  N = n("570870"),
+  N = n("185457"),
+  x = n("570870"),
   F = n("389052"),
   O = n("24311"),
-  G = n("794973"),
-  x = n("332576"),
-  U = n("710631"),
-  y = n("558924"),
-  j = n("991307"),
+  j = n("794973"),
+  G = n("332576"),
+  y = n("710631"),
+  U = n("558924"),
+  b = n("991307"),
   P = n("725119"),
-  b = n("700994"),
-  V = n("332031"),
+  V = n("700994"),
+  D = n("332031"),
   L = n("981631"),
-  D = n("689938");
-t.default = (0, s.default)((0, r.default)(function(e) {
+  k = n("689938");
+t.default = (0, l.default)((0, r.default)(function(e) {
   let {
     user: t,
     channel: n,
     channelSelected: r = !1,
-    showMute: s = !0,
+    showMute: l = !0,
     showMediaItems: o = !1,
     showChannelCallItems: L = !1,
-    showModalItems: k = !0,
-    targetIsUser: W = !1,
-    context: Y,
+    showModalItems: W = !0,
+    targetIsUser: Y = !1,
+    context: w,
     onSelect: K,
     onHeightUpdate: q
-  } = e, H = (0, P.default)(t.id, null), w = (0, O.default)(t, Y), B = (0, v.default)({
+  } = e, H = (0, P.default)(t.id, null), B = (0, O.default)(t, w), X = (0, N.default)({
     user: t,
-    context: Y
-  }), X = (0, R.default)(t), z = (0, V.default)(t.id), Q = (0, G.default)(n.id, r), J = (0, U.default)(t), Z = (0, d.default)(null, t), $ = (0, b.default)(t.id), ee = (0, y.default)(t.id, n.id), et = (0, C.default)(t), en = (0, j.default)(t.id), ea = (0, x.default)(t.id, n.id), eu = (0, F.default)(t), el = (0, E.default)(n), er = (0, I.default)({
+    context: w
+  }), z = (0, R.default)(t), Q = (0, D.default)(t.id), J = (0, j.default)(n.id, r), Z = (0, y.default)(t), $ = (0, d.default)(null, t), ee = (0, V.default)(t.id), et = (0, U.default)(t.id, n.id), en = (0, v.default)(t), ea = (0, b.default)(t.id), eu = (0, G.default)(t.id, n.id), ei = (0, F.default)(t), er = (0, M.default)(n), el = (0, A.default)(), es = (0, S.default)({
     id: t.id,
-    label: D.default.Messages.COPY_ID_USER
-  }), es = (0, I.default)({
+    label: k.default.Messages.COPY_ID_USER
+  }), ed = (0, S.default)({
     id: n.id,
-    label: D.default.Messages.COPY_ID_CHANNEL
-  }), ei = (0, _.default)(n), ed = (0, c.default)(t.id), eo = (0, f.default)(n.id), ef = (0, h.default)(t), ec = (0, M.default)(t.id), eM = (0, N.default)({
-    commandType: i.ApplicationCommandType.USER,
+    label: k.default.Messages.COPY_ID_CHANNEL
+  }), eo = (0, p.default)(n), ef = (0, c.default)(t.id), ec = (0, f.default)(n.id), e_ = (0, C.default)(t), ep = (0, _.default)(t.id), eM = (0, x.default)({
+    commandType: s.ApplicationCommandType.USER,
     commandTargetId: t.id,
     channel: n,
     guildId: void 0,
     onHeightUpdate: q
-  }), e_ = (0, S.useAddToFavoritesItem)(n), eE = (0, S.useRemoveFromFavoritesItem)(n), eI = (0, p.default)(n), eS = (0, g.default)(n), ep = (0, A.useMessageRequestItem)(n), eg = (0, T.useInappropriateConversationItem)(n), eT = (0, m.useSafetyWarningsItem)(n), eA = n.isManaged(), em = t.isNonUserBot();
+  }), eS = (0, E.useAddToFavoritesItem)(n), eE = (0, E.useRemoveFromFavoritesItem)(n), em = (0, m.default)(n), eI = (0, I.default)(n), eg = (0, h.useMessageRequestItem)(n), eh = (0, g.useInappropriateConversationItem)(n), eT = (0, T.useSafetyWarningsItem)(n), eA = n.isManaged(), eC = t.isNonUserBot();
   return (0, a.jsxs)(u.Menu, {
     navId: "user-context",
-    onClose: l.closeContextMenu,
-    "aria-label": D.default.Messages.USER_ACTIONS_MENU_LABEL,
+    onClose: i.closeContextMenu,
+    "aria-label": k.default.Messages.USER_ACTIONS_MENU_LABEL,
     onSelect: K,
     children: [(0, a.jsx)(u.MenuGroup, {
-      children: !em && ei
+      children: !eC && eo
     }), (0, a.jsx)(u.MenuGroup, {
-      children: ep
+      children: eg
     }), (0, a.jsx)(u.MenuGroup, {
       children: eT
     }), (0, a.jsx)(u.MenuGroup, {
-      children: eg
+      children: eh
     }), (0, a.jsxs)(u.MenuGroup, {
-      children: [e_, eI, eS]
+      children: [eS, em, eI]
     }), (0, a.jsx)(u.MenuGroup, {
-      children: !em && ef
+      children: !eC && e_
     }), (0, a.jsxs)(u.MenuGroup, {
-      children: [!em && (0, a.jsxs)(a.Fragment, {
-        children: [k && H, w, !eA && ee, k && B, k && X, z]
-      }), Q]
-    }), !em && (0, a.jsxs)(a.Fragment, {
+      children: [!eC && (0, a.jsxs)(a.Fragment, {
+        children: [W && H, B, !eA && et, W && X, W && z, Q]
+      }), J]
+    }), !eC && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(u.MenuGroup, {
-        children: o && $
+        children: o && ee
       }), (0, a.jsx)(u.MenuGroup, {
-        children: k && Z
+        children: W && $
       }), (0, a.jsxs)(u.MenuGroup, {
-        children: [o && en, o && ea, eM, k && J, et, k && eu, o && ec]
-      }), (0, a.jsx)(u.MenuGroup, {
-        children: s && el
+        children: [o && ea, o && eu, eM, W && Z, en, W && ei, o && ep]
+      }), (0, a.jsxs)(u.MenuGroup, {
+        children: [l && er, el]
       }), L && (0, a.jsxs)(u.MenuGroup, {
-        children: [eo, ed]
+        children: [ec, ef]
       })]
     }), (0, a.jsx)(u.MenuGroup, {
       children: eE
     }), (0, a.jsxs)(u.MenuGroup, {
-      children: [er, !W && es]
+      children: [es, !Y && ed]
     })]
   })
 }, {
