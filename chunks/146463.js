@@ -7,13 +7,13 @@ var l = s("803997"),
   n = s("924826"),
   r = s("442837"),
   u = s("481060"),
-  o = s("209613"),
-  d = s("430824"),
+  d = s("209613"),
+  o = s("430824"),
   c = s("263704"),
   E = s("855981"),
   I = s("55543"),
-  f = s("693546"),
-  T = s("826581"),
+  T = s("693546"),
+  f = s("826581"),
   R = s("246364"),
   _ = s("328977"),
   S = s("571728"),
@@ -59,33 +59,34 @@ function h(e) {
   })
 }
 t.default = function(e) {
+  var t;
   let {
-    applicationStatus: t,
-    guildJoinRequests: s,
-    guildId: l,
-    onScroll: c,
-    listRef: E
-  } = e, I = (0, r.useStateFromStores)([d.default], () => d.default.getGuild(l), [l]), p = (0, r.useStateFromStores)([T.default], () => T.default.isFetching()), C = p ? [s.length + 25] : [s.length], x = (0, _.useSelectedGuildJoinRequest)({
-    guildId: l
-  }), g = (0, S.useSubmittedGuildJoinRequestTotal)({
-    guildId: l
-  }), P = (0, o.default)("guild-join-requests"), j = e => {
+    applicationStatus: s,
+    guildJoinRequests: l,
+    guildId: c,
+    onScroll: E,
+    listRef: I
+  } = e, p = (0, r.useStateFromStores)([o.default], () => o.default.getGuild(c), [c]), x = (0, r.useStateFromStores)([f.default], () => f.default.isFetching()), C = x ? [l.length + 25] : [l.length], g = (0, _.useSelectedGuildJoinRequest)({
+    guildId: c
+  }), j = null !== (t = (0, S.useSubmittedGuildJoinRequestTotal)({
+    guildId: c
+  })) && void 0 !== t ? t : 0, P = (0, d.default)("guild-join-requests"), v = e => {
     let {
-      row: n
-    } = e, r = s[n];
-    return null == r ? (0, a.jsx)(N.MemberApplicationsListRowPlaceholder, {}, n) : (0, a.jsx)(N.MemberApplicationsListRow, {
+      row: t
+    } = e, n = l[t];
+    return null == n ? (0, a.jsx)(N.MemberApplicationsListRowPlaceholder, {}, t) : (0, a.jsx)(N.MemberApplicationsListRow, {
       className: i()({
-        [A.selected]: x === r,
-        [A.siblingSelected]: x === s[n - 1]
+        [A.selected]: g === n,
+        [A.siblingSelected]: g === l[t - 1]
       }),
-      guild: I,
-      guildJoinRequest: r,
-      onClick: () => f.default.setSelectedGuildJoinRequest(l, r),
-      applicationStatus: t
-    }, "".concat(r.userId, "-").concat(r.applicationStatus, "-").concat(n))
+      guild: p,
+      guildJoinRequest: n,
+      onClick: () => T.default.setSelectedGuildJoinRequest(c, n),
+      applicationStatus: s
+    }, "".concat(n.userId, "-").concat(n.applicationStatus, "-").concat(t))
   };
-  return p || 0 !== s.length ? (0, a.jsxs)(a.Fragment, {
-    children: [0 !== g && t === R.GuildJoinRequestApplicationStatuses.SUBMITTED && (0, a.jsx)(u.Text, {
+  return x || 0 !== l.length ? (0, a.jsxs)(a.Fragment, {
+    children: [0 !== j && s === R.GuildJoinRequestApplicationStatuses.SUBMITTED && (0, a.jsx)(u.Text, {
       className: A.title,
       variant: "text-xs/semibold",
       color: "header-secondary",
@@ -107,7 +108,7 @@ t.default = function(e) {
           default:
             return ""
         }
-      })(t, g).toUpperCase()
+      })(s, j).toUpperCase()
     }), (0, a.jsx)(n.ListNavigatorProvider, {
       navigator: P,
       children: (0, a.jsx)(n.ListNavigatorContainer, {
@@ -122,16 +123,16 @@ t.default = function(e) {
             innerAriaLabel: m.default.Messages.MEMBERS,
             ref: e => {
               var s;
-              E.current = e, t.current = null !== (s = null == e ? void 0 : e.getScrollerNode()) && void 0 !== s ? s : null
+              I.current = e, t.current = null !== (s = null == e ? void 0 : e.getScrollerNode()) && void 0 !== s ? s : null
             },
             paddingTop: 0,
             paddingBottom: 16,
             sectionHeight: 0,
             rowHeight: 64,
             renderSection: M,
-            renderRow: j,
+            renderRow: v,
             sections: C,
-            onScroll: c,
+            onScroll: E,
             fade: !0,
             ...l
           }, "guild-application-review")
@@ -139,6 +140,6 @@ t.default = function(e) {
       })
     })]
   }) : (0, a.jsx)(h, {
-    status: t
+    status: s
   })
 }

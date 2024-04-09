@@ -122,40 +122,40 @@ function _(e) {
 }
 
 function R(e) {
-  var t;
+  var t, i;
   let {
-    guild: i,
-    isInitiallyExpanded: n = !1,
-    showHeader: o = !0,
-    disableAnimation: I = !1
-  } = e, [x, h] = l.useState(n), T = l.useRef(!1), R = l.useCallback(() => {
-    T.current = !0
-  }, []), v = (0, m.useSubmittedGuildJoinRequestTotal)({
-    guildId: i.id
-  }), g = (0, r.useStateFromStores)([u.default], () => u.default.get(i.id)), p = null !== (t = null == g ? void 0 : g.formFields) && void 0 !== t ? t : [];
+    guild: n,
+    isInitiallyExpanded: o = !1,
+    showHeader: I = !0,
+    disableAnimation: x = !1
+  } = e, [h, T] = l.useState(o), R = l.useRef(!1), v = l.useCallback(() => {
+    R.current = !0
+  }, []), g = null !== (t = (0, m.useSubmittedGuildJoinRequestTotal)({
+    guildId: n.id
+  })) && void 0 !== t ? t : 0, p = (0, r.useStateFromStores)([u.default], () => u.default.get(n.id)), C = null !== (i = null == p ? void 0 : p.formFields) && void 0 !== i ? i : [];
   return l.useEffect(() => {
-    c.default.fetchVerificationForm(i.id)
-  }, [i.id]), (0, a.jsx)(d.default, {
-    renderHeader: o ? (0, a.jsx)(_, {
-      guild: i,
-      isExpanded: x,
-      emptyFormFields: (null == p ? void 0 : p.length) == null || (null == p ? void 0 : p.length) === 0,
-      hasTermsField: null == p ? void 0 : p.some(e => e.field_type === f.VerificationFormFieldTypes.TERMS)
+    c.default.fetchVerificationForm(n.id)
+  }, [n.id]), (0, a.jsx)(d.default, {
+    renderHeader: I ? (0, a.jsx)(_, {
+      guild: n,
+      isExpanded: h,
+      emptyFormFields: (null == C ? void 0 : C.length) == null || (null == C ? void 0 : C.length) === 0,
+      hasTermsField: null == C ? void 0 : C.some(e => e.field_type === f.VerificationFormFieldTypes.TERMS)
     }) : null,
-    isExpanded: x,
-    onExpand: () => h(!x),
-    disableAnimation: I,
-    disableBackground: !o,
+    isExpanded: h,
+    onExpand: () => T(!h),
+    disableAnimation: x,
+    disableBackground: !I,
     children: (0, a.jsx)("div", {
       className: s()(M.itemBodyContainer, F.rulesScreeningItems, {
-        [M.noPadding]: !o,
-        [F.rulesScreeningItemsNoBorder]: !o
+        [M.noPadding]: !I,
+        [F.rulesScreeningItemsNoBorder]: !I
       }),
-      children: null != g && (0, a.jsx)(E.default, {
-        guild: i,
-        submittedGuildJoinRequestsCount: v,
-        formFields: p,
-        onFormFieldUpdate: R,
+      children: null != p && (0, a.jsx)(E.default, {
+        guild: n,
+        submittedGuildJoinRequestsCount: g,
+        formFields: C,
+        onFormFieldUpdate: v,
         hideVerificationLevelField: !0
       })
     })

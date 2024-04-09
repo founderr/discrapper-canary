@@ -12,8 +12,7 @@ var E, _, a, n, T = s("442837"),
 let d = {};
 
 function S(e) {
-  var t;
-  return null !== (t = d[e]) && void 0 !== t ? t : 0
+  return d[e]
 }
 
 function N(e, t) {
@@ -25,12 +24,12 @@ function g(e, t, s) {
     var E, _, a, n;
     if (t === L.GuildJoinRequestApplicationStatuses.SUBMITTED) {
       ;
-      let t = S(e);
+      let t = d[e];
       E = e, _ = t + 1, d[E] = _
     }
     if (s === L.GuildJoinRequestApplicationStatuses.SUBMITTED) {
       ;
-      let t = S(e);
+      let t = d[e];
       a = e, n = Math.max(0, t - 1), d[a] = n
     }
   }
@@ -80,7 +79,7 @@ class y extends(E = T.default.Store) {
     return (0, I.isActionedApplicationStatus)(t) ? C.values(s) : (0, I.isSubmittedApplicationStatus)(t) ? U.values(s) : O.values(s)
   }
   getSubmittedGuildJoinRequestTotal(e) {
-    return S(e)
+    return d[e]
   }
   isFetching() {
     return D

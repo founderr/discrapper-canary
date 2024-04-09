@@ -6,13 +6,13 @@ var a = s("735250"),
   n = s("481060"),
   r = s("616230"),
   u = s("430824"),
-  o = s("794358"),
-  d = s("693546"),
+  d = s("794358"),
+  o = s("693546"),
   c = s("246364"),
   E = s("98493"),
   I = s("985159"),
-  f = s("328977"),
-  T = s("412222"),
+  T = s("328977"),
+  f = s("412222"),
   R = s("223312"),
   _ = s("571728"),
   S = s("572940"),
@@ -50,7 +50,7 @@ function p(e) {
         size: n.ButtonSizes.SMALL,
         "aria-label": M.default.Messages.MEMBER_VERIFICATION_PREVIEW_APPLICATION,
         innerClassName: h.previewButton,
-        children: [(0, a.jsx)(o.default, {}), M.default.Messages.MEMBER_VERIFICATION_PREVIEW_APPLICATION]
+        children: [(0, a.jsx)(d.default, {}), M.default.Messages.MEMBER_VERIFICATION_PREVIEW_APPLICATION]
       })]
     }), (0, a.jsx)(n.Text, {
       className: h.description,
@@ -63,69 +63,69 @@ function p(e) {
   })
 }
 
-function C(e) {
-  var t;
+function x(e) {
+  var t, s;
   let {
-    guildId: s
-  } = e, o = l.useRef(null), [C, x] = l.useState((0, I.useSelectedApplicationTab)({
-    guildId: s
-  })), g = (0, T.useSelectedSortOrder)({
-    guildId: s
-  }), P = (0, f.useSelectedGuildJoinRequest)({
-    guildId: s
-  }), j = (0, _.useSubmittedGuildJoinRequestTotal)({
-    guildId: s
-  }), {
-    guildJoinRequests: v
+    guildId: d
+  } = e, x = l.useRef(null), [C, g] = l.useState((0, I.useSelectedApplicationTab)({
+    guildId: d
+  })), j = (0, f.useSelectedSortOrder)({
+    guildId: d
+  }), P = (0, T.useSelectedGuildJoinRequest)({
+    guildId: d
+  }), v = null !== (t = (0, _.useSubmittedGuildJoinRequestTotal)({
+    guildId: d
+  })) && void 0 !== t ? t : 0, {
+    guildJoinRequests: G
   } = (0, R.useSortedMemberApplications)({
-    guildId: s,
+    guildId: d,
     applicationStatus: "REVIEW_APPLICATION" === C ? c.GuildJoinRequestApplicationStatuses.SUBMITTED : C,
-    sortOrder: g
+    sortOrder: j
   }), {
-    fetchNextPage: G
+    fetchNextPage: O
   } = (0, E.usePaginatedMemberApplications)({
-    guildId: s,
-    guildJoinRequests: v
-  }), O = l.useRef(!1);
-  !O.current && (O.current = !0, G(g, "REVIEW_APPLICATION" === C ? c.GuildJoinRequestApplicationStatuses.SUBMITTED : C));
-  let L = l.useRef(!1);
+    guildId: d,
+    guildJoinRequests: G
+  }), L = l.useRef(!1);
+  !L.current && (L.current = !0, O(j, "REVIEW_APPLICATION" === C ? c.GuildJoinRequestApplicationStatuses.SUBMITTED : C));
+  let D = l.useRef(!1);
   l.useEffect(() => {
-    L.current = !0
-  }, [g, C]), l.useEffect(() => {
-    if (L.current && 0 !== v.length && "REVIEW_APPLICATION" !== C) {
+    D.current = !0
+  }, [j, C]), l.useEffect(() => {
+    if (D.current && 0 !== G.length && "REVIEW_APPLICATION" !== C) {
       var e;
-      L.current = !1, d.default.setSelectedGuildJoinRequest(s, v[0]), null === (e = o.current) || void 0 === e || e.scrollToTop()
+      D.current = !1, o.default.setSelectedGuildJoinRequest(d, G[0]), null === (e = x.current) || void 0 === e || e.scrollToTop()
     }
-  }, [s, v, P, C]);
-  let D = l.useCallback(async e => {
-      if ("REVIEW_APPLICATION" !== C) g !== e && (d.default.setSelectedSortOrder(s, e), await G(e, C))
-    }, [C, g, s, G]),
-    b = l.useCallback(async e => {
-      if (C !== e) x(e), d.default.setSelectedGuildJoinRequest(s, null), "REVIEW_APPLICATION" !== e && (d.default.setSelectedApplicationTab(s, e), await G(g, e))
-    }, [C, g, s, G]),
-    F = l.useCallback(async () => {
+  }, [d, G, P, C]);
+  let b = l.useCallback(async e => {
+      if ("REVIEW_APPLICATION" !== C) j !== e && (o.default.setSelectedSortOrder(d, e), await O(e, C))
+    }, [C, j, d, O]),
+    F = l.useCallback(async e => {
+      if (C !== e) g(e), o.default.setSelectedGuildJoinRequest(d, null), "REVIEW_APPLICATION" !== e && (o.default.setSelectedApplicationTab(d, e), await O(j, e))
+    }, [C, j, d, O]),
+    B = l.useCallback(async () => {
       var e;
       if ("REVIEW_APPLICATION" === C) return;
-      let t = null === (e = o.current) || void 0 === e ? void 0 : e.getScrollerState();
-      if (null != t) t.scrollHeight - t.scrollTop - t.offsetHeight < 200 && await G(g, C)
-    }, [C, g, G]),
-    B = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(s)),
-    V = null !== (t = null == B ? void 0 : B.hasFeature(A.GuildFeatures.CLAN)) && void 0 !== t && t;
+      let t = null === (e = x.current) || void 0 === e ? void 0 : e.getScrollerState();
+      if (null != t) t.scrollHeight - t.scrollTop - t.offsetHeight < 200 && await O(j, C)
+    }, [C, j, O]),
+    V = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(d)),
+    U = null !== (s = null == V ? void 0 : V.hasFeature(A.GuildFeatures.CLAN)) && void 0 !== s && s;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(N.default, {
       currentTab: C,
-      onTabItemSelect: b,
-      pendingGuildJoinRequestsTotal: j,
-      showSetupTab: V
+      onTabItemSelect: F,
+      pendingGuildJoinRequestsTotal: v,
+      showSetupTab: U
     }), (0, a.jsx)("div", {
       className: h.content,
-      children: "REVIEW_APPLICATION" === C ? null != B ? (0, a.jsx)(n.ScrollerThin, {
+      children: "REVIEW_APPLICATION" === C ? null != V ? (0, a.jsx)(n.ScrollerThin, {
         children: (0, a.jsxs)("div", {
           className: h.scrollerContent,
           children: [(0, a.jsx)(p, {
-            guild: B
+            guild: V
           }), (0, a.jsx)(r.default, {
-            guild: B,
+            guild: V,
             isInitiallyExpanded: !0,
             showHeader: !1,
             disableAnimation: !0
@@ -136,8 +136,8 @@ function C(e) {
           className: h.listControls,
           children: (0, a.jsx)(S.default, {
             className: h.sortSelect,
-            sortOrder: g,
-            onSortChange: D
+            sortOrder: j,
+            onSortChange: b
           })
         }), (0, a.jsx)(n.Text, {
           className: h.description,
@@ -146,10 +146,10 @@ function C(e) {
           children: M.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_LIST_DESCRIPTION
         }), (0, a.jsx)(m.default, {
           applicationStatus: C,
-          guildJoinRequests: v,
-          guildId: s,
-          onScroll: F,
-          listRef: o
+          guildJoinRequests: G,
+          guildId: d,
+          onScroll: B,
+          listRef: x
         })]
       })
     })]
@@ -159,7 +159,7 @@ t.default = l.memo(function(e) {
   let {
     guildId: t
   } = e;
-  return (0, a.jsx)(C, {
+  return (0, a.jsx)(x, {
     guildId: t
   })
 })
