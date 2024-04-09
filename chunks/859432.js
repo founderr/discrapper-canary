@@ -15,17 +15,17 @@ var n = a("735250"),
   p = a("241851"),
   I = a("294978"),
   M = a("513102"),
-  m = a("976192"),
-  h = a("429824"),
+  h = a("976192"),
+  m = a("429824"),
   _ = a("466330"),
-  x = a("191471"),
-  S = a("162157"),
+  S = a("191471"),
+  x = a("162157"),
   A = a("623624"),
   v = a("894059"),
   G = a("771212"),
-  R = a("434404"),
-  T = a("41776"),
-  C = a("837949"),
+  C = a("434404"),
+  R = a("41776"),
+  T = a("837949"),
   L = a("703656"),
   b = a("271383"),
   j = a("496675"),
@@ -34,8 +34,8 @@ var n = a("735250"),
   y = a("825185"),
   P = a("808602"),
   U = a("386103"),
-  O = a("632310"),
-  H = a("615814"),
+  H = a("632310"),
+  O = a("615814"),
   V = a("937482"),
   w = a("709586"),
   F = a("185403"),
@@ -77,9 +77,9 @@ let q = i.memo(function(e) {
         showGuildAnalytics: (0, G.staffOnlyGuildSettingsAccess)(t.id) || e
       }
     }, [t]),
-    et = (0, S.useCanReportRaid)(t),
+    et = (0, x.useCanReportRaid)(t),
     ea = t.isOwner(q),
-    en = (0, u.useStateFromStores)([T.default], () => T.default.isLurking(t.id), [t.id]),
+    en = (0, u.useStateFromStores)([R.default], () => R.default.isLurking(t.id), [t.id]),
     ei = (0, u.useStateFromStores)([b.default], () => b.default.isCurrentUserGuest(t.id)),
     el = (0, v.default)(t.id, !0),
     es = (0, g.default)(t),
@@ -87,7 +87,7 @@ let q = i.memo(function(e) {
       source: W.InstantInviteSources.GUILD_HEADER,
       guild: t
     }),
-    ed = (0, m.default)({
+    ed = (0, h.default)({
       guildId: t.id,
       userId: q.id,
       analyticsLocation: {
@@ -98,10 +98,10 @@ let q = i.memo(function(e) {
     }),
     er = t.hasFeature(W.GuildFeatures.HUB),
     eo = t.id === Z.FAVORITES_RAW_GUILD_ID,
-    ec = (0, C.default)(t.id),
+    ec = (0, T.default)(t.id),
     ef = (0, I.default)(t),
     eg = (0, M.default)(t),
-    eE = (0, h.default)(t, !0),
+    eE = (0, m.default)(t, !0),
     {
       isFavoritesPerk: ep
     } = (0, E.useFavoritesServerExperiment)("GuildHeaderPopout"),
@@ -130,9 +130,9 @@ let q = i.memo(function(e) {
     children: (0, n.jsx)(d.MenuItem, {
       id: "leave-guild",
       label: K.default.Messages.LEAVE_SERVER,
-      icon: O.default,
+      icon: H.default,
       action: () => {
-        R.default.leaveGuild(t.id), !ei && (0, L.transitionTo)(W.Routes.GUILD_DISCOVERY)
+        C.default.leaveGuild(t.id), !ei && (0, L.transitionTo)(W.Routes.GUILD_DISCOVERY)
       }
     })
   }) : eo ? (0, n.jsxs)(d.Menu, {
@@ -158,7 +158,7 @@ let q = i.memo(function(e) {
       }), (0, n.jsx)(d.MenuItem, {
         id: "create-category",
         label: K.default.Messages.CREATE_CATEGORY,
-        icon: H.default,
+        icon: O.default,
         action: () => (0, d.openModalLazy)(async () => {
           let {
             default: e
@@ -188,7 +188,7 @@ let q = i.memo(function(e) {
         label: K.default.Messages.SERVER_SETTINGS,
         icon: V.default,
         action: () => {
-          R.default.open(t.id, W.GuildSettingsSections.OVERVIEW)
+          C.default.open(t.id, W.GuildSettingsSections.OVERVIEW)
         }
       }) : null, eu, (0, n.jsx)(d.MenuItem, {
         id: "privacy",
@@ -208,7 +208,7 @@ let q = i.memo(function(e) {
       children: (0, n.jsx)(d.MenuItem, {
         id: "leave",
         label: K.default.Messages.LEAVE_HUB,
-        icon: O.default,
+        icon: H.default,
         color: "danger",
         action: () => X(t)
       })
@@ -253,13 +253,13 @@ let q = i.memo(function(e) {
         label: K.default.Messages.SERVER_SETTINGS,
         icon: V.default,
         action: () => {
-          R.default.open(t.id, W.GuildSettingsSections.OVERVIEW)
+          C.default.open(t.id, W.GuildSettingsSections.OVERVIEW)
         }
       }) : null, ee ? (0, n.jsx)(d.MenuItem, {
         id: "insights",
         label: K.default.Messages.SERVER_INSIGHTS,
         icon: y.default,
-        action: () => R.default.open(t.id, W.GuildSettingsSections.ANALYTICS)
+        action: () => C.default.open(t.id, W.GuildSettingsSections.ANALYTICS)
       }) : null, $ ? (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)(d.MenuItem, {
           id: "create-channel",
@@ -278,7 +278,7 @@ let q = i.memo(function(e) {
         }), (0, n.jsx)(d.MenuItem, {
           id: "create-category",
           label: K.default.Messages.CREATE_CATEGORY,
-          icon: H.default,
+          icon: O.default,
           action: () => (0, d.openModalLazy)(async () => {
             let {
               default: e
@@ -332,11 +332,11 @@ let q = i.memo(function(e) {
         label: K.default.Messages.GUILD_REPORT_RAID_BUTTON_TITLE,
         icon: B.default,
         color: "danger",
-        action: () => (0, x.openReportRaidModal)(t.id)
+        action: () => (0, S.openReportRaidModal)(t.id)
       }) : null, ea ? null : (0, n.jsx)(d.MenuItem, {
         id: "leave",
         label: K.default.Messages.LEAVE_SERVER,
-        icon: O.default,
+        icon: H.default,
         color: "danger",
         action: () => X(t)
       })]

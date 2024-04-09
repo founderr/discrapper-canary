@@ -146,8 +146,8 @@ function X(e) {
     "aria-posinset": G,
     "aria-setsize": U
   } = e, [P, w] = a.useState(!1), z = a.useRef(null), X = a.useRef(null), {
-    avatarSrc: Q,
-    avatarDecorationSrc: q,
+    avatarSrc: q,
+    avatarDecorationSrc: Q,
     eventHandlers: J
   } = (0, A.default)({
     user: c,
@@ -253,8 +253,8 @@ function X(e) {
     return !c.isSystemUser() && (e = (0, m.default)(I) ? V.StatusTypes.STREAMING : R), (0, l.jsx)(Y, {
       ...J,
       size: h.AvatarSizes.SIZE_32,
-      src: Q,
-      avatarDecoration: q,
+      src: q,
+      avatarDecoration: Q,
       status: e,
       isMobile: M,
       isTyping: v,

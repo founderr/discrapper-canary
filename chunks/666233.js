@@ -7,8 +7,8 @@ var l = s("442837"),
   n = s("318010"),
   r = s("246364"),
   u = s("489813"),
-  o = s("186078"),
-  d = s("73880"),
+  d = s("186078"),
+  o = s("73880"),
   c = s("196345"),
   E = s("707592"),
   I = s("689938");
@@ -16,10 +16,10 @@ t.default = function(e) {
   let {
     formFields: t,
     user: s,
-    showRequirements: f = !0
+    showRequirements: T = !0
   } = e;
   return null == (0, l.useStateFromStores)([i.default], () => null != s ? s : i.default.getCurrentUser()) ? null : (0, a.jsxs)(a.Fragment, {
-    children: [f && (0, a.jsx)(u.RequirementRenderer, {
+    children: [T && (0, a.jsx)(u.RequirementRenderer, {
       icon: n.default,
       text: I.default.Messages.MEMBER_VERIFICATION_FORM_PASSED_REQUIREMENTS,
       meetsRequirement: !0
@@ -34,11 +34,11 @@ t.default = function(e) {
             formField: e
           }, t);
         case r.VerificationFormFieldTypes.PARAGRAPH:
-          return (0, a.jsx)(d.DisabledParagraphFormField, {
+          return (0, a.jsx)(o.DisabledParagraphFormField, {
             formField: e
           }, t);
         case r.VerificationFormFieldTypes.MULTIPLE_CHOICE:
-          return (0, a.jsx)(o.DisabledMultipleChoiceFormField, {
+          return (0, a.jsx)(d.DisabledMultipleChoiceFormField, {
             formField: e
           }, t)
       }

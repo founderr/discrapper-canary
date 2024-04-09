@@ -61,7 +61,7 @@ let Y = "message1",
   Z = document.hasFocus(),
   z = null,
   X = ["FR", "GF", "PF", "TF", "RE", "GP", "MQ", "YT", "NC", "PM", "WF"],
-  Q = new class {
+  q = new class {
     track(e, t) {
       let n = this._channels[e];
       for (null == n && (n = [], this._channels[e] = n), n.push(t); n.length > 1;) {
@@ -78,7 +78,7 @@ let Y = "message1",
     }
   };
 
-function q() {
+function Q() {
   return !!(v.default.getDesktopType() === B.DesktopNotificationTypes.NEVER || M.default.getStatus() === B.StatusTypes.DND || T.FocusMode.getSetting()) || !1
 }
 
@@ -115,12 +115,12 @@ k($, "displayName", "NotificationStore"), new $(r.default, __OVERLAY__ ? {} : {
       trackingProps: a,
       options: s
     } = e;
-    return !q() && (U.default.showNotification(t, n, l, a, s), !1)
+    return !Q() && (U.default.showNotification(t, n, l, a, s), !1)
   },
   WINDOW_FOCUS: function(e) {
     if (Z = e.focused) {
       let e = y.default.getChannelId();
-      null != e && Q.clearChannel(e)
+      null != e && q.clearChannel(e)
     }
   },
   MESSAGE_CREATE: function(e) {
@@ -172,26 +172,26 @@ k($, "displayName", "NotificationStore"), new $(r.default, __OVERLAY__ ? {} : {
         (0, S.transitionToChannel)(o.id), (o.type === B.ChannelTypes.GUILD_VOICE || o.type === B.ChannelTypes.GUILD_STAGE_VOICE) && u.default.updateChatOpen(o.id, !0), c.default.clickedNotification()
       }
     });
-    null != N && Q.track(o.id, N)
+    null != N && q.track(o.id, N)
   },
   CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    return null != t && Q.clearChannel(t), !1
+    return null != t && q.clearChannel(t), !1
   },
   MESSAGE_ACK: function(e) {
     let {
       channelId: t
     } = e;
-    return Q.clearChannel(t), !1
+    return q.clearChannel(t), !1
   },
   ACTIVITY_START: function(e) {
     let {
       userId: t,
       activity: n
     } = e;
-    if (q()) return !1;
+    if (Q()) return !1;
     if (n.type === B.ActivityTypes.PLAYING) {
       let e = D.default.getUser(t);
       if (null == e) return !1;
@@ -223,7 +223,7 @@ k($, "displayName", "NotificationStore"), new $(r.default, __OVERLAY__ ? {} : {
     let {
       voiceStates: t
     } = e;
-    if (q()) return;
+    if (Q()) return;
     let n = D.default.getCurrentUser();
     if (null == n) return;
     let l = t.find(e => e.userId === n.id);
@@ -249,7 +249,7 @@ k($, "displayName", "NotificationStore"), new $(r.default, __OVERLAY__ ? {} : {
     let {
       instance: t
     } = e;
-    if (q() || !t.send_start_notification || J(t.channel_id)) return !1;
+    if (Q() || !t.send_start_notification || J(t.channel_id)) return !1;
     let n = D.default.getCurrentUser(),
       l = L.default.getGuild(t.guild_id),
       s = A.default.getChannel(t.channel_id),
@@ -274,9 +274,9 @@ k($, "displayName", "NotificationStore"), new $(r.default, __OVERLAY__ ? {} : {
     let {
       guildScheduledEvent: t
     } = e;
-    if (q() || null == t.notification_type) return !1;
+    if (Q() || null == t.notification_type) return !1;
     t.notification_type === V.GuildScheduledEventNotificationTypes.EVENT_START && (t.entity_type === V.GuildScheduledEventEntityTypes.STAGE_INSTANCE || t.entity_type === V.GuildScheduledEventEntityTypes.VOICE ? ! function(e) {
-      if (q()) return !1;
+      if (Q()) return !1;
       let t = e.channel_id;
       if (null == t || J(t)) return !1;
       let n = D.default.getCurrentUser(),
@@ -299,7 +299,7 @@ k($, "displayName", "NotificationStore"), new $(r.default, __OVERLAY__ ? {} : {
         }
       })
     }(t) : t.entity_type === V.GuildScheduledEventEntityTypes.EXTERNAL && ! function(e) {
-      if (q()) return !1;
+      if (Q()) return !1;
       let t = D.default.getCurrentUser(),
         n = L.default.getGuild(e.guild_id);
       if (null == t || null == n) return !1;
@@ -325,7 +325,7 @@ k($, "displayName", "NotificationStore"), new $(r.default, __OVERLAY__ ? {} : {
       channel: n,
       isNewlyCreated: l
     } = e;
-    if (q()) return !1;
+    if (Q()) return !1;
     let a = A.default.getChannel(n.parent_id);
     if (null == a || !B.ChannelTypesSets.GUILD_THREADS_ONLY.has(a.type) || !l || !(0, G.shouldNotifyForForumThreadCreation)(n, a, !Z)) return !1;
     let {
@@ -362,7 +362,7 @@ k($, "displayName", "NotificationStore"), new $(r.default, __OVERLAY__ ? {} : {
       trackingType: s,
       tag: i
     } = e;
-    return !q() && null != n && null != l && null != s && (U.default.showNotification(t, n, l, {
+    return !Q() && null != n && null != l && null != s && (U.default.showNotification(t, n, l, {
       notif_type: s
     }, {
       onClick() {

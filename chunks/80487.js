@@ -7,16 +7,16 @@ var l = s("481060"),
   n = s("669405"),
   r = s("246364"),
   u = s("689938"),
-  o = s("98539");
+  d = s("98539");
 t.default = function(e) {
   let {
     pendingGuildJoinRequestsTotal: t,
     currentTab: s,
-    onTabItemSelect: d,
+    onTabItemSelect: o,
     showSetupTab: c
   } = e;
   return (0, a.jsxs)(i.default, {
-    className: o.__invalid_container,
+    className: d.__invalid_container,
     hideSearch: !0,
     toolbar: (0, a.jsx)("div", {}),
     children: [(0, a.jsx)(i.default.Icon, {
@@ -24,16 +24,16 @@ t.default = function(e) {
       disabled: !0,
       "aria-label": u.default.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATIONS
     }), (0, a.jsx)(i.default.Title, {
-      className: o.title,
+      className: d.title,
       children: u.default.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATIONS
     }), (0, a.jsx)(i.default.Divider, {
-      className: o.divider
+      className: d.divider
     }), (0, a.jsxs)(l.TabBar, {
       "aria-label": u.default.Messages.FRIENDS,
       selectedItem: s,
       type: "top-pill",
-      onItemSelect: d,
-      className: o.__invalid_tabBar,
+      onItemSelect: o,
+      className: d.__invalid_tabBar,
       children: [c ? (0, a.jsx)(l.TabBar.Item, {
         id: "REVIEW_APPLICATION",
         children: u.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REVIEW_APPLICATION_TITLE

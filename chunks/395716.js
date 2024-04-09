@@ -10,15 +10,15 @@ var a = s("735250"),
   n = s("481060"),
   r = s("287734"),
   u = s("592125"),
-  o = s("693546"),
-  d = s("689938");
+  d = s("693546"),
+  o = s("689938");
 
 function c(e) {
   let {
     joinRequest: t
   } = e, [s, c] = l.useState(!1), E = (0, i.useStateFromStores)([u.default], () => u.default.getChannel(t.interviewChannelId)), I = l.useCallback(() => {
-    (0, n.showToast)((0, n.createToast)(d.default.Messages.ERROR_GENERIC_TITLE, n.ToastType.FAILURE))
-  }, []), f = async () => {
+    (0, n.showToast)((0, n.createToast)(o.default.Messages.ERROR_GENERIC_TITLE, n.ToastType.FAILURE))
+  }, []), T = async () => {
     if (null != E) {
       r.default.selectPrivateChannel(E.id);
       return
@@ -26,18 +26,18 @@ function c(e) {
     if (!s) {
       c(!0);
       try {
-        await o.default.createOrEnterJoinRequestInterview(t.joinRequestId)
+        await d.default.createOrEnterJoinRequestInterview(t.joinRequestId)
       } catch {
         I()
       } finally {
         c(!1)
       }
     }
-  }, T = null == t.interviewChannelId ? d.default.Messages.CLAN_START_INTERVIEW : d.default.Messages.CLAN_JOIN_INTERVIEW;
+  }, f = null == t.interviewChannelId ? o.default.Messages.CLAN_START_INTERVIEW : o.default.Messages.CLAN_JOIN_INTERVIEW;
   return (0, a.jsx)(n.Button, {
     color: n.Button.Colors.GREEN,
     submitting: s,
-    onClick: f,
-    children: T
+    onClick: T,
+    children: f
   })
 }

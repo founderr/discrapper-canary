@@ -10,7 +10,7 @@ t.default = function(e) {
     className: t,
     sortOrder: s,
     onSortChange: u
-  } = e, o = l.useMemo(() => [{
+  } = e, d = l.useMemo(() => [{
     value: n.GuildJoinRequestSortOrders.TIMESTAMP_DESC,
     label: r.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_SORT_NEWEST
   }, {
@@ -21,6 +21,6 @@ t.default = function(e) {
     className: t,
     onChange: u,
     value: s,
-    options: o
+    options: d
   })
 }

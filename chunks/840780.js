@@ -47,8 +47,8 @@ var l = n("735250"),
   Z = n("430824"),
   z = n("131951"),
   X = n("496675"),
-  Q = n("158776"),
-  q = n("699516"),
+  q = n("158776"),
+  Q = n("699516"),
   J = n("944486"),
   $ = n("885110"),
   ee = n("594174"),
@@ -475,7 +475,7 @@ t.default = (0, E.default)(function(e) {
     if (null != h && null != h.id) return h.id;
     if (null != i && null != i.id) return i.id;
     if (null != _) return _.applicationId
-  }()) && void 0 !== t ? t : ""]), v = (0, u.useStateFromStores)([z.default], () => (0, P.default)(z.default) && (0, em.isWindows)()), R = (0, u.useStateFromStores)([Q.default], () => null != s ? Q.default.findActivity(s, e => e.type === eS.ActivityTypes.PLAYING) : null), O = null != f && f.ownerId === s && f.state !== eS.ApplicationStreamStates.ENDED, D = (0, u.useStateFromStores)([$.default], () => $.default.getBroadcast()), b = (0, L.default)() && null != i, G = (0, u.useStateFromStores)([ee.default, q.default], () => null != c ? (0, x.computeChannelName)(c, ee.default, q.default) : void 0), w = (0, u.useStateFromStores)([Z.default], () => Z.default.getGuild(n));
+  }()) && void 0 !== t ? t : ""]), v = (0, u.useStateFromStores)([z.default], () => (0, P.default)(z.default) && (0, em.isWindows)()), R = (0, u.useStateFromStores)([q.default], () => null != s ? q.default.findActivity(s, e => e.type === eS.ActivityTypes.PLAYING) : null), O = null != f && f.ownerId === s && f.state !== eS.ApplicationStreamStates.ENDED, D = (0, u.useStateFromStores)([$.default], () => $.default.getBroadcast()), b = (0, L.default)() && null != i, G = (0, u.useStateFromStores)([ee.default, Q.default], () => null != c ? (0, x.computeChannelName)(c, ee.default, Q.default) : void 0), w = (0, u.useStateFromStores)([Z.default], () => Z.default.getGuild(n));
   return (0, l.jsx)(ev, {
     ...a,
     guildId: n,

@@ -60,7 +60,7 @@ function X(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class Q extends F.default {
+class q extends F.default {
   componentWillUnmount() {
     this.activitiesHideTimeout.stop()
   }
@@ -375,7 +375,7 @@ class Q extends F.default {
     })
   }
 }
-let q = (0, c.makeChannelSortable)((0, f.makeVoiceUserDroppable)(Q));
+let Q = (0, c.makeChannelSortable)((0, f.makeVoiceUserDroppable)(q));
 
 function J(e) {
   let {
@@ -421,7 +421,7 @@ function J(e) {
     enableConnectedUserLimit: !0,
     enableActivities: !0
   }), P = x && null == O;
-  return (0, l.jsx)(q, {
+  return (0, l.jsx)(Q, {
     channelName: m,
     embeddedApps: C,
     embeddedActivityType: K.ActivityTypes.PLAYING,

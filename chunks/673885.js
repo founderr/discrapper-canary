@@ -11,8 +11,8 @@ var l = s("803997"),
   n = s("481060"),
   r = s("906732"),
   u = s("171368"),
-  o = s("768581"),
-  d = s("981631"),
+  d = s("768581"),
+  o = s("981631"),
   c = s("689938"),
   E = s("485035");
 
@@ -23,22 +23,22 @@ function I(e) {
     className: l
   } = e, {
     discriminator: I,
-    username: f
-  } = t, T = o.default.getUserAvatarURL(t), {
+    username: T
+  } = t, f = d.default.getUserAvatarURL(t), {
     analyticsLocations: R
   } = (0, r.default)();
   return (0, a.jsxs)("div", {
     className: i()(E.container, l),
     children: [(0, a.jsx)(n.Avatar, {
-      src: T,
+      src: f,
       size: n.AvatarSizes.SIZE_80,
-      "aria-label": f,
+      "aria-label": T,
       className: E.avatar
     }), (0, a.jsxs)("div", {
       className: E.username,
       children: [(0, a.jsx)(n.Heading, {
         variant: "heading-xl/semibold",
-        children: f
+        children: T
       }), (0, a.jsxs)(n.Text, {
         variant: "text-md/normal",
         color: "header-secondary",
@@ -51,8 +51,8 @@ function I(e) {
           guildId: s,
           sourceAnalyticsLocations: R,
           analyticsLocation: {
-            section: d.AnalyticsSections.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
-            object: d.AnalyticsObjects.JOIN_REQUEST
+            section: o.AnalyticsSections.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
+            object: o.AnalyticsObjects.JOIN_REQUEST
           }
         })
       },

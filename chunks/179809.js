@@ -72,9 +72,9 @@ function x(e) {
     })
   }), X = a.useCallback(e => {
     K(e)
-  }, []), Q = a.useCallback(e => {
+  }, []), q = a.useCallback(e => {
     ("ArrowRight" === e.key && !d || "ArrowLeft" === e.key && d) && G()
-  }, [G, d]), q = null != B && "" !== B ? B : null != y && "" !== y ? y : I.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(F)), $ = "folder-items-".concat(F), ee = V.length * (L + v), et = (0, o.useTransition)(!Z && d, {
+  }, [G, d]), Q = null != B && "" !== B ? B : null != y && "" !== y ? y : I.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(F)), $ = "folder-items-".concat(F), ee = V.length * (L + v), et = (0, o.useTransition)(!Z && d, {
     from: {
       height: 0
     },
@@ -95,7 +95,7 @@ function x(e) {
       unread: R,
       className: T.pill
     }), (0, l.jsx)(_.default, {
-      text: q,
+      text: Q,
       disabled: D,
       selected: s,
       disableWrapper: !0,
@@ -104,7 +104,7 @@ function x(e) {
         className: i()({
           [T.wobble]: !Z && Y && !d
         }),
-        "data-dnd-name": q,
+        "data-dnd-name": Q,
         children: Z ? (0, l.jsx)(E.default, {}) : (0, l.jsx)(m.default, {
           folderNode: t,
           expanded: d,
@@ -112,18 +112,18 @@ function x(e) {
           sorting: D,
           mediaState: p,
           mentionCount: x,
-          tooltipName: q,
+          tooltipName: Q,
           folderGroupId: $,
           onClick: G,
           onContextMenu: U,
           onHoverChange: k,
-          onKeyDown: Q,
+          onKeyDown: q,
           treeItemProps: J,
           folderIconContent: w
         })
       })
     }), O ? (0, l.jsx)(g.default, {
-      name: q,
+      name: Q,
       targetNode: t,
       onDragOverChanged: X
     }) : null]
@@ -150,7 +150,7 @@ function x(e) {
         children: V.map(P)
       }, a)
     }), O && d ? (0, l.jsx)(g.FolderEndDropTarget, {
-      name: q,
+      name: Q,
       targetNode: t
     }) : null]
   })

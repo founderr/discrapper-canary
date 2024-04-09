@@ -11,13 +11,13 @@ var l = s("913527"),
   n = s("442837"),
   r = s("692547"),
   u = s("481060"),
-  o = s("239091"),
-  d = s("171368"),
+  d = s("239091"),
+  o = s("171368"),
   c = s("271383"),
   E = s("594174"),
   I = s("441674"),
-  f = s("696202"),
-  T = s("497309"),
+  T = s("696202"),
+  f = s("497309"),
   R = s("808268"),
   _ = s("709054"),
   S = s("246364"),
@@ -33,15 +33,15 @@ function h(e) {
     guild: h,
     guildJoinRequestUser: p
   } = e, {
-    createdAt: C,
-    actionedAt: x,
+    createdAt: x,
+    actionedAt: C,
     guildId: g,
-    userId: P
+    userId: j
   } = l, {
-    approveRequest: j,
+    approveRequest: P,
     rejectRequest: v,
     submitting: G
-  } = (0, N.useJoinRequestButtonActions)(g, P), O = null === (t = l.actionedByUser) || void 0 === t ? void 0 : t.id, L = (0, n.useStateFromStores)([E.default], () => E.default.getUser(O)), D = (0, n.useStateFromStores)([c.default], () => null != O ? c.default.getMember(g, O) : null, [O, g]), b = A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING, F = (0, a.jsx)(T.default, {
+  } = (0, N.useJoinRequestButtonActions)(g, j), O = null === (t = l.actionedByUser) || void 0 === t ? void 0 : t.id, L = (0, n.useStateFromStores)([E.default], () => E.default.getUser(O)), D = (0, n.useStateFromStores)([c.default], () => null != O ? c.default.getMember(g, O) : null, [O, g]), b = A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING, F = (0, a.jsx)(f.default, {
     width: 24,
     height: 24,
     className: M.icon
@@ -51,19 +51,19 @@ function h(e) {
     height: 24,
     className: M.iconApproved,
     backgroundColor: r.default.unsafe_rawColors.WHITE_500.css
-  })) : l.applicationStatus === S.GuildJoinRequestApplicationStatuses.REJECTED && (b = A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REJECTED, F = (0, a.jsx)(f.default, {
+  })) : l.applicationStatus === S.GuildJoinRequestApplicationStatuses.REJECTED && (b = A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REJECTED, F = (0, a.jsx)(T.default, {
     width: 24,
     height: 24,
     className: M.iconRejected,
     backgroundColor: r.default.unsafe_rawColors.WHITE_500.css
   }));
-  let B = null != L && null != x ? A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_ACTIONED_BY_HOOK.format({
-    date: i()(_.default.extractTimestamp(x)).format("ll"),
+  let B = null != L && null != C ? A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_ACTIONED_BY_HOOK.format({
+    date: i()(_.default.extractTimestamp(C)).format("ll"),
     usernameHook: function() {
       var e;
       return (0, a.jsx)(u.Clickable, {
         className: M.actionedByUser,
-        onClick: () => (0, d.openUserProfileModal)({
+        onClick: () => (0, o.openUserProfileModal)({
           userId: L.id,
           guildId: g,
           analyticsLocation: {
@@ -80,7 +80,7 @@ function h(e) {
         })
       }, "username-hook")
     }
-  }) : i()(C).format("lll");
+  }) : i()(x).format("lll");
   return (0, a.jsxs)("div", {
     className: M.container,
     children: [(0, a.jsxs)("div", {
@@ -105,7 +105,7 @@ function h(e) {
           children: [(0, a.jsx)(u.Button, {
             color: u.Button.Colors.GREEN,
             submitting: G,
-            onClick: j,
+            onClick: P,
             children: A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVE_APPLICATION
           }), (0, a.jsx)(u.Button, {
             color: u.Button.Colors.RED,
@@ -115,7 +115,7 @@ function h(e) {
           })]
         }), (0, a.jsx)(u.Clickable, {
           onClick: e => {
-            (0, o.openContextMenuLazy)(e, async () => {
+            (0, d.openContextMenuLazy)(e, async () => {
               let {
                 default: e
               } = await s.e("84259").then(s.bind(s, "597409"));

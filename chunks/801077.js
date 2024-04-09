@@ -51,7 +51,7 @@ function X(e) {
   return b.default.findActivity(e, e => e.type !== F.ActivityTypes.CUSTOM_STATUS)
 }
 
-function Q(e) {
+function q(e) {
   return null == Y[e] && (Y = {
     ...Y,
     [e]: new L.default({
@@ -60,7 +60,7 @@ function Q(e) {
   }), Y[e]
 }
 
-function q(e) {
+function Q(e) {
   return null == K[e] && (K = {
     ...K,
     [e]: new A.default({
@@ -76,7 +76,7 @@ function J(e) {
 function $(e) {
   if ((0, p.default)(e)) return T.SpotifyApplication;
   let t = null != e.application_id ? E.default.getApplication(e.application_id) : null;
-  return null != t ? t : (0, C.default)(e) ? Q(e.name) : (0, m.default)(e) && null != e.url ? q(e.url) : (null != e.application_id && J(e.application_id), t)
+  return null != t ? t : (0, C.default)(e) ? q(e.name) : (0, m.default)(e) && null != e.url ? Q(e.url) : (null != e.application_id && J(e.application_id), t)
 }
 
 function ee(e) {
@@ -121,7 +121,7 @@ function en(e, t, n) {
           tags: {
             source: "ACTIVITIES"
           }
-        }), null) : e === T.SPOTIFY_APPLICATION_ID ? T.SpotifyApplication : e.startsWith(L.XBOX_APPLICATION_ID_PREFIX) ? Q(e.slice(L.XBOX_APPLICATION_ID_PREFIX.length)) : e.startsWith(A.TWITCH_APPLICATION_ID_PREFIX) ? q(e.slice(A.TWITCH_APPLICATION_ID_PREFIX.length)) : (J(e), null)
+        }), null) : e === T.SPOTIFY_APPLICATION_ID ? T.SpotifyApplication : e.startsWith(L.XBOX_APPLICATION_ID_PREFIX) ? q(e.slice(L.XBOX_APPLICATION_ID_PREFIX.length)) : e.startsWith(A.TWITCH_APPLICATION_ID_PREFIX) ? Q(e.slice(A.TWITCH_APPLICATION_ID_PREFIX.length)) : (J(e), null)
       }(u),
       m = null === (a = r.timestamps) || void 0 === a ? void 0 : a.start;
     if ((0, h.default)(r)) {

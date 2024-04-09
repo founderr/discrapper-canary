@@ -47,8 +47,8 @@ var l = n("735250"),
   Z = n("843343"),
   z = n("654142"),
   X = n("695301"),
-  Q = n("836697"),
-  q = n("921230"),
+  q = n("836697"),
+  Q = n("921230"),
   J = n("981631"),
   $ = n("689938"),
   ee = n("764060");
@@ -220,9 +220,9 @@ function er(e) {
           onScroll: em.handleScroll,
           children: [(0, l.jsx)(Y.HomeButton, {}), eT ? (0, l.jsx)(T.default, {}) : null, (0, l.jsx)(B.default, {}), (0, l.jsx)(K.default, {
             isOnHubVerificationRoute: e_
-          }), (0, l.jsx)(w.default, {}), eA, g.map(e => (0, l.jsx)(q.default, {
+          }), (0, l.jsx)(w.default, {}), eA, g.map(e => (0, l.jsx)(Q.default, {
             guildId: e
-          }, e)), (0, l.jsx)(Q.default, {}), !n && eI ? (0, l.jsx)(k.default, {
+          }, e)), (0, l.jsx)(q.default, {}), !n && eI ? (0, l.jsx)(k.default, {
             ref: em.guildDiscoveryRef,
             selected: eS,
             tooltip: $.default.Messages.GUILD_DISCOVERY_TOOLTIP
