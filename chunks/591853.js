@@ -133,9 +133,7 @@ function O(e) {
     updatePopoutPosition: s,
     reactionImage: r,
     onMessageReact: u
-  } = e, [f, h] = l.useState(null), [C, S] = l.useState(null), _ = l.useRef(null), [T, M] = l.useState(), [R, L] = l.useState(!1), y = null != r && null != f && !R, O = null == f || f.type === v.ChannelTypes.DM ? "@".concat(n.username) : "#".concat(f.name), j = e => {
-    h(e), L(!1)
-  };
+  } = e, [f, h] = l.useState(null), [C, S] = l.useState(null), _ = l.useRef(null), [T, M] = l.useState(), [R, L] = l.useState(!1), y = null != r && null != f && !R, O = null == f || f.type === v.ChannelTypes.DM ? "@".concat(n.username) : "#".concat(f.name);
   l.useEffect(() => {
     (async function e() {
       let e = null == r ? void 0 : r.item.file;
@@ -145,17 +143,23 @@ function O(e) {
     let e = m.default.getDMFromUserId(n.id);
     null == m.default.getChannel(e) && d.default.getOrEnsurePrivateChannel(n.id)
   }, [n.id]);
-  let D = e => {
+  let j = e => {
       null != e && null != C && (E.default.track(v.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
         surface_type: A.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
         channel_id: t.id,
         guild_id: t.guild_id
-      }), C.insertEmoji(e, !1, !1), C.focus())
+      }), C.focus(), D(":".concat(e.name, ":")))
     },
-    b = async e => {
-      o()(null != f, "Selected channel must be defined"), L(!0), !R && await u({
+    D = async e => {
+      let t = f;
+      if (null == t) {
+        var a;
+        let e = m.default.getDMFromUserId(n.id);
+        t = null !== (a = m.default.getChannel(e)) && void 0 !== a ? a : null
+      }
+      o()(null != t, "Selected channel must be defined"), L(!0), !R && await u({
         reply: e,
-        channel: f
+        channel: t
       })
     };
   return (0, a.jsxs)("div", {
@@ -164,14 +168,14 @@ function O(e) {
       className: N.emojiHotrailShareToChannel,
       children: [(0, a.jsx)(P, {
         channel: t,
-        onClickSuggestion: D
+        onClickSuggestion: j
       }), (0, a.jsx)(c.ReactionPickerButton, {
-        onSelectEmoji: D
+        onSelectEmoji: j
       })]
     }) : (0, a.jsx)(I.ShareToChannelHeader, {
       channel: f,
       onClose: () => {
-        j(null), null == s || s()
+        h(null), L(!1), null == s || s()
       }
     }), null != f && (0, a.jsx)(I.MessageHistory, {
       channel: f,
@@ -195,7 +199,7 @@ function O(e) {
             user: n,
             selectedChannel: f,
             onSelect: e => {
-              j(e), null == C || C.focus()
+              h(e), null == C || C.focus()
             }
           })]
         }), (0, a.jsx)(c.ReplyInput, {
@@ -207,10 +211,10 @@ function O(e) {
             if (null == f) {
               let e = m.default.getDMFromUserId(n.id),
                 t = m.default.getChannel(e);
-              null != t && (j(t), null == C || C.focus())
+              null != t && (h(t), null == C || C.focus())
             }
           },
-          onEnter: b,
+          onEnter: D,
           setEditorRef: e => S(e),
           autoCompletePosition: (() => {
             if (null == _ || null == _.current) return "top";
