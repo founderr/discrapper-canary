@@ -152,11 +152,11 @@ let F = l.memo(function(e) {
       var t;
       B.ref.current = e, X.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
     }, []);
-  return (0, a.jsx)(r.ListNavigatorProvider, {
+  return (0, a.jsxs)(r.ListNavigatorProvider, {
     navigator: G,
-    children: (0, a.jsxs)("div", {
+    children: [null != Z && Z, (0, a.jsxs)("div", {
       className: i()(U.messagesWrapper, s, "group-spacing-".concat(c)),
-      children: [null != Z ? Z : Y, (0, a.jsxs)(u.PinToBottomScrollerAuto, {
+      children: [null == Z && Y, (0, a.jsxs)(u.PinToBottomScrollerAuto, {
         ref: J,
         customTheme: !0,
         className: i()(h, U.scroller),
@@ -188,7 +188,7 @@ let F = l.memo(function(e) {
           })]
         })]
       }), z]
-    })
+    })]
   })
 }, (e, t) => null != e.isHidden && null != t.isHidden && e.isHidden && t.isHidden);
 t.default = l.memo(function(e) {
