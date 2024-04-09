@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return T
   },
   PremiumTrialOfferTabBadge: function() {
-    return I
+    return _
   }
 });
-var r = n("735250"),
-  i = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
+var i = n("735250"),
+  r = n("470079"),
+  a = n("803997"),
+  s = n.n(a),
   l = n("481060"),
   o = n("774078"),
   u = n("855693"),
@@ -18,47 +18,47 @@ var r = n("735250"),
   d = n("74538"),
   f = n("639119"),
   p = n("474936"),
-  _ = n("689938"),
+  m = n("689938"),
   E = n("893943");
 
-function m(e) {
+function I(e) {
   let {
     isTabSelected: t,
     expiresAt: n,
-    trialDuration: s
-  } = e, d = i.useMemo(() => Date.parse(n), [n]), f = (0, o.default)(d, 6e4);
-  return Object.values(f).every(e => 0 === e) ? null : (0, r.jsx)(l.Tooltip, {
+    trialDuration: a
+  } = e, d = r.useMemo(() => Date.parse(n), [n]), f = (0, o.default)(d, 6e4);
+  return Object.values(f).every(e => 0 === e) ? null : (0, i.jsx)(l.Tooltip, {
     text: (0, c.unitsAsStrings)(f, {
-      days: _.default.Messages.PREMIUM_TRIAL_REMAINING_AVAILABILITY_DAYS,
-      hours: _.default.Messages.PREMIUM_TRIAL_REMAINING_AVAILABILITY_HOURS,
-      minutes: _.default.Messages.PREMIUM_TRIAL_REMAINING_AVAILABILITY_MINUTES
+      days: m.default.Messages.PREMIUM_TRIAL_REMAINING_AVAILABILITY_DAYS,
+      hours: m.default.Messages.PREMIUM_TRIAL_REMAINING_AVAILABILITY_HOURS,
+      minutes: m.default.Messages.PREMIUM_TRIAL_REMAINING_AVAILABILITY_MINUTES
     }),
-    children: e => (0, r.jsxs)("div", {
+    children: e => (0, i.jsxs)("div", {
       ...e,
-      className: a()(E.premiumTrialBadge, E.premiumTrialAcknowledgedBadge, {
+      className: s()(E.premiumTrialBadge, E.premiumTrialAcknowledgedBadge, {
         [E.premiumTrialBadgeSelected]: t
       }),
-      children: [(0, r.jsx)(u.default, {
+      children: [(0, i.jsx)(u.default, {
         className: E.premiumTrialBadgeIcon
-      }), s]
+      }), a]
     })
   })
 }
 
-function I(e) {
+function _(e) {
   var t;
   let {
     isTabSelected: n,
-    trialOffer: i
-  } = e, s = null === (t = (0, f.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, a = (0, d.formatTrialOfferIntervalDuration)({
-    intervalType: null == s ? void 0 : s.interval,
-    intervalCount: null == s ? void 0 : s.interval_count
+    trialOffer: r
+  } = e, a = null === (t = (0, f.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, s = (0, d.formatTrialOfferIntervalDuration)({
+    intervalType: null == a ? void 0 : a.interval,
+    intervalCount: null == a ? void 0 : a.interval_count
   });
-  return (0, r.jsx)(h, {
+  return (0, i.jsx)(h, {
     isTabSelected: n,
-    badgeCopy: a,
-    offerExpiresAt: i.expires_at,
-    className: (null == s ? void 0 : s.sku_id) === p.PremiumSubscriptionSKUs.TIER_2 ? E.premiumTrialTier2UnacknowledgedBadge : E.premiumTrialTier0UnacknowledgedBadge
+    badgeCopy: s,
+    offerExpiresAt: r.expires_at,
+    className: (null == a ? void 0 : a.sku_id) === p.PremiumSubscriptionSKUs.TIER_2 ? E.premiumTrialTier2UnacknowledgedBadge : E.premiumTrialTier0UnacknowledgedBadge
   })
 }
 
@@ -66,13 +66,13 @@ function T(e) {
   let {
     isTabSelected: t,
     userDiscount: n,
-    includesAmountOff: i
-  } = e, s = _.default.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
+    includesAmountOff: r
+  } = e, a = m.default.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
     percent: n.discount.amount
   });
-  return (0, r.jsx)(h, {
+  return (0, i.jsx)(h, {
     isTabSelected: t,
-    badgeCopy: i ? s : _.default.Messages.PREMIUM_DISCOUNT_BADGE,
+    badgeCopy: r ? a : m.default.Messages.PREMIUM_DISCOUNT_BADGE,
     offerExpiresAt: n.expires_at,
     className: E.premiumDiscountUnacknowledgedBadge
   })
@@ -82,15 +82,15 @@ function h(e) {
   let {
     isTabSelected: t,
     badgeCopy: n,
-    offerExpiresAt: i,
-    className: s
+    offerExpiresAt: r,
+    className: a
   } = e;
-  return null != i ? (0, r.jsx)(m, {
-    expiresAt: i,
+  return null != r ? (0, i.jsx)(I, {
+    expiresAt: r,
     isTabSelected: t,
     trialDuration: n
-  }) : (0, r.jsx)("div", {
-    className: a()(E.premiumTrialBadge, s),
+  }) : (0, i.jsx)("div", {
+    className: s()(E.premiumTrialBadge, a),
     children: n
   })
 }

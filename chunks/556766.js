@@ -11,22 +11,22 @@ var a = n("735250"),
   c = n("378364"),
   f = n("197344"),
   E = n("474873"),
-  h = n("292959"),
-  _ = n("944486"),
+  _ = n("292959"),
+  h = n("944486"),
   C = n("246946"),
   m = n("340895"),
   S = n("557177"),
   I = n("871465");
-let p = {
+let T = {
     transform: "scale(0.7)",
     opacity: 0
   },
-  T = {
+  p = {
     transform: "scale(1)",
     opacity: 1
   };
 t.default = () => {
-  let e = (0, u.useStateFromStores)([_.default], () => _.default.getChannelId()),
+  let e = (0, u.useStateFromStores)([h.default], () => h.default.getChannelId()),
     t = (0, u.useStateFromStoresArray)([m.default], () => m.default.getIncomingCalls().filter(t => {
       let {
         channel: n
@@ -34,7 +34,7 @@ t.default = () => {
       return e !== n.id
     })),
     n = (0, u.useStateFromStores)([m.default], () => m.default.hasIncomingCalls()),
-    l = (0, u.useStateFromStores)([h.default], () => h.default.isSoundDisabled("call_ringing")),
+    l = (0, u.useStateFromStores)([_.default], () => _.default.isSoundDisabled("call_ringing")),
     g = f.default.useIsRingtoneEligible(),
     N = f.default.useIsRingtoneDisabled(),
     A = (0, u.useStateFromStores)([C.default], () => C.default.disableSounds),
@@ -63,10 +63,10 @@ t.default = () => {
       return null === (t = e.channel) || void 0 === t ? void 0 : t.id
     },
     enter: {
-      from: p,
-      to: T
+      from: T,
+      to: p
     },
-    leave: p,
+    leave: T,
     config: {
       mass: 1,
       tension: 500,

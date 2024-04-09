@@ -9,14 +9,14 @@ var a, s, l = n("735250"),
   c = n("481060"),
   f = n("438139"),
   E = n("2052"),
-  h = n("726542"),
-  _ = n("638880"),
+  _ = n("726542"),
+  h = n("638880"),
   C = n("655922"),
   m = n("122810"),
   S = n("833664"),
   I = n("503438"),
-  p = n("420660"),
-  T = n("74433"),
+  T = n("420660"),
+  p = n("74433"),
   g = n("952561"),
   N = n("513202"),
   A = n("906732"),
@@ -27,8 +27,8 @@ var a, s, l = n("735250"),
   P = n("849171"),
   M = n("314897"),
   y = n("592125"),
-  x = n("594174"),
-  D = n("368874"),
+  D = n("594174"),
+  x = n("368874"),
   b = n("366695"),
   U = n("366966"),
   j = n("446753"),
@@ -262,7 +262,7 @@ es.Header = ea, es.Body = e => {
     partySize: u,
     members: d,
     onChannelContextMenu: f
-  } = e, E = i.useRef(null), h = (0, O.default)(s, !0);
+  } = e, E = i.useRef(null), _ = (0, O.default)(s, !0);
   return (0, l.jsx)(ee, {
     children: (0, l.jsxs)("div", {
       className: q.voiceSection,
@@ -301,7 +301,7 @@ es.Header = ea, es.Body = e => {
         },
         children: (0, l.jsxs)("div", {
           className: q.voiceSectionDetails,
-          children: [X(a.toString(), q.voiceSectionText), J(h, q.voiceSectionText)]
+          children: [X(a.toString(), q.voiceSectionText), J(_, q.voiceSectionText)]
         })
       }), (0, l.jsx)(W.default, {
         partySize: u,
@@ -400,9 +400,9 @@ es.Header = ea, es.Body = e => {
       assets: f,
       application_id: E
     } = a;
-  if (null != f && (0, p.default)(a)) {
-    var _;
-    t = (0, l.jsx)(D.default, {
+  if (null != f && (0, T.default)(a)) {
+    var h;
+    t = (0, l.jsx)(x.default, {
       className: q.twitchSectionPreviewWrapper,
       aspectRatio: 16 / 9,
       children: (0, l.jsxs)(c.Clickable, {
@@ -410,7 +410,7 @@ es.Header = ea, es.Body = e => {
         tag: "a",
         target: "_blank",
         children: [(0, l.jsx)("img", {
-          alt: null !== (_ = f.large_text) && void 0 !== _ ? _ : "",
+          alt: null !== (h = f.large_text) && void 0 !== h ? h : "",
           src: i(E, f.large_image, [900, 500]),
           className: q.twitchSectionPreview
         }), (0, l.jsx)("img", {
@@ -429,7 +429,7 @@ es.Header = ea, es.Body = e => {
       }),
       children: [(0, l.jsx)("img", {
         alt: "",
-        src: h.default.get(K.PlatformTypes.TWITCH).icon.lightSVG,
+        src: _.default.get(K.PlatformTypes.TWITCH).icon.lightSVG,
         className: q.twitchSectionIcon
       }), (0, l.jsxs)("div", {
         children: [X(u), null != d ? J(d) : null]
@@ -449,7 +449,7 @@ es.Header = ea, es.Body = e => {
     applicationStream: i,
     onPreviewClick: r,
     guildId: o
-  } = e, d = (0, u.useStateFromStores)([y.default], () => y.default.getChannel(i.channelId)), [f, E] = (0, v.useCanWatchStream)(d), h = (0, l.jsxs)(c.Clickable, {
+  } = e, d = (0, u.useStateFromStores)([y.default], () => y.default.getChannel(i.channelId)), [f, E] = (0, v.useCanWatchStream)(d), _ = (0, l.jsxs)(c.Clickable, {
     onClick: f ? r : void 0,
     className: q.applicationStreamingPreviewWrapper,
     children: [(0, l.jsx)(L.default, {
@@ -462,7 +462,7 @@ es.Header = ea, es.Body = e => {
         children: (0, v.getStreamCTAString)(E)
       })
     })]
-  }), _ = null !== (n = null === (t = (0, T.default)(a, i)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : z.default.Messages.SHARING_SCREEN;
+  }), h = null !== (n = null === (t = (0, p.default)(a, i)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : z.default.Messages.SHARING_SCREEN;
   return (0, l.jsxs)(ee, {
     children: [(0, l.jsxs)("div", {
       className: q.applicationStreamingSection,
@@ -472,11 +472,11 @@ es.Header = ea, es.Body = e => {
         "aria-label": s.username,
         className: q.applicationStreamingAvatar
       }), (0, l.jsxs)("div", {
-        children: [X(Y.default.getName(s)), J(_)]
+        children: [X(Y.default.getName(s)), J(h)]
       }), (0, l.jsx)(B.default, {
         size: B.default.Sizes.SMALL
       })]
-    }), h]
+    }), _]
   })
 }, es.EmbeddedActivitySection = e => {
   let {
@@ -491,7 +491,7 @@ es.Header = ea, es.Body = e => {
       return d(t)
     })
   }, [f]);
-  let h = (0, u.useStateFromStoresArray)([x.default, M.default], () => Array.from(s).map(e => M.default.getId() === e ? null : x.default.getUser(e)).filter(V.isNotNullish)),
+  let _ = (0, u.useStateFromStoresArray)([D.default, M.default], () => Array.from(s).map(e => M.default.getId() === e ? null : D.default.getUser(e)).filter(V.isNotNullish)),
     C = (0, E.useAnalyticsContext)(),
     {
       analyticsLocations: m
@@ -502,7 +502,7 @@ es.Header = ea, es.Body = e => {
   let I = null != t.created_at && t.created_at > 0 ? {
       start: t.created_at
     } : void 0,
-    p = (0, H.getAssetImage)(S.id, o, 300);
+    T = (0, H.getAssetImage)(S.id, o, 300);
   return (0, l.jsxs)(ee, {
     children: [(0, l.jsxs)("div", {
       className: q.embeddedActivityTopRow,
@@ -528,14 +528,14 @@ es.Header = ea, es.Body = e => {
       }) : null]
     }), (0, l.jsxs)("div", {
       className: q.embeddedActivityPlayerContainer,
-      children: [null != p ? (0, l.jsx)("img", {
-        src: p,
+      children: [null != T ? (0, l.jsx)("img", {
+        src: T,
         alt: S.name,
         className: q.embeddedActivityImage
       }) : null, (0, l.jsxs)("div", {
         className: q.embeddedActivityImageOverlay,
         children: [(0, l.jsx)(P.Avatars, {
-          users: h,
+          users: _,
           guildId: a,
           channelId: n.id
         }), (0, l.jsx)("div", {
@@ -543,7 +543,7 @@ es.Header = ea, es.Body = e => {
           children: (0, l.jsx)(c.Button, {
             size: c.Button.Sizes.SMALL,
             onClick: e => {
-              e.stopPropagation(), (0, _.default)({
+              e.stopPropagation(), (0, h.default)({
                 applicationId: f,
                 currentEmbeddedApplication: r,
                 activityChannelId: n.id,

@@ -19,8 +19,8 @@ var i = n("264344"),
   T = n("384136"),
   f = n("740197"),
   S = n("548820"),
-  A = n("579237"),
-  h = n("582168"),
+  h = n("579237"),
+  A = n("582168"),
   m = n("825040"),
   N = n("65154"),
   O = n("436620");
@@ -214,7 +214,7 @@ class C extends a.default {
   }
   setExperimentalAdm(e) {}
   setLoopback(e, t) {
-    e && null == this.loopback ? (this.enable(), this.loopback = new A.default(this.getAudioContext(), this.sourceId, this.sinkId), this.loopback.setNoiseCancellation(t.noiseCancellation)) : !e && null != this.loopback && (this.loopback.stop(), this.loopback = null)
+    e && null == this.loopback ? (this.enable(), this.loopback = new h.default(this.getAudioContext(), this.sourceId, this.sinkId), this.loopback.setNoiseCancellation(t.noiseCancellation)) : !e && null != this.loopback && (this.loopback.stop(), this.loopback = null)
   }
   getLoopback() {
     return null != this.loopback
@@ -254,7 +254,7 @@ class C extends a.default {
     e([])
   }
   constructor() {
-    super(), p(this, "Video", m.default), p(this, "Camera", h.default), p(this, "_audioContext", null), p(this, "outputVolume", N.DEFAULT_VOLUME), p(this, "sourceId", N.DEFAULT_DEVICE_ID), p(this, "sinkId", N.DEFAULT_DEVICE_ID), p(this, "enabled", !1), p(this, "connections", new Set), p(this, "interacted", !1), p(this, "loopback", null), p(this, "voiceActivityInput", null), p(this, "pendingDesktopInputs", {}), p(this, "enablePromise", null), p(this, "handleActiveSinksChange", (e, t) => {
+    super(), p(this, "Video", m.default), p(this, "Camera", A.default), p(this, "_audioContext", null), p(this, "outputVolume", N.DEFAULT_VOLUME), p(this, "sourceId", N.DEFAULT_DEVICE_ID), p(this, "sinkId", N.DEFAULT_DEVICE_ID), p(this, "enabled", !1), p(this, "connections", new Set), p(this, "interacted", !1), p(this, "loopback", null), p(this, "voiceActivityInput", null), p(this, "pendingDesktopInputs", {}), p(this, "enablePromise", null), p(this, "handleActiveSinksChange", (e, t) => {
       this.connections.forEach(n => n.setHasActiveVideoOutputSink(e, t))
     }), p(this, "handleNewListener", e => {
       switch (e) {

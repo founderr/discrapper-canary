@@ -17,11 +17,11 @@ t.default = function(e) {
     className: s,
     color: f,
     animate: E,
-    gradientStopColor: h,
-    getHistoricalTotalBytes: _
-  } = e, C = (0, i.useColorValue)(f).hex, m = null === (t = (0, i.useColorValue)(h)) || void 0 === t ? void 0 : t.hex;
+    gradientStopColor: _,
+    getHistoricalTotalBytes: h
+  } = e, C = (0, i.useColorValue)(f).hex, m = null === (t = (0, i.useColorValue)(_)) || void 0 === t ? void 0 : t.hex;
   return (0, a.jsx)(u.default, {
-    getHistoricalTotalBytes: _,
+    getHistoricalTotalBytes: h,
     children: (e, t, i) => {
       var u;
       return (0, a.jsx)("div", {

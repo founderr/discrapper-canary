@@ -24,8 +24,8 @@ var a = s("735250"),
   _ = s("165583"),
   g = s("197115"),
   h = s("504983"),
-  N = s("626135"),
-  I = s("981631"),
+  I = s("626135"),
+  N = s("981631"),
   p = s("921944"),
   C = s("474936"),
   A = s("689938"),
@@ -43,7 +43,7 @@ let R = () => {
       analyticsLocations: s
     } = (0, u.default)(d.default.USER_SETTINGS), i = (0, l.useStateFromStores)([S.default], () => S.default.isPreview), o = (null === (t = (0, m.usePremiumTrialOffer)()) || void 0 === t ? void 0 : null === (e = t.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === C.PremiumSubscriptionSKUs.TIER_2, c = (0, f.usePremiumDiscountOffer)(), T = (0, f.discountOfferHasTier)(c, C.PremiumSubscriptionSKUs.TIER_2);
     return n.useEffect(() => {
-      i && N.default.track(I.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+      i && I.default.track(N.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
         type: C.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
         location_stack: s
       })

@@ -34,7 +34,7 @@ n.r(t), n.d(t, {
     return N
   },
   getIncrementalStickerCountForTier: function() {
-    return h
+    return A
   },
   getNextTier: function() {
     return S
@@ -55,7 +55,7 @@ n.r(t), n.d(t, {
     return m
   },
   getTotalStickerCountForTier: function() {
-    return A
+    return h
   },
   isGuildBoostSlotCanceled: function() {
     return F
@@ -101,8 +101,8 @@ let f = [E.BoostedGuildTiers.NONE, E.BoostedGuildTiers.TIER_1, E.BoostedGuildTie
     var n;
     return e === E.BoostedGuildTiers.NONE ? E.BoostedGuildTiers.TIER_1 : null === (n = G(t).find(t => t.tier === e)) || void 0 === n ? void 0 : n.nextTier
   },
-  A = e => I.TotalStickerCountsByTier[e],
-  h = e => I.IncrementalStickerCountsByTier[e],
+  h = e => I.TotalStickerCountsByTier[e],
+  A = e => I.IncrementalStickerCountsByTier[e],
   m = e => I.TotalSoundboardSoundCountsByTier[e],
   N = e => {
     if (e === E.BoostedGuildTiers.NONE) return I.TotalSoundboardSoundCountsByTier[e];
@@ -121,8 +121,8 @@ let f = [E.BoostedGuildTiers.NONE, E.BoostedGuildTiers.TIER_1, E.BoostedGuildTie
       icon: 1
     }, {
       title: T.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_STICKER.format({
-        adding: h(E.BoostedGuildTiers.TIER_1),
-        total: A(E.BoostedGuildTiers.TIER_1)
+        adding: A(E.BoostedGuildTiers.TIER_1),
+        total: h(E.BoostedGuildTiers.TIER_1)
       }),
       description: T.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_STICKER,
       icon: 8
@@ -164,8 +164,8 @@ let f = [E.BoostedGuildTiers.NONE, E.BoostedGuildTiers.TIER_1, E.BoostedGuildTie
       icon: 1
     }, {
       title: T.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_STICKER.format({
-        adding: h(E.BoostedGuildTiers.TIER_2),
-        total: A(E.BoostedGuildTiers.TIER_2)
+        adding: A(E.BoostedGuildTiers.TIER_2),
+        total: h(E.BoostedGuildTiers.TIER_2)
       }),
       description: T.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_STICKER,
       icon: 8
@@ -223,8 +223,8 @@ let f = [E.BoostedGuildTiers.NONE, E.BoostedGuildTiers.TIER_1, E.BoostedGuildTie
       icon: 1
     }, {
       title: T.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_STICKER.format({
-        adding: h(E.BoostedGuildTiers.TIER_3),
-        total: A(E.BoostedGuildTiers.TIER_3)
+        adding: A(E.BoostedGuildTiers.TIER_3),
+        total: h(E.BoostedGuildTiers.TIER_3)
       }),
       description: T.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_STICKER,
       icon: 8
@@ -390,12 +390,12 @@ function w(e, t) {
 }
 
 function B(e, t) {
-  let n = h(t),
+  let n = A(t),
     i = f.indexOf(t);
   if (-1 === i) return 0;
   let r = f[i - 1],
-    s = null != r ? A(r) : 0,
-    a = A(t);
+    s = null != r ? h(r) : 0,
+    a = h(t);
   return Math.max(0, n - e.slice(s, a).length)
 }
 

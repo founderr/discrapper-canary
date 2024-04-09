@@ -17,17 +17,17 @@ var a = l("735250"),
   m = l("224706"),
   S = l("594190"),
   E = l("57655"),
-  C = l("569984"),
-  _ = l("918701"),
+  _ = l("569984"),
+  C = l("918701"),
   g = l("433811"),
   N = l("131951"),
   h = l("449224"),
   x = l("285952"),
   I = l("643095"),
-  p = l("358085"),
-  A = l("463727"),
-  R = l("855403"),
-  T = l("989941"),
+  A = l("358085"),
+  p = l("463727"),
+  T = l("855403"),
+  R = l("989941"),
   v = l("958707"),
   L = l("133179"),
   M = l("46140"),
@@ -91,9 +91,9 @@ async function G() {
 }
 
 function b(e) {
-  let t = (0, p.isWindows)() ? (0, T.default)(S.default, h.default) : null,
+  let t = (0, A.isWindows)() ? (0, R.default)(S.default, h.default) : null,
     l = S.default.getRunningGames();
-  return null != t && (0, R.default)(e.id, t.windowHandle) ? 2 : null != l.find(t => (0, R.default)(e.id, t.windowHandle)) ? 1 : 0
+  return null != t && (0, T.default)(e.id, t.windowHandle) ? 2 : null != l.find(t => (0, T.default)(e.id, t.windowHandle)) ? 1 : 0
 }
 
 function U(e) {
@@ -102,9 +102,9 @@ function U(e) {
     onChangeSelectedSource: l
   } = e, {
     enableGoLiveCaptureCard: n
-  } = A.default.useExperiment({
+  } = p.default.useExperiment({
     location: "GoLive_Source_Select"
-  }), r = N.default.supports(j.Features.GO_LIVE_HARDWARE), [d, m] = s.useState(null), [h, p] = s.useState(null), [T, G] = s.useState(null), U = null != T && T.length > 0, [F, k] = s.useState(u.DesktopSources.WINDOW), [y, w] = s.useState(!1), B = s.useRef(null), V = s.useRef(new c.Interval), H = (0, o.useStateFromStores)([S.default], () => S.default.getRunningGames()), W = function(e, t, l) {
+  }), r = N.default.supports(j.Features.GO_LIVE_HARDWARE), [d, m] = s.useState(null), [h, A] = s.useState(null), [R, G] = s.useState(null), U = null != R && R.length > 0, [k, F] = s.useState(u.DesktopSources.WINDOW), [y, w] = s.useState(!1), B = s.useRef(null), V = s.useRef(new c.Interval), H = (0, o.useStateFromStores)([S.default], () => S.default.getRunningGames()), W = function(e, t, l) {
     let a = (0, E.useIsEligibleForQuests)({
       location: M.QuestsExperimentLocations.STREAM_SOURCE_SELECT
     });
@@ -112,9 +112,9 @@ function U(e) {
       if (null == l || !a) return null;
       for (let a of l) {
         var s, n;
-        let l = t.find(e => (0, R.default)(a.id, e.windowHandle));
+        let l = t.find(e => (0, T.default)(a.id, e.windowHandle));
         if ((null == l ? void 0 : l.id) == null) continue;
-        let i = (0, _.getQuestByApplicationId)(e, l.id);
+        let i = (0, C.getQuestByApplicationId)(e, l.id);
         if (null != i && (null === (s = i.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null && (null === (n = i.userStatus) || void 0 === n ? void 0 : n.completedAt) == null) return {
           source: a,
           quest: i
@@ -122,7 +122,7 @@ function U(e) {
       }
       return null
     }, [a, e, t, l])
-  }((0, o.useStateFromStores)([C.default], () => C.default.quests), H, h), z = s.useMemo(() => null == h ? null : [...h].sort((e, t) => (null == W ? void 0 : W.source.id) === e.id ? -1 : (null == W ? void 0 : W.source.id) === t.id ? 1 : b(t) - b(e)), [W, h]);
+  }((0, o.useStateFromStores)([_.default], () => _.default.quests), H, h), z = s.useMemo(() => null == h ? null : [...h].sort((e, t) => (null == W ? void 0 : W.source.id) === e.id ? -1 : (null == W ? void 0 : W.source.id) === t.id ? 1 : b(t) - b(e)), [W, h]);
   s.useEffect(() => {
     let e = V.current;
     return P().then(e => {
@@ -131,14 +131,14 @@ function U(e) {
         windowSources: l,
         cameraSources: a
       } = e;
-      m(t), p(l), G(a)
+      m(t), A(l), G(a)
     }), e.start(1e3, async () => {
       let {
         screenSources: e,
         windowSources: t,
         cameraSources: l
       } = await P();
-      m(e), p(t), G(l)
+      m(e), A(t), G(l)
     }), () => {
       e.stop()
     }
@@ -156,9 +156,9 @@ function U(e) {
         case u.DesktopSources.SCREEN:
           return d;
         case u.DesktopSources.CAMERA:
-          return T
+          return R
       }
-    }(F);
+    }(k);
   if (null == Y) return (0, a.jsx)(x.default, {
     className: D.spinner,
     justify: x.default.Justify.CENTER,
@@ -204,17 +204,17 @@ function U(e) {
             value: u.DesktopSources.CAMERA
           }), e
         }(),
-        value: F,
+        value: k,
         onChange: e => {
           let {
             value: t
           } = e;
-          return k(t)
+          return F(t)
         },
         className: D.segmentControl,
         optionClassName: D.segmentControlOption
       })]
-    }), F === u.DesktopSources.CAMERA ? (0, a.jsx)("div", {
+    }), k === u.DesktopSources.CAMERA ? (0, a.jsx)("div", {
       className: D.sourceContainer,
       children: (0, a.jsx)(f.AdvancedScroller, {
         ref: K,
@@ -231,7 +231,7 @@ function U(e) {
       ref: K,
       className: D.sourceScroller,
       onScroll: Z,
-      children: [F === u.DesktopSources.WINDOW && null != W && (0, a.jsx)(g.default, {
+      children: [k === u.DesktopSources.WINDOW && null != W && (0, a.jsx)(g.default, {
         quest: W.quest
       }), (0, a.jsx)(I.default, {
         layout: I.default.Layout.WRAP,

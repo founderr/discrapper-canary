@@ -19,8 +19,8 @@ var i, r, s, a = n("735250"),
   T = n("866960"),
   f = n("626135"),
   S = n("768581"),
-  A = n("956664"),
-  h = n("311715"),
+  h = n("956664"),
+  A = n("311715"),
   m = n("332475"),
   N = n("768760"),
   O = n("981631");
@@ -107,12 +107,12 @@ class g extends(r = o.Component) {
       mediaLayoutType: r,
       useFullWidth: s
     } = this.props;
-    return r === N.MediaLayoutType.MOSAIC && s ? (0, A.getCoverRatio)({
+    return r === N.MediaLayoutType.MOSAIC && s ? (0, h.getCoverRatio)({
       width: e,
       height: t,
       maxWidth: n,
       maxHeight: i
-    }) : (0, A.getRatio)({
+    }) : (0, h.getRatio)({
       width: e,
       height: t,
       maxWidth: n,
@@ -155,8 +155,8 @@ class g extends(r = o.Component) {
       height: T,
       minWidth: f,
       minHeight: S,
-      maxWidth: A,
-      maxHeight: h,
+      maxWidth: h,
+      maxHeight: A,
       onClick: N,
       renderAccessory: p,
       tabIndex: R,
@@ -168,7 +168,7 @@ class g extends(r = o.Component) {
       readyState: M,
       hasMouseOver: y,
       hasFocus: P
-    } = this.state, U = null != n, b = this.getRatio(), G = (0, l.clamp)(Math.round(I * b), null != f ? f : 0, null != A ? A : 1 / 0), w = (0, l.clamp)(Math.round(T * b), null != S ? S : 0, null != h ? h : 1 / 0), B = {
+    } = this.state, U = null != n, b = this.getRatio(), G = (0, l.clamp)(Math.round(I * b), null != f ? f : 0, null != h ? h : 1 / 0), w = (0, l.clamp)(Math.round(T * b), null != S ? S : 0, null != A ? A : 1 / 0), B = {
       alt: e,
       readyState: M,
       onContextMenu: null != r ? r : void 0,
@@ -292,7 +292,7 @@ class g extends(r = o.Component) {
         width: r,
         height: s
       } = this.props;
-      (1 !== r || 1 !== s) && this.loadImage(this.getSrc((0, A.getRatio)({
+      (1 !== r || 1 !== s) && this.loadImage(this.getSrc((0, h.getRatio)({
         width: r,
         height: s,
         maxWidth: n,
@@ -338,7 +338,7 @@ class g extends(r = o.Component) {
         hasMouseOver: e,
         hasFocus: t
       } = this.state, n = null != this.props.renderAccessory ? this.props.renderAccessory() : null;
-      return this.props.shouldRenderAccessory ? e || t ? n : (0, a.jsx)(h.default, {}) : null
+      return this.props.shouldRenderAccessory ? e || t ? n : (0, a.jsx)(A.default, {}) : null
     }), (0, c.isImageLoaded)(this.getSrc(this.getRatio(), g.isAnimated(this.props))) && (this.state.readyState = O.ImageReadyStates.READY), this.imageLoadAnalyticsEnabled = L.getCurrentConfig({
       location: "lazy_image"
     }).enabled

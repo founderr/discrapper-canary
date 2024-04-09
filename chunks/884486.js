@@ -12,13 +12,13 @@ var s = n("803997"),
   c = n("571245"),
   f = n("308083"),
   E = n("689938"),
-  h = n("597338");
+  _ = n("597338");
 t.default = e => {
   let {
     handleUpdate: t,
     selectedTimes: n,
     error: s
-  } = e, _ = (e, a) => {
+  } = e, h = (e, a) => {
     let s = [...n];
     s[e].day = a, t({
       primetime: s
@@ -35,41 +35,41 @@ t.default = e => {
     })
   }, S = (0, d.getDayOptions)();
   return (0, a.jsxs)("div", {
-    className: h.slideContent,
+    className: _.slideContent,
     children: [(0, a.jsx)(i.Heading, {
       variant: "heading-xxl/medium",
-      className: h.title,
+      className: _.title,
       children: E.default.Messages.CLAN_SETUP_PRIMETIME_TITLE
     }), (0, a.jsx)(i.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: h.subtitle,
+      className: _.subtitle,
       children: E.default.Messages.CLAN_SETUP_PRIMETIME_SUBTITLE
     }), null != s && (0, a.jsx)(i.Text, {
       variant: "text-sm/normal",
       color: "status-danger",
-      className: h.errorText,
+      className: _.errorText,
       children: s
     }), (0, a.jsxs)("div", {
-      className: h.timeSelection,
+      className: _.timeSelection,
       children: [n.map((e, t) => (0, a.jsxs)("div", {
-        className: h.timeSelectorRow,
+        className: _.timeSelectorRow,
         children: [(0, a.jsx)(i.SearchableSelect, {
           value: e.day,
           options: S,
           placeholder: E.default.Messages.CLAN_PRIMETIME_PLACEHOLDER,
-          onChange: e => _(t, e)
+          onChange: e => h(t, e)
         }), (0, a.jsx)(c.default, {
           value: e.time,
           onChange: e => C(t, e)
         }), t > 0 && (0, a.jsx)(i.Clickable, {
           onClick: () => m(t),
           children: (0, a.jsx)(r.default, {
-            className: l()(h.icon, h.clickable)
+            className: l()(_.icon, _.clickable)
           })
         })]
       }, "time-".concat(t))), n.length < f.MAX_GAME_HOURS && (0, a.jsxs)(i.Clickable, {
-        className: l()(h.timeSelectorRow, h.clickable),
+        className: l()(_.timeSelectorRow, _.clickable),
         onClick: () => {
           if (n.length >= f.MAX_GAME_HOURS) return;
           let e = [...n];
@@ -81,11 +81,11 @@ t.default = e => {
           })
         },
         children: [(0, a.jsx)(o.default, {
-          className: l()(h.icon, h.clickable)
+          className: l()(_.icon, _.clickable)
         }), (0, a.jsx)(i.Text, {
           variant: "text-sm/medium",
           color: "none",
-          className: h.addText,
+          className: _.addText,
           children: E.default.Messages.CLAN_SETUP_PRIMETIME_ADD
         })]
       })]

@@ -22,8 +22,8 @@ var i = n("512722"),
   T = n("968437"),
   f = n("928477"),
   S = n("665906"),
-  A = n("695346"),
-  h = n("592125"),
+  h = n("695346"),
+  A = n("592125"),
   m = n("496675"),
   N = n("594174"),
   O = n("70956"),
@@ -176,7 +176,7 @@ let v = n("227419").default,
       let {
         channel: t
       } = e;
-      return !t.isPrivate() && A.EnableTTSCommand.getSetting() && m.default.can(g.Permissions.SEND_TTS_MESSAGES, t)
+      return !t.isPrivate() && h.EnableTTSCommand.getSetting() && m.default.can(g.Permissions.SEND_TTS_MESSAGES, t)
     },
     execute: e => {
       var t;
@@ -647,7 +647,7 @@ let v = n("227419").default,
       } = t, s = M(e, "user"), a = null !== (n = M(e, "message")) && void 0 !== n ? n : "";
       (async () => {
         await u.default.openPrivateChannel(s).then(e => {
-          let t = h.default.getChannel(e);
+          let t = A.default.getChannel(e);
           r()(null != t, "Newly created PrivateChannel is null"), _.default.sendMessage(t.id, I.default.parse(t, a))
         })
       })().catch(() => {

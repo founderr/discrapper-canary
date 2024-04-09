@@ -11,14 +11,14 @@ var a = n("735250"),
   c = n("433517"),
   f = n("481060"),
   E = n("205355"),
-  h = n("607070"),
-  _ = n("38618"),
+  _ = n("607070"),
+  h = n("38618"),
   C = n("197344"),
   m = n("474873"),
   S = n("215427"),
   I = n("820254"),
-  p = n("985806"),
-  T = n("838949"),
+  T = n("985806"),
+  p = n("838949"),
   g = n("70956"),
   N = n("358085"),
   A = n("557177"),
@@ -100,7 +100,7 @@ class M extends s.PureComponent {
         },
         children: [(0, a.jsxs)("div", {
           className: L.content,
-          children: [(0, a.jsx)(T.default, {
+          children: [(0, a.jsx)(p.default, {
             autoPlay: !0,
             loop: !e,
             setRef: this.setVideoRef,
@@ -131,7 +131,7 @@ class M extends s.PureComponent {
               className: L.twitterLink,
               href: O.Links.TWITTER_SUPPORT,
               target: "_blank",
-              children: [(0, a.jsx)(p.default, {
+              children: [(0, a.jsx)(T.default, {
                 className: L.icon
               }), v.default.Messages.TWEET_US]
             }), (0, a.jsxs)(f.Anchor, {
@@ -239,12 +239,12 @@ class M extends s.PureComponent {
     }, this._connectedSound.volume = 1
   }
 }
-t.default = d.default.connectStores([_.default, S.default, m.default, h.default], () => ({
-  isTryingToConnect: _.default.isTryingToConnect(),
-  connected: _.default.isConnected(),
+t.default = d.default.connectStores([h.default, S.default, m.default, _.default], () => ({
+  isTryingToConnect: h.default.isTryingToConnect(),
+  connected: h.default.isConnected(),
   incident: S.default.getIncident(),
   soundpack: m.default.getSoundpack(),
-  reducedMotion: h.default.useReducedMotion
+  reducedMotion: _.default.useReducedMotion
 }))(e => {
   let {
     isTryingToConnect: t,

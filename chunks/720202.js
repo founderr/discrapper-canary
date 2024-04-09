@@ -24,7 +24,7 @@ function S(e, t) {
   return T.request(e, t), !1
 }
 
-function A(e, t) {
+function h(e, t) {
   return t.forEach(t => {
     let {
       author: n,
@@ -34,12 +34,12 @@ function A(e, t) {
   }), !1
 }
 
-function h(e) {
+function A(e) {
   let {
     channelId: t,
     messages: n
   } = e, i = E.default.getChannel(t);
-  return null != i && null != i.guild_id && A(i.guild_id, n)
+  return null != i && null != i.guild_id && h(i.guild_id, n)
 }
 
 function m(e) {
@@ -47,7 +47,7 @@ function m(e) {
     guildId: t,
     messages: n
   } = e;
-  return null != t && A(t, l().flatten(n))
+  return null != t && h(t, l().flatten(n))
 }
 class N extends(a = u.default.Store) {
   initialize() {
@@ -80,16 +80,16 @@ s = "GuildMemberRequesterStore", (r = "displayName") in(i = N) ? Object.definePr
   },
   SEARCH_FINISH: m,
   MOD_VIEW_SEARCH_FINISH: m,
-  LOCAL_MESSAGES_LOADED: h,
-  LOAD_MESSAGES_SUCCESS: h,
-  LOAD_MESSAGES_AROUND_SUCCESS: h,
-  LOAD_PINNED_MESSAGES_SUCCESS: h,
-  LOAD_RECENT_MENTIONS_SUCCESS: h,
+  LOCAL_MESSAGES_LOADED: A,
+  LOAD_MESSAGES_SUCCESS: A,
+  LOAD_MESSAGES_AROUND_SUCCESS: A,
+  LOAD_PINNED_MESSAGES_SUCCESS: A,
+  LOAD_RECENT_MENTIONS_SUCCESS: A,
   GUILD_FEED_FETCH_SUCCESS: function(e) {
     let {
       guildId: t,
       data: n
     } = e;
-    return A(t, (0, c.getMessagesFromGuildFeedFetch)(n))
+    return h(t, (0, c.getMessagesFromGuildFeedFetch)(n))
   }
 })

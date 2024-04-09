@@ -16,14 +16,14 @@ var a, s, l = n("470079"),
   c = n("554747"),
   f = n("499137"),
   E = n("929507"),
-  h = n("270144"),
-  _ = n("400271"),
+  _ = n("270144"),
+  h = n("400271"),
   C = n("678513"),
   m = n("899667"),
   S = n("496675"),
   I = n("541566"),
-  p = n("192513"),
-  T = n("255791"),
+  T = n("192513"),
+  p = n("255791"),
   g = n("70956"),
   N = n("267642"),
   A = n("981631");
@@ -44,18 +44,18 @@ function R(e) {
       lastDismissedGracePeriod: I.default.getLastDismissedGracePeriodForGuild(n),
       isGracePeriodVisible: I.default.isVisible(n)
     })),
-    O = (0, i.useStateFromStores)([_.default], () => _.default.isVisible(e)),
-    v = (0, i.useStateFromStores)([T.default], () => T.default.isVisible(e)),
+    O = (0, i.useStateFromStores)([h.default], () => h.default.isVisible(e)),
+    v = (0, i.useStateFromStores)([p.default], () => p.default.isVisible(e)),
     L = (0, i.useStateFromStores)([S.default], () => S.default.can(A.Permissions.ADMINISTRATOR, e)),
     P = null != s && Date.now() - s <= A.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
     M = null != e ? e.premiumSubscriberCount : 0,
     y = (0, N.getGuildTierFromAppliedBoostCount)(M, n) !== A.BoostedGuildTiers.NONE,
-    x = null != a && Date.now() - a <= 432e5,
-    D = !x && !P && L && y,
+    D = null != a && Date.now() - a <= 432e5,
+    x = !D && !P && L && y,
     b = (0, d.useGuildHasLiveChannelNotice)(n),
-    U = (0, i.useStateFromStores)([p.default], () => p.default.isVisible(e)),
+    U = (0, i.useStateFromStores)([T.default], () => T.default.isVisible(e)),
     j = E.default.useShouldShowChannelNotice(n),
-    G = (0, h.useUnseenEndedApplicationSubscriptionEntitlements)(e),
+    G = (0, _.useUnseenEndedApplicationSubscriptionEntitlements)(e),
     {
       enableStudyGroup: w
     } = (0, f.useHubStudyGroupExperiment)(e),
@@ -73,12 +73,12 @@ function R(e) {
       u.default.getGuildEventsForCurrentUser(n)
     }, [n]), l.useEffect(() => {
       let e = -1;
-      return D && (e = window.setTimeout(() => {
+      return x && (e = window.setTimeout(() => {
         null != n && (0, r.fetchAppliedGuildBoostsForGuild)(n)
       }, 30 * Math.random() * g.default.Millis.SECOND)), () => {
         window.clearTimeout(e)
       }
-    }, [n, D]), O) return 0;
+    }, [n, x]), O) return 0;
   if (R) return 1;
   if (v) return 2;
   else if (b || null != V) return 3;

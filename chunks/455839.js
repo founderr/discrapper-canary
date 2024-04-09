@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return C
   },
   default: function() {
-    return _
+    return h
   }
 });
 var a = n("735250");
@@ -19,22 +19,22 @@ var s = n("442837"),
   c = n("795295"),
   f = n("556017"),
   E = n("981631"),
-  h = n("689938");
+  _ = n("689938");
 
-function _(e) {
+function h(e) {
   let {
     guild: t,
     shiftId: n,
-    onSelect: _,
+    onSelect: h,
     closePopout: C,
     "aria-label": m
   } = e, S = (0, r.default)({
     id: t.id,
-    label: h.default.Messages.COPY_ID_GUILD,
+    label: _.default.Messages.COPY_ID_GUILD,
     shiftId: n,
     onSuccess: C
-  }), I = (0, s.useStateFromStores)([u.default], () => u.default.getGuild(t.id), [t.id]), p = (0, s.useStateFromStores)([d.default], () => d.default.can(E.Permissions.ADMINISTRATOR, I)), {
-    canSeeInAppReportingButtons: T
+  }), I = (0, s.useStateFromStores)([u.default], () => u.default.getGuild(t.id), [t.id]), T = (0, s.useStateFromStores)([d.default], () => d.default.can(E.Permissions.ADMINISTRATOR, I)), {
+    canSeeInAppReportingButtons: p
   } = f.DiscoveryInAppReportingExperiment.useExperiment({
     location: "0e35b9_1"
   }, {
@@ -43,14 +43,14 @@ function _(e) {
     (0, i.closeContextMenu)(), null == C || C()
   };
   return (0, a.jsxs)(l.Menu, {
-    onSelect: _,
+    onSelect: h,
     navId: "guild-discovery-context-menu",
-    "aria-label": null != m ? m : h.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
+    "aria-label": null != m ? m : _.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
     onClose: i.closeContextMenu,
     children: [(0, a.jsx)(l.MenuGroup, {
-      children: !p && T ? (0, a.jsx)(l.MenuItem, {
+      children: !T && p ? (0, a.jsx)(l.MenuItem, {
         id: "report-guild-discovery-listing",
-        label: h.default.Messages.REPORT_SERVER_NO_NAME,
+        label: _.default.Messages.REPORT_SERVER_NO_NAME,
         action: () => {
           (0, o.showReportModalForDiscoverableGuild)(t), g()
         },
@@ -80,7 +80,7 @@ let C = e => {
       let {
         closePopout: n
       } = e;
-      return (0, a.jsx)(_, {
+      return (0, a.jsx)(h, {
         guild: t,
         closePopout: n
       })

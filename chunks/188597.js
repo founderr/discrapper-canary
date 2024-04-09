@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return p
   },
   executeMessageComponentInteraction: function() {
-    return A
+    return h
   },
   executePrimaryEntryPointInteraction: function() {
-    return h
+    return A
   },
   getInteractionStatusViewState: function() {
     return O
@@ -38,7 +38,7 @@ var i, r, s = n("544891"),
 function S(e) {
   return null == e || "" === e || Number.isNaN(e) ? Date.now() : _.default.extractTimestamp(e) + 9e5
 }
-let A = async e => {
+let h = async e => {
   let {
     componentType: t,
     messageId: n,
@@ -49,9 +49,9 @@ let A = async e => {
     channelId: I,
     guildId: T,
     localState: S
-  } = e, A = _.default.fromTimestamp(Date.now());
-  if (!E.default.canQueueInteraction(n, A)) return;
-  await u.default.unarchiveThreadIfNecessary(I), (0, c.addQueued)(A, {
+  } = e, h = _.default.fromTimestamp(Date.now());
+  if (!E.default.canQueueInteraction(n, h)) return;
+  await u.default.unarchiveThreadIfNecessary(I), (0, c.addQueued)(h, {
     messageId: n,
     data: {
       interactionType: l.InteractionTypes.MESSAGE_COMPONENT,
@@ -59,10 +59,10 @@ let A = async e => {
       indices: a
     },
     onFailure: (e, t) => m(I, e, t)
-  }), null != S && (0, c.queueInteractionComponentState)(n, A, S, a);
-  let h = {
+  }), null != S && (0, c.queueInteractionComponentState)(n, h, S, a);
+  let A = {
     type: l.InteractionTypes.MESSAGE_COMPONENT,
-    nonce: A,
+    nonce: h,
     guild_id: T,
     channel_id: I,
     message_flags: i,
@@ -85,12 +85,12 @@ let A = async e => {
   };
   await s.HTTP.post({
     url: f.Endpoints.INTERACTIONS,
-    body: h,
+    body: A,
     timeout: 3e3
   }, e => {
-    N(A, I, T, e)
+    N(h, I, T, e)
   })
-}, h = async e => {
+}, A = async e => {
   let {
     applicationId: t,
     channelId: n,

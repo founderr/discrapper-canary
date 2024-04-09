@@ -13,7 +13,7 @@ s.r(t), s.d(t, {
     return q
   },
   useDescription: function() {
-    return P
+    return y
   },
   useEditStateIds: function() {
     return $
@@ -25,10 +25,10 @@ s.r(t), s.d(t, {
     return J
   },
   useImage: function() {
-    return m
+    return P
   },
   useIntangibleBenefits: function() {
-    return b
+    return x
   },
   useName: function() {
     return h
@@ -37,13 +37,13 @@ s.r(t), s.d(t, {
     return p
   },
   useRole: function() {
-    return H
-  },
-  useRoleColor: function() {
     return v
   },
+  useRoleColor: function() {
+    return H
+  },
   useRoleIcon: function() {
-    return y
+    return m
   },
   useSubscriptionPlan: function() {
     return X
@@ -122,7 +122,7 @@ function p(e) {
   return R(e, "priceTier", t)
 }
 
-function P(e) {
+function y(e) {
   let t = f(e, e => {
     var t;
     return null !== (t = null == e ? void 0 : e.description) && void 0 !== t ? t : ""
@@ -130,14 +130,14 @@ function P(e) {
   return R(e, "description", t)
 }
 
-function m(e, t) {
+function P(e, t) {
   let s = f(e, e => {
     if ((null == e ? void 0 : e.image_asset) != null) return (0, L.getAssetURL)(e.application_id, e.image_asset, t)
   });
   return R(e, "image", s)
 }
 
-function y(e, t) {
+function m(e, t) {
   let s = (0, D.default)(t, e);
   return R(e, "roleIcon", E.useMemo(() => {
     var e, t;
@@ -148,7 +148,7 @@ function y(e, t) {
   }, [s]))
 }
 
-function H(e, t) {
+function v(e, t) {
   let s = (0, D.default)(t, e),
     _ = (0, O.useEditStateStore)(t => {
       var s;
@@ -170,7 +170,7 @@ function H(e, t) {
   }, [s, a, _])
 }
 
-function v(e, t) {
+function H(e, t) {
   let s = (0, D.default)(t, e);
   return R(e, "roleColor", E.useMemo(() => {
     var e;
@@ -190,14 +190,14 @@ function K(e) {
 }
 let F = [];
 
-function b(e) {
+function x(e) {
   let t = f(e, e => null == e ? F : e.role_benefits.benefits.filter(o.isIntangibleBenefit));
   return R(e, "intangibleBenefits", t)
 }
-let x = new Set;
+let b = new Set;
 
 function j(e, t) {
-  if (0 === e.length) return x;
+  if (0 === e.length) return b;
   let s = e.filter(e => e.roles.includes(t));
   return new Set(s.map(e => {
     let {
@@ -210,7 +210,7 @@ function j(e, t) {
 function k(e, t) {
   let s = (0, D.default)(t, e),
     _ = (0, i.useStateFromStoresArray)([I.default], () => I.default.getGuildEmoji(t), [t]);
-  return R(e, "tierEmojiIds", E.useMemo(() => null == s ? x : j(_, s.id), [_, s]))
+  return R(e, "tierEmojiIds", E.useMemo(() => null == s ? b : j(_, s.id), [_, s]))
 }
 
 function w(e) {

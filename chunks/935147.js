@@ -21,8 +21,8 @@ var a = s("735250"),
   _ = s("350327"),
   g = s("318661"),
   h = s("996073"),
-  N = s("25990"),
-  I = s("466111"),
+  I = s("25990"),
+  N = s("466111"),
   p = s("626135"),
   C = s("74538"),
   A = s("962746"),
@@ -49,26 +49,26 @@ function B(e) {
     pendingAvatar: H,
     pendingBanner: V,
     pendingThemeColors: Y,
-    pendingPronouns: K,
-    pendingBio: W,
+    pendingPronouns: W,
+    pendingBio: K,
     tryItOutThemeColors: z,
     tryItOutAvatar: Q,
-    tryItOutBanner: Z,
-    tryItOutAvatarDecoration: q,
+    tryItOutBanner: q,
+    tryItOutAvatarDecoration: Z,
     tryItOutProfileEffectId: X
-  } = (0, l.useStateFromStoresObject)([N.default], () => {
-    let e = N.default.getAllPending(),
-      t = N.default.getErrors(),
-      s = N.default.getAllTryItOut();
+  } = (0, l.useStateFromStoresObject)([I.default], () => {
+    let e = I.default.getAllPending(),
+      t = I.default.getErrors(),
+      s = I.default.getAllTryItOut();
     return {
       ...e,
       ...s,
       errors: t
     }
-  }), J = (0, c.default)(q), $ = (0, S.default)(X), ee = n.useRef(null);
+  }), J = (0, c.default)(Z), $ = (0, S.default)(X), ee = n.useRef(null);
   (0, h.default)(ee, b.ProfileCustomizationScrollPositions.TRY_IT_OUT);
   let et = (0, g.default)(G.id),
-    es = null == et ? void 0 : et.getPreviewBio(W),
+    es = null == et ? void 0 : et.getPreviewBio(K),
     {
       analyticsLocations: ea,
       sourceAnalyticsLocations: en
@@ -103,7 +103,7 @@ function B(e) {
       children: [(0, a.jsx)(O.default, {
         layoutClassName: y.tryItOutLayout,
         previewTitle: (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(I.default, {
+          children: [(0, a.jsx)(N.default, {
             className: y.premiumIcon
           }), U.default.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_PREVIEW]
         }),
@@ -111,9 +111,9 @@ function B(e) {
           user: G,
           onAvatarChange: _.setTryItOutAvatar,
           onBannerChange: _.setTryItOutBanner,
-          pendingPronouns: K,
-          pendingBio: W,
-          pendingBanner: null !== (F = null != Z ? Z : V) && void 0 !== F ? F : s("466045"),
+          pendingPronouns: W,
+          pendingBio: K,
+          pendingBanner: null !== (F = null != q ? q : V) && void 0 !== F ? F : s("466045"),
           pendingAvatar: null != Q ? Q : H,
           pendingThemeColors: null != z ? z : Y,
           pendingAvatarDecoration: J,
@@ -146,7 +146,7 @@ function B(e) {
           }), (0, a.jsx)(v.default, {
             className: y.customizationSection,
             isTryItOutFlow: !0,
-            showRemoveBannerButton: null != Z,
+            showRemoveBannerButton: null != q,
             onBannerChange: _.setTryItOutBanner,
             showPremiumIcon: !1
           }), (0, a.jsx)(R.default, {
@@ -174,7 +174,7 @@ function B(e) {
               children: U.default.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_ALSO_INCLUDES
             }), (0, a.jsx)(m.default, {
               onSubscribeModalClose: e => {
-                e && ((0, r.setPendingAvatar)(Q), (0, _.setPendingBanner)(Z), (0, _.setPendingThemeColors)(z))
+                e && ((0, r.setPendingAvatar)(Q), (0, _.setPendingBanner)(q), (0, _.setPendingThemeColors)(z))
               },
               subscriptionTier: j.PremiumSubscriptionSKUs.TIER_2,
               className: y.premiumSubscribeButton,

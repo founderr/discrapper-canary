@@ -12,7 +12,7 @@ var i, r, s, a, o = n("442837"),
 let f = !0,
   S = !0;
 
-function A() {
+function h() {
   let e;
   let t = E.default.getChannelId();
   if (null == t) e = !0;
@@ -28,7 +28,7 @@ function A() {
     hasPermission: f
   })
 }
-class h extends(a = o.default.Store) {
+class A extends(a = o.default.Store) {
   initialize() {
     this.waitFor(c.default, _.default, E.default, I.default)
   }
@@ -39,21 +39,21 @@ class h extends(a = o.default.Store) {
     return f
   }
 }
-s = "PermissionVADStore", (r = "displayName") in(i = h) ? Object.defineProperty(i, r, {
+s = "PermissionVADStore", (r = "displayName") in(i = A) ? Object.defineProperty(i, r, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new h(l.default, {
-  RTC_CONNECTION_STATE: A,
-  MEDIA_ENGINE_SET_AUDIO_ENABLED: A,
-  AUDIO_SET_MODE: A,
-  CHANNEL_UPDATES: A,
-  THREAD_UPDATE: A,
-  GUILD_ROLE_UPDATE: A,
-  GUILD_MEMBER_UPDATE: A,
-  IMPERSONATE_UPDATE: A,
-  IMPERSONATE_STOP: A,
+}) : i[r] = s, t.default = new A(l.default, {
+  RTC_CONNECTION_STATE: h,
+  MEDIA_ENGINE_SET_AUDIO_ENABLED: h,
+  AUDIO_SET_MODE: h,
+  CHANNEL_UPDATES: h,
+  THREAD_UPDATE: h,
+  GUILD_ROLE_UPDATE: h,
+  GUILD_MEMBER_UPDATE: h,
+  IMPERSONATE_UPDATE: h,
+  IMPERSONATE_STOP: h,
   VOICE_STATE_UPDATES: function(e) {
     let {
       voiceStates: t
@@ -62,7 +62,7 @@ s = "PermissionVADStore", (r = "displayName") in(i = h) ? Object.defineProperty(
       let {
         userId: t
       } = e;
-      return t === u.default.getId() && A()
+      return t === u.default.getId() && h()
     })
   },
   AUDIO_TOGGLE_SELF_MUTE: function() {

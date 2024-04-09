@@ -21,8 +21,8 @@ var a = s("735250"),
   _ = s("487419"),
   g = s("378364"),
   h = s("197344"),
-  N = s("734934"),
-  I = s("223683"),
+  I = s("734934"),
+  N = s("223683"),
   p = s("312400"),
   C = s("115345"),
   A = s("392888"),
@@ -89,7 +89,7 @@ function Y(e) {
   })
 }
 
-function K(e) {
+function W(e) {
   let {
     disabledSounds: t,
     disableAllSounds: s,
@@ -107,7 +107,7 @@ function K(e) {
     })
   }, []);
   let d = n.useRef(),
-    c = (0, N.useFocusModeEnabled)(),
+    c = (0, I.useFocusModeEnabled)(),
     E = n.useCallback((e, t) => {
       t.stopPropagation(), t.preventDefault(), null != d.current && d.current.stop(), d.current = b.playSound(e)
     }, []),
@@ -233,7 +233,7 @@ function K(e) {
   })
 }
 
-function W() {
+function K() {
   let e = (0, d.useStateFromStores)([_.default], () => _.default.getGuildAlertSettings()),
     [t, s] = n.useState(null),
     l = j.default.keys(e).map(t => {
@@ -331,7 +331,7 @@ class z extends n.PureComponent {
         disabled: c,
         tooltipNote: c ? k.default.Messages.QUIET_MODE_DISABLED_BY : void 0,
         children: k.default.Messages.DESKTOP_NOTIFICATIONS_ENABLE
-      }), (0, a.jsx)(Z, {}), (0, a.jsx)(u.FormSwitch, {
+      }), (0, a.jsx)(q, {}), (0, a.jsx)(u.FormSwitch, {
         className: S ? H.marginBottom20 : H.marginBottom40,
         value: !s,
         note: k.default.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_BADGE_BODY,
@@ -343,7 +343,7 @@ class z extends n.PureComponent {
         note: k.default.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_FLASH_BODY,
         onChange: this.handleToggleShowFlash,
         children: k.default.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_FLASH_LABEL
-      }) : null, (0, a.jsx)(q, {}), (0, a.jsxs)(u.FormItem, {
+      }) : null, (0, a.jsx)(Z, {}), (0, a.jsxs)(u.FormItem, {
         title: k.default.Messages.FORM_LABEL_PUSH_AFK_TIMEOUT,
         children: [(0, a.jsx)(u.SingleSelect, {
           value: t,
@@ -358,8 +358,8 @@ class z extends n.PureComponent {
         })]
       }), this.renderTTS(), (0, a.jsx)(u.FormDivider, {
         className: i()(H.marginTop40, H.marginBottom40)
-      }), (0, a.jsx)(W, {}), (0, a.jsx)(u.FormItem, {
-        children: (0, a.jsx)(K, {
+      }), (0, a.jsx)(K, {}), (0, a.jsx)(u.FormItem, {
+        children: (0, a.jsx)(W, {
           disabledSounds: l,
           disableAllSounds: r,
           notifyMessagesInSelectedChannel: d
@@ -415,7 +415,7 @@ let Q = (0, f.createExperiment)({
   }]
 });
 
-function Z() {
+function q() {
   let e = Q.useExperiment({
       location: "settings"
     }, {
@@ -433,7 +433,7 @@ function Z() {
   }) : null
 }
 
-function q() {
+function Z() {
   let e = p.NotificationsExperiment.useExperiment({
       location: "UserSettingsNotifications"
     }, {
@@ -474,7 +474,7 @@ function q() {
 }
 async function X(e) {
   e(!0);
-  let t = await (0, I.listSnapshots)();
+  let t = await (0, N.listSnapshots)();
   0 === t.length ? await (0, C.revertToOldSystem)() : c.default.show({
     title: k.default.Messages.CONFIRM,
     body: k.default.Messages.NOTIF_MIGRATION_SETTINGS_CONFIRM_BODY.format({
@@ -487,7 +487,7 @@ async function X(e) {
 }
 
 function J(e) {
-  let t = (0, N.useFocusModeEnabled)();
+  let t = (0, I.useFocusModeEnabled)();
   return (0, a.jsx)(z, {
     ...e,
     focusMode: t

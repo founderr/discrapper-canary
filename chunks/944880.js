@@ -15,9 +15,9 @@ var i = n("913527"),
   T = n("474936"),
   f = n("735825");
 let S = null,
-  A = !1;
+  h = !1;
 
-function h(e) {
+function A(e) {
   let t = o.default.createFromServer(e.entitlement);
   (0, I.isPremiumTier2Entitlement)(t) ? m({
     forceRefresh: !0
@@ -64,9 +64,9 @@ function m() {
     }
 }
 async function N() {
-  !A && (A = !0, await _.syncUserTenureRewardStatus(), A = !1, s.default.wait(() => (function() {
+  !h && (h = !0, await _.syncUserTenureRewardStatus(), h = !1, s.default.wait(() => (function() {
     var e;
-    if (O(), E.default.getFetchState() !== E.FetchState.FETCHED || A) return;
+    if (O(), E.default.getFetchState() !== E.FetchState.FETCHED || h) return;
     let t = null !== (e = E.default.getTenureRewardStatusForRewardId(f.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : E.default.getTenureRewardStatusForRewardId(f.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS);
     if ((null == t ? void 0 : t.redeemable_at) == null) return;
     let n = (null == t ? void 0 : t.redeemable_at) != null ? new Date(t.redeemable_at).getTime() - Date.now() : null;
@@ -92,7 +92,7 @@ class C extends a.default {
       POST_CONNECTION_OPEN: R,
       CONNECTION_CLOSED: p,
       ENTITLEMENT_FETCH_APPLICATION_SUCCESS: () => m(),
-      ENTITLEMENT_CREATE: h,
+      ENTITLEMENT_CREATE: A,
       ENTITLEMENT_UPDATE: () => m(),
       ENTITLEMENT_DELETE: () => m(),
       LOGOUT: O

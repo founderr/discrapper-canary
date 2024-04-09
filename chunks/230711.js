@@ -87,7 +87,7 @@ t.default = {
       newPassword: f,
       discriminator: S
     } = e, {
-      close: A
+      close: h
     } = t;
     return (0, d.default)(e => {
       let t = {
@@ -139,7 +139,7 @@ t.default = {
       }), null != I && null != f && s.default.dispatch({
         type: "PASSWORD_UPDATED",
         userId: t.id
-      }), A ? this.close() : this.submitComplete(), e
+      }), h ? this.close() : this.submitComplete(), e
     }, e => (s.default.dispatch({
       type: "USER_SETTINGS_MODAL_SUBMIT_FAILURE",
       errors: e.body

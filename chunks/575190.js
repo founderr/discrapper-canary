@@ -49,7 +49,7 @@ function I(e) {
     placeholderVersion: T,
     placeholderStyle: f,
     children: S
-  } = e, A = t === u.ImageReadyStates.LOADING, [h] = r.useState(() => Date.now()), [m] = r.useState(A), [N, O] = r.useState(!1), p = r.useMemo(() => {
+  } = e, h = t === u.ImageReadyStates.LOADING, [A] = r.useState(() => Date.now()), [m] = r.useState(h), [N, O] = r.useState(!1), p = r.useMemo(() => {
     if (m && 1 === T && null != I) {
       let e = Uint8Array.from(atob(I), e => e.charCodeAt(0)),
         t = (0, l.thumbHashToRGBA)(e, {
@@ -67,9 +67,9 @@ function I(e) {
       clearTimeout(e)
     }
   }, [m]);
-  let R = t === u.ImageReadyStates.READY && Date.now() - h < 200,
-    C = (0, s.useTransition)(A && null != p, R ? c : _),
-    g = (0, s.useTransition)(A && N, E);
+  let R = t === u.ImageReadyStates.READY && Date.now() - A < 200,
+    C = (0, s.useTransition)(h && null != p, R ? c : _),
+    g = (0, s.useTransition)(h && N, E);
   return (0, i.jsxs)("div", {
     className: d.loadingOverlay,
     style: {

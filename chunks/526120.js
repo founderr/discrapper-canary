@@ -7,13 +7,13 @@ n.r(t), n.d(t, {
     return S
   },
   fetchNewMemberActions: function() {
-    return A
+    return h
   },
   getBlockForChannelDeletion: function() {
     return O
   },
   selectHomeResourceChannel: function() {
-    return h
+    return A
   },
   selectNewMemberActionChannel: function() {
     return m
@@ -55,7 +55,7 @@ let S = async e => {
       guildId: e
     })
   }
-}, A = async e => {
+}, h = async e => {
   if (!o.default.isFullServerPreview(e)) {
     r.default.dispatch({
       type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_START",
@@ -79,7 +79,7 @@ let S = async e => {
       })
     }
   }
-}, h = function(e, t) {
+}, A = function(e, t) {
   let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
   if (r.default.dispatch({
       type: "SELECT_HOME_RESOURCE_CHANNEL",

@@ -35,8 +35,8 @@ var i, r, s = n("735250"),
   T = n("952265"),
   f = n("21340"),
   S = n("922770"),
-  A = n("893776"),
-  h = n("115130"),
+  h = n("893776"),
+  A = n("115130"),
   m = n("317381"),
   N = n("367907"),
   O = n("702493"),
@@ -155,8 +155,8 @@ function ei(e) {
       isTrustedName: eT = !1,
       isEmbeddedFlow: ef = !1,
       inApp: eS = !1,
-      callback: eA,
-      callbackWithoutPost: eh,
+      callback: eh,
+      callbackWithoutPost: eA,
       onClose: em
     } = e,
     eN = (0, u.useLocation)(),
@@ -165,7 +165,7 @@ function ei(e) {
     }).userAppsTreatment === p.UserAppsTreatment.ALLOWED,
     ep = (0, E.useStateFromStores)([y.default], () => y.default.hasLoadedExperiments);
   a.useEffect(() => {
-    M.default.isAuthenticated() && !ep && A.default.getExperiments()
+    M.default.isAuthenticated() && !ep && h.default.getExperiments()
   }, [ep]);
   let [eR, eC] = a.useState(null), [eg, eL] = a.useState(null), [eD, ev] = a.useState(null), [eM, ey] = a.useState(!1), eP = null == eR ? void 0 : eR.guilds, [eU, eb] = a.useState(null != eu ? eu : null), [eG, ew] = a.useState(null != ed ? ed : null), [eB, ek] = a.useState(P.NONE), eV = a.useMemo(() => (null == eR ? void 0 : eR.user) != null ? new v.default(eR.user) : null, [null == eR ? void 0 : eR.user]), eF = a.useMemo(() => null == eP ? void 0 : eP.find(e => e.id === eU), [eP, eU]), [ex, eH] = a.useState(null), eY = a.useMemo(() => {
     var e;
@@ -196,13 +196,13 @@ function ei(e) {
       return null != t ? t : P.NONE
     }, [null == eK ? void 0 : eK.permissions, el, eY]),
     eq = (0, E.useStateFromStores)([m.default], () => m.default.getCurrentEmbeddedActivity()),
-    eJ = (0, E.useStateFromStoresObject)([h.default, m.default], () => {
+    eJ = (0, E.useStateFromStoresObject)([A.default, m.default], () => {
       let e;
-      let t = h.default.getIsEnabled();
+      let t = A.default.getIsEnabled();
       if (null != eq) {
         if (e = m.default.getShelfActivities(eq.guildId).find(e => e.application_id === eq.applicationId), t && void 0 === e) {
           var n;
-          e = null === (n = h.default.getDeveloperShelfItems().find(e => e.id === eq.applicationId)) || void 0 === n ? void 0 : n.embeddedActivityConfig
+          e = null === (n = A.default.getDeveloperShelfItems().find(e => e.id === eq.applicationId)) || void 0 === n ? void 0 : n.embeddedActivityConfig
         }
         if (null != e) return {
           ...q.DEFAULT_EMBEDDED_ACTIVITY_CONFIG,
@@ -213,12 +213,12 @@ function ei(e) {
     }, [eq]),
     eZ = Object.keys(eJ).length > 0 ? eJ : null,
     e$ = a.useCallback(async e => {
-      if (null != eh) {
-        eh(e);
+      if (null != eA) {
+        eA(e);
         return
       }
       if (!e && !eI) {
-        null != eA && (eA({
+        null != eh && (eh({
           application: null == eR ? void 0 : eR.application,
           guild: eF
         }), null == em || em());
@@ -244,7 +244,7 @@ function ei(e) {
           guildId: ex === _.ApplicationIntegrationType.GUILD_INSTALL && null != eU ? eU : void 0,
           channelId: ex === _.ApplicationIntegrationType.GUILD_INSTALL && null != eG ? eG : void 0
         });
-        if (null != eA) eA({
+        if (null != eh) eh({
           application: null == eR ? void 0 : eR.application,
           location: t.location,
           guild: eF
@@ -265,7 +265,7 @@ function ei(e) {
         let e = t.body;
         (null == e ? void 0 : e.message) != null && "" !== e.message ? ev(Error(e.message)) : ev(e), eL(1), ey(!1)
       }
-    }, [eh, eI, eA, null == eR ? void 0 : eR.application, eF, em, K, ez, ee, et, en, ei, er, eQ, eB, eU, ex, eG]),
+    }, [eA, eI, eh, null == eR ? void 0 : eR.application, eF, em, K, ez, ee, et, en, ei, er, eQ, eB, eU, ex, eG]),
     e0 = a.useRef(!1),
     e1 = a.useCallback(async () => {
       if (!M.default.isAuthenticated()) {

@@ -4,13 +4,13 @@ s.r(t), s.d(t, {
     return h
   },
   CommandPermissionChangeStrings: function() {
-    return b
+    return x
   },
   DEFAULT_FOR_STRINGS_KEY: function() {
     return M
   },
   EmojiChangeStrings: function() {
-    return H
+    return v
   },
   GuildChangeStrings: function() {
     return f
@@ -22,19 +22,19 @@ s.r(t), s.d(t, {
     return V
   },
   InviteChangeStrings: function() {
-    return m
+    return P
   },
   NotRenderedChanges: function() {
-    return x
+    return b
   },
   RoleChangeStrings: function() {
-    return P
+    return y
   },
   StageInstanceChangeStrings: function() {
     return B
   },
   StickerChangeStrings: function() {
-    return v
+    return H
   },
   ThreadChangeStrings: function() {
     return F
@@ -43,7 +43,7 @@ s.r(t), s.d(t, {
     return p
   },
   WebhookChangeStrings: function() {
-    return y
+    return m
   },
   getChangeTitle: function() {
     return Z
@@ -187,7 +187,7 @@ let C = new A.default("AuditLogUtils"),
     [G.AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_TRIGGERED_RULE_NAME_CHANGE,
     ...R()
   }),
-  P = () => ({
+  y = () => ({
     [G.AuditLogChangeKeys.NAME]: eE(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CHANGE),
     [G.AuditLogChangeKeys.PERMISSIONS_GRANTED]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PERMISSIONS_GRANTED,
     [G.AuditLogChangeKeys.PERMISSIONS_DENIED]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PERMISSIONS_DENIED,
@@ -207,7 +207,7 @@ let C = new A.default("AuditLogUtils"),
     [G.AuditLogChangeKeys.UNICODE_EMOJI]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_UNICODE_EMOJI_CHANGE,
     ...R()
   }),
-  m = () => ({
+  P = () => ({
     [G.AuditLogChangeKeys.CODE]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CODE_CREATE,
     [G.AuditLogChangeKeys.CHANNEL_ID]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CHANNEL_CREATE,
     [G.AuditLogChangeKeys.MAX_USES]: {
@@ -224,17 +224,17 @@ let C = new A.default("AuditLogUtils"),
     },
     ...R()
   }),
-  y = () => ({
+  m = () => ({
     [G.AuditLogChangeKeys.CHANNEL_ID]: eE(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CHANGE),
     [G.AuditLogChangeKeys.NAME]: eE(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CHANGE),
     [G.AuditLogChangeKeys.AVATAR_HASH]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_AVATAR,
     [G.AuditLogChangeKeys.REASON]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON
   }),
-  H = () => ({
+  v = () => ({
     [G.AuditLogChangeKeys.NAME]: eE(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CHANGE),
     ...R()
   }),
-  v = () => ({
+  H = () => ({
     [G.AuditLogChangeKeys.NAME]: eE(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CHANGE),
     [G.AuditLogChangeKeys.TAGS]: eE(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CHANGE),
     [G.AuditLogChangeKeys.DESCRIPTION]: eE(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CHANGE),
@@ -302,7 +302,7 @@ let C = new A.default("AuditLogUtils"),
     [G.AuditLogChangeKeys.RATE_LIMIT_PER_USER]: eE(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CHANGE),
     ...R()
   }),
-  b = e => {
+  x = e => {
     let t = {
       ...R()
     };
@@ -310,7 +310,7 @@ let C = new A.default("AuditLogUtils"),
       e.newValue ? e.newValue.permission ? t[e.key] = U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_GRANTED : t[e.key] = U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_DENIED : t[e.key] = U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_REMOVED
     }), t
   },
-  x = {
+  b = {
     [G.AuditLogTargetTypes.CHANNEL]: {
       [G.AuditLogChangeKeys.ID]: !0,
       [G.AuditLogChangeKeys.PERMISSION_OVERWRITES]: !0

@@ -15,7 +15,7 @@ t.default = e => {
     handleUpdate: t,
     interests: n,
     error: l
-  } = e, [E, h] = s.useState(""), _ = e => {
+  } = e, [E, _] = s.useState(""), h = e => {
     let a = new Set(n);
     a.delete(e), t({
       interests: a
@@ -27,7 +27,7 @@ t.default = e => {
     let a = new Set(n);
     a.add(e), t({
       interests: a
-    }), h("")
+    }), _("")
   }, [t, E, n]), m = s.useCallback(e => {
     switch (e.key) {
       case "Enter":
@@ -58,7 +58,7 @@ t.default = e => {
         children: [(0, a.jsx)(r.TextInput, {
           value: E,
           onKeyDown: m,
-          onChange: h,
+          onChange: _,
           placeholder: c.default.Messages.CLAN_SETUP_INTERESTS_PLACEHOLDER,
           maxLength: d.MAX_INTEREST_LENGTH,
           disabled: n.size === d.MAX_NUM_INTERESTS
@@ -89,7 +89,7 @@ t.default = e => {
             children: e
           }), (0, a.jsx)(r.Clickable, {
             className: f.flex,
-            onClick: () => _(e),
+            onClick: () => h(e),
             children: (0, a.jsx)(o.default, {
               className: i()(f.clickable, f.iconSmall)
             })

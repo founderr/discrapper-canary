@@ -16,22 +16,22 @@ t.default = n.memo(function(e) {
   let {
     guildId: t,
     itemId: a,
-    scrollerHeight: g,
-    scrollerRef: E,
+    scrollerHeight: E,
+    scrollerRef: g,
     showFeedback: _,
     setOnDismissedFeedback: I
   } = e, [x, S, v] = (0, i.useStateFromStoresArray)([u.default], () => [u.default.getItem(t, a), u.default.getIsItemHiding(t, a), u.default.getIsItemHidden(t, a)]), C = n.useRef(null);
   if (n.useEffect(() => {
       var e;
       let l = C.current;
-      if (null == l || null == g) {
+      if (null == l || null == E) {
         (0, r.markGuildFeedItemAsUnseen)(t, a, Date.now());
         return
       }
       let n = l.clientHeight,
-        s = null === (e = E.current) || void 0 === e ? void 0 : e.getScrollerNode();
+        s = null === (e = g.current) || void 0 === e ? void 0 : e.getScrollerNode();
       if (null == s) return;
-      let i = Math.min(.5, .5 * g / n),
+      let i = Math.min(.5, .5 * E / n),
         d = new IntersectionObserver(e => (function(e, t, a) {
           for (let l of a) {
             let a = l.target.dataset.itemId;
@@ -47,7 +47,7 @@ t.default = n.memo(function(e) {
       return d.observe(l), () => {
         d.disconnect()
       }
-    }, [a, t, E, g, S, v]), null == x || v) return null;
+    }, [a, t, g, E, S, v]), null == x || v) return null;
   if (S) return (0, l.jsx)(c.default, {
     guildId: t,
     feedItem: x

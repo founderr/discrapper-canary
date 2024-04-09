@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return D
   }
 }), n("47120");
 var a = n("392711"),
@@ -15,14 +15,14 @@ var a = n("392711"),
   c = n("430824"),
   f = n("157305"),
   E = n("851634"),
-  h = n("131951"),
-  _ = n("158776"),
+  _ = n("131951"),
+  h = n("158776"),
   C = n("19780"),
   m = n("699516"),
   S = n("944486"),
   I = n("800599"),
-  p = n("594174"),
-  T = n("979651"),
+  T = n("594174"),
+  p = n("979651"),
   g = n("626135"),
   N = n("823379"),
   A = n("358085"),
@@ -41,14 +41,14 @@ function y(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class x {
+class D {
   loadServer() {
     for (let e of (A.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports)) this.rpcServer.registerTransport(e);
     for (let [e, t] of Object.entries(this.rpcCommandHandlers)) this.rpcServer.setCommandHandler(e, t);
     for (let [e, t] of Object.entries(this.rpcEventHandlers)) this.rpcServer.setEventHandler(e, t)
   }
   init() {
-    this.rpcServer.getCurrentUser = () => p.default.getCurrentUser(), this.rpcServer.onConnect = e => {
+    this.rpcServer.getCurrentUser = () => T.default.getCurrentUser(), this.rpcServer.onConnect = e => {
       i.default.dispatch({
         type: "RPC_APP_CONNECTED",
         socketId: e.id,
@@ -65,7 +65,7 @@ class x {
         reason: t
       })
     };
-    let e = [u.default, d.default, _.default, T.default, h.default, C.default];
+    let e = [u.default, d.default, h.default, p.default, _.default, C.default];
     new l.BatchedStoreListener(e.concat(this.stores), () => this.rpcServer.updateSubscriptions()).attach("RPCServerManager"), i.default.subscribe("MESSAGE_CREATE", e => this.handleMessage(e)), i.default.subscribe("MESSAGE_UPDATE", e => this.handleMessage(e)), i.default.subscribe("MESSAGE_DELETE", e => this.handleMessage(e)), i.default.subscribe("SPEAKING", e => this.handleSpeaking(e)), i.default.subscribe("OAUTH2_TOKEN_REVOKE", e => this.handleOAuth2TokenRevoke(e)), i.default.subscribe("GUILD_CREATE", e => this.handleGuildCreate(e)), i.default.subscribe("CHANNEL_CREATE", e => this.handleChannelCreate(e)), i.default.subscribe("LOGOUT", () => this.handleLogout()), i.default.subscribe("VOICE_CHANNEL_SELECT", e => this.handleVoiceChannelSelect(e)), i.default.subscribe("RPC_NOTIFICATION_CREATE", e => this.handleNotificationCreate(e)), i.default.subscribe("ACTIVITY_JOIN", e => this.handleActivityJoin(e)), i.default.subscribe("ACTIVITY_LAYOUT_MODE_UPDATE", e => this.handleActivityLayoutModeUpdate(e)), i.default.subscribe("THERMAL_STATE_CHANGE", e => this.handleThermalStateChange(e)), i.default.subscribe("ACTIVITY_SCREEN_ORIENTATION_UPDATE", e => this.handleScreenOrientationUpdate(e)), i.default.subscribe("EMBEDDED_ACTIVITY_INSTANCE_CHANGE", e => this.handleActivityInstanceChange(e)), (0, O.subscribeToActivityInstanceConnectedParticipants)(e => this.rpcServer.dispatchToSubscriptions(L.RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {}, e)), i.default.subscribe("RELATIONSHIP_ADD", e => this.handleRelationshipAdd(e)), i.default.subscribe("RELATIONSHIP_REMOVE", e => this.handleRelationshipRemove(e)), i.default.subscribe("PRESENCE_UPDATES", e => this.handlePresenceUpdate(e)), i.default.subscribe("PRESENCES_REPLACE", () => this.handlePresencesReplace()), i.default.subscribe("LOBBY_UPDATE", e => this.handleLobbyUpdate(e)), i.default.subscribe("LOBBY_DELETE", e => this.handleLobbyDelete(e)), i.default.subscribe("LOBBY_MEMBER_CONNECT", e => this.handleLobbyMemberConnect(e)), i.default.subscribe("LOBBY_MEMBER_UPDATE", e => this.handleLobbyMemberUpdate(e)), i.default.subscribe("LOBBY_MEMBER_DISCONNECT", e => this.handleLobbyMemberDisconnect(e)), i.default.subscribe("LOBBY_MESSAGE", e => this.handleLobbyMessage(e)), i.default.subscribe("ENTITLEMENT_CREATE", e => this.handleEntitlementCreate(e)), i.default.subscribe("ENTITLEMENT_DELETE", e => this.handleEntitlementDelete(e)), i.default.subscribe("USER_ACHIEVEMENT_UPDATE", e => this.handleUserAchievementUpdate(e))
   }
   handleMessage(e) {
@@ -104,7 +104,7 @@ class x {
       if (null != n) {
         let a = u.default.getChannel(n);
         if (null == a) return;
-        let s = T.default.getVoiceState(a.getGuildId(), e.userId);
+        let s = p.default.getVoiceState(a.getGuildId(), e.userId);
         if (null == s) return;
         this.rpcServer.dispatchToSubscriptions(t, {
           channel_id: s.channelId
@@ -201,7 +201,7 @@ class x {
       channelId: t,
       instanceId: n
     } = e;
-    if (0 === this.rpcServer.subscriptions.length || null == p.default.getCurrentUser()) return;
+    if (0 === this.rpcServer.subscriptions.length || null == T.default.getCurrentUser()) return;
     let a = r.default.getSelfEmbeddedActivityForChannel(t);
     null != a && this.rpcServer.dispatchToSubscriptions(L.RPCEvents.ACTIVITY_INSTANCE_UPDATE, e => e.socket.application.id === a.applicationId, {
       instance_id: n
@@ -219,11 +219,11 @@ class x {
       activity: l
     } = a;
     if (null == s || null == l || null == l.party_id) return;
-    let i = p.default.getUser(null === (t = a.author) || void 0 === t ? void 0 : t.id);
+    let i = T.default.getUser(null === (t = a.author) || void 0 === t ? void 0 : t.id);
     if (null == i) return;
-    let r = p.default.getCurrentUser();
+    let r = T.default.getCurrentUser();
     if (null == r || i.id === r.id) return;
-    let o = l.type === L.ActivityActionTypes.JOIN_REQUEST ? _.default.getApplicationActivity(r.id, s.id) : _.default.getApplicationActivity(i.id, s.id);
+    let o = l.type === L.ActivityActionTypes.JOIN_REQUEST ? h.default.getApplicationActivity(r.id, s.id) : h.default.getApplicationActivity(i.id, s.id);
     if (null == o || null == o.party || o.party.id !== l.party_id) return;
     let u = o.application_id;
     switch (l.type) {

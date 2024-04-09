@@ -9,8 +9,8 @@ var i, r, s, a, o, l, u = n("392711"),
   T = n("594174"),
   f = n("626135"),
   S = n("36703"),
-  A = n("709054"),
-  h = n("710111"),
+  h = n("709054"),
+  A = n("710111"),
   m = n("981631"),
   N = n("526761");
 (s = i || (i = {}))[s.NOT_FETCHED = 0] = "NOT_FETCHED", s[s.FETCHING = 1] = "FETCHING", s[s.FETCHED = 2] = "FETCHED";
@@ -170,7 +170,7 @@ l = "SoundboardStore", (o = "displayName") in(a = U) ? Object.defineProperty(a, 
     let {
       soundboardSounds: t
     } = e;
-    O.set(h.DEFAULT_SOUND_GUILD_ID, t), C = 2
+    O.set(A.DEFAULT_SOUND_GUILD_ID, t), C = 2
   },
   SOUNDBOARD_SOUNDS_RECEIVED: function(e) {
     let {
@@ -200,7 +200,7 @@ l = "SoundboardStore", (o = "displayName") in(a = U) ? Object.defineProperty(a, 
     let {
       soundboardStoreState: t
     } = e;
-    O = new Map(A.default.entries(t.soundboardSounds)), L = new Set(t.favoritedSoundIds), R = new Set(t.localSoundboardMutes)
+    O = new Map(h.default.entries(t.soundboardSounds)), L = new Set(t.favoritedSoundIds), R = new Set(t.localSoundboardMutes)
   },
   GUILD_SOUNDBOARD_SOUNDS_UPDATE: function(e) {
     let {

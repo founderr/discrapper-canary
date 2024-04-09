@@ -16,8 +16,8 @@ var s = n("740111"),
   c = n("823188"),
   f = n("474936"),
   E = n("981631"),
-  h = n("689938"),
-  _ = n("464765"),
+  _ = n("689938"),
+  h = n("464765"),
   C = n("74316");
 
 function m(e) {
@@ -26,17 +26,17 @@ function m(e) {
     content: m,
     renderModalProps: S,
     analyticsLocations: I,
-    analyticsLocation: p,
-    isLightTheme: T
+    analyticsLocation: T,
+    isLightTheme: p
   } = e, g = "AnnouncementModalVariant1", {
     onClose: N
-  } = S, A = null != m.button && "" !== m.button.copy ? m.button.copy : h.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, R = (null === (t = m.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", O = (null === (n = m.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
+  } = S, A = null != m.button && "" !== m.button.copy ? m.button.copy : _.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, R = (null === (t = m.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", O = (null === (n = m.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
     (0, r.transitionTo)(E.Routes.APPLICATION_STORE), N()
   } : () => (0, i.default)({
     subscriptionTier: f.PremiumSubscriptionSKUs.TIER_2,
     analyticsLocations: I,
     analyticsObject: {
-      ...p,
+      ...T,
       object: E.AnalyticsObjects.BUTTON_CTA,
       objectType: E.AnalyticsObjectTypes.TIER_2
     },
@@ -44,25 +44,25 @@ function m(e) {
       e && N()
     }
   }), v = "" !== m.helpArticleId ? () => (0, a.jsx)(l.Anchor, {
-    className: _.termsApplyAnchor,
+    className: h.termsApplyAnchor,
     href: d.default.getArticleURL(m.helpArticleId),
     children: (0, a.jsx)(l.Heading, {
       variant: "heading-md/normal",
-      className: _.termsApplyBodyText,
-      children: h.default.Messages.BOGO_TERMS_APPLY
+      className: h.termsApplyBodyText,
+      children: _.default.Messages.BOGO_TERMS_APPLY
     })
   }) : void 0, L = {
     type: "video",
-    src: T ? m.heroArtVideoLinkLightTheme : m.videoLink
+    src: p ? m.heroArtVideoLinkLightTheme : m.videoLink
   };
   ("" !== m.heroArtImageLinkDarkTheme || "" !== m.heroArtImageLinkLightTheme) && (L = {
     type: "image",
-    src: T ? m.heroArtImageLinkLightTheme : m.heroArtImageLinkDarkTheme
+    src: p ? m.heroArtImageLinkLightTheme : m.heroArtImageLinkDarkTheme
   });
-  let P = T ? c.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : c.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL,
+  let P = p ? c.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : c.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL,
     M = "" !== m.modalTopPill ? () => (0, a.jsx)(c.PremiumPillWithSparkles, {
       text: m.modalTopPill,
-      className: _.modalTopPill,
+      className: h.modalTopPill,
       colorOptions: P
     }) : void 0;
   return {
@@ -75,15 +75,15 @@ function m(e) {
     featureCards: m.featureCards.map(e => ({
       header: e.header,
       subHeader: e.body,
-      imageSrc: T ? e.imageLinkLightTheme : e.imageLink,
+      imageSrc: p ? e.imageLinkLightTheme : e.imageLink,
       tagText: "" !== e.pill ? e.pill : void 0
     })),
     changeLogId: g,
     button: () => {
       let e = Date.now();
       return (0, a.jsxs)(o.default, {
-        className: _.buttonWide,
-        innerClassName: _.innerButton,
+        className: h.buttonWide,
+        innerClassName: h.innerButton,
         color: l.Button.Colors.GREEN,
         size: l.Button.Sizes.SMALL,
         onClick: () => {
@@ -96,7 +96,7 @@ function m(e) {
         },
         children: [(0, a.jsx)("img", {
           alt: "",
-          className: _.nitroIconSubHeader,
+          className: h.nitroIconSubHeader,
           src: C
         }), A]
       })

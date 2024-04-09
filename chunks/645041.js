@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   markContentAsDismissed: function() {
-    return h
+    return _
   },
   useIsContentDismissed: function() {
     return E
@@ -26,7 +26,7 @@ function E(e, t) {
   return (0, a.useStateFromStores)([i.default], () => f(e, t))
 }
 
-function h(e, t, n, a) {
+function _(e, t, n, a) {
   (0, l.updateUserGuildSettings)(t, n => {
     if (f(e, t)) return !1;
     n.dismissedGuildContent = (0, o.addBit)(n.dismissedGuildContent, e)

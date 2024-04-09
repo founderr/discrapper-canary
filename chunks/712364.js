@@ -32,8 +32,8 @@ class c extends(i = s.PureComponent) {
       retrySuccessMessage: f
     } = this.props, {
       code: S,
-      errorMessage: A,
-      retrySuccess: h
+      errorMessage: h,
+      retrySuccess: A
     } = this.state, m = s.Children.count(i) > 0 ? (0, r.jsx)(l.Card, {
       type: l.Card.Types.WARNING,
       className: d.card,
@@ -51,7 +51,7 @@ class c extends(i = s.PureComponent) {
           children: T
         })
       })]
-    }) : null, O = h ? (0, r.jsx)(l.Card, {
+    }) : null, O = A ? (0, r.jsx)(l.Card, {
       type: l.Card.Types.SUCCESS,
       className: d.card,
       children: (0, r.jsx)(l.Text, {
@@ -90,7 +90,7 @@ class c extends(i = s.PureComponent) {
               color: "text-danger",
               variant: "text-xs/normal",
               className: d.error,
-              children: null != a ? a : A
+              children: null != a ? a : h
             }) : null, N]
           })]
         }), (0, r.jsxs)(l.ModalFooter, {

@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return eG
   },
   BoostingUpsellAction: function() {
-    return h
+    return A
   },
   CUSTOM_GIFT_MESSAGE_MAX_LENGTH: function() {
     return eK
@@ -118,7 +118,7 @@ n.r(t), n.d(t, {
     return eg
   },
   PREMIUM_TIER_2_HFU_ONE_MONTH_TRIAL_ID: function() {
-    return eA
+    return eh
   },
   PREMIUM_TIER_2_HFU_ONE_WEEK_TRIAL_ID: function() {
     return ef
@@ -139,7 +139,7 @@ n.r(t), n.d(t, {
     return eI
   },
   PREMIUM_TIER_2_NEW_USER_CPV_TRIAL_ID: function() {
-    return eh
+    return eA
   },
   PREMIUM_TIER_2_PLANS: function() {
     return X
@@ -235,7 +235,7 @@ n.r(t), n.d(t, {
     return ec
   }
 }), n("47120");
-var i, r, s, a, o, l, u, d, _, c, E, I, T, f, S, A, h, m, N, O, p, R, C, g, L, D, v, M, y, P, U, b, G, w, B, k, V = n("981631"),
+var i, r, s, a, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, O, p, R, C, g, L, D, v, M, y, P, U, b, G, w, B, k, V = n("981631"),
   F = n("185923");
 (N = i || (i = {}))[N.TIER_1 = 1] = "TIER_1", N[N.TIER_2 = 2] = "TIER_2", N[N.TIER_0 = 3] = "TIER_0";
 let x = void 0,
@@ -445,8 +445,8 @@ let ee = Object.freeze({
   eT = "902329034132684800",
   ef = "983601860436819968",
   eS = "983601860436819969",
-  eA = "984244797441048577",
-  eh = "1215818925846036480",
+  eh = "984244797441048577",
+  eA = "1215818925846036480",
   em = "1004850445463584768",
   eN = "1073698058383917056",
   eO = "1070132870233980928",
@@ -473,8 +473,8 @@ let ee = Object.freeze({
       id: eS,
       skus: ["521847234246082599"]
     },
-    [eA]: {
-      id: eA,
+    [eh]: {
+      id: eh,
       skus: ["521847234246082599"]
     },
     [em]: {
@@ -489,8 +489,8 @@ let ee = Object.freeze({
       id: eN,
       skus: ["521847234246082599"]
     },
-    [eh]: {
-      id: eh,
+    [eA]: {
+      id: eA,
       skus: ["521847234246082599"]
     }
   });
@@ -609,7 +609,7 @@ let eV = Object.freeze({
       fileSize: 524288e3
     }
   });
-(G = S || (S = {})).EXPLORE_ALL_PERKS_CLICKED = "explore_all_perks_clicked", G.HELPER_COLLAPSED = "helper_collapsed", G.HELPER_UNCOLLAPSED = "helper_uncollapsed", G.UNLOCK_EMOJI_CLICKED = "unlock_emoji_clicked", G.CUSTOM_PROFILES_CLICKED = "custom_profiles_clicked", G.SERVER_BOOSTS_CLICKED = "server_boosts_clicked", G.HELPER_DISMISSED = "premium_feature_helper_dismissed", G.HELPER_RENDERED = "premium_feature_helper_rendered", (w = A || (A = {})).EMOJI_TUTORIAL_STARTED = "emoji_tutorial_started", w.EMOJI_INTRO_VIEWED = "emoji_intro_viewed", w.EMOJI_PROMPT_VIEWED = "emoji_prompt_viewed", w.CUSTOM_PROFILE_TUTORIAL_STARTED = "custom_profile_tutorial_started", w.CUSTOM_PROFILE_AVATAR_INTRO_VIEWED = "custom_profile_avatar_intro_viewed", w.CUSTOM_PROFILE_AVATAR_DECORATIONS_VIEWED = "custom_profile_avatar_decorations_viewed", w.CUSTOM_PROFILE_BANNER_INTRO_VIEWED = "custom_profile_banner_intro_viewed", w.CUSTOM_PROFILE_THEME_INTRO_VIEWED = "custom_profile_theme_intro_viewed", w.SERVER_PROFILE_INTRO_VIEWED = "server_profile_intro_viewed", w.SERVER_BOOST_TUTORIAL_STARTED = "server_boost_tutorial_started", w.BOOST_INTRO_VIEWED = "boost_intro_viewed", w.BOOST_PROMPT_VIEWED = "boost_prompt_viewed", (B = h || (h = {})).BOOST = "boost", B.DISMISS = "dismiss", (k = m || (m = {})).BADGE_TOOLTIP_VIEWED = "share_nitro_bagde_tooltip_viewed", k.BADGE_CLICKED = "share_nitro_badge_clicked", k.FLOW_STARTED = "share_nitro_flow_started", k.FLOW_COMPLETED = "share_nitro_flow_completed";
+(G = S || (S = {})).EXPLORE_ALL_PERKS_CLICKED = "explore_all_perks_clicked", G.HELPER_COLLAPSED = "helper_collapsed", G.HELPER_UNCOLLAPSED = "helper_uncollapsed", G.UNLOCK_EMOJI_CLICKED = "unlock_emoji_clicked", G.CUSTOM_PROFILES_CLICKED = "custom_profiles_clicked", G.SERVER_BOOSTS_CLICKED = "server_boosts_clicked", G.HELPER_DISMISSED = "premium_feature_helper_dismissed", G.HELPER_RENDERED = "premium_feature_helper_rendered", (w = h || (h = {})).EMOJI_TUTORIAL_STARTED = "emoji_tutorial_started", w.EMOJI_INTRO_VIEWED = "emoji_intro_viewed", w.EMOJI_PROMPT_VIEWED = "emoji_prompt_viewed", w.CUSTOM_PROFILE_TUTORIAL_STARTED = "custom_profile_tutorial_started", w.CUSTOM_PROFILE_AVATAR_INTRO_VIEWED = "custom_profile_avatar_intro_viewed", w.CUSTOM_PROFILE_AVATAR_DECORATIONS_VIEWED = "custom_profile_avatar_decorations_viewed", w.CUSTOM_PROFILE_BANNER_INTRO_VIEWED = "custom_profile_banner_intro_viewed", w.CUSTOM_PROFILE_THEME_INTRO_VIEWED = "custom_profile_theme_intro_viewed", w.SERVER_PROFILE_INTRO_VIEWED = "server_profile_intro_viewed", w.SERVER_BOOST_TUTORIAL_STARTED = "server_boost_tutorial_started", w.BOOST_INTRO_VIEWED = "boost_intro_viewed", w.BOOST_PROMPT_VIEWED = "boost_prompt_viewed", (B = A || (A = {})).BOOST = "boost", B.DISMISS = "dismiss", (k = m || (m = {})).BADGE_TOOLTIP_VIEWED = "share_nitro_bagde_tooltip_viewed", k.BADGE_CLICKED = "share_nitro_badge_clicked", k.FLOW_STARTED = "share_nitro_flow_started", k.FLOW_COMPLETED = "share_nitro_flow_completed";
 let ex = new Set(["PL", "TR"]),
   eH = [1, 2, 3],
   eY = [4, 5, 7, 6],

@@ -1,194 +1,194 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   getFormFieldBuilderComponent: function() {
-    return m
+    return p
   },
   openEmptyFormFieldModal: function() {
-    return E
+    return m
   }
 });
-var a = i("735250");
-i("470079");
-var l = i("392711"),
-  n = i("481060"),
-  s = i("246364"),
-  r = i("405545"),
-  o = i("382574"),
-  d = i("279988"),
-  c = i("786127"),
-  u = i("981631"),
-  f = i("689938");
+var i = n("735250");
+n("470079");
+var r = n("392711"),
+  a = n("481060"),
+  s = n("246364"),
+  l = n("405545"),
+  o = n("382574"),
+  u = n("279988"),
+  c = n("786127"),
+  d = n("981631"),
+  f = n("689938");
 
-function m(e) {
+function p(e) {
   let {
     dropHoveredIndex: t,
-    formField: u,
-    guild: m,
-    index: E,
-    isDragEnabled: x,
-    submittedGuildJoinRequestsCount: h,
+    formField: d,
+    guild: p,
+    index: m,
+    isDragEnabled: I,
+    submittedGuildJoinRequestsCount: _,
     removeFormField: T,
-    updateFormField: M,
-    updateFormFieldOrder: F,
-    canRemove: _
-  } = e, R = async () => {
-    await T(E)
-  }, v = async e => {
-    await M(E, e)
-  }, g = async (e, t, i) => {
-    await F(e, t, i)
-  }, p = (0, l.uniqueId)(), C = t === E, N = {
-    key: p,
-    index: E,
-    isDragEnabled: x,
-    isDropHovered: C,
+    updateFormField: h,
+    updateFormFieldOrder: g,
+    canRemove: C
+  } = e, v = async () => {
+    await T(m)
+  }, x = async e => {
+    await h(m, e)
+  }, N = async (e, t, n) => {
+    await g(e, t, n)
+  }, R = (0, r.uniqueId)(), A = t === m, S = {
+    key: R,
+    index: m,
+    isDragEnabled: I,
+    isDropHovered: A,
     onEdit: () => {
-      0 === h ? I(u, v, m) : (0, n.openModalLazy)(async () => {
+      0 === _ ? E(d, x, p) : (0, a.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([i.e("99387"), i.e("74673")]).then(i.bind(i, "394045"));
-        return t => (0, a.jsx)(e, {
+        } = await Promise.all([n.e("99387"), n.e("74673")]).then(n.bind(n, "394045"));
+        return t => (0, i.jsx)(e, {
           ...t,
-          guildId: m.id,
-          submittedGuildJoinRequestsCount: h,
-          onConfirm: () => I(u, v, m)
+          guildId: p.id,
+          submittedGuildJoinRequestsCount: _,
+          onConfirm: () => E(d, x, p)
         })
       })
     },
-    onRemove: R,
-    onDrop: g,
-    canRemove: _
+    onRemove: v,
+    onDrop: N,
+    canRemove: C
   };
-  switch (u.field_type) {
+  switch (d.field_type) {
     case s.VerificationFormFieldTypes.TERMS:
-      return (0, a.jsx)(d.default, {
-        channelId: m.rulesChannelId,
+      return (0, i.jsx)(u.default, {
+        channelId: p.rulesChannelId,
         title: f.default.Messages.GUILD_RULES_HEADER,
-        formField: u,
-        ...N
+        formField: d,
+        ...S
       });
     case s.VerificationFormFieldTypes.PARAGRAPH:
-      return (0, a.jsx)(o.default, {
-        formField: u,
-        ...N
+      return (0, i.jsx)(o.default, {
+        formField: d,
+        ...S
       });
     case s.VerificationFormFieldTypes.TEXT_INPUT:
-      return (0, a.jsx)(c.default, {
-        formField: u,
-        ...N
+      return (0, i.jsx)(c.default, {
+        formField: d,
+        ...S
       });
     case s.VerificationFormFieldTypes.MULTIPLE_CHOICE:
-      return (0, a.jsx)(r.default, {
-        formField: u,
-        ...N
+      return (0, i.jsx)(l.default, {
+        formField: d,
+        ...S
       });
     default:
       return null
   }
 }
 
-function E(e, t, l) {
-  let r = {
-    onCloseRequest: u.NOOP
+function m(e, t, r) {
+  let l = {
+    onCloseRequest: d.NOOP
   };
   switch (e) {
     case s.VerificationFormFieldTypes.TERMS:
-      return (0, n.openModalLazy)(async () => {
+      return (0, a.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([i.e("99387"), i.e("5945")]).then(i.bind(i, "92451"));
-        return i => (0, a.jsx)(e, {
-          ...i,
+        } = await Promise.all([n.e("99387"), n.e("5945")]).then(n.bind(n, "92451"));
+        return n => (0, i.jsx)(e, {
+          ...n,
           field: void 0,
           onSave: t,
-          guild: l
+          guild: r
         })
-      }, r);
+      }, l);
     case s.VerificationFormFieldTypes.PARAGRAPH:
-      return (0, n.openModalLazy)(async () => {
+      return (0, a.openModalLazy)(async () => {
         let {
           ParagraphFormFieldModal: e
-        } = await Promise.all([i.e("99387"), i.e("6595")]).then(i.bind(i, "457042"));
-        return i => (0, a.jsx)(e, {
-          ...i,
+        } = await Promise.all([n.e("99387"), n.e("6595")]).then(n.bind(n, "457042"));
+        return n => (0, i.jsx)(e, {
+          ...n,
           field: void 0,
           onSave: t
         })
-      }, r);
+      }, l);
     case s.VerificationFormFieldTypes.TEXT_INPUT:
-      return (0, n.openModalLazy)(async () => {
+      return (0, a.openModalLazy)(async () => {
         let {
           TextInputFormFieldModal: e
-        } = await Promise.all([i.e("99387"), i.e("6595")]).then(i.bind(i, "457042"));
-        return i => (0, a.jsx)(e, {
-          ...i,
+        } = await Promise.all([n.e("99387"), n.e("6595")]).then(n.bind(n, "457042"));
+        return n => (0, i.jsx)(e, {
+          ...n,
           field: void 0,
           onSave: t
         })
-      }, r);
+      }, l);
     case s.VerificationFormFieldTypes.MULTIPLE_CHOICE:
-      return (0, n.openModalLazy)(async () => {
+      return (0, a.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([i.e("99387"), i.e("94064")]).then(i.bind(i, "607569"));
-        return i => (0, a.jsx)(e, {
-          ...i,
+        } = await Promise.all([n.e("99387"), n.e("94064")]).then(n.bind(n, "607569"));
+        return n => (0, i.jsx)(e, {
+          ...n,
           field: void 0,
           onSave: t
         })
-      }, r)
+      }, l)
   }
 }
 
-function I(e, t, l) {
-  let r = {
-    onCloseRequest: u.NOOP
+function E(e, t, r) {
+  let l = {
+    onCloseRequest: d.NOOP
   };
   switch (e.field_type) {
     case s.VerificationFormFieldTypes.TERMS:
-      return (0, n.openModalLazy)(async () => {
+      return (0, a.openModalLazy)(async () => {
         let {
-          default: n
-        } = await Promise.all([i.e("99387"), i.e("5945")]).then(i.bind(i, "92451"));
-        return i => (0, a.jsx)(n, {
-          ...i,
+          default: a
+        } = await Promise.all([n.e("99387"), n.e("5945")]).then(n.bind(n, "92451"));
+        return n => (0, i.jsx)(a, {
+          ...n,
           field: e,
           onSave: t,
-          guild: l
+          guild: r
         })
-      }, r);
+      }, l);
     case s.VerificationFormFieldTypes.PARAGRAPH:
-      return (0, n.openModalLazy)(async () => {
+      return (0, a.openModalLazy)(async () => {
         let {
-          ParagraphFormFieldModal: l
-        } = await Promise.all([i.e("99387"), i.e("6595")]).then(i.bind(i, "457042"));
-        return i => (0, a.jsx)(l, {
-          ...i,
+          ParagraphFormFieldModal: r
+        } = await Promise.all([n.e("99387"), n.e("6595")]).then(n.bind(n, "457042"));
+        return n => (0, i.jsx)(r, {
+          ...n,
           field: e,
           onSave: t
         })
-      }, r);
+      }, l);
     case s.VerificationFormFieldTypes.TEXT_INPUT:
-      return (0, n.openModalLazy)(async () => {
+      return (0, a.openModalLazy)(async () => {
         let {
-          TextInputFormFieldModal: l
-        } = await Promise.all([i.e("99387"), i.e("6595")]).then(i.bind(i, "457042"));
-        return i => (0, a.jsx)(l, {
-          ...i,
+          TextInputFormFieldModal: r
+        } = await Promise.all([n.e("99387"), n.e("6595")]).then(n.bind(n, "457042"));
+        return n => (0, i.jsx)(r, {
+          ...n,
           field: e,
           onSave: t
         })
-      }, r);
+      }, l);
     case s.VerificationFormFieldTypes.MULTIPLE_CHOICE:
-      return (0, n.openModalLazy)(async () => {
+      return (0, a.openModalLazy)(async () => {
         let {
-          default: l
-        } = await Promise.all([i.e("99387"), i.e("94064")]).then(i.bind(i, "607569"));
-        return i => (0, a.jsx)(l, {
-          ...i,
+          default: r
+        } = await Promise.all([n.e("99387"), n.e("94064")]).then(n.bind(n, "607569"));
+        return n => (0, i.jsx)(r, {
+          ...n,
           field: e,
           onSave: t
         })
-      }, r)
+      }, l)
   }
 }

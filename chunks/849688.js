@@ -11,10 +11,10 @@ var a = n("735250"),
   c = n("792125"),
   f = n("547280"),
   E = n("678513"),
-  h = n("981631"),
-  _ = n("689938"),
+  _ = n("981631"),
+  h = n("689938"),
   C = n("504763");
-let m = (0, c.getThemeClass)(h.ThemeTypes.DARK);
+let m = (0, c.getThemeClass)(_.ThemeTypes.DARK);
 t.default = function(e) {
   let {
     guild: t
@@ -35,7 +35,7 @@ t.default = function(e) {
   if (null == l) return null;
   let I = "url(".concat(l.backgroundAssetUrl, ") black top / cover no-repeat");
   return (0, a.jsx)(o.ThemeContextProvider, {
-    theme: h.ThemeTypes.DARK,
+    theme: _.ThemeTypes.DARK,
     children: (0, a.jsx)("div", {
       className: i()(C.container, m),
       children: (0, a.jsxs)("div", {
@@ -52,7 +52,7 @@ t.default = function(e) {
           }), (0, a.jsx)(o.Text, {
             variant: "text-xs/semibold",
             color: "none",
-            children: _.default.Messages.SIGNUP_NOTICE_EYEBROW
+            children: h.default.Messages.SIGNUP_NOTICE_EYEBROW
           })]
         }), (0, a.jsx)(o.Heading, {
           variant: "heading-sm/medium",
@@ -64,7 +64,7 @@ t.default = function(e) {
           children: (0, a.jsx)(o.Text, {
             variant: "text-sm/medium",
             color: "none",
-            children: _.default.Messages.SIGNUP_NOTICE_CTA
+            children: h.default.Messages.SIGNUP_NOTICE_CTA
           })
         }), (0, a.jsx)("div", {
           className: C.dismiss,

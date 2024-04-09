@@ -16,8 +16,8 @@ var l = a("735250"),
   f = a("45204"),
   m = a("160404"),
   h = a("451478"),
-  g = a("474333"),
-  E = a("480739"),
+  E = a("474333"),
+  g = a("480739"),
   _ = a("709054"),
   I = a("830917"),
   x = a("199140"),
@@ -36,8 +36,8 @@ let L = n.memo(function(e) {
     let {
       guildId: t
     } = e;
-    return (0, s.useStateFromStores)([m.default], () => m.default.isViewingRoles(t)) ? (0, l.jsx)(g.default, {
-      messageType: g.HelpMessageTypes.WARNING,
+    return (0, s.useStateFromStores)([m.default], () => m.default.isViewingRoles(t)) ? (0, l.jsx)(E.default, {
+      messageType: E.HelpMessageTypes.WARNING,
       children: D.default.Messages.GUILD_FEED_VIEW_AS_ROLE_WARNING
     }) : null
   }),
@@ -81,7 +81,7 @@ let L = n.memo(function(e) {
   });
 
 function b(e) {
-  var t, a, m, g, D;
+  var t, a, m, E, D;
   let {
     guild: b,
     renderMode: G,
@@ -141,11 +141,11 @@ function b(e) {
     Q = n.useMemo(() => G !== M.GuildFeedRenderMode.NEW ? [] : [...P].sort((e, t) => -_.default.compare((0, o.default)(e).id, (0, o.default)(t).id)), [P, G]),
     $ = n.useCallback(async () => {
       var e;
-      await (null === (e = y.current) || void 0 === e ? void 0 : e.maybeFlushSeenItems(E.ForceFlushType.IMMEDIATE)), z({
+      await (null === (e = y.current) || void 0 === e ? void 0 : e.maybeFlushSeenItems(g.ForceFlushType.IMMEDIATE)), z({
         force: !0,
         flushSeenItems: () => {
           var e;
-          return null === (e = y.current) || void 0 === e ? void 0 : e.maybeFlushSeenItems(E.ForceFlushType.IMMEDIATE)
+          return null === (e = y.current) || void 0 === e ? void 0 : e.maybeFlushSeenItems(g.ForceFlushType.IMMEDIATE)
         }
       })
     }, [y, z]);
@@ -212,7 +212,7 @@ function b(e) {
       onReloadClick: $
     })]
   });
-  let el = null !== (D = null !== (g = null === (t = w[0]) || void 0 === t ? void 0 : t.id) && void 0 !== g ? g : null === (a = U[0]) || void 0 === a ? void 0 : a.id) && void 0 !== D ? D : null === (m = k[0]) || void 0 === m ? void 0 : m.id;
+  let el = null !== (D = null !== (E = null === (t = w[0]) || void 0 === t ? void 0 : t.id) && void 0 !== E ? E : null === (a = U[0]) || void 0 === a ? void 0 : a.id) && void 0 !== D ? D : null === (m = k[0]) || void 0 === m ? void 0 : m.id;
   return (0, l.jsxs)("div", {
     className: F.container,
     children: [(0, l.jsx)(L, {

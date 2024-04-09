@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return T
   }
 }), n("47120");
 var a = n("470079"),
@@ -15,25 +15,25 @@ var a = n("470079"),
   c = n("699516"),
   f = n("340895"),
   E = n("358085"),
-  h = n("998502"),
-  _ = n("252618"),
+  _ = n("998502"),
+  h = n("252618"),
   C = n("981631"),
   m = n("689938");
 let S = new Set(["Blink", "Gecko", "WebKit"]),
   I = C.NOOP;
-if (E.isPlatformEmbedded) I = e => h.default.setBadge(e);
+if (E.isPlatformEmbedded) I = e => _.default.setBadge(e);
 else if (S.has(r().layout)) {
   let e = new(l())({
     animation: "none"
   });
   I = t => {
     try {
-      (0, _.setPageTitleNotificationCount)(t), e.badge(-1 === t ? "•" : t)
+      (0, h.setPageTitleNotificationCount)(t), e.badge(-1 === t ? "•" : t)
     } catch (e) {}
   }
 }
 
-function p() {
+function T() {
   let e = (0, o.useStateFromStores)([f.default], () => f.default.hasIncomingCalls()),
     t = (0, o.useStateFromStores)([u.default, c.default, d.default], () => {
       let e = u.default.getTotalMentionCount(),
@@ -45,8 +45,8 @@ function p() {
     });
   a.useEffect(() => {
     if (!e) return;
-    let t = h.default.bounceDock("critical"),
-      n = (0, _.flashPageTitle)({
+    let t = _.default.bounceDock("critical"),
+      n = (0, h.flashPageTitle)({
         messages: [m.default.Messages.INCOMING_CALL],
         count: 50
       });

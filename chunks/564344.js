@@ -21,8 +21,8 @@ var a = s("735250"),
   _ = s("585483"),
   g = s("16703"),
   h = s("785145"),
-  N = s("981631"),
-  I = s("526761"),
+  I = s("981631"),
+  N = s("526761"),
   p = s("689938"),
   C = s("440758");
 
@@ -61,25 +61,25 @@ function A() {
         onItemSelect: function(t) {
           if (x !== t) {
             if (s) {
-              _.ComponentDispatch.dispatch(N.ComponentActions.SHAKE_APP, {
+              _.ComponentDispatch.dispatch(I.ComponentActions.SHAKE_APP, {
                 duration: 300,
                 intensity: r.SHAKE_INTENSITY_DEFAULT
-              }), _.ComponentDispatch.dispatch(N.ComponentActions.EMPHASIZE_NOTICE);
+              }), _.ComponentDispatch.dispatch(I.ComponentActions.EMPHASIZE_NOTICE);
               return
             }
-            t === I.ProfileCustomizationSubsection.GUILD && null == e && null != A && (0, u.initGuildIdentitySettings)(A, M), R(t)
+            t === N.ProfileCustomizationSubsection.GUILD && null == e && null != A && (0, u.initGuildIdentitySettings)(A, M), R(t)
           }
         },
         children: [(0, a.jsx)(i.TabBar.Item, {
           className: C.tabBarItem,
-          id: I.ProfileCustomizationSubsection.USER_PROFILE,
+          id: N.ProfileCustomizationSubsection.USER_PROFILE,
           children: p.default.Messages.EDIT_PROFILE_CATEGORY_USER_PROFILE
-        }, I.ProfileCustomizationSubsection.USER_PROFILE), (0, a.jsx)(i.TabBar.Item, {
+        }, N.ProfileCustomizationSubsection.USER_PROFILE), (0, a.jsx)(i.TabBar.Item, {
           className: C.tabBarItem,
-          id: I.ProfileCustomizationSubsection.GUILD,
+          id: N.ProfileCustomizationSubsection.GUILD,
           children: p.default.Messages.EDIT_PROFILE_CATEGORY_GUILD_IDENTITY
-        }, I.ProfileCustomizationSubsection.GUILD)]
-      }), x === I.ProfileCustomizationSubsection.GUILD ? (0, a.jsx)(S.default, {
+        }, N.ProfileCustomizationSubsection.GUILD)]
+      }), x === N.ProfileCustomizationSubsection.GUILD ? (0, a.jsx)(S.default, {
         selectedGuild: A
       }) : (0, a.jsx)(T.default, {})]
     })

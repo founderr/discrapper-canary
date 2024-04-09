@@ -26,7 +26,7 @@ t.default = e => {
         top: "0%"
       }
     }),
-    h = (0, l.useSpring)({
+    _ = (0, l.useSpring)({
       ref: d,
       config: l.config.default,
       from: {
@@ -36,7 +36,7 @@ t.default = e => {
         height: "100%"
       }
     }),
-    _ = (0, l.useSpring)({
+    h = (0, l.useSpring)({
       ref: c,
       config: l.config.default,
       from: {
@@ -64,11 +64,11 @@ t.default = e => {
       className: o.scrollContainer,
       style: {
         ...E,
-        ...h
+        ..._
       },
       children: (0, a.jsx)(i.default, {
         guildId: t,
-        animatedTextStyle: _
+        animatedTextStyle: h
       })
     })]
   })

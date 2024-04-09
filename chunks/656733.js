@@ -25,8 +25,8 @@ let E = {
   T = E.MP4,
   f = null,
   S = "",
-  A = "",
-  h = [],
+  h = "",
+  A = [],
   m = [],
   N = [],
   O = [];
@@ -42,10 +42,10 @@ class R extends(i = o.default.Store) {
     return S
   }
   getResultQuery() {
-    return A
+    return h
   }
   getResultItems() {
-    return h
+    return A
   }
   getTrendingCategories() {
     return m
@@ -70,11 +70,11 @@ a = "GIFPickerViewStore", (s = "displayName") in(r = R) ? Object.defineProperty(
     f = e.analyticsID
   },
   GIF_PICKER_QUERY: function(e) {
-    "" === (S = e.query) && (A = "", h = [], N = [])
+    "" === (S = e.query) && (h = "", A = [], N = [])
   },
   GIF_PICKER_QUERY_SUCCESS: function(e) {
-    if (null != e.query && S === A) return !1;
-    null != e.query && (A = e.query), h = e.items.map(e => {
+    if (null != e.query && S === h) return !1;
+    null != e.query && (h = e.query), A = e.items.map(e => {
       let {
         width: t,
         height: n,
@@ -117,7 +117,7 @@ a = "GIFPickerViewStore", (s = "displayName") in(r = R) ? Object.defineProperty(
       query: t
     } = e;
     if (null == t) return !1;
-    A = t, h = []
+    h = t, A = []
   },
   GIF_PICKER_TRENDING_FETCH_SUCCESS: function(e) {
     let t = e.trendingCategories;

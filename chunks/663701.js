@@ -15,14 +15,14 @@ var a = n("735250"),
   c = n("524437"),
   f = n("952265"),
   E = n("481060"),
-  h = n("493683"),
-  _ = n("348600"),
+  _ = n("493683"),
+  h = n("348600"),
   C = n("257968"),
   m = n("367907"),
   S = n("770471"),
   I = n("158631"),
-  p = n("143614"),
-  T = n("463119"),
+  T = n("143614"),
+  p = n("463119"),
   g = n("377171"),
   N = n("243778"),
   A = n("922409"),
@@ -33,8 +33,8 @@ var a = n("735250"),
   P = n("457396"),
   M = n("51596"),
   y = n("905423"),
-  x = n("155409"),
-  D = n("210887"),
+  D = n("155409"),
+  x = n("210887"),
   b = n("695346"),
   U = n("283595"),
   j = n("699516"),
@@ -59,7 +59,7 @@ let ee = e => {
     let {
       selected: t,
       ...n
-    } = e, s = (0, o.useListItem)("friends"), l = (0, d.useStateFromStores)([j.default], () => j.default.getPendingCount()), i = (0, p.default)(), {
+    } = e, s = (0, o.useListItem)("friends"), l = (0, d.useStateFromStores)([j.default], () => j.default.getPendingCount()), i = (0, T.default)(), {
       canViewBroadcasts: r
     } = S.default.useExperiment({
       location: "friends_tab_no_track"
@@ -121,7 +121,7 @@ let ee = e => {
       route: n,
       locationState: s,
       ...l
-    } = e, r = (0, o.useListItem)("activities"), u = (0, d.useStateFromStores)([D.default], () => D.default.getState().theme), c = (0, C.useActivitiesWhatsNewCount)();
+    } = e, r = (0, o.useListItem)("activities"), u = (0, d.useStateFromStores)([x.default], () => x.default.getState().theme), c = (0, C.useActivitiesWhatsNewCount)();
     return (0, a.jsx)(q.LinkButton, {
       selected: t,
       route: n,
@@ -145,7 +145,7 @@ let ee = e => {
       channelId: l
     } = (0, A.useMessageRequestSidebarState)();
     if (!(0, O.useShouldShowMessageRequestsRow)()) return null;
-    let i = null == l ? void 0 : () => h.default.preload(X.ME, l);
+    let i = null == l ? void 0 : () => _.default.preload(X.ME, l);
     return (0, a.jsx)(q.LinkButton, {
       selected: t,
       route: X.Routes.MESSAGE_REQUESTS,
@@ -243,7 +243,7 @@ let eo = e => {
     return [t, n]
   }, r.default), {
     enabled: f
-  } = _.BirthdayActivitiesExperiment.useExperiment({
+  } = h.BirthdayActivitiesExperiment.useExperiment({
     location: "a718d6_2"
   }, {
     autoTrackExposure: !0
@@ -251,7 +251,7 @@ let eo = e => {
   return (0, a.jsxs)("nav", {
     className: $.privateChannels,
     "aria-label": J.default.Messages.PRIVATE_CHANNELS_A11Y_LABEL,
-    children: [(0, a.jsx)(x.default, {
+    children: [(0, a.jsx)(D.default, {
       tutorialId: "direct-messages",
       position: "right",
       offsetX: -52,
@@ -300,7 +300,7 @@ let eo = e => {
         }
       }, "activities") : null, (0, a.jsx)(ea, {
         selected: null == c ? null != s && s.startsWith(X.Routes.MESSAGE_REQUESTS) : c === X.Routes.MESSAGE_REQUESTS
-      }, "message-requests"), (0, a.jsx)(T.CollectiblesShopButton, {
+      }, "message-requests"), (0, a.jsx)(p.CollectiblesShopButton, {
         selected: c === X.Routes.COLLECTIBLES_SHOP || (null == s ? void 0 : s.startsWith(X.Routes.COLLECTIBLES_SHOP)),
         locationState: {
           analyticsSource: {
@@ -330,8 +330,8 @@ function eu() {
     n = !b.DisableGamesTab.useSetting(),
     {
       theme: s
-    } = (0, d.useStateFromStoresObject)([D.default], () => ({
-      theme: D.default.theme
+    } = (0, d.useStateFromStoresObject)([x.default], () => ({
+      theme: x.default.theme
     })),
     l = (0, d.useStateFromStores)([U.default], () => U.default.hasLibraryApplication()),
     i = (0, d.useStateFromStores)([G.default], () => G.default.getCurrentPath());

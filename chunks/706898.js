@@ -16,7 +16,7 @@ var i, r, s, a, o = n("735250"),
   f = n("981631"),
   S = n("243013");
 
-function A(e, t, n) {
+function h(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -24,7 +24,7 @@ function A(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let h = {
+let A = {
     side: S.side,
     top: S.top,
     "top-pill": S.topPill
@@ -125,10 +125,10 @@ class p extends(r = l.Component) {
     })
   }
   constructor(...e) {
-    super(...e), A(this, "state", {
+    super(...e), h(this, "state", {
       hover: !1,
       active: !1
-    }), A(this, "handleClick", e => {
+    }), h(this, "handleClick", e => {
       let {
         disabled: t,
         onClick: n,
@@ -136,22 +136,22 @@ class p extends(r = l.Component) {
         onItemSelect: r
       } = this.props;
       !t && (null != n ? n(e) : null != r && r(i))
-    }), A(this, "handleMouseDown", () => {
+    }), h(this, "handleMouseDown", () => {
       let {
         color: e
       } = this.props;
       null != e && this.setState({
         active: !0
       })
-    }), A(this, "handleMouseUp", () => {
+    }), h(this, "handleMouseUp", () => {
       this.setState({
         active: !1
       })
-    }), A(this, "handleMouseOver", () => {
+    }), h(this, "handleMouseOver", () => {
       this.setState({
         hover: !0
       })
-    }), A(this, "handleMouseOut", () => {
+    }), h(this, "handleMouseOut", () => {
       this.setState({
         hover: !1,
         active: !1
@@ -159,7 +159,7 @@ class p extends(r = l.Component) {
     })
   }
 }
-A(p, "defaultProps", {
+h(p, "defaultProps", {
   disabled: !1,
   look: "grey",
   disableItemStyles: !1
@@ -176,7 +176,7 @@ class R extends(s = l.Component) {
     } = this.props;
     return (0, o.jsx)("div", {
       ref: this.tabBarRef,
-      className: d()(e, h[n]),
+      className: d()(e, A[n]),
       style: i,
       role: "tablist",
       "aria-orientation": s,
@@ -186,7 +186,7 @@ class R extends(s = l.Component) {
     })
   }
   constructor(...e) {
-    super(...e), A(this, "tabBarRef", l.createRef()), A(this, "focusManager", (0, _.createFocusManager)({
+    super(...e), h(this, "tabBarRef", l.createRef()), h(this, "focusManager", (0, _.createFocusManager)({
       getFocusableElements: () => {
         let e = this.tabBarRef.current;
         return null != e ? Array.from(e.querySelectorAll('[role="tab"][aria-disabled="false"]')) : []
@@ -195,7 +195,7 @@ class R extends(s = l.Component) {
         var e;
         return null === (e = this.tabBarRef.current) || void 0 === e ? void 0 : e.ownerDocument.activeElement
       }
-    })), A(this, "renderChildren", e => {
+    })), h(this, "renderChildren", e => {
       let {
         selectedItem: t,
         onItemSelect: n,
@@ -208,7 +208,7 @@ class R extends(s = l.Component) {
         itemType: i,
         look: r
       }) : null
-    }), A(this, "getNodeForKeydownEvent", async e => {
+    }), h(this, "getNodeForKeydownEvent", async e => {
       let {
         orientation: t = "horizontal"
       } = this.props, n = "vertical" === t ? f.KeyboardKeys.ARROW_UP : f.KeyboardKeys.ARROW_LEFT, i = "vertical" === t ? f.KeyboardKeys.ARROW_DOWN : f.KeyboardKeys.ARROW_RIGHT;
@@ -223,13 +223,13 @@ class R extends(s = l.Component) {
           return this.focusManager.getLastFocusableElement()
       }
       return null
-    }), A(this, "handleKeyDown", async e => {
+    }), h(this, "handleKeyDown", async e => {
       let t = await this.getNodeForKeydownEvent(e);
       null != t && (e.preventDefault(), t.focus())
     })
   }
 }
-A(R, "Header", function(e) {
+h(R, "Header", function(e) {
   let {
     className: t,
     onClick: n,
@@ -255,7 +255,7 @@ A(R, "Header", function(e) {
       children: i
     })
   })
-}), A(R, "Item", p), A(R, "Separator", function(e) {
+}), h(R, "Item", p), h(R, "Separator", function(e) {
   let {
     style: t
   } = e;
@@ -263,4 +263,4 @@ A(R, "Header", function(e) {
     className: S.separator,
     style: t
   })
-}), A(R, "Panel", m)
+}), h(R, "Panel", m)

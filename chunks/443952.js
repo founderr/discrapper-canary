@@ -12,14 +12,14 @@ var s = n("45792"),
   c = n("40851"),
   f = n("566620"),
   E = n("596223"),
-  h = n("838195"),
-  _ = n("928518"),
+  _ = n("838195"),
+  h = n("928518"),
   C = n("592125"),
   m = n("293273"),
   S = n("885110"),
   I = n("451478"),
-  p = n("630388"),
-  T = n("823379"),
+  T = n("630388"),
+  p = n("823379"),
   g = n("591759"),
   N = n("228488"),
   A = n("996106"),
@@ -30,7 +30,7 @@ var s = n("45792"),
   P = n("852926"),
   M = n("186901"),
   y = n("981631");
-async function x(e, t, n, a) {
+async function D(e, t, n, a) {
   let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
     l = m.default.getApplicationActivity(t);
   if (null == l || null == l.secrets || !(0, R.validateActivityInvite)(a, l.party, l.secrets)) throw new A.default({
@@ -71,7 +71,7 @@ t.default = {
       if (null == s) throw new A.default({
         errorCode: y.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      return x(a, s, n, y.ActivityActionTypes.JOIN)
+      return D(a, s, n, y.ActivityActionTypes.JOIN)
     }
   },
   [y.RPCCommands.CLOSE_ACTIVITY_JOIN_REQUEST]: {
@@ -110,7 +110,7 @@ t.default = {
       if (null == i) throw new A.default({
         errorCode: y.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      return x(l, i, a, n, s)
+      return D(l, i, a, n, s)
     }
   },
   [y.RPCCommands.ACCEPT_ACTIVITY_INVITE]: {
@@ -163,7 +163,7 @@ t.default = {
       } = e, {
         channel: s,
         guild: i
-      } = (0, L.validateOpenInviteDialog)(), r = _.default.getWindow(y.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
+      } = (0, L.validateOpenInviteDialog)(), r = h.default.getWindow(y.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
       (null == r ? void 0 : r.closed) && (r = null);
       let o = null != r ? y.AppContext.POPOUT : y.AppContext.APP;
       (0, N.exitFullScreen)({}, null == r ? void 0 : r.document), (0, l.openModalLazy)(async () => {
@@ -215,13 +215,13 @@ t.default = {
             }, 1e3)
           };
           l.addEventListener("change", () => {
-            (0, T.isNotNullish)(l.files) && e(l.files[0]), i()
+            (0, p.isNotNullish)(l.files) && e(l.files[0]), i()
           }), l.addEventListener("cancel", () => {
             i()
           }), s.document.body.addEventListener("focus", i, !0), s.document.body.appendChild(l), l.click()
         }(async n => {
           let l = await (0, f.uploadImageAttachment)(a, s, n);
-          (0, T.isNotNullish)(l) && (0, T.isNotNullish)(l.url) && !(l instanceof d.default) ? e({
+          (0, p.isNotNullish)(l) && (0, p.isNotNullish)(l.url) && !(l instanceof d.default) ? e({
             image_url: l.url
           }): t(l)
         }, () => t(Error("Upload canceled")))
@@ -250,7 +250,7 @@ t.default = {
       if (null == s) throw new A.default({
         errorCode: y.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      if (!(0, p.hasFlag)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, y.ApplicationFlags.EMBEDDED)) throw new A.default({
+      if (!(0, T.hasFlag)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, y.ApplicationFlags.EMBEDDED)) throw new A.default({
         errorCode: y.RPCErrors.INVALID_COMMAND
       }, "This application cannot access this API");
       let l = (0, v.default)();
@@ -260,7 +260,7 @@ t.default = {
       if (!g.default.isDiscordCdnUrl(a)) throw new A.default({
         errorCode: y.RPCErrors.INVALID_PAYLOAD
       }, "mediaUrl must be a Discord CDN url");
-      (0, h.openActivityShareMomentModal)({
+      (0, _.openActivityShareMomentModal)({
         applicationId: s,
         channelId: l.id,
         mediaUrl: a

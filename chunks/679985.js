@@ -12,8 +12,8 @@ var l = a("536402"),
   f = a("914010"),
   m = a("626135"),
   h = a("709054"),
-  g = a("276438"),
-  E = a("642101"),
+  E = a("276438"),
+  g = a("642101"),
   _ = a("971930"),
   I = a("330249"),
   x = a("313531"),
@@ -39,13 +39,13 @@ class N extends s.default {
     if (null == s) return;
     let d = c.default.getChannelId();
     if (!(0, C.isGuildHomeChannel)(d)) return;
-    let u = E.default.getItemForMessageId(s, l);
+    let u = g.default.getItemForMessageId(s, l);
     if (null == u) return;
     let o = (0, I.default)(u);
-    (0, g.trackFeedItemInteracted)({
+    (0, E.trackFeedItemInteracted)({
       feed_item_type: (0, x.getFeedItemTypeFromId)(u.id),
       feed_item_id: u.id,
-      load_id: E.default.getLoadId(s),
+      load_id: g.default.getLoadId(s),
       action_type: "MESSAGE_REACTION_ADD" === t ? S.FeedItemInteractionType.REACTION_ADDED : S.FeedItemInteractionType.REACTION_REMOVED,
       guild_id: s,
       channel_id: o.channel_id,
@@ -62,11 +62,11 @@ class N extends s.default {
     if (n !== d.SidebarType.VIEW_THREAD || !(0, C.isGuildHomeChannel)(a)) return;
     let s = f.default.getGuildId();
     if (null == s) return;
-    let r = E.default.getItemForMessageId(s, h.default.castChannelIdAsMessageId(t));
-    if (null != r) r.type !== l.GuildFeedItemTypes.FORUM_POST && (0, g.trackFeedItemInteracted)({
+    let r = g.default.getItemForMessageId(s, h.default.castChannelIdAsMessageId(t));
+    if (null != r) r.type !== l.GuildFeedItemTypes.FORUM_POST && (0, E.trackFeedItemInteracted)({
       feed_item_type: (0, x.getFeedItemTypeFromId)(r.id),
       feed_item_id: r.id,
-      load_id: E.default.getLoadId(s),
+      load_id: g.default.getLoadId(s),
       action_type: S.FeedItemInteractionType.THREAD_EMBED_CLICKED,
       guild_id: s,
       channel_id: (0, _.getChannelIdForItem)(r),
@@ -87,17 +87,17 @@ class N extends s.default {
     let r = o.default.getChannel(d.channelId),
       c = (0, _.getSidebarMessageId)(d, r);
     if (null == c) return;
-    let m = E.default.getItemForMessageId(s, c);
+    let m = g.default.getItemForMessageId(s, c);
     if (null != m) {
       if (n.type === v.MessageTypes.DEFAULT) t = S.FeedItemInteractionType.MESSAGED_IN_SIDEBAR, a = c;
       else if (n.type === v.MessageTypes.REPLY) {
         var h, I;
         a = null === (h = n.message_reference) || void 0 === h ? void 0 : h.message_id, t = (null === (I = n.message_reference) || void 0 === I ? void 0 : I.message_id) === c ? S.FeedItemInteractionType.REPLIED_TO_MESSAGE : S.FeedItemInteractionType.REPLIED_IN_SIDEBAR
       }
-      null != t && (0, g.trackFeedItemInteracted)({
+      null != t && (0, E.trackFeedItemInteracted)({
         feed_item_type: (0, x.getFeedItemTypeFromId)(m.id),
         feed_item_id: m.id,
-        load_id: E.default.getLoadId(s),
+        load_id: g.default.getLoadId(s),
         action_type: t,
         guild_id: s,
         channel_id: n.channel_id,
@@ -115,7 +115,7 @@ class N extends s.default {
     null != a && m.default.track(v.AnalyticEvents.HOME_BACKGROUNDED, {
       guild_id: a,
       home_session_id: i.default.getHomeSessionId(a),
-      load_id: E.default.getLoadId(a)
+      load_id: g.default.getLoadId(a)
     })
   }
   constructor(...e) {

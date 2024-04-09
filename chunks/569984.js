@@ -11,8 +11,8 @@ let u = !1,
   T = new Set,
   f = new Set,
   S = new Map,
-  A = new Map,
-  h = new Map;
+  h = new Map,
+  A = new Map;
 
 function m(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
@@ -47,7 +47,7 @@ function N(e, t) {
 }
 
 function O(e) {
-  null != h.get(e) && (h = new Map(h)).delete(e)
+  null != A.get(e) && (A = new Map(A)).delete(e)
 }
 
 function p(e) {
@@ -88,10 +88,10 @@ class C extends(i = o.default.Store) {
     return S.get(e)
   }
   getRewards(e) {
-    return A.get(e)
+    return h.get(e)
   }
   getStreamHeartbeatFailure(e) {
-    return h.get(e)
+    return A.get(e)
   }
 }
 a = "QuestsStore", (s = "displayName") in(r = C) ? Object.defineProperty(r, s, {
@@ -101,7 +101,7 @@ a = "QuestsStore", (s = "displayName") in(r = C) ? Object.defineProperty(r, s, {
   writable: !0
 }) : r[s] = a, t.default = new C(l.default, {
   LOGOUT: function() {
-    u = !1, d = new Map, _ = 0, c = new Set, h = new Map
+    u = !1, d = new Map, _ = 0, c = new Set, A = new Map
   },
   QUESTS_FETCH_CURRENT_QUESTS_BEGIN: function() {
     _ = Date.now(), u = !0
@@ -132,7 +132,7 @@ a = "QuestsStore", (s = "displayName") in(r = C) ? Object.defineProperty(r, s, {
       questId: t,
       streamKey: n
     } = e;
-    null == h.get(n) && (h = new Map(h)).set(n, {
+    null == A.get(n) && (A = new Map(A)).set(n, {
       questId: t,
       streamKey: n,
       firstFailedAt: Date.now()
@@ -208,8 +208,8 @@ a = "QuestsStore", (s = "displayName") in(r = C) ? Object.defineProperty(r, s, {
       entitlements: n
     } = e, i = new Set(I);
     i.delete(t), I = i, ! function(e, t) {
-      let n = new Map(A);
-      n.set(e, t.items), A = n;
+      let n = new Map(h);
+      n.set(e, t.items), h = n;
       let i = d.get(e),
         r = null == i ? void 0 : i.userStatus;
       null != r && null == r.claimedAt && m(e, {

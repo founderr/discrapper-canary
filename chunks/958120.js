@@ -25,12 +25,12 @@ function f(e) {
     displayProfile: n,
     onClose: f,
     guild: S,
-    channelId: A
+    channelId: h
   } = e, {
-    moreUserDetailsEnabled: h
+    moreUserDetailsEnabled: A
   } = (0, o.useSimplifiedProfileExperiment)({
     location: "BiteSizeProfileBody"
-  }), m = a.default.getName(null == S ? void 0 : S.id, A, t), N = (0, l.default)(t.id, null == S ? void 0 : S.id), O = (0, r.useStateFromStores)([s.default], () => s.default.hidePersonalInformation);
+  }), m = a.default.getName(null == S ? void 0 : S.id, h, t), N = (0, l.default)(t.id, null == S ? void 0 : S.id), O = (0, r.useStateFromStores)([s.default], () => s.default.hidePersonalInformation);
   return t.isSystemUser() ? null : t.isNonUserBot() ? (0, i.jsxs)("div", {
     className: T.paddingBottom,
     children: [(0, i.jsx)(I.default, {
@@ -50,9 +50,9 @@ function f(e) {
         user: t,
         nickname: m
       })
-    }), h && (0, i.jsx)(c.default, {
+    }), A && (0, i.jsx)(c.default, {
       user: t
-    }), h && (0, i.jsx)(d.default, {
+    }), A && (0, i.jsx)(d.default, {
       user: t,
       bio: null == n ? void 0 : n.bio,
       hidePersonalInformation: O,

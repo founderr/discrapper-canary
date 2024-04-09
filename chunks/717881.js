@@ -19,8 +19,8 @@ var i = n("735250"),
   T = n("142550"),
   f = n("954017"),
   S = n("314091"),
-  A = n("159244"),
-  h = n("574176"),
+  h = n("159244"),
+  A = n("574176"),
   m = n("952164"),
   N = n("199902"),
   O = n("592125"),
@@ -77,7 +77,7 @@ t.default = function(e) {
     return O.default.getChannel(null === (e = C.default.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId)
   }), {
     enableHangStatus: b
-  } = h.HangStatusExperiment.useExperiment({
+  } = A.HangStatusExperiment.useExperiment({
     guildId: null == U ? void 0 : U.guild_id,
     location: "UserActivityContainer"
   }, {
@@ -88,7 +88,7 @@ t.default = function(e) {
   }), V = (0, o.useStateFromStores)([p.default], () => null != G ? p.default.getGuild(G.guildId) : null), F = (0, o.useStateFromStores)([c.default], () => {
     if (null != t) return null != t.application_id ? c.default.getApplication(t.application_id) : c.default.getApplicationByName(t.name);
     return null
-  }), x = (0, E.default)(), H = (0, A.default)(n), Y = x && null != t && H;
+  }), x = (0, E.default)(), H = (0, h.default)(n), Y = x && null != t && H;
   return (r.useEffect(() => {
     (null == t ? void 0 : t.type) === v.ActivityTypes.HANG_STATUS && w && L.default.track(v.AnalyticEvents.VIEW_HANG_STATUS, {
       source: "UserProfilePopout",

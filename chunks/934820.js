@@ -21,9 +21,9 @@ function o(e, t, a) {
   } = a, m = e.target;
   for (;
     (0, l.isElement)(m);) {
-    var h, g;
+    var h, E;
     if (m === t) break;
-    let e = null !== (g = null === (h = m.getAttribute("data-role")) || void 0 === h ? void 0 : h.toUpperCase()) && void 0 !== g ? g : m.tagName;
+    let e = null !== (E = null === (h = m.getAttribute("data-role")) || void 0 === h ? void 0 : h.toUpperCase()) && void 0 !== E ? E : m.tagName;
     if ("A" === e) return (0, s.trackFeedItemInteracted)({
       feed_item_type: (0, r.getFeedItemTypeFromId)(d),
       feed_item_id: d,

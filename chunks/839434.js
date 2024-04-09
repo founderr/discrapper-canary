@@ -39,8 +39,8 @@ var i, a = n("735250"),
   b = n("131951"),
   j = n("944486"),
   P = n("606304"),
-  w = n("449224"),
-  k = n("938475"),
+  k = n("449224"),
+  w = n("938475"),
   V = n("237997"),
   U = n("285952"),
   B = n("366695"),
@@ -103,8 +103,8 @@ function ed(e) {
       mute: L,
       selfMute: D,
       suppress: j,
-      deaf: w,
-      selfDeaf: k
+      deaf: k,
+      selfDeaf: w
     } = E,
     U = S && v,
     B = D && (!x || !U);
@@ -131,8 +131,8 @@ function ed(e) {
       mute: L || B || I,
       localMute: I,
       serverMute: L || j,
-      deaf: w || k,
-      serverDeaf: w,
+      deaf: k || w,
+      serverDeaf: k,
       userNameClassName: o()(eo.username, {
         [eo.locked]: n,
         [eo.hidden]: n && (d === ea.OverlayDisplayNames.NEVER || !O && d === ea.OverlayDisplayNames.ONLY_WHILE_SPEAKING)
@@ -422,9 +422,9 @@ function ec(e) {
   let n = (0, r.useStateFromStores)([j.default, L.default], () => L.default.getChannel(j.default.getVoiceChannelId())),
     i = (0, S.default)(n),
     s = function(e) {
-      let [t] = (0, r.useStateFromStores)([k.default, _.default], () => null == e ? [
+      let [t] = (0, r.useStateFromStores)([w.default, _.default], () => null == e ? [
         [], -1
-      ] : e.isGuildStageVoice() ? [_.default.getMutableParticipants(e.id, C.StageChannelParticipantNamedIndex.SPEAKER), _.default.getParticipantsVersion(e.id)] : [k.default.getVoiceStatesForChannel(e), k.default.getVoiceStateVersion(e.getGuildId())], [e], q.isVersionEqual), n = (0, r.useStateFromStores)([M.default], () => M.default.getId()), {
+      ] : e.isGuildStageVoice() ? [_.default.getMutableParticipants(e.id, C.StageChannelParticipantNamedIndex.SPEAKER), _.default.getParticipantsVersion(e.id)] : [w.default.getVoiceStatesForChannel(e), w.default.getVoiceStateVersion(e.getGuildId())], [e], q.isVersionEqual), n = (0, r.useStateFromStores)([M.default], () => M.default.getId()), {
         showKeybindIndicators: i
       } = ee.default.useExperiment({
         location: "voice_widget"
@@ -432,14 +432,14 @@ function ec(e) {
       return l.useMemo(() => i ? [...t].sort((e, t) => e.user.id === n ? -1 : t.user.id === n ? 1 : 0) : t, [t, n, i])
     }(n),
     o = (0, r.useStateFromStores)([R.default], () => R.default.getStreamerActiveStreamMetadata()),
-    d = (0, r.useStateFromStores)([v.default, w.default, D.default], () => {
+    d = (0, r.useStateFromStores)([v.default, k.default, D.default], () => {
       var e;
-      let t = (0, N.default)(v.default, w.default);
+      let t = (0, N.default)(v.default, k.default);
       return null != t ? null === (e = D.default.getGameByGameData(t)) || void 0 === e ? void 0 : e.id : null
     }),
     u = (0, E.useGetOrFetchApplication)(d),
-    c = (0, r.useStateFromStoresObject)([v.default, w.default, R.default, V.default], () => {
-      let e = (0, N.default)(v.default, w.default),
+    c = (0, r.useStateFromStoresObject)([v.default, k.default, R.default, V.default], () => {
+      let e = (0, N.default)(v.default, k.default),
         t = R.default.getCurrentUserActiveStream();
       return {
         displayUserMode: V.default.getDisplayUserMode(),

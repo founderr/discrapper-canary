@@ -11,14 +11,14 @@ var a = n("735250"),
   c = n("873546"),
   f = n("442837"),
   E = n("481060"),
-  h = n("570140"),
-  _ = n("212093"),
+  _ = n("570140"),
+  h = n("212093"),
   C = n("827837"),
   m = n("785570"),
   S = n("252618"),
   I = n("440190"),
-  p = n("5955"),
-  T = n("703656"),
+  T = n("5955"),
+  p = n("703656"),
   g = n("108427"),
   N = n("706454"),
   A = n("210887"),
@@ -29,8 +29,8 @@ var a = n("735250"),
   P = n("502568"),
   M = n("900849"),
   y = n("2485"),
-  x = n("879484"),
-  D = n("117496"),
+  D = n("879484"),
+  x = n("117496"),
   b = n("296386"),
   U = n("150192"),
   j = n("769727"),
@@ -66,7 +66,7 @@ class q extends s.PureComponent {
       currentHomepageCategoryId: r,
       mostRecentQuery: o
     } = this.props;
-    if ((0, C.fetchActivityStatistics)(), (0, b.maybeFetchGuildDiscoveryCategories)(), null == O.default.getSearchIndex() && (0, _.createAlgoliaIndex)(), h.default.wait(() => {
+    if ((0, C.fetchActivityStatistics)(), (0, b.maybeFetchGuildDiscoveryCategories)(), null == O.default.getSearchIndex() && (0, h.createAlgoliaIndex)(), _.default.wait(() => {
         (0, m.markView)(H.ViewHistoryKeys.SERVER_DISCOVERY_BADGE)
       }), !a && 0 === o.length && M.trackDiscoveryViewed({
         loadId: this.loadId,
@@ -81,7 +81,7 @@ class q extends s.PureComponent {
         preferredLocale: a,
         categoryId: s
       } = u.parse(i);
-      (0, _.doAlgoliaSearch)(e, {
+      (0, h.doAlgoliaSearch)(e, {
         categoryId: parseInt(s, 10),
         preferredLocale: a,
         offset: parseInt(t, 10),
@@ -90,8 +90,8 @@ class q extends s.PureComponent {
         },
         length: parseInt(n, 10)
       })
-    } else null != r && r !== B.DISCOVERY_ALL_CATEGORIES_ID && h.default.wait(() => (0, _.selectCategory)(r));
-    let d = null !== (t = null === (e = (0, T.getHistory)().location.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0;
+    } else null != r && r !== B.DISCOVERY_ALL_CATEGORIES_ID && _.default.wait(() => (0, h.selectCategory)(r));
+    let d = null !== (t = null === (e = (0, p.getHistory)().location.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0;
     d > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({
       to: d
     })), (0, g.trackAppUIViewed)("guild_discovery")
@@ -118,7 +118,7 @@ class q extends s.PureComponent {
         to: 0
       })
     }
-    e.currentCategoryId !== i && M.trackDiscoveryExited(this.loadId, Array.from(this._guildIdsSeen)), e.mostRecentQuery.length > 0 && s.length < 1 && l !== i && (0, _.selectCategory)(l)
+    e.currentCategoryId !== i && M.trackDiscoveryExited(this.loadId, Array.from(this._guildIdsSeen)), e.mostRecentQuery.length > 0 && s.length < 1 && l !== i && (0, h.selectCategory)(l)
   }
   componentWillUnmount() {
     let {
@@ -150,7 +150,7 @@ class q extends s.PureComponent {
       analyticsContext: M.AnalyticsContexts.RECOMMENDED,
       onViewGuild: this.handleViewGuild,
       onGuildCardSeen: this.handleGuildCardSeen,
-      fetchGuilds: _.fetchGamesYouPlayGuilds,
+      fetchGuilds: h.fetchGamesYouPlayGuilds,
       theme: n
     }) : null
   }
@@ -167,12 +167,12 @@ class q extends s.PureComponent {
       categories: o,
       currentCategoryName: u
     } = this.props;
-    x.DiscoveryTagsExperiment.trackExposure({
+    D.DiscoveryTagsExperiment.trackExposure({
       location: "54961b_1"
     });
     let {
       shouldDisplayRecommendedSearchTags: d
-    } = x.DiscoveryTagsExperiment.getCurrentConfig({
+    } = D.DiscoveryTagsExperiment.getCurrentConfig({
       location: "54961b_2"
     }, {
       autoTrackExposure: !1
@@ -242,7 +242,7 @@ class q extends s.PureComponent {
       analyticsContext: M.AnalyticsContexts.POPULAR,
       onViewGuild: this.handleViewGuild,
       onGuildCardSeen: this.handleGuildCardSeen,
-      fetchGuilds: () => (0, _.fetchFeaturedOrPopularGuilds)(0, 30),
+      fetchGuilds: () => (0, h.fetchFeaturedOrPopularGuilds)(0, 30),
       loadingGuildId: n,
       theme: t,
       onTagClick: (e, t) => this.handleTagSearch(e, t, M.AnalyticsContexts.POPULAR)
@@ -264,7 +264,7 @@ class q extends s.PureComponent {
       analyticsContext: M.AnalyticsContexts.POPULAR,
       onViewGuild: this.handleViewGuild,
       onGuildCardSeen: this.handleGuildCardSeen,
-      fetchGuilds: () => (0, _.fetchPopularGuildsForCategory)(n),
+      fetchGuilds: () => (0, h.fetchPopularGuildsForCategory)(n),
       currentCategoryId: n,
       theme: t,
       onTagClick: (e, t) => this.handleTagSearch(e, t, M.AnalyticsContexts.POPULAR)
@@ -278,27 +278,27 @@ class q extends s.PureComponent {
       currentCategoryId: r,
       guilds: u
     } = this.props, d = l.length > 0;
-    x.DiscoveryTagsExperiment.trackExposure({
+    D.DiscoveryTagsExperiment.trackExposure({
       location: "54961b_3"
     });
     let {
       shouldDisplayRecommendedSearchTags: f
-    } = x.DiscoveryTagsExperiment.getCurrentConfig({
+    } = D.DiscoveryTagsExperiment.getCurrentConfig({
       location: "54961b_4"
     }, {
       autoTrackExposure: !1
-    }), h = r === B.DISCOVERY_ALL_CATEGORIES_ID ? null === (e = u[H.GuildDiscoverySections.FEATURED]) || void 0 === e ? void 0 : e.guilds : null === (t = u[r]) || void 0 === t ? void 0 : t.guilds;
-    if (r === B.DISCORD_HUB_ID) return (0, a.jsx)(p.default, {
+    }), _ = r === B.DISCOVERY_ALL_CATEGORIES_ID ? null === (e = u[H.GuildDiscoverySections.FEATURED]) || void 0 === e ? void 0 : e.guilds : null === (t = u[r]) || void 0 === t ? void 0 : t.guilds;
+    if (r === B.DISCORD_HUB_ID) return (0, a.jsx)(T.default, {
       loadId: this.loadId
     });
-    let _ = r === B.DISCOVERY_ALL_CATEGORIES_ID ? V.default.Messages.GUILD_DISCOVERY_HOME_TITLE : V.default.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({
+    let h = r === B.DISCOVERY_ALL_CATEGORIES_ID ? V.default.Messages.GUILD_DISCOVERY_HOME_TITLE : V.default.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({
       categoryName: n
     });
     return (0, a.jsxs)("div", {
       className: Y.pageWrapper,
       children: [(0, a.jsx)(S.AppPageTitle, {
         subsection: d ? l : void 0,
-        location: _
+        location: h
       }), (0, a.jsx)("div", {
         className: i()(Y.dragRegion, Y.pageHeaderDrag, {
           [Y.searchPageDrag]: d
@@ -341,7 +341,7 @@ class q extends s.PureComponent {
                     className: Y.headerTagContainer,
                     discoveryTagStyle: F.DiscoveryTagStyle.LIGHT,
                     onTagClick: e => this.handleTagSearch(e, void 0, M.AnalyticsContexts.HEADER),
-                    tags: o().chain(h).flatMap(e => e.keywords).compact().uniq().sampleSize(10).value()
+                    tags: o().chain(_).flatMap(e => e.keywords).compact().uniq().sampleSize(10).value()
                   })]
                 })
               })]
@@ -372,7 +372,7 @@ class q extends s.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), z(this, "_scroller", s.createRef()), z(this, "_guildIdsSeen", new Set), z(this, "loadId", (0, D.makeAnalyticsID)()), z(this, "state", {
+    super(...e), z(this, "_scroller", s.createRef()), z(this, "_guildIdsSeen", new Set), z(this, "loadId", (0, x.makeAnalyticsID)()), z(this, "state", {
       animatedValue: new d.default.Value(0),
       loadingGuildId: null
     }), z(this, "scrollToTop", () => {
@@ -396,8 +396,8 @@ class q extends s.PureComponent {
       let o = null !== (l = null === (s = this._scroller.current) || void 0 === s ? void 0 : s.getScrollerState().scrollTop) && void 0 !== l ? l : 0,
         {
           location: u
-        } = (0, T.getHistory)();
-      (0, T.replaceWith)({
+        } = (0, p.getHistory)();
+      (0, p.replaceWith)({
         ...u,
         state: o
       }), this.setState({
@@ -428,7 +428,7 @@ class q extends s.PureComponent {
       let l = {
         approximate_member_count: M.MINIMUM_MEMBER_COUNT
       };
-      (0, _.getSearchResultsCount)(e, l), (0, _.doAlgoliaSearch)(e, {
+      (0, h.getSearchResultsCount)(e, l), (0, h.doAlgoliaSearch)(e, {
         filters: l,
         categoryId: a,
         preferredLocale: s.code,

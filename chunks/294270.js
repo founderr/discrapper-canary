@@ -18,8 +18,8 @@ let E = 15 * l.default.Millis.SECOND,
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return "".concat(e, ":").concat(t, ":").concat(n)
   },
-  A = new s.Timeout,
-  h = [],
+  h = new s.Timeout,
+  A = [],
   m = {},
   N = (0, u.createSound)("highfive_whistle", "highfive_whistle", .6),
   O = (0, u.createSound)("highfive_clap", "highfive_clap", .6);
@@ -48,7 +48,7 @@ function p(e) {
         m[t] = i, i.delay()
       }
     }(t.name, i, n);
-    i === a && (h = [...h, t.name].slice(-1 * f), r().isEqual(h, T) ? (N.play(), A.stop(), h = [], (0, d.setHighFiveEnabled)(!l)) : A.start(E, () => h = []))
+    i === a && (A = [...A, t.name].slice(-1 * f), r().isEqual(A, T) ? (N.play(), h.stop(), A = [], (0, d.setHighFiveEnabled)(!l)) : h.start(E, () => A = []))
   }
 }
 

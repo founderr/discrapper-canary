@@ -1,47 +1,47 @@
 "use strict";
-i.r(t);
-var a = i("735250");
-i("470079");
-var l = i("960259"),
-  n = i("853706"),
-  s = i("325767");
-t.default = (0, l.replaceIcon)(function(e) {
+n.r(t);
+var i = n("735250");
+n("470079");
+var r = n("960259"),
+  a = n("853706"),
+  s = n("325767");
+t.default = (0, r.replaceIcon)(function(e) {
   let {
     width: t = 16,
-    height: i = 16,
-    color: l = "currentColor",
-    foreground: n,
-    ...r
+    height: n = 16,
+    color: r = "currentColor",
+    foreground: a,
+    ...l
   } = e;
-  return (0, a.jsxs)("svg", {
-    ...(0, s.default)(r),
+  return (0, i.jsxs)("svg", {
+    ...(0, s.default)(l),
     width: t,
-    height: i,
+    height: n,
     viewBox: "0 0 16 16",
     xmlns: "http://www.w3.org/2000/svg",
-    children: [(0, a.jsx)("rect", {
-      className: n,
+    children: [(0, i.jsx)("rect", {
+      className: a,
       y: "3",
       width: "16",
       height: "2",
       rx: "1",
-      fill: l
-    }), (0, a.jsx)("rect", {
-      className: n,
+      fill: r
+    }), (0, i.jsx)("rect", {
+      className: a,
       y: "11",
       width: "8",
       height: "2",
       rx: "1",
-      fill: l
-    }), (0, a.jsx)("rect", {
-      className: n,
+      fill: r
+    }), (0, i.jsx)("rect", {
+      className: a,
       y: "7",
       width: "16",
       height: "2",
       rx: "1",
-      fill: l
+      fill: r
     })]
   })
-}, n.ChannelListIcon, void 0, {
+}, a.ChannelListIcon, void 0, {
   size: 16
 })

@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return p
   },
   useFullScreenLayerStore: function() {
-    return A
+    return h
   }
 }), n("47120");
 var i, r, s = n("735250"),
@@ -27,7 +27,7 @@ var i, r, s = n("735250"),
   f = n("592453");
 let S = (0, I.cssValueToNumber)(_.default.FULL_SCREEN_LAYER_ANIMATION_DURATION);
 (r = i || (i = {}))[r.ENTERING = 1] = "ENTERING", r[r.ENTERED = 2] = "ENTERED", r[r.EXITING = 3] = "EXITING", r[r.EXITED = 4] = "EXITED";
-let A = (0, d.default)(e => ({
+let h = (0, d.default)(e => ({
   fullScreenLayers: [],
   addLayer: t => e(e => {
     let {
@@ -39,7 +39,7 @@ let A = (0, d.default)(e => ({
   })
 }));
 
-function h(e) {
+function A(e) {
   let {
     item: t
   } = e, n = a.useRef(null);
@@ -88,13 +88,13 @@ let m = {
 function O() {
   let {
     reducedMotion: e
-  } = a.useContext(c.AccessibilityPreferencesContext), t = e.enabled ? N : m, n = A(e => e.fullScreenLayers);
+  } = a.useContext(c.AccessibilityPreferencesContext), t = e.enabled ? N : m, n = h(e => e.fullScreenLayers);
   return (0, s.jsx)(u.TransitionGroup, {
     children: n.map(e => (0, s.jsx)(u.CSSTransition, {
       classNames: t,
       timeout: S,
       onEntered: () => {
-        A.setState({
+        h.setState({
           fullScreenLayers: n.map(t => t.key === e.key ? {
             ...t,
             transitionState: 2
@@ -102,7 +102,7 @@ function O() {
         })
       },
       unmountOnExit: !0,
-      children: (0, s.jsx)(h, {
+      children: (0, s.jsx)(A, {
         item: e
       })
     }, e.key))
@@ -116,7 +116,7 @@ function p(e) {
       Layer: i
     } = t,
     r = null != n ? n : l()();
-  return A.setState(t => ({
+  return h.setState(t => ({
     fullScreenLayers: [...t.fullScreenLayers, {
       key: r,
       transitionState: 1,
@@ -127,7 +127,7 @@ function p(e) {
 }
 
 function R(e) {
-  A.setState(t => ({
+  h.setState(t => ({
     fullScreenLayers: t.fullScreenLayers.filter(t => t.key !== e)
   }))
 }

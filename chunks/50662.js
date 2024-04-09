@@ -31,10 +31,10 @@ function h(e) {
   let {
     guildJoinRequest: l,
     guild: h,
-    guildJoinRequestUser: p
+    guildJoinRequestUser: C
   } = e, {
     createdAt: x,
-    actionedAt: C,
+    actionedAt: p,
     guildId: g,
     userId: j
   } = l, {
@@ -57,8 +57,8 @@ function h(e) {
     className: M.iconRejected,
     backgroundColor: r.default.unsafe_rawColors.WHITE_500.css
   }));
-  let B = null != L && null != C ? A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_ACTIONED_BY_HOOK.format({
-    date: i()(_.default.extractTimestamp(C)).format("ll"),
+  let B = null != L && null != p ? A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_ACTIONED_BY_HOOK.format({
+    date: i()(_.default.extractTimestamp(p)).format("ll"),
     usernameHook: function() {
       var e;
       return (0, a.jsx)(u.Clickable, {
@@ -122,7 +122,7 @@ function h(e) {
               return t => (0, a.jsx)(e, {
                 ...t,
                 guild: h,
-                user: p
+                user: C
               })
             })
           },

@@ -12,7 +12,7 @@ let u = l.ContentInventoryFeedKey.GLOBAL_FEED,
   c = 0;
 
 function E() {
-  A()
+  h()
 }
 
 function I() {
@@ -20,7 +20,7 @@ function I() {
 }
 
 function T(e) {
-  e.idle ? S() : A()
+  e.idle ? S() : h()
 }
 
 function f() {
@@ -31,13 +31,13 @@ function S() {
   clearTimeout(d), d = null
 }
 
-function A() {
+function h() {
   if (S(), !f()) return;
   let e = o.default.getFeed(u),
     t = null == e ? void 0 : e.expired_at;
-  d = setTimeout(() => h(), null == t ? 0 : new Date(t).getTime() - Date.now())
+  d = setTimeout(() => A(), null == t ? 0 : new Date(t).getTime() - Date.now())
 }
-async function h() {
+async function A() {
   if (f()) try {
     _ = !0;
     let e = await (0, a.getMyContentInventory)();
@@ -45,9 +45,9 @@ async function h() {
       type: "CONTENT_INVENTORY_SET_FEED",
       feedId: u,
       feed: e
-    }), c = 0, _ = !1, A()
+    }), c = 0, _ = !1, h()
   } catch (e) {
-    c < 3 ? (d = setTimeout(() => h(), 1e3 * Math.pow(5, c)), c += 1) : i.default.dispatch({
+    c < 3 ? (d = setTimeout(() => A(), 1e3 * Math.pow(5, c)), c += 1) : i.default.dispatch({
       type: "CONTENT_INVENTORY_CLEAR_FEED",
       feedId: u
     }), _ = !1
@@ -55,7 +55,7 @@ async function h() {
 }
 
 function m() {
-  A()
+  h()
 }
 class N extends r.default {
   constructor(...e) {

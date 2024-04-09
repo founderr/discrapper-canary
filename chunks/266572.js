@@ -12,8 +12,8 @@ var s = n("544891"),
   c = n("580130"),
   f = n("695103"),
   E = n("70956"),
-  h = n("998502"),
-  _ = n("996106"),
+  _ = n("998502"),
+  h = n("996106"),
   C = n("186901"),
   m = n("981631");
 let S = 10 * E.default.Millis.SECOND;
@@ -25,31 +25,31 @@ t.default = {
         socket: t
       } = e, s = t.application.id;
       try {
-        if (null == s) throw new _.default({
+        if (null == s) throw new h.default({
           errorCode: m.RPCErrors.INVALID_COMMAND
         }, "No application.");
         let e = u.default.getApplication(s);
-        if (null == e) throw new _.default({
+        if (null == e) throw new h.default({
           errorCode: m.RPCErrors.INVALID_ENTITLEMENT
         }, "SKU does not exist.");
         let t = e.primarySkuId;
-        if (null == t) throw new _.default({
+        if (null == t) throw new h.default({
           errorCode: m.RPCErrors.INVALID_ENTITLEMENT
         }, "SKU does not exist.");
         return Promise.race([(function(e, t) {
           let n = c.default.isEntitledToSku(d.default.getCurrentUser(), e, t);
           return null != n ? Promise.resolve(n) : (0, r.fetchUserEntitlementsForApplication)(t).then(() => !0 === c.default.isEntitledToSku(d.default.getCurrentUser(), e, t))
         })(t, e.id).then(e => {
-          if (!e) throw new _.default({
+          if (!e) throw new h.default({
             errorCode: m.RPCErrors.INVALID_ENTITLEMENT
           }, "User does not have entitlement.")
         }), (0, l.timeoutPromise)(S).then(() => {
-          throw new _.default({
+          throw new h.default({
             errorCode: m.RPCErrors.INVALID_ENTITLEMENT
           }, "Timed out fetching entitlement.")
         })])
       } catch (e) {
-        throw e.code === m.RPCErrors.INVALID_ENTITLEMENT && (h.default.focus(null, !0), (0, i.openModalLazy)(async () => {
+        throw e.code === m.RPCErrors.INVALID_ENTITLEMENT && (_.default.focus(null, !0), (0, i.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([n.e("99387"), n.e("48748")]).then(n.bind(n, "52004"));
@@ -67,7 +67,7 @@ t.default = {
       let {
         socket: t
       } = e, l = t.application.id;
-      if (null == l) throw new _.default({
+      if (null == l) throw new h.default({
         errorCode: m.RPCErrors.INVALID_COMMAND
       }, "No application.");
       return s.HTTP.post({
@@ -83,7 +83,7 @@ t.default = {
         } = e;
         return t
       }).catch(e => {
-        throw h.default.focus(null, !0), (0, i.openModalLazy)(async () => {
+        throw _.default.focus(null, !0), (0, i.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([n.e("99387"), n.e("48748")]).then(n.bind(n, "52004"));

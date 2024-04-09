@@ -10,8 +10,8 @@ var s, a, o, l, u = n("442837"),
   T = n("338336"),
   f = n("314897"),
   S = n("938475"),
-  A = n("981631"),
-  h = n("65154");
+  h = n("981631"),
+  A = n("65154");
 let m = null,
   N = null,
   O = null,
@@ -43,7 +43,7 @@ function g(e, t) {
       userId: n,
       streamId: i,
       rtcServerId: r,
-      context: h.MediaEngineContextTypes.DEFAULT
+      context: A.MediaEngineContextTypes.DEFAULT
     }))
   }), s.on(_.RTCConnectionEvent.Ping, (e, t) => {
     d.default.wait(() => d.default.dispatch({
@@ -109,13 +109,13 @@ class y extends(s = u.default.Store) {
     return i
   }
   getState() {
-    return null != i ? i.state : A.RTCConnectionStates.DISCONNECTED
+    return null != i ? i.state : h.RTCConnectionStates.DISCONNECTED
   }
   isConnected() {
-    return this.getState() === A.RTCConnectionStates.RTC_CONNECTED
+    return this.getState() === h.RTCConnectionStates.RTC_CONNECTED
   }
   isDisconnected() {
-    return this.getState() === A.RTCConnectionStates.DISCONNECTED
+    return this.getState() === h.RTCConnectionStates.DISCONNECTED
   }
   getRemoteDisconnectVoiceChannelId() {
     return m
@@ -136,7 +136,7 @@ class y extends(s = u.default.Store) {
     return null != i ? i.hostname : ""
   }
   getQuality() {
-    return null != i ? i.quality : A.RTCConnectionQuality.UNKNOWN
+    return null != i ? i.quality : h.RTCConnectionQuality.UNKNOWN
   }
   getPings() {
     return null != i ? i.getPings() : []
@@ -187,7 +187,7 @@ let P = new y(d.default, __OVERLAY__ ? {} : {
     r = null, m = null, N = null, L()
   },
   RTC_CONNECTION_STATE: function(e) {
-    return e.state === A.RTCConnectionStates.RTC_CONNECTED && (C = !0), !0
+    return e.state === h.RTCConnectionStates.RTC_CONNECTED && (C = !0), !0
   },
   RTC_CONNECTION_PING: M,
   RTC_CONNECTION_LOSS_RATE: M,
@@ -243,11 +243,11 @@ let P = new y(d.default, __OVERLAY__ ? {} : {
   },
   APP_STATE_UPDATE: function(e) {
     if (null != i) {
-      let t = e.state === A.AppStates.BACKGROUND,
+      let t = e.state === h.AppStates.BACKGROUND,
         n = E.default.isEnabled();
       i.setAppBackgrounded(t, n)
     }
-    return e.state === A.AppStates.ACTIVE && null != i && i.resetBackoff("App state is active"), !1
+    return e.state === h.AppStates.ACTIVE && null != i && i.resetBackoff("App state is active"), !1
   }
 });
 Promise.resolve().then(n.bind(n, "626135")).then(e => {

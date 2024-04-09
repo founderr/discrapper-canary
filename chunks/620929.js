@@ -11,13 +11,13 @@ var a = n("735250"),
   c = n("481060"),
   f = n("430824"),
   E = n("594174"),
-  h = n("823379"),
-  _ = n("650461"),
+  _ = n("823379"),
+  h = n("650461"),
   C = n("924801"),
   m = n("308083"),
   S = n("689938"),
   I = n("653196");
-let p = e => {
+let T = e => {
   if (1 === e.length) return e[0];
   if (2 === e.length) return S.default.Messages.CLAN_OVERVIEW_LIST_TWO_ITEMS.format({
     item1: e[0],
@@ -38,7 +38,7 @@ t.default = e => {
     guildId: n,
     signed: l,
     setSigned: r,
-    animatedTextStyle: T,
+    animatedTextStyle: p,
     signRef: g
   } = e, N = (0, d.useStateFromStores)([f.default], () => {
     var e, t;
@@ -48,12 +48,12 @@ t.default = e => {
     playstyle: R,
     interests: O,
     primetime: v
-  } = (0, d.useStateFromStoresObject)([_.default], () => {
+  } = (0, d.useStateFromStoresObject)([h.default], () => {
     var e;
-    return null !== (e = _.default.getStateForGuild(n).progress) && void 0 !== e ? e : {}
-  }), L = s.useMemo(() => (null == A ? void 0 : A.size) > 0 ? p(Array.from(A.values()).map(e => e.name)) : null, [A]), P = s.useMemo(() => (0, m.getPlaystyleTitle)(R), [R]), M = s.useMemo(() => (null == O ? void 0 : O.size) > 0 ? p(Array.from(O)) : null, [O]), y = s.useMemo(() => {
-    let e = (null == v ? void 0 : v.length) > 0 ? v.map(e => (0, C.primetimeToString)(e)).filter(h.isNotNullish) : [];
-    return (null == e ? void 0 : e.length) > 0 ? p(e) : null
+    return null !== (e = h.default.getStateForGuild(n).progress) && void 0 !== e ? e : {}
+  }), L = s.useMemo(() => (null == A ? void 0 : A.size) > 0 ? T(Array.from(A.values()).map(e => e.name)) : null, [A]), P = s.useMemo(() => (0, m.getPlaystyleTitle)(R), [R]), M = s.useMemo(() => (null == O ? void 0 : O.size) > 0 ? T(Array.from(O)) : null, [O]), y = s.useMemo(() => {
+    let e = (null == v ? void 0 : v.length) > 0 ? v.map(e => (0, C.primetimeToString)(e)).filter(_.isNotNullish) : [];
+    return (null == e ? void 0 : e.length) > 0 ? T(e) : null
   }, [v]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
@@ -67,7 +67,7 @@ t.default = e => {
       className: I.overviewSidebarWrapper,
       children: (0, a.jsx)(u.animated.div, {
         className: I.flex,
-        style: T,
+        style: p,
         children: (0, a.jsxs)(c.ScrollerNone, {
           fade: !0,
           className: I.overviewSidebarContent,

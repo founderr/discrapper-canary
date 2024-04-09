@@ -20,9 +20,9 @@ var r = n("803997"),
   T = n("981631"),
   f = n("689938"),
   S = n("181035"),
-  A = n("989171");
+  h = n("989171");
 
-function h(e) {
+function A(e) {
   let {
     guildName: t
   } = e;
@@ -53,14 +53,14 @@ function m(e) {
     lastSection: N,
     children: [(0, i.jsxs)(o.Heading, {
       variant: "eyebrow",
-      className: A.title,
+      className: h.title,
       children: [f.default.Messages.USER_POPOUT_ABOUT_ME, null != t && m && (0, i.jsx)(o.Tooltip, {
         color: o.Tooltip.Colors.CUSTOM,
         tooltipClassName: S.aboutMeGuildIconTooltip,
         "aria-label": f.default.Messages.GUILD_IDENTITY_BIO_TOAST.format({
           guildName: t.name
         }),
-        text: (0, i.jsx)(h, {
+        text: (0, i.jsx)(A, {
           guildName: t.name
         }),
         children: e => (0, i.jsx)(d.default, {

@@ -18,7 +18,7 @@ var i, r, s = n("735250"),
   f = n("689938"),
   S = n("196826");
 
-function A(e) {
+function h(e) {
   e.stopPropagation()
 }(i = r || (r = {}))[i.SMALL = 0] = "SMALL", i[i.MEDIUM = 1] = "MEDIUM", i[i.CLIP = 2] = "CLIP";
 t.default = a.forwardRef(function(e, t) {
@@ -28,7 +28,7 @@ t.default = a.forwardRef(function(e, t) {
     className: r,
     children: a,
     actions: o,
-    handleEditModal: h,
+    handleEditModal: A,
     keyboardModeEnabled: m,
     onKeyDown: N,
     draftType: O,
@@ -52,7 +52,7 @@ t.default = a.forwardRef(function(e, t) {
               e.preventDefault(), _.default.remove(i, n, O);
               return;
             case T.KeyboardKeys.E:
-              null != h && (e.preventDefault(), h(e));
+              null != A && (e.preventDefault(), A(e));
               return;
             case T.KeyboardKeys.BACKSPACE:
               e.ctrlKey ? (e.preventDefault(), _.default.clearAll(i, O)) : (e.preventDefault(), _.default.remove(i, n, O));
@@ -78,7 +78,7 @@ t.default = a.forwardRef(function(e, t) {
             className: l()(S.actionBar, {
               [S.smallActionBar]: D
             }),
-            onContextMenu: A,
+            onContextMenu: h,
             "aria-label": f.default.Messages.ATTACHMENT_UTILITIES,
             children: (0, s.jsx)(c.default, {
               className: l()({

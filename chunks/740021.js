@@ -16,8 +16,8 @@ var a = s("735250"),
   f = s("135431"),
   S = s("998502"),
   E = s("204197"),
-  I = s("249003"),
-  m = s("735336"),
+  m = s("249003"),
+  I = s("735336"),
   T = s("747074"),
   p = s("18816"),
   N = s("301984"),
@@ -50,7 +50,7 @@ function U(e) {
     relationshipType: g,
     canReceiveMessage: D,
     canReceiveFriendRequest: F
-  } = (0, I.default)(t), L = (null == s ? void 0 : s.application) != null && (0, f.canInstallApplication)(s.application), [B, b] = (0, i.useStateFromStoresArray)([c.default], () => {
+  } = (0, m.default)(t), L = (null == s ? void 0 : s.application) != null && (0, f.canInstallApplication)(s.application), [B, b] = (0, i.useStateFromStoresArray)([c.default], () => {
     let e = c.default.isMobileOnline(t.id);
     return (0, d.shouldDisableUserPresenceInChannel)(t, U) ? [v.StatusTypes.UNKNOWN, e] : (0, u.default)(n) ? [v.StatusTypes.STREAMING, e] : [c.default.getStatus(t.id), e]
   }), G = () => {
@@ -58,7 +58,7 @@ function U(e) {
   };
   return (0, a.jsxs)("header", {
     className: R,
-    children: [(0, a.jsx)(m.default, {
+    children: [(0, a.jsx)(I.default, {
       user: t,
       displayProfile: s,
       profileType: x.UserProfileTypes.MODAL,

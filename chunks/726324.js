@@ -20,11 +20,11 @@ function d(e) {
     guild: d,
     description: c,
     children: f
-  } = e, E = l.GifAutoPlay.useSetting(), h = (0, r.useIsWindowFocused)(), [_, C] = (0, o.default)(t, h && E);
+  } = e, E = l.GifAutoPlay.useSetting(), _ = (0, r.useIsWindowFocused)(), [h, C] = (0, o.default)(t, _ && E);
   return (0, a.jsxs)("div", {
     className: u.container,
     children: [(0, a.jsx)("div", {
-      ref: _,
+      ref: h,
       className: u.coverImageContainer,
       children: null != C && (0, a.jsx)("img", {
         src: C,

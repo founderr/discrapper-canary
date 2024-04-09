@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useCustomStatusMenuItem: function() {
-    return h
+    return _
   }
 });
 var a = n("735250");
@@ -17,18 +17,18 @@ var s = n("803997"),
   f = n("689938"),
   E = n("832805");
 
-function h(e, t) {
+function _(e, t) {
   let s = (0, o.useAnalyticsContext)(),
     {
-      trackUserProfileAction: h
+      trackUserProfileAction: _
     } = (0, u.useUserProfileAnalyticsContext)();
 
-  function _(e) {
+  function h(e) {
     e.stopPropagation(), d.CustomStatusSetting.updateSetting(void 0)
   }
 
   function C() {
-    h({
+    _({
       action: "PRESS_SET_CUSTOM_STATUS"
     }), (0, i.openModalLazy)(async () => {
       let {
@@ -60,7 +60,7 @@ function h(e, t) {
       showIconFirst: !0,
       hint: e => (0, a.jsx)(i.Clickable, {
         ...e,
-        onClick: _,
+        onClick: h,
         tabIndex: -1,
         children: (0, a.jsx)(c.default, {
           width: 18,

@@ -1,38 +1,38 @@
 "use strict";
-i.r(t);
-var a = i("735250");
-i("470079");
-var l = i("707592"),
-  n = i("137158"),
-  s = i("689938"),
-  r = i("482249");
+n.r(t);
+var i = n("735250");
+n("470079");
+var r = n("707592"),
+  a = n("137158"),
+  s = n("689938"),
+  l = n("482249");
 t.default = function(e) {
   let {
     formField: t,
-    index: i,
+    index: n,
     isDragEnabled: o,
-    isDropHovered: d,
+    isDropHovered: u,
     onDrop: c,
-    onEdit: u,
+    onEdit: d,
     onRemove: f,
-    canRemove: m
+    canRemove: p
   } = e, {
-    label: E,
-    placeholder: I
+    label: m,
+    placeholder: E
   } = t;
-  return (0, a.jsx)(n.default, {
+  return (0, i.jsx)(a.default, {
     field: t,
-    index: i,
+    index: n,
     isDragEnabled: o,
-    isDropHovered: d,
+    isDropHovered: u,
     onDrop: c,
-    onEdit: u,
+    onEdit: d,
     onRemove: f,
-    title: E,
-    canRemove: m,
-    children: (0, a.jsx)(l.TextInputFieldBody, {
-      className: r.fieldBackground,
-      placeholder: null != I ? I : s.default.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,
+    title: m,
+    canRemove: p,
+    children: (0, i.jsx)(r.TextInputFieldBody, {
+      className: l.fieldBackground,
+      placeholder: null != E ? E : s.default.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,
       disabled: !0
     })
   })

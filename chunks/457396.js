@@ -16,14 +16,14 @@ var s = n("924826"),
   c = n("74538"),
   f = n("104494"),
   E = n("639119"),
-  h = n("655525"),
-  _ = n("314684"),
+  _ = n("655525"),
+  h = n("314684"),
   C = n("52188"),
   m = n("248042"),
   S = n("924540"),
   I = n("565626"),
-  p = n("701910"),
-  T = n("689938"),
+  T = n("701910"),
+  p = n("689938"),
   g = n("392934");
 let N = e => {
   let t, n, {
@@ -37,28 +37,28 @@ let N = e => {
     P = (0, s.useListItem)("nitro"),
     M = (0, E.usePremiumTrialOffer)(),
     y = (0, f.usePremiumDiscountOffer)(),
-    x = (0, l.useStateFromStores)([o.default], () => o.default.isLocalizedPromoEnabled) && null == M,
-    D = (0, m.useIsEligibleForBogoPromotion)(),
+    D = (0, l.useStateFromStores)([o.default], () => o.default.isLocalizedPromoEnabled) && null == M,
+    x = (0, m.useIsEligibleForBogoPromotion)(),
     b = (0, I.default)(),
-    U = (0, _.useTenureRewardBadgeDescription)();
-  return N || null != M || null != y || D || b || null != U || null != v && Date.now() - v.createdAt.getTime() > 2592e6 || (0, c.hasPremiumSubscriptionToDisplay)(v, L) ? (D ? n = (0, a.jsx)(h.default, {
+    U = (0, h.useTenureRewardBadgeDescription)();
+  return N || null != M || null != y || x || b || null != U || null != v && Date.now() - v.createdAt.getTime() > 2592e6 || (0, c.hasPremiumSubscriptionToDisplay)(v, L) ? (x ? n = (0, a.jsx)(_.default, {
     isNitroTab: !0
-  }) : null != U ? n = (0, a.jsx)(p.default, {
+  }) : null != U ? n = (0, a.jsx)(T.default, {
     copy: U
-  }) : b ? n = (0, a.jsx)(p.default, {}) : null != y ? n = (0, a.jsx)(S.PremiumDiscountOfferTabBadge, {
+  }) : b ? n = (0, a.jsx)(T.default, {}) : null != y ? n = (0, a.jsx)(S.PremiumDiscountOfferTabBadge, {
     userDiscount: y,
     isTabSelected: N,
     includesAmountOff: !1
   }) : null != M ? n = (0, a.jsx)(S.PremiumTrialOfferTabBadge, {
     trialOffer: M,
     isTabSelected: N
-  }) : x && (n = (0, a.jsx)(C.LocalizedPricingBadgeIcon, {
+  }) : D && (n = (0, a.jsx)(C.LocalizedPricingBadgeIcon, {
     entryPoint: C.BadgeEntryPoint.PrivateMessages
   }), !N && (t = g.localizeBadge)), (0, a.jsx)(i.LinkButton, {
     selected: N,
     route: A,
     icon: d.default,
-    text: T.default.Messages.PREMIUM,
+    text: p.default.Messages.PREMIUM,
     locationState: R,
     ...O,
     ...P,

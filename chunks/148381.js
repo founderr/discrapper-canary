@@ -19,13 +19,13 @@ function c(e) {
     scrollerClassName: l,
     scrollerInnerClassName: n,
     children: c
-  } = e, f = s.useRef(null), [m, S] = s.useState(!1), [E, C] = s.useState(!1), _ = s.useCallback(() => {
+  } = e, f = s.useRef(null), [m, S] = s.useState(!1), [E, _] = s.useState(!1), C = s.useCallback(() => {
     let {
       current: e
     } = f;
-    null != e && (S(!e.isScrolledToTop()), C(!e.isScrolledToBottom()))
+    null != e && (S(!e.isScrolledToTop()), _(!e.isScrolledToBottom()))
   }, []);
-  return s.useLayoutEffect(() => _(), []), (0, a.jsxs)(a.Fragment, {
+  return s.useLayoutEffect(() => C(), []), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: i()(d.title, d.scrollWrapper),
       children: [(0, a.jsx)(r.FormTitle, {
@@ -41,7 +41,7 @@ function c(e) {
         className: i()(d.scrollerInner, n, {
           [d.bottomSeparator]: E
         }),
-        onScroll: _,
+        onScroll: C,
         children: c
       })
     })]

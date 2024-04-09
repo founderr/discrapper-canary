@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return E
   },
   setPendingAccentColor: function() {
-    return h
+    return A
   },
   setPendingBanner: function() {
     return f
@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return S
   },
   setPendingPronouns: function() {
-    return A
+    return h
   },
   setPendingThemeColors: function() {
     return m
@@ -121,14 +121,14 @@ function S(e) {
   })
 }
 
-function A(e) {
+function h(e) {
   r.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS",
     pronouns: e
   })
 }
 
-function h(e) {
+function A(e) {
   r.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR",
     color: e

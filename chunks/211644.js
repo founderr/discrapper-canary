@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   addCandidateContent: function() {
-    return A
+    return h
   },
   default: function() {
     return C
@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return m
   },
   removeCandidateContent: function() {
-    return h
+    return A
   },
   reset: function() {
     return R
@@ -80,14 +80,14 @@ let s = new(n("499303")).TaskRunner,
       })
     }, 250), e)
   },
-  A = e => {
+  h = e => {
     let t = r.CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(e.content);
     o.setState(n => {
       let i = l(n);
       return t ? d(i, e) : S(_(i, e))
     })
   },
-  h = (e, t) => {
+  A = (e, t) => {
     o.setState(n => {
       let i = l(n);
       return t ? S(u(c(i, e), e)) : u(c(i, e), e)

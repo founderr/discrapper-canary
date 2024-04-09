@@ -16,8 +16,8 @@ var r = n("989600"),
   T = n("979651"),
   f = n("617136"),
   S = n("113434"),
-  A = n("497505"),
-  h = n("918701"),
+  h = n("497505"),
+  A = n("918701"),
   m = n("874137"),
   N = n("667105"),
   O = n("268201"),
@@ -41,13 +41,13 @@ t.default = function(e) {
     position: G
   } = e, w = (0, N.useHandleClaimQuestsReward)({
     quest: y,
-    location: A.QuestContent.MEMBERS_LIST
+    location: h.QuestContent.MEMBERS_LIST
   }), B = (0, S.useIsQuestExpired)(y), k = (null == y ? void 0 : null === (t = y.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, V = (null == y ? void 0 : null === (v = y.userStatus) || void 0 === v ? void 0 : v.enrolledAt) != null, F = (null == y ? void 0 : null === (M = y.userStatus) || void 0 === M ? void 0 : M.completedAt) != null;
   if (null == y || B || k && !(null != P)) return null;
   let x = () => {
       (0, f.trackQuestContentClicked)({
         questId: y.id,
-        questContent: A.QuestContent.MEMBERS_LIST,
+        questContent: h.QuestContent.MEMBERS_LIST,
         questContentCTA: f.QuestContentCTA.OPEN_DISCLOSURE,
         trackGuildAndChannelMetadata: !0
       }), (0, a.openModalLazy)(async () => {
@@ -56,7 +56,7 @@ t.default = function(e) {
         } = await Promise.all([n.e("99387"), n.e("59286")]).then(n.bind(n, "316210"));
         return t => (0, i.jsx)(e, {
           ...t,
-          questContent: A.QuestContent.MEMBERS_LIST,
+          questContent: h.QuestContent.MEMBERS_LIST,
           questConfig: y.config
         })
       })
@@ -64,7 +64,7 @@ t.default = function(e) {
     H = () => {
       (0, f.trackQuestContentClicked)({
         questId: y.id,
-        questContent: A.QuestContent.MEMBERS_LIST,
+        questContent: h.QuestContent.MEMBERS_LIST,
         questContentCTA: f.QuestContentCTA.LEARN_MORE,
         trackGuildAndChannelMetadata: !0
       }), u.default.open(p.UserSettingsSections.INVENTORY)
@@ -77,7 +77,7 @@ t.default = function(e) {
         let e = c.default.getChannel(P.channelId);
         if (null != e && (0, _.canWatchStream)(e, T.default, E.default, I.default, d.default)[0]) return (0, f.trackQuestContentClicked)({
           questId: y.id,
-          questContent: A.QuestContent.MEMBERS_LIST,
+          questContent: h.QuestContent.MEMBERS_LIST,
           questContentCTA: f.QuestContentCTA.WATCH_STREAM,
           trackGuildAndChannelMetadata: !0
         }), o.default.selectVoiceChannel(e.id), (0, l.watchStreamAndTransitionToStream)(P)
@@ -87,27 +87,27 @@ t.default = function(e) {
     W = (() => null != P ? {
       headerText: R.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
       ctaText: R.default.Messages.QUESTS_MEMBERS_LIST_STREAM_CTA,
-      tileAssetUrl: (0, h.getGameTileAssetUrl)(y),
+      tileAssetUrl: (0, A.getGameTileAssetUrl)(y),
       handleClickCta: j
     } : F && !k ? {
       headerText: R.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD,
       ctaText: R.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD_CTA,
-      tileAssetUrl: (0, h.getRewardAssetUrl)(y),
+      tileAssetUrl: (0, A.getRewardAssetUrl)(y),
       handleClickCta: w
     } : V ? {
       headerText: R.default.Messages.QUESTS_MEMBERS_LIST_FINISH,
       ctaText: R.default.Messages.QUESTS_MEMBERS_LIST_FINISH_CTA,
-      tileAssetUrl: (0, h.getRewardAssetUrl)(y),
+      tileAssetUrl: (0, A.getRewardAssetUrl)(y),
       handleClickCta: H
     } : {
       headerText: R.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
       ctaText: R.default.Messages.QUESTS_MEMBERS_LIST_START_CTA,
-      tileAssetUrl: (0, h.getGameTileAssetUrl)(y),
+      tileAssetUrl: (0, A.getGameTileAssetUrl)(y),
       handleClickCta: H
     })();
   return (0, i.jsx)(m.QuestContentImpressionTracker, {
     questId: y.id,
-    questContent: A.QuestContent.MEMBERS_LIST,
+    questContent: h.QuestContent.MEMBERS_LIST,
     trackGuildAndChannelMetadata: !0,
     children: e => (0, i.jsx)("div", {
       ref: t => {

@@ -19,8 +19,8 @@ var l = a("735250"),
   f = a("336197"),
   m = a("6025"),
   h = a("897473"),
-  g = a("433355"),
-  E = a("592125"),
+  E = a("433355"),
+  g = a("592125"),
   _ = a("699516"),
   I = a("602623"),
   x = a("642101"),
@@ -109,9 +109,9 @@ t.default = n.forwardRef(function(e, t) {
       message: e,
       isFeaturedMessage: t
     }
-  }, [G, U, w]), V = (0, d.useStateFromStores)([E.default], () => E.default.getChannel(U)), W = (0, c.getChannelIconComponent)(V, void 0, {
+  }, [G, U, w]), V = (0, d.useStateFromStores)([g.default], () => g.default.getChannel(U)), W = (0, c.getChannelIconComponent)(V, void 0, {
     textFocused: !0
-  }), K = (0, c.getChannelIconTooltipText)(V), z = null !== (a = null == y ? void 0 : y.referenceMessages) && void 0 !== a ? a : [], Y = (0, o.default)(V), [Z, X] = n.useState(!1), J = (0, d.useStateFromStores)([_.default], () => null != P && _.default.isBlocked(null == P ? void 0 : P.author.id)), q = (0, s.useListItem)(null !== (I = null == P ? void 0 : P.id) && void 0 !== I ? I : w), Q = (0, v.default)(y), $ = (0, d.useStateFromStores)([g.default], () => g.default.getSidebarState(F.StaticChannelRoute.GUILD_HOME)), ee = (0, S.getSidebarMessageId)($, V), et = null != ee && y.message.id === ee, ea = y.highlighted ? L.default.Messages.GUILD_FEED_SPECIAL_HIGHLIGHT : B ? L.default.Messages.GUILD_FEED_FEATURED_BY_MODERATORS : null, {
+  }), K = (0, c.getChannelIconTooltipText)(V), z = null !== (a = null == y ? void 0 : y.referenceMessages) && void 0 !== a ? a : [], Y = (0, o.default)(V), [Z, X] = n.useState(!1), J = (0, d.useStateFromStores)([_.default], () => null != P && _.default.isBlocked(null == P ? void 0 : P.author.id)), q = (0, s.useListItem)(null !== (I = null == P ? void 0 : P.id) && void 0 !== I ? I : w), Q = (0, v.default)(y), $ = (0, d.useStateFromStores)([E.default], () => E.default.getSidebarState(F.StaticChannelRoute.GUILD_HOME)), ee = (0, S.getSidebarMessageId)($, V), et = null != ee && y.message.id === ee, ea = y.highlighted ? L.default.Messages.GUILD_FEED_SPECIAL_HIGHLIGHT : B ? L.default.Messages.GUILD_FEED_FEATURED_BY_MODERATORS : null, {
     handleItemClick: el,
     handleChannelClick: en,
     handleCardClick: es,

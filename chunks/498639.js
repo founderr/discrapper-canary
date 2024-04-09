@@ -17,8 +17,8 @@ var a = s("735250"),
   _ = s("305342"),
   g = s("333867"),
   h = s("963249"),
-  N = s("87484"),
-  I = s("197115"),
+  I = s("87484"),
+  N = s("197115"),
   p = s("911367"),
   C = s("430824"),
   A = s("78839"),
@@ -61,9 +61,9 @@ t.default = function() {
     } = (0, S.default)(c.default.PAYMENT_FLOW_TEST_PAGE),
     [w, H] = n.useState(""),
     [V, Y] = n.useState(O.EMPTY_STRING_SNOWFLAKE_ID),
-    [K, W] = n.useState(""),
+    [W, K] = n.useState(""),
     [z, Q] = n.useState(O.EMPTY_STRING_SNOWFLAKE_ID),
-    [Z, q] = n.useState(O.EMPTY_STRING_SNOWFLAKE_ID);
+    [q, Z] = n.useState(O.EMPTY_STRING_SNOWFLAKE_ID);
   return (0, a.jsx)(S.AnalyticsLocationProvider, {
     value: k,
     children: (0, a.jsxs)(r.FormSection, {
@@ -89,7 +89,7 @@ t.default = function() {
             label: "None"
           }],
           onChange: e => t(e)
-        }), (0, a.jsx)(I.default, {
+        }), (0, a.jsx)(N.default, {
           subscriptionTier: e,
           isGift: !0,
           premiumModalAnalyticsLocation: {}
@@ -284,15 +284,15 @@ t.default = function() {
         className: R.formItem,
         children: [(0, a.jsx)(r.TextInput, {
           placeholder: "Application Id",
-          value: K,
-          onChange: W
+          value: W,
+          onChange: K
         }), (0, a.jsx)(r.TextInput, {
           placeholder: "SKU ID",
           value: z,
           onChange: e => Q(e)
         }), (0, a.jsx)(r.Button, {
-          onClick: () => (0, N.default)({
-            applicationId: K,
+          onClick: () => (0, I.default)({
+            applicationId: W,
             skuId: z,
             analyticsLocations: k
           }),
@@ -306,11 +306,11 @@ t.default = function() {
         className: R.formItem,
         children: [(0, a.jsx)(r.TextInput, {
           placeholder: "SKU ID",
-          value: Z,
-          onChange: e => q(e)
+          value: q,
+          onChange: e => Z(e)
         }), (0, a.jsx)(r.Button, {
           onClick: () => (0, g.default)({
-            skuId: Z,
+            skuId: q,
             analyticsLocations: k
           }),
           children: "Open Collectibles Payment Modal for SKU"

@@ -56,9 +56,9 @@ function A(e) {
     guildJoinRequest: r,
     className: A,
     onClick: M
-  } = e, [h, p] = l.useState(null), {
+  } = e, [h, C] = l.useState(null), {
     user: x,
-    createdAt: C
+    createdAt: p
   } = r;
   if (null == x) throw Error("Missing user on this guild join request!");
   let g = l.useMemo(() => new c.default(x), [x]),
@@ -70,11 +70,11 @@ function A(e) {
         userId: a
       } = e;
       if (null == h) {
-        p(t);
+        C(t);
         try {
           await R.default.updateGuildJoinRequest(s, a, t)
         } catch (e) {
-          (0, d.showToast)((0, d.createToast)(S.default.Messages.ERROR_GENERIC_TITLE, d.ToastType.FAILURE)), p(null)
+          (0, d.showToast)((0, d.createToast)(S.default.Messages.ERROR_GENERIC_TITLE, d.ToastType.FAILURE)), C(null)
         }
       }
     }, [h]),
@@ -101,7 +101,7 @@ function A(e) {
         className: N.createdAt,
         variant: "text-sm/normal",
         color: "header-secondary",
-        children: u()(C).format("lll")
+        children: u()(p).format("lll")
       })]
     }), P && (0, a.jsx)(m, {
       icon: E.default,

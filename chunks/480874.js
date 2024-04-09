@@ -15,14 +15,14 @@ var a = n("735250"),
   c = n("209613"),
   f = n("797614"),
   E = n("151827"),
-  h = n("626135"),
-  _ = n("26373"),
+  _ = n("626135"),
+  h = n("26373"),
   C = n("486622"),
   m = n("922409"),
   S = n("727813"),
   I = n("355350"),
-  p = n("307947"),
-  T = n("125855"),
+  T = n("307947"),
+  p = n("125855"),
   g = n("687683"),
   N = n("981631"),
   A = n("689938"),
@@ -32,7 +32,7 @@ function O() {
   let e = s.useRef(null),
     t = (0, S.default)(),
     n = (0, I.useSpamMessageRequestCount)(),
-    l = (0, _.useListHasSingleSpamMessageRequest)(),
+    l = (0, h.useListHasSingleSpamMessageRequest)(),
     O = (0, d.useIsRejectAllMessageRequestsEnabled)(),
     v = (0, c.default)("message-requests-spam-list"),
     {
@@ -50,18 +50,18 @@ function O() {
       M(t.map(e => e.channel.id))
     }, [t, M]);
   s.useEffect(() => {
-    h.default.track(N.AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, {
+    _.default.track(N.AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, {
       num_spam_message_requests: n
     }), f.default.increment({
       name: o.MetricEvents.SPAM_MESSAGE_REQUEST_VIEW
     })
   }, []);
-  let x = s.useCallback(e => {
+  let D = s.useCallback(e => {
       var n, s;
       let {
         row: r
       } = e, o = t[r], u = null === (s = t[r + 1]) || void 0 === s ? void 0 : null === (n = s.channel) || void 0 === n ? void 0 : n.id, d = o.channel.id;
-      return (0, a.jsx)(T.default, {
+      return (0, a.jsx)(p.default, {
         index: r,
         className: i()({
           [R.selected]: null != L && L === d,
@@ -72,7 +72,7 @@ function O() {
         hasSingleMessageRequest: l
       }, d)
     }, [t, l, L]),
-    D = s.useCallback(() => (0, a.jsxs)(E.default, {
+    x = s.useCallback(() => (0, a.jsxs)(E.default, {
       className: R.sectionTitle,
       children: [A.default.Messages.MESSAGE_REQUESTS_SPAM_HEADER.format({
         count: n
@@ -94,7 +94,7 @@ function O() {
         })]
       }) : null]
     }, "message-requests-spam-title"), [n, y, O]);
-  return 0 === t.length ? (0, a.jsx)(p.default, {
+  return 0 === t.length ? (0, a.jsx)(T.default, {
     section: g.MessageRequestSections.SPAM
   }) : (0, a.jsx)(r.ListNavigatorProvider, {
     navigator: v,
@@ -117,8 +117,8 @@ function O() {
           paddingBottom: 24,
           sectionHeight: g.LIST_SECTION_HEIGHT,
           rowHeight: g.LIST_ROW_HEIGHT,
-          renderSection: D,
-          renderRow: x,
+          renderSection: x,
+          renderRow: D,
           sections: [t.length],
           chunkSize: 30,
           fade: !0,

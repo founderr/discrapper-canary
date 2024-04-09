@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return i
   },
   default: function() {
-    return h
+    return A
   }
 }), n("47120"), n("653041");
 var i, r, s = n("47770"),
@@ -33,9 +33,9 @@ let T = {
   },
   f = 30 * _.default.Millis.SECOND,
   S = 120 * _.default.Millis.SECOND,
-  A = -1 !== (0, d.getFirefoxVersion)();
+  h = -1 !== (0, d.getFirefoxVersion)();
 (r = i || (i = {})).UserSSRCUpdate = "user-ssrc-update", r.Update = "update";
-class h extends s.default {
+class A extends s.default {
   getWantsLevel() {
     let e = this.getVideoParticipantCount();
     return this.ladder.getMaxSinkValue(e)
@@ -188,7 +188,7 @@ class h extends s.default {
         var i;
         (null === (i = r.connection) || void 0 === i ? void 0 : i.getLocalMute(e)) && (n[t] = 0)
       }
-      return A ? r.latestWants : (null != r.connection && !(0, l.default)(r.latestWants, n) && (r.latestWants = n, r.emit("update", n)), n)
+      return h ? r.latestWants : (null != r.connection && !(0, l.default)(r.latestWants, n) && (r.latestWants = n, r.emit("update", n)), n)
     }, this.delayedCall = new u.DelayedCall(100, this.update), this.offscreenTimeout = new u.Timeout
   }
 }

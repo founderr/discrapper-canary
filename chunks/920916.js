@@ -22,8 +22,8 @@ var i = n("735250"),
   T = n("530618"),
   f = n("164946"),
   S = n("166625"),
-  A = n("25990"),
-  h = n("594174"),
+  h = n("25990"),
+  A = n("594174"),
   m = n("810090"),
   N = n("272008"),
   O = n("497505"),
@@ -41,7 +41,7 @@ function L(e) {
     reward: _,
     decoration: c,
     onUseNow: E
-  } = e, I = r.useRef(null), [f, S] = r.useState(null), A = r.useRef(new s.Environment), m = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), C = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), L = (0, p.getHeroAssetUrl)(a), [v, M] = r.useState(!1);
+  } = e, I = r.useRef(null), [f, S] = r.useState(null), h = r.useRef(new s.Environment), m = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), C = (0, o.useStateFromStores)([A.default], () => A.default.getCurrentUser()), L = (0, p.getHeroAssetUrl)(a), [v, M] = r.useState(!1);
   r.useEffect(() => {
     var e;
     (null === (e = a.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && (0, N.claimQuestReward)(a.id, O.QuestRewardCodePlatforms.CROSS_PLATFORM, u)
@@ -52,7 +52,7 @@ function L(e) {
     children: [(0, i.jsx)(s.ConfettiCanvas, {
       ref: S,
       className: g.confettiCanvas,
-      environment: A.current
+      environment: h.current
     }), (0, i.jsx)("div", {
       ref: I,
       children: (0, i.jsx)(l.ModalRoot, {
@@ -169,7 +169,7 @@ function v(e, t) {
       return [i, () => {
         if (null == i) return Promise.reject();
         (0, u.setPendingAvatarDecoration)(i);
-        let e = A.default.getAllPending(),
+        let e = h.default.getAllPending(),
           t = (0, f.getAccountUpdateForUpdateRequest)(e);
         return (0, u.saveAccountChanges)(t).finally(u.resetPendingAccountChanges)
       }]

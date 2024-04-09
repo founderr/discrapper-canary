@@ -25,8 +25,8 @@ var i, a, l, s, o, r, d, u, c = n("512722"),
   b = n("944486"),
   j = n("885110"),
   P = n("246946"),
-  w = n("594174"),
-  k = n("974180"),
+  k = n("594174"),
+  w = n("974180"),
   V = n("237997"),
   U = n("70956"),
   B = n("150097"),
@@ -110,7 +110,7 @@ function en(e) {
 }
 class ei extends(l = p.default.Store) {
   initialize() {
-    this.waitFor(M.default, w.default)
+    this.waitFor(M.default, k.default)
   }
   getNotifications() {
     return J
@@ -166,7 +166,7 @@ u = "OverlayNotificationsStore", (d = "displayName") in(r = ei) ? Object.defineP
     let {
       channelId: a,
       message: l
-    } = e, s = M.default.getChannel(a), o = w.default.getUser(null === (t = l.author) || void 0 === t ? void 0 : t.id);
+    } = e, s = M.default.getChannel(a), o = k.default.getUser(null === (t = l.author) || void 0 === t ? void 0 : t.id);
     if (null == s || null == o) return !1;
     if ((null === (n = l.activity) || void 0 === n ? void 0 : n.type) === H.ActivityActionTypes.JOIN || (null === (i = l.activity) || void 0 === i ? void 0 : i.type) === H.ActivityActionTypes.JOIN_REQUEST) {
       if (!(0, B.shouldNotify)(l, a, !0, !0)) return !1;
@@ -195,7 +195,7 @@ u = "OverlayNotificationsStore", (d = "displayName") in(r = ei) ? Object.defineP
       if (!1 !== e) return e
     }
     if ((!V.default.isInstanceUILocked() || V.default.isPinned(H.OverlayWidgets.TEXT)) && a === b.default.getChannelId() || V.default.getTextChatNotificationMode() === H.OverlayNotificationTextChatTypes.DISABLED || P.default.disableNotifications || !(0, B.shouldNotify)(l, a)) return !1;
-    let r = !L.default.isSoundDisabled(k.MESSAGE_SOUND);
+    let r = !L.default.isSoundDisabled(w.MESSAGE_SOUND);
     et((0, T.default)(s, l, o, r), {
       type: 1,
       channelId: s.id,

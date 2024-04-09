@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return K
+    return W
   }
 }), s("47120");
 var a = s("735250"),
@@ -21,8 +21,8 @@ var a = s("735250"),
   _ = s("3148"),
   g = s("739566"),
   h = s("753206"),
-  N = s("440849"),
-  I = s("196051"),
+  I = s("440849"),
+  N = s("196051"),
   p = s("441729"),
   C = s("285952"),
   A = s("153124"),
@@ -48,14 +48,14 @@ let k = (0, A.uid)(),
     (0, E.setSaturation)(e)
   }, 250),
   Y = o().debounce(e => {
-    (0, I.setSpeechRate)(e)
+    (0, N.setSpeechRate)(e)
   }, 250);
 
-function K(e) {
+function W(e) {
   return (0, a.jsxs)(u.FormSection, {
     tag: u.FormTitleTags.H1,
     title: y.default.Messages.ACCESSIBILITY,
-    children: [(0, a.jsx)(W, {}), (0, a.jsx)(z, {}), (0, a.jsx)(u.FormDivider, {}), (0, a.jsx)(Q, {}), (0, a.jsx)(Z, {}), (0, a.jsx)(q, {}), (0, f.canEnableForcedColors)() ? (0, a.jsx)(X, {}) : null, (0, a.jsx)(J, {}), (0, a.jsx)($, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(et, {}), (0, a.jsx)(u.FormDivider, {
+    children: [(0, a.jsx)(K, {}), (0, a.jsx)(z, {}), (0, a.jsx)(u.FormDivider, {}), (0, a.jsx)(Q, {}), (0, a.jsx)(q, {}), (0, a.jsx)(Z, {}), (0, f.canEnableForcedColors)() ? (0, a.jsx)(X, {}) : null, (0, a.jsx)(J, {}), (0, a.jsx)($, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(et, {}), (0, a.jsx)(u.FormDivider, {
       className: F.marginBottom20
     }), (0, a.jsx)(u.Text, {
       variant: "text-md/normal",
@@ -68,7 +68,7 @@ function K(e) {
   })
 }
 
-function W() {
+function K() {
   let e = v.MessageDisplayCompact.useSetting(),
     [t] = n.useState(() => {
       let e = (0, m.createMessageRecord)({
@@ -173,7 +173,7 @@ function Q() {
   })
 }
 
-function Z() {
+function q() {
   let e = (0, d.useStateFromStores)([T.default], () => T.default.roleStyle);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(u.FormItem, {
@@ -205,7 +205,7 @@ function Z() {
   })
 }
 
-function q() {
+function Z() {
   let e = (0, d.useStateFromStores)([T.default], () => T.default.syncProfileThemeWithUserTheme),
     t = n.useRef(null);
   return (0, L.default)(t, P.AccessibilityScrollPositions.SYNC_PROFILE_THEME_WITH_USER_THEME), (0, a.jsx)(u.FormItem, {
@@ -302,13 +302,13 @@ function J() {
     }), (0, a.jsx)(u.FormSwitch, {
       className: F.marginBottom40,
       value: e,
-      note: null != o ? (0, N.default)(o) : void 0,
+      note: null != o ? (0, I.default)(o) : void 0,
       onChange: v.GifAutoPlay.updateSetting,
       children: y.default.Messages.GIF_AUTO_PLAY_LABEL
     }), (0, a.jsx)(u.FormSwitch, {
       className: i()(F.marginTop8, F.marginBottom20),
       value: t,
-      note: null != c ? (0, N.default)(c) : void 0,
+      note: null != c ? (0, I.default)(c) : void 0,
       onChange: v.AnimateEmoji.updateSetting,
       children: y.default.Messages.ANIMATE_EMOJI
     })]
@@ -327,7 +327,7 @@ function $() {
     children: [(0, a.jsx)(u.FormText, {
       type: u.FormText.Types.DESCRIPTION,
       className: F.marginBottom8,
-      children: null != t ? (0, N.default)(t) : y.default.Messages.STICKERS_AUTO_PLAY_HELP
+      children: null != t ? (0, I.default)(t) : y.default.Messages.STICKERS_AUTO_PLAY_HELP
     }), (0, a.jsx)(u.RadioGroup, {
       options: [{
         name: y.default.Messages.STICKERS_ALWAYS_ANIMATE,
@@ -404,9 +404,9 @@ function et() {
           color: u.ButtonColors.BRAND_NEW,
           onClick: () => {
             if (s) {
-              (0, I.stopSpeaking)(), l(!1);
+              (0, N.stopSpeaking)(), l(!1);
               return
-            }(0, I.speakText)(y.default.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_TEST, !0, void 0, () => l(!0), () => l(!1)), l(!0)
+            }(0, N.speakText)(y.default.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_TEST, !0, void 0, () => l(!0), () => l(!1)), l(!0)
           },
           children: (0, a.jsxs)(C.default, {
             align: C.default.Align.CENTER,

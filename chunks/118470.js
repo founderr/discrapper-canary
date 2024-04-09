@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return _
   }
 }), n("47120"), n("653041");
 var a = n("735250"),
@@ -16,17 +16,17 @@ var a = n("735250"),
   f = n("689938"),
   E = n("466389");
 
-function h(e) {
+function _(e) {
   let {
     guild: t
-  } = e, n = (0, d.useUnseenEndedApplicationSubscriptionEntitlements)(t), h = () => (0, u.dismissApplicationSubscriptionExpirationNotice)(t.id), _ = s.useMemo(() => new Set(n.map(e => e.applicationId)), [n]), C = (0, l.useStateFromStoresArray)([i.default], () => {
+  } = e, n = (0, d.useUnseenEndedApplicationSubscriptionEntitlements)(t), _ = () => (0, u.dismissApplicationSubscriptionExpirationNotice)(t.id), h = s.useMemo(() => new Set(n.map(e => e.applicationId)), [n]), C = (0, l.useStateFromStoresArray)([i.default], () => {
     let e = [];
-    for (let t of _) {
+    for (let t of h) {
       let n = i.default.getApplication(t);
       null != n && e.push(n)
     }
     return e
-  }, [_]);
+  }, [h]);
   if (0 === C.length) return null;
   let m = "";
   return m = 1 === C.length ? f.default.Messages.ONE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
@@ -40,12 +40,12 @@ function h(e) {
     c: C[2].name
   }) : f.default.Messages.MORE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT, (0, a.jsx)(r.default, {
     guild: t,
-    onDismissed: h,
+    onDismissed: _,
     message: m,
     type: c.ChannelNoticeTypes.APPLICATION_SUBSCRIPTION_EXPIRATION,
     image: E,
     onClick: () => {
-      h(), o.default.open(t.id, c.GuildSettingsSections.INTEGRATIONS)
+      _(), o.default.open(t.id, c.GuildSettingsSections.INTEGRATIONS)
     },
     imageMarginTop: 6,
     imageMarginX: 46,

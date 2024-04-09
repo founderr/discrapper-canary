@@ -1,34 +1,34 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   DragIcon: function() {
-    return s
+    return n
   }
 });
-var i = n("735250");
-n("470079");
-var a = n("692547"),
-  l = n("331595");
-let s = e => {
+var E = s("735250");
+s("470079");
+var _ = s("692547"),
+  a = s("331595");
+let n = e => {
   let {
     width: t = 24,
-    height: n = 24,
-    color: s = a.default.colors.INTERACTIVE_NORMAL,
-    colorClass: o = "",
-    ...r
+    height: s = 24,
+    color: n = _.default.colors.INTERACTIVE_NORMAL,
+    colorClass: T = "",
+    ...u
   } = e;
-  return (0, i.jsx)("svg", {
-    ...(0, l.default)(r),
+  return (0, E.jsx)("svg", {
+    ...(0, a.default)(u),
     xmlns: "http://www.w3.org/2000/svg",
     width: t,
-    height: n,
+    height: s,
     fill: "none",
     viewBox: "0 0 24 24",
-    children: (0, i.jsx)("path", {
-      fill: "string" == typeof s ? s : s.css,
+    children: (0, E.jsx)("path", {
+      fill: "string" == typeof n ? n : n.css,
       fillRule: "evenodd",
       d: "M6 4a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm0 8a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm2 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm6-18a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm2 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm-2 6a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z",
       clipRule: "evenodd",
-      className: o
+      className: T
     })
   })
 }

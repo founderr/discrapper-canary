@@ -16,8 +16,8 @@ var l = a("735250"),
   f = a("38267"),
   m = a("25015"),
   h = a("438075"),
-  g = a("113039"),
-  E = a("778947"),
+  E = a("113039"),
+  g = a("778947"),
   _ = a("534761"),
   I = a("959517"),
   x = a("711593");
@@ -33,13 +33,13 @@ function S(e) {
     popouts: m,
     setPopout: h
   } = (0, f.default)(t.id, I.DEFAULT_POPOUTS), {
-    usernameProfile: g,
+    usernameProfile: E,
     avatarProfile: S
-  } = m, v = n.useMemo(() => e => (0, o.default)(e, t), [t]), C = (0, c.useContextMenuUser)(t.author.id, i.id), N = (0, c.useClickMessageAuthorUsername)(t, i, g, h), p = (0, c.useClickMessageAuthorAvatar)(S, h), T = n.useCallback(() => h({
+  } = m, v = n.useMemo(() => e => (0, o.default)(e, t), [t]), C = (0, c.useContextMenuUser)(t.author.id, i.id), N = (0, c.useClickMessageAuthorUsername)(t, i, E, h), p = (0, c.useClickMessageAuthorAvatar)(S, h), T = n.useCallback(() => h({
     usernameProfile: !1,
     avatarProfile: !1,
     referencedUsernameProfile: !1
-  }), [h]), A = (0, E.useAvatar)({
+  }), [h]), A = (0, g.useAvatar)({
     props: {
       message: t,
       channel: i,
@@ -49,7 +49,7 @@ function S(e) {
       displayCompactAvatars: !0,
       animate: s,
       showAvatarPopout: S,
-      showUsernamePopout: g,
+      showUsernamePopout: E,
       onContextMenu: C,
       onClickUsername: N,
       onClickAvatar: p,
@@ -58,7 +58,7 @@ function S(e) {
     guildId: a,
     handleRenderPopout: v,
     className: x.avatar
-  }), j = (0, E.useUsername)(e, v), M = (0, u.getMessageUsernameId)(t), D = (0, u.getMessageTimestampId)(t), F = "".concat(M, " ").concat(D), L = (0, u.getMessageReplyId)(t);
+  }), j = (0, g.useUsername)(e, v), M = (0, u.getMessageUsernameId)(t), D = (0, u.getMessageTimestampId)(t), F = "".concat(M, " ").concat(D), L = (0, u.getMessageReplyId)(t);
   return (0, l.jsx)(l.Fragment, {
     children: (0, l.jsxs)(d.H, {
       className: x.__invalid_header,
@@ -86,7 +86,7 @@ let v = n.forwardRef(function(e, t) {
     children: o,
     isTruncated: c,
     channel: f,
-    guildId: E,
+    guildId: g,
     animateAvatar: _
   } = e, I = n.useRef(null), {
     content: v,
@@ -112,9 +112,9 @@ let v = n.forwardRef(function(e, t) {
             author: N,
             message: a,
             channel: f,
-            guildId: E,
+            guildId: g,
             animateAvatar: _
-          }), (0, l.jsx)(g.default, {
+          }), (0, l.jsx)(E.default, {
             className: i()(x.messageContent, {
               [x.truncatedReply]: c
             }),

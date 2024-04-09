@@ -16,8 +16,8 @@ var l = a("735250"),
   f = a("434404"),
   m = a("159300"),
   h = a("496675"),
-  g = a("705600"),
-  E = a("346656"),
+  E = a("705600"),
+  g = a("346656"),
   _ = a("976644"),
   I = a("709586"),
   x = a("54264"),
@@ -95,10 +95,10 @@ let M = n.memo(function(e) {
       className: N.titleWrapper,
       children: (0, l.jsxs)("div", {
         className: n,
-        children: [(0, l.jsx)(E.default, {
+        children: [(0, l.jsx)(g.default, {
           className: N.headerIcon,
           guild: t,
-          size: E.default.Sizes.XLARGE,
+          size: g.default.Sizes.XLARGE,
           active: !0
         }), (0, l.jsx)(u.HeadingLevel, {
           children: (0, l.jsxs)("div", {
@@ -107,7 +107,7 @@ let M = n.memo(function(e) {
               className: N.headerName,
               variant: "heading-xxl/bold",
               children: t.name
-            }), (0, l.jsx)(g.default, {
+            }), (0, l.jsx)(E.default, {
               size: 24,
               guild: t,
               tooltipPosition: "bottom",

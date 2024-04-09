@@ -12,8 +12,8 @@ var l = a("735250"),
   f = a("393238"),
   m = a("131388"),
   h = a("724757"),
-  g = a("325708"),
-  E = a("923029"),
+  E = a("325708"),
+  g = a("923029"),
   _ = a("213557"),
   I = a("252618"),
   x = a("688465"),
@@ -164,8 +164,8 @@ function ec(e) {
     channelId: s.channelId,
     baseChannelId: ea.StaticChannelRoute.GUILD_HOME,
     channelViewSource: "Home View"
-  })), (0, l.jsx)(g.default, {
-    sidebarType: g.ChatSidebarType.HomeSidebar,
+  })), (0, l.jsx)(E.default, {
+    sidebarType: E.ChatSidebarType.HomeSidebar,
     maxWidth: i,
     onWidthChange: n,
     children: t
@@ -206,7 +206,7 @@ let eh = (0, c.default)(function(e) {
       guild: t,
       width: a,
       height: s
-    } = e, o = t.id, c = (0, r.useStateFromStores)([L.default], () => L.default.getSection(ea.StaticChannelRoute.GUILD_HOME)), g = (0, r.useStateFromStores)([O.default], () => O.default.getCurrentSearchId()), [E, _] = n.useState(!1), [x, S] = n.useState(et.DEFAULT_CHAT_SIDEBAR_WIDTH), C = c === et.ChannelSections.SEARCH, N = c === et.ChannelSections.SIDEBAR_CHAT, p = C || N, T = n.useRef(null), A = (0, h.default)("top-messages", T), {
+    } = e, o = t.id, c = (0, r.useStateFromStores)([L.default], () => L.default.getSection(ea.StaticChannelRoute.GUILD_HOME)), E = (0, r.useStateFromStores)([O.default], () => O.default.getCurrentSearchId()), [g, _] = n.useState(!1), [x, S] = n.useState(et.DEFAULT_CHAT_SIDEBAR_WIDTH), C = c === et.ChannelSections.SEARCH, N = c === et.ChannelSections.SIDEBAR_CHAT, p = C || N, T = n.useRef(null), A = (0, h.default)("top-messages", T), {
       ref: D
     } = (0, f.default)(), [F, R] = n.useState(el.GuildFeedRenderMode.SEGMENTED_READ), b = (0, m.default)(el.COLLAPSED_SIZE_MEDIA_QUERY), G = n.useRef(!1), {
       hasNewHeader: y
@@ -267,7 +267,7 @@ let eh = (0, c.default)(function(e) {
       children: [(0, l.jsxs)("div", {
         className: i()(ei.chat, es.background, {
           [ei.threadSidebarOpen]: p,
-          [ei.threadSidebarFloating]: p && E
+          [ei.threadSidebarFloating]: p && g
         }),
         children: [(0, l.jsx)(eu, {
           guild: t,
@@ -342,8 +342,8 @@ let eh = (0, c.default)(function(e) {
                 })
               }
             })
-          }), C && null != g && (0, l.jsx)(j.default, {
-            searchId: g
+          }), C && null != E && (0, l.jsx)(j.default, {
+            searchId: E
           })]
         })]
       }), N ? (0, l.jsx)(ec, {
@@ -354,7 +354,7 @@ let eh = (0, c.default)(function(e) {
       }) : null]
     })
   }),
-  eg = (0, c.default)(N.default);
+  eE = (0, c.default)(N.default);
 t.default = function(e) {
   let {
     guildId: t
@@ -379,9 +379,9 @@ t.default = function(e) {
       o.default.escapeToDefaultChannel(t);
       return
     }(0, P.trackGuildHomeOpened)(t, e)
-  }, [t, s, i, d]), null == a) ? (0, l.jsx)(E.default, {
+  }, [t, s, i, d]), null == a) ? (0, l.jsx)(g.default, {
     channelId: void 0
-  }) : d ? (0, l.jsx)(eg, {
+  }) : d ? (0, l.jsx)(eE, {
     guild: a
   }) : (0, l.jsx)(eh, {
     guild: a

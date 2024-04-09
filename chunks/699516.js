@@ -11,8 +11,8 @@ let I = {},
   T = {},
   f = {},
   S = 0,
-  A = 0,
   h = 0,
+  A = 0,
   m = 0;
 
 function N() {
@@ -20,7 +20,7 @@ function N() {
   let {
     [E.RelationshipTypes.PENDING_INCOMING]: e = 0, [E.RelationshipTypes.PENDING_OUTGOING]: t = 0, [E.RelationshipTypes.FRIEND]: n = 0
   } = l().countBy(Object.values(I), e => e);
-  S = e, A = t, h = n
+  S = e, h = t, A = n
 }
 class O extends(i = u.default.Store) {
   initialize() {
@@ -36,10 +36,10 @@ class O extends(i = u.default.Store) {
     return S
   }
   getOutgoingCount() {
-    return A
+    return h
   }
   getFriendCount() {
-    return h
+    return A
   }
   getRelationshipCount() {
     return m

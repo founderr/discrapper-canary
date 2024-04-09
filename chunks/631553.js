@@ -37,8 +37,8 @@ var a = n("735250"),
   b = n("314897"),
   j = n("592125"),
   P = n("430824"),
-  w = n("131951"),
-  k = n("944486"),
+  k = n("131951"),
+  w = n("944486"),
   V = n("618541"),
   U = n("449224"),
   B = n("574254"),
@@ -328,7 +328,7 @@ function eg() {
     incompatibleApp: G.default.incompatibleApp,
     activeRegions: G.default.getActiveRegions(),
     isPreviewingInGame: G.default.isPreviewingInGame()
-  })), s = (0, p.useStateFromStores)([H.default], () => H.default.windowSize()), o = (0, p.useStateFromStores)([F.default], () => F.default.getOverlayKeybind()), r = (0, p.useStateFromStores)([k.default], () => k.default.getVoiceChannelId()), d = (0, p.useStateFromStores)([j.default], () => j.default.getChannel(r)), u = (0, p.useStateFromStores)([P.default], () => null != d ? P.default.getGuild(d.guild_id) : null), c = (0, p.useStateFromStores)([A.default, U.default], () => (0, R.default)(A.default, U.default)), f = (0, p.useStateFromStores)([w.default], () => (0, x.default)(w.default)), {
+  })), s = (0, p.useStateFromStores)([H.default], () => H.default.windowSize()), o = (0, p.useStateFromStores)([F.default], () => F.default.getOverlayKeybind()), r = (0, p.useStateFromStores)([w.default], () => w.default.getVoiceChannelId()), d = (0, p.useStateFromStores)([j.default], () => j.default.getChannel(r)), u = (0, p.useStateFromStores)([P.default], () => null != d ? P.default.getGuild(d.guild_id) : null), c = (0, p.useStateFromStores)([A.default, U.default], () => (0, R.default)(A.default, U.default)), f = (0, p.useStateFromStores)([k.default], () => (0, x.default)(k.default)), {
     canBroadcast: h
   } = _.default.useExperiment({
     location: "overlay"

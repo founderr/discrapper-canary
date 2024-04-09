@@ -4,22 +4,22 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var r = n("735250");
+var i = n("735250");
 n("470079");
-var i = n("803997"),
-  s = n.n(i),
-  a = n("248042"),
+var r = n("803997"),
+  a = n.n(r),
+  s = n("248042"),
   l = n("673591"),
   o = n("712634");
 
 function u(e) {
   let {
     isNitroTab: t = !1
-  } = e, n = (0, a.useIsEligibleForBogoPromotion)(), i = (0, a.getBOGOPillCopy)();
-  return n ? (0, r.jsx)(l.default, {
-    className: s()({
+  } = e, n = (0, s.useIsEligibleForBogoPromotion)(), r = (0, s.getBOGOPillCopy)();
+  return n ? (0, i.jsx)(l.default, {
+    className: a()({
       [o.nitroTabBadgeContainer]: t
     }),
-    copy: i
+    copy: r
   }) : null
 }

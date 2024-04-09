@@ -11,14 +11,14 @@ var a = n("735250"),
   c = n("570140"),
   f = n("150063"),
   E = n("758059"),
-  h = n("252618"),
-  _ = n("5254"),
+  _ = n("252618"),
+  h = n("5254"),
   C = n("984370"),
   m = n("518311"),
   S = n("199104"),
   I = n("108427"),
-  p = n("210887"),
-  T = n("974042"),
+  T = n("210887"),
+  p = n("974042"),
   g = n("153124"),
   N = n("988951"),
   A = n("26290"),
@@ -30,7 +30,7 @@ var a = n("735250"),
   M = n("689938"),
   y = n("272212");
 
-function x() {
+function D() {
   return (0, a.jsxs)("div", {
     className: y.inviteToolbar,
     children: [(0, a.jsx)(m.default, {
@@ -54,22 +54,22 @@ t.default = function(e) {
   }, []), s.useEffect(() => {
     null != t && E.default.setInitialSection(t)
   }, [t]);
-  let m = (0, u.useStateFromStores)([p.default], () => p.default.theme),
+  let m = (0, u.useStateFromStores)([T.default], () => T.default.theme),
     {
-      section: D,
+      section: x,
       pendingCount: b
-    } = (0, u.useStateFromStoresObject)([T.default], () => T.default.getState()),
-    U = (0, u.useStateFromStoresObject)([_.default], () => _.default.getSuggestionCount()),
+    } = (0, u.useStateFromStoresObject)([p.default], () => p.default.getState()),
+    U = (0, u.useStateFromStoresObject)([h.default], () => h.default.getSuggestionCount()),
     j = (0, g.useUID)(),
     G = (0, g.useUID)();
   return (0, a.jsxs)("main", {
     className: y.container,
     "aria-label": M.default.Messages.FRIENDS,
-    children: [(0, a.jsx)(h.AppPageTitle, {
+    children: [(0, a.jsx)(_.AppPageTitle, {
       location: M.default.Messages.FRIENDS
     }), (0, a.jsxs)(C.default, {
       className: (0, R.getThemeClass)(m),
-      toolbar: (0, a.jsx)(x, {}),
+      toolbar: (0, a.jsx)(D, {}),
       scrollable: o.isMobile,
       role: "navigation",
       "aria-labelledby": j,
@@ -81,7 +81,7 @@ t.default = function(e) {
         children: M.default.Messages.FRIENDS
       }), (0, a.jsx)(C.default.Divider, {}), (0, a.jsxs)(d.TabBar, {
         "aria-label": M.default.Messages.FRIENDS,
-        selectedItem: D,
+        selectedItem: x,
         type: "top-pill",
         onItemSelect: e => {
           E.default.setSection(e)
@@ -133,12 +133,12 @@ t.default = function(e) {
     }), (0, a.jsxs)("div", {
       className: y.tabBody,
       children: [(0, a.jsx)(d.TabBar.Panel, {
-        id: D,
+        id: x,
         className: y.peopleColumn,
         "aria-labelledby": G,
-        children: D === L.FriendsSections.ADD_FRIEND ? (0, a.jsx)(O.default, {}) : (0, a.jsx)(v.default, {
+        children: x === L.FriendsSections.ADD_FRIEND ? (0, a.jsx)(O.default, {}) : (0, a.jsx)(v.default, {
           titleId: G,
-          sectionFilter: D
+          sectionFilter: x
         })
       }), (0, a.jsx)("div", {
         className: y.nowPlayingColumn,

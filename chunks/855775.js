@@ -14,8 +14,8 @@ let c = "no_payment_source",
   T = null,
   f = null,
   S = null,
-  A = {},
-  h = null,
+  h = {},
+  A = null,
   m = !1,
   N = null,
   O = !1,
@@ -26,11 +26,11 @@ let c = "no_payment_source",
   L = new Set;
 
 function D(e) {
-  null != i && null != h ? i(h) : null != r && r(e), i = null, r = null
+  null != i && null != A ? i(A) : null != r && r(e), i = null, r = null
 }
 class v extends(s = u.default.Store) {
   getPricesForSku(e) {
-    return A[e]
+    return h[e]
   }
   isOpen() {
     let e = __OVERLAY__ ? _.AppContext.OVERLAY : _.AppContext.APP;
@@ -77,7 +77,7 @@ l = "SKUPaymentModalStore", (o = "displayName") in(a = v) ? Object.definePropert
   writable: !0
 }) : a[o] = l, t.default = new v(d.default, {
   SKU_PURCHASE_MODAL_OPEN: function(e) {
-    D(), E = e.skuId, T = e.applicationId, p = e.isIAP, f = e.analyticsLocation, g = e.context, C = e.isGift, R = !0, O = !1, i = e.resolve, r = e.reject, N = null, h = null, S = e.promotionId
+    D(), E = e.skuId, T = e.applicationId, p = e.isIAP, f = e.analyticsLocation, g = e.context, C = e.isGift, R = !0, O = !1, i = e.resolve, r = e.reject, N = null, A = null, S = e.promotionId
   },
   SKU_PURCHASE_MODAL_CLOSE: function(e) {
     let {
@@ -97,10 +97,10 @@ l = "SKUPaymentModalStore", (o = "displayName") in(a = v) ? Object.definePropert
       paymentSourceId: n,
       price: i
     } = e;
-    A = {
-      ...A,
+    h = {
+      ...h,
       [t]: {
-        ...A[t],
+        ...h[t],
         [null != n ? n : c]: i
       }
     }, L.delete(t)
@@ -119,7 +119,7 @@ l = "SKUPaymentModalStore", (o = "displayName") in(a = v) ? Object.definePropert
       entitlements: t,
       giftCode: n
     } = e;
-    m = !1, h = t, I = n
+    m = !1, A = t, I = n
   },
   SKU_PURCHASE_FAIL: function(e) {
     let {

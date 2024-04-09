@@ -16,16 +16,16 @@ t.default = n.forwardRef(function(e, t) {
     onCardClick: f,
     onItemClick: m,
     listItemProps: h,
-    itemId: g,
-    selected: E,
+    itemId: E,
+    selected: g,
     ..._
   } = e, [I, x] = (0, r.default)(t), S = n.useRef(null);
   return (0, l.jsxs)("div", {
     ref: x,
     className: i()(u.card, u.interactiveCard, {
-      [u.selected]: E
+      [u.selected]: g
     }, a),
-    "data-item-id": g,
+    "data-item-id": E,
     onContextMenu: c,
     onClick: e => null == f ? void 0 : f(e, I.current),
     ..._,

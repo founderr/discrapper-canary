@@ -16,8 +16,8 @@ var l = a("735250"),
   f = a("780384"),
   m = a("481060"),
   h = a("239091"),
-  g = a("494404"),
-  E = a("58540"),
+  E = a("494404"),
+  g = a("58540"),
   _ = a("933557"),
   I = a("471445"),
   x = a("276438"),
@@ -46,7 +46,7 @@ let b = async () => {
   } = e, s = c.default.colors.TEXT_POSITIVE, d = j.default, u = (0, o.useStateFromStores)([T.default], () => T.default.getUser(t.details.actorUserId), [t]), f = n.useMemo(() => null == u ? {} : {
     [t.guildId]: [u.id]
   }, [t.guildId, u]);
-  switch ((0, E.useSubscribeGuildMembers)(f), s = (0, v.getFeaturedExpirationTextColor)(t.details.expiresAt)) {
+  switch ((0, g.useSubscribeGuildMembers)(f), s = (0, v.getFeaturedExpirationTextColor)(t.details.expiresAt)) {
     case c.default.colors.TEXT_DANGER:
       d = A.default;
       break;
@@ -191,7 +191,7 @@ function k(e) {
 }
 
 function U() {
-  return (0, l.jsx)(g.Header, {
+  return (0, l.jsx)(E.Header, {
     title: D.default.Messages.GUILD_FEED_FEATURE_MESSAGE
   })
 }
@@ -204,7 +204,7 @@ function w(e) {
     (0, x.fetchGuildFeedFeaturedItems)(t)
   }, [t]), (0, l.jsx)(m.Dialog, {
     "aria-label": D.default.Messages.GUILD_FEED_FEATURED_MESSAGES,
-    children: (0, l.jsx)(g.ItemsPopout, {
+    children: (0, l.jsx)(E.ItemsPopout, {
       analyticsName: "Featured Feed Items Popout",
       listName: "featuredMessages",
       items: a,

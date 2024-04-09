@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return w
+    return k
   }
 }), n("47120");
 var i = n("735250"),
@@ -184,7 +184,7 @@ class P extends a.PureComponent {
   }
 }
 
-function w(e) {
+function k(e) {
   var t;
   let {
     guildId: n
@@ -201,7 +201,7 @@ function w(e) {
       channelId: t
     } = e;
     return t
-  }), x = (0, s.useStateFromStores)([T.default], () => T.default.getVoiceChannelId()), M = (0, s.useStateFromStores)([I.default], () => I.default.getGuildVersion(n)), L = (0, s.useStateFromStores)([p.default], () => p.default.version), D = (0, s.useStateFromStores)([v.default], () => v.default.getGuildChangeSentinel(n)), b = (0, r.useEmbeddedAppsByChannel)(null == a ? void 0 : a.id), j = (0, d.useActiveEventsByChannel)(null == a ? void 0 : a.id), w = null !== (t = null == a ? void 0 : a.hasFeature(R.GuildFeatures.COMMUNITY)) && void 0 !== t && t;
+  }), x = (0, s.useStateFromStores)([T.default], () => T.default.getVoiceChannelId()), M = (0, s.useStateFromStores)([I.default], () => I.default.getGuildVersion(n)), L = (0, s.useStateFromStores)([p.default], () => p.default.version), D = (0, s.useStateFromStores)([v.default], () => v.default.getGuildChangeSentinel(n)), b = (0, r.useEmbeddedAppsByChannel)(null == a ? void 0 : a.id), j = (0, d.useActiveEventsByChannel)(null == a ? void 0 : a.id), k = null !== (t = null == a ? void 0 : a.hasFeature(R.GuildFeatures.COMMUNITY)) && void 0 !== t && t;
   return (0, i.jsx)(P, {
     guildId: n,
     guild: a,
@@ -219,7 +219,7 @@ function w(e) {
     categoryCollapseVersion: L,
     embeddedAppsByChannel: b,
     activeEventsByChannel: j,
-    showNewUnreadsBar: w,
+    showNewUnreadsBar: k,
     optInEnabled: !1
   })
 }

@@ -18,8 +18,8 @@ let u = r.forwardRef(function(e, t) {
     renderInspector: T,
     renderEmptySearchState: f,
     rowCount: S,
-    rowCountBySection: A,
-    rowHeight: h,
+    rowCountBySection: h,
+    rowHeight: A,
     sectionHeaderHeight: m,
     sectionFooterHeight: N
   } = e, O = r.useRef(!1), p = r.useRef(null), R = (0, a.useExpressionPickerStore)(e => e.searchQuery), C = n.useStore(e => e.activeCategoryIndex), g = (0, o.useSynchronizedActiveCategoryIndexForScrollPosition)({
@@ -81,8 +81,8 @@ let u = r.forwardRef(function(e, t) {
       renderSectionHeader: E,
       renderSectionFooter: I,
       rowCount: S,
-      rowCountBySection: A,
-      rowHeight: h,
+      rowCountBySection: h,
+      rowHeight: A,
       sectionHeaderHeight: m,
       sectionFooterHeight: N,
       stickyHeaders: !0,

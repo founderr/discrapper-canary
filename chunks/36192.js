@@ -21,8 +21,8 @@ var a = s("735250"),
   _ = s("594174"),
   g = s("460562"),
   h = s("465670"),
-  N = s("736921"),
-  I = s("169278"),
+  I = s("736921"),
+  N = s("169278"),
   p = s("823379"),
   C = s("981631"),
   A = s("921944"),
@@ -49,7 +49,7 @@ function R() {
         url: C.Endpoints.AUTH_SESSION_NOTIFICATIONS_DEBUG
       })
     },
-    [N, I] = n.useState(new Set);
+    [I, N] = n.useState(new Set);
   return l ? (0, a.jsx)(S.default, {}) : (e = null == t && 0 === s.length ? c ? (0, a.jsx)("div", {
     className: x.loading,
     children: (0, a.jsx)(u.Spinner, {})
@@ -71,17 +71,17 @@ function R() {
         className: x.otherSessions,
         children: [s.map(e => (0, a.jsx)(M, {
           session: e,
-          useChecks: N.size > 0,
-          checked: N.has(e.id_hash),
+          useChecks: I.size > 0,
+          checked: I.has(e.id_hash),
           setChecked: t => {
-            let s = new Set(N);
-            t ? s.add(e.id_hash) : s.delete(e.id_hash), I(s)
+            let s = new Set(I);
+            t ? s.add(e.id_hash) : s.delete(e.id_hash), N(s)
           }
         }, e.id_hash)), (null == i ? void 0 : i.mfaEnabled) ? null : (0, a.jsx)(v, {})]
       })]
     }), s.length > 0 ? (0, a.jsxs)(u.FormSection, {
       tag: u.FormTitleTags.H5,
-      title: N.size > 0 ? O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_TITLE : O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_TITLE,
+      title: I.size > 0 ? O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_TITLE : O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_TITLE,
       children: [(0, a.jsx)(u.FormText, {
         type: u.FormTextTypes.DESCRIPTION,
         children: O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_DESCRIPTION
@@ -91,10 +91,10 @@ function R() {
         size: u.Button.Sizes.SMALL,
         className: x.logOutAllButton,
         onClick: () => {
-          N.size > 0 ? (0, E.logOutSessions)(Array.from(N)) : (0, E.logOutSessions)(s.map(e => e.id_hash))
+          I.size > 0 ? (0, E.logOutSessions)(Array.from(I)) : (0, E.logOutSessions)(s.map(e => e.id_hash))
         },
-        children: N.size > 0 ? O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_ACTION.format({
-          count: N.size
+        children: I.size > 0 ? O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_ACTION.format({
+          count: I.size
         }) : O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_ACTION
       })]
     }) : null]
@@ -154,16 +154,16 @@ function M(e) {
       case void 0:
       case "":
         return {
-          text: O.default.Messages.AUTH_SESSIONS_OS_UNKNOWN, icon: I.default
+          text: O.default.Messages.AUTH_SESSIONS_OS_UNKNOWN, icon: N.default
         };
       case "ios":
       case "android":
         return {
-          text: e, icon: N.default
+          text: e, icon: I.default
         };
       default:
         return {
-          text: e, icon: I.default
+          text: e, icon: N.default
         }
     }
   }(null === (l = o.client_info) || void 0 === l ? void 0 : l.os), A = d ? null : (0, T.formatDate)(o.approx_last_used_time), R = [g, _].filter(p.isNotNullish), M = [m, A].filter(p.isNotNullish), v = (0, u.useRedesignIconContext)().enabled ? 24 : 32;

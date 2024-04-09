@@ -34,12 +34,12 @@ function _(e) {
     maintainFocusPosition: T = !0,
     includeSetSizes: f = !0,
     focusOnMount: S = !0,
-    enabled: A = !0,
-    onDispatch: h
+    enabled: h = !0,
+    onDispatch: A
   } = e, m = i.useCallback((e, t) => {
     let n = (0, r.default)(e, t);
-    return null != h && h(e, n, t), n
-  }, [h]), [N, O] = i.useReducer(m, {
+    return null != A && A(e, n, t), n
+  }, [A]), [N, O] = i.useReducer(m, {
     focusedIndex: _,
     itemCount: n
   }), {
@@ -63,16 +63,16 @@ function _(e) {
         dispatch: T,
         maintainFocusPosition: f,
         includeSetSizes: S,
-        focusOnMount: A,
-        enabled: h,
+        focusOnMount: h,
+        enabled: A,
         makeId: m = a.makeId,
         getIndexFromId: N
       } = e, O = i.useRef(n), p = i.useRef(N);
       p.current = N, O.current = n;
       let R = i.useRef();
       i.useEffect(() => {
-        R.current = h
-      }, [h]);
+        R.current = A
+      }, [A]);
       let [C, g] = i.useState(!1), [L] = i.useState(() => new a.HandlerMemoizer(e => () => {
         let t = null != p.current && "string" == typeof e ? p.current(e) : e;
         "number" == typeof t && !(t < 0) && T({
@@ -86,7 +86,7 @@ function _(e) {
         }, [E]),
         [v, M] = i.useState(!0);
       i.useEffect(() => {
-        if (v && !A) {
+        if (v && !h) {
           M(!1);
           return
         }
@@ -201,6 +201,6 @@ function _(e) {
       maintainFocusPosition: T,
       includeSetSizes: f,
       focusOnMount: S,
-      enabled: A
+      enabled: h
     })
 }

@@ -93,7 +93,7 @@ class M extends l.PureComponent {
       }
     });
     if (null != l && "" !== l) {
-      let e = l.startsWith("https://") ? l : a("302731")("../../images/change-log/".concat(l).replace("../../images/change-log/", "./"));
+      let e = l.startsWith("https://") ? l : a("866483")("../../images/change-log/".concat(l).replace("../../images/change-log/", "./"));
       return (0, n.jsx)(_.default, {
         src: e,
         poster: s,
@@ -110,7 +110,7 @@ class M extends l.PureComponent {
     }
     if (null == s || "" === s) return null;
     else {
-      let e = s.startsWith("https://") ? s : a("302731")("../../images/change-log/".concat(s).replace("../../images/change-log/", "./"));
+      let e = s.startsWith("https://") ? s : a("866483")("../../images/change-log/".concat(s).replace("../../images/change-log/", "./"));
       return (0, n.jsx)("img", {
         className: E.image,
         alt: "",

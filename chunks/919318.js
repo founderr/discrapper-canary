@@ -16,8 +16,8 @@ var l = a("735250"),
   f = a("454585"),
   m = a("118139"),
   h = a("169525"),
-  g = a("524444"),
-  E = a("703656"),
+  E = a("524444"),
+  g = a("703656"),
   _ = a("6025"),
   I = a("695346"),
   x = a("592125"),
@@ -46,7 +46,7 @@ function b(e) {
       channel: r
     }),
     f = (0, h.getObscuredAlt)(o),
-    E = (0, d.useStateFromStores)([N.default], () => N.default.isFocused()),
+    g = (0, d.useStateFromStores)([N.default], () => N.default.isFocused()),
     _ = (0, m.isAnimatedImageUrl)(n.src),
     S = I.GifAutoPlay.useSetting(),
     {
@@ -57,7 +57,7 @@ function b(e) {
     } = n;
   return p > C ? a = 72 : t = 72, (0, l.jsxs)("div", {
     className: F.media,
-    children: [(0, g.renderImageComponent)({
+    children: [(0, E.renderImageComponent)({
       src: v,
       maxHeight: t,
       maxWidth: a,
@@ -65,7 +65,7 @@ function b(e) {
       height: p,
       alt: null != T && u && null != f ? f : T,
       autoPlay: S,
-      animated: _ && !u && E,
+      animated: _ && !u && g,
       containerClassName: F.thumbnailContainer,
       imageClassName: i()({
         [F.obscured]: u
@@ -80,7 +80,7 @@ function b(e) {
 function G(e) {
   let {
     resource: t
-  } = e, a = (0, d.useStateFromStores)([x.default], () => x.default.getChannel(t.channelId)), s = (0, d.useStateFromStores)([v.default], () => v.default.getMessages(t.channelId)), c = (0, d.useStateFromStores)([C.default], () => C.default.can(M.Permissions.VIEW_CHANNEL, a)), m = s.first(), h = (0, A.default)(m), g = (0, o.useForumPostMediaProperties)(m, !1), E = (null == g ? void 0 : g.length) > 0 ? g[0] : null, I = null != a && null == s.first() && !s.loadingMore && !s.ready && !s.hasFetched && c;
+  } = e, a = (0, d.useStateFromStores)([x.default], () => x.default.getChannel(t.channelId)), s = (0, d.useStateFromStores)([v.default], () => v.default.getMessages(t.channelId)), c = (0, d.useStateFromStores)([C.default], () => C.default.can(M.Permissions.VIEW_CHANNEL, a)), m = s.first(), h = (0, A.default)(m), E = (0, o.useForumPostMediaProperties)(m, !1), g = (null == E ? void 0 : E.length) > 0 ? E[0] : null, I = null != a && null == s.first() && !s.loadingMore && !s.ready && !s.hasFetched && c;
   n.useEffect(() => {
     I && u.default.fetchMessages({
       channelId: t.channelId,
@@ -138,8 +138,8 @@ function G(e) {
         alt: "",
         "aria-hidden": !0
       })
-    }) : null, null == S && null != E ? (0, l.jsx)(b, {
-      firstMedia: E,
+    }) : null, null == S && null != g ? (0, l.jsx)(b, {
+      firstMedia: g,
       channelId: t.channelId
     }) : null]
   })
@@ -164,7 +164,7 @@ function O(e) {
       className: F.emptyStateButton,
       onClick: () => {
         let e = S.default.getDefaultChannel(t.id);
-        null != e && (0, E.transitionTo)(M.Routes.CHANNEL(t.id, e.id))
+        null != e && (0, g.transitionTo)(M.Routes.CHANNEL(t.id, e.id))
       },
       fullWidth: !0,
       children: D.default.Messages.MEMBER_ACTION_COMPLETE_EMPTY_STATE_CTA

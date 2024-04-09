@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return C
+    return _
   }
 });
 var a = l("735250");
@@ -19,12 +19,12 @@ var s = l("442837"),
   S = l("689938"),
   E = l("769138");
 
-function C(e) {
+function _(e) {
   let {
     selectedChannelId: t,
     guildId: l,
-    onChangeSelectedChannelId: C
-  } = e, _ = (0, s.useStateFromStores)([o.default], () => o.default.getCurrentUser()), g = (0, s.useStateFromStores)([r.default, i.default, u.default], () => (0, c.getStreamEligibleChannels)(i.default.getChannels(l), r.default, u.default)), N = (0, s.useStateFromStores)([d.default], () => d.default.getVoiceStates(l)), h = g.map(e => {
+    onChangeSelectedChannelId: _
+  } = e, C = (0, s.useStateFromStores)([o.default], () => o.default.getCurrentUser()), g = (0, s.useStateFromStores)([r.default, i.default, u.default], () => (0, c.getStreamEligibleChannels)(i.default.getChannels(l), r.default, u.default)), N = (0, s.useStateFromStores)([d.default], () => d.default.getVoiceStates(l)), h = g.map(e => {
     var l;
     return {
       name: (0, a.jsx)(f.default, {
@@ -33,7 +33,7 @@ function C(e) {
           let {
             user: t
           } = e;
-          return t.id !== (null == _ ? void 0 : _.id)
+          return t.id !== (null == C ? void 0 : C.id)
         }).map(e => {
           let {
             user: t
@@ -57,7 +57,7 @@ function C(e) {
         let {
           value: t
         } = e;
-        return C(t)
+        return _(t)
       }
     })
   })

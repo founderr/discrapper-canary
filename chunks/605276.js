@@ -12,8 +12,8 @@ var l = a("735250"),
   f = a("592125"),
   m = a("375954"),
   h = a("496675"),
-  g = a("760053"),
-  E = a("768581"),
+  E = a("760053"),
+  g = a("768581"),
   _ = a("526120"),
   I = a("825334"),
   x = a("981631"),
@@ -82,7 +82,7 @@ let C = n.memo(function(e) {
       onClick: e => A(e),
       children: (0, l.jsxs)(l.Fragment, {
         children: [(() => {
-          let e = E.default.getResourceChannelIconURL({
+          let e = g.default.getResourceChannelIconURL({
             channelId: t,
             icon: u
           });
@@ -97,7 +97,7 @@ let C = n.memo(function(e) {
             alt: p.alt
           }) : (0, l.jsx)("div", {
             className: v.placeholderImage,
-            children: (0, l.jsx)(g.default, {})
+            children: (0, l.jsx)(E.default, {})
           })
         })(), (0, l.jsx)(i.Text, {
           className: v.guildInfoText,

@@ -25,11 +25,11 @@ function _(e) {
     dontCloseOnActionIfHoldingShiftKey: T,
     dontCloseOnAction: f,
     onClose: S
-  } = e, A = r.useRef(null);
+  } = e, h = r.useRef(null);
   r.useEffect(() => {
-    s && (0, l.ensureItemVisible)(A)
+    s && (0, l.ensureItemVisible)(h)
   }, [s]);
-  let h = r.useCallback(e => {
+  let A = r.useCallback(e => {
       if (null == I) return !1;
       !(e.shiftKey && T) && !f && S(), e.persist(), requestAnimationFrame(() => I(e))
     }, [I, S, T, f]),
@@ -37,9 +37,9 @@ function _(e) {
       [d.focused]: s
     }) : d.customItem;
   return (0, i.jsx)(o.Clickable, {
-    innerRef: A,
+    innerRef: h,
     className: m,
-    onClick: _ ? void 0 : h,
+    onClick: _ ? void 0 : A,
     "aria-disabled": _,
     ...E,
     children: t({

@@ -1,13 +1,13 @@
 "use strict";
 a.r(t), a.d(t, {
   getDescriptionFromReason: function() {
-    return E
+    return g
   },
   useGuildFeedFeedback: function() {
     return _
   },
   useShowFeedback: function() {
-    return g
+    return E
   }
 }), a("47120");
 var l = a("470079"),
@@ -23,7 +23,7 @@ var l = a("470079"),
   m = a("981631"),
   h = a("689938");
 
-function g() {
+function E() {
   let e = l.useMemo(() => r.default.getExperimentBucket(o.GuildHomeFeedbackExperiment.definition.id), []),
     [t, a] = l.useState(!1),
     n = l.useMemo(() => s.Storage.get(f.GUILD_FEED_FEEDBACK_LAST_SEEN), [t]);
@@ -33,7 +33,7 @@ function g() {
   }
 }
 
-function E(e) {
+function g(e) {
   switch (e) {
     case f.GuildFeedFeedbackReason.ALREADY_SAW:
       return h.default.Messages.GUILD_FEED_FEEDBACK_OPTION_ALREADY_SAW;
@@ -67,15 +67,15 @@ function _(e) {
     guildId: t,
     guildFeedItem: a,
     setOnDismissFeedback: r
-  } = e, [o, h] = l.useState(), [g, _] = l.useState(new Set), [I, x] = l.useState(), [S, v] = l.useState(!1), [C, N] = l.useState(!1), [p, T] = l.useState(!1), A = l.useCallback(e => {
+  } = e, [o, h] = l.useState(), [E, _] = l.useState(new Set), [I, x] = l.useState(), [S, v] = l.useState(!1), [C, N] = l.useState(!1), [p, T] = l.useState(!1), A = l.useCallback(e => {
     h(e), T(!0), v(!1), setTimeout(() => {
       T(!1)
     }, f.GUILD_FEED_FEEDBACK_ANIMATION_DURATION + 150)
   }, [h, v, T]), j = l.useCallback(e => {
-    e === f.GuildFeedFeedbackReason.OTHER && g.has(f.GuildFeedFeedbackReason.OTHER) && x(null);
-    let t = new Set(g);
+    e === f.GuildFeedFeedbackReason.OTHER && E.has(f.GuildFeedFeedbackReason.OTHER) && x(null);
+    let t = new Set(E);
     t.has(e) ? t.delete(e) : t.add(e), _(t)
-  }, [g, x, _]), M = l.useCallback(() => {
+  }, [E, x, _]), M = l.useCallback(() => {
     v(!0), _(new Set)
   }, [v, _]), D = l.useCallback(e => {
     (function(e) {
@@ -99,7 +99,7 @@ function _(e) {
         reason_codes: r,
         reason_descriptions: r.map(e => {
           var t;
-          return null !== (t = E(e)) && void 0 !== t ? t : ""
+          return null !== (t = g(e)) && void 0 !== t ? t : ""
         }),
         user_feedback: i
       })
@@ -108,14 +108,14 @@ function _(e) {
       guildFeedItem: a,
       dismissed: e,
       selectedRating: o,
-      selectedReasons: g,
+      selectedReasons: E,
       userFeedback: I
     })
-  }, [t, a, o, g, I]), F = l.useCallback(() => {
+  }, [t, a, o, E, I]), F = l.useCallback(() => {
     s.Storage.set(f.GUILD_FEED_FEEDBACK_LAST_SEEN, Date.now()), null == r || r(!0), !C && D(!0)
   }, [D, r, C]), L = l.useCallback(() => {
     D(!1), N(!0), s.Storage.set(f.GUILD_FEED_FEEDBACK_LAST_SEEN, Date.now())
-  }, [D]), R = l.useMemo(() => g.size > 0 && (!g.has(f.GuildFeedFeedbackReason.OTHER) || null != I && "" !== I), [g, I]), b = (0, n.useStateFromStores)([i.default], () => i.default.useReducedMotion), G = l.useRef(!1);
+  }, [D]), R = l.useMemo(() => E.size > 0 && (!E.has(f.GuildFeedFeedbackReason.OTHER) || null != I && "" !== I), [E, I]), b = (0, n.useStateFromStores)([i.default], () => i.default.useReducedMotion), G = l.useRef(!1);
   return l.useEffect(() => () => {
     G.current = !0
   }, []), l.useEffect(() => () => {
@@ -123,7 +123,7 @@ function _(e) {
   }, [o, F]), {
     selectedRating: o,
     setSelectedRating: A,
-    selectedReasons: g,
+    selectedReasons: E,
     setSelectedReasons: j,
     setUserFeedback: x,
     backPressed: S,

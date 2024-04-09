@@ -12,8 +12,8 @@ var l = a("735250"),
   f = a("6025"),
   m = a("897473"),
   h = a("433355"),
-  g = a("592125"),
-  E = a("699516"),
+  E = a("592125"),
+  g = a("699516"),
   _ = a("823379"),
   I = a("642101"),
   x = a("971930"),
@@ -44,9 +44,9 @@ t.default = n.forwardRef(function(e, t) {
     setOnDismissedFeedback: H
   } = e, {
     messages: k
-  } = O, U = k[0].message, w = k[k.length - 1].message, P = w.channel_id, B = (0, i.useStateFromStoresArray)([I.default], () => k.map(e => I.default.getCachedMessage(G, P, e.message.id)).filter(_.isNotNullish), [G, P, k]), V = (0, i.useStateFromStores)([g.default], () => g.default.getChannel(P)), W = (0, o.getChannelIconComponent)(V, void 0, {
+  } = O, U = k[0].message, w = k[k.length - 1].message, P = w.channel_id, B = (0, i.useStateFromStoresArray)([I.default], () => k.map(e => I.default.getCachedMessage(G, P, e.message.id)).filter(_.isNotNullish), [G, P, k]), V = (0, i.useStateFromStores)([E.default], () => E.default.getChannel(P)), W = (0, o.getChannelIconComponent)(V, void 0, {
     textFocused: !0
-  }), K = (0, o.getChannelIconTooltipText)(V), z = (0, u.default)(V), [Y, Z] = n.useState(!1), X = (0, i.useStateFromStores)([E.default], () => null != w && E.default.isBlocked(w.author.id)), J = (0, s.useListItem)(null !== (b = null === (a = B[B.length - 1]) || void 0 === a ? void 0 : a.id) && void 0 !== b ? b : O.id), q = O.id, Q = (0, i.useStateFromStores)([h.default], () => h.default.getSidebarState(D.StaticChannelRoute.GUILD_HOME)), $ = (0, x.getSidebarMessageId)(Q, V), ee = null != $ && U.id === $, {
+  }), K = (0, o.getChannelIconTooltipText)(V), z = (0, u.default)(V), [Y, Z] = n.useState(!1), X = (0, i.useStateFromStores)([g.default], () => null != w && g.default.isBlocked(w.author.id)), J = (0, s.useListItem)(null !== (b = null === (a = B[B.length - 1]) || void 0 === a ? void 0 : a.id) && void 0 !== b ? b : O.id), q = O.id, Q = (0, i.useStateFromStores)([h.default], () => h.default.getSidebarState(D.StaticChannelRoute.GUILD_HOME)), $ = (0, x.getSidebarMessageId)(Q, V), ee = null != $ && U.id === $, {
     handleItemClick: et,
     handleChannelClick: ea,
     handleCardClick: el,

@@ -15,12 +15,12 @@ function S(e) {
   I = l()(I).reject(t => t.guildId === e).keyBy("threadId").value()
 }
 
-function A(e) {
+function h(e) {
   var t;
-  null === (t = e.threads) || void 0 === t || t.forEach(h)
+  null === (t = e.threads) || void 0 === t || t.forEach(A)
 }
 
-function h(e) {
+function A(e) {
   c.ALL_CHANNEL_TYPES.has(e.type) && null != e.member && (I[e.id] = {
     threadId: e.id,
     guildId: e.guild_id,
@@ -89,7 +89,7 @@ a = "JoinedThreadsStore", (s = "displayName") in(r = O) ? Object.defineProperty(
 let p = new O(d.default, {
   CONNECTION_OPEN: function(e) {
     T.reset(), f = new Set, I = {}, e.guilds.forEach(e => {
-      A(e)
+      h(e)
     })
   },
   OVERLAY_INITIALIZE: function(e) {
@@ -105,7 +105,7 @@ let p = new O(d.default, {
     let {
       guild: t
     } = e;
-    S(t.id), A(t)
+    S(t.id), h(t)
   },
   GUILD_DELETE: function(e) {
     let {
@@ -117,7 +117,7 @@ let p = new O(d.default, {
     let {
       channel: t
     } = e;
-    h(t)
+    A(t)
   },
   THREAD_LIST_SYNC: N,
   SEARCH_FINISH: N,

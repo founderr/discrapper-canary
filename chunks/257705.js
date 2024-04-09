@@ -23,18 +23,18 @@ function u(e, t) {
       fade: T = !1,
       onScroll: f,
       style: S,
-      ...A
-    } = s, h = r.useRef(null), m = (0, l.usePaddingFixes)({
+      ...h
+    } = s, A = r.useRef(null), m = (0, l.usePaddingFixes)({
       paddingFix: I,
       orientation: E,
       dir: c,
       className: _,
-      scrollerRef: h,
+      scrollerRef: A,
       specs: n
     });
     return (0, i.jsx)("div", {
       ref: e => {
-        "function" == typeof u ? u(e) : null != u && (u.current = e), h.current = e
+        "function" == typeof u ? u(e) : null != u && (u.current = e), A.current = e
       },
       className: a()(_, {
         [e]: !0,
@@ -42,9 +42,9 @@ function u(e, t) {
       }),
       style: (0, l.getMergedOrientationStyles)(S, E),
       dir: c,
-      ...A,
+      ...h,
       children: (0, i.jsxs)(o.FocusRingScope, {
-        containerRef: h,
+        containerRef: A,
         children: [d, m]
       })
     })

@@ -16,15 +16,15 @@ var l = a("735250"),
   f = a("605236"),
   m = a("924301"),
   h = a("554747"),
-  g = a("458513"),
-  E = a("369701"),
+  E = a("458513"),
+  g = a("369701"),
   _ = a("689938"),
   I = a("520064");
 
 function x(e) {
   let {
     guild: t
-  } = e, s = (0, c.default)(E.COLLAPSED_SIZE_MEDIA_QUERY), d = (0, h.default)(t.id), x = n.useMemo(() => {
+  } = e, s = (0, c.default)(g.COLLAPSED_SIZE_MEDIA_QUERY), d = (0, h.default)(t.id), x = n.useMemo(() => {
     let e = d.filter(e => (0, m.isGuildScheduledEventActive)(e));
     return s && e.length > 0 ? i().head(e) : i().chain(d).filter(e => !(0, m.isGuildScheduledEventActive)(e)).minBy(e => r()(e.scheduled_start_time)).value()
   }, [d, s]);
@@ -59,7 +59,7 @@ function x(e) {
       }) : null]
     }), (0, l.jsx)("div", {
       className: I.events,
-      children: (0, l.jsx)(g.default, {
+      children: (0, l.jsx)(E.default, {
         event: x,
         isInList: !1
       })

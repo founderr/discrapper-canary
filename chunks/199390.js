@@ -12,7 +12,7 @@ t.default = n.memo(function(e) {
     guildId: t,
     feedItemId: a,
     messages: o
-  } = e, c = n.useRef([]), f = o.some(e => e.attachments.length > 0) ? 4 : 8, [m, h] = n.useState(), [g, E] = n.useState(), [_, I] = (0, i.default)(t, a);
+  } = e, c = n.useRef([]), f = o.some(e => e.attachments.length > 0) ? 4 : 8, [m, h] = n.useState(), [E, g] = n.useState(), [_, I] = (0, i.default)(t, a);
   if (n.useLayoutEffect(() => {
       let e = 0;
       for (let [a, l] of c.current.entries()) {
@@ -21,7 +21,7 @@ t.default = n.memo(function(e) {
         let n = parseFloat(null !== (t = window.getComputedStyle(l).getPropertyValue("line-height")) && void 0 !== t ? t : "0"),
           s = l.scrollHeight / n;
         if ((e += s) > f) {
-          h(a), E(s - (e - f));
+          h(a), g(s - (e - f));
           break
         }
       }
@@ -31,11 +31,11 @@ t.default = n.memo(function(e) {
     children: o.map((t, a) => {
       if (null != m && a > m && !_) return null;
       let n = m === a,
-        i = n && null != g ? function(e) {
+        i = n && null != E ? function(e) {
           if (e >= 10) return u.clampLarge;
           if (e >= 4 && e < 10) return u.clampMed;
           if (e < 4) return u.clampSmall
-        }(g) : null,
+        }(E) : null,
         f = n && null != i && !_;
       return (0, l.jsx)(d.GuildFeedMessage, {
         message: t,

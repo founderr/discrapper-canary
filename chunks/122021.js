@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   useLegacyPlatformType: function() {
-    return h
+    return A
   },
   usePlatformAllowed: function() {
     return S
   },
   usePlatforms: function() {
-    return A
+    return h
   }
 }), n("47120");
 var i = n("470079"),
@@ -43,7 +43,7 @@ function S(e) {
   }
 }
 
-function A() {
+function h() {
   let e = (0, a.useStateFromStores)([u.default], () => u.default.getAccounts()),
     t = S({
       forUserProfile: !1
@@ -58,7 +58,7 @@ function A() {
   }, e => n.has(e.type), e => e.hasMetadata, e => !c.ACTIVITY_PLATFORM_TYPES.has(e.type), e => e.name])
 }
 
-function h(e) {
+function A(e) {
   let [t, n] = i.useState(!1);
 
   function r(e) {

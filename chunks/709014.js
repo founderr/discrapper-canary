@@ -23,8 +23,8 @@ let I = r.forwardRef(function(e, t) {
     width: T,
     height: f,
     className: S,
-    initialAnimation: A,
-    markers: h
+    initialAnimation: h,
+    markers: A
   } = e, [m, N] = r.useState(null), O = r.useRef(null), p = r.useRef(null), R = r.useRef(null), C = "custom" === I ? {
     width: T,
     height: f
@@ -37,7 +37,7 @@ let I = r.forwardRef(function(e, t) {
     play: e => {
       if (null != R.current) {
         if (p.current = e, v) {
-          let t = h[e];
+          let t = A[e];
           R.current.setSegment(t.start, t.start + t.duration), R.current.goToAndStop(t.duration, !0)
         } else R.current.setLoop(!g && e.includes("hover")), R.current.goToAndPlay(e)
       }
@@ -48,16 +48,16 @@ let I = r.forwardRef(function(e, t) {
     stopIfPlaying: e => {
       null != R.current && !v && p.current === e && R.current.goToAndStop(0, !0)
     }
-  }), [v, g, h]), r.useEffect(() => {
+  }), [v, g, A]), r.useEffect(() => {
     null == m && o().then(e => N(e.default))
   }, [m, o]), r.useEffect(() => (n.e("23755").then(n.t.bind(n, "500923", 23)).then(e => {
     var t;
     let n, {
         default: i
       } = e,
-      r = null !== (t = p.current) && void 0 !== t ? t : A;
-    if (null != r && null != h[r]) {
-      let e = h[r];
+      r = null !== (t = p.current) && void 0 !== t ? t : h;
+    if (null != r && null != A[r]) {
+      let e = A[r];
       n = [e.start, e.start + e.duration]
     }
     null != O.current && (R.current = i.loadAnimation({
@@ -71,7 +71,7 @@ let I = r.forwardRef(function(e, t) {
   }), () => {
     var e;
     null === (e = R.current) || void 0 === e || e.destroy()
-  }), [m, A, h]), (0, i.jsx)("div", {
+  }), [m, h, A]), (0, i.jsx)("div", {
     style: {
       "--__lottieIconColor": null != s && "string" == typeof s ? s : null == s ? void 0 : s.css,
       display: "flex",

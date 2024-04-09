@@ -53,7 +53,7 @@ function M(e) {
 }
 
 function R(e) {
-  m[e.joinRequestId] = e, O.set(e.joinRequestId, e), (0, I.isSubmittedApplicationStatus)(e.applicationStatus) && (C.delete(e.joinRequestId), U.set(e.joinRequestId, e)), (0, I.isActionedApplicationStatus)(e.applicationStatus) && (U.delete(e.joinRequestId), C.set(e.joinRequestId, e))
+  P[e.joinRequestId] = e, O.set(e.joinRequestId, e), (0, I.isSubmittedApplicationStatus)(e.applicationStatus) && (C.delete(e.joinRequestId), U.set(e.joinRequestId, e)), (0, I.isActionedApplicationStatus)(e.applicationStatus) && (U.delete(e.joinRequestId), C.set(e.joinRequestId, e))
 }
 
 function f(e) {
@@ -68,11 +68,11 @@ function f(e) {
 }
 let h = {},
   p = {},
-  P = {},
-  m = {};
-class y extends(E = T.default.Store) {
+  y = {},
+  P = {};
+class m extends(E = T.default.Store) {
   getRequest(e) {
-    return m[e]
+    return P[e]
   }
   getRequests(e, t) {
     let s = c.GUILD_JOIN_REQUESTS_BY_STATUS(e, t);
@@ -96,16 +96,16 @@ class y extends(E = T.default.Store) {
   }
   getSelectedGuildJoinRequest(e) {
     var t;
-    let s = P[e];
+    let s = y[e];
     return null != s ? (t = s.joinRequestId, O.get(t)) : null
   }
 }
-n = "GuildJoinRequestStoreV2", (a = "displayName") in(_ = y) ? Object.defineProperty(_, a, {
+n = "GuildJoinRequestStoreV2", (a = "displayName") in(_ = m) ? Object.defineProperty(_, a, {
   value: n,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : _[a] = n, t.default = new y(i.default, {
+}) : _[a] = n, t.default = new m(i.default, {
   GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS: function(e) {
     let {
       joinRequest: t
@@ -156,7 +156,7 @@ n = "GuildJoinRequestStoreV2", (a = "displayName") in(_ = y) ? Object.defineProp
     let a = (t = E, O.get(t));
     if (null != a) {
       ;
-      g(_, null, a.applicationStatus), s = E, delete m[s], O.delete(s), U.delete(s), C.delete(s)
+      g(_, null, a.applicationStatus), s = E, delete P[s], O.delete(s), U.delete(s), C.delete(s)
     }
   },
   GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB: function(e) {
@@ -182,6 +182,6 @@ n = "GuildJoinRequestStoreV2", (a = "displayName") in(_ = y) ? Object.defineProp
       guildId: t,
       request: s
     } = e;
-    P[t] = s
+    y[t] = s
   }
 })

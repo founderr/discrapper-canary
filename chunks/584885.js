@@ -11,13 +11,13 @@ var a = n("735250"),
   c = n("127541"),
   f = n("981631"),
   E = n("912625");
-let h = [
+let _ = [
     [1696, 20],
     [1432, 16],
     [1168, 12],
     [0, 8]
   ],
-  _ = [
+  h = [
     [1696, 30],
     [1432, 24],
     [1168, 18],
@@ -30,8 +30,8 @@ t.default = e => {
     guildsData: m,
     analyticsContext: S,
     theme: I,
-    onViewGuild: p,
-    fetchGuilds: T,
+    onViewGuild: T,
+    fetchGuilds: p,
     onGuildCardSeen: g,
     currentCategoryId: N,
     loadId: A,
@@ -39,9 +39,9 @@ t.default = e => {
     showMoreCards: O = !1
   } = e;
   s.useEffect(() => {
-    i.default.wait(() => T())
+    i.default.wait(() => p())
   }, [N]);
-  let v = (0, c.default)(O ? _ : h),
+  let v = (0, c.default)(O ? h : _),
     {
       analyticsLocations: L
     } = (0, r.default)();
@@ -51,7 +51,7 @@ t.default = e => {
     loading: M
   } = m, y = null == P || 0 === P.length;
   if (!M && y) return null;
-  let x = async e => {
+  let D = async e => {
     if ((0, o.isAtGuildCapAndNonPremium)())(0, u.default)({
       analyticsSource: {
         page: f.AnalyticsPages.GUILD_DISCOVERY
@@ -64,7 +64,7 @@ t.default = e => {
     });
     else {
       let t = P.findIndex(t => t.id === e);
-      await p(e, t, S, A)
+      await T(e, t, S, A)
     }
   };
   if (M || null == P) {
@@ -74,7 +74,7 @@ t.default = e => {
   } else t = P.slice(0, v).map(e => (0, a.jsx)(d.default, {
     className: E.__invalid_guildCard,
     guild: e,
-    onView: x,
+    onView: D,
     theme: I,
     onGuildCardSeen: g,
     onTagClick: R

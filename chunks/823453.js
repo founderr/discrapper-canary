@@ -15,8 +15,8 @@ var i = n("735250"),
   T = n("19759"),
   f = n("706454"),
   S = n("210887"),
-  A = n("451478"),
-  h = n("792125"),
+  h = n("451478"),
+  A = n("792125"),
   m = n("597952"),
   N = n("252618"),
   O = n("587061"),
@@ -46,7 +46,7 @@ t.default = r.memo(function(e) {
       } = (0, d.useStateFromStoresObject)([S.default, f.default], () => ({
         locale: f.default.locale,
         theme: S.default.theme
-      })), s = (0, d.useStateFromStores)([A.default], () => A.default.isFocused(), []), {
+      })), s = (0, d.useStateFromStores)([h.default], () => h.default.isFocused(), []), {
         reducedMotion: o,
         alwaysShowLinkDecorations: _
       } = r.useContext(c.AccessibilityPreferencesContext), {
@@ -98,12 +98,12 @@ t.default = r.memo(function(e) {
           "disable-forced-colors": !D && "active" === v,
           "enable-forced-colors": D,
           "show-redesigned-icons": b
-        }, (0, h.getThemeClass)(n), (0, m.default)(), N)
+        }, (0, A.getThemeClass)(n), (0, m.default)(), N)
       })
     }(R), function() {
       let [e, t] = r.useState([]);
       return r.useEffect(() => {
-        Promise.all(_.fontsToPreload.map(e => n("651434")("@discordapp/tokens/typography/generated/gg-sans/".concat(e, ".woff2").replace("@discordapp/tokens/typography/generated/gg-sans/", "./")).then(e => {
+        Promise.all(_.fontsToPreload.map(e => n("867444")("@discordapp/tokens/typography/generated/gg-sans/".concat(e, ".woff2").replace("@discordapp/tokens/typography/generated/gg-sans/", "./")).then(e => {
           let {
             default: t
           } = e;

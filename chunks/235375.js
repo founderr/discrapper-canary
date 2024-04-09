@@ -90,7 +90,7 @@ let m = i().defaultRules.link,
     },
     image: {
       react(e, t, l) {
-        let s = a("302731")("../../images/change-log/".concat(e.target).replace("../../images/change-log/", "./"));
+        let s = a("866483")("../../images/change-log/".concat(e.target).replace("../../images/change-log/", "./"));
         return (0, n.jsx)("img", {
           alt: e.alt,
           src: s

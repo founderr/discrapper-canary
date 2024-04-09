@@ -4,13 +4,13 @@ s.r(t), s.d(t, {
     return h
   },
   getActiveAgoTimestamp: function() {
-    return m
+    return P
   },
   getFirstRouteFor: function() {
     return f
   },
   useChannelBrowserChannelCount: function() {
-    return P
+    return y
   },
   useChannelBrowserSections: function() {
     return p
@@ -121,7 +121,7 @@ function p(e, t, s, E) {
   }), n
 }
 
-function P(e) {
+function y(e) {
   var t, s;
   let E = (0, u.useStateFromStores)([N.default], () => N.default.getCategories(e)),
     _ = E._categories.length,
@@ -131,7 +131,7 @@ function P(e) {
   return null == n ? 0 : 0 === n.length ? a.index + 2 - _ : n[n.length - 1].index + 2 - _
 }
 
-function m(e) {
+function P(e) {
   var t;
   return C.default.Messages.CHANNEL_BROWSER_ACTIVE_TEXT.format({
     timeAgo: T()(D.default.extractTimestamp(null !== (t = g.default.lastMessageId(e)) && void 0 !== t ? t : e)).fromNow()

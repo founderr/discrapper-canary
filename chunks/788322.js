@@ -15,14 +15,14 @@ var a = n("735250"),
   c = n("451603"),
   f = n("885714"),
   E = n("940627"),
-  h = n("806519"),
-  _ = n("768581"),
+  _ = n("806519"),
+  h = n("768581"),
   C = n("900849"),
   m = n("556017"),
   S = n("879484"),
   I = n("26580"),
-  p = n("206887"),
-  T = n("981631"),
+  T = n("206887"),
+  p = n("981631"),
   g = n("689938"),
   N = n("208596"),
   A = n("129512"),
@@ -41,25 +41,25 @@ t.default = e => {
     id: P,
     discoverySplash: M,
     icon: y,
-    name: x,
-    description: D,
+    name: D,
+    description: x,
     presenceCount: b,
     memberCount: U,
     keywords: j
   } = l, [G, w] = s.useState(!1), [k, F] = s.useState(!1), {
     analyticsLocations: B
-  } = (0, u.default)(), H = _.default.getGuildDiscoverySplashURL({
+  } = (0, u.default)(), H = h.default.getGuildDiscoverySplashURL({
     id: P,
     splash: M,
     size: 240 * (0, d.getDevicePixelRatio)()
   }), V = null != H ? H : function(e) {
     switch (e) {
-      case T.ThemeTypes.DARK:
+      case p.ThemeTypes.DARK:
         return A;
-      case T.ThemeTypes.LIGHT:
+      case p.ThemeTypes.LIGHT:
         return R
     }
-  }(O), Y = null !== (t = _.default.getGuildIconURL({
+  }(O), Y = null !== (t = h.default.getGuildIconURL({
     id: P,
     icon: y,
     size: 32
@@ -71,11 +71,11 @@ t.default = e => {
       if ((0, c.isAtGuildCapAndNonPremium)()) {
         (0, f.default)({
           analyticsSource: {
-            page: T.AnalyticsPages.GUILD_DISCOVERY
+            page: p.AnalyticsPages.GUILD_DISCOVERY
           },
           analyticsLocation: {
-            page: T.AnalyticsPages.GUILD_DISCOVERY,
-            section: T.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
+            page: p.AnalyticsPages.GUILD_DISCOVERY,
+            section: p.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
           },
           analyticsLocations: B
         });
@@ -140,8 +140,8 @@ t.default = e => {
           }),
           children: [(0, a.jsxs)("div", {
             className: N.header,
-            children: [(0, a.jsx)(h.default, {
-              mask: h.default.Masks.SQUIRCLE,
+            children: [(0, a.jsx)(_.default, {
+              mask: _.default.Masks.SQUIRCLE,
               width: 32,
               height: 32,
               children: (0, a.jsx)("img", {
@@ -160,13 +160,13 @@ t.default = e => {
               }), (0, a.jsx)(r.Heading, {
                 variant: "heading-md/semibold",
                 className: N.headerTitle,
-                children: x
+                children: D
               })]
             })]
           }), (0, a.jsx)(r.Text, {
             className: N.description,
             variant: "text-sm/normal",
-            children: D
+            children: x
           }), K && null != j && null != L && (0, a.jsx)(I.DiscoveryTags, {
             guildId: l.id,
             discoveryTagStyle: I.DiscoveryTagStyle.ALT,
@@ -201,7 +201,7 @@ t.default = e => {
           })]
         }), z ? (0, a.jsx)("div", {
           className: N.actionButtons,
-          children: (0, a.jsx)(p.default, {
+          children: (0, a.jsx)(T.default, {
             guild: l
           })
         }) : null]

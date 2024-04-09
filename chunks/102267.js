@@ -15,14 +15,14 @@ var a = n("735250"),
   c = n("423000"),
   f = n("200876"),
   E = n("674180"),
-  h = n("38618"),
-  _ = n("984370"),
+  _ = n("38618"),
+  h = n("984370"),
   C = n("430824"),
   m = n("351402"),
   S = n("730647"),
   I = n("772021"),
-  p = n("396828"),
-  T = n("475413"),
+  T = n("396828"),
+  p = n("475413"),
   g = n("20967"),
   N = n("504762"),
   A = n("807152"),
@@ -33,15 +33,15 @@ var a = n("735250"),
 function L(e) {
   let {
     guildId: t
-  } = e, n = (0, i.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), L = (0, i.useStateFromStores)([h.default], () => h.default.isConnected()), P = (0, f.default)(t), M = (0, I.default)(t), y = (0, i.useStateFromStores)([m.default], () => m.default.isSubscriptionFetching), x = (0, S.useGroupListingsFetchContext)(), {
-    shouldHideGuildPurchaseEntryPoints: D,
+  } = e, n = (0, i.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), L = (0, i.useStateFromStores)([_.default], () => _.default.isConnected()), P = (0, f.default)(t), M = (0, I.default)(t), y = (0, i.useStateFromStores)([m.default], () => m.default.isSubscriptionFetching), D = (0, S.useGroupListingsFetchContext)(), {
+    shouldHideGuildPurchaseEntryPoints: x,
     restrictionsLoading: b
-  } = (0, E.useShouldHideGuildPurchaseEntryPoints)(t), U = null == n || !x || y || b;
+  } = (0, E.useShouldHideGuildPurchaseEntryPoints)(t), U = null == n || !D || y || b;
   (0, d.usePageTitle)({
     subsection: O.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
     location: null == n ? void 0 : n.name
   }), (0, u.default)(l.isMobile ? "role-subscriptions-overview" : void 0);
-  let j = L && (null == n || !(P || M) || D && !b);
+  let j = L && (null == n || !(P || M) || x && !b);
   if (s.useEffect(() => {
       o.fetchSubscriptions()
     }, []), s.useEffect(() => {
@@ -54,13 +54,13 @@ function L(e) {
   }
   return (0, a.jsxs)("div", {
     className: v.container,
-    children: [(0, a.jsxs)(_.default, {
+    children: [(0, a.jsxs)(h.default, {
       toolbar: (0, a.jsx)(s.Fragment, {}),
       className: v.headerBar,
-      children: [(0, a.jsx)(_.default.Icon, {
-        icon: p.default,
+      children: [(0, a.jsx)(h.default.Icon, {
+        icon: T.default,
         "aria-hidden": !0
-      }), (0, a.jsx)(_.default.Title, {
+      }), (0, a.jsx)(h.default.Title, {
         children: O.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
       })]
     }), (0, a.jsx)("div", {
@@ -71,7 +71,7 @@ function L(e) {
         className: v.scroller,
         children: (0, a.jsx)("div", {
           className: v.scrollerContent,
-          children: U ? (0, a.jsx)(r.Spinner, {}) : (0, a.jsx)(T.default, {
+          children: U ? (0, a.jsx)(r.Spinner, {}) : (0, a.jsx)(p.default, {
             guild: n
           })
         })

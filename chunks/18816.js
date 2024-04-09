@@ -17,21 +17,21 @@ var l = s("481060"),
   f = s("572004"),
   S = s("591759"),
   E = s("135431"),
-  I = s("993409"),
-  m = s("981631"),
+  m = s("993409"),
+  I = s("981631"),
   T = s("689938");
 
 function p(e) {
   var t;
   let {
     application: s
-  } = e, p = null !== (t = u.default.getChannelId()) && void 0 !== t ? t : m.EMPTY_STRING_SNOWFLAKE_ID, {
+  } = e, p = null !== (t = u.default.getChannelId()) && void 0 !== t ? t : I.EMPTY_STRING_SNOWFLAKE_ID, {
     appsInGDMEnabled: N,
     availableApplications: A
   } = (0, r.usePrivateChannelIntegrationState)({
     channelId: p
   }), x = N && null != A.find(e => e.id === (null == s ? void 0 : s.id)), _ = null != s.customInstallUrl || !S.default.isDiscordUrl(s.customInstallUrl);
-  return (0, a.jsx)(I.default, {
+  return (0, a.jsx)(m.default, {
     icon: c.default,
     text: (() => {
       let e = x ? T.default.Messages.ADD : T.default.Messages.APPLICATION_ADD_BUTTON;
@@ -63,7 +63,7 @@ function p(e) {
         (0, o.openOAuth2Modal)({
           channelId: p,
           clientId: s.id,
-          scopes: [m.OAuth2Scopes.APPLICATIONS_COMMANDS],
+          scopes: [I.OAuth2Scopes.APPLICATIONS_COMMANDS],
           disableGuildSelect: !0
         });
         return

@@ -20,7 +20,7 @@ var i, r, s, a = n("735250"),
   f = n("689938"),
   S = n("757746");
 
-function A(e, t, n) {
+function h(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -28,7 +28,7 @@ function A(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let h = Object.freeze({
+let A = Object.freeze({
   SMALL: S.small,
   MEDIUM: S.medium,
   LARGE: S.large
@@ -40,7 +40,7 @@ let m = e => {
     onClear: n,
     className: i,
     themeOverride: r,
-    size: s = h.SMALL
+    size: s = A.SMALL
   } = e;
   return (0, a.jsx)(d.Clickable, {
     className: u()(i, S.iconLayout, s, (0, I.getThemeClass)(r), {
@@ -169,8 +169,8 @@ class N extends(r = o.Component) {
       maxHeight: l,
       tags: E,
       onActivate: T,
-      className: A,
-      inputProps: h,
+      className: h,
+      inputProps: A,
       focusAfterReady: N
     } = this.props, O = null != t && t.length > 0, p = !1, R = [];
     return null != E && E.length > 0 && ("string" == typeof E[0] ? E.forEach((e, t) => R.push((0, a.jsxs)(d.Anchor, {
@@ -211,7 +211,7 @@ class N extends(r = o.Component) {
       ringTarget: this.containerRef,
       children: (0, a.jsx)("div", {
         ref: this.containerRef,
-        className: u()(A, S.container, o, (0, I.getThemeClass)(i), {
+        className: u()(h, S.container, o, (0, I.getThemeClass)(i), {
           [S.disabled]: r
         }),
         children: (0, a.jsxs)(d.ScrollerThin, {
@@ -236,7 +236,7 @@ class N extends(r = o.Component) {
             autoFocus: !N && e,
             onMouseDown: T,
             ...this.defaultInputProps,
-            ...h
+            ...A
           }), null != s ? (0, a.jsx)(m, {
             size: o,
             themeOverride: i,
@@ -248,11 +248,11 @@ class N extends(r = o.Component) {
     })
   }
   constructor(...e) {
-    super(...e), A(this, "defaultInputProps", {
+    super(...e), h(this, "defaultInputProps", {
       role: "combobox",
       "aria-haspopup": "listbox",
       "aria-autocomplete": "list"
-    }), A(this, "ref", o.createRef()), A(this, "containerRef", o.createRef()), A(this, "handleKeyDown", e => {
+    }), h(this, "ref", o.createRef()), h(this, "containerRef", o.createRef()), h(this, "handleKeyDown", e => {
       let {
         onActivate: t,
         onKeyDown: n,
@@ -272,29 +272,29 @@ class N extends(r = o.Component) {
         return
       }
       r && (this.props.gridResults ? this.handleKeyDownGrid(e) : this.handleKeyDownList(e))
-    }), A(this, "handleChange", e => {
+    }), h(this, "handleChange", e => {
       let {
         onQueryChange: t
       } = this.props;
       null != t && t(e.currentTarget.value)
-    }), A(this, "handleFocus", e => {
+    }), h(this, "handleFocus", e => {
       let {
         onFocus: t
       } = this.props;
       null != t && t(e)
-    }), A(this, "handleClear", () => {
+    }), h(this, "handleClear", () => {
       let {
         onClear: e
       } = this.props, {
         current: t
       } = this.ref;
       null != e && e(), null != t && t.focus()
-    }), A(this, "handleRemoveTag", e => {
+    }), h(this, "handleRemoveTag", e => {
       let {
         onRemoveTag: t
       } = this.props;
       null == t || t(e)
-    }), A(this, "focus", () => {
+    }), h(this, "focus", () => {
       let {
         current: e
       } = this.ref;
@@ -302,8 +302,8 @@ class N extends(r = o.Component) {
     })
   }
 }
-A(N, "Sizes", h), A(N, "defaultProps", {
-  size: h.SMALL,
+h(N, "Sizes", A), h(N, "defaultProps", {
+  size: A.SMALL,
   query: "",
   sections: [],
   selectedSection: 0,

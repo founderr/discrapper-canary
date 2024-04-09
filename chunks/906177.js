@@ -16,8 +16,8 @@ var l = a("735250"),
   f = a("271383"),
   m = a("699516"),
   h = a("594174"),
-  g = a("36082"),
-  E = a("880008"),
+  E = a("36082"),
+  g = a("880008"),
   _ = a("5192"),
   I = a("276438"),
   x = a("330249"),
@@ -31,7 +31,7 @@ function p(e) {
     guildId: t,
     feedItem: a,
     onSendFeedback: n
-  } = e, s = (0, x.default)(a), E = s.channel_id, S = (0, d.useStateFromStores)([c.default], () => c.default.getChannel(E)), v = (0, u.default)(S), p = (0, o.getChannelIconComponent)(S), T = (0, d.useStateFromStores)([h.default], () => h.default.getUser(s.author.id)), A = (0, d.useStateFromStores)([c.default, f.default, m.default], () => _.default.getName(t, E, T)), j = e => {
+  } = e, s = (0, x.default)(a), g = s.channel_id, S = (0, d.useStateFromStores)([c.default], () => c.default.getChannel(g)), v = (0, u.default)(S), p = (0, o.getChannelIconComponent)(S), T = (0, d.useStateFromStores)([h.default], () => h.default.getUser(s.author.id)), A = (0, d.useStateFromStores)([c.default, f.default, m.default], () => _.default.getName(t, g, T)), j = e => {
     (0, I.setFeedItemPreference)(t, e), n()
   };
   return (0, l.jsxs)("div", {
@@ -39,7 +39,7 @@ function p(e) {
     children: [(0, l.jsx)(r.Clickable, {
       className: N.option,
       onClick: () => j({
-        channel_id: E,
+        channel_id: g,
         message_id: s.id,
         entity_type: i.GuildFeedPreferenceEntityTypes.MESSAGE
       }),
@@ -51,7 +51,7 @@ function p(e) {
     }), (0, l.jsx)(r.Clickable, {
       className: N.option,
       onClick: () => j({
-        channel_id: E,
+        channel_id: g,
         entity_type: i.GuildFeedPreferenceEntityTypes.CHANNEL
       }),
       children: (0, l.jsx)(r.Text, {
@@ -83,7 +83,7 @@ function p(e) {
         children: C.default.Messages.GUILD_FEED_HIDDEN_MESSAGE_FEEDBACK_SHOW_LESS_USER.format({
           username: A,
           usernameHook: (e, t) => (0, l.jsxs)("span", {
-            children: [(0, l.jsx)(g.default, {
+            children: [(0, l.jsx)(E.default, {
               className: N.mentionIcon,
               width: 20,
               height: 20
@@ -105,7 +105,7 @@ function T(e) {
     listItemProps: u,
     children: [(0, l.jsxs)(v.default, {
       hideBorder: i,
-      children: [(0, l.jsx)(E.default, {
+      children: [(0, l.jsx)(g.default, {
         className: N.icon,
         width: 16,
         height: 16,

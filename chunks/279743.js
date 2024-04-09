@@ -30,9 +30,9 @@ function T(e) {
     opacity: 0
   }), h = (0, d.useToken)(T).spring({
     opacity: 1
-  }), N = e => {
+  }), I = e => {
     e.finished && (null == l || l())
-  }, [I, p] = (0, r.useSpring)(() => ({
+  }, [N, p] = (0, r.useSpring)(() => ({
     immediate: !0,
     from: {
       backgroundColor: m,
@@ -73,10 +73,10 @@ function T(e) {
         duration: A,
         easing: o.default.Easing.ease
       },
-      onRest: N
+      onRest: I
     })
   }, [p]), (0, a.jsx)(r.animated.div, {
-    style: I,
+    style: N,
     className: i()(E.settingsItemHighlight, s),
     children: t
   })

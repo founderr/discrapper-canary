@@ -19,7 +19,7 @@ var i, r = n("735250"),
   f = n("717897"),
   S = n("633353");
 
-function A(e, t, n) {
+function h(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -27,7 +27,7 @@ function A(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let h = (0, l.v4)(),
+let A = (0, l.v4)(),
   m = (0, l.v4)(),
   N = (0, l.v4)();
 class O extends(i = s.Component) {
@@ -104,7 +104,7 @@ class O extends(i = s.Component) {
   renderErrorMessage() {
     let e = this.getErrorMessage();
     return null == e ? null : (0, r.jsx)(c.Text, {
-      id: h,
+      id: A,
       variant: "text-xs/normal",
       color: "text-danger",
       className: T.errorMessage,
@@ -121,8 +121,8 @@ class O extends(i = s.Component) {
       minLength: l,
       maxLength: d,
       allowOverflow: c,
-      spellCheck: A,
-      resizeable: h,
+      spellCheck: h,
+      resizeable: A,
       className: O,
       id: p,
       rows: R,
@@ -146,7 +146,7 @@ class O extends(i = s.Component) {
             className: o()(f.inputDefault, T.textArea, S.scrollbarDefault, O, {
               [f.error]: y,
               [f.disabled]: n,
-              [T.resizeable]: h
+              [T.resizeable]: A
             }),
             "aria-labelledby": P,
             "aria-describedby": U,
@@ -161,7 +161,7 @@ class O extends(i = s.Component) {
             autoFocus: a,
             minLength: l,
             maxLength: c ? void 0 : d,
-            spellCheck: A,
+            spellCheck: h,
             required: L,
             onChange: this.onChange,
             onBlur: this.onBlur,
@@ -187,15 +187,15 @@ class O extends(i = s.Component) {
   }
   constructor(e) {
     var t;
-    super(e), A(this, "getAriaDescribedBy", () => {
+    super(e), h(this, "getAriaDescribedBy", () => {
       var e;
       let {
         maxLength: t,
         minLength: n,
         error: i
       } = this.props, r = [], s = null === (e = this.context) || void 0 === e ? void 0 : e.errorId;
-      return null != s && r.push(s), null != i ? r.push(h) : (null != t && r.push(N), null != n && r.push(m)), r.length > 0 ? r.join(" ") : void 0
-    }), A(this, "onChange", e => {
+      return null != s && r.push(s), null != i ? r.push(A) : (null != t && r.push(N), null != n && r.push(m)), r.length > 0 ? r.join(" ") : void 0
+    }), h(this, "onChange", e => {
       let {
         onChange: t,
         name: n
@@ -203,19 +203,19 @@ class O extends(i = s.Component) {
       null == t || t(e.currentTarget.value, n), this.setState({
         dirty: !0
       })
-    }), A(this, "onFocus", e => {
+    }), h(this, "onFocus", e => {
       let {
         onFocus: t,
         name: n
       } = this.props;
       null == t || t(e, n)
-    }), A(this, "onBlur", e => {
+    }), h(this, "onBlur", e => {
       let {
         onBlur: t,
         name: n
       } = this.props;
       null == t || t(e, n)
-    }), A(this, "onKeyDown", e => {
+    }), h(this, "onKeyDown", e => {
       let {
         onKeyDown: t
       } = this.props;
@@ -225,7 +225,7 @@ class O extends(i = s.Component) {
     }
   }
 }
-A(O, "contextType", d.FormContext), A(O, "defaultProps", {
+h(O, "contextType", d.FormContext), h(O, "defaultProps", {
   name: "",
   disabled: !1,
   placeholder: "",

@@ -16,8 +16,8 @@ var l = a("735250"),
   f = a("901461"),
   m = a("739566"),
   h = a("453687"),
-  g = a("507418"),
-  E = a("348238"),
+  E = a("507418"),
+  g = a("348238"),
   _ = a("38267"),
   I = a("25015"),
   x = a("438075"),
@@ -55,7 +55,7 @@ let B = n.memo(function(e) {
     } = (0, _.default)(t.id, k.DEFAULT_POPOUTS), {
       usernameProfile: o,
       avatarProfile: c
-    } = d, f = (0, E.useContextMenuUser)(t.author.id, a.id), h = (0, E.useClickMessageAuthorUsername)(t, a, o, r), I = (0, E.useClickMessageAuthorAvatar)(c, r), x = n.useCallback(() => r({
+    } = d, f = (0, g.useContextMenuUser)(t.author.id, a.id), h = (0, g.useClickMessageAuthorUsername)(t, a, o, r), I = (0, g.useClickMessageAuthorAvatar)(c, r), x = n.useCallback(() => r({
       usernameProfile: !1,
       avatarProfile: !1,
       referencedUsernameProfile: !1
@@ -70,7 +70,7 @@ let B = n.memo(function(e) {
       repliedMessage: i,
       author: S,
       showTimestampOnHover: t.type !== y.MessageTypes.REPLY,
-      renderPopout: g.default,
+      renderPopout: E.default,
       showAvatarPopout: c,
       showUsernamePopout: o,
       onClickAvatar: I,
@@ -87,8 +87,8 @@ let B = n.memo(function(e) {
       guildId: s,
       channel: u,
       message: m,
-      feedItemId: g,
-      className: E,
+      feedItemId: E,
+      className: g,
       animateAvatar: _,
       contentClassName: D,
       children: G,
@@ -111,8 +111,8 @@ let B = n.memo(function(e) {
     }), et = (0, h.getMessageAriaDescribedBy)(m), ea = null != q ? (0, l.jsx)(r.Clickable, {
       onClick: e => {
         null != Q.message && (e.stopPropagation(), (0, L.trackFeedItemInteracted)({
-          feed_item_type: (0, b.getFeedItemTypeFromId)(g),
-          feed_item_id: g,
+          feed_item_type: (0, b.getFeedItemTypeFromId)(E),
+          feed_item_id: E,
           load_id: R.default.getLoadId(s),
           action_type: O.FeedItemInteractionType.REFERENCED_MESSAGE_CLICKED,
           guild_id: s,
@@ -135,7 +135,7 @@ let B = n.memo(function(e) {
     }, [U, m]);
     return (0, l.jsx)(j.default, {
       messageRef: K,
-      className: i()(E, {
+      className: i()(g, {
         [P.mentioned]: m.mentioned && !(0, f.default)(m)
       }),
       onClick: en,

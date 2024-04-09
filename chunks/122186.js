@@ -25,13 +25,13 @@ function E(e) {
     openStreamUpsellModal: s,
     glow: E = !1
   } = e, {
-    enabled: C,
-    variant: _
+    enabled: _,
+    variant: C
   } = r.default.useExperiment({
     location: "StreamSettingsUpsellBanner"
   }, {
     autoTrackExposure: !0
-  }), g = C && r.GradientVariants.includes(_), N = C && [r.EnhancedHDStreamingRoadblockVariants.VARIANT_1A, r.EnhancedHDStreamingRoadblockVariants.VARIANT_1B].includes(_), h = {
+  }), g = _ && r.GradientVariants.includes(C), N = _ && [r.EnhancedHDStreamingRoadblockVariants.VARIANT_1A, r.EnhancedHDStreamingRoadblockVariants.VARIANT_1B].includes(C), h = {
     section: c.AnalyticsSections.STREAM_SETTINGS,
     object: c.AnalyticsObjects.PREMIUM_UPSELL_BANNER,
     objectType: c.AnalyticsObjectTypes.BUY
@@ -45,7 +45,7 @@ function E(e) {
     size: i.Button.Sizes.TINY,
     premiumModalAnalyticsLocation: h
   });
-  return C ? (0, a.jsxs)("div", {
+  return _ ? (0, a.jsxs)("div", {
     className: n()(S.upsellBanner, S.enhancedBanner, {
       [S.gradientGlow]: E
     }),

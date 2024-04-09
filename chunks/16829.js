@@ -168,7 +168,7 @@ function p(e) {
   })
 }
 
-function P(e) {
+function y(e) {
   let {
     type: t
   } = e, s = (0, O.useGetIntegrationIconString)(t);
@@ -182,7 +182,7 @@ function P(e) {
   })
 }
 
-function m(e) {
+function P(e) {
   let {
     sourceInviteCode: t,
     joinSourceType: s,
@@ -227,7 +227,7 @@ function m(e) {
         role: "button",
         tabIndex: 0,
         onClick: r,
-        children: [(0, E.jsx)(P, {
+        children: [(0, E.jsx)(y, {
           type: a
         }), (0, E.jsx)(u.Text, {
           variant: "text-sm/medium",
@@ -287,7 +287,7 @@ t.default = _.memo(function(e) {
     inviterUser: null != d ? d : null,
     guildId: n,
     joinSourceType: g,
-    children: e => (0, E.jsx)(m, {
+    children: e => (0, E.jsx)(P, {
       sourceInviteCode: N,
       joinSourceType: g,
       integrationType: D,

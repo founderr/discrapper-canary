@@ -40,9 +40,9 @@ let E = {
       disabled: T,
       className: f,
       focusProps: S,
-      innerRef: A
+      innerRef: h
     } = e, {
-      reducedMotion: h
+      reducedMotion: A
     } = r.useContext(u.AccessibilityPreferencesContext), m = r.useRef(null), [N, O] = r.useState(!1), p = (0, _.useToken)(l.default.unsafe_rawColors.PRIMARY_400).spring(), R = (0, _.useToken)(l.default.unsafe_rawColors.GREEN_360).spring(), {
       state: C,
       opacity: g
@@ -122,12 +122,12 @@ let E = {
                 })
               })]
             })
-          }(C, p, R, h.enabled)]
+          }(C, p, R, A.enabled)]
         }), (0, i.jsx)("input", {
           id: t,
           type: "checkbox",
           ref: e => {
-            m.current = e, null != A && (A.current = e)
+            m.current = e, null != h && (h.current = e)
           },
           className: c.input,
           tabIndex: T ? -1 : 0,

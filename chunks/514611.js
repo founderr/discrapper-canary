@@ -10,14 +10,14 @@ var a, s = n("735250"),
   c = n("556017"),
   f = n("879484"),
   E = n("26580"),
-  h = n("206887"),
-  _ = n("134432"),
+  _ = n("206887"),
+  h = n("134432"),
   C = n("695346"),
   m = n("768581"),
   S = n("900849"),
   I = n("940627"),
-  p = n("806519"),
-  T = n("981631"),
+  T = n("806519"),
+  p = n("981631"),
   g = n("689938"),
   N = n("313618"),
   A = n("129512"),
@@ -36,9 +36,9 @@ class L extends(a = l.PureComponent) {
   getDefaultSplashURL(e, t) {
     if (t) return O;
     switch (e) {
-      case T.ThemeTypes.DARK:
+      case p.ThemeTypes.DARK:
         return A;
-      case T.ThemeTypes.LIGHT:
+      case p.ThemeTypes.LIGHT:
         return R
     }
   }
@@ -60,11 +60,11 @@ class L extends(a = l.PureComponent) {
       presenceCount: L,
       memberCount: P,
       keywords: M
-    } = t, y = null === (e = t.features) || void 0 === e ? void 0 : e.has(T.GuildFeatures.HUB), x = m.default.getGuildDiscoverySplashURL({
+    } = t, y = null === (e = t.features) || void 0 === e ? void 0 : e.has(p.GuildFeatures.HUB), D = m.default.getGuildDiscoverySplashURL({
       id: t.id,
       splash: t.discoverySplash,
-      size: 300 * (0, _.getDevicePixelRatio)()
-    }), D = null != x ? x : this.getDefaultSplashURL(a, y), b = m.default.getGuildIconURL({
+      size: 300 * (0, h.getDevicePixelRatio)()
+    }), x = null != D ? D : this.getDefaultSplashURL(a, y), b = m.default.getGuildIconURL({
       id: t.id,
       icon: t.icon,
       size: 40
@@ -117,7 +117,7 @@ class L extends(a = l.PureComponent) {
               children: [(0, s.jsx)("div", {
                 className: N.splash,
                 children: (0, s.jsx)("img", {
-                  src: D,
+                  src: x,
                   alt: "",
                   className: r()(N.splashImage, {
                     [N.splashImageHeight]: !y
@@ -128,19 +128,19 @@ class L extends(a = l.PureComponent) {
                 })
               }), G || j ? (0, s.jsx)("div", {
                 className: N.actionButtons,
-                children: (0, s.jsx)(h.default, {
+                children: (0, s.jsx)(_.default, {
                   guild: t
                 })
               }) : null, (0, s.jsx)("div", {
                 className: N.guildIcon,
-                children: (0, s.jsx)(p.default, {
-                  mask: p.default.Masks.SQUIRCLE,
+                children: (0, s.jsx)(T.default, {
+                  mask: T.default.Masks.SQUIRCLE,
                   width: 48,
                   height: 48,
                   children: (0, s.jsx)("div", {
                     className: N.iconMask,
-                    children: (0, s.jsx)(p.default, {
-                      mask: p.default.Masks.SQUIRCLE,
+                    children: (0, s.jsx)(T.default, {
+                      mask: T.default.Masks.SQUIRCLE,
                       width: 40,
                       height: 40,
                       children: (0, s.jsx)("img", {

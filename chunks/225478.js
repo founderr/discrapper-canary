@@ -16,8 +16,8 @@ var l = a("735250"),
   f = a("393238"),
   m = a("410030"),
   h = a("724757"),
-  g = a("465029"),
-  E = a("370094"),
+  E = a("465029"),
+  g = a("370094"),
   _ = a("924301"),
   I = a("554747"),
   x = a("938475"),
@@ -144,8 +144,8 @@ function k(e) {
     })
   }, [K]);
   n.useEffect(() => {
-    C.default.shouldFetch(t) && (0, g.fetchActiveChannels)(t)
-  }, [t]), (0, E.default)(t, r, h);
+    C.default.shouldFetch(t) && (0, E.fetchActiveChannels)(t)
+  }, [t]), (0, g.default)(t, r, h);
   let X = n.useCallback(e => {
       v.default.track(F.AnalyticEvents.ACTIVE_CHANNEL_CLICKED, {
         guild_id: e.guild_id,

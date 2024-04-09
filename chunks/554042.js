@@ -21,8 +21,8 @@ var a = s("735250"),
   _ = s("210887"),
   g = s("981631"),
   h = s("689938"),
-  N = s("861147");
-let I = [{
+  I = s("861147");
+let N = [{
   label: "Latin alphabet",
   value: "aBcDeFgHiJkLmNoPqRsTuVwXyZ"
 }, {
@@ -80,18 +80,18 @@ function C() {
       return (0, f.probablyHasBuildOverride)() ? null === (t = T.default.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
     [M, v] = p("playground-overrideText", null),
-    [D, L] = p("playground-defaultText", I[0].value),
+    [D, L] = p("playground-defaultText", N[0].value),
     P = n.useCallback(e => {
-      let t = I.find(t => {
+      let t = N.find(t => {
         let {
           value: s
         } = t;
         return s === e
       });
-      "" === e || null == e ? (L(I[0].value), v(null)) : null != t ? L(t.value) : (L("custom"), v(e))
+      "" === e || null == e ? (L(N[0].value), v(null)) : null != t ? L(t.value) : (L("custom"), v(e))
     }, [v, L]);
   return (0, a.jsx)("div", {
-    className: N.fullscreen,
+    className: I.fullscreen,
     style: {
       "--playground-font-family": "mono" === o ? "gg mono" : "gg sans",
       "--playground-font-style": "italic" === o ? "italic" : "normal"
@@ -99,7 +99,7 @@ function C() {
     children: (0, a.jsxs)(d.FormSection, {
       tag: d.FormTitleTags.H1,
       children: [(0, a.jsxs)("div", {
-        className: N.toolbar,
+        className: I.toolbar,
         children: [(0, a.jsxs)("div", {
           children: [(0, a.jsxs)(d.Text, {
             tag: "div",
@@ -120,14 +120,14 @@ function C() {
           }) : null]
         }), (0, a.jsx)(d.FormItem, {
           children: (0, a.jsx)(d.SingleSelect, {
-            className: N.select,
-            options: I,
+            className: I.select,
+            options: N,
             onChange: e => P(e),
             value: D
           })
         }), (0, a.jsx)(d.FormItem, {
           children: (0, a.jsx)("div", {
-            className: N.input,
+            className: I.input,
             children: (0, a.jsx)(d.TextInput, {
               placeholder: "Enter custom input...",
               value: null != M ? M : "",
@@ -137,7 +137,7 @@ function C() {
         }), (0, a.jsx)(d.FormItem, {
           children: (0, a.jsx)(d.RadioGroup, {
             withTransparentBackground: !0,
-            className: N.theme,
+            className: I.theme,
             orientation: "horizontal",
             options: [{
               name: h.default.Messages.THEME_DARK,
@@ -156,7 +156,7 @@ function C() {
         }), (0, a.jsx)(d.FormItem, {
           children: (0, a.jsx)(d.RadioGroup, {
             withTransparentBackground: !0,
-            className: N.theme,
+            className: I.theme,
             orientation: "horizontal",
             options: [{
               name: "Upright",
@@ -178,16 +178,16 @@ function C() {
           keybind: "ESC"
         })]
       }), (0, a.jsxs)("div", {
-        className: N.textGrid,
+        className: I.textGrid,
         children: [(0, a.jsx)("div", {}), A.map(e => (0, a.jsx)("div", {
-          className: N.columnHeading,
+          className: I.columnHeading,
           children: (0, a.jsx)(d.Heading, {
             variant: "eyebrow",
             children: e
           })
         }, e)), [10, 12, 14, 15, 16, 18, 20, 24].map(e => (0, a.jsxs)(n.Fragment, {
           children: [(0, a.jsxs)("div", {
-            className: N.fontSize,
+            className: I.fontSize,
             children: [(0, a.jsxs)(d.Heading, {
               variant: "eyebrow",
               children: [e, "px"]
@@ -200,11 +200,11 @@ function C() {
             var s;
             let n = null !== (s = "custom" === D ? M : D) && void 0 !== s ? s : "";
             return (0, a.jsx)("div", {
-              className: N.textSample,
+              className: I.textSample,
               children: (0, a.jsxs)("div", {
                 title: "".concat(e, "px at ").concat(t),
-                className: i()(N.text, {
-                  [N.breakAnywhere]: !n.includes(" ")
+                className: i()(I.text, {
+                  [I.breakAnywhere]: !n.includes(" ")
                 }),
                 style: {
                   fontSize: e,

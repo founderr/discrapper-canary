@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return R
   },
   fetchEmoji: function() {
-    return h
+    return A
   },
   setDiversityColor: function() {
-    return A
+    return h
   },
   unfavoriteEmoji: function() {
     return C
@@ -38,13 +38,13 @@ var i = n("392711"),
   f = n("526761"),
   S = n("689938");
 
-function A(e) {
+function h(e) {
   c.PreloadedUserSettingsActionCreators.updateAsync("textAndImages", t => {
     t.diversitySurrogate = a.StringValue.create(), t.diversitySurrogate.value = e
   }, f.UserSettingsDelay.FREQUENT_USER_ACTION)
 }
 
-function h(e) {
+function A(e) {
   o.default.dispatch({
     type: "EMOJI_FETCH",
     guildId: e

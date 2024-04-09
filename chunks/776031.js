@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return h
   }
 });
 var i = n("735250"),
@@ -20,10 +20,10 @@ var i = n("735250"),
   f = n("65154"),
   S = n("689938");
 
-function A(e, t) {
+function h(e, t) {
   let {
-    preset: A,
-    resolution: h,
+    preset: h,
+    resolution: A,
     fps: m
   } = (0, s.useStateFromStoresObject)([d.default], () => d.default.getState()), N = (0, s.useStateFromStores)([c.default], () => c.default.getGoLiveSource()), O = (0, s.useStateFromStores)([E.default], () => E.default.getCurrentUser()), p = (0, s.useStateFromStores)([_.default], () => {
     var t;
@@ -69,18 +69,18 @@ function A(e, t) {
     }
   }, [t, R, N]);
   if (null == e) return null;
-  let g = A === T.ApplicationStreamPresets.PRESET_DOCUMENTS ? T.ApplicationStreamFPS.FPS_30 : m,
+  let g = h === T.ApplicationStreamPresets.PRESET_DOCUMENTS ? T.ApplicationStreamFPS.FPS_30 : m,
     L = T.ApplicationStreamFPSButtonsWithSuffixLabel.map(e => {
       let {
         value: t,
         label: n
-      } = e, r = (0, u.default)(T.ApplicationStreamPresets.PRESET_CUSTOM, h, t, O, p);
+      } = e, r = (0, u.default)(T.ApplicationStreamPresets.PRESET_CUSTOM, A, t, O, p);
       return (0, i.jsx)(a.MenuRadioItem, {
         group: "stream-settings-fps",
         id: "stream-settings-fps-".concat(t),
         label: n,
         checked: t === m,
-        action: () => C(r, h, t, I.AnalyticsObjectTypes.RESOLUTION)
+        action: () => C(r, A, t, I.AnalyticsObjectTypes.RESOLUTION)
       }, "stream-settings-fps-".concat(t))
     }),
     D = T.ApplicationStreamResolutionButtonsWithSuffixLabel.map(e => {
@@ -92,7 +92,7 @@ function A(e, t) {
         group: "stream-settings-resolution",
         id: "stream-settings-resolution-".concat(t),
         label: n,
-        checked: t === h,
+        checked: t === A,
         action: () => C(r, t, g, I.AnalyticsObjectTypes.RESOLUTION)
       }, "stream-settings-resolution-".concat(t))
     });

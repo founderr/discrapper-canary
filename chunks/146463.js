@@ -66,7 +66,7 @@ t.default = function(e) {
     guildId: c,
     onScroll: E,
     listRef: I
-  } = e, p = (0, r.useStateFromStores)([o.default], () => o.default.getGuild(c), [c]), x = (0, r.useStateFromStores)([f.default], () => f.default.isFetching()), C = x ? [l.length + 25] : [l.length], g = (0, _.useSelectedGuildJoinRequest)({
+  } = e, C = (0, r.useStateFromStores)([o.default], () => o.default.getGuild(c), [c]), x = (0, r.useStateFromStores)([f.default], () => f.default.isFetching()), p = x ? [l.length + 25] : [l.length], g = (0, _.useSelectedGuildJoinRequest)({
     guildId: c
   }), j = null !== (t = (0, S.useSubmittedGuildJoinRequestTotal)({
     guildId: c
@@ -79,7 +79,7 @@ t.default = function(e) {
         [A.selected]: g === n,
         [A.siblingSelected]: g === l[t - 1]
       }),
-      guild: p,
+      guild: C,
       guildJoinRequest: n,
       onClick: () => T.default.setSelectedGuildJoinRequest(c, n),
       applicationStatus: s
@@ -131,7 +131,7 @@ t.default = function(e) {
             rowHeight: 64,
             renderSection: M,
             renderRow: v,
-            sections: C,
+            sections: p,
             onScroll: E,
             fade: !0,
             ...l

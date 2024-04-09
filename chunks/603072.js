@@ -25,8 +25,8 @@ var n = l("735250"),
   E = l("430824"),
   I = l("944486"),
   _ = l("514342"),
-  v = l("648414"),
-  T = l("26290"),
+  T = l("648414"),
+  v = l("26290"),
   O = l("31445"),
   A = l("59350"),
   R = l("290511"),
@@ -90,7 +90,7 @@ function y(e) {
       })
     }) : [],
     children: [(0, n.jsx)(m.default.Icon, {
-      icon: v.default,
+      icon: T.default,
       "aria-hidden": !0
     }), (0, n.jsx)(m.default.Title, {
       children: r
@@ -110,7 +110,7 @@ function B(e) {
     m = (0, r.useStateFromStores)([p.default], () => p.default.getCurrentSidebarChannelId(j.StaticChannelRoute.CHANNEL_BROWSER)),
     g = null != m && c === R.GuildOnboardingTab.BROWSE,
     _ = (0, r.useStateFromStores)([S.default], () => S.default.getChannel(f)),
-    v = (0, r.useStateFromStores)([x.default], () => x.default.getNewChannelIds(t).size > 0),
+    T = (0, r.useStateFromStores)([x.default], () => x.default.getNewChannelIds(t).size > 0),
     b = (0, C.useChannelBrowserChannelCount)(t);
   return null == s ? null : (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)("div", {
@@ -136,11 +136,11 @@ function B(e) {
             className: M.tabBarItem,
             id: R.GuildOnboardingTab.BROWSE,
             "aria-label": L.default.Messages.CHANNEL_BROWSER_TITLE,
-            children: [L.default.Messages.CHANNEL_BROWSER_TITLE, (0, n.jsx)(T.TextBadge, {
-              text: v ? L.default.Messages.CHANNEL_TYPE_NEW : b,
-              color: v ? o.default.unsafe_rawColors.BRAND_260.css : o.default.colors.BACKGROUND_ACCENT.css,
+            children: [L.default.Messages.CHANNEL_BROWSER_TITLE, (0, n.jsx)(v.TextBadge, {
+              text: T ? L.default.Messages.CHANNEL_TYPE_NEW : b,
+              color: T ? o.default.unsafe_rawColors.BRAND_260.css : o.default.colors.BACKGROUND_ACCENT.css,
               className: i()({
-                [M.newBadge]: v
+                [M.newBadge]: T
               })
             })]
           }, R.GuildOnboardingTab.BROWSE)]

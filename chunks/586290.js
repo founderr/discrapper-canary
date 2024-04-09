@@ -17,8 +17,8 @@ var a = l("735250"),
   m = l("537135"),
   S = l("176940"),
   E = l("689938"),
-  C = l("981213"),
-  _ = l("223318"),
+  _ = l("981213"),
+  C = l("223318"),
   g = l("794711");
 
 function N(e) {
@@ -41,15 +41,15 @@ function N(e) {
   return null != h && n(h), (0, a.jsx)(s.Fragment, {
     children: (0, a.jsxs)(c.FormItem, {
       title: "Capture Device",
-      className: _.modalContent,
+      className: C.modalContent,
       children: [(0, a.jsx)(c.FormItem, {
         className: g.marginTop8,
         children: (0, a.jsxs)(m.default, {
           children: [(0, a.jsx)("span", {
-            className: C.ellipsisText,
+            className: _.ellipsisText,
             children: t.name
           }), (0, a.jsx)(c.Button, {
-            className: C.changeButton,
+            className: _.changeButton,
             color: c.Button.Colors.PRIMARY,
             size: c.Button.Sizes.SMALL,
             onClick: l,

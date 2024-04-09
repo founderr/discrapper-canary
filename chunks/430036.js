@@ -37,8 +37,8 @@ var i = n("735250"),
   b = n("703558"),
   j = n("731290"),
   P = n("430824"),
-  w = n("375954"),
-  k = n("944486"),
+  k = n("375954"),
+  w = n("944486"),
   V = n("914010"),
   U = n("594174"),
   B = n("556296"),
@@ -145,7 +145,7 @@ class ei extends a.Component {
         e.preventDefault();
         let {
           channel: t
-        } = this.props, n = w.default.getLastEditableMessage(t.id);
+        } = this.props, n = k.default.getLastEditableMessage(t.id);
         null != n && h.default.startEditMessage(t.id, n.id, n.content)
       }
     }), et(this, "handleTextareaChange", (e, t, n) => {
@@ -441,7 +441,7 @@ function el(e) {
   let {
     contained: t = !1,
     ...n
-  } = e, a = (0, d.useStateFromStores)([V.default], () => V.default.getGuildId()), l = (0, d.useStateFromStores)([k.default], () => k.default.getChannelId(a)), s = (0, d.useStateFromStores)([D.default], () => D.default.getChannel(l)), o = (0, d.useStateFromStores)([B.default], () => B.default.getOverlayChatKeybind()), r = null != o ? (0, K.toString)(o.shortcut, !0) : "]", [u, c, f] = (0, d.useStateFromStoresArray)([F.default], () => [F.default.getTextWidgetOpacity(), F.default.getActiveRegions(), !t && F.default.isPreviewingInGame()]), h = (0, d.useStateFromStores)([P.default], () => P.default.getGuild(a)), p = (0, d.useStateFromStores)([j.default], () => null != a && j.default.didAgree(a)), g = null != s && s.isPrivate() ? s.getRecipientId() : null, m = (0, d.useStateFromStores)([L.default], () => null != l ? L.default.getPendingReply(l) : void 0), E = (0, d.useStateFromStores)([U.default], () => null != g ? U.default.getUser(g) : null), {
+  } = e, a = (0, d.useStateFromStores)([V.default], () => V.default.getGuildId()), l = (0, d.useStateFromStores)([w.default], () => w.default.getChannelId(a)), s = (0, d.useStateFromStores)([D.default], () => D.default.getChannel(l)), o = (0, d.useStateFromStores)([B.default], () => B.default.getOverlayChatKeybind()), r = null != o ? (0, K.toString)(o.shortcut, !0) : "]", [u, c, f] = (0, d.useStateFromStoresArray)([F.default], () => [F.default.getTextWidgetOpacity(), F.default.getActiveRegions(), !t && F.default.isPreviewingInGame()]), h = (0, d.useStateFromStores)([P.default], () => P.default.getGuild(a)), p = (0, d.useStateFromStores)([j.default], () => null != a && j.default.didAgree(a)), g = null != s && s.isPrivate() ? s.getRecipientId() : null, m = (0, d.useStateFromStores)([L.default], () => null != l ? L.default.getPendingReply(l) : void 0), E = (0, d.useStateFromStores)([U.default], () => null != g ? U.default.getUser(g) : null), {
     placeholder: S
   } = (0, v.default)(s);
   return null != s && null != h && Q.ChannelTypesSets.GUILD_THREADS_ONLY.has(s.type) ? (0, i.jsx)(y.default, {}) : (0, i.jsx)(ea, {

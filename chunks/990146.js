@@ -11,29 +11,29 @@ var a = n("735250"),
   c = n("617136"),
   f = n("57655"),
   E = n("113434"),
-  h = n("569984"),
-  _ = n("497505"),
+  _ = n("569984"),
+  h = n("497505"),
   C = n("918701"),
   m = n("874137"),
   S = n("78826"),
   I = n("789563"),
-  p = n("164164"),
-  T = n("46140"),
+  T = n("164164"),
+  p = n("46140"),
   g = n("981631"),
   N = n("311676");
 t.default = function() {
   var e, t, n;
   let l = (0, f.useIsEligibleForQuests)({
-      location: T.QuestsExperimentLocations.QUESTS_BAR
+      location: p.QuestsExperimentLocations.QUESTS_BAR
     }),
     A = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion),
-    R = (0, o.useStateFromStores)([h.default], () => (0, C.getQuestForTargetedContent)(h.default.quests, _.QuestContent.QUEST_BAR)),
+    R = (0, o.useStateFromStores)([_.default], () => (0, C.getQuestForTargetedContent)(_.default.quests, h.QuestContent.QUEST_BAR)),
     O = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()),
     v = s.useRef(-1),
     L = s.useRef(!1),
     [P, M] = s.useState(!1),
-    [y, x] = s.useState(!1),
-    [D, b] = s.useState(!1),
+    [y, D] = s.useState(!1),
+    [x, b] = s.useState(!1),
     [U, j] = s.useState(!0),
     [G, w] = s.useState(240),
     k = s.useRef(null),
@@ -41,7 +41,7 @@ t.default = function() {
     B = s.useRef(F),
     H = (null == R ? void 0 : null === (t = R.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
     V = (null == R ? void 0 : null === (n = R.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
-    Y = (null == R ? void 0 : R.userStatus) != null && (0, C.isDismissed)(null == R ? void 0 : R.userStatus, _.QuestContent.QUEST_BAR),
+    Y = (null == R ? void 0 : R.userStatus) != null && (0, C.isDismissed)(null == R ? void 0 : R.userStatus, h.QuestContent.QUEST_BAR),
     W = (0, E.useIsQuestExpired)(R),
     {
       hasError: K,
@@ -49,16 +49,16 @@ t.default = function() {
     } = (0, S.useQuestsAssetsLoadState)(),
     q = s.useCallback(() => {
       var e, t;
-      w((null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 16), x(!0)
+      w((null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 16), D(!0)
     }, []),
     Q = s.useCallback(() => {
       M(!0)
     }, []),
     Z = s.useCallback(() => {
-      M(!1), !L.current && !H && x(!1)
+      M(!1), !L.current && !H && D(!1)
     }, [H]),
     X = s.useCallback(() => {
-      M(!1), !H && x(!1), L.current = !1
+      M(!1), !H && D(!1), L.current = !1
     }, [H]),
     J = s.useCallback(function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
@@ -68,7 +68,7 @@ t.default = function() {
       t ? v.current = window.setTimeout(q, 75) : q()
     }, [q]),
     $ = s.useCallback(() => {
-      if (window.clearTimeout(v.current), !H && !P) !L.current && x(!1)
+      if (window.clearTimeout(v.current), !H && !P) !L.current && D(!1)
     }, [P, H]),
     ee = s.useCallback(() => {
       null != R && (0, c.trackQuestEvent)({
@@ -86,7 +86,7 @@ t.default = function() {
   }, [H, q]), s.useLayoutEffect(() => {
     F && !B.current && L.current && q()
   }, [F, q]), s.useLayoutEffect(() => {
-    !H && F && !B.current && !L.current && x(!1)
+    !H && F && !B.current && !L.current && D(!1)
   }, [F, H]);
   let en = l && !Y && !V && null != R && !W && !z,
     ea = s.useRef(en);
@@ -144,7 +144,7 @@ t.default = function() {
   });
   return l && null != R && (en || !U || z) && !K ? (0, a.jsx)(m.QuestContentImpressionTracker, {
     questId: R.id,
-    questContent: _.QuestContent.QUEST_BAR,
+    questContent: h.QuestContent.QUEST_BAR,
     overrideVisibility: !O && en,
     children: () => (0, a.jsx)(r.animated.div, {
       "aria-hidden": !en,
@@ -183,16 +183,16 @@ t.default = function() {
           className: N.content,
           expansionSpring: es,
           isExpanded: y,
-          isExpansionAnimationComplete: D,
+          isExpansionAnimationComplete: x,
           quest: R,
           useReducedMotion: A
-        }), (0, a.jsx)(p.default, {
+        }), (0, a.jsx)(T.default, {
           className: N.content,
           onCtxMenuOpen: Q,
           onCtxMenuClose: Z,
           onCtxMenuSelect: X,
           isExpanded: y,
-          isExpansionAnimationComplete: D,
+          isExpansionAnimationComplete: x,
           quest: R,
           useReducedMotion: A,
           ref: k

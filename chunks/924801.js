@@ -121,7 +121,7 @@ let d = function() {
         return null
     }
   },
-  h = e => {
+  _ = e => {
     switch (e) {
       case r.ExtendedTimeOptions.MORNING:
         return u.default.Messages.CLAN_PRIMETIME_RECURRING_MORNING;
@@ -135,7 +135,7 @@ let d = function() {
         return null
     }
   },
-  _ = (e, t) => {
+  h = (e, t) => {
     let n;
     switch (e) {
       case r.DayOptions.WEEKDAYS:
@@ -230,8 +230,8 @@ function I(e) {
   let {
     day: t,
     time: n
-  } = e, a = h(n);
-  if (null != a) return _(t, a);
+  } = e, a = _(n);
+  if (null != a) return h(t, a);
   let s = E(e.day);
   return "".concat(s, " ").concat(n)
 }

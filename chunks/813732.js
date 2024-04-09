@@ -17,8 +17,8 @@ var a = s("735250"),
   _ = s("15640"),
   g = s("406174"),
   h = s("810762"),
-  N = s("681833"),
-  I = s("856888"),
+  I = s("681833"),
+  N = s("856888"),
   p = s("246946"),
   C = s("663389"),
   A = s("351402"),
@@ -92,7 +92,7 @@ t.default = function() {
     T.default.clearSubsection()
   }), []), p.default.enabled) ? (0, a.jsx)(f.default, {}) : S && M ? v === B.ROLE_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(h.default, {
     onGoBack: () => T.default.clearSubsection()
-  }) : v === B.APPLICATION_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(I.default, {
+  }) : v === B.APPLICATION_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(N.default, {
     onGoBack: () => T.default.clearSubsection()
   }) : (0, a.jsx)("div", {
     className: G.container,
@@ -108,7 +108,7 @@ t.default = function() {
         className: G.subscriptionDetails
       }), (0, a.jsx)(g.default, {
         onClickManageSubscription: () => T.default.setSection(y.UserSettingsSections.SUBSCRIPTIONS, B.ROLE_SUBSCRIPTION_SUBSECTION)
-      }), (0, a.jsx)(N.default, {
+      }), (0, a.jsx)(I.default, {
         onClickManageSubscription: () => {
           T.default.setSection(y.UserSettingsSections.SUBSCRIPTIONS, B.APPLICATION_SUBSCRIPTION_SUBSECTION), D.default.track(y.AnalyticEvents.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED)
         }

@@ -1,7 +1,7 @@
 "use strict";
-t.r(r);
-var a = t("319301");
-r.default = (0, a.defineColorTokens)({
+r.r(t);
+var a = r("319301");
+t.default = (0, a.defineColorTokens)({
   "polls-normal-image-background": {
     dark: "primary.660",
     light: "white.500"

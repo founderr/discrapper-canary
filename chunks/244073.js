@@ -46,7 +46,7 @@ function P(e, t, n) {
   }) : e[t] = n, e
 }
 
-function w(e) {
+function k(e) {
   let {
     lobbyId: t
   } = e, n = (0, r.useStateFromStoresObject)([I.default], () => ({
@@ -61,7 +61,7 @@ function w(e) {
     ...n
   })
 }
-class k extends a.PureComponent {
+class w extends a.PureComponent {
   handleDisconnect() {
     f.default.selectVoiceChannel(null)
   }
@@ -164,7 +164,7 @@ class k extends a.PureComponent {
       let {
         lobbyId: e
       } = this.props;
-      return (0, i.jsx)(w, {
+      return (0, i.jsx)(k, {
         lobbyId: e
       })
     })
@@ -178,7 +178,7 @@ function V(e) {
     channel: a,
     ...l
   } = e, s = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(null == a ? void 0 : a.getGuildId())), o = (0, r.useStateFromStores)([y.default], () => null != a && y.default.hasVideo(a.id)), [d, u] = (0, r.useStateFromStoresArray)([E.default], () => [E.default.isSelfMute(t) || E.default.isSelfMutedTemporarily(t), E.default.isSelfDeaf(t)]), [c, f, h] = (0, r.useStateFromStoresArray)([I.default], () => [I.default.getConnectionState(n), I.default.getLastPing(n), I.default.getQuality(n)]);
-  return (0, i.jsx)(k, {
+  return (0, i.jsx)(w, {
     ...l,
     context: t,
     lobbyId: n,

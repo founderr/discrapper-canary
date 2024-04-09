@@ -23,7 +23,7 @@ function f(e) {
 function S() {
   E = 0, I = null, T = null
 }
-class A extends(l = u.default.Store) {
+class h extends(l = u.default.Store) {
   get purchaseTokenAuthState() {
     return E
   }
@@ -34,12 +34,12 @@ class A extends(l = u.default.Store) {
     return T
   }
 }
-a = "PurchaseTokenAuthStore", (s = "displayName") in(r = A) ? Object.defineProperty(r, s, {
+a = "PurchaseTokenAuthStore", (s = "displayName") in(r = h) ? Object.defineProperty(r, s, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new A(d.default, {
+}) : r[s] = a, t.default = new h(d.default, {
   SKU_PURCHASE_FAIL: f,
   PREMIUM_PAYMENT_SUBSCRIBE_FAIL: f,
   USER_PAYMENT_CLIENT_ADD: function(e) {

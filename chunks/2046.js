@@ -12,8 +12,8 @@ var l = a("735250"),
   f = a("933557"),
   m = a("471445"),
   h = a("456269"),
-  g = a("479099"),
-  E = a("336197"),
+  E = a("479099"),
+  g = a("336197"),
   _ = a("6025"),
   I = a("260483"),
   x = a("144140"),
@@ -93,7 +93,7 @@ t.default = n.forwardRef(function(e, t) {
     guildId: s,
     channelId: y.id,
     feedItemId: Z,
-    onChannelClick: () => (0, E.default)(G.Routes.CHANNEL(s, y.parent_id)),
+    onChannelClick: () => (0, g.default)(G.Routes.CHANNEL(s, y.parent_id)),
     onContentClick: () => _.default.openThreadAsSidebar({
       guildId: s,
       baseChannelId: O.StaticChannelRoute.GUILD_HOME,
@@ -180,13 +180,13 @@ t.default = n.forwardRef(function(e, t) {
             children: y.name
           }), null != ec ? (0, l.jsxs)("div", {
             className: k.tags,
-            children: [(0, l.jsx)(g.default, {
+            children: [(0, l.jsx)(E.default, {
               tag: ec,
-              size: g.default.Sizes.SMALL
-            }), eo > 0 ? (0, l.jsx)(g.ForumTagOverflow, {
+              size: E.default.Sizes.SMALL
+            }), eo > 0 ? (0, l.jsx)(E.ForumTagOverflow, {
               tags: ef,
               count: eo,
-              size: g.default.Sizes.SMALL
+              size: E.default.Sizes.SMALL
             }) : null]
           }) : null]
         }),

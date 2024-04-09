@@ -12,16 +12,16 @@ var s = n("481060"),
   c = n("594174"),
   f = n("626135"),
   E = n("621853"),
-  h = n("981631"),
-  _ = n("616922");
+  _ = n("981631"),
+  h = n("616922");
 let C = null;
 async function m(e) {
   var t, l, i, m;
   let {
     userId: S,
     section: I,
-    guildId: p = h.ME,
-    channelId: T,
+    guildId: T = _.ME,
+    channelId: p,
     friendToken: g,
     autoFocusNote: N,
     analyticsLocation: A
@@ -34,11 +34,11 @@ async function m(e) {
     {
       party: M,
       assets: y,
-      application_id: x
+      application_id: D
     } = null != v ? v : {},
-    D = null != x ? o.default.getApplication(x) : null,
-    b = P ? h.AnalyticsUserStatusTypes.ONLINE_MOBILE : h.AnalyticsUserStatusTypes.ONLINE_DESKTOP,
-    U = L === h.StatusTypes.ONLINE ? b : L;
+    x = null != D ? o.default.getApplication(D) : null,
+    b = P ? _.AnalyticsUserStatusTypes.ONLINE_MOBILE : _.AnalyticsUserStatusTypes.ONLINE_DESKTOP,
+    U = L === _.StatusTypes.ONLINE ? b : L;
   C = await (0, s.openModalLazy)(async () => {
     let {
       default: e
@@ -48,24 +48,24 @@ async function m(e) {
       location: "handleOpenUserProfileModal",
       user: R,
       autoFocusNote: N,
-      guildId: p,
+      guildId: T,
       friendToken: g,
       initialSection: I,
-      channelId: T
+      channelId: p
     })
-  }), f.default.track(h.AnalyticEvents.OPEN_MODAL, {
+  }), f.default.track(_.AnalyticEvents.OPEN_MODAL, {
     type: "Profile Modal",
-    guild_id: p !== h.ME ? p : null,
-    channel_id: T,
+    guild_id: T !== _.ME ? T : null,
+    channel_id: p,
     other_user_id: S,
     application_id: null !== (l = null == v ? void 0 : v.application_id) && void 0 !== l ? l : null,
     application_name: null == v ? void 0 : v.name,
-    sku_id: null !== (i = null == D ? void 0 : D.primarySkuId) && void 0 !== i ? i : null,
+    sku_id: null !== (i = null == x ? void 0 : x.primarySkuId) && void 0 !== i ? i : null,
     is_friend: d.default.isFriend(S),
     has_images: !!(null !== (m = null == y ? void 0 : y.large_image) && void 0 !== m ? m : null == y ? void 0 : y.small_image),
     party_max: null == M ? void 0 : null === (t = M.size) || void 0 === t ? void 0 : t[1],
     party_id: null == M ? void 0 : M.id,
-    party_platform: (0, _.isSpotifyParty)(null == M ? void 0 : M.id) ? h.PlatformTypes.SPOTIFY : null,
+    party_platform: (0, h.isSpotifyParty)(null == M ? void 0 : M.id) ? _.PlatformTypes.SPOTIFY : null,
     game_platform: (0, r.default)(v),
     profile_user_status: U,
     profile_has_nitro_customization: (null == O ? void 0 : O.banner) != null,

@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return m
   },
   playGiftSound: function() {
-    return A
+    return h
   }
 }), n("47120"), n("411104");
 var i, r, s = n("392711"),
@@ -31,7 +31,7 @@ let E = "default",
 (r = i || (i = {})).Stopped = "stopped", r.Playing = "playing", r.Looping = "looping", r.Paused = "paused";
 let T = new Map;
 async function f(e) {
-  let t = await fetch(n("693180")("../../sounds/".concat(e, ".mp3").replace("../../sounds/", "./"))).then(e => e.arrayBuffer());
+  let t = await fetch(n("236816")("../../sounds/".concat(e, ".mp3").replace("../../sounds/", "./"))).then(e => e.arrayBuffer());
   return (0, o.getOrCreateAudioContext)().decodeAudioData(t)
 }
 async function S(e) {
@@ -39,12 +39,12 @@ async function S(e) {
   return null == t && (t = f(e), T.set(e, t)), await t
 }
 
-function A(e, t) {
+function h(e, t) {
   let n = new Audio((0, l.default)(e));
   n.volume = (0, u.default)(t), n.play()
 }
 
-function h() {
+function A() {
   null != window.navigator.mediaDevices && window.navigator.mediaDevices.enumerateDevices().then(e => {
     let t = d.default.getOutputDevices(),
       n = a()(t).sortBy(e => e.index).findIndex(e => e.id === d.default.getOutputDeviceId()),
@@ -56,7 +56,7 @@ function h() {
     I = E
   })
 }
-_.isPlatformEmbedded && (d.default.addChangeListener(h), h());
+_.isPlatformEmbedded && (d.default.addChangeListener(A), A());
 class m {
   get volume() {
     return this._volume
@@ -98,7 +98,7 @@ class m {
     var e;
     return this._audio = null !== (e = this._audio) && void 0 !== e ? e : new Promise((e, t) => {
       let i = new Audio;
-      i.src = n("693180")("../../sounds/".concat(this.name, ".mp3").replace("../../sounds/", "./")), i.onloadeddata = () => {
+      i.src = n("236816")("../../sounds/".concat(this.name, ".mp3").replace("../../sounds/", "./")), i.onloadeddata = () => {
         i.volume = Math.min(d.default.getOutputVolume() / 100 * this._volume, 1), _.isPlatformEmbedded && i.setSinkId(I), e(i)
       }, i.onerror = () => t(Error("could not play audio")), i.onended = () => this._destroyAudio(), i.load()
     }), this._audio

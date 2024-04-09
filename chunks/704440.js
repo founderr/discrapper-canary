@@ -19,8 +19,8 @@ var i = n("735250"),
   T = n("55935"),
   f = n("63063"),
   S = n("281494"),
-  A = n("790368"),
-  h = n("474936"),
+  h = n("790368"),
+  A = n("474936"),
   m = n("981631"),
   N = n("689938"),
   O = n("74097"),
@@ -79,7 +79,7 @@ let L = async (e, t, n) => {
         onClick: () => {
           L(s, t, _), I.default.track(m.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
             location_stack: o,
-            step: h.ReferralTrialsAnalyticSteps.FLOW_COMPLETED,
+            step: A.ReferralTrialsAnalyticSteps.FLOW_COMPLETED,
             other_user_id: Number(s)
           })
         },
@@ -109,7 +109,7 @@ function v(e) {
     analyticsLocations: M
   } = (0, E.default)(c.default.REFERRAL_TRIALS_POPOUT), {
     enabled: y
-  } = A.default.useExperiment({
+  } = h.default.useExperiment({
     location: "200c24_1"
   }, {
     autoTrackExposure: !0
@@ -170,7 +170,7 @@ function v(e) {
         onClick: () => {
           o ? L(v, s, C) : (_(!0), I.default.track(m.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
             location_stack: M,
-            step: h.ReferralTrialsAnalyticSteps.FLOW_STARTED,
+            step: A.ReferralTrialsAnalyticSteps.FLOW_STARTED,
             other_user_id: Number(v)
           }))
         },
