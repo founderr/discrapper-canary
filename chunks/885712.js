@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   MessageHistory: function() {
-    return v
+    return N
   },
   ShareToChannelDropdownSelect: function() {
-    return I
+    return v
   },
   ShareToChannelHeader: function() {
-    return x
+    return M
   }
 }), n("47120");
 var a = n("735250"),
@@ -20,17 +20,19 @@ var a = n("735250"),
   d = n("481060"),
   c = n("904245"),
   f = n("400023"),
-  h = n("984933"),
-  m = n("375954"),
-  p = n("914010"),
-  E = n("594174"),
-  C = n("5192"),
-  g = n("981631"),
-  S = n("231338"),
-  _ = n("689938"),
-  T = n("535806");
+  h = n("592125"),
+  m = n("984933"),
+  p = n("375954"),
+  E = n("944486"),
+  C = n("914010"),
+  g = n("594174"),
+  S = n("5192"),
+  _ = n("981631"),
+  T = n("231338"),
+  I = n("689938"),
+  A = n("535806");
 
-function I(e) {
+function v(e) {
   let {
     user: t,
     selectedChannel: n,
@@ -41,7 +43,7 @@ function I(e) {
       let {
         closePopout: s
       } = e;
-      return (0, a.jsx)(A, {
+      return (0, a.jsx)(x, {
         closePopout: s,
         user: t,
         onSelect: l,
@@ -57,7 +59,7 @@ function I(e) {
       } = t;
       return (0, a.jsxs)("div", {
         ...e,
-        className: T.selectButton,
+        className: A.selectButton,
         children: [(0, a.jsx)(d.Text, {
           variant: "text-lg/semibold",
           children: null == n ? "@" : "#"
@@ -73,32 +75,33 @@ function I(e) {
   })
 }
 
-function A(e) {
+function x(e) {
   let {
     closePopout: t,
     user: n,
     onSelect: s,
     selectedChannel: i
-  } = e, [r, o] = l.useState(""), u = p.default.getGuildId(), c = h.default.getChannels(u), f = l.useMemo(() => {
+  } = e, [r, o] = l.useState(""), u = C.default.getGuildId(), c = m.default.getChannels(u), f = E.default.getChannelId(u), p = h.default.getChannel(f), g = l.useMemo(() => {
     var e;
-    return null !== (e = c[0, h.GUILD_SELECTABLE_CHANNELS_KEY].filter(e => {
+    let t = null !== (e = c[0, m.GUILD_SELECTABLE_CHANNELS_KEY].filter(e => {
       let {
         channel: t
       } = e;
-      return t.name.includes(r)
+      return t.name.includes(r) && t.id !== f
     }).slice(0, 8).map(e => {
       let {
         channel: t
       } = e;
       return t
-    })) && void 0 !== e ? e : []
-  }, [r, c]);
+    })) && void 0 !== e ? e : [];
+    return null == p ? t : [p, ...t]
+  }, [r, c, f, p]);
   return (0, a.jsx)(d.Menu, {
-    className: T.menu,
+    className: A.menu,
     navId: "share-to-channel-menu",
     onClose: t,
     "aria-label": "menu",
-    onSelect: S.NOOP,
+    onSelect: T.NOOP,
     children: (0, a.jsxs)(d.MenuGroup, {
       children: [(0, a.jsx)(d.MenuControlItem, {
         id: "content-inventory-channel-search",
@@ -107,7 +110,7 @@ function A(e) {
           query: r,
           onChange: o,
           ref: t,
-          placeholder: _.default.Messages.SEARCH
+          placeholder: I.default.Messages.SEARCH
         })
       }, "share-to-channel-search"), (0, a.jsx)(d.MenuRadioItem, {
         id: n.id,
@@ -117,7 +120,7 @@ function A(e) {
           t(), s(null)
         },
         group: "user-select"
-      }, n.id), f.map(e => (0, a.jsx)(d.MenuRadioItem, {
+      }, n.id), g.map(e => (0, a.jsx)(d.MenuRadioItem, {
         id: e.id,
         label: "# ".concat(e.name),
         checked: (null == i ? void 0 : i.name) === e.name,
@@ -129,7 +132,7 @@ function A(e) {
     })
   })
 }
-let v = e => {
+let N = e => {
     let {
       channel: t,
       onMessagesLoad: n
@@ -139,12 +142,12 @@ let v = e => {
         i(void 0), null != t && (await c.default.fetchMessages({
           channelId: t.id,
           limit: 5
-        }), i(m.default.getMessages(t.id)), null == n || n())
+        }), i(p.default.getMessages(t.id)), null == n || n())
       })()
     }, [t, n]), null == t || null == s) ? null : (0, a.jsx)("div", {
-      className: T.messageHistory,
+      className: A.messageHistory,
       children: (0, a.jsx)(f.default, {
-        className: T.messages,
+        className: A.messages,
         channel: t,
         showingQuarantineBanner: !1,
         hideSummaries: !0,
@@ -152,14 +155,14 @@ let v = e => {
       })
     })
   },
-  x = e => {
+  M = e => {
     let t, {
         channel: n,
         onClose: i
       } = e,
-      r = n.type === g.ChannelTypes.DM ? n.recipients[0] : null,
-      c = (0, s.useStateFromStores)([E.default], () => E.default.getUser(r)),
-      f = l.useMemo(() => C.default.getName(n.guild_id, n.id, c), [n, c]);
+      r = n.type === _.ChannelTypes.DM ? n.recipients[0] : null,
+      c = (0, s.useStateFromStores)([g.default], () => g.default.getUser(r)),
+      f = l.useMemo(() => S.default.getName(n.guild_id, n.id, c), [n, c]);
     return t = null != c ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(d.Avatar, {
         src: c.getAvatarURL(n.guild_id, 24),
@@ -175,13 +178,13 @@ let v = e => {
         children: n.name
       })]
     }), (0, a.jsxs)("div", {
-      className: T.headerContainer,
+      className: A.headerContainer,
       children: [(0, a.jsx)("div", {
-        className: T.header,
+        className: A.header,
         children: t
       }), (0, a.jsx)(d.Clickable, {
         onClick: i,
-        className: T.closeIcon,
+        className: A.closeIcon,
         children: (0, a.jsx)(o.CircleXIcon, {
           width: 16,
           height: 16
