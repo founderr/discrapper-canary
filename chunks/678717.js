@@ -1,69 +1,70 @@
 "use strict";
-t.r(r), t.d(r, {
+r.r(t), r.d(t, {
   default: function() {
-    return Y
+    return V
   }
-}), t("653041"), t("47120");
-var a = t("735250"),
-  n = t("470079"),
-  i = t("803997"),
-  o = t.n(i),
-  l = t("990547"),
-  s = t("442837"),
-  c = t("481060"),
-  d = t("347469"),
-  u = t("213609"),
-  h = t("906467"),
-  p = t("259580"),
-  m = t("465670"),
-  g = t("54017"),
-  f = t("502568"),
-  b = t("31336"),
-  y = t("19759"),
-  x = t("432877");
-t("381996");
-var k = t("392750"),
-  v = t("926976"),
-  C = t("592197"),
-  S = t("789654"),
-  j = t("691867"),
-  T = t("916790"),
-  w = t("912072"),
-  N = t("246992"),
-  E = t("442954"),
-  L = t("702904"),
-  _ = t("958328"),
-  A = t("514866"),
-  P = t("678639"),
-  R = t("351930"),
-  O = t("771751"),
-  M = t("596768"),
-  I = t("621060"),
-  D = t("689938"),
-  B = t("284439"),
-  G = t("779869");
+}), r("653041"), r("47120");
+var a = r("735250"),
+  n = r("470079"),
+  i = r("803997"),
+  l = r.n(i),
+  o = r("990547"),
+  s = r("442837"),
+  c = r("481060"),
+  d = r("347469"),
+  u = r("213609"),
+  h = r("906467"),
+  p = r("259580"),
+  m = r("465670"),
+  g = r("54017"),
+  f = r("502568"),
+  b = r("31336"),
+  y = r("19759"),
+  x = r("432877");
+r("381996");
+var k = r("392750"),
+  v = r("926976"),
+  C = r("592197"),
+  S = r("789654"),
+  j = r("691867"),
+  T = r("916790"),
+  w = r("912072"),
+  N = r("246992"),
+  E = r("442954"),
+  L = r("702904"),
+  _ = r("248526"),
+  A = r("958328"),
+  P = r("514866"),
+  R = r("678639"),
+  O = r("351930"),
+  M = r("771751"),
+  I = r("596768"),
+  D = r("621060"),
+  B = r("689938"),
+  H = r("284439"),
+  F = r("779869");
 
-function H(e) {
+function G(e) {
   let {
-    resizableNode: r,
-    onResize: t,
+    resizableNode: t,
+    onResize: r,
     onResizeEnd: n
   } = e, i = (0, d.default)({
     minDimension: y.DEVTOOLS_SIDEBAR_MIN_WIDTH,
-    resizableDomNodeRef: r,
-    onElementResize: t,
+    resizableDomNodeRef: t,
+    onElementResize: r,
     onElementResizeEnd: n,
     orientation: d.ResizeOrientation.HORIZONTAL_LEFT
   });
   return (0, a.jsx)("div", {
     onMouseDown: i,
-    className: B.resizeHandle
+    className: H.resizeHandle
   })
 }
 
-function F() {
+function U() {
   var e;
-  let r = n.useMemo(() => {
+  let t = n.useMemo(() => {
       let e = [{
         id: "analytics",
         name: "Analytics",
@@ -71,21 +72,25 @@ function F() {
       }, {
         id: "triggers",
         name: "Triggers",
-        render: () => (0, a.jsx)(M.default, {})
+        render: () => (0, a.jsx)(I.default, {})
       }, {
         id: "stores",
         name: "Stores",
-        render: () => (0, a.jsx)(P.default, {})
+        render: () => (0, a.jsx)(R.default, {})
       }, {
         id: "dispatcher",
         name: "Dispatcher",
         render: () => (0, a.jsx)(T.default, {})
       }];
-      return h.default.isDeveloper && e.push({
+      return h.default.isDeveloper && (e.push({
         id: "quick_actions",
         name: "Quick Actions",
-        render: () => (0, a.jsx)(A.default, {})
+        render: () => (0, a.jsx)(P.default, {})
       }), e.push({
+        id: "perks_demos",
+        name: "Perks Demos",
+        render: () => (0, a.jsx)(_.default, {})
+      })), e.push({
         id: "colors",
         name: "Colors",
         render: () => (0, a.jsx)(S.default, {})
@@ -108,7 +113,7 @@ function F() {
       }), e.push({
         id: "permissions",
         name: "Permissions",
-        render: () => (0, a.jsx)(_.default, {})
+        render: () => (0, a.jsx)(A.default, {})
       }), e.push({
         id: "modals",
         name: "Modals",
@@ -120,7 +125,7 @@ function F() {
       }), window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith("staging") && (e.push({
         id: "trials",
         name: "Trials",
-        render: () => (0, a.jsx)(O.default, {})
+        render: () => (0, a.jsx)(M.default, {})
       }), e.push({
         id: "payments",
         name: "Payments",
@@ -128,7 +133,7 @@ function F() {
       }), e.push({
         id: "subscriptions",
         name: "Subscriptions",
-        render: () => (0, a.jsx)(R.default, {})
+        render: () => (0, a.jsx)(O.default, {})
       }), e.push({
         id: "billing",
         name: "Billing",
@@ -136,30 +141,30 @@ function F() {
       })), e
     }, []),
     {
-      TabBar: t,
+      TabBar: r,
       renderSelectedTab: i,
-      selectedTabId: o
-    } = (0, I.default)({
-      tabs: r,
+      selectedTabId: l
+    } = (0, D.default)({
+      tabs: t,
       initialSelectedTabId: null !== (e = y.default.lastOpenTabId) && void 0 !== e ? e : void 0,
       onChangeTab: e => {
         (0, b.updateDevToolsSettings)({
           lastOpenTabId: e
         })
       }
-    }, [r]);
+    }, [t]);
   return (0, u.default)({
-    type: l.ImpressionTypes.PANE,
-    name: l.ImpressionNames.VIEW_PANEL_DEVTOOLS,
+    type: o.ImpressionTypes.PANE,
+    name: o.ImpressionNames.VIEW_PANEL_DEVTOOLS,
     properties: {
-      panel: o
+      panel: l
     }
   }), (0, a.jsxs)(N.DevToolsLayerProvider, {
     children: [(0, a.jsxs)(f.default, {
-      className: G.headerBar,
+      className: F.headerBar,
       toolbar: (0, a.jsx)(f.default.Icon, {
         icon: m.default,
-        tooltip: D.default.Messages.CLOSE,
+        tooltip: B.default.Messages.CLOSE,
         onClick: b.toggleDisplayDevTools
       }),
       children: [(0, a.jsx)(f.default.Icon, {
@@ -168,53 +173,53 @@ function F() {
       }), (0, a.jsx)(f.default.Title, {
         children: "DevTools"
       })]
-    }), (0, a.jsx)(t, {}), i(), (0, a.jsx)(N.DevToolsLayerContainer, {
-      className: B.layerContainer
-    })]
-  })
-}
-
-function U() {
-  let e = n.useRef(null),
-    r = (0, s.useStateFromStores)([y.default], () => y.default.sidebarWidth),
-    [t, i] = n.useState(null),
-    l = n.useCallback(e => (0, b.updateDevToolsSettings)({
-      sidebarWidth: e
-    }), []);
-  return (n.useEffect(() => {
-    null === t && null !== r && i(r)
-  }, [r, t]), null === t) ? null : (0, a.jsxs)("div", {
-    ref: e,
-    className: o()(B.container),
-    style: {
-      minWidth: y.DEVTOOLS_SIDEBAR_MIN_WIDTH,
-      width: t
-    },
-    children: [(0, a.jsx)(H, {
-      resizableNode: e,
-      onResize: i,
-      onResizeEnd: l
-    }), (0, a.jsx)("div", {
-      className: B.sidebarContent,
-      children: (0, a.jsx)(F, {})
+    }), (0, a.jsx)(r, {}), i(), (0, a.jsx)(N.DevToolsLayerContainer, {
+      className: H.layerContainer
     })]
   })
 }
 
 function z() {
+  let e = n.useRef(null),
+    t = (0, s.useStateFromStores)([y.default], () => y.default.sidebarWidth),
+    [r, i] = n.useState(null),
+    o = n.useCallback(e => (0, b.updateDevToolsSettings)({
+      sidebarWidth: e
+    }), []);
+  return (n.useEffect(() => {
+    null === r && null !== t && i(t)
+  }, [t, r]), null === r) ? null : (0, a.jsxs)("div", {
+    ref: e,
+    className: l()(H.container),
+    style: {
+      minWidth: y.DEVTOOLS_SIDEBAR_MIN_WIDTH,
+      width: r
+    },
+    children: [(0, a.jsx)(G, {
+      resizableNode: e,
+      onResize: i,
+      onResizeEnd: o
+    }), (0, a.jsx)("div", {
+      className: H.sidebarContent,
+      children: (0, a.jsx)(U, {})
+    })]
+  })
+}
+
+function Y() {
   let e = (0, s.useStateFromStores)([y.default], () => y.default.displayTools);
   return e ? (0, a.jsx)("div", {
-    className: o()(B.container, B.mobileContainerExpanded),
+    className: l()(H.container, H.mobileContainerExpanded),
     children: (0, a.jsx)("div", {
-      className: B.sidebarContent,
-      children: (0, a.jsx)(F, {})
+      className: H.sidebarContent,
+      children: (0, a.jsx)(U, {})
     })
   }) : (0, a.jsx)("div", {
-    className: B.container,
+    className: H.container,
     children: (0, a.jsx)(c.Clickable, {
       onClick: b.toggleDisplayDevTools,
       children: (0, a.jsxs)(f.default, {
-        className: o()(G.headerBar, B.mobileHeaderCollapsed),
+        className: l()(F.headerBar, H.mobileHeaderCollapsed),
         toolbar: (0, a.jsx)(p.default, {
           direction: p.default.Directions.UP
         }),
@@ -229,9 +234,9 @@ function z() {
   })
 }
 
-function Y(e) {
+function V(e) {
   let {
-    mobile: r
+    mobile: t
   } = e;
-  return r ? (0, a.jsx)(z, {}) : (0, a.jsx)(U, {})
+  return t ? (0, a.jsx)(Y, {}) : (0, a.jsx)(z, {})
 }
