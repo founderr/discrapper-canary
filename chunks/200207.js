@@ -9,7 +9,7 @@ n("470079");
 var r = n("557533"),
   s = n.n(r),
   a = n("789978"),
-  l = n("368072"),
+  l = n("790472"),
   o = n("777207"),
   c = n("431674"),
   d = n("956169");
@@ -36,7 +36,7 @@ function u(e) {
         style: null != r ? {
           backgroundImage: null != r ? "url(".concat(r.toString(), ")") : void 0
         } : void 0,
-        children: null == r && (0, i.jsx)(l.BadgeIcon, {
+        children: null == r && (0, i.jsx)(l.TicketIcon, {
           color: "white",
           height: 128,
           width: 128
