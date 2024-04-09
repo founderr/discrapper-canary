@@ -27,7 +27,7 @@ let T = 12,
     let e = (0, c.getHistory)().location.search;
     return null != e && e.length > 0 && e.startsWith("?") ? r.parse(e) : {}
   },
-  A = e => {
+  N = e => {
     let {
       categoryId: t,
       categoryName: n,
@@ -52,7 +52,7 @@ let T = 12,
       })]
     })
   },
-  N = () => (0, a.jsxs)("div", {
+  A = () => (0, a.jsxs)("div", {
     className: p.emptyContainer,
     children: [(0, a.jsx)("div", {
       className: p.errorImage
@@ -70,9 +70,9 @@ t.default = e => {
     mostRecentQuery: l,
     defaultLanguage: r,
     availableLanguages: c,
-    isFetchingSearch: v,
+    isFetchingSearch: O,
     scroller: R,
-    loadingGuildId: O,
+    loadingGuildId: v,
     theme: L,
     currentCategoryId: P,
     currentCategoryName: M,
@@ -138,14 +138,14 @@ t.default = e => {
       loadId: t,
       searchResults: n,
       mostRecentQuery: l,
-      isFetchingSearch: v,
+      isFetchingSearch: O,
       defaultLanguage: r,
       placeholder: x,
       availableLanguages: c,
       isSearchPage: !0,
       currentCategoryId: P,
       isTagSearch: H
-    }), Y ? (0, a.jsx)(N, {}) : w <= 0 ? (0, a.jsx)(A, {
+    }), Y ? (0, a.jsx)(A, {}) : w <= 0 ? (0, a.jsx)(N, {
       categoryId: P,
       categoryName: M,
       onClick: () => {
@@ -171,7 +171,7 @@ t.default = e => {
               loading: G,
               loadingPlaceholderCount: T,
               onViewGuild: y,
-              loadingGuildId: O,
+              loadingGuildId: v,
               theme: L,
               analyticsContext: h.AnalyticsContexts.SEARCH,
               onGuildCardSeen: D,

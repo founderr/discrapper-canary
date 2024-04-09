@@ -50,13 +50,13 @@ let T = () => 80,
     } = e, g = (0, u.useStateFromStores)([f.default], () => {
       let e = f.default.getProduct(a.skuId);
       return (0, h.isPremiumCollectiblesProduct)(e)
-    }), C = (0, m.default)(a, n), A = E.default.canUseCollectibles(t), T = i === x.Section.PREMIUM_PURCHASE && !A, N = r.useRef(null), R = (0, d.default)(null != l ? l : N), {
-      avatarDecorationSrc: M
+    }), C = (0, m.default)(a, n), A = E.default.canUseCollectibles(t), T = i === x.Section.PREMIUM_PURCHASE && !A, N = r.useRef(null), M = (0, d.default)(null != l ? l : N), {
+      avatarDecorationSrc: R
     } = (0, I.default)({
       user: t,
       avatarDecorationOverride: a,
       size: 80,
-      animateOnHover: !R
+      animateOnHover: !M
     });
     return (0, s.jsxs)(b, {
       className: T ? P.decorationGridItemChurned : void 0,
@@ -65,7 +65,7 @@ let T = () => 80,
       ...c,
       children: [(0, s.jsx)("img", {
         className: P.presetDecorationImg,
-        src: M,
+        src: R,
         alt: a.label
       }), i === x.Section.PURCHASE || i === x.Section.PREMIUM_PURCHASE && A ? null : C ? (0, s.jsx)(v.PremiumBadge, {
         className: P.newBadge,

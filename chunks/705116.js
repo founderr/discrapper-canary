@@ -17,19 +17,19 @@ var a = n("481060"),
 function c(e) {
   let t, {
       compact: c,
-      isOwner: E,
-      channel: f
+      isOwner: f,
+      channel: E
     } = e,
     _ = () => {
-      let e = i.default.getGuild(f.getGuildId());
+      let e = i.default.getGuild(E.getGuildId());
       null != e && ((0, a.openModalLazy)(async () => {
         let {
           default: t
-        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("43643"), n.e("7654"), n.e("61939")]).then(n.bind(n, "560114"));
+        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("43643"), n.e("7654"), n.e("92893")]).then(n.bind(n, "560114"));
         return n => (0, s.jsx)(t, {
           ...n,
           guild: e,
-          channel: f,
+          channel: E,
           source: o.InstantInviteSources.INVITE_SYSTEM_MESSAGE
         })
       }), (0, l.trackGuildInviteNotificationAction)())
@@ -41,7 +41,7 @@ function c(e) {
     }, t);
   return t = c ? (0, s.jsx)("div", {
     className: d.inviteContent,
-    children: E ? u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_OWNER_COMPACT.format({
+    children: f ? u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_OWNER_COMPACT.format({
       inviteHook: T
     }) : u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_COMPACT.format({
       inviteHook: T
@@ -50,10 +50,10 @@ function c(e) {
     className: d.content,
     children: [(0, s.jsx)("div", {
       className: d.inviteHeader,
-      children: E ? u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_OWNER : u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS
+      children: f ? u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_OWNER : u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS
     }), (0, s.jsx)("div", {
       className: d.inviteContent,
-      children: E ? u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION_OWNER : u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION
+      children: f ? u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION_OWNER : u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION
     }), (0, s.jsx)(a.Button, {
       onClick: _,
       size: a.Button.Sizes.SMALL,

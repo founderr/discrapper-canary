@@ -4,12 +4,12 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var i = n("544891"),
-  r = n("881052"),
+var r = n("544891"),
+  i = n("881052"),
   l = n("981631");
 let s = async (e, t) => {
   try {
-    return (await i.HTTP.get({
+    return (await r.HTTP.get({
       url: l.Endpoints.PRICE_TIERS,
       query: {
         price_tier_type: t,
@@ -17,6 +17,6 @@ let s = async (e, t) => {
       }
     })).body
   } catch (e) {
-    throw new r.APIError(e)
+    throw new i.APIError(e)
   }
 }

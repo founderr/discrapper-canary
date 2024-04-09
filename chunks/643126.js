@@ -20,9 +20,9 @@ var a = n("735250"),
   p = n("864441"),
   T = n("981631"),
   g = n("689938"),
-  A = n("285146");
+  N = n("285146");
 
-function N(e, t, n) {
+function A(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -30,7 +30,7 @@ function N(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let v = {
+let O = {
   HOST: 5,
   LISTENER: 4
 };
@@ -74,24 +74,24 @@ class R extends s.PureComponent {
   }
   render() {
     return (0, a.jsxs)("div", {
-      className: A.listeningAlong,
+      className: N.listeningAlong,
       children: [this.renderTitle(), (0, a.jsx)(E.default, {
         justify: E.default.Justify.END,
-        className: A.party,
+        className: N.party,
         children: (0, a.jsx)(h.default, {
           users: this.props.party,
-          max: this.isHost() ? v.HOST : v.LISTENER,
+          max: this.isHost() ? O.HOST : O.LISTENER,
           renderUser: this.renderPartyMember,
           renderMoreUsers: this.renderPartyMemberOverflow
         })
       }), (0, a.jsxs)("div", {
-        className: A.icons,
+        className: N.icons,
         children: [this.renderHelpIcon(), this.renderStopListeningButton()]
       })]
     })
   }
   constructor(...e) {
-    super(...e), N(this, "renderPartyMember", (e, t) => {
+    super(...e), A(this, "renderPartyMember", (e, t) => {
       let n;
       if (null == e) return null;
       let {
@@ -120,7 +120,7 @@ class R extends s.PureComponent {
               key: e.id,
               src: e.getAvatarURL(void 0, 24),
               size: u.AvatarSizes.SIZE_24,
-              className: i()(A.avatar, t),
+              className: i()(N.avatar, t),
               "aria-label": e.username,
               onMouseEnter: a,
               onMouseLeave: o,
@@ -129,7 +129,7 @@ class R extends s.PureComponent {
           }
         })
       }, e.id)
-    }), N(this, "renderPartyMemberOverflow", (e, t, n) => {
+    }), A(this, "renderPartyMemberOverflow", (e, t, n) => {
       let {
         renderOverflowPopout: s
       } = this.props;
@@ -138,7 +138,7 @@ class R extends s.PureComponent {
         children: n => (0, a.jsx)(u.Tooltip, {
           text: g.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENERS,
           children: s => (0, a.jsx)("div", {
-            className: i()(A.overflow, t),
+            className: i()(N.overflow, t),
             ...s,
             ...n,
             children: e

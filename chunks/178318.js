@@ -34,19 +34,19 @@ try {
 }
 let T = f.default.requireModule("discord_rpc").RPCWebSocket,
   g = window.GLOBAL_ENV.MARKETING_ENDPOINT,
-  A = new d.default("RPCServer:WSS"),
-  N = [];
+  N = new d.default("RPCServer:WSS"),
+  A = [];
 
-function v(e) {
+function O(e) {
   return "function" == typeof e ? e() : e
 }
 
 function R() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
     t = e > 0 ? void 0 : () => {
-      if (!v(s.listening)) return;
+      if (!O(s.listening)) return;
       let e = s.address().port;
-      A.info("Starting on ".concat(e)), u.default.dispatch({
+      N.info("Starting on ".concat(e)), u.default.dispatch({
         type: "RPC_SERVER_READY",
         port: e
       })
@@ -54,11 +54,11 @@ function R() {
   s.listen(S.RPC_STARTING_PORT + e % S.RPC_PORT_RANGE, "127.0.0.1", t)
 }
 
-function O(e, t, n) {
+function v(e, t, n) {
   let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 200,
     s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
-    l = null != v(e.headers).origin ? {
-      "Access-Control-Allow-Origin": v(e.headers).origin,
+    l = null != O(e.headers).origin ? {
+      "Access-Control-Allow-Origin": O(e.headers).origin,
       "Access-Control-Allow-Credentials": "true",
       "Access-Control-Allow-Methods": "POST, GET, PUT, PATCH, DELETE",
       "Access-Control-Allow-Headers": "Content-Type, Authorization"
@@ -71,14 +71,14 @@ function O(e, t, n) {
 
 function L(e, t, n, a) {
   let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-  O(e, t, {
+  v(e, t, {
     code: s,
     message: a
   }, n)
 }
 class P extends _.default {
   send(e) {
-    (c.default.isLoggingOverlayEvents || e.cmd !== S.RPCCommands.OVERLAY && e.evt !== S.RPCEvents.OVERLAY) && A.info("Socket Emit: ".concat(this.id), (0, h.default)(e)), null != a && "etf" === this.encoding ? this._socket.send(a.pack(e), {
+    (c.default.isLoggingOverlayEvents || e.cmd !== S.RPCCommands.OVERLAY && e.evt !== S.RPCEvents.OVERLAY) && N.info("Socket Emit: ".concat(this.id), (0, h.default)(e)), null != a && "etf" === this.encoding ? this._socket.send(a.pack(e), {
       binary: !0
     }) : this._socket.send(JSON.stringify(e))
   }
@@ -97,7 +97,7 @@ class P extends _.default {
 }
 class M extends _.default {
   send(e) {
-    (c.default.isLoggingOverlayEvents || e.cmd !== S.RPCCommands.OVERLAY) && A.info("Socket Emit: ".concat(this.id), e), this._sendCallback(e)
+    (c.default.isLoggingOverlayEvents || e.cmd !== S.RPCCommands.OVERLAY) && N.info("Socket Emit: ".concat(this.id), e), this._sendCallback(e)
   }
   close(e, t) {
     this._closeCallback(t, e)
@@ -111,9 +111,9 @@ class M extends _.default {
 }
 class y extends l.EventEmitter {
   handleRequest(e, t) {
-    let [n, a] = v(e.url).split("?"), s = v(e.method);
+    let [n, a] = O(e.url).split("?"), s = O(e.method);
     if ("/rpc" === n && "OPTIONS" === s) {
-      O(e, t, {
+      v(e, t, {
         body: ""
       });
       return
@@ -121,7 +121,7 @@ class y extends l.EventEmitter {
     let l = "POST" === s;
     if ("/rpc" === n && ("GET" === s || l)) {
       let n = new URLSearchParams(a),
-        s = l ? v(e.headers)["content-type"].split("/")[1] : "json",
+        s = l ? O(e.headers)["content-type"].split("/")[1] : "json",
         r = function() {
           var e;
           let {
@@ -130,8 +130,8 @@ class y extends l.EventEmitter {
           } = o.parse(null !== (e = n.get("callback")) && void 0 !== e ? e : "");
           a === location.protocol && s === location.host ? t.setHeader("Location", n.get("callback")) : t.setHeader("Location", g), t.writeHead(301), t.end()
         },
-        u = new M(l ? O.bind(null, e, t) : r, l ? L.bind(null, e, t, 400) : r, Number(n.get("v")), s);
-      if (l)(0, C.validateSocketClient)(u, v(e.headers).origin, n.get("client_id")).then(() => {
+        u = new M(l ? v.bind(null, e, t) : r, l ? L.bind(null, e, t, 400) : r, Number(n.get("v")), s);
+      if (l)(0, C.validateSocketClient)(u, O(e.headers).origin, n.get("client_id")).then(() => {
         let n = "";
         e.on("data", e => n += e), e.on("error", () => L(e, t, 500, "Internal Server Error")), e.on("end", () => this.handleMessage(u, n))
       }).catch(e => {
@@ -152,18 +152,18 @@ class y extends l.EventEmitter {
   handleConnection(e) {
     var t, n;
     let a;
-    let s = new URLSearchParams(v(e.upgradeReq).url.split("?")[1]),
-      l = null !== (t = v(e.upgradeReq).headers.origin) && void 0 !== t ? t : "";
+    let s = new URLSearchParams(O(e.upgradeReq).url.split("?")[1]),
+      l = null !== (t = O(e.upgradeReq).headers.origin) && void 0 !== t ? t : "";
     try {
       a = new P(e, Number(s.get("v")), null !== (n = s.get("encoding")) && void 0 !== n ? n : "json")
     } catch (t) {
       e.close(t.code, t.message);
       return
     }
-    A.info("Socket Opened: ".concat(a.id)), e.on("error", e => A.error("WS Error: ".concat(e.message))), e.on("close", (e, t) => {
-      A.info("Socket Closed: ".concat(a.id, ", code ").concat(e, ", message ").concat(t)), r().remove(N, e => e === a), this.emit("disconnect", a)
+    N.info("Socket Opened: ".concat(a.id)), e.on("error", e => N.error("WS Error: ".concat(e.message))), e.on("close", (e, t) => {
+      N.info("Socket Closed: ".concat(a.id, ", code ").concat(e, ", message ").concat(t)), r().remove(A, e => e === a), this.emit("disconnect", a)
     }), (0, C.validateSocketClient)(a, l, s.get("client_id")).then(() => {
-      N.push(a), e.on("message", e => this.handleMessage(a, e)), this.emit("connect", a)
+      A.push(a), e.on("message", e => this.handleMessage(a, e)), this.emit("connect", a)
     }).catch(e => {
       let {
         code: t,
@@ -181,14 +181,14 @@ class y extends l.EventEmitter {
     } catch (t) {
       e.close(S.RPCCloseCodes.CLOSE_UNSUPPORTED, "Payload not ".concat(e.encoding));
       return
-    }(c.default.isLoggingOverlayEvents || n.cmd !== S.RPCCommands.OVERLAY) && A.info("Socket Message: ".concat(e.id), (0, h.default)(n)), this.emit("request", e, n)
+    }(c.default.isLoggingOverlayEvents || n.cmd !== S.RPCCommands.OVERLAY) && N.info("Socket Message: ".concat(e.id), (0, h.default)(n)), this.emit("request", e, n)
   }
   constructor() {
     var e;
     super();
     let t = 0;
     (s = T.http.createServer()).on("error", e => {
-      A.error("Error: ".concat(e.message)), ("EADDRINUSE" === e.code || e.message.includes("EADDRINUSE")) && setTimeout(() => R(++t), 1e3)
+      N.error("Error: ".concat(e.message)), ("EADDRINUSE" === e.code || e.message.includes("EADDRINUSE")) && setTimeout(() => R(++t), 1e3)
     }), s.on("request", this.handleRequest.bind(this)), R(t);
     let n = {
       instanceId: null !== (e = s.instanceId) && void 0 !== e ? e : 0,

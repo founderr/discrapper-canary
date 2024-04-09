@@ -20,11 +20,11 @@ var a = n("735250"),
   p = n("210887"),
   T = n("974042"),
   g = n("153124"),
-  A = n("988951"),
-  N = n("26290"),
-  v = n("792125"),
+  N = n("988951"),
+  A = n("26290"),
+  O = n("792125"),
   R = n("666286"),
-  O = n("596957"),
+  v = n("596957"),
   L = n("981631"),
   P = n("723359"),
   M = n("689938"),
@@ -68,13 +68,13 @@ t.default = function(e) {
     children: [(0, a.jsx)(h.AppPageTitle, {
       location: M.default.Messages.FRIENDS
     }), (0, a.jsxs)(C.default, {
-      className: (0, v.getThemeClass)(m),
+      className: (0, O.getThemeClass)(m),
       toolbar: (0, a.jsx)(D, {}),
       scrollable: o.isMobile,
       role: "navigation",
       "aria-labelledby": j,
       children: [(0, a.jsx)(C.default.Icon, {
-        icon: A.default,
+        icon: N.default,
         "aria-hidden": !0
       }), (0, a.jsx)(C.default.Title, {
         id: j,
@@ -99,7 +99,7 @@ t.default = function(e) {
           id: L.FriendsSections.PENDING,
           className: y.item,
           "aria-label": M.default.Messages.FRIENDS_SECTION_PENDING,
-          children: [M.default.Messages.FRIENDS_SECTION_PENDING, b > 0 ? (0, a.jsx)(N.NumberBadge, {
+          children: [M.default.Messages.FRIENDS_SECTION_PENDING, b > 0 ? (0, a.jsx)(A.NumberBadge, {
             count: b,
             className: y.badge,
             style: {
@@ -110,7 +110,7 @@ t.default = function(e) {
           id: L.FriendsSections.SUGGESTIONS,
           className: y.item,
           "aria-label": M.default.Messages.FRIENDS_SECTION_SUGGESTIONS,
-          children: [M.default.Messages.FRIENDS_SECTION_SUGGESTIONS, (0, a.jsx)(N.NumberBadge, {
+          children: [M.default.Messages.FRIENDS_SECTION_SUGGESTIONS, (0, a.jsx)(A.NumberBadge, {
             count: U,
             className: y.badge,
             style: {
@@ -136,7 +136,7 @@ t.default = function(e) {
         id: x,
         className: y.peopleColumn,
         "aria-labelledby": G,
-        children: x === L.FriendsSections.ADD_FRIEND ? (0, a.jsx)(R.default, {}) : (0, a.jsx)(O.default, {
+        children: x === L.FriendsSections.ADD_FRIEND ? (0, a.jsx)(R.default, {}) : (0, a.jsx)(v.default, {
           titleId: G,
           sectionFilter: x
         })

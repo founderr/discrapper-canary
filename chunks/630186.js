@@ -7,15 +7,15 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var a = n("726542"),
-  l = n("973616"),
-  s = n("689938");
+var s = n("726542"),
+  a = n("973616"),
+  l = n("689938");
 let i = "twitch:";
-class r extends l.default {
+class r extends a.default {
   getIconURL() {
-    return a.default.get("twitch").icon.lightPNG
+    return s.default.get("twitch").icon.lightPNG
   }
   constructor(e) {
-    super(e), this.id = "".concat(i).concat(e.url), this.name = s.default.Messages.GAME_FEED_ACTIVITY_STREAMING_TWITCH
+    super(e), this.id = "".concat(i).concat(e.url), this.name = l.default.Messages.GAME_FEED_ACTIVITY_STREAMING_TWITCH
   }
 }

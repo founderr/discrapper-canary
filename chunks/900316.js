@@ -17,7 +17,7 @@ function o(e) {
     usernameHook: o,
     compact: u,
     isForumPost: d
-  } = e, c = (0, a.default)(t), E = o(c);
+  } = e, c = (0, a.default)(t), f = o(c);
   return (0, s.jsx)(l.default, {
     compact: u,
     className: r.channelNameChange,
@@ -25,7 +25,7 @@ function o(e) {
     timestamp: t.timestamp,
     children: (d ? i.default.Messages.SYSTEM_MESSAGE_FORUM_POST_TITLE_CHANGE2 : i.default.Messages.SYSTEM_MESSAGE_CHANNEL_NAME_CHANGE2).format({
       username: c.nick,
-      usernameHook: E,
+      usernameHook: f,
       channelName: t.content
     })
   })

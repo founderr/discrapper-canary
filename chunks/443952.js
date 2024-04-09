@@ -21,11 +21,11 @@ var s = n("45792"),
   p = n("630388"),
   T = n("823379"),
   g = n("591759"),
-  A = n("228488"),
-  N = n("996106"),
-  v = n("914946"),
+  N = n("228488"),
+  A = n("996106"),
+  O = n("914946"),
   R = n("452426"),
-  O = n("561205"),
+  v = n("561205"),
   L = n("600027"),
   P = n("852926"),
   M = n("186901"),
@@ -33,7 +33,7 @@ var s = n("45792"),
 async function D(e, t, n, a) {
   let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
     l = m.default.getApplicationActivity(t);
-  if (null == l || null == l.secrets || !(0, v.validateActivityInvite)(a, l.party, l.secrets)) throw new N.default({
+  if (null == l || null == l.secrets || !(0, O.validateActivityInvite)(a, l.party, l.secrets)) throw new A.default({
     errorCode: y.RPCErrors.NO_ELIGIBLE_ACTIVITY
   }, "No eligible activity for application. Ensure an activity includes a party and appropriate secret.");
   let o = (0, E.default)(l, S.default);
@@ -42,7 +42,7 @@ async function D(e, t, n, a) {
       lock: t
     } = (0, P.unlockOverlay)(e);
     return (0, r.openModal)(l, o).then(() => {
-      throw t(), new N.default({
+      throw t(), new A.default({
         errorCode: y.RPCErrors.NO_ELIGIBLE_ACTIVITY
       }, "No eligible activity for application. Ensure user does have have privacy enabled.")
     })
@@ -68,7 +68,7 @@ t.default = {
           pid: a
         }
       } = e, s = t.application.id;
-      if (null == s) throw new N.default({
+      if (null == s) throw new A.default({
         errorCode: y.RPCErrors.INVALID_COMMAND
       }, "No application.");
       return D(a, s, n, y.ActivityActionTypes.JOIN)
@@ -107,7 +107,7 @@ t.default = {
           pid: l
         }
       } = e, i = t.application.id;
-      if (null == i) throw new N.default({
+      if (null == i) throw new A.default({
         errorCode: y.RPCErrors.INVALID_COMMAND
       }, "No application.");
       return D(l, i, a, n, s)
@@ -135,7 +135,7 @@ t.default = {
           message_id: i
         }
       } = e, r = t.application.id;
-      if (null == r) throw new N.default({
+      if (null == r) throw new A.default({
         errorCode: y.RPCErrors.INVALID_COMMAND
       }, "No application.");
       let u = Promise.resolve(!1);
@@ -147,7 +147,7 @@ t.default = {
         messageId: i
       });
       return u.then(e => {
-        if (!e) throw new N.default({
+        if (!e) throw new A.default({
           errorCode: y.RPCErrors.INVALID_INVITE
         }, "Invite is expired or invalid.")
       })
@@ -166,7 +166,7 @@ t.default = {
       } = (0, L.validateOpenInviteDialog)(), r = _.default.getWindow(y.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
       (null == r ? void 0 : r.closed) && (r = null);
       let o = null != r ? y.AppContext.POPOUT : y.AppContext.APP;
-      (0, A.exitFullScreen)({}, null == r ? void 0 : r.document), (0, l.openModalLazy)(async () => {
+      (0, N.exitFullScreen)({}, null == r ? void 0 : r.document), (0, l.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("7654")]).then(n.bind(n, "560114"));
@@ -192,11 +192,11 @@ t.default = {
       let {
         socket: n
       } = e, a = n.application.id;
-      if (null == a) throw new N.default({
+      if (null == a) throw new A.default({
         errorCode: y.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      let s = null === (t = (0, O.default)()) || void 0 === t ? void 0 : t.id;
-      if (null == s) throw new N.default({
+      let s = null === (t = (0, v.default)()) || void 0 === t ? void 0 : t.id;
+      if (null == s) throw new A.default({
         errorCode: y.RPCErrors.UNKNOWN_ERROR
       }, "Unable to find selected channel");
       return new Promise((e, t) => {
@@ -204,7 +204,7 @@ t.default = {
           var n;
           let a = I.default.getLastFocusedWindowId(),
             s = null == a ? null : null === (n = (0, c.getAppWindowContextValue)(a)) || void 0 === n ? void 0 : n.renderWindow;
-          if (null == s) throw new N.default({
+          if (null == s) throw new A.default({
             errorCode: y.RPCErrors.UNKNOWN_ERROR
           }, "No valid window found");
           let l = s.document.createElement("input");
@@ -227,7 +227,7 @@ t.default = {
         }, () => t(Error("Upload canceled")))
       }).catch(e => {
         var t;
-        throw new N.default({
+        throw new A.default({
           errorCode: y.RPCErrors.UNKNOWN_ERROR
         }, null !== (t = null == e ? void 0 : e.message) && void 0 !== t ? t : "Failed to upload image")
       })
@@ -245,19 +245,19 @@ t.default = {
           mediaUrl: a
         }
       } = e;
-      (0, v.validatePostMessageTransport)(n.transport);
+      (0, O.validatePostMessageTransport)(n.transport);
       let s = n.application.id;
-      if (null == s) throw new N.default({
+      if (null == s) throw new A.default({
         errorCode: y.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      if (!(0, p.hasFlag)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, y.ApplicationFlags.EMBEDDED)) throw new N.default({
+      if (!(0, p.hasFlag)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, y.ApplicationFlags.EMBEDDED)) throw new A.default({
         errorCode: y.RPCErrors.INVALID_COMMAND
       }, "This application cannot access this API");
-      let l = (0, O.default)();
-      if (null == l) throw new N.default({
+      let l = (0, v.default)();
+      if (null == l) throw new A.default({
         errorCode: y.RPCErrors.INVALID_COMMAND
       }, "No channel found");
-      if (!g.default.isDiscordCdnUrl(a)) throw new N.default({
+      if (!g.default.isDiscordCdnUrl(a)) throw new A.default({
         errorCode: y.RPCErrors.INVALID_PAYLOAD
       }, "mediaUrl must be a Discord CDN url");
       (0, h.openActivityShareMomentModal)({

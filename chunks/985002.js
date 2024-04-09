@@ -14,8 +14,8 @@ function o(e) {
   let {
     onError: t,
     onSuccess: n
-  } = null != e ? e : {}, [o, u] = a.useState(!1), [d, c] = a.useState(!1), [f, E] = a.useState(!1), [h, _] = a.useState(!1), [C, m] = a.useState(!1), [S, I] = a.useState(!1), [p, T] = a.useState(!1), [g, A] = a.useState(!1), N = o || d || f || h || S || g, v = a.useCallback(async e => {
-    if (!N) {
+  } = null != e ? e : {}, [o, u] = a.useState(!1), [d, c] = a.useState(!1), [f, E] = a.useState(!1), [h, _] = a.useState(!1), [C, m] = a.useState(!1), [S, I] = a.useState(!1), [p, T] = a.useState(!1), [g, N] = a.useState(!1), A = o || d || f || h || S || g, O = a.useCallback(async e => {
+    if (!A) {
       u(!0);
       try {
         await (0, l.updateLinkForUserId)(e.id, r.UserLinkStatus.ACTIVE), null == n || n()
@@ -26,8 +26,8 @@ function o(e) {
         u(!1)
       }
     }
-  }, [N, t, n]), R = a.useCallback(async e => {
-    if (!N) {
+  }, [A, t, n]), R = a.useCallback(async e => {
+    if (!A) {
       c(!0);
       try {
         await (0, l.updateLinkForUserId)(e.id, r.UserLinkStatus.DECLINED), null == n || n()
@@ -38,8 +38,8 @@ function o(e) {
         c(!1)
       }
     }
-  }, [N, t, n]), O = a.useCallback(async e => {
-    if (!N) {
+  }, [A, t, n]), v = a.useCallback(async e => {
+    if (!A) {
       E(!0);
       try {
         await (0, l.updateLinkForUserId)(e.id, r.UserLinkStatus.INACTIVE), null == n || n()
@@ -50,8 +50,8 @@ function o(e) {
         E(!1)
       }
     }
-  }, [N, t, n]), L = a.useCallback(async e => {
-    if (!N) {
+  }, [A, t, n]), L = a.useCallback(async e => {
+    if (!A) {
       _(!0);
       try {
         await (0, l.removeLinkForUserId)(e.id), null == n || n()
@@ -62,7 +62,7 @@ function o(e) {
         _(!1)
       }
     }
-  }, [N, t, n]), P = a.useCallback(async () => {
+  }, [A, t, n]), P = a.useCallback(async () => {
     if (!C) {
       m(!0);
       try {
@@ -100,9 +100,9 @@ function o(e) {
     }
   }, [S, t, n]);
   return {
-    acceptLinkRequest: v,
+    acceptLinkRequest: O,
     declineLinkRequest: R,
-    disconnectLinkRequest: O,
+    disconnectLinkRequest: v,
     cancelLinkRequest: L,
     selectTeenUser: M,
     getLinkCode: P,
@@ -113,14 +113,14 @@ function o(e) {
         r = i.default.getStartId(),
         o = i.default.getSelectedTeenId();
       if (!g && null != r && null != o) {
-        A(!0);
+        N(!0);
         try {
           await l.default.fetchMoreTeenActivity(o, e, r, a.event_id)
         } catch (n) {
           let e = new s.APIError(n);
           null == t || t(e)
         } finally {
-          A(!1)
+          N(!1)
         }
       }
     }, [g, t]),

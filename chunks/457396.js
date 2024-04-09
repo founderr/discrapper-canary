@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   NitroTabButton: function() {
-    return A
+    return N
   }
 });
 var a = n("735250");
@@ -25,14 +25,14 @@ var s = n("924826"),
   p = n("701910"),
   T = n("689938"),
   g = n("392934");
-let A = e => {
+let N = e => {
   let t, n, {
-      selected: A,
-      route: N,
-      locationState: v,
+      selected: N,
+      route: A,
+      locationState: O,
       ...R
     } = e,
-    O = (0, l.useStateFromStores)([r.default], () => r.default.getCurrentUser()),
+    v = (0, l.useStateFromStores)([r.default], () => r.default.getCurrentUser()),
     L = (0, l.useStateFromStores)([u.default], () => u.default.getPremiumTypeSubscription()),
     P = (0, s.useListItem)("nitro"),
     M = (0, E.usePremiumTrialOffer)(),
@@ -41,25 +41,25 @@ let A = e => {
     x = (0, m.useIsEligibleForBogoPromotion)(),
     b = (0, I.default)(),
     U = (0, _.useTenureRewardBadgeDescription)();
-  return A || null != M || null != y || x || b || null != U || null != O && Date.now() - O.createdAt.getTime() > 2592e6 || (0, c.hasPremiumSubscriptionToDisplay)(O, L) ? (x ? n = (0, a.jsx)(h.default, {
+  return N || null != M || null != y || x || b || null != U || null != v && Date.now() - v.createdAt.getTime() > 2592e6 || (0, c.hasPremiumSubscriptionToDisplay)(v, L) ? (x ? n = (0, a.jsx)(h.default, {
     isNitroTab: !0
   }) : null != U ? n = (0, a.jsx)(p.default, {
     copy: U
   }) : b ? n = (0, a.jsx)(p.default, {}) : null != y ? n = (0, a.jsx)(S.PremiumDiscountOfferTabBadge, {
     userDiscount: y,
-    isTabSelected: A,
+    isTabSelected: N,
     includesAmountOff: !1
   }) : null != M ? n = (0, a.jsx)(S.PremiumTrialOfferTabBadge, {
     trialOffer: M,
-    isTabSelected: A
+    isTabSelected: N
   }) : D && (n = (0, a.jsx)(C.LocalizedPricingBadgeIcon, {
     entryPoint: C.BadgeEntryPoint.PrivateMessages
-  }), !A && (t = g.localizeBadge)), (0, a.jsx)(i.LinkButton, {
-    selected: A,
-    route: N,
+  }), !N && (t = g.localizeBadge)), (0, a.jsx)(i.LinkButton, {
+    selected: N,
+    route: A,
     icon: d.default,
     text: T.default.Messages.PREMIUM,
-    locationState: v,
+    locationState: O,
     ...R,
     ...P,
     className: t,

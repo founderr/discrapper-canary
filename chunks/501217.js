@@ -19,19 +19,19 @@ function c(e) {
   let {
     message: n,
     compact: c,
-    usernameHook: E,
-    onClickThread: f,
+    usernameHook: f,
+    onClickThread: E,
     onClickViewThreads: _,
     onContextMenuThread: T
-  } = e, I = (0, l.default)(n), m = E(I), N = (0, a.useStateFromStores)([i.default], () => {
+  } = e, m = (0, l.default)(n), I = f(m), p = (0, a.useStateFromStores)([i.default], () => {
     var e;
     return i.default.getChannel(null === (e = n.messageReference) || void 0 === e ? void 0 : e.channel_id)
-  }), p = u.default.Messages.SYSTEM_MESSAGE_THREAD_CREATED.format({
-    actorName: I.nick,
-    actorHook: m,
-    threadName: null !== (t = null == N ? void 0 : N.name) && void 0 !== t ? t : n.content,
+  }), h = u.default.Messages.SYSTEM_MESSAGE_THREAD_CREATED.format({
+    actorName: m.nick,
+    actorHook: I,
+    threadName: null !== (t = null == p ? void 0 : p.name) && void 0 !== t ? t : n.content,
     threadOnClick: {
-      onClick: f,
+      onClick: E,
       onContextMenu: T
     },
     viewThreadsOnClick: _
@@ -42,6 +42,6 @@ function c(e) {
     }),
     timestamp: n.timestamp,
     compact: c,
-    children: p
+    children: h
   })
 }

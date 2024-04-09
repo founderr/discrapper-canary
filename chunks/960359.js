@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return u
   },
   enrollDropsUser: function() {
-    return f
+    return E
   },
   fetchCodePlatformAvailability: function() {
     return o
@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return d
   },
   fetchEnrolledUser: function() {
-    return E
+    return f
   },
   fetchProgress: function() {
     return T
@@ -105,7 +105,7 @@ let r = async e => {
     type: "DROPS_UNENROLL_USER",
     dropsQuestId: e
   }), await d()
-}, E = async e => {
+}, f = async e => {
   let t = await s.HTTP.get({
     url: i.Endpoints.DROPS_ENROLL_USER,
     query: {
@@ -118,7 +118,7 @@ let r = async e => {
     isEnrolled: t.body.enrolled,
     dropsQuestId: e
   })
-}, f = async e => {
+}, E = async e => {
   await s.HTTP.post({
     url: i.Endpoints.DROPS_ENROLL_USER,
     query: {

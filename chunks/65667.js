@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return m
   }
 });
 var s = n("735250");
@@ -14,23 +14,23 @@ var a = n("803997"),
   u = n("778947"),
   d = n("702346"),
   c = n("787374"),
-  E = n("981631"),
-  f = n("674563"),
+  f = n("981631"),
+  E = n("674563"),
   _ = n("689938"),
   T = n("297621");
 
-function I(e) {
+function m(e) {
   let {
     message: t,
     compact: n,
     usernameHook: a
-  } = e, I = (0, r.default)(t), m = a(I), {
-    avatarSrc: N,
+  } = e, m = (0, r.default)(t), I = a(m), {
+    avatarSrc: p,
     eventHandlers: {
-      onMouseEnter: p,
-      onMouseLeave: S
+      onMouseEnter: h,
+      onMouseLeave: N
     }
-  } = (0, c.useAutomodAvatar)(!0), C = "" !== t.content ? new Date(t.content).toLocaleString(_.default.getLocale(), {
+  } = (0, c.useAutomodAvatar)(!0), S = "" !== t.content ? new Date(t.content).toLocaleString(_.default.getLocale(), {
     hour: "numeric",
     minute: "2-digit",
     month: "2-digit",
@@ -38,14 +38,14 @@ function I(e) {
     year: "numeric"
   }) : "";
   return (0, s.jsx)("div", {
-    onMouseEnter: p,
-    onMouseLeave: S,
+    onMouseEnter: h,
+    onMouseLeave: N,
     children: (0, s.jsx)(d.default, {
       className: l()(T.mainContainer, {
         [T.compact]: n
       }),
       iconNode: n ? null : (0, s.jsx)(c.AutomodAvatar, {
-        src: N
+        src: p
       }),
       iconContainerClassName: T.iconContainer,
       compact: n,
@@ -68,7 +68,7 @@ function I(e) {
               className: T.username,
               children: _.default.Messages.GUILD_AUTOMOD_USERNAME
             }), (0, s.jsx)(o.default, {
-              type: f.BotTagTypes.SYSTEM_DM,
+              type: E.BotTagTypes.SYSTEM_DM,
               className: T.systemTag
             })]
           }),
@@ -78,13 +78,13 @@ function I(e) {
           className: l()(T.__invalid_messageContent, {
             [T.compact]: n
           }),
-          children: t.type === E.MessageTypes.GUILD_INCIDENT_ALERT_MODE_ENABLED ? _.default.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_SYSTEM_MESSAGE_SHORT.format({
-            username: I.nick,
-            usernameHook: m,
-            time: C
+          children: t.type === f.MessageTypes.GUILD_INCIDENT_ALERT_MODE_ENABLED ? _.default.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_SYSTEM_MESSAGE_SHORT.format({
+            username: m.nick,
+            usernameHook: I,
+            time: S
           }) : _.default.Messages.GUILD_SERVER_LOCKDOWN_DISABLED_SYSTEM_MESSAGE.format({
-            username: I.nick,
-            usernameHook: m
+            username: m.nick,
+            usernameHook: I
           })
         })]
       })

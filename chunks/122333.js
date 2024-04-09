@@ -21,11 +21,11 @@ var l = n("481060"),
   p = n("358085"),
   T = n("929809"),
   g = n("179645"),
-  A = n("701476"),
-  N = n("785997"),
-  v = n("981631"),
+  N = n("701476"),
+  A = n("785997"),
+  O = n("981631"),
   R = n("188785"),
-  O = n("630724");
+  v = n("630724");
 
 function L() {
   null != a && (0, l.closeModal)(a)
@@ -42,18 +42,18 @@ class P extends r.default {
     let t, i = g.default.getType();
     if (null == i) return;
     switch (i) {
-      case A.NewUserTypes.INVITE_UNCLAIMED:
-        f.default.flowStart(O.FlowType.INVITE, O.RegistrationSteps.NUF_STARTED);
+      case N.NewUserTypes.INVITE_UNCLAIMED:
+        f.default.flowStart(v.FlowType.INVITE, v.RegistrationSteps.NUF_STARTED);
         break;
-      case A.NewUserTypes.ORGANIC_REGISTERED:
-        f.default.flowStart(O.FlowType.ORGANIC, O.RegistrationSteps.NUF_STARTED);
+      case N.NewUserTypes.ORGANIC_REGISTERED:
+        f.default.flowStart(v.FlowType.ORGANIC, v.RegistrationSteps.NUF_STARTED);
         break;
-      case A.NewUserTypes.MARKETING_UNCLAIMED:
-        f.default.flowStart(O.FlowType.ORGANIC_MARKETING, O.RegistrationSteps.NUF_STARTED)
+      case N.NewUserTypes.MARKETING_UNCLAIMED:
+        f.default.flowStart(v.FlowType.ORGANIC_MARKETING, v.RegistrationSteps.NUF_STARTED)
     }
     let r = !1,
       L = m.default.getGuildId();
-    if (i === A.NewUserTypes.INVITE_UNCLAIMED) {
+    if (i === N.NewUserTypes.INVITE_UNCLAIMED) {
       let e = C.default.getGuild(L);
       (null == e ? void 0 : e.hasVerificationGate()) && (r = !0, (0, E.fetchWelcomeScreen)(e.id))
     }
@@ -64,26 +64,26 @@ class P extends r.default {
       open: async function e(e) {
         let t = e => {
           switch (e) {
-            case N.NUFSlides.AGE_GATE:
-              f.default.flowStep(O.FlowType.ANY, O.RegistrationSteps.AGE_GATE);
+            case A.NUFSlides.AGE_GATE:
+              f.default.flowStep(v.FlowType.ANY, v.RegistrationSteps.AGE_GATE);
               break;
-            case N.NUFSlides.CHOOSE_TEMPLATE:
-              f.default.flowStep(O.FlowType.ANY, O.CreateGuildSteps.GUILD_TEMPLATES);
+            case A.NUFSlides.CHOOSE_TEMPLATE:
+              f.default.flowStep(v.FlowType.ANY, v.CreateGuildSteps.GUILD_TEMPLATES);
               break;
-            case N.NUFSlides.CUSTOMIZE_GUILD:
-              f.default.flowStep(O.FlowType.ANY, O.CreateGuildSteps.GUILD_CREATE);
+            case A.NUFSlides.CUSTOMIZE_GUILD:
+              f.default.flowStep(v.FlowType.ANY, v.CreateGuildSteps.GUILD_CREATE);
               break;
-            case N.NUFSlides.CHANNEL_PROMPT:
-              f.default.flowStep(O.FlowType.ANY, O.CreateGuildSteps.CHANNEL_PROMPT);
+            case A.NUFSlides.CHANNEL_PROMPT:
+              f.default.flowStep(v.FlowType.ANY, v.CreateGuildSteps.CHANNEL_PROMPT);
               break;
-            case N.NUFSlides.JOIN_GUILD:
-              f.default.flowStep(O.FlowType.ANY, O.CreateGuildSteps.JOIN_GUILD);
+            case A.NUFSlides.JOIN_GUILD:
+              f.default.flowStep(v.FlowType.ANY, v.CreateGuildSteps.JOIN_GUILD);
               break;
-            case N.NUFSlides.CREATION_INTENT:
-              f.default.flowStep(O.FlowType.ANY, O.CreateGuildSteps.CREATION_INTENT);
+            case A.NUFSlides.CREATION_INTENT:
+              f.default.flowStep(v.FlowType.ANY, v.CreateGuildSteps.CREATION_INTENT);
               break;
-            case N.NUFSlides.COMPLETE:
-              f.default.flowStep(O.FlowType.ANY, O.CreateGuildSteps.SUCCESS);
+            case A.NUFSlides.COMPLETE:
+              f.default.flowStep(v.FlowType.ANY, v.CreateGuildSteps.SUCCESS);
               break;
             case null:
               break;
@@ -100,7 +100,7 @@ class P extends r.default {
             onSlideChange: t
           })
         }, {
-          onCloseRequest: v.NOOP,
+          onCloseRequest: O.NOOP,
           onCloseCallback: e,
           modalKey: a
         })
@@ -139,7 +139,7 @@ class P extends r.default {
       }),
       predicate: () => null != L && null != h.default.get(L) && h.default.get(L) !== h.NO_WELCOME_SCREEN
     }], t = () => {
-      T.setNewUserFlowCompleted(), f.default.flowStep(O.FlowType.ANY, O.RegistrationSteps.NUF_COMPLETE, !0)
+      T.setNewUserFlowCompleted(), f.default.flowStep(v.FlowType.ANY, v.RegistrationSteps.NUF_COMPLETE, !0)
     }, [...e].reverse().forEach(e => {
       let n = t;
       t = () => {

@@ -28,7 +28,7 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
       onDismissed: p,
       onClick: T,
       cta: g,
-      ctaColor: A
+      ctaColor: N
     } = e;
     s.useEffect(() => {
       C(E.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
@@ -36,8 +36,8 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
         guild_id: t.id
       })
     }, [t.id, c]);
-    let N = null;
-    "function" == typeof g ? N = g() : null != g && (N = (0, a.jsx)(r.Button, {
+    let A = null;
+    "function" == typeof g ? A = g() : null != g && (A = (0, a.jsx)(r.Button, {
       className: _.btn,
       size: r.Button.Sizes.SMALL,
       onClick: () => {
@@ -48,10 +48,10 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
         }), null == T || T()
       },
       fullWidth: !0,
-      color: A,
+      color: N,
       children: g
     }));
-    let v = null != f ? "".concat(f, "px") : "16px";
+    let O = null != f ? "".concat(f, "px") : "16px";
     return (0, a.jsxs)("div", {
       className: _.channelNotice,
       children: [!0 === I ? null : (0, a.jsx)(r.Clickable, {
@@ -69,8 +69,8 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
         className: _.imageContainer,
         style: {
           marginTop: "".concat(m, "px"),
-          marginLeft: v,
-          marginRight: v
+          marginLeft: O,
+          marginRight: O
         },
         children: (0, a.jsx)("img", {
           className: _.image,
@@ -86,7 +86,7 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
         }) : null, (0, a.jsx)(r.Text, {
           variant: "text-sm/normal",
           children: l
-        }), N]
+        }), A]
       })]
     })
   };

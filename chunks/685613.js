@@ -12,7 +12,7 @@ var i = n("803997"),
   u = n("918701"),
   d = n("78826"),
   c = n("981631"),
-  E = n("922809");
+  f = n("922809");
 (s = a || (a = {}))[s.SMALL = 24] = "SMALL", s[s.MEDIUM = 32] = "MEDIUM";
 t.default = function(e) {
   let {
@@ -22,12 +22,12 @@ t.default = function(e) {
     theme: a = c.ThemeTypes.DARK
   } = e;
   return (0, l.jsxs)("div", {
-    className: r()(E.partnerBranding, t),
+    className: r()(f.partnerBranding, t),
     children: [(0, l.jsx)(d.QuestsAsset, {
       id: "QuestPartnerBranding_gameTile",
       children: e => (0, l.jsx)("img", {
         ref: e,
-        className: E.partnerBrandingGameTile,
+        className: f.partnerBrandingGameTile,
         alt: "",
         src: (0, u.getGameTileAssetUrl)(s),
         style: {
@@ -47,7 +47,7 @@ t.default = function(e) {
       id: "QuestPartnerBranding_gameLogotype",
       children: e => (0, l.jsx)("img", {
         ref: e,
-        className: E.partnerBrandingLogotype,
+        className: f.partnerBrandingLogotype,
         alt: s.config.messages.gameTitle,
         src: (0, u.getGameLogotypeAssetUrl)(s, (0, o.isThemeDark)(a) ? c.ThemeTypes.DARK : c.ThemeTypes.LIGHT)
       })

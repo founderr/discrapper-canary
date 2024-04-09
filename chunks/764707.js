@@ -1,15 +1,15 @@
 "use strict";
 r.r(t), r("47120");
-var a = r("979590"),
-  o = r.n(a),
+var o = r("979590"),
+  a = r.n(o),
   n = r("399606"),
   l = r("607070"),
   s = r("168631");
 let i = (e, t) => {
     let r = e.toRgb(),
-      a = t.toRgb(),
-      [n, l, i] = (0, s.getValueInColorGradientByPercentage)([r.r, r.g, r.b], [a.r, a.g, a.b], 50);
-    return o()({
+      o = t.toRgb(),
+      [n, l, i] = (0, s.getValueInColorGradientByPercentage)([r.r, r.g, r.b], [o.r, o.g, o.b], 50);
+    return a()({
       r: n,
       g: l,
       b: i
@@ -28,7 +28,7 @@ let i = (e, t) => {
       label: i(t[0], t[1]).isLight() ? e.dark : e.light
     }
   },
-  u = (e, t) => {
+  d = (e, t) => {
     if (0 !== t.length) return 1 === t.length ? {
       primary: t[0],
       secondary: t[0],
@@ -39,42 +39,42 @@ let i = (e, t) => {
       text: i(t[0], t[1]).isLight() ? e.dark : e.light
     }
   },
-  d = (e, t) => {
+  u = (e, t) => {
     let {
       h: r,
-      s: a,
+      s: o,
       l: n
     } = e.toHsl();
-    return o()({
+    return a()({
       h: r,
-      s: a * t,
+      s: o * t,
       l: n
     })
   };
 t.default = e => t => {
   let r = (0, n.useStateFromStores)([l.default], () => l.default.saturation);
   if (null == t) return {};
-  let a = {
+  let o = {
     backgroundColors: c(e, t.backgroundColors),
-    buttonColors: u(e, t.buttonColors),
+    buttonColors: d(e, t.buttonColors),
     confettiColors: t.confettiColors
   };
   return 1 === r ? {
-    ...a,
-    isDarkText: !!(null != a.backgroundColors && a.backgroundColors.secondary.isLight())
+    ...o,
+    isDarkText: !!(null != o.backgroundColors && o.backgroundColors.secondary.isLight())
   } : {
-    backgroundColors: null != a.backgroundColors ? {
-      primary: d(a.backgroundColors.primary, r),
-      secondary: d(a.backgroundColors.secondary, r),
-      border: d(a.backgroundColors.border, r),
-      label: d(a.backgroundColors.label, r)
+    backgroundColors: null != o.backgroundColors ? {
+      primary: u(o.backgroundColors.primary, r),
+      secondary: u(o.backgroundColors.secondary, r),
+      border: u(o.backgroundColors.border, r),
+      label: u(o.backgroundColors.label, r)
     } : void 0,
-    buttonColors: null != a.buttonColors ? {
-      primary: d(a.buttonColors.primary, r),
-      secondary: d(a.buttonColors.secondary, r),
-      text: d(a.buttonColors.text, r)
+    buttonColors: null != o.buttonColors ? {
+      primary: u(o.buttonColors.primary, r),
+      secondary: u(o.buttonColors.secondary, r),
+      text: u(o.buttonColors.text, r)
     } : void 0,
-    confettiColors: a.confettiColors.map(e => d(e, r)),
-    isDarkText: !!(null != a.backgroundColors && a.backgroundColors.secondary.isLight())
+    confettiColors: o.confettiColors.map(e => u(e, r)),
+    isDarkText: !!(null != o.backgroundColors && o.backgroundColors.secondary.isLight())
   }
 }

@@ -24,11 +24,11 @@ var a = n("735250"),
   p = n("126900"),
   T = n("26290"),
   g = n("153066"),
-  A = n("335131"),
-  N = n("141594"),
-  v = n("302800"),
+  N = n("335131"),
+  A = n("141594"),
+  O = n("302800"),
   R = n("981631"),
-  O = n("689938"),
+  v = n("689938"),
   L = n("592761");
 let P = e => {
     let {
@@ -37,7 +37,7 @@ let P = e => {
     return (0, a.jsx)(T.TextBadge, {
       className: L.newBadge,
       color: null != t ? t : S.default.STATUS_DANGER_BACKGROUND,
-      text: O.default.Messages.NEW
+      text: v.default.Messages.NEW
     })
   },
   M = e => {
@@ -56,14 +56,14 @@ let P = e => {
       selected: t,
       route: R.Routes.COLLECTIBLES_SHOP,
       icon: p.default,
-      text: O.default.Messages.COLLECTIBLES_SHOP,
+      text: v.default.Messages.COLLECTIBLES_SHOP,
       locationState: n,
       ...d,
       ...u,
       onMouseEnter: s,
       onMouseLeave: l,
       onClick: () => {
-        (0, A.openCollectiblesShop)({
+        (0, N.openCollectiblesShop)({
           openInLayer: !1,
           analyticsSource: c,
           analyticsLocations: E
@@ -186,16 +186,16 @@ let P = e => {
     } = e, {
       collectiblesShopTabNewBadgeDisplayOptions: s,
       dismissCollectiblesShopTabNewBadge: l
-    } = (0, N.default)();
+    } = (0, A.default)();
     if (null != s) switch (s.type) {
-      case v.CollectiblesMarketingVariant.TOOLTIP:
+      case O.CollectiblesMarketingVariant.TOOLTIP:
         return (0, a.jsx)(x, {
           selected: t,
           locationState: n,
           onButtonClick: l,
           displayOptions: s
         });
-      case v.CollectiblesMarketingVariant.COACHTIP:
+      case O.CollectiblesMarketingVariant.COACHTIP:
         return (0, a.jsx)(D, {
           selected: t,
           locationState: n,

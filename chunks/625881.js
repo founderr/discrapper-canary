@@ -25,8 +25,8 @@ t.default = function(e) {
     premiumType: s,
     onClose: i,
     onConfirm: C,
-    userDiscountOffer: R
-  } = e, [A, M] = n.useState(!1), [h, L] = n.useState(!1), g = async e => {
+    userDiscountOffer: A
+  } = e, [R, M] = n.useState(!1), [h, L] = n.useState(!1), g = async e => {
     try {
       L(!0), M(!1), await r.HTTP.post({
         url: I.Endpoints.USER_OFFER_REDEEM,
@@ -38,8 +38,8 @@ t.default = function(e) {
       M(!0)
     }
     L(!1)
-  }, y = (0, d.default)(), x = (0, u.isThemeDark)(y) ? P : T, D = (0, _.useChurnDiscountedPrice)(t, m.SubscriptionPlans.PREMIUM_MONTH_TIER_2, R), U = (0, E.getPrice)(m.SubscriptionPlans.PREMIUM_MONTH_TIER_2), O = (0, f.formatPrice)(U.amount, U.currency);
-  return null == R ? null : (0, a.jsxs)(a.Fragment, {
+  }, y = (0, d.default)(), D = (0, u.isThemeDark)(y) ? P : T, x = (0, _.useChurnDiscountedPrice)(t, m.SubscriptionPlans.PREMIUM_MONTH_TIER_2, A), U = (0, E.getPrice)(m.SubscriptionPlans.PREMIUM_MONTH_TIER_2), b = (0, f.formatPrice)(U.amount, U.currency);
+  return null == A ? null : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(p.default, {
       premiumType: s,
       onClose: i
@@ -50,20 +50,20 @@ t.default = function(e) {
         children: [(0, a.jsx)(o.Heading, {
           variant: "heading-xl/bold",
           children: N.default.Messages.CHURN_DISCOUNT_CONFIRM_HEADER.format({
-            percent: R.discount.amount
+            percent: A.discount.amount
           })
         }), (0, a.jsxs)("div", {
           className: S.confirmDiscountDescription,
           children: [(0, a.jsx)("img", {
             alt: "",
-            src: x,
+            src: D,
             className: S.confirmDiscountIcon
           }), (0, a.jsx)(o.Text, {
             variant: "text-sm/medium",
             children: N.default.Messages.CHURN_DISCOUNT_CONFIRM_DESCRIPTION.format({
-              percent: R.discount.amount,
-              numMonths: R.discount.user_usage_limit,
-              price: O
+              percent: A.discount.amount,
+              numMonths: A.discount.user_usage_limit,
+              price: b
             })
           })]
         }), (0, a.jsx)("div", {
@@ -72,14 +72,14 @@ t.default = function(e) {
             variant: "text-xs/semibold",
             className: S.confirmDiscountLegaleseText,
             children: N.default.Messages.CHURN_DISCOUNT_CONFIRM_LEGALESE.format({
-              discountedPrice: D,
-              billingPeriod: (0, E.getDiscountIntervalString)(R.discount.user_usage_limit_interval),
-              numMonths: R.discount.user_usage_limit,
-              fullPrice: O,
+              discountedPrice: x,
+              billingPeriod: (0, E.getDiscountIntervalString)(A.discount.user_usage_limit_interval),
+              numMonths: A.discount.user_usage_limit,
+              fullPrice: b,
               helpdeskArticle: c.default.getArticleURL(I.HelpdeskArticles.PAID_TERMS)
             })
           })
-        }), A && (0, a.jsx)("div", {
+        }), R && (0, a.jsx)("div", {
           className: S.redemptionFailedMessage,
           children: (0, a.jsx)(o.Text, {
             variant: "text-xs/semibold",
@@ -88,8 +88,8 @@ t.default = function(e) {
           })
         }), (0, a.jsxs)("div", {
           className: l()(S.confirmDiscountButtons, {
-            [S.confrimDiscountsButtonsError]: A,
-            [S.confrimDiscountsButtonsNoError]: !A
+            [S.confrimDiscountsButtonsError]: R,
+            [S.confrimDiscountsButtonsNoError]: !R
           }),
           children: [(0, a.jsx)(o.Button, {
             look: o.ButtonLooks.LINK,
@@ -98,7 +98,7 @@ t.default = function(e) {
           }), (0, a.jsx)(o.Button, {
             size: o.ButtonSizes.SMALL,
             submitting: h,
-            onClick: () => g(R.id),
+            onClick: () => g(A.id),
             children: N.default.Messages.CHURN_DISCOUNT_CONFIRM_DISCOUNT
           })]
         })]

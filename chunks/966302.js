@@ -24,11 +24,11 @@ var a = n("735250"),
   p = n("923973"),
   T = n("189771"),
   g = n("560688"),
-  A = n("871499"),
-  N = n("136995"),
-  v = n("25827"),
+  N = n("871499"),
+  A = n("136995"),
+  O = n("25827"),
   R = n("131951"),
-  O = n("594174"),
+  v = n("594174"),
   L = n("451478"),
   P = n("465670"),
   M = n("421600"),
@@ -58,7 +58,7 @@ function H(e) {
     header: t
   } = e, n = R.default.getCameraComponent(), l = (0, o.useStateFromStores)([R.default], () => R.default.getVideoDeviceId()), i = (0, I.default)();
   return s.useEffect(() => {
-    let e = O.default.getCurrentUser();
+    let e = v.default.getCurrentUser();
     if (i && null != e) {
       let t = (0, m.getLastUsedVideoBackgroundOption)(e);
       (0, S.applyBackgroundOptionPreview)(t, l, {
@@ -93,7 +93,7 @@ function V(e) {
   } = (0, p.default)(), o = (0, T.default)(n);
   return (0, a.jsxs)("div", {
     className: G.actions,
-    children: [(0, a.jsx)(A.CenterControlButton, {
+    children: [(0, a.jsx)(N.CenterControlButton, {
       iconComponent: P.default,
       color: "red",
       className: G.actionButton,
@@ -117,7 +117,7 @@ function V(e) {
         } = e, {
           isShown: u
         } = t;
-        return (0, a.jsx)(v.default, {
+        return (0, a.jsx)(O.default, {
           join: !0,
           enabled: r,
           color: "green",
@@ -134,7 +134,7 @@ function V(e) {
           }
         })
       }
-    }), (0, a.jsx)(N.default, {
+    }), (0, a.jsx)(A.default, {
       channel: n,
       color: "green",
       centerButton: !0,
@@ -149,9 +149,9 @@ function Y(e) {
     y: n,
     x: l,
     channel: f
-  } = e, [C, m] = s.useState(!1), S = (0, h.getChannelIconURL)(f), I = (0, _.default)(f), [p, T] = (0, o.useStateFromStoresArray)([R.default], () => [R.default.supports(U.Features.VIDEO), Object.keys(R.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([L.default], () => L.default.isFocused()), A = (0, o.useStateFromStores)([D.default], () => D.default.getMode(f.id)), N = s.useCallback(e => {
+  } = e, [C, m] = s.useState(!1), S = (0, h.getChannelIconURL)(f), I = (0, _.default)(f), [p, T] = (0, o.useStateFromStoresArray)([R.default], () => [R.default.supports(U.Features.VIDEO), Object.keys(R.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([L.default], () => L.default.isFocused()), N = (0, o.useStateFromStores)([D.default], () => D.default.getMode(f.id)), A = s.useCallback(e => {
     null != e.top && null != e.left && c.default.move(e.left, e.top)
-  }, []), v = (0, r.useSpring)({
+  }, []), O = (0, r.useSpring)({
     value: C ? 1 : 0,
     config: {
       ...r.config.stiff,
@@ -164,7 +164,7 @@ function Y(e) {
     };
     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
   }, [f]);
-  let O = A === b.ChannelModes.VIDEO && p && T > 0,
+  let v = N === b.ChannelModes.VIDEO && p && T > 0,
     P = (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(M.default, {
         className: G.icon,
@@ -183,11 +183,11 @@ function Y(e) {
           color: "header-secondary",
           className: G.subtitle,
           variant: C ? "text-sm/normal" : "text-md/normal",
-          children: A === b.ChannelModes.VOICE ? j.default.Messages.INCOMING_CALL_ELLIPSIS : j.default.Messages.INCOMING_VIDEO_CALL_ELLIPSIS
+          children: N === b.ChannelModes.VOICE ? j.default.Messages.INCOMING_CALL_ELLIPSIS : j.default.Messages.INCOMING_VIDEO_CALL_ELLIPSIS
         })]
       })]
     }),
-    x = O ? k : F;
+    x = v ? k : F;
   return (0, a.jsx)(E.default, {
     className: G.wrapper,
     selector: ".".concat(G.root),
@@ -197,7 +197,7 @@ function Y(e) {
     },
     maxX: window.innerWidth,
     maxY: window.innerHeight,
-    onDragEnd: N,
+    onDragEnd: A,
     dragAnywhere: !0,
     children: (0, a.jsx)(a.Fragment, {
       children: (0, a.jsxs)(r.animated.div, {
@@ -206,9 +206,9 @@ function Y(e) {
         }, C ? (0, y.getThemeClass)("dark") : null),
         style: {
           ...t,
-          width: v.value.interpolate([0, 1], [x.width, B.width]),
-          minHeight: v.value.interpolate([0, 1], [x.height, B.height]),
-          translateX: v.value.interpolate([0, 1], [0, -1 * Math.abs(B.width - x.width) / 2])
+          width: O.value.interpolate([0, 1], [x.width, B.width]),
+          minHeight: O.value.interpolate([0, 1], [x.height, B.height]),
+          translateX: O.value.interpolate([0, 1], [0, -1 * Math.abs(B.width - x.width) / 2])
         },
         children: [C ? (0, a.jsx)(H, {
           header: P
@@ -216,10 +216,10 @@ function Y(e) {
           className: G.mainChannelInfo,
           children: P
         }), (0, a.jsx)(V, {
-          canVideo: O,
+          canVideo: v,
           channel: f,
           numVideoDevices: T
-        }), O && !C ? (0, a.jsx)(u.Button, {
+        }), v && !C ? (0, a.jsx)(u.Button, {
           size: u.Button.Sizes.SMALL,
           fullWidth: !0,
           look: u.Button.Looks.LINK,

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   getAssetCDNUrl: function() {
-    return i
+    return r
   }
 });
 
-function i(e) {
+function r(e) {
   return "".concat("https://cdn.discordapp.com/assets", "/").concat(e)
 }

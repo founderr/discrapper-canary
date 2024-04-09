@@ -20,16 +20,16 @@ var a = n("735250"),
   p = n("164164"),
   T = n("46140"),
   g = n("981631"),
-  A = n("311676");
+  N = n("311676");
 t.default = function() {
   var e, t, n;
   let l = (0, f.useIsEligibleForQuests)({
       location: T.QuestsExperimentLocations.QUESTS_BAR
     }),
-    N = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion),
-    v = (0, o.useStateFromStores)([h.default], () => (0, C.getQuestForTargetedContent)(h.default.quests, _.QuestContent.QUEST_BAR)),
+    A = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion),
+    O = (0, o.useStateFromStores)([h.default], () => (0, C.getQuestForTargetedContent)(h.default.quests, _.QuestContent.QUEST_BAR)),
     R = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()),
-    O = s.useRef(-1),
+    v = s.useRef(-1),
     L = s.useRef(!1),
     [P, M] = s.useState(!1),
     [y, D] = s.useState(!1),
@@ -37,12 +37,12 @@ t.default = function() {
     [U, j] = s.useState(!0),
     [G, w] = s.useState(240),
     k = s.useRef(null),
-    F = (null == v ? void 0 : null === (e = v.userStatus) || void 0 === e ? void 0 : e.enrolledAt) != null,
+    F = (null == O ? void 0 : null === (e = O.userStatus) || void 0 === e ? void 0 : e.enrolledAt) != null,
     B = s.useRef(F),
-    H = (null == v ? void 0 : null === (t = v.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
-    V = (null == v ? void 0 : null === (n = v.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
-    Y = (null == v ? void 0 : v.userStatus) != null && (0, C.isDismissed)(null == v ? void 0 : v.userStatus, _.QuestContent.QUEST_BAR),
-    W = (0, E.useIsQuestExpired)(v),
+    H = (null == O ? void 0 : null === (t = O.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
+    V = (null == O ? void 0 : null === (n = O.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
+    Y = (null == O ? void 0 : O.userStatus) != null && (0, C.isDismissed)(null == O ? void 0 : O.userStatus, _.QuestContent.QUEST_BAR),
+    W = (0, E.useIsQuestExpired)(O),
     {
       hasError: K,
       isLoading: z
@@ -65,19 +65,19 @@ t.default = function() {
         {
           withDelay: t = !1
         } = e;
-      t ? O.current = window.setTimeout(q, 75) : q()
+      t ? v.current = window.setTimeout(q, 75) : q()
     }, [q]),
     $ = s.useCallback(() => {
-      if (window.clearTimeout(O.current), !H && !P) !L.current && D(!1)
+      if (window.clearTimeout(v.current), !H && !P) !L.current && D(!1)
     }, [P, H]),
     ee = s.useCallback(() => {
-      null != v && (0, c.trackQuestEvent)({
-        questId: v.id,
+      null != O && (0, c.trackQuestEvent)({
+        questId: O.id,
         event: g.AnalyticEvents.QUEST_HOVER
       }), L.current = !0, J({
         withDelay: !0
       })
-    }, [J, v]),
+    }, [J, O]),
     et = s.useCallback(() => {
       L.current = !1, $()
     }, [$]);
@@ -88,7 +88,7 @@ t.default = function() {
   }, [F, q]), s.useLayoutEffect(() => {
     !H && F && !B.current && !L.current && D(!1)
   }, [F, H]);
-  let en = l && !Y && !V && null != v && !W && !z,
+  let en = l && !Y && !V && null != O && !W && !z,
     ea = s.useRef(en);
   s.useLayoutEffect(() => {
     en !== ea.current && j(!1), ea.current = en
@@ -113,7 +113,7 @@ t.default = function() {
       friction: 30,
       clamp: !0
     },
-    immediate: N,
+    immediate: A,
     onRest: () => {
       b(!0)
     },
@@ -134,7 +134,7 @@ t.default = function() {
       friction: 10,
       clamp: !0
     },
-    immediate: N,
+    immediate: A,
     onRest: () => {
       j(!0)
     },
@@ -142,18 +142,18 @@ t.default = function() {
       j(!1)
     }
   });
-  return l && null != v && (en || !U || z) && !K ? (0, a.jsx)(m.QuestContentImpressionTracker, {
-    questId: v.id,
+  return l && null != O && (en || !U || z) && !K ? (0, a.jsx)(m.QuestContentImpressionTracker, {
+    questId: O.id,
     questContent: _.QuestContent.QUEST_BAR,
     overrideVisibility: !R && en,
     children: () => (0, a.jsx)(r.animated.div, {
       "aria-hidden": !en,
-      className: i()(A.wrapper, {
-        [A.wrapperInvisible]: !en,
-        [A.wrapperVisible]: en && U
+      className: i()(N.wrapper, {
+        [N.wrapperInvisible]: !en,
+        [N.wrapperVisible]: en && U
       }),
       style: {
-        color: v.config.colors.secondary,
+        color: O.config.colors.secondary,
         height: el.to({
           range: [0, 1],
           output: [0, H && y ? G : 40]
@@ -164,12 +164,12 @@ t.default = function() {
         onMouseEnter: ee,
         onFocus: () => J(),
         onBlur: $,
-        className: i()(A.contentWrapper, {
-          [A.contentWrapperExpanded]: y,
-          [A.contentWrapperAccepted]: F
+        className: i()(N.contentWrapper, {
+          [N.contentWrapperExpanded]: y,
+          [N.contentWrapperAccepted]: F
         }),
         style: {
-          backgroundImage: F ? "linear-gradient(90deg, ".concat(v.config.colors.primary, ", ").concat(v.config.colors.secondary, ")") : void 0,
+          backgroundImage: F ? "linear-gradient(90deg, ".concat(O.config.colors.primary, ", ").concat(O.config.colors.secondary, ")") : void 0,
           height: es.to({
             range: [0, 1],
             output: [40, F ? G : 240]
@@ -180,21 +180,21 @@ t.default = function() {
           }).to(e => "translateY(".concat(e, "%)"))
         },
         children: [(0, a.jsx)(I.default, {
-          className: A.content,
+          className: N.content,
           expansionSpring: es,
           isExpanded: y,
           isExpansionAnimationComplete: x,
-          quest: v,
-          useReducedMotion: N
+          quest: O,
+          useReducedMotion: A
         }), (0, a.jsx)(p.default, {
-          className: A.content,
+          className: N.content,
           onCtxMenuOpen: Q,
           onCtxMenuClose: Z,
           onCtxMenuSelect: X,
           isExpanded: y,
           isExpansionAnimationComplete: x,
-          quest: v,
-          useReducedMotion: N,
+          quest: O,
+          useReducedMotion: A,
           ref: k
         })]
       })

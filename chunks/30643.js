@@ -33,7 +33,7 @@ let g = {
     ...f.default,
     ...m.default
   },
-  A = {
+  N = {
     ...i.default,
     ...o.overlayEventHandlers,
     ...u.voiceSettingsEventHandlers
@@ -41,7 +41,7 @@ let g = {
 t.default = {
   server: r.default,
   commands: g,
-  events: A,
+  events: N,
   stores: [a.default],
   transports: [T.default],
   registerTransportsForEmbeddedPlatform: function() {

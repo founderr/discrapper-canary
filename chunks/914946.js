@@ -71,11 +71,11 @@ var a, s = n("729594"),
   p = n("594174"),
   T = n("979651"),
   g = n("70956"),
-  A = n("5192"),
-  N = n("226951"),
-  v = n("996106"),
+  N = n("5192"),
+  A = n("226951"),
+  O = n("996106"),
   R = n("863141"),
-  O = n("186901"),
+  v = n("186901"),
   L = n("981631");
 let P = null !== (a = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== a ? a : "localhost",
   M = function() {
@@ -85,7 +85,7 @@ let P = null !== (a = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && v
       n = t[t.length - 1];
     return /^\d+$/.test(n) ? e : t.slice(-2).join(".")
   }(),
-  y = new RegExp("^".concat(N.default.escape("https://"), "(?:[a-z]+\\.)?(").concat(N.default.escape(M), "|discordapp.com|discord.com)$")),
+  y = new RegExp("^".concat(A.default.escape("https://"), "(?:[a-z]+\\.)?(").concat(A.default.escape(M), "|discordapp.com|discord.com)$")),
   D = 1 * g.default.Millis.MINUTE,
   x = {};
 
@@ -168,7 +168,7 @@ function k(e, t, n) {
   } = n, u = p.default.getUser(o);
   if (null == u) throw Error("Invalid user id: ".concat(o));
   return {
-    nick: A.default.getName(e, t, u),
+    nick: N.default.getName(e, t, u),
     mute: m.default.isLocalMute(u.id),
     volume: m.default.getLocalVolume(u.id),
     pan: m.default.getLocalPan(u.id),
@@ -257,12 +257,12 @@ function K(e, t, n) {
       }
     } = a;
     if ("string" == typeof n) {
-      if (e.transport === O.TransportTypes.POST_MESSAGE) {
+      if (e.transport === v.TransportTypes.POST_MESSAGE) {
         let e = (0, u.default)(t);
-        if (null == e || !j(n, [e])) throw new v.default({
+        if (null == e || !j(n, [e])) throw new O.default({
           closeCode: L.RPCCloseCodes.INVALID_ORIGIN
         }, "Invalid Origin")
-      } else if (!j(n, s)) throw new v.default({
+      } else if (!j(n, s)) throw new O.default({
         closeCode: L.RPCCloseCodes.INVALID_ORIGIN
       }, "Invalid Origin")
     }
@@ -274,7 +274,7 @@ function K(e, t, n) {
       flags: d
     }
   }, () => {
-    throw new v.default({
+    throw new O.default({
       closeCode: L.RPCCloseCodes.INVALID_CLIENTID
     }, "Invalid Client ID")
   })
@@ -285,7 +285,7 @@ async function z(e, t) {
 }
 
 function q(e, t) {
-  null == t && (e.authorization.scopes = [O.RPC_LOCAL_SCOPE])
+  null == t && (e.authorization.scopes = [v.RPC_LOCAL_SCOPE])
 }
 
 function Q(e) {
@@ -339,13 +339,13 @@ function Z(e, t) {
 }
 
 function X(e) {
-  if (e !== O.TransportTypes.POST_MESSAGE) throw new v.default({
+  if (e !== v.TransportTypes.POST_MESSAGE) throw new O.default({
     errorCode: L.RPCErrors.INVALID_COMMAND
   }, 'command not available from "'.concat(e, " transport"))
 }
 
 function J(e) {
-  if (null == e.id) throw new v.default({
+  if (null == e.id) throw new O.default({
     errorCode: L.RPCErrors.INVALID_COMMAND
   }, "Invalid application")
 }

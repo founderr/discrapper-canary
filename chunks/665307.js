@@ -23,11 +23,11 @@ var a, s = n("735250"),
   p = n("285952"),
   T = n("366695"),
   g = n("366966"),
-  A = n("151011"),
-  N = n("880008"),
-  v = n("466111"),
+  N = n("151011"),
+  A = n("880008"),
+  O = n("466111"),
   R = n("931003"),
-  O = n("626135"),
+  v = n("626135"),
   L = n("780570"),
   P = n("624138"),
   M = n("645818"),
@@ -86,7 +86,7 @@ let U = (0, P.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
           children: e.libraryApplication.getBranchedName(e.application)
         }), e.libraryApplication.hasFlag(y.LibraryApplicationFlags.PREMIUM) ? (0, s.jsx)(f.Tooltip, {
           text: D.default.Messages.PREMIUM_GAME,
-          children: e => (0, s.jsx)(v.default, {
+          children: e => (0, s.jsx)(O.default, {
             className: x.nitroIcon,
             ...e
           })
@@ -139,7 +139,7 @@ let U = (0, P.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
           children: [(0, s.jsx)(w, {
             flag: y.LibraryApplicationFlags.PRIVATE,
             item: e,
-            icon: N.default,
+            icon: A.default,
             tooltip: D.default.Messages.GAME_LIBRARY_PRIVATE_TOOLTIP
           }), (0, s.jsx)(w, {
             flag: y.LibraryApplicationFlags.OVERLAY_DISABLED,
@@ -272,7 +272,7 @@ class B extends(a = l.PureComponent) {
       }
       e.num_applications_total++
     }
-    O.default.track(y.AnalyticEvents.LIBRARY_VIEWED, {
+    v.default.track(y.AnalyticEvents.LIBRARY_VIEWED, {
       ...e,
       load_id: t.loadId
     })
@@ -321,7 +321,7 @@ class B extends(a = l.PureComponent) {
       highlightedApplicationKey: o
     } = this.state;
     return (0, s.jsxs)(l.Fragment, {
-      children: [n.length > 0 ? (0, s.jsx)(A.default, {
+      children: [n.length > 0 ? (0, s.jsx)(N.default, {
         columns: k,
         data: n,
         sortData: !1,
@@ -396,7 +396,7 @@ class B extends(a = l.PureComponent) {
 }
 
 function H(e) {
-  let t = l.useContext(O.AnalyticsContext),
+  let t = l.useContext(v.AnalyticsContext),
     n = (0, o.useLocation)(),
     {
       applicationViewItems: a,

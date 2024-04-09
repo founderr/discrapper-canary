@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return A
   }
 }), n("47120");
 var a = n("735250"),
@@ -33,7 +33,7 @@ let g = e => {
       text: t
     })
   },
-  A = e => {
+  N = e => {
     let {
       header: t,
       subHeader: n,
@@ -68,17 +68,17 @@ let g = e => {
     })
   };
 
-function N(e) {
+function A(e) {
   let {
     className: t,
     renderModalProps: n,
     heroArt: l,
     heroArtClassName: _,
     modalDismissibleContent: g,
-    modalTopExtra: N,
-    header: v,
+    modalTopExtra: A,
+    header: O,
     headerClassName: R,
-    subHeader: O,
+    subHeader: v,
     subHeaderExtra: L,
     featureCards: P,
     changeLogId: M,
@@ -128,12 +128,12 @@ function N(e) {
       onClick: D
     }), (0, a.jsx)(S.default, {
       className: T.splash
-    }), null == N ? void 0 : N(), (0, a.jsxs)(o.ModalContent, {
+    }), null == A ? void 0 : A(), (0, a.jsxs)(o.ModalContent, {
       className: T.content,
       children: [(0, a.jsx)(o.Heading, {
         variant: "display-md",
         className: i()(T.headerText, R),
-        children: v
+        children: O
       }), "video" === l.type ? (0, a.jsx)(C.default, {
         className: i()(T.video, _),
         autoPlay: !j,
@@ -182,12 +182,12 @@ function N(e) {
       }) : null, (0, a.jsx)(o.Heading, {
         variant: "heading-lg/extrabold",
         className: T.bodyText,
-        children: O
+        children: v
       }), null == L ? void 0 : L(), (0, a.jsx)("div", {
         className: i()(T.featureCardGroup, {
           [T.wideStyle]: U
         }),
-        children: P.map((e, t) => (0, a.jsx)(A, {
+        children: P.map((e, t) => (0, a.jsx)(N, {
           ...e,
           wideStyle: U
         }, "".concat(e.header, "_").concat(t)))

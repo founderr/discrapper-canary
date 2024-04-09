@@ -20,42 +20,42 @@ var a = n("735250"),
   p = n("981631"),
   T = n("756286"),
   g = n("689938"),
-  A = n("165069");
+  N = n("165069");
 t.default = e => {
   var t;
-  let n, N;
+  let n, A;
   let {
-    guildId: v,
+    guildId: O,
     inviteCode: R
-  } = e, [O, L] = s.useState(T.WaveStates.INITIAL), P = (0, l.useStateFromStores)([h.default], () => h.default.get(v)), M = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(v)), y = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(v)), {
+  } = e, [v, L] = s.useState(T.WaveStates.INITIAL), P = (0, l.useStateFromStores)([h.default], () => h.default.get(O)), M = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(O)), y = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(O)), {
     hasFetchedRequestToJoinGuilds: D,
     guildPreviewDisabled: x
   } = (0, l.useStateFromStoresObject)([C.default], () => ({
     hasFetchedRequestToJoinGuilds: C.default.hasFetchedRequestToJoinGuilds,
-    guildPreviewDisabled: C.default.getJoinRequestGuild(v)
+    guildPreviewDisabled: C.default.getJoinRequestGuild(O)
   }));
   s.useEffect(() => {
-    null != y && (0, r.transitionTo)(p.Routes.CHANNEL(v))
-  }, [y, v]), s.useEffect(() => {
+    null != y && (0, r.transitionTo)(p.Routes.CHANNEL(O))
+  }, [y, O]), s.useEffect(() => {
     !D && f.default.fetchRequestToJoinGuilds()
   }, [D]);
   let b = s.useCallback(e => {
       L(t => Math.max(t, e))
     }, []),
     U = async e => {
-      await E.default.submitVerificationForm(v, e)
+      await E.default.submitVerificationForm(O, e)
     }, j = () => {
-      f.default.resetGuildJoinRequest(v)
+      f.default.resetGuildJoinRequest(O)
     };
   let G = (n = g.default.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({
       name: null == x ? void 0 : x.toString()
-    }), N = () => {
-      L(Math.max(O, T.WaveStates.FILLING)), f.default.removeGuildJoinRequest(v), (0, r.transitionTo)(p.Routes.ME)
+    }), A = () => {
+      L(Math.max(v, T.WaveStates.FILLING)), f.default.removeGuildJoinRequest(O), (0, r.transitionTo)(p.Routes.ME)
     }, () => {
       (0, i.openModal)(e => (0, a.jsx)(i.ConfirmModal, {
         header: g.default.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
         cancelText: g.default.Messages.NEVERMIND,
-        onConfirm: N,
+        onConfirm: A,
         confirmText: g.default.Messages.YES_TEXT,
         confirmButtonColor: i.Button.Colors.RED,
         ...e,
@@ -71,17 +71,17 @@ t.default = e => {
       splash: P.guild.splash
     }) : (0, d.getArtForPath)();
   return (0, a.jsx)("div", {
-    className: A.page,
+    className: N.page,
     children: (0, a.jsxs)(u.default, {
       embedded: !0,
       splash: w,
-      waveState: O,
+      waveState: v,
       showLogo: !1,
       updateWaveState: b,
       children: [(0, a.jsx)("div", {
-        className: A.dragRegion
+        className: N.dragRegion
       }), (0, a.jsx)("div", {
-        className: A.contentWrapper,
+        className: N.contentWrapper,
         children: (() => {
           switch (null == M ? void 0 : M.applicationStatus) {
             case _.GuildJoinRequestApplicationStatuses.SUBMITTED:
@@ -100,7 +100,7 @@ t.default = e => {
               });
             default:
               return (0, a.jsx)(I.default, {
-                guildId: v,
+                guildId: O,
                 inviteCode: R,
                 onComplete: U
               })

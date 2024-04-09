@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var s = n("735250");
 n("470079");
 var i = n("803997"),
-  l = n.n(i),
-  a = n("481060"),
+  a = n.n(i),
+  l = n("481060"),
   r = n("422559"),
   u = n("263704"),
   o = n("465670"),
@@ -23,9 +23,9 @@ function d(e) {
     className: f
   } = e;
   return (0, s.jsxs)("div", {
-    className: l()(c.list, f),
+    className: a()(c.list, f),
     children: [null != t && t.length > 0 ? (0, s.jsxs)(s.Fragment, {
-      children: [null != i ? (0, s.jsx)(a.FormTitle, {
+      children: [null != i ? (0, s.jsx)(l.FormTitle, {
         className: c.permissionHeader,
         children: i
       }) : null, (0, s.jsx)("div", {
@@ -36,14 +36,14 @@ function d(e) {
             width: 16,
             height: 16,
             className: c.check
-          }), (0, s.jsx)(a.Text, {
+          }), (0, s.jsx)(l.Text, {
             variant: "text-sm/normal",
             children: (0, r.getPermissionName)(e)
           })]
         }, e.toString()))
       })]
     }) : null, null != n && n.length > 0 ? (0, s.jsxs)(s.Fragment, {
-      children: [null != d ? (0, s.jsx)(a.FormTitle, {
+      children: [null != d ? (0, s.jsx)(l.FormTitle, {
         className: c.permissionHeader,
         children: d
       }) : null, (0, s.jsx)("div", {
@@ -54,7 +54,7 @@ function d(e) {
             width: 16,
             height: 16,
             className: c.cross
-          }), (0, s.jsx)(a.Text, {
+          }), (0, s.jsx)(l.Text, {
             variant: "text-sm/normal",
             children: (0, r.getPermissionName)(e)
           })]

@@ -24,11 +24,11 @@ var a = n("735250"),
   p = n("19780"),
   T = n("944486"),
   g = n("606304"),
-  A = n("979651"),
-  N = n("938475"),
-  v = n("823379"),
+  N = n("979651"),
+  A = n("938475"),
+  O = n("823379"),
   R = n("557177"),
-  O = n("981631");
+  v = n("981631");
 
 function L(e, t, n, a) {
   s.useEffect(() => {
@@ -80,8 +80,8 @@ function M() {
     return {
       channelType: t,
       guildId: n,
-      connected: s === O.RTCConnectionStates.RTC_CONNECTED,
-      connectHasStarted: !a && s !== O.RTCConnectionStates.DISCONNECTED || s === O.RTCConnectionStates.RTC_CONNECTED,
+      connected: s === v.RTCConnectionStates.RTC_CONNECTED,
+      connectHasStarted: !a && s !== v.RTCConnectionStates.DISCONNECTED || s === v.RTCConnectionStates.RTC_CONNECTED,
       awaitingRemote: null != u.default.getAwaitingRemoteSessionInfo(),
       connectedRemote: null != u.default.getRemoteSessionId()
     }
@@ -108,7 +108,7 @@ function y() {
   return L([g.default], () => g.default.isCurrentUserSpeaking(), (e, t) => {
     if (e !== t) {
       let e = S.default.isSelfMute();
-      if (S.default.getMode() === O.InputModes.PUSH_TO_TALK && !e) return t ? "ptt_start" : "ptt_stop"
+      if (S.default.getMode() === v.InputModes.PUSH_TO_TALK && !e) return t ? "ptt_start" : "ptt_stop"
     }
   }), null
 }
@@ -117,22 +117,22 @@ function D() {
   return L([S.default], () => S.default.isSelfMutedTemporarily(), (e, t) => {
     if (e !== t) {
       let e = S.default.isSelfMute();
-      if (S.default.getMode() === O.InputModes.VOICE_ACTIVITY && !e) return t ? "ptt_stop" : "ptt_start"
+      if (S.default.getMode() === v.InputModes.VOICE_ACTIVITY && !e) return t ? "ptt_stop" : "ptt_start"
     }
   }), null
 }
 
 function x() {
-  return L([A.default], () => A.default.userHasBeenMovedVersion, (e, t) => {
+  return L([N.default], () => N.default.userHasBeenMovedVersion, (e, t) => {
     if (e !== t) return "user_moved"
   }), null
 }
 
 function b() {
-  return L([T.default, A.default], () => {
+  return L([T.default, N.default], () => {
     let e = T.default.getVoiceChannelId();
     if (null == e) return f.RequestToSpeakStates.NONE;
-    let t = A.default.getVoiceStateForChannel(e);
+    let t = N.default.getVoiceStateForChannel(e);
     return (0, f.getAudienceRequestToSpeakState)(t)
   }, (e, t) => {
     if (e !== t && t === f.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK) return "reconnect"
@@ -140,7 +140,7 @@ function b() {
 }
 
 function U() {
-  return L([T.default, h.default, _.default, A.default, C.default], () => {
+  return L([T.default, h.default, _.default, N.default, C.default], () => {
     let e, t;
     let n = T.default.getVoiceChannelId(),
       a = _.default.getId();
@@ -150,10 +150,10 @@ function U() {
       r = h.default.getAllActiveStreams();
     if (null != n) {
       let a = C.default.getChannel(n);
-      null != a && (e = a.type, t = N.default.countVoiceStatesForChannel(a.id) - (A.default.isInChannel(a.id) ? 1 : 0), s = h.default.getAllApplicationStreamsForChannel(a.id).map(e => e.ownerId))
+      null != a && (e = a.type, t = A.default.countVoiceStatesForChannel(a.id) - (N.default.isInChannel(a.id) ? 1 : 0), s = h.default.getAllApplicationStreamsForChannel(a.id).map(e => e.ownerId))
     }
     let o = null;
-    return (null == (o = 1 === r.length ? r[0] : h.default.getCurrentUserActiveStream()) ? void 0 : o.state) === O.ApplicationStreamStates.CONNECTING && (o = null), null != o && (l = (0, d.encodeStreamKey)(o), i = h.default.getViewerIds(l).filter(e => e !== a).length), {
+    return (null == (o = 1 === r.length ? r[0] : h.default.getCurrentUserActiveStream()) ? void 0 : o.state) === v.ApplicationStreamStates.CONNECTING && (o = null), null != o && (l = (0, d.encodeStreamKey)(o), i = h.default.getViewerIds(l).filter(e => e !== a).length), {
       channelType: e,
       voiceChannelId: n,
       voiceChannelUserCount: t,
@@ -198,7 +198,7 @@ function j() {
   return L([T.default, o.default, _.default], () => {
     let e = T.default.getVoiceChannelId(),
       t = _.default.getId(),
-      n = (0, v.isNotNullish)(e) ? o.default.getEmbeddedActivitiesForChannel(e) : o.NO_ACTIVITIES;
+      n = (0, O.isNotNullish)(e) ? o.default.getEmbeddedActivitiesForChannel(e) : o.NO_ACTIVITIES;
     return {
       voiceChannelId: e,
       currentUserId: t,
@@ -214,7 +214,7 @@ function j() {
     e.channelActivities.length < l.length && (n = "activity_launch");
     let i = e.channelActivities.find(e => e.userIds.has(s)),
       r = l.find(e => e.userIds.has(s));
-    return void 0 === r && (0, v.isNotNullish)(i) && (n = "activity_end"), void 0 === i && (0, v.isNotNullish)(r) && r.userIds.size > 1 && (n = "activity_user_join"), (0, v.isNotNullish)(r) && (0, v.isNotNullish)(i) && (r.userIds.size > i.userIds.size && (n = "activity_user_join"), r.userIds.size < i.userIds.size && (n = "activity_user_left")), n
+    return void 0 === r && (0, O.isNotNullish)(i) && (n = "activity_end"), void 0 === i && (0, O.isNotNullish)(r) && r.userIds.size > 1 && (n = "activity_user_join"), (0, O.isNotNullish)(r) && (0, O.isNotNullish)(i) && (r.userIds.size > i.userIds.size && (n = "activity_user_join"), r.userIds.size < i.userIds.size && (n = "activity_user_left")), n
   }), null
 }
 

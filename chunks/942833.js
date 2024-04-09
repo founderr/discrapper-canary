@@ -1,5 +1,5 @@
 "use strict";
-u.r(e), u.d(e, {
+r.r(e), r.d(e, {
   usePrice: function() {
     return o
   },
@@ -7,28 +7,28 @@ u.r(e), u.d(e, {
     return l
   }
 });
-var r = u("470079"),
-  n = u("937615"),
-  i = u("689938");
+var n = r("470079"),
+  u = r("937615"),
+  i = r("689938");
 
 function l(t) {
-  return r.useMemo(() => {
+  return n.useMemo(() => {
     if (null == t) return;
     let e = null != t.role_id,
-      u = t.attachments_count > 0;
-    if (e && u) return i.default.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE;
+      r = t.attachments_count > 0;
+    if (e && r) return i.default.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE;
     if (e) return i.default.Messages.GUILD_PRODUCT_CARD_TYPE_ROLE;
-    if (u) return i.default.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE
+    if (r) return i.default.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE
   }, [t])
 }
 
 function o(t) {
-  return r.useMemo(() => {
+  return n.useMemo(() => {
     if ((null == t ? void 0 : t.price) == null) return;
     let {
       amount: e,
-      currency: u
+      currency: r
     } = t.price;
-    return (0, n.formatPrice)(e, u)
+    return (0, u.formatPrice)(e, r)
   }, [t])
 }

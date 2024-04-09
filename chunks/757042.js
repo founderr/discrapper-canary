@@ -24,11 +24,11 @@ var a = n("735250"),
   p = n("641826"),
   T = n("635869"),
   g = n("232700"),
-  A = n("981631"),
-  N = n("921944"),
-  v = n("689938"),
+  N = n("981631"),
+  A = n("921944"),
+  O = n("689938"),
   R = n("127906");
-let O = n("205281");
+let v = n("205281");
 
 function L() {
   let [e, t] = s.useState(!1), n = (0, p.useShouldShowMainLootboxEntrypoint)("lootbox_entrypoint"), l = !(0, C.useIsDismissibleContentDismissed)(d.DismissibleContent.LOOTBOXES_ENTRYPOINT), {
@@ -47,14 +47,14 @@ function L() {
       onMouseLeave: () => t(!1),
       children: [(0, a.jsxs)(f.Clickable, {
         className: R.closeButton,
-        onClick: () => M(N.ContentDismissActionType.DISMISS),
+        onClick: () => M(A.ContentDismissActionType.DISMISS),
         children: [(0, a.jsx)(o.CloseSmallIcon, {
           className: R.closeIcon,
           color: c.default.colors.WHITE
         }), (0, a.jsx)(u.Text, {
           variant: "text-xs/bold",
           color: "always-white",
-          children: v.default.Messages.PACKAGES_ENTRYPOINT_CLOSE
+          children: O.default.Messages.PACKAGES_ENTRYPOINT_CLOSE
         })]
       }), (0, a.jsxs)("div", {
         className: R.contentWrapper,
@@ -63,14 +63,14 @@ function L() {
           children: (0, a.jsx)(I.default, {
             ref: P,
             className: R.video,
-            src: O,
+            src: v,
             muted: !0,
             loop: !0
           })
         }), (0, a.jsxs)(f.Clickable, {
           className: R.entrypoint,
           onClick: () => {
-            M(N.ContentDismissActionType.PRIMARY), E.default.open(A.UserSettingsSections.LOOTBOXES, null, {
+            M(A.ContentDismissActionType.PRIMARY), E.default.open(N.UserSettingsSections.LOOTBOXES, null, {
               analyticsLocations: L
             })
           },
@@ -91,11 +91,11 @@ function L() {
             children: [(0, a.jsx)(u.Text, {
               variant: "text-md/bold",
               color: "always-white",
-              children: v.default.Messages.PACKAGES_ENTRYPOINT_TITLE
+              children: O.default.Messages.PACKAGES_ENTRYPOINT_TITLE
             }), (0, a.jsx)(u.Text, {
               variant: "text-sm/medium",
               color: "always-white",
-              children: v.default.Messages.PACKAGES_ENTRYPOINT_DESCRIPTION
+              children: O.default.Messages.PACKAGES_ENTRYPOINT_DESCRIPTION
             })]
           }), (0, a.jsx)("div", {
             className: R.buttonWrapper,

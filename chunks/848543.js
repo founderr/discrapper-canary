@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return O
   }
 }), n("47120");
 var a = n("735250"),
@@ -24,16 +24,16 @@ var a = n("735250"),
   p = n("603074"),
   T = n("981631"),
   g = n("921944"),
-  A = n("689938"),
-  N = n("815668");
+  N = n("689938"),
+  A = n("815668");
 
-function v(e) {
+function O(e) {
   let {
     channel: t,
     iconClassName: l,
-    className: v,
+    className: O,
     innerClassName: R,
-    ...O
+    ...v
   } = e, {
     mute: L,
     suppress: P
@@ -84,11 +84,11 @@ function v(e) {
       children: (0, a.jsx)(d.Button, {
         ...e,
         ...t,
-        className: i()(v, {
-          [N.buttonActive]: D,
-          [N.disabled]: y
+        className: i()(O, {
+          [A.buttonActive]: D,
+          [A.disabled]: y
         }),
-        wrapperClassName: v,
+        wrapperClassName: O,
         innerClassName: R,
         disabled: y,
         onClick: () => {
@@ -97,16 +97,16 @@ function v(e) {
         },
         onMouseEnter: t => {
           var n, a;
-          null === (n = O.onMouseEnter) || void 0 === n || n.call(O, t), null == e || null === (a = e.onMouseEnter) || void 0 === a || a.call(e), H()
+          null === (n = v.onMouseEnter) || void 0 === n || n.call(v, t), null == e || null === (a = e.onMouseEnter) || void 0 === a || a.call(e), H()
         },
         onMouseLeave: t => {
           var n, a;
-          null === (n = O.onMouseLeave) || void 0 === n || n.call(O, t), null == e || null === (a = e.onMouseLeave) || void 0 === a || a.call(e), V()
+          null === (n = v.onMouseLeave) || void 0 === n || n.call(v, t), null == e || null === (a = e.onMouseLeave) || void 0 === a || a.call(e), V()
         },
         onContextMenu: k,
         fullWidth: !0,
         size: d.Button.Sizes.SMALL,
-        ...O,
+        ...v,
         children: (0, a.jsx)(F, {
           className: l,
           size: "sm",
@@ -124,10 +124,10 @@ function v(e) {
     value: w,
     children: (0, a.jsx)(d.Tooltip, {
       text: function() {
-        if (L) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
-        if (P) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
-        if (M) return A.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
-        return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD
+        if (L) return N.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
+        if (P) return N.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
+        if (M) return N.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
+        return N.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD
       }(),
       children: e => Y(e)
     })

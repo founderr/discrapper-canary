@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return E
   }
 });
 var s = n("735250");
@@ -14,13 +14,13 @@ var a = n("442837"),
   u = n("58346"),
   d = n("689938"),
   c = n("155724"),
-  E = n("558338");
+  f = n("558338");
 
-function f(e) {
+function E(e) {
   var t;
   let {
-    code: f
-  } = e, _ = (0, a.useStateFromStores)([o.default], () => o.default.getGuildTemplate(f));
+    code: E
+  } = e, _ = (0, a.useStateFromStores)([o.default], () => o.default.getGuildTemplate(E));
   if (null == _ || _.state === u.GuildTemplateStates.RESOLVING) return (0, s.jsxs)(i.default, {
     children: [(0, s.jsx)(i.default.Header, {
       text: d.default.Messages.GUILD_TEMPLATE_RESOLVING_TITLE
@@ -65,7 +65,7 @@ function f(e) {
       text: d.default.Messages.GUILD_TEMPLATE_RESOLVED_EMBED_TITLE
     }), (0, s.jsxs)(i.default.Body, {
       children: [(0, s.jsxs)("div", {
-        className: E.headerLine,
+        className: f.headerLine,
         children: [(0, s.jsx)(r.default, {
           className: c.icon
         }), (0, s.jsx)(i.default.Info, {

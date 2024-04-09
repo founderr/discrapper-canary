@@ -28,11 +28,11 @@ var a, s, l = n("735250"),
   p = n("938475"),
   T = n("808602"),
   g = n("305878"),
-  A = n("263704"),
-  N = n("465670"),
-  v = n("242315"),
+  N = n("263704"),
+  A = n("465670"),
+  O = n("242315"),
   R = n("393112"),
-  O = n("170039"),
+  v = n("170039"),
   L = n("602623"),
   P = n("626135"),
   M = n("823379"),
@@ -84,7 +84,7 @@ let z = i.memo(function(e) {
         onClick: u,
         className: K.closeIcon,
         "aria-label": W.default.Messages.CLOSE,
-        children: (0, l.jsx)(N.default, {
+        children: (0, l.jsx)(A.default, {
           height: 16,
           width: 16
         })
@@ -166,7 +166,7 @@ function Q(e) {
     look: s ? o.Button.Looks.OUTLINED : o.Button.Looks.FILLED,
     color: s ? o.Button.Colors.TRANSPARENT : o.Button.Colors.GREEN,
     size: o.Button.Sizes.SMALL,
-    children: [s ? (0, l.jsx)(A.default, {
+    children: [s ? (0, l.jsx)(N.default, {
       width: 16,
       height: 16,
       className: K.buttonIcon
@@ -224,7 +224,7 @@ function Z(e) {
         },
         className: K.closeIcon,
         "aria-label": W.default.Messages.CLOSE,
-        children: (0, l.jsx)(N.default, {
+        children: (0, l.jsx)(A.default, {
           height: 16,
           width: 16
         })
@@ -335,12 +335,12 @@ function ee(e) {
     heading: W.default.Messages.STAGE_CHANNEL_LIVE_NOW,
     location: n.name,
     details: i,
-    detailsIcon: (0, l.jsx)(v.default, {
+    detailsIcon: (0, l.jsx)(O.default, {
       width: 14,
       height: 14,
       className: K.stageIcon
     }),
-    locationIcon: (0, l.jsx)(O.default, {
+    locationIcon: (0, l.jsx)(v.default, {
       width: 16,
       height: 16,
       className: K.stageIcon

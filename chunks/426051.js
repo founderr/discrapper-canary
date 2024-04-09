@@ -34,15 +34,15 @@ function m(e) {
     u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID), S && (0, o.transitionToChannel)(m.id)
   }, [m.id, S]), {
     acceptMessageRequest: g,
-    isAcceptLoading: A,
-    isUserProfileLoading: N,
-    isOptimisticAccepted: v
+    isAcceptLoading: N,
+    isUserProfileLoading: A,
+    isOptimisticAccepted: O
   } = (0, f.useMessageRequestActions)({
     user: n,
     onAcceptSuccess: T,
     onRejectSuccess: p,
     onError: I
-  }), R = A || N, O = R || v;
+  }), R = N || A, v = R || O;
   return (0, a.jsxs)("div", {
     className: C.container,
     children: [(0, a.jsx)(E.default, {
@@ -58,7 +58,7 @@ function m(e) {
         onClick: e => {
           g(m.id), e.stopPropagation()
         },
-        disabled: O,
+        disabled: v,
         submitting: R,
         children: _.default.Messages.MESSAGE_REQUESTS_SPAM_ACCEPT
       }), (0, a.jsx)(h.default, {

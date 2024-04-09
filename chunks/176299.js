@@ -24,11 +24,11 @@ var a = n("735250"),
   p = n("358221"),
   T = n("823748"),
   g = n("626421"),
-  A = n("118379"),
-  N = n("652515"),
-  v = n("544978"),
+  N = n("118379"),
+  A = n("652515"),
+  O = n("544978"),
   R = n("194729"),
-  O = n("668940"),
+  v = n("668940"),
   L = n("372900"),
   P = n("6039"),
   M = n("637853"),
@@ -91,19 +91,19 @@ let ep = () => (0, a.jsx)("div", {
     name: "GuildMemberApplicationReview",
     renderLoader: ep
   }),
-  eA = (0, d.makeLazy)({
+  eN = (0, d.makeLazy)({
     createPromise: () => Promise.all([n.e("99387"), n.e("51373")]).then(n.bind(n, "231588")),
     webpackId: "231588",
     name: "GuildHomePage",
     renderLoader: ep
   }),
-  eN = (0, d.makeLazy)({
+  eA = (0, d.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("85552"), n.e("16600")]).then(n.bind(n, "545918")),
     webpackId: "545918",
     name: "MemberSafetyPage",
     renderLoader: ep
   }),
-  ev = (0, d.makeLazy)({
+  eO = (0, d.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("75475"), n.e("58227"), n.e("38359"), n.e("35809")]).then(n.bind(n, "603072")),
     webpackId: "603072",
     name: "ChannelsAndRolesPage",
@@ -115,7 +115,7 @@ let ep = () => (0, a.jsx)("div", {
     name: "GuildOnboardingPage",
     renderLoader: ep
   }),
-  eO = e => {
+  ev = e => {
     let {
       match: t
     } = e, n = (0, f.useStateFromStores)([$.default, en.default], () => {
@@ -130,18 +130,18 @@ let ep = () => (0, a.jsx)("div", {
       let e = j.default.getData(s);
       if ((null == e ? void 0 : e.type) === G.ImpersonateType.SERVER_SHOP) switch (e.initialTab) {
         case "role_subscriptions":
-          return v.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS;
+          return O.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS;
         case "guild_products":
-          return v.GuildShopTab.GUILD_PRODUCTS;
+          return O.GuildShopTab.GUILD_PRODUCTS;
         default:
           return
       }
-    }), d = (0, N.isEligibleForSubscriptionsInGuildShop)(s, "channel_renderer");
+    }), d = (0, A.isEligibleForSubscriptionsInGuildShop)(s, "channel_renderer");
     if (null != s && null != l && (0, e_.isStaticChannelRoute)(l)) switch (l) {
       case e_.StaticChannelRoute.ROLE_SUBSCRIPTIONS:
         return d ? (0, a.jsx)(eT, {
           guildId: s,
-          initialTab: v.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS
+          initialTab: O.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS
         }) : (0, a.jsx)(D.default, {
           guildId: s
         });
@@ -156,11 +156,11 @@ let ep = () => (0, a.jsx)("div", {
           guildId: s
         });
       case e_.StaticChannelRoute.GUILD_HOME:
-        return (0, a.jsx)(eA, {
+        return (0, a.jsx)(eN, {
           guildId: s
         });
       case e_.StaticChannelRoute.CHANNEL_BROWSER:
-        return (0, a.jsx)(ev, {
+        return (0, a.jsx)(eO, {
           guildId: s,
           selectedSection: eC.GuildOnboardingTab.BROWSE
         });
@@ -169,12 +169,12 @@ let ep = () => (0, a.jsx)("div", {
           guildId: s
         });
       case e_.StaticChannelRoute.CUSTOMIZE_COMMUNITY:
-        return (0, a.jsx)(ev, {
+        return (0, a.jsx)(eO, {
           guildId: s,
           selectedSection: eC.GuildOnboardingTab.CUSTOMIZE
         });
       case e_.StaticChannelRoute.MEMBER_SAFETY:
-        return (0, a.jsx)(eN, {
+        return (0, a.jsx)(eA, {
           guildId: s
         });
       default:
@@ -200,7 +200,7 @@ let ep = () => (0, a.jsx)("div", {
     } = (0, Z.default)(), n = (0, f.useStateFromStores)([en.default], () => null != t ? t : en.default.getChannelId(e));
     return function() {
       return window.location.pathname.startsWith(eh.Routes.GUILD_DISCOVERY)
-    }() ? (0, a.jsx)(O.default, {}) : null != e ? (0, a.jsx)(x.default, {
+    }() ? (0, a.jsx)(v.default, {}) : null != e ? (0, a.jsx)(x.default, {
       selectedChannelId: n,
       guildId: e
     }, e) : (0, a.jsx)(ed.default, {})
@@ -218,7 +218,7 @@ function eP(e) {
     guildId: t
   })
 }
-let eM = e => (0, a.jsx)(eO, {
+let eM = e => (0, a.jsx)(ev, {
     ...e
   }),
   ey = e => {
@@ -250,7 +250,7 @@ let eM = e => (0, a.jsx)(eO, {
   ej = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return function(t) {
-      return (0, a.jsx)(A.default, {
+      return (0, a.jsx)(N.default, {
         isFullScreen: e,
         ...t
       })

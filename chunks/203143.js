@@ -13,28 +13,28 @@ var s = n("512722"),
   u = n("570140"),
   d = n("668781"),
   c = n("749210"),
-  E = n("904245"),
-  f = n("881052"),
+  f = n("904245"),
+  E = n("881052"),
   _ = n("367907"),
   T = n("41776"),
-  I = n("566006"),
-  m = n("3148"),
-  N = n("869765"),
-  p = n("314897"),
-  S = n("592125"),
-  C = n("703558"),
-  A = n("607744"),
-  h = n("375954"),
+  m = n("566006"),
+  I = n("3148"),
+  p = n("869765"),
+  h = n("314897"),
+  N = n("592125"),
+  S = n("703558"),
+  C = n("607744"),
+  A = n("375954"),
   g = n("117530"),
   M = n("553803"),
-  O = n("316758"),
-  R = n("467531"),
+  R = n("316758"),
+  O = n("467531"),
   v = n("798628"),
   L = n("918088"),
-  P = n("981631"),
+  x = n("981631"),
   D = n("689938");
 
-function x(e, t) {
+function P(e, t) {
   let n = [...t],
     s = 0,
     a = 0;
@@ -63,7 +63,7 @@ function y(e) {
     cancelText: D.default.Messages.LURKER_MODE_POPOUT_CANCEL,
     onConfirm: () => {
       c.default.joinGuild(t, {
-        source: P.JoinGuildSources.POLL_ALERT
+        source: x.JoinGuildSources.POLL_ALERT
       })
     }
   })
@@ -74,7 +74,7 @@ function U(e) {
     channelId: t,
     messageId: n,
     answerId: s
-  } = e, a = S.default.getChannel(t);
+  } = e, a = N.default.getChannel(t);
   if (null == a) return;
   if (T.default.isLurking(a.guild_id)) {
     y({
@@ -84,7 +84,7 @@ function U(e) {
     });
     return
   }
-  let l = h.default.getMessage(t, n);
+  let l = A.default.getMessage(t, n);
   if (null == l || null == l.poll || 0 === l.poll.answers.length) return;
   let i = null != s ? s : String(l.poll.answers[0].answer_id);
   M.showVotesForAnswer({
@@ -93,7 +93,7 @@ function U(e) {
   })
 }
 
-function j(e) {
+function b(e) {
   let {
     channelId: t,
     messageId: n,
@@ -111,11 +111,11 @@ function j(e) {
   })
 }
 
-function b(e) {
+function j(e) {
   let {
     channelId: t,
     messageId: n
-  } = e, s = h.default.getMessage(t, n);
+  } = e, s = A.default.getMessage(t, n);
   return null == s ? [] : s.reactions.flatMap(e => !0 === e.me_vote ? e.emoji.name : [])
 }
 async function G(e) {
@@ -123,16 +123,16 @@ async function G(e) {
     channelId: t,
     messageId: n,
     answerIds: s
-  } = e, a = b({
+  } = e, a = j({
     channelId: t,
     messageId: n
-  }), l = i().difference(a, s), r = i().difference(s, a), d = p.default.getId(), c = [...l.map(e => ({
+  }), l = i().difference(a, s), r = i().difference(s, a), d = h.default.getId(), c = [...l.map(e => ({
     type: "MESSAGE_REACTION_REMOVE",
     id: e
   })), ...r.map(e => ({
     type: "MESSAGE_REACTION_ADD",
     id: e
-  }))], E = o.default.Emitter.batched(() => {
+  }))], f = o.default.Emitter.batched(() => {
     let e;
     for (let {
         id: s,
@@ -148,17 +148,17 @@ async function G(e) {
       },
       userId: d,
       optimistic: !0,
-      reactionType: I.ReactionTypes.VOTE
+      reactionType: m.ReactionTypes.VOTE
     });
     return e
   });
-  null != E && await E
+  null != f && await f
 }
 async function B(e) {
   let {
     channelId: t,
     messageId: n
-  } = e, s = S.default.getChannel(t);
+  } = e, s = N.default.getChannel(t);
   if (null == s) return;
   if (T.default.isLurking(s.guild_id)) {
     y({
@@ -168,7 +168,7 @@ async function B(e) {
     });
     return
   }
-  if (!A.default.canChatInGuild(s.guild_id)) {
+  if (!C.default.canChatInGuild(s.guild_id)) {
     d.default.show({
       title: D.default.Messages.POLL_GUILD_MEMBER_UNVERIFIED_TITLE,
       body: D.default.Messages.POLL_GUILD_MEMBER_UNVERIFIED_SUBTITLE
@@ -177,7 +177,7 @@ async function B(e) {
   }
   let l = (0, v.getPollState)(t, n);
   a()(null != l, "Must not be able to vote without existing state!");
-  let i = b({
+  let i = j({
     channelId: t,
     messageId: n
   });
@@ -191,7 +191,7 @@ async function B(e) {
       channelId: t,
       messageId: n,
       answerIds: e
-    }), await R.submitPollVote({
+    }), await O.submitPollVote({
       channelId: t,
       messageId: n,
       answerIds: e
@@ -214,11 +214,11 @@ async function B(e) {
     })
   }
 }
-async function k(e) {
+async function F(e) {
   let {
     channelId: t,
     messageId: n
-  } = e, s = S.default.getChannel(t);
+  } = e, s = N.default.getChannel(t);
   if (null != s) {
     if (T.default.isLurking(s.guild_id)) {
       y({
@@ -243,7 +243,7 @@ async function k(e) {
     })
   }
 }
-async function F(e) {
+async function k(e) {
   let {
     channelId: t,
     messageId: n,
@@ -257,13 +257,13 @@ async function F(e) {
       });
       break;
     case "remove":
-      await k({
+      await F({
         channelId: t,
         messageId: n
       });
       break;
     case "cancel":
-      j({
+      b({
         channelId: t,
         messageId: n,
         isEditing: !1
@@ -278,12 +278,12 @@ async function F(e) {
         (0, v.updatePollState)(t, n, e => {
           var s, a;
           let l = null == e || !e.showResults,
-            i = h.default.getMessage(t, n),
+            i = A.default.getMessage(t, n),
             r = null != i ? i.reactions.reduce((e, t) => {
               var n, s;
               return e + (null !== (s = null === (n = t.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== s ? s : 0)
             }, 0) : 0;
-          return _.default.trackWithMetadata(P.AnalyticEvents.POLL_SHOW_RESULTS_CLICKED, {
+          return _.default.trackWithMetadata(x.AnalyticEvents.POLL_SHOW_RESULTS_CLICKED, {
             channel_id: t,
             message_id: n,
             show_results: l,
@@ -320,7 +320,7 @@ async function w(e) {
     duration: l,
     layout: i,
     onClose: o
-  } = e, u = g.default.getUploads(t.id, C.DraftType.Poll), d = s.map(e => {
+  } = e, u = g.default.getUploads(t.id, S.DraftType.Poll), d = s.map(e => {
     var t, n;
     let s = null == u ? void 0 : u.findIndex(t => t.id === e.localCreationAnswerId),
       a = {
@@ -348,19 +348,19 @@ async function w(e) {
   try {
     if (null != u && u.length > 0) {
       var _;
-      let e = null !== (_ = p.default.getToken()) && void 0 !== _ ? _ : "";
-      await O.sendPollMessageWithAttachments({
+      let e = null !== (_ = h.default.getToken()) && void 0 !== _ ? _ : "";
+      await R.sendPollMessageWithAttachments({
         channel: t,
         items: u,
         token: e,
         poll: c,
-        nonce: (0, m.createNonce)(),
+        nonce: (0, I.createNonce)(),
         maxSizeCallback: () => {}
       })
-    } else await E.default.sendPollMessage(t.id, c);
+    } else await f.default.sendPollMessage(t.id, c);
     null == o || o()
   } catch (e) {
-    if ("poll" === (e instanceof f.APIError ? e : new f.APIError(e)).getAnyErrorMessage() && null != e.text) throw {
+    if ("poll" === (e instanceof E.APIError ? e : new E.APIError(e)).getAnyErrorMessage() && null != e.text) throw {
       ...e,
       body: JSON.parse(e.text)
     };
@@ -375,7 +375,7 @@ async function H(e) {
   await d.default.confirm({
     title: D.default.Messages.POLL_END_EARLY_CONFIRMATION_TITLE,
     body: D.default.Messages.POLL_END_EARLY_CONFIRMATION_TEXT
-  }) && await R.endPollEarly({
+  }) && await O.endPollEarly({
     channelId: t,
     messageId: n
   })
@@ -394,13 +394,13 @@ t.default = {
       let {
         channelId: t,
         messageId: n
-      } = e, s = h.default.getMessage(t, n);
+      } = e, s = A.default.getMessage(t, n);
       if (null != s) return {
         message: s,
         channelId: t,
         messageId: n
       };
-      let l = N.default.getMessage(t, n);
+      let l = p.default.getMessage(t, n);
       if (null != l.message) return {
         channelId: t,
         messageId: n,
@@ -427,8 +427,8 @@ t.default = {
             analyticsSelectedAnswerIds: t,
             selectedTextAnswersCount: a,
             selectedEmojiAnswersCount: l
-          } = x(null === (n = o.poll) || void 0 === n ? void 0 : n.answers, e);
-        return _.default.trackWithMetadata(P.AnalyticEvents.POLL_VOTE_SELECTED, {
+          } = P(null === (n = o.poll) || void 0 === n ? void 0 : n.answers, e);
+        return _.default.trackWithMetadata(x.AnalyticEvents.POLL_VOTE_SELECTED, {
           channel_id: i,
           message_id: r,
           selected_answer_ids: t,
@@ -455,20 +455,20 @@ t.default = {
       let {
         analyticsSelectedAnswerIds: u,
         selectedTextAnswersCount: c,
-        selectedEmojiAnswersCount: E
-      } = x(null === (t = o.poll) || void 0 === t ? void 0 : t.answers, l);
-      return _.default.trackWithMetadata(P.AnalyticEvents.POLL_VOTE_SELECTED, {
+        selectedEmojiAnswersCount: f
+      } = P(null === (t = o.poll) || void 0 === t ? void 0 : t.answers, l);
+      return _.default.trackWithMetadata(x.AnalyticEvents.POLL_VOTE_SELECTED, {
         channel_id: i,
         message_id: r,
         selected_answer_ids: u,
         selected_text_answers_count: c,
-        selected_emoji_answers_count: E
+        selected_emoji_answers_count: f
       }), a
     })
   },
   handlePollSubmitVote: B,
-  handleUpdateVoteEditingState: j,
-  handlePollActionTapped: F,
+  handleUpdateVoteEditingState: b,
+  handlePollActionTapped: k,
   createPoll: w,
   endPollEarly: H
 }

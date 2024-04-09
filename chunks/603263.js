@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   changePage: function() {
-    return h
+    return E
   },
   clearHistory: function() {
-    return p
+    return m
   },
   clearSearchState: function() {
-    return g
+    return p
   },
   search: function() {
     return o
@@ -25,33 +25,33 @@ n.r(t), n.d(t, {
     return u
   },
   setSearchState: function() {
-    return S
+    return I
   },
   setShowBlockedResults: function() {
     return N
   },
   updateAutocompleteQuery: function() {
-    return _
+    return h
   }
 }), n("724458");
-var a = n("570140"),
-  l = n("367907"),
-  s = n("768119"),
+var s = n("570140"),
+  a = n("367907"),
+  l = n("768119"),
   i = n("405656"),
   r = n("981631");
 
 function o(e, t, n, o) {
   (0, i.setIncludeNSFW)(t, e), o && (t.search_everywhere = !0);
   let u = Object.keys(t);
-  l.default.trackWithMetadata(r.AnalyticEvents.SEARCH_STARTED, {
-    search_type: s.default.getSearchType(),
-    prev_search_id: s.default.getAnalyticsId(e),
+  a.default.trackWithMetadata(r.AnalyticEvents.SEARCH_STARTED, {
+    search_type: l.default.getSearchType(),
+    prev_search_id: l.default.getAnalyticsId(e),
     num_modifiers: u.length,
     modifiers: u.reduce((e, n) => {
-      let a = t[n];
-      return e[n] = Array.isArray(a) ? a.length : 1, e
+      let s = t[n];
+      return e[n] = Array.isArray(s) ? s.length : 1, e
     }, {})
-  }), a.default.dispatch({
+  }), s.default.dispatch({
     type: "SEARCH_START",
     query: t,
     searchId: e,
@@ -65,8 +65,8 @@ function u(e) {
 }
 
 function d(e, t) {
-  let n = s.default.getQuery(e),
-    a = function(e) {
+  let n = l.default.getQuery(e),
+    s = function(e) {
       switch (e) {
         case r.SearchModes.MOST_RELEVANT:
           return {
@@ -85,65 +85,65 @@ function d(e, t) {
     }(t);
   return o(e, {
     ...n,
-    ...a,
+    ...s,
     offset: 0
   })
 }
 
 function c(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.SEARCH_PAGE_SIZE;
-  return E(e, t)
+  return _(e, t)
 }
 
 function f(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.SEARCH_PAGE_SIZE;
-  return E(e, -t)
-}
-
-function h(e, t) {
-  return m(e, t * r.SEARCH_PAGE_SIZE)
+  return _(e, -t)
 }
 
 function E(e, t) {
-  let n = s.default.getOffset(e);
-  return m(e, n + t)
+  return T(e, t * r.SEARCH_PAGE_SIZE)
 }
 
-function m(e, t) {
-  let n = s.default.getQuery(e),
-    a = s.default.getTotalResults(e);
-  if (!(t < 0) && !(t > a)) return o(e, {
+function _(e, t) {
+  let n = l.default.getOffset(e);
+  return T(e, n + t)
+}
+
+function T(e, t) {
+  let n = l.default.getQuery(e),
+    s = l.default.getTotalResults(e);
+  if (!(t < 0) && !(t > s)) return o(e, {
     ...n,
     offset: t
   })
 }
 
-function p(e) {
-  a.default.dispatch({
+function m(e) {
+  s.default.dispatch({
     type: "SEARCH_CLEAR_HISTORY",
     searchId: e
   })
 }
 
-function S(e, t) {
-  null != e && a.default.dispatch({
+function I(e, t) {
+  null != e && s.default.dispatch({
     type: "SEARCH_EDITOR_STATE_CHANGE",
     searchId: e,
     editorState: t
   })
 }
 
-function g(e) {
-  l.default.trackWithMetadata(r.AnalyticEvents.SEARCH_CLOSED, {
-    search_id: s.default.getAnalyticsId(e)
-  }), a.default.wait(() => a.default.dispatch({
+function p(e) {
+  a.default.trackWithMetadata(r.AnalyticEvents.SEARCH_CLOSED, {
+    search_id: l.default.getAnalyticsId(e)
+  }), s.default.wait(() => s.default.dispatch({
     type: "SEARCH_EDITOR_STATE_CLEAR",
     searchId: e
   }))
 }
 
-function _(e, t, n) {
-  null != e && a.default.dispatch({
+function h(e, t, n) {
+  null != e && s.default.dispatch({
     type: "SEARCH_AUTOCOMPLETE_QUERY_UPDATE",
     searchId: e,
     tokens: t,
@@ -152,7 +152,7 @@ function _(e, t, n) {
 }
 
 function N(e, t) {
-  a.default.dispatch({
+  s.default.dispatch({
     type: "SEARCH_SET_SHOW_BLOCKED_RESULTS",
     searchId: e,
     showBlocked: t

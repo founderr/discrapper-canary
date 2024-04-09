@@ -21,15 +21,15 @@ var a, n, i, l = s("735250"),
   P = s("812206"),
   T = s("593061"),
   C = s("267101"),
-  R = s("240864"),
-  A = s("942833"),
+  A = s("240864"),
+  R = s("942833"),
   M = s("400916"),
   h = s("916001"),
   L = s("539290"),
   g = s("336197"),
   y = s("307643"),
-  x = s("378233"),
-  D = s("419922"),
+  D = s("378233"),
+  x = s("419922"),
   U = s("46141"),
   b = s("430824"),
   O = s("853872"),
@@ -37,8 +37,8 @@ var a, n, i, l = s("735250"),
   B = s("230307"),
   j = s("285952"),
   G = s("366695"),
-  F = s("499150"),
-  k = s("912454"),
+  k = s("499150"),
+  F = s("912454"),
   w = s("259580"),
   H = s("263704"),
   Y = s("465670"),
@@ -148,7 +148,7 @@ function e_(e) {
     guildProductListingId: s
   } = e, a = (0, C.useFetchGuildProductListing)(t, s, {
     requireCurrentGuild: !1
-  }), n = (0, A.useProductType)(a), i = (0, m.useStateFromStores)([b.default], () => b.default.getGuild(t)), u = (null == a ? void 0 : a.role_id) != null && (null == a ? void 0 : a.attachments_count) === 0 ? en.default.Messages.GUILD_PRODUCT_BILLING_TYPE_PREMIUM_ROLE : n, o = r.useCallback(async () => {
+  }), n = (0, R.useProductType)(a), i = (0, m.useStateFromStores)([b.default], () => b.default.getGuild(t)), u = (null == a ? void 0 : a.role_id) != null && (null == a ? void 0 : a.attachments_count) === 0 ? en.default.Messages.GUILD_PRODUCT_BILLING_TYPE_PREMIUM_ROLE : n, o = r.useCallback(async () => {
     (null == i ? void 0 : i.hasFeature(et.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, g.default)(et.Routes.GUILD_PRODUCT(t, s)) : await (0, g.default)(et.Routes.CHANNEL(t)), (0, N.popLayer)()
   }, [i, t, s]);
   return (0, l.jsxs)(l.Fragment, {
@@ -157,7 +157,7 @@ function e_(e) {
       detail: u
     }), null != i && (0, l.jsx)(ef, {
       description: en.default.Messages.GUILD_PRODUCT_BILLING_SERVER_NAME,
-      detail: (0, l.jsx)(F.default, {
+      detail: (0, l.jsx)(k.default, {
         onClick: o,
         children: i.name
       })
@@ -172,7 +172,7 @@ function ep(e) {
     guildProductListingId: n
   } = e, i = (0, C.useFetchGuildProductListing)(a, n, {
     requireCurrentGuild: !1
-  }), r = (0, m.useStateFromStores)([R.default], () => R.default.getGuildProductFetchState(n) === R.FetchState.FETCHING), u = null == i ? void 0 : i.role_id, o = (0, m.useStateFromStores)([b.default], () => null != u ? b.default.getRole(a, u) : void 0, [a, u]), d = (null !== (s = null == i ? void 0 : null === (t = i.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== s ? s : 0) > 0, c = null != o;
+  }), r = (0, m.useStateFromStores)([A.default], () => A.default.getGuildProductFetchState(n) === A.FetchState.FETCHING), u = null == i ? void 0 : i.role_id, o = (0, m.useStateFromStores)([b.default], () => null != u ? b.default.getRole(a, u) : void 0, [a, u]), d = (null !== (s = null == i ? void 0 : null === (t = i.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== s ? s : 0) > 0, c = null != o;
   return r ? (0, l.jsx)("div", {
     className: ei.guildProductBenefits,
     children: (0, l.jsx)(I.Spinner, {})
@@ -233,7 +233,7 @@ class em extends(n = r.PureComponent) {
         paymentSource: e
       }
     } = this.props;
-    return e instanceof U.PaypalSourceRecord ? k.default.Types.PAYPAL : e instanceof U.CreditCardSourceRecord ? k.default.getType(e.brand) : k.default.Types.UNKNOWN
+    return e instanceof U.PaypalSourceRecord ? F.default.Types.PAYPAL : e instanceof U.CreditCardSourceRecord ? F.default.getType(e.brand) : F.default.Types.UNKNOWN
   }
   validateRefundRules() {
     return this.refundRules.filter(e => {
@@ -537,8 +537,8 @@ class em extends(n = r.PureComponent) {
       if (t = a.isPreorder ? en.default.Messages.PREORDER_SKU_NAME.format({
           name: d.name
         }) : a.isGuildProductPurchase && a.isSoftDeletedProduct ? en.default.Messages.GUILD_PRODUCT_BILLING_DELISTED_PRODUCT : d.name, null != u) {
-        let t = (0, x.getStickerPackPreviewSticker)(u);
-        e = (0, l.jsx)(D.default, {
+        let t = (0, D.getStickerPackPreviewSticker)(u);
+        e = (0, l.jsx)(x.default, {
           disableAnimation: !o,
           isInteracting: o,
           sticker: t,

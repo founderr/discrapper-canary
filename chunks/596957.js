@@ -20,11 +20,11 @@ var a = n("735250"),
   p = n("390697"),
   T = n("434184"),
   g = n("701861"),
-  A = n("437314"),
-  N = n("696577"),
-  v = n("163417"),
+  N = n("437314"),
+  A = n("696577"),
+  O = n("163417"),
   R = n("492347"),
-  O = n("42575"),
+  v = n("42575"),
   L = n("617015"),
   P = n("981631"),
   M = n("689938"),
@@ -55,7 +55,7 @@ t.default = function(e) {
   }, [G, t]), B = D.filter(t, G[t]);
   if (0 === B.length && "" === G[t]) return (0, a.jsxs)("div", {
     className: y.emptyStateContainer,
-    children: [t === P.FriendsSections.ONLINE && (0, a.jsx)(_.default, {}), (0, a.jsx)(A.default, {
+    children: [t === P.FriendsSections.ONLINE && (0, a.jsx)(_.default, {}), (0, a.jsx)(N.default, {
       type: t,
       onClick: () => {
         u.default.setSection(P.FriendsSections.ADD_FRIEND)
@@ -116,10 +116,10 @@ t.default = function(e) {
         })]
       }), H ? (0, a.jsx)("div", {
         className: y.emptyStateContainer,
-        children: (0, a.jsx)(A.default, {
-          type: A.FriendsSearchStatus.SECTION_NO_RESULTS
+        children: (0, a.jsx)(N.default, {
+          type: N.FriendsSearchStatus.SECTION_NO_RESULTS
         }, x)
-      }) : (0, a.jsx)(v.default, {
+      }) : (0, a.jsx)(O.default, {
         relationshipCount: U,
         statusSections: [B],
         renderRow: function(e) {
@@ -130,12 +130,12 @@ t.default = function(e) {
                 isFocused: b
               });
             case P.FriendsSections.PENDING:
-              return (0, a.jsx)(N.default, {
+              return (0, a.jsx)(A.default, {
                 ...e,
                 isFocused: b
               });
             case P.FriendsSections.SUGGESTIONS:
-              return (0, a.jsx)(O.default, {
+              return (0, a.jsx)(v.default, {
                 ...e,
                 isFocused: b
               });

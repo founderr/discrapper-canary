@@ -35,7 +35,7 @@ function T(e) {
 function g() {
   return !0
 }
-class A extends(s = d.default.Store) {
+class N extends(s = d.default.Store) {
   forEach(e) {
     u().each(S, e)
   }
@@ -76,12 +76,12 @@ class A extends(s = d.default.Store) {
     return p(e, e => e.getDuration(), 0)
   }
 }
-r = "RTCConnectionStore", (i = "displayName") in(l = A) ? Object.defineProperty(l, i, {
+r = "RTCConnectionStore", (i = "displayName") in(l = N) ? Object.defineProperty(l, i, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[i] = r, t.default = new A(c.default, C.default.isSupported() ? {
+}) : l[i] = r, t.default = new N(c.default, C.default.isSupported() ? {
   CONNECTION_OPEN: function(e) {
     a = e.sessionId, I()
   },

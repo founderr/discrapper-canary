@@ -15,25 +15,25 @@ var a, s, l, i, r, o = n("442837"),
   p = n("77498"),
   T = n("283595"),
   g = n("981631");
-let A = "ActivityTrackingStore",
-  N = 30 * S.default.Millis.MINUTE,
-  v = 5 * S.default.Millis.MINUTE,
-  R = null !== (a = u.Storage.get(A)) && void 0 !== a ? a : {},
-  O = {},
+let N = "ActivityTrackingStore",
+  A = 30 * S.default.Millis.MINUTE,
+  O = 5 * S.default.Millis.MINUTE,
+  R = null !== (a = u.Storage.get(N)) && void 0 !== a ? a : {},
+  v = {},
   L = !1;
 
 function P(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
   t && M(e, !0);
-  let n = O[e.applicationId];
-  null != n && (n.stop(), delete O[e.applicationId]), delete R[e.applicationId], u.Storage.set(A, R)
+  let n = v[e.applicationId];
+  null != n && (n.stop(), delete v[e.applicationId]), delete R[e.applicationId], u.Storage.set(N, R)
 }
 
 function M(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = Date.now(),
     a = null != e.updatedAt ? n - e.updatedAt : 0;
-  a > N + v && (a = 0);
+  a > A + O && (a = 0);
   let s = (0, I.shouldShareApplicationActivity)(e.applicationId, T.default);
   f.default.updateActivity({
     applicationId: e.applicationId,
@@ -48,8 +48,8 @@ function M(e) {
     location: "28tk0bf_6"
   });
   t && s && l && _.default.updateUserRecentGamesLocal(e.applicationId, Math.floor(a / 1e3));
-  let i = O[e.applicationId];
-  null == i && (i = O[e.applicationId] = new d.Interval).start(N, () => M(e)), !t && (R[e.applicationId] = e, u.Storage.set(A, R))
+  let i = v[e.applicationId];
+  null == i && (i = v[e.applicationId] = new d.Interval).start(A, () => M(e)), !t && (R[e.applicationId] = e, u.Storage.set(N, R))
 }
 
 function y() {
@@ -110,13 +110,13 @@ r = "ActivityTrackingStore", (i = "displayName") in(l = x) ? Object.defineProper
       token: n
     } = e, a = R[t];
     if (null == a) return !1;
-    a.token = n, u.Storage.set(A, R)
+    a.token = n, u.Storage.set(N, R)
   },
   ACTIVITY_UPDATE_FAIL: function(e) {
     let {
       applicationId: t
     } = e, n = R[t];
     if (null == n) return !1;
-    n.token = null, n.updatedAt = null, u.Storage.set(A, R)
+    n.token = null, n.updatedAt = null, u.Storage.set(N, R)
   }
 })

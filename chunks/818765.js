@@ -31,17 +31,17 @@ let h = (0, d.createSoundForPack)("poggermode_applause", l.default.getSoundpack(
     if (0 === m.length || !T() || C) return;
     C = !0;
     let [e, t] = m[m.length - 1];
-    (0, d.playSound)(e, t), S = setTimeout(A, 1e3)
+    (0, d.playSound)(e, t), S = setTimeout(N, 1e3)
   },
-  A = () => {
+  N = () => {
     m.pop(), C = !1, g()
   },
-  N = function(e) {
+  A = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
       n = r.default.isConnected();
     m.push([e, t * (n ? .1 : 1)]), g()
   };
-class v extends s.default {
+class O extends s.default {
   _initialize() {
     f.default.addChangeListener(this.startAudio), a.default.subscribe("RTC_CONNECTION_STATE", this.setVolume), a.default.subscribe("TYPING_STOP", this.stopAudio), a.default.subscribe("TYPING_STOP_LOCAL", this.stopAudio), a.default.subscribe("CHANNEL_SELECT", this.stopAudio), a.default.subscribe("POGGERMODE_SETTINGS_UPDATE", this.stopAudio)
   }
@@ -75,7 +75,7 @@ class v extends s.default {
     a && l >= 7 ? I() : p()
   }
   playAchievementUnlockSound() {
-    T() && N("poggermode_achievement_unlock")
+    T() && A("poggermode_achievement_unlock")
   }
 }
-t.default = new v
+t.default = new O

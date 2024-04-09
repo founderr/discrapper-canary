@@ -1,35 +1,35 @@
 "use strict";
-r.r(t), r("47120");
-var s = r("470079"),
-  a = r("442837"),
-  n = r("889161"),
-  u = r("984933"),
-  l = r("430824"),
-  i = r("496675"),
-  o = r("981631");
-t.default = (e, t) => {
-  let r = (0, a.useStateFromStores)([l.default], () => l.default.getGuild(e), [e]),
+t.r(n), t("47120");
+var l = t("470079"),
+  i = t("442837"),
+  a = t("889161"),
+  s = t("984933"),
+  r = t("430824"),
+  u = t("496675"),
+  d = t("981631");
+n.default = (e, n) => {
+  let t = (0, i.useStateFromStores)([r.default], () => r.default.getGuild(e), [e]),
     {
-      canCreateGuildEvent: d
-    } = (0, n.useManageResourcePermissions)(r),
-    c = (0, a.useStateFromStores)([u.default], () => u.default.getChannels(e)[u.GUILD_VOCAL_CHANNELS_KEY], [e]),
-    f = s.useMemo(() => null != t ? c.filter(e => {
+      canCreateGuildEvent: c
+    } = (0, a.useManageResourcePermissions)(t),
+    o = (0, i.useStateFromStores)([s.default], () => s.default.getChannels(e)[s.GUILD_VOCAL_CHANNELS_KEY], [e]),
+    f = l.useMemo(() => null != n ? o.filter(e => {
       let {
-        channel: r
+        channel: t
       } = e;
-      return r.type === t
-    }) : c, [c, t]);
-  return (0, a.useStateFromStores)([i.default], () => {
-    if (i.default.can(o.Permissions.ADMINISTRATOR, r) || d) return !0;
+      return t.type === n
+    }) : o, [o, n]);
+  return (0, i.useStateFromStores)([u.default], () => {
+    if (u.default.can(d.Permissions.ADMINISTRATOR, t) || c) return !0;
     for (let {
         channel: e
       }
       of f) {
       let {
-        canCreateGuildEvent: t
-      } = (0, n.getManageResourcePermissions)(e);
-      if (t) return !0
+        canCreateGuildEvent: n
+      } = (0, a.getManageResourcePermissions)(e);
+      if (n) return !0
     }
     return !1
-  }, [f, r, d])
+  }, [f, t, c])
 }

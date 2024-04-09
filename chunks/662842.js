@@ -22,11 +22,11 @@ var a, s, l = n("735250"),
   p = n("497656"),
   T = n("554747"),
   g = n("230900"),
-  A = n("854698"),
-  N = n("703656"),
-  v = n("922482"),
+  N = n("854698"),
+  A = n("703656"),
+  O = n("922482"),
   R = n("565799"),
-  O = n("501655"),
+  v = n("501655"),
   L = n("427679"),
   P = n("448206"),
   M = n("484459"),
@@ -59,7 +59,7 @@ function Y(e) {
     isEventNoticeHidden: S.default.isLiveChannelNoticeHidden({
       eventId: null == s ? void 0 : s.id
     })
-  }), [r, s]), K = null == a ? void 0 : a.id, z = (0, u.useStateFromStoresArray)([R.default], () => [...new Set(R.default.getMutableParticipants(K, O.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [K]), q = (0, u.useStateFromStores)([R.default], () => null != K ? R.default.getParticipantCount(K, O.StageChannelParticipantNamedIndex.AUDIENCE) : 0, [K]), Q = (0, u.useStateFromStores)([D.default], () => D.default.can(F.Permissions.CONNECT, a)), Z = (0, P.default)(null == a ? void 0 : a.id), X = null == s ? void 0 : s.creator_id, J = (0, u.useStateFromStores)([x.default], () => x.default.getUser(X), [X]);
+  }), [r, s]), K = null == a ? void 0 : a.id, z = (0, u.useStateFromStoresArray)([R.default], () => [...new Set(R.default.getMutableParticipants(K, v.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [K]), q = (0, u.useStateFromStores)([R.default], () => null != K ? R.default.getParticipantCount(K, v.StageChannelParticipantNamedIndex.AUDIENCE) : 0, [K]), Q = (0, u.useStateFromStores)([D.default], () => D.default.can(F.Permissions.CONNECT, a)), Z = (0, P.default)(null == a ? void 0 : a.id), X = null == s ? void 0 : s.creator_id, J = (0, u.useStateFromStores)([x.default], () => x.default.getUser(X), [X]);
   i.useEffect(() => {
     null != X && (0, f.getUser)(X)
   }, [X]);
@@ -86,7 +86,7 @@ function Y(e) {
       isEventNoticeHidden: d,
       isStageNoticeHidden: f,
       isStudyRoomNotice: E
-    } = e, _ = null != n && null != a && !f, S = null != t ? (0, A.getNextRecurrenceIdInEvent)(t) : null;
+    } = e, _ = null != n && null != a && !f, S = null != t ? (0, N.getNextRecurrenceIdInEvent)(t) : null;
     if (E && null != a) {
       let e = (0, h.getChannelIconComponent)(a);
       return {
@@ -313,7 +313,7 @@ function Y(e) {
       size: c.Button.Sizes.SMALL,
       color: c.Button.Colors.GREEN,
       onClick: () => {
-        if (ea) null != a && null != a.getGuildId() && ((0, v.connectAndOpen)(a), (0, N.transitionToGuild)(a.getGuildId(), a.id));
+        if (ea) null != a && null != a.getGuildId() && ((0, O.connectAndOpen)(a), (0, A.transitionToGuild)(a.getGuildId(), a.id));
         else {
           if (null == s) return;
           (0, _.openGuildEventDetails)({

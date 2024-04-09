@@ -1,51 +1,51 @@
 "use strict";
-n.r(t), n("47120");
-var r, s = n("735250"),
-  o = n("470079"),
-  i = n("803997"),
-  a = n.n(i),
-  l = n("748780"),
-  u = n("481060"),
-  d = n("932660");
+n.r(e), n("47120");
+var i, s = n("735250"),
+  r = n("470079"),
+  a = n("803997"),
+  u = n.n(a),
+  o = n("748780"),
+  l = n("481060"),
+  c = n("932660");
 
-function c(e, t, n) {
-  return t in e ? Object.defineProperty(e, t, {
+function d(t, e, n) {
+  return e in t ? Object.defineProperty(t, e, {
     value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : t[e] = n, t
 }
-let h = {
+let p = {
   friction: 7,
   tension: 60
 };
-class f extends(r = o.Component) {
-  componentWillAppear(e) {
-    this.animateTo(1).start(e)
+class h extends(i = r.Component) {
+  componentWillAppear(t) {
+    this.animateTo(1).start(t)
   }
-  componentWillEnter(e) {
-    this.animateTo(1).start(e)
+  componentWillEnter(t) {
+    this.animateTo(1).start(t)
   }
-  componentWillLeave(e) {
+  componentWillLeave(t) {
     let {
-      reducedMotion: t
+      reducedMotion: e
     } = this.context;
-    t.enabled ? this.animateTo(0).start(e) : l.default.stagger(250, [this.animateTo(1.3), this.animateTo(0)]).start(e)
+    e.enabled ? this.animateTo(0).start(t) : o.default.stagger(250, [this.animateTo(1.3), this.animateTo(0)]).start(t)
   }
-  animateTo(e) {
-    return l.default.spring(this.animation, {
-      ...h,
-      toValue: e
+  animateTo(t) {
+    return o.default.spring(this.animation, {
+      ...p,
+      toValue: t
     })
   }
   getAnimatedStyle() {
     let {
-      reducedMotion: e
+      reducedMotion: t
     } = this.context;
-    return l.default.accelerate({
+    return o.default.accelerate({
       opacity: this.animation,
-      transform: e.enabled ? void 0 : [{
+      transform: t.enabled ? void 0 : [{
         translateY: this.animation.interpolate({
           inputRange: [0, 1],
           outputRange: ["150%", "0%"]
@@ -55,17 +55,17 @@ class f extends(r = o.Component) {
   }
   render() {
     let {
-      className: e,
-      children: t
+      className: t,
+      children: e
     } = this.props;
-    return (0, s.jsx)(l.default.div, {
-      className: a()(e, d.slider),
+    return (0, s.jsx)(o.default.div, {
+      className: u()(t, c.slider),
       style: this.getAnimatedStyle(),
-      children: t
+      children: e
     })
   }
-  constructor(...e) {
-    super(...e), c(this, "animation", new l.default.Value(0))
+  constructor(...t) {
+    super(...t), d(this, "animation", new o.default.Value(0))
   }
 }
-c(f, "contextType", u.AccessibilityPreferencesContext), t.default = f
+d(h, "contextType", l.AccessibilityPreferencesContext), e.default = h

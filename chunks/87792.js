@@ -20,11 +20,11 @@ var a = n("735250"),
   p = n("880257"),
   T = n("631885"),
   g = n("240351"),
-  A = n("792258"),
-  N = n("657825"),
-  v = n("198952"),
+  N = n("792258"),
+  A = n("657825"),
+  O = n("198952"),
   R = n("329242"),
-  O = n("895328"),
+  v = n("895328"),
   L = n("292352"),
   P = n("981631"),
   M = n("689938"),
@@ -68,37 +68,37 @@ function x(e) {
     I(e => e + L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), d(t)
   }, [t, d]);
   i()(E, "No text for action type");
-  let v = E.sectionHeader(u),
+  let O = E.sectionHeader(u),
     R = s.useCallback(e => {
       let {
         row: t
       } = e, n = r[t];
-      return (0, h.isUserAction)(n) ? (0, a.jsx)(N.default, {
+      return (0, h.isUserAction)(n) ? (0, a.jsx)(A.default, {
         userId: n.entity_id,
         timestamp: f.default.extractTimestamp(n.event_id),
         timestampFormatter: E.timestampFormatter
-      }, n.event_id) : (0, h.isGuildAction)(n) ? (0, a.jsx)(A.default, {
+      }, n.event_id) : (0, h.isGuildAction)(n) ? (0, a.jsx)(N.default, {
         guildId: n.entity_id
       }, n.event_id) : void 0
     }, [r, E.timestampFormatter]),
-    O = s.useCallback(() => (0, a.jsxs)(a.Fragment, {
+    v = s.useCallback(() => (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(o.Text, {
         className: y.sectionHeader,
         variant: "eyebrow",
         color: "header-secondary",
-        children: v
+        children: O
       }), void 0 !== E.sectionDescription ? (0, a.jsx)(o.Text, {
         className: y.sectionDescription,
         variant: "text-md/medium",
         color: "text-muted",
         children: E.sectionDescription(null != l && l, T)
       }) : null]
-    }), [v, E, l, T]);
+    }), [O, E, l, T]);
   if (0 === r.length) return null;
   let P = r.slice(0, C);
   return (0, a.jsxs)("div", {
     className: y.actionSection,
-    children: [O(), (0, a.jsx)("div", {
+    children: [v(), (0, a.jsx)("div", {
       className: y.actions,
       style: {
         maxHeight: 65 * P.length
@@ -151,7 +151,7 @@ let b = () => {
     } = e, l = (0, I.useTeenUserForId)(t);
     return void 0 === l ? null : (0, a.jsxs)("div", {
       className: y.accountRow,
-      children: [(0, a.jsx)(v.FamilyCenterAvatar, {
+      children: [(0, a.jsx)(O.FamilyCenterAvatar, {
         user: l,
         avatarSize: s
       }), (0, a.jsxs)("div", {
@@ -240,7 +240,7 @@ t.default = e => {
             return (0, a.jsx)(x, {
               displayType: t
             }, "".concat(t, "-list"))
-          }) : (0, a.jsx)(O.default, {
+          }) : (0, a.jsx)(v.default, {
             className: y.emptyActivity,
             text: null != i ? i : ""
           })

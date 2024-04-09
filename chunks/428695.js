@@ -26,9 +26,9 @@ t.default = function(e) {
     trackingSource: p,
     undismissable: T,
     onDismissed: g,
-    onClick: A,
-    cta: N,
-    ctaColor: v,
+    onClick: N,
+    cta: A,
+    ctaColor: O,
     centerText: R
   } = e;
   s.useEffect(() => {
@@ -37,8 +37,8 @@ t.default = function(e) {
       guild_id: t.id
     })
   }, [t.id, C]);
-  let O = null;
-  "function" == typeof N ? O = N() : null != N && (O = (0, a.jsx)(o.Button, {
+  let v = null;
+  "function" == typeof A ? v = A() : null != A && (v = (0, a.jsx)(o.Button, {
     className: h.button,
     size: o.Button.Sizes.SMALL,
     onClick: () => {
@@ -46,11 +46,11 @@ t.default = function(e) {
         source: p,
         guild_id: t.id,
         notice_type: C
-      }), null == A || A()
+      }), null == N || N()
     },
     fullWidth: !0,
-    color: v,
-    children: N
+    color: O,
+    children: A
   }));
   let L = null;
   "function" == typeof n ? L = n() : null != n && (L = (0, a.jsx)(o.Text, {
@@ -99,7 +99,7 @@ t.default = function(e) {
         variant: "text-sm/normal",
         color: "text-muted",
         children: l
-      }), O]
+      }), v]
     })]
   })
 }

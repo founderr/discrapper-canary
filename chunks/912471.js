@@ -79,11 +79,11 @@ async function g() {
   }
   u.default.track(h.AnalyticEvents.CLIENT_HEARTBEAT, s), a.Storage.set(_, Date.now().toString()), (0, l.drainClickstream)()
 }
-let A = null,
-  N = !0;
+let N = null,
+  A = !0;
 
-function v() {
-  if (N || null != A && A !== h.RTCConnectionStates.DISCONNECTED && A !== h.RTCConnectionStates.RTC_DISCONNECTED) try {
+function O() {
+  if (A || null != N && N !== h.RTCConnectionStates.DISCONNECTED && N !== h.RTCConnectionStates.RTC_DISCONNECTED) try {
     p()
   } catch (e) {
     f.default.captureException(e)
@@ -95,28 +95,28 @@ function v() {
 function R() {
   f.default.addBreadcrumb({
     message: "Initializing SessionHeartbeatScheduler"
-  }), o.default.addChangeListener(L), s.default.subscribe("WINDOW_FOCUS", P), s.default.subscribe("APP_STATE_UPDATE", M), s.default.subscribe("LOGIN_SUCCESS", O), v()
+  }), o.default.addChangeListener(L), s.default.subscribe("WINDOW_FOCUS", P), s.default.subscribe("APP_STATE_UPDATE", M), s.default.subscribe("LOGIN_SUCCESS", v), O()
 }
 
-function O() {
+function v() {
   g()
 }
 
 function L() {
   let e = o.default.getState();
-  A !== e && (A = e, v())
+  N !== e && (N = e, O())
 }
 
 function P(e) {
   let {
     focused: t
   } = e;
-  N = t, v()
+  A = t, O()
 }
 
 function M(e) {
   let {
     state: t
   } = e;
-  N = t === h.AppStates.ACTIVE, v()
+  A = t === h.AppStates.ACTIVE, O()
 }

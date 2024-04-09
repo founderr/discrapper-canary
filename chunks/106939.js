@@ -27,11 +27,11 @@ var a = n("735250"),
   p = n("108427"),
   T = n("210887"),
   g = n("695346"),
-  A = n("594174"),
-  N = n("153124"),
-  v = n("158010"),
+  N = n("594174"),
+  A = n("153124"),
+  O = n("158010"),
   R = n("26290"),
-  O = n("626135"),
+  v = n("626135"),
   L = n("792125"),
   P = n("280570"),
   M = n("914788"),
@@ -95,7 +95,7 @@ function z(e) {
     theme: t,
     section: n,
     handleItemSelect: s
-  } = e, l = (0, N.useUID)(), o = (0, b.usePendingRequestCount)();
+  } = e, l = (0, A.useUID)(), o = (0, b.usePendingRequestCount)();
   return (0, a.jsxs)(S.default, {
     className: i()((0, L.getThemeClass)(t), V.sidebarTabBar),
     scrollable: r.isMobile,
@@ -103,7 +103,7 @@ function z(e) {
     "aria-labelledby": l,
     toolbar: !0,
     children: [(0, a.jsx)(S.default.Icon, {
-      icon: v.default,
+      icon: O.default,
       "aria-hidden": !0
     }), (0, a.jsx)(S.default.Title, {
       id: l,
@@ -141,8 +141,8 @@ function q() {
       selectedTab: f,
       handleTabChange: h
     } = (0, y.default)(),
-    _ = (0, N.useUID)(),
-    S = A.default.getCurrentUser(),
+    _ = (0, A.useUID)(),
+    S = N.default.getCurrentUser(),
     T = null != e,
     g = l && null != S && !T;
   return (s.useEffect(() => {
@@ -151,7 +151,7 @@ function q() {
       forceTrack: !0
     })
   }, []), s.useEffect(() => {
-    l && T && (O.default.track(k.AnalyticEvents.FAMILY_CENTER_VIEWED, {
+    l && T && (v.default.track(k.AnalyticEvents.FAMILY_CENTER_VIEWED, {
       is_considered_adult: e,
       num_of_accepted_links: t,
       selected_teen_id: r,
@@ -184,17 +184,17 @@ function q() {
 function Q() {
   let {
     analyticsLocations: e
-  } = (0, _.default)(h.default.FAMILY_CENTER), t = (0, x.default)(), n = (0, b.useAcceptedRequestsCount)(), l = (0, m.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE), r = (0, u.useStateFromStores)([M.default], () => M.default.getIsInitialized()), S = (0, D.useSelectedTeenId)(), v = (0, u.useStateFromStores)([T.default], () => T.default.theme), {
+  } = (0, _.default)(h.default.FAMILY_CENTER), t = (0, x.default)(), n = (0, b.useAcceptedRequestsCount)(), l = (0, m.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE), r = (0, u.useStateFromStores)([M.default], () => M.default.getIsInitialized()), S = (0, D.useSelectedTeenId)(), O = (0, u.useStateFromStores)([T.default], () => T.default.theme), {
     selectedTab: R,
     handleTabChange: L
-  } = (0, y.default)(), U = (0, N.useUID)(), j = A.default.getCurrentUser(), G = null != t, Y = r && null != j && !G;
+  } = (0, y.default)(), U = (0, A.useUID)(), j = N.default.getCurrentUser(), G = null != t, Y = r && null != j && !G;
   if (s.useEffect(() => {
       f.setHomeLink(k.Routes.FAMILY_CENTER), (0, p.trackAppUIViewed)("family-center"), !M.default.isLoading() && M.default.canRefetch() && P.default.initialPageLoad(), !l && (0, m.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
         dismissAction: B.ContentDismissActionType.AUTO,
         forceTrack: !0
       })
     }, []), s.useEffect(() => {
-      r && G && (O.default.track(k.AnalyticEvents.FAMILY_CENTER_VIEWED, {
+      r && G && (v.default.track(k.AnalyticEvents.FAMILY_CENTER_VIEWED, {
         is_considered_adult: t,
         num_of_accepted_links: n,
         selected_teen_id: S,
@@ -217,7 +217,7 @@ function Q() {
       children: [(0, a.jsx)(C.AppPageTitle, {
         location: H.default.Messages.FAMILY_CENTER_TITLE
       }), (0, a.jsx)(z, {
-        theme: v,
+        theme: O,
         section: K,
         handleItemSelect: e => {
           L(e)

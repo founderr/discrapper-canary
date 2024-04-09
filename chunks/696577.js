@@ -29,25 +29,25 @@ function p(e) {
     status: p,
     isFocused: T
   } = e, g = s.useContext(E.AnalyticsContext), {
-    analyticsLocations: A
-  } = (0, r.default)(), N = e => {
+    analyticsLocations: N
+  } = (0, r.default)(), A = e => {
     e.stopPropagation(), i.default.cancelFriendRequest(t.id, {
       location: "Friends"
     })
-  }, v = e => {
+  }, O = e => {
     e.stopPropagation(), i.default.addRelationship({
       userId: t.id,
       context: {
         location: "Friends"
       }
     })
-  }, R = p === m.StatusTypes.OFFLINE ? m.StatusTypes.UNKNOWN : p, O = n === m.RelationshipTypes.PENDING_INCOMING ? S.default.Messages.INCOMING_FRIEND_REQUEST : S.default.Messages.OUTGOING_FRIEND_REQUEST;
+  }, R = p === m.StatusTypes.OFFLINE ? m.StatusTypes.UNKNOWN : p, v = n === m.RelationshipTypes.PENDING_INCOMING ? S.default.Messages.INCOMING_FRIEND_REQUEST : S.default.Messages.OUTGOING_FRIEND_REQUEST;
   return (0, a.jsx)(_.default, {
     isFocused: T,
     user: t,
     onClick: () => (0, o.openUserProfileModal)({
       userId: t.id,
-      sourceAnalyticsLocations: A,
+      sourceAnalyticsLocations: N,
       analyticsLocation: g.location
     }),
     children: e => {
@@ -63,20 +63,20 @@ function p(e) {
           icon: d.default,
           actionType: h.default.ActionTypes.ACCEPT,
           tooltip: S.default.Messages.FRIEND_REQUEST_ACCEPT,
-          onClick: v,
+          onClick: O,
           shouldHighlight: e
         }), (0, a.jsx)(h.default, {
           icon: c.default,
           actionType: h.default.ActionTypes.DENY,
           tooltip: S.default.Messages.FRIEND_REQUEST_IGNORE,
-          onClick: N,
+          onClick: A,
           shouldHighlight: e
         })]
       }) : (0, a.jsx)(h.default, {
         icon: c.default,
         actionType: h.default.ActionTypes.DENY,
         tooltip: S.default.Messages.FRIEND_REQUEST_CANCEL,
-        onClick: N,
+        onClick: A,
         shouldHighlight: e
       });
       return (0, a.jsxs)("div", {
@@ -86,7 +86,7 @@ function p(e) {
           hovered: e,
           showAccountIdentifier: !0,
           status: R,
-          subText: O,
+          subText: v,
           className: I.userInfo
         }), (0, a.jsx)("div", {
           className: I.actions,

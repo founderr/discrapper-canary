@@ -3,24 +3,24 @@ n.r(t);
 var s = n("735250");
 n("470079");
 var i = n("960259"),
-  l = n("651954"),
-  a = n("325767");
+  a = n("651954"),
+  l = n("325767");
 t.default = (0, i.replaceIcon)(function(e) {
   let {
     width: t = 24,
     height: n = 24,
     color: i = "currentColor",
-    foreground: l,
+    foreground: a,
     ...r
   } = e;
   return (0, s.jsx)("svg", {
-    ...(0, a.default)(r),
+    ...(0, l.default)(r),
     width: t,
     height: n,
     viewBox: "0 0 24 24",
     children: (0, s.jsxs)("g", {
       fill: "none",
-      className: l,
+      className: a,
       children: [(0, s.jsx)("path", {
         fillRule: "evenodd",
         clipRule: "evenodd",
@@ -32,6 +32,6 @@ t.default = (0, i.replaceIcon)(function(e) {
       })]
     })
   })
-}, l.UserCircleStatusIcon, void 0, {
+}, a.UserCircleStatusIcon, void 0, {
   size: 24
 })

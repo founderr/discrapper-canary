@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   extractDisplayName: function() {
-    return N
+    return A
   }
 });
 var a, s = n("392711"),
@@ -37,17 +37,17 @@ let _ = {},
     id: null,
     justChanged: !1
   },
-  A = /\(([^)]+)\)/;
+  N = /\(([^)]+)\)/;
 
-function N(e) {
+function A(e) {
   if ((0, d.getPlatform)() === d.PlatformTypes.WINDOWS) {
-    let t = e.name.match(A);
+    let t = e.name.match(N);
     if (null != t) return t[1]
   }
   return e.name
 }
 
-function v(e, t, n) {
+function O(e, t, n) {
   return null == e || e.displayName !== t ? {
     displayName: t,
     type: n
@@ -89,7 +89,7 @@ h(R, "displayName", "ConnectedDeviceStore"), h(R, "persistKey", "ConnectedDevice
       outputDevices: n
     } = e, a = {};
     T.justChanged = !1, t.forEach(e => {
-      if (a[N(e)] = e.id, e.id === E.DEFAULT_DEVICE_ID) {
+      if (a[A(e)] = e.id, e.id === E.DEFAULT_DEVICE_ID) {
         var t;
         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
         n !== T.id && (T.justChanged = !0), T.id = n
@@ -97,7 +97,7 @@ h(R, "displayName", "ConnectedDeviceStore"), h(R, "persistKey", "ConnectedDevice
     });
     let s = {};
     if (g.justChanged = !1, n.forEach(e => {
-        if (s[N(e)] = e.id, e.id === E.DEFAULT_DEVICE_ID) {
+        if (s[A(e)] = e.id, e.id === E.DEFAULT_DEVICE_ID) {
           var t;
           let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
           n !== g.id && (g.justChanged = !0), g.id = n
@@ -113,9 +113,9 @@ h(R, "displayName", "ConnectedDeviceStore"), h(R, "persistKey", "ConnectedDevice
       d = l().difference(i, r),
       c = l().difference(o, u);
     return d.length > 0 || c.length > 0 ? p = {} : (l().difference(r, i).forEach(e => {
-      p[e] = v(p[e], e, f.ConnectedDeviceType.INPUT)
+      p[e] = O(p[e], e, f.ConnectedDeviceType.INPUT)
     }), l().difference(u, o).forEach(e => {
-      p[e] = v(p[e], e, f.ConnectedDeviceType.OUTPUT)
+      p[e] = O(p[e], e, f.ConnectedDeviceType.OUTPUT)
     })), !(l().isEqual(i, r) && l().isEqual(o, u)) && (S = a, I = s, !0)
   },
   CONNECTED_DEVICE_SET: function(e) {

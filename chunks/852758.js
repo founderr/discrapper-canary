@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   EMAIL_VERIFICATION_MODAL_KEY: function() {
-    return N
+    return A
   },
   PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY: function() {
-    return v
+    return O
   },
   default: function() {
     return R
@@ -30,9 +30,9 @@ var a = n("735250"),
   p = n("1964"),
   T = n("981631"),
   g = n("815660"),
-  A = n("689938");
-let N = "Email Verification",
-  v = "PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY";
+  N = n("689938");
+let A = "Email Verification",
+  O = "PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY";
 
 function R() {
   let {
@@ -41,7 +41,7 @@ function R() {
   } = (0, i.useStateFromStoresObject)([m.default, C.default], () => ({
     action: m.default.getAction(),
     theme: C.default.theme
-  })), R = p.default.getVerificationTypes(e), [O, L] = s.useState(0), P = (0, f.default)(R);
+  })), R = p.default.getVerificationTypes(e), [v, L] = s.useState(0), P = (0, f.default)(R);
   (0, h.default)({
     type: l.ImpressionTypes.MODAL,
     name: l.ImpressionNames.USER_ACTION_REQUIRED,
@@ -59,7 +59,7 @@ function R() {
           ...t
         })
       }, {
-        modalKey: N,
+        modalKey: A,
         Layer: I.default
       })
     },
@@ -86,18 +86,18 @@ function R() {
       } = await Promise.resolve().then(n.bind(n, "468026"));
       return t => (0, a.jsx)(e, {
         ...t,
-        title: A.default.Messages.PHONE_THEN_EMAIL_INTERSTITIAL_TITLE,
-        body: A.default.Messages.PHONE_THEN_EMAIL_INTERSTITIAL_BODY,
-        confirmText: A.default.Messages.PHONE_THEN_EMAIL_INTERSTITIAL_CONFIRM
+        title: N.default.Messages.PHONE_THEN_EMAIL_INTERSTITIAL_TITLE,
+        body: N.default.Messages.PHONE_THEN_EMAIL_INTERSTITIAL_BODY,
+        confirmText: N.default.Messages.PHONE_THEN_EMAIL_INTERSTITIAL_CONFIRM
       })
     }, {
-      modalKey: v,
+      modalKey: O,
       Layer: I.default,
       onCloseCallback: M
     })
   }, [R, P]), (0, a.jsx)(S.default, {
     types: R,
-    captchaKey: O,
+    captchaKey: v,
     onCaptchaVerify: e => {
       r.HTTP.post({
         url: T.Endpoints.CAPTCHA,
@@ -120,14 +120,14 @@ function R() {
           Text: t
         } = await Promise.resolve().then(n.bind(n, "481060"));
         return n => (0, a.jsx)(e, {
-          header: A.default.Messages.LOGOUT,
-          confirmText: A.default.Messages.LOGOUT,
-          cancelText: A.default.Messages.CANCEL,
+          header: N.default.Messages.LOGOUT,
+          confirmText: N.default.Messages.LOGOUT,
+          cancelText: N.default.Messages.CANCEL,
           onConfirm: () => u.default.logout(),
           ...n,
           children: (0, a.jsx)(t, {
             variant: "text-md/normal",
-            children: A.default.Messages.USER_SETTINGS_CONFIRM_LOGOUT
+            children: N.default.Messages.USER_SETTINGS_CONFIRM_LOGOUT
           })
         })
       }, {

@@ -20,11 +20,11 @@ var a = n("735250"),
   p = n("44315"),
   T = n("210887"),
   g = n("283595"),
-  A = n("417363"),
-  N = n("941128"),
-  v = n("451478"),
+  N = n("417363"),
+  A = n("941128"),
+  O = n("451478"),
   R = n("285952"),
-  O = n("366695"),
+  v = n("366695"),
   L = n("366966"),
   P = n("151011"),
   M = n("774832"),
@@ -380,7 +380,7 @@ class Z extends s.PureComponent {
   }
   renderProgressPatching() {
     return (0, a.jsx)(j.default, {
-      getHistoricalTotalBytes: A.default.getHistoricalTotalBytesWritten,
+      getHistoricalTotalBytes: N.default.getHistoricalTotalBytesWritten,
       updateInterval: 5e3,
       children: this.renderProgressPatchingBody
     })
@@ -503,10 +503,10 @@ let X = () => (0, a.jsx)(Y, {
     cellClassName: F.nameCell,
     render: e => (0, a.jsxs)(R.default, {
       align: R.default.Align.CENTER,
-      children: [(0, a.jsx)(O.default, {
+      children: [(0, a.jsx)(v.default, {
         game: e.application,
         className: F.__invalid_gameIcon,
-        size: O.default.Sizes.SMALL
+        size: v.default.Sizes.SMALL
       }), (0, a.jsx)("div", {
         className: F.nameCellText,
         children: e.application.name
@@ -577,13 +577,13 @@ class en extends s.PureComponent {
         children: [(0, a.jsx)(G.default, {
           className: i()(F.headerCell, F.networkProgress),
           title: k.default.Messages.GAME_LIBRARY_UPDATES_HEADER_NETWORK,
-          getHistoricalTotalBytes: A.default.getHistoricalTotalBytesDownloaded,
+          getHistoricalTotalBytes: N.default.getHistoricalTotalBytesDownloaded,
           color: w.Color.GREEN_360,
           animate: s
         }), (0, a.jsx)(G.default, {
           className: i()(F.headerCell, F.diskProgress),
           title: k.default.Messages.GAME_LIBRARY_UPDATES_HEADER_DISK,
-          getHistoricalTotalBytes: A.default.getHistoricalTotalBytesWritten,
+          getHistoricalTotalBytes: N.default.getHistoricalTotalBytesWritten,
           color: w.Color.BLUE_345,
           animate: s
         })]
@@ -649,12 +649,12 @@ function ea(e, t, n, a) {
     }), e
   }, [])
 }
-t.default = (0, S.default)(u.default.connectStores([I.default, A.default, N.default, T.default, v.default], () => {
-  let e = ea(N.default.activeItems, !1, I.default, A.default);
+t.default = (0, S.default)(u.default.connectStores([I.default, N.default, A.default, T.default, O.default], () => {
+  let e = ea(A.default.activeItems, !1, I.default, N.default);
   return {
-    applications: [...e, ...ea(N.default.finishedItems, !0, I.default, A.default)],
-    paused: N.default.paused,
-    isFocused: v.default.isFocused(),
+    applications: [...e, ...ea(A.default.finishedItems, !0, I.default, N.default)],
+    paused: A.default.paused,
+    isFocused: O.default.isFocused(),
     theme: T.default.theme
   }
 })((0, m.default)(en)))

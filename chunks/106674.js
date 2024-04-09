@@ -24,11 +24,11 @@ var a = n("735250"),
   p = n("602623"),
   T = n("51144"),
   g = n("498058"),
-  A = n("158631"),
-  N = n("143614"),
-  v = n("981631"),
+  N = n("158631"),
+  A = n("143614"),
+  O = n("981631"),
   R = n("70722"),
-  O = n("689938"),
+  v = n("689938"),
   L = n("420869");
 
 function P(e) {
@@ -60,7 +60,7 @@ function M(e) {
     applicationId: I,
     channelId: p,
     streamKey: M
-  } = n, [y, D] = s.useState(!1), x = (0, l.useStateFromStores)([C.default], () => C.default.getUser(i)), [b] = (0, c.default)([I]), U = null !== (t = T.default.getGlobalName(x)) && void 0 !== t ? t : T.default.getUserTag(x), j = (0, N.default)(), G = (0, l.useStateFromStores)([E.default], () => E.default.getPreviewURL(null, p, i)), w = (0, l.useStateFromStores)([_.default], () => _.default.getVoiceChannelId()), k = (0, A.default)(), F = (0, g.default)(p);
+  } = n, [y, D] = s.useState(!1), x = (0, l.useStateFromStores)([C.default], () => C.default.getUser(i)), [b] = (0, c.default)([I]), U = null !== (t = T.default.getGlobalName(x)) && void 0 !== t ? t : T.default.getUserTag(x), j = (0, A.default)(), G = (0, l.useStateFromStores)([E.default], () => E.default.getPreviewURL(null, p, i)), w = (0, l.useStateFromStores)([_.default], () => _.default.getVoiceChannelId()), k = (0, N.default)(), F = (0, g.default)(p);
   if (s.useEffect(() => {
       y && w === p && D(!1)
     }, [w, y, p]), null == x || null == U) return null;
@@ -71,10 +71,10 @@ function M(e) {
   } = function(e, t) {
     let n = h.default.getId(),
       a = t.some(e => e.id === n) || e === n,
-      s = t.length >= v.MAX_GROUP_DM_BROADCAST_PARTICIPANTS;
+      s = t.length >= O.MAX_GROUP_DM_BROADCAST_PARTICIPANTS;
     return {
       buttonColor: s ? r.ButtonColors.RED : r.ButtonColors.GREEN,
-      buttonCTA: s ? O.default.Messages.BROADCAST_FULL : a ? O.default.Messages.VIEW_BROADCAST : O.default.Messages.JOIN_BROADCAST,
+      buttonCTA: s ? v.default.Messages.BROADCAST_FULL : a ? v.default.Messages.VIEW_BROADCAST : v.default.Messages.JOIN_BROADCAST,
       disabled: s
     }
   }(i, F);
@@ -92,9 +92,9 @@ function M(e) {
       }), (0, a.jsx)(r.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        children: null != b ? O.default.Messages.STREAMING.format({
+        children: null != b ? v.default.Messages.STREAMING.format({
           name: b.name
-        }) : O.default.Messages.STREAMING_A_GAME
+        }) : v.default.Messages.STREAMING_A_GAME
       }), (0, a.jsxs)("div", {
         className: L.activity,
         children: [F.length > 0 && (0, a.jsx)(P, {
@@ -105,7 +105,7 @@ function M(e) {
               o.default.selectPrivateChannel(p);
               return
             }
-            D(!0), (0, u.joinPrivateChannelAndWatchStream)(p, M), d.default.trackWithMetadata(v.AnalyticEvents.BROADCAST_VIEWED, {
+            D(!0), (0, u.joinPrivateChannelAndWatchStream)(p, M), d.default.trackWithMetadata(O.AnalyticEvents.BROADCAST_VIEWED, {
               num_active_broadcasts: j.length,
               broadcast_position: j.findIndex(e => e.userId === i) + 1,
               is_broadcasting: k,

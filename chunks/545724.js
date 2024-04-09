@@ -21,12 +21,12 @@ t.default = function(e) {
     isActive: m,
     onOtherHover: S,
     className: I
-  } = e, [p, T] = s.useState(!1), [g, A] = s.useState(!1), N = () => {
+  } = e, [p, T] = s.useState(!1), [g, N] = s.useState(!1), A = () => {
     T(!0), C && !m && !g && (null == S || S())
-  }, v = () => {
+  }, O = () => {
     T(!1)
   }, R = (e, t) => {
-    null != t && (A(!0), (0, d.openContextMenuLazy)(e, async () => {
+    null != t && (N(!0), (0, d.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("79695"), n.e("85559"), n.e("64409")]).then(n.bind(n, "881351"));
@@ -36,7 +36,7 @@ t.default = function(e) {
       })
     }, {
       onClose: () => {
-        A(!1)
+        N(!1)
       }
     }))
   };
@@ -53,8 +53,8 @@ t.default = function(e) {
           [f.firstItem]: 0 === t
         }),
         onContextMenu: e => R(e, E),
-        onMouseEnter: N,
-        onMouseLeave: v,
+        onMouseEnter: A,
+        onMouseLeave: O,
         onClick: null != _ ? _ : void 0,
         style: {
           LIST_ROW_HEIGHT: c.LIST_ROW_HEIGHT,

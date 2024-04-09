@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   crossPlatformCommands: function() {
-    return v
+    return O
   }
 });
 var a = n("688707"),
@@ -24,9 +24,9 @@ var a = n("688707"),
   p = n("265067"),
   T = n("881393"),
   g = n("905534"),
-  A = n("273487"),
-  N = n("543815");
-let v = {
+  N = n("273487"),
+  A = n("543815");
+let O = {
   ...a.default,
   ...l.default,
   ...i.default,
@@ -44,8 +44,8 @@ let v = {
   ...I.default,
   ...T.default,
   ...g.default,
-  ...N.default,
   ...A.default,
+  ...N.default,
   ...C.default,
   ...p.default,
   ...s.default

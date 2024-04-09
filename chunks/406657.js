@@ -10,9 +10,9 @@ var a = s("735250"),
   r = s("481060"),
   o = s("893776"),
   i = s("594174"),
-  u = s("41542"),
-  d = s("918701"),
-  c = s("689938"),
+  d = s("41542"),
+  c = s("918701"),
+  u = s("689938"),
   f = s("334644"),
   C = s("800010");
 
@@ -34,7 +34,7 @@ function m(e) {
     }), e => {
       E({
         status: "error"
-      }), (0, d.captureQuestsException)(e, {
+      }), (0, c.captureQuestsException)(e, {
         tags: {
           location: "QuestsRewardCodeModalUnverified"
         }
@@ -47,7 +47,7 @@ function m(e) {
       color: r.Button.Colors.BRAND,
       size: r.Button.Sizes.MEDIUM,
       onClick: s,
-      children: c.default.Messages.CLOSE
+      children: u.default.Messages.CLOSE
     })
   });
   return (0, a.jsxs)(r.ModalRoot, {
@@ -63,7 +63,7 @@ function m(e) {
       children: [(0, a.jsx)(r.Heading, {
         className: f.title,
         variant: "heading-xl/bold",
-        children: c.default.Messages.QUESTS_REWARD_VERIFICATION_TITLE
+        children: u.default.Messages.QUESTS_REWARD_VERIFICATION_TITLE
       }), (0, a.jsx)(r.ModalCloseButton, {
         onClick: s,
         className: f.modalCloseButton
@@ -76,7 +76,7 @@ function m(e) {
         className: f.content,
         children: (0, a.jsx)(r.Text, {
           variant: "text-md/normal",
-          children: c.default.Messages.QUESTS_REWARD_VERIFICATION_ERROR
+          children: u.default.Messages.QUESTS_REWARD_VERIFICATION_ERROR
         })
       }), R()]
     }), "success" === h.status && (0, a.jsxs)(a.Fragment, {
@@ -84,7 +84,7 @@ function m(e) {
         className: f.content,
         children: (0, a.jsx)(r.Text, {
           variant: "text-md/normal",
-          children: c.default.Messages.QUESTS_REWARD_VERIFICATION_BODY.format({
+          children: u.default.Messages.QUESTS_REWARD_VERIFICATION_BODY.format({
             emailAddress: m,
             emailAddressLink: "mailto:".concat(m)
           })
@@ -93,12 +93,12 @@ function m(e) {
         className: f.content,
         children: (0, a.jsxs)("div", {
           className: f.tooltip,
-          children: [(0, a.jsx)(u.default, {
+          children: [(0, a.jsx)(d.default, {
             className: f.infoFilledIcon
           }), (0, a.jsx)(r.Text, {
             className: f.tooltipText,
             variant: "text-sm/normal",
-            children: c.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CHECK_SPAM
+            children: u.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CHECK_SPAM
           })]
         })
       }), R()]

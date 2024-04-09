@@ -70,7 +70,7 @@ function g() {
   })
 }
 
-function A() {
+function N() {
   let e = (0, m.useClanDiscoveryUIStore)(e => e.selectedTraits, l.default);
   return null == e ? null : (0, a.jsxs)(f.Button, {
     className: p.filterPill,
@@ -89,7 +89,7 @@ function A() {
   })
 }
 
-function N() {
+function A() {
   var e;
   let t = (0, m.useClanDiscoveryUIStore)(e => e.selectedPrimetime, l.default);
   return (0, a.jsxs)(f.Button, {
@@ -109,7 +109,7 @@ function N() {
   })
 }
 
-function v() {
+function O() {
   let e = (0, E.useStateFromStoresArray)([C.default], () => C.default.getFavoriteClans(), []);
   return (0, a.jsxs)(f.Button, {
     className: p.filterPillSmall,
@@ -142,7 +142,7 @@ function R() {
   })
 }
 
-function O() {
+function v() {
   return null
 }
 
@@ -179,7 +179,7 @@ t.default = function() {
     n && (0, h.searchClanDiscovery)(e, t)
   }, [e, t, n]), (0, a.jsxs)("main", {
     className: p.container,
-    children: [(0, a.jsx)(O, {}), (0, a.jsx)("div", {
+    children: [(0, a.jsx)(v, {}), (0, a.jsx)("div", {
       className: p.content,
       children: (0, a.jsx)(L, {})
     })]

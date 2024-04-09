@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n("47120");
-var a, l = n("442837"),
-  s = n("570140");
+var s, a = n("442837"),
+  l = n("570140");
 n("278147");
 var i = n("455199"),
   r = n("70956"),
@@ -24,13 +24,13 @@ let c = 90 * r.default.Millis.DAY,
     isDataStale: !1,
     isRefreshing: !1
   };
-class h extends(a = l.default.PersistedStore) {
+class E extends(s = a.default.PersistedStore) {
   initialize(e) {
     if (this.waitFor(i.default), null != e) {
       var t;
       (f = e).localItemAcks = function(e) {
         let t = {};
-        for (let [n, a] of Object.entries(e)) Date.now() - a < c && (t[n] = a);
+        for (let [n, s] of Object.entries(e)) Date.now() - s < c && (t[n] = s);
         return t
       }(null !== (t = f.localItemAcks) && void 0 !== t ? t : {}), f.isDataStale = !0
     }
@@ -58,12 +58,12 @@ class h extends(a = l.default.PersistedStore) {
     return f.hasNewMentions || f.isDataStale || f.isRefreshing
   }
 }
-d(h, "displayName", "NotificationCenterStore"), d(h, "persistKey", "NotificationCenterStore");
+d(E, "displayName", "NotificationCenterStore"), d(E, "persistKey", "NotificationCenterStore");
 
-function E() {
+function _() {
   f.hasNewMentions = !1, f.isDataStale = !1, f.isRefreshing = !1
 }
-t.default = new h(s.default, {
+t.default = new E(l.default, {
   MESSAGE_CREATE: function(e) {
     let {
       message: t
@@ -92,6 +92,6 @@ t.default = new h(s.default, {
   NOTIFICATION_CENTER_REFRESH: function() {
     f.isRefreshing = !0
   },
-  LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: E,
-  LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: E
+  LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: _,
+  LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: _
 })

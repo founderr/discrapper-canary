@@ -20,11 +20,11 @@ var a = n("735250"),
   p = n("513202"),
   T = n("318891"),
   g = n("687751"),
-  A = n("912471"),
-  N = n("100527"),
-  v = n("74438"),
+  N = n("912471"),
+  A = n("100527"),
+  O = n("74438"),
   R = n("753450"),
-  O = n("675869"),
+  v = n("675869"),
   L = n("77987"),
   P = n("679891"),
   M = n("491575"),
@@ -74,11 +74,11 @@ var a = n("735250"),
   ep = n("6025"),
   eT = n("897473"),
   eg = n("377368"),
-  eA = n("262702"),
-  eN = n("639033"),
-  ev = n("479313"),
+  eN = n("262702"),
+  eA = n("639033"),
+  eO = n("479313"),
   eR = n("911560"),
-  eO = n("703016"),
+  ev = n("703016"),
   eL = n("171368"),
   eP = n("429974"),
   eM = n("332754"),
@@ -119,7 +119,7 @@ function e4(e, t, n) {
 }
 n("117240"), n("801077"), n("967368"), n("272053"), n("974180"), n("574254"), n("551428"), n("55563"), n("455173"), n("882029"), n("959457"), n("653255"), n("663389"), n("25990"), n("778825"), n("999382"), n("388610"), n("533947"), n("277053"), n("371398"), n("141233"), n("471073"), n("628566");
 let e9 = !1;
-(0, A.initSessionHeartbeatScheduler)(), o.default.initialize(), eS.default.loadServer(), eZ.isPlatformEmbedded && (eX.default.on("USER_SETTINGS_OPEN", () => {
+(0, N.initSessionHeartbeatScheduler)(), o.default.initialize(), eS.default.loadServer(), eZ.isPlatformEmbedded && (eX.default.on("USER_SETTINGS_OPEN", () => {
   !eF.default.getLayers().includes(e$.Layers.USER_SETTINGS) && _.default.open(e$.UserSettingsSections.ACCOUNT)
 }), eX.default.on("LAUNCH_APPLICATION", (e, t) => {
   let n = eB.default.getActiveLibraryApplication(t);
@@ -171,7 +171,7 @@ let e7 = o.default.connectStores([Y.default, ew.default, eU.default], () => ({
     passProps: !1
   }),
   e5 = (0, L.makeAuthenticated)(function() {
-    return (0, a.jsx)(v.default, {})
+    return (0, a.jsx)(O.default, {})
   }),
   e8 = (0, L.makeAuthenticated)(function(e) {
     let {
@@ -186,7 +186,7 @@ let e7 = o.default.connectStores([Y.default, ew.default, eU.default], () => ({
     })
   }),
   e6 = (0, L.makeAuthenticated)(function() {
-    return (0, a.jsx)(O.default, {})
+    return (0, a.jsx)(v.default, {})
   }),
   te = [e$.Routes.GUILD_BOOSTING_MARKETING(":guildId"), ...Array.from(e1.StaticChannelRoutes).map(e => e$.Routes.CHANNEL(":guildId", e))];
 
@@ -247,7 +247,7 @@ let tn = [{
         userId: i,
         guildId: e$.ME,
         friendToken: s,
-        sourceAnalyticsLocations: [N.default.URI_SCHEME],
+        sourceAnalyticsLocations: [A.default.URI_SCHEME],
         analyticsLocation: {
           section: e$.AnalyticsSections.DIRECT_ROUTE_ACCESS
         }
@@ -454,7 +454,7 @@ function tl(e) {
 }
 class ti extends s.PureComponent {
   componentDidMount() {
-    y.default.initialize(), eX.default.setZoomFactor(C.default.zoom), eS.default.init(), P.default.initialize(), ed.default.initialize(), F.default.initialize(), eb.default.initialize(), B.default.initialize(), ef.default.initialize(), ee.default.initialize(), m.default.init(), V.default.init(), H.default.init(), el.default.initialize(), g.default.initialize(), w.default.initialize(), eE.default.initialize(), T.default.initialize(), ex.default.initialize(), eu.default.initialize(), p.default.initialize(), K.default.init(), J.default.init(), ez.default.init(), eQ.default.init(), I.default.initialize(), eO.default.init(), eK.default.init(), eW.default.init(), eM.default.init(), eA.default.initialize(), eN.default.initialize(), eP.default.initialize(), ey.default.init(), G.default.initialize(), S.default.initialize(), eI.default.initialize(), eg.default.initialize(), er.default.initialize(), ei.default.initialize(), eo.default.initialize(), D.default.initialize(), $.default.init({
+    y.default.initialize(), eX.default.setZoomFactor(C.default.zoom), eS.default.init(), P.default.initialize(), ed.default.initialize(), F.default.initialize(), eb.default.initialize(), B.default.initialize(), ef.default.initialize(), ee.default.initialize(), m.default.init(), V.default.init(), H.default.init(), el.default.initialize(), g.default.initialize(), w.default.initialize(), eE.default.initialize(), T.default.initialize(), ex.default.initialize(), eu.default.initialize(), p.default.initialize(), K.default.init(), J.default.init(), ez.default.init(), eQ.default.init(), I.default.initialize(), ev.default.init(), eK.default.init(), eW.default.init(), eM.default.init(), eN.default.initialize(), eA.default.initialize(), eP.default.initialize(), ey.default.init(), G.default.initialize(), S.default.initialize(), eI.default.initialize(), eg.default.initialize(), er.default.initialize(), ei.default.initialize(), eo.default.initialize(), D.default.initialize(), $.default.init({
       hasModalOpen: u.hasAnyModalOpen,
       openModal: () => (0, u.openModalLazy)(async () => {
         let {
@@ -512,7 +512,7 @@ class ti extends s.PureComponent {
           let {
             summaryId: e
           } = (0, l.parse)(t);
-          null != e && ev.default.setSelectedSummary(s, e)
+          null != e && eO.default.setSelectedSummary(s, e)
         }
         if (null != o && c) {
           let e = ej.default.getCurrentSidebarChannelId(n) !== o,

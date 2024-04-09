@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n("47120");
-var a, l, s, i, r = n("442837"),
+var s, a, l, i, r = n("442837"),
   o = n("570140"),
   u = n("823379"),
   d = n("981631");
 let c = [],
   f = {},
-  h = null,
-  E = 0;
+  E = null,
+  _ = 0;
 
-function m(e) {
+function T(e) {
   let t = null;
   try {
     t = JSON.parse(e.launch_parameters)
@@ -18,18 +18,18 @@ function m(e) {
   }
   if (e.platform_type === d.PlatformTypes.XBOX) {
     let n = null == t ? void 0 : t.titleId,
-      a = null == t ? void 0 : t.inviteToken;
-    return null == n || null == a ? null : {
+      s = null == t ? void 0 : t.inviteToken;
+    return null == n || null == s ? null : {
       ...e,
       parsed_launch_parameters: {
         titleId: n,
-        inviteToken: a
+        inviteToken: s
       }
     }
   }
   return null
 }
-class p extends(a = r.default.Store) {
+class m extends(s = r.default.Store) {
   getInvites() {
     return c
   }
@@ -45,29 +45,29 @@ class p extends(a = r.default.Store) {
     return null === (t = f[e.invite_id]) || void 0 === t ? void 0 : t.joinable
   }
   getLastUnseenInvite() {
-    return h
-  }
-  getUnseenInviteCount() {
     return E
   }
+  getUnseenInviteCount() {
+    return _
+  }
 }
-i = "GameInviteStore", (s = "displayName") in(l = p) ? Object.defineProperty(l, s, {
+i = "GameInviteStore", (l = "displayName") in(a = m) ? Object.defineProperty(a, l, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[s] = i, t.default = new p(o.default, {
+}) : a[l] = i, t.default = new m(o.default, {
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
     let {
       gameInvites: t
     } = e;
-    c = t.map(m).filter(u.isNotNullish)
+    c = t.map(T).filter(u.isNotNullish)
   },
   GAME_INVITE_CREATE: function(e) {
     let {
       gameInvite: t
-    } = e, n = m(t);
-    null != n && (c = [n, ...c], h = t, E += 1)
+    } = e, n = T(t);
+    null != n && (c = [n, ...c], E = t, _ += 1)
   },
   GAME_INVITE_DELETE: function(e) {
     let {
@@ -90,6 +90,6 @@ i = "GameInviteStore", (s = "displayName") in(l = p) ? Object.defineProperty(l, 
     }
   },
   GAME_INVITE_CLEAR_UNSEEN: function(e) {
-    h = null, E = 0
+    E = null, _ = 0
   }
 })

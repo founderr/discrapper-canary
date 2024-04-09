@@ -23,10 +23,10 @@ var a, s = n("735250"),
   p = n("150192"),
   T = n("731455"),
   g = n("981631"),
-  A = n("689938"),
-  N = n("80420");
+  N = n("689938"),
+  A = n("80420");
 
-function v(e, t, n) {
+function O(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -38,7 +38,7 @@ let R = u().throttle(m.trackSearchResultsViewed, 1e3, {
     leading: !1,
     trailing: !0
   }),
-  O = e => {
+  v = e => {
     let {
       isSelected: t,
       onCategoryChange: n,
@@ -48,11 +48,11 @@ let R = u().throttle(m.trackSearchResultsViewed, 1e3, {
     } = e;
     return (0, s.jsx)(c.Clickable, {
       onClick: () => n(a),
-      className: r()(N.categoryPill, {
-        [N.selected]: t
+      className: r()(A.categoryPill, {
+        [A.selected]: t
       }),
       children: (0, s.jsx)(c.Text, {
-        className: N.categoryLabel,
+        className: A.categoryLabel,
         variant: "text-sm/normal",
         children: null != i ? "".concat(l, " (").concat(i, ")") : l
       })
@@ -132,7 +132,7 @@ class L extends(a = l.PureComponent) {
       }
     });
     return (0, s.jsx)(c.SingleSelect, {
-      className: N.languageSelector,
+      className: A.languageSelector,
       options: a,
       value: null !== (e = null == n ? void 0 : n.name) && void 0 !== e ? e : "",
       onChange: this.handleLanguageChange,
@@ -145,12 +145,12 @@ class L extends(a = l.PureComponent) {
       countsByCategory: t
     } = this.props;
     return (0, s.jsx)("div", {
-      className: N.categories,
+      className: A.categories,
       children: null == t ? void 0 : t.map(t => {
         let [n, a] = t;
-        return (0, s.jsx)(O, {
+        return (0, s.jsx)(v, {
           categoryId: n,
-          name: n === T.DISCOVERY_ALL_CATEGORIES_ID ? A.default.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : p.default.getCategoryName(n),
+          name: n === T.DISCOVERY_ALL_CATEGORIES_ID ? N.default.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : p.default.getCategoryName(n),
           onCategoryChange: this.handleCategoryChange,
           isSelected: e === n,
           count: a
@@ -168,19 +168,19 @@ class L extends(a = l.PureComponent) {
     } = this.props;
     return (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsxs)("div", {
-        className: r()(N.container, {
-          [N.searchPage]: a
+        className: r()(A.container, {
+          [A.searchPage]: a
         }),
         children: [(0, s.jsx)("div", {
-          className: N.search,
+          className: A.search,
           children: (0, s.jsx)(h.default, {
             ref: this._searchRef,
             searchTerm: e,
-            className: a ? void 0 : N.searchBox,
-            inputClassName: a ? void 0 : N.searchBoxInput,
-            closeIconClassName: a ? void 0 : N.closeIcon,
-            searchIconClassName: a ? void 0 : N.searchIcon,
-            label: A.default.Messages.GUILD_DISCOVERY_SEARCH_LABEL,
+            className: a ? void 0 : A.searchBox,
+            inputClassName: a ? void 0 : A.searchBoxInput,
+            closeIconClassName: a ? void 0 : A.closeIcon,
+            searchIconClassName: a ? void 0 : A.searchIcon,
+            label: N.default.Messages.GUILD_DISCOVERY_SEARCH_LABEL,
             placeholder: n,
             onChange: this.handleQueryChanged,
             onClear: this.handleQueryCleared,
@@ -188,14 +188,14 @@ class L extends(a = l.PureComponent) {
             onBlur: this.handleSearchBlurred,
             onKeyPress: this.handleSearchKeyPress,
             autoFocus: !a,
-            cta: t && null != e && e.length > 1 ? A.default.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
+            cta: t && null != e && e.length > 1 ? N.default.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
           })
         }), a ? this.renderSearchOptions() : null]
       }), a ? this.renderCategories() : null]
     })
   }
   constructor(e) {
-    super(e), v(this, "_searchRef", l.createRef()), v(this, "canSearch", e => e.trim().length >= 2 && !(0, S.searchQueryContainsBannedWord)(e)), v(this, "doSearch", (e, t, n, a) => {
+    super(e), O(this, "_searchRef", l.createRef()), O(this, "canSearch", e => e.trim().length >= 2 && !(0, S.searchQueryContainsBannedWord)(e)), O(this, "doSearch", (e, t, n, a) => {
       var s;
       let {
         defaultLanguage: l,
@@ -217,14 +217,14 @@ class L extends(a = l.PureComponent) {
         length: t,
         filters: u
       })
-    }), v(this, "handleSearchBlurred", e => {
+    }), O(this, "handleSearchBlurred", e => {
       let {
         onSearchBlur: t
       } = this.props;
       this.setState({
         inputFocused: !1
       }), null == t || t()
-    }), v(this, "handleSearchKeyPress", e => {
+    }), O(this, "handleSearchKeyPress", e => {
       let {
         query: t,
         queryHasChanged: n
@@ -235,18 +235,18 @@ class L extends(a = l.PureComponent) {
       this.canSearch(t) && n && e.charCode === g.KeyboardKeys.ENTER ? (m.trackSearchStarted(a, l), this.doSearch(0, 12, void 0, !0)) : 0 === t.length && e.charCode === g.KeyboardKeys.ENTER && this.setState({
         isSearching: !1
       })
-    }), v(this, "handleQueryChanged", e => {
+    }), O(this, "handleQueryChanged", e => {
       this.setState({
         query: e,
         queryHasChanged: !0
       })
-    }), v(this, "handleQueryCleared", () => {
+    }), O(this, "handleQueryCleared", () => {
       this.setState({
         query: "",
         queryHasChanged: !0,
         isSearching: !1
       })
-    }), v(this, "handleLanguageChange", e => {
+    }), O(this, "handleLanguageChange", e => {
       let {
         mostRecentQuery: t,
         availableLanguages: n
@@ -256,19 +256,19 @@ class L extends(a = l.PureComponent) {
       }, () => {
         this.canSearch(t) && this.doSearch(0, 12)
       })
-    }), v(this, "handleCategoryChange", e => {
+    }), O(this, "handleCategoryChange", e => {
       let {
         mostRecentQuery: t
       } = this.props;
       f.selectCategory(e), this.canSearch(t) && this.doSearch(0, 12, e)
-    }), v(this, "handleFocus", () => {
+    }), O(this, "handleFocus", () => {
       let {
         onSearchFocus: e
       } = this.props;
       this.setState({
         inputFocused: !0
       }), null == e || e()
-    }), v(this, "focusInput", () => {
+    }), O(this, "focusInput", () => {
       var e;
       null === (e = this._searchRef.current) || void 0 === e || e.focus()
     }), this.state = {
@@ -292,4 +292,4 @@ function P(e) {
     countsByCategory: n
   })
 }
-v(L, "contextType", void 0), L.contextType = _.AnalyticsContext
+O(L, "contextType", void 0), L.contextType = _.AnalyticsContext

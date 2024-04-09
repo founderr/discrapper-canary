@@ -14,20 +14,20 @@ var i, r, o, u, d = n("392711"),
 let p = [],
   T = null,
   g = !1,
-  A = I.FormStates.CLOSED,
-  N = {},
-  v = !1,
+  N = I.FormStates.CLOSED,
+  A = {},
+  O = !1,
   R = null;
 
-function O() {
+function v() {
   if (a = null != (s = _.default.getChannel()) ? C.default.getGuild(s.guild_id) : null, p = null != s && null != a && m.default.can(I.Permissions.MANAGE_WEBHOOKS, s) ? S.default.getWebhooksForChannel(a.id, s.id) : [], null != T) {
     let e = P(T.id);
     null != e && (T = e)
   }
-  A = I.FormStates.OPEN, N = {}, v = !1
+  N = I.FormStates.OPEN, A = {}, O = !1
 }
 let L = c().debounce(() => {
-  v && ((null == T || c().isEqual(T, P(T.id))) && (v = !1), !v && y.emitChange())
+  O && ((null == T || c().isEqual(T, P(T.id))) && (O = !1), !O && y.emitChange())
 }, 500);
 
 function P(e) {
@@ -43,7 +43,7 @@ class M extends(i = f.default.Store) {
     this.waitFor(_.default, C.default, S.default, m.default)
   }
   hasChanges() {
-    return v
+    return O
   }
   get webhooks() {
     return p
@@ -52,7 +52,7 @@ class M extends(i = f.default.Store) {
     return T
   }
   get formState() {
-    return A
+    return N
   }
   getWebhook(e) {
     return P(e)
@@ -62,14 +62,14 @@ class M extends(i = f.default.Store) {
   }
   getProps() {
     return {
-      submitting: A === I.FormStates.SUBMITTING,
+      submitting: N === I.FormStates.SUBMITTING,
       webhooks: p,
       editedWebhook: T,
       section: l,
       sectionId: R,
       hasChanges: this.hasChanges(),
       isFetching: g,
-      errors: N
+      errors: A
     }
   }
 }
@@ -80,8 +80,8 @@ u = "ChannelSettingsIntegrationsStore", (o = "displayName") in(r = M) ? Object.d
   writable: !0
 }) : r[o] = u;
 let y = new M(E.default, __OVERLAY__ ? {} : {
-  INTEGRATION_SETTINGS_INIT: O,
-  INTEGRATION_SETTINGS_SAVE_SUCCESS: O,
+  INTEGRATION_SETTINGS_INIT: v,
+  INTEGRATION_SETTINGS_SAVE_SUCCESS: v,
   CHANNEL_SETTINGS_SET_SECTION: function(e) {
     let {
       section: t
@@ -90,7 +90,7 @@ let y = new M(E.default, __OVERLAY__ ? {} : {
     if (l = I.IntegrationSettingsSections.OVERVIEW, null == a) {
       let e = _.default.getChannel(),
         t = null == e ? void 0 : e.getGuildId();
-      null != e && null != t && (h.default.fetchForChannel(t, e.id), g = !0), O()
+      null != e && null != t && (h.default.fetchForChannel(t, e.id), g = !0), v()
     }
   },
   INTEGRATION_SETTINGS_SET_SECTION: function(e) {
@@ -105,10 +105,10 @@ let y = new M(E.default, __OVERLAY__ ? {} : {
       webhookId: t
     } = e, n = P(t);
     if (null == n) return !1;
-    T = n, N = {}, v = !1
+    T = n, A = {}, O = !1
   },
   INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function() {
-    T = null, N = {}, v = !1
+    T = null, A = {}, O = !1
   },
   INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function(e) {
     let {
@@ -117,10 +117,10 @@ let y = new M(E.default, __OVERLAY__ ? {} : {
     if (null == T) return !1;
     T = {
       ...T
-    }, null != t.name && T.name !== t.name && (T.name = t.name, v = !0), void 0 !== t.avatar && T.avatar !== t.avatar && (T.avatar = t.avatar, v = !0), null != t.channelId && T.channel_id !== t.channelId && (T.channel_id = t.channelId, v = !0), v && L()
+    }, null != t.name && T.name !== t.name && (T.name = t.name, O = !0), void 0 !== t.avatar && T.avatar !== t.avatar && (T.avatar = t.avatar, O = !0), null != t.channelId && T.channel_id !== t.channelId && (T.channel_id = t.channelId, O = !0), O && L()
   },
   CHANNEL_SETTINGS_CLOSE: function() {
-    s = null, a = null, p = [], T = null, A = I.FormStates.CLOSED
+    s = null, a = null, p = [], T = null, N = I.FormStates.CLOSED
   },
   WEBHOOKS_UPDATE: function(e) {
     let {
@@ -128,7 +128,7 @@ let y = new M(E.default, __OVERLAY__ ? {} : {
       channelId: n,
       webhooks: l
     } = e;
-    if (null == a || t !== a.id || null == s || n !== s.id || null == l || A === I.FormStates.SUBMITTING) return !1;
+    if (null == a || t !== a.id || null == s || n !== s.id || null == l || N === I.FormStates.SUBMITTING) return !1;
     g = !1;
     for (let e = p.length - 1; e >= 0; e--) {
       let t = p[e];
@@ -144,7 +144,7 @@ let y = new M(E.default, __OVERLAY__ ? {} : {
           ...t,
           ...a
         };
-        p[e] = n, !v && (null == T ? void 0 : T.id) === n.id && (T = n)
+        p[e] = n, !O && (null == T ? void 0 : T.id) === n.id && (T = n)
       } else(null == T ? void 0 : T.id) === t.id && (T = null), p.splice(e, 1)
     }
     for (let e of l) null == p.find(t => {
@@ -156,12 +156,12 @@ let y = new M(E.default, __OVERLAY__ ? {} : {
     p = [...p], L()
   },
   INTEGRATION_SETTINGS_SUBMITTING: function() {
-    A = I.FormStates.SUBMITTING, N = {}
+    N = I.FormStates.SUBMITTING, A = {}
   },
   INTEGRATION_SETTINGS_SAVE_FAILURE: function(e) {
     var t;
-    if (A !== I.FormStates.SUBMITTING) return !1;
-    A = I.FormStates.OPEN, N = null !== (t = e.errors) && void 0 !== t ? t : {}
+    if (N !== I.FormStates.SUBMITTING) return !1;
+    N = I.FormStates.OPEN, A = null !== (t = e.errors) && void 0 !== t ? t : {}
   }
 });
 t.default = y

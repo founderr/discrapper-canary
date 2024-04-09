@@ -9,16 +9,16 @@ n.r(t), n.d(t, {
 });
 var s = n("481060"),
   i = n("475179"),
-  l = n("925549"),
-  a = n("905423"),
+  a = n("925549"),
+  l = n("905423"),
   r = n("981631");
 
 function u(e, t) {
   let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
     u = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-  !(0, s.hasAnyModalOpen)() && (n && l.default.channelListScrollTo(e, t), u && null != t && i.default.updateChatOpen(t, !0), a.default.getState().updatePath(r.Routes.CHANNEL(e, t)))
+  !(0, s.hasAnyModalOpen)() && (n && a.default.channelListScrollTo(e, t), u && null != t && i.default.updateChatOpen(t, !0), l.default.getState().updatePath(r.Routes.CHANNEL(e, t)))
 }
 
 function o(e) {
-  !(0, s.hasAnyModalOpen)() && a.default.getState().updatePath(e)
+  !(0, s.hasAnyModalOpen)() && l.default.getState().updatePath(e)
 }

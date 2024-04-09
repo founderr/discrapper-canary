@@ -20,9 +20,9 @@ var a = n("735250"),
   p = n("825682"),
   T = n("170245"),
   g = n("981631"),
-  A = n("65154"),
-  N = n("689938"),
-  v = n("432182");
+  N = n("65154"),
+  A = n("689938"),
+  O = n("432182");
 
 function R(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function R(e, t, n) {
   }) : e[t] = n, e
 }
 
-function O(e) {
+function v(e) {
   let {
     user: t,
     onSelect: n
@@ -41,39 +41,39 @@ function O(e) {
     c.default.removeFriend(t.id, {
       location: "Friends"
     })
-  }, l = (0, r.useStateFromStores)([h.default], () => h.default.supports(A.Features.VIDEO));
+  }, l = (0, r.useStateFromStores)([h.default], () => h.default.supports(N.Features.VIDEO));
   return (0, a.jsxs)(o.Menu, {
     navId: "friend-row",
-    "aria-label": N.default.Messages.USER_ACTIONS_MENU_LABEL,
+    "aria-label": A.default.Messages.USER_ACTIONS_MENU_LABEL,
     onClose: d.closeContextMenu,
     onSelect: n,
     children: [l ? (0, a.jsx)(o.MenuItem, {
       id: "start-video-call",
-      label: N.default.Messages.START_VIDEO_CALL,
+      label: A.default.Messages.START_VIDEO_CALL,
       action: function() {
         u.default.openPrivateChannel(t.id, !0, !0)
       }
     }) : null, (0, a.jsx)(o.MenuItem, {
       id: "start-voice-call",
-      label: N.default.Messages.START_VOICE_CALL,
+      label: A.default.Messages.START_VOICE_CALL,
       action: () => {
         u.default.openPrivateChannel(t.id, !0)
       }
     }), (0, a.jsx)(o.MenuItem, {
       id: "remove-friend",
-      label: N.default.Messages.REMOVE_FRIEND,
+      label: A.default.Messages.REMOVE_FRIEND,
       action: () => {
         (0, o.openModal)(e => (0, a.jsx)(o.ConfirmModal, {
-          header: N.default.Messages.REMOVE_FRIEND_TITLE.format({
+          header: A.default.Messages.REMOVE_FRIEND_TITLE.format({
             name: m.default.getName(t)
           }),
-          confirmText: N.default.Messages.REMOVE_FRIEND,
-          cancelText: N.default.Messages.CANCEL,
+          confirmText: A.default.Messages.REMOVE_FRIEND,
+          cancelText: A.default.Messages.CANCEL,
           onConfirm: s,
           ...e,
           children: (0, a.jsx)(o.Text, {
             variant: "text-md/normal",
-            children: N.default.Messages.REMOVE_FRIEND_BODY.format({
+            children: A.default.Messages.REMOVE_FRIEND_BODY.format({
               name: m.default.getName(t)
             })
           })
@@ -109,7 +109,7 @@ class L extends s.PureComponent {
       onOtherHover: () => r ? null : (0, d.closeContextMenu)(),
       onClick: this.handleOpenPrivateChannel,
       children: t => (0, a.jsxs)("div", {
-        className: v.listItemContents,
+        className: O.listItemContents,
         children: [(0, a.jsx)(T.default, {
           user: e,
           status: l,
@@ -124,15 +124,15 @@ class L extends s.PureComponent {
           hovered: t,
           showAccountIdentifier: !0
         }), (0, a.jsxs)("div", {
-          className: v.actions,
+          className: O.actions,
           children: [(0, a.jsx)(S.default, {
             icon: _.default,
-            tooltip: N.default.Messages.SEND_DM,
+            tooltip: A.default.Messages.SEND_DM,
             onClick: this.handleOpenPrivateChannel,
             shouldHighlight: t
           }), (0, a.jsx)(S.default, {
             icon: C.default,
-            tooltip: N.default.Messages.MORE,
+            tooltip: A.default.Messages.MORE,
             onClick: this.handleOpenActionsMenu,
             shouldHighlight: t
           })]
@@ -154,7 +154,7 @@ class L extends s.PureComponent {
       let {
         user: t
       } = this.props;
-      (0, d.openContextMenu)(e, e => (0, a.jsx)(O, {
+      (0, d.openContextMenu)(e, e => (0, a.jsx)(v, {
         ...e,
         user: t
       }), {

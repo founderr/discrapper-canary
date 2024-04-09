@@ -20,11 +20,11 @@ var a = n("735250"),
   p = n("5955"),
   T = n("703656"),
   g = n("108427"),
-  A = n("706454"),
-  N = n("210887"),
-  v = n("480294"),
+  N = n("706454"),
+  A = n("210887"),
+  O = n("480294"),
   R = n("683301"),
-  O = n("430824"),
+  v = n("430824"),
   L = n("230307"),
   P = n("502568"),
   M = n("900849"),
@@ -439,15 +439,15 @@ class q extends s.PureComponent {
     })
   }
 }
-let Q = f.default.connectStores([N.default, A.default, L.default, v.default, R.default, U.default, O.default], () => {
+let Q = f.default.connectStores([A.default, N.default, L.default, O.default, R.default, U.default, v.default], () => {
   var e;
   let t = B.LANGUAGE_OPTIONS,
-    n = A.default.locale,
+    n = N.default.locale,
     a = null !== (e = o().find(t, {
       code: n
     })) && void 0 !== e ? e : t[0],
     s = Object.keys(L.default.applicationStatistics),
-    l = v.default.hasConsented(H.Consents.PERSONALIZATION) && s.length > 0,
+    l = O.default.hasConsented(H.Consents.PERSONALIZATION) && s.length > 0,
     i = R.default.getCurrentCategoryId(),
     r = R.default.getCurrentHomepageCategoryId();
   return {
@@ -459,8 +459,8 @@ let Q = f.default.connectStores([N.default, A.default, L.default, v.default, R.d
     currentHomepageCategoryId: r,
     currentCategoryName: U.default.getCategoryName(i),
     categories: U.default.getDiscoveryCategories(),
-    userGuilds: O.default.getGuilds(),
-    theme: N.default.theme,
+    userGuilds: v.default.getGuilds(),
+    theme: A.default.theme,
     mightHaveGamesYouPlay: l,
     availableLanguages: t,
     defaultLanguage: a

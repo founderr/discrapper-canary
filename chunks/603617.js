@@ -1,57 +1,57 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   INVITE_OPTIONS_100_TIMES: function() {
-    return c
+    return o
   },
   INVITE_OPTIONS_10_TIMES: function() {
-    return u
+    return i
   },
   INVITE_OPTIONS_12_HOURS: function() {
     return N
   },
   INVITE_OPTIONS_1_DAY: function() {
-    return h
+    return T
   },
   INVITE_OPTIONS_1_HOUR: function() {
-    return E
+    return c
   },
   INVITE_OPTIONS_25_TIMES: function() {
-    return d
+    return I
   },
   INVITE_OPTIONS_30_MINUTES: function() {
     return f
   },
   INVITE_OPTIONS_50_TIMES: function() {
-    return o
+    return d
   },
   INVITE_OPTIONS_5_TIMES: function() {
-    return r
+    return u
   },
   INVITE_OPTIONS_6_HOURS: function() {
-    return _
+    return E
   },
   INVITE_OPTIONS_7_DAYS: function() {
-    return T
-  },
-  INVITE_OPTIONS_FOREVER: function() {
     return S
   },
+  INVITE_OPTIONS_FOREVER: function() {
+    return O
+  },
   INVITE_OPTIONS_ONCE: function() {
-    return i
+    return a
   },
   INVITE_OPTIONS_UNLIMITED: function() {
-    return s
+    return l
   },
   MAX_AGE_OPTIONS: function() {
-    return v
+    return h
   },
   MAX_USES_OPTIONS: function() {
-    return I
+    return _
   }
 });
-var l = n("689938");
+var n = s("689938");
 
-function a(e, t) {
+function r(e, t) {
   return {
     value: e,
     get label() {
@@ -59,45 +59,45 @@ function a(e, t) {
     }
   }
 }
-let s = a(0, () => l.default.Messages.MAX_USES.format({
+let l = r(0, () => n.default.Messages.MAX_USES.format({
     maxUses: 0
   })),
-  i = a(1, () => l.default.Messages.MAX_USES.format({
+  a = r(1, () => n.default.Messages.MAX_USES.format({
     maxUses: 1
   })),
-  r = a(5, () => l.default.Messages.MAX_USES.format({
+  u = r(5, () => n.default.Messages.MAX_USES.format({
     maxUses: 5
   })),
-  u = a(10, () => l.default.Messages.MAX_USES.format({
+  i = r(10, () => n.default.Messages.MAX_USES.format({
     maxUses: 10
   })),
-  d = a(25, () => l.default.Messages.MAX_USES.format({
+  I = r(25, () => n.default.Messages.MAX_USES.format({
     maxUses: 25
   })),
-  o = a(50, () => l.default.Messages.MAX_USES.format({
+  d = r(50, () => n.default.Messages.MAX_USES.format({
     maxUses: 50
   })),
-  c = a(100, () => l.default.Messages.MAX_USES.format({
+  o = r(100, () => n.default.Messages.MAX_USES.format({
     maxUses: 100
   })),
-  I = [s, i, r, u, d, o, c],
-  f = a(1800, () => l.default.Messages.DURATION_MINUTES.format({
+  _ = [l, a, u, i, I, d, o],
+  f = r(1800, () => n.default.Messages.DURATION_MINUTES.format({
     minutes: 30
   })),
-  E = a(3600, () => l.default.Messages.DURATION_HOURS.format({
+  c = r(3600, () => n.default.Messages.DURATION_HOURS.format({
     hours: 1
   })),
-  _ = a(21600, () => l.default.Messages.DURATION_HOURS.format({
+  E = r(21600, () => n.default.Messages.DURATION_HOURS.format({
     hours: 6
   })),
-  N = a(43200, () => l.default.Messages.DURATION_HOURS.format({
+  N = r(43200, () => n.default.Messages.DURATION_HOURS.format({
     hours: 12
   })),
-  h = a(86400, () => l.default.Messages.DURATION_DAYS.format({
+  T = r(86400, () => n.default.Messages.DURATION_DAYS.format({
     days: 1
   })),
-  T = a(604800, () => l.default.Messages.DURATION_DAYS.format({
+  S = r(604800, () => n.default.Messages.DURATION_DAYS.format({
     days: 7
   })),
-  S = a(0, () => l.default.Messages.MAX_AGE_NEVER),
-  v = [f, E, _, N, h, T, S]
+  O = r(0, () => n.default.Messages.MAX_AGE_NEVER),
+  h = [f, c, E, N, T, S, O]

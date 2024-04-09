@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return A
   }
 });
 var a = n("735250"),
@@ -24,15 +24,15 @@ var a = n("735250"),
   p = n("287746"),
   T = n("689938"),
   g = n("571770"),
-  A = n("783913");
+  N = n("783913");
 
-function N(e) {
+function A(e) {
   let {
     channel: t,
     baseChannelId: n
-  } = e, N = (0, I.default)(t), v = (0, c.useListHasSingleMessageRequest)(), R = (0, c.useListHasSingleSpamMessageRequest)(), O = (0, l.useStateFromStores)([u.default], () => u.default.isMessageRequest(t.id)), L = (0, l.useStateFromStores)([d.default], () => d.default.isSpam(t.id)), P = (0, E.useLongestChannelMessageBeforeReply)(t.id, t.getRecipientId()), M = s.useCallback(() => {
-    _.default.closeChannelSidebar(C.MESSAGE_REQUESTS_BASE_CHANNEL_ID), O && v && (0, h.transitionToChannel)(t.id), L && R && (0, h.transitionToChannel)(t.id)
-  }, [t.id, L, R, O, v]), y = s.useCallback(() => {
+  } = e, A = (0, I.default)(t), O = (0, c.useListHasSingleMessageRequest)(), R = (0, c.useListHasSingleSpamMessageRequest)(), v = (0, l.useStateFromStores)([u.default], () => u.default.isMessageRequest(t.id)), L = (0, l.useStateFromStores)([d.default], () => d.default.isSpam(t.id)), P = (0, E.useLongestChannelMessageBeforeReply)(t.id, t.getRecipientId()), M = s.useCallback(() => {
+    _.default.closeChannelSidebar(C.MESSAGE_REQUESTS_BASE_CHANNEL_ID), v && O && (0, h.transitionToChannel)(t.id), L && R && (0, h.transitionToChannel)(t.id)
+  }, [t.id, L, R, v, O]), y = s.useCallback(() => {
     (0, i.showToast)((0, i.createToast)(T.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, i.ToastType.FAILURE))
   }, []), {
     markAsNotSpam: D
@@ -52,17 +52,17 @@ function N(e) {
       "aria-label": T.default.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
       children: (0, o.renderTitle)({
         channel: t,
-        channelName: N,
+        channelName: A,
         inSidebar: !0
       })
     }), L && (0, a.jsxs)("div", {
-      className: A.hamBanner,
+      className: N.hamBanner,
       children: [(0, a.jsx)(i.Text, {
-        className: A.__invalid_hamBannerText,
+        className: N.__invalid_hamBannerText,
         variant: "text-sm/normal",
         children: T.default.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_HEADER
       }), (0, a.jsx)(i.Button, {
-        className: A.hamBannerButton,
+        className: N.hamBannerButton,
         size: i.ButtonSizes.SMALL,
         onClick: () => D(t, P),
         children: T.default.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_BUTTON

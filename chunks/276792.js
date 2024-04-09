@@ -29,9 +29,9 @@ function m(e) {
     analyticsLocation: p,
     isLightTheme: T
   } = e, g = "AnnouncementModalVariant1", {
-    onClose: A
-  } = S, N = null != m.button && "" !== m.button.copy ? m.button.copy : h.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, v = (null === (t = m.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", R = (null === (n = m.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
-    (0, r.transitionTo)(E.Routes.APPLICATION_STORE), A()
+    onClose: N
+  } = S, A = null != m.button && "" !== m.button.copy ? m.button.copy : h.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, O = (null === (t = m.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", R = (null === (n = m.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
+    (0, r.transitionTo)(E.Routes.APPLICATION_STORE), N()
   } : () => (0, i.default)({
     subscriptionTier: f.PremiumSubscriptionSKUs.TIER_2,
     analyticsLocations: I,
@@ -41,9 +41,9 @@ function m(e) {
       objectType: E.AnalyticsObjectTypes.TIER_2
     },
     onClose: e => {
-      e && A()
+      e && N()
     }
-  }), O = "" !== m.helpArticleId ? () => (0, a.jsx)(l.Anchor, {
+  }), v = "" !== m.helpArticleId ? () => (0, a.jsx)(l.Anchor, {
     className: _.termsApplyAnchor,
     href: d.default.getArticleURL(m.helpArticleId),
     children: (0, a.jsx)(l.Heading, {
@@ -70,7 +70,7 @@ function m(e) {
     header: m.header,
     modalTopExtra: M,
     subHeader: m.subheader,
-    subHeaderExtra: O,
+    subHeaderExtra: v,
     heroArt: L,
     featureCards: m.featureCards.map(e => ({
       header: e.header,
@@ -89,7 +89,7 @@ function m(e) {
         onClick: () => {
           u.default.track(E.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
             change_log_id: g,
-            cta_type: v,
+            cta_type: O,
             seconds_open: Math.round((Date.now() - e) / 1e3),
             target: g
           }), R()
@@ -98,7 +98,7 @@ function m(e) {
           alt: "",
           className: _.nitroIconSubHeader,
           src: C
-        }), N]
+        }), A]
       })
     },
     modalDismissibleContent: "" !== m.dismissKey ? Number(m.dismissKey) : void 0

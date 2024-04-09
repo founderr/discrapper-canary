@@ -19,10 +19,10 @@ let C = "IncomingCallStore",
   p = new Map,
   T = new Set,
   g = 0,
-  A = 0,
-  N = !1;
+  N = 0,
+  A = !1;
 
-function v(e) {
+function O(e) {
   if (null == e || null == p.get(e)) return !1;
   p.delete(e), (T = new Set(T)).delete(e)
 }
@@ -39,39 +39,39 @@ function R(e) {
     p.set(t, {
       channel: e,
       x: g + n,
-      y: A + n
+      y: N + n
     }), (T = new Set(T)).add(t)
   } else {
     if (!T.has(t) || a) return !1;
-    v(t)
+    O(t)
   }
 }! function() {
   let e = o.Storage.get(C);
-  if (null != e) g = +e.x, A = +e.y;
+  if (null != e) g = +e.x, N = +e.y;
   else {
     let e = n("451478").default.windowSize();
-    g = e.width / 2 - m.width / 2, A = e.height / 2 - m.height / 2
+    g = e.width / 2 - m.width / 2, N = e.height / 2 - m.height / 2
   }
 }();
 
-function O() {
-  N = h.default.getStatus() === _.StatusTypes.DND || d.FocusMode.getSetting()
+function v() {
+  A = h.default.getStatus() === _.StatusTypes.DND || d.FocusMode.getSetting()
 }
 class L extends(a = r.default.Store) {
   initialize() {
-    this.waitFor(E.default, h.default), this.syncWith([h.default], O), this.syncWith([c.default], O)
+    this.waitFor(E.default, h.default), this.syncWith([h.default], v), this.syncWith([c.default], v)
   }
   getIncomingCalls() {
-    return N ? I : Array.from(p.values())
+    return A ? I : Array.from(p.values())
   }
   getIncomingCallChannelIds() {
-    return N ? S : T
+    return A ? S : T
   }
   getFirstIncomingCallId() {
-    return N ? null : T.values().next().value
+    return A ? null : T.values().next().value
   }
   hasIncomingCalls() {
-    return !N && T.size > 0
+    return !A && T.size > 0
   }
 }
 i = "IncomingCallStore", (l = "displayName") in(s = L) ? Object.defineProperty(s, l, {
@@ -86,28 +86,28 @@ i = "IncomingCallStore", (l = "displayName") in(s = L) ? Object.defineProperty(s
     let {
       channelId: t
     } = e;
-    return v(t)
+    return O(t)
   },
   VOICE_CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    return v(t)
+    return O(t)
   },
   INCOMING_CALL_MOVE: function(e) {
     let {
       x: t,
       y: n
     } = e;
-    return g = t, A = n, o.Storage.set(C, {
+    return g = t, N = n, o.Storage.set(C, {
       x: g,
-      y: A
+      y: N
     }), !1
   },
   CHANNEL_DELETE: function(e) {
     let {
       channel: t
     } = e;
-    return v(t.id)
+    return O(t.id)
   }
 })

@@ -29,7 +29,7 @@ function I(e) {
     otherUser: E,
     active: I
   } = e, p = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), T = (0, s.useStateFromStores)([c.default], () => null == E ? null : c.default.getNickname(E.id)), g = (0, h.useMessageRequestRelativeTimestampText)(n), {
-    avatarDecorationSrc: A
+    avatarDecorationSrc: N
   } = (0, u.default)({
     user: E,
     size: (0, o.getDecorationSizeForAvatarSize)(l.AvatarSizes.SIZE_40),
@@ -39,7 +39,7 @@ function I(e) {
     children: [(0, a.jsx)(S, {
       className: m.avatar,
       src: (0, d.getChannelIconURL)(n, 40, !p && I),
-      avatarDecoration: A,
+      avatarDecoration: N,
       size: l.AvatarSizes.SIZE_40,
       "aria-label": null !== (t = null == E ? void 0 : E.username) && void 0 !== t ? t : C.default.Messages.UNKNOWN_USER
     }), (0, a.jsxs)("div", {

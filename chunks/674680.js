@@ -43,14 +43,14 @@ function C(e) {
     {
       color: g
     } = (0, c.getAchievementStyles)(T),
-    A = (0, s.isThemeDark)(m) ? h : _,
-    N = (I.size - I.offset - 2 * I.stroke) * .8,
-    v = I.size - I.stroke,
+    N = (0, s.isThemeDark)(m) ? h : _,
+    A = (I.size - I.offset - 2 * I.stroke) * .8,
+    O = I.size - I.stroke,
     R = {
-      width: .4 * N,
-      height: .4 * N
+      width: .4 * A,
+      height: .4 * A
     },
-    O = {
+    v = {
       width: R.width + 1,
       height: R.height + 1,
       right: I.stroke + 1,
@@ -60,28 +60,28 @@ function C(e) {
   return (0, a.jsxs)("div", {
     className: E.container,
     style: {
-      width: v,
-      height: v,
+      width: O,
+      height: O,
       padding: I.stroke
     },
     "aria-label": "".concat(null !== (t = p()) && void 0 !== t ? t : ""),
     children: [(0, a.jsx)("div", {
       className: E.trophyIconContainer,
       children: (0, a.jsx)(d.default, {
-        color: f ? g : (0, r.getColor)(A.trophy),
-        width: N,
-        height: N
+        color: f ? g : (0, r.getColor)(N.trophy),
+        width: A,
+        height: A
       })
     }), !f && (0, a.jsx)("div", {
       className: E.lockContainer,
-      style: O,
+      style: v,
       children: (0, a.jsx)(u.default, {
-        color: (0, r.getColor)(A.locked),
+        color: (0, r.getColor)(N.locked),
         ...R
       })
     }), f && T === c.PoggermodeAchievementRarity.LEGENDARY && (0, a.jsx)("div", {
       className: E.lockContainer,
-      style: O,
+      style: v,
       children: (0, a.jsx)(o.default, {
         className: E.confettiIcon,
         ...R
