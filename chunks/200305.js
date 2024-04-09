@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var l, n, i = s("735250"),
   a = s("470079"),
   r = s("803997"),
-  o = s.n(r),
-  d = s("442837"),
+  d = s.n(r),
+  o = s("442837"),
   u = s("481060"),
   c = s("893776"),
   I = s("809206"),
@@ -30,8 +30,8 @@ var l, n, i = s("735250"),
   O = s("983736"),
   j = s("266395"),
   S = s("990488"),
-  p = s("592286"),
-  V = s("981631"),
+  V = s("592286"),
+  p = s("981631"),
   L = s("689938"),
   B = s("815431"),
   b = s("419851"),
@@ -47,7 +47,7 @@ let D = e => {
       setEmail: n,
       setPassword: a,
       emailError: r,
-      passwordError: o
+      passwordError: d
     } = e;
     return (0, i.jsxs)("div", {
       className: B.content,
@@ -84,7 +84,7 @@ let D = e => {
         children: (0, i.jsx)(u.TextInput, {
           type: "password",
           value: l,
-          error: o,
+          error: d,
           onChange: a
         })
       })]
@@ -128,13 +128,13 @@ let D = e => {
       formState: l,
       updateFormState: n,
       isPreview: a = !1
-    } = e, r = (0, d.useStateFromStores)([v.default], () => v.default.get(s));
+    } = e, r = (0, o.useStateFromStores)([v.default], () => v.default.get(s));
     if (null == r) return null;
-    let o = null !== (t = null != l ? l : null == r ? void 0 : r.formFields) && void 0 !== t ? t : [],
+    let d = null !== (t = null != l ? l : null == r ? void 0 : r.formFields) && void 0 !== t ? t : [],
       u = a ? S.PreviewFormRenderer : S.ApplicantFormRenderer;
     return (0, i.jsx)(u, {
       guildId: s,
-      formFields: o,
+      formFields: d,
       updateFormFields: n
     })
   },
@@ -152,7 +152,7 @@ let D = e => {
       updateFormState: n,
       useReducedMotion: a,
       isClan: r,
-      clanGdmConsent: d,
+      clanGdmConsent: o,
       onClanGdmConsentChanged: c,
       isPreview: I = !1
     } = e;
@@ -163,7 +163,7 @@ let D = e => {
         children: [(0, i.jsx)("img", {
           alt: L.default.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
           src: y,
-          className: o()(B.sparkleIcon, B.sparkleBottom)
+          className: d()(B.sparkleIcon, B.sparkleBottom)
         }), (0, i.jsx)(C.default, {
           importData: k,
           shouldAnimate: !a,
@@ -171,7 +171,7 @@ let D = e => {
         }), (0, i.jsx)("img", {
           alt: L.default.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
           src: P,
-          className: o()(B.sparkleIcon, B.sparkleTop)
+          className: d()(B.sparkleIcon, B.sparkleTop)
         })]
       }), (0, i.jsx)(u.Heading, {
         id: t,
@@ -197,7 +197,7 @@ let D = e => {
         },
         size: 20,
         type: u.Checkbox.Types.INVERTED,
-        value: d,
+        value: o,
         onChange: c,
         children: (0, i.jsx)(u.Text, {
           variant: "text-sm/normal",
@@ -215,13 +215,13 @@ t.default = e => {
     onComplete: c,
     inviteCode: C,
     isPreview: S = !1
-  } = e, b = (0, j.useMemberVerificationFormNoticeStore)(e => e.hasUnsubmittedChanges), P = (0, d.useStateFromStores)([_.default], () => _.default.getGuild(n)), y = (0, d.useStateFromStores)([v.default], () => v.default.get(n)), U = null == y ? void 0 : y.formFields.some(e => e.field_type !== A.VerificationFormFieldTypes.TERMS), H = (0, d.useStateFromStores)([F.default], () => F.default.getCurrentUser()), k = !(null == H ? void 0 : H.isClaimed()), G = null == H ? void 0 : H.verified, z = null == H ? void 0 : H.isPhoneVerified(), Y = (0, d.useStateFromStores)([E.default], () => E.default.getGuildEmoji(n)), {
+  } = e, b = (0, j.useMemberVerificationFormNoticeStore)(e => e.hasUnsubmittedChanges), P = (0, o.useStateFromStores)([_.default], () => _.default.getGuild(n)), y = (0, o.useStateFromStores)([v.default], () => v.default.get(n)), U = null == y ? void 0 : y.formFields.some(e => e.field_type !== A.VerificationFormFieldTypes.TERMS), H = (0, o.useStateFromStores)([F.default], () => F.default.getCurrentUser()), k = !(null == H ? void 0 : H.isClaimed()), G = null == H ? void 0 : H.verified, z = null == H ? void 0 : H.isPhoneVerified(), Y = (0, o.useStateFromStores)([E.default], () => E.default.getGuildEmoji(n)), {
     storeMemberCount: W,
     storeOnlineCount: K
-  } = (0, d.useStateFromStoresObject)([M.default], () => ({
+  } = (0, o.useStateFromStoresObject)([M.default], () => ({
     storeMemberCount: M.default.getMemberCount(n),
     storeOnlineCount: M.default.getOnlineCount(n)
-  })), [J, X] = a.useState(null !== (t = null == y ? void 0 : y.formFields) && void 0 !== t ? t : []), [Q, Z] = a.useState(!1), [$, ee] = a.useState(null), [et, es] = a.useState(k ? 0 : 2), [el, en] = a.useState(""), [ei, ea] = a.useState(""), [er, eo] = a.useState(null), [ed, eu] = a.useState(null), [ec, eI] = a.useState(!1), em = null == y ? void 0 : y.guild, eE = a.useMemo(() => null != P ? P : null != em ? new f.default(em) : null, [P, em]), ef = null !== (s = null == eE ? void 0 : eE.hasFeature(V.GuildFeatures.CLAN)) && void 0 !== s && s, {
+  })), [J, X] = a.useState(null !== (t = null == y ? void 0 : y.formFields) && void 0 !== t ? t : []), [Q, Z] = a.useState(!1), [$, ee] = a.useState(null), [et, es] = a.useState(k ? 0 : 2), [el, en] = a.useState(""), [ei, ea] = a.useState(""), [er, ed] = a.useState(null), [eo, eu] = a.useState(null), [ec, eI] = a.useState(!1), em = null == y ? void 0 : y.guild, eE = a.useMemo(() => null != P ? P : null != em ? new f.default(em) : null, [P, em]), ef = null !== (s = null == eE ? void 0 : eE.hasFeature(p.GuildFeatures.CLAN)) && void 0 !== s && s, {
     emojisToRender: eM,
     remainingEmojis: eR,
     numGuildEmoji: e_
@@ -247,8 +247,8 @@ t.default = e => {
   }, [H]), a.useEffect(() => {
     1 === et && G && es(2)
   }, [et, G]), a.useEffect(() => {
-    null != n && x.default.track(V.AnalyticEvents.OPEN_MODAL, {
-      type: p.MEMBER_VERIFICATION_TYPE,
+    null != n && x.default.track(p.AnalyticEvents.OPEN_MODAL, {
+      type: V.MEMBER_VERIFICATION_TYPE,
       guild_id: n
     })
   }, [n]), a.useEffect(() => {
@@ -256,14 +256,14 @@ t.default = e => {
     e && !b ? (0, j.setHasUnsubmittedChanges)(!0) : !e && b && (0, j.setHasUnsubmittedChanges)(!1)
   }, [J, b]);
   let eh = a.useMemo(() => {
-      let e = ((null == eE ? void 0 : eE.verificationLevel) !== V.VerificationLevels.VERY_HIGH || (null == H ? void 0 : H.isStaff())) && G || z,
+      let e = ((null == eE ? void 0 : eE.verificationLevel) !== p.VerificationLevels.VERY_HIGH || (null == H ? void 0 : H.isStaff())) && G || z,
         t = !ef || ec;
       return !e || !t || J.some(e => !(0, O.isValidFormResponse)(e))
     }, [J, eE, z, G, H, ef, ec]),
-    eC = (0, d.useStateFromStores)([m.default], () => m.default.useReducedMotion);
+    eC = (0, o.useStateFromStores)([m.default], () => m.default.useReducedMotion);
   if (null == eE) return null;
   let ex = async () => {
-    Z(!0), eo(null), eu(null);
+    Z(!0), ed(null), eu(null);
     try {
       await (0, I.saveAccountRequest)({
         email: el,
@@ -271,7 +271,7 @@ t.default = e => {
       }), Z(!1), es(1)
     } catch (s) {
       var e, t;
-      eo(null == s ? void 0 : null === (e = s.body) || void 0 === e ? void 0 : e.email), eu(null == s ? void 0 : null === (t = s.body) || void 0 === t ? void 0 : t.password)
+      ed(null == s ? void 0 : null === (e = s.body) || void 0 === e ? void 0 : e.email), eu(null == s ? void 0 : null === (t = s.body) || void 0 === t ? void 0 : t.password)
     } finally {
       Z(!1)
     }
@@ -303,7 +303,7 @@ t.default = e => {
         children: [(0, i.jsx)(h.default, {
           guild: eE,
           active: !0,
-          className: o()(B.guildIcon, {
+          className: d()(B.guildIcon, {
             [B.guildIconNoIcon]: null == eE.icon
           })
         }), (0, i.jsx)(u.Heading, {
@@ -378,7 +378,7 @@ t.default = e => {
       children: [(0, i.jsx)(u.ModalContent, {
         className: B.modalContent,
         children: (0, i.jsx)(u.Sequencer, {
-          className: o()(B.sequencer, {
+          className: d()(B.sequencer, {
             [B.centerContent]: 2 !== et
           }),
           steps: [0, 1, 2],
@@ -393,7 +393,7 @@ t.default = e => {
                   setEmail: en,
                   setPassword: ea,
                   emailError: er,
-                  passwordError: ed
+                  passwordError: eo
                 });
               case 1:
                 return (0, i.jsx)(w, {

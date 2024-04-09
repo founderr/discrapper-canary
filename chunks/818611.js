@@ -4,87 +4,87 @@ var s = a("735250"),
   r = a("470079"),
   l = a("803997"),
   i = a.n(l),
-  n = a("278074"),
-  o = a("831209"),
+  o = a("278074"),
+  n = a("831209"),
   u = a("399606"),
   c = a("481060"),
   d = a("727637"),
-  f = a("597688"),
-  h = a("884697"),
-  m = a("295177"),
-  g = a("126900"),
-  p = a("466111"),
-  C = a("783014"),
-  S = a("242411"),
-  v = a("26290"),
-  E = a("74538"),
+  h = a("597688"),
+  m = a("884697"),
+  f = a("295177"),
+  C = a("126900"),
+  g = a("466111"),
+  v = a("783014"),
+  E = a("242411"),
+  S = a("26290"),
+  p = a("74538"),
   A = a("864106"),
-  x = a("439959"),
+  _ = a("439959"),
   I = a("125988"),
-  _ = a("689938"),
+  x = a("689938"),
   P = a("566253");
 let T = () => 80,
-  b = e => {
+  w = e => {
     let {
       children: t,
       className: a,
       onSelect: r,
       isSelected: l = !1,
-      ...n
+      ...o
     } = e;
     return (0, s.jsx)(c.Clickable, {
       className: i()(P.decorationGridItem, l ? P.selected : void 0, a),
-      ...n,
+      ...o,
       onClick: r,
       children: t
     })
   },
-  N = e => {
+  D = e => {
     let {
       user: t,
       avatarDecoration: a,
       innerRef: l,
       section: i,
-      isSelected: n = !1,
+      isSelected: o = !1,
       ...c
-    } = e, g = (0, u.useStateFromStores)([f.default], () => {
-      let e = f.default.getProduct(a.skuId);
-      return (0, h.isPremiumCollectiblesProduct)(e)
-    }), C = (0, m.default)(a, n), A = E.default.canUseCollectibles(t), T = i === x.Section.PREMIUM_PURCHASE && !A, N = r.useRef(null), M = (0, d.default)(null != l ? l : N), {
+    } = e, C = (0, u.useStateFromStores)([h.default], () => {
+      let e = h.default.getProduct(a.skuId);
+      return (0, m.isPremiumCollectiblesProduct)(e)
+    }), v = (0, f.default)(a, o), A = p.default.canUseCollectibles(t), T = i === _.Section.PREMIUM_PURCHASE && !A, D = r.useRef(null), N = (0, d.default)(null != l ? l : D), {
       avatarDecorationSrc: R
     } = (0, I.default)({
       user: t,
       avatarDecorationOverride: a,
       size: 80,
-      animateOnHover: !M
+      animateOnHover: !N
     });
-    return (0, s.jsxs)(b, {
+    return (0, s.jsxs)(w, {
       className: T ? P.decorationGridItemChurned : void 0,
-      innerRef: null != l ? l : N,
-      isSelected: n,
+      innerRef: null != l ? l : D,
+      isSelected: o,
       ...c,
       children: [(0, s.jsx)("img", {
         className: P.presetDecorationImg,
         src: R,
         alt: a.label
-      }), i === x.Section.PURCHASE || i === x.Section.PREMIUM_PURCHASE && A ? null : C ? (0, s.jsx)(v.PremiumBadge, {
+      }), i === _.Section.PURCHASE || i === _.Section.PREMIUM_PURCHASE && A ? null : v ? (0, s.jsx)(S.PremiumBadge, {
         className: P.newBadge,
         text: (0, s.jsxs)("div", {
           className: P.newBadgeText,
-          children: [(0, s.jsx)(S.default, {
+          children: [(0, s.jsx)(E.default, {
             width: 12,
             height: 12
-          }), _.default.Messages.NEW]
+          }), x.default.Messages.NEW]
         })
-      }) : (0, s.jsx)(v.IconBadge, {
-        icon: g ? () => (0, s.jsx)(p.default, {
+      }) : (0, s.jsx)(S.IconBadge, {
+        icon: C ? () => (0, s.jsx)(g.default, {
           width: 14,
           height: 14
-        }) : () => (0, s.jsx)(S.default, {
+        }) : () => (0, s.jsx)(E.default, {
           width: 12,
           height: 12
         }),
-        color: o.default.BACKGROUND_ACCENT,
+        color: n.default.BACKGROUND_ACCENT,
         className: P.iconBadge
       })]
     })
@@ -96,8 +96,8 @@ t.default = e => {
     pendingAvatarDecoration: r,
     selectedAvatarDecorationRef: l,
     onSelect: i,
-    onOpenShop: o
-  } = e, u = (0, x.default)();
+    onOpenShop: n
+  } = e, u = (0, _.default)();
   return (0, s.jsx)(c.MasonryList, {
     fade: !0,
     className: P.list,
@@ -113,47 +113,47 @@ t.default = e => {
     paddingHorizontal: 12,
     paddingVertical: 0,
     removeEdgeItemGutters: !0,
-    renderItem: (e, d, f, h) => {
+    renderItem: (e, d, h, m) => {
       let {
-        section: m,
-        items: p
+        section: f,
+        items: g
       } = u[e];
-      return (0, n.match)(p[d]).with(x.NONE_ITEM, () => (0, s.jsxs)(b, {
+      return (0, o.match)(g[d]).with(_.NONE_ITEM, () => (0, s.jsxs)(w, {
         style: {
-          ...f
+          ...h
         },
         isSelected: null === r,
         onSelect: () => i(null),
-        children: [(0, s.jsx)(C.default, {
+        children: [(0, s.jsx)(v.default, {
           className: P.notAllowedIcon
         }), (0, s.jsx)(c.Text, {
           variant: "text-xs/normal",
           color: "header-primary",
-          children: (0, A.hasGlobalDefaultAvatarDecoration)(t, a) ? _.default.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : _.default.Messages.NONE
+          children: (0, A.hasGlobalDefaultAvatarDecoration)(t, a) ? x.default.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : x.default.Messages.NONE
         })]
-      }, h)).with(x.SHOP_ITEM, () => (0, s.jsxs)(b, {
-        style: f,
-        onSelect: o,
-        children: [(0, s.jsx)(g.default, {
+      }, m)).with(_.SHOP_ITEM, () => (0, s.jsxs)(w, {
+        style: h,
+        onSelect: n,
+        children: [(0, s.jsx)(C.default, {
           className: P.shopIcon
         }), (0, s.jsx)(c.Text, {
           variant: "text-xs/normal",
           color: "header-primary",
-          children: _.default.Messages.COLLECTIBLES_SHOP
+          children: x.default.Messages.COLLECTIBLES_SHOP
         })]
-      }, h)).otherwise(e => {
+      }, m)).otherwise(e => {
         let a = (null == r ? void 0 : r.id) === e.id;
-        return (0, s.jsx)(N, {
+        return (0, s.jsx)(D, {
           style: {
-            ...f
+            ...h
           },
           user: t,
           avatarDecoration: e,
-          section: m,
+          section: f,
           innerRef: a ? l : void 0,
           isSelected: a,
           onSelect: () => i(e)
-        }, h)
+        }, m)
       })
     },
     renderSection: e => {

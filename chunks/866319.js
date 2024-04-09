@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s.d(t, {
   useCurrentUserVerificationStatus: function() {
-    return d
+    return o
   },
   useIsPhoneVerificationLevel: function() {
-    return o
+    return d
   }
 });
 var l = s("442837"),
@@ -13,7 +13,7 @@ var l = s("442837"),
   a = s("944163"),
   r = s("981631");
 
-function o(e) {
+function d(e) {
   let {
     guildId: t
   } = e, s = (0, l.useStateFromStores)([a.default], () => a.default.get(t)), i = null == s ? void 0 : s.guild;
@@ -25,10 +25,10 @@ function o(e) {
   }, [t, i])
 }
 
-function d(e) {
+function o(e) {
   let {
     guildId: t
-  } = e, s = (0, l.useStateFromStores)([i.default], () => i.default.getCurrentUser()), n = o({
+  } = e, s = (0, l.useStateFromStores)([i.default], () => i.default.getCurrentUser()), n = d({
     guildId: t
   }), a = (null == s ? void 0 : s.isPhoneVerified()) || (null == s ? void 0 : s.isStaff()), r = (null == s ? void 0 : s.verified) || a;
   return {
