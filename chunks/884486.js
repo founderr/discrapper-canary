@@ -16,23 +16,24 @@ var s = n("803997"),
 t.default = e => {
   let {
     handleUpdate: t,
-    selectedTimes: n
-  } = e, s = (e, a) => {
+    selectedTimes: n,
+    error: s
+  } = e, _ = (e, a) => {
     let s = [...n];
     s[e].day = a, t({
       primetime: s
     })
-  }, _ = (e, a) => {
+  }, C = (e, a) => {
     let s = [...n];
     s[e].time = a, t({
       primetime: s
     })
-  }, C = e => {
+  }, m = e => {
     let a = [...n];
     a.splice(e, 1), t({
       primetime: a
     })
-  }, m = (0, d.getDayOptions)();
+  }, S = (0, d.getDayOptions)();
   return (0, a.jsxs)("div", {
     className: h.slideContent,
     children: [(0, a.jsx)(i.Heading, {
@@ -44,20 +45,25 @@ t.default = e => {
       color: "header-secondary",
       className: h.subtitle,
       children: E.default.Messages.CLAN_SETUP_PRIMETIME_SUBTITLE
+    }), null != s && (0, a.jsx)(i.Text, {
+      variant: "text-sm/normal",
+      color: "status-danger",
+      className: h.errorText,
+      children: s
     }), (0, a.jsxs)("div", {
       className: h.timeSelection,
       children: [n.map((e, t) => (0, a.jsxs)("div", {
         className: h.timeSelectorRow,
         children: [(0, a.jsx)(i.SearchableSelect, {
           value: e.day,
-          options: m,
+          options: S,
           placeholder: E.default.Messages.CLAN_PRIMETIME_PLACEHOLDER,
-          onChange: e => s(t, e)
+          onChange: e => _(t, e)
         }), (0, a.jsx)(c.default, {
           value: e.time,
-          onChange: e => _(t, e)
+          onChange: e => C(t, e)
         }), t > 0 && (0, a.jsx)(i.Clickable, {
-          onClick: () => C(t),
+          onClick: () => m(t),
           children: (0, a.jsx)(r.default, {
             className: l()(h.icon, h.clickable)
           })

@@ -6,6 +6,7 @@ e.exports = {
   contentLabel: "contentLabel_aa05d5",
   contentWithMinHeight: "contentWithMinHeight__78ad4",
   enterToSearchText: "enterToSearchText_c64e49",
+  errorText: "errorText__34a8a",
   flex: "flex__7aeec",
   gameImagePlaceholder: "gameImagePlaceholder__732e7",
   icon: "icon_e8e1b2",

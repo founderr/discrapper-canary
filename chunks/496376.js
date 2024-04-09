@@ -66,7 +66,7 @@ let A = [T.ClanSetupSteps.FOUNDATIONAL_INTRO, T.ClanSetupSteps.GAMES, T.ClanSetu
         disableNextStep: !1
       },
       [T.ClanSetupSteps.CUSTOMIZE]: {
-        disableNextStep: 0 === f.length
+        disableNextStep: f.length < 2
       },
       [T.ClanSetupSteps.APPLICATION_INTRO]: {
         disableNextStep: !1
@@ -124,26 +124,33 @@ t.default = e => {
     setPage: n,
     onClose: l
   } = e, {
-    selectedGames: O,
-    playstyle: v,
-    interests: L,
-    description: P,
-    tag: M,
-    primetime: y,
-    currentStep: D
+    progress: O,
+    errors: v
   } = (0, r.useStateFromStoresObject)([f.default], () => {
-    var e;
-    return null !== (e = f.default.getStateForGuild(t)) && void 0 !== e ? e : (0, f.newClanProgress)()
-  }), x = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), [b, U] = s.useState(!0);
+    var e, n;
+    let a = f.default.getStateForGuild(t);
+    return {
+      progress: null !== (e = a.progress) && void 0 !== e ? e : (0, f.newClanProgress)(),
+      errors: null !== (n = a.errors) && void 0 !== n ? n : {}
+    }
+  }), {
+    selectedGames: L,
+    playstyle: P,
+    interests: M,
+    description: y,
+    tag: x,
+    primetime: D,
+    currentStep: b
+  } = O, U = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), [j, G] = s.useState(!0);
   s.useEffect(() => {
     u.default.getDetectableGames()
   }, []);
-  let j = s.useCallback(e => c.updateClanSettings(t, {
+  let w = s.useCallback(e => c.updateClanSettings(t, {
       currentStep: e
     }), [t]),
-    G = s.useCallback(e => c.updateClanSettings(t, e), [t]),
-    w = s.useCallback(() => {
-      U(!1), setTimeout(() => n(T.ClanSetupModalPages.SIGN), 199)
+    k = s.useCallback(e => c.updateClanSettings(t, e), [t]),
+    F = s.useCallback(() => {
+      G(!1), setTimeout(() => n(T.ClanSetupModalPages.SIGN), 199)
     }, [n]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(o.Button, {
@@ -155,10 +162,10 @@ t.default = e => {
       children: g.default.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
     }), (0, a.jsxs)("div", {
       className: i()(N.mainContent, N.fadeIn, {
-        [N.fadeOut]: !b
+        [N.fadeOut]: !j
       }),
       children: [(0, a.jsx)(o.Sequencer, {
-        step: D,
+        step: b,
         steps: A,
         sideMargin: 24,
         verticalMargin: 24,
@@ -169,36 +176,42 @@ t.default = e => {
           className: N.scroller,
           fade: !0,
           children: (() => {
-            switch (D) {
+            switch (b) {
               case T.ClanSetupSteps.GAMES:
                 return (0, a.jsx)(_.default, {
-                  handleUpdate: G,
-                  selectedGames: O
+                  handleUpdate: k,
+                  selectedGames: L,
+                  error: v.selectedGames
                 });
               case T.ClanSetupSteps.PLAYSTYLE:
                 return (0, a.jsx)(S.default, {
-                  handleUpdate: G,
-                  playstyle: v
+                  handleUpdate: k,
+                  playstyle: P,
+                  error: v.playstyle
                 });
               case T.ClanSetupSteps.INTERESTS:
                 return (0, a.jsx)(C.default, {
-                  handleUpdate: G,
-                  interests: L
+                  handleUpdate: k,
+                  interests: M,
+                  error: v.interests
                 });
               case T.ClanSetupSteps.DESCRIPTION:
                 return (0, a.jsx)(h.default, {
-                  handleUpdate: G,
-                  description: P
+                  handleUpdate: k,
+                  description: y,
+                  error: v.description
                 });
               case T.ClanSetupSteps.PRIMETIME:
                 return (0, a.jsx)(I.default, {
-                  handleUpdate: G,
-                  selectedTimes: y
+                  handleUpdate: k,
+                  selectedTimes: D,
+                  error: v.primetime
                 });
               case T.ClanSetupSteps.CUSTOMIZE:
                 return (0, a.jsx)(p.default, {
-                  handleUpdate: G,
-                  tag: M
+                  handleUpdate: k,
+                  tag: x,
+                  error: v.tag
                 });
               case T.ClanSetupSteps.FOUNDATIONAL_INTRO:
                 return (0, a.jsx)(m.default, {
@@ -230,19 +243,19 @@ t.default = e => {
           })()
         })
       }), (0, a.jsx)(R, {
-        currentStep: D,
-        setCurrentStep: j,
-        selectedGames: O,
-        playstyle: v,
-        interests: L,
-        description: P,
-        primetime: y,
-        tag: M,
-        onLastStep: w
+        currentStep: b,
+        setCurrentStep: w,
+        selectedGames: L,
+        playstyle: P,
+        interests: M,
+        description: y,
+        primetime: D,
+        tag: x,
+        onLastStep: F
       })]
     }), (0, a.jsx)("div", {
       className: i()(N.overviewSidebar, {
-        [N.fadeOut]: x && !b
+        [N.fadeOut]: U && !j
       }),
       children: (0, a.jsx)(E.default, {
         guildId: t

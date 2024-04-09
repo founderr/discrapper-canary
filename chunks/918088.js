@@ -220,8 +220,8 @@ function R(e, t) {
       style: I,
       shouldAnimateTransition: V,
       votesPercentage: Math.round(100 * (0 === W ? 0 : f / W)),
-      votes: (0, s.match)(L).with(a.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(".concat(String(f), ")")).otherwise(() => N.default.Messages.POLL_VOTES_COUNT.format({
-        count: String(f)
+      votes: (0, s.match)(L).with(a.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(".concat(f.toLocaleString(), ")")).otherwise(() => N.default.Messages.POLL_VOTES_COUNT.format({
+        count: f.toLocaleString()
       }))
     }
   }), J = (0, s.match)({

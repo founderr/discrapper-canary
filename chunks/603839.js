@@ -16,7 +16,7 @@ t.default = e => {
   let {
     guildId: t,
     onClose: n
-  } = e, _ = (0, r.useStateFromStores)([u.default], () => null == u.default.getStateForGuild(t)), C = (0, r.useStateFromStores)([o.default], () => o.default.useReducedMotion), m = (0, l.useSpring)({
+  } = e, _ = (0, r.useStateFromStores)([u.default], () => null == u.default.getStateForGuild(t).progress), C = (0, r.useStateFromStores)([o.default], () => o.default.useReducedMotion), m = (0, l.useSpring)({
     from: {
       opacity: C ? 1 : 0,
       transform: C ? "scale(1)" : "scale(1.2)"

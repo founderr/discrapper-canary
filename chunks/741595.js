@@ -12,8 +12,9 @@ var a = n("735250"),
 t.default = e => {
   let {
     handleUpdate: t,
-    playstyle: n
-  } = e, l = (0, r.useToken)(r.tokens.colors.WHITE), f = s.useMemo(() => [{
+    playstyle: n,
+    error: l
+  } = e, f = (0, r.useToken)(r.tokens.colors.WHITE), E = s.useMemo(() => [{
     type: u.ClanPlaystyles.SOCIAL,
     emoji: "\uD83D\uDC4B",
     title: d.default.Messages.CLAN_SETUP_PLAYSTYLE_SOCIAL_TITLE,
@@ -45,9 +46,14 @@ t.default = e => {
       color: "header-secondary",
       className: c.subtitle,
       children: d.default.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE
+    }), null != l && (0, a.jsx)(r.Text, {
+      variant: "text-sm/normal",
+      color: "status-danger",
+      className: c.errorText,
+      children: l
     }), (0, a.jsx)("div", {
       className: c.playstyleSelect,
-      children: f.map(e => (0, a.jsxs)(r.Clickable, {
+      children: E.map(e => (0, a.jsxs)(r.Clickable, {
         className: i()(c.playstyleOption, {
           [c.selectedPlaystyle]: e.type === n
         }),
@@ -66,7 +72,7 @@ t.default = e => {
           color: "text-muted",
           children: e.subtitle
         }), e.type === n && (0, a.jsx)(o.default, {
-          backgroundColor: l.hex(),
+          backgroundColor: f.hex(),
           className: c.checkmark
         })]
       }, e.type))

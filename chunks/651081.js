@@ -114,7 +114,7 @@ function b(e) {
       variant: "text-sm/semibold",
       color: "text-secondary",
       className: L.voteCount,
-      children: ["(", a, ")"]
+      children: ["(", a.toLocaleString(), ")"]
     })]
   })
 }
@@ -267,7 +267,7 @@ function U(e) {
           variant: "text-md/medium",
           color: "text-normal",
           children: M.default.Messages.POLL_VOTES_COUNT.format({
-            count: String(f)
+            count: f.toLocaleString()
           })
         })]
       }), (0, l.jsx)(o.ModalCloseButton, {

@@ -9,7 +9,8 @@ var s = n("481060"),
 t.default = e => {
   let {
     handleUpdate: t,
-    tag: n
+    tag: n,
+    error: o
   } = e;
   return (0, a.jsxs)("div", {
     className: r.slideContent,
@@ -22,6 +23,11 @@ t.default = e => {
       color: "header-secondary",
       className: r.subtitle,
       children: i.default.Messages.CLAN_SETUP_CUSTOMIZE_SUBTITLE
+    }), null != o && (0, a.jsx)(s.Text, {
+      variant: "text-sm/normal",
+      color: "status-danger",
+      className: r.errorText,
+      children: o
     }), (0, a.jsx)(s.TextInput, {
       inputClassName: r.tagInput,
       value: n,

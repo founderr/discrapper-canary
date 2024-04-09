@@ -18,17 +18,32 @@ t.default = e => {
     setPage: n,
     onClose: _
   } = e, C = s.useRef(null), m = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), {
-    selectedGames: S,
-    playstyle: I,
-    interests: p,
-    description: T,
-    tag: g,
-    primetime: N
-  } = (0, i.useStateFromStoresObject)([d.default], () => {
-    var e;
-    return null !== (e = d.default.getStateForGuild(t)) && void 0 !== e ? e : {}
-  }), A = s.useRef(null), O = s.useRef(null), R = s.useRef(null), [v, L] = s.useState(!1), P = (0, l.useSpring)({
-    ref: A,
+    progress: S,
+    errors: I,
+    submitting: p
+  } = (0, i.useStateFromStoresObject)([d.default], () => d.default.getStateForGuild(t)), {
+    selectedGames: T,
+    playstyle: g,
+    interests: N,
+    description: A,
+    tag: O,
+    primetime: R
+  } = null != S ? S : {}, v = s.useRef(null), L = s.useRef(null), P = s.useRef(null), [M, y] = s.useState(!1), x = async () => {
+    try {
+      await u.convertGuildToClan(t, {
+        selectedGames: T,
+        playstyle: g,
+        interests: N,
+        description: A,
+        tag: O,
+        primetime: R
+      })
+    } catch (e) {
+      return
+    }
+    _()
+  }, D = (0, l.useSpring)({
+    ref: v,
     config: l.config.slow,
     from: {
       flex: 1,
@@ -38,8 +53,8 @@ t.default = e => {
       flex: 1,
       paddingLeft: 120
     }
-  }), M = (0, l.useSpring)({
-    ref: O,
+  }), b = (0, l.useSpring)({
+    ref: L,
     config: l.config.slow,
     from: {
       flex: m ? 1 : 0,
@@ -51,8 +66,8 @@ t.default = e => {
       paddingRight: 120,
       marginLeft: -32
     }
-  }), y = (0, l.useSpring)({
-    ref: R,
+  }), U = (0, l.useSpring)({
+    ref: P,
     config: l.config.default,
     from: {
       opacity: 0
@@ -61,13 +76,15 @@ t.default = e => {
       opacity: 1
     }
   });
-  return (0, l.useChain)([A, O, R], [0, 0, 1]), (0, a.jsxs)("div", {
+  (0, l.useChain)([v, L, P], [0, 0, 1]);
+  let j = s.useMemo(() => null != I && Object.values(I).some(e => null != e), [I]);
+  return (0, a.jsxs)("div", {
     className: h.animationContainer,
     children: [(0, a.jsxs)(l.animated.div, {
       className: h.signTextLeft,
       style: {
-        ...P,
-        ...y
+        ...D,
+        ...U
       },
       children: [(0, a.jsx)(r.Heading, {
         variant: "heading-xxl/medium",
@@ -81,15 +98,15 @@ t.default = e => {
       className: h.scrollContainer,
       children: (0, a.jsx)(c.default, {
         guildId: t,
-        signed: v,
-        setSigned: L,
+        signed: M,
+        setSigned: y,
         signRef: C
       })
     }), (0, a.jsxs)(l.animated.div, {
       className: h.signTextRight,
       style: {
-        ...M,
-        ...y
+        ...b,
+        ...U
       },
       children: [(0, a.jsx)(r.Button, {
         className: h.signButton,
@@ -98,7 +115,7 @@ t.default = e => {
           var e;
           null === (e = C.current) || void 0 === e || e.scrollIntoView({
             behavior: "smooth"
-          }), L(!0)
+          }), y(!0)
         },
         children: E.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
       }), (0, a.jsx)(r.Text, {
@@ -120,23 +137,21 @@ t.default = e => {
       color: r.Button.Colors.PRIMARY,
       onClick: () => n(f.ClanSetupModalPages.SETUP),
       children: E.default.Messages.PAGINATION_PREVIOUS
-    }), (0, a.jsx)(r.Button, {
+    }), (0, a.jsxs)("div", {
       className: h.finishButton,
-      look: r.Button.Looks.FILLED,
-      size: r.Button.Sizes.MEDIUM,
-      color: r.Button.Colors.BRAND,
-      disabled: !v,
-      onClick: () => {
-        u.convertGuildToClan(t, {
-          selectedGames: S,
-          playstyle: I,
-          interests: p,
-          description: T,
-          tag: g,
-          primetime: N
-        }), _()
-      },
-      children: E.default.Messages.FINISH
+      children: [j && (0, a.jsx)(r.Text, {
+        color: "status-danger",
+        variant: "text-sm/normal",
+        children: E.default.Messages.CLAN_SUBMIT_ERROR
+      }), (0, a.jsx)(r.Button, {
+        look: r.Button.Looks.FILLED,
+        size: r.Button.Sizes.MEDIUM,
+        color: r.Button.Colors.BRAND,
+        disabled: !M,
+        submitting: p,
+        onClick: x,
+        children: E.default.Messages.FINISH
+      })]
     })]
   })
 }

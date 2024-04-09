@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   newClanProgress: function() {
-    return d
+    return f
   }
 }), n("47120");
 var a, s = n("442837"),
@@ -17,9 +17,11 @@ function o(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let u = {};
+let u = {},
+  d = !1,
+  c = {};
 
-function d() {
+function f() {
   return {
     selectedGames: new Map,
     playstyle: r.ClanPlaystyles.NONE,
@@ -33,7 +35,7 @@ function d() {
     currentStep: r.ClanSetupSteps.GAMES
   }
 }
-class c extends(a = s.default.PersistedStore) {
+class E extends(a = s.default.PersistedStore) {
   initialize(e) {
     if (null != e)
       for (let n in e.progressByGuild) {
@@ -68,24 +70,49 @@ class c extends(a = s.default.PersistedStore) {
     }
   }
   getStateForGuild(e) {
-    return u[e]
+    return {
+      progress: u[e],
+      errors: c[e],
+      submitting: d
+    }
   }
 }
-o(c, "displayName", "ClanSetupStore"), o(c, "persistKey", "ClanSetupStore"), t.default = new c(l.default, {
+o(E, "displayName", "ClanSetupStore"), o(E, "persistKey", "ClanSetupStore"), t.default = new E(l.default, {
   CLAN_SETUP_UPDATE: function(e) {
     let {
       guildId: t,
       updates: n
-    } = e, a = null != u[t] ? u[t] : d();
-    u[t] = {
-      ...a,
-      ...n
-    }
+    } = e, a = null != u[t] ? u[t] : f();
+    if (u[t] = {
+        ...a,
+        ...n
+      }, null != c[t])
+      for (let e in n) delete c[t][e]
   },
-  CLAN_SETUP_CLEAR: function(e) {
+  CLAN_SETUP_SUBMIT: function(e) {
     let {
       guildId: t
     } = e;
-    delete u[t]
+    d = !0, delete c[t]
+  },
+  CLAN_SETUP_SUCCESS: function(e) {
+    let {
+      guildId: t
+    } = e;
+    d = !1, delete u[t], delete c[t]
+  },
+  CLAN_SETUP_ERROR: function(e) {
+    let {
+      guildId: t,
+      error: n
+    } = e;
+    d = !1, c[t] = {
+      selectedGames: n.getFirstFieldErrorMessage("game_application_ids"),
+      playstyle: n.getFirstFieldErrorMessage("play_style"),
+      description: n.getFirstFieldErrorMessage("description"),
+      interests: n.getFirstFieldErrorMessage("search_terms"),
+      tag: n.getFirstFieldErrorMessage("tag"),
+      primetime: n.getFirstFieldErrorMessage("prime_time")
+    }
   }
 })

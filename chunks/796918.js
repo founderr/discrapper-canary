@@ -13,27 +13,28 @@ var a = n("735250"),
 t.default = e => {
   let {
     handleUpdate: t,
-    interests: n
-  } = e, [l, E] = s.useState(""), h = e => {
+    interests: n,
+    error: l
+  } = e, [E, h] = s.useState(""), _ = e => {
     let a = new Set(n);
     a.delete(e), t({
       interests: a
     })
-  }, _ = s.useCallback(() => {
+  }, C = s.useCallback(() => {
     if (n.size === d.MAX_NUM_INTERESTS) return;
-    let e = l.trim();
+    let e = E.trim();
     if (0 === e.length) return;
     let a = new Set(n);
     a.add(e), t({
       interests: a
-    }), E("")
-  }, [t, l, n]), C = s.useCallback(e => {
+    }), h("")
+  }, [t, E, n]), m = s.useCallback(e => {
     switch (e.key) {
       case "Enter":
       case "Tab":
-        e.preventDefault(), e.stopPropagation(), _()
+        e.preventDefault(), e.stopPropagation(), C()
     }
-  }, [_]);
+  }, [C]);
   return (0, a.jsxs)("div", {
     className: f.slideContent,
     children: [(0, a.jsx)(r.Heading, {
@@ -47,22 +48,27 @@ t.default = e => {
       children: c.default.Messages.CLAN_SETUP_INTERESTS_SUBTITLE
     }), (0, a.jsxs)("div", {
       className: f.contentWithMinHeight,
-      children: [(0, a.jsxs)("div", {
+      children: [null != l && (0, a.jsx)(r.Text, {
+        variant: "text-sm/normal",
+        color: "status-danger",
+        className: f.errorText,
+        children: l
+      }), (0, a.jsxs)("div", {
         className: f.inputContainer,
         children: [(0, a.jsx)(r.TextInput, {
-          value: l,
-          onKeyDown: C,
-          onChange: E,
+          value: E,
+          onKeyDown: m,
+          onChange: h,
           placeholder: c.default.Messages.CLAN_SETUP_INTERESTS_PLACEHOLDER,
           maxLength: d.MAX_INTEREST_LENGTH,
           disabled: n.size === d.MAX_NUM_INTERESTS
-        }), l.length > 0 && (0, a.jsx)(r.Clickable, {
-          onClick: _,
+        }), E.length > 0 && (0, a.jsx)(r.Clickable, {
+          onClick: C,
           className: i()(f.plusIcon, f.clickable),
           children: (0, a.jsx)(u.default, {
             className: f.icon
           })
-        }), l.length > 0 && (0, a.jsx)(r.Text, {
+        }), E.length > 0 && (0, a.jsx)(r.Text, {
           color: "text-muted",
           variant: "text-xs/normal",
           className: f.enterToSearchText,
@@ -83,7 +89,7 @@ t.default = e => {
             children: e
           }), (0, a.jsx)(r.Clickable, {
             className: f.flex,
-            onClick: () => h(e),
+            onClick: () => _(e),
             children: (0, a.jsx)(o.default, {
               className: i()(f.clickable, f.iconSmall)
             })

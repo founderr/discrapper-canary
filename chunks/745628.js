@@ -8,7 +8,8 @@ var s = n("481060"),
 t.default = e => {
   let {
     handleUpdate: t,
-    description: n
+    description: n,
+    error: r
   } = e;
   return (0, a.jsxs)("div", {
     className: i.slideContent,
@@ -21,6 +22,11 @@ t.default = e => {
       color: "header-secondary",
       className: i.subtitle,
       children: l.default.Messages.CLAN_SETUP_DESCRIPTION_SUBTITLE
+    }), null != r && (0, a.jsx)(s.Text, {
+      variant: "text-sm/normal",
+      color: "status-danger",
+      className: i.errorText,
+      children: r
     }), (0, a.jsx)(s.TextArea, {
       maxLength: 120,
       onChange: e => t({

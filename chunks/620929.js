@@ -50,7 +50,7 @@ t.default = e => {
     primetime: v
   } = (0, d.useStateFromStoresObject)([_.default], () => {
     var e;
-    return null !== (e = _.default.getStateForGuild(n)) && void 0 !== e ? e : {}
+    return null !== (e = _.default.getStateForGuild(n).progress) && void 0 !== e ? e : {}
   }), L = s.useMemo(() => (null == A ? void 0 : A.size) > 0 ? p(Array.from(A.values()).map(e => e.name)) : null, [A]), P = s.useMemo(() => (0, m.getPlaystyleTitle)(O), [O]), M = s.useMemo(() => (null == R ? void 0 : R.size) > 0 ? p(Array.from(R)) : null, [R]), y = s.useMemo(() => {
     let e = (null == v ? void 0 : v.length) > 0 ? v.map(e => (0, C.primetimeToString)(e)).filter(h.isNotNullish) : [];
     return (null == e ? void 0 : e.length) > 0 ? p(e) : null
