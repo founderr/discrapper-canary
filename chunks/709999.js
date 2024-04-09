@@ -27,8 +27,8 @@ var l = a("735250"),
   N = a("794358"),
   y = a("466111"),
   O = a("26290"),
-  k = a("998502"),
-  A = a("335131"),
+  A = a("998502"),
+  k = a("335131"),
   P = a("946134"),
   R = a("1870"),
   j = a("884697"),
@@ -42,7 +42,7 @@ var l = a("735250"),
   W = a("474936"),
   G = a("689938"),
   V = a("873222");
-let z = k.default.getEnableHardwareAcceleration() ? f.AnimatedAvatar : f.Avatar,
+let z = A.default.getEnableHardwareAcceleration() ? f.AnimatedAvatar : f.Avatar,
   Y = f.AvatarSizes.SIZE_152,
   K = (0, p.getDecorationSizeForAvatarSize)(Y),
   X = e => {
@@ -86,7 +86,7 @@ t.default = function(e) {
     category: a,
     onMount: r,
     isPremiumUser: N = !1,
-    isGiftEasterEggEnabled: k
+    isGiftEasterEggEnabled: A
   } = e, {
     analyticsLocations: q
   } = (0, h.default)(g.default.COLLECTIBLES_SHOP_CARD), $ = s.useRef(null), J = (0, C.default)($), [Q, ee] = s.useState(!1), et = J || Q, ea = (0, u.useStateFromStores)([I.default], () => I.default.getCurrentUser()), [el] = t.items, {
@@ -173,7 +173,7 @@ t.default = function(e) {
     }) : (0, l.jsx)(M.default, {
       product: t,
       returnRef: $,
-      isGiftEasterEggEnabled: k,
+      isGiftEasterEggEnabled: A,
       disableCustomColor: !0,
       tooltipDelay: 250
     }),
@@ -184,7 +184,7 @@ t.default = function(e) {
         submittingStartedLabel: G.default.Messages.COLLECTIBLES_COLLECTING,
         submittingFinishedLabel: G.default.Messages.COLLECTIBLES_COLLECTING_FINISHED,
         onClick: async () => {
-          await (0, A.claimPremiumCollectiblesProduct)(t.skuId), (0, U.default)({
+          await (0, k.claimPremiumCollectiblesProduct)(t.skuId), (0, U.default)({
             product: t,
             analyticsLocations: q
           })
@@ -273,11 +273,6 @@ t.default = function(e) {
           variant: "text-lg/bold",
           className: V.productName,
           children: t.name
-        }), (0, l.jsx)(f.Text, {
-          className: n()(V.description, V.innerMask),
-          variant: "text-md/normal",
-          lineClamp: 3,
-          children: t.summary
         }), (0, l.jsxs)("div", {
           className: V.detailsWrapper,
           children: [(0, l.jsx)("div", {

@@ -5,53 +5,52 @@ a("470079");
 var r = a("803997"),
   l = a.n(r),
   i = a("278074"),
-  n = a("442837"),
-  o = a("481060"),
+  o = a("442837"),
+  n = a("481060"),
   u = a("884697"),
   c = a("449217"),
-  d = a("141011"),
-  f = a("706454"),
+  d = a("706454"),
   h = a("158776"),
   m = a("74538"),
-  g = a("204418"),
-  p = a("689938"),
-  C = a("847531");
-let S = [{
-    avatarSize: o.AvatarSizes.SIZE_40,
+  f = a("204418"),
+  C = a("689938"),
+  g = a("847531");
+let v = [{
+    avatarSize: n.AvatarSizes.SIZE_40,
     showStatus: !1
   }, {
-    avatarSize: o.AvatarSizes.SIZE_32,
+    avatarSize: n.AvatarSizes.SIZE_32,
     showStatus: !1
   }, {
-    avatarSize: o.AvatarSizes.SIZE_40,
+    avatarSize: n.AvatarSizes.SIZE_40,
     showStatus: !0
   }, {
-    avatarSize: o.AvatarSizes.SIZE_32,
+    avatarSize: n.AvatarSizes.SIZE_32,
     showStatus: !0
   }],
-  v = e => {
+  E = e => {
     let {
       purchase: t
-    } = e, a = (0, n.useStateFromStores)([f.default], () => f.default.locale), r = (0, u.isPremiumCollectiblesPurchase)(t);
+    } = e, a = (0, o.useStateFromStores)([d.default], () => d.default.locale), r = (0, u.isPremiumCollectiblesPurchase)(t);
     return (0, s.jsxs)("div", {
-      className: C.purchaseInfo,
-      children: [(0, s.jsx)(o.Text, {
+      className: g.purchaseInfo,
+      children: [(0, s.jsx)(n.Text, {
         variant: "text-sm/semibold",
         color: "header-primary",
         children: t.name
-      }), (0, s.jsx)(o.Text, {
+      }), (0, s.jsx)(n.Text, {
         variant: "text-sm/normal",
         children: t.summary
-      }), (0, s.jsxs)(o.Text, {
+      }), (0, s.jsxs)(n.Text, {
         variant: "text-xxs/normal",
         color: "text-muted",
-        children: [p.default.Messages.COLLECTIBLES_ACQUIRED_DATE.format({
+        children: [C.default.Messages.COLLECTIBLES_ACQUIRED_DATE.format({
           date: t.purchasedAt.toLocaleDateString(a, {
             month: "long",
             year: "numeric"
           })
         }), r && (0, s.jsxs)(s.Fragment, {
-          children: [(0, s.jsx)("br", {}), p.default.Messages.CHANGE_DECORATION_MODAL_STARTER_DESC]
+          children: [(0, s.jsx)("br", {}), C.default.Messages.CHANGE_DECORATION_MODAL_STARTER_DESC]
         })]
       })]
     })
@@ -61,61 +60,59 @@ t.default = e => {
     user: t,
     avatarDecorationOverride: a,
     className: r
-  } = e, f = (0, n.useStateFromStores)([h.default], () => h.default.getStatus(t.id)), {
-    category: E,
-    product: A,
-    purchase: x
-  } = (0, c.default)(null == a ? void 0 : a.skuId), I = m.default.canUseCollectibles(t), _ = (0, u.isPremiumCollectiblesPurchase)(x), P = (0, u.isPremiumCollectiblesProduct)(A), T = !I && _;
-  return null != A && (null == x || T) ? (0, s.jsxs)("div", {
-    className: l()(C.modalPreview, C.shopPreviewContainer, r),
-    children: [(0, s.jsx)(d.default, {
-      asset: null == E ? void 0 : E.banner,
-      className: C.shopPreviewBanner,
-      children: (0, s.jsx)(g.default, {
+  } = e, d = (0, o.useStateFromStores)([h.default], () => h.default.getStatus(t.id)), {
+    product: S,
+    purchase: p
+  } = (0, c.default)(null == a ? void 0 : a.skuId), A = m.default.canUseCollectibles(t), _ = (0, u.isPremiumCollectiblesPurchase)(p), I = (0, u.isPremiumCollectiblesProduct)(S), x = !A && _;
+  return null != S && (null == p || x) ? (0, s.jsxs)("div", {
+    className: l()(g.modalPreview, g.shopPreviewContainer, r),
+    children: [(0, s.jsx)("div", {
+      className: g.shopPreviewBanner,
+      children: (0, s.jsx)(f.default, {
         user: t,
         avatarDecorationOverride: a
       })
     }), (0, s.jsxs)("div", {
-      className: C.shopPreviewTextContainer,
-      children: [(0, s.jsx)(o.Text, {
+      className: g.shopPreviewTextContainer,
+      children: [(0, s.jsx)(n.Text, {
         variant: "text-sm/semibold",
-        children: A.name
-      }), (0, s.jsx)(o.Text, {
+        children: S.name
+      }), (0, s.jsx)(n.Text, {
         variant: "text-sm/normal",
-        children: T ? p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, i.match)([P, I]).with([!0, !0], () => p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
+        children: x ? C.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, i.match)([I, A]).with([!0, !0], () => C.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => C.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => C.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
       })]
     })]
   }) : (0, s.jsxs)("div", {
-    className: l()(C.modalPreview, r),
+    className: l()(g.modalPreview, r),
     children: [(0, s.jsxs)("div", {
-      className: C.previewSections,
+      className: g.previewSections,
       children: [(0, s.jsx)("div", {
-        className: C.decorationPreview,
-        children: (0, s.jsx)(g.default, {
+        className: g.decorationPreview,
+        children: (0, s.jsx)(f.default, {
           user: t,
           avatarDecorationOverride: a
         })
       }), (0, s.jsx)("div", {
-        className: C.smallDecorationPreviewsContainer,
-        children: S.map(e => {
+        className: g.smallDecorationPreviewsContainer,
+        children: v.map(e => {
           let {
             avatarSize: r,
             showStatus: l
           } = e;
           return (0, s.jsx)("div", {
-            className: C.smallDecorationPreview,
-            children: (0, s.jsx)(g.default, {
+            className: g.smallDecorationPreview,
+            children: (0, s.jsx)(f.default, {
               user: t,
               avatarSize: r,
               avatarDecorationOverride: a,
-              status: l ? f : void 0,
+              status: l ? d : void 0,
               "aria-hidden": !0
             })
           }, "".concat(r).concat(l))
         })
       })]
-    }), null != x && (0, s.jsx)(v, {
-      purchase: x
+    }), null != p && (0, s.jsx)(E, {
+      purchase: p
     })]
   })
 }
