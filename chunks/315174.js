@@ -167,7 +167,6 @@ t.default = a.memo(function(e) {
             guild: x,
             isBannerVisible: n
           }), x.id === g.FAVORITES_RAW_GUILD_ID && (0, l.jsx)(N, {}), (0, l.jsx)(u.Heading, {
-            color: "none",
             variant: "text-md/semibold",
             lineClamp: 1,
             className: S.name,
