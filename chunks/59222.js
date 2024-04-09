@@ -70,15 +70,15 @@ t.default = e => {
     mostRecentQuery: l,
     defaultLanguage: r,
     availableLanguages: c,
-    isFetchingSearch: O,
-    scroller: R,
+    isFetchingSearch: R,
+    scroller: O,
     loadingGuildId: v,
     theme: L,
     currentCategoryId: P,
     currentCategoryName: M,
     onViewGuild: y,
-    onGuildCardSeen: D,
-    placeholder: x,
+    onGuildCardSeen: x,
+    placeholder: D,
     onTagClick: b
   } = e, U = i().uniqueId("GuildDiscovery"), {
     guilds: j,
@@ -97,7 +97,7 @@ t.default = e => {
       }
     }), F(!1)
   }, K = () => {
-    null == R || R.scrollTo({
+    null == O || O.scrollTo({
       to: 0
     })
   };
@@ -138,9 +138,9 @@ t.default = e => {
       loadId: t,
       searchResults: n,
       mostRecentQuery: l,
-      isFetchingSearch: O,
+      isFetchingSearch: R,
       defaultLanguage: r,
-      placeholder: x,
+      placeholder: D,
       availableLanguages: c,
       isSearchPage: !0,
       currentCategoryId: P,
@@ -174,7 +174,7 @@ t.default = e => {
               loadingGuildId: v,
               theme: L,
               analyticsContext: h.AnalyticsContexts.SEARCH,
-              onGuildCardSeen: D,
+              onGuildCardSeen: x,
               onTagClick: b
             }), t]
           })

@@ -36,13 +36,13 @@ function m(e) {
     acceptMessageRequest: g,
     isAcceptLoading: N,
     isUserProfileLoading: A,
-    isOptimisticAccepted: O
+    isOptimisticAccepted: R
   } = (0, f.useMessageRequestActions)({
     user: n,
     onAcceptSuccess: T,
     onRejectSuccess: p,
     onError: I
-  }), R = N || A, v = R || O;
+  }), O = N || A, v = O || R;
   return (0, a.jsxs)("div", {
     className: C.container,
     children: [(0, a.jsx)(E.default, {
@@ -59,7 +59,7 @@ function m(e) {
           g(m.id), e.stopPropagation()
         },
         disabled: v,
-        submitting: R,
+        submitting: O,
         children: _.default.Messages.MESSAGE_REQUESTS_SPAM_ACCEPT
       }), (0, a.jsx)(h.default, {
         className: C.button,

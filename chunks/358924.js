@@ -20,15 +20,15 @@ var a, s, l = n("735250"),
   g = n("952561"),
   N = n("513202"),
   A = n("906732"),
-  O = n("812206"),
-  R = n("933557"),
+  R = n("812206"),
+  O = n("933557"),
   v = n("102172"),
   L = n("871118"),
   P = n("849171"),
   M = n("314897"),
   y = n("592125"),
-  D = n("594174"),
-  x = n("368874"),
+  x = n("594174"),
+  D = n("368874"),
   b = n("366695"),
   U = n("366966"),
   j = n("446753"),
@@ -262,7 +262,7 @@ es.Header = ea, es.Body = e => {
     partySize: u,
     members: d,
     onChannelContextMenu: f
-  } = e, E = i.useRef(null), h = (0, R.default)(s, !0);
+  } = e, E = i.useRef(null), h = (0, O.default)(s, !0);
   return (0, l.jsx)(ee, {
     children: (0, l.jsxs)("div", {
       className: q.voiceSection,
@@ -402,7 +402,7 @@ es.Header = ea, es.Body = e => {
     } = a;
   if (null != f && (0, p.default)(a)) {
     var _;
-    t = (0, l.jsx)(x.default, {
+    t = (0, l.jsx)(D.default, {
       className: q.twitchSectionPreviewWrapper,
       aspectRatio: 16 / 9,
       children: (0, l.jsxs)(c.Clickable, {
@@ -491,13 +491,13 @@ es.Header = ea, es.Body = e => {
       return d(t)
     })
   }, [f]);
-  let h = (0, u.useStateFromStoresArray)([D.default, M.default], () => Array.from(s).map(e => M.default.getId() === e ? null : D.default.getUser(e)).filter(V.isNotNullish)),
+  let h = (0, u.useStateFromStoresArray)([x.default, M.default], () => Array.from(s).map(e => M.default.getId() === e ? null : x.default.getUser(e)).filter(V.isNotNullish)),
     C = (0, E.useAnalyticsContext)(),
     {
       analyticsLocations: m
     } = (0, A.default)();
   if (null == f) return null;
-  let S = O.default.getApplication(f);
+  let S = R.default.getApplication(f);
   if (null == S) return null;
   let I = null != t.created_at && t.created_at > 0 ? {
       start: t.created_at

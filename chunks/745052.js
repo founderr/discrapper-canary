@@ -22,15 +22,15 @@ var a = n("735250"),
   g = n("243778"),
   N = n("984370"),
   A = n("797614"),
-  O = n("359110"),
-  R = n("6025"),
+  R = n("359110"),
+  O = n("6025"),
   v = n("897473"),
   L = n("108427"),
   P = n("970731"),
   M = n("210887"),
   y = n("433355"),
-  D = n("592125"),
-  x = n("819640"),
+  x = n("592125"),
+  D = n("819640"),
   b = n("916187"),
   U = n("151827"),
   j = n("626135"),
@@ -155,7 +155,7 @@ function es(e) {
   let {
     pageWidth: t,
     onSidebarResize: n
-  } = e, s = (0, u.useStateFromStores)([y.default], () => y.default.getSidebarState(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID)), l = (0, u.useStateFromStores)([D.default], () => D.default.getChannel(null == s ? void 0 : s.channelId));
+  } = e, s = (0, u.useStateFromStores)([y.default], () => y.default.getSidebarState(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID)), l = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(null == s ? void 0 : s.channelId));
   if (null == s || s.type !== v.SidebarType.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
   let i = t - X.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
   return (0, a.jsx)(S.default, {
@@ -185,7 +185,7 @@ let el = function(e) {
   },
   ei = e => {
     let t = (0, F.default)(),
-      n = () => x.default.hasLayers() || (0, c.hasAnyModalOpen)(),
+      n = () => D.default.hasLayers() || (0, c.hasAnyModalOpen)(),
       l = (0, u.useStateFromStores)([C.default], () => C.default.useReducedMotion);
     return s.useEffect(() => {
       (0, T.requestMarkDismissibleContentAsShown)(d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
@@ -255,7 +255,7 @@ let eo = (0, h.default)(function(e) {
     m = (0, k.useIsEitherTypeOfMessageRequest)(_),
     S = (0, w.useHasUserRepliedInChannel)(_);
   s.useEffect(() => {
-    null != _ && !m && S && C && ((0, O.transitionToChannel)(_), R.default.closeChannelSidebar(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
+    null != _ && !m && S && C && ((0, R.transitionToChannel)(_), O.default.closeChannelSidebar(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
   }, [_, S, C, m]);
   let [I, T] = s.useState(Z.MessageRequestSections.REQUESTS);
   return (0, p.usePageTitle)({

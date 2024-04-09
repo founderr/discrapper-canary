@@ -40,7 +40,7 @@ n.r(t), n.d(t, {
 var a, s, l, i, r, o, u = n("913527"),
   d = n.n(u),
   c = n("689938");
-let f = 5,
+let f = 4,
   E = "ClanSetupModal",
   h = 20,
   _ = 50,

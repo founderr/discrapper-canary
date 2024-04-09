@@ -26,8 +26,8 @@ t.default = e => {
     playstyle: g,
     interests: N,
     description: A,
-    tag: O,
-    primetime: R
+    tag: R,
+    primetime: O
   } = null != S ? S : {}, v = s.useRef(null), L = s.useRef(null), P = s.useRef(null), [M, y] = s.useState(!1), x = async () => {
     try {
       await u.convertGuildToClan(t, {
@@ -35,8 +35,8 @@ t.default = e => {
         playstyle: g,
         interests: N,
         description: A,
-        tag: O,
-        primetime: R
+        tag: R,
+        primetime: O
       })
     } catch (e) {
       return

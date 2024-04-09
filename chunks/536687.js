@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return s
   },
   default: function() {
-    return O
+    return R
   }
 });
 var a, s, l = n("470079"),
@@ -28,7 +28,7 @@ var a, s, l = n("470079"),
   N = n("267642"),
   A = n("981631");
 
-function O(e) {
+function R(e) {
   var t;
   let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : A.EMPTY_STRING_SNOWFLAKE_ID,
     {
@@ -39,19 +39,19 @@ function O(e) {
     })),
     {
       lastDismissedGracePeriod: s,
-      isGracePeriodVisible: O
+      isGracePeriodVisible: R
     } = (0, i.useStateFromStoresObject)([I.default], () => ({
       lastDismissedGracePeriod: I.default.getLastDismissedGracePeriodForGuild(n),
       isGracePeriodVisible: I.default.isVisible(n)
     })),
-    R = (0, i.useStateFromStores)([_.default], () => _.default.isVisible(e)),
+    O = (0, i.useStateFromStores)([_.default], () => _.default.isVisible(e)),
     v = (0, i.useStateFromStores)([T.default], () => T.default.isVisible(e)),
     L = (0, i.useStateFromStores)([S.default], () => S.default.can(A.Permissions.ADMINISTRATOR, e)),
     P = null != s && Date.now() - s <= A.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
     M = null != e ? e.premiumSubscriberCount : 0,
     y = (0, N.getGuildTierFromAppliedBoostCount)(M, n) !== A.BoostedGuildTiers.NONE,
-    D = null != a && Date.now() - a <= 432e5,
-    x = !D && !P && L && y,
+    x = null != a && Date.now() - a <= 432e5,
+    D = !x && !P && L && y,
     b = (0, d.useGuildHasLiveChannelNotice)(n),
     U = (0, i.useStateFromStores)([p.default], () => p.default.isVisible(e)),
     j = E.default.useShouldShowChannelNotice(n),
@@ -73,13 +73,13 @@ function O(e) {
       u.default.getGuildEventsForCurrentUser(n)
     }, [n]), l.useEffect(() => {
       let e = -1;
-      return x && (e = window.setTimeout(() => {
+      return D && (e = window.setTimeout(() => {
         null != n && (0, r.fetchAppliedGuildBoostsForGuild)(n)
       }, 30 * Math.random() * g.default.Millis.SECOND)), () => {
         window.clearTimeout(e)
       }
-    }, [n, x]), R) return 0;
-  if (O) return 1;
+    }, [n, D]), O) return 0;
+  if (R) return 1;
   if (v) return 2;
   else if (b || null != V) return 3;
   else if (U) return 4;

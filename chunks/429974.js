@@ -25,18 +25,18 @@ async function m(e) {
     friendToken: g,
     autoFocusNote: N,
     analyticsLocation: A
-  } = e, O = c.default.getUser(S);
-  if (null == O) return;
-  let R = E.default.getUserProfile(S),
+  } = e, R = c.default.getUser(S);
+  if (null == R) return;
+  let O = E.default.getUserProfile(S),
     v = u.default.getPrimaryActivity(S),
     L = u.default.getStatus(S),
     P = u.default.isMobileOnline(S),
     {
       party: M,
       assets: y,
-      application_id: D
+      application_id: x
     } = null != v ? v : {},
-    x = null != D ? o.default.getApplication(D) : null,
+    D = null != x ? o.default.getApplication(x) : null,
     b = P ? h.AnalyticsUserStatusTypes.ONLINE_MOBILE : h.AnalyticsUserStatusTypes.ONLINE_DESKTOP,
     U = L === h.StatusTypes.ONLINE ? b : L;
   C = await (0, s.openModalLazy)(async () => {
@@ -46,7 +46,7 @@ async function m(e) {
     return t => (0, a.jsx)(e, {
       ...t,
       location: "handleOpenUserProfileModal",
-      user: O,
+      user: R,
       autoFocusNote: N,
       guildId: p,
       friendToken: g,
@@ -60,7 +60,7 @@ async function m(e) {
     other_user_id: S,
     application_id: null !== (l = null == v ? void 0 : v.application_id) && void 0 !== l ? l : null,
     application_name: null == v ? void 0 : v.name,
-    sku_id: null !== (i = null == x ? void 0 : x.primarySkuId) && void 0 !== i ? i : null,
+    sku_id: null !== (i = null == D ? void 0 : D.primarySkuId) && void 0 !== i ? i : null,
     is_friend: d.default.isFriend(S),
     has_images: !!(null !== (m = null == y ? void 0 : y.large_image) && void 0 !== m ? m : null == y ? void 0 : y.small_image),
     party_max: null == M ? void 0 : null === (t = M.size) || void 0 === t ? void 0 : t[1],
@@ -68,8 +68,8 @@ async function m(e) {
     party_platform: (0, _.isSpotifyParty)(null == M ? void 0 : M.id) ? h.PlatformTypes.SPOTIFY : null,
     game_platform: (0, r.default)(v),
     profile_user_status: U,
-    profile_has_nitro_customization: (null == R ? void 0 : R.banner) != null,
-    profile_has_profile_effect: (null == R ? void 0 : R.profileEffectId) != null,
+    profile_has_nitro_customization: (null == O ? void 0 : O.banner) != null,
+    profile_has_profile_effect: (null == O ? void 0 : O.profileEffectId) != null,
     ...null == A ? null : (0, f.expandLocation)(A)
   })
 }

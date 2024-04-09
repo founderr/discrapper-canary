@@ -22,15 +22,15 @@ var a = n("735250"),
   g = n("153124"),
   N = n("988951"),
   A = n("26290"),
-  O = n("792125"),
-  R = n("666286"),
+  R = n("792125"),
+  O = n("666286"),
   v = n("596957"),
   L = n("981631"),
   P = n("723359"),
   M = n("689938"),
   y = n("272212");
 
-function D() {
+function x() {
   return (0, a.jsxs)("div", {
     className: y.inviteToolbar,
     children: [(0, a.jsx)(m.default, {
@@ -56,7 +56,7 @@ t.default = function(e) {
   }, [t]);
   let m = (0, u.useStateFromStores)([p.default], () => p.default.theme),
     {
-      section: x,
+      section: D,
       pendingCount: b
     } = (0, u.useStateFromStoresObject)([T.default], () => T.default.getState()),
     U = (0, u.useStateFromStoresObject)([_.default], () => _.default.getSuggestionCount()),
@@ -68,8 +68,8 @@ t.default = function(e) {
     children: [(0, a.jsx)(h.AppPageTitle, {
       location: M.default.Messages.FRIENDS
     }), (0, a.jsxs)(C.default, {
-      className: (0, O.getThemeClass)(m),
-      toolbar: (0, a.jsx)(D, {}),
+      className: (0, R.getThemeClass)(m),
+      toolbar: (0, a.jsx)(x, {}),
       scrollable: o.isMobile,
       role: "navigation",
       "aria-labelledby": j,
@@ -81,7 +81,7 @@ t.default = function(e) {
         children: M.default.Messages.FRIENDS
       }), (0, a.jsx)(C.default.Divider, {}), (0, a.jsxs)(d.TabBar, {
         "aria-label": M.default.Messages.FRIENDS,
-        selectedItem: x,
+        selectedItem: D,
         type: "top-pill",
         onItemSelect: e => {
           E.default.setSection(e)
@@ -133,12 +133,12 @@ t.default = function(e) {
     }), (0, a.jsxs)("div", {
       className: y.tabBody,
       children: [(0, a.jsx)(d.TabBar.Panel, {
-        id: x,
+        id: D,
         className: y.peopleColumn,
         "aria-labelledby": G,
-        children: x === L.FriendsSections.ADD_FRIEND ? (0, a.jsx)(R.default, {}) : (0, a.jsx)(v.default, {
+        children: D === L.FriendsSections.ADD_FRIEND ? (0, a.jsx)(O.default, {}) : (0, a.jsx)(v.default, {
           titleId: G,
-          sectionFilter: x
+          sectionFilter: D
         })
       }), (0, a.jsx)("div", {
         className: y.nowPlayingColumn,

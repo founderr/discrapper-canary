@@ -37,12 +37,12 @@ let A = (0, _.makeLazy)({
     webpackId: "989804",
     name: "UserSettings"
   }),
-  O = (0, _.makeLazy)({
+  R = (0, _.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("33053"), n.e("85093"), n.e("78587")]).then(n.bind(n, "869779")),
     webpackId: "869779",
     name: "ChannelSettings"
   }),
-  R = (0, _.makeLazy)({
+  O = (0, _.makeLazy)({
     createPromise: () => Promise.all([n.e("99387"), n.e("18249")]).then(n.bind(n, "838819")),
     webpackId: "838819",
     name: "CollectiblesShop"
@@ -54,9 +54,9 @@ let A = (0, _.makeLazy)({
   }),
   L = {
     [T.Layers.USER_SETTINGS]: () => (0, s.jsx)(A, {}),
-    [T.Layers.CHANNEL_SETTINGS]: () => (0, s.jsx)(O, {}),
+    [T.Layers.CHANNEL_SETTINGS]: () => (0, s.jsx)(R, {}),
     [T.Layers.GUILD_SETTINGS]: () => (0, s.jsx)(v, {}),
-    [T.Layers.COLLECTIBLES_SHOP]: () => (0, s.jsx)(R, {})
+    [T.Layers.COLLECTIBLES_SHOP]: () => (0, s.jsx)(O, {})
   },
   P = "SHOWN",
   M = "HIDDEN",
@@ -65,10 +65,10 @@ let A = (0, _.makeLazy)({
     tension: 100
   };
 
-function D() {
+function x() {
   return l.useEffect(() => (h.default.enable(), h.default.enableTemp(E.SETTINGS_LAYERS_LAYOUT), () => h.default.disableTemp()), []), null
 }
-class x extends(a = l.PureComponent) {
+class D extends(a = l.PureComponent) {
   static getDerivedStateFromProps(e, t) {
     return e.mode !== t.mode ? {
       animating: !0,
@@ -202,9 +202,9 @@ class x extends(a = l.PureComponent) {
     }
   }
 }
-N(x, "defaultProps", {
+N(D, "defaultProps", {
   baseLayer: !1
-}), N(x, "contextType", c.AccessibilityPreferencesContext);
+}), N(D, "contextType", c.AccessibilityPreferencesContext);
 class b extends l.PureComponent {
   componentDidMount() {
     I.ComponentDispatch.subscribe(T.ComponentActions.LAYER_POP_ESCAPE_KEY, f.popLayer)
@@ -220,7 +220,7 @@ class b extends l.PureComponent {
     } = this.props, {
       length: a
     } = t, l = [];
-    return l.push((0, s.jsx)(x, {
+    return l.push((0, s.jsx)(D, {
       mode: 0 !== a || n ? M : P,
       baseLayer: !0,
       children: e
@@ -228,9 +228,9 @@ class b extends l.PureComponent {
   }
   renderComponent(e, t, n) {
     let a;
-    return a = "string" == typeof e ? L[e]() : (0, s.jsx)(e, {}), (0, s.jsxs)(x, {
+    return a = "string" == typeof e ? L[e]() : (0, s.jsx)(e, {}), (0, s.jsxs)(D, {
       mode: t === n - 1 ? P : M,
-      children: [(0, s.jsx)(D, {}), a]
+      children: [(0, s.jsx)(x, {}), a]
     }, "layer-".concat(t))
   }
   renderArtisanalHack() {

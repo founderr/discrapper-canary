@@ -109,7 +109,7 @@ function A() {
   })
 }
 
-function O() {
+function R() {
   let e = (0, E.useStateFromStoresArray)([C.default], () => C.default.getFavoriteClans(), []);
   return (0, a.jsxs)(f.Button, {
     className: p.filterPillSmall,
@@ -128,7 +128,7 @@ function O() {
   })
 }
 
-function R() {
+function O() {
   return (0, a.jsx)(f.Button, {
     className: p.filterPillSmall,
     innerClassName: p.filterPillContents,

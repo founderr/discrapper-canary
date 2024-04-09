@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return R
   }
 }), n("47120");
 var a = n("735250"),
@@ -27,17 +27,17 @@ var a = n("735250"),
   N = n("689938"),
   A = n("815668");
 
-function O(e) {
+function R(e) {
   let {
     channel: t,
     iconClassName: l,
-    className: O,
-    innerClassName: R,
+    className: R,
+    innerClassName: O,
     ...v
   } = e, {
     mute: L,
     suppress: P
-  } = (0, _.default)(t), M = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), y = L || P || M, [D, x] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
+  } = (0, _.default)(t), M = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), y = L || P || M, [x, D] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
     isSoundboardButtonDisabled: y
   }), [j, G] = (0, h.useGetDismissibleContent)(U), {
     analyticsLocations: w
@@ -62,9 +62,9 @@ function O(e) {
       onMouseLeave: V
     }
   } = (0, u.useSoundboardLottie)(), Y = e => (0, a.jsx)(d.Popout, {
-    shouldShow: D,
+    shouldShow: x,
     position: "top",
-    onRequestClose: () => x(!1),
+    onRequestClose: () => D(!1),
     renderPopout: e => {
       let {
         closePopout: n
@@ -84,16 +84,16 @@ function O(e) {
       children: (0, a.jsx)(d.Button, {
         ...e,
         ...t,
-        className: i()(O, {
-          [A.buttonActive]: D,
+        className: i()(R, {
+          [A.buttonActive]: x,
           [A.disabled]: y
         }),
-        wrapperClassName: O,
-        innerClassName: R,
+        wrapperClassName: R,
+        innerClassName: O,
         disabled: y,
         onClick: () => {
           var t, n;
-          null == n || n(), null != j && j !== o.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && G(g.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), x(!D), B()
+          null == n || n(), null != j && j !== o.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && G(g.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), D(!x), B()
         },
         onMouseEnter: t => {
           var n, a;
@@ -115,8 +115,8 @@ function O(e) {
       })
     })
   }), W = s.useCallback(() => {
-    !y && x(!D)
-  }, [y, D]);
+    !y && D(!x)
+  }, [y, x]);
   return (0, m.useComponentAction)({
     event: T.ComponentActions.TOGGLE_SOUNDBOARD,
     handler: W

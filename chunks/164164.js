@@ -22,18 +22,18 @@ var a = n("735250"),
   g = n("667105"),
   N = n("689938"),
   A = n("881521");
-let O = s.forwardRef(function(e, t) {
+let R = s.forwardRef(function(e, t) {
   var n, l;
   let {
-    className: O,
-    isExpanded: R,
+    className: R,
+    isExpanded: O,
     isExpansionAnimationComplete: v,
     onCtxMenuOpen: L,
     onCtxMenuClose: P,
     onCtxMenuSelect: M,
     quest: y,
-    useReducedMotion: D
-  } = e, x = (0, r.useStateFromStores)([h.default], () => h.default.isEnrolling(y.id), [y]), b = (0, E.useQuestFormattedDate)(y.config.expiresAt), U = (0, E.useQuestFormattedDate)(y.config.rewardCodeExpiresAt), j = s.useMemo(() => (0, C.isAssetAnimated)(y.config.assets.questBarHero), [y]), G = s.useCallback(() => {
+    useReducedMotion: x
+  } = e, D = (0, r.useStateFromStores)([h.default], () => h.default.isEnrolling(y.id), [y]), b = (0, E.useQuestFormattedDate)(y.config.expiresAt), U = (0, E.useQuestFormattedDate)(y.config.rewardCodeExpiresAt), j = s.useMemo(() => (0, C.isAssetAnimated)(y.config.assets.questBarHero), [y]), G = s.useCallback(() => {
     (0, f.enrollInQuest)(y.id, {
       questContent: _.QuestContent.QUEST_BAR,
       questContentCTA: c.QuestContentCTA.ACCEPT_QUEST
@@ -41,10 +41,10 @@ let O = s.forwardRef(function(e, t) {
   }, [y]), w = (0, g.useHandleClaimQuestsReward)({
     quest: y,
     location: _.QuestContent.QUEST_BAR
-  }), k = (null === (n = y.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, F = (null === (l = y.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, B = R && v, H = (0, C.getQuestBarHeroAssetUrl)(y);
+  }), k = (null === (n = y.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, F = (null === (l = y.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, B = O && v, H = (0, C.getQuestBarHeroAssetUrl)(y);
   return (0, a.jsx)("div", {
     "aria-hidden": !B,
-    className: i()(O, A.contentExpanded, {
+    className: i()(R, A.contentExpanded, {
       [A.contentInteractable]: B
     }),
     children: k ? (0, a.jsxs)("div", {
@@ -169,7 +169,7 @@ let O = s.forwardRef(function(e, t) {
           fullWidth: !0,
           onClick: B ? G : void 0,
           size: o.Button.Sizes.NONE,
-          submitting: x,
+          submitting: D,
           children: N.default.Messages.QUESTS_ACCEPT_QUEST
         })]
       }), (0, a.jsx)("div", {
@@ -181,7 +181,7 @@ let O = s.forwardRef(function(e, t) {
           id: "QuestsBarContentExpanded_heroAnimated",
           children: e => (0, a.jsx)(d.default, {
             ref: e,
-            autoPlay: !D,
+            autoPlay: !x,
             loop: !0,
             muted: !0,
             playsInline: !0,
@@ -205,4 +205,4 @@ let O = s.forwardRef(function(e, t) {
     })
   })
 });
-t.default = O
+t.default = R

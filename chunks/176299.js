@@ -26,15 +26,15 @@ var a = n("735250"),
   g = n("626421"),
   N = n("118379"),
   A = n("652515"),
-  O = n("544978"),
-  R = n("194729"),
+  R = n("544978"),
+  O = n("194729"),
   v = n("668940"),
   L = n("372900"),
   P = n("6039"),
   M = n("637853"),
   y = n("326145"),
-  D = n("102267"),
-  x = n("362416"),
+  x = n("102267"),
+  D = n("362416"),
   b = n("416568"),
   U = n("613609"),
   j = n("160404"),
@@ -103,13 +103,13 @@ let ep = () => (0, a.jsx)("div", {
     name: "MemberSafetyPage",
     renderLoader: ep
   }),
-  eO = (0, d.makeLazy)({
+  eR = (0, d.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("75475"), n.e("58227"), n.e("38359"), n.e("35809")]).then(n.bind(n, "603072")),
     webpackId: "603072",
     name: "ChannelsAndRolesPage",
     renderLoader: ep
   }),
-  eR = (0, d.makeLazy)({
+  eO = (0, d.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("75475"), n.e("19878"), n.e("38359"), n.e("50498")]).then(n.bind(n, "599263")),
     webpackId: "599263",
     name: "GuildOnboardingPage",
@@ -130,9 +130,9 @@ let ep = () => (0, a.jsx)("div", {
       let e = j.default.getData(s);
       if ((null == e ? void 0 : e.type) === G.ImpersonateType.SERVER_SHOP) switch (e.initialTab) {
         case "role_subscriptions":
-          return O.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS;
+          return R.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS;
         case "guild_products":
-          return O.GuildShopTab.GUILD_PRODUCTS;
+          return R.GuildShopTab.GUILD_PRODUCTS;
         default:
           return
       }
@@ -141,8 +141,8 @@ let ep = () => (0, a.jsx)("div", {
       case e_.StaticChannelRoute.ROLE_SUBSCRIPTIONS:
         return d ? (0, a.jsx)(eT, {
           guildId: s,
-          initialTab: O.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS
-        }) : (0, a.jsx)(D.default, {
+          initialTab: R.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS
+        }) : (0, a.jsx)(x.default, {
           guildId: s
         });
       case e_.StaticChannelRoute.GUILD_SHOP:
@@ -160,16 +160,16 @@ let ep = () => (0, a.jsx)("div", {
           guildId: s
         });
       case e_.StaticChannelRoute.CHANNEL_BROWSER:
-        return (0, a.jsx)(eO, {
+        return (0, a.jsx)(eR, {
           guildId: s,
           selectedSection: eC.GuildOnboardingTab.BROWSE
         });
       case e_.StaticChannelRoute.GUILD_ONBOARDING:
-        return (0, a.jsx)(eR, {
+        return (0, a.jsx)(eO, {
           guildId: s
         });
       case e_.StaticChannelRoute.CUSTOMIZE_COMMUNITY:
-        return (0, a.jsx)(eO, {
+        return (0, a.jsx)(eR, {
           guildId: s,
           selectedSection: eC.GuildOnboardingTab.CUSTOMIZE
         });
@@ -200,7 +200,7 @@ let ep = () => (0, a.jsx)("div", {
     } = (0, Z.default)(), n = (0, f.useStateFromStores)([en.default], () => null != t ? t : en.default.getChannelId(e));
     return function() {
       return window.location.pathname.startsWith(eh.Routes.GUILD_DISCOVERY)
-    }() ? (0, a.jsx)(v.default, {}) : null != e ? (0, a.jsx)(x.default, {
+    }() ? (0, a.jsx)(v.default, {}) : null != e ? (0, a.jsx)(D.default, {
       selectedChannelId: n,
       guildId: e
     }, e) : (0, a.jsx)(ed.default, {})
@@ -223,11 +223,11 @@ let eM = e => (0, a.jsx)(ev, {
   }),
   ey = e => {
     let t = null != e && e.length > 0 && e.startsWith("?") ? e.split("?")[1] : null;
-    return (0, a.jsx)(R.default, {
+    return (0, a.jsx)(O.default, {
       searchRoute: t
     })
   },
-  eD = e => {
+  ex = e => {
     let {
       match: t
     } = e;
@@ -236,7 +236,7 @@ let eM = e => (0, a.jsx)(ev, {
       inviteCode: t.params.inviteCode
     }) : null
   },
-  ex = e => {
+  eD = e => {
     let {
       match: t
     } = e;
@@ -474,12 +474,12 @@ function eY() {
                   disableTrack: !0
                 }), (0, a.jsx)(I.default, {
                   path: eh.Routes.GUILD_MEMBER_VERIFICATION(":guildId", ":inviteCode?"),
-                  render: eD,
+                  render: ex,
                   impressionName: u.ImpressionNames.GUILD_MEMBER_VERIFICATION,
                   disableTrack: !0
                 }), (0, a.jsx)(I.default, {
                   path: eh.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(":guildId", ":inviteCode?"),
-                  render: ex,
+                  render: eD,
                   impressionName: u.ImpressionNames.HUB_EMAIL_SIGNUP,
                   impressionProperties: e => {
                     let {

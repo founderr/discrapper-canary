@@ -76,16 +76,16 @@ function A(e) {
     heroArtClassName: _,
     modalDismissibleContent: g,
     modalTopExtra: A,
-    header: O,
-    headerClassName: R,
+    header: R,
+    headerClassName: O,
     subHeader: v,
     subHeaderExtra: L,
     featureCards: P,
     changeLogId: M,
     button: y
   } = e, {
-    onClose: D,
-    transitionState: x
+    onClose: x,
+    transitionState: D
   } = n, b = (0, h.useUID)(), U = P.length % 2 == 0, j = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [G, w] = s.useState(Date.now()), [k, F] = s.useState(0), [B, H] = s.useState(0), [V, Y] = s.useState(!1), [W, K] = s.useState(!0), z = s.useRef(G), q = s.useRef(k), Q = s.useRef(B), Z = s.useRef(V), X = s.useRef(W);
 
   function J() {
@@ -121,19 +121,19 @@ function A(e) {
     }
   }, [g, M]), (0, a.jsxs)(o.ModalRoot, {
     className: i()(T.root, t),
-    transitionState: x,
+    transitionState: D,
     "aria-labelledby": b,
     children: [(0, a.jsx)(o.ModalCloseButton, {
       className: T.closeButton,
-      onClick: D
+      onClick: x
     }), (0, a.jsx)(S.default, {
       className: T.splash
     }), null == A ? void 0 : A(), (0, a.jsxs)(o.ModalContent, {
       className: T.content,
       children: [(0, a.jsx)(o.Heading, {
         variant: "display-md",
-        className: i()(T.headerText, R),
-        children: O
+        className: i()(T.headerText, O),
+        children: R
       }), "video" === l.type ? (0, a.jsx)(C.default, {
         className: i()(T.video, _),
         autoPlay: !j,

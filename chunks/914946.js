@@ -73,8 +73,8 @@ var a, s = n("729594"),
   g = n("70956"),
   N = n("5192"),
   A = n("226951"),
-  O = n("996106"),
-  R = n("863141"),
+  R = n("996106"),
+  O = n("863141"),
   v = n("186901"),
   L = n("981631");
 let P = null !== (a = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== a ? a : "localhost",
@@ -86,8 +86,8 @@ let P = null !== (a = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && v
     return /^\d+$/.test(n) ? e : t.slice(-2).join(".")
   }(),
   y = new RegExp("^".concat(A.default.escape("https://"), "(?:[a-z]+\\.)?(").concat(A.default.escape(M), "|discordapp.com|discord.com)$")),
-  D = 1 * g.default.Millis.MINUTE,
-  x = {};
+  x = 1 * g.default.Millis.MINUTE,
+  D = {};
 
 function b(e) {
   return "customEmoji" === e.type && (e.type = "emoji"), "emoji" === e.type && e.src && (e.src = U(e.src)), Array.isArray(e.content) && (e.content = e.content.map(b)), e
@@ -179,7 +179,7 @@ function k(e, t, n) {
       self_deaf: i,
       suppress: r
     },
-    user: (0, R.default)(u)
+    user: (0, O.default)(u)
   }
 }
 
@@ -187,7 +187,7 @@ function F(e, t, n) {
   let a = p.default.getUser(t);
   return {
     type: e,
-    user: null != a ? (0, R.default)(a) : null,
+    user: null != a ? (0, O.default)(a) : null,
     presence: {
       status: I.default.getStatus(t),
       activity: null != n ? I.default.getApplicationActivity(t, n) : I.default.getPrimaryActivity(t)
@@ -259,10 +259,10 @@ function K(e, t, n) {
     if ("string" == typeof n) {
       if (e.transport === v.TransportTypes.POST_MESSAGE) {
         let e = (0, u.default)(t);
-        if (null == e || !j(n, [e])) throw new O.default({
+        if (null == e || !j(n, [e])) throw new R.default({
           closeCode: L.RPCCloseCodes.INVALID_ORIGIN
         }, "Invalid Origin")
-      } else if (!j(n, s)) throw new O.default({
+      } else if (!j(n, s)) throw new R.default({
         closeCode: L.RPCCloseCodes.INVALID_ORIGIN
       }, "Invalid Origin")
     }
@@ -274,14 +274,14 @@ function K(e, t, n) {
       flags: d
     }
   }, () => {
-    throw new O.default({
+    throw new R.default({
       closeCode: L.RPCCloseCodes.INVALID_CLIENTID
     }, "Invalid Client ID")
   })
 }
 async function z(e, t) {
-  let n = x[e];
-  null == n && (n = new i.default(t ? 2 : 60, D), x[e] = n), await n.process()
+  let n = D[e];
+  null == n && (n = new i.default(t ? 2 : 60, x), D[e] = n), await n.process()
 }
 
 function q(e, t) {
@@ -339,13 +339,13 @@ function Z(e, t) {
 }
 
 function X(e) {
-  if (e !== v.TransportTypes.POST_MESSAGE) throw new O.default({
+  if (e !== v.TransportTypes.POST_MESSAGE) throw new R.default({
     errorCode: L.RPCErrors.INVALID_COMMAND
   }, 'command not available from "'.concat(e, " transport"))
 }
 
 function J(e) {
-  if (null == e.id) throw new O.default({
+  if (null == e.id) throw new R.default({
     errorCode: L.RPCErrors.INVALID_COMMAND
   }, "Invalid application")
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   DiscoverSearchResultPlaceholder: function() {
-    return R
+    return O
   }
 }), n("47120");
 var a = n("735250"),
@@ -26,23 +26,23 @@ var a = n("735250"),
   g = n("689938"),
   N = n("208596"),
   A = n("129512"),
-  O = n("330065");
-let R = () => (0, a.jsx)("div", {
+  R = n("330065");
+let O = () => (0, a.jsx)("div", {
   className: N.placeholder
 });
 t.default = e => {
   var t;
   let {
     guild: l,
-    theme: R,
+    theme: O,
     onView: v,
     onTagClick: L
   } = e, {
     id: P,
     discoverySplash: M,
     icon: y,
-    name: D,
-    description: x,
+    name: x,
+    description: D,
     presenceCount: b,
     memberCount: U,
     keywords: j
@@ -57,9 +57,9 @@ t.default = e => {
       case T.ThemeTypes.DARK:
         return A;
       case T.ThemeTypes.LIGHT:
-        return O
+        return R
     }
-  }(R), Y = null !== (t = _.default.getGuildIconURL({
+  }(O), Y = null !== (t = _.default.getGuildIconURL({
     id: P,
     icon: y,
     size: 32
@@ -160,13 +160,13 @@ t.default = e => {
               }), (0, a.jsx)(r.Heading, {
                 variant: "heading-md/semibold",
                 className: N.headerTitle,
-                children: D
+                children: x
               })]
             })]
           }), (0, a.jsx)(r.Text, {
             className: N.description,
             variant: "text-sm/normal",
-            children: x
+            children: D
           }), K && null != j && null != L && (0, a.jsx)(I.DiscoveryTags, {
             guildId: l.id,
             discoveryTagStyle: I.DiscoveryTagStyle.ALT,

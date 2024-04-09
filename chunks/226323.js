@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return D
   }
 }), n("653041"), n("47120");
 var a = n("735250"),
@@ -26,8 +26,8 @@ var a = n("735250"),
   g = n("255439"),
   N = n("729285"),
   A = n("150954"),
-  O = n("51144"),
-  R = n("524484"),
+  R = n("51144"),
+  O = n("524484"),
   v = n("689938"),
   L = n("825292");
 let P = {
@@ -83,7 +83,7 @@ let P = {
     }
   };
 
-function D(e) {
+function x(e) {
   var t, s;
   let {
     channel: l,
@@ -96,8 +96,8 @@ function D(e) {
   } = e, T = (0, r.useStateFromStores)([I.default], () => I.default.isLocalMute(o.id)), g = (0, h.default)({
     userId: o.id,
     checkSoundSharing: !0
-  }), N = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, A = o.getAvatarURL(l.guild_id, 24), D = null != u ? u : O.default.getName(o), {
-    icon: x,
+  }), N = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, A = o.getAvatarURL(l.guild_id, 24), x = null != u ? u : R.default.getName(o), {
+    icon: D,
     colorize: b,
     getStatus: U
   } = null !== (s = function(e) {
@@ -120,9 +120,9 @@ function D(e) {
     mute: d,
     localMute: T
   })) && void 0 !== s ? s : {}, j = null != U ? v.default.Messages.VOICE_PANEL_USER_TOOLTIP.format({
-    userName: D,
+    userName: x,
     status: U()
-  }) : D;
+  }) : x;
 
   function G(e) {
     null != N ? (0, E.openContextMenuLazy)(e, async () => {
@@ -169,7 +169,7 @@ function D(e) {
         onContextMenu: G,
         focusProps: P,
         children: (0, a.jsx)(_.default, {
-          shakeLocation: R.ShakeLocation.VOICE_USER,
+          shakeLocation: O.ShakeLocation.VOICE_USER,
           isShaking: g,
           children: (0, a.jsx)("div", {
             className: i()(L.avatar, {
@@ -178,7 +178,7 @@ function D(e) {
             style: {
               backgroundImage: "url(".concat(A, ")")
             },
-            children: null != x ? (0, a.jsx)(x, {
+            children: null != D ? (0, a.jsx)(D, {
               className: i()(L.avatarIconOverlay, {
                 [L.avatarIconRed]: b
               }),
@@ -194,7 +194,7 @@ function D(e) {
   })
 }
 
-function x(e) {
+function D(e) {
   let {
     voiceStates: t,
     channel: n,
@@ -235,7 +235,7 @@ function x(e) {
           nick: s,
           voiceState: l
         } = e;
-        return t.id !== E ? (0, a.jsx)(D, {
+        return t.id !== E ? (0, a.jsx)(x, {
           channel: n,
           user: t,
           nick: s,

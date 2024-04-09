@@ -21,8 +21,8 @@ var a, s = n("735250"),
   g = n("689938"),
   N = n("313618"),
   A = n("129512"),
-  O = n("330065"),
-  R = n("755386");
+  R = n("330065"),
+  O = n("755386");
 
 function v(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -34,12 +34,12 @@ function v(e, t, n) {
 }
 class L extends(a = l.PureComponent) {
   getDefaultSplashURL(e, t) {
-    if (t) return R;
+    if (t) return O;
     switch (e) {
       case T.ThemeTypes.DARK:
         return A;
       case T.ThemeTypes.LIGHT:
-        return O
+        return R
     }
   }
   render() {
@@ -53,18 +53,18 @@ class L extends(a = l.PureComponent) {
       loaded: i,
       hasBeenSeen: d,
       isVisible: A,
-      submitting: O
+      submitting: R
     } = this.state, {
-      name: R,
+      name: O,
       description: v,
       presenceCount: L,
       memberCount: P,
       keywords: M
-    } = t, y = null === (e = t.features) || void 0 === e ? void 0 : e.has(T.GuildFeatures.HUB), D = m.default.getGuildDiscoverySplashURL({
+    } = t, y = null === (e = t.features) || void 0 === e ? void 0 : e.has(T.GuildFeatures.HUB), x = m.default.getGuildDiscoverySplashURL({
       id: t.id,
       splash: t.discoverySplash,
       size: 300 * (0, _.getDevicePixelRatio)()
-    }), x = null != D ? D : this.getDefaultSplashURL(a, y), b = m.default.getGuildIconURL({
+    }), D = null != x ? x : this.getDefaultSplashURL(a, y), b = m.default.getGuildIconURL({
       id: t.id,
       icon: t.icon,
       size: 40
@@ -102,13 +102,13 @@ class L extends(a = l.PureComponent) {
             [N.loaded]: i,
             [N.loading]: !i
           }),
-          children: [O ? (0, s.jsx)(u.Spinner, {
+          children: [R ? (0, s.jsx)(u.Spinner, {
             type: u.Spinner.Type.PULSING_ELLIPSIS,
             className: N.spinner
           }) : null, (0, s.jsxs)(u.Clickable, {
             onClick: this.handleClickView,
             className: r()(N.card, {
-              [N.submitting]: O,
+              [N.submitting]: R,
               [N.cardWithTags]: U
             }),
             onContextMenu: this.handleContextMenu,
@@ -117,7 +117,7 @@ class L extends(a = l.PureComponent) {
               children: [(0, s.jsx)("div", {
                 className: N.splash,
                 children: (0, s.jsx)("img", {
-                  src: x,
+                  src: D,
                   alt: "",
                   className: r()(N.splashImage, {
                     [N.splashImageHeight]: !y
@@ -163,7 +163,7 @@ class L extends(a = l.PureComponent) {
                 }), (0, s.jsx)(u.Heading, {
                   variant: "heading-md/semibold",
                   className: N.guildName,
-                  children: R
+                  children: O
                 })]
               }), (0, s.jsx)(u.Text, {
                 className: N.description,

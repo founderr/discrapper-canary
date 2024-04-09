@@ -22,19 +22,19 @@ var a = n("913527"),
   g = n("594174"),
   N = n("51144"),
   A = n("196051"),
-  O = n("441729"),
-  R = n("653477"),
+  R = n("441729"),
+  O = n("653477"),
   v = n("981631"),
   L = n("689938");
 let P = [],
   M = null,
   y = null,
-  D = null,
-  x = /\|\|([\s\S]+?)\|\|/g;
+  x = null,
+  D = /\|\|([\s\S]+?)\|\|/g;
 
 function b(e, t, n, a) {
   let l = C.default.getGuild(n),
-    i = e.replace(x, L.default.Messages.SPOILER).replace(/<@!?(\d+)>/g, (e, t) => {
+    i = e.replace(D, L.default.Messages.SPOILER).replace(/<@!?(\d+)>/g, (e, t) => {
       var a;
       let s = g.default.getUser(t);
       if (null == s) return e;
@@ -64,11 +64,11 @@ function b(e, t, n, a) {
 function U() {
   if (!i.supported) return !1;
   let e = d.default.locale;
-  if (null == D) {
+  if (null == x) {
     var t;
-    D = null === (t = window.speechSynthesis) || void 0 === t ? void 0 : t.getVoices()
+    x = null === (t = window.speechSynthesis) || void 0 === t ? void 0 : t.getVoices()
   }
-  let n = D.filter(t => t.lang === e || t.lang.slice(0, e.length) === e || !1);
+  let n = x.filter(t => t.lang === e || t.lang.slice(0, e.length) === e || !1);
   y = n.length > 0 ? n[0] : null
 }
 async function j(e, t, n, a, s) {
@@ -118,10 +118,10 @@ function B(e) {
   if (null == C) return !1;
   let g = p.default.getChannelId(),
     A = E.default.getCurrentSidebarChannelId(g),
-    O = o === g || o === A,
-    L = c.EnableTTSCommand.getSetting() && u.tts && O,
+    R = o === g || o === A,
+    L = c.EnableTTSCommand.getSetting() && u.tts && R,
     M = S.default.getTTSType(),
-    y = (null === (t = u.author) || void 0 === t ? void 0 : t.id) !== f.default.getId() && (M === v.TTSNotificationTypes.ALL_CHANNELS || M === v.TTSNotificationTypes.SELECTED_CHANNEL && O);
+    y = (null === (t = u.author) || void 0 === t ? void 0 : t.id) !== f.default.getId() && (M === v.TTSNotificationTypes.ALL_CHANNELS || M === v.TTSNotificationTypes.SELECTED_CHANNEL && R);
   if ((L || y) && ((null === (n = u.author) || void 0 === n ? void 0 : n.id) == null || !I.default.isBlocked(u.author.id))) {
     if (P.indexOf(u.id) >= 0) return !1;
     P.unshift(u.id) > 10 && P.pop();
@@ -130,7 +130,7 @@ function B(e) {
     let t = null !== (i = null !== (l = _.default.getNick(e, null === (a = u.author) || void 0 === a ? void 0 : a.id)) && void 0 !== l ? l : N.default.getName(u.author)) && void 0 !== i ? i : "",
       n = u.type === v.MessageTypes.REPLY ? null === (s = u.referenced_message) || void 0 === s ? void 0 : s.author : null,
       d = null != n ? null !== (r = _.default.getNick(e, null == n ? void 0 : n.id)) && void 0 !== r ? r : N.default.getName(n) : null;
-    G(b(u.content, t, e, d), !1, C.id, u.id, R.MAX_TTS_LENGTH)
+    G(b(u.content, t, e, d), !1, C.id, u.id, O.MAX_TTS_LENGTH)
   }
   return !1
 }
@@ -139,7 +139,7 @@ function H(e) {
   let {
     id: t,
     channelId: n
-  } = e, a = O.default.currentMessage;
+  } = e, a = R.default.currentMessage;
   return null != a && t === a.messageId && n === a.channelId && ((0, A.stopSpeaking)(), !0)
 }
 

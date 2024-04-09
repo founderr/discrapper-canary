@@ -26,15 +26,15 @@ var a = n("735250"),
   g = n("377171"),
   N = n("243778"),
   A = n("922409"),
-  O = n("899740"),
-  R = n("28476"),
+  R = n("899740"),
+  O = n("28476"),
   v = n("880257"),
   L = n("631885"),
   P = n("457396"),
   M = n("51596"),
   y = n("905423"),
-  D = n("155409"),
-  x = n("210887"),
+  x = n("155409"),
+  D = n("210887"),
   b = n("695346"),
   U = n("283595"),
   j = n("699516"),
@@ -121,7 +121,7 @@ let ee = e => {
       route: n,
       locationState: s,
       ...l
-    } = e, r = (0, o.useListItem)("activities"), u = (0, d.useStateFromStores)([x.default], () => x.default.getState().theme), c = (0, C.useActivitiesWhatsNewCount)();
+    } = e, r = (0, o.useListItem)("activities"), u = (0, d.useStateFromStores)([D.default], () => D.default.getState().theme), c = (0, C.useActivitiesWhatsNewCount)();
     return (0, a.jsx)(q.LinkButton, {
       selected: t,
       route: n,
@@ -141,10 +141,10 @@ let ee = e => {
   ea = e => {
     let {
       selected: t
-    } = e, n = (0, O.useMessageRequestsCount)(), s = (0, o.useListItem)("messageRequests"), {
+    } = e, n = (0, R.useMessageRequestsCount)(), s = (0, o.useListItem)("messageRequests"), {
       channelId: l
     } = (0, A.useMessageRequestSidebarState)();
-    if (!(0, R.useShouldShowMessageRequestsRow)()) return null;
+    if (!(0, O.useShouldShowMessageRequestsRow)()) return null;
     let i = null == l ? void 0 : () => h.default.preload(X.ME, l);
     return (0, a.jsx)(q.LinkButton, {
       selected: t,
@@ -251,7 +251,7 @@ let eo = e => {
   return (0, a.jsxs)("nav", {
     className: $.privateChannels,
     "aria-label": J.default.Messages.PRIVATE_CHANNELS_A11Y_LABEL,
-    children: [(0, a.jsx)(D.default, {
+    children: [(0, a.jsx)(x.default, {
       tutorialId: "direct-messages",
       position: "right",
       offsetX: -52,
@@ -330,8 +330,8 @@ function eu() {
     n = !b.DisableGamesTab.useSetting(),
     {
       theme: s
-    } = (0, d.useStateFromStoresObject)([x.default], () => ({
-      theme: x.default.theme
+    } = (0, d.useStateFromStoresObject)([D.default], () => ({
+      theme: D.default.theme
     })),
     l = (0, d.useStateFromStores)([U.default], () => U.default.hasLibraryApplication()),
     i = (0, d.useStateFromStores)([G.default], () => G.default.getCurrentPath());

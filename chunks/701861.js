@@ -22,9 +22,9 @@ var a = n("735250"),
   g = n("981631"),
   N = n("65154"),
   A = n("689938"),
-  O = n("432182");
+  R = n("432182");
 
-function R(e, t, n) {
+function O(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -109,7 +109,7 @@ class L extends s.PureComponent {
       onOtherHover: () => r ? null : (0, d.closeContextMenu)(),
       onClick: this.handleOpenPrivateChannel,
       children: t => (0, a.jsxs)("div", {
-        className: O.listItemContents,
+        className: R.listItemContents,
         children: [(0, a.jsx)(T.default, {
           user: e,
           status: l,
@@ -124,7 +124,7 @@ class L extends s.PureComponent {
           hovered: t,
           showAccountIdentifier: !0
         }), (0, a.jsxs)("div", {
-          className: O.actions,
+          className: R.actions,
           children: [(0, a.jsx)(S.default, {
             icon: _.default,
             tooltip: A.default.Messages.SEND_DM,
@@ -141,16 +141,16 @@ class L extends s.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), R(this, "peopleListItemRef", s.createRef()), R(this, "state", {
+    super(...e), O(this, "peopleListItemRef", s.createRef()), O(this, "state", {
       isActiveRow: !1
-    }), R(this, "handleOpenPrivateChannel", e => {
+    }), O(this, "handleOpenPrivateChannel", e => {
       let {
         user: t
       } = this.props;
       e.stopPropagation();
       let n = i().find(E.default.getMutablePrivateChannels(), e => e.type === g.ChannelTypes.DM && e.getRecipientId() === t.id);
       null != n ? (0, f.transitionTo)(g.Routes.CHANNEL(g.ME, n.id)) : u.default.openPrivateChannel(t.id)
-    }), R(this, "handleOpenActionsMenu", e => {
+    }), O(this, "handleOpenActionsMenu", e => {
       let {
         user: t
       } = this.props;

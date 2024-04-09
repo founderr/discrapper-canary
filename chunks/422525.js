@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return f
+    return E
   }
 });
 var s = i("735250");
@@ -15,17 +15,17 @@ var n = i("442837"),
   r = i("994763"),
   c = i("984933"),
   S = i("981631"),
-  E = i("689938");
+  f = i("689938");
 
-function f(e) {
+function E(e) {
   function t(t) {
     o.default.open(e.id, t)
   }
   let i = (0, n.useStateFromStoresArray)([c.default], () => c.default.getChannels(e.id).SELECTABLE, [e]),
-    f = (0, d.default)(e);
-  return __OVERLAY__ || !f ? null : (0, s.jsx)(a.MenuItem, {
+    E = (0, d.default)(e);
+  return __OVERLAY__ || !E ? null : (0, s.jsx)(a.MenuItem, {
     id: "guild-settings",
-    label: E.default.Messages.SERVER_SETTINGS,
+    label: f.default.Messages.SERVER_SETTINGS,
     action: () => t(),
     children: (0, r.getGuildSettingsSections)(e, i).map(i => {
       let {
@@ -40,7 +40,7 @@ function f(e) {
           return (0, s.jsx)(a.MenuItem, {
             id: n,
             action: () => t(n),
-            label: E.default.Messages.GUILD_SETTINGS_COMMUNITY
+            label: f.default.Messages.GUILD_SETTINGS_COMMUNITY
           }, n);
         case S.GuildSettingsSections.APP_DIRECTORY:
           return (0, s.jsx)(a.MenuItem, {

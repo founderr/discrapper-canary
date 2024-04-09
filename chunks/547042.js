@@ -35,8 +35,8 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
       analyticsLocation: s,
       analyticsType: N,
       ctaText: A,
-      dismissText: O,
-      description: R,
+      dismissText: R,
+      description: O,
       learnMore: v,
       title: L,
       videoPosterUrl: P,
@@ -66,17 +66,17 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
           }
       }
     }(a), {
-      analyticsLocations: D
+      analyticsLocations: x
     } = (0, E.default)(s);
     i.useEffect(() => {
       C.default.track(m.AnalyticEvents.TOOLTIP_VIEWED, {
         type: N
       })
     }, [N]);
-    let x = (0, u.useAppContext)() === m.AppContext.POPOUT,
+    let D = (0, u.useAppContext)() === m.AppContext.POPOUT,
       b = (0, r.useStateFromStores)([h.default], () => h.default.getChannel(t), [t]);
     return (0, l.jsx)(E.AnalyticsLocationProvider, {
-      value: D,
+      value: x,
       children: (0, l.jsx)("div", {
         className: p.wrapper,
         children: (0, l.jsx)("div", {
@@ -104,7 +104,7 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
               className: p.subheaderText,
               variant: "text-xs/normal",
               color: "always-white",
-              children: [R, v ? (0, l.jsxs)(l.Fragment, {
+              children: [O, v ? (0, l.jsxs)(l.Fragment, {
                 children: [" ", (0, l.jsx)(o.Anchor, {
                   className: p.learnMoreLink,
                   href: "https://support.discord.com/hc/articles/4422142836759",
@@ -118,7 +118,7 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                 onClick: () => {
                   n(S.ContentDismissActionType.UNKNOWN)
                 },
-                children: O
+                children: R
               }), (0, l.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,
                 look: o.Button.Looks.INVERTED,
@@ -132,8 +132,8 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                       object: m.AnalyticsObjects.ACTIVITIES_COACH_MARK,
                       objectType: m.AnalyticsObjectTypes.ACTIVITY
                     },
-                    openInPopout: x,
-                    analyticsLocations: D
+                    openInPopout: D,
+                    analyticsLocations: x
                   }), (0, d.fetchShelf)({
                     guildId: b.guild_id
                   }))

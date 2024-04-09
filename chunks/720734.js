@@ -26,15 +26,15 @@ var a = n("735250"),
   g = n("410575"),
   N = n("941129"),
   A = n("83200"),
-  O = n("634894"),
-  R = n("586902"),
+  R = n("634894"),
+  O = n("586902"),
   v = n("1585"),
   L = n("304761"),
   P = n("865427"),
   M = n("571250"),
   y = n("628581"),
-  D = n("55311"),
-  x = n("575175"),
+  x = n("55311"),
+  D = n("575175"),
   b = n("377171"),
   U = n("676035"),
   j = n("427217"),
@@ -80,15 +80,15 @@ var a = n("735250"),
   eg = n("546591"),
   eN = n("86813"),
   eA = n("826026"),
-  eO = n("937482"),
-  eR = n("87888"),
+  eR = n("937482"),
+  eO = n("87888"),
   ev = n("976401"),
   eL = n("333454"),
   eP = n("864441"),
   eM = n("26290"),
   ey = n("626135"),
-  eD = n("768581"),
-  ex = n("572004"),
+  ex = n("768581"),
+  eD = n("572004"),
   eb = n("70956"),
   eU = n("374023"),
   ej = n("51144"),
@@ -183,10 +183,10 @@ class eW extends s.PureComponent {
     if (null == e) return null;
     let s = null,
       l = m.TooltipColors.PRIMARY;
-    return ex.SUPPORTS_COPY && (s = eF.default.Messages.ACCOUNT_CLICK_TO_COPY, n && (s = this.renderCopiedSuccess(), l = this.isCopiedStreakGodlike ? m.TooltipColors.RED : m.TooltipColors.GREEN)), (0, a.jsx)(m.Tooltip, {
+    return eD.SUPPORTS_COPY && (s = eF.default.Messages.ACCOUNT_CLICK_TO_COPY, n && (s = this.renderCopiedSuccess(), l = this.isCopiedStreakGodlike ? m.TooltipColors.RED : m.TooltipColors.GREEN)), (0, a.jsx)(m.Tooltip, {
       text: s,
       forceOpen: t,
-      "aria-label": !!ex.SUPPORTS_COPY && eF.default.Messages.ACCOUNT_CLICK_TO_COPY,
+      "aria-label": !!eD.SUPPORTS_COPY && eF.default.Messages.ACCOUNT_CLICK_TO_COPY,
       color: l,
       delay: 500,
       onAnimationRest: (e, a) => {
@@ -211,7 +211,7 @@ class eW extends s.PureComponent {
             null == t || t(), this.handleCopyTag()
           },
           className: i()(eB.nameTag, {
-            [eB.canCopy]: ex.SUPPORTS_COPY
+            [eB.canCopy]: eD.SUPPORTS_COPY
           }),
           children: this.renderNameTag()
         })
@@ -228,7 +228,7 @@ class eW extends s.PureComponent {
       showTaglessAccountPanel: r
     } = this.props;
     if (null == n) return null;
-    let o = (0, eD.getAvatarDecorationURL)({
+    let o = (0, ex.getAvatarDecorationURL)({
       avatarDecoration: n.avatarDecoration,
       size: (0, v.getDecorationSizeForAvatarSize)(m.AvatarSizes.SIZE_32)
     });
@@ -259,7 +259,7 @@ class eW extends s.PureComponent {
             className: eB.avatar
           }), l || r ? (0, a.jsx)("div", {
             className: i()(eB.nameTag, {
-              [eB.canCopy]: ex.SUPPORTS_COPY
+              [eB.canCopy]: eD.SUPPORTS_COPY
             }),
             children: r ? (0, a.jsx)(ev.default, {
               tooltipText: null,
@@ -448,12 +448,12 @@ class eW extends s.PureComponent {
         serverMute: e,
         suppress: t
       } = this.props;
-      (0, x.default)(e, t)
+      (0, D.default)(e, t)
     }), eH(this, "handleToggleSelfDeaf", () => {
       let {
         serverDeaf: e
       } = this.props;
-      (0, D.default)(e)
+      (0, x.default)(e)
     }), eH(this, "handleOpenAccountSettings", () => {
       this.handleOpenSettings()
     }), eH(this, "handleOpenSettings", function() {
@@ -524,7 +524,7 @@ class eW extends s.PureComponent {
         copiedStreak: n
       } = this.state;
       if (null == e) return;
-      (0, ex.copy)(ej.default.getUserTag(e, {
+      (0, eD.copy)(ej.default.getUserTag(e, {
         decoration: "never",
         identifiable: "always"
       })), ey.default.track(ew.AnalyticEvents.TEXT_COPIED, {
@@ -616,7 +616,7 @@ function eK() {
       streaming: null != em.default.findActivity(e => e.type === ew.ActivityTypes.STREAMING),
       status: em.default.getStatus()
     })),
-    d = (0, R.default)({
+    d = (0, O.default)({
       userId: n
     }),
     c = ej.default.useUserTag(e, {
@@ -644,13 +644,13 @@ function eK() {
     v = (0, r.useStateFromStores)([e_.default], () => e_.default.getEverSpeakingWhileMuted()),
     M = (0, r.useStateFromStores)([eh.default], () => eh.default.hasLayers()),
     y = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || M || eU.ProcessArgs.isDisallowPopupsSet(),
-    D = (0, Q.useIsEligibleForPomelo)();
+    x = (0, Q.useIsEligibleForPomelo)();
   s.useEffect(() => {
     z.default.trackExposure({
       location: "08bd40_3"
     })
   });
-  let x = (0, r.useStateFromStores)([Y.default], () => null != Y.default.getAwaitingRemoteSessionInfo()),
+  let D = (0, r.useStateFromStores)([Y.default], () => null != Y.default.getAwaitingRemoteSessionInfo()),
     {
       isPopupEnabled: b,
       isJoinedTagButtonEnabled: j,
@@ -669,10 +669,10 @@ function eK() {
     en = (0, ee.useCanSeeSafetyEducationReportingCoachmark)(),
     ea = (0, er.default)(e),
     el = "account";
-  (0, O.useTriggerDebuggingAA)({
+  (0, R.useTriggerDebuggingAA)({
     location: el + " auto on",
     autoTrackExposure: !0
-  }), (0, O.useTriggerDebuggingAA)({
+  }), (0, R.useTriggerDebuggingAA)({
     location: el + " auto off",
     autoTrackExposure: !1
   }), (0, $.useSafetyEducationAATriggerPoint)();
@@ -735,8 +735,8 @@ function eK() {
     streaming: i,
     suppress: C,
     webBuildOverride: T,
-    awaitingRemote: x,
-    isEligibleForPomelo: D
+    awaitingRemote: D,
+    isEligibleForPomelo: x
   })
 }
 
@@ -746,8 +746,8 @@ function ez(e) {
     isEligibleForPomelo: n,
     onClick: s,
     onContextMenu: l
-  } = e, i = (0, m.useRedesignIconContext)().enabled, r = null, o = eO.default, u = (0, C.useSettingsLottie)();
-  return i ? o = null != t ? E.SettingsInfoIcon : n ? f.SettingsCircleIcon : u.Component : null != t ? r = (0, a.jsx)(eR.default, {
+  } = e, i = (0, m.useRedesignIconContext)().enabled, r = null, o = eR.default, u = (0, C.useSettingsLottie)();
+  return i ? o = null != t ? E.SettingsInfoIcon : n ? f.SettingsCircleIcon : u.Component : null != t ? r = (0, a.jsx)(eO.default, {
     width: 9,
     height: 9,
     className: eB.hasBuildOverride,

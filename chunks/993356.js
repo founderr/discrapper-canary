@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return E
+    return f
   }
 });
 var s = i("735250");
@@ -28,14 +28,14 @@ function S() {
   }]
 }
 
-function E(e) {
-  var t, E;
-  let f = function(e) {
+function f(e) {
+  var t, f;
+  let E = function(e) {
       let {
         suppressEveryone: t,
         suppressRoles: i,
-        mobilePush: E,
-        messageNotifications: f,
+        mobilePush: f,
+        messageNotifications: E,
         notifyHighlights: g
       } = (0, n.useStateFromStoresObject)([o.default], () => ({
         suppressEveryone: o.default.isSuppressEveryoneEnabled(e.id),
@@ -62,7 +62,7 @@ function E(e) {
               action: () => M({
                 message_notifications: t
               }, d.NotificationLabel.notifications(t)),
-              checked: t === f
+              checked: t === E
             }, t)
           })
         }), (0, s.jsxs)(a.MenuGroup, {
@@ -95,21 +95,21 @@ function E(e) {
             id: "mobile-push",
             label: c.default.Messages.FORM_LABEL_MOBILE_PUSH_NOTIFICATIONS,
             action: () => M({
-              mobile_push: !E
-            }, d.NotificationLabel.mobilePush(!E)),
-            checked: E
+              mobile_push: !f
+            }, d.NotificationLabel.mobilePush(!f)),
+            checked: f
           })
         })]
       })
     }(e),
     g = (0, n.useStateFromStores)([o.default], () => o.default.getMessageNotifications(e.id), [e.id]),
-    _ = null === (E = S()) || void 0 === E ? void 0 : null === (t = E.find(e => {
+    _ = null === (f = S()) || void 0 === f ? void 0 : null === (t = f.find(e => {
       let {
         setting: t
       } = e;
       return t === g
     })) || void 0 === t ? void 0 : t.label;
-  return null != f ? (0, s.jsx)(a.MenuItem, {
+  return null != E ? (0, s.jsx)(a.MenuItem, {
     id: "guild-notifications",
     label: c.default.Messages.NOTIFICATION_SETTINGS,
     subtext: _,
@@ -122,6 +122,6 @@ function E(e) {
         guildId: e.id
       })
     }),
-    children: f
+    children: E
   }) : null
 }

@@ -22,15 +22,15 @@ var a = n("735250"),
   g = n("283595"),
   N = n("417363"),
   A = n("941128"),
-  O = n("451478"),
-  R = n("285952"),
+  R = n("451478"),
+  O = n("285952"),
   v = n("366695"),
   L = n("366966"),
   P = n("151011"),
   M = n("774832"),
   y = n("465670"),
-  D = n("786048"),
-  x = n("897353"),
+  x = n("786048"),
+  D = n("897353"),
   b = n("424218"),
   U = n("780570"),
   j = n("353042"),
@@ -274,8 +274,8 @@ class Z extends s.PureComponent {
       foregroundGradientColor: s,
       message: l
     } = e;
-    return (0, a.jsxs)(R.default, {
-      direction: R.default.Direction.VERTICAL,
+    return (0, a.jsxs)(O.default, {
+      direction: O.default.Direction.VERTICAL,
       children: [(0, a.jsx)(f.Progress, {
         percent: t,
         size: f.Progress.Sizes.SMALL,
@@ -293,8 +293,8 @@ class Z extends s.PureComponent {
       percents: t,
       message: n
     } = e;
-    return (0, a.jsxs)(R.default, {
-      direction: R.default.Direction.VERTICAL,
+    return (0, a.jsxs)(O.default, {
+      direction: O.default.Direction.VERTICAL,
       children: [(0, a.jsx)(f.StackedProgress, {
         percents: t,
         size: f.Progress.Sizes.SMALL,
@@ -469,12 +469,12 @@ class Z extends s.PureComponent {
   }
 }
 let X = () => (0, a.jsx)(Y, {
-    icon: x.default,
+    icon: D.default,
     tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_RESUME,
     onClick: () => _.resume()
   }),
   J = () => (0, a.jsx)(Y, {
-    icon: D.default,
+    icon: x.default,
     tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_PAUSE,
     onClick: () => _.pause()
   }),
@@ -501,8 +501,8 @@ let X = () => (0, a.jsx)(Y, {
   et = [{
     key: Q.NAME,
     cellClassName: F.nameCell,
-    render: e => (0, a.jsxs)(R.default, {
-      align: R.default.Align.CENTER,
+    render: e => (0, a.jsxs)(O.default, {
+      align: O.default.Align.CENTER,
       children: [(0, a.jsx)(v.default, {
         game: e.application,
         className: F.__invalid_gameIcon,
@@ -539,8 +539,8 @@ let X = () => (0, a.jsx)(Y, {
         item: e
       })) : s = (0, a.jsx)(ee, {
         item: e
-      }), (0, a.jsxs)(R.default, {
-        justify: R.default.Justify.END,
+      }), (0, a.jsxs)(O.default, {
+        justify: O.default.Justify.END,
         children: [n, s]
       })
     }
@@ -649,12 +649,12 @@ function ea(e, t, n, a) {
     }), e
   }, [])
 }
-t.default = (0, S.default)(u.default.connectStores([I.default, N.default, A.default, T.default, O.default], () => {
+t.default = (0, S.default)(u.default.connectStores([I.default, N.default, A.default, T.default, R.default], () => {
   let e = ea(A.default.activeItems, !1, I.default, N.default);
   return {
     applications: [...e, ...ea(A.default.finishedItems, !0, I.default, N.default)],
     paused: A.default.paused,
-    isFocused: O.default.isFocused(),
+    isFocused: R.default.isFocused(),
     theme: T.default.theme
   }
 })((0, m.default)(en)))

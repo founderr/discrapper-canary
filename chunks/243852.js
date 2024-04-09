@@ -17,8 +17,8 @@ var a, s, l, i, r, o = n("442837"),
   g = n("981631");
 let N = "ActivityTrackingStore",
   A = 30 * S.default.Millis.MINUTE,
-  O = 5 * S.default.Millis.MINUTE,
-  R = null !== (a = u.Storage.get(N)) && void 0 !== a ? a : {},
+  R = 5 * S.default.Millis.MINUTE,
+  O = null !== (a = u.Storage.get(N)) && void 0 !== a ? a : {},
   v = {},
   L = !1;
 
@@ -26,14 +26,14 @@ function P(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
   t && M(e, !0);
   let n = v[e.applicationId];
-  null != n && (n.stop(), delete v[e.applicationId]), delete R[e.applicationId], u.Storage.set(N, R)
+  null != n && (n.stop(), delete v[e.applicationId]), delete O[e.applicationId], u.Storage.set(N, O)
 }
 
 function M(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = Date.now(),
     a = null != e.updatedAt ? n - e.updatedAt : 0;
-  a > A + O && (a = 0);
+  a > A + R && (a = 0);
   let s = (0, I.shouldShareApplicationActivity)(e.applicationId, T.default);
   f.default.updateActivity({
     applicationId: e.applicationId,
@@ -49,7 +49,7 @@ function M(e) {
   });
   t && s && l && _.default.updateUserRecentGamesLocal(e.applicationId, Math.floor(a / 1e3));
   let i = v[e.applicationId];
-  null == i && (i = v[e.applicationId] = new d.Interval).start(A, () => M(e)), !t && (R[e.applicationId] = e, u.Storage.set(N, R))
+  null == i && (i = v[e.applicationId] = new d.Interval).start(A, () => M(e)), !t && (O[e.applicationId] = e, u.Storage.set(N, O))
 }
 
 function y() {
@@ -63,60 +63,60 @@ function y() {
     }
     of t) {
     let t = p.default.getGameByName(e);
-    if (null != t) n.add(t.id), !(t.id in R) && M({
+    if (null != t) n.add(t.id), !(t.id in O) && M({
       applicationId: t.id,
       updatedAt: Date.now(),
       distributor: a,
       exePath: (0, E.removeExecutablePathPrefix)(null != s ? s : "")
     })
   }
-  for (let t of Object.keys(R)) !n.has(t) && P(R[t], e)
+  for (let t of Object.keys(O)) !n.has(t) && P(O[t], e)
 }
 
-function D() {
-  for (let e of Object.keys(R)) P(R[e]);
+function x() {
+  for (let e of Object.keys(O)) P(O[e]);
   L = !1
 }
-class x extends(s = o.default.Store) {
+class D extends(s = o.default.Store) {
   initialize() {
     this.waitFor(h.default, m.default, T.default), this.syncWith([m.default], y)
   }
   getActivities() {
-    return R
+    return O
   }
 }
-r = "ActivityTrackingStore", (i = "displayName") in(l = x) ? Object.defineProperty(l, i, {
+r = "ActivityTrackingStore", (i = "displayName") in(l = D) ? Object.defineProperty(l, i, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[i] = r, new x(c.default, {
+}) : l[i] = r, new D(c.default, {
   RUNNING_GAMES_CHANGE: () => y(),
   CONNECTION_OPEN: function() {
     if (L) return !1;
-    for (let e of Object.keys(R)) M(R[e]);
+    for (let e of Object.keys(O)) M(O[e]);
     y(!1), L = !0
   },
   CONNECTION_CLOSED: function(e) {
     let {
       code: t
     } = e;
-    4004 === t && D()
+    4004 === t && x()
   },
-  LOGOUT: D,
+  LOGOUT: x,
   ACTIVITY_UPDATE_SUCCESS: function(e) {
     let {
       applicationId: t,
       token: n
-    } = e, a = R[t];
+    } = e, a = O[t];
     if (null == a) return !1;
-    a.token = n, u.Storage.set(N, R)
+    a.token = n, u.Storage.set(N, O)
   },
   ACTIVITY_UPDATE_FAIL: function(e) {
     let {
       applicationId: t
-    } = e, n = R[t];
+    } = e, n = O[t];
     if (null == n) return !1;
-    n.token = null, n.updatedAt = null, u.Storage.set(N, R)
+    n.token = null, n.updatedAt = null, u.Storage.set(N, O)
   }
 })

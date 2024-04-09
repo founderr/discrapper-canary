@@ -23,7 +23,7 @@ var a = n("735250"),
   N = n("794711"),
   A = n("926895");
 
-function O(e) {
+function R(e) {
   let {
     header: t,
     description: n,
@@ -55,7 +55,7 @@ function O(e) {
   })
 }
 
-function R() {
+function O() {
   return (0, a.jsxs)("div", {
     className: i()(g.box, g.linkingBanner, g.linkingBannerParent),
     children: [(0, a.jsxs)("div", {
@@ -81,15 +81,15 @@ function R() {
       })]
     }), (0, a.jsxs)("div", {
       className: g.steps,
-      children: [(0, a.jsx)(O, {
+      children: [(0, a.jsx)(R, {
         header: T.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_HEADER,
         description: T.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_DESCRIPTION,
         stepNumber: 1
-      }), (0, a.jsx)(O, {
+      }), (0, a.jsx)(R, {
         header: T.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_2_HEADER,
         description: T.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_2_DESCRIPTION,
         stepNumber: 2
-      }), (0, a.jsx)(O, {
+      }), (0, a.jsx)(R, {
         header: T.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_3_HEADER,
         description: T.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_3_DESCRIPTION,
         stepNumber: 3
@@ -249,7 +249,7 @@ let P = () => {
       })
     })]
   }) : null,
-  D = () => {
+  x = () => {
     let e = (0, h.useUserForLinkStatus)(p.UserLinkStatus.PENDING),
       t = (0, c.useAgeSpecificText)(T.default.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_TEEN.format({
         count: e.length
@@ -266,6 +266,6 @@ t.default = () => {
   let e = (0, E.default)();
   return (0, a.jsxs)("div", {
     className: g.container,
-    children: [e ? (0, a.jsx)(R, {}) : (0, a.jsx)(v, {}), (0, a.jsx)(P, {}), (0, a.jsx)(D, {}), (0, a.jsx)(M, {}), (0, a.jsx)(y, {})]
+    children: [e ? (0, a.jsx)(O, {}) : (0, a.jsx)(v, {}), (0, a.jsx)(P, {}), (0, a.jsx)(x, {}), (0, a.jsx)(M, {}), (0, a.jsx)(y, {})]
   })
 }

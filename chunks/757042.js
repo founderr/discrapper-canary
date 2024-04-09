@@ -26,8 +26,8 @@ var a = n("735250"),
   g = n("232700"),
   N = n("981631"),
   A = n("921944"),
-  O = n("689938"),
-  R = n("127906");
+  R = n("689938"),
+  O = n("127906");
 let v = n("205281");
 
 function L() {
@@ -43,32 +43,32 @@ function L() {
     e ? null === (t = P.current) || void 0 === t || t.play() : null === (n = P.current) || void 0 === n || n.pause()
   }, [e]), n && l) ? (0, a.jsx)(S.default, {
     children: (0, a.jsxs)("div", {
-      className: i()(R.wrapper, e ? R.wrapperHovered : null),
+      className: i()(O.wrapper, e ? O.wrapperHovered : null),
       onMouseLeave: () => t(!1),
       children: [(0, a.jsxs)(f.Clickable, {
-        className: R.closeButton,
+        className: O.closeButton,
         onClick: () => M(A.ContentDismissActionType.DISMISS),
         children: [(0, a.jsx)(o.CloseSmallIcon, {
-          className: R.closeIcon,
+          className: O.closeIcon,
           color: c.default.colors.WHITE
         }), (0, a.jsx)(u.Text, {
           variant: "text-xs/bold",
           color: "always-white",
-          children: O.default.Messages.PACKAGES_ENTRYPOINT_CLOSE
+          children: R.default.Messages.PACKAGES_ENTRYPOINT_CLOSE
         })]
       }), (0, a.jsxs)("div", {
-        className: R.contentWrapper,
+        className: O.contentWrapper,
         children: [(0, a.jsx)("div", {
-          className: R.videoWrapper,
+          className: O.videoWrapper,
           children: (0, a.jsx)(I.default, {
             ref: P,
-            className: R.video,
+            className: O.video,
             src: v,
             muted: !0,
             loop: !0
           })
         }), (0, a.jsxs)(f.Clickable, {
-          className: R.entrypoint,
+          className: O.entrypoint,
           onClick: () => {
             M(A.ContentDismissActionType.PRIMARY), E.default.open(N.UserSettingsSections.LOOTBOXES, null, {
               analyticsLocations: L
@@ -76,33 +76,33 @@ function L() {
           },
           onMouseEnter: () => t(!0),
           children: [(0, a.jsx)("div", {
-            className: R.backgroundWrapper,
+            className: O.backgroundWrapper,
             children: (0, a.jsx)(T.default, {
-              className: R.backgroundImage,
+              className: O.backgroundImage,
               pageMultiplier: 5
             })
           }), (0, a.jsx)(m.default, {
-            className: R.animation,
+            className: O.animation,
             importData: p.importLootboxAnimationData,
             nextScene: g.BoxAnimationScenes.IDLE,
             sceneSegments: g.BoxAnimationSceneSegments
           }), (0, a.jsxs)("div", {
-            className: R.body,
+            className: O.body,
             children: [(0, a.jsx)(u.Text, {
               variant: "text-md/bold",
               color: "always-white",
-              children: O.default.Messages.PACKAGES_ENTRYPOINT_TITLE
+              children: R.default.Messages.PACKAGES_ENTRYPOINT_TITLE
             }), (0, a.jsx)(u.Text, {
               variant: "text-sm/medium",
               color: "always-white",
-              children: O.default.Messages.PACKAGES_ENTRYPOINT_DESCRIPTION
+              children: R.default.Messages.PACKAGES_ENTRYPOINT_DESCRIPTION
             })]
           }), (0, a.jsx)("div", {
-            className: R.buttonWrapper,
+            className: O.buttonWrapper,
             children: (0, a.jsx)("div", {
-              className: R.iconButton,
+              className: O.iconButton,
               children: (0, a.jsx)(r.ArrowLargeRightIcon, {
-                className: R.buttonIcon,
+                className: O.buttonIcon,
                 color: c.default.colors.WHITE
               })
             })

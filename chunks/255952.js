@@ -45,7 +45,7 @@ function A(e) {
   })
 }
 
-function O(e) {
+function R(e) {
   let {
     customStatus: t
   } = e, n = e => {
@@ -87,7 +87,7 @@ function O(e) {
   })
 }
 
-function R(e) {
+function O(e) {
   let {
     focused: t
   } = e;
@@ -187,7 +187,7 @@ let v = e => {
     }), (0, a.jsx)(u.MenuSeparator, {}), (0, a.jsx)(u.MenuItem, {
       id: "custom-status",
       keepItemStyles: !0,
-      render: () => (0, a.jsx)(O, {
+      render: () => (0, a.jsx)(R, {
         customStatus: t
       }),
       action: () => {
@@ -208,7 +208,7 @@ let v = e => {
         let {
           isFocused: t
         } = e;
-        return (0, a.jsx)(R, {
+        return (0, a.jsx)(O, {
           focused: t
         })
       },

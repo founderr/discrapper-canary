@@ -29,15 +29,15 @@ var a = n("735250"),
   g = n("695346"),
   N = n("594174"),
   A = n("153124"),
-  O = n("158010"),
-  R = n("26290"),
+  R = n("158010"),
+  O = n("26290"),
   v = n("626135"),
   L = n("792125"),
   P = n("280570"),
   M = n("914788"),
   y = n("841409"),
-  D = n("652262"),
-  x = n("880257"),
+  x = n("652262"),
+  D = n("880257"),
   b = n("631885"),
   U = n("830746"),
   j = n("731934"),
@@ -62,7 +62,7 @@ function K(e) {
   let {
     section: t,
     handleItemSelect: n
-  } = e, s = (0, b.usePendingRequestCount)(), l = (0, x.default)();
+  } = e, s = (0, b.usePendingRequestCount)(), l = (0, D.default)();
   return (0, a.jsxs)(c.TabBar, {
     className: V.settingsTabBar,
     "aria-label": H.default.Messages.FAMILY_CENTER_TITLE,
@@ -78,7 +78,7 @@ function K(e) {
       className: V.settingsTabBarItem,
       id: w.FamilyCenterSubPages.REQUESTS,
       "aria-label": H.default.Messages.FAMILY_CENTER_REQUESTS_TAB,
-      children: [H.default.Messages.FAMILY_CENTER_REQUESTS_TAB, s > 0 ? (0, a.jsx)(R.NumberBadge, {
+      children: [H.default.Messages.FAMILY_CENTER_REQUESTS_TAB, s > 0 ? (0, a.jsx)(O.NumberBadge, {
         className: V.badge,
         count: s
       }) : null]
@@ -103,7 +103,7 @@ function z(e) {
     "aria-labelledby": l,
     toolbar: !0,
     children: [(0, a.jsx)(S.default.Icon, {
-      icon: O.default,
+      icon: R.default,
       "aria-hidden": !0
     }), (0, a.jsx)(S.default.Title, {
       id: l,
@@ -122,7 +122,7 @@ function z(e) {
         id: w.FamilyCenterSubPages.REQUESTS,
         className: V.item,
         "aria-label": H.default.Messages.FAMILY_CENTER_REQUESTS_TAB,
-        children: [H.default.Messages.FAMILY_CENTER_REQUESTS_TAB, o > 0 ? (0, a.jsx)(R.NumberBadge, {
+        children: [H.default.Messages.FAMILY_CENTER_REQUESTS_TAB, o > 0 ? (0, a.jsx)(O.NumberBadge, {
           className: V.badge,
           count: o
         }) : null]
@@ -132,11 +132,11 @@ function z(e) {
 }
 
 function q() {
-  let e = (0, x.default)(),
+  let e = (0, D.default)(),
     t = (0, b.useAcceptedRequestsCount)(),
     n = (0, m.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE),
     l = (0, u.useStateFromStores)([M.default], () => M.default.getIsInitialized()),
-    r = (0, D.useSelectedTeenId)(),
+    r = (0, x.useSelectedTeenId)(),
     {
       selectedTab: f,
       handleTabChange: h
@@ -184,8 +184,8 @@ function q() {
 function Q() {
   let {
     analyticsLocations: e
-  } = (0, _.default)(h.default.FAMILY_CENTER), t = (0, x.default)(), n = (0, b.useAcceptedRequestsCount)(), l = (0, m.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE), r = (0, u.useStateFromStores)([M.default], () => M.default.getIsInitialized()), S = (0, D.useSelectedTeenId)(), O = (0, u.useStateFromStores)([T.default], () => T.default.theme), {
-    selectedTab: R,
+  } = (0, _.default)(h.default.FAMILY_CENTER), t = (0, D.default)(), n = (0, b.useAcceptedRequestsCount)(), l = (0, m.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE), r = (0, u.useStateFromStores)([M.default], () => M.default.getIsInitialized()), S = (0, x.useSelectedTeenId)(), R = (0, u.useStateFromStores)([T.default], () => T.default.theme), {
+    selectedTab: O,
     handleTabChange: L
   } = (0, y.default)(), U = (0, A.useUID)(), j = N.default.getCurrentUser(), G = null != t, Y = r && null != j && !G;
   if (s.useEffect(() => {
@@ -198,7 +198,7 @@ function Q() {
         is_considered_adult: t,
         num_of_accepted_links: n,
         selected_teen_id: S,
-        initial_page: w.FamilyCenterSubPageAnalyticsIds[R],
+        initial_page: w.FamilyCenterSubPageAnalyticsIds[O],
         source: w.FamilyCenterPageLocationAnalyticsIds[w.FamilyCenterPageLocation.SIDENAV]
       }), I.default.increment({
         name: o.MetricEvents.FAMILY_CENTER_VIEW
@@ -207,7 +207,7 @@ function Q() {
       let e = g.FamilyCenterEnabled.getSetting();
       r && t && void 0 === e && g.FamilyCenterEnabled.updateSetting(!0)
     }, [r, t]), Y) return (0, E.openAgeGateModal)(F.AgeGateSource.FAMILY_CENTER), null;
-  let K = R !== w.FamilyCenterSubPages.SETTINGS ? R : w.FamilyCenterSubPages.ACTIVITY,
+  let K = O !== w.FamilyCenterSubPages.SETTINGS ? O : w.FamilyCenterSubPages.ACTIVITY,
     q = W[K];
   return (0, a.jsx)(_.AnalyticsLocationProvider, {
     value: e,
@@ -217,7 +217,7 @@ function Q() {
       children: [(0, a.jsx)(C.AppPageTitle, {
         location: H.default.Messages.FAMILY_CENTER_TITLE
       }), (0, a.jsx)(z, {
-        theme: O,
+        theme: R,
         section: K,
         handleItemSelect: e => {
           L(e)

@@ -22,13 +22,13 @@ var a = n("735250"),
   g = n("689938"),
   N = n("653196");
 let A = [T.ClanSetupSteps.FOUNDATIONAL_INTRO, T.ClanSetupSteps.GAMES, T.ClanSetupSteps.PLAYSTYLE, T.ClanSetupSteps.PERSONALITY_INTRO, T.ClanSetupSteps.INTERESTS, T.ClanSetupSteps.DESCRIPTION, T.ClanSetupSteps.PRIMETIME, T.ClanSetupSteps.IDENTITY_INTRO, T.ClanSetupSteps.CUSTOMIZE, T.ClanSetupSteps.APPLICATION_INTRO, T.ClanSetupSteps.MEMBER_APPLICATION],
-  O = {
+  R = {
     [T.ClanSetupSteps.FOUNDATIONAL_INTRO]: [T.ClanSetupSteps.GAMES, T.ClanSetupSteps.PLAYSTYLE],
     [T.ClanSetupSteps.PERSONALITY_INTRO]: [T.ClanSetupSteps.INTERESTS, T.ClanSetupSteps.DESCRIPTION, T.ClanSetupSteps.PRIMETIME],
     [T.ClanSetupSteps.IDENTITY_INTRO]: [T.ClanSetupSteps.CUSTOMIZE],
     [T.ClanSetupSteps.APPLICATION_INTRO]: [T.ClanSetupSteps.MEMBER_APPLICATION]
   },
-  R = e => {
+  O = e => {
     var t, n;
     let {
       currentStep: l,
@@ -79,7 +79,7 @@ let A = [T.ClanSetupSteps.FOUNDATIONAL_INTRO, T.ClanSetupSteps.GAMES, T.ClanSetu
       className: N.footer,
       children: [(0, a.jsx)("div", {
         className: N.progressContainer,
-        children: Object.entries(O).map(e => {
+        children: Object.entries(R).map(e => {
           let [t, n] = e, s = n.includes(l) ? n.indexOf(l) / n.length : Number(t) < l ? 1 : 0;
           return (0, a.jsx)("div", {
             className: N.progressStep,
@@ -124,7 +124,7 @@ t.default = e => {
     setPage: n,
     onClose: l
   } = e, {
-    progress: O,
+    progress: R,
     errors: v
   } = (0, r.useStateFromStoresObject)([f.default], () => {
     var e, n;
@@ -141,7 +141,7 @@ t.default = e => {
     tag: x,
     primetime: D,
     currentStep: b
-  } = O, U = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), [j, G] = s.useState(!0);
+  } = R, U = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), [j, G] = s.useState(!0);
   s.useEffect(() => {
     u.default.getDetectableGames()
   }, []);
@@ -242,7 +242,7 @@ t.default = e => {
             }
           })()
         })
-      }), (0, a.jsx)(R, {
+      }), (0, a.jsx)(O, {
         currentStep: b,
         setCurrentStep: w,
         selectedGames: L,
