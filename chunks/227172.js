@@ -69,14 +69,19 @@ t.default = e => {
         textColor: "always-white",
         iconColor: i.tokens.colors.WHITE
       })]
-    }), (0, a.jsx)(p.PopoutReactor, {
-      user: _,
-      channel: t,
-      updatePopoutPosition: g,
-      generateReactionImage: v,
-      reactionImageAltText: (0, c.getContentAltText)(n, _),
-      entry: n,
-      requestId: o
+    }), (0, a.jsxs)(p.PopoutInteractionsContainer, {
+      children: [(0, a.jsx)(p.PopoutReactor, {
+        user: _,
+        channel: t,
+        updatePopoutPosition: g,
+        generateReactionImage: v,
+        reactionImageAltText: (0, c.getContentAltText)(n, _),
+        entry: n,
+        requestId: o
+      }), (0, a.jsx)(p.PopoutJoinPrompt, {
+        entry: n,
+        user: _
+      })]
     })]
   })
 }
