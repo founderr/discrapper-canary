@@ -17214,5 +17214,10 @@ e.exports = Object.freeze({
   MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS: "{count} {count, plural, =1 {hr} other {hrs}} this week",
   USER_RECENT_GAMES_PLAYED_LAST_WEEK_HOURS: "{count} {count, plural, =1 {hr} other {hrs}} this week",
   USER_RECENT_GAMES_PLAYED_LAST_WEEK_MINUTES: "{count} {count, plural, =1 {min} other {mins}} this week",
-  USER_RECENT_GAMES_PLAYED_LAST_WEEK_SECONDS: "{count} {count, plural, =1 {sec} other {secs}} this week"
+  USER_RECENT_GAMES_PLAYED_LAST_WEEK_SECONDS: "{count} {count, plural, =1 {sec} other {secs}} this week",
+  LIGHTNING_CHECKOUT_NON_REFUNDABLE_DISCLAIMER: "Non-refundable. By clicking pay, you agree to our [Paid Services Terms]({paidURL})",
+  LIGHTNING_CHECKOUT_GENERIC_ERROR_TITLE: "Uh oh, something went wrong",
+  LIGHTNING_CHECKOUT_GENERIC_ERROR_DESCRIPTION: "Recheck your payment information, then try again.",
+  LIGHTNING_CHECKOUT_GENERIC_ERROR_CTA: "Manage Payment",
+  LIGHTNING_CHECKOUT_REVIEW_PURCHASE: "Review Purchase"
 })
