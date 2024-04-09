@@ -22,7 +22,7 @@ var a = s("735250"),
   M = s("689938"),
   h = s("589247");
 
-function p(e) {
+function C(e) {
   let {
     guild: t
   } = e;
@@ -67,7 +67,7 @@ function x(e) {
   var t, s;
   let {
     guildId: d
-  } = e, x = l.useRef(null), [C, g] = l.useState((0, I.useSelectedApplicationTab)({
+  } = e, x = l.useRef(null), [p, g] = l.useState((0, I.useSelectedApplicationTab)({
     guildId: d
   })), j = (0, f.useSelectedSortOrder)({
     guildId: d
@@ -79,7 +79,7 @@ function x(e) {
     guildJoinRequests: G
   } = (0, R.useSortedMemberApplications)({
     guildId: d,
-    applicationStatus: "REVIEW_APPLICATION" === C ? c.GuildJoinRequestApplicationStatuses.SUBMITTED : C,
+    applicationStatus: "REVIEW_APPLICATION" === p ? c.GuildJoinRequestApplicationStatuses.SUBMITTED : p,
     sortOrder: j
   }), {
     fetchNextPage: O
@@ -87,48 +87,46 @@ function x(e) {
     guildId: d,
     guildJoinRequests: G
   }), L = l.useRef(!1);
-  !L.current && (L.current = !0, O(j, "REVIEW_APPLICATION" === C ? c.GuildJoinRequestApplicationStatuses.SUBMITTED : C));
+  !L.current && (L.current = !0, O(j, "REVIEW_APPLICATION" === p ? c.GuildJoinRequestApplicationStatuses.SUBMITTED : p));
   let D = l.useRef(!1);
   l.useEffect(() => {
     D.current = !0
-  }, [j, C]), l.useEffect(() => {
-    if (D.current && 0 !== G.length && "REVIEW_APPLICATION" !== C) {
+  }, [j, p]), l.useEffect(() => {
+    if (D.current && 0 !== G.length && "REVIEW_APPLICATION" !== p) {
       var e;
       D.current = !1, o.default.setSelectedGuildJoinRequest(d, G[0]), null === (e = x.current) || void 0 === e || e.scrollToTop()
     }
-  }, [d, G, P, C]);
+  }, [d, G, P, p]);
   let b = l.useCallback(async e => {
-      if ("REVIEW_APPLICATION" !== C) j !== e && (o.default.setSelectedSortOrder(d, e), await O(e, C))
-    }, [C, j, d, O]),
+      if ("REVIEW_APPLICATION" !== p) j !== e && (o.default.setSelectedSortOrder(d, e), await O(e, p))
+    }, [p, j, d, O]),
     F = l.useCallback(async e => {
-      if (C !== e) g(e), o.default.setSelectedGuildJoinRequest(d, null), "REVIEW_APPLICATION" !== e && (o.default.setSelectedApplicationTab(d, e), await O(j, e))
-    }, [C, j, d, O]),
+      if (p !== e) g(e), o.default.setSelectedGuildJoinRequest(d, null), "REVIEW_APPLICATION" !== e && (o.default.setSelectedApplicationTab(d, e), await O(j, e))
+    }, [p, j, d, O]),
     B = l.useCallback(async () => {
       var e;
-      if ("REVIEW_APPLICATION" === C) return;
+      if ("REVIEW_APPLICATION" === p) return;
       let t = null === (e = x.current) || void 0 === e ? void 0 : e.getScrollerState();
-      if (null != t) t.scrollHeight - t.scrollTop - t.offsetHeight < 200 && await O(j, C)
-    }, [C, j, O]),
+      if (null != t) t.scrollHeight - t.scrollTop - t.offsetHeight < 200 && await O(j, p)
+    }, [p, j, O]),
     V = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(d)),
     U = null !== (s = null == V ? void 0 : V.hasFeature(A.GuildFeatures.CLAN)) && void 0 !== s && s;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(N.default, {
-      currentTab: C,
+      currentTab: p,
       onTabItemSelect: F,
       pendingGuildJoinRequestsTotal: v,
       showSetupTab: U
     }), (0, a.jsx)("div", {
       className: h.content,
-      children: "REVIEW_APPLICATION" === C ? null != V ? (0, a.jsx)(n.ScrollerThin, {
+      children: "REVIEW_APPLICATION" === p ? null != V ? (0, a.jsx)(n.ScrollerThin, {
         children: (0, a.jsxs)("div", {
           className: h.scrollerContent,
-          children: [(0, a.jsx)(p, {
+          children: [(0, a.jsx)(C, {
             guild: V
           }), (0, a.jsx)(r.default, {
             guild: V,
-            isInitiallyExpanded: !0,
-            showHeader: !1,
-            disableAnimation: !0
+            isClanContext: !0
           })]
         })
       }) : null : (0, a.jsxs)(a.Fragment, {
@@ -145,7 +143,7 @@ function x(e) {
           color: "header-secondary",
           children: M.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_LIST_DESCRIPTION
         }), (0, a.jsx)(m.default, {
-          applicationStatus: C,
+          applicationStatus: p,
           guildJoinRequests: G,
           guildId: d,
           onScroll: B,

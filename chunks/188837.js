@@ -11,39 +11,41 @@ var a = n("735250"),
   c = n("620929"),
   f = n("308083"),
   E = n("689938"),
-  h = n("653196");
+  _ = n("653196");
 t.default = e => {
   let {
     guildId: t,
     setPage: n,
-    onClose: _
+    onClose: h
   } = e, C = s.useRef(null), m = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), {
     progress: S,
     errors: I,
-    submitting: p
+    submitting: T
   } = (0, i.useStateFromStoresObject)([d.default], () => d.default.getStateForGuild(t)), {
-    selectedGames: T,
+    selectedGames: p,
     playstyle: g,
     interests: N,
     description: A,
     tag: R,
-    primetime: O
-  } = null != S ? S : {}, v = s.useRef(null), L = s.useRef(null), P = s.useRef(null), [M, y] = s.useState(!1), x = async () => {
+    primetime: O,
+    verificationForm: v
+  } = null != S ? S : {}, L = s.useRef(null), P = s.useRef(null), M = s.useRef(null), [y, D] = s.useState(!1), x = async () => {
     try {
       await u.convertGuildToClan(t, {
-        selectedGames: T,
+        selectedGames: p,
         playstyle: g,
         interests: N,
         description: A,
         tag: R,
-        primetime: O
+        primetime: O,
+        verificationForm: v
       })
     } catch (e) {
       return
     }
-    _()
-  }, D = (0, l.useSpring)({
-    ref: v,
+    h()
+  }, b = (0, l.useSpring)({
+    ref: L,
     config: l.config.slow,
     from: {
       flex: 1,
@@ -53,8 +55,8 @@ t.default = e => {
       flex: 1,
       paddingLeft: 120
     }
-  }), b = (0, l.useSpring)({
-    ref: L,
+  }), U = (0, l.useSpring)({
+    ref: P,
     config: l.config.slow,
     from: {
       flex: m ? 1 : 0,
@@ -66,8 +68,8 @@ t.default = e => {
       paddingRight: 120,
       marginLeft: -32
     }
-  }), U = (0, l.useSpring)({
-    ref: P,
+  }), j = (0, l.useSpring)({
+    ref: M,
     config: l.config.default,
     from: {
       opacity: 0
@@ -76,15 +78,15 @@ t.default = e => {
       opacity: 1
     }
   });
-  (0, l.useChain)([v, L, P], [0, 0, 1]);
-  let j = s.useMemo(() => null != I && Object.values(I).some(e => null != e), [I]);
+  (0, l.useChain)([L, P, M], [0, 0, 1]);
+  let G = s.useMemo(() => null != I && Object.values(I).some(e => null != e), [I]);
   return (0, a.jsxs)("div", {
-    className: h.animationContainer,
+    className: _.animationContainer,
     children: [(0, a.jsxs)(l.animated.div, {
-      className: h.signTextLeft,
+      className: _.signTextLeft,
       style: {
-        ...D,
-        ...U
+        ...b,
+        ...j
       },
       children: [(0, a.jsx)(r.Heading, {
         variant: "heading-xxl/medium",
@@ -95,27 +97,27 @@ t.default = e => {
         children: E.default.Messages.CLAN_SETUP_SIGN_SUBTITLE
       })]
     }), (0, a.jsx)("div", {
-      className: h.scrollContainer,
+      className: _.scrollContainer,
       children: (0, a.jsx)(c.default, {
         guildId: t,
-        signed: M,
-        setSigned: y,
+        signed: y,
+        setSigned: D,
         signRef: C
       })
     }), (0, a.jsxs)(l.animated.div, {
-      className: h.signTextRight,
+      className: _.signTextRight,
       style: {
-        ...b,
-        ...U
+        ...U,
+        ...j
       },
       children: [(0, a.jsx)(r.Button, {
-        className: h.signButton,
+        className: _.signButton,
         size: r.Button.Sizes.SMALL,
         onClick: () => {
           var e;
           null === (e = C.current) || void 0 === e || e.scrollIntoView({
             behavior: "smooth"
-          }), y(!0)
+          }), D(!0)
         },
         children: E.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
       }), (0, a.jsx)(r.Text, {
@@ -124,22 +126,22 @@ t.default = e => {
         children: E.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_HELP
       })]
     }), (0, a.jsx)(r.Button, {
-      className: h.closeButton,
+      className: _.closeButton,
       look: r.Button.Looks.OUTLINED,
       size: r.Button.Sizes.SMALL,
       color: r.Button.Colors.PRIMARY,
-      onClick: _,
+      onClick: h,
       children: E.default.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
     }), (0, a.jsx)(r.Button, {
-      className: h.previousButton,
+      className: _.previousButton,
       look: r.Button.Looks.OUTLINED,
       size: r.Button.Sizes.MEDIUM,
       color: r.Button.Colors.PRIMARY,
       onClick: () => n(f.ClanSetupModalPages.SETUP),
       children: E.default.Messages.PAGINATION_PREVIOUS
     }), (0, a.jsxs)("div", {
-      className: h.finishButton,
-      children: [j && (0, a.jsx)(r.Text, {
+      className: _.finishButton,
+      children: [G && (0, a.jsx)(r.Text, {
         color: "status-danger",
         variant: "text-sm/normal",
         children: E.default.Messages.CLAN_SUBMIT_ERROR
@@ -147,8 +149,8 @@ t.default = e => {
         look: r.Button.Looks.FILLED,
         size: r.Button.Sizes.MEDIUM,
         color: r.Button.Colors.BRAND,
-        disabled: !M,
-        submitting: p,
+        disabled: !y,
+        submitting: T,
         onClick: x,
         children: E.default.Messages.FINISH
       })]

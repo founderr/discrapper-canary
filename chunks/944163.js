@@ -54,7 +54,15 @@ s = "MemberVerificationFormStore", (r = "displayName") in(i = I) ? Object.define
       form: t,
       guildId: n
     } = e;
-    E[n] = null != t ? t : c
+    if (null == t) E[n] = c;
+    else {
+      var i;
+      let e = null !== (i = E[n]) && void 0 !== i ? i : c;
+      E[n] = {
+        ...e,
+        ...t
+      }
+    }
   },
   MEMBER_VERIFICATION_FORM_FETCH_FAIL: function(e) {
     var t;

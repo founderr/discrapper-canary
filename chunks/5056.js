@@ -1,35 +1,35 @@
 "use strict";
-i.r(t);
-var a = i("735250"),
-  l = i("470079"),
-  n = i("481060"),
-  s = i("282597"),
-  r = i("877715"),
-  o = i("729285"),
-  d = i("838221"),
-  c = i("246364"),
-  u = i("700833"),
-  f = i("689938"),
-  m = i("482249");
+n.r(t);
+var i = n("735250"),
+  r = n("470079"),
+  a = n("481060"),
+  s = n("282597"),
+  l = n("877715"),
+  o = n("729285"),
+  u = n("838221"),
+  c = n("246364"),
+  d = n("700833"),
+  f = n("689938"),
+  p = n("482249");
 
-function E(e) {
+function m(e) {
   let {
     onClick: t,
-    text: i,
-    icon: l
+    text: n,
+    icon: r
   } = e;
-  return (0, a.jsx)("div", {
-    className: m.addFormFieldContainer,
-    children: (0, a.jsxs)(n.Clickable, {
-      className: m.addFormField,
+  return (0, i.jsx)("div", {
+    className: p.addFormFieldContainer,
+    children: (0, i.jsxs)(a.Clickable, {
+      className: p.addFormField,
       onClick: t,
-      children: [(0, a.jsx)(l, {
-        className: m.icon,
+      children: [(0, i.jsx)(r, {
+        className: p.icon,
         height: 16,
         width: 16
-      }), (0, a.jsx)(n.FormText, {
-        className: m.addFormFieldText,
-        children: i
+      }), (0, i.jsx)(a.FormText, {
+        className: p.addFormFieldText,
+        children: n
       })]
     })
   })
@@ -37,67 +37,68 @@ function E(e) {
 t.default = function(e) {
   let {
     addFormField: t,
-    showManualApprovalWarning: I,
-    guild: x
-  } = e, h = l.useCallback(e => {
-    (0, u.openEmptyFormFieldModal)(e, t, x)
-  }, [t, x]), T = l.useCallback(e => {
-    I ? (0, n.openModalLazy)(async () => {
+    showManualApprovalWarning: E,
+    guild: I,
+    showHeader: _
+  } = e, T = r.useCallback(e => {
+    (0, d.openEmptyFormFieldModal)(e, t, I)
+  }, [t, I]), h = r.useCallback(e => {
+    E ? (0, a.openModalLazy)(async () => {
       let {
         default: t
-      } = await Promise.all([i.e("99387"), i.e("54845")]).then(i.bind(i, "199836"));
-      return i => (0, a.jsx)(t, {
-        ...i,
-        onSubmit: () => h(e)
+      } = await Promise.all([n.e("99387"), n.e("54845")]).then(n.bind(n, "199836"));
+      return n => (0, i.jsx)(t, {
+        ...n,
+        onSubmit: () => T(e)
       })
-    }) : h(e)
-  }, [I, h]);
-  return (0, a.jsxs)("div", {
-    className: m.backgroundContainer,
-    children: [(0, a.jsx)("div", {
-      className: m.containerTopHat,
-      children: (0, a.jsx)(n.Text, {
-        className: m.containerTopHatText,
+    }) : T(e)
+  }, [E, T]);
+  return (0, i.jsxs)("div", {
+    className: p.backgroundContainer,
+    children: [_ && (0, i.jsx)("div", {
+      className: p.containerTopHat,
+      children: (0, i.jsx)(a.Text, {
+        className: p.containerTopHatText,
         variant: "text-xs/bold",
         color: "header-secondary",
         children: f.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_MANUAL_APPROVAL_REQUIRED
       })
-    }), (0, a.jsxs)("div", {
-      className: m.leftRailIconContainer,
-      children: [(0, a.jsx)("div", {
-        className: m.iconContainer,
-        children: (0, a.jsx)(o.default, {
+    }), (0, i.jsxs)("div", {
+      className: p.leftRailIconContainer,
+      children: [(0, i.jsx)("div", {
+        className: p.iconContainer,
+        children: (0, i.jsx)(o.default, {
           width: 18,
           height: 20,
-          className: m.icon
+          className: p.icon
         })
-      }), (0, a.jsxs)(n.FormSection, {
-        children: [(0, a.jsx)(n.FormTitle, {
+      }), (0, i.jsxs)(a.FormSection, {
+        children: [(0, i.jsx)(a.FormTitle, {
           tag: "h3",
-          className: m.leftRailIconContainerTitle,
+          className: p.leftRailIconContainerTitle,
           children: f.default.Messages.MEMBER_VERIFICATION_ADD_QUESTIONS
-        }), (0, a.jsx)(n.FormText, {
-          className: m.leftRailIconContainerDescription,
-          type: n.FormText.Types.DESCRIPTION,
+        }), (0, i.jsx)(a.FormText, {
+          className: p.leftRailIconContainerDescription,
+          type: a.FormText.Types.DESCRIPTION,
           children: f.default.Messages.MEMBER_VERIFICATION_ADD_QUESTIONS_DESCRIPTION
-        }), (0, a.jsx)(E, {
+        }), (0, i.jsx)(m, {
           formFieldType: c.VerificationFormFieldTypes.TEXT_INPUT,
           addFormField: t,
-          icon: d.default,
+          icon: u.default,
           text: f.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_TEXT_INPUT,
-          onClick: () => T(c.VerificationFormFieldTypes.TEXT_INPUT)
-        }), (0, a.jsx)(E, {
+          onClick: () => h(c.VerificationFormFieldTypes.TEXT_INPUT)
+        }), (0, i.jsx)(m, {
           formFieldType: c.VerificationFormFieldTypes.PARAGRAPH,
           addFormField: t,
-          icon: r.default,
+          icon: l.default,
           text: f.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PARAGRAPH,
-          onClick: () => T(c.VerificationFormFieldTypes.PARAGRAPH)
-        }), (0, a.jsx)(E, {
+          onClick: () => h(c.VerificationFormFieldTypes.PARAGRAPH)
+        }), (0, i.jsx)(m, {
           formFieldType: c.VerificationFormFieldTypes.MULTIPLE_CHOICE,
           addFormField: t,
           icon: s.default,
           text: f.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_MULTIPLE_CHOICE,
-          onClick: () => T(c.VerificationFormFieldTypes.MULTIPLE_CHOICE)
+          onClick: () => h(c.VerificationFormFieldTypes.MULTIPLE_CHOICE)
         })]
       })]
     })]

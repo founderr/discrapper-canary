@@ -30,7 +30,8 @@ async function u(e, t) {
         play_style: t.playstyle,
         search_terms: Array.from(null !== (u = t.interests) && void 0 !== u ? u : new Set),
         game_application_ids: Array.from((null !== (d = t.selectedGames) && void 0 !== d ? d : new Map).keys()),
-        prime_time: f
+        prime_time: f,
+        verification_form: t.verificationForm
       }
     }), l.default.dispatch({
       type: "CLAN_SETUP_SUCCESS",

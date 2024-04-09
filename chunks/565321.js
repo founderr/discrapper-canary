@@ -1,55 +1,53 @@
 "use strict";
-i.r(t), i("47120");
-var a = i("735250"),
-  l = i("470079"),
-  n = i("442837"),
-  s = i("481060"),
-  r = i("881052"),
-  o = i("863249"),
-  d = i("944163"),
-  c = i("484455"),
-  u = i("592286"),
-  f = i("689938"),
-  m = i("482249");
+n.r(t), n("47120");
+var i = n("735250"),
+  r = n("470079"),
+  a = n("481060"),
+  s = n("881052"),
+  l = n("484455"),
+  o = n("592286"),
+  u = n("689938"),
+  c = n("482249");
 t.default = function(e) {
-  var t;
   let {
-    guildId: i
-  } = e, E = (0, n.useStateFromStores)([d.default], () => d.default.get(i)), [I, x] = l.useState(null), [h, T] = l.useState(null !== (t = null == E ? void 0 : E.description) && void 0 !== t ? t : ""), M = l.useRef(!1), F = l.useRef(!1);
-  l.useEffect(() => () => {
-    F.current = !0
+    guildId: t,
+    onSave: n,
+    formDescription: d
+  } = e, [f, p] = r.useState(null), [m, E] = r.useState(d), I = r.useRef(!1), _ = r.useRef(!1);
+  r.useEffect(() => () => {
+    _.current = !0
   }, []);
-  let _ = l.useCallback(async () => {
-    if (!M.current) {
-      x(null);
+  let T = r.useCallback(async () => {
+    if (!I.current) {
+      p(null);
       try {
-        await o.default.updateVerificationFormDescription(i, h)
+        await n(t, m)
       } catch (e) {
-        if (F.current) return;
-        x(new r.APIError(e).getAnyErrorMessage())
+        if (_.current) return;
+        p(new s.APIError(e).getAnyErrorMessage())
       } finally {
-        if (F.current) return;
-        M.current = !1
+        if (_.current) return;
+        I.current = !1
       }
     }
-  }, [h, i]);
-  return (0, a.jsxs)(c.default, {
-    title: f.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_TITLE,
-    children: [(0, a.jsx)(s.TextArea, {
-      className: m.fieldBackground,
-      maxLength: u.MAX_DESCRIPTION_LENGTH,
-      value: null != h ? h : "",
-      placeholder: f.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_PLACEHOLDER,
+  }, [m, t, n]);
+  return (0, i.jsxs)(l.default, {
+    title: u.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_TITLE,
+    children: [(0, i.jsx)(a.TextArea, {
+      className: c.fieldBackground,
+      maxLength: o.MAX_DESCRIPTION_LENGTH,
+      value: null != m ? m : "",
+      placeholder: u.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_PLACEHOLDER,
       onChange: e => {
-        T(e)
+        E(e)
       },
-      onBlur: _,
+      onBlur: T,
       autosize: !0
-    }), null != I && "" !== I ? (0, a.jsx)(s.Text, {
-      className: m.errorText,
+    }), null != f && "" !== f ? (0, i.jsx)(a.Text, {
+      className: c.errorText,
       variant: "text-xs/normal",
       color: "text-danger",
-      children: I
+      children: f
     }) : null]
   })
 }
