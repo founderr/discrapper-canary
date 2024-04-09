@@ -140,7 +140,7 @@ t.default = e => {
           onClick: V,
           children: G
         })
-      })]
+      }, B)]
     }), b && (0, s.jsx)(I.default, {
       className: C.gridProgressBar,
       color: D ? r.tokens.colors.TEXT_POSITIVE : r.tokens.colors.BG_BRAND,
