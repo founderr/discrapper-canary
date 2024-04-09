@@ -1,64 +1,47 @@
 "use strict";
 n.r(t), n.d(t, {
   useCanEnableRaidAlerts: function() {
-    return _
+    return c
   },
   useCanReportRaid: function() {
-    return c
+    return o
   }
 });
-var i = n("470079"),
-  a = n("442837");
+var i = n("442837");
 n("467319");
-var l = n("496675"),
-  d = n("154285"),
-  s = n("655006"),
-  r = n("533244"),
-  u = n("487419"),
-  o = n("981631");
+var a = n("496675"),
+  l = n("154285"),
+  d = n("655006"),
+  s = n("533244"),
+  r = n("487419"),
+  u = n("981631");
+
+function o(e) {
+  let t = (0, i.useStateFromStores)([a.default], () => (function(e) {
+      let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.default;
+      return t.can(u.Permissions.BAN_MEMBERS, e) || t.can(u.Permissions.KICK_MEMBERS, e) || t.can(u.Permissions.MANAGE_GUILD, e)
+    })(e, a.default), [e]),
+    n = (0, i.useStateFromStores)([r.default], () => null != e ? r.default.getGuildIncident(e.id) : null, [e]);
+  return !(null != n && (0, s.hasDetectedActivity)(n)) && t
+}
 
 function c(e) {
   var t;
-  let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : o.EMPTY_STRING_SNOWFLAKE_ID,
-    {
-      enableRaidReporting: d
-    } = s.ReportRaidExperiment.useExperiment({
-      guildId: n,
-      location: "4467c7_1"
-    }, {
-      autoTrackExposure: !1
-    }),
-    c = (0, a.useStateFromStores)([l.default], () => (function(e) {
-      let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.default;
-      return t.can(o.Permissions.BAN_MEMBERS, e) || t.can(o.Permissions.KICK_MEMBERS, e) || t.can(o.Permissions.MANAGE_GUILD, e)
-    })(e, l.default), [e]),
-    _ = (0, a.useStateFromStores)([u.default], () => null != e ? u.default.getGuildIncident(e.id) : null, [e]),
-    E = null != _ && (0, r.hasDetectedActivity)(_);
-  return i.useEffect(() => {
-    !E && c && s.ReportRaidExperiment.trackExposure({
-      guildId: n,
-      location: "4467c7_2"
-    })
-  }, [E, c, n]), !E && c && d
-}
-
-function _(e) {
-  var t;
-  let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : o.EMPTY_STRING_SNOWFLAKE_ID,
-    i = (0, a.useStateFromStores)([l.default], () => (function(e) {
-      let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.default;
-      return t.can(o.Permissions.MANAGE_GUILD, e)
-    })(e, l.default), [e]),
+  let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.EMPTY_STRING_SNOWFLAKE_ID,
+    s = (0, i.useStateFromStores)([a.default], () => (function(e) {
+      let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.default;
+      return t.can(u.Permissions.MANAGE_GUILD, e)
+    })(e, a.default), [e]),
     {
       enableRaidAlerts: r
-    } = s.RaidAlertExperiment.useExperiment({
+    } = d.RaidAlertExperiment.useExperiment({
       guildId: n,
       location: "4467c7_3"
     }, {
-      autoTrackExposure: i
+      autoTrackExposure: s
     }),
     {
-      showAlertMode: u
-    } = (0, d.useGuildAlertModeEnabled)(n);
-  return i && (r || u)
+      showAlertMode: o
+    } = (0, l.useGuildAlertModeEnabled)(n);
+  return s && (r || o)
 }
