@@ -1,11 +1,5 @@
 "use strict";
 n.r(t), n.d(t, {
-  EasterEggAnimation: function() {
-    return k
-  },
-  EasterEggPosition: function() {
-    return a
-  },
   default: function() {
     return w
   }
