@@ -133,9 +133,9 @@ t.default = e => {
             quest: i,
             idx: 0
           }) : null;
-          return null != _ ? g.default.Messages.QUEST_REWARD_TIERED.format({
+          return null != _ && null != _.approximateCount ? g.default.Messages.QUEST_REWARD_TIERED.format({
             maxReward: _.messages.nameWithArticle,
-            maxRewardCount: null != _.approximateCount ? (0, E.humanizeValue)(_.approximateCount, r) : "300k",
+            maxRewardCount: (0, E.humanizeValue)(_.approximateCount, r),
             helpCenterLink: f.default.getArticleURL(A.HelpdeskArticles.QUESTS_LEARN_MORE)
           }) : g.default.Messages.QUEST_REWARD.format({
             reward: i.config.messages.rewardNameWithArticle
