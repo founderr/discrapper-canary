@@ -26,11 +26,11 @@ let v = s.forwardRef(function(e, t) {
   var n, l;
   let {
     className: v,
-    isExpanded: R,
-    isExpansionAnimationComplete: O,
+    isExpanded: O,
+    isExpansionAnimationComplete: R,
     onCtxMenuOpen: L,
-    onCtxMenuClose: P,
-    onCtxMenuSelect: M,
+    onCtxMenuClose: M,
+    onCtxMenuSelect: P,
     quest: y,
     useReducedMotion: x
   } = e, D = (0, r.useStateFromStores)([h.default], () => h.default.isEnrolling(y.id), [y]), b = (0, E.useQuestFormattedDate)(y.config.expiresAt), U = (0, E.useQuestFormattedDate)(y.config.rewardCodeExpiresAt), j = s.useMemo(() => (0, C.isAssetAnimated)(y.config.assets.questBarHero), [y]), G = s.useCallback(() => {
@@ -41,7 +41,9 @@ let v = s.forwardRef(function(e, t) {
   }, [y]), w = (0, g.useHandleClaimQuestsReward)({
     quest: y,
     location: _.QuestContent.QUEST_BAR
-  }), k = (null === (n = y.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, F = (null === (l = y.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, B = R && O, H = (0, C.getQuestBarHeroAssetUrl)(y);
+  }), k = (null === (n = y.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, F = (null === (l = y.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, B = O && R, H = (0, C.getQuestBarHeroAssetUrl)(y), V = (0, C.getQuestsInstructionsToWinReward)({
+    quest: y
+  });
   return (0, a.jsx)("div", {
     "aria-hidden": !B,
     className: i()(v, A.contentExpanded, {
@@ -80,8 +82,8 @@ let v = s.forwardRef(function(e, t) {
           })]
         }), (0, a.jsx)(T.QuestsEntryContextMenuPopout, {
           onOpen: L,
-          onClose: P,
-          onSelect: M,
+          onClose: M,
+          onSelect: P,
           questContent: _.QuestContent.QUEST_BAR,
           quest: y,
           shouldShowDisclosure: !1,
@@ -106,11 +108,7 @@ let v = s.forwardRef(function(e, t) {
         className: A.description,
         color: "always-white",
         variant: "text-xs/normal",
-        children: N.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD.format({
-          gameTitle: y.config.messages.gameTitle,
-          streamingDurationRequirement: y.config.streamDurationRequirementMinutes,
-          questReward: y.config.messages.rewardNameWithArticle
-        })
+        children: V
       }), (0, a.jsx)(m.default, {
         quest: y
       })]
@@ -125,8 +123,8 @@ let v = s.forwardRef(function(e, t) {
             color: "always-white"
           }), (0, a.jsx)(T.QuestsEntryContextMenuPopout, {
             onOpen: L,
-            onClose: P,
-            onSelect: M,
+            onClose: M,
+            onSelect: P,
             questContent: _.QuestContent.QUEST_BAR,
             quest: y,
             shouldShowDisclosure: !0,
@@ -157,11 +155,7 @@ let v = s.forwardRef(function(e, t) {
             className: A.description,
             color: "always-white",
             variant: "text-sm/normal",
-            children: N.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD.format({
-              gameTitle: y.config.messages.gameTitle,
-              streamingDurationRequirement: y.config.streamDurationRequirementMinutes,
-              questReward: y.config.messages.rewardNameWithArticle
-            })
+            children: V
           })]
         }), (0, a.jsx)(o.Button, {
           className: A.cta,

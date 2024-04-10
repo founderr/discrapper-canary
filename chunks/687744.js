@@ -29,7 +29,7 @@ function r(e) {
           name: e.messages.name,
           nameWithArticle: e.messages.name_with_article,
           redemptionInstructionsByPlatform: e.messages.redemption_instructions_by_platform
-        }, asset: e.asset
+        }, asset: e.asset, approximateCount: e.approximate_count
       }
   }
 }

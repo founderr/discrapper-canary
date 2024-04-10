@@ -26,7 +26,12 @@ t.default = function(e) {
       className: u.instructions,
       variant: "text-sm/normal",
       color: "text-normal",
-      children: o.default.Messages.QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD.format({
+      children: (0, r.isTieredRewardCodeQuest)({
+        quest: n
+      }) ? o.default.Messages.QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD_TIERED.format({
+        gameTitle: n.config.messages.gameTitle,
+        streamingDurationRequirement: n.config.streamDurationRequirementMinutes
+      }) : o.default.Messages.QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD.format({
         gameTitle: n.config.messages.gameTitle,
         questReward: n.config.messages.rewardNameWithArticle,
         streamingDurationRequirement: n.config.streamDurationRequirementMinutes
