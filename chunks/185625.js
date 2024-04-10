@@ -1,7 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   areRequiredElementsUnfilled: function() {
-    return N
+    return g
+  },
+  getDsaExperiment: function() {
+    return E
   },
   getReportMenu: function() {
     return d
@@ -13,7 +16,7 @@ n.r(t), n.d(t, {
     return _
   },
   showInAppReportsFeedbackModal: function() {
-    return p
+    return N
   },
   submitHeadlessReport: function() {
     return u
@@ -22,13 +25,13 @@ n.r(t), n.d(t, {
     return c
   },
   submitReportSecondLook: function() {
-    return E
+    return h
   },
   submitUnauthenticatedReport: function() {
     return m
   },
   trackCloseReportModalAnalytics: function() {
-    return x
+    return p
   },
   verifyUnauthenticatedReport: function() {
     return f
@@ -41,7 +44,7 @@ var a = n("544891"),
   i = n("981631");
 async function d(e, t) {
   var n;
-  let l = v(e),
+  let l = R(e),
     r = await a.HTTP.get({
       url: i.Endpoints.GET_REPORT_MENU(l),
       query: (null == t ? void 0 : t.variant) != null ? {
@@ -52,7 +55,7 @@ async function d(e, t) {
 }
 async function o(e, t) {
   var n;
-  let l = h(e),
+  let l = v(e),
     r = await a.HTTP.get({
       url: i.Endpoints.GET_UNAUTHENTICATED_REPORT_MENU(l),
       query: (null == t ? void 0 : t.variant) != null ? {
@@ -62,11 +65,11 @@ async function o(e, t) {
   return null !== (n = r.body) && void 0 !== n ? n : JSON.parse(r.text)
 }
 async function u(e, t) {
-  let n = v(e),
+  let n = R(e),
     l = await d(e, t);
   await a.HTTP.post({
     url: i.Endpoints.SUBMIT_REPORT_MENU(n),
-    body: R(l, e, [{
+    body: x(l, e, [{
       nodeRef: l.root_node_id,
       destination: ["", l.success_node_id]
     }])
@@ -75,16 +78,16 @@ async function u(e, t) {
 
 function c(e, t, n) {
   return a.HTTP.post({
-    url: i.Endpoints.SUBMIT_REPORT_MENU(v(t)),
-    body: R(e, t, n)
+    url: i.Endpoints.SUBMIT_REPORT_MENU(R(t)),
+    body: x(e, t, n)
   })
 }
 
 function m(e, t, n, l) {
-  let r = h(t);
+  let r = v(t);
   return a.HTTP.post({
     url: i.Endpoints.SUBMIT_UNAUTHENTICATED_REPORT_MENU(r),
-    body: R(e, t, n, l)
+    body: x(e, t, n, l)
   })
 }
 
@@ -107,7 +110,12 @@ async function f(e, t, n) {
     }
   })).body
 }
-async function E(e) {
+async function E() {
+  return await a.HTTP.get({
+    url: i.Endpoints.DSA_EXPERIMENT_UNAUTHENTICATED
+  })
+}
+async function h(e) {
   return (await a.HTTP.post({
     url: i.Endpoints.SUBMIT_REPORT_SECOND_LOOK,
     body: {
@@ -116,18 +124,18 @@ async function E(e) {
   })).body
 }
 
-function h(e) {
+function v(e) {
   let t = e.name;
   if (!Object.values(s.UnauthenticatedReportNames).includes(t)) throw Error("Invalid report type ".concat(e.name));
   return t
 }
 
-function v(e) {
+function R(e) {
   let t = e.name;
   if (!Object.values(s.ReportNames).includes(t)) throw Error("Invalid report type ".concat(e.name));
   return t
 }
-let R = (e, t, n, a) => {
+let x = (e, t, n, a) => {
   let {
     version: l,
     variant: r,
@@ -251,7 +259,7 @@ let R = (e, t, n, a) => {
   return null
 };
 
-function x(e, t, n) {
+function p(e, t, n) {
   r.default.trackWithMetadata(i.AnalyticEvents.IAR_MODAL_CLOSE, {
     report_type: e.name,
     report_id: n,
@@ -264,7 +272,7 @@ function x(e, t, n) {
   })
 }
 
-function p(e, t) {
+function N(e, t) {
   l.default.dispatch({
     type: "IN_APP_REPORTS_SHOW_FEEDBACK",
     reportId: t,
@@ -272,7 +280,7 @@ function p(e, t) {
   })
 }
 
-function N(e, t, n, a, l) {
+function g(e, t, n, a, l) {
   return e.some(e => {
     var t;
     return !0 === e.should_submit_data && ((null == a ? void 0 : a[e.name]) == null || (null == a ? void 0 : a[e.name].value) === "" || !(null == a ? void 0 : null === (t = a[e.name]) || void 0 === t ? void 0 : t.isValid))

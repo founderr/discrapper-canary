@@ -10,17 +10,16 @@ var n = s("735250"),
   d = s("82554"),
   c = s("726521"),
   f = s("185625"),
-  E = s("551549"),
-  I = s("314897"),
-  _ = s("828695"),
-  h = s("819570"),
-  p = s("63063"),
-  T = s("981631"),
-  N = s("689938"),
-  g = s("78019"),
-  m = s("794711");
+  E = s("314897"),
+  I = s("828695"),
+  _ = s("819570"),
+  h = s("63063"),
+  p = s("981631"),
+  T = s("689938"),
+  N = s("78019"),
+  g = s("794711");
 i.default.initialize();
-let A = e => {
+let m = e => {
   let {
     title: t,
     menuType: a
@@ -32,8 +31,8 @@ let A = e => {
       return t => (0, n.jsx)(e, {
         ...t,
         onSuccess: u,
-        headerText: N.default.Messages.ENTER_EMAIL,
-        confirmButtonText: N.default.Messages.NEXT,
+        headerText: T.default.Messages.ENTER_EMAIL,
+        confirmButtonText: T.default.Messages.NEXT,
         confirmButtonColor: r.Button.Colors.BRAND_NEW,
         impressionName: l.ImpressionNames.URF_ENTER_EMAIL
       })
@@ -54,17 +53,17 @@ let A = e => {
         onFormSubmit: i,
         onResend: t,
         onSuccess: u,
-        headerText: N.default.Messages.MEMBER_VERIFICATION_EMAIL_VERIFICATION_EMAIL_SENT,
-        confirmButtonText: N.default.Messages.VERIFY,
+        headerText: T.default.Messages.MEMBER_VERIFICATION_EMAIL_VERIFICATION_EMAIL_SENT,
+        confirmButtonText: T.default.Messages.VERIFY,
         confirmButtonColor: r.Button.Colors.BRAND_NEW,
         impressionName: l.ImpressionNames.URF_CONFIRM_EMAIL_CODE
       })
     })
   };
   return (0, n.jsx)("div", {
-    className: g.buttonColumn,
+    className: N.buttonColumn,
     children: (0, n.jsx)(r.Button, {
-      className: m.__invalid_reportButton,
+      className: g.__invalid_reportButton,
       fullWidth: !0,
       color: r.Button.Colors.BRAND_NEW,
       hover: r.Button.Colors.BRAND_NEW,
@@ -74,36 +73,39 @@ let A = e => {
   })
 };
 t.default = () => {
-  let e = (0, i.useStateFromStores)([I.default], () => I.default.isAuthenticated()),
-    t = (0, i.useStateFromStores)([_.default], () => _.default.hasLoadedExperiments),
-    s = (0, E.useIsUnauthenticatedReportFormEnabled)("RSL - Landing Page"),
-    [l, c] = a.useState(!0);
+  let [e, t] = a.useState(!0), [s, l] = a.useState(!1), c = (0, i.useStateFromStores)([E.default], () => E.default.isAuthenticated()), A = (0, i.useStateFromStores)([I.default], () => I.default.hasLoadedExperiments), S = () => {
+    (0, f.getDsaExperiment)().then(() => {
+      t(!1), l(!0)
+    }).catch(() => {
+      t(!1), l(!1)
+    })
+  };
   return a.useEffect(() => {
-    e ? (c(!0), o.fetchCurrentUser({
+    c ? (t(!0), o.fetchCurrentUser({
       withAnalyticsToken: !0
-    }).then(() => c(!1)).catch(() => c(!1))) : c(!1)
-  }, [e]), a.useEffect(() => {
+    }).then(() => S()).catch(() => t(!1))) : S()
+  }, [c]), a.useEffect(() => {
     (async () => {
-      !t && !s && (await u.default.getLocationMetadata(), u.default.getExperiments())
+      !A && (await u.default.getLocationMetadata(), u.default.getExperiments())
     })()
-  }, [t, s]), l ? (0, n.jsx)(h.default, {
+  }, [A]), e || !A ? (0, n.jsx)(_.default, {
     children: (0, n.jsx)(r.Spinner, {})
-  }) : s && (0, n.jsxs)(h.default, {
-    children: [(0, n.jsx)(h.Title, {
-      className: m.marginBottom8,
-      children: N.default.Messages.URF_LANDING_PAGE_TITLE
-    }), (0, n.jsx)(h.SubTitle, {
-      className: m.marginBottom8,
-      children: N.default.Messages.URF_LANDING_PAGE_SUBTITLE.format({
-        supportURL: p.default.getArticleURL(T.HelpdeskArticles.COPYRIGHT_AND_IP_POLICY)
+  }) : s && (0, n.jsxs)(_.default, {
+    children: [(0, n.jsx)(_.Title, {
+      className: g.marginBottom8,
+      children: T.default.Messages.URF_LANDING_PAGE_TITLE
+    }), (0, n.jsx)(_.SubTitle, {
+      className: g.marginBottom8,
+      children: T.default.Messages.URF_LANDING_PAGE_SUBTITLE.format({
+        supportURL: h.default.getArticleURL(p.HelpdeskArticles.COPYRIGHT_AND_IP_POLICY)
       })
     }), (0, n.jsxs)("div", {
-      className: g.container,
-      children: [(0, n.jsx)(A, {
-        title: N.default.Messages.URF_LANDING_PAGE_REPORT_MESSAGE_BUTTON,
+      className: N.container,
+      children: [(0, n.jsx)(m, {
+        title: T.default.Messages.URF_LANDING_PAGE_REPORT_MESSAGE_BUTTON,
         menuType: d.UnauthenticatedReportNames.MESSAGE
-      }), (0, n.jsx)(A, {
-        title: N.default.Messages.URF_LANDING_PAGE_REPORT_USER_PROFILE_BUTTON,
+      }), (0, n.jsx)(m, {
+        title: T.default.Messages.URF_LANDING_PAGE_REPORT_USER_PROFILE_BUTTON,
         menuType: d.UnauthenticatedReportNames.USER
       })]
     })]
