@@ -1,32 +1,31 @@
 "use strict";
 n.r(t), n.d(t, {
   crossPlatformCommands: function() {
-    return v
+    return A
   }
 });
 var a = n("688707"),
   s = n("894959"),
-  l = n("472281"),
-  i = n("624714"),
-  r = n("906228"),
-  o = n("491327"),
-  u = n("934993"),
-  d = n("793839"),
-  c = n("758177"),
-  f = n("853678"),
-  E = n("358601"),
-  h = n("378410"),
-  _ = n("468136"),
-  C = n("64974"),
-  m = n("906911"),
-  S = n("647656"),
-  I = n("918940"),
-  p = n("265067"),
-  T = n("881393"),
-  g = n("905534"),
-  N = n("273487"),
-  A = n("543815");
-let v = {
+  l = n("624714"),
+  i = n("906228"),
+  r = n("491327"),
+  o = n("934993"),
+  u = n("793839"),
+  d = n("758177"),
+  c = n("853678"),
+  f = n("358601"),
+  E = n("378410"),
+  h = n("468136"),
+  _ = n("64974"),
+  C = n("906911"),
+  m = n("647656"),
+  S = n("918940"),
+  I = n("265067"),
+  p = n("881393"),
+  T = n("905534"),
+  g = n("273487"),
+  N = n("543815");
+let A = {
   ...a.default,
   ...l.default,
   ...i.default,
@@ -38,15 +37,14 @@ let v = {
   ...f.default,
   ...E.default,
   ...h.default,
-  ..._.default,
+  ...C.default,
   ...m.default,
   ...S.default,
-  ...I.default,
-  ...T.default,
-  ...g.default,
-  ...A.default,
-  ...N.default,
-  ...C.default,
   ...p.default,
+  ...T.default,
+  ...N.default,
+  ...g.default,
+  ..._.default,
+  ...I.default,
   ...s.default
 }

@@ -25,7 +25,7 @@ let A = e => (0, I.default)(e).required().keys({
   channel_id: e.string().required()
 });
 
-function v(e) {
+function O(e) {
   var t;
   let {
     args: {
@@ -45,7 +45,7 @@ let R = e => (0, I.default)(e).keys({
   channel_id: e.string().allow(null)
 });
 
-function O(e) {
+function v(e) {
   let {
     args: {
       lobby_id: t,
@@ -208,31 +208,31 @@ let L = {
   [N.RPCEvents.MESSAGE_CREATE]: {
     scope: N.OAuth2Scopes.RPC,
     validation: A,
-    handler: v
+    handler: O
   },
   [N.RPCEvents.MESSAGE_UPDATE]: {
     scope: N.OAuth2Scopes.RPC,
     validation: A,
-    handler: v
+    handler: O
   },
   [N.RPCEvents.MESSAGE_DELETE]: {
     scope: N.OAuth2Scopes.RPC,
     validation: A,
-    handler: v
+    handler: O
   },
   [N.RPCEvents.SPEAKING_START]: {
     scope: {
       [g.RPC_SCOPE_CONFIG.ANY]: [N.OAuth2Scopes.RPC, N.OAuth2Scopes.RPC_VOICE_READ, g.RPC_LOCAL_SCOPE]
     },
     validation: R,
-    handler: O
+    handler: v
   },
   [N.RPCEvents.SPEAKING_STOP]: {
     scope: {
       [g.RPC_SCOPE_CONFIG.ANY]: [N.OAuth2Scopes.RPC, N.OAuth2Scopes.RPC_VOICE_READ, g.RPC_LOCAL_SCOPE]
     },
     validation: R,
-    handler: O
+    handler: v
   },
   [N.RPCEvents.GUILD_CREATE]: {
     scope: N.OAuth2Scopes.RPC,
@@ -301,9 +301,6 @@ let L = {
     scope: {
       [g.RPC_SCOPE_CONFIG.ANY]: [g.RPC_AUTHENTICATED_SCOPE]
     },
-    handler() {}
-  },
-  [N.RPCEvents.ACTIVITY_INSTANCE_UPDATE]: {
     handler() {}
   },
   [N.RPCEvents.VOICE_CHANNEL_SELECT]: {
