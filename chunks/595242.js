@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return N
   }
 });
 var a = s("735250"),
@@ -16,37 +16,38 @@ var a = s("735250"),
   S = s("821849"),
   E = s("15640"),
   T = s("314684"),
-  f = s("853872"),
-  m = s("78839"),
-  _ = s("783739"),
-  g = s("981631"),
-  h = s("998849");
+  f = s("899667"),
+  m = s("853872"),
+  _ = s("78839"),
+  g = s("783739"),
+  h = s("981631"),
+  I = s("998849");
 
-function I() {
+function N() {
   n.useEffect(() => {
     d.default.wait(() => {
-      u.fetchSubscriptions(), u.fetchPaymentSources(), (0, c.fetchGuildBoostSlots)(), (0, S.fetchPremiumSubscriptionPlans)(null, null, g.RevenueSurfaces.DISCOVERY)
+      u.fetchSubscriptions(), u.fetchPaymentSources(), (0, c.fetchGuildBoostSlots)(), (0, S.fetchPremiumSubscriptionPlans)(null, null, h.RevenueSurfaces.DISCOVERY), (0, c.fetchAppliedGuildBoostsForUser)(!0)
     })
   }, []);
   let {
     hasFetchedSubscriptions: e,
     premiumSubscription: t
-  } = (0, r.useStateFromStoresObject)([m.default], () => ({
-    hasFetchedSubscriptions: m.default.hasFetchedSubscriptions(),
-    premiumSubscription: m.default.getPremiumTypeSubscription()
-  })), s = (0, E.useSubscriptionPlansLoaded)(), l = (0, r.useStateFromStores)([f.default], () => f.default.hasFetchedPaymentSources);
-  return ((0, T.useFetchEntitlementsForTenureReward)(), e && s && l) ? (0, a.jsxs)("div", {
-    className: h.container,
+  } = (0, r.useStateFromStoresObject)([_.default], () => ({
+    hasFetchedSubscriptions: _.default.hasFetchedSubscriptions(),
+    premiumSubscription: _.default.getPremiumTypeSubscription()
+  })), s = (0, E.useSubscriptionPlansLoaded)(), l = (0, r.useStateFromStores)([m.default], () => m.default.hasFetchedPaymentSources), N = (0, r.useStateFromStores)([f.default], () => f.default.isFetchingCurrentUserAppliedBoosts);
+  return ((0, T.useFetchEntitlementsForTenureReward)(), e && s && l && !N) ? (0, a.jsxs)("div", {
+    className: I.container,
     children: [(0, a.jsx)("div", {
-      className: h.background
+      className: I.background
     }), (0, a.jsx)("div", {
-      className: h.content,
-      children: (0, a.jsx)(_.default, {
+      className: I.content,
+      children: (0, a.jsx)(g.default, {
         premiumSubscription: t
       })
     })]
   }) : (0, a.jsx)("div", {
-    className: i()(h.container, h.loading),
+    className: i()(I.container, I.loading),
     children: (0, a.jsx)(o.Spinner, {})
   })
 }

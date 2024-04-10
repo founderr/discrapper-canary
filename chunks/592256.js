@@ -1,13 +1,13 @@
 "use strict";
 l.r(t), l.d(t, {
   carouselAssetFromAttachment: function() {
-    return x
-  },
-  carouselAssetFromImageEmbed: function() {
     return b
   },
+  carouselAssetFromImageEmbed: function() {
+    return f
+  },
   createMediaOnClickOverrides: function() {
-    return y
+    return x
   }
 }), l("47120");
 var n = l("735250");
@@ -16,23 +16,22 @@ var r = l("374470"),
   i = l("481060"),
   s = l("794295"),
   a = l("163268"),
-  o = l("768494"),
-  d = l("254109"),
-  u = l("118139"),
-  c = l("926836"),
-  h = l("52824"),
-  m = l("626135"),
-  p = l("591759"),
-  g = l("981631"),
-  f = l("640092");
+  o = l("254109"),
+  d = l("118139"),
+  u = l("926836"),
+  c = l("52824"),
+  h = l("626135"),
+  m = l("591759"),
+  p = l("981631"),
+  g = l("640092");
 
-function b(e) {
+function f(e) {
   let {
     width: t,
     height: l
-  } = e, r = (0, h.getBestEffortSrcUrl)(e);
+  } = e, r = (0, c.getBestEffortSrcUrl)(e);
   return {
-    component: (0, n.jsx)(c.ImageModal, {
+    component: (0, n.jsx)(u.ImageModal, {
       width: t,
       height: l,
       original: e.url,
@@ -47,95 +46,93 @@ function b(e) {
   }
 }
 
-function x(e) {
+function b(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-  return function(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-      l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-      r = function(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if ((0, u.isImageContentType)(e.contentType)) {
-          var r, i;
-          let o = null !== (r = e.width) && void 0 !== r ? r : 0,
-            d = null !== (i = e.height) && void 0 !== i ? i : 0,
-            u = (0, h.getBestEffortSrcUrl)({
-              proxyURL: e.proxyUrl,
-              url: e.url
-            });
-          return {
-            component: (0, n.jsx)(c.ImageModal, {
-              width: o,
-              height: d,
-              original: e.url,
-              renderLinkComponent: e => (0, n.jsx)(s.default, {
-                ...e
-              }),
-              src: u,
-              shouldHideMediaOptions: t,
-              obscure: (0, a.isMediaObscured)({
-                type: a.ObscuredMediaTypes.GenericMedia,
-                media: e
-              }, l)
-            }),
-            width: o,
-            height: d,
-            src: u
-          }
-        }
-        return null
-      }(e, t, l);
-    if (null != r) return r;
-    let i = function(e) {
+    l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+    r = function(e) {
       let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      if ((0, u.isVideoContentType)(e.contentType)) {
+      if ((0, d.isImageFile)(e.filename)) {
         var r, i;
         let o = null !== (r = e.width) && void 0 !== r ? r : 0,
           d = null !== (i = e.height) && void 0 !== i ? i : 0,
-          u = (0, h.getBestEffortSrcUrl)({
-            proxyURL: e.proxyUrl,
+          h = (0, c.getBestEffortSrcUrl)({
+            proxyURL: e.proxy_url,
             url: e.url
-          }),
-          m = p.default.toURLSafe(e.proxyUrl);
-        return null == m ? null : (m.searchParams.append("format", "jpeg"), {
-          component: (0, n.jsx)(c.VideoModal, {
+          });
+        return {
+          component: (0, n.jsx)(u.ImageModal, {
             width: o,
             height: d,
-            poster: m.toString(),
-            naturalWidth: o,
-            naturalHeight: d,
+            original: e.url,
             renderLinkComponent: e => (0, n.jsx)(s.default, {
               ...e
             }),
-            src: u,
+            src: h,
             shouldHideMediaOptions: t,
             obscure: (0, a.isMediaObscured)({
-              type: a.ObscuredMediaTypes.GenericMedia,
+              type: a.ObscuredMediaTypes.Attachment,
               media: e
             }, l)
           }),
           width: o,
           height: d,
-          src: u
-        })
+          src: h
+        }
       }
       return null
     }(e, t, l);
-    return null != i ? i : null
-  }((0, o.messageAttachmentToUnfurledMediaItem)(e), t, l)
+  if (null != r) return r;
+  let i = function(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+      l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+    if ((0, d.isVideoFile)(e.filename)) {
+      var r, i;
+      let o = null !== (r = e.width) && void 0 !== r ? r : 0,
+        d = null !== (i = e.height) && void 0 !== i ? i : 0,
+        h = (0, c.getBestEffortSrcUrl)({
+          proxyURL: e.proxy_url,
+          url: e.url
+        }),
+        p = m.default.toURLSafe(e.proxy_url);
+      return null == p ? null : (p.searchParams.append("format", "jpeg"), {
+        component: (0, n.jsx)(u.VideoModal, {
+          width: o,
+          height: d,
+          poster: p.toString(),
+          naturalWidth: o,
+          naturalHeight: d,
+          renderLinkComponent: e => (0, n.jsx)(s.default, {
+            ...e
+          }),
+          src: h,
+          fileSize: e.size,
+          fileName: e.filename,
+          shouldHideMediaOptions: t,
+          obscure: (0, a.isMediaObscured)({
+            type: a.ObscuredMediaTypes.Attachment,
+            media: e
+          }, l)
+        }),
+        width: o,
+        height: d,
+        src: h
+      })
+    }
+    return null
+  }(e, t, l);
+  return null != i ? i : null
 }
 
-function y(e, t) {
+function x(e, t) {
   let s = {};
-  for (let [a, o] of e.entries()) s[o.src] = s => (function(e, t, s, a) {
-    e.preventDefault(), (0, r.isElement)(e.currentTarget) && e.currentTarget.blur(), null != a && (m.default.track(g.AnalyticEvents.OPEN_MODAL, {
-      type: g.AnalyticsSections.MEDIA_VIEWER,
+  for (let [a, d] of e.entries()) s[d.src] = s => (function(e, t, s, a) {
+    e.preventDefault(), (0, r.isElement)(e.currentTarget) && e.currentTarget.blur(), null != a && (h.default.track(p.AnalyticEvents.OPEN_MODAL, {
+      type: p.AnalyticsSections.MEDIA_VIEWER,
       ...a
     }, {
       throttlePercent: .01
-    }), (0, d.startMediaViewerSession)(a.guild_id, a.channel_id, a.channel_type, t.length)), (0, i.openModalLazy)(async () => {
+    }), (0, o.startMediaViewerSession)(a.guild_id, a.channel_id, a.channel_type, t.length)), (0, i.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([l.e("49237"), l.e("99387"), l.e("99857")]).then(l.bind(l, "895023"));
@@ -145,15 +142,15 @@ function y(e, t) {
         } = l;
         return (0, n.jsx)(e, {
           ...r,
-          onIndexChange: null != a ? d.incrementSelectedItemChanges : void 0,
-          className: f.zoomedCarouselModalRoot,
+          onIndexChange: null != a ? o.incrementSelectedItemChanges : void 0,
+          className: g.zoomedCarouselModalRoot,
           items: t,
-          modalCarouselClassName: f.modalCarouselWrapper,
+          modalCarouselClassName: g.modalCarouselWrapper,
           startingIndex: s
         })
       }
     }, {
-      onCloseCallback: null != a ? d.endMediaViewerSession : void 0
+      onCloseCallback: null != a ? o.endMediaViewerSession : void 0
     })
   })(s, e, a, t);
   return s

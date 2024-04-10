@@ -38,7 +38,7 @@ function i(e) {
       channel: n,
       compact: i,
       hasSpoilerEmbeds: r,
-      onMediaItemContextMenu: o,
+      onAttachmentContextMenu: o,
       renderThreadAccessory: c,
       renderComponentAccessory: f,
       renderSuppressEmbeds: E,

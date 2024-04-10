@@ -76,8 +76,8 @@ t.default = e => {
   let {
     className: t,
     url: n,
-    fileName: s,
-    fileSize: o,
+    filename: s,
+    size: o,
     onClick: d,
     onContextMenu: _,
     renderAdjacentContent: c
