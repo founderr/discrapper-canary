@@ -226,9 +226,11 @@ function Q() {
         id: K,
         "aria-labelledby": U,
         className: V.contentPanel,
-        children: (0, a.jsx)("div", {
-          className: V.sideNavContent,
-          children: q()
+        children: (0, a.jsx)(c.Scroller, {
+          children: (0, a.jsx)("div", {
+            className: V.sideNavContent,
+            children: q()
+          })
         })
       })]
     })
