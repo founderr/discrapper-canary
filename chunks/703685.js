@@ -121,85 +121,87 @@ let x = l.memo(e => {
     middle: i,
     footer: d,
     showEyeDropper: f
-  } = e, p = (0, c.default)(), [N, g] = l.useState(() => {
-    let e = null != t ? t : 0,
-      s = (0, r.int2hex)(e);
-    return {
-      current: e,
-      pending: s,
-      input: s
-    }
+  } = e, p = (0, c.default)(), N = null != t ? t : 0, g = (0, r.int2hex)(N), m = (0, r.int2hslRaw)(N), [R, x] = l.useState({
+    current: N,
+    pending: {
+      hex: g,
+      hsl: m
+    },
+    input: g
   });
   l.useEffect(() => {
-    if (null == t || t === N.current) return;
-    let e = (0, r.int2hex)(t);
-    g({
+    if (null == t || t === R.current) return;
+    let e = (0, r.int2hex)(t),
+      s = (0, r.int2hslRaw)(t);
+    x({
       current: t,
-      pending: e,
+      pending: {
+        hex: e,
+        hsl: s
+      },
       input: e
     })
-  }, [t, N]), l.useEffect(() => a, [a]);
-  let m = e => {
+  }, [t, R]), l.useEffect(() => a, [a]);
+  let T = e => {
       let t = "#" === e[0] ? e : "#".concat(e);
       if (!(0, r.isValidHex)(t)) {
-        g(e => ({
+        x(e => ({
           ...e,
           input: t
         }));
         return
       }
-      let n = (0, r.hex2int)(t);
-      g({
+      let n = (0, r.hex2int)(t),
+        l = (0, r.int2hslRaw)(n);
+      x({
         current: n,
-        pending: t,
+        pending: {
+          hex: t,
+          hsl: l
+        },
         input: t
       }), s(n)
     },
-    R = async () => {
+    v = async () => {
       if (null != p) try {
         let {
           sRGBHex: e
         } = await p.open();
-        m(e)
+        T(e)
       } catch {}
-    }, x = e => {
-      g(t => ({
+    }, L = l.useCallback(e => {
+      x(t => ({
         ...t,
         pending: e,
-        input: e
+        input: e.hex
       }))
-    }, T = e => {
+    }, []), M = e => {
       s((0, r.hex2int)(e))
     };
   return (0, n.jsxs)(u.Dialog, {
     "aria-label": _.default.Messages.PICK_A_COLOR,
     className: I.customColorPicker,
     children: [(0, n.jsx)(E.default, {
-      onChange: e => {
-        let {
-          hex: t
-        } = e;
-        return x(t)
-      },
+      onChange: L,
       onChangeComplete: e => {
         let {
           hex: t
         } = e;
-        return T(t)
+        return M(t)
       },
-      color: N.pending
+      color: R.pending.hsl
     }), i, (0, n.jsxs)("div", {
       className: I.customColorPickerInputContainer,
       children: [f && null != p && (0, n.jsx)(C.Icon, {
-        onClick: R,
+        onClick: v,
         tooltip: _.default.Messages.PICK_A_COLOR_FROM_THE_PAGE,
         tooltipPosition: "top",
         className: I.customColorPickerEyeDropper,
         icon: h.default
       }), (0, n.jsx)(u.TextInput, {
         className: I.customColorPickerInput,
-        value: N.input,
-        onChange: m,
+        value: R.input,
+        onChange: T,
         maxLength: 7
       })]
     }), null != o && o.length > 0 && (0, n.jsx)("div", {
@@ -210,7 +212,7 @@ let x = l.memo(e => {
           backgroundColor: e
         },
         className: I.suggestedColor,
-        onClick: () => m(e)
+        onClick: () => T(e)
       }, "".concat(e, "-").concat(t)))
     }), d]
   })
