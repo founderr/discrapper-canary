@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return j
+    return P
   }
 }), s("47120");
 var a = s("735250"),
@@ -18,92 +18,101 @@ var a = s("735250"),
   E = s("204197"),
   m = s("249003"),
   I = s("735336"),
-  T = s("747074"),
-  p = s("530"),
-  N = s("894374"),
-  x = s("18816"),
-  A = s("301984"),
-  v = s("30556"),
-  _ = s("228168"),
+  T = s("184325"),
+  p = s("747074"),
+  N = s("530"),
+  x = s("894374"),
+  A = s("18816"),
+  v = s("301984"),
+  _ = s("30556"),
+  h = s("228168"),
   C = s("182294"),
-  h = s("231338"),
-  U = s("262572");
+  U = s("231338"),
+  j = s("262572");
 let R = S.default.getEnableHardwareAcceleration() ? n.AnimatedAvatar : n.Avatar;
 
-function j(e) {
+function P(e) {
   let {
     user: t,
     displayProfile: s,
     activity: n,
     friendToken: S,
-    guildId: j,
-    channelId: P,
-    className: M,
-    onClose: y
+    guildId: P,
+    channelId: M,
+    className: y,
+    onClose: g
   } = e, {
     profileTheme: O
-  } = l.useContext(T.UserProfileContext), {
-    avatarSrc: g,
-    eventHandlers: D,
-    avatarDecorationSrc: F
+  } = l.useContext(p.UserProfileContext), {
+    avatarSrc: D,
+    eventHandlers: F,
+    avatarDecorationSrc: L
   } = (0, E.default)({
     user: t,
     size: C.AvatarSizes.SIZE_120
   }), {
-    relationshipType: L,
-    canReceiveMessage: B,
-    canReceiveFriendRequest: b
-  } = (0, m.default)(t), G = (null == s ? void 0 : s.application) != null && (0, f.canInstallApplication)(s.application), [k, w] = (0, i.useStateFromStoresArray)([c.default], () => {
+    relationshipType: B,
+    canReceiveMessage: b,
+    canReceiveFriendRequest: G
+  } = (0, m.default)(t), k = (null == s ? void 0 : s.application) != null && (0, f.canInstallApplication)(s.application), [z, w] = (0, i.useStateFromStoresArray)([c.default], () => {
     let e = c.default.isMobileOnline(t.id);
-    return (0, d.shouldDisableUserPresenceInChannel)(t, P) ? [h.StatusTypes.UNKNOWN, e] : (0, u.default)(n) ? [h.StatusTypes.STREAMING, e] : [c.default.getStatus(t.id), e]
-  }), z = () => {
-    y(), (0, r.popLayer)()
+    return (0, d.shouldDisableUserPresenceInChannel)(t, M) ? [U.StatusTypes.UNKNOWN, e] : (0, u.default)(n) ? [U.StatusTypes.STREAMING, e] : [c.default.getStatus(t.id), e]
+  }), V = () => {
+    g(), (0, r.popLayer)()
   };
   return (0, a.jsxs)("header", {
-    className: M,
+    className: y,
     children: [(0, a.jsx)(I.default, {
       user: t,
       displayProfile: s,
-      profileType: _.UserProfileTypes.MODAL,
+      profileType: h.UserProfileTypes.MODAL,
       hasProfileEffect: (null == s ? void 0 : s.profileEffectId) != null,
-      onClose: z
+      onClose: V
     }), (0, a.jsxs)("div", {
-      className: U.inner,
+      className: j.inner,
       children: [(0, a.jsx)("div", {
-        ...D,
+        ...F,
         children: (0, a.jsx)(R, {
-          src: g,
-          avatarDecoration: F,
+          src: D,
+          avatarDecoration: L,
           size: C.AvatarSizes.SIZE_120,
-          className: U.avatar,
-          status: k,
+          className: j.avatar,
+          status: z,
           statusBackdropColor: (0, o.getStatusBackdropColor)(O),
           "aria-label": t.username,
           isMobile: w,
           statusTooltip: !0
         })
       }), (0, a.jsxs)("div", {
-        className: U.buttons,
-        children: [B && (0, a.jsx)(v.default, {
+        className: j.buttons,
+        children: [b && (0, a.jsx)(_.default, {
           user: t,
-          compact: G || b,
-          onClose: z
-        }), G && (0, a.jsx)(x.default, {
+          compact: k || G,
+          onClose: V
+        }), k && (0, a.jsx)(A.default, {
           application: s.application
-        }), b && (0, a.jsx)(A.default, {
+        }), G && (0, a.jsx)(v.default, {
           user: t,
-          relationshipType: L,
+          relationshipType: B,
           friendToken: S,
-          onClose: z
+          onClose: V
         })]
-      }), (0, a.jsx)(p.default, {
-        className: U.username,
-        user: t,
-        guildId: j,
-        nicknameVariant: "heading-xl/bold",
-        tags: (0, a.jsx)(N.UserProfilePronounsTag, {
-          pronouns: null == s ? void 0 : s.pronouns
-        })
+      }), (0, a.jsxs)("div", {
+        className: j.usernameBadgeList,
+        children: [(0, a.jsx)(N.default, {
+          className: j.username,
+          user: t,
+          guildId: P,
+          nicknameVariant: "heading-xl/bold",
+          tags: (0, a.jsx)(x.UserProfilePronounsTag, {
+            pronouns: null == s ? void 0 : s.pronouns
+          })
+        }), (0, a.jsx)(T.default, {
+          className: j.badgeList,
+          user: t,
+          guildId: P,
+          size: T.BadgeSizes.SIZE_24
+        })]
       })]
     })]
   })
