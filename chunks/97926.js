@@ -14,8 +14,8 @@ t.default = () => {
   let {
     quests: e,
     isFetchingCurrentQuests: t
-  } = (0, i.useQuests)(void 0, {
-    fetch: !0
+  } = (0, i.useQuests)({
+    fetchPolicy: "cache-and-network"
   });
   return ((0, i.useDismissNewQuestBadge)(), t) ? (0, a.jsx)(n.Spinner, {
     className: c.spinner

@@ -35,28 +35,27 @@ var i = n("470079"),
   E = n("918701"),
   I = n("46140");
 
-function T(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-    [n, r] = i.useState(!1),
-    a = (0, s.useStateFromStoresArray)([_.default], () => [..._.default.quests.values()]),
+function T() {
+  let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+      fetchPolicy: "cache-only"
+    },
+    [t, n] = i.useState(!1),
+    r = (0, s.useStateFromStoresArray)([_.default], () => [..._.default.quests.values()]),
     {
-      isFetchingCurrentQuests: o,
-      lastFetchedCurrentQuests: d
+      isFetchingCurrentQuests: a,
+      lastFetchedCurrentQuests: o
     } = (0, s.useStateFromStoresObject)([_.default], () => ({
       isFetchingCurrentQuests: _.default.isFetchingCurrentQuests,
       lastFetchedCurrentQuests: _.default.lastFetchedCurrentQuests
     })),
-    c = (0, u.getIsEligibleForQuests)({
+    d = (0, u.getIsEligibleForQuests)({
       location: I.QuestsExperimentLocations.USE_QUESTS
     });
   return i.useEffect(() => {
-    !0 === t.fetch && c && !n && !o && 0 === d && (r(!0), (0, l.fetchCurrentQuests)())
-  }, [t.fetch, c, n, o, d]), {
-    quests: i.useMemo(() => {
-      let t = null != e ? new Set(e) : null;
-      return a.filter(e => null == t || t.has(e.id))
-    }, [e, a]),
-    isFetchingCurrentQuests: o
+    if ("cache-only" !== e.fetchPolicy)("cache-and-network" === e.fetchPolicy || "cache-or-network" === e.fetchPolicy && 0 === o) && d && !t && !a && (n(!0), (0, l.fetchCurrentQuests)())
+  }, [e.fetchPolicy, d, t, a, o]), {
+    quests: r,
+    isFetchingCurrentQuests: a
   }
 }
 
@@ -64,7 +63,9 @@ function f() {
   let {
     quests: e,
     isFetchingCurrentQuests: t
-  } = T(), [n, s] = i.useState(() => new Map(e.map(e => [e.id, (0, E.isQuestExpired)(e)])));
+  } = T({
+    fetchPolicy: "cache-only"
+  }), [n, s] = i.useState(() => new Map(e.map(e => [e.id, (0, E.isQuestExpired)(e)])));
   return i.useEffect(() => {
     if (t) return;
     let n = [];
@@ -105,8 +106,8 @@ function h() {
   let {
     quests: e,
     isFetchingCurrentQuests: t
-  } = T(void 0, {
-    fetch: !0
+  } = T({
+    fetchPolicy: "cache-or-network"
   }), n = f();
   return i.useMemo(() => {
     let i = [];
