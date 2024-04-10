@@ -30,20 +30,20 @@ function A(e) {
     channelId: A,
     messageId: v,
     roleId: _,
-    friendToken: C,
-    transitionState: h,
+    friendToken: h,
+    transitionState: C,
     sourceAnalyticsLocations: U = [],
-    onClose: R
+    onClose: j
   } = e, {
-    analyticsLocations: j
+    analyticsLocations: R
   } = (0, u.default)([...U, r.default.SIMPLIFIED_PROFILE_MODAL]), P = (0, S.default)(t.id, s), M = (0, i.useStateFromStores)([c.default], () => c.default.findActivity(t.id, e => {
     let {
       type: t
     } = e;
     return t !== p.ActivityTypes.CUSTOM_STATUS
-  })), y = l.createRef(), O = (0, o.default)(y);
+  })), y = l.createRef(), g = (0, o.default)(y);
   return (0, a.jsx)(u.AnalyticsLocationProvider, {
-    value: j,
+    value: R,
     children: (0, a.jsx)(f.UserProfileAnalyticsProvider, {
       layout: "SIMPLIFIED_MODAL",
       userId: t.id,
@@ -52,7 +52,7 @@ function A(e) {
       messageId: v,
       roleId: _,
       children: (0, a.jsxs)(n.ModalRoot, {
-        transitionState: h,
+        transitionState: C,
         className: x.root,
         hideShadow: !0,
         "aria-label": N.default.Messages.USER_PROFILE_MODAL,
@@ -66,11 +66,11 @@ function A(e) {
               user: t,
               displayProfile: P,
               activity: M,
-              friendToken: C,
-              onClose: R
+              friendToken: h,
+              onClose: j
             }), (0, a.jsxs)(m.default.Inner, {
-              children: [h === n.ModalTransitionState.ENTERED && (0, a.jsx)(E.default, {
-                onTooltipClose: R
+              children: [C === n.ModalTransitionState.ENTERED && (0, a.jsx)(E.default, {
+                onTooltipClose: j
               }), (0, a.jsx)("div", {
                 className: x.body
               })]
@@ -79,7 +79,7 @@ function A(e) {
         }), (null == P ? void 0 : P.profileEffectId) != null && (0, a.jsx)(d.default, {
           profileEffectId: null == P ? void 0 : P.profileEffectId,
           bannerAdjustment: 0,
-          isHovering: O
+          isHovering: g
         })]
       })
     })

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return p
   }
 }), n("47120"), n("724458");
 var a = n("735250"),
@@ -19,14 +19,14 @@ var a = n("735250"),
   m = n("273504"),
   g = n("689938"),
   S = n("454775");
-let p = m.AutomodTriggerType.KEYWORD;
+let v = m.AutomodTriggerType.KEYWORD;
 
-function v(e, t) {
+function p(e, t) {
   let {
     perGuildMaxCount: n
-  } = r.triggerConfigs[p], {
+  } = r.triggerConfigs[v], {
     isLoading: m,
-    saveRule: v
+    saveRule: p
   } = (0, d.useAutomodEditingRuleActions)(), {
     createNewEditingRule: I
   } = (0, d.useAutomodEditingRuleState)(), [h, A] = i.useState(!1), [_, T] = (0, u.useSyncAutomodRules)(t), {
@@ -34,13 +34,13 @@ function v(e, t) {
     updateRule: R
   } = (0, u.useAutomodRulesList)(t), y = i.useMemo(() => {
     var e;
-    return null !== (e = C[p]) && void 0 !== e ? e : []
-  }, [C]), x = 0 === y.length, O = n > y.length && !x;
+    return null !== (e = C[v]) && void 0 !== e ? e : []
+  }, [C]), O = 0 === y.length, x = n > y.length && !O;
   if (!i.useMemo(() => (0, o.canCurrentUserManageMessageFilters)(t), [t]) || null == e || 0 === e.length || null == t) return null;
   let N = e.split(" ").length,
     j = () => {
       null != t && ((0, s.closeContextMenu)(), E.default.open(t, M.GuildSettingsSections.GUILD_AUTOMOD), setTimeout(() => {
-        I(t, p, {
+        I(t, v, {
           triggerMetadata: {
             keywordFilter: [e],
             regexPatterns: [],
@@ -59,7 +59,7 @@ function v(e, t) {
           keywordFilter: [...null !== (a = null === (n = t.triggerMetadata) || void 0 === n ? void 0 : n.keywordFilter) && void 0 !== a ? a : [], e]
         }
       };
-      await v(i, y), R(i)
+      await p(i, y), R(i)
     }, P = (0, a.jsx)(a.Fragment, {
       children: (0, a.jsx)(l.MenuItem, {
         id: "automod-rules-loading",
@@ -67,13 +67,13 @@ function v(e, t) {
       })
     });
   return !_ && (P = (0, a.jsxs)(a.Fragment, {
-    children: [x && (0, a.jsx)(l.MenuItem, {
+    children: [O && (0, a.jsx)(l.MenuItem, {
       id: "add-first-rule",
       label: g.default.Messages.GUILD_SETTINGS_ACTION_FILTER_AUTOMOD_RULE_CREATE,
       action: j,
       disabled: m
     }), y.map(e => {
-      let t = (0, r.getAvailableActionTypes)(p).reduce((t, n) => {
+      let t = (0, r.getAvailableActionTypes)(v).reduce((t, n) => {
         let a = e.actions.find(e => {
           let {
             type: t
@@ -98,7 +98,7 @@ function v(e, t) {
         disabled: m,
         action: () => b(e)
       }, e.id)
-    }), O && (0, a.jsxs)(a.Fragment, {
+    }), x && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(l.MenuSeparator, {}), (0, a.jsx)(l.MenuItem, {
         id: "add-another-rule",
         label: g.default.Messages.GUILD_AUTOMOD_ADD_NEW_RULE,

@@ -1,40 +1,40 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   logVoiceMessagePlaybackEnded: function() {
-    return r
+    return o
   },
   logVoiceMessagePlaybackFailed: function() {
-    return u
+    return d
   },
   logVoiceMessagePlaybackStarted: function() {
-    return s
+    return r
   }
 });
-var i, l, a = n("626135"),
-  o = n("981631");
+var n, l, i = a("626135"),
+  s = a("981631");
 
-function s(e, t, n, i) {
-  a.default.track(o.AnalyticEvents.VOICE_MESSAGE_PLAYBACK_STARTED, {
+function r(e, t, a, n) {
+  i.default.track(s.AnalyticEvents.VOICE_MESSAGE_PLAYBACK_STARTED, {
     message_id: e,
     total_duration_secs: t,
-    start_duration_secs: Math.min(null != t ? t : n, n),
-    sender_user_id: i
+    start_duration_secs: Math.min(null != t ? t : a, a),
+    sender_user_id: n
   })
 }
 
-function r(e, t, n, i, l) {
-  a.default.track(o.AnalyticEvents.VOICE_MESSAGE_PLAYBACK_ENDED, {
+function o(e, t, a, n, l) {
+  i.default.track(s.AnalyticEvents.VOICE_MESSAGE_PLAYBACK_ENDED, {
     message_id: e,
     total_duration_secs: t,
-    end_duration_secs: Math.min(null != t ? t : n, n),
-    sender_user_id: i,
+    end_duration_secs: Math.min(null != t ? t : a, a),
+    sender_user_id: n,
     duration_listening_secs: l
   })
 }
 
-function u(e, t) {
-  a.default.track(o.AnalyticEvents.VOICE_MESSAGE_PLAYBACK_FAILED, {
+function d(e, t) {
+  i.default.track(s.AnalyticEvents.VOICE_MESSAGE_PLAYBACK_FAILED, {
     message_id: e,
     error_message: t
   })
-}(i = l || (l = {})).SENT = "sent", i.CANCELLED_DURATION = "cancelled_duration", i.CANCELLED_USER_REQUESTED = "cancelled_user_requested", i.CANCELLED_GESTURE_CONFLICT = "cancelled_gesture_conflict", i.CANCELLED_ON_BACKGROUND = "cancelled_on_background"
+}(n = l || (l = {})).SENT = "sent", n.CANCELLED_DURATION = "cancelled_duration", n.CANCELLED_USER_REQUESTED = "cancelled_user_requested", n.CANCELLED_GESTURE_CONFLICT = "cancelled_gesture_conflict", n.CANCELLED_ON_BACKGROUND = "cancelled_on_background"

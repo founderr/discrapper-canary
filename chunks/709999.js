@@ -33,8 +33,8 @@ var l = a("735250"),
   R = a("1870"),
   j = a("884697"),
   F = a("664018"),
-  D = a("624377"),
-  B = a("813083"),
+  B = a("624377"),
+  D = a("813083"),
   M = a("680942"),
   w = a("558060"),
   H = a("237031"),
@@ -100,7 +100,7 @@ t.default = function(e) {
     animateOnHover: !et
   }), {
     backgroundColors: eo
-  } = (0, D.default)(t.styles), ei = (0, j.getFormattedPriceForCollectiblesProduct)(t, N, !1), eu = (0, j.isPremiumCollectiblesProduct)(t), ec = (0, j.isFreeCollectiblesProduct)(t), [ed, ef, em] = (0, u.useStateFromStoresArray)([R.default], () => [R.default.getPurchase(t.skuId), R.default.isClaiming === t.skuId, null != R.default.isClaiming && R.default.isClaiming !== t.skuId]), eC = (0, u.useStateFromStores)([L.default], () => (0, d.isThemeDark)(L.default.theme)), eg = (0, u.useStateFromStores)([P.default], () => P.default.getIsProductNew(el.skuId)), {
+  } = (0, B.default)(t.styles), ei = (0, j.getFormattedPriceForCollectiblesProduct)(t, N, !1), eu = (0, j.isPremiumCollectiblesProduct)(t), ec = (0, j.isFreeCollectiblesProduct)(t), [ed, ef, em] = (0, u.useStateFromStoresArray)([R.default], () => [R.default.getPurchase(t.skuId), R.default.isClaiming === t.skuId, null != R.default.isClaiming && R.default.isClaiming !== t.skuId]), eC = (0, u.useStateFromStores)([L.default], () => (0, d.isThemeDark)(L.default.theme)), eg = (0, u.useStateFromStores)([P.default], () => P.default.getIsProductNew(el.skuId)), {
     hoverVariant: eh
   } = (0, F.useShopCardHoverAnimationExperiment)("CollectiblesShopTallCard");
   s.useEffect(() => {
@@ -283,7 +283,7 @@ t.default = function(e) {
             children: e_()
           })]
         })]
-      }), (0, l.jsx)(B.default, {
+      }), (0, l.jsx)(D.default, {
         category: a,
         className: V.limitedTimeBadge,
         display: "card"

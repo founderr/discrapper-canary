@@ -24,41 +24,41 @@ t.default = function(e) {
     formDescription: g,
     onFieldsSave: C,
     onDescriptionSave: v
-  } = e, x = r.useRef(!1), [N, R] = r.useState(null), [A, S] = r.useState(e.formFields), M = r.useRef(e.formFields), O = r.useMemo(() => A.filter(o.isAutomaticApprovalFormField), [A]), b = r.useMemo(() => A.filter(o.isManualApprovalFormField), [A]), F = b.length, L = r.useMemo(() => A.length === E.MAX_FORM_ELEMENTS, [A]), y = r.useMemo(() => A.some(l.isTermsFormField), [A]), D = r.useMemo(() => A.some(e => !(0, l.isTermsFormField)(e)), [A]), j = F > 1, P = (0, s.useIsMemberVerificationManualApproval)(t.id) || h, w = r.useCallback(() => {
+  } = e, x = r.useRef(!1), [N, R] = r.useState(null), [S, A] = r.useState(e.formFields), M = r.useRef(e.formFields), O = r.useMemo(() => S.filter(o.isAutomaticApprovalFormField), [S]), b = r.useMemo(() => S.filter(o.isManualApprovalFormField), [S]), F = b.length, L = r.useMemo(() => S.length === E.MAX_FORM_ELEMENTS, [S]), y = r.useMemo(() => S.some(l.isTermsFormField), [S]), D = r.useMemo(() => S.some(e => !(0, l.isTermsFormField)(e)), [S]), j = F > 1, P = (0, s.useIsMemberVerificationManualApproval)(t.id) || h, w = r.useCallback(() => {
     (0, a.showToast)((0, a.createToast)(I.default.Messages.ERROR_GENERIC_TITLE, a.ToastType.FAILURE))
   }, []), G = r.useCallback(async e => {
     if (!x.current) {
       x.current = !0, h && (e = e.filter(e => e.field_type !== l.VerificationFormFieldTypes.TERMS));
       try {
-        await C(t.id, e), _(), S(e), M.current = e
+        await C(t.id, e), _(), A(e), M.current = e
       } catch (e) {
-        throw S(M.current), e
+        throw A(M.current), e
       } finally {
         null != N && R(null), x.current = !1
       }
     }
   }, [N, t.id, _, C, h]), U = r.useCallback(async e => {
-    let t = e.field_type === l.VerificationFormFieldTypes.TERMS ? [e, ...A] : [...A, e];
+    let t = e.field_type === l.VerificationFormFieldTypes.TERMS ? [e, ...S] : [...S, e];
     await G(t)
-  }, [A, G]), B = r.useCallback(async (e, t) => {
-    if (A[e] === t) return;
-    let n = [...A];
+  }, [S, G]), B = r.useCallback(async (e, t) => {
+    if (S[e] === t) return;
+    let n = [...S];
     n[e] = t, await G(n)
-  }, [A, G]), V = r.useCallback(async (e, t, n) => {
-    let i = A.indexOf(e),
-      r = [...A];
-    if (null != t && t !== i && (r.splice(i, 1), r.splice(t, 0, e), S(r)), n) try {
+  }, [S, G]), V = r.useCallback(async (e, t, n) => {
+    let i = S.indexOf(e),
+      r = [...S];
+    if (null != t && t !== i && (r.splice(i, 1), r.splice(t, 0, e), A(r)), n) try {
       await G(r), null !== N && R(null)
     } catch (e) {
       w()
     } else N !== t && R(t)
-  }, [N, A, G, w]), H = r.useCallback(async e => {
+  }, [N, S, G, w]), H = r.useCallback(async e => {
     try {
-      await G([...A.slice(0, e), ...A.slice(e + 1)])
+      await G([...S.slice(0, e), ...S.slice(e + 1)])
     } catch (e) {
       w()
     }
-  }, [A, G, w]), k = (0, i.jsxs)(i.Fragment, {
+  }, [S, G, w]), k = (0, i.jsxs)(i.Fragment, {
     children: [!T && (0, i.jsx)(f.default, {
       guild: t
     }), (0, i.jsx)(c.default, {
@@ -72,7 +72,7 @@ t.default = function(e) {
       dropHoveredIndex: N,
       formField: e,
       guild: t,
-      index: A.indexOf(e),
+      index: S.indexOf(e),
       isDragEnabled: !1,
       submittedGuildJoinRequestsCount: n,
       removeFormField: H,
@@ -91,7 +91,7 @@ t.default = function(e) {
       dropHoveredIndex: N,
       formField: e,
       guild: t,
-      index: A.indexOf(e),
+      index: S.indexOf(e),
       isDragEnabled: j,
       submittedGuildJoinRequestsCount: n,
       removeFormField: H,

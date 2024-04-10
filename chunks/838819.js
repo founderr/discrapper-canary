@@ -33,8 +33,8 @@ var l = a("735250"),
   R = a("335131"),
   j = a("328347"),
   F = a("186711"),
-  D = a("223143"),
-  B = a("298228"),
+  B = a("223143"),
+  D = a("298228"),
   M = a("971815"),
   w = a("853748"),
   H = a("426171"),
@@ -132,12 +132,12 @@ t.default = function(e) {
     categories: Y,
     isFetchingCategories: X,
     error: ea
-  } = (0, D.default)({
+  } = (0, B.default)({
     noCache: U,
     includeUnpublished: W
   });
   (0, I.useReloadProfileEffectWhenConfigsAreMissing)();
-  let el = (0, B.usePurchasedCategoriesSort)(Y),
+  let el = (0, D.usePurchasedCategoriesSort)(Y),
     {
       tallerCardsEnabled: es
     } = (0, F.useCollectiblesShopTallerCardsExperiment)({

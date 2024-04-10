@@ -33,8 +33,8 @@ var l = a("735250"),
   R = a("558060"),
   j = a("237031"),
   F = a("372654"),
-  D = a("832149"),
-  B = a("474936"),
+  B = a("832149"),
+  D = a("474936"),
   M = a("689938"),
   w = a("321664");
 let H = _.default.getEnableHardwareAcceleration() ? u.AnimatedAvatar : u.Avatar,
@@ -141,7 +141,7 @@ t.default = function(e) {
         disabled: eu,
         onClick: e => e.stopPropagation(),
         buttonText: M.default.Messages.UNLOCK_WITH_NITRO,
-        subscriptionTier: B.PremiumSubscriptionSKUs.TIER_2
+        subscriptionTier: D.PremiumSubscriptionSKUs.TIER_2
       })
     });
   s.useEffect(() => {
@@ -186,7 +186,7 @@ t.default = function(e) {
           submittingStartedLabel: M.default.Messages.COLLECTIBLES_COLLECTING,
           submittingFinishedLabel: M.default.Messages.COLLECTIBLES_COLLECTING_FINISHED,
           onClick: async () => {
-            await (0, N.claimPremiumCollectiblesProduct)(t.skuId), (0, D.default)({
+            await (0, N.claimPremiumCollectiblesProduct)(t.skuId), (0, B.default)({
               product: t,
               analyticsLocations: z
             })

@@ -25,9 +25,9 @@ t.default = r.memo(function(e) {
     height: N = 0
   } = (0, c.default)(), {
     ref: R,
-    height: A = 0
-  } = (0, c.default)(), [S, M] = r.useState(a), O = (0, l.useSpring)({
-    height: S ? A + N : N,
+    height: S = 0
+  } = (0, c.default)(), [A, M] = r.useState(a), O = (0, l.useSpring)({
+    height: A ? S + N : N,
     immediate: h || T || I,
     config: {
       ...l.config.stiff,

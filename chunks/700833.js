@@ -37,11 +37,11 @@ function p(e) {
     await h(m, e)
   }, N = async (e, t, n) => {
     await g(e, t, n)
-  }, R = (0, r.uniqueId)(), A = t === m, S = {
+  }, R = (0, r.uniqueId)(), S = t === m, A = {
     key: R,
     index: m,
     isDragEnabled: I,
-    isDropHovered: A,
+    isDropHovered: S,
     onEdit: () => {
       0 === _ ? E(d, x, p) : (0, a.openModalLazy)(async () => {
         let {
@@ -65,22 +65,22 @@ function p(e) {
         channelId: p.rulesChannelId,
         title: f.default.Messages.GUILD_RULES_HEADER,
         formField: d,
-        ...S
+        ...A
       });
     case s.VerificationFormFieldTypes.PARAGRAPH:
       return (0, i.jsx)(o.default, {
         formField: d,
-        ...S
+        ...A
       });
     case s.VerificationFormFieldTypes.TEXT_INPUT:
       return (0, i.jsx)(c.default, {
         formField: d,
-        ...S
+        ...A
       });
     case s.VerificationFormFieldTypes.MULTIPLE_CHOICE:
       return (0, i.jsx)(l.default, {
         formField: d,
-        ...S
+        ...A
       });
     default:
       return null

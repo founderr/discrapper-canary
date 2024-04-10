@@ -135,8 +135,8 @@ function N(e) {
     onFieldsSave: I,
     onDescriptionSave: _,
     verificationForm: T
-  } = e, [N, R] = r.useState(E), A = r.useRef(!1), S = r.useCallback(() => {
-    A.current = !0
+  } = e, [N, R] = r.useState(E), S = r.useRef(!1), A = r.useCallback(() => {
+    S.current = !0
   }, []), M = null !== (t = (0, p.useSubmittedGuildJoinRequestTotal)({
     guildId: o.id
   })) && void 0 !== t ? t : 0, O = (0, l.useStateFromStores)([d.default], () => null != T ? T : d.default.get(o.id)), b = null !== (n = null == O ? void 0 : O.formFields) && void 0 !== n ? n : [];
@@ -164,7 +164,7 @@ function N(e) {
         guild: o,
         submittedGuildJoinRequestsCount: M,
         formFields: b,
-        onFormFieldUpdate: S,
+        onFormFieldUpdate: A,
         hideVerificationLevelField: !0,
         isClanContext: E,
         onFieldsSave: null != I ? I : v,
