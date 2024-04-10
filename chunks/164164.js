@@ -56,14 +56,10 @@ let v = s.forwardRef(function(e, t) {
         className: N.utils,
         children: [(0, a.jsxs)("div", {
           className: N.questAcceptedContentHeading,
-          children: [(0, a.jsx)(p.QuestsAsset, {
-            id: "QuestsBarContentExpanded_rewardTile",
-            children: e => (0, a.jsx)("img", {
-              ref: e,
-              alt: y.config.messages.rewardName,
-              className: N.questProgressRewardTile,
-              src: (0, C.getRewardAssetUrl)(y)
-            })
+          children: [(0, a.jsx)(I.default, {
+            className: N.questProgressRewardTile,
+            quest: y,
+            questContent: _.QuestContent.QUEST_BAR
           }), (0, a.jsxs)("div", {
             children: [(0, a.jsx)(o.Heading, {
               color: "always-white",

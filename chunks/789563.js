@@ -6,10 +6,10 @@ var s = n("803997"),
   l = n.n(s),
   i = n("718017"),
   r = n("481060"),
-  o = n("918701"),
+  o = n("497505"),
   u = n("685613"),
   d = n("340100"),
-  c = n("78826"),
+  c = n("644646"),
   f = n("580168"),
   E = n("689938"),
   h = n("603961");
@@ -42,14 +42,11 @@ t.default = function(e) {
       className: h.contentCollapsedWrapper,
       children: T ? (0, a.jsxs)("div", {
         className: h.questProgressWrapper,
-        children: [(0, a.jsx)(c.QuestsAsset, {
-          id: "QuestsBarContentCollapsed_rewardTile",
-          children: e => (0, a.jsx)("img", {
-            ref: e,
-            alt: I.config.messages.rewardName,
-            className: h.questProgressRewardTile,
-            src: (0, o.getRewardAssetUrl)(I)
-          })
+        children: [(0, a.jsx)(c.default, {
+          className: h.questProgressRewardTile,
+          quest: I,
+          questContent: o.QuestContent.QUEST_BAR,
+          autoplay: !1
         }), g ? (0, a.jsx)(d.default, {
           className: h.questProgressBar,
           quest: I
