@@ -25,6 +25,7 @@ t.default = e => {
     children: (0, s.jsx)(i.default, {
       avatarSize: u.AvatarSizes.SIZE_80,
       user: c,
+      guildId: null,
       avatarDecorationOverride: f
     })
   })
