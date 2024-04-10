@@ -19,12 +19,12 @@ function f(e) {
   let {
     channelId: t,
     messageId: n,
-    attachmentId: f,
+    mediaItemProxyUrl: f,
     embedId: E,
     transitionState: M,
     onClose: m
-  } = e, g = (0, s.useIsEligibleForExplicitMediaRedaction)(), S = (0, o.useExplicitMediaAttachmentsForMessage)(t, n, f), v = (0, o.useExplicitMediaEmbedsForMessage)(t, n, E), {
-    reportFalsePositive: p,
+  } = e, g = (0, s.useIsEligibleForExplicitMediaRedaction)(), S = (0, o.useExplicitMediaAttachmentsForMessage)(t, n, f), p = (0, o.useExplicitMediaEmbedsForMessage)(t, n, E), {
+    reportFalsePositive: v,
     isReportFalsePositiveLoading: I
   } = (0, r.useExplicitMediaActions)({
     onSuccess: () => (0, d.handleSuccess)(m),
@@ -32,17 +32,17 @@ function f(e) {
       (0, i.showToast)((0, i.createToast)(c.default.Messages.ERROR_GENERIC_TITLE, i.ToastType.FAILURE))
     },
     report: () => {
-      (0, l.reportFalsePositive)(t, n, S.map(e => e.id), v.map(e => e.id))
+      (0, l.reportFalsePositive)(t, n, S.map(e => e.id), p.map(e => e.id))
     }
   });
-  return !(g && (S.length > 0 || v.length > 0)) && m(), (0, a.jsx)(d.ExplicitMediaFalsePositiveModal, {
+  return !(g && (S.length > 0 || p.length > 0)) && m(), (0, a.jsx)(d.ExplicitMediaFalsePositiveModal, {
     messageId: n,
     channelId: t,
     isReportFalsePositiveLoading: I,
     analyticsContext: u.TrackMediaRedactionContext.EXPLICIT_MEDIA_OBSCURED_FALSE_POSITIVE_FLOW,
-    onConfirmPress: p,
-    attachmentPreview: 1 === S.length && 0 === v.length ? S[0] : void 0,
-    embedPreview: 1 === v.length && 0 === S.length ? v[0] : void 0,
+    onConfirmPress: v,
+    attachmentPreview: 1 === S.length && 0 === p.length ? S[0] : void 0,
+    embedPreview: 1 === p.length && 0 === S.length ? p[0] : void 0,
     transitionState: M,
     onClose: m
   })

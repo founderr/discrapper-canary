@@ -26,7 +26,7 @@ function S(e) {
       channel: _,
       message: h,
       target: O,
-      attachment: m,
+      mediaItem: m,
       onSelect: A,
       onHeightUpdate: G
     } = e,
