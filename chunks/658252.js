@@ -1,36 +1,36 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(e), s.d(e, {
   EnvelopeIcon: function() {
-    return i
+    return c
   }
 });
-var r = n("735250");
-n("470079");
-var s = n("692547"),
-  o = n("331595");
-let i = e => {
+var i = s("735250");
+s("470079");
+var n = s("692547"),
+  a = s("331595");
+let c = t => {
   let {
-    width: t = 24,
-    height: n = 24,
-    color: i = s.default.colors.INTERACTIVE_NORMAL,
-    colorClass: a = "",
-    ...l
-  } = e;
-  return (0, r.jsxs)("svg", {
-    ...(0, o.default)(l),
+    width: e = 24,
+    height: s = 24,
+    color: c = n.default.colors.INTERACTIVE_NORMAL,
+    colorClass: l = "",
+    ...o
+  } = t;
+  return (0, i.jsxs)("svg", {
+    ...(0, a.default)(o),
     xmlns: "http://www.w3.org/2000/svg",
-    width: t,
-    height: n,
+    width: e,
+    height: s,
     fill: "none",
     viewBox: "0 0 24 24",
-    children: [(0, r.jsx)("path", {
-      fill: "string" == typeof i ? i : i.css,
+    children: [(0, i.jsx)("path", {
+      fill: "string" == typeof c ? c : c.css,
       d: "M1.16 5.02c-.1.28.04.58.29.74l10.27 6.85a.5.5 0 0 0 .56 0l10.27-6.85c.25-.16.38-.46.29-.74A3 3 0 0 0 20 3H4a3 3 0 0 0-2.84 2.02Z",
-      className: a
-    }), (0, r.jsx)("path", {
-      fill: "string" == typeof i ? i : i.css,
+      className: l
+    }), (0, i.jsx)("path", {
+      fill: "string" == typeof c ? c : c.css,
       d: "M23 8.8a.5.5 0 0 0-.78-.41l-9.53 6.35c-.42.28-.96.28-1.38 0L1.78 8.39A.5.5 0 0 0 1 8.8V18a3 3 0 0 0 3 3h16a3 3 0 0 0 3-3V8.8Z",
-      className: a
+      className: l
     })]
   })
 }

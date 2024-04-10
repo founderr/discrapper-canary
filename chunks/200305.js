@@ -30,12 +30,12 @@ var l, n, i = s("735250"),
   O = s("983736"),
   j = s("266395"),
   S = s("990488"),
-  V = s("592286"),
-  p = s("981631"),
+  p = s("592286"),
+  V = s("981631"),
   L = s("689938"),
   B = s("815431"),
-  P = s("419851"),
-  b = s("296507"),
+  b = s("419851"),
+  P = s("296507"),
   y = s("866402"),
   U = s("246403");
 (n = l || (l = {}))[n.CLAIM_ACCOUNT = 0] = "CLAIM_ACCOUNT", n[n.EMAIL_CONFIRMATION = 1] = "EMAIL_CONFIRMATION", n[n.VERIFICATION_FORM = 2] = "VERIFICATION_FORM";
@@ -55,7 +55,7 @@ let D = e => {
         className: B.applicationIconContainer,
         children: (0, i.jsx)("img", {
           alt: L.default.Messages.MEMBER_VERIFICATION_CLAIM_ACCOUNT_ICON,
-          src: P,
+          src: b,
           className: B.applicationIcon
         })
       }), (0, i.jsx)(u.Heading, {
@@ -167,7 +167,7 @@ let D = e => {
           className: B.animation
         }), (0, i.jsx)("img", {
           alt: L.default.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
-          src: b,
+          src: P,
           className: d()(B.sparkleIcon, B.sparkleTop)
         })]
       }), (0, i.jsx)(u.Heading, {
@@ -199,13 +199,13 @@ t.default = e => {
     onComplete: c,
     inviteCode: x,
     isPreview: S = !1
-  } = e, P = (0, j.useMemberVerificationFormNoticeStore)(e => e.hasUnsubmittedChanges), b = (0, o.useStateFromStores)([F.default], () => F.default.getGuild(n)), y = (0, o.useStateFromStores)([v.default], () => v.default.get(n)), U = null == y ? void 0 : y.formFields.some(e => e.field_type !== A.VerificationFormFieldTypes.TERMS), H = (0, o.useStateFromStores)([_.default], () => _.default.getCurrentUser()), q = !(null == H ? void 0 : H.isClaimed()), G = null == H ? void 0 : H.verified, Y = null == H ? void 0 : H.isPhoneVerified(), z = (0, o.useStateFromStores)([E.default], () => E.default.getGuildEmoji(n)), {
+  } = e, b = (0, j.useMemberVerificationFormNoticeStore)(e => e.hasUnsubmittedChanges), P = (0, o.useStateFromStores)([F.default], () => F.default.getGuild(n)), y = (0, o.useStateFromStores)([v.default], () => v.default.get(n)), U = null == y ? void 0 : y.formFields.some(e => e.field_type !== A.VerificationFormFieldTypes.TERMS), H = (0, o.useStateFromStores)([_.default], () => _.default.getCurrentUser()), q = !(null == H ? void 0 : H.isClaimed()), G = null == H ? void 0 : H.verified, Y = null == H ? void 0 : H.isPhoneVerified(), z = (0, o.useStateFromStores)([E.default], () => E.default.getGuildEmoji(n)), {
     storeMemberCount: W,
     storeOnlineCount: K
   } = (0, o.useStateFromStoresObject)([M.default], () => ({
     storeMemberCount: M.default.getMemberCount(n),
     storeOnlineCount: M.default.getOnlineCount(n)
-  })), [J, X] = r.useState(null !== (t = null == y ? void 0 : y.formFields) && void 0 !== t ? t : []), [Q, Z] = r.useState(!1), [$, ee] = r.useState(null), [et, es] = r.useState(q ? 0 : 2), [el, en] = r.useState(""), [ei, er] = r.useState(""), [ea, ed] = r.useState(null), [eo, eu] = r.useState(null), ec = null == y ? void 0 : y.guild, eI = r.useMemo(() => null != b ? b : null != ec ? new f.default(ec) : null, [b, ec]), em = null !== (s = null == eI ? void 0 : eI.hasFeature(p.GuildFeatures.CLAN)) && void 0 !== s && s, {
+  })), [J, X] = r.useState(null !== (t = null == y ? void 0 : y.formFields) && void 0 !== t ? t : []), [Q, Z] = r.useState(!1), [$, ee] = r.useState(null), [et, es] = r.useState(q ? 0 : 2), [el, en] = r.useState(""), [ei, er] = r.useState(""), [ea, ed] = r.useState(null), [eo, eu] = r.useState(null), ec = null == y ? void 0 : y.guild, eI = r.useMemo(() => null != P ? P : null != ec ? new f.default(ec) : null, [P, ec]), em = null !== (s = null == eI ? void 0 : eI.hasFeature(V.GuildFeatures.CLAN)) && void 0 !== s && s, {
     emojisToRender: eE,
     remainingEmojis: ef,
     numGuildEmoji: eM
@@ -231,15 +231,15 @@ t.default = e => {
   }, [H]), r.useEffect(() => {
     1 === et && G && es(2)
   }, [et, G]), r.useEffect(() => {
-    null != n && C.default.track(p.AnalyticEvents.OPEN_MODAL, {
-      type: V.MEMBER_VERIFICATION_TYPE,
+    null != n && C.default.track(V.AnalyticEvents.OPEN_MODAL, {
+      type: p.MEMBER_VERIFICATION_TYPE,
       guild_id: n
     })
   }, [n]), r.useEffect(() => {
     let e = J.some(e => e.field_type !== A.VerificationFormFieldTypes.TERMS && (0, O.isValidFormResponse)(e));
-    e && !P ? (0, j.setHasUnsubmittedChanges)(!0) : !e && P && (0, j.setHasUnsubmittedChanges)(!1)
-  }, [J, P]);
-  let e_ = r.useMemo(() => !(((null == eI ? void 0 : eI.verificationLevel) !== p.VerificationLevels.VERY_HIGH || (null == H ? void 0 : H.isStaff())) && G || Y) || J.some(e => !(0, O.isValidFormResponse)(e)), [J, eI, Y, G, H]),
+    e && !b ? (0, j.setHasUnsubmittedChanges)(!0) : !e && b && (0, j.setHasUnsubmittedChanges)(!1)
+  }, [J, b]);
+  let e_ = r.useMemo(() => !(((null == eI ? void 0 : eI.verificationLevel) !== V.VerificationLevels.VERY_HIGH || (null == H ? void 0 : H.isStaff())) && G || Y) || J.some(e => !(0, O.isValidFormResponse)(e)), [J, eI, Y, G, H]),
     eN = (0, o.useStateFromStores)([m.default], () => m.default.useReducedMotion);
   if (null == eI) return null;
   let eh = async () => {

@@ -24,7 +24,7 @@ t.default = e => {
     root_node_id: p,
     success_node_id: N,
     fail_node_id: g
-  } = n, [T, S] = l.useState(p), [I, M] = l.useState(void 0), [j, C] = l.useState(void 0), [b, y] = l.useState([]), [L, A] = l.useState(void 0), D = e => {
+  } = n, [T, I] = l.useState(p), [S, M] = l.useState(void 0), [j, C] = l.useState(void 0), [b, y] = l.useState([]), [A, L] = l.useState(void 0), D = e => {
     var n;
     let {
       destination: a
@@ -43,12 +43,12 @@ t.default = e => {
         next_node: r.id
       })
     }
-    S(l)
+    I(l)
   }, O = async e => {
     var a;
     let l = v ? await (0, o.submitReport)(n, t, [...b, e]) : await (0, o.submitUnauthenticatedReport)(n, t, [...b, e], h),
       r = null == l ? void 0 : null === (a = l.body) || void 0 === a ? void 0 : a.report_id;
-    null != r && A(r), null == f || f(r)
+    null != r && L(r), null == f || f(r)
   }, U = () => {
     var e, n;
     if (b.length < 1) return;
@@ -65,23 +65,23 @@ t.default = e => {
         next_node: x[r].id
       })
     }
-    M(null == l ? void 0 : null === (e = l.multiSelect) || void 0 === e ? void 0 : e.state), C(null == l ? void 0 : l.textInput), S(r), y(a), null == E || E("..")
-  }, k = [], B = [];
+    M(null == l ? void 0 : null === (e = l.multiSelect) || void 0 === e ? void 0 : e.state), C(null == l ? void 0 : l.textInput), I(r), y(a), null == E || E("..")
+  }, k = [], P = [];
   for (let e in x) {
-    var P, G;
+    var B, G;
     let t = x[e];
     if (t.id !== N && t.id !== g && t.id !== p) {
       if (t.key.endsWith("_SUBMIT")) {
-        B.push(t);
+        P.push(t);
         continue
       }
-      if (k.push(t), (null === (P = t.button) || void 0 === P ? void 0 : P.type) === "next") {
+      if (k.push(t), (null === (B = t.button) || void 0 === B ? void 0 : B.type) === "next") {
         let e = null === (G = t.button) || void 0 === G ? void 0 : G.target,
           n = k.indexOf(x[e]); - 1 !== n && (k.splice(n, 1), k.push(x[e]))
       }
     }
   }
-  let w = [x[p], ...k, ...B, x[N], x[g]];
+  let w = [x[p], ...k, ...P, x[N], x[g]];
   return (0, a.jsx)(r.ModalRoot, {
     transitionState: _.transitionState,
     "aria-labelledby": R,
@@ -100,12 +100,12 @@ t.default = e => {
             onModalClose: _.onClose,
             onSelectChild: D,
             onNavigateBack: U,
-            multiSelect: I,
+            multiSelect: S,
             textInput: j,
             successNodeId: N,
             failNodeId: g,
             onSubmit: O,
-            reportId: L
+            reportId: A
           })
         })
       }, e.id))

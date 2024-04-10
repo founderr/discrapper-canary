@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   ApplicantFormRenderer: function() {
-    return _
+    return F
   },
   PreviewFormRenderer: function() {
     return R
@@ -10,8 +10,8 @@ s.r(t), s.d(t, {
 var l = s("735250"),
   n = s("470079"),
   i = s("442837"),
-  a = s("430824"),
-  r = s("594174"),
+  r = s("430824"),
+  a = s("594174"),
   d = s("246364"),
   o = s("866319"),
   u = s("118346"),
@@ -26,9 +26,9 @@ function M(e) {
     guildId: t,
     formFields: s,
     updateFormFields: n
-  } = e, r = (0, i.useStateFromStores)([a.default], () => {
+  } = e, a = (0, i.useStateFromStores)([r.default], () => {
     var e;
-    return null === (e = a.default.getGuild(t)) || void 0 === e ? void 0 : e.rulesChannelId
+    return null === (e = r.default.getGuild(t)) || void 0 === e ? void 0 : e.rulesChannelId
   }), o = (e, t) => {
     let l = s[e];
     n([...s.slice(0, e), {
@@ -53,7 +53,7 @@ function M(e) {
     switch (e.field_type) {
       case d.VerificationFormFieldTypes.TERMS:
         return (0, l.jsx)(E.TermsFormField, {
-          channelId: r,
+          channelId: a,
           formField: e,
           onChange: (e, s) => o(t, s)
         }, t);
@@ -84,10 +84,10 @@ function R(e) {
     guildId: t,
     formFields: s,
     updateFormFields: n
-  } = e, a = (0, i.useStateFromStores)([r.default], () => r.default.getCurrentUser()), d = (0, o.useIsPhoneVerificationLevel)({
+  } = e, r = (0, i.useStateFromStores)([a.default], () => a.default.getCurrentUser()), d = (0, o.useIsPhoneVerificationLevel)({
     guildId: t
   }) ? m.PreviewPhoneRequirementFormField : u.PreviewEmailRequirementFormField;
-  return null == a ? null : (0, l.jsxs)(l.Fragment, {
+  return null == r ? null : (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(d, {}), (0, l.jsx)(M, {
       guildId: t,
       formFields: s,
@@ -96,12 +96,12 @@ function R(e) {
   })
 }
 
-function _(e) {
+function F(e) {
   let {
     guildId: t,
     formFields: s,
-    updateFormFields: a
-  } = e, d = (0, i.useStateFromStores)([r.default], () => r.default.getCurrentUser()), {
+    updateFormFields: r
+  } = e, d = (0, i.useStateFromStores)([a.default], () => a.default.getCurrentUser()), {
     isPhoneVerificationLevel: c,
     isCurrentUserVerified: I
   } = (0, o.useCurrentUserVerificationStatus)({
@@ -113,7 +113,7 @@ function _(e) {
     }), (0, l.jsx)(M, {
       guildId: t,
       formFields: s,
-      updateFormFields: a
+      updateFormFields: r
     })]
   })
 }
