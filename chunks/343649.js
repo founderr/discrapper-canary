@@ -39,9 +39,9 @@ var l, a = n("735250"),
   D = n("853872"),
   x = n("509545"),
   B = n("78839"),
-  k = n("285952"),
-  v = n("626135"),
-  G = n("267642"),
+  G = n("285952"),
+  k = n("626135"),
+  v = n("267642"),
   j = n("74538"),
   F = n("212895"),
   w = n("296848"),
@@ -59,7 +59,7 @@ let X = K.SubscriptionPlans.NONE_MONTH,
   Z = [A.Step.PLAN_SELECT, A.Step.ADD_PAYMENT_STEPS, A.Step.REVIEW, A.Step.CONFIRM];
 async function $(e) {
   await (0, E.fetchGuildBoostSlots)();
-  let t = (0, G.getAvailableGuildBoostSlots)(O.default.boostSlots);
+  let t = (0, v.getAvailableGuildBoostSlots)(O.default.boostSlots);
   return (0, E.applyToGuild)(e, t.map(e => e.id))
 }
 
@@ -88,7 +88,7 @@ function ee(e) {
     ep = (0, c.useStateFromStores)([x.default], () => null == er || null != x.default.get(er.planId)),
     eE = (0, c.useStateFromStores)([x.default], () => null == eS ? x.default.get(X) : eS),
     em = (0, c.useStateFromStores)([h.default], () => h.default.theme),
-    eP = s.useRef((0, G.getAvailableGuildBoostSlots)(O.default.boostSlots)).current,
+    eP = s.useRef((0, v.getAvailableGuildBoostSlots)(O.default.boostSlots)).current,
     e_ = (0, c.useStateFromStores)([D.default], () => D.default.defaultPaymentSourceId),
     ef = (0, C.useSharedPaymentModal)(null != ed ? ed : ec ? e_ : null),
     {
@@ -108,22 +108,22 @@ function ee(e) {
     [eb, eD] = s.useState(!1),
     ex = (0, c.useStateFromStores)([b.default], () => b.default.popupCallbackCalled),
     eB = (0, I.useSubscriptionPlansLoaded)(),
-    ek = s.useMemo(() => null != er && ep && eB ? (0, R.calculateAdditionalPlansWithPremiumGuildAdjustment)(er, eg) : [{
+    eG = s.useMemo(() => null != er && ep && eB ? (0, R.calculateAdditionalPlansWithPremiumGuildAdjustment)(er, eg) : [{
       planId: K.SubscriptionPlans.PREMIUM_MONTH_GUILD,
       quantity: eg
     }], [er, ep, eg, eB]),
-    [ev, eG] = (0, r.useLazyValue)(() => [(0, o.v4)(), Date.now()]),
+    [ek, ev] = (0, r.useLazyValue)(() => [(0, o.v4)(), Date.now()]),
     {
       analyticsLocations: ej
     } = (0, f.default)(E, _.default.GUILD_BOOST_PURCHASE_MODAL),
     eF = s.useMemo(() => {
       var e, t;
       return {
-        load_id: ev,
+        load_id: ek,
         payment_type: z.PurchaseTypeToAnalyticsPaymentType[z.PurchaseTypes.SUBSCRIPTION],
         sku_id: K.PremiumSubscriptionSKUs.GUILD,
         subscription_type: V.SubscriptionTypes.PREMIUM,
-        subscription_plan_id: null !== (t = null === (e = ek.find(e => {
+        subscription_plan_id: null !== (t = null === (e = eG.find(e => {
           let {
             planId: t
           } = e;
@@ -134,7 +134,7 @@ function ee(e) {
         source: et,
         location_stack: ej
       }
-    }, [ev, ee, ej, et, ek, eg]);
+    }, [ek, ee, ej, et, eG, eg]);
   s.useEffect(() => {
     (0, F.fetchSubscriptionPlansOnNewPaymentSource)(eM)
   }, [eM]), s.useEffect(() => {
@@ -143,23 +143,23 @@ function ee(e) {
         if (null == b.default.redirectedPaymentId) return;
         await (0, p.redirectedPaymentSucceeded)(b.default.redirectedPaymentId), eX(A.Step.CONFIRM), eK(N.PurchaseState.COMPLETED), null != en && await $(en), null != el && el()
       } catch (e) {
-        eK(N.PurchaseState.FAIL), eT(e), v.default.track(V.AnalyticEvents.PAYMENT_FLOW_FAILED, {
+        eK(N.PurchaseState.FAIL), eT(e), k.default.track(V.AnalyticEvents.PAYMENT_FLOW_FAILED, {
           ...eF,
           payment_error_code: null == e ? void 0 : e.code,
           payment_gateway: V.PaymentGateways.STRIPE,
           payment_source_id: eM,
-          duration_ms: Date.now() - eG
+          duration_ms: Date.now() - ev
         })
       } finally {
         eA(!1), (0, p.resetPaymentIntentId)()
       }
     })()
   }, [ex]), s.useEffect(() => {
-    !B.default.hasFetchedSubscriptions() && (0, p.fetchSubscriptions)(), v.default.track(V.AnalyticEvents.PAYMENT_FLOW_STARTED, {
+    !B.default.hasFetchedSubscriptions() && (0, p.fetchSubscriptions)(), k.default.track(V.AnalyticEvents.PAYMENT_FLOW_STARTED, {
       ...eF,
       guild_id: en,
       application_id: eu
-    }), null != er && null != er.renewalMutations && v.default.track(V.AnalyticEvents.PREMIUM_GUILD_PENDING_MODAL, {
+    }), null != er && null != er.renewalMutations && k.default.track(V.AnalyticEvents.PREMIUM_GUILD_PENDING_MODAL, {
       location: ee,
       guild_id: en
     })
@@ -167,16 +167,16 @@ function ee(e) {
   let [ew, eW] = s.useState(Q), [eY, eH] = s.useState(A.Step.PLAN_SELECT), [eV, eK] = s.useState(N.PurchaseState.WAITING), [ez, eq] = s.useState(!0), eJ = (0, r.useStableMemo)(() => Date.now(), [eY]), eX = s.useCallback((e, t) => {
     eH(e), eT(null);
     let n = Date.now();
-    v.default.track(V.AnalyticEvents.PAYMENT_FLOW_STEP, {
+    k.default.track(V.AnalyticEvents.PAYMENT_FLOW_STEP, {
       ...eF,
       from_step: null != t ? t : eY,
       to_step: e === A.Step.ADD_PAYMENT_STEPS ? A.Step.PAYMENT_TYPE : e,
       step_duration_ms: n - eJ,
-      flow_duration_ms: n - eG,
+      flow_duration_ms: n - ev,
       guild_id: en,
       application_id: eu
     })
-  }, [eT, eF, eY, eJ, eG, en, eu]), eQ = () => {
+  }, [eT, eF, eY, eJ, ev, en, eu]), eQ = () => {
     l(eV === N.PurchaseState.COMPLETED)
   }, eZ = null != er && er.isPurchasedExternally;
   s.useEffect(() => {
@@ -209,12 +209,12 @@ function ee(e) {
         currentStep: t,
         toStep: n
       } = e, l = Date.now();
-      v.default.track(V.AnalyticEvents.PAYMENT_FLOW_STEP, {
+      k.default.track(V.AnalyticEvents.PAYMENT_FLOW_STEP, {
         ...eF,
         from_step: t,
         to_step: n,
         step_duration_ms: l - eJ,
-        flow_duration_ms: l - eG,
+        flow_duration_ms: l - ev,
         guild_id: en
       })
     }
@@ -223,7 +223,13 @@ function ee(e) {
     onClose: eQ
   });
   else if (ec && ep && eB && null != e1 && "" !== e1) {
-    if (null != er && null != er.renewalMutations) t = (0, a.jsx)(S.ModalContent, {
+    if (null == er ? void 0 : er.isPausedOrPausePending) t = (0, a.jsx)(S.ModalContent, {
+      children: (0, a.jsx)("p", {
+        className: J.copy,
+        children: q.default.Messages.GUILD_BOOSTING_DISABLED_FOR_PAUSED_SUBSCRIPTION
+      })
+    });
+    else if (null != er && null != er.renewalMutations) t = (0, a.jsx)(S.ModalContent, {
       children: (0, a.jsx)("p", {
         className: J.copy,
         children: q.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_PENDING_MUTATION
@@ -313,7 +319,7 @@ function ee(e) {
             currentPremiumSubscription: er,
             premiumSubscriptionPaymentSourceId: ed,
             premiumSubscriptionPlan: eE,
-            newAdditionalPlans: ek,
+            newAdditionalPlans: eG,
             onPaymentSourceChange: e => ey(null != e ? e.id : null),
             onPaymentSourceAdd: () => {
               eX(A.Step.ADD_PAYMENT_STEPS), ey(null)
@@ -326,20 +332,20 @@ function ee(e) {
             type: "submit",
             submitting: eR,
             onClick: async () => {
-              u()(null != ek, "Missing newAdditionalPlans");
+              u()(null != eG, "Missing newAdditionalPlans");
               let e = null != eM ? eI[eM] : null;
               eT(null);
               try {
-                if (eK(N.PurchaseState.PURCHASING), eA(!0), u()(null != eM, "Missing paymentSourceId"), v.default.track(V.AnalyticEvents.PAYMENT_FLOW_COMPLETED, {
+                if (eK(N.PurchaseState.PURCHASING), eA(!0), u()(null != eM, "Missing paymentSourceId"), k.default.track(V.AnalyticEvents.PAYMENT_FLOW_COMPLETED, {
                     ...eF,
-                    duration_ms: Date.now() - eG,
+                    duration_ms: Date.now() - ev,
                     guild_id: en,
                     application_id: eu
                   }), e7) return;
                 if (null == er || null == eS) {
                   u()(null != e, "Missing paymentSource");
                   let t = await (0, p.createSubscription)({
-                    items: ek,
+                    items: eG,
                     paymentSource: e,
                     currency: r.currency
                   });
@@ -349,7 +355,7 @@ function ee(e) {
                   }
                 } else {
                   let t = {
-                    items: (0, j.getItemsFromNewAdditionalPlans)(er, ek)
+                    items: (0, j.getItemsFromNewAdditionalPlans)(er, eG)
                   };
                   t.currency = er.currency, null == t.currency && (t.currency = r.currency), t.paymentSource = null != ed ? eI[ed] : void 0, null == t.paymentSource && (u()(null != e, "Missing paymentSource"), t.paymentSource = e, t.currency = r.currency);
                   let n = await (0, p.updateSubscription)(er, t, ej);
@@ -360,12 +366,12 @@ function ee(e) {
                 }
                 eX(A.Step.CONFIRM), eK(N.PurchaseState.COMPLETED), null != en && await $(en), null != el && el()
               } catch (t) {
-                eK(N.PurchaseState.FAIL), eT(t), v.default.track(V.AnalyticEvents.PAYMENT_FLOW_FAILED, {
+                eK(N.PurchaseState.FAIL), eT(t), k.default.track(V.AnalyticEvents.PAYMENT_FLOW_FAILED, {
                   ...eF,
                   payment_error_code: null == t ? void 0 : t.code,
                   payment_gateway: null != e ? e.type === V.PaymentSourceTypes.CARD ? V.PaymentGateways.STRIPE : V.PaymentGateways.BRAINTREE : null,
                   payment_source_id: eM,
-                  duration_ms: Date.now() - eG
+                  duration_ms: Date.now() - ev
                 })
               } finally {
                 !e7 && eA(!1)
@@ -408,9 +414,9 @@ function ee(e) {
         hasCurrencies: e8.length > 1,
         body: e,
         footer: eY !== A.Step.CONFIRM ? (0, a.jsxs)(S.ModalFooter, {
-          direction: k.default.Direction.HORIZONTAL,
-          align: k.default.Align.CENTER,
-          justify: k.default.Justify.END,
+          direction: G.default.Direction.HORIZONTAL,
+          align: G.default.Align.CENTER,
+          justify: G.default.Justify.END,
           children: [null != n ? (0, a.jsx)("div", {
             className: J.backStep,
             children: (0, a.jsx)(S.Button, {
