@@ -16,14 +16,14 @@ var i = n("735250"),
   f = n("287734"),
   h = n("324315"),
   p = n("236756"),
-  g = n("933557"),
-  m = n("430824"),
+  m = n("933557"),
+  g = n("430824"),
   E = n("131951"),
   S = n("699516"),
   v = n("594174"),
-  y = n("979651"),
-  I = n("362446"),
-  T = n("285952"),
+  T = n("979651"),
+  y = n("362446"),
+  I = n("285952"),
   N = n("389320"),
   O = n("242315"),
   _ = n("381238"),
@@ -49,13 +49,13 @@ function P(e, t, n) {
 function k(e) {
   let {
     lobbyId: t
-  } = e, n = (0, r.useStateFromStoresObject)([I.default], () => ({
-    connectionState: I.default.getConnectionState(t),
-    hostname: I.default.getHostname(t),
-    averagePing: I.default.getAveragePing(t),
-    lastPing: I.default.getLastPing(t),
-    pings: I.default.getPings(),
-    outboundLossRate: I.default.getOutboundLossRate(t)
+  } = e, n = (0, r.useStateFromStoresObject)([y.default], () => ({
+    connectionState: y.default.getConnectionState(t),
+    hostname: y.default.getHostname(t),
+    averagePing: y.default.getAveragePing(t),
+    lastPing: y.default.getLastPing(t),
+    pings: y.default.getPings(),
+    outboundLossRate: y.default.getOutboundLossRate(t)
   }));
   return (0, i.jsx)(p.default, {
     ...n
@@ -65,16 +65,10 @@ class w extends a.PureComponent {
   handleDisconnect() {
     f.default.selectVoiceChannel(null)
   }
-  renderLobby() {
-    return (0, i.jsx)(M.default, {
-      className: j.channel,
-      children: D.default.Messages.LOBBY
-    })
-  }
   renderChannelLink(e) {
     let {
       guild: t
-    } = this.props, n = (0, g.computeChannelName)(e, v.default, S.default), a = null != t ? "".concat(n, " / ").concat(t.name) : n, l = null != t ? t.id : L.ME;
+    } = this.props, n = (0, m.computeChannelName)(e, v.default, S.default), a = null != t ? "".concat(n, " / ").concat(t.name) : n, l = null != t ? t.id : L.ME;
     return (0, i.jsx)(o.Link, {
       to: L.Routes.CHANNEL(l),
       onClick: t => {
@@ -100,7 +94,7 @@ class w extends a.PureComponent {
       deaf: f,
       mute: p
     } = this.props;
-    return null == l && null == a ? null : (0, i.jsx)(x.default.Bar, {
+    return null == l ? null : (0, i.jsx)(x.default.Bar, {
       className: s()(e, b.controls, {
         [b.unpinned]: !n
       }),
@@ -120,11 +114,11 @@ class w extends a.PureComponent {
                 lastPing: r,
                 hasVideo: u,
                 state: c,
-                children: null != l ? this.renderChannelLink(l) : this.renderLobby()
+                children: this.renderChannelLink(l)
               })
             })
           })
-        }), (0, i.jsxs)(T.default, {
+        }), (0, i.jsxs)(I.default, {
           grow: 0,
           children: [(0, i.jsx)(R.default, {
             tooltipText: p ? D.default.Messages.UNMUTE : D.default.Messages.MUTE,
@@ -177,7 +171,7 @@ function V(e) {
     lobbyId: n,
     channel: a,
     ...l
-  } = e, s = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(null == a ? void 0 : a.getGuildId())), o = (0, r.useStateFromStores)([y.default], () => null != a && y.default.hasVideo(a.id)), [d, u] = (0, r.useStateFromStoresArray)([E.default], () => [E.default.isSelfMute(t) || E.default.isSelfMutedTemporarily(t), E.default.isSelfDeaf(t)]), [c, f, h] = (0, r.useStateFromStoresArray)([I.default], () => [I.default.getConnectionState(n), I.default.getLastPing(n), I.default.getQuality(n)]);
+  } = e, s = (0, r.useStateFromStores)([g.default], () => g.default.getGuild(null == a ? void 0 : a.getGuildId())), o = (0, r.useStateFromStores)([T.default], () => null != a && T.default.hasVideo(a.id)), [d, u] = (0, r.useStateFromStoresArray)([E.default], () => [E.default.isSelfMute(t) || E.default.isSelfMutedTemporarily(t), E.default.isSelfDeaf(t)]), [c, f, h] = (0, r.useStateFromStoresArray)([y.default], () => [y.default.getConnectionState(n), y.default.getLastPing(n), y.default.getQuality(n)]);
   return (0, i.jsx)(w, {
     ...l,
     context: t,
