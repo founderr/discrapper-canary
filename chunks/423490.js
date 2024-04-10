@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   OmniButtonNuxAnimation: function() {
-    return T
+    return I
   },
   useActivitiesInTextOnboardingVisibility: function() {
-    return I
+    return A
   }
 });
 var a, l, s = n("735250"),
@@ -14,14 +14,15 @@ var a, l, s = n("735250"),
   u = n("442837"),
   d = n("524437"),
   c = n("607070"),
-  f = n("802171"),
-  h = n("605236"),
-  m = n("175355"),
-  p = n("160683"),
-  E = n("921944"),
-  C = n("545528");
+  f = n("424602"),
+  h = n("802171"),
+  m = n("605236"),
+  p = n("175355"),
+  E = n("160683"),
+  C = n("921944"),
+  g = n("545528");
 
-function g(e) {
+function S(e) {
   let t = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion),
     n = i.useRef(null);
   return i.useEffect(() => {
@@ -38,47 +39,52 @@ function g(e) {
   }, [n, t, e]), n
 }
 
-function S() {
+function _() {
   return (0, s.jsx)("div", {
-    ref: g(a || (a = n.t(m, 2))),
-    className: C.glow
+    ref: S(a || (a = n.t(p, 2))),
+    className: g.glow
   })
 }
 
-function _() {
+function T() {
   return (0, s.jsx)("div", {
-    ref: g(l || (l = n.t(p, 2))),
-    className: C.trinkets
+    ref: S(l || (l = n.t(E, 2))),
+    className: g.trinkets
   })
 }
-let T = e => {
+let I = e => {
   let {
     children: t
   } = e;
   return i.useEffect(() => {
-    setTimeout(() => (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.ACTIVITIES_CHAT_BUTTON_NUX_V2, {
-      dismissAction: E.ContentDismissActionType.AUTO_DISMISS
+    setTimeout(() => (0, m.markDismissibleContentAsDismissed)(d.DismissibleContent.ACTIVITIES_CHAT_BUTTON_NUX_V2, {
+      dismissAction: C.ContentDismissActionType.AUTO_DISMISS
     }), 1e4)
   }, []), (0, s.jsxs)("div", {
-    className: C.animation,
-    children: [(0, s.jsx)(S, {}), (0, s.jsx)("div", {
-      className: C.circleLayer
+    className: g.animation,
+    children: [(0, s.jsx)(_, {}), (0, s.jsx)("div", {
+      className: g.circleLayer
     }), (0, s.jsx)("div", {
-      className: C.omniButton,
+      className: g.omniButton,
       children: t
-    }), (0, s.jsx)(_, {})]
+    }), (0, s.jsx)(T, {})]
   })
 };
 
-function I(e, t) {
-  let n = f.default.getCurrentConfig({
+function A(e, t) {
+  let n = h.default.getCurrentConfig({
       location: t,
       guildId: null == e ? void 0 : e.guild_id
     }, {
       autoTrackExposure: !1
     }),
-    a = n.entryPointEnabled;
-  return n.activitiesInTextEnabled && a ? {
-    desktopThrobberEnabled: "desktopThrobberEnabled" in n && n.desktopThrobberEnabled
+    {
+      enabled: a
+    } = f.AppLauncherOnboardingExperiment.useExperiment({
+      location: t
+    }),
+    l = n.entryPointEnabled;
+  return n.activitiesInTextEnabled && l ? {
+    desktopThrobberEnabled: a
   } : null
 }
