@@ -62,7 +62,7 @@ function _(e) {
   })), v > 0 && R.push(g.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
   let L = (0, i.useStateFromStores)([p.default], () => p.default.getFocusedLayout()),
     y = x > 0 ? x : v,
-    O = y > 0;
+    j = y > 0;
   return (0, a.jsxs)("div", {
     className: S.wrapper,
     children: [(0, a.jsx)(d.CenterControlButton, {
@@ -75,7 +75,7 @@ function _(e) {
       themeable: !0,
       className: n,
       ..._
-    }), O ? (0, a.jsx)(u.default, {
+    }), j ? (0, a.jsx)(u.default, {
       hasMentions: x > 0,
       truncatedCount: y > 99 ? "99+" : y,
       className: S.badge

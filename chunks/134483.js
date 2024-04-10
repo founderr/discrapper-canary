@@ -28,12 +28,12 @@ var a = n("735250"),
   R = n("981631"),
   L = n("354459"),
   y = n("689938"),
-  O = n("682164");
+  j = n("682164");
 t.default = function(e) {
   var t, n;
   let {
     channelId: s
-  } = e, j = l.useContext(f.IdleStateContext), P = (0, r.useStateFromStores)([m.default], () => m.default.getCurrentUser()), {
+  } = e, O = l.useContext(f.IdleStateContext), P = (0, r.useStateFromStores)([m.default], () => m.default.getCurrentUser()), {
     isCurrentUserStreamingQuestApplication: D,
     quest: b
   } = (0, r.useStateFromStoresObject)([h.default, d.default, S.default], () => {
@@ -86,42 +86,42 @@ t.default = function(e) {
     q = (0, T.isTargetedForContent)(b, _.QuestContent.QUEST_BAR) && !Z;
   return K || W || q || !F ? null : (0, a.jsx)(I.QuestContentImpressionTracker, {
     questId: b.id,
-    overrideVisibility: !j,
+    overrideVisibility: !O,
     questContent: _.QuestContent.QUEST_LIVE_STREAM,
     children: () => {
       var e;
       return (0, a.jsxs)("div", {
-        className: i()(O.wrapper, {
-          [O.wrapperAccepted]: Y
+        className: i()(j.wrapper, {
+          [j.wrapperAccepted]: Y
         }),
         children: [!Y && (0, a.jsxs)("div", {
-          className: O.rewardTileWrapper,
+          className: j.rewardTileWrapper,
           children: [(0, a.jsx)("img", {
             alt: b.config.messages.rewardName,
-            className: O.rewardTile,
+            className: j.rewardTile,
             src: (0, T.getRewardAssetUrl)(b)
           }), (0, a.jsx)(v.default, {
             bgOpacity: .32,
-            className: O.promotedTag
+            className: j.promotedTag
           })]
         }), (0, a.jsxs)("div", {
-          className: O.content,
+          className: j.content,
           children: [(0, a.jsxs)("div", {
-            className: O.heading,
+            className: j.heading,
             children: [Y && D ? (0, a.jsx)("img", {
               alt: b.config.messages.rewardName,
-              className: O.rewardTile,
+              className: j.rewardTile,
               src: (0, T.getRewardAssetUrl)(b)
             }) : (0, a.jsx)("img", {
-              className: O.gameTile,
+              className: j.gameTile,
               alt: b.config.messages.gameTitle,
               src: (0, T.getGameTileAssetUrl)(b)
             }), (0, a.jsxs)("div", {
-              className: O.__invalid_details,
+              className: j.__invalid_details,
               children: [(0, a.jsxs)("div", {
-                className: O.headingWithSubmenu,
+                className: j.headingWithSubmenu,
                 children: [(0, a.jsx)(o.Heading, {
-                  className: O.questTitle,
+                  className: j.questTitle,
                   variant: "heading-md/semibold",
                   color: "header-primary",
                   children: D ? (0, T.getContextualEntrypointHeading)(b) : y.default.Messages.QUESTS_TITLE.format({
@@ -134,10 +134,10 @@ t.default = function(e) {
                   shouldShowDisclosure: (null === (e = b.userStatus) || void 0 === e ? void 0 : e.enrolledAt) == null,
                   children: e => (0, a.jsx)(o.Clickable, {
                     ...e,
-                    className: O.submenuWrapper,
+                    className: j.submenuWrapper,
                     "aria-label": y.default.Messages.ACTIONS,
                     children: (0, a.jsx)(p.default, {
-                      className: O.submenuIcon
+                      className: j.submenuIcon
                     })
                   })
                 })]
@@ -154,17 +154,17 @@ t.default = function(e) {
           }), Y && !z && !D && (0, a.jsx)(M.default, {
             quest: b
           }), (0, a.jsxs)("div", {
-            className: O.ctas,
+            className: j.ctas,
             children: [!Y && (0, a.jsxs)(a.Fragment, {
               children: [(0, a.jsx)(o.Button, {
-                className: O.cta,
+                className: j.cta,
                 color: o.Button.Colors.PRIMARY,
                 fullWidth: !0,
                 size: o.Button.Sizes.SMALL,
                 onClick: G,
                 children: y.default.Messages.QUESTS_LEARN_MORE_V2
               }), (0, a.jsx)(o.Button, {
-                className: O.cta,
+                className: j.cta,
                 color: o.Button.Colors.BRAND,
                 fullWidth: !0,
                 onClick: H,
@@ -176,14 +176,14 @@ t.default = function(e) {
               color: o.tokens.colors.BG_BRAND,
               quest: b
             }), Y && !z && !D && (0, a.jsx)(o.Button, {
-              className: O.cta,
+              className: j.cta,
               color: o.Button.Colors.BRAND,
               fullWidth: !0,
               onClick: B,
               size: o.Button.Sizes.SMALL,
               children: y.default.Messages.QUESTS_TRACK_YOUR_PROGRESS
             }), z && (0, a.jsx)(o.Button, {
-              className: O.cta,
+              className: j.cta,
               color: o.Button.Colors.BRAND,
               fullWidth: !0,
               onClick: V,

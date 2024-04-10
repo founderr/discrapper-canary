@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MAX_GUILDS_PER_PAGE: function() {
-    return p
+    return T
   }
 }), n("47120");
 var a = n("735250"),
@@ -15,14 +15,14 @@ var a = n("735250"),
   c = n("703656"),
   f = n("683301"),
   E = n("671533"),
-  _ = n("900849"),
-  h = n("119317"),
+  h = n("900849"),
+  _ = n("119317"),
   C = n("749436"),
   m = n("650394"),
   S = n("731455"),
   I = n("689938"),
-  T = n("274845");
-let p = 12,
+  p = n("274845");
+let T = 12,
   g = () => {
     let e = (0, c.getHistory)().location.search;
     return null != e && e.length > 0 && e.startsWith("?") ? r.parse(e) : {}
@@ -38,12 +38,12 @@ let p = 12,
       onClick: s
     });
     return (0, a.jsxs)("div", {
-      className: T.emptyContainer,
+      className: p.emptyContainer,
       children: [(0, a.jsx)("div", {
-        className: T.emptyImage
+        className: p.emptyImage
       }), (0, a.jsx)(u.Heading, {
         variant: "heading-xl/semibold",
-        className: T.emptyHeader,
+        className: p.emptyHeader,
         children: i
       }), (0, a.jsx)(u.Text, {
         variant: "text-md/normal",
@@ -53,13 +53,13 @@ let p = 12,
     })
   },
   A = () => (0, a.jsxs)("div", {
-    className: T.emptyContainer,
+    className: p.emptyContainer,
     children: [(0, a.jsx)("div", {
-      className: T.errorImage
+      className: p.errorImage
     }), (0, a.jsx)(u.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: T.emptyHeader,
+      className: p.emptyHeader,
       children: I.default.Messages.GUILD_DISCOVERY_SEARCH_ERROR
     })]
   });
@@ -70,15 +70,15 @@ t.default = e => {
     mostRecentQuery: l,
     defaultLanguage: r,
     availableLanguages: c,
-    isFetchingSearch: R,
-    scroller: O,
-    loadingGuildId: v,
+    isFetchingSearch: v,
+    scroller: R,
+    loadingGuildId: O,
     theme: L,
     currentCategoryId: P,
     currentCategoryName: M,
     onViewGuild: y,
-    onGuildCardSeen: D,
-    placeholder: x,
+    onGuildCardSeen: x,
+    placeholder: D,
     onTagClick: b
   } = e, U = i().uniqueId("GuildDiscovery"), {
     guilds: j,
@@ -93,11 +93,11 @@ t.default = e => {
       offset: e,
       length: t,
       filters: {
-        approximate_member_count: _.MINIMUM_MEMBER_COUNT
+        approximate_member_count: h.MINIMUM_MEMBER_COUNT
       }
     }), F(!1)
   }, K = () => {
-    null == O || O.scrollTo({
+    null == R || R.scrollTo({
       to: 0
     })
   };
@@ -105,7 +105,7 @@ t.default = e => {
     let {
       offset: e,
       tag: t
-    } = g(), n = null != e ? Math.floor(parseInt(e, 10) / p) + 1 : 1;
+    } = g(), n = null != e ? Math.floor(parseInt(e, 10) / T) + 1 : 1;
     V(!!t), 1 === n && F(!0)
   }, [l]);
   let z = P === S.DISCOVERY_ALL_CATEGORIES_ID ? I.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
@@ -117,30 +117,30 @@ t.default = e => {
     category: M
   });
   return (0, a.jsxs)("div", {
-    className: T.container,
+    className: p.container,
     children: [(0, a.jsxs)("div", {
-      className: T.searchHeader,
+      className: p.searchHeader,
       children: [(0, a.jsx)(u.Clickable, {
         onClick: () => {
-          d.clearSearch(), _.trackSearchClosed(t)
+          d.clearSearch(), h.trackSearchClosed(t)
         },
-        className: T.arrow,
+        className: p.arrow,
         "aria-label": I.default.Messages.BACK,
         children: (0, a.jsx)(E.default, {
           direction: E.default.Directions.LEFT
         })
       }), (0, a.jsx)(u.Heading, {
         variant: "heading-xl/semibold",
-        className: T.header,
+        className: p.header,
         children: z
       })]
     }), (0, a.jsx)(C.default, {
       loadId: t,
       searchResults: n,
       mostRecentQuery: l,
-      isFetchingSearch: R,
+      isFetchingSearch: v,
       defaultLanguage: r,
-      placeholder: x,
+      placeholder: D,
       availableLanguages: c,
       isSearchPage: !0,
       currentCategoryId: P,
@@ -149,16 +149,16 @@ t.default = e => {
       categoryId: P,
       categoryName: M,
       onClick: () => {
-        d.selectCategory(S.DISCOVERY_ALL_CATEGORIES_ID), W(0, p, !0)
+        d.selectCategory(S.DISCOVERY_ALL_CATEGORIES_ID), W(0, T, !0)
       }
     }) : (0, a.jsx)("div", {
-      className: T.results,
-      children: (0, a.jsx)(h.default, {
-        pageSize: p,
+      className: p.results,
+      children: (0, a.jsx)(_.default, {
+        pageSize: T,
         totalCount: w,
         resetCurrentPage: k,
         onPageChange: e => {
-          W((e - 1) * p, p), K()
+          W((e - 1) * T, T), K()
         },
         children: e => {
           let {
@@ -169,12 +169,12 @@ t.default = e => {
             children: [(0, a.jsx)(m.default, {
               guilds: j,
               loading: G,
-              loadingPlaceholderCount: p,
+              loadingPlaceholderCount: T,
               onViewGuild: y,
-              loadingGuildId: v,
+              loadingGuildId: O,
               theme: L,
-              analyticsContext: _.AnalyticsContexts.SEARCH,
-              onGuildCardSeen: D,
+              analyticsContext: h.AnalyticsContexts.SEARCH,
+              onGuildCardSeen: x,
               onTagClick: b
             }), t]
           })

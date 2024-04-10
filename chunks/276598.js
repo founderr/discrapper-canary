@@ -48,11 +48,11 @@ function x(e) {
   } = e, x = (0, m.default)(), N = (0, s.useStateFromStores)([h.default], () => {
     var e, t;
     return null === (e = h.default.getSessionById(null !== (t = null == x ? void 0 : x.sessionId) && void 0 !== t ? t : "")) || void 0 === e ? void 0 : e.clientInfo.os
-  }), M = (0, s.useStateFromStores)([f.default], () => f.default.hasLayers()), [R, L] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.getMode(t.id), o.default.getLayout(t.id)]), y = (0, r.useModalsStore)(r.hasAnyModalOpenSelector), O = (0, p.default)(), j = O.filter(e => e.twoWayLink), [P, D] = l.useState(!1);
-  if (null == x && 0 === O.length || t.isBroadcastChannel()) return null;
+  }), M = (0, s.useStateFromStores)([f.default], () => f.default.hasLayers()), [R, L] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.getMode(t.id), o.default.getLayout(t.id)]), y = (0, r.useModalsStore)(r.hasAnyModalOpenSelector), j = (0, p.default)(), O = j.filter(e => e.twoWayLink), [P, D] = l.useState(!1);
+  if (null == x && 0 === j.length || t.isBroadcastChannel()) return null;
   let b = _.ChannelModes.VOICE !== R && [_.ChannelLayouts.NO_CHAT, _.ChannelLayouts.FULL_SCREEN].includes(L) ? "top" : "bottom",
     U = [];
-  return j.length > 0 && U.push(i.DismissibleContent.DONUT_DESKTOP_NUX), (0, a.jsx)(u.default, {
+  return O.length > 0 && U.push(i.DismissibleContent.DONUT_DESKTOP_NUX), (0, a.jsx)(u.default, {
     contentTypes: U,
     children: e => {
       let {
@@ -79,7 +79,7 @@ function x(e) {
                 onAccept: () => {
                   s(T.ContentDismissActionType.UNKNOWN), D(!0)
                 },
-                gameConsoleAccounts: j
+                gameConsoleAccounts: O
               }) : (0, a.jsx)(v, {
                 onClose: () => {
                   n()

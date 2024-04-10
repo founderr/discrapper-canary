@@ -145,7 +145,7 @@ t.default = l.memo(function(e) {
   }, [R]);
   let {
     multiplier: y,
-    value: O
+    value: j
   } = l.useMemo(() => ({
     value: N ? R.value : L.current.value,
     multiplier: N ? R.multiplier : L.current.multiplier
@@ -159,7 +159,7 @@ t.default = l.memo(function(e) {
       className: I.combo,
       style: M,
       children: (0, a.jsx)(v, {
-        value: O,
+        value: j,
         multiplier: y
       })
     })]

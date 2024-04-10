@@ -11,14 +11,14 @@ var a = n("735250"),
   c = n("484459"),
   f = n("103575"),
   E = n("285952"),
-  _ = n("409216"),
-  h = n("465670"),
+  h = n("409216"),
+  _ = n("465670"),
   C = n("87888"),
   m = n("63063"),
   S = n("976401"),
   I = n("333454"),
-  T = n("864441"),
-  p = n("981631"),
+  p = n("864441"),
+  T = n("981631"),
   g = n("689938"),
   N = n("285146");
 
@@ -30,11 +30,11 @@ function A(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let R = {
+let v = {
   HOST: 5,
   LISTENER: 4
 };
-class O extends s.PureComponent {
+class R extends s.PureComponent {
   isHost() {
     let {
       currentUser: e,
@@ -44,7 +44,7 @@ class O extends s.PureComponent {
   }
   renderTitle() {
     return (0, a.jsxs)("div", {
-      children: [(0, a.jsx)(T.default, {
+      children: [(0, a.jsx)(p.default, {
         children: this.isHost() ? g.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_HOST.format({
           count: this.props.party.length
         }) : g.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_LISTENER
@@ -60,14 +60,14 @@ class O extends s.PureComponent {
     return this.isHost() ? null : (0, a.jsx)(S.default, {
       tooltipText: g.default.Messages.SPOTIFY_LISTEN_ALONG_STOP,
       onClick: e,
-      icon: h.default
+      icon: _.default
     })
   }
   renderHelpIcon() {
     return this.isHost() ? (0, a.jsx)(S.default, {
       tooltipText: g.default.Messages.SPOTIFY_LISTEN_ALONG_INFO,
       onClick: () => {
-        window.open(m.default.getArticleURL(p.HelpdeskArticles.SPOTIFY_CONNECTION), "_blank")
+        window.open(m.default.getArticleURL(T.HelpdeskArticles.SPOTIFY_CONNECTION), "_blank")
       },
       icon: C.default
     }) : null
@@ -78,9 +78,9 @@ class O extends s.PureComponent {
       children: [this.renderTitle(), (0, a.jsx)(E.default, {
         justify: E.default.Justify.END,
         className: N.party,
-        children: (0, a.jsx)(_.default, {
+        children: (0, a.jsx)(h.default, {
           users: this.props.party,
-          max: this.isHost() ? R.HOST : R.LISTENER,
+          max: this.isHost() ? v.HOST : v.LISTENER,
           renderUser: this.renderPartyMember,
           renderMoreUsers: this.renderPartyMemberOverflow
         })
@@ -148,4 +148,4 @@ class O extends s.PureComponent {
     })
   }
 }
-t.default = O
+t.default = R

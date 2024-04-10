@@ -58,7 +58,7 @@ function T(e) {
         labelType: x
       })
     })
-  }), [a.application.name, x]), O = i.useMemo(() => {
+  }), [a.application.name, x]), j = i.useMemo(() => {
     switch (v) {
       case f.ActivityAction.JOIN:
         return (0, s.jsx)("div", {
@@ -125,7 +125,7 @@ function T(e) {
               applicationName: a.application.name,
               imageClassName: g.activitySuggestionImage,
               imageNotFoundClassName: g.brokenImageIconWrapper
-            }), y, O]
+            }), y, j]
           })
         })
       }

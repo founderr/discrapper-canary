@@ -11,9 +11,9 @@ var a = n("72924"),
   c = n("186901"),
   f = n("981631"),
   E = n("474936");
-let _ = [s.default.RPC];
+let h = [s.default.RPC];
 
-function h(e) {
+function _(e) {
   if (null == e) return {
     lock: f.NOOP_NULL,
     context: f.AppContext.APP
@@ -28,7 +28,7 @@ function h(e) {
 function C(e, t) {
   let n = {
     subscriptionTier: E.PremiumSubscriptionSKUs.TIER_2,
-    analyticsLocations: _,
+    analyticsLocations: h,
     analyticsObject: t
   };
   switch (e) {
@@ -63,7 +63,7 @@ t.default = {
       let {
         lock: r,
         context: d
-      } = h(t.transport !== c.TransportTypes.POST_MESSAGE ? s : null);
+      } = _(t.transport !== c.TransportTypes.POST_MESSAGE ? s : null);
       if (null == (0, o.default)()) throw new i.default({
         errorCode: f.RPCErrors.INVALID_CHANNEL
       }, "Invalid channel");
@@ -76,7 +76,7 @@ t.default = {
             applicationId: l,
             skuId: n,
             openPremiumPaymentModal: () => C(d, E),
-            analyticsLocations: _,
+            analyticsLocations: h,
             analyticsLocationObject: E,
             context: d
           });
@@ -113,7 +113,7 @@ t.default = {
       let {
         lock: a,
         context: s
-      } = h(t.transport !== c.TransportTypes.POST_MESSAGE ? n : null);
+      } = _(t.transport !== c.TransportTypes.POST_MESSAGE ? n : null);
       return C(s, {
         page: f.AnalyticsPages.IN_APP
       }).then(() => {

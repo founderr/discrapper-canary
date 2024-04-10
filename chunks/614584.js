@@ -72,7 +72,7 @@ let T = l.memo(function(e) {
       return (0, p.default)(M, e).content
     }
     return null
-  }, [M, R, I, L]), O = (0, s.useStateFromStores)([f.default], () => null != M && f.default.isBlocked(M.author.id), [M]), j = (0, g.useContextMenuUser)(null == M ? void 0 : M.author.id, I.id), P = (0, g.useClickReply)(n, M, O), D = (0, g.useClickReferencedMessageAuthorUsername)(M, I, v, N), b = (0, g.useClickReferencedMessageAuthorAvatar)(x, N), U = l.useCallback(() => N({
+  }, [M, R, I, L]), j = (0, s.useStateFromStores)([f.default], () => null != M && f.default.isBlocked(M.author.id), [M]), O = (0, g.useContextMenuUser)(null == M ? void 0 : M.author.id, I.id), P = (0, g.useClickReply)(n, M, j), D = (0, g.useClickReferencedMessageAuthorUsername)(M, I, v, N), b = (0, g.useClickReferencedMessageAuthorAvatar)(x, N), U = l.useCallback(() => N({
     referencedUsernameProfile: !1,
     referencedAvatarProfile: !1
   }), [N]), F = (0, E.useNullableMessageAuthor)(n);
@@ -84,14 +84,14 @@ let T = l.memo(function(e) {
     referencedMessage: T,
     content: y,
     compact: A,
-    isReplyAuthorBlocked: O,
+    isReplyAuthorBlocked: j,
     showAvatarPopout: x,
     showUsernamePopout: v,
     renderPopout: C.default,
     onClickAvatar: b,
     onClickUsername: D,
     onClickReply: P,
-    onContextMenu: j,
+    onContextMenu: O,
     onPopoutRequestClose: U
   })
 });

@@ -11,13 +11,13 @@ var a = n("735250"),
   c = n("481060"),
   f = n("430824"),
   E = n("594174"),
-  _ = n("823379"),
-  h = n("650461"),
+  h = n("823379"),
+  _ = n("650461"),
   C = n("924801"),
   m = n("308083"),
   S = n("689938"),
   I = n("653196");
-let T = e => {
+let p = e => {
   if (1 === e.length) return e[0];
   if (2 === e.length) return S.default.Messages.CLAN_OVERVIEW_LIST_TWO_ITEMS.format({
     item1: e[0],
@@ -38,23 +38,23 @@ t.default = e => {
     guildId: n,
     signed: l,
     setSigned: r,
-    animatedTextStyle: p,
+    animatedTextStyle: T,
     signRef: g
   } = e, N = (0, d.useStateFromStores)([f.default], () => {
     var e, t;
     return null !== (t = null === (e = f.default.getGuild(n)) || void 0 === e ? void 0 : e.name) && void 0 !== t ? t : ""
   }), {
     selectedGames: A,
-    playstyle: R,
-    interests: O,
-    primetime: v
-  } = (0, d.useStateFromStoresObject)([h.default], () => {
+    playstyle: v,
+    interests: R,
+    primetime: O
+  } = (0, d.useStateFromStoresObject)([_.default], () => {
     var e;
-    return null !== (e = h.default.getStateForGuild(n).progress) && void 0 !== e ? e : {}
-  }), L = s.useMemo(() => (null == A ? void 0 : A.size) > 0 ? T(Array.from(A.values()).map(e => e.name)) : null, [A]), P = s.useMemo(() => (0, m.getPlaystyleTitle)(R), [R]), M = s.useMemo(() => (null == O ? void 0 : O.size) > 0 ? T(Array.from(O)) : null, [O]), y = s.useMemo(() => {
-    let e = (null == v ? void 0 : v.length) > 0 ? v.map(e => (0, C.primetimeToString)(e)).filter(_.isNotNullish) : [];
-    return (null == e ? void 0 : e.length) > 0 ? T(e) : null
-  }, [v]);
+    return null !== (e = _.default.getStateForGuild(n).progress) && void 0 !== e ? e : {}
+  }), L = s.useMemo(() => (null == A ? void 0 : A.size) > 0 ? p(Array.from(A.values()).map(e => e.name)) : null, [A]), P = s.useMemo(() => (0, m.getPlaystyleTitle)(v), [v]), M = s.useMemo(() => (null == R ? void 0 : R.size) > 0 ? p(Array.from(R)) : null, [R]), y = s.useMemo(() => {
+    let e = (null == O ? void 0 : O.length) > 0 ? O.map(e => (0, C.primetimeToString)(e)).filter(h.isNotNullish) : [];
+    return (null == e ? void 0 : e.length) > 0 ? p(e) : null
+  }, [O]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: I.scrollBg,
@@ -67,7 +67,7 @@ t.default = e => {
       className: I.overviewSidebarWrapper,
       children: (0, a.jsx)(u.animated.div, {
         className: I.flex,
-        style: p,
+        style: T,
         children: (0, a.jsxs)(c.ScrollerNone, {
           fade: !0,
           className: I.overviewSidebarContent,

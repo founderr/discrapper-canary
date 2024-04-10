@@ -1,9 +1,9 @@
-var i = n("447479"),
-  a = n("658141"),
-  l = n("401427"),
-  s = RegExp("['’]", "g");
+var a = s("447479"),
+  l = s("658141"),
+  n = s("401427"),
+  i = RegExp("['’]", "g");
 e.exports = function(e) {
   return function(t) {
-    return i(l(a(t).replace(s, "")), e, "")
+    return a(n(l(t).replace(i, "")), e, "")
   }
 }

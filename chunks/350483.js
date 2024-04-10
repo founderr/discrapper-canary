@@ -38,11 +38,11 @@ t.default = l().throttle(function(e, t) {
         i = n.indexOf(e);
       return t > 0 ? n.slice(i).concat(n.slice(0, i), e) : (n.splice(i, 0, e), n.slice(i + 1).concat(n.slice(0, i + 1)))
     }(N, e),
-    L = e > 0 ? 0 : R.length - 1,
-    p = S(N, f),
-    D = p.indexOf(O) + e;
+    p = e > 0 ? 0 : R.length - 1,
+    L = S(N, f),
+    D = L.indexOf(O) + e;
   for (; null != N && "" !== N;) {
-    if (a = p[D], T(N))
+    if (a = L[D], T(N))
       for (; null != a && "" !== a;) {
         if ("string" == typeof a) {
           if (c(N, a)) return (0, A.transitionToChannel)(N, a, !1, f)
@@ -55,10 +55,10 @@ t.default = l().throttle(function(e, t) {
             guildId: N
           })
         });
-        D += e, a = p[D]
+        D += e, a = L[D]
       }
-    if (L += e, null == (N = R[L]) || "" === N) break;
-    p = S(N, f), D = e < 0 ? p.length - 1 : 0
+    if (p += e, null == (N = R[p]) || "" === N) break;
+    L = S(N, f), D = e < 0 ? L.length - 1 : 0
   }
   _.ComponentDispatch.dispatch(C.ComponentActions.SHAKE_APP, {
     duration: 200,

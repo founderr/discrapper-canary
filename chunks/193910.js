@@ -32,8 +32,8 @@ var a = n("735250"),
   R = n("951211"),
   L = n("981631"),
   y = n("921944"),
-  O = n("489887"),
-  j = n("689938"),
+  j = n("489887"),
+  O = n("689938"),
   P = n("604613");
 
 function D(e, t, l, s) {
@@ -71,7 +71,7 @@ function U(e) {
         visibleContent: t
       } = e;
       return t === r.DismissibleContent.ACTIVITIES_CHAT_MENU_NEW_BADGE ? (0, a.jsx)(T.TextBadge, {
-        text: j.default.Messages.NEW,
+        text: O.default.Messages.NEW,
         color: s.default.BUTTON_DANGER_BACKGROUND
       }) : null
     }
@@ -126,7 +126,7 @@ function F(e) {
         channel: t
       })
     }, {
-      modalKey: O.POLL_CREATION_MODAL_KEY
+      modalKey: j.POLL_CREATION_MODAL_KEY
     })
   }
 
@@ -167,7 +167,7 @@ function F(e) {
     onSelect: p,
     navId: "channel-attach",
     onClose: m,
-    "aria-label": j.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+    "aria-label": O.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
     className: P.menu,
     children: i.map(function(e) {
       var n;

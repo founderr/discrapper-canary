@@ -32,8 +32,8 @@ var a = n("735250"),
   R = n("689938"),
   L = n("987281"),
   y = n("587952"),
-  O = n("736733");
-let j = "vc-activities-".concat((0, o.v4)()),
+  j = n("736733");
+let O = "vc-activities-".concat((0, o.v4)()),
   P = l.forwardRef(function(e, t) {
     let {
       channel: n,
@@ -97,7 +97,7 @@ let j = "vc-activities-".concat((0, o.v4)()),
         to: M.Routes.ACTIVITIES,
         children: [(0, a.jsx)("img", {
           alt: R.default.Messages.EMBEDDED_ACTIVITIES_BIRTHDAY_ACTIVITIES_HERO_ALT,
-          src: "light" === w ? y : O,
+          src: "light" === w ? y : j,
           className: L.poster
         }), (0, a.jsx)("div", {
           className: L.posterDivider
@@ -108,13 +108,13 @@ let j = "vc-activities-".concat((0, o.v4)()),
       children: (0, a.jsx)(C.default, {
         children: (0, a.jsxs)(d.Dialog, {
           ref: t,
-          "aria-labelledby": j,
+          "aria-labelledby": O,
           className: U,
           children: [(0, a.jsx)(d.HeadingLevel, {
             forceLevel: 2,
             children: (0, a.jsx)(d.HiddenVisually, {
               children: (0, a.jsx)(d.H, {
-                id: j,
+                id: O,
                 children: R.default.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
               })
             })

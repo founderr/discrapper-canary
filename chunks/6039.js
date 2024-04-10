@@ -11,46 +11,46 @@ var a = n("735250"),
   c = n("768581"),
   f = n("693546"),
   E = n("863249"),
-  _ = n("944163"),
-  h = n("246364"),
+  h = n("944163"),
+  _ = n("246364"),
   C = n("937111"),
   m = n("523924"),
   S = n("390500"),
   I = n("200305"),
-  T = n("981631"),
-  p = n("756286"),
+  p = n("981631"),
+  T = n("756286"),
   g = n("689938"),
   N = n("165069");
 t.default = e => {
   var t;
   let n, A;
   let {
-    guildId: R,
-    inviteCode: O
-  } = e, [v, L] = s.useState(p.WaveStates.INITIAL), P = (0, l.useStateFromStores)([_.default], () => _.default.get(R)), M = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(R)), y = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(R)), {
-    hasFetchedRequestToJoinGuilds: D,
-    guildPreviewDisabled: x
+    guildId: v,
+    inviteCode: R
+  } = e, [O, L] = s.useState(T.WaveStates.INITIAL), P = (0, l.useStateFromStores)([h.default], () => h.default.get(v)), M = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(v)), y = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(v)), {
+    hasFetchedRequestToJoinGuilds: x,
+    guildPreviewDisabled: D
   } = (0, l.useStateFromStoresObject)([C.default], () => ({
     hasFetchedRequestToJoinGuilds: C.default.hasFetchedRequestToJoinGuilds,
-    guildPreviewDisabled: C.default.getJoinRequestGuild(R)
+    guildPreviewDisabled: C.default.getJoinRequestGuild(v)
   }));
   s.useEffect(() => {
-    null != y && (0, r.transitionTo)(T.Routes.CHANNEL(R))
-  }, [y, R]), s.useEffect(() => {
-    !D && f.default.fetchRequestToJoinGuilds()
-  }, [D]);
+    null != y && (0, r.transitionTo)(p.Routes.CHANNEL(v))
+  }, [y, v]), s.useEffect(() => {
+    !x && f.default.fetchRequestToJoinGuilds()
+  }, [x]);
   let b = s.useCallback(e => {
       L(t => Math.max(t, e))
     }, []),
     U = async e => {
-      await E.default.submitVerificationForm(R, e)
+      await E.default.submitVerificationForm(v, e)
     }, j = () => {
-      f.default.resetGuildJoinRequest(R)
+      f.default.resetGuildJoinRequest(v)
     };
   let G = (n = g.default.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({
-      name: null == x ? void 0 : x.toString()
+      name: null == D ? void 0 : D.toString()
     }), A = () => {
-      L(Math.max(v, p.WaveStates.FILLING)), f.default.removeGuildJoinRequest(R), (0, r.transitionTo)(T.Routes.ME)
+      L(Math.max(O, T.WaveStates.FILLING)), f.default.removeGuildJoinRequest(v), (0, r.transitionTo)(p.Routes.ME)
     }, () => {
       (0, i.openModal)(e => (0, a.jsx)(i.ConfirmModal, {
         header: g.default.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
@@ -75,7 +75,7 @@ t.default = e => {
     children: (0, a.jsxs)(u.default, {
       embedded: !0,
       splash: w,
-      waveState: v,
+      waveState: O,
       showLogo: !1,
       updateWaveState: b,
       children: [(0, a.jsx)("div", {
@@ -84,24 +84,24 @@ t.default = e => {
         className: N.contentWrapper,
         children: (() => {
           switch (null == M ? void 0 : M.applicationStatus) {
-            case h.GuildJoinRequestApplicationStatuses.SUBMITTED:
+            case _.GuildJoinRequestApplicationStatuses.SUBMITTED:
               return (0, a.jsx)(S.default, {
                 onWithdrawApplication: G,
-                guild: x
+                guild: D
               });
-            case h.GuildJoinRequestApplicationStatuses.REJECTED:
+            case _.GuildJoinRequestApplicationStatuses.REJECTED:
               return (0, a.jsx)(m.default, {
                 reapplyText: g.default.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
                 onReapply: j,
                 confirmText: g.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION,
                 onWithdrawApplication: G,
                 rejectionReason: null == M ? void 0 : M.rejectionReason,
-                guild: x
+                guild: D
               });
             default:
               return (0, a.jsx)(I.default, {
-                guildId: R,
-                inviteCode: O,
+                guildId: v,
+                inviteCode: R,
                 onComplete: U
               })
           }

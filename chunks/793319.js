@@ -33,8 +33,8 @@ var a, l, s = n("735250"),
   R = n("358221"),
   L = n("887012"),
   y = n("659580"),
-  O = n("793865"),
-  j = n("575175"),
+  j = n("793865"),
+  O = n("575175"),
   P = n("258609"),
   D = n("446226"),
   b = n("594190"),
@@ -401,7 +401,7 @@ t.default = function(e) {
               closePopout: t
             } = e;
             return (0, s.jsx)(W.default, {
-              children: (0, s.jsx)(O.default, {
+              children: (0, s.jsx)(j.default, {
                 onClose: t
               })
             })
@@ -469,7 +469,7 @@ t.default = function(e) {
               suppress: m,
               popoutOpen: a,
               awaitingRemote: A,
-              onClick: () => (0, j.default)(E, m)
+              onClick: () => (0, O.default)(E, m)
             })
           }
         }), w && !v ? (0, s.jsx)("div", {

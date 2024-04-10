@@ -33,8 +33,8 @@ var l = n("803997"),
   R = n("792125"),
   L = n("358221"),
   y = n("887012"),
-  O = n("613548"),
-  j = n("221888"),
+  j = n("613548"),
+  O = n("221888"),
   P = n("339340"),
   D = n("354459"),
   b = n("981631"),
@@ -49,7 +49,7 @@ function H(e) {
     channel: n
   } = e, l = (0, u.useAppContext)(), s = (0, i.useStateFromStores)([L.default], () => L.default.getLayout(n.id, l));
   return (0, a.jsx)(A.default, {
-    children: (0, a.jsx)(j.default, {
+    children: (0, a.jsx)(O.default, {
       className: w.participants,
       participant: t,
       maxVisibleUsers: 5,
@@ -150,9 +150,9 @@ function V(e) {
   }), [t.id]), C = (0, h.default)(t), I = (0, m.default)(t), [A] = (0, c.default)((null == E ? void 0 : E.type) === D.ParticipantTypes.ACTIVITY ? [E.id] : []), x = F.default.Messages.VOICE_CHANNEL;
   t.isDM() ? x = F.default.Messages.DM : t.isGroupDM() && (x = F.default.Messages.GROUP_DM);
   let y = (0, i.useStateFromStores)([f.default], () => f.default.getChannelStatus(t)),
-    j = t.isGuildVoice() && u && null != y && y.length > 0,
+    O = t.isGuildVoice() && u && null != y && y.length > 0,
     H = (0, i.useStateFromStores)([v.default], () => v.default.can(b.Permissions.SET_VOICE_CHANNEL_STATUS, t)),
-    B = j ? (0, a.jsx)(r.Tooltip, {
+    B = O ? (0, a.jsx)(r.Tooltip, {
       text: F.default.Messages.VOICE_CHANNEL_SET_STATUS,
       delay: 500,
       position: "bottom",
@@ -199,7 +199,7 @@ function V(e) {
       transparent: !0,
       className: (0, R.getThemeClass)(U.ThemeTypes.DARK),
       childrenBottom: B,
-      toolbar: (0, a.jsx)(O.default, {
+      toolbar: (0, a.jsx)(j.default, {
         inPopout: o === b.AppContext.POPOUT,
         channel: t,
         appContext: o,

@@ -11,20 +11,20 @@ var a = n("735250"),
   c = n("194359"),
   f = n("703656"),
   E = n("592125"),
-  _ = n("131951"),
-  h = n("974029"),
+  h = n("131951"),
+  _ = n("974029"),
   C = n("621113"),
   m = n("51144"),
   S = n("321488"),
   I = n("417183"),
-  T = n("825682"),
-  p = n("170245"),
+  p = n("825682"),
+  T = n("170245"),
   g = n("981631"),
   N = n("65154"),
   A = n("689938"),
-  R = n("432182");
+  v = n("432182");
 
-function O(e, t, n) {
+function R(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -33,7 +33,7 @@ function O(e, t, n) {
   }) : e[t] = n, e
 }
 
-function v(e) {
+function O(e) {
   let {
     user: t,
     onSelect: n
@@ -41,7 +41,7 @@ function v(e) {
     c.default.removeFriend(t.id, {
       location: "Friends"
     })
-  }, l = (0, r.useStateFromStores)([_.default], () => _.default.supports(N.Features.VIDEO));
+  }, l = (0, r.useStateFromStores)([h.default], () => h.default.supports(N.Features.VIDEO));
   return (0, a.jsxs)(o.Menu, {
     navId: "friend-row",
     "aria-label": A.default.Messages.USER_ACTIONS_MENU_LABEL,
@@ -109,12 +109,12 @@ class L extends s.PureComponent {
       onOtherHover: () => r ? null : (0, d.closeContextMenu)(),
       onClick: this.handleOpenPrivateChannel,
       children: t => (0, a.jsxs)("div", {
-        className: R.listItemContents,
-        children: [(0, a.jsx)(p.default, {
+        className: v.listItemContents,
+        children: [(0, a.jsx)(T.default, {
           user: e,
           status: l,
           isMobile: i,
-          subText: (0, a.jsx)(T.default, {
+          subText: (0, a.jsx)(p.default, {
             hovered: t,
             activities: n,
             applicationStream: s,
@@ -124,9 +124,9 @@ class L extends s.PureComponent {
           hovered: t,
           showAccountIdentifier: !0
         }), (0, a.jsxs)("div", {
-          className: R.actions,
+          className: v.actions,
           children: [(0, a.jsx)(S.default, {
-            icon: h.default,
+            icon: _.default,
             tooltip: A.default.Messages.SEND_DM,
             onClick: this.handleOpenPrivateChannel,
             shouldHighlight: t
@@ -141,20 +141,20 @@ class L extends s.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), O(this, "peopleListItemRef", s.createRef()), O(this, "state", {
+    super(...e), R(this, "peopleListItemRef", s.createRef()), R(this, "state", {
       isActiveRow: !1
-    }), O(this, "handleOpenPrivateChannel", e => {
+    }), R(this, "handleOpenPrivateChannel", e => {
       let {
         user: t
       } = this.props;
       e.stopPropagation();
       let n = i().find(E.default.getMutablePrivateChannels(), e => e.type === g.ChannelTypes.DM && e.getRecipientId() === t.id);
       null != n ? (0, f.transitionTo)(g.Routes.CHANNEL(g.ME, n.id)) : u.default.openPrivateChannel(t.id)
-    }), O(this, "handleOpenActionsMenu", e => {
+    }), R(this, "handleOpenActionsMenu", e => {
       let {
         user: t
       } = this.props;
-      (0, d.openContextMenu)(e, e => (0, a.jsx)(v, {
+      (0, d.openContextMenu)(e, e => (0, a.jsx)(O, {
         ...e,
         user: t
       }), {

@@ -11,8 +11,8 @@ var a = n("735250"),
   c = n("294934"),
   f = n("271322"),
   E = n("981631"),
-  _ = n("689938");
-let h = new Set([E.CloudSyncStateTypes.PUSHING, E.CloudSyncStateTypes.PULLING]),
+  h = n("689938");
+let _ = new Set([E.CloudSyncStateTypes.PUSHING, E.CloudSyncStateTypes.PULLING]),
   C = Object.freeze({
     [E.CloudSyncStateTypes.DONE]: u.default,
     [E.CloudSyncStateTypes.PLANNING]: u.default,
@@ -59,19 +59,19 @@ class m extends s.PureComponent {
   getTooltip(e, t) {
     switch (e.type) {
       case E.CloudSyncStateTypes.DONE:
-        if (t) return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_DONE;
-        return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_SUPPORTED;
+        if (t) return h.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_DONE;
+        return h.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_SUPPORTED;
       case E.CloudSyncStateTypes.CONFLICT:
       case E.CloudSyncStateTypes.ERROR:
-        return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_SUPPORTED;
+        return h.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_SUPPORTED;
       case E.CloudSyncStateTypes.PLANNING:
-        return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PLANNING;
+        return h.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PLANNING;
       case E.CloudSyncStateTypes.PREPARING:
-        return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PREPARING;
+        return h.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PREPARING;
       case E.CloudSyncStateTypes.PUSHING:
-        return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PUSHING;
+        return h.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PUSHING;
       case E.CloudSyncStateTypes.PULLING:
-        return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PULLING;
+        return h.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PULLING;
       default:
         return null
     }
@@ -84,7 +84,7 @@ class m extends s.PureComponent {
     } = this.props, s = null == e ? {
       type: E.CloudSyncStateTypes.DONE
     } : e, l = this.getIsRecentlySynced(), i = {};
-    (h.has(s.type) || l) && (i.gradientConfig = {
+    (_.has(s.type) || l) && (i.gradientConfig = {
       id: t.id,
       startColor: "rgba(199, 208, 240, 1)",
       stopColor: "rgba(114, 137, 218, 1)",

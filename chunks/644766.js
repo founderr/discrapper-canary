@@ -21,8 +21,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250");
 n("470079");
-var o = n("803997"),
-  E = n.n(o),
+var E = n("803997"),
+  o = n.n(E),
   r = n("873546"),
   s = n("481060"),
   l = n("465670"),
@@ -50,13 +50,13 @@ function A(e) {
   let {
     children: t,
     className: n,
-    minor: o = !1,
+    minor: E = !1,
     ...r
   } = e;
   return (0, i.jsx)(s.FocusRing, {
     children: (0, i.jsx)("button", {
-      className: E()(S.button, n, {
-        [S.buttonMinor]: o
+      className: o()(S.button, n, {
+        [S.buttonMinor]: E
       }),
       ...r,
       children: t
@@ -68,14 +68,14 @@ function N(e) {
   let {
     children: t,
     noticeType: n,
-    additionalTrackingProps: o,
-    ...E
+    additionalTrackingProps: E,
+    ...o
   } = e;
   return (0, i.jsx)(A, {
-    ...E,
+    ...o,
     onClick: e => {
       var t, i;
-      null != E.onClick && E.onClick(e), t = n, i = o, null != t && c.default.track(I.AnalyticEvents.APP_NOTICE_PRIMARY_CTA_OPENED, {
+      null != o.onClick && o.onClick(e), t = n, i = E, null != t && c.default.track(I.AnalyticEvents.APP_NOTICE_PRIMARY_CTA_OPENED, {
         notice_type: t,
         ...i
       })
@@ -88,10 +88,10 @@ function u(e) {
   let {
     children: t,
     href: n,
-    ...o
+    ...E
   } = e;
   return (0, i.jsx)(s.Anchor, {
-    ...o,
+    ...E,
     className: S.button,
     href: n,
     children: t
@@ -127,14 +127,14 @@ function L(e) {
   let {
     color: t = _.DEFAULT,
     className: n,
-    style: o,
+    style: E,
     children: s
   } = e;
   return (0, i.jsx)("div", {
-    className: E()(S.notice, {
+    className: o()(S.notice, {
       [S.isMobile]: r.isMobile
     }, n, t),
-    style: null != o ? o : void 0,
+    style: null != E ? E : void 0,
     children: s
   })
 }

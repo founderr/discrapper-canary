@@ -16,8 +16,8 @@ var s = n("740111"),
   c = n("823188"),
   f = n("474936"),
   E = n("981631"),
-  _ = n("689938"),
-  h = n("464765"),
+  h = n("689938"),
+  _ = n("464765"),
   C = n("74316");
 
 function m(e) {
@@ -26,43 +26,43 @@ function m(e) {
     content: m,
     renderModalProps: S,
     analyticsLocations: I,
-    analyticsLocation: T,
-    isLightTheme: p
+    analyticsLocation: p,
+    isLightTheme: T
   } = e, g = "AnnouncementModalVariant1", {
     onClose: N
-  } = S, A = null != m.button && "" !== m.button.copy ? m.button.copy : _.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, R = (null === (t = m.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", O = (null === (n = m.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
+  } = S, A = null != m.button && "" !== m.button.copy ? m.button.copy : h.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, v = (null === (t = m.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", R = (null === (n = m.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
     (0, r.transitionTo)(E.Routes.APPLICATION_STORE), N()
   } : () => (0, i.default)({
     subscriptionTier: f.PremiumSubscriptionSKUs.TIER_2,
     analyticsLocations: I,
     analyticsObject: {
-      ...T,
+      ...p,
       object: E.AnalyticsObjects.BUTTON_CTA,
       objectType: E.AnalyticsObjectTypes.TIER_2
     },
     onClose: e => {
       e && N()
     }
-  }), v = "" !== m.helpArticleId ? () => (0, a.jsx)(l.Anchor, {
-    className: h.termsApplyAnchor,
+  }), O = "" !== m.helpArticleId ? () => (0, a.jsx)(l.Anchor, {
+    className: _.termsApplyAnchor,
     href: d.default.getArticleURL(m.helpArticleId),
     children: (0, a.jsx)(l.Heading, {
       variant: "heading-md/normal",
-      className: h.termsApplyBodyText,
-      children: _.default.Messages.BOGO_TERMS_APPLY
+      className: _.termsApplyBodyText,
+      children: h.default.Messages.BOGO_TERMS_APPLY
     })
   }) : void 0, L = {
     type: "video",
-    src: p ? m.heroArtVideoLinkLightTheme : m.videoLink
+    src: T ? m.heroArtVideoLinkLightTheme : m.videoLink
   };
   ("" !== m.heroArtImageLinkDarkTheme || "" !== m.heroArtImageLinkLightTheme) && (L = {
     type: "image",
-    src: p ? m.heroArtImageLinkLightTheme : m.heroArtImageLinkDarkTheme
+    src: T ? m.heroArtImageLinkLightTheme : m.heroArtImageLinkDarkTheme
   });
-  let P = p ? c.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : c.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL,
+  let P = T ? c.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : c.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL,
     M = "" !== m.modalTopPill ? () => (0, a.jsx)(c.PremiumPillWithSparkles, {
       text: m.modalTopPill,
-      className: h.modalTopPill,
+      className: _.modalTopPill,
       colorOptions: P
     }) : void 0;
   return {
@@ -70,33 +70,33 @@ function m(e) {
     header: m.header,
     modalTopExtra: M,
     subHeader: m.subheader,
-    subHeaderExtra: v,
+    subHeaderExtra: O,
     heroArt: L,
     featureCards: m.featureCards.map(e => ({
       header: e.header,
       subHeader: e.body,
-      imageSrc: p ? e.imageLinkLightTheme : e.imageLink,
+      imageSrc: T ? e.imageLinkLightTheme : e.imageLink,
       tagText: "" !== e.pill ? e.pill : void 0
     })),
     changeLogId: g,
     button: () => {
       let e = Date.now();
       return (0, a.jsxs)(o.default, {
-        className: h.buttonWide,
-        innerClassName: h.innerButton,
+        className: _.buttonWide,
+        innerClassName: _.innerButton,
         color: l.Button.Colors.GREEN,
         size: l.Button.Sizes.SMALL,
         onClick: () => {
           u.default.track(E.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
             change_log_id: g,
-            cta_type: R,
+            cta_type: v,
             seconds_open: Math.round((Date.now() - e) / 1e3),
             target: g
-          }), O()
+          }), R()
         },
         children: [(0, a.jsx)("img", {
           alt: "",
-          className: h.nitroIconSubHeader,
+          className: _.nitroIconSubHeader,
           src: C
         }), A]
       })

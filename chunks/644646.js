@@ -11,7 +11,7 @@ var a = n("735250"),
   c = n("78826"),
   f = n("981631"),
   E = n("689938"),
-  _ = n("176126");
+  h = n("176126");
 t.default = function(e) {
   let {
     className: t,
@@ -24,19 +24,19 @@ t.default = function(e) {
     }), o.default.open(f.UserSettingsSections.INVENTORY)
   }, [n, e.questContent]);
   return (0, a.jsxs)(r.Clickable, {
-    className: i()(_.questRewardTile, t),
+    className: i()(h.questRewardTile, t),
     onClick: l,
     children: [(0, a.jsx)(r.Text, {
       color: "always-white",
       variant: "text-xs/normal",
-      className: _.questRewardTileDetailsLearnMore,
+      className: h.questRewardTileDetailsLearnMore,
       children: E.default.Messages.QUESTS_LEARN_MORE_STACKED.format()
     }), (0, a.jsx)(c.QuestsAsset, {
       id: "QuestRewardTile_rewardTile",
       children: e => (0, a.jsx)("img", {
         ref: e,
         alt: n.config.messages.rewardName,
-        className: _.questRewardTileAsset,
+        className: h.questRewardTileAsset,
         src: (0, d.getRewardAssetUrl)(n)
       })
     })]

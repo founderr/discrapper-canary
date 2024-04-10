@@ -74,20 +74,20 @@ function M(e) {
   } = e, {
     channelAction: E,
     completed: T
-  } = (0, _.useMemberActionsForChannel)(f, h), I = (0, _.useNextMemberAction)(f, null == E ? void 0 : E.channelId), M = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), R = (null == E ? void 0 : E.actionType) === S.NewMemberActionTypes.VIEW, L = (0, u.useToken)(u.tokens.colors.WHITE), [y, O] = l.useState(!1), [j] = l.useState(new r.default.Value(0)), [P] = l.useState(new r.default.Value(0));
+  } = (0, _.useMemberActionsForChannel)(f, h), I = (0, _.useNextMemberAction)(f, null == E ? void 0 : E.channelId), M = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), R = (null == E ? void 0 : E.actionType) === S.NewMemberActionTypes.VIEW, L = (0, u.useToken)(u.tokens.colors.WHITE), [y, j] = l.useState(!1), [O] = l.useState(new r.default.Value(0)), [P] = l.useState(new r.default.Value(0));
   l.useEffect(() => {
-    T ? r.default.timing(j, {
+    T ? r.default.timing(O, {
       toValue: 0,
       duration: M ? 1 : 350,
       easing: r.default.Easing.quad,
       delay: R ? 0 : 500
-    }).start(() => O(!0)) : r.default.timing(j, {
+    }).start(() => j(!0)) : r.default.timing(O, {
       toValue: 1,
       duration: M ? 1 : 350,
       easing: r.default.Easing.quad,
       delay: 400
     }).start()
-  }, [T, j, R, M]), l.useEffect(() => {
+  }, [T, O, R, M]), l.useEffect(() => {
     T && y && r.default.timing(P, {
       toValue: 1,
       duration: M ? 0 : 350,
@@ -138,7 +138,7 @@ function M(e) {
     }) : (0, a.jsxs)(r.default.div, {
       className: v.banner,
       style: {
-        marginBottom: j.interpolate({
+        marginBottom: O.interpolate({
           inputRange: [0, 1],
           outputRange: [-60, 0]
         })

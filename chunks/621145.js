@@ -1,68 +1,68 @@
 "use strict";
-i.r(t), i.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return D
   }
-}), i("47120"), i("773603");
-var a = i("735250"),
-  n = i("470079"),
-  l = i("392711"),
-  s = i("442837"),
-  o = i("481060"),
-  c = i("118139"),
-  d = i("786761"),
-  r = i("3148"),
-  u = i("524444"),
-  m = i("25015"),
-  _ = i("963550"),
-  f = i("845080"),
-  A = i("594174"),
-  h = i("715246"),
-  E = i("998951"),
-  I = i("310043"),
-  T = i("956664"),
-  p = i("709054"),
-  g = i("788080"),
-  x = i("800530"),
-  v = i("981631"),
-  C = i("768760"),
-  S = i("479079");
+}), a("47120"), a("773603");
+var i = a("735250"),
+  n = a("470079"),
+  l = a("392711"),
+  s = a("442837"),
+  o = a("481060"),
+  d = a("118139"),
+  r = a("786761"),
+  c = a("3148"),
+  u = a("524444"),
+  m = a("25015"),
+  _ = a("963550"),
+  A = a("845080"),
+  f = a("594174"),
+  h = a("715246"),
+  E = a("998951"),
+  I = a("310043"),
+  T = a("956664"),
+  g = a("709054"),
+  p = a("788080"),
+  x = a("800530"),
+  S = a("981631"),
+  C = a("768760"),
+  v = a("479079");
 let L = (e, t) => {
-    let i = e.attachments.map(e => {
-      var i, a, n, l;
+    let a = e.attachments.map(e => {
+      var a, i, n, l;
       let s = {
         ...e,
-        filename: (0, g.getAttachmentFilename)(e),
+        filename: (0, p.getAttachmentFilename)(e),
         size: 0,
         proxy_url: e.url
       };
-      if (!((0, c.isImageFile)(e.filename) || (0, c.isVideoFile)(e.filename))) return s;
+      if (!((0, d.isImageFile)(e.filename) || (0, d.isVideoFile)(e.filename))) return s;
       return {
         ...s,
-        width: null !== (n = null === (i = t[e.id]) || void 0 === i ? void 0 : i.width) && void 0 !== n ? n : x.DEFAULT_MEDIA_MAX_WIDTH,
-        height: null !== (l = null === (a = t[e.id]) || void 0 === a ? void 0 : a.height) && void 0 !== l ? l : x.DEFAULT_MEDIA_MAX_HEIGHT
+        width: null !== (n = null === (a = t[e.id]) || void 0 === a ? void 0 : a.width) && void 0 !== n ? n : x.DEFAULT_MEDIA_MAX_WIDTH,
+        height: null !== (l = null === (i = t[e.id]) || void 0 === i ? void 0 : i.height) && void 0 !== l ? l : x.DEFAULT_MEDIA_MAX_HEIGHT
       }
     });
-    return (0, d.createMessageRecord)({
-      ...(0, r.default)({
+    return (0, r.createMessageRecord)({
+      ...(0, c.default)({
         nonce: e.id,
         content: e.content,
-        type: v.MessageTypes.DEFAULT,
-        channelId: v.EMPTY_STRING_SNOWFLAKE_ID
+        type: S.MessageTypes.DEFAULT,
+        channelId: S.EMPTY_STRING_SNOWFLAKE_ID
       }),
-      timestamp: new Date(p.default.extractTimestamp(e.id)).toISOString(),
-      attachments: i,
-      state: v.MessageStates.SENT
+      timestamp: new Date(g.default.extractTimestamp(e.id)).toISOString(),
+      attachments: a,
+      state: S.MessageStates.SENT
     })
   },
   N = e => {
     let {
       message: t
     } = e, {
-      attachments: i
+      attachments: a
     } = t;
-    if (0 === i.length) return null;
-    let n = (e, t, i) => {
+    if (0 === a.length) return null;
+    let n = (e, t, a) => {
         let n = x.DEFAULT_MEDIA_MAX_WIDTH,
           s = x.DEFAULT_MEDIA_MAX_HEIGHT;
         if (null != t.width && null != t.height) {
@@ -74,17 +74,17 @@ let L = (e, t) => {
           });
           n = (0, l.clamp)(Math.round(t.width * e), 0, x.DEFAULT_MEDIA_MAX_WIDTH), s = (0, l.clamp)(Math.round(t.height * e), 0, x.DEFAULT_MEDIA_MAX_HEIGHT)
         }
-        return (0, a.jsx)("div", {
+        return (0, i.jsx)("div", {
           style: {
-            width: i ? n : "100%",
-            height: i ? s : "100%"
+            width: a ? n : "100%",
+            height: a ? s : "100%"
           },
-          children: (0, a.jsx)(h.default, {
+          children: (0, i.jsx)(h.default, {
             className: e.className,
             forceExternal: !1,
             src: t.url,
-            width: i ? n : "100%",
-            height: i ? s : "100%",
+            width: a ? n : "100%",
+            height: a ? s : "100%",
             responsive: !0,
             volume: e.volume,
             autoPlay: !1,
@@ -104,11 +104,11 @@ let L = (e, t) => {
           })
         })
       },
-      s = 1 === i.length;
-    return (0, a.jsx)("div", {
-      className: S.classificationEvidenceMessageAttachment,
-      children: (0, a.jsx)(I.default, {
-        attachments: i.map(e => ({
+      s = 1 === a.length;
+    return (0, i.jsx)("div", {
+      className: v.classificationEvidenceMessageAttachment,
+      children: (0, i.jsx)(I.default, {
+        attachments: a.map(e => ({
           attachment: e,
           spoiler: !0,
           message: t,
@@ -136,8 +136,8 @@ let L = (e, t) => {
 function D(e) {
   var t;
   let {
-    flaggedContent: i
-  } = e, l = (0, s.useStateFromStores)([A.default], () => A.default.getCurrentUser()), [d, r] = n.useState({}), [u, h] = n.useState(!0), I = i[0], T = L(I, d), p = (0, m.default)(T, {
+    flaggedContent: a
+  } = e, l = (0, s.useStateFromStores)([f.default], () => f.default.getCurrentUser()), [r, c] = n.useState({}), [u, h] = n.useState(!0), I = a[0], T = L(I, r), g = (0, m.default)(T, {
     hideSimpleEmbedContent: !1,
     allowList: !1,
     allowHeading: !1,
@@ -149,42 +149,42 @@ function D(e) {
       let {
         filename: t
       } = e;
-      return (0, c.isImageFile)(t) || (0, c.isVideoFile)(t)
+      return (0, d.isImageFile)(t) || (0, d.isVideoFile)(t)
     }).map(e => {
       var t;
-      return (t = e, new Promise((e, i) => {
-        if ((0, c.isImageFile)(t.filename)) {
-          let a = new Image;
-          a.src = t.url, a.onload = () => {
-            e(a)
-          }, a.onerror = () => {
-            i()
+      return (t = e, new Promise((e, a) => {
+        if ((0, d.isImageFile)(t.filename)) {
+          let i = new Image;
+          i.src = t.url, i.onload = () => {
+            e(i)
+          }, i.onerror = () => {
+            a()
           }
-        } else if ((0, c.isVideoFile)(t.filename)) {
-          let a = document.createElement("video");
-          a.src = t.url, a.onloadedmetadata = () => {
-            let t = a.videoWidth;
+        } else if ((0, d.isVideoFile)(t.filename)) {
+          let i = document.createElement("video");
+          i.src = t.url, i.onloadedmetadata = () => {
+            let t = i.videoWidth;
             e({
               width: t,
-              height: a.videoHeight
+              height: i.videoHeight
             })
-          }, a.onerror = () => {
-            i()
+          }, i.onerror = () => {
+            a()
           }
         } else e({
           width: 0,
           height: 0
         })
-      })).then(t => r(i => ({
-        ...i,
+      })).then(t => c(a => ({
+        ...a,
         [e.id]: t
       })))
     })).finally(() => h(!1))
-  }, [I.attachments]), "" === T.content && 0 === T.attachments.length) ? null : (0, a.jsx)("div", {
-    className: S.classificationEvidenceCard,
-    children: u ? (0, a.jsx)(o.Spinner, {}) : (0, a.jsx)(E.default, {
+  }, [I.attachments]), "" === T.content && 0 === T.attachments.length) ? null : (0, i.jsx)("div", {
+    className: v.classificationEvidenceCard,
+    children: u ? (0, i.jsx)(o.Spinner, {}) : (0, i.jsx)(E.default, {
       compact: !1,
-      childrenHeader: (0, f.default)({
+      childrenHeader: (0, A.default)({
         author: {
           ...l,
           colorString: "",
@@ -199,12 +199,12 @@ function D(e) {
         roleIcon: void 0,
         hideTimestamp: !1
       }),
-      childrenAccessories: (0, a.jsx)(N, {
+      childrenAccessories: (0, i.jsx)(N, {
         message: T
       }),
       childrenMessageContent: (0, _.default)({
         message: T
-      }, p.content),
+      }, g.content),
       hasThread: !1,
       hasReply: !1
     })

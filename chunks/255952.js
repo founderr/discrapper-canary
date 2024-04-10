@@ -11,14 +11,14 @@ var a = n("735250"),
   c = n("427217"),
   f = n("246133"),
   E = n("383832"),
-  _ = n("474376"),
-  h = n("695346"),
+  h = n("474376"),
+  _ = n("695346"),
   C = n("293273"),
   m = n("696202"),
   S = n("881201"),
   I = n("626135"),
-  T = n("51144"),
-  p = n("981631"),
+  p = n("51144"),
+  T = n("981631"),
   g = n("689938"),
   N = n("329764");
 
@@ -37,7 +37,7 @@ function A(e) {
       color: s ? "currentColor" : void 0
     }), (0, a.jsx)("div", {
       className: N.status,
-      children: (0, T.humanizeStatus)(t)
+      children: (0, p.humanizeStatus)(t)
     }), null != n && (0, a.jsx)("div", {
       className: N.description,
       children: n
@@ -45,11 +45,11 @@ function A(e) {
   })
 }
 
-function R(e) {
+function v(e) {
   let {
     customStatus: t
   } = e, n = e => {
-    e.stopPropagation(), h.CustomStatusSetting.updateSetting(void 0)
+    e.stopPropagation(), _.CustomStatusSetting.updateSetting(void 0)
   };
   return null != t ? (0, a.jsx)("div", {
     "aria-label": g.default.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
@@ -87,7 +87,7 @@ function R(e) {
   })
 }
 
-function O(e) {
+function R(e) {
   let {
     focused: t
   } = e;
@@ -105,15 +105,15 @@ function O(e) {
     })]
   })
 }
-let v = e => {
+let O = e => {
   let {
     customStatus: t,
     onClose: l,
     analyticsContext: i,
     onSelect: r
-  } = e, o = (0, _.useMultiAccountMenuItems)();
+  } = e, o = (0, h.useMultiAccountMenuItems)();
   s.useEffect(() => {
-    I.default.track(p.AnalyticEvents.OPEN_POPOUT, {
+    I.default.track(T.AnalyticEvents.OPEN_POPOUT, {
       type: "User Status Menu",
       has_custom_status: null != t,
       location: i.location
@@ -187,7 +187,7 @@ let v = e => {
     }), (0, a.jsx)(u.MenuSeparator, {}), (0, a.jsx)(u.MenuItem, {
       id: "custom-status",
       keepItemStyles: !0,
-      render: () => (0, a.jsx)(R, {
+      render: () => (0, a.jsx)(v, {
         customStatus: t
       }),
       action: () => {
@@ -208,7 +208,7 @@ let v = e => {
         let {
           isFocused: t
         } = e;
-        return (0, a.jsx)(O, {
+        return (0, a.jsx)(R, {
           focused: t
         })
       },
@@ -218,8 +218,8 @@ let v = e => {
 };
 t.default = (0, d.default)(e => {
   let t = (0, r.useStateFromStores)([C.default], () => C.default.getCustomStatusActivity()),
-    n = h.StatusSetting.useSetting();
-  return (0, a.jsx)(v, {
+    n = _.StatusSetting.useSetting();
+  return (0, a.jsx)(O, {
     ...e,
     customStatus: t,
     status: n

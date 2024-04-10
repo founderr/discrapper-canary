@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var l, a = n("735250"),
-  i = n("470079"),
+var l, i = n("735250"),
+  a = n("470079"),
   u = n("803997"),
   r = n.n(u),
   d = n("780384"),
@@ -32,27 +32,27 @@ function C(e, t, n) {
 let {
   Provider: S,
   Consumer: T
-} = i.createContext(s.ThemeTypes.DARK);
-class A extends i.PureComponent {
+} = a.createContext(s.ThemeTypes.DARK);
+class A extends a.PureComponent {
   render() {
     let {
       lightSrc: e,
       darkSrc: t,
       width: n,
       height: l,
-      offsetX: i,
+      offsetX: a,
       offsetY: u,
       style: E
     } = this.props;
-    return (0, a.jsx)(T, {
-      children: s => (0, a.jsx)(o.default.Child, {
+    return (0, i.jsx)(T, {
+      children: s => (0, i.jsx)(o.default.Child, {
         grow: 0,
         className: r()(_.image, c.marginBottom40),
         style: {
           ...E,
           width: n,
           height: l,
-          marginLeft: i,
+          marginLeft: a,
           marginTop: u,
           backgroundImage: "url(".concat((0, d.isThemeDark)(s) ? t : e, ")")
         }
@@ -65,23 +65,23 @@ let I = e => {
     children: t,
     className: n,
     noteClassName: l,
-    note: i,
+    note: a,
     style: u
   } = e;
-  return (0, a.jsxs)(o.default.Child, {
+  return (0, i.jsxs)(o.default.Child, {
     grow: 0,
     direction: o.default.Direction.VERTICAL,
     style: u,
-    children: [null != t && (0, a.jsx)(E.H, {
+    children: [null != t && (0, i.jsx)(E.H, {
       className: r()(n, _.title),
       children: t
-    }), null != i ? (0, a.jsx)("div", {
+    }), null != a ? (0, i.jsx)("div", {
       className: r()(l, _.text, c.marginTop8),
-      children: i
+      children: a
     }) : null]
   })
 };
-class f extends(l = i.PureComponent) {
+class f extends(l = a.PureComponent) {
   render() {
     let {
       children: e,
@@ -89,9 +89,9 @@ class f extends(l = i.PureComponent) {
       className: n,
       style: l
     } = this.props;
-    return (0, a.jsx)(S, {
+    return (0, i.jsx)(S, {
       value: t,
-      children: (0, a.jsx)(o.default, {
+      children: (0, i.jsx)(o.default, {
         direction: o.default.Direction.VERTICAL,
         align: o.default.Align.CENTER,
         justify: o.default.Justify.CENTER,

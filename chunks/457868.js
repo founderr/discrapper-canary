@@ -32,8 +32,8 @@ var a = n("735250"),
   R = n("885110"),
   L = n("111583"),
   y = n("594174"),
-  O = n("499033"),
-  j = n("630641"),
+  j = n("499033"),
+  O = n("630641"),
   P = n("158010"),
   D = n("151827"),
   b = n("176278"),
@@ -58,7 +58,7 @@ let z = H.default.getEnableHardwareAcceleration(),
     } = e, o = (0, c.useStateFromStores)([L.default], () => L.default.isTyping(t.id, i)), p = (0, c.useStateFromStores)([x.default], () => x.default.getMember(t.guild_id, i)), E = (0, c.useStateFromStores)([N.default], () => {
       var e;
       return (null == p ? void 0 : p.colorRoleId) != null ? null === (e = N.default.getRole(t.guild_id, p.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0
-    }, [t.guild_id, p]), C = (0, c.useStateFromStores)([y.default], () => y.default.getUser(i)), S = (0, c.useStateFromStores)([y.default], () => y.default.getCurrentUser()), _ = (null == C ? void 0 : C.id) === (null == S ? void 0 : S.id), O = (0, c.useStateFromStores)([M.default, R.default], () => _ ? R.default.getStatus() : M.default.getStatus(i, t.guild_id)), j = (0, c.useStateFromStores)([M.default], () => M.default.isMobileOnline(i)), P = (0, c.useStateFromStores)([M.default, R.default], () => _ ? R.default.getActivities() : M.default.getActivities(i, t.guild_id)), D = (0, c.useStateFromStores)([v.default], () => v.default.getAnyStreamForUser(i)), b = (0, u.useListItem)(i), U = (0, c.useStateFromStores)([T.default], () => T.default.canUserViewChannel(t.id, s, i)), w = (null == C ? void 0 : C.id) != null && C.id === r, H = l.useCallback(e => {
+    }, [t.guild_id, p]), C = (0, c.useStateFromStores)([y.default], () => y.default.getUser(i)), S = (0, c.useStateFromStores)([y.default], () => y.default.getCurrentUser()), _ = (null == C ? void 0 : C.id) === (null == S ? void 0 : S.id), j = (0, c.useStateFromStores)([M.default, R.default], () => _ ? R.default.getStatus() : M.default.getStatus(i, t.guild_id)), O = (0, c.useStateFromStores)([M.default], () => M.default.isMobileOnline(i)), P = (0, c.useStateFromStores)([M.default, R.default], () => _ ? R.default.getActivities() : M.default.getActivities(i, t.guild_id)), D = (0, c.useStateFromStores)([v.default], () => v.default.getAnyStreamForUser(i)), b = (0, u.useListItem)(i), U = (0, c.useStateFromStores)([T.default], () => T.default.canUserViewChannel(t.id, s, i)), w = (null == C ? void 0 : C.id) != null && C.id === r, H = l.useCallback(e => {
       null != C && (0, h.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -122,14 +122,14 @@ let z = H.default.getEnableHardwareAcceleration(),
           user: C,
           currentUser: S,
           nick: null == p ? void 0 : p.nick,
-          status: O,
+          status: j,
           activities: P,
           colorString: null == p ? void 0 : p.colorString,
           colorRoleName: E,
           isTyping: o,
           channel: t,
           guildId: t.guild_id,
-          isMobile: j,
+          isMobile: O,
           selected: l,
           applicationStream: D,
           premiumSince: null == K ? null : new Date(K),
@@ -184,7 +184,7 @@ let z = H.default.getEnableHardwareAcceleration(),
         variant: "text-xs/bold",
         color: "header-secondary",
         className: W.private,
-        children: [(0, a.jsx)(j.default, {
+        children: [(0, a.jsx)(O.default, {
           width: 12,
           height: 12
         }), "\xa0", V.default.Messages.THREAD_BROWSER_PRIVATE]
@@ -342,7 +342,7 @@ function J(e) {
           width: 32,
           height: 32
         })
-      }), (0, a.jsx)(O.default, {
+      }), (0, a.jsx)(j.default, {
         className: W.emptyStateStars
       })]
     }), (0, a.jsx)(f.Heading, {

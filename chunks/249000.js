@@ -43,11 +43,11 @@ function E(e, t, n, a, s) {
   }
 }(i = a || (a = {}))[i.DISABLED = 0] = "DISABLED", i[i.DEFAULT = 1] = "DEFAULT", i[i.OFFSET = 2] = "OFFSET", (r = s || (s = {})).TOP = "TOP", r.BOTTOM = "BOTTOM", r.RIGHT = "RIGHT", r.LEFT = "LEFT";
 
-function _(e) {
+function h(e) {
   return [null == e.bottom ? "TOP" : "BOTTOM", null == e.right ? "LEFT" : "RIGHT"]
 }
 
-function h(e) {
+function _(e) {
   let {
     top: t,
     left: n,
@@ -220,8 +220,8 @@ class S extends(l = u.PureComponent) {
         dragging: m,
         dragging: S,
         verticalOrientation: I,
-        horizontalOrientation: T
-      } = this.state, p = !1;
+        horizontalOrientation: p
+      } = this.state, T = !1;
       if (null == a || !m && 9 > f(this._dragStart, {
           x: t,
           y: n
@@ -230,22 +230,22 @@ class S extends(l = u.PureComponent) {
       let {
         clientWidth: g,
         clientHeight: N
-      } = a, A = n - this._offsetY, R = C(E({
+      } = a, A = n - this._offsetY, v = C(E({
         top: A,
         left: t - this._offsetX
       }, s, l, g, N));
       if (c) {
-        let e = _(R = h(R));
-        I = e[0], T = e[1]
-      } else R = {
-        top: R.top,
-        left: R.left
+        let e = h(v = _(v));
+        I = e[0], p = e[1]
+      } else v = {
+        top: v.top,
+        left: v.left
       };
-      2 === r && T !== this.state.horizontalOrientation && (this._offsetX = g - this._offsetX, p = !0), 2 === i && I !== this.state.verticalOrientation && (this._offsetY = N - this._offsetY, p = !0), this.setDOMPositions(R), !S && (null == o || o(R, a)), null == u || u(R, a), p && (null == d || d([I, T])), this.setState({
+      2 === r && p !== this.state.horizontalOrientation && (this._offsetX = g - this._offsetX, T = !0), 2 === i && I !== this.state.verticalOrientation && (this._offsetY = N - this._offsetY, T = !0), this.setDOMPositions(v), !S && (null == o || o(v, a)), null == u || u(v, a), T && (null == d || d([I, p])), this.setState({
         dragging: m,
         verticalOrientation: I,
-        horizontalOrientation: T,
-        atTopEdge: 0 === R.top
+        horizontalOrientation: p,
+        atTopEdge: 0 === v.top
       })
     }), c(this, "handleMouseUp", () => {
       window.removeEventListener("mousemove", this.handleMouseMove), window.removeEventListener("mouseup", this.handleMouseUp), this.state.dragging && this.setState({
@@ -284,7 +284,7 @@ class S extends(l = u.PureComponent) {
         clientWidth: c
       } = a, f = E(t, s, l, c, d);
       if (f = C(f), r) {
-        let t = _(e = h(f));
+        let t = h(e = _(f));
         o = t[0], u = t[1]
       } else e = {
         top: f.top,
@@ -301,7 +301,7 @@ class S extends(l = u.PureComponent) {
         atTopEdge: m
       })
     });
-    let [t, n] = _(e.initialPosition);
+    let [t, n] = h(e.initialPosition);
     this.position = function(e) {
       let {
         top: t,

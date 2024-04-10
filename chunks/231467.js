@@ -28,7 +28,7 @@ function E(e) {
     className: f.playstyle,
     color: "none",
     children: (0, d.getPlaystyleTitle)(t.playstyle)
-  }), _ = c.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
+  }), h = c.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
     count: t.memberCount
   });
   return (0, a.jsxs)("div", {
@@ -48,7 +48,7 @@ function E(e) {
         }), (0, a.jsxs)(o.Text, {
           variant: "text-xs/normal",
           color: "text-secondary",
-          children: [E, " \xb7 ".concat(_)]
+          children: [E, " \xb7 ".concat(h)]
         })]
       }), (0, a.jsx)(o.Text, {
         variant: "text-xs/normal",

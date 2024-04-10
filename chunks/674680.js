@@ -16,12 +16,12 @@ var s = n("780384"),
   c = n("955204"),
   f = n("231338"),
   E = n("546271");
-let _ = {
+let h = {
     trophy: f.Color.PRIMARY_400,
     locked: f.Color.PRIMARY_400,
     unlocked: f.Color.GREEN_330
   },
-  h = {
+  _ = {
     trophy: f.Color.PRIMARY_400,
     locked: f.Color.PRIMARY_400,
     unlocked: f.Color.GREEN_330
@@ -37,22 +37,22 @@ function C(e) {
   if (null == S) return null;
   let I = (0, l.getAvatarSpecs)(C),
     {
-      name: T,
-      rarity: p
+      name: p,
+      rarity: T
     } = S,
     {
       color: g
-    } = (0, c.getAchievementStyles)(p),
-    N = (0, s.isThemeDark)(m) ? _ : h,
+    } = (0, c.getAchievementStyles)(T),
+    N = (0, s.isThemeDark)(m) ? h : _,
     A = (I.size - I.offset - 2 * I.stroke) * .8,
-    R = I.size - I.stroke,
-    O = {
+    v = I.size - I.stroke,
+    R = {
       width: .4 * A,
       height: .4 * A
     },
-    v = {
-      width: O.width + 1,
-      height: O.height + 1,
+    O = {
+      width: R.width + 1,
+      height: R.height + 1,
       right: I.stroke + 1,
       bottom: I.stroke + 1,
       padding: 0
@@ -60,11 +60,11 @@ function C(e) {
   return (0, a.jsxs)("div", {
     className: E.container,
     style: {
-      width: R,
-      height: R,
+      width: v,
+      height: v,
       padding: I.stroke
     },
-    "aria-label": "".concat(null !== (t = T()) && void 0 !== t ? t : ""),
+    "aria-label": "".concat(null !== (t = p()) && void 0 !== t ? t : ""),
     children: [(0, a.jsx)("div", {
       className: E.trophyIconContainer,
       children: (0, a.jsx)(d.default, {
@@ -74,17 +74,17 @@ function C(e) {
       })
     }), !f && (0, a.jsx)("div", {
       className: E.lockContainer,
-      style: v,
+      style: O,
       children: (0, a.jsx)(u.default, {
         color: (0, r.getColor)(N.locked),
-        ...O
+        ...R
       })
-    }), f && p === c.PoggermodeAchievementRarity.LEGENDARY && (0, a.jsx)("div", {
+    }), f && T === c.PoggermodeAchievementRarity.LEGENDARY && (0, a.jsx)("div", {
       className: E.lockContainer,
-      style: v,
+      style: O,
       children: (0, a.jsx)(o.default, {
         className: E.confettiIcon,
-        ...O
+        ...R
       })
     })]
   })

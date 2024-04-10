@@ -7,8 +7,8 @@ var s, l, i, r, o = n("392711"),
   c = n("570140"),
   f = n("861687"),
   E = n("437263"),
-  _ = n("314897"),
-  h = n("157305"),
+  h = n("314897"),
+  _ = n("157305"),
   C = n("131951"),
   m = n("981631");
 let S = {};
@@ -19,12 +19,12 @@ function I() {
   })
 }
 
-function T(e, t, n) {
+function p(e, t, n) {
   let a = S[e];
   return null != a ? t(a) : n
 }
 
-function p(e) {
+function T(e) {
   let {
     lobbyId: t
   } = e, n = S[t];
@@ -40,7 +40,7 @@ class N extends(s = d.default.Store) {
     u().each(S, e)
   }
   getState(e) {
-    return T(e, e => e.state, m.RTCConnectionStates.DISCONNECTED)
+    return p(e, e => e.state, m.RTCConnectionStates.DISCONNECTED)
   }
   isConnected(e) {
     return this.getState(e) === m.RTCConnectionStates.RTC_CONNECTED
@@ -49,31 +49,31 @@ class N extends(s = d.default.Store) {
     return this.getState(e) === m.RTCConnectionStates.DISCONNECTED
   }
   getHostname(e) {
-    return T(e, e => e.hostname, null)
+    return p(e, e => e.hostname, null)
   }
   getQuality(e) {
-    return T(e, e => e.quality, m.RTCConnectionQuality.UNKNOWN)
+    return p(e, e => e.quality, m.RTCConnectionQuality.UNKNOWN)
   }
   getPings(e) {
-    return T(e, e => e.getPings(), [])
+    return p(e, e => e.getPings(), [])
   }
   getAveragePing(e) {
-    return T(e, e => e.getAveragePing(), 0)
+    return p(e, e => e.getAveragePing(), 0)
   }
   getLastPing(e) {
-    return T(e, e => e.getLastPing(), 0)
+    return p(e, e => e.getLastPing(), 0)
   }
   getOutboundLossRate(e) {
-    return T(e, e => e.getOutboundLossRate(), 0)
+    return p(e, e => e.getOutboundLossRate(), 0)
   }
   getMediaSessionId(e) {
-    return T(e, e => e.getMediaSessionId(), null)
+    return p(e, e => e.getMediaSessionId(), null)
   }
   getRTCConnectionId(e) {
-    return T(e, e => e.getRTCConnectionId(), null)
+    return p(e, e => e.getRTCConnectionId(), null)
   }
   getDuration(e) {
-    return T(e, e => e.getDuration(), 0)
+    return p(e, e => e.getDuration(), 0)
   }
 }
 r = "RTCConnectionStore", (i = "displayName") in(l = N) ? Object.defineProperty(l, i, {
@@ -95,15 +95,15 @@ r = "RTCConnectionStore", (i = "displayName") in(l = N) ? Object.defineProperty(
     return u().some(S, t => t === e.connection)
   },
   LOBBY_VOICE_STATE_UPDATE: function(e) {
-    if (_.default.getId() !== e.userId || e.sessionId !== a) return !1;
+    if (h.default.getId() !== e.userId || e.sessionId !== a) return !1;
     let t = S[e.lobbyId];
     null != t && null == e.channelId ? (t.destroy(), delete S[e.lobbyId]) : null != t ? t.channelId = e.channelId : null != e.channelId && (t = function(e, t) {
       if (null == a) throw Error("Creating RTCConnection without session.");
-      let n = h.default.getLobby(e);
+      let n = _.default.getLobby(e);
       if (null == n) throw Error("Creating RTCConnection without lobby.");
       let s = n.application_id,
         l = new f.default({
-          userId: _.default.getId(),
+          userId: h.default.getId(),
           sessionId: a,
           guildId: e,
           channelId: t,
@@ -138,6 +138,6 @@ r = "RTCConnectionStore", (i = "displayName") in(l = N) ? Object.defineProperty(
     if (null == t) return !1;
     t.connect(e.endpoint, e.token)
   },
-  LOBBY_DELETE: p,
-  LOBBY_DISCONNECT: p
+  LOBBY_DELETE: T,
+  LOBBY_DISCONNECT: T
 } : {})

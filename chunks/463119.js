@@ -15,29 +15,29 @@ var a = n("735250"),
   c = n("596454"),
   f = n("515753"),
   E = n("410030"),
-  _ = n("607070"),
-  h = n("100527"),
+  h = n("607070"),
+  _ = n("100527"),
   C = n("906732"),
   m = n("821982"),
   S = n("377171"),
   I = n("633302"),
-  T = n("126900"),
-  p = n("26290"),
+  p = n("126900"),
+  T = n("26290"),
   g = n("153066"),
   N = n("335131"),
   A = n("141594"),
-  R = n("302800"),
-  O = n("981631"),
-  v = n("689938"),
+  v = n("302800"),
+  R = n("981631"),
+  O = n("689938"),
   L = n("592761");
 let P = e => {
     let {
       color: t
     } = e;
-    return (0, a.jsx)(p.TextBadge, {
+    return (0, a.jsx)(T.TextBadge, {
       className: L.newBadge,
       color: null != t ? t : S.default.STATUS_DANGER_BACKGROUND,
-      text: v.default.Messages.NEW
+      text: O.default.Messages.NEW
     })
   },
   M = e => {
@@ -49,14 +49,14 @@ let P = e => {
       onButtonClick: i,
       children: o,
       ...u
-    } = e, d = (0, r.useListItem)("shop"), c = h.default.HOME_PAGE_SHOP_TAB, {
+    } = e, d = (0, r.useListItem)("shop"), c = _.default.HOME_PAGE_SHOP_TAB, {
       analyticsLocations: E
     } = (0, C.default)(c);
     return (0, a.jsx)(f.LinkButton, {
       selected: t,
-      route: O.Routes.COLLECTIBLES_SHOP,
-      icon: T.default,
-      text: v.default.Messages.COLLECTIBLES_SHOP,
+      route: R.Routes.COLLECTIBLES_SHOP,
+      icon: p.default,
+      text: O.default.Messages.COLLECTIBLES_SHOP,
       locationState: n,
       ...d,
       ...u,
@@ -76,7 +76,7 @@ let P = e => {
     let {
       displayOptions: t,
       assetId: n
-    } = e, s = (0, o.useStateFromStores)([_.default], () => _.default.useReducedMotion), l = null != n ? (0, m.default)(n, d.AvatarSizes.SIZE_80, !s) : void 0;
+    } = e, s = (0, o.useStateFromStores)([h.default], () => h.default.useReducedMotion), l = null != n ? (0, m.default)(n, d.AvatarSizes.SIZE_80, !s) : void 0;
     return (0, a.jsxs)("div", {
       className: L.shopMarketingTooltipContent,
       children: [(0, a.jsx)("div", {
@@ -101,16 +101,16 @@ let P = e => {
       })]
     })
   }),
-  D = e => {
+  x = e => {
     let {
       selected: t,
       locationState: n,
       onButtonClick: l,
       displayOptions: r
-    } = e, [o, c] = s.useState(0), [f, _] = s.useState(!1), h = (0, E.default)(), C = r.entrypointDecorationAssets, m = s.useCallback(e => {
-      c(e => (e + 1) % r.assetIds.length), _(!0), null == e || e()
+    } = e, [o, c] = s.useState(0), [f, h] = s.useState(!1), _ = (0, E.default)(), C = r.entrypointDecorationAssets, m = s.useCallback(e => {
+      c(e => (e + 1) % r.assetIds.length), h(!0), null == e || e()
     }, [r.assetIds]), S = s.useCallback(e => {
-      _(!1), null == e || e()
+      h(!1), null == e || e()
     }, []);
     return (0, a.jsx)(d.Tooltip, {
       text: (0, a.jsx)(y, {
@@ -132,7 +132,7 @@ let P = e => {
         onMouseLeave: () => S(e.onMouseLeave),
         onButtonClick: l,
         children: [null != C && (0, a.jsx)("img", {
-          src: (0, u.isThemeDark)(h) ? C.srcDark : C.srcLight,
+          src: (0, u.isThemeDark)(_) ? C.srcDark : C.srcLight,
           className: i()(L.marketingButtonImage, {
             [L.marketingButtonImageHovered]: f
           }),
@@ -144,7 +144,7 @@ let P = e => {
       })
     })
   },
-  x = e => {
+  D = e => {
     let {
       selected: t,
       locationState: n,
@@ -188,15 +188,15 @@ let P = e => {
       dismissCollectiblesShopTabNewBadge: l
     } = (0, A.default)();
     if (null != s) switch (s.type) {
-      case R.CollectiblesMarketingVariant.TOOLTIP:
-        return (0, a.jsx)(x, {
+      case v.CollectiblesMarketingVariant.TOOLTIP:
+        return (0, a.jsx)(D, {
           selected: t,
           locationState: n,
           onButtonClick: l,
           displayOptions: s
         });
-      case R.CollectiblesMarketingVariant.COACHTIP:
-        return (0, a.jsx)(D, {
+      case v.CollectiblesMarketingVariant.COACHTIP:
+        return (0, a.jsx)(x, {
           selected: t,
           locationState: n,
           onButtonClick: l,

@@ -15,19 +15,19 @@ t.default = e => {
   let {
     handleUpdate: t,
     selectedGames: n,
-    error: _
-  } = e, h = (0, l.useStateFromStores)([o.default], () => o.default.getId()), {
+    error: h
+  } = e, _ = (0, l.useStateFromStores)([o.default], () => o.default.getId()), {
     recentGames: C
-  } = (0, r.useUserRecentGames)(h), m = (0, l.useStateFromStores)([u.default], () => u.default.games, []), S = s.useMemo(() => m.map(e => ({
+  } = (0, r.useUserRecentGames)(_), m = (0, l.useStateFromStores)([u.default], () => u.default.games, []), S = s.useMemo(() => m.map(e => ({
     value: e.id,
     label: e.name
-  })), [m]), I = (0, i.useToken)(i.tokens.colors.WHITE), T = (0, l.useStateFromStoresArray)([u.default], () => null != C ? C.map(e => {
+  })), [m]), I = (0, i.useToken)(i.tokens.colors.WHITE), p = (0, l.useStateFromStoresArray)([u.default], () => null != C ? C.map(e => {
     let t = u.default.getGameById(e.applicationId);
     return {
       ...e,
       name: null == t ? void 0 : t.name
     }
-  }) : []), p = e => {
+  }) : []), T = e => {
     if (!n.has(e)) return;
     let a = new Map(n);
     a.delete(e), t({
@@ -66,11 +66,11 @@ t.default = e => {
       })
     }), (0, a.jsxs)("div", {
       className: E.contentWithMinHeight,
-      children: [null != _ && (0, a.jsx)(i.Text, {
+      children: [null != h && (0, a.jsx)(i.Text, {
         variant: "text-sm/normal",
         color: "status-danger",
         className: E.errorText,
-        children: _
+        children: h
       }), n.size > 0 && (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(i.Text, {
           variant: "text-xs/medium",
@@ -84,7 +84,7 @@ t.default = e => {
             return (0, a.jsxs)("div", {
               className: E.selectedGame,
               children: [(0, a.jsx)(i.Clickable, {
-                onClick: () => p(t),
+                onClick: () => T(t),
                 className: E.gameImagePlaceholder,
                 children: (0, a.jsx)(d.default, {
                   backgroundColor: I.hex(),
@@ -98,7 +98,7 @@ t.default = e => {
             }, t)
           })
         })]
-      }), T.length > 0 && (0, a.jsxs)(a.Fragment, {
+      }), p.length > 0 && (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(i.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
@@ -106,7 +106,7 @@ t.default = e => {
           children: f.default.Messages.RECENT_GAMES
         }), (0, a.jsx)("div", {
           className: E.selectedSection,
-          children: T.map(e => (0, a.jsxs)("div", {
+          children: p.map(e => (0, a.jsxs)("div", {
             className: E.selectedGame,
             children: [(0, a.jsx)(i.Clickable, {
               "aria-label": e.name,

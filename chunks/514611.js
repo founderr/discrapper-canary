@@ -10,21 +10,21 @@ var a, s = n("735250"),
   c = n("556017"),
   f = n("879484"),
   E = n("26580"),
-  _ = n("206887"),
-  h = n("134432"),
+  h = n("206887"),
+  _ = n("134432"),
   C = n("695346"),
   m = n("768581"),
   S = n("900849"),
   I = n("940627"),
-  T = n("806519"),
-  p = n("981631"),
+  p = n("806519"),
+  T = n("981631"),
   g = n("689938"),
   N = n("313618"),
   A = n("129512"),
-  R = n("330065"),
-  O = n("755386");
+  v = n("330065"),
+  R = n("755386");
 
-function v(e, t, n) {
+function O(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -34,12 +34,12 @@ function v(e, t, n) {
 }
 class L extends(a = l.PureComponent) {
   getDefaultSplashURL(e, t) {
-    if (t) return O;
+    if (t) return R;
     switch (e) {
-      case p.ThemeTypes.DARK:
+      case T.ThemeTypes.DARK:
         return A;
-      case p.ThemeTypes.LIGHT:
-        return R
+      case T.ThemeTypes.LIGHT:
+        return v
     }
   }
   render() {
@@ -53,18 +53,18 @@ class L extends(a = l.PureComponent) {
       loaded: i,
       hasBeenSeen: d,
       isVisible: A,
-      submitting: R
+      submitting: v
     } = this.state, {
-      name: O,
-      description: v,
+      name: R,
+      description: O,
       presenceCount: L,
       memberCount: P,
       keywords: M
-    } = t, y = null === (e = t.features) || void 0 === e ? void 0 : e.has(p.GuildFeatures.HUB), D = m.default.getGuildDiscoverySplashURL({
+    } = t, y = null === (e = t.features) || void 0 === e ? void 0 : e.has(T.GuildFeatures.HUB), x = m.default.getGuildDiscoverySplashURL({
       id: t.id,
       splash: t.discoverySplash,
-      size: 300 * (0, h.getDevicePixelRatio)()
-    }), x = null != D ? D : this.getDefaultSplashURL(a, y), b = m.default.getGuildIconURL({
+      size: 300 * (0, _.getDevicePixelRatio)()
+    }), D = null != x ? x : this.getDefaultSplashURL(a, y), b = m.default.getGuildIconURL({
       id: t.id,
       icon: t.icon,
       size: 40
@@ -102,13 +102,13 @@ class L extends(a = l.PureComponent) {
             [N.loaded]: i,
             [N.loading]: !i
           }),
-          children: [R ? (0, s.jsx)(u.Spinner, {
+          children: [v ? (0, s.jsx)(u.Spinner, {
             type: u.Spinner.Type.PULSING_ELLIPSIS,
             className: N.spinner
           }) : null, (0, s.jsxs)(u.Clickable, {
             onClick: this.handleClickView,
             className: r()(N.card, {
-              [N.submitting]: R,
+              [N.submitting]: v,
               [N.cardWithTags]: U
             }),
             onContextMenu: this.handleContextMenu,
@@ -117,7 +117,7 @@ class L extends(a = l.PureComponent) {
               children: [(0, s.jsx)("div", {
                 className: N.splash,
                 children: (0, s.jsx)("img", {
-                  src: x,
+                  src: D,
                   alt: "",
                   className: r()(N.splashImage, {
                     [N.splashImageHeight]: !y
@@ -128,19 +128,19 @@ class L extends(a = l.PureComponent) {
                 })
               }), G || j ? (0, s.jsx)("div", {
                 className: N.actionButtons,
-                children: (0, s.jsx)(_.default, {
+                children: (0, s.jsx)(h.default, {
                   guild: t
                 })
               }) : null, (0, s.jsx)("div", {
                 className: N.guildIcon,
-                children: (0, s.jsx)(T.default, {
-                  mask: T.default.Masks.SQUIRCLE,
+                children: (0, s.jsx)(p.default, {
+                  mask: p.default.Masks.SQUIRCLE,
                   width: 48,
                   height: 48,
                   children: (0, s.jsx)("div", {
                     className: N.iconMask,
-                    children: (0, s.jsx)(T.default, {
-                      mask: T.default.Masks.SQUIRCLE,
+                    children: (0, s.jsx)(p.default, {
+                      mask: p.default.Masks.SQUIRCLE,
                       width: 40,
                       height: 40,
                       children: (0, s.jsx)("img", {
@@ -163,13 +163,13 @@ class L extends(a = l.PureComponent) {
                 }), (0, s.jsx)(u.Heading, {
                   variant: "heading-md/semibold",
                   className: N.guildName,
-                  children: O
+                  children: R
                 })]
               }), (0, s.jsx)(u.Text, {
                 className: N.description,
                 variant: "text-sm/normal",
                 color: "header-secondary",
-                children: v
+                children: O
               }), U && null != M && null != l && (0, s.jsx)(E.DiscoveryTags, {
                 tags: M,
                 onTagClick: e => l(e, t.id),
@@ -212,12 +212,12 @@ class L extends(a = l.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), v(this, "state", {
+    super(...e), O(this, "state", {
       loaded: !1,
       hasBeenSeen: !1,
       isVisible: !1,
       submitting: !1
-    }), v(this, "handleClickView", async e => {
+    }), O(this, "handleClickView", async e => {
       let {
         className: t
       } = e.target;
@@ -236,7 +236,7 @@ class L extends(a = l.PureComponent) {
           submitting: !1
         })
       }
-    }), v(this, "handleVisibilityChange", e => {
+    }), O(this, "handleVisibilityChange", e => {
       let {
         onGuildCardSeen: t,
         guild: n
@@ -244,7 +244,7 @@ class L extends(a = l.PureComponent) {
       null != n && !this.state.hasBeenSeen && e && (this.setState({
         hasBeenSeen: e
       }), null != t && t(n.id))
-    }), v(this, "handleContextMenu", e => {
+    }), O(this, "handleContextMenu", e => {
       (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -254,13 +254,13 @@ class L extends(a = l.PureComponent) {
           guild: this.props.guild
         })
       })
-    }), v(this, "setIsVisible", e => {
+    }), O(this, "setIsVisible", e => {
       this.setState({
         isVisible: e
       })
     })
   }
 }
-v(L, "Placeholder", e => (0, s.jsx)("div", {
+O(L, "Placeholder", e => (0, s.jsx)("div", {
   className: r()(e.className, N.cardPlaceholder)
 })), t.default = L

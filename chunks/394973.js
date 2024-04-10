@@ -25,10 +25,10 @@ n.r(t), n.d(t, {
     return d
   },
   voiceConnect: function() {
-    return _
+    return h
   },
   voiceDisconnect: function() {
-    return h
+    return _
   }
 });
 var a = n("544891"),
@@ -126,14 +126,14 @@ function E(e) {
   })
 }
 
-function _(e) {
+function h(e) {
   s.default.dispatch({
     type: "LOBBY_VOICE_CONNECT",
     lobbyId: e
   })
 }
 
-function h(e) {
+function _(e) {
   s.default.dispatch({
     type: "LOBBY_VOICE_DISCONNECT",
     lobbyId: e

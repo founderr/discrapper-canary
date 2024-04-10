@@ -11,8 +11,8 @@ var a = n("470079"),
   c = n("410154"),
   f = n("727470"),
   E = n("888507"),
-  _ = n("302800"),
-  h = n("921944");
+  h = n("302800"),
+  _ = n("921944");
 let C = "useCollectiblesShopTabNewBadge";
 t.default = () => {
   let e = (0, s.useStateFromStores)([r.default], () => r.default.getCurrentUser()),
@@ -34,30 +34,30 @@ t.default = () => {
       location: C
     }),
     {
-      newBadgeEnabled: T
+      newBadgeEnabled: p
     } = (0, d.default)({
       location: C
     }),
-    p = a.useMemo(() => {
+    T = a.useMemo(() => {
       if ((0, o.ageEligibleForPremiumUpsell)(e)) {
         if (t) return [l.DismissibleContent.COLLECTIBLES_SHOP_SHY_COACHTIP];
         if (n) return [l.DismissibleContent.COLLECTIBLES_SHOP_SPRINGTOONS_COACHTIP];
         else if (m) return [l.DismissibleContent.COLLECTIBLES_SHOP_ANIME_V2_COACHTIP];
         else if (S) switch (I) {
-          case _.CollectiblesMarketingVariant.TOOLTIP:
+          case h.CollectiblesMarketingVariant.TOOLTIP:
             return [l.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_TOOLTIP];
-          case _.CollectiblesMarketingVariant.COACHTIP:
+          case h.CollectiblesMarketingVariant.COACHTIP:
             return [l.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_COACHTIP]
-        } else if (T) return [l.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE]
+        } else if (p) return [l.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE]
       }
       return []
-    }, [T, S, I, e, m, n, t]),
-    [g, N] = (0, i.useSelectedDismissibleContent)(p, void 0, !0),
-    A = null != g ? _.CollectiblesDCToDisplayOptions[g] : null;
+    }, [p, S, I, e, m, n, t]),
+    [g, N] = (0, i.useSelectedDismissibleContent)(T, void 0, !0),
+    A = null != g ? h.CollectiblesDCToDisplayOptions[g] : null;
   return {
     collectiblesShopTabNewBadgeDisplayOptions: A,
     dismissCollectiblesShopTabNewBadge: () => {
-      null != A && N(h.ContentDismissActionType.AUTO)
+      null != A && N(_.ContentDismissActionType.AUTO)
     }
   }
 }

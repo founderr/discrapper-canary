@@ -20,7 +20,7 @@ let d = {},
   },
   f = [],
   E = {};
-class _ extends(a = i.default.PersistedStore) {
+class h extends(a = i.default.PersistedStore) {
   initialize(e) {
     null != e && (f = e.favoriteClans)
   }
@@ -44,7 +44,7 @@ class _ extends(a = i.default.PersistedStore) {
     return null !== (t = d[e]) && void 0 !== t ? t : []
   }
 }
-u(_, "displayName", "ClanDiscoveryStore"), u(_, "persistKey", "ClanDiscoveryStore"), t.default = new _(r.default, {
+u(h, "displayName", "ClanDiscoveryStore"), u(h, "persistKey", "ClanDiscoveryStore"), t.default = new h(r.default, {
   FETCH_STATIC_CLAN_LIST_SUCCESS: function(e) {
     d[e.game] = e.clans
   },

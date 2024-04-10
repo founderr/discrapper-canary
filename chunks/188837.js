@@ -11,39 +11,39 @@ var a = n("735250"),
   c = n("620929"),
   f = n("308083"),
   E = n("689938"),
-  _ = n("653196");
+  h = n("653196");
 t.default = e => {
   let {
     guildId: t,
     setPage: n,
-    onClose: h
+    onClose: _
   } = e, C = s.useRef(null), m = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), {
     progress: S,
     errors: I,
-    submitting: T
+    submitting: p
   } = (0, i.useStateFromStoresObject)([d.default], () => d.default.getStateForGuild(t)), {
-    selectedGames: p,
+    selectedGames: T,
     playstyle: g,
     interests: N,
     description: A,
-    tag: R,
-    primetime: O,
-    verificationForm: v
-  } = null != S ? S : {}, L = s.useRef(null), P = s.useRef(null), M = s.useRef(null), [y, D] = s.useState(!1), x = async () => {
+    tag: v,
+    primetime: R,
+    verificationForm: O
+  } = null != S ? S : {}, L = s.useRef(null), P = s.useRef(null), M = s.useRef(null), [y, x] = s.useState(!1), D = async () => {
     try {
       await u.convertGuildToClan(t, {
-        selectedGames: p,
+        selectedGames: T,
         playstyle: g,
         interests: N,
         description: A,
-        tag: R,
-        primetime: O,
-        verificationForm: v
+        tag: v,
+        primetime: R,
+        verificationForm: O
       })
     } catch (e) {
       return
     }
-    h()
+    _()
   }, b = (0, l.useSpring)({
     ref: L,
     config: l.config.slow,
@@ -81,9 +81,9 @@ t.default = e => {
   (0, l.useChain)([L, P, M], [0, 0, 1]);
   let G = s.useMemo(() => null != I && Object.values(I).some(e => null != e), [I]);
   return (0, a.jsxs)("div", {
-    className: _.animationContainer,
+    className: h.animationContainer,
     children: [(0, a.jsxs)(l.animated.div, {
-      className: _.signTextLeft,
+      className: h.signTextLeft,
       style: {
         ...b,
         ...j
@@ -97,27 +97,27 @@ t.default = e => {
         children: E.default.Messages.CLAN_SETUP_SIGN_SUBTITLE
       })]
     }), (0, a.jsx)("div", {
-      className: _.scrollContainer,
+      className: h.scrollContainer,
       children: (0, a.jsx)(c.default, {
         guildId: t,
         signed: y,
-        setSigned: D,
+        setSigned: x,
         signRef: C
       })
     }), (0, a.jsxs)(l.animated.div, {
-      className: _.signTextRight,
+      className: h.signTextRight,
       style: {
         ...U,
         ...j
       },
       children: [(0, a.jsx)(r.Button, {
-        className: _.signButton,
+        className: h.signButton,
         size: r.Button.Sizes.SMALL,
         onClick: () => {
           var e;
           null === (e = C.current) || void 0 === e || e.scrollIntoView({
             behavior: "smooth"
-          }), D(!0)
+          }), x(!0)
         },
         children: E.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
       }), (0, a.jsx)(r.Text, {
@@ -126,21 +126,21 @@ t.default = e => {
         children: E.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_HELP
       })]
     }), (0, a.jsx)(r.Button, {
-      className: _.closeButton,
+      className: h.closeButton,
       look: r.Button.Looks.OUTLINED,
       size: r.Button.Sizes.SMALL,
       color: r.Button.Colors.PRIMARY,
-      onClick: h,
+      onClick: _,
       children: E.default.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
     }), (0, a.jsx)(r.Button, {
-      className: _.previousButton,
+      className: h.previousButton,
       look: r.Button.Looks.OUTLINED,
       size: r.Button.Sizes.MEDIUM,
       color: r.Button.Colors.PRIMARY,
       onClick: () => n(f.ClanSetupModalPages.SETUP),
       children: E.default.Messages.PAGINATION_PREVIOUS
     }), (0, a.jsxs)("div", {
-      className: _.finishButton,
+      className: h.finishButton,
       children: [G && (0, a.jsx)(r.Text, {
         color: "status-danger",
         variant: "text-sm/normal",
@@ -150,8 +150,8 @@ t.default = e => {
         size: r.Button.Sizes.MEDIUM,
         color: r.Button.Colors.BRAND,
         disabled: !y,
-        submitting: T,
-        onClick: x,
+        submitting: p,
+        onClick: D,
         children: E.default.Messages.FINISH
       })]
     })]

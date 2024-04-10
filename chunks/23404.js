@@ -11,19 +11,19 @@ var a = n("735250"),
   c = n("617136"),
   f = n("272008"),
   E = n("113434"),
-  _ = n("569984"),
-  h = n("497505"),
+  h = n("569984"),
+  _ = n("497505"),
   C = n("918701"),
   m = n("874137"),
   S = n("611855"),
   I = n("670638"),
-  T = n("667105"),
-  p = n("860151"),
+  p = n("667105"),
+  T = n("860151"),
   g = n("981631"),
   N = n("689938"),
   A = n("374145");
 
-function R(e) {
+function v(e) {
   var t;
   let {
     quest: n
@@ -57,33 +57,33 @@ function R(e) {
 t.default = function(e) {
   var t, n, l;
   let {
-    quest: O
-  } = e, v = (0, r.useStateFromStores)([_.default], () => _.default.isEnrolling(O.id), [O]), L = s.useCallback(e => {
+    quest: R
+  } = e, O = (0, r.useStateFromStores)([h.default], () => h.default.isEnrolling(R.id), [R]), L = s.useCallback(e => {
     e.stopPropagation()
   }, []), P = s.useCallback(() => {
-    (0, f.enrollInQuest)(O.id, {
-      questContent: h.QuestContent.ACTIVITY_PANEL,
+    (0, f.enrollInQuest)(R.id, {
+      questContent: _.QuestContent.ACTIVITY_PANEL,
       questContentCTA: c.QuestContentCTA.ACCEPT_QUEST
     })
-  }, [O]), M = s.useCallback(() => {
-    null != O && ((0, c.trackQuestContentClicked)({
-      questId: O.id,
-      questContent: h.QuestContent.ACTIVITY_PANEL,
+  }, [R]), M = s.useCallback(() => {
+    null != R && ((0, c.trackQuestContentClicked)({
+      questId: R.id,
+      questContent: _.QuestContent.ACTIVITY_PANEL,
       questContentCTA: c.QuestContentCTA.TRACK_PROGRESS
     }), u.default.open(g.UserSettingsSections.INVENTORY))
-  }, [O]), y = s.useCallback(() => {
+  }, [R]), y = s.useCallback(() => {
     (0, c.trackQuestContentClicked)({
-      questId: O.id,
-      questContent: h.QuestContent.ACTIVITY_PANEL,
+      questId: R.id,
+      questContent: _.QuestContent.ACTIVITY_PANEL,
       questContentCTA: c.QuestContentCTA.LEARN_MORE
     }), u.default.open(g.UserSettingsSections.INVENTORY)
-  }, [O]), D = (0, T.useHandleClaimQuestsReward)({
-    quest: O,
-    location: h.QuestContent.ACTIVITY_PANEL
-  }), x = (0, E.useIsQuestExpired)(O), b = (null === (t = O.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, U = (null === (n = O.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, j = (null === (l = O.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
-  return (null == O ? void 0 : O.userStatus) == null || (0, C.isDismissed)(O.userStatus, h.QuestContent.ACTIVITY_PANEL) || x || j ? null : (0, a.jsx)(m.QuestContentImpressionTracker, {
-    questId: O.id,
-    questContent: h.QuestContent.ACTIVITY_PANEL,
+  }, [R]), x = (0, p.useHandleClaimQuestsReward)({
+    quest: R,
+    location: _.QuestContent.ACTIVITY_PANEL
+  }), D = (0, E.useIsQuestExpired)(R), b = (null === (t = R.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, U = (null === (n = R.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, j = (null === (l = R.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
+  return (null == R ? void 0 : R.userStatus) == null || (0, C.isDismissed)(R.userStatus, _.QuestContent.ACTIVITY_PANEL) || D || j ? null : (0, a.jsx)(m.QuestContentImpressionTracker, {
+    questId: R.id,
+    questContent: _.QuestContent.ACTIVITY_PANEL,
     children: e => {
       var t;
       return (0, a.jsxs)("div", {
@@ -97,14 +97,14 @@ t.default = function(e) {
         onKeyPress: L,
         children: [(0, a.jsxs)("div", {
           className: A.utils,
-          children: [b ? (0, a.jsx)(R, {
-            quest: O
+          children: [b ? (0, a.jsx)(v, {
+            quest: R
           }) : (0, a.jsx)(S.default, {
             textOpacity: .5
           }), (0, a.jsx)(I.QuestsEntryContextMenuPopout, {
-            quest: O,
-            questContent: h.QuestContent.ACTIVITY_PANEL,
-            shouldShowDisclosure: (null === (t = O.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null,
+            quest: R,
+            questContent: _.QuestContent.ACTIVITY_PANEL,
+            shouldShowDisclosure: (null === (t = R.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null,
             showShareLink: !0,
             children: e => (0, a.jsx)(o.Clickable, {
               ...e,
@@ -116,21 +116,21 @@ t.default = function(e) {
             })
           })]
         }), !b && (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(R, {
-            quest: O
+          children: [(0, a.jsx)(v, {
+            quest: R
           }), (0, a.jsx)(o.Text, {
             className: A.instructions,
             variant: "text-sm/normal",
             color: "text-normal",
             children: N.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD.format({
-              gameTitle: O.config.messages.gameTitle,
-              questReward: O.config.messages.rewardNameWithArticle,
-              streamingDurationRequirement: O.config.streamDurationRequirementMinutes
+              gameTitle: R.config.messages.gameTitle,
+              questReward: R.config.messages.rewardNameWithArticle,
+              streamingDurationRequirement: R.config.streamDurationRequirementMinutes
             })
           })]
-        }), b && !U && (0, a.jsx)(p.default, {
+        }), b && !U && (0, a.jsx)(T.default, {
           className: A.rewardTileWithInstructions,
-          quest: O
+          quest: R
         }), (0, a.jsxs)("div", {
           className: A.ctas,
           children: [!b && (0, a.jsxs)(a.Fragment, {
@@ -147,7 +147,7 @@ t.default = function(e) {
               fullWidth: !0,
               onClick: P,
               size: o.Button.Sizes.SMALL,
-              submitting: v,
+              submitting: O,
               children: N.default.Messages.QUESTS_ACCEPT_QUEST
             })]
           }), b && !U && (0, a.jsx)(o.Button, {
@@ -161,7 +161,7 @@ t.default = function(e) {
             className: A.cta,
             color: o.Button.Colors.BRAND,
             fullWidth: !0,
-            onClick: D,
+            onClick: x,
             size: o.Button.Sizes.SMALL,
             children: N.default.Messages.QUESTS_CLAIM_REWARD
           })]

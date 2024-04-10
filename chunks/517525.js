@@ -34,10 +34,10 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
     opacity: 1,
     transform: "translate3d(0%, 0, 0)"
   },
-  O = {
+  j = {
     opacity: 0
   },
-  j = {
+  O = {
     opacity: 1
   },
   P = {
@@ -62,18 +62,18 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
         setDidTrackUpsellViewed: L,
         className: y
       } = e,
-      O = (0, I.getMaxQuality)(r),
+      j = (0, I.getMaxQuality)(r),
       {
-        analyticsLocations: j
+        analyticsLocations: O
       } = (0, m.default)(),
       P = null != (0, A.default)(r);
     try {
-      t = (0, I.isPremiumFPS)(O)
+      t = (0, I.isPremiumFPS)(j)
     } catch (e) {
       t = !1
     }
     try {
-      s = (0, I.isPremiumResolution)(O)
+      s = (0, I.isPremiumResolution)(j)
     } catch (e) {
       s = !1
     }
@@ -99,9 +99,9 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
           type: x.PremiumUpsellTypes.STREAM_QUALITY_INDICATOR,
           has_premium_stream_fps: t,
           has_premium_stream_resolution: s,
-          location_stack: j
+          location_stack: O
         }), L(!0))
-      }, [t, s, D, R, L, j]), null == O) return null;
+      }, [t, s, D, R, L, O]), null == j) return null;
     let k = (0, a.jsx)(f.Tooltip, {
       text: P ? N.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : D ? N.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : N.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
       position: "bottom",
@@ -116,9 +116,9 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
           className: M.premiumStreamIcon
         }) : null, (0, a.jsx)("span", {
           className: M.qualityResolution,
-          children: (0, I.getResolutionText)(O.maxResolution)
+          children: (0, I.getResolutionText)(j.maxResolution)
         }), (0, a.jsx)("span", {
-          children: (0, I.getFPSText)(O.maxFrameRate)
+          children: (0, I.getFPSText)(j.maxFrameRate)
         })]
       })
     });
@@ -146,10 +146,10 @@ t.default = e => {
   }, [t]);
   let C = (0, r.useTransition)(E, {
       enter: {
-        from: m.enabled ? O : L,
-        to: m.enabled ? j : y
+        from: m.enabled ? j : L,
+        to: m.enabled ? O : y
       },
-      leave: m.enabled ? O : L,
+      leave: m.enabled ? j : L,
       config: b
     }),
     _ = (0, r.useSpring)({

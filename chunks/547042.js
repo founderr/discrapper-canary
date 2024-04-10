@@ -16,15 +16,15 @@ var a, s, l = n("735250"),
   c = n("403404"),
   f = n("100527"),
   E = n("906732"),
-  _ = n("592125"),
-  h = n("810090"),
+  h = n("592125"),
+  _ = n("810090"),
   C = n("626135"),
   m = n("981631"),
   S = n("921944"),
   I = n("689938"),
-  T = n("198940");
+  p = n("198940");
 (a = s || (s = {})).BOOSTING = "BOOSTING", a.NITRO = "NITRO", a.BASH_OUT = "BASH_OUT", a.GAME_NIGHT = "GAME_NIGHT";
-let p = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4",
+let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4",
   g = "https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png",
   N = e => {
     let {
@@ -35,9 +35,9 @@ let p = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
       analyticsLocation: s,
       analyticsType: N,
       ctaText: A,
-      dismissText: R,
-      description: O,
-      learnMore: v,
+      dismissText: v,
+      description: R,
+      learnMore: O,
       title: L,
       videoPosterUrl: P,
       videoUrl: M,
@@ -46,11 +46,11 @@ let p = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
       switch (e) {
         case "BOOSTING":
           return {
-            analyticsLocation: f.default.ACTIVITY_COACH_MARK_BOOSTING, analyticsType: "embedded_activity_discovery_tutorial", description: I.default.Messages.EMBEDDED_ACTIVITY_NOTICE_WTP_DESCRIPTION, learnMore: !0, title: I.default.Messages.EMBEDDED_ACTIVITY_NOTICE_TITLE, videoPosterUrl: g, videoUrl: p, ctaText: I.default.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: I.default.Messages.DISMISS
+            analyticsLocation: f.default.ACTIVITY_COACH_MARK_BOOSTING, analyticsType: "embedded_activity_discovery_tutorial", description: I.default.Messages.EMBEDDED_ACTIVITY_NOTICE_WTP_DESCRIPTION, learnMore: !0, title: I.default.Messages.EMBEDDED_ACTIVITY_NOTICE_TITLE, videoPosterUrl: g, videoUrl: T, ctaText: I.default.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: I.default.Messages.DISMISS
           };
         case "NITRO":
           return {
-            analyticsLocation: f.default.ACTIVITY_COACH_MARK_NITRO, analyticsType: "embedded_activity_nitro_discovery_tutorial", description: I.default.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_DESCRIPTION, learnMore: !0, title: I.default.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_TITLE, videoPosterUrl: g, videoUrl: p, ctaText: I.default.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: I.default.Messages.DISMISS
+            analyticsLocation: f.default.ACTIVITY_COACH_MARK_NITRO, analyticsType: "embedded_activity_nitro_discovery_tutorial", description: I.default.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_DESCRIPTION, learnMore: !0, title: I.default.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_TITLE, videoPosterUrl: g, videoUrl: T, ctaText: I.default.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: I.default.Messages.DISMISS
           };
         case "BASH_OUT":
           return {
@@ -66,25 +66,25 @@ let p = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
           }
       }
     }(a), {
-      analyticsLocations: D
+      analyticsLocations: x
     } = (0, E.default)(s);
     i.useEffect(() => {
       C.default.track(m.AnalyticEvents.TOOLTIP_VIEWED, {
         type: N
       })
     }, [N]);
-    let x = (0, u.useAppContext)() === m.AppContext.POPOUT,
-      b = (0, r.useStateFromStores)([_.default], () => _.default.getChannel(t), [t]);
+    let D = (0, u.useAppContext)() === m.AppContext.POPOUT,
+      b = (0, r.useStateFromStores)([h.default], () => h.default.getChannel(t), [t]);
     return (0, l.jsx)(E.AnalyticsLocationProvider, {
-      value: D,
+      value: x,
       children: (0, l.jsx)("div", {
-        className: T.wrapper,
+        className: p.wrapper,
         children: (0, l.jsx)("div", {
-          className: T.container,
+          className: p.container,
           children: (0, l.jsxs)("div", {
-            className: T.content,
-            children: [(0, l.jsx)(h.default, {
-              className: T.video,
+            className: p.content,
+            children: [(0, l.jsx)(_.default, {
+              className: p.video,
               src: M,
               poster: P,
               width: 224,
@@ -93,32 +93,32 @@ let p = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
               muted: !0,
               autoPlay: !0
             }), (0, l.jsx)("div", {
-              className: T.header,
+              className: p.header,
               children: (0, l.jsx)(o.Heading, {
-                className: T.__invalid_headerText,
+                className: p.__invalid_headerText,
                 variant: "text-sm/bold",
                 color: "always-white",
                 children: L
               })
             }), (0, l.jsxs)(o.Text, {
-              className: T.subheaderText,
+              className: p.subheaderText,
               variant: "text-xs/normal",
               color: "always-white",
-              children: [O, v ? (0, l.jsxs)(l.Fragment, {
+              children: [R, O ? (0, l.jsxs)(l.Fragment, {
                 children: [" ", (0, l.jsx)(o.Anchor, {
-                  className: T.learnMoreLink,
+                  className: p.learnMoreLink,
                   href: "https://support.discord.com/hc/articles/4422142836759",
                   children: I.default.Messages.LEARN_MORE
                 })]
               }) : null]
             }), (0, l.jsxs)("div", {
-              className: T.ctaActionWrapper,
+              className: p.ctaActionWrapper,
               children: [(0, l.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,
                 onClick: () => {
                   n(S.ContentDismissActionType.UNKNOWN)
                 },
-                children: R
+                children: v
               }), (0, l.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,
                 look: o.Button.Looks.INVERTED,
@@ -132,8 +132,8 @@ let p = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                       object: m.AnalyticsObjects.ACTIVITIES_COACH_MARK,
                       objectType: m.AnalyticsObjectTypes.ACTIVITY
                     },
-                    openInPopout: x,
-                    analyticsLocations: D
+                    openInPopout: D,
+                    analyticsLocations: x
                   }), (0, d.fetchShelf)({
                     guildId: b.guild_id
                   }))

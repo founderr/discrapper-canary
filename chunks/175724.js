@@ -24,17 +24,17 @@ var i = n("374470"),
   N = n("306680"),
   O = n("944486"),
   R = n("914010"),
-  L = n("574254"),
-  p = n("451478"),
+  p = n("574254"),
+  L = n("451478"),
   D = n("585483"),
   h = n("981631");
 let g = {
   binds: ["esc", "shift+pagedown"],
   comboKeysBindGlobal: !0,
   action(e) {
-    if (p.default.isElementFullScreen()) return !1;
+    if (L.default.isElementFullScreen()) return !1;
     if (D.ComponentDispatch.hasSubscribers(h.ComponentActions.CALL_DECLINE)) return D.ComponentDispatch.dispatch(h.ComponentActions.CALL_DECLINE), !1;
-    if (L.default.close()) return !1;
+    if (p.default.close()) return !1;
     if (D.ComponentDispatch.hasSubscribers(h.ComponentActions.MEDIA_MODAL_CLOSE)) return D.ComponentDispatch.dispatch(h.ComponentActions.MEDIA_MODAL_CLOSE), !1;
     if ((0, i.isElement)(e.target)) {
       let t = (0, a.getWindowDispatchForElement)(e.target);

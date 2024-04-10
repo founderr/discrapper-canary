@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   HeaderGuildBreadcrumb: function() {
-    return O
+    return j
   },
   renderTitle: function() {
     return M
@@ -149,10 +149,10 @@ function M(e) {
     case v.ChannelTypes.ANNOUNCEMENT_THREAD:
     case v.ChannelTypes.PUBLIC_THREAD:
     case v.ChannelTypes.PRIVATE_THREAD:
-      let O = null;
+      let j = null;
       if (!f && null != s) {
         let e = (0, d.default)(s, r);
-        O = (0, a.jsxs)(l.Fragment, {
+        j = (0, a.jsxs)(l.Fragment, {
           children: [y(e, x.default.Messages.TEXT_CHANNEL), (0, a.jsx)(I.default.Title, {
             level: R,
             onContextMenu: g,
@@ -162,15 +162,15 @@ function M(e) {
           }), (0, a.jsx)(I.default.Caret, {})]
         })
       }
-      let j = (null == s ? void 0 : s.type) != null && v.ChannelTypesSets.GUILD_THREADS_ONLY.has(s.type);
+      let O = (null == s ? void 0 : s.type) != null && v.ChannelTypesSets.GUILD_THREADS_ONLY.has(s.type);
       return (0, a.jsxs)(l.Fragment, {
-        children: [O, y(j ? null : T, x.default.Messages.THREAD), (0, a.jsx)(I.default.Title, {
+        children: [j, y(O ? null : T, x.default.Messages.THREAD), (0, a.jsx)(I.default.Title, {
           level: R,
           onContextMenu: p,
           onClick: h,
           className: i()({
             [N.cursorPointer]: f,
-            [N.forumPostTitle]: j
+            [N.forumPostTitle]: O
           }),
           children: L
         })]
@@ -248,7 +248,7 @@ function y(e, t) {
   })
 }
 
-function O(e) {
+function j(e) {
   let {
     guild: t,
     channel: n,

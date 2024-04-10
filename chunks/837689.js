@@ -12,8 +12,8 @@ var s = n("481060"),
   c = n("913976"),
   f = n("328882"),
   E = n("104494"),
-  _ = n("29920"),
-  h = n("786397"),
+  h = n("29920"),
+  _ = n("786397"),
   C = n("248042"),
   m = n("318199"),
   S = n("474936");
@@ -26,8 +26,8 @@ function I(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let T = "PremiumServerDriveAnnouncementModal";
-class p extends i.default {
+let p = "PremiumServerDriveAnnouncementModal";
+class T extends i.default {
   _initialize() {
     l.default.subscribe("POST_CONNECTION_OPEN", this.mayShowAnnouncementModal), l.default.subscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
   }
@@ -40,7 +40,7 @@ class p extends i.default {
         content: e,
         isPreview: t
       });
-      return null != l && ((0, s.closeModal)(T), (0, s.openModalLazy)(async () => {
+      return null != l && ((0, s.closeModal)(p), (0, s.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.resolve().then(n.bind(n, "318199"));
@@ -49,7 +49,7 @@ class p extends i.default {
           properties: l
         })
       }, {
-        modalKey: T
+        modalKey: p
       }), !0)
     }), I(this, "handlePreview", e => {
       let {
@@ -63,7 +63,7 @@ class p extends i.default {
       if (null != t) return {
         userDiscountOffer: t
       };
-      let n = [(0, S.PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID), (0, S.PREMIUM_TIER_2_REACTIVATION_TRIAL_ID), (0, S.PREMIUM_TIER_2_HFU_ONE_WEEK_TRIAL_ID), (0, S.PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID), (0, S.PREMIUM_TIER_2_HFU_ONE_MONTH_TRIAL_ID), (0, S.PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID), (0, S.PREMIUM_TIER_2_AUTH3_TRIAL_ID), (0, S.PREMIUM_TIER_2_NEW_USER_CPV_TRIAL_ID)].map(e => o.default.getUserTrialOffer(e)).filter(e => null != e && !(0, h.hasUserTrialOfferExpired)(e)).shift();
+      let n = [(0, S.PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID), (0, S.PREMIUM_TIER_2_REACTIVATION_TRIAL_ID), (0, S.PREMIUM_TIER_2_HFU_ONE_WEEK_TRIAL_ID), (0, S.PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID), (0, S.PREMIUM_TIER_2_HFU_ONE_MONTH_TRIAL_ID), (0, S.PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID), (0, S.PREMIUM_TIER_2_AUTH3_TRIAL_ID), (0, S.PREMIUM_TIER_2_NEW_USER_CPV_TRIAL_ID)].map(e => o.default.getUserTrialOffer(e)).filter(e => null != e && !(0, _.hasUserTrialOfferExpired)(e)).shift();
       return null != n ? {
         userTrialOffer: n
       } : {}
@@ -72,7 +72,7 @@ class p extends i.default {
         if (!(0, s.hasAnyModalOpen)() && c.default.getCurrentConfig({
             location: "OfferAnnouncementManager"
           }).enabled) {
-          let e = !(0, u.isPremium)(r.default.getCurrentUser()) && (!o.default.hasFetchedOffer() || o.default.shouldFetchOffer()) ? await (0, _.fetchPremiumMarketingContent)() : await (0, _.fetchPremiumMarketingContentWithUserOffer)(this.getOfferFromStore());
+          let e = !(0, u.isPremium)(r.default.getCurrentUser()) && (!o.default.hasFetchedOffer() || o.default.shouldFetchOffer()) ? await (0, h.fetchPremiumMarketingContent)() : await (0, h.fetchPremiumMarketingContentWithUserOffer)(this.getOfferFromStore());
           if (null == e) {
             f.default.getCurrentConfig({
               location: "OfferAnnouncementManager"
@@ -97,4 +97,4 @@ class p extends i.default {
     })
   }
 }
-t.default = new p
+t.default = new T

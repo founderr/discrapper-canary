@@ -9,8 +9,8 @@ var s = n("481060"),
   o = n("998502"),
   u = n("703912"),
   d = n("981631");
-t.default = (0, u.default)((e, t, n, r, o, u, d, c, f, E, _, h, C) => {
-  let m = "OAuth2Authorize_".concat(e, "_").concat(E, "_").concat(_);
+t.default = (0, u.default)((e, t, n, r, o, u, d, c, f, E, h, _, C) => {
+  let m = "OAuth2Authorize_".concat(e, "_").concat(E, "_").concat(h);
   return new Promise(S => {
     let I = e => {
       let {
@@ -31,15 +31,15 @@ t.default = (0, u.default)((e, t, n, r, o, u, d, c, f, E, _, h, C) => {
       state: f,
       permissions: r,
       guildId: E,
-      channelId: _,
-      prompt: h,
+      channelId: h,
+      prompt: _,
       disableGuildSelect: "boolean" == typeof C ? C : "true" === C
     }), {
       modalKey: m,
       onCloseRequest: () => {
         (0, s.closeModal)(m), S(void 0)
       }
-    }, (0, l.default)(t.application, _) ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT)
+    }, (0, l.default)(t.application, h) ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT)
   })
 }, function(e, t) {
   if (r.isPlatformEmbedded) {

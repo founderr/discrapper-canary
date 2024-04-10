@@ -40,7 +40,7 @@ function E() {
   }
 }
 
-function _(e, t) {
+function h(e, t) {
   let n = null != d[e] ? d[e] : E();
   if (d[e] = {
       ...n,
@@ -48,7 +48,7 @@ function _(e, t) {
     }, null != f[e])
     for (let n in t) delete f[e][n]
 }
-class h extends(a = s.default.PersistedStore) {
+class _ extends(a = s.default.PersistedStore) {
   initialize(e) {
     if (null != e)
       for (let t in e.progressByGuild) d[t] = function(e) {
@@ -94,13 +94,13 @@ class h extends(a = s.default.PersistedStore) {
     }
   }
 }
-u(h, "displayName", "ClanSetupStore"), u(h, "persistKey", "ClanSetupStore"), t.default = new h(l.default, {
+u(_, "displayName", "ClanSetupStore"), u(_, "persistKey", "ClanSetupStore"), t.default = new _(l.default, {
   CLAN_SETUP_UPDATE: function(e) {
     let {
       guildId: t,
       updates: n
     } = e;
-    _(t, n)
+    h(t, n)
   },
   CLAN_SETUP_SUBMIT: function(e) {
     let {
@@ -138,7 +138,7 @@ u(h, "displayName", "ClanSetupStore"), u(h, "persistKey", "ClanSetupStore"), t.d
     s && (t = null == n ? i.NO_MEMBER_VERIFICATION_FORM : {
       ...(null != d[a] ? d[a] : E()).verificationForm,
       ...n
-    }, _(a, {
+    }, h(a, {
       verificationForm: t
     }))
   }

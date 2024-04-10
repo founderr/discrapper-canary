@@ -35,8 +35,8 @@ var a = n("735250"),
   R = n("112560"),
   L = n("442168"),
   y = n("822296"),
-  O = n("916771"),
-  j = n("792517"),
+  j = n("916771"),
+  O = n("792517"),
   P = n("979425"),
   D = n("651183"),
   b = n("623825"),
@@ -98,12 +98,12 @@ function V(e) {
     stream: q,
     width: D
   });
-  if ((null == q ? void 0 : q.state) === U.ApplicationStreamStates.FAILED) return (0, a.jsx)(O.default, {
+  if ((null == q ? void 0 : q.state) === U.ApplicationStreamStates.FAILED) return (0, a.jsx)(j.default, {
     selected: n,
     stream: q,
     width: D
   });
-  else if (t.type === F.ParticipantTypes.HIDDEN_STREAM) return (0, a.jsx)(j.default, {
+  else if (t.type === F.ParticipantTypes.HIDDEN_STREAM) return (0, a.jsx)(O.default, {
     selected: n,
     participant: t,
     width: D

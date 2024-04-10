@@ -32,8 +32,8 @@ var a = n("735250"),
   R = n("594174"),
   L = n("130208"),
   y = n("55935"),
-  O = n("70956"),
-  j = n("709054"),
+  j = n("70956"),
+  O = n("709054"),
   P = n("534091"),
   D = n("900164"),
   b = n("554838"),
@@ -161,7 +161,7 @@ function $(e) {
           collapsedReason: t
         }, e.key)
       }
-      if (null != ei && ei > e.content.timestamp.getTime() * O.default.Millis.SECOND) return;
+      if (null != ei && ei > e.content.timestamp.getTime() * j.default.Millis.SECOND) return;
       let s = x.default.can(Z.Permissions.CREATE_INSTANT_INVITE, L);
       if ((0, D.default)(e.content, s)) return;
       e.type === Z.ChannelStreamTypes.MESSAGE && null == eT && (eT = e);
@@ -217,7 +217,7 @@ function $(e) {
     })), $ > 0 && ee && ed()) {
     let e, t;
     let n = N.default.getOldestUnreadTimestamp(L.id),
-      s = 0 !== n ? n : j.default.extractTimestamp(L.id),
+      s = 0 !== n ? n : O.default.extractTimestamp(L.id),
       i = (0, y.isSameDay)(new Date, new Date(s));
     if (N.default.isEstimated(L.id) ? (e = i ? X.default.Messages.NEW_MESSAGES_ESTIMATED : X.default.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = X.default.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = i ? X.default.Messages.NEW_MESSAGES : X.default.Messages.NEW_MESSAGES_WITH_DATE, t = X.default.Messages.NEW_MESSAGES_SUMMARIES), eh && (0, o.channelEligibleForSummaries)(L) && eC.includes(z.ChatOverlays.SUMMARIES)) {
       let n = N.default.ackMessageId(L.id),

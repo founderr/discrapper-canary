@@ -14,7 +14,7 @@ function o(e) {
   let {
     onError: t,
     onSuccess: n
-  } = null != e ? e : {}, [o, u] = a.useState(!1), [d, c] = a.useState(!1), [f, E] = a.useState(!1), [_, h] = a.useState(!1), [C, m] = a.useState(!1), [S, I] = a.useState(!1), [T, p] = a.useState(!1), [g, N] = a.useState(!1), A = o || d || f || _ || S || g, R = a.useCallback(async e => {
+  } = null != e ? e : {}, [o, u] = a.useState(!1), [d, c] = a.useState(!1), [f, E] = a.useState(!1), [h, _] = a.useState(!1), [C, m] = a.useState(!1), [S, I] = a.useState(!1), [p, T] = a.useState(!1), [g, N] = a.useState(!1), A = o || d || f || h || S || g, v = a.useCallback(async e => {
     if (!A) {
       u(!0);
       try {
@@ -26,7 +26,7 @@ function o(e) {
         u(!1)
       }
     }
-  }, [A, t, n]), O = a.useCallback(async e => {
+  }, [A, t, n]), R = a.useCallback(async e => {
     if (!A) {
       c(!0);
       try {
@@ -38,7 +38,7 @@ function o(e) {
         c(!1)
       }
     }
-  }, [A, t, n]), v = a.useCallback(async e => {
+  }, [A, t, n]), O = a.useCallback(async e => {
     if (!A) {
       E(!0);
       try {
@@ -52,14 +52,14 @@ function o(e) {
     }
   }, [A, t, n]), L = a.useCallback(async e => {
     if (!A) {
-      h(!0);
+      _(!0);
       try {
         await (0, l.removeLinkForUserId)(e.id), null == n || n()
       } catch (n) {
         let e = new s.APIError(n);
         null == t || t(e)
       } finally {
-        h(!1)
+        _(!1)
       }
     }
   }, [A, t, n]), P = a.useCallback(async () => {
@@ -75,18 +75,18 @@ function o(e) {
       }
     }
   }, [C, t, n]), M = a.useCallback(async e => {
-    if (!T) {
-      p(!0);
+    if (!p) {
+      T(!0);
       try {
         await l.default.fetchTeenActivity(e), null == n || n()
       } catch (n) {
         let e = new s.APIError(n);
         null == t || t(e)
       } finally {
-        p(!1)
+        T(!1)
       }
     }
-  }, [T, t, n]), y = a.useCallback(async (e, a) => {
+  }, [p, t, n]), y = a.useCallback(async (e, a) => {
     if (!S) {
       I(!0);
       try {
@@ -100,9 +100,9 @@ function o(e) {
     }
   }, [S, t, n]);
   return {
-    acceptLinkRequest: R,
-    declineLinkRequest: O,
-    disconnectLinkRequest: v,
+    acceptLinkRequest: v,
+    declineLinkRequest: R,
+    disconnectLinkRequest: O,
     cancelLinkRequest: L,
     selectTeenUser: M,
     getLinkCode: P,
@@ -127,9 +127,9 @@ function o(e) {
     isAcceptLoading: o,
     isDeclineLoading: d,
     isDisconnectLoading: f,
-    isCancelLoading: _,
+    isCancelLoading: h,
     isGetLinkCodeLoading: C,
-    isSelectTeenUserLoading: T,
+    isSelectTeenUserLoading: p,
     isRequestingLink: S,
     isMoreLoading: g
   }

@@ -32,8 +32,8 @@ var a = n("735250"),
   R = n("838940"),
   L = n("882101"),
   y = n("11705"),
-  O = n("81273"),
-  j = n("293810"),
+  j = n("81273"),
+  O = n("293810"),
   P = n("981631"),
   D = n("689938"),
   b = n("817620");
@@ -185,13 +185,13 @@ t.default = e => {
     canOpenModal: A,
     cannotOpenReason: v,
     isCheckingTrialEligibility: x
-  } = (0, O.default)(p, s, h, m), M = (0, r.useStateFromStores)([c.default], () => c.default.isSyncing), {
+  } = (0, j.default)(p, s, h, m), M = (0, r.useStateFromStores)([c.default], () => c.default.isSyncing), {
     activeSubscription: R,
     activeSubscriptionListing: U
   } = (0, T.default)(h), F = (null == U ? void 0 : U.id) === n, H = (null == R ? void 0 : R.status) === P.SubscriptionStatusTypes.CANCELED, [B, G] = l.useState(!1), [V, W] = l.useState(!1), Y = l.useCallback(e => {
     let t = !1;
     null != e && (t = e.scrollHeight - e.clientHeight > 1), W(t)
-  }, []), [z] = _.useName(n), [K] = _.useDescription(n), [Z] = _.useTrialInterval(n), [q] = _.useTrialLimit(n), X = (0, I.default)(s, n), Q = null != Z && null == R && X, J = (0, u.default)(j.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY), [$, ee] = l.useState(!1), et = $ || !J, en = (0, r.useStateFromStores)([d.default], () => d.default.isViewingServerShop(s)), ea = (null == p ? void 0 : p.published) === !0, el = (null == p ? void 0 : p.soft_deleted) === !0, es = D.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
+  }, []), [z] = _.useName(n), [K] = _.useDescription(n), [Z] = _.useTrialInterval(n), [q] = _.useTrialLimit(n), X = (0, I.default)(s, n), Q = null != Z && null == R && X, J = (0, u.default)(O.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY), [$, ee] = l.useState(!1), et = $ || !J, en = (0, r.useStateFromStores)([d.default], () => d.default.isViewingServerShop(s)), ea = (null == p ? void 0 : p.published) === !0, el = (null == p ? void 0 : p.soft_deleted) === !0, es = D.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
   return (ea || en) && !el ? (0, a.jsxs)("article", {
     className: b.container,
     "aria-label": z,

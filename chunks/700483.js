@@ -28,8 +28,8 @@ var a = n("735250"),
   R = n("871499"),
   L = n("386000"),
   y = n("25827"),
-  O = n("314897"),
-  j = n("131951"),
+  j = n("314897"),
+  O = n("131951"),
   P = n("496675"),
   D = n("944486"),
   b = n("594174"),
@@ -137,7 +137,7 @@ function ef(e) {
     canManageGuildEvent: s
   } = (0, _.useManageResourcePermissions)(t), u = (0, r.useStateFromStores)([X.default], () => X.default.getStageInstanceByChannel(t.id), [t.id]), c = (0, r.useStateFromStores)([C.default], () => C.default.getGuildScheduledEvent(null == u ? void 0 : u.guild_scheduled_event_id)), f = (0, r.useStateFromStores)([D.default], () => D.default.getVoiceChannelId() === t.id, [t.id]), {
     suppress: h
-  } = (0, v.default)(t), m = O.default.getId(), [p] = (0, el.default)(t), E = q.default.isModerator(m, t.id), g = (0, K.useCanModerateRequestToSpeak)(t.id), S = s(c);
+  } = (0, v.default)(t), m = j.default.getId(), [p] = (0, el.default)(t), E = q.default.isModerator(m, t.id), g = (0, K.useCanModerateRequestToSpeak)(t.id), S = s(c);
   return f ? (E || S) && null != u ? (0, a.jsx)(o.Popout, {
     renderPopout: e => {
       let {
@@ -306,8 +306,8 @@ let ep = l.memo(function(e) {
   } = (0, T.default)(), S = (0, A.default)(t), {
     limit: _,
     reachedLimit: R
-  } = (0, I.default)(t), O = (0, r.useStateFromStores)([b.default], () => b.default.getCurrentUser()), P = (0, r.useStateFromStores)([j.default], () => (0, E.default)(j.default)), U = (0, r.useStateFromStores)([D.default], () => D.default.getVoiceChannelId() === t.id, [t.id]), F = (0, r.useStateFromStores)([c.default], () => c.default.getStreamParticipants(t.id)[0], [t.id]), w = (0, Q.useStageHasMedia)(t.id), k = _ > 0, H = R && !w || null != F && F.user.id !== (null == O ? void 0 : O.id);
-  if (null == O) return null;
+  } = (0, I.default)(t), j = (0, r.useStateFromStores)([b.default], () => b.default.getCurrentUser()), P = (0, r.useStateFromStores)([O.default], () => (0, E.default)(O.default)), U = (0, r.useStateFromStores)([D.default], () => D.default.getVoiceChannelId() === t.id, [t.id]), F = (0, r.useStateFromStores)([c.default], () => c.default.getStreamParticipants(t.id)[0], [t.id]), w = (0, Q.useStageHasMedia)(t.id), k = _ > 0, H = R && !w || null != F && F.user.id !== (null == j ? void 0 : j.id);
+  if (null == j) return null;
   let B = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(o.Popout, {
       renderPopout: e => {
@@ -344,7 +344,7 @@ let ep = l.memo(function(e) {
       }
     }), (0, a.jsx)(x.GoLiveButton, {
       channel: t,
-      currentUser: O,
+      currentUser: j,
       exitFullScreen: () => null,
       canGoLive: P,
       hasPermission: S,

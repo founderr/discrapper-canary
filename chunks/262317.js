@@ -34,8 +34,8 @@ var a, l = n("735250"),
   R = n("979651"),
   L = n("242315"),
   y = n("805009"),
-  O = n("981631"),
-  j = n("927923"),
+  j = n("981631"),
+  O = n("927923"),
   P = n("70722"),
   D = n("689938"),
   b = n("957233");
@@ -177,7 +177,7 @@ class k extends(a = s.PureComponent) {
         channel: t,
         hidePreview: n
       } = this.props;
-      M.default.can(o.combine(O.Permissions.CONNECT, O.Permissions.VIEW_CHANNEL), t) && (f.default.selectVoiceChannel(t.id), null == n || n(e.id))
+      M.default.can(o.combine(j.Permissions.CONNECT, j.Permissions.VIEW_CHANNEL), t) && (f.default.selectVoiceChannel(t.id), null == n || n(e.id))
     }), U(this, "handleUserContextMenu", e => {
       let {
         channel: t,
@@ -264,9 +264,9 @@ class k extends(a = s.PureComponent) {
         isSelf: R,
         application: L
       } = this.props, {
-        userPopoutOpen: O,
+        userPopoutOpen: j,
         isHoveringHangStatus: P
-      } = this.state, U = j.GAME_CONSOLE_SESSIONS.has(null != n ? n : ""), F = {
+      } = this.state, U = O.GAME_CONSOLE_SESSIONS.has(null != n ? n : ""), F = {
         user: f,
         speaking: c,
         mute: i,
@@ -290,7 +290,7 @@ class k extends(a = s.PureComponent) {
           [b.userAvatar]: !0
         }),
         disabled: t && !U,
-        selected: O,
+        selected: j,
         onClick: U ? void 0 : this.handleClickUser,
         onDoubleClick: this.handleWatchStream,
         onContextMenu: this.handleUserContextMenu,
@@ -321,7 +321,7 @@ class k extends(a = s.PureComponent) {
       return (0, l.jsx)(u.Popout, {
         position: "right",
         renderPopout: M && P || !E ? this.renderHangStatusPopout : this.renderStreamPopout,
-        shouldShow: s && !O,
+        shouldShow: s && !j,
         onRequestClose: this.handleHidePreview,
         spacing: 0,
         children: () => (0, l.jsx)(y.default, {

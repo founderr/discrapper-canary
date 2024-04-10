@@ -12,33 +12,33 @@ var s = n("481060"),
   c = n("594174"),
   f = n("626135"),
   E = n("621853"),
-  _ = n("981631"),
-  h = n("616922");
+  h = n("981631"),
+  _ = n("616922");
 let C = null;
 async function m(e) {
   var t, l, i, m;
   let {
     userId: S,
     section: I,
-    guildId: T = _.ME,
-    channelId: p,
+    guildId: p = h.ME,
+    channelId: T,
     friendToken: g,
     autoFocusNote: N,
     analyticsLocation: A
-  } = e, R = c.default.getUser(S);
-  if (null == R) return;
-  let O = E.default.getUserProfile(S),
-    v = u.default.getPrimaryActivity(S),
+  } = e, v = c.default.getUser(S);
+  if (null == v) return;
+  let R = E.default.getUserProfile(S),
+    O = u.default.getPrimaryActivity(S),
     L = u.default.getStatus(S),
     P = u.default.isMobileOnline(S),
     {
       party: M,
       assets: y,
-      application_id: D
-    } = null != v ? v : {},
-    x = null != D ? o.default.getApplication(D) : null,
-    b = P ? _.AnalyticsUserStatusTypes.ONLINE_MOBILE : _.AnalyticsUserStatusTypes.ONLINE_DESKTOP,
-    U = L === _.StatusTypes.ONLINE ? b : L;
+      application_id: x
+    } = null != O ? O : {},
+    D = null != x ? o.default.getApplication(x) : null,
+    b = P ? h.AnalyticsUserStatusTypes.ONLINE_MOBILE : h.AnalyticsUserStatusTypes.ONLINE_DESKTOP,
+    U = L === h.StatusTypes.ONLINE ? b : L;
   C = await (0, s.openModalLazy)(async () => {
     let {
       default: e
@@ -46,30 +46,30 @@ async function m(e) {
     return t => (0, a.jsx)(e, {
       ...t,
       location: "handleOpenUserProfileModal",
-      user: R,
+      user: v,
       autoFocusNote: N,
-      guildId: T,
+      guildId: p,
       friendToken: g,
       initialSection: I,
-      channelId: p
+      channelId: T
     })
-  }), f.default.track(_.AnalyticEvents.OPEN_MODAL, {
+  }), f.default.track(h.AnalyticEvents.OPEN_MODAL, {
     type: "Profile Modal",
-    guild_id: T !== _.ME ? T : null,
-    channel_id: p,
+    guild_id: p !== h.ME ? p : null,
+    channel_id: T,
     other_user_id: S,
-    application_id: null !== (l = null == v ? void 0 : v.application_id) && void 0 !== l ? l : null,
-    application_name: null == v ? void 0 : v.name,
-    sku_id: null !== (i = null == x ? void 0 : x.primarySkuId) && void 0 !== i ? i : null,
+    application_id: null !== (l = null == O ? void 0 : O.application_id) && void 0 !== l ? l : null,
+    application_name: null == O ? void 0 : O.name,
+    sku_id: null !== (i = null == D ? void 0 : D.primarySkuId) && void 0 !== i ? i : null,
     is_friend: d.default.isFriend(S),
     has_images: !!(null !== (m = null == y ? void 0 : y.large_image) && void 0 !== m ? m : null == y ? void 0 : y.small_image),
     party_max: null == M ? void 0 : null === (t = M.size) || void 0 === t ? void 0 : t[1],
     party_id: null == M ? void 0 : M.id,
-    party_platform: (0, h.isSpotifyParty)(null == M ? void 0 : M.id) ? _.PlatformTypes.SPOTIFY : null,
-    game_platform: (0, r.default)(v),
+    party_platform: (0, _.isSpotifyParty)(null == M ? void 0 : M.id) ? h.PlatformTypes.SPOTIFY : null,
+    game_platform: (0, r.default)(O),
     profile_user_status: U,
-    profile_has_nitro_customization: (null == O ? void 0 : O.banner) != null,
-    profile_has_profile_effect: (null == O ? void 0 : O.profileEffectId) != null,
+    profile_has_nitro_customization: (null == R ? void 0 : R.banner) != null,
+    profile_has_profile_effect: (null == R ? void 0 : R.profileEffectId) != null,
     ...null == A ? null : (0, f.expandLocation)(A)
   })
 }

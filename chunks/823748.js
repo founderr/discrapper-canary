@@ -28,8 +28,8 @@ var a = n("735250"),
   R = n("677601"),
   L = n("541716"),
   y = n("236091"),
-  O = n("663993"),
-  j = n("252618"),
+  j = n("663993"),
+  O = n("252618"),
   P = n("201493"),
   D = n("605236"),
   b = n("174130"),
@@ -82,8 +82,8 @@ var a = n("735250"),
   eR = n("433355"),
   eL = n("592125"),
   ey = n("703558"),
-  eO = n("486472"),
-  ej = n("731290"),
+  ej = n("486472"),
+  eO = n("731290"),
   eP = n("430824"),
   eD = n("158776"),
   eb = n("768119"),
@@ -117,7 +117,7 @@ function e4(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let e3 = (0, O.makeLazy)({
+let e3 = (0, j.makeLazy)({
   createPromise: () => Promise.all([n.e("99387"), n.e("49131")]).then(n.bind(n, "434878")),
   webpackId: "434878",
   renderLoader: () => (0, a.jsx)("div", {
@@ -425,7 +425,7 @@ class e7 extends l.PureComponent {
       p = !e.isForumLikeChannel() && !u,
       E = null == t ? void 0 : t.name;
     return (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(j.AppPageTitle, {
+      children: [(0, a.jsx)(O.AppPageTitle, {
         location: E,
         subsection: null != n ? n : void 0
       }), (0, a.jsxs)("div", {
@@ -742,8 +742,8 @@ t.default = l.memo(function(e) {
     var e;
     return v.default.getSelfEmbeddedActivityForChannel(null !== (e = null == u ? void 0 : u.id) && void 0 !== e ? e : eq.EMPTY_STRING_SNOWFLAKE_ID)
   }), x = (0, f.useStateFromStores)([v.default], () => v.default.getActivityPanelMode()), R = null != T && !(0, N.default)(null == u ? void 0 : u.id) && x === eX.ActivityPanelModes.PANEL, L = (0, f.useStateFromStores)([ek.default], () => null != u && u.isVocalThread() && !d().isEmpty(ek.default.getVoiceStatesForChannel(u.id)), [u]), y = (null == u ? void 0 : u.isGuildVocal()) || R || _ || L, {
-    welcomeModalChannelId: O
-  } = (0, c.useLocation)(), j = (0, f.useStateFromStores)([er.default], () => null != u && er.default.isLurking(u.guild_id), [u]), P = (0, f.useStateFromStores)([eN.default], () => eN.default.hasSeen(null == u ? void 0 : u.guild_id, j), [u, j]), b = (0, f.useStateFromStores)([M.default, v.default], () => null != v.default.getConnectedActivityChannelId() && v.default.getActivityPanelMode() === eX.ActivityPanelModes.PANEL ? v.default.getFocusedLayout() === eX.FocusedActivityLayouts.NO_CHAT ? eq.ChannelLayouts.NO_CHAT : eq.ChannelLayouts.NORMAL : null != r ? M.default.getLayout(r) : eq.ChannelLayouts.NORMAL, [r]), U = (0, f.useStateFromStores)([M.default], () => null != u ? M.default.getSelectedParticipant(u.id) : null), F = (0, f.useStateFromStores)([ew.default], () => ew.default.getCurrentUser()), w = (0, es.default)(g), k = (0, eM.default)(O, null == g ? void 0 : g.id), {
+    welcomeModalChannelId: j
+  } = (0, c.useLocation)(), O = (0, f.useStateFromStores)([er.default], () => null != u && er.default.isLurking(u.guild_id), [u]), P = (0, f.useStateFromStores)([eN.default], () => eN.default.hasSeen(null == u ? void 0 : u.guild_id, O), [u, O]), b = (0, f.useStateFromStores)([M.default, v.default], () => null != v.default.getConnectedActivityChannelId() && v.default.getActivityPanelMode() === eX.ActivityPanelModes.PANEL ? v.default.getFocusedLayout() === eX.FocusedActivityLayouts.NO_CHAT ? eq.ChannelLayouts.NO_CHAT : eq.ChannelLayouts.NORMAL : null != r ? M.default.getLayout(r) : eq.ChannelLayouts.NORMAL, [r]), U = (0, f.useStateFromStores)([M.default], () => null != u ? M.default.getSelectedParticipant(u.id) : null), F = (0, f.useStateFromStores)([ew.default], () => ew.default.getCurrentUser()), w = (0, es.default)(g), k = (0, eM.default)(j, null == g ? void 0 : g.id), {
     section: H,
     channelSidebarState: B
   } = (0, f.useStateFromStoresObject)([eR.default], () => ({
@@ -784,7 +784,7 @@ t.default = l.memo(function(e) {
     voiceChannel: p,
     layout: b,
     needSubscriptionToAccess: S,
-    isLurking: j,
+    isLurking: O,
     hasModalOpen: ee,
     section: H,
     channelSidebarState: B,
@@ -792,9 +792,9 @@ t.default = l.memo(function(e) {
     guild: g,
     searchId: (0, f.useStateFromStores)([eb.default], () => eb.default.getCurrentSearchId()),
     showCall: !S && y,
-    nsfwAgree: (0, f.useStateFromStores)([ej.default], () => ej.default.didAgree(null == u ? void 0 : u.guild_id)),
+    nsfwAgree: (0, f.useStateFromStores)([eO.default], () => eO.default.didAgree(null == u ? void 0 : u.guild_id)),
     isMobile: (0, f.useStateFromStores)([eD.default], () => (null == u ? void 0 : u.type) === eq.ChannelTypes.DM && eD.default.isMobileOnline(u.getRecipientId()), [u]),
-    isUnavailable: (0, f.useStateFromStores)([eO.default], () => (null == u ? void 0 : u.guild_id) != null && eO.default.isUnavailable(u.guild_id), [u]),
+    isUnavailable: (0, f.useStateFromStores)([ej.default], () => (null == u ? void 0 : u.guild_id) != null && ej.default.isUnavailable(u.guild_id), [u]),
     showRealNameModal: w,
     showWelcomeModal: !P && k,
     showFollowButton: (null == u ? void 0 : u.type) === eq.ChannelTypes.GUILD_ANNOUNCEMENT && (null == g ? void 0 : g.hasFeature(eq.GuildFeatures.NEWS)) || !1,

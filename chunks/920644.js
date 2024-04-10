@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return h
   }
 });
 var a = n("735250");
@@ -20,7 +20,7 @@ function E() {
   (0, u.closeAgeGateModal)(), (0, i.transitionTo)(d.Routes.LOGIN)
 }
 
-function _(e) {
+function h(e) {
   let {
     underageMessage: t,
     transitionState: i

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   WelcomeMessageCTA: function() {
-    return j
+    return O
   },
   default: function() {
     return P
@@ -35,9 +35,9 @@ var a = n("735250"),
   R = n("981631"),
   L = n("231873"),
   y = n("689938"),
-  O = n("811591");
+  j = n("811591");
 
-function j(e) {
+function O(e) {
   let {
     className: t,
     iconUrl: n,
@@ -49,26 +49,26 @@ function j(e) {
   return l.useEffect(() => {
     null != m && o !== m && (h(!0), setTimeout(() => h(!1), 1e3))
   }, [o, m]), (0, a.jsxs)(c.Clickable, {
-    className: i()(t, O.card, {
-      [O.completed]: o
+    className: i()(t, j.card, {
+      [j.completed]: o
     }),
     onClick: u,
     children: [null != s ? s : (0, a.jsx)("div", {
-      className: O.icon,
+      className: j.icon,
       style: {
         backgroundImage: "url('".concat(n, "')")
       }
     }), (0, a.jsx)(c.Text, {
       color: "header-primary",
-      className: i()(O.cardTextContainer, O.cardHeader),
+      className: i()(j.cardTextContainer, j.cardHeader),
       variant: "text-sm/normal",
       children: r
     }), o ? (0, a.jsx)(I.default, {
-      className: i()(O.checkmark, {
-        [O.animate]: d
+      className: i()(j.checkmark, {
+        [j.animate]: d
       })
     }) : (0, a.jsx)(T.default, {
-      className: O.arrow,
+      className: j.arrow,
       direction: T.default.Directions.RIGHT
     })]
   })
@@ -214,55 +214,55 @@ function P(e) {
     }, [s]), null == s) return null;
   let Z = [];
   !f && (I && Z.push((0, a.jsx)(o.default.div, {
-    className: O.cardWrapper,
+    className: j.cardWrapper,
     style: W ? {
       opacity: z[Z.length]
     } : {},
-    children: (0, a.jsx)(j, {
+    children: (0, a.jsx)(O, {
       iconUrl: n("538548"),
       header: y.default.Messages.WELCOME_CTA_INVITE_TITLE,
       completed: U,
       onClick: k
     })
   }, "invite")), P && Z.push((0, a.jsx)(o.default.div, {
-    className: O.cardWrapper,
+    className: j.cardWrapper,
     style: W ? {
       opacity: z[Z.length]
     } : {},
-    children: (0, a.jsx)(j, {
+    children: (0, a.jsx)(O, {
       iconUrl: n("753033"),
       header: y.default.Messages.WELCOME_CTA_PERSONALIZE_TITLE,
       completed: w,
       onClick: B
     })
   }, "customize")), D && Z.push((0, a.jsx)(o.default.div, {
-    className: O.cardWrapper,
+    className: j.cardWrapper,
     style: W ? {
       opacity: z[Z.length]
     } : {},
-    children: (0, a.jsx)(j, {
+    children: (0, a.jsx)(O, {
       iconUrl: n("15717"),
       header: y.default.Messages.WELCOME_CTA_MESSAGE_TITLE,
       completed: F,
       onClick: H
     })
   }, "message")), (0, x.isWeb)() && Z.push((0, a.jsx)(o.default.div, {
-    className: O.cardWrapper,
+    className: j.cardWrapper,
     style: W ? {
       opacity: z[Z.length]
     } : {},
-    children: (0, a.jsx)(j, {
+    children: (0, a.jsx)(O, {
       iconUrl: n("435921"),
       header: y.default.Messages.WELCOME_CTA_DOWNLOAD_TITLE,
       completed: b,
       onClick: G
     })
   }, "download")), Z.push((0, a.jsx)(o.default.div, {
-    className: O.cardWrapper,
+    className: j.cardWrapper,
     style: W ? {
       opacity: z[Z.length]
     } : {},
-    children: (0, a.jsx)(j, {
+    children: (0, a.jsx)(O, {
       iconUrl: n("881454"),
       header: y.default.Messages.WELCOME_CTA_APPS_RECOMMENDATION_TITLE,
       completed: K,
@@ -275,13 +275,13 @@ function P(e) {
   return (0, a.jsx)(M.default, {
     channelId: t.id,
     children: (0, a.jsx)("div", {
-      className: O.container,
+      className: j.container,
       children: (0, a.jsxs)("div", {
-        className: O.inner,
+        className: j.inner,
         children: [(0, a.jsxs)(o.default.div, {
           style: Y,
           children: [(0, a.jsx)(c.Heading, {
-            className: O.titleName,
+            className: j.titleName,
             variant: "heading-xxl/semibold",
             children: y.default.Messages.WELCOME_CTA_TITLE.format({
               guildName: s.name
@@ -289,8 +289,8 @@ function P(e) {
           }), (0, a.jsxs)(c.Text, {
             color: "header-secondary",
             className: i()({
-              [O.subtitle]: !0,
-              [O.noChildren]: 0 === Z.length
+              [j.subtitle]: !0,
+              [j.noChildren]: 0 === Z.length
             }),
             variant: "text-sm/normal",
             children: [q, " ", Z.length > 0 ? y.default.Messages.WELCOME_CTA_SUBTITLE_ACTION_WITH_GUIDE.format({

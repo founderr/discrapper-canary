@@ -31,8 +31,8 @@ var a, l = n("735250"),
   R = n("368666"),
   L = n("630388"),
   y = n("51144"),
-  O = n("981631"),
-  j = n("354459"),
+  j = n("981631"),
+  O = n("354459"),
   P = n("927923"),
   D = n("689938"),
   b = n("474229");
@@ -107,12 +107,12 @@ class k extends(a = s.Component) {
     } = this.props;
     return (0, l.jsx)("div", {
       className: r()(a, b.avatar, {
-        [b.avatarLarge]: n === O.OverlayAvatarSizes.LARGE,
-        [b.avatarSmall]: n === O.OverlayAvatarSizes.SMALL,
+        [b.avatarLarge]: n === j.OverlayAvatarSizes.LARGE,
+        [b.avatarSmall]: n === j.OverlayAvatarSizes.SMALL,
         [b.avatarSpeaking]: e
       }),
       style: {
-        backgroundImage: "url(".concat(t.getAvatarURL(s, n === O.OverlayAvatarSizes.LARGE ? 38 : 24), ")")
+        backgroundImage: "url(".concat(t.getAvatarURL(s, n === j.OverlayAvatarSizes.LARGE ? 38 : 24), ")")
       }
     })
   }
@@ -193,12 +193,12 @@ class k extends(a = s.Component) {
       children: (0, l.jsx)(M.default, {
         className: r()(b.icon, m)
       })
-    }, "activity")), C === P.GameConsoleTypes.XBOX || g === j.VoicePlatforms.XBOX ? V.push((0, l.jsx)("div", {
+    }, "activity")), C === P.GameConsoleTypes.XBOX || g === O.VoicePlatforms.XBOX ? V.push((0, l.jsx)("div", {
       className: r()(b.iconSpacing),
       children: (0, l.jsx)(N.default, {
         className: r()(b.icon, m)
       })
-    }, "xbox")) : (C === P.GameConsoleTypes.PLAYSTATION || g === j.VoicePlatforms.PLAYSTATION) && V.push((0, l.jsx)("div", {
+    }, "xbox")) : (C === P.GameConsoleTypes.PLAYSTATION || g === O.VoicePlatforms.PLAYSTATION) && V.push((0, l.jsx)("div", {
       className: r()(b.iconSpacing),
       children: (0, l.jsx)(x.default, {
         className: r()(b.icon, m)
@@ -215,7 +215,7 @@ class k extends(a = s.Component) {
         className: r()(b.icon, m)
       })
     }, "watch"));
-    let Y = null != y && !(0, L.hasFlag)(y.flags, O.ApplicationFlags.EMBEDDED),
+    let Y = null != y && !(0, L.hasFlag)(y.flags, j.ApplicationFlags.EMBEDDED),
       z = null == S && Y;
     return 0 !== V.length || null != W || A || z ? (0, l.jsxs)("div", {
       className: b.icons,
@@ -259,8 +259,8 @@ class k extends(a = s.Component) {
         [b.overlap]: u,
         [b.selected]: i,
         [b.clickable]: null != e,
-        [b.userSmall]: a === O.OverlayAvatarSizes.SMALL,
-        [b.userLarge]: a === O.OverlayAvatarSizes.LARGE,
+        [b.userSmall]: a === j.OverlayAvatarSizes.SMALL,
+        [b.userLarge]: a === j.OverlayAvatarSizes.LARGE,
         [b.disabled]: !i && o
       }),
       onClick: this.handleClick,
@@ -330,7 +330,7 @@ function H(e) {
     userId: o
   } = e, [u, d] = s.useState(!1), c = (0, m.useIsVisible)(e => d(e));
   return s.useEffect(() => {
-    u && E.default.trackWithMetadata(O.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
+    u && E.default.trackWithMetadata(j.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
       channel_id: i,
       guild_id: a,
       user_id: o
@@ -350,7 +350,7 @@ function H(e) {
         game: t,
         size: S.default.Sizes.XSMALL,
         onMouseEnter: () => {
-          E.default.trackWithMetadata(O.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
+          E.default.trackWithMetadata(j.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
             channel_id: i,
             guild_id: a,
             game_name: t.name,
@@ -421,7 +421,7 @@ function B(e) {
 U(k, "defaultProps", {
   avatarContainerClass: b.avatarContainer,
   userNameClassName: b.usernameFont,
-  size: O.OverlayAvatarSizes.SMALL,
+  size: j.OverlayAvatarSizes.SMALL,
   selected: !1,
   disabled: !1
 }), t.default = k

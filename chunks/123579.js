@@ -28,8 +28,8 @@ var a = n("735250"),
   R = n("5192"),
   L = n("51144"),
   y = n("342656"),
-  O = n("785717"),
-  j = n("221292"),
+  j = n("785717"),
+  O = n("221292"),
   P = n("621853"),
   D = n("895618"),
   b = n("484459"),
@@ -135,8 +135,8 @@ t.default = e => {
       }
     }),
     ey = null != eA || null != eR || ex,
-    eO = null !== (t = R.default.getNickname(null, n.id, eh)) && void 0 !== t ? t : L.default.getName(eh),
-    ej = (0, u.useStateFromStores)([x.default], () => x.default.hidePersonalInformation),
+    ej = null !== (t = R.default.getNickname(null, n.id, eh)) && void 0 !== t ? t : L.default.getName(eh),
+    eO = (0, u.useStateFromStores)([x.default], () => x.default.hidePersonalInformation),
     [eP, eD, eb, eU, eF] = (0, u.useStateFromStoresArray)([P.default], () => [P.default.getMutualFriendsCount(eh.id), P.default.getMutualFriends(eh.id), P.default.getMutualGuilds(eh.id), P.default.isFetchingProfile(eh.id), P.default.isFetchingFriends(eh.id)]),
     ew = (0, Q.useGetVoiceChannelInfoForVoiceActivitySection)(eh.id),
     ek = null != ew && !ex && !eL,
@@ -205,7 +205,7 @@ t.default = e => {
     });
   return e_ ? (0, a.jsx)(m.AnalyticsLocationProvider, {
     value: ef,
-    children: (0, a.jsx)(O.UserProfileAnalyticsProvider, {
+    children: (0, a.jsx)(j.UserProfileAnalyticsProvider, {
       layout: "DM_PANEL",
       userId: eh.id,
       channelId: n.id,
@@ -233,14 +233,14 @@ t.default = e => {
             }), (0, a.jsxs)(k.default.Inner, {
               children: [(0, a.jsx)(X.default, {
                 user: eh,
-                nickname: eO,
+                nickname: ej,
                 pronouns: null == ep ? void 0 : ep.pronouns
               }), (0, a.jsx)(K.default, {
                 customStatusActivity: ev,
                 animate: eo
               }), (0, a.jsx)(W.default, {}), (0, a.jsx)(z.default, {
                 bio: null == ep ? void 0 : ep.bio,
-                hidePersonalInformation: ej,
+                hidePersonalInformation: eO,
                 animateOnHover: !0,
                 isHovering: eo
               }), e0 && (0, a.jsx)(H.default, {
@@ -283,7 +283,7 @@ t.default = e => {
                 }),
                 isLoadingHeader: eU,
                 onExpand: () => {
-                  (0, j.trackUserProfileAction)({
+                  (0, O.trackUserProfileAction)({
                     action: "PRESS_SECTION",
                     section: "MUTUAL_GUILDS",
                     layout: "DM_PANEL",
@@ -307,7 +307,7 @@ t.default = e => {
                 onHover: eZ,
                 itemType: ee.ListType.MutualFriendsList,
                 onExpand: () => {
-                  (0, j.trackUserProfileAction)({
+                  (0, O.trackUserProfileAction)({
                     action: "PRESS_SECTION",
                     section: "MUTUAL_FRIENDS",
                     layout: "DM_PANEL",

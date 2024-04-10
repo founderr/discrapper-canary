@@ -45,16 +45,16 @@ function T(e) {
       })
     })
   }
-  let O = l.useRef(null),
-    j = l.useCallback(() => {
+  let j = l.useRef(null),
+    O = l.useCallback(() => {
       var e;
-      null === (e = O.current) || void 0 === e || e.hidePopout()
+      null === (e = j.current) || void 0 === e || e.hidePopout()
     }, []);
   return (0, C.useComponentAction)({
     event: S.ComponentActions.TOGGLE_SOUNDBOARD,
-    handler: j
+    handler: O
   }), (0, a.jsx)(g.default, {
-    ref: O,
+    ref: j,
     renderPopout: e => {
       let {
         closePopout: n

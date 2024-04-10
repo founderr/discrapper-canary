@@ -11,20 +11,20 @@ var a = n("735250"),
   c = n("360453"),
   f = n("377743"),
   E = n("834743"),
-  _ = n("862099"),
-  h = n("704631"),
+  h = n("862099"),
+  _ = n("704631"),
   C = n("819792"),
   m = n("919285"),
   S = n("118470"),
   I = n("413307"),
-  T = n("849688"),
-  p = n("374023"),
+  p = n("849688"),
+  T = n("374023"),
   g = n("661599"),
   N = n("923608"),
   A = n("617899"),
-  R = n("8521"),
-  O = n("760326"),
-  v = n("536687"),
+  v = n("8521"),
+  R = n("760326"),
+  O = n("536687"),
   L = n("652785"),
   P = n("921944");
 
@@ -36,7 +36,7 @@ function y(e) {
   var t;
   let {
     guild: n
-  } = e, [o, c] = s.useState(null !== (t = r.Storage.get(L.LAST_HIDDEN_CHANNEL_NOTICE)) && void 0 !== t ? t : 0), _ = e => {
+  } = e, [o, c] = s.useState(null !== (t = r.Storage.get(L.LAST_HIDDEN_CHANNEL_NOTICE)) && void 0 !== t ? t : 0), h = e => {
     r.Storage.set(L.LAST_HIDDEN_CHANNEL_NOTICE, e), c(e)
   }, C = (0, l.useStateFromStoresArray)(L.CHANNEL_NOTICE_STORES, () => L.CHANNEL_NOTICES.filter(e => {
     let {
@@ -52,11 +52,11 @@ function y(e) {
         visibleContent: t,
         markAsDismissed: s
       } = e, l = () => {
-        _(Date.now()), s(P.ContentDismissActionType.UNKNOWN)
+        h(Date.now()), s(P.ContentDismissActionType.UNKNOWN)
       }, r = (() => {
         switch (t) {
           case i.DismissibleContent.CHANNEL_NOTICE_HUBLINK:
-            return (0, a.jsx)(h.default, {
+            return (0, a.jsx)(_.default, {
               guild: n,
               markAsDismissed: l
             });
@@ -71,7 +71,7 @@ function y(e) {
               markAsDismissed: l
             });
           case i.DismissibleContent.CHANNEL_NOTICE_QUICKSWITCHER:
-            return (0, a.jsx)(O.default, {
+            return (0, a.jsx)(R.default, {
               guild: n,
               markAsDismissed: l
             });
@@ -105,49 +105,49 @@ t.default = e => {
   let {
     guild: t
   } = e;
-  switch ((0, v.default)(t)) {
-    case v.ConnectedChannelNotices.ENABLE_PUBLIC_GUILD:
+  switch ((0, O.default)(t)) {
+    case O.ConnectedChannelNotices.ENABLE_PUBLIC_GUILD:
       return (0, a.jsx)(I.default, {
         guild: t
       });
-    case v.ConnectedChannelNotices.APPLIED_GUILD_BOOST_GRACE_PERIOD:
+    case O.ConnectedChannelNotices.APPLIED_GUILD_BOOST_GRACE_PERIOD:
       return (0, a.jsx)(c.default, {
         guild: t
       });
-    case v.ConnectedChannelNotices.MAX_MEMBER_COUNT:
-      return (0, a.jsx)(R.default, {
+    case O.ConnectedChannelNotices.MAX_MEMBER_COUNT:
+      return (0, a.jsx)(v.default, {
         guild: t
       });
-    case v.ConnectedChannelNotices.GUILD_LIVE_CHANNEL:
-      return (0, a.jsx)(_.default, {
+    case O.ConnectedChannelNotices.GUILD_LIVE_CHANNEL:
+      return (0, a.jsx)(h.default, {
         guild: t
       });
-    case v.ConnectedChannelNotices.GUILD_MFA_WARNING:
+    case O.ConnectedChannelNotices.GUILD_MFA_WARNING:
       return (0, a.jsx)(g.default, {
         guild: t
       });
-    case v.ConnectedChannelNotices.COMMANDS_MIGRATION:
+    case O.ConnectedChannelNotices.COMMANDS_MIGRATION:
       return (0, a.jsx)(m.default, {
         guild: t
       });
-    case v.ConnectedChannelNotices.APPLICATION_SUBSCRIPTION_EXPIRATION:
+    case O.ConnectedChannelNotices.APPLICATION_SUBSCRIPTION_EXPIRATION:
       return (0, a.jsx)(S.default, {
         guild: t
       });
-    case v.ConnectedChannelNotices.HUB_STUDY_ROOM:
+    case O.ConnectedChannelNotices.HUB_STUDY_ROOM:
       return (0, a.jsx)(C.default, {
         guild: t
       });
-    case v.ConnectedChannelNotices.SIGNUP:
-      return (0, a.jsx)(T.default, {
+    case O.ConnectedChannelNotices.SIGNUP:
+      return (0, a.jsx)(p.default, {
         guild: t
       });
-    case v.ConnectedChannelNotices.CLAN_UPSELL:
+    case O.ConnectedChannelNotices.CLAN_UPSELL:
       return (0, a.jsx)(o.default, {
         guildId: t.id
       })
   }
-  return p.ProcessArgs.isDisallowPopupsSet() ? null : (0, a.jsx)(y, {
+  return T.ProcessArgs.isDisallowPopupsSet() ? null : (0, a.jsx)(y, {
     guild: e.guild
   })
 }

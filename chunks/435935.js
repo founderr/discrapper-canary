@@ -31,12 +31,12 @@ let f = {
     BETWEEN: u.flexJustifyBetween,
     AROUND: u.flexJustifyAround
   },
-  _ = {
+  h = {
     NO_WRAP: u.flexNowrap,
     WRAP: u.flexWrap,
     WRAP_REVERSE: u.flexWrapReverse
   },
-  h = {
+  _ = {
     START: u.flexAlignStart,
     END: u.flexAlignEnd,
     CENTER: u.flexAlignCenter,
@@ -99,26 +99,26 @@ class S extends(s = i.PureComponent) {
       basis: c,
       style: f,
       gutter: E,
-      ..._
-    } = this.props, h = {
+      ...h
+    } = this.props, _ = {
       flexShrink: r,
       flexGrow: u,
       flexBasis: c,
       ...f
     };
     return (0, l.jsx)("div", {
-      style: h,
+      style: _,
       className: o()(d.flex, n, a, s, i, E, t),
-      ..._,
+      ...h,
       children: e
     })
   }
 }
-c(S, "Child", m), c(S, "Direction", f), c(S, "Align", h), c(S, "Justify", E), c(S, "Wrap", _), c(S, "Gutter", C), c(S, "defaultProps", {
+c(S, "Child", m), c(S, "Direction", f), c(S, "Align", _), c(S, "Justify", E), c(S, "Wrap", h), c(S, "Gutter", C), c(S, "defaultProps", {
   direction: f.HORIZONTAL,
   justify: E.START,
-  align: h.STRETCH,
-  wrap: _.WRAP,
+  align: _.STRETCH,
+  wrap: h.WRAP,
   shrink: 1,
   grow: 1,
   basis: "auto",

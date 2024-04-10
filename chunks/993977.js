@@ -15,14 +15,14 @@ var a = n("735250"),
   c = n("465670"),
   f = n("626135"),
   E = n("630388"),
-  _ = n("804739"),
-  h = n("957657"),
+  h = n("804739"),
+  _ = n("957657"),
   C = n("34305"),
   m = n("981631"),
   S = n("689938"),
   I = n("315361");
 
-function T(e) {
+function p(e) {
   let {
     applicationViewItems: t,
     restoreApplication: n
@@ -59,7 +59,7 @@ function T(e) {
     }), s]
   })
 }
-class p extends s.PureComponent {
+class T extends s.PureComponent {
   handleToggleShortcutDesktop(e) {
     o.InstallShortcutDesktop.updateSetting(e)
   }
@@ -80,7 +80,7 @@ class p extends s.PureComponent {
     } = this.props;
     return (0, a.jsxs)("div", {
       className: I.body,
-      children: [(0, _.isSupportedPlatform)() ? (0, a.jsxs)(s.Fragment, {
+      children: [(0, h.isSupportedPlatform)() ? (0, a.jsxs)(s.Fragment, {
         children: [(0, a.jsx)(i.FormSwitch, {
           value: t,
           onChange: this.handleToggleShortcutDesktop,
@@ -92,7 +92,7 @@ class p extends s.PureComponent {
           note: S.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU_NOTE,
           children: S.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU
         }), (0, a.jsx)(C.default, {})]
-      }) : null, (0, a.jsx)(T, {
+      }) : null, (0, a.jsx)(p, {
         restoreApplication: this.handleRestoreHiddenLibraryApplication,
         applicationViewItems: e
       })]
@@ -100,7 +100,7 @@ class p extends s.PureComponent {
   }
   render() {
     return (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(h.default, {
+      children: [(0, a.jsx)(_.default, {
         currentRoute: m.Routes.APPLICATION_LIBRARY_SETTINGS
       }), (0, a.jsx)(i.ScrollerAuto, {
         className: I.scroller,
@@ -128,7 +128,7 @@ function g() {
     installShortcutStartMenu: o.InstallShortcutStartMenu.useSetting(),
     hiddenLibraryApplicationViewItems: (0, l.useStateFromStores)([u.default], () => u.default.hiddenLibraryApplicationViewItems)
   };
-  return (0, a.jsx)(p, {
+  return (0, a.jsx)(T, {
     ...e
   })
 }

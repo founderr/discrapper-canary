@@ -31,8 +31,8 @@ var a, l = n("735250"),
   R = n("933557"),
   L = n("366980"),
   y = n("703656"),
-  O = n("131704"),
-  j = n("592125"),
+  j = n("131704"),
+  O = n("592125"),
   P = n("341165"),
   D = n("544610"),
   b = n("19780"),
@@ -119,7 +119,7 @@ let eo = e => {
       onConfirm: t,
       channelIds: n,
       ...a
-    } = e, s = (0, h.useStateFromStoresArray)([j.default], () => Array.from(n).map(j.default.getChannel), [n]);
+    } = e, s = (0, h.useStateFromStoresArray)([O.default], () => Array.from(n).map(O.default.getChannel), [n]);
     return (0, l.jsxs)(m.ConfirmModal, {
       header: ee.default.Messages.GROUP_DM_INVITE_CONFIRM,
       confirmText: ee.default.Messages.GROUP_DM_INVITE_CONFIRM_BUTTON,
@@ -700,7 +700,7 @@ function ef(e) {
 
 function eh(e) {
   let t = em(e);
-  return new Set(u()(j.default.getMutablePrivateChannels()).values().filter(e => (0, O.isMultiUserDM)(e.type)).filter(e => em(e.recipients) === t).map(e => e.id).value())
+  return new Set(u()(O.default.getMutablePrivateChannels()).values().filter(e => (0, j.isMultiUserDM)(e.type)).filter(e => em(e.recipients) === t).map(e => e.id).value())
 }
 
 function em(e) {

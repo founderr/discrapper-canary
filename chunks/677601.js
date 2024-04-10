@@ -28,8 +28,8 @@ var a = n("735250"),
   R = n("349619"),
   L = n("100527"),
   y = n("367907"),
-  O = n("906732"),
-  j = n("211644"),
+  j = n("906732"),
+  O = n("211644"),
   P = n("258609"),
   D = n("446226"),
   b = n("276598"),
@@ -82,8 +82,8 @@ var a = n("735250"),
   eR = n("221888"),
   eL = n("900211"),
   ey = n("18759"),
-  eO = n("878752"),
-  ej = n("354459"),
+  ej = n("878752"),
+  eO = n("354459"),
   eP = n("981631"),
   eD = n("689938"),
   eb = n("329446");
@@ -351,8 +351,8 @@ class ek extends l.PureComponent {
         context: r
       };
       switch (null === (l = this._lastIdleProps) || void 0 === l || l.onPreventIdle("menu"), null === (s = this._lastIdleProps) || void 0 === s || s.onActive(), e.type) {
-        case ej.ParticipantTypes.HIDDEN_STREAM:
-        case ej.ParticipantTypes.STREAM:
+        case eO.ParticipantTypes.HIDDEN_STREAM:
+        case eO.ParticipantTypes.STREAM:
           (0, p.openContextMenuLazy)(t, async () => {
             let {
               default: t
@@ -365,7 +365,7 @@ class ek extends l.PureComponent {
             })
           }, d);
           return;
-        case ej.ParticipantTypes.USER:
+        case eO.ParticipantTypes.USER:
           let c = ec.default.getUser(e.id);
           if (null != c) switch (i.type) {
             case eP.ChannelTypes.DM:
@@ -428,7 +428,7 @@ class ek extends l.PureComponent {
         inCall: s,
         mode: i
       } = this.props;
-      (0, ej.isStreamParticipant)(e) && (0, F.canWatchStream)(n, ef.default, er.default, eo.default, P.default)[0] && (E.default.selectVoiceChannel(n.id), 0 === l.filter(t => (0, U.encodeStreamKey)(t) === e.id && t.state !== eP.ApplicationStreamStates.ENDED).length && (0, C.watchStream)((0, U.decodeStreamKey)(e.id), {
+      (0, eO.isStreamParticipant)(e) && (0, F.canWatchStream)(n, ef.default, er.default, eo.default, P.default)[0] && (E.default.selectVoiceChannel(n.id), 0 === l.filter(t => (0, U.encodeStreamKey)(t) === e.id && t.state !== eP.ApplicationStreamStates.ENDED).length && (0, C.watchStream)((0, U.decodeStreamKey)(e.id), {
         forceMultiple: t.shiftKey
       })), s && i === eP.ChannelModes.VIDEO && ((null == a ? void 0 : a.id) === e.id ? m.default.selectParticipant(n.id, null) : m.default.selectParticipant(n.id, e.id))
     }), eU(this, "handleOpenPopout", () => {
@@ -490,7 +490,7 @@ class ek extends l.PureComponent {
       if (!u) return null;
       let c = e === eP.ChannelLayouts.NO_CHAT ? q.default.Directions.UP : q.default.Directions.DOWN,
         f = [eP.ChannelLayouts.FULL_SCREEN, eP.ChannelLayouts.NO_CHAT].includes(e),
-        h = d.some(e => e.type === ej.ParticipantTypes.STREAM),
+        h = d.some(e => e.type === eO.ParticipantTypes.STREAM),
         m = e === eP.ChannelLayouts.FULL_SCREEN ? () => {
           this._prevLayout = eP.ChannelLayouts.NORMAL, this.handleFullScreen()
         } : this.handleToggleLayout,
@@ -500,15 +500,15 @@ class ek extends l.PureComponent {
         } = this.viewProperties,
         C = s ? (0, a.jsx)(W.default, {
           channel: n,
-          stream: (null == r ? void 0 : r.type) === ej.ParticipantTypes.STREAM ? (0, U.decodeStreamKey)(r.id) : void 0,
-          applicationId: (null == r ? void 0 : r.type) === ej.ParticipantTypes.ACTIVITY ? r.id : void 0,
+          stream: (null == r ? void 0 : r.type) === eO.ParticipantTypes.STREAM ? (0, U.decodeStreamKey)(r.id) : void 0,
+          applicationId: (null == r ? void 0 : r.type) === eO.ParticipantTypes.ACTIVITY ? r.id : void 0,
           appContext: l,
           className: eb.leftTrayIcon,
           exitFullScreen: this.maybeLeaveFullScreen,
           analyticsLocation: n.type === eP.ChannelTypes.GUILD_VOICE ? eP.AnalyticsPages.GUILD_CHANNEL : eP.AnalyticsPages.DM_CHANNEL
         }) : (0, a.jsx)(J.default, {
           channel: n,
-          stream: (null == r ? void 0 : r.type) === ej.ParticipantTypes.STREAM ? (0, U.decodeStreamKey)(r.id) : void 0,
+          stream: (null == r ? void 0 : r.type) === eO.ParticipantTypes.STREAM ? (0, U.decodeStreamKey)(r.id) : void 0,
           className: eb.leftTrayIcon,
           exitFullScreen: this.maybeLeaveFullScreen,
           analyticsLocation: n.type === eP.ChannelTypes.GUILD_VOICE ? eP.AnalyticsPages.GUILD_CHANNEL : eP.AnalyticsPages.DM_CHANNEL
@@ -527,7 +527,7 @@ class ek extends l.PureComponent {
             className: eb.badge,
             count: t
           }) : null]
-        }) : null, (null == r ? void 0 : r.type) !== ej.ParticipantTypes.STREAM && (null == r ? void 0 : r.type) !== ej.ParticipantTypes.ACTIVITY || o ? null : (0, a.jsx)(z.default, {
+        }) : null, (null == r ? void 0 : r.type) !== eO.ParticipantTypes.STREAM && (null == r ? void 0 : r.type) !== eO.ParticipantTypes.ACTIVITY || o ? null : (0, a.jsx)(z.default, {
           children: (0, a.jsx)(eR.default, {
             className: i()(eb.leftTrayIcon, eb.viewersButton),
             participant: r,
@@ -536,7 +536,7 @@ class ek extends l.PureComponent {
             channelId: n.id,
             disableInteraction: this.inPopout || e === eP.ChannelLayouts.FULL_SCREEN
           })
-        }), o && (0, a.jsx)(eO.default, {
+        }), o && (0, a.jsx)(ej.default, {
           channel: n,
           hasActiveStream: h,
           themeable: this.viewProperties.useTheme
@@ -560,7 +560,7 @@ class ek extends l.PureComponent {
         useTheme: o
       } = this.viewProperties;
       return (0, a.jsxs)(a.Fragment, {
-        children: [null != l && l.type !== ej.ParticipantTypes.ACTIVITY && l.user.id !== n ? (0, a.jsx)(et.default, {
+        children: [null != l && l.type !== eO.ParticipantTypes.ACTIVITY && l.user.id !== n ? (0, a.jsx)(et.default, {
           context: (0, eA.default)(l.type),
           userId: l.user.id,
           currentWindow: this.inPopout ? null != e ? e : void 0 : window,
@@ -724,11 +724,11 @@ t.default = function(e) {
     onTransition: void 0
   });
   let ep = (0, ev.default)(n, !0),
-    eE = (0, j.useIsContentShown)(d.DismissibleContent.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
+    eE = (0, O.useIsContentShown)(d.DismissibleContent.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
     {
       analyticsLocations: eC
-    } = (0, O.default)(L.default.CHANNEL_CALL);
-  return (0, a.jsx)(O.AnalyticsLocationProvider, {
+    } = (0, j.default)(L.default.CHANNEL_CALL);
+  return (0, a.jsx)(j.AnalyticsLocationProvider, {
     value: eC,
     children: (0, a.jsx)(_.default, {
       page: eP.AnalyticsPages.CHANNEL_CALL,

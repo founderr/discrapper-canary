@@ -15,8 +15,8 @@ var a = n("735250"),
   c = n("626135"),
   f = n("321488"),
   E = n("417183"),
-  _ = n("170245"),
-  h = n("981631"),
+  h = n("170245"),
+  _ = n("981631"),
   C = n("689938"),
   m = n("845286");
 
@@ -26,8 +26,8 @@ function S(e) {
     nickname: n,
     status: S,
     isFocused: I
-  } = e, T = s.useContext(c.AnalyticsContext), {
-    analyticsLocations: p
+  } = e, p = s.useContext(c.AnalyticsContext), {
+    analyticsLocations: T
   } = (0, i.default)(), g = e => {
     null == e || e.stopPropagation(), l.default.addRelationship({
       userId: t.id,
@@ -40,14 +40,14 @@ function S(e) {
     })
   }, N = e => {
     null == e || e.stopPropagation(), r.default.ignore(t.id)
-  }, A = S === h.StatusTypes.OFFLINE ? h.StatusTypes.UNKNOWN : S;
+  }, A = S === _.StatusTypes.OFFLINE ? _.StatusTypes.UNKNOWN : S;
   return (0, a.jsx)(E.default, {
     isFocused: I,
     user: t,
     onClick: () => (0, o.openUserProfileModal)({
       userId: t.id,
-      sourceAnalyticsLocations: p,
-      analyticsLocation: T.location
+      sourceAnalyticsLocations: T,
+      analyticsLocation: p.location
     }),
     children: e => {
       let s = (0, a.jsxs)(a.Fragment, {
@@ -67,7 +67,7 @@ function S(e) {
       });
       return (0, a.jsxs)("div", {
         className: m.listItemContents,
-        children: [(0, a.jsx)(_.default, {
+        children: [(0, a.jsx)(h.default, {
           user: t,
           hovered: e,
           status: A,

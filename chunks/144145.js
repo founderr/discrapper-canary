@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return R
   }
 }), n("653041"), n("47120");
 var a = n("735250"),
@@ -15,23 +15,23 @@ var a = n("735250"),
   c = n("620662"),
   f = n("841784"),
   E = n("802856"),
-  _ = n("594190"),
-  h = n("592745"),
+  h = n("594190"),
+  _ = n("592745"),
   C = n("553795"),
   m = n("757266"),
   S = n("283595"),
   I = n("417363"),
-  T = n("626135"),
-  p = n("804739"),
+  p = n("626135"),
+  T = n("804739"),
   g = n("346329"),
   N = n("981631"),
   A = n("689938");
-let R = d.default.get(N.PlatformTypes.XBOX).name;
+let v = d.default.get(N.PlatformTypes.XBOX).name;
 
-function O(e) {
+function R(e) {
   let {
     currentActivities: t
-  } = e, n = t.length > 1, O = function(e) {
+  } = e, n = t.length > 1, R = function(e) {
     let {
       currentActivities: t
     } = e, n = (0, l.useStateFromStores)([C.default], () => C.default.getAccounts().some(e => e.type === d.default.get(N.PlatformTypes.XBOX).type)), s = t.some(e => {
@@ -44,14 +44,14 @@ function O(e) {
       id: "xbox-connect",
       action: () => u.default.open(N.UserSettingsSections.CONNECTIONS),
       label: A.default.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({
-        platform: R
+        platform: v
       })
     })
-  }(e), v = function(e) {
+  }(e), O = function(e) {
     let {
       currentActivities: t
-    } = e, n = s.useContext(T.AnalyticsContext);
-    return (0, l.useStateFromStoresArray)([_.default, S.default, h.default, I.default, m.default], () => t.filter(e => !(0, f.default)(e.activity)).map(e => {
+    } = e, n = s.useContext(p.AnalyticsContext);
+    return (0, l.useStateFromStoresArray)([h.default, S.default, _.default, I.default, m.default], () => t.filter(e => !(0, f.default)(e.activity)).map(e => {
       let {
         activity: t,
         game: a
@@ -60,21 +60,21 @@ function O(e) {
         ...e,
         libraryApplication: s,
         canJoin: null != t && (0, c.default)(t, N.ActivityFlags.JOIN) && t.type === N.ActivityTypes.PLAYING,
-        canPlay: (0, p.isLaunchable)({
+        canPlay: (0, T.isLaunchable)({
           LibraryApplicationStore: S.default,
-          LaunchableGameStore: h.default,
+          LaunchableGameStore: _.default,
           DispatchApplicationStore: I.default,
           ConnectedAppsStore: m.default,
           applicationId: a.id,
           branchId: null != s ? s.branchId : null
         }),
-        isLaunching: h.default.launchingGames.has(a.id),
-        isRunning: _.default.getRunningVerifiedApplicationIds().includes(a.id),
+        isLaunching: _.default.launchingGames.has(a.id),
+        isRunning: h.default.getRunningVerifiedApplicationIds().includes(a.id),
         location: n.location
       }
     }), [n.location, t])
   }(e), L = [];
-  for (let e of v) {
+  for (let e of O) {
     let {
       activity: t
     } = e;
@@ -137,5 +137,5 @@ function O(e) {
       })
     }(e, n))
   }
-  return [O, ...L]
+  return [R, ...L]
 }

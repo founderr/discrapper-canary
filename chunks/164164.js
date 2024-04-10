@@ -11,40 +11,40 @@ var a = n("735250"),
   c = n("617136"),
   f = n("272008"),
   E = n("113434"),
-  _ = n("569984"),
-  h = n("497505"),
+  h = n("569984"),
+  _ = n("497505"),
   C = n("918701"),
   m = n("340100"),
   S = n("611855"),
   I = n("644646"),
-  T = n("78826"),
-  p = n("670638"),
+  p = n("78826"),
+  T = n("670638"),
   g = n("667105"),
   N = n("689938"),
   A = n("881521");
-let R = s.forwardRef(function(e, t) {
+let v = s.forwardRef(function(e, t) {
   var n, l;
   let {
-    className: R,
-    isExpanded: O,
-    isExpansionAnimationComplete: v,
+    className: v,
+    isExpanded: R,
+    isExpansionAnimationComplete: O,
     onCtxMenuOpen: L,
     onCtxMenuClose: P,
     onCtxMenuSelect: M,
     quest: y,
-    useReducedMotion: D
-  } = e, x = (0, r.useStateFromStores)([_.default], () => _.default.isEnrolling(y.id), [y]), b = (0, E.useQuestFormattedDate)(y.config.expiresAt), U = (0, E.useQuestFormattedDate)(y.config.rewardCodeExpiresAt), j = s.useMemo(() => (0, C.isAssetAnimated)(y.config.assets.questBarHero), [y]), G = s.useCallback(() => {
+    useReducedMotion: x
+  } = e, D = (0, r.useStateFromStores)([h.default], () => h.default.isEnrolling(y.id), [y]), b = (0, E.useQuestFormattedDate)(y.config.expiresAt), U = (0, E.useQuestFormattedDate)(y.config.rewardCodeExpiresAt), j = s.useMemo(() => (0, C.isAssetAnimated)(y.config.assets.questBarHero), [y]), G = s.useCallback(() => {
     (0, f.enrollInQuest)(y.id, {
-      questContent: h.QuestContent.QUEST_BAR,
+      questContent: _.QuestContent.QUEST_BAR,
       questContentCTA: c.QuestContentCTA.ACCEPT_QUEST
     })
   }, [y]), w = (0, g.useHandleClaimQuestsReward)({
     quest: y,
-    location: h.QuestContent.QUEST_BAR
-  }), k = (null === (n = y.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, F = (null === (l = y.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, B = O && v, H = (0, C.getQuestBarHeroAssetUrl)(y);
+    location: _.QuestContent.QUEST_BAR
+  }), k = (null === (n = y.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, F = (null === (l = y.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, B = R && O, H = (0, C.getQuestBarHeroAssetUrl)(y);
   return (0, a.jsx)("div", {
     "aria-hidden": !B,
-    className: i()(R, A.contentExpanded, {
+    className: i()(v, A.contentExpanded, {
       [A.contentInteractable]: B
     }),
     children: k ? (0, a.jsxs)("div", {
@@ -54,7 +54,7 @@ let R = s.forwardRef(function(e, t) {
         className: A.utils,
         children: [(0, a.jsxs)("div", {
           className: A.questAcceptedContentHeading,
-          children: [(0, a.jsx)(T.QuestsAsset, {
+          children: [(0, a.jsx)(p.QuestsAsset, {
             id: "QuestsBarContentExpanded_rewardTile",
             children: e => (0, a.jsx)("img", {
               ref: e,
@@ -78,11 +78,11 @@ let R = s.forwardRef(function(e, t) {
               })
             })]
           })]
-        }), (0, a.jsx)(p.QuestsEntryContextMenuPopout, {
+        }), (0, a.jsx)(T.QuestsEntryContextMenuPopout, {
           onOpen: L,
           onClose: P,
           onSelect: M,
-          questContent: h.QuestContent.QUEST_BAR,
+          questContent: _.QuestContent.QUEST_BAR,
           quest: y,
           shouldShowDisclosure: !1,
           showShareLink: !0,
@@ -123,11 +123,11 @@ let R = s.forwardRef(function(e, t) {
           className: A.utils,
           children: [(0, a.jsx)(S.default, {
             color: "always-white"
-          }), (0, a.jsx)(p.QuestsEntryContextMenuPopout, {
+          }), (0, a.jsx)(T.QuestsEntryContextMenuPopout, {
             onOpen: L,
             onClose: P,
             onSelect: M,
-            questContent: h.QuestContent.QUEST_BAR,
+            questContent: _.QuestContent.QUEST_BAR,
             quest: y,
             shouldShowDisclosure: !0,
             showShareLink: !0,
@@ -145,7 +145,7 @@ let R = s.forwardRef(function(e, t) {
           children: [(0, a.jsx)(I.default, {
             className: A.rewardTile,
             quest: y,
-            questContent: h.QuestContent.QUEST_BAR
+            questContent: _.QuestContent.QUEST_BAR
           }), (0, a.jsx)(o.Heading, {
             className: A.title,
             color: "always-white",
@@ -169,7 +169,7 @@ let R = s.forwardRef(function(e, t) {
           fullWidth: !0,
           onClick: B ? G : void 0,
           size: o.Button.Sizes.NONE,
-          submitting: x,
+          submitting: D,
           children: N.default.Messages.QUESTS_ACCEPT_QUEST
         })]
       }), (0, a.jsx)("div", {
@@ -177,11 +177,11 @@ let R = s.forwardRef(function(e, t) {
         style: {
           color: y.config.colors.secondary
         },
-        children: j ? (0, a.jsx)(T.QuestsAsset, {
+        children: j ? (0, a.jsx)(p.QuestsAsset, {
           id: "QuestsBarContentExpanded_heroAnimated",
           children: e => (0, a.jsx)(d.default, {
             ref: e,
-            autoPlay: !D,
+            autoPlay: !x,
             loop: !0,
             muted: !0,
             playsInline: !0,
@@ -192,7 +192,7 @@ let R = s.forwardRef(function(e, t) {
               type: (0, C.getVideoAssetMimeType)(H)
             })
           })
-        }) : (0, a.jsx)(T.QuestsAsset, {
+        }) : (0, a.jsx)(p.QuestsAsset, {
           id: "QuestsBarContentExpanded_heroStatic",
           children: e => (0, a.jsx)("img", {
             ref: e,
@@ -205,4 +205,4 @@ let R = s.forwardRef(function(e, t) {
     })
   })
 });
-t.default = R
+t.default = v
