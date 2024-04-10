@@ -38,8 +38,8 @@ function u(e) {
         } : void 0,
         children: null == r && (0, i.jsx)(l.TicketIcon, {
           color: "white",
-          height: 128,
-          width: 128
+          height: 80,
+          width: 80
         })
       }), (0, i.jsxs)("div", {
         className: c.details,
