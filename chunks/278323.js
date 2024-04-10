@@ -17,7 +17,9 @@ t.default = {
       token: a = null,
       duration: o = 0,
       closed: l = !1,
-      exePath: u = null
+      exePath: u = null,
+      voiceChannelId: _ = null,
+      mediaSessionId: c = null
     } = e;
     r.default.wait(() => r.default.dispatch({
       type: "ACTIVITY_UPDATE_START",
@@ -33,7 +35,9 @@ t.default = {
         share_activity: s,
         distributor: n,
         closed: l,
-        exePath: u
+        exePath: u,
+        voice_channel_id: _,
+        media_session_id: c
       },
       retries: 1,
       oldFormErrors: !0
