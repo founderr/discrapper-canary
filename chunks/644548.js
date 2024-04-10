@@ -88,14 +88,16 @@ t.default = e => {
         textColor: "always-white",
         iconColor: i.tokens.colors.WHITE
       })]
-    }), (0, a.jsx)(m.PopoutReactor, {
-      user: T,
-      channel: t,
-      updatePopoutPosition: o,
-      generateReactionImage: N,
-      reactionImageAltText: _(n, T),
-      entry: n,
-      requestId: s
+    }), (0, a.jsx)(m.PopoutInteractionsContainer, {
+      children: (0, a.jsx)(m.PopoutReactor, {
+        user: T,
+        channel: t,
+        updatePopoutPosition: o,
+        generateReactionImage: N,
+        reactionImageAltText: _(n, T),
+        entry: n,
+        requestId: s
+      })
     })]
   }) : null
 }

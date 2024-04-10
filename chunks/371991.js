@@ -43,6 +43,7 @@ t.default = e => {
   }) : (0, a.jsx)(r.Text, {
     variant: "text-xs/normal",
     color: n,
+    lineClamp: 1,
     children: (0, d.formatEndedTimestamp)(t, i)
   })
 }

@@ -16,7 +16,7 @@ function d(e) {
   let t = (0, a.useStateFromStores)([r.default], () => r.default.getVoiceStateForUser(e.author_id)),
     n = null == t ? void 0 : t.channelId,
     d = (0, o.isEntryActive)(e);
-  return (0, a.useStateFromStores)([s.default, i.default], () => {
+  return (0, a.useStateFromStoresObject)([s.default, i.default], () => {
     if (!d || null == n || e.author_type !== l.ContentInventoryAuthorType.USER) return u;
     let t = s.default.getChannel(n),
       a = i.default.getPrimaryActivity(e.author_id, null == t ? void 0 : t.guild_id);

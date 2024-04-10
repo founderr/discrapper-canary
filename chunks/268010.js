@@ -87,14 +87,16 @@ t.default = e => {
         iconColor: i.tokens.colors.WHITE,
         episodeDescription: I
       })]
-    }), (0, a.jsx)(m.PopoutReactor, {
-      user: _,
-      channel: t,
-      updatePopoutPosition: p,
-      generateReactionImage: N,
-      reactionImageAltText: S(n, _),
-      entry: n,
-      requestId: o
+    }), (0, a.jsx)(m.PopoutInteractionsContainer, {
+      children: (0, a.jsx)(m.PopoutReactor, {
+        user: _,
+        channel: t,
+        updatePopoutPosition: p,
+        generateReactionImage: N,
+        reactionImageAltText: S(n, _),
+        entry: n,
+        requestId: o
+      })
     })]
   })
 }
