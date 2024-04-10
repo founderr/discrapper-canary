@@ -19,8 +19,8 @@ var a = s("392711"),
   N = s("699516"),
   g = s("594174"),
   f = s("353872"),
-  E = s("981631"),
-  m = s("689938"),
+  m = s("981631"),
+  E = s("689938"),
   _ = s("19560");
 let T = e => {
   let {
@@ -28,7 +28,7 @@ let T = e => {
       type: t
     }
   } = e;
-  return (0, c.isGuildSelectableChannelType)(t) || t === E.ChannelTypes.GUILD_CATEGORY
+  return (0, c.isGuildSelectableChannelType)(t) || t === m.ChannelTypes.GUILD_CATEGORY
 };
 
 function x(e) {
@@ -50,7 +50,7 @@ function x(e) {
     let {
       channel: t
     } = e;
-    return t.type !== E.ChannelTypes.GUILD_CATEGORY || null != x[t.id] && x[t.id].length > 0
+    return t.type !== m.ChannelTypes.GUILD_CATEGORY || null != x[t.id] && x[t.id].length > 0
   }).map(e => {
     let {
       channel: t
@@ -63,11 +63,11 @@ function x(e) {
   return (0, i.jsxs)(r.FormItem, {
     children: [(0, i.jsx)(r.FormText, {
       type: r.FormText.Types.DESCRIPTION,
-      children: m.default.Messages.ADD_CHANNEL_TO_OVERRIDE
+      children: E.default.Messages.ADD_CHANNEL_TO_OVERRIDE
     }), (0, i.jsx)("div", {
       className: _.input,
       children: (0, i.jsx)(r.SearchableSelect, {
-        value: E.EMPTY_STRING_SNOWFLAKE_ID,
+        value: m.EMPTY_STRING_SNOWFLAKE_ID,
         onChange: a,
         options: I,
         renderOptionLabel: e => {
@@ -81,7 +81,7 @@ function x(e) {
             subtitle: a
           })
         },
-        placeholder: m.default.Messages.SELECT_CHANNEL_OR_CATEGORY
+        placeholder: E.default.Messages.SELECT_CHANNEL_OR_CATEGORY
       })
     })]
   })

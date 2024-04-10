@@ -18,8 +18,8 @@ var i = s("735250"),
   N = s("285952"),
   g = s("621600"),
   f = s("981631"),
-  E = s("689938"),
-  m = s("154460");
+  m = s("689938"),
+  E = s("154460");
 
 function _(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -80,26 +80,26 @@ class T extends a.PureComponent {
     let a = (0, o.getChannelIconComponent)(s);
     if (s.type === f.ChannelTypes.GUILD_CATEGORY && null != s.guild_id && "" !== s.guild_id) {
       let e = c.default.getCategories(s.guild_id);
-      t = E.default.Messages.NUM_CHANNELS.format({
+      t = m.default.Messages.NUM_CHANNELS.format({
         num: null != e[s.id] ? e[s.id].length : 0
       })
-    } else t = null != e ? E.default.Messages.IN_CATEGORY.format({
+    } else t = null != e ? m.default.Messages.IN_CATEGORY.format({
       categoryName: (0, d.computeChannelName)(e, S.default, h.default)
-    }) : E.default.Messages.NO_CATEGORY;
+    }) : m.default.Messages.NO_CATEGORY;
     return (0, i.jsxs)(N.default, {
       grow: 1,
-      className: m.nameContainer,
+      className: E.nameContainer,
       children: [null != a ? (0, i.jsx)(a, {
-        className: m.icon
+        className: E.icon
       }) : null, (0, i.jsxs)("div", {
-        className: m.channelNameContainer,
+        className: E.channelNameContainer,
         children: [(0, i.jsx)(n.Text, {
           variant: "text-md/semibold",
-          className: m.channelName,
+          className: E.channelName,
           children: (0, d.computeChannelName)(s, S.default, h.default)
         }), (0, i.jsx)(n.Text, {
           variant: "text-xs/normal",
-          className: m.channelNameByline,
+          className: E.channelNameByline,
           children: t
         })]
       })]
@@ -113,32 +113,32 @@ class T extends a.PureComponent {
     return (0, i.jsxs)(N.default, {
       grow: 0,
       shrink: 0,
-      className: m.checkboxGroup,
+      className: E.checkboxGroup,
       justify: N.default.Justify.AROUND,
       align: N.default.Align.CENTER,
       children: [(0, i.jsx)(N.default.Child, {
         wrap: !0,
         grow: 0,
         shrink: 0,
-        className: t ? m.checkboxContainerMuted : m.checkboxContainer,
+        className: t ? E.checkboxContainerMuted : E.checkboxContainer,
         children: this.renderMessageNotificationsRadioOption(f.UserNotificationSettings.ALL_MESSAGES)
       }), (0, i.jsx)(N.default.Child, {
         wrap: !0,
         grow: 0,
         shrink: 0,
-        className: t ? m.checkboxContainerMuted : m.checkboxContainer,
+        className: t ? E.checkboxContainerMuted : E.checkboxContainer,
         children: this.renderMessageNotificationsRadioOption(f.UserNotificationSettings.ONLY_MENTIONS)
       }), (0, i.jsx)(N.default.Child, {
         wrap: !0,
         grow: 0,
         shrink: 0,
-        className: t ? m.checkboxContainerMuted : m.checkboxContainer,
+        className: t ? E.checkboxContainerMuted : E.checkboxContainer,
         children: this.renderMessageNotificationsRadioOption(f.UserNotificationSettings.NO_MESSAGES)
       }), (0, i.jsx)(N.default.Child, {
         wrap: !0,
         grow: 0,
         shrink: 0,
-        className: m.checkboxMute,
+        className: E.checkboxMute,
         children: (0, i.jsx)(n.Checkbox, {
           value: e,
           shape: n.Checkbox.Shapes.BOX,
@@ -155,9 +155,9 @@ class T extends a.PureComponent {
     return (0, i.jsxs)(n.Card, {
       outline: !0,
       editable: !0,
-      className: e ? m.overrideHighlight : m.override,
+      className: e ? E.overrideHighlight : E.override,
       children: [this.renderName(), this.renderOptions(), (0, i.jsx)(r.default, {
-        className: m.removeOverride,
+        className: E.removeOverride,
         onClick: this.handleDelete
       })]
     })

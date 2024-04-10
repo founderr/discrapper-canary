@@ -150,7 +150,7 @@ let q = i.memo(function(e) {
         action: () => (0, d.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([a.e("99387"), a.e("29608")]).then(a.bind(a, "610617"));
+          } = await Promise.all([a.e("99387"), a.e("29608")]).then(a.bind(a, "178125"));
           return t => (0, n.jsx)(e, {
             ...t
           })
@@ -299,7 +299,7 @@ let q = i.memo(function(e) {
         action: () => (0, d.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([a.e("49237"), a.e("99387"), a.e("5863"), a.e("60411")]).then(a.bind(a, "751212"));
+          } = await Promise.all([a.e("49237"), a.e("99387"), a.e("5863"), a.e("27713")]).then(a.bind(a, "751212"));
           return a => (0, n.jsx)(e, {
             ...a,
             guildId: t.id

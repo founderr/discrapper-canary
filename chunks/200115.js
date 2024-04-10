@@ -23,7 +23,7 @@ function f(e) {
   var t;
   let {
     guildId: s
-  } = e, a = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(s)), f = (0, l.useStateFromStores)([u.default], () => u.default.isMuted(s)), E = (0, l.useStateFromStores)([u.default], () => u.default.getMuteConfig(s));
+  } = e, a = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(s)), f = (0, l.useStateFromStores)([u.default], () => u.default.isMuted(s)), m = (0, l.useStateFromStores)([u.default], () => u.default.getMuteConfig(s));
   return null == a ? null : (0, i.jsxs)(r.FormItem, {
     children: [(0, i.jsx)(r.FormSwitch, {
       hideBorder: !0,
@@ -58,7 +58,7 @@ function f(e) {
                 minute: "2-digit"
               })
             })
-          }(E)
+          }(m)
         })]
       }), (0, i.jsx)(r.SingleSelect, {
         onChange: e => {
@@ -72,7 +72,7 @@ function f(e) {
           }, c.NotificationLabels.Muted)
         },
         options: (0, h.getMuteTimeOptions)(),
-        value: null !== (t = null == E ? void 0 : E.selected_time_window) && void 0 !== t ? t : S.MuteUntilSeconds.ALWAYS
+        value: null !== (t = null == m ? void 0 : m.selected_time_window) && void 0 !== t ? t : S.MuteUntilSeconds.ALWAYS
       })]
     })]
   })

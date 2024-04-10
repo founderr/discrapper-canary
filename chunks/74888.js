@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return m
+    return E
   }
 });
 var i = s("735250"),
@@ -42,7 +42,7 @@ function f(e) {
   })
 }
 
-function E(e) {
+function m(e) {
   let {
     onClose: t
   } = e;
@@ -62,13 +62,13 @@ function E(e) {
   })
 }
 
-function m(e) {
+function E(e) {
   let t = a.useRef(null);
   return (0, i.jsxs)(r.ModalRoot, {
     size: r.ModalSize.MEDIUM,
     transitionState: e.transitionState,
     "aria-label": S.default.Messages.NOTIFICATION_SETTINGS,
-    children: [(0, i.jsx)(E, {
+    children: [(0, i.jsx)(m, {
       onClose: e.onClose
     }), (0, i.jsxs)(r.ModalContent, {
       className: N.content,

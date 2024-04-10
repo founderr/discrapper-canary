@@ -18,20 +18,20 @@ var i = s("735250"),
   N = s("775666"),
   g = s("471445"),
   f = s("592125"),
-  E = s("324067"),
-  m = s("699516"),
+  m = s("324067"),
+  E = s("699516"),
   _ = s("9156"),
   T = s("594174"),
   x = s("823379"),
   I = s("621600"),
   O = s("423589"),
-  C = s("221259"),
-  p = s("113449"),
+  p = s("221259"),
+  C = s("113449"),
   M = s("686660"),
   v = s("958648"),
   L = s("569658"),
-  A = s("981631"),
-  j = s("689938"),
+  j = s("981631"),
+  A = s("689938"),
   R = s("214458");
 
 function b(e) {
@@ -44,7 +44,7 @@ function b(e) {
     ignoreNotificationSetting: !1
   }).map(e => f.default.getChannel(e)).filter(x.isNotNullish));
   (0, v.default)(a, () => s());
-  let n = (0, r.useStateFromStores)([E.default], () => E.default.getCategories(t)),
+  let n = (0, r.useStateFromStores)([m.default], () => m.default.getCategories(t)),
     l = a.map((e, t) => (0, i.jsxs)("div", {
       className: R.channelRow,
       children: [(0, i.jsx)(G, {
@@ -63,7 +63,7 @@ function b(e) {
         null != s && c.default.updateChannelOverrideSettings(t, e, {
           muted: !1,
           message_notifications: _.default.resolvedMessageNotifications(s),
-          flags: (0, p.withChannelUnreadFlags)(_.default.getChannelIdFlags(s.guild_id, s.id), _.default.resolveUnreadSetting(s))
+          flags: (0, C.withChannelUnreadFlags)(_.default.getChannelIdFlags(s.guild_id, s.id), _.default.resolveUnreadSetting(s))
         }, I.NotificationLabels.OverrideCreated)
       }
     }), l.length > 0 && (0, i.jsxs)("div", {
@@ -74,27 +74,27 @@ function b(e) {
           variant: "text-xs/bold",
           color: "text-muted",
           className: R.rowName,
-          children: j.default.Messages.CHANNEL_OR_CATEGORY
+          children: A.default.Messages.CHANNEL_OR_CATEGORY
         }), (0, i.jsx)(o.Text, {
           variant: "text-xs/bold",
           color: "text-muted",
           className: R.rowOption,
-          children: j.default.Messages.NOTIFICATION_PRESET_1
+          children: A.default.Messages.NOTIFICATION_PRESET_1
         }), (0, i.jsx)(o.Text, {
           variant: "text-xs/bold",
           color: "text-muted",
           className: R.rowOption,
-          children: j.default.Messages.NOTIFICATION_PRESET_2
+          children: A.default.Messages.NOTIFICATION_PRESET_2
         }), (0, i.jsx)(o.Text, {
           variant: "text-xs/bold",
           color: "text-muted",
           className: R.rowOption,
-          children: j.default.Messages.NOTIFICATION_PRESET_3
+          children: A.default.Messages.NOTIFICATION_PRESET_3
         }), (0, i.jsx)(o.Text, {
           variant: "text-xs/bold",
           color: "text-muted",
           className: R.rowOption,
-          children: j.default.Messages.NOTIFICATION_PRESET_CUSTOM
+          children: A.default.Messages.NOTIFICATION_PRESET_CUSTOM
         })]
       }), l.length > 0 && (0, i.jsx)("div", {
         className: R.channels,
@@ -108,16 +108,16 @@ function G(e) {
   let {
     channel: t,
     categories: s
-  } = e, n = (0, o.useToken)(d.default.unsafe_rawColors.GREEN_360).hex(), c = (0, r.useStateFromStores)([f.default], () => f.default.getChannel(null == t ? void 0 : t.parent_id)), E = (0, C.useChannelPresetSettings)(t), [_, x] = a.useState(!1);
+  } = e, n = (0, o.useToken)(d.default.unsafe_rawColors.GREEN_360).hex(), c = (0, r.useStateFromStores)([f.default], () => f.default.getChannel(null == t ? void 0 : t.parent_id)), m = (0, p.useChannelPresetSettings)(t), [_, x] = a.useState(!1);
   if (null == t) return null;
-  let I = j.default.Messages.NO_CATEGORY,
+  let I = A.default.Messages.NO_CATEGORY,
     O = (0, g.getChannelIconComponent)(t);
-  t.type === A.ChannelTypes.GUILD_CATEGORY && null != t.guild_id && "" !== t.guild_id ? I = j.default.Messages.NUM_CHANNELS.format({
+  t.type === j.ChannelTypes.GUILD_CATEGORY && null != t.guild_id && "" !== t.guild_id ? I = A.default.Messages.NUM_CHANNELS.format({
     num: null != s[t.id] ? s[t.id].length : 0
-  }) : null != c && (I = j.default.Messages.IN_CATEGORY.format({
-    categoryName: (0, S.computeChannelName)(c, T.default, m.default)
+  }) : null != c && (I = A.default.Messages.IN_CATEGORY.format({
+    categoryName: (0, S.computeChannelName)(c, T.default, E.default)
   }));
-  let p = _ ? M.Presets.CUSTOM : E.preset;
+  let C = _ ? M.Presets.CUSTOM : m.preset;
   return (0, i.jsx)("div", {
     children: (0, i.jsxs)("div", {
       className: l()(R.row, R.channel),
@@ -131,7 +131,7 @@ function G(e) {
           children: [(0, i.jsx)(o.Text, {
             variant: "text-md/semibold",
             className: R.modColor,
-            children: (0, S.computeChannelName)(t, T.default, m.default)
+            children: (0, S.computeChannelName)(t, T.default, E.default)
           }), (0, i.jsx)(o.Text, {
             variant: "text-xs/medium",
             className: R.modColor,
@@ -145,8 +145,8 @@ function G(e) {
             color: n,
             shape: o.Checkbox.Shapes.ROUND,
             type: o.Checkbox.Types.INVERTED,
-            value: p === M.Presets.ALL_MESSAGES,
-            onChange: () => ((0, C.updateChannelPreset)(t.guild_id, t.id, M.Presets.ALL_MESSAGES), x(!1))
+            value: C === M.Presets.ALL_MESSAGES,
+            onChange: () => ((0, p.updateChannelPreset)(t.guild_id, t.id, M.Presets.ALL_MESSAGES), x(!1))
           })
         })
       }), (0, i.jsx)("div", {
@@ -156,8 +156,8 @@ function G(e) {
             color: n,
             shape: o.Checkbox.Shapes.ROUND,
             type: o.Checkbox.Types.INVERTED,
-            value: p === M.Presets.MENTIONS,
-            onChange: () => ((0, C.updateChannelPreset)(t.guild_id, t.id, M.Presets.MENTIONS), x(!1))
+            value: C === M.Presets.MENTIONS,
+            onChange: () => ((0, p.updateChannelPreset)(t.guild_id, t.id, M.Presets.MENTIONS), x(!1))
           })
         })
       }), (0, i.jsx)("div", {
@@ -167,8 +167,8 @@ function G(e) {
             color: n,
             shape: o.Checkbox.Shapes.ROUND,
             type: o.Checkbox.Types.INVERTED,
-            value: p === M.Presets.NOTHING,
-            onChange: () => ((0, C.updateChannelPreset)(t.guild_id, t.id, M.Presets.NOTHING), x(!1))
+            value: C === M.Presets.NOTHING,
+            onChange: () => ((0, p.updateChannelPreset)(t.guild_id, t.id, M.Presets.NOTHING), x(!1))
           })
         })
       }), (0, i.jsx)("div", {
@@ -178,7 +178,7 @@ function G(e) {
             onClick: e => {
               (0, u.openContextMenu)(e, () => (0, i.jsx)(o.Menu, {
                 navId: "ChannelNotificationCustomSettingsItems",
-                "aria-label": j.default.Messages.NOTIFICATION_SETTINGS_CHANNELS_CUSTOM_MENU_ARIA_LABEL,
+                "aria-label": A.default.Messages.NOTIFICATION_SETTINGS_CHANNELS_CUSTOM_MENU_ARIA_LABEL,
                 onClose: () => {},
                 onSelect: () => {},
                 children: (0, N.useChannelNotificationCustomSettingsItem)(t, () => x(!1))
@@ -187,12 +187,12 @@ function G(e) {
             color: n,
             shape: o.Checkbox.Shapes.ROUND,
             type: o.Checkbox.Types.INVERTED,
-            value: p === M.Presets.CUSTOM,
+            value: C === M.Presets.CUSTOM,
             onChange: () => x(!0)
           })
         })
       }), (0, i.jsx)(h.default, {
-        onClick: () => (0, C.updateChannelToGuildDefault)(t.guild_id, t.id),
+        onClick: () => (0, p.updateChannelToGuildDefault)(t.guild_id, t.id),
         className: R.removeButton
       })]
     })
