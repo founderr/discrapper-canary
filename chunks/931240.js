@@ -14,9 +14,9 @@ var a = n("392711"),
   r = n("924801"),
   o = n("981631");
 async function u(e, t) {
-  var n, u, d;
-  let c = (0, a.uniqWith)(null !== (n = t.primetime) && void 0 !== n ? n : [], a.isEqual),
-    f = (0, r.formatTimesForServer)(c);
+  var n, u, d, c, f;
+  let E = (0, a.uniqWith)(null !== (n = t.primetime) && void 0 !== n ? n : [], a.isEqual),
+    h = (0, r.formatTimesForServer)(E);
   l.default.dispatch({
     type: "CLAN_SETUP_SUBMIT",
     guildId: e
@@ -28,10 +28,12 @@ async function u(e, t) {
         tag: t.tag,
         description: t.description,
         play_style: t.playstyle,
-        search_terms: Array.from(null !== (u = t.interests) && void 0 !== u ? u : new Set),
-        game_application_ids: Array.from((null !== (d = t.selectedGames) && void 0 !== d ? d : new Map).keys()),
-        prime_time: f,
-        verification_form: t.verificationForm
+        search_terms: Array.from(null !== (d = t.interests) && void 0 !== d ? d : new Set),
+        game_application_ids: Array.from((null !== (c = t.selectedGames) && void 0 !== c ? c : new Map).keys()),
+        prime_time: h,
+        verification_form: {
+          form_fields: null !== (f = null === (u = t.verificationForm) || void 0 === u ? void 0 : u.formFields) && void 0 !== f ? f : []
+        }
       }
     }), l.default.dispatch({
       type: "CLAN_SETUP_SUCCESS",
