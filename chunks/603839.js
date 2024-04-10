@@ -6,20 +6,28 @@ var a = n("735250"),
   i = n("748780"),
   r = n("442837"),
   o = n("607070"),
-  u = n("650461"),
-  d = n("602014"),
-  c = n("188837"),
-  f = n("496376"),
-  E = n("308083"),
-  h = n("653196");
+  u = n("931240"),
+  d = n("650461"),
+  c = n("602014"),
+  f = n("188837"),
+  E = n("496376"),
+  h = n("308083"),
+  _ = n("653196");
 t.default = e => {
   let {
     guildId: t,
-    onClose: n
-  } = e, _ = (0, r.useStateFromStores)([u.default], () => null == u.default.getStateForGuild(t).progress), C = (0, r.useStateFromStores)([o.default], () => o.default.useReducedMotion), m = (0, l.useSpring)({
+    onClose: n,
+    gameId: C
+  } = e, m = (0, r.useStateFromStores)([d.default], () => null == d.default.getStateForGuild(t).progress), S = (0, r.useStateFromStores)([o.default], () => o.default.useReducedMotion), [I, p] = s.useState(m && !S ? h.ClanSetupModalPages.INTRO_ANIMATION : h.ClanSetupModalPages.SETUP);
+  s.useEffect(() => {
+    null != C && (0, u.updateClanSettings)(t, {
+      requiredGameId: C
+    })
+  }, [C, t]);
+  let T = (0, l.useSpring)({
     from: {
-      opacity: C ? 1 : 0,
-      transform: C ? "scale(1)" : "scale(1.2)"
+      opacity: S ? 1 : 0,
+      transform: S ? "scale(1)" : "scale(1.2)"
     },
     to: {
       opacity: 1,
@@ -27,32 +35,32 @@ t.default = e => {
     },
     config: {
       easing: i.default.Easing.quad,
-      duration: C ? 0 : 200,
+      duration: S ? 0 : 200,
       clamp: !0
     }
-  }), [S, I] = s.useState(_ && !C ? E.ClanSetupModalPages.INTRO_ANIMATION : E.ClanSetupModalPages.SETUP);
+  });
   return (0, a.jsx)(l.animated.div, {
-    style: m,
-    className: h.modal,
+    style: T,
+    className: _.modal,
     children: (0, a.jsx)("div", {
-      className: h.modalContents,
+      className: _.modalContents,
       children: (() => {
-        switch (S) {
-          case E.ClanSetupModalPages.INTRO_ANIMATION:
-            return (0, a.jsx)(d.default, {
-              guildId: t,
-              setPage: I
-            });
-          case E.ClanSetupModalPages.SETUP:
-            return (0, a.jsx)(f.default, {
-              guildId: t,
-              setPage: I,
-              onClose: n
-            });
-          case E.ClanSetupModalPages.SIGN:
+        switch (I) {
+          case h.ClanSetupModalPages.INTRO_ANIMATION:
             return (0, a.jsx)(c.default, {
               guildId: t,
-              setPage: I,
+              setPage: p
+            });
+          case h.ClanSetupModalPages.SETUP:
+            return (0, a.jsx)(E.default, {
+              guildId: t,
+              setPage: p,
+              onClose: n
+            });
+          case h.ClanSetupModalPages.SIGN:
+            return (0, a.jsx)(f.default, {
+              guildId: t,
+              setPage: p,
               onClose: n
             });
           default:

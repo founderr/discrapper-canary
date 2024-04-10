@@ -1,25 +1,6 @@
 "use strict";
-n.r(t), n.d(t, {
-  GENSHIN_ID: function() {
-    return s
-  },
-  VALORANT_ID: function() {
-    return a
-  },
-  buildClanFromServer: function() {
-    return l
-  },
-  isLoadedSearchResult: function() {
-    return i
-  },
-  isUnloadedSearchResult: function() {
-    return r
-  }
-});
-let a = "700136079562375258",
-  s = "762434991303950386";
 
-function l(e) {
+function a(e) {
   return {
     id: e.id,
     name: e.name,
@@ -40,10 +21,21 @@ function l(e) {
   }
 }
 
-function i(e) {
+function s(e) {
   return "loaded" === e.status
 }
 
-function r(e) {
+function l(e) {
   return "unloaded" === e.status
 }
+n.r(t), n.d(t, {
+  buildClanFromServer: function() {
+    return a
+  },
+  isLoadedSearchResult: function() {
+    return s
+  },
+  isUnloadedSearchResult: function() {
+    return l
+  }
+})

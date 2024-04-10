@@ -17,6 +17,7 @@ e.exports = {
   playstyleSelect: "playstyleSelect_b7d88b",
   playstyleTitle: "playstyleTitle__00d17",
   plusIcon: "plusIcon__22efe",
+  removableGame: "removableGame_ea342b",
   selectedGame: "selectedGame__0084c",
   selectedGameCheck: "selectedGameCheck__389d8",
   selectedInterest: "selectedInterest_aa523d",

@@ -148,23 +148,24 @@ t.default = e => {
       errors: null !== (n = a.errors) && void 0 !== n ? n : {}
     }
   }), {
-    selectedGames: P,
-    playstyle: M,
-    interests: y,
-    description: x,
-    tag: D,
-    primetime: b,
-    currentStep: U
-  } = c, j = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), [G, w] = s.useState(!0);
+    requiredGameId: P,
+    selectedGames: M,
+    playstyle: y,
+    interests: x,
+    description: D,
+    tag: b,
+    primetime: U,
+    currentStep: j
+  } = c, G = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), [w, k] = s.useState(!0);
   s.useEffect(() => {
     u.default.getDetectableGames()
   }, []);
-  let k = s.useCallback(e => f.updateClanSettings(t, {
+  let F = s.useCallback(e => f.updateClanSettings(t, {
       currentStep: e
     }), [t]),
-    F = s.useCallback(e => f.updateClanSettings(t, e), [t]),
-    B = s.useCallback(() => {
-      w(!1), setTimeout(() => n(N.ClanSetupModalPages.SIGN), 199)
+    B = s.useCallback(e => f.updateClanSettings(t, e), [t]),
+    H = s.useCallback(() => {
+      k(!1), setTimeout(() => n(N.ClanSetupModalPages.SIGN), 199)
     }, [n]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(o.Button, {
@@ -176,10 +177,10 @@ t.default = e => {
       children: A.default.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
     }), (0, a.jsxs)("div", {
       className: i()(v.mainContent, v.fadeIn, {
-        [v.fadeOut]: !G
+        [v.fadeOut]: !w
       }),
       children: [(0, a.jsx)(o.Sequencer, {
-        step: U,
+        step: j,
         steps: R,
         sideMargin: 24,
         verticalMargin: 24,
@@ -190,41 +191,42 @@ t.default = e => {
           className: v.scroller,
           fade: !0,
           children: (() => {
-            switch (U) {
+            switch (j) {
               case N.ClanSetupSteps.GAMES:
                 return (0, a.jsx)(C.default, {
-                  handleUpdate: F,
-                  selectedGames: P,
+                  handleUpdate: B,
+                  selectedGames: M,
+                  requiredGameId: P,
                   error: O.selectedGames
                 });
               case N.ClanSetupSteps.PLAYSTYLE:
                 return (0, a.jsx)(p.default, {
-                  handleUpdate: F,
-                  playstyle: M,
+                  handleUpdate: B,
+                  playstyle: y,
                   error: O.playstyle
                 });
               case N.ClanSetupSteps.INTERESTS:
                 return (0, a.jsx)(m.default, {
-                  handleUpdate: F,
-                  interests: y,
+                  handleUpdate: B,
+                  interests: x,
                   error: O.interests
                 });
               case N.ClanSetupSteps.DESCRIPTION:
                 return (0, a.jsx)(_.default, {
-                  handleUpdate: F,
-                  description: x,
+                  handleUpdate: B,
+                  description: D,
                   error: O.description
                 });
               case N.ClanSetupSteps.PRIMETIME:
                 return (0, a.jsx)(T.default, {
-                  handleUpdate: F,
-                  selectedTimes: b,
+                  handleUpdate: B,
+                  selectedTimes: U,
                   error: O.primetime
                 });
               case N.ClanSetupSteps.CUSTOMIZE:
                 return (0, a.jsx)(g.default, {
-                  handleUpdate: F,
-                  tag: D,
+                  handleUpdate: B,
+                  tag: b,
                   error: O.tag
                 });
               case N.ClanSetupSteps.MEMBER_APPLICATION:
@@ -261,13 +263,13 @@ t.default = e => {
           })()
         })
       }), (0, a.jsx)(L, {
-        setCurrentStep: k,
+        setCurrentStep: F,
         progress: c,
-        onLastStep: B
+        onLastStep: H
       })]
     }), (0, a.jsx)("div", {
       className: i()(v.overviewSidebar, {
-        [v.fadeOut]: j && !G
+        [v.fadeOut]: G && !w
       }),
       children: (0, a.jsx)(h.default, {
         guildId: t

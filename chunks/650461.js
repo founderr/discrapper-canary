@@ -63,7 +63,8 @@ class _ extends(a = s.default.PersistedStore) {
           verificationForm: null !== (t = e.verificationForm) && void 0 !== t ? t : {
             ...i.NO_MEMBER_VERIFICATION_FORM
           },
-          currentStep: e.currentStep
+          currentStep: e.currentStep,
+          requiredGameId: e.requiredGameId
         }
       }(e.progressByGuild[t])
   }
@@ -79,7 +80,8 @@ class _ extends(a = s.default.PersistedStore) {
         tag: t.tag,
         primetime: t.primetime,
         verificationForm: t.verificationForm,
-        currentStep: t.currentStep
+        currentStep: t.currentStep,
+        requiredGameId: t.requiredGameId
       }
     }
     return {

@@ -23,7 +23,8 @@ function c(e) {
       } = e;
       return (0, a.jsx)(r.default, {
         onClose: n,
-        guildId: t
+        guildId: t,
+        gameId: o.VALORANT_ID
       })
     }, {
       layerKey: o.CLAN_SETUP_MODAL_LAYER_KEY
