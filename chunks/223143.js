@@ -49,8 +49,8 @@ function c(e) {
   }(e), {
     isClaiming: m,
     fetchError: f,
-    claimError: C,
-    isFetching: g,
+    claimError: g,
+    isFetching: C,
     purchases: v
   } = function() {
     let e = "useFetchPurchases";
@@ -77,12 +77,12 @@ function c(e) {
     }
   }();
   return {
-    isFetching: c || g,
+    isFetching: c || C,
     isFetchingCategories: c,
-    isFetchingPurchases: g,
+    isFetchingPurchases: C,
     isClaiming: m,
     categories: d,
     purchases: v,
-    error: null !== (t = null != h ? h : f) && void 0 !== t ? t : C
+    error: null !== (t = null != h ? h : f) && void 0 !== t ? t : g
   }
 }

@@ -25,7 +25,7 @@ t.default = function(e) {
     T(!0), C && !m && !g && (null == S || S())
   }, v = () => {
     T(!1)
-  }, R = (e, t) => {
+  }, O = (e, t) => {
     null != t && (N(!0), (0, d.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -52,7 +52,7 @@ t.default = function(e) {
           [f.active]: m || g,
           [f.firstItem]: 0 === t
         }),
-        onContextMenu: e => R(e, E),
+        onContextMenu: e => O(e, E),
         onMouseEnter: A,
         onMouseLeave: v,
         onClick: null != _ ? _ : void 0,

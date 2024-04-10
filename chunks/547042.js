@@ -36,11 +36,11 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
       analyticsType: N,
       ctaText: A,
       dismissText: v,
-      description: R,
-      learnMore: O,
+      description: O,
+      learnMore: R,
       title: L,
-      videoPosterUrl: P,
-      videoUrl: M,
+      videoPosterUrl: M,
+      videoUrl: P,
       ctaOnClick: y
     } = function(e) {
       switch (e) {
@@ -85,8 +85,8 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
             className: p.content,
             children: [(0, l.jsx)(_.default, {
               className: p.video,
-              src: M,
-              poster: P,
+              src: P,
+              poster: M,
               width: 224,
               height: 126,
               loop: !0,
@@ -104,7 +104,7 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
               className: p.subheaderText,
               variant: "text-xs/normal",
               color: "always-white",
-              children: [R, O ? (0, l.jsxs)(l.Fragment, {
+              children: [O, R ? (0, l.jsxs)(l.Fragment, {
                 children: [" ", (0, l.jsx)(o.Anchor, {
                   className: p.learnMoreLink,
                   href: "https://support.discord.com/hc/articles/4422142836759",

@@ -27,11 +27,11 @@ var a = n("735250"),
   N = n("118379"),
   A = n("652515"),
   v = n("544978"),
-  R = n("194729"),
-  O = n("668940"),
+  O = n("194729"),
+  R = n("668940"),
   L = n("372900"),
-  P = n("6039"),
-  M = n("637853"),
+  M = n("6039"),
+  P = n("637853"),
   y = n("326145"),
   x = n("102267"),
   D = n("362416"),
@@ -109,13 +109,13 @@ let ep = () => (0, a.jsx)("div", {
     name: "ChannelsAndRolesPage",
     renderLoader: ep
   }),
-  eR = (0, d.makeLazy)({
+  eO = (0, d.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("75475"), n.e("19878"), n.e("38359"), n.e("50498")]).then(n.bind(n, "599263")),
     webpackId: "599263",
     name: "GuildOnboardingPage",
     renderLoader: ep
   }),
-  eO = e => {
+  eR = e => {
     let {
       match: t
     } = e, n = (0, f.useStateFromStores)([$.default, en.default], () => {
@@ -165,7 +165,7 @@ let ep = () => (0, a.jsx)("div", {
           selectedSection: eC.GuildOnboardingTab.BROWSE
         });
       case e_.StaticChannelRoute.GUILD_ONBOARDING:
-        return (0, a.jsx)(eR, {
+        return (0, a.jsx)(eO, {
           guildId: s
         });
       case e_.StaticChannelRoute.CUSTOMIZE_COMMUNITY:
@@ -180,7 +180,7 @@ let ep = () => (0, a.jsx)("div", {
       default:
         (0, es.assertNever)(l)
     }
-    if ((0, M.isBlockedByOnboarding)(r, o)) return (0, a.jsx)(y.default, {
+    if ((0, P.isBlockedByOnboarding)(r, o)) return (0, a.jsx)(y.default, {
       guildId: s,
       channelId: l
     });
@@ -200,13 +200,13 @@ let ep = () => (0, a.jsx)("div", {
     } = (0, Z.default)(), n = (0, f.useStateFromStores)([en.default], () => null != t ? t : en.default.getChannelId(e));
     return function() {
       return window.location.pathname.startsWith(eh.Routes.GUILD_DISCOVERY)
-    }() ? (0, a.jsx)(O.default, {}) : null != e ? (0, a.jsx)(D.default, {
+    }() ? (0, a.jsx)(R.default, {}) : null != e ? (0, a.jsx)(D.default, {
       selectedChannelId: n,
       guildId: e
     }, e) : (0, a.jsx)(ed.default, {})
   });
 
-function eP(e) {
+function eM(e) {
   let t = (0, Z.default)(e => {
     let {
       guildId: t
@@ -218,12 +218,12 @@ function eP(e) {
     guildId: t
   })
 }
-let eM = e => (0, a.jsx)(eO, {
+let eP = e => (0, a.jsx)(eR, {
     ...e
   }),
   ey = e => {
     let t = null != e && e.length > 0 && e.startsWith("?") ? e.split("?")[1] : null;
-    return (0, a.jsx)(R.default, {
+    return (0, a.jsx)(O.default, {
       searchRoute: t
     })
   },
@@ -231,7 +231,7 @@ let eM = e => (0, a.jsx)(eO, {
     let {
       match: t
     } = e;
-    return null != t.params.guildId ? (0, a.jsx)(P.default, {
+    return null != t.params.guildId ? (0, a.jsx)(M.default, {
       guildId: t.params.guildId,
       inviteCode: t.params.inviteCode
     }) : null
@@ -332,7 +332,7 @@ function eV(e) {
         children: (0, a.jsx)(Q.default, {})
       }), (0, a.jsx)(Y.default, {}), (0, a.jsx)(ec.default, {
         section: eh.AnalyticsSections.ACTIVITY_PANEL,
-        children: (0, a.jsx)(eP, {
+        children: (0, a.jsx)(eM, {
           className: eI.activityPanel
         })
       }), (0, a.jsx)(ec.default, {
@@ -459,7 +459,7 @@ function eY() {
                   disableTrack: !0
                 }), (0, a.jsx)(I.default, {
                   path: [eh.Routes.CHANNEL_THREAD_VIEW(":guildId", ":channelId", ":threadId", ":messageId?"), eh.Routes.CHANNEL(eh.ME, ":channelId"), eh.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")],
-                  render: eM,
+                  render: eP,
                   impressionName: u.ImpressionNames.GUILD_CHANNEL,
                   disableTrack: !0
                 }), (0, a.jsx)(I.default, {

@@ -27,9 +27,9 @@ t.default = e => {
     interests: N,
     description: A,
     tag: v,
-    primetime: R,
-    verificationForm: O
-  } = null != S ? S : {}, L = s.useRef(null), P = s.useRef(null), M = s.useRef(null), [y, x] = s.useState(!1), D = async () => {
+    primetime: O,
+    verificationForm: R
+  } = null != S ? S : {}, L = s.useRef(null), M = s.useRef(null), P = s.useRef(null), [y, x] = s.useState(!1), D = async () => {
     try {
       await u.convertGuildToClan(t, {
         selectedGames: T,
@@ -37,8 +37,8 @@ t.default = e => {
         interests: N,
         description: A,
         tag: v,
-        primetime: R,
-        verificationForm: O
+        primetime: O,
+        verificationForm: R
       })
     } catch (e) {
       return
@@ -56,7 +56,7 @@ t.default = e => {
       paddingLeft: 120
     }
   }), U = (0, l.useSpring)({
-    ref: P,
+    ref: M,
     config: l.config.slow,
     from: {
       flex: m ? 1 : 0,
@@ -69,7 +69,7 @@ t.default = e => {
       marginLeft: -32
     }
   }), j = (0, l.useSpring)({
-    ref: M,
+    ref: P,
     config: l.config.default,
     from: {
       opacity: 0
@@ -78,7 +78,7 @@ t.default = e => {
       opacity: 1
     }
   });
-  (0, l.useChain)([L, P, M], [0, 0, 1]);
+  (0, l.useChain)([L, M, P], [0, 0, 1]);
   let G = s.useMemo(() => null != I && Object.values(I).some(e => null != e), [I]);
   return (0, a.jsxs)("div", {
     className: h.animationContainer,

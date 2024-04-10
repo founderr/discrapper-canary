@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   DiscoverSearchResultPlaceholder: function() {
-    return R
+    return O
   }
 }), n("47120");
 var a = n("735250"),
@@ -27,19 +27,19 @@ var a = n("735250"),
   N = n("208596"),
   A = n("129512"),
   v = n("330065");
-let R = () => (0, a.jsx)("div", {
+let O = () => (0, a.jsx)("div", {
   className: N.placeholder
 });
 t.default = e => {
   var t;
   let {
     guild: l,
-    theme: R,
-    onView: O,
+    theme: O,
+    onView: R,
     onTagClick: L
   } = e, {
-    id: P,
-    discoverySplash: M,
+    id: M,
+    discoverySplash: P,
     icon: y,
     name: x,
     description: D,
@@ -49,8 +49,8 @@ t.default = e => {
   } = l, [G, w] = s.useState(!1), [k, F] = s.useState(!1), {
     analyticsLocations: B
   } = (0, u.default)(), H = _.default.getGuildDiscoverySplashURL({
-    id: P,
-    splash: M,
+    id: M,
+    splash: P,
     size: 240 * (0, d.getDevicePixelRatio)()
   }), V = null != H ? H : function(e) {
     switch (e) {
@@ -59,8 +59,8 @@ t.default = e => {
       case T.ThemeTypes.LIGHT:
         return v
     }
-  }(R), Y = null !== (t = _.default.getGuildIconURL({
-    id: P,
+  }(O), Y = null !== (t = _.default.getGuildIconURL({
+    id: M,
     icon: y,
     size: 32
   })) && void 0 !== t ? t : void 0, W = async e => {
@@ -83,7 +83,7 @@ t.default = e => {
       }
       F(!0);
       try {
-        null != O && await O(l.id)
+        null != R && await R(l.id)
       } finally {
         F(!1)
       }

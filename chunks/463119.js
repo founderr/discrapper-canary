@@ -27,20 +27,20 @@ var a = n("735250"),
   N = n("335131"),
   A = n("141594"),
   v = n("302800"),
-  R = n("981631"),
-  O = n("689938"),
+  O = n("981631"),
+  R = n("689938"),
   L = n("592761");
-let P = e => {
+let M = e => {
     let {
       color: t
     } = e;
     return (0, a.jsx)(T.TextBadge, {
       className: L.newBadge,
       color: null != t ? t : S.default.STATUS_DANGER_BACKGROUND,
-      text: O.default.Messages.NEW
+      text: R.default.Messages.NEW
     })
   },
-  M = e => {
+  P = e => {
     let {
       selected: t,
       locationState: n,
@@ -54,9 +54,9 @@ let P = e => {
     } = (0, C.default)(c);
     return (0, a.jsx)(f.LinkButton, {
       selected: t,
-      route: R.Routes.COLLECTIBLES_SHOP,
+      route: O.Routes.COLLECTIBLES_SHOP,
       icon: p.default,
-      text: O.default.Messages.COLLECTIBLES_SHOP,
+      text: R.default.Messages.COLLECTIBLES_SHOP,
       locationState: n,
       ...d,
       ...u,
@@ -123,7 +123,7 @@ let P = e => {
       allowOverflow: !0,
       hideOnClick: !1,
       "aria-label": r.title(),
-      children: e => (0, a.jsxs)(M, {
+      children: e => (0, a.jsxs)(P, {
         className: null != r.entryPointClassName ? (0, g.getClass)(L, r.entryPointClassName) : void 0,
         selected: t,
         locationState: n,
@@ -138,7 +138,7 @@ let P = e => {
           }),
           alt: "",
           "aria-hidden": !0
-        }), (0, a.jsx)(P, {
+        }), (0, a.jsx)(M, {
           color: r.badgeColor
         })]
       })
@@ -168,12 +168,12 @@ let P = e => {
       delay: 100,
       hideOnClick: !1,
       "aria-label": i.title(),
-      children: e => (0, a.jsx)(M, {
+      children: e => (0, a.jsx)(P, {
         selected: t,
         locationState: n,
         ...e,
         onButtonClick: l,
-        children: (0, a.jsx)(P, {
+        children: (0, a.jsx)(M, {
           color: i.badgeColor
         })
       })
@@ -203,7 +203,7 @@ let P = e => {
           displayOptions: s
         })
     }
-    return (0, a.jsx)(M, {
+    return (0, a.jsx)(P, {
       selected: t,
       locationState: n
     })

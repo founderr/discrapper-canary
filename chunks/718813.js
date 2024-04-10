@@ -42,12 +42,12 @@ let A = (0, _.makeLazy)({
     webpackId: "869779",
     name: "ChannelSettings"
   }),
-  R = (0, _.makeLazy)({
+  O = (0, _.makeLazy)({
     createPromise: () => Promise.all([n.e("99387"), n.e("18249")]).then(n.bind(n, "838819")),
     webpackId: "838819",
     name: "CollectiblesShop"
   }),
-  O = (0, _.makeLazy)({
+  R = (0, _.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("24267"), n.e("33053"), n.e("51238"), n.e("75475"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502")]).then(n.bind(n, "994763")),
     webpackId: "994763",
     name: "GuildSettings"
@@ -55,11 +55,11 @@ let A = (0, _.makeLazy)({
   L = {
     [T.Layers.USER_SETTINGS]: () => (0, s.jsx)(A, {}),
     [T.Layers.CHANNEL_SETTINGS]: () => (0, s.jsx)(v, {}),
-    [T.Layers.GUILD_SETTINGS]: () => (0, s.jsx)(O, {}),
-    [T.Layers.COLLECTIBLES_SHOP]: () => (0, s.jsx)(R, {})
+    [T.Layers.GUILD_SETTINGS]: () => (0, s.jsx)(R, {}),
+    [T.Layers.COLLECTIBLES_SHOP]: () => (0, s.jsx)(O, {})
   },
-  P = "SHOWN",
-  M = "HIDDEN",
+  M = "SHOWN",
+  P = "HIDDEN",
   y = {
     friction: 10,
     tension: 100
@@ -82,8 +82,8 @@ class D extends(a = l.PureComponent) {
       mode: n
     } = e;
     if (t !== n) {
-      if (t === P && n === M) return this.animateIn();
-      if (t === M && n === P) return this.animateUnder()
+      if (t === M && n === P) return this.animateIn();
+      if (t === P && n === M) return this.animateUnder()
     }
   }
   componentWillEnter(e) {
@@ -157,13 +157,13 @@ class D extends(a = l.PureComponent) {
       children: n,
       baseLayer: a,
       ...l
-    } = this.props, i = e || t === M ? this.getAnimatedStyle() : null, u = (0, s.jsx)(o.default.div, {
+    } = this.props, i = e || t === P ? this.getAnimatedStyle() : null, u = (0, s.jsx)(o.default.div, {
       ref: e => this.containerRef.current = null != e ? e.refs.node : void 0,
-      "aria-hidden": t === M,
+      "aria-hidden": t === P,
       className: r()(g.layer, {
         [g.baseLayer]: a,
         [g.animating]: e,
-        "stop-animations": t === M
+        "stop-animations": t === P
       }),
       style: i,
       ...l,
@@ -194,7 +194,7 @@ class D extends(a = l.PureComponent) {
     super(e), N(this, "containerRef", l.createRef());
     let t = 1,
       n = 1;
-    e.mode === M && (t = .93, n = 0), this.state = {
+    e.mode === P && (t = .93, n = 0), this.state = {
       animating: !1,
       scale: new o.default.Value(t),
       opacity: new o.default.Value(n),
@@ -221,7 +221,7 @@ class b extends l.PureComponent {
       length: a
     } = t, l = [];
     return l.push((0, s.jsx)(D, {
-      mode: 0 !== a || n ? M : P,
+      mode: 0 !== a || n ? P : M,
       baseLayer: !0,
       children: e
     }, "layer-base")), t.forEach((e, t) => l.push(this.renderComponent(e, t, a))), l
@@ -229,7 +229,7 @@ class b extends l.PureComponent {
   renderComponent(e, t, n) {
     let a;
     return a = "string" == typeof e ? L[e]() : (0, s.jsx)(e, {}), (0, s.jsxs)(D, {
-      mode: t === n - 1 ? P : M,
+      mode: t === n - 1 ? M : P,
       children: [(0, s.jsx)(x, {}), a]
     }, "layer-".concat(t))
   }

@@ -26,11 +26,11 @@ var a, s = n("735250"),
   N = n("151011"),
   A = n("880008"),
   v = n("466111"),
-  R = n("931003"),
-  O = n("626135"),
+  O = n("931003"),
+  R = n("626135"),
   L = n("780570"),
-  P = n("624138"),
-  M = n("645818"),
+  M = n("624138"),
+  P = n("645818"),
   y = n("981631"),
   x = n("689938"),
   D = n("373438");
@@ -43,8 +43,8 @@ function b(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let U = (0, P.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
-  j = (0, P.cssValueToNumber)(c.default.GAME_LIST_LINKED_TO_GLOW_DURATION),
+let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
+  j = (0, M.cssValueToNumber)(c.default.GAME_LIST_LINKED_TO_GLOW_DURATION),
   G = Object.freeze({
     [y.GameTableListKeys.PLATFORM]: "Platform",
     [y.GameTableListKeys.LAST_PLAYED]: "Last Played",
@@ -144,9 +144,9 @@ let U = (0, P.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
           }), (0, s.jsx)(w, {
             flag: y.LibraryApplicationFlags.OVERLAY_DISABLED,
             item: e,
-            icon: R.default,
+            icon: O.default,
             tooltip: x.default.Messages.GAME_LIBRARY_OVERLAY_DISABLED_TOOLTIP
-          }), (0, s.jsx)(M.default, {
+          }), (0, s.jsx)(P.default, {
             className: r()(D.settingIcon, {
               [D.hidden]: !e.supportsCloudSync
             }),
@@ -272,7 +272,7 @@ class B extends(a = l.PureComponent) {
       }
       e.num_applications_total++
     }
-    O.default.track(y.AnalyticEvents.LIBRARY_VIEWED, {
+    R.default.track(y.AnalyticEvents.LIBRARY_VIEWED, {
       ...e,
       load_id: t.loadId
     })
@@ -396,7 +396,7 @@ class B extends(a = l.PureComponent) {
 }
 
 function H(e) {
-  let t = l.useContext(O.AnalyticsContext),
+  let t = l.useContext(R.AnalyticsContext),
     n = (0, o.useLocation)(),
     {
       applicationViewItems: a,

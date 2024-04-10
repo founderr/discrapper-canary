@@ -44,14 +44,14 @@ function v(e) {
       lastDismissedGracePeriod: I.default.getLastDismissedGracePeriodForGuild(n),
       isGracePeriodVisible: I.default.isVisible(n)
     })),
-    R = (0, i.useStateFromStores)([_.default], () => _.default.isVisible(e)),
-    O = (0, i.useStateFromStores)([T.default], () => T.default.isVisible(e)),
+    O = (0, i.useStateFromStores)([_.default], () => _.default.isVisible(e)),
+    R = (0, i.useStateFromStores)([T.default], () => T.default.isVisible(e)),
     L = (0, i.useStateFromStores)([S.default], () => S.default.can(A.Permissions.ADMINISTRATOR, e)),
-    P = null != s && Date.now() - s <= A.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
-    M = null != e ? e.premiumSubscriberCount : 0,
-    y = (0, N.getGuildTierFromAppliedBoostCount)(M, n) !== A.BoostedGuildTiers.NONE,
+    M = null != s && Date.now() - s <= A.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
+    P = null != e ? e.premiumSubscriberCount : 0,
+    y = (0, N.getGuildTierFromAppliedBoostCount)(P, n) !== A.BoostedGuildTiers.NONE,
     x = null != a && Date.now() - a <= 432e5,
-    D = !x && !P && L && y,
+    D = !x && !M && L && y,
     b = (0, d.useGuildHasLiveChannelNotice)(n),
     U = (0, i.useStateFromStores)([p.default], () => p.default.isVisible(e)),
     j = E.default.useShouldShowChannelNotice(n),
@@ -78,9 +78,9 @@ function v(e) {
       }, 30 * Math.random() * g.default.Millis.SECOND)), () => {
         window.clearTimeout(e)
       }
-    }, [n, D]), R) return 0;
+    }, [n, D]), O) return 0;
   if (v) return 1;
-  if (O) return 2;
+  if (R) return 2;
   else if (b || null != V) return 3;
   else if (U) return 4;
   else if (j) return 5;

@@ -31,11 +31,11 @@ var a, s, l = n("735250"),
   N = n("263704"),
   A = n("465670"),
   v = n("242315"),
-  R = n("393112"),
-  O = n("170039"),
+  O = n("393112"),
+  R = n("170039"),
   L = n("602623"),
-  P = n("626135"),
-  M = n("823379"),
+  M = n("626135"),
+  P = n("823379"),
   y = n("15274"),
   x = n("924301"),
   D = n("504160"),
@@ -158,7 +158,7 @@ function Q(e) {
     className: K.joinButton,
     innerClassName: K.rsvpButton,
     onClick: function() {
-      (0, H.default)(t.id, null, t.guild_id, () => setTimeout(() => (0, D.hideUpcomingEventNotice)(t.id), 1e3)), P.default.track(Y.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
+      (0, H.default)(t.id, null, t.guild_id, () => setTimeout(() => (0, D.hideUpcomingEventNotice)(t.id), 1e3)), M.default.track(Y.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
         guild_id: t.guild_id,
         notice_type: n
       })
@@ -196,7 +196,7 @@ function Z(e) {
     date: h
   });
   return i.useEffect(() => {
-    P.default.track(Y.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
+    M.default.track(Y.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
       notice_type: a,
       guild_id: n.guild_id
     })
@@ -217,7 +217,7 @@ function Z(e) {
         })
       }), (0, l.jsx)(o.Clickable, {
         onClick: () => {
-          P.default.track(Y.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
+          M.default.track(Y.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
             notice_type: a,
             guild_id: n.guild_id
           }), (0, D.hideUpcomingEventNotice)(n.id)
@@ -247,7 +247,7 @@ function Z(e) {
         width: 16,
         height: 16,
         className: K.stageIcon
-      }) : (0, l.jsx)(R.default, {
+      }) : (0, l.jsx)(O.default, {
         width: 16,
         height: 16,
         className: K.stageIcon
@@ -275,7 +275,7 @@ function X(e) {
     heading: W.default.Messages.HAPPENING_NOW,
     topic: t.name,
     location: (0, j.guildEventDetailsParser)(n, !0),
-    locationIcon: (0, l.jsx)(R.default, {
+    locationIcon: (0, l.jsx)(O.default, {
       width: 16,
       height: 16,
       className: K.stageIcon
@@ -340,7 +340,7 @@ function ee(e) {
       height: 14,
       className: K.stageIcon
     }),
-    locationIcon: (0, l.jsx)(O.default, {
+    locationIcon: (0, l.jsx)(R.default, {
       width: 16,
       height: 16,
       className: K.stageIcon
@@ -371,7 +371,7 @@ function et(e) {
       f = W.default.Messages.HUB_STUDY_ROOM_NOTICE_VOICE_CTA;
       break;
     default:
-      (0, M.assertNever)(a)
+      (0, P.assertNever)(a)
   }
   return null == s ? null : (0, l.jsxs)(l.Fragment, {
     children: [u.length > 0 ? (0, l.jsxs)("div", {

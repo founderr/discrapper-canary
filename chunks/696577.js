@@ -41,7 +41,7 @@ function p(e) {
         location: "Friends"
       }
     })
-  }, R = p === m.StatusTypes.OFFLINE ? m.StatusTypes.UNKNOWN : p, O = n === m.RelationshipTypes.PENDING_INCOMING ? S.default.Messages.INCOMING_FRIEND_REQUEST : S.default.Messages.OUTGOING_FRIEND_REQUEST;
+  }, O = p === m.StatusTypes.OFFLINE ? m.StatusTypes.UNKNOWN : p, R = n === m.RelationshipTypes.PENDING_INCOMING ? S.default.Messages.INCOMING_FRIEND_REQUEST : S.default.Messages.OUTGOING_FRIEND_REQUEST;
   return (0, a.jsx)(_.default, {
     isFocused: T,
     user: t,
@@ -85,8 +85,8 @@ function p(e) {
           user: t,
           hovered: e,
           showAccountIdentifier: !0,
-          status: R,
-          subText: O,
+          status: O,
+          subText: R,
           className: I.userInfo
         }), (0, a.jsx)("div", {
           className: I.actions,

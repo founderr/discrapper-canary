@@ -32,12 +32,12 @@ function v(e) {
     channel: t,
     iconClassName: l,
     className: v,
-    innerClassName: R,
-    ...O
+    innerClassName: O,
+    ...R
   } = e, {
     mute: L,
-    suppress: P
-  } = (0, _.default)(t), M = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), y = L || P || M, [x, D] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
+    suppress: M
+  } = (0, _.default)(t), P = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), y = L || M || P, [x, D] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
     isSoundboardButtonDisabled: y
   }), [j, G] = (0, h.useGetDismissibleContent)(U), {
     analyticsLocations: w
@@ -89,7 +89,7 @@ function v(e) {
           [A.disabled]: y
         }),
         wrapperClassName: v,
-        innerClassName: R,
+        innerClassName: O,
         disabled: y,
         onClick: () => {
           var t, n;
@@ -97,16 +97,16 @@ function v(e) {
         },
         onMouseEnter: t => {
           var n, a;
-          null === (n = O.onMouseEnter) || void 0 === n || n.call(O, t), null == e || null === (a = e.onMouseEnter) || void 0 === a || a.call(e), H()
+          null === (n = R.onMouseEnter) || void 0 === n || n.call(R, t), null == e || null === (a = e.onMouseEnter) || void 0 === a || a.call(e), H()
         },
         onMouseLeave: t => {
           var n, a;
-          null === (n = O.onMouseLeave) || void 0 === n || n.call(O, t), null == e || null === (a = e.onMouseLeave) || void 0 === a || a.call(e), V()
+          null === (n = R.onMouseLeave) || void 0 === n || n.call(R, t), null == e || null === (a = e.onMouseLeave) || void 0 === a || a.call(e), V()
         },
         onContextMenu: k,
         fullWidth: !0,
         size: d.Button.Sizes.SMALL,
-        ...O,
+        ...R,
         children: (0, a.jsx)(F, {
           className: l,
           size: "sm",
@@ -125,8 +125,8 @@ function v(e) {
     children: (0, a.jsx)(d.Tooltip, {
       text: function() {
         if (L) return N.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
-        if (P) return N.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
-        if (M) return N.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
+        if (M) return N.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
+        if (P) return N.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
         return N.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD
       }(),
       children: e => Y(e)

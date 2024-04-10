@@ -11,20 +11,20 @@ var a = s("735250"),
   c = s("63063"),
   E = s("74538"),
   f = s("937615"),
-  _ = s("230916"),
-  p = s("798769"),
+  p = s("230916"),
+  _ = s("798769"),
   m = s("474936"),
   I = s("981631"),
   N = s("689938"),
   S = s("248928"),
-  P = s("982404"),
-  T = s("299156");
+  T = s("982404"),
+  C = s("299156");
 t.default = function(e) {
   let {
     premiumSubscription: t,
     premiumType: s,
     onClose: i,
-    onConfirm: C,
+    onConfirm: P,
     userDiscountOffer: A
   } = e, [R, M] = n.useState(!1), [h, L] = n.useState(!1), g = async e => {
     try {
@@ -33,14 +33,14 @@ t.default = function(e) {
         body: {
           user_discount_offer_id: e
         }
-      }), C()
+      }), P()
     } catch (e) {
       M(!0)
     }
     L(!1)
-  }, y = (0, d.default)(), D = (0, u.isThemeDark)(y) ? P : T, x = (0, _.useChurnDiscountedPrice)(t, m.SubscriptionPlans.PREMIUM_MONTH_TIER_2, A), U = (0, E.getPrice)(m.SubscriptionPlans.PREMIUM_MONTH_TIER_2), b = (0, f.formatPrice)(U.amount, U.currency);
+  }, y = (0, d.default)(), x = (0, u.isThemeDark)(y) ? T : C, D = (0, p.useChurnDiscountedPrice)(t, m.SubscriptionPlans.PREMIUM_MONTH_TIER_2, A), U = (0, E.getPrice)(m.SubscriptionPlans.PREMIUM_MONTH_TIER_2), b = (0, f.formatPrice)(U.amount, U.currency);
   return null == A ? null : (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(p.default, {
+    children: [(0, a.jsx)(_.default, {
       premiumType: s,
       onClose: i
     }), (0, a.jsx)(o.ModalContent, {
@@ -56,7 +56,7 @@ t.default = function(e) {
           className: S.confirmDiscountDescription,
           children: [(0, a.jsx)("img", {
             alt: "",
-            src: D,
+            src: x,
             className: S.confirmDiscountIcon
           }), (0, a.jsx)(o.Text, {
             variant: "text-sm/medium",
@@ -72,7 +72,7 @@ t.default = function(e) {
             variant: "text-xs/semibold",
             className: S.confirmDiscountLegaleseText,
             children: N.default.Messages.CHURN_DISCOUNT_CONFIRM_LEGALESE.format({
-              discountedPrice: x,
+              discountedPrice: D,
               billingPeriod: (0, E.getDiscountIntervalString)(A.discount.user_usage_limit_interval),
               numMonths: A.discount.user_usage_limit,
               fullPrice: b,

@@ -27,11 +27,11 @@ var a = n("735250"),
   N = n("358924"),
   A = n("292140"),
   v = n("525296"),
-  R = n("981631"),
-  O = n("674563"),
+  O = n("981631"),
+  R = n("674563"),
   L = n("689938"),
-  P = n("103877");
-let M = 15 * I.default.Millis.MINUTE,
+  M = n("103877");
+let P = 15 * I.default.Millis.MINUTE,
   y = (0, v.default)(function(e) {
     let {
       party: t,
@@ -53,16 +53,16 @@ let M = 15 * I.default.Millis.MINUTE,
     } = t, _ = c.length, C = f.length, m = E.length, I = h.length > 0, p = s.useCallback(() => {
       let e = E.filter(e => {
         var t, n;
-        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === O.ApplicationTypes.GAME
+        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === R.ApplicationTypes.GAME
       }).map(e => e.game.name);
-      S.default.track(R.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
+      S.default.track(O.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
         num_users: _,
         num_streams: C,
         num_activities: m,
         in_voice_channel: I,
         games_detected: e
       })
-    }, [_, C, m, I, E]), v = o()(p, M);
+    }, [_, C, m, I, E]), v = o()(p, P);
     return null != r || null != u ? (0, a.jsx)(d.Popout, {
       position: "left",
       renderPopout: e => {
@@ -83,7 +83,7 @@ let M = 15 * I.default.Millis.MINUTE,
           ...e,
           onMouseEnter: v,
           "aria-haspopup": "menu",
-          className: P.itemCard,
+          className: M.itemCard,
           active: n,
           children: (0, a.jsxs)("div", {
             children: [r, u]
@@ -135,21 +135,21 @@ function D() {
       quest: o.get(t.id)
     }, t.id)
   }) : (0, a.jsxs)("div", {
-    className: P.emptyCard,
+    className: M.emptyCard,
     children: [(0, a.jsx)(d.Heading, {
       variant: "heading-md/semibold",
-      className: P.emptyHeader,
+      className: M.emptyHeader,
       children: L.default.Messages.ACTIVITY_FEED_NONE_PLAYING_HEADER
     }), (0, a.jsx)(d.Text, {
       color: "none",
-      className: P.emptyText,
+      className: M.emptyText,
       variant: "text-sm/normal",
       children: L.default.Messages.ACTIVITY_FEED_NONE_PLAYING_BODY
     })]
   }), (0, a.jsx)(a.Fragment, {
     children: f
   })) : (0, a.jsx)("div", {
-    className: P.emptyCard,
+    className: M.emptyCard,
     children: (0, a.jsx)(d.Spinner, {})
   })
 }

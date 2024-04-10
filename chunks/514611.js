@@ -22,9 +22,9 @@ var a, s = n("735250"),
   N = n("313618"),
   A = n("129512"),
   v = n("330065"),
-  R = n("755386");
+  O = n("755386");
 
-function O(e, t, n) {
+function R(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -34,7 +34,7 @@ function O(e, t, n) {
 }
 class L extends(a = l.PureComponent) {
   getDefaultSplashURL(e, t) {
-    if (t) return R;
+    if (t) return O;
     switch (e) {
       case T.ThemeTypes.DARK:
         return A;
@@ -55,11 +55,11 @@ class L extends(a = l.PureComponent) {
       isVisible: A,
       submitting: v
     } = this.state, {
-      name: R,
-      description: O,
+      name: O,
+      description: R,
       presenceCount: L,
-      memberCount: P,
-      keywords: M
+      memberCount: M,
+      keywords: P
     } = t, y = null === (e = t.features) || void 0 === e ? void 0 : e.has(T.GuildFeatures.HUB), x = m.default.getGuildDiscoverySplashURL({
       id: t.id,
       splash: t.discoverySplash,
@@ -163,15 +163,15 @@ class L extends(a = l.PureComponent) {
                 }), (0, s.jsx)(u.Heading, {
                   variant: "heading-md/semibold",
                   className: N.guildName,
-                  children: R
+                  children: O
                 })]
               }), (0, s.jsx)(u.Text, {
                 className: N.description,
                 variant: "text-sm/normal",
                 color: "header-secondary",
-                children: O
-              }), U && null != M && null != l && (0, s.jsx)(E.DiscoveryTags, {
-                tags: M,
+                children: R
+              }), U && null != P && null != l && (0, s.jsx)(E.DiscoveryTags, {
+                tags: P,
                 onTagClick: e => l(e, t.id),
                 guildId: t.id,
                 section: S.AnalyticsContexts.POPULAR
@@ -188,7 +188,7 @@ class L extends(a = l.PureComponent) {
                       membersOnline: L
                     })
                   })]
-                }), null != P && (0, s.jsxs)("div", {
+                }), null != M && (0, s.jsxs)("div", {
                   className: N.memberCount,
                   children: [(0, s.jsx)("div", {
                     className: N.dotOffline
@@ -196,7 +196,7 @@ class L extends(a = l.PureComponent) {
                     variant: "text-xs/normal",
                     color: "header-secondary",
                     children: g.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
-                      count: P
+                      count: M
                     })
                   })]
                 })]
@@ -212,12 +212,12 @@ class L extends(a = l.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), O(this, "state", {
+    super(...e), R(this, "state", {
       loaded: !1,
       hasBeenSeen: !1,
       isVisible: !1,
       submitting: !1
-    }), O(this, "handleClickView", async e => {
+    }), R(this, "handleClickView", async e => {
       let {
         className: t
       } = e.target;
@@ -236,7 +236,7 @@ class L extends(a = l.PureComponent) {
           submitting: !1
         })
       }
-    }), O(this, "handleVisibilityChange", e => {
+    }), R(this, "handleVisibilityChange", e => {
       let {
         onGuildCardSeen: t,
         guild: n
@@ -244,7 +244,7 @@ class L extends(a = l.PureComponent) {
       null != n && !this.state.hasBeenSeen && e && (this.setState({
         hasBeenSeen: e
       }), null != t && t(n.id))
-    }), O(this, "handleContextMenu", e => {
+    }), R(this, "handleContextMenu", e => {
       (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -254,13 +254,13 @@ class L extends(a = l.PureComponent) {
           guild: this.props.guild
         })
       })
-    }), O(this, "setIsVisible", e => {
+    }), R(this, "setIsVisible", e => {
       this.setState({
         isVisible: e
       })
     })
   }
 }
-O(L, "Placeholder", e => (0, s.jsx)("div", {
+R(L, "Placeholder", e => (0, s.jsx)("div", {
   className: r()(e.className, N.cardPlaceholder)
 })), t.default = L

@@ -24,11 +24,11 @@ var s = n("45792"),
   N = n("228488"),
   A = n("996106"),
   v = n("914946"),
-  R = n("452426"),
-  O = n("561205"),
+  O = n("452426"),
+  R = n("561205"),
   L = n("600027"),
-  P = n("852926"),
-  M = n("186901"),
+  M = n("852926"),
+  P = n("186901"),
   y = n("981631");
 async function x(e, t, n, a) {
   let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
@@ -40,7 +40,7 @@ async function x(e, t, n, a) {
   if (o) {
     let {
       lock: t
-    } = (0, P.unlockOverlay)(e);
+    } = (0, M.unlockOverlay)(e);
     return (0, r.openModal)(l, o).then(() => {
       throw t(), new A.default({
         errorCode: y.RPCErrors.NO_ELIGIBLE_ACTIVITY
@@ -58,7 +58,7 @@ async function x(e, t, n, a) {
 t.default = {
   [y.RPCCommands.SEND_ACTIVITY_JOIN_INVITE]: {
     scope: {
-      [M.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE]
+      [P.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE]
     },
     handler(e) {
       let {
@@ -76,7 +76,7 @@ t.default = {
   },
   [y.RPCCommands.CLOSE_ACTIVITY_JOIN_REQUEST]: {
     scope: {
-      [M.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE]
+      [P.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE]
     },
     handler(e) {
       let {
@@ -89,9 +89,9 @@ t.default = {
   },
   [y.RPCCommands.ACTIVITY_INVITE_USER]: {
     scope: {
-      [M.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE]
+      [P.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE]
     },
-    validation: e => (0, R.default)(e).required().keys({
+    validation: e => (0, O.default)(e).required().keys({
       user_id: e.string().required(),
       type: e.number().required().valid([y.ActivityActionTypes.JOIN]),
       content: e.string().min(0).max(1024),
@@ -115,9 +115,9 @@ t.default = {
   },
   [y.RPCCommands.ACCEPT_ACTIVITY_INVITE]: {
     scope: {
-      [M.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE]
+      [P.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE]
     },
-    validation: e => (0, R.default)(e).required().keys({
+    validation: e => (0, O.default)(e).required().keys({
       type: e.number().required().valid([y.ActivityActionTypes.JOIN]),
       user_id: e.string().required(),
       session_id: e.string().required(),
@@ -155,7 +155,7 @@ t.default = {
   },
   [y.RPCCommands.OPEN_INVITE_DIALOG]: {
     scope: {
-      [M.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE, M.RPC_AUTHENTICATED_SCOPE]
+      [P.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE, P.RPC_AUTHENTICATED_SCOPE]
     },
     handler(e) {
       let {
@@ -185,7 +185,7 @@ t.default = {
   },
   [y.RPCCommands.INITIATE_IMAGE_UPLOAD]: (0, s.createRPCCommand)(y.RPCCommands.INITIATE_IMAGE_UPLOAD, {
     scope: {
-      [M.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE, M.RPC_AUTHENTICATED_SCOPE]
+      [P.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE, P.RPC_AUTHENTICATED_SCOPE]
     },
     handler(e) {
       var t;
@@ -195,7 +195,7 @@ t.default = {
       if (null == a) throw new A.default({
         errorCode: y.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      let s = null === (t = (0, O.default)()) || void 0 === t ? void 0 : t.id;
+      let s = null === (t = (0, R.default)()) || void 0 === t ? void 0 : t.id;
       if (null == s) throw new A.default({
         errorCode: y.RPCErrors.UNKNOWN_ERROR
       }, "Unable to find selected channel");
@@ -235,7 +235,7 @@ t.default = {
   }),
   [y.RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: (0, s.createRPCCommand)(y.RPCCommands.OPEN_SHARE_MOMENT_DIALOG, {
     scope: {
-      [M.RPC_SCOPE_CONFIG.ANY]: [M.RPC_AUTHENTICATED_SCOPE]
+      [P.RPC_SCOPE_CONFIG.ANY]: [P.RPC_AUTHENTICATED_SCOPE]
     },
     handler(e) {
       var t;
@@ -253,7 +253,7 @@ t.default = {
       if (!(0, p.hasFlag)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, y.ApplicationFlags.EMBEDDED)) throw new A.default({
         errorCode: y.RPCErrors.INVALID_COMMAND
       }, "This application cannot access this API");
-      let l = (0, O.default)();
+      let l = (0, R.default)();
       if (null == l) throw new A.default({
         errorCode: y.RPCErrors.INVALID_COMMAND
       }, "No channel found");

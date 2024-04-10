@@ -23,11 +23,11 @@ var a = n("735250"),
   N = n("984370"),
   A = n("797614"),
   v = n("359110"),
-  R = n("6025"),
-  O = n("897473"),
+  O = n("6025"),
+  R = n("897473"),
   L = n("108427"),
-  P = n("970731"),
-  M = n("210887"),
+  M = n("970731"),
+  P = n("210887"),
   y = n("433355"),
   x = n("592125"),
   D = n("819640"),
@@ -156,7 +156,7 @@ function es(e) {
     pageWidth: t,
     onSidebarResize: n
   } = e, s = (0, u.useStateFromStores)([y.default], () => y.default.getSidebarState(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID)), l = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(null == s ? void 0 : s.channelId));
-  if (null == s || s.type !== O.SidebarType.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
+  if (null == s || s.type !== R.SidebarType.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
   let i = t - X.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
   return (0, a.jsx)(S.default, {
     sidebarType: S.ChatSidebarType.MessageRequestSidebar,
@@ -172,14 +172,14 @@ let el = function(e) {
     let {
       markAsDismissed: t
     } = e;
-    return (0, a.jsx)(P.default, {
+    return (0, a.jsx)(M.default, {
       header: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_TITLE,
       content: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONTENT_TEENS,
       buttonCTA: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_DISMISS,
       className: et.messageRequestCoachmark,
       onClick: () => t(J.ContentDismissActionType.UNKNOWN),
       markAsDismissed: t,
-      caretPosition: P.CaretPosition.TOP_CENTER,
+      caretPosition: M.CaretPosition.TOP_CENTER,
       headerClassName: et.__invalid_header
     })
   },
@@ -199,7 +199,7 @@ let el = function(e) {
         if (i === d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK) return (0, a.jsx)(c.Popout, {
           renderPopout: () => t ? (0, a.jsx)(el, {
             markAsDismissed: r
-          }) : (0, a.jsx)(P.default, {
+          }) : (0, a.jsx)(M.default, {
             header: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_TITLE,
             content: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONTENT,
             buttonCTA: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONFIRM,
@@ -211,7 +211,7 @@ let el = function(e) {
               })
             },
             markAsDismissed: r,
-            caretPosition: P.CaretPosition.TOP_CENTER,
+            caretPosition: M.CaretPosition.TOP_CENTER,
             headerClassName: et.__invalid_header
           }),
           position: "bottom",
@@ -243,19 +243,19 @@ let eo = (0, h.default)(function(e) {
       name: o.MetricEvents.MESSAGE_REQUEST_VIEW
     })
   }, []);
-  let l = (0, u.useStateFromStores)([M.default], () => M.default.theme),
+  let l = (0, u.useStateFromStores)([P.default], () => P.default.theme),
     r = (0, K.useSpamMessageRequestCount)(),
     [d, E] = s.useState(!1),
     h = (0, u.useStateFromStores)([y.default], () => {
       let e = y.default.getSidebarState(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID);
-      return null != e && e.type === O.SidebarType.VIEW_MESSAGE_REQUEST ? e : null
+      return null != e && e.type === R.SidebarType.VIEW_MESSAGE_REQUEST ? e : null
     }),
     _ = null == h ? void 0 : h.channelId,
     C = null != h,
     m = (0, k.useIsEitherTypeOfMessageRequest)(_),
     S = (0, w.useHasUserRepliedInChannel)(_);
   s.useEffect(() => {
-    null != _ && !m && S && C && ((0, v.transitionToChannel)(_), R.default.closeChannelSidebar(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
+    null != _ && !m && S && C && ((0, v.transitionToChannel)(_), O.default.closeChannelSidebar(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
   }, [_, S, C, m]);
   let [I, T] = s.useState(Z.MessageRequestSections.REQUESTS);
   return (0, p.usePageTitle)({

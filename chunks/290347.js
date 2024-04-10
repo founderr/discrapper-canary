@@ -77,16 +77,16 @@ function A(e) {
     modalDismissibleContent: g,
     modalTopExtra: A,
     header: v,
-    headerClassName: R,
-    subHeader: O,
+    headerClassName: O,
+    subHeader: R,
     subHeaderExtra: L,
-    featureCards: P,
-    changeLogId: M,
+    featureCards: M,
+    changeLogId: P,
     button: y
   } = e, {
     onClose: x,
     transitionState: D
-  } = n, b = (0, h.useUID)(), U = P.length % 2 == 0, j = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [G, w] = s.useState(Date.now()), [k, F] = s.useState(0), [B, H] = s.useState(0), [V, Y] = s.useState(!1), [W, K] = s.useState(!0), z = s.useRef(G), q = s.useRef(k), Q = s.useRef(B), Z = s.useRef(V), X = s.useRef(W);
+  } = n, b = (0, h.useUID)(), U = M.length % 2 == 0, j = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [G, w] = s.useState(Date.now()), [k, F] = s.useState(0), [B, H] = s.useState(0), [V, Y] = s.useState(!1), [W, K] = s.useState(!0), z = s.useRef(G), q = s.useRef(k), Q = s.useRef(B), Z = s.useRef(V), X = s.useRef(W);
 
   function J() {
     let e = Date.now(),
@@ -100,26 +100,26 @@ function A(e) {
   }, [G, k, B, V, W]), s.useEffect(() => () => {
     let [e, t] = J();
     m.default.track(I.AnalyticEvents.CHANGE_LOG_VIDEO_PLAYED, {
-      change_log_id: M,
+      change_log_id: P,
       seconds_played: Math.round(e / 1e3)
     }), m.default.track(I.AnalyticEvents.CHANGE_LOG_VIDEO_UNMUTE, {
-      change_log_id: M,
+      change_log_id: P,
       seconds_unmuted: Math.round(t / 1e3)
     })
-  }, [M]), s.useEffect(() => {
+  }, [P]), s.useEffect(() => {
     null != g && (0, d.requestMarkDismissibleContentAsShown)(g);
     let e = Date.now();
     return m.default.track(I.AnalyticEvents.CHANGE_LOG_OPENED, {
-      change_log_id: M
+      change_log_id: P
     }), () => {
       m.default.track(I.AnalyticEvents.CHANGE_LOG_CLOSED, {
-        change_log_id: M,
+        change_log_id: P,
         seconds_open: Math.round((Date.now() - e) / 1e3)
       }), null != g && (0, d.markDismissibleContentAsDismissed)(g, {
         dismissAction: p.ContentDismissActionType.DISMISS
       })
     }
-  }, [g, M]), (0, a.jsxs)(o.ModalRoot, {
+  }, [g, P]), (0, a.jsxs)(o.ModalRoot, {
     className: i()(T.root, t),
     transitionState: D,
     "aria-labelledby": b,
@@ -132,7 +132,7 @@ function A(e) {
       className: T.content,
       children: [(0, a.jsx)(o.Heading, {
         variant: "display-md",
-        className: i()(T.headerText, R),
+        className: i()(T.headerText, O),
         children: v
       }), "video" === l.type ? (0, a.jsx)(C.default, {
         className: i()(T.video, _),
@@ -145,7 +145,7 @@ function A(e) {
         poster: l.poster,
         onPlay: e => {
           m.default.track(I.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
-            change_log_id: M
+            change_log_id: P
           }), w(Date.now()), Y(!0), K(e.currentTarget.muted)
         },
         onEnded: e => {
@@ -172,7 +172,7 @@ function A(e) {
         renderLinkComponent: c.renderMaskedLinkComponent,
         onPlay: () => {
           m.default.track(I.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
-            change_log_id: M
+            change_log_id: P
           })
         }
       }) : "image" === l.type ? (0, a.jsx)("img", {
@@ -182,12 +182,12 @@ function A(e) {
       }) : null, (0, a.jsx)(o.Heading, {
         variant: "heading-lg/extrabold",
         className: T.bodyText,
-        children: O
+        children: R
       }), null == L ? void 0 : L(), (0, a.jsx)("div", {
         className: i()(T.featureCardGroup, {
           [T.wideStyle]: U
         }),
-        children: P.map((e, t) => (0, a.jsx)(N, {
+        children: M.map((e, t) => (0, a.jsx)(N, {
           ...e,
           wideStyle: U
         }, "".concat(e.header, "_").concat(t)))

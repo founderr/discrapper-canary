@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return v
   },
   default: function() {
-    return R
+    return O
   }
 }), n("47120");
 var a = n("735250"),
@@ -34,23 +34,23 @@ var a = n("735250"),
 let A = "Email Verification",
   v = "PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY";
 
-function R() {
+function O() {
   let {
     action: e,
     theme: t
   } = (0, i.useStateFromStoresObject)([m.default, C.default], () => ({
     action: m.default.getAction(),
     theme: C.default.theme
-  })), R = p.default.getVerificationTypes(e), [O, L] = s.useState(0), P = (0, f.default)(R);
+  })), O = p.default.getVerificationTypes(e), [R, L] = s.useState(0), M = (0, f.default)(O);
   (0, h.default)({
     type: l.ImpressionTypes.MODAL,
     name: l.ImpressionNames.USER_ACTION_REQUIRED,
     properties: {
-      verification_type: R[0],
-      verification_types: R
+      verification_type: O[0],
+      verification_types: O
     }
-  }, {}, [R.toString()]);
-  let M = () => {
+  }, {}, [O.toString()]);
+  let P = () => {
       (0, c.accountDetailsInit)(), (0, o.openModalLazy)(async () => {
         let {
           default: e
@@ -80,7 +80,7 @@ function R() {
   return s.useEffect(() => (E.default.disable(), () => {
     E.default.enable()
   }), []), s.useEffect(() => {
-    (null == P ? void 0 : P[0]) === T.VerificationTypes.PHONE && (null == R ? void 0 : R[0]) === T.VerificationTypes.EMAIL && (0, o.openModalLazy)(async () => {
+    (null == M ? void 0 : M[0]) === T.VerificationTypes.PHONE && (null == O ? void 0 : O[0]) === T.VerificationTypes.EMAIL && (0, o.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.resolve().then(n.bind(n, "468026"));
@@ -93,11 +93,11 @@ function R() {
     }, {
       modalKey: v,
       Layer: I.default,
-      onCloseCallback: M
+      onCloseCallback: P
     })
-  }, [R, P]), (0, a.jsx)(S.default, {
-    types: R,
-    captchaKey: O,
+  }, [O, M]), (0, a.jsx)(S.default, {
+    types: O,
+    captchaKey: R,
     onCaptchaVerify: e => {
       r.HTTP.post({
         url: T.Endpoints.CAPTCHA,
@@ -111,7 +111,7 @@ function R() {
     },
     theme: t,
     onClick: e => {
-      e === T.VerificationTypes.EMAIL_OR_PHONE || e === T.VerificationTypes.EMAIL || e === T.VerificationTypes.REVERIFY_EMAIL ? M() : y()
+      e === T.VerificationTypes.EMAIL_OR_PHONE || e === T.VerificationTypes.EMAIL || e === T.VerificationTypes.REVERIFY_EMAIL ? P() : y()
     },
     onLogout: () => {
       (0, o.openModalLazy)(async () => {

@@ -15,15 +15,15 @@ var a = s("735250"),
   c = s("481060"),
   E = s("355467"),
   f = s("100527"),
-  _ = s("906732"),
-  p = s("210887"),
+  p = s("906732"),
+  _ = s("210887"),
   m = s("301766"),
   I = s("509545"),
   N = s("285952"),
   S = s("759231"),
-  P = s("74538"),
-  T = s("937615"),
-  C = s("689938"),
+  T = s("74538"),
+  C = s("937615"),
+  P = s("689938"),
   A = s("643311");
 
 function R(e) {
@@ -33,50 +33,50 @@ function R(e) {
     transitionState: n,
     onClose: i,
     analyticsLocation: l
-  } = e, r = (0, o.useStateFromStores)([p.default], () => p.default.theme), {
+  } = e, r = (0, o.useStateFromStores)([_.default], () => _.default.theme), {
     analyticsLocations: S
-  } = (0, _.default)(f.default.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL);
+  } = (0, p.default)(f.default.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL);
   async function R() {
     await (0, E.upgradeSubscription)(t, t.planId, S, l), i()
   }
   let M = I.default.get(t.planId);
   u()(null != M, "Missing subscriptionPlan");
-  let h = (0, P.getPrice)(t.planId, !1, !1, {
+  let h = (0, T.getPrice)(t.planId, !1, !1, {
       paymentSourceId: t.paymentSourceId,
       currency: t.currency
     }),
-    L = (0, T.formatRate)((0, T.formatPrice)(h.amount, h.currency), M.interval, M.intervalCount);
+    L = (0, C.formatRate)((0, C.formatPrice)(h.amount, h.currency), M.interval, M.intervalCount);
   return (0, a.jsxs)(c.ModalRoot, {
     transitionState: n,
-    "aria-label": C.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER,
+    "aria-label": P.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER,
     children: [(0, a.jsxs)(c.ModalHeader, {
       justify: N.default.Justify.BETWEEN,
       separator: !1,
       children: [(0, a.jsx)(c.FormTitle, {
         tag: c.FormTitleTags.H4,
-        children: C.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER
+        children: P.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER
       }), (0, a.jsx)(c.ModalCloseButton, {
         onClick: i
       })]
     }), (0, a.jsx)(c.ModalContent, {
       className: A.modalBody,
-      children: (0, m.isNoneSubscription)(t.planId) ? C.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY_NO_EXISTING_PLAN.format({
-        downgradedPlan: P.default.getDisplayName(s.planId),
+      children: (0, m.isNoneSubscription)(t.planId) ? P.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY_NO_EXISTING_PLAN.format({
+        downgradedPlan: T.default.getDisplayName(s.planId),
         existingRate: L
-      }) : C.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY.format({
-        existingPlan: P.default.getDisplayName(t.planId),
-        downgradedPlan: P.default.getDisplayName(s.planId),
+      }) : P.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY.format({
+        existingPlan: T.default.getDisplayName(t.planId),
+        downgradedPlan: T.default.getDisplayName(s.planId),
         existingRate: L
       })
     }), (0, a.jsxs)(c.ModalFooter, {
       children: [(0, a.jsx)(c.Button, {
         onClick: R,
-        children: C.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BUTTON
+        children: P.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BUTTON
       }), (0, a.jsx)(c.Button, {
         look: c.Button.Looks.LINK,
         color: (0, d.isThemeLight)(r) ? c.Button.Colors.PRIMARY : c.Button.Colors.WHITE,
         onClick: i,
-        children: C.default.Messages.NEVERMIND
+        children: P.default.Messages.NEVERMIND
       })]
     })]
   })
@@ -95,8 +95,8 @@ function M(e) {
       className: A.infoIcon
     }), (0, a.jsx)("div", {
       className: A.text,
-      children: C.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_NOTICE.format({
-        planName: t.hasExternalPlanChange ? (0, P.getExternalPlanDisplayName)(s) : P.default.getDisplayName(s.planId),
+      children: P.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_NOTICE.format({
+        planName: t.hasExternalPlanChange ? (0, T.getExternalPlanDisplayName)(s) : T.default.getDisplayName(s.planId),
         date: t.currentPeriodEnd
       })
     }), t.isPurchasedExternally ? null : (0, a.jsx)(c.Anchor, {
@@ -104,7 +104,7 @@ function M(e) {
         o(!0), e.preventDefault()
       },
       className: A.cancelLink,
-      children: C.default.Messages.CANCEL
+      children: P.default.Messages.CANCEL
     }), u ? (0, a.jsx)(c.Modal, {
       renderModal: e => {
         let {

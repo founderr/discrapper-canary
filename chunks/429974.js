@@ -27,17 +27,17 @@ async function m(e) {
     analyticsLocation: A
   } = e, v = c.default.getUser(S);
   if (null == v) return;
-  let R = E.default.getUserProfile(S),
-    O = u.default.getPrimaryActivity(S),
+  let O = E.default.getUserProfile(S),
+    R = u.default.getPrimaryActivity(S),
     L = u.default.getStatus(S),
-    P = u.default.isMobileOnline(S),
+    M = u.default.isMobileOnline(S),
     {
-      party: M,
+      party: P,
       assets: y,
       application_id: x
-    } = null != O ? O : {},
+    } = null != R ? R : {},
     D = null != x ? o.default.getApplication(x) : null,
-    b = P ? h.AnalyticsUserStatusTypes.ONLINE_MOBILE : h.AnalyticsUserStatusTypes.ONLINE_DESKTOP,
+    b = M ? h.AnalyticsUserStatusTypes.ONLINE_MOBILE : h.AnalyticsUserStatusTypes.ONLINE_DESKTOP,
     U = L === h.StatusTypes.ONLINE ? b : L;
   C = await (0, s.openModalLazy)(async () => {
     let {
@@ -58,18 +58,18 @@ async function m(e) {
     guild_id: p !== h.ME ? p : null,
     channel_id: T,
     other_user_id: S,
-    application_id: null !== (l = null == O ? void 0 : O.application_id) && void 0 !== l ? l : null,
-    application_name: null == O ? void 0 : O.name,
+    application_id: null !== (l = null == R ? void 0 : R.application_id) && void 0 !== l ? l : null,
+    application_name: null == R ? void 0 : R.name,
     sku_id: null !== (i = null == D ? void 0 : D.primarySkuId) && void 0 !== i ? i : null,
     is_friend: d.default.isFriend(S),
     has_images: !!(null !== (m = null == y ? void 0 : y.large_image) && void 0 !== m ? m : null == y ? void 0 : y.small_image),
-    party_max: null == M ? void 0 : null === (t = M.size) || void 0 === t ? void 0 : t[1],
-    party_id: null == M ? void 0 : M.id,
-    party_platform: (0, _.isSpotifyParty)(null == M ? void 0 : M.id) ? h.PlatformTypes.SPOTIFY : null,
-    game_platform: (0, r.default)(O),
+    party_max: null == P ? void 0 : null === (t = P.size) || void 0 === t ? void 0 : t[1],
+    party_id: null == P ? void 0 : P.id,
+    party_platform: (0, _.isSpotifyParty)(null == P ? void 0 : P.id) ? h.PlatformTypes.SPOTIFY : null,
+    game_platform: (0, r.default)(R),
     profile_user_status: U,
-    profile_has_nitro_customization: (null == R ? void 0 : R.banner) != null,
-    profile_has_profile_effect: (null == R ? void 0 : R.profileEffectId) != null,
+    profile_has_nitro_customization: (null == O ? void 0 : O.banner) != null,
+    profile_has_profile_effect: (null == O ? void 0 : O.profileEffectId) != null,
     ...null == A ? null : (0, f.expandLocation)(A)
   })
 }

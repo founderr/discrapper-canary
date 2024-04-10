@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return O
   }
 }), n("653041"), n("47120");
 var a = n("735250"),
@@ -28,10 +28,10 @@ var a = n("735250"),
   A = n("689938");
 let v = d.default.get(N.PlatformTypes.XBOX).name;
 
-function R(e) {
+function O(e) {
   let {
     currentActivities: t
-  } = e, n = t.length > 1, R = function(e) {
+  } = e, n = t.length > 1, O = function(e) {
     let {
       currentActivities: t
     } = e, n = (0, l.useStateFromStores)([C.default], () => C.default.getAccounts().some(e => e.type === d.default.get(N.PlatformTypes.XBOX).type)), s = t.some(e => {
@@ -47,7 +47,7 @@ function R(e) {
         platform: v
       })
     })
-  }(e), O = function(e) {
+  }(e), R = function(e) {
     let {
       currentActivities: t
     } = e, n = s.useContext(p.AnalyticsContext);
@@ -74,7 +74,7 @@ function R(e) {
       }
     }), [n.location, t])
   }(e), L = [];
-  for (let e of O) {
+  for (let e of R) {
     let {
       activity: t
     } = e;
@@ -137,5 +137,5 @@ function R(e) {
       })
     }(e, n))
   }
-  return [R, ...L]
+  return [O, ...L]
 }

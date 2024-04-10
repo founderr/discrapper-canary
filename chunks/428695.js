@@ -29,7 +29,7 @@ t.default = function(e) {
     onClick: N,
     cta: A,
     ctaColor: v,
-    centerText: R
+    centerText: O
   } = e;
   s.useEffect(() => {
     _(f.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
@@ -37,8 +37,8 @@ t.default = function(e) {
       guild_id: t.id
     })
   }, [t.id, C]);
-  let O = null;
-  "function" == typeof A ? O = A() : null != A && (O = (0, a.jsx)(o.Button, {
+  let R = null;
+  "function" == typeof A ? R = A() : null != A && (R = (0, a.jsx)(o.Button, {
     className: h.button,
     size: o.Button.Sizes.SMALL,
     onClick: () => {
@@ -59,11 +59,11 @@ t.default = function(e) {
     className: i()(h.title, {
       [h.noImageTitle]: null == r
     }, {
-      [h.center]: R
+      [h.center]: O
     }),
     children: n
   }));
-  let P = null != S ? "".concat(S, "px") : "16px";
+  let M = null != S ? "".concat(S, "px") : "16px";
   return (0, a.jsxs)("div", {
     className: h.container,
     children: [!0 === T ? null : (0, a.jsx)(o.Clickable, {
@@ -81,8 +81,8 @@ t.default = function(e) {
       className: h.imageContainer,
       style: {
         marginTop: "".concat(I, "px"),
-        marginLeft: P,
-        marginRight: P
+        marginLeft: M,
+        marginRight: M
       },
       children: (0, a.jsx)("img", {
         className: h.image,
@@ -94,12 +94,12 @@ t.default = function(e) {
       className: h.message,
       children: [L, (0, a.jsx)(o.Text, {
         className: i()({
-          [h.center]: R
+          [h.center]: O
         }),
         variant: "text-sm/normal",
         color: "text-muted",
         children: l
-      }), O]
+      }), R]
     })]
   })
 }

@@ -27,11 +27,11 @@ var a = n("735250"),
   N = n("440051"),
   A = n("734934"),
   v = n("158238"),
-  R = n("785717"),
-  O = n("221292"),
+  O = n("785717"),
+  R = n("221292"),
   L = n("318661"),
-  P = n("747074"),
-  M = n("192133"),
+  M = n("747074"),
+  P = n("192133"),
   y = n("138394"),
   x = n("131640"),
   D = n("695346"),
@@ -273,7 +273,7 @@ function $(e) {
     });
   return (0, a.jsx)(p.AnalyticsLocationProvider, {
     value: G,
-    children: (0, a.jsx)(R.UserProfileAnalyticsProvider, {
+    children: (0, a.jsx)(O.UserProfileAnalyticsProvider, {
       layout: "ACCOUNT_POPOUT",
       userId: t.id,
       guildId: l,
@@ -281,7 +281,7 @@ function $(e) {
         className: Q.popoutContainer,
         children: (0, a.jsx)("div", {
           ref: ea,
-          children: (0, a.jsxs)(P.default, {
+          children: (0, a.jsxs)(M.default, {
             user: t,
             profileType: z.UserProfileTypes.POPOUT,
             children: [(0, a.jsx)(x.default, {
@@ -294,8 +294,8 @@ function $(e) {
               disableUserProfileLink: __OVERLAY__,
               isHovering: es,
               showPremiumBadgeUpsell: !1
-            }), (0, a.jsxs)(P.default.Inner, {
-              children: [(0, a.jsx)(M.default, {
+            }), (0, a.jsxs)(M.default.Inner, {
+              children: [(0, a.jsx)(P.default, {
                 activity: V,
                 customStatusActivity: $,
                 displayProfile: B,
@@ -331,7 +331,7 @@ function $(e) {
                     focusedClassName: Q.menuItemFocused,
                     subMenuIconClassName: Q.subMenuIcon,
                     action: d.isMobile ? function() {
-                      (0, O.trackUserProfileAction)({
+                      (0, R.trackUserProfileAction)({
                         action: "PRESS_SET_STATUS",
                         layout: "ACCOUNT_POPOUT",
                         userId: t.id,
@@ -380,7 +380,7 @@ function $(e) {
                     icon: w.default,
                     showIconFirst: !0,
                     action: () => {
-                      (0, O.trackUserProfileAction)({
+                      (0, R.trackUserProfileAction)({
                         action: "PRESS_SWITCH_ACCOUNTS",
                         layout: "ACCOUNT_POPOUT",
                         userId: t.id,

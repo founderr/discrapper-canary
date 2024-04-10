@@ -27,11 +27,11 @@ var a = n("735250"),
   N = n("243778"),
   A = n("922409"),
   v = n("899740"),
-  R = n("28476"),
-  O = n("880257"),
+  O = n("28476"),
+  R = n("880257"),
   L = n("631885"),
-  P = n("457396"),
-  M = n("51596"),
+  M = n("457396"),
+  P = n("51596"),
   y = n("905423"),
   x = n("155409"),
   D = n("210887"),
@@ -144,7 +144,7 @@ let ee = e => {
     } = e, n = (0, v.useMessageRequestsCount)(), s = (0, o.useListItem)("messageRequests"), {
       channelId: l
     } = (0, A.useMessageRequestSidebarState)();
-    if (!(0, R.useShouldShowMessageRequestsRow)()) return null;
+    if (!(0, O.useShouldShowMessageRequestsRow)()) return null;
     let i = null == l ? void 0 : () => h.default.preload(X.ME, l);
     return (0, a.jsx)(q.LinkButton, {
       selected: t,
@@ -161,7 +161,7 @@ let ee = e => {
   es = e => {
     let {
       selected: t
-    } = e, n = J.default.Messages.FAMILY_CENTER_SIDEBAR_TITLE, l = (0, o.useListItem)("family-center"), i = b.FamilyCenterEnabled.useSetting(), r = (0, O.default)(), [u, d] = s.useState(!0);
+    } = e, n = J.default.Messages.FAMILY_CENTER_SIDEBAR_TITLE, l = (0, o.useListItem)("family-center"), i = b.FamilyCenterEnabled.useSetting(), r = (0, R.default)(), [u, d] = s.useState(!0);
     return i && r ? (0, a.jsx)(q.LinkButton, {
       selected: t,
       route: X.Routes.FAMILY_CENTER,
@@ -214,7 +214,7 @@ let ee = e => {
       }
     })
   },
-  ei = () => (0, M.show)("DM_SEARCH");
+  ei = () => (0, P.show)("DM_SEARCH");
 
 function er(e) {
   switch (e) {
@@ -278,7 +278,7 @@ let eo = e => {
       }, "friends"), n && t ? (0, a.jsx)(et, {
         selected: null == c ? null != s && s.startsWith(X.Routes.APPLICATION_LIBRARY) : c.startsWith(X.Routes.APPLICATION_LIBRARY),
         hideGameUpdateProgressIndicator: s === X.Routes.APPLICATION_LIBRARY
-      }, "library") : null, (0, a.jsx)(P.NitroTabButton, {
+      }, "library") : null, (0, a.jsx)(M.NitroTabButton, {
         selected: null == c ? o : c.startsWith(X.Routes.APPLICATION_STORE),
         route: null == l || location.pathname.startsWith(X.Routes.ACTIVITIES) || location.pathname.startsWith(X.Routes.APPLICATION_STORE) ? X.Routes.APPLICATION_STORE : l,
         locationState: {

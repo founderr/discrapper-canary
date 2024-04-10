@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return O
   }
 });
 var a = n("735250"),
@@ -28,27 +28,27 @@ var a = n("735250"),
   A = n("689938"),
   v = n("569265");
 
-function R() {
+function O() {
   let e = s.useRef(null),
     t = (0, S.default)(),
     n = (0, I.useSpamMessageRequestCount)(),
     l = (0, _.useListHasSingleSpamMessageRequest)(),
-    R = (0, d.useIsRejectAllMessageRequestsEnabled)(),
-    O = (0, c.default)("message-requests-spam-list"),
+    O = (0, d.useIsRejectAllMessageRequestsEnabled)(),
+    R = (0, c.default)("message-requests-spam-list"),
     {
       channelId: L
     } = (0, m.useMessageRequestSidebarState)(),
-    P = s.useCallback(() => {
+    M = s.useCallback(() => {
       (0, u.showToast)((0, u.createToast)(A.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, u.ToastType.FAILURE))
     }, []),
     {
-      rejectAll: M
+      rejectAll: P
     } = (0, C.useMessageRequestActions)({
-      onError: P
+      onError: M
     }),
     y = s.useCallback(() => {
-      M(t.map(e => e.channel.id))
-    }, [t, M]);
+      P(t.map(e => e.channel.id))
+    }, [t, P]);
   s.useEffect(() => {
     h.default.track(N.AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, {
       num_spam_message_requests: n
@@ -76,7 +76,7 @@ function R() {
       className: v.sectionTitle,
       children: [A.default.Messages.MESSAGE_REQUESTS_SPAM_HEADER.format({
         count: n
-      }), R && n > 0 ? (0, a.jsxs)(a.Fragment, {
+      }), O && n > 0 ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(u.Text, {
           className: v.titleDivider,
           variant: "eyebrow",
@@ -93,11 +93,11 @@ function R() {
           children: A.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL
         })]
       }) : null]
-    }, "message-requests-spam-title"), [n, y, R]);
+    }, "message-requests-spam-title"), [n, y, O]);
   return 0 === t.length ? (0, a.jsx)(p.default, {
     section: g.MessageRequestSections.SPAM
   }) : (0, a.jsx)(r.ListNavigatorProvider, {
-    navigator: O,
+    navigator: R,
     children: (0, a.jsx)(r.ListNavigatorContainer, {
       children: n => {
         let {

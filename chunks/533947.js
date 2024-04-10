@@ -17,20 +17,20 @@ let p = [],
   N = I.FormStates.CLOSED,
   A = {},
   v = !1,
-  R = null;
+  O = null;
 
-function O() {
+function R() {
   if (a = null != (s = _.default.getChannel()) ? C.default.getGuild(s.guild_id) : null, p = null != s && null != a && m.default.can(I.Permissions.MANAGE_WEBHOOKS, s) ? S.default.getWebhooksForChannel(a.id, s.id) : [], null != T) {
-    let e = P(T.id);
+    let e = M(T.id);
     null != e && (T = e)
   }
   N = I.FormStates.OPEN, A = {}, v = !1
 }
 let L = c().debounce(() => {
-  v && ((null == T || c().isEqual(T, P(T.id))) && (v = !1), !v && y.emitChange())
+  v && ((null == T || c().isEqual(T, M(T.id))) && (v = !1), !v && y.emitChange())
 }, 500);
 
-function P(e) {
+function M(e) {
   return p.find(t => {
     let {
       id: n
@@ -38,7 +38,7 @@ function P(e) {
     return n === e
   })
 }
-class M extends(i = f.default.Store) {
+class P extends(i = f.default.Store) {
   initialize() {
     this.waitFor(_.default, C.default, S.default, m.default)
   }
@@ -55,7 +55,7 @@ class M extends(i = f.default.Store) {
     return N
   }
   getWebhook(e) {
-    return P(e)
+    return M(e)
   }
   showNotice() {
     return this.hasChanges()
@@ -66,22 +66,22 @@ class M extends(i = f.default.Store) {
       webhooks: p,
       editedWebhook: T,
       section: l,
-      sectionId: R,
+      sectionId: O,
       hasChanges: this.hasChanges(),
       isFetching: g,
       errors: A
     }
   }
 }
-u = "ChannelSettingsIntegrationsStore", (o = "displayName") in(r = M) ? Object.defineProperty(r, o, {
+u = "ChannelSettingsIntegrationsStore", (o = "displayName") in(r = P) ? Object.defineProperty(r, o, {
   value: u,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : r[o] = u;
-let y = new M(E.default, __OVERLAY__ ? {} : {
-  INTEGRATION_SETTINGS_INIT: O,
-  INTEGRATION_SETTINGS_SAVE_SUCCESS: O,
+let y = new P(E.default, __OVERLAY__ ? {} : {
+  INTEGRATION_SETTINGS_INIT: R,
+  INTEGRATION_SETTINGS_SAVE_SUCCESS: R,
   CHANNEL_SETTINGS_SET_SECTION: function(e) {
     let {
       section: t
@@ -90,7 +90,7 @@ let y = new M(E.default, __OVERLAY__ ? {} : {
     if (l = I.IntegrationSettingsSections.OVERVIEW, null == a) {
       let e = _.default.getChannel(),
         t = null == e ? void 0 : e.getGuildId();
-      null != e && null != t && (h.default.fetchForChannel(t, e.id), g = !0), O()
+      null != e && null != t && (h.default.fetchForChannel(t, e.id), g = !0), R()
     }
   },
   INTEGRATION_SETTINGS_SET_SECTION: function(e) {
@@ -98,12 +98,12 @@ let y = new M(E.default, __OVERLAY__ ? {} : {
       section: t,
       sectionId: n
     } = e;
-    l = t, R = n
+    l = t, O = n
   },
   INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function(e) {
     let {
       webhookId: t
-    } = e, n = P(t);
+    } = e, n = M(t);
     if (null == n) return !1;
     T = n, A = {}, v = !1
   },

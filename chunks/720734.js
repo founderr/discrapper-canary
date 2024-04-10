@@ -27,11 +27,11 @@ var a = n("735250"),
   N = n("941129"),
   A = n("83200"),
   v = n("634894"),
-  R = n("586902"),
-  O = n("1585"),
+  O = n("586902"),
+  R = n("1585"),
   L = n("304761"),
-  P = n("865427"),
-  M = n("571250"),
+  M = n("865427"),
+  P = n("571250"),
   y = n("628581"),
   x = n("55311"),
   D = n("575175"),
@@ -81,11 +81,11 @@ var a = n("735250"),
   eN = n("826026"),
   eA = n("937482"),
   ev = n("87888"),
-  eR = n("976401"),
-  eO = n("333454"),
+  eO = n("976401"),
+  eR = n("333454"),
   eL = n("864441"),
-  eP = n("26290"),
-  eM = n("626135"),
+  eM = n("26290"),
+  eP = n("626135"),
   ey = n("768581"),
   ex = n("572004"),
   eD = n("70956"),
@@ -166,7 +166,7 @@ class eY extends s.PureComponent {
         })
       }), (0, a.jsx)("div", {
         className: eF.panelSubtextContainer,
-        children: (0, a.jsx)(eO.default, {
+        children: (0, a.jsx)(eR.default, {
           children: null != e ? e : s
         })
       })]
@@ -229,7 +229,7 @@ class eY extends s.PureComponent {
     if (null == n) return null;
     let o = (0, ey.getAvatarDecorationURL)({
       avatarDecoration: n.avatarDecoration,
-      size: (0, O.getDecorationSizeForAvatarSize)(m.AvatarSizes.SIZE_32)
+      size: (0, R.getDecorationSizeForAvatarSize)(m.AvatarSizes.SIZE_32)
     });
     return (0, a.jsx)(g.default, {
       object: eG.AnalyticsObjects.AVATAR,
@@ -260,7 +260,7 @@ class eY extends s.PureComponent {
             className: i()(eF.nameTag, {
               [eF.canCopy]: ex.SUPPORTS_COPY
             }),
-            children: r ? (0, a.jsx)(eR.default, {
+            children: r ? (0, a.jsx)(eO.default, {
               tooltipText: null,
               icon: d.isShown ? eg.default : eN.default,
               role: "switch",
@@ -524,7 +524,7 @@ class eY extends s.PureComponent {
       (0, ex.copy)(eU.default.getUserTag(e, {
         decoration: "never",
         identifiable: "always"
-      })), eM.default.track(eG.AnalyticEvents.TEXT_COPIED, {
+      })), eP.default.track(eG.AnalyticEvents.TEXT_COPIED, {
         type: "User Tag"
       });
       let a = {
@@ -613,7 +613,7 @@ function eW() {
       streaming: null != eC.default.findActivity(e => e.type === eG.ActivityTypes.STREAMING),
       status: eC.default.getStatus()
     })),
-    d = (0, R.default)({
+    d = (0, O.default)({
       userId: n
     }),
     c = eU.default.useUserTag(e, {
@@ -635,12 +635,12 @@ function eW() {
     } = (0, eu.default)(E),
     T = (0, r.useStateFromStores)([L.default], () => {
       var e;
-      return (0, P.probablyHasBuildOverride)() ? null === (e = L.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
+      return (0, M.probablyHasBuildOverride)() ? null === (e = L.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
     g = (0, r.useStateFromStores)([eI.default], () => eI.default.getPremiumTypeSubscription()),
-    O = (0, r.useStateFromStores)([eh.default], () => eh.default.getEverSpeakingWhileMuted()),
-    M = (0, r.useStateFromStores)([eE.default], () => eE.default.hasLayers()),
-    y = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || M || eb.ProcessArgs.isDisallowPopupsSet(),
+    R = (0, r.useStateFromStores)([eh.default], () => eh.default.getEverSpeakingWhileMuted()),
+    P = (0, r.useStateFromStores)([eE.default], () => eE.default.hasLayers()),
+    y = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || P || eb.ProcessArgs.isDisallowPopupsSet(),
     x = (0, q.useIsEligibleForPomelo)();
   s.useEffect(() => {
     K.default.trackExposure({
@@ -727,7 +727,7 @@ function eW() {
     showTagAsButton: j,
     showTaglessAccountPanel: w,
     speaking: d,
-    speakingWhileMuted: O,
+    speakingWhileMuted: R,
     status: u,
     streaming: i,
     suppress: C,
@@ -749,11 +749,11 @@ function eK(e) {
     height: 9,
     className: eF.hasBuildOverride,
     "aria-hidden": !0
-  }) : n && (r = (0, a.jsx)(eP.CircleBadge, {
+  }) : n && (r = (0, a.jsx)(eM.CircleBadge, {
     color: b.default.STATUS_DANGER,
     className: eF.hasBuildOverride,
     "aria-hidden": !0
-  })), (0, a.jsx)(eR.default, {
+  })), (0, a.jsx)(eO.default, {
     tooltipText: null != t ? ek.default.Messages.USER_SETTINGS_WITH_BUILD_OVERRIDE.format({
       webBuildOverride: t.id
     }) : ek.default.Messages.USER_SETTINGS,
@@ -784,7 +784,7 @@ function ez(e) {
     play: I,
     events: p
   } = (0, _.useMicrophoneLottie)(C ? "unmute" : "mute"), T = n || l ? c.MicrophoneDenyIcon : S;
-  return s.useEffect(() => () => I(), [C, I]), (0, a.jsx)(eR.default, {
+  return s.useEffect(() => () => I(), [C, I]), (0, a.jsx)(eO.default, {
     tooltipText: r,
     tooltipColor: o,
     tooltipForceOpen: u,
@@ -825,8 +825,8 @@ function eq(e) {
       onMouseLeave: _
     }
   } = (0, h.useHeadphonesLottie)(u ? "undeafen" : "deafen"), C = n ? d.HeadphonesDenyIcon : c;
-  return s.useEffect(() => () => f(), [u, f]), (0, a.jsx)(eR.default, {
-    tooltipText: (0, M.default)(t, n, l),
+  return s.useEffect(() => () => f(), [u, f]), (0, a.jsx)(eO.default, {
+    tooltipText: (0, P.default)(t, n, l),
     onMouseEnter: E,
     onMouseLeave: _,
     icon: (0, a.jsx)(C, {

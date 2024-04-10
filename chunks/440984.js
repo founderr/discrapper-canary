@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   PremiumSubscritionDiscountAppliedModal: function() {
-    return P
+    return T
   }
 }), s("47120");
 var a = s("735250"),
@@ -15,43 +15,43 @@ var a = s("735250"),
   c = s("74538"),
   E = s("937615"),
   f = s("230916"),
-  _ = s("798769"),
-  p = s("474936"),
+  p = s("798769"),
+  _ = s("474936"),
   m = s("689938"),
   I = s("720913"),
   N = s("982404"),
   S = s("299156");
 
-function P(e) {
+function T(e) {
   let {
     premiumSubscription: t,
     premiumType: s,
-    onClose: P,
-    confettiCanvas: T,
-    userWasChurned: C = !1,
+    onClose: T,
+    confettiCanvas: C,
+    userWasChurned: P = !1,
     userDiscountOffer: A
-  } = e, R = (0, u.default)(), M = (0, l.isThemeDark)(R) ? N : S, h = n.useRef(null), [L, g] = n.useState(!1), y = (0, f.useChurnDiscountedPrice)(t, p.SubscriptionPlans.PREMIUM_MONTH_TIER_2, A), D = (0, c.getPrice)(p.SubscriptionPlans.PREMIUM_MONTH_TIER_2), x = (0, E.formatPrice)(D.amount, D.currency), U = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion);
+  } = e, R = (0, u.default)(), M = (0, l.isThemeDark)(R) ? N : S, h = n.useRef(null), [L, g] = n.useState(!1), y = (0, f.useChurnDiscountedPrice)(t, _.SubscriptionPlans.PREMIUM_MONTH_TIER_2, A), x = (0, c.getPrice)(_.SubscriptionPlans.PREMIUM_MONTH_TIER_2), D = (0, E.formatPrice)(x.amount, x.currency), U = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion);
   if (n.useEffect(() => {
       null != h.current && null != y && g(!0)
     }, [h, L, y]), null == A || null == y) return null;
   let b = m.default.Messages.PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB.format({
       numMonths: A.discount.user_usage_limit,
       discountedPrice: y,
-      regularPrice: x
+      regularPrice: D
     }),
     O = (0, a.jsx)("div", {
       className: I.whatYouLoseButtonContainer,
       children: (0, a.jsx)(r.Button, {
         color: r.Button.Colors.BRAND,
-        onClick: P,
+        onClick: T,
         children: m.default.Messages.PREMIUM_DISCOUNT_SWEET
       })
     });
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(_.default, {
+    children: [(0, a.jsx)(p.default, {
       premiumType: s,
       className: I.cancellationHeader,
-      onClose: P
+      onClose: T
     }), (0, a.jsx)("div", {
       ref: h,
       children: (0, a.jsx)(r.ModalContent, {
@@ -65,7 +65,7 @@ function P(e) {
               className: I.nitroIcon
             }), (0, a.jsx)(r.Heading, {
               variant: "heading-xl/bold",
-              children: C ? m.default.Messages.PREMIUM_TRIAL_TUTORIAL_WELCOME_BACK : m.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED_PUNCTUATED
+              children: P ? m.default.Messages.PREMIUM_TRIAL_TUTORIAL_WELCOME_BACK : m.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED_PUNCTUATED
             })]
           }), (0, a.jsx)("div", {
             className: I.bodyString,
@@ -75,7 +75,7 @@ function P(e) {
       })
     }), !U && L && (0, a.jsx)(d.default, {
       confettiTarget: h.current,
-      confettiCanvas: T,
+      confettiCanvas: C,
       confettiVelocityMultiplier: .75
     })]
   })

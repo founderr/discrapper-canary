@@ -30,7 +30,7 @@ function m(e) {
     isLightTheme: T
   } = e, g = "AnnouncementModalVariant1", {
     onClose: N
-  } = S, A = null != m.button && "" !== m.button.copy ? m.button.copy : h.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, v = (null === (t = m.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", R = (null === (n = m.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
+  } = S, A = null != m.button && "" !== m.button.copy ? m.button.copy : h.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, v = (null === (t = m.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", O = (null === (n = m.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
     (0, r.transitionTo)(E.Routes.APPLICATION_STORE), N()
   } : () => (0, i.default)({
     subscriptionTier: f.PremiumSubscriptionSKUs.TIER_2,
@@ -43,7 +43,7 @@ function m(e) {
     onClose: e => {
       e && N()
     }
-  }), O = "" !== m.helpArticleId ? () => (0, a.jsx)(l.Anchor, {
+  }), R = "" !== m.helpArticleId ? () => (0, a.jsx)(l.Anchor, {
     className: _.termsApplyAnchor,
     href: d.default.getArticleURL(m.helpArticleId),
     children: (0, a.jsx)(l.Heading, {
@@ -59,18 +59,18 @@ function m(e) {
     type: "image",
     src: T ? m.heroArtImageLinkLightTheme : m.heroArtImageLinkDarkTheme
   });
-  let P = T ? c.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : c.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL,
-    M = "" !== m.modalTopPill ? () => (0, a.jsx)(c.PremiumPillWithSparkles, {
+  let M = T ? c.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : c.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL,
+    P = "" !== m.modalTopPill ? () => (0, a.jsx)(c.PremiumPillWithSparkles, {
       text: m.modalTopPill,
       className: _.modalTopPill,
-      colorOptions: P
+      colorOptions: M
     }) : void 0;
   return {
     renderModalProps: S,
     header: m.header,
-    modalTopExtra: M,
+    modalTopExtra: P,
     subHeader: m.subheader,
-    subHeaderExtra: O,
+    subHeaderExtra: R,
     heroArt: L,
     featureCards: m.featureCards.map(e => ({
       header: e.header,
@@ -92,7 +92,7 @@ function m(e) {
             cta_type: v,
             seconds_open: Math.round((Date.now() - e) / 1e3),
             target: g
-          }), R()
+          }), O()
         },
         children: [(0, a.jsx)("img", {
           alt: "",

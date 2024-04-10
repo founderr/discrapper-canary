@@ -23,11 +23,11 @@ var a = n("735250"),
   N = n("417363"),
   A = n("941128"),
   v = n("451478"),
-  R = n("285952"),
-  O = n("366695"),
+  O = n("285952"),
+  R = n("366695"),
   L = n("366966"),
-  P = n("151011"),
-  M = n("774832"),
+  M = n("151011"),
+  P = n("774832"),
   y = n("465670"),
   x = n("786048"),
   D = n("897353"),
@@ -274,8 +274,8 @@ class Z extends s.PureComponent {
       foregroundGradientColor: s,
       message: l
     } = e;
-    return (0, a.jsxs)(R.default, {
-      direction: R.default.Direction.VERTICAL,
+    return (0, a.jsxs)(O.default, {
+      direction: O.default.Direction.VERTICAL,
       children: [(0, a.jsx)(f.Progress, {
         percent: t,
         size: f.Progress.Sizes.SMALL,
@@ -293,8 +293,8 @@ class Z extends s.PureComponent {
       percents: t,
       message: n
     } = e;
-    return (0, a.jsxs)(R.default, {
-      direction: R.default.Direction.VERTICAL,
+    return (0, a.jsxs)(O.default, {
+      direction: O.default.Direction.VERTICAL,
       children: [(0, a.jsx)(f.StackedProgress, {
         percents: t,
         size: f.Progress.Sizes.SMALL,
@@ -483,7 +483,7 @@ let X = () => (0, a.jsx)(Y, {
       item: t
     } = e;
     return (0, a.jsx)(Y, {
-      icon: M.default,
+      icon: P.default,
       tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_MOVE_UP,
       onClick: () => _.moveUp(t.applicationId, t.branchId)
     })
@@ -501,12 +501,12 @@ let X = () => (0, a.jsx)(Y, {
   et = [{
     key: Q.NAME,
     cellClassName: F.nameCell,
-    render: e => (0, a.jsxs)(R.default, {
-      align: R.default.Align.CENTER,
-      children: [(0, a.jsx)(O.default, {
+    render: e => (0, a.jsxs)(O.default, {
+      align: O.default.Align.CENTER,
+      children: [(0, a.jsx)(R.default, {
         game: e.application,
         className: F.__invalid_gameIcon,
-        size: O.default.Sizes.SMALL
+        size: R.default.Sizes.SMALL
       }), (0, a.jsx)("div", {
         className: F.nameCellText,
         children: e.application.name
@@ -539,8 +539,8 @@ let X = () => (0, a.jsx)(Y, {
         item: e
       })) : s = (0, a.jsx)(ee, {
         item: e
-      }), (0, a.jsxs)(R.default, {
-        justify: R.default.Justify.END,
+      }), (0, a.jsxs)(O.default, {
+        justify: O.default.Justify.END,
         children: [n, s]
       })
     }
@@ -587,7 +587,7 @@ class en extends s.PureComponent {
           color: w.Color.BLUE_345,
           animate: s
         })]
-      }), (0, a.jsx)(P.default, {
+      }), (0, a.jsx)(M.default, {
         hasHeader: !1,
         columns: et,
         data: e,

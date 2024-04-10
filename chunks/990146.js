@@ -28,10 +28,10 @@ t.default = function() {
     }),
     A = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion),
     v = (0, o.useStateFromStores)([h.default], () => (0, C.getQuestForTargetedContent)(h.default.quests, _.QuestContent.QUEST_BAR)),
-    R = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()),
-    O = s.useRef(-1),
+    O = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()),
+    R = s.useRef(-1),
     L = s.useRef(!1),
-    [P, M] = s.useState(!1),
+    [M, P] = s.useState(!1),
     [y, x] = s.useState(!1),
     [D, b] = s.useState(!1),
     [U, j] = s.useState(!0),
@@ -52,24 +52,24 @@ t.default = function() {
       w((null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 16), x(!0)
     }, []),
     Q = s.useCallback(() => {
-      M(!0)
+      P(!0)
     }, []),
     Z = s.useCallback(() => {
-      M(!1), !L.current && !H && x(!1)
+      P(!1), !L.current && !H && x(!1)
     }, [H]),
     X = s.useCallback(() => {
-      M(!1), !H && x(!1), L.current = !1
+      P(!1), !H && x(!1), L.current = !1
     }, [H]),
     J = s.useCallback(function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         {
           withDelay: t = !1
         } = e;
-      t ? O.current = window.setTimeout(q, 75) : q()
+      t ? R.current = window.setTimeout(q, 75) : q()
     }, [q]),
     $ = s.useCallback(() => {
-      if (window.clearTimeout(O.current), !H && !P) !L.current && x(!1)
-    }, [P, H]),
+      if (window.clearTimeout(R.current), !H && !M) !L.current && x(!1)
+    }, [M, H]),
     ee = s.useCallback(() => {
       null != v && (0, c.trackQuestEvent)({
         questId: v.id,
@@ -145,7 +145,7 @@ t.default = function() {
   return l && null != v && (en || !U || z) && !K ? (0, a.jsx)(m.QuestContentImpressionTracker, {
     questId: v.id,
     questContent: _.QuestContent.QUEST_BAR,
-    overrideVisibility: !R && en,
+    overrideVisibility: !O && en,
     children: () => (0, a.jsx)(r.animated.div, {
       "aria-hidden": !en,
       className: i()(N.wrapper, {

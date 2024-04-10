@@ -46,15 +46,15 @@ t.default = e => {
   }), {
     selectedGames: A,
     playstyle: v,
-    interests: R,
-    primetime: O
+    interests: O,
+    primetime: R
   } = (0, d.useStateFromStoresObject)([_.default], () => {
     var e;
     return null !== (e = _.default.getStateForGuild(n).progress) && void 0 !== e ? e : {}
-  }), L = s.useMemo(() => (null == A ? void 0 : A.size) > 0 ? p(Array.from(A.values()).map(e => e.name)) : null, [A]), P = s.useMemo(() => (0, m.getPlaystyleTitle)(v), [v]), M = s.useMemo(() => (null == R ? void 0 : R.size) > 0 ? p(Array.from(R)) : null, [R]), y = s.useMemo(() => {
-    let e = (null == O ? void 0 : O.length) > 0 ? O.map(e => (0, C.primetimeToString)(e)).filter(h.isNotNullish) : [];
+  }), L = s.useMemo(() => (null == A ? void 0 : A.size) > 0 ? p(Array.from(A.values()).map(e => e.name)) : null, [A]), M = s.useMemo(() => (0, m.getPlaystyleTitle)(v), [v]), P = s.useMemo(() => (null == O ? void 0 : O.size) > 0 ? p(Array.from(O)) : null, [O]), y = s.useMemo(() => {
+    let e = (null == R ? void 0 : R.length) > 0 ? R.map(e => (0, C.primetimeToString)(e)).filter(h.isNotNullish) : [];
     return (null == e ? void 0 : e.length) > 0 ? p(e) : null
-  }, [O]);
+  }, [R]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: I.scrollBg,
@@ -85,12 +85,12 @@ t.default = e => {
             children: S.default.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({
               date: o()().format("MMMM YYYY")
             })
-          }), null != L ? null != P ? (0, a.jsx)(c.Text, {
+          }), null != L ? null != M ? (0, a.jsx)(c.Text, {
             variant: "text-sm/normal",
             color: "text-muted",
             className: I.overviewText,
             children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMES_AND_PLAYSTYLE.format({
-              playstyle: P,
+              playstyle: M,
               games: L
             })
           }) : (0, a.jsx)(c.Text, {
@@ -105,12 +105,12 @@ t.default = e => {
             color: "text-muted",
             className: I.overviewText,
             children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_DEFAULT
-          }), null != M ? (0, a.jsx)(c.Text, {
+          }), null != P ? (0, a.jsx)(c.Text, {
             variant: "text-sm/normal",
             color: "text-muted",
             className: I.overviewText,
             children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_TRAITS.format({
-              traits: M
+              traits: P
             })
           }) : null, null != y ? (0, a.jsx)(c.Text, {
             variant: "text-sm/normal",

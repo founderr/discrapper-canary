@@ -24,13 +24,13 @@ var a = n("735250"),
   A = n("689938"),
   v = n("24953");
 
-function R() {
+function O() {
   let [e, t, n, l] = (0, T.useClanDiscoveryUIStore)(e => [e.selectedGames, e.setSelectedGames, e.game, e.setGame], o.default), i = s.useCallback(() => {
     null != n && null != l && (n === T.ClanDiscoveryGame.GENSHIN ? (l(T.ClanDiscoveryGame.VALORANT), t([{
-      applicationId: g.VALORANT_ID,
+      applicationId: N.VALORANT_ID,
       name: "Valorant"
     }])) : (l(T.ClanDiscoveryGame.GENSHIN), t([{
-      applicationId: g.GENSHIN_ID,
+      applicationId: N.GENSHIN_ID,
       name: "Genshin Impact"
     }])))
   }, [n, l, t]);
@@ -53,7 +53,7 @@ function R() {
   })
 }
 
-function O() {
+function R() {
   let e = s.useMemo(N.getPlaystyleOptions, []),
     {
       playstyle: t,
@@ -124,7 +124,7 @@ function L() {
   })
 }
 
-function P() {
+function M() {
   var e;
   let t = (0, T.useClanDiscoveryUIStore)(e => e.selectedPrimetime, o.default);
   return (0, a.jsxs)(_.Button, {
@@ -144,7 +144,7 @@ function P() {
   })
 }
 
-function M() {
+function P() {
   let e = (0, C.useStateFromStoresArray)([p.default], () => p.default.getFavoriteClans(), []);
   return (0, a.jsxs)(_.Button, {
     className: v.filterPillSmall,
@@ -182,10 +182,10 @@ function x() {
     className: v.toolbar,
     children: [(0, a.jsxs)("div", {
       className: v.preferences,
-      children: [(0, a.jsx)(R, {}), (0, a.jsx)(O, {}), (0, a.jsx)(L, {}), (0, a.jsx)(P, {})]
+      children: [(0, a.jsx)(O, {}), (0, a.jsx)(R, {}), (0, a.jsx)(L, {}), (0, a.jsx)(M, {})]
     }), (0, a.jsxs)("div", {
       className: v.actions,
-      children: [(0, a.jsx)(M, {}), (0, a.jsx)(y, {})]
+      children: [(0, a.jsx)(P, {}), (0, a.jsx)(y, {})]
     })]
   })
 }

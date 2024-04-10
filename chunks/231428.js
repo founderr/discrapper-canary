@@ -14,15 +14,15 @@ var a, n = s("735250"),
   c = s("442837"),
   E = s("481060"),
   f = s("570140"),
-  _ = s("355467"),
-  p = s("827837"),
+  p = s("355467"),
+  _ = s("827837"),
   m = s("821849"),
   I = s("724757"),
   N = s("818035"),
   S = s("509545"),
-  P = s("78839"),
-  T = s("285952"),
-  C = s("884246"),
+  T = s("78839"),
+  C = s("285952"),
+  P = s("884246"),
   A = s("74538"),
   R = s("807160"),
   M = s("474936"),
@@ -31,7 +31,7 @@ var a, n = s("735250"),
   g = s("472009"),
   y = s("486158");
 
-function D(e, t, s) {
+function x(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -40,13 +40,13 @@ function D(e, t, s) {
   }) : e[t] = s, e
 }
 
-function x(e) {
+function D(e) {
   let {
     payments: t,
     locale: s,
     compactMode: a,
     numPages: l
-  } = e, u = i.useRef(null), [o, c] = i.useState(0), [f, p] = i.useState(null), m = t.slice(10 * o, (o + 1) * 10);
+  } = e, u = i.useRef(null), [o, c] = i.useState(0), [f, _] = i.useState(null), m = t.slice(10 * o, (o + 1) * 10);
   i.useEffect(() => {
     var e;
     null === (e = u.current) || void 0 === e || e.scrollTo({
@@ -56,7 +56,7 @@ function x(e) {
   let N = i.useCallback(e => {
       c(e);
       let s = t[t.length - 1].id;
-      e === l - 1 && f !== s && ((0, _.fetchPayments)(10, s), p(s))
+      e === l - 1 && f !== s && ((0, p.fetchPayments)(10, s), _(s))
     }, [t, l, f]),
     S = (0, I.default)("billing-history", u);
   return (0, n.jsx)(d.ListNavigatorProvider, {
@@ -67,7 +67,7 @@ function x(e) {
           ref: t,
           ...i
         } = e;
-        return (0, n.jsx)(C.default, {
+        return (0, n.jsx)(P.default, {
           className: r()(g.verticalFit, g.paginator),
           currentPageIndex: o,
           onChangePage: N,
@@ -95,7 +95,7 @@ class U extends(a = i.PureComponent) {
   }
   componentDidMount() {
     f.default.wait(() => {
-      (0, p.fetchActivityStatistics)(), (0, _.fetchPayments)(20)
+      (0, _.fetchActivityStatistics)(), (0, p.fetchPayments)(20)
     })
   }
   renderPremiumExternalSubscription(e) {
@@ -128,7 +128,7 @@ class U extends(a = i.PureComponent) {
         className: r()(g.paymentPane, g.verticalFit),
         children: [e ? null : (0, n.jsx)("div", {
           className: r()(g.paymentRow, g.bottomDivider),
-          children: (0, n.jsxs)(T.default, {
+          children: (0, n.jsxs)(C.default, {
             className: g.paymentRowHeader,
             children: [(0, n.jsx)("div", {
               className: y.date,
@@ -141,7 +141,7 @@ class U extends(a = i.PureComponent) {
               children: L.default.Messages.BILLING_PAYMENT_TABLE_HEADER_AMOUNT
             })]
           })
-        }), (0, n.jsx)(x, {
+        }), (0, n.jsx)(D, {
           compactMode: e,
           locale: a,
           payments: t,
@@ -151,7 +151,7 @@ class U extends(a = i.PureComponent) {
     }) : null
   }
   constructor(...e) {
-    super(...e), D(this, "scrollerRef", i.createRef())
+    super(...e), x(this, "scrollerRef", i.createRef())
   }
 }
 
@@ -164,7 +164,7 @@ function b(e) {
 
 function O(e) {
   let t = (0, c.useStateFromStores)([N.default], () => N.default.getPayments()),
-    s = (0, c.useStateFromStores)([P.default], () => P.default.getPremiumTypeSubscription()),
+    s = (0, c.useStateFromStores)([T.default], () => T.default.getPremiumTypeSubscription()),
     a = i.useMemo(() => new Set(t.filter(b).map(e => {
       let {
         subscription: t
@@ -189,6 +189,6 @@ function O(e) {
     subscription: s
   })
 }
-D(U, "defaultProps", {
+x(U, "defaultProps", {
   compactMode: !1
 })

@@ -18,11 +18,11 @@ let I = new Set,
   N = null,
   A = null,
   v = null,
-  R = null,
   O = null,
+  R = null,
   L = f.Storage.get(S.ADVANCED_MODE_ON_KEY) || !1;
 
-function P(e) {
+function M(e) {
   let t = e.getGuildId(),
     n = {
       ...e.permissionOverwrites
@@ -30,10 +30,10 @@ function P(e) {
   return null != t && null == n[t] && (n[t] = h.makeEveryoneOverwrite(t)), n
 }
 
-function M() {
+function P() {
   if (A = _.default.getChannel(), v = _.default.getCategory(), null == A) return !1;
   let e = A.getGuildId();
-  N = g = P(A), null == g[R] && (R = e), s = null != v, a = h.areChannelsLocked(A, v), O = null, T = !1, p = m.FormStates.CLOSED, I.clear()
+  N = g = M(A), null == g[O] && (O = e), s = null != v, a = h.areChannelsLocked(A, v), R = null, T = !1, p = m.FormStates.CLOSED, I.clear()
 }
 class y extends(l = c.default.Store) {
   initialize() {
@@ -55,7 +55,7 @@ class y extends(l = c.default.Store) {
     return g
   }
   get selectedOverwriteId() {
-    return R
+    return O
   }
   get formState() {
     return p
@@ -87,9 +87,9 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = y) ? Object.de
       section: t
     } = e;
     if (null != A || t !== m.ChannelSettingsSections.PERMISSIONS) return !1;
-    M()
+    P()
   },
-  CHANNEL_SETTINGS_PERMISSIONS_INIT: M,
+  CHANNEL_SETTINGS_PERMISSIONS_INIT: P,
   CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION: function(e) {
     let {
       id: t,
@@ -110,14 +110,14 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = y) ? Object.de
     let {
       id: t
     } = e;
-    if (null != g && null != g[t]) R = t;
+    if (null != g && null != g[t]) O = t;
     else {
       if (null == A) return !1;
-      O = t
+      R = t
     }
   },
   CHANNEL_SETTINGS_CLOSE: function() {
-    p = m.FormStates.CLOSED, g = null, N = null, A = null, v = null, T = !1, I.clear(), R = null, O = null
+    p = m.FormStates.CLOSED, g = null, N = null, A = null, v = null, T = !1, I.clear(), O = null, R = null
   },
   CHANNEL_UPDATES: function(e) {
     let {
@@ -130,14 +130,14 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = y) ? Object.de
       v = _.default.getCategory();
       let t = A.getGuildId();
       if (null == t) return !1;
-      N = P(A);
+      N = M(A);
       let n = {};
       return I.forEach(e => {
         null != g && (n[e] = g[e])
       }), null == n[t] && null == A.permissionOverwrites[t] && (n[t] = h.makeEveryoneOverwrite(t)), null == (g = {
         ...A.permissionOverwrites,
         ...n
-      })[R] ? R = t : null != O && null != g[O] && (R = O, O = null), a = h.areChannelsLocked(A, v), !0
+      })[O] ? O = t : null != R && null != g[R] && (O = R, R = null), a = h.areChannelsLocked(A, v), !0
     }(e.id) && (n = !0);
     return n
   },
@@ -148,7 +148,7 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = y) ? Object.de
     let {
       silent: t
     } = e;
-    t ? p = m.FormStates.OPEN : (p = m.FormStates.CLOSED, M())
+    t ? p = m.FormStates.OPEN : (p = m.FormStates.CLOSED, P())
   },
   CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function(e) {
     let {

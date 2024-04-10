@@ -23,11 +23,11 @@ var a = n("735250"),
   N = n("30513"),
   A = n("474936"),
   v = n("689938"),
-  R = n("54449"),
-  O = n("1006"),
+  O = n("54449"),
+  R = n("1006"),
   L = n("741160"),
-  P = n("829972"),
-  M = n("31932"),
+  M = n("829972"),
+  P = n("31932"),
   y = n("642301");
 
 function x(e) {
@@ -91,7 +91,7 @@ t.default = s.memo(function(e) {
       },
       location_stack: f
     })
-  }, G = (0, i.isThemeDark)(n) ? P : M, [w, k] = (0, c.useSelectedDismissibleContent)(t, g.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
+  }, G = (0, i.isThemeDark)(n) ? M : P, [w, k] = (0, c.useSelectedDismissibleContent)(t, g.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
   return (0, a.jsx)(a.Fragment, {
     children: (() => {
       switch (w) {
@@ -103,7 +103,7 @@ t.default = s.memo(function(e) {
               asset: (0, a.jsx)("img", {
                 alt: "",
                 src: G,
-                className: O.fullWidthImage
+                className: R.fullWidthImage
               }),
               content: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CONTENT.format(),
               buttonCTA: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
@@ -122,7 +122,7 @@ t.default = s.memo(function(e) {
               asset: (0, a.jsx)("img", {
                 alt: "",
                 src: G,
-                className: O.fullWidthImage
+                className: R.fullWidthImage
               }),
               content: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_CONTENT.format(),
               buttonCTA: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
@@ -170,7 +170,7 @@ t.default = s.memo(function(e) {
               asset: (0, a.jsx)("img", {
                 alt: "",
                 src: L,
-                className: O.fullWidthImage
+                className: R.fullWidthImage
               }),
               content: e,
               buttonCTA: t,
@@ -191,7 +191,7 @@ t.default = s.memo(function(e) {
         case l.DismissibleContent.GUILD_HEADER_ACTIVE_THREADS_NOTICE:
           return (0, a.jsx)(U, {
             renderPopout: (0, a.jsx)(S.default, {
-              className: R.tooltipOverrideColor,
+              className: O.tooltipOverrideColor,
               header: v.default.Messages.ACTIVE_THREADS_UPSELL_HEADER,
               content: v.default.Messages.ACTIVE_THREADS_UPSELL_CONTENT,
               buttonCTA: v.default.Messages.GOT_IT,
@@ -210,7 +210,7 @@ t.default = s.memo(function(e) {
               asset: (0, a.jsx)("img", {
                 alt: "",
                 src: y,
-                className: O.fullWidthImage
+                className: R.fullWidthImage
               }),
               onClick: () => {
                 _.default.open(s.id, T.GuildSettingsSections.ROLES), _.default.selectRole(s.getEveryoneRoleId(), v.default.Messages.USE_SOUNDBOARD)

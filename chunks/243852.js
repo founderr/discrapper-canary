@@ -18,24 +18,24 @@ var a, s, l, i, r, o = n("442837"),
   N = n("944486"),
   A = n("981631");
 let v = "ActivityTrackingStore",
-  R = 30 * S.default.Millis.MINUTE,
-  O = 5 * S.default.Millis.MINUTE,
+  O = 30 * S.default.Millis.MINUTE,
+  R = 5 * S.default.Millis.MINUTE,
   L = null !== (a = u.Storage.get(v)) && void 0 !== a ? a : {},
-  P = {},
-  M = !1;
+  M = {},
+  P = !1;
 
 function y(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
   t && x(e, !0);
-  let n = P[e.applicationId];
-  null != n && (n.stop(), delete P[e.applicationId]), delete L[e.applicationId], u.Storage.set(v, L)
+  let n = M[e.applicationId];
+  null != n && (n.stop(), delete M[e.applicationId]), delete L[e.applicationId], u.Storage.set(v, L)
 }
 
 function x(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = Date.now(),
     a = null != e.updatedAt ? n - e.updatedAt : 0;
-  a > R + O && (a = 0);
+  a > O + R && (a = 0);
   let s = (0, I.shouldShareApplicationActivity)(e.applicationId, T.default),
     l = N.default.getVoiceChannelId(),
     i = g.default.getMediaSessionId();
@@ -54,8 +54,8 @@ function x(e) {
     location: "28tk0bf_6"
   });
   t && s && r && _.default.updateUserRecentGamesLocal(e.applicationId, Math.floor(a / 1e3));
-  let o = P[e.applicationId];
-  null == o && (o = P[e.applicationId] = new d.Interval).start(R, () => x(e)), !t && (L[e.applicationId] = e, u.Storage.set(v, L))
+  let o = M[e.applicationId];
+  null == o && (o = M[e.applicationId] = new d.Interval).start(O, () => x(e)), !t && (L[e.applicationId] = e, u.Storage.set(v, L))
 }
 
 function D() {
@@ -81,7 +81,7 @@ function D() {
 
 function b() {
   for (let e of Object.keys(L)) y(L[e]);
-  M = !1
+  P = !1
 }
 class U extends(s = o.default.Store) {
   initialize() {
@@ -99,9 +99,9 @@ r = "ActivityTrackingStore", (i = "displayName") in(l = U) ? Object.defineProper
 }) : l[i] = r, new U(c.default, {
   RUNNING_GAMES_CHANGE: () => D(),
   CONNECTION_OPEN: function() {
-    if (M) return !1;
+    if (P) return !1;
     for (let e of Object.keys(L)) x(L[e]);
-    D(!1), M = !0
+    D(!1), P = !0
   },
   CONNECTION_CLOSED: function(e) {
     let {

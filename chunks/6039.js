@@ -26,8 +26,8 @@ t.default = e => {
   let n, A;
   let {
     guildId: v,
-    inviteCode: R
-  } = e, [O, L] = s.useState(T.WaveStates.INITIAL), P = (0, l.useStateFromStores)([h.default], () => h.default.get(v)), M = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(v)), y = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(v)), {
+    inviteCode: O
+  } = e, [R, L] = s.useState(T.WaveStates.INITIAL), M = (0, l.useStateFromStores)([h.default], () => h.default.get(v)), P = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(v)), y = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(v)), {
     hasFetchedRequestToJoinGuilds: x,
     guildPreviewDisabled: D
   } = (0, l.useStateFromStoresObject)([C.default], () => ({
@@ -50,7 +50,7 @@ t.default = e => {
   let G = (n = g.default.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({
       name: null == D ? void 0 : D.toString()
     }), A = () => {
-      L(Math.max(O, T.WaveStates.FILLING)), f.default.removeGuildJoinRequest(v), (0, r.transitionTo)(p.Routes.ME)
+      L(Math.max(R, T.WaveStates.FILLING)), f.default.removeGuildJoinRequest(v), (0, r.transitionTo)(p.Routes.ME)
     }, () => {
       (0, i.openModal)(e => (0, a.jsx)(i.ConfirmModal, {
         header: g.default.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
@@ -66,16 +66,16 @@ t.default = e => {
         })
       }))
     }),
-    w = (null == P ? void 0 : null === (t = P.guild) || void 0 === t ? void 0 : t.splash) != null ? c.default.getGuildSplashURL({
-      id: P.guild.id,
-      splash: P.guild.splash
+    w = (null == M ? void 0 : null === (t = M.guild) || void 0 === t ? void 0 : t.splash) != null ? c.default.getGuildSplashURL({
+      id: M.guild.id,
+      splash: M.guild.splash
     }) : (0, d.getArtForPath)();
   return (0, a.jsx)("div", {
     className: N.page,
     children: (0, a.jsxs)(u.default, {
       embedded: !0,
       splash: w,
-      waveState: O,
+      waveState: R,
       showLogo: !1,
       updateWaveState: b,
       children: [(0, a.jsx)("div", {
@@ -83,7 +83,7 @@ t.default = e => {
       }), (0, a.jsx)("div", {
         className: N.contentWrapper,
         children: (() => {
-          switch (null == M ? void 0 : M.applicationStatus) {
+          switch (null == P ? void 0 : P.applicationStatus) {
             case _.GuildJoinRequestApplicationStatuses.SUBMITTED:
               return (0, a.jsx)(S.default, {
                 onWithdrawApplication: G,
@@ -95,13 +95,13 @@ t.default = e => {
                 onReapply: j,
                 confirmText: g.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION,
                 onWithdrawApplication: G,
-                rejectionReason: null == M ? void 0 : M.rejectionReason,
+                rejectionReason: null == P ? void 0 : P.rejectionReason,
                 guild: D
               });
             default:
               return (0, a.jsx)(I.default, {
                 guildId: v,
-                inviteCode: R,
+                inviteCode: O,
                 onComplete: U
               })
           }
