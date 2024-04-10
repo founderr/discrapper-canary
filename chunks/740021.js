@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return U
+    return j
   }
 }), s("47120");
 var a = s("735250"),
@@ -19,77 +19,91 @@ var a = s("735250"),
   m = s("249003"),
   I = s("735336"),
   T = s("747074"),
-  p = s("18816"),
-  N = s("301984"),
-  A = s("30556"),
-  x = s("228168"),
-  _ = s("182294"),
-  v = s("231338"),
-  C = s("262572");
-let h = S.default.getEnableHardwareAcceleration() ? n.AnimatedAvatar : n.Avatar;
+  p = s("530"),
+  N = s("894374"),
+  x = s("18816"),
+  A = s("301984"),
+  v = s("30556"),
+  _ = s("228168"),
+  C = s("182294"),
+  h = s("231338"),
+  U = s("262572");
+let R = S.default.getEnableHardwareAcceleration() ? n.AnimatedAvatar : n.Avatar;
 
-function U(e) {
+function j(e) {
   let {
     user: t,
     displayProfile: s,
     activity: n,
     friendToken: S,
-    channelId: U,
-    className: R,
-    onClose: j
+    guildId: j,
+    channelId: P,
+    className: M,
+    onClose: y
   } = e, {
-    profileTheme: M
+    profileTheme: O
   } = l.useContext(T.UserProfileContext), {
-    avatarSrc: P,
-    eventHandlers: y,
-    avatarDecorationSrc: O
+    avatarSrc: g,
+    eventHandlers: D,
+    avatarDecorationSrc: F
   } = (0, E.default)({
     user: t,
-    size: _.AvatarSizes.SIZE_120
+    size: C.AvatarSizes.SIZE_120
   }), {
-    relationshipType: g,
-    canReceiveMessage: D,
-    canReceiveFriendRequest: F
-  } = (0, m.default)(t), L = (null == s ? void 0 : s.application) != null && (0, f.canInstallApplication)(s.application), [B, b] = (0, i.useStateFromStoresArray)([c.default], () => {
+    relationshipType: L,
+    canReceiveMessage: B,
+    canReceiveFriendRequest: b
+  } = (0, m.default)(t), G = (null == s ? void 0 : s.application) != null && (0, f.canInstallApplication)(s.application), [k, w] = (0, i.useStateFromStoresArray)([c.default], () => {
     let e = c.default.isMobileOnline(t.id);
-    return (0, d.shouldDisableUserPresenceInChannel)(t, U) ? [v.StatusTypes.UNKNOWN, e] : (0, u.default)(n) ? [v.StatusTypes.STREAMING, e] : [c.default.getStatus(t.id), e]
-  }), G = () => {
-    j(), (0, r.popLayer)()
+    return (0, d.shouldDisableUserPresenceInChannel)(t, P) ? [h.StatusTypes.UNKNOWN, e] : (0, u.default)(n) ? [h.StatusTypes.STREAMING, e] : [c.default.getStatus(t.id), e]
+  }), z = () => {
+    y(), (0, r.popLayer)()
   };
   return (0, a.jsxs)("header", {
-    className: R,
+    className: M,
     children: [(0, a.jsx)(I.default, {
       user: t,
       displayProfile: s,
-      profileType: x.UserProfileTypes.MODAL,
+      profileType: _.UserProfileTypes.MODAL,
       hasProfileEffect: (null == s ? void 0 : s.profileEffectId) != null,
-      onClose: G
+      onClose: z
     }), (0, a.jsxs)("div", {
-      className: C.inner,
+      className: U.inner,
       children: [(0, a.jsx)("div", {
-        ...y,
-        children: (0, a.jsx)(h, {
-          src: P,
-          avatarDecoration: O,
-          size: _.AvatarSizes.SIZE_120,
-          className: C.avatar,
-          status: B,
-          statusBackdropColor: (0, o.getStatusBackdropColor)(M),
+        ...D,
+        children: (0, a.jsx)(R, {
+          src: g,
+          avatarDecoration: F,
+          size: C.AvatarSizes.SIZE_120,
+          className: U.avatar,
+          status: k,
+          statusBackdropColor: (0, o.getStatusBackdropColor)(O),
           "aria-label": t.username,
-          isMobile: b,
+          isMobile: w,
           statusTooltip: !0
         })
-      }), D && (0, a.jsx)(A.default, {
+      }), (0, a.jsxs)("div", {
+        className: U.buttons,
+        children: [B && (0, a.jsx)(v.default, {
+          user: t,
+          compact: G || b,
+          onClose: z
+        }), G && (0, a.jsx)(x.default, {
+          application: s.application
+        }), b && (0, a.jsx)(A.default, {
+          user: t,
+          relationshipType: L,
+          friendToken: S,
+          onClose: z
+        })]
+      }), (0, a.jsx)(p.default, {
+        className: U.username,
         user: t,
-        compact: L || F,
-        onClose: G
-      }), L && (0, a.jsx)(p.default, {
-        application: s.application
-      }), F && (0, a.jsx)(N.default, {
-        user: t,
-        relationshipType: g,
-        friendToken: S,
-        onClose: G
+        guildId: j,
+        nicknameVariant: "heading-xl/bold",
+        tags: (0, a.jsx)(N.UserProfilePronounsTag, {
+          pronouns: null == s ? void 0 : s.pronouns
+        })
       })]
     })]
   })

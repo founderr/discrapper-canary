@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return x
+    return A
   }
 }), s("47120");
 var a = s("735250"),
@@ -21,22 +21,22 @@ var a = s("735250"),
   T = s("228168"),
   p = s("981631"),
   N = s("689938"),
-  A = s("420867");
+  x = s("420867");
 
-function x(e) {
+function A(e) {
   let {
     user: t,
     guildId: s,
-    channelId: x,
-    messageId: _,
-    roleId: v,
+    channelId: A,
+    messageId: v,
+    roleId: _,
     friendToken: C,
     transitionState: h,
     sourceAnalyticsLocations: U = [],
     onClose: R
   } = e, {
     analyticsLocations: j
-  } = (0, u.default)([...U, r.default.SIMPLIFIED_PROFILE_MODAL]), M = (0, S.default)(t.id, s), P = (0, i.useStateFromStores)([c.default], () => c.default.findActivity(t.id, e => {
+  } = (0, u.default)([...U, r.default.SIMPLIFIED_PROFILE_MODAL]), P = (0, S.default)(t.id, s), M = (0, i.useStateFromStores)([c.default], () => c.default.findActivity(t.id, e => {
     let {
       type: t
     } = e;
@@ -48,36 +48,36 @@ function x(e) {
       layout: "SIMPLIFIED_MODAL",
       userId: t.id,
       guildId: s,
-      channelId: x,
-      messageId: _,
-      roleId: v,
+      channelId: A,
+      messageId: v,
+      roleId: _,
       children: (0, a.jsxs)(n.ModalRoot, {
         transitionState: h,
-        className: A.root,
+        className: x.root,
         hideShadow: !0,
         "aria-label": N.default.Messages.USER_PROFILE_MODAL,
-        children: [(0, a.jsxs)("div", {
+        children: [(0, a.jsx)("div", {
           ref: y,
-          children: [(0, a.jsx)(m.default, {
+          children: (0, a.jsxs)(m.default, {
             user: t,
             profileType: T.UserProfileTypes.MODAL,
-            children: (0, a.jsx)(I.default, {
-              className: A.header,
+            children: [(0, a.jsx)(I.default, {
+              className: x.header,
               user: t,
-              displayProfile: M,
-              activity: P,
+              displayProfile: P,
+              activity: M,
               friendToken: C,
               onClose: R
-            })
-          }), (0, a.jsxs)(m.default.Inner, {
-            children: [h === n.ModalTransitionState.ENTERED && (0, a.jsx)(E.default, {
-              onTooltipClose: R
-            }), (0, a.jsx)("div", {
-              className: A.body
+            }), (0, a.jsxs)(m.default.Inner, {
+              children: [h === n.ModalTransitionState.ENTERED && (0, a.jsx)(E.default, {
+                onTooltipClose: R
+              }), (0, a.jsx)("div", {
+                className: x.body
+              })]
             })]
-          })]
-        }), (null == M ? void 0 : M.profileEffectId) != null && (0, a.jsx)(d.default, {
-          profileEffectId: null == M ? void 0 : M.profileEffectId,
+          })
+        }), (null == P ? void 0 : P.profileEffectId) != null && (0, a.jsx)(d.default, {
+          profileEffectId: null == P ? void 0 : P.profileEffectId,
           bannerAdjustment: 0,
           isHovering: O
         })]
