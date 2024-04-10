@@ -19,10 +19,10 @@ n.r(t), n.d(t, {
     return Z
   },
   hasMessageReadPermission: function() {
-    return H
+    return B
   },
   isMatchingOrigin: function() {
-    return B
+    return H
   },
   processSocketThrottlers: function() {
     return z
@@ -71,11 +71,11 @@ var a, s = n("729594"),
   p = n("594174"),
   T = n("979651"),
   g = n("70956"),
-  N = n("5192"),
-  A = n("226951"),
+  A = n("5192"),
+  N = n("226951"),
   v = n("996106"),
-  O = n("863141"),
-  R = n("186901"),
+  R = n("863141"),
+  O = n("186901"),
   L = n("981631");
 let M = null !== (a = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== a ? a : "localhost",
   P = function() {
@@ -85,7 +85,7 @@ let M = null !== (a = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && v
       n = t[t.length - 1];
     return /^\d+$/.test(n) ? e : t.slice(-2).join(".")
   }(),
-  y = new RegExp("^".concat(A.default.escape("https://"), "(?:[a-z]+\\.)?(").concat(A.default.escape(P), "|discordapp.com|discord.com)$")),
+  y = new RegExp("^".concat(N.default.escape("https://"), "(?:[a-z]+\\.)?(").concat(N.default.escape(P), "|discordapp.com|discord.com)$")),
   x = 1 * g.default.Millis.MINUTE,
   D = {};
 
@@ -168,7 +168,7 @@ function k(e, t, n) {
   } = n, u = p.default.getUser(o);
   if (null == u) throw Error("Invalid user id: ".concat(o));
   return {
-    nick: N.default.getName(e, t, u),
+    nick: A.default.getName(e, t, u),
     mute: m.default.isLocalMute(u.id),
     volume: m.default.getLocalVolume(u.id),
     pan: m.default.getLocalPan(u.id),
@@ -179,7 +179,7 @@ function k(e, t, n) {
       self_deaf: i,
       suppress: r
     },
-    user: (0, O.default)(u)
+    user: (0, R.default)(u)
   }
 }
 
@@ -187,7 +187,7 @@ function F(e, t, n) {
   let a = p.default.getUser(t);
   return {
     type: e,
-    user: null != a ? (0, O.default)(a) : null,
+    user: null != a ? (0, R.default)(a) : null,
     presence: {
       status: I.default.getStatus(t),
       activity: null != n ? I.default.getApplicationActivity(t, n) : I.default.getPrimaryActivity(t)
@@ -195,7 +195,7 @@ function F(e, t, n) {
   }
 }
 
-function B(e) {
+function H(e) {
   let t;
   if (null == e) return !1;
   let n = window.location.origin;
@@ -208,7 +208,7 @@ function B(e) {
   return window.location.hostname === t && "localhost" === t || null == e.match("staging") && (!!(y.test(e) && y.test(n)) || !1)
 }
 
-function H(e, t, n) {
+function B(e, t, n) {
   let a = C.default.getGuild(e.getGuildId());
   return (null != a ? a.getApplicationId() : e.getApplicationId()) === t || n.indexOf(L.OAuth2Scopes.MESSAGES_READ) > -1
 }
@@ -257,7 +257,7 @@ function K(e, t, n) {
       }
     } = a;
     if ("string" == typeof n) {
-      if (e.transport === R.TransportTypes.POST_MESSAGE) {
+      if (e.transport === O.TransportTypes.POST_MESSAGE) {
         let e = (0, u.default)(t);
         if (null == e || !j(n, [e])) throw new v.default({
           closeCode: L.RPCCloseCodes.INVALID_ORIGIN
@@ -285,7 +285,7 @@ async function z(e, t) {
 }
 
 function q(e, t) {
-  null == t && (e.authorization.scopes = [R.RPC_LOCAL_SCOPE])
+  null == t && (e.authorization.scopes = [O.RPC_LOCAL_SCOPE])
 }
 
 function Q(e) {
@@ -339,7 +339,7 @@ function Z(e, t) {
 }
 
 function X(e) {
-  if (e !== R.TransportTypes.POST_MESSAGE) throw new v.default({
+  if (e !== O.TransportTypes.POST_MESSAGE) throw new v.default({
     errorCode: L.RPCErrors.INVALID_COMMAND
   }, 'command not available from "'.concat(e, " transport"))
 }
@@ -347,5 +347,6 @@ function X(e) {
 function J(e) {
   if (null == e.id) throw new v.default({
     errorCode: L.RPCErrors.INVALID_COMMAND
-  }, "Invalid application")
+  }, "Invalid application");
+  return e.id
 }

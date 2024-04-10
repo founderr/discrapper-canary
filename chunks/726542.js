@@ -426,6 +426,18 @@ let l = [{
       return "https://".concat(t, "/")
     },
     enabled: !0
+  }, {
+    type: o.PlatformTypes.AMAZON_MUSIC,
+    name: "Amazon Music",
+    icon: {
+      lightPNG: n("495036"),
+      darkPNG: n("495036"),
+      whitePNG: n("495036"),
+      lightSVG: n("605098"),
+      darkSVG: n("605098"),
+      whiteSVG: n("605098")
+    },
+    enabled: !1
   }],
   u = r().keyBy(l, "type"),
   d = {};

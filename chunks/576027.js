@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   crossPlatformCommands: function() {
-    return A
+    return N
   }
 });
 var a = n("688707"),
@@ -16,15 +16,16 @@ var a = n("688707"),
   f = n("378410"),
   E = n("468136"),
   h = n("64974"),
-  _ = n("906911"),
-  C = n("647656"),
-  m = n("918940"),
-  S = n("265067"),
-  I = n("881393"),
-  p = n("905534"),
-  T = n("273487"),
-  g = n("543815");
-let A = {
+  _ = n("83567"),
+  C = n("906911"),
+  m = n("647656"),
+  S = n("918940"),
+  I = n("265067"),
+  p = n("881393"),
+  T = n("905534"),
+  g = n("273487"),
+  A = n("543815");
+let N = {
   ...a.default,
   ...l.default,
   ...i.default,
@@ -38,11 +39,12 @@ let A = {
   ..._.default,
   ...C.default,
   ...m.default,
-  ...I.default,
-  ...p.default,
-  ...g.default,
-  ...T.default,
-  ...h.default,
   ...S.default,
+  ...p.default,
+  ...T.default,
+  ...A.default,
+  ...g.default,
+  ...h.default,
+  ...I.default,
   ...s.default
 }
