@@ -16,8 +16,8 @@ var i, r, s, a, o, l, u = n("392711"),
   T = n("69882"),
   f = n("134049"),
   S = n("160404"),
-  h = n("630388"),
-  A = n("823379"),
+  A = n("630388"),
+  h = n("823379"),
   m = n("709054"),
   N = n("314897"),
   O = n("592125"),
@@ -40,22 +40,22 @@ let C = new I.default("GuildMemberStore"),
 function G(e, t) {
   if (null == t.communicationDisabledUntil || !(0, T.isMemberCommunicationDisabled)(t)) return w(e, t.userId);
   let n = V(e, t.userId);
-  D[n] !== t.communicationDisabledUntil && (0, T.isMemberCommunicationDisabled)(t) && (D[n] = t.communicationDisabledUntil, B(n))
+  D[n] !== t.communicationDisabledUntil && (0, T.isMemberCommunicationDisabled)(t) && (D[n] = t.communicationDisabledUntil, k(n))
 }
 
 function w(e, t) {
   if (null != t) {
     let n = V(e, t);
-    null != D[n] && B(n), k(V(e, t))
+    null != D[n] && k(n), B(V(e, t))
   } else
-    for (let t in D) x(t) === e && (B(t), k(t))
-}
-
-function B(e) {
-  M += 1, P[e] = M
+    for (let t in D) x(t) === e && (k(t), B(t))
 }
 
 function k(e) {
+  M += 1, P[e] = M
+}
+
+function B(e) {
   F(e) === N.default.getId() && (0, f.clearCommunicationDisabledNotice)(x(e)), delete D[e]
 }
 
@@ -117,8 +117,8 @@ function Y(e) {
   } = e, {
     colorString: T,
     colorRoleId: f,
-    iconRoleId: h,
-    hoistRoleId: A,
+    iconRoleId: A,
+    hoistRoleId: h,
     highestRoleId: O
   } = H(a, o), p = {
     userId: t,
@@ -129,8 +129,8 @@ function Y(e) {
     roles: o,
     colorString: T,
     colorRoleId: f,
-    iconRoleId: h,
-    hoistRoleId: A,
+    iconRoleId: A,
+    hoistRoleId: h,
     highestRoleId: O,
     premiumSince: l,
     isPending: u,
@@ -408,7 +408,7 @@ class ee extends(r = c.default.Store) {
       n = g[e];
     if (null == n || null == n[t]) return !1;
     let i = n[t].flags;
-    return null != i && (0, h.hasFlag)(i, R.GuildMemberFlags.IS_GUEST)
+    return null != i && (0, A.hasFlag)(i, R.GuildMemberFlags.IS_GUEST)
   }
   getMemberIds(e) {
     if (null == e) return [];
@@ -549,14 +549,14 @@ l = "GuildMemberStore", (o = "displayName") in(a = ee) ? Object.defineProperty(a
       guildId: t,
       members: n
     } = e;
-    return K(t, n.map(e => e.member).filter(A.isNotNullish))
+    return K(t, n.map(e => e.member).filter(h.isNotNullish))
   },
   THREAD_MEMBERS_UPDATE: function(e) {
     let {
       guildId: t,
       addedMembers: n
     } = e;
-    return null != n && K(t, n.map(e => e.member).filter(A.isNotNullish))
+    return null != n && K(t, n.map(e => e.member).filter(h.isNotNullish))
   },
   LOAD_ARCHIVED_THREADS_SUCCESS: function(e) {
     let {
@@ -570,7 +570,7 @@ l = "GuildMemberStore", (o = "displayName") in(a = ee) ? Object.defineProperty(a
       guildId: t,
       threads: n
     } = e;
-    return K(t, Object.values(n).map(e => e.owner).filter(A.isNotNullish))
+    return K(t, Object.values(n).map(e => e.owner).filter(h.isNotNullish))
   },
   GUILD_ROLE_UPDATE: Q,
   GUILD_ROLE_DELETE: Q,

@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return S
   },
   getConnectionsCheckText: function() {
-    return h
+    return A
   },
   getCreatedAtDate: function() {
     return N
@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return m
   },
   isVerifiedRolesChannelVisible: function() {
-    return A
+    return h
   },
   officialApplicationIds: function() {
     return f
@@ -56,7 +56,7 @@ function S(e) {
   }
 }
 
-function h(e) {
+function A(e) {
   let {
     connectionType: t,
     connectionMetadataField: n,
@@ -273,7 +273,7 @@ function h(e) {
   return a
 }
 
-function A(e, t) {
+function h(e, t) {
   return Object.values(t).some(e => {
     var t;
     return (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null

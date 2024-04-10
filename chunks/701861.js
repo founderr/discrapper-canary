@@ -20,11 +20,11 @@ var a = n("735250"),
   p = n("825682"),
   T = n("170245"),
   g = n("981631"),
-  N = n("65154"),
-  A = n("689938"),
+  A = n("65154"),
+  N = n("689938"),
   v = n("432182");
 
-function O(e, t, n) {
+function R(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -33,7 +33,7 @@ function O(e, t, n) {
   }) : e[t] = n, e
 }
 
-function R(e) {
+function O(e) {
   let {
     user: t,
     onSelect: n
@@ -41,39 +41,39 @@ function R(e) {
     c.default.removeFriend(t.id, {
       location: "Friends"
     })
-  }, l = (0, r.useStateFromStores)([h.default], () => h.default.supports(N.Features.VIDEO));
+  }, l = (0, r.useStateFromStores)([h.default], () => h.default.supports(A.Features.VIDEO));
   return (0, a.jsxs)(o.Menu, {
     navId: "friend-row",
-    "aria-label": A.default.Messages.USER_ACTIONS_MENU_LABEL,
+    "aria-label": N.default.Messages.USER_ACTIONS_MENU_LABEL,
     onClose: d.closeContextMenu,
     onSelect: n,
     children: [l ? (0, a.jsx)(o.MenuItem, {
       id: "start-video-call",
-      label: A.default.Messages.START_VIDEO_CALL,
+      label: N.default.Messages.START_VIDEO_CALL,
       action: function() {
         u.default.openPrivateChannel(t.id, !0, !0)
       }
     }) : null, (0, a.jsx)(o.MenuItem, {
       id: "start-voice-call",
-      label: A.default.Messages.START_VOICE_CALL,
+      label: N.default.Messages.START_VOICE_CALL,
       action: () => {
         u.default.openPrivateChannel(t.id, !0)
       }
     }), (0, a.jsx)(o.MenuItem, {
       id: "remove-friend",
-      label: A.default.Messages.REMOVE_FRIEND,
+      label: N.default.Messages.REMOVE_FRIEND,
       action: () => {
         (0, o.openModal)(e => (0, a.jsx)(o.ConfirmModal, {
-          header: A.default.Messages.REMOVE_FRIEND_TITLE.format({
+          header: N.default.Messages.REMOVE_FRIEND_TITLE.format({
             name: m.default.getName(t)
           }),
-          confirmText: A.default.Messages.REMOVE_FRIEND,
-          cancelText: A.default.Messages.CANCEL,
+          confirmText: N.default.Messages.REMOVE_FRIEND,
+          cancelText: N.default.Messages.CANCEL,
           onConfirm: s,
           ...e,
           children: (0, a.jsx)(o.Text, {
             variant: "text-md/normal",
-            children: A.default.Messages.REMOVE_FRIEND_BODY.format({
+            children: N.default.Messages.REMOVE_FRIEND_BODY.format({
               name: m.default.getName(t)
             })
           })
@@ -127,12 +127,12 @@ class L extends s.PureComponent {
           className: v.actions,
           children: [(0, a.jsx)(S.default, {
             icon: _.default,
-            tooltip: A.default.Messages.SEND_DM,
+            tooltip: N.default.Messages.SEND_DM,
             onClick: this.handleOpenPrivateChannel,
             shouldHighlight: t
           }), (0, a.jsx)(S.default, {
             icon: C.default,
-            tooltip: A.default.Messages.MORE,
+            tooltip: N.default.Messages.MORE,
             onClick: this.handleOpenActionsMenu,
             shouldHighlight: t
           })]
@@ -141,20 +141,20 @@ class L extends s.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), O(this, "peopleListItemRef", s.createRef()), O(this, "state", {
+    super(...e), R(this, "peopleListItemRef", s.createRef()), R(this, "state", {
       isActiveRow: !1
-    }), O(this, "handleOpenPrivateChannel", e => {
+    }), R(this, "handleOpenPrivateChannel", e => {
       let {
         user: t
       } = this.props;
       e.stopPropagation();
       let n = i().find(E.default.getMutablePrivateChannels(), e => e.type === g.ChannelTypes.DM && e.getRecipientId() === t.id);
       null != n ? (0, f.transitionTo)(g.Routes.CHANNEL(g.ME, n.id)) : u.default.openPrivateChannel(t.id)
-    }), O(this, "handleOpenActionsMenu", e => {
+    }), R(this, "handleOpenActionsMenu", e => {
       let {
         user: t
       } = this.props;
-      (0, d.openContextMenu)(e, e => (0, a.jsx)(R, {
+      (0, d.openContextMenu)(e, e => (0, a.jsx)(O, {
         ...e,
         user: t
       }), {

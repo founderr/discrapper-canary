@@ -15,8 +15,8 @@ var i, r, s, a, o = n("442837"),
 let T = null,
   f = null,
   S = null,
-  h = null,
   A = null,
+  h = null,
   m = !1,
   N = !1,
   O = null,
@@ -36,7 +36,7 @@ function C(e) {
 }
 
 function g() {
-  T = null, f = null, S = null, h = null, A = null, m = !1, N = !1, O = null, p = !1
+  T = null, f = null, S = null, A = null, h = null, m = !1, N = !1, O = null, p = !1
 }
 
 function L(e) {
@@ -98,10 +98,10 @@ class M extends(i = o.default.Store) {
     return null !== (t = null == T ? void 0 : T[e]) && void 0 !== t ? t : void 0
   }
   getActiveGuildSubscriptions() {
-    return h
+    return A
   }
   getActiveApplicationSubscriptions() {
-    return A
+    return h
   }
   getSubscriptionForPlanIds(e) {
     var t;
@@ -140,7 +140,7 @@ a = "SubscriptionStore", (s = "displayName") in(r = M) ? Object.defineProperty(r
       }
       let t = _.SubscriptionRecord.createFromServer(e);
       n[t.id] = t, L(t) && (i[t.id] = t, t.type === I.SubscriptionTypes.GUILD && t.status !== I.SubscriptionStatusTypes.ENDED && r.push(t), t.type === I.SubscriptionTypes.APPLICATION && t.status !== I.SubscriptionStatusTypes.ENDED && s.push(t))
-    }), T = n, f = i, h = r, A = s
+    }), T = n, f = i, A = r, h = s
   },
   BILLING_SUBSCRIPTION_UPDATE_SUCCESS: function(e) {
     let {
@@ -152,11 +152,11 @@ a = "SubscriptionStore", (s = "displayName") in(r = M) ? Object.defineProperty(r
     }, L(n) && (f = {
       ...f,
       [n.id]: n
-    }), null != h && n.type === I.SubscriptionTypes.GUILD && (h = C({
-      activeSubscriptions: h,
-      record: n
-    })), null != A && n.type === I.SubscriptionTypes.APPLICATION && (h = C({
+    }), null != A && n.type === I.SubscriptionTypes.GUILD && (A = C({
       activeSubscriptions: A,
+      record: n
+    })), null != h && n.type === I.SubscriptionTypes.APPLICATION && (A = C({
+      activeSubscriptions: h,
       record: n
     }))
   },

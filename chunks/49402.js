@@ -22,8 +22,8 @@ function u(e, t, n) {
       fade: T = !1,
       customTheme: f = !1,
       paddingFix: S = !0,
-      style: h,
-      ...A
+      style: A,
+      ...h
     } = u, {
       scrollerRef: m,
       getScrollerState: N
@@ -48,9 +48,9 @@ function u(e, t, n) {
         [t]: T,
         [n]: f
       }),
-      style: (0, l.getMergedOrientationStyles)(h, I),
+      style: (0, l.getMergedOrientationStyles)(A, I),
       dir: E,
-      ...A,
+      ...h,
       children: (0, i.jsxs)(o.FocusRingScope, {
         containerRef: m,
         children: [_, p]

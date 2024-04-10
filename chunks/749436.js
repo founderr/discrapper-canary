@@ -23,8 +23,8 @@ var a, s = n("735250"),
   p = n("150192"),
   T = n("731455"),
   g = n("981631"),
-  N = n("689938"),
-  A = n("80420");
+  A = n("689938"),
+  N = n("80420");
 
 function v(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -34,11 +34,11 @@ function v(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let O = u().throttle(m.trackSearchResultsViewed, 1e3, {
+let R = u().throttle(m.trackSearchResultsViewed, 1e3, {
     leading: !1,
     trailing: !0
   }),
-  R = e => {
+  O = e => {
     let {
       isSelected: t,
       onCategoryChange: n,
@@ -48,11 +48,11 @@ let O = u().throttle(m.trackSearchResultsViewed, 1e3, {
     } = e;
     return (0, s.jsx)(c.Clickable, {
       onClick: () => n(a),
-      className: r()(A.categoryPill, {
-        [A.selected]: t
+      className: r()(N.categoryPill, {
+        [N.selected]: t
       }),
       children: (0, s.jsx)(c.Text, {
-        className: A.categoryLabel,
+        className: N.categoryLabel,
         variant: "text-sm/normal",
         children: null != i ? "".concat(l, " (").concat(i, ")") : l
       })
@@ -71,7 +71,7 @@ class L extends(a = l.PureComponent) {
     } = this.state, i = this.context;
     if (null == E.default.getSearchIndex() && f.createAlgoliaIndex(), C.ComponentDispatch.subscribe(g.ComponentActions.GLOBAL_CLIPBOARD_PASTE, this.focusInput), C.ComponentDispatch.subscribe(g.ComponentActions.TEXTAREA_FOCUS, this.focusInput), s.length > 0) {
       let r = n !== T.DISCOVERY_ALL_CATEGORIES_ID ? n : null;
-      O({
+      R({
         loadId: e,
         searchId: a,
         query: s,
@@ -95,7 +95,7 @@ class L extends(a = l.PureComponent) {
       query: u,
       isHandlingTagSearch: d
     } = this.state, c = this.context, f = e.isFetchingSearch && !a, E = l !== T.DISCOVERY_ALL_CATEGORIES_ID ? l : null;
-    (r || d) && f && (O({
+    (r || d) && f && (R({
       loadId: n,
       searchId: o,
       query: u,
@@ -132,7 +132,7 @@ class L extends(a = l.PureComponent) {
       }
     });
     return (0, s.jsx)(c.SingleSelect, {
-      className: A.languageSelector,
+      className: N.languageSelector,
       options: a,
       value: null !== (e = null == n ? void 0 : n.name) && void 0 !== e ? e : "",
       onChange: this.handleLanguageChange,
@@ -145,12 +145,12 @@ class L extends(a = l.PureComponent) {
       countsByCategory: t
     } = this.props;
     return (0, s.jsx)("div", {
-      className: A.categories,
+      className: N.categories,
       children: null == t ? void 0 : t.map(t => {
         let [n, a] = t;
-        return (0, s.jsx)(R, {
+        return (0, s.jsx)(O, {
           categoryId: n,
-          name: n === T.DISCOVERY_ALL_CATEGORIES_ID ? N.default.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : p.default.getCategoryName(n),
+          name: n === T.DISCOVERY_ALL_CATEGORIES_ID ? A.default.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : p.default.getCategoryName(n),
           onCategoryChange: this.handleCategoryChange,
           isSelected: e === n,
           count: a
@@ -168,19 +168,19 @@ class L extends(a = l.PureComponent) {
     } = this.props;
     return (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsxs)("div", {
-        className: r()(A.container, {
-          [A.searchPage]: a
+        className: r()(N.container, {
+          [N.searchPage]: a
         }),
         children: [(0, s.jsx)("div", {
-          className: A.search,
+          className: N.search,
           children: (0, s.jsx)(h.default, {
             ref: this._searchRef,
             searchTerm: e,
-            className: a ? void 0 : A.searchBox,
-            inputClassName: a ? void 0 : A.searchBoxInput,
-            closeIconClassName: a ? void 0 : A.closeIcon,
-            searchIconClassName: a ? void 0 : A.searchIcon,
-            label: N.default.Messages.GUILD_DISCOVERY_SEARCH_LABEL,
+            className: a ? void 0 : N.searchBox,
+            inputClassName: a ? void 0 : N.searchBoxInput,
+            closeIconClassName: a ? void 0 : N.closeIcon,
+            searchIconClassName: a ? void 0 : N.searchIcon,
+            label: A.default.Messages.GUILD_DISCOVERY_SEARCH_LABEL,
             placeholder: n,
             onChange: this.handleQueryChanged,
             onClear: this.handleQueryCleared,
@@ -188,7 +188,7 @@ class L extends(a = l.PureComponent) {
             onBlur: this.handleSearchBlurred,
             onKeyPress: this.handleSearchKeyPress,
             autoFocus: !a,
-            cta: t && null != e && e.length > 1 ? N.default.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
+            cta: t && null != e && e.length > 1 ? A.default.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
           })
         }), a ? this.renderSearchOptions() : null]
       }), a ? this.renderCategories() : null]

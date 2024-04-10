@@ -1,52 +1,52 @@
 "use strict";
-a.r(t);
-var i = a("735250");
-a("470079");
-var n = a("481060"),
-  l = a("230711"),
-  s = a("181211"),
-  o = a("188879"),
-  d = a("800530"),
-  r = a("981631"),
-  c = a("689938"),
-  u = a("653279"),
-  m = a("170143");
+i.r(t);
+var a = i("735250");
+i("470079");
+var n = i("481060"),
+  l = i("230711"),
+  s = i("181211"),
+  o = i("188879"),
+  r = i("800530"),
+  c = i("981631"),
+  d = i("689938"),
+  u = i("653279"),
+  m = i("170143");
 t.default = e => {
   let {
     transitionState: t,
-    onClose: a,
+    onClose: i,
     classificationId: _,
     source: A
-  } = e, f = (0, s.default)(), h = () => {
-    a(), l.default.open(r.UserSettingsSections.PRIVACY_AND_SAFETY, d.SafetyHubView.ACCOUNT_STANDING)
+  } = e, h = (0, s.default)(), f = () => {
+    i(), l.default.open(c.UserSettingsSections.PRIVACY_AND_SAFETY, r.SafetyHubView.ACCOUNT_STANDING)
   };
-  return (0, i.jsxs)(n.ModalRoot, {
+  return (0, a.jsxs)(n.ModalRoot, {
     className: u.modalRoot,
     transitionState: t,
-    children: [(0, i.jsxs)("div", {
+    children: [(0, a.jsxs)("div", {
       className: u.modalHeader,
-      children: [(0, i.jsx)("img", {
+      children: [(0, a.jsx)("img", {
         className: u.image,
         src: m,
         alt: ""
-      }), (0, i.jsx)(n.ModalCloseButton, {
+      }), (0, a.jsx)(n.ModalCloseButton, {
         className: u.modalClose,
-        onClick: a
+        onClick: i
       })]
-    }), (0, i.jsx)(n.ModalContent, {
+    }), (0, a.jsx)(n.ModalContent, {
       className: u.modalContent,
-      children: f ? (0, i.jsx)(n.Spinner, {}) : (0, i.jsx)(o.default, {
+      children: h ? (0, a.jsx)(n.Spinner, {}) : (0, a.jsx)(o.default, {
         classificationId: _,
         source: A,
-        onError: h
+        onError: f
       })
-    }), (0, i.jsx)(n.ModalFooter, {
-      children: (0, i.jsx)(n.Button, {
+    }), (0, a.jsx)(n.ModalFooter, {
+      children: (0, a.jsx)(n.Button, {
         className: u.__invalid_button,
         type: "button",
         color: n.Button.Colors.BRAND,
-        onClick: h,
-        children: c.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2
+        onClick: f,
+        children: d.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2
       })
     })]
   })

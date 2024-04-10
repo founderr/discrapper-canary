@@ -12,14 +12,14 @@ var i = n("735250"),
   f = n("481060"),
   h = n("13245"),
   p = n("490029"),
-  g = n("797614"),
-  m = n("703656"),
+  m = n("797614"),
+  g = n("703656"),
   E = n("454902"),
   S = n("254761"),
   v = n("547881"),
-  y = n("70956"),
-  I = n("960048"),
-  T = n("792125"),
+  T = n("70956"),
+  y = n("960048"),
+  I = n("792125"),
   N = n("145597"),
   O = n("692546"),
   _ = n("987650"),
@@ -35,7 +35,7 @@ function R(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let M = 10 * y.default.Millis.SECOND;
+let M = 10 * T.default.Millis.SECOND;
 
 function L() {
   let e = (0, N.getPID)(),
@@ -75,7 +75,7 @@ class D extends a.PureComponent {
     return null == a ? null : (0, i.jsx)(O.default, {
       observe: !1,
       children: (0, i.jsxs)(f.Clickable, {
-        className: s()((0, T.getThemeClass)(C.ThemeTypes.DARK), x.container),
+        className: s()((0, I.getThemeClass)(C.ThemeTypes.DARK), x.container),
         onClick: e => e.stopPropagation(),
         children: [(0, i.jsx)(E.default, {
           expand: !0,
@@ -136,7 +136,7 @@ class D extends a.PureComponent {
   }
 }
 let b = r().throttle(() => {
-  g.default.increment({
+  m.default.increment({
     name: c.MetricEvents.APP_CRASHED,
     tags: ["reason:".concat(d.AppCrashedReasons.UNHANDLED_JS_ERROR), "level:".concat(u.ErrorLevels.FATAL)]
   }, !0)
@@ -145,7 +145,7 @@ let b = r().throttle(() => {
 });
 class j extends a.PureComponent {
   componentDidCatch(e, t) {
-    let n = (0, m.getHistory)().location;
+    let n = (0, g.getHistory)().location;
     this.setState({
       error: e,
       info: t
@@ -165,7 +165,7 @@ class j extends a.PureComponent {
         pid: i
       }]
     }), setImmediate(() => window.addEventListener("click", L));
-    let l = I.default.captureCrash(e, {
+    let l = y.default.captureCrash(e, {
       extra: t
     });
     h.default.track(C.AnalyticEvents.APP_CRASHED, {

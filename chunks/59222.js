@@ -27,7 +27,7 @@ let T = 12,
     let e = (0, c.getHistory)().location.search;
     return null != e && e.length > 0 && e.startsWith("?") ? r.parse(e) : {}
   },
-  N = e => {
+  A = e => {
     let {
       categoryId: t,
       categoryName: n,
@@ -52,7 +52,7 @@ let T = 12,
       })]
     })
   },
-  A = () => (0, a.jsxs)("div", {
+  N = () => (0, a.jsxs)("div", {
     className: p.emptyContainer,
     children: [(0, a.jsx)("div", {
       className: p.errorImage
@@ -71,8 +71,8 @@ t.default = e => {
     defaultLanguage: r,
     availableLanguages: c,
     isFetchingSearch: v,
-    scroller: O,
-    loadingGuildId: R,
+    scroller: R,
+    loadingGuildId: O,
     theme: L,
     currentCategoryId: M,
     currentCategoryName: P,
@@ -85,8 +85,8 @@ t.default = e => {
     loading: G,
     total: w
   } = n, [k, F] = s.useState(!1), {
-    tag: B
-  } = g(), [H, V] = s.useState(B), Y = (0, o.useStateFromStores)([f.default], () => f.default.hasSearchError()), W = (e, t, n) => {
+    tag: H
+  } = g(), [B, V] = s.useState(H), Y = (0, o.useStateFromStores)([f.default], () => f.default.hasSearchError()), W = (e, t, n) => {
     d.doAlgoliaSearch(l, {
       categoryId: n ? S.DISCOVERY_ALL_CATEGORIES_ID : M,
       preferredLocale: r.code,
@@ -97,7 +97,7 @@ t.default = e => {
       }
     }), F(!1)
   }, K = () => {
-    null == O || O.scrollTo({
+    null == R || R.scrollTo({
       to: 0
     })
   };
@@ -144,8 +144,8 @@ t.default = e => {
       availableLanguages: c,
       isSearchPage: !0,
       currentCategoryId: M,
-      isTagSearch: H
-    }), Y ? (0, a.jsx)(A, {}) : w <= 0 ? (0, a.jsx)(N, {
+      isTagSearch: B
+    }), Y ? (0, a.jsx)(N, {}) : w <= 0 ? (0, a.jsx)(A, {
       categoryId: M,
       categoryName: P,
       onClick: () => {
@@ -171,7 +171,7 @@ t.default = e => {
               loading: G,
               loadingPlaceholderCount: T,
               onViewGuild: y,
-              loadingGuildId: R,
+              loadingGuildId: O,
               theme: L,
               analyticsContext: h.AnalyticsContexts.SEARCH,
               onGuildCardSeen: x,

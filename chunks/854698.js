@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return v
   },
   generateNextRecurrences: function() {
-    return B
+    return k
   },
   getBaseScheduleForRecurrence: function() {
     return y
@@ -31,7 +31,7 @@ n.r(t), n.d(t, {
     return C
   },
   getNextRecurrenceIdInEvent: function() {
-    return k
+    return B
   },
   getRRule: function() {
     return w
@@ -79,8 +79,8 @@ let E = 365,
   T = 4,
   f = [a.RRule.MO.weekday, a.RRule.TU.weekday, a.RRule.WE.weekday, a.RRule.TH.weekday, a.RRule.FR.weekday],
   S = [a.RRule.SU.weekday, a.RRule.MO.weekday, a.RRule.TU.weekday, a.RRule.WE.weekday, a.RRule.TH.weekday],
-  h = [a.RRule.TU.weekday, a.RRule.WE.weekday, a.RRule.TH.weekday, a.RRule.FR.weekday, a.RRule.SA.weekday],
-  A = [a.RRule.SA.weekday, a.RRule.SU.weekday],
+  A = [a.RRule.TU.weekday, a.RRule.WE.weekday, a.RRule.TH.weekday, a.RRule.FR.weekday, a.RRule.SA.weekday],
+  h = [a.RRule.SA.weekday, a.RRule.SU.weekday],
   m = [a.RRule.FR.weekday, a.RRule.SA.weekday],
   N = [a.RRule.SU.weekday, a.RRule.MO.weekday],
   O = [a.RRule.SU.weekday, a.RRule.MO.weekday, a.RRule.TU.weekday, a.RRule.WE.weekday, a.RRule.TH.weekday, a.RRule.FR.weekday, a.RRule.SA.weekday],
@@ -214,7 +214,7 @@ function w(e) {
   })
 }
 
-function B(e, t, n) {
+function k(e, t, n) {
   let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
     r = [],
     s = n;
@@ -229,7 +229,7 @@ function B(e, t, n) {
   return r
 }
 
-function k(e) {
+function B(e) {
   var t;
   if (null == e) return null;
   let n = null == (t = e).recurrence_rule ? null : new Date(t.scheduled_start_time);
@@ -254,13 +254,13 @@ function V(e, t) {
 function F(e) {
   let t = v(e.toDate().getDay()),
     n = v(e.toDate().getUTCDay());
-  return n.weekday - t.weekday > 0 ? h : n.weekday - t.weekday < 0 ? S : f
+  return n.weekday - t.weekday > 0 ? A : n.weekday - t.weekday < 0 ? S : f
 }
 
 function x(e) {
   let t = v(e.toDate().getDay()),
     n = v(e.toDate().getUTCDay());
-  return n.weekday - t.weekday > 0 ? N : n.weekday - t.weekday < 0 ? m : A
+  return n.weekday - t.weekday > 0 ? N : n.weekday - t.weekday < 0 ? m : h
 }
 
 function H(e, t) {

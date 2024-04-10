@@ -47,8 +47,8 @@ var r = n("442837"),
   T = n("246946"),
   f = n("594174"),
   S = n("797053"),
-  h = n("934415"),
-  A = n("5192"),
+  A = n("934415"),
+  h = n("5192"),
   m = n("51144"),
   N = n("377668"),
   O = n("689938"),
@@ -106,7 +106,7 @@ function D(e) {
     id: t,
     guildId: n,
     channelId: a
-  } = e, l = (0, r.useStateFromStores)([f.default], () => f.default.getUser(t)), u = (0, r.useStateFromStores)([T.default], () => T.default.hidePersonalInformation), d = A.default.useName(n, a, l), _ = (0, i.jsx)(S.default, {
+  } = e, l = (0, r.useStateFromStores)([f.default], () => f.default.getUser(t)), u = (0, r.useStateFromStores)([T.default], () => T.default.hidePersonalInformation), d = h.default.useName(n, a, l), _ = (0, i.jsx)(S.default, {
     children: null == d ? "<@".concat(t, ">") : "@".concat(d)
   });
   if (null != l) {
@@ -167,7 +167,7 @@ function M(e) {
   } = e, n = (0, r.useStateFromStores)([E.default], () => E.default.getChannel(t)), s = O.default.Messages.UNKNOWN_CHANNEL, a = "text", o = !0;
   if (null != n) {
     var l;
-    s = (0, d.canViewChannel)(n) ? n.name : O.default.Messages.NO_ACCESS, a = (0, d.canViewChannel)(n) ? null !== (l = (0, h.getMentionIconType)(n)) && void 0 !== l ? l : "text" : "locked", o = (0, _.isChannelTypeMentionable)(n.type)
+    s = (0, d.canViewChannel)(n) ? n.name : O.default.Messages.NO_ACCESS, a = (0, d.canViewChannel)(n) ? null !== (l = (0, A.getMentionIconType)(n)) && void 0 !== l ? l : "text" : "locked", o = (0, _.isChannelTypeMentionable)(n.type)
   }
   return o ? (0, i.jsx)(S.default, {
     iconType: a,

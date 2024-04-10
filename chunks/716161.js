@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return I
   },
   errorApplyingMediaFilterSettings: function() {
-    return h
+    return A
   },
   fetchVideoFilterAssets: function() {
     return c
@@ -92,7 +92,7 @@ function S() {
   })
 }
 
-function h() {
+function A() {
   r.default.dispatch({
     type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR"
   })

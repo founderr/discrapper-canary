@@ -24,16 +24,16 @@ var a = n("735250"),
   p = n("603074"),
   T = n("981631"),
   g = n("921944"),
-  N = n("689938"),
-  A = n("815668");
+  A = n("689938"),
+  N = n("815668");
 
 function v(e) {
   let {
     channel: t,
     iconClassName: l,
     className: v,
-    innerClassName: O,
-    ...R
+    innerClassName: R,
+    ...O
   } = e, {
     mute: L,
     suppress: M
@@ -56,9 +56,9 @@ function v(e) {
   }
   let {
     Component: F,
-    play: B,
+    play: H,
     events: {
-      onMouseEnter: H,
+      onMouseEnter: B,
       onMouseLeave: V
     }
   } = (0, u.useSoundboardLottie)(), Y = e => (0, a.jsx)(d.Popout, {
@@ -85,28 +85,28 @@ function v(e) {
         ...e,
         ...t,
         className: i()(v, {
-          [A.buttonActive]: x,
-          [A.disabled]: y
+          [N.buttonActive]: x,
+          [N.disabled]: y
         }),
         wrapperClassName: v,
-        innerClassName: O,
+        innerClassName: R,
         disabled: y,
         onClick: () => {
           var t, n;
-          null == n || n(), null != j && j !== o.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && G(g.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), D(!x), B()
+          null == n || n(), null != j && j !== o.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && G(g.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), D(!x), H()
         },
         onMouseEnter: t => {
           var n, a;
-          null === (n = R.onMouseEnter) || void 0 === n || n.call(R, t), null == e || null === (a = e.onMouseEnter) || void 0 === a || a.call(e), H()
+          null === (n = O.onMouseEnter) || void 0 === n || n.call(O, t), null == e || null === (a = e.onMouseEnter) || void 0 === a || a.call(e), B()
         },
         onMouseLeave: t => {
           var n, a;
-          null === (n = R.onMouseLeave) || void 0 === n || n.call(R, t), null == e || null === (a = e.onMouseLeave) || void 0 === a || a.call(e), V()
+          null === (n = O.onMouseLeave) || void 0 === n || n.call(O, t), null == e || null === (a = e.onMouseLeave) || void 0 === a || a.call(e), V()
         },
         onContextMenu: k,
         fullWidth: !0,
         size: d.Button.Sizes.SMALL,
-        ...R,
+        ...O,
         children: (0, a.jsx)(F, {
           className: l,
           size: "sm",
@@ -124,10 +124,10 @@ function v(e) {
     value: w,
     children: (0, a.jsx)(d.Tooltip, {
       text: function() {
-        if (L) return N.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
-        if (M) return N.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
-        if (P) return N.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
-        return N.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD
+        if (L) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
+        if (M) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
+        if (P) return A.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
+        return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD
       }(),
       children: e => Y(e)
     })

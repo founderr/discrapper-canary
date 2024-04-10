@@ -82,10 +82,10 @@ t.default = {
         party: p,
         secrets: T,
         timestamps: g,
-        buttons: N,
-        type: A
+        buttons: A,
+        type: N
       } = _;
-      if ((null == A || A !== E.ActivityTypes.PLAYING && !m) && (_.type = E.ActivityTypes.PLAYING), null != T) {
+      if ((null == N || N !== E.ActivityTypes.PLAYING && !m) && (_.type = E.ActivityTypes.PLAYING), null != T) {
         let e = s().values(T).filter(e => !!e);
         if (null != p && s().intersection(e, [p.id]).length > 0 && !h.includes(a.application.id)) throw new u.default({
           errorCode: E.RPCErrors.INVALID_ACTIVITY_SECRET
@@ -93,13 +93,13 @@ t.default = {
         if (s().uniq(e).length < e.length) throw new u.default({
           errorCode: E.RPCErrors.INVALID_ACTIVITY_SECRET
         }, "secrets must be unique");
-        if (null != N) throw new u.default({
+        if (null != A) throw new u.default({
           errorCode: E.RPCErrors.INVALID_ACTIVITY_SECRET
         }, "secrets cannot currently be sent with buttons")
       }
-      if (null != N && (_.metadata = {
-          button_urls: N.map(e => e.url)
-        }, _.buttons = N.map(e => e.label)), null != g)
+      if (null != A && (_.metadata = {
+          button_urls: A.map(e => e.url)
+        }, _.buttons = A.map(e => e.label)), null != g)
         for (let e of Object.keys(g)) Date.now().toString().length - g[e].toString().length > 2 && (g[e] = Math.floor(g[e] * o.default.Millis.SECOND));
       if (null == I) n = Promise.resolve([]);
       else {

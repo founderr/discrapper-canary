@@ -28,11 +28,11 @@ var a, s, l = n("735250"),
   p = n("938475"),
   T = n("808602"),
   g = n("305878"),
-  N = n("263704"),
-  A = n("465670"),
+  A = n("263704"),
+  N = n("465670"),
   v = n("242315"),
-  O = n("393112"),
-  R = n("170039"),
+  R = n("393112"),
+  O = n("170039"),
   L = n("602623"),
   M = n("626135"),
   P = n("823379"),
@@ -46,8 +46,8 @@ var a, s, l = n("735250"),
   w = n("79874"),
   k = n("554747"),
   F = n("230900"),
-  B = n("854698"),
-  H = n("139712"),
+  H = n("854698"),
+  B = n("139712"),
   V = n("765305"),
   Y = n("981631"),
   W = n("689938"),
@@ -84,7 +84,7 @@ let z = i.memo(function(e) {
         onClick: u,
         className: K.closeIcon,
         "aria-label": W.default.Messages.CLOSE,
-        children: (0, l.jsx)(A.default, {
+        children: (0, l.jsx)(N.default, {
           height: 16,
           width: 16
         })
@@ -152,13 +152,13 @@ function Q(e) {
   let {
     guildEvent: t,
     noticeType: n
-  } = e, a = (0, B.getNextRecurrenceIdInEvent)(t), s = (0, r.useStateFromStores)([x.default], () => x.default.isInterestedInEventRecurrence(t.id, a), [t.id, a]), i = (0, r.useStateFromStores)([U.default], () => U.default.getUpcomingNoticeSeenTime(t.id), [t.id]);
+  } = e, a = (0, H.getNextRecurrenceIdInEvent)(t), s = (0, r.useStateFromStores)([x.default], () => x.default.isInterestedInEventRecurrence(t.id, a), [t.id, a]), i = (0, r.useStateFromStores)([U.default], () => U.default.getUpcomingNoticeSeenTime(t.id), [t.id]);
   return !s && null == i && (0, D.markUpcomingEventNoticeAsSeen)(t.id), (0, l.jsxs)(o.Button, {
     fullWidth: !0,
     className: K.joinButton,
     innerClassName: K.rsvpButton,
     onClick: function() {
-      (0, H.default)(t.id, null, t.guild_id, () => setTimeout(() => (0, D.hideUpcomingEventNotice)(t.id), 1e3)), M.default.track(Y.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
+      (0, B.default)(t.id, null, t.guild_id, () => setTimeout(() => (0, D.hideUpcomingEventNotice)(t.id), 1e3)), M.default.track(Y.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
         guild_id: t.guild_id,
         notice_type: n
       })
@@ -166,7 +166,7 @@ function Q(e) {
     look: s ? o.Button.Looks.OUTLINED : o.Button.Looks.FILLED,
     color: s ? o.Button.Colors.TRANSPARENT : o.Button.Colors.GREEN,
     size: o.Button.Sizes.SMALL,
-    children: [s ? (0, l.jsx)(N.default, {
+    children: [s ? (0, l.jsx)(A.default, {
       width: 16,
       height: 16,
       className: K.buttonIcon
@@ -190,7 +190,7 @@ function Z(e) {
     startDateTimeString: h,
     upcomingEvent: _,
     diffMinutes: C
-  } = (0, B.getEventTimeData)(f.toISOString(), null == E ? void 0 : E.toISOString()), m = _ ? C > 0 ? W.default.Messages.STARTING_IN_MINUTES.format({
+  } = (0, H.getEventTimeData)(f.toISOString(), null == E ? void 0 : E.toISOString()), m = _ ? C > 0 ? W.default.Messages.STARTING_IN_MINUTES.format({
     minutes: C
   }) : W.default.Messages.STARTING_SOON : W.default.Messages.STARTING_ON_DATE.format({
     date: h
@@ -224,7 +224,7 @@ function Z(e) {
         },
         className: K.closeIcon,
         "aria-label": W.default.Messages.CLOSE,
-        children: (0, l.jsx)(A.default, {
+        children: (0, l.jsx)(N.default, {
           height: 16,
           width: 16
         })
@@ -247,7 +247,7 @@ function Z(e) {
         width: 16,
         height: 16,
         className: K.stageIcon
-      }) : (0, l.jsx)(O.default, {
+      }) : (0, l.jsx)(R.default, {
         width: 16,
         height: 16,
         className: K.stageIcon
@@ -275,7 +275,7 @@ function X(e) {
     heading: W.default.Messages.HAPPENING_NOW,
     topic: t.name,
     location: (0, j.guildEventDetailsParser)(n, !0),
-    locationIcon: (0, l.jsx)(O.default, {
+    locationIcon: (0, l.jsx)(R.default, {
       width: 16,
       height: 16,
       className: K.stageIcon
@@ -340,7 +340,7 @@ function ee(e) {
       height: 14,
       className: K.stageIcon
     }),
-    locationIcon: (0, l.jsx)(R.default, {
+    locationIcon: (0, l.jsx)(O.default, {
       width: 16,
       height: 16,
       className: K.stageIcon

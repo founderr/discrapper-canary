@@ -34,8 +34,8 @@ function E(e) {
       iconClassName: T,
       title: f,
       body: S,
-      style: h,
-      align: A = o.default.Align.START
+      style: A,
+      align: h = o.default.Align.START
     } = e,
     m = o.default.Direction.HORIZONTAL;
   if (null != _) {
@@ -57,10 +57,10 @@ function E(e) {
   return r === a.Card.Types.PRIMARY && (N = !1), (0, i.jsx)(a.Card, {
     className: s()(d.formNotice, I),
     type: r,
-    style: h,
+    style: A,
     children: (0, i.jsxs)(o.default, {
       direction: m,
-      align: A,
+      align: h,
       children: [t, (0, i.jsxs)(o.default.Child, {
         children: [null != f && "" !== f ? (0, i.jsx)(u.FormTitle, {
           tag: u.FormTitleTags.H5,

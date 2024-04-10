@@ -29,12 +29,12 @@ t.default = e => {
   let g = s.useCallback(e => {
       m(t => Math.max(t, e))
     }, []),
-    N = (0, c.getArtForPath)();
+    A = (0, c.getArtForPath)();
   return (0, a.jsx)("div", {
     className: _.page,
     children: (0, a.jsxs)(d.default, {
       embedded: !0,
-      splash: N,
+      splash: A,
       waveState: C,
       showLogo: !1,
       updateWaveState: g,

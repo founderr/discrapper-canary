@@ -19,8 +19,8 @@ var i = n("735250"),
   T = n("785717"),
   f = n("621853"),
   S = n("335191"),
-  h = n("171368"),
-  A = n("659101"),
+  A = n("171368"),
+  h = n("659101"),
   m = n("228168"),
   N = n("981631"),
   O = n("689938"),
@@ -45,10 +45,10 @@ function C(e) {
       roleId: b
     } = (0, T.useUserProfileAnalyticsContext)(),
     G = (0, _.default)(D, g, L),
-    [w, B] = r.useState(new Set),
-    k = (0, o.useStateFromStores)([f.default], () => f.default.getUserProfile(g)),
-    V = null !== (t = null == k ? void 0 : k.connectedAccounts) && void 0 !== t ? t : [],
-    F = null !== (n = null == k ? void 0 : k.applicationRoleConnections) && void 0 !== n ? n : [],
+    [w, k] = r.useState(new Set),
+    B = (0, o.useStateFromStores)([f.default], () => f.default.getUserProfile(g)),
+    V = null !== (t = null == B ? void 0 : B.connectedAccounts) && void 0 !== t ? t : [],
+    F = null !== (n = null == B ? void 0 : B.applicationRoleConnections) && void 0 !== n ? n : [],
     x = (0, o.useStateFromStores)([E.default], () => E.default.hidePersonalInformation),
     H = (0, o.useStateFromStores)([c.default], () => c.default.locale);
   if (r.useEffect(() => {
@@ -59,7 +59,7 @@ function C(e) {
               connection_type: e
             }
             of n) t.add(e);
-        B(t)
+        k(t)
       })
     }, [null == D ? void 0 : D.id, null == G ? void 0 : G.id]), x || null == G) return null;
   let Y = Array.from(w).map(e => {
@@ -80,7 +80,7 @@ function C(e) {
       className: a()(p.connectionsContainer, y),
       children: [Y, (0, i.jsxs)(l.Clickable, {
         onClick: function() {
-          (0, h.openUserProfileModal)({
+          (0, A.openUserProfileModal)({
             userId: g,
             channelId: L,
             guildId: null == D ? void 0 : D.id,
@@ -117,7 +117,7 @@ function C(e) {
         locale: H
       }, e.application.id))
     })]
-  })), null == s && null == C) ? null : (0, i.jsxs)(A.default, {
+  })), null == s && null == C) ? null : (0, i.jsxs)(h.default, {
     children: [C, s]
   })
 }

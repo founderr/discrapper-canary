@@ -19,8 +19,8 @@ var r = n("658722"),
   T = n("31445"),
   f = n("931261"),
   S = n("285651"),
-  h = n("822179"),
-  A = n("926491"),
+  A = n("822179"),
+  h = n("926491"),
   m = n("373228"),
   N = n("601070"),
   O = n("675478"),
@@ -38,8 +38,8 @@ var r = n("658722"),
   b = n("914010"),
   G = n("594174"),
   w = n("55563"),
-  B = n("823379"),
-  k = n("892880"),
+  k = n("823379"),
+  B = n("892880"),
   V = n("700785"),
   F = n("226951"),
   x = n("709054"),
@@ -103,10 +103,10 @@ function es(e) {
     allowSnowflake: a
   } = e, o = G.default.getUsers(), u = b.default.getGuildId(), d = t.toLocaleLowerCase(), _ = (0, H.normalize)(d), c = [], E = [], I = n.length, T = 0, f = 0;
   for (; T < I;) {
-    var S, h, A, m, N, O, p, C, g;
+    var S, A, h, m, N, O, p, C, g;
     let e, i;
     let l = n[T];
-    l instanceof R.default ? (i = l, e = null === (h = L.default.getNick(u, i.id)) || void 0 === h ? void 0 : h.toLocaleLowerCase()) : (e = null === (A = l.nick) || void 0 === A ? void 0 : A.toLocaleLowerCase(), i = o[l.userId]);
+    l instanceof R.default ? (i = l, e = null === (A = L.default.getNick(u, i.id)) || void 0 === A ? void 0 : A.toLocaleLowerCase()) : (e = null === (h = l.nick) || void 0 === h ? void 0 : h.toLocaleLowerCase(), i = o[l.userId]);
     let I = null === (S = Y.default.getGlobalName(i)) || void 0 === S ? void 0 : S.toLocaleLowerCase();
     if (null == r || r(i)) {
       let n = i.username.toLocaleLowerCase(),
@@ -179,7 +179,7 @@ t.default = {
     } = e;
     return es({
       query: t,
-      members: P.default.getFriendIDs().map(e => G.default.getUser(e)).filter(B.isNotNullish),
+      members: P.default.getFriendIDs().map(e => G.default.getUser(e)).filter(k.isNotNullish),
       limit: n,
       filter: r
     })
@@ -192,7 +192,7 @@ t.default = {
     } = e;
     return es({
       query: t,
-      members: C.default.getDMUserIds().map(e => G.default.getUser(e)).filter(B.isNotNullish),
+      members: C.default.getDMUserIds().map(e => G.default.getUser(e)).filter(k.isNotNullish),
       limit: n,
       filter: i
     })
@@ -229,7 +229,7 @@ t.default = {
         let e = eo(l.id, r);
         if (e.length > 0) return e
       }
-      t = L.default.getMembers(d.guild_id).filter(er), s && k.default.requestMembers(d.guild_id, i, r)
+      t = L.default.getMembers(d.guild_id).filter(er), s && B.default.requestMembers(d.guild_id, i, r)
     }
     return es({
       query: i,
@@ -259,7 +259,7 @@ t.default = {
       if (e.length > 0) return e
     }
     let l = L.default.getMembers(t).filter(er);
-    return r && n.length > 0 && k.default.requestMembers(t, n, i), es({
+    return r && n.length > 0 && B.default.requestMembers(t, n, i), es({
       query: n,
       members: l,
       limit: i,
@@ -271,7 +271,7 @@ t.default = {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10,
       n = (arguments.length > 2 && void 0 !== arguments[2] && arguments[2], !(arguments.length > 3) || void 0 === arguments[3] || arguments[3]),
       i = arguments.length > 4 ? arguments[4] : void 0;
-    return n && e.length > 0 && k.default.requestMembers(null, e, t), es({
+    return n && e.length > 0 && B.default.requestMembers(null, e, t), es({
       query: e,
       members: o()(G.default.getUsers()).values().value(),
       limit: t,
@@ -317,8 +317,8 @@ t.default = {
     let f = {},
       S = [];
     for (let e of t) {
-      var h, A, m, O, R;
-      if (h = d, A = e.type, m = null != i, !(h === A || (m || (0, p.isGuildChannelType)(A)) && (h === g.GUILD_SELECTABLE_CHANNELS_KEY ? (0, p.isGuildSelectableChannelType)(A) || (0, p.isGuildVocalChannelType)(A) : h === g.GUILD_VOCAL_CHANNELS_KEY && (0, p.isGuildVocalChannelType)(A))) || (0, p.isGuildChannelType)(e.type) && !M.default.can(c ? e.accessPermissions : j.Permissions.VIEW_CHANNEL, e) || !a(e)) continue;
+      var A, h, m, O, R;
+      if (A = d, h = e.type, m = null != i, !(A === h || (m || (0, p.isGuildChannelType)(h)) && (A === g.GUILD_SELECTABLE_CHANNELS_KEY ? (0, p.isGuildSelectableChannelType)(h) || (0, p.isGuildVocalChannelType)(h) : A === g.GUILD_VOCAL_CHANNELS_KEY && (0, p.isGuildVocalChannelType)(h))) || (0, p.isGuildChannelType)(e.type) && !M.default.can(c ? e.accessPermissions : j.Permissions.VIEW_CHANNEL, e) || !a(e)) continue;
       let t = [...T],
         r = e.name.toLocaleLowerCase(),
         o = I && n === e.id,
@@ -509,7 +509,7 @@ t.default = {
         nick: L.default.getNick(n.guild_id, t.id),
         status: y.default.getStatus(t.id)
       }
-    }) : [], f = T.length, S = t.toLowerCase(), h = [];
+    }) : [], f = T.length, S = t.toLowerCase(), A = [];
     if (f < c && l) {
       let e = n.getGuildId(),
         t = D.default.getGuild(e);
@@ -521,14 +521,14 @@ t.default = {
         } = t;
         return (n || i || d) && (s()(S, r.toLowerCase()) || I && S === a) && a !== x.default.castGuildIdAsEveryoneGuildRoleId(e)
       }).take(c - f).forEach(e => {
-        h.push(e)
-      }), f += h.length)
+        A.push(e)
+      }), f += A.length)
     }
-    let A = [];
-    return !n.isPrivate() && i && l && (f < c && s()(S, Z().test) && (A.push(Z()), f += 1), r && f < c && s()(S, $().test) && A.push($())), {
+    let h = [];
+    return !n.isPrivate() && i && l && (f < c && s()(S, Z().test) && (h.push(Z()), f += 1), r && f < c && s()(S, $().test) && h.push($())), {
       users: T,
-      globals: A,
-      roles: h
+      globals: h,
+      roles: A
     }
   },
   queryGuildMentionResults(e) {
@@ -583,7 +583,7 @@ t.default = {
         score: n,
         originalIndex: t
       } : null
-    }).filter(B.isNotNullish).sortBy(e => -1 * e.score);
+    }).filter(k.isNotNullish).sortBy(e => -1 * e.score);
     return null !== i && (u = u.take(i)), u.value()
   },
   queryStaticRouteChannels(e) {
@@ -704,7 +704,7 @@ t.default = {
       [n, i] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [null, Q],
       {
         stickerMetadata: r
-      } = A.default,
+      } = h.default,
       s = G.default.getCurrentUser(),
       a = new Set,
       l = [];
@@ -717,7 +717,7 @@ t.default = {
       r.forEach((r, o) => {
         let u = 0,
           c = null,
-          E = A.default.getStickerById(o);
+          E = h.default.getStickerById(o);
         if (null == E || !i(E, (0, S.getStickerSendability)(E, s, n))) return;
         for (let n of r) {
           let {
@@ -740,7 +740,7 @@ t.default = {
           }(i), a = 0;
           t ? r === e ? a = 10 * s : d.test(r) ? a = 7 * s : (i === m.StickerMetadataTypes.GUILD_NAME || i === m.StickerMetadataTypes.PACK_NAME || i === m.StickerMetadataTypes.STICKER_NAME) && _.test(r) && (a = 5 * s) : r === e && (a = 10 * s, c = r), a > u && (u = a, c = r)
         }
-        let I = h.default.stickerFrecencyWithoutFetchingLatest.getScore(o);
+        let I = A.default.stickerFrecencyWithoutFetchingLatest.getScore(o);
         null != I && (u *= I / 100), u > 0 && null != c && !a.has(E.id) && (a.add(E.id), l.push({
           sticker: E,
           comparator: c,

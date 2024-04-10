@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return I
   },
   cleanupMessageReminders: function() {
-    return h
+    return A
   },
   completeMessageReminders: function() {
     return S
@@ -100,7 +100,7 @@ function S(e) {
   }), m([], _.default.getMessageReminders().filter(t => t.messageId === e))
 }
 
-function h() {
+function A() {
   d.default.track(E.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
     skipped: !1,
     reason: "clearing",
@@ -110,7 +110,7 @@ function h() {
   e.some(e => e.complete) && m([], e.filter(e => e.complete))
 }
 
-function A(e) {
+function h(e) {
   d.default.track(E.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
     skipped: !1,
     reason: "updated_from_server",
@@ -129,7 +129,7 @@ function m(e, t) {
       removed: t.map(c.savedMessageToServer)
     }
   }).then(e => {
-    A(e.body.saved_messages.map(c.savedMessageToClient))
+    h(e.body.saved_messages.map(c.savedMessageToClient))
   })
 }
 
@@ -137,6 +137,6 @@ function N() {
   return _.default.recentlyFetched() ? Promise.resolve() : i.HTTP.get({
     url: E.Endpoints.SAVED_MESSAGES
   }).then(e => {
-    A(e.body.saved_messages.map(c.savedMessageToClient))
+    h(e.body.saved_messages.map(c.savedMessageToClient))
   })
 }

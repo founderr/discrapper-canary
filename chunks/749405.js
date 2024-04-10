@@ -32,15 +32,15 @@ function h(e) {
     rejectMessageRequest: p,
     isAcceptLoading: T,
     isRejectLoading: g,
-    isUserProfileLoading: N,
-    isOptimisticAccepted: A,
+    isUserProfileLoading: A,
+    isOptimisticAccepted: N,
     isOptimisticRejected: v
   } = (0, d.useMessageRequestActions)({
     user: n,
     onAcceptSuccess: S,
     onRejectSuccess: m,
     onError: C
-  }), O = T || g || N || A || v;
+  }), R = T || g || A || N || v;
   return (0, a.jsxs)("div", {
     className: E.container,
     children: [(0, a.jsx)(c.default, {
@@ -56,7 +56,7 @@ function h(e) {
         onClick: e => {
           e.stopPropagation(), p(h.id)
         },
-        disabled: O,
+        disabled: R,
         submitting: g || v,
         children: f.default.Messages.MESSAGE_REQUEST_IGNORE
       }), (0, a.jsx)(l.Button, {
@@ -66,8 +66,8 @@ function h(e) {
         onClick: e => {
           e.stopPropagation(), I(h.id)
         },
-        disabled: O,
-        submitting: T || N || A,
+        disabled: R,
+        submitting: T || A || N,
         children: f.default.Messages.MESSAGE_REQUEST_ACCEPT
       })]
     })]

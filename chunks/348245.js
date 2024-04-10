@@ -15,8 +15,8 @@ var r = n("266067"),
   T = n("131704"),
   f = n("433355"),
   S = n("592125"),
-  h = n("430824"),
-  A = n("306680"),
+  A = n("430824"),
+  h = n("306680"),
   m = n("944486"),
   N = n("914010"),
   O = n("70956"),
@@ -71,7 +71,7 @@ function M(e) {
     focusTargetId: null
   }), c.default.commit(f));
   let m = s;
-  if (!o || E.default.isConnected() || f.loadingMore ? f.loadingMore || f.ready && !f.cached ? null != r ? m = !0 : I && v.log("Skipping fetch because no other conditions matched") : null == t || null != h.default.getGuild(t) ? m = !0 : I && v.log("Skipping fetch we are connected and have loaded messages") : m = !0, m) {
+  if (!o || E.default.isConnected() || f.loadingMore ? f.loadingMore || f.ready && !f.cached ? null != r ? m = !0 : I && v.log("Skipping fetch because no other conditions matched") : null == t || null != A.default.getGuild(t) ? m = !0 : I && v.log("Skipping fetch we are connected and have loaded messages") : m = !0, m) {
     if (c.default.commit(f.mutate({
         loadingMore: !0
       })), null != r) u.default.jumpToMessage({
@@ -83,7 +83,7 @@ function M(e) {
       jumpType: l
     });
     else if ((null == T ? void 0 : T.isThread()) && function(e) {
-        if (A.default.hasOpenedThread(e)) return !1;
+        if (h.default.hasOpenedThread(e)) return !1;
         if (null == i) {
           var t;
           i = null !== (t = a.Storage.get(P, {})) && void 0 !== t ? t : {}
@@ -103,8 +103,8 @@ function M(e) {
       isPreload: o,
       skipLocalFetch: _
     });
-    else if ((null == T ? void 0 : T.isThread()) && A.default.hasTrackedUnread(T.id) && !f.ready) {
-      let e = A.default.getTrackedAckMessageId(T.id);
+    else if ((null == T ? void 0 : T.isThread()) && h.default.hasTrackedUnread(T.id) && !f.ready) {
+      let e = h.default.getTrackedAckMessageId(T.id);
       v.log("Jumping to most recent message in thread ".concat(T.id, " - ").concat(e)), u.default.fetchMessages({
         channelId: n,
         limit: C.MAX_MESSAGES_PER_CHANNEL,
@@ -144,7 +144,7 @@ function U() {
         guildId: n.getGuildId(),
         channelId: n.id,
         messageId: null == e ? void 0 : null === (t = e.params) || void 0 === t ? void 0 : t.message
-      }), B(n.getGuildId(), n.id)
+      }), k(n.getGuildId(), n.id)
     }
   }
 }
@@ -163,7 +163,7 @@ function b() {
       isPreload: e,
       skipLocalFetch: t,
       logFailures: n
-    }) : n && v.log("Skipping fetch because the selected channel is not a text channel"), B(r.getGuildId(), r.id)) : n && v.log("Skipping fetch because channel is null")
+    }) : n && v.log("Skipping fetch because the selected channel is not a text channel"), k(r.getGuildId(), r.id)) : n && v.log("Skipping fetch because channel is null")
   } else n && v.log("Skipping fetch because there is no selected channel")
 }
 
@@ -179,7 +179,7 @@ function G(e) {
     channelId: n,
     messageId: i,
     jumpType: r
-  }), B(t, n)
+  }), k(t, n)
 }
 
 function w(e) {
@@ -193,7 +193,7 @@ function w(e) {
   })
 }
 
-function B(e, t) {
+function k(e, t) {
   let n = f.default.getCurrentSidebarChannelId(t);
   if (null != n) M({
     guildId: e,
@@ -202,12 +202,12 @@ function B(e, t) {
   })
 }
 
-function k() {
+function B() {
   let e = m.default.getChannelId(),
     t = N.default.getGuildId();
   if (null == t || null == e) return;
   let n = f.default.getSidebarState(e);
-  (null == n ? void 0 : n.type) !== I.SidebarType.VIEW_CHANNEL && B(t, e)
+  (null == n ? void 0 : n.type) !== I.SidebarType.VIEW_CHANNEL && k(t, e)
 }
 
 function V(e) {
@@ -219,7 +219,7 @@ function V(e) {
   i === C.CURRENT_APP_CONTEXT && (M({
     guildId: t,
     channelId: n
-  }), B(t, n))
+  }), k(t, n))
 }
 
 function F(e) {
@@ -314,7 +314,7 @@ class z extends _.default {
     o.default.unsubscribe("CONNECTION_OPEN", U)
   }
   constructor(...e) {
-    super(...e), D(this, "fetchMessages", M), D(this, "loadSelectedChannelIfNecessary", b), D(this, "stores", new Map().set(f.default, k)), D(this, "actions", {
+    super(...e), D(this, "fetchMessages", M), D(this, "loadSelectedChannelIfNecessary", b), D(this, "stores", new Map().set(f.default, B)), D(this, "actions", {
       APP_STATE_UPDATE: K,
       OVERLAY_INITIALIZE: U,
       CHANNEL_SELECT: G,

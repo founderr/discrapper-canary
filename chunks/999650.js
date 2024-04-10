@@ -26,8 +26,8 @@ var i, r, s = n("658722"),
   T = n("914010"),
   f = n("246946"),
   S = n("594174"),
-  h = n("483360"),
-  A = n("226951"),
+  A = n("483360"),
+  h = n("226951"),
   m = n("51144"),
   N = n("981631"),
   O = n("689938");
@@ -109,7 +109,7 @@ function w(e) {
   return null != s && (e.setData("channel", s), !0)
 }
 
-function B(e) {
+function k(e) {
   let t = {
     [O.default.Messages.SEARCH_ANSWER_HAS_LINK]: "link",
     [O.default.Messages.SEARCH_ANSWER_HAS_EMBED]: "embed",
@@ -123,16 +123,16 @@ function B(e) {
   return null != t && "" !== t && (e.setData("has", t), !0)
 }
 
-function k() {
+function B() {
   return [...Array.from(p()), ...Array.from(R()), ...Array.from(C()), ...Object.keys(v())]
 }
 
 function V() {
-  return l().sample(k())
+  return l().sample(B())
 }
 
 function F(e, t, n) {
-  return x(e, t, k()).map(e => ({
+  return x(e, t, B()).map(e => ({
     ...e,
     group: n,
     key: "".concat(n, "-").concat(e.text)
@@ -157,19 +157,19 @@ function H(e, t) {
     };
   switch (s) {
     case N.SearchTypes.GUILD:
-      n = h.default.queryGuildUsers({
+      n = A.default.queryGuildUsers({
         ...a,
         guildId: t
       });
       break;
     case N.SearchTypes.CHANNEL:
-      n = h.default.queryChannelUsers({
+      n = A.default.queryChannelUsers({
         ...a,
         channelId: t
       });
       break;
     case N.SearchTypes.DMS:
-      n = h.default.queryUsers(e, i, !0, r, () => !0);
+      n = A.default.queryUsers(e, i, !0, r, () => !0);
       break;
     default:
       return []
@@ -245,9 +245,9 @@ function z() {
         getAutocompletions: (t, n, i) => x(t, i, e)
       },
       [N.SearchTokenTypes.ANSWER_HAS]: {
-        regex: RegExp("(?:\\s*-?(".concat(e.map(e => A.default.escape(e)).join("|"), "))"), "i"),
+        regex: RegExp("(?:\\s*-?(".concat(e.map(e => h.default.escape(e)).join("|"), "))"), "i"),
         follows: [N.SearchTokenTypes.FILTER_HAS],
-        validator: B,
+        validator: k,
         componentType: "ANSWER",
         queryKey: "has"
       },
@@ -327,12 +327,12 @@ function z() {
         validator: Y,
         getAutocompletions(e, t, n) {
           "#" === e[0] && (e = e.substring(1));
-          let i = h.default.queryChannels({
+          let i = A.default.queryChannels({
             query: e,
             type: _.GUILD_SELECTABLE_CHANNELS_KEY,
             guildId: t,
             limit: 1 / 0
-          }).concat(h.default.queryChannels({
+          }).concat(A.default.queryChannels({
             query: e,
             type: _.GUILD_VOCAL_CHANNELS_KEY,
             guildId: t,

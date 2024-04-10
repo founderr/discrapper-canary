@@ -20,11 +20,11 @@ var a = n("735250"),
   p = n("513202"),
   T = n("318891"),
   g = n("687751"),
-  N = n("912471"),
-  A = n("100527"),
+  A = n("912471"),
+  N = n("100527"),
   v = n("74438"),
-  O = n("753450"),
-  R = n("675869"),
+  R = n("753450"),
+  O = n("675869"),
   L = n("77987"),
   M = n("679891"),
   P = n("491575"),
@@ -38,8 +38,8 @@ var a = n("735250"),
   w = n("750995"),
   k = n("696287"),
   F = n("408026"),
-  B = n("763916"),
-  H = n("306721"),
+  H = n("763916"),
+  B = n("306721"),
   V = n("531551"),
   Y = n("38618"),
   W = n("972830"),
@@ -74,11 +74,11 @@ var a = n("735250"),
   ep = n("6025"),
   eT = n("897473"),
   eg = n("377368"),
-  eN = n("262702"),
-  eA = n("639033"),
+  eA = n("262702"),
+  eN = n("639033"),
   ev = n("479313"),
-  eO = n("911560"),
-  eR = n("703016"),
+  eR = n("911560"),
+  eO = n("703016"),
   eL = n("171368"),
   eM = n("429974"),
   eP = n("332754"),
@@ -92,8 +92,8 @@ var a = n("735250"),
   ew = n("896797"),
   ek = n("430824"),
   eF = n("819640"),
-  eB = n("283595"),
-  eH = n("944486"),
+  eH = n("283595"),
+  eB = n("944486"),
   eV = n("914010"),
   eY = n("695103"),
   eW = n("241890"),
@@ -119,10 +119,10 @@ function e4(e, t, n) {
 }
 n("117240"), n("801077"), n("967368"), n("272053"), n("974180"), n("574254"), n("551428"), n("55563"), n("455173"), n("882029"), n("959457"), n("653255"), n("663389"), n("25990"), n("778825"), n("999382"), n("388610"), n("533947"), n("277053"), n("371398"), n("141233"), n("471073"), n("628566");
 let e9 = !1;
-(0, N.initSessionHeartbeatScheduler)(), o.default.initialize(), eS.default.loadServer(), eZ.isPlatformEmbedded && (eX.default.on("USER_SETTINGS_OPEN", () => {
+(0, A.initSessionHeartbeatScheduler)(), o.default.initialize(), eS.default.loadServer(), eZ.isPlatformEmbedded && (eX.default.on("USER_SETTINGS_OPEN", () => {
   !eF.default.getLayers().includes(e$.Layers.USER_SETTINGS) && _.default.open(e$.UserSettingsSections.ACCOUNT)
 }), eX.default.on("LAUNCH_APPLICATION", (e, t) => {
-  let n = eB.default.getActiveLibraryApplication(t);
+  let n = eH.default.getActiveLibraryApplication(t);
   eJ.playApplication(t, n, {
     analyticsParams: {
       location: {
@@ -180,13 +180,13 @@ let e7 = o.default.connectStores([Y.default, ew.default, eU.default], () => ({
       applicationId: n,
       section: s
     } = t.params, l = (0, Z.default)(e0.ApplicationDirectoryProfileSections, s);
-    return (0, a.jsx)(O.default, {
+    return (0, a.jsx)(R.default, {
       applicationId: n,
       initialSection: l
     })
   }),
   e6 = (0, L.makeAuthenticated)(function() {
-    return (0, a.jsx)(R.default, {})
+    return (0, a.jsx)(O.default, {})
   }),
   te = [e$.Routes.GUILD_BOOSTING_MARKETING(":guildId"), ...Array.from(e1.StaticChannelRoutes).map(e => e$.Routes.CHANNEL(":guildId", e))];
 
@@ -247,7 +247,7 @@ let tn = [{
         userId: i,
         guildId: e$.ME,
         friendToken: s,
-        sourceAnalyticsLocations: [A.default.URI_SCHEME],
+        sourceAnalyticsLocations: [N.default.URI_SCHEME],
         analyticsLocation: {
           section: e$.AnalyticsSections.DIRECT_ROUTE_ACCESS
         }
@@ -265,10 +265,10 @@ let tn = [{
         action: s
       } = t.params;
       return eq.default.whenInitialized(() => {
-        eB.default.whenInitialized(() => {
+        eH.default.whenInitialized(() => {
           switch (s) {
             case "launch": {
-              let e = eB.default.getActiveLibraryApplication(n);
+              let e = eH.default.getActiveLibraryApplication(n);
               if (null == e) return;
               eJ.playApplication(e.id, e, {
                 analyticsParams: {
@@ -284,7 +284,7 @@ let tn = [{
               eY.default.whenInitialized(() => h.authorizeAndSetTestModeApplication(n));
               break;
             case "uninstall": {
-              let e = eB.default.getActiveLibraryApplication(n);
+              let e = eH.default.getActiveLibraryApplication(n);
               if (null == e) return;
               (0, c.uninstallBranchPrompt)(e.id, e.branchId, e$.AnalyticsLocations.URI_SCHEME)
             }
@@ -454,7 +454,7 @@ function tl(e) {
 }
 class ti extends s.PureComponent {
   componentDidMount() {
-    y.default.initialize(), eX.default.setZoomFactor(C.default.zoom), eS.default.init(), M.default.initialize(), ed.default.initialize(), F.default.initialize(), eb.default.initialize(), B.default.initialize(), ef.default.initialize(), ee.default.initialize(), m.default.init(), V.default.init(), H.default.init(), el.default.initialize(), g.default.initialize(), w.default.initialize(), eE.default.initialize(), T.default.initialize(), eD.default.initialize(), eu.default.initialize(), p.default.initialize(), K.default.init(), J.default.init(), ez.default.init(), eQ.default.init(), I.default.initialize(), eR.default.init(), eK.default.init(), eW.default.init(), eP.default.init(), eN.default.initialize(), eA.default.initialize(), eM.default.initialize(), ey.default.init(), G.default.initialize(), S.default.initialize(), eI.default.initialize(), eg.default.initialize(), er.default.initialize(), ei.default.initialize(), eo.default.initialize(), x.default.initialize(), $.default.init({
+    y.default.initialize(), eX.default.setZoomFactor(C.default.zoom), eS.default.init(), M.default.initialize(), ed.default.initialize(), F.default.initialize(), eb.default.initialize(), H.default.initialize(), ef.default.initialize(), ee.default.initialize(), m.default.init(), V.default.init(), B.default.init(), el.default.initialize(), g.default.initialize(), w.default.initialize(), eE.default.initialize(), T.default.initialize(), eD.default.initialize(), eu.default.initialize(), p.default.initialize(), K.default.init(), J.default.init(), ez.default.init(), eQ.default.init(), I.default.initialize(), eO.default.init(), eK.default.init(), eW.default.init(), eP.default.init(), eA.default.initialize(), eN.default.initialize(), eM.default.initialize(), ey.default.init(), G.default.initialize(), S.default.initialize(), eI.default.initialize(), eg.default.initialize(), er.default.initialize(), ei.default.initialize(), eo.default.initialize(), x.default.initialize(), $.default.init({
       hasModalOpen: u.hasAnyModalOpen,
       openModal: () => (0, u.openModalLazy)(async () => {
         let {
@@ -501,7 +501,7 @@ class ti extends s.PureComponent {
         threadId: o
       } = tt(n), u = (0, eC.isValidGuildId)(a), d = (0, eC.isValidChannelId)(s), c = (0, eC.isValidChannelId)(o), h = eV.default.getGuildId(), _ = h !== a;
       if (u && _ && f.default.selectGuild(a), u && d) {
-        let n = eH.default.getChannelId(h),
+        let n = eB.default.getChannelId(h),
           i = n !== s;
         if (!e9 || _ || i || null != r) {
           e9 = !0, E.default.selectChannel({
@@ -561,7 +561,7 @@ class ti extends s.PureComponent {
     } = tt(n), i = (0, eC.isValidGuildId)(a) && a !== e$.ME && a !== e$.FAVORITES;
     if (null != s && (0, eC.isValidChannelId)(s) && !(0, e1.isStaticChannelRoute)(s) && i) {
       let n = eG.default.getChannel(s);
-      if (null == n) eO.default.loadThread(s).then(() => tl({
+      if (null == n) eR.default.loadThread(s).then(() => tl({
         channelId: s,
         guildId: a,
         pathname: t
@@ -573,7 +573,7 @@ class ti extends s.PureComponent {
       if (null != l) {
         if (!((0, eC.isValidChannelId)(l) && !(0, e1.isStaticChannelRoute)(s))) return null;
         let n = eG.default.getChannel(l);
-        if (null == n) eO.default.loadThread(l).then(() => tl({
+        if (null == n) eR.default.loadThread(l).then(() => tl({
           channelId: l,
           guildId: a,
           pathname: t

@@ -37,7 +37,7 @@ n.r(t), n.d(t, {
     return P
   },
   shouldRedactExplicitContent: function() {
-    return B
+    return k
   },
   trackExplicitMediaRedactableMessagedLoaded: function() {
     return W
@@ -55,7 +55,7 @@ n.r(t), n.d(t, {
     return j
   },
   updateExplicitContentSetting: function() {
-    return k
+    return B
   }
 }), n("789020");
 var i, r, s, a, o, l, u, d, _ = n("286379"),
@@ -65,8 +65,8 @@ var i, r, s, a, o, l, u, d, _ = n("286379"),
   T = n("797614"),
   f = n("182274"),
   S = n("695346"),
-  h = n("592125"),
-  A = n("699516"),
+  A = n("592125"),
+  h = n("699516"),
   m = n("594174"),
   N = n("626135"),
   O = n("630388"),
@@ -152,7 +152,7 @@ function w(e) {
   return e === c.ExplicitContentRedaction.BLUR || e === c.ExplicitContentRedaction.BLOCK
 }
 
-function B(e) {
+function k(e) {
   var t;
   if (!(0, R.isEligibleForExplicitMediaRedaction)()) return !1;
   let n = m.default.getCurrentUser();
@@ -161,12 +161,12 @@ function B(e) {
     explicitContentGuilds: i,
     explicitContentFriendDm: r,
     explicitContentNonFriendDm: s
-  } = G(), a = h.default.getChannel(e.channel_id);
+  } = G(), a = A.default.getChannel(e.channel_id);
   if (null == a) return !1;
-  if (a.isDM() || a.isGroupDM()) return null != e.author && A.default.getFriendIDs().includes(e.author.id) ? w(r) : w(s);
+  if (a.isDM() || a.isGroupDM()) return null != e.author && h.default.getFriendIDs().includes(e.author.id) ? w(r) : w(s);
   return w(i)
 }
-let k = e => {
+let B = e => {
   let t = G();
   S.ExplicitContentSettings.updateSetting({
     ...t,
@@ -191,7 +191,7 @@ function V(e, t) {
 }
 
 function F(e) {
-  return B(e) ? {
+  return k(e) ? {
     obscuredAttachments: e.attachments.filter(e => V({
       type: 0,
       media: e
@@ -218,7 +218,7 @@ function H(e) {
     context: r
   } = e;
   if (null == n || null == i) return;
-  let s = h.default.getChannel(n);
+  let s = A.default.getChannel(n);
   N.default.track(g.AnalyticEvents.EXPLICIT_MEDIA_ACTION, {
     action: t,
     guild_id: null == s ? void 0 : s.guild_id,
@@ -246,7 +246,7 @@ function j(e) {
     embedIds: l
   } = e;
   if (null == s || null == a || (null !== (t = null == o ? void 0 : o.length) && void 0 !== t ? t : 0) === 0 && (null !== (n = null == l ? void 0 : l.length) && void 0 !== n ? n : 0) === 0) return;
-  let u = h.default.getChannel(s);
+  let u = A.default.getChannel(s);
   N.default.track(g.AnalyticEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, {
     channel_id: s,
     guild_id: null == u ? void 0 : u.guild_id,
@@ -272,7 +272,7 @@ function W(e) {
     numOfEmbedsPendingScan: s
   } = e;
   if (null == t) return;
-  let a = h.default.getChannel(t);
+  let a = A.default.getChannel(t);
   N.default.track(g.AnalyticEvents.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED, {
     channel_id: t,
     guild_id: null == a ? void 0 : a.guild_id,
@@ -297,7 +297,7 @@ function K(e) {
     numOfExplicitEmbeds: a
   } = e;
   if (null == n) return;
-  let o = h.default.getChannel(n);
+  let o = A.default.getChannel(n);
   N.default.track(g.AnalyticEvents.EXPLICIT_MEDIA_RETROACTIVE_SCAN_COMPLETE, {
     message_id: t,
     channel_id: n,

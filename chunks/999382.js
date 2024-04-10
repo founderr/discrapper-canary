@@ -4,8 +4,8 @@ n.r(t), n("47120"), n("724458");
 var _, c, E, I, T = n("392711"),
   f = n.n(T),
   S = n("913527"),
-  h = n.n(S),
-  A = n("442837"),
+  A = n.n(S),
+  h = n("442837"),
   m = n("544891"),
   N = n("433517"),
   O = n("570140"),
@@ -23,8 +23,8 @@ var _, c, E, I, T = n("392711"),
   b = n("731455"),
   G = n("135899");
 let w = ["name", "description", "icon", "splash", "banner", "homeHeader", "afkChannelId", "afkTimeout", "systemChannelId", "verificationLevel", "defaultMessageNotifications", "explicitContentFilter", "features", "systemChannelFlags", "preferredLocale", "rulesChannelId", "safetyAlertsChannelId", "discoverySplash", "publicUpdatesChannelId", "premiumProgressBarEnabled"],
-  B = new Set(["icon", "splash", "banner", "discoverySplash", "homeHeader"]),
-  k = !1,
+  k = new Set(["icon", "splash", "banner", "discoverySplash", "homeHeader"]),
+  B = !1,
   V = U.FormStates.CLOSED,
   F = {},
   x = !1,
@@ -76,7 +76,7 @@ function ei(e) {
 }
 
 function er() {
-  k = !1, V = U.FormStates.CLOSED, a = o = null, x = !1, H = null, Y = null, j = 0, J = null, ee = null, et = null, i = null, r = null, s = null, W = U.MFALevels.NONE, u = void 0
+  B = !1, V = U.FormStates.CLOSED, a = o = null, x = !1, H = null, Y = null, j = 0, J = null, ee = null, et = null, i = null, r = null, s = null, W = U.MFALevels.NONE, u = void 0
 }
 
 function es(e) {
@@ -146,7 +146,7 @@ function ea(e) {
     uses: e.uses,
     maxUses: e.max_uses,
     maxAge: e.max_age,
-    createdAt: h()(null !== (t = e.created_at) && void 0 !== t ? t : void 0)
+    createdAt: A()(null !== (t = e.created_at) && void 0 !== t ? t : void 0)
   })
 }
 
@@ -154,7 +154,7 @@ function eo(e) {
   if (null == o || V !== U.FormStates.OPEN || "GUILD_INTEGRATIONS_UPDATE" === e.type && e.guildId !== o.id) return !1;
   (0, P.fetchGuildIntegrationsApplications)(o.id)
 }
-class el extends(_ = A.default.Store) {
+class el extends(_ = h.default.Store) {
   initialize() {
     this.waitFor(D.default, v.default)
   }
@@ -165,7 +165,7 @@ class el extends(_ = A.default.Store) {
     return !f().isEqual(o, a) || !f().isEqual(q, Q)
   }
   isOpen() {
-    return k
+    return B
   }
   getSavedRouteState() {
     return u
@@ -237,7 +237,7 @@ I = "GuildSettingsStore", (E = "displayName") in(c = el) ? Object.defineProperty
 }) : c[E] = I, t.default = new el(O.default, __OVERLAY__ ? {} : {
   GUILD_SETTINGS_INIT: ei,
   GUILD_SETTINGS_OPEN: function(e) {
-    k = !0, ei(e)
+    B = !0, ei(e)
   },
   GUILD_SETTINGS_CLOSE: er,
   GUILD_SETTINGS_UPDATE: function(e) {
@@ -361,7 +361,7 @@ I = "GuildSettingsStore", (E = "displayName") in(c = el) ? Object.defineProperty
       let t = a = e,
         n = o.toJS();
       w.forEach(e => {
-        if (!B.has(e)) {
+        if (!k.has(e)) {
           if ("rulesChannelId" !== e && "publicUpdatesChannelId" !== e || n[e] !== G.CREATE_NEW_CHANNEL_VALUE) {
             if ("features" === e) {
               t.set(e, new Set(n[e]));

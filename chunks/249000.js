@@ -229,11 +229,11 @@ class S extends(l = u.PureComponent) {
       m = !0;
       let {
         clientWidth: g,
-        clientHeight: N
-      } = a, A = n - this._offsetY, v = C(E({
-        top: A,
+        clientHeight: A
+      } = a, N = n - this._offsetY, v = C(E({
+        top: N,
         left: t - this._offsetX
-      }, s, l, g, N));
+      }, s, l, g, A));
       if (c) {
         let e = h(v = _(v));
         I = e[0], p = e[1]
@@ -241,7 +241,7 @@ class S extends(l = u.PureComponent) {
         top: v.top,
         left: v.left
       };
-      2 === r && p !== this.state.horizontalOrientation && (this._offsetX = g - this._offsetX, T = !0), 2 === i && I !== this.state.verticalOrientation && (this._offsetY = N - this._offsetY, T = !0), this.setDOMPositions(v), !S && (null == o || o(v, a)), null == u || u(v, a), T && (null == d || d([I, p])), this.setState({
+      2 === r && p !== this.state.horizontalOrientation && (this._offsetX = g - this._offsetX, T = !0), 2 === i && I !== this.state.verticalOrientation && (this._offsetY = A - this._offsetY, T = !0), this.setDOMPositions(v), !S && (null == o || o(v, a)), null == u || u(v, a), T && (null == d || d([I, p])), this.setState({
         dragging: m,
         verticalOrientation: I,
         horizontalOrientation: p,

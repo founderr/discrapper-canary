@@ -32,8 +32,8 @@ async function S(e, t, n) {
     guild_id: p,
     channel_id: T,
     prompt: g,
-    disable_guild_select: N,
-    integration_type: A
+    disable_guild_select: A,
+    integration_type: N
   } = e;
   if (null == i) throw new h.default({
     errorCode: C.RPCErrors.OAUTH2_ERROR
@@ -73,7 +73,7 @@ async function S(e, t, n) {
       codeChallenge: u,
       codeChallengeMethod: _,
       state: m,
-      integrationType: null == A ? s.ApplicationIntegrationType.GUILD_INSTALL : Number(A)
+      integrationType: null == N ? s.ApplicationIntegrationType.GUILD_INSTALL : Number(N)
     })).location
   } catch (t) {
     let {
@@ -84,11 +84,11 @@ async function S(e, t, n) {
     }, "OAuth2 Authorize Error: ".concat(e.message || "Unknown Error"))
   }
   null == n || n(a.application, T);
-  let O = E.NONE;
+  let R = E.NONE;
   try {
-    O = l.deserialize(null != I ? I : 0)
+    R = l.deserialize(null != I ? I : 0)
   } catch (e) {}
-  return t(i, a, v, O, r, o, u, _, m, p, T, g, N)
+  return t(i, a, v, R, r, o, u, _, m, p, T, g, A)
 }
 
 function I(e, t) {

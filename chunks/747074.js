@@ -26,7 +26,7 @@ let f = s.createContext({
   }),
   S = () => s.useContext(f);
 
-function h(e) {
+function A(e) {
   var t, n;
   let {
     user: i,
@@ -34,8 +34,8 @@ function h(e) {
     profileType: u,
     className: E,
     pendingThemeColors: S,
-    pendingProfileEffectId: h,
-    useDefaultClientTheme: A,
+    pendingProfileEffectId: A,
+    useDefaultClientTheme: h,
     children: m,
     forceShowPremium: N = !1,
     showOutOfBoundaryComponents: O = !1
@@ -46,7 +46,7 @@ function h(e) {
     themeElementRef: p,
     pendingThemeColors: S,
     isPreview: N,
-    useDefaultClientTheme: A
+    useDefaultClientTheme: h
   }), L = (null == R ? void 0 : R.canEditThemes) || N, D = s.useMemo(() => ({
     profileType: u,
     profileTheme: C,
@@ -72,7 +72,7 @@ function h(e) {
         }, () => T.userProfileInnerThemedWithBanner).with({
           canUsePremiumProfileCustomization: !0
         }, () => T.userProfileInnerThemedPremiumWithoutBanner).otherwise(() => T.userProfileInnerThemedNonPremium)
-      }((null == R ? void 0 : R.canUsePremiumProfileCustomization) || N, null !== h && ((null == R ? void 0 : R.banner) != null || void 0 !== h), u)),
+      }((null == R ? void 0 : R.canUsePremiumProfileCustomization) || N, null !== A && ((null == R ? void 0 : R.banner) != null || void 0 !== A), u)),
       children: (0, r.jsx)(f.Provider, {
         value: D,
         children: m
@@ -80,7 +80,7 @@ function h(e) {
     })
   })
 }
-h.Inner = function(e) {
+A.Inner = function(e) {
   var t;
   let {
     className: n,
@@ -92,4 +92,4 @@ h.Inner = function(e) {
     className: o()((t = a, (0, l.match)(t).with(c.UserProfileTypes.POPOUT, c.UserProfileTypes.SETTINGS, () => T.userPopoutOverlayBackground).with(c.UserProfileTypes.MODAL, () => T.userProfileModalOverlayBackground).with(c.UserProfileTypes.PANEL, () => T.userPanelOverlayBackground).otherwise(() => T.overlayBackground)), n),
     children: i
   })
-}, t.default = h
+}, t.default = A

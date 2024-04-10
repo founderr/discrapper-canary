@@ -14,15 +14,15 @@ var i, a, l = n("735250"),
   f = n("237997"),
   h = n("285952"),
   p = n("739563"),
-  g = n("998502"),
-  m = n("13140"),
+  m = n("998502"),
+  g = n("13140"),
   E = n("658785"),
   S = n("981631"),
   v = n("689938"),
-  y = n("873663"),
-  I = n("794711");
+  T = n("873663"),
+  y = n("794711");
 
-function T(e, t, n) {
+function I(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -66,8 +66,8 @@ function C() {
     notifications_position: t ? e : null,
     text_notifications_mode: f.default.getTextChatNotificationMode(),
     text_opacity_slider: f.default.getTextWidgetOpacity(),
-    hotkey: null != n ? (0, m.toString)(n.shortcut) : null,
-    text_activation_hotkey: null != i ? (0, m.toString)(i.shortcut) : null
+    hotkey: null != n ? (0, g.toString)(n.shortcut) : null,
+    text_activation_hotkey: null != i ? (0, g.toString)(i.shortcut) : null
   })
 }
 class A extends s.PureComponent {
@@ -104,14 +104,14 @@ class A extends s.PureComponent {
       direction: h.default.Direction.VERTICAL,
       grow: 0,
       shrink: 0,
-      className: y.header,
+      className: T.header,
       children: [(0, l.jsxs)(h.default, {
         children: [(0, l.jsx)(r.FormTitle, {
-          className: y.headerTitle,
+          className: T.headerTitle,
           tag: "h1",
           children: v.default.Messages.OVERLAY_SETTINGS_TITLE
         }), (0, l.jsx)(r.ModalCloseButton, {
-          className: y.headerClose,
+          className: T.headerClose,
           onClick: this.props.onClose
         })]
       }), this.renderTabBar()]
@@ -122,21 +122,21 @@ class A extends s.PureComponent {
       selectedSection: e
     } = this.state, t = u.default.isDeveloper ? (0, l.jsx)(r.TabBar.Item, {
       id: "DEVELOPER",
-      className: y.tabBarItem,
+      className: T.tabBarItem,
       children: "Developer"
     }) : null;
     return (0, l.jsxs)(r.TabBar, {
       selectedItem: e,
       type: "top",
-      className: y.__invalid_tabBar,
+      className: T.__invalid_tabBar,
       onItemSelect: this.handleSelectSection,
       children: [(0, l.jsx)(r.TabBar.Item, {
         id: "GENERAL",
-        className: y.tabBarItem,
+        className: T.tabBarItem,
         children: v.default.Messages.OVERLAY_SETTINGS_GENERAL_TAB
       }), (0, l.jsx)(r.TabBar.Item, {
         id: "VOICE",
-        className: y.tabBarItem,
+        className: T.tabBarItem,
         children: v.default.Messages.OVERLAY_SETTINGS_VOICE_TAB
       }), t]
     })
@@ -157,7 +157,7 @@ class A extends s.PureComponent {
         e = this.renderGeneralSettings()
     }
     return (0, l.jsx)(r.ModalContent, {
-      className: y.content,
+      className: T.content,
       children: e
     }, t)
   }
@@ -171,7 +171,7 @@ class A extends s.PureComponent {
     return (0, l.jsxs)(s.Fragment, {
       children: [(0, l.jsx)(r.FormItem, {
         title: v.default.Messages.FORM_LABEL_NOTIFICATION_POSITION,
-        className: I.marginBottom20,
+        className: y.marginBottom20,
         children: (0, l.jsx)(p.default, {
           position: t,
           onChange: this.handleChangeNotificationPositionMode
@@ -199,7 +199,7 @@ class A extends s.PureComponent {
     return (0, l.jsxs)(s.Fragment, {
       children: [(0, l.jsx)(r.FormItem, {
         title: v.default.Messages.FORM_LABEL_AVATAR_SIZE,
-        className: I.marginBottom20,
+        className: y.marginBottom20,
         children: (0, l.jsx)(r.RadioGroup, {
           onChange: this.handleChangeAvatarSizeMode,
           options: N(),
@@ -208,7 +208,7 @@ class A extends s.PureComponent {
         })
       }), (0, l.jsx)(r.FormItem, {
         title: v.default.Messages.FORM_LABEL_DISPLAY_NAMES,
-        className: I.marginBottom20,
+        className: y.marginBottom20,
         children: (0, l.jsx)(r.RadioGroup, {
           onChange: this.handleChangeDisplayNameMode,
           options: O(),
@@ -217,7 +217,7 @@ class A extends s.PureComponent {
         })
       }), (0, l.jsx)(r.FormItem, {
         title: v.default.Messages.FORM_LABEL_DISPLAY_USERS,
-        className: I.marginBottom20,
+        className: y.marginBottom20,
         children: (0, l.jsx)(r.RadioGroup, {
           onChange: this.handleChangeDisplayUserMode,
           options: _(),
@@ -231,7 +231,7 @@ class A extends s.PureComponent {
     return (0, l.jsx)(s.Fragment, {
       children: (0, l.jsx)(r.FormItem, {
         title: "Crashes",
-        className: I.marginBottom20,
+        className: y.marginBottom20,
         children: (0, l.jsx)(r.SingleSelect, {
           value: void 0,
           options: [{
@@ -253,7 +253,7 @@ class A extends s.PureComponent {
             value: 4,
             label: "Out of Memory"
           }],
-          onChange: e => null != e && g.default.crash(e)
+          onChange: e => null != e && m.default.crash(e)
         })
       })
     })
@@ -266,13 +266,13 @@ class A extends s.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), T(this, "state", {
+    super(...e), I(this, "state", {
       selectedSection: "GENERAL"
-    }), T(this, "handleSelectSection", e => {
+    }), I(this, "handleSelectSection", e => {
       this.setState({
         selectedSection: e
       })
-    }), T(this, "handleToggleTextChatNotifications", () => {
+    }), I(this, "handleToggleTextChatNotifications", () => {
       let {
         ENABLED: e,
         DISABLED: t

@@ -11,15 +11,15 @@ var i, r, s, a, o = n("442837"),
   T = n("981631");
 let f = null,
   S = {},
-  h = null;
+  A = null;
 
-function A() {
+function h() {
   return {
     _categories: [],
     null: []
   }
 }
-let m = A();
+let m = h();
 
 function N(e, t) {
   e.index = t
@@ -27,7 +27,7 @@ function N(e, t) {
 
 function O(e) {
   let t = E.default.getChannels(e),
-    n = A(),
+    n = h(),
     i = e => {
       var t;
       let {
@@ -80,7 +80,7 @@ function g(e) {
 }
 
 function L(e, t) {
-  if (h = t, null == e || null == e.getGuildId()) return !1;
+  if (A = t, null == e || null == e.getGuildId()) return !1;
   let n = e.getGuildId();
   return null != n && (S[n] = void 0, n === f && O(n), !0)
 }
@@ -158,7 +158,7 @@ a = "GuildCategoryStore", (s = "displayName") in(r = v) ? Object.defineProperty(
     let {
       channelId: t
     } = e;
-    return null == t && null != h ? L(c.default.getChannel(h), null) : L(c.default.getChannel(t), t)
+    return null == t && null != A ? L(c.default.getChannel(A), null) : L(c.default.getChannel(t), t)
   },
   VOICE_STATE_UPDATES: function(e) {
     let {

@@ -19,8 +19,8 @@ var i = n("735250"),
   T = n("911969"),
   f = n("476326"),
   S = n("998698"),
-  h = n("710845"),
-  A = n("117530"),
+  A = n("710845"),
+  h = n("117530"),
   m = n("459273"),
   N = n("403182"),
   O = n("541716"),
@@ -41,7 +41,7 @@ function y(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-new h.default("ChannelEditor.tsx");
+new A.default("ChannelEditor.tsx");
 let P = function() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n]
   },
@@ -177,8 +177,8 @@ class b extends r.Component {
       onSubmit: T,
       channel: f,
       type: S,
-      fontSize: h,
-      useSlate: A,
+      fontSize: A,
+      useSlate: h,
       spellcheckEnabled: N,
       useNewSlashCommands: R,
       canOnlyUseTextCommands: L,
@@ -188,21 +188,21 @@ class b extends r.Component {
       maxCharacterCount: b,
       allowNewLines: G,
       "aria-describedby": w,
-      "aria-labelledby": B,
-      accessibilityLabel: k
+      "aria-labelledby": k,
+      accessibilityLabel: B
     } = this.props, {
       submitting: V,
       popup: F
     } = this.state, x = {
       channel: f,
       className: a()(v, M.textArea, {
-        [M.textAreaSlate]: A,
+        [M.textAreaSlate]: h,
         [M.textAreaDisabled]: d || V
       }),
       id: y,
       placeholder: this.getPlaceholder(),
       required: P,
-      accessibilityLabel: k,
+      accessibilityLabel: B,
       disabled: d || !1,
       submitting: V,
       isEdit: S === O.ChatInputTypes.EDIT,
@@ -219,7 +219,7 @@ class b extends r.Component {
       onResize: I,
       onKeyDown: E,
       onSubmit: T,
-      textAreaPaddingClassName: a()(U[h], {
+      textAreaPaddingClassName: a()(U[A], {
         [M.textAreaWithoutAttachmentButton]: S !== O.ChatInputTypes.NORMAL && S !== O.ChatInputTypes.OVERLAY && S !== O.ChatInputTypes.THREAD_CREATION && S !== O.ChatInputTypes.SIDEBAR,
         [M.textAreaForPostCreation]: S === O.ChatInputTypes.CREATE_FORUM_POST,
         [M.textAreaCustomGift]: S === O.ChatInputTypes.CUSTOM_GIFT
@@ -234,9 +234,9 @@ class b extends r.Component {
       "aria-activedescendant": null !== (o = F.activeDescendant) && void 0 !== o ? o : void 0,
       "aria-invalid": l.length > b,
       "aria-describedby": w,
-      "aria-labelledby": B,
+      "aria-labelledby": k,
       "aria-autocomplete": "list"
-    }, H = A ? (0, i.jsx)(g.default, {
+    }, H = h ? (0, i.jsx)(g.default, {
       ref: this.ref,
       ...x,
       type: S,
@@ -419,7 +419,7 @@ class b extends r.Component {
           u = null,
           d = S.default.getActiveOption(t.id);
         null != (u = (null == d ? void 0 : d.type) === T.ApplicationCommandOptionType.ATTACHMENT ? d : null === (s = o.options) || void 0 === s ? void 0 : s.find(e => {
-          if (e.type === T.ApplicationCommandOptionType.ATTACHMENT) return null == A.default.getUpload(t.id, e.name, l)
+          if (e.type === T.ApplicationCommandOptionType.ATTACHMENT) return null == h.default.getUpload(t.id, e.name, l)
         })) && I.default.setFile({
           channelId: t.id,
           id: u.name,

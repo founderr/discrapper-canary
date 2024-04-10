@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   InteractivePIPHeader: function() {
-    return B
+    return k
   },
   PIPOverlay: function() {
     return b
@@ -29,8 +29,8 @@ var r = n("803997"),
   T = n("618158"),
   f = n("922745"),
   S = n("871499"),
-  h = n("402113"),
-  A = n("800965"),
+  A = n("402113"),
+  h = n("800965"),
   m = n("157813"),
   N = n("25827"),
   O = n("131951"),
@@ -71,7 +71,7 @@ function b(e) {
     onJumpToChannel: R,
     idle: C,
     selectedParticipant: g
-  } = e, M = (0, u.useAppContext)() === D.AppContext.POPOUT, U = (0, a.useStateFromStores)([O.default], () => O.default.isVideoEnabled()), b = (0, a.useStateFromStores)([O.default], () => Object.values(O.default.getVideoDevices())[0]), G = !1 === (null === (t = null == b ? void 0 : b.disabled) || void 0 === t || t), w = (0, d.default)([s])[0], B = (0, E.default)(r), k = e => {
+  } = e, M = (0, u.useAppContext)() === D.AppContext.POPOUT, U = (0, a.useStateFromStores)([O.default], () => O.default.isVideoEnabled()), b = (0, a.useStateFromStores)([O.default], () => Object.values(O.default.getVideoDevices())[0]), G = !1 === (null === (t = null == b ? void 0 : b.disabled) || void 0 === t || t), w = (0, d.default)([s])[0], k = (0, E.default)(r), B = e => {
     l.default.setVideoEnabled(e)
   };
   return (0, i.jsxs)("div", {
@@ -98,10 +98,10 @@ function b(e) {
           className: y.leftPipIcon,
           enabled: U,
           cameraUnavailable: !G,
-          hasPermission: B,
-          onChange: k,
+          hasPermission: k,
+          onChange: B,
           onCameraUnavailable: () => {
-            G ? k(!0) : (0, I.default)()
+            G ? B(!0) : (0, I.default)()
           }
         }), (0, i.jsx)(T.default, {
           children: (0, i.jsx)(_.default, {
@@ -118,14 +118,14 @@ function b(e) {
         justify: p.default.Justify.END,
         basis: "50%",
         align: p.default.Align.CENTER,
-        children: [M ? null : (0, i.jsx)(A.default, {
+        children: [M ? null : (0, i.jsx)(h.default, {
           className: y.rightPipIcon,
           popoutOpen: !1,
           onOpenPopout: () => {
             (0, L.default)(() => c.openChannelCallPopout(r))
           },
           onClosePopout: v.NOOP_NULL
-        }), (0, i.jsx)(h.default, {
+        }), (0, i.jsx)(A.default, {
           applicationId: s,
           channelId: r.id,
           className: y.rightPipIcon
@@ -169,7 +169,7 @@ function G(e) {
         size: 24,
         max: 3,
         className: y.__invalid_userSummaryContainer
-      }), (0, i.jsx)(h.default, {
+      }), (0, i.jsx)(A.default, {
         applicationId: r,
         channelId: n.id,
         iconClassName: y.leaveActivityIcon,
@@ -192,7 +192,7 @@ function w(e) {
   }) : null
 }
 
-function B(e) {
+function k(e) {
   var t;
   let {
     onMouseDown: n,
@@ -230,7 +230,7 @@ function B(e) {
           children: [I ? null : (0, i.jsx)(U, {
             isExpanded: E,
             onClick: c
-          }), (0, i.jsx)(h.default, {
+          }), (0, i.jsx)(A.default, {
             applicationId: l,
             channelId: u.id,
             iconClassName: y.leaveActivityIcon

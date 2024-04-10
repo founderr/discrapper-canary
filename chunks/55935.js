@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return E
   },
   diffAsUnits: function() {
-    return A
+    return h
   },
   isSameDay: function() {
     return _
@@ -80,7 +80,7 @@ function S(e) {
 a.default.addChangeListener(() => {
   l = Object.create(null)
 });
-let h = [{
+let A = [{
   key: "days",
   millisecondsInUnit: 864e5
 }, {
@@ -94,7 +94,7 @@ let h = [{
   millisecondsInUnit: 1e3
 }];
 
-function A(e, t) {
+function h(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     i = {
       days: 0,
@@ -104,7 +104,7 @@ function A(e, t) {
     };
   if (e > t || n && Number(e) + 1200 > Number(t)) return i;
   let r = Number(t) - Number(e);
-  return h.forEach(e => {
+  return A.forEach(e => {
     let {
       key: t,
       millisecondsInUnit: n

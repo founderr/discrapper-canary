@@ -35,8 +35,8 @@ var i, r, s = n("735250"),
   T = n("952265"),
   f = n("21340"),
   S = n("922770"),
-  h = n("893776"),
-  A = n("115130"),
+  A = n("893776"),
+  h = n("115130"),
   m = n("317381"),
   N = n("367907"),
   O = n("702493"),
@@ -54,8 +54,8 @@ var i, r, s = n("735250"),
   b = n("807675"),
   G = n("489863"),
   w = n("228763"),
-  B = n("422559"),
-  k = n("713938"),
+  k = n("422559"),
+  B = n("713938"),
   V = n("166148"),
   F = n("807989"),
   x = n("260430"),
@@ -155,8 +155,8 @@ function ei(e) {
       isTrustedName: eT = !1,
       isEmbeddedFlow: ef = !1,
       inApp: eS = !1,
-      callback: eh,
-      callbackWithoutPost: eA,
+      callback: eA,
+      callbackWithoutPost: eh,
       onClose: em
     } = e,
     eN = (0, u.useLocation)(),
@@ -165,9 +165,9 @@ function ei(e) {
     }).userAppsTreatment === p.UserAppsTreatment.ALLOWED,
     ep = (0, E.useStateFromStores)([y.default], () => y.default.hasLoadedExperiments);
   a.useEffect(() => {
-    M.default.isAuthenticated() && !ep && h.default.getExperiments()
+    M.default.isAuthenticated() && !ep && A.default.getExperiments()
   }, [ep]);
-  let [eR, eC] = a.useState(null), [eg, eL] = a.useState(null), [eD, ev] = a.useState(null), [eM, ey] = a.useState(!1), eP = null == eR ? void 0 : eR.guilds, [eU, eb] = a.useState(null != eu ? eu : null), [eG, ew] = a.useState(null != ed ? ed : null), [eB, ek] = a.useState(P.NONE), eV = a.useMemo(() => (null == eR ? void 0 : eR.user) != null ? new v.default(eR.user) : null, [null == eR ? void 0 : eR.user]), eF = a.useMemo(() => null == eP ? void 0 : eP.find(e => e.id === eU), [eP, eU]), [ex, eH] = a.useState(null), eY = a.useMemo(() => {
+  let [eR, eC] = a.useState(null), [eg, eL] = a.useState(null), [eD, ev] = a.useState(null), [eM, ey] = a.useState(!1), eP = null == eR ? void 0 : eR.guilds, [eU, eb] = a.useState(null != eu ? eu : null), [eG, ew] = a.useState(null != ed ? ed : null), [ek, eB] = a.useState(P.NONE), eV = a.useMemo(() => (null == eR ? void 0 : eR.user) != null ? new v.default(eR.user) : null, [null == eR ? void 0 : eR.user]), eF = a.useMemo(() => null == eP ? void 0 : eP.find(e => e.id === eU), [eP, eU]), [ex, eH] = a.useState(null), eY = a.useMemo(() => {
     var e;
     return eO && null == ea && null == e_ && (null !== (e = null == eo ? void 0 : eo.length) && void 0 !== e ? e : 0) === 0 && null == et
   }, [ea, eO, null == eo ? void 0 : eo.length, et, e_]), [ej, eW] = a.useState(null);
@@ -184,7 +184,7 @@ function ei(e) {
     } = a.useMemo(() => {
       let e = eY ? null == eK ? void 0 : eK.scopes : eo,
         t = (0, b.filterScopes)(null != e ? e : []),
-        n = k.OrderedAccountScopes.filter(e => t.includes(e));
+        n = B.OrderedAccountScopes.filter(e => t.includes(e));
       return {
         requestedScopes: t,
         accountScopes: n
@@ -196,13 +196,13 @@ function ei(e) {
       return null != t ? t : P.NONE
     }, [null == eK ? void 0 : eK.permissions, el, eY]),
     eq = (0, E.useStateFromStores)([m.default], () => m.default.getCurrentEmbeddedActivity()),
-    eJ = (0, E.useStateFromStoresObject)([A.default, m.default], () => {
+    eJ = (0, E.useStateFromStoresObject)([h.default, m.default], () => {
       let e;
-      let t = A.default.getIsEnabled();
+      let t = h.default.getIsEnabled();
       if (null != eq) {
         if (e = m.default.getShelfActivities(eq.guildId).find(e => e.application_id === eq.applicationId), t && void 0 === e) {
           var n;
-          e = null === (n = A.default.getDeveloperShelfItems().find(e => e.id === eq.applicationId)) || void 0 === n ? void 0 : n.embeddedActivityConfig
+          e = null === (n = h.default.getDeveloperShelfItems().find(e => e.id === eq.applicationId)) || void 0 === n ? void 0 : n.embeddedActivityConfig
         }
         if (null != e) return {
           ...q.DEFAULT_EMBEDDED_ACTIVITY_CONFIG,
@@ -213,12 +213,12 @@ function ei(e) {
     }, [eq]),
     eZ = Object.keys(eJ).length > 0 ? eJ : null,
     e$ = a.useCallback(async e => {
-      if (null != eA) {
-        eA(e);
+      if (null != eh) {
+        eh(e);
         return
       }
       if (!e && !eI) {
-        null != eh && (eh({
+        null != eA && (eA({
           application: null == eR ? void 0 : eR.application,
           guild: eF
         }), null == em || em());
@@ -240,11 +240,11 @@ function ei(e) {
           codeChallengeMethod: ei,
           state: er,
           integrationType: ex,
-          permissions: c.remove(eQ, eB),
+          permissions: c.remove(eQ, ek),
           guildId: ex === _.ApplicationIntegrationType.GUILD_INSTALL && null != eU ? eU : void 0,
           channelId: ex === _.ApplicationIntegrationType.GUILD_INSTALL && null != eG ? eG : void 0
         });
-        if (null != eh) eh({
+        if (null != eA) eA({
           application: null == eR ? void 0 : eR.application,
           location: t.location,
           guild: eF
@@ -265,7 +265,7 @@ function ei(e) {
         let e = t.body;
         (null == e ? void 0 : e.message) != null && "" !== e.message ? ev(Error(e.message)) : ev(e), eL(1), ey(!1)
       }
-    }, [eA, eI, eh, null == eR ? void 0 : eR.application, eF, em, K, ez, ee, et, en, ei, er, eQ, eB, eU, ex, eG]),
+    }, [eh, eI, eA, null == eR ? void 0 : eR.application, eF, em, K, ez, ee, et, en, ei, er, eQ, ek, eU, ex, eG]),
     e0 = a.useRef(!1),
     e1 = a.useCallback(async () => {
       if (!M.default.isAuthenticated()) {
@@ -323,8 +323,8 @@ function ei(e) {
     }, [ea, e2, ej, eO, eY, e_, eg, ep]), a.useEffect(() => {
       if (null == ex || null != eR || null != eD) return;
       ex === _.ApplicationIntegrationType.USER_INSTALL && (eb(null), ew(null));
-      let e = ez.filter(e => !k.ValidScopes.includes(e));
-      0 === ez.length ? ev(Error("No scopes were provided.")) : e.length > 0 ? ev(Error("Invalid scope: ".concat(e[0]))) : (0, B.containsDisallowedPermission)(eQ) ? ev(Error("Invalid permission(s) provided.")) : e1()
+      let e = ez.filter(e => !B.ValidScopes.includes(e));
+      0 === ez.length ? ev(Error("No scopes were provided.")) : e.length > 0 ? ev(Error("Invalid scope: ".concat(e[0]))) : (0, k.containsDisallowedPermission)(eQ) ? ev(Error("Invalid permission(s) provided.")) : e1()
     }, [e1, ez, eQ, ex, eR, eD]), eD instanceof Error) return {
     body: (0, s.jsx)(z.OAuth2Error, {
       message: eD.message
@@ -388,9 +388,9 @@ function ei(e) {
       l = (0, s.jsx)(H.default, {
         application: eR.application,
         permissions: eQ,
-        deniedPermissions: eB,
+        deniedPermissions: ek,
         onPermissionsChange: (e, t) => {
-          ek(n => e ? c.remove(n, t) : c.add(n, t))
+          eB(n => e ? c.remove(n, t) : c.add(n, t))
         },
         guild: eF
       }), T = 1

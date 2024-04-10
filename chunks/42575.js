@@ -38,9 +38,9 @@ function S(e) {
       friendToken: void 0,
       fromFriendSuggestion: !0
     })
-  }, N = e => {
+  }, A = e => {
     null == e || e.stopPropagation(), r.default.ignore(t.id)
-  }, A = S === _.StatusTypes.OFFLINE ? _.StatusTypes.UNKNOWN : S;
+  }, N = S === _.StatusTypes.OFFLINE ? _.StatusTypes.UNKNOWN : S;
   return (0, a.jsx)(E.default, {
     isFocused: I,
     user: t,
@@ -61,7 +61,7 @@ function S(e) {
           icon: d.default,
           actionType: f.default.ActionTypes.DENY,
           tooltip: C.default.Messages.FRIEND_REQUEST_IGNORE,
-          onClick: N,
+          onClick: A,
           shouldHighlight: e
         })]
       });
@@ -70,7 +70,7 @@ function S(e) {
         children: [(0, a.jsx)(h.default, {
           user: t,
           hovered: e,
-          status: A,
+          status: N,
           subText: n,
           className: m.__invalid_userInfo
         }), (0, a.jsx)("div", {

@@ -24,7 +24,7 @@ var a, s = n("735250"),
   T = n("981631"),
   g = n("997171");
 
-function N(e, t, n) {
+function A(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -32,7 +32,7 @@ function N(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let A = (0, _.makeLazy)({
+let N = (0, _.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("24267"), n.e("8895"), n.e("15972"), n.e("58625"), n.e("6416"), n.e("14720"), n.e("63438"), n.e("33053"), n.e("51238"), n.e("17938"), n.e("76540"), n.e("65866"), n.e("5528"), n.e("92427"), n.e("18824"), n.e("74753"), n.e("79618")]).then(n.bind(n, "989804")),
     webpackId: "989804",
     name: "UserSettings"
@@ -42,21 +42,21 @@ let A = (0, _.makeLazy)({
     webpackId: "869779",
     name: "ChannelSettings"
   }),
-  O = (0, _.makeLazy)({
+  R = (0, _.makeLazy)({
     createPromise: () => Promise.all([n.e("99387"), n.e("18249")]).then(n.bind(n, "838819")),
     webpackId: "838819",
     name: "CollectiblesShop"
   }),
-  R = (0, _.makeLazy)({
+  O = (0, _.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("24267"), n.e("33053"), n.e("51238"), n.e("75475"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502")]).then(n.bind(n, "994763")),
     webpackId: "994763",
     name: "GuildSettings"
   }),
   L = {
-    [T.Layers.USER_SETTINGS]: () => (0, s.jsx)(A, {}),
+    [T.Layers.USER_SETTINGS]: () => (0, s.jsx)(N, {}),
     [T.Layers.CHANNEL_SETTINGS]: () => (0, s.jsx)(v, {}),
-    [T.Layers.GUILD_SETTINGS]: () => (0, s.jsx)(R, {}),
-    [T.Layers.COLLECTIBLES_SHOP]: () => (0, s.jsx)(O, {})
+    [T.Layers.GUILD_SETTINGS]: () => (0, s.jsx)(O, {}),
+    [T.Layers.COLLECTIBLES_SHOP]: () => (0, s.jsx)(R, {})
   },
   M = "SHOWN",
   P = "HIDDEN",
@@ -191,7 +191,7 @@ class D extends(a = l.PureComponent) {
     }
   }
   constructor(e) {
-    super(e), N(this, "containerRef", l.createRef());
+    super(e), A(this, "containerRef", l.createRef());
     let t = 1,
       n = 1;
     e.mode === P && (t = .93, n = 0), this.state = {
@@ -202,9 +202,9 @@ class D extends(a = l.PureComponent) {
     }
   }
 }
-N(D, "defaultProps", {
+A(D, "defaultProps", {
   baseLayer: !1
-}), N(D, "contextType", c.AccessibilityPreferencesContext);
+}), A(D, "contextType", c.AccessibilityPreferencesContext);
 class b extends l.PureComponent {
   componentDidMount() {
     I.ComponentDispatch.subscribe(T.ComponentActions.LAYER_POP_ESCAPE_KEY, f.popLayer)

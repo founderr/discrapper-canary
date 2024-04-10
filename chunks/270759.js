@@ -20,11 +20,11 @@ var a = n("735250"),
   p = n("210887"),
   T = n("974042"),
   g = n("153124"),
-  N = n("988951"),
-  A = n("26290"),
+  A = n("988951"),
+  N = n("26290"),
   v = n("792125"),
-  O = n("666286"),
-  R = n("596957"),
+  R = n("666286"),
+  O = n("596957"),
   L = n("981631"),
   M = n("723359"),
   P = n("689938"),
@@ -74,7 +74,7 @@ t.default = function(e) {
       role: "navigation",
       "aria-labelledby": j,
       children: [(0, a.jsx)(C.default.Icon, {
-        icon: N.default,
+        icon: A.default,
         "aria-hidden": !0
       }), (0, a.jsx)(C.default.Title, {
         id: j,
@@ -99,7 +99,7 @@ t.default = function(e) {
           id: L.FriendsSections.PENDING,
           className: y.item,
           "aria-label": P.default.Messages.FRIENDS_SECTION_PENDING,
-          children: [P.default.Messages.FRIENDS_SECTION_PENDING, b > 0 ? (0, a.jsx)(A.NumberBadge, {
+          children: [P.default.Messages.FRIENDS_SECTION_PENDING, b > 0 ? (0, a.jsx)(N.NumberBadge, {
             count: b,
             className: y.badge,
             style: {
@@ -110,7 +110,7 @@ t.default = function(e) {
           id: L.FriendsSections.SUGGESTIONS,
           className: y.item,
           "aria-label": P.default.Messages.FRIENDS_SECTION_SUGGESTIONS,
-          children: [P.default.Messages.FRIENDS_SECTION_SUGGESTIONS, (0, a.jsx)(A.NumberBadge, {
+          children: [P.default.Messages.FRIENDS_SECTION_SUGGESTIONS, (0, a.jsx)(N.NumberBadge, {
             count: U,
             className: y.badge,
             style: {
@@ -136,7 +136,7 @@ t.default = function(e) {
         id: D,
         className: y.peopleColumn,
         "aria-labelledby": G,
-        children: D === L.FriendsSections.ADD_FRIEND ? (0, a.jsx)(O.default, {}) : (0, a.jsx)(R.default, {
+        children: D === L.FriendsSections.ADD_FRIEND ? (0, a.jsx)(R.default, {}) : (0, a.jsx)(O.default, {
           titleId: G,
           sectionFilter: D
         })

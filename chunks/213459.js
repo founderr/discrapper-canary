@@ -25,8 +25,8 @@ var i, r, s, a = n("470079"),
   T = n("399860"),
   f = n("706454"),
   S = n("675478"),
-  h = n("592125"),
-  A = n("430824"),
+  A = n("592125"),
+  h = n("430824"),
   m = n("594174"),
   N = n("626135"),
   O = n("254711"),
@@ -52,8 +52,8 @@ function b(e, t, n) {
 }
 let G = new u.Logger("ApplicationCommandIndexStore"),
   w = Symbol("currentUser"),
-  B = Symbol("stale"),
-  k = Symbol("current"),
+  k = Symbol("stale"),
+  B = Symbol("current"),
   V = Object.freeze({
     descriptors: [],
     commands: [],
@@ -61,18 +61,18 @@ let G = new u.Logger("ApplicationCommandIndexStore"),
     loading: !0
   }),
   F = Object.freeze({
-    serverVersion: k,
+    serverVersion: B,
     fetchState: {
       fetching: !1
     },
     result: {
       sections: {},
       sectionIdsByBotId: {},
-      version: k
+      version: B
     }
   }),
   x = Object.freeze({
-    serverVersion: B,
+    serverVersion: k,
     fetchState: {
       fetching: !1
     }
@@ -103,7 +103,7 @@ function j(e, t) {
     ...s,
     ...t
   }) : i && (n = {
-    serverVersion: B,
+    serverVersion: k,
     fetchState: {
       fetching: !1
     },
@@ -126,7 +126,7 @@ function z() {
   j({
     type: "user"
   }, {
-    serverVersion: B
+    serverVersion: k
   })
 }
 class X extends(i = d.default.Store) {
@@ -200,7 +200,7 @@ class X extends(i = d.default.Store) {
     return d.loading = d.loading || u, d
   }
   maybeQueryForInstallLessApps(e, t) {
-    let n = h.default.getChannel(t),
+    let n = A.default.getChannel(t),
       i = U.INSTALL_LESS_APP_IDS.includes(e) ? e : void 0;
     null != n && null != i && this.query(n, {
       commandType: E.ApplicationCommandType.CHAT
@@ -219,7 +219,7 @@ b(X, "displayName", "ApplicationCommandIndexStore");
 let Q = new X(_.default, {
   LOGOUT: K,
   CONNECTION_OPEN: function() {
-    for (let e of Object.values(Q.indices)) e.serverVersion = B
+    for (let e of Object.values(Q.indices)) e.serverVersion = k
   },
   APPLICATION_COMMAND_INDEX_FETCH_REQUEST: function(e) {
     var t;
@@ -290,7 +290,7 @@ let Q = new X(_.default, {
       }
       t.commands[e.id] = e
     }
-    let u = null !== (n = r.version) && void 0 !== n ? n : k;
+    let u = null !== (n = r.version) && void 0 !== n ? n : B;
     j(i, {
       serverVersion: u,
       result: {
@@ -326,7 +326,7 @@ let Q = new X(_.default, {
       type: "channel",
       channelId: n
     }, {
-      serverVersion: B
+      serverVersion: k
     })
   },
   CHANNEL_DELETE: function(e) {
@@ -356,16 +356,16 @@ let Q = new X(_.default, {
       type: "guild",
       guildId: n
     }, {
-      serverVersion: null != i ? i : B
+      serverVersion: null != i ? i : k
     }), s = null == r ? void 0 : null === (t = r.result) || void 0 === t ? void 0 : t.sectionIdsByBotId;
     if (null != s)
       for (let e in s) {
-        let t = h.default.getDMFromUserId(e);
+        let t = A.default.getDMFromUserId(e);
         null != t && j({
           type: "channel",
           channelId: t
         }, {
-          serverVersion: B
+          serverVersion: k
         })
       }
   },
@@ -535,7 +535,7 @@ function et(e) {
     sortOptions: _ = ee
   } = e, {
     commandType: c
-  } = t, E = null == s ? void 0 : s.toLowerCase(), T = null == E ? void 0 : E.split(" "), f = a === g.BuiltInCommandFilter.ONLY_TEXT, h = a !== g.BuiltInCommandFilter.DENY ? (0, O.getBuiltInCommands)(c, !0, f) : [], m = [], N = {
+  } = t, E = null == s ? void 0 : s.toLowerCase(), T = null == E ? void 0 : E.split(" "), f = a === g.BuiltInCommandFilter.ONLY_TEXT, A = a !== g.BuiltInCommandFilter.DENY ? (0, O.getBuiltInCommands)(c, !0, f) : [], m = [], N = {
     permissionContext: t,
     query: E,
     splitQuery: T,
@@ -590,8 +590,8 @@ function et(e) {
       return el(e.section.name, t.section.name)
     })
   }
-  if (h.length > 0 || !0 === u) {
-    let e = en(O.BUILT_IN_SECTIONS[y.BuiltInSectionId.BUILT_IN], h, N);
+  if (A.length > 0 || !0 === u) {
+    let e = en(O.BUILT_IN_SECTIONS[y.BuiltInSectionId.BUILT_IN], A, N);
     null != e && m.push(e)
   }
   let M = m.flatMap(e => e.data.map(t => ({
@@ -600,7 +600,7 @@ function et(e) {
   })));
   if (d === g.ScoreMethod.COMMAND_ONLY || d === g.ScoreMethod.COMMAND_OR_APPLICATION) {
     let e = t.context,
-      n = A.default.getGuild(t.context.guild_id);
+      n = h.default.getGuild(t.context.guild_id);
     _.commands.useFrecency && S.FrecencyUserSettingsActionCreators.loadIfNecessary(), M.sort((t, i) => {
       if (_.commands.useScore) {
         var r, s;

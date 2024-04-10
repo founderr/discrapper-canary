@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return A
   }
 }), n("47120");
 var a = n("735250"),
@@ -48,19 +48,19 @@ function g(e, t) {
   }
 }
 
-function N() {
+function A() {
   let e = s.createRef(),
     t = s.createRef(),
     [n, l] = s.useReducer(g, S),
     {
       canSend: r,
       hint: c,
-      success: N,
-      error: A
+      success: A,
+      error: N
     } = n;
   return s.useEffect(() => {
-    null != N && (o()(null != e.current, "Input is submitting when not mounted"), e.current.value = "", e.current.focus())
-  }, [N, e]), (0, a.jsxs)("form", {
+    null != A && (o()(null != e.current, "Input is submitting when not mounted"), e.current.value = "", e.current.focus())
+  }, [A, e]), (0, a.jsxs)("form", {
     onSubmit: t => {
       t.preventDefault(), o()(null != e.current, "Input is submitted when not mounted");
       let n = e.current.value.trim();
@@ -103,8 +103,8 @@ function N() {
       children: (0, a.jsxs)("div", {
         ref: t,
         className: i()(C.addFriendInputWrapper, {
-          [C.success]: N,
-          [C.error]: A
+          [C.success]: A,
+          [C.error]: N
         }),
         children: [(0, a.jsx)(u.TextInput, {
           id: I,
@@ -143,8 +143,8 @@ function N() {
           "data-lpignore": !0,
           placeholder: _.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
           "aria-label": _.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
-          "aria-invalid": null != A || void 0,
-          "aria-describedby": null != A ? T : p
+          "aria-invalid": null != N || void 0,
+          "aria-describedby": null != N ? T : p
         }), null != c && (0, a.jsx)("div", {
           className: C.addFriendHint,
           "aria-hidden": !0,
@@ -156,17 +156,17 @@ function N() {
           children: _.default.Messages.ADD_FRIEND_BUTTON
         })]
       })
-    }), null != A && (0, a.jsx)(u.FormText, {
+    }), null != N && (0, a.jsx)(u.FormText, {
       role: "alert",
       id: T,
       type: u.FormText.Types.ERROR,
       className: m.marginTop8,
-      children: A
-    }), null != N && (0, a.jsx)(u.FormText, {
+      children: N
+    }), null != A && (0, a.jsx)(u.FormText, {
       role: "status",
       type: u.FormText.Types.SUCCESS,
       className: m.marginTop8,
-      children: N
+      children: A
     })]
   })
 }

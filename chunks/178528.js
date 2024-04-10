@@ -16,14 +16,14 @@ var i = n("735250"),
   f = n("840780"),
   h = n("905423"),
   p = n("680089"),
-  g = n("58468"),
-  m = n("796974"),
+  m = n("58468"),
+  g = n("796974"),
   E = n("324067"),
   S = n("984933"),
   v = n("888369"),
-  y = n("430824"),
-  I = n("496675"),
-  T = n("944486"),
+  T = n("430824"),
+  y = n("496675"),
+  I = n("944486"),
   N = n("9156"),
   O = n("938475"),
   _ = n("937482"),
@@ -59,7 +59,7 @@ class P extends a.PureComponent {
       guildId: e
     } = this.props, {
       scrollTop: t
-    } = m.default.getGuildDimensions(e);
+    } = g.default.getGuildDimensions(e);
     this.setAnimatedValue(null != t ? t : 0)
   }
   componentDidUpdate(e) {
@@ -70,7 +70,7 @@ class P extends a.PureComponent {
     if (e.guild !== t) {
       let {
         scrollTop: e
-      } = m.default.getGuildDimensions(n);
+      } = g.default.getGuildDimensions(n);
       this.setAnimatedValue(null != e ? e : 0)
     }
   }
@@ -188,20 +188,20 @@ function k(e) {
   var t;
   let {
     guildId: n
-  } = e, a = (0, s.useStateFromStores)([y.default], () => y.default.getGuild(n)), l = (0, s.useStateFromStores)([S.default], () => S.default.getChannels(n)), o = (0, s.useStateFromStores)([E.default], () => E.default.getCategories(n)), {
+  } = e, a = (0, s.useStateFromStores)([T.default], () => T.default.getGuild(n)), l = (0, s.useStateFromStores)([S.default], () => S.default.getChannels(n)), o = (0, s.useStateFromStores)([E.default], () => E.default.getCategories(n)), {
     mutedChannels: u,
     collapseMuted: c
   } = (0, s.useStateFromStoresObject)([N.default], () => ({
     mutedChannels: N.default.getMutedChannels(n),
     collapseMuted: N.default.isGuildCollapsed(n)
-  })), f = (0, s.useStateFromStores)([O.default], () => O.default.getVoiceStates(n)), _ = (0, s.useStateFromStores)([g.default], () => g.default.getCollapsed()), {
+  })), f = (0, s.useStateFromStores)([O.default], () => O.default.getVoiceStates(n)), _ = (0, s.useStateFromStores)([m.default], () => m.default.getCollapsed()), {
     scrollTo: C
-  } = (0, s.useStateFromStores)([m.default], () => m.default.getGuildDimensions(n)), A = (0, h.default)(e => {
+  } = (0, s.useStateFromStores)([g.default], () => g.default.getGuildDimensions(n)), A = (0, h.default)(e => {
     let {
       channelId: t
     } = e;
     return t
-  }), x = (0, s.useStateFromStores)([T.default], () => T.default.getVoiceChannelId()), M = (0, s.useStateFromStores)([I.default], () => I.default.getGuildVersion(n)), L = (0, s.useStateFromStores)([p.default], () => p.default.version), D = (0, s.useStateFromStores)([v.default], () => v.default.getGuildChangeSentinel(n)), b = (0, r.useEmbeddedAppsByChannel)(null == a ? void 0 : a.id), j = (0, d.useActiveEventsByChannel)(null == a ? void 0 : a.id), k = null !== (t = null == a ? void 0 : a.hasFeature(R.GuildFeatures.COMMUNITY)) && void 0 !== t && t;
+  }), x = (0, s.useStateFromStores)([I.default], () => I.default.getVoiceChannelId()), M = (0, s.useStateFromStores)([y.default], () => y.default.getGuildVersion(n)), L = (0, s.useStateFromStores)([p.default], () => p.default.version), D = (0, s.useStateFromStores)([v.default], () => v.default.getGuildChangeSentinel(n)), b = (0, r.useEmbeddedAppsByChannel)(null == a ? void 0 : a.id), j = (0, d.useActiveEventsByChannel)(null == a ? void 0 : a.id), k = null !== (t = null == a ? void 0 : a.hasFeature(R.GuildFeatures.COMMUNITY)) && void 0 !== t && t;
   return (0, i.jsx)(P, {
     guildId: n,
     guild: a,

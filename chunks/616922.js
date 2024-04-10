@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return s
   },
   getSpotifyResourceType: function() {
-    return h
+    return A
   },
   isSpotifyParty: function() {
     return E
@@ -68,7 +68,7 @@ let I = ["open.spotify.com", "www.spotify.com"],
     IOS_APP_STORE: "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8"
   });
 
-function h(e) {
+function A(e) {
   if ("string" != typeof e) return null;
   switch (e) {
     case "track":

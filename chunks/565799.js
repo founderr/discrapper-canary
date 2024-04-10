@@ -11,8 +11,8 @@ var i, r, s, a, o = n("348327"),
   T = n("199902"),
   f = n("314897"),
   S = n("592125"),
-  h = n("430824"),
-  A = n("496675"),
+  A = n("430824"),
+  h = n("496675"),
   m = n("699516"),
   N = n("606304"),
   O = n("594174"),
@@ -60,7 +60,7 @@ function w(e) {
   return null != e && e.isGuildStageVoice() && R.default.countVoiceStatesForChannel(e.id) > 0
 }
 
-function B(e) {
+function k(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : P();
   return t.reduce((t, n) => {
     let i = G(n);
@@ -71,9 +71,9 @@ function B(e) {
   }, !1)
 }
 
-function k(e) {
+function B(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : P();
-  return B(t => t.updateParticipant(e), t)
+  return k(t => t.updateParticipant(e), t)
 }
 
 function V(e) {
@@ -94,14 +94,14 @@ function H(e) {
   let {
     user: t
   } = e;
-  return k(t.id)
+  return B(t.id)
 }
 
 function Y(e) {
   let {
     relationship: t
   } = e;
-  return k(t.id)
+  return B(t.id)
 }
 
 function j(e) {
@@ -122,12 +122,12 @@ function W(e) {
     guildId: i,
     ownerId: r
   } = (0, I.decodeStreamKey)(t);
-  return !!(null != i && M.has(i)) && k(r, [n])
+  return !!(null != i && M.has(i)) && B(r, [n])
 }
 let K = [];
 class z extends(i = _.default.Store) {
   initialize() {
-    this.waitFor(f.default, O.default, S.default, N.default, p.default, A.default, R.default, h.default, g.default, m.default, L.default, T.default)
+    this.waitFor(f.default, O.default, S.default, N.default, p.default, h.default, R.default, A.default, g.default, m.default, L.default, T.default)
   }
   getParticipantsVersion(e) {
     var t, n;
@@ -175,7 +175,7 @@ a = "StageChannelParticipantStore", (s = "displayName") in(r = z) ? Object.defin
     return t.reduce((e, t) => {
       if (null == t.guildId || !M.has(t.guildId)) return e;
       let i = new Set;
-      return (x(n, i, t.oldChannelId), x(n, i, t.channelId), 0 === i.size) ? e : k(t.userId, Array.from(i)) || e
+      return (x(n, i, t.oldChannelId), x(n, i, t.channelId), 0 === i.size) ? e : B(t.userId, Array.from(i)) || e
     }, !1)
   },
   CHANNEL_DELETE: function(e) {
@@ -190,7 +190,7 @@ a = "StageChannelParticipantStore", (s = "displayName") in(r = z) ? Object.defin
     let {
       members: t
     } = e, n = !1;
-    for (let e of t) n = k(e.user.id) || n;
+    for (let e of t) n = B(e.user.id) || n;
     return n
   },
   USER_UPDATE: H,
@@ -204,13 +204,13 @@ a = "StageChannelParticipantStore", (s = "displayName") in(r = z) ? Object.defin
       let n = v.get(t.id);
       return null == n || l()(t.permissionOverwrites, n.permissionOverwrites) ? e : (e.push(t.id), v.set(t.id, t), e)
     }, []);
-    return B(e => e.rebuild(), n), n.length > 0
+    return k(e => e.rebuild(), n), n.length > 0
   },
   GUILD_ROLE_UPDATE: function(e) {
     let {
       guildId: t
     } = e;
-    if (M.has(t)) return B(e => e.rebuild(), P(t))
+    if (M.has(t)) return k(e => e.rebuild(), P(t))
   },
   RTC_CONNECTION_VIDEO: function(e) {
     let {
@@ -218,7 +218,7 @@ a = "StageChannelParticipantStore", (s = "displayName") in(r = z) ? Object.defin
       guildId: n,
       userId: i
     } = e;
-    return !!(null != n && M.has(n)) && k(i, [t])
+    return !!(null != n && M.has(n)) && B(i, [t])
   },
   STREAM_CLOSE: W,
   STREAM_DELETE: W,

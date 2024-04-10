@@ -29,9 +29,9 @@ function m(e) {
     analyticsLocation: p,
     isLightTheme: T
   } = e, g = "AnnouncementModalVariant1", {
-    onClose: N
-  } = S, A = null != m.button && "" !== m.button.copy ? m.button.copy : h.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, v = (null === (t = m.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", O = (null === (n = m.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
-    (0, r.transitionTo)(E.Routes.APPLICATION_STORE), N()
+    onClose: A
+  } = S, N = null != m.button && "" !== m.button.copy ? m.button.copy : h.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, v = (null === (t = m.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", R = (null === (n = m.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
+    (0, r.transitionTo)(E.Routes.APPLICATION_STORE), A()
   } : () => (0, i.default)({
     subscriptionTier: f.PremiumSubscriptionSKUs.TIER_2,
     analyticsLocations: I,
@@ -41,9 +41,9 @@ function m(e) {
       objectType: E.AnalyticsObjectTypes.TIER_2
     },
     onClose: e => {
-      e && N()
+      e && A()
     }
-  }), R = "" !== m.helpArticleId ? () => (0, a.jsx)(l.Anchor, {
+  }), O = "" !== m.helpArticleId ? () => (0, a.jsx)(l.Anchor, {
     className: _.termsApplyAnchor,
     href: d.default.getArticleURL(m.helpArticleId),
     children: (0, a.jsx)(l.Heading, {
@@ -70,7 +70,7 @@ function m(e) {
     header: m.header,
     modalTopExtra: P,
     subHeader: m.subheader,
-    subHeaderExtra: R,
+    subHeaderExtra: O,
     heroArt: L,
     featureCards: m.featureCards.map(e => ({
       header: e.header,
@@ -92,13 +92,13 @@ function m(e) {
             cta_type: v,
             seconds_open: Math.round((Date.now() - e) / 1e3),
             target: g
-          }), O()
+          }), R()
         },
         children: [(0, a.jsx)("img", {
           alt: "",
           className: _.nitroIconSubHeader,
           src: C
-        }), A]
+        }), N]
       })
     },
     modalDismissibleContent: "" !== m.dismissKey ? Number(m.dismissKey) : void 0

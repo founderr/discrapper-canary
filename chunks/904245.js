@@ -15,8 +15,8 @@ var i = n("278074"),
   T = n("830121"),
   f = n("710845"),
   S = n("163268"),
-  h = n("38618"),
-  A = n("687516"),
+  A = n("38618"),
+  h = n("687516"),
   m = n("539573"),
   N = n("409059"),
   O = n("264229"),
@@ -35,8 +35,8 @@ var i = n("278074"),
   G = n("617136");
 n("807092");
 var w = n("869765"),
-  B = n("926491"),
-  k = n("467798"),
+  k = n("926491"),
+  B = n("467798"),
   V = n("346479"),
   F = n("218543"),
   x = n("199902"),
@@ -103,7 +103,7 @@ function eT(e) {
       let i = x.default.getLastActiveStream();
       if (null != i && i.channelId === t.id) {
         e = eo.LoggingInviteTypes.STREAM, n.destination_user_id = i.ownerId;
-        let t = (0, A.getStreamerApplication)(i, z.default);
+        let t = (0, h.getStreamerApplication)(i, z.default);
         n.application_id = null != t ? t.id : null
       }
     }
@@ -320,7 +320,7 @@ let ef = {
         isPreload: d,
         skipLocalFetch: _,
         truncate: c
-      } = e, E = Y.default.getChannel(t), I = h.default.isConnectedOrOverlay(), T = Date.now();
+      } = e, E = Y.default.getChannel(t), I = A.default.isConnectedOrOverlay(), T = Date.now();
       if (null != E && E.type === eo.ChannelTypes.GUILD_STORE) return !1;
       if (t === el.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) return;
       if (e_.log("Fetching messages for ".concat(t, " between ").concat(n, " and ").concat(i, ". jump=").concat(JSON.stringify(a))), eS._tryFetchMessagesCached({
@@ -341,7 +341,7 @@ let ef = {
       l.default.commit(S), o.default.dispatch({
         type: "LOAD_MESSAGES"
       });
-      let A = null == f ? void 0 : f.messageId,
+      let h = null == f ? void 0 : f.messageId,
         m = new eI;
       return !_ && this.fetchLocalMessages(t, n, i, r, m), s.HTTP.get({
         url: eo.Endpoints.MESSAGES(t),
@@ -349,7 +349,7 @@ let ef = {
           before: n,
           after: i,
           limit: r,
-          around: A,
+          around: h,
           preload: d
         },
         retries: 2,
@@ -359,16 +359,16 @@ let ef = {
           l = null != n,
           u = null != i,
           d = null == n && null == i,
-          _ = null != A || s.length === r && (l || d),
-          E = null != A || u && s.length === r;
-        if (null != A) {
+          _ = null != h || s.length === r && (l || d),
+          E = null != h || u && s.length === r;
+        if (null != h) {
           let e = Math.floor(r / 2),
-            n = [A, ...s.map(e => {
+            n = [h, ...s.map(e => {
               let {
                 id: t
               } = e;
               return t
-            })].filter((e, t, n) => n.indexOf(e) === t).sort(es.default.compare).indexOf(A);
+            })].filter((e, t, n) => n.indexOf(e) === t).sort(es.default.compare).indexOf(h);
           if (n < e && (_ = !1), s.length - n < e && (E = !1), E && s.length > 0) {
             let e = X.default.lastMessageId(t);
             s[0].id === e && (E = !1)
@@ -384,7 +384,7 @@ let ef = {
           hasMoreAfter: E,
           limit: r,
           jump: a,
-          isStale: !I || h.default.lastTimeConnectedChanged() >= T,
+          isStale: !I || A.default.lastTimeConnectedChanged() >= T,
           truncate: c
         })
       }), !0), () => (e_.log("Failed to fetch messages for ".concat(t)), o.default.dispatch({
@@ -410,7 +410,7 @@ let ef = {
         return
       }
       if (e_.log("fetched ".concat(d.messages.length, " messages from local database (channel_id: ").concat(e, ", remote_fetch_completed: ").concat(r.completed, ")")), F.default.addLocalMessages(e, d.messages.length), !r.completed && d.messages.length > 0) {
-        let t = d.messages.length >= i && d.connectionId === h.default.lastTimeConnectedChanged();
+        let t = d.messages.length >= i && d.connectionId === A.default.lastTimeConnectedChanged();
         o.default.dispatch({
           type: "LOCAL_MESSAGES_LOADED",
           guildId: s.guild_id,
@@ -620,15 +620,15 @@ let ef = {
         {
           activityAction: f,
           location: S,
-          suggestedInvite: h,
-          stickerIds: A,
+          suggestedInvite: A,
+          stickerIds: h,
           messageReference: O,
           allowedMentions: p,
           poll: R
         } = n,
         C = null !== (i = n.flags) && void 0 !== i ? i : 0,
-        [M, w] = (0, k.default)(l);
-      if (M && (l = w, C = (0, et.addFlag)(C, eo.MessageFlags.SUPPRESS_NOTIFICATIONS)), "" === l && null == f && null == A && null == R) return Promise.resolve();
+        [M, w] = (0, B.default)(l);
+      if (M && (l = w, C = (0, et.addFlag)(C, eo.MessageFlags.SUPPRESS_NOTIFICATIONS)), "" === l && null == f && null == h && null == R) return Promise.resolve();
       let V = null != O ? eo.MessageTypes.REPLY : eo.MessageTypes.DEFAULT,
         F = null !== (s = n.nonce) && void 0 !== s ? s : (0, D.createNonce)();
       if (!1 !== n.eagerDispatch) {
@@ -643,7 +643,7 @@ let ef = {
           nonce: F,
           poll: (0, U.createPollServerDataFromCreateRequest)(R)
         });
-        (0, y.updateComboOnMessageSend)(e, t.id), null != A && (t.sticker_items = A.map(e => B.default.getStickerById(e)).filter(e => null != e)), eS.receiveMessage(e, t, !0, n)
+        (0, y.updateComboOnMessageSend)(e, t.id), null != h && (t.sticker_items = h.map(e => k.default.getStickerById(e)).filter(e => null != e)), eS.receiveMessage(e, t, !0, n)
       }
       if (!eE && null != _ && _.length > 0) {
         let t, n;
@@ -678,7 +678,7 @@ let ef = {
           null != n.party && null != n.party.id && (t.party_id = n.party.id), x.message.application_id = n.application_id, x.message.activity = t
         }
       }
-      return null != R && (x.message.poll = R), null != A && (x.message.sticker_ids = A), P.default.isEnabled() && (x.message.has_poggermode_enabled = !0), new Promise((t, i) => {
+      return null != R && (x.message.poll = R), null != h && (x.message.sticker_ids = h), P.default.isEnabled() && (x.message.has_poggermode_enabled = !0), new Promise((t, i) => {
         let s = Date.now(),
           a = u.default.length,
           _ = Math.floor(1e4 * Math.random());
@@ -699,7 +699,7 @@ let ef = {
             emojiUsed: c
           }), o.default.dispatch({
             type: "STICKER_TRACK_USAGE",
-            stickerIds: A
+            stickerIds: h
           }), o.default.dispatch({
             type: "LOCAL_MESSAGE_CREATE",
             message: {
@@ -763,7 +763,7 @@ let ef = {
             channelId: e,
             messageId: u.body.id,
             location: null != S ? S : "chat_input",
-            suggested: h
+            suggested: A
           }), ! function(e, t, n, i, r) {
             (0, en.findGiftCodes)(e).forEach(e => {
               let s = Y.default.getChannel(t);

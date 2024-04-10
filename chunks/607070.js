@@ -230,7 +230,7 @@ E(S, "displayName", "AccessibilityStore"), E(S, "persistKey", "AccessibilityStor
   ...e,
   disableVoiceBackgrounds: !1
 })]);
-let h = new S(o.default, {
+let A = new S(o.default, {
   ACCESSIBILITY_SET_FONT_SIZE: function(e) {
     var t;
     let n = (t = e.fontSize, _.Accessibility.FONT_SIZES.indexOf(t) >= 0 ? t : _.Accessibility.FONT_SIZE_DEFAULT);
@@ -375,4 +375,4 @@ let h = new S(o.default, {
     }).disableVoiceBackgrounds = !T.disableVoiceBackgrounds
   }
 });
-t.default = h
+t.default = A

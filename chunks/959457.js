@@ -10,8 +10,8 @@ var s, a, o, l, u = n("512722"),
   T = n("570140"),
   f = n("594190"),
   S = n("444852"),
-  h = n("569545"),
-  A = n("687516"),
+  A = n("569545"),
+  h = n("687516"),
   m = n("139656"),
   N = n("358085"),
   O = n("199902"),
@@ -30,13 +30,13 @@ let M = {},
   G = {},
   w = [];
 
-function B() {
+function k() {
   c().forEach(G, (e, t) => {
     e.destroy(e.isOwner ? "sender-disconnect" : "receiver-disconnect"), delete G[t]
   })
 }
 
-function k(e) {
+function B(e) {
   e.filter(e => {
     let {
       connection: t
@@ -144,10 +144,10 @@ l = "StreamRTCConnectionStore", (o = "displayName") in(a = F) ? Object.definePro
   writable: !0
 }) : a[o] = l, t.default = new F(T.default, !C.default.isSupported() || __OVERLAY__ ? {} : {
   CONNECTION_OPEN: function(e) {
-    i = e.sessionId, r = null, B()
+    i = e.sessionId, r = null, k()
   },
   CONNECTION_CLOSED: function() {
-    i = null, r = null, B()
+    i = null, r = null, k()
   },
   RTC_CONNECTION_STATE: V,
   RTC_CONNECTION_PING: V,
@@ -163,7 +163,7 @@ l = "StreamRTCConnectionStore", (o = "displayName") in(a = F) ? Object.definePro
       appContext: r,
       pid: s,
       sourceId: a
-    } = e, o = (0, h.encodeStreamKey)({
+    } = e, o = (0, A.encodeStreamKey)({
       streamType: t,
       guildId: n,
       channelId: i,
@@ -208,8 +208,8 @@ l = "StreamRTCConnectionStore", (o = "displayName") in(a = F) ? Object.definePro
     if (null == o && null != n) {
       var l, u, _;
       null == P[t] && (y[t] = null);
-      let e = (0, h.decodeStreamKey)(t);
-      null == y[t] && null == U[t] && (y[t] = (0, A.getStreamerApplication)(e, g.default));
+      let e = (0, A.decodeStreamKey)(t);
+      null == y[t] && null == U[t] && (y[t] = (0, h.getStreamerApplication)(e, g.default));
       let r = R.default.getChannel(e.channelId),
         c = null != r && r.isBroadcastChannel(),
         E = new S.StreamRTCAnalyticsContext({
@@ -240,7 +240,7 @@ l = "StreamRTCConnectionStore", (o = "displayName") in(a = F) ? Object.definePro
         parentMediaSessionId: L.default.getMediaSessionId()
       }), G[t] = o
     }
-    w = [], C.default.getMediaEngine().on(I.MediaEngineEvent.ConnectionStats, k)
+    w = [], C.default.getMediaEngine().on(I.MediaEngineEvent.ConnectionStats, B)
   },
   STREAM_SERVER_UPDATE: function(e) {
     let t = G[e.streamKey];
@@ -261,7 +261,7 @@ l = "StreamRTCConnectionStore", (o = "displayName") in(a = F) ? Object.definePro
       streamKey: t
     } = e, n = G[t];
     if (null == n) return !1;
-    t === r && (r = null, C.default.getMediaEngine().off(I.MediaEngineEvent.ConnectionStats, k)), n.destroy("stream-end"), delete G[t]
+    t === r && (r = null, C.default.getMediaEngine().off(I.MediaEngineEvent.ConnectionStats, B)), n.destroy("stream-end"), delete G[t]
   },
   STREAM_STATS_UPDATE: function(e) {
     let {

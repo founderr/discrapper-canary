@@ -20,11 +20,11 @@ var a = n("735250"),
   p = n("267642"),
   T = n("981631"),
   g = n("921944"),
-  N = n("30513"),
-  A = n("474936"),
+  A = n("30513"),
+  N = n("474936"),
   v = n("689938"),
-  O = n("54449"),
-  R = n("1006"),
+  R = n("54449"),
+  O = n("1006"),
   L = n("741160"),
   M = n("829972"),
   P = n("31932"),
@@ -47,7 +47,7 @@ function b(e, t) {
     analyticsLocations: e,
     analyticsSourceLocation: T.AnalyticsSections.PREMIUM_GUILD_INVITE_SPLASH,
     guild: t,
-    perks: (0, N.guildInviteUpsellPerks)()
+    perks: (0, A.guildInviteUpsellPerks)()
   }))
 }
 
@@ -76,16 +76,16 @@ t.default = s.memo(function(e) {
     renderGuildHeaderDropdownButton: r
   } = e, {
     analyticsLocations: f
-  } = (0, o.default)(), N = () => {
+  } = (0, o.default)(), A = () => {
     I.default.track(T.AnalyticEvents.TOOLTIP_VIEWED, {
-      type: A.PremiumUpsellTypes.PREMIUM_PROGRESS_BAR,
+      type: N.PremiumUpsellTypes.PREMIUM_PROGRESS_BAR,
       location: {
         page: T.AnalyticsPages.GUILD_CHANNEL
       }
     })
   }, j = () => {
     I.default.track(T.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      type: A.PremiumUpsellTypes.INVITE_SPLASH_UPSELL,
+      type: N.PremiumUpsellTypes.INVITE_SPLASH_UPSELL,
       location: {
         page: T.AnalyticsPages.GUILD_CHANNEL
       },
@@ -98,12 +98,12 @@ t.default = s.memo(function(e) {
         case l.DismissibleContent.GUILD_HEADER_PREMIUM_GUILD_PROGRESS:
           return (0, a.jsx)(U, {
             renderPopout: (0, a.jsx)(S.default, {
-              onComponentMount: N,
+              onComponentMount: A,
               header: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
                 alt: "",
                 src: G,
-                className: R.fullWidthImage
+                className: O.fullWidthImage
               }),
               content: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CONTENT.format(),
               buttonCTA: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
@@ -117,12 +117,12 @@ t.default = s.memo(function(e) {
         case l.DismissibleContent.GUILD_HEADER_PROGRESS_BAR_SIZE_COACH_MARK:
           return (0, a.jsx)(U, {
             renderPopout: (0, a.jsx)(S.default, {
-              onComponentMount: N,
+              onComponentMount: A,
               header: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
                 alt: "",
                 src: G,
-                className: R.fullWidthImage
+                className: O.fullWidthImage
               }),
               content: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_CONTENT.format(),
               buttonCTA: v.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
@@ -170,7 +170,7 @@ t.default = s.memo(function(e) {
               asset: (0, a.jsx)("img", {
                 alt: "",
                 src: L,
-                className: R.fullWidthImage
+                className: O.fullWidthImage
               }),
               content: e,
               buttonCTA: t,
@@ -191,7 +191,7 @@ t.default = s.memo(function(e) {
         case l.DismissibleContent.GUILD_HEADER_ACTIVE_THREADS_NOTICE:
           return (0, a.jsx)(U, {
             renderPopout: (0, a.jsx)(S.default, {
-              className: O.tooltipOverrideColor,
+              className: R.tooltipOverrideColor,
               header: v.default.Messages.ACTIVE_THREADS_UPSELL_HEADER,
               content: v.default.Messages.ACTIVE_THREADS_UPSELL_CONTENT,
               buttonCTA: v.default.Messages.GOT_IT,
@@ -210,7 +210,7 @@ t.default = s.memo(function(e) {
               asset: (0, a.jsx)("img", {
                 alt: "",
                 src: y,
-                className: R.fullWidthImage
+                className: O.fullWidthImage
               }),
               onClick: () => {
                 _.default.open(s.id, T.GuildSettingsSections.ROLES), _.default.selectRole(s.getEveryoneRoleId(), v.default.Messages.USE_SOUNDBOARD)

@@ -20,11 +20,11 @@ var a = n("735250"),
   p = n("880257"),
   T = n("631885"),
   g = n("240351"),
-  N = n("792258"),
-  A = n("657825"),
+  A = n("792258"),
+  N = n("657825"),
   v = n("198952"),
-  O = n("329242"),
-  R = n("895328"),
+  R = n("329242"),
+  O = n("895328"),
   L = n("292352"),
   M = n("981631"),
   P = n("689938"),
@@ -69,19 +69,19 @@ function D(e) {
   }, [t, d]);
   i()(E, "No text for action type");
   let v = E.sectionHeader(u),
-    O = s.useCallback(e => {
+    R = s.useCallback(e => {
       let {
         row: t
       } = e, n = r[t];
-      return (0, h.isUserAction)(n) ? (0, a.jsx)(A.default, {
+      return (0, h.isUserAction)(n) ? (0, a.jsx)(N.default, {
         userId: n.entity_id,
         timestamp: f.default.extractTimestamp(n.event_id),
         timestampFormatter: E.timestampFormatter
-      }, n.event_id) : (0, h.isGuildAction)(n) ? (0, a.jsx)(N.default, {
+      }, n.event_id) : (0, h.isGuildAction)(n) ? (0, a.jsx)(A.default, {
         guildId: n.entity_id
       }, n.event_id) : void 0
     }, [r, E.timestampFormatter]),
-    R = s.useCallback(() => (0, a.jsxs)(a.Fragment, {
+    O = s.useCallback(() => (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(o.Text, {
         className: y.sectionHeader,
         variant: "eyebrow",
@@ -98,12 +98,12 @@ function D(e) {
   let M = r.slice(0, C);
   return (0, a.jsxs)("div", {
     className: y.actionSection,
-    children: [R(), (0, a.jsx)("div", {
+    children: [O(), (0, a.jsx)("div", {
       className: y.actions,
       style: {
         maxHeight: 65 * M.length
       },
-      children: M.map((e, t) => O({
+      children: M.map((e, t) => R({
         row: t
       }))
     }), M.length !== u ? (0, a.jsx)(o.Clickable, {
@@ -156,7 +156,7 @@ let b = () => {
         avatarSize: s
       }), (0, a.jsxs)("div", {
         className: y.headerText,
-        children: [(0, a.jsx)(O.default, {
+        children: [(0, a.jsx)(R.default, {
           user: l
         }), void 0 !== n ? (0, a.jsx)(o.Text, {
           variant: "text-sm/medium",
@@ -240,7 +240,7 @@ t.default = e => {
             return (0, a.jsx)(D, {
               displayType: t
             }, "".concat(t, "-list"))
-          }) : (0, a.jsx)(R.default, {
+          }) : (0, a.jsx)(O.default, {
             className: y.emptyActivity,
             text: null != i ? i : ""
           })

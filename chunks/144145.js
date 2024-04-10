@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return R
   }
 }), n("653041"), n("47120");
 var a = n("735250"),
@@ -24,17 +24,17 @@ var a = n("735250"),
   p = n("626135"),
   T = n("804739"),
   g = n("346329"),
-  N = n("981631"),
-  A = n("689938");
-let v = d.default.get(N.PlatformTypes.XBOX).name;
+  A = n("981631"),
+  N = n("689938");
+let v = d.default.get(A.PlatformTypes.XBOX).name;
 
-function O(e) {
+function R(e) {
   let {
     currentActivities: t
-  } = e, n = t.length > 1, O = function(e) {
+  } = e, n = t.length > 1, R = function(e) {
     let {
       currentActivities: t
-    } = e, n = (0, l.useStateFromStores)([C.default], () => C.default.getAccounts().some(e => e.type === d.default.get(N.PlatformTypes.XBOX).type)), s = t.some(e => {
+    } = e, n = (0, l.useStateFromStores)([C.default], () => C.default.getAccounts().some(e => e.type === d.default.get(A.PlatformTypes.XBOX).type)), s = t.some(e => {
       let {
         activity: t
       } = e;
@@ -42,12 +42,12 @@ function O(e) {
     });
     return n || !s ? null : (0, a.jsx)(i.MenuItem, {
       id: "xbox-connect",
-      action: () => u.default.open(N.UserSettingsSections.CONNECTIONS),
-      label: A.default.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({
+      action: () => u.default.open(A.UserSettingsSections.CONNECTIONS),
+      label: N.default.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({
         platform: v
       })
     })
-  }(e), R = function(e) {
+  }(e), O = function(e) {
     let {
       currentActivities: t
     } = e, n = s.useContext(p.AnalyticsContext);
@@ -59,7 +59,7 @@ function O(e) {
       return {
         ...e,
         libraryApplication: s,
-        canJoin: null != t && (0, c.default)(t, N.ActivityFlags.JOIN) && t.type === N.ActivityTypes.PLAYING,
+        canJoin: null != t && (0, c.default)(t, A.ActivityFlags.JOIN) && t.type === A.ActivityTypes.PLAYING,
         canPlay: (0, T.isLaunchable)({
           LibraryApplicationStore: S.default,
           LaunchableGameStore: _.default,
@@ -74,7 +74,7 @@ function O(e) {
       }
     }), [n.location, t])
   }(e), L = [];
-  for (let e of R) {
+  for (let e of O) {
     let {
       activity: t
     } = e;
@@ -88,18 +88,18 @@ function O(e) {
       async function u() {
         if (null == s) return;
         let e = await r.default.sendActivityInviteUser({
-          type: N.ActivityActionTypes.JOIN_REQUEST,
+          type: A.ActivityActionTypes.JOIN_REQUEST,
           userId: l.id,
           activity: s,
-          location: N.AnalyticsLocations.PROFILE_POPOUT
+          location: A.AnalyticsLocations.PROFILE_POPOUT
         });
         null != e && o.default.selectPrivateChannel(e.id)
       }
       return (0, a.jsx)(i.MenuItem, {
         id: "join-".concat(s.session_id),
-        label: t ? A.default.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN_USER.format({
+        label: t ? N.default.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN_USER.format({
           name: l.toString()
-        }) : A.default.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN,
+        }) : N.default.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN,
         action: u
       })
     }(e, n), function(e, t) {
@@ -113,9 +113,9 @@ function O(e) {
         isLaunching: d
       } = e;
       if (!o || null == n) return null;
-      let c = u ? A.default.Messages.ACTIVITY_FEED_POPOUT_APPLICATION_RUNNING.format({
+      let c = u ? N.default.Messages.ACTIVITY_FEED_POPOUT_APPLICATION_RUNNING.format({
         name: s.name
-      }) : d ? A.default.Messages.ACTIVITY_FEED_POPOUT_APPLICATION_LAUNCHING.format({
+      }) : d ? N.default.Messages.ACTIVITY_FEED_POPOUT_APPLICATION_LAUNCHING.format({
         name: s.name
       }) : void 0;
       return (0, a.jsx)(i.MenuItem, {
@@ -125,17 +125,17 @@ function O(e) {
             analyticsParams: {
               location: {
                 ...r,
-                object: N.AnalyticsObjects.LIST_ITEM
+                object: A.AnalyticsObjects.LIST_ITEM
               }
             }
           })
         },
-        label: t ? A.default.Messages.APPLICATION_CONTEXT_MENU_LAUNCH_APPLICATION_NAME.format({
+        label: t ? N.default.Messages.APPLICATION_CONTEXT_MENU_LAUNCH_APPLICATION_NAME.format({
           name: s.name
-        }) : A.default.Messages.APPLICATION_CONTEXT_MENU_LAUNCH,
+        }) : N.default.Messages.APPLICATION_CONTEXT_MENU_LAUNCH,
         subtext: c
       })
     }(e, n))
   }
-  return [O, ...L]
+  return [R, ...L]
 }

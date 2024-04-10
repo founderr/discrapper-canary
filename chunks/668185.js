@@ -42,7 +42,7 @@ function c(e) {
         })
       }, String(e))
     }),
-    h = f.filter(e => s.has(T, e)).map(e => {
+    A = f.filter(e => s.has(T, e)).map(e => {
       let t = (0, u.getPermissionName)(e);
       return (0, i.jsxs)("li", {
         className: _.permission,
@@ -72,7 +72,7 @@ function c(e) {
         className: _.permissionsList,
         children: S
       })]
-    }) : null, h.length > 0 ? (0, i.jsxs)(i.Fragment, {
+    }) : null, A.length > 0 ? (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(o.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
@@ -82,7 +82,7 @@ function c(e) {
         })
       }), (0, i.jsx)("ul", {
         className: _.permissionsList,
-        children: h
+        children: A
       })]
     }) : null]
   })

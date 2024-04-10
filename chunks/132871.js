@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return I
   },
   resetApplicationDirectoryHistory: function() {
-    return h
+    return A
   },
   setEntrypoint: function() {
     return f
@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return S
   },
   setTrackedOpenedFromExternalEntrypoint: function() {
-    return A
+    return h
   },
   useApplicationDirectoryHistory: function() {
     return E
@@ -98,14 +98,14 @@ function S(e) {
   })
 }
 
-function h() {
+function A() {
   c.setState({
     entrypoint: null,
     guildId: null
   })
 }
 
-function A(e) {
+function h(e) {
   c.setState({
     trackedOpenedFromExternalEntrypoint: e
   })

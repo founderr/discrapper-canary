@@ -24,21 +24,21 @@ t.default = e => {
   } = (0, i.useStateFromStoresObject)([d.default], () => d.default.getStateForGuild(t)), {
     selectedGames: T,
     playstyle: g,
-    interests: N,
-    description: A,
+    interests: A,
+    description: N,
     tag: v,
-    primetime: O,
-    verificationForm: R
+    primetime: R,
+    verificationForm: O
   } = null != S ? S : {}, L = s.useRef(null), M = s.useRef(null), P = s.useRef(null), [y, x] = s.useState(!1), D = async () => {
     try {
       await u.convertGuildToClan(t, {
         selectedGames: T,
         playstyle: g,
-        interests: N,
-        description: A,
+        interests: A,
+        description: N,
         tag: v,
-        primetime: O,
-        verificationForm: R
+        primetime: R,
+        verificationForm: O
       })
     } catch (e) {
       return

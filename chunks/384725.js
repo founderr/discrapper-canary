@@ -1,9 +1,9 @@
 "use strict";
-a.r(t);
-var i = a("735250");
-a("470079");
-var n = a("481060"),
-  l = a("570140");
+i.r(t);
+var a = i("735250");
+i("470079");
+var n = i("481060"),
+  l = i("570140");
 t.default = {
   open(e) {
     l.default.dispatch({
@@ -12,10 +12,10 @@ t.default = {
     }), (0, n.openModalLazy)(async () => {
       let {
         default: t
-      } = await Promise.all([a.e("99387"), a.e("65652")]).then(a.bind(a, "208265"));
-      return a => (0, i.jsx)(t, {
+      } = await Promise.all([i.e("99387"), i.e("65652")]).then(i.bind(i, "208265"));
+      return i => (0, a.jsx)(t, {
         classificationId: e,
-        ...a
+        ...i
       })
     })
   },

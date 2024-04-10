@@ -52,12 +52,12 @@ t.default = () => {
       }
       return []
     }, [p, S, I, e, m, n, t]),
-    [g, N] = (0, i.useSelectedDismissibleContent)(T, void 0, !0),
-    A = null != g ? h.CollectiblesDCToDisplayOptions[g] : null;
+    [g, A] = (0, i.useSelectedDismissibleContent)(T, void 0, !0),
+    N = null != g ? h.CollectiblesDCToDisplayOptions[g] : null;
   return {
-    collectiblesShopTabNewBadgeDisplayOptions: A,
+    collectiblesShopTabNewBadgeDisplayOptions: N,
     dismissCollectiblesShopTabNewBadge: () => {
-      null != A && N(_.ContentDismissActionType.AUTO)
+      null != N && A(_.ContentDismissActionType.AUTO)
     }
   }
 }

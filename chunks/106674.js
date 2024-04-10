@@ -24,11 +24,11 @@ var a = n("735250"),
   p = n("602623"),
   T = n("51144"),
   g = n("498058"),
-  N = n("158631"),
-  A = n("143614"),
+  A = n("158631"),
+  N = n("143614"),
   v = n("981631"),
-  O = n("70722"),
-  R = n("689938"),
+  R = n("70722"),
+  O = n("689938"),
   L = n("420869");
 
 function M(e) {
@@ -60,13 +60,13 @@ function P(e) {
     applicationId: I,
     channelId: p,
     streamKey: P
-  } = n, [y, x] = s.useState(!1), D = (0, l.useStateFromStores)([C.default], () => C.default.getUser(i)), [b] = (0, c.default)([I]), U = null !== (t = T.default.getGlobalName(D)) && void 0 !== t ? t : T.default.getUserTag(D), j = (0, A.default)(), G = (0, l.useStateFromStores)([E.default], () => E.default.getPreviewURL(null, p, i)), w = (0, l.useStateFromStores)([_.default], () => _.default.getVoiceChannelId()), k = (0, N.default)(), F = (0, g.default)(p);
+  } = n, [y, x] = s.useState(!1), D = (0, l.useStateFromStores)([C.default], () => C.default.getUser(i)), [b] = (0, c.default)([I]), U = null !== (t = T.default.getGlobalName(D)) && void 0 !== t ? t : T.default.getUserTag(D), j = (0, N.default)(), G = (0, l.useStateFromStores)([E.default], () => E.default.getPreviewURL(null, p, i)), w = (0, l.useStateFromStores)([_.default], () => _.default.getVoiceChannelId()), k = (0, A.default)(), F = (0, g.default)(p);
   if (s.useEffect(() => {
       y && w === p && x(!1)
     }, [w, y, p]), null == D || null == U) return null;
   let {
-    buttonColor: B,
-    buttonCTA: H,
+    buttonColor: H,
+    buttonCTA: B,
     disabled: V
   } = function(e, t) {
     let n = h.default.getId(),
@@ -74,7 +74,7 @@ function P(e) {
       s = t.length >= v.MAX_GROUP_DM_BROADCAST_PARTICIPANTS;
     return {
       buttonColor: s ? r.ButtonColors.RED : r.ButtonColors.GREEN,
-      buttonCTA: s ? R.default.Messages.BROADCAST_FULL : a ? R.default.Messages.VIEW_BROADCAST : R.default.Messages.JOIN_BROADCAST,
+      buttonCTA: s ? O.default.Messages.BROADCAST_FULL : a ? O.default.Messages.VIEW_BROADCAST : O.default.Messages.JOIN_BROADCAST,
       disabled: s
     }
   }(i, F);
@@ -92,9 +92,9 @@ function P(e) {
       }), (0, a.jsx)(r.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        children: null != b ? R.default.Messages.STREAMING.format({
+        children: null != b ? O.default.Messages.STREAMING.format({
           name: b.name
-        }) : R.default.Messages.STREAMING_A_GAME
+        }) : O.default.Messages.STREAMING_A_GAME
       }), (0, a.jsxs)("div", {
         className: L.activity,
         children: [F.length > 0 && (0, a.jsx)(M, {
@@ -112,7 +112,7 @@ function P(e) {
               broadcast_channel_id: p
             })
           },
-          color: B,
+          color: H,
           size: r.ButtonSizes.SMALL,
           className: L.button,
           disabled: V,
@@ -120,13 +120,13 @@ function P(e) {
           children: [(0, a.jsx)(S.default, {
             width: 16,
             height: 16
-          }), H]
+          }), B]
         })]
       })]
     }), null != G ? (0, a.jsx)(f.default, {
       className: L.stream,
       stream: {
-        streamType: O.StreamTypes.CALL,
+        streamType: R.StreamTypes.CALL,
         ownerId: i,
         channelId: p
       }

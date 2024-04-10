@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return S
   },
   getFlattenedStringArray: function() {
-    return h
+    return A
   },
   getQueryFromTokens: function() {
     return m
@@ -25,7 +25,7 @@ n.r(t), n.d(t, {
     return f
   },
   getTotalResults: function() {
-    return A
+    return h
   },
   refreshSearchTokens: function() {
     return g
@@ -185,7 +185,7 @@ function S(e, t) {
   })
 }
 
-function h(e, t) {
+function A(e, t) {
   let n = [];
   return r()(e).forEach(e => {
     if (null == e || 0 === e.results.length) return;
@@ -203,7 +203,7 @@ function h(e, t) {
   }), n.filter(e => e)
 }
 
-function A(e) {
+function h(e) {
   return e.reduce((e, t) => null == t ? e : t.results.length + e, 0)
 }
 

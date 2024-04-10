@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return E
   },
   isColorDark: function() {
-    return h
+    return A
   },
   showFileSizeErrorModal: function() {
     return I
@@ -81,6 +81,6 @@ function S(e, t) {
   return "" === e ? null : null != e ? e : t
 }
 
-function h(e) {
+function A(e) {
   return (null != e ? (0, r.getDarkness)(e) : 1) > .25
 }

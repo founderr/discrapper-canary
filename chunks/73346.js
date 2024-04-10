@@ -43,8 +43,8 @@ var i = n("392711"),
   T = n("78839"),
   f = n("526167"),
   S = n("630388"),
-  h = n("823379"),
-  A = n("358085"),
+  A = n("823379"),
+  h = n("358085"),
   m = n("709054"),
   N = n("981631"),
   O = n("689938");
@@ -140,11 +140,11 @@ async function L(e) {
 
 function D(e) {
   switch (e) {
-    case A.PlatformTypes.WINDOWS:
+    case h.PlatformTypes.WINDOWS:
       return N.OperatingSystems.WINDOWS;
-    case A.PlatformTypes.OSX:
+    case h.PlatformTypes.OSX:
       return N.OperatingSystems.MACOS;
-    case A.PlatformTypes.LINUX:
+    case h.PlatformTypes.LINUX:
       return N.OperatingSystems.LINUX;
     default:
       return null
@@ -184,7 +184,7 @@ function P(e, t, n, i, s) {
             user: n,
             startTime: r[n.id].startedPlaying
           }
-        }).filter(h.isNotNullish).sort((e, t) => t.startTime - e.startTime);
+        }).filter(A.isNotNullish).sort((e, t) => t.startTime - e.startTime);
       return 0 === s.length ? null : {
         type: N.StoreRecommendationTypes.NOW_PLAYING,
         userInfo: s
@@ -209,7 +209,7 @@ function P(e, t, n, i, s) {
             user: n,
             endTime: Date.parse(e.last_played_at)
           }
-        }).filter(h.isNotNullish).sort((e, t) => t.endTime - e.endTime);
+        }).filter(A.isNotNullish).sort((e, t) => t.endTime - e.endTime);
         return 0 === r.length ? null : {
           type: N.StoreRecommendationTypes.EVER_PLAYED,
           userInfo: r

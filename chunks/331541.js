@@ -24,11 +24,11 @@ var a = n("735250"),
   p = n("906732"),
   T = n("521868"),
   g = n("299206"),
-  N = n("440051"),
-  A = n("734934"),
+  A = n("440051"),
+  N = n("734934"),
   v = n("158238"),
-  O = n("785717"),
-  R = n("221292"),
+  R = n("785717"),
+  O = n("221292"),
   L = n("318661"),
   M = n("747074"),
   P = n("192133"),
@@ -42,8 +42,8 @@ var a = n("735250"),
   w = n("881201"),
   k = n("26290"),
   F = n("626135"),
-  B = n("70956"),
-  H = n("51144"),
+  H = n("70956"),
+  B = n("51144"),
   V = n("246133"),
   Y = n("474376"),
   W = n("383832"),
@@ -52,19 +52,19 @@ var a = n("735250"),
   q = n("689938"),
   Q = n("66449");
 let Z = [{
-  duration: 30 * B.default.Millis.MINUTE,
+  duration: 30 * H.default.Millis.MINUTE,
   label: () => q.default.Messages.MUTE_DURATION_30_MINUTES
 }, {
-  duration: B.default.Millis.HOUR,
+  duration: H.default.Millis.HOUR,
   label: () => q.default.Messages.MUTE_DURATION_1_HOUR
 }, {
-  duration: 3 * B.default.Millis.HOUR,
+  duration: 3 * H.default.Millis.HOUR,
   label: () => q.default.Messages.MUTE_DURATION_3_HOURS
 }, {
-  duration: 8 * B.default.Millis.HOUR,
+  duration: 8 * H.default.Millis.HOUR,
   label: () => q.default.Messages.MUTE_DURATION_8_HOURS
 }, {
-  duration: B.default.Millis.DAY,
+  duration: H.default.Millis.DAY,
   label: () => q.default.Messages.MUTE_DURATION_24_HOURS
 }, {
   duration: void 0,
@@ -104,7 +104,7 @@ function X(e, t, n, s) {
           color: n ? "currentColor" : void 0
         }), (0, a.jsx)("div", {
           className: Q.status,
-          children: (0, H.humanizeStatus)(e)
+          children: (0, B.humanizeStatus)(e)
         }), null != s && (0, a.jsx)("div", {
           className: Q.description,
           children: s
@@ -134,7 +134,7 @@ function J(e, t, n, s) {
           color: n ? "currentColor" : void 0
         }), (0, a.jsx)("div", {
           className: Q.status,
-          children: (0, H.humanizeStatus)(e)
+          children: (0, B.humanizeStatus)(e)
         }), null != s && (0, a.jsx)("div", {
           className: Q.description,
           children: s
@@ -157,16 +157,16 @@ function $(e) {
     closePopout: b
   } = e, U = (0, _.useAnalyticsContext)(), {
     analyticsLocations: G
-  } = (0, p.default)(I.default.ACCOUNT_PROFILE_POPOUT), B = (0, L.default)(t.id, l), [V, $, ee, et] = (0, c.useStateFromStoresArray)([j.default], () => {
+  } = (0, p.default)(I.default.ACCOUNT_PROFILE_POPOUT), H = (0, L.default)(t.id, l), [V, $, ee, et] = (0, c.useStateFromStoresArray)([j.default], () => {
     var e;
     let n = t.id;
     return "string" != typeof n ? [void 0, void 0, K.StatusTypes.UNKNOWN, !1] : [null !== (e = j.default.findActivity(n, e => e.type !== K.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, j.default.findActivity(t.id, e => e.type === K.ActivityTypes.CUSTOM_STATUS), j.default.getStatus(n), j.default.isMobileOnline(n)]
   }), en = function(e, t) {
-    let n = N.ExpiringStatusExperiment.useExperiment({
+    let n = A.ExpiringStatusExperiment.useExperiment({
         location: "account popout"
       }).expiringStatus,
       s = D.StatusExpiresAtSetting.useSetting(),
-      l = (0, A.useFocusModeEnabled)(),
+      l = (0, N.useFocusModeEnabled)(),
       i = v.QuietModeExperiment.useExperiment({
         location: "account popout"
       }).allowQuietMode || l,
@@ -201,7 +201,7 @@ function $(e) {
             id: "".concat(e, "-").concat(n),
             label: s(),
             action: () => {
-              (0, A.setFocusMode)(!0, n)
+              (0, N.setFocusMode)(!0, n)
             },
             dontCloseOnAction: !0
           }, n)
@@ -240,7 +240,7 @@ function $(e) {
           })]
         }),
         action: () => {
-          (0, A.setFocusMode)(!l)
+          (0, N.setFocusMode)(!l)
         },
         dontCloseOnAction: !0,
         children: c
@@ -257,12 +257,12 @@ function $(e) {
       application_id: null != V ? V.application_id : void 0,
       is_streaming: r,
       application_name: null != V ? V.name : void 0,
-      profile_has_nitro_customization: (null == B ? void 0 : B.banner) != null,
+      profile_has_nitro_customization: (null == H ? void 0 : H.banner) != null,
       location: U.location,
-      has_profile_effect: (null == B ? void 0 : B.profileEffectId) != null
+      has_profile_effect: (null == H ? void 0 : H.profileEffectId) != null
     })
   }, []);
-  let el = (0, A.useFocusModeEnabled)(),
+  let el = (0, N.useFocusModeEnabled)(),
     ei = ee === K.StatusTypes.DND,
     er = (0, Y.useMultiAccountMenuItems)(),
     eo = (0, T.useCustomStatusMenuItem)(null != n ? n : void 0, Q.menuItemFocused),
@@ -273,7 +273,7 @@ function $(e) {
     });
   return (0, a.jsx)(p.AnalyticsLocationProvider, {
     value: G,
-    children: (0, a.jsx)(O.UserProfileAnalyticsProvider, {
+    children: (0, a.jsx)(R.UserProfileAnalyticsProvider, {
       layout: "ACCOUNT_POPOUT",
       userId: t.id,
       guildId: l,
@@ -286,7 +286,7 @@ function $(e) {
             profileType: z.UserProfileTypes.POPOUT,
             children: [(0, a.jsx)(x.default, {
               user: t,
-              displayProfile: B,
+              displayProfile: H,
               onClose: () => null == b ? void 0 : b(),
               isMobile: et,
               isStreaming: (0, S.default)(V),
@@ -298,7 +298,7 @@ function $(e) {
               children: [(0, a.jsx)(P.default, {
                 activity: V,
                 customStatusActivity: $,
-                displayProfile: B,
+                displayProfile: H,
                 user: t,
                 onClose: o,
                 setNote: !1,
@@ -323,7 +323,7 @@ function $(e) {
                         alignItems: "center",
                         justifyContent: "space-between"
                       },
-                      children: [(0, H.humanizeStatus)(ee), el || ei ? (0, a.jsx)(f.BellSlashIcon, {
+                      children: [(0, B.humanizeStatus)(ee), el || ei ? (0, a.jsx)(f.BellSlashIcon, {
                         width: 12,
                         height: 12
                       }) : null]
@@ -331,7 +331,7 @@ function $(e) {
                     focusedClassName: Q.menuItemFocused,
                     subMenuIconClassName: Q.subMenuIcon,
                     action: d.isMobile ? function() {
-                      (0, R.trackUserProfileAction)({
+                      (0, O.trackUserProfileAction)({
                         action: "PRESS_SET_STATUS",
                         layout: "ACCOUNT_POPOUT",
                         userId: t.id,
@@ -380,7 +380,7 @@ function $(e) {
                     icon: w.default,
                     showIconFirst: !0,
                     action: () => {
-                      (0, R.trackUserProfileAction)({
+                      (0, O.trackUserProfileAction)({
                         action: "PRESS_SWITCH_ACCOUNTS",
                         layout: "ACCOUNT_POPOUT",
                         userId: t.id,

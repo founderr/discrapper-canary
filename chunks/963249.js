@@ -24,8 +24,8 @@ function T(e) {
     followupSKUInfo: T,
     onClose: f,
     onComplete: S,
-    onSubscriptionConfirmation: h,
-    analyticsLocations: A,
+    onSubscriptionConfirmation: A,
+    analyticsLocations: h,
     analyticsObject: m,
     analyticsLocation: N,
     analyticsSourceLocation: O,
@@ -41,7 +41,7 @@ function T(e) {
     returnRef: P,
     subscription: U,
     skipConfirm: b
-  } = null != e ? e : {}, G = !1, w = (0, r.v4)(), B = u.default.getCurrentUser(), k = (0, c.isPremiumExactly)(B, I.PremiumTypes.TIER_2);
+  } = null != e ? e : {}, G = !1, w = (0, r.v4)(), k = u.default.getCurrentUser(), B = (0, c.isPremiumExactly)(k, I.PremiumTypes.TIER_2);
   (0, s.openModalLazy)(async () => {
     let {
       default: e
@@ -62,13 +62,13 @@ function T(e) {
         initialPlanId: t,
         followupSKUInfo: T,
         onClose: (e, t) => {
-          r(), null == f || f(e), e && (null == h || h(), !p && null != t && t === I.PremiumSubscriptionSKUs.TIER_2 && !k && _.ComponentDispatch.dispatch(E.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED))
+          r(), null == f || f(e), e && (null == A || A(), !p && null != t && t === I.PremiumSubscriptionSKUs.TIER_2 && !B && _.ComponentDispatch.dispatch(E.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED))
         },
         onComplete: () => {
           G = !0, null == S || S(), !p && (0, l.setCanPlayWowMoment)(!0)
         },
-        onSubscriptionConfirmation: h,
-        analyticsLocations: A,
+        onSubscriptionConfirmation: A,
+        analyticsLocations: h,
         analyticsObject: m,
         analyticsLocation: N,
         analyticsSourceLocation: O,
@@ -95,8 +95,8 @@ function T(e) {
         is_gift: p,
         eligible_for_trial: null != g,
         application_id: v,
-        location_stack: A
-      }), (0, a.clearError)(), (0, o.clearPurchaseTokenAuthState)(), null == f || f(G), G && (null == h || h())
+        location_stack: h
+      }), (0, a.clearError)(), (0, o.clearPurchaseTokenAuthState)(), null == f || f(G), G && (null == A || A())
     }
   })
 }

@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return b
   },
   useSaveSettings: function() {
-    return B
+    return k
   }
 }), n("47120"), n("789020"), n("724458"), n("411104");
 var i = n("470079"),
@@ -34,8 +34,8 @@ var i = n("470079"),
   T = n("650774"),
   f = n("888369"),
   S = n("430824"),
-  h = n("771845"),
-  A = n("9156"),
+  A = n("771845"),
+  h = n("9156"),
   m = n("626135"),
   N = n("630388"),
   O = n("823379"),
@@ -68,7 +68,7 @@ function b(e, t) {
           overrideMode: r,
           messagePain: u.messages === v.PainLevel.High,
           visitsALot: o,
-          muted: A.default.isMuted(e.id) && !A.default.isTemporarilyMuted(e.id)
+          muted: h.default.isMuted(e.id) && !h.default.isTemporarilyMuted(e.id)
         }
       }(r, n, e, t, o[r.id]);
       return i
@@ -92,7 +92,7 @@ function b(e, t) {
           var n;
           return e + Number(null !== (n = t.num_month_opens) && void 0 !== n ? n : 0)
         }, 0),
-        r = h.default.getFlattenedGuildIds(),
+        r = A.default.getFlattenedGuildIds(),
         a = s().sortBy(Object.values(e), e => {
           let t = r.indexOf(e.guildId);
           return -1 === t ? r.length : t
@@ -131,7 +131,7 @@ function w() {
     t = {};
   for (let r of e) {
     var n, i;
-    let e = null !== (i = (null !== (n = A.default.getAllSettings().userGuildSettings[r.id]) && void 0 !== n ? n : {}).flags) && void 0 !== i ? i : 0;
+    let e = null !== (i = (null !== (n = h.default.getAllSettings().userGuildSettings[r.id]) && void 0 !== n ? n : {}).flags) && void 0 !== i ? i : 0;
     e = (0, N.setFlag)(e, P.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES, !0), e = (0, N.setFlag)(e, P.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS, !1), t[r.id] = {
       flags: e
     }
@@ -142,12 +142,12 @@ function w() {
   })
 }
 
-function B(e) {
+function k(e) {
   let [t, n] = i.useState(!1), [r, s] = i.useState(!1), a = i.useCallback(async t => {
     if (r) throw Error("Already submitted notifications migration");
     n(!0);
     try {
-      await k(t, e), s(!0)
+      await B(t, e), s(!0)
     } finally {
       n(!1)
     }
@@ -158,8 +158,8 @@ function B(e) {
     saveSettings: a
   }
 }
-async function k(e, t) {
-  if (A.default.useNewNotifications) {
+async function B(e, t) {
+  if (h.default.useNewNotifications) {
     u.default.show({
       title: "Info",
       body: "It looks like you are already using the new notifications system so skipping saving any changes this time because that will almost certainly mess up your account!"
@@ -179,7 +179,7 @@ async function k(e, t) {
       }),
       n = {
         num_unread_guilds_before: R.default.keys(e).filter(e => f.default.hasUnread(e)).length,
-        unmuted_server_ids: t.filter(e => A.default.isMuted(e.plan.guildId)).map(e => e.plan.guildId)
+        unmuted_server_ids: t.filter(e => h.default.isMuted(e.plan.guildId)).map(e => e.plan.guildId)
       };
     return () => {
       m.default.track(M.AnalyticEvents.NOTIFICATION_MIGRATION_COMPLETED, {
@@ -203,7 +203,7 @@ async function k(e, t) {
     let t = {};
     for (let n of Object.values(e)) {
       var i, r;
-      let e = null !== (i = A.default.getAllSettings().userGuildSettings[n.guildId]) && void 0 !== i ? i : {},
+      let e = null !== (i = h.default.getAllSettings().userGuildSettings[n.guildId]) && void 0 !== i ? i : {},
         s = {};
       for (let t of n.actions) null === (r = t.apply) || void 0 === r || r.call(t, s, e);
       t[n.guildId] = s
@@ -263,7 +263,7 @@ async function x() {
 }
 async function H() {
   o.Storage.set("turnedOffNewNotifications", !0), m.default.track(M.AnalyticEvents.NOTIFICATION_MIGRATION_OPTOUT, {
-    num_guilds_with_new_setting: Object.values(S.default.getGuilds()).filter(e => A.default.resolveGuildUnreadSetting(e) === y.UnreadSetting.ONLY_MENTIONS).length
+    num_guilds_with_new_setting: Object.values(S.default.getGuilds()).filter(e => h.default.resolveGuildUnreadSetting(e) === y.UnreadSetting.ONLY_MENTIONS).length
   });
   let e = await (0, C.listSnapshots)(),
     t = s().sortBy(e, e => new Date(e.recorded_at).getTime());

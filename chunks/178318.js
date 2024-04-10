@@ -34,19 +34,19 @@ try {
 }
 let T = f.default.requireModule("discord_rpc").RPCWebSocket,
   g = window.GLOBAL_ENV.MARKETING_ENDPOINT,
-  N = new d.default("RPCServer:WSS"),
-  A = [];
+  A = new d.default("RPCServer:WSS"),
+  N = [];
 
 function v(e) {
   return "function" == typeof e ? e() : e
 }
 
-function O() {
+function R() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
     t = e > 0 ? void 0 : () => {
       if (!v(s.listening)) return;
       let e = s.address().port;
-      N.info("Starting on ".concat(e)), u.default.dispatch({
+      A.info("Starting on ".concat(e)), u.default.dispatch({
         type: "RPC_SERVER_READY",
         port: e
       })
@@ -54,7 +54,7 @@ function O() {
   s.listen(S.RPC_STARTING_PORT + e % S.RPC_PORT_RANGE, "127.0.0.1", t)
 }
 
-function R(e, t, n) {
+function O(e, t, n) {
   let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 200,
     s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
     l = null != v(e.headers).origin ? {
@@ -71,14 +71,14 @@ function R(e, t, n) {
 
 function L(e, t, n, a) {
   let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-  R(e, t, {
+  O(e, t, {
     code: s,
     message: a
   }, n)
 }
 class M extends _.default {
   send(e) {
-    (c.default.isLoggingOverlayEvents || e.cmd !== S.RPCCommands.OVERLAY && e.evt !== S.RPCEvents.OVERLAY) && N.info("Socket Emit: ".concat(this.id), (0, h.default)(e)), null != a && "etf" === this.encoding ? this._socket.send(a.pack(e), {
+    (c.default.isLoggingOverlayEvents || e.cmd !== S.RPCCommands.OVERLAY && e.evt !== S.RPCEvents.OVERLAY) && A.info("Socket Emit: ".concat(this.id), (0, h.default)(e)), null != a && "etf" === this.encoding ? this._socket.send(a.pack(e), {
       binary: !0
     }) : this._socket.send(JSON.stringify(e))
   }
@@ -97,7 +97,7 @@ class M extends _.default {
 }
 class P extends _.default {
   send(e) {
-    (c.default.isLoggingOverlayEvents || e.cmd !== S.RPCCommands.OVERLAY) && N.info("Socket Emit: ".concat(this.id), e), this._sendCallback(e)
+    (c.default.isLoggingOverlayEvents || e.cmd !== S.RPCCommands.OVERLAY) && A.info("Socket Emit: ".concat(this.id), e), this._sendCallback(e)
   }
   close(e, t) {
     this._closeCallback(t, e)
@@ -113,7 +113,7 @@ class y extends l.EventEmitter {
   handleRequest(e, t) {
     let [n, a] = v(e.url).split("?"), s = v(e.method);
     if ("/rpc" === n && "OPTIONS" === s) {
-      R(e, t, {
+      O(e, t, {
         body: ""
       });
       return
@@ -130,7 +130,7 @@ class y extends l.EventEmitter {
           } = o.parse(null !== (e = n.get("callback")) && void 0 !== e ? e : "");
           a === location.protocol && s === location.host ? t.setHeader("Location", n.get("callback")) : t.setHeader("Location", g), t.writeHead(301), t.end()
         },
-        u = new P(l ? R.bind(null, e, t) : r, l ? L.bind(null, e, t, 400) : r, Number(n.get("v")), s);
+        u = new P(l ? O.bind(null, e, t) : r, l ? L.bind(null, e, t, 400) : r, Number(n.get("v")), s);
       if (l)(0, C.validateSocketClient)(u, v(e.headers).origin, n.get("client_id")).then(() => {
         let n = "";
         e.on("data", e => n += e), e.on("error", () => L(e, t, 500, "Internal Server Error")), e.on("end", () => this.handleMessage(u, n))
@@ -160,10 +160,10 @@ class y extends l.EventEmitter {
       e.close(t.code, t.message);
       return
     }
-    N.info("Socket Opened: ".concat(a.id)), e.on("error", e => N.error("WS Error: ".concat(e.message))), e.on("close", (e, t) => {
-      N.info("Socket Closed: ".concat(a.id, ", code ").concat(e, ", message ").concat(t)), r().remove(A, e => e === a), this.emit("disconnect", a)
+    A.info("Socket Opened: ".concat(a.id)), e.on("error", e => A.error("WS Error: ".concat(e.message))), e.on("close", (e, t) => {
+      A.info("Socket Closed: ".concat(a.id, ", code ").concat(e, ", message ").concat(t)), r().remove(N, e => e === a), this.emit("disconnect", a)
     }), (0, C.validateSocketClient)(a, l, s.get("client_id")).then(() => {
-      A.push(a), e.on("message", e => this.handleMessage(a, e)), this.emit("connect", a)
+      N.push(a), e.on("message", e => this.handleMessage(a, e)), this.emit("connect", a)
     }).catch(e => {
       let {
         code: t,
@@ -181,15 +181,15 @@ class y extends l.EventEmitter {
     } catch (t) {
       e.close(S.RPCCloseCodes.CLOSE_UNSUPPORTED, "Payload not ".concat(e.encoding));
       return
-    }(c.default.isLoggingOverlayEvents || n.cmd !== S.RPCCommands.OVERLAY) && N.info("Socket Message: ".concat(e.id), (0, h.default)(n)), this.emit("request", e, n)
+    }(c.default.isLoggingOverlayEvents || n.cmd !== S.RPCCommands.OVERLAY) && A.info("Socket Message: ".concat(e.id), (0, h.default)(n)), this.emit("request", e, n)
   }
   constructor() {
     var e;
     super();
     let t = 0;
     (s = T.http.createServer()).on("error", e => {
-      N.error("Error: ".concat(e.message)), ("EADDRINUSE" === e.code || e.message.includes("EADDRINUSE")) && setTimeout(() => O(++t), 1e3)
-    }), s.on("request", this.handleRequest.bind(this)), O(t);
+      A.error("Error: ".concat(e.message)), ("EADDRINUSE" === e.code || e.message.includes("EADDRINUSE")) && setTimeout(() => R(++t), 1e3)
+    }), s.on("request", this.handleRequest.bind(this)), R(t);
     let n = {
       instanceId: null !== (e = s.instanceId) && void 0 !== e ? e : 0,
       server: s

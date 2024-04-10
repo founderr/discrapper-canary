@@ -10,14 +10,14 @@ let I = c,
   T = {},
   f = null;
 let S = 0,
-  h = e => {
+  A = e => {
     I = (0, u.cloneDeep)(e);
     let t = {};
     I.forEach(e => {
       t[e.id] = e
     }), T = t
   };
-class A extends(l = d.default.Store) {
+class h extends(l = d.default.Store) {
   get isFetching() {
     return E
   }
@@ -40,12 +40,12 @@ class A extends(l = d.default.Store) {
     return null != e ? T[e] : void 0
   }
 }
-o = "ProfileEffectStore", (a = "displayName") in(s = A) ? Object.defineProperty(s, a, {
+o = "ProfileEffectStore", (a = "displayName") in(s = h) ? Object.defineProperty(s, a, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = o, t.default = new A(_.default, {
+}) : s[a] = o, t.default = new h(_.default, {
   USER_PROFILE_EFFECTS_FETCH: () => {
     E = !0
   },
@@ -53,13 +53,13 @@ o = "ProfileEffectStore", (a = "displayName") in(s = A) ? Object.defineProperty(
     let {
       profileEffects: t
     } = e;
-    E = !1, i = void 0, r = Date.now() + 3e5, S = 0, h(0 === t.length ? c : t)
+    E = !1, i = void 0, r = Date.now() + 3e5, S = 0, A(0 === t.length ? c : t)
   },
   USER_PROFILE_EFFECTS_FETCH_FAILURE: e => {
     let {
       error: t
     } = e;
-    E = !1, i = t, r = Date.now() + Math.min(6e4 * 2 ** S, 36e5), ++S, h(c)
+    E = !1, i = t, r = Date.now() + Math.min(6e4 * 2 ** S, 36e5), ++S, A(c)
   },
   PROFILE_EFFECTS_SET_TRY_IT_OUT: e => {
     let {
@@ -68,6 +68,6 @@ o = "ProfileEffectStore", (a = "displayName") in(s = A) ? Object.defineProperty(
     f = t
   },
   LOGOUT: e => {
-    E = !1, h(c), f = null
+    E = !1, A(c), f = null
   }
 })

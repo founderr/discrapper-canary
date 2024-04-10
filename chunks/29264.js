@@ -20,8 +20,8 @@ var i = n("481060"),
   m = n("689938");
 let g = "https://media.discordapp.net",
   S = /^.*\.discordapp\.net$/,
-  v = "cdn.discordapp.com",
-  p = "".concat(g, "/stickers"),
+  p = "cdn.discordapp.com",
+  v = "".concat(g, "/stickers"),
   I = new Set(["jpg", "jpeg", "png", "webp", "gif", "tiff", "bmp"]),
   h = new Set(["jpg", "jpeg", "png"]),
   A = e => {
@@ -41,11 +41,11 @@ function T(e, t, n) {
       let t = c.default.toURLSafe(e);
       if (null == t) return !1;
       let n = A(e);
-      return (S.test(t.hostname) || t.host === v) && !e.startsWith(p) && !(0, s.isRoleIconAssetUrl)(e) && null != n && I.has(n)
+      return (S.test(t.hostname) || t.host === p) && !e.startsWith(v) && !(0, s.isRoleIconAssetUrl)(e) && null != n && I.has(n)
     }(e)) return null;
   let l = function(e) {
       let t = c.default.toURLSafe(e);
-      return null == t || t.host === v ? e : t.origin === g ? (t.host = v, t.searchParams.delete("size"), t.searchParams.delete("width"), t.searchParams.delete("height"), t.searchParams.delete("quality"), t.searchParams.delete("format"), t.toString()) : (t.searchParams.delete("width"), t.searchParams.delete("height"), t.searchParams.set("quality", "lossless"), t.toString())
+      return null == t || t.host === p ? e : t.origin === g ? (t.host = p, t.searchParams.delete("size"), t.searchParams.delete("width"), t.searchParams.delete("height"), t.searchParams.delete("quality"), t.searchParams.delete("format"), t.toString()) : (t.searchParams.delete("width"), t.searchParams.delete("height"), t.searchParams.set("quality", "lossless"), t.toString())
     }(e),
     d = async () => {
       try {

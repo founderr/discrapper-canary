@@ -15,11 +15,11 @@ var a, s, l, i, r, o = n("442837"),
   p = n("77498"),
   T = n("283595"),
   g = n("19780"),
-  N = n("944486"),
-  A = n("981631");
+  A = n("944486"),
+  N = n("981631");
 let v = "ActivityTrackingStore",
-  O = 30 * S.default.Millis.MINUTE,
-  R = 5 * S.default.Millis.MINUTE,
+  R = 30 * S.default.Millis.MINUTE,
+  O = 5 * S.default.Millis.MINUTE,
   L = null !== (a = u.Storage.get(v)) && void 0 !== a ? a : {},
   M = {},
   P = !1;
@@ -35,13 +35,13 @@ function x(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = Date.now(),
     a = null != e.updatedAt ? n - e.updatedAt : 0;
-  a > O + R && (a = 0);
+  a > R + O && (a = 0);
   let s = (0, I.shouldShareApplicationActivity)(e.applicationId, T.default),
-    l = N.default.getVoiceChannelId(),
+    l = A.default.getVoiceChannelId(),
     i = g.default.getMediaSessionId();
   f.default.updateActivity({
     applicationId: e.applicationId,
-    distributor: e.isDiscordApplication ? A.Distributors.DISCORD : e.distributor,
+    distributor: e.isDiscordApplication ? N.Distributors.DISCORD : e.distributor,
     shareActivity: s,
     token: e.token,
     duration: Math.floor(a / 1e3),
@@ -55,7 +55,7 @@ function x(e) {
   });
   t && s && r && _.default.updateUserRecentGamesLocal(e.applicationId, Math.floor(a / 1e3));
   let o = M[e.applicationId];
-  null == o && (o = M[e.applicationId] = new d.Interval).start(O, () => x(e)), !t && (L[e.applicationId] = e, u.Storage.set(v, L))
+  null == o && (o = M[e.applicationId] = new d.Interval).start(R, () => x(e)), !t && (L[e.applicationId] = e, u.Storage.set(v, L))
 }
 
 function D() {

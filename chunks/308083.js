@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return o
   },
   GENSHIN_ID: function() {
-    return N
+    return A
   },
   LOCALE_TIME_FORMAT: function() {
     return I
@@ -102,4 +102,4 @@ function T() {
   }
 }(a = i || (i = {}))[a.NONE = 0] = "NONE", a[a.SOCIAL = 1] = "SOCIAL", a[a.CASUAL = 2] = "CASUAL", a[a.COMPETITIVE = 3] = "COMPETITIVE", a[a.CREATIVE = 4] = "CREATIVE", a[a.VERY_HARDCORE = 5] = "VERY_HARDCORE", (s = r || (r = {}))[s.INTRO_ANIMATION = 0] = "INTRO_ANIMATION", s[s.SETUP = 1] = "SETUP", s[s.SIGN = 2] = "SIGN", (l = o || (o = {}))[l.FOUNDATIONAL_INTRO = 0] = "FOUNDATIONAL_INTRO", l[l.GAMES = 1] = "GAMES", l[l.PLAYSTYLE = 2] = "PLAYSTYLE", l[l.PERSONALITY_INTRO = 3] = "PERSONALITY_INTRO", l[l.INTERESTS = 4] = "INTERESTS", l[l.DESCRIPTION = 5] = "DESCRIPTION", l[l.PRIMETIME = 6] = "PRIMETIME", l[l.IDENTITY_INTRO = 7] = "IDENTITY_INTRO", l[l.CUSTOMIZE = 8] = "CUSTOMIZE", l[l.APPLICATION_INTRO = 9] = "APPLICATION_INTRO", l[l.MEMBER_APPLICATION = 10] = "MEMBER_APPLICATION";
 let g = "700136079562375258",
-  N = "762434991303950386"
+  A = "762434991303950386"

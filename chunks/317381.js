@@ -18,8 +18,8 @@ var r, s = n("442837"),
   T = n("139143"),
   f = n("155268"),
   S = n("761122"),
-  h = n("917107"),
-  A = n("918559"),
+  A = n("917107"),
+  h = n("918559"),
   m = n("981631");
 
 function N(e, t, n) {
@@ -50,10 +50,10 @@ let O = {
   U = new Map,
   b = new Map,
   G = new Map;
-let w = A.ActivityPanelModes.DISCONNECTED,
-  B = A.FocusedActivityLayouts.RESIZABLE;
+let w = h.ActivityPanelModes.DISCONNECTED,
+  k = h.FocusedActivityLayouts.RESIZABLE;
 
-function k(e) {
+function B(e) {
   return null != e ? e : "0"
 }
 
@@ -70,10 +70,10 @@ function V(e) {
   if (null == I) return;
   let S = u.default.getBasicChannel(s);
   if (!(null != S && d.default.canBasicChannel(m.BasicPermissions.CONNECT, S) || (null == S ? void 0 : S.type) === m.ChannelTypes.DM || (null == S ? void 0 : S.type) === m.ChannelTypes.GROUP_DM)) return;
-  let h = _.map(e => e.userId),
-    A = l.default.getId(),
+  let A = _.map(e => e.userId),
+    h = l.default.getId(),
     N = l.default.getSessionId(),
-    O = null === (t = _.find(e => e.userId === A)) || void 0 === t ? void 0 : t.sessionId,
+    O = null === (t = _.find(e => e.userId === h)) || void 0 === t ? void 0 : t.sessionId,
     p = null == O,
     D = R.get(a),
     v = {
@@ -83,12 +83,12 @@ function V(e) {
       guildId: r,
       instanceId: o,
       url: I,
-      userIds: new Set(h)
+      userIds: new Set(A)
     };
-  h.some(e => e === A) && null != D && (p || N === O) && R.set(D.applicationId, {
+  A.some(e => e === h) && null != D && (p || N === O) && R.set(D.applicationId, {
     ...D,
     ...v
-  }), null != D && s === D.channelId && !h.some(e => e === A) && Array.from(D.userIds).some(e => e === A) ? L.get(s) === a ? L.delete(s) : R.delete(a) : h.some(e => e === A) && (null == D || D.applicationId !== a || D.channelId !== s) && (O === l.default.getSessionId() && !p || (0, T.shouldMountActivityIFrameFromGatewayUpdateWithoutSessionIdCheck)("EmbeddedActivitiesStore")) && (x({
+  }), null != D && s === D.channelId && !A.some(e => e === h) && Array.from(D.userIds).some(e => e === h) ? L.get(s) === a ? L.delete(s) : R.delete(a) : A.some(e => e === h) && (null == D || D.applicationId !== a || D.channelId !== s) && (O === l.default.getSessionId() && !p || (0, T.shouldMountActivityIFrameFromGatewayUpdateWithoutSessionIdCheck)("EmbeddedActivitiesStore")) && (x({
     channelId: s,
     applicationId: a,
     instanceId: o
@@ -96,9 +96,9 @@ function V(e) {
     channelId: s
   }));
   let M = (null !== (n = g.get(s)) && void 0 !== n ? n : []).filter(e => e.applicationId !== a),
-    y = k(r),
+    y = B(r),
     P = (null !== (i = C.get(y)) && void 0 !== i ? i : []).filter(e => !(e.applicationId === a && e.channelId === s));
-  h.length > 0 && (M.push(v), P.push(v)), g.set(s, M), C.set(y, P)
+  A.length > 0 && (M.push(v), P.push(v)), g.set(s, M), C.set(y, P)
 }
 
 function F(e) {
@@ -141,7 +141,7 @@ function x(e) {
     userIds: new Set([T.id]),
     connectedSince: Date.now(),
     instanceId: a
-  }), w = i !== _.default.getChannelId() || (0, h.default)(r) ? A.ActivityPanelModes.PIP : A.ActivityPanelModes.PANEL, G.set(Y(r, s), Date.now())
+  }), w = i !== _.default.getChannelId() || (0, A.default)(r) ? h.ActivityPanelModes.PIP : h.ActivityPanelModes.PANEL, G.set(Y(r, s), Date.now())
 }
 
 function H() {
@@ -197,16 +197,16 @@ class j extends(r = s.default.PersistedStore) {
   }
   getShelfActivities(e) {
     var t;
-    let n = k(e);
+    let n = B(e);
     return null !== (t = v.get(n)) && void 0 !== t ? t : []
   }
   getShelfFetchStatus(e) {
-    let t = k(e);
+    let t = B(e);
     return M.get(t)
   }
   shouldFetchShelf(e) {
     var t, n;
-    let i = k(e),
+    let i = B(e),
       r = null !== (t = M.get(i)) && void 0 !== t ? t : {
         isFetching: !1
       },
@@ -235,7 +235,7 @@ class j extends(r = s.default.PersistedStore) {
     return w
   }
   getFocusedLayout() {
-    return B
+    return k
   }
   getCurrentEmbeddedActivity() {
     var e;
@@ -340,7 +340,7 @@ let W = new j(a.default, {
     let n = t.guild_id;
     if (null != n) {
       var i;
-      let e = k(n),
+      let e = B(n),
         r = (null !== (i = C.get(e)) && void 0 !== i ? i : []).filter(e => e.channelId !== t.id);
       C.set(e, r)
     }
@@ -439,7 +439,7 @@ let W = new j(a.default, {
   EMBEDDED_ACTIVITY_FETCH_SHELF: function(e) {
     let {
       guildId: t
-    } = e, n = k(t), i = M.get(n);
+    } = e, n = B(t), i = M.get(n);
     M.set(n, {
       isFetching: !0,
       lastFetchTimestampMs: null == i ? void 0 : i.lastFetchTimestampMs
@@ -449,7 +449,7 @@ let W = new j(a.default, {
     let {
       guildId: t,
       activities: n
-    } = e, i = k(t);
+    } = e, i = B(t);
     v.set(i, n);
     let r = Date.now();
     ! function(e) {
@@ -483,7 +483,7 @@ let W = new j(a.default, {
   EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL: function(e) {
     let {
       guildId: t
-    } = e, n = k(t), i = M.get(n);
+    } = e, n = B(t), i = M.get(n);
     M.set(n, {
       isFetching: !1,
       lastFetchTimestampMs: null == i ? void 0 : i.lastFetchTimestampMs
@@ -511,13 +511,13 @@ let W = new j(a.default, {
     let {
       focusedActivityLayout: t
     } = e;
-    B = t
+    k = t
   },
   CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    i !== t && w === A.ActivityPanelModes.PANEL && (w = A.ActivityPanelModes.PIP)
+    i !== t && w === h.ActivityPanelModes.PANEL && (w = h.ActivityPanelModes.PIP)
   },
   EMBEDDED_ACTIVITY_DISCONNECT: function(e) {
     let {
@@ -528,7 +528,7 @@ let W = new j(a.default, {
     i && L.set(t, n)
   },
   CONNECTION_INTERRUPTED: function(e) {
-    e.code === m.RPCCloseCodes.CLOSE_ABNORMAL && (i = void 0, R.clear(), D = !1, w = A.ActivityPanelModes.DISCONNECTED)
+    e.code === m.RPCCloseCodes.CLOSE_ABNORMAL && (i = void 0, R.clear(), D = !1, w = h.ActivityPanelModes.DISCONNECTED)
   },
   CHANNEL_CALL_POPOUT_WINDOW_OPEN: function(e) {
     let {

@@ -23,14 +23,14 @@ let I = new Set,
   T = new Set,
   f = {},
   S = {},
-  h = {},
   A = {},
+  h = {},
   m = {},
   N = !1,
   O = !1;
 
 function p() {
-  I.clear(), T.clear(), f = {}, S = {}, h = {}, A = {}, m = {}, N = !1
+  I.clear(), T.clear(), f = {}, S = {}, A = {}, h = {}, m = {}, N = !1
 }
 
 function R(e) {
@@ -61,7 +61,7 @@ function g(e) {
 }
 
 function L(e) {
-  T.delete(e.userId), h[e.userId] = g(e.mutualFriends), A[e.userId] = e.mutualFriends.length
+  T.delete(e.userId), A[e.userId] = g(e.mutualFriends), h[e.userId] = e.mutualFriends.length
 }
 
 function D() {
@@ -94,9 +94,9 @@ function M(e) {
   }
   if (null != e.mutual_friends_count) {
     let t = e.mutual_friends_count;
-    A[e.user.id] = t
+    h[e.user.id] = t
   }
-  null != e.mutual_friends && (h[e.user.id] = g(e.mutual_friends), A[e.user.id] = e.mutual_friends.length);
+  null != e.mutual_friends && (A[e.user.id] = g(e.mutual_friends), h[e.user.id] = e.mutual_friends.length);
   let D = null !== (_ = e.premium_since) && void 0 !== _ ? _ : null,
     v = e.application;
   if (f[e.user.id] = {
@@ -237,7 +237,7 @@ function w(e) {
   O = !0
 }
 
-function B(e) {
+function k(e) {
   let {
     user: t
   } = e;
@@ -245,12 +245,12 @@ function B(e) {
   f[t.id].lastFetched = 0
 }
 
-function k() {
+function B() {
   I.clear(), f = {}, S = {}
 }
 class V extends _.default {
   initialize() {
-    this.waitFor(c.default), this.syncWith([a.default], k)
+    this.waitFor(c.default), this.syncWith([a.default], B)
   }
   isFetchingProfile(e) {
     return I.has(e)
@@ -269,10 +269,10 @@ class V extends _.default {
     return null == t ? null : null === (n = S[e]) || void 0 === n ? void 0 : n[t]
   }
   getMutualFriends(e) {
-    return h[e]
+    return A[e]
   }
   getMutualFriendsCount(e) {
-    return A[e]
+    return h[e]
   }
   getMutualGuilds(e) {
     return m[e]
@@ -307,8 +307,8 @@ class V extends _.default {
       GUILD_DELETE: D,
       GUILD_MEMBER_ADD: v,
       GUILD_MEMBER_REMOVE: v,
-      GUILD_MEMBER_UPDATE: B,
-      USER_UPDATE: B,
+      GUILD_MEMBER_UPDATE: k,
+      USER_UPDATE: k,
       LOGOUT: p
     }), E(this, "loadCache", () => {
       let e = this.readSnapshot(V.LATEST_SNAPSHOT_VERSION);

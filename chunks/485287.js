@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return m
   },
   useShowStageMusicMuteButton: function() {
-    return A
+    return h
   }
 }), n("47120");
 var i = n("442837"),
@@ -23,7 +23,7 @@ let T = e => e / 400,
   f = !1,
   S = (0, u.createSound)("stage_waiting", "stage_waiting", T(a.default.getOutputVolume()));
 
-function h() {
+function A() {
   let e = o.default.getVoiceChannelId();
   if (null == e) {
     S.stop(), f = !1;
@@ -50,7 +50,7 @@ function h() {
   n || f ? n && (S.pause(), f = !1) : (S.volume = T(a.default.getOutputVolume()), S.loop(), f = !0)
 }
 
-function A(e) {
+function h(e) {
   let t = (0, i.useStateFromStores)([o.default], () => o.default.getVoiceChannelId() === e),
     n = null != (0, _.useStageParticipants)(e, c.StageChannelParticipantNamedIndex.SPEAKER).find(e => !e.voiceState.isVoiceMuted()),
     r = (0, i.useStateFromStores)([E.default], () => E.default.getStageInstanceByChannel(e));
@@ -70,7 +70,7 @@ class N extends r.default {
     } = e;
     if (null != t) {
       let e = s.default.getChannel(t);
-      (null == e ? void 0 : e.isGuildStageVoice()) ? h(): (S.stop(), f = !1)
+      (null == e ? void 0 : e.isGuildStageVoice()) ? A(): (S.stop(), f = !1)
     } else S.stop(), f = !1
   }
   handleLogout() {
@@ -80,16 +80,16 @@ class N extends r.default {
     let {
       play: t
     } = e;
-    t ? h() : (S.pause(), f = !1)
+    t ? A() : (S.pause(), f = !1)
   }
   handleMute(e) {
     let {
       muted: t
     } = e;
-    t ? (S.pause(), f = !1) : h()
+    t ? (S.pause(), f = !1) : A()
   }
   handleVoiceStateUpdates() {
-    h()
+    A()
   }
   handleSetOutputVolume(e) {
     let {
@@ -98,7 +98,7 @@ class N extends r.default {
     S.volume = T(t)
   }
   handleToggleSelfDeaf() {
-    h()
+    A()
   }
   constructor(...e) {
     var t, n, i;

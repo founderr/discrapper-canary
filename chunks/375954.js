@@ -11,9 +11,9 @@ var i, r, s, a, o = n("392711"),
   T = n("723352"),
   f = n("160404"),
   S = n("786761"),
-  h = n("418476");
+  A = n("418476");
 n("739566");
-var A = n("995774"),
+var h = n("995774"),
   m = n("706454"),
   N = n("630388"),
   O = n("709054"),
@@ -31,9 +31,9 @@ var A = n("995774"),
   b = n("981631");
 let G = new Set,
   w = new E.default("MessageStore"),
-  B = !1;
+  k = !1;
 
-function k() {
+function B() {
   _.default.forEach(e => {
     _.default.commit(e.mutate({
       ready: !1,
@@ -68,7 +68,7 @@ function H(e) {
     emoji: s,
     reactionType: a
   } = e, o = _.default.get(n);
-  if (null == o || !(0, A.shouldApplyReaction)(e)) return !1;
+  if (null == o || !(0, h.shouldApplyReaction)(e)) return !1;
   let l = p.default.getId() === r;
   o = o.update(i, n => "MESSAGE_REACTION_ADD" === t ? n.addReaction(s, l, e.colors, a) : n.removeReaction(s, l, a)), _.default.commit(o)
 }
@@ -103,7 +103,7 @@ class j extends(i = u.default.Store) {
   }
   getLastEditableMessage(e) {
     let t = U.default.getCurrentUser();
-    return l()(this.getMessages(e).toArray()).reverse().find(e => (0, h.default)(e, null == t ? void 0 : t.id))
+    return l()(this.getMessages(e).toArray()).reverse().find(e => (0, A.default)(e, null == t ? void 0 : t.id))
   }
   getLastCommandMessage(e) {
     let t = U.default.getCurrentUser();
@@ -144,7 +144,7 @@ class j extends(i = u.default.Store) {
     return null != this.getMessages(e).findNewest(e => e.author.id === (null == t ? void 0 : t.id))
   }
   hasCurrentUserSentMessageSinceAppStart() {
-    return B
+    return k
   }
 }
 a = "MessageStore", (s = "displayName") in(r = j) ? Object.defineProperty(r, s, {
@@ -165,8 +165,8 @@ a = "MessageStore", (s = "displayName") in(r = j) ? Object.defineProperty(r, s, 
       }
     }
   },
-  CONNECTION_OPEN: k,
-  OVERLAY_INITIALIZE: k,
+  CONNECTION_OPEN: B,
+  OVERLAY_INITIALIZE: B,
   CACHE_LOADED: function(e) {
     for (let [t, n] of O.default.entries(e.messages)) {
       let e = _.default.getOrCreate(t).addCachedMessages(n, !0);
@@ -407,6 +407,6 @@ a = "MessageStore", (s = "displayName") in(r = j) ? Object.defineProperty(r, s, 
     let {
       message: t
     } = e, n = U.default.getCurrentUser();
-    null != t && null != t.author && null != n && t.author.id === n.id && (B = !0)
+    null != t && null != t.author && null != n && t.author.id === n.id && (k = !0)
   }
 })

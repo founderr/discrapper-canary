@@ -31,10 +31,10 @@ n.r(t), n.d(t, {
     return y
   },
   pinMessage: function() {
-    return O
+    return x
   },
   publishMessage: function() {
-    return x
+    return O
   },
   replyToMessage: function() {
     return j
@@ -59,8 +59,8 @@ var r = n("822893"),
   m = n("572004"),
   g = n("585483"),
   S = n("709054"),
-  v = n("111618"),
-  p = n("50284"),
+  p = n("111618"),
+  v = n("50284"),
   I = n("730954"),
   h = n("981631");
 
@@ -89,10 +89,10 @@ function R(e, t) {
 }
 
 function y(e, t) {
-  (0, p.default)(e.id, t.id)
+  (0, v.default)(e.id, t.id)
 }
 
-function O(e, t, n) {
+function x(e, t, n) {
   if (!1 === t.pinned) {
     n.shiftKey ? a.default.pinMessage(e, t.id) : l.default.confirmPin(e, t);
     return
@@ -100,12 +100,12 @@ function O(e, t, n) {
   n.shiftKey ? a.default.unpinMessage(e, t.id) : l.default.confirmUnpin(e, t)
 }
 
-function x(e, t) {
+function O(e, t) {
   (0, s.default)(e.id, t.id)
 }
 
 function N(e, t) {
-  (0, I.default)(e, t, void 0, v.default.getOptions(t.id))
+  (0, I.default)(e, t, void 0, p.default.getOptions(t.id))
 }
 
 function j(e, t, n) {

@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return _
   },
   hasAnyModalOpen: function() {
-    return A
+    return h
   },
   hasAnyModalOpenSelector: function() {
-    return h
+    return A
   },
   hasModalOpen: function() {
     return R
@@ -152,7 +152,7 @@ function S(e, t, n, i) {
   })
 }
 
-function h(e) {
+function A(e) {
   for (let t of d) {
     let n = e[t];
     if (null != n && n.length > 0) return !0
@@ -160,12 +160,12 @@ function h(e) {
   return !1
 }
 
-function A() {
-  return h(E.getState())
+function h() {
+  return A(E.getState())
 }
 
 function m() {
-  return h(E())
+  return A(E())
 }
 
 function N(e) {

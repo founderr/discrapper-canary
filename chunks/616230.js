@@ -143,9 +143,9 @@ function N(e) {
   r.useEffect(() => {
     c.default.fetchVerificationForm(o.id)
   }, [o.id]);
-  let L = !E;
+  let F = !E;
   return (0, i.jsx)(u.default, {
-    renderHeader: L ? (0, i.jsx)(C, {
+    renderHeader: F ? (0, i.jsx)(C, {
       guild: o,
       isExpanded: N,
       emptyFormFields: (null == b ? void 0 : b.length) == null || (null == b ? void 0 : b.length) === 0,
@@ -154,11 +154,11 @@ function N(e) {
     isExpanded: N,
     onExpand: () => R(!N),
     disableAnimation: E,
-    disableBackground: !L,
+    disableBackground: !F,
     children: (0, i.jsx)("div", {
       className: s()(h.itemBodyContainer, g.rulesScreeningItems, {
-        [h.noPadding]: !L,
-        [g.rulesScreeningItemsNoBorder]: !L
+        [h.noPadding]: !F,
+        [g.rulesScreeningItemsNoBorder]: !F
       }),
       children: null != O && (0, i.jsx)(m.default, {
         guild: o,

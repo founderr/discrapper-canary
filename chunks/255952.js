@@ -20,26 +20,26 @@ var a = n("735250"),
   p = n("51144"),
   T = n("981631"),
   g = n("689938"),
-  N = n("329764");
+  A = n("329764");
 
-function A(e) {
+function N(e) {
   let {
     status: t,
     description: n,
     focused: s
   } = e;
   return (0, a.jsxs)("div", {
-    className: N.statusItem,
+    className: A.statusItem,
     children: [(0, a.jsx)(u.Status, {
       status: t,
-      className: N.icon,
+      className: A.icon,
       size: 10,
       color: s ? "currentColor" : void 0
     }), (0, a.jsx)("div", {
-      className: N.status,
+      className: A.status,
       children: (0, p.humanizeStatus)(t)
     }), null != n && (0, a.jsx)("div", {
-      className: N.description,
+      className: A.description,
       children: n
     })]
   })
@@ -54,58 +54,58 @@ function v(e) {
   return null != t ? (0, a.jsx)("div", {
     "aria-label": g.default.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
     children: (0, a.jsx)(c.default, {
-      className: null != t.emoji ? N.customStatusWithEmoji : N.customStatusItem,
+      className: null != t.emoji ? A.customStatusWithEmoji : A.customStatusItem,
       activity: t,
-      emojiClassName: N.customEmoji,
-      textClassName: N.customText,
+      emojiClassName: A.customEmoji,
+      textClassName: A.customText,
       placeholderText: g.default.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
       children: (0, a.jsx)(u.Tooltip, {
         text: g.default.Messages.CUSTOM_STATUS_CLEAR_CUSTOM_STATUS,
         children: e => (0, a.jsx)(u.Button, {
           ...e,
-          className: N.clearStatusButton,
+          className: A.clearStatusButton,
           onClick: n,
           look: u.Button.Looks.BLANK,
           size: u.Button.Sizes.NONE,
           tabIndex: -1,
           "aria-hidden": !0,
           children: (0, a.jsx)(m.default, {
-            className: N.clearStatusIcon
+            className: A.clearStatusIcon
           })
         })
       })
     })
   }) : (0, a.jsxs)("div", {
-    className: i()(N.statusItem, N.__invalid_customStatusContentIcon),
+    className: i()(A.statusItem, A.__invalid_customStatusContentIcon),
     "aria-label": g.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS,
     children: [(0, a.jsx)("div", {
-      className: N.customEmojiPlaceholder
+      className: A.customEmojiPlaceholder
     }), (0, a.jsx)("div", {
-      className: N.status,
+      className: A.status,
       children: g.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS
     })]
   })
 }
 
-function O(e) {
+function R(e) {
   let {
     focused: t
   } = e;
   return (0, a.jsxs)("div", {
-    className: i()(N.statusItem, N.statusItemNoPadding, N.__invalid_customStatusContentIcon, N.switchAccountsItem),
+    className: i()(A.statusItem, A.statusItemNoPadding, A.__invalid_customStatusContentIcon, A.switchAccountsItem),
     "aria-label": g.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
     children: [(0, a.jsx)(S.default, {
       width: 18,
       height: 18,
-      className: N.switchAccountsIcon,
+      className: A.switchAccountsIcon,
       color: t ? o.default.unsafe_rawColors.WHITE_500.css : "currentColor"
     }), (0, a.jsx)("div", {
-      className: N.status,
+      className: A.status,
       children: g.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE
     })]
   })
 }
-let R = e => {
+let O = e => {
   let {
     customStatus: t,
     onClose: l,
@@ -137,7 +137,7 @@ let R = e => {
         let {
           isFocused: t
         } = e;
-        return (0, a.jsx)(A, {
+        return (0, a.jsx)(N, {
           status: u.StatusTypes.ONLINE,
           focused: t
         })
@@ -150,7 +150,7 @@ let R = e => {
         let {
           isFocused: t
         } = e;
-        return (0, a.jsx)(A, {
+        return (0, a.jsx)(N, {
           status: u.StatusTypes.IDLE,
           focused: t
         })
@@ -163,7 +163,7 @@ let R = e => {
         let {
           isFocused: t
         } = e;
-        return (0, a.jsx)(A, {
+        return (0, a.jsx)(N, {
           status: u.StatusTypes.DND,
           description: g.default.Messages.STATUS_DND_HELP,
           focused: t
@@ -177,7 +177,7 @@ let R = e => {
         let {
           isFocused: t
         } = e;
-        return (0, a.jsx)(A, {
+        return (0, a.jsx)(N, {
           status: u.StatusTypes.INVISIBLE,
           description: g.default.Messages.STATUS_INVISIBLE_HELPER,
           focused: t
@@ -208,7 +208,7 @@ let R = e => {
         let {
           isFocused: t
         } = e;
-        return (0, a.jsx)(O, {
+        return (0, a.jsx)(R, {
           focused: t
         })
       },
@@ -219,7 +219,7 @@ let R = e => {
 t.default = (0, d.default)(e => {
   let t = (0, r.useStateFromStores)([C.default], () => C.default.getCustomStatusActivity()),
     n = _.StatusSetting.useSetting();
-  return (0, a.jsx)(R, {
+  return (0, a.jsx)(O, {
     ...e,
     customStatus: t,
     status: n

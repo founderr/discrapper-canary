@@ -31,12 +31,12 @@ let h = (0, d.createSoundForPack)("poggermode_applause", l.default.getSoundpack(
     if (0 === m.length || !T() || C) return;
     C = !0;
     let [e, t] = m[m.length - 1];
-    (0, d.playSound)(e, t), S = setTimeout(N, 1e3)
+    (0, d.playSound)(e, t), S = setTimeout(A, 1e3)
   },
-  N = () => {
+  A = () => {
     m.pop(), C = !1, g()
   },
-  A = function(e) {
+  N = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
       n = r.default.isConnected();
     m.push([e, t * (n ? .1 : 1)]), g()
@@ -75,7 +75,7 @@ class v extends s.default {
     a && l >= 7 ? I() : p()
   }
   playAchievementUnlockSound() {
-    T() && A("poggermode_achievement_unlock")
+    T() && N("poggermode_achievement_unlock")
   }
 }
 t.default = new v

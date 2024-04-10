@@ -18,11 +18,11 @@ var a, s, l = n("735250"),
   p = n("420660"),
   T = n("74433"),
   g = n("952561"),
-  N = n("513202"),
-  A = n("906732"),
+  A = n("513202"),
+  N = n("906732"),
   v = n("812206"),
-  O = n("933557"),
-  R = n("102172"),
+  R = n("933557"),
+  O = n("102172"),
   L = n("871118"),
   M = n("849171"),
   P = n("314897"),
@@ -36,8 +36,8 @@ var a, s, l = n("735250"),
   w = n("395361"),
   k = n("639351"),
   F = n("632184"),
-  B = n("368666"),
-  H = n("81063"),
+  H = n("368666"),
+  B = n("81063"),
   V = n("823379"),
   Y = n("51144"),
   W = n("599706"),
@@ -262,7 +262,7 @@ es.Header = ea, es.Body = e => {
     partySize: u,
     members: d,
     onChannelContextMenu: f
-  } = e, E = i.useRef(null), h = (0, O.default)(s, !0);
+  } = e, E = i.useRef(null), h = (0, R.default)(s, !0);
   return (0, l.jsx)(ee, {
     children: (0, l.jsxs)("div", {
       className: q.voiceSection,
@@ -449,7 +449,7 @@ es.Header = ea, es.Body = e => {
     applicationStream: i,
     onPreviewClick: r,
     guildId: o
-  } = e, d = (0, u.useStateFromStores)([y.default], () => y.default.getChannel(i.channelId)), [f, E] = (0, R.useCanWatchStream)(d), h = (0, l.jsxs)(c.Clickable, {
+  } = e, d = (0, u.useStateFromStores)([y.default], () => y.default.getChannel(i.channelId)), [f, E] = (0, O.useCanWatchStream)(d), h = (0, l.jsxs)(c.Clickable, {
     onClick: f ? r : void 0,
     className: q.applicationStreamingPreviewWrapper,
     children: [(0, l.jsx)(L.default, {
@@ -459,7 +459,7 @@ es.Header = ea, es.Body = e => {
       className: q.applicationStreamingHoverWrapper,
       children: (0, l.jsx)("div", {
         className: q.applicationStreamingHoverText,
-        children: (0, R.getStreamCTAString)(E)
+        children: (0, O.getStreamCTAString)(E)
       })
     })]
   }), _ = null !== (n = null === (t = (0, T.default)(a, i)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : z.default.Messages.SHARING_SCREEN;
@@ -473,8 +473,8 @@ es.Header = ea, es.Body = e => {
         className: q.applicationStreamingAvatar
       }), (0, l.jsxs)("div", {
         children: [X(Y.default.getName(s)), J(_)]
-      }), (0, l.jsx)(B.default, {
-        size: B.default.Sizes.SMALL
+      }), (0, l.jsx)(H.default, {
+        size: H.default.Sizes.SMALL
       })]
     }), h]
   })
@@ -486,7 +486,7 @@ es.Header = ea, es.Body = e => {
     participants: s
   } = e, r = (0, g.default)(), [o, d] = i.useState(null), f = t.application_id;
   i.useEffect(() => {
-    null != f && (0, H.fetchAssetIds)(f, ["embedded_background"]).then(e => {
+    null != f && (0, B.fetchAssetIds)(f, ["embedded_background"]).then(e => {
       let [t] = e;
       return d(t)
     })
@@ -495,14 +495,14 @@ es.Header = ea, es.Body = e => {
     C = (0, E.useAnalyticsContext)(),
     {
       analyticsLocations: m
-    } = (0, A.default)();
+    } = (0, N.default)();
   if (null == f) return null;
   let S = v.default.getApplication(f);
   if (null == S) return null;
   let I = null != t.created_at && t.created_at > 0 ? {
       start: t.created_at
     } : void 0,
-    p = (0, H.getAssetImage)(S.id, o, 300);
+    p = (0, B.getAssetImage)(S.id, o, 300);
   return (0, l.jsxs)(ee, {
     children: [(0, l.jsxs)("div", {
       className: q.embeddedActivityTopRow,
@@ -548,7 +548,7 @@ es.Header = ea, es.Body = e => {
                 currentEmbeddedApplication: r,
                 activityChannelId: n.id,
                 locationObject: C.location,
-                embeddedActivitiesManager: N.default,
+                embeddedActivitiesManager: A.default,
                 analyticsLocations: m
               })
             },

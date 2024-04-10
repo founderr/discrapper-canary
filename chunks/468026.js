@@ -18,8 +18,8 @@ t.default = e => {
     cancelText: T,
     className: f,
     confirmColor: S,
-    confirmText: h = c.default.Messages.OKAY,
-    secondaryConfirmText: A,
+    confirmText: A = c.default.Messages.OKAY,
+    secondaryConfirmText: h,
     onCancel: m,
     onClose: N,
     onConfirm: O,
@@ -37,14 +37,14 @@ t.default = e => {
     },
     className: E.secondaryButton,
     children: T
-  })), null != h && "" !== h && (n = (0, i.jsx)(a.Button, {
+  })), null != A && "" !== A && (n = (0, i.jsx)(a.Button, {
     type: "submit",
     color: S,
     size: a.Button.Sizes.XLARGE,
     className: s()(E.primaryButton, null != t ? E.gutter : null),
     autoFocus: !0,
-    children: h
-  })), null != A && "" !== A && (r = (0, i.jsx)(o.Clickable, {
+    children: A
+  })), null != h && "" !== h && (r = (0, i.jsx)(o.Clickable, {
     onClick: () => {
       null == N || N(), null == p || p()
     },
@@ -52,7 +52,7 @@ t.default = e => {
     children: (0, i.jsx)(d.Text, {
       className: E.secondaryAction,
       variant: "text-xs/normal",
-      children: A
+      children: h
     })
   })), (0, i.jsx)(u.ModalRoot, {
     transitionState: C,

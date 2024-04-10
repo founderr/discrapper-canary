@@ -24,11 +24,11 @@ var a = n("735250"),
   p = n("143614"),
   T = n("463119"),
   g = n("377171"),
-  N = n("243778"),
-  A = n("922409"),
+  A = n("243778"),
+  N = n("922409"),
   v = n("899740"),
-  O = n("28476"),
-  R = n("880257"),
+  R = n("28476"),
+  O = n("880257"),
   L = n("631885"),
   M = n("457396"),
   P = n("51596"),
@@ -42,8 +42,8 @@ var a = n("735250"),
   w = n("55563"),
   k = n("774343"),
   F = n("517802"),
-  B = n("436088"),
-  H = n("427828"),
+  H = n("436088"),
+  B = n("427828"),
   V = n("916187"),
   Y = n("158010"),
   W = n("988951"),
@@ -82,7 +82,7 @@ let ee = e => {
         color: g.default.BG_BRAND,
         text: (0, a.jsxs)("div", {
           className: $.broadcastingBadge,
-          children: [(0, a.jsx)(B.default, {
+          children: [(0, a.jsx)(H.default, {
             className: $.broadcastingIcon
           }), (0, a.jsx)(E.Text, {
             variant: "text-xs/semibold",
@@ -104,7 +104,7 @@ let ee = e => {
     return (0, a.jsx)(q.LinkButton, {
       selected: t,
       route: X.Routes.APPLICATION_LIBRARY,
-      icon: H.default,
+      icon: B.default,
       text: J.default.Messages.LIBRARY,
       ...s,
       ...l,
@@ -143,8 +143,8 @@ let ee = e => {
       selected: t
     } = e, n = (0, v.useMessageRequestsCount)(), s = (0, o.useListItem)("messageRequests"), {
       channelId: l
-    } = (0, A.useMessageRequestSidebarState)();
-    if (!(0, O.useShouldShowMessageRequestsRow)()) return null;
+    } = (0, N.useMessageRequestSidebarState)();
+    if (!(0, R.useShouldShowMessageRequestsRow)()) return null;
     let i = null == l ? void 0 : () => h.default.preload(X.ME, l);
     return (0, a.jsx)(q.LinkButton, {
       selected: t,
@@ -161,7 +161,7 @@ let ee = e => {
   es = e => {
     let {
       selected: t
-    } = e, n = J.default.Messages.FAMILY_CENTER_SIDEBAR_TITLE, l = (0, o.useListItem)("family-center"), i = b.FamilyCenterEnabled.useSetting(), r = (0, R.default)(), [u, d] = s.useState(!0);
+    } = e, n = J.default.Messages.FAMILY_CENTER_SIDEBAR_TITLE, l = (0, o.useListItem)("family-center"), i = b.FamilyCenterEnabled.useSetting(), r = (0, O.default)(), [u, d] = s.useState(!0);
     return i && r ? (0, a.jsx)(q.LinkButton, {
       selected: t,
       route: X.Routes.FAMILY_CENTER,
@@ -201,7 +201,7 @@ let ee = e => {
       children: (0, a.jsx)(K.NumberBadge, {
         count: s
       })
-    }) : (0, a.jsx)(N.default, {
+    }) : (0, a.jsx)(A.default, {
       contentTypes: [c.DismissibleContent.FAMILY_CENTER_NEW_BADGE],
       children: e => {
         let {

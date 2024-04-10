@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return H
+    return B
   }
 }), n("411104"), n("47120");
 var a, s = n("735250"),
@@ -23,11 +23,11 @@ var a, s = n("735250"),
   p = n("285952"),
   T = n("366695"),
   g = n("366966"),
-  N = n("151011"),
-  A = n("880008"),
+  A = n("151011"),
+  N = n("880008"),
   v = n("466111"),
-  O = n("931003"),
-  R = n("626135"),
+  R = n("931003"),
+  O = n("626135"),
   L = n("780570"),
   M = n("624138"),
   P = n("645818"),
@@ -139,12 +139,12 @@ let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
           children: [(0, s.jsx)(w, {
             flag: y.LibraryApplicationFlags.PRIVATE,
             item: e,
-            icon: A.default,
+            icon: N.default,
             tooltip: x.default.Messages.GAME_LIBRARY_PRIVATE_TOOLTIP
           }), (0, s.jsx)(w, {
             flag: y.LibraryApplicationFlags.OVERLAY_DISABLED,
             item: e,
-            icon: O.default,
+            icon: R.default,
             tooltip: x.default.Messages.GAME_LIBRARY_OVERLAY_DISABLED_TOOLTIP
           }), (0, s.jsx)(P.default, {
             className: r()(D.settingIcon, {
@@ -200,7 +200,7 @@ let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
       })
     })
   };
-class B extends(a = l.PureComponent) {
+class H extends(a = l.PureComponent) {
   componentDidMount() {
     let {
       fetched: e
@@ -272,7 +272,7 @@ class B extends(a = l.PureComponent) {
       }
       e.num_applications_total++
     }
-    R.default.track(y.AnalyticEvents.LIBRARY_VIEWED, {
+    O.default.track(y.AnalyticEvents.LIBRARY_VIEWED, {
       ...e,
       load_id: t.loadId
     })
@@ -321,7 +321,7 @@ class B extends(a = l.PureComponent) {
       highlightedApplicationKey: o
     } = this.state;
     return (0, s.jsxs)(l.Fragment, {
-      children: [n.length > 0 ? (0, s.jsx)(N.default, {
+      children: [n.length > 0 ? (0, s.jsx)(A.default, {
         columns: k,
         data: n,
         sortData: !1,
@@ -395,8 +395,8 @@ class B extends(a = l.PureComponent) {
   }
 }
 
-function H(e) {
-  let t = l.useContext(R.AnalyticsContext),
+function B(e) {
+  let t = l.useContext(O.AnalyticsContext),
     n = (0, o.useLocation)(),
     {
       applicationViewItems: a,
@@ -418,7 +418,7 @@ function H(e) {
       activeRowKey: I.default.activeRowKey,
       isNavigatingByKeyboard: I.default.isNavigatingByKeyboard
     }));
-  return (0, s.jsx)(B, {
+  return (0, s.jsx)(H, {
     ...e,
     analyticsContext: t,
     location: n,
@@ -431,6 +431,6 @@ function H(e) {
     isNavigatingByKeyboard: E
   })
 }
-b(B, "defaultProps", {
+b(H, "defaultProps", {
   stickyHeader: !1
 })

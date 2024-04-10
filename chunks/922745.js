@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   PictureInPictureHeader: function() {
-    return A
+    return h
   },
   default: function() {
     return m
@@ -23,9 +23,9 @@ var r = n("803997"),
   T = n("540028"),
   f = n("507675"),
   S = n("689938"),
-  h = n("438249");
+  A = n("438249");
 
-function A(e) {
+function h(e) {
   let {
     title: t,
     onJumpToChannel: n,
@@ -36,17 +36,17 @@ function A(e) {
     idle: r
   }) : null;
   return (0, i.jsxs)(s, {
-    className: h.headerIdleContainer,
+    className: A.headerIdleContainer,
     children: [(0, i.jsxs)(u.Clickable, {
-      className: h.headerTitle,
+      className: A.headerTitle,
       onClick: n,
       children: [(0, i.jsx)(E.default, {
         "aria-label": S.default.Messages.OPEN_IN_THEATER,
-        className: h.backButton,
+        className: A.backButton,
         width: 20,
         height: 20
       }), (0, i.jsx)(I.default, {
-        className: h.headerText,
+        className: A.headerText,
         size: I.default.Sizes.SIZE_16,
         color: o.default.unsafe_rawColors.WHITE_500.css,
         children: t
@@ -75,8 +75,8 @@ function m(e) {
     onMouseMove: o,
     onMouseDown: o,
     onMouseLeave: u,
-    className: s()(h.pictureInPictureVideo, {
-      [h.idle]: n
+    className: s()(A.pictureInPictureVideo, {
+      [A.idle]: n
     }, S),
     onDoubleClick: r,
     children: [(0, i.jsx)(l.TransitionGroup, {
@@ -88,22 +88,22 @@ function m(e) {
       size: "small",
       ...I
     }) : null, !T && (0, i.jsxs)("div", {
-      className: h.videoControls,
+      className: A.videoControls,
       children: [(0, i.jsx)("div", {
-        className: h.topControls,
-        children: (0, i.jsx)(A, {
+        className: A.topControls,
+        children: (0, i.jsx)(h, {
           idle: n,
           onJumpToChannel: r,
           ...N
         })
       }), (0, i.jsxs)("div", {
-        className: h.bottomControls,
+        className: A.bottomControls,
         children: [(0, i.jsx)(_.default, {
           grow: 0,
           shrink: 1,
           basis: "50%",
           align: _.default.Align.CENTER,
-          className: h.bottomLeftControls,
+          className: A.bottomLeftControls,
           children: null == d ? void 0 : d()
         }), (0, i.jsx)(_.default, {
           grow: 0,

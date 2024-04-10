@@ -15,8 +15,8 @@ var i = n("735250"),
   T = n("100527"),
   f = n("906732"),
   S = n("812206"),
-  h = n("835473"),
-  A = n("199902"),
+  A = n("835473"),
+  h = n("199902"),
   m = n("271383"),
   N = n("430824"),
   O = n("158776"),
@@ -34,8 +34,8 @@ var i = n("735250"),
   b = n("436478"),
   G = n("131640"),
   w = n("664202"),
-  B = n("228168"),
-  k = n("981631"),
+  k = n("228168"),
+  B = n("981631"),
   V = n("616922"),
   F = n("617538");
 
@@ -67,20 +67,20 @@ function H(e) {
     status: er,
     isMobile: es,
     isApplicationStreaming: ea
-  } = (0, o.useStateFromStoresObject)([A.default, O.default], () => {
-    let e = null != A.default.getAnyStreamForUser(t.id);
+  } = (0, o.useStateFromStoresObject)([h.default, O.default], () => {
+    let e = null != h.default.getAnyStreamForUser(t.id);
     return {
       activity: O.default.findActivity(t.id, t => {
         let {
           type: n
         } = t;
-        return e ? n === k.ActivityTypes.PLAYING : n !== k.ActivityTypes.CUSTOM_STATUS
+        return e ? n === B.ActivityTypes.PLAYING : n !== B.ActivityTypes.CUSTOM_STATUS
       }),
       customStatusActivity: O.default.findActivity(t.id, e => {
         let {
           type: t
         } = e;
-        return t === k.ActivityTypes.CUSTOM_STATUS
+        return t === B.ActivityTypes.CUSTOM_STATUS
       }),
       status: et ? null : O.default.getStatus(t.id),
       isMobile: O.default.isMobileOnline(t.id),
@@ -98,7 +98,7 @@ function H(e) {
     }),
     [ec, eE] = r.useState(!1);
   (0, _.default)(() => eE(!0), e_.shouldShow ? 250 : null);
-  let eI = (0, h.useGetOrFetchApplication)(null == en ? void 0 : en.application_id);
+  let eI = (0, A.useGetOrFetchApplication)(null == en ? void 0 : en.application_id);
   return r.useEffect(() => {
     null == j || j(null == Q ? void 0 : Q.current)
   }, [Q, j]), r.useEffect(() => {
@@ -107,7 +107,7 @@ function H(e) {
       let i, r, a;
       null != en && (i = en.party, r = en.assets, a = null != en.application_id ? S.default.getApplication(en.application_id) : null);
       let o = er;
-      er === k.StatusTypes.ONLINE && (o = es ? k.AnalyticsUserStatusTypes.ONLINE_MOBILE : k.AnalyticsUserStatusTypes.ONLINE_DESKTOP);
+      er === B.StatusTypes.ONLINE && (o = es ? B.AnalyticsUserStatusTypes.ONLINE_MOBILE : B.AnalyticsUserStatusTypes.ONLINE_DESKTOP);
       let l = null != ee ? {
           has_nickname: !!(null == ee ? void 0 : ee.nick),
           has_guild_member_avatar: !!(null == ee ? void 0 : ee.avatar),
@@ -118,7 +118,7 @@ function H(e) {
           other_application_id: null == Z ? void 0 : Z.id,
           other_application_name: t.toString()
         } : {};
-      C.default.track(k.AnalyticEvents.OPEN_POPOUT, {
+      C.default.track(B.AnalyticEvents.OPEN_POPOUT, {
         type: "Profile Popout",
         guild_id: n,
         channel_id: s,
@@ -130,7 +130,7 @@ function H(e) {
         has_images: !!(null !== (e = null == r ? void 0 : r.large_image) && void 0 !== e ? e : null == r ? void 0 : r.small_image),
         party_max: null != i && null != i.size ? i.size[1] : void 0,
         party_id: null != i ? i.id : void 0,
-        party_platform: null != i && (0, V.isSpotifyParty)(i.id) ? k.PlatformTypes.SPOTIFY : null,
+        party_platform: null != i && (0, V.isSpotifyParty)(i.id) ? B.PlatformTypes.SPOTIFY : null,
         game_platform: (0, E.default)(en),
         profile_user_status: o,
         is_streaming: ea,
@@ -156,7 +156,7 @@ function H(e) {
       roleId: R,
       shouldTrackViewOnMount: null == ee || null != ee.fullProfileLoadedTimestamp,
       children: (0, i.jsx)(u.default, {
-        section: k.AnalyticsSections.PROFILE_POPOUT,
+        section: B.AnalyticsSections.PROFILE_POPOUT,
         children: (0, i.jsx)(l.Dialog, {
           ref: Q,
           "aria-label": t.username,
@@ -168,7 +168,7 @@ function H(e) {
           children: (0, i.jsxs)(y.default, {
             user: t,
             guildId: n,
-            profileType: B.UserProfileTypes.POPOUT,
+            profileType: k.UserProfileTypes.POPOUT,
             className: e_.shouldShow ? F.hasCollectiblesUpsell : void 0,
             showOutOfBoundaryComponents: ec,
             children: [(0, i.jsx)(G.default, {

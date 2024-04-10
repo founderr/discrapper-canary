@@ -20,11 +20,11 @@ var a = n("735250"),
   p = n("252618"),
   T = n("605236"),
   g = n("243778"),
-  N = n("984370"),
-  A = n("797614"),
+  A = n("984370"),
+  N = n("797614"),
   v = n("359110"),
-  O = n("6025"),
-  R = n("897473"),
+  R = n("6025"),
+  O = n("897473"),
   L = n("108427"),
   M = n("970731"),
   P = n("210887"),
@@ -38,8 +38,8 @@ var a = n("735250"),
   w = n("647090"),
   k = n("385956"),
   F = n("610697"),
-  B = n("26373"),
-  H = n("486622"),
+  H = n("26373"),
+  B = n("486622"),
   V = n("922409"),
   Y = n("899740"),
   W = n("177033"),
@@ -59,14 +59,14 @@ function ea() {
   let e = s.useRef(null),
     t = (0, Y.useMessageRequestsCount)(),
     n = (0, W.default)(),
-    l = (0, B.useListHasSingleMessageRequest)(),
+    l = (0, H.useListHasSingleMessageRequest)(),
     u = (0, _.useIsRejectAllMessageRequestsEnabled)(),
     d = s.useCallback(() => {
       (0, c.showToast)((0, c.createToast)(ee.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, c.ToastType.FAILURE))
     }, []),
     {
       rejectAll: f
-    } = (0, H.useMessageRequestActions)({
+    } = (0, B.useMessageRequestActions)({
       onError: d
     }),
     E = (0, m.default)("message-requests-list"),
@@ -114,7 +114,7 @@ function ea() {
         })]
       }) : null]
     }, "title"), [t, C, u]);
-  return (n.length !== t && A.default.increment({
+  return (n.length !== t && N.default.increment({
     name: o.MetricEvents.MESSAGE_REQUEST_COUNT_DRIFT
   }), 0 === n.length) ? (0, a.jsx)(z.default, {
     section: Z.MessageRequestSections.REQUESTS
@@ -156,7 +156,7 @@ function es(e) {
     pageWidth: t,
     onSidebarResize: n
   } = e, s = (0, u.useStateFromStores)([y.default], () => y.default.getSidebarState(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID)), l = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(null == s ? void 0 : s.channelId));
-  if (null == s || s.type !== R.SidebarType.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
+  if (null == s || s.type !== O.SidebarType.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
   let i = t - X.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
   return (0, a.jsx)(S.default, {
     sidebarType: S.ChatSidebarType.MessageRequestSidebar,
@@ -239,7 +239,7 @@ let eo = (0, h.default)(function(e) {
   s.useEffect(() => {
     f.setHomeLink(X.Routes.MESSAGE_REQUESTS), (0, L.trackAppUIViewed)("message-requests"), j.default.track(X.AnalyticEvents.MESSAGE_REQUESTS_VIEWED, {
       num_message_requests: n
-    }), A.default.increment({
+    }), N.default.increment({
       name: o.MetricEvents.MESSAGE_REQUEST_VIEW
     })
   }, []);
@@ -248,14 +248,14 @@ let eo = (0, h.default)(function(e) {
     [d, E] = s.useState(!1),
     h = (0, u.useStateFromStores)([y.default], () => {
       let e = y.default.getSidebarState(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID);
-      return null != e && e.type === R.SidebarType.VIEW_MESSAGE_REQUEST ? e : null
+      return null != e && e.type === O.SidebarType.VIEW_MESSAGE_REQUEST ? e : null
     }),
     _ = null == h ? void 0 : h.channelId,
     C = null != h,
     m = (0, k.useIsEitherTypeOfMessageRequest)(_),
     S = (0, w.useHasUserRepliedInChannel)(_);
   s.useEffect(() => {
-    null != _ && !m && S && C && ((0, v.transitionToChannel)(_), O.default.closeChannelSidebar(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
+    null != _ && !m && S && C && ((0, v.transitionToChannel)(_), R.default.closeChannelSidebar(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
   }, [_, S, C, m]);
   let [I, T] = s.useState(Z.MessageRequestSections.REQUESTS);
   return (0, p.usePageTitle)({
@@ -266,17 +266,17 @@ let eo = (0, h.default)(function(e) {
         [en.threadSidebarOpen]: C,
         [en.threadSidebarFloating]: C && d
       }),
-      children: [(0, a.jsxs)(N.default, {
+      children: [(0, a.jsxs)(A.default, {
         className: (0, G.getThemeClass)(l),
         toolbar: !0,
-        children: [(0, a.jsx)(N.default.Icon, {
+        children: [(0, a.jsx)(A.default.Icon, {
           icon: b.default,
           "aria-hidden": !0
         }), (0, a.jsx)(ei, {
-          children: (0, a.jsx)(N.default.Title, {
+          children: (0, a.jsx)(A.default.Title, {
             children: ee.default.Messages.MESSAGE_REQUESTS
           })
-        }), (0, a.jsx)(N.default.Divider, {}), (0, a.jsxs)(c.TabBar, {
+        }), (0, a.jsx)(A.default.Divider, {}), (0, a.jsxs)(c.TabBar, {
           "aria-label": ee.default.Messages.MESSAGE_REQUESTS,
           selectedItem: I,
           type: "top-pill",

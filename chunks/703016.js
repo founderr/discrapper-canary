@@ -20,11 +20,11 @@ var a = n("913527"),
   p = n("944486"),
   T = n("9156"),
   g = n("594174"),
-  N = n("51144"),
-  A = n("196051"),
+  A = n("51144"),
+  N = n("196051"),
   v = n("441729"),
-  O = n("653477"),
-  R = n("981631"),
+  R = n("653477"),
+  O = n("981631"),
   L = n("689938");
 let M = [],
   P = null,
@@ -38,7 +38,7 @@ function b(e, t, n, a) {
       var a;
       let s = g.default.getUser(t);
       if (null == s) return e;
-      return null !== (a = _.default.getNick(n, s.id)) && void 0 !== a ? a : N.default.getName(s)
+      return null !== (a = _.default.getNick(n, s.id)) && void 0 !== a ? a : A.default.getName(s)
     }).replace(/<@&?(\d+)>/g, (e, t) => {
       let n = null != l ? C.default.getRole(l.id, t) : null;
       return null != n && null != n.name ? n.name : L.default.Messages.MESSAGE_TTS_DELETED_ROLE
@@ -73,12 +73,12 @@ function U() {
 }
 async function j(e, t, n, a, s) {
   let l = i.createUtterance(e, n);
-  null !== l && (null == y && U(), t ? await (0, A.stopSpeaking)() : null == P || P.removeEventListener("end", A.stopSpeaking), l.addEventListener("end", A.stopSpeaking), null != a && l.addEventListener("start", a), null != s && l.addEventListener("end", s), P = l, i.speakUtterance(l, y))
+  null !== l && (null == y && U(), t ? await (0, N.stopSpeaking)() : null == P || P.removeEventListener("end", N.stopSpeaking), l.addEventListener("end", N.stopSpeaking), null != a && l.addEventListener("start", a), null != s && l.addEventListener("end", s), P = l, i.speakUtterance(l, y))
 }
 
 function G(e, t, n, a, s) {
   j(e, t, s, () => {
-    (0, A.speakingMessage)(n, a)
+    (0, N.speakingMessage)(n, a)
   })
 }
 
@@ -94,7 +94,7 @@ function w(e) {
 }
 
 function k() {
-  return null !== P && P.removeEventListener("end", A.stopSpeaking), i.cancelAll(), P = null, !0
+  return null !== P && P.removeEventListener("end", N.stopSpeaking), i.cancelAll(), P = null, !0
 }
 
 function F(e) {
@@ -102,11 +102,11 @@ function F(e) {
   let {
     message: s,
     channel: l
-  } = e, i = s.type === R.MessageTypes.REPLY ? u.default.getMessageByReference(s.messageReference) : null, r = (null == i ? void 0 : i.state) === u.ReferencedMessageState.LOADED ? null == i ? void 0 : null === (t = i.message) || void 0 === t ? void 0 : t.author : null, o = null != r ? null !== (n = _.default.getNick(l.guild_id, null == r ? void 0 : r.id)) && void 0 !== n ? n : N.default.getName(r) : null, d = l.getGuildId(), c = null !== (a = _.default.getNick(d, s.author.id)) && void 0 !== a ? a : N.default.getName(s.author);
+  } = e, i = s.type === O.MessageTypes.REPLY ? u.default.getMessageByReference(s.messageReference) : null, r = (null == i ? void 0 : i.state) === u.ReferencedMessageState.LOADED ? null == i ? void 0 : null === (t = i.message) || void 0 === t ? void 0 : t.author : null, o = null != r ? null !== (n = _.default.getNick(l.guild_id, null == r ? void 0 : r.id)) && void 0 !== n ? n : A.default.getName(r) : null, d = l.getGuildId(), c = null !== (a = _.default.getNick(d, s.author.id)) && void 0 !== a ? a : A.default.getName(s.author);
   return G(b(s.content, c, d, o), !0, l.id, s.id), !0
 }
 
-function B(e) {
+function H(e) {
   var t, n, a, s, l, i, r;
   let {
     channelId: o,
@@ -117,30 +117,30 @@ function B(e) {
   let C = h.default.getChannel(o);
   if (null == C) return !1;
   let g = p.default.getChannelId(),
-    A = E.default.getCurrentSidebarChannelId(g),
-    v = o === g || o === A,
+    N = E.default.getCurrentSidebarChannelId(g),
+    v = o === g || o === N,
     L = c.EnableTTSCommand.getSetting() && u.tts && v,
     P = S.default.getTTSType(),
-    y = (null === (t = u.author) || void 0 === t ? void 0 : t.id) !== f.default.getId() && (P === R.TTSNotificationTypes.ALL_CHANNELS || P === R.TTSNotificationTypes.SELECTED_CHANNEL && v);
+    y = (null === (t = u.author) || void 0 === t ? void 0 : t.id) !== f.default.getId() && (P === O.TTSNotificationTypes.ALL_CHANNELS || P === O.TTSNotificationTypes.SELECTED_CHANNEL && v);
   if ((L || y) && ((null === (n = u.author) || void 0 === n ? void 0 : n.id) == null || !I.default.isBlocked(u.author.id))) {
     if (M.indexOf(u.id) >= 0) return !1;
     M.unshift(u.id) > 10 && M.pop();
     let e = C.getGuildId();
     if (null != e && T.default.getMutedChannels(e).has(o)) return !1;
-    let t = null !== (i = null !== (l = _.default.getNick(e, null === (a = u.author) || void 0 === a ? void 0 : a.id)) && void 0 !== l ? l : N.default.getName(u.author)) && void 0 !== i ? i : "",
-      n = u.type === R.MessageTypes.REPLY ? null === (s = u.referenced_message) || void 0 === s ? void 0 : s.author : null,
-      d = null != n ? null !== (r = _.default.getNick(e, null == n ? void 0 : n.id)) && void 0 !== r ? r : N.default.getName(n) : null;
-    G(b(u.content, t, e, d), !1, C.id, u.id, O.MAX_TTS_LENGTH)
+    let t = null !== (i = null !== (l = _.default.getNick(e, null === (a = u.author) || void 0 === a ? void 0 : a.id)) && void 0 !== l ? l : A.default.getName(u.author)) && void 0 !== i ? i : "",
+      n = u.type === O.MessageTypes.REPLY ? null === (s = u.referenced_message) || void 0 === s ? void 0 : s.author : null,
+      d = null != n ? null !== (r = _.default.getNick(e, null == n ? void 0 : n.id)) && void 0 !== r ? r : A.default.getName(n) : null;
+    G(b(u.content, t, e, d), !1, C.id, u.id, R.MAX_TTS_LENGTH)
   }
   return !1
 }
 
-function H(e) {
+function B(e) {
   let {
     id: t,
     channelId: n
   } = e, a = v.default.currentMessage;
-  return null != a && t === a.messageId && n === a.channelId && ((0, A.stopSpeaking)(), !0)
+  return null != a && t === a.messageId && n === a.channelId && ((0, N.stopSpeaking)(), !0)
 }
 
 function V() {
@@ -148,6 +148,6 @@ function V() {
 }
 t.default = {
   init() {
-    l.default.subscribe("SPEAK_TEXT", w), l.default.subscribe("SPEAK_MESSAGE", F), l.default.subscribe("STOP_SPEAKING", k), l.default.subscribe("MESSAGE_CREATE", B), l.default.subscribe("MESSAGE_DELETE", H), l.default.subscribe("AUDIO_TOGGLE_SELF_DEAF", V), l.default.subscribe("USER_SETTINGS_PROTO_UPDATE", U), l.default.subscribe("I18N_LOAD_SUCCESS", U)
+    l.default.subscribe("SPEAK_TEXT", w), l.default.subscribe("SPEAK_MESSAGE", F), l.default.subscribe("STOP_SPEAKING", k), l.default.subscribe("MESSAGE_CREATE", H), l.default.subscribe("MESSAGE_DELETE", B), l.default.subscribe("AUDIO_TOGGLE_SELF_DEAF", V), l.default.subscribe("USER_SETTINGS_PROTO_UPDATE", U), l.default.subscribe("I18N_LOAD_SUCCESS", U)
   }
 }

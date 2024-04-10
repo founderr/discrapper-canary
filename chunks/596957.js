@@ -20,11 +20,11 @@ var a = n("735250"),
   p = n("390697"),
   T = n("434184"),
   g = n("701861"),
-  N = n("437314"),
-  A = n("696577"),
+  A = n("437314"),
+  N = n("696577"),
   v = n("163417"),
-  O = n("492347"),
-  R = n("42575"),
+  R = n("492347"),
+  O = n("42575"),
   L = n("617015"),
   M = n("981631"),
   P = n("689938"),
@@ -52,32 +52,32 @@ t.default = function(e) {
       ...G,
       [t]: ""
     })
-  }, [G, t]), B = x.filter(t, G[t]);
-  if (0 === B.length && "" === G[t]) return (0, a.jsxs)("div", {
+  }, [G, t]), H = x.filter(t, G[t]);
+  if (0 === H.length && "" === G[t]) return (0, a.jsxs)("div", {
     className: y.emptyStateContainer,
-    children: [t === M.FriendsSections.ONLINE && (0, a.jsx)(_.default, {}), (0, a.jsx)(N.default, {
+    children: [t === M.FriendsSections.ONLINE && (0, a.jsx)(_.default, {}), (0, a.jsx)(A.default, {
       type: t,
       onClick: () => {
         u.default.setSection(M.FriendsSections.ADD_FRIEND)
       }
     }, D)]
   });
-  let H = 0 === B.length && "" !== G[t],
-    V = B.filter(e => e.type === M.RelationshipTypes.PENDING_INCOMING).length,
+  let B = 0 === H.length && "" !== G[t],
+    V = H.filter(e => e.type === M.RelationshipTypes.PENDING_INCOMING).length,
     Y = t === M.FriendsSections.PENDING && V > 0 && j && V >= L.MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
   return (0, a.jsx)(h.AnalyticsLocationProvider, {
     value: l,
     children: (0, a.jsxs)(c.default, {
       section: M.AnalyticsSections.FRIENDS_LIST,
       children: [(0, a.jsx)(I.default, {
-        className: i()(y.searchBar, H ? y.searchEmptyState : null),
+        className: i()(y.searchBar, B ? y.searchEmptyState : null),
         query: G[t],
         onChange: k,
         onClear: F,
         size: I.default.Sizes.MEDIUM
       }), t === M.FriendsSections.ONLINE && "" === G[t] && (0, a.jsx)(_.default, {}), (0, a.jsxs)("div", {
         className: y.sectionTitle,
-        children: [(0, a.jsx)(O.default, {
+        children: [(0, a.jsx)(R.default, {
           id: n,
           title: function(e, t) {
             switch (e) {
@@ -102,7 +102,7 @@ t.default = function(e) {
                   count: t.toString()
                 })
             }
-          }(t, B.length)
+          }(t, H.length)
         }), Y && (0, a.jsx)(o.Button, {
           look: o.ButtonLooks.LINK,
           color: o.ButtonColors.LINK,
@@ -114,14 +114,14 @@ t.default = function(e) {
           "aria-label": P.default.Messages.CLEAR_INCOMING_REQUESTS_BUTTON,
           children: P.default.Messages.CLEAR_INCOMING_REQUESTS_BUTTON
         })]
-      }), H ? (0, a.jsx)("div", {
+      }), B ? (0, a.jsx)("div", {
         className: y.emptyStateContainer,
-        children: (0, a.jsx)(N.default, {
-          type: N.FriendsSearchStatus.SECTION_NO_RESULTS
+        children: (0, a.jsx)(A.default, {
+          type: A.FriendsSearchStatus.SECTION_NO_RESULTS
         }, D)
       }) : (0, a.jsx)(v.default, {
         relationshipCount: U,
-        statusSections: [B],
+        statusSections: [H],
         renderRow: function(e) {
           switch (t) {
             case M.FriendsSections.BLOCKED:
@@ -130,12 +130,12 @@ t.default = function(e) {
                 isFocused: b
               });
             case M.FriendsSections.PENDING:
-              return (0, a.jsx)(A.default, {
+              return (0, a.jsx)(N.default, {
                 ...e,
                 isFocused: b
               });
             case M.FriendsSections.SUGGESTIONS:
-              return (0, a.jsx)(R.default, {
+              return (0, a.jsx)(O.default, {
                 ...e,
                 isFocused: b
               });

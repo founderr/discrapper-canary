@@ -16,14 +16,14 @@ var i = n("735250"),
   f = n("984370"),
   h = n("910611"),
   p = n("131704"),
-  g = n("523746"),
-  m = n("592125"),
+  m = n("523746"),
+  g = n("592125"),
   E = n("430824"),
   S = n("699516"),
   v = n("944486"),
-  y = n("125015"),
-  I = n("389320"),
-  T = n("465670"),
+  T = n("125015"),
+  y = n("389320"),
+  I = n("465670"),
   N = n("548343"),
   O = n("339983"),
   _ = n("823779"),
@@ -56,9 +56,9 @@ class D extends a.Component {
       isBlocked: s
     } = this.props;
     if (!(0, p.isPrivate)(n.type)) return null;
-    let o = y.default,
+    let o = T.default,
       d = !1;
-    return a ? l ? (e = R.default.Messages.LEAVE_CALL, o = I.default) : e = R.default.Messages.JOIN_CALL : s ? (e = R.default.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, t = r.Tooltip.Colors.RED, d = !0) : e = R.default.Messages.START_VOICE_CALL, (0, i.jsx)(f.default.Icon, {
+    return a ? l ? (e = R.default.Messages.LEAVE_CALL, o = y.default) : e = R.default.Messages.JOIN_CALL : s ? (e = R.default.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, t = r.Tooltip.Colors.RED, d = !0) : e = R.default.Messages.START_VOICE_CALL, (0, i.jsx)(f.default.Icon, {
       icon: o,
       tooltip: e,
       onClick: this.handleClickCall,
@@ -84,7 +84,7 @@ class D extends a.Component {
     return p && !n ? (0, i.jsxs)(A.default.Bar, {
       className: M.opacityHeader,
       children: [(0, i.jsx)(x.default, {}), (0, i.jsx)(f.default.Icon, {
-        icon: T.default,
+        icon: I.default,
         onClick: this.handleCloseOpacitySettings,
         tooltip: R.default.Messages.CLOSE
       })]
@@ -170,10 +170,10 @@ function b(e) {
   let {
     channel: t,
     ...n
-  } = e, a = (0, o.useStateFromStores)([v.default, m.default], () => {
+  } = e, a = (0, o.useStateFromStores)([v.default, g.default], () => {
     let e = v.default.getVoiceChannelId();
-    return m.default.getChannel(e)
-  }), l = (0, o.useStateFromStores)([E.default], () => E.default.getGuild(t.guild_id)), s = (0, o.useStateFromStores)([g.default], () => g.default.isCallActive(t.id)), r = (0, c.default)(t), d = (0, o.useStateFromStores)([S.default], () => !!t.isDM() && null != t.getRecipientId() && S.default.isBlocked(t.getRecipientId()));
+    return g.default.getChannel(e)
+  }), l = (0, o.useStateFromStores)([E.default], () => E.default.getGuild(t.guild_id)), s = (0, o.useStateFromStores)([m.default], () => m.default.isCallActive(t.id)), r = (0, c.default)(t), d = (0, o.useStateFromStores)([S.default], () => !!t.isDM() && null != t.getRecipientId() && S.default.isBlocked(t.getRecipientId()));
   return (0, i.jsx)(D, {
     channel: t,
     channelName: r,

@@ -26,10 +26,10 @@ t.default = function(e) {
     trackingSource: p,
     undismissable: T,
     onDismissed: g,
-    onClick: N,
-    cta: A,
+    onClick: A,
+    cta: N,
     ctaColor: v,
-    centerText: O
+    centerText: R
   } = e;
   s.useEffect(() => {
     _(f.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
@@ -37,8 +37,8 @@ t.default = function(e) {
       guild_id: t.id
     })
   }, [t.id, C]);
-  let R = null;
-  "function" == typeof A ? R = A() : null != A && (R = (0, a.jsx)(o.Button, {
+  let O = null;
+  "function" == typeof N ? O = N() : null != N && (O = (0, a.jsx)(o.Button, {
     className: h.button,
     size: o.Button.Sizes.SMALL,
     onClick: () => {
@@ -46,11 +46,11 @@ t.default = function(e) {
         source: p,
         guild_id: t.id,
         notice_type: C
-      }), null == N || N()
+      }), null == A || A()
     },
     fullWidth: !0,
     color: v,
-    children: A
+    children: N
   }));
   let L = null;
   "function" == typeof n ? L = n() : null != n && (L = (0, a.jsx)(o.Text, {
@@ -59,7 +59,7 @@ t.default = function(e) {
     className: i()(h.title, {
       [h.noImageTitle]: null == r
     }, {
-      [h.center]: O
+      [h.center]: R
     }),
     children: n
   }));
@@ -94,12 +94,12 @@ t.default = function(e) {
       className: h.message,
       children: [L, (0, a.jsx)(o.Text, {
         className: i()({
-          [h.center]: O
+          [h.center]: R
         }),
         variant: "text-sm/normal",
         color: "text-muted",
         children: l
-      }), R]
+      }), O]
     })]
   })
 }

@@ -43,16 +43,16 @@ function C(e) {
     {
       color: g
     } = (0, c.getAchievementStyles)(T),
-    N = (0, s.isThemeDark)(m) ? h : _,
-    A = (I.size - I.offset - 2 * I.stroke) * .8,
+    A = (0, s.isThemeDark)(m) ? h : _,
+    N = (I.size - I.offset - 2 * I.stroke) * .8,
     v = I.size - I.stroke,
-    O = {
-      width: .4 * A,
-      height: .4 * A
-    },
     R = {
-      width: O.width + 1,
-      height: O.height + 1,
+      width: .4 * N,
+      height: .4 * N
+    },
+    O = {
+      width: R.width + 1,
+      height: R.height + 1,
       right: I.stroke + 1,
       bottom: I.stroke + 1,
       padding: 0
@@ -68,23 +68,23 @@ function C(e) {
     children: [(0, a.jsx)("div", {
       className: E.trophyIconContainer,
       children: (0, a.jsx)(d.default, {
-        color: f ? g : (0, r.getColor)(N.trophy),
-        width: A,
-        height: A
+        color: f ? g : (0, r.getColor)(A.trophy),
+        width: N,
+        height: N
       })
     }), !f && (0, a.jsx)("div", {
       className: E.lockContainer,
-      style: R,
+      style: O,
       children: (0, a.jsx)(u.default, {
-        color: (0, r.getColor)(N.locked),
-        ...O
+        color: (0, r.getColor)(A.locked),
+        ...R
       })
     }), f && T === c.PoggermodeAchievementRarity.LEGENDARY && (0, a.jsx)("div", {
       className: E.lockContainer,
-      style: R,
+      style: O,
       children: (0, a.jsx)(o.default, {
         className: E.confettiIcon,
-        ...O
+        ...R
       })
     })]
   })

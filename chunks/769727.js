@@ -20,17 +20,17 @@ var a = n("735250"),
   p = n("10473"),
   T = n("207796"),
   g = n("980721"),
-  N = n("308083"),
-  A = n("689938"),
+  A = n("308083"),
+  N = n("689938"),
   v = n("24953");
 
-function O() {
+function R() {
   let [e, t, n, l] = (0, T.useClanDiscoveryUIStore)(e => [e.selectedGames, e.setSelectedGames, e.game, e.setGame], o.default), i = s.useCallback(() => {
     null != n && null != l && (n === T.ClanDiscoveryGame.GENSHIN ? (l(T.ClanDiscoveryGame.VALORANT), t([{
-      applicationId: N.VALORANT_ID,
+      applicationId: A.VALORANT_ID,
       name: "Valorant"
     }])) : (l(T.ClanDiscoveryGame.GENSHIN), t([{
-      applicationId: N.GENSHIN_ID,
+      applicationId: A.GENSHIN_ID,
       name: "Genshin Impact"
     }])))
   }, [n, l, t]);
@@ -46,15 +46,15 @@ function O() {
     }), (0, a.jsx)(_.Text, {
       variant: "text-xs/medium",
       color: "none",
-      children: A.default.Messages.CLAN_DISCOVERY_GAME_FILTER.format({
+      children: N.default.Messages.CLAN_DISCOVERY_GAME_FILTER.format({
         count: e.length
       })
     })]
   })
 }
 
-function R() {
-  let e = s.useMemo(N.getPlaystyleOptions, []),
+function O() {
+  let e = s.useMemo(A.getPlaystyleOptions, []),
     {
       playstyle: t,
       setMode: n
@@ -139,7 +139,7 @@ function M() {
     }), (0, a.jsx)(_.Text, {
       variant: "text-xs/medium",
       color: "none",
-      children: null !== (e = null == t ? void 0 : t.start) && void 0 !== e ? e : A.default.Messages.CLAN_DISCOVERY_PRIMETIME_FILTER_EMPTY
+      children: null !== (e = null == t ? void 0 : t.start) && void 0 !== e ? e : N.default.Messages.CLAN_DISCOVERY_PRIMETIME_FILTER_EMPTY
     })]
   })
 }
@@ -182,7 +182,7 @@ function x() {
     className: v.toolbar,
     children: [(0, a.jsxs)("div", {
       className: v.preferences,
-      children: [(0, a.jsx)(O, {}), (0, a.jsx)(R, {}), (0, a.jsx)(L, {}), (0, a.jsx)(M, {})]
+      children: [(0, a.jsx)(R, {}), (0, a.jsx)(O, {}), (0, a.jsx)(L, {}), (0, a.jsx)(M, {})]
     }), (0, a.jsxs)("div", {
       className: v.actions,
       children: [(0, a.jsx)(P, {}), (0, a.jsx)(y, {})]
@@ -199,11 +199,11 @@ function D() {
       children: [(0, a.jsx)(_.Heading, {
         variant: "heading-md/medium",
         color: "header-primary",
-        children: A.default.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE
+        children: N.default.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE
       }), (0, a.jsx)(_.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
-        children: A.default.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE.format({
+        children: N.default.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE.format({
           playstyle: null == t ? void 0 : t.name
         })
       })]
@@ -219,7 +219,7 @@ function D() {
 function b() {
   let e = (0, _.useToken)(_.tokens.colors.WHITE),
     [t, n, l] = (0, T.useClanDiscoveryUIStore)(e => [e.selectedPlaystyle, e.setSelectedPlaystyle, e.setMode], o.default),
-    r = s.useMemo(() => Object.values((0, N.getPlaystyleOptions)()), []),
+    r = s.useMemo(() => Object.values((0, A.getPlaystyleOptions)()), []),
     u = s.useCallback(() => {
       l(T.ClanDiscoveryMode.DISCOVERY)
     }, [l]);
@@ -231,7 +231,7 @@ function b() {
         onClick: u,
         look: _.ButtonLooks.OUTLINED,
         color: _.ButtonColors.PRIMARY,
-        children: A.default.Messages.SAVE
+        children: N.default.Messages.SAVE
       })
     }), (0, a.jsxs)("div", {
       className: v.playstyleSelectorContent,
@@ -240,11 +240,11 @@ function b() {
         children: [(0, a.jsx)(_.Heading, {
           variant: "heading-xxl/normal",
           color: "header-primary",
-          children: A.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE
+          children: N.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE
         }), (0, a.jsx)(_.Text, {
           variant: "text-md/normal",
           color: "header-secondary",
-          children: A.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE
+          children: N.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE
         })]
       }), (0, a.jsx)("div", {
         className: v.playstyles,

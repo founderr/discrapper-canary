@@ -4,14 +4,14 @@ var i, a, l, s, o, r, d, u, c = n("512722"),
   f = n.n(c),
   h = n("153832"),
   p = n("442837"),
-  g = n("570140"),
-  m = n("13245"),
+  m = n("570140"),
+  g = n("13245"),
   E = n("836932"),
   S = n("175553"),
   v = n("158979"),
-  y = n("181912"),
-  I = n("194295"),
-  T = n("998033"),
+  T = n("181912"),
+  y = n("194295"),
+  I = n("998033"),
   N = n("181364"),
   O = n("24313"),
   _ = n("435064"),
@@ -29,8 +29,8 @@ var i, a, l, s, o, r, d, u, c = n("512722"),
   w = n("974180"),
   V = n("237997"),
   U = n("70956"),
-  B = n("150097"),
-  F = n("129724"),
+  F = n("150097"),
+  B = n("129724"),
   G = n("449224"),
   H = n("981631"),
   z = n("987650"),
@@ -48,7 +48,7 @@ let Y = 5 * U.default.Millis.SECOND,
   J = [],
   q = (e, t, n) => {
     let i = t ? H.OverlayNotificationStatus.TIMED_OUT : H.OverlayNotificationStatus.DISMISSED;
-    return setTimeout(() => m.default.updateNotificationStatus(e, i), null != n ? n : Y)
+    return setTimeout(() => g.default.updateNotificationStatus(e, i), null != n ? n : Y)
   };
 
 function Q(e) {
@@ -101,7 +101,7 @@ function en(e) {
   let a = M.default.getChannel(t);
   if (null == a || !a.isPrivate() || j.default.getStatus() === H.StatusTypes.DND || x.FocusMode.getSetting()) return !1;
   let l = J.find(e => 1 === e.type && e.channelId === t && e.messageType === H.MessageTypes.CALL);
-  null != l && Q(l.id), et((0, y.default)(a), {
+  null != l && Q(l.id), et((0, T.default)(a), {
     priority: 1,
     expirationExternallyManaged: !0,
     type: 2,
@@ -121,7 +121,7 @@ u = "OverlayNotificationsStore", (d = "displayName") in(r = ei) ? Object.defineP
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[d] = u, t.default = new ei(g.default, __OVERLAY__ ? {
+}) : r[d] = u, t.default = new ei(m.default, __OVERLAY__ ? {
   OVERLAY_UPDATE_NOTIFICATION_STATUS: function(e) {
     let {
       notificationId: t,
@@ -169,7 +169,7 @@ u = "OverlayNotificationsStore", (d = "displayName") in(r = ei) ? Object.defineP
     } = e, s = M.default.getChannel(a), o = k.default.getUser(null === (t = l.author) || void 0 === t ? void 0 : t.id);
     if (null == s || null == o) return !1;
     if ((null === (n = l.activity) || void 0 === n ? void 0 : n.type) === H.ActivityActionTypes.JOIN || (null === (i = l.activity) || void 0 === i ? void 0 : i.type) === H.ActivityActionTypes.JOIN_REQUEST) {
-      if (!(0, B.shouldNotify)(l, a, !0, !0)) return !1;
+      if (!(0, F.shouldNotify)(l, a, !0, !0)) return !1;
       let e = function(e, t, n) {
         let i, a;
         if (f()(null != t.activity, "received null message activity"), n.id === R.default.getId()) return !1;
@@ -182,7 +182,7 @@ u = "OverlayNotificationsStore", (d = "displayName") in(r = ei) ? Object.defineP
             break;
           case H.ActivityActionTypes.JOIN_REQUEST:
             if (null == (i = j.default.getApplicationActivity(l.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
-            a = (0, I.default)(e, n, l, i)
+            a = (0, y.default)(e, n, l, i)
         }
         if (null == a) return !1;
         let s = et(a, {
@@ -194,9 +194,9 @@ u = "OverlayNotificationsStore", (d = "displayName") in(r = ei) ? Object.defineP
       }(s, l, o);
       if (!1 !== e) return e
     }
-    if ((!V.default.isInstanceUILocked() || V.default.isPinned(H.OverlayWidgets.TEXT)) && a === b.default.getChannelId() || V.default.getTextChatNotificationMode() === H.OverlayNotificationTextChatTypes.DISABLED || P.default.disableNotifications || !(0, B.shouldNotify)(l, a)) return !1;
+    if ((!V.default.isInstanceUILocked() || V.default.isPinned(H.OverlayWidgets.TEXT)) && a === b.default.getChannelId() || V.default.getTextChatNotificationMode() === H.OverlayNotificationTextChatTypes.DISABLED || P.default.disableNotifications || !(0, F.shouldNotify)(l, a)) return !1;
     let r = !L.default.isSoundDisabled(w.MESSAGE_SOUND);
-    et((0, T.default)(s, l, o, r), {
+    et((0, I.default)(s, l, o, r), {
       type: 1,
       channelId: s.id,
       messageType: l.type
@@ -242,7 +242,7 @@ u = "OverlayNotificationsStore", (d = "displayName") in(r = ei) ? Object.defineP
   },
   CLIPS_SAVE_CLIP: function() {
     et((0, C.createClipsNotification)(W.default.Messages.CLIPS_NOTIFICATION_TITLE.format({
-      duration: (0, F.getSecondsSliderLabel)(_.default.getSettings().clipsLength / 1e3, !0)
+      duration: (0, B.getSecondsSliderLabel)(_.default.getSettings().clipsLength / 1e3, !0)
     })))
   },
   CLIPS_SAVE_CLIP_ERROR: function() {

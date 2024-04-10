@@ -19,8 +19,8 @@ var i = n("735250"),
   T = n("887208"),
   f = n("697426"),
   S = n("689938"),
-  h = n("89358");
-let A = [8, 8, 8, 8];
+  A = n("89358");
+let h = [8, 8, 8, 8];
 
 function m(e) {
   let {
@@ -32,11 +32,11 @@ function m(e) {
   return (0, i.jsx)(l.Clickable, {
     ...s,
     onClick: r,
-    className: a()(h.categoryIcon, {
-      [h.selected]: n
+    className: a()(A.categoryIcon, {
+      [A.selected]: n
     }),
     children: (0, i.jsx)(t, {
-      className: h.categoryIconIcon
+      className: A.categoryIconIcon
     })
   })
 }
@@ -101,7 +101,7 @@ function N(e, t, n, r) {
         case f.SoundboardSoundGridSectionType.GUILD:
           return (0, i.jsx)(l.Clickable, {
             ...r,
-            className: h.category,
+            className: A.category,
             onClick: t,
             children: (0, i.jsx)(u.default, {
               guild: e.categoryInfo.guild,
@@ -126,10 +126,10 @@ function O(e) {
   let {
     soundboardListRef: t,
     categories: n,
-    listPadding: s = A
+    listPadding: s = h
   } = e, a = r.useRef(null);
   return (0, i.jsx)(_.default, {
-    className: h.categoryList,
+    className: A.categoryList,
     categoryListRef: a,
     expressionsListRef: t,
     store: d.SoundboardPickerStore,

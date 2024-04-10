@@ -11,8 +11,8 @@ var i, r, s, a, o = n("392711"),
   T = n("427679"),
   f = n("569471"),
   S = n("195663"),
-  h = n("131704"),
-  A = n("601964"),
+  A = n("131704"),
+  h = n("601964"),
   m = n("598077"),
   N = n("386438"),
   O = n("700785"),
@@ -64,24 +64,24 @@ function w(e) {
   return null != n ? n : y[e] = G(e, t)
 }
 
-function B(e) {
+function k(e) {
   if (null != e) {
     var t;
     P[e] = (null !== (t = P[e]) && void 0 !== t ? t : 0) + 1
   }
 }
 
-function k() {
+function B() {
   for (let e in M = {}, y = {}, P) P[e] += 1;
   U += 1
 }
 
 function V() {
-  k()
+  B()
 }
 
 function F() {
-  k()
+  B()
 }
 
 function x(e) {
@@ -90,7 +90,7 @@ function x(e) {
     user: n
   } = e;
   if (n.id !== (null === (t = L.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
-  k()
+  B()
 }
 
 function H() {
@@ -113,7 +113,7 @@ function j(e) {
   let n = p.default.getMutableBasicGuildChannelsForGuild(t);
   l().forEach(n, e => {
     delete y[e.id]
-  }), U += 1, B(t)
+  }), U += 1, k(t)
 }
 
 function W(e) {
@@ -138,18 +138,18 @@ function K(e) {
   let n = p.default.getMutableBasicGuildChannelsForGuild(t);
   l().forEach(n, e => {
     delete y[e.id]
-  }), U += 1, B(t)
+  }), U += 1, k(t)
 }
 
 function z(e, t, n, i) {
   let r = O.NONE;
-  if (e instanceof h.ChannelRecordBase) {
-    if (h.THREAD_CHANNEL_TYPES.has(e.type)) {
+  if (e instanceof A.ChannelRecordBase) {
+    if (A.THREAD_CHANNEL_TYPES.has(e.type)) {
       let r = p.default.getChannel(e.parent_id);
       return null == r ? O.NONE : O.applyThreadPermissions(e, z(r, t, n, i), f.default.hasJoined(e.id))
     }
     r = w(e.id)
-  } else e instanceof A.default && (r = b(e.id));
+  } else e instanceof h.default && (r = b(e.id));
   return void 0 !== t || void 0 !== n || void 0 !== i ? O.computePermissions({
     user: L.default.getCurrentUser(),
     context: e,
@@ -164,7 +164,7 @@ class X extends(i = d.default.Store) {
     this.waitFor(L.default, g.default, p.default, C.default, R.default, f.default, T.default, E.default)
   }
   getChannelPermissions(e) {
-    return h.THREAD_CHANNEL_TYPES.has(e.type) ? G(e.id) : w(e.id)
+    return A.THREAD_CHANNEL_TYPES.has(e.type) ? G(e.id) : w(e.id)
   }
   getGuildPermissions(e) {
     return b(e.id)
@@ -280,7 +280,7 @@ a = "PermissionStore", (s = "displayName") in(r = X) ? Object.defineProperty(r, 
         context: n
       });
     if (y[n.id] === r) return !1;
-    y[n.id] = r, U += 1, B(n.getGuildId())
+    y[n.id] = r, U += 1, k(n.getGuildId())
   },
   THREAD_CREATE: H,
   THREAD_UPDATE: H,
@@ -302,7 +302,7 @@ a = "PermissionStore", (s = "displayName") in(r = X) ? Object.defineProperty(r, 
           user: i,
           context: t
         });
-      y[t.id] !== r && (y[t.id] = r, B(t.getGuildId()), n = !0)
+      y[t.id] !== r && (y[t.id] = r, k(t.getGuildId()), n = !0)
     }
     return !!n && (U += 1, n)
   },
@@ -322,16 +322,16 @@ a = "PermissionStore", (s = "displayName") in(r = X) ? Object.defineProperty(r, 
   },
   THREAD_MEMBER_UPDATE: function(e) {
     var t;
-    return (null === (t = L.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.userId && (B(e.guildId), !0)
+    return (null === (t = L.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.userId && (k(e.guildId), !0)
   },
   THREAD_MEMBERS_UPDATE: function(e) {
-    return !!(0, S.doesThreadMembersActionAffectMe)(e) && (B(e.guildId), !0)
+    return !!(0, S.doesThreadMembersActionAffectMe)(e) && (k(e.guildId), !0)
   },
   CHANNEL_DELETE: function(e) {
     let {
       channel: t
     } = e;
-    return delete y[t.id], U += 1, B(t.guild_id), !1
+    return delete y[t.id], U += 1, k(t.guild_id), !1
   },
   GUILD_ROLE_CREATE: j,
   GUILD_ROLE_UPDATE: j,

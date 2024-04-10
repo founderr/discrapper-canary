@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   EmbeddedActivityTutorial: function() {
-    return N
+    return A
   },
   TutorialType: function() {
     return s
@@ -26,18 +26,18 @@ var a, s, l = n("735250"),
 (a = s || (s = {})).BOOSTING = "BOOSTING", a.NITRO = "NITRO", a.BASH_OUT = "BASH_OUT", a.GAME_NIGHT = "GAME_NIGHT";
 let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4",
   g = "https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png",
-  N = e => {
+  A = e => {
     let {
       channelId: t,
       markAsDismissed: n,
       tutorialType: a
     } = e, {
       analyticsLocation: s,
-      analyticsType: N,
-      ctaText: A,
+      analyticsType: A,
+      ctaText: N,
       dismissText: v,
-      description: O,
-      learnMore: R,
+      description: R,
+      learnMore: O,
       title: L,
       videoPosterUrl: M,
       videoUrl: P,
@@ -70,9 +70,9 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
     } = (0, E.default)(s);
     i.useEffect(() => {
       C.default.track(m.AnalyticEvents.TOOLTIP_VIEWED, {
-        type: N
+        type: A
       })
-    }, [N]);
+    }, [A]);
     let D = (0, u.useAppContext)() === m.AppContext.POPOUT,
       b = (0, r.useStateFromStores)([h.default], () => h.default.getChannel(t), [t]);
     return (0, l.jsx)(E.AnalyticsLocationProvider, {
@@ -104,7 +104,7 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
               className: p.subheaderText,
               variant: "text-xs/normal",
               color: "always-white",
-              children: [O, R ? (0, l.jsxs)(l.Fragment, {
+              children: [R, O ? (0, l.jsxs)(l.Fragment, {
                 children: [" ", (0, l.jsx)(o.Anchor, {
                   className: p.learnMoreLink,
                   href: "https://support.discord.com/hc/articles/4422142836759",
@@ -138,7 +138,7 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                     guildId: b.guild_id
                   }))
                 },
-                children: A
+                children: N
               })]
             })]
           })

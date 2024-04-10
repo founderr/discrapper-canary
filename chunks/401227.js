@@ -27,8 +27,8 @@ t.default = function(e) {
     renderButtonContents: T,
     active: f,
     onClick: S,
-    "aria-controls": h,
-    focusProps: A
+    "aria-controls": A,
+    focusProps: h
   } = e, [m, N] = r.useState(!1), [O, p] = r.useState(50), R = m || f, C = (0, d.getClass)(E, "emojiButton", R ? "Hovered" : "Normal");
   let g = (t = O, {
       "--custom-emoji-sprite-size": "".concat(24, "px"),
@@ -53,10 +53,10 @@ t.default = function(e) {
     onFocus: v,
     onClick: S,
     "aria-label": c.default.Messages.SELECT_EMOJI,
-    "aria-controls": h,
+    "aria-controls": A,
     "aria-expanded": f,
     "aria-haspopup": "dialog",
-    focusProps: A,
+    focusProps: h,
     children: null != T ? T() : (0, i.jsx)(o.Spring, {
       config: I,
       to: {

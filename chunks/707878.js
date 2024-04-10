@@ -12,8 +12,8 @@ var i = n("735250"),
   f = n("981631"),
   h = n("689938"),
   p = n("993384");
-let g = Object.values(c.OpacityBounds).map(e => 100 * e),
-  m = (0, d.uid)();
+let m = Object.values(c.OpacityBounds).map(e => 100 * e),
+  g = (0, d.uid)();
 class E extends a.PureComponent {
   handleUpdateBackgroundOpacity(e) {
     o.default.setTextWidgetOpacity((0, u.default)(e / 100)), o.default.track(f.AnalyticEvents.OVERLAY_SETTINGS_UPDATED, {
@@ -27,7 +27,7 @@ class E extends a.PureComponent {
     return (0, i.jsxs)("div", {
       className: p.container,
       children: [(0, i.jsx)(s.FormTitle, {
-        id: m,
+        id: g,
         tag: s.FormTitleTags.H5,
         className: p.title,
         children: h.default.Messages.FORM_LABEL_OVERLAY_CHAT_OPACITY
@@ -37,16 +37,16 @@ class E extends a.PureComponent {
           mini: !0,
           initialValue: this.initialValue,
           defaultValue: this.initialValue,
-          minValue: g[0],
-          maxValue: g[g.length - 1],
+          minValue: m[0],
+          maxValue: m[m.length - 1],
           handleSize: 10,
           onValueChange: this.handleUpdateBackgroundOpacity,
           asValueChanges: this.handlePreviewBackgroundOpacity,
-          markers: g,
+          markers: m,
           onMarkerRender: f.NOOP,
           equidistant: !0,
           stickToMarkers: !0,
-          "aria-labelledby": m
+          "aria-labelledby": g
         })
       })]
     })

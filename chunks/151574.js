@@ -13,8 +13,8 @@ var i, r, s = n("735250"),
   T = n("906732"),
   f = n("570220"),
   S = n("28546"),
-  h = n("285651"),
-  A = n("926491"),
+  A = n("285651"),
+  h = n("926491"),
   m = n("373228"),
   N = n("378233"),
   O = n("419922"),
@@ -32,9 +32,9 @@ var i, r, s = n("735250"),
 let b = (0, _.cssValueToNumber)(c.default.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
   G = (0, _.cssValueToNumber)(c.default.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_SIZE),
   w = 2 * G + (0, _.cssValueToNumber)(c.default.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN) + 2 * b,
-  B = () => Promise.resolve();
+  k = () => Promise.resolve();
 
-function k(e) {
+function B(e) {
   let {
     isFocused: t,
     isHidden: n,
@@ -71,7 +71,7 @@ function k(e) {
       size: G,
       sticker: a,
       className: U.__invalid_sticker
-    }), i !== h.StickerSendability.SENDABLE && (0, s.jsx)(p.default, {
+    }), i !== A.StickerSendability.SENDABLE && (0, s.jsx)(p.default, {
       size: 14
     })]
   })
@@ -139,8 +139,8 @@ t.default = a.memo(function(e) {
       }, [s]), E = (0, u.default)({
         id: "expression-suggestions-stickers",
         isEnabled: !0,
-        scrollToStart: B,
-        scrollToEnd: B,
+        scrollToStart: k,
+        scrollToEnd: k,
         orientation: d.Orientations.HORIZONTAL,
         setFocus: c,
         useVirtualFocus: !0
@@ -185,9 +185,9 @@ t.default = a.memo(function(e) {
         if (D.default.track(y.AnalyticEvents.AUTO_SUGGEST_EXPRESSION_SELECTED, {
             sticker_id: e.id,
             suggestion_trigger: W
-          }), t === h.StickerSendability.SENDABLE) G(!0), o(e, m.StickerSelectLocation.EXPRESSION_SUGGESTIONS), ee.cancel(), j("");
+          }), t === A.StickerSendability.SENDABLE) G(!0), o(e, m.StickerSelectLocation.EXPRESSION_SUGGESTIONS), ee.cancel(), j("");
         else if ((0, N.isStandardSticker)(e)) {
-          let t = A.default.getStickerPack(e.pack_id);
+          let t = h.default.getStickerPack(e.pack_id);
           null != t && (0, R.default)({
             stickerPack: t,
             analyticsLocations: Z
@@ -246,7 +246,7 @@ t.default = a.memo(function(e) {
                     sticker: n,
                     sendability: i
                   } = e;
-                  return (0, s.jsx)(k, {
+                  return (0, s.jsx)(B, {
                     isFocused: V === "".concat(t),
                     isHidden: eu,
                     sendability: i,

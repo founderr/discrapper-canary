@@ -32,16 +32,16 @@ t.default = e => {
     }
   }) : []);
   s.useEffect(() => {
-    null != C && !n.has(C) && I.length > 0 && A(C)
+    null != C && !n.has(C) && I.length > 0 && N(C)
   }, [I.length, C]);
-  let N = e => {
+  let A = e => {
       if (!n.has(e) || e === C) return;
       let a = new Map(n);
       a.delete(e), t({
         selectedGames: a
       })
     },
-    A = e => {
+    N = e => {
       if (n.size === E.MAX_NUM_SELECTED_GAMES || n.has(e)) return;
       let a = c.default.getGameById(e);
       if (null == a) return;
@@ -70,7 +70,7 @@ t.default = e => {
         options: p,
         value: "",
         placeholder: h.default.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
-        onChange: A,
+        onChange: N,
         isDisabled: n.size === E.MAX_NUM_SELECTED_GAMES
       })
     }), (0, a.jsxs)("div", {
@@ -93,7 +93,7 @@ t.default = e => {
             return (0, a.jsxs)("div", {
               className: _.selectedGame,
               children: [(0, a.jsx)(o.Clickable, {
-                onClick: () => t !== C ? N(t) : null,
+                onClick: () => t !== C ? A(t) : null,
                 className: i()(_.gameImagePlaceholder, {
                   [_.removableGame]: t !== C
                 }),
@@ -121,7 +121,7 @@ t.default = e => {
             className: _.selectedGame,
             children: [(0, a.jsx)(o.Clickable, {
               "aria-label": e.name,
-              onClick: () => A(e.applicationId),
+              onClick: () => N(e.applicationId),
               className: _.gameImagePlaceholder
             }), (0, a.jsx)(o.Text, {
               variant: "text-xs/normal",

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   extractDisplayName: function() {
-    return A
+    return N
   }
 });
 var a, s = n("392711"),
@@ -37,11 +37,11 @@ let _ = {},
     id: null,
     justChanged: !1
   },
-  N = /\(([^)]+)\)/;
+  A = /\(([^)]+)\)/;
 
-function A(e) {
+function N(e) {
   if ((0, d.getPlatform)() === d.PlatformTypes.WINDOWS) {
-    let t = e.name.match(N);
+    let t = e.name.match(A);
     if (null != t) return t[1]
   }
   return e.name
@@ -56,7 +56,7 @@ function v(e, t, n) {
     type: f.ConnectedDeviceType.INPUT_AND_OUTPUT
   } : e
 }
-class O extends(a = i.default.DeviceSettingsStore) {
+class R extends(a = i.default.DeviceSettingsStore) {
   initialize(e) {
     this.waitFor(c.default, u.default), C = null != e ? e : _
   }
@@ -82,14 +82,14 @@ class O extends(a = i.default.DeviceSettingsStore) {
     return g
   }
 }
-h(O, "displayName", "ConnectedDeviceStore"), h(O, "persistKey", "ConnectedDeviceStore"), t.default = new O(r.default, {
+h(R, "displayName", "ConnectedDeviceStore"), h(R, "persistKey", "ConnectedDeviceStore"), t.default = new R(r.default, {
   MEDIA_ENGINE_DEVICES: function(e) {
     let {
       inputDevices: t,
       outputDevices: n
     } = e, a = {};
     T.justChanged = !1, t.forEach(e => {
-      if (a[A(e)] = e.id, e.id === E.DEFAULT_DEVICE_ID) {
+      if (a[N(e)] = e.id, e.id === E.DEFAULT_DEVICE_ID) {
         var t;
         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
         n !== T.id && (T.justChanged = !0), T.id = n
@@ -97,7 +97,7 @@ h(O, "displayName", "ConnectedDeviceStore"), h(O, "persistKey", "ConnectedDevice
     });
     let s = {};
     if (g.justChanged = !1, n.forEach(e => {
-        if (s[A(e)] = e.id, e.id === E.DEFAULT_DEVICE_ID) {
+        if (s[N(e)] = e.id, e.id === E.DEFAULT_DEVICE_ID) {
           var t;
           let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
           n !== g.id && (g.justChanged = !0), g.id = n

@@ -34,7 +34,7 @@ n.r(t), n.d(t, {
     return C
   },
   getQuestsFromActivities: function() {
-    return B
+    return k
   },
   getQuestsInstructionsToWinReward: function() {
     return Y
@@ -55,7 +55,7 @@ n.r(t), n.d(t, {
     return G
   },
   isAssetAnimated: function() {
-    return k
+    return B
   },
   isCollectibleReward: function() {
     return U
@@ -85,7 +85,7 @@ n.r(t), n.d(t, {
     return f
   },
   questsEntitlementsFromServer: function() {
-    return A
+    return h
   },
   questsRewardCodeFromServer: function() {
     return S
@@ -194,7 +194,7 @@ function S(e) {
   }
 }
 
-function h(e) {
+function A(e) {
   return {
     skuId: e.sku_id,
     tenantMetadata: function(e) {
@@ -223,10 +223,10 @@ function h(e) {
   }
 }
 
-function A(e) {
+function h(e) {
   return {
     claimedAt: e.claimed_at,
-    items: e.entitlements.map(h),
+    items: e.entitlements.map(A),
     errors: e.errors
   }
 }
@@ -328,7 +328,7 @@ function w(e, t) {
   })
 }
 
-function B(e, t) {
+function k(e, t) {
   if (null == t || null == e) return null;
   for (let n of t) {
     if (null == n.application_id) continue;
@@ -338,7 +338,7 @@ function B(e, t) {
   return null
 }
 
-function k(e) {
+function B(e) {
   return e.endsWith(".webm") || e.endsWith(".mp4")
 }
 let V = /\.([a-zA-Z]+)$/;

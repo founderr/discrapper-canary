@@ -10,8 +10,8 @@ var i, r, s, a, o, l, u = n("392711"),
   f = n("770471"),
   S = n("860852");
 (s = i || (i = {}))[s.INVALID = 0] = "INVALID", s[s.VALID_USER_ONLY = 1] = "VALID_USER_ONLY", s[s.VALID = 2] = "VALID";
-let h = new Set,
-  A = new Set,
+let A = new Set,
+  h = new Set,
   m = new Set,
   N = [],
   O = {
@@ -20,7 +20,7 @@ let h = new Set,
     BROADCASTS_BY_VALIDITY: e => "validity:".concat(e)
   },
   p = new _.SecondaryIndexMap(function(e) {
-    let t = h.has(e.userId) ? 1 : 0;
+    let t = A.has(e.userId) ? 1 : 0;
     return null != e.viewers && (t = 2), [O.BROADCASTS_BY_USER_ID(e.userId), O.BROADCASTS_BY_CHANNEL_ID(e.channelId), O.BROADCASTS_BY_VALIDITY(t)]
   }, e => e.channelId);
 
@@ -29,7 +29,7 @@ function R(e, t, n) {
   if (null == t) {
     let t = p.get(e);
     return !!(null != t && (0, u.isEqual)(t.source, n)) && (p.delete(e), void 0)
-  }!h.has(e) && !A.has(e) && (m.add(e), N = [...m]);
+  }!A.has(e) && !h.has(e) && (m.add(e), N = [...m]);
   let i = (0, S.broadcastFromServer)(t, e, n);
   p.set(e, i)
 }
@@ -122,7 +122,7 @@ l = "BroadcastingStore", (o = "displayName") in(a = g) ? Object.defineProperty(a
       data: t
     } = e;
     T.default.keys(t).forEach(e => {
-      f.CAN_VIEW_BROADCASTS_BUCKETS.includes(t[e]) ? h.add(e) : A.add(e), m.clear(), N = [...m];
+      f.CAN_VIEW_BROADCASTS_BUCKETS.includes(t[e]) ? A.add(e) : h.add(e), m.clear(), N = [...m];
       let n = p.get(e);
       null != n && (p.delete(e), p.set(e, n))
     })
@@ -174,6 +174,6 @@ l = "BroadcastingStore", (o = "displayName") in(a = g) ? Object.defineProperty(a
     })
   },
   LOGOUT: function() {
-    h.clear(), A.clear(), m.clear(), N = [], p.clear()
+    A.clear(), h.clear(), m.clear(), N = [], p.clear()
   }
 })

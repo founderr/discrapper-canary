@@ -302,8 +302,8 @@ class f extends a.default {
         framesCodec: T,
         framesNetwork: f,
         packets: S,
-        packetsLost: h,
-        nackCount: A,
+        packetsLost: A,
+        nackCount: h,
         pliCount: m,
         qpSum: N,
         pauseCount: O,
@@ -321,20 +321,20 @@ class f extends a.default {
         qualityDecoderReboots: b,
         qualityScoreErrors: G,
         qualityFrameDrops: w,
-        qualitySizeMismatches: B
+        qualitySizeMismatches: k
       } = e.aggregatedProperties;
     return {
       ...d,
       avg_bitrate: i > 0 ? Math.round((null != _ ? _ : 0) * 8 / i) : 0,
       avg_fps: i > 0 ? Math.round((null != T ? T : 0) / i) : 0,
       num_bytes: _,
-      num_packets_lost: h,
+      num_packets_lost: A,
       num_packets: S,
       num_frames: f,
       num_frames_codec_error: E,
       time_to_first_frame_ms: e.timeToFirstFrame,
       num_frames_dropped: c,
-      num_nacks: A,
+      num_nacks: h,
       num_plis: m,
       qp_sum: N,
       receiver_pause_count: O,
@@ -352,7 +352,7 @@ class f extends a.default {
       encoder_quality_decoder_reboots: b,
       encoder_quality_score_errors: G,
       encoder_quality_frame_drops: w,
-      encoder_quality_size_mismatches: B
+      encoder_quality_size_mismatches: k
     }
   }
   receivedStats(e, t, n) {

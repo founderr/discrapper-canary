@@ -33,15 +33,15 @@ t.default = e => {
     onViewGuild: p,
     fetchGuilds: T,
     onGuildCardSeen: g,
-    currentCategoryId: N,
-    loadId: A,
+    currentCategoryId: A,
+    loadId: N,
     onTagClick: v,
-    showMoreCards: O = !1
+    showMoreCards: R = !1
   } = e;
   s.useEffect(() => {
     i.default.wait(() => T())
-  }, [N]);
-  let R = (0, c.default)(O ? _ : h),
+  }, [A]);
+  let O = (0, c.default)(R ? _ : h),
     {
       analyticsLocations: L
     } = (0, r.default)();
@@ -64,14 +64,14 @@ t.default = e => {
     });
     else {
       let t = M.findIndex(t => t.id === e);
-      await p(e, t, S, A)
+      await p(e, t, S, N)
     }
   };
   if (P || null == M) {
     let e = [];
-    for (let t = 0; t < R; t++) e.push((0, a.jsx)(d.default.Placeholder, {}, t));
+    for (let t = 0; t < O; t++) e.push((0, a.jsx)(d.default.Placeholder, {}, t));
     t = e
-  } else t = M.slice(0, R).map(e => (0, a.jsx)(d.default, {
+  } else t = M.slice(0, O).map(e => (0, a.jsx)(d.default, {
     className: E.__invalid_guildCard,
     guild: e,
     onView: x,

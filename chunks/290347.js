@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return N
   }
 }), n("47120");
 var a = n("735250"),
@@ -33,7 +33,7 @@ let g = e => {
       text: t
     })
   },
-  N = e => {
+  A = e => {
     let {
       header: t,
       subHeader: n,
@@ -68,17 +68,17 @@ let g = e => {
     })
   };
 
-function A(e) {
+function N(e) {
   let {
     className: t,
     renderModalProps: n,
     heroArt: l,
     heroArtClassName: _,
     modalDismissibleContent: g,
-    modalTopExtra: A,
+    modalTopExtra: N,
     header: v,
-    headerClassName: O,
-    subHeader: R,
+    headerClassName: R,
+    subHeader: O,
     subHeaderExtra: L,
     featureCards: M,
     changeLogId: P,
@@ -86,18 +86,18 @@ function A(e) {
   } = e, {
     onClose: x,
     transitionState: D
-  } = n, b = (0, h.useUID)(), U = M.length % 2 == 0, j = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [G, w] = s.useState(Date.now()), [k, F] = s.useState(0), [B, H] = s.useState(0), [V, Y] = s.useState(!1), [W, K] = s.useState(!0), z = s.useRef(G), q = s.useRef(k), Q = s.useRef(B), Z = s.useRef(V), X = s.useRef(W);
+  } = n, b = (0, h.useUID)(), U = M.length % 2 == 0, j = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [G, w] = s.useState(Date.now()), [k, F] = s.useState(0), [H, B] = s.useState(0), [V, Y] = s.useState(!1), [W, K] = s.useState(!0), z = s.useRef(G), q = s.useRef(k), Q = s.useRef(H), Z = s.useRef(V), X = s.useRef(W);
 
   function J() {
     let e = Date.now(),
       t = e - z.current,
       n = q.current,
       a = Q.current;
-    return Z.current && (F(n += t), !X.current && H(a += t)), w(e), [n, a]
+    return Z.current && (F(n += t), !X.current && B(a += t)), w(e), [n, a]
   }
   return s.useEffect(() => {
-    z.current = G, q.current = k, Q.current = B, Z.current = V, X.current = W
-  }, [G, k, B, V, W]), s.useEffect(() => () => {
+    z.current = G, q.current = k, Q.current = H, Z.current = V, X.current = W
+  }, [G, k, H, V, W]), s.useEffect(() => () => {
     let [e, t] = J();
     m.default.track(I.AnalyticEvents.CHANGE_LOG_VIDEO_PLAYED, {
       change_log_id: P,
@@ -128,11 +128,11 @@ function A(e) {
       onClick: x
     }), (0, a.jsx)(S.default, {
       className: T.splash
-    }), null == A ? void 0 : A(), (0, a.jsxs)(o.ModalContent, {
+    }), null == N ? void 0 : N(), (0, a.jsxs)(o.ModalContent, {
       className: T.content,
       children: [(0, a.jsx)(o.Heading, {
         variant: "display-md",
-        className: i()(T.headerText, O),
+        className: i()(T.headerText, R),
         children: v
       }), "video" === l.type ? (0, a.jsx)(C.default, {
         className: i()(T.video, _),
@@ -182,12 +182,12 @@ function A(e) {
       }) : null, (0, a.jsx)(o.Heading, {
         variant: "heading-lg/extrabold",
         className: T.bodyText,
-        children: R
+        children: O
       }), null == L ? void 0 : L(), (0, a.jsx)("div", {
         className: i()(T.featureCardGroup, {
           [T.wideStyle]: U
         }),
-        children: M.map((e, t) => (0, a.jsx)(N, {
+        children: M.map((e, t) => (0, a.jsx)(A, {
           ...e,
           wideStyle: U
         }, "".concat(e.header, "_").concat(t)))

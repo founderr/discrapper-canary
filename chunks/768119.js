@@ -11,11 +11,11 @@ var r, s, a, o, l = n("392711"),
   T = n("592125"),
   f = n("430824"),
   S = n("981631");
-let h = {},
-  A = !1;
+let A = {},
+  h = !1;
 
 function m(e) {
-  return null == h[e] && (h[e] = {
+  return null == A[e] && (A[e] = {
     searchId: e,
     searchType: N(e),
     isIndexing: !1,
@@ -33,7 +33,7 @@ function m(e) {
     resultsBlocked: 0,
     showBlockedResults: !1,
     showNoResultsAlt: !1
-  }), h[e]
+  }), A[e]
 }
 
 function N(e) {
@@ -43,7 +43,7 @@ function N(e) {
 function O(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
   if (null == e) return n;
-  let i = h[e];
+  let i = A[e];
   return null == i ? n : t(i)
 }
 let p = "SearchStore",
@@ -67,14 +67,14 @@ function L(e) {
 function D(e) {
   let {
     searchId: t
-  } = e, n = h[t];
+  } = e, n = A[t];
   if (null == n) return !1;
-  null != n.searchFetcher && n.searchFetcher.cancel(), delete h[t]
+  null != n.searchFetcher && n.searchFetcher.cancel(), delete A[t]
 }
 
 function v(e) {
   if (e === g) return !1;
-  null != e && null == h[e] && m(e), g = e
+  null != e && null == A[e] && m(e), g = e
 }
 class M extends(r = d.default.Store) {
   initialize() {
@@ -89,7 +89,7 @@ class M extends(r = d.default.Store) {
     R = !!_.Storage.get("tokenized")
   }
   isOpen() {
-    return A
+    return h
   }
   getCurrentSearchModalType() {
     return i
@@ -308,8 +308,8 @@ o = "SearchStore", (a = "displayName") in(s = M) ? Object.defineProperty(s, a, {
     _.Storage.remove(p), C = {}
   },
   CONNECTION_OPEN: function() {
-    Object.keys(h).forEach(e => {
-      null != h[e] && (h[e].searchType = N(e))
+    Object.keys(A).forEach(e => {
+      null != A[e] && (A[e].searchType = N(e))
     })
   },
   SEARCH_MODAL_OPEN: function(e) {
@@ -317,9 +317,9 @@ o = "SearchStore", (a = "displayName") in(s = M) ? Object.defineProperty(s, a, {
       searchId: t,
       searchType: n
     } = e;
-    null != t && (g = t), A = !0, i = n
+    null != t && (g = t), h = !0, i = n
   },
   SEARCH_MODAL_CLOSE: function() {
-    A = !1, i = void 0
+    h = !1, i = void 0
   }
 })

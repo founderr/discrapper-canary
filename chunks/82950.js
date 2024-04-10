@@ -28,7 +28,7 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
       onDismissed: p,
       onClick: T,
       cta: g,
-      ctaColor: N
+      ctaColor: A
     } = e;
     s.useEffect(() => {
       C(E.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
@@ -36,8 +36,8 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
         guild_id: t.id
       })
     }, [t.id, c]);
-    let A = null;
-    "function" == typeof g ? A = g() : null != g && (A = (0, a.jsx)(r.Button, {
+    let N = null;
+    "function" == typeof g ? N = g() : null != g && (N = (0, a.jsx)(r.Button, {
       className: _.btn,
       size: r.Button.Sizes.SMALL,
       onClick: () => {
@@ -48,7 +48,7 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
         }), null == T || T()
       },
       fullWidth: !0,
-      color: N,
+      color: A,
       children: g
     }));
     let v = null != f ? "".concat(f, "px") : "16px";
@@ -86,7 +86,7 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
         }) : null, (0, a.jsx)(r.Text, {
           variant: "text-sm/normal",
           children: l
-        }), A]
+        }), N]
       })]
     })
   };

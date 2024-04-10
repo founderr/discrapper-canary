@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return R
   }
 });
 var a = n("735250"),
@@ -24,22 +24,22 @@ var a = n("735250"),
   p = n("307947"),
   T = n("125855"),
   g = n("687683"),
-  N = n("981631"),
-  A = n("689938"),
+  A = n("981631"),
+  N = n("689938"),
   v = n("569265");
 
-function O() {
+function R() {
   let e = s.useRef(null),
     t = (0, S.default)(),
     n = (0, I.useSpamMessageRequestCount)(),
     l = (0, _.useListHasSingleSpamMessageRequest)(),
-    O = (0, d.useIsRejectAllMessageRequestsEnabled)(),
-    R = (0, c.default)("message-requests-spam-list"),
+    R = (0, d.useIsRejectAllMessageRequestsEnabled)(),
+    O = (0, c.default)("message-requests-spam-list"),
     {
       channelId: L
     } = (0, m.useMessageRequestSidebarState)(),
     M = s.useCallback(() => {
-      (0, u.showToast)((0, u.createToast)(A.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, u.ToastType.FAILURE))
+      (0, u.showToast)((0, u.createToast)(N.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, u.ToastType.FAILURE))
     }, []),
     {
       rejectAll: P
@@ -50,7 +50,7 @@ function O() {
       P(t.map(e => e.channel.id))
     }, [t, P]);
   s.useEffect(() => {
-    h.default.track(N.AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, {
+    h.default.track(A.AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, {
       num_spam_message_requests: n
     }), f.default.increment({
       name: o.MetricEvents.SPAM_MESSAGE_REQUEST_VIEW
@@ -74,9 +74,9 @@ function O() {
     }, [t, l, L]),
     D = s.useCallback(() => (0, a.jsxs)(E.default, {
       className: v.sectionTitle,
-      children: [A.default.Messages.MESSAGE_REQUESTS_SPAM_HEADER.format({
+      children: [N.default.Messages.MESSAGE_REQUESTS_SPAM_HEADER.format({
         count: n
-      }), O && n > 0 ? (0, a.jsxs)(a.Fragment, {
+      }), R && n > 0 ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(u.Text, {
           className: v.titleDivider,
           variant: "eyebrow",
@@ -89,15 +89,15 @@ function O() {
           color: u.ButtonColors.LINK,
           size: u.ButtonSizes.SMALL,
           className: v.clearAllButton,
-          "aria-label": A.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL,
-          children: A.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL
+          "aria-label": N.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL,
+          children: N.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL
         })]
       }) : null]
-    }, "message-requests-spam-title"), [n, y, O]);
+    }, "message-requests-spam-title"), [n, y, R]);
   return 0 === t.length ? (0, a.jsx)(p.default, {
     section: g.MessageRequestSections.SPAM
   }) : (0, a.jsx)(r.ListNavigatorProvider, {
-    navigator: R,
+    navigator: O,
     children: (0, a.jsx)(r.ListNavigatorContainer, {
       children: n => {
         let {
@@ -108,7 +108,7 @@ function O() {
         return (0, a.jsx)(u.List, {
           className: v.list,
           innerRole: l,
-          innerAriaLabel: A.default.Messages.MESSAGE_REQUESTS,
+          innerAriaLabel: N.default.Messages.MESSAGE_REQUESTS,
           ref: t => {
             var n;
             e.current = t, s.current = null !== (n = null == t ? void 0 : t.getScrollerNode()) && void 0 !== n ? n : null

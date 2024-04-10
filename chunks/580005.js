@@ -26,7 +26,7 @@ function f(e, t, n) {
   }) : e[t] = n, e
 }
 let S = 100,
-  h = new l.default({
+  A = new l.default({
     computeBonus: () => 100,
     computeWeight: e => {
       let t = 0;
@@ -40,7 +40,7 @@ let S = 100,
     numFrequentlyItems: S,
     maxSamples: 10
   }),
-  A = null,
+  h = null,
   m = null;
 
 function N(e) {
@@ -48,10 +48,10 @@ function N(e) {
     guildId: t,
     channelId: n
   } = e, i = !1;
-  return n !== A && (A = null != n ? n : null, null != n && I.ID_REGEX.test(n) && (i = !0, h.track(n), p.pendingUsages.push({
+  return n !== h && (h = null != n ? n : null, null != n && I.ID_REGEX.test(n) && (i = !0, A.track(n), p.pendingUsages.push({
     key: n,
     timestamp: Date.now()
-  }))), t !== m && (m = null != t ? t : null, null != t && I.ID_REGEX.test(t) && (i = !0, h.track(t), p.pendingUsages.push({
+  }))), t !== m && (m = null != t ? t : null, null != t && I.ID_REGEX.test(t) && (i = !0, A.track(t), p.pendingUsages.push({
     key: t,
     timestamp: Date.now()
   }))), i
@@ -61,7 +61,7 @@ function O() {
   var e;
   let t = null === (e = u.default.frecencyWithoutFetchingLatest.guildAndChannelFrecency) || void 0 === e ? void 0 : e.guildAndChannels;
   if (null == t) return !1;
-  h.overwriteHistory(s().mapValues(t, e => ({
+  A.overwriteHistory(s().mapValues(t, e => ({
     ...e,
     recentUses: e.recentUses.map(Number).filter(e => e > 0)
   })), p.pendingUsages)
@@ -80,14 +80,14 @@ class R extends(i = a.default.PersistedStore) {
     return p.pendingUsages.length > 0
   }
   get frecencyWithoutFetchingLatest() {
-    return h
+    return A
   }
   getFrequentlyWithoutFetchingLatest() {
-    return h.frequently
+    return A.frequently
   }
   getScoreWithoutFetchingLatest(e) {
     var t;
-    return null !== (t = h.getFrecency(e)) && void 0 !== t ? t : 0
+    return null !== (t = A.getFrecency(e)) && void 0 !== t ? t : 0
   }
   getScoreForDMWithoutFetchingLatest(e) {
     let t = d.default.getDMFromUserId(e);

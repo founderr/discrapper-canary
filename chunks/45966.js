@@ -11,8 +11,8 @@ var i, r, s, a, o = n("392711"),
   T = n("977258"),
   f = n("819553"),
   S = n("290511");
-let h = {},
-  A = {},
+let A = {},
+  h = {},
   m = {},
   N = !1;
 
@@ -42,25 +42,25 @@ function p(e) {
   let {
     guildId: d,
     updates: _
-  } = e, c = null !== (s = null !== (r = _.onboardingPromptsSeen) && void 0 !== r ? r : null === (t = h[d]) || void 0 === t ? void 0 : t.onboardingPromptsSeen) && void 0 !== s ? s : {}, E = null !== (o = null !== (a = _.onboardingResponsesSeen) && void 0 !== a ? a : null === (n = h[d]) || void 0 === n ? void 0 : n.onboardingResponsesSeen) && void 0 !== o ? o : {}, I = O(null !== (u = null !== (l = _.prompts) && void 0 !== l ? l : null === (i = h[d]) || void 0 === i ? void 0 : i.prompts) && void 0 !== u ? u : [], c, E);
-  h[d] = {
-    ...h[d],
+  } = e, c = null !== (s = null !== (r = _.onboardingPromptsSeen) && void 0 !== r ? r : null === (t = A[d]) || void 0 === t ? void 0 : t.onboardingPromptsSeen) && void 0 !== s ? s : {}, E = null !== (o = null !== (a = _.onboardingResponsesSeen) && void 0 !== a ? a : null === (n = A[d]) || void 0 === n ? void 0 : n.onboardingResponsesSeen) && void 0 !== o ? o : {}, I = O(null !== (u = null !== (l = _.prompts) && void 0 !== l ? l : null === (i = A[d]) || void 0 === i ? void 0 : i.prompts) && void 0 !== u ? u : [], c, E);
+  A[d] = {
+    ...A[d],
     ..._,
     prompts: I
   }
 }
 
 function R(e, t) {
-  if (null == A[e]) return;
+  if (null == h[e]) return;
   let n = {};
-  Object.keys(A[e]).forEach(i => {
-    !t.includes(i) && A[e][i] ? n[i] = !0 : t.includes(i) && !1 === A[e][i] && (n[i] = !1)
-  }), A[e] = n;
+  Object.keys(h[e]).forEach(i => {
+    !t.includes(i) && h[e][i] ? n[i] = !0 : t.includes(i) && !1 === h[e][i] && (n[i] = !1)
+  }), h[e] = n;
   let i = t.filter(e => null == n[e] || !0 === n[e]);
   Object.keys(n).forEach(e => {
     !0 === n[e] && !t.includes(e) && i.push(e)
-  }), h[e] = {
-    ...h[e],
+  }), A[e] = {
+    ...A[e],
     responses: i
   }
 }
@@ -73,41 +73,41 @@ class D extends(i = u.default.Store) {
   }
   getOnboardingPromptsForOnboarding(e) {
     var t, n;
-    return null !== (n = null === (t = h[e]) || void 0 === t ? void 0 : t.onboardingPrompts) && void 0 !== n ? n : C
+    return null !== (n = null === (t = A[e]) || void 0 === t ? void 0 : t.onboardingPrompts) && void 0 !== n ? n : C
   }
   getOnboardingPrompts(e) {
     var t, n;
-    return null !== (n = null === (t = h[e]) || void 0 === t ? void 0 : t.prompts) && void 0 !== n ? n : C
+    return null !== (n = null === (t = A[e]) || void 0 === t ? void 0 : t.prompts) && void 0 !== n ? n : C
   }
   getOnboardingResponses(e) {
     var t, n, i;
-    return _.default.isFullServerPreview(e) ? Array.from(null !== (n = _.default.getOnboardingResponses(e)) && void 0 !== n ? n : g) : null !== (i = null === (t = h[e]) || void 0 === t ? void 0 : t.responses) && void 0 !== i ? i : g
+    return _.default.isFullServerPreview(e) ? Array.from(null !== (n = _.default.getOnboardingResponses(e)) && void 0 !== n ? n : g) : null !== (i = null === (t = A[e]) || void 0 === t ? void 0 : t.responses) && void 0 !== i ? i : g
   }
   getSelectedOptions(e) {
     let t = this.getOnboardingResponses(e);
     return this.getOnboardingPrompts(e).map(e => e.options).flat().filter(e => t.includes(e.id))
   }
   getOnboardingResponsesForPrompt(e, t) {
-    let n = h[e];
+    let n = A[e];
     if (null == n) return g;
     let i = n.prompts.find(e => e.id === t);
     return null == i ? g : l().intersection(i.options.map(e => e.id), this.getOnboardingResponses(e))
   }
   getEnabledOnboardingPrompts(e) {
     var t, n;
-    let i = h[e];
+    let i = A[e];
     return _.default.isFullServerPreview(e) ? null !== (t = null == i ? void 0 : i.prompts) && void 0 !== t ? t : C : null != i && i.enabled ? null !== (n = i.prompts) && void 0 !== n ? n : C : C
   }
   getDefaultChannelIds(e) {
     var t, n;
-    return null !== (n = null === (t = h[e]) || void 0 === t ? void 0 : t.defaultChannelIds) && void 0 !== n ? n : L
+    return null !== (n = null === (t = A[e]) || void 0 === t ? void 0 : t.defaultChannelIds) && void 0 !== n ? n : L
   }
   getEnabled(e) {
     var t, n;
-    return _.default.isFullServerPreview(e) ? null != h[e] : null !== (n = null === (t = h[e]) || void 0 === t ? void 0 : t.enabled) && void 0 !== n && n
+    return _.default.isFullServerPreview(e) ? null != A[e] : null !== (n = null === (t = A[e]) || void 0 === t ? void 0 : t.enabled) && void 0 !== n && n
   }
   getOnboardingPrompt(e) {
-    return Object.values(h).map(e => e.prompts).flat().find(t => t.id === e)
+    return Object.values(A).map(e => e.prompts).flat().find(t => t.id === e)
   }
   isLoading() {
     return N
@@ -119,7 +119,7 @@ class D extends(i = u.default.Store) {
     return null == n || Date.now() - n > t
   }
   getPendingResponseOptions(e) {
-    return A[e]
+    return h[e]
   }
   ackIdForGuild(e) {
     let t = this.getEnabledOnboardingPrompts(e),
@@ -135,7 +135,7 @@ class D extends(i = u.default.Store) {
   }
   isAdvancedMode(e) {
     var t;
-    return null != e && (null === (t = h[e]) || void 0 === t ? void 0 : t.mode) === S.GuildOnboardingMode.ONBOARDING_ADVANCED
+    return null != e && (null === (t = A[e]) || void 0 === t ? void 0 : t.mode) === S.GuildOnboardingMode.ONBOARDING_ADVANCED
   }
 }
 a = "GuildOnboardingPromptsStore", (s = "displayName") in(r = D) ? Object.defineProperty(r, s, {
@@ -145,7 +145,7 @@ a = "GuildOnboardingPromptsStore", (s = "displayName") in(r = D) ? Object.define
   writable: !0
 }) : r[s] = a, t.default = new D(d.default, {
   CONNECTION_OPEN: function() {
-    N = !1, h = {}
+    N = !1, A = {}
   },
   GUILD_ONBOARDING_PROMPTS_FETCH_START: function() {
     N = !0
@@ -165,7 +165,7 @@ a = "GuildOnboardingPromptsStore", (s = "displayName") in(r = D) ? Object.define
     N = !1;
     let d = f.default.getOnboardingStatus(t) === f.GuildOnboardingStatus.READY,
       _ = O(n, a, o);
-    h[t] = {
+    A[t] = {
       enabled: r,
       mode: l,
       belowRequirements: u,
@@ -187,8 +187,8 @@ a = "GuildOnboardingPromptsStore", (s = "displayName") in(r = D) ? Object.define
       selected: i,
       removedOptionIds: r
     } = e;
-    return !!_.default.isFullServerPreview(t) || null != h[t] && (null != r && r.length > 0 && l().pullAll(h[t].responses, r), i ? h[t].responses.push(n) : l().pull(h[t].responses, n), null == A[t] && (A[t] = {}), A[t][n] = i, null != r && r.forEach(e => A[t][e] = !1), A[t] = {
-      ...A[t]
+    return !!_.default.isFullServerPreview(t) || null != A[t] && (null != r && r.length > 0 && l().pullAll(A[t].responses, r), i ? A[t].responses.push(n) : l().pull(A[t].responses, n), null == h[t] && (h[t] = {}), h[t][n] = i, null != r && r.forEach(e => h[t][e] = !1), h[t] = {
+      ...h[t]
     }, !0)
   },
   GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS: function(e) {
@@ -199,10 +199,10 @@ a = "GuildOnboardingPromptsStore", (s = "displayName") in(r = D) ? Object.define
       options_seen: r
     } = e;
     R(t, n);
-    let s = h[t];
+    let s = A[t];
     if (null == s) return !1;
     let a = O(s.prompts, i, r);
-    h[t] = {
+    A[t] = {
       ...s,
       prompts: a,
       onboardingPrompts: a.filter(e => e.inOnboarding),
@@ -217,8 +217,8 @@ a = "GuildOnboardingPromptsStore", (s = "displayName") in(r = D) ? Object.define
       guildId: t,
       channelIds: n
     } = e;
-    h[t] = {
-      ...h[t],
+    A[t] = {
+      ...A[t],
       defaultChannelIds: n
     }
   },
@@ -226,7 +226,7 @@ a = "GuildOnboardingPromptsStore", (s = "displayName") in(r = D) ? Object.define
     let {
       guildId: t,
       mode: n
-    } = e, i = h[t];
+    } = e, i = A[t];
     null != i && (i.mode = n)
   }
 })
