@@ -57645,15 +57645,26 @@ html .progress__00e29 {
 }
 
 .progressStep_dec95e {
+    display: flex;
+    flex-direction: row;
     flex: 1;
     height: 4px;
     border-radius: var(--radius-sm);
-    background-color: var(--interactive-muted)
+    background-color: var(--interactive-muted);
+    overflow: hidden
+}
+
+.progressSubStep__177b8 {
+    flex: 1;
+    height: 4px;
+    background-color: transparent
+}
+
+.currentStep_f2459e {
+    filter: brightness(160%)
 }
 
 .progressStepFill__47c59 {
-    height: 100%;
-    border-radius: var(--radius-sm);
     background-color: var(--brand-500)
 }
 
