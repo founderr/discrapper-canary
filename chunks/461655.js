@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return _
+    return p
   }
 }), s("789020");
 var a, n, i = s("314877"),
@@ -21,12 +21,12 @@ function f(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }(n = a || (a = {}))[n.GIFT = 1] = "GIFT", n[n.PREORDER = 8] = "PREORDER";
-class _ extends l.default {
+class p extends l.default {
   static createFromServer(e) {
     let t = null != e.payment_source ? u.default.createFromServer(e.payment_source) : null,
       s = null != e.sku ? o.default.createFromServer(e.sku) : null,
       a = null != e.subscription ? d.default.createFromServer(e.subscription) : null;
-    return new _({
+    return new p({
       id: e.id,
       createdAt: new Date(e.created_at),
       currency: e.currency,
@@ -78,9 +78,6 @@ class _ extends l.default {
   }
   get isPremiumGift() {
     return this.isGift && Object.values(E.PremiumSubscriptionSKUs).includes(this.skuId)
-  }
-  get isPreorder() {
-    return r.hasFlag(this.flags, 8)
   }
   get isGuildProductPurchase() {
     return null != this.sku && (this.sku.productLine === c.SKUProductLines.GUILD_PRODUCT || r.hasFlag(this.sku.flags, i.SKUFlags.GUILD_PRODUCT))
