@@ -1,7 +1,7 @@
 "use strict";
-r.r(t);
-var a = r("319301");
-t.default = (0, a.defineColorTokens)({
+t.r(r);
+var a = t("319301");
+r.default = (0, a.defineColorTokens)({
   "button-danger-background": {
     dark: "red.430",
     light: "red.430"

@@ -1,40 +1,40 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   default: function() {
     return S
   }
-}), r("47120");
-var a = r("735250"),
-  n = r("470079"),
-  i = r("803997"),
-  l = r.n(i),
-  o = r("442837"),
-  s = r("481060"),
-  c = r("6048"),
-  d = r("548420"),
-  u = r("502568"),
-  h = r("428530"),
-  p = r("484036"),
-  m = r("681619"),
-  g = r("621060"),
-  f = r("779869"),
-  b = r("852535");
+}), t("47120");
+var a = t("735250"),
+  n = t("470079"),
+  i = t("803997"),
+  o = t.n(i),
+  l = t("442837"),
+  s = t("481060"),
+  c = t("6048"),
+  d = t("548420"),
+  u = t("502568"),
+  h = t("428530"),
+  p = t("484036"),
+  m = t("681619"),
+  g = t("621060"),
+  f = t("779869"),
+  b = t("852535");
 
-function y(e, t) {
-  return e.store.getName().localeCompare(t.store.getName())
+function y(e, r) {
+  return e.store.getName().localeCompare(r.store.getName())
 }
 
 function x(e) {
   let {
-    store: t,
-    dataGetter: r
-  } = e, [i, l] = n.useState(r(t));
+    store: r,
+    dataGetter: t
+  } = e, [i, o] = n.useState(t(r));
   return n.useEffect(() => {
-    let e = () => l(r(t));
-    return e(), t.addChangeListener(e), () => {
-      t.removeChangeListener(e)
+    let e = () => o(t(r));
+    return e(), r.addChangeListener(e), () => {
+      r.removeChangeListener(e)
     }
-  }, [t, r]), (0, a.jsx)(s.ScrollerThin, {
+  }, [r, t]), (0, a.jsx)(s.ScrollerThin, {
     className: b.inspectorContainer,
     children: (0, a.jsx)(h.default, {
       data: i
@@ -46,9 +46,9 @@ let k = [{
     cellClassName: b.__invalid_eventColumn,
     render(e) {
       let {
-        store: t
+        store: r
       } = e;
-      return t.getName()
+      return r.getName()
     }
   }],
   v = [{
@@ -56,15 +56,15 @@ let k = [{
     name: "Local Variables",
     render(e) {
       let {
-        store: t
+        store: r
       } = e;
-      return null == t.__getLocalVars ? (0, a.jsxs)("div", {
+      return null == r.__getLocalVars ? (0, a.jsxs)("div", {
         className: b.inspectorContainer,
         children: ["Store is missing ", (0, a.jsx)("code", {
           children: "__getLocalVars"
         }), " method."]
       }) : (0, a.jsx)(x, {
-        store: t,
+        store: r,
         dataGetter: e => e.__getLocalVars()
       })
     }
@@ -73,10 +73,10 @@ let k = [{
     name: "Store Instance",
     render(e) {
       let {
-        store: t
+        store: r
       } = e;
       return (0, a.jsx)(x, {
-        store: t,
+        store: r,
         dataGetter: e => e
       })
     }
@@ -84,8 +84,8 @@ let k = [{
 
 function C(e) {
   let {
-    store: t,
-    initialHeight: r
+    store: r,
+    initialHeight: t
   } = e, {
     TabBar: n,
     renderSelectedTab: i
@@ -95,47 +95,47 @@ function C(e) {
   return (0, a.jsxs)(p.default, {
     className: b.subPanel,
     minHeight: 100,
-    initialHeight: r,
+    initialHeight: t,
     children: [(0, a.jsx)(n, {}), (0, a.jsxs)(u.default, {
-      className: l()(f.headerBar, b.subPanelHeaderBar),
+      className: o()(f.headerBar, b.subPanelHeaderBar),
       children: [(0, a.jsx)(u.default.Icon, {
         icon: d.default,
-        tooltip: t.getName()
+        tooltip: r.getName()
       }), (0, a.jsx)(u.default.Title, {
-        children: t.getName()
+        children: r.getName()
       })]
     }), i({
-      store: t
+      store: r
     })]
   })
 }
 
 function S() {
   let e = n.useRef(null),
-    [t, r] = n.useState(""),
-    i = o.Store.getAll(),
+    [r, t] = n.useState(""),
+    i = l.Store.getAll(),
     d = n.useMemo(() => i.map(e => ({
       key: e._dispatchToken,
       store: e
-    })).sort(y), [i]).filter(e => (function(e, t) {
+    })).sort(y), [i]).filter(e => (function(e, r) {
       let {
-        store: r
+        store: t
       } = e;
-      return r.getName().toLowerCase().includes(t.toLowerCase())
-    })(e, t)),
+      return t.getName().toLowerCase().includes(r.toLowerCase())
+    })(e, r)),
     [u, h] = n.useState(),
     p = i.find(e => e._dispatchToken === u);
   return (0, a.jsxs)("div", {
     ref: e,
-    className: l()(f.panel, b.panel),
+    className: o()(f.panel, b.panel),
     children: [(0, a.jsx)("div", {
       className: b.toolbar,
       children: (0, a.jsx)(c.default, {
         className: b.searchBar,
         size: c.default.Sizes.SMALL,
-        query: t,
-        onChange: r,
-        onClear: () => r(""),
+        query: r,
+        onChange: t,
+        onClear: () => t(""),
         placeholder: "Search stores",
         "aria-label": "Search stores"
       })

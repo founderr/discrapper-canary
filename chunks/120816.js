@@ -1,11 +1,11 @@
 "use strict";
-r.r(t), r("47120");
-var a, n, i, l, o = r("153832"),
-  s = r("756647"),
-  c = r("442837"),
-  d = r("570140"),
-  u = r("314897"),
-  h = r("906467");
+t.r(r), t("47120");
+var a, n, i, o, l = t("153832"),
+  s = t("756647"),
+  c = t("442837"),
+  d = t("570140"),
+  u = t("314897"),
+  h = t("906467");
 let p = 0,
   m = [],
   g = [],
@@ -24,24 +24,24 @@ class b extends(a = c.default.Store) {
     return f
   }
 }
-l = "AnalyticsLogStore", (i = "displayName") in(n = b) ? Object.defineProperty(n, i, {
-  value: l,
+o = "AnalyticsLogStore", (i = "displayName") in(n = b) ? Object.defineProperty(n, i, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : n[i] = l, t.default = new b(d.default, {
+}) : n[i] = o, r.default = new b(d.default, {
   TRACK: function(e) {
     let {
-      event: t,
-      properties: r,
+      event: r,
+      properties: t,
       fingerprint: a
     } = e;
     if (h.default.isDeveloper) {
       var n;
       (m = [...m, {
         key: (p++).toString(),
-        event: t,
-        properties: r,
+        event: r,
+        properties: t,
         fingerprint: null != (n = a) ? (0, s.extractId)(n) : u.default.getId(),
         timestamp: new Date
       }]).length > 500 && m.shift()
@@ -49,29 +49,29 @@ l = "AnalyticsLogStore", (i = "displayName") in(n = b) ? Object.defineProperty(n
   },
   TRACK_TRIGGER: function(e) {
     let {
-      experimentId: t,
-      descriptor: r,
+      experimentId: r,
+      descriptor: t,
       exposureType: a,
       excluded: n,
       location: i,
-      previouslyTracked: l
+      previouslyTracked: o
     } = e;
     if (!!h.default.isDeveloper) f && (g = [...g, {
-      key: (0, o.v4)(),
-      experimentId: t,
-      descriptor: r,
+      key: (0, l.v4)(),
+      experimentId: r,
+      descriptor: t,
       exposureType: a,
       excluded: n,
       location: i,
-      previouslyTracked: l,
+      previouslyTracked: o,
       timestamp: new Date
     }]).length > 500 && g.shift()
   },
   SET_TRACK_TRIGGERS: function(e) {
     let {
-      enabled: t
+      enabled: r
     } = e;
-    f = t
+    f = r
   },
   ANALYTICS_LOG_CLEAR: function() {
     m = [], g = []
