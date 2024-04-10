@@ -19,7 +19,7 @@ function m(e) {
 }
 t.default = n.memo(function() {
   let e = u.ShowCurrentGame.useSetting(),
-    t = (0, d.useIsSelfRecentGamesEnabled)({
+    t = (0, d.useIsCurrentUserRecentGamesEnabled)({
       location: "28tk0bf_8"
     });
   return (0, a.jsxs)(a.Fragment, {

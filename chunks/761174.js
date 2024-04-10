@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n.d(t, {
-  useIsSelfRecentGamesEnabled: function() {
+  useIsCurrentUserRecentGamesEnabled: function() {
     return u
   },
   useIsUserRecentGamesEnabled: function() {
@@ -17,8 +17,9 @@ var i = n("442837"),
 function u(e) {
   let {
     location: t
-  } = e, n = (0, l.isUserRecentGamesExperimentEnabled)({
-    location: t
+  } = e, n = (0, l.useUserIsRecentGamesExperimentEnabled)({
+    location: t,
+    autoTrackExposure: !0
   }), i = r.RecentGamesEnabled.useSetting(), s = r.ShowCurrentGame.useSetting();
   return n && s && i
 }
@@ -35,5 +36,5 @@ function d(e) {
   });
   return (0, o.useUserIsRecentGamesExperimentApiEnabled)({
     location: n
-  }) && (l ? r && d : r)
+  }) && (l ? d && r : r)
 }
