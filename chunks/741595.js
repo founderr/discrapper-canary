@@ -14,27 +14,7 @@ t.default = e => {
     handleUpdate: t,
     playstyle: n,
     error: l
-  } = e, f = (0, r.useToken)(r.tokens.colors.WHITE), E = s.useMemo(() => [{
-    type: u.ClanPlaystyles.SOCIAL,
-    emoji: "\uD83D\uDC4B",
-    title: d.default.Messages.CLAN_SETUP_PLAYSTYLE_SOCIAL_TITLE,
-    subtitle: d.default.Messages.CLAN_SETUP_PLAYSTYLE_SOCIAL_SUBTITLE
-  }, {
-    type: u.ClanPlaystyles.CASUAL,
-    emoji: "\uD83C\uDFAE",
-    title: d.default.Messages.CLAN_SETUP_PLAYSTYLE_CASUAL_TITLE,
-    subtitle: d.default.Messages.CLAN_SETUP_PLAYSTYLE_CASUAL_SUBTITLE
-  }, {
-    type: u.ClanPlaystyles.COMPETITIVE,
-    emoji: "⚔️",
-    title: d.default.Messages.CLAN_SETUP_PLAYSTYLE_COMPETITIVE_TITLE,
-    subtitle: d.default.Messages.CLAN_SETUP_PLAYSTYLE_COMPETITIVE_SUBTITLE
-  }, {
-    type: u.ClanPlaystyles.VERY_HARDCORE,
-    emoji: "\uD83D\uDC80",
-    title: d.default.Messages.CLAN_SETUP_PLAYSTYLE_VERY_HARDCORE_TITLE,
-    subtitle: d.default.Messages.CLAN_SETUP_PLAYSTYLE_VERY_HARDCORE_SUBTITLE
-  }], []);
+  } = e, f = (0, r.useToken)(r.tokens.colors.WHITE), E = s.useMemo(() => Object.values((0, u.getPlaystyleOptions)()), []);
   return (0, a.jsxs)("div", {
     className: c.slideContent,
     children: [(0, a.jsx)(r.Heading, {

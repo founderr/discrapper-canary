@@ -1,26 +1,37 @@
 "use strict";
 n.r(t), n.d(t, {
   ClanDiscoveryGame: function() {
-    return s
+    return i
+  },
+  ClanDiscoveryMode: function() {
+    return l
   },
   buildSearchCriteriaFromUIState: function() {
-    return r
+    return d
   },
   useClanDiscoveryUIStore: function() {
-    return i
+    return u
   }
 });
-var a, s, l = n("652874");
-(a = s || (s = {})).VALORANT = "valorant", a.GENSHIN = "genshin";
-let i = (0, l.default)(e => ({
+var a, s, l, i, r = n("652874"),
+  o = n("308083");
+(a = l || (l = {})).DISCOVERY = "discovery", a.PLAYSTYLE = "playstyle", (s = i || (i = {})).VALORANT = "valorant", s.GENSHIN = "genshin";
+let u = (0, r.default)(e => ({
+  mode: "discovery",
   game: "valorant",
   selectedGames: [{
     applicationId: "valorant",
     name: "Valorant"
   }],
-  selectedPlaystyle: null,
+  selectedPlaystyle: {
+    id: o.ClanPlaystyles.SOCIAL,
+    name: "Very Casual"
+  },
   selectedTraits: [],
   selectedPrimetime: null,
+  setMode: t => e({
+    mode: t
+  }),
   setGame: t => e({
     game: t
   }),
@@ -38,7 +49,7 @@ let i = (0, l.default)(e => ({
   })
 }));
 
-function r(e) {
+function d(e) {
   var t;
   let n = e.selectedGames.map(e => e.applicationId),
     a = null === (t = e.selectedPlaystyle) || void 0 === t ? void 0 : t.id,
