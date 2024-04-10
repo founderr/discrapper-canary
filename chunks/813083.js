@@ -6,8 +6,9 @@ var n = a("803997"),
   o = a.n(n),
   i = a("278074"),
   u = a("26290"),
-  c = a("689938"),
-  d = a("628587");
+  c = a("884697"),
+  d = a("689938"),
+  f = a("628587");
 (s = l || (l = {})).BANNER = "banner", s.MODAL = "modal", s.CARD = "card";
 t.default = e => {
   let {
@@ -16,22 +17,18 @@ t.default = e => {
     className: l
   } = e;
   if (null == t.unpublishedAt) return null;
-  let s = function(e) {
-    let t = new Date,
-      a = Date.UTC(t.getFullYear(), t.getMonth(), t.getDate());
-    return Math.floor((Date.UTC(e.getFullYear(), e.getMonth(), e.getDate()) - a) / 864e5)
-  }(t.unpublishedAt);
+  let s = (0, c.getDaysRemaining)(t.unpublishedAt);
 
   function n(e) {
     return (0, r.jsx)(u.TextBadge, {
       disableColor: !0,
       text: e,
-      className: o()(d.badge, l)
+      className: o()(f.badge, l)
     })
   }
-  return (0, i.match)([a, s > 1]).with(["card", !0], () => null).with(["banner", !0], () => n(c.default.Messages.COLLECTIBLES_DAYS_LEFT_IN_SHOP.format({
+  return (0, i.match)([a, s > 1]).with(["card", !0], () => null).with(["banner", !0], () => n(d.default.Messages.COLLECTIBLES_DAYS_LEFT_IN_SHOP.format({
     days: s
-  }))).with(["modal", !0], () => n(c.default.Messages.COLLECTIBLES_DAYS_LEFT.format({
+  }))).with(["modal", !0], () => n(d.default.Messages.COLLECTIBLES_DAYS_LEFT.format({
     days: s
-  }))).otherwise(() => n(c.default.Messages.COLLECTIBLES_LAST_DAY))
+  }))).otherwise(() => n(d.default.Messages.COLLECTIBLES_LAST_DAY))
 }

@@ -9,6 +9,9 @@ n.r(t), n.d(t, {
   getCollectiblesAssetURL: function() {
     return N
   },
+  getDaysRemaining: function() {
+    return L
+  },
   getFormattedPriceForCollectiblesProduct: function() {
     return c
   },
@@ -117,4 +120,10 @@ let d = e => (null == e ? void 0 : e.premiumType) != null,
     }
   },
   C = e => e.applicationId === u.COLLECTIBLES_APPLICATION_ID,
-  g = e => 3.8 * e
+  g = e => 3.8 * e;
+
+function L(e) {
+  let t = new Date,
+    n = Date.UTC(t.getFullYear(), t.getMonth(), t.getDate());
+  return Math.floor((Date.UTC(e.getFullYear(), e.getMonth(), e.getDate()) - n) / 864e5)
+}
