@@ -36,8 +36,8 @@ function S(e) {
     onClose: null !== (t = null == e ? void 0 : e.onClose) && void 0 !== t ? t : h.NOOP,
     children: [(0, s.jsxs)(o.MenuGroup, {
       children: [(0, s.jsx)(o.MenuItem, {
-        id: "get-game",
-        label: N.default.Messages.QUESTS_GET_THIS_GAME,
+        id: "play-game",
+        label: N.default.Messages.QUESTS_PLAY_GAME,
         action: () => {
           (0, _.handleClick)({
             href: e.quest.config.getGameLink,
