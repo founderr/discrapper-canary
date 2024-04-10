@@ -110,7 +110,7 @@ function v(e) {
         children: (0, a.jsx)(F, {
           className: l,
           size: "sm",
-          color: d.tokens.colors.INTERACTIVE_ACTIVE
+          color: x ? "white" : d.tokens.colors.INTERACTIVE_ACTIVE
         })
       })
     })
