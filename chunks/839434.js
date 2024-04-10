@@ -418,16 +418,19 @@ function ec(e) {
   var t;
   let n = (0, r.useStateFromStores)([j.default, L.default], () => L.default.getChannel(j.default.getVoiceChannelId())),
     i = (0, S.default)(n),
-    s = function(e) {
-      let [t] = (0, r.useStateFromStores)([w.default, _.default], () => null == e ? [
-        [], -1
-      ] : e.isGuildStageVoice() ? [_.default.getMutableParticipants(e.id, C.StageChannelParticipantNamedIndex.SPEAKER), _.default.getParticipantsVersion(e.id)] : [w.default.getVoiceStatesForChannel(e), w.default.getVoiceStateVersion(e.getGuildId())], [e], q.isVersionEqual), n = (0, r.useStateFromStores)([M.default], () => M.default.getId()), {
-        showKeybindIndicators: i
+    s = function() {
+      let [e] = (0, r.useStateFromStores)([w.default, _.default, j.default, L.default], () => {
+        let e = L.default.getChannel(j.default.getVoiceChannelId());
+        return null == e ? [
+          [], -1
+        ] : e.isGuildStageVoice() ? [_.default.getMutableParticipants(e.id, C.StageChannelParticipantNamedIndex.SPEAKER), _.default.getParticipantsVersion(e.id)] : [w.default.getVoiceStatesForChannel(e), w.default.getVoiceStateVersion(e.getGuildId())]
+      }, [], q.isVersionEqual), t = (0, r.useStateFromStores)([M.default], () => M.default.getId()), {
+        showKeybindIndicators: n
       } = ee.default.useExperiment({
         location: "voice_widget"
       });
-      return l.useMemo(() => i ? [...t].sort((e, t) => e.user.id === n ? -1 : t.user.id === n ? 1 : 0) : t, [t, n, i])
-    }(n),
+      return l.useMemo(() => n ? [...e].sort((e, n) => e.user.id === t ? -1 : n.user.id === t ? 1 : 0) : e, [e, t, n])
+    }(),
     o = (0, r.useStateFromStores)([R.default], () => R.default.getStreamerActiveStreamMetadata()),
     d = (0, r.useStateFromStores)([v.default, k.default, D.default], () => {
       var e;
