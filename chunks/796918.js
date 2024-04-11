@@ -81,7 +81,7 @@ t.default = e => {
         children: c.default.Messages.CLAN_SETUP_SELECTED_GAMES
       }), (0, a.jsx)("div", {
         className: f.selectedSection,
-        children: Array.from(n).map(e => (0, a.jsxs)("div", {
+        children: Array.from(n).map(e => d.ALL_TRAITS_SET.has(e) || d.LANGUAGES_SET.has(e) ? null : (0, a.jsxs)("div", {
           className: f.selectedInterest,
           children: [(0, a.jsx)(r.Text, {
             variant: "text-md/normal",
