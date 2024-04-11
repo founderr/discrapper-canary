@@ -5,194 +5,204 @@ var a = n("735250"),
   l = n("803997"),
   i = n.n(l),
   r = n("442837"),
-  o = n("481060"),
-  u = n("808268"),
-  d = n("810090"),
-  c = n("617136"),
-  f = n("272008"),
-  E = n("113434"),
-  h = n("569984"),
-  _ = n("497505"),
-  C = n("918701"),
-  m = n("340100"),
-  S = n("611855"),
-  I = n("644646"),
-  T = n("78826"),
-  p = n("670638"),
-  g = n("667105"),
-  A = n("689938"),
-  N = n("881521");
-let v = s.forwardRef(function(e, t) {
+  o = n("780384"),
+  u = n("481060"),
+  d = n("808268"),
+  c = n("810090"),
+  f = n("617136"),
+  E = n("272008"),
+  h = n("113434"),
+  _ = n("569984"),
+  C = n("497505"),
+  m = n("918701"),
+  S = n("340100"),
+  I = n("611855"),
+  T = n("644646"),
+  p = n("78826"),
+  g = n("670638"),
+  A = n("667105"),
+  N = n("689938"),
+  v = n("881521");
+let R = s.forwardRef(function(e, t) {
   var n, l;
   let {
-    className: v,
-    isExpanded: R,
-    isExpansionAnimationComplete: O,
-    onCtxMenuOpen: L,
-    onCtxMenuClose: M,
-    onCtxMenuSelect: P,
-    quest: y,
-    useReducedMotion: x
-  } = e, D = (0, r.useStateFromStores)([h.default], () => h.default.isEnrolling(y.id), [y]), b = (0, E.useQuestFormattedDate)(y.config.expiresAt), U = (0, E.useQuestFormattedDate)(y.config.rewardCodeExpiresAt), j = s.useMemo(() => (0, C.isAssetAnimated)(y.config.assets.questBarHero), [y]), G = s.useCallback(() => {
-    (0, f.enrollInQuest)(y.id, {
-      questContent: _.QuestContent.QUEST_BAR,
-      questContentCTA: c.QuestContentCTA.ACCEPT_QUEST
+    className: R,
+    isExpanded: O,
+    isExpansionAnimationComplete: L,
+    onCtxMenuOpen: M,
+    onCtxMenuClose: P,
+    onCtxMenuSelect: y,
+    quest: x,
+    useReducedMotion: D
+  } = e, b = (0, r.useStateFromStores)([_.default], () => _.default.isEnrolling(x.id), [x]), U = (0, h.useQuestFormattedDate)(x.config.expiresAt), j = (0, h.useQuestFormattedDate)(x.config.rewardCodeExpiresAt), G = s.useMemo(() => (0, m.isAssetAnimated)(x.config.assets.questBarHero), [x]), w = s.useCallback(() => {
+    (0, E.enrollInQuest)(x.id, {
+      questContent: C.QuestContent.QUEST_BAR,
+      questContentCTA: f.QuestContentCTA.ACCEPT_QUEST
     })
-  }, [y]), w = (0, g.useHandleClaimQuestsReward)({
-    quest: y,
-    location: _.QuestContent.QUEST_BAR
-  }), k = (null === (n = y.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, F = (null === (l = y.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, H = R && O, B = (0, C.getQuestBarHeroAssetUrl)(y), V = (0, C.getQuestsInstructionsToWinReward)({
-    quest: y
-  });
+  }, [x]), k = (0, A.useHandleClaimQuestsReward)({
+    quest: x,
+    location: C.QuestContent.QUEST_BAR
+  }), F = (null === (n = x.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, H = (null === (l = x.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, B = s.useMemo(() => (0, m.hasQuestCollectibleRewards)(x.config), [x.config]), V = O && L, Y = (0, m.getQuestBarHeroAssetUrl)(x), W = (0, m.getQuestsInstructionsToWinReward)({
+    quest: x
+  }), K = s.useMemo(() => (0, o.getContrastingColor)(x.config.colors.primary, {
+    base: "#ffffff",
+    contrastRatio: o.WCAGContrastRatios.Text
+  }), [x.config.colors.primary]);
   return (0, a.jsx)("div", {
-    "aria-hidden": !H,
-    className: i()(v, N.contentExpanded, {
-      [N.contentInteractable]: H
+    "aria-hidden": !V,
+    className: i()(R, v.contentExpanded, {
+      [v.contentInteractable]: V
     }),
-    children: k ? (0, a.jsxs)("div", {
-      className: N.questAcceptedContent,
+    children: F ? (0, a.jsxs)("div", {
+      className: v.questAcceptedContent,
       ref: t,
       children: [(0, a.jsxs)("div", {
-        className: N.utils,
+        className: v.utils,
         children: [(0, a.jsxs)("div", {
-          className: N.questAcceptedContentHeading,
-          children: [(0, a.jsx)(I.default, {
-            className: N.questProgressRewardTile,
-            quest: y,
-            questContent: _.QuestContent.QUEST_BAR
+          className: v.questAcceptedContentHeading,
+          children: [(0, a.jsx)(T.default, {
+            className: v.questProgressRewardTile,
+            quest: x,
+            questContent: C.QuestContent.QUEST_BAR
           }), (0, a.jsxs)("div", {
-            children: [(0, a.jsx)(o.Heading, {
+            children: [(0, a.jsx)(u.Heading, {
               color: "always-white",
               variant: "heading-sm/semibold",
-              children: (0, C.getContextualEntrypointHeading)(y)
-            }), (0, a.jsx)(o.Text, {
-              className: N.questAcceptedContentCopySubheading,
+              children: (0, m.getContextualEntrypointHeading)(x)
+            }), (0, a.jsx)(u.Text, {
+              className: v.questAcceptedContentCopySubheading,
               color: "always-white",
               variant: "text-xxs/normal",
-              children: F ? A.default.Messages.QUESTS_CLAIM_BY.format({
+              children: H ? N.default.Messages.QUESTS_CLAIM_BY.format({
+                expirationDate: j
+              }) : N.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
                 expirationDate: U
-              }) : A.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
-                expirationDate: b
               })
             })]
           })]
-        }), (0, a.jsx)(p.QuestsEntryContextMenuPopout, {
-          onOpen: L,
-          onClose: M,
-          onSelect: P,
-          questContent: _.QuestContent.QUEST_BAR,
-          quest: y,
+        }), (0, a.jsx)(g.QuestsEntryContextMenuPopout, {
+          onOpen: M,
+          onClose: P,
+          onSelect: y,
+          questContent: C.QuestContent.QUEST_BAR,
+          quest: x,
           shouldShowDisclosure: !1,
           showShareLink: !0,
-          children: e => (0, a.jsx)(o.Clickable, {
+          children: e => (0, a.jsx)(u.Clickable, {
             ...e,
-            className: N.submenuWrapper,
-            "aria-label": A.default.Messages.ACTIONS,
-            children: (0, a.jsx)(u.default, {
-              className: N.submenuIcon
+            className: v.submenuWrapper,
+            "aria-label": N.default.Messages.ACTIONS,
+            children: (0, a.jsx)(d.default, {
+              className: v.submenuIcon
             })
           })
         })]
-      }), F ? (0, a.jsx)(o.Button, {
-        className: i()(N.cta, N.ctaClaimReward),
-        color: o.Button.Colors.CUSTOM,
+      }), H ? (0, a.jsx)(u.Button, {
+        className: i()(v.cta, v.ctaClaimReward),
+        style: B ? {
+          backgroundColor: K
+        } : void 0,
+        color: u.Button.Colors.CUSTOM,
         fullWidth: !0,
-        onClick: w,
-        size: o.Button.Sizes.NONE,
-        children: A.default.Messages.QUESTS_CLAIM_REWARD
-      }) : (0, a.jsx)(o.Text, {
-        className: N.description,
+        onClick: k,
+        size: u.Button.Sizes.NONE,
+        children: N.default.Messages.QUESTS_CLAIM_REWARD
+      }) : (0, a.jsx)(u.Text, {
+        className: v.description,
         color: "always-white",
         variant: "text-xs/normal",
-        children: V
-      }), (0, a.jsx)(m.default, {
-        quest: y
+        children: W
+      }), (0, a.jsx)(S.default, {
+        quest: x
       })]
     }) : (0, a.jsxs)("div", {
-      className: N.questUnacceptedContent,
+      className: v.questUnacceptedContent,
       children: [(0, a.jsxs)("div", {
-        className: N.questPromoContent,
+        className: v.questPromoContent,
         ref: t,
         children: [(0, a.jsxs)("div", {
-          className: N.utils,
-          children: [(0, a.jsx)(S.default, {
+          className: v.utils,
+          children: [(0, a.jsx)(I.default, {
             color: "always-white"
-          }), (0, a.jsx)(p.QuestsEntryContextMenuPopout, {
-            onOpen: L,
-            onClose: M,
-            onSelect: P,
-            questContent: _.QuestContent.QUEST_BAR,
-            quest: y,
+          }), (0, a.jsx)(g.QuestsEntryContextMenuPopout, {
+            onOpen: M,
+            onClose: P,
+            onSelect: y,
+            questContent: C.QuestContent.QUEST_BAR,
+            quest: x,
             shouldShowDisclosure: !0,
             showShareLink: !0,
-            children: e => (0, a.jsx)(o.Clickable, {
+            children: e => (0, a.jsx)(u.Clickable, {
               ...e,
-              className: N.submenuWrapper,
-              "aria-label": A.default.Messages.ACTIONS,
-              children: (0, a.jsx)(u.default, {
-                className: N.submenuIcon
+              className: v.submenuWrapper,
+              "aria-label": N.default.Messages.ACTIONS,
+              children: (0, a.jsx)(d.default, {
+                className: v.submenuIcon
               })
             })
           })]
         }), (0, a.jsxs)("div", {
-          className: N.details,
-          children: [(0, a.jsx)(I.default, {
-            className: N.rewardTile,
-            quest: y,
-            questContent: _.QuestContent.QUEST_BAR
-          }), (0, a.jsx)(o.Heading, {
-            className: N.title,
+          className: v.details,
+          children: [(0, a.jsx)(T.default, {
+            className: v.rewardTile,
+            quest: x,
+            questContent: C.QuestContent.QUEST_BAR
+          }), (0, a.jsx)(u.Heading, {
+            className: v.title,
             color: "always-white",
             variant: "heading-md/medium",
-            children: A.default.Messages.QUESTS_TITLE.format({
-              questName: y.config.messages.questName
+            children: N.default.Messages.QUESTS_TITLE.format({
+              questName: x.config.messages.questName
             })
-          }), (0, a.jsx)(o.Text, {
-            className: N.description,
+          }), (0, a.jsx)(u.Text, {
+            className: v.description,
             color: "always-white",
             variant: "text-sm/normal",
-            children: V
+            children: W
           })]
-        }), (0, a.jsx)(o.Button, {
-          className: N.cta,
-          color: o.Button.Colors.CUSTOM,
+        }), (0, a.jsx)(u.Button, {
+          className: v.cta,
+          style: B ? {
+            backgroundColor: K
+          } : void 0,
+          color: u.Button.Colors.CUSTOM,
           fullWidth: !0,
-          onClick: H ? G : void 0,
-          size: o.Button.Sizes.NONE,
-          submitting: D,
-          children: A.default.Messages.QUESTS_ACCEPT_QUEST
+          onClick: V ? w : void 0,
+          size: u.Button.Sizes.NONE,
+          submitting: b,
+          children: N.default.Messages.QUESTS_ACCEPT_QUEST
         })]
       }), (0, a.jsx)("div", {
-        className: N.heroAssetWrapper,
+        className: v.heroAssetWrapper,
         style: {
-          color: y.config.colors.secondary
+          color: x.config.colors.secondary
         },
-        children: j ? (0, a.jsx)(T.QuestsAsset, {
+        children: G ? (0, a.jsx)(p.QuestsAsset, {
           id: "QuestsBarContentExpanded_heroAnimated",
-          children: e => (0, a.jsx)(d.default, {
+          children: e => (0, a.jsx)(c.default, {
             ref: e,
-            autoPlay: !x,
+            autoPlay: !D,
             loop: !0,
             muted: !0,
             playsInline: !0,
-            className: N.heroAsset,
+            className: v.heroAsset,
             controls: !1,
             children: (0, a.jsx)("source", {
-              src: B,
-              type: (0, C.getVideoAssetMimeType)(B)
+              src: Y,
+              type: (0, m.getVideoAssetMimeType)(Y)
             })
           })
-        }) : (0, a.jsx)(T.QuestsAsset, {
+        }) : (0, a.jsx)(p.QuestsAsset, {
           id: "QuestsBarContentExpanded_heroStatic",
           children: e => (0, a.jsx)("img", {
             ref: e,
             alt: "",
-            className: N.heroAsset,
-            src: B
+            className: v.heroAsset,
+            src: Y
           })
         })
       })]
     })
   })
 });
-t.default = v
+t.default = R
