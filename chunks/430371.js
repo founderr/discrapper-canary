@@ -37,8 +37,8 @@ function A(e) {
       channel: R,
       selectedParticipant: L,
       showParticipants: y = !0,
-      className: j,
-      paused: O,
+      className: O,
+      paused: j,
       width: P,
       height: D,
       layout: b,
@@ -125,13 +125,13 @@ function A(e) {
     eo = l.useCallback(e => {
       B(e), V(!1)
     }, []),
-    eu = X || O ? [] : (0, p.getPipParticipants)(v, L, k),
+    eu = X || j ? [] : (0, p.getPipParticipants)(v, L, k),
     {
       visibleParticipants: ed,
       participantTileWidth: ec
     } = (0, E.useVisibleParticipants)(P, x);
   return (0, a.jsxs)("div", {
-    className: i()(_.root, S.flexCenter, j),
+    className: i()(_.root, S.flexCenter, O),
     children: [(0, a.jsxs)("div", {
       className: _.tileWrapper,
       style: {
@@ -165,7 +165,7 @@ function A(e) {
                   channel: R,
                   className: S.focusedVideo,
                   videoComponent: w,
-                  paused: O,
+                  paused: j,
                   width: P,
                   participant: t,
                   onClick: n,
@@ -207,7 +207,7 @@ function A(e) {
           participantTileWidth: ec,
           selectedParticipantId: L.id,
           inCall: M,
-          paused: O || W || !y,
+          paused: j || W || !y,
           popoutWindow: N
         })
       })]

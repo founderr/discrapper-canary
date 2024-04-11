@@ -62,17 +62,17 @@ function _(e) {
     }, [d, T, _]),
     L = i && !T,
     y = v === C.ChannelModes.VIDEO && x && !L,
-    j = l.useCallback((e, a) => {
+    O = l.useCallback((e, a) => {
       a !== e && (r.default.updateLayout(t.id, a, n), a === C.ChannelLayouts.FULL_SCREEN && t.isPrivate() && m.ComponentDispatch.dispatch(C.ComponentActions.TEXTAREA_BLUR))
     }, [n, t]),
-    O = l.useCallback(e => {
-      if (null != R) e === C.ChannelLayouts.FULL_SCREEN && (j(e, N.current), (0, E.exitFullScreen)(e => {
+    j = l.useCallback(e => {
+      if (null != R) e === C.ChannelLayouts.FULL_SCREEN && (O(e, N.current), (0, E.exitFullScreen)(e => {
         N.current = e
       }, M))
-    }, [M, j, R]),
+    }, [M, O, R]),
     P = l.useCallback(e => () => {
-      null != R && (e !== C.ChannelLayouts.FULL_SCREEN ? (N.current = e, j(e, C.ChannelLayouts.FULL_SCREEN), (0, E.requestFullScreen)(R)) : O(e))
-    }, [j, O, R]);
+      null != R && (e !== C.ChannelLayouts.FULL_SCREEN ? (N.current = e, O(e, C.ChannelLayouts.FULL_SCREEN), (0, E.requestFullScreen)(R)) : j(e))
+    }, [O, j, R]);
   return (l.useEffect(() => {
     let e = () => {
       null != R && !(0, E.isFullScreen)(R, M) && A === C.ChannelLayouts.FULL_SCREEN && P(A)()
@@ -84,7 +84,7 @@ function _(e) {
     video_layout: T ? "popout" : A,
     ...(0, o.collectVoiceAnalyticsMetadata)(t.id)
   }), () => {
-    !(T && (0, p.isMac)()) && O(A)
+    !(T && (0, p.isMac)()) && j(A)
   }), [A, T]), l.useEffect(() => {
     null != R && I.current === C.ChannelModes.VIDEO && v === C.ChannelModes.VOICE && (0, E.exitFullScreen)(R, M)
   }, [M, v, I, R]), l.useEffect(() => {

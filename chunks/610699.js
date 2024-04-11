@@ -165,9 +165,9 @@ function F(e) {
       })
     }),
     J = S.default.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
-    X = (0, u.useStateFromStores)([A.default], () => null != J && A.default.can(x.Permissions.USE_EMBEDDED_ACTIVITIES, J), [J]),
+    Z = (0, u.useStateFromStores)([A.default], () => null != J && A.default.can(x.Permissions.USE_EMBEDDED_ACTIVITIES, J), [J]),
     {
-      analyticsLocations: Z
+      analyticsLocations: X
     } = (0, I.default)(m.default.INVITE_EMBED),
     $ = (0, _.default)({
       applicationId: k.id,
@@ -181,15 +181,15 @@ function F(e) {
     if (null == d.guild) return (0, s.jsx)(L.default, {});
     W = new N.default(d.guild)
   }
-  let ea = es && !X || es && Q,
+  let ea = es && !Z || es && Q,
     el = () => {
       f.default.acceptInviteAndTransitionToInviteChannel({
         inviteKey: d.code,
         context: h("Invite Button Embed"),
-        analyticsLocations: Z
+        analyticsLocations: X
       })
     };
-  return (es && Q && (l = P.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (l = P.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), r = Q ? P.default.Messages.INVITE_EMBED_JOINED : q || !es ? P.default.Messages.JOIN : P.default.Messages.START, null == d.code || "" === d.code) ? null : (0, s.jsxs)("div", {
+  return (es && Q && (l = P.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !Z && (l = P.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), r = Q ? P.default.Messages.INVITE_EMBED_JOINED : q || !es ? P.default.Messages.JOIN : P.default.Messages.START, null == d.code || "" === d.code) ? null : (0, s.jsxs)("div", {
     className: y.container,
     ref: w,
     children: [(0, s.jsx)("div", {

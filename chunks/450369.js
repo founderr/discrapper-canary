@@ -32,7 +32,7 @@ var a = n("735250"),
   R = n("354459"),
   L = n("954539");
 let y = 16 / 9,
-  j = e => {
+  O = e => {
     let {
       stageParticipant: t,
       rtcParticipant: n,
@@ -82,7 +82,7 @@ let y = 16 / 9,
       })
     })
   },
-  O = e => {
+  j = e => {
     let {
       stageParticipant: t,
       rtcParticipant: n,
@@ -95,26 +95,26 @@ let y = 16 / 9,
       reducedMotion: g
     } = l.useContext(o.AccessibilityPreferencesContext), {
       id: v,
-      blocked: j
-    } = t, O = (0, r.useStateFromStoresArray)([S.default], () => S.default.getAllActiveStreams(), []), {
+      blocked: O
+    } = t, j = (0, r.useStateFromStoresArray)([S.default], () => S.default.getAllActiveStreams(), []), {
       selectedParticipant: P,
       largeStream: D
     } = (0, r.useStateFromStoresObject)([h.default], () => ({
       selectedParticipant: null != s ? h.default.getSelectedParticipant(s.id) : null,
       largeStream: null != s && h.default.getStageStreamSize(s.id)
     })), b = l.useCallback((e, t) => {
-      if (e.type === R.ParticipantTypes.STREAM && 0 === O.filter(t => (0, p.encodeStreamKey)(t) === e.id && t.state !== M.ApplicationStreamStates.ENDED).length) {
+      if (e.type === R.ParticipantTypes.STREAM && 0 === j.filter(t => (0, p.encodeStreamKey)(t) === e.id && t.state !== M.ApplicationStreamStates.ENDED).length) {
         if (!(0, E.canWatchStream)(s, I.default, _.default, T.default, m.default)[0]) return;
         (0, c.watchStream)((0, p.decodeStreamKey)(e.id), {
           forceMultiple: t.shiftKey
         })
       }(null == P ? void 0 : P.id) === e.id ? D ? (u.default.selectParticipant(s.id, null), u.default.updateStageStreamSize(s.id, !1)) : u.default.updateStageStreamSize(s.id, !0) : (u.default.updateStageStreamSize(s.id, !1), u.default.selectParticipant(s.id, e.id))
-    }, [O, s, P, D]);
+    }, [j, s, P, D]);
     return (0, a.jsx)(x.default, {
       participant: n,
       aspectRatio: y,
       fit: n.type === R.ParticipantTypes.USER ? A.VideoStreamFit.COVER : void 0,
-      blocked: j,
+      blocked: O,
       channel: s,
       className: L.tile,
       inCall: !0,
@@ -179,7 +179,7 @@ t.default = l.memo(function(e) {
     },
     g = p.type === R.ParticipantTypes.USER && !(null === (t = p.voiceState) || void 0 === t ? void 0 : t.selfVideo);
   return (0, a.jsx)(a.Fragment, {
-    children: g ? (0, a.jsx)(j, {
+    children: g ? (0, a.jsx)(O, {
       stageParticipant: l,
       rtcParticipant: p,
       channel: s,
@@ -189,7 +189,7 @@ t.default = l.memo(function(e) {
       isModerator: E,
       onContextMenu: C,
       inPopout: u === M.AppContext.POPOUT
-    }) : (0, a.jsx)(O, {
+    }) : (0, a.jsx)(j, {
       stageParticipant: l,
       rtcParticipant: p,
       channel: s,

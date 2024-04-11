@@ -28,8 +28,8 @@ var a = n("735250"),
   R = n("255269"),
   L = n("47481"),
   y = n("977391"),
-  j = n("73274"),
-  O = n("419388"),
+  O = n("73274"),
+  j = n("419388"),
   P = n("406534"),
   D = n("981631"),
   b = n("689938"),
@@ -68,7 +68,7 @@ let F = l.memo(function(e) {
     attachments: 8,
     fontSize: x,
     groupSpacing: c
-  }), [S, x, c]), B = (0, O.default)({
+  }), [S, x, c]), B = (0, j.default)({
     messages: E,
     channel: m,
     compact: S,
@@ -78,7 +78,7 @@ let F = l.memo(function(e) {
     canLoadMore: null == R,
     handleScrollToBottom: l.useCallback(() => k(!0), [k]),
     handleScrollFromBottom: l.useCallback(() => k(!1), [k])
-  }), G = (0, j.default)({
+  }), G = (0, O.default)({
     scrollerRef: B.ref,
     isEditing: null != v,
     keyboardModeEnabled: N,
@@ -220,8 +220,8 @@ t.default = l.memo(function(e) {
     }
   }(t), {
     messageGroupSpacing: y,
-    fontSize: j,
-    messageDisplayCompact: O,
+    fontSize: O,
+    messageDisplayCompact: j,
     renderSpoilers: P,
     keyboardModeEnabled: b
   } = function() {
@@ -302,7 +302,7 @@ t.default = l.memo(function(e) {
       messageGroupSpacing: y,
       showNewMessagesBar: !0,
       channel: t,
-      messageDisplayCompact: !r && (i || O),
+      messageDisplayCompact: !r && (i || j),
       messages: U,
       channelStream: w,
       permissionVersion: p,
@@ -311,7 +311,7 @@ t.default = l.memo(function(e) {
       hasUnreads: null != k,
       canChat: M,
       editingMessageId: H,
-      fontSize: j,
+      fontSize: O,
       keyboardModeEnabled: b,
       showingQuarantineBanner: n,
       hideSummaries: s

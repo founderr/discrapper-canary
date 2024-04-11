@@ -73,13 +73,13 @@ s.r(t), s.d(t, {
     return eT
   },
   getStringForAddedChannelFlag: function() {
-    return eu
+    return ei
   },
   getStringForPermission: function() {
     return eA
   },
   getStringForRemovedChannelFlag: function() {
-    return ei
+    return eu
   },
   transformLogs: function() {
     return el
@@ -90,8 +90,8 @@ var E = s("654861"),
   a = s("913527"),
   n = s.n(a),
   T = s("536402"),
-  u = s("533800"),
-  i = s("149765"),
+  i = s("533800"),
+  u = s("149765"),
   A = s("866442"),
   l = s("911969"),
   I = s("933557"),
@@ -328,7 +328,7 @@ let V = new L.default("AuditLogUtils"),
           newValue: t
         } = e;
         return t.map(e => (function(e) {
-          if (e === u.GuildInviteFlags.IS_GUEST_INVITE) return H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_INVITE_GUEST_INVITE;
+          if (e === i.GuildInviteFlags.IS_GUEST_INVITE) return H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_INVITE_GUEST_INVITE;
           return null
         })(e)).filter(f.isNotNullish)
       }({
@@ -901,7 +901,7 @@ function eT(e) {
   }
 }
 
-function eu(e) {
+function ei(e) {
   switch (e) {
     case P.ChannelFlags.GUILD_FEED_REMOVED:
       return H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_REMOVE_CHANNEL;
@@ -913,7 +913,7 @@ function eu(e) {
   return null
 }
 
-function ei(e) {
+function eu(e) {
   switch (e) {
     case P.ChannelFlags.GUILD_FEED_REMOVED:
       return H.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_UNREMOVE_CHANNEL;
@@ -1312,15 +1312,15 @@ function el(e, t) {
 }
 
 function eI(e, t) {
-  let s = i.deserialize("string" == typeof e ? e : 0),
-    E = i.deserialize("string" == typeof t ? t : 0),
-    _ = i.remove(E, s),
-    a = i.remove(s, E),
+  let s = u.deserialize("string" == typeof e ? e : 0),
+    E = u.deserialize("string" == typeof t ? t : 0),
+    _ = u.remove(E, s),
+    a = u.remove(s, E),
     n = [],
     T = [];
   for (let e in y.Permissions) {
     let t = y.Permissions[e];
-    i.has(_, t) && n.push(t), i.has(a, t) && T.push(t)
+    u.has(_, t) && n.push(t), u.has(a, t) && T.push(t)
   }
   return {
     added: n,

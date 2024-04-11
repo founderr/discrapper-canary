@@ -51,9 +51,9 @@ t.default = e => {
       (0, o.ack)(v.id, !0, !0, e)
     })
   }, [v.id]);
-  let j = l.useMemo(() => null != M ? (0, S.generateDirectoryRows)(Object.values(M), N) : null, [M, N]),
+  let O = l.useMemo(() => null != M ? (0, S.generateDirectoryRows)(Object.values(M), N) : null, [M, N]),
     {
-      mostRecentQuery: O,
+      mostRecentQuery: j,
       searchFetching: P,
       searchResults: D
     } = (0, s.useStateFromStoresObject)([m.default], () => {
@@ -67,8 +67,8 @@ t.default = e => {
         searchResults: m.default.getSearchResults(v.id, e)
       }
     }),
-    [b, U] = l.useState(O),
-    F = "" !== O,
+    [b, U] = l.useState(j),
+    F = "" !== j,
     {
       showHubEventsList: w
     } = u.default.useExperiment({
@@ -78,7 +78,7 @@ t.default = e => {
       autoTrackExposure: !1
     });
   l.useEffect(() => {
-    h.fetchDirectoryEntries(v.id), h.fetchDirectoryCounts(v.id), w && f.fetchDirectoryEntries(v.id), U(O)
+    h.fetchDirectoryEntries(v.id), h.fetchDirectoryCounts(v.id), w && f.fetchDirectoryEntries(v.id), U(j)
   }, [v.id]), l.useEffect(() => {
     c.default.track(I.AnalyticEvents.GUILD_DIRECTORY_CHANNEL_VIEWED, {
       directory_channel_id: v.id,
@@ -112,18 +112,18 @@ t.default = e => {
   return F ? (0, a.jsx)(_.default, {
     searchQuery: b,
     setSearchQuery: U,
-    mostRecentQuery: O,
+    mostRecentQuery: j,
     handleSearchKeyPress: H,
     handleClearSearch: B,
     handleCreateOrAddGuild: k,
     searchResults: D,
     searchFetching: P
-  }) : null == j && null == N ? (0, a.jsx)("div", {
+  }) : null == O && null == N ? (0, a.jsx)("div", {
     className: A.pageContainer,
     children: (0, a.jsx)(i.Spinner, {
       className: A.spinner
     })
-  }) : (null == j ? void 0 : j.length) === 0 && null == N ? (0, a.jsx)("div", {
+  }) : (null == O ? void 0 : O.length) === 0 && null == N ? (0, a.jsx)("div", {
     className: A.pageContainer,
     children: (0, a.jsx)(C.default, {
       guild: x,
@@ -140,7 +140,7 @@ t.default = e => {
     handleSelectCategory: e => {
       h.selectDirectoryCategory(v.id, e)
     },
-    directoryEntries: j,
+    directoryEntries: O,
     categoryCounts: R,
     allEntriesCount: L,
     isLoading: y

@@ -56,12 +56,12 @@ t.default = a.memo(function(e) {
   }), K = n.type === v.MessageTypes.REPLY ? n.messageReference : void 0, W = (0, o.useStateFromStores)([c.default], () => c.default.getMessageByReference(K)), z = (0, r.useListItem)(n.id), Q = (0, p.default)(n), q = (0, o.useStateFromStores)([f.default], () => n.hasFlag(v.MessageFlags.HAS_THREAD) && f.default.getChannel(m.default.castMessageIdAsChannelId(n.id))), J = (0, u.useRoleIcon)({
     guildId: U.guild_id,
     roleId: Q.iconRoleId
-  }), X = (0, o.useStateFromStores)([E.default], () => E.default.can(v.Permissions.CREATE_INSTANT_INVITE, U)), Z = (0, S.default)({
+  }), Z = (0, o.useStateFromStores)([E.default], () => E.default.can(v.Permissions.CREATE_INSTANT_INVITE, U)), X = (0, S.default)({
     message: n,
     channel: U,
     enabled: F
   });
-  if ((0, I.default)(n, X)) return null;
+  if ((0, I.default)(n, Z)) return null;
   let $ = (0, h.getMessageAriaLabelledBy)(n),
     ee = (0, h.getMessageAriaDescribedBy)(n);
   return (0, s.jsx)(_.default, {
@@ -88,7 +88,7 @@ t.default = a.memo(function(e) {
     hasReply: n.type === v.MessageTypes.REPLY,
     "aria-labelledby": $,
     "aria-describedby": ee,
-    messageRef: Z,
+    messageRef: X,
     ...z,
     ...k
   })

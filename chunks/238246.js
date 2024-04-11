@@ -27,8 +27,8 @@ var a, l = n("735250"),
   R = n("706454"),
   L = n("210887"),
   y = n("740492"),
-  j = n("451478"),
-  O = n("153850"),
+  O = n("451478"),
+  j = n("153850"),
   P = n("806519"),
   D = n("358085"),
   b = n("792125"),
@@ -163,7 +163,7 @@ class V extends(a = s.Component) {
                     children: [(0, l.jsx)(P.MaskLibrary, {}), (0, l.jsx)(m.AppWindowContextProvider, {
                       appContext: k.AppContext.POPOUT,
                       renderWindow: S,
-                      children: (0, l.jsxs)(O.AppLayerProvider, {
+                      children: (0, l.jsxs)(j.AppLayerProvider, {
                         children: [(0, l.jsxs)("div", {
                           className: B.popout,
                           children: [g && null != x ? (0, l.jsx)(v.default, {
@@ -175,7 +175,7 @@ class V extends(a = s.Component) {
                             className: r()(B.content, T),
                             children: s
                           })]
-                        }), (0, l.jsx)(f.Modals, {}), (0, l.jsx)(h.default, {}), (0, l.jsx)(O.AppLayerContainer, {})]
+                        }), (0, l.jsx)(f.Modals, {}), (0, l.jsx)(h.default, {}), (0, l.jsx)(j.AppLayerContainer, {})]
                       })
                     })]
                   })
@@ -212,7 +212,7 @@ let W = s.forwardRef(function(e, t) {
     focused: w.default.getWindowFocused(e.windowKey)
   }));
   u()(null != n, "Missing guestWindow reference");
-  let s = (0, c.useStateFromStores)([j.default], () => j.default.isFocused()),
+  let s = (0, c.useStateFromStores)([O.default], () => O.default.isFocused()),
     {
       locale: i,
       theme: r
@@ -245,7 +245,7 @@ let W = s.forwardRef(function(e, t) {
       analyticsLocations: y
     } = (0, _.default)(S.default.POPOUT_WINDOW),
     {
-      clientThemesClassName: O,
+      clientThemesClassName: j,
       clientThemesCSS: P
     } = (0, T.default)();
   return null == n ? null : (0, l.jsx)(f.DnDProvider, {
@@ -269,7 +269,7 @@ let W = s.forwardRef(function(e, t) {
         connectedToEmbeddedActivity: v,
         fontScaleClass: E,
         saturation: g,
-        clientThemesClassName: O,
+        clientThemesClassName: j,
         clientThemesCSS: P
       })
     })

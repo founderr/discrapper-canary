@@ -28,8 +28,8 @@ var a = n("735250"),
   R = n("375954"),
   L = n("496675"),
   y = n("885110"),
-  j = n("151785"),
-  O = n("627553"),
+  O = n("151785"),
+  j = n("627553"),
   P = n("38761"),
   D = n("585483"),
   b = n("358085"),
@@ -139,19 +139,19 @@ t.default = l.memo(function(e) {
     background: W.attachButtonPlus,
     width: 24,
     height: 24
-  }) : eM > 0 ? (0, a.jsx)(O.default, {
+  }) : eM > 0 ? (0, a.jsx)(j.default, {
     className: W.__invalid_attachButtonIcon,
     foreground: W.attachButtonClip,
     background: W.attachButtonPlus,
     width: 24,
     height: 24
-  }) : (0, a.jsx)(j.default, {
+  }) : (0, a.jsx)(O.default, {
     className: W.__invalid_attachButtonIcon,
     foreground: W.attachButtonPlus,
     width: 24,
     height: 24
   });
-  let ej = (0, a.jsx)(d.Popout, {
+  let eO = (0, a.jsx)(d.Popout, {
     shouldShow: null != ec,
     animation: d.Popout.Animation.NONE,
     align: "recentClips" === ec ? "center" : "left",
@@ -226,7 +226,7 @@ t.default = l.memo(function(e) {
         channel: Z,
         isOmniMenuOpen: "attachMenu" === ec,
         openOmniMenu: () => ef("attachMenu"),
-        children: ej
+        children: eO
       })
     })]
   })

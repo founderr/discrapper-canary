@@ -49,7 +49,7 @@ function S(e) {
         modViewPanel: e
       })
     }, [v, _, S]),
-    j = l.useMemo(() => ({
+    O = l.useMemo(() => ({
       [C.KeybindActions.CLOSE_MODAL]: {
         binds: ["esc"],
         comboKeysBindGlobal: !0,
@@ -59,8 +59,8 @@ function S(e) {
         }
       }
     }), [T, x, y]);
-  l.useEffect(() => (u.default.enable(), u.default.enableTemp(j), () => u.default.disableTemp()), [j]);
-  let O = (0, s.useTransition)(x, {
+  l.useEffect(() => (u.default.enable(), u.default.enableTemp(O), () => u.default.disableTemp()), [O]);
+  let j = (0, s.useTransition)(x, {
     immediate: N !== S,
     value: 0,
     from: {
@@ -80,7 +80,7 @@ function S(e) {
       flex: 1,
       overflow: "hidden"
     },
-    children: O((e, t, n) => {
+    children: j((e, t, n) => {
       var l, i, r;
       let {
         key: o

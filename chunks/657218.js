@@ -32,8 +32,8 @@ var a = n("735250"),
   R = n("496675"),
   L = n("117530"),
   y = n("153124"),
-  j = n("465670"),
-  O = n("663949"),
+  O = n("465670"),
+  j = n("663949"),
   P = n("934458"),
   D = n("502568"),
   b = n("459273"),
@@ -69,7 +69,7 @@ function Z(e) {
           draftType: N.DraftType.FirstThreadMessage
         }), (0, a.jsxs)(D.default, {
           toolbar: (0, a.jsx)(D.default.Icon, {
-            icon: j.default,
+            icon: O.default,
             tooltip: W.default.Messages.CLOSE,
             onClick: () => (0, B.closeAndClearThreadSidebar)(t)
           }),
@@ -207,7 +207,7 @@ function q(e) {
     privateThreadMode: T,
     textAreaState: g,
     location: s
-  }), R = (0, k.getIsPrivate)(m, T) ? O.default : P.default;
+  }), R = (0, k.getIsPrivate)(m, T) ? j.default : P.default;
   return (0, a.jsx)("div", {
     className: Y.chat,
     onMouseDown: f,

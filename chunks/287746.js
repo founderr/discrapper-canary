@@ -28,8 +28,8 @@ var a = n("735250"),
   R = n("541716"),
   L = n("752305"),
   y = n("424595"),
-  j = n("516887"),
-  O = n("974251"),
+  O = n("516887"),
+  j = n("974251"),
   P = n("893718"),
   D = n("436660"),
   b = n("28546"),
@@ -94,7 +94,7 @@ function eL(e) {
 }
 let ey = /^\+(?!\w+):?(?!:)(\w+)?:?$/;
 
-function ej(e) {
+function eO(e) {
   let {
     isSidebar: t,
     ...n
@@ -106,7 +106,7 @@ function ej(e) {
     ...n
   })
 }
-class eO extends l.PureComponent {
+class ej extends l.PureComponent {
   componentDidMount() {
     el.default.addChangeListener(this.draftDidChange)
   }
@@ -415,14 +415,14 @@ class eO extends l.PureComponent {
       var t, n;
       let a = null === (t = this.editorRef) || void 0 === t ? void 0 : t.getSlateEditor();
       null != a && (D.SlateTransforms.select(a, []), a.insertText(e), null === (n = this.editorRef) || void 0 === n || n.focus())
-    }), eR(this, "renderAttachButton", (e, t) => (0, a.jsx)(O.default, {
+    }), eR(this, "renderAttachButton", (e, t) => (0, a.jsx)(j.default, {
       className: t,
       channel: this.props.channel,
       draftType: el.DraftType.ChannelMessage,
       editorTextContent: this.state.textValue,
       setValue: this.handleSetValue,
       canOnlyUseTextCommands: e
-    })), eR(this, "renderAppLauncherButton", () => (0, a.jsx)(y.default, {})), eR(this, "renderApplicationCommandIcon", (e, t, n) => (0, a.jsx)(j.default, {
+    })), eR(this, "renderAppLauncherButton", () => (0, a.jsx)(y.default, {})), eR(this, "renderApplicationCommandIcon", (e, t, n) => (0, a.jsx)(O.default, {
       className: n,
       command: e,
       section: t,
@@ -479,7 +479,7 @@ class eP extends l.PureComponent {
       tutorialId: "writing-messages",
       position: "left",
       offsetX: 75,
-      children: (0, a.jsx)(eO, {
+      children: (0, a.jsx)(ej, {
         focused: I,
         highlighted: A,
         channel: n,
@@ -511,7 +511,7 @@ class eP extends l.PureComponent {
           }), (0, a.jsx)(em.ComponentAction, {
             event: ex.ComponentActions.OPEN_EXPRESSION_PICKER,
             handler: this.handleOpenExpressionPicker
-          }), (0, a.jsxs)(ej, {
+          }), (0, a.jsxs)(eO, {
             isSidebar: v,
             className: eM.chatContent,
             "aria-label": t.format({

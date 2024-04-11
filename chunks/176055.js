@@ -17,8 +17,8 @@ var a = s("735250"),
   R = s("430824"),
   S = s("378720"),
   m = s("285952"),
-  A = s("346656"),
-  N = s("263704"),
+  N = s("346656"),
+  A = s("263704"),
   p = s("843445"),
   g = s("981631"),
   C = s("689938"),
@@ -78,7 +78,7 @@ class M extends i.PureComponent {
       align: m.default.Align.CENTER,
       children: [(0, a.jsx)("div", {
         children: C.default.Messages.JOINED_GUILD
-      }), (0, a.jsx)(N.default, {
+      }), (0, a.jsx)(A.default, {
         className: O.joinedCheckmark
       })]
     })) : i && t && (c = C.default.Messages.JOIN_GUILD) : (c = C.default.Messages._LOGIN, _ = this.handleLogin), (0, a.jsxs)("div", {
@@ -89,10 +89,10 @@ class M extends i.PureComponent {
         className: O.content,
         children: [(0, a.jsxs)("div", {
           className: O.info,
-          children: [(0, a.jsx)(A.default, {
+          children: [(0, a.jsx)(N.default, {
             guild: d,
             active: !0,
-            size: A.default.Sizes.LARGE,
+            size: N.default.Sizes.LARGE,
             className: O.guildIcon
           }), (0, a.jsxs)("div", {
             className: O.infoText,

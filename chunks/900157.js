@@ -36,7 +36,7 @@ function L(e) {
     channelId: t,
     baseChannelId: s,
     channelViewSource: L = "Split View"
-  } = e, y = (0, r.useStateFromStores)([S.default], () => S.default.getChannel(t)), j = (0, r.useStateFromStores)([T.default], () => T.default.getGuild(null == y ? void 0 : y.getGuildId())), O = (0, m.default)(y);
+  } = e, y = (0, r.useStateFromStores)([S.default], () => S.default.getChannel(t)), O = (0, r.useStateFromStores)([T.default], () => T.default.getGuild(null == y ? void 0 : y.getGuildId())), j = (0, m.default)(y);
   (function(e) {
     let t = (0, r.useStateFromStores)([I.default], () => null != e && !i().isEmpty(I.default.getVoiceStatesForChannel(e.id)));
     l.useEffect(() => {
@@ -58,7 +58,7 @@ function L(e) {
       }), (0, h.trackClickstream)(N.AnalyticEvents.CHANNEL_OPENED_CLICKSTREAM, {
         channelId: y.id
       })
-    }, [y, L]), null == y || null == j) return null;
+    }, [y, L]), null == y || null == O) return null;
   let D = (0, a.jsx)(v.default, {
     channel: y,
     baseChannelId: s
@@ -72,8 +72,8 @@ function L(e) {
       "aria-label": M.default.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
       children: (0, C.renderTitle)({
         channel: y,
-        channelName: O,
-        guild: j,
+        channelName: j,
+        guild: O,
         inSidebar: !0,
         handleContextMenu: function(e) {
           (0, u.openContextMenuLazy)(e, async () => {
@@ -94,7 +94,7 @@ function L(e) {
       className: R.chat,
       children: (0, a.jsx)(p.default, {
         channel: y,
-        guild: j,
+        guild: O,
         chatInputType: E.ChatInputTypes.SIDEBAR
       }, t)
     })]

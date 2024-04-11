@@ -6,8 +6,8 @@ var r, i = n("735250"),
   l = n.n(a),
   u = n("481060"),
   o = n("37234"),
-  d = n("230711"),
-  c = n("981631"),
+  c = n("230711"),
+  d = n("981631"),
   f = n("689938"),
   p = n("130168");
 
@@ -36,7 +36,7 @@ class h extends(r = s.Component) {
   }
   constructor(...e) {
     super(...e), E(this, "handleClick", () => {
-      !this.props.disableButton && ((0, o.pushLayer)(c.Layers.USER_SETTINGS), d.default.setSection(c.UserSettingsSections.STREAMER_MODE))
+      !this.props.disableButton && ((0, o.pushLayer)(d.Layers.USER_SETTINGS), c.default.setSection(d.UserSettingsSections.STREAMER_MODE))
     })
   }
 }

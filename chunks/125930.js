@@ -73,7 +73,7 @@ let m = e => [{
   key: I.default.Messages.APPLICATION_STORE_SPECS_NOTES,
   value: e.notes
 }];
-class A extends i.PureComponent {
+class N extends i.PureComponent {
   static getDerivedStateFromProps(e, t) {
     let {
       systemRequirements: s
@@ -171,4 +171,4 @@ class A extends i.PureComponent {
     }
   }
 }
-t.default = A
+t.default = N

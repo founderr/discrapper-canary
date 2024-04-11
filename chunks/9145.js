@@ -32,10 +32,10 @@ var a = n("735250"),
   R = n("918559"),
   L = n("981631"),
   y = n("689938"),
-  j = n("136387");
-let O = {
-  [R.FocusedActivityLayouts.NO_CHAT]: j.noChat,
-  [R.FocusedActivityLayouts.RESIZABLE]: j.resizable
+  O = n("136387");
+let j = {
+  [R.FocusedActivityLayouts.NO_CHAT]: O.noChat,
+  [R.FocusedActivityLayouts.RESIZABLE]: O.resizable
 };
 
 function P(e) {
@@ -79,7 +79,7 @@ function P(e) {
   let et = k.get(null === (n = w[0]) || void 0 === n ? void 0 : null === (t = n.application) || void 0 === t ? void 0 : t.id),
     en = [];
   return null != et && (en = Array.from(et.embeddedActivity.userIds).map(e => E.default.getUser(e)).filter(e => null != e && void 0 !== e)), (0, a.jsxs)("div", {
-    className: i()(j.wrapper, O[G], (0, _.getThemeClass)(L.ThemeTypes.DARK)),
+    className: i()(O.wrapper, j[G], (0, _.getThemeClass)(L.ThemeTypes.DARK)),
     ref: B,
     style: V && null != W ? {
       minHeight: 200,
@@ -87,18 +87,18 @@ function P(e) {
       height: W
     } : void 0,
     children: [null == b ? void 0 : b(), (0, a.jsxs)("div", {
-      className: j.activityPanelContainer,
+      className: O.activityPanelContainer,
       children: [V ? null : (0, a.jsx)("div", {
-        className: j.header,
+        className: O.header,
         children: (0, a.jsx)(o.Text, {
           color: "header-primary",
           variant: "text-md/semibold",
-          className: j.headerTitle,
+          className: O.headerTitle,
           children: null == U ? void 0 : U.name
         })
       }), (0, a.jsx)("div", {
-        className: i()(j.activityContainer, {
-          [j.activityContainerNoMargin]: $
+        className: i()(O.activityContainer, {
+          [O.activityContainerNoMargin]: $
         }),
         style: {
           paddingLeft: Q,
@@ -108,23 +108,23 @@ function P(e) {
         },
         ref: K,
         children: (0, a.jsx)(x.default, {
-          className: j.iframe,
+          className: O.iframe,
           embedId: (0, N.default)(D, U.id)
         })
       }), null != ee ? (0, a.jsxs)("div", {
-        className: j.footer,
+        className: O.footer,
         children: [(0, a.jsx)(g.default, {
           renderIcon: !1,
           users: en,
           size: 32,
           max: 6,
-          className: j.userAvatars
+          className: O.userAvatars
         }), (0, a.jsxs)("div", {
-          className: j.footerButtons,
+          className: O.footerButtons,
           children: [(0, a.jsx)(M.default, {
             channelId: ee
           }), (0, a.jsx)("div", {
-            className: j.leaveButtonContainer,
+            className: O.leaveButtonContainer,
             children: (0, a.jsx)(m.default, {
               applicationId: U.id,
               channelId: D,
@@ -138,7 +138,7 @@ function P(e) {
             themeable: !0
           })]
         }), (0, a.jsx)("div", {
-          className: j.flex
+          className: O.flex
         })]
       }) : null]
     }), V ? (0, a.jsx)(d.default, {

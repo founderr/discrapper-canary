@@ -106,14 +106,14 @@ function L(e) {
     emojiSearchProps: E,
     recentlyUsedEmojis: g,
     analyticsOverride: _
-  } = e, L = (0, C.useUID)(), [y, j] = l.useState(!1), O = (0, f.useFrequentlyUsedEmojis)(t.guild_id), P = (0, r.uniqBy)([...O, ...N], "name").filter(e => !S.default.isEmojiFilteredOrLocked({
+  } = e, L = (0, C.useUID)(), [y, O] = l.useState(!1), j = (0, f.useFrequentlyUsedEmojis)(t.guild_id), P = (0, r.uniqBy)([...j, ...N], "name").filter(e => !S.default.isEmojiFilteredOrLocked({
     emoji: e,
     channel: t,
     intention: x
   })).slice(0, T.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT);
   null != g && g.length > 0 && P.splice(P.length - 1, 1, g[0]);
   let D = e => {
-      j(e), null == m || m(e)
+      O(e), null == m || m(e)
     },
     b = (e, t) => {
       if (null == e && t) {

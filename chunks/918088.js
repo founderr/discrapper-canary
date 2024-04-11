@@ -263,7 +263,7 @@ function R(e, t) {
     presentation: "button",
     enabled: U,
     type: "submit"
-  })), X = (0, s.match)({
+  })), Z = (0, s.match)({
     isExpired: F,
     isInteractive: k,
     isEditingVote: B
@@ -287,7 +287,7 @@ function R(e, t) {
     presentation: "text",
     enabled: !0,
     type: "showVoterDetails"
-  })), Z = !k || F || G || K ? void 0 : {
+  })), X = !k || F || G || K ? void 0 : {
     label: N.default.Messages.POLL_SHOW_VOTES,
     presentation: "textButton",
     enabled: !0,
@@ -348,7 +348,7 @@ function R(e, t) {
     hasVoted: G,
     isExpired: F,
     myAvatarUrl: O,
-    secondaryAction: X,
-    tertiaryAction: Z
+    secondaryAction: Z,
+    tertiaryAction: X
   }
 }

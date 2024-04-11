@@ -61,7 +61,7 @@ function g(e) {
       channel: null != j ? j : void 0
     }, t)
   }) : C.default.Messages.CANNOT_ACCESS_HANGOUT, 0 === V.length && (J = B ? C.default.Messages.HANGOUT_OVER_SENDER : C.default.Messages.HANGOUT_OVER_RECEIVER);
-  let X = B ? C.default.Messages.WAVE_AGAIN : C.default.Messages.WAVE_BACK;
+  let Z = B ? C.default.Messages.WAVE_AGAIN : C.default.Messages.WAVE_BACK;
   return (0, s.jsxs)("div", {
     children: [(0, s.jsxs)("div", {
       className: A.card,
@@ -115,7 +115,7 @@ function g(e) {
           o.default.sendMessage(P.id, d.default.parse(P, "\uD83D\uDC4B"))
         },
         className: A.button,
-        children: X
+        children: Z
       })]
     })]
   })

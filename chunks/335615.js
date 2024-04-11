@@ -32,8 +32,8 @@ var a = n("735250"),
   R = n("518738"),
   L = n("155409"),
   y = n("484459"),
-  j = n("103575"),
-  O = n("439170"),
+  O = n("103575"),
+  j = n("439170"),
   P = n("430824"),
   D = n("111583"),
   b = n("594174"),
@@ -164,7 +164,7 @@ class X extends l.Component {
           object: V.AnalyticsObjects.BOOST_GEM_ICON
         }
       }))
-    }), z(this, "renderUserPopout", e => (0, a.jsx)(j.default, {
+    }), z(this, "renderUserPopout", e => (0, a.jsx)(O.default, {
       ...e,
       location: "ChannelMembers",
       userId: this.props.user.id,
@@ -383,7 +383,7 @@ class ee extends l.Component {
         channel: s
       } = this.props, i = this.getRowProps(e);
       if (null != i) {
-        if (i.type === O.MemberListRowTypes.MEMBER && "user" in i) {
+        if (i.type === j.MemberListRowTypes.MEMBER && "user" in i) {
           let {
             colorString: e,
             colorRoleId: t,
@@ -412,7 +412,7 @@ class ee extends l.Component {
             index: l
           }, "member-".concat(i.user.id))
         }
-        if (i.type === O.MemberListRowTypes.CONTENT_INVENTORY) {
+        if (i.type === j.MemberListRowTypes.CONTENT_INVENTORY) {
           let e = "content-inventory-".concat(i.entry.id);
           return null != i.entry.original_id && (e += "-".concat(i.entry.original_id)), (0, a.jsx)(x.default, {
             ...i,
@@ -420,7 +420,7 @@ class ee extends l.Component {
             index: l
           }, e)
         }
-        if (i.type === O.MemberListRowTypes.HIDDEN_CONTENT_INVENTORY) return (0, a.jsx)(v.default, {}, "content-inventory-hidden-entry")
+        if (i.type === j.MemberListRowTypes.HIDDEN_CONTENT_INVENTORY) return (0, a.jsx)(v.default, {}, "content-inventory-hidden-entry")
       }
       return (0, a.jsx)($, {
         index: l
@@ -483,7 +483,7 @@ class ee extends l.Component {
       this.hasContentFeed() && (t = t.filter(e => e.section !== N.CONTENT_FEED_SECTION));
       let a = t.map(e => this.getRowProps(e)).slice(0, n + 1).filter(H.isNotNullish);
       if (0 === a.length) return;
-      let l = a.reduce((e, t) => t.type !== O.MemberListRowTypes.MEMBER ? e : (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some(e => e.type === V.ActivityTypes.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++, e), {
+      let l = a.reduce((e, t) => t.type !== j.MemberListRowTypes.MEMBER ? e : (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some(e => e.type === V.ActivityTypes.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++, e), {
         num_users_visible: 0,
         num_users_visible_with_mobile_indicator: 0,
         num_users_visible_with_game_activity: 0,
@@ -503,7 +503,7 @@ function et(e) {
     className: n
   } = e, {
     analyticsLocations: s
-  } = (0, T.default)(S.default.MEMBER_LIST), r = (0, c.useStateFromStores)([g.default], () => g.default.keyboardModeEnabled), o = (0, c.useStateFromStoresObject)([O.default], () => O.default.getProps(t.guild_id, t.id)), {
+  } = (0, T.default)(S.default.MEMBER_LIST), r = (0, c.useStateFromStores)([g.default], () => g.default.keyboardModeEnabled), o = (0, c.useStateFromStoresObject)([j.default], () => j.default.getProps(t.guild_id, t.id)), {
     rows: d,
     groups: f,
     version: h,

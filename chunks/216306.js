@@ -24,8 +24,8 @@ var E = s("470079"),
   a = s.n(_),
   n = s("913527"),
   T = s.n(n),
-  u = s("442837"),
-  i = s("524437"),
+  i = s("442837"),
+  u = s("524437"),
   A = s("45114"),
   l = s("740504"),
   I = s("605236"),
@@ -93,8 +93,8 @@ function h(e, t) {
 }
 
 function p(e, t, s, E) {
-  let _ = (0, I.useIsDismissibleContentDismissed)(i.DismissibleContent.CHANNEL_BROWSER_NUX),
-    a = (0, u.useStateFromStoresObject)([S.default], () => {
+  let _ = (0, I.useIsDismissibleContentDismissed)(u.DismissibleContent.CHANNEL_BROWSER_NUX),
+    a = (0, i.useStateFromStoresObject)([S.default], () => {
       let t = {},
         s = S.default.getMutableGuildChannelsForGuild(e);
       for (let e in s) {
@@ -123,7 +123,7 @@ function p(e, t, s, E) {
 
 function y(e) {
   var t, s;
-  let E = (0, u.useStateFromStores)([N.default], () => N.default.getCategories(e)),
+  let E = (0, i.useStateFromStores)([N.default], () => N.default.getCategories(e)),
     _ = E._categories.length,
     a = E._categories[E._categories.length - 1];
   if (null == a) return 0;

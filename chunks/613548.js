@@ -32,8 +32,8 @@ var a = n("735250"),
   R = n("805009"),
   L = n("368666"),
   y = n("358221"),
-  j = n("887012"),
-  O = n("444253"),
+  O = n("887012"),
+  j = n("444253"),
   P = n("355827"),
   D = n("354459"),
   b = n("981631"),
@@ -82,7 +82,7 @@ function k(e) {
     selectedParticipant: y.default.getSelectedParticipant(E),
     voiceParticipantsHidden: y.default.getVoiceParticipantsHidden(E),
     userParticipantCount: y.default.getUserParticipantCount(E)
-  }), [E]), k = (0, j.default)(n), {
+  }), [E]), k = (0, O.default)(n), {
     preventIdle: H,
     allowIdle: B
   } = (0, g.usePreventIdle)("popup"), G = [];
@@ -151,7 +151,7 @@ function k(e) {
         closePopout: t
       } = e;
       return (0, a.jsx)(S.default, {
-        children: (0, a.jsx)(O.default, {
+        children: (0, a.jsx)(j.default, {
           channelId: E,
           onClose: t,
           appContext: s,

@@ -48,8 +48,8 @@ var s, a, l, i, r = n("913527"),
   Q = n("199902"),
   q = n("314897"),
   J = n("881998"),
-  X = n("463395"),
-  Z = n("592125"),
+  Z = n("463395"),
+  X = n("592125"),
   $ = n("553795"),
   ee = n("427123"),
   et = n("271383"),
@@ -233,7 +233,7 @@ let eV = [eO.NoticeTypes.QUARANTINED, eO.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         let {
           voiceChannelId: t,
           voiceState: n
-        } = e, s = Z.default.getChannel(t), a = (null == s ? void 0 : s.isGuildStageVoice()) && (null == n ? void 0 : n.suppress);
+        } = e, s = X.default.getChannel(t), a = (null == s ? void 0 : s.isGuildStageVoice()) && (null == n ? void 0 : n.suppress);
         return !1 === es.default.getInputDetected() && !a
       }
     },
@@ -241,7 +241,7 @@ let eV = [eO.NoticeTypes.QUARANTINED, eO.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       predicate: e => {
         let {
           voiceChannelId: t
-        } = e, n = Z.default.getChannel(t);
+        } = e, n = X.default.getChannel(t);
         return !es.default.getOpenH264() && null != t && eT.default.hasVideo(t) && null != n && n.isGuildStageVoice()
       }
     },
@@ -249,8 +249,8 @@ let eV = [eO.NoticeTypes.QUARANTINED, eO.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       predicate: () => er.default.isConnected() && es.default.isHardwareMute(),
       metadata: () => {
         let e = es.default.getInputDeviceId(),
-          t = X.default.getVendor(e),
-          n = X.default.getModel(e);
+          t = Z.default.getVendor(e),
+          n = Z.default.getModel(e);
         if (null != t && null != n) return {
           vendor: t,
           model: n

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return L
   },
   default: function() {
-    return j
+    return O
   }
 }), n("47120");
 var a = n("735250"),
@@ -54,7 +54,7 @@ function y(e) {
   } = (0, T.renderSingleLineMessage)(n, v, s, R.messageContent, {
     iconClass: R.messageContentIcon,
     iconSize: M.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
-  }), y = (0, C.getMessageStickers)(n), j = y.length > 0 ? y.map(e => (0, a.jsx)(g.default, {
+  }), y = (0, C.getMessageStickers)(n), O = y.length > 0 ? y.map(e => (0, a.jsx)(g.default, {
     className: R.sticker,
     size: 128,
     sticker: e,
@@ -73,9 +73,9 @@ function y(e) {
       className: i()(R.messageContentWrapper, {
         [R.mentioned]: n.mentioned
       }),
-      children: [null !== (t = null != N ? N : j) && void 0 !== t ? t : (0, a.jsx)("span", {
+      children: [null !== (t = null != N ? N : O) && void 0 !== t ? t : (0, a.jsx)("span", {
         children: x
-      }), null != j ? null : L]
+      }), null != O ? null : L]
     }), (0, a.jsx)("img", {
       alt: "",
       src: (null == r ? void 0 : r.guildMemberAvatar) != null && null != o ? (0, I.getGuildMemberAvatarURLSimple)({
@@ -88,7 +88,7 @@ function y(e) {
   })
 }
 
-function j(e) {
+function O(e) {
   let {
     channelId: t,
     className: n

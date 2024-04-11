@@ -32,8 +32,8 @@ var a = n("735250"),
   R = n("998502"),
   L = n("276264"),
   y = n("981631"),
-  j = n("689938"),
-  O = n("581477"),
+  O = n("689938"),
+  j = n("581477"),
   P = n("652985");
 let D = R.default.getEnableHardwareAcceleration();
 
@@ -83,7 +83,7 @@ function b(e) {
       user: t,
       currentUser: S,
       isOwner: t.id === l.ownerId,
-      ownerTooltipText: j.default.Messages.GROUP_OWNER,
+      ownerTooltipText: O.default.Messages.GROUP_OWNER,
       shouldAnimateStatus: D,
       isTyping: f,
       status: d,
@@ -131,9 +131,9 @@ function U(e) {
     spacing: 16,
     children: e => (0, a.jsx)(T.default, {
       onContextMenu: d,
-      className: O.member,
+      className: j.member,
       name: (0, a.jsx)("span", {
-        className: O.username,
+        className: j.username,
         children: i.application.name
       }),
       avatar: (0, a.jsx)(r.Avatar, {
@@ -143,7 +143,7 @@ function U(e) {
         statusTooltip: !0
       }),
       decorators: (0, a.jsx)(S.default, {
-        className: O.botTag,
+        className: j.botTag,
         verified: null == c ? void 0 : c.isVerifiedBot()
       }),
       id: i.application.id,
@@ -196,7 +196,7 @@ function F(e) {
         fade: !0,
         children: [(0, a.jsxs)(I.default, {
           className: P.membersGroup,
-          children: ["".concat(j.default.Messages.MEMBERS, "—").concat(m.length, " "), M ? (0, a.jsx)(S.default, {
+          children: ["".concat(O.default.Messages.MEMBERS, "—").concat(m.length, " "), M ? (0, a.jsx)(S.default, {
             className: P.__invalid_decorator,
             type: S.default.Types.STAFF_ONLY_DM
           }) : null]
@@ -206,12 +206,12 @@ function F(e) {
         }, e.id)), v && (p.length > 0 || C && E.length > 0) && (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(I.default, {
             className: P.membersGroup,
-            children: "".concat(j.default.Messages.APPS, "—").concat(p.length)
+            children: "".concat(O.default.Messages.APPS, "—").concat(p.length)
           }), p.map(e => (0, a.jsx)(U, {
             integration: e,
             channel: t
           }, e.application.id)), x.length > 0 && (0, a.jsx)(T.default, {
-            className: O.member,
+            className: j.member,
             onClick: () => {
               (0, r.openModalLazy)(async () => {
                 let {
@@ -230,7 +230,7 @@ function F(e) {
                 height: 18
               })
             }),
-            name: j.default.Messages.PRIVATE_CHANNEL_ADD_APPS
+            name: O.default.Messages.PRIVATE_CHANNEL_ADD_APPS
           })]
         })]
       })

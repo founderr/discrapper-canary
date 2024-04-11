@@ -34,8 +34,8 @@ function x(e) {
     isHovered: R,
     setIsHovered: L,
     onMouseEnter: y,
-    onMouseLeave: j
-  } = (0, _.default)(200, 300), O = (0, f.useShowActivityIndicator)(), P = (0, c.default)({
+    onMouseLeave: O
+  } = (0, _.default)(200, 300), j = (0, f.useShowActivityIndicator)(), P = (0, c.default)({
     channelId: t.id
   }), D = !M, b = l.useCallback(e => {
     "focus" !== e.type && y()
@@ -77,7 +77,7 @@ function x(e) {
             channel: t,
             closePopout: n,
             onMouseEnter: y,
-            onMouseLeave: j,
+            onMouseLeave: O,
             isHovered: R,
             onClick: () => l(A.ContentDismissActionType.UNKNOWN)
           }) : (0, a.jsx)(a.Fragment, {})
@@ -93,8 +93,8 @@ function x(e) {
               k(), (n === i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES || n === i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && l(A.ContentDismissActionType.UNKNOWN)
             },
             onMouseEnter: b,
-            onMouseLeave: j
-          }), O ? (0, a.jsx)(E.FreeActivityIndicatorDot, {
+            onMouseLeave: O
+          }), j ? (0, a.jsx)(E.FreeActivityIndicatorDot, {
             top: 4,
             right: 10,
             size: 12,

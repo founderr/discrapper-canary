@@ -57,8 +57,8 @@ var s, a = n("735250"),
   Q = n("432147"),
   q = n("695346"),
   J = n("314897"),
-  X = n("271383"),
-  Z = n("607744"),
+  Z = n("271383"),
+  X = n("607744"),
   $ = n("496675"),
   ee = n("594174"),
   et = n("529815"),
@@ -668,10 +668,10 @@ function ew(e) {
     channel: n,
     message: s,
     renderSuppressEmbeds: l
-  } = e, i = (0, u.useStateFromStores)([J.default], () => J.default.getId()), r = q.InlineAttachmentMedia.useSetting(), o = q.InlineEmbedMedia.useSetting(), d = q.RenderEmbeds.useSetting() && !(0, eI.default)(e.message), c = q.RenderReactions.useSetting(), f = q.GifAutoPlay.useSetting(), E = (0, u.useStateFromStores)([Z.default], () => null == n.guild_id || Z.default.canChatInGuild(n.guild_id), [n]), _ = (0, u.useStateFromStores)([y.default], () => null != n.guild_id && y.default.isLurking(n.guild_id), [n]), T = (0, u.useStateFromStores)([X.default], () => X.default.isCurrentUserGuest(n.guild_id), [n]), m = (0, u.useStateFromStores)([X.default, ee.default], () => {
+  } = e, i = (0, u.useStateFromStores)([J.default], () => J.default.getId()), r = q.InlineAttachmentMedia.useSetting(), o = q.InlineEmbedMedia.useSetting(), d = q.RenderEmbeds.useSetting() && !(0, eI.default)(e.message), c = q.RenderReactions.useSetting(), f = q.GifAutoPlay.useSetting(), E = (0, u.useStateFromStores)([X.default], () => null == n.guild_id || X.default.canChatInGuild(n.guild_id), [n]), _ = (0, u.useStateFromStores)([y.default], () => null != n.guild_id && y.default.isLurking(n.guild_id), [n]), T = (0, u.useStateFromStores)([Z.default], () => Z.default.isCurrentUserGuest(n.guild_id), [n]), m = (0, u.useStateFromStores)([Z.default, ee.default], () => {
     var e, t;
     let s = ee.default.getCurrentUser();
-    return null !== (t = null != n.guild_id && null != s ? null === (e = X.default.getMember(n.guild_id, s.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
+    return null !== (t = null != n.guild_id && null != s ? null === (e = Z.default.getMember(n.guild_id, s.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
   }), {
     canAddNewReactions: I,
     canManageMessages: p

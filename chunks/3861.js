@@ -34,18 +34,18 @@ t.default = (0, r.default)(e => {
     showParticipants: R = !0,
     paused: L = !1,
     width: y,
-    height: j,
-    idle: O,
+    height: O,
+    idle: j,
     mode: P,
     popoutWindow: D,
     awaitingRemoteSessionInfo: b
   } = e;
   l.useEffect(() => {
     c.ComponentDispatch.dispatch(C.ComponentActions.REMEASURE_TARGET)
-  }, [y, j]);
+  }, [y, O]);
   let U = l.useMemo(() => n.filter(e => e.type !== g.ParticipantTypes.ACTIVITY || !e.participants.has(u.default.getId())), [n, r]);
   if ((null == b ? void 0 : b.channelId) === v.id) return (0, a.jsx)(h.default, {
-    height: j
+    height: O
   });
   if ((null == v ? void 0 : v.isGuildVocal()) && !M) return (0, a.jsx)(f.default, {
     channel: v,
@@ -88,8 +88,8 @@ t.default = (0, r.default)(e => {
     participants: t,
     popoutWindow: D,
     className: N,
-    idle: O,
-    height: j,
+    idle: j,
+    height: O,
     width: y,
     layout: _,
     inCall: M,

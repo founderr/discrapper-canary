@@ -32,12 +32,12 @@ var a = n("735250"),
   R = n("353368"),
   L = n("981631"),
   y = n("354459"),
-  j = n("185923"),
-  O = n("474936"),
+  O = n("185923"),
+  j = n("474936"),
   P = n("526761"),
   D = n("689938"),
   b = n("641831");
-let U = j.EmojiIntention.CHAT,
+let U = O.EmojiIntention.CHAT,
   F = {
     section: L.AnalyticsSections.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
     openPopoutType: "voice_channel_effect_emoji_picker"
@@ -50,7 +50,7 @@ function k(e) {
     channel: n,
     closePopout: p,
     onFocus: S
-  } = e, j = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), k = (0, i.useStateFromStores)([C.default], () => C.default.getCurrentUser()), H = _.default.canUseFancyVoiceChannelReactions(k), B = (0, i.useStateFromStores)([I.default], () => I.default.getState().animationType), G = l.useRef(!1), V = (0, m.useFrequentlyUsedEmojis)(n.guild_id), W = (0, s.uniqBy)([...V, ...w], "name").filter(e => !g.default.isEmojiFilteredOrLocked({
+  } = e, O = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), k = (0, i.useStateFromStores)([C.default], () => C.default.getCurrentUser()), H = _.default.canUseFancyVoiceChannelReactions(k), B = (0, i.useStateFromStores)([I.default], () => I.default.getState().animationType), G = l.useRef(!1), V = (0, m.useFrequentlyUsedEmojis)(n.guild_id), W = (0, s.uniqBy)([...V, ...w], "name").filter(e => !g.default.isEmojiFilteredOrLocked({
     emoji: e,
     channel: n,
     intention: U
@@ -73,7 +73,7 @@ function k(e) {
     Z = () => {
       (0, N.openEffectsUpsellModal)({
         analytics: {
-          type: O.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED,
+          type: j.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED,
           object: L.AnalyticsObjects.BUTTON_CTA,
           section: L.AnalyticsSections.VOICE_CHANNEL_EFFECTS_BAR
         }
@@ -95,7 +95,7 @@ function k(e) {
       guild_id: Q
     })
   }, [X, Q]);
-  let J = j ? [r.DismissibleContent.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
+  let J = O ? [r.DismissibleContent.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
     $ = B === R.VoiceChannelEffectAnimationType.PREMIUM;
   return (0, a.jsx)(h.default, {
     contentTypes: J,
@@ -103,7 +103,7 @@ function k(e) {
       let {
         visibleContent: t,
         markAsDismissed: l
-      } = e, s = j && t === r.DismissibleContent.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
+      } = e, s = O && t === r.DismissibleContent.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
       return (0, a.jsx)(o.Popout, {
         position: "left",
         "aria-label": D.default.Messages.VOICE_CHANNEL_EFFECTS_MORE,
@@ -149,7 +149,7 @@ function k(e) {
               },
               onShowUpsell: () => (0, N.openEffectsUpsellModal)({
                 analytics: {
-                  type: G.current ? O.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED : O.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED,
+                  type: G.current ? j.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED : j.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED,
                   object: L.AnalyticsObjects.VOICE_CHANNEL_EFFECTS_TOGGLE,
                   section: G.current ? L.AnalyticsSections.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER : L.AnalyticsSections.VOICE_CHANNEL_EFFECTS_BAR
                 }

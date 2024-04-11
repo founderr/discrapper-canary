@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   ClearAfterValues: function() {
-    return l
+    return n
   },
   STATUS_MAX_LENGTH: function() {
-    return s
+    return l
   }
 });
-let a = 36e5,
-  s = 128,
-  l = Object.freeze({
+let s = 36e5,
+  l = 128,
+  n = Object.freeze({
     MINUTES_30: 18e5,
     HOURS_1: 36e5,
     HOURS_4: 144e5,

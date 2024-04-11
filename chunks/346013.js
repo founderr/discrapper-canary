@@ -49,10 +49,10 @@ function F(e) {
     channel: k
   } = e, w = (0, y.useMediaPostEmbedData)(r, F), {
     setPopout: H
-  } = (0, S.default)(F.id, b.DEFAULT_POPOUTS), V = (0, N.useContextMenuMessage)(F, k, H, !0), Y = g.GifAutoPlay.useSetting(), K = (0, D.useIsWindowFocused)(), [W, z] = a.useState(!1), [Q, q] = a.useState((null == w ? void 0 : w.coverImage) == null), J = (0, c.useStateFromStores)([E.default], () => E.default.useReducedMotion), X = (0, c.useStateFromStores)([M.default, R.default], () => {
+  } = (0, S.default)(F.id, b.DEFAULT_POPOUTS), V = (0, N.useContextMenuMessage)(F, k, H, !0), Y = g.GifAutoPlay.useSetting(), K = (0, D.useIsWindowFocused)(), [W, z] = a.useState(!1), [Q, q] = a.useState((null == w ? void 0 : w.coverImage) == null), J = (0, c.useStateFromStores)([E.default], () => E.default.useReducedMotion), Z = (0, c.useStateFromStores)([M.default, R.default], () => {
     var e;
     return M.default.isMember(null == w ? void 0 : w.guildId, null === (e = R.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
-  }, [w]), [Z, $] = (0, c.useStateFromStoresArray)([M.default], () => {
+  }, [w]), [X, $] = (0, c.useStateFromStoresArray)([M.default], () => {
     var e;
     let t = (null == w ? void 0 : w.authorId) != null ? M.default.getMember(w.guildId, w.authorId) : null;
     return [null !== (e = null == t ? void 0 : t.colorString) && void 0 !== e ? e : "inherit", null == t ? void 0 : t.colorRoleId]
@@ -67,11 +67,11 @@ function F(e) {
       media_post_id: w.threadId,
       channel_id: k.id,
       can_access: w.canAccess,
-      is_member: X
-    }), w.canAccess ? (0, p.default)(U.Routes.CHANNEL(w.guildId, w.threadId, w.messageId)) : X ? (0, p.default)(U.Routes.CHANNEL(w.guildId, w.parentChannelId)) : await x.startLurking(w.guildId, {}, {
+      is_member: Z
+    }), w.canAccess ? (0, p.default)(U.Routes.CHANNEL(w.guildId, w.threadId, w.messageId)) : Z ? (0, p.default)(U.Routes.CHANNEL(w.guildId, w.parentChannelId)) : await x.startLurking(w.guildId, {}, {
       channelId: w.parentChannelId
     }))
-  }, [w, k, X]), ei = a.useCallback(() => (o()((null == w ? void 0 : w.authorId) != null, "Author Id cannot be null when loading user profile"), (0, C.default)(w.authorId, w.avatarUrl, {
+  }, [w, k, Z]), ei = a.useCallback(() => (o()((null == w ? void 0 : w.authorId) != null, "Author Id cannot be null when loading user profile"), (0, C.default)(w.authorId, w.avatarUrl, {
     guildId: w.guildId,
     channelId: k.id
   })), [w, k]);
@@ -199,7 +199,7 @@ function F(e) {
                 children: e => (0, s.jsx)(f.NameWithRoleAnchor, {
                   ...e,
                   name: w.authorName,
-                  color: Z,
+                  color: X,
                   className: G.authorName
                 })
               }, (0, u.v4)())

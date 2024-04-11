@@ -30,9 +30,9 @@ function N(e) {
 t.default = function(e, t, n) {
   let M = a.useRef(n);
   return M.current = n, a.useCallback(n => {
-    var a, R, L, y, j;
+    var a, R, L, y, O;
     if (!M.current || n.target !== n.currentTarget) return;
-    let O = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
+    let j = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
       P = n.altKey && !(n.ctrlKey || n.metaKey || n.shiftKey),
       D = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
       b = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
@@ -43,25 +43,25 @@ t.default = function(e, t, n) {
     let k = d.default.getId();
     switch (n.key.toLowerCase()) {
       case "backspace":
-        O && (N(w) || F.canDeleteOwnMessage(k)) && (n.preventDefault(), (0, v.deleteMessage)(w, F, n));
+        j && (N(w) || F.canDeleteOwnMessage(k)) && (n.preventDefault(), (0, v.deleteMessage)(w, F, n));
         break;
       case "c":
         ((0, S.isMac)() ? b : D) && C.SUPPORTS_COPY && (n.preventDefault(), (0, C.copy)(F.content));
         break;
       case "e":
-        if (O) {
+        if (j) {
           ;
           if (a = k, R = w, L = F, !R.isSystemDM() && (0, T.default)(L, a)) n.preventDefault(), (0, v.editMessage)(w, F)
         }
         break;
       case "p":
-        if (O || U) {
+        if (j || U) {
           ;
-          if (y = w, j = F, !y.isSystemDM() && !(0, I.default)(j) && (N(y) || y.isPrivate())) n.preventDefault(), (0, v.pinMessage)(w, F, n)
+          if (y = w, O = F, !y.isSystemDM() && !(0, I.default)(O) && (N(y) || y.isPrivate())) n.preventDefault(), (0, v.pinMessage)(w, F, n)
         }
         break;
       case "+":
-        (O || U) && function(e) {
+        (j || U) && function(e) {
           let t = null == e.guild_id || m.default.canChatInGuild(e.guild_id),
             n = u.RenderReactions.getSetting(),
             {
@@ -81,13 +81,13 @@ t.default = function(e, t, n) {
         }));
         break;
       case "r":
-        (O || U) && (0, i.canReplyToMessage)(w, F) && (n.preventDefault(), (0, v.replyToMessage)(w, F, n));
+        (j || U) && (0, i.canReplyToMessage)(w, F) && (n.preventDefault(), (0, v.replyToMessage)(w, F, n));
         break;
       case "t":
-        if (O && (0, r.computeCanStartPublicThread)(w, F)) n.preventDefault(), (0, o.openThreadSidebarForCreating)(w, F, "Message Shortcut");
+        if (j && (0, r.computeCanStartPublicThread)(w, F)) n.preventDefault(), (0, o.openThreadSidebarForCreating)(w, F, "Message Shortcut");
         else if (F.hasFlag(x.MessageFlags.HAS_THREAD)) {
           let e = c.default.getChannel(_.default.castMessageIdAsChannelId(F.id));
-          null != e && (O || U) && (n.preventDefault(), (0, o.openThreadSidebarForViewing)(e, U))
+          null != e && (j || U) && (n.preventDefault(), (0, o.openThreadSidebarForViewing)(e, U))
         }
         break;
       case "enter":

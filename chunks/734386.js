@@ -32,8 +32,8 @@ var a = n("735250"),
   R = n("51144"),
   L = n("396769"),
   y = n("967128"),
-  j = n("318374"),
-  O = n("981631"),
+  O = n("318374"),
+  j = n("981631"),
   P = n("689938"),
   D = n("996650");
 
@@ -51,7 +51,7 @@ function b(e) {
       },
       context: t
     });
-    return u.has(n, O.Permissions.ADMINISTRATOR) || u.has(n, O.Permissions.VIEW_CHANNEL)
+    return u.has(n, j.Permissions.ADMINISTRATOR) || u.has(n, j.Permissions.VIEW_CHANNEL)
   }).value(), [t, b, w]), H = (0, c.useStateFromStoresArray)([I.default], () => {
     let e = {};
     for (let n of (null != F && (e[F.id] = F), Object.values(t.permissionOverwrites))) {
@@ -62,15 +62,15 @@ function b(e) {
     return o()(e).filter(e => {
       var n;
       let a = M.can({
-          permission: O.Permissions.ADMINISTRATOR,
+          permission: j.Permissions.ADMINISTRATOR,
           user: e,
           context: t
         }),
         l = null !== (n = t.permissionOverwrites[e.id]) && void 0 !== n ? n : M.NONE,
-        s = u.has(l.allow, O.Permissions.VIEW_CHANNEL);
+        s = u.has(l.allow, j.Permissions.VIEW_CHANNEL);
       return a || s
     }).value()
-  }, [t, F]), B = T.default.can(O.Permissions.MANAGE_CHANNELS, t) || T.default.can(O.Permissions.MANAGE_ROLES, t);
+  }, [t, F]), B = T.default.can(j.Permissions.MANAGE_CHANNELS, t) || T.default.can(j.Permissions.MANAGE_ROLES, t);
 
   function G() {
     h.default.open(t.id)
@@ -112,7 +112,7 @@ function b(e) {
     }) : null, (0, a.jsxs)("div", {
       className: D.members,
       children: [function() {
-        if (1 !== H.length || k.length > 0) return (0, a.jsx)(j.default, {
+        if (1 !== H.length || k.length > 0) return (0, a.jsx)(O.default, {
           guildId: t.guild_id,
           className: D.avatars,
           maxUsers: 5,
@@ -140,7 +140,7 @@ function b(e) {
         })
       }(), k.map((e, n) => {
         var l, s;
-        let r = null !== (s = e.colorString) && void 0 !== s ? s : (0, d.int2hex)(O.DEFAULT_ROLE_COLOR),
+        let r = null !== (s = e.colorString) && void 0 !== s ? s : (0, d.int2hex)(j.DEFAULT_ROLE_COLOR),
           o = (null === (l = e.tags) || void 0 === l ? void 0 : l.guild_connections) !== void 0;
         return B ? (0, a.jsx)(x.default, {
           className: i()(D.role, {
@@ -151,7 +151,7 @@ function b(e) {
           disabled: !B,
           verified: o,
           onClick: () => {
-            g.default.open(t.guild_id, O.GuildSettingsSections.MEMBERS), g.default.selectRole(e.id)
+            g.default.open(t.guild_id, j.GuildSettingsSections.MEMBERS), g.default.selectRole(e.id)
           }
         }, e.id) : (0, a.jsx)(N.default, {
           className: i()(D.role, {

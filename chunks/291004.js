@@ -9,8 +9,8 @@ var E = s("735250"),
   a = s("803997"),
   n = s.n(a),
   T = s("924826"),
-  u = s("481060"),
-  i = s("285952"),
+  i = s("481060"),
+  u = s("285952"),
   A = s("153124"),
   l = s("570832");
 class I extends _.PureComponent {
@@ -21,14 +21,14 @@ class I extends _.PureComponent {
       renderValue: s,
       className: _
     } = this.props;
-    return (0, E.jsxs)(i.default, {
+    return (0, E.jsxs)(u.default, {
       className: n()(l.quickSelect, _),
-      align: i.default.Align.CENTER,
+      align: u.default.Align.CENTER,
       children: [(0, E.jsx)("div", {
         className: l.quickSelectLabel,
         children: e
-      }), (0, E.jsxs)(i.default, {
-        align: i.default.Align.CENTER,
+      }), (0, E.jsxs)(u.default, {
+        align: u.default.Align.CENTER,
         className: l.quickSelectClick,
         children: [(0, E.jsx)("div", {
           className: l.quickSelectValue,
@@ -49,7 +49,7 @@ class L extends _.PureComponent {
     } = this.props;
     return (0, E.jsx)(T.ListNavigatorItem, {
       id: s.key,
-      children: _ => (0, E.jsx)(u.Clickable, {
+      children: _ => (0, E.jsx)(i.Clickable, {
         focusProps: {
           enabled: !1
         },
@@ -86,13 +86,13 @@ function o(e) {
     value: s,
     scroller: _,
     renderOption: a,
-    onChange: i,
+    onChange: u,
     className: I
   } = e, o = n()(l.quickSelectPopout, I, {
     [l.quickSelectPopoutScroll]: _
   }), r = t.map(e => {
     let t = null != s && e.value === s.value,
-      _ = t ? void 0 : i;
+      _ = t ? void 0 : u;
     return (0, E.jsx)(L, {
       className: l.quickSelectPopoutOption,
       renderOption: a,
@@ -110,14 +110,14 @@ function o(e) {
     ref: N,
     ...g
   } = S.containerProps;
-  return (0, u.useFocusLock)(N), (0, E.jsx)(T.ListNavigatorProvider, {
+  return (0, i.useFocusLock)(N), (0, E.jsx)(T.ListNavigatorProvider, {
     navigator: S,
     children: (0, E.jsx)("div", {
       ref: N,
       className: o,
       ...g,
       role: "listbox",
-      children: _ ? (0, E.jsx)(u.Scroller, {
+      children: _ ? (0, E.jsx)(i.Scroller, {
         className: l.quickSelectScroller,
         children: r
       }) : r

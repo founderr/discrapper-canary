@@ -55,8 +55,8 @@ var s = n("735250"),
   Q = n("852923"),
   q = n("592125"),
   J = n("430824"),
-  X = n("131951"),
-  Z = n("19780"),
+  Z = n("131951"),
+  X = n("19780"),
   $ = n("914010"),
   ee = n("594174"),
   et = n("55563"),
@@ -234,7 +234,7 @@ let eS = a.memo(function() {
           noticeType: ef.NoticeTypes.VOICE_DISABLED
         }), em.default.Messages.NOTICE_CONNECTION_CONFLICT, (0, s.jsx)(ei.PrimaryCTANoticeButton, {
           onClick: () => {
-            let e = Z.default.getRemoteDisconnectVoiceChannelId();
+            let e = X.default.getRemoteDisconnectVoiceChannelId();
             null != e && null != q.default.getChannel(e) && m.default.selectVoiceChannel(e)
           },
           noticeType: ef.NoticeTypes.VOICE_DISABLED,
@@ -251,7 +251,7 @@ let eS = a.memo(function() {
           noticeType: ef.NoticeTypes.VOICE_CONNECTED_LAST_SESSION
         }), em.default.Messages.NOTICE_VOICE_CONNECTED_LAST_SESSION, (0, s.jsx)(ei.PrimaryCTANoticeButton, {
           onClick: () => {
-            let e = Z.default.getLastSessionVoiceChannelId();
+            let e = X.default.getLastSessionVoiceChannelId();
             null != e && null != q.default.getChannel(e) && m.default.selectVoiceChannel(e)
           },
           noticeType: ef.NoticeTypes.VOICE_CONNECTED_LAST_SESSION,
@@ -320,7 +320,7 @@ let eS = a.memo(function() {
         })]
       });
     case ef.NoticeTypes.NO_INPUT_DETECTED:
-      if (!X.default.supports(eT.Features.LOOPBACK)) return (0, s.jsx)(ep, {});
+      if (!Z.default.supports(eT.Features.LOOPBACK)) return (0, s.jsx)(ep, {});
       return (0, s.jsx)(eh, {});
     case ef.NoticeTypes.HARDWARE_MUTE:
       if (null == ec.metadata) return null;

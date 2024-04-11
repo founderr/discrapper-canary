@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   clearWelcomeScreenSettings: function() {
-    return i
+    return u
   },
   fetchWelcomeScreen: function() {
     return T
   },
   resetWelcomeScreen: function() {
-    return u
+    return i
   },
   saveWelcomeScreen: function() {
     return l
@@ -49,11 +49,11 @@ let n = function(e) {
         type: "WELCOME_SCREEN_FETCH_FAIL"
       })
     }
-  }, u = () => {
+  }, i = () => {
     _.default.dispatch({
       type: "WELCOME_SCREEN_SETTINGS_RESET"
     })
-  }, i = () => {
+  }, u = () => {
     _.default.dispatch({
       type: "WELCOME_SCREEN_SETTINGS_CLEAR"
     })

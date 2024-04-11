@@ -50,8 +50,8 @@ var a = n("735250"),
   R = n("69259"),
   L = n("206295"),
   y = n("885712"),
-  j = n("206583"),
-  O = n("981631"),
+  O = n("206583"),
+  j = n("981631"),
   P = n("689938"),
   D = n("522791");
 
@@ -148,7 +148,7 @@ function B(e) {
       channel: a,
       altText: n,
       reply: t
-    }), (0, R.trackInteraction)(j.ContentInventoryInteractionTypes.REACTION_MESSAGE_SENT, {
+    }), (0, R.trackInteraction)(O.ContentInventoryInteractionTypes.REACTION_MESSAGE_SENT, {
       entry: s,
       channelId: r.channel.id,
       guildId: r.channel.guild_id,
@@ -173,7 +173,7 @@ function G(e) {
     updatePopoutPosition: s,
     reactionImage: r,
     onMessageReact: u
-  } = e, [d, c] = l.useState(null), [f, m] = l.useState(null), E = l.useRef(null), [C, g] = l.useState(), [_, A] = l.useState(!1), x = null != r && null != d && !_, N = null == d || d.type === O.ChannelTypes.DM ? "@".concat(n.username) : "#".concat(d.name);
+  } = e, [d, c] = l.useState(null), [f, m] = l.useState(null), E = l.useRef(null), [C, g] = l.useState(), [_, A] = l.useState(!1), x = null != r && null != d && !_, N = null == d || d.type === j.ChannelTypes.DM ? "@".concat(n.username) : "#".concat(d.name);
   l.useEffect(() => {
     (async function e() {
       let e = null == r ? void 0 : r.item.file;
@@ -184,8 +184,8 @@ function G(e) {
     null == S.default.getChannel(e) && h.default.getOrEnsurePrivateChannel(n.id)
   }, [n.id]);
   let M = e => {
-      null != e && null != f && (I.default.track(O.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
-        surface_type: j.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
+      null != e && null != f && (I.default.track(j.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
+        surface_type: O.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
         channel_id: t.id,
         guild_id: t.guild_id
       }), f.focus(), R(":".concat(e.name, ":")))
@@ -275,8 +275,8 @@ function V(e) {
     onMessageReact: n,
     user: s
   } = e, [i, r] = l.useState(null), u = l.useRef(null), d = e => {
-    null != e && null != i && (I.default.track(O.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
-      surface_type: j.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
+    null != e && null != i && (I.default.track(j.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
+      surface_type: O.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
       channel_id: t.id,
       guild_id: t.guild_id
     }), i.insertEmoji(e, !1, !1), i.focus())

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return j
   }
 }), n("47120"), n("653041");
 var a = n("735250"),
@@ -40,12 +40,12 @@ function y(e) {
     guild: _,
     specMap: T,
     categoryTitle: I
-  } = e, A = (0, u.useStateFromStores)([g.default], () => g.default.getRoles(_.id)), v = N.Permissions[o], R = null !== (s = null === (t = T[v.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== s ? s : (0, E.getPermissionName)(v), y = null !== (r = null === (n = T[v.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== r ? r : "", j = x.ELEVATED_PERMISSIONS.has(v), O = x.MOD_PERMISSIONS.includes(o), P = C.length, D = (0, u.useStateFromStores)([S.default], () => S.default.can(N.Permissions.MANAGE_ROLES, _), [_]), b = l.useCallback(async e => {
+  } = e, A = (0, u.useStateFromStores)([g.default], () => g.default.getRoles(_.id)), v = N.Permissions[o], R = null !== (s = null === (t = T[v.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== s ? s : (0, E.getPermissionName)(v), y = null !== (r = null === (n = T[v.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== r ? r : "", O = x.ELEVATED_PERMISSIONS.has(v), j = x.MOD_PERMISSIONS.includes(o), P = C.length, D = (0, u.useStateFromStores)([S.default], () => S.default.can(N.Permissions.MANAGE_ROLES, _), [_]), b = l.useCallback(async e => {
     D && (await p.default.open(_.id, N.GuildSettingsSections.ROLES), await p.default.selectRole(e))
   }, [D, _.id]);
   return (0, a.jsxs)("div", {
     className: i()(L.permissionItemContainer, {
-      [L.elevatedPermission]: j
+      [L.elevatedPermission]: O
     }),
     children: [(0, a.jsxs)("div", {
       className: i()(L.permissionItemHeader),
@@ -61,7 +61,7 @@ function y(e) {
             variant: "text-xs/normal",
             color: "header-muted",
             children: I
-          }), j && (0, a.jsxs)(a.Fragment, {
+          }), O && (0, a.jsxs)(a.Fragment, {
             children: [(0, a.jsx)(h.default, {
               height: 4,
               width: 4,
@@ -83,7 +83,7 @@ function y(e) {
                 })]
               })
             })]
-          }), !j && O && (0, a.jsxs)(a.Fragment, {
+          }), !O && j && (0, a.jsxs)(a.Fragment, {
             children: [(0, a.jsx)(h.default, {
               height: 4,
               width: 4,
@@ -137,24 +137,24 @@ function y(e) {
   })
 }
 
-function j(e, t) {
+function O(e, t) {
   return t.toLowerCase().includes(e.toLowerCase())
 }
 
-function O(e) {
+function j(e) {
   let {
     userId: t,
     guildId: n,
     location: s,
     className: r,
     onNavigate: d
-  } = e, f = (0, u.useStateFromStores)([_.default], () => _.default.getUser(t), [t]), h = (0, u.useStateFromStores)([g.default], () => g.default.getGuild(n), [n]), m = (0, u.useStateFromStores)([C.default], () => C.default.getMember(n, t), [n, t]), p = (0, v.useProfileThemedPanelBackground)(t, n), S = (0, x.useUserPermissionsAndRoles)(t, n, x.ALL_PERMISSIONS), O = Object.keys(S).length, P = l.useMemo(() => null != h ? I.default.getGuildPermissionSpecMap(h) : null, [h]), D = l.useMemo(() => null != h ? I.default.generateGuildPermissionSpec(h) : null, [h]), [b, U] = l.useState(""), [F, w] = l.useState(""), k = l.useCallback(o()(w, 300), []), H = l.useCallback(e => {
+  } = e, f = (0, u.useStateFromStores)([_.default], () => _.default.getUser(t), [t]), h = (0, u.useStateFromStores)([g.default], () => g.default.getGuild(n), [n]), m = (0, u.useStateFromStores)([C.default], () => C.default.getMember(n, t), [n, t]), p = (0, v.useProfileThemedPanelBackground)(t, n), S = (0, x.useUserPermissionsAndRoles)(t, n, x.ALL_PERMISSIONS), j = Object.keys(S).length, P = l.useMemo(() => null != h ? I.default.getGuildPermissionSpecMap(h) : null, [h]), D = l.useMemo(() => null != h ? I.default.generateGuildPermissionSpec(h) : null, [h]), [b, U] = l.useState(""), [F, w] = l.useState(""), k = l.useCallback(o()(w, 300), []), H = l.useCallback(e => {
     U(e), k(e)
   }, [k]), B = l.useCallback(() => {
     U(""), w("")
   }, []), G = l.useMemo(() => {
     if (null == h || null == P || null == m) return null;
-    if (0 === O) return (0, a.jsx)("div", {
+    if (0 === j) return (0, a.jsx)("div", {
       className: i()(L.__invalid_permissionChiplet, L.__invalid_noModPerms),
       children: (0, a.jsx)(c.Text, {
         variant: "text-sm/normal",
@@ -178,10 +178,10 @@ function O(e) {
               i = x.ELEVATED_PERMISSIONS.has(l),
               f = x.MOD_PERMISSIONS.includes(s),
               h = i ? M.default.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION : f ? M.default.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION : null,
-              m = j(F, e),
-              p = j(F, n),
-              C = j(F, a),
-              g = null != h && j(F, h);
+              m = O(F, e),
+              p = O(F, n),
+              C = O(F, a),
+              g = null != h && O(F, h);
             if (!m && !p && !C && !g) return
           }
           e.push((0, a.jsx)(y, {
@@ -194,7 +194,7 @@ function O(e) {
         }
       })
     }), e
-  }, [h, P, m, O, D, S, F]);
+  }, [h, P, m, j, D, S, F]);
   return null == f || null == m ? null : (0, a.jsxs)("div", {
     className: i()(R.container, r),
     style: {

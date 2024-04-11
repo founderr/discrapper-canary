@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ActivityEntryPointTile: function() {
-    return j
+    return O
   }
 });
 var a = n("735250"),
@@ -33,7 +33,7 @@ var a = n("735250"),
   L = n("619727"),
   y = n("334732");
 
-function j(e) {
+function O(e) {
   let {
     channel: t,
     guild: n,
@@ -42,7 +42,7 @@ function j(e) {
     handleClose: i,
     userParticipantCount: r
   } = e;
-  return l < 250 ? (0, a.jsx)(O, {
+  return l < 250 ? (0, a.jsx)(j, {
     channel: t,
     guild: n,
     width: l,
@@ -64,7 +64,7 @@ function j(e) {
   })
 }
 
-function O(e) {
+function j(e) {
   let {
     channel: t,
     inPopout: n,

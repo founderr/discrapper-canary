@@ -33,9 +33,9 @@ t.default = e => {
   } = g.HangStatusExperiment.useExperiment({
     guildId: x.guild_id,
     location: "HangStatusPopout"
-  }), R = (0, r.useStateFromStores)([c.default], () => c.default.getId()), L = (0, r.useStateFromStores)([p.default], () => p.default.getUser(s)), y = (0, r.useStateFromStores)([m.default], () => m.default.getChannelId() === x.id), j = (0, r.useStateFromStores)([h.default], () => h.default.can(I.Permissions.CONNECT, x)), O = (0, r.useStateFromStores)([f.default], () => null != x.guild_id && null != L ? f.default.getMember(x.guild_id, s) : null), P = l.useMemo(() => null != L ? (0, d.getPreviewAvatar)(void 0, O, L, {
+  }), R = (0, r.useStateFromStores)([c.default], () => c.default.getId()), L = (0, r.useStateFromStores)([p.default], () => p.default.getUser(s)), y = (0, r.useStateFromStores)([m.default], () => m.default.getChannelId() === x.id), O = (0, r.useStateFromStores)([h.default], () => h.default.can(I.Permissions.CONNECT, x)), j = (0, r.useStateFromStores)([f.default], () => null != x.guild_id && null != L ? f.default.getMember(x.guild_id, s) : null), P = l.useMemo(() => null != L ? (0, d.getPreviewAvatar)(void 0, j, L, {
     size: 40
-  }) : void 0, [O, L]);
+  }) : void 0, [j, L]);
   return (l.useEffect(() => {
     M && null != t && N && null != L && R !== s && E.default.track(I.AnalyticEvents.VIEW_HANG_STATUS, {
       source: "HangStatusPopout",
@@ -86,11 +86,11 @@ t.default = e => {
             })]
           })]
         })]
-      }), !y && j ? (0, a.jsx)(o.Button, {
+      }), !y && O ? (0, a.jsx)(o.Button, {
         className: v.cta,
         size: o.Button.Sizes.SMALL,
         onClick: () => {
-          !y && j && (u.default.selectVoiceChannel(x.id), E.default.track(I.AnalyticEvents.HANG_STATUS_CTA_CLICKED, {
+          !y && O && (u.default.selectVoiceChannel(x.id), E.default.track(I.AnalyticEvents.HANG_STATUS_CTA_CLICKED, {
             source: "HangStatusPopout",
             guild_id: x.guild_id,
             channel_id: x.id

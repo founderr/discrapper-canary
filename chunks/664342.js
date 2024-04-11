@@ -73,10 +73,10 @@ function L(e) {
     channel: t,
     closePopout: n,
     onSelect: l
-  } = e, C = (0, o.default)(t, "Sidebar Overflow"), S = (0, d.default)(t), T = (0, h.default)(t), I = (0, m.default)(t), v = (0, i.default)(t), x = (0, u.default)(t), R = (0, f.default)(t.id), L = (0, c.default)(t), y = (0, r.default)(t), j = (0, E.default)({
+  } = e, C = (0, o.default)(t, "Sidebar Overflow"), S = (0, d.default)(t), T = (0, h.default)(t), I = (0, m.default)(t), v = (0, i.default)(t), x = (0, u.default)(t), R = (0, f.default)(t.id), L = (0, c.default)(t), y = (0, r.default)(t), O = (0, E.default)({
     id: t.id,
     label: M.default.Messages.COPY_ID_THREAD
-  }), O = (0, p.default)(t);
+  }), j = (0, p.default)(t);
 
   function P() {
     (0, g.transitionToChannel)(t.id)
@@ -117,9 +117,9 @@ function L(e) {
         }
       })]
     }), (0, a.jsxs)(s.MenuGroup, {
-      children: [O, v, x, y]
+      children: [j, v, x, y]
     }), (0, a.jsx)(s.MenuGroup, {
-      children: j
+      children: O
     })]
   })
 }

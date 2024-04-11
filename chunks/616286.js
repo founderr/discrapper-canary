@@ -111,15 +111,15 @@ function I(e) {
         channelId: n
       })
     }, [n]),
-    j = l.useCallback(() => {
+    O = l.useCallback(() => {
       var e;
       null === (e = v.current) || void 0 === e || e.focus()
     }, []);
   (0, m.useComponentAction)({
     event: g.ComponentActions.FOCUS_CHAT_BUTTON,
-    handler: A ? null : j
+    handler: A ? null : O
   });
-  let [O, P] = l.useState(!1), D = l.useCallback(() => {
+  let [j, P] = l.useState(!1), D = l.useCallback(() => {
     f && P(!0)
   }, [f]);
   (0, m.useComponentAction)({
@@ -127,12 +127,12 @@ function I(e) {
     handler: D
   }), l.useEffect(() => {
     let e;
-    return O && (e = setTimeout(() => {
+    return j && (e = setTimeout(() => {
       P(!1)
     }, 3e3)), () => {
       clearTimeout(e)
     }
-  }, [O]);
+  }, [j]);
   let b = [t = f && A ? S.default.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : x ? S.default.Messages.VIDEO_CALL_HIDE_CHAT : S.default.Messages.VIDEO_CALL_SHOW_CHAT];
   return R > 0 && b.push(S.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
     mentionCount: R
@@ -146,7 +146,7 @@ function I(e) {
     wrapperClassName: i()(s, null != r && {
       [r]: N
     }),
-    forceTooltipOpen: O,
+    forceTooltipOpen: j,
     ...I
   })
 }

@@ -32,8 +32,8 @@ var a = n("735250"),
   R = n("271383"),
   L = n("430824"),
   y = n("607744"),
-  j = n("496675"),
-  O = n("594174"),
+  O = n("496675"),
+  j = n("594174"),
   P = n("700785"),
   D = n("862679"),
   b = n("981631"),
@@ -211,7 +211,7 @@ class H extends l.PureComponent {
     }), k(this, "handleResendVerification", () => {
       var e;
       u.default.verifyResend();
-      let t = null === (e = O.default.getCurrentUser()) || void 0 === e ? void 0 : e.email;
+      let t = null === (e = j.default.getCurrentUser()) || void 0 === e ? void 0 : e.email;
       null != t && (0, o.openModal)(e => (0, a.jsx)(o.ConfirmModal, {
         ...e,
         header: F.default.Messages.VERIFICATION_EMAIL_TITLE,
@@ -299,10 +299,10 @@ function B(e) {
   let {
     channel: l,
     children: s
-  } = e, i = l.getGuildId(), o = (0, r.useStateFromStores)([L.default], () => L.default.getGuild(i)), u = (0, r.useStateFromStores)([y.default], () => y.default.getCheck(i)), d = l.type === b.ChannelTypes.GUILD_ANNOUNCEMENT && null != o && o.hasFeature(b.GuildFeatures.NEWS), c = (0, r.useStateFromStores)([M.default], () => d ? M.default.getFollowerStatsForChannel(l.id) : null), h = (0, r.useStateFromStores)([T.default], () => T.default.isLurking(i)), m = (0, r.useStateFromStores)([O.default], () => O.default.getCurrentUser()), p = null !== (t = null == m ? void 0 : m.isStaff()) && void 0 !== t && t, E = (0, r.useStateFromStores)([R.default], () => {
+  } = e, i = l.getGuildId(), o = (0, r.useStateFromStores)([L.default], () => L.default.getGuild(i)), u = (0, r.useStateFromStores)([y.default], () => y.default.getCheck(i)), d = l.type === b.ChannelTypes.GUILD_ANNOUNCEMENT && null != o && o.hasFeature(b.GuildFeatures.NEWS), c = (0, r.useStateFromStores)([M.default], () => d ? M.default.getFollowerStatsForChannel(l.id) : null), h = (0, r.useStateFromStores)([T.default], () => T.default.isLurking(i)), m = (0, r.useStateFromStores)([j.default], () => j.default.getCurrentUser()), p = null !== (t = null == m ? void 0 : m.isStaff()) && void 0 !== t && t, E = (0, r.useStateFromStores)([R.default], () => {
     var e, t;
     return null != m && null !== (t = null === (e = R.default.getMember(i, m.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== t && t
-  }), S = !!(null == o ? void 0 : o.hasVerificationGate()), I = (E || u.notClaimed) && S, A = (0, r.useStateFromStores)([_.default], () => _.default.shouldShowPopout(i)), v = (0, r.useStateFromStores)([j.default], () => j.default.can(b.Permissions.SEND_MESSAGES, l)), x = (0, r.useStateFromStores)([g.default], () => g.default.getRequest(i)), D = {
+  }), S = !!(null == o ? void 0 : o.hasVerificationGate()), I = (E || u.notClaimed) && S, A = (0, r.useStateFromStores)([_.default], () => _.default.shouldShowPopout(i)), v = (0, r.useStateFromStores)([O.default], () => O.default.can(b.Permissions.SEND_MESSAGES, l)), x = (0, r.useStateFromStores)([g.default], () => g.default.getRequest(i)), D = {
     ...u,
     guild: o,
     isLurking: h,

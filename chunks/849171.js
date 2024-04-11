@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   Avatars: function() {
-    return j
+    return O
   },
   default: function() {
     return P
@@ -36,7 +36,7 @@ var i = n("803997"),
 (l = a || (a = {}))[l.SMALL = 0] = "SMALL", l[l.MEDIUM = 1] = "MEDIUM", l[l.LARGE = 2] = "LARGE";
 let y = ["embedded_background"];
 
-function j(e) {
+function O(e) {
   let {
     avatarSize: t,
     guildId: n,
@@ -64,7 +64,7 @@ function j(e) {
   })
 }
 
-function O(e) {
+function j(e) {
   var t, n, a, l;
   let {
     participants: i,
@@ -76,14 +76,14 @@ function O(e) {
   let S = (a = C) > 400 ? 2 : a > 300 ? 1 : 0;
   let [_] = (l = C) > 400 ? [u.AvatarSizes.SIZE_56, 56] : l > 300 ? [u.AvatarSizes.SIZE_32, 32] : [u.AvatarSizes.SIZE_24, 24], I = (0, o.useStateFromStoresArray)([v.default, A.default], () => Array.from(i).map(e => A.default.getId() === e ? null : v.default.getUser(e)).filter(N.isNotNullish)), x = (0, o.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === m.id)), {
     analyticsLocations: y
-  } = (0, T.default)(), O = (0, d.useAnalyticsContext)(), P = M.default.getName(E.getGuildId(), E.id, null == I ? void 0 : I[0]), D = (0, h.useEmbeddedActivityJoinability)({
+  } = (0, T.default)(), j = (0, d.useAnalyticsContext)(), P = M.default.getName(E.getGuildId(), E.id, null == I ? void 0 : I[0]), D = (0, h.useEmbeddedActivityJoinability)({
     userId: null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
     channelId: E.id,
     application: m
   }) === h.EmbeddedActivityJoinability.CAN_JOIN, b = null !== (n = E.getGuildId()) && void 0 !== n ? n : void 0;
   return (0, s.jsxs)("div", {
     className: L.splash,
-    children: [(0, s.jsx)(j, {
+    children: [(0, s.jsx)(O, {
       avatarSize: _,
       guildId: b,
       channelId: E.id,
@@ -115,7 +115,7 @@ function O(e) {
             applicationId: x.applicationId,
             currentEmbeddedApplication: p,
             activityChannelId: E.id,
-            locationObject: O.location,
+            locationObject: j.location,
             embeddedActivitiesManager: g.default,
             analyticsLocations: y
           })
@@ -168,7 +168,7 @@ function P(e) {
           className: L.splashImage,
           alt: f.name,
           src: h
-        }) : null, !d && !a && null != f && (0, s.jsx)(O, {
+        }) : null, !d && !a && null != f && (0, s.jsx)(j, {
           width: n,
           channel: i,
           participants: t.participants,

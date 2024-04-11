@@ -180,8 +180,8 @@ function Q(e) {
   } = (0, S.useFocusInside)(O), W = (0, c.useStateFromStores)([E.default], () => E.default.keyboardModeEnabled), Q = (0, c.useStateFromStores)([A.default], () => A.default.can(G.Permissions.MANAGE_MESSAGES, r), [r]), {
     ruleName: q,
     embedChannel: J,
-    decisionId: X,
-    keywordMatchedContent: Z,
+    decisionId: Z,
+    keywordMatchedContent: X,
     keyword: $,
     content: ee,
     flaggedMessageId: et,
@@ -189,7 +189,7 @@ function Q(e) {
     decisionReason: es,
     alertActionsExecution: ea,
     quarantineType: el
-  } = (0, T.default)(l), ei = a.useMemo(() => (0, h.renderAutomodMessageMarkup)(ee, Z, r.id), [ee, Z, r]), {
+  } = (0, T.default)(l), ei = a.useMemo(() => (0, h.renderAutomodMessageMarkup)(ee, X, r.id), [ee, X, r]), {
     selected: er,
     ...eo
   } = function(e, t) {
@@ -217,8 +217,8 @@ function Q(e) {
       showUsernamePopout: i
     }
   }(l, r), eu = a.useCallback(() => {
-    (0, m.openSubmitFeedback)(l.id, ee, X, r)
-  }, [l.id, ee, X, r]), ed = a.useCallback(e => {
+    (0, m.openSubmitFeedback)(l.id, ee, Z, r)
+  }, [l.id, ee, Z, r]), ed = a.useCallback(e => {
     null != et && null != J && (e.stopPropagation(), e.preventDefault(), (0, p.default)(G.Routes.CHANNEL(null == J ? void 0 : J.guild_id, null == J ? void 0 : J.id, et)))
   }, [J, et]), ec = a.useCallback(() => {
     (0, I.executeAlertAction)(l.id, r, _.AutomodAlertActionType.DELETE_USER_MESSAGE)

@@ -35,8 +35,8 @@ var a = n("735250"),
   R = n("739566"),
   L = n("233715"),
   y = n("453687"),
-  j = n("348238"),
-  O = n("62072"),
+  O = n("348238"),
+  j = n("62072"),
   P = n("38267"),
   D = n("25015"),
   b = n("689674"),
@@ -126,7 +126,7 @@ function X(e) {
     isFocused: b,
     handleFocus: F,
     handleBlur: w
-  } = (0, j.useFocusInside)(N), {
+  } = (0, O.useFocusInside)(N), {
     popouts: B,
     selected: Z,
     setPopout: q
@@ -134,7 +134,7 @@ function X(e) {
     handleMouseEnter: ee,
     handleMouseLeave: et,
     isHovered: en
-  } = (0, j.useHoveredMessage)(I, r.author.id, Z), ea = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), el = Z || ea && b, es = el || en, {
+  } = (0, O.useHoveredMessage)(I, r.author.id, Z), ea = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), el = Z || ea && b, es = el || en, {
     content: ei,
     hasSpoilerEmbeds: er
   } = (0, D.default)(r, {
@@ -145,7 +145,7 @@ function X(e) {
     allowHeading: $,
     allowLinks: !0,
     previewLinkTarget: !0
-  }), eo = (0, O.default)(o, h, ea), eu = (0, R.default)(r), ed = (0, y.getMessageAriaLabelledBy)(r, I), ec = (0, y.getMessageAriaDescribedBy)(r), ef = (0, H.default)(e, ei, !1), eh = l.useCallback(() => (0, g.transitionToGuild)(E, h, o), [E, h, o]), em = (0, m.useRoleIcon)({
+  }), eo = (0, j.default)(o, h, ea), eu = (0, R.default)(r), ed = (0, y.getMessageAriaLabelledBy)(r, I), ec = (0, y.getMessageAriaDescribedBy)(r), ef = (0, H.default)(e, ei, !1), eh = l.useCallback(() => (0, g.transitionToGuild)(E, h, o), [E, h, o]), em = (0, m.useRoleIcon)({
     guildId: E,
     roleId: eu.iconRoleId
   });
@@ -234,20 +234,20 @@ t.default = l.memo(function(e) {
       selected: eo,
       setPopout: eu
     } = (0, P.default)(g.id, W.DEFAULT_POPOUTS),
-    ed = (0, j.useContextMenuMessage)(g, Z, eu),
-    ec = (0, j.useClickMessage)(g, Z),
+    ed = (0, O.useContextMenuMessage)(g, Z, eu),
+    ec = (0, O.useClickMessage)(g, Z),
     {
       handleMouseEnter: ef,
       handleMouseLeave: eh,
       hasHovered: em,
       isHovered: ep
-    } = (0, j.useHoveredMessage)($, g.author.id, eo),
+    } = (0, O.useHoveredMessage)($, g.author.id, eo),
     {
       isFocused: eE,
       hasFocused: eC,
       handleFocus: eg,
       handleBlur: eS
-    } = (0, j.useFocusInside)(en),
+    } = (0, O.useFocusInside)(en),
     e_ = (0, d.useStateFromStores)([I.default], () => I.default.isEditing(q, N), [q, N]),
     eT = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled),
     eI = eo || e_ || eT && eE,
@@ -269,16 +269,16 @@ t.default = l.memo(function(e) {
       allowDevLinks: eM,
       previewLinkTarget: !0
     }),
-    ey = (0, O.default)(N, q, eT),
-    ej = (0, R.default)(g),
-    eO = (0, d.useStateFromStores)([E.default], () => E.default.getPendingReply(q)),
+    ey = (0, j.default)(N, q, eT),
+    eO = (0, R.default)(g),
+    ej = (0, d.useStateFromStores)([E.default], () => E.default.getPendingReply(q)),
     eP = function(e) {
       let t = l.useRef(e);
       return l.useEffect(() => void(t.current = null != e ? e : t.current)), null != e ? e : t.current
     }(J),
     eD = (0, m.useRoleIcon)({
       guildId: Z.guild_id,
-      roleId: ej.iconRoleId
+      roleId: eO.iconRoleId
     }),
     eb = (0, y.getMessageAriaLabelledBy)(g, $),
     eU = (0, y.getMessageAriaDescribedBy)(g),
@@ -320,7 +320,7 @@ t.default = l.memo(function(e) {
             [K.systemMessage]: (0, M.default)(g),
             [K.groupStart]: !ee && (eH || g.type === Y.MessageTypes.REPLY),
             [K.selected]: eI,
-            [K.replying]: (null == eO ? void 0 : eO.message.id) === g.id,
+            [K.replying]: (null == ej ? void 0 : ej.message.id) === g.id,
             [K.interactionSending]: g.isCommandType() && g.state === Y.MessageStates.SENDING,
             [K.automodMessage]: ek
           }),
@@ -332,7 +332,7 @@ t.default = l.memo(function(e) {
             setPopout: eu,
             messagePopouts: er,
             replyReference: et,
-            author: ej,
+            author: eO,
             repliedMessage: ei,
             roleIcon: eD
           }),

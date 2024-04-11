@@ -32,8 +32,8 @@ var a = n("735250"),
   R = n("128557"),
   L = n("981631"),
   y = n("176505"),
-  j = n("689938"),
-  O = n("794711");
+  O = n("689938"),
+  j = n("794711");
 
 function P(e) {
   let {
@@ -86,16 +86,16 @@ function D(e) {
     channel: n
   }) : (0, a.jsx)(A.default, {
     channel: n,
-    children: j.default.Messages.SYSTEM_DM_EMPTY_MESSAGE
+    children: O.default.Messages.SYSTEM_DM_EMPTY_MESSAGE
   });
   if (m === L.ChannelTypes.DM) return (0, a.jsxs)(A.default, {
     channel: n,
     user: p,
     children: [null != p && (0, a.jsx)(i.Heading, {
       variant: "heading-xl/medium",
-      className: O.marginBottom20,
+      className: j.marginBottom20,
       children: T
-    }), j.default.Messages.BEGINNING_DM.format({
+    }), O.default.Messages.BEGINNING_DM.format({
       username: d
     }), (0, a.jsx)(S.default, {
       userId: n.getRecipientId(),
@@ -106,17 +106,17 @@ function D(e) {
   if (n.isMultiUserDM()) return n.isManaged() ? (0, a.jsxs)(_.default, {
     channelId: n.id,
     children: [(0, a.jsx)(_.EmptyMessageHeader, {
-      children: j.default.Messages.BEGINNING_CHANNEL_WELCOME.format({
+      children: O.default.Messages.BEGINNING_CHANNEL_WELCOME.format({
         channelName: d
       })
     }), (0, a.jsx)(_.EmptyMessageBody, {
-      children: j.default.Messages.BEGINNING_GROUP_DM_MANAGED
+      children: O.default.Messages.BEGINNING_GROUP_DM_MANAGED
     })]
   }) : n.hasFlag(y.ChannelFlags.IS_JOIN_REQUEST_INTERVIEW_CHANNEL) ? (0, a.jsx)(I.default, {
     channel: n
   }) : (0, a.jsx)(A.default, {
     channel: n,
-    children: j.default.Messages.BEGINNING_GROUP_DM.format({
+    children: O.default.Messages.BEGINNING_GROUP_DM.format({
       name: d
     })
   });
@@ -126,7 +126,7 @@ function D(e) {
   }) : (0, a.jsx)(_.default, {
     channelId: n.id,
     children: (0, a.jsx)(_.EmptyMessageBody, {
-      children: j.default.Messages.BEGINNING_CHANNEL_NO_HISTORY.format({
+      children: O.default.Messages.BEGINNING_CHANNEL_NO_HISTORY.format({
         channelName: d
       })
     })

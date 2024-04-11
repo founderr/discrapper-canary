@@ -32,8 +32,8 @@ var a = n("735250"),
   R = n("891551"),
   L = n("314897"),
   y = n("979696"),
-  j = n("430824"),
-  O = n("496675"),
+  O = n("430824"),
+  j = n("496675"),
   P = n("944486"),
   D = n("358085"),
   b = n("792125"),
@@ -107,7 +107,7 @@ function el(e) {
 function es(e) {
   let {
     channel: t
-  } = e, n = (0, h.useAppContext)(), l = (0, o.useStateFromStores)([O.default], () => O.default.can(X.Permissions.CREATE_INSTANT_INVITE, t)), s = (0, o.useStateFromStores)([j.default], () => j.default.getGuild(t.guild_id)), i = (0, o.useStateFromStores)([H.default], () => H.default.getStageInstanceByChannel(t.id)), r = l || (null == i ? void 0 : i.invite_code) != null;
+  } = e, n = (0, h.useAppContext)(), l = (0, o.useStateFromStores)([j.default], () => j.default.can(X.Permissions.CREATE_INSTANT_INVITE, t)), s = (0, o.useStateFromStores)([O.default], () => O.default.getGuild(t.guild_id)), i = (0, o.useStateFromStores)([H.default], () => H.default.getStageInstanceByChannel(t.id)), r = l || (null == i ? void 0 : i.invite_code) != null;
   return null != s && r ? (0, a.jsx)(A.default, {
     channel: t,
     appContext: n,
@@ -128,7 +128,7 @@ function ei(e) {
     } = e,
     p = (0, h.useAppContext)(),
     C = (0, o.useStateFromStores)([P.default], () => P.default.getVoiceChannelId() === n.id, [n.id]),
-    S = (0, o.useStateFromStores)([O.default], () => O.default.can(X.Permissions.CONNECT, n)),
+    S = (0, o.useStateFromStores)([j.default], () => j.default.can(X.Permissions.CONNECT, n)),
     _ = (0, w.useStageParticipants)(n.id, k.StageChannelParticipantNamedIndex.SPEAKER),
     T = (0, o.useStateFromStores)([E.default], () => E.default.getSelectedParticipant(n.id)),
     I = f && p !== X.AppContext.POPOUT,
@@ -218,7 +218,7 @@ function er(e) {
     popoutWindowAlwaysOnTop: T.default.getIsAlwaysOnTop(X.PopoutWindowKeys.CHANNEL_CALL_POPOUT)
   })), I = null != C && !C.closed, {
     analyticsLocations: A
-  } = (0, p.default)(m.default.STAGE_CHANNEL_CALL), v = (0, h.useAppContext)(), x = (0, o.useStateFromStores)([E.default], () => E.default.getChatOpen(t.id), [t.id]), N = (0, o.useStateFromStores)([j.default], () => j.default.getGuild(t.guild_id), [t.guild_id]);
+  } = (0, p.default)(m.default.STAGE_CHANNEL_CALL), v = (0, h.useAppContext)(), x = (0, o.useStateFromStores)([E.default], () => E.default.getChatOpen(t.id), [t.id]), N = (0, o.useStateFromStores)([O.default], () => O.default.getGuild(t.guild_id), [t.guild_id]);
   l.useEffect(() => {
     null == u.Storage.get(ee) && ((0, d.openModalLazy)(async () => {
       let {

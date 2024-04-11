@@ -39,8 +39,8 @@ function L(e) {
     width: o,
     paused: L,
     selected: y,
-    fit: j,
-    onVideoResize: O,
+    fit: O,
+    onVideoResize: j,
     blocked: P,
     noVideoRender: D = !1,
     pulseSpeakingIndicator: b = !1
@@ -60,13 +60,13 @@ function L(e) {
   return (l.useEffect(() => {
     n.isGuildStageVoice() && !G && (null == J ? void 0 : J.id) === w.id && u.default.selectParticipant(n.id, null)
   }, [G]), s && !Y && !D && G && !y && null != U && C.default.supports(v.Features.VIDEO)) ? (0, a.jsx)(_.default, {
-    onResize: O,
+    onResize: j,
     wrapperClassName: N.videoWrapper,
     className: N.content,
     mirror: B,
     streamId: k,
     videoComponent: U,
-    fit: j,
+    fit: O,
     paused: L,
     videoSpinnerContext: w.id === F ? d.VideoSpinnerContext.SELF_VIDEO : d.VideoSpinnerContext.REMOTE_VIDEO,
     userId: w.id

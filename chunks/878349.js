@@ -34,8 +34,8 @@ function g(e) {
     collapseWhenChecked: v = !0,
     onClick: x,
     disabled: N
-  } = e, M = (0, r.useStateFromStores)([f.default], () => f.default.useReducedMotion), [R, L] = l.useState(!1), y = (0, c.default)(), j = (0, o.isThemeDark)(y) || t ? C : E, {
-    width: O = 0,
+  } = e, M = (0, r.useStateFromStores)([f.default], () => f.default.useReducedMotion), [R, L] = l.useState(!1), y = (0, c.default)(), O = (0, o.isThemeDark)(y) || t ? C : E, {
+    width: j = 0,
     ref: P
   } = (0, d.default)(), {
     width: D = 0,
@@ -72,14 +72,14 @@ function g(e) {
         [p.labelUnchecked]: !t && !g
       }),
       style: v ? {
-        width: t ? O : O + D
+        width: t ? j : j + D
       } : void 0,
       children: [t ? (0, a.jsx)(m.Shine, {
         className: p.shine,
         shinePaused: M
       }) : null, (0, a.jsx)("img", {
         ref: P,
-        src: j,
+        src: O,
         alt: S
       }), (0, a.jsx)("span", {
         ref: b,
