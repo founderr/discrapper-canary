@@ -16,9 +16,9 @@ var l = n("735250"),
   f = n("981631"),
   h = n("176505"),
   p = n("689938"),
-  C = n("880031");
+  m = n("880031");
 
-function m(e, t) {
+function C(e, t) {
   return (0, l.jsx)(i.Text, {
     variant: "text-xs/bold",
     color: "text-normal",
@@ -37,42 +37,42 @@ let g = a.memo(function(e) {
   }, [g, n]), S = null == n ? 0 : n.length;
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)(i.Clickable, {
-      className: C.progressBarContainer,
+      className: m.progressBarContainer,
       onClick: function() {
         (0, d.transitionTo)(f.Routes.CHANNEL(t.id, h.StaticChannelRoute.GUILD_HOME))
       },
       children: [(0, l.jsxs)("div", {
-        className: C.progressBarText,
+        className: m.progressBarText,
         children: [(0, l.jsx)(i.Heading, {
           variant: "heading-sm/bold",
           children: p.default.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_GET_STARTED
         }), (0, l.jsxs)("div", {
-          className: C.rightContainer,
+          className: m.rightContainer,
           children: [(0, l.jsx)(i.Text, {
             variant: "text-xs/medium",
             color: "text-muted",
-            className: C.rightText,
+            className: m.rightText,
             children: p.default.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_COUNTER.format({
-              numberHook: m,
+              numberHook: C,
               total: S.toString(),
               completed: E.toString()
             })
           }), (0, l.jsx)(c.default, {
-            className: C.arrow,
+            className: m.arrow,
             width: 16,
             height: 16,
             direction: c.default.Directions.RIGHT
           })]
         })]
       }), (0, l.jsx)(i.Progress, {
-        className: C.progressBar,
+        className: m.progressBar,
         foregroundGradientColor: [(0, r.getColor)(f.Color.GREEN_300), (0, r.getColor)(f.Color.GREEN_230)],
         percent: E / S * 100 + 3,
         animate: !0
       })]
     }), (0, l.jsx)("div", {
       role: "separator",
-      className: C.divider
+      className: m.divider
     })]
   })
 })

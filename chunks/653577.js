@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("514342"),
   h = n("586791"),
   p = n("626135"),
-  C = n("981631"),
-  m = n("689938"),
+  m = n("981631"),
+  C = n("689938"),
   g = n("644092"),
   E = n("931093");
 
@@ -27,12 +27,12 @@ function S(e) {
     connected: n,
     hovered: s,
     subtitle: S,
-    onClick: _,
-    enableHangStatus: I,
+    onClick: I,
+    enableHangStatus: _,
     allowChannelTopic: N
-  } = e, T = (0, r.useStateFromStores)([u.default], () => u.default.getChannelStatus(t)), A = null != T && T.length > 0, L = (0, r.useStateFromStores)([c.default], () => (!I || !!N) && c.default.can(C.Permissions.SET_VOICE_CHANNEL_STATUS, t)), v = null != S && S.length > 0;
+  } = e, T = (0, r.useStateFromStores)([u.default], () => u.default.getChannelStatus(t)), A = null != T && T.length > 0, L = (0, r.useStateFromStores)([c.default], () => (!_ || !!N) && c.default.can(m.Permissions.SET_VOICE_CHANNEL_STATUS, t)), v = null != S && S.length > 0;
   a.useEffect(() => {
-    A && p.default.track(C.AnalyticEvents.VOICE_CHANNEL_TOPIC_VIEWED, {
+    A && p.default.track(m.AnalyticEvents.VOICE_CHANNEL_TOPIC_VIEWED, {
       guild_id: t.guild_id,
       channel_id: t.id
     })
@@ -42,7 +42,7 @@ function S(e) {
   let R = i()(g.statusDiv, n && L ? g.hoverable : null);
   if (A) return (0, l.jsx)(o.Clickable, {
     className: R,
-    onClick: L ? _ : void 0,
+    onClick: L ? I : void 0,
     children: (0, l.jsx)(o.Text, {
       variant: "text-xs/medium",
       className: i()(g.statusText, E.markup),
@@ -55,11 +55,11 @@ function S(e) {
   });
   if (n && L && (!v || s)) return (0, l.jsxs)(o.Clickable, {
     className: R,
-    onClick: _,
+    onClick: I,
     children: [(0, l.jsx)(o.Text, {
       variant: "text-xs/medium",
       className: g.statusText,
-      children: m.default.Messages.VOICE_CHANNEL_SET_STATUS
+      children: C.default.Messages.VOICE_CHANNEL_SET_STATUS
     }), (0, l.jsx)(h.default, {
       className: g.pencilIcon,
       width: x,

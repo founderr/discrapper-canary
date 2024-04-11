@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return A
   }
 }), n("47120");
 var i = n("735250"),
@@ -127,7 +127,7 @@ async function x(e, t) {
   await c.default.updateVerificationFormDescription(e, t)
 }
 
-function N(e) {
+function A(e) {
   var t, n, a;
   let {
     guild: o,
@@ -135,8 +135,8 @@ function N(e) {
     onFieldsSave: I,
     onDescriptionSave: _,
     verificationForm: T
-  } = e, [N, R] = r.useState(E), S = r.useRef(!1), A = r.useCallback(() => {
-    S.current = !0
+  } = e, [A, N] = r.useState(E), R = r.useRef(!1), S = r.useCallback(() => {
+    R.current = !0
   }, []), M = null !== (t = (0, p.useSubmittedGuildJoinRequestTotal)({
     guildId: o.id
   })) && void 0 !== t ? t : 0, O = (0, l.useStateFromStores)([d.default], () => null != T ? T : d.default.get(o.id)), b = null !== (n = null == O ? void 0 : O.formFields) && void 0 !== n ? n : [];
@@ -147,12 +147,12 @@ function N(e) {
   return (0, i.jsx)(u.default, {
     renderHeader: F ? (0, i.jsx)(C, {
       guild: o,
-      isExpanded: N,
+      isExpanded: A,
       emptyFormFields: (null == b ? void 0 : b.length) == null || (null == b ? void 0 : b.length) === 0,
       hasTermsField: null == b ? void 0 : b.some(e => e.field_type === f.VerificationFormFieldTypes.TERMS)
     }) : null,
-    isExpanded: N,
-    onExpand: () => R(!N),
+    isExpanded: A,
+    onExpand: () => N(!A),
     disableAnimation: E,
     disableBackground: !F,
     children: (0, i.jsx)("div", {
@@ -164,7 +164,7 @@ function N(e) {
         guild: o,
         submittedGuildJoinRequestsCount: M,
         formFields: b,
-        onFormFieldUpdate: A,
+        onFormFieldUpdate: S,
         hideVerificationLevelField: !0,
         isClanContext: E,
         onFieldsSave: null != I ? I : v,

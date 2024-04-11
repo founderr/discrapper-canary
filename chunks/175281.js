@@ -14,13 +14,13 @@ var l, a, s = n("735250"),
   f = n.n(c),
   h = n("748780"),
   p = n("442837"),
-  C = n("215569"),
-  m = n("481060"),
+  m = n("215569"),
+  C = n("481060"),
   g = n("612226"),
   E = n("951483"),
   S = n("714338"),
-  _ = n("607070"),
-  I = n("585483"),
+  I = n("607070"),
+  _ = n("585483"),
   N = n("557177"),
   T = n("264549"),
   A = n("981631"),
@@ -59,7 +59,7 @@ function M(e) {
 }
 let O = 1e3 / 60;
 
-function D() {
+function b() {
   let e = [g.KeybindGroup.MESSAGE, g.KeybindGroup.NAVIGATION, g.KeybindGroup.VOICE_AND_VIDEO, g.KeybindGroup.CHAT, g.KeybindGroup.MISCELLANEOUS];
   return (0, s.jsx)("div", {
     className: v.keyboardShortcutList,
@@ -74,10 +74,10 @@ function D() {
         }),
         children: [(0, s.jsxs)("div", {
           className: o()(v.keybindGroup),
-          children: [(0, s.jsx)(m.Heading, {
+          children: [(0, s.jsx)(C.Heading, {
             variant: "heading-md/semibold",
             children: i
-          }), null != r && (0, s.jsx)(m.Text, {
+          }), null != r && (0, s.jsx)(C.Text, {
             className: v.keybindGroupDescription,
             variant: "text-sm/normal",
             children: r
@@ -91,29 +91,29 @@ function D() {
               children: e.description
             }), (0, s.jsx)("div", {
               className: "keybind-shortcuts",
-              children: e.binds.map(e => (0, s.jsx)(m.KeyCombo, {
+              children: e.binds.map(e => (0, s.jsx)(C.KeyCombo, {
                 className: v.keybindKey,
                 shortcut: e
               }, e))
             })]
           }, t)
-        }), !l && (0, s.jsx)(m.FormDivider, {
+        }), !l && (0, s.jsx)(C.FormDivider, {
           className: v.keybindGroupDivider
         })]
       }, t)
     })
   })
 }
-class b extends i.PureComponent {
+class D extends i.PureComponent {
   componentDidMount() {
-    this.lastInputedKeys = [], I.ComponentDispatch.subscribe(A.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), I.ComponentDispatch.subscribe(A.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener("keydown", this.handleKeyDown, {
+    this.lastInputedKeys = [], _.ComponentDispatch.subscribe(A.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), _.ComponentDispatch.subscribe(A.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener("keydown", this.handleKeyDown, {
       capture: !0
     }), window.addEventListener("keyup", this.handleKeyUp, {
       capture: !0
     })
   }
   componentWillUnmount() {
-    I.ComponentDispatch.unsubscribe(A.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), I.ComponentDispatch.unsubscribe(A.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), window.removeEventListener("keydown", this.handleKeyDown, {
+    _.ComponentDispatch.unsubscribe(A.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), _.ComponentDispatch.unsubscribe(A.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), window.removeEventListener("keydown", this.handleKeyDown, {
       capture: !0
     }), window.removeEventListener("keyup", this.handleKeyUp, {
       capture: !0
@@ -129,12 +129,12 @@ class b extends i.PureComponent {
     return (0, s.jsxs)(h.default.div, {
       className: v.keyboardShortcutsModal,
       style: this.getStyles(),
-      children: [(0, s.jsxs)(m.H, {
+      children: [(0, s.jsxs)(C.H, {
         className: v.modalTitle,
         children: [(0, s.jsx)("div", {
           className: v.content,
           children: L.default.Messages.KEYBIND_DESCRIPTION_MODAL_TITLE
-        }), (0, s.jsx)(m.KeyCombo, {
+        }), (0, s.jsx)(C.KeyCombo, {
           shortcut: "mod+/"
         })]
       }), (0, s.jsx)("div", {
@@ -163,11 +163,11 @@ class b extends i.PureComponent {
           className: v.right,
           children: "right"
         })]
-      }), (0, s.jsx)(m.AdvancedScrollerAuto, {
+      }), (0, s.jsx)(C.AdvancedScrollerAuto, {
         ref: this.scrollerRef,
         fade: !0,
-        children: (0, s.jsx)(m.HeadingLevel, {
-          children: (0, s.jsx)(D, {})
+        children: (0, s.jsx)(C.HeadingLevel, {
+          children: (0, s.jsx)(b, {})
         })
       })]
     })
@@ -311,7 +311,7 @@ function j(e) {
       let e = setTimeout(() => u(!1), 500);
       return () => clearTimeout(e)
     }
-  }, [r]), (0, s.jsx)(m.Clickable, {
+  }, [r]), (0, s.jsx)(C.Clickable, {
     onClick: d,
     className: o()(v.arrow, l, {
       [v.active]: t || r
@@ -324,19 +324,19 @@ function G(e) {
   let {
     transitionState: t,
     onClose: n
-  } = e, [l, a] = i.useState(!1), r = i.useMemo(() => __OVERLAY__ ? (0, E.getOverlayLayoutContent)() : (0, g.getDefaultLayoutContent)(), []), u = (0, p.useStateFromStores)([_.default], () => _.default.keyboardModeEnabled);
-  return (0, s.jsx)(m.ModalRoot, {
+  } = e, [l, a] = i.useState(!1), r = i.useMemo(() => __OVERLAY__ ? (0, E.getOverlayLayoutContent)() : (0, g.getDefaultLayoutContent)(), []), u = (0, p.useStateFromStores)([I.default], () => I.default.keyboardModeEnabled);
+  return (0, s.jsx)(C.ModalRoot, {
     className: o()(v.noBackground, {
       [v.noShadow]: l
     }),
-    size: m.ModalSize.DYNAMIC,
+    size: C.ModalSize.DYNAMIC,
     "aria-label": L.default.Messages.KEYBINDS,
     transitionState: t,
-    children: (0, s.jsx)(C.TransitionGroup, {
+    children: (0, s.jsx)(m.TransitionGroup, {
       component: "div",
       children: l ? (0, s.jsx)(T.default, {
         onClose: n
-      }, "raging-demo") : (0, s.jsx)(b, {
+      }, "raging-demo") : (0, s.jsx)(D, {
         content: r,
         keyboardModeEnabled: u,
         activateRagingDemon: function() {

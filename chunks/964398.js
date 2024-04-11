@@ -89,7 +89,7 @@ function p(e, t, n) {
   let l = e * t;
   return e > .5 ? l - n : e < .5 ? l : l - n / 2
 }
-let C = (e, t) => {
+let m = (e, t) => {
   let n = Math.abs(t.x),
     l = 180 / Math.PI * Math.atan2(Math.abs(t.y), n),
     a = e / 2 - 28.8;
@@ -102,26 +102,26 @@ t.default = a.memo(function(e) {
   let {
     wheelWidth: t,
     wheelHeight: n,
-    itemWidth: m,
+    itemWidth: C,
     itemHeight: g,
     showDeadZoneIndicator: E,
     activeItem: S,
-    onItemSelect: _,
-    onItemAction: I,
+    onItemSelect: I,
+    onItemAction: _,
     interactive: N = !0,
     children: T
   } = e, A = a.useRef(null), L = a.useRef([]), v = a.useRef(!1), x = a.useRef(null), [R, y] = a.useState(0), [M, O] = a.useState({
     x: 0,
     y: 0
-  }), D = Math.abs(M.x) + Math.abs(M.y) > 0, b = a.useMemo(() => i().chunk(T, h), [T]), j = a.useCallback((e, t) => {
+  }), b = Math.abs(M.x) + Math.abs(M.y) > 0, D = a.useMemo(() => i().chunk(T, h), [T]), j = a.useCallback((e, t) => {
     null == L.current[R] ? L.current[R] = [] : L.current[R][t] = e
   }, [R]), G = a.useCallback((e, t) => {
-    x.current = t, _(h * e + t)
-  }, [_]), U = a.useCallback(() => {
-    x.current = null, _(null)
-  }, [_]), P = a.useCallback(e => {
-    U(), v.current = e
-  }, [U]), w = a.useCallback((e, t, n) => {
+    x.current = t, I(h * e + t)
+  }, [I]), P = a.useCallback(() => {
+    x.current = null, I(null)
+  }, [I]), U = a.useCallback(e => {
+    P(), v.current = e
+  }, [P]), w = a.useCallback((e, t, n) => {
     if (v.current) {
       O({
         x: 0,
@@ -135,15 +135,15 @@ t.default = a.memo(function(e) {
       },
       a = l.x < 0,
       s = l.y < 0,
-      i = C(n, l),
+      i = m(n, l),
       r = a ? Math.max(l.x, -i.x) : Math.min(l.x, i.x);
     O({
       x: r / 2,
       y: (s ? Math.max(l.y, -i.y) : Math.min(l.y, i.y)) / 2
     })
-  }, []), F = a.useCallback(e => {
-    null != x.current && (e.preventDefault(), e.stopPropagation(), null == I || I(h * R + x.current))
-  }, [I, R]), B = a.useMemo(() => (0, s.throttle)(e => {
+  }, []), B = a.useCallback(e => {
+    null != x.current && (e.preventDefault(), e.stopPropagation(), null == _ || _(h * R + x.current))
+  }, [_, R]), F = a.useMemo(() => (0, s.throttle)(e => {
     if (null == A.current) return;
     let l = A.current.getBoundingClientRect(),
       a = l.left + l.width / 2,
@@ -156,7 +156,7 @@ t.default = a.memo(function(e) {
         y: e.clientY
       };
     if (w(i, s, Math.max(t, n)), v.current) {
-      null != S && U();
+      null != S && P();
       return
     }
     let r = (0, o.extendLineSegment)(s, i, Math.max(t, n));
@@ -169,15 +169,15 @@ t.default = a.memo(function(e) {
         return
       }
     }
-    U()
-  }, 16), [S, w, U, G, R, n, t]), V = a.useCallback(e => {
+    P()
+  }, 16), [S, w, P, G, R, n, t]), V = a.useCallback(e => {
     if (!N) return;
     let t = R + (e.deltaY > 0 ? 1 : -1);
-    t >= 0 && t < b.length && (null != x.current && (b[t].length > x.current ? G(t, x.current) : U()), y(t))
-  }, [N, R, b, G, U]), H = a.useMemo(() => b[R].map((e, a) => {
+    t >= 0 && t < D.length && (null != x.current && (D[t].length > x.current ? G(t, x.current) : P()), y(t))
+  }, [N, R, D, G, P]), H = a.useMemo(() => D[R].map((e, a) => {
     let s = f[a];
     if (null == s) throw Error("Too many items supplied ".concat(T.length, " expected max of ").concat(f.length));
-    let i = p(s.x, t, m),
+    let i = p(s.x, t, C),
       r = p(s.y, n, g);
     return (0, l.jsx)("div", {
       ref: e => j(e, a),
@@ -185,17 +185,17 @@ t.default = a.memo(function(e) {
       style: {
         left: i,
         top: r,
-        width: m,
+        width: C,
         height: g
       },
       children: e
     }, a)
-  }), [b, R, t, m, n, g, T.length, j]);
+  }), [D, R, t, C, n, g, T.length, j]);
   return (0, l.jsx)(r.Clickable, {
     className: d.chatWheelMouseInput,
-    onMouseMove: B,
+    onMouseMove: F,
     onWheel: V,
-    onClick: F,
+    onClick: B,
     children: (0, l.jsxs)("div", {
       ref: A,
       className: d.chatWheel,
@@ -246,12 +246,12 @@ t.default = a.memo(function(e) {
             strokeWidth: "40.32"
           }), E && (0, l.jsx)("circle", {
             className: d.chatWheelDeadZone,
-            onMouseEnter: () => P(!0),
-            onMouseLeave: () => P(!1),
+            onMouseEnter: () => U(!0),
+            onMouseLeave: () => U(!1),
             cx: 144,
             cy: 144,
             r: 28.8
-          }), D && (0, l.jsx)("circle", {
+          }), b && (0, l.jsx)("circle", {
             className: d.chatWheelCenter,
             cx: 144 + M.x,
             cy: 144 + M.y,
@@ -259,8 +259,8 @@ t.default = a.memo(function(e) {
           })]
         }), E && (0, l.jsx)("circle", {
           className: d.chatWheelDeadZone,
-          onMouseEnter: () => P(!0),
-          onMouseLeave: () => P(!1),
+          onMouseEnter: () => U(!0),
+          onMouseLeave: () => U(!1),
           cx: 144,
           cy: 144,
           r: 28.8,
@@ -270,7 +270,7 @@ t.default = a.memo(function(e) {
         className: d.innerContent,
         children: [E && (0, l.jsx)(c, {
           className: d.chatWheelDeadZoneIcon
-        }), N && b.length > 1 ? (0, l.jsx)("div", {
+        }), N && D.length > 1 ? (0, l.jsx)("div", {
           className: d.paginationHint,
           children: u.default.Messages.CHAT_WHEEL_PAGINATION_HINT
         }) : null]

@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return w
   },
   getChannelItemClassName: function() {
-    return b
+    return D
   },
   isChannelItemDisabled: function() {
-    return D
+    return b
   }
 });
 var l, a, s, i, r = n("735250"),
@@ -24,13 +24,13 @@ var l, a, s, i, r = n("735250"),
   f = n("481060"),
   h = n("787014"),
   p = n("924301"),
-  C = n("159300"),
-  m = n("152376"),
+  m = n("159300"),
+  C = n("152376"),
   g = n("427679"),
   E = n("155409"),
   S = n("131704"),
-  _ = n("199902"),
-  I = n("430824"),
+  I = n("199902"),
+  _ = n("430824"),
   N = n("496675"),
   T = n("914010"),
   A = n("263704"),
@@ -42,11 +42,11 @@ var l, a, s, i, r = n("735250"),
   M = n("689938"),
   O = n("294639");
 
-function D(e, t, n) {
+function b(e, t, n) {
   return null != t && !!t && !(0, R.areTypesInSameSection)(n, e.type)
 }
 
-function b(e, t) {
+function D(e, t) {
   return null == t ? O.containerDefault : e > t ? O.containerDragAfter : O.containerDragBefore
 }
 
@@ -99,12 +99,12 @@ function G(e) {
     tabIndex: s,
     forceShowButtons: i,
     hasChannelInfo: o = !1
-  } = e, u = (0, c.useStateFromStores)([I.default], () => I.default.getGuild(t.getGuildId())), h = (0, c.useStateFromStores)([g.default], () => g.default.getStageInstanceByChannel(t.id), [t.id]), m = (0, c.useStateFromStores)([p.default], () => p.default.getActiveEventByChannel(t.id), [t.id]), S = (0, c.useStateFromStores)([N.default], () => (0, C.canViewInviteModal)(N.default, u, t, h)), T = (0, c.useStateFromStores)([N.default], () => N.default.can(y.Permissions.CREATE_INSTANT_INVITE, t) ? M.default.Messages.CREATE_INSTANT_INVITE : M.default.Messages.INVITE_TO_SERVER);
+  } = e, u = (0, c.useStateFromStores)([_.default], () => _.default.getGuild(t.getGuildId())), h = (0, c.useStateFromStores)([g.default], () => g.default.getStageInstanceByChannel(t.id), [t.id]), C = (0, c.useStateFromStores)([p.default], () => p.default.getActiveEventByChannel(t.id), [t.id]), S = (0, c.useStateFromStores)([N.default], () => (0, m.canViewInviteModal)(N.default, u, t, h)), T = (0, c.useStateFromStores)([N.default], () => N.default.can(y.Permissions.CREATE_INSTANT_INVITE, t) ? M.default.Messages.CREATE_INSTANT_INVITE : M.default.Messages.INVITE_TO_SERVER);
   if (a || !S) return null;
 
   function A() {
     if (null != u) {
-      let e = _.default.getAllActiveStreams().filter(e => e.state !== y.ApplicationStreamStates.ENDED && e.channelId === t.id);
+      let e = I.default.getAllActiveStreams().filter(e => e.state !== y.ApplicationStreamStates.ENDED && e.channelId === t.id);
       (0, f.openModalLazy)(async () => {
         let {
           default: l
@@ -115,7 +115,7 @@ function G(e) {
           channel: t,
           streamUserId: 1 === e.length ? e[0].ownerId : null,
           source: y.InstantInviteSources.GUILD_CHANNELS,
-          guildScheduledEvent: m
+          guildScheduledEvent: C
         })
       })
     }
@@ -145,11 +145,11 @@ function G(e) {
   })
 }
 
-function U(e) {
+function P(e) {
   let {
     channel: t
   } = e, n = () => {
-    (0, m.dimissFavoriteSuggestion)(t.guild_id, t.id)
+    (0, C.dimissFavoriteSuggestion)(t.guild_id, t.id)
   };
   return (0, r.jsx)(f.Tooltip, {
     text: M.default.Messages.REMOVE_FAVORITE_SUGGESTION,
@@ -167,11 +167,11 @@ function U(e) {
   })
 }
 
-function P(e) {
+function U(e) {
   let {
     channel: t
   } = e, n = () => {
-    (0, m.setIsFavorite)(t.guild_id, t.id, !0, {
+    (0, C.setIsFavorite)(t.guild_id, t.id, !0, {
       section: y.AnalyticsSections.CHANNEL_LIST
     })
   };
@@ -202,12 +202,12 @@ class w extends(i = o.PureComponent) {
     })
   }
   renderRemoveSuggestionButton() {
-    return (0, r.jsx)(U, {
+    return (0, r.jsx)(P, {
       ...this.props
     })
   }
   renderAcceptSuggestionButton() {
-    return (0, r.jsx)(P, {
+    return (0, r.jsx)(U, {
       ...this.props
     })
   }
@@ -216,7 +216,7 @@ class w extends(i = o.PureComponent) {
       position: e,
       sortingPosition: t
     } = this.props;
-    return b(e, t)
+    return D(e, t)
   }
   isDisabled() {
     let {
@@ -224,7 +224,7 @@ class w extends(i = o.PureComponent) {
       sorting: t,
       sortingType: n
     } = this.props;
-    return D(e, t, n)
+    return b(e, t, n)
   }
 }
 s = {

@@ -16,14 +16,14 @@ var l = n("735250"),
   f = n("936195"),
   h = n("727218"),
   p = n("602623"),
-  C = n("81063"),
-  m = n("768581"),
+  m = n("81063"),
+  C = n("768581"),
   g = n("823379"),
   E = n("51144"),
   S = n("847372");
-let _ = p.Sizes.SIZE_24;
+let I = p.Sizes.SIZE_24;
 
-function I(e) {
+function _(e) {
   var t, n;
   let {
     activity: s,
@@ -32,7 +32,7 @@ function I(e) {
     onOpenSpotifyAlbum: d
   } = e, c = null == s ? void 0 : s.assets, f = null == s ? void 0 : s.application_id;
   if (null == s || null == c || null == c.large_image && null == c.small_image) return null != r ? function(e) {
-    let t = m.default.getApplicationIconURL({
+    let t = C.default.getApplicationIconURL({
         id: e.application.id,
         icon: e.application.icon
       }),
@@ -52,7 +52,7 @@ function I(e) {
     g = p ? S.spotifyLargeImage : S.applicationLargeImage,
     E = null != h ? (0, l.jsx)("img", {
       alt: null !== (n = c.large_text) && void 0 !== n ? n : "",
-      src: (0, C.getAssetImage)(f, h, [128, 128]),
+      src: (0, m.getAssetImage)(f, h, [128, 128]),
       className: g
     }) : null;
   return p && null != d ? (E = (0, l.jsx)(o.Clickable, {
@@ -158,10 +158,10 @@ function v(e) {
     sortedVoiceStates: c,
     onOpenSpotifyTrack: f,
     onOpenSpotifyArtist: h,
-    onOpenSpotifyAlbum: C
-  } = e, m = [];
-  null != n ? m = Array.from(n.embeddedActivity.userIds) : (0, u.default)(t) && null != c && (m = c.map(e => e.user.id));
-  let v = (0, r.useStateFromStoresArray)([d.default], () => m.map(e => d.default.getUser(e)).filter(g.isNotNullish)),
+    onOpenSpotifyAlbum: m
+  } = e, C = [];
+  null != n ? C = Array.from(n.embeddedActivity.userIds) : (0, u.default)(t) && null != c && (C = c.map(e => e.user.id));
+  let v = (0, r.useStateFromStoresArray)([d.default], () => C.map(e => d.default.getUser(e)).filter(g.isNotNullish)),
     x = null != n || (0, u.default)(t),
     R = a.useMemo(() => {
       let e = new Map;
@@ -174,11 +174,11 @@ function v(e) {
     className: S.flexColumn,
     children: [(0, l.jsxs)("div", {
       className: S.flexRow,
-      children: [(0, l.jsx)(I, {
+      children: [(0, l.jsx)(_, {
         activity: t,
         user: s,
         embeddedApp: n,
-        onOpenSpotifyAlbum: C
+        onOpenSpotifyAlbum: m
       }), (0, l.jsxs)("div", {
         className: S.detailsAndAvatarsContainer,
         children: [(0, l.jsx)(N, {
@@ -191,11 +191,11 @@ function v(e) {
           onOpenSpotifyArtist: h
         }), (0, l.jsx)(A, {
           activity: t
-        }), m.length > 0 && (0, l.jsx)(p.default, {
+        }), C.length > 0 && (0, l.jsx)(p.default, {
           className: S.usersSummary,
           guildId: i.guild_id,
           users: v,
-          size: _,
+          size: I,
           max: 7,
           renderUser: e => {
             var t;
@@ -206,7 +206,7 @@ function v(e) {
               text: a,
               position: "bottom",
               children: (0, l.jsx)("img", {
-                src: e.getAvatarURL(i.guild_id, _),
+                src: e.getAvatarURL(i.guild_id, I),
                 alt: a,
                 className: S.avatar
               }, e.id)

@@ -24,41 +24,41 @@ t.default = function(e) {
     formDescription: g,
     onFieldsSave: C,
     onDescriptionSave: v
-  } = e, x = r.useRef(!1), [N, R] = r.useState(null), [S, A] = r.useState(e.formFields), M = r.useRef(e.formFields), O = r.useMemo(() => S.filter(o.isAutomaticApprovalFormField), [S]), b = r.useMemo(() => S.filter(o.isManualApprovalFormField), [S]), F = b.length, L = r.useMemo(() => S.length === E.MAX_FORM_ELEMENTS, [S]), y = r.useMemo(() => S.some(l.isTermsFormField), [S]), D = r.useMemo(() => S.some(e => !(0, l.isTermsFormField)(e)), [S]), j = F > 1, P = (0, s.useIsMemberVerificationManualApproval)(t.id) || h, w = r.useCallback(() => {
+  } = e, x = r.useRef(!1), [A, N] = r.useState(null), [R, S] = r.useState(e.formFields), M = r.useRef(e.formFields), O = r.useMemo(() => R.filter(o.isAutomaticApprovalFormField), [R]), b = r.useMemo(() => R.filter(o.isManualApprovalFormField), [R]), F = b.length, L = r.useMemo(() => R.length === E.MAX_FORM_ELEMENTS, [R]), y = r.useMemo(() => R.some(l.isTermsFormField), [R]), D = r.useMemo(() => R.some(e => !(0, l.isTermsFormField)(e)), [R]), j = F > 1, P = (0, s.useIsMemberVerificationManualApproval)(t.id) || h, w = r.useCallback(() => {
     (0, a.showToast)((0, a.createToast)(I.default.Messages.ERROR_GENERIC_TITLE, a.ToastType.FAILURE))
   }, []), G = r.useCallback(async e => {
     if (!x.current) {
       x.current = !0, h && (e = e.filter(e => e.field_type !== l.VerificationFormFieldTypes.TERMS));
       try {
-        await C(t.id, e), _(), A(e), M.current = e
+        await C(t.id, e), _(), S(e), M.current = e
       } catch (e) {
-        throw A(M.current), e
+        throw S(M.current), e
       } finally {
-        null != N && R(null), x.current = !1
+        null != A && N(null), x.current = !1
       }
     }
-  }, [N, t.id, _, C, h]), U = r.useCallback(async e => {
-    let t = e.field_type === l.VerificationFormFieldTypes.TERMS ? [e, ...S] : [...S, e];
+  }, [A, t.id, _, C, h]), U = r.useCallback(async e => {
+    let t = e.field_type === l.VerificationFormFieldTypes.TERMS ? [e, ...R] : [...R, e];
     await G(t)
-  }, [S, G]), B = r.useCallback(async (e, t) => {
-    if (S[e] === t) return;
-    let n = [...S];
+  }, [R, G]), B = r.useCallback(async (e, t) => {
+    if (R[e] === t) return;
+    let n = [...R];
     n[e] = t, await G(n)
-  }, [S, G]), V = r.useCallback(async (e, t, n) => {
-    let i = S.indexOf(e),
-      r = [...S];
-    if (null != t && t !== i && (r.splice(i, 1), r.splice(t, 0, e), A(r)), n) try {
-      await G(r), null !== N && R(null)
+  }, [R, G]), V = r.useCallback(async (e, t, n) => {
+    let i = R.indexOf(e),
+      r = [...R];
+    if (null != t && t !== i && (r.splice(i, 1), r.splice(t, 0, e), S(r)), n) try {
+      await G(r), null !== A && N(null)
     } catch (e) {
       w()
-    } else N !== t && R(t)
-  }, [N, S, G, w]), H = r.useCallback(async e => {
+    } else A !== t && N(t)
+  }, [A, R, G, w]), H = r.useCallback(async e => {
     try {
-      await G([...S.slice(0, e), ...S.slice(e + 1)])
+      await G([...R.slice(0, e), ...R.slice(e + 1)])
     } catch (e) {
       w()
     }
-  }, [S, G, w]), k = (0, i.jsxs)(i.Fragment, {
+  }, [R, G, w]), k = (0, i.jsxs)(i.Fragment, {
     children: [!T && (0, i.jsx)(f.default, {
       guild: t
     }), (0, i.jsx)(c.default, {
@@ -69,10 +69,10 @@ t.default = function(e) {
       addFormField: U,
       guild: t
     }), O.map(e => (0, m.getFormFieldBuilderComponent)({
-      dropHoveredIndex: N,
+      dropHoveredIndex: A,
       formField: e,
       guild: t,
-      index: S.indexOf(e),
+      index: R.indexOf(e),
       isDragEnabled: !1,
       submittedGuildJoinRequestsCount: n,
       removeFormField: H,
@@ -88,10 +88,10 @@ t.default = function(e) {
       guild: t,
       showHeader: !h
     }), b.map(e => (0, m.getFormFieldBuilderComponent)({
-      dropHoveredIndex: N,
+      dropHoveredIndex: A,
       formField: e,
       guild: t,
-      index: S.indexOf(e),
+      index: R.indexOf(e),
       isDragEnabled: j,
       submittedGuildJoinRequestsCount: n,
       removeFormField: H,

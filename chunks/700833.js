@@ -35,13 +35,13 @@ function p(e) {
     await T(m)
   }, x = async e => {
     await h(m, e)
-  }, N = async (e, t, n) => {
+  }, A = async (e, t, n) => {
     await g(e, t, n)
-  }, R = (0, r.uniqueId)(), S = t === m, A = {
-    key: R,
+  }, N = (0, r.uniqueId)(), R = t === m, S = {
+    key: N,
     index: m,
     isDragEnabled: I,
-    isDropHovered: S,
+    isDropHovered: R,
     onEdit: () => {
       0 === _ ? E(d, x, p) : (0, a.openModalLazy)(async () => {
         let {
@@ -56,7 +56,7 @@ function p(e) {
       })
     },
     onRemove: v,
-    onDrop: N,
+    onDrop: A,
     canRemove: C
   };
   switch (d.field_type) {
@@ -65,22 +65,22 @@ function p(e) {
         channelId: p.rulesChannelId,
         title: f.default.Messages.GUILD_RULES_HEADER,
         formField: d,
-        ...A
+        ...S
       });
     case s.VerificationFormFieldTypes.PARAGRAPH:
       return (0, i.jsx)(o.default, {
         formField: d,
-        ...A
+        ...S
       });
     case s.VerificationFormFieldTypes.TEXT_INPUT:
       return (0, i.jsx)(c.default, {
         formField: d,
-        ...A
+        ...S
       });
     case s.VerificationFormFieldTypes.MULTIPLE_CHOICE:
       return (0, i.jsx)(l.default, {
         formField: d,
-        ...A
+        ...S
       });
     default:
       return null

@@ -16,13 +16,13 @@ var l = n("735250"),
   f = n("22082"),
   h = n("703656"),
   p = n("306680"),
-  C = n("648414"),
-  m = n("26290"),
+  m = n("648414"),
+  C = n("26290"),
   g = n("709054"),
   E = n("540126"),
   S = n("434479"),
-  _ = n("981631"),
-  I = n("176505"),
+  I = n("981631"),
+  _ = n("176505"),
   N = n("490897"),
   T = n("689938"),
   A = n("15545");
@@ -37,9 +37,9 @@ function L(e) {
     if (null == n) return !1;
     let l = g.default.extractTimestamp(n);
     return null != e && e > l
-  }), D = a.useCallback(() => {
-    (0, h.transitionTo)(_.Routes.CHANNEL(t.id, v ? I.StaticChannelRoute.CUSTOMIZE_COMMUNITY : I.StaticChannelRoute.CHANNEL_BROWSER))
-  }, [t.id, v]), b = a.useCallback(e => {
+  }), b = a.useCallback(() => {
+    (0, h.transitionTo)(I.Routes.CHANNEL(t.id, v ? _.StaticChannelRoute.CUSTOMIZE_COMMUNITY : _.StaticChannelRoute.CHANNEL_BROWSER))
+  }, [t.id, v]), D = a.useCallback(e => {
     (0, o.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -50,18 +50,18 @@ function L(e) {
       })
     })
   }, [t]), j = null;
-  return (!x || y || M) && !L && !O && (j = (0, l.jsx)(m.TextBadge, {
+  return (!x || y || M) && !L && !O && (j = (0, l.jsx)(C.TextBadge, {
     color: r.default.unsafe_rawColors.BRAND_260.css,
     text: T.default.Messages.NEW,
     className: A.newChannel
   })), (0, l.jsx)(S.default, {
-    renderIcon: e => (0, l.jsx)(C.default, {
+    renderIcon: e => (0, l.jsx)(m.default, {
       className: e
     }),
     text: v ? T.default.Messages.CHANNELS_AND_ROLES : T.default.Messages.CHANNEL_BROWSER_TITLE,
     selected: L,
-    onClick: D,
-    onContextMenu: b,
+    onClick: b,
+    onContextMenu: D,
     badge: j
   })
 }

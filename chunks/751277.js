@@ -28,9 +28,9 @@ function h(e) {
       inviteCode: e
     } = h.params;
     return null != e ? r.default.getInvite(e) : null
-  }), C = (null == p ? void 0 : p.guild) != null ? new i.default(null == p ? void 0 : p.guild) : null;
-  return n ? null != C && null != p ? (0, l.jsx)(u.default, {
-    guild: C,
+  }), m = (null == p ? void 0 : p.guild) != null ? new i.default(null == p ? void 0 : p.guild) : null;
+  return n ? null != m && null != p ? (0, l.jsx)(u.default, {
+    guild: m,
     invite: p
   }) : (0, l.jsx)(d.default, {
     tooltip: f.default.Messages.HUB_DISCORD_HUBS,

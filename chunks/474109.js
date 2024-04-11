@@ -12,8 +12,8 @@ var l = n("735250"),
   f = n("816779"),
   h = n("251625"),
   p = n("981631"),
-  C = n("689938");
-let m = "app-download-item",
+  m = n("689938");
+let C = "app-download-item",
   g = "add-server-item";
 
 function E() {
@@ -23,11 +23,11 @@ function E() {
 function S(e) {
   var t;
   let n = r.default.getMutableGuildStates();
-  return e === p.ViewHistoryKeys.SERVER_DISCOVERY_BADGE && !d.default.hasViewed(p.ViewHistoryKeys.SERVER_DISCOVERY_BADGE) || e !== m && e !== g && (null === (t = n[null != e ? e : "null"]) || void 0 === t ? void 0 : t.mentionCount) > 0
+  return e === p.ViewHistoryKeys.SERVER_DISCOVERY_BADGE && !d.default.hasViewed(p.ViewHistoryKeys.SERVER_DISCOVERY_BADGE) || e !== C && e !== g && (null === (t = n[null != e ? e : "null"]) || void 0 === t ? void 0 : t.mentionCount) > 0
 }
-let _ = (0, h.cachedFunction)((e, t, n) => ["null", ...t, ...e, g, p.ViewHistoryKeys.E3_SERVER_DISCOVERY_BADGE, m]);
+let I = (0, h.cachedFunction)((e, t, n) => ["null", ...t, ...e, g, p.ViewHistoryKeys.E3_SERVER_DISCOVERY_BADGE, C]);
 t.default = a.forwardRef(function(e, t) {
-  let n = (0, s.useStateFromStoresArray)([u.default, o.default, r.default], () => _(u.default.getGuildFolders(), o.default.getUnreadPrivateChannelIds(), r.default.getStoreChangeSentinel())),
+  let n = (0, s.useStateFromStoresArray)([u.default, o.default, r.default], () => I(u.default.getGuildFolders(), o.default.getUnreadPrivateChannelIds(), r.default.getStoreChangeSentinel())),
     a = (0, s.useStateFromStores)([c.default], () => c.default.isFocused()),
     d = (0, s.useStateFromStores)([i.default], () => i.default.getExpandedFolders());
   return (0, l.jsx)(f.default, {
@@ -35,8 +35,8 @@ t.default = a.forwardRef(function(e, t) {
     ref: t,
     items: n,
     isUnread: E,
-    textUnread: C.default.Messages.NEW,
-    textMention: C.default.Messages.NEW,
+    textUnread: m.default.Messages.NEW,
+    textMention: m.default.Messages.NEW,
     isMentioned: S,
     animate: a,
     expandedFolders: d

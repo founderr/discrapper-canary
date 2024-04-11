@@ -1,12 +1,12 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return a
+    return n
   }
 });
 var i = s("470079");
 
-function a(e, t) {
+function n(e, t) {
   let s = i.useRef(e);
   i.useEffect(() => {
     e.length > s.current.length && t(), s.current = e

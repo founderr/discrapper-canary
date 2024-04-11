@@ -66,34 +66,34 @@ t.default = a.memo(function(e) {
     voiceStates: d,
     guildId: h,
     selectedChannelId: p,
-    selectedVoiceChannelId: C,
-    optInEnabled: m
+    selectedVoiceChannelId: m,
+    optInEnabled: C
   } = e, {
     hasDivider: g,
     canHaveVoiceSummary: E
-  } = a.useMemo(() => (0, o.getSectionFooterConfig)(n, m, t), [n, m, t, u]), S = a.useMemo(() => t === r.SECTION_INDEX_COMMUNITY ? null : n.getCategoryFromSection(t), [n, t, u]), _ = a.useMemo(() => null != S && S.isCollapsed ? (0, i.computeSummarizedVoiceUsers)({
+  } = a.useMemo(() => (0, o.getSectionFooterConfig)(n, C, t), [n, C, t, u]), S = a.useMemo(() => t === r.SECTION_INDEX_COMMUNITY ? null : n.getCategoryFromSection(t), [n, t, u]), I = a.useMemo(() => null != S && S.isCollapsed ? (0, i.computeSummarizedVoiceUsers)({
     channels: S.getChannelRecords(),
     selectedChannelId: p,
-    selectedVoiceChannelId: C,
+    selectedVoiceChannelId: m,
     voiceStates: d
-  }) : [], [S, p, C, d]);
+  }) : [], [S, p, m, d]);
   if (t === n.voiceChannelsSectionNumber) return (0, l.jsx)(f, {
     guildChannels: n,
     guildChannelsVersion: u
   });
-  let I = g ? (0, l.jsx)("div", {
+  let _ = g ? (0, l.jsx)("div", {
     className: c.sectionDivider
   }) : null;
-  return E && 0 !== _.length ? (0, l.jsxs)(l.Fragment, {
+  return E && 0 !== I.length ? (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)("div", {
       className: c.voiceUserSummary,
       children: (0, l.jsx)(s.default, {
         renderIcon: !0,
-        users: _,
+        users: I,
         max: 8,
         showUserPopout: !0,
         guildId: h
       })
-    }), I]
-  }) : I
+    }), _]
+  }) : _
 })

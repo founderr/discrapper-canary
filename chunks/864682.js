@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return m
   }
 }), n("47120");
 var l = n("735250");
@@ -18,8 +18,8 @@ var a = n("442837"),
   h = n("441319"),
   p = n("770799");
 
-function C() {
-  let [e, t, n] = (0, a.useStateFromStoresArray)([r.default, d.default], () => [d.default.getCurrentDesktopIcon(), d.default.isEditorOpen, u.default.isPremium(r.default.getCurrentUser())]), C = h.ICONS_BY_ID[e], m = e !== c.FreemiumAppIconIds.DEFAULT && (n || t), g = (0, s.useRedesignIconContext)().enabled, E = (0, l.jsx)(o.default, {
+function m() {
+  let [e, t, n] = (0, a.useStateFromStoresArray)([r.default, d.default], () => [d.default.getCurrentDesktopIcon(), d.default.isEditorOpen, u.default.isPremium(r.default.getCurrentUser())]), m = h.ICONS_BY_ID[e], C = e !== c.FreemiumAppIconIds.DEFAULT && (n || t), g = (0, s.useRedesignIconContext)().enabled, E = (0, l.jsx)(o.default, {
     width: 30,
     height: g ? 30 : 22
   }), {
@@ -34,7 +34,7 @@ function C() {
     width: 30,
     alt: "Hi Kevin!",
     draggable: !1
-  }) : null != C && m ? (0, l.jsx)(f.default, {
+  }) : null != m && C ? (0, l.jsx)(f.default, {
     id: e,
     width: 48
   }) : E

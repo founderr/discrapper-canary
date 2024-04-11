@@ -22,12 +22,12 @@ t.default = r.memo(function(e) {
     disableBackground: _
   } = e, T = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), [h, g] = r.useState(!0), [C, v] = r.useState(!1), {
     ref: x,
-    height: N = 0
+    height: A = 0
   } = (0, c.default)(), {
-    ref: R,
-    height: S = 0
-  } = (0, c.default)(), [A, M] = r.useState(a), O = (0, l.useSpring)({
-    height: A ? S + N : N,
+    ref: N,
+    height: R = 0
+  } = (0, c.default)(), [S, M] = r.useState(a), O = (0, l.useSpring)({
+    height: S ? R + A : A,
     immediate: h || T || I,
     config: {
       ...l.config.stiff,
@@ -66,7 +66,7 @@ t.default = r.memo(function(e) {
         "aria-label": f.default.Messages.EXPAND,
         children: t
       }), (0, i.jsx)("div", {
-        ref: R,
+        ref: N,
         children: n
       })]
     })

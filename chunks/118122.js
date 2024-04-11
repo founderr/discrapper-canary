@@ -16,13 +16,13 @@ var l = n("735250"),
   f = n("885714"),
   h = n("155409"),
   p = n("430824"),
-  C = n("594174"),
-  m = n("729285"),
+  m = n("594174"),
+  C = n("729285"),
   g = n("40153"),
   E = n("603592"),
   S = n("981631"),
-  _ = n("675999"),
-  I = n("689938"),
+  I = n("675999"),
+  _ = n("689938"),
   N = n("196581");
 let T = {
   origin: {
@@ -52,7 +52,7 @@ function L(e) {
   let {
     disableTooltip: t,
     lastTargetNode: n
-  } = e, o = (0, s.useStateFromStores)([p.default], () => p.default.getGuilds()), L = a.useMemo(() => Object.values(o), [o]), v = (0, s.useStateFromStores)([C.default], () => C.default.getCurrentUser()), x = a.useMemo(() => L.some(e => e.isOwner(v)), [L, v]), R = (0, r.useModalsStore)(e => (0, r.hasModalOpenSelector)(e, _.CREATE_GUILD_MODAL_KEY)), {
+  } = e, o = (0, s.useStateFromStores)([p.default], () => p.default.getGuilds()), L = a.useMemo(() => Object.values(o), [o]), v = (0, s.useStateFromStores)([m.default], () => m.default.getCurrentUser()), x = a.useMemo(() => L.some(e => e.isOwner(v)), [L, v]), R = (0, r.useModalsStore)(e => (0, r.hasModalOpenSelector)(e, I.CREATE_GUILD_MODAL_KEY)), {
     analyticsLocations: y
   } = (0, u.default)(), M = (0, r.useRedesignIconContext)().enabled, O = (0, l.jsx)(E.default, {
     showPill: !1,
@@ -73,8 +73,8 @@ function L(e) {
     },
     selected: R,
     onContextMenu: A,
-    tooltip: I.default.Messages.ADD_A_SERVER,
-    icon: M ? i.PlusMediumIcon : m.default
+    tooltip: _.default.Messages.ADD_A_SERVER,
+    icon: M ? i.PlusMediumIcon : C.default
   });
   return t ? O : (0, l.jsx)("div", {
     className: N.tutorialContainer,
@@ -83,7 +83,7 @@ function L(e) {
       inlineSpecs: T,
       position: "right",
       children: [O, null != n && (0, l.jsx)(g.default, {
-        name: I.default.Messages.DND_END_OF_LIST,
+        name: _.default.Messages.DND_END_OF_LIST,
         targetNode: n,
         below: !0,
         noCombine: !0

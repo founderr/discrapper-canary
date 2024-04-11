@@ -12,18 +12,18 @@ var l = n("735250"),
   f = n("481060"),
   h = n("210887"),
   p = n("19780"),
-  C = n("72416"),
-  m = n("476221"),
+  m = n("72416"),
+  C = n("476221"),
   g = n("236756"),
   E = n("981631"),
   S = n("601738");
-let _ = {
+let I = {
     [E.RTCConnectionQuality.UNKNOWN]: f.Tooltip.Colors.BLACK,
     [E.RTCConnectionQuality.BAD]: f.Tooltip.Colors.RED,
     [E.RTCConnectionQuality.AVERAGE]: f.Tooltip.Colors.YELLOW,
     [E.RTCConnectionQuality.FINE]: f.Tooltip.Colors.GREEN
   },
-  I = {
+  _ = {
     [E.ConnectionStatus.CONNECTED]: S.rtcConnectionStatusConnected,
     [E.ConnectionStatus.CONNECTING]: S.rtcConnectionStatusConnecting,
     [E.ConnectionStatus.ERROR]: S.rtcConnectionStatusError
@@ -59,7 +59,7 @@ class A extends a.PureComponent {
     } = this.props, {
       connectionStatus: a,
       connectionStatusText: s
-    } = m.default.getStatus(n, t);
+    } = C.default.getStatus(n, t);
     return this.renderPopoutTarget(t => {
       let {
         onClick: n
@@ -67,7 +67,7 @@ class A extends a.PureComponent {
       return (0, l.jsx)(f.Button, {
         look: f.Button.Looks.BLANK,
         size: f.Button.Sizes.NONE,
-        className: i()(e, I[a]),
+        className: i()(e, _[a]),
         onClick: n,
         children: s
       })
@@ -85,7 +85,7 @@ class A extends a.PureComponent {
     } = this.props;
     return s === E.RTCConnectionStates.RTC_CONNECTED && (e = (0, l.jsx)(f.Tooltip, {
       text: t !== E.RTCConnectionQuality.UNKNOWN && null != a ? "".concat(a.toFixed(0), " ms") : null,
-      color: _[t],
+      color: I[t],
       children: e => (0, l.jsx)(L, {
         quality: t,
         smallPing: n,
@@ -120,7 +120,7 @@ function L(e) {
     smallPing: n,
     ...a
   } = e;
-  if (!(0, f.useRedesignIconContext)().enabled) return (0, l.jsx)(C.default, {
+  if (!(0, f.useRedesignIconContext)().enabled) return (0, l.jsx)(m.default, {
     className: i()(S.ping, {
       [S.smallPing]: n
     }),

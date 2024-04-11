@@ -26,25 +26,25 @@ var a = n("803997"),
   f = n("465670"),
   h = n("737688"),
   p = n("497309"),
-  C = n("169278"),
-  m = n("185403"),
+  m = n("169278"),
+  C = n("185403"),
   g = n("944581"),
   E = n("632184"),
   S = n("170039"),
-  _ = n("26290"),
-  I = n("510601"),
+  I = n("26290"),
+  _ = n("510601"),
   N = n("981631"),
   T = n("196581");
 
 function A(e, t) {
-  return (0, l.jsx)(_.NumberBadge, {
+  return (0, l.jsx)(I.NumberBadge, {
     count: e,
     color: t
   })
 }
 
 function L() {
-  return (0, l.jsx)(_.IconBadge, {
+  return (0, l.jsx)(I.IconBadge, {
     icon: o.default,
     disableColor: !0,
     className: T.unavailableBadge
@@ -62,13 +62,13 @@ function v(e) {
       activity: o,
       gaming: c
     } = e,
-    f = (0, I.isGamingVoiceActivityEnabled)("Guild Icon", !1);
-  if (!r && !i && !o && !a && !l && c && I.default.trackExposure({
+    f = (0, _.isGamingVoiceActivityEnabled)("Guild Icon", !1);
+  if (!r && !i && !o && !a && !l && c && _.default.trackExposure({
       location: "Guild Icon"
     }), r) t = u.default;
   else if (i) t = S.default;
   else if (o) t = g.default;
-  else if (a) t = C.default;
+  else if (a) t = m.default;
   else if (l) t = d.default;
   else if (c && f) t = h.default;
   else {
@@ -93,7 +93,7 @@ function x(e) {
       case r.GuildJoinRequestApplicationStatuses.APPROVED:
         return [N.Color.GREEN_360, c.default];
       default:
-        return [void 0, m.default]
+        return [void 0, C.default]
     }
   }(t);
   return R({
@@ -112,7 +112,7 @@ function R(e) {
   } : {
     color: (0, i.getColor)(n)
   };
-  return (0, l.jsx)(_.IconBadge, {
+  return (0, l.jsx)(I.IconBadge, {
     icon: t,
     className: s()(T.iconBadge, {
       [T.isCurrentUserConnected]: a

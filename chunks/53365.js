@@ -1,113 +1,113 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   acceptCreatorMonetizationTerms: function() {
-    return c
+    return l
   },
   acceptCreatorMonetizationTermsV2: function() {
-    return d
-  },
-  acceptNewTerms: function() {
-    return E
-  },
-  acceptNewTermsDemonetized: function() {
-    return I
-  },
-  createCreatorMonetizationEnableRequest: function() {
-    return o
-  },
-  fetchCreatorMonetizationNagActivateEligibility: function() {
-    return p
-  },
-  getCreatorMonetizationEligibility: function() {
     return u
   },
+  acceptNewTerms: function() {
+    return C
+  },
+  acceptNewTermsDemonetized: function() {
+    return R
+  },
+  createCreatorMonetizationEnableRequest: function() {
+    return T
+  },
+  fetchCreatorMonetizationNagActivateEligibility: function() {
+    return d
+  },
+  getCreatorMonetizationEligibility: function() {
+    return c
+  },
   getCreatorMonetizationOnboardingMarketing: function() {
-    return f
+    return E
   },
   ownershipTransferOnboard: function() {
-    return m
+    return _
   },
   removeMonetization: function() {
-    return T
+    return A
   }
 });
 var i = n("544891"),
-  r = n("570140"),
-  a = n("728345"),
-  s = n("981631"),
-  l = n("674563");
-async function o(e) {
+  a = n("570140"),
+  o = n("728345"),
+  r = n("981631"),
+  s = n("674563");
+async function T(t) {
   await i.HTTP.post({
-    url: s.Endpoints.CREATOR_MONETIZATION_ENABLE_REQUESTS(e)
+    url: r.Endpoints.CREATOR_MONETIZATION_ENABLE_REQUESTS(t)
   })
 }
-async function u(e) {
+async function c(t) {
   return (await i.HTTP.get({
-    url: s.Endpoints.CREATOR_MONETIZATION_ELIGIBILITY(e)
+    url: r.Endpoints.CREATOR_MONETIZATION_ELIGIBILITY(t)
   })).body
 }
-async function c(e, t) {
+async function l(t, e) {
   await i.HTTP.post({
-    url: s.Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS(e, t)
+    url: r.Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS(t, e)
   })
 }
-async function d(e) {
+async function u(t) {
   await i.HTTP.post({
-    url: s.Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS_V2(e)
+    url: r.Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS_V2(t)
   })
 }
-async function f(e) {
+async function E(t) {
   return (await i.HTTP.get({
-    url: s.Endpoints.CREATOR_MONETIZATION_MARKETING_ONBOARDING(e)
+    url: r.Endpoints.CREATOR_MONETIZATION_MARKETING_ONBOARDING(t)
   })).body
 }
-async function p(e) {
+async function d(t) {
   try {
-    let t = await i.HTTP.get({
-      url: s.Endpoints.CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY,
+    let e = await i.HTTP.get({
+      url: r.Endpoints.CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY,
       query: {
-        nag_guild_ids: e
+        nag_guild_ids: t
       }
     });
-    r.default.dispatch({
+    a.default.dispatch({
       type: "CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY_FETCH_SUCCESS",
-      eligibleGuilds: t.body.eligible_guilds
+      eligibleGuilds: e.body.eligible_guilds
     })
-  } catch (e) {}
+  } catch (t) {}
 }
-async function m(e, t) {
+async function _(t, e) {
   let n = (await i.HTTP.post({
-    url: s.Endpoints.CREATOR_MONETIZATION_OWNERSHIP_TRANSFER_ONBOARD(e),
+    url: r.Endpoints.CREATOR_MONETIZATION_OWNERSHIP_TRANSFER_ONBOARD(t),
     body: {
-      team_id: t
+      team_id: e
     }
   })).body;
-  return null != n.application && r.default.dispatch({
+  return null != n.application && a.default.dispatch({
     type: "APPLICATION_FETCH_SUCCESS",
     application: n.application
   }), n
 }
 
-function E(e) {
+function C(t) {
   return i.HTTP.post({
-    url: s.Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS(e)
+    url: r.Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS(t)
   })
 }
 
-function I(e) {
+function R(t) {
   return i.HTTP.post({
-    url: s.Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED(e)
+    url: r.Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED(t)
   })
 }
-async function _(e) {
+async function O(t) {
   await i.HTTP.post({
-    url: s.Endpoints.CREATOR_MONETIZATION_REMOVE_MONETIZATION(e),
+    url: r.Endpoints.CREATOR_MONETIZATION_REMOVE_MONETIZATION(t),
     body: {}
   })
 }
-async function T(e) {
-  return await _(e), await a.default.getApplicationsForGuild(e, {
-    type: l.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS,
+async function A(t) {
+  return await O(t), await o.default.getApplicationsForGuild(t, {
+    type: s.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS,
     includeTeam: !0
   })
 }

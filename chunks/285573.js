@@ -12,8 +12,8 @@ var l = n("735250"),
   f = n("496675"),
   h = n("98597"),
   p = n("473403"),
-  C = n("981631"),
-  m = n("490897"),
+  m = n("981631"),
+  C = n("490897"),
   g = n("294639");
 let E = (0, u.makeChannelSortable)(function(e) {
   let {
@@ -22,15 +22,15 @@ let E = (0, u.makeChannelSortable)(function(e) {
     position: u,
     disableManageChannels: E,
     sorting: S,
-    sortingType: _,
-    sortingPosition: I,
+    sortingType: I,
+    sortingPosition: _,
     connectChannelDragSource: N,
     connectChannelDropTarget: T,
     tabIndex: A
   } = e, L = (0, r.useStateFromStores)([d.default, c.default], () => {
     let e = c.default.getDirectoryChannelIds(t.id);
     return 0 === e.length ? null : d.default.getChannel(e[0])
-  }), v = (0, r.useStateFromStores)([d.default], () => d.default.getChannel(null == L ? void 0 : L.parent_id)), x = s === (null == L ? void 0 : L.id), R = (0, r.useStateFromStores)([f.default], () => null != v ? f.default.can(C.Permissions.MANAGE_CHANNELS, v) : null != t && f.default.can(C.Permissions.MANAGE_CHANNELS, t)), y = a.useCallback(e => {
+  }), v = (0, r.useStateFromStores)([d.default], () => d.default.getChannel(null == L ? void 0 : L.parent_id)), x = s === (null == L ? void 0 : L.id), R = (0, r.useStateFromStores)([f.default], () => null != v ? f.default.can(m.Permissions.MANAGE_CHANNELS, v) : null != t && f.default.can(m.Permissions.MANAGE_CHANNELS, t)), y = a.useCallback(e => {
     null != L && (0, o.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -42,9 +42,9 @@ let E = (0, u.makeChannelSortable)(function(e) {
     })
   }, [L]);
   if (null == L) return null;
-  let M = (0, h.getChannelItemClassName)(u, I),
-    O = (0, h.isChannelItemDisabled)(L, S, _),
-    D = (0, l.jsx)("div", {
+  let M = (0, h.getChannelItemClassName)(u, _),
+    O = (0, h.isChannelItemDisabled)(L, S, I),
+    b = (0, l.jsx)("div", {
       className: i()(M, {
         [g.disabled]: O,
         [g.selected]: x
@@ -57,7 +57,7 @@ let E = (0, u.makeChannelSortable)(function(e) {
         selected: x,
         onContextMenu: y,
         forceInteractable: !0,
-        resolvedUnreadSetting: m.UnreadSetting.ONLY_MENTIONS,
+        resolvedUnreadSetting: C.UnreadSetting.ONLY_MENTIONS,
         children: [(0, l.jsx)(h.ChannelItemInviteButton, {
           channel: L,
           tabIndex: A
@@ -68,6 +68,6 @@ let E = (0, u.makeChannelSortable)(function(e) {
         })]
       })
     });
-  return R && (D = T(N(D))), D
+  return R && (b = T(N(b))), b
 });
 t.default = E

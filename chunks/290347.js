@@ -1,197 +1,197 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
-    return N
+    return p
   }
-}), n("47120");
-var a = n("735250"),
-  s = n("470079"),
-  l = n("803997"),
-  i = n.n(l),
-  r = n("442837"),
-  o = n("481060"),
-  u = n("607070"),
-  d = n("605236"),
-  c = n("524444"),
-  f = n("529815"),
-  E = n("250496"),
-  h = n("153124"),
-  _ = n("26290"),
-  C = n("810090"),
-  m = n("626135"),
-  S = n("565216"),
-  I = n("981631"),
-  T = n("921944"),
-  p = n("816277");
-let g = e => {
+}), a("47120");
+var s = a("735250"),
+  n = a("470079"),
+  r = a("803997"),
+  l = a.n(r),
+  o = a("442837"),
+  d = a("481060"),
+  i = a("607070"),
+  u = a("605236"),
+  c = a("524444"),
+  _ = a("529815"),
+  E = a("250496"),
+  m = a("153124"),
+  M = a("26290"),
+  R = a("810090"),
+  A = a("626135"),
+  I = a("565216"),
+  O = a("981631"),
+  f = a("921944"),
+  g = a("816277");
+let T = e => {
     let {
       tagText: t,
-      className: n
+      className: a
     } = e;
-    return (0, a.jsx)(_.TextBadge, {
-      className: i()(p.tag, n),
+    return (0, s.jsx)(M.TextBadge, {
+      className: l()(g.tag, a),
       text: t
     })
   },
-  A = e => {
+  h = e => {
     let {
       header: t,
-      subHeader: n,
-      imageSrc: s,
-      tagText: l,
-      wideStyle: r
+      subHeader: a,
+      imageSrc: n,
+      tagText: r,
+      wideStyle: o
     } = e;
-    return (0, a.jsxs)("div", {
-      className: i()(p.featureCard, {
-        [p.wideStyle]: r
+    return (0, s.jsxs)("div", {
+      className: l()(g.featureCard, {
+        [g.wideStyle]: o
       }),
-      children: [null != l ? (0, a.jsx)(g, {
-        tagText: l,
-        className: p.featureCardTag
-      }) : null, (0, a.jsx)("img", {
+      children: [null != r ? (0, s.jsx)(T, {
+        tagText: r,
+        className: g.featureCardTag
+      }) : null, (0, s.jsx)("img", {
         alt: "",
-        className: i()(p.featureCardImg, {
-          [p.wideStyle]: r
+        className: l()(g.featureCardImg, {
+          [g.wideStyle]: o
         }),
-        src: s
-      }), (0, a.jsxs)("div", {
-        className: p.featureCardTextGroup,
-        children: [(0, a.jsx)(o.Heading, {
+        src: n
+      }), (0, s.jsxs)("div", {
+        className: g.featureCardTextGroup,
+        children: [(0, s.jsx)(d.Heading, {
           variant: "heading-lg/extrabold",
-          className: p.featureCardTextHeader,
+          className: g.featureCardTextHeader,
           children: t
-        }), (0, a.jsx)(o.Text, {
+        }), (0, s.jsx)(d.Text, {
           variant: "text-sm/normal",
-          children: n
+          children: a
         })]
       })]
     })
   };
 
-function N(e) {
+function p(e) {
   let {
     className: t,
-    renderModalProps: n,
-    heroArt: l,
-    heroArtClassName: _,
-    modalDismissibleContent: g,
-    modalTopExtra: N,
-    header: v,
-    headerClassName: R,
-    subHeader: O,
-    subHeaderExtra: L,
-    featureCards: M,
-    changeLogId: P,
-    button: y
+    renderModalProps: a,
+    heroArt: r,
+    heroArtClassName: M,
+    modalDismissibleContent: T,
+    modalTopExtra: p,
+    header: L,
+    headerClassName: C,
+    subHeader: N,
+    subHeaderExtra: P,
+    featureCards: x,
+    changeLogId: D,
+    button: b
   } = e, {
-    onClose: x,
-    transitionState: D
-  } = n, b = (0, h.useUID)(), U = M.length % 2 == 0, j = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [G, w] = s.useState(Date.now()), [k, F] = s.useState(0), [H, B] = s.useState(0), [V, Y] = s.useState(!1), [W, K] = s.useState(!0), z = s.useRef(G), q = s.useRef(k), Q = s.useRef(H), Z = s.useRef(V), X = s.useRef(W);
+    onClose: S,
+    transitionState: y
+  } = a, v = (0, m.useUID)(), U = x.length % 2 == 0, j = (0, o.useStateFromStores)([i.default], () => i.default.useReducedMotion), [H, F] = n.useState(Date.now()), [k, w] = n.useState(0), [G, B] = n.useState(0), [V, K] = n.useState(!1), [Y, W] = n.useState(!0), z = n.useRef(H), q = n.useRef(k), Z = n.useRef(G), J = n.useRef(V), Q = n.useRef(Y);
 
-  function J() {
+  function X() {
     let e = Date.now(),
       t = e - z.current,
-      n = q.current,
-      a = Q.current;
-    return Z.current && (F(n += t), !X.current && B(a += t)), w(e), [n, a]
+      a = q.current,
+      s = Z.current;
+    return J.current && (w(a += t), !Q.current && B(s += t)), F(e), [a, s]
   }
-  return s.useEffect(() => {
-    z.current = G, q.current = k, Q.current = H, Z.current = V, X.current = W
-  }, [G, k, H, V, W]), s.useEffect(() => () => {
-    let [e, t] = J();
-    m.default.track(I.AnalyticEvents.CHANGE_LOG_VIDEO_PLAYED, {
-      change_log_id: P,
+  return n.useEffect(() => {
+    z.current = H, q.current = k, Z.current = G, J.current = V, Q.current = Y
+  }, [H, k, G, V, Y]), n.useEffect(() => () => {
+    let [e, t] = X();
+    A.default.track(O.AnalyticEvents.CHANGE_LOG_VIDEO_PLAYED, {
+      change_log_id: D,
       seconds_played: Math.round(e / 1e3)
-    }), m.default.track(I.AnalyticEvents.CHANGE_LOG_VIDEO_UNMUTE, {
-      change_log_id: P,
+    }), A.default.track(O.AnalyticEvents.CHANGE_LOG_VIDEO_UNMUTE, {
+      change_log_id: D,
       seconds_unmuted: Math.round(t / 1e3)
     })
-  }, [P]), s.useEffect(() => {
-    null != g && (0, d.requestMarkDismissibleContentAsShown)(g);
+  }, [D]), n.useEffect(() => {
+    null != T && (0, u.requestMarkDismissibleContentAsShown)(T);
     let e = Date.now();
-    return m.default.track(I.AnalyticEvents.CHANGE_LOG_OPENED, {
-      change_log_id: P
+    return A.default.track(O.AnalyticEvents.CHANGE_LOG_OPENED, {
+      change_log_id: D
     }), () => {
-      m.default.track(I.AnalyticEvents.CHANGE_LOG_CLOSED, {
-        change_log_id: P,
+      A.default.track(O.AnalyticEvents.CHANGE_LOG_CLOSED, {
+        change_log_id: D,
         seconds_open: Math.round((Date.now() - e) / 1e3)
-      }), null != g && (0, d.markDismissibleContentAsDismissed)(g, {
-        dismissAction: T.ContentDismissActionType.DISMISS
+      }), null != T && (0, u.markDismissibleContentAsDismissed)(T, {
+        dismissAction: f.ContentDismissActionType.DISMISS
       })
     }
-  }, [g, P]), (0, a.jsxs)(o.ModalRoot, {
-    className: i()(p.root, t),
-    transitionState: D,
-    "aria-labelledby": b,
-    children: [(0, a.jsx)(o.ModalCloseButton, {
-      className: p.closeButton,
-      onClick: x
-    }), (0, a.jsx)(S.default, {
-      className: p.splash
-    }), null == N ? void 0 : N(), (0, a.jsxs)(o.ModalContent, {
-      className: p.content,
-      children: [(0, a.jsx)(o.Heading, {
+  }, [T, D]), (0, s.jsxs)(d.ModalRoot, {
+    className: l()(g.root, t),
+    transitionState: y,
+    "aria-labelledby": v,
+    children: [(0, s.jsx)(d.ModalCloseButton, {
+      className: g.closeButton,
+      onClick: S
+    }), (0, s.jsx)(I.default, {
+      className: g.splash
+    }), null == p ? void 0 : p(), (0, s.jsxs)(d.ModalContent, {
+      className: g.content,
+      children: [(0, s.jsx)(d.Heading, {
         variant: "display-md",
-        className: i()(p.headerText, R),
-        children: v
-      }), "video" === l.type ? (0, a.jsx)(C.default, {
-        className: i()(p.video, _),
+        className: l()(g.headerText, C),
+        children: L
+      }), "video" === r.type ? (0, s.jsx)(R.default, {
+        className: l()(g.video, M),
         autoPlay: !j,
         loop: !0,
         muted: !0,
         controls: !0,
         controlsList: "nofullscreen nodownload noremoteplayback noplaybackrate",
-        src: l.src,
-        poster: l.poster,
+        src: r.src,
+        poster: r.poster,
         onPlay: e => {
-          m.default.track(I.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
-            change_log_id: P
-          }), w(Date.now()), Y(!0), K(e.currentTarget.muted)
+          A.default.track(O.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
+            change_log_id: D
+          }), F(Date.now()), K(!0), W(e.currentTarget.muted)
         },
         onEnded: e => {
-          J(), K(e.currentTarget.muted), Y(!1)
+          X(), W(e.currentTarget.muted), K(!1)
         },
         onVolumeChange: e => {
-          J(), K(e.currentTarget.muted)
+          X(), W(e.currentTarget.muted)
         },
         onPause: e => {
-          J(), K(e.currentTarget.muted), Y(!1)
+          X(), W(e.currentTarget.muted), K(!1)
         },
         disablePictureInPicture: !0
-      }) : "embed" === l.type ? (0, a.jsx)(f.EmbedVideo, {
-        className: i()(p.video, _),
+      }) : "embed" === r.type ? (0, s.jsx)(_.EmbedVideo, {
+        className: l()(g.video, M),
         allowFullScreen: !1,
-        href: l.href,
-        thumbnail: l.thumbnail,
-        video: l.embed,
+        href: r.href,
+        thumbnail: r.thumbnail,
+        video: r.embed,
         provider: E.SupportedEmbedIFrame.YOUTUBE,
-        maxWidth: l.embed.width,
-        maxHeight: l.embed.height,
+        maxWidth: r.embed.width,
+        maxHeight: r.embed.height,
         renderVideoComponent: c.renderVideoComponent,
         renderImageComponent: c.renderImageComponent,
         renderLinkComponent: c.renderMaskedLinkComponent,
         onPlay: () => {
-          m.default.track(I.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
-            change_log_id: P
+          A.default.track(O.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
+            change_log_id: D
           })
         }
-      }) : "image" === l.type ? (0, a.jsx)("img", {
+      }) : "image" === r.type ? (0, s.jsx)("img", {
         alt: "",
-        className: i()(p.video, _),
-        src: l.src
-      }) : null, (0, a.jsx)(o.Heading, {
+        className: l()(g.video, M),
+        src: r.src
+      }) : null, (0, s.jsx)(d.Heading, {
         variant: "heading-lg/extrabold",
-        className: p.bodyText,
-        children: O
-      }), null == L ? void 0 : L(), (0, a.jsx)("div", {
-        className: i()(p.featureCardGroup, {
-          [p.wideStyle]: U
+        className: g.bodyText,
+        children: N
+      }), null == P ? void 0 : P(), (0, s.jsx)("div", {
+        className: l()(g.featureCardGroup, {
+          [g.wideStyle]: U
         }),
-        children: M.map((e, t) => (0, a.jsx)(A, {
+        children: x.map((e, t) => (0, s.jsx)(h, {
           ...e,
           wideStyle: U
         }, "".concat(e.header, "_").concat(t)))
-      }), y()]
+      }), b()]
     })]
   })
 }

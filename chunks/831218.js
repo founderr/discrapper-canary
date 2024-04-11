@@ -9,13 +9,13 @@ var l, a, s, i = n("735250"),
   f = n("902704"),
   h = n("481060"),
   p = n("925549"),
-  C = n("607070"),
-  m = n("367907"),
+  m = n("607070"),
+  C = n("367907"),
   g = n("453542"),
   E = n("762914"),
   S = n("518311"),
-  _ = n("355298"),
-  I = n("869404"),
+  I = n("355298"),
+  _ = n("869404"),
   N = n("333984"),
   T = n("210887"),
   A = n("592125"),
@@ -26,8 +26,8 @@ var l, a, s, i = n("735250"),
   y = n("151827"),
   M = n("515753"),
   O = n("981631"),
-  D = n("689938"),
-  b = n("82545");
+  b = n("689938"),
+  D = n("82545");
 
 function j(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ let G = r.memo(function() {
     width: "184",
     height: "428",
     viewBox: "0 0 184 428",
-    className: b.empty,
+    className: D.empty,
     children: [(0, i.jsx)("rect", {
       x: 40,
       y: 6,
@@ -164,7 +164,7 @@ let G = r.memo(function() {
     })]
   })
 });
-class U extends(a = r.Component) {
+class P extends(a = r.Component) {
   static getDerivedStateFromProps(e) {
     let {
       children: t,
@@ -234,14 +234,14 @@ class U extends(a = r.Component) {
           children: l => (0, i.jsx)(h.List, {
             fade: !0,
             innerRole: s,
-            innerAriaLabel: D.default.Messages.DIRECT_MESSAGES,
+            innerAriaLabel: b.default.Messages.DIRECT_MESSAGES,
             innerTag: "ul",
             ref: e => {
               var t;
               this._list = e, this.props.listRef.current = e, a.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
             },
             onScroll: this.handleScroll,
-            className: b.scroller,
+            className: D.scroller,
             sectionHeight: this.getSectionHeight,
             paddingTop: t,
             paddingBottom: 8,
@@ -281,7 +281,7 @@ class U extends(a = r.Component) {
           num_users_visible: i.length,
           num_users_visible_with_mobile_indicator: o.filter(e => null != e && L.default.isMobileOnline(e)).length
         };
-      this.hasReportedAnalytics = !0, m.default.trackWithMetadata(O.AnalyticEvents.DM_LIST_VIEWED, {
+      this.hasReportedAnalytics = !0, C.default.trackWithMetadata(O.AnalyticEvents.DM_LIST_VIEWED, {
         ...u,
         ...(0, g.getNowPlayingAnalytics)()
       })
@@ -334,15 +334,15 @@ class U extends(a = r.Component) {
         showDMHeader: n
       } = this.props;
       return 0 !== t && n ? (0, i.jsxs)(y.default, {
-        className: b.privateChannelsHeaderContainer,
+        className: D.privateChannelsHeaderContainer,
         children: [(0, i.jsx)("span", {
-          className: b.headerText,
-          children: D.default.Messages.DIRECT_MESSAGES
+          className: D.headerText,
+          children: b.default.Messages.DIRECT_MESSAGES
         }), (0, i.jsx)(S.default, {
-          tooltip: D.default.Messages.CREATE_DM,
+          tooltip: b.default.Messages.CREATE_DM,
           tooltipPosition: "top",
           popoutAlign: "left",
-          iconClassName: b.privateChannelRecipientsInviteButtonIcon,
+          iconClassName: D.privateChannelRecipientsInviteButtonIcon,
           icon: R.default,
           subscribeToGlobalHotkey: !0
         })]
@@ -355,7 +355,7 @@ class U extends(a = r.Component) {
     })
   }
 }
-j(U, "defaultProps", {
+j(P, "defaultProps", {
   padding: 8
 });
 t.default = e => {
@@ -364,15 +364,15 @@ t.default = e => {
     theme: n,
     children: l,
     showDMHeader: a
-  } = e, s = r.Children.count(l), o = A.default.getMutablePrivateChannels(), u = (0, I.filterOutMessageRequestsAndSpam)(o), f = (0, c.useStateFromStoresArray)([v.default, _.default, N.default], () => {
+  } = e, s = r.Children.count(l), o = A.default.getMutablePrivateChannels(), u = (0, _.filterOutMessageRequestsAndSpam)(o), f = (0, c.useStateFromStoresArray)([v.default, I.default, N.default], () => {
     let e = v.default.getPrivateChannelIds(),
-      t = (0, I.filterOutMessageRequestsAndSpamById)(e, [_.default, N.default]);
+      t = (0, _.filterOutMessageRequestsAndSpamById)(e, [I.default, N.default]);
     return (0, E.filterBroadcastingGDMs)(t)
-  }, []), h = (0, c.useStateFromStoresObject)([C.default, T.default, A.default], () => ({
+  }, []), h = (0, c.useStateFromStoresObject)([m.default, T.default, A.default], () => ({
     theme: T.default.darkSidebar ? O.ThemeTypes.DARK : n,
-    keyboardModeEnabled: C.default.keyboardModeEnabled,
+    keyboardModeEnabled: m.default.keyboardModeEnabled,
     version: null != t ? "".concat(t, ":").concat(A.default.getPrivateChannelsVersion()) : A.default.getPrivateChannelsVersion()
-  })), p = r.useRef(null), m = r.useCallback(e => {
+  })), p = r.useRef(null), C = r.useCallback(e => {
     let t = p.current,
       n = document.querySelector(e);
     null != t && null != n && t.scrollIntoViewNode({
@@ -406,11 +406,11 @@ t.default = e => {
     scrollToStart: g,
     scrollToEnd: S,
     defaultFocused: (s + (a ? 1 : 0)).toString(),
-    setFocus: m
+    setFocus: C
   });
   return (0, i.jsx)(d.ListNavigatorProvider, {
     navigator: R,
-    children: (0, i.jsx)(U, {
+    children: (0, i.jsx)(P, {
       channels: u,
       privateChannelIds: f,
       listRef: p,

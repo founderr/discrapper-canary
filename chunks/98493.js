@@ -24,9 +24,9 @@ function c(e) {
   return {
     fetchNextPage: l.useCallback(async (e, l) => {
       if (a.current) return;
-      let C = "".concat(e, "-").concat(l),
-        m = !1;
-      if (C !== h.current && (h.current = C, p.current = !1, m = !0), p.current) return;
+      let m = "".concat(e, "-").concat(l),
+        C = !1;
+      if (m !== h.current && (h.current = m, p.current = !1, C = !0), p.current) return;
       null != c && f(null);
       let g = function(e, t, n, l) {
         let a = n === u.GuildJoinRequestApplicationStatuses.SUBMITTED;
@@ -50,7 +50,7 @@ function c(e) {
             after: a ? t.joinRequestId : t.actionedAt
           }
         }
-      }(n, e, l, m);
+      }(n, e, l, C);
       try {
         a.current = !0;
         let e = await o.default.fetchGuildJoinRequests({

@@ -1,23 +1,23 @@
 "use strict";
 s.r(t), s.d(t, {
   ChannelNotificationSettings: function() {
-    return T
+    return x
   }
 }), s("47120");
 var i = s("735250"),
-  a = s("470079"),
-  n = s("481060"),
+  n = s("470079"),
+  a = s("481060"),
   l = s("92114"),
   r = s("225433"),
-  d = s("933557"),
-  o = s("471445"),
+  o = s("933557"),
+  d = s("471445"),
   u = s("592125"),
   c = s("324067"),
   h = s("699516"),
   S = s("594174"),
   N = s("285952"),
-  g = s("621600"),
-  f = s("981631"),
+  f = s("621600"),
+  g = s("981631"),
   m = s("689938"),
   E = s("154460");
 
@@ -29,7 +29,7 @@ function _(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class T extends a.PureComponent {
+class x extends n.PureComponent {
   highlight() {
     this.setState({
       highlight: !0
@@ -43,31 +43,31 @@ class T extends a.PureComponent {
   setMessageNotification(e, t, s) {
     let {
       channel: i
-    } = this.props, a = i.getGuildId();
-    null != a && l.default.updateChannelOverrideSettings(a, i.id, {
+    } = this.props, n = i.getGuildId();
+    null != n && l.default.updateChannelOverrideSettings(n, i.id, {
       message_notifications: e,
       muted: null != t && t
     }, s)
   }
   handleRadioChange(e) {
-    this.setMessageNotification(e, void 0, g.NotificationLabel.notifications(e))
+    this.setMessageNotification(e, void 0, f.NotificationLabel.notifications(e))
   }
   renderMessageNotificationsRadioOption(e) {
     let {
       messageNotifications: t,
       guildMuted: s,
-      muted: a,
+      muted: n,
       guildMessageNotifications: l,
       checkboxColor: r
-    } = this.props, d = t === e;
-    (null == t || t === f.UserNotificationSettings.NULL) && e === l && (d = !0);
-    let o = n.Checkbox.Types.INVERTED;
-    return (a || t === f.UserNotificationSettings.NULL || null == t) && (o = n.Checkbox.Types.GHOST), (0, i.jsx)(n.Checkbox, {
-      value: !s && d,
+    } = this.props, o = t === e;
+    (null == t || t === g.UserNotificationSettings.NULL) && e === l && (o = !0);
+    let d = a.Checkbox.Types.INVERTED;
+    return (n || t === g.UserNotificationSettings.NULL || null == t) && (d = a.Checkbox.Types.GHOST), (0, i.jsx)(a.Checkbox, {
+      value: !s && o,
       disabled: s,
-      shape: n.Checkbox.Shapes.ROUND,
+      shape: a.Checkbox.Shapes.ROUND,
       color: r,
-      type: o,
+      type: d,
       onChange: this.handleRadioChange.bind(this, e)
     })
   }
@@ -77,27 +77,27 @@ class T extends a.PureComponent {
       channel: s
     } = this.props;
     null != s.parent_id && (e = u.default.getChannel(s.parent_id));
-    let a = (0, o.getChannelIconComponent)(s);
-    if (s.type === f.ChannelTypes.GUILD_CATEGORY && null != s.guild_id && "" !== s.guild_id) {
+    let n = (0, d.getChannelIconComponent)(s);
+    if (s.type === g.ChannelTypes.GUILD_CATEGORY && null != s.guild_id && "" !== s.guild_id) {
       let e = c.default.getCategories(s.guild_id);
       t = m.default.Messages.NUM_CHANNELS.format({
         num: null != e[s.id] ? e[s.id].length : 0
       })
     } else t = null != e ? m.default.Messages.IN_CATEGORY.format({
-      categoryName: (0, d.computeChannelName)(e, S.default, h.default)
+      categoryName: (0, o.computeChannelName)(e, S.default, h.default)
     }) : m.default.Messages.NO_CATEGORY;
     return (0, i.jsxs)(N.default, {
       grow: 1,
       className: E.nameContainer,
-      children: [null != a ? (0, i.jsx)(a, {
+      children: [null != n ? (0, i.jsx)(n, {
         className: E.icon
       }) : null, (0, i.jsxs)("div", {
         className: E.channelNameContainer,
-        children: [(0, i.jsx)(n.Text, {
+        children: [(0, i.jsx)(a.Text, {
           variant: "text-md/semibold",
           className: E.channelName,
-          children: (0, d.computeChannelName)(s, S.default, h.default)
-        }), (0, i.jsx)(n.Text, {
+          children: (0, o.computeChannelName)(s, S.default, h.default)
+        }), (0, i.jsx)(a.Text, {
           variant: "text-xs/normal",
           className: E.channelNameByline,
           children: t
@@ -121,28 +121,28 @@ class T extends a.PureComponent {
         grow: 0,
         shrink: 0,
         className: t ? E.checkboxContainerMuted : E.checkboxContainer,
-        children: this.renderMessageNotificationsRadioOption(f.UserNotificationSettings.ALL_MESSAGES)
+        children: this.renderMessageNotificationsRadioOption(g.UserNotificationSettings.ALL_MESSAGES)
       }), (0, i.jsx)(N.default.Child, {
         wrap: !0,
         grow: 0,
         shrink: 0,
         className: t ? E.checkboxContainerMuted : E.checkboxContainer,
-        children: this.renderMessageNotificationsRadioOption(f.UserNotificationSettings.ONLY_MENTIONS)
+        children: this.renderMessageNotificationsRadioOption(g.UserNotificationSettings.ONLY_MENTIONS)
       }), (0, i.jsx)(N.default.Child, {
         wrap: !0,
         grow: 0,
         shrink: 0,
         className: t ? E.checkboxContainerMuted : E.checkboxContainer,
-        children: this.renderMessageNotificationsRadioOption(f.UserNotificationSettings.NO_MESSAGES)
+        children: this.renderMessageNotificationsRadioOption(g.UserNotificationSettings.NO_MESSAGES)
       }), (0, i.jsx)(N.default.Child, {
         wrap: !0,
         grow: 0,
         shrink: 0,
         className: E.checkboxMute,
-        children: (0, i.jsx)(n.Checkbox, {
+        children: (0, i.jsx)(a.Checkbox, {
           value: e,
-          shape: n.Checkbox.Shapes.BOX,
-          type: n.Checkbox.Types.INVERTED,
+          shape: a.Checkbox.Shapes.BOX,
+          type: a.Checkbox.Types.INVERTED,
           onChange: this.handleMute
         })
       })]
@@ -152,7 +152,7 @@ class T extends a.PureComponent {
     let {
       highlight: e
     } = this.state;
-    return (0, i.jsxs)(n.Card, {
+    return (0, i.jsxs)(a.Card, {
       outline: !0,
       editable: !0,
       className: e ? E.overrideHighlight : E.override,
@@ -173,13 +173,13 @@ class T extends a.PureComponent {
       let {
         messageNotifications: s
       } = this.props;
-      this.setMessageNotification(null != s ? s : f.UserNotificationSettings.NULL, t, g.NotificationLabel.muted(t))
+      this.setMessageNotification(null != s ? s : g.UserNotificationSettings.NULL, t, f.NotificationLabel.muted(t))
     }), _(this, "handleDelete", () => {
       let {
         onDelete: e,
         channel: t
       } = this.props;
-      this.setMessageNotification(f.UserNotificationSettings.NULL, !1, g.NotificationLabels.OverrideDeleted), null != e && e(t.id)
+      this.setMessageNotification(g.UserNotificationSettings.NULL, !1, f.NotificationLabels.OverrideDeleted), null != e && e(t.id)
     })
   }
 }

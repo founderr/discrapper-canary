@@ -1,23 +1,23 @@
 "use strict";
-var o, u, r, _, i, a, E, s;
+var n, d, o, s, _, i, E, I;
 
-function A(e) {
+function c(e) {
   return e.includes("LEGITIMATE_ACTIVITY") ? "LEGITIMATE_ACTIVITY" : e.includes("DM_SPAM") ? "DM_SPAM" : e.includes("JOIN_RAID") ? "JOIN_RAID" : "OTHER"
 }
-n.r(t), n.d(t, {
+t.r(a), t.d(a, {
   Feedback: function() {
-    return o
+    return n
   },
   RaidAlertType: function() {
-    return u
+    return d
   },
   RaidLockdownFeedbackType: function() {
-    return _
+    return s
   },
   RaidResolutionType: function() {
-    return r
+    return o
   },
   getMostImportantRaidResolutionType: function() {
-    return A
+    return c
   }
-}), n("689938"), (i = o || (o = {})).BUG = "BUG", i.ALLOWED = "ALLOWED", i.MENTION_RAID_REMOVE_RESTRICTION = "MENTION_RAID_REMOVE_RESTRICTION", (a = u || (u = {})).JOIN_RAID = "JOIN_RAID", a.MENTION_RAID = "MENTION_RAID", (E = r || (r = {})).LEGITIMATE_ACTIVITY = "LEGITIMATE_ACTIVITY", E.LEGITIMATE_ACCOUNTS = "LEGITIMATE_ACCOUNTS", E.LEGITIMATE_DMS = "LEGITIMATE_DMS", E.DM_SPAM = "DM_SPAM", E.JOIN_RAID = "JOIN_RAID", E.OTHER = "OTHER", (s = _ || (_ = {})).DM_SPAM = "DM_SPAM", s.MENTION_SPAM = "MENTION_SPAM", s.CHANNEL_SPAM = "CHANNEL_SPAM", s.SUS_NEW_MEMBERS = "SUS_NEW_MEMBERS", s.CHANGING_SETTINGS = "CHANGING_SETTINGS", s.OTHER = "OTHER"
+}), t("689938"), (_ = n || (n = {})).BUG = "BUG", _.ALLOWED = "ALLOWED", _.MENTION_RAID_REMOVE_RESTRICTION = "MENTION_RAID_REMOVE_RESTRICTION", (i = d || (d = {})).JOIN_RAID = "JOIN_RAID", i.MENTION_RAID = "MENTION_RAID", (E = o || (o = {})).LEGITIMATE_ACTIVITY = "LEGITIMATE_ACTIVITY", E.LEGITIMATE_ACCOUNTS = "LEGITIMATE_ACCOUNTS", E.LEGITIMATE_DMS = "LEGITIMATE_DMS", E.DM_SPAM = "DM_SPAM", E.JOIN_RAID = "JOIN_RAID", E.OTHER = "OTHER", (I = s || (s = {})).DM_SPAM = "DM_SPAM", I.MENTION_SPAM = "MENTION_SPAM", I.CHANNEL_SPAM = "CHANNEL_SPAM", I.SUS_NEW_MEMBERS = "SUS_NEW_MEMBERS", I.CHANGING_SETTINGS = "CHANGING_SETTINGS", I.OTHER = "OTHER"

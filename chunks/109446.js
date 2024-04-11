@@ -16,23 +16,23 @@ var l = n("735250"),
   f = n("91159"),
   h = n("488131"),
   p = n("496675"),
-  C = n("306680"),
-  m = n("594174"),
+  m = n("306680"),
+  C = n("594174"),
   g = n("768581"),
   E = n("709054"),
   S = n("981631"),
-  _ = n("124368"),
-  I = n("689938"),
+  I = n("124368"),
+  _ = n("689938"),
   N = n("439688");
 
 function T(e) {
   let {
     channel: t
-  } = e, s = (0, r.useStateFromStoresArray)([c.default, C.default, p.default], () => {
+  } = e, s = (0, r.useStateFromStoresArray)([c.default, m.default, p.default], () => {
     let e = c.default.getActiveJoinedRelevantThreadsForParent(t.guild_id, t.id);
     return i()(c.default.getActiveJoinedThreadsForParent(t.guild_id, t.id)).values().map(e => e.channel).concat(i().values(c.default.getActiveUnjoinedThreadsForParent(t.guild_id, t.id))).filter(t => !(t.id in e) && p.default.can(S.Permissions.VIEW_CHANNEL, t)).sort((e, t) => {
-      let n = C.default.lastMessageId(e.id),
-        l = C.default.lastMessageId(t.id);
+      let n = m.default.lastMessageId(e.id),
+        l = m.default.lastMessageId(t.id);
       return E.default.compare(n, l)
     }).reverse().value()
   }), u = t.isForumLikeChannel() ? 5 : 3;
@@ -44,7 +44,7 @@ function T(e) {
       className: N.title,
       variant: "text-xs/bold",
       color: "header-secondary",
-      children: t.isForumLikeChannel() ? I.default.Messages.ACTIVE_THREADS_POPOUT_HEADER_FORUM : I.default.Messages.ACTIVE_THREADS_POPOUT_HEADER
+      children: t.isForumLikeChannel() ? _.default.Messages.ACTIVE_THREADS_POPOUT_HEADER_FORUM : _.default.Messages.ACTIVE_THREADS_POPOUT_HEADER
     }), s.slice(0, t.isForumLikeChannel() ? s.length : u).map(e => (0, l.jsx)(A, {
       thread: e
     }, e.id)).filter(e => a.isValidElement(e)).slice(0, u), (0, l.jsx)(o.Clickable, {
@@ -63,7 +63,7 @@ function T(e) {
       children: (0, l.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "none",
-        children: I.default.Messages.ACTIVE_THREADS_POPOUT_LINK
+        children: _.default.Messages.ACTIVE_THREADS_POPOUT_LINK
       })
     })]
   })
@@ -72,11 +72,11 @@ function T(e) {
 function A(e) {
   let {
     thread: t
-  } = e, n = (0, r.useStateFromStores)([m.default], () => m.default.getUser(t.ownerId)), a = (0, f.useLastMessageTimestamp)(t);
+  } = e, n = (0, r.useStateFromStores)([C.default], () => C.default.getUser(t.ownerId)), a = (0, f.useLastMessageTimestamp)(t);
   return (0, l.jsxs)(o.Clickable, {
     className: N.row,
     onClick: e => {
-      (0, h.openThreadSidebarForViewing)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, _.OpenThreadAnalyticsLocations.POPOUT)
+      (0, h.openThreadSidebarForViewing)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, I.OpenThreadAnalyticsLocations.POPOUT)
     },
     children: [null == n ? (0, l.jsx)("img", {
       className: N.avatar,

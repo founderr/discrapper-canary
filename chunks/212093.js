@@ -13,8 +13,8 @@ n.r(t), n.d(t, {
           categoryId: a = p.DISCOVERY_ALL_CATEGORIES_ID,
           preferredLocale: s,
           offset: c,
-          length: C,
-          tag: m
+          length: m,
+          tag: C
         } = n,
         E = d.default.getSearchIndex();
       if (null == E) return;
@@ -41,9 +41,9 @@ n.r(t), n.d(t, {
         query: t,
         preferredLocale: s,
         offset: c,
-        limit: C,
+        limit: m,
         categoryId: a,
-        tag: m
+        tag: C
       }), o.default.dispatch({
         type: "GUILD_DISCOVERY_SEARCH_FETCH_START",
         section: h.GuildDiscoverySections.SEARCH,
@@ -51,14 +51,14 @@ n.r(t), n.d(t, {
         categoryId: a
       });
       let S = Object.assign({}, g, n.filters),
-        _ = Object.keys(S).map(e => "".concat(e).concat(S[e]));
-      a !== p.DISCOVERY_ALL_CATEGORIES_ID && _.push("(primary_category_id=".concat(a, " OR categories.id=").concat(a, ")"));
-      let I = _.join(" AND ");
+        I = Object.keys(S).map(e => "".concat(e).concat(S[e]));
+      a !== p.DISCOVERY_ALL_CATEGORIES_ID && I.push("(primary_category_id=".concat(a, " OR categories.id=").concat(a, ")"));
+      let _ = I.join(" AND ");
       try {
         let i = E.search(t, {
-            filters: I,
+            filters: _,
             optionalFilters: ["preferred_locale: ".concat(s)],
-            length: C,
+            length: m,
             offset: c,
             restrictSearchableAttributes: ["name", "description", "keywords", "categories.name", "categories.name_localizations.".concat(s), "primary_category.name", "primary_category.name_localizations.".concat(s), "vanity_url_code"]
           }),
@@ -88,7 +88,7 @@ n.r(t), n.d(t, {
               id: e.objectID
             }))] : [],
             offset: c,
-            limit: C,
+            limit: m,
             total: s ? Math.min(l, p.MAX_ALGOLIA_PAGINATOR_RESULTS) : 0
           })
         }).catch(s => {
@@ -112,13 +112,13 @@ n.r(t), n.d(t, {
     }
   },
   fetchFeaturedOrPopularGuilds: function() {
-    return I
+    return _
   },
   fetchGamesYouPlayGuilds: function() {
     return N
   },
   fetchPopularGuildsForCategory: function() {
-    return _
+    return I
   },
   getSearchResultsCount: function() {
     return S
@@ -139,8 +139,8 @@ var l = n("807034"),
   f = n("70956"),
   h = n("981631"),
   p = n("731455");
-let C = window.GLOBAL_ENV.ALGOLIA_KEY,
-  m = "production" === window.GLOBAL_ENV.PROJECT_ENV ? "prod_discoverable_guilds" : "staging" === window.GLOBAL_ENV.PROJECT_ENV ? "stg_discoverable_guilds" : "dev_discoverable_guilds",
+let m = window.GLOBAL_ENV.ALGOLIA_KEY,
+  C = "production" === window.GLOBAL_ENV.PROJECT_ENV ? "prod_discoverable_guilds" : "staging" === window.GLOBAL_ENV.PROJECT_ENV ? "stg_discoverable_guilds" : "dev_discoverable_guilds",
   g = {
     "auto_removed:": !1,
     approximate_presence_count: "> 0",
@@ -148,10 +148,10 @@ let C = window.GLOBAL_ENV.ALGOLIA_KEY,
   };
 
 function E() {
-  if (null == C) return;
-  let e = s()("NKTZZ4AIZU", C, {
+  if (null == m) return;
+  let e = s()("NKTZZ4AIZU", m, {
     responsesCache: (0, l.createNullCache)()
-  }).initIndex(m);
+  }).initIndex(C);
   o.default.wait(() => o.default.dispatch({
     type: "GUILD_DISCOVERY_SEARCH_INIT",
     index: e
@@ -198,7 +198,7 @@ function S(e, t) {
     })
   }
 }
-async function _(e) {
+async function I(e) {
   o.default.dispatch({
     type: "GUILD_DISCOVERY_POPULAR_FETCH_START",
     categoryId: e
@@ -225,7 +225,7 @@ async function _(e) {
     })
   }
 }
-async function I(e, t) {
+async function _(e, t) {
   o.default.dispatch({
     type: "GUILD_DISCOVERY_FETCH_START",
     section: h.GuildDiscoverySections.FEATURED

@@ -31,15 +31,15 @@ let I = e => {
     setSoundEffect: h
   } = (0, l.useGiftContext)(), [x, v] = s.useState(!1), A = s.useRef(null), C = (0, a.useRadioGroup)({
     orientation: "horizontal"
-  }), g = (0, u.getGiftExperience)(n, t), y = g === u.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD, M = g !== u.GiftExperience.DEFAULT, b = (0, c.useIsSeasonalGiftingActive)(), {
-    enabled: R
+  }), g = (0, u.getGiftExperience)(n, t), M = g === u.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD, y = g !== u.GiftExperience.DEFAULT, R = (0, c.useIsSeasonalGiftingActive)(), {
+    enabled: b
   } = c.default.useExperiment({
     location: "premiumGiftSelect_GiftAnimationOptions"
   }, {
-    autoTrackExposure: b
+    autoTrackExposure: R
   }), O = null;
-  return M && (O = b && R ? p.SeasonalGiftStyles2023 : p.STANDARD_GIFT_OPTIONS), (0, i.jsxs)("div", {
-    children: [M && (0, i.jsxs)("div", {
+  return y && (O = R && b ? p.SeasonalGiftStyles2023 : p.STANDARD_GIFT_OPTIONS), (0, i.jsxs)("div", {
+    children: [y && (0, i.jsxs)("div", {
       className: S.giftMainAnimation,
       children: [null != I ? (0, i.jsx)(d.default, {
         giftStyle: I,
@@ -49,7 +49,7 @@ let I = e => {
         className: S.animation
       }) : (0, i.jsx)(a.Spinner, {
         className: S.spinner
-      }), y && (0, i.jsxs)("div", {
+      }), M && (0, i.jsxs)("div", {
         className: S.soundEmojiContainer,
         children: [(0, i.jsx)("div", {
           className: S.sound,

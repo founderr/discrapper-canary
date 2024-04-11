@@ -12,13 +12,13 @@ var l = n("735250"),
   f = n("752916"),
   h = n("898140"),
   p = n("768581"),
-  C = n("358555"),
-  m = n("981631"),
+  m = n("358555"),
+  C = n("981631"),
   g = n("647086"),
   E = n("689938"),
   S = n("126905");
 
-function _(e) {
+function I(e) {
   var t;
   let {
     guild: n,
@@ -58,7 +58,7 @@ function _(e) {
   })
 }
 
-function I(e) {
+function _(e) {
   let {
     guild: t,
     controller: n,
@@ -66,7 +66,7 @@ function I(e) {
     hasSubheader: s
   } = e, {
     value: o
-  } = n.springs, d = t.hasFeature(m.GuildFeatures.DISCOVERABLE), c = (0, l.jsx)("div", {
+  } = n.springs, d = t.hasFeature(C.GuildFeatures.DISCOVERABLE), c = (0, l.jsx)("div", {
     className: S.communityInfo,
     children: d && (0, l.jsx)(u.Tooltip, {
       text: E.default.Messages.DISCOVERABLE_GUILD_HEADER_PUBLIC_INFO,
@@ -124,19 +124,19 @@ t.default = a.memo(function(e) {
     animationOverlayHeight: y,
     children: M,
     headerClassName: O,
-    communityInfoVisible: D,
-    hasSubheader: b
-  } = e, j = x.hasFeature(m.GuildFeatures.ANIMATED_BANNER), G = (0, d.default)(x), U = !G && x.hasCommunityInfoSubheader(), P = (0, p.isAnimatedIconHash)(R) && j && !A, [w, F] = a.useState(!1), B = a.useRef(), V = a.useRef(null), H = a.useRef(), k = c.GifAutoPlay.getSetting();
+    communityInfoVisible: b,
+    hasSubheader: D
+  } = e, j = x.hasFeature(C.GuildFeatures.ANIMATED_BANNER), G = (0, d.default)(x), P = !G && x.hasCommunityInfoSubheader(), U = (0, p.isAnimatedIconHash)(R) && j && !A, [w, B] = a.useState(!1), F = a.useRef(), V = a.useRef(null), H = a.useRef(), k = c.GifAutoPlay.getSetting();
   a.useEffect(() => {
-    if (P && n && !B.current && k) return F(!0), H.current = setTimeout(() => {
-      F(!1)
+    if (U && n && !F.current && k) return B(!0), H.current = setTimeout(() => {
+      B(!1)
     }, 5e3), () => {
       clearTimeout(H.current)
     }
-  }, [P, n, k]), a.useEffect(() => {
-    B.current = n
+  }, [U, n, k]), a.useEffect(() => {
+    F.current = n
   }, [n]);
-  let Y = () => {
+  let K = () => {
     let {
       renderBanner: t,
       guildBanner: n
@@ -150,9 +150,9 @@ t.default = a.memo(function(e) {
         [S.container]: !0,
         [S.clickable]: null != f,
         [S.selected]: null != f && L,
-        [S.hasBanner]: Y(),
+        [S.hasBanner]: K(),
         [S.bannerVisible]: n,
-        [S.communityInfoVisible]: !G && D || b && U
+        [S.communityInfoVisible]: !G && b || D && P
       }),
       onMouseDown: T,
       onContextMenu: h,
@@ -163,7 +163,7 @@ t.default = a.memo(function(e) {
         }),
         children: [(0, l.jsxs)("div", {
           className: i()(S.headerContent, S.primaryInfo),
-          children: [(0, l.jsx)(C.default, {
+          children: [(0, l.jsx)(m.default, {
             guild: x,
             isBannerVisible: n
           }), x.id === g.FAVORITES_RAW_GUILD_ID && (0, l.jsx)(N, {}), (0, l.jsx)(u.Heading, {
@@ -188,24 +188,24 @@ t.default = a.memo(function(e) {
             className: S.headerChildren,
             children: M
           })]
-        }), U && (0, l.jsx)(I, {
+        }), P && (0, l.jsx)(_, {
           guild: x,
           controller: s,
           hasBanner: null != R,
-          hasSubheader: null != b && b
+          hasSubheader: null != D && D
         })]
-      }), null != R ? (0, l.jsx)(_, {
+      }), null != R ? (0, l.jsx)(I, {
         guild: x,
         controller: s,
         guildBanner: R,
         animate: w
       }) : null]
-    }), P && Y() ? (0, l.jsx)("div", {
+    }), U && K() ? (0, l.jsx)("div", {
       className: S.animatedBannerHoverLayer,
       onMouseEnter: () => {
-        F(!0), clearTimeout(H.current)
+        B(!0), clearTimeout(H.current)
       },
-      onMouseLeave: () => F(!1),
+      onMouseLeave: () => B(!1),
       style: {
         height: y
       }

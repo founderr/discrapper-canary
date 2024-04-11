@@ -6,12 +6,12 @@ s.r(t), s.d(t, {
 });
 var i = s("735250");
 s("470079");
-var a = s("442837"),
-  n = s("882485"),
+var n = s("442837"),
+  a = s("882485"),
   l = s("481060"),
   r = s("92114"),
-  d = s("9156"),
-  o = s("621600"),
+  o = s("9156"),
+  d = s("621600"),
   u = s("981631"),
   c = s("689938"),
   h = s("379665");
@@ -19,12 +19,12 @@ var a = s("442837"),
 function S(e) {
   let {
     guildId: t
-  } = e, s = (0, a.useStateFromStoresObject)([d.default], () => ({
-    highligths: d.default.getNotifyHighlights(t),
-    mobilePush: d.default.isMobilePushEnabled(t),
-    suppressRoles: d.default.isSuppressRolesEnabled(t),
-    suppressEveryone: d.default.isSuppressEveryoneEnabled(t),
-    muteScheduledEvents: d.default.isMuteScheduledEventsEnabled(t)
+  } = e, s = (0, n.useStateFromStoresObject)([o.default], () => ({
+    highligths: o.default.getNotifyHighlights(t),
+    mobilePush: o.default.isMobilePushEnabled(t),
+    suppressRoles: o.default.isSuppressRolesEnabled(t),
+    suppressEveryone: o.default.isSuppressEveryoneEnabled(t),
+    muteScheduledEvents: o.default.isMuteScheduledEventsEnabled(t)
   })), S = r.default.updateGuildNotificationSettings;
   return (0, i.jsxs)("div", {
     children: [(0, i.jsx)(N, {
@@ -32,13 +32,13 @@ function S(e) {
       title: c.default.Messages.FORM_LABEL_SUPPRESS_EVERYONE.format(),
       onChange: e => S(t, {
         suppress_everyone: e
-      }, o.NotificationLabel.suppressEveryone(e))
+      }, d.NotificationLabel.suppressEveryone(e))
     }), (0, i.jsx)(N, {
       value: s.suppressRoles,
       title: c.default.Messages.FORM_LABEL_SUPPRESS_ROLES,
       onChange: e => S(t, {
         suppress_roles: e
-      }, o.NotificationLabel.suppressRoles(e))
+      }, d.NotificationLabel.suppressRoles(e))
     }), (0, i.jsx)(N, {
       title: (0, i.jsxs)("div", {
         className: h.advanceSettingTitle,
@@ -49,7 +49,7 @@ function S(e) {
               onMouseEnter: t,
               onMouseLeave: s
             } = e;
-            return (0, i.jsx)(n.CircleInformationIcon, {
+            return (0, i.jsx)(a.CircleInformationIcon, {
               width: 14,
               height: 14,
               onMouseEnter: t,
@@ -63,19 +63,19 @@ function S(e) {
       value: s.highligths === u.HighlightSettings.ENABLED,
       onChange: e => S(t, {
         notify_highlights: e ? u.HighlightSettings.ENABLED : u.HighlightSettings.DISABLED
-      }, o.NotificationLabel.highlights(e))
+      }, d.NotificationLabel.highlights(e))
     }), (0, i.jsx)(N, {
       value: s.muteScheduledEvents,
       title: c.default.Messages.FORM_LABEL_MUTE_SCHEDULED_EVENTS,
       onChange: e => S(t, {
         mute_scheduled_events: e
-      }, o.NotificationLabel.mutedEvents(e))
+      }, d.NotificationLabel.mutedEvents(e))
     }), (0, i.jsx)(N, {
       value: s.mobilePush,
       title: c.default.Messages.FORM_LABEL_MOBILE_PUSH_NOTIFICATIONS,
       onChange: e => S(t, {
         mobile_push: e
-      }, o.NotificationLabel.mobilePush(e))
+      }, d.NotificationLabel.mobilePush(e))
     })]
   })
 }

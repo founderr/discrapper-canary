@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return x
   },
   Header: function() {
-    return D
+    return b
   },
   Link: function() {
-    return b
+    return D
   },
   User: function() {
     return M
@@ -33,13 +33,13 @@ var l, a = n("735250"),
   f = n("430824"),
   h = n("699516"),
   p = n("594174"),
-  C = n("51144"),
-  m = n("2093"),
+  m = n("51144"),
+  C = n("2093"),
   g = n("366695"),
   E = n("346656"),
   S = n("409216"),
-  _ = n("136033"),
-  I = n("757698"),
+  I = n("136033"),
+  _ = n("757698"),
   N = n("630641"),
   T = n("689938"),
   A = n("539814");
@@ -218,7 +218,7 @@ class R extends(l = s.Component) {
       category: l,
       channel: s
     } = this.props;
-    return null != n && n > 0 && (e = (0, a.jsx)(m.default, {
+    return null != n && n > 0 && (e = (0, a.jsx)(C.default, {
       className: A.badge,
       value: n
     })), null != l && (t = (0, a.jsx)("span", {
@@ -323,7 +323,7 @@ class y extends s.Component {
       mentions: t,
       channel: n
     } = this.props;
-    return null != t && t > 0 && (e = (0, a.jsx)(m.default, {
+    return null != t && t > 0 && (e = (0, a.jsx)(C.default, {
       className: A.badge,
       value: t
     })), (0, a.jsxs)("div", {
@@ -402,7 +402,7 @@ class M extends s.Component {
       user: t,
       comparator: n
     } = this.props, l = h.default.getNickname(t.id);
-    return ((e = n === t.tag || null == n || "" === n ? t.username : n) === t.username || e === t.id) && (e = null != l ? l : C.default.getName(t)), e
+    return ((e = n === t.tag || null == n || "" === n ? t.username : n) === t.username || e === t.id) && (e = null != l ? l : m.default.getName(t)), e
   }
   renderName() {
     let e;
@@ -410,7 +410,7 @@ class M extends s.Component {
       user: t,
       mentions: n
     } = this.props, l = this.getDisplayNickname();
-    return null != n && n > 0 && (e = (0, a.jsx)(m.default, {
+    return null != n && n > 0 && (e = (0, a.jsx)(C.default, {
       className: A.badge,
       value: n
     })), (0, a.jsxs)("div", {
@@ -420,7 +420,7 @@ class M extends s.Component {
         children: l
       }), e, (0, a.jsx)("span", {
         className: A.username,
-        children: C.default.getUserTag(t)
+        children: m.default.getUserTag(t)
       })]
     })
   }
@@ -441,7 +441,7 @@ class M extends s.Component {
     let {
       mentions: e,
       user: t
-    } = this.props, n = this.getDisplayNickname(), l = C.default.getUserTag(t);
+    } = this.props, n = this.getDisplayNickname(), l = m.default.getUserTag(t);
     return null != e && e > 0 ? T.default.Messages.QUICK_SWITCHER_RESULTS_USER_UNREAD_LABEL.format({
       name: n,
       id: l,
@@ -514,7 +514,7 @@ class O extends s.Component {
     })
   }
 }
-class D extends s.Component {
+class b extends s.Component {
   render() {
     return (0, a.jsx)("div", {
       className: A.__invalid_resultDefault,
@@ -528,17 +528,17 @@ class D extends s.Component {
     })
   }
 }
-class b extends s.Component {
+class D extends s.Component {
   renderContent() {
     let e, t;
     let {
       link: n,
       children: l
     } = this.props, s = (0, c.tryParseChannelPath)(n.path);
-    return null == s || void 0 === s.messageId ? (e = T.default.Messages.QUICKSWITCHER_LINK_UNKNOWN, t = (0, a.jsx)(I.default, {
+    return null == s || void 0 === s.messageId ? (e = T.default.Messages.QUICKSWITCHER_LINK_UNKNOWN, t = (0, a.jsx)(_.default, {
       width: 16,
       height: 16
-    })) : (0, c.isAccessibleChannelPath)(s) ? (e = T.default.Messages.QUICKSWITCHER_LINK_MESSAGE, t = (0, a.jsx)(_.default, {
+    })) : (0, c.isAccessibleChannelPath)(s) ? (e = T.default.Messages.QUICKSWITCHER_LINK_MESSAGE, t = (0, a.jsx)(I.default, {
       width: 16,
       height: 16
     })) : (e = T.default.Messages.QUICKSWITCHER_LINK_NO_ACCESS, t = (0, a.jsx)(N.default, {

@@ -22,14 +22,14 @@ function f(e) {
     active: a,
     onAnimationStart: f,
     onAnimationRest: h
-  } = e, p = {}, C = {};
-  p.transform = "translate3d(10px, 10px, 0) scale3d(3, 3, 1)", C.transform = "translate3d(0, 0, 0) scale3d(1, 1, 1)";
-  let m = (0, o.useToken)(r.default.unsafe_rawColors.BRAND_500).hex(),
+  } = e, p = {}, m = {};
+  p.transform = "translate3d(10px, 10px, 0) scale3d(3, 3, 1)", m.transform = "translate3d(0, 0, 0) scale3d(1, 1, 1)";
+  let C = (0, o.useToken)(r.default.unsafe_rawColors.BRAND_500).hex(),
     g = (0, o.useToken)(r.default.unsafe_rawColors.PRIMARY_630).hex();
-  a && null == t.icon && (p.backgroundColor = m, C.backgroundColor = g);
+  a && null == t.icon && (p.backgroundColor = C, m.backgroundColor = g);
   let E = (0, i.useTransition)(n, {
     from: p,
-    enter: C,
+    enter: m,
     leave: p,
     config: {
       duration: 100

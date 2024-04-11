@@ -28,12 +28,12 @@ function f(e) {
     useWinterTheme: P = !1,
     onClose: S,
     hideCloseButton: h,
-    showTrialBadge: p,
-    showDiscountBadge: A,
-    isGift: M,
-    giftRecipient: N
-  } = e, E = (0, s.useStateFromStores)([m.default], () => m.default.useReducedMotion), I = P ? L.PremiumHeaderThemes.WINTER : L.PremiumHeaderThemes.DEFAULT;
-  return M && (0, c.shouldShowCustomGiftExperience)(N) && n !== l.Step.CONFIRM ? (0, t.jsxs)(u.ModalHeader, {
+    showTrialBadge: A,
+    showDiscountBadge: M,
+    isGift: p,
+    giftRecipient: E
+  } = e, N = (0, s.useStateFromStores)([m.default], () => m.default.useReducedMotion), R = P ? L.PremiumHeaderThemes.WINTER : L.PremiumHeaderThemes.DEFAULT;
+  return p && (0, c.shouldShowCustomGiftExperience)(E) && n !== l.Step.CONFIRM ? (0, t.jsxs)(u.ModalHeader, {
     className: T.modalHeaderCustomGift,
     separator: !1,
     children: [(0, t.jsx)("div", {
@@ -69,25 +69,25 @@ function f(e) {
         className: T.headerAnimation,
         currentStep: n,
         purchaseState: i,
-        pause: E
+        pause: N
       }) : f === L.PremiumTypes.TIER_1 ? (0, t.jsx)(d.PremiumModalHeaderAnimationTier1, {
         className: T.headerAnimation,
         currentStep: n,
         purchaseState: i,
-        pause: E
+        pause: N
       }) : (0, t.jsx)(d.PremiumModalHeaderAnimationTier2, {
         className: T.headerAnimation,
         currentStep: n,
         purchaseState: i,
-        pause: E
+        pause: N
       }),
       plan: null,
       isGift: !1,
       className: T.header,
       onClose: S,
-      headerTheme: I,
-      showTrialBadge: p,
-      showDiscountBadge: A
+      headerTheme: R,
+      showTrialBadge: A,
+      showDiscountBadge: M
     })
   })
 }

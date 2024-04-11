@@ -16,13 +16,13 @@ var l = n("735250"),
   f = n("430824"),
   h = n("496675"),
   p = n("158776"),
-  C = n("979651"),
-  m = n("823379"),
+  m = n("979651"),
+  C = n("823379"),
   g = n("355363"),
   E = n("737592"),
   S = n("561788"),
-  _ = n("135724"),
-  I = n("543432"),
+  I = n("135724"),
+  _ = n("543432"),
   N = n("981631"),
   T = n("689938"),
   A = n("890108");
@@ -32,10 +32,10 @@ function L(e) {
   let {
     channel: f,
     guild: h,
-    onAction: C,
+    onAction: m,
     voiceStates: g,
     isChannelSelected: S,
-    shouldShowSettingNudge: _
+    shouldShowSettingNudge: I
   } = e;
   ! function(e, t) {
     let n = a.useMemo(() => {
@@ -51,12 +51,12 @@ function L(e) {
     }, [e, t]);
     (0, r.useSubscribeGuildMembers)(n)
   }(f, g);
-  let I = (0, o.default)(f),
+  let _ = (0, o.default)(f),
     L = new Map;
-  I.forEach(e => {
+  _.forEach(e => {
     L.set(e.application.id, e)
   });
-  let x = null !== (t = null == g ? void 0 : g.filter(m.isNotNullish)) && void 0 !== t ? t : [],
+  let x = null !== (t = null == g ? void 0 : g.filter(C.isNotNullish)) && void 0 !== t ? t : [],
     R = e => t => [N.ActivityTypes.PLAYING, N.ActivityTypes.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId) || t.type === N.ActivityTypes.LISTENING,
     y = (0, s.useStateFromStores)([p.default], () => {
       let e = new Map;
@@ -90,8 +90,8 @@ function L(e) {
       members: x,
       activity: e.presenceActivity
     })),
-    D = [...O, ...M];
-  return 0 === D.length ? null : (0, l.jsxs)(i.Scroller, {
+    b = [...O, ...M];
+  return 0 === b.length ? null : (0, l.jsxs)(i.Scroller, {
     className: A.container,
     children: [(0, l.jsx)(v, {
       channel: f,
@@ -99,7 +99,7 @@ function L(e) {
       voiceStatesCount: null !== (c = null == g ? void 0 : g.length) && void 0 !== c ? c : 0
     }), (0, l.jsx)("div", {
       className: A.headerDivider
-    }), D.map((e, t) => {
+    }), b.map((e, t) => {
       let {
         members: n,
         activity: a
@@ -109,9 +109,9 @@ function L(e) {
         embeddedApp: i,
         channel: f,
         members: n,
-        onAction: C
+        onAction: m
       }, t)
-    }), _ && (0, l.jsxs)(l.Fragment, {
+    }), I && (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)("div", {
         className: A.headerDivider
       }), (0, l.jsx)("div", {
@@ -143,7 +143,7 @@ function v(e) {
     channel: t,
     isChannelSelected: n,
     voiceStatesCount: a
-  } = e, i = (0, s.useStateFromStores)([h.default], () => !h.default.can(N.Permissions.CONNECT, t)), r = (0, s.useStateFromStores)([C.default], () => C.default.hasVideo(t.id)), o = (0, g.default)({
+  } = e, i = (0, s.useStateFromStores)([h.default], () => !h.default.can(N.Permissions.CONNECT, t)), r = (0, s.useStateFromStores)([m.default], () => m.default.hasVideo(t.id)), o = (0, g.default)({
     channel: t,
     locked: i,
     video: r,
@@ -153,11 +153,11 @@ function v(e) {
     className: A.popoutHeaderContainer,
     children: [(0, l.jsx)(S.default, {
       channel: t
-    }), o ? (0, l.jsx)(_.default, {
+    }), o ? (0, l.jsx)(I.default, {
       userCount: a,
       video: r,
       channel: t
-    }) : (0, l.jsx)(I.default, {
+    }) : (0, l.jsx)(_.default, {
       userCount: a
     })]
   })

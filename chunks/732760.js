@@ -8,23 +8,23 @@ s.r(t), s.d(t, {
   }
 });
 var i = s("981631"),
-  a = s("490897"),
-  n = s("689938");
+  n = s("490897"),
+  a = s("689938");
 let l = e => [{
-    label: n.default.Messages.NOTIFICATION_SETTINGS_PRESETS_ALL_MESSAGES,
+    label: a.default.Messages.NOTIFICATION_SETTINGS_PRESETS_ALL_MESSAGES,
     value: i.UserNotificationSettings.ALL_MESSAGES
   }, {
-    label: n.default.Messages.NOTIFICATION_SETTINGS_PRESETS_MENTION_ONLY,
+    label: a.default.Messages.NOTIFICATION_SETTINGS_PRESETS_MENTION_ONLY,
     value: i.UserNotificationSettings.ONLY_MENTIONS
   }, {
-    label: n.default.Messages.NOTIFICATION_SETTINGS_PRESETS_NONE,
+    label: a.default.Messages.NOTIFICATION_SETTINGS_PRESETS_NONE,
     value: i.UserNotificationSettings.NO_MESSAGES
   }],
   r = e => [{
-    label: n.default.Messages.NOTIFICATION_SETTINGS_PRESETS_ALL_MESSAGES,
-    value: a.UnreadSetting.ALL_MESSAGES
+    label: a.default.Messages.NOTIFICATION_SETTINGS_PRESETS_ALL_MESSAGES,
+    value: n.UnreadSetting.ALL_MESSAGES
   }, {
-    value: a.UnreadSetting.ONLY_MENTIONS,
-    label: n.default.Messages.NOTIFICATION_SETTINGS_PRESETS_MENTION_ONLY,
+    value: n.UnreadSetting.ONLY_MENTIONS,
+    label: a.default.Messages.NOTIFICATION_SETTINGS_PRESETS_MENTION_ONLY,
     disabled: (null == e ? void 0 : e.notificationSetting) === i.UserNotificationSettings.ALL_MESSAGES
   }]

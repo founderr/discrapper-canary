@@ -16,8 +16,8 @@ var l = n("735250"),
   f = n("26290"),
   h = n("434479"),
   p = n("981631"),
-  C = n("176505"),
-  m = n("689938");
+  m = n("176505"),
+  C = n("689938");
 
 function g(e) {
   let {
@@ -36,10 +36,10 @@ function g(e) {
       width: 24,
       height: 24
     }),
-    text: m.default.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATIONS,
+    text: C.default.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATIONS,
     selected: n,
     onClick: () => {
-      (0, d.transitionTo)(p.Routes.CHANNEL(t.id, C.StaticChannelRoute.MEMBER_APPLICATIONS))
+      (0, d.transitionTo)(p.Routes.CHANNEL(t.id, m.StaticChannelRoute.MEMBER_APPLICATIONS))
     },
     badge: E > 0 ? (0, l.jsx)(f.NumberBadge, {
       count: E

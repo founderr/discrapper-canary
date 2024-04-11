@@ -19,26 +19,26 @@ var l = n("735250"),
   f = n("607070"),
   h = n("100527"),
   p = n("367907"),
-  C = n("906732"),
-  m = n("434404"),
+  m = n("906732"),
+  C = n("434404"),
   g = n("496675"),
   E = n("259580"),
   S = n("267642"),
-  _ = n("624138"),
-  I = n("667815"),
+  I = n("624138"),
+  _ = n("667815"),
   N = n("531572"),
   T = n("26323"),
   A = n("30513"),
   L = n("981631"),
   v = n("689938"),
   x = n("365939");
-let R = (0, _.cssValueToNumber)(u.default.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
+let R = (0, I.cssValueToNumber)(u.default.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
   y = e => {
     let {
       guild: t,
       onSelect: n
     } = e, [s, i] = a.useState(t.premiumProgressBarEnabled), [r, u] = a.useState(!1), f = (0, o.useStateFromStores)([g.default], () => g.default.can(L.Permissions.MANAGE_GUILD, t)), h = async () => {
-      f && (u(!0), await m.default.saveGuild(t.id, {
+      f && (u(!0), await C.default.saveGuild(t.id, {
         premiumProgressBarEnabled: !s
       }), i(!s), u(!1))
     };
@@ -58,7 +58,7 @@ let R = (0, _.cssValueToNumber)(u.default.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITI
   },
   M = 57,
   O = 57 + R,
-  D = {
+  b = {
     tension: 180,
     friction: 80
   };
@@ -68,37 +68,37 @@ t.default = e => {
     withMargin: n
   } = e, {
     analyticsLocations: s
-  } = (0, C.default)(h.default.GUILD_BOOSTING_SIDEBAR_DISPLAY), {
+  } = (0, m.default)(h.default.GUILD_BOOSTING_SIDEBAR_DISPLAY), {
     premiumSubscriberCount: u,
-    id: m
-  } = t, _ = (0, S.getGuildTierFromAppliedBoostCount)(u, m), R = (0, S.getNextTier)(_, t.id), M = null == R, O = null != R ? R : _, b = (0, o.useStateFromStores)([N.default], () => {
+    id: C
+  } = t, I = (0, S.getGuildTierFromAppliedBoostCount)(u, C), R = (0, S.getNextTier)(I, t.id), M = null == R, O = null != R ? R : I, D = (0, o.useStateFromStores)([N.default], () => {
     var e;
-    return null !== (e = N.default.getCountForGuild(m)) && void 0 !== e ? e : 0
+    return null !== (e = N.default.getCountForGuild(C)) && void 0 !== e ? e : 0
   }), j = (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion), G = (0, o.useStateFromStores)([g.default], () => g.default.can(L.Permissions.MANAGE_GUILD, t));
   a.useEffect(() => {
-    b !== u && (0, I.updateGuildPremiumSubscriptionCount)(m, u)
-  }, [m, b, u]);
-  let U = "".concat(Math.min(100, u / (0, S.getAppliedGuildBoostsRequired)(t.id)[O] * 100), "%"),
+    D !== u && (0, _.updateGuildPremiumSubscriptionCount)(C, u)
+  }, [C, D, u]);
+  let P = "".concat(Math.min(100, u / (0, S.getAppliedGuildBoostsRequired)(t.id)[O] * 100), "%"),
     {
-      current: P
-    } = a.useRef(U),
+      current: U
+    } = a.useRef(P),
     w = {
       from: {
-        width: b === u ? P : "0%"
+        width: D === u ? U : "0%"
       },
       to: {
-        width: U
+        width: P
       },
-      config: D,
+      config: b,
       immediate: j
     },
-    [F, B] = (0, r.useSpring)(() => w),
+    [B, F] = (0, r.useSpring)(() => w),
     V = () => {
       (0, p.trackWithMetadata)(L.AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, {
         location: {
           section: L.AnalyticsSections.PREMIUM_GUILD_PROGRESS_BAR
         },
-        guild_id: m,
+        guild_id: C,
         location_stack: s
       }), (0, T.default)({
         analyticsLocations: s,
@@ -134,7 +134,7 @@ t.default = e => {
       onClick: V,
       onMouseEnter: () => {
         var t;
-        null === (t = e.onMouseEnter) || void 0 === t || t.call(e), B(w)
+        null === (t = e.onMouseEnter) || void 0 === t || t.call(e), F(w)
       },
       className: i()(x.container, {
         [x.containerWithMargin]: n
@@ -174,7 +174,7 @@ t.default = e => {
         }),
         children: [(0, l.jsx)(r.animated.div, {
           className: x.progressBar,
-          style: F
+          style: B
         }), M ? (0, l.jsx)("span", {
           "aria-label": v.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_TADA_ICON_ALT_TEXT,
           role: "img",

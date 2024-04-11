@@ -1,28 +1,28 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return x
+    return T
   }
 });
 var i = s("735250");
 s("470079");
-var a = s("392711"),
-  n = s.n(a),
+var n = s("392711"),
+  a = s.n(n),
   l = s("442837"),
   r = s("481060"),
-  d = s("740504"),
-  o = s("933557"),
+  o = s("740504"),
+  d = s("933557"),
   u = s("471445"),
   c = s("131704"),
   h = s("592125"),
   S = s("324067"),
   N = s("699516"),
-  g = s("594174"),
-  f = s("353872"),
+  f = s("594174"),
+  g = s("353872"),
   m = s("981631"),
   E = s("689938"),
   _ = s("19560");
-let T = e => {
+let x = e => {
   let {
     channel: {
       type: t
@@ -31,33 +31,33 @@ let T = e => {
   return (0, c.isGuildSelectableChannelType)(t) || t === m.ChannelTypes.GUILD_CATEGORY
 };
 
-function x(e) {
+function T(e) {
   var t;
   let {
     guildId: s,
-    onSelected: a
+    onSelected: n
   } = e;
   let {
     channels: c,
-    categories: x
+    categories: T
   } = (t = s, (0, l.useStateFromStoresObject)([S.default], () => {
     let e = S.default.getCategories(t);
     return {
-      channels: (0, d.default)(e._categories, e, T),
+      channels: (0, o.default)(e._categories, e, x),
       categories: e
     }
-  })), I = n()(c).filter(e => {
+  })), p = a()(c).filter(e => {
     let {
       channel: t
     } = e;
-    return t.type !== m.ChannelTypes.GUILD_CATEGORY || null != x[t.id] && x[t.id].length > 0
+    return t.type !== m.ChannelTypes.GUILD_CATEGORY || null != T[t.id] && T[t.id].length > 0
   }).map(e => {
     let {
       channel: t
     } = e;
     return {
       value: t.id,
-      label: (0, o.computeChannelName)(t, g.default, N.default)
+      label: (0, d.computeChannelName)(t, f.default, N.default)
     }
   }).value();
   return (0, i.jsxs)(r.FormItem, {
@@ -68,17 +68,17 @@ function x(e) {
       className: _.input,
       children: (0, i.jsx)(r.SearchableSelect, {
         value: m.EMPTY_STRING_SNOWFLAKE_ID,
-        onChange: a,
-        options: I,
+        onChange: n,
+        options: p,
         renderOptionLabel: e => {
           let t = h.default.getChannel(e.value);
           if (null == t) return e.label;
           let s = h.default.getChannel(t.parent_id),
-            a = null != s ? s.name : null;
-          return (0, i.jsx)(f.default, {
+            n = null != s ? s.name : null;
+          return (0, i.jsx)(g.default, {
             icon: (0, u.getChannelIconComponent)(t),
             title: e.label,
-            subtitle: a
+            subtitle: n
           })
         },
         placeholder: E.default.Messages.SELECT_CHANNEL_OR_CATEGORY

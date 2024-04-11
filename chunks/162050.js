@@ -17,8 +17,8 @@ var a = n("442837"),
   f = n("153124"),
   h = n("436088"),
   p = n("51144"),
-  C = n("603592"),
-  m = n("674552"),
+  m = n("603592"),
+  C = n("674552"),
   g = n("689938");
 
 function E() {
@@ -26,8 +26,8 @@ function E() {
   let t = (0, f.useUID)(),
     [n, E] = (0, a.useStateFromStoresArray)([d.default, o.default], () => [o.default.getChannel(d.default.getVoiceChannelId()), d.default.getCurrentlySelectedChannelId(null)]),
     S = (0, a.useStateFromStores)([u.default], () => null != n ? u.default.getMentionCount(n.id) : 0),
-    _ = (0, a.useStateFromStores)([c.default], () => c.default.getUser(null == n ? void 0 : n.ownerId)),
-    I = null !== (e = p.default.getGlobalName(_)) && void 0 !== e ? e : p.default.getUserTag(_),
+    I = (0, a.useStateFromStores)([c.default], () => c.default.getUser(null == n ? void 0 : n.ownerId)),
+    _ = null !== (e = p.default.getGlobalName(I)) && void 0 !== e ? e : p.default.getUserTag(I),
     {
       canViewBroadcasts: N
     } = r.default.useExperiment({
@@ -37,21 +37,21 @@ function E() {
     }),
     T = null == n ? void 0 : n.isBroadcastChannel(),
     A = T && E === (null == n ? void 0 : n.id);
-  return T && N ? (0, l.jsx)(C.default, {
+  return T && N ? (0, l.jsx)(m.default, {
     id: t,
     onClick: () => {
       T && null != n && i.default.selectPrivateChannel(n.id)
     },
     icon: h.default,
-    tooltip: null != I ? g.default.Messages.BROADCASTING_CHANNEL_NAME.format({
-      name: I
+    tooltip: null != _ ? g.default.Messages.BROADCASTING_CHANNEL_NAME.format({
+      name: _
     }) : void 0,
     selected: A,
     upperBadge: (0, l.jsx)(s.Avatar, {
       size: s.AvatarSizes.SIZE_16,
-      src: null == _ ? void 0 : _.getAvatarURL(null, 16),
-      "aria-label": I
+      src: null == I ? void 0 : I.getAvatarURL(null, 16),
+      "aria-label": _
     }),
-    lowerBadge: S > 0 ? (0, m.renderMentionBadge)(S) : null
+    lowerBadge: S > 0 ? (0, C.renderMentionBadge)(S) : null
   }) : null
 }

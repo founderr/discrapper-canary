@@ -17,7 +17,7 @@ function p(e) {
   return null != t && null != t.getGuildId() && !(t.isThread() ? o.default.isMuted(t.id) : c.default.isChannelMuted(t.getGuildId(), t.id)) && (0, r.getHasImportantUnread)(t)
 }
 
-function C(e) {
+function m(e) {
   let t = u.default.getChannel(e);
   if (null == t) return !1;
   let n = t.getGuildId();
@@ -39,7 +39,7 @@ t.default = a.forwardRef(function(e, t) {
     ref: t,
     ...o,
     isUnread: p,
-    isMentioned: C,
+    isMentioned: m,
     items: u,
     animate: d
   })

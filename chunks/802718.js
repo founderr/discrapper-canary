@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useSignUpButton: function() {
-    return I
+    return _
   }
 });
 var l = n("735250"),
@@ -16,16 +16,16 @@ var l = n("735250"),
   f = n("682662"),
   h = n("662146"),
   p = n("26290"),
-  C = n("15434"),
-  m = n("678513"),
+  m = n("15434"),
+  C = n("678513"),
   g = n("981631"),
   E = n("689938"),
   S = n("478011");
 
-function _(e) {
+function I(e) {
   let {
     target: t
-  } = e, o = (0, s.useTreeItem)("fakedoor"), m = a.useCallback(() => {
+  } = e, o = (0, s.useTreeItem)("fakedoor"), C = a.useCallback(() => {
     (0, r.openModalLazy)(async () => {
       let {
         default: e
@@ -35,7 +35,7 @@ function _(e) {
         target: t
       })
     })
-  }, [t]), _ = a.useCallback(e => {
+  }, [t]), I = a.useCallback(e => {
     (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -45,12 +45,12 @@ function _(e) {
         signupTarget: t
       })
     })
-  }, [t]), I = "url(".concat(t.backgroundAssetUrl, ") black top / cover no-repeat"), N = (0, l.jsxs)("div", {
+  }, [t]), _ = "url(".concat(t.backgroundAssetUrl, ") black top / cover no-repeat"), N = (0, l.jsxs)("div", {
     className: S.tooltipContainer,
     children: [(0, l.jsx)("div", {
       className: S.tooltipBackground,
       style: {
-        background: I
+        background: _
       }
     }), (0, l.jsx)(r.Heading, {
       variant: "heading-sm/medium",
@@ -74,10 +74,10 @@ function _(e) {
               count: 1,
               color: c.default.BG_BRAND
             }),
-            children: (0, l.jsx)(C.default, {
+            children: (0, l.jsx)(m.default, {
               ...o,
-              onClick: m,
-              onContextMenu: _,
+              onClick: C,
+              onContextMenu: I,
               children: (0, l.jsx)(i.BellIcon, {
                 color: c.default.TEXT_NORMAL
               })
@@ -87,7 +87,7 @@ function _(e) {
       })
     }), (0, l.jsx)("div", {
       style: {
-        background: I,
+        background: _,
         width: 0,
         height: 0
       }
@@ -95,9 +95,9 @@ function _(e) {
   })
 }
 
-function I() {
-  let e = (0, o.useStateFromStores)([m.default], () => m.default.getActiveUserSignUp());
-  return null == e ? null : (0, l.jsx)(_, {
+function _() {
+  let e = (0, o.useStateFromStores)([C.default], () => C.default.getActiveUserSignUp());
+  return null == e ? null : (0, l.jsx)(I, {
     target: e
   })
 }

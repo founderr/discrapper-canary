@@ -13,18 +13,18 @@ var a = n("803997"),
   f = n("131704"),
   h = n("314897"),
   p = n("594174"),
-  C = n("409216"),
-  m = n("768581"),
+  m = n("409216"),
+  C = n("768581"),
   g = n("51144"),
   E = n("754231"),
   S = n("299505");
 
-function _(e) {
+function I(e) {
   let {
     guildId: t,
     member: n,
     className: a
-  } = e, i = null != n.member ? (0, m.getGuildMemberAvatarURL)(n.member) : null;
+  } = e, i = null != n.member ? (0, C.getGuildMemberAvatarURL)(n.member) : null;
   return (0, l.jsx)(r.Tooltip, {
     text: n.nick,
     position: "bottom",
@@ -41,17 +41,17 @@ function _(e) {
   })
 }
 
-function I(e) {
+function _(e) {
   let {
     members: t,
     guildId: n
   } = e;
-  return (0, l.jsx)(C.default, {
+  return (0, l.jsx)(m.default, {
     className: S.partyMembers,
     guildId: n,
     users: t,
     max: 6,
-    renderUser: (e, t, a) => (0, l.jsx)(_, {
+    renderUser: (e, t, a) => (0, l.jsx)(I, {
       guildId: n,
       member: e,
       className: t
@@ -69,21 +69,21 @@ t.default = e => {
     members: a,
     embeddedApp: s,
     onAction: r
-  } = e, C = null != s, m = C ? Array.from(s.embeddedActivity.userIds) : [], g = (0, i.useStateFromStores)([p.default, h.default], () => {
+  } = e, m = null != s, C = m ? Array.from(s.embeddedActivity.userIds) : [], g = (0, i.useStateFromStores)([p.default, h.default], () => {
     if (null != a) {
       var e, t, l, s;
-      return a.length <= 0 ? null : C ? null !== (t = null === (e = a.find(e => e.voiceState.sessionId === (null == n ? void 0 : n.session_id))) || void 0 === e ? void 0 : e.user) && void 0 !== t ? t : p.default.getUser(m[0]) : null !== (s = null === (l = a.find(e => e.user.id !== h.default.getId())) || void 0 === l ? void 0 : l.user) && void 0 !== s ? s : a[0].user
+      return a.length <= 0 ? null : m ? null !== (t = null === (e = a.find(e => e.voiceState.sessionId === (null == n ? void 0 : n.session_id))) || void 0 === e ? void 0 : e.user) && void 0 !== t ? t : p.default.getUser(C[0]) : null !== (s = null === (l = a.find(e => e.user.id !== h.default.getId())) || void 0 === l ? void 0 : l.user) && void 0 !== s ? s : a[0].user
     }
-    if (C) return p.default.getUser(m[0])
+    if (m) return p.default.getUser(C[0])
   });
   if (null == g) return null;
-  let _ = C || (0, u.default)(n),
+  let I = m || (0, u.default)(n),
     N = (0, f.isVoiceChannel)(t.type);
   return (0, l.jsxs)("div", {
     className: S.activity,
     children: [(0, l.jsx)("div", {
       className: S.channelActivityContainer,
-      children: _ ? (0, l.jsx)(E.default, {
+      children: I ? (0, l.jsx)(E.default, {
         activity: n,
         embeddedApp: s,
         user: g,
@@ -98,11 +98,11 @@ t.default = e => {
         user: g,
         guildId: t.getGuildId(),
         channelId: t.id,
-        renderHeaderAccessory: null != a ? () => (0, l.jsx)(I, {
+        renderHeaderAccessory: null != a ? () => (0, l.jsx)(_, {
           guildId: t.guild_id,
           members: a
         }) : void 0,
-        isEmbedded: C
+        isEmbedded: m
       })
     }), (0, l.jsx)("div", {
       className: S.activityActionsContainer,
@@ -114,7 +114,7 @@ t.default = e => {
         channelId: t.id,
         color: S.button,
         onAction: r,
-        isEmbedded: C
+        isEmbedded: m
       })
     })]
   })

@@ -22,13 +22,13 @@ function f(e) {
       guildId: t
     } = e;
     return t
-  }), C = (0, d.default)(t);
+  }), m = (0, d.default)(t);
   return null == f ? null : (0, l.jsx)(c.default, {
     guildNode: n,
     guild: f,
     animatable: h,
     selected: p,
     draggable: !1,
-    mediaState: C
+    mediaState: m
   })
 }

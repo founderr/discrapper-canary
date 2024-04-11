@@ -1,39 +1,39 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return u
+    return C
   }
 });
-var s = n("735250");
-n("470079");
-var r = n("803997"),
-  i = n.n(r),
-  l = n("481060"),
-  a = n("559629"),
-  o = n("833141");
+var n = s("735250");
+s("470079");
+var r = s("803997"),
+  i = s.n(r),
+  l = s("481060"),
+  a = s("559629"),
+  o = s("833141");
 
-function u(e) {
+function C(e) {
   let {
     className: t,
-    copy: n,
+    copy: s,
     bannerImage: r,
-    textColor: u = "always-white"
+    textColor: C = "always-white"
   } = e;
-  return (0, s.jsxs)("div", {
+  return (0, n.jsxs)("div", {
     className: i()(o.bannerContainer, t),
-    children: [null == r ? null : (0, s.jsx)("img", {
+    children: [null == r ? null : (0, n.jsx)("img", {
       alt: "",
       className: o.banner,
       src: r
-    }), (0, s.jsxs)("div", {
+    }), (0, n.jsxs)("div", {
       className: o.textContainer,
-      children: [(0, s.jsx)(a.default, {
+      children: [(0, n.jsx)(a.default, {
         className: o.giftIcon
-      }), (0, s.jsx)(l.Heading, {
+      }), (0, n.jsx)(l.Heading, {
         className: o.textHeader,
-        color: u,
+        color: C,
         variant: "eyebrow",
-        children: n
+        children: s
       })]
     })]
   })

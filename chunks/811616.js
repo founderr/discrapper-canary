@@ -36,19 +36,19 @@ function h(e) {
     shouldShowUpdatedPaymentModal: v,
     isEligibleForDiscount: A,
     discountAmountOff: C
-  } = e, g = (0, u.useStateFromStores)([m.default], () => m.default.locale), y = (0, u.useStateFromStores)([f.default], () => f.default.get(s)), {
-    isGift: M,
-    giftRecipient: b
-  } = (0, d.useGiftContext)(), R = M && (0, p.shouldShowCustomGiftExperience)(b);
-  r()(null != y, "Missing subscriptionPlan");
+  } = e, g = (0, u.useStateFromStores)([m.default], () => m.default.locale), M = (0, u.useStateFromStores)([f.default], () => f.default.get(s)), {
+    isGift: y,
+    giftRecipient: R
+  } = (0, d.useGiftContext)(), b = y && (0, p.shouldShowCustomGiftExperience)(R);
+  r()(null != M, "Missing subscriptionPlan");
   let O = null != n && n.planId === s,
     L = O || s === P.SubscriptionPlans.PREMIUM_MONTH_TIER_2 && null != n && [P.SubscriptionPlans.PREMIUM_YEAR_TIER_0, P.SubscriptionPlans.PREMIUM_YEAR_TIER_1].includes(n.planId),
     j = P.DISCOUNTS[s],
-    G = (0, S.getPrice)(s, !1, M, x),
+    G = (0, S.getPrice)(s, !1, y, x),
     D = (0, S.isPrepaidPaymentSource)(x.paymentSourceId),
-    U = null != j && !v,
-    F = (0, E.usePremiumDiscountOffer)(),
-    w = y.interval === P.SubscriptionIntervalTypes.YEAR ? T.default.Messages.BILLING_TRIAL_YEARLY_PRICE_AFTER_TRIAL : T.default.Messages.BILLING_TRIAL_MONTHLY_PRICE_AFTER_TRIAL,
+    F = null != j && !v,
+    U = (0, E.usePremiumDiscountOffer)(),
+    w = M.interval === P.SubscriptionIntervalTypes.YEAR ? T.default.Messages.BILLING_TRIAL_YEARLY_PRICE_AFTER_TRIAL : T.default.Messages.BILLING_TRIAL_MONTHLY_PRICE_AFTER_TRIAL,
     B = () => null != j && (0, i.jsx)(c.Text, {
       tag: "span",
       variant: "eyebrow",
@@ -58,12 +58,12 @@ function h(e) {
         discount: (0, _.formatPercent)(g, j / 100)
       })
     }),
-    k = () => y.interval === P.SubscriptionIntervalTypes.YEAR && null != n || U && !O ? y.interval === P.SubscriptionIntervalTypes.YEAR && null != n ? (0, i.jsxs)("span", {
+    k = () => M.interval === P.SubscriptionIntervalTypes.YEAR && null != n || F && !O ? M.interval === P.SubscriptionIntervalTypes.YEAR && null != n ? (0, i.jsxs)("span", {
       className: N.planOptionMonthsFree,
       children: ["(", T.default.Messages.BILLING_SWITCH_PLAN_YEARLY_FREE_MONTHS, ")"]
-    }) : U && !O ? B() : void 0 : null;
+    }) : F && !O ? B() : void 0 : null;
   return (0, i.jsxs)(c.Clickable, {
-    role: R ? "menuitem" : "radio",
+    role: b ? "menuitem" : "radio",
     "aria-checked": h,
     tabIndex: h ? 0 : -1,
     focusProps: {
@@ -76,8 +76,8 @@ function h(e) {
     },
     onClick: L ? void 0 : () => l(s),
     className: a()(N.planOptionClickableContainer, {
-      [N.selectedPlan]: R && h,
-      [N.selectionBox]: R
+      [N.selectedPlan]: b && h,
+      [N.selectionBox]: b
     }),
     children: [(0, i.jsxs)("div", {
       className: a()(N.planOption, {
@@ -85,7 +85,7 @@ function h(e) {
       }),
       children: [(0, i.jsxs)("div", {
         className: N.planOptionClickable,
-        children: [!R && (0, i.jsx)(c.Checkbox, {
+        children: [!b && (0, i.jsx)(c.Checkbox, {
           readOnly: !0,
           displayOnly: !0,
           value: h,
@@ -96,11 +96,11 @@ function h(e) {
         }), (0, i.jsxs)("div", {
           children: [(0, i.jsxs)("div", {
             className: a()(N.planOptionInterval, {
-              [N.optionSelected]: h || R,
-              [N.updatedOptionSelected]: v && (h || R)
+              [N.optionSelected]: h || b,
+              [N.updatedOptionSelected]: v && (h || b)
             }),
-            children: [(0, S.getIntervalString)(y.interval, M, D, y.intervalCount, R, (0, S.getPremiumType)(y.id)), R && k()]
-          }), R && (0, i.jsx)("div", {
+            children: [(0, S.getIntervalString)(M.interval, y, D, M.intervalCount, b, (0, S.getPremiumType)(M.id)), b && k()]
+          }), b && (0, i.jsx)("div", {
             className: N.planOneTimeCost,
             children: T.default.Messages.ONE_TIME_CHARGE.format({
               currencyAmount: (0, I.formatPrice)(G.amount, G.currency)
@@ -109,14 +109,14 @@ function h(e) {
         }), O && (0, i.jsxs)("span", {
           className: N.planOptionCurrentPlan,
           children: ["(", T.default.Messages.BILLING_SWITCH_PLAN_CURRENT_PLAN, ")"]
-        }), !R && k()]
+        }), !b && k()]
       }), v ? (0, i.jsx)("div", {
         className: a()({
           [N.optionPriceSelected]: h
         }),
         children: T.default.Messages.BILLING_TRIAL_PRICE_NOW.format({
           price: (() => {
-            if (A && null != C) return y.interval === P.SubscriptionIntervalTypes.MONTH ? (0, I.formatPrice)(G.amount - C, G.currency) : (0, I.formatPrice)(G.amount, G.currency);
+            if (A && null != C) return M.interval === P.SubscriptionIntervalTypes.MONTH ? (0, I.formatPrice)(G.amount - C, G.currency) : (0, I.formatPrice)(G.amount, G.currency);
             return (0, I.formatPrice)(0, G.currency, {
               maximumFractionDigits: 0
             })
@@ -124,7 +124,7 @@ function h(e) {
         })
       }) : (0, i.jsx)("div", {
         className: a()({
-          [N.optionSelected]: h || R
+          [N.optionSelected]: h || b
         }),
         children: (0, I.formatPrice)(G.amount, G.currency)
       })]
@@ -136,8 +136,8 @@ function h(e) {
         className: a()(N.planOptionSubtext, {
           [N.discountPlanOptionSubtext]: A
         }),
-        children: A && null != C ? y.interval === P.SubscriptionIntervalTypes.MONTH ? T.default.Messages.BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC.format({
-          numMonths: null !== (t = null == F ? void 0 : F.discount.user_usage_limit) && void 0 !== t ? t : P.DISCOUNT_DURATION_FALLBACK,
+        children: A && null != C ? M.interval === P.SubscriptionIntervalTypes.MONTH ? T.default.Messages.BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC.format({
+          numMonths: null !== (t = null == U ? void 0 : U.discount.user_usage_limit) && void 0 !== t ? t : P.DISCOUNT_DURATION_FALLBACK,
           discountedPrice: (0, I.formatPrice)(G.amount - C, G.currency),
           regularPrice: (0, I.formatPrice)(G.amount, G.currency)
         }) : T.default.Messages.BILLING_YEARLY_PLAN_SAVINGS.format({

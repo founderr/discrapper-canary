@@ -41,8 +41,8 @@ var k = r("392750"),
   I = r("596768"),
   D = r("621060"),
   B = r("689938"),
-  H = r("284439"),
-  F = r("779869");
+  F = r("284439"),
+  H = r("779869");
 
 function G(e) {
   let {
@@ -58,7 +58,7 @@ function G(e) {
   });
   return (0, a.jsx)("div", {
     onMouseDown: i,
-    className: H.resizeHandle
+    className: F.resizeHandle
   })
 }
 
@@ -161,7 +161,7 @@ function U() {
     }
   }), (0, a.jsxs)(N.DevToolsLayerProvider, {
     children: [(0, a.jsxs)(f.default, {
-      className: F.headerBar,
+      className: H.headerBar,
       toolbar: (0, a.jsx)(f.default.Icon, {
         icon: m.default,
         tooltip: B.default.Messages.CLOSE,
@@ -174,7 +174,7 @@ function U() {
         children: "DevTools"
       })]
     }), (0, a.jsx)(r, {}), i(), (0, a.jsx)(N.DevToolsLayerContainer, {
-      className: H.layerContainer
+      className: F.layerContainer
     })]
   })
 }
@@ -190,7 +190,7 @@ function z() {
     null === r && null !== t && i(t)
   }, [t, r]), null === r) ? null : (0, a.jsxs)("div", {
     ref: e,
-    className: l()(H.container),
+    className: l()(F.container),
     style: {
       minWidth: y.DEVTOOLS_SIDEBAR_MIN_WIDTH,
       width: r
@@ -200,7 +200,7 @@ function z() {
       onResize: i,
       onResizeEnd: o
     }), (0, a.jsx)("div", {
-      className: H.sidebarContent,
+      className: F.sidebarContent,
       children: (0, a.jsx)(U, {})
     })]
   })
@@ -209,17 +209,17 @@ function z() {
 function Y() {
   let e = (0, s.useStateFromStores)([y.default], () => y.default.displayTools);
   return e ? (0, a.jsx)("div", {
-    className: l()(H.container, H.mobileContainerExpanded),
+    className: l()(F.container, F.mobileContainerExpanded),
     children: (0, a.jsx)("div", {
-      className: H.sidebarContent,
+      className: F.sidebarContent,
       children: (0, a.jsx)(U, {})
     })
   }) : (0, a.jsx)("div", {
-    className: H.container,
+    className: F.container,
     children: (0, a.jsx)(c.Clickable, {
       onClick: b.toggleDisplayDevTools,
       children: (0, a.jsxs)(f.default, {
-        className: l()(F.headerBar, H.mobileHeaderCollapsed),
+        className: l()(H.headerBar, F.mobileHeaderCollapsed),
         toolbar: (0, a.jsx)(p.default, {
           direction: p.default.Directions.UP
         }),

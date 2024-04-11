@@ -16,32 +16,32 @@ let h = a.forwardRef(function(e, t) {
     onClick: s,
     onContextMenu: h,
     icon: p,
-    selected: C,
-    tooltip: m,
+    selected: m,
+    tooltip: C,
     upperBadge: g,
     lowerBadge: E,
     lowerBadgeWidth: S,
-    showPill: _ = !0,
-    className: I,
+    showPill: I = !0,
+    className: _,
     "aria-label": N,
     children: T,
     onMouseEnter: A,
     onMouseLeave: L,
     onMouseDown: v
-  } = e, x = (0, r.useTreeItem)(n), [R, y] = a.useState(!1), M = "string" == typeof m && null == N ? m : N;
+  } = e, x = (0, r.useTreeItem)(n), [R, y] = a.useState(!1), M = "string" == typeof C && null == N ? C : N;
   return (0, l.jsxs)(d.ListItem, {
-    children: [_ ? (0, l.jsx)("div", {
+    children: [I ? (0, l.jsx)("div", {
       className: f.pill,
       children: (0, l.jsx)(u.default, {
         hovered: R,
-        selected: C
+        selected: m
       })
     }) : null, (0, l.jsx)(c.default, {
-      text: m,
-      selected: C,
+      text: C,
+      selected: m,
       children: (0, l.jsx)(o.BlobMask, {
         className: f.__invalid_circleButtonMask,
-        selected: C || R,
+        selected: m || R,
         upperBadge: g,
         lowerBadge: E,
         lowerBadgeWidth: S,
@@ -54,8 +54,8 @@ let h = a.forwardRef(function(e, t) {
             null == L || L(), y(!1)
           },
           onMouseDown: v,
-          className: i()(f.circleIconButton, I, {
-            [f.selected]: C || R
+          className: i()(f.circleIconButton, _, {
+            [f.selected]: m || R
           }),
           onClick: s,
           "aria-label": M,

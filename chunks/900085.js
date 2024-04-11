@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return Y
+    return K
   }
 }), n("411104"), n("47120");
 var l, a = n("735250"),
@@ -15,13 +15,13 @@ var l, a = n("735250"),
   f = n("134616"),
   h = n("714338"),
   p = n("212819"),
-  C = n("14429"),
-  m = n("592125"),
+  m = n("14429"),
+  C = n("592125"),
   g = n("888369"),
   E = n("430824"),
   S = n("306680"),
-  _ = n("944486"),
-  I = n("938475"),
+  I = n("944486"),
+  _ = n("938475"),
   N = n("387204"),
   T = n("107828"),
   A = n("153124"),
@@ -32,9 +32,9 @@ var l, a = n("735250"),
   y = n("670512"),
   M = n("981631"),
   O = n("689938"),
-  D = n("13199");
+  b = n("13199");
 
-function b(e, t, n) {
+function D(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -46,53 +46,53 @@ let j = {
     bottom: 10
   },
   G = () => (0, a.jsxs)("div", {
-    className: D.emptyState,
+    className: b.emptyState,
     children: [(0, a.jsx)("div", {
-      className: D.emptyStateNote,
+      className: b.emptyStateNote,
       children: O.default.Messages.QUICKSWITCHER_EMPTY_TEXT
     }), (0, a.jsx)("div", {
-      className: D.emptyStateCTA,
+      className: b.emptyStateCTA,
       children: (0, a.jsx)(d.Anchor, {
         href: v.default.getArticleURL(M.HelpdeskArticles.QUICK_SWITCHER_TUTORIAL),
         children: O.default.Messages.QUICKSWITCHER_EMPTY_CTA
       })
     })]
   });
-class U extends(l = s.Component) {
+class P extends(l = s.Component) {
   render() {
     let e = E.default.getGuild(this.props.channel.guild_id);
     return (0, a.jsx)(T.Channel, {
       ...this.props,
       children: (0, a.jsx)("div", {
-        className: D.miscContainer,
+        className: b.miscContainer,
         children: null != e ? e.name : null
       })
     })
   }
 }
-b(U, "defaultProps", {
+D(P, "defaultProps", {
   unread: !1
 });
-let P = u.default.connectStores([S.default, m.default], e => {
+let U = u.default.connectStores([S.default, C.default], e => {
     let {
       channel: t
     } = e;
     return {
       unread: S.default.hasUnread(t.id),
       mentions: S.default.getMentionCount(t.id),
-      category: m.default.getChannel(t.parent_id)
+      category: C.default.getChannel(t.parent_id)
     }
-  })(U),
-  w = u.default.connectStores([I.default], e => {
+  })(P),
+  w = u.default.connectStores([_.default], e => {
     let {
       channel: t
     } = e;
     if (null == t.guild_id) throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
     return {
-      voiceStates: I.default.getVoiceStates(t.guild_id)[t.id]
+      voiceStates: _.default.getVoiceStates(t.guild_id)[t.id]
     }
-  })(U),
-  F = u.default.connectStores([g.default], e => {
+  })(P),
+  B = u.default.connectStores([g.default], e => {
     let {
       guild: t
     } = e;
@@ -100,7 +100,7 @@ let P = u.default.connectStores([S.default, m.default], e => {
       unread: g.default.hasUnread(t.id)
     }
   })(T.Guild),
-  B = u.default.connectStores([S.default], e => {
+  F = u.default.connectStores([S.default], e => {
     let {
       channel: t
     } = e;
@@ -108,10 +108,10 @@ let P = u.default.connectStores([S.default, m.default], e => {
       mentions: S.default.getMentionCount(t.id)
     }
   })(T.GroupDM),
-  V = u.default.connectStores([m.default, S.default], e => {
+  V = u.default.connectStores([C.default, S.default], e => {
     let {
       user: t
-    } = e, n = m.default.getDMFromUserId(t.id);
+    } = e, n = C.default.getDMFromUserId(t.id);
     return {
       mentions: null != n ? S.default.getMentionCount(n) : 0
     }
@@ -122,7 +122,7 @@ function H(e, t, n) {
     text: n,
     children: e => (0, a.jsx)("span", {
       ...e,
-      className: D.autocompleteQuerySymbol,
+      className: b.autocompleteQuerySymbol,
       children: t
     })
   }, e)
@@ -168,7 +168,7 @@ class k extends s.PureComponent {
     } = this.state, l = t.length > 0 && "" !== n;
     return (0, a.jsx)(d.FocusRing, {
       children: (0, a.jsx)("input", {
-        className: D.input,
+        className: b.input,
         "aria-label": O.default.Messages.QUICK_SWITCHER,
         ref: this.inputRef,
         type: "text",
@@ -204,7 +204,7 @@ class k extends s.PureComponent {
       rowHeight: 34,
       paddingBottom: j.bottom,
       sections: [t.length],
-      className: D.scroller,
+      className: b.scroller,
       renderRow: this.renderRow,
       renderSection: this.renderSection
     })
@@ -219,8 +219,8 @@ class k extends s.PureComponent {
   }
   renderProtip() {
     return (0, a.jsx)(N.default, {
-      className: r()(D.protip, {
-        [D.hasContent]: this.state.query.length > 0
+      className: r()(b.protip, {
+        [b.hasContent]: this.state.query.length > 0
       }),
       type: N.default.Types.INLINE,
       children: O.default.Messages.QUICKSWITCHER_PROTIP.format({
@@ -248,43 +248,43 @@ class k extends s.PureComponent {
       "aria-label": O.default.Messages.QUICK_SWITCHER,
       size: d.ModalSize.DYNAMIC,
       transitionState: this.props.transitionState,
-      className: r()(D.container, o.isMobile && D.mobileContainer),
+      className: r()(b.container, o.isMobile && b.mobileContainer),
       fullscreenOnMobile: !1,
       children: (0, a.jsxs)("div", {
-        className: r()(D.quickswitcher, o.isMobile && D.mobileQuickswitcher),
+        className: r()(b.quickswitcher, o.isMobile && b.mobileQuickswitcher),
         onMouseMove: this.handleMouseMove,
         children: [this.renderInput(), this.renderResults(), this.renderProtip(), this.renderTutorial()]
       })
     })
   }
   constructor(...e) {
-    super(...e), b(this, "scrollerRef", s.createRef()), b(this, "inputRef", s.createRef()), b(this, "_listId", (0, A.uid)()), b(this, "state", {
+    super(...e), D(this, "scrollerRef", s.createRef()), D(this, "inputRef", s.createRef()), D(this, "_listId", (0, A.uid)()), D(this, "state", {
       query: this.props.query,
       mouseFocusDisabled: !0
-    }), b(this, "handleInputChange", () => {
+    }), D(this, "handleInputChange", () => {
       let {
         current: e
       } = this.inputRef;
       null != e && this.search(e.value)
-    }), b(this, "handleMouseMove", () => {
+    }), D(this, "handleMouseMove", () => {
       let {
         mouseFocusDisabled: e
       } = this.state;
       !1 !== e && this.setState({
         mouseFocusDisabled: !1
       })
-    }), b(this, "focusResult", e => {
+    }), D(this, "focusResult", e => {
       !this.state.mouseFocusDisabled && (0, x.selectResult)(this.props.results.indexOf(e))
-    }), b(this, "selectResult", e => {
+    }), D(this, "selectResult", e => {
       (0, x.switchToResult)(e, this.props.queryMode === p.AutocompleterResultTypes.TEXT_CHANNEL)
-    }), b(this, "handleContextMenu", e => {
+    }), D(this, "handleContextMenu", e => {
       let t = this.props.results[this.props.selectedIndex];
       switch (t.type) {
         case p.AutocompleterResultTypes.GUILD:
           return (0, c.openContextMenuLazy)(e, async () => {
             let {
               default: e
-            } = await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("24267"), n.e("33053"), n.e("51238"), n.e("75475"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502"), n.e("55134"), n.e("69760"), n.e("33213"), n.e("19255")]).then(n.bind(n, "545135"));
+            } = await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("24267"), n.e("33053"), n.e("51238"), n.e("75475"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502"), n.e("15023"), n.e("69760"), n.e("33213"), n.e("19255")]).then(n.bind(n, "545135"));
             return n => (0, a.jsx)(e, {
               ...n,
               guild: t.record,
@@ -371,7 +371,7 @@ class k extends s.PureComponent {
             return n => (0, a.jsx)(e, {
               ...n,
               channel: t.record,
-              selected: _.default.getChannelId() === t.record.id,
+              selected: I.default.getChannelId() === t.record.id,
               onSelect: x.hide
             })
           });
@@ -387,7 +387,7 @@ class k extends s.PureComponent {
             })
           })
       }
-    }), b(this, "handleKeyDown", e => {
+    }), D(this, "handleKeyDown", e => {
       let {
         mouseFocusDisabled: t,
         query: n
@@ -433,14 +433,14 @@ class k extends s.PureComponent {
           return
       }
       e.preventDefault(), (0, x.selectResult)(s)
-    }), b(this, "renderRow", e => {
+    }), D(this, "renderRow", e => {
       let {
         row: t
       } = e, n = this.props.results[t], {
         selectedIndex: l
       } = this.props, {
         showScores: s
-      } = C.default.getCurrentConfig({
+      } = m.default.getCurrentConfig({
         location: "62f4be_1"
       }, {
         autoTrackExposure: !1
@@ -451,7 +451,7 @@ class k extends s.PureComponent {
             children: n.record.text
           }, "".concat(n.type, "-").concat(n.record.id));
         case p.AutocompleterResultTypes.TEXT_CHANNEL:
-          return (0, a.jsx)(P, {
+          return (0, a.jsx)(U, {
             id: this.getRowId(t),
             focused: l >= 0 && t === l,
             onClick: () => this.selectResult(n),
@@ -473,7 +473,7 @@ class k extends s.PureComponent {
             score: s ? n.score : void 0
           }, "".concat(n.type, "-").concat(n.record.id));
         case p.AutocompleterResultTypes.GUILD:
-          return (0, a.jsx)(F, {
+          return (0, a.jsx)(B, {
             id: this.getRowId(t),
             focused: l >= 0 && t === l,
             onClick: () => this.selectResult(n),
@@ -496,7 +496,7 @@ class k extends s.PureComponent {
             score: s ? n.score : void 0
           }, "".concat(n.type, "-").concat(n.record.id));
         case p.AutocompleterResultTypes.GROUP_DM:
-          return (0, a.jsx)(B, {
+          return (0, a.jsx)(F, {
             id: this.getRowId(t),
             focused: l >= 0 && t === l,
             onClick: () => this.selectResult(n),
@@ -533,7 +533,7 @@ class k extends s.PureComponent {
   }
 }
 
-function Y(e) {
+function K(e) {
   let t = (0, u.useStateFromStoresObject)([R.default], () => R.default.getProps());
   return (0, a.jsx)(k, {
     ...t,

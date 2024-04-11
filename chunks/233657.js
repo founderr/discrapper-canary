@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return I
   }
 });
 var l = n("735250");
@@ -17,8 +17,8 @@ var a = n("924826"),
   f = n("9156"),
   h = n("305878"),
   p = n("26290"),
-  C = n("434479"),
-  m = n("490897"),
+  m = n("434479"),
+  C = n("490897"),
   g = n("689938"),
   E = n("697908");
 
@@ -33,7 +33,7 @@ function S(e) {
     mentionCount: u,
     guildId: d
   } = e, c = (0, a.useListItem)("upcoming-events-".concat(d));
-  return (0, l.jsx)(C.default, {
+  return (0, l.jsx)(m.default, {
     ...c,
     renderIcon: e => (0, l.jsx)(h.default, {
       className: e
@@ -51,7 +51,7 @@ function S(e) {
   })
 }
 
-function _(e) {
+function I(e) {
   let {
     guild: t,
     selected: a
@@ -59,9 +59,9 @@ function _(e) {
     hasUnread: h,
     mentionCount: p
   } = (0, s.useStateFromStoresObject)([c.default], () => ({
-    hasUnread: c.default.hasUnread(t.id, m.ReadStateTypes.GUILD_EVENT),
-    mentionCount: c.default.getMentionCount(t.id, m.ReadStateTypes.GUILD_EVENT)
-  }), [t.id]), C = (0, s.useStateFromStores)([f.default], () => f.default.isMuteScheduledEventsEnabled(t.id));
+    hasUnread: c.default.hasUnread(t.id, C.ReadStateTypes.GUILD_EVENT),
+    mentionCount: c.default.getMentionCount(t.id, C.ReadStateTypes.GUILD_EVENT)
+  }), [t.id]), m = (0, s.useStateFromStores)([f.default], () => f.default.isMuteScheduledEventsEnabled(t.id));
   async function E() {
     await (0, r.openModalLazy)(async () => {
       let {
@@ -73,13 +73,13 @@ function _(e) {
       })
     }), (0, u.markDismissibleContentAsDismissed)(i.DismissibleContent.GUILD_HEADER_EVENT_UPSELL)
   }
-  let _ = (0, d.default)(t.id),
-    I = _.length > 0 ? g.default.Messages.GUILD_EVENTS_PLURAL.format({
-      number: _.length
+  let I = (0, d.default)(t.id),
+    _ = I.length > 0 ? g.default.Messages.GUILD_EVENTS_PLURAL.format({
+      number: I.length
     }) : g.default.Messages.GUILD_EVENTS;
   return (0, l.jsx)(S, {
     selected: a,
-    showUnread: h && !C,
+    showUnread: h && !m,
     onClick: E,
     onContextMenu: e => {
       (0, o.openContextMenuLazy)(e, async () => {
@@ -92,8 +92,8 @@ function _(e) {
         })
       })
     },
-    eventsMuted: C,
-    rowLabel: I,
+    eventsMuted: m,
+    rowLabel: _,
     mentionCount: p,
     guildId: t.id
   })

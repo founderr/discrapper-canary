@@ -32,8 +32,8 @@ function f() {
       }, n.id)
     }),
     p = null == n && null != f ? e[f] : null,
-    C = (0, r.useIsBroadcastingGDM)(null == p ? void 0 : p.id);
-  return null != p && !C && h.unshift((0, l.jsx)(c.default, {
+    m = (0, r.useIsBroadcastingGDM)(null == p ? void 0 : p.id);
+  return null != p && !m && h.unshift((0, l.jsx)(c.default, {
     channel: p
   }, p.id)), (0, l.jsx)(i.TransitionGroup, {
     component: a.Fragment,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   FavoriteAddedTooltip: function() {
-    return C
+    return m
   }
 });
 var l = n("735250"),
@@ -25,7 +25,7 @@ function p() {
     })
   })
 }
-let C = a.memo(function(e) {
+let m = a.memo(function(e) {
   let {
     "aria-label": t = !1,
     children: n

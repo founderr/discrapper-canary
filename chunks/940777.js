@@ -16,13 +16,13 @@ var l = n("735250"),
   f = n("317381"),
   h = n("682662"),
   p = n("674552"),
-  C = n("593364"),
-  m = n("905423"),
+  m = n("593364"),
+  C = n("905423"),
   g = n("199902"),
   E = n("592125"),
   S = n("944486"),
-  _ = n("979651"),
-  I = n("898140"),
+  I = n("979651"),
+  _ = n("898140"),
   N = n("880080"),
   T = n("15434"),
   A = n("709054"),
@@ -33,8 +33,8 @@ var l = n("735250"),
   y = n("603274"),
   M = n("981631"),
   O = n("689938"),
-  D = n("706759");
-let b = {
+  b = n("706759");
+let D = {
   analyticsSource: {
     page: M.AnalyticsPages.GUILD_CHANNEL,
     section: M.AnalyticsSections.CHANNEL_LIST,
@@ -50,19 +50,19 @@ function j() {
     } = (0, v.useFavoriteAdded)(),
     [j, G] = a.useState(!1),
     {
-      favoriteServerMuted: U,
-      favoriteChannels: P
+      favoriteServerMuted: P,
+      favoriteChannels: U
     } = (0, o.useStateFromStoresObject)([L.default], () => ({
       favoriteChannels: L.default.getFavoriteChannels(),
       favoriteServerMuted: L.default.favoriteServerMuted
     })),
     w = (0, o.useStateFromStores)([S.default], () => S.default.getChannelId(M.FAVORITES)),
-    F = (0, o.useStateFromStores)([E.default], () => E.default.getChannel(w)),
-    B = (0, m.default)(e => e.guildId) === M.FAVORITES,
+    B = (0, o.useStateFromStores)([E.default], () => E.default.getChannel(w)),
+    F = (0, C.default)(e => e.guildId) === M.FAVORITES,
     {
       badge: V,
       unread: H
-    } = (0, x.default)(P),
+    } = (0, x.default)(U),
     k = function(e) {
       let t = (0, o.useStateFromStores)([S.default], () => S.default.getVoiceChannelId()),
         n = null != t && null != e[t],
@@ -72,7 +72,7 @@ function j() {
           return null != t && null != e[t.channelId]
         }),
         a = (0, o.useStateFromStores)([g.default], () => g.default.getAllApplicationStreams().some(t => null != e[t.channelId])),
-        s = (0, o.useStateFromStores)([_.default], () => n && null != t && _.default.hasVideo(t), [n, t]),
+        s = (0, o.useStateFromStores)([I.default], () => n && null != t && I.default.hasVideo(t), [n, t]),
         i = (0, o.useStateFromStoresArray)([f.default], () => A.default.keys(e).reduce((e, t) => (e.push(...f.default.getEmbeddedActivitiesForChannel(t)), e), [])),
         r = (0, o.useStateFromStores)([f.default], () => Array.from(f.default.getSelfEmbeddedActivities().values()).some(t => {
           let {
@@ -84,33 +84,33 @@ function j() {
         d = !1,
         c = !1,
         h = !1,
-        C = !1;
-      return n ? (d = !s, c = s, h = l, C = r) : (h = a, C = u), (0, p.renderMediaBadge)({
+        m = !1;
+      return n ? (d = !s, c = s, h = l, m = r) : (h = a, m = u), (0, p.renderMediaBadge)({
         audio: d,
         video: c,
         screenshare: h,
         liveStage: !1,
         isCurrentUserConnected: n,
-        activity: C
+        activity: m
       })
-    }(P),
-    Y = V > 0 ? (0, C.renderMentionBadge)(V) : null,
-    K = a.useCallback(() => {
+    }(U),
+    K = V > 0 ? (0, m.renderMentionBadge)(V) : null,
+    Y = a.useCallback(() => {
       s()
     }, [s]);
   return (0, l.jsxs)(h.ListItem, {
     children: [(0, l.jsx)(N.default, {
-      selected: B,
+      selected: F,
       hovered: j,
-      unread: H && !U,
-      className: D.pill
+      unread: H && !P,
+      className: b.pill
     }), (0, l.jsx)(y.default, {
-      onShow: K,
+      onShow: Y,
       children: (0, l.jsx)(R.FavoriteAddedTooltip, {
         children: (0, l.jsx)(u.BlobMask, {
-          selected: B || j,
+          selected: F || j,
           upperBadge: k,
-          lowerBadge: Y,
+          lowerBadge: K,
           children: (0, l.jsx)(T.default, {
             ...e,
             ariaLabel: O.default.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
@@ -119,13 +119,13 @@ function j() {
             }),
             to: {
               pathname: M.Routes.CHANNEL(M.FAVORITES, w),
-              state: b
+              state: D
             },
-            selected: B || j,
+            selected: F || j,
             onMouseEnter: () => G(!0),
             onMouseLeave: () => G(!1),
             onMouseDown: function() {
-              null != F && d.default.preload(F.guild_id, F.id)
+              null != B && d.default.preload(B.guild_id, B.id)
             },
             onContextMenu: function(e) {
               (0, c.openContextMenuLazy)(e, async () => {
@@ -138,11 +138,11 @@ function j() {
               })
             },
             children: (0, l.jsx)("div", {
-              className: i()(D.ring, {
-                [D.ringActive]: t
+              className: i()(b.ring, {
+                [b.ringActive]: t
               }),
-              children: (0, l.jsx)(I.default, {
-                className: D.favoriteIcon,
+              children: (0, l.jsx)(_.default, {
+                className: b.favoriteIcon,
                 width: 20,
                 height: 20
               })

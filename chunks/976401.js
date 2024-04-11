@@ -22,13 +22,13 @@ function d(e) {
     icon: f,
     iconForeground: h,
     innerClassName: p,
-    tooltipClassName: C,
-    onMouseEnter: m,
+    tooltipClassName: m,
+    onMouseEnter: C,
     onMouseLeave: g,
     "aria-label": E,
     "aria-checked": S,
-    role: _,
-    tooltipColor: I,
+    role: I,
+    tooltipColor: _,
     tooltipForceOpen: N
   } = e, T = a.isValidElement(f) ? f : (0, l.jsx)(f, {
     width: 20,
@@ -37,10 +37,10 @@ function d(e) {
     foreground: h
   });
   return (0, l.jsx)(r.Tooltip, {
-    tooltipClassName: C,
+    tooltipClassName: m,
     text: t,
     "aria-label": E,
-    color: I,
+    color: _,
     forceOpen: N,
     children: e => {
       let {
@@ -64,13 +64,13 @@ function d(e) {
           null != t && t(), null != d && d(e)
         },
         onMouseEnter: () => {
-          null == a || a(), null == m || m()
+          null == a || a(), null == C || C()
         },
         onMouseLeave: () => {
           null == f || f(), null == g || g()
         },
         onContextMenu: s,
-        role: _,
+        role: I,
         "aria-checked": S,
         children: [null != n ? (0, l.jsx)(o.default, {
           width: 20,

@@ -12,31 +12,31 @@ var l = n("735250"),
   f = n("451478"),
   h = n("291082"),
   p = n("61634"),
-  C = n("325257"),
-  m = n("800391");
+  m = n("325257"),
+  C = n("800391");
 t.default = a.memo(function(e) {
   let {
     guildNode: t,
     lowerBadge: n
-  } = e, g = t.id, E = (0, s.useStateFromStores)([c.default], () => c.default.getGuild(g)), S = (0, i.useCurrentUserGuildBadgeStatus)(g), _ = (0, s.useStateFromStores)([f.default], () => f.default.isFocused()), I = (0, s.useStateFromStores)([u.default], () => u.default.isUnavailable(g)), N = (0, o.default)(e => e.guildId), T = (0, p.default)(g), {
+  } = e, g = t.id, E = (0, s.useStateFromStores)([c.default], () => c.default.getGuild(g)), S = (0, i.useCurrentUserGuildBadgeStatus)(g), I = (0, s.useStateFromStores)([f.default], () => f.default.isFocused()), _ = (0, s.useStateFromStores)([u.default], () => u.default.isUnavailable(g)), N = (0, o.default)(e => e.guildId), T = (0, p.default)(g), {
     badge: A,
     unread: L
   } = (0, s.useStateFromStoresObject)([d.default], () => ({
     badge: d.default.getMentionCount(g),
     unread: d.default.hasUnread(g)
   })), v = (0, r.useShouldShowInvitesDisabledNotif)(E) && 0 === A, x = a.useMemo(() => null != n ? n : v ? (0, l.jsx)("div", {
-    className: m.pauseBackground,
+    className: C.pauseBackground,
     children: (0, l.jsx)(h.default, {
-      className: m.pause,
+      className: C.pause,
       width: 10,
       height: 10
     })
   }) : null, [n, v]);
-  return (0, l.jsx)(C.default, {
+  return (0, l.jsx)(m.default, {
     ...e,
     guild: E,
-    unavailable: I,
-    animatable: _,
+    unavailable: _,
+    animatable: I,
     selected: N === g,
     badge: A,
     lowerBadge: x,
