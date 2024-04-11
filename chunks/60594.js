@@ -9,7 +9,7 @@ var a, s, n = l("735250"),
   r = l("512722"),
   u = l.n(r),
   o = l("718017"),
-  d = l("454908"),
+  d = l("848246"),
   c = l("442837"),
   f = l("481060"),
   m = l("668781"),
@@ -36,8 +36,8 @@ var a, s, n = l("735250"),
   G = l("998502"),
   b = l("451467"),
   U = l("537413"),
-  k = l("989941"),
-  F = l("399299"),
+  F = l("989941"),
+  k = l("399299"),
   y = l("351152"),
   w = l("567126"),
   B = l("143135"),
@@ -62,7 +62,7 @@ function Y(e) {
     resolution: et,
     fps: el,
     soundshareEnabled: ea
-  } = (0, c.useStateFromStoresObject)([A.default], () => A.default.getState()), es = (0, c.useStateFromStores)([v.default, p.default], () => p.default.getChannel(v.default.getVoiceChannelId())), en = (0, c.useStateFromStores)([g.default, M.default], () => (0, P.isWindows)() ? (0, k.default)(g.default, M.default) : null), ei = (0, c.useStateFromStores)([L.default], () => {
+  } = (0, c.useStateFromStoresObject)([A.default], () => A.default.getState()), es = (0, c.useStateFromStores)([v.default, p.default], () => p.default.getChannel(v.default.getVoiceChannelId())), en = (0, c.useStateFromStores)([g.default, M.default], () => (0, P.isWindows)() ? (0, F.default)(g.default, M.default) : null), ei = (0, c.useStateFromStores)([L.default], () => {
     let e = L.default.getCurrentUser();
     return u()(null != e, "GoLiveModal: user cannot be undefined"), e
   }), er = null !== (t = null == es ? void 0 : es.getGuildId()) && void 0 !== t ? t : J, eu = (0, c.useStateFromStores)([T.default], () => {
@@ -70,7 +70,7 @@ function Y(e) {
     return null != er ? null === (e = T.default.getGuild(er)) || void 0 === e ? void 0 : e.premiumTier : null
   }), [eo, ed] = null !== (a = (0, U.default)(ee, ei, eu)) && void 0 !== a ? a : [V.ApplicationStreamResolutions.RESOLUTION_720, V.ApplicationStreamFPS.FPS_30], {
     available: ec
-  } = (0, x.usePerksDemo)(d.NitroPerks.STREAM_HIGH_QUALITY);
+  } = (0, x.usePerksDemo)(d.EntitlementFeatureNames.STREAM_HIGH_QUALITY);
   ee !== V.ApplicationStreamPresets.PRESET_CUSTOM && (et = eo, el = ed), ec && (et = V.ApplicationStreamResolutions.RESOLUTION_1080, el = V.ApplicationStreamFPS.FPS_60), !(0, b.default)(ee, et, el, ei, eu) && (et = eo, el = ed);
   let ef = (0, O.useUID)();
   let [em, eS] = i.useState((r = Q, Y = Z, r ? 0 : Y ? 1 : 2)), [eE, e_] = i.useState(null), [eC, eg] = i.useState(!1), [eN, eh] = i.useState(null), [ex, eI] = i.useState(null), [eA, ep] = i.useState(null), [eT, eR] = i.useState(ee), [ev, eL] = i.useState(et), [eM, ej] = i.useState(el), [eO, eD] = i.useState(ea), [eP, eG] = i.useState(null != J ? J : null), eb = null !== (s = null == es ? void 0 : es.id) && void 0 !== s ? s : eN;
@@ -83,7 +83,7 @@ function Y(e) {
       s = null !== (t = null == a ? void 0 : a.getGuildId()) && void 0 !== t ? t : J;
     null == es && S.default.selectVoiceChannel(l);
     let n = !0;
-    (0, I.shouldActivatePerkDemo)(d.NitroPerks.STREAM_HIGH_QUALITY) && (n = await (0, h.activatePerkDemo)(d.NitroPerks.STREAM_HIGH_QUALITY));
+    (0, I.shouldActivatePerkDemo)(d.EntitlementFeatureNames.STREAM_HIGH_QUALITY) && (n = await (0, h.activatePerkDemo)(d.EntitlementFeatureNames.STREAM_HIGH_QUALITY));
     let i = eT,
       r = ev,
       o = eM;
@@ -111,11 +111,11 @@ function Y(e) {
     })()
   }
 
-  function ek() {
+  function eF() {
     eU(), q()
   }
   i.useEffect(() => {
-    let e = (0, P.isWindows)() ? (0, k.default)(g.default, M.default) : null,
+    let e = (0, P.isWindows)() ? (0, F.default)(g.default, M.default) : null,
       t = (null == e ? void 0 : e.id) != null ? C.default.getApplication(e.id) : null;
     D.default.track(H.AnalyticEvents.OPEN_MODAL, {
       type: "Go Live Modal",
@@ -125,7 +125,7 @@ function Y(e) {
       location_section: X
     })
   }, [X]);
-  let eF = i.useCallback((e, t, l) => {
+  let ek = i.useCallback((e, t, l) => {
     let a = (0, U.default)(e, ei, eu),
       [s, n] = null != a ? a : [t, l];
     if (e !== eT && (t = s, l = n), !(0, b.default)(e, t, l, ei, eu)) {
@@ -169,11 +169,11 @@ function Y(e) {
         } = await l.e("74300").then(l.bind(l, "566852"));
         return l => (0, n.jsx)(e, {
           ...l,
-          handleStream: ek,
+          handleStream: eF,
           pid: t
         })
       })
-    }() : ek()
+    }() : eF()
   }
   let ew = i.useCallback(e => {
       eI(e), null != e && (eS(2), eg(!0))
@@ -240,7 +240,7 @@ function Y(e) {
         id: 2,
         children: (0, n.jsx)("div", {
           className: K.modalSize,
-          children: (0, n.jsx)(F.default, {
+          children: (0, n.jsx)(k.default, {
             selectedChannelId: eN,
             selectedPreset: eT,
             selectedResolution: ev,
@@ -249,9 +249,9 @@ function Y(e) {
             sound: eO,
             sourceChanged: eC,
             selectSource: Z,
-            onChangeSelectedFPS: e => eF(eT, ev, e),
-            onChangeSelectedResolution: e => eF(eT, e, eM),
-            onChangeSelectedPreset: e => eF(e, ev, eM),
+            onChangeSelectedFPS: e => ek(eT, ev, e),
+            onChangeSelectedResolution: e => ek(eT, e, eM),
+            onChangeSelectedPreset: e => ek(e, ev, eM),
             onChangeSelectedChannelId: eh,
             onChangeSelectedSource: ew,
             onChangeSource: () => eS(1),

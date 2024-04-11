@@ -1,18 +1,18 @@
 "use strict";
-t.r(r), t.d(r, {
+r.r(t), r.d(t, {
   default: function() {
     return m
   }
-}), t("47120");
-var a = t("735250"),
-  n = t("470079"),
-  i = t("454908"),
-  o = t("442837"),
-  l = t("481060"),
-  s = t("570140"),
-  c = t("594174"),
-  d = t("246992"),
-  u = t("519634");
+}), r("47120");
+var a = r("735250"),
+  n = r("470079"),
+  i = r("848246"),
+  l = r("442837"),
+  o = r("481060"),
+  s = r("570140"),
+  c = r("594174"),
+  d = r("246992"),
+  u = r("519634");
 let h = [{
     label: "No Override",
     value: !1
@@ -29,28 +29,28 @@ let h = [{
   }];
 
 function m() {
-  let e = (0, o.useStateFromStores)([c.default], () => c.default.getCurrentUser()),
-    [r, t] = n.useState(!1),
+  let e = (0, l.useStateFromStores)([c.default], () => c.default.getCurrentUser()),
+    [t, r] = n.useState(!1),
     [m, g] = n.useState(!1);
   return (0, a.jsxs)("div", {
     className: u.container,
-    children: [(0, a.jsx)(l.FormSection, {
+    children: [(0, a.jsx)(o.FormSection, {
       title: "Override HQ Streaming: Available",
       className: u.formElement,
-      tag: l.FormTitleTags.H3,
-      children: (0, a.jsx)(l.SingleSelect, {
+      tag: o.FormTitleTags.H3,
+      children: (0, a.jsx)(o.SingleSelect, {
         options: h,
-        value: r,
+        value: t,
         onChange: e => {
-          t(e)
+          r(e)
         },
         popoutLayerContext: d.devToolsLayerContext
       })
-    }), (0, a.jsx)(l.FormSection, {
+    }), (0, a.jsx)(o.FormSection, {
       title: "Override HQ Streaming: Activate",
       className: u.formElement,
-      tag: l.FormTitleTags.H3,
-      children: (0, a.jsx)(l.SingleSelect, {
+      tag: o.FormTitleTags.H3,
+      children: (0, a.jsx)(o.SingleSelect, {
         options: p,
         value: m,
         onChange: e => {
@@ -58,12 +58,12 @@ function m() {
         },
         popoutLayerContext: d.devToolsLayerContext
       })
-    }), (0, a.jsx)(l.Button, {
+    }), (0, a.jsx)(o.Button, {
       onClick: () => void s.default.dispatch({
         type: "PREMIUM_PERKS_DEMO_OVERRIDE",
-        perkType: i.NitroPerks.STREAM_HIGH_QUALITY,
+        perkType: i.EntitlementFeatureNames.STREAM_HIGH_QUALITY,
         user: e,
-        available: r,
+        available: t,
         activateSuccess: m
       }),
       children: "Update"

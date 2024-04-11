@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return em
   },
   formatTrialOfferIntervalDuration: function() {
-    return eA
+    return eh
   },
   getBillingGracePeriodDaysAndExpiresDate: function() {
     return el
@@ -28,7 +28,7 @@ n.r(t), n.d(t, {
     return eS
   },
   getDefaultPrice: function() {
-    return V
+    return F
   },
   getDiscountIntervalString: function() {
     return H
@@ -55,7 +55,7 @@ n.r(t), n.d(t, {
     return eE
   },
   getIntervalForInvoice: function() {
-    return eh
+    return eA
   },
   getIntervalString: function() {
     return Y
@@ -106,7 +106,7 @@ n.r(t), n.d(t, {
     return q
   },
   getPrice: function() {
-    return F
+    return V
   },
   getTierDisplayName: function() {
     return X
@@ -146,7 +146,7 @@ var i, r, s, a, o = n("512722"),
   l = n.n(o),
   u = n("913527"),
   d = n.n(u),
-  _ = n("454908");
+  _ = n("848246");
 n("442837");
 var c = n("710845"),
   E = n("114064"),
@@ -154,8 +154,8 @@ var c = n("710845"),
   T = n("439017"),
   f = n("301766"),
   S = n("594174"),
-  h = n("351402"),
-  A = n("853872"),
+  A = n("351402"),
+  h = n("853872"),
   m = n("509545"),
   N = n("78839"),
   O = n("122289"),
@@ -197,18 +197,18 @@ function B(e) {
   return e.items.find(e => y.PREMIUM_PLANS.has(e.planId))
 }
 
-function V(e) {
+function F(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-    r = null !== (t = A.default.defaultPaymentSourceId) && void 0 !== t ? t : void 0,
+    r = null !== (t = h.default.defaultPaymentSourceId) && void 0 !== t ? t : void 0,
     s = N.default.getPremiumTypeSubscription();
-  return null != s && null != s.paymentSourceId && (r = s.paymentSourceId), F(e, n, i, {
+  return null != s && null != s.paymentSourceId && (r = s.paymentSourceId), V(e, n, i, {
     paymentSourceId: r
   })
 }
 
-function F(e) {
+function V(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
@@ -514,8 +514,8 @@ function J(e) {
     includePremiumGuilds: I,
     hasDiscountApplied: T,
     activeDiscountInfo: f,
-    renewalInvoicePreview: h
-  } = e, A = L.default.formatPriceString(L.default.getDefaultPrice(y.SubscriptionPlans.PREMIUM_MONTH_TIER_2), y.SubscriptionIntervalTypes.MONTH), m = eI(_) || null == _.paymentSourceId && !_.isPurchasedExternally && !(null === (t = S.default.getCurrentUser()) || void 0 === t ? void 0 : t.hasFreePremium()), N = null != E, O = _.status === v.SubscriptionStatusTypes.UNPAID && null !== _.latestInvoice && (null === (n = _.latestInvoice) || void 0 === n ? void 0 : n.status) === v.InvoiceStatusTypes.OPEN, p = m ? v.SubscriptionStatusTypes.CANCELED : O ? v.SubscriptionStatusTypes.UNPAID : _.status, R = null === (s = null !== (r = null == h ? void 0 : h.taxInclusive) && void 0 !== r ? r : null === (i = _.latestInvoice) || void 0 === i ? void 0 : i.taxInclusive) || void 0 === s || s, C = y.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM + (I ? ei(_.additionalPlans) : 0);
+    renewalInvoicePreview: A
+  } = e, h = L.default.formatPriceString(L.default.getDefaultPrice(y.SubscriptionPlans.PREMIUM_MONTH_TIER_2), y.SubscriptionIntervalTypes.MONTH), m = eI(_) || null == _.paymentSourceId && !_.isPurchasedExternally && !(null === (t = S.default.getCurrentUser()) || void 0 === t ? void 0 : t.hasFreePremium()), N = null != E, O = _.status === v.SubscriptionStatusTypes.UNPAID && null !== _.latestInvoice && (null === (n = _.latestInvoice) || void 0 === n ? void 0 : n.status) === v.InvoiceStatusTypes.OPEN, p = m ? v.SubscriptionStatusTypes.CANCELED : O ? v.SubscriptionStatusTypes.UNPAID : _.status, R = null === (s = null !== (r = null == A ? void 0 : A.taxInclusive) && void 0 !== r ? r : null === (i = _.latestInvoice) || void 0 === i ? void 0 : i.taxInclusive) || void 0 === s || s, C = y.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM + (I ? ei(_.additionalPlans) : 0);
   switch (c) {
     case y.SubscriptionPlans.PREMIUM_MONTH_TIER_0:
     case y.SubscriptionPlans.PREMIUM_YEAR_TIER_0:
@@ -637,11 +637,11 @@ function J(e) {
         default:
           return T ? R ? U.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format({
             percent: null !== (a = null == f ? void 0 : f.percentage) && void 0 !== a ? a : y.DISCOUNT_PERCENTAGE_FALLBACK,
-            regularPrice: A,
+            regularPrice: h,
             numMonths: null !== (o = null == f ? void 0 : f.duration) && void 0 !== o ? o : y.DISCOUNT_DURATION_FALLBACK
           }) : U.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC_TAX_EXCLUSIVE.format({
             percent: null !== (l = null == f ? void 0 : f.percentage) && void 0 !== l ? l : y.DISCOUNT_PERCENTAGE_FALLBACK,
-            regularPrice: A,
+            regularPrice: h,
             numMonths: null !== (u = null == f ? void 0 : f.duration) && void 0 !== u ? u : y.DISCOUNT_DURATION_FALLBACK
           }) : N ? R ? U.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2.format({
             price: E,
@@ -677,7 +677,7 @@ function Z(e) {
           } = e;
           return t === n.id
         }),
-        r = null == i ? F(n.id, !1, !1, {
+        r = null == i ? V(n.id, !1, !1, {
           paymentSourceId: t.paymentSourceId,
           currency: t.currency
         }).amount : i.amount;
@@ -841,7 +841,7 @@ function el(e) {
 
 function eu(e) {
   if (null == e) return !1;
-  let t = A.default.getPaymentSource(e);
+  let t = h.default.getPaymentSource(e);
   return null != t && P.PREPAID_PAYMENT_SOURCES.has(t.type)
 }
 
@@ -917,7 +917,7 @@ function e_(e) {
 
 function ec(e, t, n) {
   let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-    r = null != t ? F(e.id, !1, i, t) : V(e.id, !1, i),
+    r = null != t ? V(e.id, !1, i, t) : F(e.id, !1, i),
     s = (0, D.formatPrice)(r.amount, r.currency);
   return e.currency !== P.CurrencyCodes.USD && !0 === n && (s = s.concat("*")), s
 }
@@ -944,7 +944,7 @@ function ef(e, t, n, i) {
       paymentSourceId: t,
       currency: n
     } : {
-      country: h.default.ipCountryCodeWithFallback,
+      country: A.default.ipCountryCodeWithFallback,
       currency: n
     },
     s = m.default.get(e);
@@ -965,7 +965,7 @@ function ef(e, t, n, i) {
       }
     }), t
   }
-  return F(a.id, (0, g.isPremium)(i), !1, r)
+  return V(a.id, (0, g.isPremium)(i), !1, r)
 }
 
 function eS(e, t, n) {
@@ -1020,7 +1020,7 @@ function eS(e, t, n) {
   }), r
 }
 
-function eh(e) {
+function eA(e) {
   let t = e.invoiceItems[0].subscriptionPlanId,
     n = m.default.get(t);
   return l()(null != n, "Missing subscriptionPlan"), {
@@ -1029,7 +1029,7 @@ function eh(e) {
   }
 }
 
-function eA(e) {
+function eh(e) {
   let {
     intervalType: t = y.SubscriptionIntervalTypes.MONTH,
     intervalCount: n = 1,
@@ -1233,8 +1233,8 @@ t.default = Object.freeze({
   isPremiumAtLeast: g.isPremiumAtLeast,
   isPremium: g.isPremium,
   isPremiumExactly: g.isPremiumExactly,
-  getPrice: F,
-  getDefaultPrice: V,
+  getPrice: V,
+  getDefaultPrice: F,
   getInterval: function(e) {
     let t = y.SubscriptionPlanInfo[e];
     if (null != t) return {
@@ -1396,7 +1396,7 @@ t.default = Object.freeze({
     })
   },
   getBillingReviewSubheader: eS,
-  getIntervalForInvoice: eh,
+  getIntervalForInvoice: eA,
   getPremiumPlanItem: B,
   getGuildBoostPlanItem: ey,
   isBoostOnlySubscription: function(e) {
@@ -1488,7 +1488,7 @@ t.default = Object.freeze({
       var t;
       let n = E.default.getPerksDemos();
       return null !== (t = null == n ? void 0 : n[e]) && void 0 !== t && t
-    }(_.NitroPerks.STREAM_HIGH_QUALITY) || ("high" === e ? (0, I.canUserUse)(I.STREAM_HIGH_QUALITY, t) : "mid" === e && (0, I.canUserUse)(I.STREAM_MID_QUALITY, t))
+    }(_.EntitlementFeatureNames.STREAM_HIGH_QUALITY) || ("high" === e ? (0, I.canUserUse)(I.STREAM_HIGH_QUALITY, t) : "mid" === e && (0, I.canUserUse)(I.STREAM_MID_QUALITY, t))
   },
   hasFreeBoosts: function(e) {
     return (0, I.canUserUse)(I.FREE_BOOSTS, e)

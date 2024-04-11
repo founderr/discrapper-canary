@@ -10,7 +10,7 @@ var a = l("735250"),
   i = l.n(n),
   r = l("512722"),
   u = l.n(r),
-  o = l("454908"),
+  o = l("848246"),
   d = l("442837"),
   c = l("481060"),
   f = l("410575"),
@@ -140,11 +140,11 @@ function U(e) {
     onFPSChange: x,
     onPresetChange: G,
     targetGuildPremiumTier: U,
-    captureDeviceSelected: k
-  } = e, F = (0, d.useStateFromStores)([g.default], () => {
+    captureDeviceSelected: F
+  } = e, k = (0, d.useStateFromStores)([g.default], () => {
     let e = g.default.getCurrentUser();
     return u()(null != e, "StreamSettings: user cannot be undefined"), e
-  }), y = I.default.canStreamQuality(I.StreamQuality.MID, F), {
+  }), y = I.default.canStreamQuality(I.StreamQuality.MID, k), {
     location: w
   } = (0, m.useAnalyticsContext)(), B = (0, S.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
     autoTrackExposure: !1
@@ -153,25 +153,25 @@ function U(e) {
     location: "Go Live Modal"
   }, {
     autoTrackExposure: !0,
-    disable: (0, I.isPremium)(F, L.PremiumTypes.TIER_1)
+    disable: (0, I.isPremium)(k, L.PremiumTypes.TIER_1)
   });
   let {
     available: V
-  } = (0, _.usePerksDemo)(o.NitroPerks.STREAM_HIGH_QUALITY), H = !y && !B && !V, {
+  } = (0, _.usePerksDemo)(o.EntitlementFeatureNames.STREAM_HIGH_QUALITY), H = !y && !B && !V, {
     enabled: W,
     variant: z
   } = C.default.useExperiment({
     location: "StreamSettingsUpsellBanner"
   }, {
     autoTrackExposure: H
-  }), K = W && C.GradientVariants.includes(z), [Y, Q] = s.useState(!1), Z = k ? R.GoLiveDeviceResolutionButtons : R.ApplicationStreamResolutionButtons, J = {
+  }), K = W && C.GradientVariants.includes(z), [Y, Q] = s.useState(!1), Z = F ? R.GoLiveDeviceResolutionButtons : R.ApplicationStreamResolutionButtons, J = {
     ...w,
     section: v.AnalyticsSections.STREAM_SETTINGS
   }, X = (0, a.jsx)(N.default, {
     buttons: Z.map(e => b({
       type: e,
       selected: e.value === n,
-      needsPremium: !(0, A.default)(l, e.value, i, F, U),
+      needsPremium: !(0, A.default)(l, e.value, i, k, U),
       needsDemo: V && e.value !== R.ApplicationStreamResolutions.RESOLUTION_720,
       analyticsLocation: J,
       useGradient: K,
@@ -183,7 +183,7 @@ function U(e) {
     buttons: R.ApplicationStreamFPSButtons.map(e => b({
       type: e,
       selected: e.value === i,
-      needsPremium: !(0, A.default)(l, n, e.value, F, U),
+      needsPremium: !(0, A.default)(l, n, e.value, k, U),
       needsDemo: V && e.value === R.ApplicationStreamFPS.FPS_60,
       analyticsLocation: J,
       useGradient: K,
@@ -194,7 +194,7 @@ function U(e) {
   }), $ = [{
     value: R.ApplicationStreamPresets.PRESET_VIDEO,
     label: M.default.Messages.STREAM_PRESET_VIDEO
-  }, ...k ? [] : [{
+  }, ...F ? [] : [{
     value: R.ApplicationStreamPresets.PRESET_DOCUMENTS,
     label: M.default.Messages.STREAM_PRESET_DOCUMENTS
   }], {
