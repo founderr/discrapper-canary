@@ -52956,7 +52956,23 @@ html .progress__00e29 {
 .badgeContainer__5607c {
     display: flex;
     gap: 4px;
-    align-items: center
+    align-items: center;
+    overflow: hidden;
+    flex-shrink: 0
+}
+
+.badgeContainer__5607c svg {
+    flex-shrink: 0
+}
+
+.badgeContainer__5607c div {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden
+}
+
+.badgeContainer__5607c:last-child {
+    flex-shrink: 1
 }
 
 .container__8d997 .badgeContainer__5607c {
@@ -53038,7 +53054,23 @@ html .progress__00e29 {
 }
 
 .badgeContainer__67878 {
-    padding: 2px
+    padding: 2px;
+    overflow: hidden;
+    flex-shrink: 0
+}
+
+.badgeContainer__67878 svg {
+    flex-shrink: 0
+}
+
+.badgeContainer__67878 div {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden
+}
+
+.badgeContainer__67878:last-child {
+    flex-shrink: 1
 }
 
 .emojiHotrailShareToChannel__16b9a {

@@ -60,9 +60,10 @@ let O = e => {
 function j(e) {
   let {
     children: t
-  } = e;
-  return (0, a.jsx)("div", {
+  } = e, n = l.useRef(null);
+  return (0, d.useFocusLock)(n), (0, a.jsx)("div", {
     className: y.popout,
+    ref: n,
     children: t
   })
 }
@@ -206,10 +207,10 @@ function w(e) {
             return O(t), t
           })
         },
-        children: m ? (0, a.jsx)(o.AtIcon, {
+        children: m ? (0, a.jsx)(u.TextIcon, {
           width: 20,
           height: 20
-        }) : (0, a.jsx)(u.TextIcon, {
+        }) : (0, a.jsx)(o.AtIcon, {
           width: 20,
           height: 20
         })
@@ -226,7 +227,6 @@ function w(e) {
             t = window.innerHeight;
           return e.top < t / 2 ? "bottom" : "top"
         })(),
-        className: y.input,
         channel: m ? t : void 0,
         showEmojiButton: !0
       })]
