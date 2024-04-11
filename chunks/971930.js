@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return N
   },
   createGuildFeedItemFromServer: function() {
-    return A
+    return h
   },
   getChannelIdForItem: function() {
     return R
@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return p
   },
   isChannelAvailableInGuildFeed: function() {
-    return h
+    return A
   },
   isGuildFeedFeaturedItem: function() {
     return S
@@ -65,7 +65,7 @@ function S(e) {
   return null != e.featuredItem || !1
 }
 
-function A(e, t) {
+function h(e, t) {
   var n, i, a, u, d, c, E;
   switch (e.type) {
     case s.GuildFeedItemTypes.FORUM_POST: {
@@ -90,7 +90,7 @@ function A(e, t) {
     case s.GuildFeedItemTypes.MESSAGE:
       let I = (0, o.createMessageRecord)(e.message),
         S = r().map(e.reference_messages, e => (0, o.createMessageRecord)(e)),
-        A = {
+        h = {
           type: s.GuildFeedItemTypes.MESSAGE,
           id: (0, _.default)(e),
           sortIndex: t,
@@ -101,17 +101,17 @@ function A(e, t) {
           unreadMention: null !== (d = e.unread_mention) && void 0 !== d && d,
           seen: e.seen
         };
-      return f(e) && (A = {
-        ...A,
+      return f(e) && (h = {
+        ...h,
         featuredItem: T(e.featured_item)
-      }), A;
+      }), h;
     case s.GuildFeedItemTypes.MESSAGE_BUNDLE:
-      let h = e.messages.map(e => ({
+      let A = e.messages.map(e => ({
         message: (0, o.createMessageRecord)(e.message),
         referenceMessages: e.reference_messages.map(e => (0, o.createMessageRecord)(e))
       }));
       return {
-        type: s.GuildFeedItemTypes.MESSAGE_BUNDLE, id: e.id, sortIndex: t, messages: h, featured: !1, highlighted: !1, unreadMention: null !== (c = e.unread_mention) && void 0 !== c && c, seen: e.seen
+        type: s.GuildFeedItemTypes.MESSAGE_BUNDLE, id: e.id, sortIndex: t, messages: A, featured: !1, highlighted: !1, unreadMention: null !== (c = e.unread_mention) && void 0 !== c && c, seen: e.seen
       };
     case s.GuildFeedItemTypes.CONVERSATION:
       let m = function e(t) {
@@ -131,7 +131,7 @@ function A(e, t) {
   }
 }
 
-function h(e) {
+function A(e) {
   return !(e.hasFlag(c.ChannelFlags.GUILD_FEED_REMOVED) || e.isNSFW()) && !0
 }
 

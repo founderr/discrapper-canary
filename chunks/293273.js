@@ -11,8 +11,8 @@ var i, r, s, a, o = n("348327"),
   T = n("676035"),
   f = n("594190"),
   S = n("106301"),
-  A = n("406066"),
-  h = n("768419"),
+  h = n("406066"),
+  A = n("768419"),
   m = n("695346"),
   N = n("581883"),
   O = n("199902"),
@@ -26,7 +26,7 @@ function D() {
   let e = [],
     t = m.CustomStatusSetting.getSetting();
   null != t && ("0" === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) && e.push((0, T.getActivityFromCustomStatus)(t));
-  let n = A.default.getActivities();
+  let n = h.default.getActivities();
   e.push(...n);
   let i = p.default.getStream();
   null != i && e.push({
@@ -63,7 +63,7 @@ function D() {
       start: a.start
     }
   });
-  let c = h.default.getActivity();
+  let c = A.default.getActivity();
   null != c && e.push({
     type: R.ActivityTypes.LISTENING,
     ...c
@@ -82,7 +82,7 @@ function D() {
 }
 class v extends(i = _.default.Store) {
   initialize() {
-    this.waitFor(f.default, E.default, p.default, O.default, h.default, N.default, S.default), this.syncWith([A.default, S.default], () => D())
+    this.waitFor(f.default, E.default, p.default, O.default, A.default, N.default, S.default), this.syncWith([h.default, S.default], () => D())
   }
   getActivities() {
     return g

@@ -24,12 +24,12 @@ let I = {
   f = new Set,
   S = !1;
 
-function A() {
+function h() {
   s = null
 }
 
-function h() {
-  i = null, r = null, f = new Set, T.applicationId = null, T.originURL = null, A()
+function A() {
+  i = null, r = null, f = new Set, T.applicationId = null, T.originURL = null, h()
 }
 class m extends(a = o.default.PersistedStore) {
   initialize(e) {
@@ -102,7 +102,7 @@ E(m, "displayName", "TestModeStore"), E(m, "persistKey", "TestModeStore"), t.def
     } = e;
     i = t
   },
-  DEVELOPER_TEST_MODE_RESET_ERROR: A,
-  LOGOUT: h,
-  DEVELOPER_TEST_MODE_RESET: h
+  DEVELOPER_TEST_MODE_RESET_ERROR: h,
+  LOGOUT: A,
+  DEVELOPER_TEST_MODE_RESET: A
 })

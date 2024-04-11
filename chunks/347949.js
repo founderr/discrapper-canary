@@ -25,8 +25,8 @@ var i = n("735250"),
   T = n("32966"),
   f = n("314897"),
   S = n("768581"),
-  A = n("785717"),
-  h = n("221292"),
+  h = n("785717"),
+  A = n("221292"),
   m = n("747074"),
   N = n("659101"),
   O = n("171368"),
@@ -43,7 +43,7 @@ function g(e) {
       let e = u.current;
       null != e && null != e.offsetWidth && null != e.scrollWidth && f(e.offsetWidth < e.scrollWidth)
     }, []), null == s) return null;
-  let A = S.default.getApplicationIconURL({
+  let h = S.default.getApplicationIconURL({
     id: s.id,
     icon: s.icon,
     size: 40
@@ -52,10 +52,10 @@ function g(e) {
     className: C.recentGameContainer,
     children: [(0, i.jsx)("div", {
       className: C.recentGameIcon,
-      children: null != A && (0, i.jsx)("img", {
+      children: null != h && (0, i.jsx)("img", {
         alt: "",
         "aria-hidden": !0,
-        src: A,
+        src: h,
         width: 40,
         height: 40
       })
@@ -114,7 +114,7 @@ let L = r.memo(function(e) {
   } = e, {
     trackUserProfileAction: l,
     ...d
-  } = (0, A.useUserProfileAnalyticsContext)(), [_, c] = r.useState(!1), [E, I] = r.useState(!1);
+  } = (0, h.useUserProfileAnalyticsContext)(), [_, c] = r.useState(!1), [E, I] = r.useState(!1);
   return r.useEffect(() => {
     if (null == s || _ || !E) return;
     c(!0);
@@ -127,7 +127,7 @@ let L = r.memo(function(e) {
         isNew: a
       } = n;
       e.push(r), a && t.push(r), s.has(r) && i.push(r)
-    }), (0, h.trackUserProfileRecentGamesViewed)({
+    }), (0, A.trackUserProfileRecentGamesViewed)({
       ...d,
       applicationIds: e,
       newApplicationIds: t,

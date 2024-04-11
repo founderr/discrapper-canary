@@ -49,10 +49,10 @@ n.r(t), n.d(t, {
     return p
   },
   newMemberActionFromServer: function() {
-    return A
+    return h
   },
   resourceChannelFromServer: function() {
-    return h
+    return A
   },
   settingsFromServer: function() {
     return m
@@ -75,7 +75,7 @@ let u = 7,
   f = 200,
   S = 7;
 
-function A(e) {
+function h(e) {
   var t;
   return {
     channelId: e.channel_id,
@@ -91,7 +91,7 @@ function A(e) {
   }
 }
 
-function h(e) {
+function A(e) {
   var t, n;
   return {
     channelId: e.channel_id,
@@ -116,11 +116,11 @@ function m(e) {
   } = e, o = {
     authorIds: t.author_ids,
     message: t.message
-  }, l = n.filter(e => (0, a.isNotNullish)(s.default.getChannel(e.channel_id))).map(A);
+  }, l = n.filter(e => (0, a.isNotNullish)(s.default.getChannel(e.channel_id))).map(h);
   return {
     welcomeMessage: o,
     newMemberActions: l,
-    resourceChannels: i.filter(e => (0, a.isNotNullish)(s.default.getChannel(e.channel_id))).map(h),
+    resourceChannels: i.filter(e => (0, a.isNotNullish)(s.default.getChannel(e.channel_id))).map(A),
     enabled: r
   }
 }

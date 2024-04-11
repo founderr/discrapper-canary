@@ -19,8 +19,8 @@ var i = n("990547"),
   T = n("703656"),
   f = n("920440"),
   S = n("314897"),
-  A = n("592125"),
-  h = n("664915"),
+  h = n("592125"),
+  A = n("664915"),
   m = n("984933"),
   N = n("430824"),
   O = n("944486"),
@@ -381,7 +381,7 @@ t.default = {
     })
   },
   toggleGuildFolderExpand(e) {
-    let t = h.default.isFolderExpanded(e);
+    let t = A.default.isFolderExpanded(e);
     C.default.track(M.AnalyticEvents.GUILD_FOLDER_CLICKED, {
       source: "sidebar",
       action: t ? "collapsed" : "expanded"
@@ -415,7 +415,7 @@ t.default = {
       for (null != (0, c.coerceModalRoute)(e.getCurrentRoute()) && e.goBack();;) {
         let t = (0, c.coerceChannelRoute)(e.getCurrentRoute());
         if (null == t) break;
-        let n = A.default.getChannel(t.params.channelId);
+        let n = h.default.getChannel(t.params.channelId);
         if (null == n || !n.isNSFW()) break;
         e.goBack()
       }

@@ -11,8 +11,8 @@ let d = "",
   T = null,
   f = "",
   S = "",
-  A = "",
   h = "",
+  A = "",
   m = "",
   N = "",
   O = "",
@@ -24,11 +24,11 @@ let d = "",
   D = null;
 
 function v() {
-  E = null, d = "", _ = null, c = "", I = !1, T = null, f = "US", S = "", A = "", h = "", m = "", N = "", O = "", p = "", R = !1, C = null, g = null, L = null, D = null
+  E = null, d = "", _ = null, c = "", I = !1, T = null, f = "US", S = "", h = "", A = "", m = "", N = "", O = "", p = "", R = !1, C = null, g = null, L = null, D = null
 }
 
 function M(e) {
-  S = e.name, f = e.country, h = e.line1, m = e.line2, N = e.city, O = e.postalCode, p = e.state, A = e.email
+  S = e.name, f = e.country, A = e.line1, m = e.line2, N = e.city, O = e.postalCode, p = e.state, h = e.email
 }
 
 function y() {
@@ -77,9 +77,9 @@ class U extends(a = o.default.Store) {
   getBillingAddressInfo() {
     return {
       name: S,
-      email: A,
+      email: h,
       country: f,
-      line1: h,
+      line1: A,
       line2: m,
       city: N,
       postalCode: O,
@@ -125,7 +125,7 @@ s = "NewPaymentSourceStore", (r = "displayName") in(i = U) ? Object.defineProper
       info: t,
       isValid: n
     } = e;
-    null != t.name && "" !== t.name && (S = t.name), f = t.country, S = t.name, h = t.line1, m = t.line2, N = t.city, O = t.postalCode, p = t.state, A = t.email, R = n
+    null != t.name && "" !== t.name && (S = t.name), f = t.country, S = t.name, A = t.line1, m = t.line2, N = t.city, O = t.postalCode, p = t.state, h = t.email, R = n
   },
   BRAINTREE_TOKENIZE_PAYPAL_START: function() {
     d = "", _ = null

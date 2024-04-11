@@ -32,7 +32,7 @@ function S(e) {
   }), l.removeToken(e)
 }
 
-function A(e, t) {
+function h(e, t) {
   let n = T.slice(),
     i = n.find(t => {
       let {
@@ -42,7 +42,7 @@ function A(e, t) {
     });
   null != i && (i.tokenStatus = t, T = n)
 }
-class h extends(a = u.default.PersistedStore) {
+class A extends(a = u.default.PersistedStore) {
   initialize(e) {
     if (null != e) {
       var t;
@@ -91,7 +91,7 @@ class h extends(a = u.default.PersistedStore) {
     return f
   }
 }
-I(h, "displayName", "MultiAccountStore"), I(h, "persistKey", "MultiAccountStore"), I(h, "migrations", [e => {
+I(A, "displayName", "MultiAccountStore"), I(A, "persistKey", "MultiAccountStore"), I(A, "migrations", [e => {
   if (null != e) {
     var t;
     return {
@@ -103,7 +103,7 @@ I(h, "displayName", "MultiAccountStore"), I(h, "persistKey", "MultiAccountStore"
     users: [],
     canUseMultiAccountMobile: !1
   }
-}]), t.default = new h(d.default, {
+}]), t.default = new A(d.default, {
   CONNECTION_OPEN: function(e) {
     let {
       user: t
@@ -138,9 +138,9 @@ I(h, "displayName", "MultiAccountStore"), I(h, "persistKey", "MultiAccountStore"
       return t !== i
     })), i = null
   },
-  MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: e => A(e.userId, 1),
-  MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS: e => A(e.userId, 2),
-  MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE: e => A(e.userId, 0),
+  MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: e => h(e.userId, 1),
+  MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS: e => h(e.userId, 2),
+  MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE: e => h(e.userId, 0),
   MULTI_ACCOUNT_REMOVE_ACCOUNT: e => S(e.userId),
   MULTI_ACCOUNT_MOVE_ACCOUNT: function(e) {
     let {

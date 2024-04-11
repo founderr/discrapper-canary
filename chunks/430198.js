@@ -11,8 +11,8 @@ var i, r, s, a, o = n("149765"),
   T = n("790285"),
   f = n("160404"),
   S = n("592125"),
-  A = n("271383"),
-  h = n("430824"),
+  h = n("271383"),
+  A = n("430824"),
   m = n("594174"),
   N = n("981631");
 let O = {},
@@ -28,7 +28,7 @@ function R(e) {
     if (null == e) return !1;
     let n = m.default.getCurrentUser();
     if (null == n) return !1;
-    let i = A.default.getMember(t, n.id);
+    let i = h.default.getMember(t, n.id);
     return null != i && i.roles.includes(e.id)
   }(n, t)) || !1)
 }
@@ -37,7 +37,7 @@ function C(e, t) {
   if (!t.hasFeature(N.GuildFeatures.CREATOR_MONETIZABLE) && !t.hasFeature(N.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)) return !1;
   let n = f.default.isViewingServerShop(t.id);
   for (let i of Object.keys(e.permissionOverwrites)) {
-    let r = h.default.getRole(t.id, i);
+    let r = A.default.getRole(t.id, i);
     if (!R({
         guildId: t.id,
         role: r,
@@ -46,11 +46,11 @@ function C(e, t) {
     let s = e.permissionOverwrites[i];
     if ((0, T.isChannelAccessGrantedBy)(e, s)) return !0
   }
-  let i = h.default.getRole(t.id, t.getEveryoneRoleId()),
+  let i = A.default.getRole(t.id, t.getEveryoneRoleId()),
     r = null != i && !o.has(i.permissions, N.Permissions.VIEW_CHANNEL),
     s = (0, T.isChannelAccessDeniedBy)(e, e.permissionOverwrites[t.id]);
   if (r && !s) {
-    for (let e of Object.values(h.default.getRoles(t.id)))
+    for (let e of Object.values(A.default.getRoles(t.id)))
       if (R({
           guildId: t.id,
           role: e,
@@ -65,7 +65,7 @@ function g(e, t) {
   if (null == n) return !1;
   let i = S.default.getChannel(t);
   if (null == i) return !1;
-  let r = h.default.getGuild(i.getGuildId());
+  let r = A.default.getGuild(i.getGuildId());
   if (null == r) return !1;
   let s = n.has(t),
     a = C(i, r);
@@ -98,7 +98,7 @@ function M(e) {
 }
 class y extends(i = l.default.Store) {
   initialize() {
-    this.waitFor(h.default, S.default, f.default), c.GuildRoleSubscriptionUsersExperiment.subscribe({
+    this.waitFor(A.default, S.default, f.default), c.GuildRoleSubscriptionUsersExperiment.subscribe({
       location: "1"
     }, () => L())
   }
@@ -106,7 +106,7 @@ class y extends(i = l.default.Store) {
     if (null == e) return !1;
     let n = O[e];
     return null == n && (! function(e) {
-      let t = h.default.getGuild(e);
+      let t = A.default.getGuild(e);
       if (null == t) return;
       let n = O[e] = new Set;
       if (!t.hasFeature(N.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED) || !(0, E.isGuildEligibleForRoleSubscriptions)(e) && !(0, d.isExpeditedMonetizationOnboardingGuild)(t)) return;

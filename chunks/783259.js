@@ -19,8 +19,8 @@ t.default = function(e) {
     backgroundSrc: T,
     userId: f,
     pulseSpeakingIndicator: S = !1,
-    speaking: A = !1,
-    ...h
+    speaking: h = !1,
+    ...A
   } = e, m = null != T ? T : n, N = (0, o.default)(m, s.default.unsafe_rawColors.PRIMARY_800.css), O = (0, l.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, p = (0, _.default)(null != f ? f : E.EMPTY_STRING_SNOWFLAKE_ID), R = null == p ? void 0 : p.getBannerURL({
     size: 1024,
     canAnimate: c.GifAutoPlay.getSetting()
@@ -33,17 +33,17 @@ t.default = function(e) {
   let C = (0, i.jsx)(a.Avatar, {
       className: I.avatarWrapper,
       src: n,
-      ...h
+      ...A
     }),
     g = {
       ...t,
       backgroundColor: N
     };
-  return null != R && A && O && (g.backgroundImage = "url(".concat(R, ")"), g.backgroundSize = "cover"), (0, i.jsx)("div", {
+  return null != R && h && O && (g.backgroundImage = "url(".concat(R, ")"), g.backgroundSize = "cover"), (0, i.jsx)("div", {
     style: g,
     className: I.background,
     children: S ? (0, i.jsx)(u.default, {
-      shouldAnimate: A,
+      shouldAnimate: h,
       children: C
     }) : C
   })

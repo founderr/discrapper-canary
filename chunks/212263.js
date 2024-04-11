@@ -15,8 +15,8 @@ var i = n("735250"),
   T = n("348121"),
   f = n("104494"),
   S = n("639119"),
-  A = n("165583"),
-  h = n("197115"),
+  h = n("165583"),
+  A = n("197115"),
   m = n("626135"),
   N = n("176354"),
   O = n("74538"),
@@ -75,7 +75,7 @@ t.default = e => {
       onClick: P,
       children: D.default.Messages.CLOSE
     }), W ? (0, i.jsx)(l.Spinner, {}) : (0, i.jsxs)(i.Fragment, {
-      children: [j ? (0, i.jsx)(A.default, {
+      children: [j ? (0, i.jsx)(h.default, {
         type: L.PremiumUpsellTypes.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
         subscriptionTier: null !== (M = null == H ? void 0 : null === (s = H.subscription_trial) || void 0 === s ? void 0 : s.sku_id) && void 0 !== M ? M : L.PremiumSubscriptionSKUs.TIER_2,
         onClose: P,
@@ -104,7 +104,7 @@ t.default = e => {
             onClick: F
           })
         })]
-      }), !j && (0, i.jsx)(h.default, {
+      }), !j && (0, i.jsx)(A.default, {
         subscriptionTier: q ? L.PremiumSubscriptionSKUs.TIER_0 : L.PremiumSubscriptionSKUs.TIER_2,
         submitting: B,
         premiumModalAnalyticsLocation: {

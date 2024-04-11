@@ -43,7 +43,7 @@ n.r(t), n.d(t, {
     return f
   },
   setPendingNickname: function() {
-    return A
+    return h
   },
   setPendingProfileEffectId: function() {
     return I
@@ -52,7 +52,7 @@ n.r(t), n.d(t, {
     return S
   },
   setPendingThemeColors: function() {
-    return h
+    return A
   }
 }), n("411104");
 var i = n("544891"),
@@ -166,14 +166,14 @@ function S(e) {
   })
 }
 
-function A(e) {
+function h(e) {
   r.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME",
     nickname: e
   })
 }
 
-function h(e) {
+function A(e) {
   r.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS",
     themeColors: e

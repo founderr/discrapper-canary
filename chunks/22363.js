@@ -21,8 +21,8 @@ t.default = e => {
     onFocus: T,
     autoFocus: f,
     searchBarRef: S,
-    hasTabWrapper: A,
-    diversitySurrogate: h,
+    hasTabWrapper: h,
+    diversitySurrogate: A,
     isBurstReaction: m,
     onBurstReactionToggle: N,
     renderHeader: O
@@ -46,8 +46,8 @@ t.default = e => {
     }) : null, n === _.EmojiIntention.COMMUNITY_CONTENT_ONLY ? null : null != t ? t : (0, i.jsx)(l.default, {
       searchBarRef: S,
       className: c.diversitySelector,
-      hasTabWrapper: A,
-      selectedSurrogate: h
+      hasTabWrapper: h,
+      selectedSurrogate: A
     })]
   });
   return (0, i.jsx)("div", {

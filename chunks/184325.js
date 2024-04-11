@@ -21,8 +21,8 @@ var a = n("803997"),
   T = n("497505"),
   f = n("626135"),
   S = n("785717"),
-  A = n("221292"),
-  h = n("290421"),
+  h = n("221292"),
+  A = n("290421"),
   m = n("318661"),
   N = n("228168"),
   O = n("981631"),
@@ -44,7 +44,7 @@ function g(e) {
   } = (0, c.default)(_.default.BADGE), {
     trackUserProfileAction: M,
     ...y
-  } = (0, S.useUserProfileAnalyticsContext)(), P = (0, h.default)(D).map(e => ({
+  } = (0, S.useUserProfileAnalyticsContext)(), P = (0, A.default)(D).map(e => ({
     ...e,
     src: (0, N.getBadgeAsset)(e.icon)
   })), U = (0, d.useWindowDispatch)();
@@ -78,7 +78,7 @@ function g(e) {
             var i;
             M({
               action: "PRESS_BADGE"
-            }), (0, A.trackUserProfileBadgePressed)({
+            }), (0, h.trackUserProfileBadgePressed)({
               badge: e.id,
               analyticsLocations: v,
               ...y
@@ -90,9 +90,9 @@ function g(e) {
           },
           onMouseEnter: () => {
             var n;
-            e.id === h.QUEST_COMPLETED_BADGE && (f.default.track(O.AnalyticEvents.QUEST_CONTENT_VIEWED, {
+            e.id === A.QUEST_COMPLETED_BADGE && (f.default.track(O.AnalyticEvents.QUEST_CONTENT_VIEWED, {
               ...(0, I.getContentProperties)(T.QuestContent.QUEST_BADGE)
-            }), (0, A.trackUserProfileBadgeHovered)({
+            }), (0, h.trackUserProfileBadgeHovered)({
               badge: e.id,
               analyticsLocations: v,
               ...y

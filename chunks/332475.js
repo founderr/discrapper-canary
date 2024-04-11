@@ -18,8 +18,8 @@ var i, r = n("735250"),
   T = n("768760"),
   f = n("981631"),
   S = n("689938"),
-  A = n("457731"),
-  h = n("167969"),
+  h = n("457731"),
+  A = n("167969"),
   m = n("557256");
 
 function N(e, t, n) {
@@ -42,9 +42,9 @@ class O extends(i = s.PureComponent) {
       placeholderVersion: l,
       alt: d,
       width: E,
-      height: h,
+      height: A,
       maxWidth: m = E,
-      maxHeight: N = h,
+      maxHeight: N = A,
       minWidth: O,
       minHeight: C,
       mediaLayoutType: g,
@@ -59,10 +59,10 @@ class O extends(i = s.PureComponent) {
       useFullWidth: G = !1,
       ...w
     } = this.props;
-    if (1 === E && 1 === h) return null;
+    if (1 === E && 1 === A) return null;
     let k = (0, c.fit)({
         width: E,
-        height: h,
+        height: A,
         maxWidth: m,
         maxHeight: N,
         minWidth: O,
@@ -92,10 +92,10 @@ class O extends(i = s.PureComponent) {
       ringTarget: this._containerRef,
       focusTarget: this._clickableRef,
       children: (0, r.jsxs)("div", {
-        className: o()(A.imageWrapper, {
-          [A.imageZoom]: v,
-          [A.imageWrapperBackground]: i !== f.ImageReadyStates.READY,
-          [A.clickable]: null != U
+        className: o()(h.imageWrapper, {
+          [h.imageZoom]: v,
+          [h.imageWrapperBackground]: i !== f.ImageReadyStates.READY,
+          [h.clickable]: null != U
         }, t),
         style: function(e, t, n, i) {
           return i === T.MediaLayoutType.MOSAIC ? {
@@ -115,13 +115,13 @@ class O extends(i = s.PureComponent) {
           tabIndex: -1,
           onClick: U,
           "aria-hidden": !0,
-          className: A.originalLink,
+          className: h.originalLink,
           href: M,
           ref: this._containerRef,
           "data-role": "img",
           "data-safe-src": s
         }), null != U ? (0, r.jsx)(u.Clickable, {
-          className: A.clickableWrapper,
+          className: h.clickableWrapper,
           tabIndex: null != b ? b : 0,
           onClick: U,
           "aria-label": null != d ? d : S.default.Messages.IMAGE,
@@ -132,7 +132,7 @@ class O extends(i = s.PureComponent) {
           },
           children: e
         }) : e, null != V ? (0, r.jsx)("div", {
-          className: A.imageAccessory,
+          className: h.imageAccessory,
           children: V
         }) : null]
       })
@@ -150,7 +150,7 @@ function p(e) {
     alt: i
   } = e, s = (0, d.default)();
   return (0, r.jsx)("div", {
-    className: A.imageErrorWrapper,
+    className: h.imageErrorWrapper,
     style: function(e, t) {
       switch (t) {
         case T.MediaLayoutType.MOSAIC:
@@ -166,8 +166,8 @@ function p(e) {
       }
     }(t, n),
     children: (0, r.jsx)("img", {
-      src: (0, l.isThemeLight)(s) ? m : h,
-      className: A.imageError,
+      src: (0, l.isThemeLight)(s) ? m : A,
+      className: h.imageError,
       alt: null != i ? i : S.default.Messages.IMAGE
     })
   })

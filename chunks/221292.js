@@ -51,8 +51,8 @@ let f = e => {
       n = s.default.isMobileOnline(e);
     return t === T.StatusTypes.ONLINE && n ? "".concat(t, "-mobile") : t === T.StatusTypes.ONLINE ? "".concat(t, "-desktop") : t
   },
-  A = e => null == e ? e : Object.keys(I.ActivityTypes)[Object.values(I.ActivityTypes).indexOf(e)],
-  h = e => {
+  h = e => null == e ? e : Object.keys(I.ActivityTypes)[Object.values(I.ActivityTypes).indexOf(e)],
+  A = e => {
     var t, n;
     let {
       layout: i,
@@ -115,7 +115,7 @@ let f = e => {
     u.default.track(I.AnalyticEvents.USER_PROFILE_ACTION, {
       ...(0, i.collectGuildAnalyticsMetadata)(n),
       ...(0, i.collectChannelAnalyticsMetadataFromId)(r),
-      ...h({
+      ...A({
         layout: l,
         userId: t,
         guildId: n
@@ -141,14 +141,14 @@ let f = e => {
     u.default.track(I.AnalyticEvents.USER_PROFILE_ACTIVITY_JOINED, {
       ...(0, i.collectGuildAnalyticsMetadata)(n),
       ...(0, i.collectChannelAnalyticsMetadataFromId)(r),
-      ...h({
+      ...A({
         layout: a,
         userId: t,
         guildId: n
       }),
       ...m(t),
       location_stack: s,
-      activity_type: null != l ? "VOICE" : A(null == o ? void 0 : o.type),
+      activity_type: null != l ? "VOICE" : h(null == o ? void 0 : o.type),
       activity_name: null == o ? void 0 : o.name,
       activity_platform: null == o ? void 0 : o.platform,
       activity_session_id: null == o ? void 0 : o.session_id,
@@ -168,7 +168,7 @@ let f = e => {
     u.default.track(I.AnalyticEvents.USER_PROFILE_BADGE_PRESSED, {
       ...(0, i.collectGuildAnalyticsMetadata)(n),
       ...(0, i.collectChannelAnalyticsMetadataFromId)(r),
-      ...h({
+      ...A({
         layout: a,
         userId: t,
         guildId: n
@@ -192,7 +192,7 @@ let f = e => {
     u.default.track(I.AnalyticEvents.USER_PROFILE_RECENT_GAMES_VIEWED, {
       ...(0, i.collectGuildAnalyticsMetadata)(n),
       ...(0, i.collectChannelAnalyticsMetadataFromId)(r),
-      ...h({
+      ...A({
         layout: a,
         userId: t,
         guildId: n
@@ -216,7 +216,7 @@ let f = e => {
     u.default.track(I.AnalyticEvents.USER_PROFILE_BADGE_HOVERED, {
       ...(0, i.collectGuildAnalyticsMetadata)(n),
       ...(0, i.collectChannelAnalyticsMetadataFromId)(r),
-      ...h({
+      ...A({
         layout: a,
         userId: t,
         guildId: n

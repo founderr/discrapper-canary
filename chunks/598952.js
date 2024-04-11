@@ -1,44 +1,44 @@
 "use strict";
-a.r(e), a.d(e, {
+a.r(t), a.d(t, {
   default: function() {
     return u
   }
 });
-var n = a("735250");
+var s = a("735250");
 a("470079");
-var s = a("481060"),
-  l = a("682864"),
-  i = a("210712"),
+var n = a("481060"),
+  i = a("682864"),
+  l = a("210712"),
   r = a("406743");
 
-function u(t) {
-  var e;
+function u(e) {
+  var t;
   let {
     attachment: a
-  } = t, u = null !== (e = a.size) && void 0 !== e ? e : 0;
-  return (0, n.jsxs)("div", {
+  } = e, u = null !== (t = a.size) && void 0 !== t ? t : 0;
+  return (0, s.jsxs)("div", {
     className: r.container,
-    children: [(0, n.jsx)(i.default, {
+    children: [(0, s.jsx)(l.default, {
       width: 16,
       height: 16,
       className: r.fileIcon
-    }), (0, n.jsx)(l.default, {
+    }), (0, s.jsx)(i.default, {
       size: 8,
       horizontal: !0
-    }), (0, n.jsx)(s.Text, {
+    }), (0, s.jsx)(n.Text, {
       variant: "text-sm/normal",
       color: "text-normal",
       className: r.fileName,
       children: a.filename
-    }), (0, n.jsx)(l.default, {
+    }), (0, s.jsx)(i.default, {
       size: 8,
       horizontal: !0
-    }), (0, n.jsx)("div", {
+    }), (0, s.jsx)("div", {
       className: r.dot
-    }), (0, n.jsx)(l.default, {
+    }), (0, s.jsx)(i.default, {
       size: 8,
       horizontal: !0
-    }), (0, n.jsxs)(s.Text, {
+    }), (0, s.jsxs)(n.Text, {
       variant: "text-sm/normal",
       color: "text-muted",
       children: [Math.round(u / 1024 / 1024 * 100) / 100, "MB"]

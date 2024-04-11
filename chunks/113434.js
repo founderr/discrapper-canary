@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return O
   },
   useQuestFormattedDate: function() {
-    return A
+    return h
   },
   useQuestFromActivities: function() {
     return N
@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return T
   },
   useShouldShowSettingBadgeForQuests: function() {
-    return h
+    return A
   }
 }), n("47120"), n("653041");
 var i = n("470079"),
@@ -94,7 +94,7 @@ function S(e) {
   }, [e, t])
 }
 
-function A(e) {
+function h(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
       dateStyle: "short"
     },
@@ -102,7 +102,7 @@ function A(e) {
   return i.useMemo(() => null == e ? "" : new Date(e).toLocaleDateString(n, t), [e, t, n])
 }
 
-function h() {
+function A() {
   let {
     quests: e,
     isFetchingCurrentQuests: t
@@ -131,7 +131,7 @@ function h() {
 }
 
 function m() {
-  let e = h();
+  let e = A();
   i.useEffect(() => {
     for (let t of e)(0, l.dismissQuestContent)(t, c.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE)
   }, [e])

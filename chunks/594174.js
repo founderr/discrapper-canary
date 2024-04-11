@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ASSISTANT_WUMPUS_VOICE_USER: function() {
-    return h
+    return A
   },
   mergeUser: function() {
     return p
@@ -36,14 +36,14 @@ function f(e, t, n) {
   }) : e[t] = n, e
 }
 let S = {},
-  A = 0,
-  h = "47835198259242069";
+  h = 0,
+  A = "47835198259242069";
 
 function m(e, t, n) {
   let i = e;
   i = null == n ? e.removeGuildAvatarHash(t) : e.addGuildAvatarHash(t, n), S[e.id] = i;
   let r = e !== i;
-  return r && A++, r
+  return r && h++, r
 }
 
 function N(e) {
@@ -85,7 +85,7 @@ function p(e) {
     }(n)), i = i.merge(n)
   }(0, l.validatePremiumType)((0, l.isStaffEnv)(i), t, i.premiumType);
   let a = S[e.id] !== i;
-  return S[e.id] = i, a && A++, a
+  return S[e.id] = i, a && h++, a
 }
 
 function R(e, t) {
@@ -128,8 +128,8 @@ function L(e) {
       let n = S[t.user.id];
       null != n && m(n, e.id, t.avatar)
     })
-  }), null != S[c.default.getId()] && (S[h] = new u.default({
-    id: h,
+  }), null != S[c.default.getId()] && (S[A] = new u.default({
+    id: A,
     username: "Wumpus",
     discriminator: "0",
     globalName: "Wumpus",
@@ -532,14 +532,14 @@ function eS(e) {
   return [...t, ...i].reduce((e, t) => p(t) || e, !1)
 }
 
-function eA(e) {
+function eh(e) {
   let {
     users: t
   } = e;
   return t.reduce((e, t) => p(t) || e, !1)
 }
 
-function eh(e) {
+function eA(e) {
   let {
     users: t
   } = e;
@@ -605,7 +605,7 @@ class eR extends E.default {
       }
   }
   getUserStoreVersion() {
-    return A
+    return h
   }
   getUser(e) {
     if (null != e) return S[e]
@@ -693,10 +693,10 @@ class eR extends E.default {
       PRIVATE_CHANNEL_INTEGRATION_CREATE: eT,
       PRIVATE_CHANNEL_INTEGRATION_UPDATE: ef,
       FAMILY_CENTER_INITIAL_LOAD: eS,
-      FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: eA,
+      FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: eh,
       FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eN,
       FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eO,
-      FAMILY_CENTER_REQUEST_LINK_SUCCESS: eh,
+      FAMILY_CENTER_REQUEST_LINK_SUCCESS: eA,
       FRIEND_FINDER_PYMK_LOADED: em,
       MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: ep
     })

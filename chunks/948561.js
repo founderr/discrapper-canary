@@ -22,8 +22,8 @@ var r = n("952639"),
   T = n("433355"),
   f = n("592125"),
   S = n("375954"),
-  A = n("944486"),
-  h = n("914010"),
+  h = n("944486"),
+  A = n("914010"),
   m = n("709054"),
   N = n("93735"),
   O = n("522664"),
@@ -192,7 +192,7 @@ function B(e) {
     let e = null !== (a = null !== (s = S.default.getMessage(o.channel_id, o.id)) && void 0 !== s ? s : C.default.getMessage(o.id, o.channel_id)) && void 0 !== a ? a : null === (r = E.default.getMessage(o.channel_id, o.id)) || void 0 === r ? void 0 : r.message;
     null != e && !(0, N.hasUnscannedAttachmentsOrEmbedsForTimeout)((0, _.updateMessageRecord)(e, o)) && U(e, R.TimeoutCancelSource.UPDATE)
   }
-  let l = A.default.getChannelId(),
+  let l = h.default.getChannelId(),
     u = T.default.getCurrentSidebarChannelId(l);
   if (!(o.channel_id === l || o.channel_id === u)) return !1;
   let d = S.default.getMessage(o.channel_id, o.id);
@@ -210,7 +210,7 @@ function V(e) {
     isPushNotification: a
   } = e;
   if (!(0, p.isEligibleForExplicitMediaRedaction)() || s || a || null == i || (null === (t = r.author) || void 0 === t ? void 0 : t.id) === I.default.getId()) return !1;
-  let o = A.default.getChannelId(),
+  let o = h.default.getChannelId(),
     l = T.default.getCurrentSidebarChannelId(o),
     u = i === o || i === l,
     d = f.default.getChannel(i);
@@ -228,7 +228,7 @@ function F(e) {
     messages: n
   } = e;
   if (!(0, p.isEligibleForExplicitMediaRedaction)() || null == t || null == n) return !1;
-  let i = A.default.getChannelId(),
+  let i = h.default.getChannelId(),
     r = T.default.getCurrentSidebarChannelId(i);
   return (t === i || t === r) && k(n)
 }
@@ -247,7 +247,7 @@ function H(e) {
     guildId: t,
     threads: n
   } = e;
-  return !!(null != n && (0, p.isEligibleForExplicitMediaRedaction)()) && h.default.getGuildId() === t && k(m.default.keys(n).map(e => n[e].first_message))
+  return !!(null != n && (0, p.isEligibleForExplicitMediaRedaction)()) && A.default.getGuildId() === t && k(m.default.keys(n).map(e => n[e].first_message))
 }
 
 function Y(e) {
@@ -255,7 +255,7 @@ function Y(e) {
     guildId: t,
     firstMessages: n
   } = e;
-  return !!(null != n && (0, p.isEligibleForExplicitMediaRedaction)()) && h.default.getGuildId() === t && k(n, {
+  return !!(null != n && (0, p.isEligibleForExplicitMediaRedaction)()) && A.default.getGuildId() === t && k(n, {
     forceBatchScan: !0
   })
 }
@@ -264,7 +264,7 @@ function j(e) {
   let {
     channelId: t
   } = e;
-  return !!(null != t && (0, p.isEligibleForExplicitMediaRedaction)()) && t === A.default.getChannelId() && z(t)
+  return !!(null != t && (0, p.isEligibleForExplicitMediaRedaction)()) && t === h.default.getChannelId() && z(t)
 }
 
 function W(e) {
@@ -273,7 +273,7 @@ function W(e) {
     local: n
   } = e;
   if (!(0, p.isEligibleForExplicitMediaRedaction)() || !n || t.type !== L.UserSettingsTypes.PRELOADED_USER_SETTINGS) return !1;
-  let i = A.default.getChannelId();
+  let i = h.default.getChannelId();
   return null != i && z(i)
 }
 

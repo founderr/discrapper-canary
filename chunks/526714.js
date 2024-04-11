@@ -31,7 +31,7 @@ function d(e) {
       var e, t;
       (null === (t = f.current) || void 0 === t ? void 0 : null === (e = t.activate) || void 0 === e ? void 0 : e.call(t)) && I()
     }, [I]),
-    A = s({
+    h = s({
       onClose: I,
       disabled: d,
       isFocused: _
@@ -51,6 +51,6 @@ function d(e) {
         className: u.label,
         children: n
       })
-    }) : null, A]
+    }) : null, h]
   })
 }

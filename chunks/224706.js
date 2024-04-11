@@ -15,8 +15,8 @@ var i = n("664751"),
   T = n("877481"),
   f = n("358085"),
   S = n("278323"),
-  A = n("58642"),
-  h = n("254854"),
+  h = n("58642"),
+  A = n("254854"),
   m = n("981631"),
   N = n("701488"),
   O = n("689938");
@@ -105,7 +105,7 @@ function R(e, t, n) {
       pids: t
     })
   }).catch(t => {
-    h.default.show(m.NoticeTypes.LAUNCH_GAME_FAILURE, O.default.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND), s.default.dispatch({
+    A.default.show(m.NoticeTypes.LAUNCH_GAME_FAILURE, O.default.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND), s.default.dispatch({
       type: "GAME_LAUNCH_FAIL",
       applicationId: e,
       error: S
@@ -129,7 +129,7 @@ t.default = {
       let e = c.default.getActiveLibraryApplication(n.id);
       if (null != e) {
         let t = I.toggleFlag(e.getFlags(), m.LibraryApplicationFlags.OVERLAY_DISABLED);
-        A.updateFlags(e.id, e.branchId, t);
+        h.updateFlags(e.id, e.branchId, t);
         return
       }
     }

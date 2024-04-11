@@ -25,7 +25,7 @@ function S(e) {
       return ""
   }
 }
-let A = [...s()(T.ChannelTextAreaIntegrations).values().map(e => ({
+let h = [...s()(T.ChannelTextAreaIntegrations).values().map(e => ({
   id: e.commandId,
   name: e.command,
   displayName: e.command,
@@ -116,4 +116,4 @@ let A = [...s()(T.ChannelTextAreaIntegrations).values().map(e => ({
     }))
   }
 }];
-t.default = A
+t.default = h

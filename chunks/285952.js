@@ -80,7 +80,7 @@ let I = e => {
     grow: T,
     basis: f,
     style: S,
-    ...A
+    ...h
   } = e;
   return (0, i.jsx)("div", {
     style: {
@@ -90,7 +90,7 @@ let I = e => {
       ...S
     },
     className: a()(o.flex, r, s, l, E, n),
-    ...A,
+    ...h,
     children: t
   })
 };

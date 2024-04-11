@@ -85,7 +85,7 @@ n.r(t), n.d(t, {
     return f
   },
   questsEntitlementsFromServer: function() {
-    return h
+    return A
   },
   questsRewardCodeFromServer: function() {
     return S
@@ -194,7 +194,7 @@ function S(e) {
   }
 }
 
-function A(e) {
+function h(e) {
   return {
     skuId: e.sku_id,
     tenantMetadata: function(e) {
@@ -223,10 +223,10 @@ function A(e) {
   }
 }
 
-function h(e) {
+function A(e) {
   return {
     claimedAt: e.claimed_at,
-    items: e.entitlements.map(A),
+    items: e.entitlements.map(h),
     errors: e.errors
   }
 }

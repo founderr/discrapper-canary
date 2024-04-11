@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   fetchBroadcasterBuckets: function() {
-    return A
+    return h
   },
   getGameName: function() {
     return I
   },
   maybeFetchBroadcastChannels: function() {
-    return h
+    return A
   },
   startBroadcastForStream: function() {
     return T
@@ -93,7 +93,7 @@ function S(e) {
     data: t
   })
 }
-async function A() {
+async function h() {
   let e = c.default.getUserIdsToValidate();
   try {
     let t = await i.HTTP.get({
@@ -116,7 +116,7 @@ async function A() {
     S(e)
   }
 }
-async function h() {
+async function A() {
   let e = c.default.getBroadcastsToValidateChannels().filter(e => null == e.viewers).map(e => e.channelId);
   if (0 !== e.length) try {
     let t = await i.HTTP.get({

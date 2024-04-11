@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   attachToProcess: function() {
-    return h
+    return A
   },
   cancelAttachToProcess: function() {
     return m
@@ -32,7 +32,7 @@ function S() {
   var e;
   return !(null === E.default || void 0 === E.default ? void 0 : null === (e = E.default.isModuleVersionAtLeast) || void 0 === e ? void 0 : e.call(E.default, "discord_hook", f))
 }
-async function A() {
+async function h() {
   if (!(0, c.isWindows)()) return Promise.reject(Error("Hook is only available on Windows"));
   if (S()) return Promise.reject(Error("Hook module is too old"));
   await E.default.ensureModule("discord_hook");
@@ -51,8 +51,8 @@ async function A() {
   }(e), e
 }(r = i || (i = {}))[r.None = 0] = "None", r[r.EnableCrashReporting = 1] = "EnableCrashReporting", r[r.EnableCrashTrigger = 2] = "EnableCrashTrigger";
 
-function h(e, t) {
-  return A().then(n => {
+function A(e, t) {
+  return h().then(n => {
     var i;
     let r = null === (i = l.default.getGameForPID(e)) || void 0 === i ? void 0 : i.name,
       d = u.default.getGameByName(r),
@@ -81,7 +81,7 @@ function h(e, t) {
 }
 
 function m(e) {
-  return A().then(t => {
+  return h().then(t => {
     t.cancelAttachToProcess(e)
   })
 }

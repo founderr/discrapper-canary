@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   Button: function() {
-    return h
+    return A
   },
   ButtonBorderColors: function() {
     return T
@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return S
   },
   getButtonStyle: function() {
-    return A
+    return h
   }
 });
 var i = n("735250"),
@@ -90,7 +90,7 @@ let E = {
     ICON: c.sizeIcon
   };
 
-function A() {
+function h() {
   let {
     look: e = E.FILLED,
     color: t = I.BRAND,
@@ -110,7 +110,7 @@ function A() {
   })
 }
 
-function h(e) {
+function A(e) {
   let {
     look: t = E.FILLED,
     color: n = I.BRAND,
@@ -118,7 +118,7 @@ function h(e) {
     hover: o,
     size: T = S.MEDIUM,
     fullWidth: f = !1,
-    grow: h = !0,
+    grow: A = !0,
     disabled: m = !1,
     submitting: N = !1,
     type: O = "button",
@@ -176,14 +176,14 @@ function h(e) {
       disabled: m,
       style: p,
       rel: G,
-      className: a()(C, A({
+      className: a()(C, h({
         look: t,
         color: n,
         borderColor: s,
         hover: o,
         size: T,
         fullWidth: f,
-        grow: h,
+        grow: A,
         submitting: N,
         disabled: m
       }), Y ? null : R),
@@ -199,7 +199,7 @@ function h(e) {
   });
   return Y ? (0, i.jsxs)("span", {
     className: a()(c.disabledButtonWrapper, R, T, {
-      [c.grow]: h,
+      [c.grow]: A,
       [c.fullWidth]: f
     }),
     children: [K, (0, i.jsx)("span", {
@@ -221,8 +221,8 @@ function m(e) {
     grow: d = !0,
     style: _,
     className: T,
-    innerClassName: A,
-    to: h,
+    innerClassName: h,
+    to: A,
     onClick: m,
     onMouseDown: N,
     onMouseUp: O,
@@ -232,7 +232,7 @@ function m(e) {
   } = e;
   return (0, i.jsx)(o.Link, {
     ...C,
-    to: h,
+    to: A,
     onClick: m,
     onMouseUp: O,
     onMouseDown: N,
@@ -244,9 +244,9 @@ function m(e) {
       [c.hasHover]: null != s && s !== f.DEFAULT
     }),
     children: (0, i.jsx)("span", {
-      className: a()(c.contents, A),
+      className: a()(c.contents, h),
       children: p
     })
   })
 }
-h.Looks = E, h.Colors = I, h.BorderColors = T, h.Hovers = f, h.Sizes = S, h.Link = m
+A.Looks = E, A.Colors = I, A.BorderColors = T, A.Hovers = f, A.Sizes = S, A.Link = m

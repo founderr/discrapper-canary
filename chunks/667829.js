@@ -19,8 +19,8 @@ var i = n("735250"),
   T = n("911969"),
   f = n("476326"),
   S = n("998698"),
-  A = n("710845"),
-  h = n("117530"),
+  h = n("710845"),
+  A = n("117530"),
   m = n("459273"),
   N = n("403182"),
   O = n("541716"),
@@ -41,7 +41,7 @@ function y(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-new A.default("ChannelEditor.tsx");
+new h.default("ChannelEditor.tsx");
 let P = function() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n]
   },
@@ -177,8 +177,8 @@ class b extends r.Component {
       onSubmit: T,
       channel: f,
       type: S,
-      fontSize: A,
-      useSlate: h,
+      fontSize: h,
+      useSlate: A,
       spellcheckEnabled: N,
       useNewSlashCommands: R,
       canOnlyUseTextCommands: L,
@@ -196,7 +196,7 @@ class b extends r.Component {
     } = this.state, x = {
       channel: f,
       className: a()(v, M.textArea, {
-        [M.textAreaSlate]: h,
+        [M.textAreaSlate]: A,
         [M.textAreaDisabled]: d || V
       }),
       id: y,
@@ -219,7 +219,7 @@ class b extends r.Component {
       onResize: I,
       onKeyDown: E,
       onSubmit: T,
-      textAreaPaddingClassName: a()(U[A], {
+      textAreaPaddingClassName: a()(U[h], {
         [M.textAreaWithoutAttachmentButton]: S !== O.ChatInputTypes.NORMAL && S !== O.ChatInputTypes.OVERLAY && S !== O.ChatInputTypes.THREAD_CREATION && S !== O.ChatInputTypes.SIDEBAR,
         [M.textAreaForPostCreation]: S === O.ChatInputTypes.CREATE_FORUM_POST,
         [M.textAreaCustomGift]: S === O.ChatInputTypes.CUSTOM_GIFT
@@ -236,7 +236,7 @@ class b extends r.Component {
       "aria-describedby": w,
       "aria-labelledby": k,
       "aria-autocomplete": "list"
-    }, H = h ? (0, i.jsx)(g.default, {
+    }, H = A ? (0, i.jsx)(g.default, {
       ref: this.ref,
       ...x,
       type: S,
@@ -419,7 +419,7 @@ class b extends r.Component {
           u = null,
           d = S.default.getActiveOption(t.id);
         null != (u = (null == d ? void 0 : d.type) === T.ApplicationCommandOptionType.ATTACHMENT ? d : null === (s = o.options) || void 0 === s ? void 0 : s.find(e => {
-          if (e.type === T.ApplicationCommandOptionType.ATTACHMENT) return null == h.default.getUpload(t.id, e.name, l)
+          if (e.type === T.ApplicationCommandOptionType.ATTACHMENT) return null == A.default.getUpload(t.id, e.name, l)
         })) && I.default.setFile({
           channelId: t.id,
           id: u.name,

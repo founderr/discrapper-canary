@@ -11,8 +11,8 @@ let _ = !1,
   T = new Set,
   f = new Set,
   S = new Set,
-  A = new Set,
-  h = new Map,
+  h = new Set,
+  A = new Map,
   m = new Map,
   N = new Map;
 
@@ -36,8 +36,8 @@ function O(e, t) {
 }
 
 function p(e, t) {
-  let n = new Map(h);
-  n.set(e, t), h = n
+  let n = new Map(A);
+  n.set(e, t), A = n
 }
 
 function R(e, t) {
@@ -62,8 +62,8 @@ function g(e) {
 }
 
 function L(e) {
-  let t = new Set(A);
-  t.delete(e), A = t
+  let t = new Set(h);
+  t.delete(e), h = t
 }
 class D extends(i = l.default.Store) {
   get quests() {
@@ -88,10 +88,10 @@ class D extends(i = l.default.Store) {
     return S.has(e)
   }
   isDismissingContent(e) {
-    return A.has(e)
+    return h.has(e)
   }
   getRewardCode(e) {
-    return h.get(e)
+    return A.get(e)
   }
   getRewards(e) {
     return m.get(e)
@@ -257,8 +257,8 @@ a = "QuestsStore", (s = "displayName") in(r = D) ? Object.defineProperty(r, s, {
   QUESTS_DISMISS_CONTENT_BEGIN: function(e) {
     let {
       questId: t
-    } = e, n = new Set(A);
-    n.add(t), A = n
+    } = e, n = new Set(h);
+    n.add(t), h = n
   },
   QUESTS_DISMISS_CONTENT_SUCCESS: function(e) {
     let {
@@ -292,7 +292,7 @@ a = "QuestsStore", (s = "displayName") in(r = D) ? Object.defineProperty(r, s, {
     } = e;
     O(t.questId, {
       userStatus: t
-    }), null == t.claimedAt && (h = new Map(h)).delete(t.questId)
+    }), null == t.claimedAt && (A = new Map(A)).delete(t.questId)
   },
   QUESTS_OPTIMISTIC_PROGRESS_UPDATE: function(e) {
     let {

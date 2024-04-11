@@ -2,7 +2,7 @@
 let i, r;
 n.r(t), n.d(t, {
   AnalyticsActionHandlers: function() {
-    return h.AnalyticsActionHandlers
+    return A.AnalyticsActionHandlers
   },
   Impression: function() {
     return m.Impression
@@ -32,10 +32,10 @@ n.r(t), n.d(t, {
     return m.TypedEventProperties
   },
   analyticsTrackingStoreMaker: function() {
-    return h.analyticsTrackingStoreMaker
+    return A.analyticsTrackingStoreMaker
   },
   encodeProperties: function() {
-    return A.encodeProperties
+    return h.encodeProperties
   },
   extendSuperProperties: function() {
     return b
@@ -72,8 +72,8 @@ var s, a, o, l = n("348327"),
   T = n("433517"),
   f = n("298444"),
   S = n("979675"),
-  A = n("947486"),
-  h = n("699407"),
+  h = n("947486"),
+  A = n("699407"),
   m = n("20281"),
   N = n("525769");
 let O = "deviceProperties",
@@ -237,14 +237,14 @@ function b(e) {
   i = {
     ...i,
     ...e
-  }, r = (0, A.encodeProperties)(i)
+  }, r = (0, h.encodeProperties)(i)
 }
 b(function() {
   var e, t, n;
   let i = {},
     r = window.GLOBAL_ENV.RELEASE_CHANNEL;
   r && (i.release_channel = r.split("-")[0]);
-  let s = parseInt((n = "283615", "283615"), 10);
+  let s = parseInt((n = "283657", "283657"), 10);
   !isNaN(s) && (i.client_build_number = s);
   let a = null == g ? void 0 : null === (e = (t = g.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
   return !isNaN(a) && (i.native_build_number = a), i.client_event_source = function() {

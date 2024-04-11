@@ -21,8 +21,8 @@ let I = r.forwardRef(function(e, t) {
     query: T,
     onChange: f,
     loading: S = !1,
-    disabled: A = !1,
-    placeholder: h = c.default.Messages.SEARCH,
+    disabled: h = !1,
+    placeholder: A = c.default.Messages.SEARCH,
     "aria-label": m
   } = e, N = r.useRef(null), O = r.useRef(null);
   r.useImperativeHandle(t, () => ({
@@ -94,8 +94,8 @@ let I = r.forwardRef(function(e, t) {
         value: T,
         onChange: e => f(e.currentTarget.value),
         "aria-label": m,
-        placeholder: h,
-        disabled: A
+        placeholder: A,
+        disabled: h
       }), p]
     })
   })

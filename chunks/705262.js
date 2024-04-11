@@ -20,8 +20,8 @@ var i, r, s = n("735250"),
   T = n("607070"),
   f = n("100527"),
   S = n("906732"),
-  A = n("98278"),
-  h = n("639119"),
+  h = n("98278"),
+  A = n("639119"),
   m = n("165583"),
   N = n("587446"),
   O = n("781391"),
@@ -95,7 +95,7 @@ let V = Object.freeze({
       isPreview: r,
       isCoachmark: a
     } = e;
-    if ((null === (n = (0, h.usePremiumTrialOffer)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === U.PremiumSubscriptionSKUs.TIER_2 && r) return null;
+    if ((null === (n = (0, A.usePremiumTrialOffer)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === U.PremiumSubscriptionSKUs.TIER_2 && r) return null;
     let o = (0, u.match)({
       type: i,
       isPreview: r,
@@ -104,7 +104,7 @@ let V = Object.freeze({
       type: "EDITOR",
       isPreview: !0
     }, () => k.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
-      onPremiumClick: A.navigateToPremiumMarketingPage
+      onPremiumClick: h.navigateToPremiumMarketingPage
     })).with({
       type: "EDITOR",
       isCoachmark: !0
@@ -114,7 +114,7 @@ let V = Object.freeze({
     }, () => k.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION).with({
       isPreview: !0
     }, () => k.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_WITH_LINK.format({
-      onPremiumClick: A.navigateToPremiumMarketingPage
+      onPremiumClick: h.navigateToPremiumMarketingPage
     })).otherwise(() => k.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_SETTINGS);
     return (0, s.jsx)(E.Heading, {
       variant: "text-sm/normal",
@@ -187,7 +187,7 @@ j.Basic = e => {
   } = (0, S.default)(f.default.CLIENT_THEMES_THEME_SELECTOR), [N, p, R] = (0, d.useStateFromStoresArray)([v.default], () => {
     var e;
     return [v.default.isPreview, v.default.isCoachmark, null === (e = v.default.gradientPreset) || void 0 === e ? void 0 : e.id]
-  }), [g, L] = a.useState(!1), [P, G] = a.useState(-1), w = (0, d.useStateFromStores)([T.default], () => T.default.useReducedMotion), V = (null === (i = (0, h.usePremiumTrialOffer)()) || void 0 === i ? void 0 : null === (t = i.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === U.PremiumSubscriptionSKUs.TIER_2;
+  }), [g, L] = a.useState(!1), [P, G] = a.useState(-1), w = (0, d.useStateFromStores)([T.default], () => T.default.useReducedMotion), V = (null === (i = (0, A.usePremiumTrialOffer)()) || void 0 === i ? void 0 : null === (t = i.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === U.PremiumSubscriptionSKUs.TIER_2;
   a.useEffect(() => {
     (P === y.BACKGROUND_GRADIENT_PRESETS.length - 2 && "EDITOR" === u || R === _.BackgroundGradientPresetId.EASTER_EGG) && L(!0)
   }, [P, u, R]);
@@ -217,7 +217,7 @@ j.Basic = e => {
       type: U.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
       subscriptionTier: U.PremiumSubscriptionSKUs.TIER_2,
       children: k.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
-        onPremiumClick: A.navigateToPremiumMarketingPage
+        onPremiumClick: h.navigateToPremiumMarketingPage
       })
     }) : (0, s.jsxs)("div", {
       className: B.header,

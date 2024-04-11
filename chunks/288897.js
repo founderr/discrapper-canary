@@ -15,8 +15,8 @@ var i = n("735250"),
   T = n("887490"),
   f = n("77224"),
   S = n("135223"),
-  A = n("704875"),
-  h = n("653309"),
+  h = n("704875"),
+  A = n("653309"),
   m = n("559366"),
   N = n("931093");
 
@@ -68,7 +68,7 @@ class p extends r.PureComponent {
       ...a.style,
       textAlign: "right"
     });
-    let l = null !== (t = null == s ? void 0 : s(e)) && void 0 !== t ? t : (0, A.default)(e, n, r);
+    let l = null !== (t = null == s ? void 0 : s(e)) && void 0 !== t ? t : (0, h.default)(e, n, r);
     return null != l ? l : (0, i.jsx)("div", {
       ...a,
       children: o
@@ -82,7 +82,7 @@ class p extends r.PureComponent {
     } = this.props, {
       attributes: s,
       children: a
-    } = e, o = null !== (t = null == r ? void 0 : r(e)) && void 0 !== t ? t : (0, h.default)(n, e);
+    } = e, o = null !== (t = null == r ? void 0 : r(e)) && void 0 !== t ? t : (0, A.default)(n, e);
     return null != o ? o : (0, i.jsx)("span", {
       ...s,
       children: a
@@ -299,8 +299,8 @@ class p extends r.PureComponent {
       onKeyUp: T,
       decorateExtra: f,
       renderExtraElement: S,
-      renderExtraLeaf: A,
-      ...h
+      renderExtraLeaf: h,
+      ...A
     } = this.props;
     return (0, i.jsxs)("div", {
       ref: this.containerRef,
@@ -313,7 +313,7 @@ class p extends r.PureComponent {
         editor: e,
         value: [...this.state.initialValue],
         children: (0, i.jsx)(o.Editable, {
-          ...h,
+          ...A,
           className: a()(N.markup, m.editor, t),
           decorate: this.decorate,
           renderElement: this.renderElement,

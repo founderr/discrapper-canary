@@ -58,10 +58,10 @@ n.r(t), n.d(t, {
     return g
   },
   trackForumSearchCleared: function() {
-    return h
+    return A
   },
   trackForumSearched: function() {
-    return A
+    return h
   },
   trackForumSortOrderUpdated: function() {
     return v
@@ -111,7 +111,7 @@ function S(e) {
   })
 }
 
-function A(e) {
+function h(e) {
   let {
     guildId: t,
     channelId: n,
@@ -127,7 +127,7 @@ function A(e) {
   })
 }
 
-function h(e) {
+function A(e) {
   let {
     guildId: t,
     channelId: n
@@ -203,8 +203,8 @@ function p(e) {
     E = l.default.getDraft(u, l.DraftType.FirstThreadMessage),
     I = null == E || 0 === E.length || (null == E ? void 0 : E.trim()) === c,
     S = (null == _ ? void 0 : _.appliedTags) == null || (null == _ ? void 0 : null === (n = _.appliedTags) || void 0 === n ? void 0 : n.size) === 0,
-    A = (null == _ ? void 0 : _.name) == null || (null == _ ? void 0 : null === (s = _.name) || void 0 === s ? void 0 : null === (i = s.trim()) || void 0 === i ? void 0 : i.length) === 0;
-  (!I || !S || !A) && r.default.trackWithMetadata(f.AnalyticEvents.FORUM_CHANNEL_NEW_POST_DRAFT_CREATED, {
+    h = (null == _ ? void 0 : _.name) == null || (null == _ ? void 0 : null === (s = _.name) || void 0 === s ? void 0 : null === (i = s.trim()) || void 0 === i ? void 0 : i.length) === 0;
+  (!I || !S || !h) && r.default.trackWithMetadata(f.AnalyticEvents.FORUM_CHANNEL_NEW_POST_DRAFT_CREATED, {
     ...(0, T.collectForumAnalyticsMetadata)({
       channelId: u
     }),

@@ -31,8 +31,8 @@ var i = n("735250"),
   T = n("213609"),
   f = n("738774"),
   S = n("29598"),
-  A = n("400106"),
-  h = n("944386"),
+  h = n("400106"),
+  A = n("944386"),
   m = n("889564"),
   N = n("687476"),
   O = n("761966"),
@@ -69,7 +69,7 @@ let X = () => ({
     let {
       node: t
     } = e;
-    return (0, h.useTrackOpenPopout)({
+    return (0, A.useTrackOpenPopout)({
       emojiId: t.emojiId,
       currentGuildId: v.default.getGuildId()
     }), (0, i.jsx)(u.Dialog, {
@@ -291,7 +291,7 @@ let X = () => ({
       }),
       e_ = ee && es && !eo && (J && er || !J),
       ec = ed.emojiDescription,
-      eE = (0, h.useTrackOpenPopout)({
+      eE = (0, A.useTrackOpenPopout)({
         emojiId: u.emojiId,
         currentGuildId: eu,
         popoutData: ed,
@@ -302,7 +302,7 @@ let X = () => ({
       eI = ed.type === x.EmojiPopoutType.JOIN_GUILD,
       eT = ed.type === x.EmojiPopoutType.GET_PREMIUM,
       [ef, eS] = r.useState(!1),
-      eA = et || ee && !Z || null != S;
+      eh = et || ee && !Z || null != S;
     return (0, i.jsxs)(H.MessagePopoutContent, {
       className: z.popoutContent,
       children: [(() => {
@@ -372,7 +372,7 @@ let X = () => ({
             children: ea ? K.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_UPGRADE_UPSELL_BUTTON : K.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_PURCHASE_UPSELL_BUTTON
           })]
         })
-      })(), eA && (() => {
+      })(), eh && (() => {
         let e = null != S && !ee && et,
           t = () => {
             e && (null == P || P(), !ef && !w && k.default.track(Y.AnalyticEvents.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, eE), eS(!ef))
@@ -383,7 +383,7 @@ let X = () => ({
             className: z.guildTitle,
             children: ee ? K.default.Messages.EMOJI_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION : K.default.Messages.EMOJI_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION
           }), (0, i.jsx)(q, {
-            expressionSourceGuild: null != S ? S : A.default.createFromGuildRecord(g),
+            expressionSourceGuild: null != S ? S : h.default.createFromGuildRecord(g),
             hasJoinedExpressionSourceGuild: ee,
             isDisplayingJoinGuildButtonInPopout: eI
           }), e && (0, i.jsxs)(i.Fragment, {

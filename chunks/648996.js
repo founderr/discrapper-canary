@@ -19,8 +19,8 @@ var i = n("735250"),
   T = n("957730"),
   f = n("592125"),
   S = n("699516"),
-  A = n("51144"),
-  h = n("838440"),
+  h = n("51144"),
+  A = n("838440"),
   m = n("981631"),
   N = n("689938"),
   O = n("726286");
@@ -36,7 +36,7 @@ function p(e) {
     if ("Enter" === e.key) {
       e.preventDefault(), l()(null != R.current, "Keypress on Input when not mounted");
       let n = R.current.value.trim();
-      return (0, h.applyChatRestrictions)({
+      return (0, A.applyChatRestrictions)({
         type: I.ChatInputTypes.NORMAL,
         content: n,
         channel: null
@@ -52,7 +52,7 @@ function p(e) {
     }
     e.which === m.KeyboardKeys.SPACE && e.stopPropagation()
   }, [t, p]), L = C ? N.default.Messages.QUICK_DM_BLOCKED : N.default.Messages.QUICK_DM_USER.format({
-    name: A.default.getName(t)
+    name: h.default.getName(t)
   });
   return (0, i.jsx)(d.TextInput, {
     className: s,

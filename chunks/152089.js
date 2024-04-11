@@ -33,8 +33,8 @@ function d(e) {
     hideMentionDescription: T,
     hidePersonalInformation: f,
     type: S,
-    emojiIntention: A,
-    editorRef: h,
+    emojiIntention: h,
+    editorRef: A,
     onSendMessage: m,
     onSendSticker: N,
     setValue: O
@@ -52,19 +52,19 @@ function d(e) {
     hideMentionDescription: !0 === T,
     hidePersonalInformation: !0 === f,
     chatInputType: S,
-    emojiIntention: A,
+    emojiIntention: h,
     sendMessage: m,
     sendSticker: N,
     insertText: (e, t) => {
       var n;
-      null === (n = h.current) || void 0 === n || n.insertAutocomplete(e, null != t ? t : e)
+      null === (n = A.current) || void 0 === n || n.insertAutocomplete(e, null != t ? t : e)
     },
     replaceText: (e, t) => {
       O(e, null != t ? t : (0, s.toRichValue)(e))
     },
     getCommandOptionValues: () => {
       var e;
-      return null === (e = h.current) || void 0 === e ? void 0 : e.getCommandOptionValues()
+      return null === (e = A.current) || void 0 === e ? void 0 : e.getCommandOptionValues()
     }
   };
   if (null != n) {
@@ -101,7 +101,7 @@ function c(e) {
     optionText: c
   } = e, E = null;
   for (let e of o.AUTOCOMPLETE_PRIORITY) {
-    var I, T, f, S, A, h;
+    var I, T, f, S, h, A;
     let m = o.AUTOCOMPLETE_OPTIONS[e];
     if (e === l.AutocompleteOptionTypes.GIFS || e === l.AutocompleteOptionTypes.CHOICES) {
       if (i.commands === l.CommandMode.OLD_BUILT_INS) {
@@ -191,7 +191,7 @@ function c(e) {
       E = {
         type: e,
         typeInfo: m,
-        query: r.substring(null !== (h = null === (A = m.sentinel) || void 0 === A ? void 0 : A.length) && void 0 !== h ? h : 0)
+        query: r.substring(null !== (A = null === (h = m.sentinel) || void 0 === h ? void 0 : h.length) && void 0 !== A ? A : 0)
       };
       break
     }

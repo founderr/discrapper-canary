@@ -10,8 +10,8 @@ var a, o, l, u = n("392711"),
   T = n("570140"),
   f = n("586902"),
   S = n("726542"),
-  A = n("524331"),
-  h = n("710845"),
+  h = n("524331"),
+  A = n("710845"),
   m = n("594190"),
   N = n("314897"),
   O = n("553795"),
@@ -52,7 +52,7 @@ let Y = {
   j = {
     SINGLE: "single"
   },
-  W = new h.default("Spotify"),
+  W = new A.default("Spotify"),
   K = new I.Timeout,
   z = new I.Timeout,
   X = new I.Timeout,
@@ -292,8 +292,8 @@ function eT(e, t, n) {
   var i, r, s, a, o, l, u, d, _, c, E;
   let I, f, {
     device: S,
-    progress_ms: A,
-    is_playing: h,
+    progress_ms: h,
+    is_playing: A,
     repeat_state: m,
     item: N,
     context: O
@@ -330,7 +330,7 @@ function eT(e, t, n) {
       ...S,
       is_active: !0
     }), null != O && [y.SpotifyResourceTypes.PLAYLIST, y.SpotifyResourceTypes.ALBUM].includes(O.type)) {
-    let n = eA.getPlayerState(e);
+    let n = eh.getPlayerState(e);
     f = null != n && null != n.context && n.context.uri === O.uri ? Promise.resolve(n.context) : O.type === y.SpotifyResourceTypes.ALBUM ? Promise.resolve(O) : M.SpotifyAPI.get(e, t, {
       url: O.href
     }).then(e => {
@@ -349,9 +349,9 @@ function eT(e, t, n) {
       accountId: e,
       track: I,
       volumePercent: null != S ? S.volume_percent : 0,
-      isPlaying: h,
+      isPlaying: A,
       repeat: "off" !== m,
-      position: A,
+      position: h,
       context: t,
       device: S
     })
@@ -378,7 +378,7 @@ class eS extends(o = c.default.Store) {
         userId: e
       } = r, t = er(e);
       if (null == t) return X.start(B, () => {
-        null != r && r.userId === e && (0, A.default)()
+        null != r && r.userId === e && (0, h.default)()
       }), !1;
       X.stop();
       let {
@@ -459,7 +459,7 @@ class eS extends(o = c.default.Store) {
       f = null != a.image ? (0, D.getAssetFromImageURL)(P.PlatformTypes.SPOTIFY, a.image.url) : null;
     null != a.image && null != f && (T.large_image = f), "single" !== a.type && (T.large_text = a.name), null != E && (t = E.uri), n = null != r && null != r.partyId ? r.partyId : "".concat(y.SPOTIFY_PARTY_PREFIX).concat(N.default.getId());
     let S = o.length > 128 ? o.substring(0, 125) + "..." : o,
-      A = {
+      h = {
         name: b.name,
         assets: T,
         details: S,
@@ -472,7 +472,7 @@ class eS extends(o = c.default.Store) {
           id: n
         }
       };
-    return !d && (A.sync_id = l, A.flags = P.ActivityFlags.PLAY | P.ActivityFlags.SYNC, A.metadata = {
+    return !d && (h.sync_id = l, h.flags = P.ActivityFlags.PLAY | P.ActivityFlags.SYNC, h.metadata = {
       context_uri: t,
       album_id: a.id,
       artist_ids: I.map(e => {
@@ -482,11 +482,11 @@ class eS extends(o = c.default.Store) {
         return t
       }),
       type: _
-    }), A
+    }), h
   }
 }
 U(eS, "displayName", "SpotifyStore");
-let eA = new eS(T.default, {
+let eh = new eS(T.default, {
   USER_CONNECTIONS_UPDATE: ec,
   CONNECTION_OPEN: ec,
   SPOTIFY_ACCOUNT_ACCESS_TOKEN: function(e) {
@@ -551,7 +551,7 @@ let eA = new eS(T.default, {
     !f && ($[t] = T);
     let S = i;
     if (i = d().values($).find(e => null != e), eI(N.default.getId()), null == a || f ? Q.stop() : Q.start(a.duration - o + V, () => ei(c.id)), null != r && (!n && o > 0 || null == l || null != T && r.trackId !== T.track.id) ? (W.info("Listen along active but playback stopped or track changed. Stopping listen along in ".concat(V, "ms")), q.start(V, () => {
-        W.info("Stopping listening along"), (0, A.default)(), ei(c.id)
+        W.info("Stopping listening along"), (0, h.default)(), ei(c.id)
       })) : q.isStarted() && (W.info("Listen along stop cancelled as playback of track resumed"), q.stop()), S === i || null == I && null == T || null != I && null != T && I.track.id === T.track.id && I.startTime === T.startTime) return _;
     null != a && L.default.track(P.AnalyticEvents.ACTIVITY_UPDATED, {
       party_platform: P.PlatformTypes.SPOTIFY,
@@ -643,4 +643,4 @@ let eA = new eS(T.default, {
     }
   }
 });
-t.default = eA
+t.default = eh

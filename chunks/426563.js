@@ -19,8 +19,8 @@ var i = n("526167"),
   T = n("484542"),
   f = n("881500"),
   S = n("910826"),
-  A = n("307244"),
-  h = n("669730"),
+  h = n("307244"),
+  A = n("669730"),
   m = n("185672"),
   N = n("235731");
 
@@ -30,11 +30,11 @@ function O() {
 }
 t.default = {
   DEFAULT_AVATARS: [s, a, o, l, u, d],
-  DEFAULT_GROUP_DM_AVATARS: [_, c, E, I, T, f, S, A],
+  DEFAULT_GROUP_DM_AVATARS: [_, c, E, I, T, f, S, h],
   BOT_AVATARS: {
     clyde: m
   },
-  DEFAULT_CHANNEL_ICON: h,
+  DEFAULT_CHANNEL_ICON: A,
   canUseWebp: function() {
     return i.canUseWebp()
   }

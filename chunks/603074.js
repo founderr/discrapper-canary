@@ -19,8 +19,8 @@ var i = n("735250"),
   T = n("19780"),
   f = n("208049"),
   S = n("763296"),
-  A = n("526617"),
-  h = n("919280");
+  h = n("526617"),
+  A = n("919280");
 
 function m(e) {
   let {
@@ -54,11 +54,11 @@ function m(e) {
   }, []), (0, i.jsx)(_.AnalyticsLocationProvider, {
     value: U,
     children: (0, i.jsx)(u.Dialog, {
-      className: a()(h.picker, {
-        [h.fetching]: y,
-        [h.autoWidth]: g
+      className: a()(A.picker, {
+        [A.fetching]: y,
+        [A.autoWidth]: g
       }),
-      children: y ? (0, i.jsx)(u.Spinner, {}) : (0, i.jsx)(A.default, {
+      children: y ? (0, i.jsx)(u.Spinner, {}) : (0, i.jsx)(h.default, {
         guildId: t,
         channel: n,
         onClose: m,

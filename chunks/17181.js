@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return T
   },
   isOnboardingActiveForGuild: function() {
-    return A
+    return h
   },
   openAndWaitForOnboarding: function() {
     return S
@@ -56,6 +56,6 @@ function S(e) {
   })
 }
 
-function A(e) {
+function h(e) {
   return null != I[e]
 }

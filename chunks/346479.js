@@ -15,14 +15,14 @@ var i = n("697988"),
   T = n("920303"),
   f = n("569471"),
   S = n("91159"),
-  A = n("952537"),
-  h = n("981631"),
+  h = n("952537"),
+  A = n("981631"),
   m = n("176505"),
   N = n("689938");
 
 function O(e, t) {
   return r.HTTP.patch({
-    url: h.Endpoints.CHANNEL(e.id),
+    url: A.Endpoints.CHANNEL(e.id),
     body: t
   }).then(t => (s.default.dispatch({
     type: "THREAD_UPDATE",
@@ -73,10 +73,10 @@ t.default = {
       return await O(e, n)
     } catch (e) {
       var r, s;
-      throw (null === (r = e.body) || void 0 === r ? void 0 : r.code) === h.AbortCodes.TOO_MANY_THREADS ? a.default.show({
+      throw (null === (r = e.body) || void 0 === r ? void 0 : r.code) === A.AbortCodes.TOO_MANY_THREADS ? a.default.show({
         title: i ? N.default.Messages.CANNOT_UNARCHIVE_FORUM_POST : N.default.Messages.CANNOT_UNARCHIVE_THREAD,
         body: i ? N.default.Messages.TOO_MANY_FORUM_POSTS_MESSAGE : N.default.Messages.TOO_MANY_THREADS_MESSAGE
-      }) : (null === (s = e.body) || void 0 === s ? void 0 : s.code) === h.AbortCodes.TOO_MANY_ANNOUNCEMENT_THREADS ? a.default.show({
+      }) : (null === (s = e.body) || void 0 === s ? void 0 : s.code) === A.AbortCodes.TOO_MANY_ANNOUNCEMENT_THREADS ? a.default.show({
         title: N.default.Messages.CANNOT_UNARCHIVE_THREAD,
         body: N.default.Messages.TOO_MANY_ANNOUNCEMENT_THREADS_MESSAGE
       }) : 429 === e.status ? a.default.show({
@@ -91,7 +91,7 @@ t.default = {
   async unarchiveThreadIfNecessary(e) {
     var t;
     let n = c.default.getChannel(e),
-      i = E.default.can(h.Permissions.MANAGE_THREADS, n);
+      i = E.default.can(A.Permissions.MANAGE_THREADS, n);
     null != n && n.isArchivedThread() && (i || (null === (t = n.threadMetadata) || void 0 === t ? void 0 : t.locked) !== !0) && await this.unarchiveThread(n, !1)
   },
   setInvitable: (e, t) => O(e, {
@@ -101,14 +101,14 @@ t.default = {
     e.isForumPost() && p(e, !0);
     try {
       return await r.HTTP.post({
-        url: h.Endpoints.THREAD_MEMBER(e.id),
+        url: A.Endpoints.THREAD_MEMBER(e.id),
         query: {
           location: t
         }
       })
     } catch (t) {
       var n;
-      if ((null === (n = t.body) || void 0 === n ? void 0 : n.code) === h.AbortCodes.TOO_MANY_THREAD_MEMBERS) {
+      if ((null === (n = t.body) || void 0 === n ? void 0 : n.code) === A.AbortCodes.TOO_MANY_THREAD_MEMBERS) {
         let t = e.isForumPost();
         a.default.show({
           title: t ? N.default.Messages.CANNOT_JOIN_FORUM_POST : N.default.Messages.CANNOT_JOIN_THREAD,
@@ -124,14 +124,14 @@ t.default = {
   async addMember(e, t, n) {
     try {
       return await r.HTTP.post({
-        url: h.Endpoints.THREAD_MEMBER(e.id, t),
+        url: A.Endpoints.THREAD_MEMBER(e.id, t),
         query: {
           location: n
         }
       })
     } catch (t) {
       var i;
-      if ((null === (i = t.body) || void 0 === i ? void 0 : i.code) === h.AbortCodes.TOO_MANY_THREAD_MEMBERS) {
+      if ((null === (i = t.body) || void 0 === i ? void 0 : i.code) === A.AbortCodes.TOO_MANY_THREAD_MEMBERS) {
         let t = e.isForumPost();
         a.default.show({
           title: t ? N.default.Messages.CANNOT_ADD_USER_TO_FORUM_POST : N.default.Messages.CANNOT_ADD_USER_TO_THREAD,
@@ -144,19 +144,19 @@ t.default = {
     }
   },
   leaveThread: (e, t) => (e.isForumPost() && p(e, !1), r.HTTP.del({
-    url: h.Endpoints.THREAD_MEMBER(e.id),
+    url: A.Endpoints.THREAD_MEMBER(e.id),
     query: {
       location: t
     }
   })),
   removeMember: (e, t, n) => r.HTTP.del({
-    url: h.Endpoints.THREAD_MEMBER(e.id, t),
+    url: A.Endpoints.THREAD_MEMBER(e.id, t),
     query: {
       location: n
     }
   }),
   setAutoArchiveDuration: (e, t) => r.HTTP.patch({
-    url: h.Endpoints.CHANNEL(e.id),
+    url: A.Endpoints.CHANNEL(e.id),
     body: {
       auto_archive_duration: t
     }
@@ -183,7 +183,7 @@ t.default = {
     n && (i.archived = !1);
     try {
       await r.HTTP.patch({
-        url: h.Endpoints.CHANNEL(e.id),
+        url: A.Endpoints.CHANNEL(e.id),
         body: i
       })
     } catch {
@@ -209,7 +209,7 @@ t.default = {
     }), await this.unarchiveThreadIfNecessary(e.id), await this.unarchiveThreadIfNecessary(t.id);
     try {
       await r.HTTP.patch({
-        url: h.Endpoints.CHANNEL(e.id),
+        url: A.Endpoints.CHANNEL(e.id),
         body: {
           flags: e.flags & ~m.ChannelFlags.PINNED
         }
@@ -226,7 +226,7 @@ t.default = {
     }
     try {
       await r.HTTP.patch({
-        url: h.Endpoints.CHANNEL(t.id),
+        url: A.Endpoints.CHANNEL(t.id),
         body: {
           flags: t.flags | m.ChannelFlags.PINNED
         }
@@ -239,7 +239,7 @@ t.default = {
     }
   },
   openThreadCreationForMobile(e, t, n) {
-    (0, l.trackWithMetadata)(h.AnalyticEvents.THREAD_CREATION_STARTED, {
+    (0, l.trackWithMetadata)(A.AnalyticEvents.THREAD_CREATION_STARTED, {
       location: n,
       channel_id: e.id,
       guild_id: e.guild_id
@@ -255,7 +255,7 @@ t.default = {
   },
   async setNotificationSettings(e, t) {
     return (0, S.trackThreadNotificationSettingsUpdated)(e, t), !f.default.hasJoined(e.id) && await this.joinThread(e, "Change Notification Settings"), r.HTTP.patch({
-      url: h.Endpoints.THREAD_MEMBER_SETTINGS(e.id),
+      url: A.Endpoints.THREAD_MEMBER_SETTINGS(e.id),
       body: t
     })
   },
@@ -266,7 +266,7 @@ t.default = {
       sortOrder: n,
       tagFilter: a
     }), r.HTTP.get({
-      url: h.Endpoints.THREAD_SEARCH(t),
+      url: A.Endpoints.THREAD_SEARCH(t),
       query: {
         archived: !0,
         sort_by: "last_message_time",
@@ -302,7 +302,7 @@ t.default = {
         threads: r,
         firstMessages: d,
         mostRecentMessages: _,
-        members: (null != l ? l : []).map(e => (0, A.default)(e)),
+        members: (null != l ? l : []).map(e => (0, h.default)(e)),
         owners: r.map(e => e.owner).filter(I.isNotNullish),
         hasMore: u
       })
@@ -325,7 +325,7 @@ t.default = {
           most_recent_messages: _
         }
       } = await r.HTTP.get({
-        url: h.Endpoints.THREAD_SEARCH(t),
+        url: A.Endpoints.THREAD_SEARCH(t),
         query: {
           name: n,
           tag: o,

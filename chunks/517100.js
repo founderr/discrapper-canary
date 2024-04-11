@@ -11,8 +11,8 @@ var i, r, s, a, o = n("442837"),
   T = n("981631"),
   f = n("65154");
 let S = Date.now(),
-  A = !1,
   h = !1,
+  A = !1,
   m = !1,
   N = !1,
   O = !1;
@@ -22,17 +22,17 @@ function p() {
 }
 
 function R() {
-  Date.now() - S > T.IDLE_DURATION || p() ? A || l.default.dispatch({
+  Date.now() - S > T.IDLE_DURATION || p() ? h || l.default.dispatch({
     type: "IDLE",
     idle: !0,
     idleSince: S
-  }) : A && l.default.dispatch({
+  }) : h && l.default.dispatch({
     type: "IDLE",
     idle: !1
-  }), Date.now() - S > Math.min(_.AfkTimeout.getSetting() * c.default.Millis.SECOND, T.IDLE_DURATION) || p() ? h || l.default.dispatch({
+  }), Date.now() - S > Math.min(_.AfkTimeout.getSetting() * c.default.Millis.SECOND, T.IDLE_DURATION) || p() ? A || l.default.dispatch({
     type: "AFK",
     afk: !0
-  }) : h && l.default.dispatch({
+  }) : A && l.default.dispatch({
     type: "AFK",
     afk: !1
   })
@@ -67,13 +67,13 @@ function C(e) {
 }
 class g extends(a = o.default.Store) {
   isIdle() {
-    return A
-  }
-  isAFK() {
     return h
   }
+  isAFK() {
+    return A
+  }
   getIdleSince() {
-    return A ? S : null
+    return h ? S : null
   }
 }
 s = "IdleStore", (r = "displayName") in(i = g) ? Object.defineProperty(i, r, {
@@ -83,10 +83,10 @@ s = "IdleStore", (r = "displayName") in(i = g) ? Object.defineProperty(i, r, {
   writable: !0
 }) : i[r] = s, t.default = new g(l.default, {
   IDLE: function(e) {
-    A = e.idle
+    h = e.idle
   },
   AFK: function(e) {
-    h = e.afk
+    A = e.afk
   },
   SPEAKING: function(e) {
     let {

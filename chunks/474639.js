@@ -19,8 +19,8 @@ var i = n("46973"),
   T = n("924557"),
   f = n("435064"),
   S = n("894694"),
-  A = n("779618"),
-  h = n("356659"),
+  h = n("779618"),
+  A = n("356659"),
   m = n("981631"),
   N = n("70722");
 class O extends s.default {
@@ -83,11 +83,11 @@ class O extends s.default {
     }), this.showClipsToast())
   }
   handlePostConnectionOpen() {
-    if (!!(0, A.default)(d.default)) {
+    if (!!(0, h.default)(d.default)) {
       if (this.applyNativeClipsSettings(), !(0, T.areClipsEnabled)()) {
         f.default.getSettings().clipsEnabled && this.disableClips();
         return
-      }(null == f.default.getHardwareClassification() || null == f.default.getHardwareClassificationForDecoupled() || f.default.getHardwareClassificationVersion() !== h.CLIPS_HARDWARE_CLASSIFICATION_VERSION) && this.classifyHardwareAndTrack().then(e => {
+      }(null == f.default.getHardwareClassification() || null == f.default.getHardwareClassificationForDecoupled() || f.default.getHardwareClassificationVersion() !== A.CLIPS_HARDWARE_CLASSIFICATION_VERSION) && this.classifyHardwareAndTrack().then(e => {
         r.default.dispatch({
           type: "CLIPS_CLASSIFY_HARDWARE",
           classification: e
@@ -102,7 +102,7 @@ class O extends s.default {
       channelId: r,
       guildId: s
     } = e;
-    if (n !== i.MediaEngineContextTypes.STREAM || !(0, A.default)(d.default)) return;
+    if (n !== i.MediaEngineContextTypes.STREAM || !(0, h.default)(d.default)) return;
     let a = c.default.getRTCConnection(o.encodeStreamKey({
       streamType: null != s ? N.StreamTypes.GUILD : N.StreamTypes.CALL,
       ownerId: t,
@@ -117,7 +117,7 @@ class O extends s.default {
         t = this.classifyHardware(e);
       return E.default.track(m.AnalyticEvents.CLIPS_HARDWARE_CLASSIFICATION, {
         classification: t,
-        version: h.CLIPS_HARDWARE_CLASSIFICATION_VERSION,
+        version: A.CLIPS_HARDWARE_CLASSIFICATION_VERSION,
         gpu_models: e.gpus.map(e => {
           let {
             model: t
@@ -135,13 +135,13 @@ class O extends s.default {
           let {
             model: t
           } = e;
-          return h.WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX.test(t)
+          return A.WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX.test(t)
         }),
         n = e.gpus.some(e => {
           let {
             model: t
           } = e;
-          return h.WINDOWS_HARDWARE_MINIMUM_GPU_REGEX.test(t)
+          return A.WINDOWS_HARDWARE_MINIMUM_GPU_REGEX.test(t)
         });
       return t ? S.ClipsHardwareClassification.MEETS_AUTO_ENABLE : n ? S.ClipsHardwareClassification.MEETS_MINIMUM : S.ClipsHardwareClassification.BELOW_MINIMUM
     }
@@ -149,12 +149,12 @@ class O extends s.default {
       let {
         model: t
       } = e;
-      return h.OSX_HARDWARE_AUTO_ENABLE_GPU_REGEX.test(t)
+      return A.OSX_HARDWARE_AUTO_ENABLE_GPU_REGEX.test(t)
     }) ? S.ClipsHardwareClassification.MEETS_AUTO_ENABLE : S.ClipsHardwareClassification.MEETS_MINIMUM;
     return S.ClipsHardwareClassification.UNKNOWN
   }
   applyUserVoiceRecording(e) {
-    if (!(0, A.default)(d.default)) return;
+    if (!(0, h.default)(d.default)) return;
     let t = _.default.getRTCConnection();
     if (null == t) return;
     if (e === u.default.getId()) {
@@ -165,7 +165,7 @@ class O extends s.default {
     t.setClipRecordUser(e, "audio", n)
   }
   applyStreamRecording(e, t) {
-    if (!(0, A.default)(d.default)) return;
+    if (!(0, h.default)(d.default)) return;
     if (u.default.getId() === e) {
       let {
         clipsEnabled: n

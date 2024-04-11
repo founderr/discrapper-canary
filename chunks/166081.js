@@ -1,19 +1,19 @@
 "use strict";
-a.r(e), a.d(e, {
+a.r(t), a.d(t, {
   useListingThumbnailUrl: function() {
     return r
   }
 });
-var n = a("470079"),
-  s = a("695346"),
-  l = a("73346"),
-  i = a("834431");
+var s = a("470079"),
+  n = a("695346"),
+  i = a("73346"),
+  l = a("834431");
 
-function r(t, e) {
+function r(e, t) {
   let {
     shouldAnimate: a = !0
-  } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, r = s.GifAutoPlay.useSetting(), u = (0, i.useIsWindowFocused)(), o = a && u && r;
-  return n.useMemo(() => {
-    if ((null == t ? void 0 : t.image_asset) != null) return (0, l.getAssetURL)(t.application_id, t.image_asset, e, o ? void 0 : "webp")
-  }, [e, t, o])
+  } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, r = n.GifAutoPlay.useSetting(), u = (0, l.useIsWindowFocused)(), c = a && u && r;
+  return s.useMemo(() => {
+    if ((null == e ? void 0 : e.image_asset) != null) return (0, i.getAssetURL)(e.application_id, e.image_asset, t, c ? void 0 : "webp")
+  }, [t, e, c])
 }

@@ -14,7 +14,7 @@ let E = new Map,
   T = [],
   f = 0,
   S = [];
-class A extends(r = u.default.Store) {
+class h extends(r = u.default.Store) {
   getIntegrations(e) {
     var t;
     return null !== (t = E.get(e)) && void 0 !== t ? t : S
@@ -38,16 +38,16 @@ class A extends(r = u.default.Store) {
   }
 }
 
-function h(e) {
+function A(e) {
   return e.sort((e, t) => e.application.name.localeCompare(t.application.name))
 }
-l = "PrivateChannelIntegrationStore", (o = "displayName") in(a = A) ? Object.defineProperty(a, o, {
+l = "PrivateChannelIntegrationStore", (o = "displayName") in(a = h) ? Object.defineProperty(a, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : a[o] = l;
-let m = new A(d.default, {
+let m = new h(d.default, {
   LOGOUT() {
     E.clear()
   },
@@ -84,7 +84,7 @@ let m = new A(d.default, {
       channelId: t,
       integrations: n
     } = e;
-    E.set(t, h(n.map(c.createPrivateChannelIntegration))), I.set(t, 2)
+    E.set(t, A(n.map(c.createPrivateChannelIntegration))), I.set(t, 2)
   },
   FETCH_PRIVATE_CHANNEL_INTEGRATIONS_FAIL(e) {
     let {
@@ -97,7 +97,7 @@ let m = new A(d.default, {
       integration: t
     } = e, n = E.get(t.channel_id);
     if (null == n) return !1;
-    E.set(t.channel_id, h([...n, (0, c.createPrivateChannelIntegration)(t)]))
+    E.set(t.channel_id, A([...n, (0, c.createPrivateChannelIntegration)(t)]))
   },
   PRIVATE_CHANNEL_INTEGRATION_UPDATE(e) {
     let {
@@ -106,7 +106,7 @@ let m = new A(d.default, {
     if (null == n) return !1;
     let i = (0, c.createPrivateChannelIntegration)(t),
       r = n.findIndex(e => e.application.id === i.application.id),
-      s = [...n]; - 1 === r ? s.push(i) : s[r] = i, E.set(i.channel_id, h(s))
+      s = [...n]; - 1 === r ? s.push(i) : s[r] = i, E.set(i.channel_id, A(s))
   },
   PRIVATE_CHANNEL_INTEGRATION_DELETE(e) {
     let {

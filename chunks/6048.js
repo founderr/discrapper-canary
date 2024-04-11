@@ -67,7 +67,7 @@ let f = Object.freeze({
     })
   };
 S.Sizes = f;
-class A extends(i = s.PureComponent) {
+class h extends(i = s.PureComponent) {
   focus() {
     let {
       current: e
@@ -94,8 +94,8 @@ class A extends(i = s.PureComponent) {
       isLoading: c,
       size: T,
       disabled: f,
-      onChange: A,
-      onBlur: h,
+      onChange: h,
+      onBlur: A,
       onFocus: m,
       autoComplete: N,
       inputProps: O,
@@ -117,7 +117,7 @@ class A extends(i = s.PureComponent) {
           children: [(0, r.jsx)("input", {
             ...O,
             onFocus: m,
-            onBlur: h,
+            onBlur: A,
             className: I.input,
             value: e,
             onChange: this.handleOnChange,
@@ -150,8 +150,8 @@ class A extends(i = s.PureComponent) {
     })
   }
 }
-T(A, "Sizes", f), T(A, "defaultProps", {
+T(h, "Sizes", f), T(h, "defaultProps", {
   size: f.SMALL,
   isLoading: !1,
   disabled: !1
-}), t.default = A
+}), t.default = h
