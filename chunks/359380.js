@@ -1,5 +1,9 @@
 "use strict";
-n.r(t), n("47120");
+n.r(t), n.d(t, {
+  TraitSelectionCategory: function() {
+    return C
+  }
+}), n("47120");
 var a = n("735250"),
   s = n("470079"),
   l = n("803997"),

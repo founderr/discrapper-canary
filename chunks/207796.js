@@ -15,7 +15,7 @@ n.r(t), n.d(t, {
 });
 var a, s, l, i, r = n("652874"),
   o = n("308083");
-(a = l || (l = {})).DISCOVERY = "discovery", a.PLAYSTYLE = "playstyle", a.PRIMETIME = "primetime", (s = i || (i = {})).VALORANT = "valorant", s.GENSHIN = "genshin";
+(a = l || (l = {})).DISCOVERY = "discovery", a.PLAYSTYLE = "playstyle", a.PRIMETIME = "primetime", a.TRAITS = "traits", (s = i || (i = {})).VALORANT = "valorant", s.GENSHIN = "genshin";
 let u = (0, r.default)(e => ({
   mode: "discovery",
   game: "valorant",
