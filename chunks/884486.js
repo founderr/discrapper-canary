@@ -75,7 +75,7 @@ t.default = e => {
           if (n.length >= E.MAX_GAME_HOURS) return;
           let e = [...n];
           e.push({
-            id: i.default.v4(),
+            id: (0, i.v4)(),
             day: void 0,
             time: d.ExtendedTimeOptions.MORNING
           }), t({

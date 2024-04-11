@@ -31,7 +31,7 @@ function h() {
     description: "",
     tag: "",
     primetime: [{
-      id: s.default.v4(),
+      id: (0, s.v4)(),
       day: void 0,
       time: o.ExtendedTimeOptions.MORNING
     }],
@@ -59,7 +59,7 @@ class C extends(a = l.default.PersistedStore) {
           var t;
           return {
             ...e,
-            id: null !== (t = e.id) && void 0 !== t ? t : s.default.v4()
+            id: null !== (t = e.id) && void 0 !== t ? t : (0, s.v4)()
           }
         });
         return {

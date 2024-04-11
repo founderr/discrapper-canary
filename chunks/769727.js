@@ -245,7 +245,7 @@ function k() {
       if (t.length >= 3) return;
       let e = [...t];
       e.push({
-        id: o.default.v4(),
+        id: (0, o.v4)(),
         day: void 0,
         time: "morning"
       }), n(e)
