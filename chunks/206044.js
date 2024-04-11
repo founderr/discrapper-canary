@@ -45,9 +45,10 @@ let g = e => {
     color: u.Tooltip.Colors.GREEN,
     text: C.default.Messages.COPY_SUCCESS_1,
     children: () => (0, s.jsx)(u.Button, {
+      className: A.shareButton,
       color: u.Button.Colors.PRIMARY,
       size: u.Button.Sizes.SMALL,
-      onClick: () => d(),
+      onClick: d,
       children: C.default.Messages.QUESTS_SHARE_QUEST
     })
   })
@@ -75,7 +76,8 @@ t.default = e => {
   return (0, s.jsxs)("div", {
     className: i()(A.outerContainer, {
       [A.outerContainerGiftInventory]: o === I.QuestContent.QUEST_INVENTORY_CARD,
-      [A.outerContainerEmbed]: o === I.QuestContent.QUESTS_EMBED
+      [A.outerContainerEmbed]: o === I.QuestContent.QUESTS_EMBED,
+      [A.outerContainerXs]: "xs" === _
     }),
     children: [(0, s.jsx)(E.default, {
       autoPlay: !1,
