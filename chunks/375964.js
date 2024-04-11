@@ -17046,7 +17046,6 @@ e.exports = Object.freeze({
   QUESTS_GET_THIS_GAME: "Get Game",
   QUESTS_PLAY_GAME: "Play Game",
   QUESTS_DISCLOSURE_LABEL: "Why am I seeing this?",
-  QUESTS_SHARE_LINK: "Copy Share Link",
   QUESTS_HIDE_THIS: "Hide This",
   QUESTS_FIND_QUEST: "You can find this again in User Settings > Gift Inventory",
   QUESTS_CLAIM_BY: "Claim by {expirationDate}.",

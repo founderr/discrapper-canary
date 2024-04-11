@@ -53,7 +53,7 @@ function S(e) {
         icon: i.LinkExternalMediumIcon
       }), !0 === e.showShareLink && (0, s.jsx)(o.MenuItem, {
         id: "share-link",
-        label: N.default.Messages.QUESTS_SHARE_LINK,
+        label: N.default.Messages.COPY_LINK,
         action: () => {
           (0, T.trackQuestContentClicked)({
             questId: e.quest.id,
