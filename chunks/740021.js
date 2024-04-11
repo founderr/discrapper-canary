@@ -17,7 +17,7 @@ var a = s("735250"),
   S = s("998502"),
   E = s("204197"),
   m = s("249003"),
-  I = s("735336"),
+  I = s("78675"),
   T = s("184325"),
   p = s("747074"),
   N = s("530"),
@@ -66,8 +66,7 @@ function P(e) {
       user: t,
       displayProfile: s,
       profileType: h.UserProfileTypes.MODAL,
-      hasProfileEffect: (null == s ? void 0 : s.profileEffectId) != null,
-      onClose: V
+      hasProfileEffect: (null == s ? void 0 : s.profileEffectId) != null
     }), (0, a.jsxs)("div", {
       className: j.inner,
       children: [(0, a.jsx)("div", {
