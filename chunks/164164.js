@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("340100"),
   S = n("611855"),
   I = n("644646"),
-  p = n("78826"),
-  T = n("670638"),
+  T = n("78826"),
+  p = n("670638"),
   g = n("667105"),
   A = n("689938"),
   N = n("881521");
@@ -76,7 +76,7 @@ let v = s.forwardRef(function(e, t) {
               })
             })]
           })]
-        }), (0, a.jsx)(T.QuestsEntryContextMenuPopout, {
+        }), (0, a.jsx)(p.QuestsEntryContextMenuPopout, {
           onOpen: L,
           onClose: M,
           onSelect: P,
@@ -117,7 +117,7 @@ let v = s.forwardRef(function(e, t) {
           className: N.utils,
           children: [(0, a.jsx)(S.default, {
             color: "always-white"
-          }), (0, a.jsx)(T.QuestsEntryContextMenuPopout, {
+          }), (0, a.jsx)(p.QuestsEntryContextMenuPopout, {
             onOpen: L,
             onClose: M,
             onSelect: P,
@@ -167,7 +167,7 @@ let v = s.forwardRef(function(e, t) {
         style: {
           color: y.config.colors.secondary
         },
-        children: j ? (0, a.jsx)(p.QuestsAsset, {
+        children: j ? (0, a.jsx)(T.QuestsAsset, {
           id: "QuestsBarContentExpanded_heroAnimated",
           children: e => (0, a.jsx)(d.default, {
             ref: e,
@@ -182,7 +182,7 @@ let v = s.forwardRef(function(e, t) {
               type: (0, C.getVideoAssetMimeType)(B)
             })
           })
-        }) : (0, a.jsx)(p.QuestsAsset, {
+        }) : (0, a.jsx)(T.QuestsAsset, {
           id: "QuestsBarContentExpanded_heroStatic",
           children: e => (0, a.jsx)("img", {
             ref: e,

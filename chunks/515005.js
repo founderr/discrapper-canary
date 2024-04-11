@@ -15,8 +15,8 @@ var i = n("735250"),
   T = n("285651"),
   f = n("373228"),
   S = n("378233"),
-  h = n("419922"),
-  A = n("490095"),
+  A = n("419922"),
+  h = n("490095"),
   m = n("981631"),
   N = n("689938"),
   O = n("900544");
@@ -41,8 +41,8 @@ let p = (0, l.cssValueToNumber)(O.__invalid_stickerPickerPreviewDimensions),
       stickerSize: w = p,
       ownedStickerPacks: k,
       enlargeOnInteraction: B = !1,
-      channel: V,
-      currentUser: F,
+      channel: F,
+      currentUser: V,
       checkSendability: x = !0
     } = e, {
       location: H
@@ -145,16 +145,16 @@ let p = (0, l.cssValueToNumber)(O.__invalid_stickerPickerPreviewDimensions),
               "data-type": c.PickerContextMenuDataTypes.STICKER,
               "data-id": e.sticker.id,
               children: [(0, i.jsx)(u.HiddenVisually, {
-                children: (0, h.getStickerAltText)(e.sticker)
+                children: (0, A.getStickerAltText)(e.sticker)
               }), (0, i.jsxs)("div", {
                 "aria-hidden": !0,
                 children: [!B && (0, i.jsx)("div", {
                   className: O.inspectedIndicator
-                }), (0, i.jsx)(h.default, {
+                }), (0, i.jsx)(A.default, {
                   className: a()(O.stickerNode, {
                     [O.stickerNodeDimmed]: B && !p && null != L && -1 !== L.rowIndex && -1 !== L.columnIndex,
                     [O.stickerNodeHidden]: R,
-                    [O.stickerUnsendable]: x && !(0, T.isSendableSticker)(e.sticker, F, V)
+                    [O.stickerUnsendable]: x && !(0, T.isSendableSticker)(e.sticker, V, F)
                   }),
                   disableAnimation: !p && !s,
                   enlargeOnInteraction: B,
@@ -162,7 +162,7 @@ let p = (0, l.cssValueToNumber)(O.__invalid_stickerPickerPreviewDimensions),
                   maskAsset: p,
                   sticker: e.sticker,
                   size: w
-                }), o ? (0, i.jsx)(A.default, {
+                }), o ? (0, i.jsx)(h.default, {
                   size: 20
                 }) : null]
               })]

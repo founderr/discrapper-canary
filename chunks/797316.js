@@ -11,8 +11,8 @@ var r, s, a, o, l = n("392711"),
   T = n("439170"),
   f = n("433355"),
   S = n("592125"),
-  h = n("486472"),
-  A = n("271383"),
+  A = n("486472"),
+  h = n("271383"),
   m = n("430824"),
   N = n("19780"),
   O = n("699516"),
@@ -20,7 +20,7 @@ var r, s, a, o, l = n("392711"),
   R = n("914010"),
   C = n("981631");
 let g = new c.default(e => {
-  for (let t in e) null == m.default.getGuild(t) && !h.default.isUnavailable(t) && delete e[t];
+  for (let t in e) null == m.default.getGuild(t) && !A.default.isUnavailable(t) && delete e[t];
   _.default.dispatch({
     type: "GUILD_SUBSCRIPTIONS_FLUSH",
     subscriptions: e
@@ -71,7 +71,7 @@ function y(e) {
     guildId: t,
     channelId: n
   } = e;
-  return !h.default.isUnavailable(t) && D(t, n)
+  return !A.default.isUnavailable(t) && D(t, n)
 }
 
 function P() {
@@ -86,7 +86,7 @@ function U() {
       userId: t
     } = e;
     if (null != i && i.userId === t || O.default.isFriend(t)) return !1;
-    let n = A.default.memberOf(t);
+    let n = h.default.memberOf(t);
     if (0 === n.length) return !1;
     let [r] = n;
     i = {

@@ -31,8 +31,8 @@ function c(e, t, n, s) {
       className: T,
       onScroll: f,
       onResize: S = null,
-      onContentResize: h = null,
-      dir: A = "ltr",
+      onContentResize: A = null,
+      dir: h = "ltr",
       sections: m,
       sectionHeight: N,
       rowHeight: O,
@@ -52,8 +52,8 @@ function c(e, t, n, s) {
       customTheme: w = !1,
       chunkSize: k,
       style: B,
-      innerId: V,
-      innerRole: F,
+      innerId: F,
+      innerRole: V,
       innerAriaLabel: x,
       innerAriaMultiselectable: H,
       innerAriaOrientation: Y,
@@ -70,7 +70,7 @@ function c(e, t, n, s) {
       className: T,
       specs: o,
       orientation: "vertical",
-      dir: A
+      dir: h
     });
     let {
       spacerTop: ee,
@@ -92,9 +92,9 @@ function c(e, t, n, s) {
       chunkSize: k,
       getScrollerState: $,
       getAnchorId: P
-    }), eo = (0, d.useScrollSpring)(J), el = r.useRef(S), eu = r.useRef(h);
+    }), eo = (0, d.useScrollSpring)(J), el = r.useRef(S), eu = r.useRef(A);
     r.useLayoutEffect(() => {
-      el.current = S, eu.current = h
+      el.current = S, eu.current = A
     });
     let ed = r.useCallback(function() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
@@ -172,8 +172,8 @@ function c(e, t, n, s) {
       style: (0, d.getMergedOrientationStyles)(B),
       ...K,
       children: [r.useMemo(() => (0, i.jsx)(W, {
-        id: V,
-        role: F,
+        id: F,
+        role: V,
         "aria-label": x,
         "aria-multiselectable": H,
         "aria-orientation": Y,
@@ -229,7 +229,7 @@ function c(e, t, n, s) {
             spacerTop: ee
           })
         })
-      }), [V, F, x, H, Y, j, W, et, en, g, L, D, M, y, ee]), r.useMemo(() => (function(e) {
+      }), [F, V, x, H, Y, j, W, et, en, g, L, D, M, y, ee]), r.useMemo(() => (function(e) {
         let {
           renderSidebar: t,
           sidebarHeight: n,

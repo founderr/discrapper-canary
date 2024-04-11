@@ -15,8 +15,8 @@ var i = n("481060"),
   T = n("539573"),
   f = n("786761"),
   S = n("3148"),
-  h = n("785359"),
-  A = n("79390"),
+  A = n("785359"),
+  h = n("79390"),
   m = n("623292"),
   N = n("807092"),
   O = n("467798"),
@@ -49,20 +49,20 @@ async function v(e) {
   null != y && (w.content = null == y ? void 0 : y.content), null != N.default.getPendingReply(c) && (w.type = L.MessageTypes.REPLY, w.message_reference = P.messageReference, w.allowed_mentions = P.allowedMentions, (0, m.deletePendingReply)(c));
   let [k, B] = (0, O.default)(w.content);
   k && (w.content = B, w.flags = (0, C.addFlag)(null !== (t = w.flags) && void 0 !== t ? t : 0, L.MessageFlags.SUPPRESS_NOTIFICATIONS));
-  let V = null !== (n = P.nonce) && void 0 !== n ? n : (0, S.createNonce)(),
-    F = (0, S.default)({
+  let F = null !== (n = P.nonce) && void 0 !== n ? n : (0, S.createNonce)(),
+    V = (0, S.default)({
       channelId: c,
       content: w.content,
       tts: null !== (i = null == y ? void 0 : y.tts) && void 0 !== i && i,
       type: w.type,
       messageReference: w.message_reference,
       flags: w.flags,
-      nonce: V,
-      poll: (0, A.createPollServerDataFromCreateRequest)(P.poll)
+      nonce: F,
+      poll: (0, h.createPollServerDataFromCreateRequest)(P.poll)
     });
-  return (w.nonce = V, b.on("start", e => {
+  return (w.nonce = F, b.on("start", e => {
     _ = (0, f.createMessageRecord)({
-      ...F,
+      ...V,
       id: e.id
     }), r.default.dispatch({
       type: "UPLOAD_START",
@@ -83,7 +83,7 @@ async function v(e) {
         channelId: c,
         file: e,
         messageRecord: _
-      }), (0, h.logMessageSendFailure)({
+      }), (0, A.logMessageSendFailure)({
         fileItems: e.items,
         failureCode: t,
         errorMessage: null == i ? void 0 : i.msg
@@ -194,7 +194,7 @@ t.default = {
           type: "UPLOAD_FAIL",
           channelId: n,
           file: t
-        }), (0, h.logMessageSendFailure)({
+        }), (0, A.logMessageSendFailure)({
           fileItems: t.items,
           failureCode: _
         }), _ === L.AbortCodes.EXPLICIT_CONTENT) {

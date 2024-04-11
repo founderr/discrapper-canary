@@ -22,7 +22,7 @@ var i, r = n("735250"),
   f = n("981631"),
   S = n("260064");
 
-function h(e, t, n) {
+function A(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -30,13 +30,13 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let A = new WeakMap;
+let h = new WeakMap;
 
 function m(e, t) {
   if (e.contains(t)) return !0;
   let n = (0, I.default)(t, S.layer);
   for (; null != n;) {
-    let t = A.get(n);
+    let t = h.get(n);
     if (null == t) break;
     if (e.contains(t)) return !0;
     n = (0, I.default)(t, S.layer)
@@ -303,7 +303,7 @@ class R extends(i = s.Component) {
       ...this.calculateState()
     });
     let r = this.elementRef.current;
-    u()(null != r, "Missing elementRef"), "function" != typeof n && null != n.current && A.set(r, n.current), c.ComponentDispatch.subscribe(f.ComponentActions.LAYER_POP_START, this.handleLayerPopStart), c.ComponentDispatch.subscribe(f.ComponentActions.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == r || null === (t = r.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.addEventListener("resize", this.handleLayerPopComplete), null == i || i()
+    u()(null != r, "Missing elementRef"), "function" != typeof n && null != n.current && h.set(r, n.current), c.ComponentDispatch.subscribe(f.ComponentActions.LAYER_POP_START, this.handleLayerPopStart), c.ComponentDispatch.subscribe(f.ComponentActions.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == r || null === (t = r.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.addEventListener("resize", this.handleLayerPopComplete), null == i || i()
   }
   componentDidUpdate(e, t) {
     if (N(e) !== N(this.props) ? this.updatePosition() : ! function(e, t) {
@@ -321,7 +321,7 @@ class R extends(i = s.Component) {
   componentWillUnmount() {
     var e, t, n, i;
     let r = this.elementRef.current;
-    u()(null != r, "Missing elementRef"), A.delete(r), c.ComponentDispatch.unsubscribe(f.ComponentActions.LAYER_POP_START, this.handleLayerPopStart), c.ComponentDispatch.unsubscribe(f.ComponentActions.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == r || null === (t = r.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.removeEventListener("resize", this.handleLayerPopComplete), null === (n = (i = this.props).onUnmount) || void 0 === n || n.call(i)
+    u()(null != r, "Missing elementRef"), h.delete(r), c.ComponentDispatch.unsubscribe(f.ComponentActions.LAYER_POP_START, this.handleLayerPopStart), c.ComponentDispatch.unsubscribe(f.ComponentActions.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == r || null === (t = r.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.removeEventListener("resize", this.handleLayerPopComplete), null === (n = (i = this.props).onUnmount) || void 0 === n || n.call(i)
   }
   render() {
     let {
@@ -366,28 +366,28 @@ class R extends(i = s.Component) {
     })
   }
   constructor(...e) {
-    super(...e), h(this, "elementRef", s.createRef()), h(this, "state", {
+    super(...e), A(this, "elementRef", s.createRef()), A(this, "state", {
       style: Object.freeze({}),
       position: this.props.autoInvert ? null : this.props.position,
       nudge: 0,
       isPositioned: !1,
       isSettingsLayerTransitioning: !1
-    }), h(this, "handleLayerPopStart", () => {
+    }), A(this, "handleLayerPopStart", () => {
       this.setState({
         isSettingsLayerTransitioning: !0
       })
-    }), h(this, "handleLayerPopComplete", () => {
+    }), A(this, "handleLayerPopComplete", () => {
       let e = this.calculateState();
       this.setState({
         ...e,
         isSettingsLayerTransitioning: !1
       })
-    }), h(this, "updatePosition", () => {
+    }), A(this, "updatePosition", () => {
       this.setState(this.calculateState())
     })
   }
 }
-h(R, "defaultProps", {
+A(R, "defaultProps", {
   nudgeAlignIntoViewport: !1,
   spacing: 0,
   autoInvert: !1,

@@ -19,8 +19,8 @@ var i = n("735250"),
   T = n("574176"),
   f = n("106301"),
   S = n("223135"),
-  h = n("695346"),
-  A = n("314897"),
+  A = n("695346"),
+  h = n("314897"),
   m = n("592125"),
   N = n("496675"),
   O = n("158776"),
@@ -36,7 +36,7 @@ function D(e) {
     className: n,
     animate: r = !0,
     hideTooltip: s
-  } = e, o = h.AnimateEmoji.useSetting(), l = null != t.id ? ":".concat(t.name, ":") : I.default.translateSurrogatesToInlineEmoji(t.name), _ = {
+  } = e, o = A.AnimateEmoji.useSetting(), l = null != t.id ? ":".concat(t.name, ":") : I.default.translateSurrogatesToInlineEmoji(t.name), _ = {
     className: a()(g.emoji, n),
     emojiId: t.id,
     emojiName: t.name,
@@ -94,10 +94,10 @@ t.default = e => {
     emojiClassName: u,
     animate: d = !0,
     hideTooltip: I = !1,
-    hideEmoji: h = !1,
+    hideEmoji: A = !1,
     user: M,
     hasQuest: y
-  } = e, P = null != n ? n.find(e => e.type === C.ActivityTypes.CUSTOM_STATUS) : null, U = (0, l.useStateFromStores)([A.default], () => A.default.getId() === (null == M ? void 0 : M.id)), b = (0, l.useStateFromStores)([f.default], () => U ? f.default.getHangStatusActivity() : null != n ? n.find(e => e.type === C.ActivityTypes.HANG_STATUS) : null), G = (0, l.useStateFromStores)([p.default, m.default], () => {
+  } = e, P = null != n ? n.find(e => e.type === C.ActivityTypes.CUSTOM_STATUS) : null, U = (0, l.useStateFromStores)([h.default], () => h.default.getId() === (null == M ? void 0 : M.id)), b = (0, l.useStateFromStores)([f.default], () => U ? f.default.getHangStatusActivity() : null != n ? n.find(e => e.type === C.ActivityTypes.HANG_STATUS) : null), G = (0, l.useStateFromStores)([p.default, m.default], () => {
     var e;
     return null != b && null != M ? m.default.getChannel(null === (e = p.default.getVoiceStateForUser(M.id)) || void 0 === e ? void 0 : e.channelId) : null
   }), {
@@ -107,19 +107,19 @@ t.default = e => {
     location: "ActivityStatus"
   }, {
     autoTrackExposure: !1
-  }), k = (0, E.useColorValue)(C.Color.BRAND_345), B = null, V = w && null != b && N.default.can(C.Permissions.CONNECT, G);
-  V ? B = (0, i.jsx)(S.default, {
+  }), k = (0, E.useColorValue)(C.Color.BRAND_345), B = null, F = w && null != b && N.default.can(C.Permissions.CONNECT, G);
+  F ? B = (0, i.jsx)(S.default, {
     className: u,
     hangStatusActivity: b
-  }) : null != P && null != P.emoji && !h && (B = (0, i.jsx)(D, {
+  }) : null != P && null != P.emoji && !A && (B = (0, i.jsx)(D, {
     emoji: P.emoji,
     animate: d,
     hideTooltip: I,
     className: u
   }));
-  let F = (0, l.useStateFromStores)([O.default], () => null != M ? O.default.getStatus(M.id) : null),
-    x = null !== F && [C.StatusTypes.OFFLINE, C.StatusTypes.INVISIBLE].includes(F),
-    H = null === (t = (0, c.default)(n, r, void 0, V)) || void 0 === t ? void 0 : t.activityText,
+  let V = (0, l.useStateFromStores)([O.default], () => null != M ? O.default.getStatus(M.id) : null),
+    x = null !== V && [C.StatusTypes.OFFLINE, C.StatusTypes.INVISIBLE].includes(V),
+    H = null === (t = (0, c.default)(n, r, void 0, F)) || void 0 === t ? void 0 : t.activityText,
     Y = null != H && H.length > 0;
   return x || null == B && !Y ? null : (0, i.jsxs)("div", {
     className: s,
@@ -131,7 +131,7 @@ t.default = e => {
       height: L,
       width: L,
       color: k.hex
-    }), null != n && n.some(e => (0, _.default)(e, V)) ? (0, i.jsx)(R.default, {
+    }), null != n && n.some(e => (0, _.default)(e, F)) ? (0, i.jsx)(R.default, {
       width: 16,
       height: 16,
       className: g.icon

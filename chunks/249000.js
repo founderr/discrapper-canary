@@ -220,8 +220,8 @@ class S extends(l = u.PureComponent) {
         dragging: m,
         dragging: S,
         verticalOrientation: I,
-        horizontalOrientation: p
-      } = this.state, T = !1;
+        horizontalOrientation: T
+      } = this.state, p = !1;
       if (null == a || !m && 9 > f(this._dragStart, {
           x: t,
           y: n
@@ -236,15 +236,15 @@ class S extends(l = u.PureComponent) {
       }, s, l, g, A));
       if (c) {
         let e = h(v = _(v));
-        I = e[0], p = e[1]
+        I = e[0], T = e[1]
       } else v = {
         top: v.top,
         left: v.left
       };
-      2 === r && p !== this.state.horizontalOrientation && (this._offsetX = g - this._offsetX, T = !0), 2 === i && I !== this.state.verticalOrientation && (this._offsetY = A - this._offsetY, T = !0), this.setDOMPositions(v), !S && (null == o || o(v, a)), null == u || u(v, a), T && (null == d || d([I, p])), this.setState({
+      2 === r && T !== this.state.horizontalOrientation && (this._offsetX = g - this._offsetX, p = !0), 2 === i && I !== this.state.verticalOrientation && (this._offsetY = A - this._offsetY, p = !0), this.setDOMPositions(v), !S && (null == o || o(v, a)), null == u || u(v, a), p && (null == d || d([I, T])), this.setState({
         dragging: m,
         verticalOrientation: I,
-        horizontalOrientation: p,
+        horizontalOrientation: T,
         atTopEdge: 0 === v.top
       })
     }), c(this, "handleMouseUp", () => {

@@ -21,7 +21,7 @@ t.default = function(e) {
     roleFilter: a,
     onSelect: T,
     onClose: f
-  } = e, S = (0, u.useStateFromStores)([_.default], () => _.default.getRoles(n.id)), h = e => o()(S).filter(a).filter(t => s()(e.toLowerCase(), t.name.toLowerCase())).value();
+  } = e, S = (0, u.useStateFromStores)([_.default], () => _.default.getRoles(n.id)), A = e => o()(S).filter(a).filter(t => s()(e.toLowerCase(), t.name.toLowerCase())).value();
   return (0, i.jsx)(d.ComboboxPopout, {
     className: t,
     value: new Set,
@@ -29,7 +29,7 @@ t.default = function(e) {
     placeholder: E.default.Messages.ADD_ROLE_PLACEHOLDER,
     "aria-label": E.default.Messages.ADD_ROLE_A11Y_LABEL,
     onClose: f,
-    children: e => h(e).map(e => {
+    children: e => A(e).map(e => {
       var t, n;
       return (0, i.jsxs)(d.ComboboxItem, {
         value: e.id,

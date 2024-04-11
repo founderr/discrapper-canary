@@ -19,8 +19,8 @@ var i = n("735250"),
   T = n("63063"),
   f = n("981631"),
   S = n("182294"),
-  h = n("689079"),
-  A = n("689938"),
+  A = n("689079"),
+  h = n("689938"),
   m = n("593275");
 
 function N(e) {
@@ -34,14 +34,14 @@ function N(e) {
   }), [n.icon, n.id]), O = r.useMemo(() => [{
     type: o.ApplicationIntegrationType.USER_INSTALL,
     icon: (0, d.UserPlusIcon),
-    title: A.default.Messages.OAUTH2_INTEGRATION_SELECT_USER,
-    subtitle: A.default.Messages.OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE,
+    title: h.default.Messages.OAUTH2_INTEGRATION_SELECT_USER,
+    subtitle: h.default.Messages.OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE,
     beta: !0
   }, {
     type: o.ApplicationIntegrationType.GUILD_INSTALL,
     icon: (0, u.ServerIcon),
-    title: A.default.Messages.OAUTH2_INTEGRATION_SELECT_GUILD,
-    subtitle: A.default.Messages.OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE,
+    title: h.default.Messages.OAUTH2_INTEGRATION_SELECT_GUILD,
+    subtitle: h.default.Messages.OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE,
     beta: !1
   }].filter(e => {
     var t, i;
@@ -94,8 +94,8 @@ function N(e) {
       variant: "text-xs/normal",
       color: "text-muted",
       className: m.learnMore,
-      children: A.default.Messages.OAUTH2_INTEGRATION_SELECT_DETAILS.format({
-        betaUserLimit: h.APPLICATION_USER_INSTALL_BETA_USER_LIMIT,
+      children: h.default.Messages.OAUTH2_INTEGRATION_SELECT_DETAILS.format({
+        betaUserLimit: A.APPLICATION_USER_INSTALL_BETA_USER_LIMIT,
         learnMoreUrl: T.default.getArticleURL(f.HelpdeskArticles.USING_APPS_FAQ)
       })
     })]

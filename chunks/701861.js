@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("51144"),
   S = n("321488"),
   I = n("417183"),
-  p = n("825682"),
-  T = n("170245"),
+  T = n("825682"),
+  p = n("170245"),
   g = n("981631"),
   A = n("65154"),
   N = n("689938"),
@@ -110,11 +110,11 @@ class L extends s.PureComponent {
       onClick: this.handleOpenPrivateChannel,
       children: t => (0, a.jsxs)("div", {
         className: v.listItemContents,
-        children: [(0, a.jsx)(T.default, {
+        children: [(0, a.jsx)(p.default, {
           user: e,
           status: l,
           isMobile: i,
-          subText: (0, a.jsx)(p.default, {
+          subText: (0, a.jsx)(T.default, {
             hovered: t,
             activities: n,
             applicationStream: s,

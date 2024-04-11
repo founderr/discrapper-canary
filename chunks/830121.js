@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return g
   },
   default: function() {
-    return F
+    return V
   },
   findCodedLink: function() {
     return Y
@@ -30,8 +30,8 @@ var _ = n("701190"),
   T = n("981631");
 let f = /^\/([a-zA-Z0-9-]+)$/,
   S = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
-  h = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?$/,
-  A = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
+  A = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?$/,
+  h = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
   m = /^\/application-directory\/([0-9-]+)\/?$/,
   N = /^\/activities\/([0-9-]+)\/?$/,
   O = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
@@ -82,7 +82,7 @@ function B(e) {
   return null !== (r = null !== (i = null !== (n = null !== (t = k(v, e)) && void 0 !== t ? t : k(M, e)) && void 0 !== n ? n : k(y, e)) && void 0 !== i ? i : k(P, e)) && void 0 !== r ? r : k(U, e)
 }
 
-function V(e) {
+function F(e) {
   var t, n, i, r;
   let s = H(e);
   if (null == s || null == s.pathname) return {
@@ -102,7 +102,7 @@ function V(e) {
   }
 }
 
-function F(e) {
+function V(e) {
   if (null == e) return [];
   let t = new Set,
     n = [],
@@ -116,7 +116,7 @@ function F(e) {
       inviteHostRemainingPath: r,
       templateHostRemainingPath: s,
       primaryHostRemainingPath: a
-    } = V(e);
+    } = F(e);
     if (null == i || null == i.pathname) continue;
     let o = (e, i) => {
       !t.has(i) && (t.add(i), n.push({
@@ -128,7 +128,7 @@ function F(e) {
       let e = (0, d.generateInviteKeyFromUrlParams)(r.substring(1), i.search);
       _.default.getInvite(e), o(I.CodedLinkType.INVITE, e)
     }(null == s ? void 0 : s.match(f)) != null && o(I.CodedLinkType.TEMPLATE, s.substring(1));
-    let l = null == a ? void 0 : a.match(h);
+    let l = null == a ? void 0 : a.match(A);
     if (null != l) {
       let e = l[1].toUpperCase();
       if (e === I.CodedLinkType.INVITE) {
@@ -138,7 +138,7 @@ function F(e) {
     }(null == a ? void 0 : a.match(S)) != null && o(I.CodedLinkType.CHANNEL_LINK, a.replace("/channels/", ""));
     let u = function(e) {
       if (null == e) return null;
-      let t = e.match(A);
+      let t = e.match(h);
       return null != t && t.length >= 4 ? {
         guildId: t[1],
         guildEventId: t[2],
@@ -173,7 +173,7 @@ function F(e) {
 
 function x(e) {
   var t, n;
-  let i = V(e),
+  let i = F(e),
     r = null == i ? void 0 : null === (t = i.primaryHostRemainingPath) || void 0 === t ? void 0 : t.match(C);
   return null !== (n = null == r ? void 0 : r[1]) && void 0 !== n ? n : null
 }
@@ -187,5 +187,5 @@ function H(e) {
 }
 
 function Y(e) {
-  return F(e)[0]
+  return V(e)[0]
 }

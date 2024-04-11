@@ -20,7 +20,7 @@ var i = n("512722"),
   f = n("987338"),
   S = n("981631");
 
-function h(e, t, n) {
+function A(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -28,7 +28,7 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let A = "scientist:triggered",
+let h = "scientist:triggered",
   m = "exerimentOverrides",
   N = "userExperimentOverrides",
   O = "guildExperimentOverrides",
@@ -60,11 +60,11 @@ let k = f.TriggerDebuggingAAExperiments.map(e => w(e)),
     description: "No description provided"
   };
 
-function V(e, t) {
+function F(e, t) {
   return e || k.includes(t)
 }
 
-function F(e) {
+function V(e) {
   var t;
   return ((null !== (t = e.flags) && void 0 !== t ? t : 0) & S.UserFlags.STAFF) === S.UserFlags.STAFF || null != e.personal_connection_id || !1
 }
@@ -174,7 +174,7 @@ function z(e) {
 }
 
 function X(e) {
-  !b && "CONNECTION_OPEN" === e.type && F(e.user) && (b = !0), v = {}, M = {}, y = {};
+  !b && "CONNECTION_OPEN" === e.type && V(e.user) && (b = !0), v = {}, M = {}, y = {};
   let t = "CONNECTION_OPEN" === e.type || null == e.fingerprint || e.fingerprint === c.default.getFingerprint(),
     {
       experiments: n,
@@ -194,7 +194,7 @@ function Q(e, t) {
       override: 0 === r,
       hashResult: null != a ? a : -1,
       aaMode: 1 === o,
-      triggerDebuggingEnabled: V(1 === l, t)
+      triggerDebuggingEnabled: F(1 === l, t)
     }
   }), null != t && t.forEach(e => {
     let [t, n, i, r, s, a, o, l, u, d] = e;
@@ -217,7 +217,7 @@ function Q(e, t) {
       holdoutName: null != o ? o : null,
       holdoutBucket: null != l ? l : null,
       aaMode: 1 === u,
-      triggerDebuggingEnabled: V(1 === d, t)
+      triggerDebuggingEnabled: F(1 === d, t)
     }
   })
 }
@@ -275,7 +275,7 @@ function Z(e) {
     serializedExperimentStore: t,
     user: n
   } = e;
-  !b && F(n) && (b = !0), R = t.hasLoadedExperiments, C = t.trackedExposureExperiments, v = t.loadedUserExperiments, P = t.userExperimentOverrides, U = t.guildExperimentOverrides, M = J(t.loadedGuildExperiments), y = {}
+  !b && V(n) && (b = !0), R = t.hasLoadedExperiments, C = t.trackedExposureExperiments, v = t.loadedUserExperiments, P = t.userExperimentOverrides, U = t.guildExperimentOverrides, M = J(t.loadedGuildExperiments), y = {}
 }
 
 function $() {
@@ -286,11 +286,11 @@ function ee(e) {
   let {
     isSwitchingAccount: t
   } = e;
-  u.Storage.remove(A), !t && (u.Storage.remove(m), u.Storage.remove(N), u.Storage.remove(O), P = {}, U = {}), v = {}, L = [], C = {}, R = !1
+  u.Storage.remove(h), !t && (u.Storage.remove(m), u.Storage.remove(N), u.Storage.remove(O), P = {}, U = {}), v = {}, L = [], C = {}, R = !1
 }
 
 function et() {
-  R = !1, C = {}, u.Storage.remove(A)
+  R = !1, C = {}, u.Storage.remove(h)
 }
 
 function en() {
@@ -314,7 +314,7 @@ function en() {
 
 function ei(e) {
   try {
-    u.Storage.set(A, {
+    u.Storage.set(h, {
       v: 1,
       e: e
     })
@@ -408,7 +408,7 @@ function eo(e) {
 class el extends E.default {
   initialize() {
     C = function() {
-      let e = u.Storage.get(A);
+      let e = u.Storage.get(h);
       if (null == e || 1 !== e.v) return {};
       let t = e.e,
         n = Date.now(),
@@ -615,7 +615,7 @@ class el extends E.default {
       EXPERIMENT_OVERRIDE_BUCKET: ea,
       GUILD_CREATE: eo,
       GUILD_UPDATE: eo
-    }), h(this, "trackExposure", W)
+    }), A(this, "trackExposure", W)
   }
 }
-h(el, "displayName", "ExperimentStore"), h(el, "LATEST_SNAPSHOT_VERSION", 1), t.default = new el
+A(el, "displayName", "ExperimentStore"), A(el, "LATEST_SNAPSHOT_VERSION", 1), t.default = new el

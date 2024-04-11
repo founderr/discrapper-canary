@@ -1,5 +1,5 @@
 "use strict";
-t.r(r), t.d(r, {
+r.r(t), r.d(t, {
   BooleanPropertyValue: function() {
     return d
   },
@@ -10,47 +10,47 @@ t.r(r), t.d(r, {
     return c
   }
 });
-var a = t("735250");
-t("470079");
-var n = t("803997"),
-  i = t.n(n),
-  o = t("481060"),
-  l = t("779869");
+var a = r("735250");
+r("470079");
+var n = r("803997"),
+  i = r.n(n),
+  l = r("481060"),
+  o = r("779869");
 
 function s(e) {
   let {
-    className: r,
-    children: t
+    className: t,
+    children: r
   } = e;
   return (0, a.jsx)("dl", {
-    className: i()(l.properties, r),
-    children: t
+    className: i()(o.properties, t),
+    children: r
   })
 }
 
 function c(e) {
   let {
-    name: r,
-    children: t
+    name: t,
+    children: r
   } = e;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("dt", {
-      className: l.propertyName,
-      children: r
-    }), (0, a.jsx)("dd", {
+      className: o.propertyName,
       children: t
+    }), (0, a.jsx)("dd", {
+      children: r
     })]
   })
 }
 
 function d(e) {
   let {
-    value: r
+    value: t
   } = e;
-  return (0, a.jsx)(o.Checkbox, {
+  return (0, a.jsx)(l.Checkbox, {
     size: 16,
-    value: r,
-    shape: o.Checkbox.Shapes.SMALL_BOX,
+    value: t,
+    shape: l.Checkbox.Shapes.SMALL_BOX,
     displayOnly: !0
   })
 }

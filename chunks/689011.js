@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return S
   },
   PurchaseConfirmation: function() {
-    return h
+    return A
   },
   PurchaseHeader: function() {
     return f
@@ -79,7 +79,7 @@ let f = e => {
     })
   };
 
-function h(e) {
+function A(e) {
   let {
     tierName: t,
     onConfirm: n,

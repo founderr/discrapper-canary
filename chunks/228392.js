@@ -49,7 +49,7 @@ n.r(t), n.d(t, {
     return y
   },
   trackForumPostSidebarViewed: function() {
-    return V
+    return F
   },
   trackForumPreviewPostClicked: function() {
     return B
@@ -58,10 +58,10 @@ n.r(t), n.d(t, {
     return g
   },
   trackForumSearchCleared: function() {
-    return A
+    return h
   },
   trackForumSearched: function() {
-    return h
+    return A
   },
   trackForumSortOrderUpdated: function() {
     return v
@@ -73,7 +73,7 @@ n.r(t), n.d(t, {
     return U
   },
   trackForumUpsellModalViewed: function() {
-    return F
+    return V
   }
 });
 var i = n("313361"),
@@ -111,7 +111,7 @@ function S(e) {
   })
 }
 
-function h(e) {
+function A(e) {
   let {
     guildId: t,
     channelId: n,
@@ -127,7 +127,7 @@ function h(e) {
   })
 }
 
-function A(e) {
+function h(e) {
   let {
     guildId: t,
     channelId: n
@@ -203,8 +203,8 @@ function p(e) {
     E = l.default.getDraft(u, l.DraftType.FirstThreadMessage),
     I = null == E || 0 === E.length || (null == E ? void 0 : E.trim()) === c,
     S = (null == _ ? void 0 : _.appliedTags) == null || (null == _ ? void 0 : null === (n = _.appliedTags) || void 0 === n ? void 0 : n.size) === 0,
-    h = (null == _ ? void 0 : _.name) == null || (null == _ ? void 0 : null === (s = _.name) || void 0 === s ? void 0 : null === (i = s.trim()) || void 0 === i ? void 0 : i.length) === 0;
-  (!I || !S || !h) && r.default.trackWithMetadata(f.AnalyticEvents.FORUM_CHANNEL_NEW_POST_DRAFT_CREATED, {
+    A = (null == _ ? void 0 : _.name) == null || (null == _ ? void 0 : null === (s = _.name) || void 0 === s ? void 0 : null === (i = s.trim()) || void 0 === i ? void 0 : i.length) === 0;
+  (!I || !S || !A) && r.default.trackWithMetadata(f.AnalyticEvents.FORUM_CHANNEL_NEW_POST_DRAFT_CREATED, {
     ...(0, T.collectForumAnalyticsMetadata)({
       channelId: u
     }),
@@ -403,7 +403,7 @@ function B() {
   r.default.trackWithMetadata(f.AnalyticEvents.FORUM_CHANNEL_ENABLE_PREVIEW_CLICKED)
 }
 
-function V(e) {
+function F(e) {
   r.default.trackWithMetadata(f.AnalyticEvents.CHANNEL_OPENED, {
     ...(0, r.collectGuildAnalyticsMetadata)(e.guild_id),
     ...(0, r.collectChannelAnalyticsMetadata)(e),
@@ -416,7 +416,7 @@ function V(e) {
   })
 }
 
-function F() {
+function V() {
   r.default.trackWithMetadata(f.AnalyticEvents.OPEN_MODAL, {
     type: "Forum Channel Upsell Modal",
     location: {

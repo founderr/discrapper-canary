@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return b
   },
   getObscuredMediaForMessage: function() {
-    return V
+    return F
   },
   getShouldObscureForSetting: function() {
     return G
@@ -31,7 +31,7 @@ n.r(t), n.d(t, {
     return B
   },
   isPendingScan: function() {
-    return F
+    return V
   },
   resolveSettingWithDefaults: function() {
     return y
@@ -65,8 +65,8 @@ var i, r, s, a, o, l, u, d, _ = n("286379"),
   T = n("182274"),
   f = n("695346"),
   S = n("592125"),
-  h = n("699516"),
-  A = n("594174"),
+  A = n("699516"),
+  h = n("594174"),
   m = n("626135"),
   N = n("630388"),
   O = n("948561"),
@@ -102,7 +102,7 @@ let L = {
       isFriend: i = !1
     } = e;
     if (null != t && t !== c.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION) return t;
-    let r = A.default.getCurrentUser();
+    let r = h.default.getCurrentUser();
     return (null == r ? void 0 : r.nsfwAllowed) === !1 ? U({
       isDm: n,
       isFriend: i
@@ -154,7 +154,7 @@ function G(e) {
 function w(e) {
   var t;
   if (!(0, p.isEligibleForExplicitMediaRedaction)()) return !1;
-  let n = A.default.getCurrentUser();
+  let n = h.default.getCurrentUser();
   if (null == n || (null === (t = e.author) || void 0 === t ? void 0 : t.id) === n.id) return !1;
   let {
     explicitContentGuilds: i,
@@ -162,7 +162,7 @@ function w(e) {
     explicitContentNonFriendDm: s
   } = b(), a = S.default.getChannel(e.channel_id);
   if (null == a) return !1;
-  if (a.isDM() || a.isGroupDM()) return null != e.author && h.default.getFriendIDs().includes(e.author.id) ? G(r) : G(s);
+  if (a.isDM() || a.isGroupDM()) return null != e.author && A.default.getFriendIDs().includes(e.author.id) ? G(r) : G(s);
   return G(i)
 }
 let k = e => {
@@ -187,7 +187,7 @@ function B(e, t) {
   }
 }
 
-function V(e) {
+function F(e) {
   return w(e) ? {
     obscuredAttachments: e.attachments.filter(e => B({
       type: 0,
@@ -203,7 +203,7 @@ function V(e) {
   }
 }
 
-function F(e) {
+function V(e) {
   return !E.default.get("explicit_media_redaction_ignore_pending_scan") && null == e
 }
 

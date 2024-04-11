@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("918854"),
   S = n("279240"),
   I = n("765717"),
-  p = n("358221"),
-  T = n("823748"),
+  T = n("358221"),
+  p = n("823748"),
   g = n("626421"),
   A = n("118379"),
   N = n("652515"),
@@ -78,13 +78,13 @@ let eI = () => (0, a.jsx)("div", {
     className: eS.loader,
     children: (0, a.jsx)(E.Spinner, {})
   }),
-  ep = (0, d.makeLazy)({
+  eT = (0, d.makeLazy)({
     createPromise: () => Promise.all([n.e("99387"), n.e("68614")]).then(n.bind(n, "650788")),
     webpackId: "650788",
     name: "GuildShopPage",
     renderLoader: eI
   }),
-  eT = (0, d.makeLazy)({
+  ep = (0, d.makeLazy)({
     createPromise: () => Promise.all([n.e("99387"), n.e("44798")]).then(n.bind(n, "998420")),
     webpackId: "998420",
     name: "GuildMemberApplicationReview",
@@ -138,20 +138,20 @@ let eI = () => (0, a.jsx)("div", {
     }), d = (0, N.isEligibleForSubscriptionsInGuildShop)(s, "channel_renderer");
     if (null != s && null != l && (0, eh.isStaticChannelRoute)(l)) switch (l) {
       case eh.StaticChannelRoute.ROLE_SUBSCRIPTIONS:
-        return d ? (0, a.jsx)(ep, {
+        return d ? (0, a.jsx)(eT, {
           guildId: s,
           initialTab: v.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS
         }) : (0, a.jsx)(x.default, {
           guildId: s
         });
       case eh.StaticChannelRoute.GUILD_SHOP:
-        return (0, a.jsx)(ep, {
+        return (0, a.jsx)(eT, {
           guildId: s,
           productId: i,
           initialTab: u
         });
       case eh.StaticChannelRoute.MEMBER_APPLICATIONS:
-        return (0, a.jsx)(eT, {
+        return (0, a.jsx)(ep, {
           guildId: s
         });
       case eh.StaticChannelRoute.GUILD_HOME:
@@ -190,7 +190,7 @@ let eI = () => (0, a.jsx)("div", {
         inputSkuId: e
       }, n.id)
     }
-    return (0, a.jsx)(T.default, {})
+    return (0, a.jsx)(p.default, {})
   },
   eO = s.memo(function() {
     let {
@@ -316,7 +316,7 @@ function eB(e) {
   }), h.UserTriggerAAExperiment.trackExposure({
     location: l
   });
-  let r = (0, f.useStateFromStores)([p.default], () => p.default.isFullscreenInContext());
+  let r = (0, f.useStateFromStores)([T.default], () => T.default.isFullscreenInContext());
   return s ? null : (0, a.jsxs)("div", {
     className: i()(eS.sidebar, (0, el.getThemeClass)(n), {
       [eS.hasNotice]: t,

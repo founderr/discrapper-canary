@@ -34,8 +34,8 @@ var i = n("470079"),
   T = n("650774"),
   f = n("888369"),
   S = n("430824"),
-  h = n("771845"),
-  A = n("9156"),
+  A = n("771845"),
+  h = n("9156"),
   m = n("626135"),
   N = n("630388"),
   O = n("823379"),
@@ -68,7 +68,7 @@ function b(e, t) {
           overrideMode: r,
           messagePain: u.messages === v.PainLevel.High,
           visitsALot: o,
-          muted: A.default.isMuted(e.id) && !A.default.isTemporarilyMuted(e.id)
+          muted: h.default.isMuted(e.id) && !h.default.isTemporarilyMuted(e.id)
         }
       }(r, n, e, t, o[r.id]);
       return i
@@ -92,7 +92,7 @@ function b(e, t) {
           var n;
           return e + Number(null !== (n = t.num_month_opens) && void 0 !== n ? n : 0)
         }, 0),
-        r = h.default.getFlattenedGuildIds(),
+        r = A.default.getFlattenedGuildIds(),
         a = s().sortBy(Object.values(e), e => {
           let t = r.indexOf(e.guildId);
           return -1 === t ? r.length : t
@@ -131,12 +131,12 @@ function w() {
     t = {};
   for (let r of e) {
     var n, i;
-    let e = null !== (i = (null !== (n = A.default.getAllSettings().userGuildSettings[r.id]) && void 0 !== n ? n : {}).flags) && void 0 !== i ? i : 0;
+    let e = null !== (i = (null !== (n = h.default.getAllSettings().userGuildSettings[r.id]) && void 0 !== n ? n : {}).flags) && void 0 !== i ? i : 0;
     e = (0, N.setFlag)(e, P.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES, !0), e = (0, N.setFlag)(e, P.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS, !1), t[r.id] = {
       flags: e
     }
   }
-  V(t), m.default.track(M.AnalyticEvents.NOTIFICATION_MIGRATION_COMPLETED, {
+  F(t), m.default.track(M.AnalyticEvents.NOTIFICATION_MIGRATION_COMPLETED, {
     auto_migrated: !0,
     num_unread_guids_after: e.filter(e => f.default.hasUnread(e.id)).length
   })
@@ -159,7 +159,7 @@ function k(e) {
   }
 }
 async function B(e, t) {
-  if (A.default.useNewNotifications) {
+  if (h.default.useNewNotifications) {
     u.default.show({
       title: "Info",
       body: "It looks like you are already using the new notifications system so skipping saving any changes this time because that will almost certainly mess up your account!"
@@ -179,7 +179,7 @@ async function B(e, t) {
       }),
       n = {
         num_unread_guilds_before: R.default.keys(e).filter(e => f.default.hasUnread(e)).length,
-        unmuted_server_ids: t.filter(e => A.default.isMuted(e.plan.guildId)).map(e => e.plan.guildId)
+        unmuted_server_ids: t.filter(e => h.default.isMuted(e.plan.guildId)).map(e => e.plan.guildId)
       };
     return () => {
       m.default.track(M.AnalyticEvents.NOTIFICATION_MIGRATION_COMPLETED, {
@@ -203,12 +203,12 @@ async function B(e, t) {
     let t = {};
     for (let n of Object.values(e)) {
       var i, r;
-      let e = null !== (i = A.default.getAllSettings().userGuildSettings[n.guildId]) && void 0 !== i ? i : {},
+      let e = null !== (i = h.default.getAllSettings().userGuildSettings[n.guildId]) && void 0 !== i ? i : {},
         s = {};
       for (let t of n.actions) null === (r = t.apply) || void 0 === r || r.call(t, s, e);
       t[n.guildId] = s
     }
-    await V(t);
+    await F(t);
     let s = Object.values(e).filter(e => e.actions.some(e => e.needsMarkedAsRead)).map(e => e.guildId);
     if (s.length > 0) {
       let e = setTimeout(n, 5e3);
@@ -226,9 +226,9 @@ async function B(e, t) {
     })
   }
 }
-async function V(e) {
-  await F(() => x()), await F(() => d.default.setAccountFlag(D.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !0));
-  let t = await F(() => c.default.saveUserGuildSettingsBulk(e));
+async function F(e) {
+  await V(() => x()), await V(() => d.default.setAccountFlag(D.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !0));
+  let t = await V(() => c.default.saveUserGuildSettingsBulk(e));
   l.default.dispatch({
     type: "USER_GUILD_SETTINGS_FULL_UPDATE",
     userGuildSettings: t
@@ -236,7 +236,7 @@ async function V(e) {
     type: "RECOMPUTE_READ_STATES"
   })
 }
-async function F(e) {
+async function V(e) {
   for (let t = 0; t < 3; t++) try {
     return await e()
   } catch (e) {
@@ -263,7 +263,7 @@ async function x() {
 }
 async function H() {
   o.Storage.set("turnedOffNewNotifications", !0), m.default.track(M.AnalyticEvents.NOTIFICATION_MIGRATION_OPTOUT, {
-    num_guilds_with_new_setting: Object.values(S.default.getGuilds()).filter(e => A.default.resolveGuildUnreadSetting(e) === y.UnreadSetting.ONLY_MENTIONS).length
+    num_guilds_with_new_setting: Object.values(S.default.getGuilds()).filter(e => h.default.resolveGuildUnreadSetting(e) === y.UnreadSetting.ONLY_MENTIONS).length
   });
   let e = await (0, C.listSnapshots)(),
     t = s().sortBy(e, e => new Date(e.recorded_at).getTime());

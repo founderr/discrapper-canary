@@ -11,8 +11,8 @@ var i, r, s, a, o = n("348327"),
   T = n("700785"),
   f = n("565799"),
   S = n("501655"),
-  h = n("750154"),
-  A = n("427679"),
+  A = n("750154"),
+  h = n("427679"),
   m = n("71275"),
   N = n("157925"),
   O = n("981631");
@@ -23,13 +23,13 @@ function R() {
     var e, t, n, i, r, s, a;
     let o = I.default.getVoiceChannelId();
     if (null == o) return null;
-    let l = A.default.getStageInstanceByChannel(o);
+    let l = h.default.getStageInstanceByChannel(o);
     if (null == l) return null;
     let u = _.default.getChannel(o);
     if (null == u || !T.canEveryone(O.Permissions.VIEW_CHANNEL, u)) return null;
     let d = c.default.getGuild(u.getGuildId());
     if (null == d || !d.hasFeature(O.GuildFeatures.DISCOVERABLE)) return null;
-    let E = (0, h.packStageChannelPartyId)(u, l),
+    let E = (0, A.packStageChannelPartyId)(u, l),
       R = (null == p ? void 0 : null === (e = p.party) || void 0 === e ? void 0 : e.id) === E ? p : null,
       C = f.default.getMutableParticipants(u.id, S.StageChannelParticipantNamedIndex.SPEAKER),
       g = C.filter(e => e.type === S.StageChannelParticipantTypes.STREAM).length,
@@ -57,7 +57,7 @@ function R() {
 }
 class C extends(a = u.default.Store) {
   initialize() {
-    this.waitFor(_.default, I.default, A.default, E.default)
+    this.waitFor(_.default, I.default, h.default, E.default)
   }
   getActivity() {
     return p
@@ -86,7 +86,7 @@ s = "StageChannelSelfRichPresenceStore", (r = "displayName") in(i = C) ? Object.
       voiceStates: t
     } = e;
     if (null == p) return;
-    let n = (0, h.unpackStageChannelParty)(p);
+    let n = (0, A.unpackStageChannelParty)(p);
     null != n && null != t.find(e => e.channelId === n.channelId) && R()
   }
 })

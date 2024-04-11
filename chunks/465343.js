@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   resolveApplicationCommandOption: function() {
-    return h
+    return A
   },
   resolvePlaintextInlineVoid: function() {
     return S
@@ -46,7 +46,7 @@ function S(e, t, n, c) {
           if (null != e) {
             if (e.isPrivate()) {
               for (let t of e.recipients)
-                if (A(a, o, t)) return {
+                if (h(a, o, t)) return {
                   type: "userMention",
                   userId: t,
                   children: [{
@@ -58,14 +58,14 @@ function S(e, t, n, c) {
                   userId: e
                 }
                 of d.default.getMembers(t))
-                if (A(a, o, e)) return {
+                if (h(a, o, e)) return {
                   type: "userMention",
                   userId: e,
                   children: [{
                     text: ""
                   }]
                 };
-              if (c && A(a, o, f.CLYDE_AI_USER_ID)) return {
+              if (c && h(a, o, f.CLYDE_AI_USER_ID)) return {
                 type: "userMention",
                 userId: f.CLYDE_AI_USER_ID,
                 children: [{
@@ -149,12 +149,12 @@ function S(e, t, n, c) {
   return null
 }
 
-function h(e, t, n, i) {
+function A(e, t, n, i) {
   let r = S(e, t, n, i);
   return null == r ? null : (0, T.voidToOptionValue)(r)
 }
 
-function A(e, t, n) {
+function h(e, t, n) {
   let i = c.default.getUser(n);
   return null != i && (n === f.CLYDE_AI_USER_ID && "clyde" === e.toLowerCase() || i.username === e && i.discriminator === (null != t ? t : "0"))
 }

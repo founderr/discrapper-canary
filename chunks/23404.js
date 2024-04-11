@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("874137"),
   S = n("611855"),
   I = n("670638"),
-  p = n("667105"),
-  T = n("860151"),
+  T = n("667105"),
+  p = n("860151"),
   g = n("981631"),
   A = n("689938"),
   N = n("374145");
@@ -77,7 +77,7 @@ t.default = function(e) {
       questContent: _.QuestContent.ACTIVITY_PANEL,
       questContentCTA: c.QuestContentCTA.LEARN_MORE
     }), u.default.open(g.UserSettingsSections.INVENTORY)
-  }, [R]), x = (0, p.useHandleClaimQuestsReward)({
+  }, [R]), x = (0, T.useHandleClaimQuestsReward)({
     quest: R,
     location: _.QuestContent.ACTIVITY_PANEL
   }), D = (0, E.useIsQuestExpired)(R), b = (null === (t = R.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, U = (null === (n = R.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, j = (null === (l = R.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
@@ -126,7 +126,7 @@ t.default = function(e) {
               quest: R
             })
           })]
-        }), b && !U && (0, a.jsx)(T.default, {
+        }), b && !U && (0, a.jsx)(p.default, {
           className: N.rewardTileWithInstructions,
           quest: R
         }), (0, a.jsxs)("div", {

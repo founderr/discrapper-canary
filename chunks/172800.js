@@ -15,8 +15,8 @@ var i = n("735250"),
   T = n("819758"),
   f = n("392552"),
   S = n("784222"),
-  h = n("926243"),
-  A = n("149203"),
+  A = n("926243"),
+  h = n("149203"),
   m = n("981631"),
   N = n("689938"),
   O = n("975903");
@@ -46,12 +46,12 @@ t.default = e => {
     location: "EmojiPicker"
   }, {
     autoTrackExposure: !1
-  }), V = _.EmojiPickerStore.getState(), [F, x] = r.useState(V.inspectedExpressionPosition), [H, Y] = (0, l.default)(null, 300), j = r.useRef(null);
+  }), F = _.EmojiPickerStore.getState(), [V, x] = r.useState(F.inspectedExpressionPosition), [H, Y] = (0, l.default)(null, 300), j = r.useRef(null);
   r.useEffect(() => _.EmojiPickerStore.useStore.subscribe(e => x(e), e => e.inspectedExpressionPosition), []), r.useEffect(() => {
     E.FrecencyUserSettingsActionCreators.loadIfNecessary()
   }, []);
-  let W = n === A.EmojiSize.LARGE,
-    K = n === A.EmojiSize.MEDIUM,
+  let W = n === h.EmojiSize.LARGE,
+    K = n === h.EmojiSize.MEDIUM,
     z = e => {
       let t = "".concat(e.rowIndex, "c").concat(e.columnIndex);
       switch (e.type) {
@@ -59,7 +59,7 @@ t.default = e => {
           let {
             visibleRowIndex: n,
             columnIndex: l
-          } = e, u = F.rowIndex === n && F.columnIndex === l, d = t => {
+          } = e, u = V.rowIndex === n && V.columnIndex === l, d = t => {
             t.stopPropagation(), !L.current && !D.current && (s(e, {
               isFinalSelection: !0,
               toggleFavorite: !1
@@ -113,8 +113,8 @@ t.default = e => {
           let {
             columnIndex: r,
             visibleRowIndex: a
-          } = e, o = F.rowIndex === a && F.columnIndex === r;
-          return (0, i.jsx)(h.default, {
+          } = e, o = V.rowIndex === a && V.columnIndex === r;
+          return (0, i.jsx)(A.default, {
             rowIndex: v,
             descriptor: e,
             emojiItemKey: t,
@@ -150,9 +150,9 @@ t.default = e => {
       ref: j,
       children: e.map(z)
     });
-  if (U !== A.EmojiCategoryTypes.TOP_GUILD_EMOJI) return X(t);
-  let Q = t.filter(e => !!B && e.type === S.EmojiGridItemTypes.CREATE_EMOJI || e.subCategory === A.EmojiSubCategory.TOP_GUILD_EMOJI || e.subCategory === A.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && !d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
-    q = t.filter(e => e.subCategory === A.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
+  if (U !== h.EmojiCategoryTypes.TOP_GUILD_EMOJI) return X(t);
+  let Q = t.filter(e => !!B && e.type === S.EmojiGridItemTypes.CREATE_EMOJI || e.subCategory === h.EmojiSubCategory.TOP_GUILD_EMOJI || e.subCategory === h.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && !d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
+    q = t.filter(e => e.subCategory === h.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
   return 0 === q.length ? X(t) : (0, i.jsxs)("div", {
     className: O.topEmojiSectionContainer,
     children: [(0, i.jsx)("div", {

@@ -16,8 +16,8 @@ var r = n("803997"),
   T = n("594174"),
   f = n("979651"),
   S = n("285952"),
-  h = n("543595"),
-  A = n("503438"),
+  A = n("543595"),
+  h = n("503438"),
   m = n("802856"),
   N = n("952561"),
   O = n("606925"),
@@ -43,8 +43,8 @@ t.default = (0, _.default)(e => {
       source: w,
       color: k = d.Button.Colors.WHITE,
       look: B = d.Button.Looks.OUTLINED,
-      type: V,
-      onAction: F,
+      type: F,
+      onAction: V,
       isEmbedded: x = !1
     } = e,
     H = (0, N.default)(),
@@ -52,9 +52,9 @@ t.default = (0, _.default)(e => {
       let e = T.default.getCurrentUser();
       return o()(null != e, "UserActivityActions: currentUser cannot be undefined"), e
     }),
-    j = V === h.Types.PROFILE || V === h.Types.PROFILE_V2,
-    W = V === h.Types.STREAM_PREVIEW || null != a,
-    K = (0, A.default)(n),
+    j = F === A.Types.PROFILE || F === A.Types.PROFILE_V2,
+    W = F === A.Types.STREAM_PREVIEW || null != a,
+    K = (0, h.default)(n),
     z = (0, E.isStageActivity)(n),
     X = j ? S.default.Align.END : S.default.Align.STRETCH,
     Q = K || W ? S.default.Direction.HORIZONTAL : S.default.Direction.VERTICAL,
@@ -150,7 +150,7 @@ t.default = (0, _.default)(e => {
     wrap: Z ? S.default.Wrap.WRAP : S.default.Wrap.NO_WRAP,
     className: s()(_, U.buttonsWrapper, Z ? U.vertical : U.horizontal),
     onClick: function(e) {
-      (0, l.isElement)(e.target) && "BUTTON" === e.target.nodeName && (null == F || F())
+      (0, l.isElement)(e.target) && "BUTTON" === e.target.nodeName && (null == V || V())
     },
     children: t
   })

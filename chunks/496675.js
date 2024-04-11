@@ -11,8 +11,8 @@ var i, r, s, a, o = n("392711"),
   T = n("427679"),
   f = n("569471"),
   S = n("195663"),
-  h = n("131704"),
-  A = n("601964"),
+  A = n("131704"),
+  h = n("601964"),
   m = n("598077"),
   N = n("386438"),
   O = n("700785"),
@@ -76,11 +76,11 @@ function B() {
   U += 1
 }
 
-function V() {
+function F() {
   B()
 }
 
-function F() {
+function V() {
   B()
 }
 
@@ -143,13 +143,13 @@ function K(e) {
 
 function z(e, t, n, i) {
   let r = O.NONE;
-  if (e instanceof h.ChannelRecordBase) {
-    if (h.THREAD_CHANNEL_TYPES.has(e.type)) {
+  if (e instanceof A.ChannelRecordBase) {
+    if (A.THREAD_CHANNEL_TYPES.has(e.type)) {
       let r = p.default.getChannel(e.parent_id);
       return null == r ? O.NONE : O.applyThreadPermissions(e, z(r, t, n, i), f.default.hasJoined(e.id))
     }
     r = w(e.id)
-  } else e instanceof A.default && (r = b(e.id));
+  } else e instanceof h.default && (r = b(e.id));
   return void 0 !== t || void 0 !== n || void 0 !== i ? O.computePermissions({
     user: L.default.getCurrentUser(),
     context: e,
@@ -164,7 +164,7 @@ class X extends(i = d.default.Store) {
     this.waitFor(L.default, g.default, p.default, C.default, R.default, f.default, T.default, E.default)
   }
   getChannelPermissions(e) {
-    return h.THREAD_CHANNEL_TYPES.has(e.type) ? G(e.id) : w(e.id)
+    return A.THREAD_CHANNEL_TYPES.has(e.type) ? G(e.id) : w(e.id)
   }
   getGuildPermissions(e) {
     return b(e.id)
@@ -253,17 +253,17 @@ a = "PermissionStore", (s = "displayName") in(r = X) ? Object.defineProperty(r, 
   configurable: !0,
   writable: !0
 }) : r[s] = a, t.default = new X(_.default, {
-  BACKGROUND_SYNC: V,
-  CONNECTION_OPEN: V,
-  OVERLAY_INITIALIZE: V,
-  CACHE_LOADED: V,
-  CACHE_LOADED_LAZY: V,
+  BACKGROUND_SYNC: F,
+  CONNECTION_OPEN: F,
+  OVERLAY_INITIALIZE: F,
+  CACHE_LOADED: F,
+  CACHE_LOADED_LAZY: F,
   CONNECTION_CLOSED: function() {
     Q()
   },
-  GUILD_CREATE: F,
-  GUILD_UPDATE: F,
-  GUILD_DELETE: F,
+  GUILD_CREATE: V,
+  GUILD_UPDATE: V,
+  GUILD_DELETE: V,
   GUILD_MEMBER_ADD: x,
   GUILD_MEMBER_UPDATE: x,
   CURRENT_USER_UPDATE: x,

@@ -22,8 +22,8 @@ var s = n("924826"),
   m = n("248042"),
   S = n("924540"),
   I = n("565626"),
-  p = n("701910"),
-  T = n("689938"),
+  T = n("701910"),
+  p = n("689938"),
   g = n("392934");
 let A = e => {
   let t, n, {
@@ -43,9 +43,9 @@ let A = e => {
     U = (0, _.useTenureRewardBadgeDescription)();
   return A || null != P || null != y || D || b || null != U || null != O && Date.now() - O.createdAt.getTime() > 2592e6 || (0, c.hasPremiumSubscriptionToDisplay)(O, L) ? (D ? n = (0, a.jsx)(h.default, {
     isNitroTab: !0
-  }) : null != U ? n = (0, a.jsx)(p.default, {
+  }) : null != U ? n = (0, a.jsx)(T.default, {
     copy: U
-  }) : b ? n = (0, a.jsx)(p.default, {}) : null != y ? n = (0, a.jsx)(S.PremiumDiscountOfferTabBadge, {
+  }) : b ? n = (0, a.jsx)(T.default, {}) : null != y ? n = (0, a.jsx)(S.PremiumDiscountOfferTabBadge, {
     userDiscount: y,
     isTabSelected: A,
     includesAmountOff: !1
@@ -58,7 +58,7 @@ let A = e => {
     selected: A,
     route: N,
     icon: d.default,
-    text: T.default.Messages.PREMIUM,
+    text: p.default.Messages.PREMIUM,
     locationState: v,
     ...R,
     ...M,

@@ -34,13 +34,13 @@ n.r(t), n.d(t, {
     return N
   },
   getIncrementalStickerCountForTier: function() {
-    return A
+    return h
   },
   getNextTier: function() {
     return S
   },
   getNumberOfAppliedBoostsNeededForTier: function() {
-    return V
+    return F
   },
   getShortenedTierName: function() {
     return R
@@ -55,10 +55,10 @@ n.r(t), n.d(t, {
     return m
   },
   getTotalStickerCountForTier: function() {
-    return h
+    return A
   },
   isGuildBoostSlotCanceled: function() {
-    return F
+    return V
   },
   isGuildBoostedAtLeast: function() {
     return D
@@ -101,8 +101,8 @@ let f = [E.BoostedGuildTiers.NONE, E.BoostedGuildTiers.TIER_1, E.BoostedGuildTie
     var n;
     return e === E.BoostedGuildTiers.NONE ? E.BoostedGuildTiers.TIER_1 : null === (n = G(t).find(t => t.tier === e)) || void 0 === n ? void 0 : n.nextTier
   },
-  h = e => I.TotalStickerCountsByTier[e],
-  A = e => I.IncrementalStickerCountsByTier[e],
+  A = e => I.TotalStickerCountsByTier[e],
+  h = e => I.IncrementalStickerCountsByTier[e],
   m = e => I.TotalSoundboardSoundCountsByTier[e],
   N = e => {
     if (e === E.BoostedGuildTiers.NONE) return I.TotalSoundboardSoundCountsByTier[e];
@@ -121,8 +121,8 @@ let f = [E.BoostedGuildTiers.NONE, E.BoostedGuildTiers.TIER_1, E.BoostedGuildTie
       icon: 1
     }, {
       title: T.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_STICKER.format({
-        adding: A(E.BoostedGuildTiers.TIER_1),
-        total: h(E.BoostedGuildTiers.TIER_1)
+        adding: h(E.BoostedGuildTiers.TIER_1),
+        total: A(E.BoostedGuildTiers.TIER_1)
       }),
       description: T.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_STICKER,
       icon: 8
@@ -164,8 +164,8 @@ let f = [E.BoostedGuildTiers.NONE, E.BoostedGuildTiers.TIER_1, E.BoostedGuildTie
       icon: 1
     }, {
       title: T.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_STICKER.format({
-        adding: A(E.BoostedGuildTiers.TIER_2),
-        total: h(E.BoostedGuildTiers.TIER_2)
+        adding: h(E.BoostedGuildTiers.TIER_2),
+        total: A(E.BoostedGuildTiers.TIER_2)
       }),
       description: T.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_STICKER,
       icon: 8
@@ -223,8 +223,8 @@ let f = [E.BoostedGuildTiers.NONE, E.BoostedGuildTiers.TIER_1, E.BoostedGuildTie
       icon: 1
     }, {
       title: T.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_STICKER.format({
-        adding: A(E.BoostedGuildTiers.TIER_3),
-        total: h(E.BoostedGuildTiers.TIER_3)
+        adding: h(E.BoostedGuildTiers.TIER_3),
+        total: A(E.BoostedGuildTiers.TIER_3)
       }),
       description: T.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_STICKER,
       icon: 8
@@ -336,7 +336,7 @@ function y() {
   let {
     numAvailableGuildBoostSlots: t,
     numCanceledGuildBoostSlots: n
-  } = Object.values(o.default.boostSlots).reduce((e, t) => (F(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
+  } = Object.values(o.default.boostSlots).reduce((e, t) => (V(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
     numAvailableGuildBoostSlots: 0,
     numCanceledGuildBoostSlots: 0
   });
@@ -391,12 +391,12 @@ function w(e, t) {
 }
 
 function k(e, t) {
-  let n = A(t),
+  let n = h(t),
     i = f.indexOf(t);
   if (-1 === i) return 0;
   let r = f[i - 1],
-    s = null != r ? h(r) : 0,
-    a = h(t);
+    s = null != r ? A(r) : 0,
+    a = A(t);
   return Math.max(0, n - e.slice(s, a).length)
 }
 
@@ -404,12 +404,12 @@ function B(e, t) {
   return -1 === f.indexOf(t) ? 0 : Math.max(0, m(t) - e.length)
 }
 
-function V(e, t) {
+function F(e, t) {
   let n = e.premiumSubscriberCount;
   return Math.max(0, b(e.id)[t] - n)
 }
 
-function F(e) {
+function V(e) {
   var t;
   return (null === (t = e.subscription) || void 0 === t ? void 0 : t.status) === E.SubscriptionStatusTypes.CANCELED || e.canceled
 }

@@ -21,7 +21,7 @@ t.default = function(e) {
     className: l,
     quest: S,
     autoplay: I = !0
-  } = e, p = (null === (t = S.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, T = (null === (n = S.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, g = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), A = s.useMemo(() => (0, E.isAssetAnimated)(S.config.assets.rewardTile), [S]), N = (0, E.getRewardAssetUrl)(S), v = s.useCallback(() => {
+  } = e, T = (null === (t = S.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, p = (null === (n = S.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, g = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), A = s.useMemo(() => (0, E.isAssetAnimated)(S.config.assets.rewardTile), [S]), N = (0, E.getRewardAssetUrl)(S), v = s.useCallback(() => {
     (0, f.trackQuestContentClicked)({
       questId: S.id,
       questContent: e.questContent,
@@ -51,7 +51,7 @@ t.default = function(e) {
       src: N
     })
   });
-  return T ? (0, a.jsx)("div", {
+  return p ? (0, a.jsx)("div", {
     className: i()(l, m.questRewardTile, m.hideLearnMore),
     children: R
   }) : (0, a.jsxs)(o.Clickable, {
@@ -59,7 +59,7 @@ t.default = function(e) {
     onClick: v,
     children: [(0, a.jsx)(o.Text, {
       color: "always-white",
-      variant: p ? "text-xxs/normal" : "text-xs/normal",
+      variant: T ? "text-xxs/normal" : "text-xs/normal",
       className: m.questRewardTileDetailsLearnMore,
       children: C.default.Messages.QUESTS_LEARN_MORE_STACKED.format()
     }), R]

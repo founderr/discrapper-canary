@@ -16,8 +16,8 @@ var r = n("803997"),
   T = n("78839"),
   f = n("451478"),
   S = n("976644"),
-  h = n("559629"),
-  A = n("466111"),
+  A = n("559629"),
+  h = n("466111"),
   m = n("74538"),
   N = n("474936"),
   O = n("981631"),
@@ -41,8 +41,8 @@ t.default = function(e) {
     showIcon: w = !0,
     disableShine: k,
     applicationId: B,
-    giftMessage: V,
-    overrideDisabledButtonText: F,
+    giftMessage: F,
+    overrideDisabledButtonText: V,
     shinyButtonClassName: x,
     ...H
   } = e, Y = (0, a.useStateFromStores)([I.default], () => I.default.getCurrentUser()), j = (0, a.useStateFromStores)([f.default], () => f.default.isFocused()), W = (0, a.useStateFromStores)([T.default], () => T.default.getPremiumTypeSubscription()), {
@@ -133,7 +133,7 @@ t.default = function(e) {
       analyticsLocations: K,
       premiumModalAnalyticsLocation: G,
       applicationId: B,
-      giftMessage: V
+      giftMessage: F
     })
   };
   if (v) return (0, i.jsxs)(o.Button, {
@@ -143,7 +143,7 @@ t.default = function(e) {
     look: o.Button.Looks.INVERTED,
     onClick: z,
     ...H,
-    children: [w && (0, i.jsx)(A.default, {
+    children: [w && (0, i.jsx)(h.default, {
       className: R.premiumIcon
     }), (0, i.jsx)("span", {
       className: s()(R.buttonText, y),
@@ -157,7 +157,7 @@ t.default = function(e) {
     color: o.Button.Colors.PRIMARY,
     onClick: z,
     ...H,
-    children: [(0, i.jsx)(h.default, {
+    children: [(0, i.jsx)(A.default, {
       className: R.giftIcon
     }), (0, i.jsx)("span", {
       className: s()(R.buttonText, y),
@@ -170,7 +170,7 @@ t.default = function(e) {
     J = r === N.PremiumSubscriptionSKUs.TIER_2 && null != q && [N.PremiumTypes.TIER_0, N.PremiumTypes.TIER_1].includes(q);
   J && (X = p.default.Messages.BILLING_SWITCH_PLAN_UPGRADE);
   let Z = null != W && W.status !== O.SubscriptionStatusTypes.ACCOUNT_HOLD && !(0, E.isNoneSubscription)(W.planId) && !J,
-    $ = Z ? null != F ? F : function(e) {
+    $ = Z ? null != V ? V : function(e) {
       let {
         ctaSubscriptionSkuId: t,
         currentPremiumType: n
@@ -204,7 +204,7 @@ t.default = function(e) {
       pauseAnimation: !j || k,
       ...H,
       ...e,
-      children: [w && (0, i.jsx)(A.default, {
+      children: [w && (0, i.jsx)(h.default, {
         className: s()(R.premiumIcon, P)
       }), (0, i.jsx)("span", {
         className: s()(R.buttonText, y),

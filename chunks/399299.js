@@ -38,8 +38,8 @@ var a = l("735250"),
   G = l("358085"),
   b = l("653255"),
   U = l("989941"),
-  k = l("618407"),
-  F = l("586290"),
+  F = l("618407"),
+  k = l("586290"),
   y = l("233037"),
   w = l("810013"),
   B = l("537135"),
@@ -209,7 +209,7 @@ function et(e) {
     isAnimationDone: B
   } = e, H = (0, r.useStateFromStores)([I.default, g.default], () => g.default.getChannel(I.default.getVoiceChannelId())), W = (0, r.useStateFromStores)([b.default], () => b.default.GPUDriversOutdated), Z = (0, r.useStateFromStores)([b.default], () => b.default.problematicGPUDriver), et = (0, r.useStateFromStores)([A.default], () => A.default.getCurrentUser()), el = (0, f.useEnableClips)(), ea = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
     autoTrackExposure: !el
-  }), es = (0, k.default)();
+  }), es = (0, F.default)();
   null != t && t.id.startsWith("screen") && !x.default.supportsScreenSoundshare() && (es = Y.default.Messages.GO_LIVE_SCREENSHARE_NO_SOUND);
   let en = el ? (0, a.jsx)(S.default, {
       guildId: E,
@@ -220,7 +220,7 @@ function et(e) {
     eu = null != H && !(0, c.isPrivateGuildChannel)(H),
     eo = !(0, r.useStateFromStores)([x.default], () => x.default.getHardwareH264());
   return (0, a.jsxs)(s.Fragment, {
-    children: [ei ? (0, a.jsx)(F.default, {
+    children: [ei ? (0, a.jsx)(k.default, {
       selectedSource: t,
       onChangeVideoDeviceSource: j,
       onChangeAudioDevice: O

@@ -12,8 +12,8 @@ var l, i, r, o, u = n("392711"),
   m = n("981631"),
   S = n("71080");
 let I = new Set,
-  p = m.FormStates.CLOSED,
-  T = !1,
+  T = m.FormStates.CLOSED,
+  p = !1,
   g = null,
   A = null,
   N = null,
@@ -33,14 +33,14 @@ function M(e) {
 function P() {
   if (N = _.default.getChannel(), v = _.default.getCategory(), null == N) return !1;
   let e = N.getGuildId();
-  A = g = M(N), null == g[R] && (R = e), s = null != v, a = h.areChannelsLocked(N, v), O = null, T = !1, p = m.FormStates.CLOSED, I.clear()
+  A = g = M(N), null == g[R] && (R = e), s = null != v, a = h.areChannelsLocked(N, v), O = null, p = !1, T = m.FormStates.CLOSED, I.clear()
 }
 class y extends(l = c.default.Store) {
   initialize() {
     this.waitFor(_.default, C.default)
   }
   hasChanges() {
-    return T
+    return p
   }
   showNotice() {
     return this.hasChanges()
@@ -58,7 +58,7 @@ class y extends(l = c.default.Store) {
     return R
   }
   get formState() {
-    return p
+    return T
   }
   get isLockable() {
     return s
@@ -104,7 +104,7 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = y) ? Object.de
     }, g = {
       ...g,
       [t]: l
-    }, I.add(t), p = m.FormStates.OPEN, T = !d().isEqual(g, A), a = h.areChannelsLocked(N, v)
+    }, I.add(t), T = m.FormStates.OPEN, p = !d().isEqual(g, A), a = h.areChannelsLocked(N, v)
   },
   CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function(e) {
     let {
@@ -117,7 +117,7 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = y) ? Object.de
     }
   },
   CHANNEL_SETTINGS_CLOSE: function() {
-    p = m.FormStates.CLOSED, g = null, A = null, N = null, v = null, T = !1, I.clear(), R = null, O = null
+    T = m.FormStates.CLOSED, g = null, A = null, N = null, v = null, p = !1, I.clear(), R = null, O = null
   },
   CHANNEL_UPDATES: function(e) {
     let {
@@ -142,13 +142,13 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = y) ? Object.de
     return n
   },
   CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING: function() {
-    p = m.FormStates.SUBMITTING
+    T = m.FormStates.SUBMITTING
   },
   CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS: function(e) {
     let {
       silent: t
     } = e;
-    t ? p = m.FormStates.OPEN : (p = m.FormStates.CLOSED, P())
+    t ? T = m.FormStates.OPEN : (T = m.FormStates.CLOSED, P())
   },
   CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function(e) {
     let {

@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("518311"),
   S = n("199104"),
   I = n("108427"),
-  p = n("210887"),
-  T = n("974042"),
+  T = n("210887"),
+  p = n("974042"),
   g = n("153124"),
   A = n("988951"),
   N = n("26290"),
@@ -54,11 +54,11 @@ t.default = function(e) {
   }, []), s.useEffect(() => {
     null != t && E.default.setInitialSection(t)
   }, [t]);
-  let m = (0, u.useStateFromStores)([p.default], () => p.default.theme),
+  let m = (0, u.useStateFromStores)([T.default], () => T.default.theme),
     {
       section: D,
       pendingCount: b
-    } = (0, u.useStateFromStoresObject)([T.default], () => T.default.getState()),
+    } = (0, u.useStateFromStoresObject)([p.default], () => p.default.getState()),
     U = (0, u.useStateFromStoresObject)([_.default], () => _.default.getSuggestionCount()),
     j = (0, g.useUID)(),
     G = (0, g.useUID)();

@@ -23,7 +23,7 @@ function C(e) {
     party: t,
     close: n,
     onSelect: C
-  } = e, m = (0, u.default)(t), S = (0, f.default)(t), I = (0, c.default)(t), p = (0, d.default)(t), T = (0, r.default)(t), g = (0, o.default)(t);
+  } = e, m = (0, u.default)(t), S = (0, f.default)(t), I = (0, c.default)(t), T = (0, d.default)(t), p = (0, r.default)(t), g = (0, o.default)(t);
   return s.useEffect(() => {
     let e = t.currentActivities.filter(e => {
       var t, n;
@@ -41,9 +41,9 @@ function C(e) {
     children: [m, (0, a.jsxs)(l.MenuGroup, {
       children: [S, I]
     }), (0, a.jsx)(l.MenuGroup, {
-      children: p
-    }), (0, a.jsx)(l.MenuGroup, {
       children: T
+    }), (0, a.jsx)(l.MenuGroup, {
+      children: p
     }), g]
   })
 }

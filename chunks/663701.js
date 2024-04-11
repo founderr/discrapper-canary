@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("367907"),
   S = n("770471"),
   I = n("158631"),
-  p = n("143614"),
-  T = n("463119"),
+  T = n("143614"),
+  p = n("463119"),
   g = n("377171"),
   A = n("243778"),
   N = n("922409"),
@@ -59,7 +59,7 @@ let ee = e => {
     let {
       selected: t,
       ...n
-    } = e, s = (0, o.useListItem)("friends"), l = (0, d.useStateFromStores)([j.default], () => j.default.getPendingCount()), i = (0, p.default)(), {
+    } = e, s = (0, o.useListItem)("friends"), l = (0, d.useStateFromStores)([j.default], () => j.default.getPendingCount()), i = (0, T.default)(), {
       canViewBroadcasts: r
     } = S.default.useExperiment({
       location: "friends_tab_no_track"
@@ -300,7 +300,7 @@ let eo = e => {
         }
       }, "activities") : null, (0, a.jsx)(ea, {
         selected: null == c ? null != s && s.startsWith(X.Routes.MESSAGE_REQUESTS) : c === X.Routes.MESSAGE_REQUESTS
-      }, "message-requests"), (0, a.jsx)(T.CollectiblesShopButton, {
+      }, "message-requests"), (0, a.jsx)(p.CollectiblesShopButton, {
         selected: c === X.Routes.COLLECTIBLES_SHOP || (null == s ? void 0 : s.startsWith(X.Routes.COLLECTIBLES_SHOP)),
         locationState: {
           analyticsSource: {

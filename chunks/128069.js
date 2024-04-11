@@ -38,8 +38,8 @@ let f = Object.freeze({
     postal_code: "postalCode"
   });
 (d = a || (a = {})).CARD = "card", d.ADDRESS = "address";
-let h = new Set(["cardNumber", "cvc", "expirationDate", "name"]),
-  A = new Set(["cardNumber", "cvc", "expirationDate", "name", "postalCode", "country", "line1", "city", "state"]),
+let A = new Set(["cardNumber", "cvc", "expirationDate", "name"]),
+  h = new Set(["cardNumber", "cvc", "expirationDate", "name", "postalCode", "country", "line1", "city", "state"]),
   m = new Set(["name", "line1", "line2", "city", "state", "postalCode", "country"]);
 
 function N(e) {
@@ -61,7 +61,7 @@ class O extends E.default {
       if (e.has(t)) return !0
   }
   hasCardError() {
-    return 2 === (0, c.reducedPaymentInfoExperiment)().bucket ? this._isInFieldSet(A) : this._isInFieldSet(h)
+    return 2 === (0, c.reducedPaymentInfoExperiment)().bucket ? this._isInFieldSet(h) : this._isInFieldSet(A)
   }
   hasAddressError() {
     return this._isInFieldSet(m)
@@ -77,4 +77,4 @@ class O extends E.default {
     null != e.body && "string" == typeof e.body.payment_id && (this.paymentId = e.body.payment_id)
   }
 }
-T(O, "ErrorCodes", i), T(O, "Fields", r), T(O, "Sections", a), T(O, "CARD_ERRORS", h), T(O, "ADDRESS_ERRORS", m), t.default = O
+T(O, "ErrorCodes", i), T(O, "Fields", r), T(O, "Sections", a), T(O, "CARD_ERRORS", A), T(O, "ADDRESS_ERRORS", m), t.default = O

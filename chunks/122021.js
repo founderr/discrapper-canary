@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return m
   },
   usePlatformAllowed: function() {
-    return h
+    return A
   },
   usePlatforms: function() {
-    return A
+    return h
   }
 }), n("47120");
 var i = n("470079"),
@@ -30,7 +30,7 @@ let T = {
   ]),
   S = 30 * _.default.Millis.DAY;
 
-function h(e) {
+function A(e) {
   let {
     forUserProfile: t
   } = e, n = (0, a.useStateFromStores)([d.default], () => d.default.getCurrentUser()), i = l.PlayStationVoiceExperiment.useExperiment({
@@ -48,9 +48,9 @@ function h(e) {
   }
 }
 
-function A() {
+function h() {
   let e = (0, a.useStateFromStores)([u.default], () => u.default.getAccounts()),
-    t = h({
+    t = A({
       forUserProfile: !1
     }),
     n = i.useMemo(() => {

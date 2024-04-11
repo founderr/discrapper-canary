@@ -1,12 +1,12 @@
 "use strict";
-t.r(r);
-var a = t("319301");
+r.r(t);
+var a = r("319301");
 let n = {
   figma: {
     category: "misc"
   }
 };
-r.default = (0, a.defineColorTokens)({
+t.default = (0, a.defineColorTokens)({
   "activity-card-background": {
     dark: "primary.700",
     light: "white.500",

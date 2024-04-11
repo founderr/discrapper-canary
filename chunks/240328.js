@@ -19,8 +19,8 @@ var i = n("735250"),
   T = n("125988"),
   f = n("335131"),
   S = n("597688"),
-  h = n("884697"),
-  A = n("731896"),
+  A = n("884697"),
+  h = n("731896"),
   m = n("594174"),
   N = n("465670"),
   O = n("74538"),
@@ -93,17 +93,17 @@ t.default = e => {
     height: k
   } = (0, d.default)(), B = r.useMemo(() => ({
     top: "-".concat((null != k ? k : v) + 6, "px")
-  }), [k]), V = (0, l.useStateFromStores)([m.default], () => m.default.getCurrentUser()), F = O.default.canUseCollectibles(V), {
+  }), [k]), F = (0, l.useStateFromStores)([m.default], () => m.default.getCurrentUser()), V = O.default.canUseCollectibles(F), {
     setUpsellSource: x,
     reset: H
   } = (0, p.useUserPopoutCollectiblesUpsellStore)();
   r.useEffect(() => (x(U), () => {
     H()
   }), [x, U, H]);
-  let Y = (0, A.useProfileEffectPreset)(null == s ? void 0 : s.profileEffectId),
+  let Y = (0, h.useProfileEffectPreset)(null == s ? void 0 : s.profileEffectId),
     [j, W] = (0, l.useStateFromStoresArray)([S.default], () => {
       var e;
-      return [(0, h.isPremiumCollectiblesProduct)(S.default.getProduct(null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId)), (0, h.isPremiumCollectiblesProduct)(S.default.getProduct(null == Y ? void 0 : Y.skuId))]
+      return [(0, A.isPremiumCollectiblesProduct)(S.default.getProduct(null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId)), (0, A.isPremiumCollectiblesProduct)(S.default.getProduct(null == Y ? void 0 : Y.skuId))]
     }),
     K = r.useCallback(() => {
       var e, t, i, r;
@@ -117,17 +117,17 @@ t.default = e => {
       null == T || T(R.ContentDismissActionType.DISMISS)
     }, [T]);
   if (!L && !P) return null;
-  let X = (0, o.match)([L, P]).with([!0, !0], () => j && W && F ? C.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
+  let X = (0, o.match)([L, P]).with([!0, !0], () => j && W && V ? C.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
     openShop: M
   }) : j && W ? C.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NON_NITRO.format({
     openShop: M
   }) : C.default.Messages.COMBINED_COLLECTIBLES_SOCIAL_UPSELL.format({
     openShop: M
-  })).with([!0, !1], () => j && F ? C.default.Messages.STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO.format({
+  })).with([!0, !1], () => j && V ? C.default.Messages.STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO.format({
     openShop: M
   }) : C.default.Messages.AVATAR_DECORATIONS_SOCIAL_UPSELL.format({
     openShop: M
-  })).with([!1, !0], () => W && F ? C.default.Messages.STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO.format({
+  })).with([!1, !0], () => W && V ? C.default.Messages.STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO.format({
     openShop: M
   }) : (W && C.default.Messages.STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NON_NITRO.format({
     openShop: M

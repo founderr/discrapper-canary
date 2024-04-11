@@ -22,9 +22,9 @@ var a, s, l = n("735250"),
   m = n("981631"),
   S = n("921944"),
   I = n("689938"),
-  p = n("198940");
+  T = n("198940");
 (a = s || (s = {})).BOOSTING = "BOOSTING", a.NITRO = "NITRO", a.BASH_OUT = "BASH_OUT", a.GAME_NIGHT = "GAME_NIGHT";
-let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4",
+let p = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4",
   g = "https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png",
   A = e => {
     let {
@@ -46,11 +46,11 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
       switch (e) {
         case "BOOSTING":
           return {
-            analyticsLocation: f.default.ACTIVITY_COACH_MARK_BOOSTING, analyticsType: "embedded_activity_discovery_tutorial", description: I.default.Messages.EMBEDDED_ACTIVITY_NOTICE_WTP_DESCRIPTION, learnMore: !0, title: I.default.Messages.EMBEDDED_ACTIVITY_NOTICE_TITLE, videoPosterUrl: g, videoUrl: T, ctaText: I.default.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: I.default.Messages.DISMISS
+            analyticsLocation: f.default.ACTIVITY_COACH_MARK_BOOSTING, analyticsType: "embedded_activity_discovery_tutorial", description: I.default.Messages.EMBEDDED_ACTIVITY_NOTICE_WTP_DESCRIPTION, learnMore: !0, title: I.default.Messages.EMBEDDED_ACTIVITY_NOTICE_TITLE, videoPosterUrl: g, videoUrl: p, ctaText: I.default.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: I.default.Messages.DISMISS
           };
         case "NITRO":
           return {
-            analyticsLocation: f.default.ACTIVITY_COACH_MARK_NITRO, analyticsType: "embedded_activity_nitro_discovery_tutorial", description: I.default.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_DESCRIPTION, learnMore: !0, title: I.default.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_TITLE, videoPosterUrl: g, videoUrl: T, ctaText: I.default.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: I.default.Messages.DISMISS
+            analyticsLocation: f.default.ACTIVITY_COACH_MARK_NITRO, analyticsType: "embedded_activity_nitro_discovery_tutorial", description: I.default.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_DESCRIPTION, learnMore: !0, title: I.default.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_TITLE, videoPosterUrl: g, videoUrl: p, ctaText: I.default.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: I.default.Messages.DISMISS
           };
         case "BASH_OUT":
           return {
@@ -78,13 +78,13 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
     return (0, l.jsx)(E.AnalyticsLocationProvider, {
       value: x,
       children: (0, l.jsx)("div", {
-        className: p.wrapper,
+        className: T.wrapper,
         children: (0, l.jsx)("div", {
-          className: p.container,
+          className: T.container,
           children: (0, l.jsxs)("div", {
-            className: p.content,
+            className: T.content,
             children: [(0, l.jsx)(_.default, {
-              className: p.video,
+              className: T.video,
               src: P,
               poster: M,
               width: 224,
@@ -93,26 +93,26 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
               muted: !0,
               autoPlay: !0
             }), (0, l.jsx)("div", {
-              className: p.header,
+              className: T.header,
               children: (0, l.jsx)(o.Heading, {
-                className: p.__invalid_headerText,
+                className: T.__invalid_headerText,
                 variant: "text-sm/bold",
                 color: "always-white",
                 children: L
               })
             }), (0, l.jsxs)(o.Text, {
-              className: p.subheaderText,
+              className: T.subheaderText,
               variant: "text-xs/normal",
               color: "always-white",
               children: [R, O ? (0, l.jsxs)(l.Fragment, {
                 children: [" ", (0, l.jsx)(o.Anchor, {
-                  className: p.learnMoreLink,
+                  className: T.learnMoreLink,
                   href: "https://support.discord.com/hc/articles/4422142836759",
                   children: I.default.Messages.LEARN_MORE
                 })]
               }) : null]
             }), (0, l.jsxs)("div", {
-              className: p.ctaActionWrapper,
+              className: T.ctaActionWrapper,
               children: [(0, l.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,
                 onClick: () => {

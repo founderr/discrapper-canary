@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return k
   },
   CLIPS_EDUCATION_MAX_DISMISSALS_DISABLED: function() {
-    return V
+    return F
   },
   CLIPS_EDUCATION_MAX_DISMISSALS_ENABLED: function() {
     return B
@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return L
   },
   CLIPS_HARDWARE_CLASSIFICATION_VERSION: function() {
-    return h
+    return A
   },
   CLIPS_MAX_PARTICIPANTS: function() {
     return M
@@ -91,7 +91,7 @@ n.r(t), n.d(t, {
     return m
   },
   WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: function() {
-    return A
+    return h
   }
 });
 var i, r, s, a, o, l, u, d, _ = n("710845"),
@@ -102,8 +102,8 @@ let E = "alt+c",
   T = new _.default("Clips"),
   f = e => "Discord_Clip_".concat(e, ".mp4"),
   S = 3,
-  h = 1,
-  A = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
+  A = 1,
+  h = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
   m = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
   N = /(Apple M[12].*)/,
   O = .1,
@@ -123,4 +123,4 @@ let E = "alt+c",
   w = 14 * c.default.Millis.DAY,
   k = 5,
   B = 5,
-  V = 1
+  F = 1

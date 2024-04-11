@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("922409"),
   S = n("727813"),
   I = n("355350"),
-  p = n("307947"),
-  T = n("125855"),
+  T = n("307947"),
+  p = n("125855"),
   g = n("687683"),
   A = n("981631"),
   N = n("689938"),
@@ -61,7 +61,7 @@ function R() {
       let {
         row: r
       } = e, o = t[r], u = null === (s = t[r + 1]) || void 0 === s ? void 0 : null === (n = s.channel) || void 0 === n ? void 0 : n.id, d = o.channel.id;
-      return (0, a.jsx)(T.default, {
+      return (0, a.jsx)(p.default, {
         index: r,
         className: i()({
           [v.selected]: null != L && L === d,
@@ -94,7 +94,7 @@ function R() {
         })]
       }) : null]
     }, "message-requests-spam-title"), [n, y, R]);
-  return 0 === t.length ? (0, a.jsx)(p.default, {
+  return 0 === t.length ? (0, a.jsx)(T.default, {
     section: g.MessageRequestSections.SPAM
   }) : (0, a.jsx)(r.ListNavigatorProvider, {
     navigator: O,

@@ -19,8 +19,8 @@ let u = r.memo(r.forwardRef((e, t) => {
     rowCount: T,
     rowCountBySection: f,
     rowHeight: S,
-    sectionMarginBottom: h,
-    sectionHeaderHeight: A,
+    sectionMarginBottom: A,
+    sectionHeaderHeight: h,
     sectionFooterHeight: m,
     listHeaderHeight: N,
     stickyHeaders: O = !1,
@@ -44,18 +44,18 @@ let u = r.memo(r.forwardRef((e, t) => {
       sectionRowIndex: t
     }) : S, [S]),
     k = r.useCallback(e => {
-      let t = "function" == typeof A ? A(e) : A;
+      let t = "function" == typeof h ? h(e) : h;
       return null == t ? 0 : t
-    }, [A]),
+    }, [h]),
     B = r.useCallback(e => {
       let t = "function" == typeof m ? m(e) : m;
       return null == t ? 0 : t
     }, [m]),
-    V = r.useCallback(e => {
-      let t = "function" == typeof h ? h(e) : h;
+    F = r.useCallback(e => {
+      let t = "function" == typeof A ? A(e) : A;
       return null == t ? 0 : t
-    }, [h]),
-    F = r.useRef([]),
+    }, [A]),
+    V = r.useRef([]),
     x = r.useRef([]),
     {
       totalHeight: H,
@@ -90,15 +90,15 @@ let u = r.memo(r.forwardRef((e, t) => {
             offset: s
           }, i = n, e++
         }
-        i += B(a) + V(a), s[a].offset.bottom = i
+        i += B(a) + F(a), s[a].offset.bottom = i
       }
       return {
         totalHeight: i += u[2],
         rowDescriptors: r,
         sectionDescriptors: s
       }
-    }, [w, B, k, V, u, T, f, G]);
-  F.current = j, x.current = Y;
+    }, [w, B, k, F, u, T, f, G]);
+  V.current = j, x.current = Y;
   let W = r.useCallback(() => {
     var e;
     let t = null === (e = P.current) || void 0 === e ? void 0 : e.getScrollerNode();
@@ -183,7 +183,7 @@ let u = r.memo(r.forwardRef((e, t) => {
           animate: n = !1,
           offset: i = 0
         } = t,
-        r = F.current[e];
+        r = V.current[e];
       null != r && window.requestAnimationFrame(() => {
         var t;
         null === (t = P.current) || void 0 === t || t.scrollTo({
@@ -196,7 +196,7 @@ let u = r.memo(r.forwardRef((e, t) => {
       height: M,
       totalHeight: H
     }),
-    getSectionDescriptors: () => F.current,
+    getSectionDescriptors: () => V.current,
     getRowDescriptors: () => x.current,
     getScrollerNode: () => {
       var e;
@@ -234,15 +234,15 @@ let u = r.memo(r.forwardRef((e, t) => {
       if (0 === l) continue;
       let u = k(r),
         I = B(r),
-        T = V(r);
+        T = F(r);
       if (o <= D) n = o;
       else if (o > D && a < e) {
         t = s;
         let o = [],
           f = 0,
           S = 0,
-          h = a + u >= D && a <= e;
-        for (null != c && (O || h) && o.push(c(r)), !h && !O && (n += u); f + u + I < l - T;) {
+          A = a + u >= D && a <= e;
+        for (null != c && (O || A) && o.push(c(r)), !A && !O && (n += u); f + u + I < l - T;) {
           let i = w(r, S, t),
             s = a + f + u,
             l = s + i;
@@ -254,8 +254,8 @@ let u = r.memo(r.forwardRef((e, t) => {
           else break;
           f += i, S++, t++
         }
-        let A = a + u + f,
-          m = A + I >= D && A <= e;
+        let h = a + u + f,
+          m = h + I >= D && h <= e;
         null != E && m && o.push(E(r)), null != _ ? i.push(_(r, o)) : i = [...i, ...o]
       } else break
     }
@@ -263,7 +263,7 @@ let u = r.memo(r.forwardRef((e, t) => {
       visibleItems: i,
       listOffset: n
     }
-  }, [w, B, k, V, u, d, _, E, c, D, j, O, I, G, M]), Q = r.useMemo(() => {
+  }, [w, B, k, F, u, d, _, E, c, D, j, O, I, G, M]), Q = r.useMemo(() => {
     var e, t, n;
     return {
       top: X,

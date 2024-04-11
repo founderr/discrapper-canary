@@ -15,8 +15,8 @@ var i = n("735250"),
   T = n("585483"),
   f = n("70956"),
   S = n("36703"),
-  h = n("347312"),
-  A = n("981631"),
+  A = n("347312"),
+  h = n("981631"),
   m = n("689938"),
   N = n("505810");
 let O = r.lazy(() => Promise.all([n.e("26460"), n.e("89792")]).then(n.bind(n, "711635")));
@@ -50,7 +50,7 @@ t.default = r.memo(function(e) {
       onError: k
     } = e,
     B = r.useRef(null),
-    [V, F] = r.useState(0),
+    [F, V] = r.useState(0),
     [x, H] = r.useState(P),
     [Y, j] = r.useState(!1),
     [W, K] = r.useState(!1),
@@ -94,13 +94,13 @@ t.default = r.memo(function(e) {
       X(!0)
     }, []),
     e_ = r.useCallback(() => {
-      X(!1), V === x && es()
-    }, [V, x, es]),
+      X(!1), F === x && es()
+    }, [F, x, es]),
     ec = r.useCallback(e => {
       let t = B.current;
       if (null == x || null == t) return;
       let n = e * x;
-      F(n), t.currentTime = n, q(!0), clearTimeout(et.current), et.current = void 0
+      V(n), t.currentTime = n, q(!0), clearTimeout(et.current), et.current = void 0
     }, [x]);
   r.useEffect(() => {
     !Q && W && q(!0)
@@ -110,14 +110,14 @@ t.default = r.memo(function(e) {
     if (Q || W) {
       if (W) {
         var e, t;
-        eE.current = performance.now(), null == G || G(!1, V, (null !== (t = null === (e = B.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * f.default.Millis.SECOND)
+        eE.current = performance.now(), null == G || G(!1, F, (null !== (t = null === (e = B.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * f.default.Millis.SECOND)
       } else {
         let e = performance.now(),
           t = eE.current;
-        null == w || w(V, null != t ? (e - t) / 1e3 : 0), eE.current = null
+        null == w || w(F, null != t ? (e - t) / 1e3 : 0), eE.current = null
       }
     }
-  }, [W]), t = B, n = W, s = F, r.useEffect(() => {
+  }, [W]), t = B, n = W, s = V, r.useEffect(() => {
     let e;
     return ! function i() {
       let r = t.current;
@@ -126,10 +126,10 @@ t.default = r.memo(function(e) {
       null != e && cancelAnimationFrame(e)
     }
   }, [t, n, s]), _ = L, R = W, C = K, r.useEffect(() => {
-    if (R) return T.ComponentDispatch.dispatch(A.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, {
+    if (R) return T.ComponentDispatch.dispatch(h.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, {
       src: _
-    }), T.ComponentDispatch.subscribe(A.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e), () => {
-      T.ComponentDispatch.unsubscribe(A.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e)
+    }), T.ComponentDispatch.subscribe(h.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e), () => {
+      T.ComponentDispatch.unsubscribe(h.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e)
     };
 
     function e(e) {
@@ -196,10 +196,10 @@ t.default = r.memo(function(e) {
         width: 18,
         height: 18
       })
-    }), (0, i.jsx)(h.default, {
+    }), (0, i.jsx)(A.default, {
       className: N.waveform,
       waveform: y,
-      currentTime: V,
+      currentTime: F,
       duration: null != x ? x : 1,
       playing: W,
       played: Q,
@@ -208,7 +208,7 @@ t.default = r.memo(function(e) {
       onDragEnd: e_
     }), (0, i.jsx)(p, {
       played: Q,
-      currentTime: V,
+      currentTime: F,
       duration: x
     }), (0, i.jsx)(c.default, {
       className: N.volumeButton,

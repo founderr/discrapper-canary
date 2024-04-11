@@ -15,8 +15,8 @@ var i = n("278074"),
   T = n("830121"),
   f = n("710845"),
   S = n("163268"),
-  h = n("38618"),
-  A = n("687516"),
+  A = n("38618"),
+  h = n("687516"),
   m = n("539573"),
   N = n("409059"),
   O = n("264229"),
@@ -37,8 +37,8 @@ n("807092");
 var w = n("869765"),
   k = n("926491"),
   B = n("467798"),
-  V = n("346479"),
-  F = n("218543"),
+  F = n("346479"),
+  V = n("218543"),
   x = n("199902"),
   H = n("314897"),
   Y = n("592125");
@@ -103,7 +103,7 @@ function eT(e) {
       let i = x.default.getLastActiveStream();
       if (null != i && i.channelId === t.id) {
         e = eo.LoggingInviteTypes.STREAM, n.destination_user_id = i.ownerId;
-        let t = (0, A.getStreamerApplication)(i, z.default);
+        let t = (0, h.getStreamerApplication)(i, z.default);
         n.application_id = null != t ? t.id : null
       }
     }
@@ -320,7 +320,7 @@ let ef = {
         isPreload: d,
         skipLocalFetch: _,
         truncate: c
-      } = e, E = Y.default.getChannel(t), I = h.default.isConnectedOrOverlay(), T = Date.now();
+      } = e, E = Y.default.getChannel(t), I = A.default.isConnectedOrOverlay(), T = Date.now();
       if (null != E && E.type === eo.ChannelTypes.GUILD_STORE) return !1;
       if (t === el.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) return;
       if (e_.log("Fetching messages for ".concat(t, " between ").concat(n, " and ").concat(i, ". jump=").concat(JSON.stringify(a))), eS._tryFetchMessagesCached({
@@ -332,7 +332,7 @@ let ef = {
           focus: u,
           truncate: c
         })) return;
-      F.default.fetchMessages.recordStart();
+      V.default.fetchMessages.recordStart();
       let f = null != a ? a : void 0;
       null == f && null != u && (f = {
         ...u
@@ -341,7 +341,7 @@ let ef = {
       l.default.commit(S), o.default.dispatch({
         type: "LOAD_MESSAGES"
       });
-      let A = null == f ? void 0 : f.messageId,
+      let h = null == f ? void 0 : f.messageId,
         m = new eI;
       return !_ && this.fetchLocalMessages(t, n, i, r, m), s.HTTP.get({
         url: eo.Endpoints.MESSAGES(t),
@@ -349,26 +349,26 @@ let ef = {
           before: n,
           after: i,
           limit: r,
-          around: A,
+          around: h,
           preload: d
         },
         retries: 2,
         oldFormErrors: !0
-      }).then(e => (F.default.fetchMessages.recordEnd(), F.default.dispatchMessages.measure(() => {
+      }).then(e => (V.default.fetchMessages.recordEnd(), V.default.dispatchMessages.measure(() => {
         let s = e.body,
           l = null != n,
           u = null != i,
           d = null == n && null == i,
-          _ = null != A || s.length === r && (l || d),
-          E = null != A || u && s.length === r;
-        if (null != A) {
+          _ = null != h || s.length === r && (l || d),
+          E = null != h || u && s.length === r;
+        if (null != h) {
           let e = Math.floor(r / 2),
-            n = [A, ...s.map(e => {
+            n = [h, ...s.map(e => {
               let {
                 id: t
               } = e;
               return t
-            })].filter((e, t, n) => n.indexOf(e) === t).sort(es.default.compare).indexOf(A);
+            })].filter((e, t, n) => n.indexOf(e) === t).sort(es.default.compare).indexOf(h);
           if (n < e && (_ = !1), s.length - n < e && (E = !1), E && s.length > 0) {
             let e = X.default.lastMessageId(t);
             s[0].id === e && (E = !1)
@@ -384,7 +384,7 @@ let ef = {
           hasMoreAfter: E,
           limit: r,
           jump: a,
-          isStale: !I || h.default.lastTimeConnectedChanged() >= T,
+          isStale: !I || A.default.lastTimeConnectedChanged() >= T,
           truncate: c
         })
       }), !0), () => (e_.log("Failed to fetch messages for ".concat(t)), o.default.dispatch({
@@ -397,20 +397,20 @@ let ef = {
         a = l.default.getOrCreate(e),
         u = _.default.database();
       if (null == u || null == s || null != t || null != n) {
-        F.default.addLocalMessages(e, -1);
+        V.default.addLocalMessages(e, -1);
         return
       }
       if (a.ready && !a.cached) {
-        F.default.addLocalMessages(e, -2);
+        V.default.addLocalMessages(e, -2);
         return
       }
       let d = await (0, c.tryLoadAsync)(() => E.default.load(u, e, i));
       if (null == d) {
-        F.default.addLocalMessages(e, -3);
+        V.default.addLocalMessages(e, -3);
         return
       }
-      if (e_.log("fetched ".concat(d.messages.length, " messages from local database (channel_id: ").concat(e, ", remote_fetch_completed: ").concat(r.completed, ")")), F.default.addLocalMessages(e, d.messages.length), !r.completed && d.messages.length > 0) {
-        let t = d.messages.length >= i && d.connectionId === h.default.lastTimeConnectedChanged();
+      if (e_.log("fetched ".concat(d.messages.length, " messages from local database (channel_id: ").concat(e, ", remote_fetch_completed: ").concat(r.completed, ")")), V.default.addLocalMessages(e, d.messages.length), !r.completed && d.messages.length > 0) {
+        let t = d.messages.length >= i && d.connectionId === A.default.lastTimeConnectedChanged();
         o.default.dispatch({
           type: "LOCAL_MESSAGES_LOADED",
           guildId: s.guild_id,
@@ -620,30 +620,30 @@ let ef = {
         {
           activityAction: f,
           location: S,
-          suggestedInvite: h,
-          stickerIds: A,
+          suggestedInvite: A,
+          stickerIds: h,
           messageReference: O,
           allowedMentions: p,
           poll: R
         } = n,
         C = null !== (i = n.flags) && void 0 !== i ? i : 0,
         [M, w] = (0, B.default)(l);
-      if (M && (l = w, C = (0, et.addFlag)(C, eo.MessageFlags.SUPPRESS_NOTIFICATIONS)), "" === l && null == f && null == A && null == R) return Promise.resolve();
-      let V = null != O ? eo.MessageTypes.REPLY : eo.MessageTypes.DEFAULT,
-        F = null !== (s = n.nonce) && void 0 !== s ? s : (0, D.createNonce)();
+      if (M && (l = w, C = (0, et.addFlag)(C, eo.MessageFlags.SUPPRESS_NOTIFICATIONS)), "" === l && null == f && null == h && null == R) return Promise.resolve();
+      let F = null != O ? eo.MessageTypes.REPLY : eo.MessageTypes.DEFAULT,
+        V = null !== (s = n.nonce) && void 0 !== s ? s : (0, D.createNonce)();
       if (!1 !== n.eagerDispatch) {
         let t = (0, D.default)({
           channelId: e,
           content: l,
           tts: E,
-          type: V,
+          type: F,
           messageReference: O,
           allowedMentions: p,
           flags: 0 !== C ? C : void 0,
-          nonce: F,
+          nonce: V,
           poll: (0, U.createPollServerDataFromCreateRequest)(R)
         });
-        (0, y.updateComboOnMessageSend)(e, t.id), null != A && (t.sticker_items = A.map(e => k.default.getStickerById(e)).filter(e => null != e)), eS.receiveMessage(e, t, !0, n)
+        (0, y.updateComboOnMessageSend)(e, t.id), null != h && (t.sticker_items = h.map(e => k.default.getStickerById(e)).filter(e => null != e)), eS.receiveMessage(e, t, !0, n)
       }
       if (!eE && null != _ && _.length > 0) {
         let t, n;
@@ -658,7 +658,7 @@ let ef = {
         message: {
           channelId: e,
           content: l,
-          nonce: F,
+          nonce: V,
           tts: E,
           message_reference: O,
           allowed_mentions: p,
@@ -678,7 +678,7 @@ let ef = {
           null != n.party && null != n.party.id && (t.party_id = n.party.id), x.message.application_id = n.application_id, x.message.activity = t
         }
       }
-      return null != R && (x.message.poll = R), null != A && (x.message.sticker_ids = A), P.default.isEnabled() && (x.message.has_poggermode_enabled = !0), new Promise((t, i) => {
+      return null != R && (x.message.poll = R), null != h && (x.message.sticker_ids = h), P.default.isEnabled() && (x.message.has_poggermode_enabled = !0), new Promise((t, i) => {
         let s = Date.now(),
           a = u.default.length,
           _ = Math.floor(1e4 * Math.random());
@@ -690,7 +690,7 @@ let ef = {
               queueSize: a
             },
             poll: R
-          }), g.default.recordMessageSendApiResponse(F), o.default.dispatch({
+          }), g.default.recordMessageSendApiResponse(V), o.default.dispatch({
             type: "SLOWMODE_RESET_COOLDOWN",
             slowmodeType: J.SlowmodeType.SendMessage,
             channelId: e
@@ -699,7 +699,7 @@ let ef = {
             emojiUsed: c
           }), o.default.dispatch({
             type: "STICKER_TRACK_USAGE",
-            stickerIds: A
+            stickerIds: h
           }), o.default.dispatch({
             type: "LOCAL_MESSAGE_CREATE",
             message: {
@@ -763,7 +763,7 @@ let ef = {
             channelId: e,
             messageId: u.body.id,
             location: null != S ? S : "chat_input",
-            suggested: h
+            suggested: A
           }), ! function(e, t, n, i, r) {
             (0, en.findGiftCodes)(e).forEach(e => {
               let s = Y.default.getChannel(t);
@@ -808,9 +808,9 @@ let ef = {
                 type: "POGGERMODE_TEMPORARILY_DISABLED"
               }) : null != R || eS.sendClydeError(e, u.body.code)
             }
-            t ? eS.deleteMessage(e, F, !0) : (o.default.dispatch({
+            t ? eS.deleteMessage(e, V, !0) : (o.default.dispatch({
               type: "MESSAGE_SEND_FAILED",
-              messageId: F,
+              messageId: V,
               channelId: e
             }), (0, v.logMessageSendFailure)({
               failureCode: u.hasErr ? void 0 : u.status,
@@ -848,7 +848,7 @@ let ef = {
       let {
         content: i
       } = n;
-      await V.default.unarchiveThreadIfNecessary(e);
+      await F.default.unarchiveThreadIfNecessary(e);
       let r = function(e, t) {
           let n = W.default.getMessage(e, t);
           if (null == n || n.type !== eo.MessageTypes.REPLY) return;
@@ -892,7 +892,7 @@ let ef = {
       })
     },
     async suppressEmbeds(e, t) {
-      await V.default.unarchiveThreadIfNecessary(e), s.HTTP.patch({
+      await F.default.unarchiveThreadIfNecessary(e), s.HTTP.patch({
         url: eo.Endpoints.MESSAGE(e, t),
         body: {
           flags: eo.MessageFlags.SUPPRESS_EMBEDS
@@ -901,7 +901,7 @@ let ef = {
       })
     },
     async patchMessageAttachments(e, t, n) {
-      await V.default.unarchiveThreadIfNecessary(e), s.HTTP.patch({
+      await F.default.unarchiveThreadIfNecessary(e), s.HTTP.patch({
         url: eo.Endpoints.MESSAGE(e, t),
         body: {
           attachments: n
@@ -920,7 +920,7 @@ let ef = {
             a.AccessibilityAnnouncer.announce(ed.default.Messages.A11Y_ANNOUNCEMENT_MESSAGE_DELETED)
           })
         };
-      n ? i() : (await V.default.unarchiveThreadIfNecessary(e), s.HTTP.del({
+      n ? i() : (await F.default.unarchiveThreadIfNecessary(e), s.HTTP.del({
         url: eo.Endpoints.MESSAGE(e, t),
         oldFormErrors: !0
       }).then(() => {

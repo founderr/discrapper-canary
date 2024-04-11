@@ -11,8 +11,8 @@ var i, r, s, a, o = n("512722"),
   T = n("258609"),
   f = n("569545"),
   S = n("199902"),
-  h = n("314897"),
-  A = n("523746"),
+  A = n("314897"),
+  h = n("523746"),
   m = n("592125"),
   N = n("944486"),
   O = n("606304"),
@@ -32,8 +32,8 @@ let v = new I.default("ChannelRTCStore"),
   w = {},
   k = {},
   B = {},
-  V = {},
   F = {},
+  V = {},
   x = {};
 
 function H(e) {
@@ -49,7 +49,7 @@ function Y(e) {
     let n = er(e) || Q(t) ? D.ChannelModes.VIDEO : D.ChannelModes.VOICE;
     n === D.ChannelModes.VOICE ? (delete G[e], delete w[e]) : G[e] = n
   }(n), function(e) {
-    let t = h.default.getId(),
+    let t = A.default.getId(),
       n = H(e);
     if (0 === n.size() || N.default.getVoiceChannelId() !== e) {
       X(e, null);
@@ -133,7 +133,7 @@ function J() {
     let n = N.default.getVoiceChannelId();
     null != n && !e.includes(n) && e.push(n);
     let i = T.default.getRemoteSessionId(),
-      r = C.default.getVoiceStateForSession(h.default.getId(), i);
+      r = C.default.getVoiceStateForSession(A.default.getId(), i);
     (null == r ? void 0 : r.channelId) != null && e.push(null == r ? void 0 : r.channelId), d().difference(y, e).forEach(q);
     let s = d().difference(e, y);
     return y = e, s
@@ -171,7 +171,7 @@ function en(e) {
       id: t
     }
   } = e;
-  return delete V[t], delete F[t], q(t)
+  return delete F[t], delete V[t], q(t)
 }
 
 function ei(e) {
@@ -190,7 +190,7 @@ function er(e) {
 }
 class es extends(i = _.default.Store) {
   initialize() {
-    this.waitFor(S.default, h.default, A.default, m.default, E.default, N.default, O.default, p.default, R.default, C.default), this.syncWith([E.default], Z), this.syncWith([T.default], J)
+    this.waitFor(S.default, A.default, h.default, m.default, E.default, N.default, O.default, p.default, R.default, C.default), this.syncWith([E.default], Z), this.syncWith([T.default], J)
   }
   getParticipantsVersion(e) {
     return H(e).version
@@ -263,14 +263,14 @@ class es extends(i = _.default.Store) {
   }
   getChatOpen(e) {
     var t;
-    return null !== (t = V[e]) && void 0 !== t && t
+    return null !== (t = F[e]) && void 0 !== t && t
   }
   isFullscreenInContext() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : D.AppContext.APP;
     return Object.values(w).some(t => t[e] === D.ChannelLayouts.FULL_SCREEN)
   }
   getStageStreamSize(e) {
-    return F[e]
+    return V[e]
   }
   getStageVideoLimitBoostUpsellDismissed(e) {
     return x[e]
@@ -291,14 +291,14 @@ a = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r,
       channelId: t,
       currentVoiceChannelId: n
     } = e;
-    return null != t ? delete b[t] : null != n && (delete V[n], delete F[n], z(n)), J()
+    return null != t ? delete b[t] : null != n && (delete F[n], delete V[n], z(n)), J()
   },
   CHANNEL_SELECT: function(e) {
     let {
       channelId: t,
       messageId: n
     } = e, i = J(), r = m.default.getChannel(t);
-    return null == t || null == n || (null == r ? void 0 : r.type) !== D.ChannelTypes.GUILD_VOICE && (null == r ? void 0 : r.type) !== D.ChannelTypes.GUILD_STAGE_VOICE || V[t] ? i : (V[t] = !0, !0)
+    return null == t || null == n || (null == r ? void 0 : r.type) !== D.ChannelTypes.GUILD_VOICE && (null == r ? void 0 : r.type) !== D.ChannelTypes.GUILD_STAGE_VOICE || F[t] ? i : (F[t] = !0, !0)
   },
   CHANNEL_RTC_ACTIVE_CHANNELS: J,
   VOICE_STATE_UPDATES: function(e) {
@@ -356,7 +356,7 @@ a = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r,
         let {
           ownerId: e
         } = (0, f.decodeStreamKey)(n);
-        e === h.default.getId() && j(e, [t])
+        e === A.default.getId() && j(e, [t])
       } catch (e) {
         v.warn("INVALID STREAM KEY FORMAT ".concat(n), e)
       }!Q(i) && (k[t] = !1)
@@ -392,7 +392,7 @@ a = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r,
       channelId: t,
       large: n
     } = e;
-    F[t] = n
+    V[t] = n
   },
   CHANNEL_RTC_UPDATE_STAGE_VIDEO_LIMIT_BOOST_UPSELL_DISMISSED: function(e) {
     let {
@@ -405,7 +405,7 @@ a = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r,
     let {
       channelId: t,
       selfStreamHidden: n
-    } = e, i = h.default.getId();
+    } = e, i = A.default.getId();
     if (n) {
       let [e] = W(t);
       (0, f.isStreamKey)(e) && e.includes(i) && X(t, null)
@@ -417,7 +417,7 @@ a = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r,
       channelId: t,
       chatOpen: n
     } = e;
-    V[t] = n
+    F[t] = n
   },
   RTC_CONNECTION_VIDEO: function(e) {
     let {

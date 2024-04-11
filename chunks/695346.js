@@ -55,7 +55,7 @@ n.r(t), n.d(t, {
     return B
   },
   DeveloperMode: function() {
-    return eA
+    return eh
   },
   DisableGamesTab: function() {
     return q
@@ -88,13 +88,13 @@ n.r(t), n.d(t, {
     return eM
   },
   FocusMode: function() {
-    return h
-  },
-  FocusModeExpiresAtSetting: function() {
     return A
   },
+  FocusModeExpiresAtSetting: function() {
+    return h
+  },
   FriendSourceFlagsSetting: function() {
-    return F
+    return V
   },
   GifAutoPlay: function() {
     return eN
@@ -154,7 +154,7 @@ n.r(t), n.d(t, {
     return f
   },
   RestrictedGuildIds: function() {
-    return V
+    return F
   },
   RtcPanelShowVoiceStates: function() {
     return x
@@ -253,13 +253,13 @@ let c = (0, o.defineProtoSetting)("textAndImages", "useLegacyChatInput", e => {
 }, e => s.BoolValue.create({
   value: e
 }));
-let h = (0, o.defineProtoSetting)("notifications", "quietMode", e => {
+let A = (0, o.defineProtoSetting)("notifications", "quietMode", e => {
     var t;
     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
   }, e => s.BoolValue.create({
     value: !!e
   })),
-  A = (0, o.defineProtoSetting)("notifications", "focusModeExpiresAtMs", e => null != e ? e : "0", e => e),
+  h = (0, o.defineProtoSetting)("notifications", "focusModeExpiresAtMs", e => null != e ? e : "0", e => e),
   m = [],
   N = (0, o.defineProtoSetting)("textAndImages", "emojiPickerCollapsedSections", e => null != e ? e : m, e => e),
   O = (0, o.defineProtoSetting)("textAndImages", "stickerPickerCollapsedSections", e => null != e ? e : m, e => e),
@@ -335,14 +335,14 @@ let M = (0, o.defineProtoSetting)("gameLibrary", "installShortcutDesktop", e => 
   value: e
 }));
 let B = (0, o.defineProtoSetting)("privacy", "defaultGuildsRestricted", e => null != e && e, e => e),
-  V = (0, o.defineProtoSetting)("privacy", "restrictedGuildIds", e => null != e ? e : [], e => e);
+  F = (0, o.defineProtoSetting)("privacy", "restrictedGuildIds", e => null != e ? e : [], e => e);
 (0, o.defineProtoSetting)("privacy", "friendDiscoveryFlags", e => {
   var t;
   return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : 0
 }, e => s.UInt32Value.create({
   value: e
 }));
-let F = (0, o.defineProtoSetting)("privacy", "friendSourceFlags", e => {
+let V = (0, o.defineProtoSetting)("privacy", "friendSourceFlags", e => {
     var t;
     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : d.AllFriendSourceFlags
   }, e => s.UInt32Value.create({
@@ -505,11 +505,11 @@ let eS = new Set([a.ChannelListLayoutTypes.COZY, a.ChannelListLayoutTypes.COMPAC
 (0, o.defineProtoSetting)("appearance", "channelListLayout", e => null != e && eS.has(e.value) ? e.value : a.ChannelListLayoutTypes.COZY, e => s.StringValue.create({
   value: e
 }));
-let eh = new Set([a.MessagePreviewTypes.ALL, a.MessagePreviewTypes.UNREADS, a.MessagePreviewTypes.NONE]);
-(0, o.defineProtoSetting)("appearance", "messagePreviews", e => null != e && eh.has(e.value) ? e.value : a.MessagePreviewTypes.ALL, e => s.StringValue.create({
+let eA = new Set([a.MessagePreviewTypes.ALL, a.MessagePreviewTypes.UNREADS, a.MessagePreviewTypes.NONE]);
+(0, o.defineProtoSetting)("appearance", "messagePreviews", e => null != e && eA.has(e.value) ? e.value : a.MessagePreviewTypes.ALL, e => s.StringValue.create({
   value: e
 }));
-let eA = (0, o.wrapSettingWithSelectiveSyncing)((0, o.defineProtoSetting)("appearance", "developerMode", e => null != e && e, e => e), "appearance", "developerMode"),
+let eh = (0, o.wrapSettingWithSelectiveSyncing)((0, o.defineProtoSetting)("appearance", "developerMode", e => null != e && e, e => e), "appearance", "developerMode"),
   em = (0, o.defineProtoSetting)("appearance", "clientThemeSettings", e => {
     var t;
     return {

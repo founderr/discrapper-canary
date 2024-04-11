@@ -25,8 +25,8 @@ function c(e) {
     onFocus: T,
     onBlur: f,
     onMouseOver: S,
-    onMouseLeave: h,
-    ...A
+    onMouseLeave: A,
+    ...h
   } = e, [m, N] = r.useState(!1), O = r.useCallback(() => {
     N(!0), null == T || T()
   }, [T]), p = r.useCallback(() => {
@@ -34,8 +34,8 @@ function c(e) {
   }, [f]), R = r.useCallback(() => {
     N(!0), null == S || S()
   }, [S]), C = r.useCallback(() => {
-    N(!1), null == h || h()
-  }, [h]), g = r.useMemo(() => {
+    N(!1), null == A || A()
+  }, [A]), g = r.useMemo(() => {
     if (t.type === u.ApplicationCommandSectionType.APPLICATION) {
       var e;
       return l.default.getApplicationIconURL({
@@ -49,7 +49,7 @@ function c(e) {
     return _
   }, [t, s]);
   return (0, i.jsx)("div", {
-    ...A,
+    ...h,
     className: a()(d.wrapper, E, {
       [d.selectable]: I,
       [d.selected]: I && n

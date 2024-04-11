@@ -24,40 +24,40 @@ var a = n("735250"),
 function I(e) {
   let {
     user: t
-  } = e, l = (0, f.default)(), I = (0, E.useHasMaxConnections)(), p = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), T = s.useCallback(() => {
-    i()(void 0 !== p, "User must be logged in to accept a link request"), (0, o.openModalLazy)(async () => {
+  } = e, l = (0, f.default)(), I = (0, E.useHasMaxConnections)(), T = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), p = s.useCallback(() => {
+    i()(void 0 !== T, "User must be logged in to accept a link request"), (0, o.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("59716")]).then(n.bind(n, "275370"));
       return n => (0, a.jsx)(e, {
         ...n,
-        currentUser: p,
+        currentUser: T,
         otherUser: t
       })
     })
-  }, [p, t]), g = s.useCallback(() => {
-    i()(void 0 !== p, "User must be logged in to decline a link request"), (0, o.openModalLazy)(async () => {
+  }, [T, t]), g = s.useCallback(() => {
+    i()(void 0 !== T, "User must be logged in to decline a link request"), (0, o.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("958")]).then(n.bind(n, "4526"));
       return n => (0, a.jsx)(e, {
         ...n,
-        currentUser: p,
+        currentUser: T,
         otherUser: t
       })
     })
-  }, [p, t]), A = s.useCallback(() => {
-    i()(void 0 !== p, "User must be logged in to decline a link request"), (0, o.openModalLazy)(async () => {
+  }, [T, t]), A = s.useCallback(() => {
+    i()(void 0 !== T, "User must be logged in to decline a link request"), (0, o.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("69015")]).then(n.bind(n, "247265"));
       return n => (0, a.jsx)(e, {
         ...n,
-        currentUser: p,
+        currentUser: T,
         otherUser: t
       })
     })
-  }, [p, t]);
+  }, [T, t]);
   return (0, a.jsxs)("div", {
     className: S.container,
     children: [(0, a.jsx)("div", {
@@ -78,7 +78,7 @@ function I(e) {
           icon: d.default,
           className: S.__invalid_actionAccept,
           tooltip: m.default.Messages.FAMILY_CENTER_LINK_ACTION_ACCEPT,
-          onClick: T
+          onClick: p
         }), (0, a.jsx)(h.default, {
           icon: c.default,
           className: S.__invalid_actionDeny,

@@ -29,8 +29,8 @@ var r = n("803997"),
   T = n("618158"),
   f = n("922745"),
   S = n("871499"),
-  h = n("402113"),
-  A = n("800965"),
+  A = n("402113"),
+  h = n("800965"),
   m = n("157813"),
   N = n("25827"),
   O = n("131951"),
@@ -118,14 +118,14 @@ function b(e) {
         justify: p.default.Justify.END,
         basis: "50%",
         align: p.default.Align.CENTER,
-        children: [M ? null : (0, i.jsx)(A.default, {
+        children: [M ? null : (0, i.jsx)(h.default, {
           className: y.rightPipIcon,
           popoutOpen: !1,
           onOpenPopout: () => {
             (0, L.default)(() => c.openChannelCallPopout(r))
           },
           onClosePopout: v.NOOP_NULL
-        }), (0, i.jsx)(h.default, {
+        }), (0, i.jsx)(A.default, {
           applicationId: s,
           channelId: r.id,
           className: y.rightPipIcon
@@ -169,7 +169,7 @@ function G(e) {
         size: 24,
         max: 3,
         className: y.__invalid_userSummaryContainer
-      }), (0, i.jsx)(h.default, {
+      }), (0, i.jsx)(A.default, {
         applicationId: r,
         channelId: n.id,
         iconClassName: y.leaveActivityIcon,
@@ -230,7 +230,7 @@ function k(e) {
           children: [I ? null : (0, i.jsx)(U, {
             isExpanded: E,
             onClick: c
-          }), (0, i.jsx)(h.default, {
+          }), (0, i.jsx)(A.default, {
             applicationId: l,
             channelId: u.id,
             iconClassName: y.leaveActivityIcon

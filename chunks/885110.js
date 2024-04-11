@@ -10,8 +10,8 @@ var s, a, o, l, u = n("348327"),
   T = n("503438"),
   f = n("860852"),
   S = n("768419"),
-  h = n("695346"),
-  A = n("581883"),
+  A = n("695346"),
+  h = n("581883"),
   m = n("131704"),
   N = n("780570"),
   O = n("314897"),
@@ -32,25 +32,25 @@ let M = !1,
   k = Object.freeze([]),
   B = [];
 
-function V(e) {
+function F(e) {
   return (0, N.shouldShareApplicationActivity)(e, C.default)
 }
 
-function F(e) {
+function V(e) {
   switch (e.type) {
     case v.ActivityTypes.LISTENING:
       if ((0, T.default)(e)) return S.default.shouldShowActivity();
-      if (null != e.application_id) return V(e.application_id);
+      if (null != e.application_id) return F(e.application_id);
       return !1;
     case v.ActivityTypes.PLAYING:
-      return null != e.application_id ? V(e.application_id) : function(e) {
+      return null != e.application_id ? F(e.application_id) : function(e) {
         let t = p.default.getGameByName(e);
-        return null != t ? V(t.id) : h.ShowCurrentGame.getSetting()
+        return null != t ? F(t.id) : A.ShowCurrentGame.getSetting()
       }(e.name);
     case v.ActivityTypes.STREAMING:
     case v.ActivityTypes.WATCHING:
     default:
-      return null == e.application_id || V(e.application_id)
+      return null == e.application_id || F(e.application_id)
   }
 }
 
@@ -59,12 +59,12 @@ function x() {
   if (U = null !== (e = R.default.getIdleSince()) && void 0 !== e ? e : 0, G = R.default.isAFK(), w) y = P, H();
   else if (M) y = v.StatusTypes.INVISIBLE;
   else {
-    let e = h.StatusSetting.getSetting();
+    let e = A.StatusSetting.getSetting();
     y = e !== v.StatusTypes.UNKNOWN ? e : v.StatusTypes.ONLINE
   }
   y === v.StatusTypes.ONLINE && U > 0 && (y = v.StatusTypes.IDLE);
   let t = !1,
-    n = w || y === v.StatusTypes.INVISIBLE ? [] : g.default.getActivities().filter(F);
+    n = w || y === v.StatusTypes.INVISIBLE ? [] : g.default.getActivities().filter(V);
   !d()(b, n) && (b = n, t = !0);
   let i = D.default.getRemoteActivities();
   if (k !== i && (k = i, t = !0), t) {
@@ -82,7 +82,7 @@ function Y() {
 }
 class j extends(s = E.default.Store) {
   initialize() {
-    this.waitFor(R.default, A.default, g.default, D.default, C.default, p.default), this.syncWith([g.default], x)
+    this.waitFor(R.default, h.default, g.default, D.default, C.default, p.default), this.syncWith([g.default], x)
   }
   getLocalPresence() {
     return {

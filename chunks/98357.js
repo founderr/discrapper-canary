@@ -1,17 +1,17 @@
 "use strict";
-t.r(r), t.d(r, {
+r.r(t), r.d(t, {
   toggle: function() {
     return i
   }
 });
-var a = t("570140"),
-  n = t("432877");
+var a = r("570140"),
+  n = r("432877");
 
-function i(e, r) {
-  let t = "boolean" == typeof r ? r : !n.default.get(e);
+function i(e, t) {
+  let r = "boolean" == typeof t ? t : !n.default.get(e);
   a.default.dispatch({
     type: "DEV_TOOLS_DEV_SETTING_SET",
     toggle: e,
-    value: t
+    value: r
   })
 }

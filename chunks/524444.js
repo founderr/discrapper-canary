@@ -62,8 +62,8 @@ var i, r, s = n("735250"),
   T = n("45114"),
   f = n("431279"),
   S = n("794295"),
-  h = n("593472"),
-  A = n("110924"),
+  A = n("593472"),
+  h = n("110924"),
   m = n("688465"),
   N = n("479313"),
   O = n("765104"),
@@ -83,8 +83,8 @@ var i, r, s = n("735250"),
   w = n("465670"),
   k = n("839523"),
   B = n("626135"),
-  V = n("823379"),
-  F = n("589530"),
+  F = n("823379"),
+  V = n("589530"),
   x = n("709054"),
   H = n("981631"),
   Y = n("420212"),
@@ -97,10 +97,10 @@ let X = {
     position: "top"
   },
   Q = e => t => {
-    null == e || e(t), (0, F.setVolume)(t)
+    null == e || e(t), (0, V.setVolume)(t)
   },
   q = e => t => {
-    null == e || e(t), (0, F.setMuted)(t)
+    null == e || e(t), (0, V.setMuted)(t)
   };
 
 function J(e) {
@@ -114,7 +114,7 @@ function J(e) {
     renderOverlayContent: u,
     ...d
   } = e, _ = Q(t), c = q(n);
-  return i = null == i ? F.getVolume : i, r = null == r ? F.getMuted : r, (0, s.jsxs)(a.Fragment, {
+  return i = null == i ? V.getVolume : i, r = null == r ? V.getMuted : r, (0, s.jsxs)(a.Fragment, {
     children: [(0, s.jsx)(M.default, {
       ...d,
       alt: o,
@@ -138,7 +138,7 @@ function Z(e) {
     renderAdjacentContent: l,
     ...u
   } = e, d = Q(t), _ = q(i);
-  return n = null == n ? F.getVolume : n, (0, s.jsxs)(a.Fragment, {
+  return n = null == n ? V.getVolume : n, (0, s.jsxs)(a.Fragment, {
     children: [(0, s.jsx)(v.default, {
       ...u,
       onVolumeChange: d,
@@ -159,7 +159,7 @@ function $(e) {
     onMute: i,
     ...r
   } = e, a = Q(t), o = q(i);
-  return n = null == n ? F.getVolume : n, (0, s.jsx)(g.default, {
+  return n = null == n ? V.getVolume : n, (0, s.jsx)(g.default, {
     ...r,
     onVolumeChange: a,
     onMute: o,
@@ -272,7 +272,7 @@ let ei = e => {
                 case 1:
                   return K.default.Messages.JUMP_BAR_VIEWING_REPLY;
                 default:
-                  return (0, V.assertNever)(e)
+                  return (0, F.assertNever)(e)
               }
             }(t)
           })
@@ -289,7 +289,7 @@ let ei = e => {
                 case 1:
                   return K.default.Messages.JUMP_TO_ORIGINAL_MESSAGE;
                 default:
-                  return (0, V.assertNever)(e)
+                  return (0, F.assertNever)(e)
               }
             }(t), (0, s.jsx)(b.default, {
               className: z.barButtonIcon
@@ -400,7 +400,7 @@ function ea(e) {
   } = a.useContext(U.MessagesInteractionContext), [S, R] = a.useState(null), C = a.useRef(null), [g, v] = a.useState(null), M = a.useRef(null), y = (0, c.useStateFromStoresArray)([O.default], () => {
     var e;
     return null !== (e = O.default.summaries(r.id)) && void 0 !== e ? e : []
-  }, [r]), P = (0, A.default)(y);
+  }, [r]), P = (0, h.default)(y);
   a.useEffect(() => {
     !d().isEqual(P, y) && B.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
       num_summaries: y.length,
@@ -413,14 +413,14 @@ function ea(e) {
       channel_type: r.type
     })
   }, [y, P, r.guild_id, r.id, r.type]);
-  let F = (0, c.useStateFromStores)([D.default], () => {
+  let V = (0, c.useStateFromStores)([D.default], () => {
       var e;
       return null !== (e = null == y ? void 0 : y.map(e => {
         var t;
         return null === (t = e.people) || void 0 === t ? void 0 : t.map(e => {
           var t;
           return null !== (t = D.default.getUser(e)) && void 0 !== t ? t : null
-        }).filter(V.isNotNullish)
+        }).filter(F.isNotNullish)
       })) && void 0 !== e ? e : []
     }, [y], eo),
     Y = null !== (n = (0, c.useStateFromStores)([O.default], () => O.default.visibleSummaryIndex())) && void 0 !== n ? n : -1,
@@ -473,7 +473,7 @@ function ea(e) {
         messageId: n.startId,
         flash: !0,
         offset: 0,
-        jumpType: h.JumpTypes.ANIMATED,
+        jumpType: A.JumpTypes.ANIMATED,
         context: "Summary Jump"
       })
     }, [y, r, q, u]),
@@ -515,10 +515,10 @@ function ea(e) {
   let ei = a.useMemo(() => (0, s.jsx)(p.default, {
       channel: r,
       summaries: y,
-      summariesMembers: F,
+      summariesMembers: V,
       selectTopic: ee,
       setOpen: et
-    }), [y, F, ee, et, r]),
+    }), [y, V, ee, et, r]),
     er = a.useCallback(() => {
       let e = L.default.ackMessageId(r.id);
       null != e ? I.default.jumpToMessage({
@@ -631,7 +631,7 @@ function el(e) {
   } = a.useContext(U.MessagesInteractionContext), [T, f] = a.useState(null), S = a.useRef(null), [R, C] = a.useState(null), g = a.useRef(null), L = (0, c.useStateFromStoresArray)([O.default], () => {
     var e;
     return null !== (e = O.default.summaries(r.id)) && void 0 !== e ? e : []
-  }, [r]), v = (0, A.default)(L);
+  }, [r]), v = (0, h.default)(L);
   a.useEffect(() => {
     !d().isEqual(v, L) && B.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
       num_summaries: L.length,
@@ -651,14 +651,14 @@ function el(e) {
         return null === (t = e.people) || void 0 === t ? void 0 : t.map(e => {
           var t;
           return null !== (t = D.default.getUser(e)) && void 0 !== t ? t : null
-        }).filter(V.isNotNullish)
+        }).filter(F.isNotNullish)
       })) && void 0 !== e ? e : []
     }, [L], eo),
     y = null !== (n = (0, c.useStateFromStores)([O.default], () => O.default.visibleSummaryIndex())) && void 0 !== n ? n : -1,
     P = null == L ? void 0 : null === (t = L[y]) || void 0 === t ? void 0 : t.topic;
   null == P && null == T && (null == L ? void 0 : L.length) >= 1 && (P = null === (i = L[0]) || void 0 === i ? void 0 : i.topic);
   let G = a.useMemo(() => d().get(L, y - 1), [y, L]),
-    F = a.useMemo(() => d().get(L, y + 1), [y, L]),
+    V = a.useMemo(() => d().get(L, y + 1), [y, L]),
     x = a.useMemo(() => d().debounce(e => {
       var t;
       f(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null)
@@ -706,7 +706,7 @@ function el(e) {
         messageId: n.startId,
         flash: !0,
         offset: 0,
-        jumpType: h.JumpTypes.ANIMATED,
+        jumpType: A.JumpTypes.ANIMATED,
         context: "Summary Jump"
       })
     }, [L, r, W, o]),
@@ -795,7 +795,7 @@ function el(e) {
           "aria-label": K.default.Messages.SUMMARY_PILL_NEXT,
           onClick: $,
           className: l()(z.topicsPillCaret, z.topicsCaretLeft, {
-            [z.topicsPillCaretDisabled]: null == F
+            [z.topicsPillCaretDisabled]: null == V
           }),
           children: (0, s.jsx)(b.default, {
             width: 16,

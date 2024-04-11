@@ -38,9 +38,9 @@ var i, r, s = n("544891"),
   T = n("176354"),
   f = n("563114"),
   S = n("981631"),
-  h = n("689938");
+  A = n("689938");
 
-function A(e, t, n) {
+function h(e, t, n) {
   let {
     status: i,
     body: r
@@ -49,9 +49,9 @@ function A(e, t, n) {
   if (403 === i) switch (r && r.code) {
     case S.AbortCodes.TOO_MANY_REACTIONS:
       l.default.show({
-        title: h.default.Messages.TOO_MANY_REACTIONS_ALERT_HEADER,
-        body: h.default.Messages.TOO_MANY_REACTIONS_ALERT_BODY,
-        confirmText: h.default.Messages.OKAY
+        title: A.default.Messages.TOO_MANY_REACTIONS_ALERT_HEADER,
+        body: A.default.Messages.TOO_MANY_REACTIONS_ALERT_BODY,
+        confirmText: A.default.Messages.OKAY
       });
       break;
     case S.AbortCodes.REACTION_BLOCKED:
@@ -132,9 +132,9 @@ async function p(e, t, n) {
       return null != r && r.userHasReactedWithEmoji(n, i)
     }(e, t, n, o)) {
     l.default.show({
-      title: h.default.Messages.EMOJI_PICKER_DOUBLE_REACTION_SUPER_ERROR_TITLE,
-      body: h.default.Messages.EMOJI_PICKER_DOUBLE_REACTION_SUPER_ERROR_BODY,
-      confirmText: h.default.Messages.GOT_IT
+      title: A.default.Messages.EMOJI_PICKER_DOUBLE_REACTION_SUPER_ERROR_TITLE,
+      body: A.default.Messages.EMOJI_PICKER_DOUBLE_REACTION_SUPER_ERROR_BODY,
+      confirmText: A.default.Messages.GOT_IT
     });
     return
   }
@@ -155,7 +155,7 @@ async function p(e, t, n) {
     },
     oldFormErrors: !0
   }).then(() => {
-    o ? (a.AccessibilityAnnouncer.announce(h.default.Messages.BURST_REACTION_ADD_UNLIMITED_SUCCESS_A11Y.format({
+    o ? (a.AccessibilityAnnouncer.announce(A.default.Messages.BURST_REACTION_ADD_UNLIMITED_SUCCESS_A11Y.format({
       name: n.name
     })), f.default.triggerFullscreenAnimation({
       channelId: e,
@@ -164,20 +164,20 @@ async function p(e, t, n) {
         ...n,
         animated: !1
       }
-    })) : a.AccessibilityAnnouncer.announce(h.default.Messages.REACTION_ADD_SUCCESS_A11Y.format({
+    })) : a.AccessibilityAnnouncer.announce(A.default.Messages.REACTION_ADD_SUCCESS_A11Y.format({
       name: n.name
     }))
   }).catch(r => {
-    A(r, () => p(e, t, n, i, {
+    h(r, () => p(e, t, n, i, {
       burst: o,
       isRetry: !0
     }), {
       isRetry: _
     }) && (m("MESSAGE_REACTION_REMOVE", e, t, n, {
       burst: o
-    }), o ? a.AccessibilityAnnouncer.announce(h.default.Messages.BURST_REACTION_ADD_UNLIMITED_ERROR_A11Y.format({
+    }), o ? a.AccessibilityAnnouncer.announce(A.default.Messages.BURST_REACTION_ADD_UNLIMITED_ERROR_A11Y.format({
       name: n.name
-    })) : a.AccessibilityAnnouncer.announce(h.default.Messages.REACTION_ADD_ERROR_A11Y.format({
+    })) : a.AccessibilityAnnouncer.announce(A.default.Messages.REACTION_ADD_ERROR_A11Y.format({
       name: n.name
     })))
   })
@@ -204,7 +204,7 @@ async function C(e, t, n) {
     url: S.Endpoints.REMOVE_REACTIONS(e, t),
     oldFormErrors: !0
   }).catch(n => {
-    A(n, () => C(e, t, {
+    h(n, () => C(e, t, {
       isRetry: !0
     }), {
       isRetry: i
@@ -219,7 +219,7 @@ async function g(e, t, n, i) {
     url: S.Endpoints.REMOVE_EMOJI_REACTIONS(e, t, a),
     oldFormErrors: !0
   }).catch(i => {
-    A(i, () => g(e, t, n, {
+    h(i, () => g(e, t, n, {
       isRetry: !0
     }), {
       isRetry: r
@@ -249,13 +249,13 @@ async function L(e, t, n, i) {
     },
     oldFormErrors: !0
   }).then(() => {
-    (null == o ? void 0 : o.burst) ? a.AccessibilityAnnouncer.announce(h.default.Messages.BURST_REACTION_REMOVE_SUCCESS_A11Y.format({
+    (null == o ? void 0 : o.burst) ? a.AccessibilityAnnouncer.announce(A.default.Messages.BURST_REACTION_REMOVE_SUCCESS_A11Y.format({
       name: n.name
-    })): a.AccessibilityAnnouncer.announce(h.default.Messages.REACTION_REMOVE_SUCCESS_A11Y.format({
+    })): a.AccessibilityAnnouncer.announce(A.default.Messages.REACTION_REMOVE_SUCCESS_A11Y.format({
       name: n.name
     }))
   }).catch(async s => {
-    if (A(s, () => L(e, t, n, i, r, {
+    if (h(s, () => L(e, t, n, i, r, {
         burst: l,
         isRetry: !0
       }), {
@@ -266,9 +266,9 @@ async function L(e, t, n, i) {
         userId: i,
         burst: l,
         colors: r
-      }), (null == o ? void 0 : o.burst) ? a.AccessibilityAnnouncer.announce(h.default.Messages.BURST_REACTION_REMOVE_ERROR_A11Y.format({
+      }), (null == o ? void 0 : o.burst) ? a.AccessibilityAnnouncer.announce(A.default.Messages.BURST_REACTION_REMOVE_ERROR_A11Y.format({
         name: n.name
-      })) : a.AccessibilityAnnouncer.announce(h.default.Messages.REACTION_REMOVE_ERROR_A11Y.format({
+      })) : a.AccessibilityAnnouncer.announce(A.default.Messages.REACTION_REMOVE_ERROR_A11Y.format({
         name: n.name
       }))
     }

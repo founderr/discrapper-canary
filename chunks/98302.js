@@ -23,7 +23,7 @@ function f(e, t, n) {
   }) : e[t] = n, e
 }
 let S = 1 * E.default.Millis.MINUTE;
-class h extends r.default {
+class A extends r.default {
   _initialize() {
     __OVERLAY__ ? this.stores = new Map : (this.stores = new Map().set(_.default, () => this._handleSpeakingStoreChanged()).set(u.default, () => this._handleRTCConnectionStoreChanged()), this._reset())
   }
@@ -105,4 +105,4 @@ class h extends r.default {
     })
   }
 }
-t.default = new h
+t.default = new A

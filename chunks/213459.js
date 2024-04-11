@@ -25,8 +25,8 @@ var i, r, s, a = n("470079"),
   T = n("399860"),
   f = n("706454"),
   S = n("675478"),
-  h = n("592125"),
-  A = n("430824"),
+  A = n("592125"),
+  h = n("430824"),
   m = n("594174"),
   N = n("626135"),
   O = n("254711"),
@@ -54,13 +54,13 @@ let G = new u.Logger("ApplicationCommandIndexStore"),
   w = Symbol("currentUser"),
   k = Symbol("stale"),
   B = Symbol("current"),
-  V = Object.freeze({
+  F = Object.freeze({
     descriptors: [],
     commands: [],
     sectionedCommands: [],
     loading: !0
   }),
-  F = Object.freeze({
+  V = Object.freeze({
     serverVersion: B,
     fetchState: {
       fetching: !1
@@ -143,7 +143,7 @@ class X extends(i = d.default.Store) {
   }
   getContextState(e) {
     var t, n;
-    return null != e && ei(e) ? null !== (n = this.indices[null !== (t = e.guild_id) && void 0 !== t ? t : e.id]) && void 0 !== n ? n : x : F
+    return null != e && ei(e) ? null !== (n = this.indices[null !== (t = e.guild_id) && void 0 !== t ? t : e.id]) && void 0 !== n ? n : x : V
   }
   getUserState() {
     var e;
@@ -151,17 +151,17 @@ class X extends(i = d.default.Store) {
       location: "getUserState"
     }, {
       autoTrackExposure: !1
-    }) ? null !== (e = this.indices[w]) && void 0 !== e ? e : x : F
+    }) ? null !== (e = this.indices[w]) && void 0 !== e ? e : x : V
   }
   getApplicationState(e) {
     var t;
-    return null == e ? F : null !== (t = this.indices[e]) && void 0 !== t ? t : x
+    return null == e ? V : null !== (t = this.indices[e]) && void 0 !== t ? t : x
   }
   getApplicationStates() {
     return this.applicationIndices
   }
   query(e, t, n) {
-    if (null == m.default.getCurrentUser()) return V;
+    if (null == m.default.getCurrentUser()) return F;
     let i = this.getContextState(e),
       r = this.getUserState(),
       s = this.getApplicationState(n.applicationId),
@@ -200,7 +200,7 @@ class X extends(i = d.default.Store) {
     return d.loading = d.loading || u, d
   }
   maybeQueryForInstallLessApps(e, t) {
-    let n = h.default.getChannel(t),
+    let n = A.default.getChannel(t),
       i = U.INSTALL_LESS_APP_IDS.includes(e) ? e : void 0;
     null != n && null != i && this.query(n, {
       commandType: E.ApplicationCommandType.CHAT
@@ -360,7 +360,7 @@ let Q = new X(_.default, {
     }), s = null == r ? void 0 : null === (t = r.result) || void 0 === t ? void 0 : t.sectionIdsByBotId;
     if (null != s)
       for (let e in s) {
-        let t = h.default.getDMFromUserId(e);
+        let t = A.default.getDMFromUserId(e);
         null != t && j({
           type: "channel",
           channelId: t
@@ -535,7 +535,7 @@ function et(e) {
     sortOptions: _ = ee
   } = e, {
     commandType: c
-  } = t, E = null == s ? void 0 : s.toLowerCase(), T = null == E ? void 0 : E.split(" "), f = a === g.BuiltInCommandFilter.ONLY_TEXT, h = a !== g.BuiltInCommandFilter.DENY ? (0, O.getBuiltInCommands)(c, !0, f) : [], m = [], N = {
+  } = t, E = null == s ? void 0 : s.toLowerCase(), T = null == E ? void 0 : E.split(" "), f = a === g.BuiltInCommandFilter.ONLY_TEXT, A = a !== g.BuiltInCommandFilter.DENY ? (0, O.getBuiltInCommands)(c, !0, f) : [], m = [], N = {
     permissionContext: t,
     query: E,
     splitQuery: T,
@@ -590,8 +590,8 @@ function et(e) {
       return el(e.section.name, t.section.name)
     })
   }
-  if (h.length > 0 || !0 === u) {
-    let e = en(O.BUILT_IN_SECTIONS[y.BuiltInSectionId.BUILT_IN], h, N);
+  if (A.length > 0 || !0 === u) {
+    let e = en(O.BUILT_IN_SECTIONS[y.BuiltInSectionId.BUILT_IN], A, N);
     null != e && m.push(e)
   }
   let M = m.flatMap(e => e.data.map(t => ({
@@ -600,7 +600,7 @@ function et(e) {
   })));
   if (d === g.ScoreMethod.COMMAND_ONLY || d === g.ScoreMethod.COMMAND_OR_APPLICATION) {
     let e = t.context,
-      n = A.default.getGuild(t.context.guild_id);
+      n = h.default.getGuild(t.context.guild_id);
     _.commands.useFrecency && S.FrecencyUserSettingsActionCreators.loadIfNecessary(), M.sort((t, i) => {
       if (_.commands.useScore) {
         var r, s;

@@ -11,8 +11,8 @@ var i, r, s, a, o = n("392711"),
   T = n("314897"),
   f = n("523746"),
   S = n("592125"),
-  h = n("131951"),
-  A = n("19780"),
+  A = n("131951"),
+  h = n("19780"),
   m = n("936349"),
   N = n("944486"),
   O = n("885110"),
@@ -43,7 +43,7 @@ async function k(e) {
         guildId: e.getGuildId(),
         channelId: n
       })
-    } else A.default.setLastSessionVoiceChannelId(null != n ? n : null), _.default.selectVoiceChannel(null)
+    } else h.default.setLastSessionVoiceChannelId(null != n ? n : null), _.default.selectVoiceChannel(null)
   }
   g.localVoiceState.update(t, !0), G = !1
 }
@@ -52,11 +52,11 @@ function B() {
   g.localVoiceState.update()
 }
 
-function V() {
+function F() {
   return g.localVoiceState.update(), !1
 }
 
-function F() {
+function V() {
   return g.localPresenceState.update(), !1
 }
 
@@ -65,7 +65,7 @@ function x(e) {
 }
 class H extends(i = u.default.Store) {
   initialize() {
-    this.waitFor(T.default, N.default, S.default, f.default, I.default), this.syncWith([h.default], V), this.syncWith([O.default], F)
+    this.waitFor(T.default, N.default, S.default, f.default, I.default), this.syncWith([A.default], F), this.syncWith([O.default], V)
   }
   getSocket() {
     return g.socket

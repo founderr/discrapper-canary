@@ -15,8 +15,8 @@ var i = n("735250"),
   T = n("348121"),
   f = n("104494"),
   S = n("639119"),
-  h = n("165583"),
-  A = n("197115"),
+  A = n("165583"),
+  h = n("197115"),
   m = n("626135"),
   N = n("176354"),
   O = n("74538"),
@@ -36,7 +36,7 @@ t.default = e => {
     emojiDescriptor: b,
     pickerIntention: G,
     analyticsLocation: w
-  } = e, k = (0, u.default)(), [B, V] = r.useState(!1), F = () => {
+  } = e, k = (0, u.default)(), [B, F] = r.useState(!1), V = () => {
     (0, p.trackPremiumSettingsPaneOpened)(U), (0, E.navigateToPremiumMarketingPage)(), y()
   }, x = (0, o.isThemeLight)(k) ? n("537381") : n("341048"), H = (0, S.usePremiumTrialOffer)(), Y = (0, f.usePremiumDiscountOffer)(), j = null != H || null != Y, {
     isLoading: W,
@@ -75,7 +75,7 @@ t.default = e => {
       onClick: P,
       children: D.default.Messages.CLOSE
     }), W ? (0, i.jsx)(l.Spinner, {}) : (0, i.jsxs)(i.Fragment, {
-      children: [j ? (0, i.jsx)(h.default, {
+      children: [j ? (0, i.jsx)(A.default, {
         type: L.PremiumUpsellTypes.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
         subscriptionTier: null !== (M = null == H ? void 0 : null === (s = H.subscription_trial) || void 0 === s ? void 0 : s.sku_id) && void 0 !== M ? M : L.PremiumSubscriptionSKUs.TIER_2,
         onClose: P,
@@ -83,9 +83,9 @@ t.default = e => {
         discountOffer: Y,
         children: q ? D.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
           planName: (0, O.getTierDisplayName)(L.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
-          onClick: F
+          onClick: V
         }) : D.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({
-          onClick: F
+          onClick: V
         })
       }) : (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)("img", {
@@ -99,12 +99,12 @@ t.default = e => {
           className: v.premiumPromoDescription,
           children: q ? D.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
             planName: (0, O.getTierDisplayName)(L.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
-            onClick: F
+            onClick: V
           }) : D.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({
-            onClick: F
+            onClick: V
           })
         })]
-      }), !j && (0, i.jsx)(A.default, {
+      }), !j && (0, i.jsx)(h.default, {
         subscriptionTier: q ? L.PremiumSubscriptionSKUs.TIER_0 : L.PremiumSubscriptionSKUs.TIER_2,
         submitting: B,
         premiumModalAnalyticsLocation: {
@@ -114,10 +114,10 @@ t.default = e => {
         size: l.Button.Sizes.SMALL,
         color: l.Button.Colors.GREEN,
         onClick: () => {
-          V(!0)
+          F(!0)
         },
         onSubscribeModalClose: e => {
-          V(!1), e && P()
+          F(!1), e && P()
         },
         buttonText: (() => {
           if (j) return q ? D.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : D.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT;

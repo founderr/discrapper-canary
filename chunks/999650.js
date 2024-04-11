@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return X
   },
   getRandomDateShortcut: function() {
-    return V
+    return F
   },
   refreshSearchTokens: function() {
     return z
@@ -26,8 +26,8 @@ var i, r, s = n("658722"),
   T = n("914010"),
   f = n("246946"),
   S = n("594174"),
-  h = n("483360"),
-  A = n("226951"),
+  A = n("483360"),
+  h = n("226951"),
   m = n("51144"),
   N = n("981631"),
   O = n("689938");
@@ -127,11 +127,11 @@ function B() {
   return [...Array.from(p()), ...Array.from(R()), ...Array.from(C()), ...Object.keys(v())]
 }
 
-function V() {
+function F() {
   return l().sample(B())
 }
 
-function F(e, t, n) {
+function V(e, t, n) {
   return x(e, t, B()).map(e => ({
     ...e,
     group: n,
@@ -157,19 +157,19 @@ function H(e, t) {
     };
   switch (s) {
     case N.SearchTypes.GUILD:
-      n = h.default.queryGuildUsers({
+      n = A.default.queryGuildUsers({
         ...a,
         guildId: t
       });
       break;
     case N.SearchTypes.CHANNEL:
-      n = h.default.queryChannelUsers({
+      n = A.default.queryChannelUsers({
         ...a,
         channelId: t
       });
       break;
     case N.SearchTypes.DMS:
-      n = h.default.queryUsers(e, i, !0, r, () => !0);
+      n = A.default.queryUsers(e, i, !0, r, () => !0);
       break;
     default:
       return []
@@ -245,7 +245,7 @@ function z() {
         getAutocompletions: (t, n, i) => x(t, i, e)
       },
       [N.SearchTokenTypes.ANSWER_HAS]: {
-        regex: RegExp("(?:\\s*-?(".concat(e.map(e => A.default.escape(e)).join("|"), "))"), "i"),
+        regex: RegExp("(?:\\s*-?(".concat(e.map(e => h.default.escape(e)).join("|"), "))"), "i"),
         follows: [N.SearchTokenTypes.FILTER_HAS],
         validator: k,
         componentType: "ANSWER",
@@ -282,21 +282,21 @@ function z() {
         componentType: "FILTER",
         key: P(O.default.Messages.SEARCH_FILTER_BEFORE),
         plainText: O.default.Messages.SEARCH_FILTER_BEFORE,
-        getAutocompletions: (e, t, n) => F(e, n, N.SearchTokenTypes.FILTER_BEFORE)
+        getAutocompletions: (e, t, n) => V(e, n, N.SearchTokenTypes.FILTER_BEFORE)
       },
       [N.SearchTokenTypes.FILTER_ON]: {
         regex: U("(".concat(O.default.Messages.SEARCH_FILTER_ON, "|").concat(O.default.Messages.SEARCH_FILTER_DURING, ")")),
         componentType: "FILTER",
         key: P(O.default.Messages.SEARCH_FILTER_DURING),
         plainText: O.default.Messages.SEARCH_FILTER_DURING,
-        getAutocompletions: (e, t, n) => F(e, n, N.SearchTokenTypes.FILTER_ON)
+        getAutocompletions: (e, t, n) => V(e, n, N.SearchTokenTypes.FILTER_ON)
       },
       [N.SearchTokenTypes.FILTER_AFTER]: {
         regex: U(O.default.Messages.SEARCH_FILTER_AFTER),
         componentType: "FILTER",
         key: P(O.default.Messages.SEARCH_FILTER_AFTER),
         plainText: O.default.Messages.SEARCH_FILTER_AFTER,
-        getAutocompletions: (e, t, n) => F(e, n, N.SearchTokenTypes.FILTER_AFTER)
+        getAutocompletions: (e, t, n) => V(e, n, N.SearchTokenTypes.FILTER_AFTER)
       },
       [N.SearchTokenTypes.ANSWER_BEFORE]: {
         regex: M,
@@ -327,12 +327,12 @@ function z() {
         validator: Y,
         getAutocompletions(e, t, n) {
           "#" === e[0] && (e = e.substring(1));
-          let i = h.default.queryChannels({
+          let i = A.default.queryChannels({
             query: e,
             type: _.GUILD_SELECTABLE_CHANNELS_KEY,
             guildId: t,
             limit: 1 / 0
-          }).concat(h.default.queryChannels({
+          }).concat(A.default.queryChannels({
             query: e,
             type: _.GUILD_VOCAL_CHANNELS_KEY,
             guildId: t,

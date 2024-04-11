@@ -24,8 +24,8 @@ var r, s, a, o, l = n("392711"),
   T = n("593472"),
   f = n("726542"),
   S = n("710845"),
-  h = n("630699"),
-  A = n("855403"),
+  A = n("630699"),
+  h = n("855403"),
   m = n("454991"),
   N = n("77498"),
   O = n("283595"),
@@ -119,8 +119,8 @@ let b = new S.default("RunningGameStore"),
   }],
   k = !0,
   B = new Set,
-  V = [],
   F = [],
+  V = [],
   x = [],
   H = null,
   Y = [],
@@ -194,7 +194,7 @@ function er(e) {
       overlayMethod: U.OverlayMethod.Disabled
     }
   }
-  let n = h.isOOPExperimentEnabled() && (0, M.supportsOutOfProcess)() && !m.OverlayStoredSettings.legacyEnabled,
+  let n = A.isOOPExperimentEnabled() && (0, M.supportsOutOfProcess)() && !m.OverlayStoredSettings.legacyEnabled,
     i = n ? U.OverlayMethod.OutOfProcess : U.OverlayMethod.Hook,
     r = K.enableOverlay[ei(e)];
   if (null != r) return {
@@ -245,7 +245,7 @@ function el(e) {
 
 function eu() {
   let e = !1;
-  return V = u().values(O.default.libraryApplications).reduce((t, n) => {
+  return F = u().values(O.default.libraryApplications).reduce((t, n) => {
     let i = N.default.getDetectableGame(n.id);
     if (null == i) return t;
     for (let r of p.default.getLaunchOptions(n.id, n.branchId)) {
@@ -269,7 +269,7 @@ function eu() {
 
 function ed() {
   if (!__OVERLAY__ && D.isPlatformEmbedded) {
-    let e = [...V, ...u().values(K.gameOverrides)];
+    let e = [...F, ...u().values(K.gameOverrides)];
     v.default.setGameCandidateOverrides(e)
   }
 }
@@ -426,7 +426,7 @@ class eE extends(r = c.default.Store) {
     return null != J && J === e
   }
   getCandidateGames() {
-    return F.filter(e => e.hidden || null == e.id).filter(e => void 0 === K.gameOverrides[ei(e)])
+    return V.filter(e => e.hidden || null == e.id).filter(e => void 0 === K.gameOverrides[ei(e)])
   }
   getGamesSeen(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -459,7 +459,7 @@ class eE extends(r = c.default.Store) {
   }
   getObservedAppNameForWindow(e) {
     var t, n;
-    return null !== (n = null === (t = Y.find(t => (0, A.default)(e, t.windowHandle))) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : null
+    return null !== (n = null === (t = Y.find(t => (0, h.default)(e, t.windowHandle))) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : null
   }
   get canShowAdminWarning() {
     return k
@@ -475,7 +475,7 @@ o = "RunningGameStore", (a = "displayName") in(s = eE) ? Object.defineProperty(s
     e_(x)
   },
   CANDIDATE_GAMES_CHANGE: function(e) {
-    F = e.games
+    V = e.games
   },
   PERMISSION_CLEAR_PTT_ADMIN_WARNING: function() {
     k = !1
@@ -500,7 +500,7 @@ o = "RunningGameStore", (a = "displayName") in(s = eE) ? Object.defineProperty(s
     let n = e.pid,
       i = x.find(e => e.pid === n);
     if (null == i) {
-      let e = F.find(e => e.pid === n);
+      let e = V.find(e => e.pid === n);
       if (null == e) return;
       (i = {
         ...e

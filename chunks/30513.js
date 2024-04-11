@@ -49,12 +49,12 @@ let f = () => ({
       description: T.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_ANIMATED_ICON
     }
   },
-  h = () => ({
+  A = () => ({
     color: i.default.unsafe_rawColors.PREMIUM_PERK_GREEN.css,
     icon: u.default,
     description: T.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_GUILD_BANNER
   }),
-  A = () => ({
+  h = () => ({
     color: i.default.unsafe_rawColors.PREMIUM_PERK_GREEN.css,
     icon: o.default,
     description: T.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_ANIMATED_GUILD_BANNER
@@ -142,7 +142,7 @@ let f = () => ({
   };
 
 function y() {
-  return [m(), h(), N(), D()]
+  return [m(), A(), N(), D()]
 }
 
 function P() {
@@ -154,7 +154,7 @@ function U() {
 }
 
 function b() {
-  return [p(), A(), O(I.BoostedGuildTiers.TIER_3), D()]
+  return [p(), h(), O(I.BoostedGuildTiers.TIER_3), D()]
 }
 
 function G() {

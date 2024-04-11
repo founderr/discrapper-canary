@@ -29,7 +29,7 @@ function I(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class p extends s.PureComponent {
+class T extends s.PureComponent {
   componentDidMount() {
     this._initTimeout.start(1e3, this.setupVoiceActivity)
   }
@@ -205,4 +205,4 @@ t.default = r.default.connectStores([E.default, f.default], () => {
     inputDeviceName: null != n ? n.name : "",
     outputDeviceName: null != l ? l.name : ""
   }
-})(p)
+})(T)

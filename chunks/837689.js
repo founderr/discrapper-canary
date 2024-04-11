@@ -26,8 +26,8 @@ function I(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let p = "PremiumServerDriveAnnouncementModal";
-class T extends i.default {
+let T = "PremiumServerDriveAnnouncementModal";
+class p extends i.default {
   _initialize() {
     l.default.subscribe("POST_CONNECTION_OPEN", this.mayShowAnnouncementModal), l.default.subscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
   }
@@ -40,7 +40,7 @@ class T extends i.default {
         content: e,
         isPreview: t
       });
-      return null != l && ((0, s.closeModal)(p), (0, s.openModalLazy)(async () => {
+      return null != l && ((0, s.closeModal)(T), (0, s.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.resolve().then(n.bind(n, "318199"));
@@ -49,7 +49,7 @@ class T extends i.default {
           properties: l
         })
       }, {
-        modalKey: p
+        modalKey: T
       }), !0)
     }), I(this, "handlePreview", e => {
       let {
@@ -97,4 +97,4 @@ class T extends i.default {
     })
   }
 }
-t.default = new T
+t.default = new p

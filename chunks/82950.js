@@ -25,8 +25,8 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
       imageMarginTop: m,
       trackingSource: S,
       undismissable: I,
-      onDismissed: p,
-      onClick: T,
+      onDismissed: T,
+      onClick: p,
       cta: g,
       ctaColor: A
     } = e;
@@ -45,7 +45,7 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
           source: S,
           guild_id: t.id,
           notice_type: c
-        }), null == T || T()
+        }), null == p || p()
       },
       fullWidth: !0,
       color: A,
@@ -58,7 +58,7 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
         onClick: () => {
           o.default.trackWithMetadata(E.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
             notice_type: c
-          }), null == p || p()
+          }), null == T || T()
         },
         className: _.close,
         "aria-label": h.default.Messages.DISMISS,

@@ -17,7 +17,7 @@ var l = n("836560"),
   S = n("981631"),
   I = n("413135").Buffer;
 
-function p(e, t, n) {
+function T(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -32,7 +32,7 @@ try {
     a = f.default.requireModule("erlpack")
   } catch (e) {}
 }
-let T = f.default.requireModule("discord_rpc").RPCWebSocket,
+let p = f.default.requireModule("discord_rpc").RPCWebSocket,
   g = window.GLOBAL_ENV.MARKETING_ENDPOINT,
   A = new d.default("RPCServer:WSS"),
   N = [];
@@ -86,7 +86,7 @@ class M extends _.default {
     this._socket.close(e, t)
   }
   constructor(e, t, n) {
-    if (super("ws", t, n), p(this, "_socket", void 0), -1 === ["etf", "json"].indexOf(n)) throw new E.default({
+    if (super("ws", t, n), T(this, "_socket", void 0), -1 === ["etf", "json"].indexOf(n)) throw new E.default({
       closeCode: S.RPCCloseCodes.INVALID_ENCODING
     }, "Invalid Encoding: ".concat(n));
     if ("etf" === n && null == a) throw new E.default({
@@ -103,7 +103,7 @@ class P extends _.default {
     this._closeCallback(t, e)
   }
   constructor(e, t, n, a) {
-    if (super("http", n, a), p(this, "_sendCallback", void 0), p(this, "_closeCallback", void 0), "json" !== a) throw new E.default({
+    if (super("http", n, a), T(this, "_sendCallback", void 0), T(this, "_closeCallback", void 0), "json" !== a) throw new E.default({
       closeCode: S.RPCCloseCodes.INVALID_ENCODING
     }, "Invalid Encoding: ".concat(a));
     this._sendCallback = e, this._closeCallback = t
@@ -187,14 +187,14 @@ class y extends l.EventEmitter {
     var e;
     super();
     let t = 0;
-    (s = T.http.createServer()).on("error", e => {
+    (s = p.http.createServer()).on("error", e => {
       A.error("Error: ".concat(e.message)), ("EADDRINUSE" === e.code || e.message.includes("EADDRINUSE")) && setTimeout(() => R(++t), 1e3)
     }), s.on("request", this.handleRequest.bind(this)), R(t);
     let n = {
       instanceId: null !== (e = s.instanceId) && void 0 !== e ? e : 0,
       server: s
     };
-    new T.ws.Server(n).on("connection", e => this.handleConnection(e))
+    new p.ws.Server(n).on("connection", e => this.handleConnection(e))
   }
 }
 t.default = new y

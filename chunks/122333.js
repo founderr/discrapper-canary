@@ -18,8 +18,8 @@ var l = n("481060"),
   m = n("914010"),
   S = n("594174"),
   I = n("823379"),
-  p = n("358085"),
-  T = n("929809"),
+  T = n("358085"),
+  p = n("929809"),
   g = n("179645"),
   A = n("701476"),
   N = n("785997"),
@@ -57,7 +57,7 @@ class M extends r.default {
       let e = C.default.getGuild(L);
       (null == e ? void 0 : e.hasVerificationGate()) && (r = !0, (0, E.fetchWelcomeScreen)(e.id))
     }
-    let M = () => 0 === _.default.totalGuilds && !p.isPlatformEmbedded,
+    let M = () => 0 === _.default.totalGuilds && !T.isPlatformEmbedded,
       P = o.userNeedsAgeGate();
     e = [{
       key: "Unified NUF Modal",
@@ -112,7 +112,7 @@ class M extends r.default {
       predicate: () => P && !M() && !R.CONFERENCE_MODE_ENABLED
     }, {
       key: "Claim Account Modal",
-      open: e => u.openClaimAccountModal(p.isPlatformEmbedded, e),
+      open: e => u.openClaimAccountModal(T.isPlatformEmbedded, e),
       predicate: () => {
         var e;
         return !r && null != S.default.getCurrentUser() && !(null === (e = S.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !R.CONFERENCE_MODE_ENABLED && !(0, c.isMidjourneyOnboardingFlow)("new_user_manager")
@@ -139,7 +139,7 @@ class M extends r.default {
       }),
       predicate: () => null != L && null != h.default.get(L) && h.default.get(L) !== h.NO_WELCOME_SCREEN
     }], t = () => {
-      T.setNewUserFlowCompleted(), f.default.flowStep(O.FlowType.ANY, O.RegistrationSteps.NUF_COMPLETE, !0)
+      p.setNewUserFlowCompleted(), f.default.flowStep(O.FlowType.ANY, O.RegistrationSteps.NUF_COMPLETE, !0)
     }, [...e].reverse().forEach(e => {
       let n = t;
       t = () => {

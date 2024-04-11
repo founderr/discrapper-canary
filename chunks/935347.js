@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("474873"),
   S = n("706454"),
   I = n("215427"),
-  p = n("820254"),
-  T = n("985806"),
+  T = n("820254"),
+  p = n("985806"),
   g = n("838949"),
   A = n("70956"),
   N = n("358085"),
@@ -132,14 +132,14 @@ class y extends s.PureComponent {
               className: M.twitterLink,
               href: O.Links.TWITTER_SUPPORT,
               target: "_blank",
-              children: [(0, a.jsx)(T.default, {
+              children: [(0, a.jsx)(p.default, {
                 className: M.icon
               }), L.default.Messages.TWEET_US]
             }), (0, a.jsxs)(f.Anchor, {
               className: M.statusLink,
               href: O.Links.STATUS,
               target: "_blank",
-              children: [(0, a.jsx)(p.default, {
+              children: [(0, a.jsx)(T.default, {
                 className: M.icon
               }), L.default.Messages.SERVER_STATUS]
             })]

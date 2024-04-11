@@ -20,8 +20,8 @@ var a, s = n("735250"),
   m = n("785547"),
   S = n("490983"),
   I = n("799777"),
-  p = n("285952"),
-  T = n("366695"),
+  T = n("285952"),
+  p = n("366695"),
   g = n("366966"),
   A = n("151011"),
   N = n("880008"),
@@ -73,11 +73,11 @@ let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
     sort: !0,
     cellClassName: D.nameCell,
     bodyCellClassName: D.nameBodyCell,
-    render: e => (0, s.jsxs)(p.default, {
-      align: p.default.Align.CENTER,
-      children: [(0, s.jsx)(T.default, {
+    render: e => (0, s.jsxs)(T.default, {
+      align: T.default.Align.CENTER,
+      children: [(0, s.jsx)(p.default, {
         game: e.application,
-        size: T.default.Sizes.SMALL,
+        size: p.default.Sizes.SMALL,
         className: D.gameIcon
       }), (0, s.jsxs)("div", {
         className: D.nameCellInfo,
@@ -101,8 +101,8 @@ let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
     bodyCellClassName: D.textCell,
     render(e) {
       let t = e.libraryApplication.getDistributor();
-      return (0, s.jsx)(p.default, {
-        align: p.default.Align.CENTER,
+      return (0, s.jsx)(T.default, {
+        align: T.default.Align.CENTER,
         children: null != t ? y.DistributorNames[t] : x.default.Messages.GAME_LIBRARY_NOT_APPLICABLE
       })
     }
@@ -117,8 +117,8 @@ let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
       return t = e.isRunning ? x.default.Messages.GAME_LIBRARY_LAST_PLAYED_PLAYING_NOW : e.isNew ? x.default.Messages.GAME_LIBRARY_NEW : 0 !== e.lastPlayed ? (0, s.jsx)(g.default, {
         end: e.lastPlayed,
         location: g.default.Locations.GAME_LIBRARY_LAST_PLAYED
-      }) : x.default.Messages.GAME_LIBRARY_LAST_PLAYED_NONE, (0, s.jsx)(p.default, {
-        align: p.default.Align.CENTER,
+      }) : x.default.Messages.GAME_LIBRARY_LAST_PLAYED_NONE, (0, s.jsx)(T.default, {
+        align: T.default.Align.CENTER,
         className: r()({
           [D.lastPlayedCellNew]: e.isNew
         }),
@@ -292,10 +292,10 @@ class H extends(a = l.PureComponent) {
       className: a ? D.emptyStateSmall : D.emptyStateLarge,
       children: [(0, s.jsx)("div", {
         className: D.emptyWumpus
-      }), (0, s.jsx)(p.default, {
+      }), (0, s.jsx)(T.default, {
         grow: 0,
         shrink: a ? 1 : 0,
-        direction: p.default.Direction.VERTICAL,
+        direction: T.default.Direction.VERTICAL,
         children: (0, s.jsxs)("div", {
           className: D.emptyStateText,
           children: [(0, s.jsx)("div", {

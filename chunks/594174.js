@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ASSISTANT_WUMPUS_VOICE_USER: function() {
-    return A
+    return h
   },
   mergeUser: function() {
     return p
@@ -36,14 +36,14 @@ function f(e, t, n) {
   }) : e[t] = n, e
 }
 let S = {},
-  h = 0,
-  A = "47835198259242069";
+  A = 0,
+  h = "47835198259242069";
 
 function m(e, t, n) {
   let i = e;
   i = null == n ? e.removeGuildAvatarHash(t) : e.addGuildAvatarHash(t, n), S[e.id] = i;
   let r = e !== i;
-  return r && h++, r
+  return r && A++, r
 }
 
 function N(e) {
@@ -85,7 +85,7 @@ function p(e) {
     }(n)), i = i.merge(n)
   }(0, l.validatePremiumType)((0, l.isStaffEnv)(i), t, i.premiumType);
   let a = S[e.id] !== i;
-  return S[e.id] = i, a && h++, a
+  return S[e.id] = i, a && A++, a
 }
 
 function R(e, t) {
@@ -128,8 +128,8 @@ function L(e) {
       let n = S[t.user.id];
       null != n && m(n, e.id, t.avatar)
     })
-  }), null != S[c.default.getId()] && (S[A] = new u.default({
-    id: A,
+  }), null != S[c.default.getId()] && (S[h] = new u.default({
+    id: h,
     username: "Wumpus",
     discriminator: "0",
     globalName: "Wumpus",
@@ -223,7 +223,7 @@ function B(e) {
   null != t && t.forEach(e => C(e, !0)), null != n && n.forEach(e => p(e.user, !0))
 }
 
-function V(e) {
+function F(e) {
   let {
     threads: t
   } = e;
@@ -237,7 +237,7 @@ function V(e) {
   })
 }
 
-function F(e) {
+function V(e) {
   let {
     supplementalData: t
   } = e;
@@ -532,14 +532,14 @@ function eS(e) {
   return [...t, ...i].reduce((e, t) => p(t) || e, !1)
 }
 
-function eh(e) {
+function eA(e) {
   let {
     users: t
   } = e;
   return t.reduce((e, t) => p(t) || e, !1)
 }
 
-function eA(e) {
+function eh(e) {
   let {
     users: t
   } = e;
@@ -605,7 +605,7 @@ class eR extends E.default {
       }
   }
   getUserStoreVersion() {
-    return h
+    return A
   }
   getUser(e) {
     if (null != e) return S[e]
@@ -682,21 +682,21 @@ class eR extends E.default {
       GUILD_FEED_FETCH_SUCCESS: k,
       LOAD_THREADS_SUCCESS: B,
       LOAD_ARCHIVED_THREADS_SUCCESS: B,
-      LOAD_FORUM_POSTS: V,
+      LOAD_FORUM_POSTS: F,
       GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: x,
       LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: H,
       NOTIFICATION_CENTER_ITEM_CREATE: Y,
-      LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: F,
+      LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: V,
       PASSIVE_UPDATE_V1: et,
       LOCAL_MESSAGES_LOADED: en,
       FETCH_PRIVATE_CHANNEL_INTEGRATIONS_SUCCESS: eI,
       PRIVATE_CHANNEL_INTEGRATION_CREATE: eT,
       PRIVATE_CHANNEL_INTEGRATION_UPDATE: ef,
       FAMILY_CENTER_INITIAL_LOAD: eS,
-      FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: eh,
+      FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: eA,
       FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eN,
       FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eO,
-      FAMILY_CENTER_REQUEST_LINK_SUCCESS: eA,
+      FAMILY_CENTER_REQUEST_LINK_SUCCESS: eh,
       FRIEND_FINDER_PYMK_LOADED: em,
       MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: ep
     })

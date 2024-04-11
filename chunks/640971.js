@@ -1,26 +1,26 @@
 "use strict";
-t.r(r), t.d(r, {
+r.r(t), r.d(t, {
   componentColorTokens: function() {
     return g
   }
 });
-var a = t("490434"),
-  n = t("765162"),
-  i = t("591404"),
-  o = t("971101"),
-  l = t("344394"),
-  s = t("702632"),
-  c = t("547111"),
-  d = t("922801"),
-  u = t("693470"),
-  h = t("860444"),
-  p = t("336781"),
-  m = t("161294");
+var a = r("490434"),
+  n = r("765162"),
+  i = r("591404"),
+  l = r("971101"),
+  o = r("344394"),
+  s = r("702632"),
+  c = r("547111"),
+  d = r("922801"),
+  u = r("693470"),
+  h = r("860444"),
+  p = r("336781"),
+  m = r("161294");
 let g = {
   ...a.default,
-  ...o.default,
-  ...i.default,
   ...l.default,
+  ...i.default,
+  ...o.default,
   ...s.default,
   ...c.default,
   ...d.default,

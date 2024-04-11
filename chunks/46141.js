@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return T
   },
   GcashSourceRecord: function() {
-    return h
+    return A
   },
   GiropaySourceRecord: function() {
     return E
@@ -25,7 +25,7 @@ n.r(t), n.d(t, {
     return p
   },
   GrabPayMySourceRecord: function() {
-    return A
+    return h
   },
   IdealSourceRecord: function() {
     return f
@@ -136,11 +136,11 @@ class u extends i.default {
           ...i
         });
       case o.PaymentSourceTypes.GCASH:
-        return new h({
+        return new A({
           ...i
         });
       case o.PaymentSourceTypes.GRABPAY_MY:
-        return new A({
+        return new h({
           ...i
         });
       case o.PaymentSourceTypes.MOMO_WALLET:
@@ -190,9 +190,9 @@ class u extends i.default {
       case o.PaymentSourceTypes.PAYSAFE_CARD:
         return new S(e);
       case o.PaymentSourceTypes.GCASH:
-        return new h(e);
-      case o.PaymentSourceTypes.GRABPAY_MY:
         return new A(e);
+      case o.PaymentSourceTypes.GRABPAY_MY:
+        return new h(e);
       case o.PaymentSourceTypes.MOMO_WALLET:
         return new m(e);
       case o.PaymentSourceTypes.VENMO:
@@ -280,12 +280,12 @@ class S extends u {
     if (super(e), e.type !== o.PaymentSourceTypes.PAYSAFE_CARD) throw Error("Cannot instantiate PaysafeSourceRecord with type: ".concat(e.type, ", must be ").concat(o.PaymentSourceTypes.PAYSAFE_CARD))
   }
 }
-class h extends u {
+class A extends u {
   constructor(e) {
     if (super(e), e.type !== o.PaymentSourceTypes.GCASH) throw Error("Cannot instantiate GcashSourceRecord with type: ".concat(e.type, ", must be ").concat(o.PaymentSourceTypes.GCASH))
   }
 }
-class A extends u {
+class h extends u {
   constructor(e) {
     if (super(e), e.type !== o.PaymentSourceTypes.GRABPAY_MY) throw Error("Cannot instantiate GrabPayMySourceRecord with type: ".concat(e.type, ", must be ").concat(o.PaymentSourceTypes.GRABPAY_MY))
   }

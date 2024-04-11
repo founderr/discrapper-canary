@@ -16,8 +16,8 @@ var i, r, s, a, o, l, u = n("442837"),
   T = n("709054"),
   f = n("971930"),
   S = n("330249"),
-  h = n("853147"),
-  A = n("313531"),
+  A = n("853147"),
+  h = n("313531"),
   m = n("369701"),
   N = n("176505");
 let O = 10;
@@ -62,9 +62,9 @@ function G(e) {
 let w = {},
   k = {},
   B = {},
-  V = {};
+  F = {};
 
-function F(e, t, n) {
+function V(e, t, n) {
   var i, r;
   return null === (r = y[e]) || void 0 === r ? void 0 : null === (i = r[t]) || void 0 === i ? void 0 : i[n]
 }
@@ -83,7 +83,7 @@ function Y(e, t, n) {
   if (null == e || null == t) return !1;
   let i = x(e, t);
   if (null == i) return !1;
-  let r = F(i, e, t);
+  let r = V(i, e, t);
   if (null == r) return !1;
   let s = n(r);
   return y[i][e][t] = s, !0
@@ -109,9 +109,9 @@ function z(e, t) {
   return null != s && (null === (i = y[s]) || void 0 === i || null === (n = i[e]) || void 0 === n || delete n[t], null === (r = M[e]) || void 0 === r || delete r[t], ! function(e, t) {
     let n = K(e, t);
     if (null == n) return;
-    let i = (0, A.default)(n),
+    let i = (0, h.default)(n),
       r = U(e);
-    !(Array.from((0, S.getAllMessagesFromFeedItem)(n)).filter(t => F(e, t.channel_id, t.id)).length > 0) && r.delete(i)
+    !(Array.from((0, S.getAllMessagesFromFeedItem)(n)).filter(t => V(e, t.channel_id, t.id)).length > 0) && r.delete(i)
   }(s, t), !0)
 }
 
@@ -163,14 +163,14 @@ class J extends(r = u.default.Store) {
     return K(e, t)
   }
   getMessageItem(e, t) {
-    return this.getItem(e, (0, A.GUILD_FEED_MESSAGE_ITEM_ID_TEMPLATE)(t))
+    return this.getItem(e, (0, h.GUILD_FEED_MESSAGE_ITEM_ID_TEMPLATE)(t))
   }
   getLoadId(e) {
     var t;
     return null === (t = v[e]) || void 0 === t ? void 0 : t.load_id
   }
   getCachedMessage(e, t, n) {
-    return F(e, t, n)
+    return V(e, t, n)
   }
   getFetchStatus(e) {
     var t;
@@ -194,7 +194,7 @@ class J extends(r = u.default.Store) {
   }
   getIsItemFeatured(e) {
     var t;
-    let n = (0, A.getGuildFeedItemIdFromFeatureableItem)(e),
+    let n = (0, h.getGuildFeedItemIdFromFeatureableItem)(e),
       {
         guildId: i
       } = e;
@@ -202,11 +202,11 @@ class J extends(r = u.default.Store) {
   }
   getFeaturedItems(e) {
     var t;
-    return Object.values(null !== (t = V[e]) && void 0 !== t ? t : [])
+    return Object.values(null !== (t = F[e]) && void 0 !== t ? t : [])
   }
   getFeaturedItemByMessageId(e, t) {
     var n;
-    return Object.values(null !== (n = V[e]) && void 0 !== n ? n : []).find(e => "message" in e && e.message.id === t)
+    return Object.values(null !== (n = F[e]) && void 0 !== n ? n : []).find(e => "message" in e && e.message.id === t)
   }
 }
 l = "GuildFeedStore", (o = "displayName") in(a = J) ? Object.defineProperty(a, o, {
@@ -287,7 +287,7 @@ l = "GuildFeedStore", (o = "displayName") in(a = J) ? Object.defineProperty(a, o
       let n = (0, f.createGuildFeedItemFromServer)(r, e);
       null != n && (0, f.isGuildFeedFeaturedItem)(n) && (n.featured && B[t].add(n.id), j(t, n), i[n.id] = n)
     }
-    V[t] = i
+    F[t] = i
   },
   GUILD_FEED_FEATURED_ITEMS_FETCH_FAILURE: function(e) {
     let {
@@ -308,13 +308,13 @@ l = "GuildFeedStore", (o = "displayName") in(a = J) ? Object.defineProperty(a, o
   GUILD_FEED_ITEM_HIDE: function(e) {
     let {
       item: t
-    } = e, n = (0, A.default)(t), i = H(t);
+    } = e, n = (0, h.default)(t), i = H(t);
     null != i && (!(i in w) && (w[i] = new Set), w[i].add(n))
   },
   GUILD_FEED_ITEM_UNHIDE: function(e) {
     let {
       item: t
-    } = e, n = (0, A.default)(t), i = H(t);
+    } = e, n = (0, h.default)(t), i = H(t);
     null != i && w[i].delete(n)
   },
   GUILD_FEED_FEATURE_ITEM: function(e) {
@@ -324,10 +324,10 @@ l = "GuildFeedStore", (o = "displayName") in(a = J) ? Object.defineProperty(a, o
       options: s
     } = e, {
       guildId: a
-    } = r, o = (0, A.getGuildFeedItemIdFromFeatureableItem)(r);
+    } = r, o = (0, h.getGuildFeedItemIdFromFeatureableItem)(r);
     if (!(a in B) && (B[a] = new Set), B[a].add(o), !s.hoist) return;
     let l = U(a),
-      u = null !== (i = l.get(o)) && void 0 !== i ? i : (0, h.createFakeGuildFeedItem)(r);
+      u = null !== (i = l.get(o)) && void 0 !== i ? i : (0, A.createFakeGuildFeedItem)(r);
     null != u && (null != u.message && (null === (n = y[a]) || void 0 === n ? void 0 : null === (t = n[u.message.channel_id]) || void 0 === t ? void 0 : t[u.message.id]) == null && W(a, u.message), l.delete(u.id), u.featured = !0, u.seen = !1, l.set(u.id, u))
   },
   GUILD_FEED_UNFEATURE_ITEM: function(e) {
@@ -336,8 +336,8 @@ l = "GuildFeedStore", (o = "displayName") in(a = J) ? Object.defineProperty(a, o
       featureableItem: s
     } = e, {
       guildId: a
-    } = s, o = (0, A.getGuildFeedItemIdFromFeatureableItem)(s);
-    t = a, n = o, null === (i = B[t]) || void 0 === i || i.delete(n), null === (r = V[t]) || void 0 === r || delete r[n]
+    } = s, o = (0, h.getGuildFeedItemIdFromFeatureableItem)(s);
+    t = a, n = o, null === (i = B[t]) || void 0 === i || i.delete(n), null === (r = F[t]) || void 0 === r || delete r[n]
   },
   CHANNEL_SELECT: function() {
     for (let e of T.default.keys(w)) null == k[e] && (k[e] = new Set), k[e] = new Set([...Array.from(k[e]), ...Array.from(w[e])]), delete w[e]
@@ -361,7 +361,7 @@ l = "GuildFeedStore", (o = "displayName") in(a = J) ? Object.defineProperty(a, o
       if (null == e ? void 0 : e.hasFlag(N.ChannelFlags.GUILD_FEED_REMOVED)) return q(e)
   },
   LOGOUT: function() {
-    C = {}, v = {}, M = {}, y = {}, P = {}, w = {}, k = {}, B = {}, V = {}
+    C = {}, v = {}, M = {}, y = {}, P = {}, w = {}, k = {}, B = {}, F = {}
   },
   MESSAGE_UPDATE: function(e) {
     let {

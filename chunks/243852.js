@@ -12,8 +12,8 @@ var a, s, l, i, r, o = n("442837"),
   m = n("581883"),
   S = n("70956"),
   I = n("780570"),
-  p = n("77498"),
-  T = n("283595"),
+  T = n("77498"),
+  p = n("283595"),
   g = n("19780"),
   A = n("944486"),
   N = n("981631");
@@ -36,7 +36,7 @@ function x(e) {
     n = Date.now(),
     a = null != e.updatedAt ? n - e.updatedAt : 0;
   a > R + O && (a = 0);
-  let s = (0, I.shouldShareApplicationActivity)(e.applicationId, T.default),
+  let s = (0, I.shouldShareApplicationActivity)(e.applicationId, p.default),
     l = A.default.getVoiceChannelId(),
     i = g.default.getMediaSessionId();
   f.default.updateActivity({
@@ -68,7 +68,7 @@ function D() {
       exePath: s
     }
     of t) {
-    let t = p.default.getGameByName(e);
+    let t = T.default.getGameByName(e);
     if (null != t) n.add(t.id), !(t.id in L) && x({
       applicationId: t.id,
       updatedAt: Date.now(),
@@ -85,7 +85,7 @@ function b() {
 }
 class U extends(s = o.default.Store) {
   initialize() {
-    this.waitFor(h.default, m.default, T.default), this.syncWith([m.default], D)
+    this.waitFor(h.default, m.default, p.default), this.syncWith([m.default], D)
   }
   getActivities() {
     return L

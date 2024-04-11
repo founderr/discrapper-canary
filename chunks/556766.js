@@ -17,11 +17,11 @@ var a = n("735250"),
   m = n("340895"),
   S = n("557177"),
   I = n("871465");
-let p = {
+let T = {
     transform: "scale(0.7)",
     opacity: 0
   },
-  T = {
+  p = {
     transform: "scale(1)",
     opacity: 1
   };
@@ -63,10 +63,10 @@ t.default = () => {
       return null === (t = e.channel) || void 0 === t ? void 0 : t.id
     },
     enter: {
-      from: p,
-      to: T
+      from: T,
+      to: p
     },
-    leave: p,
+    leave: T,
     config: {
       mass: 1,
       tension: 500,

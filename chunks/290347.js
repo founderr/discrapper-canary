@@ -21,15 +21,15 @@ var a = n("735250"),
   m = n("626135"),
   S = n("565216"),
   I = n("981631"),
-  p = n("921944"),
-  T = n("816277");
+  T = n("921944"),
+  p = n("816277");
 let g = e => {
     let {
       tagText: t,
       className: n
     } = e;
     return (0, a.jsx)(_.TextBadge, {
-      className: i()(T.tag, n),
+      className: i()(p.tag, n),
       text: t
     })
   },
@@ -42,23 +42,23 @@ let g = e => {
       wideStyle: r
     } = e;
     return (0, a.jsxs)("div", {
-      className: i()(T.featureCard, {
-        [T.wideStyle]: r
+      className: i()(p.featureCard, {
+        [p.wideStyle]: r
       }),
       children: [null != l ? (0, a.jsx)(g, {
         tagText: l,
-        className: T.featureCardTag
+        className: p.featureCardTag
       }) : null, (0, a.jsx)("img", {
         alt: "",
-        className: i()(T.featureCardImg, {
-          [T.wideStyle]: r
+        className: i()(p.featureCardImg, {
+          [p.wideStyle]: r
         }),
         src: s
       }), (0, a.jsxs)("div", {
-        className: T.featureCardTextGroup,
+        className: p.featureCardTextGroup,
         children: [(0, a.jsx)(o.Heading, {
           variant: "heading-lg/extrabold",
-          className: T.featureCardTextHeader,
+          className: p.featureCardTextHeader,
           children: t
         }), (0, a.jsx)(o.Text, {
           variant: "text-sm/normal",
@@ -116,26 +116,26 @@ function N(e) {
         change_log_id: P,
         seconds_open: Math.round((Date.now() - e) / 1e3)
       }), null != g && (0, d.markDismissibleContentAsDismissed)(g, {
-        dismissAction: p.ContentDismissActionType.DISMISS
+        dismissAction: T.ContentDismissActionType.DISMISS
       })
     }
   }, [g, P]), (0, a.jsxs)(o.ModalRoot, {
-    className: i()(T.root, t),
+    className: i()(p.root, t),
     transitionState: D,
     "aria-labelledby": b,
     children: [(0, a.jsx)(o.ModalCloseButton, {
-      className: T.closeButton,
+      className: p.closeButton,
       onClick: x
     }), (0, a.jsx)(S.default, {
-      className: T.splash
+      className: p.splash
     }), null == N ? void 0 : N(), (0, a.jsxs)(o.ModalContent, {
-      className: T.content,
+      className: p.content,
       children: [(0, a.jsx)(o.Heading, {
         variant: "display-md",
-        className: i()(T.headerText, R),
+        className: i()(p.headerText, R),
         children: v
       }), "video" === l.type ? (0, a.jsx)(C.default, {
-        className: i()(T.video, _),
+        className: i()(p.video, _),
         autoPlay: !j,
         loop: !0,
         muted: !0,
@@ -159,7 +159,7 @@ function N(e) {
         },
         disablePictureInPicture: !0
       }) : "embed" === l.type ? (0, a.jsx)(f.EmbedVideo, {
-        className: i()(T.video, _),
+        className: i()(p.video, _),
         allowFullScreen: !1,
         href: l.href,
         thumbnail: l.thumbnail,
@@ -177,15 +177,15 @@ function N(e) {
         }
       }) : "image" === l.type ? (0, a.jsx)("img", {
         alt: "",
-        className: i()(T.video, _),
+        className: i()(p.video, _),
         src: l.src
       }) : null, (0, a.jsx)(o.Heading, {
         variant: "heading-lg/extrabold",
-        className: T.bodyText,
+        className: p.bodyText,
         children: O
       }), null == L ? void 0 : L(), (0, a.jsx)("div", {
-        className: i()(T.featureCardGroup, {
-          [T.wideStyle]: U
+        className: i()(p.featureCardGroup, {
+          [p.wideStyle]: U
         }),
         children: M.map((e, t) => (0, a.jsx)(A, {
           ...e,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return T
   }
 }), n("47120");
 var a = n("470079"),
@@ -33,7 +33,7 @@ else if (S.has(r().layout)) {
   }
 }
 
-function p() {
+function T() {
   let e = (0, o.useStateFromStores)([f.default], () => f.default.hasIncomingCalls()),
     t = (0, o.useStateFromStores)([u.default, c.default, d.default], () => {
       let e = u.default.getTotalMentionCount(),

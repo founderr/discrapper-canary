@@ -17,14 +17,14 @@ var a = n("735250"),
   m = n("874137"),
   S = n("78826"),
   I = n("789563"),
-  p = n("164164"),
-  T = n("46140"),
+  T = n("164164"),
+  p = n("46140"),
   g = n("981631"),
   A = n("311676");
 t.default = function() {
   var e, t, n;
   let l = (0, f.useIsEligibleForQuests)({
-      location: T.QuestsExperimentLocations.QUESTS_BAR
+      location: p.QuestsExperimentLocations.QUESTS_BAR
     }),
     N = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion),
     v = (0, o.useStateFromStores)([h.default], () => (0, C.getQuestForTargetedContent)(h.default.quests, _.QuestContent.QUEST_BAR)),
@@ -186,7 +186,7 @@ t.default = function() {
           isExpansionAnimationComplete: D,
           quest: v,
           useReducedMotion: N
-        }), (0, a.jsx)(p.default, {
+        }), (0, a.jsx)(T.default, {
           className: A.content,
           onCtxMenuOpen: Q,
           onCtxMenuClose: Z,

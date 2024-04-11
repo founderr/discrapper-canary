@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return h
   }
 }), n("47120");
 var i = n("470079"),
@@ -19,10 +19,10 @@ var i = n("470079"),
   T = n("691841"),
   f = n("981631"),
   S = n("377668"),
-  h = n("185923");
+  A = n("185923");
 
-function A(e, t, n) {
-  var A, m, N, O, p, R, C;
+function h(e, t, n) {
+  var h, m, N, O, p, R, C;
   let {
     channel: g,
     type: L
@@ -53,7 +53,7 @@ function A(e, t, n) {
     scrollerRef: n,
     state: D,
     onFocus: e => x.setSelectedIndex(e)
-  }), V = null === (A = e.editorRef.current) || void 0 === A ? void 0 : A.getCurrentWord(), F = {
+  }), F = null === (h = e.editorRef.current) || void 0 === h ? void 0 : h.getCurrentWord(), V = {
     ...e,
     navigator: B,
     activeCommand: w,
@@ -63,15 +63,15 @@ function A(e, t, n) {
     canMentionClyde: P,
     hidePersonalInformation: G,
     hideMentionDescription: L === l.ChatInputTypes.RULES_INPUT,
-    emojiIntention: L === l.ChatInputTypes.RULES_INPUT ? h.EmojiIntention.COMMUNITY_CONTENT : h.EmojiIntention.CHAT,
-    currentWord: null !== (R = null == V ? void 0 : V.word) && void 0 !== R ? R : "",
-    currentWordIsAtStart: (null == V ? void 0 : V.isAtStart) === !0,
+    emojiIntention: L === l.ChatInputTypes.RULES_INPUT ? A.EmojiIntention.COMMUNITY_CONTENT : A.EmojiIntention.CHAT,
+    currentWord: null !== (R = null == F ? void 0 : F.word) && void 0 !== R ? R : "",
+    currentWordIsAtStart: (null == F ? void 0 : F.isAtStart) === !0,
     optionText: null != k ? (0, a.getString)({
       [k.name]: null !== (C = null === (N = e.editorRef.current) || void 0 === N ? void 0 : N.getCurrentCommandOptionValue()) && void 0 !== C ? C : []
     }, k.name) : ""
-  }, [x] = i.useState(() => new I.default(F));
+  }, [x] = i.useState(() => new I.default(V));
   return i.useEffect(() => {
-    x.updateProps(F)
+    x.updateProps(V)
   }), i.useImperativeHandle(t, () => x, [x]), i.useEffect(() => {
     let e = e => v(e);
     return x.on("change", e), x.on("update", M), () => {

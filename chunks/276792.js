@@ -26,8 +26,8 @@ function m(e) {
     content: m,
     renderModalProps: S,
     analyticsLocations: I,
-    analyticsLocation: p,
-    isLightTheme: T
+    analyticsLocation: T,
+    isLightTheme: p
   } = e, g = "AnnouncementModalVariant1", {
     onClose: A
   } = S, N = null != m.button && "" !== m.button.copy ? m.button.copy : h.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, v = (null === (t = m.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", R = (null === (n = m.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
@@ -36,7 +36,7 @@ function m(e) {
     subscriptionTier: f.PremiumSubscriptionSKUs.TIER_2,
     analyticsLocations: I,
     analyticsObject: {
-      ...p,
+      ...T,
       object: E.AnalyticsObjects.BUTTON_CTA,
       objectType: E.AnalyticsObjectTypes.TIER_2
     },
@@ -53,13 +53,13 @@ function m(e) {
     })
   }) : void 0, L = {
     type: "video",
-    src: T ? m.heroArtVideoLinkLightTheme : m.videoLink
+    src: p ? m.heroArtVideoLinkLightTheme : m.videoLink
   };
   ("" !== m.heroArtImageLinkDarkTheme || "" !== m.heroArtImageLinkLightTheme) && (L = {
     type: "image",
-    src: T ? m.heroArtImageLinkLightTheme : m.heroArtImageLinkDarkTheme
+    src: p ? m.heroArtImageLinkLightTheme : m.heroArtImageLinkDarkTheme
   });
-  let M = T ? c.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : c.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL,
+  let M = p ? c.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : c.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL,
     P = "" !== m.modalTopPill ? () => (0, a.jsx)(c.PremiumPillWithSparkles, {
       text: m.modalTopPill,
       className: _.modalTopPill,
@@ -75,7 +75,7 @@ function m(e) {
     featureCards: m.featureCards.map(e => ({
       header: e.header,
       subHeader: e.body,
-      imageSrc: T ? e.imageLinkLightTheme : e.imageLink,
+      imageSrc: p ? e.imageLinkLightTheme : e.imageLink,
       tagText: "" !== e.pill ? e.pill : void 0
     })),
     changeLogId: g,

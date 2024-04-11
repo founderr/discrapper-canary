@@ -19,8 +19,8 @@ var i = n("735250"),
   T = n("639119"),
   f = n("165583"),
   S = n("197115"),
-  h = n("302945"),
-  A = n("474936"),
+  A = n("302945"),
+  h = n("474936"),
   m = n("981631"),
   N = n("689938"),
   O = n("620118"),
@@ -44,11 +44,11 @@ function R(e) {
     onClose: w,
     onSubscribeClick: k,
     onSecondaryClick: B,
-    secondaryCTA: V,
-    subscribeButtonText: F,
+    secondaryCTA: F,
+    subscribeButtonText: V,
     showNewBadge: x = !1,
     enableArtBoxShadow: H = !0,
-    subscriptionTier: Y = A.PremiumSubscriptionSKUs.TIER_2,
+    subscriptionTier: Y = h.PremiumSubscriptionSKUs.TIER_2,
     isLoading: j = !1,
     hideBackButton: W,
     backButtonText: K,
@@ -62,7 +62,7 @@ function R(e) {
     location: "PremiumUpsellModal"
   }, {
     autoTrackExposure: !1
-  }), et = $ && C === A.PremiumUpsellTypes.STREAM_QUALITY_UPSELL, en = et && E.GradientVariants.includes(ee);
+  }), et = $ && C === h.PremiumUpsellTypes.STREAM_QUALITY_UPSELL, en = et && E.GradientVariants.includes(ee);
   r.useEffect(() => {
     !j && (X ? _.default.track(m.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
       type: "".concat(C, " - Tier ").concat(g.boostedGuildTier),
@@ -105,7 +105,7 @@ function R(e) {
           children: (0, i.jsx)(f.default, {
             onClose: w,
             type: C,
-            subscriptionTier: null !== (s = null == Q ? void 0 : null === (n = Q.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== s ? s : A.PremiumSubscriptionSKUs.TIER_2,
+            subscriptionTier: null !== (s = null == Q ? void 0 : null === (n = Q.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== s ? s : h.PremiumSubscriptionSKUs.TIER_2,
             headingText: R,
             context: M,
             analyticsLocationObject: D,
@@ -120,7 +120,7 @@ function R(e) {
             }),
             variant: "heading-xl/semibold",
             children: R
-          }), (0, i.jsx)(h.default, {
+          }), (0, i.jsx)(A.default, {
             premiumUpsellType: C
           }), (0, i.jsx)(o.Text, {
             variant: "text-md/normal",
@@ -137,7 +137,7 @@ function R(e) {
         className: a()(O.primaryActions, {
           [O.enhancedPrimaryActions]: et
         }),
-        children: [null != V ? (0, i.jsx)(o.Button, {
+        children: [null != F ? (0, i.jsx)(o.Button, {
           className: a()(O.secondaryAction, {
             [O.enhancedSecondaryAction]: en
           }),
@@ -145,7 +145,7 @@ function R(e) {
           size: o.Button.Sizes.SMALL,
           color: en ? o.Button.Colors.CUSTOM : o.Button.Colors.PRIMARY,
           look: o.Button.Looks.LINK,
-          children: V
+          children: F
         }) : null, (() => {
           let e;
           if (X) return (0, i.jsx)(d.default, {
@@ -177,7 +177,7 @@ function R(e) {
             onClick: () => {
               null == k || k(), w()
             },
-            buttonText: null != F ? F : t
+            buttonText: null != V ? V : t
           })
         })()]
       }), !W && !et && (0, i.jsx)(o.Button, {

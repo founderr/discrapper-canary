@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("801077"),
   S = n("626135"),
   I = n("70956"),
-  p = n("225559"),
-  T = n("910436"),
+  T = n("225559"),
+  p = n("910436"),
   g = n("203028"),
   A = n("358924"),
   N = n("292140"),
@@ -41,7 +41,7 @@ let P = 15 * I.default.Millis.MINUTE,
     } = e, r = (0, a.jsx)(g.default, {
       party: t,
       onUserContextMenu: n
-    }), u = (0, a.jsx)(T.default, {
+    }), u = (0, a.jsx)(p.default, {
       party: t,
       onChannelContextMenu: l,
       quest: i
@@ -50,7 +50,7 @@ let P = 15 * I.default.Millis.MINUTE,
       applicationStreams: f,
       currentActivities: E,
       voiceChannels: h
-    } = t, _ = c.length, C = f.length, m = E.length, I = h.length > 0, p = s.useCallback(() => {
+    } = t, _ = c.length, C = f.length, m = E.length, I = h.length > 0, T = s.useCallback(() => {
       let e = E.filter(e => {
         var t, n;
         return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === O.ApplicationTypes.GAME
@@ -62,7 +62,7 @@ let P = 15 * I.default.Millis.MINUTE,
         in_voice_channel: I,
         games_detected: e
       })
-    }, [_, C, m, I, E]), v = o()(p, P);
+    }, [_, C, m, I, E]), v = o()(T, P);
     return null != r || null != u ? (0, a.jsx)(d.Popout, {
       position: "left",
       renderPopout: e => {
@@ -108,7 +108,7 @@ function D() {
     fetching: _.default.getFetching(),
     currentUser: C.default.getCurrentUser()
   })), r = (0, u.useStateFromStores)([E.default], () => E.default.quests);
-  s.useEffect(() => (c.default.wait(() => p.mount()), () => c.default.wait(() => p.unmount())), [null == i ? void 0 : i.id]), s.useEffect(() => {
+  s.useEffect(() => (c.default.wait(() => T.mount()), () => c.default.wait(() => T.unmount())), [null == i ? void 0 : i.id]), s.useEffect(() => {
     n && !l && x()
   }, [n, l]);
   let o = s.useMemo(() => {

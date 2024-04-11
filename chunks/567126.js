@@ -104,7 +104,7 @@ function U(e) {
     enableGoLiveCaptureCard: n
   } = p.default.useExperiment({
     location: "GoLive_Source_Select"
-  }), r = N.default.supports(j.Features.GO_LIVE_HARDWARE), [d, m] = s.useState(null), [h, A] = s.useState(null), [R, G] = s.useState(null), U = null != R && R.length > 0, [k, F] = s.useState(u.DesktopSources.WINDOW), [y, w] = s.useState(!1), B = s.useRef(null), V = s.useRef(new c.Interval), H = (0, o.useStateFromStores)([S.default], () => S.default.getRunningGames()), W = function(e, t, l) {
+  }), r = N.default.supports(j.Features.GO_LIVE_HARDWARE), [d, m] = s.useState(null), [h, A] = s.useState(null), [R, G] = s.useState(null), U = null != R && R.length > 0, [F, k] = s.useState(u.DesktopSources.WINDOW), [y, w] = s.useState(!1), B = s.useRef(null), V = s.useRef(new c.Interval), H = (0, o.useStateFromStores)([S.default], () => S.default.getRunningGames()), W = function(e, t, l) {
     let a = (0, E.useIsEligibleForQuests)({
       location: M.QuestsExperimentLocations.STREAM_SOURCE_SELECT
     });
@@ -158,7 +158,7 @@ function U(e) {
         case u.DesktopSources.CAMERA:
           return R
       }
-    }(k);
+    }(F);
   if (null == Y) return (0, a.jsx)(x.default, {
     className: D.spinner,
     justify: x.default.Justify.CENTER,
@@ -204,17 +204,17 @@ function U(e) {
             value: u.DesktopSources.CAMERA
           }), e
         }(),
-        value: k,
+        value: F,
         onChange: e => {
           let {
             value: t
           } = e;
-          return F(t)
+          return k(t)
         },
         className: D.segmentControl,
         optionClassName: D.segmentControlOption
       })]
-    }), k === u.DesktopSources.CAMERA ? (0, a.jsx)("div", {
+    }), F === u.DesktopSources.CAMERA ? (0, a.jsx)("div", {
       className: D.sourceContainer,
       children: (0, a.jsx)(f.AdvancedScroller, {
         ref: K,
@@ -231,7 +231,7 @@ function U(e) {
       ref: K,
       className: D.sourceScroller,
       onScroll: Z,
-      children: [k === u.DesktopSources.WINDOW && null != W && (0, a.jsx)(g.default, {
+      children: [F === u.DesktopSources.WINDOW && null != W && (0, a.jsx)(g.default, {
         quest: W.quest
       }), (0, a.jsx)(I.default, {
         layout: I.default.Layout.WRAP,

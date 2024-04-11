@@ -17,8 +17,8 @@ var a = n("570140"),
   m = n("199902"),
   S = n("131951"),
   I = n("246946"),
-  p = n("808506"),
-  T = n("237997"),
+  T = n("808506"),
+  p = n("237997"),
   g = n("626135"),
   A = n("554174"),
   N = n("981631"),
@@ -92,8 +92,8 @@ let R = {
   },
   [N.GlobalKeybindActions.TOGGLE_OVERLAY]: {
     onTrigger() {
-      let e = p.default.enabled;
-      l.default.setEnabled(!e, p.default.legacyEnabled)
+      let e = T.default.enabled;
+      l.default.setEnabled(!e, T.default.legacyEnabled)
     },
     keyEvents: {
       keyup: !0,
@@ -103,7 +103,7 @@ let R = {
   [N.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK]: {
     onTrigger(e) {
       let t = (0, A.default)();
-      null != t && (e ? l.default.setUILocked(!T.default.isUILocked(t), t) : l.default.setInputLocked(!p.default.isInputLocked(t), t))
+      null != t && (e ? l.default.setUILocked(!p.default.isUILocked(t), t) : l.default.setInputLocked(!T.default.isInputLocked(t), t))
     },
     keyEvents: {
       keyup: !0,
@@ -112,9 +112,9 @@ let R = {
   },
   [N.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET]: {
     onTrigger() {
-      let e = p.default.getFocusedPID(),
+      let e = T.default.getFocusedPID(),
         t = null != e;
-      null != e && t && T.default.isPinned(N.OverlayWidgets.TEXT) && p.default.isReady(e) && p.default.isInputLocked(e) && l.default.activateRegion(N.OverlayActiveRegions.TEXT_WIDGET)
+      null != e && t && p.default.isPinned(N.OverlayWidgets.TEXT) && T.default.isReady(e) && T.default.isInputLocked(e) && l.default.activateRegion(N.OverlayActiveRegions.TEXT_WIDGET)
     },
     keyEvents: {
       keyup: !0,
@@ -163,7 +163,7 @@ let R = {
     onTrigger: () => {
       if (!(0, _.canSelectedVoiceChannelUseSoundboard)()) return;
       let e = (0, A.default)();
-      null != e && (T.default.isUILocked(e) ? (0, C.openSoundboardInOverlay)(!0, e) : (0, C.closeSoundboardInOverlay)(e))
+      null != e && (p.default.isUILocked(e) ? (0, C.openSoundboardInOverlay)(!0, e) : (0, C.closeSoundboardInOverlay)(e))
     },
     keyEvents: {
       keyup: !0,

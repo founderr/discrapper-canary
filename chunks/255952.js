@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("696202"),
   S = n("881201"),
   I = n("626135"),
-  p = n("51144"),
-  T = n("981631"),
+  T = n("51144"),
+  p = n("981631"),
   g = n("689938"),
   A = n("329764");
 
@@ -37,7 +37,7 @@ function N(e) {
       color: s ? "currentColor" : void 0
     }), (0, a.jsx)("div", {
       className: A.status,
-      children: (0, p.humanizeStatus)(t)
+      children: (0, T.humanizeStatus)(t)
     }), null != n && (0, a.jsx)("div", {
       className: A.description,
       children: n
@@ -113,7 +113,7 @@ let O = e => {
     onSelect: r
   } = e, o = (0, h.useMultiAccountMenuItems)();
   s.useEffect(() => {
-    I.default.track(T.AnalyticEvents.OPEN_POPOUT, {
+    I.default.track(p.AnalyticEvents.OPEN_POPOUT, {
       type: "User Status Menu",
       has_custom_status: null != t,
       location: i.location

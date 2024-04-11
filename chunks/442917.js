@@ -15,8 +15,8 @@ var i = n("735250"),
   T = n("37234"),
   f = n("367907"),
   S = n("158631"),
-  h = n("552740"),
-  A = n("358221"),
+  A = n("552740"),
+  h = n("358221"),
   m = n("414910"),
   N = n("221888"),
   O = n("933557"),
@@ -36,8 +36,8 @@ var i = n("735250"),
   w = n("199902"),
   k = n("314897"),
   B = n("131951"),
-  V = n("699516"),
-  F = n("594174"),
+  F = n("699516"),
+  V = n("594174"),
   x = n("248402"),
   H = n("33039"),
   Y = n("451478"),
@@ -129,7 +129,7 @@ class eo extends r.PureComponent {
       channel: e
     } = this.props;
     W.default.track(en.AnalyticEvents.VIDEO_LAYOUT_TOGGLED, {
-      video_layout: A.default.getLayout(e.id),
+      video_layout: h.default.getLayout(e.id),
       ...(0, f.collectVoiceAnalyticsMetadata)(e.id)
     })
   }
@@ -177,7 +177,7 @@ class eo extends r.PureComponent {
       streamId: t,
       participantOnScreen: n,
       isVideoEnabled: r
-    } = this.props, s = (0, O.computeChannelName)(e, F.default, V.default), o = this.isEmptyBroadcast(), l = (null == n ? void 0 : n.id) === k.default.getId() && r, u = this.renderStreamState(), d = null;
+    } = this.props, s = (0, O.computeChannelName)(e, V.default, F.default), o = this.isEmptyBroadcast(), l = (null == n ? void 0 : n.id) === k.default.getId() && r, u = this.renderStreamState(), d = null;
     return (null == n ? void 0 : n.type) !== ei.ParticipantTypes.ACTIVITY && (null != u ? d = u : ((null == n ? void 0 : n.type) === ei.ParticipantTypes.USER || (null == n ? void 0 : n.type) === ei.ParticipantTypes.STREAM) && (d = (0, i.jsx)(Q.default, {
       paused: this.streamerPaused,
       streamId: t,
@@ -240,7 +240,7 @@ class eo extends r.PureComponent {
         participantOnScreen: e,
         isSelfBroadcasting: t
       } = this.props;
-      l()((0, ei.isStreamParticipant)(e), "cannot stop stream for non streamer"), t ? (0, h.openStopBroadcastConfirmModal)(() => (0, g.default)(e.stream)) : (0, g.default)(e.stream)
+      l()((0, ei.isStreamParticipant)(e), "cannot stop stream for non streamer"), t ? (0, A.openStopBroadcastConfirmModal)(() => (0, g.default)(e.stream)) : (0, g.default)(e.stream)
     }), ea(this, "handleOpenPopout", () => {
       let {
         channel: e
@@ -315,10 +315,10 @@ class eo extends r.PureComponent {
     })
   }
 }
-t.default = _.default.connectStores([B.default, A.default, k.default, x.default, H.default, w.default, Y.default], e => {
+t.default = _.default.connectStores([B.default, h.default, k.default, x.default, H.default, w.default, Y.default], e => {
   let {
     channel: t
-  } = e, n = x.default.getSpeaker(t.id), i = A.default.getParticipant(t.id, n), r = d()(B.default.getVideoDevices()).values().first(), s = null == r || r.disabled, a = null != i && i.type !== ei.ParticipantTypes.ACTIVITY && i.type !== ei.ParticipantTypes.HIDDEN_STREAM ? H.default.getStreamId(i.user.id, t.getGuildId(), (0, m.default)(i.type)) : null, o = !s && B.default.isVideoEnabled(), l = (0, R.default)(B.default), u = k.default.getId(), _ = w.default.getCurrentUserActiveStream(), c = (0, S.isBroadcastingInChannel)(t.id);
+  } = e, n = x.default.getSpeaker(t.id), i = h.default.getParticipant(t.id, n), r = d()(B.default.getVideoDevices()).values().first(), s = null == r || r.disabled, a = null != i && i.type !== ei.ParticipantTypes.ACTIVITY && i.type !== ei.ParticipantTypes.HIDDEN_STREAM ? H.default.getStreamId(i.user.id, t.getGuildId(), (0, m.default)(i.type)) : null, o = !s && B.default.isVideoEnabled(), l = (0, R.default)(B.default), u = k.default.getId(), _ = w.default.getCurrentUserActiveStream(), c = (0, S.isBroadcastingInChannel)(t.id);
   return {
     channel: t,
     streamId: a,

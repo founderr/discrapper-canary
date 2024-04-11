@@ -15,8 +15,8 @@ var i = n("302454"),
   T = n("934415"),
   f = n("624138"),
   S = n("699450"),
-  h = n("594199"),
-  A = n("981631"),
+  A = n("594199"),
+  h = n("981631"),
   m = n("689938");
 let N = e => {
   let t = u.default.getChannel(e);
@@ -125,7 +125,7 @@ function D(e, t, n, i, r) {
     inContent: null == s || a ? null : [O(s)],
     content: [p({
       name: m.default.Messages.UNKNOWN_CHANNEL,
-      type: A.ChannelTypes.UNKNOWN,
+      type: h.ChannelTypes.UNKNOWN,
       iconType: "text"
     }, "italics")]
   }
@@ -136,7 +136,7 @@ function v(e, t, n, i) {
     let n = {
       type: "channel",
       content: [L(e.roleSubscriptionGated ? e.name : m.default.Messages.NO_ACCESS)],
-      channelType: e.roleSubscriptionGated ? e.type : A.ChannelTypes.UNKNOWN,
+      channelType: e.roleSubscriptionGated ? e.type : h.ChannelTypes.UNKNOWN,
       iconType: "locked"
     };
     return {
@@ -161,7 +161,7 @@ function v(e, t, n, i) {
     var a;
     if (e.isDm) return {
       ...r,
-      guildId: A.ME,
+      guildId: h.ME,
       inContent: [p(e)],
       content: [R(!1)]
     };
@@ -210,7 +210,7 @@ function v(e, t, n, i) {
   }
 }
 let M = {
-    order: h.default.order,
+    order: A.default.order,
     requiredFirstCharacters: ["<"],
     match: e => /^<#(\d+)>/.exec(e),
     parse(e, t, n) {

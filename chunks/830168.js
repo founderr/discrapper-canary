@@ -22,7 +22,7 @@ function S(e) {
   return T.log("Native Dispatch error", t), new a.default(t)
 }
 
-function h(e, t) {
+function A(e, t) {
   "" !== e && S(e)
 }
 t.default = {
@@ -43,7 +43,7 @@ t.default = {
       var i;
       let _ = {
           environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          build_number: "283718"
+          build_number: "283758"
         },
         c = l.default.getCurrentUser();
       null != c && (_.user_id = c.id, _.user_name = c.tag, null != c.email && (_.email = c.email));
@@ -119,7 +119,7 @@ t.default = {
       build_id: s,
       manifest_ids: a,
       install_path: o
-    }), h)
+    }), A)
   },
   setCurrentTask(e, t, n, i, r) {
     let s = f();
@@ -130,7 +130,7 @@ t.default = {
       action: n,
       user_id: i,
       user_token: r
-    }), h), !0)
+    }), A), !0)
   },
   setCredentials(e, t) {
     let n = f();
@@ -138,7 +138,7 @@ t.default = {
       command: "SetCredentials",
       user_id: e,
       user_token: t
-    }), h)
+    }), A)
   },
   cancel(e, t) {
     let n = f();
@@ -146,7 +146,7 @@ t.default = {
       command: "Cancel",
       application_id: e,
       branch_id: t
-    }), h)
+    }), A)
   },
   uninstall(e, t) {
     let n = f();
@@ -154,19 +154,19 @@ t.default = {
       command: "Uninstall",
       application_id: e,
       branch_id: t
-    }), h)
+    }), A)
   },
   pause() {
     let e = f();
     null != e && e.command(JSON.stringify({
       command: "Pause"
-    }), h)
+    }), A)
   },
   resume() {
     let e = f();
     null != e && e.command(JSON.stringify({
       command: "Resume"
-    }), h)
+    }), A)
   },
   queryDirectory(e, t) {
     let n = f();

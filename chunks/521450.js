@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("981631"),
   S = n("930441"),
   I = n("689938"),
-  p = n("663041"),
-  T = n("794711");
+  T = n("663041"),
+  p = n("794711");
 t.default = () => {
   let e = h.FamilyCenterEnabled.useSetting(),
     {
@@ -28,20 +28,20 @@ t.default = () => {
   return s.useEffect(() => {
     null == n && (0, f.fetchEmailSettings)()
   }, [n]), (0, a.jsxs)("div", {
-    className: p.container,
+    className: T.container,
     children: [(0, a.jsx)(d.Text, {
       variant: "eyebrow",
       color: "text-muted",
       children: I.default.Messages.FAMILY_CENTER_SETTINGS_FORM_TITLE
     }), (0, a.jsx)(d.FormSwitch, {
-      className: i()(T.marginTop8, T.marginBottom20),
+      className: i()(p.marginTop8, p.marginBottom20),
       value: e,
       note: I.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH_NOTE,
       hideBorder: !0,
       onChange: h.FamilyCenterEnabled.updateSetting,
       children: I.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH
     }), e ? (0, a.jsx)(d.Card, {
-      className: p.enableCard,
+      className: T.enableCard,
       type: d.Card.Types.CUSTOM,
       outline: !0,
       children: (0, a.jsxs)(o.Flex, {
@@ -65,12 +65,12 @@ t.default = () => {
           })
         }), (0, a.jsx)(C.IconBadge, {
           icon: _.default,
-          className: p.arrow,
+          className: T.arrow,
           disableColor: !0
         })]
       })
     }) : null, (0, a.jsx)(d.FormSwitch, {
-      className: i()(T.marginTop20, T.marginBottom20),
+      className: i()(p.marginTop20, p.marginBottom20),
       value: !!t[S.EmailCategories.FAMILY_CENTER_DIGEST],
       note: I.default.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH_NOTE,
       hideBorder: !0,

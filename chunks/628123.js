@@ -15,8 +15,8 @@ var i = n("735250"),
   T = n("25779"),
   f = n("797614"),
   S = n("703656"),
-  h = n("586576"),
-  A = n("626135"),
+  A = n("586576"),
+  h = n("626135"),
   m = n("960048"),
   N = n("998502"),
   O = n("981631"),
@@ -75,7 +75,7 @@ class D extends r.PureComponent {
       r = m.default.captureCrash(e, {
         extra: t
       });
-    A.default.track(O.AnalyticEvents.APP_CRASHED, {
+    h.default.track(O.AnalyticEvents.APP_CRASHED, {
       path: n.pathname,
       extra: t,
       error_message: e.message,
@@ -118,7 +118,7 @@ class D extends r.PureComponent {
             children: p.default.Messages.ERRORS_RELOAD
           }), (0, i.jsx)(g, {})]
         });
-      return (0, i.jsx)(h.default, {
+      return (0, i.jsx)(A.default, {
         title: p.default.Messages.UNSUPPORTED_BROWSER_TITLE,
         note: null != t ? t() : e,
         action: n,

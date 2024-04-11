@@ -21,7 +21,7 @@ let _ = "LATEST_HEARTBEAST_EVENT_TIMESTAMP",
   m = null,
   S = null,
   I = !1;
-async function p() {
+async function T() {
   if (I) return;
   I = !0, (0, E.setSessionExtendingEnabled)(!0), f.default.addBreadcrumb({
     message: "Start Analytics Heartbeat"
@@ -34,14 +34,14 @@ async function p() {
     message: "Received invalid Date.now() when generating a heartbeat. Date.now() = ".concat(t, ", timeUntilNextHeartbeat = ").concat(n, ", latestHeartbeatEventTimestamp = ").concat(e)
   }), e > t && (n = 0), f.default.addBreadcrumb({
     message: "Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: ".concat(n / 1e3, " seconds. Scheduling Heartbeat")
-  }), T(!1), m = setTimeout(() => {
+  }), p(!1), m = setTimeout(() => {
     g(), C = setInterval(() => {
       g()
     }, 15 * d.default.Millis.MINUTE)
   }, Math.max(n, 0))
 }
 
-function T() {
+function p() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
   null != m && (clearTimeout(m), m = null), null != C && (clearInterval(C), C = null), null != S && e && (f.default.addBreadcrumb({
     message: "Heartbeat correctly scheduled. Clearing 10s check timeout"
@@ -56,7 +56,7 @@ async function g() {
     return
   }
   if (!I) {
-    f.default.captureException(Error("Heartbeat scheduler not started when tracking session heartbeat.")), T();
+    f.default.captureException(Error("Heartbeat scheduler not started when tracking session heartbeat.")), p();
     return
   }
   f.default.addBreadcrumb({
@@ -84,12 +84,12 @@ let A = null,
 
 function v() {
   if (N || null != A && A !== h.RTCConnectionStates.DISCONNECTED && A !== h.RTCConnectionStates.RTC_DISCONNECTED) try {
-    p()
+    T()
   } catch (e) {
     f.default.captureException(e)
   } else !I || (I = !1, f.default.addBreadcrumb({
     message: "Stopping Analytics Heartbeat"
-  }), (0, E.setSessionExtendingEnabled)(!1), T(), (0, l.drainClickstream)())
+  }), (0, E.setSessionExtendingEnabled)(!1), p(), (0, l.drainClickstream)())
 }
 
 function R() {

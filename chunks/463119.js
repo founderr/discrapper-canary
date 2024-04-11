@@ -21,8 +21,8 @@ var a = n("735250"),
   m = n("821982"),
   S = n("377171"),
   I = n("633302"),
-  p = n("126900"),
-  T = n("26290"),
+  T = n("126900"),
+  p = n("26290"),
   g = n("153066"),
   A = n("335131"),
   N = n("141594"),
@@ -34,7 +34,7 @@ let M = e => {
     let {
       color: t
     } = e;
-    return (0, a.jsx)(T.TextBadge, {
+    return (0, a.jsx)(p.TextBadge, {
       className: L.newBadge,
       color: null != t ? t : S.default.STATUS_DANGER_BACKGROUND,
       text: O.default.Messages.NEW
@@ -55,7 +55,7 @@ let M = e => {
     return (0, a.jsx)(f.LinkButton, {
       selected: t,
       route: R.Routes.COLLECTIBLES_SHOP,
-      icon: p.default,
+      icon: T.default,
       text: O.default.Messages.COLLECTIBLES_SHOP,
       locationState: n,
       ...d,

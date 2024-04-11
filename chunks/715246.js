@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   convertSecondsToClockFormat: function() {
-    return V
+    return F
   }
 }), n("653041"), n("47120"), n("411104");
 var i, r, s = n("735250"),
@@ -17,8 +17,8 @@ var i, r, s = n("735250"),
   T = n("866960"),
   f = n("626135"),
   S = n("70956"),
-  h = n("36703"),
-  A = n("228488"),
+  A = n("36703"),
+  h = n("228488"),
   m = n("196050"),
   N = n("189595"),
   O = n("27268"),
@@ -57,16 +57,16 @@ let G = "-:--",
     backgroundColor: "black"
   };
 
-function V(e) {
+function F(e) {
   let t = 0 | e,
     n = t % 60;
   return "".concat((t - n) / 60, ":").concat(String(n).padStart(2, "0"))
 }
-let F = e => {
+let V = e => {
   let {
     current: t,
     duration: n
-  } = e, i = null != t ? V(t) : G, r = null != n ? V(n) : G;
+  } = e, i = null != t ? F(t) : G, r = null != n ? F(n) : G;
   return i = i.padStart(r.length, "0"), (0, s.jsxs)("div", {
     className: P.durationTimeWrapper,
     children: [(0, s.jsx)("span", {
@@ -179,7 +179,7 @@ class x extends(i = a.Component) {
       onClick: e => e.stopPropagation(),
       onDoubleClick: e => e.stopPropagation(),
       style: this.getAnimatedStyle(),
-      children: [this.renderPlayIcon(), "string" == typeof E || E > 250 ? (0, s.jsx)(F, {
+      children: [this.renderPlayIcon(), "string" == typeof E || E > 250 ? (0, s.jsx)(V, {
         current: n,
         duration: i
       }) : null, (0, s.jsx)(N.default, {
@@ -522,8 +522,8 @@ class K extends(r = a.PureComponent) {
     } = this.playPausePopRef;
     if (null == d) return;
     s && !t.playing ? (this.play(), this.handleMouseMove(), this.handleUIUpdate(), t.hasClickedPlay && (null == _ || _.pop(s))) : !s && t.playing && (d.pause(), null == _ || _.pop(s), null == n || n());
-    let c = (0, A.getFullScreenNode)(d.parentNode, d);
-    a && !t.fullscreen && null != c ? ((0, A.requestFullScreen)(c), c.addEventListener(A.FULLSCREEN_CHANGE_EVENT, this.handleFullScreenExit)) : !a && t.fullscreen && null != c && (c.removeEventListener(A.FULLSCREEN_CHANGE_EVENT, this.handleFullScreenExit), (0, A.exitFullScreen)(c)), l === N.default.Types.DURATION && t.dragging !== N.default.Types.DURATION && s ? d.pause() : l !== N.default.Types.DURATION && t.dragging === N.default.Types.DURATION && s && d.play(), o !== t.muted && (d.muted = o, null == r || r(o)), u !== t.volume && (d.volume = u, null == i || i(u))
+    let c = (0, h.getFullScreenNode)(d.parentNode, d);
+    a && !t.fullscreen && null != c ? ((0, h.requestFullScreen)(c), c.addEventListener(h.FULLSCREEN_CHANGE_EVENT, this.handleFullScreenExit)) : !a && t.fullscreen && null != c && (c.removeEventListener(h.FULLSCREEN_CHANGE_EVENT, this.handleFullScreenExit), (0, h.exitFullScreen)(c)), l === N.default.Types.DURATION && t.dragging !== N.default.Types.DURATION && s ? d.pause() : l !== N.default.Types.DURATION && t.dragging === N.default.Types.DURATION && s && d.play(), o !== t.muted && (d.muted = o, null == r || r(o)), u !== t.volume && (d.volume = u, null == i || i(u))
   }
   componentWillUnmount() {
     this._unmounted = !0;
@@ -531,8 +531,8 @@ class K extends(r = a.PureComponent) {
       current: e
     } = this.mediaRef;
     if (null == e) return;
-    let t = (0, A.getFullScreenNode)(e.parentNode, e);
-    null != t && (t.removeEventListener(A.FULLSCREEN_CHANGE_EVENT, this.handleFullScreenExit), (0, A.exitFullScreen)(t))
+    let t = (0, h.getFullScreenNode)(e.parentNode, e);
+    null != t && (t.removeEventListener(h.FULLSCREEN_CHANGE_EVENT, this.handleFullScreenExit), (0, h.exitFullScreen)(t))
   }
   play() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -686,7 +686,7 @@ class K extends(r = a.PureComponent) {
       buffers: u,
       currentTime: d,
       duration: _,
-      volume: (0, h.amplitudeToPerceptual)(m, 1),
+      volume: (0, A.amplitudeToPerceptual)(m, 1),
       hide: t === k.VIDEO && E,
       muted: T,
       autoPlay: n,
@@ -711,7 +711,7 @@ class K extends(r = a.PureComponent) {
         className: P.videoButton,
         guestWindow: window,
         onClick: this.toggleFullscreen,
-        node: (0, A.getFullScreenNode)(null == e ? void 0 : e.parentNode, e)
+        node: (0, h.getFullScreenNode)(null == e ? void 0 : e.parentNode, e)
       }) : null
     }) : (0, s.jsx)(O.default, {
       onPlay: this.handleVideoClick,
@@ -818,8 +818,8 @@ class K extends(r = a.PureComponent) {
         current: e
       } = this.mediaRef;
       if (null == e) return;
-      let t = (0, A.getFullScreenNode)(e.parentNode, e);
-      (null == t || !(0, A.isFullScreen)(t)) && this.setState({
+      let t = (0, h.getFullScreenNode)(e.parentNode, e);
+      (null == t || !(0, h.isFullScreen)(t)) && this.setState({
         fullscreen: !1
       })
     }), b(this, "toggleFullscreen", () => {
@@ -851,7 +851,7 @@ class K extends(r = a.PureComponent) {
       } = this.mediaRef;
       if (t === N.default.Types.DURATION) null != n && isFinite(n.duration) && this.setTime(n.duration * e, !1);
       else if (t === N.default.Types.VOLUME) {
-        let t = (0, h.perceptualToAmplitude)(e, 1);
+        let t = (0, A.perceptualToAmplitude)(e, 1);
         0 === t ? this.setState({
           muted: !0,
           volume: t

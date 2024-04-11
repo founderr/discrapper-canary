@@ -11,8 +11,8 @@ var i, r, s, a, o = n("658722"),
   T = n("812206"),
   f = n("594190"),
   S = n("592745"),
-  h = n("706454"),
-  A = n("757266"),
+  A = n("706454"),
+  h = n("757266"),
   m = n("77498"),
   N = n("283595"),
   O = n("246946"),
@@ -32,19 +32,19 @@ var i, r, s, a, o = n("658722"),
 let w = c()().subtract(1, "week"),
   k = [],
   B = "",
-  V = !1;
+  F = !1;
 
-function F(e, t) {
-  return e.application.name.localeCompare(t.application.name, h.default.locale, {
+function V(e, t) {
+  return e.application.name.localeCompare(t.application.name, A.default.locale, {
     sensitivity: "base"
   })
 }
 let x = {
-    [G.GameTableListKeys.NAME]: F,
+    [G.GameTableListKeys.NAME]: V,
     [G.GameTableListKeys.PLATFORM]: (e, t, n) => {
       let i = e.libraryApplication.getDistributor(),
         r = t.libraryApplication.getDistributor();
-      return i === r ? (n === G.TableSortDirections.DESCENDING ? -1 : 1) * F(e, t) : null == i ? 1 : null == r ? -1 : i.localeCompare(r)
+      return i === r ? (n === G.TableSortDirections.DESCENDING ? -1 : 1) * V(e, t) : null == i ? 1 : null == r ? -1 : i.localeCompare(r)
     },
     [G.GameTableListKeys.LAST_PLAYED]: (e, t) => e.isNew && !t.isNew ? -1 : !e.isNew && t.isNew ? 1 : e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1,
     [G.GameTableListKeys.ACTIONS]: null
@@ -95,7 +95,7 @@ function X() {
           LibraryApplicationStore: N.default,
           LaunchableGameStore: S.default,
           DispatchApplicationStore: C.default,
-          ConnectedAppsStore: A.default,
+          ConnectedAppsStore: h.default,
           applicationId: e.id,
           branchId: e.branchId
         }),
@@ -120,7 +120,7 @@ function X() {
           LibraryApplicationStore: N.default,
           LaunchableGameStore: S.default,
           DispatchApplicationStore: C.default,
-          ConnectedAppsStore: A.default,
+          ConnectedAppsStore: h.default,
           applicationId: e,
           branchId: null
         }),
@@ -130,11 +130,11 @@ function X() {
         defaultAction: null
       }
     })(i, n, t, e)).filter(v.isNotNullish), ...r].sort((e, t) => e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1);
-  return V = null != m.default.lastFetched && N.default.fetched, !d().isEqual(s, k) && (k = s, y.isPlatformEmbedded && P.default.setSystemTrayApplications(Y(k).map(e => e.application).slice(0, 5)), !0)
+  return F = null != m.default.lastFetched && N.default.fetched, !d().isEqual(s, k) && (k = s, y.isPlatformEmbedded && P.default.setSystemTrayApplications(Y(k).map(e => e.application).slice(0, 5)), !0)
 }
 class Q extends(i = E.default.Store) {
   initialize() {
-    this.syncWith([T.default, m.default, S.default, f.default, C.default, g.default, N.default, p.default, O.default, A.default], X, 200), this.syncWith([R.default, h.default], () => !0)
+    this.syncWith([T.default, m.default, S.default, f.default, C.default, g.default, N.default, p.default, O.default, h.default], X, 200), this.syncWith([R.default, A.default], () => !0)
   }
   get applicationFilterQuery() {
     return B
@@ -152,13 +152,13 @@ class Q extends(i = E.default.Store) {
     return j(this.libraryApplicationViewItems, B)
   }
   get sortedFilteredLibraryApplicationViewItems() {
-    return W(this.filteredLibraryApplicationViewItems, R.default.sortKey, R.default.sortDirection, h.default.locale)
+    return W(this.filteredLibraryApplicationViewItems, R.default.sortKey, R.default.sortDirection, A.default.locale)
   }
   get hiddenLibraryApplicationViewItems() {
     return K(k)
   }
   get hasFetchedApplications() {
-    return V
+    return F
   }
 }
 a = "ApplicationViewStore", (s = "displayName") in(r = Q) ? Object.defineProperty(r, s, {

@@ -388,7 +388,7 @@ class f extends i.MessageType {
   }
 }
 let S = new f;
-class h extends i.MessageType {
+class A extends i.MessageType {
   internalJsonWrite(e, t) {
     return this.refJsonWriter.scalar(12, e.value, "value", !1, !0)
   }
@@ -433,4 +433,4 @@ class h extends i.MessageType {
     }])
   }
 }
-new h
+new A

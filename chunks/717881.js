@@ -19,8 +19,8 @@ var i = n("735250"),
   T = n("142550"),
   f = n("954017"),
   S = n("314091"),
-  h = n("159244"),
-  A = n("574176"),
+  A = n("159244"),
+  h = n("574176"),
   m = n("952164"),
   N = n("199902"),
   O = n("592125"),
@@ -77,7 +77,7 @@ t.default = function(e) {
     return O.default.getChannel(null === (e = C.default.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId)
   }), {
     enableHangStatus: b
-  } = A.HangStatusExperiment.useExperiment({
+  } = h.HangStatusExperiment.useExperiment({
     guildId: null == U ? void 0 : U.guild_id,
     location: "UserActivityContainer"
   }, {
@@ -85,10 +85,10 @@ t.default = function(e) {
   }), G = (0, o.useStateFromStores)([N.default], () => s ? N.default.getAnyStreamForUser(n.id) : null), w = b && R.default.can(v.Permissions.CONNECT, U), k = (null == t ? void 0 : t.type) === v.ActivityTypes.HANG_STATUS && w ? U : null, B = (0, o.useStateFromStores)([p.default, C.default, O.default], () => {
     var e, i;
     return (0, u.default)(t, v.ActivityFlags.EMBEDDED) ? p.default.getGuild(null === (e = O.default.getChannel(null === (i = C.default.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != k ? p.default.getGuild(k.getGuildId()) : null
-  }), V = (0, o.useStateFromStores)([p.default], () => null != G ? p.default.getGuild(G.guildId) : null), F = (0, o.useStateFromStores)([c.default], () => {
+  }), F = (0, o.useStateFromStores)([p.default], () => null != G ? p.default.getGuild(G.guildId) : null), V = (0, o.useStateFromStores)([c.default], () => {
     if (null != t) return null != t.application_id ? c.default.getApplication(t.application_id) : c.default.getApplicationByName(t.name);
     return null
-  }), x = (0, E.default)(), H = (0, h.default)(n), Y = x && null != t && H;
+  }), x = (0, E.default)(), H = (0, A.default)(n), Y = x && null != t && H;
   return (r.useEffect(() => {
     (null == t ? void 0 : t.type) === v.ActivityTypes.HANG_STATUS && w && L.default.track(v.AnalyticEvents.VIEW_HANG_STATUS, {
       source: "UserProfilePopout",
@@ -99,9 +99,9 @@ t.default = function(e) {
     ...D,
     activity: t,
     user: n,
-    application: F,
+    application: V,
     hideHeader: d,
-    activityGuild: null != B ? B : V,
+    activityGuild: null != B ? B : F,
     showReactions: Y,
     renderActions: l ? () => (0, i.jsxs)("div", {
       className: a()(Y && y.actionsWrapper),
@@ -133,14 +133,14 @@ t.default = function(e) {
             reaction: r,
             user: n,
             activity: t,
-            application: F,
+            application: V,
             altText: (0, S.getActivityAltText)(n, t),
             stream: G
           }), i === T.AtomicReactorInteractionTypes.ReplySubmit && null != s && (0, f.sendReplyToActivity)({
             reply: s,
             user: n,
             activity: t,
-            application: F,
+            application: V,
             altText: (0, S.getActivityAltText)(n, t),
             stream: G
           })

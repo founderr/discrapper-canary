@@ -25,7 +25,7 @@ let c = {
       pid: T,
       className: f,
       guildClassName: S,
-      size: h = c.MEDIUM
+      size: A = c.MEDIUM
     } = e;
     if (null != I && (t = function(e) {
         if (null == e) return null;
@@ -57,7 +57,7 @@ let c = {
           default:
             return 80
         }
-      }(h))), null == (t = (0, a.default)(T, t)) && null != E) {
+      }(A))), null == (t = (0, a.default)(T, t)) && null != E) {
       let e = function(e) {
         switch (e) {
           case c.XSMALL:
@@ -70,7 +70,7 @@ let c = {
           case c.MEDIUM:
             return o.default.Sizes.MEDIUM
         }
-      }(h);
+      }(A);
       return (0, i.jsx)(o.default, {
         className: s()(_.gameIcon, S, f),
         guild: E,
@@ -78,16 +78,16 @@ let c = {
       })
     }
     if (null == t) return (0, i.jsx)(l.default, {
-      className: s()(_.gameIcon, h, f)
+      className: s()(_.gameIcon, A, f)
     });
-    let A = null == r ? void 0 : r.name,
-      m = null != A && "" !== A ? d.default.Messages.APPLICATION_ICON_A11Y_LABEL.format({
-        applicationName: A
+    let h = null == r ? void 0 : r.name,
+      m = null != h && "" !== h ? d.default.Messages.APPLICATION_ICON_A11Y_LABEL.format({
+        applicationName: h
       }) : d.default.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL;
     return (0, i.jsx)("img", {
       alt: m,
       src: t,
-      className: s()(_.gameIcon, h, f)
+      className: s()(_.gameIcon, A, f)
     })
   };
 E.Sizes = c, t.default = E

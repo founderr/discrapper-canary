@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return V
+    return F
   }
 }), n("47120");
 var i = n("735250"),
@@ -19,8 +19,8 @@ var i = n("735250"),
   T = n("797053"),
   f = n("68588"),
   S = n("263704"),
-  h = n("757206"),
-  A = n("332870"),
+  A = n("757206"),
+  h = n("332870"),
   m = n("750156"),
   N = n("979516"),
   O = n("671612"),
@@ -55,7 +55,7 @@ function k(e) {
     children: n ? (0, i.jsx)(S.default, {
       width: 16,
       height: 16
-    }) : (0, i.jsx)(h.default, {
+    }) : (0, i.jsx)(A.default, {
       width: 16,
       height: 16
     })
@@ -255,7 +255,7 @@ let B = {
     }
   },
   channel: {
-    react: (e, t, n) => (0, i.jsx)(A.default, {
+    react: (e, t, n) => (0, i.jsx)(h.default, {
       iconType: e.iconType,
       children: (0, C.smartOutput)(e, t, n)
     }, n.key)
@@ -265,7 +265,7 @@ let B = {
   }
 };
 
-function V(e) {
+function F(e) {
   return {
     ...B,
     link: (0, y.default)(e),

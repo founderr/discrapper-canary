@@ -16,15 +16,15 @@ let C = "IncomingCallStore",
   },
   S = new Set,
   I = [],
-  p = new Map,
-  T = new Set,
+  T = new Map,
+  p = new Set,
   g = 0,
   A = 0,
   N = !1;
 
 function v(e) {
-  if (null == e || null == p.get(e)) return !1;
-  p.delete(e), (T = new Set(T)).delete(e)
+  if (null == e || null == T.get(e)) return !1;
+  T.delete(e), (p = new Set(p)).delete(e)
 }
 
 function R(e) {
@@ -32,17 +32,17 @@ function R(e) {
     channelId: t,
     ringing: n
   } = e, a = n.includes(f.default.getId());
-  if (!T.has(t) && a) {
+  if (!p.has(t) && a) {
     let e = E.default.getChannel(t);
     if (null == e) return !1;
-    let n = 10 * T.size;
-    p.set(t, {
+    let n = 10 * p.size;
+    T.set(t, {
       channel: e,
       x: g + n,
       y: A + n
-    }), (T = new Set(T)).add(t)
+    }), (p = new Set(p)).add(t)
   } else {
-    if (!T.has(t) || a) return !1;
+    if (!p.has(t) || a) return !1;
     v(t)
   }
 }! function() {
@@ -62,16 +62,16 @@ class L extends(a = r.default.Store) {
     this.waitFor(E.default, h.default), this.syncWith([h.default], O), this.syncWith([c.default], O)
   }
   getIncomingCalls() {
-    return N ? I : Array.from(p.values())
+    return N ? I : Array.from(T.values())
   }
   getIncomingCallChannelIds() {
-    return N ? S : T
+    return N ? S : p
   }
   getFirstIncomingCallId() {
-    return N ? null : T.values().next().value
+    return N ? null : p.values().next().value
   }
   hasIncomingCalls() {
-    return !N && T.size > 0
+    return !N && p.size > 0
   }
 }
 i = "IncomingCallStore", (l = "displayName") in(s = L) ? Object.defineProperty(s, l, {

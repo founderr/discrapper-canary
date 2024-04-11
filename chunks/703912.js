@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return T
   }
 }), n("47120");
 var a = n("664751"),
@@ -29,8 +29,8 @@ async function S(e, t, n) {
     state: m,
     scope: S,
     permissions: I,
-    guild_id: p,
-    channel_id: T,
+    guild_id: T,
+    channel_id: p,
     prompt: g,
     disable_guild_select: A,
     integration_type: N
@@ -83,12 +83,12 @@ async function S(e, t, n) {
       errorCode: C.RPCErrors.OAUTH2_ERROR
     }, "OAuth2 Authorize Error: ".concat(e.message || "Unknown Error"))
   }
-  null == n || n(a.application, T);
+  null == n || n(a.application, p);
   let R = E.NONE;
   try {
     R = l.deserialize(null != I ? I : 0)
   } catch (e) {}
-  return t(i, a, v, R, r, o, u, _, m, p, T, g, A)
+  return t(i, a, v, R, r, o, u, _, m, T, p, g, A)
 }
 
 function I(e, t) {
@@ -136,7 +136,7 @@ function I(e, t) {
   })
 }
 
-function p(e, t) {
+function T(e, t) {
   return {
     [C.RPCCommands.AUTHENTICATE]: (0, r.createRPCCommand)(C.RPCCommands.AUTHENTICATE, {
       handler(n) {

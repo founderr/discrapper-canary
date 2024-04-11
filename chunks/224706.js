@@ -15,8 +15,8 @@ var i = n("664751"),
   T = n("630388"),
   f = n("877481"),
   S = n("358085"),
-  h = n("278323"),
-  A = n("58642"),
+  A = n("278323"),
+  h = n("58642"),
   m = n("254854"),
   N = n("981631"),
   O = n("701488"),
@@ -130,7 +130,7 @@ t.default = {
       let e = E.default.getActiveLibraryApplication(n.id);
       if (null != e) {
         let t = T.toggleFlag(e.getFlags(), N.LibraryApplicationFlags.OVERLAY_DISABLED);
-        A.updateFlags(e.id, e.branchId, t);
+        h.updateFlags(e.id, e.branchId, t);
         return
       }
     }
@@ -324,7 +324,7 @@ t.default = {
       applicationId: i
     });
     try {
-      let e = await h.default.getJoinSecret(t, n, i, r, a);
+      let e = await A.default.getJoinSecret(t, n, i, r, a);
       return R({
         applicationId: i,
         secret: e,

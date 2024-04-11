@@ -15,8 +15,8 @@ var i = n("735250"),
   T = n("410575"),
   f = n("347469"),
   S = n("40851"),
-  h = n("367907"),
-  A = n("907040"),
+  A = n("367907"),
+  h = n("907040"),
   m = n("455708"),
   N = n("315744"),
   O = n("603074"),
@@ -36,7 +36,7 @@ var i = n("735250"),
   w = n("689938"),
   k = n("371396");
 let B = y.MIN_EXPRESSION_PICKER_WIDTH + U.EmojiSize.MEDIUM,
-  V = r.memo(function(e) {
+  F = r.memo(function(e) {
     let {
       isActive: t,
       className: n,
@@ -51,7 +51,7 @@ let B = y.MIN_EXPRESSION_PICKER_WIDTH + U.EmojiSize.MEDIUM,
       "aria-controls": t ? o : void 0,
       ...l,
       onClick: () => {
-        h.default.trackWithMetadata(P.AnalyticEvents.EXPRESSION_PICKER_TAB_CLICKED, {
+        A.default.trackWithMetadata(P.AnalyticEvents.EXPRESSION_PICKER_TAB_CLICKED, {
           tab: r,
           badged: !1
         }), (0, M.setExpressionPickerView)(r)
@@ -64,7 +64,7 @@ let B = y.MIN_EXPRESSION_PICKER_WIDTH + U.EmojiSize.MEDIUM,
       size: E.Button.Sizes.NONE
     })
   }),
-  F = e => {
+  V = e => {
     let {
       positionContainerRef: t,
       drawerRef: n,
@@ -127,7 +127,7 @@ t.default = r.memo(function(e) {
   } = e, J = r.useRef(null), Z = r.useRef(!1), $ = r.useRef(), ee = r.useRef(null), {
     drawerWidth: et,
     handleDrawerResizeHandleMouseDown: en
-  } = F({
+  } = V({
     positionContainerRef: J,
     drawerRef: ee,
     orientation: "left" === z ? f.ResizeOrientation.HORIZONTAL_RIGHT : f.ResizeOrientation.HORIZONTAL_LEFT
@@ -165,7 +165,7 @@ t.default = r.memo(function(e) {
   }, [ed, eu]), r.useEffect(() => {
     if (null != ee.current && !Z.current) {
       var e, t, n, i;
-      ei === y.ExpressionPickerViewType.EMOJI ? (null == $ ? void 0 : null === (e = $.current) || void 0 === e ? void 0 : e.onPickerOpen) != null && (null == $ || null === (t = $.current) || void 0 === t || t.onPickerOpen(), Z.current = !0) : ei === y.ExpressionPickerViewType.STICKER ? (null == $ ? void 0 : null === (n = $.current) || void 0 === n ? void 0 : n.onPickerOpen) != null && !eo && (null == $ || null === (i = $.current) || void 0 === i || i.onPickerOpen(), Z.current = !0) : (h.default.trackWithMetadata(P.AnalyticEvents.EXPRESSION_PICKER_OPENED, {
+      ei === y.ExpressionPickerViewType.EMOJI ? (null == $ ? void 0 : null === (e = $.current) || void 0 === e ? void 0 : e.onPickerOpen) != null && (null == $ || null === (t = $.current) || void 0 === t || t.onPickerOpen(), Z.current = !0) : ei === y.ExpressionPickerViewType.STICKER ? (null == $ ? void 0 : null === (n = $.current) || void 0 === n ? void 0 : n.onPickerOpen) != null && !eo && (null == $ || null === (i = $.current) || void 0 === i || i.onPickerOpen(), Z.current = !0) : (A.default.trackWithMetadata(P.AnalyticEvents.EXPRESSION_PICKER_OPENED, {
         width: ee.current.offsetWidth,
         tab: ei,
         badged: !1
@@ -218,14 +218,14 @@ t.default = r.memo(function(e) {
                   className: k.navList,
                   role: "tablist",
                   "aria-label": w.default.Messages.EXPRESSION_PICKER_CATEGORIES_A11Y_LABEL,
-                  children: [eE ? (0, i.jsx)(V, {
+                  children: [eE ? (0, i.jsx)(F, {
                     id: U.GIF_PICKER_TAB_ID,
                     "aria-controls": U.GIF_PICKER_TAB_PANEL_ID,
                     "aria-selected": ei === y.ExpressionPickerViewType.GIF,
                     isActive: ei === y.ExpressionPickerViewType.GIF,
                     viewType: y.ExpressionPickerViewType.GIF,
                     children: w.default.Messages.EXPRESSION_PICKER_GIF
-                  }) : null, eI ? (0, i.jsx)(V, {
+                  }) : null, eI ? (0, i.jsx)(F, {
                     id: G.STICKER_PICKER_TAB_ID,
                     "aria-controls": G.STICKER_PICKER_TAB_PANEL_ID,
                     "aria-selected": ei === y.ExpressionPickerViewType.STICKER,
@@ -236,14 +236,14 @@ t.default = r.memo(function(e) {
                       className: k.stickersNavItem,
                       children: w.default.Messages.EXPRESSION_PICKER_STICKER
                     })
-                  }) : null, (0, i.jsx)(V, {
+                  }) : null, (0, i.jsx)(F, {
                     id: U.EMOJI_PICKER_TAB_ID,
                     "aria-controls": U.EMOJI_PICKER_TAB_PANEL_ID,
                     "aria-selected": ei === y.ExpressionPickerViewType.EMOJI,
                     isActive: ei === y.ExpressionPickerViewType.EMOJI,
                     viewType: y.ExpressionPickerViewType.EMOJI,
                     children: w.default.Messages.EXPRESSION_PICKER_EMOJI
-                  }), el && null != Y && (0, i.jsx)(V, {
+                  }), el && null != Y && (0, i.jsx)(F, {
                     id: U.SOUNDBOARD_PICKER_TAB_ID,
                     "aria-controls": U.SOUNDBOARD_PICKER_TAB_PANEL_ID,
                     "aria-selected": ei === y.ExpressionPickerViewType.SOUNDBOARD,
@@ -265,7 +265,7 @@ t.default = r.memo(function(e) {
                 onSelectGIF: g,
                 hideFavorites: l,
                 persistSearch: !0
-              }) : null, ei === y.ExpressionPickerViewType.EMOJI ? (0, i.jsx)(A.default, {
+              }) : null, ei === y.ExpressionPickerViewType.EMOJI ? (0, i.jsx)(h.default, {
                 hasTabWrapper: !0,
                 persistSearch: !0,
                 channel: j,

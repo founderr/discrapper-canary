@@ -7,8 +7,8 @@ var i, r, s, a, o, l, u, d, _ = n("392711"),
   T = n("570140"),
   f = n("51025"),
   S = n("594190"),
-  h = n("314897"),
-  A = n("173747"),
+  A = n("314897"),
+  h = n("173747"),
   m = n("780570"),
   N = n("830168"),
   O = n("358085"),
@@ -49,34 +49,34 @@ function B() {
       branchId: a
     } = (0, m.convertComboId)(i);
     if (t = s, n = a, (null == y || y.applicationId !== t || y.branchId !== n) && (null == P || P.applicationId !== t || P.branchId !== n)) {
-      let e = h.default.getToken(),
-        t = h.default.getId();
+      let e = A.default.getToken(),
+        t = A.default.getId();
       if (null == e) throw Error("missing user token");
       G = !N.default.setCurrentTask(s, a, r, t, e)
     }
   }
 }
 
-function V(e, t) {
+function F(e, t) {
   let n = (0, m.getComboId)(e, t);
   return D.findIndex(e => e.comboId === n)
 }
 
-function F(e, t, n, i) {
+function V(e, t, n, i) {
   let r = (0, m.getComboId)(e, t),
     s = {
       comboId: r,
       action: i
     },
     a = v.indexOf(r); - 1 !== a && v.splice(a, 1);
-  let o = V(e, t);
+  let o = F(e, t);
   0 !== o && (n ? -1 === o && (D.push(s), B()) : (o > 0 && D.splice(o, 1), D.unshift(s), B())), !n && M && N.default.resume(), k()
 }
 
 function x(e, t) {
   let n = (0, m.getComboId)(e, t),
     i = v.indexOf(n); - 1 !== i && v.splice(i, 1);
-  let r = V(e, t); - 1 !== r && (D.splice(r, 1), k()), B()
+  let r = F(e, t); - 1 !== r && (D.splice(r, 1), k()), B()
 }
 
 function H(e) {
@@ -95,8 +95,8 @@ function Y(e) {
 }
 
 function j() {
-  let e = h.default.getToken(),
-    t = h.default.getId();
+  let e = A.default.getToken(),
+    t = A.default.getId();
   null != e && N.default.setCredentials(t, e)
 }
 
@@ -134,7 +134,7 @@ class K extends(s = E.default.Store) {
     return M
   }
   getQueuePosition(e, t) {
-    return V(e, t)
+    return F(e, t)
   }
   isCorruptInstallation() {
     return G
@@ -151,7 +151,7 @@ d = "DispatchManagerStore", (u = "displayName") in(l = K) ? Object.definePropert
       applicationId: t,
       branchId: n
     } = e;
-    b.set((0, m.getComboId)(t, n), "Install"), F(t, n, !1, "Patch")
+    b.set((0, m.getComboId)(t, n), "Install"), V(t, n, !1, "Patch")
   },
   DISPATCH_APPLICATION_UPDATE: function(e) {
     let {
@@ -159,7 +159,7 @@ d = "DispatchManagerStore", (u = "displayName") in(l = K) ? Object.definePropert
       branchId: n,
       automatic: i
     } = e;
-    F(t, n, i, "Patch")
+    V(t, n, i, "Patch")
   },
   DISPATCH_APPLICATION_UNINSTALL: function(e) {
     H(e), Y(e)
@@ -170,13 +170,13 @@ d = "DispatchManagerStore", (u = "displayName") in(l = K) ? Object.definePropert
       applicationId: t,
       branchId: n
     } = e;
-    b.set((0, m.getComboId)(t, n), "Repair"), F(t, n, !1, "Repair")
+    b.set((0, m.getComboId)(t, n), "Repair"), V(t, n, !1, "Repair")
   },
   DISPATCH_APPLICATION_MOVE_UP: function(e) {
     let {
       applicationId: t,
       branchId: n
-    } = e, i = V(t, n);
+    } = e, i = F(t, n);
     if (i < 1) return !1;
     D.splice(0, 0, D.splice(i, 1)[0]), B(), M && N.default.resume(), k()
   },
@@ -195,7 +195,7 @@ d = "DispatchManagerStore", (u = "displayName") in(l = K) ? Object.definePropert
       } = e, {
         applicationId: n,
         branchId: r
-      } = (0, m.convertComboId)(t), s = p.default.getState(n, r), a = A.default.getTargetBuildId(n, r), o = A.default.getTargetManifests(n, r);
+      } = (0, m.convertComboId)(t), s = p.default.getState(n, r), a = h.default.getTargetBuildId(n, r), o = h.default.getTargetManifests(n, r);
       if (null != s && s.type === R.LocalDispatchApplicationStates.UP_TO_DATE && s.buildId === s.targetBuildId && s.buildId === a && c().isEqual(s.manifestIds, s.targetManifestIds) && c().isEqual(s.manifestIds, o)) {
         if (v.push(t), b.has(t)) {
           switch (b.get(t)) {

@@ -26,8 +26,8 @@ function S(e) {
     nickname: n,
     status: S,
     isFocused: I
-  } = e, p = s.useContext(c.AnalyticsContext), {
-    analyticsLocations: T
+  } = e, T = s.useContext(c.AnalyticsContext), {
+    analyticsLocations: p
   } = (0, i.default)(), g = e => {
     null == e || e.stopPropagation(), l.default.addRelationship({
       userId: t.id,
@@ -46,8 +46,8 @@ function S(e) {
     user: t,
     onClick: () => (0, o.openUserProfileModal)({
       userId: t.id,
-      sourceAnalyticsLocations: T,
-      analyticsLocation: p.location
+      sourceAnalyticsLocations: p,
+      analyticsLocation: T.location
     }),
     children: e => {
       let s = (0, a.jsxs)(a.Fragment, {

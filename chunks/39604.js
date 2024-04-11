@@ -67,8 +67,8 @@ var i = n("46973"),
   T = n("199902"),
   f = n("314897"),
   S = n("131951"),
-  h = n("959457"),
-  A = n("33039"),
+  A = n("959457"),
+  h = n("33039"),
   m = n("626135"),
   N = n("358085"),
   O = n("557177"),
@@ -188,7 +188,7 @@ function B(e) {
   })
 }
 
-function V(e, t) {
+function F(e, t) {
   var n, i, r, s, a, o, u, d, _, c;
   let E = new Map;
   for (let e in t.framesEncodedByEncoder) {
@@ -226,7 +226,7 @@ function V(e, t) {
     saved_at: t.savedAt
   }
 }
-async function F(e) {
+async function V(e) {
   let t = p.default.getSettings().storageLocation,
     n = (0, C.default)(e),
     i = "".concat((0, R.default)(n.applicationName.substring(0, 20)), "_").concat(n.id, ".mp4"),
@@ -238,13 +238,13 @@ async function F(e) {
       var t;
       let n, i, r;
       if (null != e) {
-        n = null != e ? h.default.getRTCConnection(e) : null;
+        n = null != e ? A.default.getRTCConnection(e) : null;
         let t = (0, d.decodeStreamKey)(e);
         i = t.guildId, r = t.channelId
       } else {
         let e = f.default.getId(),
           t = T.default.getActiveStreamForUser(e, null);
-        n = null != t ? h.default.getRTCConnection((0, d.encodeStreamKey)(t)) : null, i = null == t ? void 0 : t.guildId, r = null == t ? void 0 : t.channelId
+        n = null != t ? A.default.getRTCConnection((0, d.encodeStreamKey)(t)) : null, i = null == t ? void 0 : t.guildId, r = null == t ? void 0 : t.channelId
       }
       let s = null == n ? void 0 : null === (t = n.analyticsContext) || void 0 === t ? void 0 : t.streamApplication;
       return {
@@ -269,7 +269,7 @@ async function F(e) {
     let {
       duration: e,
       clipStats: t
-    } = await (null != u ? s.saveClipForUser(u, r, l) : s.saveClip(r, l)), i = V(_, t);
+    } = await (null != u ? s.saveClipForUser(u, r, l) : s.saveClip(r, l)), i = F(_, t);
     i.clip_save_time_ms = t.clipSaveTimeMs, i.clip_size_bytes = t.clipSizeBytes, null != t.viewerDecodeFps && (i.decode_fps_during_clip = t.viewerDecodeFps, i.encode_fps_during_clip = t.viewerEncodeFps, i.target_fps = null), m.default.track(M.AnalyticEvents.CLIP_SAVED, i);
     let a = await (0, D.createThumbnailFromVideo)(o.default.clips.getClipProtocolURLFromPath(r), 0);
     return n.thumbnail = a, n.length = e, v.ClipsLogger.info("Clip save succeeded with ".concat(e, "ms and thumbnail ").concat(null !== (c = null == a ? void 0 : a.length) && void 0 !== c ? c : 0, " bytes thumbnail.")), await s.updateClipMetadata(r, JSON.stringify(n)), {
@@ -281,7 +281,7 @@ async function F(e) {
         type: "CLIPS_SAVE_CLIP_PLACEHOLDER_ERROR",
         clipId: n.id
       }), !("errorMessage" in i)) throw m.default.track(M.AnalyticEvents.CLIP_SAVE_FAILURE, _), i;
-    let t = V(_, i);
+    let t = F(_, i);
     throw t.error_at = i.errorAt, t.error_message = i.errorMessage, m.default.track(M.AnalyticEvents.CLIP_SAVE_FAILURE, t), i.errorMessage
   }
 }
@@ -306,8 +306,8 @@ async function x(e) {
     E = null != e && null != T.default.getActiveStreamForStreamKey(e) && s;
   if (!o && !l && !E) return;
   let I = T.default.getCurrentUserActiveStream(),
-    h = null != I ? (0, d.encodeStreamKey)(I) : void 0,
-    m = null != e ? e : h,
+    A = null != I ? (0, d.encodeStreamKey)(I) : void 0,
+    m = null != e ? e : A,
     N = (() => {
       let e = null != m ? (0, d.decodeStreamKey)(m).ownerId : void 0;
       return e === f.default.getId() ? v.ClipSaveTypes.STREAMER : null != e ? v.ClipSaveTypes.VIEWER : v.ClipSaveTypes.DECOUPLED
@@ -317,7 +317,7 @@ async function x(e) {
       let {
         ownerId: e,
         guildId: t
-      } = (0, d.decodeStreamKey)(m), n = A.default.getStreamId(e, t, i.MediaEngineContextTypes.STREAM);
+      } = (0, d.decodeStreamKey)(m), n = h.default.getStreamId(e, t, i.MediaEngineContextTypes.STREAM);
       if (null != n) try {
         let e = (0, r.getVoiceEngine)(),
           t = await e.getNextVideoOutputFrame(n);
@@ -335,7 +335,7 @@ async function x(e) {
   let C = (0, O.playSound)("clip_save", .5),
     g = performance.now();
   try {
-    let e = await F(m);
+    let e = await V(m);
     a.default.dispatch({
       type: "CLIPS_SAVE_CLIP",
       clip: e

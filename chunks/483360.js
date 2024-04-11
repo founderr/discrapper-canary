@@ -19,8 +19,8 @@ var r = n("658722"),
   T = n("31445"),
   f = n("931261"),
   S = n("285651"),
-  h = n("822179"),
-  A = n("926491"),
+  A = n("822179"),
+  h = n("926491"),
   m = n("373228"),
   N = n("601070"),
   O = n("675478"),
@@ -40,8 +40,8 @@ var r = n("658722"),
   w = n("55563"),
   k = n("823379"),
   B = n("892880"),
-  V = n("700785"),
-  F = n("226951"),
+  F = n("700785"),
+  V = n("226951"),
   x = n("709054"),
   H = n("624138"),
   Y = n("51144"),
@@ -82,7 +82,7 @@ function ei(e, t) {
       return 7
     }
     if (i.test(e)) return 5;
-    if (l = r, u = e, l.split(/(?:,| )+/).every(e => RegExp(F.default.escape(e), "i").test(u))) return 3;
+    if (l = r, u = e, l.split(/(?:,| )+/).every(e => RegExp(V.default.escape(e), "i").test(u))) return 3;
     if (o && s()(r, e)) return 1
   } catch (e) {
     X.error(e)
@@ -103,10 +103,10 @@ function es(e) {
     allowSnowflake: a
   } = e, o = G.default.getUsers(), u = b.default.getGuildId(), d = t.toLocaleLowerCase(), _ = (0, H.normalize)(d), c = [], E = [], I = n.length, T = 0, f = 0;
   for (; T < I;) {
-    var S, h, A, m, N, O, p, C, g;
+    var S, A, h, m, N, O, p, C, g;
     let e, i;
     let l = n[T];
-    l instanceof R.default ? (i = l, e = null === (h = L.default.getNick(u, i.id)) || void 0 === h ? void 0 : h.toLocaleLowerCase()) : (e = null === (A = l.nick) || void 0 === A ? void 0 : A.toLocaleLowerCase(), i = o[l.userId]);
+    l instanceof R.default ? (i = l, e = null === (A = L.default.getNick(u, i.id)) || void 0 === A ? void 0 : A.toLocaleLowerCase()) : (e = null === (h = l.nick) || void 0 === h ? void 0 : h.toLocaleLowerCase(), i = o[l.userId]);
     let I = null === (S = Y.default.getGlobalName(i)) || void 0 === S ? void 0 : S.toLocaleLowerCase();
     if (null == r || r(i)) {
       let n = i.username.toLocaleLowerCase(),
@@ -235,7 +235,7 @@ t.default = {
       query: i,
       members: t,
       limit: r,
-      filter: e => d.isPrivate() || V.can({
+      filter: e => d.isPrivate() || F.can({
         permission: j.Permissions.VIEW_CHANNEL,
         user: e,
         context: d
@@ -297,8 +297,8 @@ t.default = {
             let t = e.toLocaleLowerCase();
             return {
               queryLower: t,
-              exactQuery: RegExp("^".concat(F.default.escape(t)), "i"),
-              containQuery: RegExp(F.default.escape(t), "i"),
+              exactQuery: RegExp("^".concat(V.default.escape(t)), "i"),
+              containQuery: RegExp(V.default.escape(t), "i"),
               isFullMatch: !1
             }
           });
@@ -306,8 +306,8 @@ t.default = {
           let t = e.toLocaleLowerCase();
           n.unshift({
             queryLower: t,
-            exactQuery: RegExp("^".concat(F.default.escape(t).replace(" ", "( |-)")), "i"),
-            containQuery: RegExp(F.default.escape(t).replace(" ", "( |-)"), "i"),
+            exactQuery: RegExp("^".concat(V.default.escape(t).replace(" ", "( |-)")), "i"),
+            containQuery: RegExp(V.default.escape(t).replace(" ", "( |-)"), "i"),
             isFullMatch: !0
           })
         }
@@ -317,8 +317,8 @@ t.default = {
     let f = {},
       S = [];
     for (let e of t) {
-      var h, A, m, O, R;
-      if (h = d, A = e.type, m = null != i, !(h === A || (m || (0, p.isGuildChannelType)(A)) && (h === g.GUILD_SELECTABLE_CHANNELS_KEY ? (0, p.isGuildSelectableChannelType)(A) || (0, p.isGuildVocalChannelType)(A) : h === g.GUILD_VOCAL_CHANNELS_KEY && (0, p.isGuildVocalChannelType)(A))) || (0, p.isGuildChannelType)(e.type) && !M.default.can(c ? e.accessPermissions : j.Permissions.VIEW_CHANNEL, e) || !a(e)) continue;
+      var A, h, m, O, R;
+      if (A = d, h = e.type, m = null != i, !(A === h || (m || (0, p.isGuildChannelType)(h)) && (A === g.GUILD_SELECTABLE_CHANNELS_KEY ? (0, p.isGuildSelectableChannelType)(h) || (0, p.isGuildVocalChannelType)(h) : A === g.GUILD_VOCAL_CHANNELS_KEY && (0, p.isGuildVocalChannelType)(h))) || (0, p.isGuildChannelType)(e.type) && !M.default.can(c ? e.accessPermissions : j.Permissions.VIEW_CHANNEL, e) || !a(e)) continue;
       let t = [...T],
         r = e.name.toLocaleLowerCase(),
         o = I && n === e.id,
@@ -371,8 +371,8 @@ t.default = {
       filter: r = Q,
       boosters: s = {}
     } = e, a = "" === t ? "" : t.toLocaleLowerCase(), u = {
-      exactQuery: RegExp("^".concat(F.default.escape(a)), "i"),
-      containQuery: RegExp(F.default.escape(a), "i"),
+      exactQuery: RegExp("^".concat(V.default.escape(a)), "i"),
+      containQuery: RegExp(V.default.escape(a), "i"),
       queryLower: a
     }, d = [];
     for (let e of o()(D.default.getGuilds()).values().value()) {
@@ -397,8 +397,8 @@ t.default = {
       filter: r = Q,
       boosters: s = {}
     } = e, a = (0, H.stripDiacritics)((0, H.normalize)(t.toLocaleLowerCase())), d = {
-      exactQuery: RegExp("^".concat(F.default.escape(a)), "i"),
-      containQuery: RegExp(F.default.escape(a), "i"),
+      exactQuery: RegExp("^".concat(V.default.escape(a)), "i"),
+      containQuery: RegExp(V.default.escape(a), "i"),
       queryLower: a
     }, _ = o()(C.default.getMutablePrivateChannels()).values().value(), c = [];
     for (let e of _) {
@@ -423,8 +423,8 @@ t.default = {
       fuzzy: i = !0,
       filter: r = Q
     } = e, s = t.toLocaleLowerCase(), a = {
-      exactQuery: RegExp("^".concat(F.default.escape(s)), "i"),
-      containQuery: RegExp(F.default.escape(s), "i"),
+      exactQuery: RegExp("^".concat(V.default.escape(s)), "i"),
+      containQuery: RegExp(V.default.escape(s), "i"),
       queryLower: s
     }, o = ee(), u = [];
     for (let {
@@ -451,8 +451,8 @@ t.default = {
       fuzzy: i = !0,
       filter: r = Q
     } = e, s = t.toLocaleLowerCase(), a = {
-      exactQuery: RegExp("^".concat(F.default.escape(s)), "i"),
-      containQuery: RegExp(F.default.escape(s), "i"),
+      exactQuery: RegExp("^".concat(V.default.escape(s)), "i"),
+      containQuery: RegExp(V.default.escape(s), "i"),
       queryLower: s
     }, u = o()(w.default.getSKUs()).values().value(), d = [];
     for (let e of u)
@@ -509,7 +509,7 @@ t.default = {
         nick: L.default.getNick(n.guild_id, t.id),
         status: y.default.getStatus(t.id)
       }
-    }) : [], f = T.length, S = t.toLowerCase(), h = [];
+    }) : [], f = T.length, S = t.toLowerCase(), A = [];
     if (f < c && l) {
       let e = n.getGuildId(),
         t = D.default.getGuild(e);
@@ -521,14 +521,14 @@ t.default = {
         } = t;
         return (n || i || d) && (s()(S, r.toLowerCase()) || I && S === a) && a !== x.default.castGuildIdAsEveryoneGuildRoleId(e)
       }).take(c - f).forEach(e => {
-        h.push(e)
-      }), f += h.length)
+        A.push(e)
+      }), f += A.length)
     }
-    let A = [];
-    return !n.isPrivate() && i && l && (f < c && s()(S, Z().test) && (A.push(Z()), f += 1), r && f < c && s()(S, $().test) && A.push($())), {
+    let h = [];
+    return !n.isPrivate() && i && l && (f < c && s()(S, Z().test) && (h.push(Z()), f += 1), r && f < c && s()(S, $().test) && h.push($())), {
       users: T,
-      globals: A,
-      roles: h
+      globals: h,
+      roles: A
     }
   },
   queryGuildMentionResults(e) {
@@ -572,7 +572,7 @@ t.default = {
       choices: n,
       limit: i = 10,
       fuzzy: r = !0
-    } = e, s = t.toLocaleLowerCase(), a = RegExp("^".concat(F.default.escape(s)), "i"), l = RegExp(F.default.escape(s), "i"), u = o()(n).map((e, t) => {
+    } = e, s = t.toLocaleLowerCase(), a = RegExp("^".concat(V.default.escape(s)), "i"), l = RegExp(V.default.escape(s), "i"), u = o()(n).map((e, t) => {
       let n = ei(e.displayName.toLocaleLowerCase(), {
         exactQuery: a,
         containQuery: l,
@@ -591,8 +591,8 @@ t.default = {
       query: t,
       guild: n
     } = e, i = t.toLocaleLowerCase(), r = {
-      exactQuery: RegExp("^".concat(F.default.escape(i)), "i"),
-      containQuery: RegExp(F.default.escape(i), "i"),
+      exactQuery: RegExp("^".concat(V.default.escape(i)), "i"),
+      containQuery: RegExp(V.default.escape(i), "i"),
       queryLower: i
     }, s = ((0, I.canSeeGuildHome)(n.id) || (0, f.canSeeOnboardingHome)(n.id)) && !n.hasFeature(j.GuildFeatures.HUB), a = n.hasFeature(j.GuildFeatures.COMMUNITY), o = (0, T.isGuildOnboardingAvailable)(n) && n.hasFeature(j.GuildFeatures.COMMUNITY), l = [{
       id: K.StaticChannelId.SERVER_GUIDE,
@@ -704,7 +704,7 @@ t.default = {
       [n, i] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [null, Q],
       {
         stickerMetadata: r
-      } = A.default,
+      } = h.default,
       s = G.default.getCurrentUser(),
       a = new Set,
       l = [];
@@ -712,12 +712,12 @@ t.default = {
       if ("" === o) continue;
       let e = o.toLocaleLowerCase(),
         u = (0, H.stripDiacritics)(e),
-        d = RegExp("^".concat(F.default.escape(u)), "i"),
-        _ = RegExp("".concat(F.default.escape(u)), "i");
+        d = RegExp("^".concat(V.default.escape(u)), "i"),
+        _ = RegExp("".concat(V.default.escape(u)), "i");
       r.forEach((r, o) => {
         let u = 0,
           c = null,
-          E = A.default.getStickerById(o);
+          E = h.default.getStickerById(o);
         if (null == E || !i(E, (0, S.getStickerSendability)(E, s, n))) return;
         for (let n of r) {
           let {
@@ -740,7 +740,7 @@ t.default = {
           }(i), a = 0;
           t ? r === e ? a = 10 * s : d.test(r) ? a = 7 * s : (i === m.StickerMetadataTypes.GUILD_NAME || i === m.StickerMetadataTypes.PACK_NAME || i === m.StickerMetadataTypes.STICKER_NAME) && _.test(r) && (a = 5 * s) : r === e && (a = 10 * s, c = r), a > u && (u = a, c = r)
         }
-        let I = h.default.stickerFrecencyWithoutFetchingLatest.getScore(o);
+        let I = A.default.stickerFrecencyWithoutFetchingLatest.getScore(o);
         null != I && (u *= I / 100), u > 0 && null != c && !a.has(E.id) && (a.add(E.id), l.push({
           sticker: E,
           comparator: c,

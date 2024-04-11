@@ -25,8 +25,8 @@ var a, s, l = n("735250"),
   m = n("427679"),
   S = n("448206"),
   I = n("496675"),
-  p = n("938475"),
-  T = n("808602"),
+  T = n("938475"),
+  p = n("808602"),
   g = n("305878"),
   A = n("263704"),
   N = n("465670"),
@@ -122,7 +122,7 @@ function q(e) {
   let {
     guildEvent: t,
     channel: n
-  } = e, a = (0, r.useStateFromStoresArray)([p.default], () => p.default.getVoiceStatesForChannel(n).map(e => {
+  } = e, a = (0, r.useStateFromStoresArray)([T.default], () => T.default.getVoiceStatesForChannel(n).map(e => {
     let {
       user: t
     } = e;
@@ -170,7 +170,7 @@ function Q(e) {
       width: 16,
       height: 16,
       className: K.buttonIcon
-    }) : (0, l.jsx)(T.default, {
+    }) : (0, l.jsx)(p.default, {
       width: 16,
       height: 16,
       className: K.buttonIcon

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   allowUnicodeEmojiForIntention: function() {
-    return V
+    return F
   },
   dedupeUnicodeEmojis: function() {
     return z
@@ -52,7 +52,7 @@ n.r(t), n.d(t, {
     return j
   },
   useEmojiSearchResults: function() {
-    return F
+    return V
   },
   useFavoriteEmojis: function() {
     return H
@@ -83,8 +83,8 @@ var i = n("470079"),
   f = n("176354"),
   S = n("111361");
 n("709054");
-var h = n("253696"),
-  A = n("304852"),
+var A = n("253696"),
+  h = n("304852"),
   m = n("199257"),
   N = n("149203"),
   O = n("981631"),
@@ -123,7 +123,7 @@ let L = function(e, t, n) {
       } = (0, m.default)(n, e),
       {
         allEmojis: I
-      } = (0, A.default)({
+      } = (0, h.default)({
         topEmojis: d,
         newlyAddedEmojis: E
       }),
@@ -179,7 +179,7 @@ let L = function(e, t, n) {
         } else if (i === N.EmojiCategories.CUSTOM) {
           let e = u;
           !r && (e = u.filter(e => e.type === N.EmojiCategoryTypes.GUILD && e.guild.id === n)), t.push(...e)
-        } else if (V(e)) t.push({
+        } else if (F(e)) t.push({
           type: N.EmojiCategoryTypes.UNICODE,
           id: i,
           name: i
@@ -376,9 +376,9 @@ let k = (e, t) => {
         return null != t ? t : e
     }
   },
-  V = e => e !== p.EmojiIntention.COMMUNITY_CONTENT_ONLY;
+  F = e => e !== p.EmojiIntention.COMMUNITY_CONTENT_ONLY;
 
-function F(e, t, n) {
+function V(e, t, n) {
   i.useEffect(() => {
     d.FrecencyUserSettingsActionCreators.loadIfNecessary()
   }, []);
@@ -421,7 +421,7 @@ function j(e) {
 
 function W(e) {
   let t = i.useCallback(() => {
-    (0, h.default)(e)
+    (0, A.default)(e)
   }, [e]);
   return i.useEffect(() => {
     e.intention === p.EmojiIntention.REACTION && t()

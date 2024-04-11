@@ -10,8 +10,8 @@ var s, a, o, l, u = n("512722"),
   T = n("433517"),
   f = n("570140"),
   S = n("911969"),
-  h = n("670890"),
-  A = n("569611"),
+  A = n("670890"),
+  h = n("569611"),
   m = n("710845"),
   N = n("703656"),
   O = n("786213"),
@@ -31,8 +31,8 @@ let M = n("952265").hasModalOpen,
   w = null,
   k = null,
   B = null,
-  V = null,
   F = null,
+  V = null,
   x = null,
   H = D.LoginStates.NONE,
   Y = D.RegistrationStates.NONE,
@@ -64,8 +64,8 @@ function ea(e) {
 
 function eo() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  if (V = T.Storage.get(P), null != ei) return ei;
-  let t = null != V ? V : _.getToken();
+  if (F = T.Storage.get(P), null != ei) return ei;
+  let t = null != F ? F : _.getToken();
   !(!(0, N.isValidFingerprintRoute)() || !e && null != t || g.default.isHandoffAvailable()) && el({
     withGuildExperiments: !0
   })
@@ -75,7 +75,7 @@ function el(e) {
   let {
     withGuildExperiments: t
   } = e, n = {}, i = p.default.getSuperPropertiesBase64();
-  null != i && (n["X-Super-Properties"] = i), null != V && (n["X-Fingerprint"] = V), ei = I.HTTP.get({
+  null != i && (n["X-Super-Properties"] = i), null != F && (n["X-Fingerprint"] = F), ei = I.HTTP.get({
     url: D.Endpoints.EXPERIMENTS,
     query: {
       with_guild_experiments: t
@@ -109,7 +109,7 @@ function el(e) {
 }
 
 function eu() {
-  F = V, V = null, T.Storage.remove(P)
+  V = F, F = null, T.Storage.remove(P)
 }
 
 function ed(e, t) {
@@ -130,11 +130,11 @@ function eE(e) {
   ea("handleLogout called."), e_(), eu(), !(null == e ? void 0 : e.isSwitchingAccount) && eo(), E.default.PersistedStore.clearAll({
     omit: ["InstallationManagerStore", "AgeGateStore", "NativePermissionsStore", "MultiAccountStore", "DraftStore", "OverlayStoreV2", "StreamerModeStore", "LoginRequiredActionStore"],
     type: (null == e ? void 0 : e.isSwitchingAccount) ? "user-data-only" : "all"
-  }), L.default.clearAll(), A.clear(), C.default.clearUser(), T.Storage.remove(b), G = null, H = (null == e ? void 0 : e.isSwitchingAccount) ? D.LoginStates.LOGGING_IN : D.LoginStates.NONE, Y = D.RegistrationStates.NONE, K = "", J = "", X = null, z = !1, Z = !1, $ = !1, ee = {}, et = {}
+  }), L.default.clearAll(), h.clear(), C.default.clearUser(), T.Storage.remove(b), G = null, H = (null == e ? void 0 : e.isSwitchingAccount) ? D.LoginStates.LOGGING_IN : D.LoginStates.NONE, Y = D.RegistrationStates.NONE, K = "", J = "", X = null, z = !1, Z = !1, $ = !1, ee = {}, et = {}
 }
 class eI extends(s = E.default.Store) {
   initialize() {
-    G = T.Storage.get(b), w = T.Storage.get(U), er = T.Storage.get("login_cache"), null == _.getToken() && eo(), this.addChangeListener(() => (0, h.setClientState)(G))
+    G = T.Storage.get(b), w = T.Storage.get(U), er = T.Storage.get("login_cache"), null == _.getToken() && eo(), this.addChangeListener(() => (0, A.setClientState)(G))
   }
   getEmail() {
     return w
@@ -173,7 +173,7 @@ class eI extends(s = E.default.Store) {
     return (0, R.isAuthenticated)()
   }
   getFingerprint() {
-    return V
+    return F
   }
   getAnalyticsToken() {
     return x
@@ -388,11 +388,11 @@ l = "AuthenticationStore", (o = "displayName") in(a = eI) ? Object.definePropert
   LOGOUT: eE,
   FINGERPRINT: function(e) {
     let t = e.fingerprint;
-    null == V ? null != t ? (p.default.track(D.AnalyticEvents.USER_FINGERPRINT_CHANGED, {
-      old_fingerprint: null != F ? (0, c.extractId)(F) : null,
+    null == F ? null != t ? (p.default.track(D.AnalyticEvents.USER_FINGERPRINT_CHANGED, {
+      old_fingerprint: null != V ? (0, c.extractId)(V) : null,
       new_fingerprint: (0, c.extractId)(t)
-    }), V = t, F = t, T.Storage.set(P, V)) : eo() : null != t && V !== t && p.default.track(D.AnalyticEvents.EXTERNAL_FINGERPRINT_DROPPED, {
-      fingerprint: (0, c.extractId)(V),
+    }), F = t, V = t, T.Storage.set(P, F)) : eo() : null != t && F !== t && p.default.track(D.AnalyticEvents.EXTERNAL_FINGERPRINT_DROPPED, {
+      fingerprint: (0, c.extractId)(F),
       dropped_fingerprint: (0, c.extractId)(t)
     })
   },

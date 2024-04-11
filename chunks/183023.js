@@ -31,8 +31,8 @@ var i = n("735250"),
   T = n("213609"),
   f = n("738774"),
   S = n("29598"),
-  h = n("400106"),
-  A = n("944386"),
+  A = n("400106"),
+  h = n("944386"),
   m = n("889564"),
   N = n("687476"),
   O = n("761966"),
@@ -52,8 +52,8 @@ var i = n("735250"),
   w = n("605403"),
   k = n("806519"),
   B = n("626135"),
-  V = n("768581"),
-  F = n("900849"),
+  F = n("768581"),
+  V = n("900849"),
   x = n("74538"),
   H = n("886132"),
   Y = n("524444"),
@@ -70,7 +70,7 @@ let Q = () => ({
     let {
       node: t
     } = e;
-    (0, A.useTrackOpenPopout)({
+    (0, h.useTrackOpenPopout)({
       emojiId: t.emojiId,
       currentGuildId: M.default.getGuildId()
     });
@@ -116,13 +116,13 @@ let Q = () => ({
       id: s,
       icon: o,
       name: l
-    } = t, u = V.default.getGuildIconURL({
+    } = t, u = F.default.getGuildIconURL({
       id: s,
       icon: o,
       size: 32,
       canAnimate: !0
     }), _ = (n = null == n || n) || t.isDiscoverable(), c = () => {
-      t.isDiscoverable() ? (0, F.startLurking)(s, {}) : n && (0, g.transitionTo)(j.Routes.CHANNEL(s, v.default.getChannelId(s)))
+      t.isDiscoverable() ? (0, V.startLurking)(s, {}) : n && (0, g.transitionTo)(j.Routes.CHANNEL(s, v.default.getChannelId(s)))
     }, E = t.isDiscoverable() && null != t.presenceCount, I = () => {
       let e = !r && !n;
       return (0, i.jsxs)(i.Fragment, {
@@ -244,7 +244,7 @@ let Q = () => ({
       guildEmoji: U,
       demoMode: b = !1,
       nonce: k
-    } = e, V = (0, l.useStateFromStores)([y.default], () => y.default.getCurrentUser()), F = (0, l.useStateFromStores)([M.default], () => M.default.getGuildId()), q = x.default.isPremium(V), Z = null != F && (F === (null == S ? void 0 : S.id) || F === (null == g ? void 0 : g.id)), $ = null != g, et = null !== (t = null == S ? void 0 : S.isDiscoverable()) && void 0 !== t && t;
+    } = e, F = (0, l.useStateFromStores)([y.default], () => y.default.getCurrentUser()), V = (0, l.useStateFromStores)([M.default], () => M.default.getGuildId()), q = x.default.isPremium(F), Z = null != V && (V === (null == S ? void 0 : S.id) || V === (null == g ? void 0 : g.id)), $ = null != g, et = null !== (t = null == S ? void 0 : S.isDiscoverable()) && void 0 !== t && t;
     b && (q = !0, et = !0, $ = !1, Z = !1);
     let {
       enabled: en
@@ -262,9 +262,9 @@ let Q = () => ({
       userIsRoleSubscriber: !1
     } : {
       isRoleSubscriptionEmoji: m.isPurchasableRoleSubscriptionEmoji(U),
-      isUnusableRoleSubscriptionEmoji: m.isUnusableRoleSubscriptionEmoji(U, null != F ? F : void 0),
+      isUnusableRoleSubscriptionEmoji: m.isUnusableRoleSubscriptionEmoji(U, null != V ? V : void 0),
       userIsRoleSubscriber: N.default.getUserSubscriptionRoles(U.guildId).size > 0
-    }, [U, F]), eo = !!es && (0, f.shouldHideGuildPurchaseEntryPoints)(null == U ? void 0 : U.guildId), {
+    }, [U, V]), eo = !!es && (0, f.shouldHideGuildPurchaseEntryPoints)(null == U ? void 0 : U.guildId), {
       analyticsLocations: el
     } = (0, I.default)(E.default.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL);
     (0, T.default)({
@@ -297,7 +297,7 @@ let Q = () => ({
       }),
       e_ = $ && es && !eo && (q && er || !q),
       ec = ed.emojiDescription,
-      eE = (0, A.useTrackOpenPopout)({
+      eE = (0, h.useTrackOpenPopout)({
         emojiId: u.emojiId,
         currentGuildId: eu,
         popoutData: ed,
@@ -308,7 +308,7 @@ let Q = () => ({
       eI = ed.type === H.EmojiPopoutType.JOIN_GUILD,
       eT = ed.type === H.EmojiPopoutType.GET_PREMIUM,
       [ef, eS] = r.useState(!1),
-      eh = et || $ && !Z || null != S;
+      eA = et || $ && !Z || null != S;
     return (0, i.jsxs)(Y.MessagePopoutContent, {
       className: X.popoutContent,
       children: [(() => {
@@ -378,7 +378,7 @@ let Q = () => ({
             children: ea ? z.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_UPGRADE_UPSELL_BUTTON : z.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_PURCHASE_UPSELL_BUTTON
           })]
         })
-      })(), eh && (() => {
+      })(), eA && (() => {
         let e = null != S && !$ && et,
           t = () => {
             e && (null == v || v(), !ef && !b && B.default.track(j.AnalyticEvents.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, eE), eS(!ef))
@@ -389,7 +389,7 @@ let Q = () => ({
             className: X.guildTitle,
             children: $ ? z.default.Messages.EMOJI_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION : z.default.Messages.EMOJI_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION
           }), (0, i.jsx)(J, {
-            expressionSourceGuild: null != S ? S : h.default.createFromGuildRecord(g),
+            expressionSourceGuild: null != S ? S : A.default.createFromGuildRecord(g),
             hasJoinedExpressionSourceGuild: $,
             isDisplayingJoinGuildButtonInPopout: eI
           }), e && (0, i.jsxs)(i.Fragment, {
@@ -473,7 +473,7 @@ let Q = () => ({
         color: d.ButtonColors.BRAND,
         fullWidth: !0,
         onClick: () => {
-          (0, F.startLurking)(r.id, {})
+          (0, V.startLurking)(r.id, {})
         },
         children: a.text
       }) : null)]

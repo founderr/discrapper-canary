@@ -25,8 +25,8 @@ var i = n("392711"),
   T = n("666475"),
   f = n("591304"),
   S = n("328664"),
-  h = n("328259"),
-  A = n("19009"),
+  A = n("328259"),
+  h = n("19009"),
   m = n("405571"),
   N = n("730886"),
   O = n("473974"),
@@ -51,12 +51,12 @@ let g = 60,
     name: C.default.Messages.APP_ICON_MANGA
   }, {
     id: R.PremiumAppIconIds.MATTE_DARK,
-    iconSource: h,
+    iconSource: A,
     isPremium: !0,
     name: C.default.Messages.APP_ICON_MATTE_DARK
   }, {
     id: R.PremiumAppIconIds.MATTE_LIGHT,
-    iconSource: A,
+    iconSource: h,
     name: C.default.Messages.APP_ICON_MATTE_LIGHT,
     isPremium: !0
   }, {

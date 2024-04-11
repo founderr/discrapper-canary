@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("919285"),
   S = n("118470"),
   I = n("413307"),
-  p = n("849688"),
-  T = n("374023"),
+  T = n("849688"),
+  p = n("374023"),
   g = n("661599"),
   A = n("923608"),
   N = n("617899"),
@@ -139,7 +139,7 @@ t.default = e => {
         guild: t
       });
     case O.ConnectedChannelNotices.SIGNUP:
-      return (0, a.jsx)(p.default, {
+      return (0, a.jsx)(T.default, {
         guild: t
       });
     case O.ConnectedChannelNotices.CLAN_UPSELL:
@@ -147,7 +147,7 @@ t.default = e => {
         guildId: t.id
       })
   }
-  return T.ProcessArgs.isDisallowPopupsSet() ? null : (0, a.jsx)(y, {
+  return p.ProcessArgs.isDisallowPopupsSet() ? null : (0, a.jsx)(y, {
     guild: e.guild
   })
 }

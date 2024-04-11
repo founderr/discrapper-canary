@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   SeasonalGiftIcon: function() {
-    return F
+    return V
   }
 }), n("47120"), n("653041");
 var i = n("735250"),
@@ -19,8 +19,8 @@ var i = n("735250"),
   T = n("243778"),
   f = n("963249"),
   S = n("646476"),
-  h = n("819640"),
-  A = n("594174"),
+  A = n("819640"),
+  h = n("594174"),
   m = n("147915"),
   N = n("559629"),
   O = n("965645"),
@@ -82,9 +82,9 @@ let U = [{
   w = R.default.Millis.DAYS_30,
   k = (0, s.animated)(O.default),
   B = (0, s.animated)(p.default),
-  V = (0, s.animated)(N.default);
+  F = (0, s.animated)(N.default);
 
-function F(e) {
+function V(e) {
   let {
     themeOverride: t,
     hovered: n,
@@ -118,7 +118,7 @@ function F(e) {
       friction: 24
     }
   }), I = a ? c : 0, T = (0, l.isThemeDark)(null != t ? t : u) ? o.dark[I] : o.light[I];
-  return !n && a ? (0, i.jsx)(V, {}) : a && d ? (0, i.jsx)(B, {
+  return !n && a ? (0, i.jsx)(F, {}) : a && d ? (0, i.jsx)(B, {
     isDark: (0, l.isThemeDark)(u),
     style: E
   }) : (0, i.jsx)(k, {
@@ -133,7 +133,7 @@ t.default = r.memo(function(e) {
     channel: n
   } = e, {
     analyticsLocations: s
-  } = (0, E.default)(c.default.GIFT_BUTTON), [l, _] = r.useState(!1), N = (0, a.useStateFromStores)([h.default], () => !(null === h.default || void 0 === h.default ? void 0 : h.default.hasLayers())), O = (0, a.useStateFromStores)([A.default], () => A.default.getCurrentUser()), p = null != O ? C.default.age(O.id) : 0, R = !t && N && p >= w, {
+  } = (0, E.default)(c.default.GIFT_BUTTON), [l, _] = r.useState(!1), N = (0, a.useStateFromStores)([A.default], () => !(null === A.default || void 0 === A.default ? void 0 : A.default.hasLayers())), O = (0, a.useStateFromStores)([h.default], () => h.default.getCurrentUser()), p = null != O ? C.default.age(O.id) : 0, R = !t && N && p >= w, {
     enabled: U
   } = S.SeasonalGiftingMarketingExperiment.useExperiment({
     location: "ChannelPremiumGiftButton"
@@ -141,12 +141,12 @@ t.default = r.memo(function(e) {
     autoTrackExposure: R
   }), b = [];
   U && R && b.push(o.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023);
-  let [G, k] = (0, T.useSelectedDismissibleContent)(b), B = null != G, V = (0, g.useDirectMessageRecipient)(n), x = null != V;
+  let [G, k] = (0, T.useSelectedDismissibleContent)(b), B = null != G, F = (0, g.useDirectMessageRecipient)(n), x = null != F;
   if (t) return null;
   let H = () => {
       (0, f.default)({
         isGift: !0,
-        giftRecipient: null == V ? void 0 : V,
+        giftRecipient: null == F ? void 0 : F,
         initialPlanId: null,
         subscriptionTier: v.PremiumSubscriptionSKUs.TIER_2,
         analyticsLocations: s,
@@ -182,7 +182,7 @@ t.default = r.memo(function(e) {
         },
         children: (0, i.jsx)("div", {
           className: y.noPointerEvents,
-          children: (0, i.jsx)(F, {
+          children: (0, i.jsx)(V, {
             hovered: l,
             isContentDismissed: !B
           })

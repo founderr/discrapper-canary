@@ -5,7 +5,7 @@ n.r(t), n.d(t, {
     return T
   },
   analyticsTrackingStoreMaker: function() {
-    return h
+    return A
   }
 }), n("177593"), n("733860"), n("47120"), n("653041"), n("17089");
 var a, o = n("756647"),
@@ -34,17 +34,17 @@ let c = 1500,
   S = () => Promise.resolve({
     sessionId: void 0
   }),
-  h = e => {
+  A = e => {
     let {
       dispatcher: t,
       actionHandler: n,
       getFingerprint: a,
       getSessionId: d = S,
-      TRACKING_URL: h,
-      drainTimeoutOverride: A,
+      TRACKING_URL: A,
+      drainTimeoutOverride: h,
       waitFor: m
     } = e;
-    c = null != A ? A : 1500;
+    c = null != h ? h : 1500;
 
     function N() {
       return 0 !== f.length && (null != r ? null != i : null != a())
@@ -83,7 +83,7 @@ let c = 1500,
           }
         }));
       return u.HTTP.post({
-        url: h,
+        url: A,
         body: {
           token: i,
           events: n

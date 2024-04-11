@@ -16,8 +16,8 @@ var i = n("756647"),
   m = n("594174"),
   S = n("626135"),
   I = n("585483"),
-  p = n("591759"),
-  T = n("998502"),
+  T = n("591759"),
+  p = n("998502"),
   g = n("996106"),
   A = n("186901"),
   N = n("981631");
@@ -70,7 +70,7 @@ function v(e, t) {
       if (null == a) throw new g.default({
         errorCode: N.RPCErrors.INVALID_GUILD_TEMPLATE
       }, "Invalid guild template id: ".concat(t));
-      return T.default.focus(), (0, r.openModalLazy)(async () => {
+      return p.default.focus(), (0, r.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("10778"), n.e("90424")]).then(n.bind(n, "766775"));
@@ -98,7 +98,7 @@ function v(e, t) {
             let {
               giftCode: s
             } = a;
-            T.default.focus(), S.default.track(N.AnalyticEvents.OPEN_MODAL, {
+            p.default.focus(), S.default.track(N.AnalyticEvents.OPEN_MODAL, {
               type: "gift_accept",
               location: N.DIRECT_ANALYTICS_LOCATION
             }), (0, r.openModalLazy)(async () => {
@@ -128,12 +128,12 @@ function v(e, t) {
           params: n
         }
       } = e;
-      switch (T.default.focus(), t) {
+      switch (p.default.focus(), t) {
         case A.RPCDeepLinks.USER_SETTINGS:
           null != n && ((0, _.replaceWith)(N.Routes.SETTINGS(n.section, n.subsection)), v(n.fingerprint, "settings"));
           break;
         case A.RPCDeepLinks.CHANGELOG:
-          null != n && ((0, _.replaceWith)(p.default.formatPathWithQuery(N.Routes.CHANGELOGS(n.date), n.query)), v(n.fingerprint, "changelog"));
+          null != n && ((0, _.replaceWith)(T.default.formatPathWithQuery(N.Routes.CHANGELOGS(n.date), n.query)), v(n.fingerprint, "changelog"));
           break;
         case A.RPCDeepLinks.LIBRARY:
           (0, _.replaceWith)(N.Routes.APPLICATION_LIBRARY), null != n && v(n.fingerprint, "library");
@@ -167,7 +167,7 @@ function v(e, t) {
           fingerprint: n
         }
       } = e;
-      T.default.focus(null, !0), (0, d.handoffEnd)(t, n)
+      p.default.focus(null, !0), (0, d.handoffEnd)(t, n)
     }
   },
   [N.RPCCommands.CONNECTIONS_CALLBACK]: {

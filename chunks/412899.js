@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MemberRole: function() {
-    return F
+    return V
   },
   OverflowAddRolesButton: function() {
     return H
@@ -25,8 +25,8 @@ var i = n("735250"),
   T = n("239091"),
   f = n("749210"),
   S = n("112724"),
-  h = n("607070"),
-  A = n("605436"),
+  A = n("607070"),
+  h = n("605436"),
   m = n("134433"),
   N = n("518738"),
   O = n("434404"),
@@ -47,7 +47,7 @@ var i = n("735250"),
   k = n("862273");
 let B = () => Promise.resolve();
 
-function V(e) {
+function F(e) {
   let {
     userRoles: t,
     position: n,
@@ -84,13 +84,13 @@ function V(e) {
     })]
   })
 }
-let F = r.forwardRef(function(e, t) {
+let V = r.forwardRef(function(e, t) {
   var s, o, l;
   let u;
   let {
     canRemove: f,
     className: S,
-    role: A,
+    role: h,
     onRemove: O,
     guildId: p,
     disableBorderColor: R,
@@ -98,23 +98,23 @@ let F = r.forwardRef(function(e, t) {
   } = e, {
     tabIndex: g,
     ...L
-  } = (0, d.useListItem)(A.id), D = (0, N.useRoleIcon)({
-    roleId: A.id,
+  } = (0, d.useListItem)(h.id), D = (0, N.useRoleIcon)({
+    roleId: h.id,
     size: 16,
     guildId: p
-  }), M = (0, c.useStateFromStores)([h.default], () => h.default.roleStyle), y = (null === (s = A.tags) || void 0 === s ? void 0 : s.guild_connections) === null, U = r.useCallback(e => {
+  }), M = (0, c.useStateFromStores)([A.default], () => A.default.roleStyle), y = (null === (s = h.tags) || void 0 === s ? void 0 : s.guild_connections) === null, U = r.useCallback(e => {
     (0, T.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await n.e("5396").then(n.bind(n, "731646"));
       return t => (0, i.jsx)(e, {
         ...t,
-        id: A.id,
+        id: h.id,
         label: w.default.Messages.COPY_ID_ROLE
       })
     })
-  }, [A.id]), b = (0, I.useToken)(E.default.unsafe_rawColors.PRIMARY_300).hsl(), G = null !== (o = A.colorString) && void 0 !== o ? o : b, B = null !== (l = (0, _.hex2rgb)(G, .6)) && void 0 !== l ? l : void 0, V = E.default.unsafe_rawColors.WHITE_500.css, F = (0, _.hex2int)(G);
-  null != F && .3 > (0, _.getDarkness)(F) && (V = E.default.unsafe_rawColors.PRIMARY_630.css), u = y ? (0, i.jsx)(m.default, {
+  }, [h.id]), b = (0, I.useToken)(E.default.unsafe_rawColors.PRIMARY_300).hsl(), G = null !== (o = h.colorString) && void 0 !== o ? o : b, B = null !== (l = (0, _.hex2rgb)(G, .6)) && void 0 !== l ? l : void 0, F = E.default.unsafe_rawColors.WHITE_500.css, V = (0, _.hex2int)(G);
+  null != V && .3 > (0, _.getDarkness)(V) && (F = E.default.unsafe_rawColors.PRIMARY_630.css), u = y ? (0, i.jsx)(m.default, {
     className: k.roleFlowerStar,
     iconClassName: f ? k.roleVerifiedIcon : void 0,
     color: G,
@@ -141,7 +141,7 @@ let F = r.forwardRef(function(e, t) {
       style: x,
       onContextMenu: U,
       onMouseDown: C,
-      "aria-label": A.name,
+      "aria-label": h.name,
       tabIndex: g,
       ...L,
       children: [(0, i.jsxs)(I.Clickable, {
@@ -153,10 +153,10 @@ let F = r.forwardRef(function(e, t) {
         },
         "aria-hidden": !f,
         "aria-label": w.default.Messages.GUILD_SETTINGS_MEMBERS_REMOVE_ROLE.format({
-          roleName: A.name
+          roleName: h.name
         }),
         children: [u, f ? (0, i.jsx)(v.default, {
-          color: V,
+          color: F,
           className: k.roleRemoveIcon,
           "aria-hidden": !0
         }) : null]
@@ -170,7 +170,7 @@ let F = r.forwardRef(function(e, t) {
         children: (0, i.jsx)(I.Text, {
           variant: "text-xs/medium",
           className: k.roleNameOverflow,
-          children: A.name
+          children: h.name
         })
       })]
     })
@@ -188,7 +188,7 @@ function x(e) {
       let {
         position: n
       } = t;
-      return (0, i.jsx)(V, {
+      return (0, i.jsx)(F, {
         ...e,
         position: null != n ? n : "top"
       })
@@ -214,7 +214,7 @@ function H(e) {
     roleClassName: s,
     addButtonClassName: o,
     addButtonIconClassName: l
-  } = e, u = (0, d.useListItem)("overflow-add-roles-".concat(n.id)), _ = (0, c.useStateFromStores)([h.default], () => h.default.roleStyle), E = C.default.getHighestRole(t), T = p.default.getMember(t.id, n.id), f = e => (0, A.isNotEveryoneRoleId)(t.id, e.id) && !e.managed && C.default.isRoleHigher(t, E, e) && (null == T || -1 === T.roles.indexOf(e.id));
+  } = e, u = (0, d.useListItem)("overflow-add-roles-".concat(n.id)), _ = (0, c.useStateFromStores)([A.default], () => A.default.roleStyle), E = C.default.getHighestRole(t), T = p.default.getMember(t.id, n.id), f = e => (0, h.isNotEveryoneRoleId)(t.id, e.id) && !e.managed && C.default.isRoleHigher(t, E, e) && (null == T || -1 === T.roles.indexOf(e.id));
   return (0, i.jsx)(I.Popout, {
     renderPopout: e => {
       let {
@@ -257,8 +257,8 @@ function Y(e) {
     className: I,
     readOnly: T,
     roleClassName: S,
-    disableBorderColor: h
-  } = e, A = r.useRef({}), m = r.useCallback(e => {
+    disableBorderColor: A
+  } = e, h = r.useRef({}), m = r.useCallback(e => {
     var t;
     let i = o.filter(t => t !== e.id);
     (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null ? f.default.unassignGuildRoleConnection(s.id, e.id) : O.default.updateMemberRoles(s.id, n.id, i, [], [e.id])
@@ -281,7 +281,7 @@ function Y(e) {
       n = E - 30 - 4;
     for (let i = 0; i < v.length; i++) {
       let r = v[i],
-        s = A.current[r.id];
+        s = h.current[r.id];
       if (null != s) {
         if ((t += s.offsetWidth + 4) > n) break;
         e++
@@ -293,9 +293,9 @@ function Y(e) {
   l()(null != y, "MemberRolesList: currentUser cannot be undefined");
   let P = !T && C.default.can(G.Permissions.MANAGE_ROLES, s),
     b = U.getHighestRole(s, y.id),
-    V = r.useMemo(() => "roles-".concat((0, u.v4)()), []),
+    F = r.useMemo(() => "roles-".concat((0, u.v4)()), []),
     Y = (0, d.default)({
-      id: V,
+      id: F,
       isEnabled: !0,
       scrollToStart: B,
       scrollToEnd: B,
@@ -303,17 +303,17 @@ function Y(e) {
     }),
     j = v.map(e => {
       var t;
-      return (0, i.jsx)(F, {
+      return (0, i.jsx)(V, {
         className: S,
         role: e,
         canRemove: P && U.isRoleHigher(s, y.id, b, e) || (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null && n.id === y.id,
         onRemove: () => m(e),
         ref: t => {
           var n, i;
-          return n = e.id, void(null != (i = t) ? A.current[n] = i : delete A.current[n])
+          return n = e.id, void(null != (i = t) ? h.current[n] = i : delete h.current[n])
         },
         guildId: s.id,
-        disableBorderColor: h
+        disableBorderColor: A
       }, e.id)
     });
   return null != p && 0 !== M ? t = (0, i.jsx)(x, {

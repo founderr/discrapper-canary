@@ -14,8 +14,8 @@ var r, s = n("392711"),
   T = n("210887"),
   f = n("314897"),
   S = n("592125"),
-  h = n("703558"),
-  A = n("984933"),
+  A = n("703558"),
+  h = n("984933"),
   m = n("271383"),
   N = n("430824"),
   O = n("496675"),
@@ -43,8 +43,8 @@ let P = "seenQSTutorial",
   w = !1,
   k = null,
   B = [],
-  V = null,
-  F = 0,
+  F = null,
+  V = 0,
   x = [],
   H = [];
 
@@ -66,7 +66,7 @@ function W(e) {
   null != s && a.add("guild:".concat(s)), i = null != i ? i : new d.default(K, U, null != r ? 100 : 5, {
     frecencyBoosters: !0,
     blacklist: a
-  }), V = null, F = n.length, k = r, i.search(n)
+  }), F = null, V = n.length, k = r, i.search(n)
 }
 
 function K(e, t) {
@@ -118,7 +118,7 @@ function K(e, t) {
           limit: 100,
           fuzzy: !0,
           filter: () => !0,
-          type: A.GUILD_VOCAL_CHANNELS_KEY
+          type: h.GUILD_VOCAL_CHANNELS_KEY
         })
     }
     let r = [],
@@ -130,7 +130,7 @@ function K(e, t) {
     s.length > 0 && r.push((0, d.createHeaderResult)(M.default.Messages.QUICKSWITCHER_LAST_CHANNEL), ...s);
     let o = function(e) {
       let t = [];
-      return h.default.getRecentlyEditedDrafts(h.DraftType.ChannelMessage).forEach(n => {
+      return A.default.getRecentlyEditedDrafts(A.DraftType.ChannelMessage).forEach(n => {
         let {
           channelId: i
         } = n;
@@ -142,7 +142,7 @@ function K(e, t) {
     o.length > 0 && r.push((0, d.createHeaderResult)(M.default.Messages.QUICKSWITCHER_DRAFTS), ...o);
     let l = p.default.getMentionChannelIds().filter(e => e !== i && !H.includes(e)).map(e => j(e)).filter(D.isNotNullish).reverse();
     if (l.length > 0 && (r.push((0, d.createHeaderResult)(M.default.Messages.QUICKSWITCHER_MENTIONS)), r = r.concat(l)), null != n) {
-      let e = A.default.getSelectableChannelIds(n).filter(e => {
+      let e = h.default.getSelectableChannelIds(n).filter(e => {
         let t = S.default.getChannel(e);
         return !(null == t || e === i || H.includes(e) || g.default.isChannelMuted(t.guild_id, e) || null != t.parent_id && g.default.isChannelMuted(t.guild_id, t.parent_id)) && (0, E.getHasImportantUnread)(t)
       }).map(e => j(e)).filter(e => e);
@@ -178,7 +178,7 @@ function K(e, t) {
       default:
         B = e
     }
-    if (t !== V) V = t, F = Math.max(t.length, F), b = (0, d.findNextSelectedResult)(d.FindResultDirections.DOWN, -1, B);
+    if (t !== F) F = t, V = Math.max(t.length, V), b = (0, d.findNextSelectedResult)(d.FindResultDirections.DOWN, -1, B);
     else {
       let e = B[b];
       null != e && e.type === d.AutocompleterResultTypes.HEADER && (b = (0, d.findNextSelectedResult)(d.FindResultDirections.DOWN, b, B))
@@ -188,7 +188,7 @@ function K(e, t) {
 }
 
 function z() {
-  V = null, F = 0, x = [], null != i && (i.destroy(), i = null)
+  F = null, V = 0, x = [], null != i && (i.destroy(), i = null)
 }
 class X extends(r = o.default.PersistedStore) {
   initialize(e) {
@@ -227,7 +227,7 @@ class X extends(r = o.default.PersistedStore) {
       results: B,
       selectedIndex: b,
       seenTutorial: G,
-      maxQueryLength: F
+      maxQueryLength: V
     }
   }
 }

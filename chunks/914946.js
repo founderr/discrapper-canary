@@ -68,8 +68,8 @@ var a, s = n("729594"),
   m = n("131951"),
   S = n("375954"),
   I = n("158776"),
-  p = n("594174"),
-  T = n("979651"),
+  T = n("594174"),
+  p = n("979651"),
   g = n("70956"),
   A = n("5192"),
   N = n("226951"),
@@ -112,8 +112,8 @@ function G(e, t) {
     })
   })), Promise.all(n).then(() => {
     var n;
-    let s = (!e.isNSFW() || (null === (n = p.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? S.default.getMessages(e.id).toArray().map(w) : [],
-      l = Object.values(T.default.getVoiceStatesForChannel(e.id)).map(t => k(a, e.id, t));
+    let s = (!e.isNSFW() || (null === (n = T.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? S.default.getMessages(e.id).toArray().map(w) : [],
+      l = Object.values(p.default.getVoiceStatesForChannel(e.id)).map(t => k(a, e.id, t));
     return {
       id: e.id,
       name: e.name,
@@ -165,7 +165,7 @@ function k(e, t, n) {
     selfDeaf: i,
     suppress: r,
     userId: o
-  } = n, u = p.default.getUser(o);
+  } = n, u = T.default.getUser(o);
   if (null == u) throw Error("Invalid user id: ".concat(o));
   return {
     nick: A.default.getName(e, t, u),
@@ -184,7 +184,7 @@ function k(e, t, n) {
 }
 
 function F(e, t, n) {
-  let a = p.default.getUser(t);
+  let a = T.default.getUser(t);
   return {
     type: e,
     user: null != a ? (0, R.default)(a) : null,

@@ -31,8 +31,8 @@ function S(e, t, n, i, r) {
     context: s,
     commandType: u,
     allowNsfw: S,
-    computedPermissions: h,
-    userId: A,
+    computedPermissions: A,
+    userId: h,
     roleIds: O,
     isImpersonating: p,
     hasBaseAccessPermissions: R
@@ -52,7 +52,7 @@ function S(e, t, n, i, r) {
   }
   if (e.applicationId === T.BuiltInSectionId.BUILT_IN) return 0;
   let g = (0, I.getContextGuildId)(s);
-  if (null == g || o.has(h, f.Permissions.ADMINISTRATOR)) return 0;
+  if (null == g || o.has(A, f.Permissions.ADMINISTRATOR)) return 0;
   if (!R) return 5;
   if (s instanceof d.ChannelRecordBase) {
     a()(void 0 !== i, "missing applicationAllowedForChannel");
@@ -65,21 +65,21 @@ function S(e, t, n, i, r) {
         return !1 === e
       }(i)) return 6
   }
-  let L = N(e.permissions, g, A, O, p);
+  let L = N(e.permissions, g, h, O, p);
   return function(e) {
     return !0 === e
   }(L) ? 0 : function(e) {
     return !1 === e
   }(L) ? 7 : function(e) {
     return !1 === e
-  }(n) || null != e.defaultMemberPermissions && !(!o.equals(e.defaultMemberPermissions, E.DISABLED_BY_DEFAULT_PERMISSION_FLAG) && o.has(h, e.defaultMemberPermissions)) ? 7 : 0
-}
-
-function h(e) {
-  return !0 === e
+  }(n) || null != e.defaultMemberPermissions && !(!o.equals(e.defaultMemberPermissions, E.DISABLED_BY_DEFAULT_PERMISSION_FLAG) && o.has(A, e.defaultMemberPermissions)) ? 7 : 0
 }
 
 function A(e) {
+  return !0 === e
+}
+
+function h(e) {
   return !1 === e
 }
 

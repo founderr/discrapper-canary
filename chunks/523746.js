@@ -12,7 +12,7 @@ var i, r, s, a, o = n("392711"),
 let f = {},
   S = {};
 
-function h() {
+function A() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
     t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : E.default.getChannelId(),
     n = c.default.getChannel(t);
@@ -28,7 +28,7 @@ function h() {
   }
   return !1
 }
-class A extends(a = u.default.Store) {
+class h extends(a = u.default.Store) {
   initialize() {
     this.waitFor(I.default, E.default)
   }
@@ -57,14 +57,14 @@ class A extends(a = u.default.Store) {
     }
   }
 }
-s = "CallStore", (r = "displayName") in(i = A) ? Object.defineProperty(i, r, {
+s = "CallStore", (r = "displayName") in(i = h) ? Object.defineProperty(i, r, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new A(_.default, {
+}) : i[r] = s, t.default = new h(_.default, {
   CONNECTION_OPEN: function() {
-    return h(!0)
+    return A(!0)
   },
   CONNECTION_CLOSED: function() {
     f = {}, S = {}
@@ -80,13 +80,13 @@ s = "CallStore", (r = "displayName") in(i = A) ? Object.defineProperty(i, r, {
     }
   },
   CONNECTION_RESUMED: function() {
-    return h(!0)
+    return A(!0)
   },
   CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    return h(!1, t)
+    return A(!1, t)
   },
   CHANNEL_DELETE: function(e) {
     let {

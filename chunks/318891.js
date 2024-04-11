@@ -34,7 +34,7 @@ function I() {
   }(r, (0, m.default)(t, n.applicationId))
 }
 
-function p() {
+function T() {
   let e = u.default.hasLayers(),
     t = r.default.getWindowOpen(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
   return e && !t ? function() {
@@ -45,12 +45,12 @@ function p() {
     null != e && d.default.isOpen(e) && s.default.wait(() => l.show(e))
   }()
 }
-class T extends i.default {
+class p extends i.default {
   _initialize() {
-    f.default.addChangeListener(I), E.default.addChangeListener(I), c.default.addChangeListener(I), h.default.addChangeListener(I), r.default.addChangeListener(I), _.default.addChangeListener(I), u.default.addChangeListener(p)
+    f.default.addChangeListener(I), E.default.addChangeListener(I), c.default.addChangeListener(I), h.default.addChangeListener(I), r.default.addChangeListener(I), _.default.addChangeListener(I), u.default.addChangeListener(T)
   }
   _terminate() {
-    f.default.removeChangeListener(I), E.default.removeChangeListener(I), c.default.removeChangeListener(I), h.default.removeChangeListener(I), r.default.removeChangeListener(I), _.default.removeChangeListener(I), u.default.removeChangeListener(p)
+    f.default.removeChangeListener(I), E.default.removeChangeListener(I), c.default.removeChangeListener(I), h.default.removeChangeListener(I), r.default.removeChangeListener(I), _.default.removeChangeListener(I), u.default.removeChangeListener(T)
   }
 }
-t.default = new T
+t.default = new p

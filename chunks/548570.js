@@ -19,8 +19,8 @@ var i = n("512722"),
   T = n("250407"),
   f = n("710845"),
   S = n("797614"),
-  h = n("218543"),
-  A = n("857192"),
+  A = n("218543"),
+  h = n("857192"),
   m = n("626135"),
   N = n("12647"),
   O = n("70956"),
@@ -50,8 +50,8 @@ let w = new f.default("GatewaySocket"),
   k = new D.default;
 
 function B() {}
-let V = 30 * O.default.Millis.SECOND,
-  F = 3 * O.default.Millis.MINUTE,
+let F = 30 * O.default.Millis.SECOND,
+  V = 3 * O.default.Millis.MINUTE,
   x = 1 * O.default.Millis.MINUTE;
 
 function H(e) {
@@ -93,7 +93,7 @@ class j extends y.default {
     o.default.mark("\uD83C\uDF10", "Socket._connect"), w.info("[CONNECT] ".concat(s, ", ") + "encoding: ".concat(r, ", ") + "version: ".concat(a, ", ") + "compression: ".concat(null != i ? i : "none")), null !== this.webSocket && (w.error("_connect called with already existing websocket"), this._cleanup(e => e.close(4e3))), this.connectionStartTime = Date.now(), this.helloTimeout = setTimeout(() => {
       let e = Date.now() - this.connectionStartTime;
       this._handleClose(!1, 0, "The connection timed out after ".concat(e, " ms - did not receive OP_HELLO in time.")), this.setResumeUrl(null)
-    }, V);
+    }, F);
     let l = new URL(s);
     l.searchParams.append("encoding", r), l.searchParams.append("v", a.toString()), null != i && l.searchParams.append("compress", i);
     ! function(e) {
@@ -147,7 +147,7 @@ class j extends y.default {
           } = k.unpack(e);
         i !== y.Opcode.DISPATCH && o.default.mark("\uD83C\uDF10", "GatewaySocket.onMessage ".concat(i, " ").concat(y.Opcode[i]));
         let l = Date.now() - n;
-        switch ("READY" === s ? h.default.parseReady.set(n, l) : "READY_SUPPLEMENTAL" === s ? h.default.parseReadySupplemental.set(n, l) : l > 10 && o.default.mark("\uD83C\uDF10", "Parse " + s, l), null != r && (this.seq = r), i) {
+        switch ("READY" === s ? A.default.parseReady.set(n, l) : "READY_SUPPLEMENTAL" === s ? A.default.parseReadySupplemental.set(n, l) : l > 10 && o.default.mark("\uD83C\uDF10", "Parse " + s, l), null != r && (this.seq = r), i) {
           case y.Opcode.HELLO:
             this._clearHelloTimeout(), this._handleHello(a);
             break;
@@ -365,7 +365,7 @@ class j extends y.default {
   }
   _doResumeOrIdentify() {
     let e = Date.now();
-    null !== this.sessionId && (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= F) ? this._doResume() : this._doIdentify(), this._updateLastHeartbeatAckTime()
+    null !== this.sessionId && (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= V) ? this._doResume() : this._doIdentify(), this._updateLastHeartbeatAckTime()
   }
   _updateLastHeartbeatAckTime() {
     this.lastHeartbeatAckTime = Date.now()
@@ -459,7 +459,7 @@ class j extends y.default {
   }
   constructor() {
     super(), G(this, "gatewayBackoff", void 0), G(this, "handleIdentify", void 0), G(this, "dispatchExceptionBackoff", new a.default(1e3, x)), G(this, "dispatchSuccessTimer", 0), G(this, "connectionState_", void 0), G(this, "webSocket", void 0), G(this, "seq", void 0), G(this, "sessionId", void 0), G(this, "token", void 0), G(this, "initialHeartbeatTimeout", void 0), G(this, "expeditedHeartbeatTimeout", void 0), G(this, "heartbeatInterval", void 0), G(this, "helloTimeout", void 0), G(this, "heartbeater", void 0), G(this, "lastHeartbeatAckTime", void 0), G(this, "heartbeatAck", void 0), G(this, "connectionStartTime", void 0), G(this, "identifyStartTime", void 0), G(this, "nextReconnectIsImmediate", void 0), G(this, "compressionHandler", void 0), G(this, "hasConnectedOnce", void 0), G(this, "isFastConnect", void 0), G(this, "didForceClearGuildHashes", !1), G(this, "identifyUncompressedByteSize", 0), G(this, "identifyCompressedByteSize", 0), G(this, "analytics", {}), G(this, "identifyCount", 0), G(this, "resumeUrl", null), G(this, "iosGoingAwayEventCount", 0), G(this, "dispatcher", void 0), G(this, "send", (e, t, n) => {
-      A.default.isLoggingGatewayEvents && w.verboseDangerously("~>", e, t);
+      h.default.isLoggingGatewayEvents && w.verboseDangerously("~>", e, t);
       let i = k.pack({
         op: e,
         d: t

@@ -1,80 +1,80 @@
 "use strict";
-t.r(r), t.d(r, {
+r.r(t), r.d(t, {
   default: function() {
     return C
   }
 });
-var a = t("735250");
-t("470079");
-var n = t("803997"),
-  i = t.n(n),
-  o = t("149765"),
-  l = t("442837"),
-  s = t("481060"),
-  c = t("933557"),
-  d = t("592125"),
-  u = t("430824"),
-  h = t("496675"),
-  p = t("944486"),
-  m = t("914010"),
-  g = t("263704"),
-  f = t("465670"),
-  b = t("233608"),
-  y = t("71080"),
-  x = t("275369"),
-  k = t("779869");
+var a = r("735250");
+r("470079");
+var n = r("803997"),
+  i = r.n(n),
+  l = r("149765"),
+  o = r("442837"),
+  s = r("481060"),
+  c = r("933557"),
+  d = r("592125"),
+  u = r("430824"),
+  h = r("496675"),
+  p = r("944486"),
+  m = r("914010"),
+  g = r("263704"),
+  f = r("465670"),
+  b = r("233608"),
+  y = r("71080"),
+  x = r("275369"),
+  k = r("779869");
 
 function v(e) {
   let {
-    title: r,
-    can: t
-  } = e, n = t ? g.default : f.default, o = (0, a.jsx)("div", {
-    className: i()(x.iconOuter, t ? x.iconCheck : x.iconCross),
+    title: t,
+    can: r
+  } = e, n = r ? g.default : f.default, l = (0, a.jsx)("div", {
+    className: i()(x.iconOuter, r ? x.iconCheck : x.iconCross),
     children: (0, a.jsx)(n, {
       className: x.icon
     })
   });
   return (0, a.jsxs)("div", {
     className: x.scope,
-    children: [o, (0, a.jsx)("div", {
+    children: [l, (0, a.jsx)("div", {
       className: x.scopeInner,
       children: (0, a.jsx)(s.Text, {
         variant: "text-md/normal",
-        children: r
+        children: t
       })
     })]
   })
 }
 
 function C() {
-  let e = (0, l.useStateFromStores)([p.default], () => p.default.getChannelId()),
-    r = (0, l.useStateFromStores)([m.default], () => m.default.getGuildId()),
-    t = (0, l.useStateFromStores)([d.default], () => d.default.getChannel(e)),
-    n = (0, l.useStateFromStores)([u.default], () => u.default.getGuild(r)),
-    g = (0, l.useStateFromStores)([h.default], () => h.default.computePermissions(t)),
-    f = (0, l.useStateFromStores)([h.default], () => h.default.computePermissions(n)),
-    C = (0, c.default)(t, !0),
-    S = null != t ? (0, y.getChannelPermissionSpecMap)(t, !1, !0) : null,
+  let e = (0, o.useStateFromStores)([p.default], () => p.default.getChannelId()),
+    t = (0, o.useStateFromStores)([m.default], () => m.default.getGuildId()),
+    r = (0, o.useStateFromStores)([d.default], () => d.default.getChannel(e)),
+    n = (0, o.useStateFromStores)([u.default], () => u.default.getGuild(t)),
+    g = (0, o.useStateFromStores)([h.default], () => h.default.computePermissions(r)),
+    f = (0, o.useStateFromStores)([h.default], () => h.default.computePermissions(n)),
+    C = (0, c.default)(r, !0),
+    S = null != r ? (0, y.getChannelPermissionSpecMap)(r, !1, !0) : null,
     j = null != n ? b.default.getGuildPermissionSpecMap(n) : null,
     T = Object.values(null != S ? S : {}).map(e => {
       let {
-        title: r,
-        flag: t
-      } = e, n = o.has(g, t);
+        title: t,
+        flag: r
+      } = e, n = l.has(g, r);
       return (0, a.jsx)(v, {
-        title: r,
+        title: t,
         can: n
-      }, r)
+      }, t)
     }),
     w = Object.values(null != j ? j : {}).map(e => {
       let {
-        title: r,
-        flag: t
-      } = e, n = o.has(f, t);
+        title: t,
+        flag: r
+      } = e, n = l.has(f, r);
       return (0, a.jsx)(v, {
-        title: r,
+        title: t,
         can: n
-      }, r)
+      }, t)
     });
   return (0, a.jsx)("div", {
     className: i()(k.panel, x.panel),

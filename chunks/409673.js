@@ -22,8 +22,8 @@ var i = n("735250"),
   T = n("594174"),
   f = n("225196"),
   S = n("887208"),
-  h = n("897353"),
-  A = n("729285"),
+  A = n("897353"),
+  h = n("729285"),
   m = n("632184"),
   N = n("208049"),
   O = n("763296"),
@@ -90,8 +90,8 @@ t.default = r.forwardRef(function(e, t) {
     forceSecondaryActions: w = !1,
     interactive: k = !0,
     enableSecondaryActions: B = !1,
-    suppressPlaySound: V,
-    onMouseEnter: F,
+    suppressPlaySound: F,
+    onMouseEnter: V,
     onSelectItem: x,
     analyticsLocations: H,
     buttonOverlay: Y = p.SoundButtonOverlay.PLAY,
@@ -159,11 +159,11 @@ t.default = r.forwardRef(function(e, t) {
       className: v.buttonOverlay,
       children: [(0, i.jsx)("div", {
         className: a()({
-          [v.buttonOverlayBackground]: !V
+          [v.buttonOverlayBackground]: !F
         })
       }), (0, i.jsxs)("div", {
         className: v.buttonOverlayActions,
-        children: [ec && eT, !V && !e_ && (0, i.jsx)(h.default, {
+        children: [ec && eT, !F && !e_ && (0, i.jsx)(A.default, {
           className: v.playIcon
         }), ec && eI()]
       })]
@@ -176,7 +176,7 @@ t.default = r.forwardRef(function(e, t) {
   }, [ea]), (0, i.jsxs)("li", {
     ref: t,
     className: v.soundButtonWrapper,
-    onMouseEnter: F,
+    onMouseEnter: V,
     children: [(0, i.jsxs)(_.ClickableContainer, {
       ...j,
       buttonProps: {
@@ -190,7 +190,7 @@ t.default = r.forwardRef(function(e, t) {
       }),
       className: a()(b, v.soundButton, {
         [v.playing]: $,
-        [v.hoverActiveBackground]: V,
+        [v.hoverActiveBackground]: F,
         [v.soundButtonInteractive]: k,
         [v.buttonDisabled]: !k && !w,
         [v.premiumDisabled]: e_ && !w,
@@ -204,7 +204,7 @@ t.default = r.forwardRef(function(e, t) {
           x();
           return
         }
-        V || J(H)
+        F || J(H)
       },
       onContextMenu: B && !e_ ? q : void 0,
       children: [(0, i.jsxs)("div", {
@@ -234,7 +234,7 @@ t.default = r.forwardRef(function(e, t) {
                 className: v.buttonOverlayActions,
                 children: [eT, (0, i.jsxs)("div", {
                   className: v.addButton,
-                  children: [(0, i.jsx)(A.default, {
+                  children: [(0, i.jsx)(h.default, {
                     className: v.plusSign
                   }), (0, i.jsx)(_.Text, {
                     variant: "text-xs/medium",

@@ -11,7 +11,7 @@ var r, s, a, o, l = n("442837"),
 let T = "BlockedDomainStore",
   f = "BlockedDomainRevision",
   S = null;
-class h extends(r = l.default.Store) {
+class A extends(r = l.default.Store) {
   initialize() {
     i = null, u.Storage.get(T) && (u.Storage.remove(f), u.Storage.remove(T))
   }
@@ -40,12 +40,12 @@ class h extends(r = l.default.Store) {
     }), a) : null
   }
 }
-o = "BlockedDomainStore", (a = "displayName") in(s = h) ? Object.defineProperty(s, a, {
+o = "BlockedDomainStore", (a = "displayName") in(s = A) ? Object.defineProperty(s, a, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = o, t.default = new h(d.default, {
+}) : s[a] = o, t.default = new A(d.default, {
   BLOCKED_DOMAIN_LIST_FETCHED: function(e) {
     let {
       list: t,

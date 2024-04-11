@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   generateEbayMetadataItems: function() {
-    return h
+    return A
   },
   generatePaypalMetadataItems: function() {
     return S
@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return f
   },
   generateTikTokMetadataItems: function() {
-    return A
+    return h
   },
   generateTwitterMetadataItems: function() {
     return T
@@ -109,7 +109,7 @@ function S(e) {
   }, _.MetadataFields.PAYPAL_VERIFIED)), n
 }
 
-function h(e) {
+function A(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
     r = [],
@@ -126,7 +126,7 @@ function h(e) {
   }, _.MetadataFields.EBAY_TOP_RATED_SELLER)), r
 }
 
-function A(e) {
+function h(e) {
   var t, n, r;
   let s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
     a = [],

@@ -15,8 +15,8 @@ var a, s, l = n("735250"),
   m = n("122810"),
   S = n("833664"),
   I = n("503438"),
-  p = n("420660"),
-  T = n("74433"),
+  T = n("420660"),
+  p = n("74433"),
   g = n("952561"),
   A = n("513202"),
   N = n("906732"),
@@ -400,7 +400,7 @@ es.Header = ea, es.Body = e => {
       assets: f,
       application_id: E
     } = a;
-  if (null != f && (0, p.default)(a)) {
+  if (null != f && (0, T.default)(a)) {
     var _;
     t = (0, l.jsx)(D.default, {
       className: q.twitchSectionPreviewWrapper,
@@ -462,7 +462,7 @@ es.Header = ea, es.Body = e => {
         children: (0, O.getStreamCTAString)(E)
       })
     })]
-  }), _ = null !== (n = null === (t = (0, T.default)(a, i)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : z.default.Messages.SHARING_SCREEN;
+  }), _ = null !== (n = null === (t = (0, p.default)(a, i)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : z.default.Messages.SHARING_SCREEN;
   return (0, l.jsxs)(ee, {
     children: [(0, l.jsxs)("div", {
       className: q.applicationStreamingSection,
@@ -502,7 +502,7 @@ es.Header = ea, es.Body = e => {
   let I = null != t.created_at && t.created_at > 0 ? {
       start: t.created_at
     } : void 0,
-    p = (0, B.getAssetImage)(S.id, o, 300);
+    T = (0, B.getAssetImage)(S.id, o, 300);
   return (0, l.jsxs)(ee, {
     children: [(0, l.jsxs)("div", {
       className: q.embeddedActivityTopRow,
@@ -528,8 +528,8 @@ es.Header = ea, es.Body = e => {
       }) : null]
     }), (0, l.jsxs)("div", {
       className: q.embeddedActivityPlayerContainer,
-      children: [null != p ? (0, l.jsx)("img", {
-        src: p,
+      children: [null != T ? (0, l.jsx)("img", {
+        src: T,
         alt: S.name,
         className: q.embeddedActivityImage
       }) : null, (0, l.jsxs)("div", {

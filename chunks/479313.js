@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return g
   },
   fetchSummaries: function() {
-    return h
+    return A
   },
   setHighlightedSummary: function() {
-    return A
+    return h
   },
   setSelectedSummary: function() {
     return N
@@ -61,7 +61,7 @@ async function S(e, t) {
     receivedAt: Date.now()
   })
 }
-async function h(e) {
+async function A(e) {
   var t, n;
   let i, r;
   if (!I.default.shouldFetch(e)) return;
@@ -87,7 +87,7 @@ async function h(e) {
   })
 }
 
-function A(e, t) {
+function h(e, t) {
   l.default.dispatch({
     type: "SET_HIGHLIGHTED_SUMMARY",
     channelId: e,
@@ -208,8 +208,8 @@ t.default = {
   setSummaryFeedback: p,
   updateVisibleMessages: O,
   setSelectedSummary: N,
-  setHighlightedSummary: A,
-  fetchSummaries: h,
+  setHighlightedSummary: h,
+  fetchSummaries: A,
   fetchSummariesBulk: C,
   useChannelSummaries: function(e) {
     let {

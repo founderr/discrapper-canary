@@ -28,8 +28,8 @@ var i = n("735250"),
   T = n("551428"),
   f = n("975104"),
   S = n("630388"),
-  h = n("74538"),
-  A = n("960048"),
+  A = n("74538"),
+  h = n("960048"),
   m = n("735521"),
   N = n("583046"),
   O = n("897829"),
@@ -54,8 +54,8 @@ function k(e) {
     stepConfigs: w,
     breadcrumbs: k = [],
     skuIDs: B,
-    isGift: V = !1,
-    children: F,
+    isGift: F = !1,
+    children: V,
     defaultPlanId: x,
     purchaseType: H = P.PurchaseTypes.SUBSCRIPTION,
     applicationId: Y,
@@ -67,7 +67,7 @@ function k(e) {
     setPaymentSourceId: J,
     hasFetchedPaymentSources: Z
   } = (0, p.default)({
-    isGift: V,
+    isGift: F,
     activeSubscription: G
   }), $ = r.useRef(Q), {
     hasFetchedSubscriptionPlans: ee,
@@ -79,7 +79,7 @@ function k(e) {
     activeSubscription: G,
     skuIDs: B,
     paymentSourceId: q,
-    isGift: V
+    isGift: F
   }), es = (0, L.default)(), [ea, eo] = r.useState(!1), {
     step: el,
     setStep: eu,
@@ -94,10 +94,10 @@ function k(e) {
   } = (0, R.default)(), {
     purchaseError: ef,
     purchaseErrorBlockRef: eS,
-    setPurchaseError: eh
-  } = (0, C.default)(), eA = (0, a.useLazyValue)(() => {
+    setPurchaseError: eA
+  } = (0, C.default)(), eh = (0, a.useLazyValue)(() => {
     let e = null != f ? f : (0, o.v4)();
-    return A.default.addBreadcrumb({
+    return h.default.addBreadcrumb({
       message: "Checkout session ID: ".concat(e)
     }), {
       loadId: e,
@@ -108,7 +108,7 @@ function k(e) {
     selectedPlan: eN,
     setSelectedSkuId: eO,
     setSelectedPlanId: ep
-  } = (0, m.default)(), [eR, eC] = (0, l.useStateFromStoresArray)([E.default], () => [E.default.purchaseTokenAuthState, E.default.purchaseTokenHash]), [eg, eL] = (0, l.useStateFromStoresArray)([y.default], () => [y.default.browserCheckoutState, y.default.loadId]), [eD, ev] = r.useState(null), [eM, ey] = r.useState(null), [eP, eU] = r.useState(null), [eb, eG] = r.useState(null), [ew, ek] = r.useState(null), [eB, eV] = r.useState(void 0), [eF, ex] = r.useState([]), eH = r.useMemo(() => null == eN || (0, h.isPremiumSubscriptionPlan)(eN.id), [eN]), eY = r.useRef(null != G ? G.planId : null);
+  } = (0, m.default)(), [eR, eC] = (0, l.useStateFromStoresArray)([E.default], () => [E.default.purchaseTokenAuthState, E.default.purchaseTokenHash]), [eg, eL] = (0, l.useStateFromStoresArray)([y.default], () => [y.default.browserCheckoutState, y.default.loadId]), [eD, ev] = r.useState(null), [eM, ey] = r.useState(null), [eP, eU] = r.useState(null), [eb, eG] = r.useState(null), [ew, ek] = r.useState(null), [eB, eF] = r.useState(void 0), [eV, ex] = r.useState([]), eH = r.useMemo(() => null == eN || (0, A.isPremiumSubscriptionPlan)(eN.id), [eN]), eY = r.useRef(null != G ? G.planId : null);
   r.useEffect(() => {
     null == eY.current && null != G && (eY.current = G.planId)
   }, [G]);
@@ -120,7 +120,7 @@ function k(e) {
     applicationId: null != Y ? Y : U.PREMIUM_SUBSCRIPTION_APPLICATION,
     skuIDs: B,
     currentPaymentSourceId: q,
-    isGift: V
+    isGift: F
   }), ez = r.useMemo(() => {
     if (null == em) return null;
     let e = eK[em];
@@ -134,7 +134,7 @@ function k(e) {
   return (0, i.jsx)(b.Provider, {
     value: {
       stripe: W,
-      contextMetadata: eA,
+      contextMetadata: eh,
       blockedPayments: K,
       activeSubscription: G,
       hasFetchedSubscriptions: z,
@@ -165,7 +165,7 @@ function k(e) {
       paymentAuthenticationState: eT,
       paymentError: eI,
       purchaseError: ef,
-      setPurchaseError: eh,
+      setPurchaseError: eA,
       purchaseErrorBlockRef: eS,
       purchaseTokenAuthState: eR,
       purchaseTokenHash: eC,
@@ -184,7 +184,7 @@ function k(e) {
       setSelectedSkuId: eO,
       setSelectedPlanId: ep,
       readySlideId: eB,
-      setReadySlideId: eV,
+      setReadySlideId: eF,
       defaultPlanId: x,
       isPremium: eH,
       startedPaymentFlowWithPaymentSourcesRef: $,
@@ -197,7 +197,7 @@ function k(e) {
       purchaseType: H,
       isEmbeddedIAP: eQ,
       activitySessionId: eJ,
-      entitlementsGranted: eF,
+      entitlementsGranted: eV,
       setEntitlementsGranted: ex,
       referralCode: j,
       invoicePreview: e0,
@@ -206,7 +206,7 @@ function k(e) {
     children: (0, i.jsx)(s.Elements, {
       options: P.StripeElementsOptions,
       stripe: W,
-      children: F
+      children: V
     })
   })
 }

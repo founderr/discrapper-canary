@@ -46,7 +46,7 @@ n.r(t), n.d(t, {
     return H
   },
   getVideoAssetMimeType: function() {
-    return F
+    return V
   },
   hasQuestCollectibleRewards: function() {
     return b
@@ -85,7 +85,7 @@ n.r(t), n.d(t, {
     return f
   },
   questsEntitlementsFromServer: function() {
-    return A
+    return h
   },
   questsRewardCodeFromServer: function() {
     return S
@@ -194,7 +194,7 @@ function S(e) {
   }
 }
 
-function h(e) {
+function A(e) {
   return {
     skuId: e.sku_id,
     tenantMetadata: function(e) {
@@ -223,10 +223,10 @@ function h(e) {
   }
 }
 
-function A(e) {
+function h(e) {
   return {
     claimedAt: e.claimed_at,
-    items: e.entitlements.map(h),
+    items: e.entitlements.map(A),
     errors: e.errors
   }
 }
@@ -341,11 +341,11 @@ function k(e, t) {
 function B(e) {
   return e.endsWith(".webm") || e.endsWith(".mp4")
 }
-let V = /\.([a-zA-Z]+)$/;
+let F = /\.([a-zA-Z]+)$/;
 
-function F(e) {
+function V(e) {
   var t, n;
-  switch (null === (n = V.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase()) {
+  switch (null === (n = F.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase()) {
     case "webm":
       return "video/webm";
     case "mp4":

@@ -19,8 +19,8 @@ var a, s, l = n("735250"),
   m = n("504160"),
   S = n("151864"),
   I = n("725436"),
-  p = n("497656"),
-  T = n("554747"),
+  T = n("497656"),
+  p = n("554747"),
   g = n("230900"),
   A = n("854698"),
   N = n("703656"),
@@ -49,7 +49,7 @@ function Y(e) {
   let {
     guild: t,
     isStudyRoomNotice: n = !1
-  } = e, a = (0, p.useActiveEventOrStageInstanceChannel)(t.id), s = (0, T.useGuildActiveEvent)(t.id), r = (0, u.useStateFromStores)([L.default], () => L.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
+  } = e, a = (0, T.useActiveEventOrStageInstanceChannel)(t.id), s = (0, p.useGuildActiveEvent)(t.id), r = (0, u.useStateFromStores)([L.default], () => L.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
     isStageNoticeHidden: Y,
     isEventNoticeHidden: W
   } = (0, u.useStateFromStoresObject)([S.default], () => ({

@@ -17,8 +17,8 @@ var i, r, s = n("735250"),
   T = n("906732"),
   f = n("220082"),
   S = n("583405"),
-  h = n("556084"),
-  A = n("300284"),
+  A = n("556084"),
+  h = n("300284"),
   m = n("695346"),
   N = n("314897"),
   O = n("592125"),
@@ -38,8 +38,8 @@ var i, r, s = n("735250"),
   w = n("785717"),
   k = n("621853"),
   B = n("943217"),
-  V = n("793397"),
-  F = n("841040"),
+  F = n("793397"),
+  V = n("841040"),
   x = n("228168"),
   H = n("981631"),
   Y = n("474936"),
@@ -172,13 +172,13 @@ function q(e) {
     hasProfileEffect: U = !1
   } = e, [K, z] = a.useState((null == o ? void 0 : o.banner) == null ? 2 : 0), q = (0, d.useStateFromStores)([p.default], () => p.default.getGuild(T)), J = (0, d.useStateFromStores)([N.default], () => N.default.getId()) === r.id && y, Z = G.default.isPremiumAtLeast(null == o ? void 0 : o.premiumType, Y.PremiumTypes.TIER_2), {
     trackUserProfileAction: $
-  } = (0, w.useUserProfileAnalyticsContext)(), [ee, et] = a.useState(!1), en = (0, d.useStateFromStores)([g.default], () => g.default.isFocused()), ei = m.GifAutoPlay.getSetting(), er = (0, c.useToken)(_.default.unsafe_rawColors.PRIMARY_800).hex(), es = (0, c.getAvatarSize)(c.AvatarSizes.SIZE_80), ea = (0, u.hex2int)((0, f.default)(r.getAvatarURL(T, es), er, !1)), eo = (0, S.default)(null !== (t = null == o ? void 0 : o.primaryColor) && void 0 !== t ? t : ea).hsl, el = (0, V.getUserBannerSize)(C), eu = null != E ? E : null == o ? void 0 : o.getBannerURL({
+  } = (0, w.useUserProfileAnalyticsContext)(), [ee, et] = a.useState(!1), en = (0, d.useStateFromStores)([g.default], () => g.default.isFocused()), ei = m.GifAutoPlay.getSetting(), er = (0, c.useToken)(_.default.unsafe_rawColors.PRIMARY_800).hex(), es = (0, c.getAvatarSize)(c.AvatarSizes.SIZE_80), ea = (0, u.hex2int)((0, f.default)(r.getAvatarURL(T, es), er, !1)), eo = (0, S.default)(null !== (t = null == o ? void 0 : o.primaryColor) && void 0 !== t ? t : ea).hsl, el = (0, F.getUserBannerSize)(C), eu = null != E ? E : null == o ? void 0 : o.getBannerURL({
     size: el,
     canAnimate: M || !ei ? ee : en
   }), ed = null != eu, e_ = (0, d.useStateFromStores)([k.default], () => k.default.getUserProfile(r.id)), ec = O.default.getChannel(R.default.getChannelId()), {
     appsInGDMEnabled: eE,
     availableApplications: eI
-  } = (0, h.usePrivateChannelIntegrationState)({
+  } = (0, A.usePrivateChannelIntegrationState)({
     channelId: null !== (n = null == ec ? void 0 : ec.id) && void 0 !== n ? n : H.EMPTY_STRING_SNOWFLAKE_ID
   }), eT = null == e_ ? void 0 : e_.application, ef = eE && null != eI.find(e => e.id === (null == eT ? void 0 : eT.id));
   (0, a.useEffect)(() => {
@@ -195,7 +195,7 @@ function q(e) {
     });
     if (null != e) new Image().src = e
   }, [ei, ed, E, o, el]);
-  let eS = (0, A.default)({
+  let eS = (0, h.default)({
     analyticsLocation: {
       page: H.AnalyticsPages.USER_POPOUT,
       section: H.AnalyticsSections.PROFILE_POPOUT
@@ -208,7 +208,7 @@ function q(e) {
     hasBanner: ed,
     hasProfileEffect: U,
     children: (0, s.jsxs)("div", {
-      className: l()(W.banner, (0, V.getUserBannerStyles)({
+      className: l()(W.banner, (0, F.getUserBannerStyles)({
         profileType: C,
         user: {
           hasBanner: ed,
@@ -241,7 +241,7 @@ function q(e) {
           let {
             closePopout: t
           } = e;
-          return (0, s.jsx)(F.default, {
+          return (0, s.jsx)(V.default, {
             onClose: t,
             onSelect: I,
             guild: q

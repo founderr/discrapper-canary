@@ -17,8 +17,8 @@ var a = n("735250"),
   m = n("523924"),
   S = n("390500"),
   I = n("200305"),
-  p = n("981631"),
-  T = n("756286"),
+  T = n("981631"),
+  p = n("756286"),
   g = n("689938"),
   A = n("165069");
 t.default = e => {
@@ -27,7 +27,7 @@ t.default = e => {
   let {
     guildId: v,
     inviteCode: R
-  } = e, [O, L] = s.useState(T.WaveStates.INITIAL), M = (0, l.useStateFromStores)([h.default], () => h.default.get(v)), P = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(v)), y = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(v)), {
+  } = e, [O, L] = s.useState(p.WaveStates.INITIAL), M = (0, l.useStateFromStores)([h.default], () => h.default.get(v)), P = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(v)), y = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(v)), {
     hasFetchedRequestToJoinGuilds: x,
     guildPreviewDisabled: D
   } = (0, l.useStateFromStoresObject)([C.default], () => ({
@@ -35,7 +35,7 @@ t.default = e => {
     guildPreviewDisabled: C.default.getJoinRequestGuild(v)
   }));
   s.useEffect(() => {
-    null != y && (0, r.transitionTo)(p.Routes.CHANNEL(v))
+    null != y && (0, r.transitionTo)(T.Routes.CHANNEL(v))
   }, [y, v]), s.useEffect(() => {
     !x && f.default.fetchRequestToJoinGuilds()
   }, [x]);
@@ -50,7 +50,7 @@ t.default = e => {
   let G = (n = g.default.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({
       name: null == D ? void 0 : D.toString()
     }), N = () => {
-      L(Math.max(O, T.WaveStates.FILLING)), f.default.removeGuildJoinRequest(v), (0, r.transitionTo)(p.Routes.ME)
+      L(Math.max(O, p.WaveStates.FILLING)), f.default.removeGuildJoinRequest(v), (0, r.transitionTo)(T.Routes.ME)
     }, () => {
       (0, i.openModal)(e => (0, a.jsx)(i.ConfirmModal, {
         header: g.default.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,

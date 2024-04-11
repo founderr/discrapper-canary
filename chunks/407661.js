@@ -19,8 +19,8 @@ var i = n("735250"),
   T = n("375954"),
   f = n("36082"),
   S = n("696202"),
-  h = n("981631"),
-  A = n("689938"),
+  A = n("981631"),
+  h = n("689938"),
   m = n("970999");
 
 function N(e) {
@@ -30,7 +30,7 @@ function N(e) {
     replyChainLength: s
   } = e;
   return r.useEffect(() => {
-    (0, u.trackWithMetadata)(h.AnalyticEvents.THREAD_NUDGE_SHOWN, {
+    (0, u.trackWithMetadata)(A.AnalyticEvents.THREAD_NUDGE_SHOWN, {
       type: "Reply Chain (".concat(3, ")"),
       reply_chain_length: s + 1,
       channel_id: t.id,
@@ -51,14 +51,14 @@ function N(e) {
       color: "header-secondary",
       className: m.text,
       variant: "text-sm/normal",
-      children: A.default.Messages.THREAD_REPLY_SUGGESTION.format({
+      children: h.default.Messages.THREAD_REPLY_SUGGESTION.format({
         count: Math.min(10, s + 1)
       })
     }), (0, i.jsx)(l.Text, {
       color: "text-link",
       className: m.createThreadButton,
       variant: "text-sm/semibold",
-      children: A.default.Messages.CREATE_THREAD
+      children: h.default.Messages.CREATE_THREAD
     })]
   })
 }
@@ -83,7 +83,7 @@ function O(e) {
       let e = i;
       for (let t = 0; t < 10; t++) {
         let i = T.default.getMessage(n, e);
-        if ((null == i ? void 0 : i.type) !== h.MessageTypes.REPLY || null == i.messageReference) return t;
+        if ((null == i ? void 0 : i.type) !== A.MessageTypes.REPLY || null == i.messageReference) return t;
         e = i.messageReference.message_id
       }
       return 10
@@ -100,7 +100,7 @@ function O(e) {
       children: [(0, i.jsxs)("div", {
         className: m.replyBar,
         children: [(0, i.jsx)(l.Clickable, {
-          onClick: () => (0, c.transitionTo)(h.Routes.CHANNEL(r.getGuildId(), r.id, s.id)),
+          onClick: () => (0, c.transitionTo)(A.Routes.CHANNEL(r.getGuildId(), r.id, s.id)),
           focusProps: {
             offset: {
               top: -8,
@@ -113,7 +113,7 @@ function O(e) {
             color: "header-secondary",
             className: a()(m.text, m.replyLabel),
             variant: "text-sm/normal",
-            children: A.default.Messages.REPLYING_TO.format({
+            children: h.default.Messages.REPLYING_TO.format({
               userHook: (e, t) => (0, i.jsx)(l.NameWithRole, {
                 className: m.name,
                 name: O,
@@ -126,7 +126,7 @@ function O(e) {
           className: m.actions,
           children: [I && (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(l.Tooltip, {
-              text: u ? A.default.Messages.REPLY_MENTION_ON_TOOLTIP : A.default.Messages.REPLY_MENTION_OFF_TOOLTIP,
+              text: u ? h.default.Messages.REPLY_MENTION_ON_TOOLTIP : h.default.Messages.REPLY_MENTION_OFF_TOOLTIP,
               children: e => {
                 let {
                   onMouseEnter: t,
@@ -147,9 +147,9 @@ function O(e) {
                     color: u ? "text-link" : "text-muted",
                     className: m.mentionButton,
                     children: [(0, i.jsx)(f.default, {
-                      "aria-label": A.default.Messages.MENTION,
+                      "aria-label": h.default.Messages.MENTION,
                       className: m.mentionIcon
-                    }), u ? A.default.Messages.REPLY_MENTION_ON : A.default.Messages.REPLY_MENTION_OFF]
+                    }), u ? h.default.Messages.REPLY_MENTION_ON : h.default.Messages.REPLY_MENTION_OFF]
                   })
                 })
               }

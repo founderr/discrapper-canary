@@ -37,7 +37,7 @@ n.r(t), n.d(t, {
     return o
   },
   getValidationErrorText: function() {
-    return h
+    return A
   }
 });
 var i, r, s = n("911969"),
@@ -64,7 +64,7 @@ let d = 10,
 Object.freeze([]), Object.freeze([]);
 let S = 25;
 
-function h(e) {
+function A(e) {
   if (null != e.choices) return a.default.Messages.COMMAND_VALIDATION_CHOICE_ERROR;
   switch (e.type) {
     case s.ApplicationCommandOptionType.BOOLEAN:

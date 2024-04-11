@@ -15,8 +15,8 @@ var i = n("735250"),
   T = n("430742"),
   f = n("607070"),
   S = n("100527"),
-  h = n("906732"),
-  A = n("424602"),
+  A = n("906732"),
+  h = n("424602"),
   m = n("541099"),
   N = n("663924"),
   O = n("998698"),
@@ -36,8 +36,8 @@ var i = n("735250"),
   w = n("378233"),
   k = n("665906"),
   B = n("695346"),
-  V = n("271383"),
-  F = n("496675"),
+  F = n("271383"),
+  V = n("496675"),
   x = n("944486"),
   H = n("398327"),
   Y = n("117530"),
@@ -61,7 +61,7 @@ var i = n("735250"),
   eo = n("957825"),
   el = n("23383");
 t.default = r.memo(r.forwardRef(function(e, t) {
-  var s, l, eu, ed, e_, ec, eE, eI, eT, ef, eS, eh, eA, em;
+  var s, l, eu, ed, e_, ec, eE, eI, eT, ef, eS, eA, eh, em;
   let {
     textValue: eN,
     richValue: eO,
@@ -81,8 +81,8 @@ t.default = r.memo(r.forwardRef(function(e, t) {
     renderApplicationCommandIcon: ew,
     pendingReply: ek,
     onChange: eB,
-    onResize: eV,
-    onBlur: eF,
+    onResize: eF,
+    onBlur: eV,
     onFocus: ex,
     onKeyDown: eH,
     onSubmit: eY,
@@ -106,7 +106,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
   u()(null != eP, "chat input type must be set");
   let {
     analyticsLocations: e6
-  } = (0, h.default)(S.default.CHANNEL_TEXT_AREA), e5 = function(e) {
+  } = (0, A.default)(S.default.CHANNEL_TEXT_AREA), e5 = function(e) {
     let t = r.useRef(null);
     if (null != e && "function" == typeof e) throw Error("Only Ref objects are supported");
     return null == e ? t : e
@@ -131,15 +131,15 @@ t.default = r.memo(r.forwardRef(function(e, t) {
   } = function(e, t, n, i) {
     let r = e.getGuildId(),
       s = (0, E.useStateFromStores)([y.default], () => null != r && y.default.isLurking(r), [r]),
-      a = (0, E.useStateFromStores)([V.default, j.default], () => {
+      a = (0, E.useStateFromStores)([F.default, j.default], () => {
         var e, t;
         let n = j.default.getCurrentUser();
-        return null !== (t = null != r && null != n ? null === (e = V.default.getMember(r, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
+        return null !== (t = null != r && null != n ? null === (e = F.default.getMember(r, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
       }),
-      o = (0, E.useStateFromStoresObject)([F.default], () => {
+      o = (0, E.useStateFromStoresObject)([V.default], () => {
         var r, s;
         let o = e.isPrivate(),
-          l = F.default.computePermissions(e),
+          l = V.default.computePermissions(e),
           u = c.has(l, es.Permissions.CREATE_PUBLIC_THREADS) || c.has(l, es.Permissions.CREATE_PRIVATE_THREADS),
           d = (!(null === (r = t.permissions) || void 0 === r ? void 0 : r.requireCreateTherads) || u) && (!(null === (s = t.permissions) || void 0 === s ? void 0 : s.requireSendMessages) || c.has(l, es.Permissions.SEND_MESSAGES)),
           _ = d && c.has(l, es.Permissions.ATTACH_FILES),
@@ -189,7 +189,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
   }(eP, ta);
   let {
     eventEmitter: tS,
-    handleEditorSelectionChanged: th
+    handleEditorSelectionChanged: tA
   } = function(e, t, n) {
     let [i] = r.useState(() => new o.EventEmitter);
     return r.useEffect(() => {
@@ -201,16 +201,16 @@ t.default = r.memo(r.forwardRef(function(e, t) {
       }
     }
   }(e9, eN, eO), {
-    submitting: tA,
+    submitting: th,
     submit: tm,
     handleSubmit: tN
   } = function(e, t, s, a) {
     let [o, l] = r.useState(!1), u = r.useCallback((r, d, _, c, E) => {
-      var f, S, h;
+      var f, S, A;
       if (o) return;
       l(!0);
-      let A = null !== (S = null === (f = b.default.getStickerPreview(a, t.drafts.type)) || void 0 === f ? void 0 : f.map(e => e.id)) && void 0 !== S ? S : [],
-        m = null !== (h = Y.default.getUploads(a, t.drafts.type)) && void 0 !== h ? h : [];
+      let h = null !== (S = null === (f = b.default.getStickerPreview(a, t.drafts.type)) || void 0 === f ? void 0 : f.map(e => e.id)) && void 0 !== S ? S : [],
+        m = null !== (A = Y.default.getUploads(a, t.drafts.type)) && void 0 !== A ? A : [];
       if (null == d && !c && !E && (0, M.shouldShowAddMediaToOriginalPostModal)(m, a)) {
         l(!1), (0, I.openModalLazy)(async () => {
           let {
@@ -228,7 +228,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
       e({
         value: r,
         uploads: m,
-        stickers: A,
+        stickers: h,
         command: d,
         commandOptionValues: _,
         isGif: c
@@ -275,15 +275,15 @@ t.default = r.memo(r.forwardRef(function(e, t) {
       handleHideAutocomplete: n
     }
   }();
-  let tC = (ef = tm, eS = eP, eh = e9, r.useCallback(e => {
+  let tC = (ef = tm, eS = eP, eA = e9, r.useCallback(e => {
     var t, n;
-    eS === Q.ChatInputTypes.CREATE_FORUM_POST ? null === (n = eh.current) || void 0 === n || n.insertGIF(e) : ef(e.url, void 0, void 0, !0), (0, L.closeExpressionPicker)(), null === (t = eh.current) || void 0 === t || t.focus()
-  }, [eh, ef, eS]));
-  let tg = (eA = e9, r.useCallback(function(e, t) {
+    eS === Q.ChatInputTypes.CREATE_FORUM_POST ? null === (n = eA.current) || void 0 === n || n.insertGIF(e) : ef(e.url, void 0, void 0, !0), (0, L.closeExpressionPicker)(), null === (t = eA.current) || void 0 === t || t.focus()
+  }, [eA, ef, eS]));
+  let tg = (eh = e9, r.useCallback(function(e, t) {
       let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        i = eA.current;
+        i = eh.current;
       null != e && null != i && i.insertEmoji(e, t, n), t && (0, L.closeExpressionPicker)()
-    }, [eA])),
+    }, [eh])),
     tL = function(e) {
       let {
         editorRef: t,
@@ -294,7 +294,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
         submit: o
       } = e, {
         analyticsLocations: l
-      } = (0, h.default)();
+      } = (0, A.default)();
       return r.useCallback((e, r) => {
         var u, d;
         !n && ((0, w.shouldAttachSticker)(r, i, s, a.drafts.type) ? ((0, Z.trackStickerPreviewSelect)({
@@ -335,7 +335,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
           n(null != t ? t : 0), null == e || e(t)
         }, [e])
       }
-    }(eV),
+    }(eF),
     {
       handleTab: tP,
       handleEnter: tU,
@@ -383,18 +383,18 @@ t.default = r.memo(r.forwardRef(function(e, t) {
         handleOuterClick: o
       }
     }(eP, tS, e9),
-    tV = A.AppLauncherDesktopExperiment.useExperiment({
+    tF = h.AppLauncherDesktopExperiment.useExperiment({
       location: "chat_input"
     }, {
       autoTrackExposure: !1
     }).enabled,
-    tF = (0, E.useStateFromStores)([m.default], () => m.default.shouldShowPopup(), []);
+    tV = (0, E.useStateFromStores)([m.default], () => m.default.shouldShowPopup(), []);
   (0, X.useHereMentionCallback)(tS, ey.guild_id, ey.id);
   let tx = null != ek,
-    tH = ta && !((tr || ts) && tu) || tA && (null === (l = eP.submit) || void 0 === l ? void 0 : l.useDisabledStylesOnSubmit),
+    tH = ta && !((tr || ts) && tu) || th && (null === (l = eP.submit) || void 0 === l ? void 0 : l.useDisabledStylesOnSubmit),
     tY = null,
     tj = null;
-  null != tn ? tY = null == ew ? void 0 : ew(tn, ti, el.attachButton) : (!ta || tl) && (tY = null == eb ? void 0 : eb(tx, el.attachButton), tV && (tj = null == eG ? void 0 : eG()));
+  null != tn ? tY = null == ew ? void 0 : ew(tn, ti, el.attachButton) : (!ta || tl) && (tY = null == eb ? void 0 : eb(tx, el.attachButton), tF && (tj = null == eG ? void 0 : eG()));
   let tW = t_ && null != eO && !ta && eP.showCharacterCount && null == tn,
     tK = t_ && !__OVERLAY__ && null != eO && null == tn,
     tz = function(e, t, n, i) {
@@ -409,7 +409,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
     tq = !!(null === (eu = eP.emojis) || void 0 === eu ? void 0 : eu.button) && tM <= 44;
   return (0, i.jsx)(g.EventEmitterProvider, {
     value: tS,
-    children: (0, i.jsxs)(h.AnalyticsLocationProvider, {
+    children: (0, i.jsxs)(A.AnalyticsLocationProvider, {
       value: e6,
       children: [tK && td ? (0, i.jsx)(er.default, {
         editorRef: e9,
@@ -481,14 +481,14 @@ t.default = r.memo(r.forwardRef(function(e, t) {
                 "aria-describedby": eZ,
                 onChange: eB,
                 onResize: ty,
-                onBlur: eF,
+                onBlur: eV,
                 onFocus: ex,
                 onKeyDown: eH,
                 onSubmit: tm,
                 onTab: tP,
                 onEnter: tU,
                 onMoveSelection: tb,
-                onSelectionChanged: th,
+                onSelectionChanged: tA,
                 onMaybeShowAutocomplete: tp,
                 onHideAutocomplete: tR,
                 promptToUpload: ej,
@@ -564,7 +564,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
         position: "top",
         align: "right",
         positionLayerClassName: el.expressionPickerPositionLayer
-      }), tF ? (0, i.jsx)(N.default, {
+      }), tV ? (0, i.jsx)(N.default, {
         positionTargetRef: e5,
         channel: ey,
         closeOnModalOuterClick: e4,

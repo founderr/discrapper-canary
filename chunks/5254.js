@@ -13,9 +13,9 @@ let _ = {},
   m = !1,
   S = !1,
   I = new Set,
-  p = new Set;
+  T = new Set;
 
-function T(e, t) {
+function p(e, t) {
   var n;
   let a = null != e.contact_names && e.contact_names.length >= 2 ? e.contact_names.slice(0, 2) : [];
   return {
@@ -54,7 +54,7 @@ i = "FriendSuggestionStore", (l = "displayName") in(s = g) ? Object.defineProper
     _ = {}, (C = e.friendSuggestionCount) > 0 && (S = !0, m || !S || (m = !0, S = !1, h.default.fetch()))
   },
   FRIEND_SUGGESTION_CREATE: function(e) {
-    let t = T(e.suggestion);
+    let t = p(e.suggestion);
     if (null != _[t.key]) return !1;
     C++, _ = {
       ..._,
@@ -68,7 +68,7 @@ i = "FriendSuggestionStore", (l = "displayName") in(s = g) ? Object.defineProper
     m = !1, _ = function(e) {
       let t = e.reduce((e, t) => e + (t.is_viewed ? 0 : 1), 0) === e.length,
         n = !(0, c.isInFriendSuggestionSeenStateExperiment)() || t;
-      return o().chain(e).map(e => T(e, n)).keyBy(e => e.key).value()
+      return o().chain(e).map(e => p(e, n)).keyBy(e => e.key).value()
     }(e.suggestions), C = o().keys(_).length
   },
   LOAD_FRIEND_SUGGESTIONS_FAILURE: function() {
@@ -76,7 +76,7 @@ i = "FriendSuggestionStore", (l = "displayName") in(s = g) ? Object.defineProper
   },
   VIEWED_FRIEND_SUGGESTIONS_SUCCESS: function(e) {
     e.userIds.forEach(e => {
-      I.add(e), p.delete(e)
+      I.add(e), T.delete(e)
     })
   }
 })

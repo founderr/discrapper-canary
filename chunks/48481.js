@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return E
   },
   mergeTopLevelFields: function() {
-    return h
+    return A
   },
   mutateUserChannelSettings: function() {
     return m
@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return N
   },
   mutateUserGuildSettingsInternal: function() {
-    return A
+    return h
   },
   protoToB64: function() {
     return S
@@ -79,20 +79,20 @@ function S(e, t) {
   return (0, i.base64encode)(e.toBinary(t))
 }
 
-function h(e, t, n) {
+function A(e, t, n) {
   for (let e in t = {
       ...t
     }, n) delete t[e];
   return e.mergePartial(t, n), t
 }
 
-function A(e, t, n) {
+function h(e, t, n) {
   return (null == t || "null" === t) && (t = d.ZERO_STRING_GUILD_ID), !(t in e.guilds) && (e.guilds[t] = o.GuildSettings.create()), n(e.guilds[t])
 }
 
 function m(e, t, n, i) {
   var r, s, a;
-  return r = e, s = t, a = e => N(e, n, i), null == r.guilds && (r.guilds = o.AllGuildSettings.create()), A(r.guilds, s, a)
+  return r = e, s = t, a = e => N(e, n, i), null == r.guilds && (r.guilds = o.AllGuildSettings.create()), h(r.guilds, s, a)
 }
 
 function N(e, t, n) {

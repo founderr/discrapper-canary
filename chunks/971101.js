@@ -1,12 +1,12 @@
 "use strict";
-t.r(r);
-var a = t("319301");
+r.r(t);
+var a = r("319301");
 let n = {
   figma: {
     category: "forms"
   }
 };
-r.default = (0, a.defineColorTokens)({
+t.default = (0, a.defineColorTokens)({
   "input-background": {
     dark: "primary.700",
     light: "primary.200",

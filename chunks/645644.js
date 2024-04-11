@@ -13,8 +13,8 @@ var i, r, s = n("259443"),
   T = n("237997"),
   f = n("626135"),
   S = n("998502"),
-  h = n("830917"),
-  A = n("554174"),
+  A = n("830917"),
+  h = n("554174"),
   m = n("938038"),
   N = n("981631"),
   O = n("987650");
@@ -458,13 +458,13 @@ function B(e) {
   e.message.state === N.MessageStates.SENDING && v.desktopMessageEvent("created")
 }
 
-function V(e) {
-  null != (0, A.default)() && (R.verbose("AUDIO_TOGGLE_SELF_MUTE", e), v.handleMuteToggled())
+function F(e) {
+  null != (0, h.default)() && (R.verbose("AUDIO_TOGGLE_SELF_MUTE", e), v.handleMuteToggled())
 }
 
-function F(e) {
+function V(e) {
   R.verbose("WINDOW_FOCUS", e);
-  let t = (0, h.getMainWindowId)();
+  let t = (0, A.getMainWindowId)();
   if (e.windowId !== t) {
     R.verbose("WINDOW_FOCUS: Not main window", {
       action: e,
@@ -549,9 +549,9 @@ class j extends u.default {
       SOUNDBOARD_SET_OVERLAY_ENABLED: G,
       MESSAGE_ACKED: k,
       MESSAGE_CREATE: B,
-      WINDOW_FOCUS: F,
+      WINDOW_FOCUS: V,
       RTC_CONNECTION_STATE: H.handleRTCConnectionState,
-      AUDIO_TOGGLE_SELF_MUTE: V,
+      AUDIO_TOGGLE_SELF_MUTE: F,
       OVERLAY_SUCCESSFULLY_SHOWN: x
     })
   }

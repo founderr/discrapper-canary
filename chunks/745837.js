@@ -23,11 +23,11 @@ var s = n("803997"),
   S = n("689938"),
   I = n("783348");
 
-function p(e) {
+function T(e) {
   o.default.open(m.UserSettingsSections.CLIPS), (0, _.dismissClipsUserEducation)(e)
 }
 
-function T() {
+function p() {
   let e = (0, i.useStateFromStores)([u.default], () => u.default.getKeybindForAction(m.GlobalKeybindActions.SAVE_CLIP));
   if (null == e) return (0, a.jsx)(a.Fragment, {
     children: S.default.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY_NO_KEYBIND
@@ -67,16 +67,16 @@ let g = {
     buttonColor: r.Button.Colors.BRAND,
     bodyCopy: () => S.default.Messages.CLIPS_USER_EDUCATION_DISABLED_BODY,
     buttonCopy: () => S.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
-    ctaOnClick: () => p(C.ClipsUserEducationType.Disabled),
+    ctaOnClick: () => T(C.ClipsUserEducationType.Disabled),
     containerClass: I.container
   },
   [C.ClipsUserEducationType.Enabled]: {
     textColor: "always-white",
     buttonLook: r.Button.Looks.INVERTED,
     buttonColor: r.Button.Colors.BRAND,
-    bodyCopy: () => (0, a.jsx)(T, {}),
+    bodyCopy: () => (0, a.jsx)(p, {}),
     buttonCopy: () => S.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
-    ctaOnClick: () => p(C.ClipsUserEducationType.Enabled),
+    ctaOnClick: () => T(C.ClipsUserEducationType.Enabled),
     containerClass: l()(I.container, I.containerEnabled)
   }
 };

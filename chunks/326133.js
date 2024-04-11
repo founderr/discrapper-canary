@@ -15,8 +15,8 @@ var i = n("735250"),
   T = n("482207"),
   f = n("436896"),
   S = n("590921"),
-  h = n("606992"),
-  A = n("51062"),
+  A = n("606992"),
+  h = n("51062"),
   m = n("881338");
 t.default = r.forwardRef(function(e, t) {
   var n, s, N, O, p;
@@ -28,7 +28,7 @@ t.default = r.forwardRef(function(e, t) {
   } = e, D = (0, E.useUID)(), v = (0, l.useStateFromStores)([_.default], () => {
     var e;
     return null !== (e = _.default.getGuild(R.guild_id)) && void 0 !== e ? e : null
-  }, [R.guild_id]), M = r.useRef(), [y, P, U] = (0, A.default)({
+  }, [R.guild_id]), M = r.useRef(), [y, P, U] = (0, h.default)({
     ...e,
     guild: v
   }, t, M), b = (null === (n = C.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? T.default : I.default, G = (0, c.getAutocompleteRowId)(y.selectedIndex);
@@ -41,7 +41,7 @@ t.default = r.forwardRef(function(e, t) {
     location: "6e9811_2"
   }, {
     autoTrackExposure: !1
-  }), k = (0, h.useChannelAutocompleteLayerPosition)({
+  }), k = (0, A.useChannelAutocompleteLayerPosition)({
     editorHeight: g,
     type: C,
     state: y,
@@ -50,7 +50,7 @@ t.default = r.forwardRef(function(e, t) {
   if (r.useEffect(() => {
       L(y.isVisible)
     }, [L, y.isVisible]), !y.isVisible || null == y.query || void 0 === k) return null;
-  let V = null !== (s = y.query.typeInfo.renderResults({
+  let F = null !== (s = y.query.typeInfo.renderResults({
     results: y.query.results,
     selectedIndex: y.selectedIndex,
     channel: R,
@@ -60,8 +60,8 @@ t.default = r.forwardRef(function(e, t) {
     onHover: e => P.onResultHover(e),
     onClick: e => P.onResultClick(e)
   })) && void 0 !== s ? s : null;
-  if (null == V) return null;
-  let F = {
+  if (null == F) return null;
+  let V = {
       [m.autocompleteAttached]: null == k,
       [m.autocompletePopout]: null != k,
       [m.bottom]: null == k && "bottom" === e.position
@@ -70,7 +70,7 @@ t.default = r.forwardRef(function(e, t) {
   null != k && (x = (null === (N = C.autocomplete) || void 0 === N ? void 0 : N.small) ? 200 : (null === (O = y.query) || void 0 === O ? void 0 : O.type) === S.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), x = Math.min(window.innerHeight - 175, x);
   let H = (0, i.jsx)(c.default, {
     id: D,
-    className: a()(m.autocomplete, F),
+    className: a()(m.autocomplete, V),
     innerClassName: m.autocompleteInner,
     onMouseDown: e => e.preventDefault(),
     children: (0, i.jsx)(o.ListNavigatorProvider, {
@@ -94,7 +94,7 @@ t.default = r.forwardRef(function(e, t) {
             },
             role: "listbox",
             "aria-labelledby": (0, c.getAutocompleteTitleId)(D),
-            children: V
+            children: F
           })
         }
       })

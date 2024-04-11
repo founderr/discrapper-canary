@@ -42,12 +42,12 @@ function f(e) {
 function S(e) {
   var t, n, f, S;
   let {
-    contentDisplay: h,
-    ...A
+    contentDisplay: A,
+    ...h
   } = e, m = {}, {
     analyticsLocations: N
   } = (0, _.default)();
-  r.Children.forEach(A.children, (e, t) => {
+  r.Children.forEach(h.children, (e, t) => {
     m[e.props.id] = {
       children: e.props.children,
       impressionName: e.props.impressionName,
@@ -55,8 +55,8 @@ function S(e) {
       index: t
     }
   });
-  let O = A.activeSlide,
-    p = (0, d.default)(A.activeSlide);
+  let O = h.activeSlide,
+    p = (0, d.default)(h.activeSlide);
   let R = (f = null != p ? m[p] : null, S = m[O], null == f ? null : f.index > S.index ? "backwards" : f.index < S.index ? "forwards" : null),
     {
       reducedMotion: C
@@ -81,13 +81,13 @@ function S(e) {
     height: y = 0
   } = (0, u.default)(O), P = {
     ...I,
-    ...A.springConfig,
+    ...h.springConfig,
     ...C.enabled ? {
       clamp: !0
     } : null
   }, U = (0, s.useSpring)({
     immediate: null == p,
-    width: null !== (t = A.width) && void 0 !== t ? t : M,
+    width: null !== (t = h.width) && void 0 !== t ? t : M,
     height: y,
     config: P
   }), b = (0, s.useTransition)(O, {
@@ -107,24 +107,24 @@ function S(e) {
       let {
         item: n
       } = t;
-      n === O && null != A.onSlideReady && A.onSlideReady(n)
+      n === O && null != h.onSlideReady && h.onSlideReady(n)
     }
   }), G = (0, E.default)(R), {
     width: w,
     centered: k = !0
-  } = A, B = o.isMobile ? "100%" : U.width.to(e => Math.round(e)), V = o.isMobile ? "100%" : U.height.to(e => Math.round(e)), F = o.isMobile ? {} : k ? {
+  } = h, B = o.isMobile ? "100%" : U.width.to(e => Math.round(e)), F = o.isMobile ? "100%" : U.height.to(e => Math.round(e)), V = o.isMobile ? {} : k ? {
     transform: "translate3d(0, -50%, 0) scale(1.0, 1.0)",
     top: "50%"
   } : {
     transform: "scale(1.0, 1.0)"
   }, x = o.isMobile ? {} : {
-    overflow: null !== (n = A.overflow) && void 0 !== n ? n : "hidden"
+    overflow: null !== (n = h.overflow) && void 0 !== n ? n : "hidden"
   };
   return (0, i.jsx)(s.animated.div, {
     style: {
       position: "relative",
       width: B,
-      height: V,
+      height: F,
       ...x
     },
     children: b((e, t, n) => {
@@ -135,11 +135,11 @@ function S(e) {
         ref: t === O ? v : null,
         style: {
           position: "absolute",
-          display: h,
+          display: A,
           flexDirection: "column",
           backfaceVisibility: "hidden",
           width: o.isMobile ? "100%" : w,
-          ...F,
+          ...V,
           ...C.enabled ? {
             opacity: e.value.to(e => 1 - Math.abs(e))
           } : {

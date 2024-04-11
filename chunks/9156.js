@@ -21,8 +21,8 @@ var i, r = n("392711"),
   T = n("592125"),
   f = n("430824"),
   S = n("594174"),
-  h = n("981631"),
-  A = n("468788"),
+  A = n("981631"),
+  h = n("468788"),
   m = n("490897"),
   N = n("526761");
 
@@ -49,22 +49,22 @@ let p = {},
     mute_scheduled_events: !1,
     mobile_push: !0,
     muted: !1,
-    message_notifications: h.UserNotificationSettings.ALL_MESSAGES,
+    message_notifications: A.UserNotificationSettings.ALL_MESSAGES,
     flags: 0,
     channel_overrides: {},
-    notify_highlights: h.HighlightSettings.NULL,
+    notify_highlights: A.HighlightSettings.NULL,
     hide_muted_channels: !1,
     version: -1,
     mute_config: null
   },
   y = {
-    [h.UserNotificationSettings.ALL_MESSAGES]: {
+    [A.UserNotificationSettings.ALL_MESSAGES]: {
       ...M,
-      message_notifications: h.UserNotificationSettings.ALL_MESSAGES
+      message_notifications: A.UserNotificationSettings.ALL_MESSAGES
     },
-    [h.UserNotificationSettings.ONLY_MENTIONS]: {
+    [A.UserNotificationSettings.ONLY_MENTIONS]: {
       ...M,
-      message_notifications: h.UserNotificationSettings.ONLY_MENTIONS
+      message_notifications: A.UserNotificationSettings.ONLY_MENTIONS
     }
   },
   P = {},
@@ -87,7 +87,7 @@ function B(e, t) {
     };
   D.clearTimer(e), s().forEach(r, e => {
     v.clearTimer(e.channel_id)
-  }), V(e, o), p[e] = o, P[e] = Q(p[e]);
+  }), F(e, o), p[e] = o, P[e] = Q(p[e]);
   let l = s().filter(o.channel_overrides, e => {
     var t;
     return E.hasFlag(null !== (t = e.flags) && void 0 !== t ? t : 0, N.ChannelNotificationSettingsFlags.OPT_IN_ENABLED)
@@ -106,9 +106,9 @@ function B(e, t) {
     }(e), delete R[e]
 }
 
-function V(e, t) {
+function F(e, t) {
   !0 === t.muted && D.setTimer(e, t.mute_config, () => {
-    F(e, {
+    V(e, {
       muted: !1
     }), o.default.dispatch({
       type: "GUILD_MUTE_EXPIRED",
@@ -127,7 +127,7 @@ function V(e, t) {
   })
 }
 
-function F(e, t) {
+function V(e, t) {
   var n;
   let i = p[e];
   B(e, {
@@ -185,7 +185,7 @@ function j(e, t, n) {
 
 function W(e) {
   let t = f.default.getGuild(e);
-  return y[null != t ? t.defaultMessageNotifications : h.UserNotificationSettings.ALL_MESSAGES]
+  return y[null != t ? t.defaultMessageNotifications : A.UserNotificationSettings.ALL_MESSAGES]
 }
 
 function K() {
@@ -199,7 +199,7 @@ function z(e) {
 }
 
 function X(e) {
-  C = E.hasFlag(e.flags, A.AccountNotificationFlags.USE_NEW_NOTIFICATIONS), g = E.hasFlag(e.flags, A.AccountNotificationFlags.MENTION_ON_ALL_MESSAGES), L = e
+  C = E.hasFlag(e.flags, h.AccountNotificationFlags.USE_NEW_NOTIFICATIONS), g = E.hasFlag(e.flags, h.AccountNotificationFlags.MENTION_ON_ALL_MESSAGES), L = e
 }
 
 function Q(e) {
@@ -272,7 +272,7 @@ class Z extends(i = a.default.PersistedStore) {
   }
   getChannelMessageNotifications(e, t) {
     let n = this.getChannelOverrides(e)[t];
-    return null == n || null == n.message_notifications ? h.UserNotificationSettings.NULL : n.message_notifications
+    return null == n || null == n.message_notifications ? A.UserNotificationSettings.NULL : n.message_notifications
   }
   getChannelMuteConfig(e, t) {
     let n = this.getChannelOverrides(e)[t];
@@ -295,10 +295,10 @@ class Z extends(i = a.default.PersistedStore) {
   }
   resolvedMessageNotifications(e) {
     let t = this.getChannelMessageNotifications(e.guild_id, e.id);
-    if (t !== h.UserNotificationSettings.NULL) return t;
+    if (t !== A.UserNotificationSettings.NULL) return t;
     if (null != e.parent_id) {
       let t = this.getChannelMessageNotifications(e.guild_id, e.parent_id);
-      if (t !== h.UserNotificationSettings.NULL) return t
+      if (t !== A.UserNotificationSettings.NULL) return t
     }
     return this.getMessageNotifications(e.guild_id)
   }
@@ -311,16 +311,16 @@ class Z extends(i = a.default.PersistedStore) {
       if (t !== m.UnreadSetting.UNSET) return t
     }
     let n = this.getGuildUnreadSetting(e.guild_id);
-    return n !== m.UnreadSetting.UNSET ? n : this.resolvedMessageNotifications(e) === h.UserNotificationSettings.ALL_MESSAGES ? m.UnreadSetting.ALL_MESSAGES : m.UnreadSetting.ONLY_MENTIONS
+    return n !== m.UnreadSetting.UNSET ? n : this.resolvedMessageNotifications(e) === A.UserNotificationSettings.ALL_MESSAGES ? m.UnreadSetting.ALL_MESSAGES : m.UnreadSetting.ONLY_MENTIONS
   }
   isGuildOrCategoryOrChannelMuted(e, t) {
     return this.isMuted(e) || this.isCategoryMuted(e, t) || this.isChannelMuted(e, t)
   }
   allowNoMessages(e) {
-    return this.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id) || this.resolvedMessageNotifications(e) === h.UserNotificationSettings.NO_MESSAGES || this.isOptInEnabled(e.guild_id) && !this.isChannelRecordOrParentOptedIn(e)
+    return this.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id) || this.resolvedMessageNotifications(e) === A.UserNotificationSettings.NO_MESSAGES || this.isOptInEnabled(e.guild_id) && !this.isChannelRecordOrParentOptedIn(e)
   }
   allowAllMessages(e) {
-    return !this.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id) && this.resolvedMessageNotifications(e) === h.UserNotificationSettings.ALL_MESSAGES && (!this.isOptInEnabled(e.guild_id) || this.isChannelRecordOrParentOptedIn(e))
+    return !this.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id) && this.resolvedMessageNotifications(e) === A.UserNotificationSettings.ALL_MESSAGES && (!this.isOptInEnabled(e.guild_id) || this.isChannelRecordOrParentOptedIn(e))
   }
   isGuildCollapsed(e) {
     var t;
@@ -347,7 +347,7 @@ class Z extends(i = a.default.PersistedStore) {
       if (E.hasFlag(t.flags, N.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_ON)) return !0;
       if (E.hasFlag(t.flags, N.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_OFF)) return !1
     }
-    return this.resolvedMessageNotifications(e) === h.UserNotificationSettings.ALL_MESSAGES
+    return this.resolvedMessageNotifications(e) === A.UserNotificationSettings.ALL_MESSAGES
   }
   isOptInEnabled(e) {
     return null != e && (u.default.isFullServerPreview(e) ? u.default.isOptInEnabled(e) : E.hasFlag(this.getGuildFlags(e), N.GuildNotificationSettingsFlags.OPT_IN_CHANNELS_ON))
@@ -419,7 +419,7 @@ class Z extends(i = a.default.PersistedStore) {
   }
   resolveGuildUnreadSetting(e) {
     let t = this.getGuildFlags(e.id);
-    return !J() || E.hasFlag(t, N.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES) ? m.UnreadSetting.ALL_MESSAGES : E.hasFlag(t, N.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS) ? m.UnreadSetting.ONLY_MENTIONS : e.defaultMessageNotifications === h.UserNotificationSettings.ALL_MESSAGES ? m.UnreadSetting.ALL_MESSAGES : m.UnreadSetting.ONLY_MENTIONS
+    return !J() || E.hasFlag(t, N.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES) ? m.UnreadSetting.ALL_MESSAGES : E.hasFlag(t, N.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS) ? m.UnreadSetting.ONLY_MENTIONS : e.defaultMessageNotifications === A.UserNotificationSettings.ALL_MESSAGES ? m.UnreadSetting.ALL_MESSAGES : m.UnreadSetting.ONLY_MENTIONS
   }
   getChannelRecordUnreadSetting(e) {
     return this.getChannelUnreadSetting(e.guild_id, e.id)
@@ -447,14 +447,14 @@ let $ = new Z(o.default, {
       guildId: t,
       settings: n
     } = e;
-    F(t, n)
+    V(t, n)
   },
   USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: function(e) {
     let {
       guildId: t,
       settings: n
     } = e;
-    F(t, n), H(t, n.channel_overrides)
+    V(t, n), H(t, n.channel_overrides)
   },
   USER_GUILD_SETTINGS_CHANNEL_UPDATE: function(e) {
     let {
@@ -481,7 +481,7 @@ let $ = new Z(o.default, {
     let t = new Set;
     for (let n in e.userGuildSettings.entries.forEach(e => {
         !("channel_overrides" in e) && (e.channel_overrides = {}), B(e.guild_id, e), null != e.guild_id && t.add(e.guild_id)
-      }), p) !t.has(n) && V(n, p[n])
+      }), p) !t.has(n) && F(n, p[n])
   },
   CACHE_LOADED: function(e) {
     null != e.userGuildSettings && 0 !== e.userGuildSettings.length && (p = {}, P = {}, U = {}, e.userGuildSettings.forEach(e => {

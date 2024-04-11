@@ -25,8 +25,8 @@ var i = n("859802"),
   T = n("308540"),
   f = n("814550"),
   S = n("93879"),
-  h = n("535321"),
-  A = n("277942"),
+  A = n("535321"),
+  h = n("277942"),
   m = n("974029"),
   N = n("481479"),
   O = n("160696"),
@@ -46,8 +46,8 @@ var i = n("859802"),
   w = n("761529"),
   k = n("308570"),
   B = n("632184"),
-  V = n("414896"),
-  F = n("398856"),
+  F = n("414896"),
+  V = n("398856"),
   x = n("170039"),
   H = n("178695"),
   Y = n("548420"),
@@ -147,8 +147,8 @@ function J(e, t) {
         if ((0, K.default)(e)) return w.default;
         else return W.default
       }
-      if (e.isNSFW()) return A.default;
-      if ((0, K.default)(e)) return h.default;
+      if (e.isNSFW()) return h.default;
+      if ((0, K.default)(e)) return A.default;
       return S.default;
     case X.ChannelTypes.GUILD_FORUM:
       let en = e.isMediaChannel();
@@ -166,14 +166,14 @@ function J(e, t) {
       else return x.default;
     case X.ChannelTypes.GUILD_VOICE:
       if ($) return m.default;
-      if (e.isNSFW()) return F.default;
+      if (e.isNSFW()) return V.default;
       if (J) return j.default;
       if (ee) {
         if ((0, K.default)(e)) return g.default;
-        return q ? c.default : V.default
+        return q ? c.default : F.default
       }
       if (Q) return g.default;
-      if ((0, K.default)(e)) return q ? c.default : V.default;
+      if ((0, K.default)(e)) return q ? c.default : F.default;
       else return q ? _.default : B.default;
     case X.ChannelTypes.GUILD_DIRECTORY:
       return T.default;

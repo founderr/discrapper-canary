@@ -15,8 +15,8 @@ var i = n("735250"),
   T = n("100527"),
   f = n("906732"),
   S = n("812206"),
-  h = n("835473"),
-  A = n("199902"),
+  A = n("835473"),
+  h = n("199902"),
   m = n("271383"),
   N = n("430824"),
   O = n("158776"),
@@ -36,8 +36,8 @@ var i = n("735250"),
   w = n("664202"),
   k = n("228168"),
   B = n("981631"),
-  V = n("616922"),
-  F = n("617538");
+  F = n("616922"),
+  V = n("617538");
 
 function x(e) {
   e.stopPropagation()
@@ -67,8 +67,8 @@ function H(e) {
     status: er,
     isMobile: es,
     isApplicationStreaming: ea
-  } = (0, o.useStateFromStoresObject)([A.default, O.default], () => {
-    let e = null != A.default.getAnyStreamForUser(t.id);
+  } = (0, o.useStateFromStoresObject)([h.default, O.default], () => {
+    let e = null != h.default.getAnyStreamForUser(t.id);
     return {
       activity: O.default.findActivity(t.id, t => {
         let {
@@ -98,7 +98,7 @@ function H(e) {
     }),
     [ec, eE] = r.useState(!1);
   (0, _.default)(() => eE(!0), e_.shouldShow ? 250 : null);
-  let eI = (0, h.useGetOrFetchApplication)(null == en ? void 0 : en.application_id);
+  let eI = (0, A.useGetOrFetchApplication)(null == en ? void 0 : en.application_id);
   return r.useEffect(() => {
     null == j || j(null == Q ? void 0 : Q.current)
   }, [Q, j]), r.useEffect(() => {
@@ -130,7 +130,7 @@ function H(e) {
         has_images: !!(null !== (e = null == r ? void 0 : r.large_image) && void 0 !== e ? e : null == r ? void 0 : r.small_image),
         party_max: null != i && null != i.size ? i.size[1] : void 0,
         party_id: null != i ? i.id : void 0,
-        party_platform: null != i && (0, V.isSpotifyParty)(i.id) ? B.PlatformTypes.SPOTIFY : null,
+        party_platform: null != i && (0, F.isSpotifyParty)(i.id) ? B.PlatformTypes.SPOTIFY : null,
         game_platform: (0, E.default)(en),
         profile_user_status: o,
         is_streaming: ea,
@@ -169,7 +169,7 @@ function H(e) {
             user: t,
             guildId: n,
             profileType: k.UserProfileTypes.POPOUT,
-            className: e_.shouldShow ? F.hasCollectiblesUpsell : void 0,
+            className: e_.shouldShow ? V.hasCollectiblesUpsell : void 0,
             showOutOfBoundaryComponents: ec,
             children: [(0, i.jsx)(G.default, {
               user: t,

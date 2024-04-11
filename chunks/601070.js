@@ -11,8 +11,8 @@ var i, r, s, a, o = n("392711"),
   T = n("944486"),
   f = n("709054"),
   S = n("344185"),
-  h = n("569471"),
-  A = n("819168"),
+  A = n("569471"),
+  h = n("819168"),
   m = n("176505");
 let N = {},
   O = {},
@@ -41,7 +41,7 @@ function y(e) {
       Y(n);
       let e = c.default.getChannel(n);
       if (null == e) continue;
-      let t = h.default.joinTimestamp(n);
+      let t = A.default.joinTimestamp(n);
       if (null != t) {
         let n = {
             channel: e,
@@ -88,7 +88,7 @@ function b(e, t) {
 function G(e, t, n) {
   if (null == t) return !1;
   let i = c.default.getChannel(n),
-    r = h.default.joinTimestamp(n);
+    r = A.default.joinTimestamp(n);
   if (null != i && S.default.isActive(e, t, n)) {
     if (null != r) {
       let e = {
@@ -120,7 +120,7 @@ function k(e) {
 
 function B(e) {
   let t = c.default.getChannel(e.channelId);
-  if (null == t) V();
+  if (null == t) F();
   else {
     let {
       guild_id: e,
@@ -154,7 +154,7 @@ function B(e) {
   }
 }
 
-function V() {
+function F() {
   for (let e in O = {}, C = {}, N)
     for (let t in N[e])
       for (let n in N[e][t]) {
@@ -175,7 +175,7 @@ function V() {
   P()
 }
 
-function F() {
+function V() {
   let e = L;
   if ((L = T.default.getChannelId()) === e) return !1;
   U(e), U(L)
@@ -183,10 +183,10 @@ function F() {
 
 function x(e) {
   let t = I.default.getMentionCount(e.id) > 0,
-    n = I.default.hasUnread(e.id) && (!h.default.isMuted(e.id) || t),
+    n = I.default.hasUnread(e.id) && (!A.default.isMuted(e.id) || t),
     i = e.hasFlag(m.ChannelFlags.PINNED),
     r = e.isActiveThread(),
-    s = r && (0, A.default)(e) > Date.now();
+    s = r && (0, h.default)(e) > Date.now();
   return {
     isUnread: (r || i) && n,
     isRelevant: s || i || n,
@@ -202,7 +202,7 @@ function H(e, t) {
         type: "THREAD_UPDATE",
         channel: t
       })
-    }, (0, A.default)(e) - Date.now() + 1)
+    }, (0, h.default)(e) - Date.now() + 1)
   }(e)
 }
 
@@ -247,7 +247,7 @@ let X = {},
   Z = {};
 class $ extends(i = u.default.Store) {
   initialize() {
-    this.waitFor(S.default, c.default, h.default, I.default), this.syncWith([T.default], F)
+    this.waitFor(S.default, c.default, A.default, I.default), this.syncWith([T.default], V)
   }
   hasActiveJoinedUnreadThreads(e, t) {
     return e in O && t in O[e]
@@ -384,14 +384,14 @@ a = "ActiveJoinedThreadsStore", (s = "displayName") in(r = $) ? Object.definePro
   CHANNEL_ACK: B,
   CHANNEL_LOCAL_ACK: B,
   CHANNEL_SELECT: function(e) {
-    B(e), F()
+    B(e), V()
   },
   PASSIVE_UPDATE_V1: function(e) {
-    null != e.channels && V()
+    null != e.channels && F()
   },
-  WINDOW_FOCUS: V,
-  UPDATE_CHANNEL_DIMENSIONS: V,
-  DRAWER_OPEN: V,
-  DRAWER_CLOSE: V,
-  BULK_ACK: V
+  WINDOW_FOCUS: F,
+  UPDATE_CHANNEL_DIMENSIONS: F,
+  DRAWER_OPEN: F,
+  DRAWER_CLOSE: F,
+  BULK_ACK: F
 })

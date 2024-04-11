@@ -15,8 +15,8 @@ var i = n("735250"),
   T = n("551058"),
   f = n("156361"),
   S = n("695464"),
-  h = n("153124"),
-  A = n("555573"),
+  A = n("153124"),
+  h = n("555573"),
   m = n("10718"),
   N = n("367790"),
   O = n("895924"),
@@ -41,7 +41,7 @@ t.default = r.forwardRef(function(e, t) {
   let {
     channel: n,
     canOnlyUseTextCommands: s
-  } = e, o = r.useRef(!1), l = r.useRef(0), [G, w] = r.useState(0), k = r.useRef(null), [B, V] = r.useState(!1), F = E.ApplicationCommandDiscoveryPickerStore.useStore(e => e.activeCategoryIndex);
+  } = e, o = r.useRef(!1), l = r.useRef(0), [G, w] = r.useState(0), k = r.useRef(null), [B, F] = r.useState(!1), V = E.ApplicationCommandDiscoveryPickerStore.useStore(e => e.activeCategoryIndex);
   r.useEffect(() => {
     (0, _.trackWithMetadata)(D.AnalyticEvents.APPLICATION_COMMAND_BROWSER_OPENED)
   }, []);
@@ -63,7 +63,7 @@ t.default = r.forwardRef(function(e, t) {
     limit: L.DISCOVERY_COMMANDS_QUERY_LIMIT,
     includeFrecency: !0
   }), Q = (0, I.useSynchronizedActiveCategoryIndexForScrollPosition)({
-    activeCategoryIndex: F,
+    activeCategoryIndex: V,
     isScrolling: o,
     listRef: k,
     onActiveCategoryIndexChange: e => {
@@ -100,7 +100,7 @@ t.default = r.forwardRef(function(e, t) {
       } else X(e.id)
     }, [X, K]),
     ee = r.useCallback((e, t, i) => {
-      A.setActiveCommand({
+      h.setActiveCommand({
         channelId: n.id,
         command: e,
         section: t,
@@ -127,7 +127,7 @@ t.default = r.forwardRef(function(e, t) {
       let t = j ? 7 : 0,
         n = W.length + t,
         i = null == G ? 0 : G + e;
-      return i >= n ? i = n - 1 : i < 0 && (i = 0), w(i), V(!0), !0
+      return i >= n ? i = n - 1 : i < 0 && (i = 0), w(i), F(!0), !0
     }
   }), [W.length, Y, j, x, ee, G]);
   let et = r.useCallback(e => {
@@ -185,11 +185,11 @@ t.default = r.forwardRef(function(e, t) {
         section: l,
         onClick: () => ee(a, l, (0, p.getCommandTriggerSection)(s.section)),
         onHover: () => {
-          w(null), V(!1)
+          w(null), F(!1)
         }
       }, o)
     }, [n, Y, ee, x, G]),
-    er = (0, h.useUID)();
+    er = (0, A.useUID)();
   return (0, c.useChannelEditorPopup)(er, !0, (0, f.getAutocompleteRowId)(G)), r.useEffect(() => () => {
     (0, c.dismissChannelEditorPopup)()
   }, []), (0, i.jsxs)(f.default, {
@@ -202,7 +202,7 @@ t.default = r.forwardRef(function(e, t) {
       channel: n,
       sections: x,
       filteredSectionId: K,
-      activeCategoryIndex: F,
+      activeCategoryIndex: V,
       onSectionClick: $,
       applicationCommandListRef: k
     }), (0, i.jsx)(S.default, {

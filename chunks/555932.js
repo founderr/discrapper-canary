@@ -20,7 +20,7 @@ let I = [_.BoostedGuildTiers.NONE, _.BoostedGuildTiers.TIER_1, _.BoostedGuildTie
 function T(e) {
   let {
     guild: t
-  } = e, n = (0, a.useStateFromStores)([o.default], () => o.default.useReducedMotion), [T, f] = r.useState(!1), [S, h] = r.useState(0), A = r.useRef(null), m = Math.min(_.BoostedGuildTiers.TIER_3, t.premiumTier + 1), N = _.AppliedGuildBoostsRequiredForBoostedGuildTier[t.premiumTier], O = _.AppliedGuildBoostsRequiredForBoostedGuildTier[m], p = (t.premiumSubscriberCount - N) / (O - N), R = d.TierMarkerPositions[t.premiumTier], C = d.TierMarkerPositions[m], g = t.premiumTier === _.BoostedGuildTiers.TIER_3, {
+  } = e, n = (0, a.useStateFromStores)([o.default], () => o.default.useReducedMotion), [T, f] = r.useState(!1), [S, A] = r.useState(0), h = r.useRef(null), m = Math.min(_.BoostedGuildTiers.TIER_3, t.premiumTier + 1), N = _.AppliedGuildBoostsRequiredForBoostedGuildTier[t.premiumTier], O = _.AppliedGuildBoostsRequiredForBoostedGuildTier[m], p = (t.premiumSubscriberCount - N) / (O - N), R = d.TierMarkerPositions[t.premiumTier], C = d.TierMarkerPositions[m], g = t.premiumTier === _.BoostedGuildTiers.TIER_3, {
     progressBarFillWidthFactor: L,
     isProgressBarAnimationComplete: D,
     setShouldFireConfetti: v,
@@ -116,17 +116,17 @@ function T(e) {
         className: E.progressBarTrack
       })]
     }), I.map(e => (0, i.jsx)(d.default, {
-      confettiTriggerRef: A,
+      confettiTriggerRef: h,
       guild: t,
       isProgressBarAnimationComplete: D,
-      setConfettiCount: h,
+      setConfettiCount: A,
       setShouldFireConfetti: v,
       tier: e,
       tierMarkerAnimationPosition: y,
       children: (0, l.getTierName)(e)
     }, e)), (0, i.jsx)(u.default, {
       confettiCount: S,
-      confettiTriggerRef: A,
+      confettiTriggerRef: h,
       isFiring: M
     })]
   })
