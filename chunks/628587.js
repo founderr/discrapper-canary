@@ -1,4 +1,5 @@
 "use strict";
 e.exports = {
-  badge: "badge__38d19"
+  badgeDark: "badgeDark__1b20d",
+  badgeLight: "badgeLight__5fbd1"
 }

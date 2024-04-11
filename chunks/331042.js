@@ -21,8 +21,8 @@ var o = r("735250"),
   y = r("1585"),
   S = r("125988"),
   k = r("300284"),
-  v = r("876917"),
-  m = r("642619"),
+  m = r("876917"),
+  v = r("642619"),
   E = r("594174"),
   h = r("318028"),
   x = r("624377"),
@@ -85,8 +85,9 @@ let F = e => {
         children: [(0, o.jsx)(T.default, {
           asset: q ? void 0 : J,
           addGradient: null === (t = N.categoryBannerOverrides[n.categorySkuId]) || void 0 === t ? void 0 : t.addGradient,
-          size: (0, L.getAssetSizeByHeight)(440),
-          className: _.decorationBanner
+          size: (0, L.getAssetSizeByHeight)(880),
+          className: _.decorationBanner,
+          blur: !0
         }), (null == U ? void 0 : U.type) === d.CollectiblesItemType.AVATAR_DECORATION && (0, o.jsx)(f.Avatar, {
           size: f.AvatarSizes.SIZE_120,
           src: B,
@@ -95,7 +96,7 @@ let F = e => {
           "aria-label": n.name
         }), (null == U ? void 0 : U.type) === d.CollectiblesItemType.PROFILE_EFFECT && (0, o.jsx)("div", {
           className: _.profileEffectShopPreview,
-          children: (0, o.jsx)(v.default, {
+          children: (0, o.jsx)(m.default, {
             forCollectedModal: !0,
             profileEffectId: U.id
           })
@@ -125,7 +126,7 @@ let F = e => {
                 analyticsLocations: K
               });
               return
-            }(null == U ? void 0 : U.type) === d.CollectiblesItemType.PROFILE_EFFECT && (0, m.openProfileEffectModal)({
+            }(null == U ? void 0 : U.type) === d.CollectiblesItemType.PROFILE_EFFECT && (0, v.openProfileEffectModal)({
               initialSelectedEffectId: U.id,
               analyticsLocations: K
             })

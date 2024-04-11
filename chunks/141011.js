@@ -18,30 +18,37 @@ t.default = e => {
     addGradient: n = !1,
     className: C,
     style: b,
-    children: p
-  } = e, y = (0, s.useStateFromStores)([c.default], () => c.default.saturation), S = a.useMemo(() => {
+    children: p,
+    blur: y = !1
+  } = e, S = (0, s.useStateFromStores)([c.default], () => c.default.saturation), k = a.useMemo(() => {
     if (null == t) return b;
     let e = (0, u.getCollectiblesAssetURL)(t, {
-      size: r,
-      format: "jpg"
-    });
-    if (1 === y) return {
+        size: r,
+        format: "jpg"
+      }),
+      o = y ? {
+        filter: "blur(2px)",
+        transform: "scale(1.02)"
+      } : {};
+    if (1 === S) return {
       ...b,
       backgroundImage: n ? "url(".concat(e, "), linear-gradient(180deg, rgba(0, 71, 94, 0.6) 5%, rgba(9, 33, 65, 0.6) 95%)") : "url(".concat(e, ")"),
       backgroundBlendMode: "multiply",
-      backgroundSize: "cover"
+      backgroundSize: "cover",
+      ...o
     };
-    let o = (0, d.hexOpacityToRgba)(i.default.unsafe_rawColors.BLACK_500, 1 - y);
+    let a = (0, d.hexOpacityToRgba)(i.default.unsafe_rawColors.BLACK_500, 1 - S);
     return {
       ...b,
-      backgroundImage: "linear-gradient(".concat(o, ", ").concat(o, "), url(").concat(e, ")"),
+      backgroundImage: "linear-gradient(".concat(a, ", ").concat(a, "), url(").concat(e, ")"),
       backgroundBlendMode: "saturation",
-      backgroundSize: "cover"
+      backgroundSize: "cover",
+      ...o
     }
-  }, [y, t, r, n, b]);
+  }, [t, r, S, b, y, n]);
   return (0, o.jsx)("div", {
     className: l()(g.banner, C),
-    style: S,
+    style: k,
     children: p
   })
 }
