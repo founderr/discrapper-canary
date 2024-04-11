@@ -41,7 +41,7 @@ function d(e) {
       }), (0, a.jsx)(i.Heading, {
         variant: "heading-lg/medium",
         className: o.textContainer,
-        children: n.default.Messages.USER_TRIAL_OFFER_ATTRIBUTION_BANNER.format({
+        children: n.default.Messages.REFERRAL_PROGRAM_SUBSCRIBER_HOMER_BANNER.format({
           username: null != (t = s).globalName ? t.globalName : t.username
         })
       }), (0, a.jsx)("img", {

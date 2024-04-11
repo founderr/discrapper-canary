@@ -32,150 +32,150 @@ var i = n("735250"),
   A = n("18376"),
   C = n("847903"),
   g = n("104494"),
-  y = n("639119"),
-  M = n("55610"),
-  b = n("653798"),
-  R = n("553797"),
+  M = n("639119"),
+  y = n("55610"),
+  R = n("653798"),
+  b = n("553797"),
   O = n("927699"),
   L = n("987716"),
   j = n("311821"),
   G = n("459965"),
   D = n("811616"),
-  U = n("251660"),
-  F = n("474936"),
+  F = n("251660"),
+  U = n("474936"),
   w = n("981631"),
   B = n("231338"),
   k = n("689938"),
   H = n("206059");
 
 function W(e) {
-  var t, n, a, _, S, E;
+  var t, n, a, _;
   let {
-    premiumSubscription: N,
-    skuId: A,
-    selectedPlanId: j,
-    setSelectedPlanId: G,
-    priceOptions: W,
-    planOptions: Y,
-    eligibleForMultiMonthPlans: K,
-    referralTrialOfferId: V,
-    subscriptionPeriodEnd: Z,
-    showTotal: z = !0,
-    discountInvoiceItems: J,
-    handleClose: X
+    premiumSubscription: S,
+    skuId: E,
+    selectedPlanId: N,
+    setSelectedPlanId: A,
+    priceOptions: j,
+    planOptions: G,
+    eligibleForMultiMonthPlans: W,
+    referralTrialOfferId: Y,
+    subscriptionPeriodEnd: K,
+    showTotal: V = !0,
+    discountInvoiceItems: Z,
+    handleClose: z
   } = e, {
-    activeSubscription: q,
-    setSelectedPlanId: Q,
-    selectedSkuId: $,
-    selectedPlan: ee,
-    priceOptions: et
+    activeSubscription: J,
+    setSelectedPlanId: X,
+    selectedSkuId: q,
+    selectedPlan: Q,
+    priceOptions: $
   } = (0, p.usePaymentContext)(), {
-    isGift: en,
-    giftRecipient: ei,
-    selectedGiftStyle: es,
-    customGiftMessage: ea,
-    setCustomGiftMessage: el
-  } = (0, f.useGiftContext)(), er = (0, P.getGiftExperience)(ei), eu = en && (0, P.shouldShowCustomGiftExperience)(ei), {
-    confirmUpsellEnabled: eo
+    isGift: ee,
+    giftRecipient: et,
+    selectedGiftStyle: en,
+    customGiftMessage: ei,
+    setCustomGiftMessage: es
+  } = (0, f.useGiftContext)(), ea = (0, P.getGiftExperience)(et), el = ee && (0, P.shouldShowCustomGiftExperience)(et), {
+    confirmUpsellEnabled: er
   } = (0, d.default)({
     location: "PremiumSwitchPlanSelectBody"
   });
-  A = null != A ? A : $, N = null != N ? N : q, l()(void 0 !== N, "should not be undefined");
-  let [ec, ed] = (0, r.useStateFromStoresArray)([I.default], () => [null != N ? I.default.get(N.planId) : null, null != j ? I.default.get(j) : null]), em = (0, y.usePremiumTrialOffer)(V), ef = null == em ? void 0 : em.subscription_trial, ep = (0, g.usePremiumDiscountOffer)(), e_ = null == ep ? void 0 : null === (t = ep.discount) || void 0 === t ? void 0 : t.plan_ids, eS = null != ed ? ed : ee, eI = s.useCallback(e => {
-    null != G ? G(e) : Q(e)
-  }, [G, Q]), eE = null != W ? W : et;
-  l()(null != eE, "Price option has to be set");
-  let eP = null != em && (0, F.SubscriptionTrials)[em.trial_id].skus.includes(A),
-    eT = null != ep && Y.some(e => null == e_ ? void 0 : e_.includes(e)) && null != ep.discount,
-    eN = (0, h.getPrice)(F.SubscriptionPlans.PREMIUM_MONTH_TIER_2, !1, en, eE);
+  E = null != E ? E : q, S = null != S ? S : J, l()(void 0 !== S, "should not be undefined");
+  let [eu, eo] = (0, r.useStateFromStoresArray)([I.default], () => [null != S ? I.default.get(S.planId) : null, null != N ? I.default.get(N) : null]), ec = (0, M.usePremiumTrialOffer)(Y), ed = null == ec ? void 0 : ec.subscription_trial, em = (0, g.usePremiumDiscountOffer)(), ef = null == em ? void 0 : null === (t = em.discount) || void 0 === t ? void 0 : t.plan_ids, ep = null != eo ? eo : Q, e_ = s.useCallback(e => {
+    null != A ? A(e) : X(e)
+  }, [A, X]), eS = null != j ? j : $;
+  l()(null != eS, "Price option has to be set");
+  let eI = null != ec && (0, U.SubscriptionTrials)[ec.trial_id].skus.includes(E),
+    eE = null != em && G.some(e => null == ef ? void 0 : ef.includes(e)) && null != em.discount,
+    eP = (0, h.getPrice)(U.SubscriptionPlans.PREMIUM_MONTH_TIER_2, !1, ee, eS);
   s.useEffect(() => {
-    K && v.default.trackExposure({
+    W && v.default.trackExposure({
       location: "5f89bb_1"
     })
-  }, [K]);
-  let eh = (null == eS ? void 0 : eS.id) != null && Y.includes(eS.id);
+  }, [W]);
+  let eT = (null == ep ? void 0 : ep.id) != null && G.includes(ep.id);
   s.useEffect(() => {
-    if (!eh) {
-      if (null == ec || en) eI(Y[0]);
-      else if (null != ec) {
-        let e = Y.find(e => e !== ec.id);
-        null != e && eI(e)
+    if (!eT) {
+      if (null == eu || ee) e_(G[0]);
+      else if (null != eu) {
+        let e = G.find(e => e !== eu.id);
+        null != e && e_(e)
       }
     }
-  }, [eh, en, Y, ec, eI]);
-  let ex = !eu && (en || !eP && !eT) && eh && z,
-    ev = (0, u.useRadioGroup)(),
-    eA = (null == eS ? void 0 : eS.id) != null ? (0, h.getPrice)(eS.id, !1, en, eE) : void 0,
+  }, [eT, ee, G, eu, e_]);
+  let eN = !el && (ee || !eI && !eE) && eT && V,
+    eh = (0, u.useRadioGroup)(),
+    ex = (null == ep ? void 0 : ep.id) != null ? (0, h.getPrice)(ep.id, !1, ee, eS) : void 0,
     {
-      ipCountryCode: eC
+      ipCountryCode: ev
     } = (0, C.default)(),
-    eg = "HR" === eC && null != eA && eA.currency === B.CurrencyCodes.EUR,
-    ey = (0, h.isPrepaidPaymentSource)(eE.paymentSourceId),
-    eM = (null == ef ? void 0 : ef.interval) === F.SubscriptionIntervalTypes.DAY ? k.default.Messages.BILLING_TRIAL_2_WEEK_PERIOD : k.default.Messages.BILLING_TRIAL_30_DAY_PERIOD,
-    eb = !en && (eT || null != ef && eP && null != Z),
-    eR = null == J ? void 0 : null === (_ = J.find(e => e.subscriptionPlanId === F.SubscriptionPlans.PREMIUM_MONTH_TIER_2)) || void 0 === _ ? void 0 : null === (a = _.discounts) || void 0 === a ? void 0 : null === (n = a.find(e => e.type === c.InvoiceDiscountTypes.SUBSCRIPTION_PLAN)) || void 0 === n ? void 0 : n.amount;
+    eA = "HR" === ev && null != ex && ex.currency === B.CurrencyCodes.EUR,
+    eC = (0, h.isPrepaidPaymentSource)(eS.paymentSourceId),
+    eg = (null == ed ? void 0 : ed.interval) === U.SubscriptionIntervalTypes.DAY ? k.default.Messages.BILLING_TRIAL_2_WEEK_PERIOD : k.default.Messages.BILLING_TRIAL_30_DAY_PERIOD,
+    eM = !ee && (eE || null != ed && eI && null != K),
+    ey = null == Z ? void 0 : null === (_ = Z.find(e => e.subscriptionPlanId === U.SubscriptionPlans.PREMIUM_MONTH_TIER_2)) || void 0 === _ ? void 0 : null === (a = _.discounts) || void 0 === a ? void 0 : null === (n = a.find(e => e.type === c.InvoiceDiscountTypes.SUBSCRIPTION_PLAN)) || void 0 === n ? void 0 : n.amount;
   return (0, i.jsx)(i.Fragment, {
     children: (0, i.jsxs)("div", {
-      className: eu ? H.stepBodyCustomGift : H.stepBody,
+      className: el ? H.stepBodyCustomGift : H.stepBody,
       children: [(0, i.jsxs)("div", {
-        className: eu ? H.bodyColumnMiddle : void 0,
-        children: [(0, i.jsx)(M.default, {
+        className: el ? H.bodyColumnMiddle : void 0,
+        children: [(0, i.jsx)(y.default, {
           fromBoostCancelModal: !1,
           className: H.legacyPricingNotice
-        }), eu && null != es && (0, i.jsx)(L.GiftAnimationOptions, {})]
+        }), el && null != en && (0, i.jsx)(L.GiftAnimationOptions, {})]
       }), (0, i.jsxs)("div", {
-        className: eu ? H.bodyColumnRight : void 0,
-        children: [(0, i.jsx)(U.SendGiftToUser, {
-          giftRecipient: ei
+        className: el ? H.bodyColumnRight : void 0,
+        children: [(0, i.jsx)(F.SendGiftToUser, {
+          giftRecipient: et
         }), (() => {
-          if (er === P.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null != el) return (0, i.jsx)(O.default, {
+          if (ea === P.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null != es) return (0, i.jsx)(O.default, {
             sectionTitle: k.default.Messages.GIFT_OPTIONAL_MESSAGE,
-            onTextChange: e => el(e),
-            pendingText: ea,
-            currentText: ea
+            onTextChange: e => es(e),
+            pendingText: ei,
+            currentText: ei
           })
-        })(), null != ec && !en && (0, i.jsx)("div", {
+        })(), null != eu && !ee && (0, i.jsx)("div", {
           className: H.bodyText,
           children: function(e, t) {
             let n = k.default.Messages.BILLING_SWITCH_PLAN_DOWNGRADE_BODY_MONTH,
               i = k.default.Messages.BILLING_SWITCH_PLAN_UPGRADE_BODY_TIER_1_YEAR,
               s = (() => {
                 switch (e.interval) {
-                  case F.SubscriptionIntervalTypes.YEAR:
+                  case U.SubscriptionIntervalTypes.YEAR:
                     return n;
-                  case F.SubscriptionIntervalTypes.MONTH:
+                  case U.SubscriptionIntervalTypes.MONTH:
                   default:
                     return i
                 }
               })(),
               a = e.skuId;
             switch (t) {
-              case F.PremiumSubscriptionSKUs.TIER_0:
+              case U.PremiumSubscriptionSKUs.TIER_0:
                 switch (a) {
-                  case F.PremiumSubscriptionSKUs.TIER_1:
+                  case U.PremiumSubscriptionSKUs.TIER_1:
                     return k.default.Messages.BILLING_SWITCH_PLAN_DOWNGRADE_BODY_TIER_1_TO_TIER_0;
-                  case F.PremiumSubscriptionSKUs.TIER_2:
+                  case U.PremiumSubscriptionSKUs.TIER_2:
                     return k.default.Messages.BILLING_SWITCH_PLAN_DOWNGRADE_BODY_TIER_0;
                   default:
                     return s
                 }
-              case F.PremiumSubscriptionSKUs.TIER_1:
+              case U.PremiumSubscriptionSKUs.TIER_1:
                 switch (a) {
-                  case F.PremiumSubscriptionSKUs.TIER_0:
+                  case U.PremiumSubscriptionSKUs.TIER_0:
                     return k.default.Messages.BILLING_SWITCH_PLAN_UPGRADE_BODY_TIER_1;
-                  case F.PremiumSubscriptionSKUs.TIER_2:
+                  case U.PremiumSubscriptionSKUs.TIER_2:
                     return k.default.Messages.BILLING_SWITCH_PLAN_DOWNGRADE_BODY_TIER_1;
                   default:
                     return s
                 }
-              case F.PremiumSubscriptionSKUs.TIER_2:
+              case U.PremiumSubscriptionSKUs.TIER_2:
                 switch (a) {
-                  case F.PremiumSubscriptionSKUs.TIER_0:
-                  case F.PremiumSubscriptionSKUs.TIER_1:
+                  case U.PremiumSubscriptionSKUs.TIER_0:
+                  case U.PremiumSubscriptionSKUs.TIER_1:
                     return k.default.Messages.BILLING_SWITCH_PLAN_UPGRADE_BODY_TIER_2;
-                  case F.PremiumSubscriptionSKUs.TIER_2:
-                    return e.interval === F.SubscriptionIntervalTypes.MONTH ? k.default.Messages.BILLING_SWITCH_PLAN_UPGRADE_BODY_TIER_2_YEAR.format({
-                      numFreeGuildSubscriptions: F.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM
+                  case U.PremiumSubscriptionSKUs.TIER_2:
+                    return e.interval === U.SubscriptionIntervalTypes.MONTH ? k.default.Messages.BILLING_SWITCH_PLAN_UPGRADE_BODY_TIER_2_YEAR.format({
+                      numFreeGuildSubscriptions: U.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM
                     }) : s;
                   default:
                     return s
@@ -183,73 +183,83 @@ function W(e) {
               default:
                 return s
             }
-          }(ec, A)
-        }), (S = eP, E = eT, eu ? (0, i.jsx)(u.FormTitle, {
-          children: k.default.Messages.GIFT_SUBSCRIPTION_SELECTION
-        }) : eb ? S ? (0, i.jsxs)("div", {
-          children: [(0, i.jsx)(u.Text, {
-            variant: "text-sm/normal",
-            className: H.trialPlanSelectHeader,
-            children: k.default.Messages.BILLING_TRIAL_PAYMENT_MODAL_INFO.format({
-              trialEnd: Z,
-              trialPeriod: eM
+          }(eu, E)
+        }), ((e, t, n) => {
+          if (el) return (0, i.jsx)(u.FormTitle, {
+            children: k.default.Messages.GIFT_SUBSCRIPTION_SELECTION
+          });
+          if (!eM) return (0, i.jsx)("div", {
+            className: H.selectPlanChooseTitle,
+            children: k.default.Messages.BILLING_SWITCH_PLAN_CHOOSE_ONE
+          });
+          if (t) {
+            let t = (null == e ? void 0 : e.trial_id) === U.PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
+            return (0, i.jsxs)("div", {
+              children: [(0, i.jsx)(u.Text, {
+                variant: "text-sm/normal",
+                className: H.trialPlanSelectHeader,
+                children: t ? k.default.Messages.REFERRAL_PROGRAM_PAYMENT_MODAL_COPY.format({
+                  endDate: K
+                }) : k.default.Messages.BILLING_TRIAL_PAYMENT_MODAL_INFO.format({
+                  trialEnd: K,
+                  trialPeriod: eg
+                })
+              }), (0, i.jsx)("hr", {
+                className: H.planSelectSeparator
+              })]
             })
-          }), (0, i.jsx)("hr", {
-            className: H.planSelectSeparator
-          })]
-        }) : E && null != eR && null != eN ? (0, i.jsxs)("div", {
-          children: [(0, i.jsx)(u.Text, {
-            variant: "text-sm/normal",
-            className: H.trialPlanSelectHeader,
-            children: k.default.Messages.BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC.format({
-              numMonths: null == ep ? void 0 : ep.discount.user_usage_limit,
-              discountedPrice: (0, x.formatPrice)(eN.amount - eR, eN.currency),
-              regularPrice: (0, x.formatPrice)(eN.amount, eN.currency)
-            })
-          }), (0, i.jsx)("hr", {
-            className: H.planSelectSeparator
-          })]
-        }) : void 0 : (0, i.jsx)("div", {
-          className: H.selectPlanChooseTitle,
-          children: k.default.Messages.BILLING_SWITCH_PLAN_CHOOSE_ONE
-        })), (0, i.jsx)("div", {
-          ...ev,
-          children: Y.map(e => (0, i.jsx)(D.default, {
+          }
+          if (n && null != ey && null != eP) return (0, i.jsxs)("div", {
+            children: [(0, i.jsx)(u.Text, {
+              variant: "text-sm/normal",
+              className: H.trialPlanSelectHeader,
+              children: k.default.Messages.BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC.format({
+                numMonths: null == em ? void 0 : em.discount.user_usage_limit,
+                discountedPrice: (0, x.formatPrice)(eP.amount - ey, eP.currency),
+                regularPrice: (0, x.formatPrice)(eP.amount, eP.currency)
+              })
+            }), (0, i.jsx)("hr", {
+              className: H.planSelectSeparator
+            })]
+          })
+        })(ec, eI, eE), (0, i.jsx)("div", {
+          ...eh,
+          children: G.map(e => (0, i.jsx)(D.default, {
             planId: e,
-            premiumSubscription: en ? null : null != N ? N : null,
-            selectPlan: eI,
-            selected: (null == eS ? void 0 : eS.id) === e,
-            priceOptions: eE,
-            shouldShowUpdatedPaymentModal: eb,
-            isEligibleForDiscount: eT,
-            discountAmountOff: eR
+            premiumSubscription: ee ? null : null != S ? S : null,
+            selectPlan: e_,
+            selected: (null == ep ? void 0 : ep.id) === e,
+            priceOptions: eS,
+            shouldShowUpdatedPaymentModal: eM,
+            isEligibleForDiscount: eE,
+            discountAmountOff: ey
           }, e))
         }), (0, i.jsx)("div", {
-          children: ex && null != eS && null != eA ? (0, i.jsxs)("div", {
+          children: eN && null != ep && null != ex ? (0, i.jsxs)("div", {
             children: [(0, i.jsx)("div", {
               className: H.selectPlanDivider
-            }), (0, i.jsx)(b.PremiumInvoiceTableTotalRow, {
+            }), (0, i.jsx)(R.PremiumInvoiceTableTotalRow, {
               label: k.default.Messages.BILLING_PAYMENT_BREAKDOWN_TOTAL,
-              value: (0, i.jsx)(R.default, {
-                price: eA.amount,
-                currency: eA.currency,
-                intervalType: en ? null : eS.interval,
-                intervalCount: eS.intervalCount,
-                isPrepaidPaymentSource: ey
+              value: (0, i.jsx)(b.default, {
+                price: ex.amount,
+                currency: ex.currency,
+                intervalType: ee ? null : ep.interval,
+                intervalCount: ep.intervalCount,
+                isPrepaidPaymentSource: eC
               }),
               className: H.selectPlanTotalRow
             })]
           }) : null
-        }), eg && (0, i.jsx)(o.default, {
+        }), eA && (0, i.jsx)(o.default, {
           message: k.default.Messages.LOCALIZED_PRICING_HRK_EURO_WARNING.format({
-            kunaPriceWithCurrency: (0, x.formatPrice)(7.5345 * eA.amount, B.CurrencyCodes.HRK)
+            kunaPriceWithCurrency: (0, x.formatPrice)(7.5345 * ex.amount, B.CurrencyCodes.HRK)
           })
-        }), !en && !eb && z && (0, i.jsx)(o.default, {
+        }), !ee && !eM && V && (0, i.jsx)(o.default, {
           message: k.default.Messages.BILLING_FINAL_PRICE_MAY_CHANGE.format({
             documentationLink: T.default.getArticleURL(w.HelpdeskArticles.LOCALIZED_PRICING)
           })
-        }), eo && en && (0, i.jsx)(m.default, {
-          onClose: X
+        }), er && ee && (0, i.jsx)(m.default, {
+          onClose: z
         })]
       })]
     })
