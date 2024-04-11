@@ -24,8 +24,14 @@ n.r(t), n.d(t, {
   isEntryExpired: function() {
     return p
   },
+  isEntryMarathon: function() {
+    return g
+  },
   isEntryNew: function() {
     return m
+  },
+  isEntryResurrected: function() {
+    return S
   }
 });
 var a = n("913527"),
@@ -116,4 +122,14 @@ function E(e) {
 function C(e) {
   let t = e.traits.find(e => e.type === s.ContentInventoryTraitType.AGGREGATE_RANGE);
   return null == t ? void 0 : t.range
+}
+
+function g(e) {
+  let t = e.traits.find(e => e.type === s.ContentInventoryTraitType.MARATHON);
+  return null == t ? void 0 : t.marathon
+}
+
+function S(e) {
+  let t = e.traits.find(e => e.type === s.ContentInventoryTraitType.RESURRECTED);
+  return null == t ? void 0 : t.resurrected
 }

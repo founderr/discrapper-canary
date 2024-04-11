@@ -25,6 +25,12 @@ let d = (e, t) => ({
     return (0, i.isEntryNew)(e) && n.push({
       iconPath: o.NEW_GAME_ICON_PATH,
       text: u.default.Messages.MEMBER_LIST_CONTENT_FEED_FIRST_TIME
+    }), (0, i.isEntryResurrected)(e) && n.push({
+      iconPath: o.RESURRECTED_ICON_PATH,
+      text: u.default.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED
+    }), (0, i.isEntryMarathon)(e) && n.push({
+      iconPath: o.TIMER_ICON_PATH,
+      text: u.default.Messages.MEMBER_LIST_CONTENT_FEED_MARATHON
     }), n
   },
   f = (e, t) => {
