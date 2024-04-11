@@ -15,7 +15,7 @@ n.r(t), n.d(t, {
 });
 var a, s, l, i, r = n("652874"),
   o = n("308083");
-(a = l || (l = {})).DISCOVERY = "discovery", a.PLAYSTYLE = "playstyle", (s = i || (i = {})).VALORANT = "valorant", s.GENSHIN = "genshin";
+(a = l || (l = {})).DISCOVERY = "discovery", a.PLAYSTYLE = "playstyle", a.PRIMETIME = "primetime", (s = i || (i = {})).VALORANT = "valorant", s.GENSHIN = "genshin";
 let u = (0, r.default)(e => ({
   mode: "discovery",
   game: "valorant",
@@ -28,7 +28,7 @@ let u = (0, r.default)(e => ({
     name: "Very Casual"
   },
   selectedTraits: [],
-  selectedPrimetime: null,
+  selectedPrimetimes: [],
   setMode: t => e({
     mode: t
   }),
@@ -45,7 +45,7 @@ let u = (0, r.default)(e => ({
     selectedTraits: t
   }),
   setSelectedPrimetime: t => e({
-    selectedPrimetime: t
+    selectedPrimetimes: t
   })
 }));
 
@@ -53,12 +53,11 @@ function d(e) {
   var t;
   let n = e.selectedGames.map(e => e.applicationId),
     a = null === (t = e.selectedPlaystyle) || void 0 === t ? void 0 : t.id,
-    s = e.selectedTraits,
-    l = e.selectedPrimetime;
+    s = e.selectedTraits;
   return {
     games: n,
     playstyle: a,
     traits: s,
-    primetime: null != l ? l : void 0
+    primetimes: e.selectedPrimetimes
   }
 }

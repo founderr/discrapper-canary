@@ -4,89 +4,91 @@ var a = n("735250");
 n("470079");
 var s = n("803997"),
   l = n.n(s),
-  i = n("481060"),
-  r = n("465670"),
-  o = n("729285"),
-  u = n("227120"),
-  d = n("924801"),
-  c = n("571245"),
-  f = n("308083"),
-  E = n("689938"),
-  h = n("597338");
+  i = n("153832"),
+  r = n("481060"),
+  o = n("465670"),
+  u = n("729285"),
+  d = n("227120"),
+  c = n("924801"),
+  f = n("571245"),
+  E = n("308083"),
+  h = n("689938"),
+  _ = n("597338");
 t.default = e => {
   let {
     handleUpdate: t,
     selectedTimes: n,
     error: s
-  } = e, _ = (e, a) => {
+  } = e, C = (e, a) => {
     let s = [...n];
     s[e].day = a, t({
       primetime: s
     })
-  }, C = (e, a) => {
+  }, m = (e, a) => {
     let s = [...n];
     s[e].time = a, t({
       primetime: s
     })
-  }, m = e => {
+  }, S = e => {
     let a = [...n];
     a.splice(e, 1), t({
       primetime: a
     })
-  }, S = (0, d.getDayOptions)();
+  }, I = (0, c.getDayOptions)();
   return (0, a.jsxs)("div", {
-    className: h.slideContent,
-    children: [(0, a.jsx)(i.Heading, {
+    className: _.slideContent,
+    children: [(0, a.jsx)(r.Heading, {
       variant: "heading-xxl/medium",
-      className: h.title,
-      children: E.default.Messages.CLAN_SETUP_PRIMETIME_TITLE
-    }), (0, a.jsx)(i.Text, {
+      className: _.title,
+      children: h.default.Messages.CLAN_SETUP_PRIMETIME_TITLE
+    }), (0, a.jsx)(r.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: h.subtitle,
-      children: E.default.Messages.CLAN_SETUP_PRIMETIME_SUBTITLE
-    }), null != s && (0, a.jsx)(i.Text, {
+      className: _.subtitle,
+      children: h.default.Messages.CLAN_SETUP_PRIMETIME_SUBTITLE
+    }), null != s && (0, a.jsx)(r.Text, {
       variant: "text-sm/normal",
       color: "status-danger",
-      className: h.errorText,
+      className: _.errorText,
       children: s
     }), (0, a.jsxs)("div", {
-      className: h.timeSelection,
+      className: _.timeSelection,
       children: [n.map((e, t) => (0, a.jsxs)("div", {
-        className: h.timeSelectorRow,
-        children: [(0, a.jsx)(i.SearchableSelect, {
+        className: _.timeSelectorRow,
+        children: [(0, a.jsx)(r.SearchableSelect, {
           value: e.day,
-          options: S,
-          placeholder: E.default.Messages.CLAN_PRIMETIME_PLACEHOLDER,
-          onChange: e => _(t, e)
-        }), (0, a.jsx)(c.default, {
-          value: e.time,
+          options: I,
+          placeholder: h.default.Messages.CLAN_PRIMETIME_PLACEHOLDER,
           onChange: e => C(t, e)
-        }), t > 0 && (0, a.jsx)(i.Clickable, {
-          onClick: () => m(t),
-          children: (0, a.jsx)(r.default, {
-            className: l()(h.icon, h.clickable)
+        }), (0, a.jsx)(f.default, {
+          value: e.time,
+          onChange: e => m(t, e)
+        }), t > 0 && (0, a.jsx)(r.Clickable, {
+          onClick: () => S(t),
+          children: (0, a.jsx)(o.default, {
+            className: l()(_.icon, _.clickable)
           })
         })]
-      }, "time-".concat(t))), n.length < f.MAX_GAME_HOURS && (0, a.jsxs)(i.Clickable, {
-        className: l()(h.timeSelectorRow, h.clickable),
+      }, e.id)), n.length < E.MAX_GAME_HOURS && (0, a.jsxs)(r.Clickable, {
+        className: l()(_.timeSelectorRow, _.clickable),
         onClick: () => {
-          if (n.length >= f.MAX_GAME_HOURS) return;
+          if (n.length >= E.MAX_GAME_HOURS) return;
           let e = [...n];
           e.push({
+            id: i.default.v4(),
             day: void 0,
-            time: u.ExtendedTimeOptions.MORNING
+            time: d.ExtendedTimeOptions.MORNING
           }), t({
             primetime: e
           })
         },
-        children: [(0, a.jsx)(o.default, {
-          className: l()(h.icon, h.clickable)
-        }), (0, a.jsx)(i.Text, {
+        children: [(0, a.jsx)(u.default, {
+          className: l()(_.icon, _.clickable)
+        }), (0, a.jsx)(r.Text, {
           variant: "text-sm/medium",
           color: "none",
-          className: h.addText,
-          children: E.default.Messages.CLAN_SETUP_PRIMETIME_ADD
+          className: _.addText,
+          children: h.default.Messages.CLAN_SETUP_PRIMETIME_ADD
         })]
       })]
     })]

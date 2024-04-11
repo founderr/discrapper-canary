@@ -1,102 +1,107 @@
 "use strict";
-n.r(t), n("47120");
+n.r(t), n("47120"), n("653041");
 var a = n("735250"),
   s = n("470079"),
   l = n("803997"),
   i = n.n(l),
   r = n("718017"),
-  o = n("143927"),
-  u = n("828065"),
-  d = n("149020"),
-  c = n("509633"),
-  f = n("670900"),
-  E = n("738232"),
-  h = n("376644"),
-  _ = n("481060"),
-  C = n("442837"),
-  m = n("441674"),
-  S = n("229765"),
-  I = n("231467"),
-  p = n("10473"),
-  T = n("207796"),
-  g = n("980721"),
-  A = n("308083"),
-  N = n("689938"),
-  v = n("24953");
+  o = n("153832"),
+  u = n("143927"),
+  d = n("828065"),
+  c = n("149020"),
+  f = n("509633"),
+  E = n("670900"),
+  h = n("738232"),
+  _ = n("376644"),
+  C = n("481060"),
+  m = n("442837"),
+  S = n("924801"),
+  I = n("571245"),
+  T = n("441674"),
+  p = n("465670"),
+  g = n("729285"),
+  A = n("229765"),
+  N = n("231467"),
+  v = n("10473"),
+  R = n("207796"),
+  O = n("980721"),
+  L = n("308083"),
+  M = n("689938"),
+  P = n("24953");
 
-function R() {
-  let [e, t, n, l] = (0, T.useClanDiscoveryUIStore)(e => [e.selectedGames, e.setSelectedGames, e.game, e.setGame], o.default), i = s.useCallback(() => {
-    null != n && null != l && (n === T.ClanDiscoveryGame.GENSHIN ? (l(T.ClanDiscoveryGame.VALORANT), t([{
-      applicationId: A.VALORANT_ID,
+function y() {
+  let [e, t, n, l] = (0, R.useClanDiscoveryUIStore)(e => [e.selectedGames, e.setSelectedGames, e.game, e.setGame], u.default), i = s.useCallback(() => {
+    null != n && null != l && (n === R.ClanDiscoveryGame.GENSHIN ? (l(R.ClanDiscoveryGame.VALORANT), t([{
+      applicationId: L.VALORANT_ID,
       name: "Valorant"
-    }])) : (l(T.ClanDiscoveryGame.GENSHIN), t([{
-      applicationId: A.GENSHIN_ID,
+    }])) : (l(R.ClanDiscoveryGame.GENSHIN), t([{
+      applicationId: L.GENSHIN_ID,
       name: "Genshin Impact"
     }])))
   }, [n, l, t]);
-  return (0, a.jsxs)(_.Button, {
-    className: v.filterPill,
-    innerClassName: v.filterPillContents,
-    look: _.ButtonLooks.OUTLINED,
-    color: _.ButtonColors.CUSTOM,
+  return (0, a.jsxs)(C.Button, {
+    className: P.filterPill,
+    innerClassName: P.filterPillContents,
+    look: C.ButtonLooks.OUTLINED,
+    color: C.ButtonColors.CUSTOM,
     onClick: i,
-    children: [(0, a.jsx)(d.GameControllerIcon, {
-      className: v.filterPillIcon,
+    children: [(0, a.jsx)(c.GameControllerIcon, {
+      className: P.filterPillIcon,
       color: "currentColor"
-    }), (0, a.jsx)(_.Text, {
+    }), (0, a.jsx)(C.Text, {
       variant: "text-xs/medium",
       color: "none",
-      children: N.default.Messages.CLAN_DISCOVERY_GAME_FILTER.format({
+      children: M.default.Messages.CLAN_DISCOVERY_GAME_FILTER.format({
         count: e.length
       })
     })]
   })
 }
 
-function O() {
-  let e = s.useMemo(A.getPlaystyleOptions, []),
+function x() {
+  let e = s.useMemo(L.getPlaystyleOptions, []),
     {
       playstyle: t,
       setMode: n
-    } = (0, T.useClanDiscoveryUIStore)(e => ({
+    } = (0, R.useClanDiscoveryUIStore)(e => ({
       playstyle: e.selectedPlaystyle,
       setMode: e.setMode
-    }), o.default),
+    }), u.default),
     l = e[t.id],
     i = s.useCallback(() => {
-      n(T.ClanDiscoveryMode.PLAYSTYLE)
+      n(R.ClanDiscoveryMode.PLAYSTYLE)
     }, [n]),
     r = null == l ? null : (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(_.Heading, {
+      children: [(0, a.jsx)(C.Heading, {
         variant: "heading-xxl/medium",
         children: l.emoji
       }), (0, a.jsxs)("div", {
-        children: [(0, a.jsx)(_.Heading, {
+        children: [(0, a.jsx)(C.Heading, {
           variant: "heading-md/medium",
           children: l.title
-        }), (0, a.jsx)(_.Text, {
+        }), (0, a.jsx)(C.Text, {
           variant: "text-xs/normal",
           children: l.subtitle
         })]
       })]
     });
-  return (0, a.jsx)(_.Tooltip, {
+  return (0, a.jsx)(C.Tooltip, {
     text: r,
     position: "bottom",
     "aria-label": t.name,
-    tooltipClassName: v.filterTooltip,
-    tooltipContentClassName: v.filterTooltipContent,
-    children: e => (0, a.jsxs)(_.Button, {
+    tooltipClassName: P.filterTooltip,
+    tooltipContentClassName: P.filterTooltipContent,
+    children: e => (0, a.jsxs)(C.Button, {
       ...e,
-      className: v.filterPill,
-      innerClassName: v.filterPillContents,
-      look: _.ButtonLooks.OUTLINED,
-      color: _.ButtonColors.CUSTOM,
+      className: P.filterPill,
+      innerClassName: P.filterPillContents,
+      look: C.ButtonLooks.OUTLINED,
+      color: C.ButtonColors.CUSTOM,
       onClick: i,
-      children: [(0, a.jsx)(E.ReactionIcon, {
-        className: v.filterPillIcon,
+      children: [(0, a.jsx)(h.ReactionIcon, {
+        className: P.filterPillIcon,
         color: "currentColor"
-      }), (0, a.jsx)(_.Text, {
+      }), (0, a.jsx)(C.Text, {
         variant: "text-xs/medium",
         color: "none",
         children: t.name
@@ -105,18 +110,18 @@ function O() {
   })
 }
 
-function L() {
-  let e = (0, T.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default);
-  return null == e ? null : (0, a.jsxs)(_.Button, {
-    className: v.filterPill,
-    innerClassName: v.filterPillContents,
-    look: _.ButtonLooks.OUTLINED,
-    color: _.ButtonColors.CUSTOM,
+function D() {
+  let e = (0, R.useClanDiscoveryUIStore)(e => e.selectedTraits, u.default);
+  return null == e ? null : (0, a.jsxs)(C.Button, {
+    className: P.filterPill,
+    innerClassName: P.filterPillContents,
+    look: C.ButtonLooks.OUTLINED,
+    color: C.ButtonColors.CUSTOM,
     onClick: () => !1,
-    children: [(0, a.jsx)(h.TagIcon, {
-      className: v.filterPillIcon,
+    children: [(0, a.jsx)(_.TagIcon, {
+      className: P.filterPillIcon,
       color: "currentColor"
-    }), (0, a.jsx)(_.Text, {
+    }), (0, a.jsx)(C.Text, {
       variant: "text-xs/medium",
       color: "none",
       children: "".concat(e.length, " Traits")
@@ -124,38 +129,40 @@ function L() {
   })
 }
 
-function M() {
-  var e;
-  let t = (0, T.useClanDiscoveryUIStore)(e => e.selectedPrimetime, o.default);
-  return (0, a.jsxs)(_.Button, {
-    className: v.filterPill,
-    innerClassName: v.filterPillContents,
-    look: _.ButtonLooks.OUTLINED,
-    color: _.ButtonColors.CUSTOM,
-    onClick: () => !1,
-    children: [(0, a.jsx)(u.ClockIcon, {
-      className: v.filterPillIcon,
+function b() {
+  let e = (0, R.useClanDiscoveryUIStore)(e => e.setMode, u.default),
+    t = s.useCallback(() => {
+      e(R.ClanDiscoveryMode.PRIMETIME)
+    }, [e]);
+  return (0, a.jsxs)(C.Button, {
+    className: P.filterPill,
+    innerClassName: P.filterPillContents,
+    look: C.ButtonLooks.OUTLINED,
+    color: C.ButtonColors.CUSTOM,
+    onClick: t,
+    children: [(0, a.jsx)(d.ClockIcon, {
+      className: P.filterPillIcon,
       color: "currentColor"
-    }), (0, a.jsx)(_.Text, {
+    }), (0, a.jsx)(C.Text, {
       variant: "text-xs/medium",
       color: "none",
-      children: null !== (e = null == t ? void 0 : t.start) && void 0 !== e ? e : N.default.Messages.CLAN_DISCOVERY_PRIMETIME_FILTER_EMPTY
+      children: M.default.Messages.CLAN_DISCOVERY_PRIMETIME_FILTER
     })]
   })
 }
 
-function P() {
-  let e = (0, C.useStateFromStoresArray)([p.default], () => p.default.getFavoriteClans(), []);
-  return (0, a.jsxs)(_.Button, {
-    className: v.filterPillSmall,
-    innerClassName: v.filterPillContents,
-    look: _.ButtonLooks.OUTLINED,
-    color: _.ButtonColors.CUSTOM,
+function U() {
+  let e = (0, m.useStateFromStoresArray)([v.default], () => v.default.getFavoriteClans(), []);
+  return (0, a.jsxs)(C.Button, {
+    className: P.filterPillSmall,
+    innerClassName: P.filterPillContents,
+    look: C.ButtonLooks.OUTLINED,
+    color: C.ButtonColors.CUSTOM,
     onClick: () => !1,
-    children: [(0, a.jsx)(c.HeartIcon, {
-      className: v.filterPillIcon,
+    children: [(0, a.jsx)(f.HeartIcon, {
+      className: P.filterPillIcon,
       color: "currentColor"
-    }), (0, a.jsx)(_.Text, {
+    }), (0, a.jsx)(C.Text, {
       variant: "text-xs/medium",
       color: "none",
       children: e.length
@@ -163,114 +170,197 @@ function P() {
   })
 }
 
-function y() {
-  return (0, a.jsx)(_.Button, {
-    className: v.filterPillSmall,
-    innerClassName: v.filterPillContents,
-    look: _.ButtonLooks.OUTLINED,
-    color: _.ButtonColors.CUSTOM,
+function j() {
+  return (0, a.jsx)(C.Button, {
+    className: P.filterPillSmall,
+    innerClassName: P.filterPillContents,
+    look: C.ButtonLooks.OUTLINED,
+    color: C.ButtonColors.CUSTOM,
     onClick: () => !1,
-    children: (0, a.jsx)(f.MagnifyingGlassIcon, {
-      className: v.filterPillIcon,
+    children: (0, a.jsx)(E.MagnifyingGlassIcon, {
+      className: P.filterPillIcon,
       color: "currentColor"
     })
   })
 }
 
-function x() {
+function G() {
   return (0, a.jsxs)("div", {
-    className: v.toolbar,
+    className: P.toolbar,
     children: [(0, a.jsxs)("div", {
-      className: v.preferences,
-      children: [(0, a.jsx)(R, {}), (0, a.jsx)(O, {}), (0, a.jsx)(L, {}), (0, a.jsx)(M, {})]
+      className: P.preferences,
+      children: [(0, a.jsx)(y, {}), (0, a.jsx)(x, {}), (0, a.jsx)(D, {}), (0, a.jsx)(b, {})]
     }), (0, a.jsxs)("div", {
-      className: v.actions,
-      children: [(0, a.jsx)(P, {}), (0, a.jsx)(y, {})]
+      className: P.actions,
+      children: [(0, a.jsx)(U, {}), (0, a.jsx)(j, {})]
     })]
   })
 }
 
-function D() {
-  let [e, t] = (0, T.useClanDiscoveryUIStore)(e => [(0, T.buildSearchCriteriaFromUIState)(e), e.selectedPlaystyle], o.default), n = (0, C.useStateFromStores)([p.default], () => p.default.getSearchResult(e), [e]);
-  return (0, g.isUnloadedSearchResult)(n) ? null : (0, g.isLoadedSearchResult)(n) ? (0, a.jsxs)("div", {
-    className: v.topPicks,
+function w() {
+  let [e, t] = (0, R.useClanDiscoveryUIStore)(e => [(0, R.buildSearchCriteriaFromUIState)(e), e.selectedPlaystyle], u.default), n = (0, m.useStateFromStores)([v.default], () => v.default.getSearchResult(e), [e]);
+  return (0, O.isUnloadedSearchResult)(n) ? null : (0, O.isLoadedSearchResult)(n) ? (0, a.jsxs)("div", {
+    className: P.topPicks,
     children: [(0, a.jsxs)("div", {
-      className: v.topPicksHeader,
-      children: [(0, a.jsx)(_.Heading, {
+      className: P.topPicksHeader,
+      children: [(0, a.jsx)(C.Heading, {
         variant: "heading-md/medium",
         color: "header-primary",
-        children: N.default.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE
-      }), (0, a.jsx)(_.Text, {
+        children: M.default.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE
+      }), (0, a.jsx)(C.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
-        children: N.default.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE.format({
+        children: M.default.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE.format({
           playstyle: null == t ? void 0 : t.name
         })
       })]
     }), (0, a.jsx)("div", {
-      className: v.topPicksContent,
-      children: n.items.map(e => (0, a.jsx)(I.default, {
+      className: P.topPicksContent,
+      children: n.items.map(e => (0, a.jsx)(N.default, {
         clan: e
       }, e.id))
     })]
   }) : null
 }
 
-function b() {
-  let e = (0, _.useToken)(_.tokens.colors.WHITE),
-    [t, n, l] = (0, T.useClanDiscoveryUIStore)(e => [e.selectedPlaystyle, e.setSelectedPlaystyle, e.setMode], o.default),
-    r = s.useMemo(() => Object.values((0, A.getPlaystyleOptions)()), []),
-    u = s.useCallback(() => {
-      l(T.ClanDiscoveryMode.DISCOVERY)
-    }, [l]);
+function k() {
+  let e = s.useMemo(() => (0, S.getDayOptions)(), []),
+    [t, n, l] = (0, R.useClanDiscoveryUIStore)(e => [e.selectedPrimetimes, e.setSelectedPrimetime, e.setMode], u.default),
+    r = s.useCallback(() => {
+      l(R.ClanDiscoveryMode.DISCOVERY)
+    }, [l]),
+    d = s.useCallback((e, a) => {
+      let s = [...t];
+      s[e].day = a, n(s)
+    }, [t, n]),
+    c = s.useCallback((e, a) => {
+      let s = [...t];
+      s[e].time = a, n(s)
+    }, [t, n]),
+    f = s.useCallback(e => {
+      let a = [...t];
+      a.splice(e, 1), n(a)
+    }, [t, n]),
+    E = s.useCallback(() => {
+      if (t.length >= 3) return;
+      let e = [...t];
+      e.push({
+        id: o.default.v4(),
+        day: void 0,
+        time: "morning"
+      }), n(e)
+    }, [t, n]);
   return (0, a.jsxs)("div", {
-    className: v.playstyleSelector,
+    className: P.playtimeSelector,
     children: [(0, a.jsx)("div", {
-      className: v.playstyleSelectorSaveContainer,
-      children: (0, a.jsx)(_.Button, {
-        onClick: u,
-        look: _.ButtonLooks.OUTLINED,
-        color: _.ButtonColors.PRIMARY,
-        children: N.default.Messages.SAVE
+      className: P.playtimeSelectorSaveContainer,
+      children: (0, a.jsx)(C.Button, {
+        onClick: r,
+        look: C.ButtonLooks.OUTLINED,
+        color: C.ButtonColors.PRIMARY,
+        children: M.default.Messages.SAVE
       })
     }), (0, a.jsxs)("div", {
-      className: v.playstyleSelectorContent,
+      className: P.playtimeSelectorContent,
       children: [(0, a.jsxs)("div", {
-        className: v.playstyleHeader,
-        children: [(0, a.jsx)(_.Heading, {
-          variant: "heading-xxl/normal",
-          color: "header-primary",
-          children: N.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE
-        }), (0, a.jsx)(_.Text, {
+        className: P.playtimeHeader,
+        children: [(0, a.jsx)(C.Heading, {
+          variant: "heading-xxl/medium",
+          children: M.default.Messages.CLAN_SETUP_PRIMETIME_TITLE
+        }), (0, a.jsx)(C.Text, {
           variant: "text-md/normal",
           color: "header-secondary",
-          children: N.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE
+          children: M.default.Messages.CLAN_SETUP_PRIMETIME_SUBTITLE
+        })]
+      }), (0, a.jsxs)("div", {
+        className: P.playtimes,
+        children: [t.map((t, n) => (0, a.jsxs)("div", {
+          className: P.timeSelectorRow,
+          children: [(0, a.jsx)(C.SearchableSelect, {
+            value: t.day,
+            options: e,
+            placeholder: M.default.Messages.CLAN_PRIMETIME_PLACEHOLDER,
+            onChange: e => d(n, e)
+          }), (0, a.jsx)(I.default, {
+            value: t.time,
+            onChange: e => c(n, e)
+          }), (0, a.jsx)(C.Clickable, {
+            onClick: () => f(n),
+            className: P.clickable,
+            children: (0, a.jsx)(p.default, {
+              className: P.removeIcon
+            })
+          })]
+        }, t.id)), t.length < 3 && (0, a.jsxs)(C.Clickable, {
+          onClick: E,
+          className: i()(P.timeSelectorRow, P.clickable),
+          children: [(0, a.jsx)(g.default, {
+            className: P.plusIcon
+          }), (0, a.jsx)(C.Text, {
+            variant: "text-sm/medium",
+            children: M.default.Messages.CLAN_SETUP_PRIMETIME_ADD
+          })]
+        })]
+      })]
+    })]
+  })
+}
+
+function F() {
+  let e = (0, C.useToken)(C.tokens.colors.WHITE),
+    [t, n, l] = (0, R.useClanDiscoveryUIStore)(e => [e.selectedPlaystyle, e.setSelectedPlaystyle, e.setMode], u.default),
+    r = s.useMemo(() => Object.values((0, L.getPlaystyleOptions)()), []),
+    o = s.useCallback(() => {
+      l(R.ClanDiscoveryMode.DISCOVERY)
+    }, [l]);
+  return (0, a.jsxs)("div", {
+    className: P.playstyleSelector,
+    children: [(0, a.jsx)("div", {
+      className: P.playstyleSelectorSaveContainer,
+      children: (0, a.jsx)(C.Button, {
+        onClick: o,
+        look: C.ButtonLooks.OUTLINED,
+        color: C.ButtonColors.PRIMARY,
+        children: M.default.Messages.SAVE
+      })
+    }), (0, a.jsxs)("div", {
+      className: P.playstyleSelectorContent,
+      children: [(0, a.jsxs)("div", {
+        className: P.playstyleHeader,
+        children: [(0, a.jsx)(C.Heading, {
+          variant: "heading-xxl/normal",
+          color: "header-primary",
+          children: M.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE
+        }), (0, a.jsx)(C.Text, {
+          variant: "text-md/normal",
+          color: "header-secondary",
+          children: M.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE
         })]
       }), (0, a.jsx)("div", {
-        className: v.playstyles,
-        children: r.map(s => (0, a.jsxs)(_.Clickable, {
-          className: i()(v.playstyleOption, {
-            [v.selectedPlaystyle]: s.type === t.id
+        className: P.playstyles,
+        children: r.map(s => (0, a.jsxs)(C.Clickable, {
+          className: i()(P.playstyleOption, {
+            [P.selectedPlaystyle]: s.type === t.id
           }),
           onClick: () => n({
             id: s.type,
             name: s.title
           }),
-          children: [(0, a.jsx)(_.Heading, {
+          children: [(0, a.jsx)(C.Heading, {
             variant: "heading-xxl/medium",
             children: s.emoji
           }), (0, a.jsxs)("div", {
-            children: [(0, a.jsx)(_.Heading, {
+            children: [(0, a.jsx)(C.Heading, {
               variant: "heading-md/medium",
               children: s.title
-            }), (0, a.jsx)(_.Text, {
+            }), (0, a.jsx)(C.Text, {
               variant: "text-xs/normal",
               color: "text-muted",
               children: s.subtitle
             })]
-          }), s.type === t.id && (0, a.jsx)(m.default, {
+          }), s.type === t.id && (0, a.jsx)(T.default, {
             backgroundColor: e.hex(),
-            className: v.checkmark
+            className: P.checkmark
           })]
         }, s.type))
       })]
@@ -278,7 +368,7 @@ function b() {
   })
 }
 t.default = function() {
-  let [e, t, n] = (0, T.useClanDiscoveryUIStore)(e => [e.mode, e.game, (0, T.buildSearchCriteriaFromUIState)(e)], o.default), l = (0, C.useStateFromStores)([p.default], () => p.default.hasLoadedStaticClanDiscovery(t)), i = (0, r.useTransition)([e], {
+  let [e, t, n] = (0, R.useClanDiscoveryUIStore)(e => [e.mode, e.game, (0, R.buildSearchCriteriaFromUIState)(e)], u.default), l = (0, m.useStateFromStores)([v.default], () => v.default.hasLoadedStaticClanDiscovery(t)), i = (0, r.useTransition)([e], {
     config: {
       mass: 1,
       tension: 280,
@@ -294,23 +384,32 @@ t.default = function() {
     leave: {
       opacity: 0
     },
-    expires: 300
+    expires: 350
   });
   return s.useEffect(() => {
-    !l && (0, S.loadStaticClanDiscovery)(t)
+    !l && (0, A.loadStaticClanDiscovery)(t)
   }, [t, l]), s.useEffect(() => {
-    l && (0, S.searchClanDiscovery)(t, n)
+    l && (0, A.searchClanDiscovery)(t, n)
   }, [t, n, l]), (0, a.jsxs)("main", {
-    className: v.container,
-    children: [(0, a.jsx)(x, {}), (0, a.jsx)("div", {
-      className: v.content,
-      children: (0, a.jsx)(D, {})
+    className: P.container,
+    children: [(0, a.jsx)(G, {}), (0, a.jsx)("div", {
+      className: P.content,
+      children: (0, a.jsx)(w, {})
     }), i((e, t) => {
-      if (t === T.ClanDiscoveryMode.PLAYSTYLE) return (0, a.jsx)(r.animated.div, {
-        style: e,
-        children: (0, a.jsx)(b, {})
-      });
-      return null
+      switch (t) {
+        case R.ClanDiscoveryMode.PLAYSTYLE:
+          return (0, a.jsx)(r.animated.div, {
+            style: e,
+            children: (0, a.jsx)(F, {})
+          });
+        case R.ClanDiscoveryMode.PRIMETIME:
+          return (0, a.jsx)(r.animated.div, {
+            style: e,
+            children: (0, a.jsx)(k, {})
+          });
+        default:
+          return null
+      }
     })]
   })
 }
