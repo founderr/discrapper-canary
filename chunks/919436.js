@@ -11,13 +11,13 @@ var l, a = n("735250"),
   f = n("43267"),
   h = n("933557"),
   p = n("93687"),
-  C = n("266076"),
-  m = n("199902"),
+  m = n("266076"),
+  C = n("199902"),
   g = n("19780"),
   E = n("306680"),
   S = n("944486"),
-  _ = n("594174"),
-  I = n("451478"),
+  I = n("594174"),
+  _ = n("451478"),
   N = n("880080"),
   T = n("26290"),
   A = n("15434"),
@@ -40,7 +40,7 @@ let O = {
   tension: 600
 };
 
-function D(e) {
+function b(e) {
   switch (e) {
     case "height":
     case "opacity":
@@ -55,17 +55,17 @@ function D(e) {
       throw Error("DirectMessage: getSpringConfigs() - Invalid spring ".concat(String(e)))
   }
 }
-class b extends(l = s.PureComponent) {
+class D extends(l = s.PureComponent) {
   componentWillEnter(e) {
     let {
       controller: t
     } = this.state;
     e(), t.update({
-      immediate: !I.default.isFocused(),
+      immediate: !_.default.isFocused(),
       height: 1,
       opacity: 1,
       scale: 1,
-      config: D
+      config: b
     }).start().then(() => this.setState({
       animating: !1
     }))
@@ -79,7 +79,7 @@ class b extends(l = s.PureComponent) {
       scale: 1,
       opacity: 1,
       height: 1,
-      config: D
+      config: b
     }).start().then(e)
   }
   componentWillLeave(e) {
@@ -89,11 +89,11 @@ class b extends(l = s.PureComponent) {
     this.setState({
       animating: !0
     }, () => t.update({
-      immediate: !I.default.isFocused(),
+      immediate: !_.default.isFocused(),
       height: 0,
       opacity: 0,
       scale: 0,
-      config: D
+      config: b
     }).start().then(e))
   }
   componentWillUnmount() {
@@ -116,7 +116,7 @@ class b extends(l = s.PureComponent) {
   getChannelIcon() {
     let {
       channel: e
-    } = this.props, t = e.type === R.ChannelTypes.DM ? _.default.getUser(e.getRecipientId()) : null;
+    } = this.props, t = e.type === R.ChannelTypes.DM ? I.default.getUser(e.getRecipientId()) : null;
     return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, f.getChannelIconURL)(e)
   }
   render() {
@@ -133,15 +133,15 @@ class b extends(l = s.PureComponent) {
       isGDMFacepileEnabled: h
     } = this.props, {
       hovered: p,
-      animating: m
+      animating: C
     } = this.state, g = e.isMultiUserDM() && null == e.icon && h;
     return (0, a.jsx)(i.animated.div, {
       style: this.getAnimatedStyle(),
       children: (0, a.jsxs)(L.ListItem, {
         children: [(0, a.jsx)(N.default, {
-          hovered: !m && p,
-          selected: !m && n,
-          unread: !m && f,
+          hovered: !C && p,
+          selected: !C && n,
+          unread: !C && f,
           className: y.pill
         }), (0, a.jsx)(v.default, {
           text: null != t ? t : "",
@@ -170,7 +170,8 @@ class b extends(l = s.PureComponent) {
                 ariaLabel: null != t ? t : "",
                 onContextMenu: this.handleContextMenu,
                 icon: g ? void 0 : this.getChannelIcon(),
-                children: g ? (0, a.jsx)(C.default, {
+                backgroundStyle: g ? "on-hover" : "always",
+                children: g ? (0, a.jsx)(m.default, {
                   channel: e,
                   size: u.AvatarSizes.SIZE_48,
                   facepileSizeOverride: 36,
@@ -193,12 +194,12 @@ class b extends(l = s.PureComponent) {
         scale: 0,
         height: 0,
         opacity: 0,
-        config: D
+        config: b
       })
     }), M(this, "handleContextMenu", e => {
       let {
         channel: t
-      } = this.props, l = t.type === R.ChannelTypes.DM ? _.default.getUser(t.getRecipientId()) : null;
+      } = this.props, l = t.type === R.ChannelTypes.DM ? I.default.getUser(t.getRecipientId()) : null;
       null != l ? (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -221,7 +222,7 @@ class b extends(l = s.PureComponent) {
     })
   }
 }
-M(b, "defaultProps", {
+M(D, "defaultProps", {
   badge: 0,
   audio: !1,
   video: !1,
@@ -231,7 +232,7 @@ M(b, "defaultProps", {
     l = (0, h.default)(e.channel),
     s = (0, o.useStateFromStores)([g.default], () => g.default.getChannelId(), []),
     i = (0, o.useStateFromStores)([c.default], () => null != s ? c.default.getMode(s) : R.ChannelModes.VOICE, [s]),
-    r = (0, o.useStateFromStores)([m.default], () => m.default.getAllApplicationStreamsForChannel(n).length > 0),
+    r = (0, o.useStateFromStores)([C.default], () => C.default.getAllApplicationStreamsForChannel(n).length > 0),
     u = (0, o.useStateFromStores)([S.default], () => S.default.getChannelId(), []),
     d = (0, o.useStateFromStores)([E.default], () => E.default.getMentionCount(n), [n]),
     {
@@ -241,20 +242,20 @@ M(b, "defaultProps", {
     }, {
       autoTrackExposure: !1
     }),
-    C = s === n,
-    _ = !1,
-    I = !1;
-  return C && (_ = i === R.ChannelModes.VOICE, I = i === R.ChannelModes.VIDEO), (0, a.jsx)(b, {
+    m = s === n,
+    I = !1,
+    _ = !1;
+  return m && (I = i === R.ChannelModes.VOICE, _ = i === R.ChannelModes.VIDEO), (0, a.jsx)(D, {
     ...e,
     ref: t,
     channelName: l,
     unread: d > 0,
     selected: u === n,
     badge: d,
-    audio: _,
-    video: I,
+    audio: I,
+    video: _,
     stream: r,
-    isCurrentUserInThisDMCall: C,
+    isCurrentUserInThisDMCall: m,
     isGDMFacepileEnabled: f
   })
 })
