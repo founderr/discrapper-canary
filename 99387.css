@@ -57958,12 +57958,44 @@ html .progress__00e29 {
     gap: 12px 8px
 }
 
-.gameImagePlaceholder__732e7 {
+@keyframes placeholderPulse_c13237 {
+    0% {
+        opacity: .3
+    }
+
+    50% {
+        opacity: .8
+    }
+
+    to {
+        opacity: .3
+    }
+}
+
+.gameImageLoading__108e9 {
+    animation: placeholderPulse_c13237 1.3s ease-in-out infinite
+}
+
+.gameImageBackground_c5e476 {
     position: relative;
     height: 168px;
     background-color: var(--background-secondary);
     border-radius: 4px;
-    margin-bottom: 8px
+    margin-bottom: 8px;
+    overflow: hidden
+}
+
+.gameImage__4ad7a {
+    height: 100%;
+    width: 100%
+}
+
+.gameUnknownImage__8221f {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center
 }
 
 .removableGame_ea342b {
