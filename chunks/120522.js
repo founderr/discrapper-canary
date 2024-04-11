@@ -46,7 +46,7 @@ async function d(e) {
   let t = a.default.getCurrentUser();
   try {
     return await i.HTTP.post({
-      url: l.Endpoints.USER_PERKS_DEMOS
+      url: l.Endpoints.USER_PERKS_DEMOS_ACTIVATE(e)
     }), _(e), !0
   } catch {
     if ((0, s.isStaffEnv)(t) && function(e) {
