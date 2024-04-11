@@ -28,39 +28,40 @@ t.default = e => {
     channel: t,
     entry: n,
     requestId: o,
-    updatePopoutPosition: g
+    updatePopoutPosition: g,
+    closePopout: S
   } = e, {
-    applicationImageSrc: S,
-    user: _
+    applicationImageSrc: _,
+    user: T
   } = (0, h.useGamingContentData)(n), {
-    primaryColor: T,
-    secondaryColor: I
-  } = (0, f.default)(S), A = (0, s.useStateFromStores)([r.default], () => r.default.locale), v = l.useCallback(e => {
-    if (null != S && null != t && null != _) return (0, d.generateGamingContentImage)({
+    primaryColor: I,
+    secondaryColor: A
+  } = (0, f.default)(_), v = (0, s.useStateFromStores)([r.default], () => r.default.locale), N = l.useCallback(e => {
+    if (null != _ && null != t && null != T) return (0, d.generateGamingContentImage)({
       entry: n,
-      applicationImageSrc: S,
-      avatarSrc: _.getAvatarURL(t.guild_id, 128),
-      description: (0, c.formatCanvasDescription)(n, t, _),
-      timestamp: (0, u.formatEntryTimestamp)(n, A),
-      colors: [T, I],
+      applicationImageSrc: _,
+      avatarSrc: T.getAvatarURL(t.guild_id, 128),
+      description: (0, c.formatCanvasDescription)(n, t, T),
+      timestamp: (0, u.formatEntryTimestamp)(n, v),
+      colors: [I, A],
       channelId: e
     })
-  }, [S, t, n, A, T, I, _]);
-  return null == _ ? null : (0, a.jsxs)(p.Popout, {
+  }, [_, t, n, v, I, A, T]);
+  return null == T ? null : (0, a.jsxs)(p.Popout, {
     children: [(0, a.jsxs)(p.PopoutHero, {
-      backgroundImgSrc: S,
+      backgroundImgSrc: _,
       children: [(0, a.jsxs)("div", {
         className: E.heroDetails,
         children: [(0, a.jsxs)("div", {
           children: [(0, a.jsx)(p.PopoutAvatar, {
-            user: _,
+            user: T,
             guildId: t.guild_id
           }), (0, a.jsx)(p.PopoutTitle, {
-            children: C(n, t, _)
+            children: C(n, t, T)
           })]
         }), (0, a.jsx)(m.ContentImage, {
           size: 80,
-          src: S,
+          src: _,
           className: E.contentImage
         })]
       }), (0, a.jsx)(h.ContentRowBadges, {
@@ -71,16 +72,17 @@ t.default = e => {
       })]
     }), (0, a.jsxs)(p.PopoutInteractionsContainer, {
       children: [(0, a.jsx)(p.PopoutReactor, {
-        user: _,
+        closePopout: S,
+        user: T,
         channel: t,
         updatePopoutPosition: g,
-        generateReactionImage: v,
-        reactionImageAltText: (0, c.getContentAltText)(n, _),
+        generateReactionImage: N,
+        reactionImageAltText: (0, c.getContentAltText)(n, T),
         entry: n,
         requestId: o
       }), (0, a.jsx)(p.PopoutJoinPrompt, {
         entry: n,
-        user: _
+        user: T
       })]
     })]
   })
