@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return O
   }
 }), n("47120");
 var s = n("735250"),
@@ -21,31 +21,35 @@ var s = n("735250"),
   I = n("78839"),
   p = n("55935"),
   h = n("74538"),
-  N = n("51144"),
-  S = n("276444"),
-  C = n("790368"),
-  A = n("786397"),
-  g = n("474936"),
-  M = n("689938"),
-  R = n("851282");
-class O extends a.Component {
-  renderTitle(e, t) {
+  N = n("276444"),
+  S = n("790368"),
+  C = n("786397"),
+  A = n("474936"),
+  g = n("689938"),
+  M = n("851282");
+class R extends a.Component {
+  renderTitle(e, t, n) {
     let {
-      trialOffer: n
-    } = this.props, s = m.default.getUser(n.user_id), a = null != s ? s.username : "???";
-    return e && void 0 === n.redeemed_at ? M.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_DISABLED_HEADER.format({
-      username: a
-    }) : t ? M.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_EXPIRED_HEADER : M.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_HEADER.format({
-      username: a
+      trialOffer: s
+    } = this.props, a = m.default.getUser(s.user_id), l = null != a ? a.username : "???", i = m.default.getUser(s.referrer_id), r = null != i ? i.username : "???";
+    if (e && void 0 === s.redeemed_at) return g.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_DISABLED_HEADER.format({
+      username: l
+    });
+    if (t) return n ? g.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_EXPIRED_HEADER : g.default.Messages.REFERRAL_PROGRAM_EMBED_TIRAL_EXPIRED.format({
+      userName: r
+    });
+    return g.default.Messages.REFERRAL_PROGRAM_EMBED_HEADER.format({
+      senderUserName: r,
+      recipientUserName: l
     })
   }
   renderBody(e, t, n) {
     let {
       trialOffer: s
-    } = this.props, a = m.default.getUser(s.referrer_id);
-    return (e || t) && n && void 0 === s.redeemed_at ? M.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_EXPIRED_BODY : e && !n && void 0 === s.redeemed_at ? M.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_DISABLED_BODY : M.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_BODY.format({
-      username: null != a ? N.default.getName(a) : "???"
-    })
+    } = this.props, a = m.default.getUser(s.referrer_id), l = null != a ? a.username : "???";
+    return e && !n && void 0 === s.redeemed_at ? g.default.Messages.REFERRAL_PROGRAM_EMBED_RECIPIENT_INELIGIBLE_SUBHEADER.format({
+      userName: l
+    }) : t ? null : g.default.Messages.REFERRAL_PROGRAM_EMBED_BODY
   }
   renderActions(e, t, n) {
     let {
@@ -57,9 +61,9 @@ class O extends a.Component {
         this.handleStartTrial(a, i)
       },
       color: c.Button.Colors.BRAND
-    }, o = l.id !== a.user_id || (0, h.isPremium)(l) || !l.verified || (0, A.hasUserTrialOfferExpired)(a), u = this.renderExpirationDate(e, t, n);
+    }, o = l.id !== a.user_id || (0, h.isPremium)(l) || !l.verified || (0, C.hasUserTrialOfferExpired)(a), u = this.renderExpirationDate(e, t, n);
     return r.disabled = o, (0, s.jsxs)("div", {
-      className: R.buttonContainer,
+      className: M.buttonContainer,
       children: [(0, s.jsx)("div", {
         children: (0, s.jsx)(c.Button, {
           ...r,
@@ -67,16 +71,16 @@ class O extends a.Component {
           onClick: () => {
             (0, T.default)({
               initialPlanId: null,
-              subscriptionTier: g.PremiumSubscriptionSKUs.TIER_2,
+              subscriptionTier: A.PremiumSubscriptionSKUs.TIER_2,
               analyticsLocations: i,
               trialId: a.trial_id,
               referralTrialOfferId: a.id
             })
           },
-          children: M.default.Messages.START_TRIAL
+          children: g.default.Messages.START_TRIAL
         })
       }), (0, s.jsx)("div", {
-        className: R.metadata,
+        className: M.metadata,
         children: u
       })]
     })
@@ -86,34 +90,34 @@ class O extends a.Component {
       trialOffer: s,
       trialEndsAt: a
     } = this.props;
-    if (void 0 !== s.redeemed_at && !n && null !== a) return M.default.Messages.TRIAL_EXPIRES.format({
+    if (void 0 !== s.redeemed_at && !n && null !== a) return g.default.Messages.TRIAL_EXPIRES.format({
       date: (0, p.dateFormat)(o()(a), "LL")
     });
     if (e || void 0 === s.expires_at) return null;
     let l = o()(s.expires_at);
-    if (t) return M.default.Messages.EXPIRED_DATE.format({
+    if (t) return g.default.Messages.EXPIRED_DATE.format({
       date: (0, p.dateFormat)(o()(l), "LL")
     });
     let i = l.diff(o()(), "h");
     if (i > 48) {
       let e = l.diff(o()(), "d");
-      return M.default.Messages.EXPIRES_DAYS.format({
+      return g.default.Messages.EXPIRES_DAYS.format({
         numDays: e
       })
     }
-    if (i > 1) return M.default.Messages.EXPIRES_HOURS.format({
+    if (i > 1) return g.default.Messages.EXPIRES_HOURS.format({
       numHours: i
     });
     let r = l.diff(o()(), "minutes");
-    return M.default.Messages.EXPIRES_MINUTES.format({
+    return g.default.Messages.EXPIRES_MINUTES.format({
       numMinutes: r
     })
   }
   renderMedia(e) {
     return (0, s.jsx)("div", {
       className: i()({
-        [R.referral]: !e,
-        [R.birthdayReferral]: e
+        [M.referral]: !e,
+        [M.birthdayReferral]: e
       })
     })
   }
@@ -123,22 +127,22 @@ class O extends a.Component {
       currentUser: t,
       recipientHasNitro: n,
       shouldShowBirthdayUX: a
-    } = this.props, l = (0, A.hasUserTrialOfferExpired)(e), r = t.id === e.referrer_id;
+    } = this.props, l = (0, C.hasUserTrialOfferExpired)(e), r = t.id === e.referrer_id;
     return (0, s.jsxs)("div", {
-      className: i()(R.tile, R.container),
+      className: i()(M.tile, M.container),
       children: [(0, s.jsx)("div", {
-        className: R.media,
+        className: M.media,
         children: this.renderMedia(a)
       }), (0, s.jsxs)("div", {
-        className: R.description,
+        className: M.description,
         children: [(0, s.jsx)(c.H, {
-          className: R.title,
-          children: this.renderTitle(n, l)
+          className: M.title,
+          children: this.renderTitle(n, l, r)
         }), (0, s.jsx)("div", {
-          className: R.tagline,
+          className: M.tagline,
           children: this.renderBody(n, l, r)
         }), (0, s.jsx)("div", {
-          className: R.actions,
+          className: M.actions,
           children: this.renderActions(n, l, r)
         })]
       })]
@@ -149,7 +153,7 @@ class O extends a.Component {
     super(...e), t = this, n = "handleStartTrial", s = (e, t) => {
       (0, T.default)({
         initialPlanId: null,
-        subscriptionTier: g.PremiumSubscriptionSKUs.TIER_2,
+        subscriptionTier: A.PremiumSubscriptionSKUs.TIER_2,
         analyticsLocations: t,
         trialId: e.trial_id
       })
@@ -162,16 +166,16 @@ class O extends a.Component {
   }
 }
 
-function v(e) {
+function O(e) {
   let {
     userTrialOfferId: t,
     canRenderReferralEmbed: n
   } = e, {
     trialOffer: a,
     isResolving: l
-  } = (0, d.useStateFromStoresObject)([S.default], () => ({
-    trialOffer: n ? S.default.getRelevantUserTrialOffer(t) : null,
-    isResolving: !!n && S.default.isResolving(t)
+  } = (0, d.useStateFromStoresObject)([N.default], () => ({
+    trialOffer: n ? N.default.getRelevantUserTrialOffer(t) : null,
+    isResolving: !!n && N.default.isResolving(t)
   }), [n, t]), i = m.default.getCurrentUser(), r = (0, d.useStateFromStores)([m.default], () => null != a && (0, h.isPremium)(void 0 !== i && a.user_id === i.id ? i : m.default.getUser(a.user_id))), o = (0, d.useStateFromStores)([I.default], () => {
     var e;
     return r ? null === (e = I.default.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt : null
@@ -179,14 +183,14 @@ function v(e) {
     analyticsLocations: c
   } = (0, _.default)(E.default.SHARE_NITRO_EMBED), {
     enabled: T
-  } = C.default.useExperiment({
+  } = S.default.useExperiment({
     location: "f4ff1d_1"
   }, {
     autoTrackExposure: !0
   });
   return l ? (0, s.jsx)(f.ResponsiveLoadingEmbedTile, {
     isHorizontal: !u.isMobile
-  }) : n && null != a && void 0 !== i ? (0, s.jsx)(O, {
+  }) : n && null != a && void 0 !== i ? (0, s.jsx)(R, {
     trialOffer: a,
     currentUser: i,
     recipientHasNitro: r,
@@ -195,9 +199,9 @@ function v(e) {
     shouldShowBirthdayUX: T,
     ...e
   }) : (0, s.jsx)("div", {
-    className: R.invalidWrapper,
+    className: M.invalidWrapper,
     children: (0, s.jsx)("div", {
-      className: R.invalid
+      className: M.invalid
     })
   })
 }
