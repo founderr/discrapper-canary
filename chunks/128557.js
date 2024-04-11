@@ -29,8 +29,8 @@ var a = n("735250"),
   I = n("263704"),
   A = n("585483"),
   v = n("63063"),
-  x = n("358085"),
-  N = n("709054"),
+  N = n("358085"),
+  x = n("709054"),
   M = n("967128"),
   R = n("981631"),
   L = n("231873"),
@@ -77,7 +77,7 @@ function j(e) {
 function P(e) {
   let {
     channel: t
-  } = e, s = (0, u.useStateFromStores)([S.default], () => null != t ? S.default.getGuild(t.getGuildId()) : null, [t]), f = null != s && N.default.extractTimestamp(s.id) < Date.now() - R.WELCOME_OLD_GUILD_AGE_THRESHOLD, T = (0, u.useStateFromStores)([g.default], () => (null == s ? void 0 : s.ownerId) === g.default.getId(), [s]), {
+  } = e, s = (0, u.useStateFromStores)([S.default], () => null != t ? S.default.getGuild(t.getGuildId()) : null, [t]), f = null != s && x.default.extractTimestamp(s.id) < Date.now() - R.WELCOME_OLD_GUILD_AGE_THRESHOLD, T = (0, u.useStateFromStores)([g.default], () => (null == s ? void 0 : s.ownerId) === g.default.getId(), [s]), {
     canInvite: I,
     canManageGuild: P,
     canMessage: D
@@ -246,7 +246,7 @@ function P(e) {
       completed: F,
       onClick: H
     })
-  }, "message")), (0, x.isWeb)() && Z.push((0, a.jsx)(o.default.div, {
+  }, "message")), (0, N.isWeb)() && Z.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
       opacity: z[Z.length]

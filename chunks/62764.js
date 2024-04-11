@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("592125"),
   A = n("808602"),
   v = n("263704"),
-  x = n("757698"),
-  N = n("934415"),
+  N = n("757698"),
+  x = n("934415"),
   M = n("456269"),
   R = n("109590"),
   L = n("228392"),
@@ -86,7 +86,7 @@ function b(e) {
         location: {
           section: O.AnalyticsSections.CHANNEL_HEADER
         }
-      }), (0, r.copy)((0, N.getChannelLinkToCopy)(W, $)), V(!0)
+      }), (0, r.copy)((0, x.getChannelLinkToCopy)(W, $)), V(!0)
     },
     eo = z ? v.default : A.default;
   return (0, a.jsxs)(a.Fragment, {
@@ -168,7 +168,7 @@ function b(e) {
             children: [G ? (0, a.jsx)(v.default, {
               width: 16,
               height: 16
-            }) : (0, a.jsx)(x.default, {
+            }) : (0, a.jsx)(N.default, {
               width: 16,
               height: 16
             }), G ? j.default.Messages.COPIED : null]

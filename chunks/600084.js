@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("269203"),
   A = n("753898"),
   v = n("734386"),
-  x = n("184279"),
-  N = n("438306"),
+  N = n("184279"),
+  x = n("438306"),
   M = n("544142"),
   R = n("128557"),
   L = n("981631"),
@@ -53,7 +53,7 @@ function P(e) {
   else if (l) return (0, a.jsx)(v.default, {
     channel: n
   });
-  return (0, a.jsx)(N.default, {
+  return (0, a.jsx)(x.default, {
     channel: n
   })
 }
@@ -67,7 +67,7 @@ function D(e) {
     type: m
   } = n, p = (0, s.useStateFromStores)([C.default], () => n.isPrivate() ? C.default.getUser(n.getRecipientId()) : null), T = g.default.useUserTag(p), {
     canManageRoles: v,
-    canReadMessageHistory: N
+    canReadMessageHistory: x
   } = (0, s.useStateFromStoresObject)([E.default], () => ({
     canManageRoles: E.default.can(L.Permissions.MANAGE_ROLES, n),
     canReadMessageHistory: E.default.can(L.Permissions.READ_MESSAGE_HISTORY, n)
@@ -82,7 +82,7 @@ function D(e) {
       m === L.ChannelTypes.DM && null == M && null != p && r.default.wait(() => (0, h.default)(n.getRecipientId(), p.getAvatarURL(null, 80), {
         withMutualGuilds: !0
       }))
-    }, [M, m, n, p]), n.isSystemDM()) return R ? (0, a.jsx)(x.default, {
+    }, [M, m, n, p]), n.isSystemDM()) return R ? (0, a.jsx)(N.default, {
     channel: n
   }) : (0, a.jsx)(A.default, {
     channel: n,
@@ -120,7 +120,7 @@ function D(e) {
       name: d
     })
   });
-  return N ? (0, a.jsx)(P, {
+  return x ? (0, a.jsx)(P, {
     channel: n,
     canManageRoles: v
   }) : (0, a.jsx)(_.default, {

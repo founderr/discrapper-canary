@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a, i, r = s("735250");
 s("470079");
-var n = s("780384"),
-  l = s("410030");
+var l = s("780384"),
+  n = s("410030");
 (a = i || (i = {}))[a.TOP = 0] = "TOP", a[a.BOTTOM = 1] = "BOTTOM";
 let o = "premium_tier_2_gradient",
   u = "premium_tier_2_fill",
@@ -77,10 +77,10 @@ let o = "premium_tier_2_gradient",
       stopOpacity: "0"
     })]
   }),
-  T = (0, r.jsxs)("defs", {
+  C = (0, r.jsxs)("defs", {
     children: [c, _, E]
   }),
-  I = e => {
+  f = e => {
     let {
       className: t,
       fill: s,
@@ -106,10 +106,10 @@ let o = "premium_tier_2_gradient",
       }), (0, r.jsx)("path", {
         d: "M142.759 6.59865L140.044 5.57301C139.986 5.52173 139.986 5.47046 140.044 5.47046L142.759 4.39353L143.972 2.03456C143.972 1.98327 144.029 1.98327 144.087 2.03456L145.242 4.39353H145.3L147.957 5.47046C148.015 5.47046 148.015 5.52173 147.957 5.57301L145.3 6.59865H145.242L144.087 8.95763C144.029 9.00891 143.972 9.00891 143.972 8.95763L142.759 6.59865V6.59865Z",
         fill: s
-      }), T]
+      }), C]
     })
   },
-  f = e => {
+  T = e => {
     let {
       className: t,
       fill: s,
@@ -135,23 +135,23 @@ let o = "premium_tier_2_gradient",
       }), (0, r.jsx)("path", {
         d: "M228.758 6.60256L226.043 5.57692C225.986 5.52564 225.986 5.47437 226.043 5.47437L228.758 4.39744L229.971 2.03846C229.971 1.98718 230.029 1.98718 230.087 2.03846L231.242 4.39744H231.3L233.957 5.47437C234.014 5.47437 234.014 5.52564 233.957 5.57692L231.3 6.60256H231.242L230.087 8.96154C230.029 9.01282 229.971 9.01282 229.971 8.96154L228.758 6.60256V6.60256Z",
         fill: s
-      }), T]
+      }), C]
     })
   };
 t.default = e => {
   let {
     className: t,
     variant: s
-  } = e, a = (0, l.default)(), i = (0, n.isThemeDark)(a) ? d : o, c = (0, n.isThemeDark)(a) ? "#F2F3F5" : "url(#".concat(u, ")");
+  } = e, a = (0, n.default)(), i = (0, l.isThemeDark)(a) ? d : o, c = (0, l.isThemeDark)(a) ? "#F2F3F5" : "url(#".concat(u, ")");
   switch (s) {
     case 0:
-      return (0, r.jsx)(f, {
+      return (0, r.jsx)(T, {
         className: t,
         fill: c,
         gradient: i
       });
     case 1:
-      return (0, r.jsx)(I, {
+      return (0, r.jsx)(f, {
         className: t,
         fill: c,
         gradient: i

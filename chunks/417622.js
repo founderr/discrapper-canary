@@ -10,12 +10,12 @@ t.default = (0, i.replaceIcon)(function(e) {
     height: s = 18,
     color: i = "currentColor",
     foreground: r,
-    className: n
+    className: l
   } = e;
   return (0, a.jsx)("svg", {
     width: t,
     height: s,
-    className: n,
+    className: l,
     viewBox: "0 0 18 18",
     children: (0, a.jsx)("g", {
       stroke: "none",

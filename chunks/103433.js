@@ -4,8 +4,8 @@ var a = s("735250");
 s("470079");
 var i = s("803997"),
   r = s.n(i),
-  n = s("605260"),
-  l = s("481060"),
+  l = s("605260"),
+  n = s("481060"),
   o = s("689938"),
   u = s("589453"),
   d = s("505944");
@@ -25,10 +25,10 @@ t.default = e => {
       className: u.containerInner,
       children: [(0, a.jsx)("div", {
         className: u.backButtonContainer,
-        children: (0, a.jsxs)(l.Clickable, {
+        children: (0, a.jsxs)(n.Clickable, {
           onClick: s,
           className: u.backButton,
-          children: [(0, a.jsx)(n.ChevronSmallLeftIcon, {
+          children: [(0, a.jsx)(l.ChevronSmallLeftIcon, {
             color: "currentColor"
           }), o.default.Messages.BACK]
         })
@@ -36,7 +36,7 @@ t.default = e => {
         className: u.__invalid_contentContainer,
         children: (0, a.jsx)("div", {
           className: u.content,
-          children: (0, a.jsx)(l.Heading, {
+          children: (0, a.jsx)(n.Heading, {
             variant: "display-lg",
             color: "always-white",
             children: o.default.Messages.NITRO_HOME_ALL_YOUR_NITRO_PERKS

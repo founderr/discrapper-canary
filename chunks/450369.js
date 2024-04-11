@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("979651"),
   A = n("40300"),
   v = n("88751"),
-  x = n("252132"),
-  N = n("248400"),
+  N = n("252132"),
+  x = n("248400"),
   M = n("981631"),
   R = n("354459"),
   L = n("954539");
@@ -66,7 +66,7 @@ let y = 16 / 9,
       children: e => (0, a.jsx)(o.Clickable, {
         onContextMenu: e => c(n, e),
         ...e,
-        children: (0, a.jsx)(x.default, {
+        children: (0, a.jsx)(N.default, {
           participant: n,
           aspectRatio: y,
           blocked: m,
@@ -77,7 +77,7 @@ let y = 16 / 9,
           paused: !1,
           pulseSpeakingIndicator: !h.enabled,
           width: u,
-          children: d && (0, a.jsx)(N.default, {})
+          children: d && (0, a.jsx)(x.default, {})
         }, p)
       })
     })
@@ -110,7 +110,7 @@ let y = 16 / 9,
         })
       }(null == P ? void 0 : P.id) === e.id ? D ? (u.default.selectParticipant(s.id, null), u.default.updateStageStreamSize(s.id, !1)) : u.default.updateStageStreamSize(s.id, !0) : (u.default.updateStageStreamSize(s.id, !1), u.default.selectParticipant(s.id, e.id))
     }, [j, s, P, D]);
-    return (0, a.jsx)(x.default, {
+    return (0, a.jsx)(N.default, {
       participant: n,
       aspectRatio: y,
       fit: n.type === R.ParticipantTypes.USER ? A.VideoStreamFit.COVER : void 0,
@@ -124,7 +124,7 @@ let y = 16 / 9,
       paused: !1,
       pulseSpeakingIndicator: !g.enabled,
       width: i,
-      children: d && n.type === R.ParticipantTypes.USER && (0, a.jsx)(N.default, {})
+      children: d && n.type === R.ParticipantTypes.USER && (0, a.jsx)(x.default, {})
     }, v)
   };
 t.default = l.memo(function(e) {

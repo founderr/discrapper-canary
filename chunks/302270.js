@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("961048"),
   A = n("430824"),
   v = n("496675"),
-  x = n("976644"),
-  N = n("357727"),
+  N = n("976644"),
+  x = n("357727"),
   M = n("158010"),
   R = n("170039"),
   L = n("502568"),
@@ -54,7 +54,7 @@ function W(e) {
     showRequestToSpeakSidebar: o
   } = e, h = (0, c.useAppContext)(), E = (0, r.useStateFromStores)([f.default], () => f.default.getChatOpen(n.id)), C = (0, D.useCanModerateRequestToSpeak)(n.id), A = (0, j.useStageParticipantsCount)(n.id, P.StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY), {
     preventIdle: v,
-    allowIdle: x
+    allowIdle: N
   } = (0, S.usePreventIdle)("popup");
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(p.default, {
@@ -87,7 +87,7 @@ function W(e) {
       className: V.button
     }, "clips"), (0, a.jsx)(g.default, {
       onOpen: v,
-      onClose: x,
+      onClose: N,
       className: V.button
     }, "recents"), !o && C ? (0, a.jsx)("div", {
       className: V.button,
@@ -158,7 +158,7 @@ function Y(e) {
     }), (0, a.jsx)(L.default.Divider, {
       className: V.divider
     }), (0, a.jsxs)(L.default.Title, {
-      children: [(0, a.jsx)(N.default, {
+      children: [(0, a.jsx)(x.default, {
         width: 16,
         height: 16
       }), (0, a.jsx)(u.Text, {
@@ -204,7 +204,7 @@ function Y(e) {
             look: u.Button.Looks.BLANK,
             size: u.Button.Sizes.SMALL,
             children: G.default.Messages.NOT_NOW
-          }), (0, a.jsx)(x.default, {
+          }), (0, a.jsx)(N.default, {
             size: u.Button.Sizes.SMALL,
             onClick: () => {
               (0, E.openGuildBoostingMarketingModal)({

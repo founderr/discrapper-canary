@@ -22,8 +22,8 @@ var a = n("735250"),
   I = n("902840"),
   A = n("110924"),
   v = n("317381"),
-  x = n("82888"),
-  N = n("917107"),
+  N = n("82888"),
+  x = n("917107"),
   M = n("358221"),
   R = n("677601"),
   L = n("541716"),
@@ -76,8 +76,8 @@ var a = n("735250"),
   eI = n("171368"),
   eA = n("123579"),
   ev = n("524329"),
-  ex = n("995532"),
-  eN = n("738643"),
+  eN = n("995532"),
+  ex = n("738643"),
   eM = n("433355"),
   eR = n("592125"),
   eL = n("703558"),
@@ -205,7 +205,7 @@ class e3 extends l.PureComponent {
   }
   renderEmbeddedActivityPanel() {
     let e = this.props.height - 200;
-    return (0, a.jsx)(x.default, {
+    return (0, a.jsx)(N.default, {
       maxHeight: e,
       renderExternalHeader: this.renderHeaderBar
     })
@@ -736,9 +736,9 @@ t.default = l.memo(function(e) {
   }, [r]), T = (0, f.useStateFromStores)([v.default], () => {
     var e;
     return v.default.getSelfEmbeddedActivityForChannel(null !== (e = null == u ? void 0 : u.id) && void 0 !== e ? e : eZ.EMPTY_STRING_SNOWFLAKE_ID)
-  }), x = (0, f.useStateFromStores)([v.default], () => v.default.getActivityPanelMode()), R = null != T && !(0, N.default)(null == u ? void 0 : u.id) && x === eq.ActivityPanelModes.PANEL, L = (0, f.useStateFromStores)([ew.default], () => null != u && u.isVocalThread() && !d().isEmpty(ew.default.getVoiceStatesForChannel(u.id)), [u]), y = (null == u ? void 0 : u.isGuildVocal()) || R || _ || L, {
+  }), N = (0, f.useStateFromStores)([v.default], () => v.default.getActivityPanelMode()), R = null != T && !(0, x.default)(null == u ? void 0 : u.id) && N === eq.ActivityPanelModes.PANEL, L = (0, f.useStateFromStores)([ew.default], () => null != u && u.isVocalThread() && !d().isEmpty(ew.default.getVoiceStatesForChannel(u.id)), [u]), y = (null == u ? void 0 : u.isGuildVocal()) || R || _ || L, {
     welcomeModalChannelId: O
-  } = (0, c.useLocation)(), j = (0, f.useStateFromStores)([ei.default], () => null != u && ei.default.isLurking(u.guild_id), [u]), P = (0, f.useStateFromStores)([ex.default], () => ex.default.hasSeen(null == u ? void 0 : u.guild_id, j), [u, j]), b = (0, f.useStateFromStores)([M.default, v.default], () => null != v.default.getConnectedActivityChannelId() && v.default.getActivityPanelMode() === eq.ActivityPanelModes.PANEL ? v.default.getFocusedLayout() === eq.FocusedActivityLayouts.NO_CHAT ? eZ.ChannelLayouts.NO_CHAT : eZ.ChannelLayouts.NORMAL : null != r ? M.default.getLayout(r) : eZ.ChannelLayouts.NORMAL, [r]), U = (0, f.useStateFromStores)([M.default], () => null != u ? M.default.getSelectedParticipant(u.id) : null), F = (0, f.useStateFromStores)([eF.default], () => eF.default.getCurrentUser()), w = (0, el.default)(g), k = (0, eN.default)(O, null == g ? void 0 : g.id), {
+  } = (0, c.useLocation)(), j = (0, f.useStateFromStores)([ei.default], () => null != u && ei.default.isLurking(u.guild_id), [u]), P = (0, f.useStateFromStores)([eN.default], () => eN.default.hasSeen(null == u ? void 0 : u.guild_id, j), [u, j]), b = (0, f.useStateFromStores)([M.default, v.default], () => null != v.default.getConnectedActivityChannelId() && v.default.getActivityPanelMode() === eq.ActivityPanelModes.PANEL ? v.default.getFocusedLayout() === eq.FocusedActivityLayouts.NO_CHAT ? eZ.ChannelLayouts.NO_CHAT : eZ.ChannelLayouts.NORMAL : null != r ? M.default.getLayout(r) : eZ.ChannelLayouts.NORMAL, [r]), U = (0, f.useStateFromStores)([M.default], () => null != u ? M.default.getSelectedParticipant(u.id) : null), F = (0, f.useStateFromStores)([eF.default], () => eF.default.getCurrentUser()), w = (0, el.default)(g), k = (0, ex.default)(O, null == g ? void 0 : g.id), {
     section: H,
     channelSidebarState: B
   } = (0, f.useStateFromStoresObject)([eM.default], () => ({

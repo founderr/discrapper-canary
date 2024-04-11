@@ -4,15 +4,15 @@ var a = s("735250");
 s("470079");
 var i = s("803997"),
   r = s.n(i),
-  n = s("481060"),
-  l = s("626135"),
+  l = s("481060"),
+  n = s("626135"),
   o = s("391110"),
   u = s("474936"),
   d = s("981631"),
   c = s("689938"),
   _ = s("393845");
 let E = (e, t, s) => {
-  l.default.track(d.AnalyticEvents.NITRO_HOME_NAVIGATION, {
+  n.default.track(d.AnalyticEvents.NITRO_HOME_NAVIGATION, {
     current_component: "".concat(o.NitroLandingPages.MARKETING, "-").concat(t),
     next_component: "".concat(o.NitroLandingPages.MARKETING, "-").concat(e),
     interaction_component: "Nitro Toggle"
@@ -34,10 +34,10 @@ t.default = e => {
       [_.toggleSwitchStandard]: t === u.PremiumTypes.TIER_2,
       [_.toggleSwitchBasic]: t === u.PremiumTypes.TIER_0
     }),
-    children: [i.map(e => (0, a.jsx)(n.Clickable, {
+    children: [i.map(e => (0, a.jsx)(l.Clickable, {
       className: _.toggleOption,
       onClick: () => E(e.type, t, s),
-      children: (0, a.jsx)(n.Heading, {
+      children: (0, a.jsx)(l.Heading, {
         className: _.__invalid_sectionHeader,
         variant: "heading-md/semibold",
         children: e.label

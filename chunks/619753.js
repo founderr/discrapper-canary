@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("699516"),
   A = n("768119"),
   v = n("944486"),
-  x = n("594174"),
-  N = n("68588"),
+  N = n("594174"),
+  x = n("68588"),
   M = n("93879"),
   R = n("101695"),
   L = n("683101"),
@@ -49,8 +49,8 @@ function P(e) {
     offset: _,
     totalResults: T,
     isSearching: v,
-    showBlockedResults: x
-  } = n, N = l.useCallback(e => {
+    showBlockedResults: N
+  } = n, x = l.useCallback(e => {
     if (v) return;
     let t = e - 1;
     null == g || g(t), u.changePage(f, t)
@@ -75,7 +75,7 @@ function P(e) {
     let t = 0;
     return p.reduce((n, a) => {
       let l = a.find(e => e.isSearchHit);
-      if (!x && null != l && I.default.isBlocked(l.author.id)) return n;
+      if (!N && null != l && I.default.isBlocked(l.author.id)) return n;
       let s = S.default.getChannel(a[0].channel_id);
       return null == s ? n : ((null == e || e !== s.id) && n.push({
         channel: s,
@@ -83,7 +83,7 @@ function P(e) {
         startIndex: t
       }), t += 1, n[n.length - 1].results.push(a), e = null == s ? void 0 : s.id, n)
     }, [])
-  }, [p, x]), P = l.useRef([]), b = L.reduce((e, t) => e + 1 + t.results.length, 0), U = l.useCallback((e, t) => {
+  }, [p, N]), P = l.useRef([]), b = L.reduce((e, t) => e + 1 + t.results.length, 0), U = l.useCallback((e, t) => {
     if (!c.default.keyboardModeEnabled) return;
     let n = P.current,
       a = null != t ? n[t] : void 0;
@@ -141,19 +141,19 @@ function P(e) {
     }), C > 0 ? (0, a.jsxs)(i.Clickable, {
       tag: "div",
       className: j.resultsBlocked,
-      onClick: () => u.setShowBlockedResults(f, !x),
+      onClick: () => u.setShowBlockedResults(f, !N),
       children: [(0, a.jsx)("div", {
         className: j.resultsBlockedImage
       }), (0, a.jsx)("div", {
         className: j.__invalid_resultsBlockedText,
-        children: x ? O.default.Messages.SEARCH_HIDE_BLOCKED_MESSAGES.format({
+        children: N ? O.default.Messages.SEARCH_HIDE_BLOCKED_MESSAGES.format({
           count: C
         }) : O.default.Messages.SEARCH_NUM_RESULTS_BLOCKED_NOT_SHOWN.format({
           count: C
         })
       })]
     }) : null, !v && !H && (0, a.jsx)(R.default, {
-      changePage: N,
+      changePage: x,
       offset: _,
       totalResults: T,
       pageLength: y.SEARCH_PAGE_SIZE
@@ -181,7 +181,7 @@ function D(e) {
     if (e === v.default.getChannelId()) return;
     let t = S.default.getChannel(e);
     if (null != t) T.default.can(y.Permissions.VIEW_CHANNEL, t) && (0, C.transitionToChannel)(t.id)
-  }, []), w = null != s ? (0, f.computeChannelName)(s, x.default, I.default, !1) : "???", k = b && null != s.guild_id ? null === (t = _.default.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, H = (null == s ? void 0 : s.parent_id) != null ? S.default.getChannel(s.parent_id) : null, B = null != H ? H.name : null, G = null !== (n = (0, h.default)(s)) && void 0 !== n ? n : M.default, V = null != H ? (0, h.default)(H) : null, W = T.default.can(y.Permissions.MANAGE_MESSAGES, s), {
+  }, []), w = null != s ? (0, f.computeChannelName)(s, N.default, I.default, !1) : "???", k = b && null != s.guild_id ? null === (t = _.default.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, H = (null == s ? void 0 : s.parent_id) != null ? S.default.getChannel(s.parent_id) : null, B = null != H ? H.name : null, G = null !== (n = (0, h.default)(s)) && void 0 !== n ? n : M.default, V = null != H ? (0, h.default)(H) : null, W = T.default.can(y.Permissions.MANAGE_MESSAGES, s), {
     content: Y
   } = (0, p.default)({
     content: w,
@@ -194,7 +194,7 @@ function D(e) {
     null != e && null != e.offsetWidth && null != e.scrollWidth && Z(e.offsetWidth < e.scrollWidth)
   }, []);
   let q = [w, B, k].filter(e => null != e).join(", ");
-  return (0, a.jsx)(N.ObscuredDisplayContext.Provider, {
+  return (0, a.jsx)(x.ObscuredDisplayContext.Provider, {
     value: (0, m.default)(U, W),
     children: (0, a.jsxs)("ul", {
       role: "group",

@@ -33,7 +33,7 @@ let I = (e, t) => {
   A = (e, t) => e < T.singleSpeaker ? 1 : e < T.twoSpeakers ? 2 : e < T.threeSpeakers ? 3 : t ? 3 : 4,
   v = e => Math.floor((e - 32) / 102);
 
-function x(e) {
+function N(e) {
   return e.type === f.StageChannelParticipantTypes.VOICE
 }
 t.default = (0, o.default)(e => {
@@ -44,20 +44,20 @@ t.default = (0, o.default)(e => {
     onScroll: o
   } = e, {
     selectedParticipantId: T,
-    largeStream: N,
+    largeStream: x,
     chatOpen: M
   } = (0, r.useStateFromStoresObject)([u.default], () => ({
     selectedParticipantId: u.default.getSelectedParticipantId(a.id),
     largeStream: u.default.getStageStreamSize(a.id),
     chatOpen: u.default.getChatOpen(a.id)
-  }), [a.id]), R = (0, c.useActualStageSpeakerCount)(a.id), L = (0, c.useStageParticipantsCount)(a.id, f.StageChannelParticipantNamedIndex.AUDIENCE), y = (0, r.useStateFromStores)([d.default], () => null != T ? d.default.getParticipant(a.id, T) : null), O = (0, c.useStageParticipants)(a.id, f.StageChannelParticipantNamedIndex.SPEAKER), j = O.filter(x), P = null != O.find(e => e.type === f.StageChannelParticipantTypes.STREAM), D = v(l), b = A(l, M), U = {
+  }), [a.id]), R = (0, c.useActualStageSpeakerCount)(a.id), L = (0, c.useStageParticipantsCount)(a.id, f.StageChannelParticipantNamedIndex.AUDIENCE), y = (0, r.useStateFromStores)([d.default], () => null != T ? d.default.getParticipant(a.id, T) : null), O = (0, c.useStageParticipants)(a.id, f.StageChannelParticipantNamedIndex.SPEAKER), j = O.filter(N), P = null != O.find(e => e.type === f.StageChannelParticipantTypes.STREAM), D = v(l), b = A(l, M), U = {
     [f.StageChannelParticipantNamedIndex.SPEAKER]: b,
     [f.StageChannelParticipantNamedIndex.AUDIENCE]: D,
     [f.StageChannelParticipantNamedIndex.SELECTED]: 1
   }, F = (0, h.useThrottleDurationForChannel)(a.id), [w, k] = (0, h.useStageChannelParticipantsListThrottled)(a.id, U, F), H = [Math.max(null !== (t = w[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = w[1]) && void 0 !== n ? n : 1, 1), w[2]], {
     speakerTileWidth: B,
     speakerTileHeight: G
-  } = I(l, b), V = N ? l - 32 : Math.min(l - 64, 3 * B + 8), W = e => e === w.length - 1 || 0 === L && 1 === e, [Y, z] = i.useState(!1), [K, Z] = i.useState(!1);
+  } = I(l, b), V = x ? l - 32 : Math.min(l - 64, 3 * B + 8), W = e => e === w.length - 1 || 0 === L && 1 === e, [Y, z] = i.useState(!1), [K, Z] = i.useState(!1);
   return (0, s.jsx)(p.default, {
     sections: H,
     renderSection: e => {

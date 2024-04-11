@@ -22,8 +22,8 @@ var a = n("735250"),
   I = n("885110"),
   A = n("797258"),
   v = n("606304"),
-  x = n("979651"),
-  N = n("805009"),
+  N = n("979651"),
+  x = n("805009"),
   M = n("700785"),
   R = n("51144"),
   L = n("649739"),
@@ -40,19 +40,19 @@ let D = l.memo(e => {
     channel: i,
     sessionId: o,
     nick: _
-  } = e, N = s.id, P = (0, r.useStateFromStores)([C.default], () => C.default.getId() === N, [N]), [D, b, U] = (0, r.useStateFromStoresArray)([S.default], () => P ? [!S.default.isSupported() || S.default.isSelfMute() || S.default.isSelfMutedTemporarily(), S.default.isSelfDeaf(), !1] : [!S.default.isSupported() || S.default.isLocalMute(N), !1, S.default.isLocalVideoDisabled(N)], [P, N]), F = (0, r.useStateFromStores)([v.default], () => v.default.isPrioritySpeaker(N)), w = (0, u.default)({
-    userId: N,
+  } = e, x = s.id, P = (0, r.useStateFromStores)([C.default], () => C.default.getId() === x, [x]), [D, b, U] = (0, r.useStateFromStoresArray)([S.default], () => P ? [!S.default.isSupported() || S.default.isSelfMute() || S.default.isSelfMutedTemporarily(), S.default.isSelfDeaf(), !1] : [!S.default.isSupported() || S.default.isLocalMute(x), !1, S.default.isLocalVideoDisabled(x)], [P, x]), F = (0, r.useStateFromStores)([v.default], () => v.default.isPrioritySpeaker(x)), w = (0, u.default)({
+    userId: x,
     checkSoundSharing: !0
-  }), k = (0, r.useStateFromStores)([g.default], () => g.default.isGuestOrLurker(i.guild_id, N)), H = (0, r.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(i.id).find(e => {
+  }), k = (0, r.useStateFromStores)([g.default], () => g.default.isGuestOrLurker(i.guild_id, x)), H = (0, r.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(i.id).find(e => {
     let {
       userIds: t
     } = e;
-    return t.has(N)
-  }), [N, i.id]), B = (0, f.default)(null != H ? [H.applicationId] : []), G = (0, L.useIsVoiceUserGameActivityEnabled)("voice_users_eligibility_check", !1), V = (0, r.useStateFromStores)([T.default, I.default], () => P ? I.default.getActivities() : T.default.getActivities(N, i.guild_id)).find(e => null != e.application_id && e.type === O.ActivityTypes.PLAYING), W = (0, r.useStateFromStores)([c.default], () => (null == V ? void 0 : V.application_id) != null ? c.default.getApplication(null == V ? void 0 : V.application_id) : void 0);
+    return t.has(x)
+  }), [x, i.id]), B = (0, f.default)(null != H ? [H.applicationId] : []), G = (0, L.useIsVoiceUserGameActivityEnabled)("voice_users_eligibility_check", !1), V = (0, r.useStateFromStores)([T.default, I.default], () => P ? I.default.getActivities() : T.default.getActivities(x, i.guild_id)).find(e => null != e.application_id && e.type === O.ActivityTypes.PLAYING), W = (0, r.useStateFromStores)([c.default], () => (null == V ? void 0 : V.application_id) != null ? c.default.getApplication(null == V ? void 0 : V.application_id) : void 0);
   null != W && L.default.trackExposure({
     location: "voice_users"
   });
-  let [Y, z] = (0, r.useStateFromStoresArray)([E.default], () => [E.default.getStreamForUser(N, i.getGuildId()), E.default.getActiveStreamForUser(N, i.getGuildId())], [i, N]), K = (0, r.useStateFromStores)([A.default], () => A.default.getSessionById(o)), Z = R.default.useName(s), q = (0, r.useStateFromStores)([x.default], () => x.default.getVoicePlatformForChannel(i.id, N), [i.id, N]), {
+  let [Y, z] = (0, r.useStateFromStoresArray)([E.default], () => [E.default.getStreamForUser(x, i.getGuildId()), E.default.getActiveStreamForUser(x, i.getGuildId())], [i, x]), K = (0, r.useStateFromStores)([A.default], () => A.default.getSessionById(o)), Z = R.default.useName(s), q = (0, r.useStateFromStores)([N.default], () => N.default.getVoicePlatformForChannel(i.id, x), [i.id, x]), {
     enableHangStatus: X
   } = h.HangStatusExperiment.useExperiment({
     guildId: i.guild_id,
@@ -61,7 +61,7 @@ let D = l.memo(e => {
     permission: O.Permissions.SET_VOICE_CHANNEL_STATUS,
     user: s,
     context: i
-  }), J = (0, r.useStateFromStores)([m.default], () => P ? m.default.getHangStatusActivity() : null, [P]), $ = (0, r.useStateFromStores)([T.default], () => T.default.findActivity(N, e => e.type === O.ActivityTypes.HANG_STATUS), [N]);
+  }), J = (0, r.useStateFromStores)([m.default], () => P ? m.default.getHangStatusActivity() : null, [P]), $ = (0, r.useStateFromStores)([T.default], () => T.default.findActivity(x, e => e.type === O.ActivityTypes.HANG_STATUS), [x]);
   return (0, a.jsx)(p.default, {
     shakeLocation: j.ShakeLocation.VOICE_USER,
     isShaking: w,
@@ -103,14 +103,14 @@ t.default = function(e) {
     withGuildIcon: E = !1,
     className: g,
     children: S
-  } = e, [I, A] = l.useState(null), [v, x] = l.useState(!1), M = l.useRef(null), R = l.useRef(new o.DelayedCall(50, () => {
+  } = e, [I, A] = l.useState(null), [v, N] = l.useState(!1), M = l.useRef(null), R = l.useRef(new o.DelayedCall(50, () => {
     A(M.current), M.current = null
   })), L = l.useRef(new o.DelayedCall(175, () => {
     A(null)
   })), j = l.useCallback(e => {
-    t && (x(!0), L.current.cancel(), M.current = e, R.current.delay())
+    t && (N(!0), L.current.cancel(), M.current = e, R.current.delay())
   }, [t]), b = l.useCallback(e => {
-    t && (R.current.cancel(), I === e && (x(!1), L.current.delay()))
+    t && (R.current.cancel(), I === e && (N(!1), L.current.delay()))
   }, [t, I]), U = (0, r.useStateFromStoresArray)([T.default], () => {
     if (d) return [];
     let e = new Set;
@@ -161,7 +161,7 @@ t.default = function(e) {
       numUsers: u.length - c
     })), e
   })();
-  return null == F && null == S ? null : (0, a.jsxs)(N.VoiceUserList, {
+  return null == F && null == S ? null : (0, a.jsxs)(x.VoiceUserList, {
     className: i()(g, P.list, {
       [P.collapsed]: d,
       [P.withGuildIcon]: E

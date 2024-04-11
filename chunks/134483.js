@@ -22,8 +22,8 @@ var a = n("735250"),
   I = n("874137"),
   A = n("340100"),
   v = n("611855"),
-  x = n("670638"),
-  N = n("667105"),
+  N = n("670638"),
+  x = n("667105"),
   M = n("860151"),
   R = n("981631"),
   L = n("354459"),
@@ -74,7 +74,7 @@ t.default = function(e) {
       questContent: _.QuestContent.QUEST_LIVE_STREAM,
       questContentCTA: E.QuestContentCTA.LEARN_MORE
     }), u.default.open(R.UserSettingsSections.INVENTORY))
-  }, [b]), V = (0, N.useHandleClaimQuestsReward)({
+  }, [b]), V = (0, x.useHandleClaimQuestsReward)({
     quest: b,
     location: _.QuestContent.QUEST_LIVE_STREAM
   }), W = (0, g.useIsQuestExpired)(b);
@@ -127,7 +127,7 @@ t.default = function(e) {
                   children: D ? (0, T.getContextualEntrypointHeading)(b) : y.default.Messages.QUESTS_TITLE.format({
                     questName: b.config.messages.questName
                   })
-                }), (0, a.jsx)(x.QuestsEntryContextMenuPopout, {
+                }), (0, a.jsx)(N.QuestsEntryContextMenuPopout, {
                   questContent: _.QuestContent.QUEST_LIVE_STREAM,
                   quest: b,
                   preventIdle: !0,

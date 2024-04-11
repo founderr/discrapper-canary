@@ -28,8 +28,8 @@ var a, l = n("735250"),
   I = n("224184"),
   A = n("484459"),
   v = n("103575"),
-  x = n("314897"),
-  N = n("430824"),
+  N = n("314897"),
+  x = n("430824"),
   M = n("496675"),
   R = n("979651"),
   L = n("242315"),
@@ -92,7 +92,7 @@ class k extends(a = s.PureComponent) {
       channel: e,
       isStreaming: t
     } = this.props;
-    return t && (0, S.canWatchStream)(e, R.default, N.default, M.default, E.default)[0]
+    return t && (0, S.canWatchStream)(e, R.default, x.default, M.default, E.default)[0]
   }
   render() {
     let {
@@ -170,7 +170,7 @@ class k extends(a = s.PureComponent) {
         channelId: t.id,
         guildId: t.guild_id
       };
-      x.default.getId() !== e.id && f.default.selectVoiceChannel(t.id), n ? ((0, _.default)(l), d.default.selectParticipant(l.channelId, (0, g.encodeStreamKey)(l))) : (0, h.watchStreamAndTransitionToStream)(l), null == a || a(e.id)
+      N.default.getId() !== e.id && f.default.selectVoiceChannel(t.id), n ? ((0, _.default)(l), d.default.selectParticipant(l.channelId, (0, g.encodeStreamKey)(l))) : (0, h.watchStreamAndTransitionToStream)(l), null == a || a(e.id)
     }), U(this, "handleJoinVoice", () => {
       let {
         user: e,
@@ -258,8 +258,8 @@ class k extends(a = s.PureComponent) {
         serverDeaf: I,
         tabIndex: A,
         embeddedApplication: v,
-        channel: x,
-        hangStatusActivity: N,
+        channel: N,
+        hangStatusActivity: x,
         showHangStatus: M,
         isSelf: R,
         application: L
@@ -294,12 +294,12 @@ class k extends(a = s.PureComponent) {
         onClick: U ? void 0 : this.handleClickUser,
         onDoubleClick: this.handleWatchStream,
         onContextMenu: this.handleUserContextMenu,
-        guildId: x.guild_id,
-        hangStatusActivity: N,
+        guildId: N.guild_id,
+        hangStatusActivity: x,
         showHangStatus: M,
         isSelf: R,
         application: L,
-        channelId: x.id
+        channelId: N.id
       };
       if (t) {
         var w;

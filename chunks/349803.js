@@ -4,49 +4,49 @@ var a = s("735250");
 s("470079");
 var i = s("803997"),
   r = s.n(i),
-  n = s("718017"),
-  l = s("399606"),
+  l = s("718017"),
+  n = s("399606"),
   o = s("607070"),
   u = s("104494"),
   d = s("639119"),
   c = s("318747"),
   _ = s("409100"),
   E = s("474936"),
-  T = s("981631"),
-  I = s("450057");
+  C = s("981631"),
+  f = s("450057");
 t.default = function(e) {
   var t, s;
   let {
     isVisible: i,
-    isFullscreen: f,
-    subscriptionTier: R
-  } = e, S = null === (t = (0, d.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, m = (0, u.usePremiumDiscountOffer)(), N = (0, u.discountOfferHasTier)(m, E.PremiumSubscriptionSKUs.TIER_2) ? E.PremiumSubscriptionSKUs.TIER_2 : void 0, A = (0, l.useStateFromStores)([o.default], () => o.default.useReducedMotion), p = (0, n.useSpring)({
+    isFullscreen: T,
+    subscriptionTier: I
+  } = e, R = null === (t = (0, d.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, S = (0, u.usePremiumDiscountOffer)(), p = (0, u.discountOfferHasTier)(S, E.PremiumSubscriptionSKUs.TIER_2) ? E.PremiumSubscriptionSKUs.TIER_2 : void 0, m = (0, n.useStateFromStores)([o.default], () => o.default.useReducedMotion), A = (0, l.useSpring)({
     transform: i ? "translateY(-100%)" : "translateY(0%)",
     opacity: i ? 1 : 0,
     config: {
       tension: 120,
       friction: 12
     },
-    immediate: A
+    immediate: m
   }), g = {
-    section: T.AnalyticsSections.MARKETING_FLOATING_CTA
+    section: C.AnalyticsSections.MARKETING_FLOATING_CTA
   };
-  return (0, a.jsx)(n.animated.div, {
-    className: r()(I.wrapper, {
-      [I.fullscreenWrapper]: f,
-      [I.invisible]: !i
+  return (0, a.jsx)(l.animated.div, {
+    className: r()(f.wrapper, {
+      [f.fullscreenWrapper]: T,
+      [f.invisible]: !i
     }),
-    style: p,
+    style: A,
     children: (0, a.jsxs)("div", {
-      className: I.innerWrapper,
+      className: f.innerWrapper,
       children: [(0, a.jsx)(_.default, {
-        className: I.button,
-        shinyButtonClassName: I.shinyButton,
-        subscriptionTier: null !== (s = null != R ? R : null == S ? void 0 : S.sku_id) && void 0 !== s ? s : N,
+        className: f.button,
+        shinyButtonClassName: f.shinyButton,
+        subscriptionTier: null !== (s = null != I ? I : null == R ? void 0 : R.sku_id) && void 0 !== s ? s : p,
         premiumModalAnalyticsLocation: g,
         isPersistentCTA: !0
       }), (0, a.jsx)(c.default, {
-        className: I.button,
+        className: f.button,
         premiumModalAnalyticsLocation: g
       })]
     })

@@ -2,8 +2,8 @@
 s.r(t), s("411104");
 var a, i, r = s("735250");
 s("470079");
-var n = s("803997"),
-  l = s.n(n),
+var l = s("803997"),
+  n = s.n(l),
   o = s("442837"),
   u = s("481060"),
   d = s("700582"),
@@ -11,7 +11,7 @@ var n = s("803997"),
   _ = s("689938"),
   E = s("55013");
 (i = a || (a = {}))[i.STAFF_NOTES = 1] = "STAFF_NOTES";
-let T = o.default.connectStores([c.default], () => ({
+let C = o.default.connectStores([c.default], () => ({
     animate: c.default.isFocused()
   }))(e => {
     let {
@@ -20,7 +20,7 @@ let T = o.default.connectStores([c.default], () => ({
       animate: a
     } = e;
     return (0, r.jsxs)("div", {
-      className: l()(E.staffReviewHeader, s),
+      className: n()(E.staffReviewHeader, s),
       children: [(0, r.jsx)(d.default, {
         size: u.AvatarSizes.SIZE_32,
         user: t,
@@ -37,7 +37,7 @@ let T = o.default.connectStores([c.default], () => ({
       })]
     })
   }),
-  I = e => {
+  f = e => {
     let {
       data: t,
       className: s
@@ -50,7 +50,7 @@ let T = o.default.connectStores([c.default], () => ({
       } = t.staffNotes;
       return null == e ? null : (0, r.jsxs)("div", {
         className: s,
-        children: [(0, r.jsx)(T, {
+        children: [(0, r.jsx)(C, {
           user: e,
           className: E.header
         }), (0, r.jsx)("div", {
@@ -61,4 +61,4 @@ let T = o.default.connectStores([c.default], () => ({
     }
     throw Error("Unknown type")
   };
-I.Types = a, t.default = I
+f.Types = a, t.default = f

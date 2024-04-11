@@ -22,8 +22,8 @@ var a = n("735250"),
   I = n("557457"),
   A = n("475674"),
   v = n("981631"),
-  x = n("474936"),
-  N = n("689938"),
+  N = n("474936"),
+  x = n("689938"),
   M = n("526144");
 let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
   L = {
@@ -82,7 +82,7 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
         location: b
       } = (0, h.useAnalyticsContext)(),
       U = (0, u.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
-      F = o && !T.default.isPremium(U, x.PremiumTypes.TIER_1) && !T.default.canStreamQuality(T.default.StreamQuality.MID, U),
+      F = o && !T.default.isPremium(U, N.PremiumTypes.TIER_1) && !T.default.canStreamQuality(T.default.StreamQuality.MID, U),
       w = l.useCallback(() => {
         F && D && (0, f.openModalLazy)(async () => {
           let {
@@ -96,14 +96,14 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
       }, [F, D, b]);
     if (l.useEffect(() => {
         !R && D && (_.default.track(v.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-          type: x.PremiumUpsellTypes.STREAM_QUALITY_INDICATOR,
+          type: N.PremiumUpsellTypes.STREAM_QUALITY_INDICATOR,
           has_premium_stream_fps: t,
           has_premium_stream_resolution: s,
           location_stack: j
         }), L(!0))
       }, [t, s, D, R, L, j]), null == O) return null;
     let k = (0, a.jsx)(f.Tooltip, {
-      text: P ? N.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : D ? N.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : N.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
+      text: P ? x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : D ? x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
       position: "bottom",
       color: f.Tooltip.Colors.GREY,
       children: e => (0, a.jsxs)(f.Clickable, {

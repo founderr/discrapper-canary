@@ -29,8 +29,8 @@ var a = n("735250"),
   I = n("768581"),
   A = n("70956"),
   v = n("823379"),
-  x = n("792125"),
-  N = n("981631"),
+  N = n("792125"),
+  x = n("981631"),
   M = n("768760"),
   R = n("901288");
 let L = 10 * A.default.Millis.SECOND;
@@ -48,8 +48,8 @@ function y(e) {
   }, [n.channel_id, n.id]), v = null != n.content && "" !== n.content ? (0, p.default)(n, {
     isInteracting: c
   }).content : null, {
-    contentPlaceholder: x,
-    renderedContent: N,
+    contentPlaceholder: N,
+    renderedContent: x,
     icon: L
   } = (0, T.renderSingleLineMessage)(n, v, s, R.messageContent, {
     iconClass: R.messageContentIcon,
@@ -73,8 +73,8 @@ function y(e) {
       className: i()(R.messageContentWrapper, {
         [R.mentioned]: n.mentioned
       }),
-      children: [null !== (t = null != N ? N : O) && void 0 !== t ? t : (0, a.jsx)("span", {
-        children: x
+      children: [null !== (t = null != x ? x : O) && void 0 !== t ? t : (0, a.jsx)("span", {
+        children: N
       }), null != O ? null : L]
     }), (0, a.jsx)("img", {
       alt: "",
@@ -111,7 +111,7 @@ function O(e) {
           channelId: t,
           message: a
         } = e;
-        t === n && a.type !== N.MessageTypes.STAGE_START && a.type !== N.MessageTypes.STAGE_END && a.type !== N.MessageTypes.STAGE_TOPIC && a.type !== N.MessageTypes.STAGE_SPEAKER && a.type !== N.MessageTypes.STAGE_RAISE_HAND && (clearTimeout(m.current), m.current = setTimeout(p, i), o(e => [...e, a.id]))
+        t === n && a.type !== x.MessageTypes.STAGE_START && a.type !== x.MessageTypes.STAGE_END && a.type !== x.MessageTypes.STAGE_TOPIC && a.type !== x.MessageTypes.STAGE_SPEAKER && a.type !== x.MessageTypes.STAGE_RAISE_HAND && (clearTimeout(m.current), m.current = setTimeout(p, i), o(e => [...e, a.id]))
       }
       return c.default.subscribe("MESSAGE_CREATE", e), () => {
         c.default.unsubscribe("MESSAGE_CREATE", e)
@@ -186,7 +186,7 @@ function O(e) {
       }
     });
   return (0, a.jsx)("div", {
-    className: i()(n, (0, x.getThemeClass)(N.ThemeTypes.DARK)),
+    className: i()(n, (0, N.getThemeClass)(x.ThemeTypes.DARK)),
     onMouseEnter: () => {
       d(!0)
     },

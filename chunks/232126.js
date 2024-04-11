@@ -4,8 +4,8 @@ var a = s("735250");
 s("470079");
 var i = s("803997"),
   r = s.n(i),
-  n = s("981631"),
-  l = s("535146");
+  l = s("981631"),
+  n = s("535146");
 let o = {
     ESRB: {
       EVERYONE: "1",
@@ -24,20 +24,20 @@ let o = {
     }
   },
   u = {
-    [n.ContentRatingAgencies.ESRB]: {
-      [o.ESRB.EVERYONE]: l.esrbEveryone,
-      [o.ESRB.EVERYONE_TEN_PLUS]: l.esrbEveryoneTenPlus,
-      [o.ESRB.TEEN]: l.esrbTeen,
-      [o.ESRB.MATURE]: l.esrbMature,
-      [o.ESRB.ADULT]: l.esrbAdult,
-      [o.ESRB.RATING_PENDING]: l.esrbRatingPending
+    [l.ContentRatingAgencies.ESRB]: {
+      [o.ESRB.EVERYONE]: n.esrbEveryone,
+      [o.ESRB.EVERYONE_TEN_PLUS]: n.esrbEveryoneTenPlus,
+      [o.ESRB.TEEN]: n.esrbTeen,
+      [o.ESRB.MATURE]: n.esrbMature,
+      [o.ESRB.ADULT]: n.esrbAdult,
+      [o.ESRB.RATING_PENDING]: n.esrbRatingPending
     },
-    [n.ContentRatingAgencies.PEGI]: {
-      [o.PEGI.THREE]: l.pegiThree,
-      [o.PEGI.SEVEN]: l.pegiSeven,
-      [o.PEGI.TWELVE]: l.pegiTwelve,
-      [o.PEGI.SIXTEEN]: l.pegiSixteen,
-      [o.PEGI.EIGHTEEN]: l.pegiEighteen
+    [l.ContentRatingAgencies.PEGI]: {
+      [o.PEGI.THREE]: n.pegiThree,
+      [o.PEGI.SEVEN]: n.pegiSeven,
+      [o.PEGI.TWELVE]: n.pegiTwelve,
+      [o.PEGI.SIXTEEN]: n.pegiSixteen,
+      [o.PEGI.EIGHTEEN]: n.pegiEighteen
     }
   };
 t.default = e => {
@@ -45,8 +45,8 @@ t.default = e => {
     agency: t,
     rating: s,
     className: i
-  } = e, n = u[t][s];
-  return null == n ? null : (0, a.jsx)("div", {
-    className: r()(l.contentRating, n, i)
+  } = e, l = u[t][s];
+  return null == l ? null : (0, a.jsx)("div", {
+    className: r()(n.contentRating, l, i)
   })
 }

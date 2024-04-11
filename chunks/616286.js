@@ -74,9 +74,9 @@ function I(e) {
       disabled: A
     } = I,
     v = l.useRef(null),
-    x = (0, o.useStateFromStores)([d.default], () => d.default.getChatOpen(n), [n]),
+    N = (0, o.useStateFromStores)([d.default], () => d.default.getChatOpen(n), [n]),
     {
-      isShowing: N,
+      isShowing: x,
       unreadCount: M,
       mentionCount: R
     } = function(e) {
@@ -100,8 +100,8 @@ function I(e) {
       }
     }(n),
     L = l.useCallback(() => {
-      null == c || c(), !x && h && (null == E || E()), u.default.updateChatOpen(n, !x)
-    }, [n, x, c, h, E]),
+      null == c || c(), !N && h && (null == E || E()), u.default.updateChatOpen(n, !N)
+    }, [n, N, c, h, E]),
     y = l.useCallback(e => {
       let {
         className: t
@@ -133,7 +133,7 @@ function I(e) {
       clearTimeout(e)
     }
   }, [j]);
-  let b = [t = f && A ? S.default.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : x ? S.default.Messages.VIDEO_CALL_HIDE_CHAT : S.default.Messages.VIDEO_CALL_SHOW_CHAT];
+  let b = [t = f && A ? S.default.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : N ? S.default.Messages.VIDEO_CALL_HIDE_CHAT : S.default.Messages.VIDEO_CALL_SHOW_CHAT];
   return R > 0 && b.push(S.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
     mentionCount: R
   })), M > 0 && b.push(S.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), (0, a.jsx)(C.default, {
@@ -144,7 +144,7 @@ function I(e) {
     iconComponent: y,
     tooltipPosition: "bottom",
     wrapperClassName: i()(s, null != r && {
-      [r]: N
+      [r]: x
     }),
     forceTooltipOpen: j,
     ...I

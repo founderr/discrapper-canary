@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("833858"),
   A = n("223135"),
   v = n("37091"),
-  x = n("6572"),
-  N = n("535400"),
+  N = n("6572"),
+  x = n("535400"),
   M = n("512384"),
   R = n("937995"),
   L = n("456631"),
@@ -91,8 +91,8 @@ let eu = l.memo(e => {
   } = e, eh = l.useContext(R.IdleStateContext), [em, ep] = l.useState(!1), eE = (0, r.useStateFromStores)([O.default], () => O.default.getId()), eC = d.type === el.ParticipantTypes.ACTIVITY ? null : null === (t = d.user) || void 0 === t ? void 0 : t.id, [eg] = (0, C.default)(d.type === el.ParticipantTypes.ACTIVITY ? [d.id] : []), eS = (0, r.useStateFromStores)([v.default], () => v.default.getEnabled()), e_ = (0, r.useStateFromStores)([P.default], () => null != eC && P.default.isLocalVideoDisabled(eC, (0, g.default)(d.type)), [eC, d.type]), eT = (0, r.useStateFromStores)([P.default], () => null != eC ? P.default.getVideoToggleState(eC, (0, g.default)(d.type)) : ea.VideoToggleState.NONE, [eC, d.type]), eI = eT === ea.VideoToggleState.AUTO_PROBING, {
     speaking: eA,
     ringing: ev,
-    hasVideo: ex
-  } = (0, en.default)(d, eE), eN = function(e, t, n) {
+    hasVideo: eN
+  } = (0, en.default)(d, eE), ex = function(e, t, n) {
     var a, l, s, i;
     let o = (0, r.useStateFromStoresObject)([b.default], () => {
         var e, a, l;
@@ -281,8 +281,8 @@ let eu = l.memo(e => {
               width: G,
               inCall: Y,
               participantType: d.type,
-              hasVideo: null != ex && ex,
-              ...eN,
+              hasVideo: null != eN && eN,
+              ...ex,
               idle: eh,
               platform: eL,
               title: (0, X.default)(B, d),
@@ -296,7 +296,7 @@ let eu = l.memo(e => {
               hangStatusActivity: eP,
               application: eU,
               speaking: eA
-            }) : null, d.type === el.ParticipantTypes.USER && eS ? (0, a.jsx)(x.default, {
+            }) : null, d.type === el.ParticipantTypes.USER && eS ? (0, a.jsx)(N.default, {
               userId: d.id,
               channelId: B.id
             }) : null, Y && !K ? (0, a.jsx)("div", {
@@ -306,7 +306,7 @@ let eu = l.memo(e => {
               })
             }) : null]
           })
-        }), (0, a.jsx)(N.default, {
+        }), (0, a.jsx)(x.default, {
           isFiring: em,
           callTileRef: eW.current
         })]
@@ -358,8 +358,8 @@ let ec = l.memo(e => {
     inCall: _,
     localVideoDisabled: T,
     videoToggleState: v,
-    focused: x,
-    blocked: N,
+    focused: N,
+    blocked: x,
     hideAudioIcon: M,
     participantType: R,
     participantUserId: L,
@@ -371,7 +371,7 @@ let ec = l.memo(e => {
     speaking: F
   } = e, V = null, W = null, z = null, K = null, X = (0, et.isVideoCompact)(C), Q = (0, et.isNamesCompact)(C), J = (0, r.useStateFromStores)([P.default], () => null != L && P.default.isLocalVideoAutoDisabled(L, (0, g.default)(R)), [L, R]), $ = (0, h.useRedesignIconContext)().enabled;
   if (!M) {
-    if (l && R === el.ParticipantTypes.STREAM && S && !x) V = (0, a.jsx)(h.Tooltip, {
+    if (l && R === el.ParticipantTypes.STREAM && S && !N) V = (0, a.jsx)(h.Tooltip, {
       text: er.default.Messages.UNMUTE,
       children: e => {
         let {
@@ -388,7 +388,7 @@ let ec = l.memo(e => {
         })
       }
     });
-    else if (l || R !== el.ParticipantTypes.STREAM || !S || X || x) {
+    else if (l || R !== el.ParticipantTypes.STREAM || !S || X || N) {
       if ($) {
         let e;
         m ? e = u.HeadphonesDenyIcon : s ? e = c.MicrophoneDenyIcon : n ? e = d.HeadphonesSlashIcon : l ? e = c.MicrophoneDenyIcon : t && (e = f.MicrophoneSlashIcon), V = null != e ? (0, a.jsx)(e, {
@@ -422,7 +422,7 @@ let ec = l.memo(e => {
   }
   return _ && P.default.supports(ei.Features.VIDEO) || !S ? _ && S && T && !J && (W = (0, a.jsx)(H.default, {
     foreground: eo.localMuteStrikethrough
-  })) : W = (0, a.jsx)(k.default, {}), R === el.ParticipantTypes.STREAM && !x && S && (z = (0, a.jsx)(h.Tooltip, {
+  })) : W = (0, a.jsx)(k.default, {}), R === el.ParticipantTypes.STREAM && !N && S && (z = (0, a.jsx)(h.Tooltip, {
     text: er.default.Messages.OPTIONS,
     children: e => {
       let {
@@ -496,7 +496,7 @@ let ec = l.memo(e => {
         }),
         color: "none",
         variant: "text-md/normal",
-        children: [N ? (0, a.jsx)("div", {
+        children: [x ? (0, a.jsx)("div", {
           className: eo.blocked,
           children: (0, a.jsx)(w.default, {
             className: eo.blockedIcon,

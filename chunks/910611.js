@@ -32,8 +32,8 @@ var a = n("735250"),
   I = n("984370"),
   A = n("217314"),
   v = n("981631"),
-  x = n("689938"),
-  N = n("121950");
+  N = n("689938"),
+  x = n("121950");
 
 function M(e) {
   let {
@@ -55,11 +55,11 @@ function M(e) {
     switch (e) {
       case v.ChannelTypes.DM:
         return {
-          prefix: x.default.Messages.DIRECT_MESSAGE, level: 1
+          prefix: N.default.Messages.DIRECT_MESSAGE, level: 1
         };
       case v.ChannelTypes.GROUP_DM:
         return {
-          prefix: x.default.Messages.GROUP_DM, level: 1
+          prefix: N.default.Messages.GROUP_DM, level: 1
         };
       case v.ChannelTypes.GUILD_DIRECTORY:
         return {
@@ -78,7 +78,7 @@ function M(e) {
       case v.ChannelTypes.PUBLIC_THREAD:
       case v.ChannelTypes.PRIVATE_THREAD:
         return {
-          prefix: x.default.Messages.THREAD, level: 2
+          prefix: N.default.Messages.THREAD, level: 2
         };
       default:
         return {
@@ -102,7 +102,7 @@ function M(e) {
       if (t.isManaged()) return L;
       return (0, a.jsxs)(l.Fragment, {
         children: [(0, a.jsx)(o.HiddenVisually, {
-          children: x.default.Messages.GROUP_DM
+          children: N.default.Messages.GROUP_DM
         }), (0, a.jsx)("div", {
           children: (0, a.jsx)(c.default, {
             "aria-hidden": !0,
@@ -110,7 +110,7 @@ function M(e) {
             size: o.AvatarSizes.SIZE_24,
             facepileSizeOverride: 32,
             experimentLocation: "header_bar",
-            className: N.avatar
+            className: x.avatar
           })
         }), (0, a.jsx)(_.default, {
           channel: t
@@ -121,7 +121,7 @@ function M(e) {
     case v.ChannelTypes.GUILD_FORUM:
     case v.ChannelTypes.GUILD_MEDIA:
       return (0, a.jsxs)(l.Fragment, {
-        children: [y(T, t.type === v.ChannelTypes.GUILD_ANNOUNCEMENT ? x.default.Messages.NEWS_CHANNEL : x.default.Messages.TEXT_CHANNEL), (0, a.jsx)(I.default.Title, {
+        children: [y(T, t.type === v.ChannelTypes.GUILD_ANNOUNCEMENT ? N.default.Messages.NEWS_CHANNEL : N.default.Messages.TEXT_CHANNEL), (0, a.jsx)(I.default.Title, {
           level: R,
           onContextMenu: p,
           onClick: h,
@@ -130,7 +130,7 @@ function M(e) {
       });
     case v.ChannelTypes.GUILD_VOICE:
       return (0, a.jsxs)(l.Fragment, {
-        children: [y(T, x.default.Messages.VOICE_CHANNEL), (0, a.jsx)(I.default.Title, {
+        children: [y(T, N.default.Messages.VOICE_CHANNEL), (0, a.jsx)(I.default.Title, {
           level: R,
           onContextMenu: p,
           onClick: h,
@@ -139,7 +139,7 @@ function M(e) {
       });
     case v.ChannelTypes.GUILD_STAGE_VOICE:
       return (0, a.jsxs)(l.Fragment, {
-        children: [y(T, x.default.Messages.STAGE_CHANNEL), (0, a.jsx)(I.default.Title, {
+        children: [y(T, N.default.Messages.STAGE_CHANNEL), (0, a.jsx)(I.default.Title, {
           level: R,
           onContextMenu: p,
           onClick: h,
@@ -153,35 +153,35 @@ function M(e) {
       if (!f && null != s) {
         let e = (0, d.default)(s, r);
         O = (0, a.jsxs)(l.Fragment, {
-          children: [y(e, x.default.Messages.TEXT_CHANNEL), (0, a.jsx)(I.default.Title, {
+          children: [y(e, N.default.Messages.TEXT_CHANNEL), (0, a.jsx)(I.default.Title, {
             level: R,
             onContextMenu: g,
             onClick: C,
-            className: i()(N.parentChannelName, N.cursorPointer),
+            className: i()(x.parentChannelName, x.cursorPointer),
             children: (0, u.computeChannelName)(s, E.default, m.default)
           }), (0, a.jsx)(I.default.Caret, {})]
         })
       }
       let j = (null == s ? void 0 : s.type) != null && v.ChannelTypesSets.GUILD_THREADS_ONLY.has(s.type);
       return (0, a.jsxs)(l.Fragment, {
-        children: [O, y(j ? null : T, x.default.Messages.THREAD), (0, a.jsx)(I.default.Title, {
+        children: [O, y(j ? null : T, N.default.Messages.THREAD), (0, a.jsx)(I.default.Title, {
           level: R,
           onContextMenu: p,
           onClick: h,
           className: i()({
-            [N.cursorPointer]: f,
-            [N.forumPostTitle]: j
+            [x.cursorPointer]: f,
+            [x.forumPostTitle]: j
           }),
           children: L
         })]
       });
     case v.ChannelTypes.GUILD_DIRECTORY:
-      let P = (null == r ? void 0 : r.hasFeature(v.GuildFeatures.HUB)) ? x.default.Messages.HUB_DIRECTORY_CHANNEL_TITLE.format({
+      let P = (null == r ? void 0 : r.hasFeature(v.GuildFeatures.HUB)) ? N.default.Messages.HUB_DIRECTORY_CHANNEL_TITLE.format({
         guildName: n
       }) : n;
       return (0, a.jsxs)(l.Fragment, {
         children: [null !== T ? (0, a.jsx)(I.default.Icon, {
-          iconClassName: N.__invalid_icon,
+          iconClassName: x.__invalid_icon,
           icon: T,
           "aria-hidden": !0
         }) : null, (0, a.jsxs)(I.default.Title, {
@@ -239,7 +239,7 @@ function L(e, t) {
 function y(e, t) {
   return (0, a.jsxs)(a.Fragment, {
     children: [null !== e && (0, a.jsx)(I.default.Icon, {
-      iconClassName: N.__invalid_icon,
+      iconClassName: x.__invalid_icon,
       icon: e,
       "aria-hidden": !0
     }), (0, a.jsx)(o.HiddenVisually, {
@@ -255,19 +255,19 @@ function O(e) {
     caretPosition: l = "left"
   } = e;
   return (0, r.useStateFromStores)([p.default], () => p.default.getGuildId()) !== v.FAVORITES || null == t ? null : (0, a.jsxs)("div", {
-    className: N.guildBreadcrumbContainer,
+    className: x.guildBreadcrumbContainer,
     children: ["left" === l && (0, a.jsx)(I.default.Caret, {
       direction: "left"
     }), (0, a.jsx)(g.default, {
       guild: t,
       size: g.default.Sizes.SMALLER,
-      className: N.guildBreadcrumbIcon,
+      className: x.guildBreadcrumbIcon,
       active: !0
     }), (0, a.jsx)(I.default.Title, {
       onClick: () => {
         (0, f.transitionToGuild)(t.id, n.id)
       },
-      className: i()(N.parentChannelName, N.cursorPointer),
+      className: i()(x.parentChannelName, x.cursorPointer),
       children: t.name
     }), "right" === l && (0, a.jsx)(I.default.Caret, {
       direction: "right"

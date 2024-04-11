@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("703656"),
   A = n("493754"),
   v = n("880831"),
-  x = n("73563"),
-  N = n("800965"),
+  N = n("73563"),
+  x = n("800965"),
   M = n("107169"),
   R = n("891551"),
   L = n("314897"),
@@ -95,7 +95,7 @@ function el(e) {
       className: $.rightTrayIcon,
       popoutWindowAlwaysOnTop: r,
       onToggleStayOnTop: ea
-    }) : null, h ? (0, a.jsx)(N.default, {
+    }) : null, h ? (0, a.jsx)(x.default, {
       className: $.rightTrayIcon,
       popoutOpen: s,
       onOpenPopout: et(t, c),
@@ -132,7 +132,7 @@ function ei(e) {
     _ = (0, w.useStageParticipants)(n.id, k.StageChannelParticipantNamedIndex.SPEAKER),
     T = (0, o.useStateFromStores)([E.default], () => E.default.getSelectedParticipant(n.id)),
     I = f && p !== X.AppContext.POPOUT,
-    [A, N] = l.useState(0),
+    [A, x] = l.useState(0),
     {
       isOnStartStageScreen: M
     } = (0, B.default)();
@@ -150,7 +150,7 @@ function ei(e) {
       let {
         scrollTop: t
       } = e.target;
-      (0, r.debounce)(() => N(t), 1e3, {
+      (0, r.debounce)(() => x(t), 1e3, {
         leading: !0
       })()
     }
@@ -158,12 +158,12 @@ function ei(e) {
     participants: _,
     channel: n,
     hasConnectPermission: S
-  }), (0, a.jsx)(x.default, {
+  }), (0, a.jsx)(N.default, {
     style: {
       height: "calc(100% - ".concat(L, ")"),
       paddingTop: L
     },
-    disableGradients: 0 === A && x.DisableGradient.TOP,
+    disableGradients: 0 === A && N.DisableGradient.TOP,
     renderBottomLeft: () => (0, a.jsx)(es, {
       channel: n
     }),
@@ -218,7 +218,7 @@ function er(e) {
     popoutWindowAlwaysOnTop: T.default.getIsAlwaysOnTop(X.PopoutWindowKeys.CHANNEL_CALL_POPOUT)
   })), I = null != C && !C.closed, {
     analyticsLocations: A
-  } = (0, p.default)(m.default.STAGE_CHANNEL_CALL), v = (0, h.useAppContext)(), x = (0, o.useStateFromStores)([E.default], () => E.default.getChatOpen(t.id), [t.id]), N = (0, o.useStateFromStores)([O.default], () => O.default.getGuild(t.guild_id), [t.guild_id]);
+  } = (0, p.default)(m.default.STAGE_CHANNEL_CALL), v = (0, h.useAppContext)(), N = (0, o.useStateFromStores)([E.default], () => E.default.getChatOpen(t.id), [t.id]), x = (0, o.useStateFromStores)([O.default], () => O.default.getGuild(t.guild_id), [t.guild_id]);
   l.useEffect(() => {
     null == u.Storage.get(ee) && ((0, d.openModalLazy)(async () => {
       let {
@@ -242,7 +242,7 @@ function er(e) {
         children: [(0, a.jsx)("div", {
           className: i()($.callContainer, (0, b.getThemeClass)(X.ThemeTypes.DARK), {
             [$.sidebarVisible]: s,
-            [$.sidebarOrChatVisible]: s || x
+            [$.sidebarOrChatVisible]: s || N
           }),
           children: (0, a.jsx)(ei, {
             channel: t,
@@ -251,17 +251,17 @@ function er(e) {
             popoutWindow: C,
             popoutWindowAlwaysOnTop: _,
             popoutOpen: I,
-            chatOpen: x
+            chatOpen: N
           })
         }), s ? (0, a.jsx)(G.default, {
           channel: t,
           toggleRequestToSpeakSidebar: c,
-          chatOpen: x
+          chatOpen: N
         }) : null, (0, a.jsx)("div", {
           className: $.channelChatWrapper,
-          children: x && (!I || I && v === X.AppContext.POPOUT) && (0, a.jsx)(S.default, {
+          children: N && (!I || I && v === X.AppContext.POPOUT) && (0, a.jsx)(S.default, {
             channel: t,
-            guild: N,
+            guild: x,
             maxWidth: M - 550
           })
         })]

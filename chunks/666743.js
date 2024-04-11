@@ -1,14 +1,14 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return l
+    return n
   }
 }), s("47120");
 var a = s("735250"),
   i = s("470079"),
   r = s("314897");
 
-function n(e, t, s) {
+function l(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -17,7 +17,7 @@ function n(e, t, s) {
   }) : e[t] = s, e
 }
 
-function l(e) {
+function n(e) {
   return class extends i.Component {
     componentDidMount() {
       r.default.addChangeListener(this.onStoreChange)
@@ -32,9 +32,9 @@ function l(e) {
       })
     }
     constructor(...e) {
-      super(...e), n(this, "state", {
+      super(...e), l(this, "state", {
         isAuthenticated: r.default.isAuthenticated()
-      }), n(this, "onStoreChange", () => {
+      }), l(this, "onStoreChange", () => {
         this.setState({
           isAuthenticated: r.default.isAuthenticated()
         })

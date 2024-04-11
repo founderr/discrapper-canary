@@ -3,23 +3,23 @@ s.r(t), s("47120");
 var a = s("735250"),
   i = s("470079"),
   r = s("803997"),
-  n = s.n(r),
-  l = s("481060"),
+  l = s.n(r),
+  n = s("481060"),
   o = s("378720"),
   u = s("285952"),
   d = s("424218"),
   c = s("823379"),
   _ = s("358085"),
   E = s("843445"),
-  T = s("981631"),
-  I = s("689938"),
-  f = s("989466");
-let R = {
-  [T.OperatingSystems.WINDOWS]: _.PlatformTypes.WINDOWS,
-  [T.OperatingSystems.MACOS]: _.PlatformTypes.OSX,
-  [T.OperatingSystems.LINUX]: _.PlatformTypes.LINUX
+  C = s("981631"),
+  f = s("689938"),
+  T = s("989466");
+let I = {
+  [C.OperatingSystems.WINDOWS]: _.PlatformTypes.WINDOWS,
+  [C.OperatingSystems.MACOS]: _.PlatformTypes.OSX,
+  [C.OperatingSystems.LINUX]: _.PlatformTypes.LINUX
 };
-class S extends i.PureComponent {
+class R extends i.PureComponent {
   render() {
     let {
       active: e,
@@ -27,53 +27,53 @@ class S extends i.PureComponent {
       pageSize: s,
       onClick: i
     } = this.props, r = s === E.PageSizes.LARGE;
-    return (0, a.jsx)(l.Button, {
-      size: r ? l.Button.Sizes.MIN : l.Button.Sizes.LARGE,
+    return (0, a.jsx)(n.Button, {
+      size: r ? n.Button.Sizes.MIN : n.Button.Sizes.LARGE,
       fullWidth: !r,
-      color: e ? f.tabSelectedColor : f.tabNotSelectedColor,
-      className: n()({
-        [f.tabPageLarge]: r,
-        [f.tabPageSmall]: !r,
-        [f.tabSelected]: e,
-        [f.tabNotSelected]: !e
+      color: e ? T.tabSelectedColor : T.tabNotSelectedColor,
+      className: l()({
+        [T.tabPageLarge]: r,
+        [T.tabPageSmall]: !r,
+        [T.tabSelected]: e,
+        [T.tabNotSelected]: !e
       }),
       onClick: i,
       children: t
     })
   }
 }
-let m = e => [{
-  key: I.default.Messages.APPLICATION_STORE_SPECS_OS,
+let S = e => [{
+  key: f.default.Messages.APPLICATION_STORE_SPECS_OS,
   value: e.operating_system_version
 }, {
-  key: I.default.Messages.APPLICATION_STORE_SPECS_CPU,
+  key: f.default.Messages.APPLICATION_STORE_SPECS_CPU,
   value: e.cpu
 }, {
-  key: I.default.Messages.APPLICATION_STORE_SPECS_MEMORY,
-  value: null != e.ram ? I.default.Messages.APPLICATION_STORE_SPECS_MEMORY_VALUE.format({
+  key: f.default.Messages.APPLICATION_STORE_SPECS_MEMORY,
+  value: null != e.ram ? f.default.Messages.APPLICATION_STORE_SPECS_MEMORY_VALUE.format({
     size: (0, d.formatSize)(1e3 * e.ram, {
       showDecimalForGB: !1
     })
   }) : null
 }, {
-  key: I.default.Messages.APPLICATION_STORE_SPECS_VIDEO,
+  key: f.default.Messages.APPLICATION_STORE_SPECS_VIDEO,
   value: e.gpu
 }, {
-  key: I.default.Messages.APPLICATION_STORE_SPECS_STORAGE,
+  key: f.default.Messages.APPLICATION_STORE_SPECS_STORAGE,
   value: null != e.disk ? (0, d.formatSize)(1e3 * e.disk, {
     showDecimalForGB: !1
   }) : null
 }, {
-  key: I.default.Messages.APPLICATION_STORE_SPECS_SOUND,
+  key: f.default.Messages.APPLICATION_STORE_SPECS_SOUND,
   value: e.sound_card
 }, {
-  key: I.default.Messages.APPLICATION_STORE_SPECS_NETWORK,
+  key: f.default.Messages.APPLICATION_STORE_SPECS_NETWORK,
   value: e.network
 }, {
-  key: I.default.Messages.APPLICATION_STORE_SPECS_NOTES,
+  key: f.default.Messages.APPLICATION_STORE_SPECS_NOTES,
   value: e.notes
 }];
-class N extends i.PureComponent {
+class p extends i.PureComponent {
   static getDerivedStateFromProps(e, t) {
     let {
       systemRequirements: s
@@ -92,21 +92,21 @@ class N extends i.PureComponent {
       selectedOperatingSystem: s
     } = this.state, i = Object.keys(t);
     return 1 === i.length ? null : (0, a.jsxs)(u.default, {
-      className: f.tabs,
+      className: T.tabs,
       children: [(0, a.jsx)("div", {
-        className: f.separator
-      }), i.map(t => (0, a.jsx)(S, {
+        className: T.separator
+      }), i.map(t => (0, a.jsx)(R, {
         active: t === s,
         onClick: () => this.handleSelectOperatingSystem(t),
         pageSize: e,
         children: function(e) {
           switch (e) {
-            case T.OperatingSystems.WINDOWS:
-              return I.default.Messages.WINDOWS;
-            case T.OperatingSystems.MACOS:
-              return I.default.Messages.MACOS;
-            case T.OperatingSystems.LINUX:
-              return I.default.Messages.LINUX
+            case C.OperatingSystems.WINDOWS:
+              return f.default.Messages.WINDOWS;
+            case C.OperatingSystems.MACOS:
+              return f.default.Messages.MACOS;
+            case C.OperatingSystems.LINUX:
+              return f.default.Messages.LINUX
           }
         }(t)
       }, t))]
@@ -114,18 +114,18 @@ class N extends i.PureComponent {
   }
   renderRequirementsSection(e, t) {
     if (null == e) return null;
-    let s = m(e).map((e, t) => {
+    let s = S(e).map((e, t) => {
       let s = null != e.value ? e.value.trim() : null;
       return null == s || 0 === s.length ? null : (0, a.jsxs)("div", {
-        className: f.requirement,
+        className: T.requirement,
         children: [(0, a.jsxs)("span", {
-          className: f.requirementKey,
+          className: T.requirementKey,
           children: [e.key, ":"]
         }), s]
       }, t)
     }).filter(c.isNotNullish);
     return (0, a.jsxs)("div", {
-      className: f.requirements,
+      className: T.requirements,
       children: [(0, a.jsx)(o.default, {
         tag: "h4",
         children: t
@@ -138,15 +138,15 @@ class N extends i.PureComponent {
       recommended: t
     } = this.props.systemRequirements[this.state.selectedOperatingSystem];
     return (0, a.jsxs)("div", {
-      className: f.requirementsContainer,
-      children: [this.renderRequirementsSection(e, I.default.Messages.APPLICATION_STORE_SPECS_MINIMUM), this.renderRequirementsSection(t, I.default.Messages.APPLICATION_STORE_SPECS_RECOMMENDED)]
+      className: T.requirementsContainer,
+      children: [this.renderRequirementsSection(e, f.default.Messages.APPLICATION_STORE_SPECS_MINIMUM), this.renderRequirementsSection(t, f.default.Messages.APPLICATION_STORE_SPECS_RECOMMENDED)]
     })
   }
   render() {
     return (0, a.jsxs)("div", {
       className: this.props.className,
       children: [(0, a.jsx)(o.default, {
-        children: I.default.Messages.APPLICATION_STORE_SECTION_TITLE_SYSTEM_REQUIREMENTS
+        children: f.default.Messages.APPLICATION_STORE_SECTION_TITLE_SYSTEM_REQUIREMENTS
       }), this.renderTabs(), this.renderBody()]
     })
   }
@@ -164,11 +164,11 @@ class N extends i.PureComponent {
     }) : t[s] = a;
     let i = (0, _.getPlatform)(),
       r = Object.keys(e.systemRequirements),
-      n = r[0];
-    for (let e of r) R[e] === i && (n = e);
+      l = r[0];
+    for (let e of r) I[e] === i && (l = e);
     this.state = {
-      selectedOperatingSystem: n
+      selectedOperatingSystem: l
     }
   }
 }
-t.default = N
+t.default = p

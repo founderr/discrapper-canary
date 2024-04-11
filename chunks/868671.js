@@ -32,7 +32,7 @@ function p(e) {
   } = e, [C, g] = a.useState(!1), {
     requestId: S,
     entries: _
-  } = (0, o.default)(p), T = (0, l.useStateFromStores)([r.default], () => r.default.hidden), [I, A, v, x] = a.useMemo(() => {
+  } = (0, o.default)(p), T = (0, l.useStateFromStores)([r.default], () => r.default.hidden), [I, A, v, N] = a.useMemo(() => {
     let e;
     if (null == _ || 0 === _.length || null == S) return [t, n, m];
     let a = C ? _.length : 3,
@@ -68,18 +68,18 @@ function p(e) {
       o = [r, ...t],
       d = [...n, r, ...e];
     return [o, d, Math.random(), e]
-  }, [p, _, C, t, E, S, n, m, T]), N = a.useRef(0), M = a.useRef(_), R = a.useRef(), L = a.useCallback(e => {
+  }, [p, _, C, t, E, S, n, m, T]), x = a.useRef(0), M = a.useRef(_), R = a.useRef(), L = a.useCallback(e => {
     var t;
     let n = Math.floor(e / u.DEFAULT_CONTENT_ROW_HEIGHT),
-      a = Math.min(null !== (t = null == x ? void 0 : x.length) && void 0 !== t ? t : 0, n);
-    N.current = Math.max(N.current, a)
-  }, [x]);
+      a = Math.min(null !== (t = null == N ? void 0 : N.length) && void 0 !== t ? t : 0, n);
+    x.current = Math.max(x.current, a)
+  }, [N]);
   return a.useEffect(() => {
     M.current = _
-  }, [_]), a.useEffect(() => (N.current = 0, R.current = Date.now(), () => {
+  }, [_]), a.useEffect(() => (x.current = 0, R.current = Date.now(), () => {
     var e, t;
     if (null == S || null == R.current || Date.now() - R.current < 3e3) return;
-    let n = null !== (t = null === (e = M.current) || void 0 === e ? void 0 : e.slice(0, N.current).map(e => e.id)) && void 0 !== t ? t : [];
+    let n = null !== (t = null === (e = M.current) || void 0 === e ? void 0 : e.slice(0, x.current).map(e => e.id)) && void 0 !== t ? t : [];
     !T && i.default.track(f.AnalyticEvents.RANKING_ITEMS_SEEN, {
       request_id: S,
       first_shown_at: R.current,

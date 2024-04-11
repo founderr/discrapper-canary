@@ -29,8 +29,8 @@ var a = n("735250"),
   I = n("131951"),
   A = n("451478"),
   v = n("40300"),
-  x = n("167580"),
-  N = n("368666"),
+  N = n("167580"),
+  x = n("368666"),
   M = n("685203"),
   R = n("112560"),
   L = n("442168"),
@@ -59,7 +59,7 @@ function G(e) {
     children: [n ? null : (0, a.jsx)(D.default, {
       participant: t
     }), l || null == o || o.state === U.ApplicationStreamStates.ENDED || o.state === U.ApplicationStreamStates.FAILED ? null : (0, a.jsx)(E.default, {
-      size: N.default.Sizes.SMALL,
+      size: x.default.Sizes.SMALL,
       className: H.liveIndicator,
       participant: t,
       showQuality: !u && !s,
@@ -75,14 +75,14 @@ function V(e) {
     onVideoResize: s,
     paused: f,
     fit: E,
-    inPopout: N,
+    inPopout: x,
     width: D,
     focused: b
   } = e, G = I.default.getVideoComponent(), V = (0, r.useStateFromStores)([_.default], () => _.default.getId()), W = (0, h.default)(), {
     stream: Y,
     user: z,
     streamId: K
-  } = t, Z = (0, r.useStateFromStores)([T.default], () => T.default.getChannel(Y.channelId)), q = (0, r.useStateFromStores)([S.default], () => S.default.getActiveStreamForUser(z.id, Y.guildId), [z.id, Y.guildId]), X = (0, r.useStateFromStores)([S.default], () => S.default.getAllActiveStreams().length > 0), Q = (0, r.useStateFromStores)([A.default], () => A.default.isFocused()), J = (null == q ? void 0 : q.ownerId) === V, $ = J && !Q && !N, ee = null != q ? (0, m.default)(q, z, z.id === V, $) : null, et = D < 195;
+  } = t, Z = (0, r.useStateFromStores)([T.default], () => T.default.getChannel(Y.channelId)), q = (0, r.useStateFromStores)([S.default], () => S.default.getActiveStreamForUser(z.id, Y.guildId), [z.id, Y.guildId]), X = (0, r.useStateFromStores)([S.default], () => S.default.getAllActiveStreams().length > 0), Q = (0, r.useStateFromStores)([A.default], () => A.default.isFocused()), J = (null == q ? void 0 : q.ownerId) === V, $ = J && !Q && !x, ee = null != q ? (0, m.default)(q, z, z.id === V, $) : null, et = D < 195;
   if (l.useEffect(() => {
       !X && (null == Z ? void 0 : Z.isGuildStageVoice()) && !J && ((0, d.watchStream)(Y), u.default.updateStageStreamSize(Y.channelId, !1))
     }, []), l.useEffect(() => {
@@ -131,7 +131,7 @@ function V(e) {
       ...ee
     }) : null, (0, a.jsx)(L.default, {
       stream: Y,
-      inPopout: N
+      inPopout: x
     })]
   });
   else return (0, a.jsxs)("div", {
@@ -161,7 +161,7 @@ function V(e) {
           })
         },
         isSmall: et,
-        children: (0, a.jsx)(x.default, {
+        children: (0, a.jsx)(N.default, {
           className: H.addStreamIcon
         })
       }) : null]

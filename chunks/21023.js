@@ -1,297 +1,297 @@
 "use strict";
 s.r(t), s.d(t, {
   useGetPlanComparisonTableRows: function() {
-    return N
+    return p
   }
 });
 var a, i, r = s("735250");
 s("470079");
-var n = s("481060"),
-  l = s("706454"),
+var l = s("481060"),
+  n = s("706454"),
   o = s("263704"),
   u = s("465670"),
   d = s("74538"),
   c = s("937615"),
   _ = s("846363"),
   E = s("474936"),
-  T = s("981631"),
-  I = s("689938"),
-  f = s("116511");
-let R = e => {
+  C = s("981631"),
+  f = s("689938"),
+  T = s("116511");
+let I = e => {
     let {
       text: t,
       badge: s,
       variant: a
     } = e;
-    return (0, r.jsxs)(n.Text, {
+    return (0, r.jsxs)(l.Text, {
       color: "text-normal",
       variant: null != a ? a : "text-sm/normal",
       children: [t, " ", s]
     })
   },
-  S = e => {
+  R = e => {
     let {
       text: t,
       variant: s
     } = e;
-    return (0, r.jsx)(n.Text, {
+    return (0, r.jsx)(l.Text, {
       color: "header-primary",
       variant: null != s ? s : "text-md/semibold",
       children: t
     })
   },
-  m = e => {
+  S = e => {
     let {
       includes: t
     } = e;
     return t ? (0, r.jsxs)(r.Fragment, {
       children: [(0, r.jsx)(o.default, {
-        className: f.checkmarkIcon,
+        className: T.checkmarkIcon,
         "aria-hidden": !0
-      }), (0, r.jsx)(n.HiddenVisually, {
-        children: I.default.Messages.INCLUDED
+      }), (0, r.jsx)(l.HiddenVisually, {
+        children: f.default.Messages.INCLUDED
       })]
     }) : (0, r.jsxs)(r.Fragment, {
       children: [(0, r.jsx)(u.default, {
-        className: f.closeIcon,
+        className: T.closeIcon,
         "aria-hidden": !0
-      }), (0, r.jsx)(n.HiddenVisually, {
-        children: I.default.Messages.NOT_INCLUDED
+      }), (0, r.jsx)(l.HiddenVisually, {
+        children: f.default.Messages.NOT_INCLUDED
       })]
     })
   };
 (a = i || (i = {}))[a.PRICE = 0] = "PRICE", a[a.EMOJI = 1] = "EMOJI", a[a.STICKER = 2] = "STICKER", a[a.CUSTOM_APP_ICONS = 3] = "CUSTOM_APP_ICONS", a[a.SUPER_REACTIONS = 4] = "SUPER_REACTIONS", a[a.UPLOAD = 5] = "UPLOAD", a[a.STREAMING = 6] = "STREAMING", a[a.BOOSTS = 7] = "BOOSTS", a[a.PROFILE_THEMES = 8] = "PROFILE_THEMES", a[a.SERVER_PROFILE = 9] = "SERVER_PROFILE", a[a.SHOP_DISCOUNTS = 10] = "SHOP_DISCOUNTS", a[a.CLIENT_THEME = 11] = "CLIENT_THEME", a[a.BADGE = 12] = "BADGE", a[a.VIDEO_BACKGROUND = 13] = "VIDEO_BACKGROUND", a[a.CUSTOM_SOUNDS_ANYWHERE = 14] = "CUSTOM_SOUNDS_ANYWHERE", a[a.CUSTOM_ENTRY_SOUNDS = 15] = "CUSTOM_ENTRY_SOUNDS", a[a.SERVER_LIMIT = 16] = "SERVER_LIMIT", a[a.MESSAGE_LENGTH = 17] = "MESSAGE_LENGTH", a[a.CUSTOMIZATION_CATEGORY = 18] = "CUSTOMIZATION_CATEGORY", a[a.FEATURE_UPGRADES_CATEGORY = 19] = "FEATURE_UPGRADES_CATEGORY", a[a.PERSONALIZATION_CATEGORY = 20] = "PERSONALIZATION_CATEGORY", a[a.AVATAR_AND_BANNER = 21] = "AVATAR_AND_BANNER";
-let N = (e, t, s, a) => {
+let p = (e, t, s, a) => {
   let i = (0, _.useMarketingOptimizationExperiment)({
       autoTrackExposure: !1
     }),
     o = {
       0: {
-        label: (0, r.jsx)(R, {
+        label: (0, r.jsx)(I, {
           variant: i ? "heading-lg/extrabold" : void 0,
-          text: I.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_PRICE
+          text: f.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_PRICE
         }),
         column1: (0, r.jsx)(r.Fragment, {
-          children: (0, r.jsx)(S, {
+          children: (0, r.jsx)(R, {
             variant: i ? "heading-md/semibold" : void 0,
             text: d.default.formatPriceString(e, E.SubscriptionIntervalTypes.MONTH)
           })
         }),
         column2: (0, r.jsx)(r.Fragment, {
-          children: (0, r.jsx)(S, {
+          children: (0, r.jsx)(R, {
             text: s ? a : d.default.formatPriceString(t, E.SubscriptionIntervalTypes.MONTH)
           })
         }),
         withBottomBorder: !i
       },
       1: {
-        label: (0, r.jsx)(R, {
-          text: I.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_EMOJI
+        label: (0, r.jsx)(I, {
+          text: f.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_EMOJI
         }),
-        column1: (0, r.jsx)(m, {
+        column1: (0, r.jsx)(S, {
           includes: !0
         }),
-        column2: (0, r.jsx)(m, {
+        column2: (0, r.jsx)(S, {
           includes: !0
         })
       },
       2: {
-        label: (0, r.jsx)(R, {
-          text: I.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_STICKER_V2
+        label: (0, r.jsx)(I, {
+          text: f.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_STICKER_V2
         }),
-        column1: (0, r.jsx)(m, {
+        column1: (0, r.jsx)(S, {
           includes: !0
         }),
-        column2: (0, r.jsx)(m, {
+        column2: (0, r.jsx)(S, {
           includes: !0
         })
       },
       3: {
-        label: (0, r.jsx)(R, {
-          text: I.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE
+        label: (0, r.jsx)(I, {
+          text: f.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE
         }),
-        column1: (0, r.jsx)(m, {
+        column1: (0, r.jsx)(S, {
           includes: !0
         }),
-        column2: (0, r.jsx)(m, {
+        column2: (0, r.jsx)(S, {
           includes: !0
         })
       },
       4: {
-        label: (0, r.jsx)(R, {
-          text: I.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SUPER_REACTIONS
+        label: (0, r.jsx)(I, {
+          text: f.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SUPER_REACTIONS
         }),
-        column1: (0, r.jsx)(m, {
+        column1: (0, r.jsx)(S, {
           includes: !0
         }),
-        column2: (0, r.jsx)(m, {
+        column2: (0, r.jsx)(S, {
           includes: !0
         })
       },
       5: {
-        label: (0, r.jsx)(R, {
-          text: I.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_UPLOAD
+        label: (0, r.jsx)(I, {
+          text: f.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_UPLOAD
         }),
-        column1: (0, r.jsx)(S, {
+        column1: (0, r.jsx)(R, {
           text: (0, d.getMaxFileSizeForPremiumType)(E.PremiumTypes.TIER_0)
         }),
-        column2: (0, r.jsx)(S, {
+        column2: (0, r.jsx)(R, {
           text: (0, d.getMaxFileSizeForPremiumType)(E.PremiumTypes.TIER_2)
         })
       },
       6: {
-        label: (0, r.jsx)(R, {
-          text: I.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_STREAMING
+        label: (0, r.jsx)(I, {
+          text: f.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_STREAMING
         }),
-        column1: (0, r.jsx)(m, {
+        column1: (0, r.jsx)(S, {
           includes: !1
         }),
-        column2: (0, r.jsx)(S, {
-          text: I.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_STREAMING_DETAILS
+        column2: (0, r.jsx)(R, {
+          text: f.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_STREAMING_DETAILS
         })
       },
       7: {
-        label: (0, r.jsx)(R, {
-          text: I.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BOOSTS.format({
+        label: (0, r.jsx)(I, {
+          text: f.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BOOSTS.format({
             numBoosts: E.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
-            percentageOff: (0, c.formatPercent)(l.default.locale, E.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
+            percentageOff: (0, c.formatPercent)(n.default.locale, E.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
           })
         }),
-        column1: (0, r.jsx)(m, {
+        column1: (0, r.jsx)(S, {
           includes: !1
         }),
-        column2: (0, r.jsx)(m, {
+        column2: (0, r.jsx)(S, {
           includes: !0
         })
       },
       8: {
-        label: (0, r.jsx)(R, {
-          text: I.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_PROFILE_THEMES
+        label: (0, r.jsx)(I, {
+          text: f.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_PROFILE_THEMES
         }),
-        column1: (0, r.jsx)(m, {
+        column1: (0, r.jsx)(S, {
           includes: !1
         }),
-        column2: (0, r.jsx)(m, {
+        column2: (0, r.jsx)(S, {
           includes: !0
         })
       },
       9: {
-        label: (0, r.jsx)(R, {
-          text: I.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SERVER_PROFILE
+        label: (0, r.jsx)(I, {
+          text: f.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SERVER_PROFILE
         }),
-        column1: (0, r.jsx)(m, {
+        column1: (0, r.jsx)(S, {
           includes: !1
         }),
-        column2: (0, r.jsx)(m, {
+        column2: (0, r.jsx)(S, {
           includes: !0
         })
       },
       10: {
-        label: (0, r.jsx)(R, {
-          text: I.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SHOP_DISCOUNTS_GENERIC
+        label: (0, r.jsx)(I, {
+          text: f.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SHOP_DISCOUNTS_GENERIC
         }),
-        column1: (0, r.jsx)(m, {
+        column1: (0, r.jsx)(S, {
           includes: !1
         }),
-        column2: (0, r.jsx)(m, {
+        column2: (0, r.jsx)(S, {
           includes: !0
         })
       },
       11: {
-        label: (0, r.jsx)(R, {
-          text: I.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_CLIENT_THEME
+        label: (0, r.jsx)(I, {
+          text: f.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_CLIENT_THEME
         }),
-        column1: (0, r.jsx)(m, {
+        column1: (0, r.jsx)(S, {
           includes: !1
         }),
-        column2: (0, r.jsx)(m, {
+        column2: (0, r.jsx)(S, {
           includes: !0
         })
       },
       12: {
-        label: (0, r.jsx)(R, {
-          text: I.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BADGE
+        label: (0, r.jsx)(I, {
+          text: f.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BADGE
         }),
-        column1: (0, r.jsx)(m, {
+        column1: (0, r.jsx)(S, {
           includes: !0
         }),
-        column2: (0, r.jsx)(m, {
+        column2: (0, r.jsx)(S, {
           includes: !0
         })
       },
       13: {
-        label: (0, r.jsx)(R, {
-          text: I.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_VIDEO_BACKGROUND
+        label: (0, r.jsx)(I, {
+          text: f.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_VIDEO_BACKGROUND
         }),
-        column1: (0, r.jsx)(m, {
+        column1: (0, r.jsx)(S, {
           includes: !0
         }),
-        column2: (0, r.jsx)(m, {
+        column2: (0, r.jsx)(S, {
           includes: !0
         })
       },
       14: {
-        label: (0, r.jsx)(R, {
-          text: I.default.Messages.SOUNDBOARD_MARKETING_CUSTOM_SOUNDS_ANYWHERE
+        label: (0, r.jsx)(I, {
+          text: f.default.Messages.SOUNDBOARD_MARKETING_CUSTOM_SOUNDS_ANYWHERE
         }),
-        column1: (0, r.jsx)(m, {
+        column1: (0, r.jsx)(S, {
           includes: !1
         }),
-        column2: (0, r.jsx)(m, {
+        column2: (0, r.jsx)(S, {
           includes: !0
         }),
         withBottomBorder: !i
       },
       15: {
-        label: (0, r.jsx)(R, {
-          text: I.default.Messages.SOUNDBOARD_MARKETING_CUSTOM_ENTRY_SOUNDS_V2
+        label: (0, r.jsx)(I, {
+          text: f.default.Messages.SOUNDBOARD_MARKETING_CUSTOM_ENTRY_SOUNDS_V2
         }),
-        column1: (0, r.jsx)(m, {
+        column1: (0, r.jsx)(S, {
           includes: !1
         }),
-        column2: (0, r.jsx)(m, {
+        column2: (0, r.jsx)(S, {
           includes: !0
         })
       },
       21: {
-        label: (0, r.jsx)(R, {
-          text: I.default.Messages.AVATAR_PROFILE_BANNER_MARKETING
+        label: (0, r.jsx)(I, {
+          text: f.default.Messages.AVATAR_PROFILE_BANNER_MARKETING
         }),
-        column1: (0, r.jsx)(m, {
+        column1: (0, r.jsx)(S, {
           includes: !1
         }),
-        column2: (0, r.jsx)(m, {
+        column2: (0, r.jsx)(S, {
           includes: !0
         })
       },
       16: {
-        label: (0, r.jsx)(R, {
-          text: I.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SERVER_LIMIT
+        label: (0, r.jsx)(I, {
+          text: f.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SERVER_LIMIT
         }),
-        column1: (0, r.jsx)(m, {
+        column1: (0, r.jsx)(S, {
           includes: !1
         }),
-        column2: (0, r.jsx)(m, {
+        column2: (0, r.jsx)(S, {
           includes: !0
         })
       },
       17: {
-        label: (0, r.jsx)(R, {
-          text: I.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_MESSAGE_LENGTH.format({
-            maxChars: T.MAX_MESSAGE_LENGTH_PREMIUM
+        label: (0, r.jsx)(I, {
+          text: f.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_MESSAGE_LENGTH.format({
+            maxChars: C.MAX_MESSAGE_LENGTH_PREMIUM
           })
         }),
-        column1: (0, r.jsx)(m, {
+        column1: (0, r.jsx)(S, {
           includes: !1
         }),
-        column2: (0, r.jsx)(m, {
+        column2: (0, r.jsx)(S, {
           includes: !0
         }),
         withBottomBorder: !i
       },
       18: {
-        label: (0, r.jsx)(n.Heading, {
-          className: f.__invalid_textColor,
+        label: (0, r.jsx)(l.Heading, {
+          className: T.__invalid_textColor,
           variant: "display-sm",
           children: "Make Discord Yours"
         }),
@@ -300,8 +300,8 @@ let N = (e, t, s, a) => {
         withBottomBorder: !1
       },
       19: {
-        label: (0, r.jsx)(n.Heading, {
-          className: f.__invalid_textColor,
+        label: (0, r.jsx)(l.Heading, {
+          className: T.__invalid_textColor,
           variant: "display-sm",
           children: "Enjoy an Upgraded Discord"
         }),
@@ -310,8 +310,8 @@ let N = (e, t, s, a) => {
         withBottomBorder: !1
       },
       20: {
-        label: (0, r.jsx)(n.Heading, {
-          className: f.__invalid_textColor,
+        label: (0, r.jsx)(l.Heading, {
+          className: T.__invalid_textColor,
           variant: "display-sm",
           children: "Show Up the Way You Want"
         }),

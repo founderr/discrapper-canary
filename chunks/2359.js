@@ -3,8 +3,8 @@ s.r(t);
 var a = s("735250"),
   i = s("470079"),
   r = s("937579"),
-  n = s("316941"),
-  l = s("104494"),
+  l = s("316941"),
+  n = s("104494"),
   o = s("639119"),
   u = s("633361"),
   d = s("702328"),
@@ -12,9 +12,9 @@ var a = s("735250"),
 t.default = e => {
   let {
     entrypoint: t
-  } = e, s = (0, o.usePremiumTrialOffer)(), _ = (0, l.usePremiumDiscountOffer)(), E = t === c.PremiumMarketingEntrypoints.ApplicationStoreHome;
+  } = e, s = (0, o.usePremiumTrialOffer)(), _ = (0, n.usePremiumDiscountOffer)(), E = t === c.PremiumMarketingEntrypoints.ApplicationStoreHome;
   return i.useEffect(() => {
-    (null != s || null != _) && ((0, u.shouldHitUserOfferEndPoints)("PremiumMarketing") ? (0, r.acknowledgeUserOffer)(s, _) : null != s && n.default.acknowledgeUserTrialOffer(s))
+    (null != s || null != _) && ((0, u.shouldHitUserOfferEndPoints)("PremiumMarketing") ? (0, r.acknowledgeUserOffer)(s, _) : null != s && l.default.acknowledgeUserTrialOffer(s))
   }, [s, _]), (0, a.jsx)(d.default, {
     isFullscreen: E,
     entrypoint: t

@@ -25,9 +25,9 @@ t.default = e => {
     cancelTimers: S
   } = (0, d.default)(200, 300), [_, T] = l.useState(!1), I = (0, r.useStateFromStores)([f.default], () => f.default.effectCooldownEndTime), A = l.useMemo(() => null != I ? (I.getTime() - Date.now()) / 1e3 : 0, [I]), {
     seconds: v
-  } = (0, u.default)(null != I ? I : new Date), x = v > 0, N = l.useCallback(e => {
-    if ("focus" !== e.type) !_ && !x && C()
-  }, [_, x, C]), M = l.useCallback(() => {
+  } = (0, u.default)(null != I ? I : new Date), N = v > 0, x = l.useCallback(e => {
+    if ("focus" !== e.type) !_ && !N && C()
+  }, [_, N, C]), M = l.useCallback(() => {
     !_ && g()
   }, [g, _]), R = l.useCallback((e, t) => {
     S(), T(!_), (!s || _) && (null == t || t(e))
@@ -71,7 +71,7 @@ t.default = e => {
         onClick: e => {
           R(e, t)
         },
-        onMouseEnter: N,
+        onMouseEnter: x,
         onMouseLeave: M,
         isActive: L
       })

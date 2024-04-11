@@ -25,8 +25,8 @@ var a, l = n("735250"),
   I = n("425493"),
   A = n("461745"),
   v = n("40851"),
-  x = n("367907"),
-  N = n("762914"),
+  N = n("367907"),
+  x = n("762914"),
   M = n("43267"),
   R = n("933557"),
   L = n("366980"),
@@ -153,7 +153,7 @@ class ed extends(a = s.PureComponent) {
       channel: e
     } = this.props;
     p.default.wait(() => _.default.open(null == e ? void 0 : e.id));
-    let t = (0, x.collectChannelAnalyticsMetadata)(e);
+    let t = (0, N.collectChannelAnalyticsMetadata)(e);
     null != e ? e.isDM() ? Y.default.track($.AnalyticEvents.OPEN_POPOUT, {
       ...t,
       type: "Add Friends to DM",
@@ -672,7 +672,7 @@ function ef(e) {
     popoutPosition: o = "bottom",
     popoutAlign: u = "right",
     subscribeToGlobalHotkey: d = !1
-  } = e, [c, f] = s.useState(null != t && t.isGroupDM() && 0 === t.recipients.length), h = (0, N.useIsBroadcastingGDM)(null == t ? void 0 : t.id), p = s.useCallback(() => f(e => !e), []);
+  } = e, [c, f] = s.useState(null != t && t.isGroupDM() && 0 === t.recipients.length), h = (0, x.useIsBroadcastingGDM)(null == t ? void 0 : t.id), p = s.useCallback(() => f(e => !e), []);
   return (s.useEffect(() => (d && K.ComponentDispatch.subscribe($.ComponentActions.TOGGLE_DM_CREATE, p), () => {
     K.ComponentDispatch.unsubscribe($.ComponentActions.TOGGLE_DM_CREATE, p)
   }), [d, p]), h) ? null : (0, l.jsx)(m.Popout, {

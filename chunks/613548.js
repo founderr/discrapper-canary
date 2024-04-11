@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("179424"),
   A = n("786915"),
   v = n("975146"),
-  x = n("991617"),
-  N = n("606304"),
+  N = n("991617"),
+  x = n("606304"),
   M = n("502568"),
   R = n("805009"),
   L = n("368666"),
@@ -44,7 +44,7 @@ function w(e) {
   let {
     channelId: t,
     guildId: n
-  } = e, l = Date.now(), s = (0, u.useStateFromStores)([N.default, y.default], () => o()(N.default.getSpeakers()).map(e => y.default.getParticipant(t, e)).filter(e => null != e && e.type === D.ParticipantTypes.USER && e.speaking && !(0, E.default)(e)).sortBy(e => -N.default.getSpeakingDuration(e.user.id, l)).slice(0, 3).value());
+  } = e, l = Date.now(), s = (0, u.useStateFromStores)([x.default, y.default], () => o()(x.default.getSpeakers()).map(e => y.default.getParticipant(t, e)).filter(e => null != e && e.type === D.ParticipantTypes.USER && e.speaking && !(0, E.default)(e)).sortBy(e => -x.default.getSpeakingDuration(e.user.id, l)).slice(0, 3).value());
   return 0 === s.length ? null : (0, a.jsx)(a.Fragment, {
     children: s.map((e, t) => (0, a.jsx)(d.Tooltip, {
       position: "bottom",
@@ -75,7 +75,7 @@ function k(e) {
     isChatOpen: r,
     exitFullScreen: o
   } = e, E = n.id, {
-    voiceParticipantsHidden: N,
+    voiceParticipantsHidden: x,
     selectedParticipant: R,
     userParticipantCount: U
   } = (0, u.useStateFromStoresObject)([y.default], () => ({
@@ -98,7 +98,7 @@ function k(e) {
       analyticsLocation: n.type === b.ChannelTypes.GUILD_VOICE ? b.AnalyticsPages.GUILD_CHANNEL : b.AnalyticsPages.DM_CHANNEL
     }, "invite-button"))
   }
-  return N && G.push((0, a.jsx)(w, {
+  return x && G.push((0, a.jsx)(w, {
     channelId: E,
     guildId: n.guild_id
   }, "current-speaker")), G.push((0, a.jsx)(f.default, {
@@ -112,7 +112,7 @@ function k(e) {
     className: F.button,
     participant: R,
     showQuality: !0
-  }, "live-indicator"))), N && G.push((0, a.jsx)(d.Popout, {
+  }, "live-indicator"))), x && G.push((0, a.jsx)(d.Popout, {
     position: "bottom",
     renderPopout: () => (0, a.jsx)(S.default, {
       children: (0, a.jsx)(P.default, {
@@ -134,7 +134,7 @@ function k(e) {
   }, "call-members-popout")), i && G.push(null != R ? (0, a.jsx)(I.default, {
     className: F.button,
     channelId: E
-  }, "deselect-participant") : (0, a.jsx)(x.default, {
+  }, "deselect-participant") : (0, a.jsx)(N.default, {
     className: F.button,
     channelId: E,
     isHorizontal: !0

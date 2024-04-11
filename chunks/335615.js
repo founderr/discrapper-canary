@@ -26,8 +26,8 @@ var a = n("735250"),
   I = n("493324"),
   A = n("611064"),
   v = n("677432"),
-  x = n("178762"),
-  N = n("868671"),
+  N = n("178762"),
+  x = n("868671"),
   M = n("623624"),
   R = n("518738"),
   L = n("155409"),
@@ -414,7 +414,7 @@ class ee extends l.Component {
         }
         if (i.type === j.MemberListRowTypes.CONTENT_INVENTORY) {
           let e = "content-inventory-".concat(i.entry.id);
-          return null != i.entry.original_id && (e += "-".concat(i.entry.original_id)), (0, a.jsx)(x.default, {
+          return null != i.entry.original_id && (e += "-".concat(i.entry.original_id)), (0, a.jsx)(N.default, {
             ...i,
             channel: this.props.channel,
             index: l
@@ -436,7 +436,7 @@ class ee extends l.Component {
       } = e.getScrollerState();
       this.props.updateMaxContentFeedRowSeen(n + t - 40)
     }, 50)), z(this, "getContentFeedGroup", () => {
-      let e = this.props.groups[N.CONTENT_FEED_SECTION];
+      let e = this.props.groups[x.CONTENT_FEED_SECTION];
       if ((0, A.isContentGroup)(e)) return e
     }), z(this, "hasContentFeed", () => null != this.getContentFeedGroup()), z(this, "getRowHeightComputer", () => {
       let e = this.getContentFeedGroup();
@@ -445,9 +445,9 @@ class ee extends l.Component {
           rows: t
         } = this.props, n = e.index;
         return function(e, a) {
-          if (e === N.CONTENT_FEED_SECTION) {
+          if (e === x.CONTENT_FEED_SECTION) {
             let e = t[n + 1 + a];
-            return (0, x.getContentRowHeight)(e)
+            return (0, N.getContentRowHeight)(e)
           }
           return Z
         }
@@ -480,7 +480,7 @@ class ee extends l.Component {
           rowsVisible: n
         } = this.getDimensions();
       if (void 0 === n || 0 === n || null == t) return;
-      this.hasContentFeed() && (t = t.filter(e => e.section !== N.CONTENT_FEED_SECTION));
+      this.hasContentFeed() && (t = t.filter(e => e.section !== x.CONTENT_FEED_SECTION));
       let a = t.map(e => this.getRowProps(e)).slice(0, n + 1).filter(H.isNotNullish);
       if (0 === a.length) return;
       let l = a.reduce((e, t) => t.type !== j.MemberListRowTypes.MEMBER ? e : (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some(e => e.type === V.ActivityTypes.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++, e), {
@@ -508,7 +508,7 @@ function et(e) {
     groups: f,
     version: h,
     updateMaxRowSeen: m
-  } = (0, N.useInjectContentInventoryFeed)({
+  } = (0, x.useInjectContentInventoryFeed)({
     memberStoreProps: o,
     channelId: t.id,
     guildId: t.guild_id

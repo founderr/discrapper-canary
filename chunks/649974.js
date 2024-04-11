@@ -1,64 +1,64 @@
 "use strict";
 s.r(t);
-var a, i, r, n, l = s("442837"),
+var a, i, r, l, n = s("442837"),
   o = s("570140"),
   u = s("656063"),
   d = s("158776"),
   c = s("800599"),
   _ = s("594174"),
   E = s("981631");
-let T = !1,
-  I = {},
-  f = {};
+let C = !1,
+  f = {},
+  T = {};
 
-function R(e) {
+function I(e) {
   let t = !1;
   return e.forEach(e => {
-    t = !1 !== m(e) || t
+    t = !1 !== S(e) || t
   }), t
 }
 
-function S(e) {
-  let t = f[e];
+function R(e) {
+  let t = T[e];
   if (null == t) return !1;
   let s = t.gameId;
-  return null != I[s] && (I = {
-    ...I
-  }, delete I[s][e], 0 === Object.values(I[s]).length && delete I[s]), f = {
+  return null != f[s] && (f = {
     ...f
-  }, delete f[e], !0
+  }, delete f[s][e], 0 === Object.values(f[s]).length && delete f[s]), T = {
+    ...T
+  }, delete T[e], !0
 }
 
-function m(e) {
+function S(e) {
   let {
     user: t,
     activities: s
   } = e;
   if (null == t) return !1;
   let a = s.filter(e => e.type !== E.ActivityTypes.CUSTOM_STATUS);
-  if (0 === a.length) return S(t.id);
+  if (0 === a.length) return R(t.id);
   let i = !1;
   return a.forEach(e => {
     (function(e, t) {
       var s, a, i, r;
-      let n = (0, u.default)(e);
-      if (null == n) return S(t.id);
-      let l = f[t.id];
-      null != l && l.gameId !== n && S(t.id);
+      let l = (0, u.default)(e);
+      if (null == l) return R(t.id);
+      let n = T[t.id];
+      null != n && n.gameId !== l && R(t.id);
       let o = null !== (a = null === (s = e.timestamps) || void 0 === s ? void 0 : s.start) && void 0 !== a ? a : Date.now(),
         d = {
           userId: t.id,
           activity: e,
           startedPlaying: o
         };
-      return i = n, r = d, I = {
-        ...I,
+      return i = l, r = d, f = {
+        ...f,
         [i]: {
-          ...I[i],
+          ...f[i],
           [r.userId]: r
         }
-      }, f = {
-        ...f,
+      }, T = {
+        ...T,
         [r.userId]: {
           gameId: i,
           startedPlaying: r.startedPlaying
@@ -68,48 +68,48 @@ function m(e) {
   }), i
 }
 
-function N() {
+function p() {
   let e = !1;
-  if (!c.default.needsRefresh() && !T) {
+  if (!c.default.needsRefresh() && !C) {
     let t;
-    I = {}, f = {}, t = !1, d.default.getUserIds().forEach(e => {
+    f = {}, T = {}, t = !1, d.default.getUserIds().forEach(e => {
       let s = _.default.getUser(e);
-      null != s && (t = m({
+      null != s && (t = S({
         user: s,
         activities: d.default.getActivities(e)
       }) || t)
     }), e = t
   }
-  return T = !c.default.needsRefresh(), e
+  return C = !c.default.needsRefresh(), e
 }
-class A extends(n = l.default.Store) {
+class m extends(l = n.default.Store) {
   initialize() {
-    this.waitFor(c.default), this.syncWith([c.default], N)
+    this.waitFor(c.default), this.syncWith([c.default], p)
   }
   get games() {
-    return I
-  }
-  get usersPlaying() {
     return f
   }
+  get usersPlaying() {
+    return T
+  }
   get gameIds() {
-    return Object.keys(I)
+    return Object.keys(f)
   }
   getNowPlaying(e) {
-    return I[e]
-  }
-  getUserGame(e) {
     return f[e]
   }
+  getUserGame(e) {
+    return T[e]
+  }
 }
-r = "NowPlayingStore", (i = "displayName") in(a = A) ? Object.defineProperty(a, i, {
+r = "NowPlayingStore", (i = "displayName") in(a = m) ? Object.defineProperty(a, i, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[i] = r, t.default = new A(o.default, {
+}) : a[i] = r, t.default = new m(o.default, {
   CONNECTION_OPEN: function() {
-    I = {}, f = {}
+    f = {}, T = {}
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
     let {
@@ -117,22 +117,22 @@ r = "NowPlayingStore", (i = "displayName") in(a = A) ? Object.defineProperty(a, 
       presences: s
     } = e, a = !1;
     return t.forEach(e => {
-      R(e.presences) && (a = !0)
-    }), R(s) && (a = !0), a
+      I(e.presences) && (a = !0)
+    }), I(s) && (a = !0), a
   },
   LOGOUT: function() {
-    I = {}, f = {}
+    f = {}, T = {}
   },
   PRESENCE_UPDATES: function(e) {
     let {
       updates: t
     } = e;
-    return t.map(e => m(e)).some(e => e)
+    return t.map(e => S(e)).some(e => e)
   },
   PRESENCES_REPLACE: function(e) {
     let {
       presences: t
     } = e;
-    return R(t)
+    return I(t)
   }
 })

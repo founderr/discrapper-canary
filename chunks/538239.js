@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   activityInviteKey: function() {
-    return N
+    return x
   }
 }), n("47120");
 var a = n("735250"),
@@ -27,7 +27,7 @@ var a = n("735250"),
   A = n("689938"),
   v = n("650714");
 
-function x(e, t, n) {
+function N(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -35,7 +35,7 @@ function x(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let N = "ActivityInvite";
+let x = "ActivityInvite";
 class M extends l.PureComponent {
   componentDidMount() {
     this.fetchApplication()
@@ -136,7 +136,7 @@ class M extends l.PureComponent {
             onChange: this.handleTextChange,
             onSubmit: this.handleShare,
             type: p.ChatInputTypes.FORM,
-            parentModalKey: N,
+            parentModalKey: x,
             disableThemedBackground: !0
           })
         })]
@@ -161,11 +161,11 @@ class M extends l.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), x(this, "state", {
+    super(...e), N(this, "state", {
       ...(0, E.createEmptyState)(),
       textFocused: !0,
       contentWarningProps: null
-    }), x(this, "trackInvite", e => {
+    }), N(this, "trackInvite", e => {
       if (null != e && e.ok) {
         let {
           activity: t,
@@ -191,12 +191,12 @@ class M extends l.PureComponent {
           message_id: null != e ? e.body.id : null
         }), Promise.resolve()
       }
-    }), x(this, "handleTextChange", (e, t, n) => {
+    }), N(this, "handleTextChange", (e, t, n) => {
       this.setState({
         textValue: t,
         richValue: n
       })
-    }), x(this, "handleShare", () => {
+    }), N(this, "handleShare", () => {
       let {
         channel: e,
         activity: t,

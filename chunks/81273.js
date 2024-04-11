@@ -22,8 +22,8 @@ var a = n("735250"),
   I = n("817460"),
   A = n("584825"),
   v = n("697227"),
-  x = n("934826"),
-  N = n("896083"),
+  N = n("934826"),
+  x = n("896083"),
   M = n("939872"),
   R = n("265985"),
   L = n("293810"),
@@ -43,7 +43,7 @@ t.default = (e, t, n, s) => {
     {
       activeSubscription: B,
       activeSubscriptionPlanFromStore: G
-    } = (0, x.default)(n),
+    } = (0, N.default)(n),
     V = null == B || null != G,
     W = (0, A.useSubscriptionListingsForGroup)(n, {
       includeSoftDeleted: !0
@@ -54,7 +54,7 @@ t.default = (e, t, n, s) => {
     {
       loading: Z,
       getTrialPurchaseEligibility: q
-    } = (0, N.useGetTrialPurchaseEligibility)(),
+    } = (0, x.useGetTrialPurchaseEligibility)(),
     X = (0, A.useSubscriptionTrial)(null == e ? void 0 : e.id),
     {
       analyticsLocations: Q
