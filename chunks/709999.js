@@ -27,14 +27,14 @@ var l = a("735250"),
   N = a("794358"),
   y = a("466111"),
   O = a("26290"),
-  A = a("998502"),
-  k = a("335131"),
+  k = a("998502"),
+  A = a("335131"),
   P = a("946134"),
   R = a("1870"),
   j = a("884697"),
   F = a("664018"),
-  B = a("624377"),
-  D = a("813083"),
+  D = a("624377"),
+  B = a("813083"),
   M = a("680942"),
   w = a("558060"),
   H = a("237031"),
@@ -42,7 +42,7 @@ var l = a("735250"),
   W = a("474936"),
   G = a("689938"),
   V = a("873222");
-let z = A.default.getEnableHardwareAcceleration() ? f.AnimatedAvatar : f.Avatar,
+let z = k.default.getEnableHardwareAcceleration() ? f.AnimatedAvatar : f.Avatar,
   Y = f.AvatarSizes.SIZE_152,
   K = (0, p.getDecorationSizeForAvatarSize)(Y),
   X = e => {
@@ -86,7 +86,7 @@ t.default = function(e) {
     category: a,
     onMount: r,
     isPremiumUser: N = !1,
-    isGiftEasterEggEnabled: A
+    isGiftEasterEggEnabled: k
   } = e, {
     analyticsLocations: q
   } = (0, h.default)(g.default.COLLECTIBLES_SHOP_CARD), $ = s.useRef(null), J = (0, C.default)($), [Q, ee] = s.useState(!1), et = J || Q, ea = (0, u.useStateFromStores)([I.default], () => I.default.getCurrentUser()), [el] = t.items, {
@@ -100,7 +100,7 @@ t.default = function(e) {
     animateOnHover: !et
   }), {
     backgroundColors: eo
-  } = (0, B.default)(t.styles), ei = (0, j.getFormattedPriceForCollectiblesProduct)(t, N, !1), eu = (0, j.isPremiumCollectiblesProduct)(t), ec = (0, j.isFreeCollectiblesProduct)(t), [ed, ef, em] = (0, u.useStateFromStoresArray)([R.default], () => [R.default.getPurchase(t.skuId), R.default.isClaiming === t.skuId, null != R.default.isClaiming && R.default.isClaiming !== t.skuId]), eC = (0, u.useStateFromStores)([L.default], () => (0, d.isThemeDark)(L.default.theme)), eg = (0, u.useStateFromStores)([P.default], () => P.default.getIsProductNew(el.skuId)), {
+  } = (0, D.default)(t.styles), ei = (0, j.getFormattedPriceForCollectiblesProduct)(t, N, !1), eu = (0, j.isPremiumCollectiblesProduct)(t), ec = (0, j.isFreeCollectiblesProduct)(t), [ed, ef, em] = (0, u.useStateFromStoresArray)([R.default], () => [R.default.getPurchase(t.skuId), R.default.isClaiming === t.skuId, null != R.default.isClaiming && R.default.isClaiming !== t.skuId]), eC = (0, u.useStateFromStores)([L.default], () => (0, d.isThemeDark)(L.default.theme)), eg = (0, u.useStateFromStores)([P.default], () => P.default.getIsProductNew(el.skuId)), {
     hoverVariant: eh
   } = (0, F.useShopCardHoverAnimationExperiment)("CollectiblesShopTallCard");
   s.useEffect(() => {
@@ -173,7 +173,7 @@ t.default = function(e) {
     }) : (0, l.jsx)(M.default, {
       product: t,
       returnRef: $,
-      isGiftEasterEggEnabled: A,
+      isGiftEasterEggEnabled: k,
       disableCustomColor: !0,
       tooltipDelay: 250
     }),
@@ -184,7 +184,7 @@ t.default = function(e) {
         submittingStartedLabel: G.default.Messages.COLLECTIBLES_COLLECTING,
         submittingFinishedLabel: G.default.Messages.COLLECTIBLES_COLLECTING_FINISHED,
         onClick: async () => {
-          await (0, k.claimPremiumCollectiblesProduct)(t.skuId), (0, U.default)({
+          await (0, A.claimPremiumCollectiblesProduct)(t.skuId), (0, U.default)({
             product: t,
             analyticsLocations: q
           })
@@ -283,7 +283,7 @@ t.default = function(e) {
             children: e_()
           })]
         })]
-      }), (0, l.jsx)(D.default, {
+      }), (0, l.jsx)(B.default, {
         category: a,
         className: V.limitedTimeBadge,
         display: "card"

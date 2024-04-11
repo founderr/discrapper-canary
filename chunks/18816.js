@@ -17,25 +17,25 @@ var l = s("481060"),
   f = s("572004"),
   S = s("591759"),
   E = s("135431"),
-  m = s("993409"),
-  I = s("981631"),
+  I = s("993409"),
+  m = s("981631"),
   T = s("689938");
 
 function p(e) {
   var t;
   let {
     application: s
-  } = e, p = null !== (t = u.default.getChannelId()) && void 0 !== t ? t : I.EMPTY_STRING_SNOWFLAKE_ID, {
-    appsInGDMEnabled: N,
-    availableApplications: x
+  } = e, p = null !== (t = u.default.getChannelId()) && void 0 !== t ? t : m.EMPTY_STRING_SNOWFLAKE_ID, {
+    appsInGDMEnabled: _,
+    availableApplications: N
   } = (0, r.usePrivateChannelIntegrationState)({
     channelId: p
-  }), A = N && null != x.find(e => e.id === (null == s ? void 0 : s.id)), v = null != s.customInstallUrl || !S.default.isDiscordUrl(s.customInstallUrl);
-  return (0, a.jsx)(m.default, {
+  }), A = _ && null != N.find(e => e.id === (null == s ? void 0 : s.id)), x = null != s.customInstallUrl || !S.default.isDiscordUrl(s.customInstallUrl);
+  return (0, a.jsx)(I.default, {
     icon: c.default,
     text: (() => {
       let e = A ? T.default.Messages.ADD : T.default.Messages.APPLICATION_ADD_BUTTON;
-      return v ? (0, a.jsxs)(a.Fragment, {
+      return x ? (0, a.jsxs)(a.Fragment, {
         children: [e, (0, a.jsx)(d.default, {
           width: 16,
           height: 16
@@ -63,7 +63,7 @@ function p(e) {
         (0, o.openOAuth2Modal)({
           channelId: p,
           clientId: s.id,
-          scopes: [I.OAuth2Scopes.APPLICATIONS_COMMANDS],
+          scopes: [m.OAuth2Scopes.APPLICATIONS_COMMANDS],
           disableGuildSelect: !0
         });
         return

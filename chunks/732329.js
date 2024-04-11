@@ -27,14 +27,14 @@ var l = a("735250"),
   N = a("335131"),
   y = a("1870"),
   O = a("884697"),
-  A = a("624377"),
-  k = a("813083"),
+  k = a("624377"),
+  A = a("813083"),
   P = a("680942"),
   R = a("558060"),
   j = a("237031"),
   F = a("372654"),
-  B = a("832149"),
-  D = a("474936"),
+  D = a("832149"),
+  B = a("474936"),
   M = a("689938"),
   w = a("321664");
 let H = _.default.getEnableHardwareAcceleration() ? u.AnimatedAvatar : u.Avatar,
@@ -96,7 +96,7 @@ t.default = function(e) {
   }), {
     buttonColors: ea,
     backgroundColors: el
-  } = (0, A.default)(t.styles), es = (0, O.getFormattedPriceForCollectiblesProduct)(t, v, !1), er = (0, O.isPremiumCollectiblesProduct)(t), en = (0, O.isFreeCollectiblesProduct)(t), [eo, ei, eu] = (0, i.useStateFromStoresArray)([y.default], () => [y.default.getPurchase(t.skuId), y.default.isClaiming === t.skuId, null != y.default.isClaiming && y.default.isClaiming !== t.skuId]), ec = s.useRef(null);
+  } = (0, k.default)(t.styles), es = (0, O.getFormattedPriceForCollectiblesProduct)(t, v, !1), er = (0, O.isPremiumCollectiblesProduct)(t), en = (0, O.isFreeCollectiblesProduct)(t), [eo, ei, eu] = (0, i.useStateFromStoresArray)([y.default], () => [y.default.getPurchase(t.skuId), y.default.isClaiming === t.skuId, null != y.default.isClaiming && y.default.isClaiming !== t.skuId]), ec = s.useRef(null);
   s.useEffect(() => {
     let {
       current: e
@@ -141,7 +141,7 @@ t.default = function(e) {
         disabled: eu,
         onClick: e => e.stopPropagation(),
         buttonText: M.default.Messages.UNLOCK_WITH_NITRO,
-        subscriptionTier: D.PremiumSubscriptionSKUs.TIER_2
+        subscriptionTier: B.PremiumSubscriptionSKUs.TIER_2
       })
     });
   s.useEffect(() => {
@@ -186,7 +186,7 @@ t.default = function(e) {
           submittingStartedLabel: M.default.Messages.COLLECTIBLES_COLLECTING,
           submittingFinishedLabel: M.default.Messages.COLLECTIBLES_COLLECTING_FINISHED,
           onClick: async () => {
-            await (0, N.claimPremiumCollectiblesProduct)(t.skuId), (0, B.default)({
+            await (0, N.claimPremiumCollectiblesProduct)(t.skuId), (0, D.default)({
               product: t,
               analyticsLocations: z
             })
@@ -287,7 +287,7 @@ t.default = function(e) {
             children: eb()
           })]
         })]
-      }), (0, l.jsx)(k.default, {
+      }), (0, l.jsx)(A.default, {
         category: a,
         className: w.limitedTimeBadge,
         display: "card"
