@@ -1,25 +1,25 @@
 "use strict";
 n.r(t), n.d(t, {
   Popout: function() {
-    return O
-  },
-  PopoutAvatar: function() {
-    return H
-  },
-  PopoutHero: function() {
     return j
   },
-  PopoutInteractionsContainer: function() {
-    return b
-  },
-  PopoutJoinPrompt: function() {
+  PopoutAvatar: function() {
     return B
   },
-  PopoutReactor: function() {
+  PopoutHero: function() {
+    return P
+  },
+  PopoutInteractionsContainer: function() {
     return U
   },
+  PopoutJoinPrompt: function() {
+    return G
+  },
+  PopoutReactor: function() {
+    return F
+  },
   PopoutTitle: function() {
-    return P
+    return D
   }
 }), n("47120");
 var a = n("735250"),
@@ -51,8 +51,13 @@ var r = n("442837"),
   R = n("981631"),
   L = n("689938"),
   y = n("522791");
+let O = e => {
+  _.default.track(R.AnalyticEvents.MEMBERLIST_POPOUT_SHARE_TO_CHANNEL_TOGGLED, {
+    is_send_to_channel: e
+  })
+};
 
-function O(e) {
+function j(e) {
   let {
     children: t
   } = e;
@@ -62,7 +67,7 @@ function O(e) {
   })
 }
 
-function j(e) {
+function P(e) {
   let {
     children: t,
     backgroundImgSrc: n
@@ -79,7 +84,7 @@ function j(e) {
   })
 }
 
-function P(e) {
+function D(e) {
   let {
     children: t
   } = e;
@@ -91,9 +96,9 @@ function P(e) {
     children: t
   })
 }
-let D = l.createContext(null);
+let b = l.createContext(null);
 
-function b(e) {
+function U(e) {
   let {
     children: t
   } = e, n = l.useRef(null);
@@ -103,7 +108,7 @@ function b(e) {
       ref: e => n.current = e
     }), (0, a.jsx)("div", {
       className: y.interactionsContainer,
-      children: (0, a.jsx)(D.Provider, {
+      children: (0, a.jsx)(b.Provider, {
         value: n.current,
         children: t
       })
@@ -111,7 +116,7 @@ function b(e) {
   })
 }
 
-function U(e) {
+function F(e) {
   let {
     generateReactionImage: t,
     reactionImageAltText: n,
@@ -147,18 +152,18 @@ function U(e) {
       requestId: r
     })
   };
-  return u ? (0, a.jsx)(F, {
+  return u ? (0, a.jsx)(w, {
     ...o,
     reactionImage: d,
     onMessageReact: f
-  }) : (0, a.jsx)(w, {
+  }) : (0, a.jsx)(k, {
     ...o,
     reactionImage: d,
     onMessageReact: f
   })
 }
 
-function F(e) {
+function w(e) {
   let {
     channel: t,
     user: n,
@@ -181,7 +186,7 @@ function F(e) {
   return (0, a.jsxs)("div", {
     children: [(0, a.jsx)("div", {
       className: y.emojiHotrailShareToChannel,
-      children: (0, a.jsx)(k, {
+      children: (0, a.jsx)(H, {
         channel: t,
         onClickSuggestion: e => {
           null != e && null != E && (_.default.track(R.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
@@ -195,7 +200,12 @@ function F(e) {
       className: y.inputContainerShareToChannel,
       children: [A && (0, a.jsx)(d.Clickable, {
         className: y.shareToChannelButton,
-        onClick: () => p(e => !e),
+        onClick: () => {
+          p(e => {
+            let t = !e;
+            return O(t), t
+          })
+        },
         children: m ? (0, a.jsx)(o.AtIcon, {
           width: 20,
           height: 20
@@ -224,7 +234,7 @@ function F(e) {
   })
 }
 
-function w(e) {
+function k(e) {
   let {
     channel: t,
     onMessageReact: n,
@@ -246,7 +256,7 @@ function w(e) {
   return (0, a.jsxs)("div", {
     children: [(0, a.jsxs)("div", {
       className: y.emojiHotrail,
-      children: [(0, a.jsx)(k, {
+      children: [(0, a.jsx)(H, {
         channel: t,
         onClickSuggestion: d
       }), (0, a.jsx)(h.ReactionPickerButton, {
@@ -268,7 +278,7 @@ function w(e) {
     })]
   })
 }
-let k = e => {
+let H = e => {
   let {
     channel: t,
     onClickSuggestion: n
@@ -302,7 +312,7 @@ let k = e => {
   })
 };
 
-function H(e) {
+function B(e) {
   let {
     user: t,
     guildId: n
@@ -314,7 +324,7 @@ function H(e) {
   })
 }
 
-function B(e) {
+function G(e) {
   let {
     entry: t
   } = e, {
