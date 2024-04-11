@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return A
+    return x
   }
 }), s("47120");
 var a = s("735250"),
@@ -16,70 +16,80 @@ var a = s("735250"),
   f = s("785717"),
   S = s("318661"),
   E = s("484404"),
-  m = s("747074"),
-  I = s("740021"),
-  T = s("228168"),
-  p = s("981631"),
+  I = s("747074"),
+  m = s("806926"),
+  T = s("740021"),
+  p = s("228168"),
+  _ = s("981631"),
   N = s("689938"),
-  x = s("420867");
+  A = s("420867");
 
-function A(e) {
+function x(e) {
   let {
     user: t,
     guildId: s,
-    channelId: A,
+    channelId: x,
     messageId: v,
-    roleId: _,
+    roleId: U,
     friendToken: h,
-    transitionState: C,
-    sourceAnalyticsLocations: U = [],
+    initialSection: C,
+    autoFocusNote: R,
+    transitionState: P,
+    sourceAnalyticsLocations: M = [],
     onClose: j
   } = e, {
-    analyticsLocations: R
-  } = (0, u.default)([...U, r.default.SIMPLIFIED_PROFILE_MODAL]), P = (0, S.default)(t.id, s), M = (0, i.useStateFromStores)([c.default], () => c.default.findActivity(t.id, e => {
+    analyticsLocations: g
+  } = (0, u.default)([...M, r.default.SIMPLIFIED_PROFILE_MODAL]), y = (0, S.default)(t.id, s), O = (0, i.useStateFromStores)([c.default], () => c.default.findActivity(t.id, e => {
     let {
       type: t
     } = e;
-    return t !== p.ActivityTypes.CUSTOM_STATUS
-  })), y = l.createRef(), g = (0, o.default)(y);
+    return t !== _.ActivityTypes.CUSTOM_STATUS
+  })), D = l.createRef(), F = (0, o.default)(D);
   return (0, a.jsx)(u.AnalyticsLocationProvider, {
-    value: R,
+    value: g,
     children: (0, a.jsx)(f.UserProfileAnalyticsProvider, {
       layout: "SIMPLIFIED_MODAL",
       userId: t.id,
       guildId: s,
-      channelId: A,
+      channelId: x,
       messageId: v,
-      roleId: _,
+      roleId: U,
       children: (0, a.jsxs)(n.ModalRoot, {
-        transitionState: C,
-        className: x.root,
+        transitionState: P,
+        className: A.root,
         hideShadow: !0,
         "aria-label": N.default.Messages.USER_PROFILE_MODAL,
         children: [(0, a.jsx)("div", {
-          ref: y,
-          children: (0, a.jsxs)(m.default, {
+          ref: D,
+          children: (0, a.jsxs)(I.default, {
             user: t,
-            profileType: T.UserProfileTypes.MODAL,
-            children: [(0, a.jsx)(I.default, {
-              className: x.header,
+            profileType: p.UserProfileTypes.MODAL,
+            children: [(0, a.jsx)(T.default, {
+              className: A.header,
               user: t,
-              displayProfile: P,
-              activity: M,
+              displayProfile: y,
+              activity: O,
               friendToken: h,
               onClose: j
-            }), (0, a.jsxs)(m.default.Inner, {
-              children: [C === n.ModalTransitionState.ENTERED && (0, a.jsx)(E.default, {
+            }), (0, a.jsxs)(I.default.Inner, {
+              children: [P === n.ModalTransitionState.ENTERED && (0, a.jsx)(E.default, {
                 onTooltipClose: j
               }), (0, a.jsx)("div", {
-                className: x.body
+                className: A.body,
+                children: (0, a.jsx)(m.default, {
+                  user: t,
+                  displayProfile: y,
+                  initialSection: C,
+                  autoFocusNote: R,
+                  onClose: j
+                })
               })]
             })]
           })
-        }), (null == P ? void 0 : P.profileEffectId) != null && (0, a.jsx)(d.default, {
-          profileEffectId: null == P ? void 0 : P.profileEffectId,
+        }), (null == y ? void 0 : y.profileEffectId) != null && (0, a.jsx)(d.default, {
+          profileEffectId: null == y ? void 0 : y.profileEffectId,
           bannerAdjustment: 0,
-          isHovering: g
+          isHovering: F
         })]
       })
     })
