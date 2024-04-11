@@ -59,6 +59,7 @@ function L(e) {
         transitionState: t,
         size: l.ModalSize.DYNAMIC,
         className: g.rootContainer,
+        hideShadow: !0,
         children: y ? (0, i.jsx)(l.Spinner, {
           className: g.spinner,
           type: l.Spinner.Type.SPINNING_CIRCLE
@@ -129,15 +130,16 @@ function D(e) {
       children: (0, i.jsxs)("div", {
         className: g.gradient,
         style: {
-          backgroundImage: "linear-gradient(180deg, ".concat(s, "40, ").concat(a, "40)")
+          backgroundImage: "linear-gradient(180deg, ".concat(s, ", ").concat(a, ")")
         },
         children: [(0, i.jsx)(l.Heading, {
           variant: "heading-lg/bold",
-          color: "header-primary",
+          color: "always-white",
           className: g.heading,
           children: C.default.Messages.QUESTS_REWARD_AVATAR_DECORATION_HEADER
         }), (0, i.jsx)(l.Text, {
           variant: "text-sm/normal",
+          color: "always-white",
           className: g.text,
           children: C.default.Messages.QUESTS_REWARD_AVATAR_DECORATION_BODY.format({
             decorationName: r
