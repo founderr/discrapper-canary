@@ -19540,9 +19540,17 @@ h6.title_c2a544 {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color.15s ease-out, color.15s ease-out;
-    background-color: var(--background-primary);
+    transition: scale.15s ease-out, background-color.15s ease-out, color.15s ease-out;
     color: var(--text-normal)
+}
+
+.childWrapperNoHoverBg__7e8f1 {
+    background-color: var(--background-primary)
+}
+
+.wrapper__8436d:hover .childWrapperHoverScale__6df99,
+.wrapper__8436d.selected_ae80f7 .childWrapperHoverScale__6df99 {
+    scale: 1.1
 }
 
 .wrapper__8436d:hover .childWrapper_a6ce15,
