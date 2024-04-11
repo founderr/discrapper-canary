@@ -17,9 +17,16 @@ t.default = () => {
   } = (0, i.useQuests)({
     fetchPolicy: "cache-and-network"
   });
-  return ((0, i.useDismissNewQuestBadge)(), t) ? (0, a.jsx)(n.Spinner, {
+  (0, i.useDismissNewQuestBadge)();
+  let s = (0, i.useExpiredQuestsMap)(),
+    S = e.filter(e => {
+      var t, a;
+      let n = (null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
+      return !(null !== (a = s.get(e.id)) && void 0 !== a && a) || n
+    });
+  return t ? (0, a.jsx)(n.Spinner, {
     className: c.spinner
-  }) : 0 === e.length ? null : (0, a.jsx)(n.FormSection, {
+  }) : 0 === S.length ? null : (0, a.jsx)(n.FormSection, {
     className: c.questsContainer,
     children: (0, a.jsxs)(n.HeadingLevel, {
       component: (0, a.jsxs)("div", {
@@ -38,7 +45,7 @@ t.default = () => {
       }),
       children: [(0, a.jsx)(n.FormDivider, {
         className: c.divider
-      }), e.map(e => (0, a.jsx)(o.QuestsCard, {
+      }), S.map(e => (0, a.jsx)(o.QuestsCard, {
         quest: e,
         location: r.QuestContent.QUEST_INVENTORY_CARD
       }, e.id))]
