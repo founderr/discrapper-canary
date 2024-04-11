@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   formatTimesForServer: function() {
-    return S
+    return I
   },
   generateTimeOptions: function() {
     return d
@@ -9,8 +9,11 @@ n.r(t), n.d(t, {
   getDayOptions: function() {
     return c
   },
+  getTimeRangesInNextWeek: function() {
+    return S
+  },
   primetimeToString: function() {
-    return I
+    return T
   }
 }), n("653041"), n("47120");
 var a = n("913527"),
@@ -193,6 +196,49 @@ function S(e) {
           time: n
         });
       null != e && t.push({
+        start: e,
+        end: e.clone().add(a, "hour")
+      }), null != s && t.push({
+        start: s,
+        end: s.clone().add(a, "hour")
+      })
+    } else if (e.day === r.DayOptions.WEEKDAYS) {
+      let s = m({
+        day: e.day,
+        time: n
+      });
+      null != s && t.push({
+        start: s,
+        end: s.clone().add(a, "hour")
+      })
+    } else {
+      let s = m({
+        day: e.day,
+        time: n
+      });
+      null != s && t.push({
+        start: s,
+        end: s.clone().add(a, "hour")
+      })
+    }
+  }), t
+}
+
+function I(e) {
+  let t = [];
+  return e.forEach(e => {
+    if (null == e.day || null == e.time) return null;
+    let [n, a] = C(e.time);
+    if (e.day === r.DayOptions.WEEKENDS) {
+      let e = m({
+          day: r.DayOptions.SATURDAY,
+          time: n
+        }),
+        s = m({
+          day: r.DayOptions.SUNDAY,
+          time: n
+        });
+      null != e && t.push({
         scheduled_start_time: e.toISOString(),
         scheduled_end_time: e.clone().add(a, "hour").toISOString(),
         days: [(0, l.convertJSDayToRRuleDay)(e.toDate().getUTCDay()).weekday]
@@ -225,7 +271,7 @@ function S(e) {
   }), t
 }
 
-function I(e) {
+function T(e) {
   if (null == e.day || null == e.time) return null;
   let {
     day: t,

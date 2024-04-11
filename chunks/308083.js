@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   AGE_TRAITS: function() {
-    return v
+    return R
   },
   ALL_TRAITS_SET: function() {
-    return L
+    return M
   },
   ARBITRARY_MIDNIGHT: function() {
     return S
@@ -22,19 +22,19 @@ n.r(t), n.d(t, {
     return l
   },
   GENSHIN_ID: function() {
-    return A
+    return N
   },
   IDENTITY_TRAITS: function() {
-    return R
+    return O
   },
   LANGUAGES_SET: function() {
-    return M
+    return P
   },
   LOCALE_TIME_FORMAT: function() {
     return I
   },
   LOCALE_TRAITS: function() {
-    return O
+    return L
   },
   MAX_GAME_HOURS: function() {
     return m
@@ -51,17 +51,20 @@ n.r(t), n.d(t, {
   MAX_TAG_LENGTH: function() {
     return f
   },
+  PLAYSTYLE_GROUPS: function() {
+    return T
+  },
   VALORANT_ID: function() {
-    return g
+    return A
   },
   VALORANT_TRAITS: function() {
-    return N
+    return v
   },
   getPlaystyleOptions: function() {
-    return p
+    return g
   },
   getPlaystyleTitle: function() {
-    return T
+    return p
   }
 }), n("47120");
 var a, s, l, i, r, o, u = n("913527"),
@@ -75,8 +78,17 @@ let f = 4,
   m = 7,
   S = d()("2024-01-01T00:00:00"),
   I = "LT";
+(i = a || (a = {}))[i.NONE = 0] = "NONE", i[i.SOCIAL = 1] = "SOCIAL", i[i.CASUAL = 2] = "CASUAL", i[i.COMPETITIVE = 3] = "COMPETITIVE", i[i.CREATIVE = 4] = "CREATIVE", i[i.VERY_HARDCORE = 5] = "VERY_HARDCORE";
+let T = {
+  0: "NONE",
+  4: "NONE",
+  1: "CASUAL",
+  2: "CASUAL",
+  3: "COMPETITIVE",
+  5: "COMPETITIVE"
+};
 
-function T(e) {
+function p(e) {
   switch (e) {
     case 1:
       return c.default.Messages.CLAN_SETUP_PLAYSTYLE_SOCIAL_TITLE;
@@ -91,7 +103,7 @@ function T(e) {
   }
 }
 
-function p() {
+function g() {
   return {
     1: {
       type: 1,
@@ -118,12 +130,12 @@ function p() {
       subtitle: c.default.Messages.CLAN_SETUP_PLAYSTYLE_VERY_HARDCORE_SUBTITLE
     }
   }
-}(i = a || (a = {}))[i.NONE = 0] = "NONE", i[i.SOCIAL = 1] = "SOCIAL", i[i.CASUAL = 2] = "CASUAL", i[i.COMPETITIVE = 3] = "COMPETITIVE", i[i.CREATIVE = 4] = "CREATIVE", i[i.VERY_HARDCORE = 5] = "VERY_HARDCORE", (r = s || (s = {}))[r.INTRO_ANIMATION = 0] = "INTRO_ANIMATION", r[r.SETUP = 1] = "SETUP", r[r.SIGN = 2] = "SIGN", (o = l || (l = {}))[o.FOUNDATIONAL_INTRO = 0] = "FOUNDATIONAL_INTRO", o[o.GAMES = 1] = "GAMES", o[o.PLAYSTYLE = 2] = "PLAYSTYLE", o[o.PERSONALITY_INTRO = 3] = "PERSONALITY_INTRO", o[o.UTILITY_TRAITS = 4] = "UTILITY_TRAITS", o[o.INTERESTS = 5] = "INTERESTS", o[o.DESCRIPTION = 6] = "DESCRIPTION", o[o.PRIMETIME = 7] = "PRIMETIME", o[o.IDENTITY_INTRO = 8] = "IDENTITY_INTRO", o[o.CUSTOMIZE = 9] = "CUSTOMIZE", o[o.APPLICATION_INTRO = 10] = "APPLICATION_INTRO", o[o.MEMBER_APPLICATION = 11] = "MEMBER_APPLICATION";
-let g = "700136079562375258",
-  A = "762434991303950386",
-  N = ["Unrated", "Spike Rush", "Death Match", "Swift", "TDM", "Server: NA", "Server: EU", "Server: LATAM", "Server: KR", "Server: AP", "Voice ON", "Voice OFF"],
-  v = ["20+", "30+", "40+", "All Ages"],
-  R = ["LGBTQIA-Friendly", "All genders"],
-  O = ["NA", "LATAM", "EU West", "SEA", "OCE", "Global"],
-  L = new Set([...N, ...v, ...R, ...O]),
-  M = new Set(c.default.getAvailableLocales().map(e => e.value))
+}(r = s || (s = {}))[r.INTRO_ANIMATION = 0] = "INTRO_ANIMATION", r[r.SETUP = 1] = "SETUP", r[r.SIGN = 2] = "SIGN", (o = l || (l = {}))[o.FOUNDATIONAL_INTRO = 0] = "FOUNDATIONAL_INTRO", o[o.GAMES = 1] = "GAMES", o[o.PLAYSTYLE = 2] = "PLAYSTYLE", o[o.PERSONALITY_INTRO = 3] = "PERSONALITY_INTRO", o[o.UTILITY_TRAITS = 4] = "UTILITY_TRAITS", o[o.INTERESTS = 5] = "INTERESTS", o[o.DESCRIPTION = 6] = "DESCRIPTION", o[o.PRIMETIME = 7] = "PRIMETIME", o[o.IDENTITY_INTRO = 8] = "IDENTITY_INTRO", o[o.CUSTOMIZE = 9] = "CUSTOMIZE", o[o.APPLICATION_INTRO = 10] = "APPLICATION_INTRO", o[o.MEMBER_APPLICATION = 11] = "MEMBER_APPLICATION";
+let A = "700136079562375258",
+  N = "762434991303950386",
+  v = ["Unrated", "Spike Rush", "Death Match", "Swift", "TDM", "Server: NA", "Server: EU", "Server: LATAM", "Server: KR", "Server: AP", "Voice ON", "Voice OFF"],
+  R = ["20+", "30+", "40+", "All Ages"],
+  O = ["LGBTQIA-Friendly", "All genders"],
+  L = ["NA", "LATAM", "EU West", "SEA", "OCE", "Global"],
+  M = new Set([...v, ...R, ...O, ...L]),
+  P = new Set(c.default.getAvailableLocales().map(e => e.value))

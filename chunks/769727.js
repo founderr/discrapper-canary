@@ -216,9 +216,10 @@ function w() {
       })]
     }), (0, a.jsx)("div", {
       className: P.topPicksContent,
-      children: n.items.map(e => (0, a.jsx)(N.default, {
-        clan: e
-      }, e.id))
+      children: n.items.map(t => (0, a.jsx)(N.default, {
+        clan: t,
+        affinity: (0, O.getClanDiscoveryAffinity)(t, e)
+      }, t.id))
     })]
   }) : null
 }

@@ -20,7 +20,7 @@ let u = (0, r.default)(e => ({
   mode: "discovery",
   game: "valorant",
   selectedGames: [{
-    applicationId: "valorant",
+    applicationId: o.VALORANT_ID,
     name: "Valorant"
   }],
   selectedPlaystyle: {
