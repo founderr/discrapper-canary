@@ -138,7 +138,9 @@ function U(e) {
       channel: a,
       altText: n,
       reply: t
-    }), (0, N.trackInteraction)(M.ContentInventoryInteractionTypes.REACTION_MESSAGE_SENT, {
+    });
+    let l = a.type === R.ChannelTypes.DM ? M.ContentInventoryInteractionTypes.DM_REACTION_MESSAGE_SENT : M.ContentInventoryInteractionTypes.CHANNEL_REACTION_MESSAGE_SENT;
+    (0, N.trackInteraction)(l, {
       entry: s,
       channelId: o.channel.id,
       guildId: o.channel.guild_id,
