@@ -1,156 +1,111 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("735250"),
-  s = n("470079"),
-  l = n("803997"),
-  i = n.n(l),
-  r = n("183249"),
-  o = n("442837"),
-  u = n("481060"),
-  d = n("210753"),
-  c = n("32966"),
-  f = n("314897"),
-  E = n("77498"),
-  h = n("441674"),
-  _ = n("308083"),
-  C = n("689938"),
-  m = n("597338");
-
-function S(e) {
-  let {
-    applicationId: t,
-    name: n,
-    imageContainerClassName: l,
-    onClick: o
-  } = e, c = (0, u.useToken)(u.tokens.colors.WHITE), {
-    isFetching: f,
-    coverImageUrl: E
-  } = (0, d.useDetectableGameSupplementalData)(t, {
-    coverImageHeight: 336,
-    coverImageWidth: 252
-  }), _ = s.useCallback(() => {
-    null == o || o(t)
-  }, [t, o]), C = s.useMemo(() => f ? null : null == E ? (0, a.jsx)("div", {
-    className: m.gameUnknownImage,
-    children: (0, a.jsx)(r.UnknownGameIcon, {
-      height: 32,
-      width: 32
-    })
-  }) : (0, a.jsx)("img", {
-    className: m.gameImage,
-    alt: n,
-    src: E
-  }), [E, f, n]);
-  return (0, a.jsxs)("div", {
-    className: m.selectedGame,
-    children: [(0, a.jsxs)(u.Clickable, {
-      onClick: _,
-      className: i()(l, f ? m.gameImageLoading : void 0, m.gameImageBackground),
-      children: [(0, a.jsx)(h.default, {
-        backgroundColor: c.hex(),
-        className: m.selectedGameCheck
-      }), C]
-    }), (0, a.jsx)(u.Text, {
-      variant: "text-xs/normal",
-      color: "header-primary",
-      children: n
-    })]
-  })
-}
+a.r(t), a("47120");
+var n = a("735250"),
+  s = a("470079"),
+  l = a("442837"),
+  i = a("481060"),
+  r = a("32966"),
+  o = a("314897"),
+  u = a("77498"),
+  d = a("92373"),
+  c = a("308083"),
+  f = a("689938"),
+  E = a("597338");
 t.default = e => {
   let {
     handleUpdate: t,
-    selectedGames: n,
-    error: l,
-    requiredGameId: i
-  } = e, r = (0, o.useStateFromStores)([f.default], () => f.default.getId()), {
-    recentGames: d
-  } = (0, c.useUserRecentGames)(r), h = (0, o.useStateFromStores)([E.default], () => E.default.games, []), I = s.useMemo(() => h.map(e => ({
+    selectedGames: a,
+    error: h,
+    requiredGameId: _
+  } = e, C = (0, l.useStateFromStores)([o.default], () => o.default.getId()), {
+    recentGames: m
+  } = (0, r.useUserRecentGames)(C), S = (0, l.useStateFromStores)([u.default], () => u.default.games, []), p = s.useMemo(() => S.map(e => ({
     value: e.id,
     label: e.name
-  })), [h]), p = (0, o.useStateFromStoresArray)([E.default], () => null != d ? d.map(e => {
-    let t = E.default.getGameById(e.applicationId);
+  })), [S]), I = (0, l.useStateFromStoresArray)([u.default], () => null != m ? m.map(e => {
+    let t = u.default.getGameById(e.applicationId);
     return {
       ...e,
       name: null == t ? void 0 : t.name
     }
   }) : []);
   s.useEffect(() => {
-    null != i && !n.has(i) && h.length > 0 && g(i)
-  }, [h.length, i]);
+    null != _ && !a.has(_) && S.length > 0 && g(_)
+  }, [S.length, _]);
   let T = e => {
-      if (!n.has(e) || e === i) return;
-      let a = new Map(n);
-      a.delete(e), t({
-        selectedGames: a
+      if (!a.has(e) || e === _) return;
+      let n = new Map(a);
+      n.delete(e), t({
+        selectedGames: n
       })
     },
     g = e => {
-      if (n.size === _.MAX_NUM_SELECTED_GAMES || n.has(e)) return;
-      let a = E.default.getGameById(e);
-      if (null == a) return;
-      let s = new Map(n);
+      if (a.size === c.MAX_NUM_SELECTED_GAMES || a.has(e)) return;
+      let n = u.default.getGameById(e);
+      if (null == n) return;
+      let s = new Map(a);
       s.set(e, {
         id: e,
-        name: a.name
+        name: n.name
       }), t({
         selectedGames: s
       })
     };
-  return (0, a.jsxs)("div", {
-    className: m.slideContent,
-    children: [(0, a.jsx)(u.Heading, {
+  return (0, n.jsxs)("div", {
+    className: E.slideContent,
+    children: [(0, n.jsx)(i.Heading, {
       variant: "heading-xxl/medium",
-      className: m.title,
-      children: C.default.Messages.CLAN_SETUP_GAMES_TITLE
-    }), (0, a.jsx)(u.Text, {
+      className: E.title,
+      children: f.default.Messages.CLAN_SETUP_GAMES_TITLE
+    }), (0, n.jsx)(i.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: m.subtitle,
-      children: C.default.Messages.CLAN_SETUP_GAMES_SUBTITLE
-    }), (0, a.jsx)("div", {
-      className: m.inputContainer,
-      children: (0, a.jsx)(u.SearchableSelect, {
-        options: I,
+      className: E.subtitle,
+      children: f.default.Messages.CLAN_SETUP_GAMES_SUBTITLE
+    }), (0, n.jsx)("div", {
+      className: E.inputContainer,
+      children: (0, n.jsx)(i.SearchableSelect, {
+        options: p,
         value: "",
-        placeholder: C.default.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
+        placeholder: f.default.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
         onChange: g,
-        isDisabled: n.size === _.MAX_NUM_SELECTED_GAMES
+        isDisabled: a.size === c.MAX_NUM_SELECTED_GAMES
       })
-    }), (0, a.jsxs)("div", {
-      className: m.contentWithMinHeight,
-      children: [null != l && (0, a.jsx)(u.Text, {
+    }), (0, n.jsxs)("div", {
+      className: E.contentWithMinHeight,
+      children: [null != h && (0, n.jsx)(i.Text, {
         variant: "text-sm/normal",
         color: "status-danger",
-        className: m.errorText,
-        children: l
-      }), n.size > 0 && (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(u.Text, {
+        className: E.errorText,
+        children: h
+      }), a.size > 0 && (0, n.jsxs)(n.Fragment, {
+        children: [(0, n.jsx)(i.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
-          className: m.contentLabel,
-          children: C.default.Messages.CLAN_SETUP_SELECTED_GAMES
-        }), (0, a.jsx)("div", {
-          className: m.selectedSection,
-          children: Array.from(n.entries()).map(e => {
-            let [t, n] = e;
-            return (0, a.jsx)(S, {
+          className: E.contentLabel,
+          children: f.default.Messages.CLAN_SETUP_SELECTED_GAMES
+        }), (0, n.jsx)("div", {
+          className: E.selectedSection,
+          children: Array.from(a.entries()).map(e => {
+            let [t, a] = e;
+            return (0, n.jsx)(d.default, {
               applicationId: t,
-              name: n.name,
-              onClick: t !== i ? T : void 0,
-              imageContainerClassName: t !== i ? m.removableGame : void 0
+              name: a.name,
+              onClick: t !== _ ? T : void 0,
+              imageContainerClassName: t !== _ ? E.removableGame : void 0,
+              selected: !0
             }, t)
           })
         })]
-      }), p.length > 0 && (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(u.Text, {
+      }), I.length > 0 && (0, n.jsxs)(n.Fragment, {
+        children: [(0, n.jsx)(i.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
-          className: m.contentLabel,
-          children: C.default.Messages.RECENT_GAMES
-        }), (0, a.jsx)("div", {
-          className: m.selectedSection,
-          children: p.map(e => (0, a.jsx)(S, {
+          className: E.contentLabel,
+          children: f.default.Messages.RECENT_GAMES
+        }), (0, n.jsx)("div", {
+          className: E.selectedSection,
+          children: I.map(e => (0, n.jsx)(d.default, {
             name: e.name,
             applicationId: e.applicationId,
             onClick: g

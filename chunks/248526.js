@@ -1,26 +1,27 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return m
+    return g
   }
 }), r("47120");
 var a = r("735250"),
   n = r("470079"),
   i = r("848246"),
-  l = r("442837"),
-  o = r("481060"),
+  o = r("442837"),
+  l = r("481060"),
   s = r("570140"),
-  c = r("594174"),
-  d = r("246992"),
-  u = r("519634");
-let h = [{
+  c = r("485731"),
+  d = r("594174"),
+  u = r("246992"),
+  h = r("519634");
+let p = [{
     label: "No Override",
     value: !1
   }, {
     label: "Available: true",
     value: !0
   }],
-  p = [{
+  m = [{
     label: "No Override",
     value: !1
   }, {
@@ -28,44 +29,44 @@ let h = [{
     value: !0
   }];
 
-function m() {
-  let e = (0, l.useStateFromStores)([c.default], () => c.default.getCurrentUser()),
+function g() {
+  let e = (0, o.useStateFromStores)([d.default], () => d.default.getCurrentUser()),
     [t, r] = n.useState(!1),
-    [m, g] = n.useState(!1);
+    [g, f] = n.useState(!1);
   return (0, a.jsxs)("div", {
-    className: u.container,
-    children: [(0, a.jsx)(o.FormSection, {
+    className: h.container,
+    children: [(0, a.jsx)(l.FormSection, {
       title: "Override HQ Streaming: Available",
-      className: u.formElement,
-      tag: o.FormTitleTags.H3,
-      children: (0, a.jsx)(o.SingleSelect, {
-        options: h,
+      className: h.formElement,
+      tag: l.FormTitleTags.H3,
+      children: (0, a.jsx)(l.SingleSelect, {
+        options: p,
         value: t,
         onChange: e => {
           r(e)
         },
-        popoutLayerContext: d.devToolsLayerContext
+        popoutLayerContext: u.devToolsLayerContext
       })
-    }), (0, a.jsx)(o.FormSection, {
+    }), (0, a.jsx)(l.FormSection, {
       title: "Override HQ Streaming: Activate",
-      className: u.formElement,
-      tag: o.FormTitleTags.H3,
-      children: (0, a.jsx)(o.SingleSelect, {
-        options: p,
-        value: m,
+      className: h.formElement,
+      tag: l.FormTitleTags.H3,
+      children: (0, a.jsx)(l.SingleSelect, {
+        options: m,
+        value: g,
         onChange: e => {
-          g(e)
+          f(e)
         },
-        popoutLayerContext: d.devToolsLayerContext
+        popoutLayerContext: u.devToolsLayerContext
       })
-    }), (0, a.jsx)(o.Button, {
-      onClick: () => void s.default.dispatch({
+    }), (0, a.jsx)(l.Button, {
+      onClick: () => void(s.default.dispatch({
         type: "PREMIUM_PERKS_DEMO_OVERRIDE",
         perkType: i.EntitlementFeatureNames.STREAM_HIGH_QUALITY,
         user: e,
         available: t,
-        activateSuccess: m
-      }),
+        activateSuccess: g
+      }), (0, c.hqStreamingPopoutDismissed)(!1), (0, c.hqStreamingFrameAnimationPlayed)(!1)),
       children: "Update"
     })]
   })

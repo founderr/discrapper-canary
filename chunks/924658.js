@@ -432,5 +432,9 @@ e.exports = Object.freeze({
   CLAN_DISCOVERY_PLAYSTYLE_TITLE: "What's your playstyle?",
   CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE: "We'll recommend you Gaming Guilds that fit your playstyle.",
   CLAN_DISCOVERY_TRAIT_TITLE: "Would you prefer to sort by any of these?",
-  CLAN_DISCOVERY_TRAIT_SUBTITLE: "We will prioritize Gaming Guilds that match the criteria you selected."
+  CLAN_DISCOVERY_TRAIT_SUBTITLE: "We will prioritize Gaming Guilds that match the criteria you selected.",
+  CLAN_DISCOVERY_GAME_TITLE: "What games do you play?",
+  CLAN_DISCOVERY_GAME_SUBTITLE: "We'll recommend Gaming Guilds to join based on games you play.",
+  CLAN_DISCOVERY_GAMES_SEARCH_PLACEHOLDER: "Look for a Game...",
+  CLAN_DISCOVERY_GAMES_SELECTED: "Selected Games"
 })
