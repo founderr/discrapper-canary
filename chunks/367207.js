@@ -12,7 +12,8 @@ var a = n("481060"),
   c = n("74538"),
   f = n("937579"),
   E = n("316941"),
-  _ = n("633361");
+  _ = n("424082"),
+  m = n("633361");
 
 function T(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -22,7 +23,7 @@ function T(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class m extends i.default {
+class I extends i.default {
   _initialize() {
     __OVERLAY__ ? l.default.subscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen) : (l.default.subscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose), l.default.subscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell), l.default.subscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer))
   }
@@ -76,8 +77,9 @@ class m extends i.default {
   }
   constructor(...e) {
     super(...e), T(this, "_premiumPaymentModalCloseResolve", null), T(this, "_premiumPaymentModalCloseReject", null), T(this, "_maybeFetchPremiumOffer", () => {
-      let e = u.default.getCurrentUser();
-      null != e && e.verified && !(0, c.isPremium)(e) && d.default.shouldFetchOffer() && ((0, _.shouldHitUserOfferEndPoints)("PremiumManager") ? (0, f.fetchUserOffer)() : E.default.fetchUserTrialOffer())
+      let e = u.default.getCurrentUser(),
+        t = (0, _.annualDiscountsExperimentEnabled)("PremiumManager");
+      null != e && e.verified && (!(0, c.isPremium)(e) && d.default.shouldFetchOffer() && ((0, m.shouldHitUserOfferEndPoints)("PremiumManager") ? (0, f.fetchUserOffer)() : E.default.fetchUserTrialOffer()), t && d.default.shouldFetchAnnualOffer() && (0, f.fetchAnnualUserOffer)())
     }), T(this, "_handlePremiumPaymentModalOpen", e => {
       (0, o.default)({
         ...e,
@@ -97,4 +99,4 @@ class m extends i.default {
     })
   }
 }
-t.default = new m
+t.default = new I

@@ -1,6 +1,9 @@
 "use strict";
 r.r(t), r.d(t, {
   acknowledgeUserOffer: function() {
+    return u
+  },
+  fetchAnnualUserOffer: function() {
     return d
   },
   fetchUserOffer: function() {
@@ -41,8 +44,25 @@ async function c() {
     })
   }
 }
+async function d() {
+  try {
+    var e;
+    let t = await a.HTTP.post({
+        url: s.Endpoints.ANNUAL_USER_OFFER
+      }),
+      r = null !== (e = t.body.user_discount_offer) && void 0 !== e ? e : null;
+    null != r && (h(r), i.default.dispatch({
+      type: "BILLING_ANNUAL_USER_OFFER_FETCH_SUCCESS",
+      userDiscountOffer: r
+    }))
+  } catch (e) {
+    i.default.dispatch({
+      type: "BILLING_ANNUAL_USER_OFFER_FETCH_FAIL"
+    })
+  }
+}
 
-function d(e, t) {
+function u(e, t) {
   let r = null != e && null == e.expires_at ? e.id : void 0,
     n = null != t && null == t.expires_at ? t.id : void 0;
   if (void 0 !== r || void 0 !== n) return a.HTTP.post({
@@ -68,4 +88,16 @@ function d(e, t) {
       userDiscountOffer: null
     })
   })
+}
+async function h(e) {
+  if (null != e && null == e.applied_at) try {
+    await a.HTTP.post({
+      url: s.Endpoints.USER_OFFER_REDEEM,
+      body: {
+        user_discount_offer_id: e.id
+      }
+    })
+  } catch (e) {
+    throw e
+  }
 }

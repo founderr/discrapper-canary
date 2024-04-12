@@ -17,6 +17,7 @@ function d(e, t, n) {
 }
 let _ = {
     userOffersLastFetchedAtDate: void 0,
+    userAnnualOfferLastFetchedAtDate: void 0,
     userTrialOffers: {},
     userDiscountOffers: {},
     userDiscounts: void 0
@@ -24,7 +25,7 @@ let _ = {
   c = _;
 
 function E() {
-  c.userTrialOffers = {}, c.userDiscountOffers = {}, c.userOffersLastFetchedAtDate = void 0
+  c.userTrialOffers = {}, c.userDiscountOffers = {}, c.userOffersLastFetchedAtDate = void 0, c.userAnnualOfferLastFetchedAtDate = void 0
 }
 let I = () => !0;
 
@@ -53,6 +54,10 @@ class f extends(i = r.default.PersistedStore) {
     let e = c.userOffersLastFetchedAtDate;
     return null == e || Date.now() - 1728e5 > e
   }
+  shouldFetchAnnualOffer() {
+    let e = c.userAnnualOfferLastFetchedAtDate;
+    return null == e || Date.now() - 1728e5 > e
+  }
   getAlmostExpiringTrialOffers(e) {
     let t = Object.values(u.SubscriptionTrials).map(e => e.id),
       n = a.default.getCurrentUser();
@@ -65,7 +70,7 @@ class f extends(i = r.default.PersistedStore) {
   getUnacknowledgedDiscountOffers() {
     var e;
     let t = a.default.getCurrentUser();
-    return (0, o.isPremium)(t) ? [] : Object.values(null !== (e = c.userDiscountOffers) && void 0 !== e ? e : {}).filter(e => null == e.expires_at)
+    return (0, o.isPremium)(t) ? [] : Object.values(null !== (e = c.userDiscountOffers) && void 0 !== e ? e : {}).filter(e => null == e.expires_at && !u.ANNUAL_DISCOUNT_IDS.includes(e.discount_id))
   }
   getUnacknowledgedOffers(e) {
     let t = a.default.getCurrentUser();
@@ -91,6 +96,11 @@ d(f, "displayName", "UserOfferStore"), d(f, "persistKey", "UserOfferStore"), d(f
     ...e,
     userDiscountOffers: t
   }
+}, e => {
+  if (null != e) return (null == e ? void 0 : e.userAnnualOfferLastFetchedAtDate) == null ? {
+    ...e,
+    userAnnualOfferLastFetchedAtDate: void 0
+  } : e
 }]), t.default = new f(s.default, {
   BILLING_USER_TRIAL_OFFER_FETCH_SUCCESS: function(e) {
     let {
@@ -112,6 +122,12 @@ d(f, "displayName", "UserOfferStore"), d(f, "persistKey", "UserOfferStore"), d(f
     } = e;
     null == t && null == n && null == i && E(), null != t ? (c.userTrialOffers[t.trial_id] = t, c.userDiscountOffers = {}) : null != n ? (c.userDiscountOffers[n.discount_id] = n, c.userTrialOffers = {}) : null != i && (c.userDiscountOffers[i.discount_id] = i, c.userTrialOffers = {}), c.userOffersLastFetchedAtDate = Date.now()
   },
+  BILLING_ANNUAL_USER_OFFER_FETCH_SUCCESS: function(e) {
+    let {
+      userDiscountOffer: t
+    } = e;
+    delete c.userDiscountOffers[u.PREMIUM_TIER_2_ANNUAL_20_PERCENT_DISCOUNT_ID], delete c.userDiscountOffers[u.PREMIUM_TIER_2_ANNUAL_25_PERCENT_DISCOUNT_ID], null != t && (c.userDiscountOffers[t.discount_id] = t), c.userAnnualOfferLastFetchedAtDate = Date.now()
+  },
   BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS: function(e) {
     let {
       userTrialOffer: t,
@@ -122,6 +138,9 @@ d(f, "displayName", "UserOfferStore"), d(f, "persistKey", "UserOfferStore"), d(f
   },
   BILLING_USER_OFFER_FETCH_FAIL: function() {
     E(), c.userOffersLastFetchedAtDate = Date.now()
+  },
+  BILLING_ANNUAL_USER_OFFER_FETCH_FAIL: function() {
+    delete c.userDiscountOffers[u.PREMIUM_TIER_2_ANNUAL_20_PERCENT_DISCOUNT_ID], delete c.userDiscountOffers[u.PREMIUM_TIER_2_ANNUAL_25_PERCENT_DISCOUNT_ID], c.userAnnualOfferLastFetchedAtDate = Date.now()
   },
   LOGOUT: E
 })
