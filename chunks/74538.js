@@ -1502,6 +1502,9 @@ t.default = Object.freeze({
   canUseCollectibles: function(e) {
     return (0, I.canUserUse)(I.COLLECTIBLES, e)
   },
+  canUseCustomNotificationSounds: function(e) {
+    return (0, I.canUserUse)(I.CUSTOM_NOTIFICATION_SOUNDS, e)
+  },
   formatPriceString: function(e, t) {
     let n = (0, D.formatPrice)(e.amount, e.currency),
       i = j(t);
