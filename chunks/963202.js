@@ -1,10 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   ClanExperiment: function() {
-    return a
+    return i
+  },
+  useIsInUserClanExperiment: function() {
+    return r
   }
 });
-let a = (0, n("818083").createExperiment)({
+let i = (0, n("818083").createExperiment)({
   kind: "user",
   id: "2024-02_clans",
   label: "Clans",
@@ -18,4 +21,18 @@ let a = (0, n("818083").createExperiment)({
       enableClanCreation: !0
     }
   }]
-})
+});
+
+function r() {
+  let {
+    autoTrackExposure: e = !1,
+    disable: t = !1,
+    location: n
+  } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+  return i.useExperiment({
+    location: n
+  }, {
+    autoTrackExposure: e,
+    disable: t
+  }).enableClanCreation
+}

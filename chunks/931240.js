@@ -1,55 +1,83 @@
 "use strict";
 n.r(t), n.d(t, {
+  adoptClanIdentity: function() {
+    return _
+  },
   convertGuildToClan: function() {
     return u
   },
-  updateClanSettings: function() {
+  getClanInfo: function() {
     return d
+  },
+  updateClanSettings: function() {
+    return c
   }
 }), n("47120");
-var a = n("392711"),
-  s = n("544891"),
-  l = n("570140"),
-  i = n("479531"),
-  r = n("924801"),
-  o = n("981631");
+var i = n("392711"),
+  r = n("544891"),
+  s = n("570140"),
+  a = n("479531"),
+  o = n("924801"),
+  l = n("981631");
 async function u(e, t) {
-  var n, u, d, c, f;
-  let E = (0, a.uniqWith)(null !== (n = t.primetime) && void 0 !== n ? n : [], a.isEqual),
-    h = (0, r.formatTimesForServer)(E);
-  l.default.dispatch({
+  var n, u, d, _, c;
+  let E = (0, i.uniqWith)(null !== (n = t.primetime) && void 0 !== n ? n : [], i.isEqual),
+    I = (0, o.formatTimesForServer)(E);
+  s.default.dispatch({
     type: "CLAN_SETUP_SUBMIT",
     guildId: e
   });
   try {
-    await s.HTTP.put({
-      url: o.Endpoints.GUILD_CONVERT_TO_CLAN(e),
+    await r.HTTP.put({
+      url: l.Endpoints.GUILD_CONVERT_TO_CLAN(e),
       body: {
         tag: t.tag,
         description: t.description,
         play_style: t.playstyle,
         search_terms: Array.from(null !== (d = t.interests) && void 0 !== d ? d : new Set),
-        game_application_ids: Array.from((null !== (c = t.selectedGames) && void 0 !== c ? c : new Map).keys()),
-        prime_time: h,
+        game_application_ids: Array.from((null !== (_ = t.selectedGames) && void 0 !== _ ? _ : new Map).keys()),
+        prime_time: I,
         verification_form: {
-          form_fields: null !== (f = null === (u = t.verificationForm) || void 0 === u ? void 0 : u.formFields) && void 0 !== f ? f : []
+          form_fields: null !== (c = null === (u = t.verificationForm) || void 0 === u ? void 0 : u.formFields) && void 0 !== c ? c : []
         }
       }
-    }), l.default.dispatch({
+    }), s.default.dispatch({
       type: "CLAN_SETUP_SUCCESS",
       guildId: e
     })
   } catch (t) {
-    throw l.default.dispatch({
+    throw s.default.dispatch({
       type: "CLAN_SETUP_ERROR",
       guildId: e,
-      error: new i.default(t)
+      error: new a.default(t)
     }), t
   }
 }
+async function d(e) {
+  return (await r.HTTP.get({
+    url: l.Endpoints.GUILD_CLAN_INFO(e)
+  })).body
+}
+async function _(e, t) {
+  try {
+    let n = await r.HTTP.put({
+      url: l.Endpoints.USER_SET_CLAN_IDENTITY,
+      body: {
+        identity_guild_id: e,
+        identity_enabled: t
+      }
+    });
+    s.default.dispatch({
+      type: "CURRENT_USER_UPDATE",
+      user: n.body
+    })
+  } catch (e) {
+    return
+  }
+}
 
-function d(e, t) {
-  l.default.dispatch({
+function c(e, t) {
+  s.default.dispatch({
     type: "CLAN_SETUP_UPDATE",
     guildId: e,
     updates: t

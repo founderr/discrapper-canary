@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   },
   default: function() {
-    return M
+    return v
   }
 });
 var a, i, r = n("735250"),
@@ -17,79 +17,86 @@ var a, i, r = n("735250"),
   m = n("607070"),
   f = n("100527"),
   g = n("906732"),
-  p = n("372900"),
-  E = n("463396"),
-  S = n("477734"),
-  A = n("484459"),
-  h = n("467679"),
-  I = n("768581"),
-  T = n("50182");
+  p = n("979264"),
+  E = n("372900"),
+  S = n("463396"),
+  A = n("477734"),
+  h = n("484459"),
+  I = n("467679"),
+  T = n("768581"),
+  y = n("50182");
 
-function y(e) {
+function M(e) {
   let {
     compact: t
   } = e;
-  return (0, r.jsx)(h.default, {
-    className: t ? T.botTagCompact : T.botTagCozy,
-    type: h.default.Types.REMIX,
+  return (0, r.jsx)(I.default, {
+    className: t ? y.botTagCompact : y.botTagCozy,
+    type: I.default.Types.REMIX,
     useRemSizes: !0
   })
 }
 
-function M(e) {
+function v(e) {
   let t, {
       author: n,
       message: a,
       userOverride: i,
       compact: l = !1,
-      withMentionPrefix: h = !1,
-      showPopout: M = !1,
-      className: v,
-      onClick: x,
-      onContextMenu: _,
-      onPopoutRequestClose: b,
-      renderPopout: N,
-      renderRemixTag: L = !1,
-      decorations: R
+      withMentionPrefix: I = !1,
+      showPopout: v = !1,
+      className: x,
+      onClick: _,
+      onContextMenu: b,
+      onPopoutRequestClose: N,
+      renderPopout: L,
+      renderRemixTag: R = !1,
+      decorations: C
     } = e,
-    C = s.useContext(p.default),
+    k = s.useContext(E.default),
     {
-      analyticsLocations: k
+      analyticsLocations: D
     } = (0, g.default)(f.default.USERNAME),
     {
-      nick: D,
+      nick: j,
       colorString: w,
-      colorRoleName: j
+      colorRoleName: F
     } = n,
-    F = null != a.messageReference && null != a.webhookId,
-    P = (0, c.useStateFromStores)([m.default], () => m.default.roleStyle),
-    B = (0, S.useCanSeeRemixBadge)(),
-    G = {
-      className: T.username,
-      style: "username" === P && null != w ? {
+    P = null != a.messageReference && null != a.webhookId,
+    B = (0, c.useStateFromStores)([m.default], () => m.default.roleStyle),
+    G = (0, A.useCanSeeRemixBadge)(),
+    U = {
+      className: y.username,
+      style: "username" === B && null != w ? {
         color: w
       } : void 0,
-      onClick: x,
-      onContextMenu: _,
-      children: (h ? "@" : "") + D
+      onClick: _,
+      onContextMenu: b,
+      children: (0, r.jsxs)(r.Fragment, {
+        children: [(I ? "@" : "") + j, (0, r.jsx)(p.default, {
+          clan: n.clan,
+          userId: a.author.id,
+          className: y.clanTagChiplet
+        })]
+      })
     };
-  t = null != N && null != M ? (0, r.jsx)(d.Popout, {
-    preload: F ? void 0 : function() {
+  t = null != L && null != v ? (0, r.jsx)(d.Popout, {
+    preload: P ? void 0 : function() {
       let e = null != i ? i : a.author;
-      return (0, A.default)(e.id, null != n.guildMemberAvatar && null != C ? (0, I.getGuildMemberAvatarURLSimple)({
-        guildId: C,
+      return (0, h.default)(e.id, null != n.guildMemberAvatar && null != k ? (0, T.getGuildMemberAvatarURLSimple)({
+        guildId: k,
         userId: e.id,
         avatar: n.guildMemberAvatar,
         size: 80
-      }) : e.getAvatarURL(C, 80), {
-        guildId: C,
+      }) : e.getAvatarURL(k, 80), {
+        guildId: k,
         channelId: a.channel_id
       })
     },
-    renderPopout: N,
-    shouldShow: M,
+    renderPopout: L,
+    shouldShow: v,
     position: u.isMobile ? "window_center" : "right",
-    onRequestClose: b,
+    onRequestClose: N,
     children: e => {
       let {
         onClick: t,
@@ -98,26 +105,26 @@ function M(e) {
       return (0, r.jsx)(d.Clickable, {
         tag: "span",
         ...n,
-        ...G,
-        className: o()(G.className, T.clickable, v)
+        ...U,
+        className: o()(U.className, y.clickable, x)
       })
     }
   }) : (0, r.jsx)(d.Clickable, {
-    ...G,
-    className: o()(G.className, v)
+    ...U,
+    className: o()(U.className, x)
   });
-  let U = null != R ? R[0] : null,
-    O = null != R ? R[1] : null;
+  let O = null != C ? C[0] : null,
+    H = null != C ? C[1] : null;
   return (0, r.jsxs)(g.AnalyticsLocationProvider, {
-    value: k,
-    children: [null != U && l ? (0, r.jsxs)(r.Fragment, {
-      children: [" ", U, " "]
-    }) : null, "dot" === P ? (0, r.jsx)(d.RoleDot, {
+    value: D,
+    children: [null != O && l ? (0, r.jsxs)(r.Fragment, {
+      children: [" ", O, " "]
+    }) : null, "dot" === B ? (0, r.jsx)(d.RoleDot, {
       color: w,
-      name: j,
-      className: T.roleDot
-    }) : null, t, null != O ? (0, r.jsx)(r.Fragment, {
-      children: O
-    }) : null, null == U || l ? null : U, null != a && (0, E.default)(a) && B && L ? (0, r.jsx)(y, {}) : null]
+      name: F,
+      className: y.roleDot
+    }) : null, t, null != H ? (0, r.jsx)(r.Fragment, {
+      children: H
+    }) : null, null == O || l ? null : O, null != a && (0, S.default)(a) && G && R ? (0, r.jsx)(M, {}) : null]
   })
 }(a = i || (i = {}))[a.SYSTEM_TAG = 0] = "SYSTEM_TAG", a[a.BADGES = 1] = "BADGES"
