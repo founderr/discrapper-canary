@@ -17,19 +17,19 @@ var a = n("913527"),
   m = n("131951"),
   S = n("292959"),
   I = n("699516"),
-  T = n("944486"),
-  p = n("9156"),
+  p = n("944486"),
+  T = n("9156"),
   g = n("594174"),
   A = n("51144"),
   N = n("196051"),
-  R = n("441729"),
-  v = n("653477"),
+  v = n("441729"),
+  R = n("653477"),
   O = n("981631"),
   L = n("689938");
 let M = [],
   P = null,
-  y = null,
   x = null,
+  y = null,
   D = /\|\|([\s\S]+?)\|\|/g;
 
 function b(e, t, n, a) {
@@ -64,16 +64,16 @@ function b(e, t, n, a) {
 function U() {
   if (!i.supported) return !1;
   let e = d.default.locale;
-  if (null == x) {
+  if (null == y) {
     var t;
-    x = null === (t = window.speechSynthesis) || void 0 === t ? void 0 : t.getVoices()
+    y = null === (t = window.speechSynthesis) || void 0 === t ? void 0 : t.getVoices()
   }
-  let n = x.filter(t => t.lang === e || t.lang.slice(0, e.length) === e || !1);
-  y = n.length > 0 ? n[0] : null
+  let n = y.filter(t => t.lang === e || t.lang.slice(0, e.length) === e || !1);
+  x = n.length > 0 ? n[0] : null
 }
 async function j(e, t, n, a, s) {
   let l = i.createUtterance(e, n);
-  null !== l && (null == y && U(), t ? await (0, N.stopSpeaking)() : null == P || P.removeEventListener("end", N.stopSpeaking), l.addEventListener("end", N.stopSpeaking), null != a && l.addEventListener("start", a), null != s && l.addEventListener("end", s), P = l, i.speakUtterance(l, y))
+  null !== l && (null == x && U(), t ? await (0, N.stopSpeaking)() : null == P || P.removeEventListener("end", N.stopSpeaking), l.addEventListener("end", N.stopSpeaking), null != a && l.addEventListener("start", a), null != s && l.addEventListener("end", s), P = l, i.speakUtterance(l, x))
 }
 
 function G(e, t, n, a, s) {
@@ -116,21 +116,21 @@ function H(e) {
   if (d || m.default.isSelfDeaf()) return !1;
   let C = h.default.getChannel(o);
   if (null == C) return !1;
-  let g = T.default.getChannelId(),
+  let g = p.default.getChannelId(),
     N = E.default.getCurrentSidebarChannelId(g),
-    R = o === g || o === N,
-    L = c.EnableTTSCommand.getSetting() && u.tts && R,
+    v = o === g || o === N,
+    L = c.EnableTTSCommand.getSetting() && u.tts && v,
     P = S.default.getTTSType(),
-    y = (null === (t = u.author) || void 0 === t ? void 0 : t.id) !== f.default.getId() && (P === O.TTSNotificationTypes.ALL_CHANNELS || P === O.TTSNotificationTypes.SELECTED_CHANNEL && R);
-  if ((L || y) && ((null === (n = u.author) || void 0 === n ? void 0 : n.id) == null || !I.default.isBlocked(u.author.id))) {
+    x = (null === (t = u.author) || void 0 === t ? void 0 : t.id) !== f.default.getId() && (P === O.TTSNotificationTypes.ALL_CHANNELS || P === O.TTSNotificationTypes.SELECTED_CHANNEL && v);
+  if ((L || x) && ((null === (n = u.author) || void 0 === n ? void 0 : n.id) == null || !I.default.isBlocked(u.author.id))) {
     if (M.indexOf(u.id) >= 0) return !1;
     M.unshift(u.id) > 10 && M.pop();
     let e = C.getGuildId();
-    if (null != e && p.default.getMutedChannels(e).has(o)) return !1;
+    if (null != e && T.default.getMutedChannels(e).has(o)) return !1;
     let t = null !== (i = null !== (l = _.default.getNick(e, null === (a = u.author) || void 0 === a ? void 0 : a.id)) && void 0 !== l ? l : A.default.getName(u.author)) && void 0 !== i ? i : "",
       n = u.type === O.MessageTypes.REPLY ? null === (s = u.referenced_message) || void 0 === s ? void 0 : s.author : null,
       d = null != n ? null !== (r = _.default.getNick(e, null == n ? void 0 : n.id)) && void 0 !== r ? r : A.default.getName(n) : null;
-    G(b(u.content, t, e, d), !1, C.id, u.id, v.MAX_TTS_LENGTH)
+    G(b(u.content, t, e, d), !1, C.id, u.id, R.MAX_TTS_LENGTH)
   }
   return !1
 }
@@ -139,7 +139,7 @@ function B(e) {
   let {
     id: t,
     channelId: n
-  } = e, a = R.default.currentMessage;
+  } = e, a = v.default.currentMessage;
   return null != a && t === a.messageId && n === a.channelId && ((0, N.stopSpeaking)(), !0)
 }
 

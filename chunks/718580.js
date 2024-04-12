@@ -112,7 +112,7 @@ function S(e) {
   }), G = (0, E.default)(R), {
     width: w,
     centered: k = !0
-  } = h, B = o.isMobile ? "100%" : U.width.to(e => Math.round(e)), F = o.isMobile ? "100%" : U.height.to(e => Math.round(e)), V = o.isMobile ? {} : k ? {
+  } = h, B = o.isMobile ? "100%" : U.width.to(e => Math.round(e)), V = o.isMobile ? "100%" : U.height.to(e => Math.round(e)), F = o.isMobile ? {} : k ? {
     transform: "translate3d(0, -50%, 0) scale(1.0, 1.0)",
     top: "50%"
   } : {
@@ -124,7 +124,7 @@ function S(e) {
     style: {
       position: "relative",
       width: B,
-      height: F,
+      height: V,
       ...x
     },
     children: b((e, t, n) => {
@@ -139,7 +139,7 @@ function S(e) {
           flexDirection: "column",
           backfaceVisibility: "hidden",
           width: o.isMobile ? "100%" : w,
-          ...V,
+          ...F,
           ...C.enabled ? {
             opacity: e.value.to(e => 1 - Math.abs(e))
           } : {

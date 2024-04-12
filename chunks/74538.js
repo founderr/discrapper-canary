@@ -28,7 +28,7 @@ n.r(t), n.d(t, {
     return eS
   },
   getDefaultPrice: function() {
-    return F
+    return V
   },
   getDiscountIntervalString: function() {
     return H
@@ -85,7 +85,7 @@ n.r(t), n.d(t, {
     return ei
   },
   getPlanDescriptionFromInvoice: function() {
-    return Z
+    return J
   },
   getPremiumGuildHeaderDescription: function() {
     return e_
@@ -106,7 +106,7 @@ n.r(t), n.d(t, {
     return q
   },
   getPrice: function() {
-    return V
+    return F
   },
   getTierDisplayName: function() {
     return X
@@ -197,18 +197,18 @@ function B(e) {
   return e.items.find(e => y.PREMIUM_PLANS.has(e.planId))
 }
 
-function F(e) {
+function V(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     r = null !== (t = h.default.defaultPaymentSourceId) && void 0 !== t ? t : void 0,
     s = N.default.getPremiumTypeSubscription();
-  return null != s && null != s.paymentSourceId && (r = s.paymentSourceId), V(e, n, i, {
+  return null != s && null != s.paymentSourceId && (r = s.paymentSourceId), F(e, n, i, {
     paymentSourceId: r
   })
 }
 
-function V(e) {
+function F(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
@@ -505,7 +505,7 @@ function q(e) {
   }
 }
 
-function J(e) {
+function Z(e) {
   var t, n, i, r, s, a, o, l, u;
   let {
     subscription: _,
@@ -658,7 +658,7 @@ function J(e) {
   }
 }
 
-function Z(e) {
+function J(e) {
   let {
     renewalInvoicePreview: t,
     subscription: n,
@@ -667,7 +667,7 @@ function Z(e) {
     hasDiscountApplied: s = !1,
     activeDiscountInfo: a
   } = e, o = m.default.get(i);
-  return l()(null != o, "Missing plan"), J({
+  return l()(null != o, "Missing plan"), Z({
     subscription: n,
     planId: o.id,
     price: function(e, t, n) {
@@ -677,7 +677,7 @@ function Z(e) {
           } = e;
           return t === n.id
         }),
-        r = null == i ? V(n.id, !1, !1, {
+        r = null == i ? F(n.id, !1, !1, {
           paymentSourceId: t.paymentSourceId,
           currency: t.currency
         }).amount : i.amount;
@@ -917,7 +917,7 @@ function e_(e) {
 
 function ec(e, t, n) {
   let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-    r = null != t ? V(e.id, !1, i, t) : F(e.id, !1, i),
+    r = null != t ? F(e.id, !1, i, t) : V(e.id, !1, i),
     s = (0, D.formatPrice)(r.amount, r.currency);
   return e.currency !== P.CurrencyCodes.USD && !0 === n && (s = s.concat("*")), s
 }
@@ -965,7 +965,7 @@ function ef(e, t, n, i) {
       }
     }), t
   }
-  return V(a.id, (0, g.isPremium)(i), !1, r)
+  return F(a.id, (0, g.isPremium)(i), !1, r)
 }
 
 function eS(e, t, n) {
@@ -1233,8 +1233,8 @@ t.default = Object.freeze({
   isPremiumAtLeast: g.isPremiumAtLeast,
   isPremium: g.isPremium,
   isPremiumExactly: g.isPremiumExactly,
-  getPrice: V,
-  getDefaultPrice: F,
+  getPrice: F,
+  getDefaultPrice: V,
   getInterval: function(e) {
     let t = y.SubscriptionPlanInfo[e];
     if (null != t) return {
@@ -1255,7 +1255,7 @@ t.default = Object.freeze({
   getDisplayPremiumType: Q,
   getPremiumPlanOptions: ee,
   getUpgradeEligibilities: en,
-  getPlanDescription: J,
+  getPlanDescription: Z,
   isPremiumSku: function(e) {
     return e === y.PremiumSubscriptionSKUs.TIER_0 || e === y.PremiumSubscriptionSKUs.TIER_1 || e === y.PremiumSubscriptionSKUs.TIER_2
   },

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   changeStreamRegion: function() {
-    return F
+    return V
   },
   closeStream: function() {
     return G
@@ -25,7 +25,7 @@ n.r(t), n.d(t, {
     return D
   },
   stopOwnStream: function() {
-    return V
+    return F
   },
   stopStream: function() {
     return b
@@ -204,7 +204,7 @@ function B(e) {
   })
 }
 
-function F(e, t) {
+function V(e, t) {
   a.HTTP.patch({
     url: g.Endpoints.STREAM(e),
     body: {
@@ -214,7 +214,7 @@ function F(e, t) {
   })
 }
 
-function V() {
+function F() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
     t = c.default.getCurrentUserActiveStream();
   null != t && b((0, u.encodeStreamKey)(t), e)

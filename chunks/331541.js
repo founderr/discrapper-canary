@@ -21,19 +21,19 @@ var a = n("735250"),
   m = n("727637"),
   S = n("420660"),
   I = n("100527"),
-  T = n("906732"),
-  p = n("521868"),
+  p = n("906732"),
+  T = n("521868"),
   g = n("299206"),
   A = n("440051"),
   N = n("734934"),
-  R = n("158238"),
-  v = n("785717"),
+  v = n("158238"),
+  R = n("785717"),
   O = n("221292"),
   L = n("318661"),
-  M = n("747074"),
+  M = n("502762"),
   P = n("192133"),
-  y = n("138394"),
-  x = n("131640"),
+  x = n("138394"),
+  y = n("131640"),
   D = n("695346"),
   b = n("199902"),
   U = n("293273"),
@@ -157,7 +157,7 @@ function $(e) {
     closePopout: b
   } = e, U = (0, _.useAnalyticsContext)(), {
     analyticsLocations: G
-  } = (0, T.default)(I.default.ACCOUNT_PROFILE_POPOUT), H = (0, L.default)(t.id, l), [V, $, ee, et] = (0, c.useStateFromStoresArray)([j.default], () => {
+  } = (0, p.default)(I.default.ACCOUNT_PROFILE_POPOUT), H = (0, L.default)(t.id, l), [V, $, ee, et] = (0, c.useStateFromStoresArray)([j.default], () => {
     var e;
     let n = t.id;
     return "string" != typeof n ? [void 0, void 0, K.StatusTypes.UNKNOWN, !1] : [null !== (e = j.default.findActivity(n, e => e.type !== K.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, j.default.findActivity(t.id, e => e.type === K.ActivityTypes.CUSTOM_STATUS), j.default.getStatus(n), j.default.isMobileOnline(n)]
@@ -167,7 +167,7 @@ function $(e) {
       }).expiringStatus,
       s = D.StatusExpiresAtSetting.useSetting(),
       l = (0, N.useFocusModeEnabled)(),
-      i = R.QuietModeExperiment.useExperiment({
+      i = v.QuietModeExperiment.useExperiment({
         location: "account popout"
       }).allowQuietMode || l,
       r = D.FocusModeExpiresAtSetting.useSetting(),
@@ -265,15 +265,15 @@ function $(e) {
   let el = (0, N.useFocusModeEnabled)(),
     ei = ee === K.StatusTypes.DND,
     er = (0, Y.useMultiAccountMenuItems)(),
-    eo = (0, p.useCustomStatusMenuItem)(null != n ? n : void 0, Q.menuItemFocused),
+    eo = (0, T.useCustomStatusMenuItem)(null != n ? n : void 0, Q.menuItemFocused),
     eu = (0, g.default)({
       id: t.id,
       label: q.default.Messages.COPY_ID_USER,
       showIconFirst: !0
     });
-  return (0, a.jsx)(T.AnalyticsLocationProvider, {
+  return (0, a.jsx)(p.AnalyticsLocationProvider, {
     value: G,
-    children: (0, a.jsx)(v.UserProfileAnalyticsProvider, {
+    children: (0, a.jsx)(R.UserProfileAnalyticsProvider, {
       layout: "ACCOUNT_POPOUT",
       userId: t.id,
       guildId: l,
@@ -284,7 +284,7 @@ function $(e) {
           children: (0, a.jsxs)(M.default, {
             user: t,
             profileType: z.UserProfileTypes.POPOUT,
-            children: [(0, a.jsx)(x.default, {
+            children: [(0, a.jsx)(y.default, {
               user: t,
               displayProfile: H,
               onClose: () => null == b ? void 0 : b(),
@@ -305,7 +305,7 @@ function $(e) {
                 canDM: !1,
                 hideNote: !0,
                 showCopiableUsername: !0
-              }), (0, a.jsx)(y.default, {
+              }), (0, a.jsx)(x.default, {
                 className: Q.divider
               }), (0, a.jsxs)(E.Menu, {
                 navId: "account",

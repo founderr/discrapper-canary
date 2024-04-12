@@ -3,14 +3,14 @@ let s;
 i.r(t);
 var n = i("544891"),
   l = i("570140"),
-  r = i("728345"),
-  a = i("812206"),
-  o = i("625128"),
-  d = i("335131"),
+  a = i("728345"),
+  r = i("812206"),
+  d = i("625128"),
+  o = i("335131"),
   u = i("669079"),
   c = i("981631"),
-  _ = i("474936");
-async function E(e) {
+  E = i("474936");
+async function _(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   l.default.dispatch({
@@ -19,14 +19,14 @@ async function E(e) {
   });
   try {
     let s = await (0, u.resolveGiftCode)(e, t, i);
-    if (null != s.application_id && s.application_id !== _.PREMIUM_SUBSCRIPTION_APPLICATION) {
-      let e = a.default.getApplication(s.application_id);
+    if (null != s.application_id && s.application_id !== E.PREMIUM_SUBSCRIPTION_APPLICATION) {
+      let e = r.default.getApplication(s.application_id);
       if (null == e) try {
-        await r.default.fetchApplication(s.application_id)
+        await a.default.fetchApplication(s.application_id)
       } catch (e) {}
     }
     if (s.application_id === c.COLLECTIBLES_APPLICATION_ID) try {
-      await (0, d.fetchCollectiblesProduct)(s.sku_id)
+      await (0, o.fetchCollectiblesProduct)(s.sku_id)
     } catch (e) {}
     return l.default.dispatch({
       type: "GIFT_CODE_RESOLVE_SUCCESS",
@@ -43,7 +43,7 @@ async function E(e) {
   }
 }
 s = i("775644").default, t.default = {
-  resolveGiftCode: E,
+  resolveGiftCode: _,
   async fetchUserGiftCodesForSKU(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
     l.default.dispatch({
@@ -125,7 +125,7 @@ s = i("775644").default, t.default = {
     }
   },
   openNativeGiftCodeModal(e) {
-    o.default.openNativeAppModal(e, c.RPCCommands.GIFT_CODE_BROWSER)
+    d.default.openNativeAppModal(e, c.RPCCommands.GIFT_CODE_BROWSER)
   },
   ...s
 }

@@ -6,12 +6,12 @@ var r, i = n("735250"),
   l = n.n(a),
   u = n("481060"),
   o = n("37234"),
-  c = n("230711"),
-  d = n("981631"),
+  d = n("230711"),
+  c = n("981631"),
   f = n("689938"),
   p = n("130168");
 
-function E(e, t, n) {
+function _(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -19,7 +19,7 @@ function E(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class h extends(r = s.Component) {
+class E extends(r = s.Component) {
   render() {
     return (0, i.jsxs)("div", {
       className: p.streamerModeEnabled,
@@ -35,11 +35,11 @@ class h extends(r = s.Component) {
     })
   }
   constructor(...e) {
-    super(...e), E(this, "handleClick", () => {
-      !this.props.disableButton && ((0, o.pushLayer)(d.Layers.USER_SETTINGS), c.default.setSection(d.UserSettingsSections.STREAMER_MODE))
+    super(...e), _(this, "handleClick", () => {
+      !this.props.disableButton && ((0, o.pushLayer)(c.Layers.USER_SETTINGS), d.default.setSection(c.UserSettingsSections.STREAMER_MODE))
     })
   }
 }
-E(h, "defaultProps", {
+_(E, "defaultProps", {
   disableButton: !1
-}), t.default = h
+}), t.default = E

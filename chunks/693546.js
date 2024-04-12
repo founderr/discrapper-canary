@@ -39,11 +39,11 @@ let d = async e => {
         }
       }),
       r = e.body.total,
-      f = (null !== (c = e.body.guild_join_requests) && void 0 !== c ? c : []).map(o.joinRequestFromServer);
+      E = (null !== (c = e.body.guild_join_requests) && void 0 !== c ? c : []).map(o.joinRequestFromServer);
     return a.default.dispatch({
       type: "GUILD_JOIN_REQUESTS_FETCH_SUCCESS",
       status: n,
-      requests: f,
+      requests: E,
       total: r,
       limit: d,
       guildId: t
@@ -53,7 +53,7 @@ let d = async e => {
       type: "GUILD_JOIN_REQUESTS_FETCH_FAILURE"
     }), e
   }
-}, f = async e => {
+}, E = async e => {
   try {
     let t = await s.HTTP.del({
       url: u.Endpoints.GUILD_MEMBER_REQUEST_TO_JOIN(e)
@@ -66,7 +66,7 @@ let d = async e => {
   } catch (e) {
     throw e
   }
-}, E = async (e, t) => {
+}, f = async (e, t) => {
   try {
     return await s.HTTP.post({
       url: u.Endpoints.GUILD_JOIN_REQUEST_ACK(e, t)
@@ -94,7 +94,7 @@ let d = async e => {
     status: i.body.application_status,
     request: i.body
   })
-}, m = async (e, t) => {
+}, T = async (e, t) => {
   let n = await s.HTTP.patch({
     url: u.Endpoints.GUILD_JOIN_REQUESTS(e),
     body: {
@@ -106,7 +106,7 @@ let d = async e => {
     guildId: e,
     action: t
   }), n.body
-}, T = async e => {
+}, I = async e => {
   try {
     let {
       body: t
@@ -121,7 +121,7 @@ let d = async e => {
   } catch (e) {
     throw e
   }
-}, I = async () => {
+}, m = async () => {
   let e = await s.HTTP.get({
     url: u.Endpoints.USER_JOIN_REQUEST_GUILDS
   });
@@ -143,12 +143,12 @@ let d = async e => {
 t.default = {
   fetchGuildJoinRequest: d,
   fetchGuildJoinRequests: c,
-  ackUserGuildJoinRequest: E,
-  removeGuildJoinRequest: f,
+  ackUserGuildJoinRequest: f,
+  removeGuildJoinRequest: E,
   updateGuildJoinRequest: _,
-  actionAllPendingJoinRequests: m,
-  resetGuildJoinRequest: T,
-  fetchRequestToJoinGuilds: I,
+  actionAllPendingJoinRequests: T,
+  resetGuildJoinRequest: I,
+  fetchRequestToJoinGuilds: m,
   setSelectedApplicationTab: (e, t) => {
     a.default.dispatch({
       type: "GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB",

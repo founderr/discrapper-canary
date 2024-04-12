@@ -28,7 +28,7 @@ var i = n("735250"),
   D = n("505737"),
   v = n("318661"),
   M = n("484404"),
-  y = n("747074"),
+  y = n("502762"),
   P = n("192133"),
   U = n("240328"),
   b = n("436478"),
@@ -36,8 +36,8 @@ var i = n("735250"),
   w = n("664202"),
   k = n("228168"),
   B = n("981631"),
-  F = n("616922"),
-  V = n("617538");
+  V = n("616922"),
+  F = n("617538");
 
 function x(e) {
   e.stopPropagation()
@@ -58,7 +58,7 @@ function H(e) {
     newAnalyticsLocations: z = []
   } = e, {
     analyticsLocations: X
-  } = (0, f.default)([...z, T.default.PROFILE_POPOUT]), Q = r.useRef(null), q = (0, v.default)(t.id, n), J = (0, d.default)(Q), Z = (0, o.useStateFromStores)([L.default], () => {
+  } = (0, f.default)([...z, T.default.PROFILE_POPOUT]), Q = r.useRef(null), q = (0, v.default)(t.id, n), Z = (0, d.default)(Q), J = (0, o.useStateFromStores)([L.default], () => {
     var e;
     return null === (e = L.default.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
   }), $ = (0, o.useStateFromStores)([N.default], () => null != n ? N.default.getGuild(n) : null), ee = (0, o.useStateFromStores)([m.default], () => null != n ? m.default.getMember(n, t.id) : null), et = t.isNonUserBot(), {
@@ -114,8 +114,8 @@ function H(e) {
           has_guild_member_banner: !!(null == q ? void 0 : q.isUsingGuildMemberBanner()),
           has_guild_member_bio: !!(null == q ? void 0 : q.isUsingGuildMemberBio())
         } : {},
-        u = null != Z ? {
-          other_application_id: null == Z ? void 0 : Z.id,
+        u = null != J ? {
+          other_application_id: null == J ? void 0 : J.id,
           other_application_name: t.toString()
         } : {};
       C.default.track(B.AnalyticEvents.OPEN_POPOUT, {
@@ -130,7 +130,7 @@ function H(e) {
         has_images: !!(null !== (e = null == r ? void 0 : r.large_image) && void 0 !== e ? e : null == r ? void 0 : r.small_image),
         party_max: null != i && null != i.size ? i.size[1] : void 0,
         party_id: null != i ? i.id : void 0,
-        party_platform: null != i && (0, F.isSpotifyParty)(i.id) ? B.PlatformTypes.SPOTIFY : null,
+        party_platform: null != i && (0, V.isSpotifyParty)(i.id) ? B.PlatformTypes.SPOTIFY : null,
         game_platform: (0, E.default)(en),
         profile_user_status: o,
         is_streaming: ea,
@@ -169,7 +169,7 @@ function H(e) {
             user: t,
             guildId: n,
             profileType: k.UserProfileTypes.POPOUT,
-            className: e_.shouldShow ? V.hasCollectiblesUpsell : void 0,
+            className: e_.shouldShow ? F.hasCollectiblesUpsell : void 0,
             showOutOfBoundaryComponents: ec,
             children: [(0, i.jsx)(G.default, {
               user: t,
@@ -181,7 +181,7 @@ function H(e) {
               isStreaming: (0, I.default)(en),
               status: er,
               disableUserProfileLink: W,
-              isHovering: J,
+              isHovering: Z,
               upsell: e_.shouldShow ? (0, i.jsx)(U.default, {
                 user: t,
                 upsellSource: b.UserPopoutUpsellSource.USER_POPOUT,

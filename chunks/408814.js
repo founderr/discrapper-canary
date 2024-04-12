@@ -32,19 +32,19 @@ class h extends(s = a.Component) {
       onBlur: I,
       onKeyPress: _,
       autoComplete: m,
-      forwardedRef: A,
-      closeIconClassName: T,
-      searchIconClassName: E,
-      cta: v
-    } = this.props, S = null != s && s.length > 0, g = null != A ? A : this._textInputRef;
+      forwardedRef: v,
+      closeIconClassName: A,
+      searchIconClassName: T,
+      cta: C
+    } = this.props, g = null != s && s.length > 0, E = null != v ? v : this._textInputRef;
     return (0, i.jsx)(u.FocusRing, {
-      focusTarget: g,
+      focusTarget: E,
       ringTarget: this._containerRef,
       children: (0, i.jsxs)("div", {
         className: r()(f.searchBox, l),
         ref: this._containerRef,
         children: [(0, i.jsx)(u.TextInput, {
-          inputRef: g,
+          inputRef: E,
           focusProps: {
             enabled: !1
           },
@@ -56,25 +56,25 @@ class h extends(s = a.Component) {
           onFocus: h,
           onBlur: I,
           onKeyPress: _,
-          value: S ? s : "",
+          value: g ? s : "",
           placeholder: n,
           autoFocus: e,
           "aria-label": t,
           autoComplete: m ? "on" : "off"
-        }), null != v ? (0, i.jsx)(u.Text, {
+        }), null != C ? (0, i.jsx)(u.Text, {
           color: "text-muted",
           variant: "text-xs/normal",
           className: f.cta,
-          children: v
-        }) : null, S ? (0, i.jsx)(u.Clickable, {
+          children: C
+        }) : null, g ? (0, i.jsx)(u.Clickable, {
           onClick: this.handleClear,
           className: f.clear,
           "aria-label": d.default.Messages.SEARCH_CLEAR,
           children: (0, i.jsx)(o.default, {
-            className: r()(f.clearIcon, T)
+            className: r()(f.clearIcon, A)
           })
         }) : (0, i.jsx)(c.default, {
-          className: r()(f.searchIcon, E),
+          className: r()(f.searchIcon, T),
           "aria-label": d.default.Messages.SEARCH
         })]
       })

@@ -28,21 +28,21 @@ function m(e) {
     (0, i.showToast)((0, i.createToast)(_.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, i.ToastType.FAILURE)), r.default.increment({
       name: l.MetricEvents.SPAM_MESSAGE_REQUEST_ERROR_VIEW
     })
-  }, []), T = s.useCallback(() => {
-    u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
   }, []), p = s.useCallback(() => {
+    u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
+  }, []), T = s.useCallback(() => {
     u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID), S && (0, o.transitionToChannel)(m.id)
   }, [m.id, S]), {
     acceptMessageRequest: g,
     isAcceptLoading: A,
     isUserProfileLoading: N,
-    isOptimisticAccepted: R
+    isOptimisticAccepted: v
   } = (0, f.useMessageRequestActions)({
     user: n,
-    onAcceptSuccess: p,
-    onRejectSuccess: T,
+    onAcceptSuccess: T,
+    onRejectSuccess: p,
     onError: I
-  }), v = A || N, O = v || R;
+  }), R = A || N, O = R || v;
   return (0, a.jsxs)("div", {
     className: C.container,
     children: [(0, a.jsx)(E.default, {
@@ -59,7 +59,7 @@ function m(e) {
           g(m.id), e.stopPropagation()
         },
         disabled: O,
-        submitting: v,
+        submitting: R,
         children: _.default.Messages.MESSAGE_REQUESTS_SPAM_ACCEPT
       }), (0, a.jsx)(h.default, {
         className: C.button,

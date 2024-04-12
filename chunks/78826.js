@@ -29,13 +29,13 @@ function u(e) {
   let {
     children: t,
     sentrySource: n
-  } = e, [u, d] = a.useState(!1), [c, f] = a.useState(new Set), [E, _] = a.useState(!1), m = a.useRef(!1);
+  } = e, [u, d] = a.useState(!1), [c, E] = a.useState(new Set), [f, _] = a.useState(!1), T = a.useRef(!1);
   a.useEffect(() => {
     let e = new Set;
     for (let t of c) !o(t) && e.add(t);
-    e.size !== c.size && f(e)
+    e.size !== c.size && E(e)
   }, [c]);
-  let T = a.useCallback(e => {
+  let I = a.useCallback(e => {
       var t, s, a;
       let {
         assetNode: r,
@@ -49,8 +49,8 @@ function u(e) {
         }
       }), d(!0)
     }, [n]),
-    I = a.useCallback(e => {
-      f(t => {
+    m = a.useCallback(e => {
+      E(t => {
         let n = new Set(t);
         return n.delete(e), n
       })
@@ -58,35 +58,35 @@ function u(e) {
     p = a.useCallback((e, t) => {
       var n;
       if (_(!0), o(e)) return;
-      f(t => {
+      E(t => {
         let n = new Set(t);
         return n.add(e), n
       });
       let s = (n = e, (0, l.isElement)(n, HTMLImageElement) ? "load" : (0, l.isElement)(n, HTMLVideoElement) ? "canplaythrough" : "load");
       e.addEventListener(s, function t() {
-        I(e), e.removeEventListener(s, t)
+        m(e), e.removeEventListener(s, t)
       });
       e.addEventListener("error", function n(s) {
-        I(e), T({
+        m(e), I({
           assetNode: e,
           nodeId: t,
           errorPrefix: "Error loading asset",
           errorMessage: "message" in s ? s.message : null
         }), e.removeEventListener("error", n)
       })
-    }, [T, I]),
-    h = a.useMemo(() => c.size > 0 || !E, [E, c]);
+    }, [I, m]),
+    N = a.useMemo(() => c.size > 0 || !f, [f, c]);
   a.useEffect(() => {
-    !h && (m.current = !0)
-  }, [h]);
-  let N = a.useMemo(() => ({
+    !N && (T.current = !0)
+  }, [N]);
+  let S = a.useMemo(() => ({
     registerAsset: p,
-    unregisterAsset: I,
+    unregisterAsset: m,
     hasError: u,
-    isLoading: h && !m.current
-  }), [p, I, u, h]);
+    isLoading: N && !T.current
+  }), [p, m, u, N]);
   return (0, s.jsx)(r.Provider, {
-    value: N,
+    value: S,
     children: t
   })
 }

@@ -44,8 +44,8 @@ function R(e) {
     onClose: w,
     onSubscribeClick: k,
     onSecondaryClick: B,
-    secondaryCTA: F,
-    subscribeButtonText: V,
+    secondaryCTA: V,
+    subscribeButtonText: F,
     showNewBadge: x = !1,
     enableArtBoxShadow: H = !0,
     subscriptionTier: Y = h.PremiumSubscriptionSKUs.TIER_2,
@@ -53,8 +53,8 @@ function R(e) {
     hideBackButton: W,
     backButtonText: K,
     ...z
-  } = e, X = null != g, Q = (0, T.usePremiumTrialOffer)(), q = (0, I.usePremiumDiscountOffer)(), J = ((null == Q ? void 0 : null === (t = Q.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === Y || (0, I.discountOfferHasTier)(q, Y)) && !X, {
-    analyticsLocations: Z
+  } = e, X = null != g, Q = (0, T.usePremiumTrialOffer)(), q = (0, I.usePremiumDiscountOffer)(), Z = ((null == Q ? void 0 : null === (t = Q.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === Y || (0, I.discountOfferHasTier)(q, Y)) && !X, {
+    analyticsLocations: J
   } = (0, u.default)(l.default.PREMIUM_UPSELL_MODAL), {
     enabled: $,
     variant: ee
@@ -69,12 +69,12 @@ function R(e) {
       guild_id: g.guild.id,
       channel_id: g.channelId,
       location: D,
-      location_stack: Z
+      location_stack: J
     }) : _.default.track(m.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: C,
       source: L,
       location: D,
-      location_stack: Z,
+      location_stack: J,
       sku_id: (0, c.castPremiumSubscriptionAsSkuId)(Y)
     }))
   }, [X, Y, j]);
@@ -101,7 +101,7 @@ function R(e) {
     }) : null, (0, i.jsx)(o.ModalContent, {
       className: O.content,
       children: j ? (0, i.jsx)(o.Spinner, {}) : (0, i.jsx)(i.Fragment, {
-        children: J ? (0, i.jsx)(i.Fragment, {
+        children: Z ? (0, i.jsx)(i.Fragment, {
           children: (0, i.jsx)(f.default, {
             onClose: w,
             type: C,
@@ -137,7 +137,7 @@ function R(e) {
         className: a()(O.primaryActions, {
           [O.enhancedPrimaryActions]: et
         }),
-        children: [null != F ? (0, i.jsx)(o.Button, {
+        children: [null != V ? (0, i.jsx)(o.Button, {
           className: a()(O.secondaryAction, {
             [O.enhancedSecondaryAction]: en
           }),
@@ -145,7 +145,7 @@ function R(e) {
           size: o.Button.Sizes.SMALL,
           color: en ? o.Button.Colors.CUSTOM : o.Button.Colors.PRIMARY,
           look: o.Button.Looks.LINK,
-          children: F
+          children: V
         }) : null, (() => {
           let e;
           if (X) return (0, i.jsx)(d.default, {
@@ -154,7 +154,7 @@ function R(e) {
             onClose: w
           });
           let t = et ? N.default.Messages.PREMIUM_UPSELL_GET_NITRO : void 0;
-          if (J) {
+          if (Z) {
             if (null != Q) {
               var n, r;
               t = (0, c.formatTrialCtaIntervalDuration)({
@@ -177,7 +177,7 @@ function R(e) {
             onClick: () => {
               null == k || k(), w()
             },
-            buttonText: null != V ? V : t
+            buttonText: null != F ? F : t
           })
         })()]
       }), !W && !et && (0, i.jsx)(o.Button, {

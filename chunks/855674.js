@@ -24,7 +24,7 @@ function _(e) {
   } = e;
   I(t)[n.id] = n
 }
-class T extends(r = c.default.Store) {
+class h extends(r = c.default.Store) {
   isFetching(e, t) {
     return null != m[E(e, t)]
   }
@@ -38,12 +38,12 @@ class T extends(r = c.default.Store) {
     return i
   }
 }
-l = "WebhooksStore", (a = "displayName") in(s = T) ? Object.defineProperty(s, a, {
+l = "WebhooksStore", (a = "displayName") in(s = h) ? Object.defineProperty(s, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = l, t.default = new T(d.default, {
+}) : s[a] = l, t.default = new h(d.default, {
   WEBHOOKS_UPDATE: function(e) {
     let {
       guildId: t,

@@ -134,7 +134,7 @@ class m extends(r = o.PureComponent) {
     } = this.props, k = 0;
     S ? null != s && (null != l ? k = s[l] : null != o && (k = s[o])) : k = this.scaleValue(t);
     let B = "".concat(k, "%"),
-      F = null != s && null != r ? s.map((e, t) => {
+      V = null != s && null != r ? s.map((e, t) => {
         let n = r[t],
           i = null != R && R === n,
           s = this.renderMark(n);
@@ -157,7 +157,7 @@ class m extends(r = o.PureComponent) {
           })
         }, t)
       }) : null,
-      V = null != g ? g(t) : "".concat(k.toFixed(0), "%"),
+      F = null != g ? g(t) : "".concat(k.toFixed(0), "%"),
       x = null !== (e = null == D ? void 0 : D(t)) && void 0 !== e ? e : void 0;
     return (0, a.jsx)(E.FocusRing, {
       focusTarget: this.containerRef,
@@ -186,7 +186,7 @@ class m extends(r = o.PureComponent) {
         ref: this.containerRef,
         children: [(0, a.jsx)("div", {
           className: f.track,
-          children: F
+          children: V
         }), (0, a.jsx)("div", {
           className: u()(f.bar, v),
           style: m,
@@ -202,7 +202,7 @@ class m extends(r = o.PureComponent) {
           children: (0, a.jsx)(I.Tooltip, {
             color: I.Tooltip.Colors.GREY,
             hideOnClick: !1,
-            text: p || S ? null : V,
+            text: p || S ? null : F,
             forceOpen: n || i && T.default.keyboardModeEnabled,
             children: e => (0, a.jsx)("div", {
               ...e,

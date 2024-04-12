@@ -120,7 +120,7 @@ function k(e) {
 
 function B(e) {
   let t = c.default.getChannel(e.channelId);
-  if (null == t) F();
+  if (null == t) V();
   else {
     let {
       guild_id: e,
@@ -154,7 +154,7 @@ function B(e) {
   }
 }
 
-function F() {
+function V() {
   for (let e in O = {}, C = {}, N)
     for (let t in N[e])
       for (let n in N[e][t]) {
@@ -175,7 +175,7 @@ function F() {
   P()
 }
 
-function V() {
+function F() {
   let e = L;
   if ((L = T.default.getChannelId()) === e) return !1;
   U(e), U(L)
@@ -243,18 +243,18 @@ function z(e, t, n, i) {
 let X = {},
   Q = {},
   q = {},
-  J = {},
-  Z = {};
+  Z = {},
+  J = {};
 class $ extends(i = u.default.Store) {
   initialize() {
-    this.waitFor(S.default, c.default, A.default, I.default), this.syncWith([T.default], V)
+    this.waitFor(S.default, c.default, A.default, I.default), this.syncWith([T.default], F)
   }
   hasActiveJoinedUnreadThreads(e, t) {
     return e in O && t in O[e]
   }
   getActiveUnjoinedThreadsForParent(e, t) {
     var n;
-    return e in p && null !== (n = p[e][t]) && void 0 !== n ? n : J
+    return e in p && null !== (n = p[e][t]) && void 0 !== n ? n : Z
   }
   getActiveJoinedThreadsForParent(e, t) {
     var n;
@@ -294,7 +294,7 @@ class $ extends(i = u.default.Store) {
   }
   getNewThreadCountsForGuild(e) {
     var t;
-    return null !== (t = g[e]) && void 0 !== t ? t : Z
+    return null !== (t = g[e]) && void 0 !== t ? t : J
   }
   computeAllActiveJoinedThreads(e) {
     let t = [];
@@ -384,14 +384,14 @@ a = "ActiveJoinedThreadsStore", (s = "displayName") in(r = $) ? Object.definePro
   CHANNEL_ACK: B,
   CHANNEL_LOCAL_ACK: B,
   CHANNEL_SELECT: function(e) {
-    B(e), V()
+    B(e), F()
   },
   PASSIVE_UPDATE_V1: function(e) {
-    null != e.channels && F()
+    null != e.channels && V()
   },
-  WINDOW_FOCUS: F,
-  UPDATE_CHANNEL_DIMENSIONS: F,
-  DRAWER_OPEN: F,
-  DRAWER_CLOSE: F,
-  BULK_ACK: F
+  WINDOW_FOCUS: V,
+  UPDATE_CHANNEL_DIMENSIONS: V,
+  DRAWER_OPEN: V,
+  DRAWER_CLOSE: V,
+  BULK_ACK: V
 })

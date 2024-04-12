@@ -24,7 +24,7 @@ function S(e, t, n) {
   }) : e[t] = n, e
 }
 let I = c.default.getArticleURL(h.HelpdeskArticles.VERIFICATION_FAQ);
-class T extends(a = l.PureComponent) {
+class p extends(a = l.PureComponent) {
   renderFields() {
     let {
       types: e,
@@ -103,8 +103,8 @@ class T extends(a = l.PureComponent) {
     })
   }
 }
-S(T, "defaultProps", {
+S(p, "defaultProps", {
   types: [h.VerificationTypes.CAPTCHA],
   onCaptchaVerify: h.NOOP,
   onLogout: h.NOOP
-}), t.default = T
+}), t.default = p

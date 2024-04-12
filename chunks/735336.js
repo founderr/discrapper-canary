@@ -40,27 +40,27 @@ var i = n("735250"),
   w = n("888778"),
   k = n("943217"),
   B = n("793397"),
-  F = n("841040"),
-  V = n("228168"),
+  V = n("841040"),
+  F = n("228168"),
   x = n("981631"),
   H = n("474936"),
   Y = n("689938"),
   j = n("350315");
 let W = {
-    [V.UserProfileTypes.POPOUT]: 18,
-    [V.UserProfileTypes.MODAL]: 24,
-    [V.UserProfileTypes.SETTINGS]: 0,
-    [V.UserProfileTypes.PANEL]: 18,
-    [V.UserProfileTypes.POMELO_POPOUT]: 18,
-    [V.UserProfileTypes.CANCEL_MODAL]: 0
+    [F.UserProfileTypes.POPOUT]: 18,
+    [F.UserProfileTypes.MODAL]: 24,
+    [F.UserProfileTypes.SETTINGS]: 0,
+    [F.UserProfileTypes.PANEL]: 18,
+    [F.UserProfileTypes.POMELO_POPOUT]: 18,
+    [F.UserProfileTypes.CANCEL_MODAL]: 0
   },
   K = {
-    [V.UserProfileTypes.MODAL]: x.AnalyticsPages.USER_PROFILE,
-    [V.UserProfileTypes.POPOUT]: x.AnalyticsPages.USER_POPOUT,
-    [V.UserProfileTypes.SETTINGS]: x.AnalyticsPages.USER_POPOUT,
-    [V.UserProfileTypes.PANEL]: x.AnalyticsPages.DM_CHANNEL,
-    [V.UserProfileTypes.POMELO_POPOUT]: x.AnalyticsPages.POMELO_POPOUT,
-    [V.UserProfileTypes.CANCEL_MODAL]: x.AnalyticsPages.USER_POPOUT
+    [F.UserProfileTypes.MODAL]: x.AnalyticsPages.USER_PROFILE,
+    [F.UserProfileTypes.POPOUT]: x.AnalyticsPages.USER_POPOUT,
+    [F.UserProfileTypes.SETTINGS]: x.AnalyticsPages.USER_POPOUT,
+    [F.UserProfileTypes.PANEL]: x.AnalyticsPages.DM_CHANNEL,
+    [F.UserProfileTypes.POMELO_POPOUT]: x.AnalyticsPages.POMELO_POPOUT,
+    [F.UserProfileTypes.CANCEL_MODAL]: x.AnalyticsPages.USER_POPOUT
   };
 
 function z(e) {
@@ -170,8 +170,8 @@ function Q(e) {
     allowEdit: y = !0,
     showPremiumBadgeUpsell: W = !0,
     hasProfileEffect: K = !1
-  } = e, Q = (0, l.useStateFromStores)([N.default], () => N.default.getGuild(L)), q = (0, l.useStateFromStores)([h.default], () => h.default.getId()) === _.id && y, J = U.default.isPremiumAtLeast(null == c ? void 0 : c.premiumType, H.PremiumTypes.TIER_2), {
-    trackUserProfileAction: Z
+  } = e, Q = (0, l.useStateFromStores)([N.default], () => N.default.getGuild(L)), q = (0, l.useStateFromStores)([h.default], () => h.default.getId()) === _.id && y, Z = U.default.isPremiumAtLeast(null == c ? void 0 : c.premiumType, H.PremiumTypes.TIER_2), {
+    trackUserProfileAction: J
   } = (0, b.useUserProfileAnalyticsContext)(), [$, ee] = r.useState(!1), et = (0, l.useStateFromStores)([R.default], () => R.default.isFocused()), en = A.GifAutoPlay.getSetting(), {
     bannerSrc: ei,
     status: er
@@ -192,7 +192,7 @@ function Q(e) {
     }
   });
   return (0, i.jsx)(k.default, {
-    isPremium: J,
+    isPremium: Z,
     hasThemeColors: null !== (s = null == c ? void 0 : c.canEditThemes) && void 0 !== s && s,
     profileType: D,
     hasBanner: null != ei,
@@ -202,7 +202,7 @@ function Q(e) {
         profileType: D,
         user: {
           hasBanner: null != ei,
-          isPremium: J,
+          isPremium: Z,
           hasProfileEffect: K
         }
       }), {
@@ -220,7 +220,7 @@ function Q(e) {
         profileLabel: Y.default.Messages.EDIT_PROFILE,
         icon: "pencil",
         onClick: () => {
-          Z({
+          J({
             action: "EDIT_PROFILE"
           }), null == p || p(), eT()
         }
@@ -231,7 +231,7 @@ function Q(e) {
           let {
             closePopout: t
           } = e;
-          return (0, i.jsx)(F.default, {
+          return (0, i.jsx)(V.default, {
             onClose: t,
             onSelect: p,
             guild: Q
@@ -244,15 +244,15 @@ function Q(e) {
           ...e,
           profileType: D
         })
-      }) : W && null != ei && D !== V.UserProfileTypes.SETTINGS ? (0, i.jsx)(z, {
+      }) : W && null != ei && D !== F.UserProfileTypes.SETTINGS ? (0, i.jsx)(z, {
         type: D,
         shown: void 0 === v ? $ : v,
         onClick: () => {
-          Z({
+          J({
             action: "PRESS_PREMIUM_UPSELL"
           }), null == p || p()
         }
-      }) : null, eI ? D !== V.UserProfileTypes.MODAL ? null : (0, i.jsx)(d.Clickable, {
+      }) : null, eI ? D !== F.UserProfileTypes.MODAL ? null : (0, i.jsx)(d.Clickable, {
         onClick: p,
         "aria-label": Y.default.Messages.BACK,
         className: j.pencilContainer,

@@ -18,9 +18,9 @@ var s = n("481060"),
   m = n("747071"),
   S = n("49230"),
   I = n("981631"),
-  T = n("65154");
+  p = n("65154");
 
-function p(e, t, n) {
+function T(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -37,13 +37,13 @@ class g extends f.default {
   }
   constructor(...e) {
     var t;
-    super(...e), t = this, p(this, "playingSoundsWeb", new Map), p(this, "_stopAndClearSounds", () => {
-      u.default.supports(T.Features.SAMPLE_PLAYBACK) && u.default.getMediaEngine().eachConnection(e => {
+    super(...e), t = this, T(this, "playingSoundsWeb", new Map), T(this, "_stopAndClearSounds", () => {
+      u.default.supports(p.Features.SAMPLE_PLAYBACK) && u.default.getMediaEngine().eachConnection(e => {
         e.stopAllSamplesLocalPlayback()
       }), this.playingSoundsWeb.forEach(e => {
         e.pause(), e.src = ""
       }), this.playingSoundsWeb = new Map
-    }), p(this, "_playSound", async function(e) {
+    }), T(this, "_playSound", async function(e) {
       let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         a = arguments.length > 2 ? arguments[2] : void 0,
         s = arguments.length > 3 ? arguments[3] : void 0,
@@ -55,13 +55,13 @@ class g extends f.default {
           soundVolume: (0, m.default)(n),
           reportSoundStartedPlaying: () => (0, E.reportSoundStartedPlaying)(e, a)
         };
-        u.default.supports(T.Features.SAMPLE_PLAYBACK) ? await (0, S.playDesktopSound)(s) : await (0, S.playWebSound)(s, t.playingSoundsWeb)
+        u.default.supports(p.Features.SAMPLE_PLAYBACK) ? await (0, S.playDesktopSound)(s) : await (0, S.playWebSound)(s, t.playingSoundsWeb)
       } finally {
         (0, E.reportSoundFinishedPlaying)(e, a)
       }
-    }), p(this, "_handleOverlaySoundboardSoundsFetchRequest", () => {
+    }), T(this, "_handleOverlaySoundboardSoundsFetchRequest", () => {
       (0, E.maybeFetchSoundboardSounds)()
-    }), p(this, "_handleOpenEducationModal", (e, t) => {
+    }), T(this, "_handleOpenEducationModal", (e, t) => {
       if (null == e) return;
       let l = o.default.getChannel(t),
         u = c.default.getKeybindForAction(I.GlobalKeybindActions.SOUNDBOARD_HOLD);

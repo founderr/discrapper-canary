@@ -37,22 +37,22 @@ function C(e) {
   if (null == S) return null;
   let I = (0, l.getAvatarSpecs)(C),
     {
-      name: T,
-      rarity: p
+      name: p,
+      rarity: T
     } = S,
     {
       color: g
-    } = (0, c.getAchievementStyles)(p),
+    } = (0, c.getAchievementStyles)(T),
     A = (0, s.isThemeDark)(m) ? h : _,
     N = (I.size - I.offset - 2 * I.stroke) * .8,
-    R = I.size - I.stroke,
-    v = {
+    v = I.size - I.stroke,
+    R = {
       width: .4 * N,
       height: .4 * N
     },
     O = {
-      width: v.width + 1,
-      height: v.height + 1,
+      width: R.width + 1,
+      height: R.height + 1,
       right: I.stroke + 1,
       bottom: I.stroke + 1,
       padding: 0
@@ -60,11 +60,11 @@ function C(e) {
   return (0, a.jsxs)("div", {
     className: E.container,
     style: {
-      width: R,
-      height: R,
+      width: v,
+      height: v,
       padding: I.stroke
     },
-    "aria-label": "".concat(null !== (t = T()) && void 0 !== t ? t : ""),
+    "aria-label": "".concat(null !== (t = p()) && void 0 !== t ? t : ""),
     children: [(0, a.jsx)("div", {
       className: E.trophyIconContainer,
       children: (0, a.jsx)(d.default, {
@@ -77,14 +77,14 @@ function C(e) {
       style: O,
       children: (0, a.jsx)(u.default, {
         color: (0, r.getColor)(A.locked),
-        ...v
+        ...R
       })
-    }), f && p === c.PoggermodeAchievementRarity.LEGENDARY && (0, a.jsx)("div", {
+    }), f && T === c.PoggermodeAchievementRarity.LEGENDARY && (0, a.jsx)("div", {
       className: E.lockContainer,
       style: O,
       children: (0, a.jsx)(o.default, {
         className: E.confettiIcon,
-        ...v
+        ...R
       })
     })]
   })

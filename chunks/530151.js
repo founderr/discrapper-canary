@@ -17,19 +17,19 @@ var a = n("735250"),
   m = n("730749"),
   S = n("112724"),
   I = n("812206"),
-  T = n("44315"),
-  p = n("210887"),
+  p = n("44315"),
+  T = n("210887"),
   g = n("283595"),
   A = n("417363"),
   N = n("941128"),
-  R = n("451478"),
-  v = n("285952"),
+  v = n("451478"),
+  R = n("285952"),
   O = n("366695"),
   L = n("366966"),
   M = n("151011"),
   P = n("774832"),
-  y = n("465670"),
-  x = n("786048"),
+  x = n("465670"),
+  y = n("786048"),
   D = n("897353"),
   b = n("424218"),
   U = n("780570"),
@@ -274,13 +274,13 @@ class Z extends s.PureComponent {
       foregroundGradientColor: s,
       message: l
     } = e;
-    return (0, a.jsxs)(v.default, {
-      direction: v.default.Direction.VERTICAL,
+    return (0, a.jsxs)(R.default, {
+      direction: R.default.Direction.VERTICAL,
       children: [(0, a.jsx)(f.Progress, {
         percent: t,
         size: f.Progress.Sizes.SMALL,
-        foregroundColor: (0, T.getColor)(n),
-        foregroundGradientColor: null != s ? [(0, T.getColor)(s[0]), (0, T.getColor)(s[1])] : void 0,
+        foregroundColor: (0, p.getColor)(n),
+        foregroundGradientColor: null != s ? [(0, p.getColor)(s[0]), (0, p.getColor)(s[1])] : void 0,
         animate: this.isFocused
       }), (0, a.jsx)("div", {
         className: F.progressCellText,
@@ -293,8 +293,8 @@ class Z extends s.PureComponent {
       percents: t,
       message: n
     } = e;
-    return (0, a.jsxs)(v.default, {
-      direction: v.default.Direction.VERTICAL,
+    return (0, a.jsxs)(R.default, {
+      direction: R.default.Direction.VERTICAL,
       children: [(0, a.jsx)(f.StackedProgress, {
         percents: t,
         size: f.Progress.Sizes.SMALL,
@@ -474,7 +474,7 @@ let X = () => (0, a.jsx)(Y, {
     onClick: () => _.resume()
   }),
   J = () => (0, a.jsx)(Y, {
-    icon: x.default,
+    icon: y.default,
     tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_PAUSE,
     onClick: () => _.pause()
   }),
@@ -493,7 +493,7 @@ let X = () => (0, a.jsx)(Y, {
       item: t
     } = e;
     return (0, a.jsx)(Y, {
-      icon: y.default,
+      icon: x.default,
       tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_REMOVE,
       onClick: () => _.cancel(t.applicationId, t.branchId)
     })
@@ -501,8 +501,8 @@ let X = () => (0, a.jsx)(Y, {
   et = [{
     key: Q.NAME,
     cellClassName: F.nameCell,
-    render: e => (0, a.jsxs)(v.default, {
-      align: v.default.Align.CENTER,
+    render: e => (0, a.jsxs)(R.default, {
+      align: R.default.Align.CENTER,
       children: [(0, a.jsx)(O.default, {
         game: e.application,
         className: F.__invalid_gameIcon,
@@ -539,8 +539,8 @@ let X = () => (0, a.jsx)(Y, {
         item: e
       })) : s = (0, a.jsx)(ee, {
         item: e
-      }), (0, a.jsxs)(v.default, {
-        justify: v.default.Justify.END,
+      }), (0, a.jsxs)(R.default, {
+        justify: R.default.Justify.END,
         children: [n, s]
       })
     }
@@ -649,12 +649,12 @@ function ea(e, t, n, a) {
     }), e
   }, [])
 }
-t.default = (0, S.default)(u.default.connectStores([I.default, A.default, N.default, p.default, R.default], () => {
+t.default = (0, S.default)(u.default.connectStores([I.default, A.default, N.default, T.default, v.default], () => {
   let e = ea(N.default.activeItems, !1, I.default, A.default);
   return {
     applications: [...e, ...ea(N.default.finishedItems, !0, I.default, A.default)],
     paused: N.default.paused,
-    isFocused: R.default.isFocused(),
-    theme: p.default.theme
+    isFocused: v.default.isFocused(),
+    theme: T.default.theme
   }
 })((0, m.default)(en)))

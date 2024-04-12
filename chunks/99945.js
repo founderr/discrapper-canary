@@ -1,7 +1,7 @@
 "use strict";
-var s, n;
-r.r(t), r.d(t, {
+var r, a;
+n.r(t), n.d(t, {
   PauseDuration: function() {
-    return s
+    return r
   }
-}), (n = s || (s = {}))[n.ONE_MONTH = 30] = "ONE_MONTH", n[n.TWO_MONTHS = 60] = "TWO_MONTHS", n[n.THREE_MONTHS = 90] = "THREE_MONTHS"
+}), (a = r || (r = {}))[a.ONE_MONTH = 30] = "ONE_MONTH", a[a.TWO_MONTHS = 60] = "TWO_MONTHS", a[a.THREE_MONTHS = 90] = "THREE_MONTHS"

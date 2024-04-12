@@ -1,40 +1,40 @@
 "use strict";
-r.r(t), r.d(t, {
+i.r(t), i.d(t, {
   formatPomeloForEditing: function() {
-    return A
+    return C
   },
   formatUsernameLiveCheckValidation: function() {
-    return p
-  },
-  getDefaultPomelo: function() {
-    return L
-  },
-  getLocalizedForcedUUDate: function() {
     return I
   },
+  getDefaultPomelo: function() {
+    return _
+  },
+  getLocalizedForcedUUDate: function() {
+    return g
+  },
   getMemberSince: function() {
-    return E
+    return S
   },
   getUserAvatarURLForPomelo: function() {
-    return f
+    return E
   },
   shouldSkipToEditUsername: function() {
-    return g
+    return p
   }
-}), r("757143"), r("47120"), r("627341");
-var n = r("913527"),
-  a = r.n(n),
-  i = r("278074"),
-  s = r("768581"),
-  o = r("709054"),
-  l = r("624138"),
-  c = r("219496"),
-  u = r("801461"),
-  d = r("689938");
+}), i("757143"), i("47120"), i("627341");
+var s = i("913527"),
+  n = i.n(s),
+  l = i("278074"),
+  a = i("768581"),
+  r = i("709054"),
+  d = i("624138"),
+  o = i("219496"),
+  u = i("801461"),
+  c = i("689938");
 
-function f(e) {
+function E(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-  return s.default.getUserAvatarURL({
+  return a.default.getUserAvatarURL({
     id: e.id,
     avatar: e.avatar,
     bot: e.bot,
@@ -42,74 +42,74 @@ function f(e) {
   }, t, 80)
 }
 
-function L(e) {
-  let t = (0, l.stripDiacritics)(e.username).replace(u.dirtyChars, "").replace(u.coalescePeriods, ".").toLowerCase();
+function _(e) {
+  let t = (0, d.stripDiacritics)(e.username).replace(u.dirtyChars, "").replace(u.coalescePeriods, ".").toLowerCase();
   return "".concat(t).concat(e.discriminator).substring(0, 32)
 }
-let R = ["@", "#", ":"],
-  m = ["```", "discord", "hypesquad", "system message", "system mesage", "sustem message", "sustem mesage", "clyde"],
-  h = ["discordtag", "everyone", "here", "discord nitro", "discord", "snowsgiving"];
+let f = ["@", "#", ":"],
+  h = ["```", "discord", "hypesquad", "system message", "system mesage", "sustem message", "sustem mesage", "clyde"],
+  m = ["discordtag", "everyone", "here", "discord nitro", "discord", "snowsgiving"];
 
-function g(e) {
-  var t, r;
-  let n = e.username.toLowerCase();
-  if ((t = n, r = u.CONTROL_CHARACTERS_CODE, t.split("").filter(e => !r.includes(e.charCodeAt(0))).join("")).length < 2) return !0;
-  for (let e of R)
-    if (n.includes(e)) return !0;
-  for (let e of h)
-    if (n === e.toLowerCase()) return !0;
+function p(e) {
+  var t, i;
+  let s = e.username.toLowerCase();
+  if ((t = s, i = u.CONTROL_CHARACTERS_CODE, t.split("").filter(e => !i.includes(e.charCodeAt(0))).join("")).length < 2) return !0;
+  for (let e of f)
+    if (s.includes(e)) return !0;
   for (let e of m)
-    if (n.includes(e.toLowerCase())) return !0;
+    if (s === e.toLowerCase()) return !0;
+  for (let e of h)
+    if (s.includes(e.toLowerCase())) return !0;
   return !1
 }
 
-function A(e) {
+function C(e) {
   return e.toLowerCase().replace(/\s/g, "").replace("@", "")
 }
 
-function E(e) {
-  let t = o.default.extractTimestamp(e);
+function S(e) {
+  let t = r.default.extractTimestamp(e);
   try {
-    return a()(new Date(t)).format("MMM DD, YYYY")
+    return n()(new Date(t)).format("MMM DD, YYYY")
   } catch (e) {}
   return null
 }
 
-function p(e) {
-  return (0, i.match)(e).with({
+function I(e) {
+  return (0, l.match)(e).with({
     rateLimited: !0
   }, () => ({
-    type: c.NameValidationState.RATE_LIMIT,
-    message: d.default.Messages.APPLICATION_STORE_LISTING_PURCHASE_RATE_LIMIT_ERROR_SHORT
+    type: o.NameValidationState.RATE_LIMIT,
+    message: c.default.Messages.APPLICATION_STORE_LISTING_PURCHASE_RATE_LIMIT_ERROR_SHORT
   })).with({
-    error: i.P.not(i.P.nullish)
+    error: l.P.not(l.P.nullish)
   }, e => {
     let {
       error: t
     } = e;
     return {
-      type: c.NameValidationState.ERROR,
+      type: o.NameValidationState.ERROR,
       message: t
     }
   }).with({
     taken: !1
   }, () => ({
-    type: c.NameValidationState.AVAILABLE,
-    message: d.default.Messages.POMELO_EXISTING_FLOW_AVAILABLE
+    type: o.NameValidationState.AVAILABLE,
+    message: c.default.Messages.POMELO_EXISTING_FLOW_AVAILABLE
   })).with({
     taken: !0
   }, () => ({
-    type: c.NameValidationState.ERROR,
-    message: d.default.Messages.POMELO_EXISTING_FLOW_ERROR_UNAVAILABLE
+    type: o.NameValidationState.ERROR,
+    message: c.default.Messages.POMELO_EXISTING_FLOW_ERROR_UNAVAILABLE
   })).with({
-    error: i.P.nullish
+    error: l.P.nullish
   }, () => ({
-    type: c.NameValidationState.INTERNAL_ERROR,
+    type: o.NameValidationState.INTERNAL_ERROR,
     message: ""
   })).otherwise(() => void 0)
 }
 
-function I(e) {
+function g(e) {
   return new Date(2024, 2, 4).toLocaleDateString(e, {
     month: "long",
     day: "numeric",

@@ -17,7 +17,7 @@ var a = n("735250"),
   m = n("308083"),
   S = n("689938"),
   I = n("653196");
-let T = e => {
+let p = e => {
   if (1 === e.length) return e[0];
   if (2 === e.length) return S.default.Messages.CLAN_OVERVIEW_LIST_TWO_ITEMS.format({
     item1: e[0],
@@ -38,22 +38,22 @@ t.default = e => {
     guildId: n,
     signed: l,
     setSigned: r,
-    animatedTextStyle: p,
+    animatedTextStyle: T,
     signRef: g
   } = e, A = (0, d.useStateFromStores)([f.default], () => {
     var e, t;
     return null !== (t = null === (e = f.default.getGuild(n)) || void 0 === e ? void 0 : e.name) && void 0 !== t ? t : ""
   }), {
     selectedGames: N,
-    playstyle: R,
-    interests: v,
+    playstyle: v,
+    interests: R,
     primetime: O
   } = (0, d.useStateFromStoresObject)([_.default], () => {
     var e;
     return null !== (e = _.default.getStateForGuild(n).progress) && void 0 !== e ? e : {}
-  }), L = s.useMemo(() => (null == N ? void 0 : N.size) > 0 ? T(Array.from(N.values()).map(e => e.name)) : null, [N]), M = s.useMemo(() => (0, m.getPlaystyleTitle)(R), [R]), P = s.useMemo(() => (null == v ? void 0 : v.size) > 0 ? T(Array.from(v)) : null, [v]), y = s.useMemo(() => {
+  }), L = s.useMemo(() => (null == N ? void 0 : N.size) > 0 ? p(Array.from(N.values()).map(e => e.name)) : null, [N]), M = s.useMemo(() => (0, m.getPlaystyleTitle)(v), [v]), P = s.useMemo(() => (null == R ? void 0 : R.size) > 0 ? p(Array.from(R)) : null, [R]), x = s.useMemo(() => {
     let e = (null == O ? void 0 : O.length) > 0 ? O.map(e => (0, C.primetimeToString)(e)).filter(h.isNotNullish) : [];
-    return (null == e ? void 0 : e.length) > 0 ? T(e) : null
+    return (null == e ? void 0 : e.length) > 0 ? p(e) : null
   }, [O]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
@@ -67,7 +67,7 @@ t.default = e => {
       className: I.overviewSidebarWrapper,
       children: (0, a.jsx)(u.animated.div, {
         className: I.flex,
-        style: p,
+        style: T,
         children: (0, a.jsxs)(c.ScrollerNone, {
           fade: !0,
           className: I.overviewSidebarContent,
@@ -112,12 +112,12 @@ t.default = e => {
             children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_TRAITS.format({
               traits: P
             })
-          }) : null, null != y ? (0, a.jsx)(c.Text, {
+          }) : null, null != x ? (0, a.jsx)(c.Text, {
             variant: "text-sm/normal",
             color: "text-muted",
             className: I.overviewText,
             children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMETIME.format({
-              selectedTimes: y
+              selectedTimes: x
             })
           }) : null, (0, a.jsx)(c.Text, {
             variant: "text-sm/normal",

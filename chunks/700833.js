@@ -27,14 +27,14 @@ function p(e) {
     index: m,
     isDragEnabled: I,
     submittedGuildJoinRequestsCount: _,
-    removeFormField: T,
-    updateFormField: h,
+    removeFormField: h,
+    updateFormField: T,
     updateFormFieldOrder: g,
     canRemove: C
   } = e, x = async () => {
-    await T(m)
+    await h(m)
   }, v = async e => {
-    await h(m, e)
+    await T(m, e)
   }, N = async (e, t, n) => {
     await g(e, t, n)
   }, R = (0, r.uniqueId)(), A = t === m, S = {

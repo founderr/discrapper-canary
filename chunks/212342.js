@@ -5,27 +5,27 @@ var s, a, l, i, r = n("442837"),
   u = n("570140"),
   d = n("314897"),
   c = n("592125"),
-  f = n("496675"),
-  E = n("594174"),
+  E = n("496675"),
+  f = n("594174"),
   _ = n("630388"),
-  m = n("981631");
-let T = "ChannelFollowingBumpChannels",
-  I = new Set,
+  T = n("981631");
+let I = "ChannelFollowingBumpChannels",
+  m = new Set,
   p = new Set;
-class h extends(s = r.default.Store) {
+class N extends(s = r.default.Store) {
   initialize() {
-    this.waitFor(d.default), I = new Set(o.Storage.get(T))
+    this.waitFor(d.default), m = new Set(o.Storage.get(I))
   }
   shouldShowBump(e) {
     return p.has(e)
   }
 }
-i = "ChannelFollowingPublishBumpStore", (l = "displayName") in(a = h) ? Object.defineProperty(a, l, {
+i = "ChannelFollowingPublishBumpStore", (l = "displayName") in(a = N) ? Object.defineProperty(a, l, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = i, t.default = new h(u.default, {
+}) : a[l] = i, t.default = new N(u.default, {
   MESSAGE_CREATE: function(e) {
     var t;
     let {
@@ -33,17 +33,17 @@ i = "ChannelFollowingPublishBumpStore", (l = "displayName") in(a = h) ? Object.d
       message: s,
       optimistic: a
     } = e;
-    if (a || I.has(n)) return !1;
+    if (a || m.has(n)) return !1;
     let l = c.default.getChannel(n),
-      i = E.default.getCurrentUser();
-    if (!(null != l && l.type === m.ChannelTypes.GUILD_ANNOUNCEMENT && s.type === m.MessageTypes.DEFAULT && (null != i && (null === (t = s.author) || void 0 === t ? void 0 : t.id) === i.id ? f.default.can(m.Permissions.SEND_MESSAGES, l) : f.default.can(m.Permissions.MANAGE_MESSAGES, l)) && !_.hasFlag(Number(s.flags), m.MessageFlags.CROSSPOSTED))) return !1;
+      i = f.default.getCurrentUser();
+    if (!(null != l && l.type === T.ChannelTypes.GUILD_ANNOUNCEMENT && s.type === T.MessageTypes.DEFAULT && (null != i && (null === (t = s.author) || void 0 === t ? void 0 : t.id) === i.id ? E.default.can(T.Permissions.SEND_MESSAGES, l) : E.default.can(T.Permissions.MANAGE_MESSAGES, l)) && !_.hasFlag(Number(s.flags), T.MessageFlags.CROSSPOSTED))) return !1;
     p.add(s.id)
   },
   MESSAGE_UPDATE: function(e) {
     let {
       message: t
     } = e;
-    p.has(t.id) && _.hasFlag(Number(t.flags), m.MessageFlags.CROSSPOSTED) && p.delete(t.id)
+    p.has(t.id) && _.hasFlag(Number(t.flags), T.MessageFlags.CROSSPOSTED) && p.delete(t.id)
   },
   CHANNEL_SELECT: function(e) {
     p.clear()
@@ -58,6 +58,6 @@ i = "ChannelFollowingPublishBumpStore", (l = "displayName") in(a = h) ? Object.d
     let {
       channelId: t
     } = e;
-    I.add(t), o.Storage.set(T, I), p.clear()
+    m.add(t), o.Storage.set(I, m), p.clear()
   }
 })

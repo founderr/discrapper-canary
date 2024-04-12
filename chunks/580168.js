@@ -50,12 +50,12 @@ function S(e) {
         b: e.b / 255
       };
     return h.reduce((e, n) => [...e, n, t.r, t.g, t.b], [])
-  }, [n]), I = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, T = !l && r;
+  }, [n]), I = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, p = !l && r;
   s.useEffect(() => {
     var e, t, n, a;
-    r ? T && (null === (a = o.current) || void 0 === a || null === (n = a.animation) || void 0 === n || n.play()) : null === (t = o.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0)
-  }, [T, r]);
-  let p = s.useCallback(() => {
+    r ? p && (null === (a = o.current) || void 0 === a || null === (n = a.animation) || void 0 === n || n.play()) : null === (t = o.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0)
+  }, [p, r]);
+  let T = s.useCallback(() => {
     C(!0)
   }, []);
   return null == S || I ? (0, a.jsx)("div", {
@@ -67,9 +67,9 @@ function S(e) {
     className: E.lottieAnimationBackgroundWrapper,
     children: (0, a.jsx)(c.default, {
       ref: o,
-      onComplete: p,
+      onComplete: T,
       importData: () => m(n.id, S),
-      shouldAnimate: !_ && T,
+      shouldAnimate: !_ && p,
       className: i()(E.lottieAnimation, E.lottieAnimationBackground),
       loop: 0,
       rendererSettings: {

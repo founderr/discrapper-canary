@@ -21,19 +21,19 @@ var a = n("735250"),
   m = n("367907"),
   S = n("770471"),
   I = n("158631"),
-  T = n("143614"),
-  p = n("463119"),
+  p = n("143614"),
+  T = n("463119"),
   g = n("377171"),
   A = n("243778"),
   N = n("922409"),
-  R = n("899740"),
-  v = n("28476"),
+  v = n("899740"),
+  R = n("28476"),
   O = n("880257"),
   L = n("631885"),
   M = n("457396"),
   P = n("51596"),
-  y = n("905423"),
-  x = n("155409"),
+  x = n("905423"),
+  y = n("155409"),
   D = n("210887"),
   b = n("695346"),
   U = n("283595"),
@@ -59,7 +59,7 @@ let ee = e => {
     let {
       selected: t,
       ...n
-    } = e, s = (0, o.useListItem)("friends"), l = (0, d.useStateFromStores)([j.default], () => j.default.getPendingCount()), i = (0, T.default)(), {
+    } = e, s = (0, o.useListItem)("friends"), l = (0, d.useStateFromStores)([j.default], () => j.default.getPendingCount()), i = (0, p.default)(), {
       canViewBroadcasts: r
     } = S.default.useExperiment({
       location: "friends_tab_no_track"
@@ -141,10 +141,10 @@ let ee = e => {
   ea = e => {
     let {
       selected: t
-    } = e, n = (0, R.useMessageRequestsCount)(), s = (0, o.useListItem)("messageRequests"), {
+    } = e, n = (0, v.useMessageRequestsCount)(), s = (0, o.useListItem)("messageRequests"), {
       channelId: l
     } = (0, N.useMessageRequestSidebarState)();
-    if (!(0, v.useShouldShowMessageRequestsRow)()) return null;
+    if (!(0, R.useShouldShowMessageRequestsRow)()) return null;
     let i = null == l ? void 0 : () => h.default.preload(X.ME, l);
     return (0, a.jsx)(q.LinkButton, {
       selected: t,
@@ -235,7 +235,7 @@ let eo = e => {
     homeLink: s,
     storeLink: l,
     premiumTabSelected: o
-  } = e, [d, c] = (0, y.default)(e => {
+  } = e, [d, c] = (0, x.default)(e => {
     let {
       channelId: t,
       path: n
@@ -251,7 +251,7 @@ let eo = e => {
   return (0, a.jsxs)("nav", {
     className: $.privateChannels,
     "aria-label": J.default.Messages.PRIVATE_CHANNELS_A11Y_LABEL,
-    children: [(0, a.jsx)(x.default, {
+    children: [(0, a.jsx)(y.default, {
       tutorialId: "direct-messages",
       position: "right",
       offsetX: -52,
@@ -300,7 +300,7 @@ let eo = e => {
         }
       }, "activities") : null, (0, a.jsx)(ea, {
         selected: null == c ? null != s && s.startsWith(X.Routes.MESSAGE_REQUESTS) : c === X.Routes.MESSAGE_REQUESTS
-      }, "message-requests"), (0, a.jsx)(p.CollectiblesShopButton, {
+      }, "message-requests"), (0, a.jsx)(T.CollectiblesShopButton, {
         selected: c === X.Routes.COLLECTIBLES_SHOP || (null == s ? void 0 : s.startsWith(X.Routes.COLLECTIBLES_SHOP)),
         locationState: {
           analyticsSource: {

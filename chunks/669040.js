@@ -36,8 +36,8 @@ var i = n("735250"),
   w = n("883661"),
   k = n("880949"),
   B = n("784222"),
-  F = n("566083"),
-  V = n("172800"),
+  V = n("566083"),
+  F = n("172800"),
   x = n("149203"),
   H = n("981631"),
   Y = n("957825"),
@@ -48,8 +48,8 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
   X = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_RIGHT),
   Q = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_BOTTOM),
   q = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
-  J = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_SEARCH_RESULTS_PADDING_TOP),
-  Z = (0, U.cssValueToNumber)(E.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_LIST_SECTION_HEADING_HEIGHT),
+  Z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_SEARCH_RESULTS_PADDING_TOP),
+  J = (0, U.cssValueToNumber)(E.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_LIST_SECTION_HEADING_HEIGHT),
   $ = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_SECTION_MARGIN_BOTTOM),
   ee = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_PREMIUM_UPSELL_HEIGHT) + (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_PREMIUM_UPSELL_MARGIN_TOP),
   et = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
@@ -107,7 +107,7 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
     }, []), es = (0, _.useStateFromStores)([R.HotspotStore], () => R.HotspotStore.hasHotspot(R.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), []), ea = r.useMemo(() => l().memoize((e, t) => {
       let n = s[e],
         r = E[t.sectionIndex];
-      return (0, i.jsx)(V.default, {
+      return (0, i.jsx)(F.default, {
         emojiDescriptors: n,
         emojiSize: o,
         surrogateCodePoint: W,
@@ -188,7 +188,7 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
           glowOpacity: P
         }) : et(e) ? (0, i.jsx)("div", {
           className: K.nitroBottomDivider
-        }) : null : (0, i.jsx)(F.default, {
+        }) : null : (0, i.jsx)(V.default, {
           className: K.premiumUpsell
         }, "emoji-picker-inline-upsell")
       }, [E, t, P, U, en, et]),
@@ -200,7 +200,7 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
         var n;
         return e === E.length - 1 || t.has(null === (n = E[e]) || void 0 === n ? void 0 : n.sectionId) || en(e) || et(e) ? 0 : $
       }, [t, E, en, et]),
-      ec = r.useMemo(() => ["" !== d ? J : z, X, Q, q], [d]);
+      ec = r.useMemo(() => ["" !== d ? Z : z, X, Q, q], [d]);
     return {
       listPadding: ec,
       renderRow: ea,
@@ -208,7 +208,7 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       renderSectionHeader: eo,
       renderSectionFooter: eu,
       sectionMarginBottom: e_,
-      sectionHeaderHeight: r.useCallback(e => E[e].type === x.EmojiCategoryTypes.SEARCH_RESULTS ? 0 : Z, [E]),
+      sectionHeaderHeight: r.useCallback(e => E[e].type === x.EmojiCategoryTypes.SEARCH_RESULTS ? 0 : J, [E]),
       sectionFooterHeight: ed
     }
   },
@@ -231,11 +231,11 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       messageId: w,
       isBurstReaction: k,
       listHeaderClassName: B
-    } = e, F = r.useRef(!1), V = h.EmojiPickerStore.useStore(e => e.activeCategoryIndex), x = (0, m.useExpressionPickerStore)(e => e.searchQuery), Y = L.AnimateEmoji.useSetting(), z = (0, _.useStateFromStores)([D.default], () => D.default.getCurrentUser()), X = (0, P.isPremium)(z), {
+    } = e, V = r.useRef(!1), F = h.EmojiPickerStore.useStore(e => e.activeCategoryIndex), x = (0, m.useExpressionPickerStore)(e => e.searchQuery), Y = L.AnimateEmoji.useSetting(), z = (0, _.useStateFromStores)([D.default], () => D.default.getCurrentUser()), X = (0, P.isPremium)(z), {
       location: Q
     } = (0, f.useAnalyticsContext)(), {
       analyticsLocations: q
-    } = (0, A.default)(), [J, Z] = r.useState(0), [$, ee] = r.useState(!1), [et, er] = r.useState(0), es = (0, _.useStateFromStores)([S.default], () => S.default.useReducedMotion), ea = (0, u.useSpring)({
+    } = (0, A.default)(), [Z, J] = r.useState(0), [$, ee] = r.useState(!1), [et, er] = r.useState(0), es = (0, _.useStateFromStores)([S.default], () => S.default.useReducedMotion), ea = (0, u.useSpring)({
       transform: $ ? "translateY(0%)" : "translateY(120%)",
       opacity: $ ? 1 : 0,
       config: {
@@ -269,14 +269,14 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       setCollapsedSections: N,
       getEmojiItemProps: p,
       getEmojiRowProps: R,
-      isScrolling: F,
+      isScrolling: V,
       isUsingKeyboardNavigation: U,
       allowAnimatedEmoji: Y,
       channelGuildId: G,
       messageId: w,
       isBurstReaction: k,
       listHeaderClassName: B,
-      activeSectionIndex: J,
+      activeSectionIndex: Z,
       upsellGlowOpacity: et,
       enableNitroUpsell: el
     }), eS = (0, O.useShowUpsellForScrollPosition)({
@@ -286,11 +286,11 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       setUpsellGlowOpacity: er,
       emojiSectionDescriptors: l
     }), eA = (0, O.useSynchronizedActiveCategoryIndexForScrollPosition)({
-      activeCategoryIndex: V,
-      isScrolling: F,
+      activeCategoryIndex: F,
+      isScrolling: V,
       listRef: s,
       onActiveCategoryIndexChange: e => {
-        Z(e), "" === x && h.EmojiPickerStore.setActiveCategoryIndex(e)
+        J(e), "" === x && h.EmojiPickerStore.setActiveCategoryIndex(e)
       },
       scrollOffset: 0,
       searchQuery: x,
@@ -298,7 +298,7 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
     });
     (0, O.useSynchronizedScrollPositionForActiveCategoryIndex)({
       searchQuery: x,
-      activeCategoryIndex: V,
+      activeCategoryIndex: F,
       listRef: s
     });
     let eh = r.useCallback(e => {

@@ -29,7 +29,7 @@ t.default = e => {
     })
   }, [t, m]), I = () => {
     C(!0)
-  }, T = () => {
+  }, p = () => {
     C(!1)
   };
   return (0, a.jsx)(u.ListNavigatorItem, {
@@ -48,7 +48,7 @@ t.default = e => {
           [E.active]: _
         }),
         onMouseEnter: I,
-        onMouseLeave: T,
+        onMouseLeave: p,
         onClick: S,
         ...e,
         children: n(_)

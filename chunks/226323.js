@@ -21,13 +21,13 @@ var a = n("735250"),
   m = n("103575"),
   S = n("314897"),
   I = n("131951"),
-  T = n("836946"),
-  p = n("381238"),
+  p = n("836946"),
+  T = n("381238"),
   g = n("255439"),
   A = n("729285"),
   N = n("150954"),
-  R = n("51144"),
-  v = n("524484"),
+  v = n("51144"),
+  R = n("524484"),
   O = n("689938"),
   L = n("825292");
 let M = {
@@ -35,7 +35,7 @@ let M = {
   },
   P = {
     serverDeaf: {
-      icon: p.default,
+      icon: T.default,
       colorize: !0,
       getStatus: () => O.default.Messages.SERVER_DEAFENED
     },
@@ -45,7 +45,7 @@ let M = {
       getStatus: () => O.default.Messages.SERVER_MUTED
     },
     deaf: {
-      icon: p.default,
+      icon: T.default,
       colorize: !1,
       getStatus: () => O.default.Messages.VOICE_CHANNEL_DEAFENED
     },
@@ -55,7 +55,7 @@ let M = {
       getStatus: () => O.default.Messages.VOICE_CHANNEL_MUTED
     }
   },
-  y = {
+  x = {
     serverDeaf: {
       icon: o.HeadphonesDenyIcon,
       colorize: !0,
@@ -83,7 +83,7 @@ let M = {
     }
   };
 
-function x(e) {
+function y(e) {
   var t, s;
   let {
     channel: l,
@@ -92,11 +92,11 @@ function x(e) {
     mute: d,
     deaf: c,
     serverMute: S,
-    serverDeaf: T
-  } = e, p = (0, r.useStateFromStores)([I.default], () => I.default.isLocalMute(o.id)), g = (0, h.default)({
+    serverDeaf: p
+  } = e, T = (0, r.useStateFromStores)([I.default], () => I.default.isLocalMute(o.id)), g = (0, h.default)({
     userId: o.id,
     checkSoundSharing: !0
-  }), A = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, N = o.getAvatarURL(l.guild_id, 24), x = null != u ? u : R.default.getName(o), {
+  }), A = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, N = o.getAvatarURL(l.guild_id, 24), y = null != u ? u : v.default.getName(o), {
     icon: D,
     colorize: b,
     getStatus: U
@@ -108,21 +108,21 @@ function x(e) {
       mute: s,
       localMute: l
     } = e, i = (0, f.useRedesignIconContext)().enabled;
-    if (t) return i ? y.serverDeaf : P.serverDeaf;
-    if (n) return i ? y.deaf : P.deaf;
-    if (a) return i ? y.serverMute : P.serverMute;
-    else if (l) return i ? y.localMute : P.mute;
-    else if (s) return i ? y.mute : P.mute
+    if (t) return i ? x.serverDeaf : P.serverDeaf;
+    if (n) return i ? x.deaf : P.deaf;
+    if (a) return i ? x.serverMute : P.serverMute;
+    else if (l) return i ? x.localMute : P.mute;
+    else if (s) return i ? x.mute : P.mute
   }({
-    serverDeaf: T,
+    serverDeaf: p,
     deaf: c,
     serverMute: S,
     mute: d,
-    localMute: p
+    localMute: T
   })) && void 0 !== s ? s : {}, j = null != U ? O.default.Messages.VOICE_PANEL_USER_TOOLTIP.format({
-    userName: x,
+    userName: y,
     status: U()
-  }) : x;
+  }) : y;
 
   function G(e) {
     null != A ? (0, E.openContextMenuLazy)(e, async () => {
@@ -169,7 +169,7 @@ function x(e) {
         onContextMenu: G,
         focusProps: M,
         children: (0, a.jsx)(_.default, {
-          shakeLocation: v.ShakeLocation.VOICE_USER,
+          shakeLocation: R.ShakeLocation.VOICE_USER,
           isShaking: g,
           children: (0, a.jsx)("div", {
             className: i()(L.avatar, {
@@ -199,11 +199,11 @@ function D(e) {
     voiceStates: t,
     channel: n,
     className: l
-  } = e, [o, u] = s.useState(!1), d = o ? N.default : A.default, c = (0, a.jsx)(T.default, {
+  } = e, [o, u] = s.useState(!1), d = o ? N.default : A.default, c = (0, a.jsx)(p.default, {
     className: L.expandButton,
     onClick: () => u(!o),
-    color: T.CircleIconButtonColors.PRIMARY,
-    size: T.CircleIconButtonSizes.SIZE_24,
+    color: p.CircleIconButtonColors.PRIMARY,
+    size: p.CircleIconButtonSizes.SIZE_24,
     tooltip: o ? O.default.Messages.VOICE_PANEL_HIDE_EXTRAS : O.default.Messages.VOICE_PANEL_SHOW_EXTRAS,
     icon: (0, a.jsx)(d, {
       width: 16,
@@ -235,7 +235,7 @@ function D(e) {
           nick: s,
           voiceState: l
         } = e;
-        return t.id !== E ? (0, a.jsx)(x, {
+        return t.id !== E ? (0, a.jsx)(y, {
           channel: n,
           user: t,
           nick: s,

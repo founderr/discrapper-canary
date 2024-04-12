@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   WelcomeCTAContainer: function() {
-    return N
+    return S
   }
 }), n("47120");
 var s = n("735250"),
@@ -13,18 +13,18 @@ var s = n("735250"),
   u = n("665906"),
   d = n("271383"),
   c = n("430824"),
-  f = n("496675"),
-  E = n("594174"),
+  E = n("496675"),
+  f = n("594174"),
   _ = n("838440"),
-  m = n("779139"),
-  T = n("981631"),
-  I = n("689938"),
+  T = n("779139"),
+  I = n("981631"),
+  m = n("689938"),
   p = n("909013");
-let h = e => {
+let N = e => {
     let {
       channel: t,
       message: n
-    } = e, [l, u] = a.useState(!1), d = (0, m.pickWelcomeSticker)(n.id), c = a.useCallback(() => {
+    } = e, [l, u] = a.useState(!1), d = (0, T.pickWelcomeSticker)(n.id), c = a.useCallback(() => {
       (0, _.applyChatRestrictions)({
         type: r.ChatInputTypes.FORM,
         content: "",
@@ -33,7 +33,7 @@ let h = e => {
         let {
           valid: s
         } = e;
-        s && (0, m.handleWelcomeCtaClicked)(t, n, d.id)
+        s && (0, T.handleWelcomeCtaClicked)(t, n, d.id)
       })
     }, [t, n, d]);
     return (0, s.jsx)("div", {
@@ -50,26 +50,26 @@ let h = e => {
           isInteracting: l,
           sticker: d,
           size: 28
-        }), I.default.Messages.WELCOME_CTA_LABEL]
+        }), m.default.Messages.WELCOME_CTA_LABEL]
       })
     })
   },
-  N = e => {
+  S = e => {
     let {
       message: t,
       channel: n
-    } = e, a = n.getGuildId(), i = (0, l.useStateFromStores)([E.default, f.default, c.default, d.default], () => {
+    } = e, a = n.getGuildId(), i = (0, l.useStateFromStores)([f.default, E.default, c.default, d.default], () => {
       var e;
-      let s = E.default.getCurrentUser(),
+      let s = f.default.getCurrentUser(),
         l = (0, u.computeIsReadOnlyThread)(n),
-        i = f.default.can(T.Permissions.SEND_MESSAGES, n),
+        i = E.default.can(I.Permissions.SEND_MESSAGES, n),
         r = null != a && null != s && (null === (e = d.default.getMember(a, s.id)) || void 0 === e ? void 0 : e.isPending),
         o = t.author.bot,
         _ = c.default.getGuild(a),
-        m = null != _ && (_.systemChannelFlags & T.SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
-      return i && !l && !r && !o && m
+        T = null != _ && (_.systemChannelFlags & I.SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
+      return i && !l && !r && !o && T
     });
-    return null != a && i ? (0, s.jsx)(h, {
+    return null != a && i ? (0, s.jsx)(N, {
       message: t,
       channel: n
     }) : null

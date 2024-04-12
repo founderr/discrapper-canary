@@ -1,50 +1,50 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   PaymentModalConfirmStep: function() {
-    return p
+    return f
   }
 });
-var a = n("735250");
-n("470079");
-var r = n("512722"),
-  s = n.n(r),
-  i = n("481060"),
-  l = n("598"),
-  o = n("698708"),
-  u = n("614277"),
-  d = n("689938"),
-  c = n("822439");
+var l = s("735250");
+s("470079");
+var n = s("512722"),
+  a = s.n(n),
+  i = s("481060"),
+  r = s("598"),
+  u = s("698708"),
+  d = s("614277"),
+  o = s("689938"),
+  c = s("822439");
 
-function p(e) {
+function f(e) {
   let {
     handleClose: t
   } = e, {
-    skusById: n,
-    selectedSkuId: r,
-    application: p
-  } = (0, l.usePaymentContext)();
-  s()(null != r, "Expected selectedSkuId"), s()(null != p, "Expected application");
-  let m = n[r];
-  s()(null != m, "Expected sku");
-  let f = d.default.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
-    applicationName: p.name,
-    itemName: m.name
+    skusById: s,
+    selectedSkuId: n,
+    application: f
+  } = (0, r.usePaymentContext)();
+  a()(null != n, "Expected selectedSkuId"), a()(null != f, "Expected application");
+  let S = s[n];
+  a()(null != S, "Expected sku");
+  let E = o.default.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
+    applicationName: f.name,
+    itemName: S.name
   });
-  return (0, a.jsxs)(u.PaymentPortalBody, {
-    children: [(0, a.jsx)(o.default, {}), (0, a.jsxs)("div", {
+  return (0, l.jsxs)(d.PaymentPortalBody, {
+    children: [(0, l.jsx)(u.default, {}), (0, l.jsxs)("div", {
       className: c.confirmation,
-      children: [(0, a.jsx)(i.Heading, {
+      children: [(0, l.jsx)(i.Heading, {
         variant: "heading-xxl/bold",
         className: c.confirmationHeader,
         children: "Success!"
-      }), (0, a.jsx)(i.Text, {
+      }), (0, l.jsx)(i.Text, {
         variant: "text-md/normal",
-        children: f
-      }), (0, a.jsx)("div", {
+        children: E
+      }), (0, l.jsx)("div", {
         className: c.divider
-      }), (0, a.jsx)(i.Button, {
+      }), (0, l.jsx)(i.Button, {
         onClick: t,
-        children: d.default.Messages.CLOSE
+        children: o.default.Messages.CLOSE
       })]
     })]
   })

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return g
   },
   default: function() {
-    return V
+    return F
   },
   findCodedLink: function() {
     return Y
@@ -82,7 +82,7 @@ function B(e) {
   return null !== (r = null !== (i = null !== (n = null !== (t = k(v, e)) && void 0 !== t ? t : k(M, e)) && void 0 !== n ? n : k(y, e)) && void 0 !== i ? i : k(P, e)) && void 0 !== r ? r : k(U, e)
 }
 
-function F(e) {
+function V(e) {
   var t, n, i, r;
   let s = H(e);
   if (null == s || null == s.pathname) return {
@@ -102,7 +102,7 @@ function F(e) {
   }
 }
 
-function V(e) {
+function F(e) {
   if (null == e) return [];
   let t = new Set,
     n = [],
@@ -116,7 +116,7 @@ function V(e) {
       inviteHostRemainingPath: r,
       templateHostRemainingPath: s,
       primaryHostRemainingPath: a
-    } = F(e);
+    } = V(e);
     if (null == i || null == i.pathname) continue;
     let o = (e, i) => {
       !t.has(i) && (t.add(i), n.push({
@@ -173,7 +173,7 @@ function V(e) {
 
 function x(e) {
   var t, n;
-  let i = F(e),
+  let i = V(e),
     r = null == i ? void 0 : null === (t = i.primaryHostRemainingPath) || void 0 === t ? void 0 : t.match(C);
   return null !== (n = null == r ? void 0 : r[1]) && void 0 !== n ? n : null
 }
@@ -187,5 +187,5 @@ function H(e) {
 }
 
 function Y(e) {
-  return V(e)[0]
+  return F(e)[0]
 }

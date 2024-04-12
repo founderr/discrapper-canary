@@ -17,13 +17,13 @@ var a = n("570140"),
   m = n("199902"),
   S = n("131951"),
   I = n("246946"),
-  T = n("808506"),
-  p = n("237997"),
+  p = n("808506"),
+  T = n("237997"),
   g = n("626135"),
   A = n("554174"),
   N = n("981631"),
-  R = n("65154");
-let v = {
+  v = n("65154");
+let R = {
   [N.GlobalKeybindActions.TOGGLE_PRIORITY_SPEAKER]: {
     onTrigger() {},
     keyEvents: {}
@@ -34,7 +34,7 @@ let v = {
   },
   [N.GlobalKeybindActions.PUSH_TO_TALK]: {
     onTrigger(e, t) {
-      S.default.getMode(t.context) === N.InputModes.PUSH_TO_TALK && (v[N.GlobalKeybindActions.PUSH_TO_TALK].isPressed = e, S.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !1), t.context))
+      S.default.getMode(t.context) === N.InputModes.PUSH_TO_TALK && (R[N.GlobalKeybindActions.PUSH_TO_TALK].isPressed = e, S.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !1), t.context))
     },
     keyEvents: {
       keyup: !0,
@@ -44,7 +44,7 @@ let v = {
   },
   [N.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY]: {
     onTrigger(e) {
-      S.default.getMode() === N.InputModes.PUSH_TO_TALK && (v[N.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY].isPressed = e, S.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !0), R.MediaEngineContextTypes.DEFAULT))
+      S.default.getMode() === N.InputModes.PUSH_TO_TALK && (R[N.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY].isPressed = e, S.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !0), v.MediaEngineContextTypes.DEFAULT))
     },
     keyEvents: {
       keyup: !0,
@@ -54,7 +54,7 @@ let v = {
   },
   [N.GlobalKeybindActions.PUSH_TO_MUTE]: {
     onTrigger(e) {
-      if (S.default.getMode() === N.InputModes.VOICE_ACTIVITY) !S.default.isSelfDeaf() && (v[N.GlobalKeybindActions.PUSH_TO_MUTE].isPressed = e, s.default.setTemporarySelfMute(e))
+      if (S.default.getMode() === N.InputModes.VOICE_ACTIVITY) !S.default.isSelfDeaf() && (R[N.GlobalKeybindActions.PUSH_TO_MUTE].isPressed = e, s.default.setTemporarySelfMute(e))
     },
     keyEvents: {
       keyup: !0,
@@ -92,8 +92,8 @@ let v = {
   },
   [N.GlobalKeybindActions.TOGGLE_OVERLAY]: {
     onTrigger() {
-      let e = T.default.enabled;
-      l.default.setEnabled(!e, T.default.legacyEnabled)
+      let e = p.default.enabled;
+      l.default.setEnabled(!e, p.default.legacyEnabled)
     },
     keyEvents: {
       keyup: !0,
@@ -103,7 +103,7 @@ let v = {
   [N.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK]: {
     onTrigger(e) {
       let t = (0, A.default)();
-      null != t && (e ? l.default.setUILocked(!p.default.isUILocked(t), t) : l.default.setInputLocked(!T.default.isInputLocked(t), t))
+      null != t && (e ? l.default.setUILocked(!T.default.isUILocked(t), t) : l.default.setInputLocked(!p.default.isInputLocked(t), t))
     },
     keyEvents: {
       keyup: !0,
@@ -112,9 +112,9 @@ let v = {
   },
   [N.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET]: {
     onTrigger() {
-      let e = T.default.getFocusedPID(),
+      let e = p.default.getFocusedPID(),
         t = null != e;
-      null != e && t && p.default.isPinned(N.OverlayWidgets.TEXT) && T.default.isReady(e) && T.default.isInputLocked(e) && l.default.activateRegion(N.OverlayActiveRegions.TEXT_WIDGET)
+      null != e && t && T.default.isPinned(N.OverlayWidgets.TEXT) && p.default.isReady(e) && p.default.isInputLocked(e) && l.default.activateRegion(N.OverlayActiveRegions.TEXT_WIDGET)
     },
     keyEvents: {
       keyup: !0,
@@ -163,7 +163,7 @@ let v = {
     onTrigger: () => {
       if (!(0, _.canSelectedVoiceChannelUseSoundboard)()) return;
       let e = (0, A.default)();
-      null != e && (p.default.isUILocked(e) ? (0, C.openSoundboardInOverlay)(!0, e) : (0, C.closeSoundboardInOverlay)(e))
+      null != e && (T.default.isUILocked(e) ? (0, C.openSoundboardInOverlay)(!0, e) : (0, C.closeSoundboardInOverlay)(e))
     },
     keyEvents: {
       keyup: !0,
@@ -225,7 +225,7 @@ class O extends u.default {
   _initialize() {
     a.default.wait(() => a.default.dispatch({
       type: "KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS",
-      keybinds: v
+      keybinds: R
     }))
   }
   _terminate() {}

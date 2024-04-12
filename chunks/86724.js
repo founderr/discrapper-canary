@@ -82,12 +82,12 @@ function g(e, t, n, d) {
     w = null,
     k = null,
     B = null,
-    F = null;
+    V = null;
   return e.onChange = () => {
     if (null != t) {
       let s = o.default.getState(t.id),
         u = a.getChangeKeys(t);
-      if (h.EditorUtils.richValue(e) !== G || !h.SelectionUtils.equals(e.selection, w) || s.activeCommand !== k || null == F || u.some((e, t) => F[t] !== e)) {
+      if (h.EditorUtils.richValue(e) !== G || !h.SelectionUtils.equals(e.selection, w) || s.activeCommand !== k || null == V || u.some((e, t) => V[t] !== e)) {
         let o = f.HistoryUtils.withMergedEntry(e, () => {
           var o;
           return function(e) {
@@ -316,7 +316,7 @@ function g(e, t, n, d) {
           let t = f.HistoryUtils.currentEntry(e);
           null != t && (t.commandId = o.commandId), B = o.optionValues
         } else B = null;
-        G = h.EditorUtils.richValue(e), w = e.selection, k = s.activeCommand, F = u
+        G = h.EditorUtils.richValue(e), w = e.selection, k = s.activeCommand, V = u
       }
     }
     N()

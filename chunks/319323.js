@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
 });
 var s = n("735250");
@@ -14,28 +14,28 @@ var a = n("442837"),
   u = n("359610"),
   d = n("696906"),
   c = n("981631"),
-  f = n("689938");
+  E = n("689938");
 
-function E(e) {
+function f(e) {
   let {
     applicationId: t,
     guildId: n
-  } = e, E = (0, i.useApplication)(t), {
+  } = e, f = (0, i.useApplication)(t), {
     listingsLoaded: _
-  } = (0, i.useFetchListingsForApplication)(t, null == E ? void 0 : E.primarySkuId), m = (0, a.useStateFromStores)([r.default], () => r.default.getSubscriptionGroupListingForApplication(t), [t]), T = null != m ? (0, o.getPayableSubscriptionListing)(m) : null, {
-    openModal: I,
+  } = (0, i.useFetchListingsForApplication)(t, null == f ? void 0 : f.primarySkuId), T = (0, a.useStateFromStores)([r.default], () => r.default.getSubscriptionGroupListingForApplication(t), [t]), I = null != T ? (0, o.getPayableSubscriptionListing)(T) : null, {
+    openModal: m,
     canOpenModal: p
   } = (0, d.default)({
-    listing: T,
+    listing: I,
     guildId: n,
-    groupListingId: null == m ? void 0 : m.id,
+    groupListingId: null == T ? void 0 : T.id,
     showBenefitsFirst: !0,
     analyticsLocation: c.AnalyticsLocations.INTERACTION_RESPONSE
   });
   return (0, s.jsx)(u.default, {
     size: l.Button.Sizes.MEDIUM,
-    onClick: () => I(),
+    onClick: () => m(),
     disabled: !p || !_,
-    children: f.default.Messages.INTERACTION_PREMIUM_UPSELL_CTA
+    children: E.default.Messages.INTERACTION_PREMIUM_UPSELL_CTA
   })
 }

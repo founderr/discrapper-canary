@@ -21,19 +21,19 @@ var a = n("735250"),
   m = n("932724"),
   S = n("672339"),
   I = n("898531"),
-  T = n("923973"),
-  p = n("189771"),
+  p = n("923973"),
+  T = n("189771"),
   g = n("560688"),
   A = n("871499"),
   N = n("136995"),
-  R = n("25827"),
-  v = n("131951"),
+  v = n("25827"),
+  R = n("131951"),
   O = n("594174"),
   L = n("451478"),
   M = n("465670"),
   P = n("421600"),
-  y = n("792125"),
-  x = n("358221"),
+  x = n("792125"),
+  y = n("358221"),
   D = n("793865"),
   b = n("981631"),
   U = n("65154"),
@@ -56,7 +56,7 @@ let k = {
 function B(e) {
   let {
     header: t
-  } = e, n = v.default.getCameraComponent(), l = (0, o.useStateFromStores)([v.default], () => v.default.getVideoDeviceId()), i = (0, I.default)();
+  } = e, n = R.default.getCameraComponent(), l = (0, o.useStateFromStores)([R.default], () => R.default.getVideoDeviceId()), i = (0, I.default)();
   return s.useEffect(() => {
     let e = O.default.getCurrentUser();
     if (i && null != e) {
@@ -90,7 +90,7 @@ function V(e) {
   } = e, {
     cameraUnavailable: l,
     enabled: r
-  } = (0, T.default)(), o = (0, p.default)(n);
+  } = (0, p.default)(), o = (0, T.default)(n);
   return (0, a.jsxs)("div", {
     className: G.actions,
     children: [(0, a.jsx)(A.CenterControlButton, {
@@ -117,7 +117,7 @@ function V(e) {
         } = e, {
           isShown: u
         } = t;
-        return (0, a.jsx)(R.default, {
+        return (0, a.jsx)(v.default, {
           join: !0,
           enabled: r,
           color: "green",
@@ -149,9 +149,9 @@ function Y(e) {
     y: n,
     x: l,
     channel: f
-  } = e, [C, m] = s.useState(!1), S = (0, h.getChannelIconURL)(f), I = (0, _.default)(f), [T, p] = (0, o.useStateFromStoresArray)([v.default], () => [v.default.supports(U.Features.VIDEO), Object.keys(v.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([L.default], () => L.default.isFocused()), A = (0, o.useStateFromStores)([x.default], () => x.default.getMode(f.id)), N = s.useCallback(e => {
+  } = e, [C, m] = s.useState(!1), S = (0, h.getChannelIconURL)(f), I = (0, _.default)(f), [p, T] = (0, o.useStateFromStoresArray)([R.default], () => [R.default.supports(U.Features.VIDEO), Object.keys(R.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([L.default], () => L.default.isFocused()), A = (0, o.useStateFromStores)([y.default], () => y.default.getMode(f.id)), N = s.useCallback(e => {
     null != e.top && null != e.left && c.default.move(e.left, e.top)
-  }, []), R = (0, r.useSpring)({
+  }, []), v = (0, r.useSpring)({
     value: C ? 1 : 0,
     config: {
       ...r.config.stiff,
@@ -164,7 +164,7 @@ function Y(e) {
     };
     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
   }, [f]);
-  let O = A === b.ChannelModes.VIDEO && T && p > 0,
+  let O = A === b.ChannelModes.VIDEO && p && T > 0,
     M = (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(P.default, {
         className: G.icon,
@@ -203,12 +203,12 @@ function Y(e) {
       children: (0, a.jsxs)(r.animated.div, {
         className: i()(G.root, w.elevationHigh, {
           [G.previewCamera]: C
-        }, C ? (0, y.getThemeClass)("dark") : null),
+        }, C ? (0, x.getThemeClass)("dark") : null),
         style: {
           ...t,
-          width: R.value.interpolate([0, 1], [D.width, H.width]),
-          minHeight: R.value.interpolate([0, 1], [D.height, H.height]),
-          translateX: R.value.interpolate([0, 1], [0, -1 * Math.abs(H.width - D.width) / 2])
+          width: v.value.interpolate([0, 1], [D.width, H.width]),
+          minHeight: v.value.interpolate([0, 1], [D.height, H.height]),
+          translateX: v.value.interpolate([0, 1], [0, -1 * Math.abs(H.width - D.width) / 2])
         },
         children: [C ? (0, a.jsx)(B, {
           header: M
@@ -218,7 +218,7 @@ function Y(e) {
         }), (0, a.jsx)(V, {
           canVideo: O,
           channel: f,
-          numVideoDevices: p
+          numVideoDevices: T
         }), O && !C ? (0, a.jsx)(u.Button, {
           size: u.Button.Sizes.SMALL,
           fullWidth: !0,

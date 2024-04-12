@@ -29,18 +29,18 @@ function h(e) {
     r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID), _ && (0, i.transitionToChannel)(h.id)
   }, [h.id, _]), {
     acceptMessageRequest: I,
-    rejectMessageRequest: T,
-    isAcceptLoading: p,
+    rejectMessageRequest: p,
+    isAcceptLoading: T,
     isRejectLoading: g,
     isUserProfileLoading: A,
     isOptimisticAccepted: N,
-    isOptimisticRejected: R
+    isOptimisticRejected: v
   } = (0, d.useMessageRequestActions)({
     user: n,
     onAcceptSuccess: S,
     onRejectSuccess: m,
     onError: C
-  }), v = p || g || A || N || R;
+  }), R = T || g || A || N || v;
   return (0, a.jsxs)("div", {
     className: E.container,
     children: [(0, a.jsx)(c.default, {
@@ -54,10 +54,10 @@ function h(e) {
         color: l.ButtonColors.PRIMARY,
         size: l.Button.Sizes.SMALL,
         onClick: e => {
-          e.stopPropagation(), T(h.id)
+          e.stopPropagation(), p(h.id)
         },
-        disabled: v,
-        submitting: g || R,
+        disabled: R,
+        submitting: g || v,
         children: f.default.Messages.MESSAGE_REQUEST_IGNORE
       }), (0, a.jsx)(l.Button, {
         className: E.button,
@@ -66,8 +66,8 @@ function h(e) {
         onClick: e => {
           e.stopPropagation(), I(h.id)
         },
-        disabled: v,
-        submitting: p || A || N,
+        disabled: R,
+        submitting: T || A || N,
         children: f.default.Messages.MESSAGE_REQUEST_ACCEPT
       })]
     })]

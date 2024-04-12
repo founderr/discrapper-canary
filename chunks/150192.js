@@ -18,8 +18,8 @@ function m(e, t) {
 let E = null,
   I = [],
   _ = [],
-  T = {};
-class h extends(i = u.default.Store) {
+  h = {};
+class T extends(i = u.default.Store) {
   getPrimaryCategories() {
     return I
   }
@@ -44,15 +44,15 @@ class h extends(i = u.default.Store) {
     return E
   }
   getCategoryName(e) {
-    return e === f.DISCOVERY_ALL_CATEGORIES_ID ? p.default.Messages.HOME : T[e]
+    return e === f.DISCOVERY_ALL_CATEGORIES_ID ? p.default.Messages.HOME : h[e]
   }
 }
-a = "GuildDiscoveryCategoryStore", (s = "displayName") in(r = h) ? Object.defineProperty(r, s, {
+a = "GuildDiscoveryCategoryStore", (s = "displayName") in(r = T) ? Object.defineProperty(r, s, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new h(c.default, {
+}) : r[s] = a, t.default = new T(c.default, {
   GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function(e) {
     let t, {
         categories: n,
@@ -79,7 +79,7 @@ a = "GuildDiscoveryCategoryStore", (s = "displayName") in(r = h) ? Object.define
           }), s.push({
             categoryId: n,
             name: i
-          }), T[n] = i
+          }), h[n] = i
         }
       }), null != t) {
       let {
@@ -89,7 +89,7 @@ a = "GuildDiscoveryCategoryStore", (s = "displayName") in(r = h) ? Object.define
       r.push({
         categoryId: e,
         name: n
-      }), T[e] = n
+      }), h[e] = n
     }
     E = i, I = r, _ = s
   }

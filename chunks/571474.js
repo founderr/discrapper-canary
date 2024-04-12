@@ -5,24 +5,24 @@ var s, a, l, i, r = n("442837"),
   u = n("70956"),
   d = n("709054"),
   c = n("314897"),
-  f = n("699516");
-let E = 180 * u.default.Millis.DAY,
+  E = n("699516");
+let f = 180 * u.default.Millis.DAY,
   _ = !1;
-class m extends(i = r.default.Store) {
+class T extends(i = r.default.Store) {
   initialize() {
-    this.waitFor(f.default, c.default)
+    this.waitFor(E.default, c.default)
   }
   isEligible() {
     return _
   }
 }
-l = "PremiumPromoStore", (a = "displayName") in(s = m) ? Object.defineProperty(s, a, {
+l = "PremiumPromoStore", (a = "displayName") in(s = T) ? Object.defineProperty(s, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = l, t.default = new m(o.default, {
+}) : s[a] = l, t.default = new T(o.default, {
   CONNECTION_OPEN: function() {
-    return _ !== (_ = f.default.getFriendIDs().length >= 10 && d.default.extractTimestamp(c.default.getId()) < Date.now() - E)
+    return _ !== (_ = E.default.getFriendIDs().length >= 10 && d.default.extractTimestamp(c.default.getId()) < Date.now() - f)
   }
 })

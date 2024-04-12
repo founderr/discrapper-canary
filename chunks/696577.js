@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return p
   }
 });
 var a = n("735250"),
@@ -22,28 +22,28 @@ var a = n("735250"),
   S = n("689938"),
   I = n("220503");
 
-function T(e) {
+function p(e) {
   let {
     user: t,
     type: n,
-    status: T,
-    isFocused: p
+    status: p,
+    isFocused: T
   } = e, g = s.useContext(E.AnalyticsContext), {
     analyticsLocations: A
   } = (0, r.default)(), N = e => {
     e.stopPropagation(), i.default.cancelFriendRequest(t.id, {
       location: "Friends"
     })
-  }, R = e => {
+  }, v = e => {
     e.stopPropagation(), i.default.addRelationship({
       userId: t.id,
       context: {
         location: "Friends"
       }
     })
-  }, v = T === m.StatusTypes.OFFLINE ? m.StatusTypes.UNKNOWN : T, O = n === m.RelationshipTypes.PENDING_INCOMING ? S.default.Messages.INCOMING_FRIEND_REQUEST : S.default.Messages.OUTGOING_FRIEND_REQUEST;
+  }, R = p === m.StatusTypes.OFFLINE ? m.StatusTypes.UNKNOWN : p, O = n === m.RelationshipTypes.PENDING_INCOMING ? S.default.Messages.INCOMING_FRIEND_REQUEST : S.default.Messages.OUTGOING_FRIEND_REQUEST;
   return (0, a.jsx)(_.default, {
-    isFocused: p,
+    isFocused: T,
     user: t,
     onClick: () => (0, o.openUserProfileModal)({
       userId: t.id,
@@ -63,7 +63,7 @@ function T(e) {
           icon: d.default,
           actionType: h.default.ActionTypes.ACCEPT,
           tooltip: S.default.Messages.FRIEND_REQUEST_ACCEPT,
-          onClick: R,
+          onClick: v,
           shouldHighlight: e
         }), (0, a.jsx)(h.default, {
           icon: c.default,
@@ -85,7 +85,7 @@ function T(e) {
           user: t,
           hovered: e,
           showAccountIdentifier: !0,
-          status: v,
+          status: R,
           subText: O,
           className: I.userInfo
         }), (0, a.jsx)("div", {

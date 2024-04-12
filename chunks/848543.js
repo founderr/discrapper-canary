@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return v
   }
 }), n("47120");
 var a = n("735250"),
@@ -21,24 +21,24 @@ var a = n("735250"),
   m = n("459273"),
   S = n("242291"),
   I = n("792165"),
-  T = n("603074"),
-  p = n("981631"),
+  p = n("603074"),
+  T = n("981631"),
   g = n("921944"),
   A = n("689938"),
   N = n("815668");
 
-function R(e) {
+function v(e) {
   let {
     channel: t,
     iconClassName: l,
-    className: R,
-    innerClassName: v,
+    className: v,
+    innerClassName: R,
     ...O
   } = e, {
     mute: L,
     suppress: M
-  } = (0, _.default)(t), P = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), y = L || M || P, [x, D] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
-    isSoundboardButtonDisabled: y
+  } = (0, _.default)(t), P = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), x = L || M || P, [y, D] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
+    isSoundboardButtonDisabled: x
   }), [j, G] = (0, h.useGetDismissibleContent)(U), {
     analyticsLocations: w
   } = (0, E.default)(f.default.SOUNDBOARD_BUTTON);
@@ -62,14 +62,14 @@ function R(e) {
       onMouseLeave: V
     }
   } = (0, u.useSoundboardLottie)(), Y = e => (0, a.jsx)(d.Popout, {
-    shouldShow: x,
+    shouldShow: y,
     position: "top",
     onRequestClose: () => D(!1),
     renderPopout: e => {
       let {
         closePopout: n
       } = e;
-      return (0, a.jsx)(T.default, {
+      return (0, a.jsx)(p.default, {
         guildId: b,
         channel: t,
         onClose: n,
@@ -84,16 +84,16 @@ function R(e) {
       children: (0, a.jsx)(d.Button, {
         ...e,
         ...t,
-        className: i()(R, {
-          [N.buttonActive]: x,
-          [N.disabled]: y
+        className: i()(v, {
+          [N.buttonActive]: y,
+          [N.disabled]: x
         }),
-        wrapperClassName: R,
-        innerClassName: v,
-        disabled: y,
+        wrapperClassName: v,
+        innerClassName: R,
+        disabled: x,
         onClick: () => {
           var t, n;
-          null == n || n(), null != j && j !== o.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && G(g.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), D(!x), H()
+          null == n || n(), null != j && j !== o.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && G(g.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), D(!y), H()
         },
         onMouseEnter: t => {
           var n, a;
@@ -110,15 +110,15 @@ function R(e) {
         children: (0, a.jsx)(F, {
           className: l,
           size: "sm",
-          color: x ? "white" : d.tokens.colors.INTERACTIVE_ACTIVE
+          color: y ? "white" : d.tokens.colors.INTERACTIVE_ACTIVE
         })
       })
     })
   }), W = s.useCallback(() => {
-    !y && D(!x)
-  }, [y, x]);
+    !x && D(!y)
+  }, [x, y]);
   return (0, m.useComponentAction)({
-    event: p.ComponentActions.TOGGLE_SOUNDBOARD,
+    event: T.ComponentActions.TOGGLE_SOUNDBOARD,
     handler: W
   }), (0, a.jsx)(E.AnalyticsLocationProvider, {
     value: w,

@@ -16,14 +16,14 @@ var a = s("735250"),
   f = s("221292"),
   S = s("895618"),
   E = s("58307"),
-  I = s("981631"),
-  m = s("970903"),
+  m = s("981631"),
+  I = s("970903"),
   T = s("521170");
 
 function p(e) {
   let {
     user: t
-  } = e, s = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), p = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), _ = l.useMemo(() => p.filter(e => e.type !== I.ActivityTypes.CUSTOM_STATUS), [p]), N = p.some(e => e.type === I.ActivityTypes.HANG_STATUS), A = l.useMemo(() => s ? _.find(e => e.type === I.ActivityTypes.PLAYING) : null, [_, s]), x = l.useMemo(() => _.filter(e => e !== A), [A, _]), v = (0, E.useGetVoiceChannelInfoForVoiceActivitySection)(t.id), U = null != v && !s && !N, {
+  } = e, s = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), p = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), _ = l.useMemo(() => p.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [p]), N = p.some(e => e.type === m.ActivityTypes.HANG_STATUS), A = l.useMemo(() => s ? _.find(e => e.type === m.ActivityTypes.PLAYING) : null, [_, s]), x = l.useMemo(() => _.filter(e => e !== A), [A, _]), v = (0, E.useGetVoiceChannelInfoForVoiceActivitySection)(t.id), U = null != v && !s && !N, {
     showVoiceActivityInProfile: h
   } = S.VoiceActivityProfileExperiment.useExperiment({
     location: "user profile modal"
@@ -36,26 +36,26 @@ function p(e) {
     ...P
   } = (0, c.useUserProfileAnalyticsContext)(), M = {
     location: {
-      page: I.AnalyticsPages.USER_PROFILE,
-      section: I.AnalyticsSections.PROFILE_MODAL
+      page: m.AnalyticsPages.USER_PROFILE,
+      section: m.AnalyticsSections.PROFILE_MODAL
     }
   };
   return (0, a.jsxs)(n.ScrollerThin, {
     className: T.listScroller,
     fade: !0,
     children: [h && U ? (0, a.jsx)("div", {
-      className: m.voiceActivity,
+      className: I.voiceActivity,
       children: (0, a.jsx)(E.default, {
         ...v,
-        color: m.actionColor
+        color: I.actionColor
       })
     }) : null, s ? (0, a.jsx)(o.default, {
       type: o.UserActivityTypes.PROFILE_V2,
       user: t,
       source: "Profile Modal",
-      className: m.userProfileActivity,
+      className: I.userProfileActivity,
       activity: A,
-      actionColor: m.actionColor,
+      actionColor: I.actionColor,
       analyticsParams: M,
       onAction: () => {
         R({
@@ -72,8 +72,8 @@ function p(e) {
       user: t,
       useStoreStream: !1,
       source: "Profile Modal",
-      className: m.userProfileActivity,
-      actionColor: m.actionColor,
+      className: I.userProfileActivity,
+      actionColor: I.actionColor,
       analyticsParams: M,
       onAction: () => {
         R({

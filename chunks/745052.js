@@ -17,19 +17,19 @@ var a = n("735250"),
   m = n("209613"),
   S = n("325708"),
   I = n("320149"),
-  T = n("252618"),
-  p = n("605236"),
+  p = n("252618"),
+  T = n("605236"),
   g = n("243778"),
   A = n("984370"),
   N = n("797614"),
-  R = n("359110"),
-  v = n("6025"),
+  v = n("359110"),
+  R = n("6025"),
   O = n("897473"),
   L = n("108427"),
   M = n("970731"),
   P = n("210887"),
-  y = n("433355"),
-  x = n("592125"),
+  x = n("433355"),
+  y = n("592125"),
   D = n("819640"),
   b = n("916187"),
   U = n("151827"),
@@ -155,7 +155,7 @@ function es(e) {
   let {
     pageWidth: t,
     onSidebarResize: n
-  } = e, s = (0, u.useStateFromStores)([y.default], () => y.default.getSidebarState(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID)), l = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(null == s ? void 0 : s.channelId));
+  } = e, s = (0, u.useStateFromStores)([x.default], () => x.default.getSidebarState(x.MESSAGE_REQUESTS_BASE_CHANNEL_ID)), l = (0, u.useStateFromStores)([y.default], () => y.default.getChannel(null == s ? void 0 : s.channelId));
   if (null == s || s.type !== O.SidebarType.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
   let i = t - X.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
   return (0, a.jsx)(S.default, {
@@ -164,7 +164,7 @@ function es(e) {
     onWidthChange: n,
     children: (0, a.jsx)(I.default, {
       channel: l,
-      baseChannelId: y.MESSAGE_REQUESTS_BASE_CHANNEL_ID
+      baseChannelId: x.MESSAGE_REQUESTS_BASE_CHANNEL_ID
     })
   })
 }
@@ -188,7 +188,7 @@ let el = function(e) {
       n = () => D.default.hasLayers() || (0, c.hasAnyModalOpen)(),
       l = (0, u.useStateFromStores)([C.default], () => C.default.useReducedMotion);
     return s.useEffect(() => {
-      (0, p.requestMarkDismissibleContentAsShown)(d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
+      (0, T.requestMarkDismissibleContentAsShown)(d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
     }, []), (0, a.jsx)(g.default, {
       contentTypes: [d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
       children: s => {
@@ -246,8 +246,8 @@ let eo = (0, h.default)(function(e) {
   let l = (0, u.useStateFromStores)([P.default], () => P.default.theme),
     r = (0, K.useSpamMessageRequestCount)(),
     [d, E] = s.useState(!1),
-    h = (0, u.useStateFromStores)([y.default], () => {
-      let e = y.default.getSidebarState(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID);
+    h = (0, u.useStateFromStores)([x.default], () => {
+      let e = x.default.getSidebarState(x.MESSAGE_REQUESTS_BASE_CHANNEL_ID);
       return null != e && e.type === O.SidebarType.VIEW_MESSAGE_REQUEST ? e : null
     }),
     _ = null == h ? void 0 : h.channelId,
@@ -255,10 +255,10 @@ let eo = (0, h.default)(function(e) {
     m = (0, k.useIsEitherTypeOfMessageRequest)(_),
     S = (0, w.useHasUserRepliedInChannel)(_);
   s.useEffect(() => {
-    null != _ && !m && S && C && ((0, R.transitionToChannel)(_), v.default.closeChannelSidebar(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
+    null != _ && !m && S && C && ((0, v.transitionToChannel)(_), R.default.closeChannelSidebar(x.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
   }, [_, S, C, m]);
-  let [I, p] = s.useState(Z.MessageRequestSections.REQUESTS);
-  return (0, T.usePageTitle)({
+  let [I, T] = s.useState(Z.MessageRequestSections.REQUESTS);
+  return (0, p.usePageTitle)({
     location: ee.default.Messages.MESSAGE_REQUESTS
   }), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
@@ -281,7 +281,7 @@ let eo = (0, h.default)(function(e) {
           selectedItem: I,
           type: "top-pill",
           onItemSelect: e => {
-            p(e)
+            T(e)
           },
           className: et.__invalid_tabBar,
           children: [(0, a.jsx)(c.TabBar.Item, {

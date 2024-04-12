@@ -40,8 +40,8 @@ t.default = r.forwardRef(function(e, t) {
     placeholder: w,
     required: k,
     textAreaPaddingClassName: B,
-    onChange: F,
-    onPaste: V,
+    onChange: V,
+    onPaste: F,
     onResize: x,
     onFocus: H,
     onBlur: Y,
@@ -52,8 +52,8 @@ t.default = r.forwardRef(function(e, t) {
     onSubmit: X,
     maybeShowAutocomplete: Q,
     hideAutocomplete: q,
-    moveSelection: J,
-    spellcheckEnabled: Z,
+    moveSelection: Z,
+    spellcheckEnabled: J,
     canUseCommands: $,
     canOnlyUseTextCommands: ee,
     disableAutoFocus: et,
@@ -171,17 +171,17 @@ t.default = r.forwardRef(function(e, t) {
     allowNewLines: ei,
     submit: ep,
     hideAutocomplete: q,
-    moveSelection: J
+    moveSelection: Z
   }), {
     handlePaste: eg,
     handleGlobalPaste: eL
-  } = (0, p.default)(eN, eS, V), eD = r.useCallback(e => {
+  } = (0, p.default)(eN, eS, F), eD = r.useCallback(e => {
     null == Q || Q()
   }, [Q]), ev = r.useCallback(e => {
-    e !== eI.current ? ef.current && (null == F || F(null, (0, f.toTextValue)(e, {
+    e !== eI.current ? ef.current && (null == V || V(null, (0, f.toTextValue)(e, {
       mode: "raw"
     }), e)) : ef.current && Q()
-  }, [Q, F]);
+  }, [Q, V]);
   r.useLayoutEffect(() => {
     eT.current && (eI.current = n, eA(eN, "parent", {
       value: n
@@ -212,7 +212,7 @@ t.default = r.forwardRef(function(e, t) {
         className: a()(M.slateTextArea, B),
         placeholder: w,
         readOnly: eS,
-        spellCheck: Z,
+        spellCheck: J,
         autoFocus: !et,
         canFocus: !b,
         onChange: ev,

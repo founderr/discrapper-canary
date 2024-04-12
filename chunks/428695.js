@@ -23,13 +23,13 @@ t.default = function(e) {
     imageStyles: m,
     imageMarginX: S,
     imageMarginTop: I,
-    trackingSource: T,
-    undismissable: p,
+    trackingSource: p,
+    undismissable: T,
     onDismissed: g,
     onClick: A,
     cta: N,
-    ctaColor: R,
-    centerText: v
+    ctaColor: v,
+    centerText: R
   } = e;
   s.useEffect(() => {
     _(f.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
@@ -43,13 +43,13 @@ t.default = function(e) {
     size: o.Button.Sizes.SMALL,
     onClick: () => {
       null != C && c.default.track(f.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
-        source: T,
+        source: p,
         guild_id: t.id,
         notice_type: C
       }), null == A || A()
     },
     fullWidth: !0,
-    color: R,
+    color: v,
     children: N
   }));
   let L = null;
@@ -59,14 +59,14 @@ t.default = function(e) {
     className: i()(h.title, {
       [h.noImageTitle]: null == r
     }, {
-      [h.center]: v
+      [h.center]: R
     }),
     children: n
   }));
   let M = null != S ? "".concat(S, "px") : "16px";
   return (0, a.jsxs)("div", {
     className: h.container,
-    children: [!0 === p ? null : (0, a.jsx)(o.Clickable, {
+    children: [!0 === T ? null : (0, a.jsx)(o.Clickable, {
       onClick: () => {
         u.default.trackWithMetadata(f.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
           notice_type: C
@@ -94,7 +94,7 @@ t.default = function(e) {
       className: h.message,
       children: [L, (0, a.jsx)(o.Text, {
         className: i()({
-          [h.center]: v
+          [h.center]: R
         }),
         variant: "text-sm/normal",
         color: "text-muted",

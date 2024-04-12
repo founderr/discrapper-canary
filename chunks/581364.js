@@ -46,7 +46,7 @@ n.r(t), n.d(t, {
     return w
   },
   trackCommandSelected: function() {
-    return F
+    return V
   },
   useIsGuildInUserAppExperiment: function() {
     return k
@@ -357,7 +357,7 @@ function B(e, t, n) {
   }, n).userAppsTreatment === f.UserAppsTreatment.ALLOWED
 }
 
-function F(e) {
+function V(e) {
   var t, n;
   let {
     command: i,

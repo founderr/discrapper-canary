@@ -17,9 +17,9 @@ var a = n("735250"),
   m = n("207796"),
   S = n("308083"),
   I = n("689938"),
-  T = n("60427");
+  p = n("60427");
 
-function p() {
+function T() {
   let e = (0, m.useClanDiscoveryUIStore)(e => e.selectedGames, i()),
     t = (0, m.useClanDiscoveryUIStore)(e => e.setSelectedGames, r.default),
     n = (0, m.useClanDiscoveryUIStore)(e => e.game, r.default),
@@ -34,13 +34,13 @@ function p() {
       }])))
     }, [n, l, t]);
   return (0, a.jsxs)(h.Button, {
-    className: T.filterPill,
-    innerClassName: T.filterPillContents,
+    className: p.filterPill,
+    innerClassName: p.filterPillContents,
     look: h.ButtonLooks.OUTLINED,
     color: h.ButtonColors.CUSTOM,
     onClick: o,
     children: [(0, a.jsx)(u.GameControllerIcon, {
-      className: T.filterPillIcon,
+      className: p.filterPillIcon,
       color: "currentColor"
     }), (0, a.jsx)(h.Text, {
       variant: "text-xs/medium",
@@ -79,17 +79,17 @@ function g() {
     text: u,
     position: "bottom",
     "aria-label": n,
-    tooltipClassName: T.filterTooltip,
-    tooltipContentClassName: T.filterTooltipContent,
+    tooltipClassName: p.filterTooltip,
+    tooltipContentClassName: p.filterTooltipContent,
     children: e => (0, a.jsxs)(h.Button, {
       ...e,
-      className: T.filterPill,
-      innerClassName: T.filterPillContents,
+      className: p.filterPill,
+      innerClassName: p.filterPillContents,
       look: h.ButtonLooks.OUTLINED,
       color: h.ButtonColors.CUSTOM,
       onClick: o,
       children: [(0, a.jsx)(f.ReactionIcon, {
-        className: T.filterPillIcon,
+        className: p.filterPillIcon,
         color: "currentColor"
       }), (0, a.jsx)(h.Text, {
         variant: "text-xs/medium",
@@ -107,13 +107,13 @@ function A() {
       t(m.ClanDiscoveryMode.TRAITS)
     }, [t]);
   return null == e ? null : (0, a.jsxs)(h.Button, {
-    className: T.filterPill,
-    innerClassName: T.filterPillContents,
+    className: p.filterPill,
+    innerClassName: p.filterPillContents,
     look: h.ButtonLooks.OUTLINED,
     color: h.ButtonColors.CUSTOM,
     onClick: n,
     children: [(0, a.jsx)(E.TagIcon, {
-      className: T.filterPillIcon,
+      className: p.filterPillIcon,
       color: "currentColor"
     }), (0, a.jsx)(h.Text, {
       variant: "text-xs/medium",
@@ -129,13 +129,13 @@ function N() {
       e(m.ClanDiscoveryMode.PRIMETIME)
     }, [e]);
   return (0, a.jsxs)(h.Button, {
-    className: T.filterPill,
-    innerClassName: T.filterPillContents,
+    className: p.filterPill,
+    innerClassName: p.filterPillContents,
     look: h.ButtonLooks.OUTLINED,
     color: h.ButtonColors.CUSTOM,
     onClick: t,
     children: [(0, a.jsx)(o.ClockIcon, {
-      className: T.filterPillIcon,
+      className: p.filterPillIcon,
       color: "currentColor"
     }), (0, a.jsx)(h.Text, {
       variant: "text-xs/medium",
@@ -145,16 +145,16 @@ function N() {
   })
 }
 
-function R() {
+function v() {
   let e = (0, _.useStateFromStoresArray)([C.default], () => C.default.getFavoriteClans(), []);
   return (0, a.jsxs)(h.Button, {
-    className: T.filterPillSmall,
-    innerClassName: T.filterPillContents,
+    className: p.filterPillSmall,
+    innerClassName: p.filterPillContents,
     look: h.ButtonLooks.OUTLINED,
     color: h.ButtonColors.CUSTOM,
     onClick: () => !1,
     children: [(0, a.jsx)(d.HeartIcon, {
-      className: T.filterPillIcon,
+      className: p.filterPillIcon,
       color: "currentColor"
     }), (0, a.jsx)(h.Text, {
       variant: "text-xs/medium",
@@ -164,28 +164,28 @@ function R() {
   })
 }
 
-function v() {
+function R() {
   return (0, a.jsx)(h.Button, {
-    className: T.filterPillSmall,
-    innerClassName: T.filterPillContents,
+    className: p.filterPillSmall,
+    innerClassName: p.filterPillContents,
     look: h.ButtonLooks.OUTLINED,
     color: h.ButtonColors.CUSTOM,
     onClick: () => !1,
     children: (0, a.jsx)(c.MagnifyingGlassIcon, {
-      className: T.filterPillIcon,
+      className: p.filterPillIcon,
       color: "currentColor"
     })
   })
 }
 t.default = function() {
   return (0, a.jsxs)("div", {
-    className: T.toolbar,
+    className: p.toolbar,
     children: [(0, a.jsxs)("div", {
-      className: T.preferences,
-      children: [(0, a.jsx)(p, {}), (0, a.jsx)(g, {}), (0, a.jsx)(A, {}), (0, a.jsx)(N, {})]
+      className: p.preferences,
+      children: [(0, a.jsx)(T, {}), (0, a.jsx)(g, {}), (0, a.jsx)(A, {}), (0, a.jsx)(N, {})]
     }), (0, a.jsxs)("div", {
-      className: T.actions,
-      children: [(0, a.jsx)(R, {}), (0, a.jsx)(v, {})]
+      className: p.actions,
+      children: [(0, a.jsx)(v, {}), (0, a.jsx)(R, {})]
     })]
   })
 }

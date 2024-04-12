@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   PremiumDiscountOfferTabBadge: function() {
-    return T
+    return h
   },
   PremiumTrialOfferTabBadge: function() {
     return _
@@ -54,7 +54,7 @@ function _(e) {
     intervalType: null == s ? void 0 : s.interval,
     intervalCount: null == s ? void 0 : s.interval_count
   });
-  return (0, i.jsx)(h, {
+  return (0, i.jsx)(T, {
     isTabSelected: n,
     badgeCopy: a,
     offerExpiresAt: r.expires_at,
@@ -62,7 +62,7 @@ function _(e) {
   })
 }
 
-function T(e) {
+function h(e) {
   let {
     isTabSelected: t,
     userDiscount: n,
@@ -70,7 +70,7 @@ function T(e) {
   } = e, s = m.default.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
     percent: n.discount.amount
   });
-  return (0, i.jsx)(h, {
+  return (0, i.jsx)(T, {
     isTabSelected: t,
     badgeCopy: r ? s : m.default.Messages.PREMIUM_DISCOUNT_BADGE,
     offerExpiresAt: n.expires_at,
@@ -78,7 +78,7 @@ function T(e) {
   })
 }
 
-function h(e) {
+function T(e) {
   let {
     isTabSelected: t,
     badgeCopy: n,

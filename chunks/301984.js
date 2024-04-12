@@ -23,24 +23,24 @@ function f(e) {
     onClose: S
   } = e, {
     trackUserProfileAction: E
-  } = (0, r.useUserProfileAnalyticsContext)(), I = () => i.default.addRelationship({
+  } = (0, r.useUserProfileAnalyticsContext)(), m = () => i.default.addRelationship({
     userId: t.id,
     friendToken: f
-  }, S), m = () => i.default.cancelFriendRequest(t.id);
+  }, S), I = () => i.default.cancelFriendRequest(t.id);
   return s === d.RelationshipTypes.PENDING_INCOMING ? (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(u.default, {
       icon: n.default,
       text: c.default.Messages.FRIEND_REQUEST_ACCEPT,
       onClick: () => (E({
         action: "ACCEPT_FRIEND_REQUEST"
-      }), I())
+      }), m())
     }), (0, a.jsx)(u.default, {
       icon: o.default,
       text: c.default.Messages.FRIEND_REQUEST_IGNORE,
       color: l.ButtonColors.RED,
       onClick: () => (E({
         action: "IGNORE_FRIEND_REQUEST"
-      }), m())
+      }), I())
     })]
   }) : s === d.RelationshipTypes.PENDING_OUTGOING ? (0, a.jsx)(u.default, {
     icon: n.default,
@@ -51,6 +51,6 @@ function f(e) {
     text: c.default.Messages.ADD_FRIEND,
     onClick: () => (E({
       action: "SEND_FRIEND_REQUEST"
-    }), I())
+    }), m())
   })
 }

@@ -1,47 +1,47 @@
 "use strict";
-let s;
-r.r(t), r("653041");
-var n, a = r("442837"),
-  l = r("570140");
+let r;
+n.r(t), n("653041");
+var a, u = n("442837"),
+  s = n("570140");
 
-function u(e, t, r) {
+function i(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: r,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = r, e
+  }) : e[t] = n, e
 }
-let c = {
+let l = {
   hasAcceptedStoreTerms: !1,
   hasAcceptedEulaIds: []
 };
-class i extends(n = a.default.PersistedStore) {
+class c extends(a = u.default.PersistedStore) {
   initialize(e) {
-    s = null != e ? e : c
+    r = null != e ? e : l
   }
   getState() {
-    return s
+    return r
   }
   get hasAcceptedStoreTerms() {
-    return s.hasAcceptedStoreTerms
+    return r.hasAcceptedStoreTerms
   }
   hasAcceptedEULA(e) {
-    return s.hasAcceptedEulaIds.includes(e)
+    return r.hasAcceptedEulaIds.includes(e)
   }
 }
-u(i, "displayName", "ApplicationStoreUserSettingsStore"), u(i, "persistKey", "ApplicationStoreUserSettingsStore"), u(i, "migrations", [e => null == e.hasAcceptedEulaIds ? {
+i(c, "displayName", "ApplicationStoreUserSettingsStore"), i(c, "persistKey", "ApplicationStoreUserSettingsStore"), i(c, "migrations", [e => null == e.hasAcceptedEulaIds ? {
   ...e,
   hasAcceptedEulaIds: []
-} : e]), t.default = new i(l.default, {
+} : e]), t.default = new c(s.default, {
   APPLICATION_STORE_ACCEPT_STORE_TERMS: function() {
-    s.hasAcceptedStoreTerms = !0
+    r.hasAcceptedStoreTerms = !0
   },
   APPLICATION_STORE_ACCEPT_EULA: function(e) {
     let {
       eulaId: t
     } = e;
-    if (s.hasAcceptedEulaIds.includes(t)) return !1;
-    s.hasAcceptedEulaIds.push(t)
+    if (r.hasAcceptedEulaIds.includes(t)) return !1;
+    r.hasAcceptedEulaIds.push(t)
   }
 })

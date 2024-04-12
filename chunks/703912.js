@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return p
   }
 }), n("47120");
 var a = n("664751"),
@@ -29,8 +29,8 @@ async function S(e, t, n) {
     state: m,
     scope: S,
     permissions: I,
-    guild_id: T,
-    channel_id: p,
+    guild_id: p,
+    channel_id: T,
     prompt: g,
     disable_guild_select: A,
     integration_type: N
@@ -41,14 +41,14 @@ async function S(e, t, n) {
   if (null != o) throw new h.default({
     errorCode: C.RPCErrors.OAUTH2_ERROR
   }, "Redirect URI cannot be used in the RPC OAuth2 Authorization flow");
-  let R = [];
-  if ("string" == typeof S ? R = S.split(" ").filter(e => e.length > 0) : Array.isArray(S) && (R = S), null == f.default.getCurrentUser()) throw new h.default({
+  let v = [];
+  if ("string" == typeof S ? v = S.split(" ").filter(e => e.length > 0) : Array.isArray(S) && (v = S), null == f.default.getCurrentUser()) throw new h.default({
     errorCode: C.RPCErrors.OAUTH2_ERROR
   }, "Client is not logged in");
   try {
     a = await (0, d.fetchAuthorization)({
       clientId: i,
-      scopes: R,
+      scopes: v,
       responseType: r,
       redirectUri: o,
       codeChallenge: u,
@@ -67,7 +67,7 @@ async function S(e, t, n) {
     return (await (0, d.authorize)({
       authorize: !0,
       clientId: i,
-      scopes: R,
+      scopes: v,
       responseType: r,
       redirectUri: o,
       codeChallenge: u,
@@ -83,12 +83,12 @@ async function S(e, t, n) {
       errorCode: C.RPCErrors.OAUTH2_ERROR
     }, "OAuth2 Authorize Error: ".concat(e.message || "Unknown Error"))
   }
-  null == n || n(a.application, p);
-  let v = E.NONE;
+  null == n || n(a.application, T);
+  let R = E.NONE;
   try {
-    v = l.deserialize(null != I ? I : 0)
+    R = l.deserialize(null != I ? I : 0)
   } catch (e) {}
-  return t(i, a, R, v, r, o, u, _, m, T, p, g, A)
+  return t(i, a, v, R, r, o, u, _, m, p, T, g, A)
 }
 
 function I(e, t) {
@@ -136,7 +136,7 @@ function I(e, t) {
   })
 }
 
-function T(e, t) {
+function p(e, t) {
   return {
     [C.RPCCommands.AUTHENTICATE]: (0, r.createRPCCommand)(C.RPCCommands.AUTHENTICATE, {
       handler(n) {

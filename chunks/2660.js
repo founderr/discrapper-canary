@@ -14,19 +14,19 @@ t.default = e => {
     questConfig: t,
     fallback: n
   } = e, c = (0, a.useStateFromStores)([r.default], () => r.default.getCurrentUser()), {
-    avatarDecoration: f,
-    isFetching: E
+    avatarDecoration: E,
+    isFetching: f
   } = (0, o.useQuestCollectibles)(t);
-  return E ? (0, s.jsx)("div", {
+  return f ? (0, s.jsx)("div", {
     className: d.questsCollectibleReward,
     children: (0, s.jsx)(l.Spinner, {})
-  }) : null == c || null == f ? n : (0, s.jsx)("div", {
+  }) : null == c || null == E ? n : (0, s.jsx)("div", {
     className: d.questsCollectibleReward,
     children: (0, s.jsx)(i.default, {
       avatarSize: u.AvatarSizes.SIZE_80,
       user: c,
       guildId: null,
-      avatarDecorationOverride: f
+      avatarDecorationOverride: E
     })
   })
 }

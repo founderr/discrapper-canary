@@ -17,48 +17,48 @@ var a = n("735250"),
   m = n("874137"),
   S = n("78826"),
   I = n("789563"),
-  T = n("164164"),
-  p = n("46140"),
+  p = n("164164"),
+  T = n("46140"),
   g = n("981631"),
   A = n("311676");
 t.default = function() {
   var e, t, n;
   let l = (0, f.useIsEligibleForQuests)({
-      location: p.QuestsExperimentLocations.QUESTS_BAR
+      location: T.QuestsExperimentLocations.QUESTS_BAR
     }),
     N = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion),
-    R = (0, o.useStateFromStores)([h.default], () => (0, C.getQuestForTargetedContent)(h.default.quests, _.QuestContent.QUEST_BAR)),
-    v = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()),
+    v = (0, o.useStateFromStores)([h.default], () => (0, C.getQuestForTargetedContent)(h.default.quests, _.QuestContent.QUEST_BAR)),
+    R = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()),
     O = s.useRef(-1),
     L = s.useRef(!1),
     [M, P] = s.useState(!1),
-    [y, x] = s.useState(!1),
+    [x, y] = s.useState(!1),
     [D, b] = s.useState(!1),
     [U, j] = s.useState(!0),
     [G, w] = s.useState(240),
     k = s.useRef(null),
-    F = (null == R ? void 0 : null === (e = R.userStatus) || void 0 === e ? void 0 : e.enrolledAt) != null,
+    F = (null == v ? void 0 : null === (e = v.userStatus) || void 0 === e ? void 0 : e.enrolledAt) != null,
     H = s.useRef(F),
-    B = (null == R ? void 0 : null === (t = R.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
-    V = (null == R ? void 0 : null === (n = R.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
-    Y = (null == R ? void 0 : R.userStatus) != null && (0, C.isDismissed)(null == R ? void 0 : R.userStatus, _.QuestContent.QUEST_BAR),
-    W = (0, E.useIsQuestExpired)(R),
+    B = (null == v ? void 0 : null === (t = v.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
+    V = (null == v ? void 0 : null === (n = v.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
+    Y = (null == v ? void 0 : v.userStatus) != null && (0, C.isDismissed)(null == v ? void 0 : v.userStatus, _.QuestContent.QUEST_BAR),
+    W = (0, E.useIsQuestExpired)(v),
     {
       hasError: K,
       isLoading: z
     } = (0, S.useQuestsAssetsLoadState)(),
     q = s.useCallback(() => {
       var e, t;
-      w((null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 16), x(!0)
+      w((null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 16), y(!0)
     }, []),
     Q = s.useCallback(() => {
       P(!0)
     }, []),
     Z = s.useCallback(() => {
-      P(!1), !L.current && !B && x(!1)
+      P(!1), !L.current && !B && y(!1)
     }, [B]),
     X = s.useCallback(() => {
-      P(!1), !B && x(!1), L.current = !1
+      P(!1), !B && y(!1), L.current = !1
     }, [B]),
     J = s.useCallback(function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
@@ -68,16 +68,16 @@ t.default = function() {
       t ? O.current = window.setTimeout(q, 75) : q()
     }, [q]),
     $ = s.useCallback(() => {
-      if (window.clearTimeout(O.current), !B && !M) !L.current && x(!1)
+      if (window.clearTimeout(O.current), !B && !M) !L.current && y(!1)
     }, [M, B]),
     ee = s.useCallback(() => {
-      null != R && (0, c.trackQuestEvent)({
-        questId: R.id,
+      null != v && (0, c.trackQuestEvent)({
+        questId: v.id,
         event: g.AnalyticEvents.QUEST_HOVER
       }), L.current = !0, J({
         withDelay: !0
       })
-    }, [J, R]),
+    }, [J, v]),
     et = s.useCallback(() => {
       L.current = !1, $()
     }, [$]);
@@ -86,9 +86,9 @@ t.default = function() {
   }, [B, q]), s.useLayoutEffect(() => {
     F && !H.current && L.current && q()
   }, [F, q]), s.useLayoutEffect(() => {
-    !B && F && !H.current && !L.current && x(!1)
+    !B && F && !H.current && !L.current && y(!1)
   }, [F, B]);
-  let en = l && !Y && !V && null != R && !W && !z,
+  let en = l && !Y && !V && null != v && !W && !z,
     ea = s.useRef(en);
   s.useLayoutEffect(() => {
     en !== ea.current && j(!1), ea.current = en
@@ -99,10 +99,10 @@ t.default = function() {
     expansionSpring: es
   } = (0, r.useSpring)({
     from: {
-      expansionSpring: y ? 0 : 1
+      expansionSpring: x ? 0 : 1
     },
     to: {
-      expansionSpring: y ? 1 : 0
+      expansionSpring: x ? 1 : 0
     },
     config: F ? {
       tension: 900,
@@ -142,10 +142,10 @@ t.default = function() {
       j(!1)
     }
   });
-  return l && null != R && (en || !U || z) && !K ? (0, a.jsx)(m.QuestContentImpressionTracker, {
-    questId: R.id,
+  return l && null != v && (en || !U || z) && !K ? (0, a.jsx)(m.QuestContentImpressionTracker, {
+    questId: v.id,
     questContent: _.QuestContent.QUEST_BAR,
-    overrideVisibility: !v && en,
+    overrideVisibility: !R && en,
     children: () => (0, a.jsx)(r.animated.div, {
       "aria-hidden": !en,
       className: i()(A.wrapper, {
@@ -153,10 +153,10 @@ t.default = function() {
         [A.wrapperVisible]: en && U
       }),
       style: {
-        color: R.config.colors.secondary,
+        color: v.config.colors.secondary,
         height: el.to({
           range: [0, 1],
-          output: [0, B && y ? G : 40]
+          output: [0, B && x ? G : 40]
         })
       },
       children: (0, a.jsxs)(r.animated.div, {
@@ -165,11 +165,11 @@ t.default = function() {
         onFocus: () => J(),
         onBlur: $,
         className: i()(A.contentWrapper, {
-          [A.contentWrapperExpanded]: y,
+          [A.contentWrapperExpanded]: x,
           [A.contentWrapperAccepted]: F
         }),
         style: {
-          backgroundImage: F ? "linear-gradient(90deg, ".concat(R.config.colors.primary, ", ").concat(R.config.colors.secondary, ")") : void 0,
+          backgroundImage: F ? "linear-gradient(90deg, ".concat(v.config.colors.primary, ", ").concat(v.config.colors.secondary, ")") : void 0,
           height: es.to({
             range: [0, 1],
             output: [40, F ? G : 240]
@@ -182,18 +182,18 @@ t.default = function() {
         children: [(0, a.jsx)(I.default, {
           className: A.content,
           expansionSpring: es,
-          isExpanded: y,
+          isExpanded: x,
           isExpansionAnimationComplete: D,
-          quest: R,
+          quest: v,
           useReducedMotion: N
-        }), (0, a.jsx)(T.default, {
+        }), (0, a.jsx)(p.default, {
           className: A.content,
           onCtxMenuOpen: Q,
           onCtxMenuClose: Z,
           onCtxMenuSelect: X,
-          isExpanded: y,
+          isExpanded: x,
           isExpansionAnimationComplete: D,
-          quest: R,
+          quest: v,
           useReducedMotion: N,
           ref: k
         })]

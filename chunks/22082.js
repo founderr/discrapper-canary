@@ -7,49 +7,49 @@ var i, s, l, a, r = n("442837"),
   u = n("581883"),
   c = n("314897"),
   C = n("592125"),
-  f = n("984933"),
-  g = n("271383"),
+  g = n("984933"),
+  f = n("271383"),
   p = n("430824"),
-  v = n("306680"),
-  I = n("9156"),
+  I = n("306680"),
+  v = n("9156"),
   E = n("70956"),
   S = n("709054"),
   y = n("981631");
 let m = new Set,
   _ = {},
-  w = {};
+  N = {};
 
-function N(e, t) {
+function w(e, t) {
   let n = _[e];
   if (null != n && null != t && n.has(t)) {
     var i;
-    I.default.isOptInEnabled(e) && !(null === (i = C.default.getChannel(t)) || void 0 === i ? void 0 : i.isThread()) && null == v.default.ackMessageId(t) && d.default.wait(() => (0, o.ack)(t, !0, !0, S.default.atPreviousMillisecond(t)))
+    v.default.isOptInEnabled(e) && !(null === (i = C.default.getChannel(t)) || void 0 === i ? void 0 : i.isThread()) && null == I.default.ackMessageId(t) && d.default.wait(() => (0, o.ack)(t, !0, !0, S.default.atPreviousMillisecond(t)))
   }
 }
 
 function L(e) {
   var t;
   if (null != _[e]) return;
-  let n = f.default.getChannels(e)[0, f.GUILD_SELECTABLE_CHANNELS_KEY].map(e => e.channel.id),
-    i = null === (t = g.default.getMember(e, c.default.getId())) || void 0 === t ? void 0 : t.joinedAt;
+  let n = g.default.getChannels(e)[0, g.GUILD_SELECTABLE_CHANNELS_KEY].map(e => e.channel.id),
+    i = null === (t = f.default.getMember(e, c.default.getId())) || void 0 === t ? void 0 : t.joinedAt;
   if (null == i) return;
   _[e] = new Set;
   let s = new Date(i).getTime();
   0 !== n.length && (_[e] = new Set(n.filter(t => {
     let n = S.default.extractTimestamp(t);
-    return null == v.default.getTrackedAckMessageId(t) && n > Date.now() - E.default.Millis.WEEK && n > u.default.getGuildRecentsDismissedAt(e) && n > s && !I.default.isChannelOrParentOptedIn(e, t)
-  })), w[e] = Date.now())
+    return null == I.default.getTrackedAckMessageId(t) && n > Date.now() - E.default.Millis.WEEK && n > u.default.getGuildRecentsDismissedAt(e) && n > s && !v.default.isChannelOrParentOptedIn(e, t)
+  })), N[e] = Date.now())
 }
 
 function T() {
   S.default.keys(_).forEach(e => {
     let t = _[e];
-    _[e] = new Set([...t].filter(t => !I.default.isChannelOrParentOptedIn(e, t)))
+    _[e] = new Set([...t].filter(t => !v.default.isChannelOrParentOptedIn(e, t)))
   })
 }
-class R extends(i = r.default.Store) {
+class O extends(i = r.default.Store) {
   initialize() {
-    this.waitFor(f.default, c.default, g.default, I.default, v.default, u.default), this.syncWith([I.default], T)
+    this.waitFor(g.default, c.default, f.default, v.default, I.default, u.default), this.syncWith([v.default], T)
   }
   getNewChannelIds(e) {
     var t;
@@ -59,15 +59,15 @@ class R extends(i = r.default.Store) {
     var n;
     if (null == e) return !1;
     let i = p.default.getGuild(e);
-    return !!(null != i && i.hasFeature(y.GuildFeatures.COMMUNITY)) && (null != e && null == _[e] && L(e), (null === (n = _[e]) || void 0 === n ? void 0 : n.has(t)) && null == v.default.getTrackedAckMessageId(t))
+    return !!(null != i && i.hasFeature(y.GuildFeatures.COMMUNITY)) && (null != e && null == _[e] && L(e), (null === (n = _[e]) || void 0 === n ? void 0 : n.has(t)) && null == I.default.getTrackedAckMessageId(t))
   }
 }
-a = "NewChannelsStore", (l = "displayName") in(s = R) ? Object.defineProperty(s, l, {
+a = "NewChannelsStore", (l = "displayName") in(s = O) ? Object.defineProperty(s, l, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[l] = a, t.default = new R(d.default, {
+}) : s[l] = a, t.default = new O(d.default, {
   BULK_CLEAR_RECENTS: function(e) {
     let {
       guildId: t,
@@ -82,7 +82,7 @@ a = "NewChannelsStore", (l = "displayName") in(s = R) ? Object.defineProperty(s,
       guildId: t,
       channelId: n
     } = e;
-    return null != t && (null == _[t] || w[t] < Date.now() - E.default.Millis.HOUR ? (L(t), !0) : (null != n && N(t, n), !1))
+    return null != t && (null == _[t] || N[t] < Date.now() - E.default.Millis.HOUR ? (L(t), !0) : (null != n && w(t, n), !1))
   },
   SIDEBAR_VIEW_CHANNEL: function(e) {
     let {
@@ -90,14 +90,14 @@ a = "NewChannelsStore", (l = "displayName") in(s = R) ? Object.defineProperty(s,
       channelId: n,
       sidebarType: i
     } = e;
-    return null != t && i === h.SidebarType.VIEW_CHANNEL && (N(t, n), !1)
+    return null != t && i === h.SidebarType.VIEW_CHANNEL && (w(t, n), !1)
   },
   SIDEBAR_VIEW_GUILD: function(e) {
     let {
       guildId: t,
       baseChannelId: n
     } = e;
-    return null != t && (N(t, n), !1)
+    return null != t && (w(t, n), !1)
   },
   GUILD_DELETE: function(e) {
     let {

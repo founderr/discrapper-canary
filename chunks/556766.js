@@ -17,11 +17,11 @@ var a = n("735250"),
   m = n("340895"),
   S = n("557177"),
   I = n("871465");
-let T = {
+let p = {
     transform: "scale(0.7)",
     opacity: 0
   },
-  p = {
+  T = {
     transform: "scale(1)",
     opacity: 1
   };
@@ -38,35 +38,35 @@ t.default = () => {
     g = f.default.useIsRingtoneEligible(),
     A = f.default.useIsRingtoneDisabled(),
     N = (0, u.useStateFromStores)([C.default], () => C.default.disableSounds),
-    R = (0, u.useStateFromStores)([E.default], () => E.default.getSoundpack()),
-    v = s.useRef(!1),
+    v = (0, u.useStateFromStores)([E.default], () => E.default.getSoundpack()),
+    R = s.useRef(!1),
     O = (0, r.useStableMemo)(() => {
       let e = "call_ringing";
       if (g && !A) return (0, S.createSound)(c.default.ringtone, e);
-      if (R === I.Soundpacks.CLASSIC) {
+      if (v === I.Soundpacks.CLASSIC) {
         let t = 500 === i().random(1, 1e3) ? "call_ringing_beat" : "call_ringing";
         return (0, S.createSound)(t, e)
       }
-      return (0, S.createSoundForPack)("call_ringing", R)
-    }, [R, A, g]);
+      return (0, S.createSoundForPack)("call_ringing", v)
+    }, [v, A, g]);
   return s.useEffect(() => () => {
     O.stop()
   }, [O]), s.useEffect(() => {
     if (N || l) {
-      v.current && (O.stop(), v.current = !1);
+      R.current && (O.stop(), R.current = !1);
       return
     }
-    n && !v.current ? (O.loop(), v.current = !0) : !n && v.current && (O.stop(), v.current = !1)
+    n && !R.current ? (O.loop(), R.current = !0) : !n && R.current && (O.stop(), R.current = !1)
   }, [l, N, n, O]), (0, o.useTransition)(t, {
     keys: e => {
       var t;
       return null === (t = e.channel) || void 0 === t ? void 0 : t.id
     },
     enter: {
-      from: T,
-      to: p
+      from: p,
+      to: T
     },
-    leave: T,
+    leave: p,
     config: {
       mass: 1,
       tension: 500,

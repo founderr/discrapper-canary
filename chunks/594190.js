@@ -119,8 +119,8 @@ let b = new S.default("RunningGameStore"),
   }],
   k = !0,
   B = new Set,
-  F = [],
   V = [],
+  F = [],
   x = [],
   H = null,
   Y = [],
@@ -136,8 +136,8 @@ let b = new S.default("RunningGameStore"),
   X = {},
   Q = 0,
   q = null,
-  J = null,
-  Z = {};
+  Z = null,
+  J = {};
 
 function $(e, t, n) {
   let i = e[t];
@@ -158,14 +158,14 @@ function en() {
     H = x[0], null != e && H.pid === e.pid ? H.start = e.start : H.start = Date.now()
   } else H = null;
   let e = [];
-  for (let t of x) !(t.pid in Z) && (Z[t.pid] = t, e.push(t));
+  for (let t of x) !(t.pid in J) && (J[t.pid] = t, e.push(t));
   let t = [];
-  for (let e of Object.values(Z)) !x.some(t => t.pid === e.pid) && (t.push(e), delete Z[e.pid]);
+  for (let e of Object.values(J)) !x.some(t => t.pid === e.pid) && (t.push(e), delete J[e.pid]);
   b.info("games", {
     runningGames: x,
     added: e,
     removed: t,
-    previousGames: Z
+    previousGames: J
   }), I.default.dispatch({
     type: "RUNNING_GAMES_CHANGE",
     games: x,
@@ -245,7 +245,7 @@ function el(e) {
 
 function eu() {
   let e = !1;
-  return F = u().values(O.default.libraryApplications).reduce((t, n) => {
+  return V = u().values(O.default.libraryApplications).reduce((t, n) => {
     let i = N.default.getDetectableGame(n.id);
     if (null == i) return t;
     for (let r of p.default.getLaunchOptions(n.id, n.branchId)) {
@@ -269,7 +269,7 @@ function eu() {
 
 function ed() {
   if (!__OVERLAY__ && D.isPlatformEmbedded) {
-    let e = [...F, ...u().values(K.gameOverrides)];
+    let e = [...V, ...u().values(K.gameOverrides)];
     v.default.setGameCandidateOverrides(e)
   }
 }
@@ -423,10 +423,10 @@ class eE extends(r = c.default.Store) {
     return null != q && q === e
   }
   shouldContinueWithoutElevatedProcessForPID(e) {
-    return null != J && J === e
+    return null != Z && Z === e
   }
   getCandidateGames() {
-    return V.filter(e => e.hidden || null == e.id).filter(e => void 0 === K.gameOverrides[ei(e)])
+    return F.filter(e => e.hidden || null == e.id).filter(e => void 0 === K.gameOverrides[ei(e)])
   }
   getGamesSeen(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -475,7 +475,7 @@ o = "RunningGameStore", (a = "displayName") in(s = eE) ? Object.defineProperty(s
     e_(x)
   },
   CANDIDATE_GAMES_CHANGE: function(e) {
-    V = e.games
+    F = e.games
   },
   PERMISSION_CLEAR_PTT_ADMIN_WARNING: function() {
     k = !1
@@ -484,7 +484,7 @@ o = "RunningGameStore", (a = "displayName") in(s = eE) ? Object.defineProperty(s
     let {
       pid: t
     } = e;
-    q = t, J = null
+    q = t, Z = null
   },
   PERMISSION_CLEAR_ELEVATED_PROCESS: function() {
     q = null
@@ -493,14 +493,14 @@ o = "RunningGameStore", (a = "displayName") in(s = eE) ? Object.defineProperty(s
     let {
       pid: t
     } = e;
-    J = t, q = null
+    Z = t, q = null
   },
   RUNNING_GAME_ADD_OVERRIDE: function(e) {
     let t;
     let n = e.pid,
       i = x.find(e => e.pid === n);
     if (null == i) {
-      let e = V.find(e => e.pid === n);
+      let e = F.find(e => e.pid === n);
       if (null == e) return;
       (i = {
         ...e

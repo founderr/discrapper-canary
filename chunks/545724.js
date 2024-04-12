@@ -21,11 +21,11 @@ t.default = function(e) {
     isActive: m,
     onOtherHover: S,
     className: I
-  } = e, [T, p] = s.useState(!1), [g, A] = s.useState(!1), N = () => {
-    p(!0), C && !m && !g && (null == S || S())
-  }, R = () => {
-    p(!1)
-  }, v = (e, t) => {
+  } = e, [p, T] = s.useState(!1), [g, A] = s.useState(!1), N = () => {
+    T(!0), C && !m && !g && (null == S || S())
+  }, v = () => {
+    T(!1)
+  }, R = (e, t) => {
     null != t && (A(!0), (0, d.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -52,16 +52,16 @@ t.default = function(e) {
           [f.active]: m || g,
           [f.firstItem]: 0 === t
         }),
-        onContextMenu: e => v(e, E),
+        onContextMenu: e => R(e, E),
         onMouseEnter: N,
-        onMouseLeave: R,
+        onMouseLeave: v,
         onClick: null != _ ? _ : void 0,
         style: {
           LIST_ROW_HEIGHT: c.LIST_ROW_HEIGHT,
           opacity: 1
         },
         ...e,
-        children: l(T || m || g)
+        children: l(p || m || g)
       })
     })
   })

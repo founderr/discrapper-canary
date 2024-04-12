@@ -17,14 +17,14 @@ var a = n("735250"),
   m = n("51144"),
   S = n("321488"),
   I = n("417183"),
-  T = n("825682"),
-  p = n("170245"),
+  p = n("825682"),
+  T = n("170245"),
   g = n("981631"),
   A = n("65154"),
   N = n("689938"),
-  R = n("432182");
+  v = n("432182");
 
-function v(e, t, n) {
+function R(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -109,12 +109,12 @@ class L extends s.PureComponent {
       onOtherHover: () => r ? null : (0, d.closeContextMenu)(),
       onClick: this.handleOpenPrivateChannel,
       children: t => (0, a.jsxs)("div", {
-        className: R.listItemContents,
-        children: [(0, a.jsx)(p.default, {
+        className: v.listItemContents,
+        children: [(0, a.jsx)(T.default, {
           user: e,
           status: l,
           isMobile: i,
-          subText: (0, a.jsx)(T.default, {
+          subText: (0, a.jsx)(p.default, {
             hovered: t,
             activities: n,
             applicationStream: s,
@@ -124,7 +124,7 @@ class L extends s.PureComponent {
           hovered: t,
           showAccountIdentifier: !0
         }), (0, a.jsxs)("div", {
-          className: R.actions,
+          className: v.actions,
           children: [(0, a.jsx)(S.default, {
             icon: _.default,
             tooltip: N.default.Messages.SEND_DM,
@@ -141,16 +141,16 @@ class L extends s.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), v(this, "peopleListItemRef", s.createRef()), v(this, "state", {
+    super(...e), R(this, "peopleListItemRef", s.createRef()), R(this, "state", {
       isActiveRow: !1
-    }), v(this, "handleOpenPrivateChannel", e => {
+    }), R(this, "handleOpenPrivateChannel", e => {
       let {
         user: t
       } = this.props;
       e.stopPropagation();
       let n = i().find(E.default.getMutablePrivateChannels(), e => e.type === g.ChannelTypes.DM && e.getRecipientId() === t.id);
       null != n ? (0, f.transitionTo)(g.Routes.CHANNEL(g.ME, n.id)) : u.default.openPrivateChannel(t.id)
-    }), v(this, "handleOpenActionsMenu", e => {
+    }), R(this, "handleOpenActionsMenu", e => {
       let {
         user: t
       } = this.props;

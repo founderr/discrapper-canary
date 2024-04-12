@@ -22,46 +22,46 @@ var s = n("924826"),
   m = n("655525"),
   S = n("314684"),
   I = n("52188"),
-  T = n("248042"),
-  p = n("924540"),
+  p = n("248042"),
+  T = n("924540"),
   g = n("565626"),
   A = n("701910"),
   N = n("886654"),
-  R = n("921944"),
-  v = n("689938"),
+  v = n("921944"),
+  R = n("689938"),
   O = n("392934");
 let L = e => {
   let t, n, {
       selected: L,
       route: M,
       locationState: P,
-      ...y
+      ...x
     } = e,
-    x = (0, l.useStateFromStores)([u.default], () => u.default.getCurrentUser()),
+    y = (0, l.useStateFromStores)([u.default], () => u.default.getCurrentUser()),
     D = (0, l.useStateFromStores)([c.default], () => c.default.getPremiumTypeSubscription()),
     b = (0, s.useListItem)("nitro"),
     U = (0, C.usePremiumTrialOffer)(),
     j = (0, _.usePremiumDiscountOffer)(),
     G = (0, l.useStateFromStores)([d.default], () => d.default.isLocalizedPromoEnabled) && null == U,
-    w = (0, T.useIsEligibleForBogoPromotion)(),
+    w = (0, p.useIsEligibleForBogoPromotion)(),
     k = (0, g.default)(),
     F = (0, S.useTenureRewardBadgeDescription)(),
     H = (0, h.useShouldShowNewOfferBadgeForAprilMarketingMoment)("NitroTabButton");
-  return L || null != U || null != j || w || H || k || null != F || null != x && Date.now() - x.createdAt.getTime() > 2592e6 || (0, E.hasPremiumSubscriptionToDisplay)(x, D) ? (w ? n = (0, a.jsx)(m.default, {
+  return L || null != U || null != j || w || H || k || null != F || null != y && Date.now() - y.createdAt.getTime() > 2592e6 || (0, E.hasPremiumSubscriptionToDisplay)(y, D) ? (w ? n = (0, a.jsx)(m.default, {
     isNitroTab: !0
   }) : H ? n = (0, a.jsx)(N.default, {
-    copy: v.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_MODAL_TOP_PILL,
+    copy: R.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_MODAL_TOP_PILL,
     isSelected: L,
     onSelect: () => (0, o.markDismissibleContentAsDismissed)(i.DismissibleContent.PREMIUM_2024_APRIL_MARKETING_BADGE, {
-      dismissAction: R.ContentDismissActionType.TAKE_ACTION
+      dismissAction: v.ContentDismissActionType.TAKE_ACTION
     })
   }) : null != F ? n = (0, a.jsx)(A.default, {
     copy: F
-  }) : k ? n = (0, a.jsx)(A.default, {}) : null != j ? n = (0, a.jsx)(p.PremiumDiscountOfferTabBadge, {
+  }) : k ? n = (0, a.jsx)(A.default, {}) : null != j ? n = (0, a.jsx)(T.PremiumDiscountOfferTabBadge, {
     userDiscount: j,
     isTabSelected: L,
     includesAmountOff: !1
-  }) : null != U ? n = (0, a.jsx)(p.PremiumTrialOfferTabBadge, {
+  }) : null != U ? n = (0, a.jsx)(T.PremiumTrialOfferTabBadge, {
     trialOffer: U,
     isTabSelected: L
   }) : G && (n = (0, a.jsx)(I.LocalizedPricingBadgeIcon, {
@@ -70,9 +70,9 @@ let L = e => {
     selected: L,
     route: M,
     icon: f.default,
-    text: v.default.Messages.PREMIUM,
+    text: R.default.Messages.PREMIUM,
     locationState: P,
-    ...y,
+    ...x,
     ...b,
     className: t,
     children: n

@@ -90,8 +90,8 @@ t.default = r.forwardRef(function(e, t) {
     forceSecondaryActions: w = !1,
     interactive: k = !0,
     enableSecondaryActions: B = !1,
-    suppressPlaySound: F,
-    onMouseEnter: V,
+    suppressPlaySound: V,
+    onMouseEnter: F,
     onSelectItem: x,
     analyticsLocations: H,
     buttonOverlay: Y = p.SoundButtonOverlay.PLAY,
@@ -102,8 +102,8 @@ t.default = r.forwardRef(function(e, t) {
     emojiId: z,
     emojiName: X
   } = P, Q = (0, l.useStateFromStores)([T.default], () => T.default.getCurrentUser()), q = (0, g.useSoundButtonContextMenu)(P, null == U ? void 0 : U.guild_id), {
-    playSoundboardSound: J,
-    previewSound: Z,
+    playSoundboardSound: Z,
+    previewSound: J,
     isPlayingSound: $
   } = (0, C.default)(P, null !== (n = null == U ? void 0 : U.id) && void 0 !== n ? n : null), {
     createMultipleConfettiAt: ee
@@ -152,18 +152,18 @@ t.default = r.forwardRef(function(e, t) {
   }
   let eT = y({
       sound: P,
-      previewSound: Z,
+      previewSound: J,
       disabled: e_
     }),
     ef = () => (0, i.jsxs)("div", {
       className: v.buttonOverlay,
       children: [(0, i.jsx)("div", {
         className: a()({
-          [v.buttonOverlayBackground]: !F
+          [v.buttonOverlayBackground]: !V
         })
       }), (0, i.jsxs)("div", {
         className: v.buttonOverlayActions,
-        children: [ec && eT, !F && !e_ && (0, i.jsx)(A.default, {
+        children: [ec && eT, !V && !e_ && (0, i.jsx)(A.default, {
           className: v.playIcon
         }), ec && eI()]
       })]
@@ -176,7 +176,7 @@ t.default = r.forwardRef(function(e, t) {
   }, [ea]), (0, i.jsxs)("li", {
     ref: t,
     className: v.soundButtonWrapper,
-    onMouseEnter: V,
+    onMouseEnter: F,
     children: [(0, i.jsxs)(_.ClickableContainer, {
       ...j,
       buttonProps: {
@@ -190,7 +190,7 @@ t.default = r.forwardRef(function(e, t) {
       }),
       className: a()(b, v.soundButton, {
         [v.playing]: $,
-        [v.hoverActiveBackground]: F,
+        [v.hoverActiveBackground]: V,
         [v.soundButtonInteractive]: k,
         [v.buttonDisabled]: !k && !w,
         [v.premiumDisabled]: e_ && !w,
@@ -204,7 +204,7 @@ t.default = r.forwardRef(function(e, t) {
           x();
           return
         }
-        F || J(H)
+        V || Z(H)
       },
       onContextMenu: B && !e_ ? q : void 0,
       children: [(0, i.jsxs)("div", {

@@ -17,13 +17,13 @@ var a = n("735250"),
   m = n("919285"),
   S = n("118470"),
   I = n("413307"),
-  T = n("849688"),
-  p = n("374023"),
+  p = n("849688"),
+  T = n("374023"),
   g = n("661599"),
   A = n("923608"),
   N = n("617899"),
-  R = n("8521"),
-  v = n("760326"),
+  v = n("8521"),
+  R = n("760326"),
   O = n("536687"),
   L = n("652785"),
   M = n("921944");
@@ -32,7 +32,7 @@ function P(e) {
   e.stopPropagation()
 }
 
-function y(e) {
+function x(e) {
   var t;
   let {
     guild: n
@@ -71,7 +71,7 @@ function y(e) {
               markAsDismissed: l
             });
           case i.DismissibleContent.CHANNEL_NOTICE_QUICKSWITCHER:
-            return (0, a.jsx)(v.default, {
+            return (0, a.jsx)(R.default, {
               guild: n,
               markAsDismissed: l
             });
@@ -115,7 +115,7 @@ t.default = e => {
         guild: t
       });
     case O.ConnectedChannelNotices.MAX_MEMBER_COUNT:
-      return (0, a.jsx)(R.default, {
+      return (0, a.jsx)(v.default, {
         guild: t
       });
     case O.ConnectedChannelNotices.GUILD_LIVE_CHANNEL:
@@ -139,7 +139,7 @@ t.default = e => {
         guild: t
       });
     case O.ConnectedChannelNotices.SIGNUP:
-      return (0, a.jsx)(T.default, {
+      return (0, a.jsx)(p.default, {
         guild: t
       });
     case O.ConnectedChannelNotices.CLAN_UPSELL:
@@ -147,7 +147,7 @@ t.default = e => {
         guildId: t.id
       })
   }
-  return p.ProcessArgs.isDisallowPopupsSet() ? null : (0, a.jsx)(y, {
+  return T.ProcessArgs.isDisallowPopupsSet() ? null : (0, a.jsx)(x, {
     guild: e.guild
   })
 }

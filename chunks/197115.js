@@ -41,8 +41,8 @@ t.default = function(e) {
     premiumModalAnalyticsLocation: w,
     showIcon: k = !0,
     disableShine: B,
-    applicationId: F,
-    giftMessage: V,
+    applicationId: V,
+    giftMessage: F,
     overrideDisabledButtonText: x,
     shinyButtonClassName: H,
     ...Y
@@ -135,8 +135,8 @@ t.default = function(e) {
       onSubscribeModalClose: G,
       analyticsLocations: z,
       premiumModalAnalyticsLocation: w,
-      applicationId: F,
-      giftMessage: V
+      applicationId: V,
+      giftMessage: F
     })
   };
   if (M) return (0, i.jsxs)(o.Button, {
@@ -168,9 +168,9 @@ t.default = function(e) {
     })]
   });
   let q = R.default.Messages.APPLICATION_STORE_GET_PREMIUM,
-    J = null != K ? (0, m.getPremiumPlanItem)(K) : null,
-    Z = null != J ? m.default.getPremiumType(J.planId) : null == j ? void 0 : j.premiumType,
-    $ = r === O.PremiumSubscriptionSKUs.TIER_2 && null != Z && [O.PremiumTypes.TIER_0, O.PremiumTypes.TIER_1].includes(Z);
+    Z = null != K ? (0, m.getPremiumPlanItem)(K) : null,
+    J = null != Z ? m.default.getPremiumType(Z.planId) : null == j ? void 0 : j.premiumType,
+    $ = r === O.PremiumSubscriptionSKUs.TIER_2 && null != J && [O.PremiumTypes.TIER_0, O.PremiumTypes.TIER_1].includes(J);
   $ ? q = R.default.Messages.BILLING_SWITCH_PLAN_UPGRADE : X && null == K && (r === O.PremiumSubscriptionSKUs.TIER_2 || null == r) && (q = R.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_BUTTON_CTA_NON_SUB);
   let ee = null != K && K.status !== p.SubscriptionStatusTypes.ACCOUNT_HOLD && !(0, E.isNoneSubscription)(K.planId) && !$,
     et = ee ? null != x ? x : function(e) {
@@ -191,7 +191,7 @@ t.default = function(e) {
       }
     }({
       ctaSubscriptionSkuId: r,
-      currentPremiumType: Z
+      currentPremiumType: J
     }) : null;
 
   function en(e) {

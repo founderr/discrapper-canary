@@ -25,8 +25,8 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
       imageMarginTop: m,
       trackingSource: S,
       undismissable: I,
-      onDismissed: T,
-      onClick: p,
+      onDismissed: p,
+      onClick: T,
       cta: g,
       ctaColor: A
     } = e;
@@ -45,20 +45,20 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
           source: S,
           guild_id: t.id,
           notice_type: c
-        }), null == p || p()
+        }), null == T || T()
       },
       fullWidth: !0,
       color: A,
       children: g
     }));
-    let R = null != f ? "".concat(f, "px") : "16px";
+    let v = null != f ? "".concat(f, "px") : "16px";
     return (0, a.jsxs)("div", {
       className: _.channelNotice,
       children: [!0 === I ? null : (0, a.jsx)(r.Clickable, {
         onClick: () => {
           o.default.trackWithMetadata(E.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
             notice_type: c
-          }), null == T || T()
+          }), null == p || p()
         },
         className: _.close,
         "aria-label": h.default.Messages.DISMISS,
@@ -69,8 +69,8 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
         className: _.imageContainer,
         style: {
           marginTop: "".concat(m, "px"),
-          marginLeft: R,
-          marginRight: R
+          marginLeft: v,
+          marginRight: v
         },
         children: (0, a.jsx)("img", {
           className: _.image,

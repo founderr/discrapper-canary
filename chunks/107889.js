@@ -16,8 +16,8 @@ var a = s("735250"),
   f = s("785717"),
   S = s("318661"),
   E = s("484404"),
-  I = s("747074"),
-  m = s("806926"),
+  m = s("502762"),
+  I = s("806926"),
   T = s("740021"),
   p = s("228168"),
   _ = s("981631"),
@@ -61,7 +61,7 @@ function x(e) {
         "aria-label": N.default.Messages.USER_PROFILE_MODAL,
         children: [(0, a.jsx)("div", {
           ref: D,
-          children: (0, a.jsxs)(I.default, {
+          children: (0, a.jsxs)(m.default, {
             user: t,
             profileType: p.UserProfileTypes.MODAL,
             children: [(0, a.jsx)(T.default, {
@@ -71,12 +71,12 @@ function x(e) {
               activity: O,
               friendToken: h,
               onClose: j
-            }), (0, a.jsxs)(I.default.Inner, {
+            }), (0, a.jsxs)(m.default.Inner, {
               children: [P === n.ModalTransitionState.ENTERED && (0, a.jsx)(E.default, {
                 onTooltipClose: j
               }), (0, a.jsx)("div", {
                 className: A.body,
-                children: (0, a.jsx)(m.default, {
+                children: (0, a.jsx)(I.default, {
                   user: t,
                   displayProfile: y,
                   initialSection: C,

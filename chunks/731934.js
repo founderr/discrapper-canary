@@ -17,13 +17,13 @@ var a = n("735250"),
   m = n("419821"),
   S = n("367515"),
   I = n("250285"),
-  T = n("292352"),
-  p = n("689938"),
+  p = n("292352"),
+  T = n("689938"),
   g = n("954830"),
   A = n("794711"),
   N = n("926895");
 
-function R(e) {
+function v(e) {
   let {
     header: t,
     description: n,
@@ -55,7 +55,7 @@ function R(e) {
   })
 }
 
-function v() {
+function R() {
   return (0, a.jsxs)("div", {
     className: i()(g.box, g.linkingBanner, g.linkingBannerParent),
     children: [(0, a.jsxs)("div", {
@@ -66,32 +66,32 @@ function v() {
           className: A.marginBottom8,
           variant: "heading-xl/medium",
           children: (0, a.jsx)(o.HeadingLevel, {
-            children: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_PARENT
+            children: T.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_PARENT
           })
         }), (0, a.jsx)(o.Text, {
           variant: "text-sm/medium",
           color: "text-muted",
           className: A.marginBottom20,
-          children: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_DESCRIPTION_PARENT
+          children: T.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_DESCRIPTION_PARENT
         })]
       }), (0, a.jsx)("img", {
         className: g.bannerArt,
         src: N,
-        alt: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_TEEN_ASSET_ALT
+        alt: T.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_TEEN_ASSET_ALT
       })]
     }), (0, a.jsxs)("div", {
       className: g.steps,
-      children: [(0, a.jsx)(R, {
-        header: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_HEADER,
-        description: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_DESCRIPTION,
+      children: [(0, a.jsx)(v, {
+        header: T.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_HEADER,
+        description: T.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_DESCRIPTION,
         stepNumber: 1
-      }), (0, a.jsx)(R, {
-        header: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_2_HEADER,
-        description: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_2_DESCRIPTION,
+      }), (0, a.jsx)(v, {
+        header: T.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_2_HEADER,
+        description: T.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_2_DESCRIPTION,
         stepNumber: 2
-      }), (0, a.jsx)(R, {
-        header: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_3_HEADER,
-        description: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_3_DESCRIPTION,
+      }), (0, a.jsx)(v, {
+        header: T.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_3_HEADER,
+        description: T.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_3_DESCRIPTION,
         stepNumber: 3
       })]
     })]
@@ -107,20 +107,20 @@ function O() {
         className: A.marginBottom8,
         variant: "heading-xl/medium",
         children: (0, a.jsx)(o.HeadingLevel, {
-          children: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN
+          children: T.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN
         })
       }), (0, a.jsx)(o.Text, {
         variant: "text-sm/medium",
         color: "text-muted",
         className: A.marginBottom20,
-        children: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_DESCRIPTION_TEEN.format({
+        children: T.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_DESCRIPTION_TEEN.format({
           link: "https://support.discord.com/hc/articles/14155060633623"
         })
       }), e ? null : (0, a.jsx)(C.default, {})]
     }), (0, a.jsx)("img", {
       className: g.bannerArt,
       src: N,
-      alt: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_TEEN_ASSET_ALT
+      alt: T.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_TEEN_ASSET_ALT
     })]
   })
 }
@@ -138,7 +138,7 @@ function L(e) {
     return null == i ? null : (0, a.jsx)(I.default, {
       userId: i.id,
       isLast: r,
-      children: () => t === T.UserLinkStatus.ACTIVE ? (0, a.jsx)(m.UserLinkAcceptedRequestRow, {
+      children: () => t === p.UserLinkStatus.ACTIVE ? (0, a.jsx)(m.UserLinkAcceptedRequestRow, {
         user: i
       }) : (0, a.jsx)(S.UserLinkPendingRequestRow, {
         user: i
@@ -172,8 +172,8 @@ function L(e) {
               var n;
               i.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
             },
-            sectionHeight: T.FAMILY_CENTER_REQUEST_SECTION_HEIGHT,
-            rowHeight: T.FAMILY_CENTER_REQUEST_ROW_HEIGHT,
+            sectionHeight: p.FAMILY_CENTER_REQUEST_SECTION_HEIGHT,
+            rowHeight: p.FAMILY_CENTER_REQUEST_ROW_HEIGHT,
             renderSection: h,
             renderRow: E,
             sections: [l.length],
@@ -188,16 +188,16 @@ function L(e) {
 }
 let M = () => {
     let e = (0, E.default)(),
-      t = (0, h.useUserForLinkStatus)(T.UserLinkStatus.ACTIVE),
-      n = e ? T.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : T.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
+      t = (0, h.useUserForLinkStatus)(p.UserLinkStatus.ACTIVE),
+      n = e ? p.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : p.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
       s = {
         count: t.length,
         max: n
       },
-      l = (0, c.useAgeSpecificText)(p.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_TEEN.format(s), p.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_PARENT.format(s));
+      l = (0, c.useAgeSpecificText)(T.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_TEEN.format(s), T.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_PARENT.format(s));
     return (0, a.jsx)(a.Fragment, {
       children: t.length > 0 ? (0, a.jsx)(L, {
-        sectionType: T.UserLinkStatus.ACTIVE,
+        sectionType: p.UserLinkStatus.ACTIVE,
         sectionTitle: l,
         requests: t
       }) : (0, a.jsxs)("div", {
@@ -210,7 +210,7 @@ let M = () => {
         }), (0, a.jsx)("div", {
           className: g.box,
           children: (0, a.jsx)(_.default, {
-            text: p.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_EMPTY_DESCRIPTION
+            text: T.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_EMPTY_DESCRIPTION
           })
         })]
       })
@@ -218,10 +218,10 @@ let M = () => {
   },
   P = () => {
     let e = (0, h.useHasMaxConnections)(),
-      t = (0, E.default)() ? T.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : T.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
-      n = (0, c.useAgeSpecificText)(p.default.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_TEEN.format({
+      t = (0, E.default)() ? p.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : p.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
+      n = (0, c.useAgeSpecificText)(T.default.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_TEEN.format({
         maxConnections: t
-      }), p.default.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_PARENT.format({
+      }), T.default.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_PARENT.format({
         maxConnections: t
       }));
     return e ? (0, a.jsx)("div", {
@@ -233,31 +233,31 @@ let M = () => {
       })
     }) : null
   },
-  y = () => (0, f.useShouldShowHelplineLink)() ? (0, a.jsxs)("div", {
+  x = () => (0, f.useShouldShowHelplineLink)() ? (0, a.jsxs)("div", {
     className: i()(g.__invalid_helpLineInfo, A.marginTop20),
     children: [(0, a.jsx)(o.Heading, {
       className: g.supportHeader,
       variant: "heading-sm/semibold",
       children: (0, a.jsx)(o.HeadingLevel, {
-        children: p.default.Messages.FAMILY_CENTER_HELP_LINE_HEADER
+        children: T.default.Messages.FAMILY_CENTER_HELP_LINE_HEADER
       })
     }), (0, a.jsx)(o.Text, {
       variant: "text-xs/medium",
       color: "text-muted",
-      children: p.default.Messages.FAMILY_CENTER_HELP_LINE_CONTENT.format({
+      children: T.default.Messages.FAMILY_CENTER_HELP_LINE_CONTENT.format({
         helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line"
       })
     })]
   }) : null,
-  x = () => {
-    let e = (0, h.useUserForLinkStatus)(T.UserLinkStatus.PENDING),
-      t = (0, c.useAgeSpecificText)(p.default.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_TEEN.format({
+  y = () => {
+    let e = (0, h.useUserForLinkStatus)(p.UserLinkStatus.PENDING),
+      t = (0, c.useAgeSpecificText)(T.default.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_TEEN.format({
         count: e.length
-      }), p.default.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_PARENT.format({
+      }), T.default.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_PARENT.format({
         count: e.length
       }));
     return 0 === e.length ? null : (0, a.jsx)(L, {
-      sectionType: T.UserLinkStatus.PENDING,
+      sectionType: p.UserLinkStatus.PENDING,
       sectionTitle: t,
       requests: e
     })
@@ -266,6 +266,6 @@ t.default = () => {
   let e = (0, E.default)();
   return (0, a.jsxs)("div", {
     className: g.container,
-    children: [e ? (0, a.jsx)(v, {}) : (0, a.jsx)(O, {}), (0, a.jsx)(M, {}), (0, a.jsx)(x, {}), (0, a.jsx)(P, {}), (0, a.jsx)(y, {})]
+    children: [e ? (0, a.jsx)(R, {}) : (0, a.jsx)(O, {}), (0, a.jsx)(M, {}), (0, a.jsx)(y, {}), (0, a.jsx)(P, {}), (0, a.jsx)(x, {})]
   })
 }

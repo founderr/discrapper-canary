@@ -22,17 +22,17 @@ t.default = e => {
     badge: n,
     primaryColor: l,
     secondaryColor: I,
-    tag: T,
-    error: p,
+    tag: p,
+    error: T,
     furthestStep: g
-  } = e, [A, N] = s.useState(n), [R, v] = s.useState({
+  } = e, [A, N] = s.useState(n), [v, R] = s.useState({
     primary: l,
     secondary: I
   }), [O, L] = s.useState(() => {
     for (let e = 0; e < f.CLAN_BADGE_PALETTE_PRESETS.length; e++)
       if (f.CLAN_BADGE_PALETTE_PRESETS[e].primary === l && f.CLAN_BADGE_PALETTE_PRESETS[e].secondary === I) return e;
     return S
-  }), M = S === O, P = M ? R : f.CLAN_BADGE_PALETTE_PRESETS[O];
+  }), M = S === O, P = M ? v : f.CLAN_BADGE_PALETTE_PRESETS[O];
   return s.useEffect(() => {
     let e = g === E.ClanSetupSteps.CUSTOMIZE_TAG_BADGE ? {
       brandPrimaryColor: P.primary,
@@ -89,7 +89,7 @@ t.default = e => {
             className: _.pickerGrid,
             children: [f.CLAN_BADGE_PALETTE_PRESETS.map((e, t) => (0, a.jsx)(u.Clickable, {
               onClick: () => {
-                L(t), v(f.CLAN_BADGE_PALETTE_PRESETS[t])
+                L(t), R(f.CLAN_BADGE_PALETTE_PRESETS[t])
               },
               className: i()(_.badgeAssetContainer, {
                 [_.badgeAssetContainerSelected]: t === O
@@ -117,22 +117,22 @@ t.default = e => {
             }),
             children: [(0, a.jsx)(d.CustomColorPicker, {
               className: _.colorPicker,
-              value: R.primary,
+              value: v.primary,
               eagerUpdate: !0,
               wrapperComponentType: "div",
               onChange: e => {
-                v(t => ({
+                R(t => ({
                   ...t,
                   primary: (0, r.int2hex)(e)
                 }))
               }
             }), (0, a.jsx)(d.CustomColorPicker, {
               className: _.colorPicker,
-              value: R.secondary,
+              value: v.secondary,
               eagerUpdate: !0,
               wrapperComponentType: "div",
               onChange: e => {
-                v(t => ({
+                R(t => ({
                   ...t,
                   secondary: (0, r.int2hex)(e)
                 }))
@@ -142,15 +142,15 @@ t.default = e => {
         })]
       }), (0, a.jsxs)("div", {
         className: _.tagContainer,
-        children: [null != p && (0, a.jsx)(u.Text, {
+        children: [null != T && (0, a.jsx)(u.Text, {
           variant: "text-sm/normal",
           color: "status-danger",
           className: C.errorText,
-          children: p
+          children: T
         }), (0, a.jsx)(u.TextInput, {
           className: _.tagInputWrapper,
           inputClassName: _.tagInput,
-          value: T,
+          value: p,
           onChange: e => t({
             tag: e
           }),

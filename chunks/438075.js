@@ -24,15 +24,15 @@ function i(e) {
     isInteracting: u,
     isAutomodBlockedMessage: d,
     renderThreadAccessory: c,
-    renderComponentAccessory: f,
-    renderSuppressEmbeds: E,
+    renderComponentAccessory: E,
+    renderSuppressEmbeds: f,
     forceAddReactions: _,
-    className: m
+    className: T
   } = e;
   return d ? null : (0, s.jsx)(a.default, {
     message: t,
     children: (0, s.jsx)(l.default, {
-      className: m,
+      className: T,
       isInteracting: u,
       message: t,
       channel: n,
@@ -40,8 +40,8 @@ function i(e) {
       hasSpoilerEmbeds: r,
       onAttachmentContextMenu: o,
       renderThreadAccessory: c,
-      renderComponentAccessory: f,
-      renderSuppressEmbeds: E,
+      renderComponentAccessory: E,
+      renderSuppressEmbeds: f,
       forceAddReactions: _
     })
   })

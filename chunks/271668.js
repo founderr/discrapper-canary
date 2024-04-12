@@ -41,7 +41,7 @@ t.default = r.forwardRef(function(e, t) {
   let {
     channel: n,
     canOnlyUseTextCommands: s
-  } = e, o = r.useRef(!1), l = r.useRef(0), [G, w] = r.useState(0), k = r.useRef(null), [B, F] = r.useState(!1), V = E.ApplicationCommandDiscoveryPickerStore.useStore(e => e.activeCategoryIndex);
+  } = e, o = r.useRef(!1), l = r.useRef(0), [G, w] = r.useState(0), k = r.useRef(null), [B, V] = r.useState(!1), F = E.ApplicationCommandDiscoveryPickerStore.useStore(e => e.activeCategoryIndex);
   r.useEffect(() => {
     (0, _.trackWithMetadata)(D.AnalyticEvents.APPLICATION_COMMAND_BROWSER_OPENED)
   }, []);
@@ -63,7 +63,7 @@ t.default = r.forwardRef(function(e, t) {
     limit: L.DISCOVERY_COMMANDS_QUERY_LIMIT,
     includeFrecency: !0
   }), Q = (0, I.useSynchronizedActiveCategoryIndexForScrollPosition)({
-    activeCategoryIndex: V,
+    activeCategoryIndex: F,
     isScrolling: o,
     listRef: k,
     onActiveCategoryIndexChange: e => {
@@ -83,8 +83,8 @@ t.default = r.forwardRef(function(e, t) {
   r.useEffect(() => {
     q(l.current)
   }, [W]);
-  let J = r.useCallback(e => e !== H.length - 1 || j ? 16 : 0, [H.length, j]),
-    Z = Y.map(e => e.data.length);
+  let Z = r.useCallback(e => e !== H.length - 1 || j ? 16 : 0, [H.length, j]),
+    J = Y.map(e => e.data.length);
   r.useEffect(() => {
     null != k.current && B && null != G && k.current.scrollRowIntoView(G)
   }, [B, G]), r.useLayoutEffect(() => {
@@ -127,7 +127,7 @@ t.default = r.forwardRef(function(e, t) {
       let t = j ? 7 : 0,
         n = W.length + t,
         i = null == G ? 0 : G + e;
-      return i >= n ? i = n - 1 : i < 0 && (i = 0), w(i), F(!0), !0
+      return i >= n ? i = n - 1 : i < 0 && (i = 0), w(i), V(!0), !0
     }
   }), [W.length, Y, j, x, ee, G]);
   let et = r.useCallback(e => {
@@ -185,7 +185,7 @@ t.default = r.forwardRef(function(e, t) {
         section: l,
         onClick: () => ee(a, l, (0, p.getCommandTriggerSection)(s.section)),
         onHover: () => {
-          w(null), F(!1)
+          w(null), V(!1)
         }
       }, o)
     }, [n, Y, ee, x, G]),
@@ -202,7 +202,7 @@ t.default = r.forwardRef(function(e, t) {
       channel: n,
       sections: x,
       filteredSectionId: K,
-      activeCategoryIndex: V,
+      activeCategoryIndex: F,
       onSectionClick: $,
       applicationCommandListRef: k
     }), (0, i.jsx)(S.default, {
@@ -214,10 +214,10 @@ t.default = r.forwardRef(function(e, t) {
       renderSection: en,
       renderSectionHeader: et,
       rowCount: H.length,
-      rowCountBySection: Z,
+      rowCountBySection: J,
       rowHeight: 56,
       sectionHeaderHeight: 32,
-      sectionMarginBottom: J,
+      sectionMarginBottom: Z,
       ref: k,
       stickyHeaders: !0
     })]

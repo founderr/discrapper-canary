@@ -35,7 +35,7 @@ function N(e) {
       })
     },
     children: [function(e) {
-      let [t, i] = n.useState(!1), [N, M] = n.useState(!1), h = (0, a.useStateFromStores)([c.default], () => c.default.getGuildUnreadSetting(e)), I = (0, a.useStateFromStores)([c.default], () => c.default.getMessageNotifications(e)), L = N ? r.Presets.CUSTOM : (0, r.presetFromSettings)(h, I), A = t => {
+      let [t, i] = n.useState(!1), [N, M] = n.useState(!1), h = (0, a.useStateFromStores)([c.default], () => c.default.getGuildUnreadSetting(e)), I = (0, a.useStateFromStores)([c.default], () => c.default.getMessageNotifications(e)), A = N ? r.Presets.CUSTOM : (0, r.presetFromSettings)(h, I), L = t => {
         M(!1);
         let i = {
           message_notifications: t
@@ -53,29 +53,29 @@ function N(e) {
           children: [(0, s.jsx)(l.MenuRadioItem, {
             id: "everything",
             group: "notification-preset",
-            checked: L === r.Presets.ALL_MESSAGES,
+            checked: A === r.Presets.ALL_MESSAGES,
             label: _.default.Messages.NOTIFICATION_PRESET_1,
             action: () => ((0, d.updateGuildPreset)(e, r.Presets.ALL_MESSAGES), M(!1))
           }), (0, s.jsx)(l.MenuRadioItem, {
             id: "essentials",
             group: "notification-preset",
-            checked: L === r.Presets.MENTIONS,
+            checked: A === r.Presets.MENTIONS,
             label: _.default.Messages.NOTIFICATION_PRESET_2,
             action: () => ((0, d.updateGuildPreset)(e, r.Presets.MENTIONS), M(!1))
           }), (0, s.jsx)(l.MenuRadioItem, {
             id: "nothing",
             group: "notification-preset",
-            checked: L === r.Presets.NOTHING,
+            checked: A === r.Presets.NOTHING,
             label: _.default.Messages.NOTIFICATION_PRESET_3,
             action: () => ((0, d.updateGuildPreset)(e, r.Presets.NOTHING), M(!1))
           }), (0, s.jsx)(l.MenuRadioItem, {
             id: "custom",
             group: "notification-preset",
-            checked: L === r.Presets.CUSTOM,
+            checked: A === r.Presets.CUSTOM,
             action: () => (i(!0), M(!0)),
             label: _.default.Messages.NOTIFICATION_PRESET_CUSTOM
           })]
-        }), (L === r.Presets.CUSTOM || t) && (0, s.jsxs)(l.MenuGroup, {
+        }), (A === r.Presets.CUSTOM || t) && (0, s.jsxs)(l.MenuGroup, {
           children: [(0, s.jsxs)(l.MenuItem, {
             id: "unread_setting",
             label: "Unread Badges",
@@ -102,20 +102,20 @@ function N(e) {
               id: "push_settings_everything",
               label: _.default.Messages.NOTIFICATION_SETTINGS_PRESETS_ALL_MESSAGES,
               checked: I === f.UserNotificationSettings.ALL_MESSAGES,
-              action: () => A(f.UserNotificationSettings.ALL_MESSAGES),
+              action: () => L(f.UserNotificationSettings.ALL_MESSAGES),
               subtext: h !== E.UnreadSetting.ALL_MESSAGES && I !== f.UserNotificationSettings.ALL_MESSAGES ? _.default.Messages.NOTIFICATION_SETTINGS_UNREAD_UPDATE_WARNING : void 0
             }), (0, s.jsx)(l.MenuRadioItem, {
               group: "notification-preset",
               id: "push_settings_everything_mention",
               checked: I === f.UserNotificationSettings.ONLY_MENTIONS,
               label: _.default.Messages.NOTIFICATION_SETTINGS_PRESETS_MENTION_ONLY,
-              action: () => A(f.UserNotificationSettings.ONLY_MENTIONS)
+              action: () => L(f.UserNotificationSettings.ONLY_MENTIONS)
             }), (0, s.jsx)(l.MenuRadioItem, {
               group: "notification-preset",
               id: "push_settings_everything_nothing",
               label: _.default.Messages.NOTIFICATION_SETTINGS_PRESETS_NONE,
               checked: I === f.UserNotificationSettings.NO_MESSAGES,
-              action: () => A(f.UserNotificationSettings.NO_MESSAGES)
+              action: () => L(f.UserNotificationSettings.NO_MESSAGES)
             })]
           }, "push_settings")]
         })]

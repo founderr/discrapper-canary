@@ -16,8 +16,8 @@ var a = s("735250"),
   f = s("487922"),
   S = s("620648"),
   E = s("944546"),
-  I = s("470900"),
-  m = s("228168"),
+  m = s("470900"),
+  I = s("228168"),
   T = s("689938"),
   p = s("727705");
 let _ = e => {
@@ -27,20 +27,20 @@ let _ = e => {
     return [c.default.getUserProfile(e.id), null !== (a = null === (t = c.default.getMutualFriends(e.id)) || void 0 === t ? void 0 : t.length) && void 0 !== a ? a : 0, null !== (l = null === (s = c.default.getMutualGuilds(e.id)) || void 0 === s ? void 0 : s.length) && void 0 !== l ? l : 0]
   }), i = [];
   return (!e.isNonUserBot() || e.isClyde()) && i.push({
-    section: m.UserProfileSections.USER_INFO,
+    section: I.UserProfileSections.USER_INFO,
     text: T.default.Messages.USER_PROFILE_ABOUT_ME
   }), !e.bot && i.push({
-    section: m.UserProfileSections.MUTUAL_FRIENDS,
+    section: I.UserProfileSections.MUTUAL_FRIENDS,
     text: 0 === a ? T.default.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS : T.default.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
       count: a
     })
   }), !e.isClyde() && i.push({
-    section: m.UserProfileSections.MUTUAL_GUILDS,
+    section: I.UserProfileSections.MUTUAL_GUILDS,
     text: 0 === l ? T.default.Messages.USER_PROFILE_NO_MUTUAL_SERVERS : T.default.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
       count: l
     })
   }), e.bot && (null == s ? void 0 : null === (t = s.application) || void 0 === t ? void 0 : t.id) != null && i.push({
-    section: m.UserProfileSections.BOT_DATA_ACCESS,
+    section: I.UserProfileSections.BOT_DATA_ACCESS,
     text: T.default.Messages.BOTS_DATA_ACCESS_TAB
   }), i
 };
@@ -50,7 +50,7 @@ function N(e) {
   let {
     user: T,
     displayProfile: N,
-    initialSection: A = m.UserProfileSections.USER_INFO,
+    initialSection: A = I.UserProfileSections.USER_INFO,
     autoFocusNote: x,
     onClose: v
   } = e, U = (0, n.useStateFromStores)([u.default], () => u.default.getId() === T.id), {
@@ -65,13 +65,13 @@ function N(e) {
       action: "PRESS_SECTION",
       section: e
     }), P(e)
-  }, [h, P]), j = (0, i.match)(R).with(m.UserProfileSections.MUTUAL_FRIENDS, () => (0, a.jsx)(E.default, {
+  }, [h, P]), j = (0, i.match)(R).with(I.UserProfileSections.MUTUAL_FRIENDS, () => (0, a.jsx)(E.default, {
     user: T,
     onClose: v
-  })).with(m.UserProfileSections.MUTUAL_GUILDS, () => (0, a.jsx)(I.default, {
+  })).with(I.UserProfileSections.MUTUAL_GUILDS, () => (0, a.jsx)(m.default, {
     user: T,
     onClose: v
-  })).with(m.UserProfileSections.BOT_DATA_ACCESS, () => (0, a.jsx)(f.default, {
+  })).with(I.UserProfileSections.BOT_DATA_ACCESS, () => (0, a.jsx)(f.default, {
     user: T
   })).otherwise(() => (0, a.jsx)(S.default, {
     user: T,

@@ -16,8 +16,8 @@ var a = s("735250"),
   f = s("906732"),
   S = s("680295"),
   E = s("199902"),
-  I = s("314897"),
-  m = s("158776"),
+  m = s("314897"),
+  I = s("158776"),
   T = s("594174"),
   p = s("342656"),
   _ = s("785717"),
@@ -27,7 +27,7 @@ var a = s("735250"),
   v = s("318661"),
   U = s("706327"),
   h = s("484404"),
-  C = s("747074"),
+  C = s("502762"),
   R = s("58307"),
   P = s("62154"),
   M = s("293259"),
@@ -48,28 +48,28 @@ function F(e) {
     var e, s;
     return (null === (s = A.default.getUserProfile(t.id)) || void 0 === s ? void 0 : null === (e = s.application) || void 0 === e ? void 0 : e.id) != null
   }), f = (0, U.useMutualFriends)(t), S = (0, i.useStateFromStores)([A.default], () => A.default.getMutualGuilds(t.id)), E = t.bot || s, {
-    enabled: I
+    enabled: m
   } = (0, p.useProfileMutualsExperiment)({
     autoTrackExposure: !0,
     location: c.default.PROFILE_MODAL,
     disable: E
-  }), m = l.useMemo(() => {
-    if (I) {
+  }), I = l.useMemo(() => {
+    if (m) {
       var e;
       return O.default.Messages.MUTUAL_FRIENDS_WITH_END_COUNT.format({
         count: "".concat(null !== (e = null == f ? void 0 : f.length) && void 0 !== e ? e : 0)
       })
     }
     return O.default.Messages.MUTUAL_FRIENDS
-  }, [I, f]), T = l.useMemo(() => {
-    if (I) {
+  }, [m, f]), T = l.useMemo(() => {
+    if (m) {
       var e;
       return O.default.Messages.MUTUAL_GUILDS_WITH_END_COUNT.format({
         count: "".concat(null !== (e = null == S ? void 0 : S.length) && void 0 !== e ? e : 0)
       })
     }
     return O.default.Messages.MUTUAL_GUILDS
-  }, [I, S]);
+  }, [m, S]);
   return (0, a.jsx)("div", {
     className: D.tabBarContainer,
     children: (0, a.jsxs)(n.TabBar, {
@@ -88,7 +88,7 @@ function F(e) {
       }) : null, t.bot || s ? null : (0, a.jsx)(n.TabBar.Item, {
         className: D.tabBarItem,
         id: g.UserProfileSections.MUTUAL_FRIENDS,
-        children: m
+        children: I
       }), s || t.isClyde() ? null : (0, a.jsx)(n.TabBar.Item, {
         className: D.tabBarItem,
         id: g.UserProfileSections.MUTUAL_GUILDS,
@@ -123,11 +123,11 @@ function L(e) {
     [A]: [Y.id]
   });
   let K = (0, i.useStateFromStores)([E.default], () => null != E.default.getAnyStreamForUser(Y.id)),
-    W = (0, i.useStateFromStores)([m.default], () => m.default.findActivity(Y.id, e => e.type !== y.ActivityTypes.CUSTOM_STATUS)),
+    W = (0, i.useStateFromStores)([I.default], () => I.default.findActivity(Y.id, e => e.type !== y.ActivityTypes.CUSTOM_STATUS)),
     Z = (0, R.useGetVoiceChannelInfoForVoiceActivitySection)(Y.id, A),
     [q, J] = l.useState(!1),
     [X, $] = l.useState(Y.isNonUserBot() && !Y.isClyde() ? g.UserProfileSections.MUTUAL_GUILDS : k),
-    ee = (0, i.useStateFromStores)([I.default], () => I.default.getId() === Y.id),
+    ee = (0, i.useStateFromStores)([m.default], () => m.default.getId() === Y.id),
     {
       showVoiceActivityInProfile: et
     } = x.VoiceActivityProfileExperiment.useExperiment({

@@ -25,19 +25,19 @@ var a, s, l = n("735250"),
   m = n("427679"),
   S = n("448206"),
   I = n("496675"),
-  T = n("938475"),
-  p = n("808602"),
+  p = n("938475"),
+  T = n("808602"),
   g = n("305878"),
   A = n("263704"),
   N = n("465670"),
-  R = n("242315"),
-  v = n("393112"),
+  v = n("242315"),
+  R = n("393112"),
   O = n("170039"),
   L = n("602623"),
   M = n("626135"),
   P = n("823379"),
-  y = n("15274"),
-  x = n("924301"),
+  x = n("15274"),
+  y = n("924301"),
   D = n("504160"),
   b = n("151864"),
   U = n("835184"),
@@ -122,7 +122,7 @@ function q(e) {
   let {
     guildEvent: t,
     channel: n
-  } = e, a = (0, r.useStateFromStoresArray)([T.default], () => T.default.getVoiceStatesForChannel(n).map(e => {
+  } = e, a = (0, r.useStateFromStoresArray)([p.default], () => p.default.getVoiceStatesForChannel(n).map(e => {
     let {
       user: t
     } = e;
@@ -152,7 +152,7 @@ function Q(e) {
   let {
     guildEvent: t,
     noticeType: n
-  } = e, a = (0, H.getNextRecurrenceIdInEvent)(t), s = (0, r.useStateFromStores)([x.default], () => x.default.isInterestedInEventRecurrence(t.id, a), [t.id, a]), i = (0, r.useStateFromStores)([U.default], () => U.default.getUpcomingNoticeSeenTime(t.id), [t.id]);
+  } = e, a = (0, H.getNextRecurrenceIdInEvent)(t), s = (0, r.useStateFromStores)([y.default], () => y.default.isInterestedInEventRecurrence(t.id, a), [t.id, a]), i = (0, r.useStateFromStores)([U.default], () => U.default.getUpcomingNoticeSeenTime(t.id), [t.id]);
   return !s && null == i && (0, D.markUpcomingEventNoticeAsSeen)(t.id), (0, l.jsxs)(o.Button, {
     fullWidth: !0,
     className: K.joinButton,
@@ -170,7 +170,7 @@ function Q(e) {
       width: 16,
       height: 16,
       className: K.buttonIcon
-    }) : (0, l.jsx)(p.default, {
+    }) : (0, l.jsx)(T.default, {
       width: 16,
       height: 16,
       className: K.buttonIcon
@@ -205,7 +205,7 @@ function Z(e) {
     children: [(0, l.jsxs)("div", {
       className: K.textBlock,
       children: [(0, l.jsx)(o.Clickable, {
-        onClick: () => (0, y.openGuildEventDetails)({
+        onClick: () => (0, x.openGuildEventDetails)({
           eventId: n.id
         }),
         className: K.eventNameClickable,
@@ -247,7 +247,7 @@ function Z(e) {
         width: 16,
         height: 16,
         className: K.stageIcon
-      }) : (0, l.jsx)(v.default, {
+      }) : (0, l.jsx)(R.default, {
         width: 16,
         height: 16,
         className: K.stageIcon
@@ -275,7 +275,7 @@ function X(e) {
     heading: W.default.Messages.HAPPENING_NOW,
     topic: t.name,
     location: (0, j.guildEventDetailsParser)(n, !0),
-    locationIcon: (0, l.jsx)(v.default, {
+    locationIcon: (0, l.jsx)(R.default, {
       width: 16,
       height: 16,
       className: K.stageIcon
@@ -290,7 +290,7 @@ function J(e) {
   let {
     guildEvent: t
   } = e, n = i.useCallback(() => {
-    (0, y.openGuildEventDetails)({
+    (0, x.openGuildEventDetails)({
       eventId: t.id
     })
   }, [t]);
@@ -335,7 +335,7 @@ function ee(e) {
     heading: W.default.Messages.STAGE_CHANNEL_LIVE_NOW,
     location: n.name,
     details: i,
-    detailsIcon: (0, l.jsx)(R.default, {
+    detailsIcon: (0, l.jsx)(v.default, {
       width: 14,
       height: 14,
       className: K.stageIcon

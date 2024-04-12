@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return O
   },
   TraitSelector: function() {
-    return v
+    return R
   }
 }), n("47120"), n("653041");
 var a = n("735250"),
@@ -27,14 +27,14 @@ var a = n("735250"),
   m = n("950463"),
   S = n("90062"),
   I = n("964309"),
-  T = n("729285"),
-  p = n("480222"),
+  p = n("729285"),
+  T = n("480222"),
   g = n("207796"),
   A = n("308083"),
   N = n("689938"),
-  R = n("896328");
+  v = n("896328");
 
-function v() {
+function R() {
   let e = (0, g.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default),
     t = (0, g.useClanDiscoveryUIStore)(e => e.setSelectedTraits, o.default),
     n = s.useMemo(() => N.default.getAvailableLocales().map(e => ({
@@ -53,9 +53,9 @@ function v() {
         interests: new Set([...i, ...e])
       })
     }, [r, i]);
-  return (0, a.jsxs)(p.default, {
+  return (0, a.jsxs)(T.default, {
     children: [(0, a.jsxs)("div", {
-      className: R.traitHeader,
+      className: v.traitHeader,
       children: [(0, a.jsx)(u.Heading, {
         variant: "heading-xxl/normal",
         color: "header-primary",
@@ -66,9 +66,9 @@ function v() {
         children: N.default.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE
       })]
     }), (0, a.jsxs)("div", {
-      className: R.traits,
+      className: v.traits,
       children: [(0, a.jsx)("div", {
-        className: R.traitCategory,
+        className: v.traitCategory,
         children: (0, a.jsx)(c.TraitSelectionCategory, {
           title: N.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_VALORANT,
           icon: h.default,
@@ -77,7 +77,7 @@ function v() {
           handleUpdate: r
         })
       }), (0, a.jsx)("div", {
-        className: R.traitCategory,
+        className: v.traitCategory,
         children: (0, a.jsx)(c.TraitSelectionCategory, {
           title: N.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_AGE,
           icon: S.default,
@@ -86,7 +86,7 @@ function v() {
           handleUpdate: r
         })
       }), (0, a.jsx)("div", {
-        className: R.traitCategory,
+        className: v.traitCategory,
         children: (0, a.jsx)(c.TraitSelectionCategory, {
           title: N.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_IDENTITY,
           icon: I.default,
@@ -95,18 +95,18 @@ function v() {
           handleUpdate: r
         })
       }), (0, a.jsxs)("div", {
-        className: R.traitCategory,
+        className: v.traitCategory,
         children: [(0, a.jsxs)("div", {
-          className: R.languagesTitle,
+          className: v.languagesTitle,
           children: [(0, a.jsx)(E.default, {
-            className: R.languagesIcon
+            className: v.languagesIcon
           }), (0, a.jsx)(u.Text, {
             variant: "text-xs/semibold",
             color: "text-muted",
             children: N.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_LANGUAGE
           })]
         }), (0, a.jsx)("div", {
-          className: R.languagesSelect,
+          className: v.languagesSelect,
           children: (0, a.jsx)(u.SearchableSelect, {
             options: n,
             value: l,
@@ -116,7 +116,7 @@ function v() {
           })
         })]
       }), (0, a.jsx)("div", {
-        className: R.traitCategory,
+        className: v.traitCategory,
         children: (0, a.jsx)(c.TraitSelectionCategory, {
           title: N.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_LOCALE,
           icon: m.default,
@@ -154,9 +154,9 @@ function O() {
         time: "morning"
       }), n(e)
     }, [t, n]);
-  return (0, a.jsxs)(p.default, {
+  return (0, a.jsxs)(T.default, {
     children: [(0, a.jsxs)("div", {
-      className: R.playtimeHeader,
+      className: v.playtimeHeader,
       children: [(0, a.jsx)(u.Heading, {
         variant: "heading-xxl/medium",
         children: N.default.Messages.CLAN_SETUP_PRIMETIME_TITLE
@@ -166,9 +166,9 @@ function O() {
         children: N.default.Messages.CLAN_SETUP_PRIMETIME_SUBTITLE
       })]
     }), (0, a.jsxs)("div", {
-      className: R.playtimes,
+      className: v.playtimes,
       children: [t.map((t, n) => (0, a.jsxs)("div", {
-        className: R.timeSelectorRow,
+        className: v.timeSelectorRow,
         children: [(0, a.jsx)(u.SearchableSelect, {
           value: t.day,
           options: e,
@@ -179,16 +179,16 @@ function O() {
           onChange: e => c(n, e)
         }), (0, a.jsx)(u.Clickable, {
           onClick: () => E(n),
-          className: R.clickable,
+          className: v.clickable,
           children: (0, a.jsx)(C.default, {
-            className: R.removeIcon
+            className: v.removeIcon
           })
         })]
       }, t.id)), t.length < 3 && (0, a.jsxs)(u.Clickable, {
         onClick: h,
-        className: i()(R.timeSelectorRow, R.clickable),
-        children: [(0, a.jsx)(T.default, {
-          className: R.plusIcon
+        className: i()(v.timeSelectorRow, v.clickable),
+        children: [(0, a.jsx)(p.default, {
+          className: v.plusIcon
         }), (0, a.jsx)(u.Text, {
           variant: "text-sm/medium",
           children: N.default.Messages.CLAN_SETUP_PRIMETIME_ADD
@@ -203,9 +203,9 @@ function L() {
     t = (0, g.useClanDiscoveryUIStore)(e => e.selectedPlaystyle.id, o.default),
     n = (0, g.useClanDiscoveryUIStore)(e => e.setSelectedPlaystyle, o.default),
     l = s.useMemo(() => Object.values((0, A.getPlaystyleOptions)()), []);
-  return (0, a.jsxs)(p.default, {
+  return (0, a.jsxs)(T.default, {
     children: [(0, a.jsxs)("div", {
-      className: R.playstyleHeader,
+      className: v.playstyleHeader,
       children: [(0, a.jsx)(u.Heading, {
         variant: "heading-xxl/normal",
         color: "header-primary",
@@ -216,10 +216,10 @@ function L() {
         children: N.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE
       })]
     }), (0, a.jsx)("div", {
-      className: R.playstyles,
+      className: v.playstyles,
       children: l.map(s => (0, a.jsxs)(u.Clickable, {
-        className: i()(R.playstyleOption, {
-          [R.selectedPlaystyle]: s.type === t
+        className: i()(v.playstyleOption, {
+          [v.selectedPlaystyle]: s.type === t
         }),
         onClick: () => n({
           id: s.type,
@@ -239,7 +239,7 @@ function L() {
           })]
         }), s.type === t && (0, a.jsx)(_.default, {
           backgroundColor: e.hex(),
-          className: R.checkmark
+          className: v.checkmark
         })]
       }, s.type))
     })]

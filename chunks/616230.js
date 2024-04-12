@@ -19,8 +19,8 @@ var i = n("735250"),
   E = n("794358"),
   I = n("931468"),
   _ = n("449226"),
-  T = n("689938"),
-  h = n("893079"),
+  h = n("689938"),
+  T = n("893079"),
   g = n("120623");
 
 function C(e) {
@@ -44,13 +44,13 @@ function C(e) {
       } = await Promise.resolve().then(n.bind(n, "481060"));
       return n => (0, i.jsx)(t, {
         ...n,
-        header: T.default.Messages.MEMBER_VERIFICATION_WARNING_TITLE,
-        cancelText: T.default.Messages.MEMBER_VERIFICATION_WARNING_CANCEL,
-        confirmText: T.default.Messages.MEMBER_VERIFICATION_WARNING_CONFIRM,
+        header: h.default.Messages.MEMBER_VERIFICATION_WARNING_TITLE,
+        cancelText: h.default.Messages.MEMBER_VERIFICATION_WARNING_CANCEL,
+        confirmText: h.default.Messages.MEMBER_VERIFICATION_WARNING_CONFIRM,
         onConfirm: () => m(e),
         children: (0, i.jsx)(o.Text, {
           variant: "text-md/normal",
-          children: T.default.Messages.MEMBER_VERIFICATION_AUTOMATIC_WARNING
+          children: h.default.Messages.MEMBER_VERIFICATION_AUTOMATIC_WARNING
         })
       })
     }) : m(e)
@@ -67,27 +67,27 @@ function C(e) {
     })
   };
   return (0, i.jsxs)("div", {
-    className: h.itemWrapper,
+    className: T.itemWrapper,
     children: [(0, i.jsxs)("div", {
-      className: h.itemContent,
+      className: T.itemContent,
       children: [(0, i.jsx)(o.Heading, {
         variant: "text-md/semibold",
         color: "header-primary",
-        children: T.default.Messages.GUILD_SETTINGS_SAFETY_RULES_SCREENING
+        children: h.default.Messages.GUILD_SETTINGS_SAFETY_RULES_SCREENING
       }), (s || a && !d) && (0, i.jsx)(o.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        children: T.default.Messages.GUILD_SETTINGS_SAFETY_RULES_EDIT_SUBTITLE
+        children: h.default.Messages.GUILD_SETTINGS_SAFETY_RULES_EDIT_SUBTITLE
       }), !s && (0, i.jsx)("div", {
         className: g.pillRow,
         children: l && (0, i.jsxs)(o.Text, {
           color: "interactive-normal",
           variant: "text-xs/medium",
-          className: h.valuePill,
+          className: T.valuePill,
           children: [(0, i.jsx)(I.default, {
             width: 16,
             height: 16
-          }), T.default.Messages.GUILD_SETTINGS_SAFETY_RULES_FORM_PILL]
+          }), h.default.Messages.GUILD_SETTINGS_SAFETY_RULES_FORM_PILL]
         })
       })]
     }), (0, i.jsx)("div", {
@@ -101,7 +101,7 @@ function C(e) {
           },
           children: (0, i.jsx)(o.Tooltip, {
             tooltipContentClassName: g.__invalid_tooltip,
-            text: T.default.Messages.PREVIEW,
+            text: h.default.Messages.PREVIEW,
             children: e => (0, i.jsx)(E.default, {
               height: 24,
               width: 24,
@@ -115,7 +115,7 @@ function C(e) {
         })]
       }) : (0, i.jsx)(o.Button, {
         size: o.Button.Sizes.SMALL,
-        children: T.default.Messages.GUILD_AUTOMOD_RULE_SETUP_BUTTON
+        children: h.default.Messages.GUILD_AUTOMOD_RULE_SETUP_BUTTON
       })
     })]
   })
@@ -134,12 +134,12 @@ function N(e) {
     isClanContext: E = !1,
     onFieldsSave: I,
     onDescriptionSave: _,
-    verificationForm: T
+    verificationForm: h
   } = e, [N, R] = r.useState(E), A = r.useRef(!1), S = r.useCallback(() => {
     A.current = !0
   }, []), M = null !== (t = (0, p.useSubmittedGuildJoinRequestTotal)({
     guildId: o.id
-  })) && void 0 !== t ? t : 0, b = (0, l.useStateFromStores)([d.default], () => null != T ? T : d.default.get(o.id)), O = null !== (n = null == b ? void 0 : b.formFields) && void 0 !== n ? n : [];
+  })) && void 0 !== t ? t : 0, b = (0, l.useStateFromStores)([d.default], () => null != h ? h : d.default.get(o.id)), O = null !== (n = null == b ? void 0 : b.formFields) && void 0 !== n ? n : [];
   r.useEffect(() => {
     c.default.fetchVerificationForm(o.id)
   }, [o.id]);
@@ -156,8 +156,8 @@ function N(e) {
     disableAnimation: E,
     disableBackground: !L,
     children: (0, i.jsx)("div", {
-      className: a()(h.itemBodyContainer, g.rulesScreeningItems, {
-        [h.noPadding]: !L,
+      className: a()(T.itemBodyContainer, g.rulesScreeningItems, {
+        [T.noPadding]: !L,
         [g.rulesScreeningItemsNoBorder]: !L
       }),
       children: null != b && (0, i.jsx)(m.default, {

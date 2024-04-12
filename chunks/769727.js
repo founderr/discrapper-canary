@@ -18,7 +18,7 @@ var a = n("735250"),
   S = n("689938"),
   I = n("24953");
 
-function T() {
+function p() {
   let e = (0, C.useClanDiscoveryUIStore)(C.buildSearchCriteriaFromUIState, i()),
     t = (0, C.useClanDiscoveryUIStore)(e => e.selectedPlaystyle.name, o.default),
     n = (0, d.useStateFromStores)([h.default], () => h.default.getSearchResult(e), [e]);
@@ -47,7 +47,7 @@ function T() {
   }) : null
 }
 
-function p() {
+function T() {
   let e = (0, C.useClanDiscoveryUIStore)(e => e.mode, o.default),
     [, t] = s.useState(0),
     n = (0, r.useTransition)([e], {
@@ -104,7 +104,7 @@ t.default = function() {
     className: I.container,
     children: [(0, a.jsx)(g, {}), (0, a.jsx)(_.default, {}), (0, a.jsx)("div", {
       className: I.content,
-      children: (0, a.jsx)(T, {})
-    }), (0, a.jsx)(p, {})]
+      children: (0, a.jsx)(p, {})
+    }), (0, a.jsx)(T, {})]
   })
 }

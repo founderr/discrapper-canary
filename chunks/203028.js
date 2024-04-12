@@ -52,8 +52,8 @@ function C(e) {
         })
     }
   }(t), {
-    subtitle: T,
-    icon: p
+    subtitle: p,
+    icon: T
   } = function(e) {
     var t;
     let {
@@ -61,10 +61,10 @@ function C(e) {
       partiedMembers: d,
       voiceChannels: C,
       currentActivities: m
-    } = e, S = s.length, I = d.length - S, T = m[0], p = null == T ? void 0 : T.activity, g = null == T ? void 0 : T.startedPlayingTime, A = {
-      name: null !== (t = null == p ? void 0 : p.name) && void 0 !== t ? t : ""
+    } = e, S = s.length, I = d.length - S, p = m[0], T = null == p ? void 0 : p.activity, g = null == p ? void 0 : p.startedPlayingTime, A = {
+      name: null !== (t = null == T ? void 0 : T.name) && void 0 !== t ? t : ""
     };
-    if ((0, i.default)(p) && null != p) return {
+    if ((0, i.default)(T) && null != T) return {
       subtitle: (0, a.jsx)(u.default, {
         start: g,
         location: u.default.Locations.ACTIVITY_FEED_NEW,
@@ -72,19 +72,19 @@ function C(e) {
       }),
       icon: null
     };
-    if (S + I === 1 && null != T) {
+    if (S + I === 1 && null != p) {
       let {
         game: e
-      } = T;
-      if (null == p) return {
+      } = p;
+      if (null == T) return {
         subtitle: null,
         icon: null
       };
-      let t = c.createHeader(p);
+      let t = c.createHeader(T);
       if (null != t) return t;
-      switch (p.type) {
+      switch (T.type) {
         case h.ActivityTypes.PLAYING:
-          if ((0, o.default)(p)) return {
+          if ((0, o.default)(T)) return {
             subtitle: _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_XBOX,
             icon: (0, a.jsx)(f.default.Header.Icon, {
               src: f.default.Header.Icon.Src.XBOX
@@ -107,7 +107,7 @@ function C(e) {
           };
         case h.ActivityTypes.LISTENING:
           let s;
-          return s = (0, r.default)(p) ? (0, a.jsx)(f.default.Header.Icon, {
+          return s = (0, r.default)(T) ? (0, a.jsx)(f.default.Header.Icon, {
             src: f.default.Header.Icon.Src.SPOTIFY
           }) : null != e.getIconURL(E.ICON_SIZE) ? (0, a.jsx)(f.default.Header.Icon, {
             src: e.getIconURL(E.ICON_SIZE)
@@ -115,7 +115,7 @@ function C(e) {
             src: n("211827")
           }), {
             subtitle: _.default.Messages.ACTIVITY_FEED_NOW_PLAYING_LISTENING.format({
-              name: p.name
+              name: T.name
             }),
             icon: s
           };
@@ -185,8 +185,8 @@ function C(e) {
     priorityUser: S,
     guildId: null == m ? void 0 : m.id,
     title: I,
-    subtitle: T,
-    icon: p,
+    subtitle: p,
+    icon: T,
     onContextMenu: e => s(e, S.user)
   })
 }

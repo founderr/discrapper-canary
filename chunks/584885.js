@@ -30,18 +30,18 @@ t.default = e => {
     guildsData: m,
     analyticsContext: S,
     theme: I,
-    onViewGuild: T,
-    fetchGuilds: p,
+    onViewGuild: p,
+    fetchGuilds: T,
     onGuildCardSeen: g,
     currentCategoryId: A,
     loadId: N,
-    onTagClick: R,
-    showMoreCards: v = !1
+    onTagClick: v,
+    showMoreCards: R = !1
   } = e;
   s.useEffect(() => {
-    i.default.wait(() => p())
+    i.default.wait(() => T())
   }, [A]);
-  let O = (0, c.default)(v ? _ : h),
+  let O = (0, c.default)(R ? _ : h),
     {
       analyticsLocations: L
     } = (0, r.default)();
@@ -49,9 +49,9 @@ t.default = e => {
   let {
     guilds: M,
     loading: P
-  } = m, y = null == M || 0 === M.length;
-  if (!P && y) return null;
-  let x = async e => {
+  } = m, x = null == M || 0 === M.length;
+  if (!P && x) return null;
+  let y = async e => {
     if ((0, o.isAtGuildCapAndNonPremium)())(0, u.default)({
       analyticsSource: {
         page: f.AnalyticsPages.GUILD_DISCOVERY
@@ -64,7 +64,7 @@ t.default = e => {
     });
     else {
       let t = M.findIndex(t => t.id === e);
-      await T(e, t, S, N)
+      await p(e, t, S, N)
     }
   };
   if (P || null == M) {
@@ -74,10 +74,10 @@ t.default = e => {
   } else t = M.slice(0, O).map(e => (0, a.jsx)(d.default, {
     className: E.__invalid_guildCard,
     guild: e,
-    onView: x,
+    onView: y,
     theme: I,
     onGuildCardSeen: g,
-    onTagClick: R
+    onTagClick: v
   }, e.id));
   return (0, a.jsx)("section", {
     className: E.guildListSection,

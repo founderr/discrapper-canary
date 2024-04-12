@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return R
   }
 }), n("653041"), n("47120");
 var a = n("735250"),
@@ -21,17 +21,17 @@ var a = n("735250"),
   m = n("757266"),
   S = n("283595"),
   I = n("417363"),
-  T = n("626135"),
-  p = n("804739"),
+  p = n("626135"),
+  T = n("804739"),
   g = n("346329"),
   A = n("981631"),
   N = n("689938");
-let R = d.default.get(A.PlatformTypes.XBOX).name;
+let v = d.default.get(A.PlatformTypes.XBOX).name;
 
-function v(e) {
+function R(e) {
   let {
     currentActivities: t
-  } = e, n = t.length > 1, v = function(e) {
+  } = e, n = t.length > 1, R = function(e) {
     let {
       currentActivities: t
     } = e, n = (0, l.useStateFromStores)([C.default], () => C.default.getAccounts().some(e => e.type === d.default.get(A.PlatformTypes.XBOX).type)), s = t.some(e => {
@@ -44,13 +44,13 @@ function v(e) {
       id: "xbox-connect",
       action: () => u.default.open(A.UserSettingsSections.CONNECTIONS),
       label: N.default.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({
-        platform: R
+        platform: v
       })
     })
   }(e), O = function(e) {
     let {
       currentActivities: t
-    } = e, n = s.useContext(T.AnalyticsContext);
+    } = e, n = s.useContext(p.AnalyticsContext);
     return (0, l.useStateFromStoresArray)([h.default, S.default, _.default, I.default, m.default], () => t.filter(e => !(0, f.default)(e.activity)).map(e => {
       let {
         activity: t,
@@ -60,7 +60,7 @@ function v(e) {
         ...e,
         libraryApplication: s,
         canJoin: null != t && (0, c.default)(t, A.ActivityFlags.JOIN) && t.type === A.ActivityTypes.PLAYING,
-        canPlay: (0, p.isLaunchable)({
+        canPlay: (0, T.isLaunchable)({
           LibraryApplicationStore: S.default,
           LaunchableGameStore: _.default,
           DispatchApplicationStore: I.default,
@@ -137,5 +137,5 @@ function v(e) {
       })
     }(e, n))
   }
-  return [v, ...L]
+  return [R, ...L]
 }

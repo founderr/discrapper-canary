@@ -21,20 +21,20 @@ var a = n("735250"),
   m = n("821982"),
   S = n("377171"),
   I = n("633302"),
-  T = n("126900"),
-  p = n("26290"),
+  p = n("126900"),
+  T = n("26290"),
   g = n("153066"),
   A = n("335131"),
   N = n("141594"),
-  R = n("302800"),
-  v = n("981631"),
+  v = n("302800"),
+  R = n("981631"),
   O = n("689938"),
   L = n("592761");
 let M = e => {
     let {
       color: t
     } = e;
-    return (0, a.jsx)(p.TextBadge, {
+    return (0, a.jsx)(T.TextBadge, {
       className: L.newBadge,
       color: null != t ? t : S.default.STATUS_DANGER_BACKGROUND,
       text: O.default.Messages.NEW
@@ -54,8 +54,8 @@ let M = e => {
     } = (0, C.default)(c);
     return (0, a.jsx)(f.LinkButton, {
       selected: t,
-      route: v.Routes.COLLECTIBLES_SHOP,
-      icon: T.default,
+      route: R.Routes.COLLECTIBLES_SHOP,
+      icon: p.default,
       text: O.default.Messages.COLLECTIBLES_SHOP,
       locationState: n,
       ...d,
@@ -72,7 +72,7 @@ let M = e => {
       children: o
     })
   },
-  y = s.memo(function(e) {
+  x = s.memo(function(e) {
     let {
       displayOptions: t,
       assetId: n
@@ -101,7 +101,7 @@ let M = e => {
       })]
     })
   }),
-  x = e => {
+  y = e => {
     let {
       selected: t,
       locationState: n,
@@ -113,7 +113,7 @@ let M = e => {
       h(!1), null == e || e()
     }, []);
     return (0, a.jsx)(d.Tooltip, {
-      text: (0, a.jsx)(y, {
+      text: (0, a.jsx)(x, {
         displayOptions: r,
         assetId: r.assetIds[o]
       }),
@@ -188,15 +188,15 @@ let M = e => {
       dismissCollectiblesShopTabNewBadge: l
     } = (0, N.default)();
     if (null != s) switch (s.type) {
-      case R.CollectiblesMarketingVariant.TOOLTIP:
+      case v.CollectiblesMarketingVariant.TOOLTIP:
         return (0, a.jsx)(D, {
           selected: t,
           locationState: n,
           onButtonClick: l,
           displayOptions: s
         });
-      case R.CollectiblesMarketingVariant.COACHTIP:
-        return (0, a.jsx)(x, {
+      case v.CollectiblesMarketingVariant.COACHTIP:
+        return (0, a.jsx)(y, {
           selected: t,
           locationState: n,
           onButtonClick: l,

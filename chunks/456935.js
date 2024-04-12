@@ -41,7 +41,7 @@ let I = {
 t.default = function(e) {
   let {
     guild: t
-  } = e, s = l.default.can(f.Permissions.MANAGE_GUILD, t), _ = t.verificationLevel, T = _ === f.VerificationLevels.VERY_HIGH ? u.default : o.default, h = r.useMemo(() => E(_), [_]), g = I[_], C = (0, i.jsx)("div", {
+  } = e, s = l.default.can(f.Permissions.MANAGE_GUILD, t), _ = t.verificationLevel, h = _ === f.VerificationLevels.VERY_HIGH ? u.default : o.default, T = r.useMemo(() => E(_), [_]), g = I[_], C = (0, i.jsx)("div", {
     className: m.verificationLevelTitle,
     children: p.default.Messages.MEMBER_VERIFICATION_GUILD_VERIFICATION_LEVEL.format({
       verificationLevelHook: function() {
@@ -51,7 +51,7 @@ t.default = function(e) {
             color: g
           },
           variant: "text-sm/semibold",
-          children: h
+          children: T
         }, "hook")
       }
     })
@@ -60,7 +60,7 @@ t.default = function(e) {
     title: C,
     children: (0, i.jsxs)("div", {
       className: m.verificationContainer,
-      children: [(0, i.jsx)(T, {
+      children: [(0, i.jsx)(h, {
         width: 20,
         height: 20,
         className: m.icon

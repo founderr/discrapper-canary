@@ -20,24 +20,24 @@ t.default = e => {
   } = e, C = s.useRef(null), m = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), {
     progress: S,
     errors: I,
-    submitting: T
+    submitting: p
   } = (0, i.useStateFromStoresObject)([d.default], () => d.default.getStateForGuild(t)), {
-    selectedGames: p,
+    selectedGames: T,
     playstyle: g,
     interests: A,
     description: N,
-    tag: R,
-    primetime: v,
+    tag: v,
+    primetime: R,
     verificationForm: O
-  } = null != S ? S : {}, L = s.useRef(null), M = s.useRef(null), P = s.useRef(null), [y, x] = s.useState(!1), D = async () => {
+  } = null != S ? S : {}, L = s.useRef(null), M = s.useRef(null), P = s.useRef(null), [x, y] = s.useState(!1), D = async () => {
     try {
       await u.convertGuildToClan(t, {
-        selectedGames: p,
+        selectedGames: T,
         playstyle: g,
         interests: A,
         description: N,
-        tag: R,
-        primetime: v,
+        tag: v,
+        primetime: R,
         verificationForm: O
       })
     } catch (e) {
@@ -100,8 +100,8 @@ t.default = e => {
       className: h.scrollContainer,
       children: (0, a.jsx)(c.default, {
         guildId: t,
-        signed: y,
-        setSigned: x,
+        signed: x,
+        setSigned: y,
         signRef: C
       })
     }), (0, a.jsxs)(l.animated.div, {
@@ -117,7 +117,7 @@ t.default = e => {
           var e;
           null === (e = C.current) || void 0 === e || e.scrollIntoView({
             behavior: "smooth"
-          }), x(!0)
+          }), y(!0)
         },
         children: E.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
       }), (0, a.jsx)(r.Text, {
@@ -149,8 +149,8 @@ t.default = e => {
         look: r.Button.Looks.FILLED,
         size: r.Button.Sizes.MEDIUM,
         color: r.Button.Colors.BRAND,
-        disabled: !y,
-        submitting: T,
+        disabled: !x,
+        submitting: p,
         onClick: D,
         children: E.default.Messages.FINISH
       })]

@@ -1,29 +1,29 @@
 "use strict";
-r.r(t);
-var s = r("735250");
-r("470079");
-var n = r("960259"),
-  a = r("289987"),
-  l = r("325767");
-t.default = (0, n.replaceIcon)(function(e) {
+i.r(t);
+var n = i("735250");
+i("470079");
+var s = i("960259"),
+  r = i("289987"),
+  a = i("325767");
+t.default = (0, s.replaceIcon)(function(e) {
   let {
     width: t = 24,
-    height: r = 24,
-    color: n = "currentColor",
-    foreground: a,
-    ...u
+    height: i = 24,
+    color: s = "currentColor",
+    foreground: r,
+    ...o
   } = e;
-  return (0, s.jsx)("svg", {
-    ...(0, l.default)(u),
+  return (0, n.jsx)("svg", {
+    ...(0, a.default)(o),
     width: t,
-    height: r,
+    height: i,
     viewBox: "0 0 24 24",
-    children: (0, s.jsx)("path", {
-      className: a,
-      fill: n,
+    children: (0, n.jsx)("path", {
+      className: r,
+      fill: s,
       d: "M12 2C6.486 2 2 6.487 2 12C2 17.515 6.486 22 12 22C17.514 22 22 17.515 22 12C22 6.487 17.514 2 12 2ZM12 18.25C11.31 18.25 10.75 17.691 10.75 17C10.75 16.31 11.31 15.75 12 15.75C12.69 15.75 13.25 16.31 13.25 17C13.25 17.691 12.69 18.25 12 18.25ZM13 13.875V15H11V12H12C13.104 12 14 11.103 14 10C14 8.896 13.104 8 12 8C10.896 8 10 8.896 10 10H8C8 7.795 9.795 6 12 6C14.205 6 16 7.795 16 10C16 11.861 14.723 13.429 13 13.875Z"
     })
   })
-}, a.CircleQuestionIcon, void 0, {
+}, r.CircleQuestionIcon, void 0, {
   size: 24
 })

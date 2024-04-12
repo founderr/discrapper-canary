@@ -17,19 +17,19 @@ var a = n("735250"),
   m = n("627845"),
   S = n("185666"),
   I = n("503737"),
-  T = n("513202"),
-  p = n("318891"),
+  p = n("513202"),
+  T = n("318891"),
   g = n("687751"),
   A = n("912471"),
   N = n("100527"),
-  R = n("74438"),
-  v = n("753450"),
+  v = n("74438"),
+  R = n("753450"),
   O = n("675869"),
   L = n("77987"),
   M = n("679891"),
   P = n("491575"),
-  y = n("561345"),
-  x = n("314533"),
+  x = n("561345"),
+  y = n("314533"),
   D = n("935347"),
   b = n("560067"),
   U = n("823169"),
@@ -71,19 +71,19 @@ var a = n("735250"),
   em = n("703656"),
   eS = n("298969"),
   eI = n("719256"),
-  eT = n("6025"),
-  ep = n("897473"),
+  ep = n("6025"),
+  eT = n("897473"),
   eg = n("377368"),
   eA = n("262702"),
   eN = n("639033"),
-  eR = n("479313"),
-  ev = n("911560"),
+  ev = n("479313"),
+  eR = n("911560"),
   eO = n("703016"),
   eL = n("171368"),
   eM = n("429974"),
   eP = n("332754"),
-  ey = n("507468"),
-  ex = n("357269"),
+  ex = n("507468"),
+  ey = n("357269"),
   eD = n("282506"),
   eb = n("444961"),
   eU = n("314897"),
@@ -171,7 +171,7 @@ let e3 = o.default.connectStores([Y.default, ew.default, eU.default], () => ({
     passProps: !1
   }),
   e5 = (0, L.makeAuthenticated)(function() {
-    return (0, a.jsx)(R.default, {})
+    return (0, a.jsx)(v.default, {})
   }),
   e8 = (0, L.makeAuthenticated)(function(e) {
     let {
@@ -180,7 +180,7 @@ let e3 = o.default.connectStores([Y.default, ew.default, eU.default], () => ({
       applicationId: n,
       section: s
     } = t.params, l = (0, Z.default)(e0.ApplicationDirectoryProfileSections, s);
-    return (0, a.jsx)(v.default, {
+    return (0, a.jsx)(R.default, {
       applicationId: n,
       initialSection: l
     })
@@ -326,7 +326,7 @@ let tn = [{
     render: function(e) {
       let {
         location: t
-      } = e, n = (0, ex.default)(t.pathname);
+      } = e, n = (0, ey.default)(t.pathname);
       return null != n && (0, W.addPostConnectionCallback)(() => _.default.open(n.section, n.subsection, {
         openWithoutBackstack: !1,
         impressionSource: n.source
@@ -454,7 +454,7 @@ function tl(e) {
 }
 class ti extends s.PureComponent {
   componentDidMount() {
-    y.default.initialize(), eX.default.setZoomFactor(C.default.zoom), eS.default.init(), M.default.initialize(), ed.default.initialize(), F.default.initialize(), eb.default.initialize(), H.default.initialize(), ef.default.initialize(), ee.default.initialize(), m.default.init(), V.default.init(), B.default.init(), el.default.initialize(), g.default.initialize(), w.default.initialize(), eE.default.initialize(), p.default.initialize(), eD.default.initialize(), eu.default.initialize(), T.default.initialize(), K.default.init(), J.default.init(), ez.default.init(), eQ.default.init(), I.default.initialize(), eO.default.init(), eK.default.init(), eW.default.init(), eP.default.init(), eA.default.initialize(), eN.default.initialize(), eM.default.initialize(), ey.default.init(), G.default.initialize(), S.default.initialize(), eI.default.initialize(), eg.default.initialize(), er.default.initialize(), ei.default.initialize(), eo.default.initialize(), x.default.initialize(), $.default.init({
+    x.default.initialize(), eX.default.setZoomFactor(C.default.zoom), eS.default.init(), M.default.initialize(), ed.default.initialize(), F.default.initialize(), eb.default.initialize(), H.default.initialize(), ef.default.initialize(), ee.default.initialize(), m.default.init(), V.default.init(), B.default.init(), el.default.initialize(), g.default.initialize(), w.default.initialize(), eE.default.initialize(), T.default.initialize(), eD.default.initialize(), eu.default.initialize(), p.default.initialize(), K.default.init(), J.default.init(), ez.default.init(), eQ.default.init(), I.default.initialize(), eO.default.init(), eK.default.init(), eW.default.init(), eP.default.init(), eA.default.initialize(), eN.default.initialize(), eM.default.initialize(), ex.default.init(), G.default.initialize(), S.default.initialize(), eI.default.initialize(), eg.default.initialize(), er.default.initialize(), ei.default.initialize(), eo.default.initialize(), y.default.initialize(), $.default.init({
       hasModalOpen: u.hasAnyModalOpen,
       openModal: () => (0, u.openModalLazy)(async () => {
         let {
@@ -467,7 +467,7 @@ class ti extends s.PureComponent {
     }), j.default.init(), et.default.initialize(), eh.default.initialize(), ec.default.initialize(), U.default.initialize(), this.rewriterUnlisten = e_.default.addRouteRewriter(this.ensureChannelMatchesGuild), this.historyUnlisten = e_.default.addRouteChangeListener(this.handleHistoryChange)
   }
   componentWillUnmount() {
-    y.default.terminate(), eb.default.terminate(), ef.default.terminate(), ed.default.terminate(), M.default.terminate(), p.default.terminate(), eD.default.terminate(), T.default.terminate(), eE.default.terminate(), eu.default.terminate(), eM.default.terminate(), I.default.terminate(), G.default.terminate(), et.default.terminate(), S.default.terminate(), eh.default.terminate(), eI.default.terminate(), eg.default.terminate(), er.default.terminate(), ei.default.terminate(), eo.default.terminate(), x.default.terminate(), ec.default.terminate(), U.default.terminate(), k.default.terminate(), this.historyUnlisten(), this.rewriterUnlisten()
+    x.default.terminate(), eb.default.terminate(), ef.default.terminate(), ed.default.terminate(), M.default.terminate(), T.default.terminate(), eD.default.terminate(), p.default.terminate(), eE.default.terminate(), eu.default.terminate(), eM.default.terminate(), I.default.terminate(), G.default.terminate(), et.default.terminate(), S.default.terminate(), eh.default.terminate(), eI.default.terminate(), eg.default.terminate(), er.default.terminate(), ei.default.terminate(), eo.default.terminate(), y.default.terminate(), ec.default.terminate(), U.default.terminate(), k.default.terminate(), this.historyUnlisten(), this.rewriterUnlisten()
   }
   handleHistoryChange(e) {
     let {
@@ -512,7 +512,7 @@ class ti extends s.PureComponent {
           let {
             summaryId: e
           } = (0, l.parse)(t);
-          null != e && eR.default.setSelectedSummary(s, e)
+          null != e && ev.default.setSelectedSummary(s, e)
         }
         if (null != o && c) {
           let e = ej.default.getCurrentSidebarChannelId(n) !== o,
@@ -521,9 +521,9 @@ class ti extends s.PureComponent {
             if (t)(0, em.replaceWith)(e$.Routes.CHANNEL(a, o, r));
             else {
               let e = {
-                type: ep.SidebarOpenDetailsType.THREAD
+                type: eT.SidebarOpenDetailsType.THREAD
               };
-              null != r && (e.initialMessageId = r), eT.default.openThreadAsSidebar({
+              null != r && (e.initialMessageId = r), ep.default.openThreadAsSidebar({
                 guildId: a,
                 baseChannelId: s,
                 channelId: o,
@@ -531,7 +531,7 @@ class ti extends s.PureComponent {
               })
             }
           }
-        } else null != s && !i && eT.default.closeChannelSidebar(s);
+        } else null != s && !i && ep.default.closeChannelSidebar(s);
         let u = ea.default.getIsOpen();
         if (s === e1.StaticChannelRoute.ROLE_SUBSCRIPTIONS) en.default.closeSidebar();
         else if (_ && u) {
@@ -561,7 +561,7 @@ class ti extends s.PureComponent {
     } = tt(n), i = (0, eC.isValidGuildId)(a) && a !== e$.ME && a !== e$.FAVORITES;
     if (null != s && (0, eC.isValidChannelId)(s) && !(0, e1.isStaticChannelRoute)(s) && i) {
       let n = eG.default.getChannel(s);
-      if (null == n) ev.default.loadThread(s).then(() => tl({
+      if (null == n) eR.default.loadThread(s).then(() => tl({
         channelId: s,
         guildId: a,
         pathname: t
@@ -573,12 +573,12 @@ class ti extends s.PureComponent {
       if (null != l) {
         if (!((0, eC.isValidChannelId)(l) && !(0, e1.isStaticChannelRoute)(s))) return null;
         let n = eG.default.getChannel(l);
-        if (null == n) ev.default.loadThread(l).then(() => tl({
+        if (null == n) eR.default.loadThread(l).then(() => tl({
           channelId: l,
           guildId: a,
           pathname: t
         }));
-        else if ((null == n ? void 0 : n.parent_id) !== s) return eT.default.closeChannelSidebar(s), {
+        else if ((null == n ? void 0 : n.parent_id) !== s) return ep.default.closeChannelSidebar(s), {
           path: e$.Routes.CHANNEL(a, s),
           state: e.state
         }

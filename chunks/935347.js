@@ -17,13 +17,13 @@ var a = n("735250"),
   m = n("474873"),
   S = n("706454"),
   I = n("215427"),
-  T = n("820254"),
-  p = n("985806"),
+  p = n("820254"),
+  T = n("985806"),
   g = n("838949"),
   A = n("70956"),
   N = n("358085"),
-  R = n("557177"),
-  v = n("998502"),
+  v = n("557177"),
+  R = n("998502"),
   O = n("981631"),
   L = n("689938"),
   M = n("82863");
@@ -36,11 +36,11 @@ function P(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class y extends s.PureComponent {
+class x extends s.PureComponent {
   createSound() {
     let {
       soundpack: e
-    } = this.props, t = (0, R.createSoundForPack)("discodo", e);
+    } = this.props, t = (0, v.createSoundForPack)("discodo", e);
     return t.volume = 1, t
   }
   componentDidMount() {
@@ -132,14 +132,14 @@ class y extends s.PureComponent {
               className: M.twitterLink,
               href: O.Links.TWITTER_SUPPORT,
               target: "_blank",
-              children: [(0, a.jsx)(p.default, {
+              children: [(0, a.jsx)(T.default, {
                 className: M.icon
               }), L.default.Messages.TWEET_US]
             }), (0, a.jsxs)(f.Anchor, {
               className: M.statusLink,
               href: O.Links.STATUS,
               target: "_blank",
-              children: [(0, a.jsx)(T.default, {
+              children: [(0, a.jsx)(p.default, {
                 className: M.icon
               }), L.default.Messages.SERVER_STATUS]
             })]
@@ -218,7 +218,7 @@ class y extends s.PureComponent {
     }()), P(this, "handleReady", () => {
       this.setState({
         ready: !0
-      }), (0, N.isDesktop)() && (v.default.send("UPDATED_QUOTES", ["Hold Tight — Loading Discord"]), v.default.send("UPDATE_OPEN_ON_STARTUP"))
+      }), (0, N.isDesktop)() && (R.default.send("UPDATED_QUOTES", ["Hold Tight — Loading Discord"]), R.default.send("UPDATE_OPEN_ON_STARTUP"))
     }), P(this, "setVideoRef", e => {
       this.videoRef = e
     }), P(this, "setProblemsTimeout", () => {
@@ -254,7 +254,7 @@ t.default = d.default.connectStores([_.default, I.default, m.default, h.default]
     soundpack: l,
     reducedMotion: i
   } = e;
-  return t ? (0, a.jsx)(y, {
+  return t ? (0, a.jsx)(x, {
     reducedMotion: i,
     soundpack: l,
     connected: n,

@@ -21,8 +21,8 @@ t.default = function(e) {
     onDrop: E,
     onEdit: I,
     onRemove: _,
-    canRemove: T,
-    title: h
+    canRemove: h,
+    title: T
   } = e, g = n.values, C = g.slice(0, 1), x = g.length - C.length;
   return (0, i.jsxs)(c.default, {
     field: n,
@@ -32,8 +32,8 @@ t.default = function(e) {
     onDrop: E,
     onEdit: I,
     onRemove: _,
-    title: h,
-    canRemove: T,
+    title: T,
+    canRemove: h,
     children: [(0, i.jsx)(u.TermsFieldBody, {
       className: s()(f.fieldBackground, {
         [f.withFooter]: 0 !== x

@@ -7,11 +7,11 @@ i.r(t), i.d(t, {
 var s = i("913527"),
   n = i.n(s),
   l = i("81825"),
-  r = i("630388"),
-  a = i("301766"),
-  o = i("474936");
+  a = i("630388"),
+  r = i("301766"),
+  d = i("474936");
 
-function d(e, t, i) {
+function o(e, t, i) {
   return t in e ? Object.defineProperty(e, t, {
     value: i,
     enumerable: !0,
@@ -37,7 +37,7 @@ class c extends l.default {
       expiresAt: null != e.expires_at ? n()(e.expires_at) : null,
       redeemed: e.redeemed,
       subscriptionPlanId: null != e.subscription_plan ? e.subscription_plan.id : e.subscription_plan_id,
-      subscriptionPlan: null != e.subscription_plan ? a.default.createFromServer(e.subscription_plan) : null,
+      subscriptionPlan: null != e.subscription_plan ? r.default.createFromServer(e.subscription_plan) : null,
       revoked: !1,
       entitlementBranches: null != e.entitlement_branches ? e.entitlement_branches : null,
       flags: null != e.flags ? e.flags : 0,
@@ -75,13 +75,13 @@ class c extends l.default {
     return null != this.subscriptionPlanId
   }
   get premiumSubscriptionType() {
-    return this.isSubscription && o.PremiumSubscriptionSKUToPremiumType[this.skuId] || null
+    return this.isSubscription && d.PremiumSubscriptionSKUToPremiumType[this.skuId] || null
   }
   get isSelfRedeemable() {
-    return !(0, r.hasFlag)(this.flags, u.NOT_SELF_REDEEMABLE)
+    return !(0, a.hasFlag)(this.flags, u.NOT_SELF_REDEEMABLE)
   }
   get isExistingPremiumSubscriptionDisallowed() {
-    return (0, r.hasFlag)(this.flags, u.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED)
+    return (0, a.hasFlag)(this.flags, u.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED)
   }
   get analyticsData() {
     return {
@@ -93,6 +93,6 @@ class c extends l.default {
     return this.code
   }
   constructor(e) {
-    super(), d(this, "userId", void 0), d(this, "code", void 0), d(this, "skuId", void 0), d(this, "applicationId", void 0), d(this, "uses", void 0), d(this, "maxUses", void 0), d(this, "expiresAt", void 0), d(this, "redeemed", void 0), d(this, "storeListingId", void 0), d(this, "subscriptionPlanId", void 0), d(this, "subscriptionPlan", void 0), d(this, "revoked", void 0), d(this, "entitlementBranches", void 0), d(this, "flags", void 0), d(this, "subscriptionTrial", void 0), d(this, "promotion", void 0), d(this, "giftStyle", void 0), this.userId = e.userId, this.code = e.code, this.skuId = e.skuId, this.applicationId = e.applicationId, this.uses = e.uses, this.maxUses = e.maxUses, this.expiresAt = e.expiresAt, this.redeemed = e.redeemed, this.storeListingId = e.storeListingId, this.subscriptionPlanId = e.subscriptionPlanId, this.subscriptionPlan = e.subscriptionPlan, this.revoked = e.revoked, this.entitlementBranches = e.entitlementBranches, this.flags = e.flags, this.subscriptionTrial = e.subscriptionTrial, this.promotion = e.promotion, this.giftStyle = e.giftStyle
+    super(), o(this, "userId", void 0), o(this, "code", void 0), o(this, "skuId", void 0), o(this, "applicationId", void 0), o(this, "uses", void 0), o(this, "maxUses", void 0), o(this, "expiresAt", void 0), o(this, "redeemed", void 0), o(this, "storeListingId", void 0), o(this, "subscriptionPlanId", void 0), o(this, "subscriptionPlan", void 0), o(this, "revoked", void 0), o(this, "entitlementBranches", void 0), o(this, "flags", void 0), o(this, "subscriptionTrial", void 0), o(this, "promotion", void 0), o(this, "giftStyle", void 0), this.userId = e.userId, this.code = e.code, this.skuId = e.skuId, this.applicationId = e.applicationId, this.uses = e.uses, this.maxUses = e.maxUses, this.expiresAt = e.expiresAt, this.redeemed = e.redeemed, this.storeListingId = e.storeListingId, this.subscriptionPlanId = e.subscriptionPlanId, this.subscriptionPlan = e.subscriptionPlan, this.revoked = e.revoked, this.entitlementBranches = e.entitlementBranches, this.flags = e.flags, this.subscriptionTrial = e.subscriptionTrial, this.promotion = e.promotion, this.giftStyle = e.giftStyle
   }
 }

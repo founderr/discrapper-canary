@@ -21,19 +21,19 @@ var a = n("735250"),
   m = n("100527"),
   S = n("906732"),
   I = n("211242"),
-  T = n("536687"),
-  p = n("745837"),
+  p = n("536687"),
+  T = n("745837"),
   g = n("13228"),
   A = n("1259"),
   N = n("211644"),
-  R = n("605236"),
-  v = n("243778"),
+  v = n("605236"),
+  R = n("243778"),
   O = n("492162"),
   L = n("818634"),
   M = n("596557"),
   P = n("817520"),
-  y = n("999309"),
-  x = n("408987"),
+  x = n("999309"),
+  y = n("408987"),
   D = n("130734"),
   b = n("499137"),
   U = n("258871"),
@@ -286,7 +286,7 @@ class em extends s.PureComponent {
       selectedChannelId: e,
       shouldRenderClipsEducation: t
     } = this.props;
-    return (0, a.jsx)(v.default, {
+    return (0, a.jsx)(R.default, {
       contentTypes: [],
       children: n => {
         let {
@@ -307,7 +307,7 @@ class em extends s.PureComponent {
               tutorialType: en.TutorialType.GAME_NIGHT
             });
           default:
-            if (t) return (0, a.jsx)(p.default, {});
+            if (t) return (0, a.jsx)(T.default, {});
             return (0, a.jsx)(a.Fragment, {})
         }
       }
@@ -386,9 +386,9 @@ class em extends s.PureComponent {
       this.handleCloseSubscribeTooltip(), this.handleCloseTemplateDirtyTooltip(), this.handleCloseStudentHubPrivacySettingsTooltip()
     }), eE(this, "handleCloseStudentHubPrivacySettingsTooltip", () => {
       var e;
-      let t = (0, R.isDismissibleContentDismissed)(u.DismissibleContent.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
+      let t = (0, v.isDismissibleContentDismissed)(u.DismissibleContent.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
         n = null === (e = this.props.guild) || void 0 === e ? void 0 : e.hasFeature(er.GuildFeatures.HUB);
-      !t && n && (0, R.markDismissibleContentAsDismissed)(u.DismissibleContent.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP, {
+      !t && n && (0, v.markDismissibleContentAsDismissed)(u.DismissibleContent.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP, {
         dismissAction: eu.ContentDismissActionType.AUTO
       })
     }), eE(this, "handleCloseSubscribeTooltip", () => {
@@ -400,7 +400,7 @@ class em extends s.PureComponent {
         guild: e,
         showGuildTemplateDirtyTooltip: t
       } = this.props;
-      null != e && t && x.default.hideGuildTemplateDirtyTooltip(e.id)
+      null != e && t && y.default.hideGuildTemplateDirtyTooltip(e.id)
     }), eE(this, "renderMenuPopout", async () => {
       let {
         default: e
@@ -463,7 +463,7 @@ function eS(e) {
   let f = (0, O.default)(n),
     E = (0, o.useStateFromStores)([Y.default], () => Y.default.getGuildDimensions(n).scrollTo),
     h = (0, o.useStateFromStores)([X.default], () => X.default.getChannelId()),
-    [p, v, x] = (0, o.useStateFromStoresArray)([Z.default], () => [Z.default.can(er.Permissions.MANAGE_GUILD, d), Z.default.can(er.Permissions.MANAGE_ROLES, d), Z.default.can(er.Permissions.MANAGE_THREADS, d)]),
+    [T, R, y] = (0, o.useStateFromStoresArray)([Z.default], () => [Z.default.can(er.Permissions.MANAGE_GUILD, d), Z.default.can(er.Permissions.MANAGE_ROLES, d), Z.default.can(er.Permissions.MANAGE_THREADS, d)]),
     U = (0, o.useStateFromStores)([W.default], () => W.default.isUnavailable(n)),
     G = (0, o.useStateFromStores)([J.default], () => J.default.getCurrentUser()),
     k = (0, o.useStateFromStores)([B.default], () => B.default.darkSidebar ? er.ThemeTypes.DARK : B.default.theme),
@@ -482,11 +482,11 @@ function eS(e) {
   s.useEffect(() => {
     n !== ea && en(!K)
   }, [n, ea, K]);
-  let [ei, ed] = (0, N.default)(e => [eo.CHANNEL_NOTICES.some(t => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(eu.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS)]), ec = (0, T.default)(d), ef = (0, c.useModalsStore)(c.hasAnyModalOpenSelector), eE = (0, o.useStateFromStores)([Q.default], () => Q.default.hasLayers()), eh = (0, o.useStateFromStores)([F.default], () => F.default.shouldShow(e_)), eC = p && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !ee.ProcessArgs.isDisallowPopupsSet(), eS = (0, o.useStateFromStores)([z.default], () => z.default.getMemberCount(n)), eI = p && null != eS && eS >= 30 && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !ee.ProcessArgs.isDisallowPopupsSet(), eT = v && null != d && (d.hasFeature(er.GuildFeatures.COMMUNITY) || null != eS && eS > 50), ep = (0, y.default)(n), eg = (0, A.useLowerMemberCountRequirements)(n), eA = (null == d ? void 0 : d.hasFeature(er.GuildFeatures.HUB)) === !0, eN = p && (null == d ? void 0 : d.hasFeature(er.GuildFeatures.DISCOVERABLE)) === !0, eR = (0, I.useBlockedPaymentsConfig)(), ev = (p || (null == d ? void 0 : d.premiumTier) === er.BoostedGuildTiers.NONE) && !ee.ProcessArgs.isDisallowPopupsSet() && !eR, eO = (0, o.useStateFromStores)([D.default, Q.default], () => null != d && null != G && p && !Q.default.hasLayers() && D.default.shouldShowGuildTemplateDirtyTooltip(n)), eL = (0, o.useStateFromStores)([V.default], () => V.default.getChannel(r)), {
+  let [ei, ed] = (0, N.default)(e => [eo.CHANNEL_NOTICES.some(t => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(eu.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS)]), ec = (0, p.default)(d), ef = (0, c.useModalsStore)(c.hasAnyModalOpenSelector), eE = (0, o.useStateFromStores)([Q.default], () => Q.default.hasLayers()), eh = (0, o.useStateFromStores)([F.default], () => F.default.shouldShow(e_)), eC = T && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !ee.ProcessArgs.isDisallowPopupsSet(), eS = (0, o.useStateFromStores)([z.default], () => z.default.getMemberCount(n)), eI = T && null != eS && eS >= 30 && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !ee.ProcessArgs.isDisallowPopupsSet(), ep = R && null != d && (d.hasFeature(er.GuildFeatures.COMMUNITY) || null != eS && eS > 50), eT = (0, x.default)(n), eg = (0, A.useLowerMemberCountRequirements)(n), eA = (null == d ? void 0 : d.hasFeature(er.GuildFeatures.HUB)) === !0, eN = T && (null == d ? void 0 : d.hasFeature(er.GuildFeatures.DISCOVERABLE)) === !0, ev = (0, I.useBlockedPaymentsConfig)(), eR = (T || (null == d ? void 0 : d.premiumTier) === er.BoostedGuildTiers.NONE) && !ee.ProcessArgs.isDisallowPopupsSet() && !ev, eO = (0, o.useStateFromStores)([D.default, Q.default], () => null != d && null != G && T && !Q.default.hasLayers() && D.default.shouldShowGuildTemplateDirtyTooltip(n)), eL = (0, o.useStateFromStores)([V.default], () => V.default.getChannel(r)), {
     isPopoutOpen: eM
-  } = (0, L.useGuildHeaderPopoutStore)(), eP = null !== (t = null == d ? void 0 : d.hasFeature(er.GuildFeatures.COMMUNITY)) && void 0 !== t && t, ey = (0, o.useStateFromStores)([w.default], () => !i().isEmpty(w.default.getThreadsForGuild(n))), ex = $.default.isNewUser(G), eD = et && !ex, eb = (0, g.default)(G);
+  } = (0, L.useGuildHeaderPopoutStore)(), eP = null !== (t = null == d ? void 0 : d.hasFeature(er.GuildFeatures.COMMUNITY)) && void 0 !== t && t, ex = (0, o.useStateFromStores)([w.default], () => !i().isEmpty(w.default.getThreadsForGuild(n))), ey = $.default.isNewUser(G), eD = et && !ey, eb = (0, g.default)(G);
   (0, M.default)(d);
-  let eU = (0, R.useIsDismissibleContentDismissed)(u.DismissibleContent.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
+  let eU = (0, v.useIsDismissibleContentDismissed)(u.DismissibleContent.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
     ej = (0, j.default)(n),
     eG = (0, P.default)(n);
   return (0, a.jsx)(em, {
@@ -505,16 +505,16 @@ function eS(e) {
     anyLayerOpen: ef || eE,
     showGuildBoostingProgressBarUpsell: eC,
     showGuildBoostingProgressBarSizeUpsell: eI,
-    showInviteSplashUpsell: ev,
+    showInviteSplashUpsell: eR,
     showDiscoveryLandingPageSettingsUpsell: eN,
     showGuildHeaderTutorial: eh,
     showGuildTemplateDirtyTooltip: eO,
-    showRoleSubscriptionUpsell: ep,
+    showRoleSubscriptionUpsell: eT,
     showDiscoveryTooltip: eg,
     showHubPrivacySettingsTooltip: eA,
     showNewUnreadsBar: eP,
-    showActiveThreadsNotice: x && null != eS && eS >= 200 && ey,
-    showGuildSoundboardPermissionUpsell: eT,
+    showActiveThreadsNotice: y && null != eS && eS >= 200 && ex,
+    showGuildSoundboardPermissionUpsell: ep,
     showMediaChannelUpsell: ej,
     showTierTemplatesUpsell: eG,
     isHeaderPopoutOpen: eM,

@@ -5,40 +5,40 @@ var s, a, l, i, r = n("442837"),
   u = n("70956"),
   d = n("709054");
 let c = 14 * u.default.Millis.DAY,
-  f = Object.freeze([]),
-  E = {},
+  E = Object.freeze([]),
+  f = {},
   _ = {};
 
-function m() {
-  E = {}, _ = {}
+function T() {
+  f = {}, _ = {}
 }
-class T extends(s = r.default.Store) {
+class I extends(s = r.default.Store) {
   getFpMessageInfo(e) {
-    return E[e]
+    return f[e]
   }
   getChannelFpInfo(e) {
     var t;
-    return null !== (t = _[e]) && void 0 !== t ? t : f
+    return null !== (t = _[e]) && void 0 !== t ? t : E
   }
   canSubmitFpReport(e) {
-    let t = E[e];
+    let t = f[e];
     return null != t && !t.reportSubmit && d.default.age(t.messageId) < c
   }
 }
-i = "FalsePositiveStore", (l = "displayName") in(a = T) ? Object.defineProperty(a, l, {
+i = "FalsePositiveStore", (l = "displayName") in(a = I) ? Object.defineProperty(a, l, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = i, t.default = new T(o.default, {
+}) : a[l] = i, t.default = new I(o.default, {
   LOGOUT: function() {
     (function() {
-      E = {}, _ = {}
+      f = {}, _ = {}
     })()
   },
   CONNECTION_OPEN: function() {
     (function() {
-      E = {}, _ = {}
+      f = {}, _ = {}
     })()
   },
   MESSAGE_EXPLICIT_CONTENT_FP_CREATE: function(e) {
@@ -52,8 +52,8 @@ i = "FalsePositiveStore", (l = "displayName") in(a = T) ? Object.defineProperty(
       channelId: s,
       attachments: a,
       reportSubmit: !1
-    }, i = null !== (t = _[s]) && void 0 !== t ? t : f;
-    _[s] = [...i, l], E[n] = l
+    }, i = null !== (t = _[s]) && void 0 !== t ? t : E;
+    _[s] = [...i, l], f[n] = l
   },
   MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT: function(e) {
     let {
@@ -63,8 +63,8 @@ i = "FalsePositiveStore", (l = "displayName") in(a = T) ? Object.defineProperty(
     null != s && (_[n] = s.map(e => e.messageId === t ? {
       ...e,
       reportSubmit: !0
-    } : e), E[t] = {
-      ...E[t],
+    } : e), f[t] = {
+      ...f[t],
       reportSubmit: !0
     })
   }

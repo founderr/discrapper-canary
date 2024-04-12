@@ -16,8 +16,8 @@ var a = s("735250"),
   f = s("761174"),
   S = s("706454"),
   E = s("246946"),
-  I = s("785717"),
-  m = s("621853"),
+  m = s("785717"),
+  I = s("621853"),
   T = s("358794"),
   p = s("588822"),
   _ = s("81334"),
@@ -36,11 +36,11 @@ function h(e) {
     scrollToConnections: C = !1
   } = e, {
     trackUserProfileAction: R
-  } = (0, I.useUserProfileAnalyticsContext)(), P = (0, c.usePlatformAllowed)({
+  } = (0, m.useUserProfileAnalyticsContext)(), P = (0, c.usePlatformAllowed)({
     forUserProfile: !0
-  }), M = (0, o.useStateFromStores)([m.default], () => {
+  }), M = (0, o.useStateFromStores)([I.default], () => {
     var e, t;
-    return null !== (t = null === (e = m.default.getUserProfile(s.id)) || void 0 === e ? void 0 : e.connectedAccounts) && void 0 !== t ? t : []
+    return null !== (t = null === (e = I.default.getUserProfile(s.id)) || void 0 === e ? void 0 : e.connectedAccounts) && void 0 !== t ? t : []
   }), j = (0, o.useStateFromStores)([E.default], () => E.default.hidePersonalInformation), {
     profileTheme: g
   } = (0, T.default)(s, i), y = (0, o.useStateFromStores)([S.default], () => S.default.locale), O = (0, f.useIsUserRecentGamesEnabled)({

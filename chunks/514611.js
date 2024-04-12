@@ -16,13 +16,13 @@ var a, s = n("735250"),
   m = n("768581"),
   S = n("900849"),
   I = n("940627"),
-  T = n("806519"),
-  p = n("981631"),
+  p = n("806519"),
+  T = n("981631"),
   g = n("689938"),
   A = n("313618"),
   N = n("129512"),
-  R = n("330065"),
-  v = n("755386");
+  v = n("330065"),
+  R = n("755386");
 
 function O(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -34,12 +34,12 @@ function O(e, t, n) {
 }
 class L extends(a = l.PureComponent) {
   getDefaultSplashURL(e, t) {
-    if (t) return v;
+    if (t) return R;
     switch (e) {
-      case p.ThemeTypes.DARK:
+      case T.ThemeTypes.DARK:
         return N;
-      case p.ThemeTypes.LIGHT:
-        return R
+      case T.ThemeTypes.LIGHT:
+        return v
     }
   }
   render() {
@@ -53,18 +53,18 @@ class L extends(a = l.PureComponent) {
       loaded: i,
       hasBeenSeen: d,
       isVisible: N,
-      submitting: R
+      submitting: v
     } = this.state, {
-      name: v,
+      name: R,
       description: O,
       presenceCount: L,
       memberCount: M,
       keywords: P
-    } = t, y = null === (e = t.features) || void 0 === e ? void 0 : e.has(p.GuildFeatures.HUB), x = m.default.getGuildDiscoverySplashURL({
+    } = t, x = null === (e = t.features) || void 0 === e ? void 0 : e.has(T.GuildFeatures.HUB), y = m.default.getGuildDiscoverySplashURL({
       id: t.id,
       splash: t.discoverySplash,
       size: 300 * (0, _.getDevicePixelRatio)()
-    }), D = null != x ? x : this.getDefaultSplashURL(a, y), b = m.default.getGuildIconURL({
+    }), D = null != y ? y : this.getDefaultSplashURL(a, x), b = m.default.getGuildIconURL({
       id: t.id,
       icon: t.icon,
       size: 40
@@ -102,13 +102,13 @@ class L extends(a = l.PureComponent) {
             [A.loaded]: i,
             [A.loading]: !i
           }),
-          children: [R ? (0, s.jsx)(u.Spinner, {
+          children: [v ? (0, s.jsx)(u.Spinner, {
             type: u.Spinner.Type.PULSING_ELLIPSIS,
             className: A.spinner
           }) : null, (0, s.jsxs)(u.Clickable, {
             onClick: this.handleClickView,
             className: r()(A.card, {
-              [A.submitting]: R,
+              [A.submitting]: v,
               [A.cardWithTags]: U
             }),
             onContextMenu: this.handleContextMenu,
@@ -120,7 +120,7 @@ class L extends(a = l.PureComponent) {
                   src: D,
                   alt: "",
                   className: r()(A.splashImage, {
-                    [A.splashImageHeight]: !y
+                    [A.splashImageHeight]: !x
                   }),
                   onLoad: () => this.setState({
                     loaded: !0
@@ -133,14 +133,14 @@ class L extends(a = l.PureComponent) {
                 })
               }) : null, (0, s.jsx)("div", {
                 className: A.guildIcon,
-                children: (0, s.jsx)(T.default, {
-                  mask: T.default.Masks.SQUIRCLE,
+                children: (0, s.jsx)(p.default, {
+                  mask: p.default.Masks.SQUIRCLE,
                   width: 48,
                   height: 48,
                   children: (0, s.jsx)("div", {
                     className: A.iconMask,
-                    children: (0, s.jsx)(T.default, {
-                      mask: T.default.Masks.SQUIRCLE,
+                    children: (0, s.jsx)(p.default, {
+                      mask: p.default.Masks.SQUIRCLE,
                       width: 40,
                       height: 40,
                       children: (0, s.jsx)("img", {
@@ -163,7 +163,7 @@ class L extends(a = l.PureComponent) {
                 }), (0, s.jsx)(u.Heading, {
                   variant: "heading-md/semibold",
                   className: A.guildName,
-                  children: v
+                  children: R
                 })]
               }), (0, s.jsx)(u.Text, {
                 className: A.description,

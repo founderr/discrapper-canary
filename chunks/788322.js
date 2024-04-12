@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   DiscoverSearchResultPlaceholder: function() {
-    return v
+    return R
   }
 }), n("47120");
 var a = n("735250"),
@@ -21,27 +21,27 @@ var a = n("735250"),
   m = n("556017"),
   S = n("879484"),
   I = n("26580"),
-  T = n("206887"),
-  p = n("981631"),
+  p = n("206887"),
+  T = n("981631"),
   g = n("689938"),
   A = n("208596"),
   N = n("129512"),
-  R = n("330065");
-let v = () => (0, a.jsx)("div", {
+  v = n("330065");
+let R = () => (0, a.jsx)("div", {
   className: A.placeholder
 });
 t.default = e => {
   var t;
   let {
     guild: l,
-    theme: v,
+    theme: R,
     onView: O,
     onTagClick: L
   } = e, {
     id: M,
     discoverySplash: P,
-    icon: y,
-    name: x,
+    icon: x,
+    name: y,
     description: D,
     presenceCount: b,
     memberCount: U,
@@ -54,14 +54,14 @@ t.default = e => {
     size: 240 * (0, d.getDevicePixelRatio)()
   }), V = null != B ? B : function(e) {
     switch (e) {
-      case p.ThemeTypes.DARK:
+      case T.ThemeTypes.DARK:
         return N;
-      case p.ThemeTypes.LIGHT:
-        return R
+      case T.ThemeTypes.LIGHT:
+        return v
     }
-  }(v), Y = null !== (t = _.default.getGuildIconURL({
+  }(R), Y = null !== (t = _.default.getGuildIconURL({
     id: M,
-    icon: y,
+    icon: x,
     size: 32
   })) && void 0 !== t ? t : void 0, W = async e => {
     let {
@@ -71,11 +71,11 @@ t.default = e => {
       if ((0, c.isAtGuildCapAndNonPremium)()) {
         (0, f.default)({
           analyticsSource: {
-            page: p.AnalyticsPages.GUILD_DISCOVERY
+            page: T.AnalyticsPages.GUILD_DISCOVERY
           },
           analyticsLocation: {
-            page: p.AnalyticsPages.GUILD_DISCOVERY,
-            section: p.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
+            page: T.AnalyticsPages.GUILD_DISCOVERY,
+            section: T.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
           },
           analyticsLocations: H
         });
@@ -160,7 +160,7 @@ t.default = e => {
               }), (0, a.jsx)(r.Heading, {
                 variant: "heading-md/semibold",
                 className: A.headerTitle,
-                children: x
+                children: y
               })]
             })]
           }), (0, a.jsx)(r.Text, {
@@ -201,7 +201,7 @@ t.default = e => {
           })]
         }), z ? (0, a.jsx)("div", {
           className: A.actionButtons,
-          children: (0, a.jsx)(T.default, {
+          children: (0, a.jsx)(p.default, {
             guild: l
           })
         }) : null]

@@ -21,18 +21,18 @@ var a = n("735250"),
   m = n("801077"),
   S = n("626135"),
   I = n("70956"),
-  T = n("225559"),
-  p = n("910436"),
+  p = n("225559"),
+  T = n("910436"),
   g = n("203028"),
   A = n("358924"),
   N = n("292140"),
-  R = n("525296"),
-  v = n("981631"),
+  v = n("525296"),
+  R = n("981631"),
   O = n("674563"),
   L = n("689938"),
   M = n("103877");
 let P = 15 * I.default.Millis.MINUTE,
-  y = (0, R.default)(function(e) {
+  x = (0, v.default)(function(e) {
     let {
       party: t,
       onUserContextMenu: n,
@@ -41,7 +41,7 @@ let P = 15 * I.default.Millis.MINUTE,
     } = e, r = (0, a.jsx)(g.default, {
       party: t,
       onUserContextMenu: n
-    }), u = (0, a.jsx)(p.default, {
+    }), u = (0, a.jsx)(T.default, {
       party: t,
       onChannelContextMenu: l,
       quest: i
@@ -50,19 +50,19 @@ let P = 15 * I.default.Millis.MINUTE,
       applicationStreams: f,
       currentActivities: E,
       voiceChannels: h
-    } = t, _ = c.length, C = f.length, m = E.length, I = h.length > 0, T = s.useCallback(() => {
+    } = t, _ = c.length, C = f.length, m = E.length, I = h.length > 0, p = s.useCallback(() => {
       let e = E.filter(e => {
         var t, n;
         return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === O.ApplicationTypes.GAME
       }).map(e => e.game.name);
-      S.default.track(v.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
+      S.default.track(R.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
         num_users: _,
         num_streams: C,
         num_activities: m,
         in_voice_channel: I,
         games_detected: e
       })
-    }, [_, C, m, I, E]), R = o()(T, P);
+    }, [_, C, m, I, E]), v = o()(p, P);
     return null != r || null != u ? (0, a.jsx)(d.Popout, {
       position: "left",
       renderPopout: e => {
@@ -81,7 +81,7 @@ let P = 15 * I.default.Millis.MINUTE,
         } = t;
         return (0, a.jsx)(A.default, {
           ...e,
-          onMouseEnter: R,
+          onMouseEnter: v,
           "aria-haspopup": "menu",
           className: M.itemCard,
           active: n,
@@ -92,7 +92,7 @@ let P = 15 * I.default.Millis.MINUTE,
       }
     }) : null
   }),
-  x = i().throttle(() => f.fetchUserAffinities(!1), 3e5);
+  y = i().throttle(() => f.fetchUserAffinities(!1), 3e5);
 
 function D() {
   let {
@@ -108,8 +108,8 @@ function D() {
     fetching: _.default.getFetching(),
     currentUser: C.default.getCurrentUser()
   })), r = (0, u.useStateFromStores)([E.default], () => E.default.quests);
-  s.useEffect(() => (c.default.wait(() => T.mount()), () => c.default.wait(() => T.unmount())), [null == i ? void 0 : i.id]), s.useEffect(() => {
-    n && !l && x()
+  s.useEffect(() => (c.default.wait(() => p.mount()), () => c.default.wait(() => p.unmount())), [null == i ? void 0 : i.id]), s.useEffect(() => {
+    n && !l && y()
   }, [n, l]);
   let o = s.useMemo(() => {
       let t = new Map,
@@ -130,7 +130,7 @@ function D() {
     let {
       party: t
     } = e;
-    return (0, a.jsx)(y, {
+    return (0, a.jsx)(x, {
       party: t,
       quest: o.get(t.id)
     }, t.id)

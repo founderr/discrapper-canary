@@ -16,34 +16,34 @@ let C = "IncomingCallStore",
   },
   S = new Set,
   I = [],
-  T = new Map,
-  p = new Set,
+  p = new Map,
+  T = new Set,
   g = 0,
   A = 0,
   N = !1;
 
-function R(e) {
-  if (null == e || null == T.get(e)) return !1;
-  T.delete(e), (p = new Set(p)).delete(e)
+function v(e) {
+  if (null == e || null == p.get(e)) return !1;
+  p.delete(e), (T = new Set(T)).delete(e)
 }
 
-function v(e) {
+function R(e) {
   let {
     channelId: t,
     ringing: n
   } = e, a = n.includes(f.default.getId());
-  if (!p.has(t) && a) {
+  if (!T.has(t) && a) {
     let e = E.default.getChannel(t);
     if (null == e) return !1;
-    let n = 10 * p.size;
-    T.set(t, {
+    let n = 10 * T.size;
+    p.set(t, {
       channel: e,
       x: g + n,
       y: A + n
-    }), (p = new Set(p)).add(t)
+    }), (T = new Set(T)).add(t)
   } else {
-    if (!p.has(t) || a) return !1;
-    R(t)
+    if (!T.has(t) || a) return !1;
+    v(t)
   }
 }! function() {
   let e = o.Storage.get(C);
@@ -62,16 +62,16 @@ class L extends(a = r.default.Store) {
     this.waitFor(E.default, h.default), this.syncWith([h.default], O), this.syncWith([c.default], O)
   }
   getIncomingCalls() {
-    return N ? I : Array.from(T.values())
+    return N ? I : Array.from(p.values())
   }
   getIncomingCallChannelIds() {
-    return N ? S : p
+    return N ? S : T
   }
   getFirstIncomingCallId() {
-    return N ? null : p.values().next().value
+    return N ? null : T.values().next().value
   }
   hasIncomingCalls() {
-    return !N && p.size > 0
+    return !N && T.size > 0
   }
 }
 i = "IncomingCallStore", (l = "displayName") in(s = L) ? Object.defineProperty(s, l, {
@@ -80,19 +80,19 @@ i = "IncomingCallStore", (l = "displayName") in(s = L) ? Object.defineProperty(s
   configurable: !0,
   writable: !0
 }) : s[l] = i, t.default = new L(u.default, {
-  CALL_CREATE: v,
-  CALL_UPDATE: v,
+  CALL_CREATE: R,
+  CALL_UPDATE: R,
   CALL_DELETE: function(e) {
     let {
       channelId: t
     } = e;
-    return R(t)
+    return v(t)
   },
   VOICE_CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    return R(t)
+    return v(t)
   },
   INCOMING_CALL_MOVE: function(e) {
     let {
@@ -108,6 +108,6 @@ i = "IncomingCallStore", (l = "displayName") in(s = L) ? Object.defineProperty(s
     let {
       channel: t
     } = e;
-    return R(t.id)
+    return v(t.id)
   }
 })

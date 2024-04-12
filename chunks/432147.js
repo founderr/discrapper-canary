@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return S
   }
 });
 var s = n("735250");
@@ -14,69 +14,69 @@ var a = n("803997"),
   u = n("901461"),
   d = n("592125"),
   c = n("709054"),
-  f = n("723774"),
-  E = n("144140"),
+  E = n("723774"),
+  f = n("144140"),
   _ = n("91159"),
-  m = n("576799"),
-  T = n("488131"),
-  I = n("981631"),
+  T = n("576799"),
+  I = n("488131"),
+  m = n("981631"),
   p = n("689938"),
-  h = n("251113");
+  N = n("251113");
 
-function N(e) {
+function S(e) {
   let {
     message: t,
     compact: n
   } = e, a = (0, i.useStateFromStores)([d.default], () => d.default.getChannel(c.default.castMessageIdAsChannelId(t.id)));
-  return null == a ? null : (0, s.jsx)(S, {
+  return null == a ? null : (0, s.jsx)(C, {
     channel: a,
     compact: n,
     isSystemMessage: (0, u.default)(t)
   })
 }
 
-function S(e) {
+function C(e) {
   let {
     channel: t,
     compact: a,
     isSystemMessage: u
-  } = e, d = (0, i.useStateFromStores)([E.default], () => E.default.getCount(t.id)), c = function(e) {
+  } = e, d = (0, i.useStateFromStores)([f.default], () => f.default.getCount(t.id)), c = function(e) {
     var t;
-    let n = (0, i.useStateFromStores)([E.default], () => E.default.getMostRecentMessage(e.id)),
-      a = (0, i.useStateFromStores)([E.default], () => E.default.getCount(e.id)),
+    let n = (0, i.useStateFromStores)([f.default], () => f.default.getMostRecentMessage(e.id)),
+      a = (0, i.useStateFromStores)([f.default], () => f.default.getCount(e.id)),
       l = (0, _.useLastMessageTimestamp)(e);
     return (null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.archived) ? p.default.Messages.NO_RECENT_THREAD_MESSAGES : null == a || 0 === a ? p.default.Messages.NO_THREAD_MESSAGES : null == n ? (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)("span", {
         children: p.default.Messages.NO_RECENT_THREAD_MESSAGES
       }), (0, s.jsx)("span", {
-        className: h.timestamp,
+        className: N.timestamp,
         children: (0, _.getTimestampString)(l)
       })]
     }) : (0, s.jsxs)(s.Fragment, {
-      children: [(0, s.jsx)(m.default, {
+      children: [(0, s.jsx)(T.default, {
         message: n,
         channel: e
       }), (0, s.jsx)("span", {
-        className: h.timestamp,
+        className: N.timestamp,
         children: (0, _.getTimestampString)(l)
       })]
     })
-  }(t), N = null != d && d > 0;
+  }(t), S = null != d && d > 0;
   return (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)("div", {
-      className: l()(h.spine, {
-        [h.cozy]: !a,
-        [h.systemMessageSpine]: u
+      className: l()(N.spine, {
+        [N.cozy]: !a,
+        [N.systemMessageSpine]: u
       })
     }), (0, s.jsx)(r.Clickable, {
       onClick: function(e) {
-        e.stopPropagation(), (0, T.openThreadSidebarForViewing)(t, e.shiftKey)
+        e.stopPropagation(), (0, I.openThreadSidebarForViewing)(t, e.shiftKey)
       },
       onKeyDown: function(e) {
         e.stopPropagation();
         let n = !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey,
           s = e.shiftKey && !(e.altKey || e.ctrlKey || e.metaKey);
-        (e.which === I.KeyboardKeys.SPACE || e.which === I.KeyboardKeys.ENTER) && (e.preventDefault(), (n || s) && (0, T.openThreadSidebarForViewing)(t, s))
+        (e.which === m.KeyboardKeys.SPACE || e.which === m.KeyboardKeys.ENTER) && (e.preventDefault(), (n || s) && (0, I.openThreadSidebarForViewing)(t, s))
       },
       onContextMenu: function(e) {
         (0, o.openContextMenuLazy)(e, async () => {
@@ -90,25 +90,25 @@ function S(e) {
         })
       },
       "aria-roledescription": p.default.Messages.THREAD_MESSAGE_ROLE_DESCRIPTION,
-      className: l()(h.container, {
-        [h.systemMessageContainer]: u
+      className: l()(N.container, {
+        [N.systemMessageContainer]: u
       }),
       children: (0, s.jsxs)(r.BlockInteractions, {
         children: [(0, s.jsxs)("div", {
-          className: h.topLine,
+          className: N.topLine,
           children: [(0, s.jsx)(r.HiddenVisually, {
             children: p.default.Messages.THREAD
           }), (0, s.jsx)("span", {
-            className: h.name,
+            className: N.name,
             children: t.name
           }), (0, s.jsx)("span", {
-            className: h.cta,
-            "aria-hidden": !N,
-            children: (0, f.formatMessageCountLabel)(d, t.id)
+            className: N.cta,
+            "aria-hidden": !S,
+            children: (0, E.formatMessageCountLabel)(d, t.id)
           })]
         }), (0, s.jsx)("span", {
           "aria-hidden": !0,
-          className: l()(h.bottomLine),
+          className: l()(N.bottomLine),
           children: c
         })]
       })

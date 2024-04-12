@@ -1,7 +1,7 @@
 "use strict";
-var n, a;
-r.r(t), r.d(t, {
+var s, n;
+i.r(t), i.d(t, {
   NameValidationState: function() {
-    return n
+    return s
   }
-}), (a = n || (n = {})).AVAILABLE = "AVAILABLE", a.ERROR = "ERROR", a.RATE_LIMIT = "RATE_LIMIT", a.INTERNAL_ERROR = "INTERNAL_ERROR"
+}), (n = s || (s = {})).AVAILABLE = "AVAILABLE", n.ERROR = "ERROR", n.RATE_LIMIT = "RATE_LIMIT", n.INTERNAL_ERROR = "INTERNAL_ERROR"

@@ -124,7 +124,7 @@ function B(e, t, n) {
   })
 }
 
-function F(e) {
+function V(e) {
   let {
     member: t,
     mentions: n,
@@ -141,7 +141,7 @@ function F(e) {
   })
 }
 
-function V(e) {
+function F(e) {
   return e.map(e => ({
     sessionId: e.session_id,
     lastModified: e.last_modified,
@@ -307,7 +307,7 @@ G(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.ChannelLoader.loadGu
           guildExperiments: e.guild_experiments,
           requiredAction: e.required_action,
           consents: e.consents,
-          sessions: V(e.sessions || []),
+          sessions: F(e.sessions || []),
           pendingPayments: e.pending_payments,
           countryCode: null !== (n = e.country_code) && void 0 !== n ? n : void 0,
           guildJoinRequests: e.guild_join_requests || [],
@@ -352,7 +352,7 @@ G(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.ChannelLoader.loadGu
     messageId: e.message_id
   })
 }), G(["MESSAGE_CREATE"], e => A.ChannelLoader.loadGuildIds([e.guild_id]), e => {
-  F(e), null != e.author && k({
+  V(e), null != e.author && k({
     type: "MESSAGE_CREATE",
     guildId: e.guild_id,
     channelId: e.channel_id,
@@ -361,7 +361,7 @@ G(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.ChannelLoader.loadGu
     isPushNotification: !1
   })
 }), G(["MESSAGE_UPDATE"], e => A.ChannelLoader.loadGuildIds([e.guild_id]), e => {
-  F(e), k({
+  V(e), k({
     type: "MESSAGE_UPDATE",
     guildId: e.guild_id,
     message: e
@@ -743,7 +743,7 @@ G(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.ChannelLoader.loadGu
 }), b(["SESSIONS_REPLACE"], e => {
   k({
     type: "SESSIONS_REPLACE",
-    sessions: V(e)
+    sessions: F(e)
   })
 }), b(["VOICE_STATE_UPDATE"], e => {
   var t;

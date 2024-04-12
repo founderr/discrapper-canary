@@ -70,12 +70,12 @@ function B() {
   e && t ? (0, o.focus)(window, !0) : (0, o.focus)(window, !1)
 }
 
-function F() {
+function V() {
   if (R !== (0, A.getPID)()) return !1;
   P.clear()
 }
 
-function V(e) {
+function F(e) {
   let t = (0, A.getPID)();
   if (null == e.pid || e.pid === t) switch (e.type) {
     case m.OverlayEventTypes.STORAGE_SYNC:
@@ -285,7 +285,7 @@ O(x, "displayName", "OverlayStore"), O(x, "persistKey", "OverlayStoreV2"), O(x, 
         token: (0, A.getRPCAuthToken)(),
         payloads: [e]
       }), !w.has(e.type)
-    }), (0, l.setReceiveEventHandler)(V, (0, A.getRPCAuthToken)()), (0, l.connect)(), (0, l.send)({
+    }), (0, l.setReceiveEventHandler)(F, (0, A.getRPCAuthToken)()), (0, l.connect)(), (0, l.send)({
       type: m.OverlayEventTypes.CONNECT,
       pid: (0, A.getPID)(),
       token: (0, A.getRPCAuthToken)()
@@ -382,7 +382,7 @@ O(x, "displayName", "OverlayStore"), O(x, "persistKey", "OverlayStoreV2"), O(x, 
       locked: t,
       pid: n
     } = e;
-    t ? L.delete(n) : L.add(n), F(), B(), U = !1
+    t ? L.delete(n) : L.add(n), V(), B(), U = !1
   },
   OVERLAY_ACTIVATE_REGION: function(e) {
     let {
@@ -391,7 +391,7 @@ O(x, "displayName", "OverlayStore"), O(x, "persistKey", "OverlayStoreV2"), O(x, 
     if (R !== (0, A.getPID)() || P.has(t)) return !1;
     P.add(t)
   },
-  OVERLAY_DEACTIVATE_ALL_REGIONS: F,
+  OVERLAY_DEACTIVATE_ALL_REGIONS: V,
   OVERLAY_SET_PREVIEW_IN_GAME_MODE: function(e) {
     U = e.isPreviewingInGame
   },

@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return $
   },
   useGuildIndexState: function() {
-    return J
+    return Z
   },
   useUserIndexState: function() {
-    return Z
+    return J
   }
 }), n("47120"), n("653041"), n("390547");
 var i, r, s, a = n("470079"),
@@ -54,13 +54,13 @@ let G = new u.Logger("ApplicationCommandIndexStore"),
   w = Symbol("currentUser"),
   k = Symbol("stale"),
   B = Symbol("current"),
-  F = Object.freeze({
+  V = Object.freeze({
     descriptors: [],
     commands: [],
     sectionedCommands: [],
     loading: !0
   }),
-  V = Object.freeze({
+  F = Object.freeze({
     serverVersion: B,
     fetchState: {
       fetching: !1
@@ -143,7 +143,7 @@ class X extends(i = d.default.Store) {
   }
   getContextState(e) {
     var t, n;
-    return null != e && ei(e) ? null !== (n = this.indices[null !== (t = e.guild_id) && void 0 !== t ? t : e.id]) && void 0 !== n ? n : x : V
+    return null != e && ei(e) ? null !== (n = this.indices[null !== (t = e.guild_id) && void 0 !== t ? t : e.id]) && void 0 !== n ? n : x : F
   }
   getUserState() {
     var e;
@@ -151,17 +151,17 @@ class X extends(i = d.default.Store) {
       location: "getUserState"
     }, {
       autoTrackExposure: !1
-    }) ? null !== (e = this.indices[w]) && void 0 !== e ? e : x : V
+    }) ? null !== (e = this.indices[w]) && void 0 !== e ? e : x : F
   }
   getApplicationState(e) {
     var t;
-    return null == e ? V : null !== (t = this.indices[e]) && void 0 !== t ? t : x
+    return null == e ? F : null !== (t = this.indices[e]) && void 0 !== t ? t : x
   }
   getApplicationStates() {
     return this.applicationIndices
   }
   query(e, t, n) {
-    if (null == m.default.getCurrentUser()) return F;
+    if (null == m.default.getCurrentUser()) return V;
     let i = this.getContextState(e),
       r = this.getUserState(),
       s = this.getApplicationState(n.applicationId),
@@ -423,7 +423,7 @@ function q(e, t, n) {
   }, [s, n, e, t, i]), s
 }
 
-function J(e, t) {
+function Z(e, t) {
   let [n, i] = a.useState(!0), r = (0, d.useStateFromStoresObject)([Q], () => {
     var t;
     return null !== (t = Q.indices[e]) && void 0 !== t ? t : x
@@ -439,7 +439,7 @@ function J(e, t) {
   }, [r, t, e, n]), r
 }
 
-function Z(e, t) {
+function J(e, t) {
   let [n, i] = a.useState(!0), r = (0, d.useStateFromStoresObject)([Q], () => Q.getUserState()), s = (0, D.useIsUserInUserAppExperiment)({
     location: "useUserIndexState"
   });
@@ -461,7 +461,7 @@ function $(e, t, n, i) {
     let i = (0, v.usePermissionContext)(e, t.commandType),
       r = !1 !== t.applicationCommands && i.hasBaseAccessPermissions,
       s = q(e, r, n.allowFetch),
-      o = Z(r, n.allowFetch),
+      o = J(r, n.allowFetch),
       l = (0, d.useStateFromStores)([Q], () => Q.getApplicationStates());
     return a.useMemo(() => et({
       permissionContext: i,

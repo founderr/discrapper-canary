@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return F
+    return V
   },
   retryCommandMessage: function() {
     return x
@@ -57,7 +57,7 @@ let w = (e, t) => {
       n = e.toLowerCase() === P.FALSE_OPTION_NAME.toLowerCase();
     return t || n ? t : null
   };
-async function F(e) {
+async function V(e) {
   var t, n, i, a, l, d, _, I, T, f, S, m, O, p, R;
   let {
     command: C,
@@ -73,7 +73,7 @@ async function F(e) {
     command: C,
     commandOrigin: G
   }), await A.default.unarchiveThreadIfNecessary(v.channel.id);
-  let F = [],
+  let V = [],
     x = [],
     Y = (0, y.getCommandAttachmentDraftType)(G);
   if (null != C.options)
@@ -83,7 +83,7 @@ async function F(e) {
         n = null;
       if (e.type === u.ApplicationCommandOptionType.STRING) {
         let i = null !== (l = null === (a = D.getOptionalString(L, e.name)) || void 0 === a ? void 0 : a.trim()) && void 0 !== l ? l : "";
-        n = null != e.choices ? w(e.choices, i) : e.autocomplete ? k(e, i, v) : i, r()(null != v.autocomplete || null != n, 'Option "'.concat(e.name, '" expects a value')), null != n && F.push({
+        n = null != e.choices ? w(e.choices, i) : e.autocomplete ? k(e, i, v) : i, r()(null != v.autocomplete || null != n, 'Option "'.concat(e.name, '" expects a value')), null != n && V.push({
           type: e.type,
           name: e.name,
           value: n,
@@ -96,7 +96,7 @@ async function F(e) {
         let i = N.default.getUpload(v.channel.id, e.name, Y);
         if (null == i) continue;
         let r = N.default.getUploads(v.channel.id, Y).findIndex(e => i.id === e.id);
-        x.push(i), n = r, F.push({
+        x.push(i), n = r, V.push({
           type: e.type,
           name: e.name,
           value: n,
@@ -176,7 +176,7 @@ async function F(e) {
           r()(!1, "Unsupported option type: ".concat(e.type));
           continue
       }
-      r()(null != v.autocomplete || null != n, 'Unexpected value for option "'.concat(e.name, '"')), null != n && F.push({
+      r()(null != v.autocomplete || null != n, 'Unexpected value for option "'.concat(e.name, '"')), null != n && V.push({
         type: e.type,
         name: e.name,
         value: n,
@@ -189,10 +189,10 @@ async function F(e) {
         name: t,
         type: n
       } = C.subCommandPath[e];
-      F = [{
+      V = [{
         type: n,
         name: t,
-        options: F
+        options: V
       }]
     }
   if (null != C.execute) return c.default.trackWithMetadata(U.AnalyticEvents.APPLICATION_COMMAND_USED, {
@@ -200,7 +200,7 @@ async function F(e) {
     application_id: C.applicationId,
     command_type: C.type,
     location: G === M.CommandOrigin.APPLICATION_LAUNCHER ? M.ApplicationCommandTriggerLocations.APP_LAUNCHER : M.ApplicationCommandTriggerLocations.SLASH_UI
-  }), C.execute(F, v);
+  }), C.execute(V, v);
   if (C.inputType === M.ApplicationCommandInputType.BUILT_IN || C.inputType === M.ApplicationCommandInputType.BUILT_IN_TEXT || C.inputType === M.ApplicationCommandInputType.BUILT_IN_INTEGRATION) return;
   let j = {
     version: C.version,
@@ -208,7 +208,7 @@ async function F(e) {
     guild_id: C.guildId,
     name: null !== (R = null === (n = C.rootCommand) || void 0 === n ? void 0 : n.name) && void 0 !== R ? R : C.name,
     type: C.type,
-    options: F,
+    options: V,
     application_command: C.rootCommand
   };
   null != P && (j.target_id = P), null != v.autocomplete ? (0, g.performAutocomplete)(C, v, j) : (o.default.clearAll(v.channel.id, Y), await H({
@@ -218,13 +218,13 @@ async function F(e) {
     attachments: x,
     maxSizeCallback: b,
     onMessageSuccess: () => {
-      V(L)
+      F(L)
     },
     commandDisplayName: C.displayName,
     analytics_location: G === M.CommandOrigin.APPLICATION_LAUNCHER ? M.ApplicationCommandTriggerLocations.APP_LAUNCHER : M.ApplicationCommandTriggerLocations.SLASH_UI
   }))
 }
-let V = e => {
+let F = e => {
     let t = Object.values(e).flatMap(e => e.map(e => "emoji" === e.type ? {
       name: e.name.replaceAll(":", "")
     } : "customEmoji" === e.type ? I.default.getCustomEmojiById(e.emojiId) : null).filter(R.isNotNullish));

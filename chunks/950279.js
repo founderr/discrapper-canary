@@ -68,7 +68,7 @@ t.default = e => {
   } = (0, c.useUserRecentGames)(r), h = (0, o.useStateFromStores)([E.default], () => E.default.games, []), I = s.useMemo(() => h.map(e => ({
     value: e.id,
     label: e.name
-  })), [h]), T = (0, o.useStateFromStoresArray)([E.default], () => null != d ? d.map(e => {
+  })), [h]), p = (0, o.useStateFromStoresArray)([E.default], () => null != d ? d.map(e => {
     let t = E.default.getGameById(e.applicationId);
     return {
       ...e,
@@ -78,7 +78,7 @@ t.default = e => {
   s.useEffect(() => {
     null != i && !n.has(i) && h.length > 0 && g(i)
   }, [h.length, i]);
-  let p = e => {
+  let T = e => {
       if (!n.has(e) || e === i) return;
       let a = new Map(n);
       a.delete(e), t({
@@ -137,12 +137,12 @@ t.default = e => {
             return (0, a.jsx)(S, {
               applicationId: t,
               name: n.name,
-              onClick: t !== i ? p : void 0,
+              onClick: t !== i ? T : void 0,
               imageContainerClassName: t !== i ? m.removableGame : void 0
             }, t)
           })
         })]
-      }), T.length > 0 && (0, a.jsxs)(a.Fragment, {
+      }), p.length > 0 && (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(u.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
@@ -150,7 +150,7 @@ t.default = e => {
           children: C.default.Messages.RECENT_GAMES
         }), (0, a.jsx)("div", {
           className: m.selectedSection,
-          children: T.map(e => (0, a.jsx)(S, {
+          children: p.map(e => (0, a.jsx)(S, {
             name: e.name,
             applicationId: e.applicationId,
             onClick: g

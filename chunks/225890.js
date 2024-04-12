@@ -13,22 +13,22 @@ var s = n("735250"),
   u = n("592125"),
   d = n("271383"),
   c = n("430824"),
-  f = n("594174"),
-  E = n("897285"),
+  E = n("594174"),
+  f = n("897285"),
   _ = n("924301"),
-  m = n("482241"),
-  T = n("11868"),
-  I = n("231338");
+  T = n("482241"),
+  I = n("11868"),
+  m = n("231338");
 
 function p(e) {
   let {
     code: t
-  } = e, [n, p, h] = t.split("-"), {
-    guildScheduledEvent: N,
-    guild: S,
-    channel: C,
-    isMember: A
-  } = (0, l.useStateFromStoresObject)([_.default, c.default, u.default, d.default, f.default], () => {
+  } = e, [n, p, N] = t.split("-"), {
+    guildScheduledEvent: S,
+    guild: C,
+    channel: A,
+    isMember: h
+  } = (0, l.useStateFromStoresObject)([_.default, c.default, u.default, d.default, E.default], () => {
     var e, t;
     let s = null !== (t = _.default.getGuildScheduledEvent(p)) && void 0 !== t ? t : void 0,
       a = c.default.getGuild(n),
@@ -37,23 +37,23 @@ function p(e) {
       guildScheduledEvent: s,
       guild: a,
       channel: l,
-      isMember: d.default.isMember(n, null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
+      isMember: d.default.isMember(n, null === (e = E.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
     }
   }, [n, p]);
   return a.useEffect(() => {
-    (null == N ? void 0 : N.id) == null && m.default.fetchGuildEvent(n, p), E.default.getGuildEventUserCounts(n, p, null != h ? [h] : []), E.default.getGuildEventsForCurrentUser(n)
-  }, [p, n, null == N ? void 0 : N.id, h]), (0, s.jsx)(T.default, {
-    guild: S,
-    channel: C,
-    guildScheduledEvent: N,
-    isMember: A,
-    onAcceptInstantInvite: I.NOOP,
+    (null == S ? void 0 : S.id) == null && T.default.fetchGuildEvent(n, p), f.default.getGuildEventUserCounts(n, p, null != N ? [N] : []), f.default.getGuildEventsForCurrentUser(n)
+  }, [p, n, null == S ? void 0 : S.id, N]), (0, s.jsx)(I.default, {
+    guild: C,
+    channel: A,
+    guildScheduledEvent: S,
+    isMember: h,
+    onAcceptInstantInvite: m.NOOP,
     onTransitionToInviteChannel: function() {
       if ((0, r.shouldShowMembershipVerificationGate)(n)) {
         (0, i.openMemberVerificationModal)(n);
         return
-      }(null == C ? void 0 : C.isGuildStageVoice()) ? (0, o.connectAndOpen)(C) : (null == C ? void 0 : C.isGuildVoice()) && m.default.joinVoiceEvent(C.guild_id, C.id)
+      }(null == A ? void 0 : A.isGuildStageVoice()) ? (0, o.connectAndOpen)(A) : (null == A ? void 0 : A.isGuildVoice()) && T.default.joinVoiceEvent(A.guild_id, A.id)
     },
-    recurrenceId: h
+    recurrenceId: N
   })
 }

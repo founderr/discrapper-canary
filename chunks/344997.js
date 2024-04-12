@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   SafetySystemNotification: function() {
-    return N
+    return S
   }
 });
 var s = n("735250");
@@ -14,11 +14,11 @@ var a = n("913527"),
   u = n("316949"),
   d = n("788080"),
   c = n("800530"),
-  f = n("689938"),
-  E = n("117265");
+  E = n("689938"),
+  f = n("117265");
 let _ = e => l()().diff(l().unix(e), "days");
 
-function m(e) {
+function T(e) {
   let {
     classificationId: t
   } = e;
@@ -36,23 +36,23 @@ function m(e) {
         })
       })
     },
-    className: E.detailsButton,
-    children: f.default.Messages.SAFETY_SYSTEM_NOTIFICATION_SEE_DETAILS_BUTTON
-  })
-}
-
-function T(e) {
-  let {
-    learnMoreLink: t
-  } = e;
-  return (0, s.jsx)(o.Anchor, {
-    className: E.detailsButton,
-    href: t,
-    children: f.default.Messages.SAFETY_SYSTEM_NOTIFICATION_LEARN_MORE_BUTTON
+    className: f.detailsButton,
+    children: E.default.Messages.SAFETY_SYSTEM_NOTIFICATION_SEE_DETAILS_BUTTON
   })
 }
 
 function I(e) {
+  let {
+    learnMoreLink: t
+  } = e;
+  return (0, s.jsx)(o.Anchor, {
+    className: f.detailsButton,
+    href: t,
+    children: E.default.Messages.SAFETY_SYSTEM_NOTIFICATION_LEARN_MORE_BUTTON
+  })
+}
+
+function m(e) {
   let {
     ctaType: t,
     classificationId: n,
@@ -61,12 +61,12 @@ function I(e) {
   switch (t) {
     case c.SafetySystemNotificationCtaType.POLICY_VIOLATION_DETAIL:
       if (null == n) return null;
-      return (0, s.jsx)(m, {
+      return (0, s.jsx)(T, {
         classificationId: n
       });
     case c.SafetySystemNotificationCtaType.LEARN_MORE_LINK:
       if (null == a) return null;
-      return (0, s.jsx)(T, {
+      return (0, s.jsx)(I, {
         learnMoreLink: a
       });
     default:
@@ -86,18 +86,18 @@ function p(e) {
     })
   };
   return null != t && t in n ? (0, s.jsx)("div", {
-    className: E.icon,
+    className: f.icon,
     children: n[t]
   }) : null
 }
 
-function h(e) {
+function N(e) {
   let {
     children: t,
     theme: n
   } = e, a = {
-    default: E.defaultFooterContainer,
-    danger: E.dangerFooterContainer
+    default: f.defaultFooterContainer,
+    danger: f.dangerFooterContainer
   };
   return (0, s.jsx)("div", {
     className: a[null != n ? n : "default"],
@@ -105,16 +105,16 @@ function h(e) {
   })
 }
 
-function N(e) {
+function S(e) {
   var t, n;
   if (null == e.embed || null == e.embed.fields) return null;
   let a = (0, d.parseMessageEmbedForProps)(e.embed);
   return null == a ? null : (0, s.jsxs)(o.Clickable, {
-    className: E.safetyPolicyNoticeContainer,
+    className: f.safetyPolicyNoticeContainer,
     children: [(0, s.jsxs)("div", {
-      className: E.noticeContent,
+      className: f.noticeContent,
       children: [(0, s.jsxs)("div", {
-        className: E.headerRow,
+        className: f.headerRow,
         children: [(0, s.jsx)(p, {
           iconType: a.icon
         }), (0, s.jsx)(o.Text, {
@@ -122,24 +122,24 @@ function N(e) {
           children: a.header
         })]
       }), (0, s.jsx)("div", {
-        className: E.incidentTiming,
+        className: f.incidentTiming,
         children: (0, s.jsx)(o.Text, {
           variant: "text-xs/medium",
-          children: f.default.Messages.SAFETY_POLICY_NOTICE_DAYS_AGO.format({
+          children: E.default.Messages.SAFETY_POLICY_NOTICE_DAYS_AGO.format({
             daysAgo: _(null !== (n = a.timestamp) && void 0 !== n ? n : 0)
           })
         })
       }), (0, s.jsx)("div", {
-        className: E.noticeBody,
+        className: f.noticeBody,
         children: (0, s.jsx)(o.Text, {
           variant: "text-md/normal",
           color: "text-muted",
           children: a.body
         })
       })]
-    }), (0, s.jsx)(h, {
+    }), (0, s.jsx)(N, {
       theme: a.theme,
-      children: null === (t = a.ctas) || void 0 === t ? void 0 : t.map(e => (0, s.jsx)(I, {
+      children: null === (t = a.ctas) || void 0 === t ? void 0 : t.map(e => (0, s.jsx)(m, {
         ctaType: e,
         classificationId: a.classification_id,
         learnMoreLink: a.learn_more_link

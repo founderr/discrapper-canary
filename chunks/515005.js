@@ -41,8 +41,8 @@ let p = (0, l.cssValueToNumber)(O.__invalid_stickerPickerPreviewDimensions),
       stickerSize: w = p,
       ownedStickerPacks: k,
       enlargeOnInteraction: B = !1,
-      channel: F,
-      currentUser: V,
+      channel: V,
+      currentUser: F,
       checkSendability: x = !0
     } = e, {
       location: H
@@ -154,7 +154,7 @@ let p = (0, l.cssValueToNumber)(O.__invalid_stickerPickerPreviewDimensions),
                   className: a()(O.stickerNode, {
                     [O.stickerNodeDimmed]: B && !p && null != L && -1 !== L.rowIndex && -1 !== L.columnIndex,
                     [O.stickerNodeHidden]: R,
-                    [O.stickerUnsendable]: x && !(0, T.isSendableSticker)(e.sticker, V, F)
+                    [O.stickerUnsendable]: x && !(0, T.isSendableSticker)(e.sticker, F, V)
                   }),
                   disableAnimation: !p && !s,
                   enlargeOnInteraction: B,

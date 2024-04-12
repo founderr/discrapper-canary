@@ -40,8 +40,8 @@ var r = n("658722"),
   w = n("55563"),
   k = n("823379"),
   B = n("892880"),
-  F = n("700785"),
-  V = n("226951"),
+  V = n("700785"),
+  F = n("226951"),
   x = n("709054"),
   H = n("624138"),
   Y = n("51144"),
@@ -52,8 +52,8 @@ var r = n("658722"),
 let X = new c.default("AutocompleteUtils"),
   Q = () => !0,
   q = /(\t|\s)/,
-  J = [],
-  Z = (i = n("786074").default).MENTION_EVERYONE,
+  Z = [],
+  J = (i = n("786074").default).MENTION_EVERYONE,
   $ = i.MENTION_HERE,
   ee = i.LAUNCHABLE_APPLICATIONS;
 
@@ -82,7 +82,7 @@ function ei(e, t) {
       return 7
     }
     if (i.test(e)) return 5;
-    if (l = r, u = e, l.split(/(?:,| )+/).every(e => RegExp(V.default.escape(e), "i").test(u))) return 3;
+    if (l = r, u = e, l.split(/(?:,| )+/).every(e => RegExp(F.default.escape(e), "i").test(u))) return 3;
     if (o && s()(r, e)) return 1
   } catch (e) {
     X.error(e)
@@ -235,7 +235,7 @@ t.default = {
       query: i,
       members: t,
       limit: r,
-      filter: e => d.isPrivate() || F.can({
+      filter: e => d.isPrivate() || V.can({
         permission: j.Permissions.VIEW_CHANNEL,
         user: e,
         context: d
@@ -297,8 +297,8 @@ t.default = {
             let t = e.toLocaleLowerCase();
             return {
               queryLower: t,
-              exactQuery: RegExp("^".concat(V.default.escape(t)), "i"),
-              containQuery: RegExp(V.default.escape(t), "i"),
+              exactQuery: RegExp("^".concat(F.default.escape(t)), "i"),
+              containQuery: RegExp(F.default.escape(t), "i"),
               isFullMatch: !1
             }
           });
@@ -306,8 +306,8 @@ t.default = {
           let t = e.toLocaleLowerCase();
           n.unshift({
             queryLower: t,
-            exactQuery: RegExp("^".concat(V.default.escape(t).replace(" ", "( |-)")), "i"),
-            containQuery: RegExp(V.default.escape(t).replace(" ", "( |-)"), "i"),
+            exactQuery: RegExp("^".concat(F.default.escape(t).replace(" ", "( |-)")), "i"),
+            containQuery: RegExp(F.default.escape(t).replace(" ", "( |-)"), "i"),
             isFullMatch: !0
           })
         }
@@ -371,8 +371,8 @@ t.default = {
       filter: r = Q,
       boosters: s = {}
     } = e, a = "" === t ? "" : t.toLocaleLowerCase(), u = {
-      exactQuery: RegExp("^".concat(V.default.escape(a)), "i"),
-      containQuery: RegExp(V.default.escape(a), "i"),
+      exactQuery: RegExp("^".concat(F.default.escape(a)), "i"),
+      containQuery: RegExp(F.default.escape(a), "i"),
       queryLower: a
     }, d = [];
     for (let e of o()(D.default.getGuilds()).values().value()) {
@@ -397,8 +397,8 @@ t.default = {
       filter: r = Q,
       boosters: s = {}
     } = e, a = (0, H.stripDiacritics)((0, H.normalize)(t.toLocaleLowerCase())), d = {
-      exactQuery: RegExp("^".concat(V.default.escape(a)), "i"),
-      containQuery: RegExp(V.default.escape(a), "i"),
+      exactQuery: RegExp("^".concat(F.default.escape(a)), "i"),
+      containQuery: RegExp(F.default.escape(a), "i"),
       queryLower: a
     }, _ = o()(C.default.getMutablePrivateChannels()).values().value(), c = [];
     for (let e of _) {
@@ -423,8 +423,8 @@ t.default = {
       fuzzy: i = !0,
       filter: r = Q
     } = e, s = t.toLocaleLowerCase(), a = {
-      exactQuery: RegExp("^".concat(V.default.escape(s)), "i"),
-      containQuery: RegExp(V.default.escape(s), "i"),
+      exactQuery: RegExp("^".concat(F.default.escape(s)), "i"),
+      containQuery: RegExp(F.default.escape(s), "i"),
       queryLower: s
     }, o = ee(), u = [];
     for (let {
@@ -451,8 +451,8 @@ t.default = {
       fuzzy: i = !0,
       filter: r = Q
     } = e, s = t.toLocaleLowerCase(), a = {
-      exactQuery: RegExp("^".concat(V.default.escape(s)), "i"),
-      containQuery: RegExp(V.default.escape(s), "i"),
+      exactQuery: RegExp("^".concat(F.default.escape(s)), "i"),
+      containQuery: RegExp(F.default.escape(s), "i"),
       queryLower: s
     }, u = o()(w.default.getSKUs()).values().value(), d = [];
     for (let e of u)
@@ -525,7 +525,7 @@ t.default = {
       }), f += A.length)
     }
     let h = [];
-    return !n.isPrivate() && i && l && (f < c && s()(S, Z().test) && (h.push(Z()), f += 1), r && f < c && s()(S, $().test) && h.push($())), {
+    return !n.isPrivate() && i && l && (f < c && s()(S, J().test) && (h.push(J()), f += 1), r && f < c && s()(S, $().test) && h.push($())), {
       users: T,
       globals: h,
       roles: A
@@ -560,7 +560,7 @@ t.default = {
       }), _ += E.length)
     }
     let I = [];
-    return i && a && (_ < j.MAX_AUTOCOMPLETE_RESULTS && s()(c, Z().test) && (I.push(Z()), _ += 1), _ < j.MAX_AUTOCOMPLETE_RESULTS && s()(c, $().test) && I.push($())), {
+    return i && a && (_ < j.MAX_AUTOCOMPLETE_RESULTS && s()(c, J().test) && (I.push(J()), _ += 1), _ < j.MAX_AUTOCOMPLETE_RESULTS && s()(c, $().test) && I.push($())), {
       users: u,
       globals: I,
       roles: E
@@ -572,7 +572,7 @@ t.default = {
       choices: n,
       limit: i = 10,
       fuzzy: r = !0
-    } = e, s = t.toLocaleLowerCase(), a = RegExp("^".concat(V.default.escape(s)), "i"), l = RegExp(V.default.escape(s), "i"), u = o()(n).map((e, t) => {
+    } = e, s = t.toLocaleLowerCase(), a = RegExp("^".concat(F.default.escape(s)), "i"), l = RegExp(F.default.escape(s), "i"), u = o()(n).map((e, t) => {
       let n = ei(e.displayName.toLocaleLowerCase(), {
         exactQuery: a,
         containQuery: l,
@@ -591,8 +591,8 @@ t.default = {
       query: t,
       guild: n
     } = e, i = t.toLocaleLowerCase(), r = {
-      exactQuery: RegExp("^".concat(V.default.escape(i)), "i"),
-      containQuery: RegExp(V.default.escape(i), "i"),
+      exactQuery: RegExp("^".concat(F.default.escape(i)), "i"),
+      containQuery: RegExp(F.default.escape(i), "i"),
       queryLower: i
     }, s = ((0, I.canSeeGuildHome)(n.id) || (0, f.canSeeOnboardingHome)(n.id)) && !n.hasFeature(j.GuildFeatures.HUB), a = n.hasFeature(j.GuildFeatures.COMMUNITY), o = (0, T.isGuildOnboardingAvailable)(n) && n.hasFeature(j.GuildFeatures.COMMUNITY), l = [{
       id: K.StaticChannelId.SERVER_GUIDE,
@@ -712,8 +712,8 @@ t.default = {
       if ("" === o) continue;
       let e = o.toLocaleLowerCase(),
         u = (0, H.stripDiacritics)(e),
-        d = RegExp("^".concat(V.default.escape(u)), "i"),
-        _ = RegExp("".concat(V.default.escape(u)), "i");
+        d = RegExp("^".concat(F.default.escape(u)), "i"),
+        _ = RegExp("".concat(F.default.escape(u)), "i");
       r.forEach((r, o) => {
         let u = 0,
           c = null,
@@ -748,7 +748,7 @@ t.default = {
         }))
       })
     }
-    return 0 === (l = o()(l).sortBy(e => -1 * e.score).value()).length && (l = J), l
+    return 0 === (l = o()(l).sortBy(e => -1 * e.score).value()).length && (l = Z), l
   },
   matchSentinel: (e, t, n) => !q.test(t) && e === n,
   hasSameRoleAsUsername(e, t) {

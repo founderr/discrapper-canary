@@ -20,7 +20,7 @@ t.default = r.memo(function(e) {
     onExpand: E,
     disableAnimation: I,
     disableBackground: _
-  } = e, T = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), [h, g] = r.useState(!0), [C, x] = r.useState(!1), {
+  } = e, h = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), [T, g] = r.useState(!0), [C, x] = r.useState(!1), {
     ref: v,
     height: N = 0
   } = (0, c.default)(), {
@@ -28,7 +28,7 @@ t.default = r.memo(function(e) {
     height: A = 0
   } = (0, c.default)(), [S, M] = r.useState(s), b = (0, l.useSpring)({
     height: S ? A + N : N,
-    immediate: h || T || I,
+    immediate: T || h || I,
     config: {
       ...l.config.stiff,
       clamp: !0

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return R
   }
 });
 var a = n("735250"),
@@ -21,19 +21,19 @@ var a = n("735250"),
   m = n("922409"),
   S = n("727813"),
   I = n("355350"),
-  T = n("307947"),
-  p = n("125855"),
+  p = n("307947"),
+  T = n("125855"),
   g = n("687683"),
   A = n("981631"),
   N = n("689938"),
-  R = n("569265");
+  v = n("569265");
 
-function v() {
+function R() {
   let e = s.useRef(null),
     t = (0, S.default)(),
     n = (0, I.useSpamMessageRequestCount)(),
     l = (0, _.useListHasSingleSpamMessageRequest)(),
-    v = (0, d.useIsRejectAllMessageRequestsEnabled)(),
+    R = (0, d.useIsRejectAllMessageRequestsEnabled)(),
     O = (0, c.default)("message-requests-spam-list"),
     {
       channelId: L
@@ -46,7 +46,7 @@ function v() {
     } = (0, C.useMessageRequestActions)({
       onError: M
     }),
-    y = s.useCallback(() => {
+    x = s.useCallback(() => {
       P(t.map(e => e.channel.id))
     }, [t, P]);
   s.useEffect(() => {
@@ -56,16 +56,16 @@ function v() {
       name: o.MetricEvents.SPAM_MESSAGE_REQUEST_VIEW
     })
   }, []);
-  let x = s.useCallback(e => {
+  let y = s.useCallback(e => {
       var n, s;
       let {
         row: r
       } = e, o = t[r], u = null === (s = t[r + 1]) || void 0 === s ? void 0 : null === (n = s.channel) || void 0 === n ? void 0 : n.id, d = o.channel.id;
-      return (0, a.jsx)(p.default, {
+      return (0, a.jsx)(T.default, {
         index: r,
         className: i()({
-          [R.selected]: null != L && L === d,
-          [R.siblingSelected]: null != L && L === u
+          [v.selected]: null != L && L === d,
+          [v.siblingSelected]: null != L && L === u
         }),
         channel: o.channel,
         user: o.user,
@@ -73,28 +73,28 @@ function v() {
       }, d)
     }, [t, l, L]),
     D = s.useCallback(() => (0, a.jsxs)(E.default, {
-      className: R.sectionTitle,
+      className: v.sectionTitle,
       children: [N.default.Messages.MESSAGE_REQUESTS_SPAM_HEADER.format({
         count: n
-      }), v && n > 0 ? (0, a.jsxs)(a.Fragment, {
+      }), R && n > 0 ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(u.Text, {
-          className: R.titleDivider,
+          className: v.titleDivider,
           variant: "eyebrow",
           color: "header-secondary",
           tag: "span",
           children: "•"
         }), (0, a.jsx)(u.Button, {
-          onClick: y,
+          onClick: x,
           look: u.ButtonLooks.LINK,
           color: u.ButtonColors.LINK,
           size: u.ButtonSizes.SMALL,
-          className: R.clearAllButton,
+          className: v.clearAllButton,
           "aria-label": N.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL,
           children: N.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL
         })]
       }) : null]
-    }, "message-requests-spam-title"), [n, y, v]);
-  return 0 === t.length ? (0, a.jsx)(T.default, {
+    }, "message-requests-spam-title"), [n, x, R]);
+  return 0 === t.length ? (0, a.jsx)(p.default, {
     section: g.MessageRequestSections.SPAM
   }) : (0, a.jsx)(r.ListNavigatorProvider, {
     navigator: O,
@@ -106,7 +106,7 @@ function v() {
           ...i
         } = n;
         return (0, a.jsx)(u.List, {
-          className: R.list,
+          className: v.list,
           innerRole: l,
           innerAriaLabel: N.default.Messages.MESSAGE_REQUESTS,
           ref: t => {
@@ -118,7 +118,7 @@ function v() {
           sectionHeight: g.LIST_SECTION_HEIGHT,
           rowHeight: g.LIST_ROW_HEIGHT,
           renderSection: D,
-          renderRow: x,
+          renderRow: y,
           sections: [t.length],
           chunkSize: 30,
           fade: !0,

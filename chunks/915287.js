@@ -52,8 +52,8 @@ function c(e, t, n, s) {
       customTheme: w = !1,
       chunkSize: k,
       style: B,
-      innerId: F,
-      innerRole: V,
+      innerId: V,
+      innerRole: F,
       innerAriaLabel: x,
       innerAriaMultiselectable: H,
       innerAriaOrientation: Y,
@@ -61,12 +61,12 @@ function c(e, t, n, s) {
       innerTag: W = "div",
       ...K
     } = s, z = r.useRef(null), X = r.useRef(null), [Q, q] = r.useState(!1), {
-      scrollerRef: J,
-      scrollerState: Z,
+      scrollerRef: Z,
+      scrollerState: J,
       getScrollerState: $
     } = (0, d.useCachedScrollerState)();
     (0, d.usePaddingFixes)({
-      scrollerRef: J,
+      scrollerRef: Z,
       className: T,
       specs: o,
       orientation: "vertical",
@@ -92,21 +92,21 @@ function c(e, t, n, s) {
       chunkSize: k,
       getScrollerState: $,
       getAnchorId: P
-    }), eo = (0, d.useScrollSpring)(J), el = r.useRef(S), eu = r.useRef(A);
+    }), eo = (0, d.useScrollSpring)(Z), el = r.useRef(S), eu = r.useRef(A);
     r.useLayoutEffect(() => {
       el.current = S, eu.current = A
     });
     let ed = r.useCallback(function() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
-        if (e > Z.current.dirty && (Z.current.dirty = e), 2 === e) {
+        if (e > J.current.dirty && (J.current.dirty = e), 2 === e) {
           var t;
           null === (t = el.current) || void 0 === t || t.call(el)
         }
         es(e)
-      }, [es, Z]),
+      }, [es, J]),
       e_ = r.useCallback(() => ed(), [ed]);
     (0, d.useResizeObserverSubscription)({
-      ref: J,
+      ref: Z,
       onUpdate: e_,
       key: "container",
       resizeObserver: E,
@@ -140,28 +140,28 @@ function c(e, t, n, s) {
         }, [])
       }(m);
     r.useImperativeHandle(I, () => ({
-      getScrollerNode: () => J.current,
+      getScrollerNode: () => Z.current,
       getScrollerState: $,
       getItems: ec,
       getSectionRowFromIndex: eE,
-      ...(0, d.getAnimatedListScrollHelpers)(J, $, er, eo)
-    }), [J, $, eE, ec, er, eo]);
+      ...(0, d.getAnimatedListScrollHelpers)(Z, $, er, eo)
+    }), [Z, $, eE, ec, er, eo]);
     let eI = r.useCallback(e => {
       ed(1), null == z.current ? q(!0) : clearTimeout(z.current), z.current = setTimeout(() => {
         z.current = null, q(!1)
       }, 200), null != f && f(e)
     }, [f, ed]);
     return r.useLayoutEffect(() => {
-      2 !== Z.current.dirty && (Z.current.dirty = 2)
-    }, [en, g, L, D, y, et, ee, Z]), (0, d.useVirtualizedAnchor)({
-      scrollerRef: J,
+      2 !== J.current.dirty && (J.current.dirty = 2)
+    }, [en, g, L, D, y, et, ee, J]), (0, d.useVirtualizedAnchor)({
+      scrollerRef: Z,
       anchor: ea,
       getScrollerState: $,
       listComputer: er,
       getAnchorId: P,
       totalHeight: et
     }), (0, i.jsxs)("div", {
-      ref: J,
+      ref: Z,
       onScroll: eI,
       className: a()(T, {
         [e]: !0,
@@ -172,8 +172,8 @@ function c(e, t, n, s) {
       style: (0, d.getMergedOrientationStyles)(B),
       ...K,
       children: [r.useMemo(() => (0, i.jsx)(W, {
-        id: F,
-        role: V,
+        id: V,
+        role: F,
         "aria-label": x,
         "aria-multiselectable": H,
         "aria-orientation": Y,
@@ -229,7 +229,7 @@ function c(e, t, n, s) {
             spacerTop: ee
           })
         })
-      }), [F, V, x, H, Y, j, W, et, en, g, L, D, M, y, ee]), r.useMemo(() => (function(e) {
+      }), [V, F, x, H, Y, j, W, et, en, g, L, D, M, y, ee]), r.useMemo(() => (function(e) {
         let {
           renderSidebar: t,
           sidebarHeight: n,
