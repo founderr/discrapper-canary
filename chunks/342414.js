@@ -66,7 +66,7 @@ let p = e => {
       location: s
     }, {
       autoTrackExposure: !1
-    }), n = (0, f.useShouldShowReferralProgressBar)(s), o = i === c.SubscriberHomeVariant.VARIANT_2;
+    }), n = (0, f.useIsEligibleSenderForReferralProgram)(s), o = i === c.SubscriberHomeVariant.VARIANT_2;
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)("img", {
         src: S,

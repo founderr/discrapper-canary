@@ -1,27 +1,37 @@
 "use strict";
-s.r(t), s.d(t, {
-  useShouldShowReferralProgressBar: function() {
-    return d
+i.r(t), i.d(t, {
+  useIsEligibleSenderForReferralProgram: function() {
+    return p
+  },
+  useIsEligibleSenderForReferralProgramTabBadge: function() {
+    return f
   }
 });
-var a = s("442837"),
-  i = s("594174"),
-  r = s("74538"),
-  l = s("140465"),
-  n = s("775412"),
-  o = s("520540"),
-  u = s("474936");
-let d = e => {
-  let t = (0, a.useStateFromStores)([i.default], () => i.default.getCurrentUser()),
-    s = (0, l.useHasDiscountApplied)(),
-    d = (0, n.useHasActiveTrial)(),
-    c = null != t && r.default.isPremiumAtLeast(t.premiumType, u.PremiumTypes.TIER_2) && !s && !d,
-    {
-      enabled: _
-    } = o.ReferralProgramSender.useExperiment({
-      location: e
-    }, {
-      autoTrackExposure: c
-    });
-  return _ && c
-}
+var n = i("442837"),
+  r = i("524437"),
+  s = i("605236"),
+  a = i("594174"),
+  l = i("74538"),
+  o = i("140465"),
+  u = i("775412"),
+  c = i("520540"),
+  d = i("474936");
+let f = e => {
+    let t = p(e),
+      i = (0, s.useIsDismissibleContentDismissed)(r.DismissibleContent.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
+    return t && !i
+  },
+  p = e => {
+    let t = (0, n.useStateFromStores)([a.default], () => a.default.getCurrentUser()),
+      i = (0, o.useHasDiscountApplied)(),
+      r = (0, u.useHasActiveTrial)(),
+      s = null != t && l.default.isPremiumAtLeast(t.premiumType, d.PremiumTypes.TIER_2),
+      {
+        enabled: f
+      } = c.ReferralProgramSender.useExperiment({
+        location: e
+      }, {
+        autoTrackExposure: !1
+      });
+    return f && s && !i && !r
+  }

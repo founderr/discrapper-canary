@@ -209,7 +209,7 @@ t.default = function() {
     location: h + " auto off",
     autoTrackExposure: !1
   }), (0, y.useMaybeFetchReferralsRemaining)("PremiumManagementSettings");
-  let x = (0, w.useShouldShowReferralProgressBar)("PremiumManagementSettings");
+  let x = (0, w.useIsEligibleSenderForReferralProgram)("PremiumManagementSettings");
   n.useEffect(() => {
     E.default.wait(async () => {
       !_ && !e && await Promise.all([T.fetchSubscriptions(), T.fetchPaymentSources(), (0, m.fetchPremiumSubscriptionPlans)(f, null, Y.RevenueSurfaces.DISCOVERY)]), o(!1)

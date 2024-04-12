@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   NitroTabButton: function() {
-    return L
+    return P
   }
 });
 var n = a("735250");
@@ -24,56 +24,64 @@ var s = a("924826"),
   p = a("52188"),
   I = a("248042"),
   T = a("924540"),
-  g = a("565626"),
-  A = a("701910"),
-  N = a("886654"),
-  v = a("921944"),
-  R = a("689938"),
-  O = a("392934");
-let L = e => {
+  g = a("649765"),
+  A = a("565626"),
+  N = a("701910"),
+  v = a("886654"),
+  R = a("487980"),
+  O = a("921944"),
+  L = a("689938"),
+  M = a("392934");
+let P = e => {
   let t, a, {
-      selected: L,
-      route: M,
-      locationState: P,
-      ...x
+      selected: P,
+      route: x,
+      locationState: y,
+      ...D
     } = e,
-    y = (0, l.useStateFromStores)([u.default], () => u.default.getCurrentUser()),
-    D = (0, l.useStateFromStores)([c.default], () => c.default.getPremiumTypeSubscription()),
-    b = (0, s.useListItem)("nitro"),
-    U = (0, C.usePremiumTrialOffer)(),
-    j = (0, _.usePremiumDiscountOffer)(),
-    G = (0, l.useStateFromStores)([d.default], () => d.default.isLocalizedPromoEnabled) && null == U,
-    w = (0, I.useIsEligibleForBogoPromotion)(),
-    k = (0, g.default)(),
-    F = (0, S.useTenureRewardBadgeDescription)(),
-    H = (0, h.useShouldShowNewOfferBadgeForAprilMarketingMoment)("NitroTabButton");
-  return L || null != U || null != j || w || H || k || null != F || null != y && Date.now() - y.createdAt.getTime() > 2592e6 || (0, E.hasPremiumSubscriptionToDisplay)(y, D) ? (w ? a = (0, n.jsx)(m.default, {
+    b = (0, l.useStateFromStores)([u.default], () => u.default.getCurrentUser()),
+    U = (0, l.useStateFromStores)([c.default], () => c.default.getPremiumTypeSubscription()),
+    j = (0, s.useListItem)("nitro"),
+    G = (0, C.usePremiumTrialOffer)(),
+    w = (0, _.usePremiumDiscountOffer)(),
+    k = (0, l.useStateFromStores)([d.default], () => d.default.isLocalizedPromoEnabled) && null == G,
+    F = (0, I.useIsEligibleForBogoPromotion)(),
+    H = (0, A.default)(),
+    B = (0, S.useTenureRewardBadgeDescription)(),
+    V = (0, h.useShouldShowNewOfferBadgeForAprilMarketingMoment)("NitroTabButton"),
+    Y = (0, R.useIsEligibleSenderForReferralProgramTabBadge)("NitroTabButton");
+  return P || null != G || null != w || F || V || H || null != B || null != b && Date.now() - b.createdAt.getTime() > 2592e6 || (0, E.hasPremiumSubscriptionToDisplay)(b, U) ? (F ? a = (0, n.jsx)(m.default, {
     isNitroTab: !0
-  }) : H ? a = (0, n.jsx)(N.default, {
-    copy: R.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_MODAL_TOP_PILL,
-    isSelected: L,
+  }) : V ? a = (0, n.jsx)(v.default, {
+    copy: L.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_MODAL_TOP_PILL,
+    isSelected: P,
     onSelect: () => (0, o.markDismissibleContentAsDismissed)(i.DismissibleContent.PREMIUM_2024_APRIL_MARKETING_BADGE, {
-      dismissAction: v.ContentDismissActionType.TAKE_ACTION
+      dismissAction: O.ContentDismissActionType.TAKE_ACTION
     })
-  }) : null != F ? a = (0, n.jsx)(A.default, {
-    copy: F
-  }) : k ? a = (0, n.jsx)(A.default, {}) : null != j ? a = (0, n.jsx)(T.PremiumDiscountOfferTabBadge, {
-    userDiscount: j,
-    isTabSelected: L,
+  }) : null != B ? a = (0, n.jsx)(N.default, {
+    copy: B
+  }) : H ? a = (0, n.jsx)(N.default, {}) : null != w ? a = (0, n.jsx)(T.PremiumDiscountOfferTabBadge, {
+    userDiscount: w,
+    isTabSelected: P,
     includesAmountOff: !1
-  }) : null != U ? a = (0, n.jsx)(T.PremiumTrialOfferTabBadge, {
-    trialOffer: U,
-    isTabSelected: L
-  }) : G && (a = (0, n.jsx)(p.LocalizedPricingBadgeIcon, {
+  }) : null != G ? a = (0, n.jsx)(T.PremiumTrialOfferTabBadge, {
+    trialOffer: G,
+    isTabSelected: P
+  }) : Y ? a = (0, n.jsx)(g.default, {
+    isSelected: P,
+    onSelect: () => (0, o.markDismissibleContentAsDismissed)(i.DismissibleContent.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, {
+      dismissAction: O.ContentDismissActionType.TAKE_ACTION
+    })
+  }) : k && (a = (0, n.jsx)(p.LocalizedPricingBadgeIcon, {
     entryPoint: p.BadgeEntryPoint.PrivateMessages
-  }), !L && (t = O.localizeBadge)), (0, n.jsx)(r.LinkButton, {
-    selected: L,
-    route: M,
+  }), !P && (t = M.localizeBadge)), (0, n.jsx)(r.LinkButton, {
+    selected: P,
+    route: x,
     icon: f.default,
-    text: R.default.Messages.PREMIUM,
-    locationState: P,
-    ...x,
-    ...b,
+    text: L.default.Messages.PREMIUM,
+    locationState: y,
+    ...D,
+    ...j,
     className: t,
     children: a
   })) : null
