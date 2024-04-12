@@ -1,13 +1,13 @@
 "use strict";
-n.r(t);
-var a = n("399606"),
-  s = n("626135"),
-  l = n("280570"),
-  i = n("914788"),
-  r = n("292352"),
-  o = n("981631");
+a.r(t);
+var n = a("399606"),
+  s = a("626135"),
+  l = a("280570"),
+  i = a("914788"),
+  r = a("292352"),
+  o = a("981631");
 t.default = () => {
-  let e = (0, a.useStateFromStores)([i.default], () => i.default.getSelectedTab());
+  let e = (0, n.useStateFromStores)([i.default], () => i.default.getSelectedTab());
   return {
     selectedTab: e,
     handleTabChange: e => {

@@ -8,8 +8,8 @@ var a = r("735250");
 r("470079");
 var n = r("346652"),
   i = r("692547"),
-  l = r("410030"),
-  o = r("68588"),
+  o = r("410030"),
+  l = r("68588"),
   s = r("981631"),
   c = r("779869");
 let d = {
@@ -31,8 +31,8 @@ let h = u(d),
   p = u(d);
 
 function m(e) {
-  return s.TOKEN_REGEX.test(e) ? (0, a.jsx)(o.default, {
-    type: o.default.Types.TEXT,
+  return s.TOKEN_REGEX.test(e) ? (0, a.jsx)(l.default, {
+    type: l.default.Types.TEXT,
     children: () => (0, a.jsx)(a.Fragment, {
       children: e
     })
@@ -42,7 +42,7 @@ function m(e) {
 function g(e) {
   let {
     data: t
-  } = e, r = (0, l.default)();
+  } = e, r = (0, o.default)();
   return (0, a.jsx)("div", {
     className: c.inspectorWrapper,
     children: (0, a.jsx)(n.JSONTree, {

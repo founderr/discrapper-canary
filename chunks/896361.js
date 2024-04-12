@@ -8,16 +8,16 @@
       n = a("470079"),
       c = a("445131"),
       i = a("613828"),
-      o = a("304445"),
-      r = a("703656");
+      r = a("304445"),
+      o = a("703656");
 
     function f(e) {
       let {
         children: t
       } = e;
-      return n.useEffect(() => (o.default.initialize(), () => o.default.cleanup()), []), (0, d.jsx)(c.HelmetProvider, {
+      return n.useEffect(() => (r.default.initialize(), () => r.default.cleanup()), []), (0, d.jsx)(c.HelmetProvider, {
         children: (0, d.jsx)(i.Router, {
-          history: (0, r.getHistory)(),
+          history: (0, o.getHistory)(),
           children: t
         })
       })

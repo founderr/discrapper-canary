@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   fetchConsents: function() {
     return u
   },
   setConsents: function() {
     return d
   }
-}), n("411104");
-var a = n("544891"),
-  s = n("570140"),
-  l = n("981631"),
-  i = n("689938");
+}), a("411104");
+var n = a("544891"),
+  s = a("570140"),
+  l = a("981631"),
+  i = a("689938");
 
 function r(e) {
   return null != e && null != e.body && s.default.dispatch({
@@ -27,14 +27,14 @@ function o(e) {
 }
 
 function u() {
-  return a.HTTP.get({
+  return n.HTTP.get({
     url: l.Endpoints.SETTINGS_CONSENT,
     oldFormErrors: !0
   }).then(r, e => Promise.reject(Error(e.body.message)))
 }
 
 function d(e, t) {
-  return a.HTTP.post({
+  return n.HTTP.post({
     url: l.Endpoints.SETTINGS_CONSENT,
     body: {
       grant: e,

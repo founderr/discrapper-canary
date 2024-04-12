@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("232567"),
-  s = n("996106"),
-  l = n("452426"),
-  i = n("863141"),
-  r = n("186901"),
-  o = n("981631");
+a.r(t), a("47120");
+var n = a("232567"),
+  s = a("996106"),
+  l = a("452426"),
+  i = a("863141"),
+  r = a("186901"),
+  o = a("981631");
 t.default = {
   [o.RPCCommands.GET_USER]: {
     scope: r.RPC_LOCAL_SCOPE,
@@ -18,7 +18,7 @@ t.default = {
           id: t
         }
       } = e;
-      return (0, a.getUser)(t).then(i.default).catch(() => {
+      return (0, n.getUser)(t).then(i.default).catch(() => {
         throw new s.default({
           errorCode: o.RPCErrors.INVALID_USER
         }, "Invalid user id: ".concat(t))

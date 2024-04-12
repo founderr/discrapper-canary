@@ -1,7 +1,7 @@
     "use strict";
     a.r(t), a.d(t, {
       StreamDirector: function() {
-        return o
+        return r
       },
       StreamDirectorActionType: function() {
         return n
@@ -17,7 +17,7 @@
         writable: !0
       }) : e[t] = a, e
     }(d = n || (n = {})).STREAM = "stream", d.PAUSE = "pause", d.STOP = "stop";
-    class o {
+    class r {
       onStreamBegin(e, t) {
         let a = (0, c.getInitialStreamTarget)(e, t);
         null == a || null == a.windowHandle ? this.callback({

@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   useIsEligibleForFamilyCenterVCJoin: function() {
     return s
   }
 });
-let a = (0, n("818083").createExperiment)({
+let n = (0, a("818083").createExperiment)({
   kind: "user",
   id: "2024-02_family_center_vc_join",
   label: "Family Center VC Join",
@@ -23,13 +23,13 @@ let a = (0, n("818083").createExperiment)({
 function s(e) {
   let {
     location: t,
-    autoTrackExposure: n = !1
+    autoTrackExposure: a = !1
   } = e, {
     enabled: s
-  } = a.useExperiment({
+  } = n.useExperiment({
     location: t
   }, {
-    autoTrackExposure: n
+    autoTrackExposure: a
   });
   return s
 }

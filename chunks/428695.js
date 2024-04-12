@@ -1,29 +1,29 @@
 "use strict";
-n.r(t);
-var a = n("735250"),
-  s = n("470079"),
-  l = n("803997"),
-  i = n.n(l),
-  r = n("392711"),
-  o = n("481060"),
-  u = n("367907"),
-  d = n("465670"),
-  c = n("626135"),
-  f = n("981631"),
-  E = n("689938"),
-  h = n("615273");
+a.r(t);
+var n = a("735250"),
+  s = a("470079"),
+  l = a("803997"),
+  i = a.n(l),
+  r = a("392711"),
+  o = a("481060"),
+  u = a("367907"),
+  d = a("465670"),
+  c = a("626135"),
+  f = a("981631"),
+  E = a("689938"),
+  h = a("615273");
 let _ = (0, r.debounce)(u.default.trackWithMetadata, 500);
 t.default = function(e) {
   let {
     guild: t,
-    title: n,
+    title: a,
     message: l,
     image: r,
     type: C,
     imageStyles: m,
     imageMarginX: S,
-    imageMarginTop: I,
-    trackingSource: p,
+    imageMarginTop: p,
+    trackingSource: I,
     undismissable: T,
     onDismissed: g,
     onClick: A,
@@ -38,12 +38,12 @@ t.default = function(e) {
     })
   }, [t.id, C]);
   let O = null;
-  "function" == typeof N ? O = N() : null != N && (O = (0, a.jsx)(o.Button, {
+  "function" == typeof N ? O = N() : null != N && (O = (0, n.jsx)(o.Button, {
     className: h.button,
     size: o.Button.Sizes.SMALL,
     onClick: () => {
       null != C && c.default.track(f.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
-        source: p,
+        source: I,
         guild_id: t.id,
         notice_type: C
       }), null == A || A()
@@ -53,7 +53,7 @@ t.default = function(e) {
     children: N
   }));
   let L = null;
-  "function" == typeof n ? L = n() : null != n && (L = (0, a.jsx)(o.Text, {
+  "function" == typeof a ? L = a() : null != a && (L = (0, n.jsx)(o.Text, {
     variant: "text-md/medium",
     color: "header-primary",
     className: i()(h.title, {
@@ -61,12 +61,12 @@ t.default = function(e) {
     }, {
       [h.center]: R
     }),
-    children: n
+    children: a
   }));
   let M = null != S ? "".concat(S, "px") : "16px";
-  return (0, a.jsxs)("div", {
+  return (0, n.jsxs)("div", {
     className: h.container,
-    children: [!0 === T ? null : (0, a.jsx)(o.Clickable, {
+    children: [!0 === T ? null : (0, n.jsx)(o.Clickable, {
       onClick: () => {
         u.default.trackWithMetadata(f.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
           notice_type: C
@@ -74,25 +74,25 @@ t.default = function(e) {
       },
       className: h.close,
       "aria-label": E.default.Messages.DISMISS,
-      children: (0, a.jsx)(d.default, {
+      children: (0, n.jsx)(d.default, {
         className: h.closeIcon
       })
-    }), null != r && (0, a.jsx)("div", {
+    }), null != r && (0, n.jsx)("div", {
       className: h.imageContainer,
       style: {
-        marginTop: "".concat(I, "px"),
+        marginTop: "".concat(p, "px"),
         marginLeft: M,
         marginRight: M
       },
-      children: (0, a.jsx)("img", {
+      children: (0, n.jsx)("img", {
         className: h.image,
         style: m,
         src: r,
         alt: ""
       })
-    }), (0, a.jsxs)("div", {
+    }), (0, n.jsxs)("div", {
       className: h.message,
-      children: [L, (0, a.jsx)(o.Text, {
+      children: [L, (0, n.jsx)(o.Text, {
         className: i()({
           [h.center]: R
         }),

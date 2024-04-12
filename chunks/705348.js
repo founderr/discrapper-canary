@@ -1,29 +1,29 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return d
   }
 });
-var a = n("735250");
-n("470079");
-var s = n("82950"),
-  l = n("63063"),
-  i = n("981631"),
-  r = n("921944"),
-  o = n("689938"),
-  u = n("157476");
+var n = a("735250");
+a("470079");
+var s = a("82950"),
+  l = a("63063"),
+  i = a("981631"),
+  r = a("921944"),
+  o = a("689938"),
+  u = a("157476");
 
 function d(e) {
   let {
     guild: t,
-    markAsDismissed: n
+    markAsDismissed: a
   } = e;
-  return (0, a.jsx)(s.default, {
+  return (0, n.jsx)(s.default, {
     image: u,
     guild: t,
-    onDismissed: () => n(r.ContentDismissActionType.UNKNOWN),
+    onDismissed: () => a(r.ContentDismissActionType.UNKNOWN),
     onClick: () => {
-      open(l.default.getArticleURL(i.HelpdeskArticles.CONNECTION_DETAILS)), n(r.ContentDismissActionType.UNKNOWN)
+      open(l.default.getArticleURL(i.HelpdeskArticles.CONNECTION_DETAILS)), a(r.ContentDismissActionType.UNKNOWN)
     },
     title: o.default.Messages.LINKED_ROLES_ADMIN_NUX_TITLE,
     message: o.default.Messages.LINKED_ROLES_ADMIN_NUX_CONTENT,

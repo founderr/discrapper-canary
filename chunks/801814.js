@@ -1,7 +1,7 @@
     "use strict";
     var d, n, c, i;
 
-    function o(e, t, a) {
+    function r(e, t, a) {
       return t in e ? Object.defineProperty(e, t, {
         value: a,
         enumerable: !0,
@@ -10,7 +10,7 @@
       }) : e[t] = a, e
     }
 
-    function r() {
+    function o() {
       return {
         num_failed: 0,
         num_delta_installed: 0,
@@ -29,10 +29,10 @@
     }
     a.r(t), a.d(t, {
       default: function() {
-        return s
+        return l
       }
     }), (c = d || (d = {})).CHECKING_FOR_UPDATES = "checking-for-updates", c.INSTALLED_MODULE = "installed-module", c.UPDATE_CHECK_FINISHED = "update-check-finished", c.DOWNLOADING_MODULE = "downloading-module", c.DOWNLOADING_MODULE_PROGRESS = "downloading-module-progress", c.DOWNLOADING_MODULES_FINISHED = "downloading-modules-finished", c.UPDATE_MANUALLY = "update-manually", c.DOWNLOADED_MODULE = "downloaded-module", c.INSTALLING_MODULES_FINISHED = "installing-modules-finished", c.INSTALLING_MODULE = "installing-module", c.INSTALLING_MODULE_PROGRESS = "installing-module-progress", c.NO_PENDING_UPDATES = "no-pending-updates", (i = n || (n = {})).CLOUD_SYNC = "discord_cloudsync", i.DESKTOP_CORE = "discord_desktop_core", i.DISPATCH = "discord_dispatch", i.ERLPACK = "discord_erlpack", i.GAME_UTILS = "discord_game_utils", i.HOOK = "discord_hook", i.KRISP = "discord_krisp", i.MEDIA = "discord_media", i.MODULES = "discord_modules", i.OVERLAY2 = "discord_overlay2", i.RPC = "discord_rpc", i.SPELLCHECK = "discord_spellcheck", i.UPDATER_BOOTSTRAP = "discord_updater_bootstrap", i.UTILS = "discord_utils", i.VIGILANTE = "discord_vigilante", i.VOICE = "discord_voice", i.ZSTD = "discord_zstd";
-    class s {
+    class l {
       handleDownloadingModule(e) {
         if (!f(e.name)) {
           if (null != this._downloadingModules[e.name]) {
@@ -116,12 +116,12 @@
         return this._report
       }
       reset() {
-        this._report = r()
+        this._report = o()
       }
       submissionReady() {
         return this._report.num_full_installed + this._report.num_failed + this._report.num_delta_installed + this._report.foreground_bytes_total + this._report.background_bytes_total !== 0 && !(Object.keys(this._installingModules).length > 0) && !(Object.keys(this._downloadingModules).length > 0) && !0
       }
       constructor() {
-        o(this, "_installingModules", {}), o(this, "_downloadingModules", {}), o(this, "_report", void 0), this._report = r()
+        r(this, "_installingModules", {}), r(this, "_downloadingModules", {}), r(this, "_report", void 0), this._report = o()
       }
     }

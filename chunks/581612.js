@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   clearAll: function() {
-    return l
+    return o
   },
   toggle: function() {
     return i
@@ -19,6 +19,6 @@ function i(e, t) {
   })
 }
 
-function l() {
+function o() {
   for (let e in n.default.all()) i(e, !1)
 }

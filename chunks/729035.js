@@ -1,9 +1,9 @@
 "use strict";
 r.r(t);
 var a, n, i = r("735250"),
-  l = r("470079"),
-  o = r("803997"),
-  s = r.n(o),
+  o = r("470079"),
+  l = r("803997"),
+  s = r.n(l),
   c = r("302454"),
   d = r.n(c),
   u = r("663993"),
@@ -131,7 +131,7 @@ let v = {
   },
   C = d().parserFor(v),
   S = d().reactFor(d().ruleOutput(v, "react"));
-class j extends(n = l.PureComponent) {
+class j extends(n = o.PureComponent) {
   render() {
     let {
       className: e,
@@ -139,13 +139,13 @@ class j extends(n = l.PureComponent) {
       state: r,
       parser: a,
       output: n
-    } = this.props, l = n(a("".concat(t, "\n\n"), {
+    } = this.props, o = n(a("".concat(t, "\n\n"), {
       inline: !1,
       ...r
     }));
     return (0, i.jsx)("div", {
       className: s()(f.markdown, e),
-      children: l
+      children: o
     })
   }
 }

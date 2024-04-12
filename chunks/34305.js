@@ -1,35 +1,35 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("735250"),
-  s = n("470079"),
-  l = n("442837"),
-  i = n("481060"),
-  r = n("325432"),
-  o = n("391690"),
-  u = n("714759"),
-  d = n("285952"),
-  c = n("546591"),
-  f = n("424218"),
-  E = n("358085"),
-  h = n("998502"),
-  _ = n("689938"),
-  C = n("422340"),
-  m = n("794711");
+a.r(t), a("47120");
+var n = a("735250"),
+  s = a("470079"),
+  l = a("442837"),
+  i = a("481060"),
+  r = a("325432"),
+  o = a("391690"),
+  u = a("714759"),
+  d = a("285952"),
+  c = a("546591"),
+  f = a("424218"),
+  E = a("358085"),
+  h = a("998502"),
+  _ = a("689938"),
+  C = a("422340"),
+  m = a("794711");
 
-function S(e, t, n) {
+function S(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: a,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = a, e
 }
-class I extends s.PureComponent {
+class p extends s.PureComponent {
   renderDiskUsageCircle() {
     let {
       metadata: e
     } = this.props;
-    return null != e && null != e.availableKB && null != e.totalKB ? (0, a.jsx)(u.default, {
+    return null != e && null != e.availableKB && null != e.totalKB ? (0, n.jsx)(u.default, {
       total: e.totalKB,
       used: e.totalKB - e.availableKB
     }) : null
@@ -37,7 +37,7 @@ class I extends s.PureComponent {
   renderViewing() {
     let e, t;
     let {
-      path: n,
+      path: a,
       label: s,
       editingPath: l,
       isDefault: r,
@@ -47,35 +47,35 @@ class I extends s.PureComponent {
       useKibibytes: !0
     }) : null, t = null != u.totalKB ? (0, f.formatSize)(u.totalKB, {
       useKibibytes: !0
-    }) : null), (0, a.jsxs)(d.default, {
+    }) : null), (0, n.jsxs)(d.default, {
       className: C.installationPath,
       align: d.default.Align.CENTER,
-      children: [this.renderDiskUsageCircle(), (0, a.jsxs)(d.default, {
+      children: [this.renderDiskUsageCircle(), (0, n.jsxs)(d.default, {
         direction: d.default.Direction.VERTICAL,
         className: C.__invalid_descriptionWrapper,
-        children: [(0, a.jsxs)(d.default, {
+        children: [(0, n.jsxs)(d.default, {
           align: d.default.Align.CENTER,
-          children: [(0, a.jsx)(i.Heading, {
+          children: [(0, n.jsx)(i.Heading, {
             className: C.rowTitle,
             variant: "heading-md/semibold",
-            children: null != s ? s : o.default.getLabelFromPath(n)
-          }), r ? (0, a.jsx)("span", {
+            children: null != s ? s : o.default.getLabelFromPath(a)
+          }), r ? (0, n.jsx)("span", {
             className: C.defaultIndicator,
             children: _.default.Messages.DEFAULT
           }) : null]
-        }), null != u && null != e && null != t ? (0, a.jsx)(c.default, {
+        }), null != u && null != e && null != t ? (0, n.jsx)(c.default, {
           className: C.rowBody,
           hoverText: _.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_SPACE.format({
             available: e,
             total: t
           }),
-          children: n
-        }) : (0, a.jsx)(i.Text, {
+          children: a
+        }) : (0, n.jsx)(i.Text, {
           className: C.rowBody,
           variant: "text-xs/normal",
-          children: n
+          children: a
         })]
-      }), (0, a.jsx)(i.Button, {
+      }), (0, n.jsx)(i.Button, {
         size: i.Button.Sizes.SMALL,
         disabled: null != l,
         color: i.Button.Colors.PRIMARY,
@@ -89,55 +89,55 @@ class I extends s.PureComponent {
       path: e,
       hasGamesInstalledInPath: t
     } = this.props, {
-      label: n,
+      label: a,
       isDefault: s
     } = this.state;
-    return (0, a.jsx)(i.Card, {
+    return (0, n.jsx)(i.Card, {
       editable: !0,
       className: C.installationPathEditing,
-      children: (0, a.jsxs)(d.default, {
-        children: [this.renderDiskUsageCircle(), (0, a.jsxs)(d.default.Child, {
-          children: [(0, a.jsx)(i.FormItem, {
+      children: (0, n.jsxs)(d.default, {
+        children: [this.renderDiskUsageCircle(), (0, n.jsxs)(d.default.Child, {
+          children: [(0, n.jsx)(i.FormItem, {
             title: _.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_NAME,
-            children: (0, a.jsx)(i.TextInput, {
-              value: n,
+            children: (0, n.jsx)(i.TextInput, {
+              value: a,
               placeholder: o.default.getLabelFromPath(e),
               onChange: this.handleLabelChange
             })
-          }), (0, a.jsx)(i.FormItem, {
+          }), (0, n.jsx)(i.FormItem, {
             title: _.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION,
             className: m.marginTop20,
-            children: (0, a.jsx)(i.TextInput, {
+            children: (0, n.jsx)(i.TextInput, {
               disabled: !0,
               value: e
             })
-          }), (0, a.jsx)(i.Checkbox, {
+          }), (0, n.jsx)(i.Checkbox, {
             type: i.Checkbox.Types.INVERTED,
             value: null != s ? s : this.props.isDefault,
             disabled: this.props.isDefault,
             className: C.defaultLocationCheckbox,
             onChange: this.handleToggleDefault,
             children: _.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_MAKE_DEFAULT
-          }), (0, a.jsx)(i.FormDivider, {
+          }), (0, n.jsx)(i.FormDivider, {
             className: C.separator
-          }), (0, a.jsxs)(d.default, {
-            children: [(0, a.jsx)(i.Button, {
+          }), (0, n.jsxs)(d.default, {
+            children: [(0, n.jsx)(i.Button, {
               disabled: t || this.props.isDefault,
               size: i.Button.Sizes.SMALL,
               color: i.Button.Colors.RED,
               look: i.Button.Looks.OUTLINED,
               onClick: this.handleRemoveLocation,
               children: _.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_REMOVE
-            }), (0, a.jsxs)(d.default, {
+            }), (0, n.jsxs)(d.default, {
               justify: d.default.Justify.END,
-              children: [(0, a.jsx)(i.Button, {
+              children: [(0, n.jsx)(i.Button, {
                 size: i.Button.Sizes.SMALL,
                 color: i.Button.Colors.PRIMARY,
                 look: i.Button.Looks.LINK,
                 onClick: this.handleStopEditing,
                 children: _.default.Messages.CANCEL
-              }), (0, a.jsx)(i.Button, {
-                disabled: e === this.props.path && n === this.props.label && s === this.props.isDefault,
+              }), (0, n.jsx)(i.Button, {
+                disabled: e === this.props.path && a === this.props.label && s === this.props.isDefault,
                 size: i.Button.Sizes.SMALL,
                 color: i.Button.Colors.GREEN,
                 onClick: this.handleSaveChanges,
@@ -160,12 +160,12 @@ class I extends s.PureComponent {
       let {
         path: e,
         label: t,
-        isDefault: n,
-        onToggleEditing: a
+        isDefault: a,
+        onToggleEditing: n
       } = this.props;
-      a(e), this.setState({
+      n(e), this.setState({
         label: t,
-        isDefault: n
+        isDefault: a
       })
     }), S(this, "handleStopEditing", () => {
       let {
@@ -176,7 +176,7 @@ class I extends s.PureComponent {
         isDefault: null
       })
     }), S(this, "handleRemoveLocation", () => {
-      (0, i.openModal)(e => (0, a.jsx)(i.ConfirmModal, {
+      (0, i.openModal)(e => (0, n.jsx)(i.ConfirmModal, {
         ...e,
         header: _.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_REMOVE,
         confirmText: _.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_REMOVE,
@@ -184,7 +184,7 @@ class I extends s.PureComponent {
         onConfirm: () => {
           this.handleStopEditing(), (0, r.removeInstallLocation)(this.props.path)
         },
-        children: (0, a.jsx)(i.Text, {
+        children: (0, n.jsx)(i.Text, {
           variant: "text-md/normal",
           children: _.default.Messages.USER_SETTINGS_GAMES_REMOVE_LOCATION_BODY
         })
@@ -205,7 +205,7 @@ class I extends s.PureComponent {
     })
   }
 }
-class p extends s.PureComponent {
+class I extends s.PureComponent {
   componentDidMount() {
     (0, r.fetchMetadata)(this.props.installationPaths.map(e => {
       let {
@@ -218,11 +218,11 @@ class p extends s.PureComponent {
     let {
       installationPaths: e,
       installationPathsMetadata: t,
-      defaultInstallationPath: n
+      defaultInstallationPath: a
     } = this.props, {
       editingPath: s
     } = this.state;
-    return (0, a.jsxs)(i.FormSection, {
+    return (0, n.jsxs)(i.FormSection, {
       className: C.wrapper,
       title: _.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATIONS,
       children: [e.map(e => {
@@ -230,18 +230,18 @@ class p extends s.PureComponent {
           path: l,
           label: i
         } = e;
-        return (0, a.jsx)(I, {
+        return (0, n.jsx)(p, {
           path: l,
           label: i,
           metadata: t[l],
-          isDefault: n === l,
+          isDefault: a === l,
           editingPath: s,
           hasGamesInstalledInPath: o.default.hasGamesInstalledInPath(l),
           onToggleEditing: this.handleToggleEditing
         }, l)
-      }), (0, a.jsx)("div", {
+      }), (0, n.jsx)("div", {
         className: C.buttonRowWrapper,
-        children: (0, a.jsx)(i.Button, {
+        children: (0, n.jsx)(i.Button, {
           disabled: !E.isPlatformEmbedded,
           onClick: this.handleAddInstallationLocation,
           size: i.Button.Sizes.SMALL,
@@ -268,4 +268,4 @@ t.default = l.default.connectStores([o.default], () => ({
   installationPaths: o.default.installationPaths,
   installationPathsMetadata: o.default.installationPathsMetadata,
   defaultInstallationPath: o.default.defaultInstallationPath
-}))(p)
+}))(I)

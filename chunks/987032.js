@@ -4,7 +4,7 @@ r.r(t), r.d(t, {
     return c
   },
   getIdealBankDisplayNameFromBankName: function() {
-    return o
+    return l
   }
 }), r("47120");
 var a = r("818083"),
@@ -149,7 +149,7 @@ t.default = (0, a.createExperiment)({
     }
   }]
 });
-let l = new Map([
+let o = new Map([
   ["abn_amro", "ABN AMRO"],
   ["asn_bank", "ASN Bank"],
   ["bunq", "Bunq"],
@@ -164,8 +164,8 @@ let l = new Map([
   ["van_lanschot", "Van Lanschot"]
 ]);
 
-function o(e) {
-  return void 0 !== e && l.has(e) ? l.get(e) : i.default.Messages.PAYMENT_SOURCE_UNKNOWN
+function l(e) {
+  return void 0 !== e && o.has(e) ? o.get(e) : i.default.Messages.PAYMENT_SOURCE_UNKNOWN
 }
 let s = new Map([
   ["arzte_und_apotheker_bank", "\xc4rzte- und Apothekerbank"],

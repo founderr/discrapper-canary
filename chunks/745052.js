@@ -1,64 +1,64 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("735250"),
-  s = n("470079"),
-  l = n("803997"),
-  i = n.n(l),
-  r = n("924826"),
-  o = n("286379"),
-  u = n("442837"),
-  d = n("524437"),
-  c = n("481060"),
-  f = n("150063"),
-  E = n("230711"),
-  h = n("112724"),
-  _ = n("183126"),
-  C = n("607070"),
-  m = n("209613"),
-  S = n("325708"),
-  I = n("320149"),
-  p = n("252618"),
-  T = n("605236"),
-  g = n("243778"),
-  A = n("984370"),
-  N = n("797614"),
-  v = n("359110"),
-  R = n("6025"),
-  O = n("897473"),
-  L = n("108427"),
-  M = n("970731"),
-  P = n("210887"),
-  x = n("433355"),
-  y = n("592125"),
-  D = n("819640"),
-  b = n("916187"),
-  U = n("151827"),
-  j = n("626135"),
-  G = n("792125"),
-  w = n("647090"),
-  k = n("385956"),
-  F = n("610697"),
-  H = n("26373"),
-  B = n("486622"),
-  V = n("922409"),
-  Y = n("899740"),
-  W = n("177033"),
-  K = n("355350"),
-  z = n("307947"),
-  q = n("96479"),
-  Q = n("480874"),
-  Z = n("687683"),
-  X = n("981631"),
-  J = n("921944"),
-  $ = n("526761"),
-  ee = n("689938"),
-  et = n("169819"),
-  en = n("121950");
+a.r(t), a("47120");
+var n = a("735250"),
+  s = a("470079"),
+  l = a("803997"),
+  i = a.n(l),
+  r = a("924826"),
+  o = a("286379"),
+  u = a("442837"),
+  d = a("524437"),
+  c = a("481060"),
+  f = a("150063"),
+  E = a("230711"),
+  h = a("112724"),
+  _ = a("183126"),
+  C = a("607070"),
+  m = a("209613"),
+  S = a("325708"),
+  p = a("320149"),
+  I = a("252618"),
+  T = a("605236"),
+  g = a("243778"),
+  A = a("984370"),
+  N = a("797614"),
+  v = a("359110"),
+  R = a("6025"),
+  O = a("897473"),
+  L = a("108427"),
+  M = a("970731"),
+  P = a("210887"),
+  x = a("433355"),
+  y = a("592125"),
+  D = a("819640"),
+  b = a("916187"),
+  U = a("151827"),
+  j = a("626135"),
+  G = a("792125"),
+  w = a("647090"),
+  k = a("385956"),
+  F = a("610697"),
+  H = a("26373"),
+  B = a("486622"),
+  V = a("922409"),
+  Y = a("899740"),
+  W = a("177033"),
+  K = a("355350"),
+  z = a("307947"),
+  q = a("96479"),
+  Q = a("480874"),
+  Z = a("687683"),
+  X = a("981631"),
+  J = a("921944"),
+  $ = a("526761"),
+  ee = a("689938"),
+  et = a("169819"),
+  ea = a("121950");
 
-function ea() {
+function en() {
   let e = s.useRef(null),
     t = (0, Y.useMessageRequestsCount)(),
-    n = (0, W.default)(),
+    a = (0, W.default)(),
     l = (0, H.useListHasSingleMessageRequest)(),
     u = (0, _.useIsRejectAllMessageRequestsEnabled)(),
     d = s.useCallback(() => {
@@ -74,14 +74,14 @@ function ea() {
       channelId: h
     } = (0, V.useMessageRequestSidebarState)(),
     C = s.useCallback(() => {
-      f(n.map(e => e.channel.id))
-    }, [n, f]),
+      f(a.map(e => e.channel.id))
+    }, [a, f]),
     S = s.useCallback(e => {
       var t, s;
       let {
         row: r
-      } = e, o = n[r], u = null === (s = n[r + 1]) || void 0 === s ? void 0 : null === (t = s.channel) || void 0 === t ? void 0 : t.id, d = o.channel.id;
-      return (0, a.jsx)(q.default, {
+      } = e, o = a[r], u = null === (s = a[r + 1]) || void 0 === s ? void 0 : null === (t = s.channel) || void 0 === t ? void 0 : t.id, d = o.channel.id;
+      return (0, n.jsx)(q.default, {
         index: r,
         className: i()({
           [et.selected]: null != h && h === d,
@@ -91,19 +91,19 @@ function ea() {
         user: o.user,
         hasSingleMessageRequest: l
       }, d)
-    }, [l, n, h]),
-    I = s.useCallback(() => (0, a.jsxs)(U.default, {
+    }, [l, a, h]),
+    p = s.useCallback(() => (0, n.jsxs)(U.default, {
       className: et.sectionTitle,
       children: [t > 0 ? ee.default.Messages.MESSAGE_REQUESTS_PAGE_TITLE_WITH_COUNT.format({
         count: t
-      }) : ee.default.Messages.MESSAGE_REQUESTS_PAGE_TITLE, u && t > 0 ? (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(c.Text, {
+      }) : ee.default.Messages.MESSAGE_REQUESTS_PAGE_TITLE, u && t > 0 ? (0, n.jsxs)(n.Fragment, {
+        children: [(0, n.jsx)(c.Text, {
           className: et.titleDivider,
           variant: "eyebrow",
           color: "header-secondary",
           tag: "span",
           children: "•"
-        }), (0, a.jsx)(c.Button, {
+        }), (0, n.jsx)(c.Button, {
           onClick: C,
           look: c.ButtonLooks.LINK,
           color: c.ButtonColors.LINK,
@@ -114,34 +114,34 @@ function ea() {
         })]
       }) : null]
     }, "title"), [t, C, u]);
-  return (n.length !== t && N.default.increment({
+  return (a.length !== t && N.default.increment({
     name: o.MetricEvents.MESSAGE_REQUEST_COUNT_DRIFT
-  }), 0 === n.length) ? (0, a.jsx)(z.default, {
+  }), 0 === a.length) ? (0, n.jsx)(z.default, {
     section: Z.MessageRequestSections.REQUESTS
-  }) : (0, a.jsx)(r.ListNavigatorProvider, {
+  }) : (0, n.jsx)(r.ListNavigatorProvider, {
     navigator: E,
-    children: (0, a.jsx)(r.ListNavigatorContainer, {
+    children: (0, n.jsx)(r.ListNavigatorContainer, {
       children: t => {
         let {
           ref: s,
           role: l,
           ...i
         } = t;
-        return (0, a.jsx)(c.List, {
+        return (0, n.jsx)(c.List, {
           className: et.list,
           innerRole: l,
           innerAriaLabel: ee.default.Messages.MESSAGE_REQUESTS,
           ref: t => {
-            var n;
-            e.current = t, s.current = null !== (n = null == t ? void 0 : t.getScrollerNode()) && void 0 !== n ? n : null
+            var a;
+            e.current = t, s.current = null !== (a = null == t ? void 0 : t.getScrollerNode()) && void 0 !== a ? a : null
           },
           paddingTop: 24,
           paddingBottom: 24,
           sectionHeight: Z.LIST_SECTION_HEIGHT,
           rowHeight: Z.LIST_ROW_HEIGHT,
-          renderSection: I,
+          renderSection: p,
           renderRow: S,
-          sections: [n.length],
+          sections: [a.length],
           chunkSize: 30,
           fade: !0,
           ...i
@@ -154,15 +154,15 @@ function ea() {
 function es(e) {
   let {
     pageWidth: t,
-    onSidebarResize: n
+    onSidebarResize: a
   } = e, s = (0, u.useStateFromStores)([x.default], () => x.default.getSidebarState(x.MESSAGE_REQUESTS_BASE_CHANNEL_ID)), l = (0, u.useStateFromStores)([y.default], () => y.default.getChannel(null == s ? void 0 : s.channelId));
   if (null == s || s.type !== O.SidebarType.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
   let i = t - X.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
-  return (0, a.jsx)(S.default, {
+  return (0, n.jsx)(S.default, {
     sidebarType: S.ChatSidebarType.MessageRequestSidebar,
     maxWidth: i,
-    onWidthChange: n,
-    children: (0, a.jsx)(I.default, {
+    onWidthChange: a,
+    children: (0, n.jsx)(p.default, {
       channel: l,
       baseChannelId: x.MESSAGE_REQUESTS_BASE_CHANNEL_ID
     })
@@ -172,7 +172,7 @@ let el = function(e) {
     let {
       markAsDismissed: t
     } = e;
-    return (0, a.jsx)(M.default, {
+    return (0, n.jsx)(M.default, {
       header: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_TITLE,
       content: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONTENT_TEENS,
       buttonCTA: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_DISMISS,
@@ -185,21 +185,21 @@ let el = function(e) {
   },
   ei = e => {
     let t = (0, F.default)(),
-      n = () => D.default.hasLayers() || (0, c.hasAnyModalOpen)(),
+      a = () => D.default.hasLayers() || (0, c.hasAnyModalOpen)(),
       l = (0, u.useStateFromStores)([C.default], () => C.default.useReducedMotion);
     return s.useEffect(() => {
       (0, T.requestMarkDismissibleContentAsShown)(d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
-    }, []), (0, a.jsx)(g.default, {
+    }, []), (0, n.jsx)(g.default, {
       contentTypes: [d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
       children: s => {
         let {
           visibleContent: i,
           markAsDismissed: r
         } = s;
-        if (i === d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK) return (0, a.jsx)(c.Popout, {
-          renderPopout: () => t ? (0, a.jsx)(el, {
+        if (i === d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK) return (0, n.jsx)(c.Popout, {
+          renderPopout: () => t ? (0, n.jsx)(el, {
             markAsDismissed: r
-          }) : (0, a.jsx)(M.default, {
+          }) : (0, n.jsx)(M.default, {
             header: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_TITLE,
             content: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONTENT,
             buttonCTA: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONFIRM,
@@ -217,7 +217,7 @@ let el = function(e) {
           position: "bottom",
           align: "center",
           animation: l ? c.Popout.Animation.NONE : c.Popout.Animation.TRANSLATE,
-          shouldShow: !n(),
+          shouldShow: !a(),
           spacing: 16,
           children: () => e.children
         });
@@ -230,15 +230,15 @@ function er(e) {
   let {
     section: t
   } = e;
-  return t === Z.MessageRequestSections.SPAM ? (0, a.jsx)(Q.default, {}) : (0, a.jsx)(ea, {})
+  return t === Z.MessageRequestSections.SPAM ? (0, n.jsx)(Q.default, {}) : (0, n.jsx)(en, {})
 }
 let eo = (0, h.default)(function(e) {
   let {
     width: t
-  } = e, n = (0, Y.useMessageRequestsCount)();
+  } = e, a = (0, Y.useMessageRequestsCount)();
   s.useEffect(() => {
     f.setHomeLink(X.Routes.MESSAGE_REQUESTS), (0, L.trackAppUIViewed)("message-requests"), j.default.track(X.AnalyticEvents.MESSAGE_REQUESTS_VIEWED, {
-      num_message_requests: n
+      num_message_requests: a
     }), N.default.increment({
       name: o.MetricEvents.MESSAGE_REQUEST_VIEW
     })
@@ -257,38 +257,38 @@ let eo = (0, h.default)(function(e) {
   s.useEffect(() => {
     null != _ && !m && S && C && ((0, v.transitionToChannel)(_), R.default.closeChannelSidebar(x.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
   }, [_, S, C, m]);
-  let [I, T] = s.useState(Z.MessageRequestSections.REQUESTS);
-  return (0, p.usePageTitle)({
+  let [p, T] = s.useState(Z.MessageRequestSections.REQUESTS);
+  return (0, I.usePageTitle)({
     location: ee.default.Messages.MESSAGE_REQUESTS
-  }), (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsxs)("div", {
-      className: i()(en.chat, et.container, {
-        [en.threadSidebarOpen]: C,
-        [en.threadSidebarFloating]: C && d
+  }), (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsxs)("div", {
+      className: i()(ea.chat, et.container, {
+        [ea.threadSidebarOpen]: C,
+        [ea.threadSidebarFloating]: C && d
       }),
-      children: [(0, a.jsxs)(A.default, {
+      children: [(0, n.jsxs)(A.default, {
         className: (0, G.getThemeClass)(l),
         toolbar: !0,
-        children: [(0, a.jsx)(A.default.Icon, {
+        children: [(0, n.jsx)(A.default.Icon, {
           icon: b.default,
           "aria-hidden": !0
-        }), (0, a.jsx)(ei, {
-          children: (0, a.jsx)(A.default.Title, {
+        }), (0, n.jsx)(ei, {
+          children: (0, n.jsx)(A.default.Title, {
             children: ee.default.Messages.MESSAGE_REQUESTS
           })
-        }), (0, a.jsx)(A.default.Divider, {}), (0, a.jsxs)(c.TabBar, {
+        }), (0, n.jsx)(A.default.Divider, {}), (0, n.jsxs)(c.TabBar, {
           "aria-label": ee.default.Messages.MESSAGE_REQUESTS,
-          selectedItem: I,
+          selectedItem: p,
           type: "top-pill",
           onItemSelect: e => {
             T(e)
           },
           className: et.__invalid_tabBar,
-          children: [(0, a.jsx)(c.TabBar.Item, {
+          children: [(0, n.jsx)(c.TabBar.Item, {
             id: Z.MessageRequestSections.REQUESTS,
             className: et.__invalid_item,
             children: ee.default.Messages.MESSAGE_REQUESTS_REQUESTS_TAB_TITLE
-          }), (0, a.jsx)(c.TabBar.Item, {
+          }), (0, n.jsx)(c.TabBar.Item, {
             id: Z.MessageRequestSections.SPAM,
             className: et.__invalid_item,
             children: 0 === r ? ee.default.Messages.MESSAGE_REQUESTS_SPAM_TAB_TITLE : ee.default.Messages.MESSAGE_REQUESTS_SPAM_TAB_TITLE_WITH_COUNT.format({
@@ -296,13 +296,13 @@ let eo = (0, h.default)(function(e) {
             })
           })]
         })]
-      }), (0, a.jsx)("div", {
-        className: en.content,
-        children: (0, a.jsx)(er, {
-          section: I
+      }), (0, n.jsx)("div", {
+        className: ea.content,
+        children: (0, n.jsx)(er, {
+          section: p
         })
       })]
-    }), C && (0, a.jsx)(es, {
+    }), C && (0, n.jsx)(es, {
       pageWidth: t,
       onSidebarResize: (e, t) => {
         E(t)

@@ -1,34 +1,34 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   useMultiAccountMenuItems: function() {
     return T
   }
-}), n("653041");
-var a = n("735250");
-n("470079");
-var s = n("442837"),
-  l = n("481060"),
-  i = n("44315"),
-  r = n("598077"),
-  o = n("246946"),
-  u = n("594174"),
-  d = n("441674"),
-  c = n("759231"),
-  f = n("626135"),
-  E = n("51144"),
-  h = n("480387"),
-  _ = n("726745"),
-  C = n("251423"),
-  m = n("383832"),
-  S = n("981631"),
-  I = n("689938"),
-  p = n("319667");
+}), a("653041");
+var n = a("735250");
+a("470079");
+var s = a("442837"),
+  l = a("481060"),
+  i = a("44315"),
+  r = a("598077"),
+  o = a("246946"),
+  u = a("594174"),
+  d = a("441674"),
+  c = a("759231"),
+  f = a("626135"),
+  E = a("51144"),
+  h = a("480387"),
+  _ = a("726745"),
+  C = a("251423"),
+  m = a("383832"),
+  S = a("981631"),
+  p = a("689938"),
+  I = a("319667");
 
 function T() {
   let e = (0, s.useStateFromStores)([u.default], () => u.default.getCurrentUser()),
     t = (0, s.useStateFromStores)([o.default], () => o.default.hidePersonalInformation),
     {
-      multiAccountUsers: n
+      multiAccountUsers: a
     } = (0, C.useMultiAccountUsers)(),
     T = t => {
       t !== (null == e ? void 0 : e.id) && (f.default.track(S.AnalyticEvents.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
@@ -37,50 +37,50 @@ function T() {
         }
       }), h.switchAccount(t))
     },
-    g = n.map(n => {
-      let s = new r.default(n),
+    g = a.map(a => {
+      let s = new r.default(a),
         o = s.id === (null == e ? void 0 : e.id),
-        u = n.tokenStatus === _.MultiAccountTokenStatus.INVALID,
+        u = a.tokenStatus === _.MultiAccountTokenStatus.INVALID,
         f = t ? null : "#".concat(s.discriminator);
-      return (0, a.jsx)(l.MenuItem, {
+      return (0, n.jsx)(l.MenuItem, {
         id: s.id,
-        focusedClassName: p.focused,
+        focusedClassName: I.focused,
         label: e => {
           let {
             isFocused: r
           } = e;
-          return (0, a.jsxs)("div", {
-            className: p.userMenuItem,
-            children: [(0, a.jsx)(l.Avatar, {
+          return (0, n.jsxs)("div", {
+            className: I.userMenuItem,
+            children: [(0, n.jsx)(l.Avatar, {
               src: s.getAvatarURL(void 0, 40),
               size: l.AvatarSizes.SIZE_24,
-              "aria-label": n.username
-            }), (0, a.jsxs)("div", {
-              className: p.userMenuUsername,
-              children: [(0, a.jsx)(l.Text, {
-                className: p.userMenuText,
+              "aria-label": a.username
+            }), (0, n.jsxs)("div", {
+              className: I.userMenuUsername,
+              children: [(0, n.jsx)(l.Text, {
+                className: I.userMenuText,
                 variant: "text-sm/normal",
                 children: E.default.getUserTag(s, {
                   mode: "username",
                   identifiable: t ? "never" : "always"
                 })
-              }), !s.isPomelo() && (0, a.jsx)(l.Text, {
-                className: p.userMenuDiscriminator,
+              }), !s.isPomelo() && (0, n.jsx)(l.Text, {
+                className: I.userMenuDiscriminator,
                 variant: "text-sm/normal",
                 children: f
               })]
-            }), o && (0, a.jsx)(d.default, {
+            }), o && (0, n.jsx)(d.default, {
               color: (0, i.getColor)(r ? S.Color.WHITE_500 : S.Color.BRAND_500),
               backgroundColor: (0, i.getColor)(r ? S.Color.BRAND_500 : S.Color.WHITE_500),
               width: 18,
               height: 18,
-              className: p.activeIcon
-            }), u && (0, a.jsx)(c.default, {
+              className: I.activeIcon
+            }), u && (0, n.jsx)(c.default, {
               color: (0, i.getColor)(S.Color.RED_400),
               backgroundColor: (0, i.getColor)(S.Color.WHITE_500),
               width: 15,
               height: 15,
-              className: p.activeIcon
+              className: I.activeIcon
             })]
           })
         },
@@ -89,10 +89,10 @@ function T() {
         }
       }, s.id)
     });
-  return g.push((0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(l.MenuSeparator, {}), (0, a.jsx)(l.MenuItem, {
+  return g.push((0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsx)(l.MenuSeparator, {}), (0, n.jsx)(l.MenuItem, {
       id: "manage-accounts",
-      label: I.default.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
+      label: p.default.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
       action: m.default
     })]
   })), g

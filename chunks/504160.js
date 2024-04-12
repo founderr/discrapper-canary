@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   hideLiveChannelNotice: function() {
     return s
   },
@@ -10,29 +10,29 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var a = n("570140");
+var n = a("570140");
 
 function s(e) {
   let {
     eventId: t,
-    stageId: n
+    stageId: a
   } = e;
-  (null != t || null != n) && a.default.dispatch({
+  (null != t || null != a) && n.default.dispatch({
     type: "LIVE_CHANNEL_NOTICE_HIDE",
     eventId: t,
-    stageId: n
+    stageId: a
   })
 }
 
 function l(e) {
-  a.default.dispatch({
+  n.default.dispatch({
     type: "UPCOMING_GUILD_EVENT_NOTICE_HIDE",
     eventId: e
   })
 }
 
 function i(e) {
-  a.default.dispatch({
+  n.default.dispatch({
     type: "UPCOMING_GUILD_EVENT_NOTICE_SEEN",
     guildEventId: e
   })

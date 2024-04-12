@@ -36,8 +36,8 @@ var a = l("735250"),
   D = l("823379"),
   P = l("63063"),
   G = l("358085"),
-  b = l("653255"),
-  U = l("989941"),
+  U = l("653255"),
+  b = l("989941"),
   F = l("618407"),
   k = l("586290"),
   y = l("233037"),
@@ -50,15 +50,15 @@ var a = l("735250"),
   K = l("526761"),
   Y = l("689938"),
   Q = l("534079"),
-  Z = l("223318");
+  q = l("223318");
 
-function J(e) {
+function Z(e) {
   let {
     selectedSource: t,
     selectSource: l,
     sourceChanged: s,
     onChangeSource: n
-  } = e, i = (0, r.useStateFromStores)([E.default, p.default], () => (0, G.isWindows)() ? (0, U.default)(E.default, p.default) : null), o = (0, r.useStateFromStores)([d.default], () => (null == i ? void 0 : i.id) != null ? d.default.getApplication(i.id) : null), c = (0, r.useStateFromStores)([E.default], () => E.default.getRunningGames()), f = (0, r.useStateFromStoresArray)([d.default], () => c.map(e => null != e.id ? d.default.getApplication(e.id) : null).filter(D.isNotNullish), [c]), m = null;
+  } = e, i = (0, r.useStateFromStores)([E.default, p.default], () => (0, G.isWindows)() ? (0, b.default)(E.default, p.default) : null), o = (0, r.useStateFromStores)([d.default], () => (null == i ? void 0 : i.id) != null ? d.default.getApplication(i.id) : null), c = (0, r.useStateFromStores)([E.default], () => E.default.getRunningGames()), f = (0, r.useStateFromStoresArray)([d.default], () => c.map(e => null != e.id ? d.default.getApplication(e.id) : null).filter(D.isNotNullish), [c]), m = null;
   if (null != t ? m = t.name : null != i && (m = i.name), null == m) return null;
   let S = (0, H.default)(i, t, c),
     _ = s ? f.find(e => {
@@ -70,8 +70,8 @@ function J(e) {
     C = null != t && t.id.startsWith("screen") ? L.default : j.default;
   return (0, a.jsx)(u.FormItem, {
     title: Y.default.Messages.GO_LIVE_MODAL_APPLICATION_FORM_TITLE,
-    className: Z.modalContent,
-    titleClassName: Z.formItemTitleVerySlim,
+    className: q.modalContent,
+    titleClassName: q.formItemTitleVerySlim,
     children: (0, a.jsxs)(B.default, {
       children: [null != _ ? (0, a.jsx)(R.default, {
         game: _,
@@ -93,15 +93,15 @@ function J(e) {
   })
 }
 
-function X(e) {
+function J(e) {
   let {
     onChange: t,
     guildId: l
   } = e, s = (0, r.useStateFromStores)([h.default], () => h.default.getGuild(l));
   return null == s ? (t(), null) : (0, a.jsx)(u.FormItem, {
     title: Y.default.Messages.GO_LIVE_MODAL_GUILD_FORM_TITLE,
-    className: Z.modalContent,
-    titleClassName: Z.formItemTitle,
+    className: q.modalContent,
+    titleClassName: q.formItemTitle,
     children: (0, a.jsxs)(B.default, {
       children: [(0, a.jsx)(v.default, {
         guild: s,
@@ -121,7 +121,7 @@ function X(e) {
   })
 }
 
-function q(e) {
+function X(e) {
   let {
     text: t
   } = e;
@@ -150,7 +150,7 @@ function $(e) {
     })
   }, []);
   return l >= 2 && l <= W.STREAM_NOTIFY_GUILD_MAX_SIZE ? (0, a.jsx)(u.FormItem, {
-    className: i()(Z.modalContent, Q.checkboxRow),
+    className: i()(q.modalContent, Q.checkboxRow),
     children: (0, a.jsx)(u.Checkbox, {
       value: !!n,
       type: u.Checkbox.Types.INVERTED,
@@ -171,7 +171,7 @@ function ee(e) {
     l(t)
   }, [l]);
   return (0, a.jsx)(u.FormItem, {
-    className: i()(Z.modalContent, Q.checkboxRow),
+    className: i()(q.modalContent, Q.checkboxRow),
     children: (0, a.jsx)(u.Checkbox, {
       value: t,
       type: u.Checkbox.Types.INVERTED,
@@ -205,9 +205,9 @@ function et(e) {
     onChangeSource: j,
     onChangeAudioDevice: O,
     onChangeGuild: D,
-    onChangeSound: U,
+    onChangeSound: b,
     isAnimationDone: B
-  } = e, H = (0, r.useStateFromStores)([I.default, g.default], () => g.default.getChannel(I.default.getVoiceChannelId())), W = (0, r.useStateFromStores)([b.default], () => b.default.GPUDriversOutdated), Z = (0, r.useStateFromStores)([b.default], () => b.default.problematicGPUDriver), et = (0, r.useStateFromStores)([A.default], () => A.default.getCurrentUser()), el = (0, f.useEnableClips)(), ea = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
+  } = e, H = (0, r.useStateFromStores)([I.default, g.default], () => g.default.getChannel(I.default.getVoiceChannelId())), W = (0, r.useStateFromStores)([U.default], () => U.default.GPUDriversOutdated), q = (0, r.useStateFromStores)([U.default], () => U.default.problematicGPUDriver), et = (0, r.useStateFromStores)([A.default], () => A.default.getCurrentUser()), el = (0, f.useEnableClips)(), ea = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
     autoTrackExposure: !el
   }), es = (0, F.default)();
   null != t && t.id.startsWith("screen") && !x.default.supportsScreenSoundshare() && (es = Y.default.Messages.GO_LIVE_SCREENSHARE_NO_SOUND);
@@ -225,18 +225,18 @@ function et(e) {
       onChangeVideoDeviceSource: j,
       onChangeAudioDevice: O
     }) : (0, a.jsxs)("div", {
-      children: [(0, a.jsx)(J, {
+      children: [(0, a.jsx)(Z, {
         selectSource: N,
         sourceChanged: d,
         onChangeSource: j,
         selectedSource: t
-      }), null != es ? (0, a.jsx)(q, {
+      }), null != es ? (0, a.jsx)(X, {
         text: es
       }) : null, (0, G.isWindows)() && null != t && t.id.startsWith("screen") && null == es ? (0, a.jsx)(ee, {
         enabled: p,
-        onChange: U
+        onChange: b
       }) : null]
-    }), h && null != E ? (0, a.jsx)(X, {
+    }), h && null != E ? (0, a.jsx)(J, {
       guildId: E,
       onChange: D
     }) : null, null != H ? (0, a.jsx)(w.default, {
@@ -247,9 +247,9 @@ function et(e) {
       onChangeSelectedChannelId: M
     }), null != E && er && eu ? (0, a.jsx)($, {
       guildId: E
-    }) : null, W ? (0, a.jsx)(q, {
+    }) : null, W ? (0, a.jsx)(X, {
       text: Y.default.Messages.GO_LIVE_VIDEO_DRIVERS_OUTDATED
-    }) : null, Z ? (0, a.jsx)(q, {
+    }) : null, q ? (0, a.jsx)(X, {
       text: Y.default.Messages.PROBLEMATIC_GPU_DRIVER_DETECTED.format({
         helpCenterLink: P.default.getArticleURL(z.HelpdeskArticles.NVIDIA_DRIVER_ISSUES)
       })

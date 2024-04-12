@@ -1,22 +1,22 @@
 "use strict";
-n.r(t);
-var a = n("735250"),
-  s = n("470079"),
-  l = n("949389"),
-  i = n("63063"),
-  r = n("82950"),
-  o = n("981631"),
-  u = n("689938"),
-  d = n("511189");
+a.r(t);
+var n = a("735250"),
+  s = a("470079"),
+  l = a("949389"),
+  i = a("63063"),
+  r = a("82950"),
+  o = a("981631"),
+  u = a("689938"),
+  d = a("511189");
 t.default = e => {
   let {
     guild: t
-  } = e, n = s.useCallback(() => {
+  } = e, a = s.useCallback(() => {
     (0, l.hideMaxMemberCountChannelNotice)(t.id)
   }, [t.id]);
-  return (0, a.jsx)(r.default, {
+  return (0, n.jsx)(r.default, {
     guild: t,
-    onDismissed: n,
+    onDismissed: a,
     message: u.default.Messages.NOTICE_CHANNEL_MAX_MEMBERS_CAP_REACHED_MESSAGE.format({
       maxMemberCount: t.maxMembers,
       maxMembersUrl: i.default.getArticleURL(o.HelpdeskArticles.MAX_MEMBERS)

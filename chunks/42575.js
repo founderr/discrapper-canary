@@ -1,32 +1,32 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return S
   }
 });
-var a = n("735250"),
-  s = n("470079"),
-  l = n("194359"),
-  i = n("906732"),
-  r = n("388380"),
-  o = n("171368"),
-  u = n("263704"),
-  d = n("465670"),
-  c = n("626135"),
-  f = n("321488"),
-  E = n("417183"),
-  h = n("170245"),
-  _ = n("981631"),
-  C = n("689938"),
-  m = n("845286");
+var n = a("735250"),
+  s = a("470079"),
+  l = a("194359"),
+  i = a("906732"),
+  r = a("388380"),
+  o = a("171368"),
+  u = a("263704"),
+  d = a("465670"),
+  c = a("626135"),
+  f = a("321488"),
+  E = a("417183"),
+  h = a("170245"),
+  _ = a("981631"),
+  C = a("689938"),
+  m = a("845286");
 
 function S(e) {
   let {
     user: t,
-    nickname: n,
+    nickname: a,
     status: S,
-    isFocused: I
-  } = e, p = s.useContext(c.AnalyticsContext), {
+    isFocused: p
+  } = e, I = s.useContext(c.AnalyticsContext), {
     analyticsLocations: T
   } = (0, i.default)(), g = e => {
     null == e || e.stopPropagation(), l.default.addRelationship({
@@ -41,23 +41,23 @@ function S(e) {
   }, A = e => {
     null == e || e.stopPropagation(), r.default.ignore(t.id)
   }, N = S === _.StatusTypes.OFFLINE ? _.StatusTypes.UNKNOWN : S;
-  return (0, a.jsx)(E.default, {
-    isFocused: I,
+  return (0, n.jsx)(E.default, {
+    isFocused: p,
     user: t,
     onClick: () => (0, o.openUserProfileModal)({
       userId: t.id,
       sourceAnalyticsLocations: T,
-      analyticsLocation: p.location
+      analyticsLocation: I.location
     }),
     children: e => {
-      let s = (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(f.default, {
+      let s = (0, n.jsxs)(n.Fragment, {
+        children: [(0, n.jsx)(f.default, {
           icon: u.default,
           actionType: f.default.ActionTypes.ACCEPT,
           tooltip: C.default.Messages.FRIEND_REQUEST_ACCEPT,
           onClick: g,
           shouldHighlight: e
-        }), (0, a.jsx)(f.default, {
+        }), (0, n.jsx)(f.default, {
           icon: d.default,
           actionType: f.default.ActionTypes.DENY,
           tooltip: C.default.Messages.FRIEND_REQUEST_IGNORE,
@@ -65,15 +65,15 @@ function S(e) {
           shouldHighlight: e
         })]
       });
-      return (0, a.jsxs)("div", {
+      return (0, n.jsxs)("div", {
         className: m.listItemContents,
-        children: [(0, a.jsx)(h.default, {
+        children: [(0, n.jsx)(h.default, {
           user: t,
           hovered: e,
           status: N,
-          subText: n,
+          subText: a,
           className: m.__invalid_userInfo
-        }), (0, a.jsx)("div", {
+        }), (0, n.jsx)("div", {
           className: m.actions,
           children: s
         })]

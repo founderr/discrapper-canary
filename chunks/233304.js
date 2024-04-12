@@ -1,33 +1,33 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   NotchBackground: function() {
     return _
   }
-}), n("47120");
-var a, s = n("735250"),
-  l = n("470079"),
-  i = n("803997"),
-  r = n.n(i),
-  o = n("692547"),
-  u = n("477690"),
-  d = n("624138"),
-  c = n("162168"),
-  f = n("37397");
+}), a("47120");
+var n, s = a("735250"),
+  l = a("470079"),
+  i = a("803997"),
+  r = a.n(i),
+  o = a("692547"),
+  u = a("477690"),
+  d = a("624138"),
+  c = a("162168"),
+  f = a("37397");
 
-function E(e, t, n) {
+function E(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: a,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = a, e
 }
 let h = (0, d.cssValueToNumber)(u.default.GRADIENT_PROGRESS_NOTCH_WIDTH),
   _ = Object.freeze({
     BLACK: f.black,
     GRAY: f.gray
   });
-class C extends(a = l.Component) {
+class C extends(n = l.Component) {
   componentDidMount() {
     this.computeBars(), window.addEventListener("resize", this.computeBars)
   }
@@ -42,22 +42,22 @@ class C extends(a = l.Component) {
       progress: e
     } = this.props, {
       barWidth: t
-    } = this.state, n = this.roundToNearestStep(t * (100 - Math.max(0, Math.min(100, e))) / 100);
+    } = this.state, a = this.roundToNearestStep(t * (100 - Math.max(0, Math.min(100, e))) / 100);
     return {
-      transform: "translateX(".concat(Math.abs(n - t), "px)")
+      transform: "translateX(".concat(Math.abs(a - t), "px)")
     }
   }
   getGradientStyles() {
     let {
       gradientEnd: e,
       gradientStart: t,
-      progress: n
+      progress: a
     } = this.props, {
-      barWidth: a
+      barWidth: n
     } = this.state;
     return {
-      width: "".concat(a, "px"),
-      background: n <= 0 ? "none" : "linear-gradient(to right, ".concat(t, ", ").concat(e, ")")
+      width: "".concat(n, "px"),
+      background: a <= 0 ? "none" : "linear-gradient(to right, ".concat(t, ", ").concat(e, ")")
     }
   }
   render() {
@@ -65,7 +65,7 @@ class C extends(a = l.Component) {
       className: e,
       notchBackground: t
     } = this.props, {
-      barWidth: n
+      barWidth: a
     } = this.state;
     return (0, s.jsx)("div", {
       className: f.wrapper,
@@ -76,8 +76,8 @@ class C extends(a = l.Component) {
         children: [(0, s.jsx)("div", {
           className: f.progress,
           style: this.getProgressStyles()
-        }), 0 !== n && (0, s.jsx)(c.default, {
-          width: n,
+        }), 0 !== a && (0, s.jsx)(c.default, {
+          width: a,
           className: r()(f.notches, t)
         })]
       })

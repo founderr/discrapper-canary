@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return U
+    return b
   }
 }), l("47120"), l("518263"), l("970173"), l("520712"), l("268111"), l("941497"), l("32026"), l("480839"), l("744285"), l("492257"), l("873817"), l("863942"), l("642549"), l("653041");
 var a = l("735250"),
@@ -90,13 +90,13 @@ async function G() {
   }))).filter(e => null !== e)
 }
 
-function b(e) {
+function U(e) {
   let t = (0, A.isWindows)() ? (0, R.default)(S.default, h.default) : null,
     l = S.default.getRunningGames();
   return null != t && (0, T.default)(e.id, t.windowHandle) ? 2 : null != l.find(t => (0, T.default)(e.id, t.windowHandle)) ? 1 : 0
 }
 
-function U(e) {
+function b(e) {
   let {
     selectedSource: t,
     onChangeSelectedSource: l
@@ -104,7 +104,7 @@ function U(e) {
     enableGoLiveCaptureCard: n
   } = p.default.useExperiment({
     location: "GoLive_Source_Select"
-  }), r = N.default.supports(j.Features.GO_LIVE_HARDWARE), [d, m] = s.useState(null), [h, A] = s.useState(null), [R, G] = s.useState(null), U = null != R && R.length > 0, [F, k] = s.useState(u.DesktopSources.WINDOW), [y, w] = s.useState(!1), B = s.useRef(null), V = s.useRef(new c.Interval), H = (0, o.useStateFromStores)([S.default], () => S.default.getRunningGames()), W = function(e, t, l) {
+  }), r = N.default.supports(j.Features.GO_LIVE_HARDWARE), [d, m] = s.useState(null), [h, A] = s.useState(null), [R, G] = s.useState(null), b = null != R && R.length > 0, [F, k] = s.useState(u.DesktopSources.WINDOW), [y, w] = s.useState(!1), B = s.useRef(null), V = s.useRef(new c.Interval), H = (0, o.useStateFromStores)([S.default], () => S.default.getRunningGames()), W = function(e, t, l) {
     let a = (0, E.useIsEligibleForQuests)({
       location: M.QuestsExperimentLocations.STREAM_SOURCE_SELECT
     });
@@ -122,7 +122,7 @@ function U(e) {
       }
       return null
     }, [a, e, t, l])
-  }((0, o.useStateFromStores)([_.default], () => _.default.quests), H, h), z = s.useMemo(() => null == h ? null : [...h].sort((e, t) => (null == W ? void 0 : W.source.id) === e.id ? -1 : (null == W ? void 0 : W.source.id) === t.id ? 1 : b(t) - b(e)), [W, h]);
+  }((0, o.useStateFromStores)([_.default], () => _.default.quests), H, h), z = s.useMemo(() => null == h ? null : [...h].sort((e, t) => (null == W ? void 0 : W.source.id) === e.id ? -1 : (null == W ? void 0 : W.source.id) === t.id ? 1 : U(t) - U(e)), [W, h]);
   s.useEffect(() => {
     let e = V.current;
     return P().then(e => {
@@ -181,7 +181,7 @@ function U(e) {
     }, s)
   });
 
-  function Z() {
+  function q() {
     let e = B.current;
     null != e && w(!e.isScrolledToTop())
   }
@@ -199,7 +199,7 @@ function U(e) {
             name: O.default.Messages.GO_LIVE_MODAL_SCREENS,
             value: u.DesktopSources.SCREEN
           }];
-          return n && r && U && e.push({
+          return n && r && b && e.push({
             name: O.default.Messages.GO_LIVE_MODAL_CAPTURE,
             value: u.DesktopSources.CAMERA
           }), e
@@ -219,7 +219,7 @@ function U(e) {
       children: (0, a.jsx)(f.AdvancedScroller, {
         ref: K,
         className: D.sourceScroller,
-        onScroll: Z,
+        onScroll: q,
         children: (0, a.jsx)(I.default, {
           layout: I.default.Layout.WRAP,
           columns: 2,
@@ -230,7 +230,7 @@ function U(e) {
     }) : (0, a.jsxs)(f.AdvancedScroller, {
       ref: K,
       className: D.sourceScroller,
-      onScroll: Z,
+      onScroll: q,
       children: [F === u.DesktopSources.WINDOW && null != W && (0, a.jsx)(g.default, {
         quest: W.quest
       }), (0, a.jsx)(I.default, {

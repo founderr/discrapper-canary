@@ -4,7 +4,7 @@
       n = a("570140"),
       c = a("317770"),
       i = a("358085");
-    class o extends c.default {
+    class r extends c.default {
       _initialize() {
         n.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen)
       }
@@ -23,4 +23,4 @@
         }) : t[a] = n
       }
     }
-    t.default = new o
+    t.default = new r

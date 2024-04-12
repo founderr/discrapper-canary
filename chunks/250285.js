@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("735250"),
-  s = n("470079"),
-  l = n("803997"),
-  i = n.n(l),
-  r = n("789978"),
-  o = n("748780"),
-  u = n("91192"),
-  d = n("906732"),
-  c = n("171368"),
-  f = n("981631"),
-  E = n("413934");
+a.r(t), a("47120");
+var n = a("735250"),
+  s = a("470079"),
+  l = a("803997"),
+  i = a.n(l),
+  r = a("789978"),
+  o = a("748780"),
+  u = a("91192"),
+  d = a("906732"),
+  c = a("171368"),
+  f = a("981631"),
+  E = a("413934");
 t.default = e => {
   let {
     userId: t,
-    children: n,
+    children: a,
     isLast: l,
     className: h
   } = e, [_, C] = s.useState(!1), {
@@ -27,19 +27,19 @@ t.default = e => {
         section: f.AnalyticsSections.FAMILY_CENTER
       }
     })
-  }, [t, m]), I = () => {
+  }, [t, m]), p = () => {
     C(!0)
-  }, p = () => {
+  }, I = () => {
     C(!1)
   };
-  return (0, a.jsx)(u.ListNavigatorItem, {
+  return (0, n.jsx)(u.ListNavigatorItem, {
     id: t,
-    children: e => (0, a.jsx)(r.FocusRing, {
+    children: e => (0, n.jsx)(r.FocusRing, {
       offset: {
         left: -8,
         right: -8
       },
-      children: (0, a.jsx)(o.default.div, {
+      children: (0, n.jsx)(o.default.div, {
         style: {
           opacity: 1
         },
@@ -47,11 +47,11 @@ t.default = e => {
           [E.last]: l,
           [E.active]: _
         }),
-        onMouseEnter: I,
-        onMouseLeave: p,
+        onMouseEnter: p,
+        onMouseLeave: I,
         onClick: S,
         ...e,
-        children: n(_)
+        children: a(_)
       })
     })
   })

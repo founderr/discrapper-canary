@@ -8,8 +8,8 @@ var a = r("735250");
 r("470079");
 var n = r("442837"),
   i = r("481060"),
-  l = r("800599"),
-  o = r("594174"),
+  o = r("800599"),
+  l = r("594174"),
   s = r("681619"),
   c = r("64823"),
   d = r("779869");
@@ -36,13 +36,13 @@ let u = [{
 }];
 
 function h() {
-  let e = (0, n.useStateFromStoresArray)([l.default, o.default], () => l.default.getUserAffinities().map(e => {
+  let e = (0, n.useStateFromStoresArray)([o.default, l.default], () => o.default.getUserAffinities().map(e => {
     let {
       user_id: t,
       affinity: r
     } = e;
     return {
-      user: o.default.getUser(t),
+      user: l.default.getUser(t),
       affinity: r,
       key: t
     }

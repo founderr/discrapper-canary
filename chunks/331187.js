@@ -1,16 +1,16 @@
 "use strict";
-n.r(t);
-var a = n("735250"),
-  s = n("470079"),
-  l = n("703656"),
-  i = n("970731"),
-  r = n("626135"),
-  o = n("63063"),
-  u = n("973005"),
-  d = n("981631"),
-  c = n("921944"),
-  f = n("689938"),
-  E = n("353213");
+a.r(t);
+var n = a("735250"),
+  s = a("470079"),
+  l = a("703656"),
+  i = a("970731"),
+  r = a("626135"),
+  o = a("63063"),
+  u = a("973005"),
+  d = a("981631"),
+  c = a("921944"),
+  f = a("689938"),
+  E = a("353213");
 t.default = e => {
   let {
     markAsDismissed: t
@@ -19,7 +19,7 @@ t.default = e => {
     r.default.track(d.AnalyticEvents.DM_SAFETY_COACHMARK_ACTION, {
       action: u.DMSafetyCoachmarkActions.VIEW
     })
-  }, []), (0, a.jsx)(i.default, {
+  }, []), (0, n.jsx)(i.default, {
     header: f.default.Messages.USER_EXPLICIT_CONTENT_FILTER_COACHMARK_HEADER_V2,
     content: f.default.Messages.USER_EXPLICIT_CONTENT_FILTER_COACHMARK_CONTENT_V2.format({
       helpdeskArticle: o.default.getArticleURL(d.HelpdeskArticles.SAFE_DIRECT_MESSAGING)

@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("120960"),
-  s = n("996106"),
-  l = n("452426"),
-  i = n("186901"),
-  r = n("981631"),
-  o = n("65154");
+a.r(t), a("47120");
+var n = a("120960"),
+  s = a("996106"),
+  l = a("452426"),
+  i = a("186901"),
+  r = a("981631"),
+  o = a("65154");
 t.default = {
   [r.RPCCommands.SET_CERTIFIED_DEVICES]: {
     scope: {
@@ -34,18 +34,18 @@ t.default = {
       let {
         socket: t,
         args: {
-          devices: n
+          devices: a
         }
       } = e;
       if (null == t.application.id) throw new s.default({
         errorCode: r.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      (0, a.setCertifiedDevices)(t.application.id, n.map(e => ({
+      (0, n.setCertifiedDevices)(t.application.id, a.map(e => ({
         type: e.type,
         id: e.id,
         vendor: e.vendor,
         model: e.model,
-        related: e.related.filter(e => n.some(t => t.id === e)),
+        related: e.related.filter(e => a.some(t => t.id === e)),
         echoCancellation: e.echo_cancellation,
         noiseSuppression: e.noise_suppression,
         automaticGainControl: e.automatic_gain_control,

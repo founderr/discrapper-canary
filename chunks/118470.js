@@ -1,29 +1,29 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return h
   }
-}), n("47120"), n("653041");
-var a = n("735250"),
-  s = n("470079"),
-  l = n("442837"),
-  i = n("812206"),
-  r = n("82950"),
-  o = n("434404"),
-  u = n("106976"),
-  d = n("270144"),
-  c = n("981631"),
-  f = n("689938"),
-  E = n("466389");
+}), a("47120"), a("653041");
+var n = a("735250"),
+  s = a("470079"),
+  l = a("442837"),
+  i = a("812206"),
+  r = a("82950"),
+  o = a("434404"),
+  u = a("106976"),
+  d = a("270144"),
+  c = a("981631"),
+  f = a("689938"),
+  E = a("466389");
 
 function h(e) {
   let {
     guild: t
-  } = e, n = (0, d.useUnseenEndedApplicationSubscriptionEntitlements)(t), h = () => (0, u.dismissApplicationSubscriptionExpirationNotice)(t.id), _ = s.useMemo(() => new Set(n.map(e => e.applicationId)), [n]), C = (0, l.useStateFromStoresArray)([i.default], () => {
+  } = e, a = (0, d.useUnseenEndedApplicationSubscriptionEntitlements)(t), h = () => (0, u.dismissApplicationSubscriptionExpirationNotice)(t.id), _ = s.useMemo(() => new Set(a.map(e => e.applicationId)), [a]), C = (0, l.useStateFromStoresArray)([i.default], () => {
     let e = [];
     for (let t of _) {
-      let n = i.default.getApplication(t);
-      null != n && e.push(n)
+      let a = i.default.getApplication(t);
+      null != a && e.push(a)
     }
     return e
   }, [_]);
@@ -38,7 +38,7 @@ function h(e) {
     a: C[0].name,
     b: C[1].name,
     c: C[2].name
-  }) : f.default.Messages.MORE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT, (0, a.jsx)(r.default, {
+  }) : f.default.Messages.MORE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT, (0, n.jsx)(r.default, {
     guild: t,
     onDismissed: h,
     message: m,

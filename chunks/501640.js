@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return o
   }
 });
-var a = n("149765"),
-  s = n("442837"),
-  l = n("984933"),
-  i = n("496675"),
-  r = n("981631");
+var n = a("149765"),
+  s = a("442837"),
+  l = a("984933"),
+  i = a("496675"),
+  r = a("981631");
 
 function o(e) {
   let t = (0, s.useStateFromStores)([l.default], () => {
@@ -19,6 +19,6 @@ function o(e) {
     let {
       channel: t
     } = e;
-    return i.default.can(a.combine(r.Permissions.SEND_MESSAGES, r.Permissions.VIEW_CHANNEL), t)
+    return i.default.can(n.combine(r.Permissions.SEND_MESSAGES, r.Permissions.VIEW_CHANNEL), t)
   }).length
 }

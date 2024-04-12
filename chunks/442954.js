@@ -7,8 +7,8 @@ r.r(t), r.d(t, {
 var a = r("735250"),
   n = r("470079"),
   i = r("803997"),
-  l = r.n(i),
-  o = r("481060"),
+  o = r.n(i),
+  l = r("481060"),
   s = r("246992"),
   c = r("779869"),
   d = r("534477");
@@ -45,18 +45,18 @@ function u() {
       value: e
     })),
     [i, u] = n.useState(t[0].value);
-  return (0, a.jsx)(o.ScrollerThin, {
-    className: l()(c.panel),
+  return (0, a.jsx)(l.ScrollerThin, {
+    className: o()(c.panel),
     children: (0, a.jsx)("div", {
       className: d.panelInner,
       children: (0, a.jsxs)("section", {
         className: d.section,
-        children: [(0, a.jsx)(o.Heading, {
+        children: [(0, a.jsx)(l.Heading, {
           variant: "heading-md/semibold",
           children: "Open a Modal"
         }), (0, a.jsxs)("div", {
           className: d.inputRow,
-          children: [(0, a.jsx)(o.Select, {
+          children: [(0, a.jsx)(l.Select, {
             className: d.input,
             options: t,
             isSelected: e => i === e,
@@ -64,9 +64,9 @@ function u() {
             serialize: e => String(e),
             select: e => u(e),
             popoutLayerContext: s.devToolsLayerContext
-          }), (0, a.jsx)(o.Button, {
+          }), (0, a.jsx)(l.Button, {
             onClick: () => {
-              (0, o.openModalLazy)(e[i])
+              (0, l.openModalLazy)(e[i])
             },
             children: "Open"
           })]

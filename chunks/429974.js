@@ -1,26 +1,26 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var s = n("481060"),
-  l = n("570140"),
-  i = n("317770"),
-  r = n("603113"),
-  o = n("812206"),
-  u = n("158776"),
-  d = n("699516"),
-  c = n("594174"),
-  f = n("626135"),
-  E = n("621853"),
-  h = n("981631"),
-  _ = n("616922");
+a.r(t);
+var n = a("735250");
+a("470079");
+var s = a("481060"),
+  l = a("570140"),
+  i = a("317770"),
+  r = a("603113"),
+  o = a("812206"),
+  u = a("158776"),
+  d = a("699516"),
+  c = a("594174"),
+  f = a("626135"),
+  E = a("621853"),
+  h = a("981631"),
+  _ = a("616922");
 let C = null;
 async function m(e) {
   var t, l, i, m;
   let {
     userId: S,
-    section: I,
-    guildId: p = h.ME,
+    section: p,
+    guildId: I = h.ME,
     channelId: T,
     friendToken: g,
     autoFocusNote: A,
@@ -42,20 +42,20 @@ async function m(e) {
   C = await (0, s.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([n.e("99387"), n.e("824")]).then(n.bind(n, "304113"));
-    return t => (0, a.jsx)(e, {
+    } = await Promise.all([a.e("99387"), a.e("824")]).then(a.bind(a, "304113"));
+    return t => (0, n.jsx)(e, {
       ...t,
       location: "handleOpenUserProfileModal",
       user: v,
       autoFocusNote: A,
-      guildId: p,
+      guildId: I,
       friendToken: g,
-      initialSection: I,
+      initialSection: p,
       channelId: T
     })
   }), f.default.track(h.AnalyticEvents.OPEN_MODAL, {
     type: "Profile Modal",
-    guild_id: p !== h.ME ? p : null,
+    guild_id: I !== h.ME ? I : null,
     channel_id: T,
     other_user_id: S,
     application_id: null !== (l = null == O ? void 0 : O.application_id) && void 0 !== l ? l : null,
@@ -77,7 +77,7 @@ async function m(e) {
 function S() {
   null != C && (0, s.closeModal)(C), C = null
 }
-class I extends i.default {
+class p extends i.default {
   _initialize() {
     l.default.subscribe("USER_PROFILE_MODAL_OPEN", m), l.default.subscribe("USER_PROFILE_MODAL_CLOSE", S)
   }
@@ -85,4 +85,4 @@ class I extends i.default {
     l.default.unsubscribe("USER_PROFILE_MODAL_OPEN", m), l.default.unsubscribe("USER_PROFILE_MODAL_CLOSE", S)
   }
 }
-t.default = new I
+t.default = new p

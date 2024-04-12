@@ -1,23 +1,23 @@
 "use strict";
-n.r(t);
-var a = n("735250"),
-  s = n("470079"),
-  l = n("481060"),
-  i = n("442837"),
-  r = n("212093"),
-  o = n("677277"),
-  u = n("285865"),
-  d = n("683301"),
-  c = n("104259"),
-  f = n("360048"),
-  E = n("296386"),
-  h = n("150192"),
-  _ = n("889010"),
-  C = n("488905"),
-  m = n("731455"),
-  S = n("689938"),
-  I = n("393810");
-let p = e => {
+a.r(t);
+var n = a("735250"),
+  s = a("470079"),
+  l = a("481060"),
+  i = a("442837"),
+  r = a("212093"),
+  o = a("677277"),
+  u = a("285865"),
+  d = a("683301"),
+  c = a("104259"),
+  f = a("360048"),
+  E = a("296386"),
+  h = a("150192"),
+  _ = a("889010"),
+  C = a("488905"),
+  m = a("731455"),
+  S = a("689938"),
+  p = a("393810");
+let I = e => {
   switch (e) {
     case m.CategoryId.Activity:
       return m.CategoryIcons.Activity;
@@ -40,19 +40,19 @@ t.default = function() {
   } = (0, i.useStateFromStoresObject)([d.default], () => ({
     currentCategoryId: d.default.getCurrentCategoryId(),
     isViewingSearchResults: d.default.getMostRecentQuery().length > 0
-  })), n = (0, i.useStateFromStores)([h.default], () => h.default.getClanDiscoveryCategories(), [], h.areDiscoveryCategoriesEqual), T = null == n ? void 0 : n.map(e => ({
+  })), a = (0, i.useStateFromStores)([h.default], () => h.default.getClanDiscoveryCategories(), [], h.areDiscoveryCategoriesEqual), T = null == a ? void 0 : a.map(e => ({
     ...e,
-    icon: p(e.categoryId)
+    icon: I(e.categoryId)
   })), g = e => {
     (0, r.selectCategory)(e, !0), u.default.closeSidebar(), t && (0, r.clearSearch)()
   };
   return s.useEffect(() => {
     (0, E.maybeFetchGuildDiscoveryCategories)(!1, !0)
-  }, []), (0, a.jsxs)(l.Scroller, {
-    children: [(0, a.jsx)(C.DiscoverySidebarHeader, {
+  }, []), (0, n.jsxs)(l.Scroller, {
+    children: [(0, n.jsx)(C.DiscoverySidebarHeader, {
       text: S.default.Messages.DISCOVER
-    }), (0, a.jsx)(f.default, {
-      avatar: (0, a.jsx)(c.default, {}),
+    }), (0, n.jsx)(f.default, {
+      avatar: (0, n.jsx)(c.default, {}),
       name: S.default.Messages.HOME,
       focusProps: {
         offset: {
@@ -64,15 +64,15 @@ t.default = function() {
       onClick: () => g(m.CategoryId.Clans),
       wrapContent: !0,
       selected: e === m.CategoryId.Clans,
-      className: I.categoryItem,
-      selectedClassName: I.selectedCategoryItem,
-      innerClassName: I.itemInner
-    }, "clan-discovery-home"), (0, a.jsx)(_.default, {
+      className: p.categoryItem,
+      selectedClassName: p.selectedCategoryItem,
+      innerClassName: p.itemInner
+    }, "clan-discovery-home"), (0, n.jsx)(_.default, {
       categories: T,
       handleCategorySelect: g,
       currentCategoryId: e,
       shouldDisplaySelectedCategory: !t
-    }), (0, a.jsx)(o.default, {
+    }), (0, n.jsx)(o.default, {
       handleCategorySelect: g,
       currentCategoryId: e,
       shouldDisplaySelectedCategory: !t

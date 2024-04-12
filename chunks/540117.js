@@ -4,15 +4,15 @@
       n = a("470079"),
       c = a("803997"),
       i = a.n(c),
-      o = a("715702"),
-      r = a("750950"),
+      r = a("715702"),
+      o = a("750950"),
       f = a("605094");
-    class s extends n.Component {
+    class l extends n.Component {
       render() {
         return (0, d.jsx)("div", {
-          className: i()(r.app, f.vertical),
-          children: (0, d.jsx)(o.default, {})
+          className: i()(o.app, f.vertical),
+          children: (0, d.jsx)(r.default, {})
         })
       }
     }
-    t.default = s
+    t.default = l

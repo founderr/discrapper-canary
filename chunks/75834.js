@@ -27,22 +27,22 @@
       let n = new Map(e.map(e => [e.processId, e])),
         i = t.processPath.map(e => n.get(e)).find(e => null != e);
       if (null == i) return null;
-      let r = e.map(e => {
+      let o = e.map(e => {
         let t = e.processPath.findIndex(e => n.has(e));
         return -1 === t ? null : {
           application: e,
           rootedPath: e.processPath.slice(t)
         }
       }).filter(d.isNotNullish).filter(e => e.rootedPath[0] === i.processId);
-      r.sort((e, t) => {
+      o.sort((e, t) => {
         let a = e.rootedPath.map(e => n.get(e)).filter(e => null != e && null != e.windowHandle),
-          d = o(t.rootedPath.map(e => n.get(e)).filter(e => null != e && null != e.windowHandle), a);
-        return 0 !== d ? d : o(t.rootedPath, e.rootedPath)
+          d = r(t.rootedPath.map(e => n.get(e)).filter(e => null != e && null != e.windowHandle), a);
+        return 0 !== d ? d : r(t.rootedPath, e.rootedPath)
       });
-      let f = null !== (a = r.find(e => null != e.application.windowHandle)) && void 0 !== a ? a : r[0];
+      let f = null !== (a = o.find(e => null != e.application.windowHandle)) && void 0 !== a ? a : o[0];
       return null == f ? null : f.application
     }
 
-    function o(e, t) {
+    function r(e, t) {
       return e.length - t.length
     }

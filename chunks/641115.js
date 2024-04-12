@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return U
+    return b
   }
 }), l("47120");
 var a = l("735250"),
@@ -65,7 +65,7 @@ function G() {
   })
 }
 
-function b(e) {
+function U(e) {
   let t, l, {
       type: s,
       selected: n,
@@ -130,7 +130,7 @@ function b(e) {
   }
 }
 
-function U(e) {
+function b(e) {
   let {
     onClose: t,
     selectedPreset: l,
@@ -139,7 +139,7 @@ function U(e) {
     onResolutionChange: r,
     onFPSChange: x,
     onPresetChange: G,
-    targetGuildPremiumTier: U,
+    targetGuildPremiumTier: b,
     captureDeviceSelected: F
   } = e, k = (0, d.useStateFromStores)([g.default], () => {
     let e = g.default.getCurrentUser();
@@ -164,28 +164,28 @@ function U(e) {
     location: "StreamSettingsUpsellBanner"
   }, {
     autoTrackExposure: H
-  }), K = W && C.GradientVariants.includes(z), [Y, Q] = s.useState(!1), Z = F ? R.GoLiveDeviceResolutionButtons : R.ApplicationStreamResolutionButtons, J = {
+  }), K = W && C.GradientVariants.includes(z), [Y, Q] = s.useState(!1), q = F ? R.GoLiveDeviceResolutionButtons : R.ApplicationStreamResolutionButtons, Z = {
     ...w,
     section: v.AnalyticsSections.STREAM_SETTINGS
-  }, X = (0, a.jsx)(N.default, {
-    buttons: Z.map(e => b({
+  }, J = (0, a.jsx)(N.default, {
+    buttons: q.map(e => U({
       type: e,
       selected: e.value === n,
-      needsPremium: !(0, A.default)(l, e.value, i, k, U),
+      needsPremium: !(0, A.default)(l, e.value, i, k, b),
       needsDemo: V && e.value !== R.ApplicationStreamResolutions.RESOLUTION_720,
-      analyticsLocation: J,
+      analyticsLocation: Z,
       useGradient: K,
       onClick: () => r(e.value),
       onClose: t,
       setIsHovering: Q
     }))
-  }), q = (0, a.jsx)(N.default, {
-    buttons: R.ApplicationStreamFPSButtons.map(e => b({
+  }), X = (0, a.jsx)(N.default, {
+    buttons: R.ApplicationStreamFPSButtons.map(e => U({
       type: e,
       selected: e.value === i,
-      needsPremium: !(0, A.default)(l, n, e.value, k, U),
+      needsPremium: !(0, A.default)(l, n, e.value, k, b),
       needsDemo: V && e.value === R.ApplicationStreamFPS.FPS_60,
-      analyticsLocation: J,
+      analyticsLocation: Z,
       useGradient: K,
       onClick: () => x(e.value),
       onClose: t,
@@ -224,12 +224,12 @@ function U(e) {
         title: M.default.Messages.STREAM_RESOLUTION,
         className: O.settingsGroup,
         titleClassName: j.formItemTitleSlim,
-        children: X
+        children: J
       }), (0, a.jsx)(c.FormItem, {
         title: M.default.Messages.SCREENSHARE_FRAME_RATE,
         className: O.settingsGroup,
         titleClassName: j.formItemTitleSlim,
-        children: q
+        children: X
       })]
     }), H ? (0, a.jsx)(T.default, {
       onClose: t,
@@ -240,7 +240,7 @@ function U(e) {
     }) : null]
   });
   return (0, a.jsx)(f.default, {
-    ...J,
+    ...Z,
     children: (0, a.jsx)(c.FormItem, {
       title: M.default.Messages.STREAM_QUALITY,
       titleClassName: j.formItemTitle,

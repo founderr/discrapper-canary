@@ -7,8 +7,8 @@ r.r(t), r.d(t, {
     return a
   }
 }), r("757143");
-var a, n, i, l = r("735250"),
-  o = r("470079"),
+var a, n, i, o = r("735250"),
+  l = r("470079"),
   s = r("803997"),
   c = r.n(s),
   d = r("918210");
@@ -27,7 +27,7 @@ let h = {
   LARGE: d.cardIconLarge,
   XLARGE: d.cardIconXLarge
 };
-class p extends(n = o.PureComponent) {
+class p extends(n = l.PureComponent) {
   static getType(e) {
     return null == e ? "unknown" : a[e.replace(/[^a-z0-9_]/gi, "").toUpperCase()] || "unknown"
   }
@@ -38,7 +38,7 @@ class p extends(n = o.PureComponent) {
       className: r,
       size: a
     } = this.props;
-    return (0, l.jsx)("div", {
+    return (0, o.jsx)("div", {
       className: c()(a, d[t], r, {
         [d.flipped]: e
       }),

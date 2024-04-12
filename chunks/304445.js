@@ -4,11 +4,11 @@
       n = a("266067"),
       c = a("38618"),
       i = a("278147"),
-      o = a("528097"),
-      r = a("777639"),
+      r = a("215355"),
+      o = a("777639"),
       f = a("311163"),
-      s = a("272423"),
-      l = a("869735"),
+      l = a("272423"),
+      s = a("869735"),
       u = a("700615"),
       b = a("905423"),
       h = a("703656"),
@@ -34,23 +34,23 @@
         var a, d, c;
         let {
           pathname: b
-        } = e, h = (0, r.getRootNavigationRef)(), m = (0, i.isInMainTabsExperiment)(), {
-          showYouBar: _
-        } = (0, o.getNavYouBarExperiment)({
+        } = e, h = (0, o.getRootNavigationRef)(), m = (0, i.isInMainTabsExperiment)(), {
+          mergeTabs: _
+        } = (0, r.getMergedTabsExperiment)({
           location: "convertRouteToNavigation"
         });
         if (null == h || !h.isReady()) return;
         let E = e.navigationReplace,
           g = null !== (a = e.useScreen) && void 0 !== a && a;
-        if (m && (0, l.isSplitMessagesTab)() && b === p.Routes.ME) {
-          (0, s.navigateToRootTab)({
+        if (m && (0, s.isSplitMessagesTab)() && b === p.Routes.ME) {
+          (0, l.navigateToRootTab)({
             screen: "messages",
             resetRoot: E
           });
           return
         }
         if (m && b === p.Routes.NOTIFICATIONS) {
-          (0, s.navigateToRootTab)({
+          (0, l.navigateToRootTab)({
             screen: "notifications",
             resetRoot: E
           });
@@ -65,7 +65,7 @@
             });
           if (!m) {
             let e = h.getRootState();
-            (null == e ? void 0 : null === (c = e.routes) || void 0 === c ? void 0 : null === (d = c[0]) || void 0 === d ? void 0 : d.name) !== "panels" && (0, s.resetToPanelsUI)();
+            (null == e ? void 0 : null === (c = e.routes) || void 0 === c ? void 0 : null === (d = c[0]) || void 0 === d ? void 0 : d.name) !== "panels" && (0, l.resetToPanelsUI)();
             return
           }
           if (null != t) {
@@ -74,7 +74,7 @@
               voiceChannelId: a,
               voiceMessageId: d
             } = t.params;
-            !(0, u.isVoicePanelEnabled)() && (0, s.navigateToChannel)({
+            !(0, u.isVoicePanelEnabled)() && (0, l.navigateToChannel)({
               channelId: a,
               guildId: e,
               messageId: d,
@@ -89,27 +89,27 @@
               guildId: a,
               messageId: d
             } = e.params;
-            if (!(0, l.isSplitMessagesTab)() && !_) {
-              (0, s.navigateToRootTab)({
+            if (!(0, s.isSplitMessagesTab)() && !_) {
+              (0, l.navigateToRootTab)({
                 screen: "guilds",
                 guildId: a,
                 resetRoot: E
               });
               return
             }
-            if ((0, l.isOnNewPanels)()) {
+            if ((0, s.isOnNewPanels)()) {
               let [e, d] = (0, f.default)(h.getCurrentRoute());
               if (e === a && d === t) return
             }
-            null == t || (0, l.shouldHandleNewPanelsRoute)(a) && !1 !== E ? a !== p.ME || _ ? (0, s.navigateToRootTab)({
+            null == t || (0, s.shouldHandleNewPanelsRoute)(a) && !1 !== E ? a !== p.ME || _ ? (0, l.navigateToRootTab)({
               screen: "guilds",
               guildId: a,
-              channelId: (0, l.isOnNewPanels)() ? t : void 0,
+              channelId: (0, s.isOnNewPanels)() ? t : void 0,
               resetRoot: E
-            }) : (0, s.navigateToRootTab)({
+            }) : (0, l.navigateToRootTab)({
               screen: "messages",
               resetRoot: E
-            }) : null != a && (0, s.navigateToChannel)({
+            }) : null != a && (0, l.navigateToChannel)({
               channelId: t,
               guildId: a,
               messageId: d,
@@ -123,11 +123,11 @@
           let e = (0, n.matchPath)(b, {
             path: p.Routes.GUILD_MEMBER_VERIFICATION(":guildId", ":inviteCode?")
           });
-          null != e && (0, s.navigateToMemberVerification)(e.params.guildId, e.params.inviteCode);
+          null != e && (0, l.navigateToMemberVerification)(e.params.guildId, e.params.inviteCode);
           return
         }
         if (b.startsWith("/login") || b.startsWith("/register")) {
-          (0, s.resetToAuthRoute)();
+          (0, l.resetToAuthRoute)();
           return
         }
         if (b.startsWith("/account-standing")) {
@@ -137,7 +137,7 @@
           });
           return
         }
-        m && (0, s.navigateToRootTab)({
+        m && (0, l.navigateToRootTab)({
           screen: "messages",
           resetRoot: E
         })

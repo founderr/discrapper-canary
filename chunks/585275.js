@@ -4,11 +4,11 @@
     var n = a("512722"),
       c = a.n(n),
       i = a("392711"),
-      o = a.n(i),
-      r = a("544891"),
+      r = a.n(i),
+      o = a("544891"),
       f = a("992774"),
-      s = a("649754"),
-      l = a("376398"),
+      l = a("649754"),
+      s = a("376398"),
       u = a("846519"),
       b = a("570140"),
       h = a("710845"),
@@ -18,18 +18,18 @@
       E = a("569545"),
       g = a("70722"),
       I = a("981631"),
-      O = a("65154");
-    let T = {},
-      w = new u.Timeout,
+      T = a("65154");
+    let O = {},
+      R = new u.Timeout,
       v = !1,
-      R = window.document.createElement("canvas");
-    R.width = 512, R.height = 288;
-    let S = R.getContext("2d");
+      w = window.document.createElement("canvas");
+    w.width = 512, w.height = 288;
+    let S = w.getContext("2d");
 
     function A() {
-      w.stop(), null != d && (s.default.removeSink(d, T), d = null)
+      R.stop(), null != d && (l.default.removeSink(d, O), d = null)
     }
-    let N = o().debounce((e, t, a, d) => {
+    let N = r().debounce((e, t, a, d) => {
       C(e, (0, E.encodeStreamKey)({
         streamType: null != t ? g.StreamTypes.GUILD : g.StreamTypes.CALL,
         guildId: t,
@@ -49,32 +49,32 @@
             let a = (0, f.getVoiceEngine)(),
               n = (null == a ? void 0 : a.getNextVideoOutputFrame) != null;
             return new Promise((c, i) => {
-              let o = e => {
+              let r = e => {
                 try {
                   null != e && t(e) && c(e)
                 } catch (e) {
                   i(e)
                 }
               };
-              n ? a.getNextVideoOutputFrame(e).then(o, t => {
+              n ? a.getNextVideoOutputFrame(e).then(r, t => {
                 if (d === e) throw t
-              }) : s.default.addSink(e, T, o)
+              }) : l.default.addSink(e, O, r)
             }).finally(() => {
-              !n && s.default.removeSink(e, T)
+              !n && l.default.removeSink(e, O)
             })
           } : function(e, t) {
-            let a = (0, l.getVideoStream)(e);
+            let a = (0, s.getVideoStream)(e);
             if (null == a) return Promise.resolve(new ImageData(0, 0));
             let {
               width: d,
               height: n
             } = a.getVideoTracks()[0].getSettings(), c = document.createElement("video"), i = document.createElement("canvas");
             c.width = i.width = null != d ? d : 512, c.height = i.height = null != n ? n : 288, c.srcObject = a, c.play();
-            let o = i.getContext("2d");
+            let r = i.getContext("2d");
             return new Promise((e, a) => {
               c.ontimeupdate = () => {
-                null == o || o.drawImage(c, 0, 0, i.width, i.height);
-                let d = null == o ? void 0 : o.getImageData(0, 0, i.width, i.height);
+                null == r || r.drawImage(c, 0, 0, i.width, i.height);
+                let d = null == r ? void 0 : r.getImageData(0, 0, i.width, i.height);
                 try {
                   null != d && t(d) && e(d)
                 } catch (e) {
@@ -97,16 +97,16 @@
             a = Math.min(t, 288 / e.height),
             d = e.width * a,
             n = e.height * a;
-          R.width = d, R.height = n;
+          w.width = d, w.height = n;
           let c = window.document.createElement("canvas"),
             i = c.getContext("2d");
           c.width = e.width, c.height = e.height;
-          let o = new ImageData(e.data, e.width, e.height);
-          return null == i || i.putImageData(o, 0, 0), new Promise(t => {
+          let r = new ImageData(e.data, e.width, e.height);
+          return null == i || i.putImageData(r, 0, 0), new Promise(t => {
             null == S || S.drawImage(c, 0, 0, e.width, e.height, 0, 0, d, n), t()
           })
         }(a);
-        let n = R.toDataURL("image/jpeg");
+        let n = w.toDataURL("image/jpeg");
         if (b.default.dispatch({
             type: "STREAM_PREVIEW_FETCH_SUCCESS",
             streamKey: t,
@@ -119,7 +119,7 @@
             method: "POST",
             token: e
           })
-        } else await r.HTTP.post({
+        } else await o.HTTP.post({
           url: I.Endpoints.STREAM_PREVIEW(t),
           body: {
             thumbnail: n
@@ -127,10 +127,10 @@
           oldFormErrors: !0
         })
       } catch (t) {
-        new h.default("ApplicationStreamPreviewUploadManager").error("Failed to post stream preview", t), d === e && w.start(6e4, a);
+        new h.default("ApplicationStreamPreviewUploadManager").error("Failed to post stream preview", t), d === e && R.start(6e4, a);
         return
       }
-      d === e && (v ? w.start(6e4, a) : w.start(3e5, a))
+      d === e && (v ? R.start(6e4, a) : R.start(3e5, a))
     }
     t.default = {
       init() {
@@ -142,7 +142,7 @@
             streamId: c,
             context: i
           } = e;
-          !(null == c || i !== O.MediaEngineContextTypes.STREAM || n !== p.default.getId() || __OVERLAY__) && (A(), d = c, N(c, t, a, n))
+          !(null == c || i !== T.MediaEngineContextTypes.STREAM || n !== p.default.getId() || __OVERLAY__) && (A(), d = c, N(c, t, a, n))
         }), b.default.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", e => {
           let {
             videoState: t

@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("735250");
-n("470079");
-var s = n("481060"),
-  l = n("570140"),
-  i = n("24124"),
-  r = n("447543"),
-  o = n("13245"),
-  u = n("596223"),
-  d = n("293273"),
-  c = n("885110"),
-  f = n("996106"),
-  E = n("914946"),
-  h = n("452426"),
-  _ = n("852926"),
-  C = n("186901"),
-  m = n("981631");
+a.r(t), a("47120");
+var n = a("735250");
+a("470079");
+var s = a("481060"),
+  l = a("570140"),
+  i = a("24124"),
+  r = a("447543"),
+  o = a("13245"),
+  u = a("596223"),
+  d = a("293273"),
+  c = a("885110"),
+  f = a("996106"),
+  E = a("914946"),
+  h = a("452426"),
+  _ = a("852926"),
+  C = a("186901"),
+  m = a("981631");
 t.default = {
   [m.RPCCommands.SET_OVERLAY_LOCKED]: {
     scope: C.RPC_LOCAL_SCOPE,
@@ -27,16 +27,16 @@ t.default = {
       let {
         args: {
           locked: t,
-          pid: n
+          pid: a
         },
         socket: {
-          application: a
+          application: n
         }
       } = e;
-      if (null == a.id) throw new f.default({
+      if (null == n.id) throw new f.default({
         errorCode: m.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      o.default.setLocked(t, n)
+      o.default.setLocked(t, a)
     }
   },
   [m.RPCCommands.OPEN_OVERLAY_ACTIVITY_INVITE]: {
@@ -49,20 +49,20 @@ t.default = {
       let {
         socket: t,
         args: {
-          type: n,
-          pid: a
+          type: a,
+          pid: n
         }
       } = e, s = t.application.id;
       if (null == s) throw new f.default({
         errorCode: m.RPCErrors.INVALID_COMMAND
       }, "No application.");
       let l = d.default.getApplicationActivity(s);
-      if (null == l || null == l.secrets || !(0, E.validateActivityInvite)(n, l.party, l.secrets)) throw new f.default({
+      if (null == l || null == l.secrets || !(0, E.validateActivityInvite)(a, l.party, l.secrets)) throw new f.default({
         errorCode: m.RPCErrors.NO_ELIGIBLE_ACTIVITY
       }, "No eligible activity for application. Ensure an activity includes a party and appropriate secret.");
       let {
         lock: r
-      } = (0, _.unlockOverlay)(a), o = (0, u.default)(l, c.default);
+      } = (0, _.unlockOverlay)(n), o = (0, u.default)(l, c.default);
       return (0, i.openModal)(l, o).then(() => {
         if (r(), o) throw new f.default({
           errorCode: m.RPCErrors.NO_ELIGIBLE_ACTIVITY
@@ -80,30 +80,30 @@ t.default = {
       let {
         args: {
           code: t,
-          pid: n
+          pid: a
         },
-        socket: a
+        socket: n
       } = e;
-      if (null == a.application.id) throw new f.default({
+      if (null == n.application.id) throw new f.default({
         errorCode: m.RPCErrors.INVALID_COMMAND
       }, "No application.");
       return r.default.resolveInvite(t, "Game SDK").then(e => {
         let {
           invite: t,
-          code: a
+          code: n
         } = e;
         if (null == t) throw new f.default({
           errorCode: m.RPCErrors.INVALID_INVITE
-        }, "Invalid invite id: ".concat(a));
+        }, "Invalid invite id: ".concat(n));
         let {
           context: s,
           lock: i
-        } = (0, _.unlockOverlay)(n);
+        } = (0, _.unlockOverlay)(a);
         return new Promise(e => {
           l.default.dispatch({
             type: "INVITE_MODAL_OPEN",
             invite: t,
-            code: a,
+            code: n,
             context: s,
             resolve: e
           })
@@ -133,13 +133,13 @@ t.default = {
         (0, s.openModalLazy)(async () => {
           let {
             default: t
-          } = await Promise.all([n.e("49237"), n.e("99387"), n.e("84518")]).then(n.bind(n, "344516"));
-          return n => (0, a.jsx)(t, {
-            ...n,
+          } = await Promise.all([a.e("49237"), a.e("99387"), a.e("84518")]).then(a.bind(a, "344516"));
+          return a => (0, n.jsx)(t, {
+            ...a,
             mediaEngineContext: i,
             title: l.application.name,
             onClose: () => {
-              n.onClose(), r(), e()
+              a.onClose(), r(), e()
             }
           })
         })

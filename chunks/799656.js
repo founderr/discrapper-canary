@@ -5,13 +5,13 @@
     var n = a("613828"),
       c = a("442837"),
       i = a("314897"),
-      o = a("828695"),
-      r = a("981631");
-    t.default = c.default.connectStores([o.default, i.default], () => {
+      r = a("828695"),
+      o = a("981631");
+    t.default = c.default.connectStores([r.default, i.default], () => {
       let e = i.default.getToken();
       return {
         token: e,
-        hasLoadedExperiments: null != e || o.default.hasLoadedExperiments
+        hasLoadedExperiments: null != e || r.default.hasLoadedExperiments
       }
     })(e => {
       let {
@@ -19,8 +19,8 @@
         token: a
       } = e;
       return null != a ? (0, d.jsx)(n.Redirect, {
-        to: r.Routes.APP
+        to: o.Routes.APP
       }) : t ? (0, d.jsx)(n.Redirect, {
-        to: r.Routes.DEFAULT_LOGGED_OUT
+        to: o.Routes.DEFAULT_LOGGED_OUT
       }) : null
     })

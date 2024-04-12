@@ -16,21 +16,21 @@
       var I = "stackTraceLimit",
         h = g ? 2 : 1,
         E = t.split("."),
-        T = E[E.length - 1],
-        b = n.apply(null, E);
-      if (b) {
-        var m = b.prototype;
-        if (!y && o(m, "cause") && delete m.cause, !e) return b;
+        b = E[E.length - 1],
+        T = n.apply(null, E);
+      if (T) {
+        var m = T.prototype;
+        if (!y && o(m, "cause") && delete m.cause, !e) return T;
         var S = n("Error"),
           R = r(function(t, r) {
             var e = p(g ? r : t, void 0),
-              n = g ? new b(t) : new b;
+              n = g ? new T(t) : new T;
             return void 0 !== e && i(n, "message", e), v(n, R, n.stack, 2), this && u(m, this) && f(n, this, R), arguments.length > h && l(n, arguments[h]), n
           });
-        if (R.prototype = m, "Error" !== T ? c ? c(R, S) : s(R, S, {
+        if (R.prototype = m, "Error" !== b ? c ? c(R, S) : s(R, S, {
             name: !0
-          }) : d && I in b && (a(R, b, I), a(R, b, "prepareStackTrace")), s(R, b), !y) try {
-          m.name !== T && i(m, "name", T), m.constructor = R
+          }) : d && I in T && (a(R, T, I), a(R, T, "prepareStackTrace")), s(R, T), !y) try {
+          m.name !== b && i(m, "name", b), m.constructor = R
         } catch (t) {}
         return R
       }

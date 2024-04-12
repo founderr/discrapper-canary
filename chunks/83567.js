@@ -1,17 +1,17 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("570140"),
-  s = n("457330"),
-  l = n("726542"),
-  i = n("231757"),
-  r = n("553795"),
-  o = n("585483"),
-  u = n("996106"),
-  d = n("914946"),
-  c = n("452426"),
-  f = n("186901"),
-  E = n("981631"),
-  h = n("231338");
+a.r(t), a("47120");
+var n = a("570140"),
+  s = a("457330"),
+  l = a("726542"),
+  i = a("231757"),
+  r = a("553795"),
+  o = a("585483"),
+  u = a("996106"),
+  d = a("914946"),
+  c = a("452426"),
+  f = a("186901"),
+  E = a("981631"),
+  h = a("231338");
 let _ = new Set(["1214629548377768066"]);
 t.default = {
   [h.RPCCommands.GET_PROVIDER_ACCESS_TOKEN]: {
@@ -25,16 +25,16 @@ t.default = {
       let {
         socket: t,
         args: {
-          provider: n
+          provider: a
         }
       } = e;
       (0, d.validatePostMessageTransport)(t.transport);
       let c = (0, d.validateApplication)(t.application),
-        f = l.default.get(n);
+        f = l.default.get(a);
       if (null == f) throw new u.default({
         errorCode: h.RPCErrors.INVALID_PROVIDER
-      }, 'Platform not found for provider "'.concat(n, '"'));
-      if (n === E.PlatformTypes.AMAZON_MUSIC) {
+      }, 'Platform not found for provider "'.concat(a, '"'));
+      if (a === E.PlatformTypes.AMAZON_MUSIC) {
         if (!_.has(c)) throw new u.default({
           errorCode: h.RPCErrors.UNAUTHORIZED_FOR_APPLICATION
         }, "Command not available for this application")
@@ -42,27 +42,27 @@ t.default = {
         errorCode: h.RPCErrors.UNAUTHORIZED_FOR_APPLICATION
       }, "Command not available for this application");
       return new Promise(async (e, t) => {
-        let l = r.default.getAccount(null, n);
+        let l = r.default.getAccount(null, a);
         if (null == l) {
           function d(t) {
-            var n;
+            var a;
             if (null == f) return;
-            let a = (null !== (n = t.accounts) && void 0 !== n ? n : []).find(e => e.type === f.type);
-            null != a && (e({
-              access_token: a.access_token
+            let n = (null !== (a = t.accounts) && void 0 !== a ? a : []).find(e => e.type === f.type);
+            null != n && (e({
+              access_token: n.access_token
             }), _())
           }
 
           function c() {
             t(new u.default({
               errorCode: h.RPCErrors.OAUTH2_ERROR
-            }, 'OAuth2 setup for "'.concat(n, '" failed'))), _()
+            }, 'OAuth2 setup for "'.concat(a, '" failed'))), _()
           }
 
           function _() {
-            a.default.unsubscribe("USER_CONNECTIONS_UPDATE", d), o.ComponentDispatch.unsubscribe(E.ComponentActions.CONNECTIONS_CALLBACK_ERROR, c)
+            n.default.unsubscribe("USER_CONNECTIONS_UPDATE", d), o.ComponentDispatch.unsubscribe(E.ComponentActions.CONNECTIONS_CALLBACK_ERROR, c)
           }
-          a.default.subscribe("USER_CONNECTIONS_UPDATE", d), o.ComponentDispatch.subscribe(E.ComponentActions.CONNECTIONS_CALLBACK_ERROR, c), (0, i.default)({
+          n.default.subscribe("USER_CONNECTIONS_UPDATE", d), o.ComponentDispatch.subscribe(E.ComponentActions.CONNECTIONS_CALLBACK_ERROR, c), (0, i.default)({
             platformType: f.type,
             location: E.AnalyticsLocations.ACTIVITY_RPC
           })

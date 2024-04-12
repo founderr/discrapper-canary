@@ -1,39 +1,39 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("570140"),
-  s = n("846027"),
-  l = n("872810"),
-  i = n("317770"),
-  r = n("569545"),
-  o = n("199902"),
-  u = n("314897"),
-  d = n("592125"),
-  c = n("131951"),
-  f = n("590415");
+a.r(t), a("47120");
+var n = a("570140"),
+  s = a("846027"),
+  l = a("872810"),
+  i = a("317770"),
+  r = a("569545"),
+  o = a("199902"),
+  u = a("314897"),
+  d = a("592125"),
+  c = a("131951"),
+  f = a("590415");
 
-function E(e, t, n) {
+function E(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: a,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = a, e
 }
 class h extends i.default {
   _initialize() {
-    a.default.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates)
+    n.default.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates)
   }
   _terminate() {
-    a.default.unsubscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates)
+    n.default.unsubscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates)
   }
   constructor(...e) {
     super(...e), E(this, "handleVoiceStateUpdates", e => {
       let {
         voiceStates: t
-      } = e, n = u.default.getId();
+      } = e, a = u.default.getId();
       t.forEach(e => {
         var t;
-        if (e.userId === n && !!(null === (t = d.default.getChannel(e.channelId)) || void 0 === t ? void 0 : t.isGuildStageVoice()))(0, f.getAudienceRequestToSpeakState)(e) !== f.RequestToSpeakStates.ON_STAGE && (this.handleStopStream(e), this.handleStopUserVideo())
+        if (e.userId === a && !!(null === (t = d.default.getChannel(e.channelId)) || void 0 === t ? void 0 : t.isGuildStageVoice()))(0, f.getAudienceRequestToSpeakState)(e) !== f.RequestToSpeakStates.ON_STAGE && (this.handleStopStream(e), this.handleStopUserVideo())
       })
     }), E(this, "handleStopStream", e => {
       let t = o.default.getActiveStreamForUser(e.userId, e.guildId);

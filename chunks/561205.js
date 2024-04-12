@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return l
   }
 });
-var a = n("317381"),
-  s = n("592125");
+var n = a("317381"),
+  s = a("592125");
 
 function l() {
-  let e = a.default.getConnectedActivityChannelId();
+  let e = n.default.getConnectedActivityChannelId();
   return s.default.getChannel(e)
 }
