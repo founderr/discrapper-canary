@@ -57,27 +57,28 @@ t.default = e => {
   var t;
   let {
     isFocused: n,
-    quest: l,
-    location: o,
-    size: _
-  } = e, T = (0, r.useStateFromStores)([c.default], () => c.default.getState().theme), M = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), R = a.useMemo(() => (0, p.isAssetAnimated)(l.config.assets.hero), [l]), O = a.useRef(null), v = (0, m.useIsQuestExpired)(l), L = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, x = (0, m.useQuestFormattedDate)(l.config.expiresAt, {
+    isQuestExpired: l,
+    quest: o,
+    location: _,
+    size: T
+  } = e, M = (0, r.useStateFromStores)([c.default], () => c.default.getState().theme), R = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), O = a.useMemo(() => (0, p.isAssetAnimated)(o.config.assets.hero), [o]), v = a.useRef(null), L = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, x = (0, m.useQuestFormattedDate)(o.config.expiresAt, {
     year: "numeric",
     month: "long",
     day: "numeric"
-  }), D = (0, m.useQuestFormattedDate)(l.config.rewardCodeExpiresAt, {
+  }), D = (0, m.useQuestFormattedDate)(o.config.rewardCodeExpiresAt, {
     year: "numeric",
     month: "long",
     day: "numeric"
   });
   a.useEffect(() => {
-    null != O.current && (n ? O.current.play() : (O.current.pause(), O.current.currentTime = 0))
+    null != v.current && (n ? v.current.play() : (v.current.pause(), v.current.currentTime = 0))
   }, [n]);
-  let P = (0, p.getHeroAssetUrl)(l);
+  let P = (0, p.getHeroAssetUrl)(o);
   return (0, s.jsxs)("div", {
     className: i()(A.outerContainer, {
-      [A.outerContainerGiftInventory]: o === I.QuestContent.QUEST_INVENTORY_CARD,
-      [A.outerContainerEmbed]: o === I.QuestContent.QUESTS_EMBED,
-      [A.outerContainerXs]: "xs" === _
+      [A.outerContainerGiftInventory]: _ === I.QuestContent.QUEST_INVENTORY_CARD,
+      [A.outerContainerEmbed]: _ === I.QuestContent.QUESTS_EMBED,
+      [A.outerContainerXs]: "xs" === T
     }),
     children: [(0, s.jsx)(E.default, {
       autoPlay: !1,
@@ -87,8 +88,8 @@ t.default = e => {
       className: A.questSplash,
       controls: !1,
       poster: P,
-      ref: O,
-      children: !M && R && (0, s.jsx)("source", {
+      ref: v,
+      children: !R && O && (0, s.jsx)("source", {
         src: P,
         type: (0, p.getVideoAssetMimeType)(P)
       })
@@ -102,37 +103,39 @@ t.default = e => {
             children: [(0, s.jsx)(h.default, {
               className: A.partnerBranding,
               gameTileSize: h.GameTileSizes.MEDIUM,
-              quest: l,
-              theme: T
+              quest: o,
+              theme: M
             }), (0, s.jsx)(N.default, {
               color: "always-white"
             })]
           }), (0, s.jsxs)("div", {
             className: A.questInfo,
             children: [(0, s.jsx)(u.Heading, {
-              variant: "lg" === _ ? "heading-xxl/bold" : "sm" === _ ? "heading-xl/bold" : "heading-lg/bold",
+              variant: "lg" === T ? "heading-xxl/bold" : "sm" === T ? "heading-xl/bold" : "heading-lg/bold",
               children: C.default.Messages.QUEST.format({
-                questName: l.config.messages.questName
+                questName: o.config.messages.questName
               })
             }), (0, s.jsx)(u.Text, {
               variant: "text-xs/normal",
               children: L ? C.default.Messages.QUESTS_CLAIM_BY.format({
                 expirationDate: D
+              }) : l ? C.default.Messages.QUESTS_EXPIRED_ON.format({
+                expirationDate: x
               }) : C.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
                 expirationDate: x
               })
             })]
           })]
-        }), !v && o === I.QuestContent.QUEST_INVENTORY_CARD && (0, s.jsx)(g, {
-          quest: l,
-          location: o
+        }), !l && _ === I.QuestContent.QUEST_INVENTORY_CARD && (0, s.jsx)(g, {
+          quest: o,
+          location: _
         })]
       }), (0, s.jsx)(S.QuestsEntryContextMenuPopout, {
-        questContent: o,
-        quest: l,
+        questContent: _,
+        quest: o,
         shouldShowDisclosure: !0,
-        hideLearnMore: o === I.QuestContent.QUEST_INVENTORY_CARD,
-        showShareLink: o === I.QuestContent.QUESTS_EMBED,
+        hideLearnMore: _ === I.QuestContent.QUEST_INVENTORY_CARD,
+        showShareLink: !l && _ === I.QuestContent.QUESTS_EMBED,
         children: e => (0, s.jsx)(u.Clickable, {
           ...e,
           className: A.submenuWrapper,
