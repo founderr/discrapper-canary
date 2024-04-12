@@ -33,30 +33,30 @@ function A(e, t, n) {
   }) : e[t] = n, e
 }
 let N = (0, _.makeLazy)({
-    createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("24267"), n.e("8895"), n.e("15972"), n.e("58625"), n.e("6416"), n.e("14720"), n.e("63438"), n.e("33053"), n.e("51238"), n.e("17938"), n.e("76540"), n.e("65866"), n.e("5528"), n.e("92427"), n.e("18824"), n.e("74753"), n.e("79618")]).then(n.bind(n, "989804")),
+    createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("8895"), n.e("15972"), n.e("58625"), n.e("6416"), n.e("14720"), n.e("63438"), n.e("33053"), n.e("49146"), n.e("17938"), n.e("76540"), n.e("65866"), n.e("5528"), n.e("92427"), n.e("18824"), n.e("74753"), n.e("79618")]).then(n.bind(n, "989804")),
     webpackId: "989804",
     name: "UserSettings"
   }),
-  v = (0, _.makeLazy)({
+  R = (0, _.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("33053"), n.e("85093"), n.e("78587")]).then(n.bind(n, "869779")),
     webpackId: "869779",
     name: "ChannelSettings"
   }),
-  R = (0, _.makeLazy)({
+  v = (0, _.makeLazy)({
     createPromise: () => Promise.all([n.e("99387"), n.e("18249")]).then(n.bind(n, "838819")),
     webpackId: "838819",
     name: "CollectiblesShop"
   }),
   O = (0, _.makeLazy)({
-    createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("24267"), n.e("33053"), n.e("51238"), n.e("75475"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502")]).then(n.bind(n, "994763")),
+    createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("33053"), n.e("49146"), n.e("75475"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502")]).then(n.bind(n, "994763")),
     webpackId: "994763",
     name: "GuildSettings"
   }),
   L = {
     [p.Layers.USER_SETTINGS]: () => (0, s.jsx)(N, {}),
-    [p.Layers.CHANNEL_SETTINGS]: () => (0, s.jsx)(v, {}),
+    [p.Layers.CHANNEL_SETTINGS]: () => (0, s.jsx)(R, {}),
     [p.Layers.GUILD_SETTINGS]: () => (0, s.jsx)(O, {}),
-    [p.Layers.COLLECTIBLES_SHOP]: () => (0, s.jsx)(R, {})
+    [p.Layers.COLLECTIBLES_SHOP]: () => (0, s.jsx)(v, {})
   },
   M = "SHOWN",
   P = "HIDDEN",

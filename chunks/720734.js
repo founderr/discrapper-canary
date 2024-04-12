@@ -26,8 +26,8 @@ var a = n("735250"),
   g = n("410575"),
   A = n("941129"),
   N = n("83200"),
-  v = n("634894"),
-  R = n("586902"),
+  R = n("634894"),
+  v = n("586902"),
   O = n("1585"),
   L = n("304761"),
   M = n("865427"),
@@ -80,8 +80,8 @@ var a = n("735250"),
   eg = n("86813"),
   eA = n("826026"),
   eN = n("937482"),
-  ev = n("87888"),
-  eR = n("976401"),
+  eR = n("87888"),
+  ev = n("976401"),
   eO = n("333454"),
   eL = n("864441"),
   eM = n("26290"),
@@ -260,7 +260,7 @@ class eY extends s.PureComponent {
             className: i()(eF.nameTag, {
               [eF.canCopy]: ex.SUPPORTS_COPY
             }),
-            children: r ? (0, a.jsx)(eR.default, {
+            children: r ? (0, a.jsx)(ev.default, {
               tooltipText: null,
               icon: d.isShown ? eg.default : eA.default,
               role: "switch",
@@ -465,7 +465,7 @@ class eY extends s.PureComponent {
       null != t && (0, I.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("24267"), n.e("8895"), n.e("15972"), n.e("58625"), n.e("6416"), n.e("14720"), n.e("63438"), n.e("33053"), n.e("51238"), n.e("17938"), n.e("76540"), n.e("65866"), n.e("5528"), n.e("92427"), n.e("18824"), n.e("74753"), n.e("2535")]).then(n.bind(n, "923422"));
+        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("8895"), n.e("15972"), n.e("58625"), n.e("6416"), n.e("14720"), n.e("63438"), n.e("33053"), n.e("49146"), n.e("17938"), n.e("76540"), n.e("65866"), n.e("5528"), n.e("92427"), n.e("18824"), n.e("74753"), n.e("2535")]).then(n.bind(n, "923422"));
         return n => (0, a.jsx)(e, {
           ...n,
           user: t,
@@ -613,7 +613,7 @@ function eW() {
       streaming: null != eC.default.findActivity(e => e.type === eG.ActivityTypes.STREAMING),
       status: eC.default.getStatus()
     })),
-    d = (0, R.default)({
+    d = (0, v.default)({
       userId: n
     }),
     c = eU.default.useUserTag(e, {
@@ -666,10 +666,10 @@ function eW() {
     en = (0, $.useCanSeeSafetyEducationReportingCoachmark)(),
     es = (0, ei.default)(e),
     el = "account";
-  (0, v.useTriggerDebuggingAA)({
+  (0, R.useTriggerDebuggingAA)({
     location: el + " auto on",
     autoTrackExposure: !0
-  }), (0, v.useTriggerDebuggingAA)({
+  }), (0, R.useTriggerDebuggingAA)({
     location: el + " auto off",
     autoTrackExposure: !1
   }), (0, J.useSafetyEducationAATriggerPoint)();
@@ -744,7 +744,7 @@ function eK(e) {
     onClick: s,
     onContextMenu: l
   } = e, i = (0, m.useRedesignIconContext)().enabled, r = null, o = eN.default, u = (0, C.useSettingsLottie)();
-  return i ? o = null != t ? E.SettingsInfoIcon : n ? f.SettingsCircleIcon : u.Component : null != t ? r = (0, a.jsx)(ev.default, {
+  return i ? o = null != t ? E.SettingsInfoIcon : n ? f.SettingsCircleIcon : u.Component : null != t ? r = (0, a.jsx)(eR.default, {
     width: 9,
     height: 9,
     className: eF.hasBuildOverride,
@@ -753,7 +753,7 @@ function eK(e) {
     color: b.default.STATUS_DANGER,
     className: eF.hasBuildOverride,
     "aria-hidden": !0
-  })), (0, a.jsx)(eR.default, {
+  })), (0, a.jsx)(ev.default, {
     tooltipText: null != t ? ek.default.Messages.USER_SETTINGS_WITH_BUILD_OVERRIDE.format({
       webBuildOverride: t.id
     }) : ek.default.Messages.USER_SETTINGS,
@@ -784,7 +784,7 @@ function ez(e) {
     play: I,
     events: T
   } = (0, _.useMicrophoneLottie)(C ? "unmute" : "mute"), p = n || l ? c.MicrophoneDenyIcon : S;
-  return s.useEffect(() => () => I(), [C, I]), (0, a.jsx)(eR.default, {
+  return s.useEffect(() => () => I(), [C, I]), (0, a.jsx)(ev.default, {
     tooltipText: r,
     tooltipColor: o,
     tooltipForceOpen: u,
@@ -825,7 +825,7 @@ function eq(e) {
       onMouseLeave: _
     }
   } = (0, h.useHeadphonesLottie)(u ? "undeafen" : "deafen"), C = n ? d.HeadphonesDenyIcon : c;
-  return s.useEffect(() => () => f(), [u, f]), (0, a.jsx)(eR.default, {
+  return s.useEffect(() => () => f(), [u, f]), (0, a.jsx)(ev.default, {
     tooltipText: (0, P.default)(t, n, l),
     onMouseEnter: E,
     onMouseLeave: _,

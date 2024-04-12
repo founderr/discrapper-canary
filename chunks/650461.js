@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   newClanProgress: function() {
-    return h
+    return _
   }
 }), n("47120");
 var a, s = n("153832"),
@@ -9,9 +9,10 @@ var a, s = n("153832"),
   i = n("570140"),
   r = n("944163"),
   o = n("227120"),
-  u = n("308083");
+  u = n("116175"),
+  d = n("308083");
 
-function d(e, t, n) {
+function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -19,14 +20,14 @@ function d(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let c = {},
-  f = !1,
-  E = {};
+let f = {},
+  E = !1,
+  h = {};
 
-function h() {
+function _() {
   return {
     selectedGames: new Map,
-    playstyle: u.ClanPlaystyles.NONE,
+    playstyle: d.ClanPlaystyles.NONE,
     interests: new Set,
     description: "",
     tag: "",
@@ -38,24 +39,27 @@ function h() {
     verificationForm: {
       ...r.NO_MEMBER_VERIFICATION_FORM
     },
-    currentStep: u.ClanSetupSteps.GAMES
+    badgeKind: u.ClanBadgeKind.SWORD,
+    badgePrimaryColor: u.CLAN_BADGE_PALETTE_PRESETS["0"].primary,
+    badgeSecondaryColor: u.CLAN_BADGE_PALETTE_PRESETS["0"].secondary,
+    currentStep: d.ClanSetupSteps.GAMES
   }
 }
 
-function _(e, t) {
-  let n = null != c[e] ? c[e] : h();
-  if (c[e] = {
+function C(e, t) {
+  let n = null != f[e] ? f[e] : _();
+  if (f[e] = {
       ...n,
       ...t
-    }, null != E[e])
-    for (let n in t) delete E[e][n]
+    }, null != h[e])
+    for (let n in t) delete h[e][n]
 }
-class C extends(a = l.default.PersistedStore) {
+class m extends(a = l.default.PersistedStore) {
   initialize(e) {
     if (null != e)
-      for (let t in e.progressByGuild) c[t] = function(e) {
-        var t;
-        let n = e.primetime.map(e => {
+      for (let t in e.progressByGuild) f[t] = function(e) {
+        var t, n, a, l;
+        let i = e.primetime.map(e => {
           var t;
           return {
             ...e,
@@ -68,10 +72,13 @@ class C extends(a = l.default.PersistedStore) {
           interests: new Set(e.interests),
           description: e.description,
           tag: e.tag,
-          primetime: n,
+          primetime: i,
           verificationForm: null !== (t = e.verificationForm) && void 0 !== t ? t : {
             ...r.NO_MEMBER_VERIFICATION_FORM
           },
+          badgeKind: null !== (n = e.badgeKind) && void 0 !== n ? n : u.ClanBadgeKind.SWORD,
+          badgePrimaryColor: null !== (a = e.badgePrimaryColor) && void 0 !== a ? a : u.CLAN_BADGE_PALETTE_PRESETS["0"].primary,
+          badgeSecondaryColor: null !== (l = e.badgeSecondaryColor) && void 0 !== l ? l : u.CLAN_BADGE_PALETTE_PRESETS["0"].secondary,
           currentStep: e.currentStep,
           requiredGameId: e.requiredGameId
         }
@@ -79,16 +86,19 @@ class C extends(a = l.default.PersistedStore) {
   }
   getState() {
     let e = {};
-    for (let n in c) {
+    for (let n in f) {
       var t;
       e[n] = {
-        selectedGames: Object.fromEntries((t = c[n]).selectedGames.entries()),
+        selectedGames: Object.fromEntries((t = f[n]).selectedGames.entries()),
         playstyle: t.playstyle,
         interests: Array.from(t.interests),
         description: t.description,
         tag: t.tag,
         primetime: t.primetime,
         verificationForm: t.verificationForm,
+        badgeKind: t.badgeKind,
+        badgePrimaryColor: t.badgePrimaryColor,
+        badgeSecondaryColor: t.badgeSecondaryColor,
         currentStep: t.currentStep,
         requiredGameId: t.requiredGameId
       }
@@ -99,38 +109,38 @@ class C extends(a = l.default.PersistedStore) {
   }
   getStateForGuild(e) {
     return {
-      progress: c[e],
-      errors: E[e],
-      submitting: f
+      progress: f[e],
+      errors: h[e],
+      submitting: E
     }
   }
 }
-d(C, "displayName", "ClanSetupStore"), d(C, "persistKey", "ClanSetupStore"), t.default = new C(i.default, {
+c(m, "displayName", "ClanSetupStore"), c(m, "persistKey", "ClanSetupStore"), t.default = new m(i.default, {
   CLAN_SETUP_UPDATE: function(e) {
     let {
       guildId: t,
       updates: n
     } = e;
-    _(t, n)
+    C(t, n)
   },
   CLAN_SETUP_SUBMIT: function(e) {
     let {
       guildId: t
     } = e;
-    f = !0, delete E[t]
+    E = !0, delete h[t]
   },
   CLAN_SETUP_SUCCESS: function(e) {
     let {
       guildId: t
     } = e;
-    f = !1, delete c[t], delete E[t]
+    E = !1, delete f[t], delete h[t]
   },
   CLAN_SETUP_ERROR: function(e) {
     let {
       guildId: t,
       error: n
     } = e;
-    f = !1, E[t] = {
+    E = !1, h[t] = {
       selectedGames: n.getFirstFieldErrorMessage("game_application_ids"),
       playstyle: n.getFirstFieldErrorMessage("play_style"),
       description: n.getFirstFieldErrorMessage("description"),
@@ -147,9 +157,9 @@ d(C, "displayName", "ClanSetupStore"), d(C, "persistKey", "ClanSetupStore"), t.d
       isLocalUpdate: s
     } = e;
     s && (t = null == n ? r.NO_MEMBER_VERIFICATION_FORM : {
-      ...(null != c[a] ? c[a] : h()).verificationForm,
+      ...(null != f[a] ? f[a] : _()).verificationForm,
       ...n
-    }, _(a, {
+    }, C(a, {
       verificationForm: t
     }))
   }
