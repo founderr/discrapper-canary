@@ -71,6 +71,9 @@ let K = G.default.getEnableHardwareAcceleration(),
     }
   };
 class X extends l.Component {
+  handleClosePopout() {
+    this.closePopoutRef()
+  }
   shouldComponentUpdate(e) {
     return !(0, f.default)(this.props, e, ["channelId"])
   }
@@ -123,13 +126,14 @@ class X extends l.Component {
           onClickPremiumGuildIcon: this.openGuildSubscriptionModal,
           selected: E,
           itemProps: g,
+          onClosePopout: this.handleClosePopout,
           ...d
         })
       }
     })
   }
   constructor(...e) {
-    super(...e), z(this, "renderUserContextMenu", e => {
+    super(...e), z(this, "closePopoutRef", V.NOOP), z(this, "renderUserContextMenu", e => {
       (0, m.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -164,7 +168,7 @@ class X extends l.Component {
           object: V.AnalyticsObjects.BOOST_GEM_ICON
         }
       }))
-    }), z(this, "renderUserPopout", e => (0, a.jsx)(O.default, {
+    }), z(this, "renderUserPopout", e => (this.closePopoutRef = e.closePopout, (0, a.jsx)(O.default, {
       ...e,
       location: "ChannelMembers",
       userId: this.props.user.id,
@@ -177,7 +181,7 @@ class X extends l.Component {
           section: V.AnalyticsSections.MEMBER_LIST
         }
       }
-    }))
+    })))
   }
 }
 let Q = l.memo(e => {
