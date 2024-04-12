@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   isPaymentSourceEligibleForMultiMonthPlans: function() {
-    return r
+    return l
   }
 }), n("47120");
 var i = n("742280"),
@@ -28,8 +28,8 @@ t.default = (0, s.createExperiment)({
     }
   }]
 });
-let l = new Set([i.CountryCodes.US, i.CountryCodes.CA]);
+let r = new Set([i.CountryCodes.US, i.CountryCodes.CA]);
 
-function r(e) {
-  return null == e || l.has(e.country)
+function l(e) {
+  return null == e || r.has(e.country)
 }

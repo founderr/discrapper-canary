@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250"),
   s = n("470079"),
   a = n("481060"),
-  l = n("987209"),
-  r = n("321051"),
+  r = n("987209"),
+  l = n("321051"),
   u = n("669079"),
   o = n("479446"),
   c = n("646476"),
@@ -29,17 +29,17 @@ let I = e => {
     soundEffect: T,
     setEmojiConfetti: N,
     setSoundEffect: h
-  } = (0, l.useGiftContext)(), [x, v] = s.useState(!1), A = s.useRef(null), C = (0, a.useRadioGroup)({
+  } = (0, r.useGiftContext)(), [v, x] = s.useState(!1), A = s.useRef(null), C = (0, a.useRadioGroup)({
     orientation: "horizontal"
-  }), g = (0, u.getGiftExperience)(n, t), M = g === u.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD, y = g !== u.GiftExperience.DEFAULT, R = (0, c.useIsSeasonalGiftingActive)(), {
+  }), g = (0, u.getGiftExperience)(n, t), y = g === u.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD, M = g !== u.GiftExperience.DEFAULT, R = (0, c.useIsSeasonalGiftingActive)(), {
     enabled: b
   } = c.default.useExperiment({
     location: "premiumGiftSelect_GiftAnimationOptions"
   }, {
     autoTrackExposure: R
-  }), O = null;
-  return y && (O = R && b ? p.SeasonalGiftStyles2023 : p.STANDARD_GIFT_OPTIONS), (0, i.jsxs)("div", {
-    children: [y && (0, i.jsxs)("div", {
+  }), L = null;
+  return M && (L = R && b ? p.SeasonalGiftStyles2023 : p.STANDARD_GIFT_OPTIONS), (0, i.jsxs)("div", {
+    children: [M && (0, i.jsxs)("div", {
       className: S.giftMainAnimation,
       children: [null != I ? (0, i.jsx)(d.default, {
         giftStyle: I,
@@ -49,11 +49,11 @@ let I = e => {
         className: S.animation
       }) : (0, i.jsx)(a.Spinner, {
         className: S.spinner
-      }), M && (0, i.jsxs)("div", {
+      }), y && (0, i.jsxs)("div", {
         className: S.soundEmojiContainer,
         children: [(0, i.jsx)("div", {
           className: S.sound,
-          children: (0, i.jsx)(r.default, {
+          children: (0, i.jsx)(l.default, {
             sound: T,
             onSelect: e => {
               null != h && h(null == e ? void 0 : e)
@@ -68,7 +68,7 @@ let I = e => {
         })]
       })]
     }), (0, i.jsx)("div", {
-      tabIndex: null != I || x ? void 0 : 0,
+      tabIndex: null != I || v ? void 0 : 0,
       onFocus: e => {
         var t;
         e.target === e.currentTarget && (null === (t = A.current) || void 0 === t || t.focus())
@@ -76,13 +76,13 @@ let I = e => {
       className: S.giftBoxOptionContainer,
       "aria-label": _.default.Messages.SEASONAL_GIFTING_CUSTOMIZE_YOUR_GIFT_BOX,
       ...C,
-      children: null != O && O.map((e, t) => (0, i.jsx)(f.GiftStaticOption, {
+      children: null != L && L.map((e, t) => (0, i.jsx)(f.GiftStaticOption, {
         isSelected: I === e,
         giftStyle: e,
         setSelectedGiftStyle: E,
         ref: 0 === t ? A : null,
-        onFocus: () => v(!0),
-        onBlur: () => v(!1)
+        onFocus: () => x(!0),
+        onBlur: () => x(!1)
       }, e))
     }), (0, i.jsx)("div", {
       className: S.__invalid_selectPlanDivider

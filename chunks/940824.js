@@ -4,8 +4,8 @@ var i = n("735250");
 n("470079");
 var s = n("393586"),
   a = n("481060"),
-  l = n("37234"),
-  r = n("100527"),
+  r = n("37234"),
+  l = n("100527"),
   u = n("906732"),
   o = n("703656"),
   c = n("335131"),
@@ -20,9 +20,9 @@ t.default = e => {
   } = (0, u.default)(), p = () => {
     t(), (0, o.transitionTo)(d.Routes.COLLECTIBLES_SHOP), (0, c.openCollectiblesShop)({
       openInLayer: !1,
-      analyticsSource: r.default.PREMIUM_PAYMENT_MODAL,
+      analyticsSource: l.default.PREMIUM_PAYMENT_MODAL,
       analyticsLocations: n
-    }), (0, l.popLayer)()
+    }), (0, r.popLayer)()
   };
   return (0, i.jsxs)("div", {
     className: f.container,

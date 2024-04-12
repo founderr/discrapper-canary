@@ -12,8 +12,8 @@ var l = a("735250"),
   f = a("100527"),
   m = a("906732"),
   C = a("1585"),
-  g = a("125988"),
-  h = a("333867"),
+  h = a("125988"),
+  g = a("333867"),
   p = a("197115"),
   E = a("300284"),
   b = a("876917"),
@@ -88,7 +88,7 @@ t.default = function(e) {
     avatarDecorationSrc: Q,
     eventHandlers: ee,
     avatarPlaceholderSrc: et
-  } = (0, g.default)({
+  } = (0, h.default)({
     user: $,
     avatarDecorationOverride: (null == J ? void 0 : J.type) === o.CollectiblesItemType.AVATAR_DECORATION ? J : void 0,
     size: W,
@@ -132,8 +132,8 @@ t.default = function(e) {
       })
     },
     eC = em(f.default.COLLECTIBLES_SHOP_CARD),
-    eg = em(f.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
-    eh = () => (0, l.jsx)("div", {
+    eh = em(f.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
+    eg = () => (0, l.jsx)("div", {
       className: w.hoverUpsellContainer,
       children: (0, l.jsx)(p.default, {
         fullWidth: !0,
@@ -168,7 +168,7 @@ t.default = function(e) {
         color: ea.text.toHslString()
       } : void 0,
       className: w.defaultPreviewButtonColor,
-      onClick: eg
+      onClick: eh
     }) : (0, l.jsx)(P.default, {
       product: t,
       returnRef: Y,
@@ -176,7 +176,7 @@ t.default = function(e) {
       tooltipDelay: 250
     }),
     eb = () => {
-      if (er && !v && !en) return eh();
+      if (er && !v && !en) return eg();
       let e = null != ea ? {
           background: (0, F.getBackgroundGradient)(ea, 90),
           color: ea.text.toHslString()
@@ -192,7 +192,7 @@ t.default = function(e) {
             })
           }
         } : {
-          onClick: () => (0, h.default)({
+          onClick: () => (0, g.default)({
             skuId: t.skuId,
             analyticsLocations: z,
             returnRef: Y

@@ -8,8 +8,8 @@ var i = n("735250");
 n("470079");
 var s = n("278074"),
   a = n("979554"),
-  l = n("481060"),
-  r = n("1585"),
+  r = n("481060"),
+  l = n("1585"),
   u = n("125988"),
   o = n("583434"),
   c = n("479446"),
@@ -21,7 +21,7 @@ var s = n("278074"),
   S = n("689938"),
   I = n("506027"),
   E = n("241822");
-let P = p.default.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
+let P = p.default.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
 
 function T(e) {
   let {
@@ -32,7 +32,7 @@ function T(e) {
     avatarPlaceholderSrc: a
   } = (0, u.default)({
     avatarDecorationOverride: t,
-    size: (0, r.getDecorationSizeForAvatarSize)(l.AvatarSizes.SIZE_152)
+    size: (0, l.getDecorationSizeForAvatarSize)(r.AvatarSizes.SIZE_152)
   });
   return (0, i.jsx)("div", {
     className: I.giftMainAnimationWrapper,
@@ -41,7 +41,7 @@ function T(e) {
       avatarDecoration: n,
       src: a,
       className: I.avatar,
-      size: l.AvatarSizes.SIZE_152,
+      size: r.AvatarSizes.SIZE_152,
       "aria-label": S.default.Messages.USER_SETTINGS_AVATAR
     })
   })
@@ -70,8 +70,8 @@ function h(e) {
   } = e, {
     selectedGiftStyle: n
   } = (0, _.useGiftContext)(), {
-    product: l
-  } = (0, o.useFetchCollectiblesProduct)(null == t ? void 0 : t.id), r = null == l ? void 0 : l.items[0], u = (0, s.match)(r).with({
+    product: r
+  } = (0, o.useFetchCollectiblesProduct)(null == t ? void 0 : t.id), l = null == r ? void 0 : r.items[0], u = (0, s.match)(l).with({
     type: a.CollectiblesItemType.AVATAR_DECORATION
   }, e => (0, i.jsx)(T, {
     avatarDecoration: e

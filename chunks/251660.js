@@ -8,8 +8,8 @@ var i = n("735250");
 n("470079");
 var s = n("481060"),
   a = n("700582"),
-  l = n("51144"),
-  r = n("689938"),
+  r = n("51144"),
+  l = n("689938"),
   u = n("800464");
 let o = e => {
   let {
@@ -18,7 +18,7 @@ let o = e => {
   return null == t ? null : (0, i.jsxs)("div", {
     className: u.content,
     children: [(0, i.jsx)(s.FormTitle, {
-      children: r.default.Messages.FORM_LABEL_SEND_TO
+      children: l.default.Messages.FORM_LABEL_SEND_TO
     }), (0, i.jsxs)("div", {
       className: u.giftRecipientInfo,
       children: [(0, i.jsx)(a.default, {
@@ -28,11 +28,11 @@ let o = e => {
       }), (0, i.jsx)(s.Heading, {
         className: u.giftRecipientName,
         variant: "text-md/normal",
-        children: l.default.getName(t)
+        children: r.default.getName(t)
       }), (0, i.jsx)(s.Heading, {
         className: u.giftRecipientTag,
         variant: "text-md/normal",
-        children: l.default.getUserTag(t)
+        children: r.default.getUserTag(t)
       })]
     })]
   })

@@ -17,8 +17,8 @@ var s = a("803997"),
   f = a("74538"),
   m = a("884697"),
   C = a("409116"),
-  g = a("981631"),
-  h = a("689938"),
+  h = a("981631"),
+  g = a("689938"),
   p = a("951841");
 
 function E(e) {
@@ -29,7 +29,7 @@ function E(e) {
     disableTooltipPointerEvents: E,
     alwaysWhiteText: b = !0,
     nitroWheelColor: S
-  } = e, T = (0, n.useStateFromStores)([c.default], () => c.default.getCurrentUser()), x = (0, n.useStateFromStores)([u.default], () => (0, o.isThemeDark)(u.default.theme)), v = (0, m.extractPriceByPurchaseTypes)(t, g.PriceSetAssignmentPurchaseTypes.DEFAULT);
+  } = e, T = (0, n.useStateFromStores)([c.default], () => c.default.getCurrentUser()), x = (0, n.useStateFromStores)([u.default], () => (0, o.isThemeDark)(u.default.theme)), v = (0, m.extractPriceByPurchaseTypes)(t, h.PriceSetAssignmentPurchaseTypes.DEFAULT);
   if (null == v) return null;
   if (v.amount <= 0) return (0, l.jsx)("div", {
     className: r()(p.priceTagsContainer, a),
@@ -39,7 +39,7 @@ function E(e) {
       className: s
     })
   });
-  let L = (0, m.extractPriceByPurchaseTypes)(t, g.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
+  let L = (0, m.extractPriceByPurchaseTypes)(t, h.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
     I = !f.default.canUseCollectibles(T);
   return (0, l.jsxs)("div", {
     className: r()(p.priceTagsContainer, a),
@@ -50,14 +50,14 @@ function E(e) {
     }), null != L && (0, l.jsx)(C.default, {
       price: L,
       alwaysWhiteText: b,
-      renderPrice: I ? e => h.default.Messages.COLLECTIBLES_NON_PREMIUM_PRICE.format({
+      renderPrice: I ? e => g.default.Messages.COLLECTIBLES_NON_PREMIUM_PRICE.format({
         price: e
       }) : void 0,
       className: r()([s, I ? p.fullPrice : void 0]),
       variant: I ? "text-xs/semibold" : void 0,
       icon: (0, l.jsx)(i.Tooltip, {
-        text: h.default.Messages.COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT,
-        "aria-label": h.default.Messages.COLLECTIBLES_NITRO_EXCLUSIVE,
+        text: g.default.Messages.COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT,
+        "aria-label": g.default.Messages.COLLECTIBLES_NITRO_EXCLUSIVE,
         disableTooltipPointerEvents: E,
         children: e => {
           let {

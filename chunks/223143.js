@@ -11,8 +11,8 @@ var s = a("470079"),
   r = a("399606"),
   l = a("634894"),
   i = a("335131"),
-  o = a("597688"),
-  n = a("337679"),
+  n = a("597688"),
+  o = a("337679"),
   u = a("1870");
 
 function c() {
@@ -24,16 +24,16 @@ function c() {
     location: e + " auto off",
     autoTrackExposure: !1
   });
-  let [t, a, o, c, d] = (0, r.useStateFromStoresArray)([u.default], () => [u.default.isFetching, u.default.isClaiming, u.default.fetchError, u.default.claimError, u.default.purchases]), {
+  let [t, a, n, c, d] = (0, r.useStateFromStoresArray)([u.default], () => [u.default.isFetching, u.default.isClaiming, u.default.fetchError, u.default.claimError, u.default.purchases]), {
     shouldFakePurchaseSuccessFlowLocally: h
-  } = (0, n.default)({
+  } = (0, o.default)({
     location: "useFetchPurchases"
   });
   return (0, s.useEffect)(() => {
     (!h || !(d.size > 0)) && (0, i.fetchCollectiblesPurchases)()
   }, [h]), {
     isClaiming: a,
-    fetchError: o,
+    fetchError: n,
     claimError: c,
     isFetching: t,
     purchases: d
@@ -51,7 +51,7 @@ function d(e) {
     autoTrackExposure: !1
   });
   let {
-    isFetching: n,
+    isFetching: o,
     categories: u,
     error: d
   } = function(e) {
@@ -63,16 +63,16 @@ function d(e) {
       location: t + " auto off",
       autoTrackExposure: !1
     });
-    let [a, n, u, c] = (0, r.useStateFromStoresArray)([o.default], () => {
+    let [a, o, u, c] = (0, r.useStateFromStoresArray)([n.default], () => {
       var e;
-      return [o.default.isFetching, o.default.error, null !== (e = o.default.lastFetched) && void 0 !== e ? e : 0, o.default.categories]
+      return [n.default.isFetching, n.default.error, null !== (e = n.default.lastFetched) && void 0 !== e ? e : 0, n.default.categories]
     });
     return (0, s.useEffect)(() => {
-      !(a || n || Date.now() - u < 6e5) && (0, i.fetchCollectiblesCategories)(e)
-    }, [a, u, n, e]), {
+      !(a || o || Date.now() - u < 6e5) && (0, i.fetchCollectiblesCategories)(e)
+    }, [a, u, o, e]), {
       isFetching: a,
       categories: c,
-      error: n
+      error: o
     }
   }(e), {
     isClaiming: h,
@@ -82,8 +82,8 @@ function d(e) {
     purchases: C
   } = c();
   return {
-    isFetching: n || g,
-    isFetchingCategories: n,
+    isFetching: o || g,
+    isFetchingCategories: o,
     isFetchingPurchases: g,
     isClaiming: h,
     categories: u,

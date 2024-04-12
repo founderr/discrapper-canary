@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250"),
   s = n("470079"),
   a = n("481060"),
-  l = n("907040"),
-  r = n("642113"),
+  r = n("907040"),
+  l = n("642113"),
   u = n("981631"),
   o = n("185923"),
   c = n("689938"),
@@ -49,7 +49,7 @@ function p(e) {
         closePopout: t
       } = e;
       return (0, i.jsx)(a.Dialog, {
-        children: (0, i.jsx)(l.default, {
+        children: (0, i.jsx)(r.default, {
           analyticsOverride: m,
           closePopout: t,
           onSelectEmoji: _,
@@ -71,7 +71,7 @@ function p(e) {
         className: d.emoji,
         onClick: () => o(!0),
         children: (null == n ? void 0 : n.name) == null ? (0, i.jsxs)(i.Fragment, {
-          children: [(0, i.jsx)(r.default, {
+          children: [(0, i.jsx)(l.default, {
             className: d.emojiIcon,
             width: 14,
             height: 14

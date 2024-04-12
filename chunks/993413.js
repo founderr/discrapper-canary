@@ -8,8 +8,8 @@ var i = n("735250");
 n("470079");
 var s = n("803997"),
   a = n.n(s),
-  l = n("481060"),
-  r = n("403182"),
+  r = n("481060"),
+  l = n("403182"),
   u = n("587446"),
   o = n("504983"),
   c = n("669967");
@@ -19,13 +19,13 @@ function d(e) {
     errors: t
   } = e;
   return (0, i.jsx)(i.Fragment, {
-    children: t.map((e, t) => (0, i.jsx)(l.Text, {
+    children: t.map((e, t) => (0, i.jsx)(r.Text, {
       variant: "text-xs/normal",
       color: "text-danger",
       className: c.errorMessage,
       children: e.replace(/[0-9.,]+ ?kb/g, e => {
         let t = 1024 * parseInt(e, 10);
-        return isNaN(t) ? e : (0, r.sizeString)(t)
+        return isNaN(t) ? e : (0, l.sizeString)(t)
       })
     }, t))
   })
@@ -36,7 +36,7 @@ function m(e) {
     title: t,
     titleIcon: n,
     titleId: s,
-    description: r,
+    description: l,
     children: m,
     className: f,
     errors: p,
@@ -61,14 +61,14 @@ function m(e) {
       isShown: I,
       type: E,
       hasBackground: P,
-      children: [(0, i.jsxs)(l.FormTitle, {
+      children: [(0, i.jsxs)(r.FormTitle, {
         className: c.title,
         id: s,
         children: [t, N && (0, i.jsx)(u.default, {}), n]
-      }), null != r ? (0, i.jsx)(l.FormText, {
-        type: l.FormText.Types.DESCRIPTION,
+      }), null != l ? (0, i.jsx)(r.FormText, {
+        type: r.FormText.Types.DESCRIPTION,
         className: c.sectionDescription,
-        children: r
+        children: l
       }) : null, m, null != p && (0, i.jsx)(d, {
         errors: p
       })]

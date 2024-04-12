@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("512722"),
   s = n.n(i),
   a = n("207561"),
-  l = n("639119"),
-  r = n("3409"),
+  r = n("639119"),
+  l = n("3409"),
   u = n("626135"),
   o = n("987209"),
   c = n("598"),
@@ -31,30 +31,30 @@ function p(e) {
     paymentSourceId: T,
     setPaymentSourceId: N,
     purchaseError: h,
-    setPurchaseError: x,
-    purchaseErrorBlockRef: v,
+    setPurchaseError: v,
+    purchaseErrorBlockRef: x,
     paymentAuthenticationState: A,
     selectedSkuId: C
   } = (0, c.usePaymentContext)(), {
     isGift: g
-  } = (0, o.useGiftContext)(), M = {
-    ...(0, r.useSharedPaymentModal)(),
+  } = (0, o.useGiftContext)(), y = {
+    ...(0, l.useSharedPaymentModal)(),
     paymentSources: P,
     paymentSourceId: T,
     setPaymentSourceId: N,
     purchaseError: h,
-    setPurchaseError: x,
-    purchaseErrorBlockRef: v,
+    setPurchaseError: v,
+    purchaseErrorBlockRef: x,
     paymentAuthenticationState: A
-  }, y = (0, l.usePremiumTrialOffer)(_), R = !g && null != y && null != C && (0, f.SubscriptionTrials)[y.trial_id].skus.includes(C), b = null != S ? S : () => {
+  }, M = (0, r.usePremiumTrialOffer)(_), R = !g && null != M && null != C && (0, f.SubscriptionTrials)[M.trial_id].skus.includes(C), b = null != S ? S : () => {
     p(Object.values(P).length < 1 && null == n ? d.Step.PLAN_SELECT : d.Step.REVIEW, {
       trackedFromStep: d.Step.PAYMENT_TYPE
     })
   };
   s()(E, "Step should be set here");
-  let O = (0, a.useStableMemo)(() => Date.now(), [E]);
-  return (0, r.AddPaymentFlow)({
-    paymentModalArgs: M,
+  let L = (0, a.useStableMemo)(() => Date.now(), [E]);
+  return (0, l.AddPaymentFlow)({
+    paymentModalArgs: y,
     initialStep: d.Step.PAYMENT_TYPE,
     prependSteps: [d.Step.PROMOTION_INFO],
     appendSteps: [d.Step.REVIEW, d.Step.CONFIRM],
@@ -76,7 +76,7 @@ function p(e) {
         ...t,
         from_step: n,
         to_step: i,
-        step_duration_ms: s - O,
+        step_duration_ms: s - L,
         flow_duration_ms: s - I.startTime
       })
     },

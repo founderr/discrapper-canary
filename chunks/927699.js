@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250"),
   s = n("470079"),
   a = n("803997"),
-  l = n.n(a),
-  r = n("481060"),
+  r = n.n(a),
+  l = n("481060"),
   u = n("541716"),
   o = n("752305"),
   c = n("893718"),
@@ -35,30 +35,30 @@ function E(e) {
     innerClassName: T,
     disabled: N = !1,
     disableThemedBackground: h = !1
-  } = e, [x, v] = s.useState(null != m ? m : E), [A, C] = s.useState((0, o.toRichValue)(x)), g = s.useRef(!1);
+  } = e, [v, x] = s.useState(null != m ? m : E), [A, C] = s.useState((0, o.toRichValue)(v)), g = s.useRef(!1);
   return s.useEffect(() => {
     g.current = !0
   }, []), s.useEffect(() => {
     if (void 0 === m) {
       let e = (0, o.toRichValue)(E);
-      v(E), C(e)
+      x(E), C(e)
     }
   }, [m, E]), (0, i.jsx)("div", {
-    className: l()(S.body, P),
+    className: r()(S.body, P),
     children: (0, i.jsxs)(d.default, {
       title: t,
       errors: n,
       disabled: N,
       children: [(0, i.jsx)(c.default, {
-        innerClassName: l()(S.textArea, T),
+        innerClassName: r()(S.textArea, T),
         editorClassName: S.editorTextArea,
         maxCharacterCount: f.CUSTOM_GIFT_MESSAGE_MAX_LENGTH,
         onChange: function(e, t, n) {
-          t !== x && (v(t), C(n), a(t))
+          t !== v && (x(t), C(n), a(t))
         },
         placeholder: p,
         channel: I,
-        textValue: x,
+        textValue: v,
         richValue: A,
         type: u.ChatInputTypes.CUSTOM_GIFT,
         onBlur: () => {
@@ -77,7 +77,7 @@ function E(e) {
           })
         },
         disableThemedBackground: h
-      }), (0, i.jsx)(r.HiddenVisually, {
+      }), (0, i.jsx)(l.HiddenVisually, {
         children: _.default.Messages.MAXIMUM_LENGTH.format({
           maxLength: f.CUSTOM_GIFT_MESSAGE_MAX_LENGTH
         })

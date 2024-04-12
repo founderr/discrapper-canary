@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   useProductDetailsDeepLinking: function() {
-    return h
+    return g
   },
   useProductDetailsLinkableRoute: function() {
     return C
@@ -26,7 +26,7 @@ let d = "".concat("#").concat("itemSkuId", "="),
       }
     }, [])
   },
-  g = e => {
+  h = e => {
     let {
       categories: t,
       productSkuId: a,
@@ -58,15 +58,15 @@ let d = "".concat("#").concat("itemSkuId", "="),
     }
     return () => {}
   },
-  h = e => {
+  g = e => {
     let {
       categories: t,
       isFetchingCategories: a,
       isLayer: u,
       initialItemCardRef: d
-    } = e, m = l.useRef(null), C = (0, s.useLocation)(), h = C.pathname === c.Routes.COLLECTIBLES_SHOP ? n.default.HOME_PAGE_SHOP_TAB : C.pathname === c.Routes.COLLECTIBLES_SHOP_FULLSCREEN ? n.default.COLLECTIBLES_SHOP_FULLSCREEN : n.default.COLLECTIBLES_SHOP, {
+    } = e, m = l.useRef(null), C = (0, s.useLocation)(), g = C.pathname === c.Routes.COLLECTIBLES_SHOP ? n.default.HOME_PAGE_SHOP_TAB : C.pathname === c.Routes.COLLECTIBLES_SHOP_FULLSCREEN ? n.default.COLLECTIBLES_SHOP_FULLSCREEN : n.default.COLLECTIBLES_SHOP, {
       analyticsLocations: p
-    } = (0, o.default)(h);
+    } = (0, o.default)(g);
     l.useEffect(() => {
       if (u) return;
       let e = f.exec(C.hash);
@@ -82,11 +82,11 @@ let d = "".concat("#").concat("itemSkuId", "="),
       if (u && null != E && (e = E), !u && null != m.current && (e = m.current), null != e) {
         let a = [],
           l = setTimeout(() => {
-            let l = g({
+            let l = h({
               categories: t,
               productSkuId: e,
               analyticsLocations: p,
-              analyticsSource: h,
+              analyticsSource: g,
               initialItemCardRef: d
             });
             a.push(l)
@@ -95,5 +95,5 @@ let d = "".concat("#").concat("itemSkuId", "="),
           a.forEach(e => e())
         }
       }
-    }, [u, p, h, t, a, E, d])
+    }, [u, p, g, t, a, E, d])
   }

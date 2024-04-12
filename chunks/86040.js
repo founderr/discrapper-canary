@@ -11,8 +11,8 @@ var i = n("735250");
 n("470079");
 var s = n("481060"),
   a = n("285952"),
-  l = n("689938"),
-  r = n("806233");
+  r = n("689938"),
+  l = n("806233");
 let u = e => {
     let {
       className: t,
@@ -22,22 +22,22 @@ let u = e => {
     return (0, i.jsx)("div", {
       className: t,
       children: (0, i.jsxs)("div", {
-        className: r.awaitingWrapper,
+        className: l.awaitingWrapper,
         children: [(0, i.jsx)(s.Heading, {
           variant: "heading-xl/bold",
-          children: l.default.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_HEADER
+          children: r.default.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_HEADER
         }), (0, i.jsxs)("p", {
           children: [(0, i.jsx)(s.Text, {
             variant: "text-md/normal",
-            children: l.default.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL
+            children: r.default.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL
           }), (0, i.jsx)("br", {}), (0, i.jsx)(s.Text, {
             variant: "text-md/normal",
-            children: l.default.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_INSTRUCTIONS
+            children: r.default.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_INSTRUCTIONS
           }), (0, i.jsx)("br", {}), (0, i.jsxs)(s.Text, {
             variant: "text-md/normal",
-            children: [l.default.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT, "\xa0", n ? l.default.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT : (0, i.jsx)(s.Anchor, {
+            children: [r.default.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT, "\xa0", n ? r.default.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT : (0, i.jsx)(s.Anchor, {
               onClick: a,
-              children: l.default.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION
+              children: r.default.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION
             })]
           })]
         })]
@@ -52,7 +52,7 @@ let u = e => {
         "data-testid": "continue",
         color: s.Button.Colors.BRAND,
         disabled: !0,
-        children: l.default.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON
+        children: r.default.Messages.PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON
       })
     })
   })
