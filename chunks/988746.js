@@ -36,7 +36,7 @@ class l {
     "number" == typeof this.framerateReductionTimeout && (clearTimeout(this.framerateReductionTimeout), this.framerateReductionTimeout = void 0)
   }
   updateRemoteWantsFramerate() {
-    this.connection.updateVideoQuality(["remoteSinkWantsMaxFramerate", "encodingVideoFrameRate"])
+    this.connection.updateVideoQuality(["remoteSinkWantsMaxFramerate"])
   }
   destroy() {
     this.destroyFramerateScaleFactorTimers()
