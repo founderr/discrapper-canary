@@ -1,95 +1,99 @@
 "use strict";
-a.r(t), a.d(t, {
+s.r(t), s.d(t, {
+  DECO_SKU_ID: function() {
+    return C
+  },
   default: function() {
-    return p
+    return _
   }
 });
-var s = a("735250");
-a("470079");
-var o = a("442837"),
-  r = a("481060"),
-  d = a("37234"),
-  l = a("100527"),
-  i = a("906732"),
-  u = a("204418"),
-  n = a("1585"),
-  c = a("223143"),
-  m = a("300284"),
-  v = a("158776"),
-  _ = a("594174"),
-  f = a("153124"),
-  x = a("741245"),
-  I = a("474936"),
-  A = a("689938"),
-  M = a("425593");
+var a = s("735250");
+s("470079");
+var i = s("442837"),
+  l = s("481060"),
+  n = s("37234"),
+  r = s("100527"),
+  o = s("906732"),
+  d = s("204418"),
+  u = s("1585"),
+  c = s("223143"),
+  f = s("300284"),
+  p = s("158776"),
+  h = s("594174"),
+  m = s("153124"),
+  I = s("741245"),
+  S = s("474936"),
+  g = s("689938"),
+  E = s("425593");
+let C = "1225876188074082374";
 
-function h(e) {
+function T(e) {
   let {
     user: t,
-    deco: a
-  } = e, r = (0, o.useStateFromStores)([v.default], () => v.default.getStatus(t.id));
-  return (0, s.jsxs)("div", {
-    className: M.avatarBackground,
-    children: [(0, s.jsx)(u.default, {
+    deco: s
+  } = e, l = (0, i.useStateFromStores)([p.default], () => p.default.getStatus(t.id));
+  return (0, a.jsxs)("div", {
+    className: E.avatarBackground,
+    children: [(0, a.jsx)(d.default, {
       user: t,
       guildId: void 0,
-      avatarDecorationOverride: a,
-      status: r,
-      className: M.avatar
-    }), (0, s.jsx)("div", {
-      className: M.rect
-    }), (0, s.jsx)("div", {
-      className: M.rect
-    }), (0, s.jsx)("div", {
-      className: M.bottomOverlay
+      avatarDecorationOverride: s,
+      status: l,
+      className: E.avatar
+    }), (0, a.jsx)("div", {
+      className: E.rect
+    }), (0, a.jsx)("div", {
+      className: E.rect
+    }), (0, a.jsx)("div", {
+      className: E.bottomOverlay
     })]
   })
 }
 
-function p(e) {
+function _(e) {
   var t;
   let {
-    transitionState: a,
-    onClose: u
-  } = e, v = (0, f.useUID)(), {
-    theme: p
-  } = (0, r.useThemeContext)(), N = (0, o.useStateFromStores)([_.default], () => _.default.getCurrentUser()), {
-    purchases: T
-  } = (0, c.useFetchPurchases)(), C = null === (t = T.get("1225876188074082374")) || void 0 === t ? void 0 : t.items, R = void 0 !== C ? C[0] : void 0, {
-    analyticsLocations: j
-  } = (0, i.default)(l.default.PREMIUM_SUBSCRIPTION_APRIL_CAMPAIGN_MODAL), D = (0, m.default)({
-    analyticsLocations: j
+    transitionState: s,
+    onClose: d
+  } = e, p = (0, m.useUID)(), {
+    theme: _
+  } = (0, l.useThemeContext)(), v = (0, i.useStateFromStores)([h.default], () => h.default.getCurrentUser()), {
+    purchases: A
+  } = (0, c.useFetchPurchases)(), M = null === (t = A.get(C)) || void 0 === t ? void 0 : t.items, x = void 0 !== M ? M[0] : void 0, {
+    analyticsLocations: R
+  } = (0, o.default)(r.default.PREMIUM_SUBSCRIPTION_APRIL_CAMPAIGN_MODAL), N = (0, f.default)({
+    analyticsLocations: R
   });
-  return (0, s.jsxs)(r.ModalRoot, {
-    transitionState: a,
-    "aria-labelledby": v,
-    className: M.container,
-    children: [void 0 !== N && (0, s.jsx)(h, {
-      user: N,
-      deco: R
-    }), (0, s.jsxs)(r.ModalContent, {
-      className: M.content,
-      children: [(0, s.jsx)(x.default, {
-        theme: p,
-        premiumType: I.PremiumTypes.TIER_2,
-        type: x.default.Types.PREMIUM_ACTIVATED
-      }), (0, s.jsx)(r.Text, {
+  return (0, a.jsxs)(l.ModalRoot, {
+    transitionState: s,
+    "aria-labelledby": p,
+    className: E.container,
+    children: [void 0 !== v && (0, a.jsx)(T, {
+      user: v,
+      deco: x
+    }), (0, a.jsxs)(l.ModalContent, {
+      className: E.content,
+      children: [(0, a.jsx)(I.default, {
+        theme: _,
+        premiumType: S.PremiumTypes.TIER_2,
+        type: I.default.Types.PREMIUM_ACTIVATED
+      }), (0, a.jsx)(l.Text, {
         variant: "text-md/medium",
         color: "text-normal",
-        className: M.bodyText,
-        children: A.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_CLAIM_DECO_MODAL_BODY.format()
+        className: E.bodyText,
+        children: g.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_CLAIM_DECO_MODAL_BODY.format()
       })]
-    }), (0, s.jsx)(r.ModalFooter, {
-      children: (0, s.jsx)(r.Button, {
-        look: r.Button.Looks.FILLED,
-        color: r.Button.Colors.BRAND,
+    }), (0, a.jsx)(l.ModalFooter, {
+      children: (0, a.jsx)(l.Button, {
+        look: l.Button.Looks.FILLED,
+        color: l.Button.Colors.BRAND,
         onClick: () => {
-          u(), (0, d.popLayer)(), D(), (0, n.openAvatarDecorationModal)({
-            initialSelectedDecoration: R,
-            analyticsLocations: j
+          d(), (0, n.popLayer)(), N(), (0, u.openAvatarDecorationModal)({
+            initialSelectedDecoration: x,
+            analyticsLocations: R
           })
         },
-        children: A.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
+        children: g.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
       })
     })]
   })

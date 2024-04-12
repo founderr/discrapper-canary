@@ -8,44 +8,46 @@ var a = s("735250"),
   o = s("442837"),
   d = s("780384"),
   u = s("481060"),
-  c = s("533307"),
-  f = s("410030"),
-  p = s("607070"),
-  h = s("100527"),
-  m = s("906732"),
-  g = s("728345"),
-  S = s("812206"),
-  C = s("884697"),
-  I = s("583434"),
+  c = s("570140"),
+  f = s("533307"),
+  p = s("410030"),
+  h = s("607070"),
+  m = s("100527"),
+  I = s("906732"),
+  S = s("728345"),
+  g = s("812206"),
+  E = s("884697"),
+  C = s("583434"),
   T = s("551425"),
-  v = s("832149"),
-  E = s("745510"),
-  x = s("703656"),
-  A = s("763296"),
-  R = s("82142"),
-  _ = s("283595"),
-  y = s("594174"),
-  N = s("509545"),
-  M = s("55563"),
-  O = s("366695"),
+  _ = s("832149"),
+  v = s("745510"),
+  A = s("703656"),
+  M = s("763296"),
+  x = s("82142"),
+  R = s("283595"),
+  N = s("594174"),
+  O = s("509545"),
+  y = s("55563"),
+  j = s("366695"),
   b = s("153124"),
   G = s("626135"),
-  j = s("176354"),
-  F = s("669079"),
-  L = s("296848"),
+  L = s("176354"),
+  D = s("669079"),
+  F = s("296848"),
   P = s("51144"),
-  D = s("902653"),
+  U = s("902653"),
   k = s("479446"),
-  U = s("715627"),
-  w = s("981632"),
-  H = s("474936"),
-  B = s("981631"),
-  z = s("689938"),
-  V = s("770421"),
-  Y = s("167969"),
-  W = s("557256");
+  w = s("546650"),
+  B = s("715627"),
+  H = s("981632"),
+  z = s("474936"),
+  V = s("981631"),
+  Y = s("689938"),
+  K = s("770421"),
+  W = s("167969"),
+  Z = s("557256");
 
-function Z(e, t, s) {
+function q(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -53,29 +55,29 @@ function Z(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-let q = e => {
+let J = e => {
     let {
       openedGift: t
     } = e, {
       createMultipleConfettiAt: s
-    } = i.useContext(E.ConfettiCannonContext);
+    } = i.useContext(v.ConfettiCannonContext);
     return i.useEffect(() => {
       t && s(window.innerWidth / 2, window.innerHeight / 4)
     }, [s, t]), null
   },
-  J = e => {
+  Q = e => {
     let {
       step: t,
       soundId: s
     } = e;
     return i.useEffect(() => {
       var e;
-      if (t !== B.GiftCodeModalStates.CONFIRM) return;
-      let a = A.default.getSoundById(s);
-      (0, D.playGiftSound)(s, null !== (e = null == a ? void 0 : a.volume) && void 0 !== e ? e : 1)
+      if (t !== V.GiftCodeModalStates.CONFIRM) return;
+      let a = M.default.getSoundById(s);
+      (0, U.playGiftSound)(s, null !== (e = null == a ? void 0 : a.volume) && void 0 !== e ? e : 1)
     }, [t, s]), null
   };
-class K extends i.Component {
+class X extends i.Component {
   componentDidMount() {
     let {
       application: e,
@@ -84,10 +86,10 @@ class K extends i.Component {
       giftCode: a,
       emojiName: i
     } = this.props;
-    null == e && null != t && g.default.fetchApplication(t.applicationId);
+    null == e && null != t && S.default.fetchApplication(t.applicationId);
     let l = null != s || null != a.giftStyle,
-      n = (0, C.isCollectiblesGiftCode)(a),
-      r = null != i ? j.default.getURL(i) : void 0;
+      n = (0, E.isCollectiblesGiftCode)(a),
+      r = null != i ? L.default.getURL(i) : void 0;
     this.setState({
       isCustomGift: l,
       isCollectiblesGift: n,
@@ -106,10 +108,10 @@ class K extends i.Component {
       opened: l,
       isCustomGift: n
     } = this.state;
-    return (0, F.getStep)(e, s, a, i, t, l, n)
+    return (0, D.getStep)(e, s, a, i, t, l, n)
   }
   get buttonText() {
-    return (0, F.getButtonText)(this.step, this.props.giftCode, this.state.isCustomGift)
+    return (0, D.getButtonText)(this.step, this.props.giftCode, this.state.isCustomGift)
   }
   get firstHeaderText() {
     let {
@@ -121,30 +123,30 @@ class K extends i.Component {
       subscriptionPlan: i,
       collectiblesItemType: l
     } = this.props;
-    if (e && this.step === B.GiftCodeModalStates.ERROR) return z.default.Messages.GIFT_CONFIRMATION_HEADER_FAIL;
+    if (e && this.step === V.GiftCodeModalStates.ERROR) return Y.default.Messages.GIFT_CONFIRMATION_HEADER_FAIL;
     if (e && !s) {
-      if (!t) return z.default.Messages.GIFT_RECIPIENT_INFO.format({
-        recipientDisplayName: P.default.getName(y.default.getCurrentUser())
+      if (!t) return Y.default.Messages.GIFT_RECIPIENT_INFO.format({
+        recipientDisplayName: P.default.getName(N.default.getCurrentUser())
       });
       {
-        let e = y.default.getUser(a.userId),
+        let e = N.default.getUser(a.userId),
           t = P.default.getName(e);
-        return l === r.CollectiblesItemType.AVATAR_DECORATION ? z.default.Messages.COLLECTIBLES_SENDER_GIFTED_YOU_DECORATION.format({
+        return l === r.CollectiblesItemType.AVATAR_DECORATION ? Y.default.Messages.COLLECTIBLES_SENDER_GIFTED_YOU_DECORATION.format({
           sender: t
-        }) : l === r.CollectiblesItemType.PROFILE_EFFECT ? z.default.Messages.COLLECTIBLES_SENDER_GIFTED_YOU_EFFECT.format({
+        }) : l === r.CollectiblesItemType.PROFILE_EFFECT ? Y.default.Messages.COLLECTIBLES_SENDER_GIFTED_YOU_EFFECT.format({
           sender: t
-        }) : z.default.Messages.GIFT_SUBSCRIPTION_INFO.format({
+        }) : Y.default.Messages.GIFT_SUBSCRIPTION_INFO.format({
           sender: t,
-          timeInterval: (null == i ? void 0 : i.interval) === H.SubscriptionIntervalTypes.MONTH ? z.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH : z.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_YEAR
+          timeInterval: (null == i ? void 0 : i.interval) === z.SubscriptionIntervalTypes.MONTH ? Y.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH : Y.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_YEAR
         })
       }
     }
-    return null == this.props.sku ? null : (0, F.getHeaderText)(this.step, this.props.giftCode, this.props.sku)
+    return null == this.props.sku ? null : (0, D.getHeaderText)(this.step, this.props.giftCode, this.props.sku)
   }
   get secondHeaderText() {
     if (!this.state.isCustomGift || this.state.opened || this.state.accepted) return null;
-    let e = y.default.getUser(this.props.giftCode.userId);
-    return z.default.Messages.GIFT_SENDER_INFO.format({
+    let e = N.default.getUser(this.props.giftCode.userId);
+    return Y.default.Messages.GIFT_SENDER_INFO.format({
       sender: P.default.getName(e)
     })
   }
@@ -162,7 +164,7 @@ class K extends i.Component {
       isCustomGift: n,
       opened: r
     } = this.state;
-    return !r && n ? null : (0, F.getBodyText)({
+    return !r && n ? null : (0, D.getBodyText)({
       step: this.step,
       sku: e,
       libraryApplication: s,
@@ -181,7 +183,7 @@ class K extends i.Component {
       error: s,
       accepted: a
     } = this.state;
-    return (0, F.getErrorMessage)(e, s, a, t, this.handleGoToLibrary)
+    return (0, D.getErrorMessage)(e, s, a, t, this.handleGoToLibrary)
   }
   get handleClick() {
     let {
@@ -189,14 +191,14 @@ class K extends i.Component {
       onClose: t
     } = this.props;
     switch (this.step) {
-      case B.GiftCodeModalStates.ERROR:
+      case V.GiftCodeModalStates.ERROR:
         return t;
-      case B.GiftCodeModalStates.SUCCESS:
+      case V.GiftCodeModalStates.SUCCESS:
         if (__OVERLAY__ || null != e.subscriptionPlanId) return t;
         return this.handleGoToLibrary;
-      case B.GiftCodeModalStates.OPEN:
+      case V.GiftCodeModalStates.OPEN:
         return this.handleOpen;
-      case B.GiftCodeModalStates.CONFIRM:
+      case V.GiftCodeModalStates.CONFIRM:
       default:
         return this.handleAccept
     }
@@ -210,10 +212,10 @@ class K extends i.Component {
     } = this.props, {
       isCustomGift: i
     } = this.state;
-    G.default.track(B.AnalyticEvents.GIFT_ACCEPT_STEP, {
+    G.default.track(V.AnalyticEvents.GIFT_ACCEPT_STEP, {
       to_step: this.step,
       has_custom_message: i,
-      is_custom_message_edited: i && t !== z.default.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE,
+      is_custom_message_edited: i && t !== Y.default.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE,
       gift_style: e.giftStyle,
       gift_code: e.code,
       emoji_name: s,
@@ -234,18 +236,18 @@ class K extends i.Component {
       emojiName: f,
       soundId: p,
       isThemeDark: h
-    } = this.props, m = y.default.getUser(i.userId), {
-      isCustomGift: g,
+    } = this.props, m = N.default.getUser(i.userId), {
+      isCustomGift: I,
       isCollectiblesGift: S,
-      accepted: C,
-      opened: I,
-      emojiURL: v
-    } = this.state, E = y.default.getCurrentUser(), x = this.step === B.GiftCodeModalStates.ERROR, A = (null == i ? void 0 : i.userId) != null && null != E && (null == E ? void 0 : E.id) != null && i.userId === E.id;
+      accepted: g,
+      opened: E,
+      emojiURL: C
+    } = this.state, _ = N.default.getCurrentUser(), v = this.step === V.GiftCodeModalStates.ERROR, A = (null == i ? void 0 : i.userId) != null && null != _ && (null == _ ? void 0 : _.id) != null && i.userId === _.id;
     switch (this.step) {
-      case B.GiftCodeModalStates.ERROR:
+      case V.GiftCodeModalStates.ERROR:
         null == d || d(i, !1);
         break;
-      case B.GiftCodeModalStates.SUCCESS:
+      case V.GiftCodeModalStates.SUCCESS:
         null == d || d(i, !0)
     }
     return (0, a.jsxs)("div", {
@@ -253,68 +255,68 @@ class K extends i.Component {
       children: [(0, a.jsxs)(u.ModalRoot, {
         transitionState: r,
         size: u.ModalSize.SMALL,
-        className: V.modal,
+        className: K.modal,
         "aria-labelledby": l,
-        children: [null != i.giftStyle && !g && !S && (0, a.jsx)(w.default, {
+        children: [null != i.giftStyle && !I && !S && (0, a.jsx)(H.default, {
           defaultAnimationState: this.getDefaultAnimationStatus(),
           idleAnimationState: this.getIdleAnimationStatus(),
           giftStyle: i.giftStyle,
-          className: V.seasonalGiftIcon
+          className: K.seasonalGiftIcon
         }), (0, a.jsx)("div", {
-          className: g ? void 0 : V.backSplash
+          className: I ? void 0 : K.backSplash
         }), (0, a.jsxs)(u.ModalContent, {
           className: n()({
-            [V.content]: !g,
-            [V.contentCustomGift]: g
+            [K.content]: !I,
+            [K.contentCustomGift]: I
           }),
           children: [!S && (0, a.jsx)(u.ModalCloseButton, {
             onClick: s,
-            className: V.closeButton
-          }), !S && (null == i.giftStyle || g && C) && (0, a.jsx)(O.default, {
-            size: O.default.Sizes.LARGE,
+            className: K.closeButton
+          }), !S && (null == i.giftStyle || I && g) && (0, a.jsx)(j.default, {
+            size: j.default.Sizes.LARGE,
             game: e,
             skuId: i.skuId
-          }), x && (0, a.jsx)("img", {
+          }), v && (0, a.jsx)("img", {
             alt: "",
-            src: h ? Y : W
+            src: h ? W : Z
           }), (0, a.jsxs)(u.Heading, {
             id: l,
             className: n()({
-              [V.customGiftHeader]: g && !C,
-              [V.header]: !g || C
+              [K.customGiftHeader]: I && !g,
+              [K.header]: !I || g
             }),
             variant: "heading-sm/semibold",
             children: [(0, a.jsx)("div", {
               className: n()({
-                [V.customGiftHeaderText]: g
+                [K.customGiftHeaderText]: I
               }),
               children: this.firstHeaderText
             }), (0, a.jsx)("div", {
               children: this.secondHeaderText
             })]
-          }), !(g && !C) && (0, a.jsx)(u.Text, {
-            className: V.body,
+          }), !(I && !g) && (0, a.jsx)(u.Text, {
+            className: K.body,
             variant: "text-sm/normal",
             children: this.bodyText
-          }), g && !S && null != i.giftStyle && !C && (0, a.jsx)(w.default, {
+          }), I && !S && null != i.giftStyle && !g && (0, a.jsx)(H.default, {
             defaultAnimationState: this.getDefaultAnimationStatus(),
             idleAnimationState: this.getIdleAnimationStatus(),
-            className: V.giftAnimation,
+            className: K.giftAnimation,
             giftStyle: i.giftStyle
-          }), this.state.opened && !x && (0, a.jsx)(T.default, {
+          }), this.state.opened && !v && (0, a.jsx)(T.default, {
             giftCode: i
-          }), x && (0, a.jsx)(u.Text, {
-            className: V.body,
+          }), v && (0, a.jsx)(u.Text, {
+            className: K.body,
             variant: "text-md/normal",
             children: this.errorMessage
-          }), g && this.state.opened && !this.state.accepted && !x && null != c && "" !== c && !A && (0, a.jsxs)(a.Fragment, {
+          }), I && this.state.opened && !this.state.accepted && !v && null != c && "" !== c && !A && (0, a.jsxs)(a.Fragment, {
             children: [(0, a.jsx)(u.FormTitle, {
-              children: z.default.Messages.GIFT_SENDER_INFO.format({
+              children: Y.default.Messages.GIFT_SENDER_INFO.format({
                 sender: P.default.getName(m)
               })
             }), (0, a.jsx)(u.Heading, {
               id: l,
-              className: V.customMessage,
+              className: K.customMessage,
               variant: "heading-sm/bold",
               children: c
             })]
@@ -326,21 +328,21 @@ class K extends i.Component {
             children: this.buttonText
           })]
         })]
-      }), null != i.giftStyle && !o && this.step !== B.GiftCodeModalStates.ERROR && (0, a.jsx)(a.Fragment, {
-        children: !C && !t && I && (null == f || null == v ? (0, a.jsx)(q, {
-          openedGift: I && !C && !t
-        }) : (0, a.jsx)(U.default, {
+      }), null != i.giftStyle && !o && this.step !== V.GiftCodeModalStates.ERROR && (0, a.jsx)(a.Fragment, {
+        children: !g && !t && E && (null == f || null == C ? (0, a.jsx)(J, {
+          openedGift: E && !g && !t
+        }) : (0, a.jsx)(B.default, {
           confettiTarget: this.modalRef.current,
-          emojiURL: v
+          emojiURL: C
         }))
-      }), !C && !t && I && null != p && (0, a.jsx)(J, {
+      }), !g && !t && E && null != p && (0, a.jsx)(Q, {
         soundId: p,
         step: this.step
       })]
     })
   }
   constructor(...e) {
-    super(...e), Z(this, "state", {
+    super(...e), q(this, "state", {
       error: null,
       accepted: !1,
       opened: !1,
@@ -348,62 +350,72 @@ class K extends i.Component {
       isCollectiblesGift: !1,
       step: void 0,
       emojiURL: void 0
-    }), Z(this, "modalRef", i.createRef()), Z(this, "handleOpen", () => {
+    }), q(this, "modalRef", i.createRef()), q(this, "handleOpen", () => {
       this.setState({
         opened: !0
       })
-    }), Z(this, "handleAccept", async () => {
+    }), q(this, "handleAccept", async () => {
       let {
         giftCode: e,
         channelContext: t,
-        onAccept: s
+        onAccept: i,
+        onClose: l
       } = this.props;
       if (null == e) throw Error("GiftCode is null at acceptance.");
       try {
-        await c.default.redeemGiftCode({
+        await f.default.redeemGiftCode({
           code: e.code,
           options: {
             channelId: t
           }
-        }), this.setState({
+        }), w.default.isAprilMarketingDecoEntitlementCreated ? (c.default.dispatch({
+          type: "PREMIUM_APRIL_MARKETING_DECO_ENTITLEMENT_RESET"
+        }), null == i || i(), l(), !(0, u.hasAnyModalOpen)() && (0, u.openModalLazy)(async () => {
+          let {
+            default: e
+          } = await Promise.resolve().then(s.bind(s, "731433"));
+          return t => (0, a.jsx)(e, {
+            ...t
+          })
+        })) : (this.setState({
           accepted: !0
-        }), null == s || s()
+        }), null == i || i())
       } catch (e) {
         this.setState({
           error: e
         })
       }
-    }), Z(this, "handleGoToLibrary", () => {
+    }), q(this, "handleGoToLibrary", () => {
       let {
         onClose: e,
         libraryApplication: t
       } = this.props;
-      (0, x.transitionTo)(B.Routes.APPLICATION_LIBRARY, {
+      (0, A.transitionTo)(V.Routes.APPLICATION_LIBRARY, {
         state: {
           applicationId: null != t ? t.id : null
         }
       }), e()
-    }), Z(this, "getDefaultAnimationStatus", () => {
-      if (this.step === B.GiftCodeModalStates.OPEN) return k.AnimationState.IDLE;
+    }), q(this, "getDefaultAnimationStatus", () => {
+      if (this.step === V.GiftCodeModalStates.OPEN) return k.AnimationState.IDLE;
       return k.AnimationState.ACTION
-    }), Z(this, "getIdleAnimationStatus", () => {
-      if (this.step !== B.GiftCodeModalStates.OPEN) return k.AnimationState.LOOP
+    }), q(this, "getIdleAnimationStatus", () => {
+      if (this.step !== V.GiftCodeModalStates.OPEN) return k.AnimationState.LOOP
     })
   }
 }
-let Q = o.default.connectStores([_.default, M.default, S.default, R.default, N.default, p.default], e => {
+let $ = o.default.connectStores([R.default, y.default, g.default, x.default, O.default, h.default], e => {
   let {
     giftCode: t
-  } = e, s = M.default.get(t.skuId), a = null != s ? S.default.getApplication(s.applicationId) : null, i = p.default.useReducedMotion;
+  } = e, s = y.default.get(t.skuId), a = null != s ? g.default.getApplication(s.applicationId) : null, i = h.default.useReducedMotion;
   return {
     sku: s,
-    libraryApplication: null != s && (null == t ? void 0 : t.entitlementBranches) != null ? (0, F.firstLibraryApplicationForGiftCode)(t.entitlementBranches, s, _.default) : null,
+    libraryApplication: null != s && (null == t ? void 0 : t.entitlementBranches) != null ? (0, D.firstLibraryApplicationForGiftCode)(t.entitlementBranches, s, R.default) : null,
     application: a,
-    subscriptionPlan: null != t.subscriptionPlanId ? (0, L.getOrFetchSubscriptionPlan)(t.subscriptionPlanId) : null,
-    accepting: R.default.getIsAccepting(t.code),
+    subscriptionPlan: null != t.subscriptionPlanId ? (0, F.getOrFetchSubscriptionPlan)(t.subscriptionPlanId) : null,
+    accepting: x.default.getIsAccepting(t.code),
     useReducedMotion: i
   }
-})(K);
+})(X);
 t.default = e => {
   var t;
   let {
@@ -414,27 +426,27 @@ t.default = e => {
     soundId: r,
     onClose: u,
     ...c
-  } = e, p = (0, b.useUID)(), g = (0, o.useStateFromStores)([R.default], () => R.default.get(i)), S = (0, f.default)(), {
-    analyticsLocations: C
-  } = (0, m.default)(h.default.GIFT_CODE_MODAL), {
-    product: T
-  } = (0, I.useFetchCollectiblesProduct)(null == g ? void 0 : g.skuId);
-  return null == g ? null : (0, a.jsx)(Q, {
+  } = e, f = (0, b.useUID)(), h = (0, o.useStateFromStores)([x.default], () => x.default.get(i)), S = (0, p.default)(), {
+    analyticsLocations: g
+  } = (0, I.default)(m.default.GIFT_CODE_MODAL), {
+    product: E
+  } = (0, C.useFetchCollectiblesProduct)(null == h ? void 0 : h.skuId);
+  return null == h ? null : (0, a.jsx)($, {
     ...c,
     customGiftMessage: l,
     channelContext: s,
-    giftCode: g,
-    headerId: p,
+    giftCode: h,
+    headerId: f,
     emojiName: n,
     soundId: r,
-    analyticsLocations: C,
+    analyticsLocations: g,
     isThemeDark: (0, d.isThemeDark)(S),
     onClose: u,
-    collectiblesItemType: null == T ? void 0 : null === (t = T.items[0]) || void 0 === t ? void 0 : t.type,
-    onAccept: null != T ? () => {
-      u(), (0, v.default)({
-        product: T,
-        analyticsLocations: C
+    collectiblesItemType: null == E ? void 0 : null === (t = E.items[0]) || void 0 === t ? void 0 : t.type,
+    onAccept: null != E ? () => {
+      u(), (0, _.default)({
+        product: E,
+        analyticsLocations: g
       })
     } : void 0
   })
