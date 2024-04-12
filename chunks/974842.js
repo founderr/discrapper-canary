@@ -23,22 +23,28 @@ t.default = e => {
     primaryColor: l,
     secondaryColor: I,
     tag: T,
-    error: p
-  } = e, [g, A] = s.useState(n), [N, R] = s.useState({
+    error: p,
+    furthestStep: g
+  } = e, [A, N] = s.useState(n), [R, v] = s.useState({
     primary: l,
     secondary: I
-  }), [v, O] = s.useState(() => {
+  }), [O, L] = s.useState(() => {
     for (let e = 0; e < f.CLAN_BADGE_PALETTE_PRESETS.length; e++)
       if (f.CLAN_BADGE_PALETTE_PRESETS[e].primary === l && f.CLAN_BADGE_PALETTE_PRESETS[e].secondary === I) return e;
     return S
-  }), L = S === v, M = L ? N : f.CLAN_BADGE_PALETTE_PRESETS[v];
+  }), M = S === O, P = M ? R : f.CLAN_BADGE_PALETTE_PRESETS[O];
   return s.useEffect(() => {
+    let e = g === E.ClanSetupSteps.CUSTOMIZE_TAG_BADGE ? {
+      brandPrimaryColor: P.primary,
+      brandSecondaryColor: P.secondary
+    } : {};
     t({
-      badgeKind: g,
-      badgePrimaryColor: M.primary,
-      badgeSecondaryColor: M.secondary
+      badgeKind: A,
+      badgePrimaryColor: P.primary,
+      badgeSecondaryColor: P.secondary,
+      ...e
     })
-  }, [t, g, M.primary, M.secondary]), (0, a.jsxs)("div", {
+  }, [t, A, P.primary, P.secondary, g]), (0, a.jsxs)("div", {
     className: C.slideContent,
     children: [(0, a.jsx)(u.Heading, {
       variant: "heading-xxl/medium",
@@ -62,9 +68,9 @@ t.default = e => {
           }), (0, a.jsx)("div", {
             className: _.pickerGrid,
             children: m.map(e => (0, a.jsx)(u.Clickable, {
-              onClick: () => A(e),
+              onClick: () => N(e),
               className: i()(_.badgeAssetContainer, {
-                [_.badgeAssetContainerSelected]: e === g
+                [_.badgeAssetContainerSelected]: e === A
               }),
               children: (0, a.jsx)(c.ClanBadge, {
                 badge: e,
@@ -83,22 +89,22 @@ t.default = e => {
             className: _.pickerGrid,
             children: [f.CLAN_BADGE_PALETTE_PRESETS.map((e, t) => (0, a.jsx)(u.Clickable, {
               onClick: () => {
-                O(t), R(f.CLAN_BADGE_PALETTE_PRESETS[t])
+                L(t), v(f.CLAN_BADGE_PALETTE_PRESETS[t])
               },
               className: i()(_.badgeAssetContainer, {
-                [_.badgeAssetContainerSelected]: t === v
+                [_.badgeAssetContainerSelected]: t === O
               }),
               children: (0, a.jsx)(c.ClanBadge, {
-                badge: g,
+                badge: A,
                 width: 32,
                 height: 32,
                 primaryTintColor: e.primary,
                 secondaryTintColor: e.secondary
               })
             }, "".concat(e.primary, ":").concat(e.secondary))), (0, a.jsx)(u.Clickable, {
-              onClick: () => O(S),
+              onClick: () => L(S),
               className: i()(_.badgeAssetContainer, {
-                [_.badgeAssetContainerSelected]: S === v
+                [_.badgeAssetContainerSelected]: S === O
               }),
               children: (0, a.jsx)(o.EyeDropperIcon, {
                 width: 20,
@@ -107,26 +113,26 @@ t.default = e => {
             })]
           }), (0, a.jsxs)("div", {
             className: i()(_.customColorPickerContainer, {
-              [_.customColorPickerContainerHidden]: !L
+              [_.customColorPickerContainerHidden]: !M
             }),
             children: [(0, a.jsx)(d.CustomColorPicker, {
               className: _.colorPicker,
-              value: N.primary,
+              value: R.primary,
               eagerUpdate: !0,
               wrapperComponentType: "div",
               onChange: e => {
-                R(t => ({
+                v(t => ({
                   ...t,
                   primary: (0, r.int2hex)(e)
                 }))
               }
             }), (0, a.jsx)(d.CustomColorPicker, {
               className: _.colorPicker,
-              value: N.secondary,
+              value: R.secondary,
               eagerUpdate: !0,
               wrapperComponentType: "div",
               onChange: e => {
-                R(t => ({
+                v(t => ({
                   ...t,
                   secondary: (0, r.int2hex)(e)
                 }))
@@ -151,11 +157,11 @@ t.default = e => {
           maxLength: E.MAX_TAG_LENGTH,
           placeholder: h.default.Messages.CLAN_SETUP_TAG_PLACEHOLDER,
           prefixElement: (0, a.jsx)(c.ClanBadge, {
-            badge: g,
+            badge: A,
             width: 40,
             height: 40,
-            primaryTintColor: M.primary,
-            secondaryTintColor: M.secondary
+            primaryTintColor: P.primary,
+            secondaryTintColor: P.secondary
           })
         }), (0, a.jsx)(u.Text, {
           variant: "text-xs/medium",

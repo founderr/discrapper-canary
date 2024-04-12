@@ -42,7 +42,11 @@ function _() {
     badgeKind: u.ClanBadgeKind.SWORD,
     badgePrimaryColor: u.CLAN_BADGE_PALETTE_PRESETS["0"].primary,
     badgeSecondaryColor: u.CLAN_BADGE_PALETTE_PRESETS["0"].secondary,
-    currentStep: d.ClanSetupSteps.GAMES
+    banner: d.ClanBannerKind.PIXEL_RUSH,
+    brandPrimaryColor: d.CLAN_BRAND_PALETTE_PRESETS["0"].primary,
+    brandSecondaryColor: d.CLAN_BRAND_PALETTE_PRESETS["0"].secondary,
+    currentStep: d.ClanSetupSteps.GAMES,
+    furthestStep: d.ClanSetupSteps.GAMES
   }
 }
 
@@ -58,8 +62,8 @@ class m extends(a = l.default.PersistedStore) {
   initialize(e) {
     if (null != e)
       for (let t in e.progressByGuild) f[t] = function(e) {
-        var t, n, a, l;
-        let i = e.primetime.map(e => {
+        var t, n, a, l, i, o, c;
+        let f = e.primetime.map(e => {
           var t;
           return {
             ...e,
@@ -72,14 +76,18 @@ class m extends(a = l.default.PersistedStore) {
           interests: new Set(e.interests),
           description: e.description,
           tag: e.tag,
-          primetime: i,
+          primetime: f,
           verificationForm: null !== (t = e.verificationForm) && void 0 !== t ? t : {
             ...r.NO_MEMBER_VERIFICATION_FORM
           },
           badgeKind: null !== (n = e.badgeKind) && void 0 !== n ? n : u.ClanBadgeKind.SWORD,
           badgePrimaryColor: null !== (a = e.badgePrimaryColor) && void 0 !== a ? a : u.CLAN_BADGE_PALETTE_PRESETS["0"].primary,
           badgeSecondaryColor: null !== (l = e.badgeSecondaryColor) && void 0 !== l ? l : u.CLAN_BADGE_PALETTE_PRESETS["0"].secondary,
+          banner: null !== (i = e.banner) && void 0 !== i ? i : d.ClanBannerKind.PIXEL_RUSH,
+          brandPrimaryColor: null !== (o = e.brandPrimaryColor) && void 0 !== o ? o : d.CLAN_BRAND_PALETTE_PRESETS["0"].primary,
+          brandSecondaryColor: null !== (c = e.brandSecondaryColor) && void 0 !== c ? c : d.CLAN_BRAND_PALETTE_PRESETS["0"].secondary,
           currentStep: e.currentStep,
+          furthestStep: e.furthestStep,
           requiredGameId: e.requiredGameId
         }
       }(e.progressByGuild[t])
@@ -99,7 +107,11 @@ class m extends(a = l.default.PersistedStore) {
         badgeKind: t.badgeKind,
         badgePrimaryColor: t.badgePrimaryColor,
         badgeSecondaryColor: t.badgeSecondaryColor,
+        banner: t.banner,
+        brandPrimaryColor: t.brandPrimaryColor,
+        brandSecondaryColor: t.brandSecondaryColor,
         currentStep: t.currentStep,
+        furthestStep: t.furthestStep,
         requiredGameId: t.requiredGameId
       }
     }
