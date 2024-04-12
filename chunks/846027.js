@@ -55,6 +55,13 @@ t.default = {
       skipMuteUnmuteSoundEffect: !r
     }) : this.enable(!0)
   },
+  setSelfMute(e, t) {
+    !S() && i.default.dispatch({
+      type: "AUDIO_SET_SELF_MUTE",
+      context: e,
+      mute: t
+    })
+  },
   setTemporarySelfMute(e) {
     !S() && i.default.dispatch({
       type: "AUDIO_SET_TEMPORARY_SELF_MUTE",
