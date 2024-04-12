@@ -42,7 +42,7 @@ var i = n("735250"),
   v = n("735336"),
   M = n("793397"),
   y = n("184325"),
-  P = n("747074"),
+  P = n("652853"),
   U = n("171368"),
   b = n("228168"),
   G = n("981631"),
@@ -96,7 +96,7 @@ function Y(e) {
     hasProfileEffect: m
   } = e, {
     profileTheme: R
-  } = r.useContext(P.UserProfileContext), g = r.useContext(O.AnalyticsContext), D = t.isNonUserBot() && !t.isClyde(), v = p.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, w.PremiumTypes.TIER_2), y = r.useMemo(() => (0, T.shouldDisableUserPresenceInChannel)(t, I), [t, I]), {
+  } = (0, P.useUserProfileThemeContext)(), g = r.useContext(O.AnalyticsContext), D = t.isNonUserBot() && !t.isClyde(), v = p.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, w.PremiumTypes.TIER_2), y = r.useMemo(() => (0, T.shouldDisableUserPresenceInChannel)(t, I), [t, I]), {
     analyticsLocations: x
   } = (0, c.default)(), {
     trackUserProfileAction: Y,

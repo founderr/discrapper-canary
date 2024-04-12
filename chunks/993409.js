@@ -8,7 +8,7 @@ var a = s("735250");
 s("470079");
 var l = s("693789"),
   i = s("481060"),
-  n = s("747074"),
+  n = s("652853"),
   o = s("46781");
 
 function r(e) {
@@ -19,7 +19,7 @@ function r(e) {
     ...u
   } = e, {
     primaryProfileColor: d
-  } = (0, n.useUserProfileContext)(), c = null !== d ? o.themeColor : l.ButtonColors.PRIMARY, f = (0, a.jsx)(t, {
+  } = (0, n.useUserProfileThemeContext)(), c = null !== d ? o.themeColor : l.ButtonColors.PRIMARY, f = (0, a.jsx)(t, {
     width: 16,
     height: 16
   });
