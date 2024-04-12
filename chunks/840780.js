@@ -314,7 +314,7 @@ class ev extends a.PureComponent {
       embeddedActivity: n,
       channel: a,
       channelName: s,
-      guild: i
+      guildForConnectedChannel: i
     } = this.props;
     if (null == n || null == a || null == t) return null;
     let r = {
@@ -467,37 +467,37 @@ t.default = (0, E.default)(function(e) {
   let {
     guildId: n,
     ...a
-  } = e, s = (0, u.useStateFromStores)([K.default], () => K.default.getId()), i = (0, u.useStateFromStores)([j.default, et.default], () => (0, F.default)(j.default, et.default)), r = (0, u.useStateFromStores)([J.default, Y.default], () => Y.default.getChannel(J.default.getVoiceChannelId())), o = (0, u.useStateFromStores)([_.default], () => _.default.getConnectedActivityChannelId()), c = (0, u.useStateFromStores)([Y.default], () => Y.default.getChannel(o)), [f, h] = (0, u.useStateFromStoresArray)([k.default], () => [k.default.getCurrentUserActiveStream(), k.default.getStreamerActiveStreamMetadata()]), p = (0, u.useStateFromStores)([S.default], () => S.default.useReducedMotion), m = (0, u.useStateFromStores)([M.default], () => M.default.getActivityPanelTooltipAction()), {
-    partnerGame: C,
-    dropsActivityPanelExperienceBlocked: g,
-    showDropsSparkles: E
-  } = (0, y.useActivityPanelDrop)(e_.PartnerGame.FORTNITE, i, d.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP, d.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP), I = (0, u.useStateFromStores)([_.default], () => null != c ? _.default.getSelfEmbeddedActivityForChannel(c.id) : null), N = (0, u.useStateFromStores)([Z.default, X.default, W.default], () => null != r ? P.canStreamInChannel(r, Z.default, X.default, !1) : null != n && P.getStreamEligibleChannels(W.default.getChannels(n), Z.default, X.default).length > 0), [A] = (0, T.default)([null !== (t = function() {
-    if (null != h && null != h.id) return h.id;
+  } = e, s = (0, u.useStateFromStores)([K.default], () => K.default.getId()), i = (0, u.useStateFromStores)([j.default, et.default], () => (0, F.default)(j.default, et.default)), r = (0, u.useStateFromStores)([J.default, Y.default], () => Y.default.getChannel(J.default.getVoiceChannelId())), o = (0, u.useStateFromStores)([_.default], () => _.default.getConnectedActivityChannelId()), c = (0, u.useStateFromStores)([Y.default], () => Y.default.getChannel(o)), f = (0, u.useStateFromStores)([Z.default], () => Z.default.getGuild(null == c ? void 0 : c.guild_id)), [h, p] = (0, u.useStateFromStoresArray)([k.default], () => [k.default.getCurrentUserActiveStream(), k.default.getStreamerActiveStreamMetadata()]), m = (0, u.useStateFromStores)([S.default], () => S.default.useReducedMotion), C = (0, u.useStateFromStores)([M.default], () => M.default.getActivityPanelTooltipAction()), {
+    partnerGame: g,
+    dropsActivityPanelExperienceBlocked: E,
+    showDropsSparkles: I
+  } = (0, y.useActivityPanelDrop)(e_.PartnerGame.FORTNITE, i, d.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP, d.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP), N = (0, u.useStateFromStores)([_.default], () => null != c ? _.default.getSelfEmbeddedActivityForChannel(c.id) : null), A = (0, u.useStateFromStores)([Z.default, X.default, W.default], () => null != r ? P.canStreamInChannel(r, Z.default, X.default, !1) : null != n && P.getStreamEligibleChannels(W.default.getChannels(n), Z.default, X.default).length > 0), [v] = (0, T.default)([null !== (t = function() {
+    if (null != p && null != p.id) return p.id;
     if (null != i && null != i.id) return i.id;
-    if (null != I) return I.applicationId
-  }()) && void 0 !== t ? t : ""]), v = (0, u.useStateFromStores)([z.default], () => (0, U.default)(z.default) && (0, eC.isWindows)()), R = (0, u.useStateFromStores)([q.default], () => null != s ? q.default.findActivity(s, e => e.type === eS.ActivityTypes.PLAYING) : null), O = null != f && f.ownerId === s && f.state !== eS.ApplicationStreamStates.ENDED, b = (0, u.useStateFromStores)([$.default], () => $.default.getBroadcast()), D = (0, L.default)() && null != i, G = (0, u.useStateFromStores)([ee.default, Q.default], () => null != c ? (0, x.computeChannelName)(c, ee.default, Q.default) : void 0), w = (0, u.useStateFromStores)([Z.default], () => Z.default.getGuild(n));
+    if (null != N) return N.applicationId
+  }()) && void 0 !== t ? t : ""]), R = (0, u.useStateFromStores)([z.default], () => (0, U.default)(z.default) && (0, eC.isWindows)()), O = (0, u.useStateFromStores)([q.default], () => null != s ? q.default.findActivity(s, e => e.type === eS.ActivityTypes.PLAYING) : null), b = null != h && h.ownerId === s && h.state !== eS.ApplicationStreamStates.ENDED, D = (0, u.useStateFromStores)([$.default], () => $.default.getBroadcast()), G = (0, L.default)() && null != i, w = (0, u.useStateFromStores)([ee.default, Q.default], () => null != c ? (0, x.computeChannelName)(c, ee.default, Q.default) : void 0);
   return (0, l.jsx)(ev, {
     ...a,
     guildId: n,
-    canGoLive: v,
-    activity: R,
-    embeddedActivity: I,
-    showDropsSparkles: E,
-    dropsPartnerGame: C,
-    dropsActivityPanelExperienceBlocked: g,
+    canGoLive: R,
+    activity: O,
+    embeddedActivity: N,
+    showDropsSparkles: I,
+    dropsPartnerGame: g,
+    dropsActivityPanelExperienceBlocked: E,
     userId: s,
     runningGame: i,
-    application: A,
-    useReducedMotion: p,
-    isStreaming: O,
+    application: v,
+    useReducedMotion: m,
+    isStreaming: b,
     channel: c,
-    canStream: N,
-    dropsTooltipAction: m,
-    stream: f,
-    streamMetadata: h,
-    broadcast: b,
-    canStartBroadcast: D,
-    channelName: G,
-    guild: w
+    canStream: A,
+    dropsTooltipAction: C,
+    stream: h,
+    streamMetadata: p,
+    broadcast: D,
+    canStartBroadcast: G,
+    channelName: w,
+    guildForConnectedChannel: f
   })
 })
