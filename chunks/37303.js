@@ -38,8 +38,8 @@ let E = e => {
   return (0, s.jsx)(r.QuestContentImpressionTracker, {
     questId: t.id,
     questContent: n,
-    children: e => (0, s.jsx)(s.Fragment, {
-      children: (0, s.jsxs)("div", {
+    children: e => (0, s.jsxs)(s.Fragment, {
+      children: [(0, s.jsxs)("div", {
         ref: t => {
           e.current = t, T.current = t
         },
@@ -59,11 +59,11 @@ let E = e => {
           isQuestExpired: p,
           location: n,
           size: I
-        }), !p && (0, s.jsx)(d.default, {
-          quest: t,
-          location: n
         })]
-      })
+      }), !p && (0, s.jsx)(d.default, {
+        quest: t,
+        location: n
+      })]
     })
   })
 }
