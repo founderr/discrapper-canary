@@ -1486,4 +1486,9 @@ G(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.ChannelLoader.loadGu
     type: "USER_APPLICATION_REMOVE",
     applicationId: e.application_id
   })
+}), b(["DM_SETTINGS_UPSELL_SHOW"], e => {
+  k({
+    type: "DM_SETTINGS_UPSELL_SHOW",
+    guildId: e.guild_id
+  })
 })
