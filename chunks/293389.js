@@ -351,6 +351,11 @@ t.default = function() {
       children: [(0, a.jsx)(d.FormTitle, {
         className: U.marginBottom4,
         children: D.default.Messages.SETTINGS_GAMES_ADDED_GAMES_LABEL
+      }), (0, a.jsx)(d.FormText, {
+        type: d.FormTextTypes.DESCRIPTION,
+        children: D.default.Messages.SETTINGS_GAMES_IGDB_ATTRIBUTION.format({
+          igdbLink: "https://www.igdb.com/about"
+        })
       }), e.map(e => (0, a.jsx)(G, {
         rawGame: e,
         isOverride: s.has(e.exePath)

@@ -70,7 +70,7 @@ let d = (e, t) => ({
       truncate: l.TextTruncationMethod.None
     }), e.drawText(u.default.Messages.BETA, {
       x: o.imageWidth - o.imagePadding - 29,
-      y: o.imagePadding + 12
+      y: o.imagePadding + 12 + 2
     }, !0), e.setColor("white"), e.drawRoundedImage("ApplicationImage", {
       x: o.imagePadding,
       y: o.imagePadding

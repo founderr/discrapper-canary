@@ -170,7 +170,12 @@ function w(e) {
     user: n,
     onMessageReact: s,
     closePopout: f
-  } = e, [m, p] = l.useState(!1), [E, S] = l.useState(null), T = l.useRef(null), I = m ? "#".concat(t.name) : "@".concat(n.username), A = (0, r.useStateFromStores)([g.default], () => g.default.can(R.Permissions.SEND_MESSAGES, t)), v = async e => {
+  } = e, [m, p] = l.useState(!1), [E, S] = l.useState(null), T = l.useRef(null), I = (0, r.useStateFromStores)([g.default], () => g.default.can(R.Permissions.SEND_MESSAGES, t)), A = "#".concat(t.name), v = "@".concat(n.username), N = m ? L.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : L.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, x = () => {
+    p(e => {
+      let t = !e;
+      return O(t), t
+    })
+  }, j = async e => {
     if (m) return f(), await s({
       reply: e,
       channel: t
@@ -199,27 +204,26 @@ function w(e) {
       })
     }), (0, a.jsxs)("div", {
       className: y.inputContainerShareToChannel,
-      children: [A && (0, a.jsx)(d.Clickable, {
-        className: y.shareToChannelButton,
-        onClick: () => {
-          p(e => {
-            let t = !e;
-            return O(t), t
+      children: [I && (0, a.jsx)(d.Tooltip, {
+        text: N,
+        children: e => (0, a.jsx)(d.Clickable, {
+          ...e,
+          className: y.shareToChannelButton,
+          onClick: x,
+          children: m ? (0, a.jsx)(u.TextIcon, {
+            width: 20,
+            height: 20
+          }) : (0, a.jsx)(o.AtIcon, {
+            width: 20,
+            height: 20
           })
-        },
-        children: m ? (0, a.jsx)(u.TextIcon, {
-          width: 20,
-          height: 20
-        }) : (0, a.jsx)(o.AtIcon, {
-          width: 20,
-          height: 20
         })
       }), (0, a.jsx)(h.ReplyInput, {
         ref: T,
         placeholder: L.default.Messages.TEXTAREA_PLACEHOLDER.format({
-          channel: I
+          channel: m ? A : v
         }),
-        onEnter: v,
+        onEnter: j,
         setEditorRef: e => S(e),
         autoCompletePosition: (() => {
           if (null == T || null == T.current) return "top";
