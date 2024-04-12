@@ -42,14 +42,14 @@ n.r(t), n.d(t, {
 });
 var i = n("544891"),
   r = n("570140"),
-  a = n("706454"),
-  s = n("150192"),
+  s = n("706454"),
+  a = n("150192"),
   l = n("981631");
 async function o() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
     t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    n = a.default.locale;
-  if (n === s.default.getFetchedLocale()) return;
+    n = s.default.locale;
+  if (n === a.default.getFetchedLocale()) return;
   let o = await i.HTTP.get({
     url: l.Endpoints.GUILD_DISCOVERY_CATEGORIES,
     query: {
@@ -70,8 +70,8 @@ async function u(e) {
     let {
       primary_category_id: t,
       category_ids: n,
-      keywords: a,
-      emoji_discoverability_enabled: s,
+      keywords: s,
+      emoji_discoverability_enabled: a,
       partner_actioned_timestamp: o,
       partner_application_timestamp: u,
       is_published: c,
@@ -84,8 +84,8 @@ async function u(e) {
     })).body, m = {
       primaryCategoryId: t,
       secondaryCategoryIds: n,
-      keywords: a,
-      emojiDiscoverabilityEnabled: s,
+      keywords: s,
+      emojiDiscoverabilityEnabled: a,
       partnerActionedTimestamp: o,
       partnerApplicationTimestamp: u,
       isPublished: c,
@@ -180,8 +180,8 @@ async function T(e) {
   let {
     guildId: t,
     primaryCategoryId: n,
-    keywords: a,
-    emojiDiscoverabilityEnabled: s,
+    keywords: s,
+    emojiDiscoverabilityEnabled: a,
     partnerActionedTimestamp: o,
     partnerApplicationTimestamp: u,
     isPublished: c,
@@ -200,15 +200,15 @@ async function T(e) {
       is_published: h,
       reasons_to_join: g,
       social_links: C,
-      about: v
+      about: x
     } = (await i.HTTP.patch({
       url: l.Endpoints.GUILD_DISCOVERY_METADATA(t),
       body: {
         primary_category_id: n,
-        emoji_discoverability_enabled: s,
+        emoji_discoverability_enabled: a,
         partner_actioned_timestamp: o,
         partner_application_timestamp: u,
-        keywords: a,
+        keywords: s,
         is_published: c,
         reasons_to_join: d,
         social_links: f,
@@ -229,7 +229,7 @@ async function T(e) {
         isPublished: h,
         reasonsToJoin: g,
         socialLinks: C,
-        about: v
+        about: x
       }
     })
   } catch (e) {

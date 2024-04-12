@@ -25,9 +25,9 @@ async function m(e) {
     friendToken: g,
     autoFocusNote: A,
     analyticsLocation: N
-  } = e, v = c.default.getUser(S);
-  if (null == v) return;
-  let R = E.default.getUserProfile(S),
+  } = e, R = c.default.getUser(S);
+  if (null == R) return;
+  let v = E.default.getUserProfile(S),
     O = u.default.getPrimaryActivity(S),
     L = u.default.getStatus(S),
     M = u.default.isMobileOnline(S),
@@ -46,7 +46,7 @@ async function m(e) {
     return t => (0, a.jsx)(e, {
       ...t,
       location: "handleOpenUserProfileModal",
-      user: v,
+      user: R,
       autoFocusNote: A,
       guildId: T,
       friendToken: g,
@@ -68,8 +68,8 @@ async function m(e) {
     party_platform: (0, _.isSpotifyParty)(null == P ? void 0 : P.id) ? h.PlatformTypes.SPOTIFY : null,
     game_platform: (0, r.default)(O),
     profile_user_status: U,
-    profile_has_nitro_customization: (null == R ? void 0 : R.banner) != null,
-    profile_has_profile_effect: (null == R ? void 0 : R.profileEffectId) != null,
+    profile_has_nitro_customization: (null == v ? void 0 : v.banner) != null,
+    profile_has_profile_effect: (null == v ? void 0 : v.profileEffectId) != null,
     ...null == N ? null : (0, f.expandLocation)(N)
   })
 }

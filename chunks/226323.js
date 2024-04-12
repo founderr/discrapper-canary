@@ -26,8 +26,8 @@ var a = n("735250"),
   g = n("255439"),
   A = n("729285"),
   N = n("150954"),
-  v = n("51144"),
-  R = n("524484"),
+  R = n("51144"),
+  v = n("524484"),
   O = n("689938"),
   L = n("825292");
 let M = {
@@ -96,7 +96,7 @@ function x(e) {
   } = e, p = (0, r.useStateFromStores)([I.default], () => I.default.isLocalMute(o.id)), g = (0, h.default)({
     userId: o.id,
     checkSoundSharing: !0
-  }), A = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, N = o.getAvatarURL(l.guild_id, 24), x = null != u ? u : v.default.getName(o), {
+  }), A = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, N = o.getAvatarURL(l.guild_id, 24), x = null != u ? u : R.default.getName(o), {
     icon: D,
     colorize: b,
     getStatus: U
@@ -169,7 +169,7 @@ function x(e) {
         onContextMenu: G,
         focusProps: M,
         children: (0, a.jsx)(_.default, {
-          shakeLocation: R.ShakeLocation.VOICE_USER,
+          shakeLocation: v.ShakeLocation.VOICE_USER,
           isShaking: g,
           children: (0, a.jsx)("div", {
             className: i()(L.avatar, {

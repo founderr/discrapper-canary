@@ -3,8 +3,8 @@ n.r(t);
 var i = n("735250");
 n("470079");
 var r = n("803997"),
-  a = n.n(r),
-  s = n("186078"),
+  s = n.n(r),
+  a = n("186078"),
   l = n("137158"),
   o = n("482249");
 t.default = function(e) {
@@ -30,10 +30,10 @@ t.default = function(e) {
     onRemove: f,
     title: m,
     canRemove: p,
-    children: (0, i.jsx)(s.MultipleChoiceFieldBody, {
+    children: (0, i.jsx)(a.MultipleChoiceFieldBody, {
       field: t,
       value: void 0,
-      radioItemClassName: a()(o.fieldBackground, o.multipleChoiceFixedTextColor),
+      radioItemClassName: s()(o.fieldBackground, o.multipleChoiceFixedTextColor),
       disabled: !1
     })
   })

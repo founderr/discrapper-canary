@@ -26,8 +26,8 @@ var a = n("735250"),
   g = n("498058"),
   A = n("158631"),
   N = n("143614"),
-  v = n("981631"),
-  R = n("70722"),
+  R = n("981631"),
+  v = n("70722"),
   O = n("689938"),
   L = n("420869");
 
@@ -71,7 +71,7 @@ function P(e) {
   } = function(e, t) {
     let n = h.default.getId(),
       a = t.some(e => e.id === n) || e === n,
-      s = t.length >= v.MAX_GROUP_DM_BROADCAST_PARTICIPANTS;
+      s = t.length >= R.MAX_GROUP_DM_BROADCAST_PARTICIPANTS;
     return {
       buttonColor: s ? r.ButtonColors.RED : r.ButtonColors.GREEN,
       buttonCTA: s ? O.default.Messages.BROADCAST_FULL : a ? O.default.Messages.VIEW_BROADCAST : O.default.Messages.JOIN_BROADCAST,
@@ -105,7 +105,7 @@ function P(e) {
               o.default.selectPrivateChannel(T);
               return
             }
-            x(!0), (0, u.joinPrivateChannelAndWatchStream)(T, P), d.default.trackWithMetadata(v.AnalyticEvents.BROADCAST_VIEWED, {
+            x(!0), (0, u.joinPrivateChannelAndWatchStream)(T, P), d.default.trackWithMetadata(R.AnalyticEvents.BROADCAST_VIEWED, {
               num_active_broadcasts: j.length,
               broadcast_position: j.findIndex(e => e.userId === i) + 1,
               is_broadcasting: k,
@@ -126,7 +126,7 @@ function P(e) {
     }), null != G ? (0, a.jsx)(f.default, {
       className: L.stream,
       stream: {
-        streamType: R.StreamTypes.CALL,
+        streamType: v.StreamTypes.CALL,
         ownerId: i,
         channelId: T
       }

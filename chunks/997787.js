@@ -1,8 +1,8 @@
 "use strict";
 let i;
 n.r(t), n("47120"), n("653041");
-var r, a = n("442837"),
-  s = n("570140");
+var r, s = n("442837"),
+  a = n("570140");
 
 function l(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -17,7 +17,7 @@ let o = {
   },
   u = new Map,
   c = new Set;
-class d extends(r = a.default.PersistedStore) {
+class d extends(r = s.default.PersistedStore) {
   initialize() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : o;
     i = e
@@ -37,7 +37,7 @@ class d extends(r = a.default.PersistedStore) {
     return c.has(e)
   }
 }
-l(d, "displayName", "CommandsMigrationStore"), l(d, "persistKey", "CommandsMigrationStore"), t.default = new d(s.default, {
+l(d, "displayName", "CommandsMigrationStore"), l(d, "persistKey", "CommandsMigrationStore"), t.default = new d(a.default, {
   COMMANDS_MIGRATION_UPDATE_SUCCESS: function(e) {
     let {
       guildId: t,

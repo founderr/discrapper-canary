@@ -8,8 +8,8 @@ var n = s("735250");
 s("470079");
 var l = s("803997"),
   a = s.n(l),
-  o = s("457749"),
-  i = s("189003"),
+  i = s("457749"),
+  o = s("189003"),
   r = s("277138");
 
 function u(e) {
@@ -18,23 +18,23 @@ function u(e) {
     className: s
   } = e;
   return (0, n.jsx)("div", {
-    className: a()(o.container, s),
+    className: a()(i.container, s),
     children: (0, n.jsxs)("div", {
-      className: o.innerContainer,
+      className: i.innerContainer,
       children: [(0, n.jsx)("img", {
         src: r,
         alt: "",
-        className: o.star
+        className: i.star
       }), (0, n.jsx)("div", {
-        className: o.iconWrapper,
+        className: i.iconWrapper,
         children: (0, n.jsx)(t, {
           width: 40,
           height: 40
         })
       }), (0, n.jsx)("img", {
-        src: i,
+        src: o,
         alt: "",
-        className: o.sparkle
+        className: i.sparkle
       })]
     })
   })

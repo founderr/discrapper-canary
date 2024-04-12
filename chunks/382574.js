@@ -3,8 +3,8 @@ n.r(t);
 var i = n("735250");
 n("470079");
 var r = n("73880"),
-  a = n("137158"),
-  s = n("689938"),
+  s = n("137158"),
+  a = n("689938"),
   l = n("482249");
 t.default = function(e) {
   let {
@@ -20,7 +20,7 @@ t.default = function(e) {
     label: m,
     placeholder: E
   } = t;
-  return (0, i.jsx)(a.default, {
+  return (0, i.jsx)(s.default, {
     field: t,
     index: n,
     isDragEnabled: o,
@@ -32,7 +32,7 @@ t.default = function(e) {
     canRemove: p,
     children: (0, i.jsx)(r.ParagraphFieldBody, {
       className: l.fieldBackground,
-      placeholder: null != E ? E : s.default.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,
+      placeholder: null != E ? E : a.default.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,
       disabled: !0
     })
   })

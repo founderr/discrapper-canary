@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return o
+    return i
   }
 });
 var n = s("735250"),
@@ -10,18 +10,18 @@ let a = e => t => {
   null == t || t.stopPropagation(), e()
 };
 
-function o(e) {
+function i(e) {
   let {
     onClick: t,
     className: s,
-    children: o
-  } = e, i = l.useRef(null);
+    children: i
+  } = e, o = l.useRef(null);
   return (0, n.jsx)("div", {
     onClick: t,
-    ref: i,
+    ref: o,
     className: s,
-    children: o({
-      areaRef: i,
+    children: i({
+      areaRef: o,
       handleStopPropagation: a
     })
   })

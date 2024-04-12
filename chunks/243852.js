@@ -17,10 +17,10 @@ var a, s, l, i, r, o = n("442837"),
   g = n("19780"),
   A = n("944486"),
   N = n("981631");
-let v = "ActivityTrackingStore",
-  R = 30 * S.default.Millis.MINUTE,
+let R = "ActivityTrackingStore",
+  v = 30 * S.default.Millis.MINUTE,
   O = 5 * S.default.Millis.MINUTE,
-  L = null !== (a = u.Storage.get(v)) && void 0 !== a ? a : {},
+  L = null !== (a = u.Storage.get(R)) && void 0 !== a ? a : {},
   M = {},
   P = !1;
 
@@ -28,14 +28,14 @@ function y(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
   t && x(e, !0);
   let n = M[e.applicationId];
-  null != n && (n.stop(), delete M[e.applicationId]), delete L[e.applicationId], u.Storage.set(v, L)
+  null != n && (n.stop(), delete M[e.applicationId]), delete L[e.applicationId], u.Storage.set(R, L)
 }
 
 function x(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = Date.now(),
     a = null != e.updatedAt ? n - e.updatedAt : 0;
-  a > R + O && (a = 0);
+  a > v + O && (a = 0);
   let s = (0, I.shouldShareApplicationActivity)(e.applicationId, p.default),
     l = A.default.getVoiceChannelId(),
     i = g.default.getMediaSessionId();
@@ -55,7 +55,7 @@ function x(e) {
   });
   t && s && r && _.default.updateUserRecentGamesLocal(e.applicationId, Math.floor(a / 1e3));
   let o = M[e.applicationId];
-  null == o && (o = M[e.applicationId] = new d.Interval).start(R, () => x(e)), !t && (L[e.applicationId] = e, u.Storage.set(v, L))
+  null == o && (o = M[e.applicationId] = new d.Interval).start(v, () => x(e)), !t && (L[e.applicationId] = e, u.Storage.set(R, L))
 }
 
 function D() {
@@ -116,13 +116,13 @@ r = "ActivityTrackingStore", (i = "displayName") in(l = U) ? Object.defineProper
       token: n
     } = e, a = L[t];
     if (null == a) return !1;
-    a.token = n, u.Storage.set(v, L)
+    a.token = n, u.Storage.set(R, L)
   },
   ACTIVITY_UPDATE_FAIL: function(e) {
     let {
       applicationId: t
     } = e, n = L[t];
     if (null == n) return !1;
-    n.token = null, n.updatedAt = null, u.Storage.set(v, L)
+    n.token = null, n.updatedAt = null, u.Storage.set(R, L)
   }
 })

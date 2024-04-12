@@ -25,32 +25,32 @@ t.default = e => {
   var t;
   let n, N;
   let {
-    guildId: v,
-    inviteCode: R
-  } = e, [O, L] = s.useState(p.WaveStates.INITIAL), M = (0, l.useStateFromStores)([h.default], () => h.default.get(v)), P = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(v)), y = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(v)), {
+    guildId: R,
+    inviteCode: v
+  } = e, [O, L] = s.useState(p.WaveStates.INITIAL), M = (0, l.useStateFromStores)([h.default], () => h.default.get(R)), P = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(R)), y = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(R)), {
     hasFetchedRequestToJoinGuilds: x,
     guildPreviewDisabled: D
   } = (0, l.useStateFromStoresObject)([C.default], () => ({
     hasFetchedRequestToJoinGuilds: C.default.hasFetchedRequestToJoinGuilds,
-    guildPreviewDisabled: C.default.getJoinRequestGuild(v)
+    guildPreviewDisabled: C.default.getJoinRequestGuild(R)
   }));
   s.useEffect(() => {
-    null != y && (0, r.transitionTo)(T.Routes.CHANNEL(v))
-  }, [y, v]), s.useEffect(() => {
+    null != y && (0, r.transitionTo)(T.Routes.CHANNEL(R))
+  }, [y, R]), s.useEffect(() => {
     !x && f.default.fetchRequestToJoinGuilds()
   }, [x]);
   let b = s.useCallback(e => {
       L(t => Math.max(t, e))
     }, []),
     U = async e => {
-      await E.default.submitVerificationForm(v, e)
+      await E.default.submitVerificationForm(R, e)
     }, j = () => {
-      f.default.resetGuildJoinRequest(v)
+      f.default.resetGuildJoinRequest(R)
     };
   let G = (n = g.default.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({
       name: null == D ? void 0 : D.toString()
     }), N = () => {
-      L(Math.max(O, p.WaveStates.FILLING)), f.default.removeGuildJoinRequest(v), (0, r.transitionTo)(T.Routes.ME)
+      L(Math.max(O, p.WaveStates.FILLING)), f.default.removeGuildJoinRequest(R), (0, r.transitionTo)(T.Routes.ME)
     }, () => {
       (0, i.openModal)(e => (0, a.jsx)(i.ConfirmModal, {
         header: g.default.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
@@ -100,8 +100,8 @@ t.default = e => {
               });
             default:
               return (0, a.jsx)(I.default, {
-                guildId: v,
-                inviteCode: R,
+                guildId: R,
+                inviteCode: v,
                 onComplete: U
               })
           }

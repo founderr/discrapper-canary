@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("392711"),
-  a = n("481060"),
-  s = n("246364"),
+  s = n("481060"),
+  a = n("246364"),
   l = n("405545"),
   o = n("382574"),
   u = n("279988"),
@@ -31,19 +31,19 @@ function p(e) {
     updateFormField: h,
     updateFormFieldOrder: g,
     canRemove: C
-  } = e, v = async () => {
+  } = e, x = async () => {
     await T(m)
-  }, x = async e => {
+  }, v = async e => {
     await h(m, e)
-  }, A = async (e, t, n) => {
+  }, N = async (e, t, n) => {
     await g(e, t, n)
-  }, N = (0, r.uniqueId)(), R = t === m, S = {
-    key: N,
+  }, R = (0, r.uniqueId)(), A = t === m, S = {
+    key: R,
     index: m,
     isDragEnabled: I,
-    isDropHovered: R,
+    isDropHovered: A,
     onEdit: () => {
-      0 === _ ? E(d, x, p) : (0, a.openModalLazy)(async () => {
+      0 === _ ? E(d, v, p) : (0, s.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("74673")]).then(n.bind(n, "394045"));
@@ -51,33 +51,33 @@ function p(e) {
           ...t,
           guildId: p.id,
           submittedGuildJoinRequestsCount: _,
-          onConfirm: () => E(d, x, p)
+          onConfirm: () => E(d, v, p)
         })
       })
     },
-    onRemove: v,
-    onDrop: A,
+    onRemove: x,
+    onDrop: N,
     canRemove: C
   };
   switch (d.field_type) {
-    case s.VerificationFormFieldTypes.TERMS:
+    case a.VerificationFormFieldTypes.TERMS:
       return (0, i.jsx)(u.default, {
         channelId: p.rulesChannelId,
         title: f.default.Messages.GUILD_RULES_HEADER,
         formField: d,
         ...S
       });
-    case s.VerificationFormFieldTypes.PARAGRAPH:
+    case a.VerificationFormFieldTypes.PARAGRAPH:
       return (0, i.jsx)(o.default, {
         formField: d,
         ...S
       });
-    case s.VerificationFormFieldTypes.TEXT_INPUT:
+    case a.VerificationFormFieldTypes.TEXT_INPUT:
       return (0, i.jsx)(c.default, {
         formField: d,
         ...S
       });
-    case s.VerificationFormFieldTypes.MULTIPLE_CHOICE:
+    case a.VerificationFormFieldTypes.MULTIPLE_CHOICE:
       return (0, i.jsx)(l.default, {
         formField: d,
         ...S
@@ -92,8 +92,8 @@ function m(e, t, r) {
     onCloseRequest: d.NOOP
   };
   switch (e) {
-    case s.VerificationFormFieldTypes.TERMS:
-      return (0, a.openModalLazy)(async () => {
+    case a.VerificationFormFieldTypes.TERMS:
+      return (0, s.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("5945")]).then(n.bind(n, "92451"));
@@ -104,8 +104,8 @@ function m(e, t, r) {
           guild: r
         })
       }, l);
-    case s.VerificationFormFieldTypes.PARAGRAPH:
-      return (0, a.openModalLazy)(async () => {
+    case a.VerificationFormFieldTypes.PARAGRAPH:
+      return (0, s.openModalLazy)(async () => {
         let {
           ParagraphFormFieldModal: e
         } = await Promise.all([n.e("99387"), n.e("6595")]).then(n.bind(n, "457042"));
@@ -115,8 +115,8 @@ function m(e, t, r) {
           onSave: t
         })
       }, l);
-    case s.VerificationFormFieldTypes.TEXT_INPUT:
-      return (0, a.openModalLazy)(async () => {
+    case a.VerificationFormFieldTypes.TEXT_INPUT:
+      return (0, s.openModalLazy)(async () => {
         let {
           TextInputFormFieldModal: e
         } = await Promise.all([n.e("99387"), n.e("6595")]).then(n.bind(n, "457042"));
@@ -126,8 +126,8 @@ function m(e, t, r) {
           onSave: t
         })
       }, l);
-    case s.VerificationFormFieldTypes.MULTIPLE_CHOICE:
-      return (0, a.openModalLazy)(async () => {
+    case a.VerificationFormFieldTypes.MULTIPLE_CHOICE:
+      return (0, s.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("94064")]).then(n.bind(n, "607569"));
@@ -145,20 +145,20 @@ function E(e, t, r) {
     onCloseRequest: d.NOOP
   };
   switch (e.field_type) {
-    case s.VerificationFormFieldTypes.TERMS:
-      return (0, a.openModalLazy)(async () => {
+    case a.VerificationFormFieldTypes.TERMS:
+      return (0, s.openModalLazy)(async () => {
         let {
-          default: a
+          default: s
         } = await Promise.all([n.e("99387"), n.e("5945")]).then(n.bind(n, "92451"));
-        return n => (0, i.jsx)(a, {
+        return n => (0, i.jsx)(s, {
           ...n,
           field: e,
           onSave: t,
           guild: r
         })
       }, l);
-    case s.VerificationFormFieldTypes.PARAGRAPH:
-      return (0, a.openModalLazy)(async () => {
+    case a.VerificationFormFieldTypes.PARAGRAPH:
+      return (0, s.openModalLazy)(async () => {
         let {
           ParagraphFormFieldModal: r
         } = await Promise.all([n.e("99387"), n.e("6595")]).then(n.bind(n, "457042"));
@@ -168,8 +168,8 @@ function E(e, t, r) {
           onSave: t
         })
       }, l);
-    case s.VerificationFormFieldTypes.TEXT_INPUT:
-      return (0, a.openModalLazy)(async () => {
+    case a.VerificationFormFieldTypes.TEXT_INPUT:
+      return (0, s.openModalLazy)(async () => {
         let {
           TextInputFormFieldModal: r
         } = await Promise.all([n.e("99387"), n.e("6595")]).then(n.bind(n, "457042"));
@@ -179,8 +179,8 @@ function E(e, t, r) {
           onSave: t
         })
       }, l);
-    case s.VerificationFormFieldTypes.MULTIPLE_CHOICE:
-      return (0, a.openModalLazy)(async () => {
+    case a.VerificationFormFieldTypes.MULTIPLE_CHOICE:
+      return (0, s.openModalLazy)(async () => {
         let {
           default: r
         } = await Promise.all([n.e("99387"), n.e("94064")]).then(n.bind(n, "607569"));

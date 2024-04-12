@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("481060"),
-  s = n("881052"),
+  s = n("481060"),
+  a = n("881052"),
   l = n("484455"),
   o = n("592286"),
   u = n("689938"),
@@ -24,7 +24,7 @@ t.default = function(e) {
         await n(t, m)
       } catch (e) {
         if (_.current) return;
-        p(new s.APIError(e).getAnyErrorMessage())
+        p(new a.APIError(e).getAnyErrorMessage())
       } finally {
         if (_.current) return;
         I.current = !1
@@ -33,7 +33,7 @@ t.default = function(e) {
   }, [m, t, n]);
   return (0, i.jsxs)(l.default, {
     title: u.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_TITLE,
-    children: [(0, i.jsx)(a.TextArea, {
+    children: [(0, i.jsx)(s.TextArea, {
       className: c.fieldBackground,
       maxLength: o.MAX_DESCRIPTION_LENGTH,
       value: null != m ? m : "",
@@ -43,7 +43,7 @@ t.default = function(e) {
       },
       onBlur: T,
       autosize: !0
-    }), null != f && "" !== f ? (0, i.jsx)(a.Text, {
+    }), null != f && "" !== f ? (0, i.jsx)(s.Text, {
       className: c.errorText,
       variant: "text-xs/normal",
       color: "text-danger",

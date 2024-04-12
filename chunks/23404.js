@@ -23,7 +23,7 @@ var a = n("735250"),
   A = n("689938"),
   N = n("374145");
 
-function v(e) {
+function R(e) {
   var t;
   let {
     quest: n
@@ -57,32 +57,32 @@ function v(e) {
 t.default = function(e) {
   var t, n, l;
   let {
-    quest: R
-  } = e, O = (0, r.useStateFromStores)([h.default], () => h.default.isEnrolling(R.id), [R]), L = s.useCallback(e => {
+    quest: v
+  } = e, O = (0, r.useStateFromStores)([h.default], () => h.default.isEnrolling(v.id), [v]), L = s.useCallback(e => {
     e.stopPropagation()
   }, []), M = s.useCallback(() => {
-    (0, f.enrollInQuest)(R.id, {
+    (0, f.enrollInQuest)(v.id, {
       questContent: _.QuestContent.ACTIVITY_PANEL,
       questContentCTA: c.QuestContentCTA.ACCEPT_QUEST
     })
-  }, [R]), P = s.useCallback(() => {
-    null != R && ((0, c.trackQuestContentClicked)({
-      questId: R.id,
+  }, [v]), P = s.useCallback(() => {
+    null != v && ((0, c.trackQuestContentClicked)({
+      questId: v.id,
       questContent: _.QuestContent.ACTIVITY_PANEL,
       questContentCTA: c.QuestContentCTA.TRACK_PROGRESS
     }), u.default.open(g.UserSettingsSections.INVENTORY))
-  }, [R]), y = s.useCallback(() => {
+  }, [v]), y = s.useCallback(() => {
     (0, c.trackQuestContentClicked)({
-      questId: R.id,
+      questId: v.id,
       questContent: _.QuestContent.ACTIVITY_PANEL,
       questContentCTA: c.QuestContentCTA.LEARN_MORE
     }), u.default.open(g.UserSettingsSections.INVENTORY)
-  }, [R]), x = (0, T.useHandleClaimQuestsReward)({
-    quest: R,
+  }, [v]), x = (0, T.useHandleClaimQuestsReward)({
+    quest: v,
     location: _.QuestContent.ACTIVITY_PANEL
-  }), D = (0, E.useIsQuestExpired)(R), b = (null === (t = R.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, U = (null === (n = R.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, j = (null === (l = R.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
-  return (null == R ? void 0 : R.userStatus) == null || (0, C.isDismissed)(R.userStatus, _.QuestContent.ACTIVITY_PANEL) || D || j ? null : (0, a.jsx)(m.QuestContentImpressionTracker, {
-    questId: R.id,
+  }), D = (0, E.useIsQuestExpired)(v), b = (null === (t = v.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, U = (null === (n = v.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, j = (null === (l = v.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
+  return (null == v ? void 0 : v.userStatus) == null || (0, C.isDismissed)(v.userStatus, _.QuestContent.ACTIVITY_PANEL) || D || j ? null : (0, a.jsx)(m.QuestContentImpressionTracker, {
+    questId: v.id,
     questContent: _.QuestContent.ACTIVITY_PANEL,
     children: e => {
       var t;
@@ -97,14 +97,14 @@ t.default = function(e) {
         onKeyPress: L,
         children: [(0, a.jsxs)("div", {
           className: N.utils,
-          children: [b ? (0, a.jsx)(v, {
-            quest: R
+          children: [b ? (0, a.jsx)(R, {
+            quest: v
           }) : (0, a.jsx)(S.default, {
             textOpacity: .5
           }), (0, a.jsx)(I.QuestsEntryContextMenuPopout, {
-            quest: R,
+            quest: v,
             questContent: _.QuestContent.ACTIVITY_PANEL,
-            shouldShowDisclosure: (null === (t = R.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null,
+            shouldShowDisclosure: (null === (t = v.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null,
             showShareLink: !0,
             children: e => (0, a.jsx)(o.Clickable, {
               ...e,
@@ -116,19 +116,19 @@ t.default = function(e) {
             })
           })]
         }), !b && (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(v, {
-            quest: R
+          children: [(0, a.jsx)(R, {
+            quest: v
           }), (0, a.jsx)(o.Text, {
             className: N.instructions,
             variant: "text-sm/normal",
             color: "text-normal",
             children: (0, C.getQuestsInstructionsToWinReward)({
-              quest: R
+              quest: v
             })
           })]
         }), b && !U && (0, a.jsx)(p.default, {
           className: N.rewardTileWithInstructions,
-          quest: R
+          quest: v
         }), (0, a.jsxs)("div", {
           className: N.ctas,
           children: [!b && (0, a.jsxs)(a.Fragment, {

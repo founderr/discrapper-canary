@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("803997"),
-  s = n.n(a),
+  s = n("803997"),
+  a = n.n(s),
   l = n("392711"),
   o = n("942389"),
   u = n("692547"),
@@ -21,7 +21,7 @@ function m(e) {
     title: t,
     children: n,
     onEdit: r,
-    onRemove: a,
+    onRemove: s,
     canRemove: l
   } = e;
   return (0, i.jsxs)("div", {
@@ -40,10 +40,10 @@ function m(e) {
         shouldShow: !l,
         children: e => (0, i.jsx)(c.Button, {
           ...e,
-          className: s()(p.removeButton, p.button),
+          className: a()(p.removeButton, p.button),
           size: c.Button.Sizes.SMALL,
           look: c.Button.Looks.BLANK,
-          onClick: a,
+          onClick: s,
           disabled: !l,
           children: f.default.Messages.REMOVE
         })
@@ -63,7 +63,7 @@ function I(e) {
   let {
     index: t,
     field: n,
-    isDropHovered: a,
+    isDropHovered: s,
     onDrop: c
   } = e, f = (0, l.debounce)(async (e, t, n) => {
     await c(e, t, n)
@@ -82,10 +82,10 @@ function I(e) {
       var i;
       let {
         index: r
-      } = e, a = null === (i = I.current) || void 0 === i ? void 0 : i.getBoundingClientRect(), s = n.getClientOffset();
-      if (null == a || null == s) return;
-      let l = (a.bottom - a.top) / 2,
-        o = s.y - a.top;
+      } = e, s = null === (i = I.current) || void 0 === i ? void 0 : i.getBoundingClientRect(), a = n.getClientOffset();
+      if (null == s || null == a) return;
+      let l = (s.bottom - s.top) / 2,
+        o = a.y - s.top;
       (!(r < t) || !(o < l)) && (!(r > t) || !(o < l)) && r !== t && f(e.field, t, !1)
     },
     drop: e => {
@@ -97,8 +97,8 @@ function I(e) {
   }), [_, T]), (0, i.jsxs)("div", {
     ref: I,
     "data-dnd-name": "field-".concat(t),
-    className: s()(p.dragContainer, {
-      [p.dropHovered]: a
+    className: a()(p.dragContainer, {
+      [p.dropHovered]: s
     }),
     children: [(0, i.jsx)("div", {
       className: p.dragIconContainer,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return R
   }
 }), n("47120");
 var a = n("735250"),
@@ -27,12 +27,12 @@ var a = n("735250"),
   A = n("689938"),
   N = n("815668");
 
-function v(e) {
+function R(e) {
   let {
     channel: t,
     iconClassName: l,
-    className: v,
-    innerClassName: R,
+    className: R,
+    innerClassName: v,
     ...O
   } = e, {
     mute: L,
@@ -84,12 +84,12 @@ function v(e) {
       children: (0, a.jsx)(d.Button, {
         ...e,
         ...t,
-        className: i()(v, {
+        className: i()(R, {
           [N.buttonActive]: x,
           [N.disabled]: y
         }),
-        wrapperClassName: v,
-        innerClassName: R,
+        wrapperClassName: R,
+        innerClassName: v,
         disabled: y,
         onClick: () => {
           var t, n;

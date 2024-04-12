@@ -31,7 +31,7 @@ function S(e) {
     isLightTheme: g
   } = e, A = "AnnouncementModalVariant1_".concat(s.DismissibleContent[Number(S.dismissKey)]), {
     onClose: N
-  } = I, v = null != S.button && "" !== S.button.copy ? S.button.copy : _.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, R = (null === (t = S.button) || void 0 === t ? void 0 : t.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", O = (null === (n = S.button) || void 0 === n ? void 0 : n.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? () => {
+  } = I, R = null != S.button && "" !== S.button.copy ? S.button.copy : _.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, v = (null === (t = S.button) || void 0 === t ? void 0 : t.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", O = (null === (n = S.button) || void 0 === n ? void 0 : n.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? () => {
     (0, o.transitionTo)(h.Routes.APPLICATION_STORE), N()
   } : () => (0, r.default)({
     subscriptionTier: E.PremiumSubscriptionSKUs.TIER_2,
@@ -90,7 +90,7 @@ function S(e) {
         onClick: () => {
           d.default.track(h.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
             change_log_id: A,
-            cta_type: R,
+            cta_type: v,
             seconds_open: Math.round((Date.now() - e) / 1e3),
             target: A
           }), O()
@@ -99,7 +99,7 @@ function S(e) {
           alt: "",
           className: C.nitroIconSubHeader,
           src: m
-        }), v]
+        }), R]
       })
     },
     modalDismissibleContent: "" !== S.dismissKey ? Number(S.dismissKey) : void 0

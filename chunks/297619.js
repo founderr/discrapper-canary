@@ -3,8 +3,8 @@ n.r(t);
 var i = n("735250");
 n("470079");
 var r = n("803997"),
-  a = n.n(r),
-  s = n("481060"),
+  s = n.n(r),
+  a = n("481060"),
   l = n("814550"),
   o = n("246364"),
   u = n("700833"),
@@ -16,7 +16,7 @@ t.default = function(e) {
     guild: n
   } = e;
   return (0, i.jsxs)("div", {
-    className: a()(d.spacingContainer, d.leftRailIconContainer, d.backgroundContainer),
+    className: s()(d.spacingContainer, d.leftRailIconContainer, d.backgroundContainer),
     children: [(0, i.jsx)("div", {
       className: d.iconContainer,
       children: (0, i.jsx)(l.default, {
@@ -24,16 +24,16 @@ t.default = function(e) {
         height: 20,
         className: d.icon
       })
-    }), (0, i.jsxs)(s.FormSection, {
-      children: [(0, i.jsx)(s.FormTitle, {
+    }), (0, i.jsxs)(a.FormSection, {
+      children: [(0, i.jsx)(a.FormTitle, {
         tag: "h3",
         className: d.leftRailIconContainerTitle,
         children: c.default.Messages.MEMBER_VERIFICATION_GET_STARTED_TITLE
-      }), (0, i.jsx)(s.FormText, {
+      }), (0, i.jsx)(a.FormText, {
         className: d.leftRailIconContainerDescription,
-        type: s.FormText.Types.DESCRIPTION,
+        type: a.FormText.Types.DESCRIPTION,
         children: c.default.Messages.MEMBER_VERIFICATION_GET_STARTED_DESCRIPTION
-      }), (0, i.jsx)(s.Button, {
+      }), (0, i.jsx)(a.Button, {
         onClick: () => (0, u.openEmptyFormFieldModal)(o.VerificationFormFieldTypes.TERMS, t, n),
         children: c.default.Messages.MEMBER_VERIFICATION_GET_STARTED_BUTTON
       })]

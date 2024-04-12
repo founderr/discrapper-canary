@@ -35,13 +35,13 @@ t.default = e => {
     onGuildCardSeen: g,
     currentCategoryId: A,
     loadId: N,
-    onTagClick: v,
-    showMoreCards: R = !1
+    onTagClick: R,
+    showMoreCards: v = !1
   } = e;
   s.useEffect(() => {
     i.default.wait(() => p())
   }, [A]);
-  let O = (0, c.default)(R ? _ : h),
+  let O = (0, c.default)(v ? _ : h),
     {
       analyticsLocations: L
     } = (0, r.default)();
@@ -77,7 +77,7 @@ t.default = e => {
     onView: x,
     theme: I,
     onGuildCardSeen: g,
-    onTagClick: v
+    onTagClick: R
   }, e.id));
   return (0, a.jsx)("section", {
     className: E.guildListSection,

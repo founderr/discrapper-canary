@@ -30,11 +30,11 @@ function N(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let v = {
+let R = {
   HOST: 5,
   LISTENER: 4
 };
-class R extends s.PureComponent {
+class v extends s.PureComponent {
   isHost() {
     let {
       currentUser: e,
@@ -80,7 +80,7 @@ class R extends s.PureComponent {
         className: A.party,
         children: (0, a.jsx)(h.default, {
           users: this.props.party,
-          max: this.isHost() ? v.HOST : v.LISTENER,
+          max: this.isHost() ? R.HOST : R.LISTENER,
           renderUser: this.renderPartyMember,
           renderMoreUsers: this.renderPartyMemberOverflow
         })
@@ -148,4 +148,4 @@ class R extends s.PureComponent {
     })
   }
 }
-t.default = R
+t.default = v

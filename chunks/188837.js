@@ -26,8 +26,8 @@ t.default = e => {
     playstyle: g,
     interests: A,
     description: N,
-    tag: v,
-    primetime: R,
+    tag: R,
+    primetime: v,
     verificationForm: O
   } = null != S ? S : {}, L = s.useRef(null), M = s.useRef(null), P = s.useRef(null), [y, x] = s.useState(!1), D = async () => {
     try {
@@ -36,8 +36,8 @@ t.default = e => {
         playstyle: g,
         interests: A,
         description: N,
-        tag: v,
-        primetime: R,
+        tag: R,
+        primetime: v,
         verificationForm: O
       })
     } catch (e) {

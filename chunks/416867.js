@@ -8,8 +8,8 @@ var n = s("735250");
 s("470079");
 var l = s("481060"),
   a = s("682864"),
-  o = s("22238"),
-  i = s("153124"),
+  i = s("22238"),
+  o = s("153124"),
   r = s("689938"),
   u = s("309332");
 
@@ -20,13 +20,13 @@ function c(e) {
     title: c,
     body: d,
     onClose: E
-  } = e, f = (0, i.useUID)();
+  } = e, f = (0, o.useUID)();
   return (0, n.jsxs)(l.ModalRoot, {
     className: u.container,
     transitionState: t,
     "aria-labelledby": f,
     children: [(0, n.jsxs)(l.ModalContent, {
-      children: [(0, n.jsx)(o.default, {
+      children: [(0, n.jsx)(i.default, {
         Icon: s
       }), (0, n.jsx)(a.default, {
         size: 24

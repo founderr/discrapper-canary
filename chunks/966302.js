@@ -26,8 +26,8 @@ var a = n("735250"),
   g = n("560688"),
   A = n("871499"),
   N = n("136995"),
-  v = n("25827"),
-  R = n("131951"),
+  R = n("25827"),
+  v = n("131951"),
   O = n("594174"),
   L = n("451478"),
   M = n("465670"),
@@ -56,7 +56,7 @@ let k = {
 function B(e) {
   let {
     header: t
-  } = e, n = R.default.getCameraComponent(), l = (0, o.useStateFromStores)([R.default], () => R.default.getVideoDeviceId()), i = (0, I.default)();
+  } = e, n = v.default.getCameraComponent(), l = (0, o.useStateFromStores)([v.default], () => v.default.getVideoDeviceId()), i = (0, I.default)();
   return s.useEffect(() => {
     let e = O.default.getCurrentUser();
     if (i && null != e) {
@@ -117,7 +117,7 @@ function V(e) {
         } = e, {
           isShown: u
         } = t;
-        return (0, a.jsx)(v.default, {
+        return (0, a.jsx)(R.default, {
           join: !0,
           enabled: r,
           color: "green",
@@ -149,9 +149,9 @@ function Y(e) {
     y: n,
     x: l,
     channel: f
-  } = e, [C, m] = s.useState(!1), S = (0, h.getChannelIconURL)(f), I = (0, _.default)(f), [T, p] = (0, o.useStateFromStoresArray)([R.default], () => [R.default.supports(U.Features.VIDEO), Object.keys(R.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([L.default], () => L.default.isFocused()), A = (0, o.useStateFromStores)([x.default], () => x.default.getMode(f.id)), N = s.useCallback(e => {
+  } = e, [C, m] = s.useState(!1), S = (0, h.getChannelIconURL)(f), I = (0, _.default)(f), [T, p] = (0, o.useStateFromStoresArray)([v.default], () => [v.default.supports(U.Features.VIDEO), Object.keys(v.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([L.default], () => L.default.isFocused()), A = (0, o.useStateFromStores)([x.default], () => x.default.getMode(f.id)), N = s.useCallback(e => {
     null != e.top && null != e.left && c.default.move(e.left, e.top)
-  }, []), v = (0, r.useSpring)({
+  }, []), R = (0, r.useSpring)({
     value: C ? 1 : 0,
     config: {
       ...r.config.stiff,
@@ -206,9 +206,9 @@ function Y(e) {
         }, C ? (0, y.getThemeClass)("dark") : null),
         style: {
           ...t,
-          width: v.value.interpolate([0, 1], [D.width, H.width]),
-          minHeight: v.value.interpolate([0, 1], [D.height, H.height]),
-          translateX: v.value.interpolate([0, 1], [0, -1 * Math.abs(H.width - D.width) / 2])
+          width: R.value.interpolate([0, 1], [D.width, H.width]),
+          minHeight: R.value.interpolate([0, 1], [D.height, H.height]),
+          translateX: R.value.interpolate([0, 1], [0, -1 * Math.abs(H.width - D.width) / 2])
         },
         children: [C ? (0, a.jsx)(B, {
           header: M

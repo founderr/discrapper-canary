@@ -22,8 +22,8 @@ var a = n("735250"),
   g = n("283595"),
   A = n("417363"),
   N = n("941128"),
-  v = n("451478"),
-  R = n("285952"),
+  R = n("451478"),
+  v = n("285952"),
   O = n("366695"),
   L = n("366966"),
   M = n("151011"),
@@ -274,8 +274,8 @@ class Z extends s.PureComponent {
       foregroundGradientColor: s,
       message: l
     } = e;
-    return (0, a.jsxs)(R.default, {
-      direction: R.default.Direction.VERTICAL,
+    return (0, a.jsxs)(v.default, {
+      direction: v.default.Direction.VERTICAL,
       children: [(0, a.jsx)(f.Progress, {
         percent: t,
         size: f.Progress.Sizes.SMALL,
@@ -293,8 +293,8 @@ class Z extends s.PureComponent {
       percents: t,
       message: n
     } = e;
-    return (0, a.jsxs)(R.default, {
-      direction: R.default.Direction.VERTICAL,
+    return (0, a.jsxs)(v.default, {
+      direction: v.default.Direction.VERTICAL,
       children: [(0, a.jsx)(f.StackedProgress, {
         percents: t,
         size: f.Progress.Sizes.SMALL,
@@ -501,8 +501,8 @@ let X = () => (0, a.jsx)(Y, {
   et = [{
     key: Q.NAME,
     cellClassName: F.nameCell,
-    render: e => (0, a.jsxs)(R.default, {
-      align: R.default.Align.CENTER,
+    render: e => (0, a.jsxs)(v.default, {
+      align: v.default.Align.CENTER,
       children: [(0, a.jsx)(O.default, {
         game: e.application,
         className: F.__invalid_gameIcon,
@@ -539,8 +539,8 @@ let X = () => (0, a.jsx)(Y, {
         item: e
       })) : s = (0, a.jsx)(ee, {
         item: e
-      }), (0, a.jsxs)(R.default, {
-        justify: R.default.Justify.END,
+      }), (0, a.jsxs)(v.default, {
+        justify: v.default.Justify.END,
         children: [n, s]
       })
     }
@@ -649,12 +649,12 @@ function ea(e, t, n, a) {
     }), e
   }, [])
 }
-t.default = (0, S.default)(u.default.connectStores([I.default, A.default, N.default, p.default, v.default], () => {
+t.default = (0, S.default)(u.default.connectStores([I.default, A.default, N.default, p.default, R.default], () => {
   let e = ea(N.default.activeItems, !1, I.default, A.default);
   return {
     applications: [...e, ...ea(N.default.finishedItems, !0, I.default, A.default)],
     paused: N.default.paused,
-    isFocused: v.default.isFocused(),
+    isFocused: R.default.isFocused(),
     theme: p.default.theme
   }
 })((0, m.default)(en)))

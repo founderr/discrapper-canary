@@ -26,8 +26,8 @@ var a = n("735250"),
   g = n("626421"),
   A = n("118379"),
   N = n("652515"),
-  v = n("544978"),
-  R = n("194729"),
+  R = n("544978"),
+  v = n("194729"),
   O = n("668940"),
   L = n("372900"),
   M = n("6039"),
@@ -108,13 +108,13 @@ let eI = () => (0, a.jsx)("div", {
     name: "ChannelsAndRolesPage",
     renderLoader: eI
   }),
-  ev = (0, d.makeLazy)({
+  eR = (0, d.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("75475"), n.e("19878"), n.e("38359"), n.e("50498")]).then(n.bind(n, "599263")),
     webpackId: "599263",
     name: "GuildOnboardingPage",
     renderLoader: eI
   }),
-  eR = e => {
+  ev = e => {
     let {
       match: t
     } = e, n = (0, f.useStateFromStores)([J.default, et.default], () => {
@@ -129,9 +129,9 @@ let eI = () => (0, a.jsx)("div", {
       let e = j.default.getData(s);
       if ((null == e ? void 0 : e.type) === G.ImpersonateType.SERVER_SHOP) switch (e.initialTab) {
         case "role_subscriptions":
-          return v.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS;
+          return R.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS;
         case "guild_products":
-          return v.GuildShopTab.GUILD_PRODUCTS;
+          return R.GuildShopTab.GUILD_PRODUCTS;
         default:
           return
       }
@@ -140,7 +140,7 @@ let eI = () => (0, a.jsx)("div", {
       case eh.StaticChannelRoute.ROLE_SUBSCRIPTIONS:
         return d ? (0, a.jsx)(eT, {
           guildId: s,
-          initialTab: v.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS
+          initialTab: R.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS
         }) : (0, a.jsx)(x.default, {
           guildId: s
         });
@@ -164,7 +164,7 @@ let eI = () => (0, a.jsx)("div", {
           selectedSection: e_.GuildOnboardingTab.BROWSE
         });
       case eh.StaticChannelRoute.GUILD_ONBOARDING:
-        return (0, a.jsx)(ev, {
+        return (0, a.jsx)(eR, {
           guildId: s
         });
       case eh.StaticChannelRoute.CUSTOMIZE_COMMUNITY:
@@ -217,12 +217,12 @@ function eL(e) {
     guildId: t
   })
 }
-let eM = e => (0, a.jsx)(eR, {
+let eM = e => (0, a.jsx)(ev, {
     ...e
   }),
   eP = e => {
     let t = null != e && e.length > 0 && e.startsWith("?") ? e.split("?")[1] : null;
-    return (0, a.jsx)(R.default, {
+    return (0, a.jsx)(v.default, {
       searchRoute: t
     })
   },

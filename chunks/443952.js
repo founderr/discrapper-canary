@@ -23,8 +23,8 @@ var s = n("45792"),
   g = n("591759"),
   A = n("228488"),
   N = n("996106"),
-  v = n("914946"),
-  R = n("452426"),
+  R = n("914946"),
+  v = n("452426"),
   O = n("561205"),
   L = n("600027"),
   M = n("852926"),
@@ -33,7 +33,7 @@ var s = n("45792"),
 async function x(e, t, n, a) {
   let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
     l = m.default.getApplicationActivity(t);
-  if (null == l || null == l.secrets || !(0, v.validateActivityInvite)(a, l.party, l.secrets)) throw new N.default({
+  if (null == l || null == l.secrets || !(0, R.validateActivityInvite)(a, l.party, l.secrets)) throw new N.default({
     errorCode: y.RPCErrors.NO_ELIGIBLE_ACTIVITY
   }, "No eligible activity for application. Ensure an activity includes a party and appropriate secret.");
   let o = (0, E.default)(l, S.default);
@@ -91,7 +91,7 @@ t.default = {
     scope: {
       [P.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE]
     },
-    validation: e => (0, R.default)(e).required().keys({
+    validation: e => (0, v.default)(e).required().keys({
       user_id: e.string().required(),
       type: e.number().required().valid([y.ActivityActionTypes.JOIN]),
       content: e.string().min(0).max(1024),
@@ -117,7 +117,7 @@ t.default = {
     scope: {
       [P.RPC_SCOPE_CONFIG.ANY]: [y.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE]
     },
-    validation: e => (0, R.default)(e).required().keys({
+    validation: e => (0, v.default)(e).required().keys({
       type: e.number().required().valid([y.ActivityActionTypes.JOIN]),
       user_id: e.string().required(),
       session_id: e.string().required(),
@@ -245,7 +245,7 @@ t.default = {
           mediaUrl: a
         }
       } = e;
-      (0, v.validatePostMessageTransport)(n.transport);
+      (0, R.validatePostMessageTransport)(n.transport);
       let s = n.application.id;
       if (null == s) throw new N.default({
         errorCode: y.RPCErrors.INVALID_COMMAND

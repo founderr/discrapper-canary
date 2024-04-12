@@ -45,13 +45,13 @@ t.default = e => {
     return null !== (t = null === (e = f.default.getGuild(n)) || void 0 === e ? void 0 : e.name) && void 0 !== t ? t : ""
   }), {
     selectedGames: N,
-    playstyle: v,
-    interests: R,
+    playstyle: R,
+    interests: v,
     primetime: O
   } = (0, d.useStateFromStoresObject)([_.default], () => {
     var e;
     return null !== (e = _.default.getStateForGuild(n).progress) && void 0 !== e ? e : {}
-  }), L = s.useMemo(() => (null == N ? void 0 : N.size) > 0 ? T(Array.from(N.values()).map(e => e.name)) : null, [N]), M = s.useMemo(() => (0, m.getPlaystyleTitle)(v), [v]), P = s.useMemo(() => (null == R ? void 0 : R.size) > 0 ? T(Array.from(R)) : null, [R]), y = s.useMemo(() => {
+  }), L = s.useMemo(() => (null == N ? void 0 : N.size) > 0 ? T(Array.from(N.values()).map(e => e.name)) : null, [N]), M = s.useMemo(() => (0, m.getPlaystyleTitle)(R), [R]), P = s.useMemo(() => (null == v ? void 0 : v.size) > 0 ? T(Array.from(v)) : null, [v]), y = s.useMemo(() => {
     let e = (null == O ? void 0 : O.length) > 0 ? O.map(e => (0, C.primetimeToString)(e)).filter(h.isNotNullish) : [];
     return (null == e ? void 0 : e.length) > 0 ? T(e) : null
   }, [O]);

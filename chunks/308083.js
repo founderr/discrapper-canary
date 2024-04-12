@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   AGE_TRAITS: function() {
-    return R
+    return v
   },
   ALL_TRAITS_SET: function() {
     return M
@@ -58,7 +58,7 @@ n.r(t), n.d(t, {
     return A
   },
   VALORANT_TRAITS: function() {
-    return v
+    return R
   },
   getPlaystyleOptions: function() {
     return g
@@ -133,9 +133,9 @@ function g() {
 }(r = s || (s = {}))[r.INTRO_ANIMATION = 0] = "INTRO_ANIMATION", r[r.SETUP = 1] = "SETUP", r[r.SIGN = 2] = "SIGN", (o = l || (l = {}))[o.FOUNDATIONAL_INTRO = 0] = "FOUNDATIONAL_INTRO", o[o.GAMES = 1] = "GAMES", o[o.PLAYSTYLE = 2] = "PLAYSTYLE", o[o.PERSONALITY_INTRO = 3] = "PERSONALITY_INTRO", o[o.UTILITY_TRAITS = 4] = "UTILITY_TRAITS", o[o.INTERESTS = 5] = "INTERESTS", o[o.DESCRIPTION = 6] = "DESCRIPTION", o[o.PRIMETIME = 7] = "PRIMETIME", o[o.IDENTITY_INTRO = 8] = "IDENTITY_INTRO", o[o.CUSTOMIZE = 9] = "CUSTOMIZE", o[o.APPLICATION_INTRO = 10] = "APPLICATION_INTRO", o[o.MEMBER_APPLICATION = 11] = "MEMBER_APPLICATION";
 let A = "700136079562375258",
   N = "762434991303950386",
-  v = ["Unrated", "Spike Rush", "Death Match", "Swift", "TDM", "Server: NA", "Server: EU", "Server: LATAM", "Server: KR", "Server: AP", "Voice ON", "Voice OFF"],
-  R = ["20+", "30+", "40+", "All Ages"],
+  R = ["Unrated", "Spike Rush", "Death Match", "Swift", "TDM", "Server: NA", "Server: EU", "Server: LATAM", "Server: KR", "Server: AP", "Voice ON", "Voice OFF"],
+  v = ["20+", "30+", "40+", "All Ages"],
   O = ["LGBTQIA-Friendly", "All genders"],
   L = ["NA", "LATAM", "EU West", "SEA", "OCE", "Global"],
-  M = new Set([...v, ...R, ...O, ...L]),
+  M = new Set([...R, ...v, ...O, ...L]),
   P = new Set(c.default.getAvailableLocales().map(e => e.value))

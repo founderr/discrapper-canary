@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  a = n("803997"),
-  s = n.n(a),
+  s = n("803997"),
+  a = n.n(s),
   l = n("481060"),
   o = n("774078"),
   u = n("855693"),
@@ -25,7 +25,7 @@ function I(e) {
   let {
     isTabSelected: t,
     expiresAt: n,
-    trialDuration: a
+    trialDuration: s
   } = e, d = r.useMemo(() => Date.parse(n), [n]), f = (0, o.default)(d, 6e4);
   return Object.values(f).every(e => 0 === e) ? null : (0, i.jsx)(l.Tooltip, {
     text: (0, c.unitsAsStrings)(f, {
@@ -35,12 +35,12 @@ function I(e) {
     }),
     children: e => (0, i.jsxs)("div", {
       ...e,
-      className: s()(E.premiumTrialBadge, E.premiumTrialAcknowledgedBadge, {
+      className: a()(E.premiumTrialBadge, E.premiumTrialAcknowledgedBadge, {
         [E.premiumTrialBadgeSelected]: t
       }),
       children: [(0, i.jsx)(u.default, {
         className: E.premiumTrialBadgeIcon
-      }), a]
+      }), s]
     })
   })
 }
@@ -50,15 +50,15 @@ function _(e) {
   let {
     isTabSelected: n,
     trialOffer: r
-  } = e, a = null === (t = (0, f.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, s = (0, d.formatTrialOfferIntervalDuration)({
-    intervalType: null == a ? void 0 : a.interval,
-    intervalCount: null == a ? void 0 : a.interval_count
+  } = e, s = null === (t = (0, f.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, a = (0, d.formatTrialOfferIntervalDuration)({
+    intervalType: null == s ? void 0 : s.interval,
+    intervalCount: null == s ? void 0 : s.interval_count
   });
   return (0, i.jsx)(h, {
     isTabSelected: n,
-    badgeCopy: s,
+    badgeCopy: a,
     offerExpiresAt: r.expires_at,
-    className: (null == a ? void 0 : a.sku_id) === p.PremiumSubscriptionSKUs.TIER_2 ? E.premiumTrialTier2UnacknowledgedBadge : E.premiumTrialTier0UnacknowledgedBadge
+    className: (null == s ? void 0 : s.sku_id) === p.PremiumSubscriptionSKUs.TIER_2 ? E.premiumTrialTier2UnacknowledgedBadge : E.premiumTrialTier0UnacknowledgedBadge
   })
 }
 
@@ -67,12 +67,12 @@ function T(e) {
     isTabSelected: t,
     userDiscount: n,
     includesAmountOff: r
-  } = e, a = m.default.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
+  } = e, s = m.default.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
     percent: n.discount.amount
   });
   return (0, i.jsx)(h, {
     isTabSelected: t,
-    badgeCopy: r ? a : m.default.Messages.PREMIUM_DISCOUNT_BADGE,
+    badgeCopy: r ? s : m.default.Messages.PREMIUM_DISCOUNT_BADGE,
     offerExpiresAt: n.expires_at,
     className: E.premiumDiscountUnacknowledgedBadge
   })
@@ -83,14 +83,14 @@ function h(e) {
     isTabSelected: t,
     badgeCopy: n,
     offerExpiresAt: r,
-    className: a
+    className: s
   } = e;
   return null != r ? (0, i.jsx)(I, {
     expiresAt: r,
     isTabSelected: t,
     trialDuration: n
   }) : (0, i.jsx)("div", {
-    className: s()(E.premiumTrialBadge, a),
+    className: a()(E.premiumTrialBadge, s),
     children: n
   })
 }

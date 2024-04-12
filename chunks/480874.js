@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return v
   }
 });
 var a = n("735250"),
@@ -26,14 +26,14 @@ var a = n("735250"),
   g = n("687683"),
   A = n("981631"),
   N = n("689938"),
-  v = n("569265");
+  R = n("569265");
 
-function R() {
+function v() {
   let e = s.useRef(null),
     t = (0, S.default)(),
     n = (0, I.useSpamMessageRequestCount)(),
     l = (0, _.useListHasSingleSpamMessageRequest)(),
-    R = (0, d.useIsRejectAllMessageRequestsEnabled)(),
+    v = (0, d.useIsRejectAllMessageRequestsEnabled)(),
     O = (0, c.default)("message-requests-spam-list"),
     {
       channelId: L
@@ -64,8 +64,8 @@ function R() {
       return (0, a.jsx)(p.default, {
         index: r,
         className: i()({
-          [v.selected]: null != L && L === d,
-          [v.siblingSelected]: null != L && L === u
+          [R.selected]: null != L && L === d,
+          [R.siblingSelected]: null != L && L === u
         }),
         channel: o.channel,
         user: o.user,
@@ -73,12 +73,12 @@ function R() {
       }, d)
     }, [t, l, L]),
     D = s.useCallback(() => (0, a.jsxs)(E.default, {
-      className: v.sectionTitle,
+      className: R.sectionTitle,
       children: [N.default.Messages.MESSAGE_REQUESTS_SPAM_HEADER.format({
         count: n
-      }), R && n > 0 ? (0, a.jsxs)(a.Fragment, {
+      }), v && n > 0 ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(u.Text, {
-          className: v.titleDivider,
+          className: R.titleDivider,
           variant: "eyebrow",
           color: "header-secondary",
           tag: "span",
@@ -88,12 +88,12 @@ function R() {
           look: u.ButtonLooks.LINK,
           color: u.ButtonColors.LINK,
           size: u.ButtonSizes.SMALL,
-          className: v.clearAllButton,
+          className: R.clearAllButton,
           "aria-label": N.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL,
           children: N.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL
         })]
       }) : null]
-    }, "message-requests-spam-title"), [n, y, R]);
+    }, "message-requests-spam-title"), [n, y, v]);
   return 0 === t.length ? (0, a.jsx)(T.default, {
     section: g.MessageRequestSections.SPAM
   }) : (0, a.jsx)(r.ListNavigatorProvider, {
@@ -106,7 +106,7 @@ function R() {
           ...i
         } = n;
         return (0, a.jsx)(u.List, {
-          className: v.list,
+          className: R.list,
           innerRole: l,
           innerAriaLabel: N.default.Messages.MESSAGE_REQUESTS,
           ref: t => {

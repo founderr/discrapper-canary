@@ -22,8 +22,8 @@ var a = n("735250"),
   g = n("661599"),
   A = n("923608"),
   N = n("617899"),
-  v = n("8521"),
-  R = n("760326"),
+  R = n("8521"),
+  v = n("760326"),
   O = n("536687"),
   L = n("652785"),
   M = n("921944");
@@ -71,7 +71,7 @@ function y(e) {
               markAsDismissed: l
             });
           case i.DismissibleContent.CHANNEL_NOTICE_QUICKSWITCHER:
-            return (0, a.jsx)(R.default, {
+            return (0, a.jsx)(v.default, {
               guild: n,
               markAsDismissed: l
             });
@@ -115,7 +115,7 @@ t.default = e => {
         guild: t
       });
     case O.ConnectedChannelNotices.MAX_MEMBER_COUNT:
-      return (0, a.jsx)(v.default, {
+      return (0, a.jsx)(R.default, {
         guild: t
       });
     case O.ConnectedChannelNotices.GUILD_LIVE_CHANNEL:

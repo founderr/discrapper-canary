@@ -20,8 +20,8 @@ var a, s, l = n("735250"),
   g = n("952561"),
   A = n("513202"),
   N = n("906732"),
-  v = n("812206"),
-  R = n("933557"),
+  R = n("812206"),
+  v = n("933557"),
   O = n("102172"),
   L = n("871118"),
   M = n("849171"),
@@ -262,7 +262,7 @@ es.Header = ea, es.Body = e => {
     partySize: u,
     members: d,
     onChannelContextMenu: f
-  } = e, E = i.useRef(null), h = (0, R.default)(s, !0);
+  } = e, E = i.useRef(null), h = (0, v.default)(s, !0);
   return (0, l.jsx)(ee, {
     children: (0, l.jsxs)("div", {
       className: q.voiceSection,
@@ -497,7 +497,7 @@ es.Header = ea, es.Body = e => {
       analyticsLocations: m
     } = (0, N.default)();
   if (null == f) return null;
-  let S = v.default.getApplication(f);
+  let S = R.default.getApplication(f);
   if (null == S) return null;
   let I = null != t.created_at && t.created_at > 0 ? {
       start: t.created_at

@@ -21,13 +21,13 @@ t.default = function(e) {
     className: l,
     quest: S,
     autoplay: I = !0
-  } = e, T = (null === (t = S.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, p = (null === (n = S.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, g = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), A = s.useMemo(() => (0, E.isAssetAnimated)(S.config.assets.rewardTile), [S]), N = (0, E.getRewardAssetUrl)(S), v = s.useCallback(() => {
+  } = e, T = (null === (t = S.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, p = (null === (n = S.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, g = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), A = s.useMemo(() => (0, E.isAssetAnimated)(S.config.assets.rewardTile), [S]), N = (0, E.getRewardAssetUrl)(S), R = s.useCallback(() => {
     (0, f.trackQuestContentClicked)({
       questId: S.id,
       questContent: e.questContent,
       questContentCTA: f.QuestContentCTA.REWARD_LEARN_MORE
     }), u.default.open(_.UserSettingsSections.INVENTORY)
-  }, [S, e.questContent]), R = A ? (0, a.jsx)(h.QuestsAsset, {
+  }, [S, e.questContent]), v = A ? (0, a.jsx)(h.QuestsAsset, {
     id: "QuestRewardTile_rewardTileAnimated",
     children: e => (0, a.jsx)(c.default, {
       ref: e,
@@ -53,15 +53,15 @@ t.default = function(e) {
   });
   return p ? (0, a.jsx)("div", {
     className: i()(l, m.questRewardTile, m.hideLearnMore),
-    children: R
+    children: v
   }) : (0, a.jsxs)(o.Clickable, {
     className: i()(m.questRewardTile, l),
-    onClick: v,
+    onClick: R,
     children: [(0, a.jsx)(o.Text, {
       color: "always-white",
       variant: T ? "text-xxs/normal" : "text-xs/normal",
       className: m.questRewardTileDetailsLearnMore,
       children: C.default.Messages.QUESTS_LEARN_MORE_STACKED.format()
-    }), R]
+    }), v]
   })
 }

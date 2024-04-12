@@ -21,8 +21,8 @@ var a, s = n("735250"),
   g = n("689938"),
   A = n("313618"),
   N = n("129512"),
-  v = n("330065"),
-  R = n("755386");
+  R = n("330065"),
+  v = n("755386");
 
 function O(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -34,12 +34,12 @@ function O(e, t, n) {
 }
 class L extends(a = l.PureComponent) {
   getDefaultSplashURL(e, t) {
-    if (t) return R;
+    if (t) return v;
     switch (e) {
       case p.ThemeTypes.DARK:
         return N;
       case p.ThemeTypes.LIGHT:
-        return v
+        return R
     }
   }
   render() {
@@ -53,9 +53,9 @@ class L extends(a = l.PureComponent) {
       loaded: i,
       hasBeenSeen: d,
       isVisible: N,
-      submitting: v
+      submitting: R
     } = this.state, {
-      name: R,
+      name: v,
       description: O,
       presenceCount: L,
       memberCount: M,
@@ -102,13 +102,13 @@ class L extends(a = l.PureComponent) {
             [A.loaded]: i,
             [A.loading]: !i
           }),
-          children: [v ? (0, s.jsx)(u.Spinner, {
+          children: [R ? (0, s.jsx)(u.Spinner, {
             type: u.Spinner.Type.PULSING_ELLIPSIS,
             className: A.spinner
           }) : null, (0, s.jsxs)(u.Clickable, {
             onClick: this.handleClickView,
             className: r()(A.card, {
-              [A.submitting]: v,
+              [A.submitting]: R,
               [A.cardWithTags]: U
             }),
             onContextMenu: this.handleContextMenu,
@@ -163,7 +163,7 @@ class L extends(a = l.PureComponent) {
                 }), (0, s.jsx)(u.Heading, {
                   variant: "heading-md/semibold",
                   className: A.guildName,
-                  children: R
+                  children: v
                 })]
               }), (0, s.jsx)(u.Text, {
                 className: A.description,

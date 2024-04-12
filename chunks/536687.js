@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return s
   },
   default: function() {
-    return v
+    return R
   }
 });
 var a, s, l = n("470079"),
@@ -28,7 +28,7 @@ var a, s, l = n("470079"),
   A = n("267642"),
   N = n("981631");
 
-function v(e) {
+function R(e) {
   var t;
   let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : N.EMPTY_STRING_SNOWFLAKE_ID,
     {
@@ -39,12 +39,12 @@ function v(e) {
     })),
     {
       lastDismissedGracePeriod: s,
-      isGracePeriodVisible: v
+      isGracePeriodVisible: R
     } = (0, i.useStateFromStoresObject)([I.default], () => ({
       lastDismissedGracePeriod: I.default.getLastDismissedGracePeriodForGuild(n),
       isGracePeriodVisible: I.default.isVisible(n)
     })),
-    R = (0, i.useStateFromStores)([_.default], () => _.default.isVisible(e)),
+    v = (0, i.useStateFromStores)([_.default], () => _.default.isVisible(e)),
     O = (0, i.useStateFromStores)([p.default], () => p.default.isVisible(e)),
     L = (0, i.useStateFromStores)([S.default], () => S.default.can(N.Permissions.ADMINISTRATOR, e)),
     M = null != s && Date.now() - s <= N.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
@@ -78,8 +78,8 @@ function v(e) {
       }, 30 * Math.random() * g.default.Millis.SECOND)), () => {
         window.clearTimeout(e)
       }
-    }, [n, D]), R) return 0;
-  if (v) return 1;
+    }, [n, D]), v) return 0;
+  if (R) return 1;
   if (O) return 2;
   else if (b || null != V) return 3;
   else if (U) return 4;

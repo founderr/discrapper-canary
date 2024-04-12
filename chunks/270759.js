@@ -22,8 +22,8 @@ var a = n("735250"),
   g = n("153124"),
   A = n("988951"),
   N = n("26290"),
-  v = n("792125"),
-  R = n("666286"),
+  R = n("792125"),
+  v = n("666286"),
   O = n("596957"),
   L = n("981631"),
   M = n("723359"),
@@ -68,7 +68,7 @@ t.default = function(e) {
     children: [(0, a.jsx)(h.AppPageTitle, {
       location: P.default.Messages.FRIENDS
     }), (0, a.jsxs)(C.default, {
-      className: (0, v.getThemeClass)(m),
+      className: (0, R.getThemeClass)(m),
       toolbar: (0, a.jsx)(x, {}),
       scrollable: o.isMobile,
       role: "navigation",
@@ -136,7 +136,7 @@ t.default = function(e) {
         id: D,
         className: y.peopleColumn,
         "aria-labelledby": G,
-        children: D === L.FriendsSections.ADD_FRIEND ? (0, a.jsx)(R.default, {}) : (0, a.jsx)(O.default, {
+        children: D === L.FriendsSections.ADD_FRIEND ? (0, a.jsx)(v.default, {}) : (0, a.jsx)(O.default, {
           titleId: G,
           sectionFilter: D
         })

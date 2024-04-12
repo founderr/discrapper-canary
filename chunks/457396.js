@@ -27,8 +27,8 @@ var s = n("924826"),
   g = n("565626"),
   A = n("701910"),
   N = n("886654"),
-  v = n("921944"),
-  R = n("689938"),
+  R = n("921944"),
+  v = n("689938"),
   O = n("392934");
 let L = e => {
   let t, n, {
@@ -50,10 +50,10 @@ let L = e => {
   return L || null != U || null != j || w || H || k || null != F || null != x && Date.now() - x.createdAt.getTime() > 2592e6 || (0, E.hasPremiumSubscriptionToDisplay)(x, D) ? (w ? n = (0, a.jsx)(m.default, {
     isNitroTab: !0
   }) : H ? n = (0, a.jsx)(N.default, {
-    copy: R.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_MODAL_TOP_PILL,
+    copy: v.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_MODAL_TOP_PILL,
     isSelected: L,
     onSelect: () => (0, o.markDismissibleContentAsDismissed)(i.DismissibleContent.PREMIUM_2024_APRIL_MARKETING_BADGE, {
-      dismissAction: v.ContentDismissActionType.TAKE_ACTION
+      dismissAction: R.ContentDismissActionType.TAKE_ACTION
     })
   }) : null != F ? n = (0, a.jsx)(A.default, {
     copy: F
@@ -70,7 +70,7 @@ let L = e => {
     selected: L,
     route: M,
     icon: f.default,
-    text: R.default.Messages.PREMIUM,
+    text: v.default.Messages.PREMIUM,
     locationState: P,
     ...y,
     ...b,

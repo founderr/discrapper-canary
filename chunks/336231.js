@@ -4,8 +4,8 @@ l.r(t), l.d(t, {
     return a
   }
 }), l("47120");
-var o = l("735250"),
-  n = l("470079"),
+var n = l("735250"),
+  o = l("470079"),
   r = l("481060"),
   s = l("703685"),
   i = l("689938");
@@ -18,32 +18,32 @@ function a(e) {
     onChange: c,
     disabled: u = !1,
     customPickerPosition: d = "bottom"
-  } = e, [h, C] = n.useState(() => 0 === a || a === t || l.some(e => e === a) ? null : a);
-  n.useEffect(() => {
+  } = e, [h, C] = o.useState(() => 0 === a || a === t || l.some(e => e === a) ? null : a);
+  o.useEffect(() => {
     C(0 === a || a === t || l.some(e => e === a) ? null : a)
   }, [a, l, t]);
-  let p = n.useCallback(e => {
+  let p = o.useCallback(e => {
       null == c || c(e), C(null)
     }, [c, C]),
-    f = n.useCallback(e => {
+    f = o.useCallback(e => {
       null == c || c(e), C(e)
     }, [c, C]),
-    x = n.useCallback(() => (0, o.jsx)(s.CustomColorPicker, {
+    x = o.useCallback(() => (0, n.jsx)(s.CustomColorPicker, {
       onChange: f,
       value: h
     }), [f, h]),
-    m = n.useCallback(e => {
-      let t = (0, o.jsx)(s.CustomColorButton, {
+    m = o.useCallback(e => {
+      let t = (0, n.jsx)(s.CustomColorButton, {
         ...e,
         "aria-label": i.default.Messages.CUSTOM_COLOR
       });
-      return u ? t : (0, o.jsx)(r.Popout, {
+      return u ? t : (0, n.jsx)(r.Popout, {
         renderPopout: x,
         position: d,
-        children: e => (0, o.jsx)(r.Tooltip, {
+        children: e => (0, n.jsx)(r.Tooltip, {
           text: i.default.Messages.CUSTOM_COLOR,
           position: "bottom",
-          children: l => (0, o.jsx)("div", {
+          children: l => (0, n.jsx)("div", {
             ...l,
             ...e,
             children: t
@@ -51,20 +51,20 @@ function a(e) {
         })
       })
     }, [d, u, x]),
-    g = n.useCallback(e => {
-      let t = (0, o.jsx)(s.DefaultColorButton, {
+    g = o.useCallback(e => {
+      let t = (0, n.jsx)(s.DefaultColorButton, {
         ...e
       });
-      return u ? t : (0, o.jsx)(r.Tooltip, {
+      return u ? t : (0, n.jsx)(r.Tooltip, {
         text: i.default.Messages.DEFAULT,
         position: "bottom",
-        children: e => (0, o.jsx)("div", {
+        children: e => (0, n.jsx)("div", {
           ...e,
           children: t
         })
       })
     }, [u]);
-  return (0, o.jsx)(s.default, {
+  return (0, n.jsx)(s.default, {
     ...e,
     renderDefaultButton: g,
     renderCustomButton: m,

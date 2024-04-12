@@ -22,12 +22,12 @@ let C = "IncomingCallStore",
   A = 0,
   N = !1;
 
-function v(e) {
+function R(e) {
   if (null == e || null == T.get(e)) return !1;
   T.delete(e), (p = new Set(p)).delete(e)
 }
 
-function R(e) {
+function v(e) {
   let {
     channelId: t,
     ringing: n
@@ -43,7 +43,7 @@ function R(e) {
     }), (p = new Set(p)).add(t)
   } else {
     if (!p.has(t) || a) return !1;
-    v(t)
+    R(t)
   }
 }! function() {
   let e = o.Storage.get(C);
@@ -80,19 +80,19 @@ i = "IncomingCallStore", (l = "displayName") in(s = L) ? Object.defineProperty(s
   configurable: !0,
   writable: !0
 }) : s[l] = i, t.default = new L(u.default, {
-  CALL_CREATE: R,
-  CALL_UPDATE: R,
+  CALL_CREATE: v,
+  CALL_UPDATE: v,
   CALL_DELETE: function(e) {
     let {
       channelId: t
     } = e;
-    return v(t)
+    return R(t)
   },
   VOICE_CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    return v(t)
+    return R(t)
   },
   INCOMING_CALL_MOVE: function(e) {
     let {
@@ -108,6 +108,6 @@ i = "IncomingCallStore", (l = "displayName") in(s = L) ? Object.defineProperty(s
     let {
       channel: t
     } = e;
-    return v(t.id)
+    return R(t.id)
   }
 })

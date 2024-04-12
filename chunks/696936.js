@@ -11,12 +11,12 @@ var n = s("735250");
 s("470079");
 var l = s("803997"),
   a = s.n(l),
-  o = s("481060"),
-  i = s("789718");
+  i = s("481060"),
+  o = s("789718");
 let r = {
-  RED: i.redMessageBlock,
-  YELLOW: i.yellowMessageBlock,
-  BROWN: i.brownMessageBlock
+  RED: o.redMessageBlock,
+  YELLOW: o.yellowMessageBlock,
+  BROWN: o.brownMessageBlock
 };
 
 function u(e) {
@@ -26,13 +26,13 @@ function u(e) {
     children: l,
     className: r
   } = e;
-  return (0, n.jsx)(o.FormErrorBlock, {
+  return (0, n.jsx)(i.FormErrorBlock, {
     icon: e => (0, n.jsx)(s, {
       height: 20,
       width: 20,
       ...e
     }),
-    iconClassName: i.messageBlockIcon,
+    iconClassName: o.messageBlockIcon,
     className: a()(t, r),
     children: l
   })

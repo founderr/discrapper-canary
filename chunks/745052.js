@@ -22,8 +22,8 @@ var a = n("735250"),
   g = n("243778"),
   A = n("984370"),
   N = n("797614"),
-  v = n("359110"),
-  R = n("6025"),
+  R = n("359110"),
+  v = n("6025"),
   O = n("897473"),
   L = n("108427"),
   M = n("970731"),
@@ -255,7 +255,7 @@ let eo = (0, h.default)(function(e) {
     m = (0, k.useIsEitherTypeOfMessageRequest)(_),
     S = (0, w.useHasUserRepliedInChannel)(_);
   s.useEffect(() => {
-    null != _ && !m && S && C && ((0, v.transitionToChannel)(_), R.default.closeChannelSidebar(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
+    null != _ && !m && S && C && ((0, R.transitionToChannel)(_), v.default.closeChannelSidebar(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
   }, [_, S, C, m]);
   let [I, p] = s.useState(Z.MessageRequestSections.REQUESTS);
   return (0, T.usePageTitle)({
