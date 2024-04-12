@@ -31,7 +31,7 @@ let u = e => {
     (0, s.getHistory)().location.pathname === o.Routes.COLLECTIBLES_SHOP_FULLSCREEN && (0, s.transitionTo)(o.Routes.APP);
     let {
       default: e
-    } = await Promise.all([n.e("99387"), n.e("79589")]).then(n.bind(n, "235400"));
+    } = await Promise.resolve().then(n.bind(n, "235400"));
     return n => (0, i.jsx)(e, {
       ...n,
       onCloseModal: n.onClose,

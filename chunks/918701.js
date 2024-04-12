@@ -208,7 +208,7 @@ function A(e) {
   return {
     skuId: e.sku_id,
     tenantMetadata: function(e) {
-      if (null == e) return null;
+      if ((null == e ? void 0 : e.quest_rewards) == null) return null;
       let t = e.quest_rewards;
       switch (t.reward.tag) {
         case r.QuestRewardTypes.IN_GAME:

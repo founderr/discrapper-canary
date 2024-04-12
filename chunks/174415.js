@@ -1,5 +1,6 @@
 "use strict";
 e.exports = {
+  claimedRootContainer: "claimedRootContainer__21952",
   close: "close__85eb5",
   confettiCanvas: "confettiCanvas_d0db40",
   footerContainer: "footerContainer__95cd2",
@@ -11,5 +12,6 @@ e.exports = {
   previewContainer: "previewContainer__32cb1",
   rootContainer: "rootContainer_d251a3",
   spinner: "spinner__2aca6",
+  spinnerContainer: "spinnerContainer_b7aa46",
   text: "text__4fd4a"
 }
