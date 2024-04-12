@@ -8,8 +8,8 @@ var s, a, l, i, r = n("392711"),
   f = n("570140"),
   E = n("786761"),
   _ = n("572804"),
-  T = n("901461"),
-  m = n("23750"),
+  m = n("901461"),
+  T = n("23750"),
   I = n("314897"),
   p = n("592125"),
   h = n("375954"),
@@ -35,7 +35,7 @@ let R = "recentMentionFilterSettings",
   b = !1;
 
 function j(e) {
-  if (e instanceof m.default) return e;
+  if (e instanceof T.default) return e;
   let t = h.default.getMessage(e.channel_id, e.id);
   return null != t ? t : (0, E.createMessageRecord)(e)
 }
@@ -43,7 +43,7 @@ function j(e) {
 function G(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-  if ((0, T.default)(e)) return null;
+  if ((0, m.default)(e)) return null;
   null == n && (n = e.channel_id);
   let s = p.default.getChannel(n);
   if (null == s || s.type === M.ChannelTypes.DM || D.guildFilter === M.RecentMentionsFilters.THIS_SERVER && s.getGuildId() !== C.default.getGuildId()) return null;

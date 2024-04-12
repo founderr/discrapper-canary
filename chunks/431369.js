@@ -1,27 +1,27 @@
 "use strict";
-s.r(e), s.d(e, {
+n.r(t), n.d(t, {
   calculateAdditionalPlansWithPremiumGuildAdjustment: function() {
     return r
   }
-}), s("411104"), s("47120");
-var n = s("512722"),
-  i = s.n(n),
-  l = s("509545"),
-  a = s("74538"),
-  u = s("474936"),
-  o = s("981631");
+}), n("411104"), n("47120");
+var i = n("512722"),
+  l = n.n(i),
+  s = n("509545"),
+  a = n("74538"),
+  u = n("474936"),
+  o = n("981631");
 
-function r(t, e) {
-  let s = l.default.get(t.planId);
-  i()(null != s, "missing premium subscription plan");
-  let n = l.default.getForSkuAndInterval((0, a.castPremiumSubscriptionAsSkuId)(u.PremiumSubscriptionSKUs.GUILD), s.interval, s.intervalCount);
-  i()(null != n, "missing premium guild plan");
-  let r = null != t.renewalMutations ? t.renewalMutations.additionalPlans : t.additionalPlans,
-    d = (t.status === o.SubscriptionStatusTypes.CANCELED ? 0 : (0, a.getNumPremiumGuildSubscriptions)(r)) + e,
-    c = r.filter(t => t.planId !== n.id);
-  if (d < 0) throw Error("Invalid adjustment");
-  return 0 === d ? c : [...c, {
-    planId: n.id,
-    quantity: d
+function r(e, t) {
+  let n = s.default.get(e.planId);
+  l()(null != n, "missing premium subscription plan");
+  let i = s.default.getForSkuAndInterval((0, a.castPremiumSubscriptionAsSkuId)(u.PremiumSubscriptionSKUs.GUILD), n.interval, n.intervalCount);
+  l()(null != i, "missing premium guild plan");
+  let r = null != e.renewalMutations ? e.renewalMutations.additionalPlans : e.additionalPlans,
+    c = (e.status === o.SubscriptionStatusTypes.CANCELED ? 0 : (0, a.getNumPremiumGuildSubscriptions)(r)) + t,
+    d = r.filter(e => e.planId !== i.id);
+  if (c < 0) throw Error("Invalid adjustment");
+  return 0 === c ? d : [...d, {
+    planId: i.id,
+    quantity: c
   }]
 }

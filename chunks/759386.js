@@ -1,30 +1,30 @@
 "use strict";
 n.r(t), n.d(t, {
   getApplicationPaymentSteps: function() {
-    return f
+    return I
   }
 }), n("47120");
 var a = n("735250");
 n("470079");
 var r = n("409813"),
-  s = n("276442"),
-  l = n("961830"),
+  l = n("276442"),
+  s = n("961830"),
   i = n("721165"),
   u = n("519801"),
   o = n("589771"),
   d = n("883419"),
   c = n("689938");
 
-function f(e) {
+function I(e) {
   let {
     guildId: t,
     eligibleApplicationSubscriptionGuilds: n,
-    showBenefitsFirst: f
+    showBenefitsFirst: I
   } = e;
   return [{
     key: null,
     renderStep: e => (0, a.jsx)(o.default, {
-      initialStep: f ? r.Step.BENEFITS : r.Step.REVIEW,
+      initialStep: I ? r.Step.BENEFITS : r.Step.REVIEW,
       guildId: t,
       ...e
     })
@@ -39,7 +39,7 @@ function f(e) {
   }, {
     key: r.Step.ADD_PAYMENT_STEPS,
     renderStep: e => (0, a.jsx)(a.Fragment, {
-      children: (0, a.jsx)(s.PaymentModalAddPaymentStep, {
+      children: (0, a.jsx)(l.PaymentModalAddPaymentStep, {
         ...e,
         breadcrumbSteps: [r.Step.ADD_PAYMENT_STEPS, r.Step.REVIEW, r.Step.CONFIRM]
       })
@@ -47,11 +47,11 @@ function f(e) {
     options: {
       renderHeader: !0
     }
-  }, ...l.SHARED_STEP_CONFIGS, {
+  }, ...s.SHARED_STEP_CONFIGS, {
     key: r.Step.REVIEW,
     renderStep: e => (0, a.jsx)(d.default, {
-      backButtonEligible: !!f || void 0,
-      prevStep: f ? r.Step.BENEFITS : void 0,
+      backButtonEligible: !!I || void 0,
+      prevStep: I ? r.Step.BENEFITS : void 0,
       showGuildPicker: null == t,
       eligibleApplicationSubscriptionGuilds: n,
       ...e
@@ -63,7 +63,7 @@ function f(e) {
   }, {
     key: r.Step.CONFIRM,
     renderStep: e => (0, a.jsx)(u.default, {
-      showBenefits: !f,
+      showBenefits: !I,
       ...e
     })
   }]

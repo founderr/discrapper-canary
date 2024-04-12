@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return m
   }
 });
 var s = n("735250");
@@ -25,7 +25,7 @@ function _(e) {
   } = e, u = (0, a.useStateFromStores)([r.default, o.default], () => r.default.getChannel(o.default.getChannelId())), {
     everyoneFilter: d,
     roleFilter: _,
-    guildFilter: T
+    guildFilter: m
   } = (0, a.useStateFromStoresObject)([c.default], () => {
     let {
       everyoneFilter: e,
@@ -66,15 +66,15 @@ function _(e) {
       label: E.default.Messages.RECENT_MENTIONS_FILTER_ALL_SERVERS,
       action: function() {
         i.default.setGuildFilter({
-          guildFilter: T === f.RecentMentionsFilters.THIS_SERVER ? f.RecentMentionsFilters.ALL_SERVERS : f.RecentMentionsFilters.THIS_SERVER
+          guildFilter: m === f.RecentMentionsFilters.THIS_SERVER ? f.RecentMentionsFilters.ALL_SERVERS : f.RecentMentionsFilters.THIS_SERVER
         })
       },
-      checked: T === f.RecentMentionsFilters.ALL_SERVERS
+      checked: m === f.RecentMentionsFilters.ALL_SERVERS
     })]
   })
 }
 
-function T() {
+function m() {
   return (0, s.jsx)(l.Popout, {
     align: "right",
     animation: l.Popout.Animation.NONE,

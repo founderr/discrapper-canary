@@ -16,8 +16,8 @@ var s = n("512722"),
   f = n("904245"),
   E = n("881052"),
   _ = n("367907"),
-  T = n("41776"),
-  m = n("566006"),
+  m = n("41776"),
+  T = n("566006"),
   I = n("3148"),
   p = n("869765"),
   h = n("314897"),
@@ -76,7 +76,7 @@ function U(e) {
     answerId: s
   } = e, a = N.default.getChannel(t);
   if (null == a) return;
-  if (T.default.isLurking(a.guild_id)) {
+  if (m.default.isLurking(a.guild_id)) {
     y({
       guildId: a.guild_id,
       title: D.default.Messages.POLL_LURKING_SEE_VOTES_TITLE,
@@ -148,7 +148,7 @@ async function G(e) {
       },
       userId: d,
       optimistic: !0,
-      reactionType: m.ReactionTypes.VOTE
+      reactionType: T.ReactionTypes.VOTE
     });
     return e
   });
@@ -160,7 +160,7 @@ async function B(e) {
     messageId: n
   } = e, s = N.default.getChannel(t);
   if (null == s) return;
-  if (T.default.isLurking(s.guild_id)) {
+  if (m.default.isLurking(s.guild_id)) {
     y({
       guildId: s.guild_id,
       title: D.default.Messages.POLL_LURKING_VOTE_TITLE,
@@ -220,7 +220,7 @@ async function F(e) {
     messageId: n
   } = e, s = N.default.getChannel(t);
   if (null != s) {
-    if (T.default.isLurking(s.guild_id)) {
+    if (m.default.isLurking(s.guild_id)) {
       y({
         guildId: s.guild_id,
         title: D.default.Messages.POLL_LURKING_UNVOTE_TITLE,

@@ -19,8 +19,8 @@ var s = n("735250"),
   f = n("695346"),
   E = n("271383"),
   _ = n("594174"),
-  T = n("346656"),
-  m = n("682864"),
+  m = n("346656"),
+  T = n("682864"),
   I = n("671533"),
   p = n("810090"),
   h = n("51144"),
@@ -43,7 +43,7 @@ function O(e) {
       variant: "text-sm/medium",
       color: "header-primary",
       children: M.default.Messages.GUILD_STORE_HERO_SHOW_MORE_DESCRIPTION_LABEL
-    }), (0, s.jsx)(m.default, {
+    }), (0, s.jsx)(T.default, {
       size: 4,
       horizontal: !0
     }), (0, s.jsx)(I.default, {
@@ -113,7 +113,7 @@ function L(e) {
         children: null == f ? void 0 : f.description
       })
     }), L && (0, s.jsxs)(s.Fragment, {
-      children: [(0, s.jsx)(m.default, {
+      children: [(0, s.jsx)(T.default, {
         size: 4
       }), (0, s.jsx)(O, {
         onClick: () => (0, g.default)({
@@ -131,12 +131,12 @@ function L(e) {
     children: [(0, s.jsxs)("div", {
       className: R.infoContainer,
       children: [(0, s.jsx)("div", {
-        children: (0, s.jsx)(T.default, {
+        children: (0, s.jsx)(m.default, {
           guild: c,
-          size: T.default.Sizes.LARGER,
+          size: m.default.Sizes.LARGER,
           iconSrc: null == c.icon || j ? (0, d.getAssetCDNUrl)("server_products/storefront/default-guild-icon.jpg") : void 0
         })
-      }), (0, s.jsx)(m.default, {
+      }), (0, s.jsx)(T.default, {
         size: 16,
         horizontal: !0
       }), (0, s.jsxs)("div", {
@@ -153,7 +153,7 @@ function L(e) {
             })
           })
         }), (0, s.jsxs)(s.Fragment, {
-          children: [(0, s.jsx)(m.default, {
+          children: [(0, s.jsx)(T.default, {
             size: 8
           }), (0, s.jsx)(o.Text, {
             variant: "text-md/normal",
@@ -169,7 +169,7 @@ function L(e) {
                 }, t)
               }
             })
-          }), (0, s.jsx)(m.default, {
+          }), (0, s.jsx)(T.default, {
             size: 9
           }), B]
         })]

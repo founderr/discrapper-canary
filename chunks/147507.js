@@ -12,8 +12,8 @@ var s, a, l, i, r = n("735250"),
   f = n("153832"),
   E = n("468194"),
   _ = n("477690"),
-  T = n("481060"),
-  m = n("230711"),
+  m = n("481060"),
+  T = n("230711"),
   I = n("745510"),
   p = n("739566"),
   h = n("64078"),
@@ -146,7 +146,7 @@ function k(e) {
         return "BOTTOM_RIGHT"
     }
   }()), {
-    createMultipleConfettiAt: m,
+    createMultipleConfettiAt: T,
     confettiCanvas: p
   } = o.useContext(I.ConfettiCannonContext), [h, N] = o.useState(null), C = (0, c.useConfettiCannon)(p, h), A = function(e, t) {
     if (null == e) return "enter";
@@ -187,7 +187,7 @@ function k(e) {
           y: s.top + a.y
         }
       }(i.current, _, l);
-      m(t.x, t.y, {
+      T(t.x, t.y, {
         velocity: {
           type: "static-random",
           minValue: {
@@ -201,7 +201,7 @@ function k(e) {
         }
       })
     }
-  }, [m, _, u, l]), o.useEffect(() => {
+  }, [T, _, u, l]), o.useEffect(() => {
     if (g && "leaf_fall" === u) {
       let e = y[_].leafRotationDirection;
       C.createConfetti({
@@ -259,7 +259,7 @@ function k(e) {
       colors: b,
       spriteWidth: 45,
       spriteHeight: 45
-    }), (0, r.jsx)(T.Clickable, {
+    }), (0, r.jsx)(m.Clickable, {
       onClick: n,
       className: d()(v.easterEggAnimationClickTarget, {
         [v.easterEggAnimationClickTargetTopLeft]: "TOP_LEFT" === _,
@@ -311,7 +311,7 @@ function w(e) {
     S = o.useRef(null),
     {
       reducedMotion: L
-    } = o.useContext(T.AccessibilityPreferencesContext),
+    } = o.useContext(m.AccessibilityPreferencesContext),
     x = (0, p.getMessageAuthor)(n),
     D = x.nick,
     P = l(x);
@@ -349,13 +349,13 @@ function w(e) {
     j = o.useCallback(() => {
       (0, h.updatePoggermodeSettings)({
         settingsVisible: !0
-      }), m.default.open(R.UserSettingsSections.POGGERMODE), _(!1)
+      }), T.default.open(R.UserSettingsSections.POGGERMODE), _(!1)
     }, []),
     G = o.useCallback((e, t) => {
       (null == t ? void 0 : t.id.startsWith(U)) && j()
     }, [j]);
   o.useEffect(() => f(G));
-  let B = (0, r.jsx)(T.Clickable, {
+  let B = (0, r.jsx)(m.Clickable, {
     className: v.iconWrapper,
     innerRef: S,
     onClick: i,

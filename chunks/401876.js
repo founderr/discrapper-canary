@@ -1,39 +1,39 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   default: function() {
     return c
   }
 });
-var a = n("735250"),
-  s = n("470079"),
-  l = n("481060"),
-  i = n("377171"),
-  r = n("26290"),
-  d = n("854698"),
-  u = n("689938"),
-  o = n("718149");
+var a = l("735250"),
+  n = l("470079"),
+  s = l("481060"),
+  r = l("377171"),
+  i = l("26290"),
+  d = l("854698"),
+  u = l("689938"),
+  o = l("718149");
 
 function c(e) {
   let {
     startDate: t,
-    recurrenceRule: n,
+    recurrenceRule: l,
     onRecurrenceChange: c
-  } = e, E = s.useMemo(() => (0, d.recurrenceRuleToOption)(t, n), [n, t]), f = (0, d.getRecurrenceOptions)(t), h = e => e.toString(), _ = (0, a.jsxs)("div", {
+  } = e, E = n.useMemo(() => (0, d.recurrenceRuleToOption)(t, l), [l, t]), _ = (0, d.getRecurrenceOptions)(t), f = e => e.toString(), T = (0, a.jsxs)("div", {
     className: o.title,
-    children: [u.default.Messages.CREATE_EVENT_RECUR_LABEL, (0, a.jsx)(r.TextBadge, {
+    children: [u.default.Messages.CREATE_EVENT_RECUR_LABEL, (0, a.jsx)(i.TextBadge, {
       text: u.default.Messages.NEW,
-      color: i.default.BG_BRAND
+      color: r.default.BG_BRAND
     })]
   });
-  return (0, a.jsx)(l.FormItem, {
-    title: _,
+  return (0, a.jsx)(s.FormItem, {
+    title: T,
     required: !0,
-    children: (0, a.jsx)(l.Select, {
+    children: (0, a.jsx)(s.Select, {
       placeholder: "gaming",
-      options: f,
+      options: _,
       select: c,
-      serialize: h,
-      isSelected: e => null != E && h(e) === h(E)
+      serialize: f,
+      isSelected: e => null != E && f(e) === f(E)
     })
   })
 }

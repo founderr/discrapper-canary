@@ -12,8 +12,8 @@ var s, a, l, i, r = n("913527"),
   f = n("433517"),
   E = n("570140"),
   _ = n("579806"),
-  T = n("726542"),
-  m = n("812206"),
+  m = n("726542"),
+  T = n("812206"),
   I = n("223892"),
   p = n("674525"),
   h = n("605236"),
@@ -66,8 +66,8 @@ var s, a, l, i, r = n("913527"),
   ef = n("558724"),
   eE = n("23434"),
   e_ = n("594174"),
-  eT = n("979651"),
-  em = n("351402"),
+  em = n("979651"),
+  eT = n("351402"),
   eI = n("853872"),
   ep = n("78839"),
   eh = n("295226"),
@@ -242,7 +242,7 @@ let eV = [eO.NoticeTypes.QUARANTINED, eO.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         let {
           voiceChannelId: t
         } = e, n = X.default.getChannel(t);
-        return !es.default.getOpenH264() && null != t && eT.default.hasVideo(t) && null != n && n.isGuildStageVoice()
+        return !es.default.getOpenH264() && null != t && em.default.hasVideo(t) && null != n && n.isGuildStageVoice()
       }
     },
     [eO.NoticeTypes.HARDWARE_MUTE]: {
@@ -304,7 +304,7 @@ let eV = [eO.NoticeTypes.QUARANTINED, eO.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         let {
           voiceChannelId: t
         } = e;
-        return null != t && eT.default.hasVideo(t) && !es.default.supports(ey.Features.VIDEO) && !eH(eO.NoticeTypes.VIDEO_UNSUPPORTED_BROWSER)
+        return null != t && em.default.hasVideo(t) && !es.default.supports(ey.Features.VIDEO) && !eH(eO.NoticeTypes.VIDEO_UNSUPPORTED_BROWSER)
       }
     },
     [eO.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK]: {
@@ -378,7 +378,7 @@ let eV = [eO.NoticeTypes.QUARANTINED, eO.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       }
     },
     [eO.NoticeTypes.CONNECT_SPOTIFY]: {
-      predicate: () => !K.default.hasConnectedAccount() && A.default.isObservedAppRunning(T.default.get(eO.PlatformTypes.SPOTIFY).name) && !eH(eO.NoticeTypes.CONNECT_SPOTIFY)
+      predicate: () => !K.default.hasConnectedAccount() && A.default.isObservedAppRunning(m.default.get(eO.PlatformTypes.SPOTIFY).name) && !eH(eO.NoticeTypes.CONNECT_SPOTIFY)
     },
     [eO.NoticeTypes.WIN32_DEPRECATED_MESSAGE]: {
       predicate: () => {
@@ -517,7 +517,7 @@ let eV = [eO.NoticeTypes.QUARANTINED, eO.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       metadata: () => {
         if (null == eS.default.testModeApplicationId) return {};
         let e = eS.default.testModeApplicationId,
-          t = m.default.getApplication(e);
+          t = T.default.getApplication(e);
         return {
           applicationName: null != t ? t.name : e,
           applicationId: e
@@ -655,10 +655,10 @@ function eW() {
   let e = e_.default.getCurrentUser();
   if (null == e) return !1;
   let t = ep.default.getPremiumSubscription(),
-    n = em.default.isLocalizedPromoEnabled,
+    n = eT.default.isLocalizedPromoEnabled,
     s = eu.default.getGuildId(),
     a = eo.default.getVoiceChannelId(),
-    l = null != a ? eT.default.getVoiceStateForChannel(a) : null;
+    l = null != a ? em.default.getVoiceStateForChannel(a) : null;
   for (let o of ev.CONFERENCE_MODE_ENABLED ? eY : eV)
     if (null != eK[o] && eK[o].predicate({
         selectedGuildId: s,

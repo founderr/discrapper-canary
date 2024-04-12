@@ -12,8 +12,8 @@ var s = n("735250"),
   f = n("484459"),
   E = n("598077"),
   _ = n("63063"),
-  T = n("153066"),
-  m = n("51144"),
+  m = n("153066"),
+  T = n("51144"),
   I = n("285952"),
   p = n("936195"),
   h = n("409216"),
@@ -47,7 +47,7 @@ class R extends a.PureComponent {
       children: a => {
         var l;
         return (0, s.jsx)(o.Tooltip, {
-          text: e.unknownUser ? null : null !== (l = e.nick) && void 0 !== l ? l : m.default.getName(e.user),
+          text: e.unknownUser ? null : null !== (l = e.nick) && void 0 !== l ? l : T.default.getName(e.user),
           children: l => (0, s.jsx)(o.Clickable, {
             className: e.unknownUser ? g.partyMember : g.partyMemberKnown,
             ...l,
@@ -304,7 +304,7 @@ class O extends a.PureComponent {
     })) : d = (0, s.jsx)("img", {
       alt: "",
       src: t,
-      className: (0, T.getClass)(g, "artwork", this.getActionableMode())
+      className: (0, m.getClass)(g, "artwork", this.getActionableMode())
     });
     let f = null != a && null != d && null != a.assets && null != a.assets.large_text && "" !== a.assets.large_text && !u && (0, c.default)(a) ? a.assets.large_text : null,
       E = null != f ? (0, s.jsx)(o.Tooltip, {
@@ -327,7 +327,7 @@ class O extends a.PureComponent {
       children: [(0, s.jsx)("div", {
         className: g.coverImageWrapper,
         children: (0, s.jsx)("div", {
-          className: i()((0, T.getClass)(g, "coverImage", this.getActionableMode()), null != d ? g.blurred : null),
+          className: i()((0, m.getClass)(g, "coverImage", this.getActionableMode()), null != d ? g.blurred : null),
           style: {
             backgroundImage: null != t ? "url('".concat(t, "')") : void 0
           }

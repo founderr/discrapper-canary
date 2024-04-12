@@ -11,8 +11,8 @@ var s, a = n("735250"),
   f = n("55008"),
   E = n("592771"),
   _ = n("305177"),
-  T = n("73346"),
-  m = n("568836"),
+  m = n("73346"),
+  T = n("568836"),
   I = n("345898"),
   p = n("981631"),
   h = n("656049");
@@ -36,7 +36,7 @@ class S extends(s = l.PureComponent) {
       renderCustomTitle: i,
       renderCustomMedia: r,
       isEmbed: o
-    } = this.props, u = o ? m.ResponsiveEmbedTile : I.default;
+    } = this.props, u = o ? T.ResponsiveEmbedTile : I.default;
     return (0, a.jsx)(u, {
       className: s,
       renderMedia: null != r ? r : this.renderMedia,
@@ -90,8 +90,8 @@ class S extends(s = l.PureComponent) {
           className: r()(h.splashContainer, {
             [h.splashContainerHorizontal]: o
           }),
-          video: null != u.previewVideo ? (0, T.getAssetURL)(i.applicationId, u.previewVideo) : void 0,
-          image: null != u.thumbnail ? (0, T.getAssetURL)(i.applicationId, u.thumbnail, 600) : null,
+          video: null != u.previewVideo ? (0, m.getAssetURL)(i.applicationId, u.previewVideo) : void 0,
+          image: null != u.thumbnail ? (0, m.getAssetURL)(i.applicationId, u.thumbnail, 600) : null,
           title: i.name,
           playing: e,
           muted: t,

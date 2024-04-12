@@ -16,9 +16,9 @@ var s = n("904245"),
   f = n("176354"),
   E = n("709054"),
   _ = n("981631"),
-  T = n("185923");
+  m = n("185923");
 
-function m(e) {
+function T(e) {
   let t = d.default.getGuild(e);
   return null != t && (t.nsfwLevel === _.GuildNSFWContentLevel.DEFAULT || t.nsfwLevel === _.GuildNSFWContentLevel.SAFE)
 }
@@ -30,7 +30,7 @@ async function I(e, t) {
   if (null == h) return;
   await (0, r.fetchStickerPacks)();
   let N = Array.from(o.default.getAllStickersIterator()),
-    S = N.filter(e => e.type === u.MetaStickerType.GUILD).filter(e => m(e.guild_id) && (0, i.isSendableSticker)(e, h, t)).sort((e, t) => -E.default.compare(e.id, t.id));
+    S = N.filter(e => e.type === u.MetaStickerType.GUILD).filter(e => T(e.guild_id) && (0, i.isSendableSticker)(e, h, t)).sort((e, t) => -E.default.compare(e.id, t.id));
   if (S.length > 5) {
     let a = [S[Math.floor(Math.pow(Math.random(), 2) * S.length)].id];
     s.default.sendStickers(t.id, a, "", {
@@ -42,11 +42,11 @@ async function I(e, t) {
     });
     return
   }
-  let C = d.default.getGuildIds().filter(m).map(e => a.default.getUsableGuildEmoji(e)).flat().filter(e => null == f.default.getEmojiUnavailableReason({
+  let C = d.default.getGuildIds().filter(T).map(e => a.default.getUsableGuildEmoji(e)).flat().filter(e => null == f.default.getEmojiUnavailableReason({
     emoji: e,
     channel: t,
     guildId: p,
-    intention: T.EmojiIntention.CHAT
+    intention: m.EmojiIntention.CHAT
   })).sort((e, t) => -E.default.compare(e.id, t.id));
   if (C.length > 10) {
     let n = C[Math.floor(Math.pow(Math.random(), 2) * C.length)];

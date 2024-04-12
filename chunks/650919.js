@@ -37,8 +37,8 @@ function f(e) {
     _ = (0, i.useStateFromStores)([o.default], () => {
       if (null != f) return o.default.getGuild(f.guildId)
     }, [f]),
-    [g, h] = a.useState(!1),
-    I = null == s ? void 0 : function(e) {
+    [g, I] = a.useState(!1),
+    h = null == s ? void 0 : function(e) {
       let {
         listing: t,
         subscription: s
@@ -60,9 +60,9 @@ function f(e) {
     application: m,
     guild: _,
     expanded: g,
-    handleToggleExpanded: () => h(e => !e),
+    handleToggleExpanded: () => I(e => !e),
     listing: s,
     groupListing: n,
-    subscriptionInfo: I
+    subscriptionInfo: h
   }
 }

@@ -21,8 +21,8 @@ var s, a, l, i, r = n("470079"),
   f = n.n(c),
   E = n("570140"),
   _ = n("904245"),
-  T = n("45114"),
-  m = n("607070"),
+  m = n("45114"),
+  T = n("607070"),
   I = n("853856"),
   p = n("181945"),
   h = n("220444"),
@@ -168,7 +168,7 @@ class V extends o.EventEmitter {
         channelId: t,
         newestUnreadMessageId: n
       } = e;
-      if (E.default.wait(() => T.ack(t, !0, void 0, n, {
+      if (E.default.wait(() => m.ack(t, !0, void 0, n, {
           section: F.AnalyticsSections.INBOX
         })), 1 === this.state.channels.length) {
         this.deleteChannel(t);
@@ -179,7 +179,7 @@ class V extends o.EventEmitter {
           ...e,
           deleted: !0
         }))
-      }), m.default.useReducedMotion && this.deleteChannel(t), this.maybeLoadMore()
+      }), T.default.useReducedMotion && this.deleteChannel(t), this.maybeLoadMore()
     }, this.markGuildRead = e => {
       E.default.wait(() => (0, p.default)([e], F.AnalyticsSections.INBOX)), this.setState({
         channels: this.state.channels.filter(t => t.guildId !== e)
@@ -190,7 +190,7 @@ class V extends o.EventEmitter {
         channels: this.state.channels.filter(t => t.channelId !== e)
       }), this.maybeLoadMore()
     }, this.markAllRead = () => {
-      T.bulkAck(this.state.channels.map(e => ({
+      m.bulkAck(this.state.channels.map(e => ({
         channelId: e.channelId,
         messageId: e.newestUnreadMessageId
       }))), this.setState({

@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return c
+    return d
   }
 }), n("47120");
-var r = n("735250"),
-  a = n("470079"),
+var a = n("735250"),
+  r = n("470079"),
   s = n("911765");
 let i = [n("992134")],
   l = ["#FFFFFF"],
-  u = 1e3 / 60,
-  o = {
+  o = 1e3 / 60,
+  u = {
     velocity: {
       type: "static-random",
       minValue: {
@@ -63,19 +63,19 @@ let i = [n("992134")],
     }
   };
 
-function c(e) {
+function d(e) {
   let {
     className: t,
     firing: n = !0,
-    wind: c = 2
-  } = e, [d, f] = a.useState(null), [E, p] = a.useState(null), m = (0, s.useConfettiCannon)(E, d), S = a.useMemo(() => new s.Environment({
-    wind: c
-  }), [c]), h = a.useCallback(() => {
-    let e = null == E ? void 0 : E.getCanvas();
+    wind: d = 2
+  } = e, [c, p] = r.useState(null), [m, f] = r.useState(null), h = (0, s.useConfettiCannon)(m, c), E = r.useMemo(() => new s.Environment({
+    wind: d
+  }), [d]), S = r.useCallback(() => {
+    let e = null == m ? void 0 : m.getCanvas();
     if (null == e) return;
     let t = e.getBoundingClientRect();
-    m.createConfetti({
-      ...o,
+    h.createConfetti({
+      ...u,
       position: {
         type: "static-random",
         minValue: {
@@ -88,17 +88,17 @@ function c(e) {
         }
       }
     })
-  }, [m, E]);
-  return a.useEffect(() => {
-    let e = n ? setInterval(h, u) : null;
+  }, [h, m]);
+  return r.useEffect(() => {
+    let e = n ? setInterval(S, o) : null;
     return () => clearInterval(e)
-  }, [n, h]), (0, r.jsxs)(r.Fragment, {
-    children: [(0, r.jsx)(s.ConfettiCanvas, {
-      ref: p,
-      className: t,
-      environment: S
-    }), (0, r.jsx)(s.SpriteCanvas, {
+  }, [n, S]), (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)(s.ConfettiCanvas, {
       ref: f,
+      className: t,
+      environment: E
+    }), (0, a.jsx)(s.SpriteCanvas, {
+      ref: p,
       colors: l,
       sprites: i,
       spriteWidth: 6,

@@ -64,8 +64,8 @@ function j(e) {
   var t, n, l, _, S, T, j, O;
   let {
     channel: D,
-    guild: B,
-    header: P,
+    guild: P,
+    header: B,
     error: G,
     loading: y,
     onSave: w,
@@ -77,7 +77,7 @@ function j(e) {
     isSlideReady: F = !0
   } = e, Z = s.useMemo(() => v.default.getStageInstanceByChannel(D.id), [D.id]), [z, W] = s.useState(null !== (n = null !== (t = null == b ? void 0 : b.topic) && void 0 !== t ? t : null == Z ? void 0 : Z.topic) && void 0 !== n ? n : ""), [Y, q] = s.useState(null !== (l = null == b ? void 0 : b.description) && void 0 !== l ? l : ""), [K] = s.useState(H), [X, Q] = s.useState(null !== (_ = null == b ? void 0 : b.schedule) && void 0 !== _ ? _ : {
     startDate: (0, c.getInitialEventStartDate)()
-  }), [J, $] = s.useState(K && (null == b ? void 0 : b.schedule) != null), ee = (0, g.useCanSendStageStartNotification)(D), et = (0, g.useDefaultSendStartStageNotificationToggle)(D), en = null == Z && ee && !K, [ea, es] = s.useState(en && et), el = (0, r.useStateFromStores)([h.default], () => h.default.hasHotspot(p.HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE)), ei = A.GuildScheduledEventPrivacyLevel.GUILD_ONLY, [er] = s.useState(null !== (T = null !== (S = null == b ? void 0 : b.privacyLevel) && void 0 !== S ? S : null == Z ? void 0 : Z.privacy_level) && void 0 !== T ? T : ei), [ed, eu] = s.useState(null == b ? void 0 : b.recurrenceRule), eo = (0, x.useStageBlockedUsersCount)(D.id), [ec, eE] = s.useState(!1), ef = (0, u.default)(D), eh = (0, o.useChannelsUserCanStartStageIn)(B), e_ = null != k, eS = eh.length > 1;
+  }), [J, $] = s.useState(K && (null == b ? void 0 : b.schedule) != null), ee = (0, g.useCanSendStageStartNotification)(D), et = (0, g.useDefaultSendStartStageNotificationToggle)(D), en = null == Z && ee && !K, [ea, es] = s.useState(en && et), el = (0, r.useStateFromStores)([h.default], () => h.default.hasHotspot(p.HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE)), ei = A.GuildScheduledEventPrivacyLevel.GUILD_ONLY, [er] = s.useState(null !== (T = null !== (S = null == b ? void 0 : b.privacyLevel) && void 0 !== S ? S : null == Z ? void 0 : Z.privacy_level) && void 0 !== T ? T : ei), [ed, eu] = s.useState(null == b ? void 0 : b.recurrenceRule), eo = (0, x.useStageBlockedUsersCount)(D.id), [ec, eE] = s.useState(!1), ef = (0, u.default)(D), eh = (0, o.useChannelsUserCanStartStageIn)(P), e_ = null != k, eS = eh.length > 1;
   s.useEffect(() => {
     N.default.track(m.AnalyticEvents.START_STAGE_OPENED, {
       stage_instance_id: null == Z ? void 0 : Z.id,
@@ -131,7 +131,7 @@ function j(e) {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(d.ModalContent, {
       className: R.modalContent,
-      children: [P, (0, a.jsx)("div", {
+      children: [B, (0, a.jsx)("div", {
         className: R.blockedUsersContainer,
         children: null == Z && eo > 0 && (0, a.jsx)(I.BlockedUsersNotice, {
           channelId: D.id

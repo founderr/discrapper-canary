@@ -43,7 +43,7 @@ n.r(t), n.d(t, {
     return s
   },
   MAX_AGE_OPTIONS: function() {
-    return v
+    return O
   },
   MAX_USES_OPTIONS: function() {
     return I
@@ -100,4 +100,4 @@ let s = a(0, () => l.default.Messages.MAX_USES.format({
     days: 7
   })),
   S = a(0, () => l.default.Messages.MAX_AGE_NEVER),
-  v = [f, E, _, N, h, T, S]
+  O = [f, E, _, N, h, T, S]

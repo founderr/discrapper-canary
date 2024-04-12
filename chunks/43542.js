@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("735250");
 n("470079");
 var r = n("481060"),
-  s = n("689938"),
-  l = n("200323");
+  l = n("689938"),
+  s = n("200323");
 
 function i(e) {
   let {
@@ -20,10 +20,10 @@ function i(e) {
     label: e.name
   }));
   return (0, a.jsx)(r.SearchableSelect, {
-    className: l.select,
+    className: s.select,
     maxVisibleItems: 5,
     value: t,
-    placeholder: s.default.Messages.APPLICATION_SUBSCRIPTION_GUILD_PICKER_PLACEHOLDER,
+    placeholder: l.default.Messages.APPLICATION_SUBSCRIPTION_GUILD_PICKER_PLACEHOLDER,
     options: u,
     onChange: e => {
       n(e)

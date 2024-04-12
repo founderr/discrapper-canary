@@ -74,7 +74,7 @@ function E(e) {
     })]
   })
 }
-let L = [{
+let _ = [{
     id: "details",
     name: "Details",
     render: e => {
@@ -132,10 +132,10 @@ let L = [{
       })
     }
   }],
-  _ = {
+  L = {
     events: {
       label: "Events",
-      filter: e => Object.entries(_).filter(e => {
+      filter: e => Object.entries(L).filter(e => {
         let [t] = e;
         return "events" !== t
       }).map(t => {
@@ -162,10 +162,10 @@ let L = [{
 function A() {
   let e = n.useRef(null),
     t = (0, c.useStateFromStores)([b.default], () => b.default.loggedEvents),
-    [r, i] = n.useState(Object.keys(_)),
+    [r, i] = n.useState(Object.keys(L)),
     o = t.filter(e => {
       for (let t of r)
-        if (_[t].filter(e)) return !0;
+        if (L[t].filter(e)) return !0;
       return !1
     }),
     [s, u] = n.useState(void 0),
@@ -174,7 +174,7 @@ function A() {
       TabBar: p,
       renderSelectedTab: g
     } = (0, C.default)({
-      tabs: L
+      tabs: _
     }, []);
   return (0, a.jsxs)("div", {
     ref: e,
@@ -196,7 +196,7 @@ function A() {
         className: j.toolbarDivider
       }), (0, a.jsx)("div", {
         className: j.filters,
-        children: Object.entries(_).map(e => {
+        children: Object.entries(L).map(e => {
           let [t, n] = e;
           return (0, a.jsx)(d.Clickable, {
             className: l()(j.filter, r.includes(t) && j.activeFilter),

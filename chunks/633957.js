@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("266820"),
   E = n("527805"),
   _ = n("952561"),
-  T = n("513202"),
-  m = n("100527"),
+  m = n("513202"),
+  T = n("100527"),
   I = n("906732"),
   p = n("973616"),
   h = n("314897"),
@@ -40,7 +40,7 @@ function L(e) {
     guildId: D
   } = e, [P, y] = a.useState(!1), {
     analyticsLocations: U
-  } = (0, I.default)(m.default.ACTIVITY_INSTANCE_EMBED), b = (0, r.useAnalyticsContext)(), j = (0, _.default)(), G = (0, l.useStateFromStores)([N.default], () => N.default.getChannel(x)), B = (null == G ? void 0 : null === (t = G.isThread) || void 0 === t ? void 0 : t.call(G)) ? null == G ? void 0 : G.parent_id : x, F = (0, l.useStateFromStores)([h.default], () => h.default.getId()), {
+  } = (0, I.default)(T.default.ACTIVITY_INSTANCE_EMBED), b = (0, r.useAnalyticsContext)(), j = (0, _.default)(), G = (0, l.useStateFromStores)([N.default], () => N.default.getChannel(x)), B = (null == G ? void 0 : null === (t = G.isThread) || void 0 === t ? void 0 : t.call(G)) ? null == G ? void 0 : G.parent_id : x, F = (0, l.useStateFromStores)([h.default], () => h.default.getId()), {
     embeddedActivity: k,
     currentEmbeddedActivity: w
   } = (0, l.useStateFromStoresObject)([u.default], () => ({
@@ -84,7 +84,7 @@ function L(e) {
           channelId: x,
           guildId: D,
           locationObject: b.location,
-          embeddedActivitiesManager: T.default,
+          embeddedActivitiesManager: m.default,
           analyticsLocations: U
         })
       } else await (0, c.default)({
@@ -92,7 +92,7 @@ function L(e) {
         currentEmbeddedApplication: j,
         activityChannelId: x,
         locationObject: b.location,
-        embeddedActivitiesManager: T.default,
+        embeddedActivitiesManager: m.default,
         analyticsLocations: U
       })
     } finally {

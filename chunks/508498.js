@@ -6,8 +6,8 @@ a.r(t), a.d(t, {
 }), a("610138"), a("216116"), a("78328"), a("815648"), a("47120");
 var l, s, r = a("470079"),
   n = a("613828"),
-  o = a("37234"),
-  i = a("703656"),
+  i = a("37234"),
+  o = a("703656"),
   u = a("981631");
 
 function c() {
@@ -17,13 +17,13 @@ function c() {
   return {
     onClose: r.useCallback(() => {
       if (0 === l) {
-        (0, i.back)(), (0, o.pushLayer)(u.Layers.USER_SETTINGS);
+        (0, o.back)(), (0, i.pushLayer)(u.Layers.USER_SETTINGS);
         return
       }
-      if ((0, i.currentRouteHasBackNavigation)()) {
-        (0, i.back)();
+      if ((0, o.currentRouteHasBackNavigation)()) {
+        (0, o.back)();
         return
-      }(0, i.transitionTo)(u.Routes.APP)
+      }(0, o.transitionTo)(u.Routes.APP)
     }, [l]),
     source: l,
     ...t

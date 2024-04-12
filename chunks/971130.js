@@ -70,7 +70,7 @@ let h = (e, t) => null != e && u.default.isMember(e, t),
         }), a.numChannels++)
       }
   },
-  v = e => {
+  O = e => {
     let {
       omitUserIds: t,
       maxRowsWithoutQuery: n,
@@ -126,7 +126,7 @@ let h = (e, t) => null != e && u.default.isMember(e, t),
       }), i.numFriends++)
     }
   },
-  O = e => {
+  v = e => {
     let {
       query: t,
       rows: n,
@@ -242,7 +242,7 @@ function p(e) {
       rows: d,
       counts: o
     };
-    n === _.InviteTargetTypes.EMBEDDED_APPLICATION && (v({
+    n === _.InviteTargetTypes.EMBEDDED_APPLICATION && (O({
       ...e,
       includeGroupDms: !1,
       limit: 1
@@ -252,7 +252,7 @@ function p(e) {
     })), T({
       ...e,
       suggestedUserIds: a
-    }), v({
+    }), O({
       ...e,
       includeGroupDms: !0
     }), g(e)
@@ -262,7 +262,7 @@ function p(e) {
       rows: d,
       counts: o
     };
-    n === _.InviteTargetTypes.EMBEDDED_APPLICATION && O({
+    n === _.InviteTargetTypes.EMBEDDED_APPLICATION && v({
       ...e,
       inviteTargetType: n
     }), m({
@@ -309,54 +309,54 @@ function R(e) {
   }
   return new Set
 }
-let x = {
+let V = {
     MINUTES: "minutes",
     HOURS: "hours",
     DAYS: "days",
     NEVER: "never"
   },
-  V = {
+  x = {
     [l.INVITE_OPTIONS_30_MINUTES.value]: {
       value: 30,
-      type: x.MINUTES
+      type: V.MINUTES
     },
     [l.INVITE_OPTIONS_1_HOUR.value]: {
       value: 1,
-      type: x.HOURS
+      type: V.HOURS
     },
     [l.INVITE_OPTIONS_6_HOURS.value]: {
       value: 6,
-      type: x.HOURS
+      type: V.HOURS
     },
     [l.INVITE_OPTIONS_12_HOURS.value]: {
       value: 12,
-      type: x.HOURS
+      type: V.HOURS
     },
     [l.INVITE_OPTIONS_1_DAY.value]: {
       value: 1,
-      type: x.DAYS
+      type: V.DAYS
     },
     [l.INVITE_OPTIONS_7_DAYS.value]: {
       value: 7,
-      type: x.DAYS
+      type: V.DAYS
     },
     [l.INVITE_OPTIONS_FOREVER.value]: {
       value: 0,
-      type: x.NEVER
+      type: V.NEVER
     }
   };
 
 function P(e, t) {
   let n = parseInt(t, 10),
     l = 0 === n,
-    a = V[e].value;
-  switch (V[e].type) {
-    case x.MINUTES:
+    a = x[e].value;
+  switch (x[e].type) {
+    case V.MINUTES:
       if (l) return N.default.Messages.INVITE_EXPIRES_MINUTES;
       return N.default.Messages.INVITE_EXPIRES_MINUTES_OR_USES.format({
         numUses: n
       });
-    case x.HOURS:
+    case V.HOURS:
       if (l) return N.default.Messages.INVITE_EXPIRES_HOURS.format({
         numHours: a
       });
@@ -364,7 +364,7 @@ function P(e, t) {
         numHours: a,
         numUses: n
       });
-    case x.DAYS:
+    case V.DAYS:
       if (l) return N.default.Messages.INVITE_EXPIRES_DAYS_PLURAL.format({
         numDays: a
       });
@@ -372,7 +372,7 @@ function P(e, t) {
         numDays: a,
         numUses: n
       });
-    case x.NEVER:
+    case V.NEVER:
       if (l) return N.default.Messages.INVITE_EXPIRES_NEVER;
       return N.default.Messages.INVITE_EXPIRES_USES.format({
         numUses: n

@@ -11,8 +11,8 @@ var s, a = n("735250"),
   f = n("401131"),
   E = n("16084"),
   _ = n("558381"),
-  T = n("230711"),
-  m = n("72924"),
+  m = n("230711"),
+  T = n("72924"),
   I = n("2052"),
   p = n("115130"),
   h = n("812206"),
@@ -113,15 +113,15 @@ class F extends(s = l.Component) {
         color: f,
         customDisabledColor: E,
         pauseAnimation: _,
-        isEntitled: T,
-        asGift: m,
+        isEntitled: m,
+        asGift: T,
         sku: I,
         entitlementBranchId: p,
         isInTestMode: h,
         innerClassName: N
       } = this.props,
-      S = !0 === T && (null == I || I.type !== b.SKUTypes.CONSUMABLE),
-      C = !0 === n.disabled || null != I && !I.available && !(null != p) && !h || S && !m,
+      S = !0 === m && (null == I || I.type !== b.SKUTypes.CONSUMABLE),
+      C = !0 === n.disabled || null != I && !I.available && !(null != p) && !h || S && !T,
       A = n.disabledTooltipText,
       g = {
         wrapperClassName: l,
@@ -240,7 +240,7 @@ class F extends(s = l.Component) {
       if (!s.premium || _ || i || u || I) {
         if ((s.requiresPayment || _) && !I) {
           if (null != a) try {
-            await (0, m.openSKUPaymentModal)(n, a, this.analyticsLocation, {
+            await (0, T.openSKUPaymentModal)(n, a, this.analyticsLocation, {
               promotionId: null != d ? d.promotionId : null,
               isGift: E
             })
@@ -261,7 +261,7 @@ class F extends(s = l.Component) {
         var p;
         p = this.analyticsLocation, D.default.track(b.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
           location: p
-        }), T.default.open(b.UserSettingsSections.PREMIUM)
+        }), m.default.open(b.UserSettingsSections.PREMIUM)
       }
     })
   }
@@ -280,7 +280,7 @@ B(F, "defaultProps", {
     channelId: l,
     skuId: i,
     ...r
-  } = e, o = (0, u.useStateFromStores)([p.default, O.default], () => O.default.inTestModeForApplication(s) || p.default.inDevModeForApplication(s), [s]), [d, c, f, E, _, T] = (0, u.useStateFromStoresArray)([h.default, A.default, R.default, g.default], () => {
+  } = e, o = (0, u.useStateFromStores)([p.default, O.default], () => O.default.inTestModeForApplication(s) || p.default.inDevModeForApplication(s), [s]), [d, c, f, E, _, m] = (0, u.useStateFromStoresArray)([h.default, A.default, R.default, g.default], () => {
     let e = h.default.getApplication(s),
       t = A.default.getCurrentUser(),
       a = null == i && null != e ? e.destinationSkuId : i,
@@ -289,7 +289,7 @@ B(F, "defaultProps", {
       o = null != a ? g.default.isEntitledToSku(t, a, s, r) : null,
       u = y.default.canInstallPremiumApplications(t);
     return [e, t, l, o, u, a]
-  }), m = (0, u.useStateFromStores)([v.default], () => v.default.isFocused()), N = (0, u.useStateFromStores)([M.default], () => M.default.isPurchasingSKU), S = (0, u.useStateFromStores)([C.default], () => C.default.locale), L = (0, I.useAnalyticsContext)();
+  }), T = (0, u.useStateFromStores)([v.default], () => v.default.isFocused()), N = (0, u.useStateFromStores)([M.default], () => M.default.isPurchasingSKU), S = (0, u.useStateFromStores)([C.default], () => C.default.locale), L = (0, I.useAnalyticsContext)();
   if (null != n && null == l) throw Error("Unexpected entitlementBranchId without a channelId");
   return (0, a.jsx)(F, {
     ...r,
@@ -303,11 +303,11 @@ B(F, "defaultProps", {
     isInTestMode: o,
     isEntitled: E,
     isUserPremium: _,
-    isWindowFocused: m,
+    isWindowFocused: T,
     isPurchasing: N,
     locale: S,
     analyticsContext: L,
     ref: t,
-    targetSkuId: T
+    targetSkuId: m
   })
 })

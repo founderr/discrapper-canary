@@ -25,7 +25,7 @@ n.r(t), n.d(t, {
     return I
   },
   getEligibleGameLastSeenStartTimeSeconds: function() {
-    return T
+    return m
   },
   getPlatformLabel: function() {
     return M
@@ -37,7 +37,7 @@ n.r(t), n.d(t, {
     return h
   },
   isDropGameDetected: function() {
-    return m
+    return T
   }
 });
 var s = n("913527"),
@@ -69,11 +69,11 @@ function _(e, t) {
   })) || !1
 }
 
-function T() {
+function m() {
   return Math.floor(Date.now() / 1e3) - d.DROPS_ELIGIBILITY_SEEN_GAMES_LOOKBACK_SECONDS
 }
 
-function m(e, t, n) {
+function T(e, t, n) {
   var s, a, l, i;
   if (null == C(e)) return !1;
   let r = (s = t, a = d.PartnerGameNameToSearchTermMapping[e], null !== (l = s.find(e => _(e.name, a))) && void 0 !== l ? l : null);
@@ -86,7 +86,7 @@ function m(e, t, n) {
 }
 
 function I(e) {
-  return m(e, l.default.getGamesSeen(!1), T())
+  return T(e, l.default.getGamesSeen(!1), m())
 }
 
 function p(e, t) {

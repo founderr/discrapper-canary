@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("481060"),
   E = n("607070"),
   _ = n("100527"),
-  T = n("367907"),
-  m = n("1585"),
+  m = n("367907"),
+  T = n("1585"),
   I = n("841762"),
   p = n("336197"),
   h = n("118139"),
@@ -63,7 +63,7 @@ function F(e) {
   }, [z]), ea = a.useCallback(() => {
     z(!1)
   }, [z]), el = a.useCallback(async () => {
-    null != w && ((0, T.trackWithMetadata)(U.AnalyticEvents.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
+    null != w && ((0, m.trackWithMetadata)(U.AnalyticEvents.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
       media_post_id: w.threadId,
       channel_id: k.id,
       can_access: w.canAccess,
@@ -88,7 +88,7 @@ function F(e) {
     })),
     eo = (0, L.getAvatarDecorationURL)({
       avatarDecoration: null === (t = w.user) || void 0 === t ? void 0 : t.avatarDecoration,
-      size: (0, m.getDecorationSizeForAvatarSize)(f.AvatarSizes.SIZE_40),
+      size: (0, T.getDecorationSizeForAvatarSize)(f.AvatarSizes.SIZE_40),
       canAnimate: et
     }),
     eu = null === (n = w.user) || void 0 === n ? void 0 : n.getAvatarURL(w.guildId, 40, et),

@@ -12,8 +12,8 @@ var s = n("735250"),
   f = n("367907"),
   E = n("717680"),
   _ = n("703656"),
-  T = n("592125"),
-  m = n("836946"),
+  m = n("592125"),
+  T = n("836946"),
   I = n("259580"),
   p = n("263704"),
   h = n("568570"),
@@ -73,7 +73,7 @@ let v = a.memo(function(e) {
     onJump: n,
     deleteChannel: l,
     toggle: i
-  } = e, r = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(t.channelId));
+  } = e, r = (0, o.useStateFromStores)([m.default], () => m.default.getChannel(t.channelId));
   if (a.useEffect(() => {
       null != r && t.isFullyLoaded && !t.hasError && !t.collapsed && "messages" === t.type && 0 === t.messages.length && d.default.wait(() => {
         (0, c.ack)(t.channelId, !0), l(t.channelId)
@@ -124,10 +124,10 @@ function L(e) {
     markGuildRead: a,
     getNumUnreadChannels: l
   } = e, i = (0, E.default)() && null != t.guildId;
-  return (0, s.jsx)(m.default, {
+  return (0, s.jsx)(T.default, {
     className: R.markReadButton,
     tooltip: i ? M.default.Messages.MARK_GUILD_AS_READ : M.default.Messages.MARK_AS_READ,
-    color: m.CircleIconButtonColors.TERTIARY,
+    color: T.CircleIconButtonColors.TERTIARY,
     icon: i ? (0, s.jsx)(h.default, {
       width: 16,
       height: 16

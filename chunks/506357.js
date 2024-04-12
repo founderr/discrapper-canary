@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("346656"),
   E = n("630641"),
   _ = n("644766"),
-  T = n("626135"),
-  m = n("528011"),
+  m = n("626135"),
+  T = n("528011"),
   I = n("666657"),
   p = n("533244"),
   h = n("981631"),
@@ -33,11 +33,11 @@ function A(e) {
     shouldShowIncidentActions: L,
     incidentData: x,
     isUnderLockdown: D
-  } = (0, m.useGuildIncidentsState)(O), P = (0, r.useCanAccessMemberSafetyPage)(null !== (t = null == v ? void 0 : v.id) && void 0 !== t ? t : h.EMPTY_STRING_SNOWFLAKE_ID), y = a.useCallback(() => null != v && (0, o.goToMemberSafetyDashboard)(v.id), [v]);
+  } = (0, T.useGuildIncidentsState)(O), P = (0, r.useCanAccessMemberSafetyPage)(null !== (t = null == v ? void 0 : v.id) && void 0 !== t ? t : h.EMPTY_STRING_SNOWFLAKE_ID), y = a.useCallback(() => null != v && (0, o.goToMemberSafetyDashboard)(v.id), [v]);
   if (null == v || null == x || !L) return null;
   let U = e => {
       if (e && P && R !== N.StaticChannelRoute.MEMBER_SAFETY && y()) {
-        T.default.track(h.AnalyticEvents.APP_NOTICE_PRIMARY_CTA_OPENED, {
+        m.default.track(h.AnalyticEvents.APP_NOTICE_PRIMARY_CTA_OPENED, {
           notice_type: h.NoticeTypes.GUILD_RAID_NOTIFICATION,
           guild_id: v.id
         });

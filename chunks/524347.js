@@ -8,8 +8,8 @@ var s, a, l, i, r = n("913527"),
   f = n("594190"),
   E = n("569545"),
   _ = n("314897"),
-  T = n("70956"),
-  m = n("960359"),
+  m = n("70956"),
+  T = n("960359"),
   I = n("853197"),
   p = n("702512");
 let h = null,
@@ -32,8 +32,8 @@ let h = null,
       completed: a,
       gameTitle: l
     } = M;
-    !(null == t || null == l || a || null == s || null == n || g.isStarted()) && (e ? (0, m.sendHeartbeat)(t, n, s.pid) : g.start(1 * T.default.Millis.MINUTE, () => {
-      (0, m.sendHeartbeat)(t, n, s.pid)
+    !(null == t || null == l || a || null == s || null == n || g.isStarted()) && (e ? (0, T.sendHeartbeat)(t, n, s.pid) : g.start(1 * m.default.Millis.MINUTE, () => {
+      (0, T.sendHeartbeat)(t, n, s.pid)
     }))
   },
   O = e => {
@@ -178,7 +178,7 @@ l = "DropsStore", (a = "displayName") in(s = L) ? Object.defineProperty(s, a, {
     let d = u.autoEnrollment;
     null != C[o.dropsQuestId] && C[o.dropsQuestId].isEnrolled || d ? v(o, r, i) : c.default.wait(async () => {
       var e;
-      await (0, m.fetchEnrolledUser)(o.dropsQuestId), (null === (e = C[o.dropsQuestId]) || void 0 === e ? void 0 : e.isEnrolled) && v(o, r, i)
+      await (0, T.fetchEnrolledUser)(o.dropsQuestId), (null === (e = C[o.dropsQuestId]) || void 0 === e ? void 0 : e.isEnrolled) && v(o, r, i)
     })
   },
   LOGOUT: function() {

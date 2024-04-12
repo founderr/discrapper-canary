@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("867176"),
   E = n("566620"),
   _ = n("403404"),
-  T = n("100527"),
-  m = n("906732"),
+  m = n("100527"),
+  T = n("906732"),
   I = n("424602"),
   p = n("739566"),
   h = n("223021"),
@@ -63,7 +63,7 @@ function D(e) {
     channel: r
   } = e, {
     analyticsLocations: u
-  } = (0, m.default)(T.default.EXECUTED_COMMAND), D = a.useMemo(() => (e, t, n) => (o()(null != r && null != t, "ExecuteCommand: user and channel cannot be undefined"), (0, s.jsx)(N.default, {
+  } = (0, T.default)(m.default.EXECUTED_COMMAND), D = a.useMemo(() => (e, t, n) => (o()(null != r && null != t, "ExecuteCommand: user and channel cannot be undefined"), (0, s.jsx)(N.default, {
     ...e,
     location: "ExecutedCommand",
     channelId: r.id,
@@ -103,13 +103,13 @@ function D(e) {
           })
         });
         if (null != a.interaction) {
-          var _, T, m;
+          var _, m, T;
           let e = (0, p.getUserAuthor)(a.interaction.user, r);
-          n = null !== (m = C.default.getGuildMemberAvatarURL({
+          n = null !== (T = C.default.getGuildMemberAvatarURL({
             avatar: null !== (_ = e.guildMemberAvatar) && void 0 !== _ ? _ : void 0,
             userId: a.interaction.user.id,
-            guildId: null !== (T = null == r ? void 0 : r.guild_id) && void 0 !== T ? T : ""
-          })) && void 0 !== m ? m : void 0
+            guildId: null !== (m = null == r ? void 0 : r.guild_id) && void 0 !== m ? m : ""
+          })) && void 0 !== T ? T : void 0
         }
         let I = () => null != a.interaction && function(e) {
           let {
@@ -145,7 +145,7 @@ function D(e) {
           onRequestClose: E,
           children: I
         }) : I()
-      }(e, e => D(e, G.user, [T.default.AVATAR])),
+      }(e, e => D(e, G.user, [m.default.AVATAR])),
       n = function(e, t, n) {
         var a;
         let {
@@ -255,7 +255,7 @@ function D(e) {
       }, "command")
     }
   });
-  return (0, s.jsx)(m.AnalyticsLocationProvider, {
+  return (0, s.jsx)(T.AnalyticsLocationProvider, {
     value: u,
     children: (0, s.jsx)("div", {
       className: i()(L.repliedMessage, L.executedCommand, U),

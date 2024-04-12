@@ -17,15 +17,15 @@ var a = n("803997"),
   f = n("602478"),
   E = n("641051"),
   _ = n("329461"),
-  T = n("360629"),
-  m = n("837062"),
+  m = n("360629"),
+  T = n("837062"),
   I = n("26290"),
   p = n("818186"),
   h = n("689938"),
   N = n("551046");
 
 function S(e) {
-  return (0, T.useInDesktopNotificationCenterExperiment)() ? (0, s.jsx)(C, {
+  return (0, m.useInDesktopNotificationCenterExperiment)() ? (0, s.jsx)(C, {
     ...e
   }) : (0, s.jsx)(A, {
     ...e
@@ -37,7 +37,7 @@ function C(e) {
     tab: t,
     setTab: n,
     children: a,
-    badgeState: T,
+    badgeState: m,
     closePopout: S
   } = e, {
     showReminders: C
@@ -54,7 +54,7 @@ function C(e) {
     className: l()(N.header, N.expanded),
     children: [(0, s.jsxs)("div", {
       className: l()(N.expandedInboxHeader),
-      children: [(0, s.jsx)(m.default, {
+      children: [(0, s.jsx)(T.default, {
         className: N.inboxIcon
       }), (0, s.jsx)(o.Text, {
         className: N.inboxTitle,
@@ -75,7 +75,7 @@ function C(e) {
           className: l()(N.tab, N.expanded, {
             [N.active]: t === r.InboxTab.FOR_YOU
           }),
-          children: [h.default.Messages.FOR_YOU, (null == T ? void 0 : T.badgeForYou) ? (0, s.jsx)(I.CircleBadge, {
+          children: [h.default.Messages.FOR_YOU, (null == m ? void 0 : m.badgeForYou) ? (0, s.jsx)(I.CircleBadge, {
             color: d.default.STATUS_DANGER,
             className: l()(N.iconBadge)
           }) : null]
@@ -132,7 +132,7 @@ function A(e) {
     location: "489e3f_2"
   }, {
     autoTrackExposure: !1
-  }), d = (0, T.useInDesktopNotificationCenterExperiment)(), {
+  }), d = (0, m.useInDesktopNotificationCenterExperiment)(), {
     enabled: c
   } = f.default.useExperiment({
     location: "RecentsHeader"

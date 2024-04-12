@@ -22,7 +22,7 @@ function E(e) {
     messageId: n,
     transitionState: E,
     onClose: _
-  } = e, T = (0, a.useStateFromStores)([u.default], () => u.default.getFpMessageInfo(n)), m = T.attachments.map(e => e.id), I = T.attachments.map(e => e.filename), {
+  } = e, m = (0, a.useStateFromStores)([u.default], () => u.default.getFpMessageInfo(n)), T = m.attachments.map(e => e.id), I = m.attachments.map(e => e.filename), {
     reportFalsePositive: p,
     isReportFalsePositiveLoading: h
   } = (0, d.useExplicitMediaActions)({
@@ -33,10 +33,10 @@ function E(e) {
       (0, l.showToast)((0, l.createToast)(f.default.Messages.ERROR_GENERIC_TITLE, l.ToastType.FAILURE))
     },
     report: () => {
-      (0, r.reportFailedSendFalsePositive)(t, n, m, I)
+      (0, r.reportFailedSendFalsePositive)(t, n, T, I)
     }
   });
-  return !(T.attachments.length > 0) && _(), (0, s.jsx)(c.ExplicitMediaFalsePositiveModal, {
+  return !(m.attachments.length > 0) && _(), (0, s.jsx)(c.ExplicitMediaFalsePositiveModal, {
     messageId: n,
     channelId: t,
     isReportFalsePositiveLoading: h,

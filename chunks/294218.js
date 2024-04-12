@@ -12,8 +12,8 @@ var s = n("735250"),
   f = n("592125"),
   E = n("496675"),
   _ = n("998951"),
-  T = n("630388"),
-  m = n("709054"),
+  m = n("630388"),
+  T = n("709054"),
   I = n("900164"),
   p = n("739566"),
   h = n("453687"),
@@ -53,7 +53,7 @@ t.default = a.memo(function(e) {
     allowHeading: w || H,
     allowLinks: !0,
     previewLinkTarget: !0
-  }), K = n.type === v.MessageTypes.REPLY ? n.messageReference : void 0, W = (0, o.useStateFromStores)([c.default], () => c.default.getMessageByReference(K)), z = (0, r.useListItem)(n.id), Q = (0, p.default)(n), q = (0, o.useStateFromStores)([f.default], () => n.hasFlag(v.MessageFlags.HAS_THREAD) && f.default.getChannel(m.default.castMessageIdAsChannelId(n.id))), J = (0, u.useRoleIcon)({
+  }), K = n.type === v.MessageTypes.REPLY ? n.messageReference : void 0, W = (0, o.useStateFromStores)([c.default], () => c.default.getMessageByReference(K)), z = (0, r.useListItem)(n.id), Q = (0, p.default)(n), q = (0, o.useStateFromStores)([f.default], () => n.hasFlag(v.MessageFlags.HAS_THREAD) && f.default.getChannel(T.default.castMessageIdAsChannelId(n.id))), J = (0, u.useRoleIcon)({
     guildId: U.guild_id,
     roleId: Q.iconRoleId
   }), Z = (0, o.useStateFromStores)([E.default], () => E.default.can(v.Permissions.CREATE_INSTANT_INVITE, U)), X = (0, S.default)({
@@ -67,7 +67,7 @@ t.default = a.memo(function(e) {
   return (0, s.jsx)(_.default, {
     compact: a,
     className: i()(l, {
-      [L.ephemeral]: (0, T.hasFlag)(n.flags, v.MessageFlags.EPHEMERAL),
+      [L.ephemeral]: (0, m.hasFlag)(n.flags, v.MessageFlags.EPHEMERAL),
       [L.disableInteraction]: P
     }),
     disableInteraction: P,

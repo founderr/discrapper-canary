@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("294218"),
   E = n("695346"),
   _ = n("592125"),
-  T = n("731290"),
-  m = n("944486"),
+  m = n("731290"),
+  T = n("944486"),
   I = n("836946"),
   p = n("36082"),
   h = n("465670"),
@@ -51,7 +51,7 @@ function D(e) {
     onJump: n,
     badgeState: f,
     closePopout: E
-  } = e, T = (0, l.useStateFromStores)([_.default, m.default], () => _.default.getChannel(m.default.getChannelId())), {
+  } = e, m = (0, l.useStateFromStores)([_.default, T.default], () => _.default.getChannel(T.default.getChannelId())), {
     messages: I,
     hasMore: p,
     loading: h,
@@ -68,14 +68,14 @@ function D(e) {
   })), L = (0, u.default)(S), D = (0, u.default)(A), P = (0, u.default)(g);
   a.useEffect(() => {
     if (!N.default.hasLoadedEver) {
-      x(T, !0);
+      x(m, !0);
       return
-    }(null != L && S !== L || null != D && A !== D || null != P && g !== P) && x(T, !0)
-  }, [L, S, D, A, P, g, T, !0]);
+    }(null != L && S !== L || null != D && A !== D || null != P && g !== P) && x(m, !0)
+  }, [L, S, D, A, P, g, m, !0]);
   a.useEffect(() => {
     d.AttachmentLinkRefreshExperiment.getCurrentConfig({
       location: "mentions"
-    }).enabled && (null == I ? void 0 : I.some(c.messageHasExpiredAttachmentUrl)) && (r.default.clearMentions(), x(T, !0))
+    }).enabled && (null == I ? void 0 : I.some(c.messageHasExpiredAttachmentUrl)) && (r.default.clearMentions(), x(m, !0))
   }, []), a.useEffect(() => () => {
     r.default.truncateMentions(R.MAX_MENTIONS_PER_FETCH)
   }, []);
@@ -95,13 +95,13 @@ function D(e) {
       onCloseMessage: function(e) {
         r.default.deleteRecentMention(e.id)
       },
-      channel: T,
+      channel: m,
       messages: I,
       loading: h,
       hasMore: p,
       analyticsName: "Recent Mentions",
       loadMore: function() {
-        x(T, !0, null != I && I.length > 0 ? I[I.length - 1].id : null)
+        x(m, !0, null != I && I.length > 0 ? I[I.length - 1].id : null)
       },
       canCloseAllMessages: !0,
       renderHeader: U,
@@ -137,7 +137,7 @@ function U(e) {
   if (null == t) return null;
   let l = _.default.getChannel(t.channel_id);
   if (null == l) return null;
-  let i = T.default.didAgree(l.getGuildId()),
+  let i = m.default.didAgree(l.getGuildId()),
     o = !!l.isNSFW() && !i;
   return (0, s.jsxs)("div", {
     className: v.container,

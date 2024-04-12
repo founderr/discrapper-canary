@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("554838"),
   E = n("493892"),
   _ = n("37772"),
-  T = n("695346"),
-  m = n("314897"),
+  m = n("695346"),
+  T = n("314897"),
   I = n("496675"),
   p = n("594174"),
   h = n("132338"),
@@ -83,7 +83,7 @@ function v(e) {
     location: "20e3b0_1"
   }, {
     autoTrackExposure: !1
-  }), S = T.MessageDisplayCompact.useSetting(), R = (0, o.useStateFromStores)([I.default], () => I.default.can(A.Permissions.CREATE_INSTANT_INVITE, l)), v = (0, E.isSpamSupported)(l), L = !1, x = 0 === a.messages.length || i()(a.messages[0].timestamp).isSame(i()(), "day"), D = null !== (n = null === (t = p.default.getUser(m.default.getId())) || void 0 === t ? void 0 : t.hasFlag(A.UserFlags.SPAMMER)) && void 0 !== n && n, P = [];
+  }), S = m.MessageDisplayCompact.useSetting(), R = (0, o.useStateFromStores)([I.default], () => I.default.can(A.Permissions.CREATE_INSTANT_INVITE, l)), v = (0, E.isSpamSupported)(l), L = !1, x = 0 === a.messages.length || i()(a.messages[0].timestamp).isSame(i()(), "day"), D = null !== (n = null === (t = p.default.getUser(T.default.getId())) || void 0 === t ? void 0 : t.hasFlag(A.UserFlags.SPAMMER)) && void 0 !== n && n, P = [];
   if (!a.collapsed) {
     let e = null,
       t = null,

@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("695346"),
   E = n("836946"),
   _ = n("568570"),
-  T = n("626135"),
-  m = n("709054"),
+  m = n("626135"),
+  T = n("709054"),
   I = n("791914"),
   p = n("981631"),
   h = n("689938"),
@@ -45,10 +45,10 @@ function C(e) {
     items: h,
     loading: C,
     loadMore: A
-  } = (0, d.useDesktopNotificationCenterItemsLoader)(), g = (0, l.useStateFromStores)([r.default], () => r.default.localItems), M = a.useMemo(() => [...[...h, ...g].sort((e, t) => -1 * m.default.compare(e.id, t.id))], [h, g]), R = h.length > 0 ? h[0] : null, O = f.NotificationCenterAckedBeforeId.useSetting(), v = a.useMemo(() => {
-    if (null != R && 0 >= m.default.compare(R.id, O)) return !1;
+  } = (0, d.useDesktopNotificationCenterItemsLoader)(), g = (0, l.useStateFromStores)([r.default], () => r.default.localItems), M = a.useMemo(() => [...[...h, ...g].sort((e, t) => -1 * T.default.compare(e.id, t.id))], [h, g]), R = h.length > 0 ? h[0] : null, O = f.NotificationCenterAckedBeforeId.useSetting(), v = a.useMemo(() => {
+    if (null != R && 0 >= T.default.compare(R.id, O)) return !1;
     for (let e of M) {
-      if (0 >= m.default.compare(e.id, O)) break;
+      if (0 >= T.default.compare(e.id, O)) break;
       if (!(0, u.isRemoteAcked)(e, O)) return !0
     }
     return !1
@@ -62,7 +62,7 @@ function C(e) {
       closePopout: E,
       children: v ? (0, s.jsx)(S, {
         onClick: () => {
-          null != R && (f.NotificationCenterAckedBeforeId.updateSetting(R.id), T.default.track(p.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
+          null != R && (f.NotificationCenterAckedBeforeId.updateSetting(R.id), m.default.track(p.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
             action_type: o.NotificationCenterActionTypes.MARK_ALL_READ
           }))
         }

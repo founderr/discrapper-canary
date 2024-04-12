@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("481060"),
   E = n("607070"),
   _ = n("313889"),
-  T = n("825829"),
-  m = n("226192"),
+  m = n("825829"),
+  T = n("226192"),
   I = n("36459"),
   p = n("336197"),
   h = n("937889"),
@@ -189,7 +189,7 @@ function Q(e) {
     decisionReason: es,
     alertActionsExecution: ea,
     quarantineType: el
-  } = (0, T.default)(l), ei = a.useMemo(() => (0, h.renderAutomodMessageMarkup)(ee, X, r.id), [ee, X, r]), {
+  } = (0, m.default)(l), ei = a.useMemo(() => (0, h.renderAutomodMessageMarkup)(ee, X, r.id), [ee, X, r]), {
     selected: er,
     ...eo
   } = function(e, t) {
@@ -217,19 +217,19 @@ function Q(e) {
       showUsernamePopout: i
     }
   }(l, r), eu = a.useCallback(() => {
-    (0, m.openSubmitFeedback)(l.id, ee, Z, r)
+    (0, T.openSubmitFeedback)(l.id, ee, Z, r)
   }, [l.id, ee, Z, r]), ed = a.useCallback(e => {
     null != et && null != J && (e.stopPropagation(), e.preventDefault(), (0, p.default)(G.Routes.CHANNEL(null == J ? void 0 : J.guild_id, null == J ? void 0 : J.id, et)))
   }, [J, et]), ec = a.useCallback(() => {
     (0, I.executeAlertAction)(l.id, r, _.AutomodAlertActionType.DELETE_USER_MESSAGE)
-  }, [r, l.id]), ef = a.useMemo(() => (0, T.getActionHeaderText)(l, J, () => (0, s.jsx)("div", {
+  }, [r, l.id]), ef = a.useMemo(() => (0, m.getActionHeaderText)(l, J, () => (0, s.jsx)("div", {
     className: H.channelNameContainer,
     children: (0, s.jsx)(x.default, {
       channel: J,
       className: H.channelName,
       openChatWithoutConnecting: !0
     })
-  })), [l, J]), eE = (0, F.getFriendlyDurationString)(Number(en)), e_ = null != es, eT = Q && null != et && (null == ea || !ea.actions.hasOwnProperty(_.AutomodAlertActionType.DELETE_USER_MESSAGE));
+  })), [l, J]), eE = (0, F.getFriendlyDurationString)(Number(en)), e_ = null != es, em = Q && null != et && (null == ea || !ea.actions.hasOwnProperty(_.AutomodAlertActionType.DELETE_USER_MESSAGE));
   return (0, s.jsx)("div", {
     onMouseEnter: g,
     onMouseLeave: R,
@@ -332,7 +332,7 @@ function Q(e) {
                     tag: "span",
                     className: H.titleCase,
                     children: w.default.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_REASON.format({
-                      reason: (0, T.getQuarantineReasonString)(el)
+                      reason: (0, m.getQuarantineReasonString)(el)
                     })
                   })]
                 })]
@@ -395,7 +395,7 @@ function Q(e) {
                   children: w.default.Messages.GUILD_AUTOMOD_REPORT_ISSUES
                 })
               })
-            }), eT ? (0, s.jsxs)(s.Fragment, {
+            }), em ? (0, s.jsxs)(s.Fragment, {
               children: [(0, s.jsx)("div", {
                 className: H.dot
               }), (0, s.jsx)(f.Button, {

@@ -21,8 +21,8 @@ var n = s("512722"),
   m = s("134795"),
   _ = s("610966"),
   g = s("513901"),
-  h = s("451392"),
-  I = s("906364"),
+  I = s("451392"),
+  h = s("906364"),
   N = s("676934"),
   p = s("350327"),
   C = s("621853"),
@@ -46,8 +46,8 @@ function P() {
       pendingAvatar: F,
       pendingGlobalName: G,
       pendingBanner: k,
-      pendingBio: w,
-      pendingPronouns: H,
+      pendingBio: H,
+      pendingPronouns: w,
       pendingAccentColor: V,
       pendingThemeColors: Y,
       errors: W
@@ -87,11 +87,11 @@ function P() {
       currentGlobalName: y.globalName,
       pendingGlobalName: G,
       onGlobalNameChange: r.setPendingGlobalNameName
-    }), (0, a.jsx)(I.default, {
+    }), (0, a.jsx)(h.default, {
       sectionTitle: D.default.Messages.USER_SETTINGS_PRONOUNS,
       errors: W.pronouns,
       onPronounsChange: p.setPendingPronouns,
-      pendingPronouns: H,
+      pendingPronouns: w,
       currentPronouns: null !== (b = null == B ? void 0 : B.pronouns) && void 0 !== b ? b : ""
     }, "pronouns"), (0, a.jsx)(E.default, {
       onAvatarChange: r.setPendingAvatar,
@@ -111,7 +111,7 @@ function P() {
         errors: W.banner,
         onBannerChange: p.setPendingBanner,
         forcedDivider: !0
-      }, "banner"), (0, a.jsx)(h.default, {
+      }, "banner"), (0, a.jsx)(I.default, {
         user: y,
         pendingAvatar: F,
         pendingColors: Y,
@@ -129,7 +129,7 @@ function P() {
       onBioChange: e => {
         (0, u.setNewPendingUserBio)(e, null == B ? void 0 : B.bio), (0, r.setDisableSubmit)(null != e && e.length > v.BIO_MAX_LENGTH)
       },
-      pendingBio: w,
+      pendingBio: H,
       currentBio: null !== (U = null == B ? void 0 : B.bio) && void 0 !== U ? U : ""
     }, "bio"), et && (0, a.jsx)(N.default, {}), null != J && (0, a.jsx)(f.default, {
       legacyUsername: J

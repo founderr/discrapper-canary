@@ -1,52 +1,52 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   OneTimePaymentPredicateStep: function() {
-    return _
+    return m
   }
-}), n("47120");
-var a = n("735250"),
-  r = n("470079"),
-  s = n("512722"),
-  l = n.n(s),
-  i = n("89057"),
-  u = n("987209"),
-  o = n("598"),
-  d = n("409813"),
-  c = n("456251"),
-  f = n("981631");
+}), r("47120");
+var n = r("735250"),
+  s = r("470079"),
+  a = r("512722"),
+  l = r.n(a),
+  u = r("89057"),
+  i = r("987209"),
+  c = r("598"),
+  d = r("409813"),
+  o = r("456251"),
+  f = r("981631");
 
-function _(e) {
+function m(e) {
   let {
     handleStepChange: t,
-    handleClose: n
+    handleClose: r
   } = e, {
-    blockedPayments: s,
-    hasFetchedSkus: _,
-    paymentSources: I,
-    hasFetchedPaymentSources: E,
-    application: S,
+    blockedPayments: a,
+    hasFetchedSkus: m,
+    paymentSources: p,
+    hasFetchedPaymentSources: h,
+    application: x,
     skusById: P,
-    selectedSkuId: A
-  } = (0, o.usePaymentContext)(), {
-    isGift: C
-  } = (0, u.useGiftContext)(), [N, T] = r.useState(!0);
-  return (r.useEffect(() => {
-    let e = null != S;
-    _ && E && e && T(!1)
-  }, [_, E, S]), r.useEffect(() => {
-    if (N || s) return;
-    l()(null != A, "Expected selectedSkuId");
-    let e = P[A];
-    if (C && (null == e ? void 0 : e.productLine) === f.SKUProductLines.COLLECTIBLES) {
+    selectedSkuId: C
+  } = (0, c.usePaymentContext)(), {
+    isGift: j
+  } = (0, i.useGiftContext)(), [g, E] = s.useState(!0);
+  return (s.useEffect(() => {
+    let e = null != x;
+    m && h && e && E(!1)
+  }, [m, h, x]), s.useEffect(() => {
+    if (g || a) return;
+    l()(null != C, "Expected selectedSkuId");
+    let e = P[C];
+    if (j && (null == e ? void 0 : e.productLine) === f.SKUProductLines.COLLECTIBLES) {
       t(d.Step.GIFT_CUSTOMIZATION);
       return
     }
-    if (0 === Object.keys(I).length) {
+    if (0 === Object.keys(p).length) {
       t(d.Step.ADD_PAYMENT_STEPS);
       return
     }
     t(d.Step.REVIEW)
-  }, [N, s, t, I, C, P, A]), N) ? (0, a.jsx)(c.default, {}) : s ? (0, a.jsx)(i.BlockedPaymentsContentModal, {
-    onClose: n
+  }, [g, a, t, p, j, P, C]), g) ? (0, n.jsx)(o.default, {}) : a ? (0, n.jsx)(u.BlockedPaymentsContentModal, {
+    onClose: r
   }) : null
 }

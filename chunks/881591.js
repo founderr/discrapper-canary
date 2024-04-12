@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("524437"),
   E = n("481060"),
   _ = n("239091"),
-  T = n("904245"),
-  m = n("43267"),
+  m = n("904245"),
+  T = n("43267"),
   I = n("933557"),
   p = n("822893"),
   h = n("329461"),
@@ -105,7 +105,7 @@ function w(e) {
     D = (0, I.default)(S, !0),
     y = null != D ? D : N.name,
     U = (0, c.useStateFromStores)([O.default], () => O.default.getGuild(null == N ? void 0 : N.guild_id)),
-    k = null != N ? (0, m.getChannelIconURL)(N) : null,
+    k = null != N ? (0, T.getChannelIconURL)(N) : null,
     w = null;
   return null != l.dueAt && (l.dueAt > new Date ? (t = "text-muted", w = j.default.Messages.MESSAGE_REMINDERS_DUE_IN.format({
     duration: d().duration(l.dueAt.getTime() - Date.now(), "millisecond").humanize()
@@ -191,7 +191,7 @@ function w(e) {
         className: G.actions,
         children: [null == u ? (0, s.jsx)(E.Button, {
           onClick: () => {
-            T.default.fetchMessages({
+            m.default.fetchMessages({
               channelId: l.channelId,
               limit: 1,
               jump: {

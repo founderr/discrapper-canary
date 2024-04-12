@@ -1,76 +1,76 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   formatPlanInterval: function() {
-    return T
+    return r
   },
   formatPlanIntervalDuration: function() {
-    return i
-  },
-  getBenefitKey: function() {
-    return n
-  },
-  isChannelBenefit: function() {
     return u
   },
+  getBenefitKey: function() {
+    return l
+  },
+  isChannelBenefit: function() {
+    return o
+  },
   isIntangibleBenefit: function() {
-    return A
+    return c
   }
 });
-var E = s("293810"),
-  _ = s("474936"),
-  a = s("689938");
+var s = n("293810"),
+  i = n("474936"),
+  a = n("689938");
 
-function n(e) {
+function l(e) {
   return "roles" in e ? "emoji-".concat(e.id) : "".concat(e.ref_type, "-").concat(e.emoji_id, "-").concat(e.name, "-").concat(e.ref_id)
 }
 
-function T(e) {
+function r(e) {
   let {
     interval: t,
-    interval_count: s
+    interval_count: n
   } = e;
   return (function(e) {
     switch (e) {
-      case _.SubscriptionIntervalTypes.DAY:
+      case i.SubscriptionIntervalTypes.DAY:
         return a.default.Messages.DAY;
-      case _.SubscriptionIntervalTypes.MONTH:
+      case i.SubscriptionIntervalTypes.MONTH:
         return a.default.Messages.MONTH;
-      case _.SubscriptionIntervalTypes.YEAR:
+      case i.SubscriptionIntervalTypes.YEAR:
         return a.default.Messages.YEAR
     }
   })(t).format({
-    count: s
+    count: n
   })
 }
 
-function i(e) {
+function u(e) {
   let {
     interval: t,
-    interval_count: s
+    interval_count: n
   } = e;
   switch (t) {
-    case _.SubscriptionIntervalTypes.DAY:
-      if (s > 0 && s % 7 == 0) return a.default.Messages.DURATION_WEEKS_CAPITALIZE.format({
-        weeks: s / 7
+    case i.SubscriptionIntervalTypes.DAY:
+      if (n > 0 && n % 7 == 0) return a.default.Messages.DURATION_WEEKS_CAPITALIZE.format({
+        weeks: n / 7
       });
       return a.default.Messages.DURATION_DAYS_CAPITALIZE.format({
-        days: s
+        days: n
       });
-    case _.SubscriptionIntervalTypes.MONTH:
+    case i.SubscriptionIntervalTypes.MONTH:
       return a.default.Messages.DURATION_MONTHS_CAPITALIZE.format({
-        months: s
+        months: n
       });
-    case _.SubscriptionIntervalTypes.YEAR:
+    case i.SubscriptionIntervalTypes.YEAR:
       return a.default.Messages.DURATION_YEARS_CAPITALIZE.format({
-        years: s
+        years: n
       })
   }
 }
 
-function u(e) {
-  return e.ref_type === E.GuildRoleSubscriptionBenefitTypes.CHANNEL
+function o(e) {
+  return e.ref_type === s.GuildRoleSubscriptionBenefitTypes.CHANNEL
 }
 
-function A(e) {
-  return e.ref_type === E.GuildRoleSubscriptionBenefitTypes.INTANGIBLE
+function c(e) {
+  return e.ref_type === s.GuildRoleSubscriptionBenefitTypes.INTANGIBLE
 }

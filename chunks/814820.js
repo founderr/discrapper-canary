@@ -16,15 +16,15 @@ var s = n("735250"),
   f = n("496675"),
   E = n("594174"),
   _ = n("838440"),
-  T = n("779139"),
-  m = n("981631"),
+  m = n("779139"),
+  T = n("981631"),
   I = n("689938"),
   p = n("909013");
 let h = e => {
     let {
       channel: t,
       message: n
-    } = e, [l, u] = a.useState(!1), d = (0, T.pickWelcomeSticker)(n.id), c = a.useCallback(() => {
+    } = e, [l, u] = a.useState(!1), d = (0, m.pickWelcomeSticker)(n.id), c = a.useCallback(() => {
       (0, _.applyChatRestrictions)({
         type: r.ChatInputTypes.FORM,
         content: "",
@@ -33,7 +33,7 @@ let h = e => {
         let {
           valid: s
         } = e;
-        s && (0, T.handleWelcomeCtaClicked)(t, n, d.id)
+        s && (0, m.handleWelcomeCtaClicked)(t, n, d.id)
       })
     }, [t, n, d]);
     return (0, s.jsx)("div", {
@@ -62,12 +62,12 @@ let h = e => {
       var e;
       let s = E.default.getCurrentUser(),
         l = (0, u.computeIsReadOnlyThread)(n),
-        i = f.default.can(m.Permissions.SEND_MESSAGES, n),
+        i = f.default.can(T.Permissions.SEND_MESSAGES, n),
         r = null != a && null != s && (null === (e = d.default.getMember(a, s.id)) || void 0 === e ? void 0 : e.isPending),
         o = t.author.bot,
         _ = c.default.getGuild(a),
-        T = null != _ && (_.systemChannelFlags & m.SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
-      return i && !l && !r && !o && T
+        m = null != _ && (_.systemChannelFlags & T.SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
+      return i && !l && !r && !o && m
     });
     return null != a && i ? (0, s.jsx)(h, {
       message: t,

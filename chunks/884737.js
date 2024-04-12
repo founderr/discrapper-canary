@@ -72,8 +72,8 @@ var E = s("654861"),
   a = s("149765"),
   n = s("866442"),
   T = s("144830"),
-  i = s("911969"),
-  u = s("933557"),
+  u = s("911969"),
+  i = s("933557"),
   A = s("710845"),
   l = s("339085"),
   I = s("776617"),
@@ -859,7 +859,7 @@ function q(e, t) {
             return t;
           case G.AuditLogTargetTypes.CHANNEL:
           case G.AuditLogTargetTypes.CHANNEL_OVERWRITE:
-            return et(e, G.AuditLogChangeKeys.NAME, e => d.default.getChannel(e), e => (0, u.computeChannelName)(e, g.default, N.default, !0));
+            return et(e, G.AuditLogChangeKeys.NAME, e => d.default.getChannel(e), e => (0, i.computeChannelName)(e, g.default, N.default, !0));
           case G.AuditLogTargetTypes.USER:
             return et(e, G.AuditLogChangeKeys.NICK, e => g.default.getUser(e), void 0);
           case G.AuditLogTargetTypes.ROLE:
@@ -891,7 +891,7 @@ function q(e, t) {
             }
             return et(e, G.AuditLogChangeKeys.NAME, e => I.default.applicationCommands.find(t => t.id === e), e => {
               let t = null != e.name_localized && "" !== e.name_localized ? e.name_localized : e.name;
-              return e.type === i.ApplicationCommandType.CHAT ? "/⁠".concat(t) : t
+              return e.type === u.ApplicationCommandType.CHAT ? "/⁠".concat(t) : t
             });
           default:
             return C.warn("Unknown targetType for log", e), null
@@ -929,7 +929,7 @@ function q(e, t) {
                   e.subtarget = es(t.id, e => g.default.getUser(e), e => e.tag);
                   break;
                 case G.ApplicationCommandPermissionTypes.CHANNEL:
-                  t.id === _()(s.id).subtract(1).toString() ? e.subtarget = U.default.Messages.ALL_CHANNELS : e.subtarget = es(t.id, e => d.default.getChannel(e), e => (0, u.computeChannelName)(e, g.default, N.default, !0))
+                  t.id === _()(s.id).subtract(1).toString() ? e.subtarget = U.default.Messages.ALL_CHANNELS : e.subtarget = es(t.id, e => d.default.getChannel(e), e => (0, i.computeChannelName)(e, g.default, N.default, !0))
               }
               return e
             }
@@ -941,7 +941,7 @@ function q(e, t) {
               case G.AuditLogChangeKeys.SYSTEM_CHANNEL_ID:
               case G.AuditLogChangeKeys.RULES_CHANNEL_ID:
               case G.AuditLogChangeKeys.PUBLIC_UPDATES_CHANNEL_ID:
-                return ee(e, e => d.default.getChannel(e), e => (0, u.computeChannelName)(e, g.default, N.default, !0));
+                return ee(e, e => d.default.getChannel(e), e => (0, i.computeChannelName)(e, g.default, N.default, !0));
               case G.AuditLogChangeKeys.AFK_TIMEOUT:
                 return ee(e, e => e / 60);
               case G.AuditLogChangeKeys.BITRATE:
@@ -1032,17 +1032,17 @@ function $(e, t) {
     _ = a.remove(E, s),
     n = a.remove(s, E),
     T = [],
-    i = [],
-    u = {
+    u = [],
+    i = {
       ...G.Permissions
     };
-  for (let e in u) {
-    let t = u[e];
-    a.has(_, t) && T.push(t), a.has(n, t) && i.push(t)
+  for (let e in i) {
+    let t = i[e];
+    a.has(_, t) && T.push(t), a.has(n, t) && u.push(t)
   }
   return {
     added: T,
-    removed: i
+    removed: u
   }
 }
 

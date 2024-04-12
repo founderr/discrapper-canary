@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return T
   }
 });
 var s = n("735250");
@@ -17,14 +17,14 @@ var a = n("803997"),
   f = n("981631"),
   E = n("674563"),
   _ = n("689938"),
-  T = n("297621");
+  m = n("297621");
 
-function m(e) {
+function T(e) {
   let {
     message: t,
     compact: n,
     usernameHook: a
-  } = e, m = (0, r.default)(t), I = a(m), {
+  } = e, T = (0, r.default)(t), I = a(T), {
     avatarSrc: p,
     eventHandlers: {
       onMouseEnter: h,
@@ -41,49 +41,49 @@ function m(e) {
     onMouseEnter: h,
     onMouseLeave: N,
     children: (0, s.jsx)(d.default, {
-      className: l()(T.mainContainer, {
-        [T.compact]: n
+      className: l()(m.mainContainer, {
+        [m.compact]: n
       }),
       iconNode: n ? null : (0, s.jsx)(c.AutomodAvatar, {
         src: p
       }),
-      iconContainerClassName: T.iconContainer,
+      iconContainerClassName: m.iconContainer,
       compact: n,
       children: (0, s.jsxs)("div", {
-        className: l()(T.content, {
-          [T.compact]: n
+        className: l()(m.content, {
+          [m.compact]: n
         }),
         children: [(0, s.jsx)(u.BaseMessageHeader, {
           message: t,
-          messageClassname: T.spanCorrection,
-          className: l()(T.usernameContainer, T.spanCorrection, {
-            [T.compact]: n
+          messageClassname: m.spanCorrection,
+          className: l()(m.usernameContainer, m.spanCorrection, {
+            [m.compact]: n
           }),
           username: (0, s.jsxs)("div", {
-            className: T.spanCorrection,
+            className: m.spanCorrection,
             children: [(0, s.jsx)(i.Text, {
               variant: "text-md/normal",
               color: "text-brand",
               tag: "span",
-              className: T.username,
+              className: m.username,
               children: _.default.Messages.GUILD_AUTOMOD_USERNAME
             }), (0, s.jsx)(o.default, {
               type: E.BotTagTypes.SYSTEM_DM,
-              className: T.systemTag
+              className: m.systemTag
             })]
           }),
           compact: n,
           showTimestamp: !0
         }), (0, s.jsx)("div", {
-          className: l()(T.__invalid_messageContent, {
-            [T.compact]: n
+          className: l()(m.__invalid_messageContent, {
+            [m.compact]: n
           }),
           children: t.type === f.MessageTypes.GUILD_INCIDENT_ALERT_MODE_ENABLED ? _.default.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_SYSTEM_MESSAGE_SHORT.format({
-            username: m.nick,
+            username: T.nick,
             usernameHook: I,
             time: S
           }) : _.default.Messages.GUILD_SERVER_LOCKDOWN_DISABLED_SYSTEM_MESSAGE.format({
-            username: m.nick,
+            username: T.nick,
             usernameHook: I
           })
         })]

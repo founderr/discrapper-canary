@@ -17,8 +17,8 @@ var a = n("803997"),
   f = n("599706"),
   E = n("703656"),
   _ = n("592125"),
-  T = n("430824"),
-  m = n("594174"),
+  m = n("430824"),
+  T = n("594174"),
   I = n("938475"),
   p = n("632184"),
   h = n("622116"),
@@ -42,12 +42,12 @@ function g(e) {
       rawName: t
     } = e;
     return "channel_id" === t
-  })) || void 0 === g ? void 0 : g.rawValue, b = (0, i.useStateFromStores)([T.default], () => T.default.getGuild(y)), j = (0, i.useStateFromStores)([_.default], () => _.default.getChannel(U)), G = (0, i.useStateFromStores)([m.default], () => m.default.getCurrentUser()), B = (0, i.useStateFromStores)([], () => D.author.id === (null == G ? void 0 : G.id)), F = null === (O = P.recipients) || void 0 === O ? void 0 : O.find(e => e !== D.author.id), k = (0, i.useStateFromStores)([m.default], () => null != F ? m.default.getUser(F) : null), w = (0, c.default)(D), H = (0, N.useName)(P.getGuildId(), P.id, k), V = (0, i.useStateFromStoresArray)([I.default], () => null != j ? I.default.getVoiceStatesForChannel(j) : [], [j]), Y = V.some(e => e.user.id === (null == G ? void 0 : G.id)), K = null === (x = D.embeds[0]) || void 0 === x ? void 0 : null === (L = x.fields) || void 0 === L ? void 0 : null === (v = L.find(e => {
+  })) || void 0 === g ? void 0 : g.rawValue, b = (0, i.useStateFromStores)([m.default], () => m.default.getGuild(y)), j = (0, i.useStateFromStores)([_.default], () => _.default.getChannel(U)), G = (0, i.useStateFromStores)([T.default], () => T.default.getCurrentUser()), B = (0, i.useStateFromStores)([], () => D.author.id === (null == G ? void 0 : G.id)), F = null === (O = P.recipients) || void 0 === O ? void 0 : O.find(e => e !== D.author.id), k = (0, i.useStateFromStores)([T.default], () => null != F ? T.default.getUser(F) : null), w = (0, c.default)(D), H = (0, N.useName)(P.getGuildId(), P.id, k), V = (0, i.useStateFromStoresArray)([I.default], () => null != j ? I.default.getVoiceStatesForChannel(j) : [], [j]), Y = V.some(e => e.user.id === (null == G ? void 0 : G.id)), K = null === (x = D.embeds[0]) || void 0 === x ? void 0 : null === (L = x.fields) || void 0 === L ? void 0 : null === (v = L.find(e => {
     let {
       rawName: t
     } = e;
     return "voice_user_ids" === t
-  })) || void 0 === v ? void 0 : v.rawValue, W = null != K ? K.split(",") : [], z = (0, i.useStateFromStoresArray)([m.default], () => W.map(e => m.default.getUser(e)).filter(Boolean)), Q = B && null != k ? C.default.Messages.WAVED_AT_USER.format({
+  })) || void 0 === v ? void 0 : v.rawValue, W = null != K ? K.split(",") : [], z = (0, i.useStateFromStoresArray)([T.default], () => W.map(e => T.default.getUser(e)).filter(Boolean)), Q = B && null != k ? C.default.Messages.WAVED_AT_USER.format({
     username: H
   }) : C.default.Messages.WAVED_AT_YOU.format({
     username: w.nick

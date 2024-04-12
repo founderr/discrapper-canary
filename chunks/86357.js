@@ -4,8 +4,8 @@ var s, a, l, i, r, o, u, d, c = n("735250"),
   f = n("470079"),
   E = n("803997"),
   _ = n.n(E),
-  T = n("646288"),
-  m = n("427828"),
+  m = n("646288"),
+  T = n("427828"),
   I = n("466111"),
   p = n("689938"),
   h = n("316556");
@@ -16,7 +16,7 @@ let N = e => {
     } = e;
     return (0, c.jsxs)("div", {
       className: _()(h.row, t),
-      children: [(0, c.jsx)(m.default, {
+      children: [(0, c.jsx)(T.default, {
         className: h.icon
       }), p.default.Messages.APPLICATION_STORE_IN_LIBRARY]
     })
@@ -30,7 +30,7 @@ let N = e => {
       className: _()(h.row, n),
       children: [(0, c.jsx)(I.default, {
         className: h.icon
-      }), (0, T.default)(t)]
+      }), (0, m.default)(t)]
     })
   },
   C = e => {
@@ -50,7 +50,7 @@ let N = e => {
     } = e;
     return (0, c.jsx)("div", {
       className: _()(h.originalAmount, n),
-      children: (0, T.default)(t, !1)
+      children: (0, m.default)(t, !1)
     })
   },
   g = e => {
@@ -60,7 +60,7 @@ let N = e => {
     } = e;
     return (0, c.jsx)("div", {
       className: n,
-      children: (0, T.default)(t)
+      children: (0, m.default)(t)
     })
   },
   M = e => {

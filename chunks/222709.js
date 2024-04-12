@@ -16,14 +16,14 @@ t.default = e => {
   let {
     channelId: t,
     messageId: n
-  } = e, T = (0, l.useStateFromStores)([f.default], () => f.default.shouldShowBump(n), [n]), m = a.useCallback(() => {
+  } = e, m = (0, l.useStateFromStores)([f.default], () => f.default.shouldShowBump(n), [n]), T = a.useCallback(() => {
     r.default.dismissPublishBump(n), (0, o.default)(t, n)
   }, [t, n]), I = a.useCallback(() => {
     r.default.dismissPublishBump(n)
   }, [n]), p = a.useCallback(() => {
     r.default.permanentlyHidePublishBump(t)
   }, [t]);
-  return T ? (0, s.jsxs)("div", {
+  return m ? (0, s.jsxs)("div", {
     className: _.container,
     children: [(0, s.jsxs)("div", {
       className: _.bumpBox,
@@ -38,7 +38,7 @@ t.default = e => {
         look: i.Button.Looks.LINK,
         size: i.Button.Sizes.MIN,
         className: _.publish,
-        onClick: m,
+        onClick: T,
         children: E.default.Messages.NEWS_CHANNEL_PUBLISH
       }), (0, s.jsx)(i.Clickable, {
         onClick: I,

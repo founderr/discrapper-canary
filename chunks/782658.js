@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("451603"),
   E = n("885714"),
   _ = n("314897"),
-  T = n("430824"),
-  m = n("701190"),
+  m = n("430824"),
+  T = n("701190"),
   I = n("610699"),
   p = n("313876"),
   h = n("778333"),
@@ -37,9 +37,9 @@ function O(e) {
   } = e, {
     invite: v,
     inviteError: L
-  } = (0, l.useStateFromStoresObject)([m.default], () => ({
-    invite: m.default.getInvite(t),
-    inviteError: m.default.getInviteError(t)
+  } = (0, l.useStateFromStoresObject)([T.default], () => ({
+    invite: T.default.getInvite(t),
+    inviteError: T.default.getInviteError(t)
   }), [t]);
   a.useEffect(() => {
     null == v && i.default.resolveInvite(t)
@@ -51,7 +51,7 @@ function O(e) {
     {
       analyticsLocations: D
     } = (0, o.default)(),
-    P = (0, l.useStateFromStores)([T.default], () => (null == v ? void 0 : v.guild) != null ? T.default.getGuild(v.guild.id) : null, [v]),
+    P = (0, l.useStateFromStores)([m.default], () => (null == v ? void 0 : v.guild) != null ? m.default.getGuild(v.guild.id) : null, [v]),
     y = (0, l.useStateFromStores)([_.default], () => _.default.getId()),
     U = (0, l.useStateFromStores)([u.default], () => {
       var e;

@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("641051"),
   E = n("360629"),
   _ = n("675478"),
-  T = n("581883"),
-  m = n("585483"),
+  m = n("581883"),
+  T = n("585483"),
   I = n("153209"),
   p = n("881591"),
   h = n("903672"),
@@ -37,9 +37,9 @@ function g(e) {
   } = e, {
     analyticsLocations: v
   } = (0, d.default)(u.default.NOTIFICATION_CENTER), [L, x] = a.useState(!1), [D, P] = function() {
-    let e = (0, i.useStateFromStores)([T.default], () => {
+    let e = (0, i.useStateFromStores)([m.default], () => {
       var e, t;
-      return null !== (t = null === (e = T.default.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : r.InboxTab.UNREADS
+      return null !== (t = null === (e = m.default.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : r.InboxTab.UNREADS
     });
     return [e, a.useCallback(e => {
       _.PreloadedUserSettingsActionCreators.updateAsync("inbox", t => {
@@ -51,9 +51,9 @@ function g(e) {
     showTutorial: y,
     setSeenTutorial: U
   } = function(e) {
-    let t = (0, i.useStateFromStores)([T.default], () => {
+    let t = (0, i.useStateFromStores)([m.default], () => {
         var e, t;
-        return null !== (t = null === (e = T.default.settings.inbox) || void 0 === e ? void 0 : e.viewedTutorial) && void 0 !== t && t
+        return null !== (t = null === (e = m.default.settings.inbox) || void 0 === e ? void 0 : e.viewedTutorial) && void 0 !== t && t
       }),
       n = a.useCallback(() => {
         _.PreloadedUserSettingsActionCreators.updateAsync("inbox", e => {
@@ -71,7 +71,7 @@ function g(e) {
   }, [n, t, L]), G = a.useCallback(() => {
     j(), P(r.InboxTab.UNREADS)
   }, [P, j]);
-  a.useEffect(() => (m.ComponentDispatch.subscribe(C.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, G), () => void m.ComponentDispatch.unsubscribe(C.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, G)), [G]);
+  a.useEffect(() => (T.ComponentDispatch.subscribe(C.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, G), () => void T.ComponentDispatch.unsubscribe(C.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, G)), [G]);
   let {
     showReminders: B
   } = f.default.useExperiment({

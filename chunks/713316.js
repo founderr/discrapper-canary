@@ -1,48 +1,48 @@
 "use strict";
 n.r(t), n.d(t, {
   PaymentModalConfirmStep: function() {
-    return f
+    return p
   }
 });
 var a = n("735250");
 n("470079");
 var r = n("512722"),
   s = n.n(r),
-  l = n("481060"),
-  i = n("598"),
-  u = n("698708"),
-  o = n("614277"),
+  i = n("481060"),
+  l = n("598"),
+  o = n("698708"),
+  u = n("614277"),
   d = n("689938"),
   c = n("822439");
 
-function f(e) {
+function p(e) {
   let {
     handleClose: t
   } = e, {
     skusById: n,
     selectedSkuId: r,
-    application: f
-  } = (0, i.usePaymentContext)();
-  s()(null != r, "Expected selectedSkuId"), s()(null != f, "Expected application");
-  let _ = n[r];
-  s()(null != _, "Expected sku");
-  let I = d.default.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
-    applicationName: f.name,
-    itemName: _.name
+    application: p
+  } = (0, l.usePaymentContext)();
+  s()(null != r, "Expected selectedSkuId"), s()(null != p, "Expected application");
+  let m = n[r];
+  s()(null != m, "Expected sku");
+  let f = d.default.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
+    applicationName: p.name,
+    itemName: m.name
   });
-  return (0, a.jsxs)(o.PaymentPortalBody, {
-    children: [(0, a.jsx)(u.default, {}), (0, a.jsxs)("div", {
+  return (0, a.jsxs)(u.PaymentPortalBody, {
+    children: [(0, a.jsx)(o.default, {}), (0, a.jsxs)("div", {
       className: c.confirmation,
-      children: [(0, a.jsx)(l.Heading, {
+      children: [(0, a.jsx)(i.Heading, {
         variant: "heading-xxl/bold",
         className: c.confirmationHeader,
         children: "Success!"
-      }), (0, a.jsx)(l.Text, {
+      }), (0, a.jsx)(i.Text, {
         variant: "text-md/normal",
-        children: I
+        children: f
       }), (0, a.jsx)("div", {
         className: c.divider
-      }), (0, a.jsx)(l.Button, {
+      }), (0, a.jsx)(i.Button, {
         onClick: t,
         children: d.default.Messages.CLOSE
       })]

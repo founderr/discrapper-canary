@@ -26,7 +26,7 @@ function l(e) {
   (0, r.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("11250"), n.e("95393"), n.e("14262"), n.e("22347"), n.e("66993")]).then(n.bind(n, "697849"));
+    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("11250"), n.e("14262"), n.e("95393"), n.e("22347"), n.e("66993")]).then(n.bind(n, "697849"));
     return n => (0, i.jsx)(e, {
       guildScheduledEventId: t,
       parentGuildId: s,

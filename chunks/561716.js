@@ -4,10 +4,10 @@ l.r(t), l.d(t, {
     return u
   }
 });
-var n = l("51596"),
-  s = l("819640");
+var s = l("51596"),
+  n = l("819640");
 let u = {
   binds: ["mod+k", "mod+t"],
   comboKeysBindGlobal: !0,
-  action: () => (!s.default.hasLayers() && (0, n.show)(), !1)
+  action: () => (!n.default.hasLayers() && (0, s.show)(), !1)
 }

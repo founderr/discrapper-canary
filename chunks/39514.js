@@ -1,56 +1,56 @@
 "use strict";
-s.r(t), s("47120"), s("411104");
-var n, a, l = s("735250"),
-  i = s("470079"),
-  r = s("803997"),
-  u = s.n(r),
-  o = s("442837"),
-  d = s("570140"),
-  c = s("893776"),
-  f = s("533307"),
-  E = s("978085"),
-  I = s("232567"),
-  _ = s("362762"),
-  h = s("108427"),
-  p = s("314897"),
-  T = s("896797"),
-  N = s("82142"),
-  g = s("283595"),
-  m = s("55563"),
-  A = s("819570"),
-  S = s("669079"),
-  v = s("63063"),
-  C = s("51144"),
-  O = s("481153"),
-  R = s("781428"),
-  x = s("109894"),
-  D = s("981631"),
-  L = s("689938"),
-  P = s("794711");
+n.r(t), n("47120"), n("411104");
+var s, a, i = n("735250"),
+  l = n("470079"),
+  r = n("803997"),
+  u = n.n(r),
+  o = n("442837"),
+  d = n("570140"),
+  c = n("893776"),
+  f = n("533307"),
+  E = n("978085"),
+  I = n("232567"),
+  h = n("362762"),
+  _ = n("108427"),
+  p = n("314897"),
+  T = n("896797"),
+  m = n("82142"),
+  N = n("283595"),
+  g = n("55563"),
+  A = n("819570"),
+  S = n("669079"),
+  v = n("63063"),
+  O = n("51144"),
+  C = n("481153"),
+  R = n("781428"),
+  x = n("109894"),
+  D = n("981631"),
+  P = n("689938"),
+  L = n("794711");
 
-function M(e, t, s) {
+function M(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: s,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = s, e
+  }) : e[t] = n, e
 }
-o.default.initialize(), (a = n || (n = {})).REGISTER = "register", a.LOGIN = "login";
-class j extends i.PureComponent {
+o.default.initialize(), (a = s || (s = {})).REGISTER = "register", a.LOGIN = "login";
+class b extends l.PureComponent {
   componentDidMount() {
     let {
       authenticated: e,
       isResolved: t
     } = this.props;
-    e && this.handleAuthenticated(), !t && this.resolveGiftCode(), (0, h.trackAppUIViewed)("gift_code")
+    e && this.handleAuthenticated(), !t && this.resolveGiftCode(), (0, _.trackAppUIViewed)("gift_code")
   }
   componentDidUpdate(e) {
     let {
       authenticated: t,
-      isResolved: s
+      isResolved: n
     } = this.props;
-    !s && d.default.wait(() => {
+    !n && d.default.wait(() => {
       this.resolveGiftCode()
     }), t && !e.authenticated && this.handleAuthenticated(), !t && e.authenticated && this.setState({
       currentUser: null
@@ -79,19 +79,19 @@ class j extends i.PureComponent {
   getErrorMessage(e) {
     let {
       libraryApplication: t,
-      sku: s
+      sku: n
     } = this.props, {
-      error: n
-    } = this.state, a = null != n ? n.code : null;
-    return a === D.AbortCodes.INVALID_GIFT_SELF_REDEMPTION ? L.default.Messages.GIFT_CONFIRMATION_BODY_SELF_GIFT_NO_PAYMENT : a === D.AbortCodes.INVALID_GIFT_REDEMPTION_OWNED && (null == s ? void 0 : s.productLine) === D.SKUProductLines.COLLECTIBLES ? L.default.Messages.GIFT_ERROR_OWNED : null != t || a === D.AbortCodes.INVALID_GIFT_REDEMPTION_OWNED ? L.default.Messages.GIFT_CODE_AUTH_HELP_TEXT_OWNED.format({
+      error: s
+    } = this.state, a = null != s ? s.code : null;
+    return a === D.AbortCodes.INVALID_GIFT_SELF_REDEMPTION ? P.default.Messages.GIFT_CONFIRMATION_BODY_SELF_GIFT_NO_PAYMENT : a === D.AbortCodes.INVALID_GIFT_REDEMPTION_OWNED && (null == n ? void 0 : n.productLine) === D.SKUProductLines.COLLECTIBLES ? P.default.Messages.GIFT_ERROR_OWNED : null != t || a === D.AbortCodes.INVALID_GIFT_REDEMPTION_OWNED ? P.default.Messages.GIFT_CODE_AUTH_HELP_TEXT_OWNED.format({
       libraryLink: D.Routes.APPLICATION_LIBRARY
-    }) : e.isClaimed || a === D.AbortCodes.INVALID_GIFT_REDEMPTION_EXHAUSTED ? L.default.Messages.GIFT_CODE_AUTH_HELP_TEXT_CLAIMED : a === D.AbortCodes.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED ? L.default.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT : void 0
+    }) : e.isClaimed || a === D.AbortCodes.INVALID_GIFT_REDEMPTION_EXHAUSTED ? P.default.Messages.GIFT_CODE_AUTH_HELP_TEXT_CLAIMED : a === D.AbortCodes.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED ? P.default.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT : void 0
   }
   renderSpinner(e) {
-    return (0, l.jsxs)(A.default, {
-      children: [(0, l.jsx)(A.Title, {
+    return (0, i.jsxs)(A.default, {
+      children: [(0, i.jsx)(A.Title, {
         children: e
-      }), (0, l.jsx)(A.AuthSpinner, {})]
+      }), (0, i.jsx)(A.AuthSpinner, {})]
     })
   }
   renderExpiredInvite() {
@@ -99,40 +99,40 @@ class j extends i.PureComponent {
       defaultRoute: e,
       transitionTo: t
     } = this.props;
-    return (0, l.jsxs)(A.default, {
-      children: [(0, l.jsx)(A.Image, {
-        src: s("167969"),
-        className: P.marginBottom8
-      }), (0, l.jsx)(A.Title, {
-        className: u()(P.marginTop8, P.marginBottom8),
-        children: L.default.Messages.GIFT_CODE_AUTH_INVALID_TITLE
-      }), (0, l.jsx)(A.SubTitle, {
-        children: L.default.Messages.GIFT_CODE_AUTH_INVALID_BODY
-      }), (0, l.jsx)(A.Button, {
-        className: u()(P.marginTop40, P.marginBottom8),
+    return (0, i.jsxs)(A.default, {
+      children: [(0, i.jsx)(A.Image, {
+        src: n("167969"),
+        className: L.marginBottom8
+      }), (0, i.jsx)(A.Title, {
+        className: u()(L.marginTop8, L.marginBottom8),
+        children: P.default.Messages.GIFT_CODE_AUTH_INVALID_TITLE
+      }), (0, i.jsx)(A.SubTitle, {
+        children: P.default.Messages.GIFT_CODE_AUTH_INVALID_BODY
+      }), (0, i.jsx)(A.Button, {
+        className: u()(L.marginTop40, L.marginBottom8),
         onClick: () => t(e),
-        children: L.default.Messages.CONTINUE_TO_WEBAPP
-      }), (0, l.jsx)(A.Button, {
+        children: P.default.Messages.CONTINUE_TO_WEBAPP
+      }), (0, i.jsx)(A.Button, {
         onClick: () => window.open(v.default.getArticleURL(D.HelpdeskArticles.GIFTING), "_blank"),
         look: A.Button.Looks.LINK,
         color: A.Button.Colors.LINK,
-        children: L.default.Messages.GIFT_CODE_AUTH_INVALID_TIP
+        children: P.default.Messages.GIFT_CODE_AUTH_INVALID_TIP
       })]
     })
   }
   renderAppOpened() {
-    return (0, l.jsxs)(A.default, {
-      children: [(0, l.jsx)(A.Title, {
-        className: P.marginBottom8,
-        children: L.default.Messages.APP_OPENED_TITLE
-      }), (0, l.jsx)(A.SubTitle, {
-        children: L.default.Messages.APP_OPENED_BODY
-      }), (0, l.jsx)(A.Button, {
-        className: P.marginTop40,
+    return (0, i.jsxs)(A.default, {
+      children: [(0, i.jsx)(A.Title, {
+        className: L.marginBottom8,
+        children: P.default.Messages.APP_OPENED_TITLE
+      }), (0, i.jsx)(A.SubTitle, {
+        children: P.default.Messages.APP_OPENED_BODY
+      }), (0, i.jsx)(A.Button, {
+        className: L.marginTop40,
         onClick: () => this.setState({
           continueOnWeb: !0
         }),
-        children: L.default.Messages.GIFT_CODE_AUTH_CONTINUE_IN_BROWSER
+        children: P.default.Messages.GIFT_CODE_AUTH_CONTINUE_IN_BROWSER
       })]
     })
   }
@@ -140,48 +140,48 @@ class j extends i.PureComponent {
     let {
       sentVerification: t
     } = this.state;
-    return (0, l.jsxs)(A.default, {
-      children: [(0, l.jsx)(A.Image, {
-        src: s("892235"),
-        className: P.marginBottom8
-      }), (0, l.jsx)(A.Title, {
-        children: L.default.Messages.GIFT_CODE_AUTH_VERIFICATION_TITLE.format({
+    return (0, i.jsxs)(A.default, {
+      children: [(0, i.jsx)(A.Image, {
+        src: n("892235"),
+        className: L.marginBottom8
+      }), (0, i.jsx)(A.Title, {
+        children: P.default.Messages.GIFT_CODE_AUTH_VERIFICATION_TITLE.format({
           username: e.username
         })
-      }), (0, l.jsx)(A.SubTitle, {
-        className: P.marginTop20,
-        children: L.default.Messages.GIFT_CODE_AUTH_HELP_TEXT_VERIFICATION_REQUIRED
-      }), (0, l.jsx)(A.Button, {
+      }), (0, i.jsx)(A.SubTitle, {
+        className: L.marginTop20,
+        children: P.default.Messages.GIFT_CODE_AUTH_HELP_TEXT_VERIFICATION_REQUIRED
+      }), (0, i.jsx)(A.Button, {
         disabled: t,
-        className: P.marginTop40,
+        className: L.marginTop40,
         onClick: this.handleResendVerification,
-        children: t ? L.default.Messages.GIFT_CODE_AUTH_VERIFICATION_SENT : L.default.Messages.RESEND_VERIFICATION_EMAIL
-      }), (0, l.jsx)(A.Button, {
+        children: t ? P.default.Messages.GIFT_CODE_AUTH_VERIFICATION_SENT : P.default.Messages.RESEND_VERIFICATION_EMAIL
+      }), (0, i.jsx)(A.Button, {
         look: A.Button.Looks.LINK,
         color: A.Button.Colors.LINK,
         onClick: this.refreshUser,
-        className: P.marginTop8,
-        children: L.default.Messages.GIFT_CODE_AUTH_CHECK_VERIFICATION_AGAIN
+        className: L.marginTop8,
+        children: P.default.Messages.GIFT_CODE_AUTH_CHECK_VERIFICATION_AGAIN
       })]
     })
   }
   renderAuthenticated(e, t) {
-    let s = this.getErrorMessage(e);
-    return (0, l.jsxs)(A.default, {
-      children: [(0, l.jsx)(O.default, {
+    let n = this.getErrorMessage(e);
+    return (0, i.jsxs)(A.default, {
+      children: [(0, i.jsx)(C.default, {
         giftCode: e
-      }), (0, l.jsx)(A.Button, {
-        disabled: null != s,
-        className: P.marginTop40,
+      }), (0, i.jsx)(A.Button, {
+        disabled: null != n,
+        className: L.marginTop40,
         onClick: this.handleAccept,
-        children: L.default.Messages.GIFT_CODE_AUTH_ACCEPT
-      }), null != s ? (0, l.jsx)(A.SubTitle, {
-        className: P.marginTop20,
-        children: s
-      }) : (0, l.jsx)(A.SubText, {
-        className: P.marginTop20,
-        children: L.default.Messages.GIFT_CODE_AUTH_LOGGED_IN_AS.format({
-          userTag: C.default.getUserTag(t),
+        children: P.default.Messages.GIFT_CODE_AUTH_ACCEPT
+      }), null != n ? (0, i.jsx)(A.SubTitle, {
+        className: L.marginTop20,
+        children: n
+      }) : (0, i.jsx)(A.SubText, {
+        className: L.marginTop20,
+        children: P.default.Messages.GIFT_CODE_AUTH_LOGGED_IN_AS.format({
+          userTag: O.default.getUserTag(t),
           onLogoutClick: this.handleLogout
         })
       })]
@@ -191,10 +191,10 @@ class j extends i.PureComponent {
     let {
       nativeAppState: e,
       sku: t,
-      authenticated: s,
-      giftCode: n,
+      authenticated: n,
+      giftCode: s,
       isResolved: a,
-      isAccepting: i,
+      isAccepting: l,
       transitionTo: r,
       location: u
     } = this.props, {
@@ -202,22 +202,22 @@ class j extends i.PureComponent {
       continueOnWeb: d
     } = this.state;
     if (e === D.NativeAppStates.OPEN && !d) return this.renderAppOpened();
-    if (e === D.NativeAppStates.OPENING) return this.renderSpinner(L.default.Messages.APP_OPENING);
-    if (i) return this.renderSpinner(L.default.Messages.GIFT_CODE_AUTH_ACCEPTING);
-    if (null == n) return a ? this.renderExpiredInvite() : this.renderSpinner(L.default.Messages.GIFT_CODE_AUTH_RESOLVING);
+    if (e === D.NativeAppStates.OPENING) return this.renderSpinner(P.default.Messages.APP_OPENING);
+    if (l) return this.renderSpinner(P.default.Messages.GIFT_CODE_AUTH_ACCEPTING);
+    if (null == s) return a ? this.renderExpiredInvite() : this.renderSpinner(P.default.Messages.GIFT_CODE_AUTH_RESOLVING);
     if (a) {
-      if (s) {
+      if (n) {
         let e = this.state.currentUser;
-        return o || null == e ? this.renderSpinner(L.default.Messages.GIFT_CODE_AUTH_FETCHING_USER) : this.requiresVerification && null != e ? this.renderVerification(e) : this.renderAuthenticated(n, e)
+        return o || null == e ? this.renderSpinner(P.default.Messages.GIFT_CODE_AUTH_FETCHING_USER) : this.requiresVerification && null != e ? this.renderVerification(e) : this.renderAuthenticated(s, e)
       }
-      return "login" === this.getMode() ? (0, l.jsx)(R.default, {
+      return "login" === this.getMode() ? (0, i.jsx)(R.default, {
         giftCodeSKU: t,
-        giftCode: n,
+        giftCode: s,
         transitionTo: r,
         location: u
-      }) : (0, l.jsx)(x.default, {
+      }) : (0, i.jsx)(x.default, {
         giftCodeSKU: t,
-        giftCode: n,
+        giftCode: s,
         transitionTo: r,
         location: u
       })
@@ -255,12 +255,12 @@ class j extends i.PureComponent {
         giftCode: t
       } = this.props;
       if (null == t) throw Error("Trying to accept gift before resolve");
-      let s = this.getCode();
+      let n = this.getCode();
       try {
         this.setState({
           error: null
         }), await f.default.redeemGiftCode({
-          code: s
+          code: n
         }), e(D.Routes.APP)
       } catch (e) {
         this.setState({
@@ -271,25 +271,25 @@ class j extends i.PureComponent {
       let {
         transitionTo: e
       } = this.props, t = this.getCode();
-      f.default.resolveGiftCode(t, !0, !0).then(s => {
-        null != s && null != s.giftCode.promotion && e(D.Routes.BILLING_PROMOTION_REDEMPTION(t))
+      f.default.resolveGiftCode(t, !0, !0).then(n => {
+        null != n && null != n.giftCode.promotion && e(D.Routes.BILLING_PROMOTION_REDEMPTION(t))
       })
     })
   }
 }
-t.default = o.default.connectStores([N.default, g.default, p.default, m.default, T.default, _.default], e => {
+t.default = o.default.connectStores([m.default, N.default, p.default, g.default, T.default, h.default], e => {
   let t = e.match.params.giftCode,
-    s = N.default.get(t),
-    n = null != s ? m.default.get(s.skuId) : null;
+    n = m.default.get(t),
+    s = null != n ? g.default.get(n.skuId) : null;
   return {
-    giftCode: s,
-    sku: n,
-    libraryApplication: null != n && (null == s ? void 0 : s.entitlementBranches) != null ? S.firstLibraryApplicationForGiftCode(s.entitlementBranches, n, g.default) : null,
+    giftCode: n,
+    sku: s,
+    libraryApplication: null != s && (null == n ? void 0 : n.entitlementBranches) != null ? S.firstLibraryApplicationForGiftCode(n.entitlementBranches, s, N.default) : null,
     authenticated: p.default.isAuthenticated(),
     defaultRoute: T.default.defaultRoute,
-    isResolved: N.default.getIsResolved(t),
-    isAccepting: N.default.getIsAccepting(t),
-    libraryApplicationsFetched: g.default.fetched,
-    nativeAppState: _.default.getState(t)
+    isResolved: m.default.getIsResolved(t),
+    isAccepting: m.default.getIsAccepting(t),
+    libraryApplicationsFetched: N.default.fetched,
+    nativeAppState: h.default.getState(t)
   }
-})(j)
+})(b)

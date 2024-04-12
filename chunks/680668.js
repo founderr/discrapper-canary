@@ -17,8 +17,8 @@ var a = n("533800"),
   f = n("411198"),
   E = n("277707"),
   _ = n("358595"),
-  T = n("981631"),
-  m = n("689938"),
+  m = n("981631"),
+  T = n("689938"),
   I = n("558338");
 
 function p(e) {
@@ -37,14 +37,14 @@ function p(e) {
       approximate_member_count: x,
       approximate_presence_count: D
     } = M,
-    P = M.state === T.InviteStates.ACCEPTING,
+    P = M.state === m.InviteStates.ACCEPTING,
     y = null != L ? (0, r.createChannelRecordFromInvite)(L) : null,
     U = null != g,
     b = null != y,
     j = null != y && y.isGuildVocal(),
     G = null != y && y.isGuildStageVoice(),
     B = (0, d.hasFlag)(null !== (t = M.flags) && void 0 !== t ? t : 0, a.GuildInviteFlags.IS_GUEST_INVITE),
-    F = null !== (p = null == g ? void 0 : g.hasFeature(T.GuildFeatures.HUB)) && void 0 !== p && p;
+    F = null !== (p = null == g ? void 0 : g.hasFeature(m.GuildFeatures.HUB)) && void 0 !== p && p;
   if (null == g) {
     if (null == M.guild) return (0, s.jsx)(_.default, {});
     g = f.fromInviteGuild(M.guild);
@@ -74,7 +74,7 @@ function p(e) {
     })]
   }), B && (S = (0, s.jsx)(l.TooltipContainer, {
     className: I.tooltipContainer,
-    text: m.default.Messages.GUEST_MEMBERSHIP_EXPLANATION,
+    text: T.default.Messages.GUEST_MEMBERSHIP_EXPLANATION,
     children: (0, s.jsx)(u.default, {
       className: I.infoIcon
     })
@@ -82,7 +82,7 @@ function p(e) {
     channel: y
   }), h = (0, s.jsxs)("span", {
     className: I.infoTitle,
-    children: [m.default.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({
+    children: [T.default.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({
       guildName: g.name
     }), (0, s.jsx)("span", {
       className: I.infoBadge,
@@ -117,15 +117,15 @@ function p(e) {
         onClick: k,
         submitting: P,
         color: o.default.Button.Colors.GREEN,
-        children: j ? G ? m.default.Messages.STAGE_CHANNEL_JOIN : m.default.Messages.INVITE_VOICE_CHANNEL_JOIN : U ? m.default.Messages.JOINED_GUILD : m.default.Messages.JOIN_GUILD
+        children: j ? G ? T.default.Messages.STAGE_CHANNEL_JOIN : T.default.Messages.INVITE_VOICE_CHANNEL_JOIN : U ? T.default.Messages.JOINED_GUILD : T.default.Messages.JOIN_GUILD
       })]
-    }), g.hasFeature(T.GuildFeatures.HUB) && (0, s.jsxs)(s.Fragment, {
+    }), g.hasFeature(m.GuildFeatures.HUB) && (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)("div", {
         className: I.separator
       }), (0, s.jsx)(l.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
-        children: m.default.Messages.HUB_INVITE_ANOTHER_SCHOOL_LINK.format({
+        children: T.default.Messages.HUB_INVITE_ANOTHER_SCHOOL_LINK.format({
           onClick: () => (0, l.openModalLazy)(async () => {
             let {
               default: e

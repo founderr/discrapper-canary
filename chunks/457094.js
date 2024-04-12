@@ -118,7 +118,7 @@ function e4(e, t, n) {
   }) : e[t] = n, e
 }
 n("117240"), n("801077"), n("967368"), n("272053"), n("974180"), n("574254"), n("551428"), n("55563"), n("455173"), n("882029"), n("959457"), n("653255"), n("663389"), n("25990"), n("778825"), n("999382"), n("388610"), n("533947"), n("277053"), n("371398"), n("141233"), n("471073"), n("628566");
-let e9 = !1;
+let e7 = !1;
 (0, A.initSessionHeartbeatScheduler)(), o.default.initialize(), eS.default.loadServer(), eZ.isPlatformEmbedded && (eX.default.on("USER_SETTINGS_OPEN", () => {
   !eF.default.getLayers().includes(e$.Layers.USER_SETTINGS) && _.default.open(e$.UserSettingsSections.ACCOUNT)
 }), eX.default.on("LAUNCH_APPLICATION", (e, t) => {
@@ -132,7 +132,7 @@ let e9 = !1;
     }
   })
 }));
-let e7 = o.default.connectStores([Y.default, ew.default, eU.default], () => ({
+let e3 = o.default.connectStores([Y.default, ew.default, eU.default], () => ({
     isConnected: Y.default.isConnected(),
     defaultRoute: ew.default.defaultRoute,
     defaultRouteFallback: ew.default.fallbackRoute,
@@ -167,7 +167,7 @@ let e7 = o.default.connectStores([Y.default, ew.default, eU.default], () => ({
       return null
     }
   }),
-  e3 = (0, L.makeAuthenticated)(P.default, null, {
+  e9 = (0, L.makeAuthenticated)(P.default, null, {
     passProps: !1
   }),
   e5 = (0, L.makeAuthenticated)(function() {
@@ -223,14 +223,14 @@ let tn = [{
       let {
         match: t
       } = e;
-      return (0, a.jsx)(e7, {
+      return (0, a.jsx)(e3, {
         match: t
       })
     },
     isSessionRequired: !0
   }, {
     path: [e$.Routes.APP],
-    render: () => (0, a.jsx)(e7, {}),
+    render: () => (0, a.jsx)(e3, {}),
     isSessionRequired: !0
   }, {
     path: [e$.Routes.USERS(":id")],
@@ -420,7 +420,7 @@ let tn = [{
     isChatRoute: !0
   }, {
     path: [e$.Routes.CHANNEL_THREAD_VIEW(":guildId", ":channelId", ":threadId", ":messageId?"), e$.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?"), e$.Routes.ACTIVITY, e$.Routes.ACTIVITIES, e$.Routes.ACTIVITIES_HAPPENING_NOW, e$.Routes.ACTIVITY_DETAILS(":applicationId"), e$.Routes.APPLICATION_LIBRARY, e$.Routes.APPLICATION_STORE, e$.Routes.MESSAGE_REQUESTS, e$.Routes.COLLECTIBLES_SHOP, e$.Routes.COLLECTIBLES_SHOP_FULLSCREEN, e$.Routes.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"), e$.Routes.GUILD_DISCOVERY, e$.Routes.GUILD_MEMBER_VERIFICATION(":guildId", ":inviteCode?"), e$.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(":guildId", ":inviteCode?"), e$.Routes.GUILD_BOOSTING_MARKETING(":guildId"), e$.Routes.FEATURE(":feature"), e$.Routes.FAMILY_CENTER],
-    render: e3,
+    render: e9,
     isSessionRequired: !0,
     isChatRoute: !0
   }, ...tn];
@@ -503,8 +503,8 @@ class ti extends s.PureComponent {
       if (u && _ && f.default.selectGuild(a), u && d) {
         let n = eB.default.getChannelId(h),
           i = n !== s;
-        if (!e9 || _ || i || null != r) {
-          e9 = !0, E.default.selectChannel({
+        if (!e7 || _ || i || null != r) {
+          e7 = !0, E.default.selectChannel({
             guildId: a,
             channelId: s,
             messageId: r

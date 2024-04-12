@@ -8,8 +8,8 @@ var s, a, l, i, r = n("442837"),
   f = n("483360"),
   E = n("892880"),
   _ = n("405656"),
-  T = n("51144"),
-  m = n("271383"),
+  m = n("51144"),
+  T = n("271383"),
   I = n("768119"),
   p = n("246946"),
   h = n("594174"),
@@ -59,7 +59,7 @@ function g(e, t) {
       let n = h.default.getUser(t.id);
       return null == n ? e : (e.push({
         id: n.id,
-        text: T.default.getUserTag(n),
+        text: m.default.getUserTag(n),
         user: n
       }), e)
     }, [])).length > t && (e.length = t), e
@@ -93,7 +93,7 @@ function M(e, t, n) {
       } = e;
       return {
         user: t,
-        text: T.default.getUserTag(t)
+        text: m.default.getUserTag(t)
       }
     })), s = e.results)
   } else {
@@ -212,7 +212,7 @@ function x() {
 }
 class D extends(s = r.default.Store) {
   initialize() {
-    this.waitFor(m.default, p.default)
+    this.waitFor(T.default, p.default)
   }
   getState(e) {
     var t;

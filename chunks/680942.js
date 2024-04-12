@@ -4,15 +4,15 @@ var l = a("735250"),
   s = a("470079"),
   r = a("481060"),
   n = a("727637"),
-  o = a("906732"),
-  i = a("241553"),
+  i = a("906732"),
+  o = a("241553"),
   u = a("333867"),
   c = a("559629"),
   d = a("624377"),
   f = a("231338"),
   m = a("689938"),
   C = a("125006");
-let h = {
+let p = {
   dark: [{
     box: "#FFF19E",
     ribbon: "#FF484B"
@@ -62,25 +62,25 @@ t.default = e => {
   let {
     product: t,
     returnRef: a,
-    onSuccess: g,
-    tooltipDelay: p,
+    onSuccess: h,
+    tooltipDelay: g,
     isGiftEasterEggEnabled: E,
     disableCustomColor: b = !1
   } = e, {
     analyticsLocations: S
-  } = (0, o.default)(), T = s.useRef(null), x = (0, n.default)(T), {
-    buttonColors: v
-  } = (0, d.default)(t.styles), L = null == v || b ? void 0 : {
-    background: v.secondary.toHslString(),
-    color: v.text.toHslString()
-  }, I = b || (null == v ? void 0 : v.text.isDark()) ? f.ThemeTypes.DARK : f.ThemeTypes.LIGHT;
+  } = (0, i.default)(), T = s.useRef(null), x = (0, n.default)(T), {
+    buttonColors: L
+  } = (0, d.default)(t.styles), v = null == L || b ? void 0 : {
+    background: L.secondary.toHslString(),
+    color: L.text.toHslString()
+  }, I = b || (null == L ? void 0 : L.text.isDark()) ? f.ThemeTypes.DARK : f.ThemeTypes.LIGHT;
   return (0, l.jsx)(r.Tooltip, {
     text: m.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
-    delay: p,
+    delay: g,
     children: e => (0, l.jsx)(r.Button, {
       ...e,
       buttonRef: T,
-      style: L,
+      style: v,
       className: C.giftButton,
       color: b ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
       look: r.Button.Looks.FILLED,
@@ -93,16 +93,16 @@ t.default = e => {
           isGift: !0,
           analyticsLocations: S,
           returnRef: a,
-          onClose: null != g ? e => {
-            e && g()
+          onClose: null != h ? e => {
+            e && h()
           } : void 0
         })
       },
-      children: E ? (0, l.jsx)(i.SeasonalGiftIcon, {
+      children: E ? (0, l.jsx)(o.SeasonalGiftIcon, {
         hovered: x,
         isContentDismissed: !0,
         themeOverride: I,
-        boxColors: h
+        boxColors: p
       }) : (0, l.jsx)(c.default, {
         width: 24,
         height: 24

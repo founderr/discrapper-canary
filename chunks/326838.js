@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("317632"),
   E = n("174767"),
   _ = n("594174"),
-  T = n("836946"),
-  m = n("507893"),
+  m = n("836946"),
+  T = n("507893"),
   I = n("55935"),
   p = n("689938"),
   h = n("139773");
@@ -29,7 +29,7 @@ function N(e) {
   } = e, l = (0, r.useStateFromStores)([_.default], () => {
     var e, n;
     return null !== (n = null === (e = _.default.getUser(t.inviter_id)) || void 0 === e ? void 0 : e.username) && void 0 !== n ? n : ""
-  }), c = (0, I.dateFormat)(i()(t.created_at), "LT"), f = a.useRef(null), m = (0, d.default)(f);
+  }), c = (0, I.dateFormat)(i()(t.created_at), "LT"), f = a.useRef(null), T = (0, d.default)(f);
   return a.useEffect(() => {
     !n && (0, E.updateInviteStatus)(t)
   }, [t, n]), (0, s.jsxs)("div", {
@@ -53,11 +53,11 @@ function N(e) {
         children: [(0, s.jsx)(S, {
           expired: n,
           invite: t,
-          isHoveringInvite: m
-        }), (0, s.jsx)(T.default, {
+          isHoveringInvite: T
+        }), (0, s.jsx)(m.default, {
           className: h.deleteButton,
           tooltip: p.default.Messages.DELETE,
-          color: T.CircleIconButtonColors.SECONDARY,
+          color: m.CircleIconButtonColors.SECONDARY,
           icon: (0, s.jsx)(o.TrashIcon, {
             width: 16,
             height: 16
@@ -94,7 +94,7 @@ function S(e) {
     expired: t,
     invite: n,
     isHoveringInvite: l
-  } = e, i = (0, r.useStateFromStores)([f.default], () => f.default.isInviteGameInstalled(n)), o = (0, r.useStateFromStores)([f.default], () => f.default.isInviteJoinable(n)), [d, _] = a.useState(!1), T = a.useCallback(async () => {
+  } = e, i = (0, r.useStateFromStores)([f.default], () => f.default.isInviteGameInstalled(n)), o = (0, r.useStateFromStores)([f.default], () => f.default.isInviteJoinable(n)), [d, _] = a.useState(!1), m = a.useCallback(async () => {
     _(!0);
     try {
       await (0, E.launchInviteGame)(n)
@@ -112,7 +112,7 @@ function S(e) {
     color: u.ButtonColors.TRANSPARENT,
     disabled: d,
     size: u.ButtonSizes.SMALL,
-    onClick: T,
+    onClick: m,
     children: p.default.Messages.GAME_INVITES_LAUNCH_GAME
   }) : null;
   return i && o ? (0, s.jsx)(u.Button, {
@@ -147,7 +147,7 @@ function S(e) {
           className: h.launchToJoinText,
           color: "text-muted",
           children: p.default.Messages.GAME_INVITES_LAUNCH_TO_JOIN
-        }), (0, s.jsx)(m.default, {
+        }), (0, s.jsx)(T.default, {
           color: u.tokens.colors.TEXT_MUTED.css,
           width: 12,
           height: 12

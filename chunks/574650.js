@@ -13,8 +13,8 @@ var a = n("803997"),
   f = n("693546"),
   E = n("305325"),
   _ = n("246364"),
-  T = n("937111"),
-  m = n("981631"),
+  m = n("937111"),
+  T = n("981631"),
   I = n("176505"),
   p = n("689938"),
   h = n("463318"),
@@ -23,9 +23,9 @@ t.default = () => {
   var e, t;
   let a = (0, o.useStateFromStores)([c.default], () => c.default.getGuildId(), []),
     S = (0, o.useStateFromStores)([d.default], () => d.default.getGuild(a), [a]),
-    C = (0, o.useStateFromStores)([T.default], () => null != a ? T.default.getRequest(a) : null, [a]),
+    C = (0, o.useStateFromStores)([m.default], () => null != a ? m.default.getRequest(a) : null, [a]),
     A = (0, r.useLocation)(),
-    g = (null === (e = (0, i.matchPath)(A.pathname, m.Routes.CHANNEL(null == S ? void 0 : S.id, I.StaticChannelRoute.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
+    g = (null === (e = (0, i.matchPath)(A.pathname, T.Routes.CHANNEL(null == S ? void 0 : S.id, I.StaticChannelRoute.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
   if (null == S || !S.hasVerificationGate() || g) return null;
   let M = null !== (t = null == C ? void 0 : C.applicationStatus) && void 0 !== t ? t : _.GuildJoinRequestApplicationStatuses.STARTED,
     R = null,

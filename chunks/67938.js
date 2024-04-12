@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   ShyBanner: function() {
-    return p
+    return g
   }
 });
 var l = a("735250");
@@ -9,21 +9,21 @@ a("470079");
 var s = a("803997"),
   r = a.n(s),
   n = a("442837"),
-  o = a("481060"),
-  i = a("607070"),
+  i = a("481060"),
+  o = a("607070"),
   u = a("68972"),
   c = a("442479"),
   d = a("373008"),
   f = a("383416"),
   m = a("26213"),
   C = a("249174"),
-  h = a("767247"),
-  g = a("621881");
+  p = a("767247"),
+  h = a("621881");
 
-function p(e) {
+function g(e) {
   let {
     category: t
-  } = e, a = (0, n.useStateFromStores)([i.default], () => i.default.useReducedMotion);
+  } = e, a = (0, n.useStateFromStores)([o.default], () => o.default.useReducedMotion);
   return (0, l.jsxs)("div", {
     className: r()(c.banner, c.shyBanner),
     "aria-label": t.name,
@@ -45,7 +45,7 @@ function p(e) {
       className: r()(c.shyBannerImage, c.shyBannerLeft),
       alt: ""
     }), (0, l.jsx)("img", {
-      src: h,
+      src: p,
       className: c.shyBannerLogo,
       alt: t.name,
       "aria-hidden": !0
@@ -53,10 +53,10 @@ function p(e) {
       className: c.attributionLogos,
       "aria-label": "Valorant x Discord",
       children: [(0, l.jsx)("img", {
-        src: g,
+        src: h,
         alt: "",
         "aria-hidden": !0
-      }), (0, l.jsx)(o.Text, {
+      }), (0, l.jsx)(i.Text, {
         variant: "heading-sm/extrabold",
         tag: "div",
         children: "|"
@@ -64,7 +64,7 @@ function p(e) {
         height: 22,
         "aria-hidden": !0
       })]
-    }), (0, l.jsx)(o.Text, {
+    }), (0, l.jsx)(i.Text, {
       className: c.summary,
       variant: "text-md/normal",
       children: t.summary

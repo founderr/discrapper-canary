@@ -18,7 +18,7 @@ var a = n("913527"),
   E = n("117265");
 let _ = e => l()().diff(l().unix(e), "days");
 
-function T(e) {
+function m(e) {
   let {
     classificationId: t
   } = e;
@@ -41,7 +41,7 @@ function T(e) {
   })
 }
 
-function m(e) {
+function T(e) {
   let {
     learnMoreLink: t
   } = e;
@@ -61,12 +61,12 @@ function I(e) {
   switch (t) {
     case c.SafetySystemNotificationCtaType.POLICY_VIOLATION_DETAIL:
       if (null == n) return null;
-      return (0, s.jsx)(T, {
+      return (0, s.jsx)(m, {
         classificationId: n
       });
     case c.SafetySystemNotificationCtaType.LEARN_MORE_LINK:
       if (null == a) return null;
-      return (0, s.jsx)(m, {
+      return (0, s.jsx)(T, {
         learnMoreLink: a
       });
     default:

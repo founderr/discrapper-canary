@@ -1,50 +1,50 @@
 "use strict";
-l.r(t), l.d(t, {
+i.r(t), i.d(t, {
   redeemGiftCode: function() {
-    return o
+    return d
   }
 });
-var n = l("544891"),
-  a = l("570140"),
-  i = l("881052"),
-  s = l("122289"),
-  r = l("981631");
-let d = Object.freeze({});
-async function o(e) {
+var s = i("544891"),
+  n = i("570140"),
+  l = i("881052"),
+  r = i("122289"),
+  a = i("981631");
+let o = Object.freeze({});
+async function d(e) {
   let {
     code: t,
-    options: l = d,
-    onRedeemed: o,
+    options: i = o,
+    onRedeemed: d,
     onError: u
   } = e, {
     channelId: c = null,
     paymentSource: _ = null
-  } = l;
-  a.default.dispatch({
+  } = i;
+  n.default.dispatch({
     type: "GIFT_CODE_REDEEM",
     code: t
   });
   try {
-    let e = await n.HTTP.post({
-      url: r.Endpoints.GIFT_CODE_REDEEM(t),
+    let e = await s.HTTP.post({
+      url: a.Endpoints.GIFT_CODE_REDEEM(t),
       body: {
         channel_id: c,
         payment_source_id: null == _ ? void 0 : _.id,
-        gateway_checkout_context: await (0, s.createGatewayCheckoutContext)(_)
+        gateway_checkout_context: await (0, r.createGatewayCheckoutContext)(_)
       },
       oldFormErrors: !0
     });
-    return a.default.dispatch({
+    return n.default.dispatch({
       type: "GIFT_CODE_REDEEM_SUCCESS",
       code: t,
       entitlement: e.body
-    }), null == o || o(), {
+    }), null == d || d(), {
       code: t,
       entitlement: e
     }
-  } catch (l) {
-    let e = new i.BillingError(l);
-    throw a.default.dispatch({
+  } catch (i) {
+    let e = new l.BillingError(i);
+    throw n.default.dispatch({
       type: "GIFT_CODE_REDEEM_FAILURE",
       code: t,
       error: e
@@ -52,5 +52,5 @@ async function o(e) {
   }
 }
 t.default = {
-  redeemGiftCode: o
+  redeemGiftCode: d
 }

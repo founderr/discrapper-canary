@@ -25,8 +25,8 @@ var s = n("278074"),
   f = n("358085"),
   E = n("798628"),
   _ = n("79390"),
-  T = n("839963"),
-  m = n("897325"),
+  m = n("839963"),
+  T = n("897325"),
   I = n("57101"),
   p = n("562293"),
   h = n("981631"),
@@ -90,17 +90,17 @@ function M(e, t) {
       editing: f,
       showResults: _
     } = null !== (n = null != t ? t : (0, E.getPollState)(e.getChannelId(), e.id)) && void 0 !== n ? n : S,
-    T = e.reactions,
-    m = !0;
+    m = e.reactions,
+    T = !0;
   if (!g(e)) {
     let t = o.default.getMessage(e.channel_id, e.id);
-    m = !e.isSearchHit && null != t, T = null !== (s = null == t ? void 0 : t.reactions) && void 0 !== s ? s : T
+    T = !e.isSearchHit && null != t, m = null !== (s = null == t ? void 0 : t.reactions) && void 0 !== s ? s : m
   }
   let I = d.size > 0,
-    N = T.some(e => !0 === e.me_vote),
+    N = m.some(e => !0 === e.me_vote),
     C = !f && N,
     A = C || u || _,
-    M = i && m && (!N || f || A);
+    M = i && T && (!N || f || A);
   return {
     poll: l,
     canTapAnswers: M,
@@ -113,9 +113,9 @@ function M(e, t) {
     hasVoteRecorded: N,
     isEditingVote: f,
     isExpired: u,
-    isInteractive: m,
+    isInteractive: T,
     isSent: i,
-    reactions: T,
+    reactions: m,
     selectedAnswerIds: d,
     submitting: c,
     tapShouldOpenVotersModal: A,
@@ -136,7 +136,7 @@ function R(e, t) {
   let g = u.default.getCurrentUser();
   if (null == g) return;
   let R = null === (o = r.default.getChannel(e.getChannelId())) || void 0 === o ? void 0 : null === (n = o.getGuildId) || void 0 === n ? void 0 : n.call(o),
-    O = (0, m.getAvatarUrl)(g, R),
+    O = (0, T.getAvatarUrl)(g, R),
     v = S.answers,
     L = S.layout_type,
     x = M(e, t, {
@@ -171,14 +171,14 @@ function R(e, t) {
       u = C(w, o),
       f = null !== (n = null == u ? void 0 : null === (t = u.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0,
       _ = H.has(o),
-      T = f >= Q && 0 !== f,
-      m = G && null !== (r = null == u ? void 0 : u.me_vote) && void 0 !== r && r,
+      m = f >= Q && 0 !== f,
+      T = G && null !== (r = null == u ? void 0 : u.me_vote) && void 0 !== r && r,
       I = A({
-        didSelfVote: m,
+        didSelfVote: T,
         hasVoted: G,
         isExpired: F,
         isSelected: _,
-        isLeader: T,
+        isLeader: m,
         showResults: K
       });
     return {
@@ -215,8 +215,8 @@ function R(e, t) {
         attachmentIds: e.poll_media.attachment_ids
       },
       isSelected: _,
-      isVictor: F && T,
-      didSelfVote: m,
+      isVictor: F && m,
+      didSelfVote: T,
       style: I,
       shouldAnimateTransition: V,
       votesPercentage: Math.round(100 * (0 === W ? 0 : f / W)),
@@ -313,13 +313,13 @@ function R(e, t) {
       canSelectMultipleAnswers: $
     }).with({
       tapShouldOpenVotersModal: !0
-    }, () => T.PollChatAnswerInteractionType.LIST).with({
+    }, () => m.PollChatAnswerInteractionType.LIST).with({
       canTapAnswers: !1
-    }, () => T.PollChatAnswerInteractionType.LIST).with({
+    }, () => m.PollChatAnswerInteractionType.LIST).with({
       canSelectMultipleAnswers: !1
-    }, () => T.PollChatAnswerInteractionType.RADIO_BUTTONS).with({
+    }, () => m.PollChatAnswerInteractionType.RADIO_BUTTONS).with({
       canSelectMultipleAnswers: !0
-    }, () => T.PollChatAnswerInteractionType.CHECKBOXES).exhaustive(),
+    }, () => m.PollChatAnswerInteractionType.CHECKBOXES).exhaustive(),
     answerTapAccessibilityLabel: (0, s.match)({
       tapShouldOpenVotersModal: Y,
       platform: (0, f.getNativePlatform)()

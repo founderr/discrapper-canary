@@ -19,26 +19,26 @@ var i = s("803997"),
   m = s("626135"),
   _ = s("63063"),
   g = s("210887"),
-  h = s("981631"),
-  I = s("689938"),
+  I = s("981631"),
+  h = s("689938"),
   N = s("794711");
 let p = s("775322"),
   C = s("853453"),
   A = (0, f.uid)();
 (n = a || (a = {}))[n.NONE = 0] = "NONE", n[n.STANDARD = 1] = "STANDARD", n[n.KRISP = 2] = "KRISP";
 let O = {
-  page: h.AnalyticsPages.USER_SETTINGS,
-  section: h.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
+  page: I.AnalyticsPages.USER_SETTINGS,
+  section: I.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
 };
 
 function x(e) {
   let t = e.currentTarget;
-  m.default.track(h.AnalyticEvents.NOISE_CANCELLATION_LINK_CLICKED, {
+  m.default.track(I.AnalyticEvents.NOISE_CANCELLATION_LINK_CLICKED, {
     text: t.text,
     href: t.href,
     location: {
-      page: h.AnalyticsPages.USER_SETTINGS,
-      section: h.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
+      page: I.AnalyticsPages.USER_SETTINGS,
+      section: I.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
     }
   })
 }
@@ -59,13 +59,13 @@ function R() {
   if (!a && !n) return null;
   let i = [];
   return n && i.push({
-    name: I.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_KRISP,
+    name: h.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_KRISP,
     value: 2
   }), a && i.push({
-    name: I.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_STANDARD,
+    name: h.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_STANDARD,
     value: 1
   }), i.push({
-    name: I.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_DISABLED,
+    name: h.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_DISABLED,
     value: 0
   }), (0, l.jsxs)(u.FormSection, {
     className: N.marginBottom20,
@@ -73,11 +73,11 @@ function R() {
       id: A,
       tag: u.FormTitleTags.H3,
       className: N.marginBottom8,
-      children: I.default.Messages.NOISE_SUPPRESSION
+      children: h.default.Messages.NOISE_SUPPRESSION
     }), (0, l.jsx)(u.FormText, {
       type: u.FormText.Types.DESCRIPTION,
       className: N.marginBottom8,
-      children: I.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_DESCRIPTION
+      children: h.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_DESCRIPTION
     }), (0, l.jsx)(u.RadioGroup, {
       options: i,
       onChange: e => {
@@ -94,9 +94,9 @@ function R() {
       },
       align: T.default.Align.CENTER,
       body: (0, l.jsx)(u.Anchor, {
-        href: _.default.getArticleURL(h.HelpdeskArticles.NOISE_SUPPRESSION),
+        href: _.default.getArticleURL(I.HelpdeskArticles.NOISE_SUPPRESSION),
         onClick: x,
-        children: I.default.Messages.LEARN_MORE
+        children: h.default.Messages.LEARN_MORE
       })
     }), (0, l.jsx)(u.FormDivider, {})]
   })
@@ -129,40 +129,40 @@ function M() {
     hasEchoCancellation: S.default.hasEchoCancellation(t),
     hasNoiseSuppression: S.default.hasNoiseSuppression(t),
     hasAutomaticGainControl: S.default.hasAutomaticGainControl(t)
-  }), [t]), g = f || m || _, p = e === h.InputModes.VOICE_ACTIVITY && n;
+  }), [t]), g = f || m || _, p = e === I.InputModes.VOICE_ACTIVITY && n;
   return (0, l.jsxs)(u.FormSection, {
     className: N.marginBottom20,
-    title: I.default.Messages.FORM_LABEL_VOICE_PROCESSING,
+    title: h.default.Messages.FORM_LABEL_VOICE_PROCESSING,
     children: [g && (0, l.jsx)(u.FormText, {
       className: N.marginBottom20,
       type: u.FormText.Types.DESCRIPTION,
-      children: I.default.Messages.FORM_HELP_CERTIFIED_VOICE_PROCESSING
+      children: h.default.Messages.FORM_HELP_CERTIFIED_VOICE_PROCESSING
     }), (0, l.jsx)(u.FormSwitch, {
       className: r()(N.marginTop8, N.marginBottom20),
       value: s,
       onChange: e => c.default.setEchoCancellation(e, {
-        page: h.AnalyticsPages.USER_SETTINGS,
-        section: h.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
+        page: I.AnalyticsPages.USER_SETTINGS,
+        section: I.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
       }),
       disabled: f,
-      children: I.default.Messages.ECHO_CANCELLATION
+      children: h.default.Messages.ECHO_CANCELLATION
     }), (0, l.jsx)(R, {}), d && (0, l.jsx)(u.FormSwitch, {
       value: i,
       onChange: t => c.default.setMode(e, {
         vadUseKrisp: t
       }),
-      note: I.default.Messages.USER_SETTINGS_DISABLE_ADVANCED_VOICE_ACTIVITY,
+      note: h.default.Messages.USER_SETTINGS_DISABLE_ADVANCED_VOICE_ACTIVITY,
       disabled: !p,
-      children: I.default.Messages.ADVANCED_VOICE_ACTIVITY
+      children: h.default.Messages.ADVANCED_VOICE_ACTIVITY
     }), T && (0, l.jsx)(u.FormSwitch, {
       className: "",
       value: a,
       onChange: e => c.default.setAutomaticGainControl(e, {
-        page: h.AnalyticsPages.USER_SETTINGS,
-        section: h.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
+        page: I.AnalyticsPages.USER_SETTINGS,
+        section: I.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
       }),
       disabled: _,
-      children: I.default.Messages.AUTOMATIC_GAIN_CONTROL
+      children: h.default.Messages.AUTOMATIC_GAIN_CONTROL
     })]
   })
 }

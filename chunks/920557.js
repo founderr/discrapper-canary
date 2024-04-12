@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("607070"),
   E = n("542578"),
   _ = n("153124"),
-  T = n("203143"),
-  m = n("79390"),
+  m = n("203143"),
+  T = n("79390"),
   I = n("839963"),
   p = n("139256"),
   h = n("294608"),
@@ -34,13 +34,13 @@ function C(e) {
     channelId: u,
     messageId: d
   } = (0, h.useMessageIds)(), [f, I] = a.useState(""), [p, N] = a.useState(!1), C = "" !== f && p, A = a.useCallback(() => {
-    I((0, m.getPollAnswerVotesTooltipText)(d, u, i))
+    I((0, T.getPollAnswerVotesTooltipText)(d, u, i))
   }, [d, u, i]), g = a.useCallback(() => {
     A(), N(!0)
   }, [A]), M = a.useCallback(() => {
     N(!1)
   }, []), R = a.useCallback(() => {
-    (0, T.handleShowVotesForAnswer)({
+    (0, m.handleShowVotesForAnswer)({
       channelId: u,
       messageId: d,
       answerId: i

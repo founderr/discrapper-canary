@@ -14,8 +14,8 @@ var o = n("570140"),
   f = n("430824"),
   E = n("496675"),
   _ = n("914010"),
-  T = n("594174"),
-  m = n("981631");
+  m = n("594174"),
+  T = n("981631");
 
 function I(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -60,7 +60,7 @@ function g(e) {
           continue
         }
       }
-      if (t.includes("is_community") && !r.hasFeature(m.GuildFeatures.COMMUNITY) || t.includes("is_hub") && !r.hasFeature(m.GuildFeatures.HUB)) continue;
+      if (t.includes("is_community") && !r.hasFeature(T.GuildFeatures.COMMUNITY) || t.includes("is_hub") && !r.hasFeature(T.GuildFeatures.HUB)) continue;
       if (t.includes("guild_permissions")) {
         if (0 === s.length) continue;
         let e = !1;
@@ -73,9 +73,9 @@ function g(e) {
         } catch (e) {}
         if (!e) continue
       }
-      let o = T.default.getCurrentUser(),
+      let o = m.default.getCurrentUser(),
         u = (null == o ? void 0 : o.id) === r.ownerId,
-        d = E.default.can(m.Permissions.ADMINISTRATOR, r);
+        d = E.default.can(T.Permissions.ADMINISTRATOR, r);
       if (t.includes("is_owner") && !u || t.includes("is_admin") && !d) continue;
       null == (N = null != N ? N : {})[e.key] && (N[e.key] = e);
       let f = _.default.getGuildId(),

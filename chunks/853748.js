@@ -1,15 +1,15 @@
 "use strict";
 a.r(t), a.d(t, {
   CollectiblesCountdown: function() {
-    return g
+    return h
   }
 }), a("653041");
 var l = a("735250"),
   s = a("470079"),
   r = a("803997"),
   n = a.n(r),
-  o = a("718017"),
-  i = a("873546"),
+  i = a("718017"),
+  o = a("873546"),
   u = a("399606"),
   c = a("481060"),
   d = a("774078"),
@@ -17,7 +17,7 @@ var l = a("735250"),
   m = a("689938"),
   C = a("13574");
 
-function h(e) {
+function p(e) {
   let {
     endDate: t
   } = e, {
@@ -25,7 +25,7 @@ function h(e) {
     hours: s,
     minutes: r,
     seconds: n
-  } = (0, d.default)(t), o = function(e, t, a, l) {
+  } = (0, d.default)(t), i = function(e, t, a, l) {
     let s = (e, t) => "".concat(e.toString().padStart(2, "0")).concat(t),
       r = [];
     return e > 0 && r.push(s(e, m.default.Messages.COUNTDOWN_UNITS_DAYS)), (t > 0 || r.length > 0) && r.push(s(t, m.default.Messages.COUNTDOWN_UNITS_HOURS)), (a > 0 || r.length > 0) && r.push(s(a, m.default.Messages.COUNTDOWN_UNITS_MINUTES)), r.push(s(l, m.default.Messages.COUNTDOWN_UNITS_SECONDS)), r.join(":")
@@ -33,16 +33,16 @@ function h(e) {
   return (0, l.jsx)(c.Heading, {
     variant: "heading-md/medium",
     className: C.countdown,
-    children: o
+    children: i
   })
 }
-let g = s.memo(function(e) {
+let h = s.memo(function(e) {
   let {
     unpublishedAt: t,
     isVisible: a,
     displayOptions: s,
     isFullScreen: r
-  } = e, d = (0, u.useStateFromStores)([f.default], () => f.default.useReducedMotion), m = (0, o.useSpring)({
+  } = e, d = (0, u.useStateFromStores)([f.default], () => f.default.useReducedMotion), m = (0, i.useSpring)({
     transform: "translateX(-50%) ".concat(a ? "translateY(-100%)" : "translateY(0%)"),
     opacity: a ? 1 : 0,
     config: {
@@ -51,8 +51,8 @@ let g = s.memo(function(e) {
     },
     immediate: d
   });
-  return (0, l.jsxs)(o.animated.div, {
-    className: n()([C.countDownWrapper, r && C.fullScreenWrapper, i.isMobile && C.mobileWrapper]),
+  return (0, l.jsxs)(i.animated.div, {
+    className: n()([C.countDownWrapper, r && C.fullScreenWrapper, o.isMobile && C.mobileWrapper]),
     "aria-live": "polite",
     style: {
       backgroundColor: s.backgroundColor,
@@ -73,7 +73,7 @@ let g = s.memo(function(e) {
       variant: "heading-md/medium",
       className: C.countdown,
       children: "—"
-    }), (0, l.jsx)(h, {
+    }), (0, l.jsx)(p, {
       endDate: t
     })]
   })

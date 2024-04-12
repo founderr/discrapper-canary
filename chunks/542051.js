@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   getListboxOptionProps: function() {
-    return T
+    return m
   }
 }), n("411104");
 var s, a, l, i, r = n("735250"),
@@ -16,7 +16,7 @@ function _(e) {
   e.stopPropagation(), e.preventDefault()
 }
 
-function T(e, t, n) {
+function m(e, t, n) {
   return {
     id: "".concat(e, "-").concat(t),
     role: "option",
@@ -24,7 +24,7 @@ function T(e, t, n) {
     "aria-selected": n
   }
 }
-class m extends(s = o.PureComponent) {
+class T extends(s = o.PureComponent) {
   renderQuery(e) {
     let {
       query: t,
@@ -43,7 +43,7 @@ class m extends(s = o.PureComponent) {
         className: d()(E.queryContainer, {
           [E.focused]: _
         }),
-        ...T(n, -1, _),
+        ...m(n, -1, _),
         onMouseEnter: i,
         onClick: a,
         children: [(0, r.jsx)("div", {
@@ -64,7 +64,7 @@ class m extends(s = o.PureComponent) {
         className: d()(E.queryContainer, {
           [E.focused]: _
         }),
-        ...T(n, -1, _),
+        ...m(n, -1, _),
         onMouseEnter: i,
         onClick: l,
         children: [(0, r.jsx)("div", {
@@ -123,9 +123,9 @@ i = {
   renderInitialState: () => null,
   hideQuery: !1,
   width: 320
-}, (l = "defaultProps") in(a = m) ? Object.defineProperty(a, l, {
+}, (l = "defaultProps") in(a = T) ? Object.defineProperty(a, l, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = i, t.default = m
+}) : a[l] = i, t.default = T

@@ -12,8 +12,8 @@ var s = n("735250"),
   f = n("603721"),
   E = n("739566"),
   _ = n("171368"),
-  T = n("592125"),
-  m = n("430824"),
+  m = n("592125"),
+  T = n("430824"),
   I = n("594174"),
   p = n("797053"),
   h = n("981631"),
@@ -52,7 +52,7 @@ t.default = a.memo(function(e) {
       onCopy: y,
       copyRef: U
     } = (0, c.default)(L, null == D ? void 0 : null === (t = D.application_command) || void 0 === t ? void 0 : t.id),
-    b = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(L.guild_id), [L.guild_id]);
+    b = (0, r.useStateFromStores)([T.default], () => T.default.getGuild(L.guild_id), [L.guild_id]);
   if (a.useEffect(() => {
       (null == D || D.type === u.ApplicationCommandType.CHAT && void 0 === D.application_command) && f.fetchMessageInteractionData(L.id, x)
     }, [L.id, x, D]), null == D) v = (0, s.jsx)(o.Spinner, {
@@ -119,7 +119,7 @@ t.default = a.memo(function(e) {
         }
         case u.ApplicationCommandOptionType.CHANNEL: {
           let e = R.value.toString(),
-            t = T.default.getChannel(e);
+            t = m.default.getChannel(e);
           null != t && (C = (0, s.jsxs)(p.default, {
             ...g,
             children: [N.CHANNEL_SENTINEL, t.name]
@@ -128,7 +128,7 @@ t.default = a.memo(function(e) {
         }
         case u.ApplicationCommandOptionType.ROLE: {
           let e = R.value.toString(),
-            t = null != v ? m.default.getRole(v.id, e) : void 0;
+            t = null != v ? T.default.getRole(v.id, e) : void 0;
           null != t && (C = (0, s.jsxs)(p.default, {
             ...g,
             children: [N.MENTION_SENTINEL, t.name]
@@ -137,7 +137,7 @@ t.default = a.memo(function(e) {
         }
         case u.ApplicationCommandOptionType.MENTIONABLE: {
           let e = R.value.toString(),
-            t = null != v ? m.default.getRole(v.id, e) : void 0;
+            t = null != v ? T.default.getRole(v.id, e) : void 0;
           if (null != t) C = (0, s.jsxs)(p.default, {
             children: [N.MENTION_SENTINEL, t.name]
           });

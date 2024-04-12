@@ -31,11 +31,11 @@ var k = r("392750"),
   w = r("912072"),
   N = r("246992"),
   E = r("442954"),
-  L = r("702904"),
-  _ = r("248526"),
+  _ = r("702904"),
+  L = r("248526"),
   A = r("958328"),
-  P = r("514866"),
-  R = r("678639"),
+  R = r("514866"),
+  P = r("678639"),
   O = r("351930"),
   M = r("771751"),
   I = r("596768"),
@@ -44,7 +44,7 @@ var k = r("392750"),
   F = r("284439"),
   H = r("779869");
 
-function G(e) {
+function U(e) {
   let {
     resizableNode: t,
     onResize: r,
@@ -62,7 +62,7 @@ function G(e) {
   })
 }
 
-function U() {
+function G() {
   var e;
   let t = n.useMemo(() => {
       let e = [{
@@ -76,7 +76,7 @@ function U() {
       }, {
         id: "stores",
         name: "Stores",
-        render: () => (0, a.jsx)(R.default, {})
+        render: () => (0, a.jsx)(P.default, {})
       }, {
         id: "dispatcher",
         name: "Dispatcher",
@@ -85,11 +85,11 @@ function U() {
       return h.default.isDeveloper && (e.push({
         id: "quick_actions",
         name: "Quick Actions",
-        render: () => (0, a.jsx)(P.default, {})
+        render: () => (0, a.jsx)(R.default, {})
       }), e.push({
         id: "perks_demos",
         name: "Perks Demos",
-        render: () => (0, a.jsx)(_.default, {})
+        render: () => (0, a.jsx)(L.default, {})
       })), e.push({
         id: "colors",
         name: "Colors",
@@ -129,7 +129,7 @@ function U() {
       }), e.push({
         id: "payments",
         name: "Payments",
-        render: () => (0, a.jsx)(L.default, {})
+        render: () => (0, a.jsx)(_.default, {})
       }), e.push({
         id: "subscriptions",
         name: "Subscriptions",
@@ -195,13 +195,13 @@ function z() {
       minWidth: y.DEVTOOLS_SIDEBAR_MIN_WIDTH,
       width: r
     },
-    children: [(0, a.jsx)(G, {
+    children: [(0, a.jsx)(U, {
       resizableNode: e,
       onResize: i,
       onResizeEnd: o
     }), (0, a.jsx)("div", {
       className: F.sidebarContent,
-      children: (0, a.jsx)(U, {})
+      children: (0, a.jsx)(G, {})
     })]
   })
 }
@@ -212,7 +212,7 @@ function Y() {
     className: l()(F.container, F.mobileContainerExpanded),
     children: (0, a.jsx)("div", {
       className: F.sidebarContent,
-      children: (0, a.jsx)(U, {})
+      children: (0, a.jsx)(G, {})
     })
   }) : (0, a.jsx)("div", {
     className: F.container,

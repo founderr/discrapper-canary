@@ -8,13 +8,13 @@ var s, a, l, i, r = n("442837"),
   f = n("496675"),
   E = n("594174"),
   _ = n("630388"),
-  T = n("981631");
-let m = "ChannelFollowingBumpChannels",
+  m = n("981631");
+let T = "ChannelFollowingBumpChannels",
   I = new Set,
   p = new Set;
 class h extends(s = r.default.Store) {
   initialize() {
-    this.waitFor(d.default), I = new Set(o.Storage.get(m))
+    this.waitFor(d.default), I = new Set(o.Storage.get(T))
   }
   shouldShowBump(e) {
     return p.has(e)
@@ -36,14 +36,14 @@ i = "ChannelFollowingPublishBumpStore", (l = "displayName") in(a = h) ? Object.d
     if (a || I.has(n)) return !1;
     let l = c.default.getChannel(n),
       i = E.default.getCurrentUser();
-    if (!(null != l && l.type === T.ChannelTypes.GUILD_ANNOUNCEMENT && s.type === T.MessageTypes.DEFAULT && (null != i && (null === (t = s.author) || void 0 === t ? void 0 : t.id) === i.id ? f.default.can(T.Permissions.SEND_MESSAGES, l) : f.default.can(T.Permissions.MANAGE_MESSAGES, l)) && !_.hasFlag(Number(s.flags), T.MessageFlags.CROSSPOSTED))) return !1;
+    if (!(null != l && l.type === m.ChannelTypes.GUILD_ANNOUNCEMENT && s.type === m.MessageTypes.DEFAULT && (null != i && (null === (t = s.author) || void 0 === t ? void 0 : t.id) === i.id ? f.default.can(m.Permissions.SEND_MESSAGES, l) : f.default.can(m.Permissions.MANAGE_MESSAGES, l)) && !_.hasFlag(Number(s.flags), m.MessageFlags.CROSSPOSTED))) return !1;
     p.add(s.id)
   },
   MESSAGE_UPDATE: function(e) {
     let {
       message: t
     } = e;
-    p.has(t.id) && _.hasFlag(Number(t.flags), T.MessageFlags.CROSSPOSTED) && p.delete(t.id)
+    p.has(t.id) && _.hasFlag(Number(t.flags), m.MessageFlags.CROSSPOSTED) && p.delete(t.id)
   },
   CHANNEL_SELECT: function(e) {
     p.clear()
@@ -58,6 +58,6 @@ i = "ChannelFollowingPublishBumpStore", (l = "displayName") in(a = h) ? Object.d
     let {
       channelId: t
     } = e;
-    I.add(t), o.Storage.set(m, I), p.clear()
+    I.add(t), o.Storage.set(T, I), p.clear()
   }
 })

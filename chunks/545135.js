@@ -80,7 +80,7 @@ function U(e) {
         action: () => (0, u.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([i.e("99387"), i.e("59500")]).then(i.bind(i, "241420"));
+          } = await Promise.all([i.e("99387"), i.e("88408")]).then(i.bind(i, "241420"));
           return i => (0, s.jsx)(e, {
             ...i,
             guild: t
@@ -115,7 +115,7 @@ function U(e) {
         action: () => (0, u.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([i.e("99387"), i.e("59500")]).then(i.bind(i, "241420"));
+          } = await Promise.all([i.e("99387"), i.e("88408")]).then(i.bind(i, "241420"));
           return i => (0, s.jsx)(e, {
             ...i,
             guild: t

@@ -50,7 +50,7 @@ function h(t, e) {
   let y = null != d.installPath ? (0, s.default)(d.installPath) : null;
   if (null == y) throw Error("No install path for ".concat(t, ":").concat(e));
   let A = r.default.getId(),
-    S = {
+    N = {
       forceHash: i,
       manifestPath: f.DefaultCloudSyncConfiguration.STORAGE_MANIFEST(y, A),
       roots: null != p.roots ? p.roots : [{
@@ -71,5 +71,5 @@ function h(t, e) {
         BRANCHID: e
       }
     };
-  return o.sync(C, S)
+  return o.sync(C, N)
 }

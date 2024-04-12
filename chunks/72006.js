@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   applyTokensAsEntities: function() {
-    return O
+    return A
   },
   clearContent: function() {
     return x
@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return l()
   },
   getFirstTextBlock: function() {
-    return A
+    return O
   },
   isEmpty: function() {
     return B
@@ -136,11 +136,11 @@ function b(e, t) {
   }
 }
 
-function A(e) {
+function O(e) {
   return e.getCurrentContent().getFirstBlock().getText()
 }
 
-function O(e, t) {
+function A(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
     r = t.getCurrentContent(),
     i = r.getFirstBlock(),
@@ -186,7 +186,7 @@ function x(e) {
 }
 
 function P(e, t) {
-  let n = A(t);
+  let n = O(t);
   return R(e, t, 0, n.length)
 }
 
@@ -209,14 +209,14 @@ function D(e) {
 }
 
 function j(e) {
-  let t = A(e),
+  let t = O(e),
     n = e.getSelection();
   return n = (n = n.set("focusOffset", t.length)).set("isBackward", !1), r.EditorState.forceSelection(e, n)
 }
 
 function w(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 512,
-    n = A(e);
+    n = O(e);
   if (n.length > t) {
     let i = e.getSelection();
     e = R("", e, t, n.length), i.getAnchorOffset() > t && (i = i.set("anchorOffset", t)), i.getFocusOffset() > t && (i = i.set("focusOffset", t)), e = r.EditorState.forceSelection(e, i)
@@ -243,5 +243,5 @@ function U(e) {
 }
 
 function B(e) {
-  return 0 === A(e).length
+  return 0 === O(e).length
 }

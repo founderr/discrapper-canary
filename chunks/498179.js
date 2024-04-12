@@ -22,8 +22,8 @@ function f(e) {
     size: f = l.Button.Sizes.LARGE,
     color: E,
     customDisabledColor: _,
-    hideNotLaunchable: T,
-    tooltipPosition: m,
+    hideNotLaunchable: m,
+    tooltipPosition: T,
     onClick: I,
     className: p,
     source: h,
@@ -36,7 +36,7 @@ function f(e) {
     size: f,
     color: E,
     customDisabledColor: _,
-    tooltipPosition: m,
+    tooltipPosition: T,
     onClick: I,
     className: p,
     hover: C,
@@ -54,7 +54,7 @@ function f(e) {
     storeListingAnalyticsProperties: N
   }) : (0, s.jsx)(d.default, {
     ...g,
-    hideNotLaunchable: T,
+    hideNotLaunchable: m,
     applicationId: t.id
   })
 }

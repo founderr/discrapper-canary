@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return T
   }
 }), n("47120");
 var s = n("735250"),
@@ -16,15 +16,15 @@ var s = n("735250"),
   f = n("441957"),
   E = n("502568"),
   _ = n("63063"),
-  T = n("689938");
+  m = n("689938");
 
-function m() {
+function T() {
   let e = (0, l.useStateFromStores)([u.default], () => u.default.isDeveloper),
-    [t, m] = a.useState(!1),
+    [t, T] = a.useState(!1),
     [I, p] = a.useState(0),
     h = e => {
       clearTimeout(I), p(setTimeout(() => {
-        m(e)
+        T(e)
       }, 100))
     };
   return (0, s.jsx)("div", {
@@ -36,8 +36,8 @@ function m() {
       position: "bottom",
       align: "right",
       autoInvert: !1,
-      onRequestOpen: () => m(!0),
-      onRequestClose: () => m(!1),
+      onRequestOpen: () => T(!0),
+      onRequestClose: () => T(!1),
       renderPopout: () => (function(e) {
         let {
           onClose: t,
@@ -48,11 +48,11 @@ function m() {
           navId: "staff-help-popout",
           variant: "fixed",
           onClose: t,
-          "aria-label": T.default.Messages.GUILD_ACTIONS_MENU_LABEL,
+          "aria-label": m.default.Messages.GUILD_ACTIONS_MENU_LABEL,
           children: (0, s.jsxs)(i.MenuGroup, {
             children: [(0, s.jsx)(i.MenuItem, {
               id: "staff-help-bug-reporter",
-              label: T.default.Messages.BUG_REPORT_TITLE,
+              label: m.default.Messages.BUG_REPORT_TITLE,
               icon: d.default,
               action: () => (0, i.openModalLazy)(async () => {
                 let {
@@ -76,7 +76,7 @@ function m() {
           })
         })
       })({
-        onClose: () => m(!1),
+        onClose: () => T(!1),
         isDiscordDeveloper: e
       }),
       children: (e, t) => {
@@ -86,7 +86,7 @@ function m() {
         return (0, s.jsx)(E.Icon, {
           ...e,
           icon: d.default,
-          "aria-label": T.default.Messages.HELP,
+          "aria-label": m.default.Messages.HELP,
           selected: n
         })
       }

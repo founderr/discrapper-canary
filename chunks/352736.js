@@ -12,8 +12,8 @@ var s = n("25209"),
   f = n("592125"),
   E = n("430824"),
   _ = n("594174"),
-  T = n("5192"),
-  m = n("709054"),
+  m = n("5192"),
+  T = n("709054"),
   I = n("981631"),
   p = n("689938");
 let h = {
@@ -26,7 +26,7 @@ let h = {
 
 function C(e) {
   let t = S(),
-    n = m.default.extractTimestamp(e) % t.length;
+    n = T.default.extractTimestamp(e) % t.length;
   return t[n]
 }
 
@@ -46,18 +46,18 @@ function g(e, t) {
 }
 t.default = {
   stringify: function(e, t) {
-    var n, m, h, N;
+    var n, T, h, N;
     let S = null === (n = e.mentions) || void 0 === n ? void 0 : n[0],
       M = null != S && "string" != typeof S ? _.default.getUser(S.id) : void 0,
       R = e.channel_id,
-      O = T.default.getName(null, R, e.author);
+      O = m.default.getName(null, R, e.author);
     switch (e.type) {
       case I.MessageTypes.RECIPIENT_ADD:
         if (null == M) return;
         return (0, s.astToString)(p.default.Messages.SYSTEM_MESSAGE_RECIPIENT_ADD.astFormat({
           username: O,
           usernameOnClick: I.NOOP,
-          otherUsername: T.default.getName(null, R, M),
+          otherUsername: m.default.getName(null, R, M),
           otherUsernameOnClick: I.NOOP
         }));
       case I.MessageTypes.RECIPIENT_REMOVE:
@@ -70,7 +70,7 @@ t.default = {
         return (0, s.astToString)(p.default.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE.astFormat({
           username: O,
           usernameOnClick: I.NOOP,
-          otherUsername: T.default.getName(null, R, M),
+          otherUsername: m.default.getName(null, R, M),
           otherUsernameOnClick: I.NOOP
         }));
       case I.MessageTypes.CALL:
@@ -124,7 +124,7 @@ t.default = {
           roleSubscriptionData: e.role_subscription_data
         }));
       case I.MessageTypes.PURCHASE_NOTIFICATION:
-        if (e instanceof d.default || (null === (h = e.purchase_notification) || void 0 === h ? void 0 : null === (m = h.guild_product_purchase) || void 0 === m ? void 0 : m.product_name) == null) return null;
+        if (e instanceof d.default || (null === (h = e.purchase_notification) || void 0 === h ? void 0 : null === (T = h.guild_product_purchase) || void 0 === T ? void 0 : T.product_name) == null) return null;
         return (0, s.astToString)((0, a.getGuildProductPurchaseSystemMessageContentMobile)({
           username: O,
           productName: e.purchase_notification.guild_product_purchase.product_name
@@ -193,7 +193,7 @@ t.default = {
   },
   getSystemMessageUserJoin: function(e) {
     let t = N(),
-      n = m.default.extractTimestamp(e) % t.length;
+      n = T.default.extractTimestamp(e) % t.length;
     return t[n]
   },
   getSystemMessageUserJoinMobile: C,

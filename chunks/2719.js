@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("299206"),
   _ = s("295474"),
   g = s("144114"),
-  h = s("918505"),
-  I = s("332473"),
+  I = s("918505"),
+  h = s("332473"),
   N = s("318661"),
   p = s("735336"),
   C = s("184325"),
@@ -43,12 +43,12 @@ var a = s("735250"),
   G = s("557013");
 let k = L.default.getEnableHardwareAcceleration() ? c.AnimatedAvatar : c.Avatar;
 
-function w(e) {
+function H(e) {
   var t, l;
   let {
     className: r,
     user: o
-  } = e, d = n.useRef(null), S = (0, h.usePomeloEligibility)(), E = (0, I.useIsEligibleForPomelo)(), T = (0, _.useGuildAutomodProfileQuarantineErrors)(), f = null !== (l = null == T ? void 0 : null === (t = T.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : null, [m, g] = n.useState(!1);
+  } = e, d = n.useRef(null), S = (0, I.usePomeloEligibility)(), E = (0, h.useIsEligibleForPomelo)(), T = (0, _.useGuildAutomodProfileQuarantineErrors)(), f = null !== (l = null == T ? void 0 : null === (t = T.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : null, [m, g] = n.useState(!1);
   n.useEffect(() => {
     g(null != d.current && d.current.scrollWidth > d.current.clientWidth)
   }, [o.username]);
@@ -132,7 +132,7 @@ function w(e) {
   })
 }
 
-function H(e) {
+function w(e) {
   var t, s;
   let {
     user: l,
@@ -453,10 +453,10 @@ function Q() {
         children: i
       }) : null, (0, a.jsxs)("div", {
         className: G.fieldList,
-        children: [(0, a.jsx)(H, {
+        children: [(0, a.jsx)(w, {
           className: G.fieldSpacerBottom,
           user: t
-        }), (0, a.jsx)(w, {
+        }), (0, a.jsx)(H, {
           user: t
         }), (0, a.jsx)(Y, {
           className: G.fieldSpacer,

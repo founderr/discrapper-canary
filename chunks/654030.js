@@ -11,8 +11,8 @@ var s, a = n("735250"),
   f = n("276852"),
   E = n("994339"),
   _ = n("275920"),
-  T = n("431583"),
-  m = n("592745"),
+  m = n("431583"),
+  T = n("592745"),
   I = n("952164"),
   p = n("768419"),
   h = n("456432"),
@@ -142,7 +142,7 @@ class k extends(s = l.PureComponent) {
       } = this.props;
       null != e && null != t && d.sync(e, t)
     }), B(this, "handleDownloadApp", () => {
-      (0, r.openModal)(e => (0, a.jsx)(T.default, {
+      (0, r.openModal)(e => (0, a.jsx)(m.default, {
         source: "Game Invite",
         ...e
       }))
@@ -198,8 +198,8 @@ class k extends(s = l.PureComponent) {
         channelId: f,
         message: E,
         hideParty: _,
-        isSyncable: T,
-        isLaunchable: m,
+        isSyncable: m,
+        isLaunchable: T,
         guildId: I
       } = this.props;
       if (null != l) e = l.name;
@@ -217,11 +217,11 @@ class k extends(s = l.PureComponent) {
         className: c,
         coverImage: this.getCoverImage(),
         isPreview: r,
-        isGameLaunchable: m,
+        isGameLaunchable: T,
         isLoading: o || this.state.sending,
         activityActionType: d,
         isInBrowser: !y.isPlatformEmbedded,
-        isSyncable: T,
+        isSyncable: m,
         isSender: u,
         channelId: f,
         guildId: null != I ? I : void 0,
@@ -243,7 +243,7 @@ class k extends(s = l.PureComponent) {
 }
 B(k, "defaultProps", {
   isPreview: !1
-}), t.default = i.default.connectStores([p.default, g.default, O.default, R.default, m.default, x.default, A.default, L.default, v.default, M.default], e => {
+}), t.default = i.default.connectStores([p.default, g.default, O.default, R.default, T.default, x.default, A.default, L.default, v.default, M.default], e => {
   let {
     activity: t,
     analyticsLocations: n,
@@ -280,7 +280,7 @@ B(k, "defaultProps", {
     isSyncable: f && !_,
     isLaunchable: null != r && (0, U.isLaunchable)({
       LibraryApplicationStore: R.default,
-      LaunchableGameStore: m.default,
+      LaunchableGameStore: T.default,
       DispatchApplicationStore: x.default,
       ConnectedAppsStore: A.default,
       applicationId: r

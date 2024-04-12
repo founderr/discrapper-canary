@@ -46,26 +46,26 @@ function h(e) {
   } = e, {
     listingsLoaded: m
   } = (0, u.useFetchListingsForApplication)(o, d), {
-    entitlementsLoaded: v
+    entitlementsLoaded: A
   } = (0, u.useFetchEntitlementsForGuild)({
     guildId: n
   }), {
     subscriptionGroupListing: T
-  } = (0, u.useActiveSubscriptionListingForApplication)(o, n), A = (0, r.default)();
+  } = (0, u.useActiveSubscriptionListingForApplication)(o, n), E = (0, r.default)();
   i.useEffect(() => {
-    A && l.fetchSubscriptions()
-  }, [A]);
-  let E = null == T ? void 0 : T.id,
-    g = null == T ? void 0 : null === (t = T.subscription_listings) || void 0 === t ? void 0 : t.filter(e => e.published);
-  return m && (null == n || v) ? null == E || null == g || 0 === g.length ? null : (0, s.jsx)("div", {
+    E && l.fetchSubscriptions()
+  }, [E]);
+  let v = null == T ? void 0 : T.id,
+    S = null == T ? void 0 : null === (t = T.subscription_listings) || void 0 === t ? void 0 : t.filter(e => e.published);
+  return m && (null == n || A) ? null == v || null == S || 0 === S.length ? null : (0, s.jsx)("div", {
     className: f.container,
-    children: g.map(e => (0, s.jsxs)(i.Fragment, {
+    children: S.map(e => (0, s.jsxs)(i.Fragment, {
       children: [(0, s.jsx)(p, {
         listing: e
       }), (0, s.jsx)(c.default, {
         listing: e,
         guildId: n,
-        groupListingId: E,
+        groupListingId: v,
         analyticsLocation: h,
         onComplete: I,
         forcesTransitionToGuild: _

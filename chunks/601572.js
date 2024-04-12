@@ -1,131 +1,131 @@
 "use strict";
-a.r(t), a.d(t, {
+t.r(a), t.d(a, {
   default: function() {
-    return I
+    return m
   }
-}), a("47120");
-var s = a("735250"),
-  l = a("470079"),
-  i = a("481060"),
-  n = a("846027"),
-  o = a("410575"),
-  r = a("2052"),
-  c = a("100527"),
-  d = a("906732"),
-  u = a("695346"),
-  h = a("932724"),
-  f = a("716161"),
-  v = a("672339"),
-  E = a("898531"),
-  A = a("131951"),
-  C = a("594174"),
-  g = a("285952"),
-  p = a("153124"),
-  x = a("626135"),
-  M = a("747545"),
-  R = a("981631"),
-  w = a("689938"),
-  _ = a("768454");
-let m = {
+}), t("47120");
+var s = t("735250"),
+  l = t("470079"),
+  i = t("481060"),
+  n = t("846027"),
+  d = t("410575"),
+  o = t("2052"),
+  c = t("100527"),
+  r = t("906732"),
+  u = t("695346"),
+  h = t("932724"),
+  E = t("716161"),
+  f = t("672339"),
+  A = t("898531"),
+  v = t("131951"),
+  C = t("594174"),
+  g = t("285952"),
+  p = t("153124"),
+  M = t("626135"),
+  R = t("747545"),
+  _ = t("981631"),
+  x = t("689938"),
+  V = t("768454");
+let w = {
   width: 368,
   height: 207
 };
 
-function I(e) {
+function m(e) {
   let {
-    transitionState: t,
-    videoEnabled: a,
-    onEnable: m,
-    onClose: I
-  } = e, j = A.default.getCameraComponent(), V = (0, p.useUID)(), L = (0, E.default)(), N = u.AlwaysPreviewVideo.useSetting(), [y, O] = l.useState((0, h.getLastUsedVideoBackgroundOption)(C.default.getCurrentUser())), P = (0, r.useAnalyticsContext)(), {
-    analyticsLocations: D
-  } = (0, d.default)(c.default.CAMERA_PREVIEW), B = l.useRef(null);
+    transitionState: a,
+    videoEnabled: t,
+    onEnable: w,
+    onClose: m
+  } = e, I = v.default.getCameraComponent(), j = (0, p.useUID)(), L = (0, A.default)(), y = u.AlwaysPreviewVideo.useSetting(), [N, P] = l.useState((0, h.getLastUsedVideoBackgroundOption)(C.default.getCurrentUser())), O = (0, o.useAnalyticsContext)(), {
+    analyticsLocations: k
+  } = (0, r.default)(c.default.CAMERA_PREVIEW), D = l.useRef(null);
   l.useEffect(() => {
-    x.default.track(R.AnalyticEvents.OPEN_MODAL, {
+    M.default.track(_.AnalyticEvents.OPEN_MODAL, {
       type: "Camera Preview Modal"
     })
   }, []), l.useEffect(() => {
     var e;
-    null === (e = B.current) || void 0 === e || e.scrollToTop()
+    null === (e = D.current) || void 0 === e || e.scrollToTop()
   }, []);
-  let k = async () => {
-    await H(), n.default.setVideoEnabled(!0), null == m || m()
+  let B = async () => {
+    await H(), n.default.setVideoEnabled(!0), null == w || w()
   }, H = async () => {
     try {
-      await (0, v.applyBackgroundOptionLive)(y, {
+      await (0, f.applyBackgroundOptionLive)(N, {
         location: {
-          page: R.AnalyticsPages.PREVIEW_CAMERA_MODAL,
-          ...P.location
+          page: _.AnalyticsPages.PREVIEW_CAMERA_MODAL,
+          ...O.location
         }
       })
     } catch (e) {}
-    await I(), (0, f.saveLastUsedBackgroundOption)(y)
+    await m(), (0, E.saveLastUsedBackgroundOption)(N)
   };
-  return (0, s.jsx)(d.AnalyticsLocationProvider, {
-    value: D,
-    children: (0, s.jsx)(o.default, {
-      page: R.AnalyticsPages.PREVIEW_CAMERA_MODAL,
+  return (0, s.jsx)(r.AnalyticsLocationProvider, {
+    value: k,
+    children: (0, s.jsx)(d.default, {
+      page: _.AnalyticsPages.PREVIEW_CAMERA_MODAL,
       children: (0, s.jsxs)(i.ModalRoot, {
-        className: _.modalRoot,
+        className: V.modalRoot,
         size: i.ModalSize.DYNAMIC,
-        "aria-labelledby": V,
-        transitionState: t,
+        "aria-labelledby": j,
+        transitionState: a,
         children: [(0, s.jsxs)(i.ModalContent, {
-          className: L ? _.contentWithVideoBackgrounds : _.content,
-          scrollerRef: B,
+          className: L ? V.contentWithVideoBackgrounds : V.content,
+          scrollerRef: D,
           children: [(0, s.jsx)(i.Heading, {
-            id: V,
-            className: _.header,
+            id: j,
+            className: V.header,
             variant: "heading-xl/semibold",
-            children: a ? w.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_CHANGE_HEADER : w.default.Messages.CAMERA_PREVIEW_MODAL_HEADER
-          }), (0, s.jsx)(M.default, {
+            children: t ? x.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_CHANGE_HEADER : x.default.Messages.CAMERA_PREVIEW_MODAL_HEADER
+          }), (0, s.jsx)(R.default, {
             hidePreviewToggle: !0,
             showSmallBackgroundOptions: !0,
             hideDeviceHeader: !0,
-            selectedBackgroundOption: y,
-            onSelectBackgroundOption: O,
-            hideDeviceSelector: a,
+            selectedBackgroundOption: N,
+            onSelectBackgroundOption: P,
+            hideDeviceSelector: t,
             renderCamera: e => (0, s.jsxs)("div", {
-              className: _.cameraPreview,
+              className: V.cameraPreview,
               children: [(0, s.jsx)("div", {
-                className: _.camera,
-                children: (0, s.jsx)(j, {
+                className: V.camera,
+                children: (0, s.jsx)(I, {
                   disabled: !1,
                   deviceId: e,
                   width: 368,
                   height: 207
                 })
-              }), (0, s.jsx)(M.FilterLoadingIndicator, {})]
+              }), (0, s.jsx)(R.FilterLoadingIndicator, {})]
             }),
-            onLearnMore: I
+            onLearnMore: m
           })]
         }), (0, s.jsxs)(i.ModalFooter, {
           justify: g.default.Justify.BETWEEN,
           children: [(() => {
-            let e = a ? w.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_CHANGE_BACKGROUND : w.default.Messages.CAMERA_ON;
+            let e = t ? x.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_CHANGE_BACKGROUND : x.default.Messages.CAMERA_ON;
             return (0, s.jsx)(i.Button, {
-              onClick: a ? H : k,
+              onClick: t ? H : B,
               size: i.Button.Sizes.SMALL,
-              autoFocus: !a,
+              autoFocus: !t,
               children: e
             })
           })(), (0, s.jsx)(i.Checkbox, {
             size: 18,
             type: i.Checkbox.Types.INVERTED,
-            value: N,
+            value: y,
             onChange: () => {
-              u.AlwaysPreviewVideo.updateSetting(!N), x.default.track(R.AnalyticEvents.UPDATE_USER_SETTINGS_LOCAL, {
-                always_preview_video: !N
+              u.AlwaysPreviewVideo.updateSetting(!y), M.default.track(_.AnalyticEvents.UPDATE_USER_SETTINGS_LOCAL, {
+                always_preview_video: !y
               })
             },
             children: (0, s.jsx)(i.Text, {
               variant: "text-sm/normal",
-              children: w.default.Messages.CAMERA_PREVIEW_ALWAYS_PREVIEW
+              children: x.default.Messages.CAMERA_PREVIEW_ALWAYS_PREVIEW
             })
           })]
         }), (0, s.jsx)(i.ModalCloseButton, {
-          onClick: I,
-          className: _.modalClose
+          onClick: m,
+          className: V.modalClose
         })]
       })
     })

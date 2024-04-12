@@ -1,7 +1,7 @@
 "use strict";
 n.r(e), n.d(e, {
   playApplication: function() {
-    return T
+    return S
   }
 }), n("411104"), n("47120");
 var l = n("735250"),
@@ -19,9 +19,9 @@ var l = n("735250"),
   h = n("981631"),
   y = n("689938"),
   A = n("296601"),
-  S = n("794711");
+  N = n("794711");
 
-function _(t, e, n) {
+function O(t, e, n) {
   return e in t ? Object.defineProperty(t, e, {
     value: n,
     enumerable: !0,
@@ -29,7 +29,7 @@ function _(t, e, n) {
     writable: !0
   }) : t[e] = n, t
 }
-class N extends a.PureComponent {
+class _ extends a.PureComponent {
   renderConflictButton(t, e, n, a) {
     return (0, l.jsxs)(r.Button, {
       className: A.conflictButton,
@@ -103,7 +103,7 @@ class N extends a.PureComponent {
     } = this.props;
     if (e.type !== h.CloudSyncStateTypes.CONFLICT) throw Error("Cannot render conflict for non conflict type");
     return (0, l.jsxs)(r.ModalContent, {
-      className: S.marginBottom20,
+      className: N.marginBottom20,
       children: [(0, l.jsx)("div", {
         className: A.description,
         children: y.default.Messages.CLOUD_SYNC_MODAL_CONFLICT_DESCRIPTION.format({
@@ -139,7 +139,7 @@ class N extends a.PureComponent {
           onClick: this.onClose
         }), (0, l.jsx)(r.FormTitle, {
           tag: "h2",
-          className: S.marginReset,
+          className: N.marginReset,
           children: n
         })]
       }), t.type === h.CloudSyncStateTypes.CONFLICT ? this.renderConflict() : this.renderError()]
@@ -147,26 +147,26 @@ class N extends a.PureComponent {
   }
   constructor(...t) {
     var e;
-    super(...t), e = this, _(this, "onClose", () => {
+    super(...t), e = this, O(this, "onClose", () => {
       this.props.onClose()
-    }), _(this, "handlePlay", function() {
+    }), O(this, "handlePlay", function() {
       let t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         {
           libraryApplication: l,
           analyticsParams: a
         } = e.props;
-      e.onClose(), T(l.id, l, {
+      e.onClose(), S(l.id, l, {
         analyticsParams: a,
         cloudSync: t,
         cloudSyncForceHash: n
       })
-    }), _(this, "handleChooseDownload", () => {
+    }), O(this, "handleChooseDownload", () => {
       let {
         cloudSyncState: t
       } = this.props;
       t.type === h.CloudSyncStateTypes.CONFLICT && this.handlePlay(!0, t.remote.hash)
-    }), _(this, "handleChooseUpload", () => {
+    }), O(this, "handleChooseUpload", () => {
       let {
         cloudSyncState: t
       } = this.props;
@@ -174,7 +174,7 @@ class N extends a.PureComponent {
     })
   }
 }
-let O = s.default.connectStores([p.default, d.default], t => {
+let L = s.default.connectStores([p.default, d.default], t => {
   let {
     libraryApplication: e,
     branchId: n
@@ -183,8 +183,8 @@ let O = s.default.connectStores([p.default, d.default], t => {
     cloudSyncState: p.default.getState(e.id, n),
     application: d.default.getApplication(e.id)
   }
-})(N);
-async function T(t, e, n) {
+})(_);
+async function S(t, e, n) {
   let a = d.default.getApplication(t);
   if (null == a) return;
   let {
@@ -197,7 +197,7 @@ async function T(t, e, n) {
     try {
       await c.sync(e.id, t, o)
     } catch (n) {
-      (0, r.openModal)(n => (0, l.jsx)(O, {
+      (0, r.openModal)(n => (0, l.jsx)(L, {
         libraryApplication: e,
         analyticsParams: s,
         branchId: t,

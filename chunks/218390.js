@@ -16,8 +16,8 @@ var a = s("735250"),
   m = s("821849"),
   _ = s("230711"),
   g = s("497321"),
-  h = s("634894"),
-  I = s("410030"),
+  I = s("634894"),
+  h = s("410030"),
   N = s("100527"),
   p = s("906732"),
   C = s("211242"),
@@ -38,8 +38,8 @@ var a = s("735250"),
   F = s("823188"),
   G = s("504865"),
   k = s("179984"),
-  w = s("386733"),
-  H = s("487980"),
+  H = s("386733"),
+  w = s("487980"),
   V = s("474936"),
   Y = s("981631"),
   W = s("689938"),
@@ -53,7 +53,7 @@ function Z() {
   let s = (0, d.useStateFromStores)([M.default], () => M.default.getPremiumTypeSubscription()),
     n = (0, j.useHasDiscountApplied)(),
     l = (0, j.useActiveDiscountInfo)(),
-    r = (0, I.default)();
+    r = (0, h.default)();
   if (null == s || null == s.planIdFromItems) return null;
   let u = null != s.trialId,
     E = n || u,
@@ -201,15 +201,15 @@ t.default = function() {
     c = (0, U.useLocalizedPromoQuery)(),
     f = null == c ? void 0 : c.countryCode,
     _ = (0, d.useStateFromStores)([R.default], () => R.default.enabled),
-    I = "PremiumManagementSettings";
-  (0, h.useTriggerDebuggingAA)({
-    location: I + " auto on",
+    h = "PremiumManagementSettings";
+  (0, I.useTriggerDebuggingAA)({
+    location: h + " auto on",
     autoTrackExposure: !0
-  }), (0, h.useTriggerDebuggingAA)({
-    location: I + " auto off",
+  }), (0, I.useTriggerDebuggingAA)({
+    location: h + " auto off",
     autoTrackExposure: !1
   }), (0, y.useMaybeFetchReferralsRemaining)("PremiumManagementSettings");
-  let x = (0, H.useShouldShowReferralProgressBar)("PremiumManagementSettings");
+  let x = (0, w.useShouldShowReferralProgressBar)("PremiumManagementSettings");
   n.useEffect(() => {
     E.default.wait(async () => {
       !_ && !e && await Promise.all([T.fetchSubscriptions(), T.fetchPaymentSources(), (0, m.fetchPremiumSubscriptionPlans)(f, null, Y.RevenueSurfaces.DISCOVERY)]), o(!1)
@@ -229,7 +229,7 @@ t.default = function() {
     children: (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)("div", {
         className: K.__invalid_container,
-        children: [(0, a.jsx)(Z, {}), x && (0, a.jsx)(w.default, {
+        children: [(0, a.jsx)(Z, {}), x && (0, a.jsx)(H.default, {
           isInSettings: !0
         }), (0, a.jsx)(X, {}), (0, a.jsx)(k.default, {
           className: K.__invalid_planComparisonTable,

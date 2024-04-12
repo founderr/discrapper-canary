@@ -1,42 +1,42 @@
 "use strict";
-a.r(e), a.d(e, {
+n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
-}), a("47120");
-var n = a("470079"),
-  s = a("668781"),
-  l = a("881052"),
-  i = a("824389"),
-  r = a("179838"),
-  u = a("689938");
+}), n("47120");
+var s = n("470079"),
+  a = n("668781"),
+  l = n("881052"),
+  i = n("824389"),
+  r = n("179838"),
+  o = n("689938");
 
-function o(t, e) {
-  let [a, o] = n.useState(!1);
+function u(e, t) {
+  let [n, u] = s.useState(!1);
   return {
-    isLoading: a,
-    downloadAttachment: n.useCallback(async a => {
-      if (null != t && null != e) {
-        o(!0);
+    isLoading: n,
+    downloadAttachment: s.useCallback(async n => {
+      if (null != e && null != t) {
+        u(!0);
         try {
           let {
-            url: n
+            url: s
           } = await i.requestDownloadUrl({
-            guildId: t,
-            productId: e,
-            attachmentId: a
+            guildId: e,
+            productId: t,
+            attachmentId: n
           });
-          await r.download(n)
-        } catch (e) {
-          let t = e instanceof l.APIError ? e.getAnyErrorMessage() : void 0;
-          s.default.show({
-            title: u.default.Messages.ERROR_GENERIC_TITLE,
-            body: null != t ? t : u.default.Messages.GENERIC_ERROR_BODY
+          await r.download(s)
+        } catch (t) {
+          let e = t instanceof l.APIError ? t.getAnyErrorMessage() : void 0;
+          a.default.show({
+            title: o.default.Messages.ERROR_GENERIC_TITLE,
+            body: null != e ? e : o.default.Messages.GENERIC_ERROR_BODY
           })
         } finally {
-          o(!1)
+          u(!1)
         }
       }
-    }, [t, e])
+    }, [e, t])
   }
 }

@@ -17,8 +17,8 @@ var a = n("613828"),
   f = n("835473"),
   E = n("522474"),
   _ = n("523746"),
-  T = n("592125"),
-  m = n("594174"),
+  m = n("592125"),
+  T = n("594174"),
   I = n("158010"),
   p = n("602623"),
   h = n("630388"),
@@ -46,7 +46,7 @@ function j(e) {
     message: G
   } = e, {
     analyticsLocations: B
-  } = (0, c.default)(d.default.ACTIVITY_BOOKMARK), F = (0, u.useAnalyticsContext)(), k = G.channel_id, w = (0, l.useStateFromStores)([T.default], () => T.default.getChannel(k), [k]), H = null == w ? void 0 : w.guild_id, V = null != w && (w.isGuildVoice() || w.isPrivate()), Y = (0, l.useStateFromStores)([A.default], () => A.default.getSelfEmbeddedActivityForChannel(k)), K = (null == Y ? void 0 : Y.applicationId) === j, [W, z] = (0, f.default)([j, null !== (n = null == Y ? void 0 : Y.applicationId) && void 0 !== n ? n : ""]), Q = (0, O.default)(null !== (i = null == W ? void 0 : W.maxParticipants) && void 0 !== i ? i : 0), [q] = (0, l.useStateFromStoresArray)([A.default], () => V ? A.default.getEmbeddedActivitiesForChannel(k).filter(e => e.applicationId === j) : [], [j, k, V]), J = Array.from(null !== (S = null == q ? void 0 : q.userIds) && void 0 !== S ? S : []), Z = (0, l.useStateFromStoresArray)([m.default], () => J.map(e => m.default.getUser(e)).filter(N.isNotNullish), [J]), X = (0, v.default)({
+  } = (0, c.default)(d.default.ACTIVITY_BOOKMARK), F = (0, u.useAnalyticsContext)(), k = G.channel_id, w = (0, l.useStateFromStores)([m.default], () => m.default.getChannel(k), [k]), H = null == w ? void 0 : w.guild_id, V = null != w && (w.isGuildVoice() || w.isPrivate()), Y = (0, l.useStateFromStores)([A.default], () => A.default.getSelfEmbeddedActivityForChannel(k)), K = (null == Y ? void 0 : Y.applicationId) === j, [W, z] = (0, f.default)([j, null !== (n = null == Y ? void 0 : Y.applicationId) && void 0 !== n ? n : ""]), Q = (0, O.default)(null !== (i = null == W ? void 0 : W.maxParticipants) && void 0 !== i ? i : 0), [q] = (0, l.useStateFromStoresArray)([A.default], () => V ? A.default.getEmbeddedActivitiesForChannel(k).filter(e => e.applicationId === j) : [], [j, k, V]), J = Array.from(null !== (S = null == q ? void 0 : q.userIds) && void 0 !== S ? S : []), Z = (0, l.useStateFromStoresArray)([T.default], () => J.map(e => T.default.getUser(e)).filter(N.isNotNullish), [J]), X = (0, v.default)({
     applicationId: j,
     size: b
   }), $ = E.default.getWindowOpen(P.PopoutWindowKeys.CHANNEL_CALL_POPOUT), ee = Z.length > 0 ? y.default.Messages.JOIN : y.default.Messages.START, et = async () => {

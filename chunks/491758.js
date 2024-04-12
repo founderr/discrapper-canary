@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("556296"),
   _ = s("924557"),
   g = s("435064"),
-  h = s("894694"),
-  I = s("779618"),
+  I = s("894694"),
+  h = s("779618"),
   N = s("39604"),
   p = s("442334"),
   C = s("356659"),
@@ -51,7 +51,7 @@ function L() {
     }, {
       autoTrackExposure: !1
     }),
-    y = (0, I.default)(f.default),
+    y = (0, h.default)(f.default),
     {
       showClipsHeaderEntrypoint: B
     } = _.ClipsExperiment.useExperiment({
@@ -101,7 +101,7 @@ function L() {
       value: O.ApplicationStreamResolutions.RESOLUTION_SOURCE,
       label: R.default.Messages.SCREENSHARE_SOURCE
     }], [F]),
-    w = n.useMemo(() => [{
+    H = n.useMemo(() => [{
       value: O.ApplicationStreamFPS.FPS_15,
       label: R.default.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
         fps: O.ApplicationStreamFPS.FPS_15
@@ -117,7 +117,7 @@ function L() {
         fps: O.ApplicationStreamFPS.FPS_60
       })
     }], [F]),
-    H = n.useCallback(e => {
+    w = n.useCallback(e => {
       d.default.setKeybind({
         ...b,
         shortcut: e
@@ -134,7 +134,7 @@ function L() {
             scrollPosition: x.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION
           })
         })
-      }), j === h.ClipsHardwareClassification.BELOW_MINIMUM ? (0, a.jsx)(T.default, {
+      }), j === I.ClipsHardwareClassification.BELOW_MINIMUM ? (0, a.jsx)(T.default, {
         look: T.InfoBoxLooks.WARNING,
         className: v.formItem,
         children: R.default.Messages.CLIPS_SETTINGS_UNDER_MIN_SPECS
@@ -210,7 +210,7 @@ function L() {
         title: R.default.Messages.CLIPS_SETTINGS_FRAMERATE,
         note: R.default.Messages.CLIPS_SETTINGS_FRAMERATE_NOTE,
         value: P.frameRate,
-        options: w
+        options: H
       }), (0, a.jsx)(p.InputItem, {
         className: v.formItem,
         title: R.default.Messages.CLIPS_SETTINGS_KEYBIND,
@@ -219,7 +219,7 @@ function L() {
           className: M.keyRecorder,
           children: (0, a.jsx)(c.default, {
             defaultValue: b.shortcut,
-            onChange: H
+            onChange: w
           })
         })
       })]

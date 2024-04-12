@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("598077"),
   E = n("594174"),
   _ = n("626135"),
-  T = n("709054"),
-  m = n("591759"),
+  m = n("709054"),
+  T = n("591759"),
   I = n("833592"),
   p = n("497089"),
   h = n("178480"),
@@ -111,12 +111,12 @@ let y = a.memo(function(e) {
         return
       }
       if (null != i.deeplink) {
-        let t = m.default.safeParseWithQuery(i.deeplink);
+        let t = T.default.safeParseWithQuery(i.deeplink);
         if (null == t) return;
         let n = t.hostname,
           s = t.path;
         if (null == n || null == s) return;
-        if (m.default.isDiscordHostname(n)) {
+        if (T.default.isDiscordHostname(n)) {
           let t = s.match("^/users/(\\d+)");
           if (null != t && 2 === t.length) {
             var e;
@@ -171,7 +171,7 @@ let y = a.memo(function(e) {
           }) : null, (0, s.jsx)(l.Text, {
             variant: "text-xs/medium",
             color: E ? "text-muted" : "header-secondary",
-            children: (0, h.getRelativeTimestamp)(T.default.extractTimestamp(i.id))
+            children: (0, h.getRelativeTimestamp)(m.default.extractTimestamp(i.id))
           }), v]
         })]
       }), L ? null : (0, s.jsx)(g.MoreButton, {

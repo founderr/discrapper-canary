@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("466794"),
   E = n("659215"),
   _ = n("222677"),
-  T = n("995774"),
-  m = n("931651"),
+  m = n("995774"),
+  T = n("931651"),
   I = n("594174"),
   p = n("250690"),
   h = n("506917"),
@@ -53,11 +53,11 @@ class x extends a.Component {
     if (o || (0, N.hasFlag)(t.flags, A.MessageFlags.EPHEMERAL)) return null;
     let E = I.default.getCurrentUser(),
       _ = (0, S.isPremium)(E),
-      T = u ? R.default.Messages.ADD_BURST_REACTION : R.default.Messages.ADD_REACTION;
-    !_ && u && (T = (0, s.jsx)(f.NitroTooltipLabel, {
+      m = u ? R.default.Messages.ADD_BURST_REACTION : R.default.Messages.ADD_REACTION;
+    !_ && u && (m = (0, s.jsx)(f.NitroTooltipLabel, {
       tooltipText: R.default.Messages.ADD_BURST_REACTION
     }));
-    let m = l ? v : O;
+    let T = l ? v : O;
     return (0, s.jsx)(d.Popout, {
       shouldShow: r,
       onRequestClose: this.handleReactionPickerToggle,
@@ -68,10 +68,10 @@ class x extends a.Component {
           isShown: l
         } = t;
         return (0, s.jsx)(d.TooltipContainer, {
-          text: T,
+          text: m,
           color: d.TooltipColors.PRIMARY,
           "aria-label": u ? R.default.Messages.ADD_BURST_REACTION : R.default.Messages.ADD_REACTION,
-          tooltipClassName: m.__invalid_addReactionTooltip,
+          tooltipClassName: T.__invalid_addReactionTooltip,
           children: (0, s.jsxs)(d.Clickable, {
             ...e,
             onClick: e => {
@@ -79,16 +79,16 @@ class x extends a.Component {
             },
             onMouseEnter: () => (0, c.initiateEmojiInteraction)(g.EmojiInteractionPoint.AddReactionPopoutMouseEntered),
             onFocus: () => (0, c.initiateEmojiInteraction)(g.EmojiInteractionPoint.AddReactionPopoutFocused),
-            className: i()(m.reactionBtn, {
-              [m.active]: l
+            className: i()(T.reactionBtn, {
+              [T.active]: l
             }, n),
             children: [u ? (0, s.jsx)(s.Fragment, {
               children: (0, s.jsx)(h.default, {
-                className: m.icon
+                className: T.icon
               })
             }) : (0, s.jsx)(s.Fragment, {
               children: (0, s.jsx)(p.default, {
-                className: m.icon
+                className: T.icon
               })
             }), a]
           })
@@ -106,7 +106,7 @@ class x extends a.Component {
         message: s,
         isForumToolbar: a
       } = this.props;
-      (0, _.addReaction)(n.id, s.id, (0, T.toReactionEmoji)(e), a ? _.ReactionLocations.FORUM_TOOLBAR : _.ReactionLocations.MESSAGE, {
+      (0, _.addReaction)(n.id, s.id, (0, m.toReactionEmoji)(e), a ? _.ReactionLocations.FORUM_TOOLBAR : _.ReactionLocations.MESSAGE, {
         burst: t
       })
     }), L(this, "handleReactionPickerToggle", () => {
@@ -124,7 +124,7 @@ class x extends a.Component {
         analytics: {
           type: M.PremiumUpsellTypes.BURST_REACTION_UPSELL,
           page: null != n.getGuildId() ? A.AnalyticsPages.GUILD_CHANNEL : A.AnalyticsPages.DM_CHANNEL,
-          section: (0, T.getBurstAnalyticsSection)(n),
+          section: (0, m.getBurstAnalyticsSection)(n),
           object: A.AnalyticsObjects.INLINE_REACTION_PICKER_UPSELL
         }
       }), this.handleReactionPickerToggle()
@@ -140,10 +140,10 @@ class x extends a.Component {
         ...n === C.ReactionTypes.BURST && {
           openPopoutType: "message_super_reaction_emoji_picker",
           page: null != a.getGuildId() ? A.AnalyticsPages.GUILD_CHANNEL : A.AnalyticsPages.DM_CHANNEL,
-          section: (0, T.getBurstAnalyticsSection)(a),
+          section: (0, m.getBurstAnalyticsSection)(a),
           object: A.AnalyticsObjects.REACTION_RAIL
         }
-      }, r = (0, s.jsx)(m.ReactionPicker, {
+      }, r = (0, s.jsx)(T.ReactionPicker, {
         closePopout: t,
         channel: a,
         onSelectEmoji: (e, n, s) => {

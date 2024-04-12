@@ -12,8 +12,8 @@ var s = n("735250"),
   f = n("697568"),
   E = n("183023"),
   _ = n("524444"),
-  T = n("98278"),
-  m = n("857185"),
+  m = n("98278"),
+  T = n("857185"),
   I = n("911200"),
   p = n("197115"),
   h = n("430824"),
@@ -50,7 +50,7 @@ function B(e) {
   g.default.track(D.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
     location_page: null != e.guild_id ? D.AnalyticsPages.GUILD_CHANNEL : D.AnalyticsPages.DM_CHANNEL,
     location_section: D.AnalyticsSections.STICKER_POPOUT
-  }), (0, T.navigateToPremiumMarketingPage)()
+  }), (0, m.navigateToPremiumMarketingPage)()
 }
 
 function F(e) {
@@ -91,8 +91,8 @@ let k = e => {
       stickerPack: u
     });
     (0, R.useFetchStickerPack)(n.pack_id);
-    let T = (0, R.useFilteredStickerPackCategories)(l);
-    return ((0, m.useMaybeFetchPremiumLikelihood)(I.default), a.useEffect(() => {
+    let m = (0, R.useFilteredStickerPackCategories)(l);
+    return ((0, T.useMaybeFetchPremiumLikelihood)(I.default), a.useEffect(() => {
       i()
     }, [c]), a.useEffect(() => {
       g.default.track(D.AnalyticEvents.OPEN_POPOUT, {
@@ -126,7 +126,7 @@ let k = e => {
           onClick: () => {
             f && (0, x.navigateToOwnedStickerPack)({
               stickerPack: u,
-              stickerPickerCategories: T
+              stickerPickerCategories: m
             }), t()
           },
           children: y.default.Messages.STICKER_VIEW_MORE_STICKERS
@@ -138,8 +138,8 @@ let k = e => {
     let t, {
         sticker: n,
         channel: l,
-        closePopout: T,
-        refreshPositionKey: m
+        closePopout: m,
+        refreshPositionKey: T
       } = e,
       [I, C] = a.useState(null),
       [R, O] = a.useState(!1),
@@ -170,12 +170,12 @@ let k = e => {
       q = "Custom Sticker Popout";
     x ? t = G ? W ? y.default.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : y.default.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION : z ? y.default.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : y.default.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION : G ? (W ? t = y.default.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION : t = y.default.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION, Q = !0, q = "Custom Sticker Popout (Upsell)") : z ? (t = y.default.Messages.STICKER_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION, Q = !0, q = "Custom Sticker Popout (Upsell)") : (t = y.default.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
       openPremiumSettings: () => {
-        B(l), T()
+        B(l), m()
       }
     }), q = "Custom Sticker Popout (Soft Upsell)");
     let J = !Q && !G && z && x;
     return (a.useEffect(() => {
-      m()
+      T()
     }, [R, I]), a.useEffect(() => {
       g.default.track(D.AnalyticEvents.OPEN_POPOUT, {
         type: q,
@@ -186,7 +186,7 @@ let k = e => {
       children: [(() => {
         let e = async () => {
           if (null == I || G) return;
-          T();
+          m();
           let e = I.id;
           try {
             await u.default.joinGuild(e), u.default.transitionToGuildSync(e)
@@ -203,7 +203,7 @@ let k = e => {
             size: o.Button.Sizes.SMALL,
             fullWidth: !0,
             buttonText: y.default.Messages.EMOJI_POPOUT_PREMIUM_CTA,
-            onSubscribeModalClose: t => t ? e() : T(),
+            onSubscribeModalClose: t => t ? e() : m(),
             postSuccessGuild: G || null == I ? void 0 : I,
             premiumModalAnalyticsLocation: Y
           }), J && (0, s.jsx)(o.Button, {
@@ -231,7 +231,7 @@ let k = e => {
           }), !G && (0, s.jsxs)(s.Fragment, {
             children: [(0, s.jsx)(o.Clickable, {
               onClick: () => {
-                m(), w(!k)
+                T(), w(!k)
               },
               className: b.showMoreEmojis,
               children: (0, s.jsxs)(S.default, {

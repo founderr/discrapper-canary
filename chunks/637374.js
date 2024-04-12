@@ -12,8 +12,8 @@ var s = n("735250"),
   f = n("568836"),
   E = n("730749"),
   _ = n("112724"),
-  T = n("607070"),
-  m = n("884697"),
+  m = n("607070"),
+  T = n("884697"),
   I = n("479446"),
   p = n("930114"),
   h = n("981632"),
@@ -153,7 +153,7 @@ class Y extends a.Component {
     }, i = !e.isSubscription && null != t || !e.isSelfRedeemable && a || e.isExistingPremiumSubscriptionDisallowed && (0, y.isPremium)(n);
     return (e.redeemed || i || e.isClaimed || !n.verified) && (l.color = d.Button.Colors.BRAND, l.disabled = !0), (0, s.jsx)(d.Button, {
       ...l,
-      className: (0, m.isCollectiblesGiftCode)(e) ? k.collectiblesAcceptButton : null,
+      className: (0, T.isCollectiblesGiftCode)(e) ? k.collectiblesAcceptButton : null,
       size: d.Button.Sizes.SMALL,
       children: e.redeemed ? F.default.Messages.GIFT_EMBED_BUTTON_CLAIMED : null != e.giftStyle ? F.default.Messages.SEASONAL_GIFTING_OPEN_GIFT : F.default.Messages.GIFT_EMBED_BUTTON_ACCEPT
     })
@@ -188,7 +188,7 @@ class Y extends a.Component {
     let r = s.isPreorder() ? F.default.Messages.PREORDER_SKU_NAME.format({
       name: s.name
     }) : s.name;
-    if (e.redeemed) return e.isSubscription || (0, m.isCollectiblesGiftCode)(e) ? F.default.Messages.GIFT_EMBED_BODY_CLAIMED_SELF_SUBSCRIPTION : F.default.Messages.GIFT_EMBED_BODY_CLAIMED_SELF.format({
+    if (e.redeemed) return e.isSubscription || (0, T.isCollectiblesGiftCode)(e) ? F.default.Messages.GIFT_EMBED_BODY_CLAIMED_SELF_SUBSCRIPTION : F.default.Messages.GIFT_EMBED_BODY_CLAIMED_SELF.format({
       skuName: r,
       onViewInLibrary: this.handleViewLibrary
     });
@@ -276,7 +276,7 @@ class Y extends a.Component {
     }) : (0, s.jsx)(f.ResponsiveLoadingEmbedTile, {
       isHorizontal: n >= f.HORIZONTAL_EMBED_BREAKPOINT
     });
-    return (0, m.isCollectiblesGiftCode)(e) ? (0, s.jsx)("div", {
+    return (0, T.isCollectiblesGiftCode)(e) ? (0, s.jsx)("div", {
       className: k.collectiblesEmbedWrapper,
       children: this.renderEmbed()
     }) : this.renderEmbed()
@@ -359,12 +359,12 @@ class Y extends a.Component {
   }
 }
 let K = (0, _.default)((0, E.default)(Y));
-t.default = u.default.connectStores([C.default, R.default, g.default, A.default, M.default, S.default, T.default], e => {
+t.default = u.default.connectStores([C.default, R.default, g.default, A.default, M.default, S.default, m.default], e => {
   let {
     code: t,
     author: n,
     currentUser: s
-  } = e, a = C.default.get(t), l = null != a ? R.default.get(a.skuId) : null, i = null != a && null != a.userId ? g.default.getUser(a.userId) : null, r = T.default.useReducedMotion;
+  } = e, a = C.default.get(t), l = null != a ? R.default.get(a.skuId) : null, i = null != a && null != a.userId ? g.default.getUser(a.userId) : null, r = m.default.useReducedMotion;
   return {
     sku: l,
     giftCode: a,

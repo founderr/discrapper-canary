@@ -1,59 +1,59 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return T
   }
 });
 var s = n("735250");
 n("470079");
 var a = n("512722"),
-  r = n.n(a),
+  l = n.n(a),
   i = n("399606"),
-  l = n("481060"),
-  u = n("682864"),
-  o = n("671533"),
-  c = n("943461"),
-  d = n("240864"),
-  C = n("613810"),
+  r = n("481060"),
+  o = n("682864"),
+  u = n("671533"),
+  d = n("943461"),
+  c = n("240864"),
+  f = n("613810"),
   E = n("596211"),
-  f = n("689938"),
-  _ = n("929802");
+  _ = n("689938"),
+  m = n("929802");
 
-function A(e) {
-  var t, n, a, A;
+function T(e) {
+  var t, n, a, T;
   let {
-    guildId: p,
-    productId: h
-  } = e, m = (0, i.useStateFromStores)([d.default], () => d.default.getGuildProduct(h)), N = (null !== (A = null == m ? void 0 : null === (t = m.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== A ? A : 0) > 1, I = null == m ? void 0 : null === (a = m.attachments) || void 0 === a ? void 0 : null === (n = a[0]) || void 0 === n ? void 0 : n.id;
-  return N ? (0, s.jsxs)(l.Button, {
+    guildId: I,
+    productId: p
+  } = e, h = (0, i.useStateFromStores)([c.default], () => c.default.getGuildProduct(p)), N = (null !== (T = null == h ? void 0 : null === (t = h.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== T ? T : 0) > 1, S = null == h ? void 0 : null === (a = h.attachments) || void 0 === a ? void 0 : null === (n = a[0]) || void 0 === n ? void 0 : n.id;
+  return N ? (0, s.jsxs)(r.Button, {
     onClick: function() {
-      C.default.open({
-        guildId: p,
-        productId: h
+      f.default.open({
+        guildId: I,
+        productId: p
       })
     },
-    innerClassName: _.textWithIcon,
+    innerClassName: m.textWithIcon,
     children: [(0, s.jsx)("div", {
-      children: f.default.Messages.GUILD_PRODUCT_DOWNLOAD_BUTTON_MULTIPLE_FILES
-    }), (0, s.jsx)(u.default, {
+      children: _.default.Messages.GUILD_PRODUCT_DOWNLOAD_BUTTON_MULTIPLE_FILES
+    }), (0, s.jsx)(o.default, {
       size: 8,
       horizontal: !0
-    }), (0, s.jsx)(o.default, {
+    }), (0, s.jsx)(u.default, {
       width: 16,
       height: 16,
-      direction: o.default.Directions.RIGHT
+      direction: u.default.Directions.RIGHT
     })]
-  }) : (r()(null != I, "No attachment"), (0, s.jsxs)(E.default, {
-    guildId: p,
-    productId: h,
-    attachmentId: I,
-    innerClassName: _.textWithIcon,
+  }) : (l()(null != S, "No attachment"), (0, s.jsxs)(E.default, {
+    guildId: I,
+    productId: p,
+    attachmentId: S,
+    innerClassName: m.textWithIcon,
     children: [(0, s.jsx)("div", {
-      children: f.default.Messages.GUILD_PRODUCT_DOWNLOAD_BUTTON_SINGLE_FILE
-    }), (0, s.jsx)(u.default, {
+      children: _.default.Messages.GUILD_PRODUCT_DOWNLOAD_BUTTON_SINGLE_FILE
+    }), (0, s.jsx)(o.default, {
       size: 8,
       horizontal: !0
-    }), (0, s.jsx)(c.default, {
+    }), (0, s.jsx)(d.default, {
       width: 16,
       height: 16
     })]

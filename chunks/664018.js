@@ -4,7 +4,7 @@ a.r(t), a.d(t, {
     return s
   },
   useShopCardHoverAnimationExperiment: function() {
-    return o
+    return i
   }
 });
 var l, s, r = a("818083");
@@ -30,6 +30,6 @@ let n = (0, r.createExperiment)({
       }
     }]
   }),
-  o = e => n.useExperiment({
+  i = e => n.useExperiment({
     location: e
   })

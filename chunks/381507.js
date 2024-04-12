@@ -8,8 +8,8 @@ var r = s("780384"),
   a = s("204197"),
   o = s("51144"),
   C = s("105759"),
-  d = s("898969"),
-  u = s("703614"),
+  u = s("898969"),
+  d = s("703614"),
   c = s("182294"),
   p = s("689938"),
   f = s("841140");
@@ -26,7 +26,7 @@ t.default = () => {
     x = (0, l.useTheme)(),
     _ = (0, r.isThemeLight)(x),
     m = o.default.getName(e),
-    h = _ ? d.default : u.default;
+    L = _ ? u.default : d.default;
   return null == e ? null : (0, n.jsxs)("div", {
     className: f.attributionBannerContainer,
     children: [(0, n.jsx)("div", {
@@ -43,7 +43,7 @@ t.default = () => {
       children: p.default.Messages.REFERRAL_PRORAM_PAYMENT_MODAL_BANNER.format({
         userName: m
       })
-    }), (0, n.jsx)(h, {
+    }), (0, n.jsx)(L, {
       className: f.bannerIcon
     })]
   })

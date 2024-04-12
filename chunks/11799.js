@@ -20,7 +20,7 @@ let f = e => {
       isDesktop: f,
       withMentions: E = !1,
       initialPageSize: _
-    } = e, T = (0, a.useStateFromStores)([d.default], () => d.default.shouldReload()), m = s.useRef(!1), [I, p] = s.useState(!1), {
+    } = e, m = (0, a.useStateFromStores)([d.default], () => d.default.shouldReload()), T = s.useRef(!1), [I, p] = s.useState(!1), {
       initialized: h,
       loading: N,
       items: S,
@@ -48,23 +48,23 @@ let f = e => {
     s.useEffect(() => () => {
       f ? !O() && (g || S.length > 100) && (0, o.resetNotificationCenter)() : n && S.length > 100 && (0, o.resetNotificationCenter)()
     }, [n, S, f, O, g]), s.useEffect(() => {
-      let e = T && t;
+      let e = m && t;
       (!h || e) && (0, o.fetchNotificationCenterItems)({
         limit: null != _ ? _ : E ? 8 : 20,
         with_mentions: E,
         roles_filter: M,
         everyone_filter: R
       })
-    }, [h, T, t, E, M, R, _]);
+    }, [h, m, t, E, M, R, _]);
     let v = s.useCallback(async e => {
-      !m.current && h && C && null != A && (e || !g) && (m.current = !0, p(!0), await (0, o.fetchNotificationCenterItems)({
+      !T.current && h && C && null != A && (e || !g) && (T.current = !0, p(!0), await (0, o.fetchNotificationCenterItems)({
         after: A,
         with_mentions: E,
         roles_filter: M,
         everyone_filter: R,
         limit: E ? 8 : 20
       }, () => {
-        m.current = !1
+        T.current = !1
       }), p(!1))
     }, [h, C, A, g, E, M, R]);
     return {

@@ -12,8 +12,8 @@ var s = n("735250"),
   f = n("808268"),
   E = n("810090"),
   _ = n("572004"),
-  T = n("617136"),
-  m = n("113434"),
+  m = n("617136"),
+  T = n("113434"),
   I = n("497505"),
   p = n("918701"),
   h = n("685613"),
@@ -33,10 +33,10 @@ let g = e => {
     }
   }, []);
   let d = () => {
-    (0, T.trackQuestContentClicked)({
+    (0, m.trackQuestContentClicked)({
       questId: t.id,
       questContent: n,
-      questContentCTA: T.QuestContentCTA.COPY_QUEST_URL
+      questContentCTA: m.QuestContentCTA.COPY_QUEST_URL
     }), (0, _.copy)((0, p.getQuestUrl)(t.id)), i(!0), r.current.start(1e3, () => i(!1))
   };
   return (0, s.jsx)(u.Tooltip, {
@@ -60,12 +60,12 @@ t.default = e => {
     isQuestExpired: l,
     quest: o,
     location: _,
-    size: T
-  } = e, M = (0, r.useStateFromStores)([c.default], () => c.default.getState().theme), R = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), O = a.useMemo(() => (0, p.isAssetAnimated)(o.config.assets.hero), [o]), v = a.useRef(null), L = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, x = (0, m.useQuestFormattedDate)(o.config.expiresAt, {
+    size: m
+  } = e, M = (0, r.useStateFromStores)([c.default], () => c.default.getState().theme), R = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), O = a.useMemo(() => (0, p.isAssetAnimated)(o.config.assets.hero), [o]), v = a.useRef(null), L = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, x = (0, T.useQuestFormattedDate)(o.config.expiresAt, {
     year: "numeric",
     month: "long",
     day: "numeric"
-  }), D = (0, m.useQuestFormattedDate)(o.config.rewardCodeExpiresAt, {
+  }), D = (0, T.useQuestFormattedDate)(o.config.rewardCodeExpiresAt, {
     year: "numeric",
     month: "long",
     day: "numeric"
@@ -78,7 +78,7 @@ t.default = e => {
     className: i()(A.outerContainer, {
       [A.outerContainerGiftInventory]: _ === I.QuestContent.QUEST_INVENTORY_CARD,
       [A.outerContainerEmbed]: _ === I.QuestContent.QUESTS_EMBED,
-      [A.outerContainerXs]: "xs" === T
+      [A.outerContainerXs]: "xs" === m
     }),
     children: [(0, s.jsx)(E.default, {
       autoPlay: !1,
@@ -111,7 +111,7 @@ t.default = e => {
           }), (0, s.jsxs)("div", {
             className: A.questInfo,
             children: [(0, s.jsx)(u.Heading, {
-              variant: "lg" === T ? "heading-xxl/bold" : "sm" === T ? "heading-xl/bold" : "heading-lg/bold",
+              variant: "lg" === m ? "heading-xxl/bold" : "sm" === m ? "heading-xl/bold" : "heading-lg/bold",
               children: C.default.Messages.QUEST.format({
                 questName: o.config.messages.questName
               })

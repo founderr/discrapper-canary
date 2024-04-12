@@ -9,10 +9,10 @@ let c = 14 * u.default.Millis.DAY,
   E = {},
   _ = {};
 
-function T() {
+function m() {
   E = {}, _ = {}
 }
-class m extends(s = r.default.Store) {
+class T extends(s = r.default.Store) {
   getFpMessageInfo(e) {
     return E[e]
   }
@@ -25,12 +25,12 @@ class m extends(s = r.default.Store) {
     return null != t && !t.reportSubmit && d.default.age(t.messageId) < c
   }
 }
-i = "FalsePositiveStore", (l = "displayName") in(a = m) ? Object.defineProperty(a, l, {
+i = "FalsePositiveStore", (l = "displayName") in(a = T) ? Object.defineProperty(a, l, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = i, t.default = new m(o.default, {
+}) : a[l] = i, t.default = new T(o.default, {
   LOGOUT: function() {
     (function() {
       E = {}, _ = {}

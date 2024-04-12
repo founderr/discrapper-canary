@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("317632"),
   E = n("174767"),
   _ = n("836946"),
-  T = n("240126"),
-  m = n("791914"),
+  m = n("240126"),
+  T = n("791914"),
   I = n("326838"),
   p = n("689938"),
   h = n("941305");
@@ -35,14 +35,14 @@ function N(e) {
     (0, E.clearUnseenInvites)()
   }), 0 === C.length) ? (0, s.jsxs)("div", {
     className: h.container,
-    children: [(0, s.jsx)(m.default, {
+    children: [(0, s.jsx)(T.default, {
       tab: o.InboxTab.GAME_INVITES,
       setTab: t,
       badgeState: l,
       closePopout: N
     }), (0, s.jsx)("div", {
       className: h.__invalid_emptyStateContainer,
-      children: (0, s.jsx)(T.default, {
+      children: (0, s.jsx)(m.default, {
         Icon: u.GameControllerIcon,
         header: p.default.Messages.GAME_INVITES_EMPTY_STATE_TITLE,
         tip: p.default.Messages.GAME_INVITES_EMPTY_STATE_SUBTITLE
@@ -50,7 +50,7 @@ function N(e) {
     })]
   }) : (0, s.jsxs)("div", {
     className: h.container,
-    children: [(0, s.jsx)(m.default, {
+    children: [(0, s.jsx)(T.default, {
       tab: o.InboxTab.GAME_INVITES,
       setTab: t,
       badgeState: l,

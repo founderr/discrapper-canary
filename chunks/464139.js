@@ -17,8 +17,8 @@ var a = n("803997"),
   f = n("702346"),
   E = n("787374"),
   _ = n("674563"),
-  T = n("689938"),
-  m = n("297621");
+  m = n("689938"),
+  T = n("297621");
 
 function I(e) {
   var t;
@@ -38,44 +38,44 @@ function I(e) {
     onMouseEnter: A,
     onMouseLeave: g,
     children: (0, s.jsx)(f.default, {
-      className: l()(m.mainContainer, {
-        [m.compact]: a
+      className: l()(T.mainContainer, {
+        [T.compact]: a
       }),
       iconNode: a ? null : (0, s.jsx)(E.AutomodAvatar, {
         src: C
       }),
-      iconContainerClassName: m.iconContainer,
+      iconContainerClassName: T.iconContainer,
       compact: a,
       children: (0, s.jsxs)("div", {
-        className: l()(m.content, {
-          [m.compact]: a
+        className: l()(T.content, {
+          [T.compact]: a
         }),
         children: [(0, s.jsx)(c.BaseMessageHeader, {
           message: n,
-          messageClassname: m.spanCorrection,
-          className: l()(m.usernameContainer, m.spanCorrection, {
-            [m.compact]: a
+          messageClassname: T.spanCorrection,
+          className: l()(T.usernameContainer, T.spanCorrection, {
+            [T.compact]: a
           }),
           username: (0, s.jsxs)("div", {
-            className: m.spanCorrection,
+            className: T.spanCorrection,
             children: [(0, s.jsx)(r.Text, {
               variant: "text-md/normal",
               color: "text-brand",
               tag: "span",
-              className: m.username,
-              children: T.default.Messages.GUILD_AUTOMOD_USERNAME
+              className: T.username,
+              children: m.default.Messages.GUILD_AUTOMOD_USERNAME
             }), (0, s.jsx)(d.default, {
               type: _.BotTagTypes.SYSTEM_DM,
-              className: m.systemTag
+              className: T.systemTag
             })]
           }),
           compact: a,
           showTimestamp: !0
         }), (0, s.jsx)("div", {
-          className: l()(m.__invalid_messageContent, {
-            [m.compact]: a
+          className: l()(T.__invalid_messageContent, {
+            [T.compact]: a
           }),
-          children: T.default.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
+          children: m.default.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
             username: N.nick,
             usernameHook: S,
             guildName: null !== (t = null == h ? void 0 : h.name) && void 0 !== t ? t : ""

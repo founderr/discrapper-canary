@@ -5,8 +5,8 @@ a("470079");
 var s = a("803997"),
   r = a.n(s),
   n = a("481060"),
-  o = a("937615"),
-  i = a("75117");
+  i = a("937615"),
+  o = a("75117");
 t.default = e => {
   var t;
   let {
@@ -19,11 +19,11 @@ t.default = e => {
     className: d,
     variant: f = "heading-md/semibold",
     alwaysWhiteText: m = !0
-  } = e, C = (0, o.formatPrice)(a, s);
+  } = e, C = (0, i.formatPrice)(a, s);
   return (0, l.jsxs)(n.Heading, {
     variant: f,
     color: m ? "always-white" : "none",
-    className: r()(i.heading, d),
+    className: r()(o.heading, d),
     children: [c, null !== (t = null == u ? void 0 : u(C)) && void 0 !== t ? t : C]
   })
 }

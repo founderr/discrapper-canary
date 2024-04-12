@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return T
   },
   default: function() {
-    return i
+    return u
   }
 });
 var E = s("735250");
@@ -18,23 +18,23 @@ let T = {
   LARGE: n.large
 };
 
-function i(e) {
+function u(e) {
   let {
     emojiId: t,
     emojiName: s,
     defaultComponent: n,
-    size: i = T.MEDIUM
+    size: u = T.MEDIUM
   } = e, {
-    customEmoji: u,
+    customEmoji: i,
     unicodeEmoji: A
   } = (0, a.default)(t, s);
-  return null == u && null == A ? (0, E.jsx)(E.Fragment, {
+  return null == i && null == A ? (0, E.jsx)(E.Fragment, {
     children: n
   }) : (0, E.jsx)(_.default, {
-    emojiName: null != u ? null == u ? void 0 : u.name : s,
-    animated: null != u && u.animated,
-    emojiId: null == u ? void 0 : u.id,
+    emojiName: null != i ? null == i ? void 0 : i.name : s,
+    animated: null != i && i.animated,
+    emojiId: null == i ? void 0 : i.id,
     autoplay: !0,
-    className: i
+    className: u
   })
 }

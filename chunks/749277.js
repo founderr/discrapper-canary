@@ -17,8 +17,8 @@ var a = n("442837"),
   f = n("29458"),
   E = n("636629"),
   _ = n("33885"),
-  T = n("346585"),
-  m = n("303172"),
+  m = n("346585"),
+  T = n("303172"),
   I = n("463230"),
   p = n("246965"),
   h = n("703656"),
@@ -233,7 +233,7 @@ let P = e => {
               onClick: () => S(R.ContentDismissActionType.UNKNOWN),
               noticeType: P
             }), x.default.Messages.POMELO_ACTION_NEEDED.format(), (0, s.jsx)(A.PrimaryCTANoticeButton, {
-              onClick: () => (0, m.default)(v.PomeloEntrypoints.NOTICE),
+              onClick: () => (0, T.default)(v.PomeloEntrypoints.NOTICE),
               noticeType: P,
               children: x.default.Messages.GET_STARTED
             })]
@@ -245,9 +245,9 @@ let P = e => {
               onClick: () => S(R.ContentDismissActionType.UNKNOWN),
               noticeType: P
             }), x.default.Messages.POMELO_ACTION_NEEDED_FORCE.format({
-              date: (0, T.getLocalizedForcedUUDate)(U)
+              date: (0, m.getLocalizedForcedUUDate)(U)
             }), (0, s.jsx)(A.PrimaryCTANoticeButton, {
-              onClick: () => (0, m.default)(v.PomeloEntrypoints.NOTICE),
+              onClick: () => (0, T.default)(v.PomeloEntrypoints.NOTICE),
               noticeType: P,
               children: x.default.Messages.GET_STARTED
             })]

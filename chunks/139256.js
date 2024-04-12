@@ -29,8 +29,8 @@ var s, a, l = n("735250"),
   f = n("596454"),
   E = n("44315"),
   _ = n("377171"),
-  T = n("339085"),
-  m = n("695346"),
+  m = n("339085"),
+  T = n("695346"),
   I = n("261922"),
   p = n("263704"),
   h = n("441674"),
@@ -230,7 +230,7 @@ function B(e) {
   let {
     attachment: n,
     className: s
-  } = e, a = (0, C.useIsWindowFocused)(), i = m.GifAutoPlay.useSetting();
+  } = e, a = (0, C.useIsWindowFocused)(), i = T.GifAutoPlay.useSetting();
   return (0, l.jsx)(I.default, {
     className: s,
     imageClassName: x.attachmentImage,
@@ -250,9 +250,9 @@ function F(e) {
   let {
     className: n,
     emoji: s
-  } = e, a = (0, d.useStateFromStores)([T.default], () => {
+  } = e, a = (0, d.useStateFromStores)([m.default], () => {
     var e;
-    return T.default.getCustomEmojiById(null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : "")
+    return m.default.getCustomEmojiById(null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : "")
   }, [s.id]), i = (null == s ? void 0 : s.name) !== "" ? s.name : null == a ? void 0 : a.name;
   return (0, l.jsx)(f.default, {
     className: n,

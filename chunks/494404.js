@@ -25,8 +25,8 @@ var s = n("735250"),
   f = n("668781"),
   E = n("904245"),
   _ = n("724757"),
-  T = n("294218"),
-  m = n("703656"),
+  m = n("294218"),
+  T = n("703656"),
   I = n("210887"),
   p = n("592125"),
   h = n("375954"),
@@ -161,8 +161,8 @@ function j(e) {
     loading: r,
     loadMore: f,
     renderHeader: E,
-    renderEmptyState: T,
-    renderItem: m,
+    renderEmptyState: m,
+    renderItem: T,
     getProTip: p,
     scrollerClassName: h,
     className: N,
@@ -201,9 +201,9 @@ function j(e) {
     className: i()(L.emptyPlaceholder, L.loadingPlaceholder),
     children: (0, s.jsx)(c.Spinner, {})
   }, "spinner")] : 0 === n.length ? j.push((0, s.jsx)(a.Fragment, {
-    children: T(I.default.theme)
+    children: m(I.default.theme)
   }, "empty-state")) : (G = !1, j = [], o().each(n, e => {
-    j.push(...m(e))
+    j.push(...T(e))
   }));
   let B = null;
   null != n && n.length > 0 && null != f && (B = r ? (0, s.jsx)("div", {
@@ -220,7 +220,7 @@ function j(e) {
     })
   }) : (0, s.jsx)("div", {
     className: L.scrollingFooterWrap,
-    children: T(I.default.theme)
+    children: m(I.default.theme)
   }));
   let F = null == p ? void 0 : p(),
     k = G && null != F ? (0, s.jsx)("div", {
@@ -312,7 +312,7 @@ function G(e) {
     });
     else if (!x) {
       let e = p.default.getChannel(i);
-      null != e && (E.default.trackJump(i, s, t), (0, m.transitionTo)(O.Routes.CHANNEL(e.getGuildId(), i, s))), null == c || c(n)
+      null != e && (E.default.trackJump(i, s, t), (0, T.transitionTo)(O.Routes.CHANNEL(e.getGuildId(), i, s))), null == c || c(n)
     }
   }
   a.useEffect(() => {
@@ -343,7 +343,7 @@ function G(e) {
       let a = [];
       return null == n ? [] : (a.push((0, s.jsxs)("div", {
         className: L.messageGroupWrapper,
-        children: [(0, s.jsx)(T.default, {
+        children: [(0, s.jsx)(m.default, {
           className: L.messageGroupCozy,
           message: t,
           channel: n

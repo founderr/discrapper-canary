@@ -21,15 +21,15 @@ var n = s("803997"),
   m = s("981631"),
   _ = s("689938"),
   g = s("901145"),
-  h = s("794711");
-let I = !T.isPlatformEmbedded,
+  I = s("794711");
+let h = !T.isPlatformEmbedded,
   N = (0, E.uid)();
 
 function p(e) {
   let {
     value: t
   } = e;
-  t === m.InputModes.PUSH_TO_TALK && I && (0, r.openModalLazy)(async () => {
+  t === m.InputModes.PUSH_TO_TALK && h && (0, r.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.resolve().then(s.bind(s, "468026"));
@@ -58,13 +58,13 @@ function A(e) {
     } = (0, i.useStateFromStoresObject)([c.default], () => c.default.getModeOptions());
   return t = T.isPlatformEmbedded || s !== m.InputModes.PUSH_TO_TALK ? (0, a.jsx)(r.FormText, {
     type: r.FormText.Types.DESCRIPTION,
-    className: l()(g.pttToolsMessage, h.marginBottom8),
+    className: l()(g.pttToolsMessage, I.marginBottom8),
     children: _.default.Messages.USER_SETTINGS_VOICE_ADD_MULTIPLE.format({
       onClick: () => d.default.setSection(m.UserSettingsSections.KEYBINDS)
     })
   }) : (0, a.jsx)(r.FormText, {
     type: r.FormText.Types.DESCRIPTION,
-    className: l()(g.pttToolsMessage, g.pttToolsWarning, h.marginBottom8),
+    className: l()(g.pttToolsMessage, g.pttToolsWarning, I.marginBottom8),
     children: _.default.Messages.PTT_LIMITED_WARNING.format({
       onDownloadClick: () => (0, f.openDownloadAppsModal)("Help Text PTT")
     })
@@ -88,7 +88,7 @@ function A(e) {
           children: [(0, a.jsx)(r.FormTitle, {
             id: N,
             tag: r.FormTitleTags.H5,
-            className: h.marginBottom8,
+            className: I.marginBottom8,
             children: _.default.Messages.INPUT_MODE_PTT_RELEASE_DELAY
           }), (0, a.jsx)(r.Slider, {
             initialValue: E,
@@ -112,12 +112,12 @@ function O() {
       name: _.default.Messages.INPUT_MODE_VAD
     }, {
       value: m.InputModes.PUSH_TO_TALK,
-      name: I ? _.default.Messages.INPUT_MODE_PTT_LIMITED : _.default.Messages.INPUT_MODE_PTT
+      name: h ? _.default.Messages.INPUT_MODE_PTT_LIMITED : _.default.Messages.INPUT_MODE_PTT
     }];
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(r.FormItem, {
       title: _.default.Messages.FORM_LABEL_INPUT_MODE,
-      className: h.marginBottom20,
+      className: I.marginBottom20,
       children: (0, a.jsx)(r.RadioGroup, {
         onChange: p,
         options: t,

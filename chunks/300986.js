@@ -17,8 +17,8 @@ var a = n("442837"),
   f = n("63063"),
   E = n("51144"),
   _ = n("981631"),
-  T = n("689938");
-let m = new Set(["ko", "ja"]);
+  m = n("689938");
+let T = new Set(["ko", "ja"]);
 
 function I() {
   let e = (0, a.useStateFromStores)([o.default], () => o.default.getCurrentUser()),
@@ -34,8 +34,8 @@ function I() {
         highlighted: n
       }),
       icon: u.default,
-      tooltipPosition: m.has(t) ? "left" : void 0,
-      tooltip: T.default.Messages.HELP
+      tooltipPosition: T.has(t) ? "left" : void 0,
+      tooltip: m.default.Messages.HELP
     })
   })
 }

@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return _
+    return L
   }
 }), r("47120");
 var a = r("735250"),
@@ -57,7 +57,7 @@ let E = [{
       return t.toLocaleString()
     }
   }],
-  L = [{
+  _ = [{
     id: "details",
     name: "Details",
     render: e => {
@@ -136,13 +136,13 @@ let E = [{
     }
   }];
 
-function _() {
+function L() {
   let [e, t] = n.useState(""), r = n.useRef(null), i = (0, u.useStateFromStoresArray)([x.default], () => x.default.loggedTriggers), o = n.useMemo(() => i.filter(t => 0 === e.length || s()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [i, e]), [c, d] = n.useState(void 0), g = o.find(e => e.key === c), {
     TabBar: b,
     renderSelectedTab: y
   } = (0, j.default)({
-    tabs: L
-  }, []), v = (0, u.useStateFromStores)([x.default], () => x.default.trackTriggers), _ = n.useCallback(e => {
+    tabs: _
+  }, []), v = (0, u.useStateFromStores)([x.default], () => x.default.trackTriggers), L = n.useCallback(e => {
     p.default.dispatch({
       type: "SET_TRACK_TRIGGERS",
       enabled: e
@@ -158,7 +158,7 @@ function _() {
         className: w.triggersEnable,
         children: (0, a.jsx)(h.Switch, {
           checked: v,
-          onChange: _,
+          onChange: L,
           className: w.__invalid_toolbarSwitch
         })
       }), (0, a.jsx)(h.Button, {

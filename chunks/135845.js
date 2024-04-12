@@ -17,8 +17,8 @@ var a = n("512722"),
   f = n("358595"),
   E = n("981631"),
   _ = n("245335"),
-  T = n("689938"),
-  m = n("558338");
+  m = n("689938"),
+  T = n("558338");
 
 function I(e) {
   let t, n, a, {
@@ -49,22 +49,22 @@ function I(e) {
   }
   let y = null != I.channel ? (0, r.createChannelRecordFromInvite)(I.channel) : null,
     U = R ? N : S;
-  P && !O ? a = x ? T.default.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : T.default.Messages.INVITE_BUTTON_STREAM_ENDED.format({
+  P && !O ? a = x ? m.default.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : m.default.Messages.INVITE_BUTTON_STREAM_ENDED.format({
     name: L.username
-  }) : (t = T.default.Messages.WATCH, n = c.default.Button.Colors.GREEN, R && (t = T.default.Messages.INVITE_BUTTON_STREAM_WATCHING, n = c.default.Button.Colors.PRIMARY), a = x ? T.default.Messages.INVITE_BUTTON_STREAMER : T.default.Messages.INVITE_BUTTON_STREAMING.format({
+  }) : (t = m.default.Messages.WATCH, n = c.default.Button.Colors.GREEN, R && (t = m.default.Messages.INVITE_BUTTON_STREAM_WATCHING, n = c.default.Button.Colors.PRIMARY), a = x ? m.default.Messages.INVITE_BUTTON_STREAMER : m.default.Messages.INVITE_BUTTON_STREAMING.format({
     name: L.username
   }));
   let b = A === h.id && null != y ? (0, s.jsx)(c.default.Channel, {
     channel: y
-  }) : T.default.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({
+  }) : m.default.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({
     guildName: h.name
   });
   return (0, s.jsxs)(c.default, {
     children: [(0, s.jsx)(c.default.Header, {
-      text: T.default.Messages.INVITE_BUTTON_TITLE_STREAMING
+      text: m.default.Messages.INVITE_BUTTON_TITLE_STREAMING
     }), (0, s.jsxs)(c.default.Body, {
       children: [(0, s.jsxs)("div", {
-        className: m.headerLine,
+        className: T.headerLine,
         children: [(0, s.jsx)(c.default.Icon, {
           guild: h,
           onClick: P && O ? U : void 0

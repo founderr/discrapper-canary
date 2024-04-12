@@ -15,8 +15,8 @@ var a, n = s("735250"),
   m = s("823379"),
   _ = s("464179"),
   g = s("211667"),
-  h = s("244526"),
-  I = s("689938"),
+  I = s("244526"),
+  h = s("689938"),
   N = s("946255");
 
 function p(e, t, s) {
@@ -61,7 +61,7 @@ class A extends(a = l.PureComponent) {
       children: [(0, n.jsx)(u.Text, {
         className: N.sectionHeader,
         variant: "text-sm/normal",
-        children: I.default.Messages.BILLING_ADDRESS
+        children: h.default.Messages.BILLING_ADDRESS
       }), (0, n.jsx)(_.default, {
         ...e,
         mode: _.default.Modes.EDIT,
@@ -83,7 +83,7 @@ class A extends(a = l.PureComponent) {
       children: [(0, n.jsx)(u.Text, {
         className: N.sectionHeader,
         variant: "text-sm/normal",
-        children: I.default.Messages.BILLING_STEP_CREDIT_CARD_INFORMATION
+        children: h.default.Messages.BILLING_STEP_CREDIT_CARD_INFORMATION
       }), (0, n.jsx)(g.default, {
         expirationDate: s,
         onCardInfoChange: this.handleExpirationDateUpdate,
@@ -107,7 +107,7 @@ class A extends(a = l.PureComponent) {
         children: (0, n.jsxs)("div", {
           className: N.disabledTooltipWrapper,
           children: [s ? (0, n.jsx)(u.Tooltip, {
-            text: I.default.Messages.PAYMENT_SOURCE_DELETE_DISABLED_TOOLTIP,
+            text: h.default.Messages.PAYMENT_SOURCE_DELETE_DISABLED_TOOLTIP,
             children: e => (0, n.jsx)("div", {
               "aria-hidden": !0,
               className: N.disabledTooltipTarget,
@@ -121,7 +121,7 @@ class A extends(a = l.PureComponent) {
             look: u.Button.Looks.OUTLINED,
             color: u.Button.Colors.RED,
             size: o.isMobile ? u.ButtonSizes.SMALL : u.ButtonSizes.MEDIUM,
-            children: o.isMobile ? I.default.Messages.DELETE : I.default.Messages.PAYMENT_SOURCE_DELETE
+            children: o.isMobile ? h.default.Messages.DELETE : h.default.Messages.PAYMENT_SOURCE_DELETE
           })]
         })
       }), (0, n.jsxs)("div", {
@@ -133,14 +133,14 @@ class A extends(a = l.PureComponent) {
           look: u.Button.Looks.LINK,
           color: u.Button.Colors.PRIMARY,
           size: o.isMobile ? u.ButtonSizes.SMALL : u.ButtonSizes.MEDIUM,
-          children: I.default.Messages.CANCEL
+          children: h.default.Messages.CANCEL
         }), (0, n.jsx)(u.Button, {
           submitting: e,
           disabled: !a || t || !l,
           type: "submit",
           color: u.Button.Colors.GREEN,
           size: o.isMobile ? u.ButtonSizes.SMALL : u.ButtonSizes.MEDIUM,
-          children: I.default.Messages.SAVE
+          children: h.default.Messages.SAVE
         })]
       })]
     })
@@ -163,19 +163,19 @@ class A extends(a = l.PureComponent) {
         noValidate: !0,
         children: [this.renderError(), (0, n.jsxs)("div", {
           className: N.__invalid_paymentSection,
-          children: [(0, n.jsx)(h.default, {
+          children: [(0, n.jsx)(I.default, {
             paymentSource: e,
             isDefault: t,
             isForSubscription: l,
             locale: s
           }), e.invalid ? (0, n.jsx)("div", {
             className: N.errorSubText,
-            children: I.default.Messages.PAYMENT_SOURCE_INVALID_HELP
+            children: h.default.Messages.PAYMENT_SOURCE_INVALID_HELP
           }) : null, (0, n.jsx)("div", {
             className: N.subText,
-            children: o ? I.default.Messages.PAYMENT_SOURCE_EDIT_HELP_PAYPAL.format({
+            children: o ? h.default.Messages.PAYMENT_SOURCE_EDIT_HELP_PAYPAL.format({
               paypalURL: "https://www.paypal.com"
-            }) : I.default.Messages.PAYMENT_SOURCE_EDIT_HELP_CARD
+            }) : h.default.Messages.PAYMENT_SOURCE_EDIT_HELP_CARD
           })]
         }), this.renderCardExpirationSection(), this.renderBillingAddressSection(), (0, n.jsx)(u.Checkbox, {
           name: C.IS_DEFAULT,
@@ -186,7 +186,7 @@ class A extends(a = l.PureComponent) {
           children: (0, n.jsx)(u.Text, {
             className: N.defaultCheckboxLabel,
             variant: "text-sm/normal",
-            children: I.default.Messages.PAYMENT_SOURCE_MAKE_DEFAULT
+            children: h.default.Messages.PAYMENT_SOURCE_MAKE_DEFAULT
           })
         }), (0, n.jsx)(u.FormDivider, {}), this.renderActions()]
       })

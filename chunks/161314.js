@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("213609"),
   E = n("267101"),
   _ = n("336197"),
-  T = n("430824"),
-  m = n("346656"),
+  m = n("430824"),
+  T = n("346656"),
   I = n("682864"),
   p = n("132338"),
   h = n("626135"),
@@ -32,7 +32,7 @@ function R(e) {
   var t;
   let {
     guildId: n
-  } = e, l = (0, u.useStateFromStores)([T.default], () => T.default.getGuild(n)), {
+  } = e, l = (0, u.useStateFromStores)([m.default], () => m.default.getGuild(n)), {
     loading: R,
     subscriptionsSettings: O
   } = (0, N.useMonetizationSettings)(n), {
@@ -93,7 +93,7 @@ function R(e) {
       size: 16
     }), (0, s.jsxs)("div", {
       className: M.guildShopEmbedFooter,
-      children: [(0, s.jsx)(m.default, {
+      children: [(0, s.jsx)(T.default, {
         guild: l
       }), (0, s.jsxs)("ul", {
         className: M.guildShopSummary,

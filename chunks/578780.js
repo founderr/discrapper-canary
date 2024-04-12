@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return v
+    return E
   }
 });
 var n = r("735250");
@@ -55,7 +55,7 @@ let g = [{
   })
 }];
 
-function v(e) {
+function E(e) {
   let {
     guildProductContext: t,
     sourceAnalyticsLocations: r,

@@ -5,8 +5,8 @@ a("470079");
 var s = a("780384"),
   r = a("481060"),
   n = a("410030"),
-  o = a("689938"),
-  i = a("239014"),
+  i = a("689938"),
+  o = a("239014"),
   u = a("982240"),
   c = a("533854");
 t.default = e => {
@@ -14,24 +14,24 @@ t.default = e => {
     onRetry: t
   } = e, a = (0, n.default)();
   return (0, l.jsxs)("div", {
-    className: i.wrapper,
+    className: o.wrapper,
     children: [(0, l.jsx)("img", {
-      className: i.__invalid_loadIssueImg,
+      className: o.__invalid_loadIssueImg,
       src: (0, s.isThemeDark)(a) ? u : c,
       alt: ""
     }), (0, l.jsx)(r.Heading, {
-      className: i.heading1,
+      className: o.heading1,
       variant: "heading-xl/semibold",
-      children: o.default.Messages.COLLECTIBLES_SHOP_ERROR_HEADING
+      children: i.default.Messages.COLLECTIBLES_SHOP_ERROR_HEADING
     }), (0, l.jsx)(r.Text, {
       variant: "text-md/normal",
-      children: o.default.Messages.COLLECTIBLES_SHOP_ERROR_SHOP_LOAD
+      children: i.default.Messages.COLLECTIBLES_SHOP_ERROR_SHOP_LOAD
     }), (0, l.jsx)(r.Button, {
-      className: i.reload,
+      className: o.reload,
       size: r.Button.Sizes.MEDIUM,
       color: r.Button.Colors.BRAND_NEW,
       onClick: t,
-      children: o.default.Messages.ERRORS_RELOAD
+      children: i.default.Messages.ERRORS_RELOAD
     })]
   })
 }

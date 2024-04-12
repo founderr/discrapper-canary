@@ -12,8 +12,8 @@ var s = n("735250"),
   f = n("603263"),
   E = n("461745"),
   _ = n("349033"),
-  T = n("999650"),
-  m = n("857595"),
+  m = n("999650"),
+  T = n("857595"),
   I = n("607070"),
   p = n("367907"),
   h = n("592125"),
@@ -63,7 +63,7 @@ class j extends a.PureComponent {
   }
   tokenize(e) {
     let t = R.tokenizeQuery(M.getFirstTextBlock(e)).filter(e => e.type !== _.default.NON_TOKEN_TYPE);
-    return M.applyTokensAsEntities(t, e, T.default)
+    return M.applyTokensAsEntities(t, e, m.default)
   }
   clearSearch() {
     let {
@@ -232,7 +232,7 @@ class j extends a.PureComponent {
       let a = N.default.getTextChannelNameDisambiguations(s.getGuildId())[s.id],
         l = null != a ? a.name : s.name;
       this.handleSetSearchQuery({
-        query: T.default[x.SearchTokenTypes.FILTER_IN].key + "#".concat(l, " "),
+        query: m.default[x.SearchTokenTypes.FILTER_IN].key + "#".concat(l, " "),
         replace: !0
       })
     }), y(this, "focusEditor", () => {
@@ -355,7 +355,7 @@ class j extends a.PureComponent {
       }
       if ("Tab" === t) {
         if (i) return;
-        return (0, m.enableKeyboardMode)(), !0
+        return (0, T.enableKeyboardMode)(), !0
       }
       if ("Home" === t || "ArrowLeft" === t && n) return e.preventDefault(), a = s ? M.setToStartSelection(a) : M.setCollapsedStartSelection(a), this.setEditorState(a), !0;
       if ("End" === t || "ArrowRight" === t && n) return e.preventDefault(), a = s ? M.setToEndSelection(a) : M.setCollapsedEndSelection(a), this.setEditorState(a), !0;
@@ -372,7 +372,7 @@ t.default = d.default.connectStores([I.default, S.default], () => {
   let t = S.default.getCurrentSearchId(),
     n = S.default.getSearchType(),
     s = null != t && S.default.isSearching(t),
-    a = null != t && null !== (e = S.default.getEditorState(t)) && void 0 !== e ? e : M.createEmptyEditorState(O.generateDecorators(T.default)),
+    a = null != t && null !== (e = S.default.getEditorState(t)) && void 0 !== e ? e : M.createEmptyEditorState(O.generateDecorators(m.default)),
     l = I.default.keyboardModeEnabled;
   return {
     searchId: t,

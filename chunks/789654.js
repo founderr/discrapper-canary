@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return R
+    return P
   }
 }), r("47120"), r("724458"), r("757143"), r("390547"), r("653041");
 var a = r("735250"),
@@ -57,7 +57,7 @@ let w = {
   },
   E = ["100", "130", "160", "200", "230", "260", "300", "330", "345", "360", "400", "430", "460", "500", "530", "560", "600", "630", "645", "660", "700", "730", "760", "800", "830", "860", "900"];
 
-function L(e) {
+function _(e) {
   var t;
   let r = "string" == typeof e ? 1 : null !== (t = e.opacity) && void 0 !== t ? t : 1;
   return {
@@ -66,7 +66,7 @@ function L(e) {
   }
 }
 
-function _(e) {
+function L(e) {
   return "name" in e
 }
 
@@ -79,15 +79,15 @@ function A(e) {
       return "name" in r ? e(r) : r
     }(a);
     t[r] = {
-      light: L(a.light),
-      dark: L(a.dark),
-      darker: L(null != a.darker ? a.darker : a.dark),
-      midnight: L(null != a.midnight ? a.midnight : a.dark)
+      light: _(a.light),
+      dark: _(a.dark),
+      darker: _(null != a.darker ? a.darker : a.dark),
+      midnight: _(null != a.midnight ? a.midnight : a.dark)
     }
   }), t
 }
 
-function P(e, t) {
+function R(e, t) {
   let [r, a] = n.useState(() => {
     let r = h.Storage.get(e);
     return null != r ? r : t
@@ -97,13 +97,13 @@ function P(e, t) {
   }, [e, r]), [r, a]
 }
 
-function R() {
+function P() {
   let e = (0, y.useTheme)(),
     [{
       rawPalette: t,
       semanticTokens: r
     }, i, o, c, h, p] = function(e, t) {
-      let [r, a] = P("".concat(e, "-states"), [t]), [i, l] = P("".concat(e, "-index"), 0), o = r[i], s = n.useCallback(e => {
+      let [r, a] = R("".concat(e, "-states"), [t]), [i, l] = R("".concat(e, "-index"), 0), o = r[i], s = n.useCallback(e => {
         a([e, ...r].slice(0, 20)), l(0)
       }, [l, a, r]), c = n.useCallback(() => {
         l(Math.min(r.length - 1, i + 1))
@@ -117,12 +117,12 @@ function R() {
     }),
     [m, f] = n.useState(""),
     [S, w] = n.useState({}),
-    [L, _] = n.useState({}),
+    [_, L] = n.useState({}),
     A = n.useMemo(() => Object.keys(t).reduce((e, t) => [...e, {
       value: t,
       label: t
     }], []), [t]),
-    R = n.useCallback((e, a, n, l) => {
+    P = n.useCallback((e, a, n, l) => {
       let o = d().cloneDeep(r);
       o[e][a] = {
         color: n,
@@ -157,8 +157,8 @@ function R() {
           }(r), o = d().kebabCase(e);
           return ["--".concat(o, "-hsl: ").concat(a, " calc(var(--saturation-factor, 1) * ").concat(n, "%) ").concat(i, "% !important;"), "--".concat(o, ": hsl(var(--").concat(o, "-hsl)) !important;")]
         });
-      return "\n      .theme-".concat(e, " {\n        ").concat(a.join("\n"), "\n\n        ").concat(Object.keys(S).filter(e => S[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n\n        ").concat(Object.keys(L).filter(e => L[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n      }\n\n      html {\n        ").concat(n.join("\n"), "\n      }\n    ")
-    }, [e, r, t, S, L]),
+      return "\n      .theme-".concat(e, " {\n        ").concat(a.join("\n"), "\n\n        ").concat(Object.keys(S).filter(e => S[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n\n        ").concat(Object.keys(_).filter(e => _[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n      }\n\n      html {\n        ").concat(n.join("\n"), "\n      }\n    ")
+    }, [e, r, t, S, _]),
     M = n.useCallback(e => {
       let t = "",
         r = "",
@@ -312,13 +312,13 @@ function R() {
           return (0, a.jsxs)(n.Fragment, {
             children: [(0, a.jsx)("div", {
               onMouseEnter: () => {
-                _(e => ({
+                L(e => ({
                   ...e,
                   [t]: !0
                 }))
               },
               onMouseLeave: () => {
-                _(e => ({
+                L(e => ({
                   ...e,
                   [t]: !1
                 }))
@@ -338,7 +338,7 @@ function R() {
               value: o.color,
               options: A,
               onChange: r => {
-                R(t, e, r, o.opacity)
+                P(t, e, r, o.opacity)
               },
               renderOptionPrefix: t => null == t ? null : (0, a.jsx)("div", {
                 style: {
@@ -357,7 +357,7 @@ function R() {
               },
               value: null === (i = o.opacity) || void 0 === i ? void 0 : i.toString(),
               onChange: r => {
-                "" !== r && R(t, e, o.color, parseFloat(r))
+                "" !== r && P(t, e, o.color, parseFloat(r))
               }
             }), (0, a.jsx)(b.Clickable, {
               style: s ? {} : {
@@ -366,7 +366,7 @@ function R() {
               },
               onClick: () => {
                 var r;
-                s && R(t, e, l.color, null !== (r = l.opacity) && void 0 !== r ? r : 1)
+                s && P(t, e, l.color, null !== (r = l.opacity) && void 0 !== r ? r : 1)
               },
               children: (0, a.jsx)(k.default, {
                 width: 16,

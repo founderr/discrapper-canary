@@ -20,7 +20,7 @@ function d(e) {
     onSelect: d,
     navId: c,
     label: f
-  } = e, E = (0, l.default)(t, "Notifications Bell"), _ = (0, i.default)(t), T = (0, o.useThreadNotificationSetting)(t);
+  } = e, E = (0, l.default)(t, "Notifications Bell"), _ = (0, i.default)(t), m = (0, o.useThreadNotificationSetting)(t);
   return (0, s.jsxs)(a.Menu, {
     navId: c,
     onClose: n,
@@ -41,7 +41,7 @@ function d(e) {
           action: () => r.default.setNotificationSettings(t, {
             flags: n
           }),
-          checked: n === T
+          checked: n === m
         }, n)
       })
     })]

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return E
   },
   clearHistory: function() {
-    return m
+    return T
   },
   clearSearchState: function() {
     return p
@@ -101,15 +101,15 @@ function f(e) {
 }
 
 function E(e, t) {
-  return T(e, t * r.SEARCH_PAGE_SIZE)
+  return m(e, t * r.SEARCH_PAGE_SIZE)
 }
 
 function _(e, t) {
   let n = l.default.getOffset(e);
-  return T(e, n + t)
+  return m(e, n + t)
 }
 
-function T(e, t) {
+function m(e, t) {
   let n = l.default.getQuery(e),
     s = l.default.getTotalResults(e);
   if (!(t < 0) && !(t > s)) return o(e, {
@@ -118,7 +118,7 @@ function T(e, t) {
   })
 }
 
-function m(e) {
+function T(e) {
   s.default.dispatch({
     type: "SEARCH_CLEAR_HISTORY",
     searchId: e

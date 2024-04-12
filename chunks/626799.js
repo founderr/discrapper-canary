@@ -15,8 +15,8 @@ var s, a = n("735250"),
   f = n("86357"),
   E = n("914602"),
   _ = n("568836"),
-  T = n("730749"),
-  m = n("112724"),
+  m = n("730749"),
+  T = n("112724"),
   I = n("812206"),
   p = n("283595"),
   h = n("558314"),
@@ -197,6 +197,6 @@ function L(e) {
     libraryApplication: null != n ? p.default.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
   }
 }
-let x = (0, m.default)((0, T.default)(O));
+let x = (0, T.default)((0, m.default)(O));
 t.default = r.default.connectStores(v, L)(x);
-let D = (0, T.default)(r.default.connectStores(v, L)(O))
+let D = (0, m.default)(r.default.connectStores(v, L)(O))

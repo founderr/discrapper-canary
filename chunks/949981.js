@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return T
   }
 }), n("724458"), n("653041");
 var s = n("735250");
@@ -17,17 +17,17 @@ var a = n("512722"),
   f = n("358595"),
   E = n("981631"),
   _ = n("689938"),
-  T = n("558338");
+  m = n("558338");
 
-function m(e) {
+function T(e) {
   let t, {
       invite: n,
       author: a,
-      currentUserId: m,
+      currentUserId: T,
       onTransitionToInviteChannel: I,
       onAcceptInstantInvite: p
     } = e,
-    h = m === a.id,
+    h = T === a.id,
     N = n.state === E.InviteStates.ACCEPTING,
     S = (0, i.useStateFromStores)([o.default], () => null != n.channel ? o.default.getChannel(n.channel.id) : null, [n]);
   l()(null == S || S.isPrivate(), "must be a private channel");
@@ -55,7 +55,7 @@ function m(e) {
       text: O
     }), (0, s.jsxs)(d.default.Body, {
       children: [(0, s.jsxs)("div", {
-        className: T.headerLine,
+        className: m.headerLine,
         children: [(0, s.jsx)(d.default.Icon, {
           channel: S,
           onClick: C ? g : void 0

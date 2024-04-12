@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   useProductDetailsDeepLinking: function() {
-    return g
+    return h
   },
   useProductDetailsLinkableRoute: function() {
     return C
@@ -11,8 +11,8 @@ var l = a("470079"),
   s = a("266067"),
   r = a("442837"),
   n = a("100527"),
-  o = a("906732"),
-  i = a("328347"),
+  i = a("906732"),
+  o = a("328347"),
   u = a("237031"),
   c = a("981631");
 let d = "".concat("#").concat("itemSkuId", "="),
@@ -26,7 +26,7 @@ let d = "".concat("#").concat("itemSkuId", "="),
       }
     }, [])
   },
-  h = e => {
+  p = e => {
     let {
       categories: t,
       productSkuId: a,
@@ -58,15 +58,15 @@ let d = "".concat("#").concat("itemSkuId", "="),
     }
     return () => {}
   },
-  g = e => {
+  h = e => {
     let {
       categories: t,
       isFetchingCategories: a,
       isLayer: u,
       initialItemCardRef: d
-    } = e, m = l.useRef(null), C = (0, s.useLocation)(), g = C.pathname === c.Routes.COLLECTIBLES_SHOP ? n.default.HOME_PAGE_SHOP_TAB : C.pathname === c.Routes.COLLECTIBLES_SHOP_FULLSCREEN ? n.default.COLLECTIBLES_SHOP_FULLSCREEN : n.default.COLLECTIBLES_SHOP, {
-      analyticsLocations: p
-    } = (0, o.default)(g);
+    } = e, m = l.useRef(null), C = (0, s.useLocation)(), h = C.pathname === c.Routes.COLLECTIBLES_SHOP ? n.default.HOME_PAGE_SHOP_TAB : C.pathname === c.Routes.COLLECTIBLES_SHOP_FULLSCREEN ? n.default.COLLECTIBLES_SHOP_FULLSCREEN : n.default.COLLECTIBLES_SHOP, {
+      analyticsLocations: g
+    } = (0, i.default)(h);
     l.useEffect(() => {
       if (u) return;
       let e = f.exec(C.hash);
@@ -75,18 +75,18 @@ let d = "".concat("#").concat("itemSkuId", "="),
         m.current = t
       }
     }, []);
-    let E = (0, r.useStateFromStores)([i.default], () => i.default.initialProductSkuId);
+    let E = (0, r.useStateFromStores)([o.default], () => o.default.initialProductSkuId);
     l.useEffect(() => {
       if (a) return;
       let e = null;
       if (u && null != E && (e = E), !u && null != m.current && (e = m.current), null != e) {
         let a = [],
           l = setTimeout(() => {
-            let l = h({
+            let l = p({
               categories: t,
               productSkuId: e,
-              analyticsLocations: p,
-              analyticsSource: g,
+              analyticsLocations: g,
+              analyticsSource: h,
               initialItemCardRef: d
             });
             a.push(l)
@@ -95,5 +95,5 @@ let d = "".concat("#").concat("itemSkuId", "="),
           a.forEach(e => e())
         }
       }
-    }, [u, p, g, t, a, E, d])
+    }, [u, g, h, t, a, E, d])
   }

@@ -44,7 +44,7 @@ let g = e => {
       "aria-checked": w,
       "aria-expanded": N,
       "aria-haspopup": E
-    } = e, L = (0, a.jsx)(g, {
+    } = e, _ = (0, a.jsx)(g, {
       x: 0,
       y: 0,
       width: 24,
@@ -53,8 +53,8 @@ let g = e => {
       foreground: null != u ? u : void 0,
       background: null != h ? h : void 0,
       color: d
-    }), _ = j;
-    return null == _ && "string" == typeof y && (_ = y), (0, a.jsx)(c.Tooltip, {
+    }), L = j;
+    return null == L && "string" == typeof y && (L = y), (0, a.jsx)(c.Tooltip, {
       text: y,
       color: x,
       position: k,
@@ -98,7 +98,7 @@ let g = e => {
             [m.selected]: i
           }),
           role: S,
-          "aria-label": _,
+          "aria-label": L,
           "aria-hidden": T,
           "aria-checked": w,
           "aria-haspopup": E,
@@ -106,8 +106,8 @@ let g = e => {
           tabIndex: o || null == f ? -1 : 0,
           children: [s ? (0, a.jsx)(p.default, {
             mask: p.default.Masks.HEADER_BAR_BADGE,
-            children: L
-          }) : L, s ? (0, a.jsx)("span", {
+            children: _
+          }) : _, s ? (0, a.jsx)("span", {
             className: m.iconBadge
           }) : null, n]
         })

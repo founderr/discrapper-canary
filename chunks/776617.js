@@ -1,8 +1,8 @@
 "use strict";
 s.r(t), s("653041"), s("47120"), s("733860");
 var E, _, a, n, T = s("392711"),
-  i = s.n(T),
-  u = s("149765"),
+  u = s.n(T),
+  i = s("149765"),
   A = s("442837"),
   l = s("570140"),
   I = s("387667"),
@@ -38,12 +38,12 @@ function B(e) {
     var E, _, a;
     let n = [],
       T = null,
-      u = null,
+      i = null,
       A = null;
     if (null != e.reason && n.push(new I.AuditLogChange(d.AuditLogChangeKeys.REASON, null, e.reason)), null != e.changes)
       for (let t of e.changes) {
         let e = new I.AuditLogChange(t.key, t.old_value, t.new_value);
-        n.push(e), e.key === d.AuditLogChangeKeys.NAME ? T = e : e.key === d.AuditLogChangeKeys.TYPE ? A = e : e.key === d.AuditLogChangeKeys.TITLE && (u = e)
+        n.push(e), e.key === d.AuditLogChangeKeys.NAME ? T = e : e.key === d.AuditLogChangeKeys.TYPE ? A = e : e.key === d.AuditLogChangeKeys.TITLE && (i = e)
       }
     if (e.action_type === d.AuditLogActions.MEMBER_PRUNE) {
       let t = null != e && null != e.options && null != e.options.delete_member_days ? e.options.delete_member_days : 1,
@@ -63,7 +63,7 @@ function B(e) {
     if (function(e, t, s) {
         let E = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 30,
           _ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 50;
-        return null != e && e.action === t.action && e.targetId === t.targetId && e.userId === t.userId && i().isEqual(e.options, t.options) && t.timestampStart.diff(e.timestampStart, "minutes") < E && s < _ && t.targetType !== d.AuditLogTargetTypes.INVITE && t.action !== d.AuditLogActions.MESSAGE_DELETE && t.action !== d.AuditLogActions.MESSAGE_BULK_DELETE && t.action !== d.AuditLogActions.MESSAGE_PIN && t.action !== d.AuditLogActions.MESSAGE_UNPIN && t.action !== d.AuditLogActions.MEMBER_MOVE && t.action !== d.AuditLogActions.MEMBER_DISCONNECT && t.action !== d.AuditLogActions.BOT_ADD && t.action !== d.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE && t.action !== d.AuditLogActions.MEMBER_PRUNE
+        return null != e && e.action === t.action && e.targetId === t.targetId && e.userId === t.userId && u().isEqual(e.options, t.options) && t.timestampStart.diff(e.timestampStart, "minutes") < E && s < _ && t.targetType !== d.AuditLogTargetTypes.INVITE && t.action !== d.AuditLogActions.MESSAGE_DELETE && t.action !== d.AuditLogActions.MESSAGE_BULK_DELETE && t.action !== d.AuditLogActions.MESSAGE_PIN && t.action !== d.AuditLogActions.MESSAGE_UNPIN && t.action !== d.AuditLogActions.MEMBER_MOVE && t.action !== d.AuditLogActions.MEMBER_DISCONNECT && t.action !== d.AuditLogActions.BOT_ADD && t.action !== d.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE && t.action !== d.AuditLogActions.MEMBER_PRUNE
       }(o, l, s)) {
       t[0] = o.merge({
         changes: [...o.changes, ...l.changes],
@@ -71,8 +71,8 @@ function B(e) {
       }), s++;
       return
     }
-    if (l.actionType === d.AuditLogActionTypes.DELETE && (null != T || null != u)) {
-      let e = null !== (a = null == T ? void 0 : T.oldValue) && void 0 !== a ? a : null == u ? void 0 : u.oldValue;
+    if (l.actionType === d.AuditLogActionTypes.DELETE && (null != T || null != i)) {
+      let e = null !== (a = null == T ? void 0 : T.oldValue) && void 0 !== a ? a : null == i ? void 0 : i.oldValue;
       (l.targetType === d.AuditLogTargetTypes.CHANNEL || l.targetType === d.AuditLogTargetTypes.CHANNEL_OVERWRITE) && null !== A && (0, L.isGuildSelectableChannelType)(A.oldValue) && (e = "#".concat(e)), null == H[l.targetType] ? H[l.targetType] = {
         [l.targetId]: e
       } : H[l.targetType][l.targetId] = e
@@ -89,11 +89,11 @@ function K(e) {
   let s = o.default.getMembers(N),
     E = r.default.getGuild(N),
     _ = null != N ? r.default.getRoles(N) : void 0;
-  c = i()(s).filter(e => e.roles.some(t => {
+  c = u()(s).filter(e => e.roles.some(t => {
     if (null != E) {
       if (e.userId === E.ownerId) return !0;
       let s = null == _ ? void 0 : _[t];
-      return null != s && S.some(e => u.has(s.permissions, e))
+      return null != s && S.some(e => i.has(s.permissions, e))
     }
   })).map(e => e.userId).value()
 }

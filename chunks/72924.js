@@ -20,8 +20,8 @@ var a = n("512722"),
   f = n("558381"),
   E = n("821849"),
   _ = n("15640"),
-  T = n("724870"),
-  m = n("87484"),
+  m = n("724870"),
+  T = n("87484"),
   I = n("928518"),
   p = n("367207"),
   h = n("106976"),
@@ -101,7 +101,7 @@ async function L(e) {
     }(c, i, o, r, d), await O(c, d)
   } else {
     if (c.type !== R.SKUTypes.SUBSCRIPTION) return new Promise(async (e, s) => {
-      await (0, m.default)({
+      await (0, T.default)({
         applicationId: t,
         skuId: n,
         analyticsLocationObject: o,
@@ -119,7 +119,7 @@ async function L(e) {
     await
 
     function(e, t, n, a, l) {
-      return (0, T.openActivityApplicationPaymentModal)({
+      return (0, m.openActivityApplicationPaymentModal)({
         applicationId: e,
         skuId: t,
         initialPlanId: n,

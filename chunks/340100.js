@@ -12,8 +12,8 @@ var s = n("735250"),
   f = n("507893"),
   E = n("930153"),
   _ = n("358085"),
-  T = n("918701"),
-  m = n("689938"),
+  m = n("918701"),
+  T = n("689938"),
   I = n("872861");
 t.default = function(e) {
   var t;
@@ -22,7 +22,7 @@ t.default = function(e) {
     color: l = o.default.colors.WHITE,
     quest: p,
     isInventory: h
-  } = e, N = (null === (t = p.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, S = (0, r.useStateFromStores)([c.default], () => c.default.locale), C = a.useMemo(() => (0, T.calculatePercentComplete)(p), [p]), A = 100 * C, g = (0, _.isWeb)() && !N, M = () => (0, s.jsxs)("div", {
+  } = e, N = (null === (t = p.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, S = (0, r.useStateFromStores)([c.default], () => c.default.locale), C = a.useMemo(() => (0, m.calculatePercentComplete)(p), [p]), A = 100 * C, g = (0, _.isWeb)() && !N, M = () => (0, s.jsxs)("div", {
     className: I.desktopTooltip,
     style: {
       marginTop: h ? 8 : 0
@@ -36,7 +36,7 @@ t.default = function(e) {
       className: I.__invalid_desktopTooltipText,
       color: h ? "text-muted" : "always-white",
       variant: h ? "text-xs/normal" : "text-xxs/normal",
-      children: m.default.Messages.QUESTS_PROGRESS_WEB_TIP
+      children: T.default.Messages.QUESTS_PROGRESS_WEB_TIP
     })]
   });
   return g && !h ? (0, s.jsx)(M, {}) : (0, s.jsxs)("div", {

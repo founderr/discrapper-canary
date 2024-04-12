@@ -58,8 +58,8 @@ var s = n("735250"),
   f = n("375954"),
   E = n("594174"),
   _ = n("585483"),
-  T = n("5967"),
-  m = n("630388"),
+  m = n("5967"),
+  T = n("630388"),
   I = n("358085"),
   p = n("51144"),
   h = n("91047"),
@@ -134,9 +134,9 @@ function y(e, t, l, r) {
   } = t, {
     id: E,
     flags: _
-  } = e, T = (0, m.hasFlag)(_, C.MessageFlags.EPHEMERAL), p = (0, N.default)(e), h = (0, u.useAppContext)();
+  } = e, m = (0, T.hasFlag)(_, C.MessageFlags.EPHEMERAL), p = (0, N.default)(e), h = (0, u.useAppContext)();
   return a.useCallback((e, t) => {
-    if (T) return;
+    if (m) return;
     if (!I.isPlatformEmbedded) {
       let t = e.target;
       if ("A" === t.tagName && "" !== t.textContent || null == window.getSelection) return;
@@ -177,7 +177,7 @@ function y(e, t, l, r) {
       }),
       context: h
     }))
-  }, [T, o, E, l, h, p, r])
+  }, [m, o, E, l, h, p, r])
 }
 
 function U(e, t) {
@@ -241,14 +241,14 @@ function B(e, t, n) {
 function F(e, t) {
   let [n, s] = a.useState(!1), [l, i] = a.useState(!1), r = a.useCallback(t => {
     var n, a;
-    let l = null !== (a = null === (n = (0, T.eventOwnerDocument)(t)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== a ? a : null;
+    let l = null !== (a = null === (n = (0, m.eventOwnerDocument)(t)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== a ? a : null;
     (t.target === t.currentTarget || t.currentTarget.contains(l)) && (i(!0), s(!0)), null != e && e(t)
   }, [e]);
   return {
     handleFocus: r,
     handleBlur: a.useCallback(e => {
       var n, a;
-      let l = null !== (a = null === (n = (0, T.eventOwnerDocument)(e)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== a ? a : null;
+      let l = null !== (a = null === (n = (0, m.eventOwnerDocument)(e)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== a ? a : null;
       (e.target === e.currentTarget || !e.currentTarget.contains(l)) && s(!1), null != t && t(e)
     }, [t]),
     isFocused: n,

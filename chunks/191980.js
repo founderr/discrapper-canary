@@ -4,19 +4,19 @@ l.r(t), l.d(t, {
     return u
   },
   show: function() {
-    return s
+    return n
   }
 });
-var n = l("570140");
+var s = l("570140");
 
-function s() {
-  n.default.dispatch({
+function n() {
+  s.default.dispatch({
     type: "SHOW_KEYBOARD_SHORTCUTS"
   })
 }
 
 function u() {
-  n.default.dispatch({
+  s.default.dispatch({
     type: "HIDE_KEYBOARD_SHORTCUTS"
   })
 }

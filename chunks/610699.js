@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("447543"),
   E = n("317381"),
   _ = n("778569"),
-  T = n("182906"),
-  m = n("100527"),
+  m = n("182906"),
+  T = n("100527"),
   I = n("906732"),
   p = n("835473"),
   h = n("471445"),
@@ -168,7 +168,7 @@ function F(e) {
     Z = (0, u.useStateFromStores)([A.default], () => null != J && A.default.can(x.Permissions.USE_EMBEDDED_ACTIVITIES, J), [J]),
     {
       analyticsLocations: X
-    } = (0, I.default)(m.default.INVITE_EMBED),
+    } = (0, I.default)(T.default.INVITE_EMBED),
     $ = (0, _.default)({
       applicationId: k.id,
       size: U
@@ -197,7 +197,7 @@ function F(e) {
         [y.large]: H,
         [y.stacked]: Y
       }),
-      children: (0, s.jsx)(T.default, {
+      children: (0, s.jsx)(m.default, {
         imageBackground: $,
         applicationName: null !== (n = null == z ? void 0 : z.name) && void 0 !== n ? n : "",
         imageClassName: i()(y.img, {

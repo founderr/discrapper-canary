@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("568836"),
   E = n("100527"),
   _ = n("906732"),
-  T = n("963249"),
-  m = n("594174"),
+  m = n("963249"),
+  T = n("594174"),
   I = n("78839"),
   p = n("55935"),
   h = n("74538"),
@@ -31,7 +31,7 @@ class R extends a.Component {
   renderTitle(e, t, n) {
     let {
       trialOffer: s
-    } = this.props, a = m.default.getUser(s.user_id), l = null != a ? a.username : "???", i = m.default.getUser(s.referrer_id), r = null != i ? i.username : "???";
+    } = this.props, a = T.default.getUser(s.user_id), l = null != a ? a.username : "???", i = T.default.getUser(s.referrer_id), r = null != i ? i.username : "???";
     if (e && void 0 === s.redeemed_at) return g.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_DISABLED_HEADER.format({
       username: l
     });
@@ -46,7 +46,7 @@ class R extends a.Component {
   renderBody(e, t, n) {
     let {
       trialOffer: s
-    } = this.props, a = m.default.getUser(s.referrer_id), l = null != a ? a.username : "???";
+    } = this.props, a = T.default.getUser(s.referrer_id), l = null != a ? a.username : "???";
     return e && !n && void 0 === s.redeemed_at ? g.default.Messages.REFERRAL_PROGRAM_EMBED_RECIPIENT_INELIGIBLE_SUBHEADER.format({
       userName: l
     }) : t ? null : g.default.Messages.REFERRAL_PROGRAM_EMBED_BODY
@@ -69,7 +69,7 @@ class R extends a.Component {
           ...r,
           size: c.Button.Sizes.SMALL,
           onClick: () => {
-            (0, T.default)({
+            (0, m.default)({
               initialPlanId: null,
               subscriptionTier: A.PremiumSubscriptionSKUs.TIER_2,
               analyticsLocations: i,
@@ -151,7 +151,7 @@ class R extends a.Component {
   constructor(...e) {
     var t, n, s;
     super(...e), t = this, n = "handleStartTrial", s = (e, t) => {
-      (0, T.default)({
+      (0, m.default)({
         initialPlanId: null,
         subscriptionTier: A.PremiumSubscriptionSKUs.TIER_2,
         analyticsLocations: t,
@@ -176,13 +176,13 @@ function O(e) {
   } = (0, d.useStateFromStoresObject)([N.default], () => ({
     trialOffer: n ? N.default.getRelevantUserTrialOffer(t) : null,
     isResolving: !!n && N.default.isResolving(t)
-  }), [n, t]), i = m.default.getCurrentUser(), r = (0, d.useStateFromStores)([m.default], () => null != a && (0, h.isPremium)(void 0 !== i && a.user_id === i.id ? i : m.default.getUser(a.user_id))), o = (0, d.useStateFromStores)([I.default], () => {
+  }), [n, t]), i = T.default.getCurrentUser(), r = (0, d.useStateFromStores)([T.default], () => null != a && (0, h.isPremium)(void 0 !== i && a.user_id === i.id ? i : T.default.getUser(a.user_id))), o = (0, d.useStateFromStores)([I.default], () => {
     var e;
     return r ? null === (e = I.default.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt : null
   }), {
     analyticsLocations: c
   } = (0, _.default)(E.default.SHARE_NITRO_EMBED), {
-    enabled: T
+    enabled: m
   } = S.default.useExperiment({
     location: "f4ff1d_1"
   }, {
@@ -196,7 +196,7 @@ function O(e) {
     recipientHasNitro: r,
     trialEndsAt: o,
     analyticsLocations: c,
-    shouldShowBirthdayUX: T,
+    shouldShowBirthdayUX: m,
     ...e
   }) : (0, s.jsx)("div", {
     className: M.invalidWrapper,

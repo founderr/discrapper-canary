@@ -21,10 +21,10 @@ function c(e, t, n) {
     deleteChannel: f,
     toggle: E,
     getNumUnreadChannels: _
-  } = t, T = null;
+  } = t, m = null;
   return l().flatMap(e, e => {
-    let t = e.sortOrder !== T;
-    T = e.sortOrder;
+    let t = e.sortOrder !== m;
+    m = e.sortOrder;
     let l = [];
     return t && (e.hasLoadedAnything && e.sortOrder === o.SortOrder.ReallyOldChannel ? l.push((0, s.jsx)(i.default, {
       className: d.divider,

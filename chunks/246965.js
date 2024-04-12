@@ -17,9 +17,9 @@ t.default = function(e) {
   var t;
   let {
     dismissCurrentNotice: n,
-    subscriptionTier: T
+    subscriptionTier: m
   } = e, {
-    analyticsLocations: m
+    analyticsLocations: T
   } = (0, i.default)(function(e) {
     switch (e) {
       case c.PremiumSubscriptionSKUs.TIER_0:
@@ -29,8 +29,8 @@ t.default = function(e) {
       default:
         throw Error("Unsupported subscription tier: ".concat(e))
     }
-  }(T)), I = (0, d.usePremiumTrialOffer)(), p = (0, a.default)(null != I && null != I.expires_at ? Date.parse(I.expires_at) : 0);
-  return null == I || (null === (t = I.subscription_trial) || void 0 === t ? void 0 : t.sku_id) !== T || null == I.expires_at || Object.values(p).every(e => 0 === e) ? null : (0, s.jsxs)(u.default, {
+  }(m)), I = (0, d.usePremiumTrialOffer)(), p = (0, a.default)(null != I && null != I.expires_at ? Date.parse(I.expires_at) : 0);
+  return null == I || (null === (t = I.subscription_trial) || void 0 === t ? void 0 : t.sku_id) !== m || null == I.expires_at || Object.values(p).every(e => 0 === e) ? null : (0, s.jsxs)(u.default, {
     color: function(e) {
       switch (e) {
         case c.PremiumSubscriptionSKUs.TIER_0:
@@ -40,7 +40,7 @@ t.default = function(e) {
         default:
           throw Error("Unsupported subscription tier: ".concat(e))
       }
-    }(T),
+    }(m),
     children: [(0, s.jsx)(u.NoticeCloseButton, {
       onClick: n
     }), (0, s.jsx)(o.default, {
@@ -66,12 +66,12 @@ t.default = function(e) {
         default:
           throw Error("Unsupported subscription tier: ".concat(e))
       }
-    }(T, p), (0, s.jsx)(u.NoticeButton, {
+    }(m, p), (0, s.jsx)(u.NoticeButton, {
       onClick: () => {
         (0, r.default)({
           trialId: I.trial_id,
-          subscriptionTier: T,
-          analyticsLocations: m,
+          subscriptionTier: m,
+          analyticsLocations: T,
           analyticsObject: {
             page: f.AnalyticsPages.IN_APP,
             section: f.AnalyticsSections.NOTIFICATION_BAR,
@@ -88,7 +88,7 @@ t.default = function(e) {
           default:
             throw Error("Unsupported subscription tier: ".concat(e))
         }
-      }(T)
+      }(m)
     })]
   })
 }

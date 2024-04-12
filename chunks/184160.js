@@ -12,8 +12,8 @@ var r = s("512722"),
   a = s("481060"),
   o = s("410030"),
   C = s("973159"),
-  d = s("74538"),
-  u = s("987209"),
+  u = s("74538"),
+  d = s("987209"),
   c = s("598"),
   p = s("409813"),
   f = s("614223"),
@@ -26,15 +26,15 @@ function m(e) {
     handleClose: s
   } = e, r = (0, o.default)(), {
     activeSubscription: m,
-    selectedSkuId: h,
-    setSelectedPlanId: L,
+    selectedSkuId: L,
+    setSelectedPlanId: h,
     startedPaymentFlowWithPaymentSourcesRef: S
   } = (0, c.usePaymentContext)(), {
     isGift: j
-  } = (0, u.useGiftContext)(), E = null != m ? (0, d.getPremiumPlanItem)(m) : null, P = null != E ? (0, d.getDisplayPremiumType)(E.planId) : null, g = null != E ? (0, d.getPremiumType)(E.planId) : null, y = (0, f.inOneStepSubscriptionCheckout)({
+  } = (0, d.useGiftContext)(), E = null != m ? (0, u.getPremiumPlanItem)(m) : null, P = null != E ? (0, u.getDisplayPremiumType)(E.planId) : null, g = null != E ? (0, u.getPremiumType)(E.planId) : null, y = (0, f.inOneStepSubscriptionCheckout)({
     isTrial: !1,
     isGift: j,
-    selectedSkuId: h,
+    selectedSkuId: L,
     startedPaymentFlowWithPaymentSources: S.current
   });
   return i()(null != g, "Expected premium type"), (0, n.jsx)(C.default, {
@@ -47,7 +47,7 @@ function m(e) {
       className: _.whatYouLoseButtonContainer,
       children: [(0, n.jsx)(a.Button, {
         onClick: () => {
-          y ? (L((0, f.getDefaultPlanOneStepCheckout)(h, m)), t(p.Step.REVIEW)) : t(p.Step.PLAN_SELECT)
+          y ? (h((0, f.getDefaultPlanOneStepCheckout)(L, m)), t(p.Step.REVIEW)) : t(p.Step.PLAN_SELECT)
         },
         children: x.default.Messages.CONTINUE
       }), (0, n.jsx)(a.Button, {

@@ -29,13 +29,13 @@ function u(e) {
   let {
     children: t,
     sentrySource: n
-  } = e, [u, d] = a.useState(!1), [c, f] = a.useState(new Set), [E, _] = a.useState(!1), T = a.useRef(!1);
+  } = e, [u, d] = a.useState(!1), [c, f] = a.useState(new Set), [E, _] = a.useState(!1), m = a.useRef(!1);
   a.useEffect(() => {
     let e = new Set;
     for (let t of c) !o(t) && e.add(t);
     e.size !== c.size && f(e)
   }, [c]);
-  let m = a.useCallback(e => {
+  let T = a.useCallback(e => {
       var t, s, a;
       let {
         assetNode: r,
@@ -67,23 +67,23 @@ function u(e) {
         I(e), e.removeEventListener(s, t)
       });
       e.addEventListener("error", function n(s) {
-        I(e), m({
+        I(e), T({
           assetNode: e,
           nodeId: t,
           errorPrefix: "Error loading asset",
           errorMessage: "message" in s ? s.message : null
         }), e.removeEventListener("error", n)
       })
-    }, [m, I]),
+    }, [T, I]),
     h = a.useMemo(() => c.size > 0 || !E, [E, c]);
   a.useEffect(() => {
-    !h && (T.current = !0)
+    !h && (m.current = !0)
   }, [h]);
   let N = a.useMemo(() => ({
     registerAsset: p,
     unregisterAsset: I,
     hasError: u,
-    isLoading: h && !T.current
+    isLoading: h && !m.current
   }), [p, I, u, h]);
   return (0, s.jsx)(r.Provider, {
     value: N,

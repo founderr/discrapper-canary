@@ -1,10 +1,10 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   useIsUnauthenticatedReportFormEnabled: function() {
     return a
   }
 });
-let n = (0, s("818083").createExperiment)({
+let s = (0, n("818083").createExperiment)({
   kind: "user",
   id: "2023-09_iar_dsa_webform",
   label: "Safety Experience Unauthenticated Report Form",
@@ -27,7 +27,7 @@ let n = (0, s("818083").createExperiment)({
 });
 
 function a(e) {
-  return n.useExperiment({
+  return s.useExperiment({
     location: e
   }, {
     autoTrackExposure: !0

@@ -1,8 +1,8 @@
 "use strict";
 s.r(t), s("653041"), s("47120");
 var E, _, a, n, T = s("442837"),
-  i = s("759174"),
-  u = s("570140"),
+  u = s("759174"),
+  i = s("570140"),
   A = s("430824"),
   l = s("594174"),
   I = s("881952"),
@@ -44,9 +44,9 @@ function G(e) {
   let t = [];
   return t.push(c.GUILD_JOIN_REQUESTS_BY_ID(e.joinRequestId)), t.push(c.GUILD_JOIN_REQUESTS_BY_STATUS(e.guildId, e.applicationStatus)), t
 }
-let O = new i.SecondaryIndexMap(G, e => "".concat(e.joinRequestId)),
-  U = new i.SecondaryIndexMap(G, e => "".concat(e.joinRequestId)),
-  C = new i.SecondaryIndexMap(G, e => "".concat(e.actionedAt));
+let O = new u.SecondaryIndexMap(G, e => "".concat(e.joinRequestId)),
+  U = new u.SecondaryIndexMap(G, e => "".concat(e.joinRequestId)),
+  C = new u.SecondaryIndexMap(G, e => "".concat(e.actionedAt));
 
 function M(e) {
   return O.get(e)
@@ -105,7 +105,7 @@ n = "GuildJoinRequestStoreV2", (a = "displayName") in(_ = m) ? Object.defineProp
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : _[a] = n, t.default = new m(u.default, {
+}) : _[a] = n, t.default = new m(i.default, {
   GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS: function(e) {
     let {
       joinRequest: t

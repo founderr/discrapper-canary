@@ -63,8 +63,8 @@ var E = s("470079"),
   a = s.n(_),
   n = s("392711"),
   T = s("153832"),
-  i = s("866442"),
-  u = s("442837"),
+  u = s("866442"),
+  i = s("442837"),
   A = s("80932"),
   l = s("749210"),
   I = s("339085"),
@@ -102,7 +102,7 @@ function R(e, t, s) {
 }
 
 function f(e, t) {
-  let s = (0, u.useStateFromStores)([S.default], () => S.default.getSubscriptionListing(e));
+  let s = (0, i.useStateFromStores)([S.default], () => S.default.getSubscriptionListing(e));
   return E.useMemo(() => t(s), [s])
 }
 
@@ -166,7 +166,7 @@ function v(e, t) {
       var t, E;
       e.icon = null !== (t = a.icon) && void 0 !== t ? t : "", e.unicodeEmoji = null !== (E = a.unicodeEmoji) && void 0 !== E ? E : ""
     }
-    return void 0 !== _ && (e.color = _, e.colorString = (0, i.int2hex)(_)), e
+    return void 0 !== _ && (e.color = _, e.colorString = (0, u.int2hex)(_)), e
   }, [s, a, _])
 }
 
@@ -209,7 +209,7 @@ function j(e, t) {
 
 function k(e, t) {
   let s = (0, D.default)(t, e),
-    _ = (0, u.useStateFromStoresArray)([I.default], () => I.default.getGuildEmoji(t), [t]);
+    _ = (0, i.useStateFromStoresArray)([I.default], () => I.default.getGuildEmoji(t), [t]);
   return R(e, "tierEmojiIds", E.useMemo(() => null == s ? b : j(_, s.id), [_, s]))
 }
 
@@ -272,17 +272,17 @@ async function z(e) {
   a()(null != E, "listing doesnt exist");
   let _ = E.role_id,
     T = E.id,
-    i = O.useEditStateStore.getState().listings[s];
-  a()(null != i, "edit state does not exist");
+    u = O.useEditStateStore.getState().listings[s];
+  a()(null != u, "edit state does not exist");
   let {
-    roleColor: u,
+    roleColor: i,
     roleIcon: L,
     trialLimit: o,
     trialInterval: d,
     tierEmojiIds: N
-  } = i;
-  (void 0 !== u || void 0 !== L) && await l.default.updateRole(t, _, {
-    color: u,
+  } = u;
+  (void 0 !== i || void 0 !== L) && await l.default.updateRole(t, _, {
+    color: i,
     icon: null == L ? void 0 : L.icon,
     unicodeEmoji: null == L ? void 0 : L.unicodeEmoji
   });
@@ -323,18 +323,18 @@ async function Q(e) {
   a()(null != n, "edit state does not exist");
   let {
     name: T,
-    description: i,
-    channelBenefits: u,
+    description: u,
+    channelBenefits: i,
     intangibleBenefits: A,
     priceTier: l,
     image: I,
     channelAccessFormat: L
   } = n;
-  a()(null != T, "no name provided"), a()(null != i, "no description provided"), a()(null != l, "no priceTier provided"), a()(null != I, "no image provided");
+  a()(null != T, "no name provided"), a()(null != u, "no description provided"), a()(null != l, "no priceTier provided"), a()(null != I, "no image provided");
   let o = L === O.AllChannelAccessOptions.ALL_CHANNELS_ACCESS,
     d = E;
-  null == d && (d = (await r.createSubscriptionGroupListing(t, {})).id), null != u && u.length > 0 && await (0, g.createChannelsFromTemplateTierBenefits)(t, u);
-  let S = [...null != u ? u : [], ...null != A ? A : []],
+  null == d && (d = (await r.createSubscriptionGroupListing(t, {})).id), null != i && i.length > 0 && await (0, g.createChannelsFromTemplateTierBenefits)(t, i);
+  let S = [...null != i ? i : [], ...null != A ? A : []],
     N = (0, g.getTemplateTierCreationAnalyticsContext)(s, t);
   return r.createSubscriptionListing({
     guildId: t,
@@ -343,7 +343,7 @@ async function Q(e) {
       can_access_all_channels: o,
       image: I,
       name: T,
-      description: i,
+      description: u,
       benefits: S,
       priceTier: l
     },
@@ -362,8 +362,8 @@ function q() {
         guildId: s,
         editStateId: E,
         groupListingId: T,
-        onBeforeDispatchNewListing: i,
-        onAfterDispatchNewListing: u
+        onBeforeDispatchNewListing: u,
+        onAfterDispatchNewListing: i
       } = e, A = E, l = S.default.getSubscriptionListing(A);
       try {
         if (t(!0), _(void 0), null != l) a()(null != T, "groupListingId is null"), await
@@ -376,18 +376,18 @@ function q() {
             groupListingId: _
           } = e, T = S.default.getSubscriptionListing(E);
           a()(null != T, "listing doesnt exist");
-          let i = O.useEditStateStore.getState().listings[E];
-          a()(null != i, "edit state does not exist");
+          let u = O.useEditStateStore.getState().listings[E];
+          a()(null != u, "edit state does not exist");
           let {
-            name: u,
+            name: i,
             description: A,
             channelBenefits: l,
             intangibleBenefits: I,
             priceTier: L,
             image: d,
             channelAccessFormat: N
-          } = i, g = {};
-          if (u !== T.name && (g.name = u), A !== T.description && (g.description = A), L !== (null === (t = T.subscription_plans[0]) || void 0 === t ? void 0 : t.price) && (g.priceTier = L), null != d && (g.image = d), null != N && (g.can_access_all_channels = N === O.AllChannelAccessOptions.ALL_CHANNELS_ACCESS), null != l || null != I) {
+          } = u, g = {};
+          if (i !== T.name && (g.name = i), A !== T.description && (g.description = A), L !== (null === (t = T.subscription_plans[0]) || void 0 === t ? void 0 : t.price) && (g.priceTier = L), null != d && (g.image = d), null != N && (g.can_access_all_channels = N === O.AllChannelAccessOptions.ALL_CHANNELS_ACCESS), null != l || null != I) {
             let e = T.role_benefits.benefits.filter(o.isChannelBenefit),
               t = T.role_benefits.benefits.filter(o.isIntangibleBenefit),
               s = [...null != l ? l : e, ...null != I ? I : t];
@@ -410,7 +410,7 @@ function q() {
             guildId: s,
             editStateId: A,
             groupListingId: T,
-            onBeforeDispatchNewListing: i
+            onBeforeDispatchNewListing: u
           });
           A = e.id, I = E, L = A, O.useEditStateStore.setState(e => ({
             listings: {
@@ -418,7 +418,7 @@ function q() {
               [L]: e.listings[I],
               [I]: void 0
             }
-          })), null == u || u(e)
+          })), null == i || i(e)
         }
         return await z({
           guildId: s,
@@ -441,8 +441,8 @@ function $(e, t) {
     _ = (0, d.useSubscriptionListingsForGroup)(e, s),
     a = (0, O.useEditStateStore)(e => e.editStateIdsForGroup[t]),
     n = (0, O.useEditStateStore)(e => e.setEditStateIdsForGroup),
-    i = (0, O.useEditStateStore)(e => e.setListing),
-    u = E.useMemo(() => [..._.map(e => {
+    u = (0, O.useEditStateStore)(e => e.setListing),
+    i = E.useMemo(() => [..._.map(e => {
       let {
         id: t
       } = e;
@@ -455,7 +455,7 @@ function $(e, t) {
     l = E.useCallback(e => {
       let s = (0, T.v4)();
       return n(t, e => [...null != e ? e : [], s]), e.listings.forEach(t => {
-        i(s, () => ({
+        u(s, () => ({
           name: t.name,
           description: t.description,
           priceTier: t.price_tier,
@@ -476,9 +476,9 @@ function $(e, t) {
           usedTemplate: e.category
         }))
       }), s
-    }, [t, n, i]);
+    }, [t, n, u]);
   return {
-    editStateIds: u,
+    editStateIds: i,
     addNewEditStateId: A,
     addNewEditStateFromTemplate: l,
     removeEditStateId: E.useCallback(e => {

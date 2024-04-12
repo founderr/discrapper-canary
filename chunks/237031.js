@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   closeCollectiblesShopProductDetailsModal: function() {
-    return o
+    return i
   },
   openCollectiblesShopProductDetailsModal: function() {
     return n
@@ -15,8 +15,8 @@ let r = "collectibles shop product details modal",
     let {
       product: t,
       category: n,
-      analyticsSource: o,
-      analyticsLocations: i,
+      analyticsSource: i,
+      analyticsLocations: o,
       returnRef: u
     } = e;
     (0, s.openModalLazy)(async () => {
@@ -27,14 +27,14 @@ let r = "collectibles shop product details modal",
         ...a,
         product: t,
         category: n,
-        analyticsSource: o,
-        analyticsLocations: i,
+        analyticsSource: i,
+        analyticsLocations: o,
         returnRef: u
       })
     }, {
       modalKey: r
     })
   },
-  o = () => {
+  i = () => {
     (0, s.closeModal)(r)
   }

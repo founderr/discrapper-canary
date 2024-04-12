@@ -12,8 +12,8 @@ var s = n("735250"),
   f = n("977683"),
   E = n("869765"),
   _ = n("695346"),
-  T = n("592125"),
-  m = n("699516"),
+  m = n("592125"),
+  T = n("699516"),
   I = n("465670"),
   p = n("998951"),
   h = n("702346"),
@@ -75,7 +75,7 @@ t.default = a.memo(function e(t) {
     disableInteraction: w = !1,
     hasThread: H,
     treatSpam: V
-  } = t, Y = U.MessageTypesWithLazyLoadedReferences.has(I.type) ? I.messageReference : void 0, K = (0, r.useStateFromStores)([E.default], () => E.default.getMessageByReference(Y)), W = (0, r.useStateFromStores)([T.default], () => I.type === U.MessageTypes.THREAD_STARTER_MESSAGE && K.state === E.ReferencedMessageState.LOADED ? T.default.getChannel(K.message.channel_id) : null), z = _.InlineAttachmentMedia.useSetting(), Q = _.InlineEmbedMedia.useSetting(), q = _.RenderEmbeds.useSetting(), J = _.GifAutoPlay.useSetting(), Z = (0, d.isMessageNewerThanImprovedMarkdownEpoch)((null !== (n = I.editedTimestamp) && void 0 !== n ? n : I.timestamp).valueOf()), X = (0, c.default)(null == l ? void 0 : l.id), {
+  } = t, Y = U.MessageTypesWithLazyLoadedReferences.has(I.type) ? I.messageReference : void 0, K = (0, r.useStateFromStores)([E.default], () => E.default.getMessageByReference(Y)), W = (0, r.useStateFromStores)([m.default], () => I.type === U.MessageTypes.THREAD_STARTER_MESSAGE && K.state === E.ReferencedMessageState.LOADED ? m.default.getChannel(K.message.channel_id) : null), z = _.InlineAttachmentMedia.useSetting(), Q = _.InlineEmbedMedia.useSetting(), q = _.RenderEmbeds.useSetting(), J = _.GifAutoPlay.useSetting(), Z = (0, d.isMessageNewerThanImprovedMarkdownEpoch)((null !== (n = I.editedTimestamp) && void 0 !== n ? n : I.timestamp).valueOf()), X = (0, c.default)(null == l ? void 0 : l.id), {
     disableReactionCreates: $
   } = (0, M.default)(l), {
     content: ee,
@@ -86,7 +86,7 @@ t.default = a.memo(function e(t) {
     allowHeading: Z,
     allowLinks: !0,
     previewLinkTarget: !0
-  }), en = (0, g.default)(I), es = (0, r.useStateFromStores)([T.default], () => I.hasFlag(U.MessageFlags.HAS_THREAD) && T.default.getChannel(S.default.castMessageIdAsChannelId(I.id))), ea = I.type === U.MessageTypes.THREAD_STARTER_MESSAGE && K.state === E.ReferencedMessageState.LOADED && null != W, el = !ea && void 0 === a, ei = (0, v.default)({
+  }), en = (0, g.default)(I), es = (0, r.useStateFromStores)([m.default], () => I.hasFlag(U.MessageFlags.HAS_THREAD) && m.default.getChannel(S.default.castMessageIdAsChannelId(I.id))), ea = I.type === U.MessageTypes.THREAD_STARTER_MESSAGE && K.state === E.ReferencedMessageState.LOADED && null != W, el = !ea && void 0 === a, ei = (0, v.default)({
     message: I,
     channel: l,
     enabled: el
@@ -96,7 +96,7 @@ t.default = a.memo(function e(t) {
     message: K.message,
     channel: W,
     hasThread: !1
-  }) : (m.default.isBlocked(I.author.id) ? a = b.default.Messages.BLOCKED_MESSAGE_COUNT : (0, C.isSpam)(I) && V && (a = b.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== a) ? (0, s.jsx)(B, {
+  }) : (T.default.isBlocked(I.author.id) ? a = b.default.Messages.BLOCKED_MESSAGE_COUNT : (0, C.isSpam)(I) && V && (a = b.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== a) ? (0, s.jsx)(B, {
     className: j,
     compact: h,
     count: 1,

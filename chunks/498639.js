@@ -16,8 +16,8 @@ var a = s("735250"),
   m = s("584825"),
   _ = s("305342"),
   g = s("333867"),
-  h = s("963249"),
-  I = s("87484"),
+  I = s("963249"),
+  h = s("87484"),
   N = s("197115"),
   p = s("911367"),
   C = s("430824"),
@@ -59,7 +59,7 @@ t.default = function() {
     {
       analyticsLocations: k
     } = (0, S.default)(c.default.PAYMENT_FLOW_TEST_PAGE),
-    [w, H] = n.useState(""),
+    [H, w] = n.useState(""),
     [V, Y] = n.useState(O.EMPTY_STRING_SNOWFLAKE_ID),
     [W, K] = n.useState(""),
     [z, Q] = n.useState(O.EMPTY_STRING_SNOWFLAKE_ID),
@@ -117,7 +117,7 @@ t.default = function() {
           }],
           onChange: e => m(e)
         }), (0, a.jsx)(r.Button, {
-          onClick: () => (0, h.default)({
+          onClick: () => (0, I.default)({
             subscriptionTier: s,
             analyticsLocations: k
           }),
@@ -257,15 +257,15 @@ t.default = function() {
         className: R.formItem,
         children: [(0, a.jsx)(r.TextInput, {
           placeholder: "Application Id",
-          value: w,
-          onChange: H
+          value: H,
+          onChange: w
         }), (0, a.jsx)(r.TextInput, {
           placeholder: "Sku Id",
           value: V,
           onChange: e => Y(e)
         }), (0, a.jsx)(r.Button, {
           onClick: () => (0, u.openIAPPurchaseModal)({
-            applicationId: w,
+            applicationId: H,
             skuId: V,
             openPremiumPaymentModal: () => !0,
             analyticsLocations: [],
@@ -291,7 +291,7 @@ t.default = function() {
           value: z,
           onChange: e => Q(e)
         }), (0, a.jsx)(r.Button, {
-          onClick: () => (0, I.default)({
+          onClick: () => (0, h.default)({
             applicationId: W,
             skuId: z,
             analyticsLocations: k

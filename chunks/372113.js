@@ -13,8 +13,8 @@ var a = n("803997"),
   f = n("976644"),
   E = n("63063"),
   _ = n("930153"),
-  T = n("617136"),
-  m = n("272008"),
+  m = n("617136"),
+  T = n("272008"),
   I = n("113434"),
   p = n("569984"),
   h = n("497505"),
@@ -63,9 +63,9 @@ t.default = e => {
     quest: x,
     location: D
   }), V = b && !U, Y = (0, i.useStateFromStores)([p.default], () => p.default.isEnrolling(x.id)), K = () => {
-    if (!b && !U) return (0, m.enrollInQuest)(x.id, {
+    if (!b && !U) return (0, T.enrollInQuest)(x.id, {
       questContent: D,
-      questContentCTA: T.QuestContentCTA.ACCEPT_QUEST
+      questContentCTA: m.QuestContentCTA.ACCEPT_QUEST
     });
     H()
   }, W = (0, i.useStateFromStores)([c.default], () => c.default.locale), z = D === h.QuestContent.QUESTS_EMBED, Q = D === h.QuestContent.QUEST_INVENTORY_CARD, q = Q && j, J = (0, s.jsx)("img", {
@@ -124,11 +124,11 @@ t.default = e => {
             year: "numeric",
             month: "long",
             day: "numeric"
-          }), T = (0, N.isTieredRewardCodeQuest)({
+          }), m = (0, N.isTieredRewardCodeQuest)({
             quest: r
           });
           if (c) {
-            let e = T ? (0, N.getRewardCodeQuestReward)({
+            let e = m ? (0, N.getRewardCodeQuestReward)({
                 quest: r,
                 idx: null === (a = r.userStatus) || void 0 === a ? void 0 : a.claimedTier
               }) : null,
@@ -141,21 +141,21 @@ t.default = e => {
               date: f
             })
           }
-          if (d) return T ? M.default.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({
+          if (d) return m ? M.default.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({
             date: f
           }) : M.default.Messages.QUEST_REWARD_COMPLETED.format({
             reward: r.config.messages.rewardNameWithArticle,
             date: f
           });
-          let m = T ? (0, N.getRewardCodeQuestReward)({
+          let T = m ? (0, N.getRewardCodeQuestReward)({
             quest: r,
             idx: 0
           }) : null;
           return u ? M.default.Messages.QUESTS_EXPIRED_QUEST_CARD_SUBHEADING.format({
-            reward: null !== (i = null == m ? void 0 : m.messages.nameWithArticle) && void 0 !== i ? i : r.config.messages.rewardNameWithArticle
-          }) : null != m && null != m.approximateCount ? M.default.Messages.QUEST_REWARD_TIERED.format({
-            maxReward: m.messages.nameWithArticle,
-            maxRewardCount: (0, _.humanizeValue)(m.approximateCount, o),
+            reward: null !== (i = null == T ? void 0 : T.messages.nameWithArticle) && void 0 !== i ? i : r.config.messages.rewardNameWithArticle
+          }) : null != T && null != T.approximateCount ? M.default.Messages.QUEST_REWARD_TIERED.format({
+            maxReward: T.messages.nameWithArticle,
+            maxRewardCount: (0, _.humanizeValue)(T.approximateCount, o),
             helpCenterLink: E.default.getArticleURL(g.HelpdeskArticles.QUESTS_LEARN_MORE)
           }) : M.default.Messages.QUEST_REWARD.format({
             reward: r.config.messages.rewardNameWithArticle
@@ -173,10 +173,10 @@ t.default = e => {
         isQuestAccepted: b,
         containerSize: P,
         onClick: () => {
-          u.default.open(g.UserSettingsSections.INVENTORY), (0, T.trackQuestContentClicked)({
+          u.default.open(g.UserSettingsSections.INVENTORY), (0, m.trackQuestContentClicked)({
             questId: x.id,
             questContent: D,
-            questContentCTA: T.QuestContentCTA.LEARN_MORE
+            questContentCTA: m.QuestContentCTA.LEARN_MORE
           })
         },
         children: M.default.Messages.QUESTS_LEARN_MORE_V2

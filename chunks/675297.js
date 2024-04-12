@@ -17,8 +17,8 @@ var a = n("399606"),
   f = n("612111"),
   E = n("623488"),
   _ = n("942833"),
-  T = n("391181"),
-  m = n("964793"),
+  m = n("391181"),
+  T = n("964793"),
   I = n("226060"),
   p = n("981631");
 
@@ -42,12 +42,12 @@ function h(e) {
     shouldHideGuildPurchaseEntryPoints: y
   } = (0, r.useShouldHideGuildPurchaseEntryPoints)(n), U = (0, _.usePrice)(t);
   if (null == v || y) return null;
-  let b = () => (0, m.openGuildProductInfoModal)({
+  let b = () => (0, T.openGuildProductInfoModal)({
       guildId: n,
       guildProductListingId: t.id,
       analyticsLocation: h
     }),
-    j = (0, s.jsx)(T.GuildProductListingPopout, {
+    j = (0, s.jsx)(m.GuildProductListingPopout, {
       product: t,
       guildId: n,
       showEditProduct: P,

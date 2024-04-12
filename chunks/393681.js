@@ -16,8 +16,8 @@ var a = s("735250"),
   m = s("952306"),
   _ = s("346585"),
   g = s("347649"),
-  h = s("332473"),
-  I = s("303172"),
+  I = s("332473"),
+  h = s("303172"),
   N = s("484459"),
   p = s("430824"),
   C = s("325067"),
@@ -38,8 +38,8 @@ var a = s("735250"),
   F = s("801461"),
   G = s("689938"),
   k = s("438170"),
-  w = s("794711");
-class H extends n.PureComponent {
+  H = s("794711");
+class w extends n.PureComponent {
   componentDidMount() {
     let {
       currentUser: e
@@ -68,7 +68,7 @@ class H extends n.PureComponent {
       });
       return (0, a.jsx)(c.FormNotice, {
         type: c.FormNotice.Types.DANGER,
-        className: w.marginBottom20,
+        className: H.marginBottom20,
         imageData: {
           src: s("418558"),
           width: 60,
@@ -91,7 +91,7 @@ class H extends n.PureComponent {
       });
       return (0, a.jsx)(c.FormNotice, {
         type: c.FormNotice.Types.PRIMARY,
-        className: w.marginBottom20,
+        className: H.marginBottom20,
         imageData: {
           src: s("449125"),
           width: 60,
@@ -110,7 +110,7 @@ class H extends n.PureComponent {
         date: (0, _.getLocalizedForcedUUDate)(this.props.locale)
       }) : G.default.Messages.POMELO_ACTION_NEEDED.format(), " ", "", (0, a.jsx)(M.default, {
         className: k.noticeTextButton,
-        onClick: () => (0, I.default)(F.PomeloEntrypoints.USER_SETTINGS),
+        onClick: () => (0, h.default)(F.PomeloEntrypoints.USER_SETTINGS),
         children: G.default.Messages.GET_STARTED
       })]
     }) : null
@@ -130,12 +130,12 @@ class H extends n.PureComponent {
       theme: n
     } = this.props, l = (0, u.isThemeDark)(n) ? s("555702") : s("610802");
     return (0, a.jsxs)(c.FormSection, {
-      className: i()(k.userSettingsSecurity, w.marginTop40),
+      className: i()(k.userSettingsSecurity, H.marginTop40),
       title: G.default.Messages.USER_SETTINGS_ACCOUNT_PASSWORD_AND_AUTHENTICATION,
       tag: "h1",
       children: [t.mfaEnabled ? (0, a.jsx)(c.FormSection, {
         children: (0, a.jsxs)(c.FormTitle, {
-          className: i()(k.isEnabled, w.marginBottom20),
+          className: i()(k.isEnabled, H.marginBottom20),
           children: [(0, a.jsx)("img", {
             alt: "",
             className: i()(k.lockIcon),
@@ -240,12 +240,12 @@ class H extends n.PureComponent {
     return (0, a.jsxs)("div", {
       children: [this.renderConfirmModals(), this.renderAccountSettings(), e.isClaimed() ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(c.FormDivider, {
-          className: w.marginTop40
+          className: H.marginTop40
         }), this.renderSecuritySettings(), (0, a.jsx)(c.FormDivider, {
-          className: w.marginTop40
+          className: H.marginTop40
         })]
       }) : null, (0, a.jsx)(b.default, {
-        className: w.marginTop40,
+        className: H.marginTop40,
         currentUser: e,
         handleDisableAccount: () => this.handleDisableAccount(!1),
         handleDeleteAccount: () => this.handleDisableAccount(!0)
@@ -301,10 +301,10 @@ t.default = () => {
     t = (0, d.useStateFromStores)([C.default], () => C.default.getBackupCodes()),
     s = (0, d.useStateFromStores)([A.default], () => A.default.hidePersonalInformation),
     n = (0, d.useStateFromStores)([L.default], () => L.default.theme),
-    l = (0, h.useIsEligibleForPomelo)(),
+    l = (0, I.useIsEligibleForPomelo)(),
     i = (0, g.useForceMigration)(),
     r = (0, d.useStateFromStores)([D.default], () => D.default.locale);
-  return (0, a.jsx)(H, {
+  return (0, a.jsx)(w, {
     theme: n,
     currentUser: e,
     backupCodes: t,
