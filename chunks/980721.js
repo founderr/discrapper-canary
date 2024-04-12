@@ -45,7 +45,7 @@ function o(e) {
 
 function u(e, t) {
   let n = 0;
-  if (null != t.games && (n += 2 * t.games.filter(t => e.games.includes(t)).length), null != t.playstyle && (t.playstyle === e.playstyle ? n += 2 : l.PLAYSTYLE_GROUPS[e.playstyle] === l.PLAYSTYLE_GROUPS[t.playstyle] && (n += 1)), null != t.traits && (n += 2 * t.traits.filter(t => e.traits.includes(t)).length), null != t.primetimes) {
+  if (null != t.games && (n += 2 * t.games.filter(t => e.games.includes(t)).length), null != t.playstyle && (t.playstyle === e.playstyle ? n += 2 : l.PLAYSTYLE_GROUPS[e.playstyle] === l.PLAYSTYLE_GROUPS[t.playstyle] && (n += 1)), null != t.traits && (n += 2 * Array.from(t.traits).filter(t => e.traits.includes(t)).length), null != t.primetimes) {
     let l = e.primetime.map(e => (0, s.getRRule)(e).between(new Date, new Date(Date.now() + 6048e5))).flat();
     n += 2 * (0, a.getTimeRangesInNextWeek)(t.primetimes).filter(e => l.some(t => e.start.subtract(1).isBefore(t) && e.end.add(1).isAfter(t))).length
   }

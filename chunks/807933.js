@@ -35,19 +35,24 @@ var a = n("735250"),
   R = n("896328");
 
 function v() {
-  let [e, t] = (0, g.useClanDiscoveryUIStore)(e => [new Set(e.selectedTraits), e.setSelectedTraits, e.setMode], o.default), n = s.useMemo(() => N.default.getAvailableLocales().map(e => ({
-    value: e.value,
-    label: e.name
-  })), []), [l, i] = s.useMemo(() => [Array.from(e).filter(e => A.LANGUAGES_SET.has(e)), Array.from(e).filter(e => !A.LANGUAGES_SET.has(e))], [e]), r = s.useCallback(e => {
-    let {
-      interests: n
-    } = e;
-    null != n && t(Array.from(n))
-  }, [t]), d = s.useCallback(e => {
-    r({
-      interests: new Set([...i, ...e])
-    })
-  }, [r, i]);
+  let e = (0, g.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default),
+    t = (0, g.useClanDiscoveryUIStore)(e => e.setSelectedTraits, o.default),
+    n = s.useMemo(() => N.default.getAvailableLocales().map(e => ({
+      value: e.value,
+      label: e.name
+    })), []),
+    [l, i] = s.useMemo(() => [Array.from(e).filter(e => A.LANGUAGES_SET.has(e)), Array.from(e).filter(e => !A.LANGUAGES_SET.has(e))], [e]),
+    r = s.useCallback(e => {
+      let {
+        interests: n
+      } = e;
+      null != n && t(n)
+    }, [t]),
+    d = s.useCallback(e => {
+      r({
+        interests: new Set([...i, ...e])
+      })
+    }, [r, i]);
   return (0, a.jsxs)(p.default, {
     children: [(0, a.jsxs)("div", {
       className: R.traitHeader,
@@ -126,7 +131,8 @@ function v() {
 
 function O() {
   let e = s.useMemo(() => (0, d.getDayOptions)(), []),
-    [t, n] = (0, g.useClanDiscoveryUIStore)(e => [e.selectedPrimetimes, e.setSelectedPrimetime, e.setMode], o.default),
+    t = (0, g.useClanDiscoveryUIStore)(e => e.selectedPrimetimes, o.default),
+    n = (0, g.useClanDiscoveryUIStore)(e => e.setSelectedPrimetime, o.default),
     l = s.useCallback((e, a) => {
       let s = [...t];
       s[e].day = a, n(s)
@@ -194,7 +200,8 @@ function O() {
 
 function L() {
   let e = (0, u.useToken)(u.tokens.colors.WHITE),
-    [t, n] = (0, g.useClanDiscoveryUIStore)(e => [e.selectedPlaystyle, e.setSelectedPlaystyle], o.default),
+    t = (0, g.useClanDiscoveryUIStore)(e => e.selectedPlaystyle.id, o.default),
+    n = (0, g.useClanDiscoveryUIStore)(e => e.setSelectedPlaystyle, o.default),
     l = s.useMemo(() => Object.values((0, A.getPlaystyleOptions)()), []);
   return (0, a.jsxs)(p.default, {
     children: [(0, a.jsxs)("div", {
@@ -212,7 +219,7 @@ function L() {
       className: R.playstyles,
       children: l.map(s => (0, a.jsxs)(u.Clickable, {
         className: i()(R.playstyleOption, {
-          [R.selectedPlaystyle]: s.type === t.id
+          [R.selectedPlaystyle]: s.type === t
         }),
         onClick: () => n({
           id: s.type,
@@ -230,7 +237,7 @@ function L() {
             color: "text-muted",
             children: s.subtitle
           })]
-        }), s.type === t.id && (0, a.jsx)(_.default, {
+        }), s.type === t && (0, a.jsx)(_.default, {
           backgroundColor: e.hex(),
           className: R.checkmark
         })]
