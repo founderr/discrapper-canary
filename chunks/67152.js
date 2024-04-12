@@ -25,7 +25,6 @@ t.default = r.memo(function(e) {
     analyticsLocations: h
   } = (0, a.default)(), [m, N] = r.useState(!1);
   return I || null == E || "" === E ? null : (0, i.jsxs)("div", {
-    className: c.container,
     children: [(0, i.jsx)("div", {
       ref: e => {
         null != e && N(e.scrollHeight - e.clientHeight > 1)

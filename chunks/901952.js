@@ -17,18 +17,15 @@ function o(e) {
   } = e, {
     trackUserProfileAction: o
   } = (0, s.useUserProfileAnalyticsContext)();
-  return (0, i.jsx)("div", {
-    className: a.container,
-    children: (0, i.jsx)(r.default, {
-      className: a.messageInputContainer,
-      inputClassName: a.messageInput,
-      user: t,
-      autoFocus: !0,
-      onSend: () => {
-        o({
-          action: "SEND_DIRECT_MESSAGE"
-        }), null == n || n()
-      }
-    })
+  return (0, i.jsx)(r.default, {
+    className: a.messageInputContainer,
+    inputClassName: a.messageInput,
+    user: t,
+    autoFocus: !0,
+    onSend: () => {
+      o({
+        action: "SEND_DIRECT_MESSAGE"
+      }), null == n || n()
+    }
   })
 }

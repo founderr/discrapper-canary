@@ -123,7 +123,8 @@ let C = (0, E.default)(function(e) {
         children: "+".concat(P)
       })
     }) : null;
-  return (0, i.jsxs)(i.Fragment, {
+  return (0, i.jsxs)("div", {
+    className: R.container,
     children: [(0, i.jsxs)("div", {
       className: R.rolesHeader,
       children: [(0, i.jsx)(d.Text, {
