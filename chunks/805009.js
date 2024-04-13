@@ -128,17 +128,21 @@ class H extends(a = s.Component) {
       serverMute: o,
       isGuest: u
     } = this.props;
-    return n ? null : (0, l.jsxs)("div", {
-      className: r()(s, {
-        [U.username]: !0,
-        [U.usernameSpeaking]: !i && !o && a
-      }),
-      children: [null != e ? e : O.default.getName(t), u ? (0, l.jsxs)("span", {
-        className: U.guestSuffix,
-        children: ["\xa0", b.default.Messages.GUEST_NAME_SUFFIX]
-      }) : "", (0, l.jsx)(C.default, {
+    return n ? null : (0, l.jsxs)(l.Fragment, {
+      children: [(0, l.jsxs)("div", {
+        className: r()(s, {
+          [U.username]: !0,
+          [U.usernameSpeaking]: !i && !o && a
+        }),
+        children: [null != e ? e : O.default.getName(t), u ? (0, l.jsxs)("span", {
+          className: U.guestSuffix,
+          children: ["\xa0", b.default.Messages.GUEST_NAME_SUFFIX]
+        }) : ""]
+      }), (0, l.jsx)(C.default, {
         clan: t.clan,
-        userId: t.id
+        userId: t.id,
+        disableTooltip: !0,
+        className: U.clanTag
       })]
     })
   }

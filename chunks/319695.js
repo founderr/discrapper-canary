@@ -2,5 +2,7 @@
 e.exports = {
   badge: "badge_d12073",
   chipletContainerInner: "chipletContainerInner_bfcb1e",
-  text: "text_c2b2cb"
+  noTooltip: "noTooltip_e2f660",
+  text: "text_c2b2cb",
+  tooltip: "tooltip_a9f8fc"
 }
