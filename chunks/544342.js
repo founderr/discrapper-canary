@@ -149,14 +149,6 @@ let a = {
       opacity: .7
     }
   },
-  "background-mobile-secondary": {
-    dark: {
-      color: "gradient.start"
-    },
-    light: {
-      color: "gradient.start"
-    }
-  },
   "redesign-button-secondary-background": {
     dark: {
       color: "white.500",
