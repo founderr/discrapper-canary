@@ -110,7 +110,7 @@ function O(e) {
       null != t && (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await n.e("66050").then(n.bind(n, "64220"));
+        } = await n.e("66050").then(n.bind(n, "376573"));
         return n => (0, l.jsx)(e, {
           ...n,
           guild: t

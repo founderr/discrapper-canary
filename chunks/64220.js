@@ -1,46 +1,37 @@
 "use strict";
-t.r(n), t.d(n, {
+a.r(t), a.d(t, {
   default: function() {
-    return h
+    return u
   }
 });
-var a = t("735250");
-t("470079");
-var i = t("852229"),
-  o = t("399606"),
-  l = t("481060"),
-  s = t("239091"),
-  c = t("367907"),
-  u = t("496675"),
-  r = t("626135"),
-  d = t("934415"),
-  _ = t("629481"),
-  p = t("981631"),
-  C = t("176505"),
-  I = t("689938");
+var n = a("735250"),
+  s = a("470079"),
+  l = a("481060"),
+  i = a("921944"),
+  r = a("689938"),
+  o = a("90113");
 
-function h(e) {
+function u(e) {
   let {
-    guild: n,
-    onSelect: t
-  } = e, h = (0, o.useStateFromStores)([u.default], () => null != n && u.default.can(p.Permissions.ADMINISTRATOR, n));
-  return (0, a.jsx)(l.Menu, {
-    navId: "guild-shop-context",
-    "aria-label": I.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_ACTION_MENU_LABEL,
-    onClose: s.closeContextMenu,
-    onSelect: t,
-    children: (0, a.jsx)(l.MenuGroup, {
-      children: (0, a.jsx)(l.MenuItem, {
-        id: "role-subscription-copy-link",
-        label: I.default.Messages.COPY_LINK,
-        action: () => {
-          r.default.track(p.AnalyticEvents.GUILD_SHOP_COPY_LINK, {
-            ...(0, c.collectGuildAnalyticsMetadata)(n.id),
-            is_admin_or_owner: h,
-            copy_location: _.GuildShopCopyLinkLocations.CHANNEL_ROW_CONTEXT_MENU
-          }), (0, i.copy)((0, d.getChannelPermalink)(n.id, C.StaticChannelRoute.GUILD_SHOP))
-        }
-      })
-    })
+    markAsDismissed: t
+  } = e;
+  return s.useEffect(() => {
+    let e = setTimeout(() => {
+      t(i.ContentDismissActionType.AUTO_DISMISS)
+    }, 8e3);
+    return () => {
+      clearTimeout(e)
+    }
+  }, [t]), (0, n.jsxs)(l.Clickable, {
+    className: o.container,
+    onClick: () => {
+      t(i.ContentDismissActionType.USER_DISMISS)
+    },
+    children: [(0, n.jsx)(l.Text, {
+      variant: "text-sm/medium",
+      children: r.default.Messages.PROFILE_LOOKING_GOOD_TOOLTIP_TEXT
+    }), (0, n.jsx)("div", {
+      className: o.pointer
+    })]
   })
 }
