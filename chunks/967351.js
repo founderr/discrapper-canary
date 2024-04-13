@@ -32,9 +32,9 @@ function S(e) {
   return new Promise((t, a) => {
     "string" == typeof e && (e = E.net.createConnection(e)), e.pause(), e.on("readable", () => {
       try {
-        I(e)
+        p(e)
       } catch (t) {
-        e.end(p(_.CLOSE, {
+        e.end(I(_.CLOSE, {
           code: 1003,
           message: t.message
         })), e.destroy()
@@ -54,11 +54,11 @@ function S(e) {
       }, e => {
         throw n(), e
       });
-    return e.write(p(_.PING, i().uniqueId())), s.then(t, a)
+    return e.write(I(_.PING, i().uniqueId())), s.then(t, a)
   })
 }
 
-function p(e, t) {
+function I(e, t) {
   var a;
   t = JSON.stringify(t);
   let s = n.Buffer.byteLength(t),
@@ -66,7 +66,7 @@ function p(e, t) {
   return l.writeInt32LE(e, 0), l.writeInt32LE(s, 4), l.write(t, 8, s), (a = l).buffer.slice(a.byteOffset, a.byteOffset + a.byteLength)
 }
 
-function I(e) {
+function p(e) {
   let t = e.read(8);
   if (null == t) return;
   let a = n.Buffer.from(t),
@@ -77,7 +77,7 @@ function I(e) {
   let i = JSON.parse((a = n.Buffer.from(t)).toString());
   switch (s) {
     case _.PING:
-      e.emit("ping", i), e.write(p(_.PONG, i));
+      e.emit("ping", i), e.write(I(_.PONG, i));
       break;
     case _.PONG:
       e.emit("pong", i);
@@ -93,14 +93,14 @@ function I(e) {
     case _.CLOSE:
       e.end(), e.destroy()
   }
-  I(e)
+  p(e)
 }
 class T extends d.default {
   send(e) {
-    h.info("Socket Emit: ".concat(this.id), (0, u.default)(e)), this.socket.write(p(_.FRAME, e))
+    h.info("Socket Emit: ".concat(this.id), (0, u.default)(e)), this.socket.write(I(_.FRAME, e))
   }
   close(e, t) {
-    this.socket.end(p(_.CLOSE, {
+    this.socket.end(I(_.CLOSE, {
       code: e,
       message: t
     })), this.socket.destroy()
@@ -119,9 +119,9 @@ class g extends s.EventEmitter {
   handleConnection(e) {
     C(e, !1), e.pause(), e.on("readable", () => {
       try {
-        I(e)
+        p(e)
       } catch (t) {
-        e.end(p(_.CLOSE, {
+        e.end(I(_.CLOSE, {
           code: f.RPCCloseCodes.CLOSE_UNSUPPORTED,
           message: t.message
         })), e.destroy()
@@ -133,7 +133,7 @@ class g extends s.EventEmitter {
       try {
         a = new T(e, s, "json")
       } catch (t) {
-        e.end(p(_.CLOSE, {
+        e.end(I(_.CLOSE, {
           code: t.code,
           message: t.message
         })), e.destroy();

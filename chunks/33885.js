@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return T
   }
 });
 var s = n("735250"),
@@ -13,34 +13,34 @@ var s = n("735250"),
   u = n("430824"),
   d = n("914010"),
   c = n("644766"),
-  E = n("626135"),
-  f = n("150340"),
+  f = n("626135"),
+  E = n("150340"),
   _ = n("981631"),
-  T = n("689938");
+  m = n("689938");
 
-function I(e) {
+function T(e) {
   let {
     dismissCurrentNotice: t
-  } = e, n = (0, l.useStateFromStores)([d.default], () => d.default.getGuildId(), []), I = (0, l.useStateFromStores)([u.default], () => u.default.getGuild(n), [n]);
+  } = e, n = (0, l.useStateFromStores)([d.default], () => d.default.getGuildId(), []), T = (0, l.useStateFromStores)([u.default], () => u.default.getGuild(n), [n]);
   return (a.useEffect(() => {
     (0, r.requestMarkDismissibleContentAsShown)(i.DismissibleContent.GUILD_ONBOARDING_UPSELL_NAGBAR)
-  }, []), null == I) ? null : (0, s.jsxs)(c.default, {
+  }, []), null == T) ? null : (0, s.jsxs)(c.default, {
     color: c.NoticeColors.DEFAULT,
     children: [(0, s.jsx)(c.NoticeCloseButton, {
       onClick: () => {
-        E.default.track(_.AnalyticEvents.UPSELL_CLICKED, {
+        f.default.track(_.AnalyticEvents.UPSELL_CLICKED, {
           type: i.DismissibleContent[i.DismissibleContent.GUILD_ONBOARDING_UPSELL_NAGBAR],
           action: "dismiss"
-        }), t(), (0, f.dismissedGuildOnboardingUpsell)(I.id, i.DismissibleContent.GUILD_ONBOARDING_UPSELL_NAGBAR)
+        }), t(), (0, E.dismissedGuildOnboardingUpsell)(T.id, i.DismissibleContent.GUILD_ONBOARDING_UPSELL_NAGBAR)
       }
-    }), T.default.Messages.GUILD_ONBOARDING_NAGBAR_MESSAGE, (0, s.jsx)(c.NoticeButton, {
+    }), m.default.Messages.GUILD_ONBOARDING_NAGBAR_MESSAGE, (0, s.jsx)(c.NoticeButton, {
       onClick: () => {
-        E.default.track(_.AnalyticEvents.UPSELL_CLICKED, {
+        f.default.track(_.AnalyticEvents.UPSELL_CLICKED, {
           type: i.DismissibleContent[i.DismissibleContent.GUILD_ONBOARDING_UPSELL_NAGBAR],
           action: "primary"
-        }), o.default.open(I.id, _.GuildSettingsSections.ONBOARDING), (0, f.dismissedGuildOnboardingUpsell)(I.id, i.DismissibleContent.GUILD_ONBOARDING_UPSELL_NAGBAR)
+        }), o.default.open(T.id, _.GuildSettingsSections.ONBOARDING), (0, E.dismissedGuildOnboardingUpsell)(T.id, i.DismissibleContent.GUILD_ONBOARDING_UPSELL_NAGBAR)
       },
-      children: T.default.Messages.GUILD_ONBOARDING_UPSELL_COACHMARK_CHECK_IT_OUT
+      children: m.default.Messages.GUILD_ONBOARDING_UPSELL_COACHMARK_CHECK_IT_OUT
     })]
   })
 }

@@ -29,8 +29,8 @@ var n = a("735250"),
   C = a("898543"),
   m = a("32966"),
   S = a("314897"),
-  p = a("77498"),
-  I = a("441674"),
+  I = a("77498"),
+  p = a("441674"),
   T = a("465670"),
   g = a("950463"),
   A = a("90062"),
@@ -43,7 +43,7 @@ var n = a("735250"),
   P = a("896328");
 
 function x() {
-  let e = (0, O.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default),
+  let e = (0, O.useClanDiscoveryUIStore)(e => e.selectedTraits, Object.is),
     t = (0, O.useClanDiscoveryUIStore)(e => e.setSelectedTraits, o.default),
     a = s.useMemo(() => M.default.getAvailableLocales().map(e => ({
       value: e.value,
@@ -245,7 +245,7 @@ function D() {
             color: "text-muted",
             children: s.subtitle
           })]
-        }), s.type === t && (0, n.jsx)(I.default, {
+        }), s.type === t && (0, n.jsx)(p.default, {
           backgroundColor: e.hex(),
           className: P.checkmark
         })]
@@ -262,7 +262,7 @@ function U() {
   let e = (0, O.useClanDiscoveryUIStore)(e => e.game, o.default),
     t = (0, O.useClanDiscoveryUIStore)(e => e.selectedGames, o.default),
     a = (0, O.useClanDiscoveryUIStore)(e => e.setSelectedGames, o.default),
-    l = (0, d.useStateFromStoresArray)([p.default], () => p.default.games, []),
+    l = (0, d.useStateFromStoresArray)([I.default], () => I.default.games, []),
     i = s.useMemo(() => l.map(e => ({
       value: e.id,
       label: e.name
@@ -271,8 +271,8 @@ function U() {
     {
       recentGames: c
     } = (0, m.useUserRecentGames)(r),
-    E = (0, d.useStateFromStoresArray)([p.default], () => null != c ? c.map(e => {
-      let t = p.default.getGameById(e.applicationId);
+    E = (0, d.useStateFromStoresArray)([I.default], () => null != c ? c.map(e => {
+      let t = I.default.getGameById(e.applicationId);
       return {
         ...e,
         name: null == t ? void 0 : t.name
@@ -280,7 +280,7 @@ function U() {
     }) : []),
     h = s.useCallback(e => {
       if (3 === t.length) return;
-      let n = p.default.getGameById(e);
+      let n = I.default.getGameById(e);
       null != n && a([...t, {
         applicationId: e,
         name: n.name

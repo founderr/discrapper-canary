@@ -20,8 +20,8 @@ t.default = function(e) {
   let {
     className: l,
     quest: S,
-    autoplay: p = !0
-  } = e, I = (null === (t = S.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, T = (null === (a = S.userStatus) || void 0 === a ? void 0 : a.completedAt) != null, g = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), A = s.useMemo(() => (0, E.isAssetAnimated)(S.config.assets.rewardTile), [S]), N = (0, E.getRewardAssetUrl)(S), v = s.useCallback(() => {
+    autoplay: I = !0
+  } = e, p = (null === (t = S.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, T = (null === (a = S.userStatus) || void 0 === a ? void 0 : a.completedAt) != null, g = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), A = s.useMemo(() => (0, E.isAssetAnimated)(S.config.assets.rewardTile), [S]), N = (0, E.getRewardAssetUrl)(S), v = s.useCallback(() => {
     (0, f.trackQuestContentClicked)({
       questId: S.id,
       questContent: e.questContent,
@@ -31,7 +31,7 @@ t.default = function(e) {
     id: "QuestRewardTile_rewardTileAnimated",
     children: e => (0, n.jsx)(c.default, {
       ref: e,
-      autoPlay: !g && !1 !== p,
+      autoPlay: !g && !1 !== I,
       loop: !0,
       muted: !0,
       playsInline: !0,
@@ -59,7 +59,7 @@ t.default = function(e) {
     onClick: v,
     children: [(0, n.jsx)(o.Text, {
       color: "always-white",
-      variant: I ? "text-xxs/normal" : "text-xs/normal",
+      variant: p ? "text-xxs/normal" : "text-xs/normal",
       className: m.questRewardTileDetailsLearnMore,
       children: C.default.Messages.QUESTS_LEARN_MORE_STACKED.format()
     }), R]

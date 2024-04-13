@@ -16,8 +16,8 @@ var n = a("735250"),
   C = a("785681"),
   m = a("985002"),
   S = a("858719"),
-  p = a("780985"),
-  I = a("880257"),
+  I = a("780985"),
+  p = a("880257"),
   T = a("631885"),
   g = a("240351"),
   A = a("792258"),
@@ -57,15 +57,15 @@ function D(e) {
     displayType: t
   } = e, a = s.useCallback(() => {
     (0, o.showToast)((0, o.createToast)(P.default.Messages.FAMILY_CENTER_ERROR_GENERIC_TOAST, o.ToastType.FAILURE))
-  }, []), l = (0, I.default)(), r = (0, S.useActionsForDisplayType)(t), u = (0, S.useActionTotalsForDisplayType)(t), {
+  }, []), l = (0, p.default)(), r = (0, S.useActionsForDisplayType)(t), u = (0, S.useActionTotalsForDisplayType)(t), {
     loadMore: d,
     isMoreLoading: c
   } = (0, m.useFamilyCenterActions)({
     onError: a
-  }), E = L.ACTION_TO_TEXT.get(t), [C, p] = s.useState(L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), T = (0, _.useIsEligibleForFamilyCenterVCJoin)({
+  }), E = L.ACTION_TO_TEXT.get(t), [C, I] = s.useState(L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), T = (0, _.useIsEligibleForFamilyCenterVCJoin)({
     location: "family_center_activity_section_web"
   }), g = s.useCallback(() => {
-    p(e => e + L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), d(t)
+    I(e => e + L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), d(t)
   }, [t, d]);
   i()(E, "No text for action type");
   let v = E.sectionHeader(u),
@@ -124,7 +124,7 @@ function D(e) {
   })
 }
 let b = () => {
-    let e = (0, I.default)(),
+    let e = (0, p.default)(),
       t = (0, T.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE),
       a = (0, C.useAgeSpecificText)(P.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({
         activeLinks: t.length
@@ -148,7 +148,7 @@ let b = () => {
       userId: t,
       subText: a,
       avatarSize: s = o.AvatarSizes.SIZE_40
-    } = e, l = (0, p.useTeenUserForId)(t);
+    } = e, l = (0, I.useTeenUserForId)(t);
     return void 0 === l ? null : (0, n.jsxs)("div", {
       className: x.accountRow,
       children: [(0, n.jsx)(v.FamilyCenterAvatar, {
@@ -200,7 +200,7 @@ let b = () => {
   G = e => {
     let {
       userId: t
-    } = e, a = (0, I.default)(), s = (0, T.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE), l = (0, h.getActivityWindowTimestampFormatter)(!!a), i = (0, T.useActivityWindowTimeStamp)(l);
+    } = e, a = (0, p.default)(), s = (0, T.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE), l = (0, h.getActivityWindowTimestampFormatter)(!!a), i = (0, T.useActivityWindowTimeStamp)(l);
     return a && 1 !== s.length ? (0, n.jsx)(j, {}) : (0, n.jsx)(U, {
       userId: t,
       subText: i

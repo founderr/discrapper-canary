@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return E
   }
 });
 var s = n("735250");
@@ -14,35 +14,35 @@ var a = n("399606"),
   u = n("774863"),
   d = n("668058"),
   c = n("160877"),
-  E = n("689938");
+  f = n("689938");
 
-function f(e) {
+function E(e) {
   let {
     channelId: t,
     messageId: n,
-    transitionState: f,
+    transitionState: E,
     onClose: _
-  } = e, T = (0, a.useStateFromStores)([u.default], () => u.default.getFpMessageInfo(n)), I = T.attachments.map(e => e.id), m = T.attachments.map(e => e.filename), {
+  } = e, m = (0, a.useStateFromStores)([u.default], () => u.default.getFpMessageInfo(n)), T = m.attachments.map(e => e.id), I = m.attachments.map(e => e.filename), {
     reportFalsePositive: p,
-    isReportFalsePositiveLoading: N
+    isReportFalsePositiveLoading: h
   } = (0, d.useExplicitMediaActions)({
     onSuccess: () => {
       (0, c.handleSuccess)(_), i.default.disableFalsePositiveButton(t, n)
     },
     onError: () => {
-      (0, l.showToast)((0, l.createToast)(E.default.Messages.ERROR_GENERIC_TITLE, l.ToastType.FAILURE))
+      (0, l.showToast)((0, l.createToast)(f.default.Messages.ERROR_GENERIC_TITLE, l.ToastType.FAILURE))
     },
     report: () => {
-      (0, r.reportFailedSendFalsePositive)(t, n, I, m)
+      (0, r.reportFailedSendFalsePositive)(t, n, T, I)
     }
   });
-  return !(T.attachments.length > 0) && _(), (0, s.jsx)(c.ExplicitMediaFalsePositiveModal, {
+  return !(m.attachments.length > 0) && _(), (0, s.jsx)(c.ExplicitMediaFalsePositiveModal, {
     messageId: n,
     channelId: t,
-    isReportFalsePositiveLoading: N,
+    isReportFalsePositiveLoading: h,
     analyticsContext: o.TrackMediaRedactionContext.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW,
     onConfirmPress: p,
-    transitionState: f,
+    transitionState: E,
     onClose: _
   })
 }

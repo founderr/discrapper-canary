@@ -10,7 +10,7 @@ r.r(t), r.d(t, {
     return s
   },
   getConfettiSprites: function() {
-    return d
+    return u
   }
 });
 var o = r("180650"),
@@ -35,7 +35,7 @@ let n = 1060,
     ["".concat(o.CollectiblesCategorySkuId.WINTER)]: [r("304088"), r("774694")],
     ["".concat(o.CollectiblesCategorySkuId.MONSTERS)]: [r("16724"), r("441506")]
   },
-  d = e => {
+  u = e => {
     var t;
     return null == e ? i : null !== (t = c[e]) && void 0 !== t ? t : i
   }

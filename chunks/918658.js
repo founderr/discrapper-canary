@@ -1,189 +1,189 @@
 "use strict";
 n.r(t), n.d(t, {
   ViewingRolesSettingsNotice: function() {
-    return D
+    return F
   },
   default: function() {
-    return G
+    return y
   }
 });
-var i = n("735250");
+var r = n("735250");
 n("470079");
-var r = n("803997"),
-  l = n.n(r),
+var i = n("803997"),
+  l = n.n(i),
   s = n("442837"),
-  u = n("692547"),
-  o = n("481060"),
+  o = n("692547"),
+  u = n("481060"),
   a = n("549817"),
-  d = n("819553"),
-  c = n("17181"),
+  c = n("819553"),
+  d = n("17181"),
   f = n("303737"),
   S = n("434404"),
-  E = n("703656"),
-  _ = n("944486"),
-  g = n("914010"),
-  h = n("671533"),
-  p = n("259580"),
-  C = n("759231"),
-  I = n("644766"),
-  T = n("358085"),
-  m = n("962086"),
-  R = n("160404"),
+  g = n("703656"),
+  h = n("944486"),
+  E = n("914010"),
+  p = n("671533"),
+  _ = n("259580"),
+  m = n("759231"),
+  C = n("644766"),
+  I = n("358085"),
+  T = n("962086"),
+  v = n("160404"),
   N = n("889695"),
-  v = n("981631"),
-  O = n("176505"),
-  A = n("302463"),
-  M = n("293810"),
-  L = n("689938"),
-  b = n("935983");
-
-function P(e) {
-  let {
-    className: t,
-    onClick: n,
-    children: r
-  } = e;
-  return (0, i.jsx)(o.Button, {
-    className: l()(b.button, t),
-    innerClassName: b.buttonInner,
-    look: o.Button.Looks.OUTLINED,
-    color: o.Button.Colors.WHITE,
-    size: o.Button.Sizes.NONE,
-    onClick: n,
-    children: r
-  })
-}
+  R = n("981631"),
+  M = n("176505"),
+  b = n("302463"),
+  O = n("293810"),
+  A = n("689938"),
+  L = n("935983");
 
 function x(e) {
   let {
-    onClick: t
+    className: t,
+    onClick: n,
+    children: i
   } = e;
-  return (0, i.jsx)(P, {
-    onClick: t,
-    children: L.default.Messages.DISABLE
+  return (0, r.jsx)(u.Button, {
+    className: l()(L.button, t),
+    innerClassName: L.buttonInner,
+    look: u.Button.Looks.OUTLINED,
+    color: u.Button.Colors.WHITE,
+    size: u.Button.Sizes.NONE,
+    onClick: n,
+    children: i
   })
 }
 
-function G() {
-  let e = (0, s.useStateFromStores)([g.default], () => g.default.getGuildId()),
-    t = (0, s.useStateFromStores)([_.default], () => _.default.getChannelId(e)),
+function P(e) {
+  let {
+    onClick: t
+  } = e;
+  return (0, r.jsx)(x, {
+    onClick: t,
+    children: A.default.Messages.DISABLE
+  })
+}
+
+function y() {
+  let e = (0, s.useStateFromStores)([E.default], () => E.default.getGuildId()),
+    t = (0, s.useStateFromStores)([h.default], () => h.default.getChannelId(e)),
     {
       viewingRoles: n,
-      backNavigationSection: r,
+      backNavigationSection: i,
       isFullServerPreview: l,
-      isServerShopPreview: T
-    } = (0, s.useStateFromStoresObject)([R.default], () => ({
-      viewingRoles: null != e ? R.default.getViewingRoles(e) : null,
-      backNavigationSection: R.default.getBackNavigationSection(e),
-      isFullServerPreview: null != e && R.default.isFullServerPreview(e),
-      isServerShopPreview: null != e && R.default.isViewingServerShop(e)
+      isServerShopPreview: I
+    } = (0, s.useStateFromStoresObject)([v.default], () => ({
+      viewingRoles: null != e ? v.default.getViewingRoles(e) : null,
+      backNavigationSection: v.default.getBackNavigationSection(e),
+      isFullServerPreview: null != e && v.default.isFullServerPreview(e),
+      isServerShopPreview: null != e && v.default.isViewingServerShop(e)
     }));
   if (null == n || null == e) return null;
-  let G = function(e) {
+  let y = function(e) {
       switch (e) {
-        case v.GuildSettingsSections.INTEGRATIONS:
-          return L.default.Messages.VIEWING_AS_ROLES_BACK_INTEGRATIONS;
-        case v.GuildSettingsSections.ROLE_SUBSCRIPTIONS:
-          return L.default.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_BACK;
-        case v.GuildSettingsSections.ONBOARDING:
-          return L.default.Messages.VIEWING_AS_ONBOARDING_MEMBER_BACK;
+        case R.GuildSettingsSections.INTEGRATIONS:
+          return A.default.Messages.VIEWING_AS_ROLES_BACK_INTEGRATIONS;
+        case R.GuildSettingsSections.ROLE_SUBSCRIPTIONS:
+          return A.default.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_BACK;
+        case R.GuildSettingsSections.ONBOARDING:
+          return A.default.Messages.VIEWING_AS_ONBOARDING_MEMBER_BACK;
         default:
-          return L.default.Messages.VIEWING_AS_ROLES_BACK
+          return A.default.Messages.VIEWING_AS_ROLES_BACK
       }
-    }(r),
-    D = r === v.GuildSettingsSections.ROLE_SUBSCRIPTIONS ? L.default.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_SELECT : L.default.Messages.VIEWING_AS_ROLES_SELECT,
-    F = t === O.StaticChannelRoute.GUILD_ONBOARDING,
-    w = t => {
+    }(i),
+    F = i === R.GuildSettingsSections.ROLE_SUBSCRIPTIONS ? A.default.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_SELECT : A.default.Messages.VIEWING_AS_ROLES_SELECT,
+    G = t === M.StaticChannelRoute.GUILD_ONBOARDING,
+    D = t => {
       let {
         backToSettings: n
       } = t;
-      null != e && (R.default.isFullServerPreview(e) && (0, E.transitionTo)(v.Routes.CHANNEL(e)), d.default.shouldShowOnboarding(e) && (a.default.finishOnboarding(e), (0, c.discardOnboardingPromise)(e)), (0, m.stopImpersonating)(e), n && S.default.open(e, r), r === v.GuildSettingsSections.ROLE_SUBSCRIPTIONS && (0, f.announceDeleteTemplateChannels)(e))
+      null != e && (v.default.isFullServerPreview(e) && (0, g.transitionTo)(R.Routes.CHANNEL(e)), c.default.shouldShowOnboarding(e) && (a.default.finishOnboarding(e), (0, d.discardOnboardingPromise)(e)), (0, T.stopImpersonating)(e), n && S.default.open(e, i), i === R.GuildSettingsSections.ROLE_SUBSCRIPTIONS && (0, f.announceDeleteTemplateChannels)(e))
     };
-  return (0, i.jsxs)(I.default, {
-    color: I.NoticeColors.BRAND,
-    className: b.notice,
-    children: [(0, i.jsxs)(P, {
-      onClick: () => w({
+  return (0, r.jsxs)(C.default, {
+    color: C.NoticeColors.BRAND,
+    className: L.notice,
+    children: [(0, r.jsxs)(x, {
+      onClick: () => D({
         backToSettings: !0
       }),
-      className: b.backButton,
-      children: [(0, i.jsx)(h.default, {
+      className: L.backButton,
+      children: [(0, r.jsx)(p.default, {
         width: 16,
         height: 16,
-        direction: h.default.Directions.LEFT,
-        className: b.backArrow
-      }), G]
-    }), F && l ? (0, i.jsx)("div", {
-      className: b.noticeContents,
-      children: (0, i.jsx)("div", {
-        className: b.noticeText,
-        children: L.default.Messages.VIEW_AS_MEMBER_DESCRIPTION
+        direction: p.default.Directions.LEFT,
+        className: L.backArrow
+      }), y]
+    }), G && l ? (0, r.jsx)("div", {
+      className: L.noticeContents,
+      children: (0, r.jsx)("div", {
+        className: L.noticeText,
+        children: A.default.Messages.VIEW_AS_MEMBER_DESCRIPTION
       })
-    }) : (0, i.jsxs)("div", {
-      className: b.noticeContents,
-      children: [(0, i.jsx)("div", {
-        className: b.noticeText,
-        children: l ? L.default.Messages.VIEW_AS_MEMBER_DESCRIPTION_WITH_ROLES.format({
+    }) : (0, r.jsxs)("div", {
+      className: L.noticeContents,
+      children: [(0, r.jsx)("div", {
+        className: L.noticeText,
+        children: l ? A.default.Messages.VIEW_AS_MEMBER_DESCRIPTION_WITH_ROLES.format({
           numRoles: Object.keys(n).length
-        }) : L.default.Messages.VIEWING_AS_ROLES.format({
+        }) : A.default.Messages.VIEWING_AS_ROLES.format({
           numRoles: Object.keys(n).length
         })
-      }), (0, i.jsx)(o.Popout, {
+      }), (0, r.jsx)(u.Popout, {
         position: "bottom",
-        renderPopout: () => (0, i.jsx)(N.default, {
+        renderPopout: () => (0, r.jsx)(N.default, {
           guildId: e
         }),
         children: e => {
           let {
             onClick: t
           } = e;
-          return (0, i.jsxs)(P, {
+          return (0, r.jsxs)(x, {
             onClick: t,
-            children: [D, (0, i.jsx)(p.default, {
+            children: [F, (0, r.jsx)(_.default, {
               width: 16,
               height: 16,
-              direction: p.default.Directions.DOWN,
-              className: b.selectCaret
+              direction: _.default.Directions.DOWN,
+              className: L.selectCaret
             })]
           })
         }
-      }), l && (0, i.jsx)(o.TooltipContainer, {
-        className: b.previewWarning,
-        text: L.default.Messages.VIEW_AS_MEMBER_ROLES_WARNING,
-        children: (0, i.jsx)(C.default, {
+      }), l && (0, r.jsx)(u.TooltipContainer, {
+        className: L.previewWarning,
+        text: A.default.Messages.VIEW_AS_MEMBER_ROLES_WARNING,
+        children: (0, r.jsx)(m.default, {
           width: 16,
           height: 16,
-          color: u.default.unsafe_rawColors.YELLOW_300.css
+          color: o.default.unsafe_rawColors.YELLOW_300.css
         })
-      }), T && (0, i.jsx)(o.TooltipContainer, {
-        className: b.previewWarning,
-        text: L.default.Messages.SERVER_SHOP_PREVIEW_DISCLAIMER.format({
-          maxTiers: M.MAX_SUBSCRIPTION_TIERS,
-          maxProducts: A.MAX_PUBLISHED_GUILD_PRODUCT_LISTINGS
+      }), I && (0, r.jsx)(u.TooltipContainer, {
+        className: L.previewWarning,
+        text: A.default.Messages.SERVER_SHOP_PREVIEW_DISCLAIMER.format({
+          maxTiers: O.MAX_SUBSCRIPTION_TIERS,
+          maxProducts: b.MAX_PUBLISHED_GUILD_PRODUCT_LISTINGS
         }),
-        children: (0, i.jsx)(C.default, {
+        children: (0, r.jsx)(m.default, {
           width: 16,
           height: 16,
-          color: u.default.unsafe_rawColors.YELLOW_300.css
+          color: o.default.unsafe_rawColors.YELLOW_300.css
         })
       })]
-    }), l || r === v.GuildSettingsSections.ROLE_SUBSCRIPTIONS ? null : (0, i.jsx)(x, {
-      onClick: () => w({
+    }), l || i === R.GuildSettingsSections.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(P, {
+      onClick: () => D({
         backToSettings: !1
       })
     })]
   })
 }
 
-function D(e) {
+function F(e) {
   let {
     guildId: t
   } = e;
-  return (0, s.useStateFromStores)([R.default], () => R.default.isViewingRoles(t)) ? (0, i.jsx)("div", {
-    className: l()(b.settingsWrapper, {
-      [b.windows]: (0, T.isWindows)(),
-      [b.osx]: (0, T.isMac)()
+  return (0, s.useStateFromStores)([v.default], () => v.default.isViewingRoles(t)) ? (0, r.jsx)("div", {
+    className: l()(L.settingsWrapper, {
+      [L.windows]: (0, I.isWindows)(),
+      [L.osx]: (0, I.isMac)()
     }),
-    children: (0, i.jsx)(G, {})
+    children: (0, r.jsx)(y, {})
   }) : null
 }

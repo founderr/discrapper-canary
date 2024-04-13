@@ -28,12 +28,12 @@ function T(e) {
     selectedSku: P,
     selectedStoreListing: N,
     application: m
-  } = (0, c.usePaymentContext)(), C = (0, s.default)(S.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY), A = (0, l.useStateFromStores)([d.default], () => d.default.getGuild(null == T ? void 0 : T.guild_id)), p = r.useCallback(() => t(I.Step.REVIEW), [t]);
+  } = (0, c.usePaymentContext)(), A = (0, s.default)(S.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY), C = (0, l.useStateFromStores)([d.default], () => d.default.getGuild(null == T ? void 0 : T.guild_id)), p = r.useCallback(() => t(I.Step.REVIEW), [t]);
   if (null == P) return null;
   let O = (0, i.isApplicationUserSubscription)(P.flags);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(f.PaymentPortalBody, {
-      children: C ? (0, a.jsx)(o.BenefitsConfirmationLite, {
+      children: A ? (0, a.jsx)(o.BenefitsConfirmationLite, {
         confirmCta: E.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_CONTINUE_BUTTON,
         onConfirm: p,
         onCancel: n,
@@ -41,7 +41,7 @@ function T(e) {
           tier: P.name
         }),
         subtitle: O ? E.default.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_LITE_SUBTITLE : E.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_LITE_SUBTITLE.format({
-          guildName: null == A ? void 0 : A.name
+          guildName: null == C ? void 0 : C.name
         }),
         showOpenDiscord: !1
       }) : (0, a.jsx)(u.BenefitsConfirmation, {
@@ -56,7 +56,7 @@ function T(e) {
           applicationName: null == m ? void 0 : m.name
         }) : E.default.Messages.APPLICATION_GUILD_SUBSCRIPTION_LISTING_DETAILS
       })
-    }), !C && (0, a.jsx)(f.PaymentPortalFooter, {
+    }), !A && (0, a.jsx)(f.PaymentPortalFooter, {
       children: (0, a.jsx)(_.default, {
         onBack: n,
         backText: E.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_CANCEL_BUTTON,

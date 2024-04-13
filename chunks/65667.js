@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return T
   }
 });
 var s = n("735250");
@@ -14,23 +14,23 @@ var a = n("803997"),
   u = n("778947"),
   d = n("702346"),
   c = n("787374"),
-  E = n("981631"),
-  f = n("674563"),
+  f = n("981631"),
+  E = n("674563"),
   _ = n("689938"),
-  T = n("297621");
+  m = n("297621");
 
-function I(e) {
+function T(e) {
   let {
     message: t,
     compact: n,
     usernameHook: a
-  } = e, I = (0, r.default)(t), m = a(I), {
+  } = e, T = (0, r.default)(t), I = a(T), {
     avatarSrc: p,
     eventHandlers: {
-      onMouseEnter: N,
-      onMouseLeave: S
+      onMouseEnter: h,
+      onMouseLeave: N
     }
-  } = (0, c.useAutomodAvatar)(!0), C = "" !== t.content ? new Date(t.content).toLocaleString(_.default.getLocale(), {
+  } = (0, c.useAutomodAvatar)(!0), S = "" !== t.content ? new Date(t.content).toLocaleString(_.default.getLocale(), {
     hour: "numeric",
     minute: "2-digit",
     month: "2-digit",
@@ -38,53 +38,53 @@ function I(e) {
     year: "numeric"
   }) : "";
   return (0, s.jsx)("div", {
-    onMouseEnter: N,
-    onMouseLeave: S,
+    onMouseEnter: h,
+    onMouseLeave: N,
     children: (0, s.jsx)(d.default, {
-      className: l()(T.mainContainer, {
-        [T.compact]: n
+      className: l()(m.mainContainer, {
+        [m.compact]: n
       }),
       iconNode: n ? null : (0, s.jsx)(c.AutomodAvatar, {
         src: p
       }),
-      iconContainerClassName: T.iconContainer,
+      iconContainerClassName: m.iconContainer,
       compact: n,
       children: (0, s.jsxs)("div", {
-        className: l()(T.content, {
-          [T.compact]: n
+        className: l()(m.content, {
+          [m.compact]: n
         }),
         children: [(0, s.jsx)(u.BaseMessageHeader, {
           message: t,
-          messageClassname: T.spanCorrection,
-          className: l()(T.usernameContainer, T.spanCorrection, {
-            [T.compact]: n
+          messageClassname: m.spanCorrection,
+          className: l()(m.usernameContainer, m.spanCorrection, {
+            [m.compact]: n
           }),
           username: (0, s.jsxs)("div", {
-            className: T.spanCorrection,
+            className: m.spanCorrection,
             children: [(0, s.jsx)(i.Text, {
               variant: "text-md/normal",
               color: "text-brand",
               tag: "span",
-              className: T.username,
+              className: m.username,
               children: _.default.Messages.GUILD_AUTOMOD_USERNAME
             }), (0, s.jsx)(o.default, {
-              type: f.BotTagTypes.SYSTEM_DM,
-              className: T.systemTag
+              type: E.BotTagTypes.SYSTEM_DM,
+              className: m.systemTag
             })]
           }),
           compact: n,
           showTimestamp: !0
         }), (0, s.jsx)("div", {
-          className: l()(T.__invalid_messageContent, {
-            [T.compact]: n
+          className: l()(m.__invalid_messageContent, {
+            [m.compact]: n
           }),
-          children: t.type === E.MessageTypes.GUILD_INCIDENT_ALERT_MODE_ENABLED ? _.default.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_SYSTEM_MESSAGE_SHORT.format({
-            username: I.nick,
-            usernameHook: m,
-            time: C
+          children: t.type === f.MessageTypes.GUILD_INCIDENT_ALERT_MODE_ENABLED ? _.default.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_SYSTEM_MESSAGE_SHORT.format({
+            username: T.nick,
+            usernameHook: I,
+            time: S
           }) : _.default.Messages.GUILD_SERVER_LOCKDOWN_DISABLED_SYSTEM_MESSAGE.format({
-            username: I.nick,
-            usernameHook: m
+            username: T.nick,
+            usernameHook: I
           })
         })]
       })

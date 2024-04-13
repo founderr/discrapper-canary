@@ -20,8 +20,8 @@ var n = a("735250"),
   C = a("749436"),
   m = a("650394"),
   S = a("731455"),
-  p = a("689938"),
-  I = a("274845");
+  I = a("689938"),
+  p = a("274845");
 let T = 12,
   g = () => {
     let e = (0, c.getHistory)().location.search;
@@ -32,18 +32,18 @@ let T = 12,
       categoryId: t,
       categoryName: a,
       onClick: s
-    } = e, l = t === S.DISCOVERY_ALL_CATEGORIES_ID, i = l ? p.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER : p.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({
+    } = e, l = t === S.DISCOVERY_ALL_CATEGORIES_ID, i = l ? I.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER : I.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({
       categoryName: a
-    }), r = l ? p.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_BODY : p.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_BODY.format({
+    }), r = l ? I.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_BODY : I.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_BODY.format({
       onClick: s
     });
     return (0, n.jsxs)("div", {
-      className: I.emptyContainer,
+      className: p.emptyContainer,
       children: [(0, n.jsx)("div", {
-        className: I.emptyImage
+        className: p.emptyImage
       }), (0, n.jsx)(u.Heading, {
         variant: "heading-xl/semibold",
-        className: I.emptyHeader,
+        className: p.emptyHeader,
         children: i
       }), (0, n.jsx)(u.Text, {
         variant: "text-md/normal",
@@ -53,14 +53,14 @@ let T = 12,
     })
   },
   N = () => (0, n.jsxs)("div", {
-    className: I.emptyContainer,
+    className: p.emptyContainer,
     children: [(0, n.jsx)("div", {
-      className: I.errorImage
+      className: p.errorImage
     }), (0, n.jsx)(u.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: I.emptyHeader,
-      children: p.default.Messages.GUILD_DISCOVERY_SEARCH_ERROR
+      className: p.emptyHeader,
+      children: I.default.Messages.GUILD_DISCOVERY_SEARCH_ERROR
     })]
   });
 t.default = e => {
@@ -108,30 +108,30 @@ t.default = e => {
     } = g(), a = null != e ? Math.floor(parseInt(e, 10) / T) + 1 : 1;
     V(!!t), 1 === a && F(!0)
   }, [l]);
-  let z = M === S.DISCOVERY_ALL_CATEGORIES_ID ? p.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
+  let z = M === S.DISCOVERY_ALL_CATEGORIES_ID ? I.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
     count: null != w ? w.toLocaleString() : "0",
     query: l
-  }) : p.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_CATEGORY_HEADER.format({
+  }) : I.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_CATEGORY_HEADER.format({
     count: null != w ? w.toLocaleString() : "0",
     query: l,
     category: P
   });
   return (0, n.jsxs)("div", {
-    className: I.container,
+    className: p.container,
     children: [(0, n.jsxs)("div", {
-      className: I.searchHeader,
+      className: p.searchHeader,
       children: [(0, n.jsx)(u.Clickable, {
         onClick: () => {
           d.clearSearch(), h.trackSearchClosed(t)
         },
-        className: I.arrow,
-        "aria-label": p.default.Messages.BACK,
+        className: p.arrow,
+        "aria-label": I.default.Messages.BACK,
         children: (0, n.jsx)(E.default, {
           direction: E.default.Directions.LEFT
         })
       }), (0, n.jsx)(u.Heading, {
         variant: "heading-xl/semibold",
-        className: I.header,
+        className: p.header,
         children: z
       })]
     }), (0, n.jsx)(C.default, {
@@ -152,7 +152,7 @@ t.default = e => {
         d.selectCategory(S.DISCOVERY_ALL_CATEGORIES_ID), W(0, T, !0)
       }
     }) : (0, n.jsx)("div", {
-      className: I.results,
+      className: p.results,
       children: (0, n.jsx)(_.default, {
         pageSize: T,
         totalCount: w,

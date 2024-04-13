@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   PremiumPaymentSKUSelectStep: function() {
-    return S
+    return E
   }
 });
 var n = s("735250");
@@ -12,8 +12,8 @@ var r = s("803997"),
   a = s("140465"),
   o = s("639119"),
   C = s("55610"),
-  u = s("973007"),
-  d = s("74538"),
+  d = s("973007"),
+  u = s("74538"),
   c = s("987209"),
   p = s("598"),
   f = s("409813"),
@@ -23,7 +23,7 @@ var r = s("803997"),
   L = s("689938"),
   h = s("300561");
 
-function S(e) {
+function E(e) {
   let {
     handleStepChange: t,
     handleClose: s,
@@ -32,12 +32,12 @@ function S(e) {
     setSelectedSkuId: i,
     activeSubscription: l,
     startedPaymentFlowWithPaymentSourcesRef: C,
-    setSelectedPlanId: u,
+    setSelectedPlanId: d,
     priceOptions: L
   } = (0, p.usePaymentContext)(), {
     isGift: h
-  } = (0, c.useGiftContext)(), S = (0, o.usePremiumTrialOffer)(r), E = (0, a.useIsInPremiumOfferExperience)();
-  return (0, n.jsx)(j, {
+  } = (0, c.useGiftContext)(), E = (0, o.usePremiumTrialOffer)(r), j = (0, a.useIsInPremiumOfferExperience)();
+  return (0, n.jsx)(S, {
     selectSku: e => (function(e) {
       let {
         activeSubscription: t,
@@ -51,8 +51,8 @@ function S(e) {
       } = e;
       n(s);
       let C = f.Step.PLAN_SELECT,
-        u = (0, d.getPremiumSkuIdForSubscription)(t);
-      (u === m.PremiumSubscriptionSKUs.TIER_1 || u === m.PremiumSubscriptionSKUs.TIER_2) && s === m.PremiumSubscriptionSKUs.TIER_0 && !i && (C = f.Step.WHAT_YOU_LOSE);
+        d = (0, u.getPremiumSkuIdForSubscription)(t);
+      (d === m.PremiumSubscriptionSKUs.TIER_1 || d === m.PremiumSubscriptionSKUs.TIER_2) && s === m.PremiumSubscriptionSKUs.TIER_0 && !i && (C = f.Step.WHAT_YOU_LOSE);
       let c = (0, _.isInTrialRedemption)({
           userTrialOffer: l,
           isGift: i,
@@ -75,18 +75,18 @@ function S(e) {
       setSelectedSkuId: i,
       handleStepChange: t,
       isGift: h,
-      userTrialOffer: S,
+      userTrialOffer: E,
       startedPaymentFlowWithPaymentSources: C.current,
-      setSelectedPlanId: u
+      setSelectedPlanId: d
     }),
     onClose: s,
     isGift: h,
-    inOfferExperience: E,
+    inOfferExperience: j,
     priceOptions: L
   })
 }
 
-function j(e) {
+function S(e) {
   let {
     selectSku: t,
     onClose: s,
@@ -111,8 +111,8 @@ function j(e) {
       children: [(0, n.jsx)(C.default, {
         fromBoostCancelModal: !1,
         className: h.legacyPricingNotice
-      }), (0, n.jsx)(u.default, {
-        onSelectSku: e => t((0, d.castPremiumSubscriptionAsSkuId)(e)),
+      }), (0, n.jsx)(d.default, {
+        onSelectSku: e => t((0, u.castPremiumSubscriptionAsSkuId)(e)),
         isGift: r,
         priceOptions: o
       })]

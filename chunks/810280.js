@@ -37,8 +37,8 @@ function _(e) {
     header: C,
     body: m,
     imgSrc: S,
-    imgStyle: p
-  } = h(_.drop, _.config.streamLengthRequirement), I = () => {
+    imgStyle: I
+  } = h(_.drop, _.config.streamLengthRequirement), p = () => {
     t(c.ContentDismissActionType.DISMISS)
   };
   return (0, n.jsxs)("div", {
@@ -46,11 +46,11 @@ function _(e) {
     children: [(0, n.jsx)("img", {
       src: S,
       alt: "",
-      className: p
+      className: I
     }), (0, n.jsx)(l.Clickable, {
       className: E.__invalid_buttonClose,
       "aria-label": f.default.Messages.CLOSE,
-      onClick: I,
+      onClick: p,
       children: (0, n.jsx)(r.default, {
         width: 16,
         height: 16,
@@ -82,7 +82,7 @@ function _(e) {
     }), (0, n.jsx)(l.Button, {
       className: E.linkButtonContainer,
       innerClassName: E.linkButton,
-      onClick: I,
+      onClick: p,
       look: l.Button.Looks.LINK,
       fullWidth: !0,
       color: l.Button.Colors.WHITE,

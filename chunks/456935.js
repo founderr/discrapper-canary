@@ -1,23 +1,23 @@
 "use strict";
-n.r(t), n.d(t, {
+i.r(t), i.d(t, {
   getVerificationLevelText: function() {
-    return E
+    return m
   }
 });
-var i = n("735250"),
-  r = n("470079"),
-  s = n("692547"),
-  a = n("481060"),
-  l = n("496675"),
-  o = n("916187"),
-  u = n("736921"),
-  c = n("185403"),
-  d = n("484455"),
-  f = n("981631"),
-  p = n("689938"),
-  m = n("482249");
+var n = i("735250"),
+  r = i("470079"),
+  s = i("692547"),
+  a = i("481060"),
+  l = i("496675"),
+  o = i("916187"),
+  u = i("736921"),
+  c = i("185403"),
+  d = i("484455"),
+  f = i("981631"),
+  p = i("689938"),
+  C = i("482249");
 
-function E(e) {
+function m(e) {
   switch (e) {
     case f.VerificationLevels.LOW:
       return p.default.Messages.VERIFICATION_LEVEL_LOW;
@@ -31,7 +31,7 @@ function E(e) {
       return ""
   }
 }
-let I = {
+let h = {
   [f.VerificationLevels.NONE]: "",
   [f.VerificationLevels.LOW]: s.default.unsafe_rawColors.GREEN_360.css,
   [f.VerificationLevels.MEDIUM]: s.default.unsafe_rawColors.YELLOW_300.css,
@@ -41,48 +41,48 @@ let I = {
 t.default = function(e) {
   let {
     guild: t
-  } = e, s = l.default.can(f.Permissions.MANAGE_GUILD, t), _ = t.verificationLevel, h = _ === f.VerificationLevels.VERY_HIGH ? u.default : o.default, T = r.useMemo(() => E(_), [_]), g = I[_], C = (0, i.jsx)("div", {
-    className: m.verificationLevelTitle,
+  } = e, s = l.default.can(f.Permissions.MANAGE_GUILD, t), _ = t.verificationLevel, E = _ === f.VerificationLevels.VERY_HIGH ? u.default : o.default, I = r.useMemo(() => m(_), [_]), T = h[_], x = (0, n.jsx)("div", {
+    className: C.verificationLevelTitle,
     children: p.default.Messages.MEMBER_VERIFICATION_GUILD_VERIFICATION_LEVEL.format({
       verificationLevelHook: function() {
-        return (0, i.jsx)(a.Text, {
-          className: m.verificationLevelHook,
+        return (0, n.jsx)(a.Text, {
+          className: C.verificationLevelHook,
           style: {
-            color: g
+            color: T
           },
           variant: "text-sm/semibold",
-          children: T
+          children: I
         }, "hook")
       }
     })
-  }), x = _ === f.VerificationLevels.VERY_HIGH ? p.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_SETTINGS_LABEL : p.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_SETTINGS_LABEL;
-  return (0, i.jsx)(d.default, {
-    title: C,
-    children: (0, i.jsxs)("div", {
-      className: m.verificationContainer,
-      children: [(0, i.jsx)(h, {
+  }), g = _ === f.VerificationLevels.VERY_HIGH ? p.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_SETTINGS_LABEL : p.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_SETTINGS_LABEL;
+  return (0, n.jsx)(d.default, {
+    title: x,
+    children: (0, n.jsxs)("div", {
+      className: C.verificationContainer,
+      children: [(0, n.jsx)(E, {
         width: 20,
         height: 20,
-        className: m.icon
-      }), (0, i.jsx)(a.Text, {
-        className: m.guildVerificationText,
+        className: C.icon
+      }), (0, n.jsx)(a.Text, {
+        className: C.guildVerificationText,
         variant: "text-sm/normal",
-        children: x
-      }), s && (0, i.jsx)(a.Clickable, {
-        className: m.iconInteractiveContainer,
+        children: g
+      }), s && (0, n.jsx)(a.Clickable, {
+        className: C.iconInteractiveContainer,
         onClick: () => (0, a.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([n.e("99387"), n.e("27933")]).then(n.bind(n, "694278"));
-          return n => (0, i.jsx)(e, {
-            ...n,
+          } = await Promise.all([i.e("99387"), i.e("27933")]).then(i.bind(i, "694278"));
+          return i => (0, n.jsx)(e, {
+            ...i,
             guild: t
           })
         }),
-        children: (0, i.jsx)(c.default, {
+        children: (0, n.jsx)(c.default, {
           width: 20,
           height: 20,
-          className: m.iconInteractive
+          className: C.iconInteractive
         })
       })]
     })

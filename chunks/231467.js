@@ -28,13 +28,13 @@ function _(e) {
       primaryColor: C,
       secondaryColor: m
     }
-  } = t, S = (0, u.default)(t.games), p = (0, n.jsx)(o.Text, {
+  } = t, S = (0, u.default)(t.games), I = (0, n.jsx)(o.Text, {
     variant: "text-xs/medium",
     tag: "span",
     className: h.playstyle,
     color: "none",
     children: (0, f.getPlaystyleTitle)(t.playstyle)
-  }), I = E.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
+  }), p = E.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
     count: t.memberCount
   });
   return (0, n.jsxs)("div", {
@@ -78,7 +78,7 @@ function _(e) {
         }), (0, n.jsxs)(o.Text, {
           variant: "text-xs/normal",
           color: "text-secondary",
-          children: [p, " \xb7 ".concat(I)]
+          children: [I, " \xb7 ".concat(p)]
         })]
       }), (0, n.jsx)(o.Text, {
         variant: "text-xs/normal",

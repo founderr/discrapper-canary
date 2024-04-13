@@ -27,9 +27,9 @@ t.default = e => {
         section: f.AnalyticsSections.FAMILY_CENTER
       }
     })
-  }, [t, m]), p = () => {
+  }, [t, m]), I = () => {
     C(!0)
-  }, I = () => {
+  }, p = () => {
     C(!1)
   };
   return (0, n.jsx)(u.ListNavigatorItem, {
@@ -47,8 +47,8 @@ t.default = e => {
           [E.last]: l,
           [E.active]: _
         }),
-        onMouseEnter: p,
-        onMouseLeave: I,
+        onMouseEnter: I,
+        onMouseLeave: p,
         onClick: S,
         ...e,
         children: a(_)

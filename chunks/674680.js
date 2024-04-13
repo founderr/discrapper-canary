@@ -35,17 +35,17 @@ function C(e) {
     size: C = l.AvatarSizes.SIZE_40
   } = e, m = (0, i.default)(), S = (0, c.getPoggermodeAchievementData)(a);
   if (null == S) return null;
-  let p = (0, l.getAvatarSpecs)(C),
+  let I = (0, l.getAvatarSpecs)(C),
     {
-      name: I,
+      name: p,
       rarity: T
     } = S,
     {
       color: g
     } = (0, c.getAchievementStyles)(T),
     A = (0, s.isThemeDark)(m) ? h : _,
-    N = (p.size - p.offset - 2 * p.stroke) * .8,
-    v = p.size - p.stroke,
+    N = (I.size - I.offset - 2 * I.stroke) * .8,
+    v = I.size - I.stroke,
     R = {
       width: .4 * N,
       height: .4 * N
@@ -53,8 +53,8 @@ function C(e) {
     O = {
       width: R.width + 1,
       height: R.height + 1,
-      right: p.stroke + 1,
-      bottom: p.stroke + 1,
+      right: I.stroke + 1,
+      bottom: I.stroke + 1,
       padding: 0
     };
   return (0, n.jsxs)("div", {
@@ -62,9 +62,9 @@ function C(e) {
     style: {
       width: v,
       height: v,
-      padding: p.stroke
+      padding: I.stroke
     },
-    "aria-label": "".concat(null !== (t = I()) && void 0 !== t ? t : ""),
+    "aria-label": "".concat(null !== (t = p()) && void 0 !== t ? t : ""),
     children: [(0, n.jsx)("div", {
       className: E.trophyIconContainer,
       children: (0, n.jsx)(d.default, {

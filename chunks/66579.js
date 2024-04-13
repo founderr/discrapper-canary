@@ -35,7 +35,7 @@ class c extends i.PureComponent {
         breadcrumbs: s,
         renderCustomBreadcrumb: u,
         separatorClassName: c
-      } = this.props, f = e.id === n, p = t === s.length - 1, _ = null != u ? u(e, f) : (0, r.jsx)("span", {
+      } = this.props, f = e.id === n, p = t === s.length - 1, E = null != u ? u(e, f) : (0, r.jsx)("span", {
         className: a()(d.breadcrumb, {
           [d.activeBreadcrumb]: f,
           [d.interactiveBreadcrumb]: null != i
@@ -50,8 +50,8 @@ class c extends i.PureComponent {
           tag: "span",
           onClick: () => this.handleClick(e),
           className: d.breadcrumbClickWrapper,
-          children: _
-        }) : _, p ? null : (0, r.jsx)(o.default, {
+          children: E
+        }) : E, p ? null : (0, r.jsx)(o.default, {
           className: a()(d.breadcrumbArrow, c),
           direction: o.default.Directions.RIGHT
         })]

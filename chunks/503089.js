@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   SHAKE_INTENSITY_DEFAULT: function() {
-    return C
+    return j
   },
   SHAKE_INTENSITY_INCREMENT: function() {
-    return I
+    return A
   },
   SHAKE_INTENSITY_MAX: function() {
     return E
@@ -19,16 +19,16 @@ var i = n("735250"),
   c = n("252618"),
   u = n("243778"),
   d = n("495065"),
-  h = n("126848"),
-  m = n("759231"),
+  m = n("126848"),
+  h = n("759231"),
   p = n("26290"),
   f = n("585483"),
-  S = n("960048"),
-  b = n("410575"),
+  b = n("960048"),
+  S = n("410575"),
   g = n("493544"),
   T = n("981631"),
-  v = n("689938"),
-  x = n("810637");
+  x = n("689938"),
+  v = n("810637");
 
 function N(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -38,16 +38,16 @@ function N(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let j = Object.freeze({
+let C = Object.freeze({
     shouldPreventNavigation: !1,
     onPreventNavigation: null,
     sidebarOpen: !0
   }),
-  C = 1.4,
+  j = 1.4,
   E = 15,
-  I = 2;
+  A = 2;
 
-function P(e) {
+function I(e) {
   var t, n;
   let {
     section: s,
@@ -61,7 +61,7 @@ function P(e) {
   });
   let c = null !== (t = null == s ? void 0 : s.element) && void 0 !== t ? t : T.NOOP_NULL,
     u = null !== (n = null == s ? void 0 : s.elementProps) && void 0 !== n ? n : {};
-  return (0, i.jsx)(b.default, {
+  return (0, i.jsx)(S.default, {
     section: s.section,
     children: (0, i.jsx)(c, {
       ...u,
@@ -70,7 +70,7 @@ function P(e) {
     })
   })
 }
-class A extends s.PureComponent {
+class P extends s.PureComponent {
   componentDidMount() {
     this.getPredicateSections().forEach(e => {
       let {
@@ -89,7 +89,7 @@ class A extends s.PureComponent {
     let {
       section: t
     } = e;
-    t !== this.props.section && (this._intensity = C)
+    t !== this.props.section && (this._intensity = j)
   }
   componentWillUnmount() {
     this._unmounted = !0, this._subscribedStores.forEach(e => e.removeChangeListener(this.handleNoticeStoreUpdate)), this.props.sections.forEach(e => {
@@ -110,7 +110,7 @@ class A extends s.PureComponent {
     return null != n && n.stores.some(e => e.showNotice() && !(null != e.canCloseEarly && e.canCloseEarly())) ? (f.ComponentDispatch.dispatch(T.ComponentActions.SHAKE_APP, {
       duration: 300,
       intensity: this._intensity
-    }), this._intensity = Math.min(this._intensity + I, E), f.ComponentDispatch.dispatch(T.ComponentActions.EMPHASIZE_NOTICE), !1) : (this._intensity = C, !0)
+    }), this._intensity = Math.min(this._intensity + A, E), f.ComponentDispatch.dispatch(T.ComponentActions.EMPHASIZE_NOTICE), !1) : (this._intensity = j, !0)
   }
   renderSidebar(e) {
     let {
@@ -182,7 +182,7 @@ class A extends s.PureComponent {
         scrollerRef: this.scrollerRef,
         section: n,
         sidebar: this.renderSidebar(o),
-        content: (0, i.jsx)(P, {
+        content: (0, i.jsx)(I, {
           section: a,
           setPreventNavigation: this.setPreventNavigation,
           scrollerRef: this.scrollerRef
@@ -199,8 +199,8 @@ class A extends s.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), N(this, "_unmounted", !1), N(this, "_intensity", C), N(this, "_subscribedStores", []), N(this, "scrollerRef", s.createRef()), N(this, "state", {
-      ...j,
+    super(...e), N(this, "_unmounted", !1), N(this, "_intensity", j), N(this, "_subscribedStores", []), N(this, "scrollerRef", s.createRef()), N(this, "state", {
+      ...C,
       sidebarOpen: this.props.section !== T.UserSettingsSections.SUBSCRIPTIONS && this.props.section !== T.UserSettingsSections.PROFILE_CUSTOMIZATION
     }), N(this, "setPreventNavigation", (e, t) => {
       this.setState({
@@ -223,11 +223,11 @@ class A extends s.PureComponent {
         null != l && l.forEach(e => {
           !this._subscribedStores.includes(e) && (e.addChangeListener(this.handleNoticeStoreUpdate), this._subscribedStores.push(e))
         }), this.setState({
-          ...j,
+          ...C,
           sidebarOpen: !1
         })
       };
-      this.validNavigation() && !i && (l(), S.default.addBreadcrumb({
+      this.validNavigation() && !i && (l(), b.default.addBreadcrumb({
         category: "settings",
         message: "Set section: ".concat(e)
       })), i && null != s && s(l)
@@ -239,7 +239,7 @@ class A extends s.PureComponent {
         null == e || e()
       }
     }), N(this, "handleNoticeStoreUpdate", () => {
-      !this._unmounted && (this._intensity = C, this.forceUpdate())
+      !this._unmounted && (this._intensity = j, this.forceUpdate())
     }), N(this, "renderSettingsSectionTabBarItem", (e, t, n) => {
       let {
         section: s,
@@ -248,41 +248,41 @@ class A extends s.PureComponent {
         onClick: c,
         color: u,
         icon: f,
-        className: S,
-        newIndicator: b,
+        className: b,
+        newIndicator: S,
         newIndicatorDismissibleContentTypes: g,
         badgeCount: N
-      } = e, j = null;
-      s === T.UserSettingsSections.ACCOUNT && this.props.isEligibleForPomelo ? j = (0, i.jsx)(m.default, {
+      } = e, C = null;
+      s === T.UserSettingsSections.ACCOUNT && this.props.isEligibleForPomelo ? C = (0, i.jsx)(h.default, {
         color: r.default.colors.STATUS_WARNING.css
-      }) : s === T.UserSettingsSections.INVENTORY && null != this.props.shouldShowSettingBadgeForQuests && this.props.shouldShowSettingBadgeForQuests.length > 0 ? j = (0, i.jsx)(d.QuestUserSettingsBadge, {
+      }) : s === T.UserSettingsSections.INVENTORY && null != this.props.shouldShowSettingBadgeForQuests && this.props.shouldShowSettingBadgeForQuests.length > 0 ? C = (0, i.jsx)(d.QuestUserSettingsBadge, {
         questIds: this.props.shouldShowSettingBadgeForQuests
-      }) : null != e.decoration ? j = (0, i.jsx)(o.Text, {
+      }) : null != e.decoration ? C = (0, i.jsx)(o.Text, {
         variant: "text-md/normal",
         color: "text-muted",
         children: e.decoration
-      }) : null != n && (null == g ? void 0 : g.includes(n)) && !t ? j = null != b ? b : (0, i.jsx)(p.TextBadge, {
-        text: v.default.Messages.NEW
-      }) : null != f ? j = f : null != N && N > 0 && (j = (0, i.jsx)(p.NumberBadge, {
+      }) : null != n && (null == g ? void 0 : g.includes(n)) && !t ? C = null != S ? S : (0, i.jsx)(p.TextBadge, {
+        text: x.default.Messages.NEW
+      }) : null != f ? C = f : null != N && N > 0 && (C = (0, i.jsx)(p.NumberBadge, {
         count: N
       }));
-      let C = s === T.UserSettingsSections.PREMIUM ? (0, i.jsx)(h.default, {
+      let j = s === T.UserSettingsSections.PREMIUM ? (0, i.jsx)(m.default, {
         label: l,
         isSelected: t,
-        decoration: j
-      }) : null == j ? l : (0, i.jsxs)("div", {
-        className: x.tabBarItemContainer,
-        children: [l, j]
+        decoration: C
+      }) : null == C ? l : (0, i.jsxs)("div", {
+        className: v.tabBarItemContainer,
+        children: [l, C]
       });
       return (0, i.jsx)(o.TabBar.Item, {
         color: u,
         id: s,
         onClick: c,
-        className: S,
+        className: b,
         "aria-label": a,
-        children: C
+        children: j
       }, s)
     })
   }
 }
-t.default = A
+t.default = P

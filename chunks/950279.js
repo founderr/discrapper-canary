@@ -19,10 +19,10 @@ t.default = e => {
     requiredGameId: _
   } = e, C = (0, l.useStateFromStores)([o.default], () => o.default.getId()), {
     recentGames: m
-  } = (0, r.useUserRecentGames)(C), S = (0, l.useStateFromStores)([u.default], () => u.default.games, []), p = s.useMemo(() => S.map(e => ({
+  } = (0, r.useUserRecentGames)(C), S = (0, l.useStateFromStores)([u.default], () => u.default.games, []), I = s.useMemo(() => S.map(e => ({
     value: e.id,
     label: e.name
-  })), [S]), I = (0, l.useStateFromStoresArray)([u.default], () => null != m ? m.map(e => {
+  })), [S]), p = (0, l.useStateFromStoresArray)([u.default], () => null != m ? m.map(e => {
     let t = u.default.getGameById(e.applicationId);
     return {
       ...e,
@@ -65,7 +65,7 @@ t.default = e => {
     }), (0, n.jsx)("div", {
       className: E.inputContainer,
       children: (0, n.jsx)(i.SearchableSelect, {
-        options: p,
+        options: I,
         value: "",
         placeholder: f.default.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
         onChange: g,
@@ -97,7 +97,7 @@ t.default = e => {
             }, t)
           })
         })]
-      }), I.length > 0 && (0, n.jsxs)(n.Fragment, {
+      }), p.length > 0 && (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)(i.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
@@ -105,7 +105,7 @@ t.default = e => {
           children: f.default.Messages.RECENT_GAMES
         }), (0, n.jsx)("div", {
           className: E.selectedSection,
-          children: I.map(e => (0, n.jsx)(d.default, {
+          children: p.map(e => (0, n.jsx)(d.default, {
             name: e.name,
             applicationId: e.applicationId,
             onClick: g

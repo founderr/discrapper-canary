@@ -36,7 +36,7 @@ let p = n.AvatarSizes.SIZE_152,
       })
     })
   },
-  g = e => {
+  I = e => {
     let {
       item: t
     } = e;
@@ -55,7 +55,7 @@ t.default = e => {
   return (0, a.jsxs)(a.Fragment, {
     children: [(null == n ? void 0 : n.type) === i.CollectiblesItemType.AVATAR_DECORATION && (0, a.jsx)(m, {
       item: n
-    }), (null == n ? void 0 : n.type) === i.CollectiblesItemType.PROFILE_EFFECT && (0, a.jsx)(g, {
+    }), (null == n ? void 0 : n.type) === i.CollectiblesItemType.PROFILE_EFFECT && (0, a.jsx)(I, {
       item: n
     })]
   })

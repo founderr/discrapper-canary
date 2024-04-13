@@ -16,8 +16,8 @@ var n = a("735250"),
   C = a("984370"),
   m = a("518311"),
   S = a("199104"),
-  p = a("108427"),
-  I = a("210887"),
+  I = a("108427"),
+  p = a("210887"),
   T = a("974042"),
   g = a("153124"),
   A = a("988951"),
@@ -50,11 +50,11 @@ t.default = function(e) {
       l.replace(L.Routes.ME)
     })
   }, [l, a]), s.useEffect(() => {
-    f.setHomeLink(L.Routes.FRIENDS), (0, p.trackAppUIViewed)("friends")
+    f.setHomeLink(L.Routes.FRIENDS), (0, I.trackAppUIViewed)("friends")
   }, []), s.useEffect(() => {
     null != t && E.default.setInitialSection(t)
   }, [t]);
-  let m = (0, u.useStateFromStores)([I.default], () => I.default.theme),
+  let m = (0, u.useStateFromStores)([p.default], () => p.default.theme),
     {
       section: D,
       pendingCount: b

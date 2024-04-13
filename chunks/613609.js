@@ -17,11 +17,11 @@ t.default = e => {
   let {
     guildId: t,
     inviteCode: a
-  } = e, [C, m] = s.useState(h.WaveStates.INITIAL), [S, p] = s.useState(null != a);
+  } = e, [C, m] = s.useState(h.WaveStates.INITIAL), [S, I] = s.useState(null != a);
   s.useEffect(() => {
-    null != a && i.default.resolveInvite(a, "Hub").finally(() => p(!1))
+    null != a && i.default.resolveInvite(a, "Hub").finally(() => I(!1))
   }, [a]);
-  let I = (0, l.useStateFromStores)([u.default], () => null != a ? u.default.getInvite(a) : null),
+  let p = (0, l.useStateFromStores)([u.default], () => null != a ? u.default.getInvite(a) : null),
     T = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(t));
   s.useEffect(() => {
     null != T && (0, r.transitionTo)(E.Routes.CHANNEL(t))
@@ -43,7 +43,7 @@ t.default = e => {
       }), (0, n.jsx)("div", {
         className: _.contentWrapper,
         children: !S && (0, n.jsx)(f.HubEmailConnectionModalView, {
-          invite: I
+          invite: p
         })
       })]
     })

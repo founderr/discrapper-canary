@@ -21,16 +21,16 @@ t.default = e => {
     handleUpdate: t,
     badge: a,
     primaryColor: l,
-    secondaryColor: p,
-    tag: I,
+    secondaryColor: I,
+    tag: p,
     error: T,
     furthestStep: g
   } = e, [A, N] = s.useState(a), [v, R] = s.useState({
     primary: l,
-    secondary: p
+    secondary: I
   }), [O, L] = s.useState(() => {
     for (let e = 0; e < f.CLAN_BADGE_PALETTE_PRESETS.length; e++)
-      if (f.CLAN_BADGE_PALETTE_PRESETS[e].primary === l && f.CLAN_BADGE_PALETTE_PRESETS[e].secondary === p) return e;
+      if (f.CLAN_BADGE_PALETTE_PRESETS[e].primary === l && f.CLAN_BADGE_PALETTE_PRESETS[e].secondary === I) return e;
     return S
   }), M = S === O, P = M ? v : f.CLAN_BADGE_PALETTE_PRESETS[O];
   return s.useEffect(() => {
@@ -150,7 +150,7 @@ t.default = e => {
         }), (0, n.jsx)(u.TextInput, {
           className: _.tagInputWrapper,
           inputClassName: _.tagInput,
-          value: I,
+          value: p,
           onChange: e => t({
             tag: e
           }),

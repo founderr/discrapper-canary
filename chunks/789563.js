@@ -20,9 +20,9 @@ t.default = function(e) {
     expansionSpring: C,
     isExpanded: m,
     isExpansionAnimationComplete: S,
-    quest: p,
-    useReducedMotion: I
-  } = e, T = (null === (t = p.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, g = (null !== (s = null === (a = p.userStatus) || void 0 === a ? void 0 : a.streamProgressSeconds) && void 0 !== s ? s : 0) > 0;
+    quest: I,
+    useReducedMotion: p
+  } = e, T = (null === (t = I.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, g = (null !== (s = null === (a = I.userStatus) || void 0 === a ? void 0 : a.streamProgressSeconds) && void 0 !== s ? s : 0) > 0;
   return (0, n.jsxs)(i.animated.div, {
     "aria-hidden": m && S,
     className: l()(_, h.contentCollapsed, {
@@ -36,20 +36,20 @@ t.default = function(e) {
       })
     },
     children: [(0, n.jsx)(f.QuestsBarBackgroundAnimation, {
-      quest: p,
-      useReducedMotion: I
+      quest: I,
+      useReducedMotion: p
     }), (0, n.jsx)("div", {
       className: h.contentCollapsedWrapper,
       children: T ? (0, n.jsxs)("div", {
         className: h.questProgressWrapper,
         children: [(0, n.jsx)(c.default, {
           className: h.questProgressRewardTile,
-          quest: p,
+          quest: I,
           questContent: o.QuestContent.QUEST_BAR,
           autoplay: !1
         }), g ? (0, n.jsx)(d.default, {
           className: h.questProgressBar,
-          quest: p
+          quest: I
         }) : (0, n.jsx)(r.Text, {
           className: h.questProgressHint,
           color: "always-white",
@@ -60,13 +60,13 @@ t.default = function(e) {
         className: h.brandingWrapper,
         children: [(0, n.jsx)(u.default, {
           className: h.partnerBranding,
-          quest: p
+          quest: I
         }), (0, n.jsx)(r.Heading, {
           color: "always-white",
           variant: "heading-sm/medium",
           className: h.questName,
           children: E.default.Messages.QUEST.format({
-            questName: p.config.messages.questName
+            questName: I.config.messages.questName
           })
         })]
       })

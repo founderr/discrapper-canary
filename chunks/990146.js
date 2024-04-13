@@ -16,8 +16,8 @@ var n = a("735250"),
   C = a("918701"),
   m = a("874137"),
   S = a("78826"),
-  p = a("789563"),
-  I = a("164164"),
+  I = a("789563"),
+  p = a("164164"),
   T = a("46140"),
   g = a("981631"),
   A = a("311676");
@@ -179,14 +179,14 @@ t.default = function() {
             output: [100, 0]
           }).to(e => "translateY(".concat(e, "%)"))
         },
-        children: [(0, n.jsx)(p.default, {
+        children: [(0, n.jsx)(I.default, {
           className: A.content,
           expansionSpring: es,
           isExpanded: x,
           isExpansionAnimationComplete: D,
           quest: v,
           useReducedMotion: N
-        }), (0, n.jsx)(I.default, {
+        }), (0, n.jsx)(p.default, {
           className: A.content,
           onCtxMenuOpen: Q,
           onCtxMenuClose: Z,

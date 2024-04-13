@@ -20,8 +20,8 @@ var n = a("735250"),
   C = a("592125"),
   m = a("430824"),
   S = a("131951"),
-  p = a("292959"),
-  I = a("19780"),
+  I = a("292959"),
+  p = a("19780"),
   T = a("944486"),
   g = a("606304"),
   A = a("979651"),
@@ -36,7 +36,7 @@ function L(e, t, a, n) {
       l = new r.BatchedStoreListener(e, () => {
         let e = t(),
           l = a(s, e);
-        null != l && !p.default.isSoundDisabled(l) && (0, R.playSound)(l, null != n ? n : .4), s = e
+        null != l && !I.default.isSoundDisabled(l) && (0, R.playSound)(l, null != n ? n : .4), s = e
       });
     return l.attach("useSound"), () => l.detach()
   })
@@ -71,12 +71,12 @@ function M() {
 }
 
 function P() {
-  return L([C.default, I.default, T.default, u.default], () => {
+  return L([C.default, p.default, T.default, u.default], () => {
     let e = C.default.getChannel(T.default.getVoiceChannelId()),
       t = null == e ? void 0 : e.type,
       a = null == e ? void 0 : e.getGuildId(),
-      n = I.default.getWasEverRtcConnected(),
-      s = I.default.getState();
+      n = p.default.getWasEverRtcConnected(),
+      s = p.default.getState();
     return {
       channelType: t,
       guildId: a,

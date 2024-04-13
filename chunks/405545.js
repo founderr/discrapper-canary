@@ -1,16 +1,16 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var r = n("803997"),
-  s = n.n(r),
-  a = n("186078"),
-  l = n("137158"),
-  o = n("482249");
+i.r(t);
+var n = i("735250");
+i("470079");
+var r = i("803997"),
+  s = i.n(r),
+  a = i("186078"),
+  l = i("137158"),
+  o = i("482249");
 t.default = function(e) {
   let {
     formField: t,
-    index: n,
+    index: i,
     isDragEnabled: r,
     isDropHovered: u,
     onDrop: c,
@@ -18,19 +18,19 @@ t.default = function(e) {
     onRemove: f,
     canRemove: p
   } = e, {
-    label: m
+    label: C
   } = t;
-  return (0, i.jsx)(l.default, {
+  return (0, n.jsx)(l.default, {
     field: t,
-    index: n,
+    index: i,
     isDragEnabled: r,
     isDropHovered: u,
     onDrop: c,
     onEdit: d,
     onRemove: f,
-    title: m,
+    title: C,
     canRemove: p,
-    children: (0, i.jsx)(a.MultipleChoiceFieldBody, {
+    children: (0, n.jsx)(a.MultipleChoiceFieldBody, {
       field: t,
       value: void 0,
       radioItemClassName: s()(o.fieldBackground, o.multipleChoiceFixedTextColor),

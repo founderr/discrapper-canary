@@ -26,8 +26,8 @@ var n = a("735250"),
   C = a("210887"),
   m = a("23434"),
   S = a("610001"),
-  p = a("78415"),
-  I = a("1964"),
+  I = a("78415"),
+  p = a("1964"),
   T = a("981631"),
   g = a("815660"),
   A = a("689938");
@@ -41,7 +41,7 @@ function R() {
   } = (0, i.useStateFromStoresObject)([m.default, C.default], () => ({
     action: m.default.getAction(),
     theme: C.default.theme
-  })), R = I.default.getVerificationTypes(e), [O, L] = s.useState(0), M = (0, f.default)(R);
+  })), R = p.default.getVerificationTypes(e), [O, L] = s.useState(0), M = (0, f.default)(R);
   (0, h.default)({
     type: l.ImpressionTypes.MODAL,
     name: l.ImpressionNames.USER_ACTION_REQUIRED,
@@ -60,7 +60,7 @@ function R() {
         })
       }, {
         modalKey: N,
-        Layer: p.default
+        Layer: I.default
       })
     },
     x = () => {
@@ -74,7 +74,7 @@ function R() {
         })
       }, {
         modalKey: g.PHONE_VERIFICATION_MODAL_KEY,
-        Layer: p.default
+        Layer: I.default
       })
     };
   return s.useEffect(() => (E.default.disable(), () => {
@@ -92,7 +92,7 @@ function R() {
       })
     }, {
       modalKey: v,
-      Layer: p.default,
+      Layer: I.default,
       onCloseCallback: P
     })
   }, [R, M]), (0, n.jsx)(S.default, {
@@ -131,7 +131,7 @@ function R() {
           })
         })
       }, {
-        Layer: p.default
+        Layer: I.default
       })
     }
   })

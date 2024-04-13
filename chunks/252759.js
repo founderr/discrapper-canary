@@ -7,9 +7,9 @@
         return n
       }
     });
-    var d, n, c = a("75834");
+    var d, n, i = a("75834");
 
-    function i(e, t, a) {
+    function c(e, t, a) {
       return t in e ? Object.defineProperty(e, t, {
         value: a,
         enumerable: !0,
@@ -19,7 +19,7 @@
     }(d = n || (n = {})).STREAM = "stream", d.PAUSE = "pause", d.STOP = "stop";
     class r {
       onStreamBegin(e, t) {
-        let a = (0, c.getInitialStreamTarget)(e, t);
+        let a = (0, i.getInitialStreamTarget)(e, t);
         null == a || null == a.windowHandle ? this.callback({
           type: "stop"
         }) : this._stream(a)
@@ -42,7 +42,7 @@
         return (null === (t = this.application) || void 0 === t ? void 0 : t.windowHandle) != null ? this.onCaptureEnd(e, this.application.windowHandle) : this._stop()
       }
       _update(e) {
-        let t = (0, c.getStreamTarget)(e, this.application);
+        let t = (0, i.getStreamTarget)(e, this.application);
         if (null != t) return null == t.windowHandle ? this._pause() : this._stream(t);
         this._stop()
       }
@@ -68,6 +68,6 @@
         }))
       }
       constructor(e) {
-        i(this, "callback", void 0), i(this, "active", void 0), i(this, "application", void 0), this.callback = e, this.active = !1, this.application = null
+        c(this, "callback", void 0), c(this, "active", void 0), c(this, "application", void 0), this.callback = e, this.active = !1, this.application = null
       }
     }

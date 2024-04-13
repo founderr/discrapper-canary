@@ -25,7 +25,7 @@ function C(e) {
     isFocused: C
   } = e, m = s.useContext(u.AnalyticsContext), {
     analyticsLocations: S
-  } = (0, i.default)(), p = e => {
+  } = (0, i.default)(), I = e => {
     e.stopPropagation(), l.default.unblockUser(t.id, {
       location: "Friends"
     })
@@ -49,7 +49,7 @@ function C(e) {
         icon: o.default,
         actionType: d.default.ActionTypes.DENY,
         tooltip: h.default.Messages.UNBLOCK,
-        onClick: p,
+        onClick: I,
         shouldHighlight: e
       })]
     })

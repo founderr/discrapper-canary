@@ -20,8 +20,8 @@ var n = a("735250"),
   C = a("900849"),
   m = a("556017"),
   S = a("879484"),
-  p = a("26580"),
-  I = a("206887"),
+  I = a("26580"),
+  p = a("206887"),
   T = a("981631"),
   g = a("689938"),
   A = a("208596"),
@@ -167,9 +167,9 @@ t.default = e => {
             className: A.description,
             variant: "text-sm/normal",
             children: D
-          }), K && null != j && null != L && (0, n.jsx)(p.DiscoveryTags, {
+          }), K && null != j && null != L && (0, n.jsx)(I.DiscoveryTags, {
             guildId: l.id,
-            discoveryTagStyle: p.DiscoveryTagStyle.ALT,
+            discoveryTagStyle: I.DiscoveryTagStyle.ALT,
             onTagClick: e => L(e, l.id),
             tags: j,
             section: C.AnalyticsContexts.SEARCH
@@ -201,7 +201,7 @@ t.default = e => {
           })]
         }), z ? (0, n.jsx)("div", {
           className: A.actionButtons,
-          children: (0, n.jsx)(I.default, {
+          children: (0, n.jsx)(p.default, {
             guild: l
           })
         }) : null]

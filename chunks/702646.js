@@ -16,17 +16,17 @@ var n = a("735250"),
   C = a("481060"),
   m = a("442837"),
   S = a("92373"),
-  p = a("10473"),
-  I = a("207796"),
+  I = a("10473"),
+  p = a("207796"),
   T = a("308083"),
   g = a("689938"),
   A = a("60427");
 
 function N() {
-  let e = (0, I.useClanDiscoveryUIStore)(e => e.selectedGames, o()),
-    t = (0, I.useClanDiscoveryUIStore)(e => e.setMode, u.default),
+  let e = (0, p.useClanDiscoveryUIStore)(e => e.selectedGames, o()),
+    t = (0, p.useClanDiscoveryUIStore)(e => e.setMode, u.default),
     a = s.useCallback(() => {
-      t(I.ClanDiscoveryMode.GAMES)
+      t(p.ClanDiscoveryMode.GAMES)
     }, [t]),
     l = e.map(e => e.name).join(", "),
     r = (0, n.jsx)("div", {
@@ -65,12 +65,12 @@ function N() {
 
 function v() {
   let e = s.useMemo(T.getPlaystyleOptions, []),
-    t = (0, I.useClanDiscoveryUIStore)(e => e.selectedPlaystyle.id, u.default),
-    a = (0, I.useClanDiscoveryUIStore)(e => e.selectedPlaystyle.name, u.default),
-    l = (0, I.useClanDiscoveryUIStore)(e => e.setMode, u.default),
+    t = (0, p.useClanDiscoveryUIStore)(e => e.selectedPlaystyle.id, u.default),
+    a = (0, p.useClanDiscoveryUIStore)(e => e.selectedPlaystyle.name, u.default),
+    l = (0, p.useClanDiscoveryUIStore)(e => e.setMode, u.default),
     i = e[t],
     r = s.useCallback(() => {
-      l(I.ClanDiscoveryMode.PLAYSTYLE)
+      l(p.ClanDiscoveryMode.PLAYSTYLE)
     }, [l]),
     o = null == i ? null : (0, n.jsxs)(n.Fragment, {
       children: [(0, n.jsx)(C.Heading, {
@@ -112,10 +112,10 @@ function v() {
 }
 
 function R() {
-  let e = (0, I.useClanDiscoveryUIStore)(e => e.selectedTraits, u.default),
-    t = (0, I.useClanDiscoveryUIStore)(e => e.setMode, u.default),
+  let e = (0, p.useClanDiscoveryUIStore)(e => e.selectedTraits, u.default),
+    t = (0, p.useClanDiscoveryUIStore)(e => e.setMode, u.default),
     a = s.useCallback(() => {
-      t(I.ClanDiscoveryMode.TRAITS)
+      t(p.ClanDiscoveryMode.TRAITS)
     }, [t]);
   return null == e ? null : (0, n.jsxs)(C.Button, {
     className: A.filterPill,
@@ -135,9 +135,9 @@ function R() {
 }
 
 function O() {
-  let e = (0, I.useClanDiscoveryUIStore)(e => e.setMode, u.default),
+  let e = (0, p.useClanDiscoveryUIStore)(e => e.setMode, u.default),
     t = s.useCallback(() => {
-      e(I.ClanDiscoveryMode.PRIMETIME)
+      e(p.ClanDiscoveryMode.PRIMETIME)
     }, [e]);
   return (0, n.jsxs)(C.Button, {
     className: A.filterPill,
@@ -157,7 +157,7 @@ function O() {
 }
 
 function L() {
-  let e = (0, m.useStateFromStoresArray)([p.default], () => p.default.getFavoriteClans(), []);
+  let e = (0, m.useStateFromStoresArray)([I.default], () => I.default.getFavoriteClans(), []);
   return (0, n.jsxs)(C.Button, {
     className: A.filterPillSmall,
     innerClassName: A.filterPillContents,

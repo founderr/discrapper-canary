@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   AutomodMentionRaidLimit: function() {
-    return r
+    return i
   }
 });
-let r = (0, n("818083").createExperiment)({
+let i = (0, n("818083").createExperiment)({
   kind: "guild",
   id: "2022-12_mention_raid_limit",
   label: "Automod Mention Raid Limit",

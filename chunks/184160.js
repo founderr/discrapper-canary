@@ -12,8 +12,8 @@ var r = s("512722"),
   a = s("481060"),
   o = s("410030"),
   C = s("973159"),
-  u = s("74538"),
-  d = s("987209"),
+  d = s("74538"),
+  u = s("987209"),
   c = s("598"),
   p = s("409813"),
   f = s("614223"),
@@ -28,17 +28,17 @@ function m(e) {
     activeSubscription: m,
     selectedSkuId: L,
     setSelectedPlanId: h,
-    startedPaymentFlowWithPaymentSourcesRef: S
+    startedPaymentFlowWithPaymentSourcesRef: E
   } = (0, c.usePaymentContext)(), {
-    isGift: j
-  } = (0, d.useGiftContext)(), E = null != m ? (0, u.getPremiumPlanItem)(m) : null, P = null != E ? (0, u.getDisplayPremiumType)(E.planId) : null, g = null != E ? (0, u.getPremiumType)(E.planId) : null, y = (0, f.inOneStepSubscriptionCheckout)({
+    isGift: S
+  } = (0, u.useGiftContext)(), j = null != m ? (0, d.getPremiumPlanItem)(m) : null, P = null != j ? (0, d.getDisplayPremiumType)(j.planId) : null, M = null != j ? (0, d.getPremiumType)(j.planId) : null, g = (0, f.inOneStepSubscriptionCheckout)({
     isTrial: !1,
-    isGift: j,
+    isGift: S,
     selectedSkuId: L,
-    startedPaymentFlowWithPaymentSources: S.current
+    startedPaymentFlowWithPaymentSources: E.current
   });
-  return i()(null != g, "Expected premium type"), (0, n.jsx)(C.default, {
-    premiumType: g,
+  return i()(null != M, "Expected premium type"), (0, n.jsx)(C.default, {
+    premiumType: M,
     titleText: x.default.Messages.PREMIUM_DOWNGRADE_WHAT_YOU_LOSE_TITLE,
     subtitleText: x.default.Messages.PREMIUM_DOWNGRADE_WHAT_YOU_LOSE_SUBTITLE.format({
       subscriptionName: P
@@ -47,7 +47,7 @@ function m(e) {
       className: _.whatYouLoseButtonContainer,
       children: [(0, n.jsx)(a.Button, {
         onClick: () => {
-          y ? (h((0, f.getDefaultPlanOneStepCheckout)(L, m)), t(p.Step.REVIEW)) : t(p.Step.PLAN_SELECT)
+          g ? (h((0, f.getDefaultPlanOneStepCheckout)(L, m)), t(p.Step.REVIEW)) : t(p.Step.PLAN_SELECT)
         },
         children: x.default.Messages.CONTINUE
       }), (0, n.jsx)(a.Button, {

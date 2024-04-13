@@ -1,5 +1,5 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   useIsEligibleSenderForReferralProgram: function() {
     return p
   },
@@ -7,31 +7,31 @@ i.r(t), i.d(t, {
     return f
   }
 });
-var n = i("442837"),
-  r = i("524437"),
-  s = i("605236"),
-  a = i("594174"),
-  l = i("74538"),
-  o = i("140465"),
-  u = i("775412"),
-  c = i("520540"),
-  d = i("474936");
+var r = n("442837"),
+  i = n("524437"),
+  s = n("605236"),
+  a = n("594174"),
+  l = n("74538"),
+  u = n("140465"),
+  o = n("775412"),
+  d = n("520540"),
+  c = n("474936");
 let f = e => {
     let t = p(e),
-      i = (0, s.useIsDismissibleContentDismissed)(r.DismissibleContent.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
-    return t && !i
+      n = (0, s.useIsDismissibleContentDismissed)(i.DismissibleContent.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
+    return t && !n
   },
   p = e => {
-    let t = (0, n.useStateFromStores)([a.default], () => a.default.getCurrentUser()),
-      i = (0, o.useHasDiscountApplied)(),
-      r = (0, u.useHasActiveTrial)(),
-      s = null != t && l.default.isPremiumAtLeast(t.premiumType, d.PremiumTypes.TIER_2),
+    let t = (0, r.useStateFromStores)([a.default], () => a.default.getCurrentUser()),
+      n = (0, u.useHasDiscountApplied)(),
+      i = (0, o.useHasActiveTrial)(),
+      s = null != t && l.default.isPremiumAtLeast(t.premiumType, c.PremiumTypes.TIER_2),
       {
         enabled: f
-      } = c.ReferralProgramSender.useExperiment({
+      } = d.ReferralProgramSender.useExperiment({
         location: e
       }, {
         autoTrackExposure: !1
       });
-    return f && s && !i && !r
+    return f && s && !n && !i
   }

@@ -1,47 +1,47 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return c
+    return d
   }
 }), n("47120");
-var a = n("735250");
+var i = n("735250");
 n("470079");
-var i = n("442837"),
+var l = n("442837"),
   s = n("481060"),
-  l = n("607070"),
-  r = n("122890"),
-  u = n("285952"),
-  o = n("300395"),
-  d = n("142749");
+  a = n("607070"),
+  u = n("122890"),
+  o = n("285952"),
+  r = n("300395"),
+  c = n("142749");
 
-function c(e) {
+function d(e) {
   let {
     purchaseState: t,
     currentStep: n,
-    onClose: c
-  } = e, [m, I] = (0, r.usePaymentModalAnimationScene)({
+    onClose: d
+  } = e, [S, p] = (0, u.usePaymentModalAnimationScene)({
     purchaseState: t,
     currentStep: n,
-    initialScene: o.PremiumPaymentGuildAnimation.Scenes.ENTRY,
-    purchaseScene: o.PremiumPaymentGuildAnimation.Scenes.STARS,
-    errorScene: o.PremiumPaymentGuildAnimation.Scenes.ERROR,
-    successScene: o.PremiumPaymentGuildAnimation.Scenes.SUCCESS
-  }), S = (0, i.useStateFromStores)([l.default], () => l.default.useReducedMotion);
-  return (0, a.jsxs)(s.ModalHeader, {
-    align: u.default.Align.START,
-    className: d.header,
+    initialScene: r.PremiumPaymentGuildAnimation.Scenes.ENTRY,
+    purchaseScene: r.PremiumPaymentGuildAnimation.Scenes.STARS,
+    errorScene: r.PremiumPaymentGuildAnimation.Scenes.ERROR,
+    successScene: r.PremiumPaymentGuildAnimation.Scenes.SUCCESS
+  }), m = (0, l.useStateFromStores)([a.default], () => a.default.useReducedMotion);
+  return (0, i.jsxs)(s.ModalHeader, {
+    align: o.default.Align.START,
+    className: c.header,
     separator: !1,
-    children: [(0, a.jsx)(o.PremiumPaymentGuildAnimation, {
-      className: d.animation,
-      nextScene: m,
-      onScenePlay: e => I(o.PremiumPaymentGuildAnimation.getNextScene(e)),
+    children: [(0, i.jsx)(r.PremiumPaymentGuildAnimation, {
+      className: c.animation,
+      nextScene: S,
+      onScenePlay: e => p(r.PremiumPaymentGuildAnimation.getNextScene(e)),
       pauseWhileUnfocused: !1,
-      pause: S
-    }), (0, a.jsx)("div", {
-      className: d.headerTitle
-    }), (0, a.jsx)(s.ModalCloseButton, {
-      onClick: c,
-      className: d.closeButton
+      pause: m
+    }), (0, i.jsx)("div", {
+      className: c.headerTitle
+    }), (0, i.jsx)(s.ModalCloseButton, {
+      onClick: d,
+      className: c.closeButton
     })]
   })
 }

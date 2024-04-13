@@ -28,7 +28,7 @@ let i = (e, t) => {
       label: i(t[0], t[1]).isLight() ? e.dark : e.light
     }
   },
-  d = (e, t) => {
+  u = (e, t) => {
     if (0 !== t.length) return 1 === t.length ? {
       primary: t[0],
       secondary: t[0],
@@ -39,7 +39,7 @@ let i = (e, t) => {
       text: i(t[0], t[1]).isLight() ? e.dark : e.light
     }
   },
-  u = (e, t) => {
+  d = (e, t) => {
     let {
       h: r,
       s: o,
@@ -56,7 +56,7 @@ t.default = e => t => {
   if (null == t) return {};
   let o = {
     backgroundColors: c(e, t.backgroundColors),
-    buttonColors: d(e, t.buttonColors),
+    buttonColors: u(e, t.buttonColors),
     confettiColors: t.confettiColors
   };
   return 1 === r ? {
@@ -64,17 +64,17 @@ t.default = e => t => {
     isDarkText: !!(null != o.backgroundColors && o.backgroundColors.secondary.isLight())
   } : {
     backgroundColors: null != o.backgroundColors ? {
-      primary: u(o.backgroundColors.primary, r),
-      secondary: u(o.backgroundColors.secondary, r),
-      border: u(o.backgroundColors.border, r),
-      label: u(o.backgroundColors.label, r)
+      primary: d(o.backgroundColors.primary, r),
+      secondary: d(o.backgroundColors.secondary, r),
+      border: d(o.backgroundColors.border, r),
+      label: d(o.backgroundColors.label, r)
     } : void 0,
     buttonColors: null != o.buttonColors ? {
-      primary: u(o.buttonColors.primary, r),
-      secondary: u(o.buttonColors.secondary, r),
-      text: u(o.buttonColors.text, r)
+      primary: d(o.buttonColors.primary, r),
+      secondary: d(o.buttonColors.secondary, r),
+      text: d(o.buttonColors.text, r)
     } : void 0,
-    confettiColors: o.confettiColors.map(e => u(e, r)),
+    confettiColors: o.confettiColors.map(e => d(e, r)),
     isDarkText: !!(null != o.backgroundColors && o.backgroundColors.secondary.isLight())
   }
 }

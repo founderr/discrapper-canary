@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   LOGO_SIZE: function() {
-    return N
+    return _
   },
   default: function() {
     return y
@@ -30,8 +30,8 @@ var l = a("735250"),
   L = a("474936"),
   v = a("689938"),
   I = a("380762");
-let N = (0, h.getLogoSize)(96),
-  _ = e => {
+let _ = (0, h.getLogoSize)(96),
+  N = e => {
     let {
       category: t
     } = e, {
@@ -91,7 +91,7 @@ function y(e) {
     }), (0, l.jsx)("img", {
       className: I.categoryLogo,
       src: (0, h.getCollectiblesAssetURL)(s.logo, {
-        size: N
+        size: _
       }),
       alt: s.name,
       style: {
@@ -102,7 +102,7 @@ function y(e) {
         [I.blackSummary]: d
       }),
       variant: "text-md/normal",
-      children: s.skuId === i.CollectiblesCategorySkuId.DISXCORE ? (0, l.jsx)(_, {
+      children: s.skuId === i.CollectiblesCategorySkuId.DISXCORE ? (0, l.jsx)(N, {
         category: s
       }) : s.summary
     }), !o && (0, l.jsx)(b.default, {

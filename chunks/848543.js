@@ -20,8 +20,8 @@ var n = a("735250"),
   C = a("131951"),
   m = a("459273"),
   S = a("242291"),
-  p = a("792165"),
-  I = a("603074"),
+  I = a("792165"),
+  p = a("603074"),
   T = a("981631"),
   g = a("921944"),
   A = a("689938"),
@@ -69,11 +69,11 @@ function v(e) {
       let {
         closePopout: a
       } = e;
-      return (0, n.jsx)(I.default, {
+      return (0, n.jsx)(p.default, {
         guildId: b,
         channel: t,
         onClose: a,
-        gridNotice: j === o.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, n.jsx)(p.CustomCallSoundUpsell, {
+        gridNotice: j === o.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, n.jsx)(I.CustomCallSoundUpsell, {
           onClose: a,
           markAsDismissed: G
         }),

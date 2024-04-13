@@ -18,7 +18,7 @@ t.default = e => {
     guildId: t,
     onClose: a,
     gameId: C
-  } = e, m = (0, r.useStateFromStores)([d.default], () => null == d.default.getStateForGuild(t).progress), S = (0, r.useStateFromStores)([o.default], () => o.default.useReducedMotion), [p, I] = s.useState(m && !S ? h.ClanSetupModalPages.INTRO_ANIMATION : h.ClanSetupModalPages.SETUP);
+  } = e, m = (0, r.useStateFromStores)([d.default], () => null == d.default.getStateForGuild(t).progress), S = (0, r.useStateFromStores)([o.default], () => o.default.useReducedMotion), [I, p] = s.useState(m && !S ? h.ClanSetupModalPages.INTRO_ANIMATION : h.ClanSetupModalPages.SETUP);
   s.useEffect(() => {
     null != C && (0, u.updateClanSettings)(t, {
       requiredGameId: C
@@ -45,22 +45,22 @@ t.default = e => {
     children: (0, n.jsx)("div", {
       className: _.modalContents,
       children: (() => {
-        switch (p) {
+        switch (I) {
           case h.ClanSetupModalPages.INTRO_ANIMATION:
             return (0, n.jsx)(c.default, {
               guildId: t,
-              setPage: I
+              setPage: p
             });
           case h.ClanSetupModalPages.SETUP:
             return (0, n.jsx)(E.default, {
               guildId: t,
-              setPage: I,
+              setPage: p,
               onClose: a
             });
           case h.ClanSetupModalPages.SIGN:
             return (0, n.jsx)(f.default, {
               guildId: t,
-              setPage: I,
+              setPage: p,
               onClose: a
             });
           default:

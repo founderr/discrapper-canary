@@ -24,7 +24,7 @@ function S(e, t, a) {
     writable: !0
   }) : e[t] = a, e
 }
-class p extends s.PureComponent {
+class I extends s.PureComponent {
   hasParty(e) {
     return e.length > 1
   }
@@ -85,4 +85,4 @@ t.default = r.default.connectStores([c.default, h.default, E.default, f.default]
     host: e,
     party: l
   }
-})(p)
+})(I)

@@ -34,7 +34,7 @@ t.default = e => {
     n.splice(e, 1), t({
       primetime: n
     })
-  }, p = (0, c.getDayOptions)();
+  }, I = (0, c.getDayOptions)();
   return (0, n.jsxs)("div", {
     className: _.slideContent,
     children: [(0, n.jsx)(r.Heading, {
@@ -57,7 +57,7 @@ t.default = e => {
         className: _.timeSelectorRow,
         children: [(0, n.jsx)(r.SearchableSelect, {
           value: e.day,
-          options: p,
+          options: I,
           placeholder: h.default.Messages.CLAN_PRIMETIME_PLACEHOLDER,
           onChange: e => C(t, e)
         }), (0, n.jsx)(f.default, {

@@ -9,22 +9,22 @@ var s, a, l, i, r = n("735250"),
   u = n("803997"),
   d = n.n(u),
   c = n("911765"),
-  E = n("153832"),
-  f = n("468194"),
+  f = n("153832"),
+  E = n("468194"),
   _ = n("477690"),
-  T = n("481060"),
-  I = n("230711"),
-  m = n("745510"),
+  m = n("481060"),
+  T = n("230711"),
+  I = n("745510"),
   p = n("739566"),
-  N = n("64078"),
-  S = n("29270"),
-  C = n("903958"),
-  A = n("709586"),
-  h = n("482207"),
+  h = n("64078"),
+  N = n("29270"),
+  S = n("903958"),
+  C = n("709586"),
+  A = n("482207"),
   g = n("702346"),
   M = n("267642"),
-  O = n("981631"),
-  R = n("689938"),
+  R = n("981631"),
+  O = n("689938"),
   v = n("152209");
 (l = s || (s = {})).ENTER = "enter", l.CONFETTI = "confetti", l.LEAF_PEEL = "leaf_peel", l.LEAF_FALL = "leaf_fall", l.EXIT = "exit";
 let L = {
@@ -50,9 +50,9 @@ let L = {
   }
 };
 (i = a || (a = {})).TOP_LEFT = "TOP_LEFT", i.TOP_RIGHT = "TOP_RIGHT", i.BOTTOM_LEFT = "BOTTOM_LEFT", i.BOTTOM_RIGHT = "BOTTOM_RIGHT";
-let P = ["TOP_LEFT", "TOP_RIGHT"],
-  D = (0, f.cssValueToNumber)(_.default.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
-  x = {
+let x = ["TOP_LEFT", "TOP_RIGHT"],
+  D = (0, E.cssValueToNumber)(_.default.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
+  P = {
     leafPosition: {
       x: 85,
       y: 125
@@ -91,7 +91,7 @@ let P = ["TOP_LEFT", "TOP_RIGHT"],
       leafRotationDirection: -1
     },
     BOTTOM_LEFT: {
-      ...x,
+      ...P,
       getConfettiPosition: e => ({
         x: e - 11,
         y: 125
@@ -102,7 +102,7 @@ let P = ["TOP_LEFT", "TOP_RIGHT"],
       }
     },
     BOTTOM_RIGHT: {
-      ...x,
+      ...P,
       getConfettiPosition: e => ({
         x: 11,
         y: 125
@@ -114,10 +114,10 @@ let P = ["TOP_LEFT", "TOP_RIGHT"],
     }
   }),
   U = "falling-leaf",
-  j = ["#61D5B2"],
-  b = n("303893"),
+  b = ["#61D5B2"],
+  j = n("303893"),
   G = n("808392"),
-  B = [b, G];
+  B = [j, G];
 
 function F() {
   return n.e("60005").then(n.t.bind(n, "931152", 19)).then(e => {
@@ -134,7 +134,7 @@ function k(e) {
     onClick: n,
     position: s,
     size: l
-  } = e, i = o.useRef(null), [u, f] = o.useState(null), [_] = o.useState(null != s ? s : function() {
+  } = e, i = o.useRef(null), [u, E] = o.useState(null), [_] = o.useState(null != s ? s : function() {
     switch (Math.floor(Math.random() * Object.keys(a).length)) {
       case 0:
         return "TOP_LEFT";
@@ -146,15 +146,15 @@ function k(e) {
         return "BOTTOM_RIGHT"
     }
   }()), {
-    createMultipleConfettiAt: I,
+    createMultipleConfettiAt: T,
     confettiCanvas: p
-  } = o.useContext(m.ConfettiCannonContext), [N, S] = o.useState(null), A = (0, c.useConfettiCannon)(p, N), h = function(e, t) {
+  } = o.useContext(I.ConfettiCannonContext), [h, N] = o.useState(null), C = (0, c.useConfettiCannon)(p, h), A = function(e, t) {
     if (null == e) return "enter";
     switch (e) {
       case "enter":
         return "confetti";
       case "confetti":
-        if (P.includes(t)) return "leaf_peel";
+        if (x.includes(t)) return "leaf_peel";
         return "exit";
       case "leaf_peel":
         return "leaf_fall";
@@ -163,11 +163,11 @@ function k(e) {
       case "exit":
         return "enter"
     }
-  }(u, _), g = P.includes(_), M = g && "exit" === u, O = o.useCallback(e => {
-    f(e)
-  }, []), R = o.useCallback(() => {
+  }(u, _), g = x.includes(_), M = g && "exit" === u, R = o.useCallback(e => {
+    E(e)
+  }, []), O = o.useCallback(() => {
     "exit" === u && (null == t || t())
-  }, [t, u]), x = o.useCallback(e => {
+  }, [t, u]), P = o.useCallback(e => {
     i.current = e
   }, []);
   return o.useEffect(() => {
@@ -187,7 +187,7 @@ function k(e) {
           y: s.top + a.y
         }
       }(i.current, _, l);
-      I(t.x, t.y, {
+      T(t.x, t.y, {
         velocity: {
           type: "static-random",
           minValue: {
@@ -201,11 +201,11 @@ function k(e) {
         }
       })
     }
-  }, [I, _, u, l]), o.useEffect(() => {
+  }, [T, _, u, l]), o.useEffect(() => {
     if (g && "leaf_fall" === u) {
       let e = y[_].leafRotationDirection;
-      A.createConfetti({
-        id: "".concat(U, "-").concat((0, E.v4)()),
+      C.createConfetti({
+        id: "".concat(U, "-").concat((0, f.v4)()),
         position: {
           type: "static",
           value: function(e, t) {
@@ -249,17 +249,17 @@ function k(e) {
           }
         }
       }, {
-        sprite: "TOP_LEFT" === _ ? b : G
+        sprite: "TOP_LEFT" === _ ? j : G
       })
     }
-  }, [g, A, _, u]), (0, r.jsxs)(r.Fragment, {
+  }, [g, C, _, u]), (0, r.jsxs)(r.Fragment, {
     children: [(0, r.jsx)(c.SpriteCanvas, {
-      ref: S,
+      ref: N,
       sprites: B,
-      colors: j,
+      colors: b,
       spriteWidth: 45,
       spriteHeight: 45
-    }), (0, r.jsx)(T.Clickable, {
+    }), (0, r.jsx)(m.Clickable, {
       onClick: n,
       className: d()(v.easterEggAnimationClickTarget, {
         [v.easterEggAnimationClickTargetTopLeft]: "TOP_LEFT" === _,
@@ -267,15 +267,15 @@ function k(e) {
         [v.easterEggAnimationClickTargetBottomLeft]: "BOTTOM_LEFT" === _,
         [v.easterEggAnimationClickTargetBottomRight]: "BOTTOM_RIGHT" === _
       }),
-      children: (0, r.jsx)(C.default, {
-        animationRef: x,
+      children: (0, r.jsx)(S.default, {
+        animationRef: P,
         className: d()(v.easterEggAnimation, {
           [v.easterEggAnimationHideLeaf]: M
         }),
-        nextScene: h,
+        nextScene: A,
         sceneSegments: L,
-        onScenePlay: O,
-        onSceneComplete: R,
+        onScenePlay: R,
+        onSceneComplete: O,
         importData: F,
         pauseWhileUnfocused: !1
       })
@@ -293,73 +293,73 @@ function w(e) {
     } = e,
     u = function(e) {
       switch (e.type) {
-        case O.MessageTypes.GUILD_BOOST_TIER_1:
-          return O.BoostedGuildTiers.TIER_1;
-        case O.MessageTypes.GUILD_BOOST_TIER_2:
-          return O.BoostedGuildTiers.TIER_2;
-        case O.MessageTypes.GUILD_BOOST_TIER_3:
-          return O.BoostedGuildTiers.TIER_3
+        case R.MessageTypes.GUILD_BOOST_TIER_1:
+          return R.BoostedGuildTiers.TIER_1;
+        case R.MessageTypes.GUILD_BOOST_TIER_2:
+          return R.BoostedGuildTiers.TIER_2;
+        case R.MessageTypes.GUILD_BOOST_TIER_3:
+          return R.BoostedGuildTiers.TIER_3
       }
       return null
     }(n),
-    d = (0, S.default)(n),
+    d = (0, N.default)(n),
     {
       createMultipleConfettiAt: c,
-      addClickListener: E
-    } = o.useContext(m.ConfettiCannonContext),
-    [f, _] = o.useState(!1),
-    C = o.useRef(null),
+      addClickListener: f
+    } = o.useContext(I.ConfettiCannonContext),
+    [E, _] = o.useState(!1),
+    S = o.useRef(null),
     {
       reducedMotion: L
-    } = o.useContext(T.AccessibilityPreferencesContext),
-    P = (0, p.getMessageAuthor)(n),
-    D = P.nick,
-    x = l(P);
-  t = null == u || null == a ? d > 1 ? R.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY_HOOK.format({
+    } = o.useContext(m.AccessibilityPreferencesContext),
+    x = (0, p.getMessageAuthor)(n),
+    D = x.nick,
+    P = l(x);
+  t = null == u || null == a ? d > 1 ? O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY_HOOK.format({
     username: D,
-    usernameHook: x,
+    usernameHook: P,
     numSubscriptions: d
-  }) : R.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_HOOK.format({
+  }) : O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_HOOK.format({
     username: D,
-    usernameHook: x
-  }) : d > 1 ? R.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY_ACHIEVED_TIER_HOOK.format({
+    usernameHook: P
+  }) : d > 1 ? O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY_ACHIEVED_TIER_HOOK.format({
     username: D,
-    usernameHook: x,
+    usernameHook: P,
     numSubscriptions: d,
     guildName: a.name,
     newTierName: (0, M.getTierName)(u)
-  }) : R.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_ACHIEVED_TIER_HOOK.format({
+  }) : O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_ACHIEVED_TIER_HOOK.format({
     username: D,
-    usernameHook: x,
+    usernameHook: P,
     guildName: a.name,
     newTierName: (0, M.getTierName)(u)
   });
   let y = o.useCallback(() => {
       if (!L.enabled) {
-        if (f || 0 !== Math.floor(50 * Math.random())) {
+        if (E || 0 !== Math.floor(50 * Math.random())) {
           var e;
-          let t = null === (e = C.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
+          let t = null === (e = S.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
           if (null != t) c(t.left + t.width / 2, t.top + t.height / 2)
         } else _(!0)
       }
-    }, [c, L, f]),
-    j = o.useCallback(() => {
+    }, [c, L, E]),
+    b = o.useCallback(() => {
       _(!1)
     }, []),
-    b = o.useCallback(() => {
-      (0, N.updatePoggermodeSettings)({
+    j = o.useCallback(() => {
+      (0, h.updatePoggermodeSettings)({
         settingsVisible: !0
-      }), I.default.open(O.UserSettingsSections.POGGERMODE), _(!1)
+      }), T.default.open(R.UserSettingsSections.POGGERMODE), _(!1)
     }, []),
     G = o.useCallback((e, t) => {
-      (null == t ? void 0 : t.id.startsWith(U)) && b()
-    }, [b]);
-  o.useEffect(() => E(G));
-  let B = (0, r.jsx)(T.Clickable, {
+      (null == t ? void 0 : t.id.startsWith(U)) && j()
+    }, [j]);
+  o.useEffect(() => f(G));
+  let B = (0, r.jsx)(m.Clickable, {
     className: v.iconWrapper,
-    innerRef: C,
+    innerRef: S,
     onClick: i,
-    children: (0, r.jsx)(A.default, {
+    children: (0, r.jsx)(C.default, {
       className: v.icon,
       onMouseEnter: y
     })
@@ -372,12 +372,12 @@ function w(e) {
       onClick: i,
       className: v.message,
       children: t
-    }), f ? (0, r.jsx)(h.default, {
+    }), E ? (0, r.jsx)(A.default, {
       children: (0, r.jsx)("div", {
         className: v.cannonWrapper,
         children: (0, r.jsx)(k, {
-          onAnimationComplete: j,
-          onClick: b
+          onAnimationComplete: b,
+          onClick: j
         })
       })
     }) : null]

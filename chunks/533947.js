@@ -10,28 +10,28 @@ var i, r, o, u, d = a("392711"),
   C = a("430824"),
   m = a("496675"),
   S = a("855674"),
-  p = a("981631");
-let I = [],
+  I = a("981631");
+let p = [],
   T = null,
   g = !1,
-  A = p.FormStates.CLOSED,
+  A = I.FormStates.CLOSED,
   N = {},
   v = !1,
   R = null;
 
 function O() {
-  if (n = null != (s = _.default.getChannel()) ? C.default.getGuild(s.guild_id) : null, I = null != s && null != n && m.default.can(p.Permissions.MANAGE_WEBHOOKS, s) ? S.default.getWebhooksForChannel(n.id, s.id) : [], null != T) {
+  if (n = null != (s = _.default.getChannel()) ? C.default.getGuild(s.guild_id) : null, p = null != s && null != n && m.default.can(I.Permissions.MANAGE_WEBHOOKS, s) ? S.default.getWebhooksForChannel(n.id, s.id) : [], null != T) {
     let e = M(T.id);
     null != e && (T = e)
   }
-  A = p.FormStates.OPEN, N = {}, v = !1
+  A = I.FormStates.OPEN, N = {}, v = !1
 }
 let L = c().debounce(() => {
   v && ((null == T || c().isEqual(T, M(T.id))) && (v = !1), !v && x.emitChange())
 }, 500);
 
 function M(e) {
-  return I.find(t => {
+  return p.find(t => {
     let {
       id: a
     } = t;
@@ -46,7 +46,7 @@ class P extends(i = f.default.Store) {
     return v
   }
   get webhooks() {
-    return I
+    return p
   }
   get editedWebhook() {
     return T
@@ -62,8 +62,8 @@ class P extends(i = f.default.Store) {
   }
   getProps() {
     return {
-      submitting: A === p.FormStates.SUBMITTING,
-      webhooks: I,
+      submitting: A === I.FormStates.SUBMITTING,
+      webhooks: p,
       editedWebhook: T,
       section: l,
       sectionId: R,
@@ -86,8 +86,8 @@ let x = new P(E.default, __OVERLAY__ ? {} : {
     let {
       section: t
     } = e;
-    if (t !== p.ChannelSettingsSections.INTEGRATIONS) return !1;
-    if (l = p.IntegrationSettingsSections.OVERVIEW, null == n) {
+    if (t !== I.ChannelSettingsSections.INTEGRATIONS) return !1;
+    if (l = I.IntegrationSettingsSections.OVERVIEW, null == n) {
       let e = _.default.getChannel(),
         t = null == e ? void 0 : e.getGuildId();
       null != e && null != t && (h.default.fetchForChannel(t, e.id), g = !0), O()
@@ -120,7 +120,7 @@ let x = new P(E.default, __OVERLAY__ ? {} : {
     }, null != t.name && T.name !== t.name && (T.name = t.name, v = !0), void 0 !== t.avatar && T.avatar !== t.avatar && (T.avatar = t.avatar, v = !0), null != t.channelId && T.channel_id !== t.channelId && (T.channel_id = t.channelId, v = !0), v && L()
   },
   CHANNEL_SETTINGS_CLOSE: function() {
-    s = null, n = null, I = [], T = null, A = p.FormStates.CLOSED
+    s = null, n = null, p = [], T = null, A = I.FormStates.CLOSED
   },
   WEBHOOKS_UPDATE: function(e) {
     let {
@@ -128,10 +128,10 @@ let x = new P(E.default, __OVERLAY__ ? {} : {
       channelId: a,
       webhooks: l
     } = e;
-    if (null == n || t !== n.id || null == s || a !== s.id || null == l || A === p.FormStates.SUBMITTING) return !1;
+    if (null == n || t !== n.id || null == s || a !== s.id || null == l || A === I.FormStates.SUBMITTING) return !1;
     g = !1;
-    for (let e = I.length - 1; e >= 0; e--) {
-      let t = I[e];
+    for (let e = p.length - 1; e >= 0; e--) {
+      let t = p[e];
       if (null != a && (null == t ? void 0 : t.channel_id) !== a) continue;
       let n = l.find(e => {
         let {
@@ -144,24 +144,24 @@ let x = new P(E.default, __OVERLAY__ ? {} : {
           ...t,
           ...n
         };
-        I[e] = a, !v && (null == T ? void 0 : T.id) === a.id && (T = a)
-      } else(null == T ? void 0 : T.id) === t.id && (T = null), I.splice(e, 1)
+        p[e] = a, !v && (null == T ? void 0 : T.id) === a.id && (T = a)
+      } else(null == T ? void 0 : T.id) === t.id && (T = null), p.splice(e, 1)
     }
-    for (let e of l) null == I.find(t => {
+    for (let e of l) null == p.find(t => {
       let {
         id: a
       } = t;
       if (a === e.id) return !0
-    }) && I.push(e);
-    I = [...I], L()
+    }) && p.push(e);
+    p = [...p], L()
   },
   INTEGRATION_SETTINGS_SUBMITTING: function() {
-    A = p.FormStates.SUBMITTING, N = {}
+    A = I.FormStates.SUBMITTING, N = {}
   },
   INTEGRATION_SETTINGS_SAVE_FAILURE: function(e) {
     var t;
-    if (A !== p.FormStates.SUBMITTING) return !1;
-    A = p.FormStates.OPEN, N = null !== (t = e.errors) && void 0 !== t ? t : {}
+    if (A !== I.FormStates.SUBMITTING) return !1;
+    A = I.FormStates.OPEN, N = null !== (t = e.errors) && void 0 !== t ? t : {}
   }
 });
 t.default = x

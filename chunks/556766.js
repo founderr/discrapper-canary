@@ -16,8 +16,8 @@ var n = a("735250"),
   C = a("246946"),
   m = a("340895"),
   S = a("557177"),
-  p = a("871465");
-let I = {
+  I = a("871465");
+let p = {
     transform: "scale(0.7)",
     opacity: 0
   },
@@ -43,7 +43,7 @@ t.default = () => {
     O = (0, r.useStableMemo)(() => {
       let e = "call_ringing";
       if (g && !A) return (0, S.createSound)(c.default.ringtone, e);
-      if (v === p.Soundpacks.CLASSIC) {
+      if (v === I.Soundpacks.CLASSIC) {
         let t = 500 === i().random(1, 1e3) ? "call_ringing_beat" : "call_ringing";
         return (0, S.createSound)(t, e)
       }
@@ -63,10 +63,10 @@ t.default = () => {
       return null === (t = e.channel) || void 0 === t ? void 0 : t.id
     },
     enter: {
-      from: I,
+      from: p,
       to: T
     },
-    leave: I,
+    leave: p,
     config: {
       mass: 1,
       tension: 500,

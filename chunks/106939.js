@@ -23,8 +23,8 @@ var n = a("735250"),
   C = a("252618"),
   m = a("605236"),
   S = a("984370"),
-  p = a("797614"),
-  I = a("108427"),
+  I = a("797614"),
+  p = a("108427"),
   T = a("210887"),
   g = a("695346"),
   A = a("594174"),
@@ -146,7 +146,7 @@ function q() {
     T = null != e,
     g = l && null != S && !T;
   return (s.useEffect(() => {
-    (0, I.trackAppUIViewed)("family-center"), M.default.initialPageLoad(), !a && (0, m.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
+    (0, p.trackAppUIViewed)("family-center"), M.default.initialPageLoad(), !a && (0, m.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
       dismissAction: H.ContentDismissActionType.AUTO,
       forceTrack: !0
     })
@@ -157,7 +157,7 @@ function q() {
       selected_teen_id: r,
       initial_page: w.FamilyCenterSubPageAnalyticsIds[f],
       source: w.FamilyCenterPageLocationAnalyticsIds[w.FamilyCenterPageLocation.SIDENAV]
-    }), p.default.increment({
+    }), I.default.increment({
       name: o.MetricEvents.FAMILY_CENTER_VIEW
     }))
   }, [l, T]), g) ? ((0, E.openAgeGateModal)(F.AgeGateSource.FAMILY_CENTER), null) : (0, n.jsxs)("main", {
@@ -189,7 +189,7 @@ function Q() {
     handleTabChange: L
   } = (0, x.default)(), U = (0, N.useUID)(), j = A.default.getCurrentUser(), G = null != t, Y = r && null != j && !G;
   if (s.useEffect(() => {
-      f.setHomeLink(k.Routes.FAMILY_CENTER), (0, I.trackAppUIViewed)("family-center"), !P.default.isLoading() && P.default.canRefetch() && M.default.initialPageLoad(), !l && (0, m.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
+      f.setHomeLink(k.Routes.FAMILY_CENTER), (0, p.trackAppUIViewed)("family-center"), !P.default.isLoading() && P.default.canRefetch() && M.default.initialPageLoad(), !l && (0, m.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
         dismissAction: H.ContentDismissActionType.AUTO,
         forceTrack: !0
       })
@@ -200,7 +200,7 @@ function Q() {
         selected_teen_id: S,
         initial_page: w.FamilyCenterSubPageAnalyticsIds[R],
         source: w.FamilyCenterPageLocationAnalyticsIds[w.FamilyCenterPageLocation.SIDENAV]
-      }), p.default.increment({
+      }), I.default.increment({
         name: o.MetricEvents.FAMILY_CENTER_VIEW
       }))
     }, [r, G]), s.useEffect(() => {

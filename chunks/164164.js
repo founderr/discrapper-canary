@@ -16,8 +16,8 @@ var n = a("735250"),
   C = a("569984"),
   m = a("497505"),
   S = a("918701"),
-  p = a("340100"),
-  I = a("611855"),
+  I = a("340100"),
+  p = a("611855"),
   T = a("644646"),
   g = a("78826"),
   A = a("670638"),
@@ -118,7 +118,7 @@ let O = s.forwardRef(function(e, t) {
         color: "always-white",
         variant: "text-xs/normal",
         children: K
-      }), (0, n.jsx)(p.default, {
+      }), (0, n.jsx)(I.default, {
         quest: D
       })]
     }) : (0, n.jsxs)("div", {
@@ -128,7 +128,7 @@ let O = s.forwardRef(function(e, t) {
         ref: t,
         children: [(0, n.jsxs)("div", {
           className: R.utils,
-          children: [(0, n.jsx)(I.default, {
+          children: [(0, n.jsx)(p.default, {
             color: "always-white"
           }), (0, n.jsx)(A.QuestsEntryContextMenuPopout, {
             onOpen: P,

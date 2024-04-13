@@ -34,7 +34,7 @@ function c(e, t) {
     l = {
       status: "loaded",
       loadedAt: Date.now(),
-      items: a.sort((e, a) => (0, o.getClanDiscoveryAffinity)(e, t) - (0, o.getClanDiscoveryAffinity)(a, t))
+      items: a.sort((e, a) => (0, o.getClanDiscoveryAffinity)(a, t) - (0, o.getClanDiscoveryAffinity)(e, t))
     };
   i.default.dispatch({
     type: "FETCH_CLAN_DISCOVERY_SEARCH_RESULT_SUCCESS",

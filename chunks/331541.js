@@ -20,8 +20,8 @@ var n = a("735250"),
   C = a("393238"),
   m = a("727637"),
   S = a("420660"),
-  p = a("100527"),
-  I = a("906732"),
+  I = a("100527"),
+  p = a("906732"),
   T = a("521868"),
   g = a("299206"),
   A = a("440051"),
@@ -157,7 +157,7 @@ function $(e) {
     closePopout: b
   } = e, U = (0, _.useAnalyticsContext)(), {
     analyticsLocations: G
-  } = (0, I.default)(p.default.ACCOUNT_PROFILE_POPOUT), H = (0, L.default)(t.id, l), [V, $, ee, et] = (0, c.useStateFromStoresArray)([j.default], () => {
+  } = (0, p.default)(I.default.ACCOUNT_PROFILE_POPOUT), H = (0, L.default)(t.id, l), [V, $, ee, et] = (0, c.useStateFromStoresArray)([j.default], () => {
     var e;
     let a = t.id;
     return "string" != typeof a ? [void 0, void 0, K.StatusTypes.UNKNOWN, !1] : [null !== (e = j.default.findActivity(a, e => e.type !== K.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, j.default.findActivity(t.id, e => e.type === K.ActivityTypes.CUSTOM_STATUS), j.default.getStatus(a), j.default.isMobileOnline(a)]
@@ -271,7 +271,7 @@ function $(e) {
       label: q.default.Messages.COPY_ID_USER,
       showIconFirst: !0
     });
-  return (0, n.jsx)(I.AnalyticsLocationProvider, {
+  return (0, n.jsx)(p.AnalyticsLocationProvider, {
     value: G,
     children: (0, n.jsx)(R.UserProfileAnalyticsProvider, {
       layout: "ACCOUNT_POPOUT",

@@ -21,8 +21,8 @@ var s = a("442837"),
   C = a("251423"),
   m = a("383832"),
   S = a("981631"),
-  p = a("689938"),
-  I = a("319667");
+  I = a("689938"),
+  p = a("319667");
 
 function T() {
   let e = (0, s.useStateFromStores)([u.default], () => u.default.getCurrentUser()),
@@ -44,28 +44,28 @@ function T() {
         f = t ? null : "#".concat(s.discriminator);
       return (0, n.jsx)(l.MenuItem, {
         id: s.id,
-        focusedClassName: I.focused,
+        focusedClassName: p.focused,
         label: e => {
           let {
             isFocused: r
           } = e;
           return (0, n.jsxs)("div", {
-            className: I.userMenuItem,
+            className: p.userMenuItem,
             children: [(0, n.jsx)(l.Avatar, {
               src: s.getAvatarURL(void 0, 40),
               size: l.AvatarSizes.SIZE_24,
               "aria-label": a.username
             }), (0, n.jsxs)("div", {
-              className: I.userMenuUsername,
+              className: p.userMenuUsername,
               children: [(0, n.jsx)(l.Text, {
-                className: I.userMenuText,
+                className: p.userMenuText,
                 variant: "text-sm/normal",
                 children: E.default.getUserTag(s, {
                   mode: "username",
                   identifiable: t ? "never" : "always"
                 })
               }), !s.isPomelo() && (0, n.jsx)(l.Text, {
-                className: I.userMenuDiscriminator,
+                className: p.userMenuDiscriminator,
                 variant: "text-sm/normal",
                 children: f
               })]
@@ -74,13 +74,13 @@ function T() {
               backgroundColor: (0, i.getColor)(r ? S.Color.BRAND_500 : S.Color.WHITE_500),
               width: 18,
               height: 18,
-              className: I.activeIcon
+              className: p.activeIcon
             }), u && (0, n.jsx)(c.default, {
               color: (0, i.getColor)(S.Color.RED_400),
               backgroundColor: (0, i.getColor)(S.Color.WHITE_500),
               width: 15,
               height: 15,
-              className: I.activeIcon
+              className: p.activeIcon
             })]
           })
         },
@@ -92,7 +92,7 @@ function T() {
   return g.push((0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(l.MenuSeparator, {}), (0, n.jsx)(l.MenuItem, {
       id: "manage-accounts",
-      label: p.default.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
+      label: I.default.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
       action: m.default
     })]
   })), g

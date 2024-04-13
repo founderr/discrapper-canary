@@ -1,47 +1,47 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   ONE_TIME_PAYMENT_ADD_PAYMENT_STEP_CONFIG: function() {
-    return E
+    return f
   },
   ONE_TIME_PAYMENT_CONFIRM_STEP_CONFIG: function() {
-    return T
+    return x
   },
   ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG: function() {
-    return S
+    return m
   },
   REVIEW_STEP_CONFIG: function() {
-    return _
+    return S
   },
   SHARED_STEP_CONFIGS: function() {
-    return p
+    return N
   }
 });
-var l = s("735250");
-s("470079");
-var n = s("853872"),
-  a = s("409813"),
-  i = s("276442"),
-  r = s("793541"),
-  u = s("380898"),
-  d = s("713316"),
-  o = s("710094"),
-  c = s("865921"),
-  f = s("689938");
-let S = {
+var a = n("735250");
+n("470079");
+var r = n("853872"),
+  s = n("409813"),
+  i = n("276442"),
+  l = n("793541"),
+  o = n("380898"),
+  u = n("713316"),
+  d = n("710094"),
+  c = n("865921"),
+  p = n("689938");
+let m = {
     key: null,
-    renderStep: e => (0, l.jsx)(c.OneTimePaymentPredicateStep, {
+    renderStep: e => (0, a.jsx)(c.OneTimePaymentPredicateStep, {
       ...e
     })
   },
-  E = {
-    key: a.Step.ADD_PAYMENT_STEPS,
-    renderStep: e => (0, l.jsx)(l.Fragment, {
-      children: (0, l.jsx)(i.PaymentModalAddPaymentStep, {
+  f = {
+    key: s.Step.ADD_PAYMENT_STEPS,
+    renderStep: e => (0, a.jsx)(a.Fragment, {
+      children: (0, a.jsx)(i.PaymentModalAddPaymentStep, {
         ...e,
-        breadcrumbSteps: [a.Step.ADD_PAYMENT_STEPS, a.Step.REVIEW, a.Step.CONFIRM],
+        breadcrumbSteps: [s.Step.ADD_PAYMENT_STEPS, s.Step.REVIEW, s.Step.CONFIRM],
         onReturn: () => {
-          0 === Object.keys(n.default.paymentSources).length ? e.handleClose() : e.handleStepChange(a.Step.REVIEW, {
-            trackedFromStep: a.Step.ADD_PAYMENT_STEPS
+          0 === Object.keys(r.default.paymentSources).length ? e.handleClose() : e.handleStepChange(s.Step.REVIEW, {
+            trackedFromStep: s.Step.ADD_PAYMENT_STEPS
           })
         }
       })
@@ -50,30 +50,30 @@ let S = {
       renderHeader: !0
     }
   },
-  I = {
-    key: a.Step.AWAITING_PURCHASE_TOKEN_AUTH,
-    renderStep: () => (0, l.jsx)(u.default, {})
+  h = {
+    key: s.Step.AWAITING_PURCHASE_TOKEN_AUTH,
+    renderStep: () => (0, a.jsx)(o.default, {})
   },
-  C = {
-    key: a.Step.AWAITING_AUTHENTICATION,
-    renderStep: () => (0, l.jsx)(r.default, {}),
+  E = {
+    key: s.Step.AWAITING_AUTHENTICATION,
+    renderStep: () => (0, a.jsx)(l.default, {}),
     options: {
       renderHeader: !0
     }
   },
-  _ = {
-    key: a.Step.REVIEW,
-    renderStep: e => (0, l.jsx)(o.PaymentModalReviewStep, {
+  S = {
+    key: s.Step.REVIEW,
+    renderStep: e => (0, a.jsx)(d.PaymentModalReviewStep, {
       ...e
     }),
     options: {
-      useBreadcrumbLabel: () => f.default.Messages.BILLING_STEP_REVIEW
+      useBreadcrumbLabel: () => p.default.Messages.BILLING_STEP_REVIEW
     }
   },
-  T = {
-    key: a.Step.CONFIRM,
-    renderStep: e => (0, l.jsx)(d.PaymentModalConfirmStep, {
+  x = {
+    key: s.Step.CONFIRM,
+    renderStep: e => (0, a.jsx)(u.PaymentModalConfirmStep, {
       ...e
     })
   },
-  p = [I, C]
+  N = [h, E]

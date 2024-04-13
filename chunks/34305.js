@@ -24,7 +24,7 @@ function S(e, t, a) {
     writable: !0
   }) : e[t] = a, e
 }
-class p extends s.PureComponent {
+class I extends s.PureComponent {
   renderDiskUsageCircle() {
     let {
       metadata: e
@@ -205,7 +205,7 @@ class p extends s.PureComponent {
     })
   }
 }
-class I extends s.PureComponent {
+class p extends s.PureComponent {
   componentDidMount() {
     (0, r.fetchMetadata)(this.props.installationPaths.map(e => {
       let {
@@ -230,7 +230,7 @@ class I extends s.PureComponent {
           path: l,
           label: i
         } = e;
-        return (0, n.jsx)(p, {
+        return (0, n.jsx)(I, {
           path: l,
           label: i,
           metadata: t[l],
@@ -268,4 +268,4 @@ t.default = l.default.connectStores([o.default], () => ({
   installationPaths: o.default.installationPaths,
   installationPathsMetadata: o.default.installationPathsMetadata,
   defaultInstallationPath: o.default.defaultInstallationPath
-}))(I)
+}))(p)

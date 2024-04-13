@@ -20,8 +20,8 @@ t.default = function(e) {
     isFocused: C,
     isActive: m,
     onOtherHover: S,
-    className: p
-  } = e, [I, T] = s.useState(!1), [g, A] = s.useState(!1), N = () => {
+    className: I
+  } = e, [p, T] = s.useState(!1), [g, A] = s.useState(!1), N = () => {
     T(!0), C && !m && !g && (null == S || S())
   }, v = () => {
     T(!1)
@@ -48,7 +48,7 @@ t.default = function(e) {
         right: -8
       },
       children: (0, n.jsx)(r.default.div, {
-        className: i()(f.messageRequestItem, p, {
+        className: i()(f.messageRequestItem, I, {
           [f.active]: m || g,
           [f.firstItem]: 0 === t
         }),
@@ -61,7 +61,7 @@ t.default = function(e) {
           opacity: 1
         },
         ...e,
-        children: l(I || m || g)
+        children: l(p || m || g)
       })
     })
   })

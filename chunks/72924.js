@@ -17,23 +17,23 @@ var a = n("512722"),
   u = n("341382"),
   d = n("401131"),
   c = n("16084"),
-  E = n("558381"),
-  f = n("821849"),
+  f = n("558381"),
+  E = n("821849"),
   _ = n("15640"),
-  T = n("724870"),
-  I = n("87484"),
-  m = n("928518"),
+  m = n("724870"),
+  T = n("87484"),
+  I = n("928518"),
   p = n("367207"),
-  N = n("106976"),
-  S = n("689011"),
-  C = n("594174"),
-  A = n("853872"),
-  h = n("78839"),
+  h = n("106976"),
+  N = n("689011"),
+  S = n("594174"),
+  C = n("853872"),
+  A = n("78839"),
   g = n("55563"),
   M = n("74538"),
-  O = n("981631");
+  R = n("981631");
 
-function R(e, t) {
+function O(e, t) {
   let {
     applicationId: n,
     id: s
@@ -49,7 +49,7 @@ function R(e, t) {
 }
 
 function v() {
-  let e = m.default.getWindow(O.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
+  let e = I.default.getWindow(R.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
   return null == e || e.closed ? i.DEFAULT_MODAL_CONTEXT : i.POPOUT_MODAL_CONTEXT
 }
 async function L(e) {
@@ -63,18 +63,18 @@ async function L(e) {
     context: d
   } = e, c = g.default.get(n);
   if (null == c) {
-    let e = (await (0, E.fetchAllStoreListingsForApplication)(t)).find(e => e.sku.id === n);
-    l()(null != e, "Could not find store listing for sku"), e.sku.type === O.SKUTypes.SUBSCRIPTION_GROUP && await (0, N.fetchAllSubscriptionListingsDataForApplication)(t, e.id)
+    let e = (await (0, f.fetchAllStoreListingsForApplication)(t)).find(e => e.sku.id === n);
+    l()(null != e, "Could not find store listing for sku"), e.sku.type === R.SKUTypes.SUBSCRIPTION_GROUP && await (0, h.fetchAllSubscriptionListingsDataForApplication)(t, e.id)
   }
-  c = null != c ? c : g.default.get(n), l()(null != c && c.applicationId === t, "SKU must belong to application"), c.type === O.SKUTypes.SUBSCRIPTION && !(0, _.getSubscriptionPlansLoaded)([c.id]) && await (0, f.fetchSubscriptionPlansForSKU)(c.id);
-  let m = v(),
-    A = C.default.getCurrentUser();
+  c = null != c ? c : g.default.get(n), l()(null != c && c.applicationId === t, "SKU must belong to application"), c.type === R.SKUTypes.SUBSCRIPTION && !(0, _.getSubscriptionPlansLoaded)([c.id]) && await (0, E.fetchSubscriptionPlansForSKU)(c.id);
+  let I = v(),
+    C = S.default.getCurrentUser();
   if (c.premium) {
-    if (M.default.canInstallPremiumApplications(A)) return R(c, d);
+    if (M.default.canInstallPremiumApplications(C)) return O(c, d);
     await u.openModal(d), await
 
     function(e, t, n, s, a) {
-      let l = h.default.getPremiumSubscription(),
+      let l = A.default.getPremiumSubscription(),
         i = {
           id: e.id,
           applicationId: e.applicationId
@@ -89,24 +89,24 @@ async function L(e) {
           analyticsObject: n
         };
         switch (a) {
-          case O.AppContext.APP:
+          case R.AppContext.APP:
             return p.default.openPremiumPaymentModalInApp(t);
-          case O.AppContext.OVERLAY:
+          case R.AppContext.OVERLAY:
             return p.default.openPremiumPaymentModalInOverlay(t);
           default:
             throw Error("Unexpected app context: ".concat(a))
         }
       }
       return t()
-    }(c, i, o, r, d), await R(c, d)
+    }(c, i, o, r, d), await O(c, d)
   } else {
-    if (c.type !== O.SKUTypes.SUBSCRIPTION) return new Promise(async (e, s) => {
-      await (0, I.default)({
+    if (c.type !== R.SKUTypes.SUBSCRIPTION) return new Promise(async (e, s) => {
+      await (0, T.default)({
         applicationId: t,
         skuId: n,
         analyticsLocationObject: o,
         analyticsLocations: r,
-        contextKey: m,
+        contextKey: I,
         onComplete: t => {
           var n;
           e(null !== (n = null == t ? void 0 : t.entitlements) && void 0 !== n ? n : [])
@@ -119,13 +119,13 @@ async function L(e) {
     await
 
     function(e, t, n, a, l) {
-      return (0, T.openActivityApplicationPaymentModal)({
+      return (0, m.openActivityApplicationPaymentModal)({
         applicationId: e,
         skuId: t,
         initialPlanId: n,
         analyticsLocationObject: a,
         analyticsLocations: l,
-        renderHeader: (e, t, n) => (0, s.jsx)(S.PurchaseHeader, {
+        renderHeader: (e, t, n) => (0, s.jsx)(N.PurchaseHeader, {
           step: n,
           onClose: () => t(!1)
         })
@@ -133,9 +133,9 @@ async function L(e) {
     }(t, n, a, o, r)
   }
 }
-let P = {
+let x = {
   isIAP: !1,
-  context: O.AppContext.APP,
+  context: R.AppContext.APP,
   promotionId: null,
   isGift: !1
 };
@@ -143,14 +143,14 @@ let P = {
 function D(e, t, a) {
   let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
     u = Promise.resolve();
-  !A.default.hasFetchedPaymentSources && (u = o.fetchPaymentSources());
+  !C.default.hasFetchedPaymentSources && (u = o.fetchPaymentSources());
   let {
     isIAP: d,
     context: c,
-    promotionId: E,
-    isGift: f
+    promotionId: f,
+    isGift: E
   } = {
-    ...P,
+    ...x,
     ...l
   }, _ = v();
   return u.then(() => new Promise((l, o) => {
@@ -159,9 +159,9 @@ function D(e, t, a) {
       applicationId: e,
       skuId: t,
       isIAP: d,
-      isGift: f,
+      isGift: E,
       analyticsLocation: a,
-      promotionId: E,
+      promotionId: f,
       context: c,
       resolve: l,
       reject: o

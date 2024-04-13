@@ -16,8 +16,8 @@ var n = a("735250"),
   C = a("937111"),
   m = a("523924"),
   S = a("390500"),
-  p = a("200305"),
-  I = a("981631"),
+  I = a("200305"),
+  p = a("981631"),
   T = a("756286"),
   g = a("689938"),
   A = a("165069");
@@ -35,7 +35,7 @@ t.default = e => {
     guildPreviewDisabled: C.default.getJoinRequestGuild(v)
   }));
   s.useEffect(() => {
-    null != x && (0, r.transitionTo)(I.Routes.CHANNEL(v))
+    null != x && (0, r.transitionTo)(p.Routes.CHANNEL(v))
   }, [x, v]), s.useEffect(() => {
     !y && f.default.fetchRequestToJoinGuilds()
   }, [y]);
@@ -50,7 +50,7 @@ t.default = e => {
   let G = (a = g.default.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({
       name: null == D ? void 0 : D.toString()
     }), N = () => {
-      L(Math.max(O, T.WaveStates.FILLING)), f.default.removeGuildJoinRequest(v), (0, r.transitionTo)(I.Routes.ME)
+      L(Math.max(O, T.WaveStates.FILLING)), f.default.removeGuildJoinRequest(v), (0, r.transitionTo)(p.Routes.ME)
     }, () => {
       (0, i.openModal)(e => (0, n.jsx)(i.ConfirmModal, {
         header: g.default.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
@@ -99,7 +99,7 @@ t.default = e => {
                 guild: D
               });
             default:
-              return (0, n.jsx)(p.default, {
+              return (0, n.jsx)(I.default, {
                 guildId: v,
                 inviteCode: R,
                 onComplete: U

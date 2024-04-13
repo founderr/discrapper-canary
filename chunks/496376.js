@@ -16,8 +16,8 @@ var n = a("735250"),
   C = a("745628"),
   m = a("950279"),
   S = a("796918"),
-  p = a("22035"),
-  I = a("513532"),
+  I = a("22035"),
+  p = a("513532"),
   T = a("741595"),
   g = a("884486"),
   A = a("974842"),
@@ -47,8 +47,8 @@ let L = [v.ClanSetupSteps.FOUNDATIONAL_INTRO, v.ClanSetupSteps.GAMES, v.ClanSetu
       tag: C,
       primetime: m,
       verificationForm: S,
-      furthestStep: p
-    } = r, I = d === L.length - 1, T = null != S && S.formFields.some(e => !(0, c.isTermsFormField)(e)), g = s.useMemo(() => ({
+      furthestStep: I
+    } = r, p = d === L.length - 1, T = null != S && S.formFields.some(e => !(0, c.isTermsFormField)(e)), g = s.useMemo(() => ({
       [v.ClanSetupSteps.FOUNDATIONAL_INTRO]: {
         disableNextStep: !1
       },
@@ -98,8 +98,8 @@ let L = [v.ClanSetupSteps.FOUNDATIONAL_INTRO, v.ClanSetupSteps.GAMES, v.ClanSetu
           return (0, n.jsx)("div", {
             className: O.progressStep,
             children: a.map(e => {
-              let t = !g[e].disableNextStep && p >= e,
-                a = e <= p;
+              let t = !g[e].disableNextStep && I >= e,
+                a = e <= I;
               return (0, n.jsx)(o.Clickable, {
                 "aria-label": R.default.Messages.STEP_NUMBER.format({
                   number: e
@@ -129,7 +129,7 @@ let L = [v.ClanSetupSteps.FOUNDATIONAL_INTRO, v.ClanSetupSteps.GAMES, v.ClanSetu
           look: o.Button.Looks.FILLED,
           size: o.Button.Sizes.MEDIUM,
           onClick: () => {
-            if (I) {
+            if (p) {
               u();
               return
             }
@@ -257,29 +257,29 @@ t.default = e => {
                   guildId: t
                 });
               case v.ClanSetupSteps.MEMBER_APPLICATION:
-                return (0, n.jsx)(I.default, {
+                return (0, n.jsx)(p.default, {
                   guildId: t
                 });
               case v.ClanSetupSteps.FOUNDATIONAL_INTRO:
-                return (0, n.jsx)(p.default, {
+                return (0, n.jsx)(I.default, {
                   stepNum: 1,
                   title: R.default.Messages.CLAN_SETUP_FOUNDATIONAL_INTRO_TITLE,
                   subtitle: R.default.Messages.CLAN_SETUP_FOUNDATIONAL_INTRO_SUBTITLE
                 });
               case v.ClanSetupSteps.PERSONALITY_INTRO:
-                return (0, n.jsx)(p.default, {
+                return (0, n.jsx)(I.default, {
                   stepNum: 2,
                   title: R.default.Messages.CLAN_SETUP_PERSONALITY_INTRO_TITLE,
                   subtitle: R.default.Messages.CLAN_SETUP_PERSONALITY_INTRO_SUBTITLE
                 });
               case v.ClanSetupSteps.IDENTITY_INTRO:
-                return (0, n.jsx)(p.default, {
+                return (0, n.jsx)(I.default, {
                   stepNum: 3,
                   title: R.default.Messages.CLAN_SETUP_IDENTITY_INTRO_TITLE,
                   subtitle: R.default.Messages.CLAN_SETUP_IDENTITY_INTRO_SUBTITLE
                 });
               case v.ClanSetupSteps.APPLICATION_INTRO:
-                return (0, n.jsx)(p.default, {
+                return (0, n.jsx)(I.default, {
                   stepNum: 4,
                   title: R.default.Messages.CLAN_SETUP_APPLICATION_INTRO_TITLE,
                   subtitle: R.default.Messages.CLAN_SETUP_APPLICATION_INTRO_SUBTITLE

@@ -16,30 +16,30 @@ var n = a("735250"),
   C = a("702646"),
   m = a("207796"),
   S = a("980721"),
-  p = a("689938"),
-  I = a("24953");
+  I = a("689938"),
+  p = a("24953");
 
 function T() {
   let e = (0, m.useClanDiscoveryUIStore)(m.buildSearchCriteriaFromUIState, i()),
     t = (0, m.useClanDiscoveryUIStore)(e => e.selectedPlaystyle.name, o.default),
     a = (0, d.useStateFromStores)([_.default], () => _.default.getSearchResult(e), [e]);
   return (0, S.isUnloadedSearchResult)(a) ? null : (0, S.isLoadedSearchResult)(a) ? (0, n.jsxs)("div", {
-    className: I.topPicks,
+    className: p.topPicks,
     children: [(0, n.jsxs)("div", {
-      className: I.topPicksHeader,
+      className: p.topPicksHeader,
       children: [(0, n.jsx)(u.Heading, {
         variant: "heading-md/medium",
         color: "header-primary",
-        children: p.default.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE
+        children: I.default.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE
       }), (0, n.jsx)(u.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
-        children: p.default.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE.format({
+        children: I.default.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE.format({
           playstyle: t
         })
       })]
     }), (0, n.jsx)("div", {
-      className: I.topPicksContent,
+      className: p.topPicksContent,
       children: a.items.map(t => (0, n.jsx)(E.default, {
         clan: t,
         affinity: (0, S.getClanDiscoveryAffinity)(t, e)
@@ -106,9 +106,9 @@ function A() {
 }
 t.default = function() {
   return (0, n.jsxs)("main", {
-    className: I.container,
+    className: p.container,
     children: [(0, n.jsx)(A, {}), (0, n.jsx)(C.default, {}), (0, n.jsx)("div", {
-      className: I.content,
+      className: p.content,
       children: (0, n.jsx)(T, {})
     }), (0, n.jsx)(g, {})]
   })

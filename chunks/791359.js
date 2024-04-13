@@ -20,8 +20,8 @@ var n = a("735250"),
   C = a("594174"),
   m = a("801077"),
   S = a("626135"),
-  p = a("70956"),
-  I = a("225559"),
+  I = a("70956"),
+  p = a("225559"),
   T = a("910436"),
   g = a("203028"),
   A = a("358924"),
@@ -31,7 +31,7 @@ var n = a("735250"),
   O = a("674563"),
   L = a("689938"),
   M = a("103877");
-let P = 15 * p.default.Millis.MINUTE,
+let P = 15 * I.default.Millis.MINUTE,
   x = (0, v.default)(function(e) {
     let {
       party: t,
@@ -50,7 +50,7 @@ let P = 15 * p.default.Millis.MINUTE,
       applicationStreams: f,
       currentActivities: E,
       voiceChannels: h
-    } = t, _ = c.length, C = f.length, m = E.length, p = h.length > 0, I = s.useCallback(() => {
+    } = t, _ = c.length, C = f.length, m = E.length, I = h.length > 0, p = s.useCallback(() => {
       let e = E.filter(e => {
         var t, a;
         return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (a = e.game) || void 0 === a ? void 0 : a.type) === O.ApplicationTypes.GAME
@@ -59,10 +59,10 @@ let P = 15 * p.default.Millis.MINUTE,
         num_users: _,
         num_streams: C,
         num_activities: m,
-        in_voice_channel: p,
+        in_voice_channel: I,
         games_detected: e
       })
-    }, [_, C, m, p, E]), v = o()(I, P);
+    }, [_, C, m, I, E]), v = o()(p, P);
     return null != r || null != u ? (0, n.jsx)(d.Popout, {
       position: "left",
       renderPopout: e => {
@@ -108,7 +108,7 @@ function D() {
     fetching: _.default.getFetching(),
     currentUser: C.default.getCurrentUser()
   })), r = (0, u.useStateFromStores)([E.default], () => E.default.quests);
-  s.useEffect(() => (c.default.wait(() => I.mount()), () => c.default.wait(() => I.unmount())), [null == i ? void 0 : i.id]), s.useEffect(() => {
+  s.useEffect(() => (c.default.wait(() => p.mount()), () => c.default.wait(() => p.unmount())), [null == i ? void 0 : i.id]), s.useEffect(() => {
     a && !l && y()
   }, [a, l]);
   let o = s.useMemo(() => {

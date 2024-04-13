@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return C
   },
   AwaitingBrowserCheckoutStepFooter: function() {
-    return u
+    return d
   }
 });
 var n = s("735250");
@@ -20,7 +20,7 @@ let C = () => (0, n.jsx)("div", {
       children: o.default.Messages.PAYMENT_WAITING_FOR_BROWSER_CHECKOUT_MODAL_HEADER
     })
   }),
-  u = e => {
+  d = e => {
     let {
       onStepChange: t,
       onBackClick: s

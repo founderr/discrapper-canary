@@ -10,16 +10,16 @@ var a = n("774078"),
   u = n("644766"),
   d = n("639119"),
   c = n("474936"),
-  E = n("981631"),
-  f = n("689938"),
+  f = n("981631"),
+  E = n("689938"),
   _ = n("502786");
 t.default = function(e) {
   var t;
   let {
     dismissCurrentNotice: n,
-    subscriptionTier: T
+    subscriptionTier: m
   } = e, {
-    analyticsLocations: I
+    analyticsLocations: T
   } = (0, i.default)(function(e) {
     switch (e) {
       case c.PremiumSubscriptionSKUs.TIER_0:
@@ -29,8 +29,8 @@ t.default = function(e) {
       default:
         throw Error("Unsupported subscription tier: ".concat(e))
     }
-  }(T)), m = (0, d.usePremiumTrialOffer)(), p = (0, a.default)(null != m && null != m.expires_at ? Date.parse(m.expires_at) : 0);
-  return null == m || (null === (t = m.subscription_trial) || void 0 === t ? void 0 : t.sku_id) !== T || null == m.expires_at || Object.values(p).every(e => 0 === e) ? null : (0, s.jsxs)(u.default, {
+  }(m)), I = (0, d.usePremiumTrialOffer)(), p = (0, a.default)(null != I && null != I.expires_at ? Date.parse(I.expires_at) : 0);
+  return null == I || (null === (t = I.subscription_trial) || void 0 === t ? void 0 : t.sku_id) !== m || null == I.expires_at || Object.values(p).every(e => 0 === e) ? null : (0, s.jsxs)(u.default, {
     color: function(e) {
       switch (e) {
         case c.PremiumSubscriptionSKUs.TIER_0:
@@ -40,7 +40,7 @@ t.default = function(e) {
         default:
           throw Error("Unsupported subscription tier: ".concat(e))
       }
-    }(T),
+    }(m),
     children: [(0, s.jsx)(u.NoticeCloseButton, {
       onClick: n
     }), (0, s.jsx)(o.default, {
@@ -48,47 +48,47 @@ t.default = function(e) {
     }), function(e, t) {
       switch (e) {
         case c.PremiumSubscriptionSKUs.TIER_0:
-          return t.days > 0 ? f.default.Messages.NOTICE_PREMIUM_TIER_0_TRIAL_ENDING_DAYS_VARIANT.format({
+          return t.days > 0 ? E.default.Messages.NOTICE_PREMIUM_TIER_0_TRIAL_ENDING_DAYS_VARIANT.format({
             days: t.days
-          }) : t.hours > 0 ? f.default.Messages.NOTICE_PREMIUM_TIER_0_TRIAL_ENDING_HOURS_VARIANT.format({
+          }) : t.hours > 0 ? E.default.Messages.NOTICE_PREMIUM_TIER_0_TRIAL_ENDING_HOURS_VARIANT.format({
             hours: t.hours
-          }) : f.default.Messages.NOTICE_PREMIUM_TIER_0_TRIAL_ENDING_MINUTES_VARIANT.format({
+          }) : E.default.Messages.NOTICE_PREMIUM_TIER_0_TRIAL_ENDING_MINUTES_VARIANT.format({
             minutes: Math.max(t.minutes, 1)
           });
         case c.PremiumSubscriptionSKUs.TIER_2:
-          return t.days > 0 ? f.default.Messages.NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_DAYS_VARIANT.format({
+          return t.days > 0 ? E.default.Messages.NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_DAYS_VARIANT.format({
             days: t.days
-          }) : t.hours > 0 ? f.default.Messages.NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_HOURS_VARIANT.format({
+          }) : t.hours > 0 ? E.default.Messages.NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_HOURS_VARIANT.format({
             hours: t.hours
-          }) : f.default.Messages.NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_MINUTES_VARIANT.format({
+          }) : E.default.Messages.NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_MINUTES_VARIANT.format({
             minutes: Math.max(t.minutes, 1)
           });
         default:
           throw Error("Unsupported subscription tier: ".concat(e))
       }
-    }(T, p), (0, s.jsx)(u.NoticeButton, {
+    }(m, p), (0, s.jsx)(u.NoticeButton, {
       onClick: () => {
         (0, r.default)({
-          trialId: m.trial_id,
-          subscriptionTier: T,
-          analyticsLocations: I,
+          trialId: I.trial_id,
+          subscriptionTier: m,
+          analyticsLocations: T,
           analyticsObject: {
-            page: E.AnalyticsPages.IN_APP,
-            section: E.AnalyticsSections.NOTIFICATION_BAR,
-            object: E.AnalyticsObjects.BUTTON_CTA
+            page: f.AnalyticsPages.IN_APP,
+            section: f.AnalyticsSections.NOTIFICATION_BAR,
+            object: f.AnalyticsObjects.BUTTON_CTA
           }
         })
       },
       children: function(e) {
         switch (e) {
           case c.PremiumSubscriptionSKUs.TIER_0:
-            return f.default.Messages.NOTICE_PREMIUM_TIER_0_TRIAL_ENDING_CTA_VARIANT;
+            return E.default.Messages.NOTICE_PREMIUM_TIER_0_TRIAL_ENDING_CTA_VARIANT;
           case c.PremiumSubscriptionSKUs.TIER_2:
-            return f.default.Messages.NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_CTA_VARIANT;
+            return E.default.Messages.NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_CTA_VARIANT;
           default:
             throw Error("Unsupported subscription tier: ".concat(e))
         }
-      }(T)
+      }(m)
     })]
   })
 }

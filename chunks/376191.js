@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return p
+    return I
   }
 });
 var n = a("735250");
@@ -22,13 +22,13 @@ var s = a("442837"),
   m = a("548847");
 let S = E.default.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 
-function p(e) {
+function I(e) {
   var t;
   let {
     channel: a,
     otherUser: E,
-    active: p
-  } = e, I = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), T = (0, s.useStateFromStores)([c.default], () => null == E ? null : c.default.getNickname(E.id)), g = (0, h.useMessageRequestRelativeTimestampText)(a), {
+    active: I
+  } = e, p = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), T = (0, s.useStateFromStores)([c.default], () => null == E ? null : c.default.getNickname(E.id)), g = (0, h.useMessageRequestRelativeTimestampText)(a), {
     avatarDecorationSrc: A
   } = (0, u.default)({
     user: E,
@@ -38,7 +38,7 @@ function p(e) {
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(S, {
       className: m.avatar,
-      src: (0, d.getChannelIconURL)(a, 40, !I && p),
+      src: (0, d.getChannelIconURL)(a, 40, !p && I),
       avatarDecoration: A,
       size: l.AvatarSizes.SIZE_40,
       "aria-label": null !== (t = null == E ? void 0 : E.username) && void 0 !== t ? t : C.default.Messages.UNKNOWN_USER

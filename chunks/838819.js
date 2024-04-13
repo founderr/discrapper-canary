@@ -23,8 +23,8 @@ var l = a("735250"),
   L = a("479446"),
   v = a("981632"),
   I = a("290026"),
-  N = a("819640"),
-  _ = a("594174"),
+  _ = a("819640"),
+  N = a("594174"),
   y = a("292665"),
   O = a("471731"),
   k = a("626135"),
@@ -34,8 +34,8 @@ var l = a("735250"),
   P = a("328347"),
   B = a("186711"),
   F = a("223143"),
-  M = a("298228"),
-  D = a("971815"),
+  D = a("298228"),
+  M = a("971815"),
   w = a("853748"),
   H = a("426171"),
   U = a("823941"),
@@ -43,8 +43,8 @@ var l = a("735250"),
   G = a("752053"),
   V = a("508498"),
   z = a("38900"),
-  Y = a("709999"),
-  K = a("373113"),
+  K = a("709999"),
+  Y = a("373113"),
   X = a("302800"),
   Z = a("981631"),
   q = a("921944"),
@@ -64,11 +64,11 @@ function et(e) {
     setIsGiftEasterEggEnabled: h,
     showEasterEggToggle: g,
     isFullScreen: E
-  } = e, b = s.useRef(10 + 70 * Math.random()), S = (0, D.usePurchasedProductsSort)(r.products), T = (0, i.groupBy)(S, "type"), x = (0, u.useStateFromStores)([P.default], () => P.default.initialProductSkuId), {
+  } = e, b = s.useRef(10 + 70 * Math.random()), S = (0, M.usePurchasedProductsSort)(r.products), T = (0, i.groupBy)(S, "type"), x = (0, u.useStateFromStores)([P.default], () => P.default.initialProductSkuId), {
     tallerCardsEnabled: I
   } = (0, B.useCollectiblesShopTallerCardsExperiment)({
     location: "CollectiblesShop"
-  }), N = I ? Y.default : W.default, _ = s.useCallback(e => t => {
+  }), _ = I ? K.default : W.default, N = s.useCallback(e => t => {
     e.skuId === x && (m.current = t.current)
   }, [x, m]), [y, O] = s.useState(!1), k = (0, X.getCountdownDisplayOptions)(r.skuId), A = (0, p.useIsVisible)(e => {
     O(e && null != k)
@@ -82,8 +82,8 @@ function et(e) {
       children: t
     }), (0, l.jsx)("div", {
       className: n()(ee.cardsContainer, I ? ee.tallerShopCard : ee.regularShopCard, c),
-      children: e.map(e => (0, l.jsx)(N, {
-        onMount: _(e),
+      children: e.map(e => (0, l.jsx)(_, {
+        onMount: N(e),
         isPremiumUser: d,
         category: r,
         product: e,
@@ -126,10 +126,10 @@ t.default = function(e) {
     analyticsLocations: r
   } = (0, u.useStateFromStoresObject)([P.default], () => P.default.getAnalytics()), {
     analyticsLocations: i
-  } = (0, E.default)([...r, g.default.COLLECTIBLES_SHOP]), p = (0, u.useStateFromStores)([N.default], () => N.default.getLayers().includes(Z.Layers.COLLECTIBLES_SHOP)), L = (0, d.useHasAnyModalOpen)(), {
+  } = (0, E.default)([...r, g.default.COLLECTIBLES_SHOP]), p = (0, u.useStateFromStores)([_.default], () => _.default.getLayers().includes(Z.Layers.COLLECTIBLES_SHOP)), L = (0, d.useHasAnyModalOpen)(), {
     onClose: v
-  } = (0, V.useCollectiblesShopRouting)(), D = (0, u.useStateFromStores)([_.default], () => _.default.getCurrentUser()), w = A.default.canUseCollectibles(D), U = (0, S.default)("shop_disable_cache"), W = (0, S.default)("shop_include_unpublished"), {
-    categories: Y,
+  } = (0, V.useCollectiblesShopRouting)(), M = (0, u.useStateFromStores)([N.default], () => N.default.getCurrentUser()), w = A.default.canUseCollectibles(M), U = (0, S.default)("shop_disable_cache"), W = (0, S.default)("shop_include_unpublished"), {
+    categories: K,
     isFetchingCategories: X,
     error: ea
   } = (0, F.default)({
@@ -137,7 +137,7 @@ t.default = function(e) {
     includeUnpublished: W
   });
   (0, I.useReloadProfileEffectWhenConfigsAreMissing)();
-  let el = (0, M.usePurchasedCategoriesSort)(Y),
+  let el = (0, D.usePurchasedCategoriesSort)(K),
     {
       tallerCardsEnabled: es
     } = (0, B.useCollectiblesShopTallerCardsExperiment)({
@@ -146,7 +146,7 @@ t.default = function(e) {
     er = s.useRef(null),
     [en, ei] = s.useState(!1);
   (0, H.useProductDetailsDeepLinking)({
-    categories: Y,
+    categories: K,
     isFetchingCategories: X,
     isLayer: p,
     initialItemCardRef: er
@@ -174,10 +174,10 @@ t.default = function(e) {
     !t && (0, m.setHomeLink)(Z.Routes.COLLECTIBLES_SHOP)
   }, [t]), s.useEffect(() => () => {
     (0, j.setCollectiblesCategoryItemsViewed)({
-      categories: [...Y.values()],
+      categories: [...K.values()],
       itemTypes: [o.CollectiblesItemType.AVATAR_DECORATION, o.CollectiblesItemType.PROFILE_EFFECT]
     })
-  }, [Y]), s.useEffect(() => {
+  }, [K]), s.useEffect(() => {
     if (!t || p || L) return;
     let e = e => {
       e.key === $.KeyboardEventKey.Escape && v()
@@ -264,6 +264,6 @@ t.default = function(e) {
           })
         })
       })]
-    }), en && (0, l.jsx)(K.default, {})]
+    }), en && (0, l.jsx)(Y.default, {})]
   })
 }

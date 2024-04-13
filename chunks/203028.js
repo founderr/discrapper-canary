@@ -26,7 +26,7 @@ function C(e) {
   } = e, {
     priorityMembers: C,
     guildContext: m
-  } = t, S = C[0], p = function(e) {
+  } = t, S = C[0], I = function(e) {
     let {
       priorityMembers: t,
       partiedMembers: a
@@ -52,7 +52,7 @@ function C(e) {
         })
     }
   }(t), {
-    subtitle: I,
+    subtitle: p,
     icon: T
   } = function(e) {
     var t;
@@ -61,7 +61,7 @@ function C(e) {
       partiedMembers: d,
       voiceChannels: C,
       currentActivities: m
-    } = e, S = s.length, p = d.length - S, I = m[0], T = null == I ? void 0 : I.activity, g = null == I ? void 0 : I.startedPlayingTime, A = {
+    } = e, S = s.length, I = d.length - S, p = m[0], T = null == p ? void 0 : p.activity, g = null == p ? void 0 : p.startedPlayingTime, A = {
       name: null !== (t = null == T ? void 0 : T.name) && void 0 !== t ? t : ""
     };
     if ((0, i.default)(T) && null != T) return {
@@ -72,10 +72,10 @@ function C(e) {
       }),
       icon: null
     };
-    if (S + p === 1 && null != I) {
+    if (S + I === 1 && null != p) {
       let {
         game: e
-      } = I;
+      } = p;
       if (null == T) return {
         subtitle: null,
         icon: null
@@ -184,8 +184,8 @@ function C(e) {
   return (0, n.jsx)(f.default.Header, {
     priorityUser: S,
     guildId: null == m ? void 0 : m.id,
-    title: p,
-    subtitle: I,
+    title: I,
+    subtitle: p,
     icon: T,
     onContextMenu: e => s(e, S.user)
   })

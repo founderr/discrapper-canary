@@ -1,25 +1,25 @@
 "use strict";
-n.r(t);
-var i = n("735250");
-n("470079");
-var r = n("960259"),
-  s = n("421086");
+i.r(t);
+var n = i("735250");
+i("470079");
+var r = i("960259"),
+  s = i("421086");
 t.default = (0, r.replaceIcon)(function(e) {
   let {
     width: t = 16,
-    height: n = 16,
+    height: i = 16,
     color: r = "currentColor",
     className: s,
     foreground: a
   } = e;
-  return (0, i.jsx)("svg", {
+  return (0, n.jsx)("svg", {
     className: s,
     width: t,
-    height: n,
+    height: i,
     viewBox: "0 0 20 20",
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg",
-    children: (0, i.jsx)("path", {
+    children: (0, n.jsx)("path", {
       className: a,
       fill: r,
       fillRule: "evenodd",

@@ -1,20 +1,20 @@
 "use strict";
-n.r(t);
-var i = n("735250"),
-  r = n("470079"),
-  s = n("574523"),
-  a = n("475521"),
-  l = n("688673");
-let o = (0, s.CustomPicker)(e => (0, i.jsxs)("div", {
+i.r(t);
+var n = i("735250"),
+  r = i("470079"),
+  s = i("574523"),
+  a = i("475521"),
+  l = i("688673");
+let o = (0, s.CustomPicker)(e => (0, n.jsxs)("div", {
   className: l.wrapper,
-  children: [(0, i.jsx)("div", {
+  children: [(0, n.jsx)("div", {
     className: l.saturation,
-    children: (0, i.jsx)(a.Saturation, {
+    children: (0, n.jsx)(a.Saturation, {
       ...e
     })
-  }), (0, i.jsx)("div", {
+  }), (0, n.jsx)("div", {
     className: l.hue,
-    children: (0, i.jsx)(a.Hue, {
+    children: (0, n.jsx)(a.Hue, {
       ...e,
       direction: "horizontal"
     })

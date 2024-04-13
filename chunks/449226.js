@@ -1,35 +1,35 @@
 "use strict";
-n.r(t), n.d(t, {
+i.r(t), i.d(t, {
   default: function() {
     return o
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("803997"),
-  s = n.n(r),
-  a = n("481060"),
-  l = n("893079");
+var n = i("735250");
+i("470079");
+var r = i("803997"),
+  s = i.n(r),
+  a = i("481060"),
+  l = i("893079");
 
 function o(e) {
   let {
     checked: t,
-    onChange: n,
+    onChange: i,
     disabled: r,
     className: o,
     tooltipProps: u
   } = e, c = e => {
     e.stopPropagation(), e.preventDefault()
   };
-  return (0, i.jsx)(a.Clickable, {
+  return (0, n.jsx)(a.Clickable, {
     onClick: c,
     onMouseDown: c,
     onMouseUp: c,
     className: s()(l.switch, o),
     ...u,
-    children: (0, i.jsx)(a.Switch, {
+    children: (0, n.jsx)(a.Switch, {
       checked: t,
-      onChange: n,
+      onChange: i,
       disabled: r
     })
   })

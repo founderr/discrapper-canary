@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+i.r(t), i.d(t, {
   acceptCreatorMonetizationTerms: function() {
     return c
   },
@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return d
   },
   acceptNewTerms: function() {
-    return E
+    return m
   },
   acceptNewTermsDemonetized: function() {
-    return I
+    return h
   },
   createCreatorMonetizationEnableRequest: function() {
     return o
@@ -25,45 +25,45 @@ n.r(t), n.d(t, {
     return f
   },
   ownershipTransferOnboard: function() {
-    return m
+    return C
   },
   removeMonetization: function() {
-    return h
+    return E
   }
 });
-var i = n("544891"),
-  r = n("570140"),
-  s = n("728345"),
-  a = n("981631"),
-  l = n("674563");
+var n = i("544891"),
+  r = i("570140"),
+  s = i("728345"),
+  a = i("981631"),
+  l = i("674563");
 async function o(e) {
-  await i.HTTP.post({
+  await n.HTTP.post({
     url: a.Endpoints.CREATOR_MONETIZATION_ENABLE_REQUESTS(e)
   })
 }
 async function u(e) {
-  return (await i.HTTP.get({
+  return (await n.HTTP.get({
     url: a.Endpoints.CREATOR_MONETIZATION_ELIGIBILITY(e)
   })).body
 }
 async function c(e, t) {
-  await i.HTTP.post({
+  await n.HTTP.post({
     url: a.Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS(e, t)
   })
 }
 async function d(e) {
-  await i.HTTP.post({
+  await n.HTTP.post({
     url: a.Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS_V2(e)
   })
 }
 async function f(e) {
-  return (await i.HTTP.get({
+  return (await n.HTTP.get({
     url: a.Endpoints.CREATOR_MONETIZATION_MARKETING_ONBOARDING(e)
   })).body
 }
 async function p(e) {
   try {
-    let t = await i.HTTP.get({
+    let t = await n.HTTP.get({
       url: a.Endpoints.CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY,
       query: {
         nag_guild_ids: e
@@ -75,37 +75,37 @@ async function p(e) {
     })
   } catch (e) {}
 }
-async function m(e, t) {
-  let n = (await i.HTTP.post({
+async function C(e, t) {
+  let i = (await n.HTTP.post({
     url: a.Endpoints.CREATOR_MONETIZATION_OWNERSHIP_TRANSFER_ONBOARD(e),
     body: {
       team_id: t
     }
   })).body;
-  return null != n.application && r.default.dispatch({
+  return null != i.application && r.default.dispatch({
     type: "APPLICATION_FETCH_SUCCESS",
-    application: n.application
-  }), n
+    application: i.application
+  }), i
 }
 
-function E(e) {
-  return i.HTTP.post({
+function m(e) {
+  return n.HTTP.post({
     url: a.Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS(e)
   })
 }
 
-function I(e) {
-  return i.HTTP.post({
+function h(e) {
+  return n.HTTP.post({
     url: a.Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED(e)
   })
 }
 async function _(e) {
-  await i.HTTP.post({
+  await n.HTTP.post({
     url: a.Endpoints.CREATOR_MONETIZATION_REMOVE_MONETIZATION(e),
     body: {}
   })
 }
-async function h(e) {
+async function E(e) {
   return await _(e), await s.default.getApplicationsForGuild(e, {
     type: l.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS,
     includeTeam: !0

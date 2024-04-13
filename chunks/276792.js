@@ -25,17 +25,17 @@ function S(e) {
   var t, a;
   let {
     content: S,
-    renderModalProps: p,
-    analyticsLocations: I,
+    renderModalProps: I,
+    analyticsLocations: p,
     analyticsLocation: T,
     isLightTheme: g
   } = e, A = "AnnouncementModalVariant1_".concat(s.DismissibleContent[Number(S.dismissKey)]), {
     onClose: N
-  } = p, v = null != S.button && "" !== S.button.copy ? S.button.copy : _.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, R = (null === (t = S.button) || void 0 === t ? void 0 : t.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", O = (null === (a = S.button) || void 0 === a ? void 0 : a.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? () => {
+  } = I, v = null != S.button && "" !== S.button.copy ? S.button.copy : _.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, R = (null === (t = S.button) || void 0 === t ? void 0 : t.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", O = (null === (a = S.button) || void 0 === a ? void 0 : a.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? () => {
     (0, o.transitionTo)(h.Routes.APPLICATION_STORE), N()
   } : () => (0, r.default)({
     subscriptionTier: E.PremiumSubscriptionSKUs.TIER_2,
-    analyticsLocations: I,
+    analyticsLocations: p,
     analyticsObject: {
       ...T,
       object: h.AnalyticsObjects.BUTTON_CTA,
@@ -67,7 +67,7 @@ function S(e) {
       colorOptions: P
     }) : void 0;
   return {
-    renderModalProps: p,
+    renderModalProps: I,
     header: S.header,
     modalTopExtra: x,
     subHeader: S.subheader,

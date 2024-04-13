@@ -20,8 +20,8 @@ var n = a("392711"),
   C = a("800599"),
   m = a("594174"),
   S = a("979651"),
-  p = a("626135"),
-  I = a("823379"),
+  I = a("626135"),
+  p = a("823379"),
   T = a("358085"),
   g = a("914946"),
   A = a("238679"),
@@ -50,7 +50,7 @@ class M {
         type: "RPC_APP_CONNECTED",
         socketId: e.id,
         application: e.application
-      }), p.default.track(v.AnalyticEvents.AUTHORIZED_APP_CONNECTED, {
+      }), I.default.track(v.AnalyticEvents.AUTHORIZED_APP_CONNECTED, {
         app_id: e.application.id,
         transport: e.transport
       })
@@ -84,7 +84,7 @@ class M {
         }, s = "".concat(t).concat(e.id);
         break;
       default:
-        return (0, I.assertNever)(e)
+        return (0, p.assertNever)(e)
     }
     null != a && this.rpcServer.dispatchToSubscriptions(t, {
       channel_id: a

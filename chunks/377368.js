@@ -17,8 +17,8 @@ var s = a("481060"),
   C = a("22382"),
   m = a("747071"),
   S = a("49230"),
-  p = a("981631"),
-  I = a("65154");
+  I = a("981631"),
+  p = a("65154");
 
 function T(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
@@ -38,7 +38,7 @@ class g extends f.default {
   constructor(...e) {
     var t;
     super(...e), t = this, T(this, "playingSoundsWeb", new Map), T(this, "_stopAndClearSounds", () => {
-      u.default.supports(I.Features.SAMPLE_PLAYBACK) && u.default.getMediaEngine().eachConnection(e => {
+      u.default.supports(p.Features.SAMPLE_PLAYBACK) && u.default.getMediaEngine().eachConnection(e => {
         e.stopAllSamplesLocalPlayback()
       }), this.playingSoundsWeb.forEach(e => {
         e.pause(), e.src = ""
@@ -55,7 +55,7 @@ class g extends f.default {
           soundVolume: (0, m.default)(a),
           reportSoundStartedPlaying: () => (0, E.reportSoundStartedPlaying)(e, n)
         };
-        u.default.supports(I.Features.SAMPLE_PLAYBACK) ? await (0, S.playDesktopSound)(s) : await (0, S.playWebSound)(s, t.playingSoundsWeb)
+        u.default.supports(p.Features.SAMPLE_PLAYBACK) ? await (0, S.playDesktopSound)(s) : await (0, S.playWebSound)(s, t.playingSoundsWeb)
       } finally {
         (0, E.reportSoundFinishedPlaying)(e, n)
       }
@@ -64,7 +64,7 @@ class g extends f.default {
     }), T(this, "_handleOpenEducationModal", (e, t) => {
       if (null == e) return;
       let l = o.default.getChannel(t),
-        u = c.default.getKeybindForAction(p.GlobalKeybindActions.SOUNDBOARD_HOLD);
+        u = c.default.getKeybindForAction(I.GlobalKeybindActions.SOUNDBOARD_HOLD);
       null != l && (0, _.default)(l) && null != u && r.default.hasHotspot(i.HotspotLocations.SOUNDBOARD_WHEEL_EDUCATION_MODAL) && (0, s.openModalLazy)(async () => {
         let {
           default: t

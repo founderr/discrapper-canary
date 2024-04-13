@@ -21,8 +21,8 @@ var n, s, l = a("470079"),
   C = a("678513"),
   m = a("899667"),
   S = a("496675"),
-  p = a("541566"),
-  I = a("192513"),
+  I = a("541566"),
+  p = a("192513"),
   T = a("255791"),
   g = a("70956"),
   A = a("267642"),
@@ -40,9 +40,9 @@ function v(e) {
     {
       lastDismissedGracePeriod: s,
       isGracePeriodVisible: v
-    } = (0, i.useStateFromStoresObject)([p.default], () => ({
-      lastDismissedGracePeriod: p.default.getLastDismissedGracePeriodForGuild(a),
-      isGracePeriodVisible: p.default.isVisible(a)
+    } = (0, i.useStateFromStoresObject)([I.default], () => ({
+      lastDismissedGracePeriod: I.default.getLastDismissedGracePeriodForGuild(a),
+      isGracePeriodVisible: I.default.isVisible(a)
     })),
     R = (0, i.useStateFromStores)([_.default], () => _.default.isVisible(e)),
     O = (0, i.useStateFromStores)([T.default], () => T.default.isVisible(e)),
@@ -53,7 +53,7 @@ function v(e) {
     y = null != n && Date.now() - n <= 432e5,
     D = !y && !M && L && x,
     b = (0, d.useGuildHasLiveChannelNotice)(a),
-    U = (0, i.useStateFromStores)([I.default], () => I.default.isVisible(e)),
+    U = (0, i.useStateFromStores)([p.default], () => p.default.isVisible(e)),
     j = E.default.useShouldShowChannelNotice(a),
     G = (0, h.useUnseenEndedApplicationSubscriptionEntitlements)(e),
     {

@@ -19,8 +19,8 @@ t.default = e => {
     onClose: _
   } = e, C = s.useRef(null), m = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), {
     progress: S,
-    errors: p,
-    submitting: I
+    errors: I,
+    submitting: p
   } = (0, i.useStateFromStoresObject)([d.default], () => d.default.getStateForGuild(t)), {
     selectedGames: T,
     playstyle: g,
@@ -79,7 +79,7 @@ t.default = e => {
     }
   });
   (0, l.useChain)([L, M, P], [0, 0, 1]);
-  let G = s.useMemo(() => null != p && Object.values(p).some(e => null != e), [p]);
+  let G = s.useMemo(() => null != I && Object.values(I).some(e => null != e), [I]);
   return (0, n.jsxs)("div", {
     className: h.animationContainer,
     children: [(0, n.jsxs)(l.animated.div, {
@@ -150,7 +150,7 @@ t.default = e => {
         size: r.Button.Sizes.MEDIUM,
         color: r.Button.Colors.BRAND,
         disabled: !x,
-        submitting: I,
+        submitting: p,
         onClick: D,
         children: E.default.Messages.FINISH
       })]

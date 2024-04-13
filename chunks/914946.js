@@ -67,8 +67,8 @@ var n, s = a("729594"),
   C = a("430824"),
   m = a("131951"),
   S = a("375954"),
-  p = a("158776"),
-  I = a("594174"),
+  I = a("158776"),
+  p = a("594174"),
   T = a("979651"),
   g = a("70956"),
   A = a("5192"),
@@ -112,7 +112,7 @@ function G(e, t) {
     })
   })), Promise.all(a).then(() => {
     var a;
-    let s = (!e.isNSFW() || (null === (a = I.default.getCurrentUser()) || void 0 === a ? void 0 : a.nsfwAllowed) === !0) && t ? S.default.getMessages(e.id).toArray().map(w) : [],
+    let s = (!e.isNSFW() || (null === (a = p.default.getCurrentUser()) || void 0 === a ? void 0 : a.nsfwAllowed) === !0) && t ? S.default.getMessages(e.id).toArray().map(w) : [],
       l = Object.values(T.default.getVoiceStatesForChannel(e.id)).map(t => k(n, e.id, t));
     return {
       id: e.id,
@@ -165,7 +165,7 @@ function k(e, t, a) {
     selfDeaf: i,
     suppress: r,
     userId: o
-  } = a, u = I.default.getUser(o);
+  } = a, u = p.default.getUser(o);
   if (null == u) throw Error("Invalid user id: ".concat(o));
   return {
     nick: A.default.getName(e, t, u),
@@ -184,13 +184,13 @@ function k(e, t, a) {
 }
 
 function F(e, t, a) {
-  let n = I.default.getUser(t);
+  let n = p.default.getUser(t);
   return {
     type: e,
     user: null != n ? (0, R.default)(n) : null,
     presence: {
-      status: p.default.getStatus(t),
-      activity: null != a ? p.default.getApplicationActivity(t, a) : p.default.getPrimaryActivity(t)
+      status: I.default.getStatus(t),
+      activity: null != a ? I.default.getApplicationActivity(t, a) : I.default.getPrimaryActivity(t)
     }
   }
 }

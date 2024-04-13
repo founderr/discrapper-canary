@@ -1,45 +1,45 @@
 "use strict";
-n.r(t), n("47120");
-var i = n("470079"),
-  r = n("399606"),
-  s = n("544891"),
-  a = n("570140"),
-  l = n("367907"),
-  o = n("430824"),
-  u = n("496675"),
-  c = n("626135"),
-  d = n("70956"),
-  f = n("997787"),
-  p = n("981631");
-let m = 1 * d.default.Millis.DAY,
-  E = new Map;
+i.r(t), i("47120");
+var n = i("470079"),
+  r = i("399606"),
+  s = i("544891"),
+  a = i("570140"),
+  l = i("367907"),
+  o = i("430824"),
+  u = i("496675"),
+  c = i("626135"),
+  d = i("70956"),
+  f = i("997787"),
+  p = i("981631");
+let C = 1 * d.default.Millis.DAY,
+  m = new Map;
 t.default = {
   useShouldShowChannelNotice(e) {
     let t = (0, r.useStateFromStores)([o.default, u.default], () => {
       let t = o.default.getGuild(e);
       return null != t && u.default.can(p.Permissions.ADMINISTRATOR, t)
     });
-    i.useEffect(() => {
+    n.useEffect(() => {
       t && ! function(e) {
         var t;
-        let n = Date.now(),
-          i = null !== (t = E.get(e)) && void 0 !== t ? t : 0;
-        !(n < i + m) && (E.set(e, n), s.HTTP.post({
+        let i = Date.now(),
+          n = null !== (t = m.get(e)) && void 0 !== t ? t : 0;
+        !(i < n + C) && (m.set(e, i), s.HTTP.post({
           url: p.Endpoints.GUILD_MIGRATE_COMMAND_SCOPE(e)
         }).then(t => {
-          var n, i;
+          var i, n;
           a.default.dispatch({
             type: "COMMANDS_MIGRATION_UPDATE_SUCCESS",
             guildId: e,
-            integrationIdsWithAppCommands: null !== (i = null === (n = t.body) || void 0 === n ? void 0 : n.integration_ids_with_app_commands) && void 0 !== i ? i : []
+            integrationIdsWithAppCommands: null !== (n = null === (i = t.body) || void 0 === i ? void 0 : i.integration_ids_with_app_commands) && void 0 !== n ? n : []
           })
         }, () => {
-          E.set(e, i)
+          m.set(e, n)
         }))
       }(e)
     }, [e, t]);
-    let n = (0, r.useStateFromStores)([f.default], () => f.default.shouldShowChannelNotice(e));
-    return t && n
+    let i = (0, r.useStateFromStores)([f.default], () => f.default.shouldShowChannelNotice(e));
+    return t && i
   },
   dismissNotice(e) {
     a.default.dispatch({
@@ -48,25 +48,25 @@ t.default = {
     })
   },
   dismissOverviewTooltip(e, t) {
-    var n;
+    var i;
     a.default.dispatch({
       type: "COMMANDS_MIGRATION_OVERVIEW_TOOLTIP_DISMISSED",
       guildId: e,
       integrationId: t.id
     }), c.default.track(p.AnalyticEvents.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {
       ...(0, l.collectGuildAnalyticsMetadata)(e),
-      application_id: null === (n = t.application) || void 0 === n ? void 0 : n.id,
+      application_id: null === (i = t.application) || void 0 === i ? void 0 : i.id,
       location: "overview"
     })
   },
   dismissToggleTooltip(e, t) {
-    var n;
+    var i;
     void 0 !== t && (a.default.dispatch({
       type: "COMMANDS_MIGRATION_TOGGLE_TOOLTIP_DISMISSED",
       integrationId: t.id
     }), c.default.track(p.AnalyticEvents.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {
       ...(0, l.collectGuildAnalyticsMetadata)(e),
-      application_id: null === (n = t.application) || void 0 === n ? void 0 : n.id,
+      application_id: null === (i = t.application) || void 0 === i ? void 0 : i.id,
       location: "toggle"
     }))
   }

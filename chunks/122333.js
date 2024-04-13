@@ -17,8 +17,8 @@ var l = a("481060"),
   C = a("430824"),
   m = a("914010"),
   S = a("594174"),
-  p = a("823379"),
-  I = a("358085"),
+  I = a("823379"),
+  p = a("358085"),
   T = a("929809"),
   g = a("179645"),
   A = a("701476"),
@@ -57,7 +57,7 @@ class M extends r.default {
       let e = C.default.getGuild(L);
       (null == e ? void 0 : e.hasVerificationGate()) && (r = !0, (0, E.fetchWelcomeScreen)(e.id))
     }
-    let M = () => 0 === _.default.totalGuilds && !I.isPlatformEmbedded,
+    let M = () => 0 === _.default.totalGuilds && !p.isPlatformEmbedded,
       P = o.userNeedsAgeGate();
     e = [{
       key: "Unified NUF Modal",
@@ -88,7 +88,7 @@ class M extends r.default {
             case null:
               break;
             default:
-              p.assertNever(e)
+              I.assertNever(e)
           }
         };
         n = await (0, l.openModalLazy)(async () => {
@@ -112,7 +112,7 @@ class M extends r.default {
       predicate: () => P && !M() && !R.CONFERENCE_MODE_ENABLED
     }, {
       key: "Claim Account Modal",
-      open: e => u.openClaimAccountModal(I.isPlatformEmbedded, e),
+      open: e => u.openClaimAccountModal(p.isPlatformEmbedded, e),
       predicate: () => {
         var e;
         return !r && null != S.default.getCurrentUser() && !(null === (e = S.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !R.CONFERENCE_MODE_ENABLED && !(0, c.isMidjourneyOnboardingFlow)("new_user_manager")

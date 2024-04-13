@@ -16,8 +16,8 @@ var n = a("735250"),
   C = a("607070"),
   m = a("209613"),
   S = a("325708"),
-  p = a("320149"),
-  I = a("252618"),
+  I = a("320149"),
+  p = a("252618"),
   T = a("605236"),
   g = a("243778"),
   A = a("984370"),
@@ -92,7 +92,7 @@ function en() {
         hasSingleMessageRequest: l
       }, d)
     }, [l, a, h]),
-    p = s.useCallback(() => (0, n.jsxs)(U.default, {
+    I = s.useCallback(() => (0, n.jsxs)(U.default, {
       className: et.sectionTitle,
       children: [t > 0 ? ee.default.Messages.MESSAGE_REQUESTS_PAGE_TITLE_WITH_COUNT.format({
         count: t
@@ -139,7 +139,7 @@ function en() {
           paddingBottom: 24,
           sectionHeight: Z.LIST_SECTION_HEIGHT,
           rowHeight: Z.LIST_ROW_HEIGHT,
-          renderSection: p,
+          renderSection: I,
           renderRow: S,
           sections: [a.length],
           chunkSize: 30,
@@ -162,7 +162,7 @@ function es(e) {
     sidebarType: S.ChatSidebarType.MessageRequestSidebar,
     maxWidth: i,
     onWidthChange: a,
-    children: (0, n.jsx)(p.default, {
+    children: (0, n.jsx)(I.default, {
       channel: l,
       baseChannelId: x.MESSAGE_REQUESTS_BASE_CHANNEL_ID
     })
@@ -257,8 +257,8 @@ let eo = (0, h.default)(function(e) {
   s.useEffect(() => {
     null != _ && !m && S && C && ((0, v.transitionToChannel)(_), R.default.closeChannelSidebar(x.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
   }, [_, S, C, m]);
-  let [p, T] = s.useState(Z.MessageRequestSections.REQUESTS);
-  return (0, I.usePageTitle)({
+  let [I, T] = s.useState(Z.MessageRequestSections.REQUESTS);
+  return (0, p.usePageTitle)({
     location: ee.default.Messages.MESSAGE_REQUESTS
   }), (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)("div", {
@@ -278,7 +278,7 @@ let eo = (0, h.default)(function(e) {
           })
         }), (0, n.jsx)(A.default.Divider, {}), (0, n.jsxs)(c.TabBar, {
           "aria-label": ee.default.Messages.MESSAGE_REQUESTS,
-          selectedItem: p,
+          selectedItem: I,
           type: "top-pill",
           onItemSelect: e => {
             T(e)
@@ -299,7 +299,7 @@ let eo = (0, h.default)(function(e) {
       }), (0, n.jsx)("div", {
         className: ea.content,
         children: (0, n.jsx)(er, {
-          section: p
+          section: I
         })
       })]
     }), C && (0, n.jsx)(es, {

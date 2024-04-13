@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return p
+    return I
   }
 }), a("653041"), a("47120");
 var n = a("735250");
@@ -22,12 +22,12 @@ var s = a("287734"),
   m = a("817915"),
   S = a("981631");
 
-function p(e) {
+function I(e) {
   let {
     party: t,
     onChannelContextMenu: a,
-    quest: p
-  } = e, I = (0, C.useNowPlayingVisible)(), {
+    quest: I
+  } = e, p = (0, C.useNowPlayingVisible)(), {
     voiceChannels: T,
     currentActivities: g,
     partiedMembers: A,
@@ -88,7 +88,7 @@ function p(e) {
         O(t);
         break
       }
-    } return N.length > 0 && I && N.forEach(e => {
+    } return N.length > 0 && p && N.forEach(e => {
     let {
       stream: t,
       streamUser: a,
@@ -104,7 +104,7 @@ function p(e) {
       }
     }, "application-stream-".concat(t.ownerId)))
   }), g.forEach((e, t) => {
-    var a, s, l, f, h, C, I, N, R;
+    var a, s, l, f, h, C, p, N, R;
     let {
       activity: L,
       game: M,
@@ -157,12 +157,12 @@ function p(e) {
     }, "spotify-".concat(null !== (C = L.session_id) && void 0 !== C ? C : t, "-").concat(x.id))) : (null != L.assets || (0, i.default)(L)) && L.type === S.ActivityTypes.LISTENING ? O((0, n.jsx)(_.default.RichPresenceSection, {
       activity: L,
       getAssetImage: E.getAssetImage
-    }, "rich-presence-".concat(null !== (I = L.session_id) && void 0 !== I ? I : t, "-").concat(x.id))) : (0, u.default)(L) && O((0, n.jsx)(_.default.XboxSection, {
+    }, "rich-presence-".concat(null !== (p = L.session_id) && void 0 !== p ? p : t, "-").concat(x.id))) : (0, u.default)(L) && O((0, n.jsx)(_.default.XboxSection, {
       title: M.name
     }, "xbox-".concat(null !== (N = L.session_id) && void 0 !== N ? N : t)));
-    null != p && O((0, n.jsx)(c.default, {
-      quest: p
-    }, "quest-".concat(p.id, "-").concat(null !== (R = L.session_id) && void 0 !== R ? R : t)))
+    null != I && O((0, n.jsx)(c.default, {
+      quest: I
+    }, "quest-".concat(I.id, "-").concat(null !== (R = L.session_id) && void 0 !== R ? R : t)))
   }), R.length > 0 ? (0, n.jsx)(_.default.Body, {
     children: R
   }) : null
