@@ -109,7 +109,7 @@ t.default = l.memo(e => {
   }, [i, p]), S = l.useCallback(() => {
     c(String(Date.now()))
   }, []);
-  return (0, u.useFocusLock)(E), (0, a.jsx)(u.Popout, {
+  return (0, a.jsx)(u.Popout, {
     renderPopout: e => {
       let {
         closePopout: t
