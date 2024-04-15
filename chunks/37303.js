@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   QuestsCard: function() {
-    return E
+    return f
   },
   useQuestCardSize: function() {
-    return c
+    return E
   }
 }), n("47120");
 var s = n("735250"),
@@ -14,9 +14,10 @@ var s = n("735250"),
   r = n("874137"),
   o = n("372113"),
   u = n("206044"),
-  d = n("25269");
+  d = n("21029"),
+  c = n("25269");
 
-function c() {
+function E() {
   let {
     ref: e,
     width: t
@@ -26,41 +27,44 @@ function c() {
     size: a.useMemo(() => null == t || t > 460 ? "lg" : t > 280 ? "sm" : "xs", [t])
   }
 }
-let E = e => {
+let f = e => {
   let {
     quest: t,
     location: n
-  } = e, [l, E] = a.useState(!1), f = a.useCallback(() => E(!0), []), _ = a.useCallback(() => E(!1), []), {
-    containerRef: T,
-    size: I
-  } = c(), m = (0, i.useIsQuestExpired)(t);
+  } = e, [l, f] = a.useState(!1), _ = a.useCallback(() => f(!0), []), T = a.useCallback(() => f(!1), []), {
+    containerRef: I,
+    size: m
+  } = E(), N = (0, i.useIsQuestExpired)(t);
   return (0, s.jsx)(r.QuestContentImpressionTracker, {
     questId: t.id,
     questContent: n,
-    children: e => (0, s.jsx)(s.Fragment, {
-      children: (0, s.jsxs)("div", {
+    children: e => (0, s.jsxs)(s.Fragment, {
+      children: [(0, s.jsxs)("div", {
         ref: t => {
-          e.current = t, T.current = t
+          e.current = t, I.current = t
         },
-        className: d.questsCard,
-        onFocus: f,
-        onMouseEnter: f,
-        onBlur: _,
-        onMouseLeave: _,
+        className: c.questsCard,
+        onFocus: _,
+        onMouseEnter: _,
+        onBlur: T,
+        onMouseLeave: T,
         children: [(0, s.jsx)(u.default, {
           isFocused: l,
-          isQuestExpired: m,
+          isQuestExpired: N,
           location: n,
           quest: t,
-          size: I
+          size: m
         }), (0, s.jsx)(o.default, {
           isFocused: l,
-          isQuestExpired: m,
+          isQuestExpired: N,
           location: n,
           quest: t,
-          size: I
+          size: m
         })]
-      })
+      }), !N && (0, s.jsx)(d.default, {
+        quest: t,
+        location: n
+      })]
     })
   })
 }

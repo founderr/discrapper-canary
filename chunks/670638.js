@@ -105,28 +105,7 @@ function C(e) {
         },
         subtext: S.default.Messages.QUESTS_FIND_QUEST
       })]
-    }, "minor-actions"), e.quest.preview && (0, s.jsxs)(o.MenuGroup, {
-      label: "Preview Controls",
-      children: [(0, s.jsx)(o.MenuItem, {
-        id: "dismiss",
-        label: "Reset Dismissibility",
-        action: () => {
-          (0, I.resetQuestDismissibilityStatus)(e.quest.id)
-        }
-      }), (0, s.jsx)(o.MenuItem, {
-        id: "enrollment",
-        label: "Reset Quest",
-        action: () => {
-          (0, I.resetQuestPreviewStatus)(e.quest.id)
-        }
-      }), (0, s.jsx)(o.MenuItem, {
-        id: "complete",
-        label: "Complete Quest",
-        action: () => {
-          (0, I.completeQuestPreview)(e.quest.id)
-        }
-      })]
-    }, "preview-controls")]
+    }, "minor-actions")]
   })
 }
 
