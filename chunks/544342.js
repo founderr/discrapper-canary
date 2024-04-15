@@ -149,6 +149,16 @@ let a = {
       opacity: .7
     }
   },
+  "background-mobile-secondary": {
+    dark: {
+      color: "black.500",
+      opacity: .4
+    },
+    light: {
+      color: "white.500",
+      opacity: .6
+    }
+  },
   "redesign-button-secondary-background": {
     dark: {
       color: "white.500",
