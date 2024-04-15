@@ -34,7 +34,7 @@ n.r(t), n.d(t, {
     return C
   },
   getQuestsFromActivities: function() {
-    return B
+    return k
   },
   getQuestsInstructionsToWinReward: function() {
     return Y
@@ -55,7 +55,7 @@ n.r(t), n.d(t, {
     return G
   },
   isAssetAnimated: function() {
-    return k
+    return B
   },
   isCollectibleReward: function() {
     return U
@@ -259,7 +259,7 @@ let m = e => {
 
 function g(e, t) {
   for (let [n, i] of e)
-    if (i.targetedContent.includes(t)) return i;
+    if (!I(i) && i.targetedContent.includes(t)) return i;
   return null
 }
 
@@ -338,7 +338,7 @@ function w(e, t) {
   })
 }
 
-function B(e, t) {
+function k(e, t) {
   if (null == t || null == e) return null;
   for (let n of t) {
     if (null == n.application_id) continue;
@@ -348,7 +348,7 @@ function B(e, t) {
   return null
 }
 
-function k(e) {
+function B(e) {
   return e.endsWith(".webm") || e.endsWith(".mp4")
 }
 let V = /\.([a-zA-Z]+)$/;
