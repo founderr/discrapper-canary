@@ -2,7 +2,7 @@
 s.r(t);
 var a = s("735250"),
   i = s("470079"),
-  r = s("803997"),
+  r = s("120356"),
   l = s.n(r),
   n = s("581051"),
   o = s("452165"),
@@ -161,16 +161,17 @@ t.default = e => {
     })
   }, [s]);
   let x = s.length,
-    L = 3 === x,
-    v = (0, R.useIsDismissibleContentDismissed)(d.DismissibleContent.REFERRAL_PROGRAM_PROGRESS_BAR_TOGGLE),
-    j = v ? () => (0, m.removeDismissedContent)(d.DismissibleContent.REFERRAL_PROGRAM_PROGRESS_BAR_TOGGLE) : () => (0, R.markDismissibleContentAsDismissed)(d.DismissibleContent.REFERRAL_PROGRAM_PROGRESS_BAR_TOGGLE),
-    H = O.default.getArticleURL(b.HelpdeskArticles.REFERRAL_PROGRAM),
-    F = L ? U.default.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : U.default.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
+    L = x > 0,
+    v = 3 === x,
+    j = (0, R.useIsDismissibleContentDismissed)(d.DismissibleContent.REFERRAL_PROGRAM_PROGRESS_BAR_TOGGLE),
+    H = j ? () => (0, m.removeDismissedContent)(d.DismissibleContent.REFERRAL_PROGRAM_PROGRESS_BAR_TOGGLE) : () => (0, R.markDismissibleContentAsDismissed)(d.DismissibleContent.REFERRAL_PROGRAM_PROGRESS_BAR_TOGGLE),
+    F = O.default.getArticleURL(b.HelpdeskArticles.REFERRAL_PROGRAM),
+    K = v ? U.default.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : U.default.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
     {
-      analyticsLocations: K
+      analyticsLocations: V
     } = (0, I.default)(T.default.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
-    V = (0, a.jsxs)(a.Fragment, {
-      children: [L ? (0, a.jsx)(G, {}) : (0, a.jsx)(k, {}), (0, a.jsxs)("div", {
+    Y = (0, a.jsxs)(a.Fragment, {
+      children: [v ? (0, a.jsx)(G, {}) : (0, a.jsx)(k, {}), (0, a.jsxs)("div", {
         className: l()(y.expandedProgressBarContent, {
           [y.expandedProgressBarContentVariant1]: !p,
           [y.expandedProgressBarContentVariant2]: p
@@ -178,12 +179,12 @@ t.default = e => {
         children: [(0, a.jsx)(E.Heading, {
           variant: "heading-xxl/extrabold",
           className: y.expandedProgressBarHeader,
-          children: F
+          children: K
         }), (0, a.jsx)(w, {
           userRecords: _
         }), (0, a.jsx)(E.Text, {
           variant: t ? "text-sm/normal" : "text-lg/medium",
-          children: W(L, x > 0, s.length, H)
+          children: W(v, L, s.length, F)
         }), (0, a.jsxs)("div", {
           className: y.expandedProgressBarButtonContainer,
           children: [!t && !p && (0, a.jsx)(M.default, {
@@ -202,16 +203,16 @@ t.default = e => {
                 src: B,
                 alt: "",
                 className: y.expandedProgressBarSelectFriendsIcon
-              }), U.default.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS]
+              }), L ? U.default.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS : U.default.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS]
             })
           })]
         })]
       })]
     });
-  return v && (V = (0, a.jsxs)(a.Fragment, {
+  return j && (Y = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
       className: y.collapsedProgressBarIconContainer,
-      children: L ? (0, a.jsx)(G, {
+      children: v ? (0, a.jsx)(G, {
         height: t ? 96 : 68,
         width: t ? 66 : 87
       }) : (0, a.jsx)(k, {
@@ -221,7 +222,7 @@ t.default = e => {
     }), (0, a.jsxs)("div", {
       children: [(0, a.jsx)(E.Heading, {
         variant: "heading-xl/extrabold",
-        children: F
+        children: K
       }), (0, a.jsx)(w, {
         userRecords: _
       })]
@@ -230,7 +231,7 @@ t.default = e => {
       children: [!t && !p && (0, a.jsx)(E.Clickable, {
         onClick: () => (0, S.default)({
           isGift: !0,
-          analyticsLocations: K
+          analyticsLocations: V
         }),
         className: y.collapsedGiftButton,
         children: (0, a.jsx)(o.GiftIcon, {
@@ -246,13 +247,13 @@ t.default = e => {
       })]
     })]
   })), (0, a.jsx)(I.AnalyticsLocationProvider, {
-    value: K,
+    value: V,
     children: (0, a.jsxs)("div", {
       className: l()({
-        [y.expandedProgressBarContainer]: !v && !t,
-        [y.expandedProgressBarContainerSettingsPage]: !v && t,
-        [y.collapsedProgressBarContainer]: v && !t,
-        [y.collapsedProgressBarContainerSettingsPage]: v && t,
+        [y.expandedProgressBarContainer]: !j && !t,
+        [y.expandedProgressBarContainerSettingsPage]: !j && t,
+        [y.collapsedProgressBarContainer]: j && !t,
+        [y.collapsedProgressBarContainerSettingsPage]: j && t,
         [y.expandedProgressBarContainerVariant1]: !p && !t,
         [y.expandedProgressBarContainerVariant2]: p && !t,
         [y.allReferralsSentBorder]: 3 === s.length
@@ -261,15 +262,15 @@ t.default = e => {
         className: l()(y.collapseToggle, {
           [y.collapseToggleInSettings]: t
         }),
-        onClick: () => j(),
-        children: v ? (0, a.jsx)(n.ChevronSmallDownIcon, {
+        onClick: () => H(),
+        children: j ? (0, a.jsx)(n.ChevronSmallDownIcon, {
           width: t ? 20 : 24,
           height: t ? 20 : 24
         }) : (0, a.jsx)(c.ChevronSmallUpIcon, {
           width: t ? 20 : 24,
           height: t ? 20 : 24
         })
-      }), V]
+      }), Y]
     })
   })
 }
