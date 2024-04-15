@@ -33,9 +33,6 @@ n.r(t), n.d(t, {
   saveAccountRequest: function() {
     return A
   },
-  setDisableSubmit: function() {
-    return M
-  },
   setPendingAvatar: function() {
     return O
   },
@@ -236,12 +233,5 @@ function D() {
 function v() {
   a.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM"
-  })
-}
-
-function M(e) {
-  a.default.dispatch({
-    type: "USER_SETTINGS_ACCOUNT_SET_DISABLE_SUBMIT",
-    disable: e
   })
 }

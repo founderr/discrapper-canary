@@ -27,9 +27,6 @@ n.r(t), n.d(t, {
   setCurrentGuild: function() {
     return l
   },
-  setDisableSubmit: function() {
-    return R
-  },
   setPendingAvatar: function() {
     return c
   },
@@ -201,12 +198,5 @@ function O() {
 function p() {
   r.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS"
-  })
-}
-
-function R(e) {
-  r.default.dispatch({
-    type: "GUILD_IDENTITY_SETTINGS_SET_DISABLE_SUBMIT",
-    disable: e
   })
 }

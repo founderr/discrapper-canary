@@ -15,7 +15,7 @@ var a = s("735250"),
   c = s("689938");
 
 function S() {
-  let e = (0, l.useStateFromStores)([u.default], () => u.default.getIsDisableSubmit()),
+  let e = (0, l.useStateFromStores)([u.default], () => u.default.getIsSubmitDisabled()),
     t = (0, l.useStateFromStores)([u.default], () => u.default.getGuild()),
     s = (0, l.useStateFromStores)([u.default], () => u.default.getErrors()),
     [S, E] = n.useState(!1),
