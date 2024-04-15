@@ -2,6 +2,7 @@
 e.exports = {
   active: "active_ff29dc",
   activeLight: "activeLight__4b58a",
+  buttonPremiumGlow: "buttonPremiumGlow__778ce",
   centerButton: "centerButton__8316e colorable__4f530",
   centerIcon: "centerIcon_e3df23",
   colorable: "colorable__4f530",
