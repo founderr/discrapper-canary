@@ -32461,6 +32461,10 @@ input[type=checked]:focus-visible+.label__73b15 {
     text-transform: none
 }
 
+.qualityIndicatorBadgePremium__18825 {
+    background: var(--custom-premium-colors-premium-gradient-tier-2-tri-color)
+}
+
 .streamQualityIndicator__1fe46 {
     display: flex;
     overflow: hidden;

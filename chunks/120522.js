@@ -43,6 +43,7 @@ async function u() {
   }
 }
 async function d(e) {
+  if (o.default.getActivated()[e]) return !0;
   let t = a.default.getCurrentUser();
   try {
     return await i.HTTP.post({

@@ -53,17 +53,19 @@ function G(e) {
     selected: n,
     focused: l,
     idle: s,
-    width: i
-  } = e, o = (0, r.useStateFromStores)([S.default], () => S.default.getActiveStreamForUser(t.user.id, t.stream.guildId)), u = (0, b.isVideoCompact)(i);
+    width: i,
+    premiumIndicator: o
+  } = e, u = (0, r.useStateFromStores)([S.default], () => S.default.getActiveStreamForUser(t.user.id, t.stream.guildId)), d = (0, b.isVideoCompact)(i);
   return (0, a.jsxs)(a.Fragment, {
     children: [n ? null : (0, a.jsx)(D.default, {
       participant: t
-    }), l || null == o || o.state === U.ApplicationStreamStates.ENDED || o.state === U.ApplicationStreamStates.FAILED ? null : (0, a.jsx)(E.default, {
+    }), l || null == u || u.state === U.ApplicationStreamStates.ENDED || u.state === U.ApplicationStreamStates.FAILED ? null : (0, a.jsx)(E.default, {
       size: x.default.Sizes.SMALL,
       className: H.liveIndicator,
       participant: t,
-      showQuality: !u && !s,
-      isUpsellEnabled: !1
+      showQuality: !d && !s,
+      isUpsellEnabled: !1,
+      premiumIndicator: o
     })]
   })
 }

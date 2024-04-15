@@ -66,7 +66,7 @@ function g() {
         user: e,
         available: t,
         activateSuccess: g
-      }), (0, c.hqStreamingPopoutDismissed)(!1), (0, c.hqStreamingFrameAnimationPlayed)(!1)),
+      }), (0, c.hqStreamingSetEnabled)(!1), (0, c.hqStreamingPopoutDismissed)(!1), (0, c.hqStreamingFrameAnimationPlayed)(!1)),
       children: "Update"
     })]
   })
