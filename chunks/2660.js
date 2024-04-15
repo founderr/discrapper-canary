@@ -12,22 +12,23 @@ var a = n("442837"),
 t.default = e => {
   let {
     questConfig: t,
-    fallback: n
-  } = e, c = (0, a.useStateFromStores)([r.default], () => r.default.getCurrentUser()), {
-    avatarDecoration: E,
-    isFetching: f
+    fallback: n,
+    isFocused: c
+  } = e, E = (0, a.useStateFromStores)([r.default], () => r.default.getCurrentUser()), {
+    avatarDecoration: f,
+    isFetching: _
   } = (0, o.useQuestCollectibles)(t);
-  return f ? (0, s.jsx)("div", {
+  return _ ? (0, s.jsx)("div", {
     className: d.questsCollectibleReward,
     children: (0, s.jsx)(l.Spinner, {})
-  }) : null == c || null == E ? n : (0, s.jsx)("div", {
+  }) : null == E || null == f ? n : (0, s.jsx)("div", {
     className: d.questsCollectibleReward,
     children: (0, s.jsx)(i.default, {
       avatarSize: u.AvatarSizes.SIZE_80,
-      user: c,
+      user: E,
       guildId: null,
-      avatarDecorationOverride: E,
-      animateOnHover: !0
+      avatarDecorationOverride: f,
+      animateOnHover: !c
     })
   })
 }

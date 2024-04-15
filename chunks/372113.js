@@ -100,7 +100,8 @@ t.default = e => {
           })
         }), Z ? (0, s.jsx)(g.default, {
           questConfig: D.config,
-          fallback: $
+          fallback: $,
+          isFocused: U
         }) : $]
       })
     }), (0, s.jsxs)("div", {
