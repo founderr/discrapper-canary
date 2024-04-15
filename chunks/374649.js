@@ -117,7 +117,8 @@ async function f(e) {
     paymentSourceId: t,
     skuId: n,
     subscriptionPlanId: i,
-    currency: r
+    currency: r,
+    loadId: a
   } = e;
   s()(n, "SKU ID is missing for one time purchase gift invoice preview");
   try {
@@ -127,7 +128,8 @@ async function f(e) {
         gift: !0,
         payment_source_id: t,
         sku_subscription_plan_id: i,
-        currency: r
+        currency: r,
+        loadId: a
       },
       oldFormErrors: !0
     });
