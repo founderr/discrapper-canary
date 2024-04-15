@@ -96,9 +96,9 @@ function b(e) {
     guildId: b.id,
     highlightedItemData: H
   }), {
-    hasMoreItems: Z
+    hasMoreItems: X
   } = (0, s.useStateFromStores)([u.default], () => u.default.getPaginationStatus(b.id)), {
-    hasNewHeader: X
+    hasNewHeader: Z
   } = S.GuildHomeHeaderRedesignExperiment.useExperiment({
     guildId: b.id,
     location: "00f40d_1"
@@ -152,11 +152,11 @@ function b(e) {
   n.useEffect(() => {
     if (W === u.LoadingStatus.LOADING_FRESH_FEED) {
       var e, t;
-      X ? null === (e = O.current) || void 0 === e || e.scrollTo({
+      Z ? null === (e = O.current) || void 0 === e || e.scrollTo({
         to: J
       }) : null === (t = O.current) || void 0 === t || t.scrollToTop()
     }
-  }, [W, X, J]);
+  }, [W, Z, J]);
   let ee = 0 === P.length,
     {
       showFeedback: et,
@@ -185,7 +185,7 @@ function b(e) {
       setOnDismissedFeedback: ea
     }, e.id)), (0, l.jsx)(R, {
       guildId: b.id,
-      hasMoreItems: null != Z && Z,
+      hasMoreItems: null != X && X,
       scrollerRef: O,
       error: K,
       fetchPage: Y,
@@ -205,7 +205,7 @@ function b(e) {
       setOnDismissedFeedback: ea
     }, e.id)), (0, l.jsx)(R, {
       guildId: b.id,
-      hasMoreItems: null != Z && Z,
+      hasMoreItems: null != X && X,
       scrollerRef: O,
       error: K,
       fetchPage: Y,
@@ -242,7 +242,7 @@ function b(e) {
       setOnDismissedFeedback: ea
     }, e.id)), (0, l.jsx)(R, {
       guildId: b.id,
-      hasMoreItems: null != Z && Z,
+      hasMoreItems: null != X && X,
       scrollerRef: O,
       error: K,
       fetchPage: Y,

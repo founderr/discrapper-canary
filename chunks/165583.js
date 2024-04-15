@@ -9,7 +9,7 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("803997"),
+  s = n("120356"),
   a = n.n(s),
   o = n("512722"),
   l = n.n(o),
@@ -178,7 +178,7 @@ function k(e) {
   })
 }
 
-function F(e) {
+function V(e) {
   let {
     onClose: t,
     analyticsLocationObject: n
@@ -209,7 +209,7 @@ function F(e) {
   })
 }
 
-function V(e) {
+function F(e) {
   let {
     headingText: t,
     context: n,
@@ -474,7 +474,7 @@ function x(e) {
       });
     case v.PremiumUpsellTypes.CUSTOM_PROFILE_TRY_OUT_UPSELL:
     case v.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL:
-      return (0, i.jsx)(F, {});
+      return (0, i.jsx)(V, {});
     case v.PremiumUpsellTypes.GUILD_CAP_MODAL_UPSELL:
     case v.PremiumUpsellTypes.PREMIUM_GUILD_IDENTITY_MODAL:
     case v.PremiumUpsellTypes.CUSTOM_PROFILE_UPSELL:
@@ -482,7 +482,7 @@ function x(e) {
     case v.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED:
     case v.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED:
     case v.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED:
-      return (0, i.jsx)(V, {
+      return (0, i.jsx)(F, {
         trialOffer: N,
         discountOffer: O,
         headingText: t,
@@ -490,7 +490,7 @@ function x(e) {
         children: s
       });
     default:
-      return R.default.captureMessage("Possible mishandling of a PremiumUpsellType: ".concat(u)), (0, i.jsx)(V, {
+      return R.default.captureMessage("Possible mishandling of a PremiumUpsellType: ".concat(u)), (0, i.jsx)(F, {
         headingText: t,
         context: r,
         children: s,

@@ -6,7 +6,7 @@ l.r(t), l.d(t, {
 }), l("47120"), l("653041");
 var n = l("735250"),
   a = l("470079"),
-  s = l("803997"),
+  s = l("120356"),
   i = l.n(s),
   r = l("544891"),
   o = l("846519"),
@@ -21,8 +21,8 @@ var n = l("735250"),
   E = l("497309"),
   S = l("768581"),
   g = l("572004"),
-  h = l("709054"),
-  p = l("51144"),
+  p = l("709054"),
+  h = l("51144"),
   _ = l("486199"),
   O = l("981631"),
   A = l("689938"),
@@ -30,7 +30,7 @@ var n = l("735250"),
 let x = e => {
   if (null == e) return null;
   let t = new I.default(e);
-  return p.default.getUserTag(t)
+  return h.default.getUserTag(t)
 };
 
 function R(e, t) {
@@ -48,7 +48,7 @@ function M(e) {
     editedWebhook: s,
     channelOptions: I,
     isExpanded: S,
-    isNew: p,
+    isNew: h,
     errors: M,
     onToggleExpand: v
   } = e, [L, j] = a.useState(!1), [P] = a.useState(new o.Timeout);
@@ -93,12 +93,12 @@ function M(e) {
     icon: E.default,
     text: A.default.Messages.INTEGRATION_CREATED_USER_DATE.format({
       user: x(l.user),
-      timestamp: h.default.extractTimestamp(l.id)
+      timestamp: p.default.extractTimestamp(l.id)
     })
   }) : G.push({
     icon: E.default,
     text: A.default.Messages.INTEGRATION_CREATED_DATE.format({
-      timestamp: h.default.extractTimestamp(l.id)
+      timestamp: p.default.extractTimestamp(l.id)
     })
   });
   let B = null;
@@ -207,7 +207,7 @@ function M(e) {
   })), (0, n.jsx)(d.Card, {
     editable: !0,
     id: t,
-    className: i()(C.card, p ? C.pulse : null),
+    className: i()(C.card, h ? C.pulse : null),
     children: (0, n.jsxs)(T.default, {
       direction: T.default.Direction.VERTICAL,
       children: [(0, n.jsx)(d.Clickable, {

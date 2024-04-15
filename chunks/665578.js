@@ -21,8 +21,8 @@ var n = l("735250"),
   E = l("41542"),
   S = l("821864"),
   g = l("905753"),
-  h = l("937427"),
-  p = l("643886"),
+  p = l("937427"),
+  h = l("643886"),
   _ = l("869157"),
   O = l("454092"),
   A = l("289465"),
@@ -35,15 +35,15 @@ function v(e) {
   let {
     applicationId: t,
     commandId: s,
-    guildId: h,
-    inModal: p,
+    guildId: p,
+    inModal: h,
     editedTargetPermissions: v,
     originalApplicationPermissions: P,
     originalCommandPermissions: b,
     selectedPermissionCount: D
   } = e, y = (0, o.useStateFromStores)([g.default], () => null == s ? null : g.default.getCommand(s), [s]), G = (null == y ? void 0 : y.defaultMemberPermissions) != null, B = (0, o.useStateFromStores)([I.default, m.default, T.default], () => {
-    let e = I.default.getGuild(h),
-      t = m.default.getSelfMember(h);
+    let e = I.default.getGuild(p),
+      t = m.default.getSelfMember(p);
     return null != e && null != t && (0, c.hasAccess)({
       PermissionStore: T.default,
       guild: e,
@@ -52,14 +52,14 @@ function v(e) {
       commandLevelPermissions: b,
       defaultMemberPermissions: null == y ? void 0 : y.defaultMemberPermissions
     })
-  }, [h, y, P, b]), H = null != s ? s : t, [k, U] = a.useMemo(() => {
+  }, [p, y, P, b]), H = null != s ? s : t, [k, U] = a.useMemo(() => {
     let e = {},
       t = {};
     for (let [l, n] of Object.entries(v)) n.type === u.ApplicationCommandPermissionType.CHANNEL ? e[l] = n : t[l] = n;
     return [e, t]
   }, [v]), F = a.useCallback(e => {
-    let t = I.default.getGuild(h),
-      l = m.default.getSelfMember(h);
+    let t = I.default.getGuild(p),
+      l = m.default.getSelfMember(p);
     return null != t && null != l && (null != s ? (0, c.hasAccess)({
       PermissionStore: T.default,
       guild: t,
@@ -73,7 +73,7 @@ function v(e) {
       selfMember: l,
       applicationLevelPermissions: e
     }))
-  }, [h, y, s, P]), w = a.useCallback((e, t) => {
+  }, [p, y, s, P]), W = a.useCallback((e, t) => {
     let l;
     let n = null;
     if (0 !== t.length) {
@@ -81,21 +81,21 @@ function v(e) {
       if (e.type === u.ApplicationCommandPermissionType.USER) l = O.InvalidAction.REMOVE_SELF;
       else {
         let t = e.id;
-        if (l = O.InvalidAction.REMOVE_ROLE, (0, f.isEveryoneRoleId)(h, t)) n = "@everyone";
+        if (l = O.InvalidAction.REMOVE_ROLE, (0, f.isEveryoneRoleId)(p, t)) n = "@everyone";
         else {
-          let e = I.default.getRole(h, t);
+          let e = I.default.getRole(p, t);
           n = null != e ? e.name : "role"
         }
       }
     } else {
       let t = Object.values(e)[0].id;
-      if (l = O.InvalidAction.DENY_ROLE, (0, f.isEveryoneRoleId)(h, t)) n = "@everyone";
+      if (l = O.InvalidAction.DENY_ROLE, (0, f.isEveryoneRoleId)(p, t)) n = "@everyone";
       else {
-        let e = I.default.getRole(h, t);
+        let e = I.default.getRole(p, t);
         n = null != e ? e.name : "role"
       }
     }(0, O.showApplicationCommandPermissionLockoutModal)(l, n)
-  }, [h, v]), W = a.useCallback((e, l) => {
+  }, [p, v]), w = a.useCallback((e, l) => {
     let n = {};
     for (let [e, t] of Object.entries(v)) n[e] = {
       id: t.id,
@@ -103,19 +103,19 @@ function v(e) {
       type: t.type
     };
     if (n = Object.assign(n, e), l.length > 0 && (n = i().omit(n, l)), !F(n)) {
-      w(e, l);
+      W(e, l);
       return
     }
     S.editPermissions(t, H, n)
-  }, [t, v, H, F, w]), V = a.useCallback(() => {
+  }, [t, v, H, F, W]), V = a.useCallback(() => {
     let e = Object.keys(k);
     return (0, d.openModalLazy)(async () => {
       let {
         default: t
       } = await Promise.all([l.e("99387"), l.e("64908")]).then(l.bind(l, "557944"));
       return l => (0, n.jsx)(t, {
-        editPermissions: W,
-        guildId: h,
+        editPermissions: w,
+        guildId: p,
         headerText: R.default.Messages.INTEGRATIONS_APPLICATION_COMMAND_CHANNEL_ADD_BUTTON,
         hasMemberSearch: !1,
         overwrittenKeys: e,
@@ -125,15 +125,15 @@ function v(e) {
         ...l
       })
     })
-  }, [W, k, h, D]), Y = a.useCallback(() => {
+  }, [w, k, p, D]), Y = a.useCallback(() => {
     let e = Object.keys(U);
     return (0, d.openModalLazy)(async () => {
       let {
         default: t
       } = await Promise.all([l.e("99387"), l.e("64908")]).then(l.bind(l, "557944"));
       return l => (0, n.jsx)(t, {
-        editPermissions: W,
-        guildId: h,
+        editPermissions: w,
+        guildId: p,
         hasMemberSearch: !0,
         headerText: R.default.Messages.INTEGRATIONS_APPLICATION_COMMAND_ROLE_MEMBER_ADD_BUTTON,
         overwrittenKeys: e,
@@ -143,7 +143,7 @@ function v(e) {
         ...l
       })
     })
-  }, [W, h, U, D]), K = a.useCallback(() => (0, d.openModalLazy)(async () => {
+  }, [w, p, U, D]), K = a.useCallback(() => (0, d.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.all([l.e("99387"), l.e("21897")]).then(l.bind(l, "303313")), t = y.defaultMemberPermissions;
@@ -204,16 +204,16 @@ function v(e) {
           shouldShow: null != a,
           children: e => l(e)
         }),
-        inModal: p,
+        inModal: h,
         title: e.title,
         children: (0, n.jsx)("div", {
-          className: p ? void 0 : M.listContainer,
+          className: h ? void 0 : M.listContainer,
           children: (0, n.jsx)(_.default, {
-            guildId: h,
+            guildId: p,
             commandId: s,
             noneSelectedText: e.noneSelectedText,
             overwrites: e.overwrites,
-            editPermissions: W,
+            editPermissions: w,
             hasAccessToMutatePermissions: B
           })
         })
@@ -223,7 +223,7 @@ function v(e) {
 }
 
 function L(e) {
-  let t = (0, h.useIntegrationPermissionChannelSearch)(e);
+  let t = (0, p.useIntegrationPermissionChannelSearch)(e);
   return {
     ...t,
     results: t.results.map(e => ({
@@ -234,7 +234,7 @@ function L(e) {
 }
 
 function j(e) {
-  let t = (0, p.useIntegrationPermissionMemberSearch)(e);
+  let t = (0, h.useIntegrationPermissionMemberSearch)(e);
   return {
     ...t,
     results: t.results.roles.map(e => ({

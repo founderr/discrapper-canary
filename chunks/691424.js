@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return F
+    return V
   }
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("803997"),
+  s = n("120356"),
   a = n.n(s),
   o = n("302454"),
   l = n("481060"),
@@ -265,7 +265,7 @@ let k = {
   }
 };
 
-function F(e) {
+function V(e) {
   return {
     ...k,
     link: (0, y.default)(e),

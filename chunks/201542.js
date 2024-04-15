@@ -2,7 +2,7 @@
 n.r(t), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("803997"),
+  s = n("120356"),
   a = n.n(s),
   o = n("442837"),
   l = n("481060"),
@@ -50,7 +50,7 @@ t.default = r.memo(function(e) {
       onError: B
     } = e,
     k = r.useRef(null),
-    [F, V] = r.useState(0),
+    [V, F] = r.useState(0),
     [x, H] = r.useState(P),
     [Y, j] = r.useState(!1),
     [W, K] = r.useState(!1),
@@ -94,13 +94,13 @@ t.default = r.memo(function(e) {
       X(!0)
     }, []),
     e_ = r.useCallback(() => {
-      X(!1), F === x && es()
-    }, [F, x, es]),
+      X(!1), V === x && es()
+    }, [V, x, es]),
     ec = r.useCallback(e => {
       let t = k.current;
       if (null == x || null == t) return;
       let n = e * x;
-      V(n), t.currentTime = n, q(!0), clearTimeout(et.current), et.current = void 0
+      F(n), t.currentTime = n, q(!0), clearTimeout(et.current), et.current = void 0
     }, [x]);
   r.useEffect(() => {
     !Q && W && q(!0)
@@ -110,14 +110,14 @@ t.default = r.memo(function(e) {
     if (Q || W) {
       if (W) {
         var e, t;
-        eE.current = performance.now(), null == G || G(!1, F, (null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * f.default.Millis.SECOND)
+        eE.current = performance.now(), null == G || G(!1, V, (null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * f.default.Millis.SECOND)
       } else {
         let e = performance.now(),
           t = eE.current;
-        null == w || w(F, null != t ? (e - t) / 1e3 : 0), eE.current = null
+        null == w || w(V, null != t ? (e - t) / 1e3 : 0), eE.current = null
       }
     }
-  }, [W]), t = k, n = W, s = V, r.useEffect(() => {
+  }, [W]), t = k, n = W, s = F, r.useEffect(() => {
     let e;
     return ! function i() {
       let r = t.current;
@@ -199,7 +199,7 @@ t.default = r.memo(function(e) {
     }), (0, i.jsx)(A.default, {
       className: N.waveform,
       waveform: y,
-      currentTime: F,
+      currentTime: V,
       duration: null != x ? x : 1,
       playing: W,
       played: Q,
@@ -208,7 +208,7 @@ t.default = r.memo(function(e) {
       onDragEnd: e_
     }), (0, i.jsx)(p, {
       played: Q,
-      currentTime: F,
+      currentTime: V,
       duration: x
     }), (0, i.jsx)(c.default, {
       className: N.volumeButton,

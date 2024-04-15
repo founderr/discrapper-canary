@@ -9,7 +9,7 @@ A.r(t), A.d(t, {
 }), A("47120");
 var a, l, s = A("735250"),
   n = A("470079"),
-  r = A("803997"),
+  r = A("120356"),
   i = A.n(r),
   o = A("512722"),
   d = A.n(o),
@@ -205,7 +205,7 @@ function eA(e) {
       ...e
     }), e6)
   }, [L, e6, es]);
-  let e9 = async e => {
+  let e2 = async e => {
     let t = (0, M.describeProductChangeValidation)({
       newRoleParams: eX
     });
@@ -227,7 +227,7 @@ function eA(e) {
   }, [eG, L, eo]), n.useEffect(() => {
     eJ && ek(void 0)
   }, [eJ]);
-  let e2 = n.useRef(null);
+  let e9 = n.useRef(null);
   return (0, s.jsxs)(g.ModalRoot, {
     transitionState: eA,
     size: g.ModalSize.DYNAMIC,
@@ -258,7 +258,7 @@ function eA(e) {
       children: [(0, s.jsx)(g.ScrollerThin, {
         children: (0, s.jsxs)("div", {
           className: w.productFieldsSection,
-          ref: e2,
+          ref: e9,
           children: [(0, s.jsx)(g.FormItem, {
             title: H.default.Messages.GUILD_PRODUCT_EDIT_MODAL_NAME_LABEL,
             tag: "label",
@@ -332,7 +332,7 @@ function eA(e) {
             children: (0, s.jsx)(_.AttachmentsUploadComponent, {
               onFileAdded: () => {
                 var e;
-                null === (e = e2.current) || void 0 === e || e.scrollIntoView({
+                null === (e = e9.current) || void 0 === e || e.scrollIntoView({
                   behavior: "smooth",
                   block: "end"
                 })
@@ -357,7 +357,7 @@ function eA(e) {
             disabledTooltip: ei ? H.default.Messages.GUILD_PRODUCT_UNPUBLISH_REQUIRES_SAVE : H.default.Messages.GUILD_PRODUCT_PUBLISH_REQUIRES_SAVE,
             published: ei,
             onClick: () => {
-              d()(e1, "Attempting to publish/unpublish when not allowed"), ek(ei ? "unpublish" : "publish"), e9({
+              d()(e1, "Attempting to publish/unpublish when not allowed"), ek(ei ? "unpublish" : "publish"), e2({
                 ...eY,
                 published: !ei
               })
@@ -439,7 +439,7 @@ function eA(e) {
             disabled: !e0,
             submitting: eB,
             onClick: () => {
-              d()(e0, "cannot save changes for published product without adding all fields"), ek("update_publish"), e9(eY)
+              d()(e0, "cannot save changes for published product without adding all fields"), ek("update_publish"), e2(eY)
             },
             children: H.default.Messages.GUILD_PRODUCT_EDIT_MODAL_SAVE_CHANGES_BUTTON
           }) : (0, s.jsx)(s.Fragment, {
@@ -448,7 +448,7 @@ function eA(e) {
               disabled: !e$,
               submitting: eB,
               onClick: () => {
-                d()(e$, "cannot save changes without name or price tier"), ek("draft"), e9(eY)
+                d()(e$, "cannot save changes without name or price tier"), ek("draft"), e2(eY)
               },
               children: H.default.Messages.GUILD_PRODUCT_EDIT_MODAL_SAVE_DRAFT_BUTTON
             })

@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   ReferralProgramSender: function() {
-    return a
+    return s
   },
   SubscriberHomeVariant: function() {
     return i
   }
 });
-var r, i, s = n("818083");
+var r, i, a = n("818083");
 (r = i || (i = {}))[r.VARIANT_1 = 0] = "VARIANT_1", r[r.VARIANT_2 = 1] = "VARIANT_2";
-let a = (0, s.createExperiment)({
+let s = (0, a.createExperiment)({
   kind: "user",
   id: "2024-03_referral_program_sender",
   label: "Referral Program Sender Experience",

@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
 }), n("47120"), n("653041");
 var i = n("735250"),
   r = n("470079"),
-  s = n("803997"),
+  s = n("120356"),
   a = n.n(s),
   o = n("392711"),
   l = n.n(o),
@@ -191,20 +191,20 @@ class b extends r.Component {
       "aria-labelledby": B,
       accessibilityLabel: k
     } = this.props, {
-      submitting: F,
-      popup: V
+      submitting: V,
+      popup: F
     } = this.state, x = {
       channel: f,
       className: a()(v, M.textArea, {
         [M.textAreaSlate]: h,
-        [M.textAreaDisabled]: d || F
+        [M.textAreaDisabled]: d || V
       }),
       id: y,
       placeholder: this.getPlaceholder(),
       required: P,
       accessibilityLabel: k,
       disabled: d || !1,
-      submitting: F,
+      submitting: V,
       isEdit: S === O.ChatInputTypes.EDIT,
       onFocus: this.handleFocus,
       onBlur: this.handleBlur,
@@ -228,10 +228,10 @@ class b extends r.Component {
       useNewSlashCommands: R,
       disableAutoFocus: c.isMobile || null !== (n = S.disableAutoFocus) && void 0 !== n && n,
       disableEnterToSubmit: null !== (r = null === (e = S.submit) || void 0 === e ? void 0 : e.disableEnterToSubmit) && void 0 !== r && r,
-      "aria-controls": null !== (s = V.id) && void 0 !== s ? s : void 0,
+      "aria-controls": null !== (s = F.id) && void 0 !== s ? s : void 0,
       "aria-haspopup": "listbox",
-      "aria-expanded": null !== V.id || void 0,
-      "aria-activedescendant": null !== (o = V.activeDescendant) && void 0 !== o ? o : void 0,
+      "aria-expanded": null !== F.id || void 0,
+      "aria-activedescendant": null !== (o = F.activeDescendant) && void 0 !== o ? o : void 0,
       "aria-invalid": l.length > b,
       "aria-describedby": w,
       "aria-labelledby": B,

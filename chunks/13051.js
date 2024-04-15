@@ -6,7 +6,7 @@ l.r(t), l.d(t, {
 }), l("47120"), l("315314"), l("610138"), l("216116"), l("78328"), l("815648");
 var n = l("735250"),
   a = l("470079"),
-  s = l("803997"),
+  s = l("120356"),
   i = l.n(s),
   r = l("913527"),
   o = l.n(r),
@@ -21,8 +21,8 @@ var n = l("735250"),
   E = l("246946"),
   S = l("285952"),
   g = l("259580"),
-  h = l("497309"),
-  p = l("531087"),
+  p = l("497309"),
+  h = l("531087"),
   _ = l("768581"),
   O = l("709054"),
   A = l("486199"),
@@ -71,8 +71,8 @@ function v(e) {
     }, [s.role_id]),
     {
       serviceName: F,
-      channelURL: w,
-      expireBehaviorLabel: W,
+      channelURL: W,
+      expireBehaviorLabel: w,
       syncLabel: V,
       subscribersText: Y
     } = a.useMemo(() => {
@@ -123,7 +123,7 @@ function v(e) {
   if (a.useEffect(() => {
       (null == r ? void 0 : r.id) === s.id && (null == r ? void 0 : r.enabled) === !0 && y(!1)
     }, [r, s.id]), s.enabled && null != s.user) t = [{
-    icon: h.default,
+    icon: p.default,
     text: G ? x.default.Messages.INTEGRATION_ADDED_DATE.format({
       timestamp: O.default.extractTimestamp(s.id)
     }) : x.default.Messages.INTEGRATION_ADDED_USER_DATE.format({
@@ -132,11 +132,11 @@ function v(e) {
     })
   }];
   else {
-    let e = new URL(w);
+    let e = new URL(W);
     t = [{
       text: x.default.Messages.INTEGRATIONS_ACCOUNT_DESCRIPTION.format({
         serviceName: F,
-        accountUrl: w,
+        accountUrl: W,
         accountUrlText: e.hostname + e.pathname
       })
     }]
@@ -164,7 +164,7 @@ function v(e) {
           color: u.Button.Colors.PRIMARY,
           onClick: B,
           disabled: D,
-          children: D ? (0, n.jsx)(p.default, {
+          children: D ? (0, n.jsx)(h.default, {
             width: 24,
             height: 24
           }) : (0, n.jsx)(n.Fragment, {
@@ -224,7 +224,7 @@ function v(e) {
               color: u.Button.Colors.PRIMARY,
               disabled: t.syncing || t.revoked,
               onClick: r,
-              children: t.syncing ? (0, n.jsx)(p.default, {
+              children: t.syncing ? (0, n.jsx)(h.default, {
                 width: 24,
                 height: 24
               }) : (0, n.jsx)(n.Fragment, {
@@ -291,7 +291,7 @@ function v(e) {
       })
     }({
       integration: r,
-      labelText: W,
+      labelText: w,
       onBehaviorChange: function(e) {
         c.default.updateIntegration({
           expireBehavior: e

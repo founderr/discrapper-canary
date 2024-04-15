@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MemberRole: function() {
-    return V
+    return F
   },
   OverflowAddRolesButton: function() {
     return H
@@ -12,7 +12,7 @@ n.r(t), n.d(t, {
 }), n("47120"), n("411104");
 var i = n("735250"),
   r = n("470079"),
-  s = n("803997"),
+  s = n("120356"),
   a = n.n(s),
   o = n("512722"),
   l = n.n(o),
@@ -47,7 +47,7 @@ var i = n("735250"),
   B = n("862273");
 let k = () => Promise.resolve();
 
-function F(e) {
+function V(e) {
   let {
     userRoles: t,
     position: n,
@@ -84,7 +84,7 @@ function F(e) {
     })]
   })
 }
-let V = r.forwardRef(function(e, t) {
+let F = r.forwardRef(function(e, t) {
   var s, o, l;
   let u;
   let {
@@ -113,8 +113,8 @@ let V = r.forwardRef(function(e, t) {
         label: w.default.Messages.COPY_ID_ROLE
       })
     })
-  }, [h.id]), b = (0, I.useToken)(E.default.unsafe_rawColors.PRIMARY_300).hsl(), G = null !== (o = h.colorString) && void 0 !== o ? o : b, k = null !== (l = (0, _.hex2rgb)(G, .6)) && void 0 !== l ? l : void 0, F = E.default.unsafe_rawColors.WHITE_500.css, V = (0, _.hex2int)(G);
-  null != V && .3 > (0, _.getDarkness)(V) && (F = E.default.unsafe_rawColors.PRIMARY_630.css), u = y ? (0, i.jsx)(m.default, {
+  }, [h.id]), b = (0, I.useToken)(E.default.unsafe_rawColors.PRIMARY_300).hsl(), G = null !== (o = h.colorString) && void 0 !== o ? o : b, k = null !== (l = (0, _.hex2rgb)(G, .6)) && void 0 !== l ? l : void 0, V = E.default.unsafe_rawColors.WHITE_500.css, F = (0, _.hex2int)(G);
+  null != F && .3 > (0, _.getDarkness)(F) && (V = E.default.unsafe_rawColors.PRIMARY_630.css), u = y ? (0, i.jsx)(m.default, {
     className: B.roleFlowerStar,
     iconClassName: f ? B.roleVerifiedIcon : void 0,
     color: G,
@@ -156,7 +156,7 @@ let V = r.forwardRef(function(e, t) {
           roleName: h.name
         }),
         children: [u, f ? (0, i.jsx)(v.default, {
-          color: F,
+          color: V,
           className: B.roleRemoveIcon,
           "aria-hidden": !0
         }) : null]
@@ -188,7 +188,7 @@ function x(e) {
       let {
         position: n
       } = t;
-      return (0, i.jsx)(F, {
+      return (0, i.jsx)(V, {
         ...e,
         position: null != n ? n : "top"
       })
@@ -293,9 +293,9 @@ function Y(e) {
   l()(null != y, "MemberRolesList: currentUser cannot be undefined");
   let P = !T && C.default.can(G.Permissions.MANAGE_ROLES, s),
     b = U.getHighestRole(s, y.id),
-    F = r.useMemo(() => "roles-".concat((0, u.v4)()), []),
+    V = r.useMemo(() => "roles-".concat((0, u.v4)()), []),
     Y = (0, d.default)({
-      id: F,
+      id: V,
       isEnabled: !0,
       scrollToStart: k,
       scrollToEnd: k,
@@ -303,7 +303,7 @@ function Y(e) {
     }),
     j = v.map(e => {
       var t;
-      return (0, i.jsx)(V, {
+      return (0, i.jsx)(F, {
         className: S,
         role: e,
         canRemove: P && U.isRoleHigher(s, y.id, b, e) || (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null && n.id === y.id,

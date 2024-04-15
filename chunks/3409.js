@@ -754,7 +754,7 @@ function eA(e) {
       sideMargin: 20,
       children: t
     }),
-    e9 = eN === b.Step.PAYMENT_TYPE && 0 === T.length ? null : a;
+    e5 = eN === b.Step.PAYMENT_TYPE && 0 === T.length ? null : a;
   return L ? (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(g.default, {
       className: W.paymentModalError
@@ -764,7 +764,7 @@ function eA(e) {
     }), (0, n.jsx)(R.PaymentPortalBody, {
       children: e8
     }), (0, n.jsx)(R.PaymentPortalFooter, {
-      children: e9
+      children: e5
     })]
   }) : (0, n.jsx)(B.default, {
     steps: null != C ? C : eC.steps,
@@ -773,7 +773,7 @@ function eA(e) {
     header: D,
     hideBreadcrumbs: F,
     body: e8,
-    footer: e9
+    footer: e5
   })
 }
 

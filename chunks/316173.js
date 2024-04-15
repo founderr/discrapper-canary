@@ -2,7 +2,7 @@
 a.r(t), a("47120");
 var n = a("735250"),
   s = a("470079"),
-  l = a("803997"),
+  l = a("120356"),
   i = a.n(l),
   r = a("442837"),
   o = a("433517"),
@@ -42,7 +42,7 @@ t.default = () => {
     children: [(0, n.jsx)(E.default, {
       className: _.icon
     }), h.default.Messages.DEV_NOTICE_STAGING.format({
-      buildNumber: "284483"
+      buildNumber: "284536"
     }), (0, n.jsx)(S, {})]
   }) : null
 }

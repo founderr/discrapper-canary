@@ -26,9 +26,9 @@ function f(e) {
     canNavigate: E
   } = e, S = r.default.get(m), g = a.useCallback(async e => {
     E() && (await o.default.enableIntegration(f.id, e.type, e.id), i.default.startEditingIntegration(e.id))
-  }, [E, f.id]), h = a.useCallback(e => {
+  }, [E, f.id]), p = a.useCallback(e => {
     E() && (e.id === (null == l ? void 0 : l.id) && i.default.stopEditingIntegration(), o.default.disableIntegration(f.id, e.id))
-  }, [E, l, f.id]), p = a.useCallback(e => {
+  }, [E, l, f.id]), h = a.useCallback(e => {
     E() && (e === (null == l ? void 0 : l.id) ? i.default.stopEditingIntegration() : i.default.startEditingIntegration(e))
   }, [E, l]);
   return (0, n.jsxs)(n.Fragment, {
@@ -47,8 +47,8 @@ function f(e) {
       guild: f,
       isExpanded: (null == l ? void 0 : l.id) === e.id,
       onEnable: g,
-      onDisable: h,
-      onToggleExpand: () => p(e.id)
+      onDisable: p,
+      onToggleExpand: () => h(e.id)
     }, e.id)), (0, n.jsx)(s.Text, {
       className: c.helpText,
       color: "text-muted",

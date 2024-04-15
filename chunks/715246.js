@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   convertSecondsToClockFormat: function() {
-    return F
+    return V
   }
 }), n("653041"), n("47120"), n("411104");
 var i, r, s = n("735250"),
   a = n("470079"),
-  o = n("803997"),
+  o = n("120356"),
   l = n.n(o),
   u = n("392711"),
   d = n.n(u),
@@ -57,16 +57,16 @@ let G = "-:--",
     backgroundColor: "black"
   };
 
-function F(e) {
+function V(e) {
   let t = 0 | e,
     n = t % 60;
   return "".concat((t - n) / 60, ":").concat(String(n).padStart(2, "0"))
 }
-let V = e => {
+let F = e => {
   let {
     current: t,
     duration: n
-  } = e, i = null != t ? F(t) : G, r = null != n ? F(n) : G;
+  } = e, i = null != t ? V(t) : G, r = null != n ? V(n) : G;
   return i = i.padStart(r.length, "0"), (0, s.jsxs)("div", {
     className: P.durationTimeWrapper,
     children: [(0, s.jsx)("span", {
@@ -179,7 +179,7 @@ class x extends(i = a.Component) {
       onClick: e => e.stopPropagation(),
       onDoubleClick: e => e.stopPropagation(),
       style: this.getAnimatedStyle(),
-      children: [this.renderPlayIcon(), "string" == typeof E || E > 250 ? (0, s.jsx)(V, {
+      children: [this.renderPlayIcon(), "string" == typeof E || E > 250 ? (0, s.jsx)(F, {
         current: n,
         duration: i
       }) : null, (0, s.jsx)(N.default, {

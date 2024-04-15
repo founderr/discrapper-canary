@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return h
+    return p
   }
 }), l("653041"), l("47120");
 var n = l("470079"),
@@ -22,7 +22,7 @@ var n = l("470079"),
   S = l("399860"),
   g = l("981631");
 
-function h(e, t, l) {
+function p(e, t, l) {
   let a = (0, o.useStateFromStores)([E.default], () => E.default.getApplicationPermissions()),
     i = n.useMemo(() => (function(e, t) {
       let l = {
@@ -41,28 +41,28 @@ function h(e, t, l) {
         type: u.ApplicationCommandPermissionType.CHANNEL
       }), l
     })(e, null != a ? a : {}), [a, e]),
-    h = (0, o.useStateFromStores)([E.default], () => {
+    p = (0, o.useStateFromStores)([E.default], () => {
       var e;
       if (null == l) return;
       let t = E.default.getCommand(l);
       return null !== (e = null == t ? void 0 : t.permissions) && void 0 !== e ? e : {}
     }, [l]),
-    p = (0, o.useStateFromStores)([E.default], () => {
+    h = (0, o.useStateFromStores)([E.default], () => {
       var e;
       return null == l ? E.default.getEditedApplication() : null === (e = E.default.getEditedCommand()) || void 0 === e ? void 0 : e.permissions
     }, [l]),
     _ = null != l ? l : t,
-    O = null != l ? h : i,
-    A = n.useMemo(() => null != p ? p : {
+    O = null != l ? p : i,
+    A = n.useMemo(() => null != h ? h : {
       ...null != O ? O : {}
-    }, [p, O]),
+    }, [h, O]),
     C = n.useMemo(() => Object.keys(A).length, [A]),
     x = n.useMemo(() => null == O || null == A ? null : !r().isEqual(O, A), [O, A]);
   return n.useEffect(() => {
     _ === t && (x ? d.default.startEditingCommandPermissions(_) : d.default.stopEditingCommandPermissions(_))
   }, [t, x, _]), {
     originalApplicationPermissions: i,
-    originalCommandPermissions: h,
+    originalCommandPermissions: p,
     editedTargetPermissions: function(e, t) {
       let l = (0, o.useStateFromStores)([m.default], () => m.default.getGuild(e), [e]);
       s()(null != l, "guild must be present to be editing its integration settings");
@@ -88,8 +88,8 @@ function h(e, t, l) {
             userIds: n
           }
         }, [t]),
-        h = (0, o.useStateFromStoresObject)([f.default], () => Object.fromEntries(d.map(f.default.getChannel).filter(N.isNotNullish).map(e => [e.id, e])), [d]),
-        p = (0, o.useStateFromStoresObject)([m.default], () => Object.fromEntries(E.map(t => m.default.getRole(e, t)).filter(N.isNotNullish).map(e => [e.id, e])), [E, e]),
+        p = (0, o.useStateFromStoresObject)([f.default], () => Object.fromEntries(d.map(f.default.getChannel).filter(N.isNotNullish).map(e => [e.id, e])), [d]),
+        h = (0, o.useStateFromStoresObject)([m.default], () => Object.fromEntries(E.map(t => m.default.getRole(e, t)).filter(N.isNotNullish).map(e => [e.id, e])), [E, e]),
         _ = (0, o.useStateFromStoresObject)([T.default], () => Object.fromEntries(S.map(T.default.getUser).filter(N.isNotNullish).map(e => [e.id, e])), [S]);
       return n.useMemo(() => {
         let e = l.id,
@@ -100,11 +100,11 @@ function h(e, t, l) {
             d = !1;
           if (o.type === u.ApplicationCommandPermissionType.CHANNEL) {
             let e = o.id === n,
-              l = h[o.id];
+              l = p[o.id];
             t = e || I.default.can(g.Permissions.VIEW_CHANNEL, l), d = !0
           } else if (o.type === u.ApplicationCommandPermissionType.ROLE) {
             let n = o.id === e,
-              s = p[o.id];
+              s = h[o.id];
             t = n || null != s, d = r || n || I.default.isRoleHigher(l, a, s)
           } else if (o.type === u.ApplicationCommandPermissionType.USER) {
             let e = _[o.id];
@@ -117,7 +117,7 @@ function h(e, t, l) {
           }
         }
         return s
-      }, [h, l, a, r, t, p, _])
+      }, [p, l, a, r, t, h, _])
     }(e, A),
     hasChanges: x,
     selectedPermissionCount: C

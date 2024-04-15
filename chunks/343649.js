@@ -185,13 +185,13 @@ function ee(e) {
   let e$ = s.useRef(null),
     [e0, e3] = (0, P.default)(!1, 500),
     [e1, e4] = s.useState(null),
-    [e7, e5] = s.useState([]),
-    [e8, e9] = s.useState(!1);
+    [e5, e7] = s.useState([]),
+    [e2, e8] = s.useState(!1);
   s.useEffect(() => {
     let e;
-    if (!!ex) null != v.default.get(K.SubscriptionPlans.PREMIUM_MONTH_GUILD) && e5(e = (0, k.getCurrencies)(K.SubscriptionPlans.PREMIUM_MONTH_GUILD, eM, !1)), null == eM && null != eo && null != eo.paymentSourceId ? e4(eo.currency) : null != e && e4(e[0])
-  }, [eM, eo, ex, JSON.stringify(e7)]);
-  let e2 = (0, L.AddPaymentFlow)({
+    if (!!ex) null != v.default.get(K.SubscriptionPlans.PREMIUM_MONTH_GUILD) && e7(e = (0, k.getCurrencies)(K.SubscriptionPlans.PREMIUM_MONTH_GUILD, eM, !1)), null == eM && null != eo && null != eo.paymentSourceId ? e4(eo.currency) : null != e && e4(e[0])
+  }, [eM, eo, ex, JSON.stringify(e5)]);
+  let e9 = (0, L.AddPaymentFlow)({
     paymentModalArgs: ef,
     initialStep: T.Step.PAYMENT_TYPE,
     prependSteps: [T.Step.PLAN_SELECT],
@@ -341,7 +341,7 @@ function ee(e) {
                     duration_ms: Date.now() - eG,
                     guild_id: en,
                     application_id: eu
-                  }), e8) return;
+                  }), e2) return;
                 if (null == eo || null == eS) {
                   u()(null != e, "Missing paymentSource");
                   let t = await (0, p.createSubscription)({
@@ -350,7 +350,7 @@ function ee(e) {
                     currency: o.currency
                   });
                   if (t.redirectConfirmation) {
-                    e9(null != t.redirectURL);
+                    e8(null != t.redirectURL);
                     return
                   }
                 } else {
@@ -360,7 +360,7 @@ function ee(e) {
                   t.currency = eo.currency, null == t.currency && (t.currency = o.currency), t.paymentSource = null != ed ? eI[ed] : void 0, null == t.paymentSource && (u()(null != e, "Missing paymentSource"), t.paymentSource = e, t.currency = o.currency);
                   let n = await (0, p.updateSubscription)(eo, t, ej);
                   if (n.redirectConfirmation) {
-                    e9(null != n.redirectURL);
+                    e8(null != n.redirectURL);
                     return
                   }
                 }
@@ -374,7 +374,7 @@ function ee(e) {
                   duration_ms: Date.now() - eG
                 })
               } finally {
-                !e8 && eT(!1)
+                !e2 && eT(!1)
               }
             },
             children: q.default.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_SUBMIT
@@ -405,13 +405,13 @@ function ee(e) {
           })
       }
       let c = null != eR && null == (0, T.errorToStep)(eR) ? eR : eL;
-      t = eY === T.Step.ADD_PAYMENT_STEPS ? e2 : (0, l.jsx)(C.default, {
+      t = eY === T.Step.ADD_PAYMENT_STEPS ? e9 : (0, l.jsx)(C.default, {
         hideBreadcrumbs: eY === T.Step.CONFIRM,
         steps: ew,
         currentStep: eY,
         paymentError: c,
         purchaseErrorBlockRef: eC,
-        hasCurrencies: e7.length > 1,
+        hasCurrencies: e5.length > 1,
         body: e,
         footer: eY !== T.Step.CONFIRM ? (0, l.jsxs)(S.ModalFooter, {
           direction: B.default.Direction.HORIZONTAL,

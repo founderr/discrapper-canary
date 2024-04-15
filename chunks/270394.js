@@ -6,7 +6,7 @@ l.r(t), l.d(t, {
 }), l("47120");
 var n = l("735250"),
   a = l("470079"),
-  s = l("803997"),
+  s = l("120356"),
   i = l.n(s),
   r = l("512722"),
   o = l.n(r),
@@ -21,8 +21,8 @@ var n = l("735250"),
   E = l("493544"),
   S = l("700582"),
   g = l("410030"),
-  h = l("933557"),
-  p = l("154285"),
+  p = l("933557"),
+  h = l("154285"),
   _ = l("666657"),
   O = l("487419"),
   A = l("699516"),
@@ -76,7 +76,7 @@ function B(e) {
         }), (l = a.channel, s ? (0, n.jsx)(m.Text, {
           variant: "text-xs/normal",
           color: "header-secondary",
-          children: (0, h.computeChannelName)(l, C.default, A.default, !0)
+          children: (0, p.computeChannelName)(l, C.default, A.default, !0)
         }) : null)]
       })
     }), (0, n.jsx)(M.default, {
@@ -139,10 +139,10 @@ function H(e) {
       enableInvitesDisabled: S
     } = (0, L.useInvitesDisabledExperiment)(s),
     {
-      showAlertMode: h
-    } = (0, p.useGuildAlertModeEnabled)(s.id),
+      showAlertMode: p
+    } = (0, h.useGuildAlertModeEnabled)(s.id),
     A = (0, c.useStateFromStores)([O.default], () => O.default.getGuildIncident(s.id)),
-    C = s.hasFeature(j.GuildFeatures.INVITES_DISABLED) || h && (null == A ? void 0 : A.invitesDisabledUntil) != null && new Date(A.invitesDisabledUntil) > new Date,
+    C = s.hasFeature(j.GuildFeatures.INVITES_DISABLED) || p && (null == A ? void 0 : A.invitesDisabledUntil) != null && new Date(A.invitesDisabledUntil) > new Date,
     [x, D] = a.useState(!1);
   a.useEffect(() => {
     N && L.InvitesDisabledExperiment.trackExposure({
@@ -177,8 +177,8 @@ function H(e) {
           D(!1)
         }
       }
-    }, w = () => {
-      if (h) {
+    }, W = () => {
+      if (p) {
         let e = {
           source: _.GuildIncidentActionSources.GUILD_SETTINGS
         };
@@ -262,14 +262,14 @@ function H(e) {
             children: T ? P.default.Messages.SETTINGS_INVITE_TIP.format({
               onCreateInvite: U
             }) : P.default.Messages.SETTINGS_INVITE_TIP_WITHOUT_CREATE
-          }), (S || h || C) && (0, n.jsxs)("div", {
+          }), (S || p || C) && (0, n.jsxs)("div", {
             className: b.inviteDisabledContainer,
             children: [(0, n.jsx)(m.Button, {
               size: m.Button.Sizes.SMALL,
               color: C ? m.Button.Colors.BRAND : m.Button.Colors.RED,
               disabled: !N,
               submitting: x,
-              onClick: w,
+              onClick: W,
               children: C ? P.default.Messages.ENABLE_INVITES : P.default.Messages.DISABLE_INVITES
             }), C && (0, n.jsxs)("div", {
               className: b.inviteDisabledTip,

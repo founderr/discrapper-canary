@@ -2,7 +2,7 @@
 a.r(t), a("653041"), a("47120");
 var l = a("735250"),
   n = a("470079"),
-  s = a("803997"),
+  s = a("120356"),
   i = a.n(s),
   d = a("91192"),
   r = a("442837"),
@@ -45,8 +45,8 @@ var l = a("735250"),
   K = a("511642"),
   z = a("88476"),
   Y = a("325667"),
-  Z = a("147873"),
-  X = a("225478"),
+  X = a("147873"),
+  Z = a("225478"),
   J = a("867403"),
   q = a("217351"),
   Q = a("638848"),
@@ -137,7 +137,7 @@ let er = 936,
             guild: t
           }) : (0, l.jsx)(Q.default, {
             guild: t
-          }), (0, l.jsx)(X.default, {
+          }), (0, l.jsx)(Z.default, {
             guildId: t.id,
             isUsingCollapsedLayout: s
           }), (0, l.jsx)(q.default, {
@@ -222,7 +222,7 @@ let eh = (0, c.default)(function(e) {
       G.current = !1
     }, [o]), n.useEffect(() => {
       null == v.default.getLoadId(o) && M.default.closeChannelSidebar(ea.StaticChannelRoute.GUILD_HOME)
-    }, [o]), (0, Z.default)(o), n.useLayoutEffect(() => {
+    }, [o]), (0, X.default)(o), n.useLayoutEffect(() => {
       var e, t;
       let a = W.default.getSavedScrollPosition(o);
       return y && (0 === a || null == a) ? null === (e = T.current) || void 0 === e || e.scrollTo({
@@ -249,7 +249,7 @@ let eh = (0, c.default)(function(e) {
         guildName: t.name
       })
     });
-    let X = (0, u.useFocusJumpSection)(),
+    let Z = (0, u.useFocusJumpSection)(),
       {
         showDeprecationNotice: q
       } = B.GuildHomeDeprecationExperiment.useExperiment({
@@ -294,7 +294,7 @@ let eh = (0, c.default)(function(e) {
                     T.current = e, a.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
                   },
                   ...n,
-                  ...X,
+                  ...Z,
                   children: [y && (0, l.jsx)($.default, {
                     guild: t
                   }), b ? Q : null, (0, l.jsxs)("div", {

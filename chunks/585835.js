@@ -6,7 +6,7 @@ l.r(t), l.d(t, {
 }), l("653041"), l("47120");
 var n = l("735250"),
   a = l("470079"),
-  s = l("803997"),
+  s = l("120356"),
   i = l.n(s),
   r = l("442837"),
   o = l("481060"),
@@ -21,8 +21,8 @@ var n = l("735250"),
   E = l("912527"),
   S = l("202597"),
   g = l("626135"),
-  h = l("486199"),
-  p = l("929507"),
+  p = l("486199"),
+  h = l("929507"),
   _ = l("981631"),
   O = l("231338"),
   A = l("689938"),
@@ -43,8 +43,8 @@ function x(e) {
     hasNextSection: k,
     onButtonClick: U,
     guildId: F,
-    isScrolling: w,
-    canShowMigrationTooltip: W
+    isScrolling: W,
+    canShowMigrationTooltip: w
   } = e, [V, Y] = a.useState(!1), [K, z] = a.useState(!1);
   let Z = (x = B, R = H, M = k, v = U, null == x || null == v ? null : M ? (0, n.jsxs)(I.default, {
       align: I.default.Align.CENTER,
@@ -64,7 +64,7 @@ function x(e) {
       onClick: v,
       children: x
     })),
-    q = W && !w && !K && void 0 !== F && null != G;
+    q = w && !W && !K && void 0 !== F && null != G;
   a.useEffect(() => {
     q && g.default.track(_.AnalyticEvents.COMMANDS_MIGRATION_TOOLTIP_VIEWED, {
       ...(0, d.collectGuildAnalyticsMetadata)(F),
@@ -75,7 +75,7 @@ function x(e) {
   let J = q ? (0, n.jsx)(o.Popout, {
       renderPopout: () => (0, n.jsx)(o.Clickable, {
         onClick: e => {
-          e.stopPropagation(), z(!0), p.default.dismissOverviewTooltip(F, G.integration)
+          e.stopPropagation(), z(!0), h.default.dismissOverviewTooltip(F, G.integration)
         },
         children: (0, n.jsx)(f.default, {
           content: A.default.Messages.COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP,
@@ -95,7 +95,7 @@ function x(e) {
     Q = (0, u.useGuildIndexState)(F, !0),
     $ = (null == G ? void 0 : G.application) != null && Object.keys(null !== (s = null === (l = Q.result) || void 0 === l ? void 0 : null === (t = l.sections[G.application.id]) || void 0 === t ? void 0 : t.commands) && void 0 !== s ? s : {}).length > 0,
     ee = (0, n.jsxs)(I.default, {
-      children: [(0, n.jsx)(h.default, {
+      children: [(0, n.jsx)(p.default, {
         name: L,
         icon: j,
         imageSrc: P,
@@ -152,7 +152,7 @@ function x(e) {
     });
   return k ? (0, n.jsx)(o.Clickable, {
     onClick: () => {
-      W && null != F && null != G && p.default.dismissOverviewTooltip(F, G.integration), null == U || U()
+      w && null != F && null != G && h.default.dismissOverviewTooltip(F, G.integration), null == U || U()
     },
     onFocus: () => Y(!0),
     onBlur: () => Y(!1),

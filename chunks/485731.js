@@ -1,28 +1,28 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   hqStreamingFrameAnimationPlayed: function() {
-    return s
+    return r
   },
   hqStreamingPopoutDismissed: function() {
-    return n
+    return s
   },
   usePerksDemosUIStore: function() {
-    return a
+    return l
   }
 });
-let a = (0, l("652874").default)(() => ({
+let l = (0, n("652874").default)(() => ({
   hqStreamingFrameAnimationPlayed: !1,
   hqStreamingPopoutDismissed: !1
 }));
 
-function s(e) {
-  a.setState({
+function r(e) {
+  l.setState({
     hqStreamingFrameAnimationPlayed: e
   })
 }
 
-function n(e) {
-  a.setState({
+function s(e) {
+  l.setState({
     hqStreamingPopoutDismissed: e
   })
 }

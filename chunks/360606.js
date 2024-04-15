@@ -12,8 +12,8 @@ var s, i, r, o, d = l("392711"),
   E = l("981631");
 let S = [],
   g = [],
-  h = null,
   p = null,
+  h = null,
   _ = null,
   O = !1,
   A = !1,
@@ -38,18 +38,18 @@ function L(e) {
     let e = N.default.getProps().integrations;
     null == e && (A = !0), S = null != e ? e : []
   } else S = [];
-  if (g = null != n && I.default.can(E.Permissions.MANAGE_WEBHOOKS, n) ? T.default.getWebhooksForGuild(n.id) : [], !e && null != p) {
-    let e = P(p.id);
-    null != e && (p = e)
+  if (g = null != n && I.default.can(E.Permissions.MANAGE_WEBHOOKS, n) ? T.default.getWebhooksForGuild(n.id) : [], !e && null != h) {
+    let e = P(h.id);
+    null != e && (h = e)
   }
   if (null != _) {
     let e = b(_.id);
     null != e && (_ = e)
   }
-  h = null, C = E.FormStates.OPEN, x = {}, R = !1
+  p = null, C = E.FormStates.OPEN, x = {}, R = !1
 }
 let j = u().debounce(() => {
-  R && (null != p ? u().isEqual(p, P(p.id)) && (R = !1) : null != _ && u().isEqual(_, b(_.id)) && (R = !1), !R && y.emitChange())
+  R && (null != h ? u().isEqual(h, P(h.id)) && (R = !1) : null != _ && u().isEqual(_, b(_.id)) && (R = !1), !R && y.emitChange())
 }, 500);
 
 function P(e) {
@@ -86,10 +86,10 @@ class D extends(s = c.default.Store) {
     return g
   }
   get editedCommandId() {
-    return h
+    return p
   }
   get editedIntegration() {
-    return p
+    return h
   }
   get editedWebhook() {
     return _
@@ -152,33 +152,33 @@ let y = new D(f.default, __OVERLAY__ ? {} : {
     let {
       commandId: t
     } = e;
-    h = t, p = null, _ = null, x = {}, R = !0
+    p = t, h = null, _ = null, x = {}, R = !0
   },
   INTEGRATION_SETTINGS_STOP_EDITING_COMMAND: function(e) {
     let {
       commandId: t
     } = e;
-    if (null == h || h !== t) return !1;
-    h = null, x = {}, R = !1
+    if (null == p || p !== t) return !1;
+    p = null, x = {}, R = !1
   },
   INTEGRATION_SETTINGS_START_EDITING_INTEGRATION: function(e) {
     let {
       integrationId: t
     } = e, l = P(t);
     if (null == l) return !1;
-    p = l, h = null, _ = null, x = {}, R = !1
+    h = l, p = null, _ = null, x = {}, R = !1
   },
   INTEGRATION_SETTINGS_STOP_EDITING_INTEGRATION: function() {
-    p = null, x = {}, R = !1
+    h = null, x = {}, R = !1
   },
   INTEGRATION_SETTINGS_UPDATE_INTEGRATION: function(e) {
     let {
       settings: t
     } = e;
-    if (null == p) return !1;
-    p = {
-      ...p
-    }, null != t.enableEmoticons && p.enable_emoticons !== t.enableEmoticons && (p.enable_emoticons = t.enableEmoticons, R = !0), null != t.expireBehavior && p.expire_behavior !== t.expireBehavior && (p.expire_behavior = t.expireBehavior, R = !0), null != t.expireGracePeriod && p.expire_grace_period !== t.expireGracePeriod && (p.expire_grace_period = t.expireGracePeriod, R = !0), R && j()
+    if (null == h) return !1;
+    h = {
+      ...h
+    }, null != t.enableEmoticons && h.enable_emoticons !== t.enableEmoticons && (h.enable_emoticons = t.enableEmoticons, R = !0), null != t.expireBehavior && h.expire_behavior !== t.expireBehavior && (h.expire_behavior = t.expireBehavior, R = !0), null != t.expireGracePeriod && h.expire_grace_period !== t.expireGracePeriod && (h.expire_grace_period = t.expireGracePeriod, R = !0), R && j()
   },
   INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function(e) {
     let {
@@ -194,13 +194,13 @@ let y = new D(f.default, __OVERLAY__ ? {} : {
       webhookId: t
     } = e, l = b(t);
     if (null == l) return !1;
-    _ = l, h = null, p = null, x = {}, R = !1
+    _ = l, p = null, h = null, x = {}, R = !1
   },
   INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function() {
     _ = null, x = {}, R = !1
   },
   GUILD_SETTINGS_CLOSE: function() {
-    n = null, S = [], g = [], h = null, p = null, _ = null, C = E.FormStates.CLOSED, R = !1
+    n = null, S = [], g = [], p = null, h = null, _ = null, C = E.FormStates.CLOSED, R = !1
   },
   GUILD_SETTINGS_LOADED_INTEGRATIONS: function(e) {
     let {
@@ -216,7 +216,7 @@ let y = new D(f.default, __OVERLAY__ ? {} : {
           if (l === e.id) return !0
         })) {
         var a, s;
-        S.push(e), e.type === (null == p ? void 0 : p.type) && (null === (a = e.account) || void 0 === a ? void 0 : a.id) === (null === (s = p.account) || void 0 === s ? void 0 : s.id) && (p = e)
+        S.push(e), e.type === (null == h ? void 0 : h.type) && (null === (a = e.account) || void 0 === a ? void 0 : a.id) === (null === (s = h.account) || void 0 === s ? void 0 : s.id) && (h = e)
       } for (let e = S.length - 1; e >= 0; e--) {
       let t = S[e],
         n = l.find(e => {
@@ -230,8 +230,8 @@ let y = new D(f.default, __OVERLAY__ ? {} : {
           ...t,
           ...n
         };
-        (null == p ? void 0 : p.id) === l.id && (!1 === l.enabled ? p = null : !R && (p = l)), S[e] = l
-      } else(null == p ? void 0 : p.id) === t.id && (p = null), S.splice(e, 1)
+        (null == h ? void 0 : h.id) === l.id && (!1 === l.enabled ? h = null : !R && (h = l)), S[e] = l
+      } else(null == h ? void 0 : h.id) === t.id && (h = null), S.splice(e, 1)
     }
     S = [...S], j()
   },

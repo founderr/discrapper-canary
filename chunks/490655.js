@@ -17,8 +17,8 @@ var n = l("735250"),
   E = l("285952"),
   S = l("585483"),
   g = l("63063"),
-  h = l("919196"),
-  p = l("731072"),
+  p = l("919196"),
+  h = l("731072"),
   _ = l("494118"),
   O = l("351644"),
   A = l("720764"),
@@ -59,7 +59,7 @@ t.default = a.memo(function(e) {
     refToScroller: y,
     errors: G,
     hasChanges: B
-  } = e, H = (0, r.useStateFromStores)([I.default], () => null != s ? I.default.getDefaultChannel(s.id) : null), k = (0, r.useStateFromStoresObject)([I.default], () => I.default.getChannels(null == s ? void 0 : s.id)), U = (0, r.useStateFromStoresObject)([T.default], () => i().keyBy(k.SELECTABLE.map(e => e.channel).filter(e => T.default.can(C.Permissions.MANAGE_WEBHOOKS, e)), "id")), F = (0, r.useStateFromStoresObject)([T.default], () => i().keyBy(k.VOCAL.map(e => e.channel).filter(e => e.isGuildVocal() && T.default.can(C.Permissions.MANAGE_WEBHOOKS, e)), "id")), w = null != v ? v : H, W = t === C.IntegrationSettingsSections.APPLICATION ? l : null, [V, Y] = a.useState(u.SHAKE_INTENSITY_DEFAULT), K = a.useCallback(() => B() ? (S.ComponentDispatch.dispatch(C.ComponentActions.SHAKE_APP, {
+  } = e, H = (0, r.useStateFromStores)([I.default], () => null != s ? I.default.getDefaultChannel(s.id) : null), k = (0, r.useStateFromStoresObject)([I.default], () => I.default.getChannels(null == s ? void 0 : s.id)), U = (0, r.useStateFromStoresObject)([T.default], () => i().keyBy(k.SELECTABLE.map(e => e.channel).filter(e => T.default.can(C.Permissions.MANAGE_WEBHOOKS, e)), "id")), F = (0, r.useStateFromStoresObject)([T.default], () => i().keyBy(k.VOCAL.map(e => e.channel).filter(e => e.isGuildVocal() && T.default.can(C.Permissions.MANAGE_WEBHOOKS, e)), "id")), W = null != v ? v : H, w = t === C.IntegrationSettingsSections.APPLICATION ? l : null, [V, Y] = a.useState(u.SHAKE_INTENSITY_DEFAULT), K = a.useCallback(() => B() ? (S.ComponentDispatch.dispatch(C.ComponentActions.SHAKE_APP, {
     duration: 300,
     intensity: V
   }), Y(Math.min(V + u.SHAKE_INTENSITY_INCREMENT, u.SHAKE_INTENSITY_MAX)), S.ComponentDispatch.dispatch(C.ComponentActions.EMPHASIZE_NOTICE), !1) : (Y(u.SHAKE_INTENSITY_DEFAULT), !0), [B, V]), z = a.useCallback(e => !!K() && (d.default.setSection(e), !0), [K]), {
@@ -104,15 +104,15 @@ t.default = a.memo(function(e) {
         null == J[C.PlatformTypes.YOUTUBE] && d.default.setSection(C.IntegrationSettingsSections.OVERVIEW);
         break;
       case C.IntegrationSettingsSections.APPLICATION:
-        (null == W || !(W in q || W in Z)) && d.default.setSection(C.IntegrationSettingsSections.OVERVIEW)
+        (null == w || !(w in q || w in Z)) && d.default.setSection(C.IntegrationSettingsSections.OVERVIEW)
     }
-  }, [Z, q, J, W, t, D]), a.useEffect(() => {
+  }, [Z, q, J, w, t, D]), a.useEffect(() => {
     if ((null == s ? void 0 : s.id) != null) m.default.getEntitlementsForGuildFetchState(s.id) === m.FetchState.NOT_FETCHED && f.fetchEntitlementsForGuild(s.id)
   }, [null == s ? void 0 : s.id]);
   let $ = null;
   switch (t) {
     case C.IntegrationSettingsSections.TWITCH:
-      null != J[C.PlatformTypes.TWITCH] && ($ = (0, n.jsx)(p.default, {
+      null != J[C.PlatformTypes.TWITCH] && ($ = (0, n.jsx)(h.default, {
         guild: s,
         integrations: J[C.PlatformTypes.TWITCH],
         editedIntegration: j,
@@ -130,7 +130,7 @@ t.default = a.memo(function(e) {
       }));
       break;
     case C.IntegrationSettingsSections.YOUTUBE:
-      null != J[C.PlatformTypes.YOUTUBE] && ($ = (0, n.jsx)(p.default, {
+      null != J[C.PlatformTypes.YOUTUBE] && ($ = (0, n.jsx)(h.default, {
         guild: s,
         integrations: J[C.PlatformTypes.YOUTUBE],
         editedIntegration: j,
@@ -148,8 +148,8 @@ t.default = a.memo(function(e) {
       break;
     case C.IntegrationSettingsSections.APPLICATION:
       var ee;
-      let et = null != W ? null !== (ee = Z[q[W]]) && void 0 !== ee ? ee : Z[W] : null;
-      null != et && ($ = (0, n.jsx)(h.default, {
+      let et = null != w ? null !== (ee = Z[q[w]]) && void 0 !== ee ? ee : Z[w] : null;
+      null != et && ($ = (0, n.jsx)(p.default, {
         guild: s,
         applicationIntegration: et,
         editedWebhook: b,
@@ -191,7 +191,7 @@ t.default = a.memo(function(e) {
         customWebhooks: X,
         followedChannelWebhooks: Q,
         isLoading: D || null == s,
-        canCreateWebhook: null != w,
+        canCreateWebhook: null != W,
         onManageCustomWebhooks: () => {
           d.default.setSection(C.IntegrationSettingsSections.WEBHOOKS)
         },
@@ -223,7 +223,7 @@ t.default = a.memo(function(e) {
         activeId: t.toString(),
         breadcrumbs: [C.IntegrationSettingsSections.OVERVIEW, t].map(e => ({
           id: e.toString(),
-          label: M(e, Z[W])
+          label: M(e, Z[w])
         })),
         onBreadcrumbClick: e => {
           t !== parseInt(e.id) && z(parseInt(e.id))

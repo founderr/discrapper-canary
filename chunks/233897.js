@@ -111,7 +111,7 @@ t.default = n.forwardRef(function(e, t) {
     }
   }, [G, U, w]), V = (0, d.useStateFromStores)([g.default], () => g.default.getChannel(U)), W = (0, c.getChannelIconComponent)(V, void 0, {
     textFocused: !0
-  }), K = (0, c.getChannelIconTooltipText)(V), z = null !== (a = null == y ? void 0 : y.referenceMessages) && void 0 !== a ? a : [], Y = (0, o.default)(V), [Z, X] = n.useState(!1), J = (0, d.useStateFromStores)([_.default], () => null != P && _.default.isBlocked(null == P ? void 0 : P.author.id)), q = (0, s.useListItem)(null !== (I = null == P ? void 0 : P.id) && void 0 !== I ? I : w), Q = (0, v.default)(y), $ = (0, d.useStateFromStores)([E.default], () => E.default.getSidebarState(F.StaticChannelRoute.GUILD_HOME)), ee = (0, S.getSidebarMessageId)($, V), et = null != ee && y.message.id === ee, ea = y.highlighted ? L.default.Messages.GUILD_FEED_SPECIAL_HIGHLIGHT : B ? L.default.Messages.GUILD_FEED_FEATURED_BY_MODERATORS : null, {
+  }), K = (0, c.getChannelIconTooltipText)(V), z = null !== (a = null == y ? void 0 : y.referenceMessages) && void 0 !== a ? a : [], Y = (0, o.default)(V), [X, Z] = n.useState(!1), J = (0, d.useStateFromStores)([_.default], () => null != P && _.default.isBlocked(null == P ? void 0 : P.author.id)), q = (0, s.useListItem)(null !== (I = null == P ? void 0 : P.id) && void 0 !== I ? I : w), Q = (0, v.default)(y), $ = (0, d.useStateFromStores)([E.default], () => E.default.getSidebarState(F.StaticChannelRoute.GUILD_HOME)), ee = (0, S.getSidebarMessageId)($, V), et = null != ee && y.message.id === ee, ea = y.highlighted ? L.default.Messages.GUILD_FEED_SPECIAL_HIGHLIGHT : B ? L.default.Messages.GUILD_FEED_FEATURED_BY_MODERATORS : null, {
     handleItemClick: el,
     handleChannelClick: en,
     handleCardClick: es,
@@ -158,8 +158,8 @@ t.default = n.forwardRef(function(e, t) {
       channelName: Y
     }),
     listItemProps: q,
-    onMouseEnter: () => X(!0),
-    onMouseLeave: () => X(!1),
+    onMouseEnter: () => Z(!0),
+    onMouseLeave: () => Z(!1),
     children: [(0, l.jsxs)(r.HeadingLevel, {
       component: (0, l.jsxs)(A.default, {
         children: [(0, l.jsxs)("div", {
@@ -207,7 +207,7 @@ t.default = n.forwardRef(function(e, t) {
       children: [(0, l.jsx)(M.default, {
         className: R.messageItemBody,
         guildId: G,
-        animateAvatar: Z,
+        animateAvatar: X,
         channel: V,
         message: P,
         feedItemId: y.id,

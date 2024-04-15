@@ -24,12 +24,12 @@ function _(e) {
     selectedChannelId: t,
     guildId: l,
     onChangeSelectedChannelId: _
-  } = e, C = (0, s.useStateFromStores)([o.default], () => o.default.getCurrentUser()), g = (0, s.useStateFromStores)([r.default, i.default, u.default], () => (0, c.getStreamEligibleChannels)(i.default.getChannels(l), r.default, u.default)), N = (0, s.useStateFromStores)([d.default], () => d.default.getVoiceStates(l)), h = g.map(e => {
+  } = e, C = (0, s.useStateFromStores)([o.default], () => o.default.getCurrentUser()), N = (0, s.useStateFromStores)([r.default, i.default, u.default], () => (0, c.getStreamEligibleChannels)(i.default.getChannels(l), r.default, u.default)), g = (0, s.useStateFromStores)([d.default], () => d.default.getVoiceStates(l)), h = N.map(e => {
     var l;
     return {
       name: (0, a.jsx)(f.default, {
         channel: e,
-        users: null === (l = N[e.id]) || void 0 === l ? void 0 : l.filter(e => {
+        users: null === (l = g[e.id]) || void 0 === l ? void 0 : l.filter(e => {
           let {
             user: t
           } = e;

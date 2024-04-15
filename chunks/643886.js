@@ -43,14 +43,14 @@ function T(e) {
       }
       return e
     }, [t, a, T]),
-    h = e => {
+    p = e => {
       var t;
       return e.managed && (null === (t = e.tags) || void 0 === t ? void 0 : t.bot_id) != null
     },
-    p = n.useMemo(() => {
+    h = n.useMemo(() => {
       let n = [];
       for (let a of S) {
-        if (h(a)) continue;
+        if (p(a)) continue;
         let s = !i.has(a.permissions, I.Permissions.ADMINISTRATOR) && u.default.isRoleHigher(t, l, a),
           r = {
             id: a.id,
@@ -66,13 +66,13 @@ function T(e) {
       let t = function(e) {
           return e.startsWith("@") ? e.substr(1) : e
         }(_),
-        l = _.startsWith("@") ? p.filter(t => t.id === e) : p,
+        l = _.startsWith("@") ? h.filter(t => t.id === e) : h,
         n = (0, m.filterPermissionSearchItems)(g, N, t);
       return {
         members: n,
         roles: (0, m.filterPermissionSearchItems)(l, E, t)
       }
-    }, [e, g, _, p]);
+    }, [e, g, _, h]);
   return {
     query: _,
     results: A,

@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n("47120");
 var r, i = n("735250"),
-  s = n("470079"),
-  a = n("803997"),
-  l = n.n(a),
+  a = n("470079"),
+  s = n("120356"),
+  l = n.n(s),
   u = n("481060"),
   o = n("37234"),
   d = n("230711"),
@@ -19,7 +19,7 @@ function E(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class T extends(r = s.Component) {
+class _ extends(r = a.Component) {
   render() {
     return (0, i.jsxs)("div", {
       className: p.streamerModeEnabled,
@@ -40,6 +40,6 @@ class T extends(r = s.Component) {
     })
   }
 }
-E(T, "defaultProps", {
+E(_, "defaultProps", {
   disableButton: !1
-}), t.default = T
+}), t.default = _

@@ -6,7 +6,7 @@ l.r(t), l.d(t, {
 }), l("390547");
 var a = l("735250");
 l("470079");
-var s = l("803997"),
+var s = l("120356"),
   n = l.n(s),
   i = l("392711"),
   r = l.n(i),
@@ -20,8 +20,8 @@ var s = l("803997"),
   E = l("259580"),
   _ = l("102172"),
   C = l("148381"),
-  g = l("689938"),
-  N = l("223318"),
+  N = l("689938"),
+  g = l("223318"),
   h = l("578606");
 
 function x(e) {
@@ -57,8 +57,8 @@ function I(e) {
     onSelectGuild: t
   } = e, l = (0, u.useStateFromStores)([m.default], () => m.default.getGuildFolders());
   return (0, a.jsx)(C.default, {
-    title: g.default.Messages.GO_LIVE_MODAL_SELECT_GUILD_FORM_TITLE,
-    scrollerClassName: n()(h.guildScroller, N.marginBottom),
+    title: N.default.Messages.GO_LIVE_MODAL_SELECT_GUILD_FORM_TITLE,
+    scrollerClassName: n()(h.guildScroller, g.marginBottom),
     children: r().flatMap(l, e => {
       let {
         guildIds: l

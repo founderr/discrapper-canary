@@ -21,8 +21,8 @@ var n = l("735250"),
   E = l("970731"),
   S = l("314897"),
   g = l("430824"),
-  h = l("594174"),
-  p = l("740727"),
+  p = l("594174"),
+  h = l("740727"),
   _ = l("626135"),
   O = l("5192"),
   A = l("709054"),
@@ -46,7 +46,7 @@ function b(e) {
   } = e, E = (0, d.useStateFromStores)([g.default], () => g.default.getGuild(s));
   i()(null != E, "");
   let S = (0, d.useStateFromStores)([g.default], () => g.default.getRoles(s)),
-    [p, _] = a.useState(new Set),
+    [h, _] = a.useState(new Set),
     M = a.useMemo(() => {
       var e;
       let t = (0, I.allChannelsSentinel)(s);
@@ -59,8 +59,8 @@ function b(e) {
             return function(e, t, l) {
               let n = Number(e.canWrite) - Number(t.canWrite);
               if (0 !== n) return n;
-              let a = h.default.getUser(e.id),
-                s = h.default.getUser(t.id);
+              let a = p.default.getUser(e.id),
+                s = p.default.getUser(t.id);
               if (null != a && null != s) {
                 let e = O.default.getName(l, void 0, a),
                   t = O.default.getName(l, void 0, s);
@@ -99,9 +99,9 @@ function b(e) {
       }, [])
     }, [l, f]);
   a.useEffect(() => {
-    let e = Object.values(f).filter(e => e.type === m.ApplicationCommandPermissionType.USER && !e.canRead && !p.has(e.id)).map(e => e.id);
+    let e = Object.values(f).filter(e => e.type === m.ApplicationCommandPermissionType.USER && !e.canRead && !h.has(e.id)).map(e => e.id);
     0 !== e.length && (c.default.requestMembersById(s, e, !1), _(t => new Set([...t, ...e])))
-  }, [s, f, p, _]);
+  }, [s, f, h, _]);
   let j = (0, d.useStateFromStores)([x.default], () => x.default.getApplicationId()),
     b = (0, d.useStateFromStores)([C.default], () => null == j ? void 0 : C.default.integrations.find(e => {
       var t;
@@ -138,15 +138,15 @@ function D(e) {
       onRemove: c,
       overwrite: N,
       integration: g,
-      canShowMigrationTooltip: h,
-      hasAccessToMutatePermissions: p
+      canShowMigrationTooltip: p,
+      hasAccessToMutatePermissions: h
     } = e,
     O = N.id === r.id || N.id === (0, I.allChannelsSentinel)(r.id),
     A = null == g ? void 0 : null === (l = g.application) || void 0 === l ? void 0 : null === (t = l.bot) || void 0 === t ? void 0 : t.username,
-    C = !N.canWrite || !p,
+    C = !N.canWrite || !h,
     x = S.default.getId();
-  p ? !N.canWrite && (N.type === m.ApplicationCommandPermissionType.USER ? i = N.id === x ? j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_SELF : j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_OTHER : N.type === m.ApplicationCommandPermissionType.ROLE && (i = j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_ROLE)) : i = null != o ? j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_COMMAND : j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_APPLICATION;
-  let R = h && null != g && N.id === r.id && void 0 !== A && !N.permission;
+  h ? !N.canWrite && (N.type === m.ApplicationCommandPermissionType.USER ? i = N.id === x ? j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_SELF : j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_OTHER : N.type === m.ApplicationCommandPermissionType.ROLE && (i = j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_ROLE)) : i = null != o ? j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_COMMAND : j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_APPLICATION;
+  let R = p && null != g && N.id === r.id && void 0 !== A && !N.permission;
   a.useEffect(() => {
     if (R) {
       var e;
@@ -212,7 +212,7 @@ function D(e) {
       children: [(0, n.jsx)(y, {
         commandId: o,
         isSentinel: O,
-        isDisabled: !p,
+        isDisabled: !h,
         onRemove: c
       }), D]
     })]
@@ -232,7 +232,7 @@ function y(e) {
       className: P.removeContainer,
       "aria-label": j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSION_ENTRY_REMOVE_ARIA_LABEL,
       onClick: s,
-      children: (0, n.jsx)(p.default, {
+      children: (0, n.jsx)(h.default, {
         width: 24,
         height: 24,
         className: P.removeIcon

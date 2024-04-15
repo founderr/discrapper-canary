@@ -2,7 +2,7 @@
 n.r(t);
 var i = n("735250"),
   r = n("470079"),
-  s = n("803997"),
+  s = n("120356"),
   a = n.n(s),
   o = n("392711"),
   l = n("468194"),
@@ -41,8 +41,8 @@ let p = (0, l.cssValueToNumber)(O.__invalid_stickerPickerPreviewDimensions),
       stickerSize: w = p,
       ownedStickerPacks: B,
       enlargeOnInteraction: k = !1,
-      channel: F,
-      currentUser: V,
+      channel: V,
+      currentUser: F,
       checkSendability: x = !0
     } = e, {
       location: H
@@ -154,7 +154,7 @@ let p = (0, l.cssValueToNumber)(O.__invalid_stickerPickerPreviewDimensions),
                   className: a()(O.stickerNode, {
                     [O.stickerNodeDimmed]: k && !p && null != L && -1 !== L.rowIndex && -1 !== L.columnIndex,
                     [O.stickerNodeHidden]: R,
-                    [O.stickerUnsendable]: x && !(0, T.isSendableSticker)(e.sticker, V, F)
+                    [O.stickerUnsendable]: x && !(0, T.isSendableSticker)(e.sticker, F, V)
                   }),
                   disableAnimation: !p && !s,
                   enlargeOnInteraction: k,

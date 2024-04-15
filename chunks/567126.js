@@ -6,7 +6,7 @@ l.r(t), l.d(t, {
 }), l("47120"), l("518263"), l("970173"), l("520712"), l("268111"), l("941497"), l("32026"), l("480839"), l("744285"), l("492257"), l("873817"), l("863942"), l("642549"), l("653041");
 var a = l("735250"),
   s = l("470079"),
-  n = l("803997"),
+  n = l("120356"),
   i = l.n(n),
   r = l("788900"),
   u = l("268146"),
@@ -19,8 +19,8 @@ var a = l("735250"),
   E = l("57655"),
   _ = l("569984"),
   C = l("918701"),
-  g = l("433811"),
-  N = l("131951"),
+  N = l("433811"),
+  g = l("131951"),
   h = l("449224"),
   x = l("285952"),
   I = l("643095"),
@@ -35,8 +35,8 @@ var a = l("735250"),
   O = l("689938"),
   D = l("787186");
 async function P() {
-  let e = N.default.getVideoDevices(),
-    t = (0, d.default)(N.default.getMediaEngine(), [u.DesktopSources.WINDOW, u.DesktopSources.SCREEN], {
+  let e = g.default.getVideoDevices(),
+    t = (0, d.default)(g.default.getMediaEngine(), [u.DesktopSources.WINDOW, u.DesktopSources.SCREEN], {
       width: 176,
       height: 99
     }),
@@ -104,7 +104,7 @@ function b(e) {
     enableGoLiveCaptureCard: n
   } = p.default.useExperiment({
     location: "GoLive_Source_Select"
-  }), r = N.default.supports(j.Features.GO_LIVE_HARDWARE), [d, m] = s.useState(null), [h, A] = s.useState(null), [R, G] = s.useState(null), b = null != R && R.length > 0, [F, k] = s.useState(u.DesktopSources.WINDOW), [y, w] = s.useState(!1), B = s.useRef(null), V = s.useRef(new c.Interval), H = (0, o.useStateFromStores)([S.default], () => S.default.getRunningGames()), W = function(e, t, l) {
+  }), r = g.default.supports(j.Features.GO_LIVE_HARDWARE), [d, m] = s.useState(null), [h, A] = s.useState(null), [R, G] = s.useState(null), b = null != R && R.length > 0, [F, k] = s.useState(u.DesktopSources.WINDOW), [y, w] = s.useState(!1), B = s.useRef(null), V = s.useRef(new c.Interval), H = (0, o.useStateFromStores)([S.default], () => S.default.getRunningGames()), W = function(e, t, l) {
     let a = (0, E.useIsEligibleForQuests)({
       location: M.QuestsExperimentLocations.STREAM_SOURCE_SELECT
     });
@@ -181,7 +181,7 @@ function b(e) {
     }, s)
   });
 
-  function q() {
+  function Z() {
     let e = B.current;
     null != e && w(!e.isScrolledToTop())
   }
@@ -219,7 +219,7 @@ function b(e) {
       children: (0, a.jsx)(f.AdvancedScroller, {
         ref: K,
         className: D.sourceScroller,
-        onScroll: q,
+        onScroll: Z,
         children: (0, a.jsx)(I.default, {
           layout: I.default.Layout.WRAP,
           columns: 2,
@@ -230,8 +230,8 @@ function b(e) {
     }) : (0, a.jsxs)(f.AdvancedScroller, {
       ref: K,
       className: D.sourceScroller,
-      onScroll: q,
-      children: [F === u.DesktopSources.WINDOW && null != W && (0, a.jsx)(g.default, {
+      onScroll: Z,
+      children: [F === u.DesktopSources.WINDOW && null != W && (0, a.jsx)(N.default, {
         quest: W.quest
       }), (0, a.jsx)(I.default, {
         layout: I.default.Layout.WRAP,

@@ -6,7 +6,7 @@ a.r(t), a.d(t, {
 }), a("47120");
 var l = a("735250"),
   n = a("470079"),
-  s = a("803997"),
+  s = a("120356"),
   i = a.n(s),
   d = a("442837"),
   r = a("481060"),
@@ -97,13 +97,13 @@ let B = n.memo(function(e) {
       hideHeader: w = !1,
       forceAddReactions: V = !0,
       ...W
-    } = e, K = n.useRef(null), z = (0, d.useStateFromStores)([A.default], () => A.default.getChannel(u.id)), Y = null != z && m.isFirstMessageInForumPost(z), Z = (0, c.isMessageNewerThanImprovedMarkdownEpoch)((null !== (a = m.editedTimestamp) && void 0 !== a ? a : m.timestamp).valueOf()), {
-      content: X,
+    } = e, K = n.useRef(null), z = (0, d.useStateFromStores)([A.default], () => A.default.getChannel(u.id)), Y = null != z && m.isFirstMessageInForumPost(z), X = (0, c.isMessageNewerThanImprovedMarkdownEpoch)((null !== (a = m.editedTimestamp) && void 0 !== a ? a : m.timestamp).valueOf()), {
+      content: Z,
       hasSpoilerEmbeds: J
     } = (0, I.default)(m, {
       hideSimpleEmbedContent: !0,
-      allowList: Y || Z,
-      allowHeading: Y || Z,
+      allowList: Y || X,
+      allowHeading: Y || X,
       allowLinks: !0,
       previewLinkTarget: !0
     }), q = m.type === y.MessageTypes.REPLY ? m.messageReference : void 0, Q = (0, d.useStateFromStores)([N.default], () => N.default.getMessageByReference(q)), $ = (0, d.useStateFromStores)([A.default], () => m.hasFlag(y.MessageFlags.HAS_THREAD) && A.default.getChannel(F.default.castMessageIdAsChannelId(m.id))), ee = (0, h.getMessageAriaLabelledBy)(m, k, {
@@ -157,7 +157,7 @@ let B = n.memo(function(e) {
         children: [(0, l.jsx)(M.default, {
           className: D,
           message: m,
-          content: X,
+          content: Z,
           contentRef: t
         }), G]
       }),

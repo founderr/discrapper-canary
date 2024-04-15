@@ -84,7 +84,7 @@ t.default = n.forwardRef(function(e, t) {
         entityType: r.GuildFeedItemTypes.FORUM_POST
       })
     }
-  }, [s, I.message.id, y]), K = (0, f.default)(y), z = (0, u.useStateFromStores)([C.default], () => null != V && C.default.isBlocked(null == V ? void 0 : V.author.id)), Y = (0, d.useListItem)(null !== (a = null == V ? void 0 : V.id) && void 0 !== a ? a : I.message.id), Z = (0, T.default)(I), X = (0, m.getChannelIconTooltipText)(y), J = (0, u.useStateFromStores)([v.default], () => v.default.getChannel(y.parent_id)), q = (0, f.default)(J), Q = (0, m.getChannelIconComponent)(J), [$, ee] = n.useState(!1), et = (0, u.useStateFromStores)([S.default], () => S.default.getSidebarState(O.StaticChannelRoute.GUILD_HOME)), ea = (0, p.getSidebarMessageId)(et, B), el = null != ea && I.message.id === ea, en = I.highlighted ? H.default.Messages.GUILD_FEED_SPECIAL_HIGHLIGHT : W ? H.default.Messages.GUILD_FEED_FEATURED_BY_MODERATORS : null, {
+  }, [s, I.message.id, y]), K = (0, f.default)(y), z = (0, u.useStateFromStores)([C.default], () => null != V && C.default.isBlocked(null == V ? void 0 : V.author.id)), Y = (0, d.useListItem)(null !== (a = null == V ? void 0 : V.id) && void 0 !== a ? a : I.message.id), X = (0, T.default)(I), Z = (0, m.getChannelIconTooltipText)(y), J = (0, u.useStateFromStores)([v.default], () => v.default.getChannel(y.parent_id)), q = (0, f.default)(J), Q = (0, m.getChannelIconComponent)(J), [$, ee] = n.useState(!1), et = (0, u.useStateFromStores)([S.default], () => S.default.getSidebarState(O.StaticChannelRoute.GUILD_HOME)), ea = (0, p.getSidebarMessageId)(et, B), el = null != ea && I.message.id === ea, en = I.highlighted ? H.default.Messages.GUILD_FEED_SPECIAL_HIGHLIGHT : W ? H.default.Messages.GUILD_FEED_FEATURED_BY_MODERATORS : null, {
     handleItemClick: es,
     handleChannelClick: ei,
     handleCardClick: ed,
@@ -92,7 +92,7 @@ t.default = n.forwardRef(function(e, t) {
   } = (0, A.default)({
     guildId: s,
     channelId: y.id,
-    feedItemId: Z,
+    feedItemId: X,
     onChannelClick: () => (0, g.default)(G.Routes.CHANNEL(s, y.parent_id)),
     onContentClick: () => _.default.openThreadAsSidebar({
       guildId: s,
@@ -119,7 +119,7 @@ t.default = n.forwardRef(function(e, t) {
     onCardClick: ed,
     onItemClick: es,
     onContextMenu: eh,
-    itemId: Z,
+    itemId: X,
     ariaLabel: H.default.Messages.GUILD_FEED_MESSAGE_ITEM_A11Y_LABEL.format({
       channelName: K
     }),
@@ -134,7 +134,7 @@ t.default = n.forwardRef(function(e, t) {
             className: k.channelNameContainer,
             onClick: ei,
             children: [null != Q ? (0, l.jsx)(o.Tooltip, {
-              text: X,
+              text: Z,
               delay: 500,
               children: e => (0, l.jsx)(Q, {
                 ...e,

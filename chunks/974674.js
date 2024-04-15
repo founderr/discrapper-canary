@@ -9,7 +9,7 @@ n.r(t), n.d(t, {
 }), n("411104"), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("803997"),
+  s = n("120356"),
   a = n.n(s),
   o = n("718017"),
   l = n("1561"),
@@ -438,8 +438,8 @@ function L(e) {
   }), [P, S, g, l, c]), {
     avatarCutoutX: B,
     avatarCutoutY: k,
-    avatarCutoutWidth: F,
-    avatarCutoutHeight: V,
+    avatarCutoutWidth: V,
+    avatarCutoutHeight: F,
     avatarCutoutRadius: x,
     fill: H,
     ...Y
@@ -474,8 +474,8 @@ function L(e) {
           color: "black",
           x: B,
           y: k,
-          width: F,
-          height: V,
+          width: V,
+          height: F,
           rx: x,
           ry: x
         })]

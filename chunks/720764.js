@@ -25,8 +25,8 @@ function S(e) {
       guild: l,
       channel: S,
       customWebhooks: g,
-      editedWebhook: h,
-      selectableWebhookChannels: p,
+      editedWebhook: p,
+      selectableWebhookChannels: h,
       refToScroller: _,
       errors: O,
       canNavigate: A
@@ -36,7 +36,7 @@ function S(e) {
     [M, v] = a.useState(null);
   if (null != S) t = S;
   else {
-    let e = Object.values(p);
+    let e = Object.values(h);
     t = e.length > 0 ? e[0] : null
   }
   let L = a.useCallback(async () => {
@@ -82,8 +82,8 @@ function S(e) {
         children: I.default.Messages.INTEGRATIONS_WEBHOOKS_CREATE
       }), (0, n.jsx)(f.default, {
         webhooks: g,
-        editedWebhook: h,
-        selectableWebhookChannels: p,
+        editedWebhook: p,
+        selectableWebhookChannels: h,
         lastCreatedWebhookId: null == x ? void 0 : x.id,
         errors: O,
         canNavigate: A

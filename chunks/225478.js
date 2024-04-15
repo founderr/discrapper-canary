@@ -6,7 +6,7 @@ a.r(t), a.d(t, {
 }), a("47120");
 var l = a("735250"),
   n = a("470079"),
-  s = a("803997"),
+  s = a("120356"),
   i = a.n(s),
   d = a("392711"),
   r = a("91192"),
@@ -129,7 +129,7 @@ function k(e) {
       to: Math.max(0, Math.ceil((t - a) / l) * l),
       animate: !0
     })
-  }, [K]), Z = n.useCallback(() => {
+  }, [K]), X = n.useCallback(() => {
     let {
       current: e
     } = G;
@@ -146,7 +146,7 @@ function k(e) {
   n.useEffect(() => {
     C.default.shouldFetch(t) && (0, E.fetchActiveChannels)(t)
   }, [t]), (0, g.default)(t, r, h);
-  let X = n.useCallback(e => {
+  let Z = n.useCallback(e => {
       v.default.track(F.AnalyticEvents.ACTIVE_CHANNEL_CLICKED, {
         guild_id: e.guild_id,
         channel_id: e.id,
@@ -159,13 +159,13 @@ function k(e) {
     J = r.map(e => (0, l.jsx)(j.default, {
       guildId: t,
       channel: e,
-      trackChannelClick: X
+      trackChannelClick: Z
     }, e.id)),
     q = h.map(e => (0, l.jsx)(M.default, {
       guildId: t,
       channel: e,
       voiceStates: m[e.id],
-      trackChannelClick: X,
+      trackChannelClick: Z,
       showPreview: !a
     }, e.id)),
     Q = [];
@@ -226,7 +226,7 @@ function k(e) {
         })
       }), a && b && !B && (0, l.jsx)(c.Clickable, {
         className: i()(R.scrollIcon, R.right),
-        onClick: Z,
+        onClick: X,
         "aria-hidden": !0,
         children: (0, l.jsx)(S.default, {
           direction: S.default.Directions.RIGHT,

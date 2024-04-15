@@ -201,7 +201,7 @@ function k(e) {
   })
 }
 
-function F(e) {
+function V(e) {
   var t, n;
   let {
     channelId: i,
@@ -222,7 +222,7 @@ function F(e) {
   })
 }
 
-function V(e) {
+function F(e) {
   let {
     channelId: t,
     messages: n
@@ -331,11 +331,11 @@ class Q extends d.default {
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
-      LOAD_MESSAGES_SUCCESS: V,
+      LOAD_MESSAGES_SUCCESS: F,
       LOAD_FORUM_POSTS: H,
       LOAD_THREADS_SUCCESS: Y,
       LOAD_ARCHIVED_THREADS_SUCCESS: Y,
-      MESSAGE_CREATE: F,
+      MESSAGE_CREATE: V,
       MESSAGE_UPDATE: k,
       LOGOUT: P,
       SEARCH_FINISH: x,

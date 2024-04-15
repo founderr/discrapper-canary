@@ -6,7 +6,7 @@ l.r(t), l.d(t, {
 });
 var a = l("735250");
 l("470079");
-var s = l("803997"),
+var s = l("120356"),
   n = l.n(s),
   i = l("481060"),
   r = l("193878"),
@@ -31,13 +31,13 @@ function E(e) {
     location: "StreamSettingsUpsellBanner"
   }, {
     autoTrackExposure: !0
-  }), g = _ && r.GradientVariants.includes(C), N = _ && [r.EnhancedHDStreamingRoadblockVariants.VARIANT_1A, r.EnhancedHDStreamingRoadblockVariants.VARIANT_1B].includes(C), h = {
+  }), N = _ && r.GradientVariants.includes(C), g = _ && [r.EnhancedHDStreamingRoadblockVariants.VARIANT_1A, r.EnhancedHDStreamingRoadblockVariants.VARIANT_1B].includes(C), h = {
     section: c.AnalyticsSections.STREAM_SETTINGS,
     object: c.AnalyticsObjects.PREMIUM_UPSELL_BANNER,
     objectType: c.AnalyticsObjectTypes.BUY
   }, x = () => (0, a.jsx)(u.default, {
     className: n()(S.enhancedCTA, {
-      [S.ctaGradientBackground]: g
+      [S.ctaGradientBackground]: N
     }),
     iconClassName: S.premiumIcon,
     subscriptionTier: f.PremiumSubscriptionSKUs.TIER_2,
@@ -56,7 +56,7 @@ function E(e) {
       }), (0, a.jsx)(i.Text, {
         variant: "text-sm/medium",
         className: n()(S.upsellText, S.enhancedUpsellText),
-        children: null != t ? t : N ? m.default.Messages.STREAM_PREMIUM_UPSELL_BANNER_V2 : m.default.Messages.STREAM_PREMIUM_UPSELL_BANNER_LEARN_MORE_V2.format({
+        children: null != t ? t : g ? m.default.Messages.STREAM_PREMIUM_UPSELL_BANNER_V2 : m.default.Messages.STREAM_PREMIUM_UPSELL_BANNER_LEARN_MORE_V2.format({
           onClick: () => s({
             analyticsLocation: h,
             onClose: l
@@ -65,10 +65,10 @@ function E(e) {
       })]
     }), (0, a.jsx)("div", {
       className: S.enhancedCTAs,
-      children: N ? (0, a.jsxs)(a.Fragment, {
+      children: g ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(i.Button, {
           className: n()(S.enhancedCTA, S.learnMoreCTA),
-          color: g ? i.Button.Colors.CUSTOM : i.Button.Colors.TRANSPARENT,
+          color: N ? i.Button.Colors.CUSTOM : i.Button.Colors.TRANSPARENT,
           onClick: () => s({
             analyticsLocation: h,
             onClose: l

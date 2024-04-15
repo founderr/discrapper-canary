@@ -33,9 +33,9 @@ function T(e, t) {
   });
   null != S && N.push(S);
   let g = (null === (l = t.tags) || void 0 === l ? void 0 : l.guild_connections) === null,
-    h = t.managed && !g,
-    p = null != t && (0, o.isEveryoneRoleId)(e.id, t.id);
-  return !T && !h && !p && N.push((0, n.jsx)(s.MenuGroup, {
+    p = t.managed && !g,
+    h = null != t && (0, o.isEveryoneRoleId)(e.id, t.id);
+  return !T && !p && !h && N.push((0, n.jsx)(s.MenuGroup, {
     children: (0, n.jsx)(s.MenuItem, {
       id: "delete-role",
       label: I.default.Messages.DELETE,

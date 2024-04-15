@@ -2,7 +2,7 @@
 a.r(t), a("47120");
 var l = a("735250"),
   n = a("470079"),
-  s = a("803997"),
+  s = a("120356"),
   i = a.n(s),
   d = a("91192"),
   r = a("442837"),
@@ -104,9 +104,9 @@ t.default = n.forwardRef(function(e, t) {
   } = H, {
     messages: P,
     children: B
-  } = w, V = P[0], W = P[P.length - 1], K = W.channel_id, z = (0, r.useStateFromStoresArray)([S.default], () => P.map(e => S.default.getCachedMessage(T, K, e.id)).filter(x.isNotNullish), [T, K, P]), Y = (0, r.useStateFromStores)([_.default], () => _.default.getChannel(K)), Z = (0, f.getChannelIconComponent)(Y, void 0, {
+  } = w, V = P[0], W = P[P.length - 1], K = W.channel_id, z = (0, r.useStateFromStoresArray)([S.default], () => P.map(e => S.default.getCachedMessage(T, K, e.id)).filter(x.isNotNullish), [T, K, P]), Y = (0, r.useStateFromStores)([_.default], () => _.default.getChannel(K)), X = (0, f.getChannelIconComponent)(Y, void 0, {
     textFocused: !0
-  }), X = (0, f.getChannelIconTooltipText)(Y), J = (0, c.default)(Y), [q, Q] = n.useState(!1), $ = (0, r.useStateFromStores)([I.default], () => null != W && I.default.isBlocked(W.author.id)), ee = (0, d.useListItem)(null !== (s = null === (a = z[z.length - 1]) || void 0 === a ? void 0 : a.id) && void 0 !== s ? s : H.id), et = H.id, ea = (0, r.useStateFromStores)([g.default], () => g.default.getSidebarState(R.StaticChannelRoute.GUILD_HOME)), el = (0, v.getSidebarMessageId)(ea, Y), en = null != el && V.id === el, {
+  }), Z = (0, f.getChannelIconTooltipText)(Y), J = (0, c.default)(Y), [q, Q] = n.useState(!1), $ = (0, r.useStateFromStores)([I.default], () => null != W && I.default.isBlocked(W.author.id)), ee = (0, d.useListItem)(null !== (s = null === (a = z[z.length - 1]) || void 0 === a ? void 0 : a.id) && void 0 !== s ? s : H.id), et = H.id, ea = (0, r.useStateFromStores)([g.default], () => g.default.getSidebarState(R.StaticChannelRoute.GUILD_HOME)), el = (0, v.getSidebarMessageId)(ea, Y), en = null != el && V.id === el, {
     handleItemClick: es,
     handleChannelClick: ei,
     handleCardClick: ed,
@@ -163,10 +163,10 @@ t.default = n.forwardRef(function(e, t) {
           children: (0, l.jsxs)(u.Clickable, {
             className: G.channelNameContainer,
             onClick: ei,
-            children: [null != Z ? (0, l.jsx)(u.Tooltip, {
-              text: X,
+            children: [null != X ? (0, l.jsx)(u.Tooltip, {
+              text: Z,
               delay: 500,
-              children: e => (0, l.jsx)(Z, {
+              children: e => (0, l.jsx)(X, {
                 ...e,
                 className: G.channelIcon,
                 height: 16,

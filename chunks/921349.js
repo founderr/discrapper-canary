@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("803997"),
+  s = n("120356"),
   a = n.n(s),
   o = n("423802"),
   l = n("372817"),
@@ -54,7 +54,7 @@ let P = r.forwardRef(function(e, t) {
     look: G = D.SelectLooks.FILLED,
     autoFocus: w = !1,
     popoutPosition: B = "bottom",
-    filter: V = !0,
+    filter: F = !0,
     debounceTime: x,
     renderOptionLabel: H = y,
     onSearchChange: Y,
@@ -248,7 +248,7 @@ let P = r.forwardRef(function(e, t) {
   let ek = r.useCallback(() => {
       eE(""), eB(null), eD(!0)
     }, [eB, eD]),
-    eF = r.useCallback(e => {
+    eV = r.useCallback(e => {
       switch (e.key) {
         case "Escape":
           ed && (e.stopPropagation(), eD(!1));
@@ -258,8 +258,8 @@ let P = r.forwardRef(function(e, t) {
           eD(!0)
       }
     }, [eD, ed]),
-    eV = eA;
-  eI && null != ec && !1 !== V && (eV = "function" == typeof V ? V(eA, ec) : (0, o.matchSorter)(eA, ec, {
+    eF = eA;
+  eI && null != ec && !1 !== F && (eF = "function" == typeof F ? F(eA, ec) : (0, o.matchSorter)(eA, ec, {
     keys: ["label"]
   })), r.useEffect(() => {
     let e = ef.current;
@@ -267,7 +267,7 @@ let P = r.forwardRef(function(e, t) {
   }, [ec]), r.useEffect(() => {
     !eh && eI && null !== ec && requestAnimationFrame(() => eb.focusFirstVisibleItem())
   }, [eh, eI, ec]);
-  let ex = I ? F : k;
+  let ex = I ? V : k;
   return (0, i.jsx)(u.ListNavigatorProvider, {
     navigator: eb,
     children: (0, i.jsx)(f.Popout, {
@@ -293,7 +293,7 @@ let P = r.forwardRef(function(e, t) {
           closePopout: t,
           onSelect: eB,
           closeOnSelect: T,
-          options: eV,
+          options: eF,
           activeDescendant: el,
           renderOptionLabel: H,
           updatePosition: r,
@@ -375,7 +375,7 @@ let P = r.forwardRef(function(e, t) {
                   },
                   onKeyDown: e => {
                     var t;
-                    null === (t = $.onKeyDown) || void 0 === t || t.call($, e), E(e), eF(e)
+                    null === (t = $.onKeyDown) || void 0 === t || t.call($, e), E(e), eV(e)
                   },
                   activeDescendant: el,
                   placeholder: N,
@@ -667,7 +667,7 @@ function k(e) {
     children: [null != o ? (0, i.jsx)("div", {
       "aria-hidden": !0,
       children: o
-    }) : null, (0, i.jsx)(V, {
+    }) : null, (0, i.jsx)(F, {
       selectedOptions: t,
       ...s
     }), null != l ? (0, i.jsx)("div", {
@@ -677,7 +677,7 @@ function k(e) {
   })
 }
 
-function F(e) {
+function V(e) {
   let {
     query: t,
     placeholder: n,
@@ -750,7 +750,7 @@ function F(e) {
       selectValue: o,
       focusNextItem: m,
       focusPreviousItem: h
-    }), (0, i.jsx)(V, {
+    }), (0, i.jsx)(F, {
       style: {
         minWidth: "".concat(S, "ch")
       },
@@ -770,7 +770,7 @@ function F(e) {
   })
 }
 
-function V(e) {
+function F(e) {
   let {
     query: t,
     inputId: n,

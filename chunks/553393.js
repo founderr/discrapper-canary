@@ -65,10 +65,10 @@ t.default = function(e) {
         trackGuildAndChannelMetadata: !0
       }), l.default.open(N.UserSettingsSections.INVENTORY)
     },
-    F = e => {
+    V = e => {
       e.stopPropagation(), B()
     },
-    V = () => {
+    F = () => {
       if (null != D) {
         let e = _.default.getChannel(D.channelId);
         if (null != e && (0, d.canWatchStream)(e, I.default, c.default, E.default, u.default)[0]) return (0, T.trackQuestContentClicked)({
@@ -84,7 +84,7 @@ t.default = function(e) {
       headerText: O.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
       ctaText: O.default.Messages.QUESTS_MEMBERS_LIST_STREAM_CTA,
       tileAssetUrl: (0, A.getGameTileAssetUrl)(L),
-      handleClickCta: V
+      handleClickCta: F
     } : w && !b ? {
       headerText: O.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD,
       ctaText: O.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD_CTA,
@@ -128,7 +128,7 @@ t.default = function(e) {
             }), (0, i.jsxs)(s.Clickable, {
               className: p.help,
               onClick: e => {
-                y(), null == M || M(), F(e)
+                y(), null == M || M(), V(e)
               },
               children: [(0, i.jsx)(s.Text, {
                 variant: "text-xs/medium",
