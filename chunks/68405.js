@@ -12,6 +12,9 @@ n.r(t), n.d(t, {
   fetchTrendingGIFs: function() {
     return P
   },
+  gifUrlKey: function() {
+    return U
+  },
   initializeSearch: function() {
     return M
   },
