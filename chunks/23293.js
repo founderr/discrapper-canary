@@ -48,7 +48,7 @@ function I(e) {
       user: t,
       displayProfile: n,
       guildId: T,
-      profileType: d.UserProfileTypes.POPOUT,
+      profileType: d.UserProfileTypes.BITE_SIZE,
       hasProfileEffect: (null == n ? void 0 : n.profileEffectId) != null
     }), (0, i.jsx)(u.UserPopoutAvatar, {
       user: t,
@@ -61,7 +61,7 @@ function I(e) {
       disableUserProfileLink: I,
       hasBanner: (null == n ? void 0 : n.banner) != null,
       hasProfileEffect: (null == n ? void 0 : n.profileEffectId) != null,
-      profileType: d.UserProfileTypes.POPOUT
+      profileType: d.UserProfileTypes.BITE_SIZE
     }), (0, i.jsx)("div", {
       className: E.customStatus
     })]

@@ -230,7 +230,7 @@ t.default = e => {
               channel: n,
               animateAssets: eo,
               forceShowPremiumBadge: eo
-            }), (0, a.jsxs)(k.default.Inner, {
+            }), (0, a.jsxs)(k.default.Overlay, {
               children: [(0, a.jsx)(X.default, {
                 user: eh,
                 nickname: eO,
@@ -254,13 +254,13 @@ t.default = e => {
                 user: eh,
                 setNote: !1
               })]
-            }), eH && ek ? (0, a.jsx)(k.default.Inner, {
+            }), eH && ek ? (0, a.jsx)(k.default.Overlay, {
               children: (0, a.jsx)(Q.default, {
                 voiceGuild: ew.voiceGuild,
                 voiceChannel: ew.voiceChannel,
                 color: er.appButtonColor
               })
-            }) : null, ey ? (0, a.jsx)(k.default.Inner, {
+            }) : null, ey ? (0, a.jsx)(k.default.Overlay, {
               children: (0, a.jsx)(Y.default, {
                 activity: null != eA ? eA : eR,
                 user: eh,
@@ -274,7 +274,7 @@ t.default = e => {
               })
             }) : null, e1 && (0, a.jsx)(B.UserProfileRecentGamesThemedSection, {
               userId: r
-            }), (eB || eG) && (0, a.jsxs)(k.default.Inner, {
+            }), (eB || eG) && (0, a.jsxs)(k.default.Overlay, {
               className: er.profilePanelConnections,
               children: [eB ? (0, a.jsx)(ee.default, {
                 className: er.mutualGuildsList,
@@ -318,7 +318,7 @@ t.default = e => {
                 },
                 children: ez
               }) : null]
-            }), eg && (0, a.jsx)(k.default.Inner, {
+            }), eg && (0, a.jsx)(k.default.Overlay, {
               className: i()(er.profilePanelConnections, er.appListThemedContainer),
               children: (0, a.jsxs)(ee.default, {
                 header: eK.length > 0 ? ei.default.Messages.PRIVATE_CHANNEL_APPS_HEADER_COUNT.format({

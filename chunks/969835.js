@@ -56,7 +56,7 @@ function p(e) {
         children: [(0, i.jsxs)(A.default, {
           user: t,
           guildId: n,
-          profileType: N.UserProfileTypes.POPOUT,
+          profileType: N.UserProfileTypes.BITE_SIZE,
           children: [(0, i.jsx)(m.default, {
             user: t,
             displayProfile: D,

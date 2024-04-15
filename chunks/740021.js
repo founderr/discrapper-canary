@@ -23,8 +23,8 @@ var l = s("442837"),
   p = s("530"),
   _ = s("894374"),
   N = s("18816"),
-  A = s("301984"),
-  x = s("30556"),
+  x = s("301984"),
+  A = s("30556"),
   v = s("228168"),
   U = s("182294"),
   h = s("231338"),
@@ -38,8 +38,8 @@ function P(e) {
     activity: i,
     friendToken: f,
     guildId: P,
-    channelId: M,
-    className: j,
+    channelId: j,
+    className: M,
     onClose: g
   } = e, {
     profileTheme: y
@@ -56,16 +56,16 @@ function P(e) {
     canReceiveFriendRequest: b
   } = (0, E.default)(t), G = (null == s ? void 0 : s.application) != null && (0, c.canInstallApplication)(s.application), [k, w] = (0, l.useStateFromStoresArray)([d.default], () => {
     let e = d.default.isMobileOnline(t.id);
-    return (0, u.shouldDisableUserPresenceInChannel)(t, M) ? [h.StatusTypes.UNKNOWN, e] : (0, r.default)(i) ? [h.StatusTypes.STREAMING, e] : [d.default.getStatus(t.id), e]
+    return (0, u.shouldDisableUserPresenceInChannel)(t, j) ? [h.StatusTypes.UNKNOWN, e] : (0, r.default)(i) ? [h.StatusTypes.STREAMING, e] : [d.default.getStatus(t.id), e]
   }), z = () => {
     g(), (0, o.popLayer)()
   };
   return (0, a.jsxs)("header", {
-    className: j,
+    className: M,
     children: [(0, a.jsx)(m.default, {
       user: t,
       displayProfile: s,
-      profileType: v.UserProfileTypes.MODAL,
+      profileType: v.UserProfileTypes.FULL_SIZE,
       hasProfileEffect: (null == s ? void 0 : s.profileEffectId) != null
     }), (0, a.jsxs)("div", {
       className: C.inner,
@@ -84,13 +84,13 @@ function P(e) {
         })
       }), (0, a.jsxs)("div", {
         className: C.buttons,
-        children: [B && (0, a.jsx)(x.default, {
+        children: [B && (0, a.jsx)(A.default, {
           user: t,
           compact: G || b,
           onClose: z
         }), G && (0, a.jsx)(N.default, {
           application: s.application
-        }), b && (0, a.jsx)(A.default, {
+        }), b && (0, a.jsx)(x.default, {
           user: t,
           relationshipType: L,
           friendToken: f,

@@ -147,7 +147,7 @@ function ep(e) {
       src: s.getAvatarURL(void 0, (0, p.getAvatarSize)(p.AvatarSizes.SIZE_56), !i),
       size: p.AvatarSizes.SIZE_56,
       "aria-label": s.username
-    }), (0, a.jsx)(g.default.Inner, {
+    }), (0, a.jsx)(g.default.Overlay, {
       className: J.profileInner,
       children: (0, a.jsxs)("div", {
         className: J.profileUserInfo,

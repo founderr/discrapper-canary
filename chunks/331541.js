@@ -294,7 +294,7 @@ function $(e) {
               disableUserProfileLink: __OVERLAY__,
               isHovering: es,
               showPremiumBadgeUpsell: !1
-            }), (0, n.jsxs)(M.default.Inner, {
+            }), (0, n.jsxs)(M.default.Overlay, {
               children: [(0, n.jsx)(P.default, {
                 activity: V,
                 customStatusActivity: $,

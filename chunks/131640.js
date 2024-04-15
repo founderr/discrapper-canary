@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   UserPopoutAvatar: function() {
-    return F
+    return V
   },
   UserPopoutBadgeList: function() {
     return B
   },
   default: function() {
-    return V
+    return F
   }
 }), n("627341");
 var i = n("735250"),
@@ -72,7 +72,7 @@ function B(e) {
 }
 let k = N.default.getEnableHardwareAcceleration() ? d.AnimatedAvatar : d.Avatar;
 
-function F(e) {
+function V(e) {
   let {
     user: t,
     displayProfile: n,
@@ -89,7 +89,7 @@ function F(e) {
     hasProfileEffect: C
   } = e, {
     profileTheme: L
-  } = (0, D.useUserProfileThemeContext)(), B = r.useContext(h.AnalyticsContext), F = t.isNonUserBot() && !t.isClyde(), V = m.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, P.PremiumTypes.TIER_2), x = r.useMemo(() => (0, I.shouldDisableUserPresenceInChannel)(t, T), [t, T]), {
+  } = (0, D.useUserProfileThemeContext)(), B = r.useContext(h.AnalyticsContext), V = t.isNonUserBot() && !t.isClyde(), F = m.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, P.PremiumTypes.TIER_2), x = r.useMemo(() => (0, I.shouldDisableUserPresenceInChannel)(t, T), [t, T]), {
     analyticsLocations: H
   } = (0, _.default)(), {
     trackUserProfileAction: Y,
@@ -113,7 +113,7 @@ function F(e) {
       size: G,
       "aria-label": t.username,
       status: x ? y.StatusTypes.UNKNOWN : u,
-      statusBackdropColor: null != L && V && !x ? (0, d.getStatusBackdropColor)(L) : void 0,
+      statusBackdropColor: null != L && F && !x ? (0, d.getStatusBackdropColor)(L) : void 0,
       isMobile: c,
       statusTooltip: !0
     })
@@ -122,18 +122,18 @@ function F(e) {
     premiumUserWithoutBanner: b.avatarPositionPremiumNoBanner,
     default: b.avatarPositionNormal
   })({
-    isPremium: V,
+    isPremium: F,
     hasBanner: l,
     hasProfileEffect: C
-  })).with(M.UserProfileTypes.POMELO_POPOUT, () => b.avatarPositionPomelo).with(M.UserProfileTypes.PANEL, () => b.avatarPositionPanel).exhaustive();
+  })).with(M.UserProfileTypes.POMELO_POPOUT, () => b.avatarPositionPomelo).with(M.UserProfileTypes.PANEL, () => b.avatarPositionPanel).with(M.UserProfileTypes.BITE_SIZE, () => b.avatarPositionBiteSize).exhaustive();
   return (0, i.jsx)(i.Fragment, {
     children: (0, i.jsxs)(d.Clickable, {
       className: a()({
         [b.clickable]: !K,
-        [b.avatarWrapperNonUserBot]: F,
-        [b.avatarWrapperNormal]: !F
+        [b.avatarWrapperNonUserBot]: V,
+        [b.avatarWrapperNormal]: !V
       }, Z),
-      onClick: F || K ? void 0 : function() {
+      onClick: V || K ? void 0 : function() {
         Y({
           action: "PRESS_VIEW_PROFILE"
         }), (0, v.openUserProfileModal)({
@@ -167,7 +167,7 @@ function F(e) {
   })
 }
 
-function V(e) {
+function F(e) {
   let {
     user: t,
     displayProfile: n,
@@ -196,7 +196,7 @@ function V(e) {
       profileEffectId: null == n ? void 0 : n.profileEffectId,
       bannerAdjustment: 0,
       isHovering: _
-    }), (0, i.jsx)(F, {
+    }), (0, i.jsx)(V, {
       user: t,
       displayProfile: n,
       status: l ? y.StatusTypes.STREAMING : u,

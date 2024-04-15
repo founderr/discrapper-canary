@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return x
+    return A
   }
 }), s("47120");
 var a = s("735250"),
@@ -22,24 +22,24 @@ var a = s("735250"),
   p = s("228168"),
   _ = s("981631"),
   N = s("689938"),
-  A = s("420867");
+  x = s("420867");
 
-function x(e) {
+function A(e) {
   let {
     user: t,
     guildId: s,
-    channelId: x,
+    channelId: A,
     messageId: v,
     roleId: U,
     friendToken: h,
     initialSection: C,
     autoFocusNote: R,
     transitionState: P,
-    sourceAnalyticsLocations: M = [],
-    onClose: j
+    sourceAnalyticsLocations: j = [],
+    onClose: M
   } = e, {
     analyticsLocations: g
-  } = (0, u.default)([...M, r.default.SIMPLIFIED_PROFILE_MODAL]), y = (0, S.default)(t.id, s), O = (0, i.useStateFromStores)([c.default], () => c.default.findActivity(t.id, e => {
+  } = (0, u.default)([...j, r.default.SIMPLIFIED_PROFILE_MODAL]), y = (0, S.default)(t.id, s), O = (0, i.useStateFromStores)([c.default], () => c.default.findActivity(t.id, e => {
     let {
       type: t
     } = e;
@@ -51,37 +51,37 @@ function x(e) {
       layout: "SIMPLIFIED_MODAL",
       userId: t.id,
       guildId: s,
-      channelId: x,
+      channelId: A,
       messageId: v,
       roleId: U,
       children: (0, a.jsxs)(n.ModalRoot, {
         transitionState: P,
-        className: A.root,
+        className: x.root,
         hideShadow: !0,
         "aria-label": N.default.Messages.USER_PROFILE_MODAL,
         children: [(0, a.jsx)("div", {
           ref: D,
           children: (0, a.jsxs)(m.default, {
             user: t,
-            profileType: p.UserProfileTypes.MODAL,
+            profileType: p.UserProfileTypes.FULL_SIZE,
             children: [(0, a.jsx)(T.default, {
-              className: A.header,
+              className: x.header,
               user: t,
               displayProfile: y,
               activity: O,
               friendToken: h,
-              onClose: j
-            }), (0, a.jsxs)(m.default.Inner, {
+              onClose: M
+            }), (0, a.jsxs)(m.default.Overlay, {
               children: [P === n.ModalTransitionState.ENTERED && (0, a.jsx)(E.default, {
-                onTooltipClose: j
+                onTooltipClose: M
               }), (0, a.jsx)("div", {
-                className: A.body,
+                className: x.body,
                 children: (0, a.jsx)(I.default, {
                   user: t,
                   displayProfile: y,
                   initialSection: C,
                   autoFocusNote: R,
-                  onClose: j
+                  onClose: M
                 })
               })]
             })]

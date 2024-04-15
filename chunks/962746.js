@@ -25,9 +25,9 @@ var l = t("735250"),
   T = t("680295"),
   x = t("168631"),
   E = t("318661"),
-  P = t("943217"),
-  U = t("793397"),
-  y = t("502762"),
+  y = t("943217"),
+  P = t("793397"),
+  U = t("502762"),
   N = t("347949"),
   j = t("155916"),
   C = t("138394"),
@@ -60,14 +60,14 @@ var l = t("735250"),
   et = t("943455"),
   el = t("471031");
 let ei = q.default.getEnableHardwareAcceleration() ? d.AnimatedAvatar : d.Avatar,
-  en = (0, U.buildGetPremiumUserBannerStyles)({
+  en = (0, P.buildGetPremiumUserBannerStyles)({
     premiumUserWithBanner: et.avatarUploaderPremium,
     premiumUserWithoutBanner: et.avatarUploaderPremiumNoBanner,
     default: et.avatarUploaderNormal
   });
 
 function er(e) {
-  var a, n, U, q;
+  var a, n, P, q;
   let {
     user: er,
     guild: es,
@@ -87,9 +87,9 @@ function er(e) {
     pendingProfileEffectId: eT,
     avatarClassName: ex,
     activityName: eE,
-    activityCharacter: eP,
-    isTryItOutFlow: eU = !1,
-    disabledInputs: ey = !1,
+    activityCharacter: ey,
+    isTryItOutFlow: eP = !1,
+    disabledInputs: eU = !1,
     hideExampleButton: eN = !1,
     hideFakeActivity: ej = !1,
     hideBioSection: eC = !1,
@@ -110,7 +110,7 @@ function er(e) {
     avatarOverride: eg,
     size: d.AvatarSizes.SIZE_80,
     showPending: !0
-  }), eW = (0, E.default)(er.id, null == es ? void 0 : es.id), eH = (0, o.useStateFromStores)([v.default], () => v.default.syncProfileThemeWithUserTheme), eV = (0, m.default)(), eZ = (0, o.useStateFromStores)([z.default], () => null == es ? null : z.default.getMember(es.id, er.id)), eY = null != es, eq = null === (a = (0, E.default)(er.id, null)) || void 0 === a ? void 0 : a.profileEffectId, eK = null == eW ? void 0 : eW.profileEffectId, eX = eY && null == eT ? eT !== eK && null !== eT ? eK : eq : eT, eJ = void 0 === eg ? er.getAvatarURL(void 0, 80) : eg, eQ = (0, g.default)(eJ, (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_530).hsl(), !1), e$ = null == eW ? void 0 : eW.getPreviewThemeColors(eA), e0 = null !== (n = null == e$ ? void 0 : e$[0]) && void 0 !== n ? n : null == eW ? void 0 : eW.primaryColor, e1 = eH ? eV : (0, x.getProfileTheme)(e0), e6 = (0, I.default)(null !== (U = null != ef ? ef : e0) && void 0 !== U ? U : (0, s.hex2int)(eQ)).hsl, e4 = (0, o.useStateFromStores)([G.default], () => G.default.isFocused()), e8 = null == eW ? void 0 : eW.getPreviewBanner(em, ez ? e4 : eB), e9 = null != e8 || null != eX, e3 = ew || null != eX, e5 = null !== (q = (0, X.getPreviewNickname)(eS, null == eZ ? void 0 : eZ.nick)) && void 0 !== q ? q : (0, X.getPreviewDisplayName)(eI, Y.default.getName(er)), [e7, e2] = (0, o.useStateFromStoresArray)([F.default], () => [F.default.findActivity(er.id, e => e.type === Q.ActivityTypes.CUSTOM_STATUS), F.default.getStatus(er.id)]), ae = (0, d.useStatusFillColor)(e2), aa = (0, o.useStateFromStores)([D.default], () => D.default.hidePersonalInformation), at = (null == eW ? void 0 : eW.canUsePremiumProfileCustomization) || eo, al = i.useCallback(() => {
+  }), eW = (0, E.default)(er.id, null == es ? void 0 : es.id), eH = (0, o.useStateFromStores)([v.default], () => v.default.syncProfileThemeWithUserTheme), eV = (0, m.default)(), eZ = (0, o.useStateFromStores)([z.default], () => null == es ? null : z.default.getMember(es.id, er.id)), eY = null != es, eq = null === (a = (0, E.default)(er.id, null)) || void 0 === a ? void 0 : a.profileEffectId, eK = null == eW ? void 0 : eW.profileEffectId, eX = eY && null == eT ? eT !== eK && null !== eT ? eK : eq : eT, eJ = void 0 === eg ? er.getAvatarURL(void 0, 80) : eg, eQ = (0, g.default)(eJ, (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_530).hsl(), !1), e$ = null == eW ? void 0 : eW.getPreviewThemeColors(eA), e0 = null !== (n = null == e$ ? void 0 : e$[0]) && void 0 !== n ? n : null == eW ? void 0 : eW.primaryColor, e1 = eH ? eV : (0, x.getProfileTheme)(e0), e6 = (0, I.default)(null !== (P = null != ef ? ef : e0) && void 0 !== P ? P : (0, s.hex2int)(eQ)).hsl, e4 = (0, o.useStateFromStores)([G.default], () => G.default.isFocused()), e8 = null == eW ? void 0 : eW.getPreviewBanner(em, ez ? e4 : eB), e9 = null != e8 || null != eX, e3 = ew || null != eX, e5 = null !== (q = (0, X.getPreviewNickname)(eS, null == eZ ? void 0 : eZ.nick)) && void 0 !== q ? q : (0, X.getPreviewDisplayName)(eI, Y.default.getName(er)), [e7, e2] = (0, o.useStateFromStoresArray)([F.default], () => [F.default.findActivity(er.id, e => e.type === Q.ActivityTypes.CUSTOM_STATUS), F.default.getStatus(er.id)]), ae = (0, d.useStatusFillColor)(e2), aa = (0, o.useStateFromStores)([D.default], () => D.default.hidePersonalInformation), at = (null == eW ? void 0 : eW.canUsePremiumProfileCustomization) || eo, al = i.useCallback(() => {
     var e, a;
     null === (a = eO.current) || void 0 === a || null === (e = a.inputRef.current) || void 0 === e || e.activateUploadDialogue()
   }, []), ai = i.useCallback((e, a) => {
@@ -198,7 +198,7 @@ function er(e) {
     if (!!V.isAnimatedImageURL(e)) new Image().src = null != e ? e : ""
   }, [eW, ez]);
   let ad = null == es;
-  return (0, l.jsxs)(y.default, {
+  return (0, l.jsxs)(U.default, {
     forceShowPremium: eo,
     user: er,
     guildId: null == es ? void 0 : es.id,
@@ -209,12 +209,12 @@ function er(e) {
     children: [(0, l.jsx)(T.default, {
       profileEffectId: void 0 !== eX ? eX : eK
     }), (0, l.jsxs)(d.HeadingLevel, {
-      children: [(0, l.jsx)(P.default, {
+      children: [(0, l.jsx)(y.default, {
         profileType: ee.UserProfileTypes.POPOUT,
         hasBanner: e9,
         isPremium: eo,
         hasThemeColors: at,
-        forProfileEffectModal: eM,
+        overrideBannerWidth: eM ? 280 : void 0,
         hasProfileEffect: e3,
         children: eo ? (0, l.jsxs)("div", {
           onMouseMove: () => eL(!0),
@@ -222,7 +222,7 @@ function er(e) {
           children: [(0, l.jsx)(A.default, {
             className: et.bannerUploader,
             showRemoveButton: !1,
-            disabled: !eo || ey,
+            disabled: !eo || eU,
             image: e8,
             makeURL: () => e8,
             onChange: an,
@@ -231,7 +231,7 @@ function er(e) {
             },
             imageClassName: r()(e9 ? et.bannerUploaderInnerSquare : et.bannerUploaderInnerSquareEmpty),
             hint: ea.default.Messages.CHANGE_BANNER,
-            onOpenImageSelectModal: () => (0, X.handleOpenSelectImageModal)($.UploadTypes.BANNER, null == eZ ? void 0 : eZ.guildId, eU, void 0),
+            onOpenImageSelectModal: () => (0, X.handleOpenSelectImageModal)($.UploadTypes.BANNER, null == eZ ? void 0 : eZ.guildId, eP, void 0),
             hideSize: !0,
             maxFileSizeBytes: J.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
             onFileSizeError: X.showFileSizeErrorModal
@@ -243,7 +243,7 @@ function er(e) {
           style: {
             backgroundColor: e6
           },
-          children: ey ? null : (0, l.jsx)(d.Clickable, {
+          children: eU ? null : (0, l.jsx)(d.Clickable, {
             onClick: () => null == eu ? void 0 : eu({
               object: Q.AnalyticsObjects.EDIT_PROFILE_BANNER
             }),
@@ -256,16 +256,16 @@ function er(e) {
           })
         })
       }), ad ? function() {
-        let e = () => (0, X.handleOpenSelectImageModal)($.UploadTypes.AVATAR, null == eZ ? void 0 : eZ.guildId, eU),
+        let e = () => (0, X.handleOpenSelectImageModal)($.UploadTypes.AVATAR, null == eZ ? void 0 : eZ.guildId, eP),
           a = () => (0, S.openAvatarDecorationModal)({
             guild: null == es ? void 0 : es,
             analyticsLocations: ao,
-            isTryItOutFlow: eU
+            isTryItOutFlow: eP
           });
         return (0, l.jsxs)(d.Clickable, {
           ...eG,
-          "aria-disabled": ey,
-          onClick: ey ? void 0 : i => {
+          "aria-disabled": eU,
+          onClick: eU ? void 0 : i => {
             (0, c.openContextMenuLazy)(i, async () => {
               let {
                 default: i
@@ -281,7 +281,7 @@ function er(e) {
             hasBanner: e9,
             hasProfileEffect: e3
           }), {
-            [et.defaultCursor]: ey
+            [et.defaultCursor]: eU
           }),
           children: [(0, l.jsx)(ei, {
             className: et.avatarUploaderInner,
@@ -299,7 +299,7 @@ function er(e) {
               className: et.tryingOutAvatarDecoration,
               "aria-hidden": !0
             })
-          }, eF), ey ? null : (0, l.jsx)("div", {
+          }, eF), eU ? null : (0, l.jsx)("div", {
             className: et.hoverIconWrapper,
             children: (0, l.jsx)(H.default, {
               className: et.hoverIcon,
@@ -316,7 +316,7 @@ function er(e) {
               hasProfileEffect: e3
             }),
             children: [(0, l.jsx)(A.default, {
-              disabled: ey,
+              disabled: eU,
               ref: eO,
               showIcon: null == eF,
               hint: e ? ea.default.Messages.UNLOCK_GUILD_MEMBER_AVATAR : ea.default.Messages.CHANGE_AVATAR,
@@ -327,7 +327,7 @@ function er(e) {
               makeURL: () => eD,
               maxFileSizeBytes: J.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
               onFileSizeError: X.showFileSizeErrorModal,
-              onOpenImageSelectModal: () => (0, X.handleOpenSelectImageModal)($.UploadTypes.AVATAR, null == eZ ? void 0 : eZ.guildId, eU, void 0)
+              onOpenImageSelectModal: () => (0, X.handleOpenSelectImageModal)($.UploadTypes.AVATAR, null == eZ ? void 0 : eZ.guildId, eP, void 0)
             }), null != eF && (0, l.jsx)("img", {
               className: et.avatarDecoration,
               src: eF,
@@ -346,14 +346,14 @@ function er(e) {
       }(), (0, l.jsx)(b.UserPopoutBadgeList, {
         user: er,
         guildId: null == es ? void 0 : es.id,
-        isTryItOutFlow: eU,
+        isTryItOutFlow: eP,
         forProfileEffectModal: eM
       }), function() {
         let e = null == eW ? void 0 : eW.getPreviewBio(ev);
-        return (0, l.jsxs)(y.default.Inner, {
+        return (0, l.jsxs)(U.default.Overlay, {
           className: r()(et.body, eR),
           children: [(0, l.jsx)(w.default, {
-            isTryItOut: eU,
+            isTryItOut: eP,
             user: er,
             nickname: null != e5 ? e5 : er.username,
             pronouns: null != ep ? ep : null == eW ? void 0 : eW.pronouns,
@@ -382,7 +382,7 @@ function er(e) {
             guildMember: eZ
           }), !ej && (0, l.jsx)(K.default, {
             activityName: eE,
-            activityCharacter: eP,
+            activityCharacter: ey,
             showExampleButton: null == es && !eN
           })]
         })
