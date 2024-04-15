@@ -52,7 +52,7 @@ function h(e) {
     children: (0, a.jsxs)(O.default, {
       className: G.welcomeMessageProfileContainer,
       user: x,
-      guildId: n,
+      displayProfile: U,
       profileType: g.UserProfileTypes.CARD,
       forceShowPremium: !0,
       useDefaultClientTheme: !0,

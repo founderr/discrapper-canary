@@ -201,7 +201,7 @@ function er(e) {
   return (0, l.jsxs)(U.default, {
     forceShowPremium: eo,
     user: er,
-    guildId: null == es ? void 0 : es.id,
+    displayProfile: eW,
     profileType: ee.UserProfileTypes.POPOUT,
     pendingThemeColors: eA,
     pendingProfileEffectId: eX,

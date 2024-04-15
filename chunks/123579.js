@@ -215,6 +215,7 @@ t.default = e => {
         onMouseLeave: eX,
         children: (0, a.jsxs)(k.default, {
           user: eh,
+          displayProfile: ep,
           profileType: el.UserProfileTypes.PANEL,
           useDefaultClientTheme: !0,
           children: [eV.shouldShow && (0, a.jsx)(G.default, {

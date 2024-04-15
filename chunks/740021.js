@@ -1,115 +1,112 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return P
+    return R
   }
 }), s("47120");
-var a = s("735250");
+var l = s("735250");
 s("470079");
-var l = s("442837"),
+var a = s("442837"),
   i = s("974674"),
   n = s("696826"),
-  o = s("37234"),
-  r = s("420660"),
-  u = s("233440"),
-  d = s("158776"),
-  c = s("135431"),
-  f = s("998502"),
-  S = s("204197"),
-  E = s("249003"),
-  m = s("78675"),
+  o = s("420660"),
+  r = s("233440"),
+  u = s("158776"),
+  d = s("135431"),
+  c = s("998502"),
+  f = s("204197"),
+  S = s("249003"),
+  E = s("78675"),
   I = s("184325"),
-  T = s("652853"),
-  p = s("530"),
-  _ = s("894374"),
-  N = s("18816"),
-  x = s("301984"),
-  A = s("30556"),
+  m = s("652853"),
+  _ = s("530"),
+  T = s("894374"),
+  p = s("18816"),
+  A = s("301984"),
+  N = s("30556"),
   v = s("228168"),
-  U = s("182294"),
-  h = s("231338"),
-  C = s("262572");
-let R = f.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
+  x = s("182294"),
+  U = s("231338"),
+  h = s("262572");
+let C = c.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
 
-function P(e) {
+function R(e) {
   let {
     user: t,
     displayProfile: s,
     activity: i,
-    friendToken: f,
-    guildId: P,
-    channelId: j,
-    className: M,
-    onClose: g
+    friendToken: c,
+    channelId: R,
+    className: P,
+    onClose: M
   } = e, {
-    profileTheme: y
-  } = (0, T.useUserProfileThemeContext)(), {
-    avatarSrc: O,
-    eventHandlers: D,
-    avatarDecorationSrc: F
-  } = (0, S.default)({
+    profileTheme: g
+  } = (0, m.useUserProfileThemeContext)(), {
+    avatarSrc: j,
+    eventHandlers: y,
+    avatarDecorationSrc: O
+  } = (0, f.default)({
     user: t,
-    size: U.AvatarSizes.SIZE_120
+    guildId: null == s ? void 0 : s.guildId,
+    size: x.AvatarSizes.SIZE_120
   }), {
-    relationshipType: L,
-    canReceiveMessage: B,
-    canReceiveFriendRequest: b
-  } = (0, E.default)(t), G = (null == s ? void 0 : s.application) != null && (0, c.canInstallApplication)(s.application), [k, w] = (0, l.useStateFromStoresArray)([d.default], () => {
-    let e = d.default.isMobileOnline(t.id);
-    return (0, u.shouldDisableUserPresenceInChannel)(t, j) ? [h.StatusTypes.UNKNOWN, e] : (0, r.default)(i) ? [h.StatusTypes.STREAMING, e] : [d.default.getStatus(t.id), e]
-  }), z = () => {
-    g(), (0, o.popLayer)()
-  };
-  return (0, a.jsxs)("header", {
-    className: M,
-    children: [(0, a.jsx)(m.default, {
+    relationshipType: D,
+    canReceiveMessage: F,
+    canReceiveFriendRequest: L
+  } = (0, S.default)(t), B = (null == s ? void 0 : s.application) != null && (0, d.canInstallApplication)(s.application), [b, G] = (0, a.useStateFromStoresArray)([u.default], () => {
+    let e = u.default.isMobileOnline(t.id);
+    return (0, r.shouldDisableUserPresenceInChannel)(t, R) ? [U.StatusTypes.UNKNOWN, e] : (0, o.default)(i) ? [U.StatusTypes.STREAMING, e] : [u.default.getStatus(t.id), e]
+  });
+  return (0, l.jsxs)("header", {
+    className: P,
+    children: [(0, l.jsx)(E.default, {
       user: t,
       displayProfile: s,
       profileType: v.UserProfileTypes.FULL_SIZE,
       hasProfileEffect: (null == s ? void 0 : s.profileEffectId) != null
-    }), (0, a.jsxs)("div", {
-      className: C.inner,
-      children: [(0, a.jsx)("div", {
-        ...D,
-        children: (0, a.jsx)(R, {
-          src: O,
-          avatarDecoration: F,
-          size: U.AvatarSizes.SIZE_120,
-          className: C.avatar,
-          status: k,
-          statusBackdropColor: (0, n.getStatusBackdropColor)(y),
+    }), (0, l.jsxs)("div", {
+      className: h.inner,
+      children: [(0, l.jsx)("div", {
+        ...y,
+        children: (0, l.jsx)(C, {
+          src: j,
+          avatarDecoration: O,
+          size: x.AvatarSizes.SIZE_120,
+          className: h.avatar,
+          status: b,
+          statusBackdropColor: (0, n.getStatusBackdropColor)(g),
           "aria-label": t.username,
-          isMobile: w,
+          isMobile: G,
           statusTooltip: !0
         })
-      }), (0, a.jsxs)("div", {
-        className: C.buttons,
-        children: [B && (0, a.jsx)(A.default, {
+      }), (0, l.jsxs)("div", {
+        className: h.buttons,
+        children: [F && (0, l.jsx)(N.default, {
           user: t,
-          compact: G || b,
-          onClose: z
-        }), G && (0, a.jsx)(N.default, {
+          compact: B || L,
+          onClose: M
+        }), B && (0, l.jsx)(p.default, {
           application: s.application
-        }), b && (0, a.jsx)(x.default, {
+        }), L && (0, l.jsx)(A.default, {
           user: t,
-          relationshipType: L,
-          friendToken: f,
-          onClose: z
+          relationshipType: D,
+          friendToken: c,
+          onClose: M
         })]
-      }), (0, a.jsxs)("div", {
-        className: C.usernameBadgeList,
-        children: [(0, a.jsx)(p.default, {
-          className: C.username,
+      }), (0, l.jsxs)("div", {
+        className: h.usernameBadgeList,
+        children: [(0, l.jsx)(_.default, {
+          className: h.username,
           user: t,
-          guildId: P,
+          guildId: null == s ? void 0 : s.guildId,
           nicknameVariant: "heading-xl/bold",
-          tags: (0, a.jsx)(_.UserProfilePronounsTag, {
+          tags: (0, l.jsx)(T.UserProfilePronounsTag, {
             pronouns: null == s ? void 0 : s.pronouns
           })
-        }), (0, a.jsx)(I.default, {
-          className: C.badgeList,
+        }), (0, l.jsx)(I.default, {
+          className: h.badgeList,
           user: t,
-          guildId: P,
+          guildId: null == s ? void 0 : s.guildId,
           size: I.BadgeSizes.SIZE_24
         })]
       })]

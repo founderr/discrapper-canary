@@ -283,6 +283,7 @@ function $(e) {
           ref: ea,
           children: (0, a.jsxs)(M.default, {
             user: t,
+            displayProfile: H,
             profileType: z.UserProfileTypes.POPOUT,
             children: [(0, a.jsx)(y.default, {
               user: t,

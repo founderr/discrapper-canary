@@ -130,8 +130,9 @@ function ep(e) {
     premiumType: t,
     onClose: r
   } = e, l = (0, S.default)(s.id), i = (0, m.useStateFromStores)([N.default], () => N.default.useReducedMotion), n = t === Y.PremiumTypes.TIER_1, o = (0, d.match)(null == l ? void 0 : l.premiumType).with(Y.PremiumTypes.TIER_2, () => (0, a.jsxs)(g.default, {
-    forceShowPremium: !0,
     user: s,
+    displayProfile: l,
+    forceShowPremium: !0,
     profileType: Z.UserProfileTypes.CANCEL_MODAL,
     className: J.profileCard,
     children: [(0, a.jsx)("div", {
