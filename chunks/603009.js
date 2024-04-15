@@ -32,27 +32,27 @@ function v(e) {
     showToast: n,
     onConfirm: s,
     onDismiss: h
-  } = e, [m, E] = l.useState(!1), C = l.useRef(null), [g, S] = l.useState(0), v = l.useCallback(e => {
+  } = e, [m, E] = l.useState(!1), g = l.useRef(null), [S, v] = l.useState(0), N = (0, C.useIsInUserClanExperiment)(), x = l.useCallback(e => {
     let t = e.target.getBoundingClientRect();
-    S(window.innerWidth - t.right)
-  }, []), N = (0, c.useResizeObserver)(v), x = (0, d.useStateFromStores)([f.default], () => f.default.useReducedMotion);
+    v(window.innerWidth - t.right)
+  }, []), M = (0, c.useResizeObserver)(x), R = (0, d.useStateFromStores)([f.default], () => f.default.useReducedMotion);
   l.useLayoutEffect(() => {
     var e;
-    if (null == C.current) return;
-    let t = null === (e = C.current) || void 0 === e ? void 0 : e.parentNode;
+    if (null == g.current) return;
+    let t = null === (e = g.current) || void 0 === e ? void 0 : e.parentNode;
     return null != t && (t.style.zIndex = "1003"), () => {
       null != t && (t.style.zIndex = "1002")
     }
   }, []);
-  let M = l.useCallback(e => {
+  let L = l.useCallback(e => {
       e.stopPropagation(), e.preventDefault(), h()
     }, [h]),
-    R = l.useCallback(e => {
+    y = l.useCallback(e => {
       e.stopPropagation(), e.preventDefault(), s()
     }, [s]),
-    L = (0, r.useTransition)(n, {
+    O = (0, r.useTransition)(n, {
       from: {
-        transform: x ? "translateY(0)" : "translateY(16px)",
+        transform: R ? "translateY(0)" : "translateY(16px)",
         opacity: 0,
         pointerEvents: "none"
       },
@@ -62,7 +62,7 @@ function v(e) {
         pointerEvents: "all"
       },
       leave: {
-        transform: x ? "translateY(0)" : "translateY(16px)",
+        transform: R ? "translateY(0)" : "translateY(16px)",
         opacity: 0,
         pointerEvents: "none"
       },
@@ -74,12 +74,12 @@ function v(e) {
       },
       delay: 200
     });
-  return (0, a.jsxs)(a.Fragment, {
+  return N ? (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
-      ref: N,
+      ref: M,
       className: i()(A.positionTracker)
     }), (0, a.jsx)(p.default, {
-      children: L((e, n) => {
+      children: O((e, n) => {
         var l;
         return n && (0, a.jsx)(r.animated.div, {
           onMouseEnter: () => E(!0),
@@ -87,14 +87,14 @@ function v(e) {
           className: i()(A.wrapper),
           style: {
             ...e,
-            right: g + 12
+            right: S + 12
           },
-          ref: C,
+          ref: g,
           children: (0, a.jsx)(u.ClickableContainer, {
             "aria-label": I.default.Messages.CLAN_USER_ADOPT_TAG_UPSELL_ARIA_LABEL.format({
               guildName: t.name
             }),
-            onClick: R,
+            onClick: y,
             children: (0, a.jsxs)("div", {
               className: i()(A.toastContainerInner, m ? A.hovered : null),
               children: [(0, a.jsxs)("div", {
@@ -129,7 +129,7 @@ function v(e) {
               }), (0, a.jsx)("div", {
                 children: (0, a.jsx)(u.Clickable, {
                   className: A.toastButton,
-                  onClick: M,
+                  onClick: L,
                   children: (0, a.jsx)(o.CloseSmallBoldIcon, {
                     width: 20,
                     height: 20
@@ -141,7 +141,7 @@ function v(e) {
         })
       })
     })]
-  })
+  }) : null
 }
 
 function N(e) {
