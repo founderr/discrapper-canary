@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   OmniButtonNuxAnimation: function() {
-    return I
+    return T
   },
   useActivitiesInTextOnboardingVisibility: function() {
-    return A
+    return I
   }
 });
 var a, l, s = n("735250"),
@@ -15,14 +15,13 @@ var a, l, s = n("735250"),
   d = n("524437"),
   c = n("607070"),
   f = n("424602"),
-  h = n("802171"),
-  m = n("605236"),
-  p = n("175355"),
-  E = n("160683"),
-  C = n("921944"),
-  g = n("545528");
+  h = n("605236"),
+  m = n("175355"),
+  p = n("160683"),
+  E = n("921944"),
+  C = n("545528");
 
-function S(e) {
+function g(e) {
   let t = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion),
     n = i.useRef(null);
   return i.useEffect(() => {
@@ -39,52 +38,45 @@ function S(e) {
   }, [n, t, e]), n
 }
 
-function _() {
+function S() {
   return (0, s.jsx)("div", {
-    ref: S(a || (a = n.t(p, 2))),
-    className: g.glow
+    ref: g(a || (a = n.t(m, 2))),
+    className: C.glow
   })
 }
 
-function T() {
+function _() {
   return (0, s.jsx)("div", {
-    ref: S(l || (l = n.t(E, 2))),
-    className: g.trinkets
+    ref: g(l || (l = n.t(p, 2))),
+    className: C.trinkets
   })
 }
-let I = e => {
+let T = e => {
   let {
     children: t
   } = e;
   return i.useEffect(() => {
-    setTimeout(() => (0, m.markDismissibleContentAsDismissed)(d.DismissibleContent.ACTIVITIES_CHAT_BUTTON_NUX_V2, {
-      dismissAction: C.ContentDismissActionType.AUTO_DISMISS
+    setTimeout(() => (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.ACTIVITIES_CHAT_BUTTON_NUX_V2, {
+      dismissAction: E.ContentDismissActionType.AUTO_DISMISS
     }), 1e4)
   }, []), (0, s.jsxs)("div", {
-    className: g.animation,
-    children: [(0, s.jsx)(_, {}), (0, s.jsx)("div", {
-      className: g.circleLayer
+    className: C.animation,
+    children: [(0, s.jsx)(S, {}), (0, s.jsx)("div", {
+      className: C.circleLayer
     }), (0, s.jsx)("div", {
-      className: g.omniButton,
+      className: C.omniButton,
       children: t
-    }), (0, s.jsx)(T, {})]
+    }), (0, s.jsx)(_, {})]
   })
 };
 
-function A(e, t) {
-  let n = h.default.getCurrentConfig({
-      location: t,
-      guildId: null == e ? void 0 : e.guild_id
-    }, {
-      autoTrackExposure: !1
-    }),
-    {
-      enabled: a
-    } = f.AppLauncherOnboardingExperiment.useExperiment({
-      location: t
-    }),
-    l = n.entryPointEnabled;
-  return n.activitiesInTextEnabled && l ? {
-    desktopThrobberEnabled: a
-  } : null
+function I(e, t) {
+  let {
+    enabled: n
+  } = f.AppLauncherOnboardingExperiment.useExperiment({
+    location: t
+  });
+  return {
+    desktopThrobberEnabled: n
+  }
 }
