@@ -24,8 +24,8 @@ function T(e) {
     messageId: t,
     emoji: i,
     startPosition: T,
-    targetPosition: v
-  } = e, [S, E] = a.useState(0), [R, I] = a.useState(0), [N, C] = a.useState(null), {
+    targetPosition: S
+  } = e, [v, E] = a.useState(0), [R, I] = a.useState(0), [N, C] = a.useState(null), {
     confettiCanvas: _
   } = a.useContext(u.ConfettiCannonContext), x = (0, s.useConfettiCannon)(_, N), O = a.useMemo(() => [{
     src: null == i.id ? f.default.getURL(i.name) : h.default.getEmojiURL({
@@ -34,7 +34,7 @@ function T(e) {
       size: 22
     }),
     colorize: !1
-  }], [i.name, i.id]), j = v.x - v.width / 2 * .5, A = v.y - v.height / 2 * .5, M = (0, l.useSpring)({
+  }], [i.name, i.id]), j = S.x - S.width / 2 * .5, A = S.y - S.height / 2 * .5, M = (0, l.useSpring)({
     from: {
       y: T.y
     },
@@ -77,17 +77,17 @@ function T(e) {
     }
   });
   return a.useEffect(() => {
-    S > 0 && R > 0 && x.createConfetti({
+    v > 0 && R > 0 && x.createConfetti({
       ...m.COMMON_CONFETTI_BASE_CONFIG,
       position: {
         type: "static",
         value: {
-          x: S,
+          x: v,
           y: R
         }
       }
     })
-  }, [x, S, R]), (0, n.jsxs)(n.Fragment, {
+  }, [x, v, R]), (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(s.SpriteCanvas, {
       ref: C,
       sprites: O,

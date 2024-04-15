@@ -42,10 +42,10 @@ function d(e) {
     gridNavigatorId: U,
     gridNotice: b,
     renderHeader: G
-  } = e, w = r.useRef(null), k = r.useRef(null), B = r.useRef(null), V = 0 === t.length, F = (0, s.useExpressionPickerStore)(e => e.searchQuery), x = _.useStore(e => e.inspectedExpressionPosition), H = (0, a.useExpressionPickerGridWidth)({
+  } = e, w = r.useRef(null), B = r.useRef(null), k = r.useRef(null), F = 0 === t.length, V = (0, s.useExpressionPickerStore)(e => e.searchQuery), x = _.useStore(e => e.inspectedExpressionPosition), H = (0, a.useExpressionPickerGridWidth)({
     gridWrapperRef: w,
     containerWidth: d,
-    showingEmptyState: V
+    showingEmptyState: F
   }), {
     expressionsGrid: Y,
     rowCount: j,
@@ -67,7 +67,7 @@ function d(e) {
     isUsingKeyboardNavigation: J
   } = (0, a.useKeyboardNavigation)({
     columnCounts: K,
-    expressionsListRef: k,
+    expressionsListRef: B,
     expressionsGrid: Y,
     onSelectItem: c,
     store: _,
@@ -81,18 +81,18 @@ function d(e) {
     return null == O ? void 0 : O(null == Y ? void 0 : null === (e = Y[x.rowIndex]) || void 0 === e ? void 0 : e[x.columnIndex])
   }, [Y, x.columnIndex, x.rowIndex, O]);
   r.useEffect(() => {
-    E(F)
-  }, [E, F]), r.useEffect(() => _.resetStoreState, [_.resetStoreState]), r.useLayoutEffect(() => {
+    E(V)
+  }, [E, V]), r.useEffect(() => _.resetStoreState, [_.resetStoreState]), r.useLayoutEffect(() => {
     var e;
-    null === (e = B.current) || void 0 === e || e.focus()
+    null === (e = k.current) || void 0 === e || e.focus()
   }, []);
   let er = (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(l.default, {
-      ref: B,
+      ref: k,
       store: _,
       hasSendableExpressions: !0,
       onKeyDown: Z,
-      expressionsListRef: k,
+      expressionsListRef: B,
       gridNavigatorId: U,
       defaultSearchPlaceholder: T,
       emptySearchPlaceholder: f
@@ -102,8 +102,8 @@ function d(e) {
     children: [null != G ? G(er) : (0, i.jsxs)("div", {
       className: u.header,
       children: [" ", er, " "]
-    }), V && null != S ? S(u.emptyState) : (0, i.jsxs)(i.Fragment, {
-      children: [R(k), null != b && (0, i.jsx)("div", {
+    }), F && null != S ? S(u.emptyState) : (0, i.jsxs)(i.Fragment, {
+      children: [R(B), null != b && (0, i.jsx)("div", {
         className: u.gridNoticeWrapper,
         children: b
       }), (0, i.jsx)("div", {
@@ -112,7 +112,7 @@ function d(e) {
         id: U,
         ...q,
         children: null != H ? (0, i.jsx)(o.default, {
-          ref: k,
+          ref: B,
           store: _,
           hasSearchResults: I,
           listPadding: P,

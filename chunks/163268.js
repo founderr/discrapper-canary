@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return b
   },
   getObscuredMediaForMessage: function() {
-    return V
+    return F
   },
   getShouldObscureForSetting: function() {
     return G
@@ -28,10 +28,10 @@ n.r(t), n.d(t, {
     return z
   },
   isMediaObscured: function() {
-    return B
+    return k
   },
   isPendingScan: function() {
-    return F
+    return V
   },
   resolveSettingWithDefaults: function() {
     return y
@@ -55,7 +55,7 @@ n.r(t), n.d(t, {
     return Y
   },
   updateExplicitContentSetting: function() {
-    return k
+    return B
   }
 }), n("789020");
 var i, r, s, a, o, l, u, d, _ = n("286379"),
@@ -165,7 +165,7 @@ function w(e) {
   if (a.isDM() || a.isGroupDM()) return null != e.author && A.default.getFriendIDs().includes(e.author.id) ? G(r) : G(s);
   return G(i)
 }
-let k = e => {
+let B = e => {
   let t = b();
   f.ExplicitContentSettings.updateSetting({
     ...t,
@@ -173,7 +173,7 @@ let k = e => {
   })
 };
 
-function B(e, t) {
+function k(e, t) {
   var n, i;
   if (!t) return !1;
   if (E.default.get("obscure_blur_effect_enabled")) return !0;
@@ -187,13 +187,13 @@ function B(e, t) {
   }
 }
 
-function V(e) {
+function F(e) {
   return w(e) ? {
-    obscuredAttachments: e.attachments.filter(e => B({
+    obscuredAttachments: e.attachments.filter(e => k({
       type: 0,
       media: e
     }, !0)),
-    obscuredEmbeds: e.embeds.filter(e => B({
+    obscuredEmbeds: e.embeds.filter(e => k({
       type: 1,
       media: e
     }, !0))
@@ -203,7 +203,7 @@ function V(e) {
   }
 }
 
-function F(e) {
+function V(e) {
   return !E.default.get("explicit_media_redaction_ignore_pending_scan") && null == e
 }
 

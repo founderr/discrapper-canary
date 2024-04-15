@@ -37,16 +37,16 @@ function w(e) {
   return e.type === p.LocalDispatchApplicationStates.INSTALLING || e.type === p.LocalDispatchApplicationStates.UPDATING || e.type === p.LocalDispatchApplicationStates.REPAIRING ? e.diskProgress : null
 }
 
-function k(e) {
+function B(e) {
   return e.type === p.LocalDispatchApplicationStates.INSTALLING || e.type === p.LocalDispatchApplicationStates.UPDATING || e.type === p.LocalDispatchApplicationStates.REPAIRING ? e.readerProgress : null
 }
-let B = u().throttle(function(e) {
+let k = u().throttle(function(e) {
     P = (P = [{
       bytes: e,
       timestamp: Date.now()
     }, ...P]).slice(0, 200)
   }, 200),
-  V = u().throttle(function(e) {
+  F = u().throttle(function(e) {
     let t = Date.now(),
       n = t - R;
     y = (y = [{
@@ -59,7 +59,7 @@ let B = u().throttle(function(e) {
       return t >= n
     })
   }, 200),
-  F = u().throttle(function(e) {
+  V = u().throttle(function(e) {
     U = (U = [{
       bytes: e,
       timestamp: Date.now()
@@ -264,11 +264,11 @@ o = "DispatchApplicationStore", (a = "displayName") in(s = H) ? Object.definePro
             throw Error("Invalid Dispatch State. state=".concat(e.state.type))
           }(i[e][t]), null != C[a]) {
           let e = x(n, a, G);
-          e > 0 && B(D += e);
+          e > 0 && k(D += e);
           let i = x(n, a, w);
-          i > 0 && F(v += i);
-          let o = x(n, a, k);
-          if (o > 0 && V(M += o), r === t) {
+          i > 0 && V(v += i);
+          let o = x(n, a, B);
+          if (o > 0 && F(M += o), r === t) {
             let e = n[a];
             if (!0 !== e.paused && (e.type === p.LocalDispatchApplicationStates.UNINSTALLING || e.type === p.LocalDispatchApplicationStates.INSTALLING || e.type === p.LocalDispatchApplicationStates.UPDATING)) switch (e.stage) {
               case p.DispatchApplicationStages.PATCHING:

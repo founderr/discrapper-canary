@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   PremiumTrialGradientBadge: function() {
-    return k
+    return B
   },
   default: function() {
     return x
@@ -133,7 +133,7 @@ function w(e) {
   })
 }
 
-function k(e) {
+function B(e) {
   var t, n;
   let r = null === (t = (0, g.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial,
     s = null !== (n = null == r ? void 0 : r.sku_id) && void 0 !== n ? n : v.PremiumSubscriptionSKUs.TIER_2;
@@ -151,7 +151,7 @@ function k(e) {
   })
 }
 
-function B(e) {
+function k(e) {
   let {
     subscriptionTier: t,
     onClose: n,
@@ -178,7 +178,7 @@ function B(e) {
   })
 }
 
-function V(e) {
+function F(e) {
   let {
     onClose: t,
     analyticsLocationObject: n
@@ -209,7 +209,7 @@ function V(e) {
   })
 }
 
-function F(e) {
+function V(e) {
   let {
     headingText: t,
     context: n,
@@ -271,7 +271,7 @@ function x(e) {
               onClick: () => (0, A.transitionTo)(M.Routes.APPLICATION_STORE)
             })
           })]
-        }), (0, i.jsx)(B, {
+        }), (0, i.jsx)(k, {
           subscriptionTier: d,
           onClose: o,
           analyticsLocationObject: {
@@ -302,7 +302,7 @@ function x(e) {
               onClick: () => (0, A.transitionTo)(M.Routes.APPLICATION_STORE)
             })
           })]
-        }), (0, i.jsx)(B, {
+        }), (0, i.jsx)(k, {
           subscriptionTier: d,
           onClose: o,
           analyticsLocationObject: {
@@ -335,7 +335,7 @@ function x(e) {
               onClick: () => (0, A.transitionTo)(M.Routes.APPLICATION_STORE)
             })
           })]
-        }), (0, i.jsx)(B, {
+        }), (0, i.jsx)(k, {
           subscriptionTier: d,
           onClose: o,
           analyticsLocationObject: {
@@ -474,7 +474,7 @@ function x(e) {
       });
     case v.PremiumUpsellTypes.CUSTOM_PROFILE_TRY_OUT_UPSELL:
     case v.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL:
-      return (0, i.jsx)(V, {});
+      return (0, i.jsx)(F, {});
     case v.PremiumUpsellTypes.GUILD_CAP_MODAL_UPSELL:
     case v.PremiumUpsellTypes.PREMIUM_GUILD_IDENTITY_MODAL:
     case v.PremiumUpsellTypes.CUSTOM_PROFILE_UPSELL:
@@ -482,7 +482,7 @@ function x(e) {
     case v.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED:
     case v.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED:
     case v.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED:
-      return (0, i.jsx)(F, {
+      return (0, i.jsx)(V, {
         trialOffer: N,
         discountOffer: O,
         headingText: t,
@@ -490,7 +490,7 @@ function x(e) {
         children: s
       });
     default:
-      return R.default.captureMessage("Possible mishandling of a PremiumUpsellType: ".concat(u)), (0, i.jsx)(F, {
+      return R.default.captureMessage("Possible mishandling of a PremiumUpsellType: ".concat(u)), (0, i.jsx)(V, {
         headingText: t,
         context: r,
         children: s,

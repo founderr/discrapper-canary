@@ -27,8 +27,8 @@ var n, a = i("735250"),
   p = i("596454"),
   g = i("785388"),
   T = i("607070"),
-  v = i("367907"),
-  S = i("98474"),
+  S = i("367907"),
+  v = i("98474"),
   E = i("339085"),
   R = i("906411"),
   I = i("56314"),
@@ -126,7 +126,7 @@ class eu extends(n = s.PureComponent) {
       isLurking: f,
       isGuest: g,
       isPendingMember: T,
-      className: v,
+      className: S,
       useChatFontScaling: E,
       message: R,
       hideEmoji: I,
@@ -168,7 +168,7 @@ class eu extends(n = s.PureComponent) {
           onMouseLeave: this.handleLeave,
           ref: this.handleSetReactionRef,
           children: (0, a.jsx)(u.default.div, {
-            className: o()(A.reaction, v, {
+            className: o()(A.reaction, S, {
               [A.reactionMe]: this.isMe(),
               [A.reactionReadOnly]: h && !f && !T && !g,
               [A.shakeReaction]: I && null == N
@@ -193,7 +193,7 @@ class eu extends(n = s.PureComponent) {
                   }
                 }), (0, a.jsxs)("div", {
                   children: [l ? (0, a.jsxs)(a.Fragment, {
-                    children: [U && (0, a.jsx)(S.default, {
+                    children: [U && (0, a.jsx)(v.default, {
                       messageId: R.id,
                       emoji: c,
                       startPosition: N,
@@ -470,7 +470,7 @@ class eu extends(n = s.PureComponent) {
         message: t,
         type: i
       } = this.props, n = F.default.getCurrentUser(), a = L.default.getChannel(t.getChannelId()), s = i === K.ReactionTypes.BURST, l = (0, z.isPremium)(n), o = s ? $.PremiumUpsellTypes.EMOJI_IN_BURST_REACTION_HOVER : $.PremiumUpsellTypes.EMOJI_IN_REACTION_HOVER;
-      s && !this.userCanBurstReact() && !l && (o = $.PremiumUpsellTypes.EMOJI_IN_BURST_REACTION_HOVER_UPSELL), v.default.trackWithMetadata(Q.AnalyticEvents.EXPRESSION_TOOLTIP_VIEWED, {
+      s && !this.userCanBurstReact() && !l && (o = $.PremiumUpsellTypes.EMOJI_IN_BURST_REACTION_HOVER_UPSELL), S.default.trackWithMetadata(Q.AnalyticEvents.EXPRESSION_TOOLTIP_VIEWED, {
         type: o,
         expression_id: e.id,
         expression_name: e.name,
@@ -567,7 +567,7 @@ let ed = s.memo(e => {
       return {
         joinedEmojiSourceGuild: (null == e ? void 0 : e.type) === R.EmojiTypes.GUILD ? P.default.getGuild(null == e ? void 0 : e.guildId) : void 0
       }
-    }), [d, h] = s.useState(void 0), [f, p] = s.useState(!1), [g, T] = s.useState(!1), [v, S] = s.useState(!1), I = null != u, C = null !== (t = null == d ? void 0 : d.isDiscoverable()) && void 0 !== t && t, _ = w.default.getGuildId(), x = null != _ && (_ === (null == d ? void 0 : d.id) || _ === (null == u ? void 0 : u.id)), O = F.default.getCurrentUser(), j = (0, J.getEmojiPopoutData)({
+    }), [d, h] = s.useState(void 0), [f, p] = s.useState(!1), [g, T] = s.useState(!1), [S, v] = s.useState(!1), I = null != u, C = null !== (t = null == d ? void 0 : d.isDiscoverable()) && void 0 !== t && t, _ = w.default.getGuildId(), x = null != _ && (_ === (null == d ? void 0 : d.id) || _ === (null == u ? void 0 : u.id)), O = F.default.getCurrentUser(), j = (0, J.getEmojiPopoutData)({
       isPremium: z.default.isPremium(O),
       hasJoinedEmojiSourceGuild: I,
       isDiscoverable: C,
@@ -578,10 +578,10 @@ let ed = s.memo(e => {
       shouldHideRoleSubscriptionCTA: !1
     });
     s.useEffect(() => {
-      if (!!f && !v)(async () => {
-        n(), T(!0), h(await N.default.getGuildFromEmojiId(i)), T(!1), S(!0), n()
+      if (!!f && !S)(async () => {
+        n(), T(!0), h(await N.default.getGuildFromEmojiId(i)), T(!1), v(!0), n()
       })()
-    }, [i, f, v, n]);
+    }, [i, f, S, n]);
     if (I) return null;
     let A = () => {
         p(!f)

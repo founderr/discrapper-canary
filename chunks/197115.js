@@ -39,10 +39,10 @@ t.default = function(e) {
     postSuccessGuild: b,
     onSubscribeModalClose: G,
     premiumModalAnalyticsLocation: w,
-    showIcon: k = !0,
-    disableShine: B,
-    applicationId: V,
-    giftMessage: F,
+    showIcon: B = !0,
+    disableShine: k,
+    applicationId: F,
+    giftMessage: V,
     overrideDisabledButtonText: x,
     shinyButtonClassName: H,
     ...Y
@@ -135,8 +135,8 @@ t.default = function(e) {
       onSubscribeModalClose: G,
       analyticsLocations: z,
       premiumModalAnalyticsLocation: w,
-      applicationId: V,
-      giftMessage: F
+      applicationId: F,
+      giftMessage: V
     })
   };
   if (M) return (0, i.jsxs)(o.Button, {
@@ -146,7 +146,7 @@ t.default = function(e) {
     look: o.Button.Looks.INVERTED,
     onClick: Q,
     ...Y,
-    children: [k && (0, i.jsx)(h.default, {
+    children: [B && (0, i.jsx)(h.default, {
       className: C.premiumIcon
     }), (0, i.jsx)("span", {
       className: s()(C.buttonText, P),
@@ -204,10 +204,10 @@ t.default = function(e) {
       size: L,
       className: H,
       wrapperClassName: D,
-      pauseAnimation: !W || B,
+      pauseAnimation: !W || k,
       ...Y,
       ...e,
-      children: [k && (0, i.jsx)(h.default, {
+      children: [B && (0, i.jsx)(h.default, {
         className: s()(C.premiumIcon, U)
       }), (0, i.jsx)("span", {
         className: s()(C.buttonText, P),

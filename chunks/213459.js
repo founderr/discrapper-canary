@@ -52,27 +52,27 @@ function b(e, t, n) {
 }
 let G = new u.Logger("ApplicationCommandIndexStore"),
   w = Symbol("currentUser"),
-  k = Symbol("stale"),
-  B = Symbol("current"),
-  V = Object.freeze({
+  B = Symbol("stale"),
+  k = Symbol("current"),
+  F = Object.freeze({
     descriptors: [],
     commands: [],
     sectionedCommands: [],
     loading: !0
   }),
-  F = Object.freeze({
-    serverVersion: B,
+  V = Object.freeze({
+    serverVersion: k,
     fetchState: {
       fetching: !1
     },
     result: {
       sections: {},
       sectionIdsByBotId: {},
-      version: B
+      version: k
     }
   }),
   x = Object.freeze({
-    serverVersion: k,
+    serverVersion: B,
     fetchState: {
       fetching: !1
     }
@@ -103,7 +103,7 @@ function j(e, t) {
     ...s,
     ...t
   }) : i && (n = {
-    serverVersion: k,
+    serverVersion: B,
     fetchState: {
       fetching: !1
     },
@@ -126,7 +126,7 @@ function z() {
   j({
     type: "user"
   }, {
-    serverVersion: k
+    serverVersion: B
   })
 }
 class X extends(i = d.default.Store) {
@@ -143,7 +143,7 @@ class X extends(i = d.default.Store) {
   }
   getContextState(e) {
     var t, n;
-    return null != e && ei(e) ? null !== (n = this.indices[null !== (t = e.guild_id) && void 0 !== t ? t : e.id]) && void 0 !== n ? n : x : F
+    return null != e && ei(e) ? null !== (n = this.indices[null !== (t = e.guild_id) && void 0 !== t ? t : e.id]) && void 0 !== n ? n : x : V
   }
   getUserState() {
     var e;
@@ -151,17 +151,17 @@ class X extends(i = d.default.Store) {
       location: "getUserState"
     }, {
       autoTrackExposure: !1
-    }) ? null !== (e = this.indices[w]) && void 0 !== e ? e : x : F
+    }) ? null !== (e = this.indices[w]) && void 0 !== e ? e : x : V
   }
   getApplicationState(e) {
     var t;
-    return null == e ? F : null !== (t = this.indices[e]) && void 0 !== t ? t : x
+    return null == e ? V : null !== (t = this.indices[e]) && void 0 !== t ? t : x
   }
   getApplicationStates() {
     return this.applicationIndices
   }
   query(e, t, n) {
-    if (null == m.default.getCurrentUser()) return V;
+    if (null == m.default.getCurrentUser()) return F;
     let i = this.getContextState(e),
       r = this.getUserState(),
       s = this.getApplicationState(n.applicationId),
@@ -219,7 +219,7 @@ b(X, "displayName", "ApplicationCommandIndexStore");
 let Q = new X(_.default, {
   LOGOUT: K,
   CONNECTION_OPEN: function() {
-    for (let e of Object.values(Q.indices)) e.serverVersion = k
+    for (let e of Object.values(Q.indices)) e.serverVersion = B
   },
   APPLICATION_COMMAND_INDEX_FETCH_REQUEST: function(e) {
     var t;
@@ -290,7 +290,7 @@ let Q = new X(_.default, {
       }
       t.commands[e.id] = e
     }
-    let u = null !== (n = r.version) && void 0 !== n ? n : B;
+    let u = null !== (n = r.version) && void 0 !== n ? n : k;
     j(i, {
       serverVersion: u,
       result: {
@@ -326,7 +326,7 @@ let Q = new X(_.default, {
       type: "channel",
       channelId: n
     }, {
-      serverVersion: k
+      serverVersion: B
     })
   },
   CHANNEL_DELETE: function(e) {
@@ -356,7 +356,7 @@ let Q = new X(_.default, {
       type: "guild",
       guildId: n
     }, {
-      serverVersion: null != i ? i : k
+      serverVersion: null != i ? i : B
     }), s = null == r ? void 0 : null === (t = r.result) || void 0 === t ? void 0 : t.sectionIdsByBotId;
     if (null != s)
       for (let e in s) {
@@ -365,7 +365,7 @@ let Q = new X(_.default, {
           type: "channel",
           channelId: t
         }, {
-          serverVersion: k
+          serverVersion: B
         })
       }
   },

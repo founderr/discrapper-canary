@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return k
+    return B
   }
 }), n("47120"), n("627341");
 var i = n("735250"),
@@ -133,7 +133,7 @@ let U = () => (0, i.jsx)("div", {
     })
   };
 
-function k(e) {
+function B(e) {
   let {
     markAsDismissed: t
   } = e, {

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   SeasonalGiftIcon: function() {
-    return F
+    return V
   }
 }), n("47120"), n("653041");
 var i = n("735250"),
@@ -80,11 +80,11 @@ let U = [{
   }],
   G = 1 / 300,
   w = R.default.Millis.DAYS_30,
-  k = (0, s.animated)(O.default),
-  B = (0, s.animated)(p.default),
-  V = (0, s.animated)(N.default);
+  B = (0, s.animated)(O.default),
+  k = (0, s.animated)(p.default),
+  F = (0, s.animated)(N.default);
 
-function F(e) {
+function V(e) {
   let {
     themeOverride: t,
     hovered: n,
@@ -118,10 +118,10 @@ function F(e) {
       friction: 24
     }
   }), I = a ? c : 0, T = (0, l.isThemeDark)(null != t ? t : u) ? o.dark[I] : o.light[I];
-  return !n && a ? (0, i.jsx)(V, {}) : a && d ? (0, i.jsx)(B, {
+  return !n && a ? (0, i.jsx)(F, {}) : a && d ? (0, i.jsx)(k, {
     isDark: (0, l.isThemeDark)(u),
     style: E
-  }) : (0, i.jsx)(k, {
+  }) : (0, i.jsx)(B, {
     boxColor: T.box,
     ribbonColor: T.ribbon,
     style: E
@@ -141,12 +141,12 @@ t.default = r.memo(function(e) {
     autoTrackExposure: R
   }), b = [];
   U && R && b.push(o.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023);
-  let [G, k] = (0, T.useSelectedDismissibleContent)(b), B = null != G, V = (0, g.useDirectMessageRecipient)(n), x = null != V;
+  let [G, B] = (0, T.useSelectedDismissibleContent)(b), k = null != G, F = (0, g.useDirectMessageRecipient)(n), x = null != F;
   if (t) return null;
   let H = () => {
       (0, f.default)({
         isGift: !0,
-        giftRecipient: null == V ? void 0 : V,
+        giftRecipient: null == F ? void 0 : F,
         initialPlanId: null,
         subscriptionTier: v.PremiumSubscriptionSKUs.TIER_2,
         analyticsLocations: s,
@@ -166,10 +166,10 @@ t.default = r.memo(function(e) {
       onMouseLeave: () => {
         _(!1)
       },
-      children: [B && (0, i.jsx)(d.default, {
+      children: [k && (0, i.jsx)(d.default, {
         onComplete: () => _(!1),
         onDMCheckItOutClick: H,
-        markAsDismissed: k,
+        markAsDismissed: B,
         isDM: x
       }), (0, i.jsx)(m.default, {
         innerClassName: P.button,
@@ -182,14 +182,14 @@ t.default = r.memo(function(e) {
         },
         children: (0, i.jsx)("div", {
           className: y.noPointerEvents,
-          children: (0, i.jsx)(F, {
+          children: (0, i.jsx)(V, {
             hovered: l,
-            isContentDismissed: !B
+            isContentDismissed: !k
           })
         })
       })]
     });
-  return B ? Y : (0, i.jsx)(u.TooltipContainer, {
+  return k ? Y : (0, i.jsx)(u.TooltipContainer, {
     className: y.container,
     text: (0, d.getSeasonalGiftingBody)(x),
     children: Y

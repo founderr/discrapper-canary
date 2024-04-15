@@ -2,10 +2,10 @@
     a.r(t), a("411104");
     var d = a("570140"),
       n = a("846027"),
-      i = a("872810"),
-      c = a("710845"),
-      r = a("252759"),
-      o = a("361291"),
+      c = a("872810"),
+      i = a("710845"),
+      o = a("252759"),
+      r = a("361291"),
       f = a("199902"),
       l = a("314897"),
       s = a("569545"),
@@ -39,7 +39,7 @@
       }
       _onStreamDirectSource(e, t, a, d) {
         this.mode = "verbatim-source", this.streamKey = e, this._onDirectorAction({
-          type: r.StreamDirectorActionType.STREAM,
+          type: o.StreamDirectorActionType.STREAM,
           sourceId: t,
           audioSourceId: a,
           sound: d
@@ -52,7 +52,7 @@
             break;
           case "verbatim-source":
             this._onDirectorAction({
-              type: r.StreamDirectorActionType.STOP
+              type: o.StreamDirectorActionType.STOP
             });
             break;
           default:
@@ -74,10 +74,10 @@
       }
       _onDirectorAction(e) {
         let t = f.default.getCurrentUserActiveStream(),
-          a = o.default.getState();
+          a = r.default.getState();
         switch (e.type) {
-          case r.StreamDirectorActionType.STREAM:
-            if (null != t && (0, i.setStreamPaused)(t, !1), e.sourceId.startsWith("camera") && null != e.audioSourceId) {
+          case o.StreamDirectorActionType.STREAM:
+            if (null != t && (0, c.setStreamPaused)(t, !1), e.sourceId.startsWith("camera") && null != e.audioSourceId) {
               let t = e.sourceId.split(":")[1];
               n.default.setGoLiveSource({
                 cameraSettings: {
@@ -107,10 +107,10 @@
               })
             }
             break;
-          case r.StreamDirectorActionType.PAUSE:
-            null != t && (0, i.setStreamPaused)(t, !0);
+          case o.StreamDirectorActionType.PAUSE:
+            null != t && (0, c.setStreamPaused)(t, !0);
             break;
-          case r.StreamDirectorActionType.STOP:
+          case o.StreamDirectorActionType.STOP:
             null != t && (0, u.default)(t);
             break;
           default:
@@ -119,7 +119,7 @@
       }
       _onCapturePaused(e) {
         let t = f.default.getCurrentUserActiveStream();
-        null != t && (0, i.setStreamPaused)(t, e)
+        null != t && (0, c.setStreamPaused)(t, e)
       }
       _onCaptureEnded() {
         switch (this.mode) {
@@ -135,22 +135,22 @@
         }
       }
       constructor() {
-        p(this, "director", void 0), p(this, "applications", void 0), p(this, "streamKey", void 0), p(this, "mode", void 0), this.mode = null, this.applications = [], this.director = new r.StreamDirector(e => this._onDirectorAction(e)), d.default.subscribe("STREAM_START", e => {
+        p(this, "director", void 0), p(this, "applications", void 0), p(this, "streamKey", void 0), p(this, "mode", void 0), this.mode = null, this.applications = [], this.director = new o.StreamDirector(e => this._onDirectorAction(e)), d.default.subscribe("STREAM_START", e => {
           let {
             streamType: t,
             guildId: a,
             channelId: d,
             pid: n,
-            sourceId: i,
-            audioSourceId: r,
-            sound: o
+            sourceId: c,
+            audioSourceId: o,
+            sound: r
           } = e, f = l.default.getId(), u = (0, s.encodeStreamKey)({
             streamType: t,
             guildId: a,
             channelId: d,
             ownerId: f
           });
-          null == n != (null == i) ? (null != n && this._onStreamApplication(u, n), null != i && this._onStreamDirectSource(u, i, r, o)) : new c.default("ApplicationSwitchingManager").warn("invalid start_stream: both application + display modes were specified (pid: ".concat(n, ", source-id: ").concat(i, ")"))
+          null == n != (null == c) ? (null != n && this._onStreamApplication(u, n), null != c && this._onStreamDirectSource(u, c, o, r)) : new i.default("ApplicationSwitchingManager").warn("invalid start_stream: both application + display modes were specified (pid: ".concat(n, ", source-id: ").concat(c, ")"))
         }), d.default.subscribe("STREAM_DELETE", e => {
           let {
             streamKey: t

@@ -34,7 +34,7 @@ n.r(t), n.d(t, {
     return C
   },
   getQuestsFromActivities: function() {
-    return k
+    return B
   },
   getQuestsInstructionsToWinReward: function() {
     return Y
@@ -46,7 +46,7 @@ n.r(t), n.d(t, {
     return H
   },
   getVideoAssetMimeType: function() {
-    return F
+    return V
   },
   hasQuestCollectibleRewards: function() {
     return b
@@ -55,7 +55,7 @@ n.r(t), n.d(t, {
     return G
   },
   isAssetAnimated: function() {
-    return B
+    return k
   },
   isCollectibleReward: function() {
     return U
@@ -338,7 +338,7 @@ function w(e, t) {
   })
 }
 
-function k(e, t) {
+function B(e, t) {
   if (null == t || null == e) return null;
   for (let n of t) {
     if (null == n.application_id) continue;
@@ -348,14 +348,14 @@ function k(e, t) {
   return null
 }
 
-function B(e) {
+function k(e) {
   return e.endsWith(".webm") || e.endsWith(".mp4")
 }
-let V = /\.([a-zA-Z]+)$/;
+let F = /\.([a-zA-Z]+)$/;
 
-function F(e) {
+function V(e) {
   var t, n;
-  switch (null === (n = V.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase()) {
+  switch (null === (n = F.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase()) {
     case "webm":
       return "video/webm";
     case "mp4":

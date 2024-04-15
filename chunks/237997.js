@@ -61,21 +61,21 @@ let G = {
     ...p
   },
   w = new Set(["AUDIO_SET_INPUT_DEVICE", "AUDIO_SET_INPUT_VOLUME", "AUDIO_SET_LOCAL_VIDEO_DISABLED", "AUDIO_SET_LOCAL_VOLUME", "AUDIO_SET_MODE", "AUDIO_SET_NOISE_CANCELLATION", "AUDIO_SET_NOISE_SUPPRESSION", "AUDIO_SET_OUTPUT_DEVICE", "AUDIO_SET_OUTPUT_VOLUME", "AUDIO_TOGGLE_LOCAL_MUTE", "AUDIO_TOGGLE_SELF_DEAF", "AUDIO_TOGGLE_SELF_MUTE", "BILLING_SUBSCRIPTION_UPDATE_SUCCESS", "CATEGORY_COLLAPSE", "CATEGORY_EXPAND", "CHANNEL_ACK", "CHANNEL_PRELOAD", "GIFT_CODE_REDEEM", "GIFT_CODE_REDEEM_FAILURE", "GIFT_CODE_REDEEM_SUCCESS", "HOTSPOT_HIDE", "INVITE_MODAL_CLOSE", "LAYOUT_CREATE", "LAYOUT_CREATE_WIDGETS", "LAYOUT_DELETE_ALL_WIDGETS", "LAYOUT_DELETE_WIDGET", "LAYOUT_SET_PINNED", "LAYOUT_SET_TOP_WIDGET", "LAYOUT_UPDATE_WIDGET", "LOAD_MESSAGES", "LOAD_MESSAGES_FAILURE", "LOAD_MESSAGES_SUCCESS", "MEDIA_ENGINE_SET_GO_LIVE_SOURCE", "OVERLAY_ACTIVATE_REGION", "OVERLAY_DEACTIVATE_ALL_REGIONS", "OVERLAY_MESSAGE_EVENT_ACTION", "OVERLAY_SET_AVATAR_SIZE_MODE", "OVERLAY_SET_CLICK_ZONES", "OVERLAY_SET_DISPLAY_NAME_MODE", "OVERLAY_SET_DISPLAY_USER_MODE", "OVERLAY_SET_INPUT_LOCKED", "OVERLAY_SET_NOTIFICATION_POSITION_MODE", "OVERLAY_SET_TEXT_CHAT_NOTIFICATION_MODE", "OVERLAY_SET_SHOW_KEYBIND_INDICATORS", "OVERLAY_SET_TEXT_WIDGET_OPACITY", "OVERLAY_SET_UI_LOCKED", "OVERLAY_NOTIFY_READY_TO_SHOW", "PREMIUM_PAYMENT_ERROR_CLEAR", "PREMIUM_PAYMENT_MODAL_CLOSE", "PREMIUM_PAYMENT_MODAL_OPEN", "PREMIUM_PAYMENT_SUBSCRIBE_FAIL", "PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS", "PREMIUM_PAYMENT_UPDATE_FAIL", "PREMIUM_PAYMENT_UPDATE_SUCCESS", "PREMIUM_REQUIRED_MODAL_CLOSE", "PREMIUM_REQUIRED_MODAL_OPEN", "PURCHASE_CONFIRMATION_MODAL_CLOSE", "PURCHASE_CONFIRMATION_MODAL_OPEN", "SKU_PURCHASE_CLEAR_ERROR", "SKU_PURCHASE_FAIL", "SKU_PURCHASE_MODAL_CLOSE", "SKU_PURCHASE_MODAL_OPEN", "SKU_PURCHASE_PREVIEW_FETCH_SUCCESS", "SKU_PURCHASE_SHOW_CONFIRMATION_STEP", "SKU_PURCHASE_START", "SKU_PURCHASE_SUCCESS", "STREAM_CLOSE", "STREAM_START", "VOICE_CHANNEL_SELECT", "USER_SETTINGS_PROTO_ENQUEUE_UPDATE", "USER_SETTINGS_PROTO_LOAD_IF_NECESSARY"]),
-  k = new Set([...w.values(), "ACTIVITY_INVITE_MODAL_CLOSE", "CALL_DELETE", "CHANNEL_COLLAPSE", "CHANNEL_SELECT", "GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY", "OVERLAY_CALL_PRIVATE_CHANNEL", "OVERLAY_JOIN_GAME", "OVERLAY_NOTIFICATION_EVENT", "OVERLAY_SELECT_CALL", "OVERLAY_SET_NOT_IDLE", "OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST", "OVERLAY_WIDGET_CHANGED", "SOUNDBOARD_SET_OVERLAY_ENABLED", "STREAM_STOP"]);
+  B = new Set([...w.values(), "ACTIVITY_INVITE_MODAL_CLOSE", "CALL_DELETE", "CHANNEL_COLLAPSE", "CHANNEL_SELECT", "GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY", "OVERLAY_CALL_PRIVATE_CHANNEL", "OVERLAY_JOIN_GAME", "OVERLAY_NOTIFICATION_EVENT", "OVERLAY_SELECT_CALL", "OVERLAY_SET_NOT_IDLE", "OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST", "OVERLAY_WIDGET_CHANGED", "SOUNDBOARD_SET_OVERLAY_ENABLED", "STREAM_STOP"]);
 
-function B() {
+function k() {
   if (!__OVERLAY__) return !1;
   let e = R === (0, A.getPID)(),
     t = L.has((0, A.getPID)()) || P.size > 0;
   e && t ? (0, o.focus)(window, !0) : (0, o.focus)(window, !1)
 }
 
-function V() {
+function F() {
   if (R !== (0, A.getPID)()) return !1;
   P.clear()
 }
 
-function F(e) {
+function V(e) {
   let t = (0, A.getPID)();
   if (null == e.pid || e.pid === t) switch (e.type) {
     case m.OverlayEventTypes.STORAGE_SYNC:
@@ -257,7 +257,7 @@ O(x, "displayName", "OverlayStore"), O(x, "persistKey", "OverlayStoreV2"), O(x, 
   },
   OVERLAY_START_SESSION: function() {
     a.default.addInterceptor(e => {
-      if (M || !k.has(e.type)) return !1;
+      if (M || !B.has(e.type)) return !1;
       if ("CHANNEL_SELECT" === e.type) {
         let {
           guildId: t,
@@ -285,7 +285,7 @@ O(x, "displayName", "OverlayStore"), O(x, "persistKey", "OverlayStoreV2"), O(x, 
         token: (0, A.getRPCAuthToken)(),
         payloads: [e]
       }), !w.has(e.type)
-    }), (0, l.setReceiveEventHandler)(F, (0, A.getRPCAuthToken)()), (0, l.connect)(), (0, l.send)({
+    }), (0, l.setReceiveEventHandler)(V, (0, A.getRPCAuthToken)()), (0, l.connect)(), (0, l.send)({
       type: m.OverlayEventTypes.CONNECT,
       pid: (0, A.getPID)(),
       token: (0, A.getRPCAuthToken)()
@@ -310,7 +310,7 @@ O(x, "displayName", "OverlayStore"), O(x, "persistKey", "OverlayStoreV2"), O(x, 
     let {
       pid: t
     } = e;
-    R = t, B()
+    R = t, k()
   },
   OVERLAY_SELECT_CHANNEL: function(e) {
     let {
@@ -382,7 +382,7 @@ O(x, "displayName", "OverlayStore"), O(x, "persistKey", "OverlayStoreV2"), O(x, 
       locked: t,
       pid: n
     } = e;
-    t ? L.delete(n) : L.add(n), V(), B(), U = !1
+    t ? L.delete(n) : L.add(n), F(), k(), U = !1
   },
   OVERLAY_ACTIVATE_REGION: function(e) {
     let {
@@ -391,7 +391,7 @@ O(x, "displayName", "OverlayStore"), O(x, "persistKey", "OverlayStoreV2"), O(x, 
     if (R !== (0, A.getPID)() || P.has(t)) return !1;
     P.add(t)
   },
-  OVERLAY_DEACTIVATE_ALL_REGIONS: V,
+  OVERLAY_DEACTIVATE_ALL_REGIONS: F,
   OVERLAY_SET_PREVIEW_IN_GAME_MODE: function(e) {
     U = e.isPreviewingInGame
   },

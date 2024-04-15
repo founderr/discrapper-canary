@@ -113,14 +113,14 @@ function w(e) {
   return G(e.channel.guild_id, e.channel.parent_id, e.channel.id)
 }
 
-function k(e) {
+function B(e) {
   let t = c.default.getChannel(e.id);
   return !!(null != t && S.default.isActive(e.guildId, t.parent_id, e.id)) && G(t.guild_id, t.parent_id, t.id)
 }
 
-function B(e) {
+function k(e) {
   let t = c.default.getChannel(e.channelId);
-  if (null == t) V();
+  if (null == t) F();
   else {
     let {
       guild_id: e,
@@ -154,7 +154,7 @@ function B(e) {
   }
 }
 
-function V() {
+function F() {
   for (let e in O = {}, C = {}, N)
     for (let t in N[e])
       for (let n in N[e][t]) {
@@ -175,7 +175,7 @@ function V() {
   P()
 }
 
-function F() {
+function V() {
   let e = L;
   if ((L = T.default.getChannelId()) === e) return !1;
   U(e), U(L)
@@ -247,7 +247,7 @@ let X = {},
   J = {};
 class $ extends(i = u.default.Store) {
   initialize() {
-    this.waitFor(S.default, c.default, A.default, I.default), this.syncWith([T.default], F)
+    this.waitFor(S.default, c.default, A.default, I.default), this.syncWith([T.default], V)
   }
   hasActiveJoinedUnreadThreads(e, t) {
     return e in O && t in O[e]
@@ -374,24 +374,24 @@ a = "ActiveJoinedThreadsStore", (s = "displayName") in(r = $) ? Object.definePro
     } = e, n = !1;
     return null != t.guild_id && null != t.parent_id && (t.guild_id in N && t.parent_id in N[t.guild_id] && (delete N[t.guild_id][t.parent_id], n = !0), t.guild_id in O && t.parent_id in O[t.guild_id] && (delete O[t.guild_id][t.parent_id], n = !0), t.guild_id in C && t.parent_id in C[t.guild_id] && (f.default.keys(C[t.guild_id][t.parent_id]).forEach(Y), delete C[t.guild_id][t.parent_id], n = !0), t.guild_id in p && t.parent_id in p[t.guild_id] && (delete p[t.guild_id][t.parent_id], n = !0), t.guild_id in R && t.parent_id in R[t.guild_id] && (delete R[t.guild_id][t.parent_id], n = !0), n && b(t.guild_id, t.parent_id)), n
   },
-  THREAD_MEMBER_UPDATE: k,
-  THREAD_MEMBERS_UPDATE: k,
-  LOAD_MESSAGES_SUCCESS: B,
-  MESSAGE_CREATE: B,
-  MESSAGE_DELETE: B,
-  MESSAGE_DELETE_BULK: B,
-  MESSAGE_ACK: B,
-  CHANNEL_ACK: B,
-  CHANNEL_LOCAL_ACK: B,
+  THREAD_MEMBER_UPDATE: B,
+  THREAD_MEMBERS_UPDATE: B,
+  LOAD_MESSAGES_SUCCESS: k,
+  MESSAGE_CREATE: k,
+  MESSAGE_DELETE: k,
+  MESSAGE_DELETE_BULK: k,
+  MESSAGE_ACK: k,
+  CHANNEL_ACK: k,
+  CHANNEL_LOCAL_ACK: k,
   CHANNEL_SELECT: function(e) {
-    B(e), F()
+    k(e), V()
   },
   PASSIVE_UPDATE_V1: function(e) {
-    null != e.channels && V()
+    null != e.channels && F()
   },
-  WINDOW_FOCUS: V,
-  UPDATE_CHANNEL_DIMENSIONS: V,
-  DRAWER_OPEN: V,
-  DRAWER_CLOSE: V,
-  BULK_ACK: V
+  WINDOW_FOCUS: F,
+  UPDATE_CHANNEL_DIMENSIONS: F,
+  DRAWER_OPEN: F,
+  DRAWER_CLOSE: F,
+  BULK_ACK: F
 })

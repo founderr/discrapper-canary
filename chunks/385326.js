@@ -38,7 +38,7 @@ function w(e) {
   let {
     channel: t,
     isLoading: n
-  } = e, [s, D] = r.useState(!1), w = (0, o.useStateFromStores)([p.default], () => p.default.getSelfEmbeddedActivityForChannel(t.id)), k = (0, o.useStateFromStores)([p.default], () => p.default.getActivityPanelMode()), B = (0, E.useGetOrFetchApplication)(null == w ? void 0 : w.applicationId), V = null == w ? void 0 : w.instanceId, F = (0, o.useStateFromStores)([m.default], () => m.default.getChannelId() === t.id), {
+  } = e, [s, D] = r.useState(!1), w = (0, o.useStateFromStores)([p.default], () => p.default.getSelfEmbeddedActivityForChannel(t.id)), B = (0, o.useStateFromStores)([p.default], () => p.default.getActivityPanelMode()), k = (0, E.useGetOrFetchApplication)(null == w ? void 0 : w.applicationId), F = null == w ? void 0 : w.instanceId, V = (0, o.useStateFromStores)([m.default], () => m.default.getChannelId() === t.id), {
     dockedRect: x,
     isHidden: H
   } = (0, o.useStateFromStoresObject)([h.default], () => {
@@ -55,7 +55,7 @@ function w(e) {
     activityParticipant: null != w ? I.default.getParticipant(t.id, w.applicationId) : null,
     selectedParticipant: I.default.getSelectedParticipant(t.id),
     participantsOpen: I.default.getParticipantsOpen(t.id)
-  })), z = F || null != Y, X = (0, C.default)(t.id), Q = X && (null == W ? void 0 : W.type) !== P.ParticipantTypes.ACTIVITY, q = !X && k === M.ActivityPanelModes.PIP, Z = (!z || z && (Q || q) && null == x) && !H, J = Z && null != h.default.pipVideoWindow && null != h.default.pipActivityWindow;
+  })), z = V || null != Y, X = (0, C.default)(t.id), Q = X && (null == W ? void 0 : W.type) !== P.ParticipantTypes.ACTIVITY, q = !X && B === M.ActivityPanelModes.PIP, Z = (!z || z && (Q || q) && null == x) && !H, J = Z && null != h.default.pipVideoWindow && null != h.default.pipActivityWindow;
 
   function $() {
     var e;
@@ -78,10 +78,10 @@ function w(e) {
       })
     }
   }, [null == w ? void 0 : w.applicationId, Z]);
-  if (null == w || null == V || null == j && (0, C.default)(t.id) || null == B) return null;
+  if (null == w || null == F || null == j && (0, C.default)(t.id) || null == k) return null;
   let et = Array.from(w.userIds).map(e => N.default.getUser(e)).filter(e => null != e),
     en = {
-      instance_id: V,
+      instance_id: F,
       channel_id: t.id
     };
   return null != t.guild_id && "" !== t.guild_id && (en.guild_id = t.guild_id), (0, i.jsx)(A.default, {
@@ -151,7 +151,7 @@ function w(e) {
             [U.pipModeTall]: Z && s
           })
         }) : (0, i.jsx)(g.EmbedIFrameWithLoadingBackground, {
-          allowPopups: (0, R.allowPopups)(B),
+          allowPopups: (0, R.allowPopups)(k),
           referrerPolicy: v.APPLICATIONS_WITH_NO_REFFERER.has(w.applicationId) ? "no-referrer" : "origin",
           url: w.url,
           queryParams: en,
@@ -160,7 +160,7 @@ function w(e) {
             [U.pipModeTall]: Z && s,
             [U.pipNonInteractive]: Z && !(null === (o = w.config) || void 0 === o ? void 0 : o.useInteractivePIP)
           }),
-          shouldRefocus: !Z && F
+          shouldRefocus: !Z && V
         }), !Z && (0, i.jsx)(L.TileOverlay, {
           participantsOpen: K,
           showToggleParticipants: !1,

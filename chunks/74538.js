@@ -28,7 +28,7 @@ n.r(t), n.d(t, {
     return eS
   },
   getDefaultPrice: function() {
-    return V
+    return F
   },
   getDiscountIntervalString: function() {
     return H
@@ -91,7 +91,7 @@ n.r(t), n.d(t, {
     return e_
   },
   getPremiumPlanItem: function() {
-    return B
+    return k
   },
   getPremiumPlanOptions: function() {
     return ee
@@ -106,7 +106,7 @@ n.r(t), n.d(t, {
     return q
   },
   getPrice: function() {
-    return F
+    return V
   },
   getTierDisplayName: function() {
     return X
@@ -181,7 +181,7 @@ let b = {
     BILLING_HISTORY: "https://play.google.com/store/account/orderhistory"
   },
   w = new c.default("PremiumUtils.tsx"),
-  k = {
+  B = {
     [y.SubscriptionPlans.NONE_MONTH]: [y.SubscriptionPlans.NONE_YEAR, y.SubscriptionPlans.PREMIUM_YEAR_TIER_2, y.SubscriptionPlans.PREMIUM_MONTH_TIER_2, y.SubscriptionPlans.PREMIUM_YEAR_TIER_1, y.SubscriptionPlans.PREMIUM_MONTH_TIER_1],
     [y.SubscriptionPlans.NONE_YEAR]: [y.SubscriptionPlans.PREMIUM_YEAR_TIER_2, y.SubscriptionPlans.PREMIUM_MONTH_TIER_2, y.SubscriptionPlans.PREMIUM_YEAR_TIER_1, y.SubscriptionPlans.PREMIUM_MONTH_TIER_1],
     [y.SubscriptionPlans.PREMIUM_MONTH_TIER_0]: [y.SubscriptionPlans.PREMIUM_YEAR_TIER_2, y.SubscriptionPlans.PREMIUM_MONTH_TIER_2, y.SubscriptionPlans.PREMIUM_YEAR_TIER_1, y.SubscriptionPlans.PREMIUM_MONTH_TIER_1, y.SubscriptionPlans.PREMIUM_YEAR_TIER_0],
@@ -193,22 +193,22 @@ let b = {
     ALL: [y.SubscriptionPlans.NONE_MONTH, y.SubscriptionPlans.NONE_YEAR, y.SubscriptionPlans.PREMIUM_YEAR_TIER_2, y.SubscriptionPlans.PREMIUM_MONTH_TIER_2, y.SubscriptionPlans.PREMIUM_YEAR_TIER_1, y.SubscriptionPlans.PREMIUM_MONTH_TIER_1, y.SubscriptionPlans.PREMIUM_YEAR_TIER_0, y.SubscriptionPlans.PREMIUM_MONTH_TIER_0]
   };
 
-function B(e) {
+function k(e) {
   return e.items.find(e => y.PREMIUM_PLANS.has(e.planId))
 }
 
-function V(e) {
+function F(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     r = null !== (t = h.default.defaultPaymentSourceId) && void 0 !== t ? t : void 0,
     s = N.default.getPremiumTypeSubscription();
-  return null != s && null != s.paymentSourceId && (r = s.paymentSourceId), F(e, n, i, {
+  return null != s && null != s.paymentSourceId && (r = s.paymentSourceId), V(e, n, i, {
     paymentSourceId: r
   })
 }
 
-function F(e) {
+function V(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
@@ -677,7 +677,7 @@ function J(e) {
           } = e;
           return t === n.id
         }),
-        r = null == i ? F(n.id, !1, !1, {
+        r = null == i ? V(n.id, !1, !1, {
           paymentSourceId: t.paymentSourceId,
           currency: t.currency
         }).amount : i.amount;
@@ -774,7 +774,7 @@ function et(e) {
 
 function en(e) {
   var t;
-  return null == e ? k.ALL : null !== (t = k[e]) && void 0 !== t ? t : []
+  return null == e ? B.ALL : null !== (t = B[e]) && void 0 !== t ? t : []
 }
 
 function ei(e) {
@@ -917,7 +917,7 @@ function e_(e) {
 
 function ec(e, t, n) {
   let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-    r = null != t ? F(e.id, !1, i, t) : V(e.id, !1, i),
+    r = null != t ? V(e.id, !1, i, t) : F(e.id, !1, i),
     s = (0, D.formatPrice)(r.amount, r.currency);
   return e.currency !== P.CurrencyCodes.USD && !0 === n && (s = s.concat("*")), s
 }
@@ -965,7 +965,7 @@ function ef(e, t, n, i) {
       }
     }), t
   }
-  return F(a.id, (0, g.isPremium)(i), !1, r)
+  return V(a.id, (0, g.isPremium)(i), !1, r)
 }
 
 function eS(e, t, n) {
@@ -1221,7 +1221,7 @@ function ey(e) {
 }
 
 function eP(e) {
-  let t = null != e ? B(e) : null;
+  let t = null != e ? k(e) : null;
   return null != t ? et(t.planId) : null
 }
 
@@ -1233,8 +1233,8 @@ t.default = Object.freeze({
   isPremiumAtLeast: g.isPremiumAtLeast,
   isPremium: g.isPremium,
   isPremiumExactly: g.isPremiumExactly,
-  getPrice: F,
-  getDefaultPrice: V,
+  getPrice: V,
+  getDefaultPrice: F,
   getInterval: function(e) {
     let t = y.SubscriptionPlanInfo[e];
     if (null != t) return {
@@ -1397,21 +1397,21 @@ t.default = Object.freeze({
   },
   getBillingReviewSubheader: eS,
   getIntervalForInvoice: eA,
-  getPremiumPlanItem: B,
+  getPremiumPlanItem: k,
   getGuildBoostPlanItem: ey,
   isBoostOnlySubscription: function(e) {
-    return null != e && null == B(e) && null != ey(e)
+    return null != e && null == k(e) && null != ey(e)
   },
   getPremiumSkuIdForSubscription: eP,
   getPremiumTypeFromSubscription: function(e) {
     if (null != e) {
-      let t = B(e);
+      let t = k(e);
       if (null != t) return W(t.planId)
     }
   },
   getPremiumTypeFromSubscriptionRenewalMutations: function(e) {
     if (null != e && null != e.renewalMutations) {
-      let t = B(e.renewalMutations);
+      let t = k(e.renewalMutations);
       if (null != t) return W(t.planId)
     }
   },

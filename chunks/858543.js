@@ -28,8 +28,8 @@ var n = i("735250"),
   p = i("176505"),
   g = i("689938"),
   T = i("426863"),
-  v = i("570793"),
-  S = i("267391");
+  S = i("570793"),
+  v = i("267391");
 let E = 16;
 
 function R(e) {
@@ -66,9 +66,9 @@ function I(e) {
     tagFilter: N
   } = (0, h.useForumChannelStore)(t.id);
   return I ? (0, n.jsxs)("div", {
-    className: l()(S.increasedActivityTags, o),
+    className: l()(v.increasedActivityTags, o),
     children: [T && (0, n.jsx)("div", {
-      className: v.pinIcon,
+      className: S.pinIcon,
       children: (0, n.jsx)(r.Tooltip, {
         text: g.default.Messages.PINNED_POST,
         children: e => (0, n.jsx)(d.default, {
@@ -83,13 +83,13 @@ function I(e) {
         tag: e,
         size: m.default.Sizes.SMALL,
         className: l()(s, {
-          [S.tagFiltered]: N.has(e.id)
+          [v.tagFiltered]: N.has(e.id)
         })
       }), (t < c.length - 1 || p > 0) && (0, n.jsx)(u.default, {
         height: 4,
         width: 4,
         "aria-hidden": "true",
-        className: S.increasedActivityDotIcon
+        className: v.increasedActivityDotIcon
       }, e.id.concat(t.toString()))]
     }, e.id)), p > 0 ? (0, n.jsx)(m.IncreasedActivityForumTagOverflow, {
       tags: f,
@@ -109,7 +109,7 @@ function N(e) {
     shownTags: u,
     remainingTags: f,
     moreTagsCount: p,
-    isPinned: v,
+    isPinned: S,
     shouldRenderTagsRow: I
   } = R({
     channel: t,
@@ -118,13 +118,13 @@ function N(e) {
     tagFilter: N
   } = (0, h.useForumChannelStore)(t.id);
   return I ? (0, n.jsxs)("div", {
-    className: l()(S.tags, s),
+    className: l()(v.tags, s),
     children: [i ? (0, n.jsx)(c.TextBadge, {
       className: l()(T.newBadge, T.inTagsRow),
       color: o.default.unsafe_rawColors.BRAND_260.css,
       text: g.default.Messages.NEW
-    }) : null, v && (0, n.jsx)("div", {
-      className: S.pinIcon,
+    }) : null, S && (0, n.jsx)("div", {
+      className: v.pinIcon,
       children: (0, n.jsx)(r.Tooltip, {
         text: g.default.Messages.PINNED_POST,
         children: e => (0, n.jsx)(d.default, {
@@ -138,7 +138,7 @@ function N(e) {
       tag: e,
       size: m.default.Sizes.SMALL,
       className: l()(a, {
-        [S.tagFiltered]: N.has(e.id)
+        [v.tagFiltered]: N.has(e.id)
       })
     }, e.id)), p > 0 ? (0, n.jsx)(m.ForumTagOverflow, {
       tags: f,

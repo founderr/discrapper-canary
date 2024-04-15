@@ -38,10 +38,10 @@ var i = n("735250"),
   b = n("579729"),
   G = n("302316"),
   w = n("186395"),
-  k = n("584045"),
-  B = n("58307"),
-  V = n("981631"),
-  F = n("700481"),
+  B = n("584045"),
+  k = n("58307"),
+  F = n("981631"),
+  V = n("700481"),
   x = n("27729");
 
 function H(e) {
@@ -63,7 +63,7 @@ function H(e) {
   } = e, et = (0, o.useStateFromStores)([I.default], () => I.default.hidePersonalInformation), en = (0, o.useStateFromStores)([A.default], () => {
     var e;
     return null === (e = A.default.getUserProfile(j.id)) || void 0 === e ? void 0 : e.application
-  }), ei = (0, o.useStateFromStores)([_.default], () => null != _.default.getAnyStreamForUser(j.id)), er = (0, B.useGetVoiceChannelInfoForVoiceActivitySection)(j.id, null == K ? void 0 : K.id), es = (null == H ? void 0 : H.type) === V.ActivityTypes.HANG_STATUS, ea = !ei && null != er && !es, {
+  }), ei = (0, o.useStateFromStores)([_.default], () => null != _.default.getAnyStreamForUser(j.id)), er = (0, k.useGetVoiceChannelInfoForVoiceActivitySection)(j.id, null == K ? void 0 : K.id), es = (null == H ? void 0 : H.type) === F.ActivityTypes.HANG_STATUS, ea = !ei && null != er && !es, {
     showVoiceActivityInProfile: eo
   } = h.VoiceActivityProfileExperiment.useExperiment({
     location: "user popout"
@@ -101,23 +101,23 @@ function H(e) {
       location: "28tk0bf_1"
     });
   if (j.isSystemUser()) return null;
-  if (j.isNonUserBot()) return (0, i.jsx)(k.default, {
+  if (j.isNonUserBot()) return (0, i.jsx)(B.default, {
     user: j,
     nickname: null,
     pronouns: null,
-    className: F.usernameSection,
+    className: V.usernameSection,
     lastSection: !0
   });
   let eh = null !== (t = T.default.getNickname(null == K ? void 0 : K.id, X, j)) && void 0 !== t ? t : f.default.getName(j),
     em = {
       location: {
-        page: V.AnalyticsPages.USER_POPOUT,
-        section: V.AnalyticsSections.USER_PROFILE
+        page: F.AnalyticsPages.USER_POPOUT,
+        section: F.AnalyticsSections.USER_PROFILE
       }
     };
   return (0, i.jsxs)(i.Fragment, {
-    children: [(0, i.jsx)(k.default, {
-      className: F.usernameSection,
+    children: [(0, i.jsx)(B.default, {
+      className: V.usernameSection,
       user: j,
       nickname: eh,
       pronouns: null == W ? void 0 : W.pronouns,
@@ -128,13 +128,13 @@ function H(e) {
       shouldCopyOnClick: $
     }), (0, i.jsxs)(l.HeadingLevel, {
       children: [(0, i.jsx)(M.default, {
-        className: F.customStatusSection,
+        className: V.customStatusSection,
         customStatusActivity: Y
       }), (0, i.jsx)(p.default, {
-        className: F.divider
+        className: V.divider
       }), (0, i.jsxs)(l.AdvancedScroller, {
-        className: a()(F.scroller, {
-          [F.scrollerSeparator]: !e_
+        className: a()(V.scroller, {
+          [V.scrollerSeparator]: !e_
         }),
         onScroll: eE,
         ref: ed,
@@ -147,14 +147,14 @@ function H(e) {
           guild: K,
           hidePersonalInformation: et
         }), eS && (0, i.jsx)(N.default, {
-          className: F.profileMutuals,
+          className: V.profileMutuals,
           user: j,
           onClose: Q
         }), (0, i.jsx)(P.default, {
           userId: j.id,
           guild: K,
           guildMember: z
-        }), eo && ea && (0, i.jsx)(B.default, {
+        }), eo && ea && (0, i.jsx)(k.default, {
           voiceChannel: er.voiceChannel,
           voiceGuild: er.voiceGuild,
           color: x.buttonColor

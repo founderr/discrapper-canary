@@ -199,32 +199,32 @@ function w(e) {
   L(t)
 }
 
-function k(e) {
+function B(e) {
   let {
     user: t
   } = e;
   L(t)
 }
 
-function B(e) {
+function k(e) {
   let {
     messages: t
   } = e;
   return t.forEach(e => v(e, !0)), !1
 }
 
-function V(e) {
+function F(e) {
   let {
     mostRecentMessages: t
   } = e;
   return null == t || t.forEach(e => v(e, !1)), !1
 }
 
-function F(e) {
+function V(e) {
   let {
     messages: t
   } = e;
-  return t.forEach(e => B({
+  return t.forEach(e => k({
     messages: e
   })), !1
 }
@@ -674,19 +674,19 @@ class ev extends T.default {
     super({
       CONNECTION_OPEN: y,
       CONNECTION_OPEN_SUPPLEMENTAL: P,
-      UPDATE_CLIENT_PREMIUM_TYPE: k,
+      UPDATE_CLIENT_PREMIUM_TYPE: B,
       OVERLAY_INITIALIZE: b,
       CACHE_LOADED: e => this.handleLoadCache(e),
       USER_UPDATE: G,
       CURRENT_USER_UPDATE: w,
       PRESENCE_UPDATES: J,
-      SEARCH_FINISH: F,
-      MOD_VIEW_SEARCH_FINISH: F,
-      LOAD_MESSAGES_SUCCESS: B,
-      LOAD_MESSAGES_AROUND_SUCCESS: B,
-      LOAD_PINNED_MESSAGES_SUCCESS: B,
-      LOAD_RECENT_MENTIONS_SUCCESS: B,
-      THREAD_LIST_SYNC: V,
+      SEARCH_FINISH: V,
+      MOD_VIEW_SEARCH_FINISH: V,
+      LOAD_MESSAGES_SUCCESS: k,
+      LOAD_MESSAGES_AROUND_SUCCESS: k,
+      LOAD_PINNED_MESSAGES_SUCCESS: k,
+      LOAD_RECENT_MENTIONS_SUCCESS: k,
+      THREAD_LIST_SYNC: F,
       MESSAGE_CREATE: X,
       MESSAGE_UPDATE: X,
       GUILD_SETTINGS_LOADED_BANS: $,

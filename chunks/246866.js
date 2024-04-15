@@ -72,14 +72,14 @@ let C = (0, E.default)(function(e) {
   let b = S.default.can(O.Permissions.MANAGE_ROLES, n),
     G = h.getHighestRole(n, U.id),
     w = r.useMemo(() => "roles-".concat((0, o.v4)()), []),
-    k = (0, l.default)({
+    B = (0, l.default)({
       id: w,
       isEnabled: !0,
       scrollToStart: O.NOOP_PROMISE,
       scrollToEnd: O.NOOP_PROMISE,
       wrap: !0
     }),
-    B = y.map(e => {
+    k = y.map(e => {
       var r;
       return (0, i.jsx)(c.MemberRole, {
         className: R.role,
@@ -95,8 +95,8 @@ let C = (0, E.default)(function(e) {
       }, e.id)
     }),
     {
-      guildId: V,
-      channelId: F,
+      guildId: F,
+      channelId: V,
       messageId: x,
       roleId: H
     } = (0, m.useUserProfileAnalyticsContext)(),
@@ -107,8 +107,8 @@ let C = (0, E.default)(function(e) {
       onClick: () => {
         (0, N.openUserProfileModal)({
           userId: t.id,
-          guildId: V,
-          channelId: F,
+          guildId: F,
+          channelId: V,
           messageId: x,
           roleId: H,
           analyticsLocation: {
@@ -144,7 +144,7 @@ let C = (0, E.default)(function(e) {
         })
       })]
     }), (0, i.jsx)(l.ListNavigatorProvider, {
-      navigator: k,
+      navigator: B,
       children: (0, i.jsx)(l.ListNavigatorContainer, {
         children: e => {
           let {
@@ -158,7 +158,7 @@ let C = (0, E.default)(function(e) {
             }),
             ref: t,
             ...n,
-            children: [B, j]
+            children: [k, j]
           })
         }
       })

@@ -109,8 +109,8 @@ function C(e) {
     messageId: b,
     isBurstReaction: G,
     rowPosition: w,
-    inNitroLockedSection: k
-  } = e, [B, V] = r.useState(""), F = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), x = (0, o.useStateFromStores)([_.default], () => _.default.getDisambiguatedEmojiContext(I), [I]), H = r.useRef(null), {
+    inNitroLockedSection: B
+  } = e, [k, F] = r.useState(""), V = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), x = (0, o.useStateFromStores)([_.default], () => _.default.getDisambiguatedEmojiContext(I), [I]), H = r.useRef(null), {
     emoji: Y,
     size: j,
     isDisabled: W,
@@ -148,7 +148,7 @@ function C(e) {
       ...d,
       key: s,
       ref: H
-    }, B !== p(K, c) && (0, i.jsx)(R, {
+    }, k !== p(K, c) && (0, i.jsx)(R, {
       ref: o,
       emoji: Y,
       isFavorite: x.isFavoriteEmojiWithoutFetchingLatest(Y),
@@ -163,10 +163,10 @@ function C(e) {
       onMouseEnter: t,
       onMouseLeave: n,
       onClick: e => {
-        if (null != H.current && null != w && null != b && !e.shiftKey && null != Y.name && G && !F && P) {
+        if (null != H.current && null != w && null != b && !e.shiftKey && null != Y.name && G && !V && P) {
           let e = null == Y.id ? E.default.convertNameToSurrogate(Y.name) : Y.name,
             t = H.current.getBoundingClientRect();
-          t.x = w.x + (K + 1) * j, V(p(K, c)), (0, f.addReactionPickerAnimation)(b, e, Y.id, t)
+          t.x = w.x + (K + 1) * j, F(p(K, c)), (0, f.addReactionPickerAnimation)(b, e, Y.id, t)
         }
         z(e)
       },
@@ -177,7 +177,7 @@ function C(e) {
       size: j,
       surrogateCodePoint: g,
       selectedItemClassName: L,
-      inNitroLockedSection: k
+      inNitroLockedSection: B
     }))
   };
   return C ? (0, i.jsx)(l.Tooltip, {

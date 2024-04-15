@@ -39,10 +39,10 @@ let p = (0, l.cssValueToNumber)(O.__invalid_stickerPickerPreviewDimensions),
       stickerDescriptors: b,
       stickerPadding: G = R,
       stickerSize: w = p,
-      ownedStickerPacks: k,
-      enlargeOnInteraction: B = !1,
-      channel: V,
-      currentUser: F,
+      ownedStickerPacks: B,
+      enlargeOnInteraction: k = !1,
+      channel: F,
+      currentUser: V,
       checkSendability: x = !0
     } = e, {
       location: H
@@ -63,7 +63,7 @@ let p = (0, l.cssValueToNumber)(O.__invalid_stickerPickerPreviewDimensions),
       children: b.map(e => {
         var _;
         let p = e.visibleRowIndex === (null == L ? void 0 : L.rowIndex) && e.columnIndex === (null == L ? void 0 : L.columnIndex),
-          R = e.type === f.StickerGridItemTypes.STICKER && B && p,
+          R = e.type === f.StickerGridItemTypes.STICKER && k && p,
           C = (0, o.throttle)(() => {
             (null == D ? void 0 : D.current) !== !0 && (null == v ? void 0 : v.current) !== !0 && !p && (null == M || M(e))
           }, 250),
@@ -101,7 +101,7 @@ let p = (0, l.cssValueToNumber)(O.__invalid_stickerPickerPreviewDimensions),
                   }))
                 },
                 style: W,
-                children: [!B && (0, i.jsx)("div", {
+                children: [!k && (0, i.jsx)("div", {
                   className: O.inspectedIndicator
                 }), (0, i.jsx)("div", {
                   className: O.iconWrapper,
@@ -116,7 +116,7 @@ let p = (0, l.cssValueToNumber)(O.__invalid_stickerPickerPreviewDimensions),
               })
             }, e.guild_id);
           case f.StickerGridItemTypes.STICKER: {
-            let o = t && null != k && (0, S.isStandardSticker)(e.sticker) && !k.has(e.sticker.pack_id);
+            let o = t && null != B && (0, S.isStandardSticker)(e.sticker) && !B.has(e.sticker.pack_id);
             return (0, r.createElement)("div", {
               ...Y,
               key: e.sticker.id
@@ -148,16 +148,16 @@ let p = (0, l.cssValueToNumber)(O.__invalid_stickerPickerPreviewDimensions),
                 children: (0, A.getStickerAltText)(e.sticker)
               }), (0, i.jsxs)("div", {
                 "aria-hidden": !0,
-                children: [!B && (0, i.jsx)("div", {
+                children: [!k && (0, i.jsx)("div", {
                   className: O.inspectedIndicator
                 }), (0, i.jsx)(A.default, {
                   className: a()(O.stickerNode, {
-                    [O.stickerNodeDimmed]: B && !p && null != L && -1 !== L.rowIndex && -1 !== L.columnIndex,
+                    [O.stickerNodeDimmed]: k && !p && null != L && -1 !== L.rowIndex && -1 !== L.columnIndex,
                     [O.stickerNodeHidden]: R,
-                    [O.stickerUnsendable]: x && !(0, T.isSendableSticker)(e.sticker, F, V)
+                    [O.stickerUnsendable]: x && !(0, T.isSendableSticker)(e.sticker, V, F)
                   }),
                   disableAnimation: !p && !s,
-                  enlargeOnInteraction: B,
+                  enlargeOnInteraction: k,
                   isInteracting: p,
                   maskAsset: p,
                   sticker: e.sticker,

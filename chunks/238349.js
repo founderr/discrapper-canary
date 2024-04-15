@@ -2,7 +2,7 @@
 let i;
 n.r(t), n.d(t, {
   computeThreadIdsSnapshot: function() {
-    return V
+    return F
   }
 }), n("47120");
 var r, s, a, o, l = n("392711"),
@@ -47,20 +47,20 @@ function w(e) {
   }
 }
 
-function k() {
+function B() {
   D = [], i = null, R = null, C = new Set, g = d.ThreadSortOrder.LATEST_ACTIVITY, L = 0, M = [], y = u().chain(O), P = u().chain(O), b.clear(), U.clear()
 }
 
-function B() {
+function k() {
   var e;
   let t = A.default.getChannelId();
-  if (null == t || !(null === (e = f.default.getChannel(t)) || void 0 === e ? void 0 : e.isForumLikeChannel())) return k(), !1;
-  F({
+  if (null == t || !(null === (e = f.default.getChannel(t)) || void 0 === e ? void 0 : e.isForumLikeChannel())) return B(), !1;
+  V({
     refreshThreadIds: !0
   })
 }
 
-function V(e) {
+function F(e) {
   let t = f.default.getChannel(e);
   return null == t ? [] : Object.values(E.default.getThreadsForParent(t.guild_id, t.id)).map(e => {
     let {
@@ -70,7 +70,7 @@ function V(e) {
   }).sort(w(g))
 }
 
-function F(e) {
+function V(e) {
   var t;
   let n = f.default.getChannel(R);
   if (null == n) return;
@@ -105,11 +105,11 @@ class x extends(r = _.default.Store) {
     let i = e !== R,
       r = !(0, h.areSetsEqual)(n, C),
       s = t !== g;
-    return R = e, C = n, g = t, i ? F({
+    return R = e, C = n, g = t, i ? V({
       refreshThreadIds: !0
-    }) : s ? F({
+    }) : s ? V({
       sortThreadIds: !0
-    }) : r && F(), D
+    }) : r && V(), D
   }
   getCurrentThreadIds() {
     return D
@@ -128,16 +128,16 @@ o = "ForumActivePostStore", (a = "displayName") in(s = x) ? Object.definePropert
   configurable: !0,
   writable: !0
 }) : s[a] = o, t.default = new x(c.default, {
-  CONNECTION_OPEN: B,
-  OVERLAY_INITIALIZE: B,
-  GUILD_CREATE: B,
-  CHANNEL_SELECT: B,
+  CONNECTION_OPEN: k,
+  OVERLAY_INITIALIZE: k,
+  GUILD_CREATE: k,
+  CHANNEL_SELECT: k,
   CHANNEL_DELETE: function(e) {
     let {
       channel: t
     } = e;
     if (null == t.parent_id || t.parent_id !== R) return !1;
-    k()
+    B()
   },
   THREAD_LIST_SYNC: function(e) {
     var t;
@@ -145,7 +145,7 @@ o = "ForumActivePostStore", (a = "displayName") in(s = x) ? Object.definePropert
       guildId: n
     } = e;
     if (null == R || n !== (null === (t = f.default.getChannel(R)) || void 0 === t ? void 0 : t.guild_id)) return !1;
-    F({
+    V({
       refreshThreadIds: !0
     })
   },
@@ -164,12 +164,12 @@ o = "ForumActivePostStore", (a = "displayName") in(s = x) ? Object.definePropert
     if (null == t.parent_id || t.parent_id !== R) return !1;
     let n = (0, N.isForumPostPinned)(t.id),
       i = b.has(t.id);
-    if (n && !i) b.add(t.id), F({
+    if (n && !i) b.add(t.id), V({
       sortThreadIds: !0
     });
     else {
       if (n || !i) return !1;
-      b.delete(t.id), F({
+      b.delete(t.id), V({
         sortThreadIds: !0
       })
     }
@@ -179,7 +179,7 @@ o = "ForumActivePostStore", (a = "displayName") in(s = x) ? Object.definePropert
       channel: t
     } = e;
     if (null == t.parent_id || t.parent_id !== R) return !1;
-    U.add(t.id), F({
+    U.add(t.id), V({
       sortThreadIds: !0
     })
   },
@@ -188,7 +188,7 @@ o = "ForumActivePostStore", (a = "displayName") in(s = x) ? Object.definePropert
       channelId: t
     } = e;
     if (null == t || t !== R) return !1;
-    F({
+    V({
       refreshThreadIds: !0
     })
   },

@@ -64,24 +64,24 @@ function w(e) {
   return null != n ? n : y[e] = G(e, t)
 }
 
-function k(e) {
+function B(e) {
   if (null != e) {
     var t;
     P[e] = (null !== (t = P[e]) && void 0 !== t ? t : 0) + 1
   }
 }
 
-function B() {
+function k() {
   for (let e in M = {}, y = {}, P) P[e] += 1;
   U += 1
 }
 
-function V() {
-  B()
+function F() {
+  k()
 }
 
-function F() {
-  B()
+function V() {
+  k()
 }
 
 function x(e) {
@@ -90,7 +90,7 @@ function x(e) {
     user: n
   } = e;
   if (n.id !== (null === (t = L.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
-  B()
+  k()
 }
 
 function H() {
@@ -113,7 +113,7 @@ function j(e) {
   let n = p.default.getMutableBasicGuildChannelsForGuild(t);
   l().forEach(n, e => {
     delete y[e.id]
-  }), U += 1, k(t)
+  }), U += 1, B(t)
 }
 
 function W(e) {
@@ -138,7 +138,7 @@ function K(e) {
   let n = p.default.getMutableBasicGuildChannelsForGuild(t);
   l().forEach(n, e => {
     delete y[e.id]
-  }), U += 1, k(t)
+  }), U += 1, B(t)
 }
 
 function z(e, t, n, i) {
@@ -253,17 +253,17 @@ a = "PermissionStore", (s = "displayName") in(r = X) ? Object.defineProperty(r, 
   configurable: !0,
   writable: !0
 }) : r[s] = a, t.default = new X(_.default, {
-  BACKGROUND_SYNC: V,
-  CONNECTION_OPEN: V,
-  OVERLAY_INITIALIZE: V,
-  CACHE_LOADED: V,
-  CACHE_LOADED_LAZY: V,
+  BACKGROUND_SYNC: F,
+  CONNECTION_OPEN: F,
+  OVERLAY_INITIALIZE: F,
+  CACHE_LOADED: F,
+  CACHE_LOADED_LAZY: F,
   CONNECTION_CLOSED: function() {
     Q()
   },
-  GUILD_CREATE: F,
-  GUILD_UPDATE: F,
-  GUILD_DELETE: F,
+  GUILD_CREATE: V,
+  GUILD_UPDATE: V,
+  GUILD_DELETE: V,
   GUILD_MEMBER_ADD: x,
   GUILD_MEMBER_UPDATE: x,
   CURRENT_USER_UPDATE: x,
@@ -280,7 +280,7 @@ a = "PermissionStore", (s = "displayName") in(r = X) ? Object.defineProperty(r, 
         context: n
       });
     if (y[n.id] === r) return !1;
-    y[n.id] = r, U += 1, k(n.getGuildId())
+    y[n.id] = r, U += 1, B(n.getGuildId())
   },
   THREAD_CREATE: H,
   THREAD_UPDATE: H,
@@ -302,7 +302,7 @@ a = "PermissionStore", (s = "displayName") in(r = X) ? Object.defineProperty(r, 
           user: i,
           context: t
         });
-      y[t.id] !== r && (y[t.id] = r, k(t.getGuildId()), n = !0)
+      y[t.id] !== r && (y[t.id] = r, B(t.getGuildId()), n = !0)
     }
     return !!n && (U += 1, n)
   },
@@ -322,16 +322,16 @@ a = "PermissionStore", (s = "displayName") in(r = X) ? Object.defineProperty(r, 
   },
   THREAD_MEMBER_UPDATE: function(e) {
     var t;
-    return (null === (t = L.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.userId && (k(e.guildId), !0)
+    return (null === (t = L.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.userId && (B(e.guildId), !0)
   },
   THREAD_MEMBERS_UPDATE: function(e) {
-    return !!(0, S.doesThreadMembersActionAffectMe)(e) && (k(e.guildId), !0)
+    return !!(0, S.doesThreadMembersActionAffectMe)(e) && (B(e.guildId), !0)
   },
   CHANNEL_DELETE: function(e) {
     let {
       channel: t
     } = e;
-    return delete y[t.id], U += 1, k(t.guild_id), !1
+    return delete y[t.id], U += 1, B(t.guild_id), !1
   },
   GUILD_ROLE_CREATE: j,
   GUILD_ROLE_UPDATE: j,

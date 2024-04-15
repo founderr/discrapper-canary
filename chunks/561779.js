@@ -131,10 +131,10 @@ class m extends(r = o.PureComponent) {
       "aria-label": b,
       "aria-labelledby": G,
       "aria-describedby": w
-    } = this.props, k = 0;
-    S ? null != s && (null != l ? k = s[l] : null != o && (k = s[o])) : k = this.scaleValue(t);
-    let B = "".concat(k, "%"),
-      V = null != s && null != r ? s.map((e, t) => {
+    } = this.props, B = 0;
+    S ? null != s && (null != l ? B = s[l] : null != o && (B = s[o])) : B = this.scaleValue(t);
+    let k = "".concat(B, "%"),
+      F = null != s && null != r ? s.map((e, t) => {
         let n = r[t],
           i = null != R && R === n,
           s = this.renderMark(n);
@@ -157,7 +157,7 @@ class m extends(r = o.PureComponent) {
           })
         }, t)
       }) : null,
-      F = null != g ? g(t) : "".concat(k.toFixed(0), "%"),
+      V = null != g ? g(t) : "".concat(B.toFixed(0), "%"),
       x = null !== (e = null == D ? void 0 : D(t)) && void 0 !== e ? e : void 0;
     return (0, a.jsx)(E.FocusRing, {
       focusTarget: this.containerRef,
@@ -186,7 +186,7 @@ class m extends(r = o.PureComponent) {
         ref: this.containerRef,
         children: [(0, a.jsx)("div", {
           className: f.track,
-          children: V
+          children: F
         }), (0, a.jsx)("div", {
           className: u()(f.bar, v),
           style: m,
@@ -194,7 +194,7 @@ class m extends(r = o.PureComponent) {
             className: f.barFill,
             style: {
               ...N,
-              width: B
+              width: k
             }
           })
         }), h, (0, a.jsx)("div", {
@@ -202,14 +202,14 @@ class m extends(r = o.PureComponent) {
           children: (0, a.jsx)(I.Tooltip, {
             color: I.Tooltip.Colors.GREY,
             hideOnClick: !1,
-            text: p || S ? null : F,
+            text: p || S ? null : V,
             forceOpen: n || i && T.default.keyboardModeEnabled,
             children: e => (0, a.jsx)("div", {
               ...e,
               className: u()(f.grabber, M),
               style: {
                 ...y,
-                left: B
+                left: k
               },
               onMouseDown: this.handleMouseDown,
               ref: this.grabberRef

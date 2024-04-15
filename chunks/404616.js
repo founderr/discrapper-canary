@@ -37,8 +37,8 @@ var n = i("735250"),
   p = i("738619"),
   g = i("393238"),
   T = i("963374"),
-  v = i("118139"),
-  S = i("169525"),
+  S = i("118139"),
+  v = i("169525"),
   E = i("566006"),
   R = i("255269"),
   I = i("937889"),
@@ -90,8 +90,8 @@ t.default = a.memo(function(e) {
     channel: f,
     isOpen: p,
     messageCount: T,
-    firstMessage: v,
-    content: S,
+    firstMessage: S,
+    content: v,
     media: E
   } = function(e) {
     let {
@@ -178,8 +178,8 @@ t.default = a.memo(function(e) {
       children: [(0, n.jsx)(m.HeadingLevel, {
         children: (0, n.jsx)(es, {
           channel: f,
-          firstMessage: v,
-          content: S,
+          firstMessage: S,
+          content: v,
           hasMediaAttachment: null != E,
           containerWidth: d
         })
@@ -187,11 +187,11 @@ t.default = a.memo(function(e) {
         enabled: !y,
         children: (0, n.jsx)(er, {
           channel: f,
-          firstMessage: v,
+          firstMessage: S,
           facepileRef: C
         })
       })]
-    }), (null == v ? void 0 : v.blocked) || null == E ? null : (0, n.jsx)(em, {
+    }), (null == S ? void 0 : S.blocked) || null == E ? null : (0, n.jsx)(em, {
       channel: f,
       firstMedia: E
     })]
@@ -498,13 +498,13 @@ function em(e) {
       firstMedia: s
     } = e,
     o = (0, h.useStateFromStores)([b.default], () => b.default.isFocused()),
-    r = (0, v.isAnimatedImageUrl)(s.src),
+    r = (0, S.isAnimatedImageUrl)(s.src),
     u = x.GifAutoPlay.useSetting(),
-    [d, c] = (0, S.useShouldObscure)({
+    [d, c] = (0, v.useShouldObscure)({
       media: s,
       channel: a
     }),
-    f = (0, S.getObscuredAlt)(c),
+    f = (0, v.getObscuredAlt)(c),
     {
       src: p,
       width: g,

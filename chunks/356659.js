@@ -7,13 +7,13 @@ n.r(t), n.d(t, {
     return w
   },
   CLIPS_EDUCATION_GAME_LAUNCH_THRESHOLD: function() {
-    return k
+    return B
   },
   CLIPS_EDUCATION_MAX_DISMISSALS_DISABLED: function() {
-    return V
+    return F
   },
   CLIPS_EDUCATION_MAX_DISMISSALS_ENABLED: function() {
-    return B
+    return k
   },
   CLIPS_EXPORT_FILENAME: function() {
     return f
@@ -121,6 +121,6 @@ let E = "alt+c",
   b = 30,
   G = 10,
   w = 14 * c.default.Millis.DAY,
-  k = 5,
   B = 5,
-  V = 1
+  k = 5,
+  F = 1

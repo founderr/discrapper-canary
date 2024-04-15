@@ -28,7 +28,7 @@ var n = a("735250"),
 let L = [v.ClanSetupSteps.FOUNDATIONAL_INTRO, v.ClanSetupSteps.GAMES, v.ClanSetupSteps.PLAYSTYLE, v.ClanSetupSteps.PERSONALITY_INTRO, v.ClanSetupSteps.UTILITY_TRAITS, v.ClanSetupSteps.INTERESTS, v.ClanSetupSteps.DESCRIPTION, v.ClanSetupSteps.PRIMETIME, v.ClanSetupSteps.IDENTITY_INTRO, v.ClanSetupSteps.CUSTOMIZE_TAG_BADGE, v.ClanSetupSteps.CUSTOMIZE_BANNER, v.ClanSetupSteps.APPLICATION_INTRO, v.ClanSetupSteps.MEMBER_APPLICATION],
   M = {
     [v.ClanSetupSteps.FOUNDATIONAL_INTRO]: [v.ClanSetupSteps.GAMES, v.ClanSetupSteps.PLAYSTYLE],
-    [v.ClanSetupSteps.PERSONALITY_INTRO]: [v.ClanSetupSteps.INTERESTS, v.ClanSetupSteps.UTILITY_TRAITS, v.ClanSetupSteps.DESCRIPTION, v.ClanSetupSteps.PRIMETIME],
+    [v.ClanSetupSteps.PERSONALITY_INTRO]: [v.ClanSetupSteps.UTILITY_TRAITS, v.ClanSetupSteps.INTERESTS, v.ClanSetupSteps.DESCRIPTION, v.ClanSetupSteps.PRIMETIME],
     [v.ClanSetupSteps.IDENTITY_INTRO]: [v.ClanSetupSteps.CUSTOMIZE_TAG_BADGE, v.ClanSetupSteps.CUSTOMIZE_BANNER],
     [v.ClanSetupSteps.APPLICATION_INTRO]: [v.ClanSetupSteps.MEMBER_APPLICATION]
   },

@@ -38,10 +38,10 @@ var r = n("658722"),
   b = n("914010"),
   G = n("594174"),
   w = n("55563"),
-  k = n("823379"),
-  B = n("892880"),
-  V = n("700785"),
-  F = n("226951"),
+  B = n("823379"),
+  k = n("892880"),
+  F = n("700785"),
+  V = n("226951"),
   x = n("709054"),
   H = n("624138"),
   Y = n("51144"),
@@ -82,7 +82,7 @@ function ei(e, t) {
       return 7
     }
     if (i.test(e)) return 5;
-    if (l = r, u = e, l.split(/(?:,| )+/).every(e => RegExp(F.default.escape(e), "i").test(u))) return 3;
+    if (l = r, u = e, l.split(/(?:,| )+/).every(e => RegExp(V.default.escape(e), "i").test(u))) return 3;
     if (o && s()(r, e)) return 1
   } catch (e) {
     X.error(e)
@@ -179,7 +179,7 @@ t.default = {
     } = e;
     return es({
       query: t,
-      members: P.default.getFriendIDs().map(e => G.default.getUser(e)).filter(k.isNotNullish),
+      members: P.default.getFriendIDs().map(e => G.default.getUser(e)).filter(B.isNotNullish),
       limit: n,
       filter: r
     })
@@ -192,7 +192,7 @@ t.default = {
     } = e;
     return es({
       query: t,
-      members: C.default.getDMUserIds().map(e => G.default.getUser(e)).filter(k.isNotNullish),
+      members: C.default.getDMUserIds().map(e => G.default.getUser(e)).filter(B.isNotNullish),
       limit: n,
       filter: i
     })
@@ -229,13 +229,13 @@ t.default = {
         let e = eo(l.id, r);
         if (e.length > 0) return e
       }
-      t = L.default.getMembers(d.guild_id).filter(er), s && B.default.requestMembers(d.guild_id, i, r)
+      t = L.default.getMembers(d.guild_id).filter(er), s && k.default.requestMembers(d.guild_id, i, r)
     }
     return es({
       query: i,
       members: t,
       limit: r,
-      filter: e => d.isPrivate() || V.can({
+      filter: e => d.isPrivate() || F.can({
         permission: j.Permissions.VIEW_CHANNEL,
         user: e,
         context: d
@@ -259,7 +259,7 @@ t.default = {
       if (e.length > 0) return e
     }
     let l = L.default.getMembers(t).filter(er);
-    return r && n.length > 0 && B.default.requestMembers(t, n, i), es({
+    return r && n.length > 0 && k.default.requestMembers(t, n, i), es({
       query: n,
       members: l,
       limit: i,
@@ -271,7 +271,7 @@ t.default = {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10,
       n = (arguments.length > 2 && void 0 !== arguments[2] && arguments[2], !(arguments.length > 3) || void 0 === arguments[3] || arguments[3]),
       i = arguments.length > 4 ? arguments[4] : void 0;
-    return n && e.length > 0 && B.default.requestMembers(null, e, t), es({
+    return n && e.length > 0 && k.default.requestMembers(null, e, t), es({
       query: e,
       members: o()(G.default.getUsers()).values().value(),
       limit: t,
@@ -297,8 +297,8 @@ t.default = {
             let t = e.toLocaleLowerCase();
             return {
               queryLower: t,
-              exactQuery: RegExp("^".concat(F.default.escape(t)), "i"),
-              containQuery: RegExp(F.default.escape(t), "i"),
+              exactQuery: RegExp("^".concat(V.default.escape(t)), "i"),
+              containQuery: RegExp(V.default.escape(t), "i"),
               isFullMatch: !1
             }
           });
@@ -306,8 +306,8 @@ t.default = {
           let t = e.toLocaleLowerCase();
           n.unshift({
             queryLower: t,
-            exactQuery: RegExp("^".concat(F.default.escape(t).replace(" ", "( |-)")), "i"),
-            containQuery: RegExp(F.default.escape(t).replace(" ", "( |-)"), "i"),
+            exactQuery: RegExp("^".concat(V.default.escape(t).replace(" ", "( |-)")), "i"),
+            containQuery: RegExp(V.default.escape(t).replace(" ", "( |-)"), "i"),
             isFullMatch: !0
           })
         }
@@ -371,8 +371,8 @@ t.default = {
       filter: r = Q,
       boosters: s = {}
     } = e, a = "" === t ? "" : t.toLocaleLowerCase(), u = {
-      exactQuery: RegExp("^".concat(F.default.escape(a)), "i"),
-      containQuery: RegExp(F.default.escape(a), "i"),
+      exactQuery: RegExp("^".concat(V.default.escape(a)), "i"),
+      containQuery: RegExp(V.default.escape(a), "i"),
       queryLower: a
     }, d = [];
     for (let e of o()(D.default.getGuilds()).values().value()) {
@@ -397,8 +397,8 @@ t.default = {
       filter: r = Q,
       boosters: s = {}
     } = e, a = (0, H.stripDiacritics)((0, H.normalize)(t.toLocaleLowerCase())), d = {
-      exactQuery: RegExp("^".concat(F.default.escape(a)), "i"),
-      containQuery: RegExp(F.default.escape(a), "i"),
+      exactQuery: RegExp("^".concat(V.default.escape(a)), "i"),
+      containQuery: RegExp(V.default.escape(a), "i"),
       queryLower: a
     }, _ = o()(C.default.getMutablePrivateChannels()).values().value(), c = [];
     for (let e of _) {
@@ -423,8 +423,8 @@ t.default = {
       fuzzy: i = !0,
       filter: r = Q
     } = e, s = t.toLocaleLowerCase(), a = {
-      exactQuery: RegExp("^".concat(F.default.escape(s)), "i"),
-      containQuery: RegExp(F.default.escape(s), "i"),
+      exactQuery: RegExp("^".concat(V.default.escape(s)), "i"),
+      containQuery: RegExp(V.default.escape(s), "i"),
       queryLower: s
     }, o = ee(), u = [];
     for (let {
@@ -451,8 +451,8 @@ t.default = {
       fuzzy: i = !0,
       filter: r = Q
     } = e, s = t.toLocaleLowerCase(), a = {
-      exactQuery: RegExp("^".concat(F.default.escape(s)), "i"),
-      containQuery: RegExp(F.default.escape(s), "i"),
+      exactQuery: RegExp("^".concat(V.default.escape(s)), "i"),
+      containQuery: RegExp(V.default.escape(s), "i"),
       queryLower: s
     }, u = o()(w.default.getSKUs()).values().value(), d = [];
     for (let e of u)
@@ -572,7 +572,7 @@ t.default = {
       choices: n,
       limit: i = 10,
       fuzzy: r = !0
-    } = e, s = t.toLocaleLowerCase(), a = RegExp("^".concat(F.default.escape(s)), "i"), l = RegExp(F.default.escape(s), "i"), u = o()(n).map((e, t) => {
+    } = e, s = t.toLocaleLowerCase(), a = RegExp("^".concat(V.default.escape(s)), "i"), l = RegExp(V.default.escape(s), "i"), u = o()(n).map((e, t) => {
       let n = ei(e.displayName.toLocaleLowerCase(), {
         exactQuery: a,
         containQuery: l,
@@ -583,7 +583,7 @@ t.default = {
         score: n,
         originalIndex: t
       } : null
-    }).filter(k.isNotNullish).sortBy(e => -1 * e.score);
+    }).filter(B.isNotNullish).sortBy(e => -1 * e.score);
     return null !== i && (u = u.take(i)), u.value()
   },
   queryStaticRouteChannels(e) {
@@ -591,8 +591,8 @@ t.default = {
       query: t,
       guild: n
     } = e, i = t.toLocaleLowerCase(), r = {
-      exactQuery: RegExp("^".concat(F.default.escape(i)), "i"),
-      containQuery: RegExp(F.default.escape(i), "i"),
+      exactQuery: RegExp("^".concat(V.default.escape(i)), "i"),
+      containQuery: RegExp(V.default.escape(i), "i"),
       queryLower: i
     }, s = ((0, I.canSeeGuildHome)(n.id) || (0, f.canSeeOnboardingHome)(n.id)) && !n.hasFeature(j.GuildFeatures.HUB), a = n.hasFeature(j.GuildFeatures.COMMUNITY), o = (0, T.isGuildOnboardingAvailable)(n) && n.hasFeature(j.GuildFeatures.COMMUNITY), l = [{
       id: K.StaticChannelId.SERVER_GUIDE,
@@ -712,8 +712,8 @@ t.default = {
       if ("" === o) continue;
       let e = o.toLocaleLowerCase(),
         u = (0, H.stripDiacritics)(e),
-        d = RegExp("^".concat(F.default.escape(u)), "i"),
-        _ = RegExp("".concat(F.default.escape(u)), "i");
+        d = RegExp("^".concat(V.default.escape(u)), "i"),
+        _ = RegExp("".concat(V.default.escape(u)), "i");
       r.forEach((r, o) => {
         let u = 0,
           c = null,

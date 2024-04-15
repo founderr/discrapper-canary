@@ -436,10 +436,10 @@ function L(e) {
       isTyping: c
     })
   }), [P, S, g, l, c]), {
-    avatarCutoutX: k,
-    avatarCutoutY: B,
-    avatarCutoutWidth: V,
-    avatarCutoutHeight: F,
+    avatarCutoutX: B,
+    avatarCutoutY: k,
+    avatarCutoutWidth: F,
+    avatarCutoutHeight: V,
     avatarCutoutRadius: x,
     fill: H,
     ...Y
@@ -472,10 +472,10 @@ function L(e) {
           fill: "white"
         }), (0, i.jsx)(o.animated.rect, {
           color: "black",
-          x: k,
-          y: B,
-          width: V,
-          height: F,
+          x: B,
+          y: k,
+          width: F,
+          height: V,
           rx: x,
           ry: x
         })]

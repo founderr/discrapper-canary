@@ -34,10 +34,10 @@ var i = n("735250"),
   b = n("904085"),
   G = n("892254"),
   w = n("210887"),
-  k = n("819640"),
-  B = n("594174"),
-  V = n("451478"),
-  F = n("672752"),
+  B = n("819640"),
+  k = n("594174"),
+  F = n("451478"),
+  V = n("672752"),
   x = n("812663"),
   H = n("153850"),
   Y = n("725568"),
@@ -69,7 +69,7 @@ let en = (0, X.makeLazy)({
     webpackId: "177741"
   }),
   ei = r.memo(function(e) {
-    let t = (0, _.useStateFromStores)([V.default], () => V.default.isFocused());
+    let t = (0, _.useStateFromStores)([F.default], () => F.default.isFocused());
     return (0, i.jsx)(J.default, {
       ...e,
       focused: t
@@ -81,13 +81,13 @@ t.default = function(e) {
     skipsSettingDefaultPageTitle: n
   } = e, {
     pathname: s
-  } = (0, u.useLocation)(), E = (0, K.getPlatform)(), h = d.isMobile || d.isTablet, V = (0, _.useStateFromStores)([w.default], () => w.default.darkSidebar ? $.ThemeTypes.DARK : void 0), X = (0, _.useStateFromStores)([N.default], () => N.default.useForcedColors ? "yes" : "no"), [J, er] = (0, _.useStateFromStoresArray)([D.default], () => [D.default.isEditorOpen, D.default.isCoachmark]), es = (0, _.useStateFromStores)([C.default], () => C.default.isEditorOpen), {
+  } = (0, u.useLocation)(), E = (0, K.getPlatform)(), h = d.isMobile || d.isTablet, F = (0, _.useStateFromStores)([w.default], () => w.default.darkSidebar ? $.ThemeTypes.DARK : void 0), X = (0, _.useStateFromStores)([N.default], () => N.default.useForcedColors ? "yes" : "no"), [J, er] = (0, _.useStateFromStoresArray)([D.default], () => [D.default.isEditorOpen, D.default.isCoachmark]), es = (0, _.useStateFromStores)([C.default], () => C.default.isEditorOpen), {
     enabled: ea
   } = b.default.useExperiment({
     location: "client_themes_coachmark_reintro"
   }, {
     autoTrackExposure: !0
-  }), eo = (0, _.useStateFromStores)([k.default], () => k.default.getLayers().includes($.Layers.USER_SETTINGS)), el = (0, _.useStateFromStores)([B.default], () => z.default.canUseClientThemes(B.default.getCurrentUser())), eu = J && !eo, ed = [];
+  }), eo = (0, _.useStateFromStores)([B.default], () => B.default.getLayers().includes($.Layers.USER_SETTINGS)), el = (0, _.useStateFromStores)([k.default], () => z.default.canUseClientThemes(k.default.getCurrentUser())), eu = J && !eo, ed = [];
   eu && er && ea && !el && ed.push(c.DismissibleContent.CLIENT_THEMES_COACHMARK);
   let [e_, ec] = (0, P.useSelectedDismissibleContent)(ed, ee.DismissibleContentGroupName.SIDEBAR, !0);
   ed.push(c.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
@@ -115,9 +115,9 @@ t.default = function(e) {
           children: (0, i.jsx)(q.default, {
             children: (0, i.jsxs)(I.FocusRingScope, {
               containerRef: eT,
-              children: [(0, i.jsx)(W.MaskLibrary, {}), (0, i.jsx)(F.default, {}), (0, i.jsx)(o.FocusGuard, {}), null != E ? (0, i.jsx)(ei, {
+              children: [(0, i.jsx)(W.MaskLibrary, {}), (0, i.jsx)(V.default, {}), (0, i.jsx)(o.FocusGuard, {}), null != E ? (0, i.jsx)(ei, {
                 type: E,
-                themeOverride: V
+                themeOverride: F
               }) : null, (0, i.jsx)(m.AppWindowContextProvider, {
                 appContext: $.AppContext.APP,
                 renderWindow: window,

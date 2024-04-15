@@ -88,10 +88,10 @@ t.default = r.forwardRef(function(e, t) {
     className: b,
     focused: G,
     forceSecondaryActions: w = !1,
-    interactive: k = !0,
-    enableSecondaryActions: B = !1,
-    suppressPlaySound: V,
-    onMouseEnter: F,
+    interactive: B = !0,
+    enableSecondaryActions: k = !1,
+    suppressPlaySound: F,
+    onMouseEnter: V,
     onSelectItem: x,
     analyticsLocations: H,
     buttonOverlay: Y = p.SoundButtonOverlay.PLAY,
@@ -128,7 +128,7 @@ t.default = r.forwardRef(function(e, t) {
     eu = (0, o.useListItem)(el),
     ed = null != z || null != X,
     e_ = !(0, R.canUseSoundboardSound)(Q, P, U),
-    ec = w || B && !e_;
+    ec = w || k && !e_;
 
   function eE(e) {
     e.stopPropagation(), e.currentTarget.blur(), eo ? (0, N.removeFavoriteSound)(W) : (0, N.addFavoriteSound)(W)
@@ -136,7 +136,7 @@ t.default = r.forwardRef(function(e, t) {
 
   function eI() {
     return (0, i.jsx)(M, {
-      disabled: !k && !w,
+      disabled: !B && !w,
       onClick: eE,
       text: D.default.Messages.SOUNDBOARD_SOUND_FAVORITE_SOUND.format({
         emojiName: P.emojiName,
@@ -159,11 +159,11 @@ t.default = r.forwardRef(function(e, t) {
       className: v.buttonOverlay,
       children: [(0, i.jsx)("div", {
         className: a()({
-          [v.buttonOverlayBackground]: !V
+          [v.buttonOverlayBackground]: !F
         })
       }), (0, i.jsxs)("div", {
         className: v.buttonOverlayActions,
-        children: [ec && eT, !V && !e_ && (0, i.jsx)(A.default, {
+        children: [ec && eT, !F && !e_ && (0, i.jsx)(A.default, {
           className: v.playIcon
         }), ec && eI()]
       })]
@@ -176,7 +176,7 @@ t.default = r.forwardRef(function(e, t) {
   }, [ea]), (0, i.jsxs)("li", {
     ref: t,
     className: v.soundButtonWrapper,
-    onMouseEnter: F,
+    onMouseEnter: V,
     children: [(0, i.jsxs)(_.ClickableContainer, {
       ...j,
       buttonProps: {
@@ -190,12 +190,12 @@ t.default = r.forwardRef(function(e, t) {
       }),
       className: a()(b, v.soundButton, {
         [v.playing]: $,
-        [v.hoverActiveBackground]: V,
-        [v.soundButtonInteractive]: k,
-        [v.buttonDisabled]: !k && !w,
+        [v.hoverActiveBackground]: F,
+        [v.soundButtonInteractive]: B,
+        [v.buttonDisabled]: !B && !w,
         [v.premiumDisabled]: e_ && !w,
-        [v.buttonDisabledSecondaryActionsEnabled]: !k && w,
-        [v.focused]: k && G
+        [v.buttonDisabledSecondaryActionsEnabled]: !B && w,
+        [v.focused]: B && G
       }),
       onClick: function() {
         if (ea && !ei && (er.current = Math.min(er.current + .01, .1), Math.random() < er.current && ee(en.x, en.y, void 0, void 0, {
@@ -204,9 +204,9 @@ t.default = r.forwardRef(function(e, t) {
           x();
           return
         }
-        V || Z(H)
+        F || Z(H)
       },
-      onContextMenu: B && !e_ ? q : void 0,
+      onContextMenu: k && !e_ ? q : void 0,
       children: [(0, i.jsxs)("div", {
         className: v.soundInfo,
         "aria-hidden": !0,
@@ -217,7 +217,7 @@ t.default = r.forwardRef(function(e, t) {
           className: v.emoji
         }), (0, i.jsx)(_.Text, {
           variant: "text-xs/medium",
-          color: k ? "header-primary" : "text-muted",
+          color: B ? "header-primary" : "text-muted",
           className: a()(v.soundName, {
             [v.hasEmoji]: ed
           }),

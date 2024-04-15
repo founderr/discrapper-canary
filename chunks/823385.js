@@ -8,7 +8,7 @@ var r, s = n("392711"),
   u = n("570140"),
   d = n("212819"),
   _ = n("938078"),
-  c = n("869735"),
+  c = n("781157"),
   E = n("220444"),
   I = n("601070"),
   T = n("210887"),
@@ -41,10 +41,10 @@ let P = "seenQSTutorial",
   b = 0,
   G = !1,
   w = !1,
-  k = null,
-  B = [],
-  V = null,
-  F = 0,
+  B = null,
+  k = [],
+  F = null,
+  V = 0,
   x = [],
   H = [];
 
@@ -54,7 +54,7 @@ function Y() {
 
 function j(e) {
   let t = (0, _.default)(e);
-  return null == t || null != k && k !== t.type ? null : t
+  return null == t || null != B && B !== t.type ? null : t
 }
 
 function W(e) {
@@ -66,7 +66,7 @@ function W(e) {
   null != s && a.add("guild:".concat(s)), i = null != i ? i : new d.default(K, U, null != r ? 100 : 5, {
     frecencyBoosters: !0,
     blacklist: a
-  }), V = null, F = n.length, k = r, i.search(n)
+  }), F = null, V = n.length, B = r, i.search(n)
 }
 
 function K(e, t) {
@@ -82,7 +82,7 @@ function K(e, t) {
     var e, t;
     let n = null !== (e = C.default.getGuildId()) && void 0 !== e ? e : void 0,
       i = null !== (t = R.default.getChannelId()) && void 0 !== t ? t : void 0;
-    switch (k) {
+    switch (B) {
       case d.AutocompleterResultTypes.USER: {
         let e = f.default.getId();
         return L.default.getRecentlyTalked(i, 100).filter(t => {
@@ -155,40 +155,40 @@ function K(e, t) {
     }
     return a()(r).uniqBy(e => e.record.id).value()
   }() : e, x) && (x = e, ! function(e, t) {
-    switch (k) {
+    switch (B) {
       case d.AutocompleterResultTypes.USER: {
         let t = N.default.getGuild(C.default.getGuildId());
         e.unshift((0, d.createHeaderResult)(null != t ? M.default.Messages.QUICKSWITCHER_QUERYMODE_USERS_IN_GUILD.format({
           name: t.name
-        }) : M.default.Messages.QUICKSWITCHER_QUERYMODE_USERS)), B = e;
+        }) : M.default.Messages.QUICKSWITCHER_QUERYMODE_USERS)), k = e;
         break
       }
       case d.AutocompleterResultTypes.TEXT_CHANNEL:
-        e.unshift((0, d.createHeaderResult)(M.default.Messages.QUICKSWITCHER_QUERYMODE_TEXT_CHANNELS)), B = e;
+        e.unshift((0, d.createHeaderResult)(M.default.Messages.QUICKSWITCHER_QUERYMODE_TEXT_CHANNELS)), k = e;
         break;
       case d.AutocompleterResultTypes.VOICE_CHANNEL:
-        e.unshift((0, d.createHeaderResult)(M.default.Messages.QUICKSWITCHER_QUERYMODE_VOICE_CHANNELS)), B = e;
+        e.unshift((0, d.createHeaderResult)(M.default.Messages.QUICKSWITCHER_QUERYMODE_VOICE_CHANNELS)), k = e;
         break;
       case d.AutocompleterResultTypes.GUILD:
-        e.unshift((0, d.createHeaderResult)(M.default.Messages.QUICKSWITCHER_QUERYMODE_GUILDS)), B = e;
+        e.unshift((0, d.createHeaderResult)(M.default.Messages.QUICKSWITCHER_QUERYMODE_GUILDS)), k = e;
         break;
       case d.AutocompleterResultTypes.APPLICATION:
-        e.unshift((0, d.createHeaderResult)(M.default.Messages.QUICKSWITCHER_QUERYMODE_APPLICATIONS)), B = e;
+        e.unshift((0, d.createHeaderResult)(M.default.Messages.QUICKSWITCHER_QUERYMODE_APPLICATIONS)), k = e;
         break;
       default:
-        B = e
+        k = e
     }
-    if (t !== V) V = t, F = Math.max(t.length, F), b = (0, d.findNextSelectedResult)(d.FindResultDirections.DOWN, -1, B);
+    if (t !== F) F = t, V = Math.max(t.length, V), b = (0, d.findNextSelectedResult)(d.FindResultDirections.DOWN, -1, k);
     else {
-      let e = B[b];
-      null != e && e.type === d.AutocompleterResultTypes.HEADER && (b = (0, d.findNextSelectedResult)(d.FindResultDirections.DOWN, b, B))
+      let e = k[b];
+      null != e && e.type === d.AutocompleterResultTypes.HEADER && (b = (0, d.findNextSelectedResult)(d.FindResultDirections.DOWN, b, k))
     }
     Q.emitChange()
   }(e, t))
 }
 
 function z() {
-  V = null, F = 0, x = [], null != i && (i.destroy(), i = null)
+  F = null, V = 0, x = [], null != i && (i.destroy(), i = null)
 }
 class X extends(r = o.default.PersistedStore) {
   initialize(e) {
@@ -223,11 +223,11 @@ class X extends(r = o.default.PersistedStore) {
     return {
       theme: T.default.theme,
       query: null != i ? i.query : "",
-      queryMode: k,
-      results: B,
+      queryMode: B,
+      results: k,
       selectedIndex: b,
       seenTutorial: G,
-      maxQueryLength: F
+      maxQueryLength: V
     }
   }
 }
@@ -248,7 +248,7 @@ let Q = new X(u.default, {
     } = e;
     if (null == i) return !1;
     let a = null !== (t = C.default.getGuildId()) && void 0 !== t ? t : null;
-    if (k !== s) {
+    if (B !== s) {
       i.setResultTypes(null != s ? [s] : U), i.setLimit(null != s ? 100 : 5);
       let e = null !== (n = C.default.getGuildId()) && void 0 !== n ? n : void 0;
       s === d.AutocompleterResultTypes.USER && null != e ? i.setOptions({
@@ -263,7 +263,7 @@ let Q = new X(u.default, {
         voiceChannelGuildFilter: void 0
       }, !0)
     }
-    k = s, i.search(r, k === d.AutocompleterResultTypes.USER ? a : void 0)
+    B = s, i.search(r, B === d.AutocompleterResultTypes.USER ? a : void 0)
   },
   QUICKSWITCHER_SELECT: function(e) {
     b = e.selectedIndex

@@ -77,7 +77,7 @@ let R = a.memo(function(e) {
     b()
   }, [b, L]);
   let w = C.length > 0,
-    k = g.length > 0;
+    B = g.length > 0;
   return (0, s.jsxs)("div", {
     className: l()(p.compactItemContainer, !M && p.hideElement),
     ref: v,
@@ -103,10 +103,10 @@ let R = a.memo(function(e) {
           children: L
         })]
       })
-    }), w && k && (0, s.jsx)("div", {
+    }), w && B && (0, s.jsx)("div", {
       "aria-hidden": "true",
       className: p.dotSpacer
-    }), k && (0, s.jsx)(d.Tooltip, {
+    }), B && (0, s.jsx)(d.Tooltip, {
       text: O.default.Messages.USER_PROFILE_MUTUAL_GUILDS_TOOLTIP,
       children: e => (0, s.jsxs)(d.Clickable, {
         ...e,

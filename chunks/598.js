@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return b
   },
   PaymentContextProvider: function() {
-    return k
+    return B
   },
   useForwardedPaymentContext: function() {
     return w
@@ -46,16 +46,16 @@ var i = n("735250"),
   U = n("474936");
 let [b, G, w] = (0, f.default)();
 
-function k(e) {
+function B(e) {
   var t, n;
   let {
     loadId: f,
     activeSubscription: G,
     stepConfigs: w,
-    breadcrumbs: k = [],
-    skuIDs: B,
-    isGift: V = !1,
-    children: F,
+    breadcrumbs: B = [],
+    skuIDs: k,
+    isGift: F = !1,
+    children: V,
     defaultPlanId: x,
     purchaseType: H = P.PurchaseTypes.SUBSCRIPTION,
     applicationId: Y,
@@ -67,7 +67,7 @@ function k(e) {
     setPaymentSourceId: Z,
     hasFetchedPaymentSources: J
   } = (0, p.default)({
-    isGift: V,
+    isGift: F,
     activeSubscription: G
   }), $ = r.useRef(Q), {
     hasFetchedSubscriptionPlans: ee,
@@ -77,9 +77,9 @@ function k(e) {
     currencies: er
   } = (0, N.default)({
     activeSubscription: G,
-    skuIDs: B,
+    skuIDs: k,
     paymentSourceId: q,
-    isGift: V
+    isGift: F
   }), es = (0, L.default)(), [ea, eo] = r.useState(!1), {
     step: el,
     setStep: eu,
@@ -87,7 +87,7 @@ function k(e) {
     breadcrumbsData: e_
   } = (0, v.default)({
     stepConfigs: w,
-    breadcrumbs: k
+    breadcrumbs: B
   }), [ec, eE] = (0, g.default)(el), {
     paymentError: eI,
     paymentAuthenticationState: eT
@@ -108,7 +108,7 @@ function k(e) {
     selectedPlan: eN,
     setSelectedSkuId: eO,
     setSelectedPlanId: ep
-  } = (0, m.default)(), [eR, eC] = (0, l.useStateFromStoresArray)([E.default], () => [E.default.purchaseTokenAuthState, E.default.purchaseTokenHash]), [eg, eL] = (0, l.useStateFromStoresArray)([y.default], () => [y.default.browserCheckoutState, y.default.loadId]), [eD, ev] = r.useState(null), [eM, ey] = r.useState(null), [eP, eU] = r.useState(null), [eb, eG] = r.useState(null), [ew, ek] = r.useState(null), [eB, eV] = r.useState(void 0), [eF, ex] = r.useState([]), eH = r.useMemo(() => null == eN || (0, A.isPremiumSubscriptionPlan)(eN.id), [eN]), eY = r.useRef(null != G ? G.planId : null);
+  } = (0, m.default)(), [eR, eC] = (0, l.useStateFromStoresArray)([E.default], () => [E.default.purchaseTokenAuthState, E.default.purchaseTokenHash]), [eg, eL] = (0, l.useStateFromStoresArray)([y.default], () => [y.default.browserCheckoutState, y.default.loadId]), [eD, ev] = r.useState(null), [eM, ey] = r.useState(null), [eP, eU] = r.useState(null), [eb, eG] = r.useState(null), [ew, eB] = r.useState(null), [ek, eF] = r.useState(void 0), [eV, ex] = r.useState([]), eH = r.useMemo(() => null == eN || (0, A.isPremiumSubscriptionPlan)(eN.id), [eN]), eY = r.useRef(null != G ? G.planId : null);
   r.useEffect(() => {
     null == eY.current && null != G && (eY.current = G.planId)
   }, [G]);
@@ -118,9 +118,9 @@ function k(e) {
     skuPricePreviewsById: eK
   } = (0, D.default)({
     applicationId: null != Y ? Y : U.PREMIUM_SUBSCRIPTION_APPLICATION,
-    skuIDs: B,
+    skuIDs: k,
     currentPaymentSourceId: q,
-    isGift: V
+    isGift: F
   }), ez = r.useMemo(() => {
     if (null == em) return null;
     let e = eK[em];
@@ -142,7 +142,7 @@ function k(e) {
       updatedSubscription: eb,
       setUpdatedSubscription: eG,
       subscriptionMetadataRequest: ew,
-      setSubscriptionMetadataRequest: ek,
+      setSubscriptionMetadataRequest: eB,
       hasFetchedPaymentSources: J,
       paymentSources: X,
       hasPaymentSources: Q,
@@ -183,8 +183,8 @@ function k(e) {
       selectedPlan: eN,
       setSelectedSkuId: eO,
       setSelectedPlanId: ep,
-      readySlideId: eB,
-      setReadySlideId: eV,
+      readySlideId: ek,
+      setReadySlideId: eF,
       defaultPlanId: x,
       isPremium: eH,
       startedPaymentFlowWithPaymentSourcesRef: $,
@@ -197,7 +197,7 @@ function k(e) {
       purchaseType: H,
       isEmbeddedIAP: eQ,
       activitySessionId: eZ,
-      entitlementsGranted: eF,
+      entitlementsGranted: eV,
       setEntitlementsGranted: ex,
       referralCode: j,
       invoicePreview: e0,
@@ -206,7 +206,7 @@ function k(e) {
     children: (0, i.jsx)(s.Elements, {
       options: P.StripeElementsOptions,
       stripe: W,
-      children: F
+      children: V
     })
   })
 }

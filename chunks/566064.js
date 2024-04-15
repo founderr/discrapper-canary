@@ -178,24 +178,24 @@ function d(e) {
           }
         }, [y, T, A, N, c, d, _]),
         w = i.useCallback(e => e.currentTarget !== e.target ? (!O && (p(!0), L(!0)), !1) : O ? (y(!1), !1) : void(f && null != N ? M(d, _) : y(!0)), [O, f, N, y, M, d, _]),
-        k = i.useCallback(e => {
+        B = i.useCallback(e => {
           if (e.target !== e.currentTarget) {
             if (e.currentTarget.contains(e.relatedTarget)) return !1;
             p(!1)
           }
         }, []),
-        B = i.useMemo(() => Math.max(...n), [n]),
-        V = i.useCallback(() => ({
+        k = i.useMemo(() => Math.max(...n), [n]),
+        F = i.useCallback(() => ({
           role: "grid",
           "aria-rowcount": n.length,
-          "aria-colcount": B,
+          "aria-colcount": k,
           tabIndex: O && f ? -1 : 0,
           "data-ref-id": t,
           onKeyDown: G,
           onFocus: w,
-          onBlur: k
-        }), [n.length, B, O, f, t, G, w, k]),
-        F = i.useCallback((e, n) => {
+          onBlur: B
+        }), [n.length, k, O, f, t, G, w, B]),
+        V = i.useCallback((e, n) => {
           let i = {
             role: "gridcell",
             "aria-rowindex": n + 1,
@@ -212,10 +212,10 @@ function d(e) {
         }), []);
       return i.useMemo(() => ({
         dispatch: T,
-        getContainerProps: V,
-        getItemProps: F,
+        getContainerProps: F,
+        getItemProps: V,
         getRowProps: x
-      }), [T, V, F, x])
+      }), [T, F, V, x])
     }({
       navId: t,
       columnCounts: p,

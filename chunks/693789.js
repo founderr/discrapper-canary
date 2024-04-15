@@ -136,10 +136,10 @@ function h(e) {
     children: b,
     rel: G,
     buttonRef: w,
-    focusProps: k,
-    "aria-label": B,
-    submittingStartedLabel: V,
-    submittingFinishedLabel: F,
+    focusProps: B,
+    "aria-label": k,
+    submittingStartedLabel: F,
+    submittingFinishedLabel: V,
     ...x
   } = e, H = m || N, Y = H && (null != y || null != P), j = function(e, t) {
     var n, i, r, s;
@@ -153,16 +153,16 @@ function h(e) {
       bottom: (null !== (r = a.bottom) && void 0 !== r ? r : 0) - 2,
       left: (null !== (s = a.left) && void 0 !== s ? s : 0) - 2
     }
-  }(k, t), W = r.useRef(!1);
+  }(B, t), W = r.useRef(!1);
   r.useEffect(() => {
-    !0 === N && (W.current = !0, l.AccessibilityAnnouncer.announce(null != V ? V : _.default.Messages.A11Y_LOADING_STARTED)), !1 === N && !0 === W.current && l.AccessibilityAnnouncer.announce(null != F ? F : _.default.Messages.A11Y_LOADING_FINISHED)
-  }, [N, V, F]);
+    !0 === N && (W.current = !0, l.AccessibilityAnnouncer.announce(null != F ? F : _.default.Messages.A11Y_LOADING_STARTED)), !1 === N && !0 === W.current && l.AccessibilityAnnouncer.announce(null != V ? V : _.default.Messages.A11Y_LOADING_FINISHED)
+  }, [N, F, V]);
   let K = (0, i.jsx)(u.FocusRing, {
-    ...k,
+    ...B,
     offset: j,
     children: (0, i.jsxs)("button", {
       ...H ? null : x,
-      "aria-label": B,
+      "aria-label": k,
       "aria-busy": !!N || void 0,
       ref: w,
       onClick: H ? e => e.preventDefault() : L,

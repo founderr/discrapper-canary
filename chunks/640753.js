@@ -19,12 +19,12 @@ t.default = a.memo(function(e) {
     messageId: i,
     emoji: g,
     useChatFontScaling: T,
-    color: v,
-    count: S
-  } = e, E = (0, s.useStateFromStores)([d.default], () => d.default.getEffectForEmojiId(t, i, g)), R = T ? p : m, I = a.useMemo(() => (0, f.buildEffect)(g, v, t, {
+    color: S,
+    count: v
+  } = e, E = (0, s.useStateFromStores)([d.default], () => d.default.getEffectForEmojiId(t, i, g)), R = T ? p : m, I = a.useMemo(() => (0, f.buildEffect)(g, S, t, {
     key: E,
     messageId: i
-  }), [v, E, g, t, i]), [N, C] = a.useState(!1), _ = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion), x = u.AnimateEmoji.useSetting(), O = a.useCallback(() => {
+  }), [S, E, g, t, i]), [N, C] = a.useState(!1), _ = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion), x = u.AnimateEmoji.useSetting(), O = a.useCallback(() => {
     l.default.dispatch({
       type: "BURST_REACTION_EFFECT_CLEAR",
       channelId: t,
@@ -36,7 +36,7 @@ t.default = a.memo(function(e) {
     let e = () => {
       if (N) return;
       let e = (0, c.getBurstAnimationHash)("".concat(Date.now()).concat(t).concat(i).concat(g.name)) % 10;
-      (e += S > 4 ? 4 : S - 1) > 7 && (C(!0), (0, r.playBurstReaction)({
+      (e += v > 4 ? 4 : v - 1) > 7 && (C(!0), (0, r.playBurstReaction)({
         channelId: t,
         messageId: i,
         emoji: g,
@@ -49,7 +49,7 @@ t.default = a.memo(function(e) {
     return () => {
       clearInterval(n)
     }
-  }, [x, t, S, g, g.name, N, i, _]), null == E) ? null : (0, n.jsx)(h.default, {
+  }, [x, t, v, g, g.name, N, i, _]), null == E) ? null : (0, n.jsx)(h.default, {
     className: R.effect,
     effect: I,
     onComplete: O

@@ -30,10 +30,10 @@ let v = new I.default("ChannelRTCStore"),
   b = {},
   G = {},
   w = {},
-  k = {},
   B = {},
-  V = {},
+  k = {},
   F = {},
+  V = {},
   x = {};
 
 function H(e) {
@@ -171,7 +171,7 @@ function en(e) {
       id: t
     }
   } = e;
-  return delete V[t], delete F[t], q(t)
+  return delete F[t], delete V[t], q(t)
 }
 
 function ei(e) {
@@ -204,7 +204,7 @@ class es extends(i = _.default.Store) {
     return null !== (t = H(e).toArray(g.ChannelRTCParticipantsIndexes.SPEAKING)) && void 0 !== t ? t : M
   }
   getFilteredParticipants(e) {
-    return B[e] ? H(e).toArray(g.ChannelRTCParticipantsIndexes.FILTERED) : H(e).toArray()
+    return k[e] ? H(e).toArray(g.ChannelRTCParticipantsIndexes.FILTERED) : H(e).toArray()
   }
   getVideoParticipants(e) {
     var t;
@@ -227,11 +227,11 @@ class es extends(i = _.default.Store) {
   }
   getParticipantsOpen(e) {
     var t;
-    return null === (t = k[e]) || void 0 === t || t
+    return null === (t = B[e]) || void 0 === t || t
   }
   getVoiceParticipantsHidden(e) {
     var t;
-    return null !== (t = B[e]) && void 0 !== t && t
+    return null !== (t = k[e]) && void 0 !== t && t
   }
   getSelectedParticipantId(e) {
     let [t, n] = W(e);
@@ -263,14 +263,14 @@ class es extends(i = _.default.Store) {
   }
   getChatOpen(e) {
     var t;
-    return null !== (t = V[e]) && void 0 !== t && t
+    return null !== (t = F[e]) && void 0 !== t && t
   }
   isFullscreenInContext() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : D.AppContext.APP;
     return Object.values(w).some(t => t[e] === D.ChannelLayouts.FULL_SCREEN)
   }
   getStageStreamSize(e) {
-    return F[e]
+    return V[e]
   }
   getStageVideoLimitBoostUpsellDismissed(e) {
     return x[e]
@@ -291,14 +291,14 @@ a = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r,
       channelId: t,
       currentVoiceChannelId: n
     } = e;
-    return null != t ? delete b[t] : null != n && (delete V[n], delete F[n], z(n)), Z()
+    return null != t ? delete b[t] : null != n && (delete F[n], delete V[n], z(n)), Z()
   },
   CHANNEL_SELECT: function(e) {
     let {
       channelId: t,
       messageId: n
     } = e, i = Z(), r = m.default.getChannel(t);
-    return null == t || null == n || (null == r ? void 0 : r.type) !== D.ChannelTypes.GUILD_VOICE && (null == r ? void 0 : r.type) !== D.ChannelTypes.GUILD_STAGE_VOICE || V[t] ? i : (V[t] = !0, !0)
+    return null == t || null == n || (null == r ? void 0 : r.type) !== D.ChannelTypes.GUILD_VOICE && (null == r ? void 0 : r.type) !== D.ChannelTypes.GUILD_STAGE_VOICE || F[t] ? i : (F[t] = !0, !0)
   },
   CHANNEL_RTC_ACTIVE_CHANNELS: Z,
   VOICE_STATE_UPDATES: function(e) {
@@ -359,7 +359,7 @@ a = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r,
         e === A.default.getId() && j(e, [t])
       } catch (e) {
         v.warn("INVALID STREAM KEY FORMAT ".concat(n), e)
-      }!Q(i) && (k[t] = !1)
+      }!Q(i) && (B[t] = !1)
     }
   },
   CHANNEL_RTC_UPDATE_LAYOUT: function(e) {
@@ -378,21 +378,21 @@ a = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r,
       channelId: t,
       participantsOpen: n
     } = e;
-    k[t] = n
+    B[t] = n
   },
   CHANNEL_RTC_UPDATE_VOICE_PARTICIPANTS_HIDDEN: function(e) {
     let {
       channelId: t,
       voiceParticipantsHidden: n
     } = e;
-    B[t] = n
+    k[t] = n
   },
   CHANNEL_RTC_UPDATE_STAGE_STREAM_SIZE: function(e) {
     let {
       channelId: t,
       large: n
     } = e;
-    F[t] = n
+    V[t] = n
   },
   CHANNEL_RTC_UPDATE_STAGE_VIDEO_LIMIT_BOOST_UPSELL_DISMISSED: function(e) {
     let {
@@ -417,7 +417,7 @@ a = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r,
       channelId: t,
       chatOpen: n
     } = e;
-    V[t] = n
+    F[t] = n
   },
   RTC_CONNECTION_VIDEO: function(e) {
     let {

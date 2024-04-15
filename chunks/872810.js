@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   changeStreamRegion: function() {
-    return V
+    return F
   },
   closeStream: function() {
     return G
@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return H
   },
   notifyStreamStart: function() {
-    return k
+    return B
   },
   setStreamPaused: function() {
     return v
@@ -25,7 +25,7 @@ n.r(t), n.d(t, {
     return D
   },
   stopOwnStream: function() {
-    return F
+    return V
   },
   stopStream: function() {
     return b
@@ -34,7 +34,7 @@ n.r(t), n.d(t, {
     return P
   },
   updateStreamSettings: function() {
-    return B
+    return k
   },
   watchStream: function() {
     return y
@@ -185,7 +185,7 @@ async function w(e, t, n) {
     })
   }
 }
-async function k(e) {
+async function B(e) {
   try {
     await N.default.post({
       url: g.Endpoints.STREAM_NOTIFY(e),
@@ -197,14 +197,14 @@ async function k(e) {
   } catch (e) {}
 }
 
-function B(e) {
+function k(e) {
   (0, m.trackStreamSettingsUpdate)(e.preset, e.resolution, e.frameRate), o.default.dispatch({
     type: "STREAM_UPDATE_SETTINGS",
     ...e
   })
 }
 
-function V(e, t) {
+function F(e, t) {
   a.HTTP.patch({
     url: g.Endpoints.STREAM(e),
     body: {
@@ -214,7 +214,7 @@ function V(e, t) {
   })
 }
 
-function F() {
+function V() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
     t = c.default.getCurrentUserActiveStream();
   null != t && b((0, u.encodeStreamKey)(t), e)

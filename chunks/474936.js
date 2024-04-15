@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return ed
   },
   BoostedGuildFeatures: function() {
-    return eB
+    return ek
   },
   BoostingUpsellAction: function() {
     return h
@@ -37,7 +37,7 @@ n.r(t), n.d(t, {
     return er
   },
   DISCOUNTS: function() {
-    return eF
+    return eV
   },
   DISCOUNT_DURATION_FALLBACK: function() {
     return eq
@@ -79,7 +79,7 @@ n.r(t), n.d(t, {
     return ei
   },
   ORDERED_PREMIUM_SUBSCRIPTION_PLANS: function() {
-    return eV
+    return eF
   },
   PAID_SUBSCRIPTION_MAX_BILLING_RETRY_DAYS: function() {
     return el
@@ -232,7 +232,7 @@ n.r(t), n.d(t, {
     return eP
   },
   TotalSoundboardSoundCountsByTier: function() {
-    return ek
+    return eB
   },
   TotalStickerCountsByTier: function() {
     return ew
@@ -244,8 +244,8 @@ n.r(t), n.d(t, {
     return ec
   }
 }), n("47120");
-var i, r, s, a, o, l, u, d, _, c, E, I, T, f, S, A, h, m, N, O, p, R, C, g, L, D, v, M, y, P, U, b, G, w, k, B, V = n("981631"),
-  F = n("185923");
+var i, r, s, a, o, l, u, d, _, c, E, I, T, f, S, A, h, m, N, O, p, R, C, g, L, D, v, M, y, P, U, b, G, w, B, k, F = n("981631"),
+  V = n("185923");
 (N = i || (i = {}))[N.TIER_1 = 1] = "TIER_1", N[N.TIER_2 = 2] = "TIER_2", N[N.TIER_0 = 3] = "TIER_0";
 let x = void 0,
   H = [{
@@ -515,84 +515,84 @@ let eU = Object.freeze({
   }),
   eb = 52428800,
   eG = {
-    [V.BoostedGuildTiers.NONE]: 5,
-    [V.BoostedGuildTiers.TIER_1]: 10,
-    [V.BoostedGuildTiers.TIER_2]: 15,
-    [V.BoostedGuildTiers.TIER_3]: 30
+    [F.BoostedGuildTiers.NONE]: 5,
+    [F.BoostedGuildTiers.TIER_1]: 10,
+    [F.BoostedGuildTiers.TIER_2]: 15,
+    [F.BoostedGuildTiers.TIER_3]: 30
   },
   ew = {
-    [V.BoostedGuildTiers.NONE]: eG[V.BoostedGuildTiers.NONE],
-    [V.BoostedGuildTiers.TIER_1]: eG[V.BoostedGuildTiers.NONE] + eG[V.BoostedGuildTiers.TIER_1],
-    [V.BoostedGuildTiers.TIER_2]: eG[V.BoostedGuildTiers.NONE] + eG[V.BoostedGuildTiers.TIER_1] + eG[V.BoostedGuildTiers.TIER_2],
-    [V.BoostedGuildTiers.TIER_3]: eG[V.BoostedGuildTiers.NONE] + eG[V.BoostedGuildTiers.TIER_1] + eG[V.BoostedGuildTiers.TIER_2] + eG[V.BoostedGuildTiers.TIER_3]
+    [F.BoostedGuildTiers.NONE]: eG[F.BoostedGuildTiers.NONE],
+    [F.BoostedGuildTiers.TIER_1]: eG[F.BoostedGuildTiers.NONE] + eG[F.BoostedGuildTiers.TIER_1],
+    [F.BoostedGuildTiers.TIER_2]: eG[F.BoostedGuildTiers.NONE] + eG[F.BoostedGuildTiers.TIER_1] + eG[F.BoostedGuildTiers.TIER_2],
+    [F.BoostedGuildTiers.TIER_3]: eG[F.BoostedGuildTiers.NONE] + eG[F.BoostedGuildTiers.TIER_1] + eG[F.BoostedGuildTiers.TIER_2] + eG[F.BoostedGuildTiers.TIER_3]
   },
-  ek = {
-    [V.BoostedGuildTiers.NONE]: 8,
-    [V.BoostedGuildTiers.TIER_1]: 24,
-    [V.BoostedGuildTiers.TIER_2]: 36,
-    [V.BoostedGuildTiers.TIER_3]: 48
+  eB = {
+    [F.BoostedGuildTiers.NONE]: 8,
+    [F.BoostedGuildTiers.TIER_1]: 24,
+    [F.BoostedGuildTiers.TIER_2]: 36,
+    [F.BoostedGuildTiers.TIER_3]: 48
   },
-  eB = Object.freeze({
-    [V.BoostedGuildTiers.NONE]: {
+  ek = Object.freeze({
+    [F.BoostedGuildTiers.NONE]: {
       features: [],
       limits: {
-        emoji: F.EMOJI_MAX_SLOTS,
-        bitrate: V.BITRATE_MAX,
-        fileSize: V.MAX_ATTACHMENT_SIZE,
+        emoji: V.EMOJI_MAX_SLOTS,
+        bitrate: F.BITRATE_MAX,
+        fileSize: F.MAX_ATTACHMENT_SIZE,
         screenShareQualityFramerate: 30,
         screenShareQualityResolution: "720p",
-        soundboardSounds: ek[V.BoostedGuildTiers.NONE],
+        soundboardSounds: eB[F.BoostedGuildTiers.NONE],
         maxConcurrentActivities: 2,
-        stickers: ew[V.BoostedGuildTiers.NONE],
-        stageVideoUsers: V.MAX_STAGE_VIDEO_USER_LIMIT_TIER01
+        stickers: ew[F.BoostedGuildTiers.NONE],
+        stageVideoUsers: F.MAX_STAGE_VIDEO_USER_LIMIT_TIER01
       }
     },
-    [V.BoostedGuildTiers.TIER_1]: {
-      features: [V.GuildFeatures.INVITE_SPLASH, V.GuildFeatures.ANIMATED_ICON],
+    [F.BoostedGuildTiers.TIER_1]: {
+      features: [F.GuildFeatures.INVITE_SPLASH, F.GuildFeatures.ANIMATED_ICON],
       limits: {
         emoji: 100,
         bitrate: 128e3,
-        fileSize: V.MAX_ATTACHMENT_SIZE,
+        fileSize: F.MAX_ATTACHMENT_SIZE,
         screenShareQualityFramerate: 60,
         screenShareQualityResolution: "720p",
-        soundboardSounds: ek[V.BoostedGuildTiers.TIER_1],
+        soundboardSounds: eB[F.BoostedGuildTiers.TIER_1],
         maxConcurrentActivities: 3,
-        stickers: ew[V.BoostedGuildTiers.TIER_1],
-        stageVideoUsers: V.MAX_STAGE_VIDEO_USER_LIMIT_TIER01
+        stickers: ew[F.BoostedGuildTiers.TIER_1],
+        stageVideoUsers: F.MAX_STAGE_VIDEO_USER_LIMIT_TIER01
       }
     },
-    [V.BoostedGuildTiers.TIER_2]: {
-      features: [V.GuildFeatures.INVITE_SPLASH, V.GuildFeatures.ANIMATED_ICON, V.GuildFeatures.BANNER, V.GuildFeatures.ROLE_ICONS],
+    [F.BoostedGuildTiers.TIER_2]: {
+      features: [F.GuildFeatures.INVITE_SPLASH, F.GuildFeatures.ANIMATED_ICON, F.GuildFeatures.BANNER, F.GuildFeatures.ROLE_ICONS],
       limits: {
         emoji: 150,
         bitrate: 256e3,
         fileSize: 52428800,
         screenShareQualityFramerate: 60,
         screenShareQualityResolution: "1080p",
-        soundboardSounds: ek[V.BoostedGuildTiers.TIER_2],
+        soundboardSounds: eB[F.BoostedGuildTiers.TIER_2],
         maxConcurrentActivities: 5,
-        stickers: ew[V.BoostedGuildTiers.TIER_2],
-        stageVideoUsers: V.MAX_STAGE_VIDEO_USER_LIMIT_TIER2
+        stickers: ew[F.BoostedGuildTiers.TIER_2],
+        stageVideoUsers: F.MAX_STAGE_VIDEO_USER_LIMIT_TIER2
       }
     },
-    [V.BoostedGuildTiers.TIER_3]: {
-      features: [V.GuildFeatures.INVITE_SPLASH, V.GuildFeatures.ANIMATED_ICON, V.GuildFeatures.BANNER, V.GuildFeatures.ANIMATED_BANNER, V.GuildFeatures.VANITY_URL, V.GuildFeatures.ROLE_ICONS],
+    [F.BoostedGuildTiers.TIER_3]: {
+      features: [F.GuildFeatures.INVITE_SPLASH, F.GuildFeatures.ANIMATED_ICON, F.GuildFeatures.BANNER, F.GuildFeatures.ANIMATED_BANNER, F.GuildFeatures.VANITY_URL, F.GuildFeatures.ROLE_ICONS],
       limits: {
         emoji: 250,
         bitrate: 384e3,
         fileSize: 104857600,
         screenShareQualityFramerate: 60,
         screenShareQualityResolution: "1080p",
-        soundboardSounds: ek[V.BoostedGuildTiers.TIER_3],
+        soundboardSounds: eB[F.BoostedGuildTiers.TIER_3],
         maxConcurrentActivities: Number.MAX_SAFE_INTEGER,
-        stickers: ew[V.BoostedGuildTiers.TIER_3],
-        stageVideoUsers: V.MAX_STAGE_VIDEO_USER_LIMIT_TIER3
+        stickers: ew[F.BoostedGuildTiers.TIER_3],
+        stageVideoUsers: F.MAX_STAGE_VIDEO_USER_LIMIT_TIER3
       }
     }
   }),
-  eV = ["978380692553465866", "1024422698568122368", "511651871736201216", "511651876987469824", "511651880837840896", "642251038925127690", "944037208325619722", "511651885459963904"];
+  eF = ["978380692553465866", "1024422698568122368", "511651871736201216", "511651876987469824", "511651880837840896", "642251038925127690", "944037208325619722", "511651885459963904"];
 (D = d || (d = {})).SOUNDBOARD_PLAY = "soundboard play", D.PROFILE_THEME_COLOR = "profile_theme_color", D.PROFILE_BANNER = "profile_banner", D.ANIMATED_AVATAR = "animated_avatar", D.AVATAR_DECORATION = "avatar_decoration", D.CLIENT_THEME = "client_theme", D.SHARED_CANVAS = "shared_canvas", D.PROFILE_EFFECT = "profile_effect", (v = _ || (_ = {})).FREE = "free", v.PREMIUM_STANDARD = "premium-standard";
-let eF = {
+let eV = {
   "1024422698568122368": 16,
   "511651876987469824": 16,
   "511651885459963904": 16,
@@ -621,7 +621,7 @@ let eH = Object.freeze({
       fileSize: 524288e3
     }
   });
-(G = S || (S = {})).EXPLORE_ALL_PERKS_CLICKED = "explore_all_perks_clicked", G.HELPER_COLLAPSED = "helper_collapsed", G.HELPER_UNCOLLAPSED = "helper_uncollapsed", G.UNLOCK_EMOJI_CLICKED = "unlock_emoji_clicked", G.CUSTOM_PROFILES_CLICKED = "custom_profiles_clicked", G.SERVER_BOOSTS_CLICKED = "server_boosts_clicked", G.HELPER_DISMISSED = "premium_feature_helper_dismissed", G.HELPER_RENDERED = "premium_feature_helper_rendered", (w = A || (A = {})).EMOJI_TUTORIAL_STARTED = "emoji_tutorial_started", w.EMOJI_INTRO_VIEWED = "emoji_intro_viewed", w.EMOJI_PROMPT_VIEWED = "emoji_prompt_viewed", w.CUSTOM_PROFILE_TUTORIAL_STARTED = "custom_profile_tutorial_started", w.CUSTOM_PROFILE_AVATAR_INTRO_VIEWED = "custom_profile_avatar_intro_viewed", w.CUSTOM_PROFILE_AVATAR_DECORATIONS_VIEWED = "custom_profile_avatar_decorations_viewed", w.CUSTOM_PROFILE_BANNER_INTRO_VIEWED = "custom_profile_banner_intro_viewed", w.CUSTOM_PROFILE_THEME_INTRO_VIEWED = "custom_profile_theme_intro_viewed", w.SERVER_PROFILE_INTRO_VIEWED = "server_profile_intro_viewed", w.SERVER_BOOST_TUTORIAL_STARTED = "server_boost_tutorial_started", w.BOOST_INTRO_VIEWED = "boost_intro_viewed", w.BOOST_PROMPT_VIEWED = "boost_prompt_viewed", (k = h || (h = {})).BOOST = "boost", k.DISMISS = "dismiss", (B = m || (m = {})).BADGE_TOOLTIP_VIEWED = "share_nitro_bagde_tooltip_viewed", B.BADGE_CLICKED = "share_nitro_badge_clicked", B.FLOW_STARTED = "share_nitro_flow_started", B.FLOW_COMPLETED = "share_nitro_flow_completed";
+(G = S || (S = {})).EXPLORE_ALL_PERKS_CLICKED = "explore_all_perks_clicked", G.HELPER_COLLAPSED = "helper_collapsed", G.HELPER_UNCOLLAPSED = "helper_uncollapsed", G.UNLOCK_EMOJI_CLICKED = "unlock_emoji_clicked", G.CUSTOM_PROFILES_CLICKED = "custom_profiles_clicked", G.SERVER_BOOSTS_CLICKED = "server_boosts_clicked", G.HELPER_DISMISSED = "premium_feature_helper_dismissed", G.HELPER_RENDERED = "premium_feature_helper_rendered", (w = A || (A = {})).EMOJI_TUTORIAL_STARTED = "emoji_tutorial_started", w.EMOJI_INTRO_VIEWED = "emoji_intro_viewed", w.EMOJI_PROMPT_VIEWED = "emoji_prompt_viewed", w.CUSTOM_PROFILE_TUTORIAL_STARTED = "custom_profile_tutorial_started", w.CUSTOM_PROFILE_AVATAR_INTRO_VIEWED = "custom_profile_avatar_intro_viewed", w.CUSTOM_PROFILE_AVATAR_DECORATIONS_VIEWED = "custom_profile_avatar_decorations_viewed", w.CUSTOM_PROFILE_BANNER_INTRO_VIEWED = "custom_profile_banner_intro_viewed", w.CUSTOM_PROFILE_THEME_INTRO_VIEWED = "custom_profile_theme_intro_viewed", w.SERVER_PROFILE_INTRO_VIEWED = "server_profile_intro_viewed", w.SERVER_BOOST_TUTORIAL_STARTED = "server_boost_tutorial_started", w.BOOST_INTRO_VIEWED = "boost_intro_viewed", w.BOOST_PROMPT_VIEWED = "boost_prompt_viewed", (B = h || (h = {})).BOOST = "boost", B.DISMISS = "dismiss", (k = m || (m = {})).BADGE_TOOLTIP_VIEWED = "share_nitro_bagde_tooltip_viewed", k.BADGE_CLICKED = "share_nitro_badge_clicked", k.FLOW_STARTED = "share_nitro_flow_started", k.FLOW_COMPLETED = "share_nitro_flow_completed";
 let ej = new Set(["PL", "TR"]),
   eW = [1, 2, 3],
   eK = [4, 5, 7, 6],

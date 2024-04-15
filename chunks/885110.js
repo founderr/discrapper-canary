@@ -29,28 +29,28 @@ let M = !1,
   b = [],
   G = !1,
   w = !0,
-  k = Object.freeze([]),
-  B = [];
+  B = Object.freeze([]),
+  k = [];
 
-function V(e) {
+function F(e) {
   return (0, N.shouldShareApplicationActivity)(e, C.default)
 }
 
-function F(e) {
+function V(e) {
   switch (e.type) {
     case v.ActivityTypes.LISTENING:
       if ((0, T.default)(e)) return S.default.shouldShowActivity();
-      if (null != e.application_id) return V(e.application_id);
+      if (null != e.application_id) return F(e.application_id);
       return !1;
     case v.ActivityTypes.PLAYING:
-      return null != e.application_id ? V(e.application_id) : function(e) {
+      return null != e.application_id ? F(e.application_id) : function(e) {
         let t = p.default.getGameByName(e);
-        return null != t ? V(t.id) : A.ShowCurrentGame.getSetting()
+        return null != t ? F(t.id) : A.ShowCurrentGame.getSetting()
       }(e.name);
     case v.ActivityTypes.STREAMING:
     case v.ActivityTypes.WATCHING:
     default:
-      return null == e.application_id || V(e.application_id)
+      return null == e.application_id || F(e.application_id)
   }
 }
 
@@ -64,12 +64,12 @@ function x() {
   }
   y === v.StatusTypes.ONLINE && U > 0 && (y = v.StatusTypes.IDLE);
   let t = !1,
-    n = w || y === v.StatusTypes.INVISIBLE ? [] : g.default.getActivities().filter(F);
+    n = w || y === v.StatusTypes.INVISIBLE ? [] : g.default.getActivities().filter(V);
   !d()(b, n) && (b = n, t = !0);
   let i = D.default.getRemoteActivities();
-  if (k !== i && (k = i, t = !0), t) {
+  if (B !== i && (B = i, t = !0), t) {
     let e = b.find(e => e.type === v.ActivityTypes.CUSTOM_STATUS);
-    B = b.filter(e => e.type !== v.ActivityTypes.CUSTOM_STATUS).length > 0 ? b : null != e ? [e, ...c()(k).filter(e => e.type !== v.ActivityTypes.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : c().uniqBy(k, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
+    k = b.filter(e => e.type !== v.ActivityTypes.CUSTOM_STATUS).length > 0 ? b : null != e ? [e, ...c()(B).filter(e => e.type !== v.ActivityTypes.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : c().uniqBy(B, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
   }
 }
 
@@ -78,7 +78,7 @@ function H() {
 }
 
 function Y() {
-  w = !1, P = v.StatusTypes.UNKNOWN, x(), L.default.setCurrentUserOnConnectionOpen(y, B)
+  w = !1, P = v.StatusTypes.UNKNOWN, x(), L.default.setCurrentUserOnConnectionOpen(y, k)
 }
 class j extends(s = E.default.Store) {
   initialize() {
@@ -98,11 +98,11 @@ class j extends(s = E.default.Store) {
   }
   getActivities() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return e ? B : b
+    return e ? k : b
   }
   getPrimaryActivity() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return e ? B[0] : b[0]
+    return e ? k[0] : b[0]
   }
   getApplicationActivity(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];

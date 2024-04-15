@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return x
   },
   getUserIdFromCommunicationDisabledUserKey: function() {
-    return F
+    return V
   }
 }), n("47120"), n("789020"), n("653041");
 var i, r, s, a, o, l, u = n("392711"),
@@ -39,32 +39,32 @@ let C = new I.default("GuildMemberStore"),
 
 function G(e, t) {
   if (null == t.communicationDisabledUntil || !(0, T.isMemberCommunicationDisabled)(t)) return w(e, t.userId);
-  let n = V(e, t.userId);
-  D[n] !== t.communicationDisabledUntil && (0, T.isMemberCommunicationDisabled)(t) && (D[n] = t.communicationDisabledUntil, k(n))
+  let n = F(e, t.userId);
+  D[n] !== t.communicationDisabledUntil && (0, T.isMemberCommunicationDisabled)(t) && (D[n] = t.communicationDisabledUntil, B(n))
 }
 
 function w(e, t) {
   if (null != t) {
-    let n = V(e, t);
-    null != D[n] && k(n), B(V(e, t))
+    let n = F(e, t);
+    null != D[n] && B(n), k(F(e, t))
   } else
-    for (let t in D) x(t) === e && (k(t), B(t))
-}
-
-function k(e) {
-  M += 1, P[e] = M
+    for (let t in D) x(t) === e && (B(t), k(t))
 }
 
 function B(e) {
-  F(e) === N.default.getId() && (0, f.clearCommunicationDisabledNotice)(x(e)), delete D[e]
+  M += 1, P[e] = M
 }
 
-function V(e, t) {
+function k(e) {
+  V(e) === N.default.getId() && (0, f.clearCommunicationDisabledNotice)(x(e)), delete D[e]
+}
+
+function F(e, t) {
   let n = [];
   return n[0] = e, n[1] = t, n.join("-")
 }
 
-function F(e) {
+function V(e) {
   return e.split("-")[1]
 }
 
