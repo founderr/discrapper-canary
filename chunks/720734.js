@@ -289,13 +289,8 @@ class eK extends s.PureComponent {
             visibleContent: t,
             markAsDismissed: a
           } = e;
-          if (t === o.DismissibleContent.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP) return (0, n.jsx)(m.Popout, {
-            position: "top",
-            align: "center",
-            shouldShow: !0,
-            renderPopout: () => (0, n.jsx)(b.default, {
-              markAsDismissed: a
-            }),
+          if (t === o.DismissibleContent.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP) return (0, n.jsx)(b.default, {
+            markAsDismissed: a,
             children: () => this.renderAvatarWithPopout()
           });
           return this.renderAvatarWithPopout()

@@ -1,9 +1,9 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return u
+    return d
   }
-});
+}), a("47120");
 var n = a("735250"),
   s = a("470079"),
   l = a("481060"),
@@ -33,5 +33,28 @@ function u(e) {
     }), (0, n.jsx)("div", {
       className: o.pointer
     })]
+  })
+}
+
+function d(e) {
+  let {
+    children: t,
+    markAsDismissed: a
+  } = e, [i, r] = s.useState(!1);
+  return s.useEffect(() => {
+    let e = setTimeout(() => {
+      r(!0)
+    }, 1e3);
+    return () => {
+      clearTimeout(e)
+    }
+  }, [r]), (0, n.jsx)(l.Popout, {
+    position: "top",
+    align: "left",
+    shouldShow: i,
+    renderPopout: () => (0, n.jsx)(u, {
+      markAsDismissed: a
+    }),
+    children: t
   })
 }
