@@ -25,7 +25,6 @@ let r = {
     nav_experiment_you_bar_grounded: "[NavI] Grounded you bar",
     nav_experiment_you_bar_large_buttons: "[NavI] Small buttons in you bar",
     nav_experiment_you_bar_large_messages: "[NavI] Large avatars in messages",
-    nav_experiment_you_bar_messages_new_header: "[NavI] Use updated header in messages panel",
     force_channel_list_v2: "Force channel list V2"
   },
   d = {};
