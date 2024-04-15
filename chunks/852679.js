@@ -23,12 +23,12 @@ async function E(e) {
     guildId: T,
     closeLayer: f,
     onCloseModal: S,
-    totalNumberOfSlotsToAssign: A = 1,
-    disablePremiumUpsell: h,
+    totalNumberOfSlotsToAssign: h = 1,
+    disablePremiumUpsell: A,
     onSubscriptionConfirmation: m,
     inPopout: N,
-    applicationId: O
-  } = e, p = N ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT, R = l.default.getPremiumTypeSubscription();
+    applicationId: p
+  } = e, O = N ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT, R = l.default.getPremiumTypeSubscription();
   if (null != R && R.isPurchasedExternally && null != R.paymentGateway) {
     null != f && f(), s.default.show({
       title: c.default.Messages.BILLING_MANAGED_BY_PAYMENT_GATEWAY.format({
@@ -45,7 +45,7 @@ async function E(e) {
   let C = await (0, r.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("40326"), n.e("23357"), n.e("15972"), n.e("58625"), n.e("14720"), n.e("63438"), n.e("62511"), n.e("61247"), n.e("8016"), n.e("58600"), n.e("22646"), n.e("20533"), n.e("35027")]).then(n.bind(n, "343649"));
+    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("40326"), n.e("23357"), n.e("15972"), n.e("58625"), n.e("14720"), n.e("63438"), n.e("62511"), n.e("61247"), n.e("8016"), n.e("58600"), n.e("22646"), n.e("54999"), n.e("57743")]).then(n.bind(n, "343649"));
     return n => {
       let {
         transitionState: r,
@@ -60,11 +60,11 @@ async function E(e) {
         analyticsLocation: E,
         analyticsSourceLocation: null != I ? I : E,
         guildId: T,
-        totalNumberOfSlotsToAssign: A,
+        totalNumberOfSlotsToAssign: h,
         closeGuildPerksModal: f,
-        disablePremiumUpsell: h,
+        disablePremiumUpsell: A,
         onSubscriptionConfirmation: m,
-        applicationId: O
+        applicationId: p
       })
     }
   }, {
@@ -77,6 +77,6 @@ async function E(e) {
     onCloseRequest: () => {
       null != C && (0, r.closeModal)(C), null == S || S(!1)
     },
-    contextKey: p
+    contextKey: O
   })
 }

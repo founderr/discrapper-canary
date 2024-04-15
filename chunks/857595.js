@@ -25,7 +25,7 @@ n.r(t), n.d(t, {
     return C
   },
   setSaturation: function() {
-    return h
+    return A
   },
   setSyncForcedColors: function() {
     return N
@@ -34,13 +34,13 @@ n.r(t), n.d(t, {
     return c
   },
   systemColorPreferencesChanged: function() {
-    return O
-  },
-  systemPrefersContrastChanged: function() {
     return p
   },
+  systemPrefersContrastChanged: function() {
+    return O
+  },
   systemPrefersReducedMotionChanged: function() {
-    return A
+    return h
   },
   toggleDarkSidebar: function() {
     return f
@@ -119,14 +119,14 @@ function S() {
   })
 }
 
-function A(e) {
+function h(e) {
   i.default.dispatch({
     type: "ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED",
     systemPrefersReducedMotion: e
   })
 }
 
-function h(e) {
+function A(e) {
   i.default.dispatch({
     type: "ACCESSIBILITY_SET_SATURATION",
     saturation: e
@@ -163,7 +163,7 @@ function N(e) {
   })
 }
 
-function O(e, t) {
+function p(e, t) {
   i.default.dispatch({
     type: "ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED",
     systemPrefersColorScheme: e,
@@ -171,7 +171,7 @@ function O(e, t) {
   })
 }
 
-function p(e) {
+function O(e) {
   i.default.dispatch({
     type: "ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED",
     systemPrefersContrast: e

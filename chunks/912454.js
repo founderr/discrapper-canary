@@ -1,25 +1,25 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   IconSizes: function() {
     return h
   },
   IconTypes: function() {
     return a
   }
-}), r("757143");
-var a, n, i, o = r("735250"),
-  l = r("470079"),
-  s = r("120356"),
-  c = r.n(s),
-  d = r("918210");
+}), t("757143");
+var a, n, i, l = t("735250"),
+  o = t("470079"),
+  s = t("120356"),
+  c = t.n(s),
+  d = t("918210");
 
-function u(e, t, r) {
-  return t in e ? Object.defineProperty(e, t, {
-    value: r,
+function u(e, r, t) {
+  return r in e ? Object.defineProperty(e, r, {
+    value: t,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = r, e
+  }) : e[r] = t, e
 }(i = a || (a = {})).UNKNOWN = "unknown", i.VISA = "visa", i.DISCOVER = "discover", i.MASTERCARD = "mastercard", i.AMEX = "amex", i.PAYPAL = "paypal", i.PAYMENT_REQUEST = "paymentRequest", i.G_PAY = "gPay", i.DINERS = "diners", i.JCB = "jcb", i.UNIONPAY = "unionpay", i.SOFORT = "sofort", i.PRZELEWY24 = "przelewy24", i.GIROPAY = "giropay", i.PAYSAFECARD = "paysafecard", i.GCASH = "gcash", i.GRABPAY = "grabpay", i.MOMO_WALLET = "momo_wallet", i.VENMO = "venmo", i.KAKAOPAY = "kakaopay", i.GOPAY_WALLET = "gopay_wallet", i.BANCONTACT = "bancontact", i.EPS = "eps", i.IDEAL = "ideal", i.CASH_APP = "cash_app", i.APPLE = "apple";
 let h = {
   SMALL: d.cardIconSmall,
@@ -27,26 +27,26 @@ let h = {
   LARGE: d.cardIconLarge,
   XLARGE: d.cardIconXLarge
 };
-class p extends(n = l.PureComponent) {
+class p extends(n = o.PureComponent) {
   static getType(e) {
     return null == e ? "unknown" : a[e.replace(/[^a-z0-9_]/gi, "").toUpperCase()] || "unknown"
   }
   render() {
     let {
       flipped: e,
-      type: t,
-      className: r,
+      type: r,
+      className: t,
       size: a
     } = this.props;
-    return (0, o.jsx)("div", {
-      className: c()(a, d[t], r, {
+    return (0, l.jsx)("div", {
+      className: c()(a, d[r], t, {
         [d.flipped]: e
       }),
-      children: t
+      children: r
     })
   }
 }
 u(p, "Types", a), u(p, "Sizes", h), u(p, "defaultProps", {
   size: h.SMALL,
   flipped: !1
-}), t.default = p
+}), r.default = p

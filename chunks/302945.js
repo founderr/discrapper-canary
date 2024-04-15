@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return h
   }
 });
 var i = n("735250"),
@@ -20,15 +20,15 @@ var i = n("735250"),
   f = n("740106");
 let S = [E.PremiumUpsellTypes.STREAM_QUALITY_UPSELL];
 
-function A(e) {
+function h(e) {
   let {
     premiumUpsellType: t,
     className: n
-  } = e, s = (0, l.useStateFromStores)([d.default], () => d.default.affinities), A = s.length > 0 && S.includes(t), h = _.default.useExperiment({
+  } = e, s = (0, l.useStateFromStores)([d.default], () => d.default.affinities), h = s.length > 0 && S.includes(t), A = _.default.useExperiment({
     location: "HD Streaming Upsell"
   }, {
-    autoTrackExposure: A,
-    disable: !A
+    autoTrackExposure: h,
+    disable: !h
   }).enabled, m = (0, l.useStateFromStores)([d.default], () => d.default.hasFetched);
   r.useEffect(() => {
     !m && u.getNitroAffinity()
@@ -38,7 +38,7 @@ function A(e) {
     applyMask: t !== s.length - 1,
     size: I.AvatarSizes.SIZE_20
   }, e.id));
-  return h ? (0, i.jsxs)("div", {
+  return A ? (0, i.jsxs)("div", {
     className: a()(f.container, n),
     children: [(0, i.jsx)("div", {
       className: f.iconContainer,

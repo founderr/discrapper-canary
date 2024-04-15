@@ -26,8 +26,8 @@ function f(e, t, n) {
 let S = Object.freeze({
     state: 1
   }),
-  A = new Set;
-class h {
+  h = new Set;
+class A {
   handleCacheDisposed(e, t) {
     this._cachedMessageIds.has(e) && (this._cachedMessageIds = new Set(this._cachedMessageIds), this._cachedMessageIds.delete(e))
   }
@@ -61,7 +61,7 @@ let m = new class e {
   }
   set(e, t, n) {
     let i = this._channelCaches.get(e);
-    null == i && (i = new h, this._channelCaches.set(e, i)), i.set(t, n)
+    null == i && (i = new A, this._channelCaches.set(e, i)), i.set(t, n)
   }
   updateExistingMessageIfCached(e) {
     let t = this._channelCaches.get(e.channel_id);
@@ -118,24 +118,24 @@ function N(e) {
   return t
 }
 
-function O(e, t) {
+function p(e, t) {
   let n = !1;
   for (let i of e) n = !1 !== t(i) || n;
   return n
 }
 
-function p(e) {
+function O(e) {
   let {
     messages: t
   } = e;
-  return O(t, e => N(e))
+  return p(t, e => N(e))
 }
 
 function R(e) {
   let {
     messages: t
   } = e;
-  return O(t, e => O(e, e => N(e)))
+  return p(t, e => p(e, e => N(e)))
 }
 
 function C(e) {
@@ -157,7 +157,7 @@ function D(e) {
   let {
     firstMessages: t
   } = e;
-  return null != t && O(t, e => N(e))
+  return null != t && p(t, e => N(e))
 }
 class v extends(r = l.default.Store) {
   initialize() {
@@ -173,7 +173,7 @@ class v extends(r = l.default.Store) {
   }
   getReplyIdsForChannel(e) {
     let t;
-    return null != e && (t = m.getCachedMessageIdsForChannel(e)), null != t ? t : A
+    return null != e && (t = m.getCachedMessageIdsForChannel(e)), null != t ? t : h
   }
 }
 f(v, "displayName", "ReferencedMessageStore"), t.default = new v(u.default, {
@@ -181,18 +181,18 @@ f(v, "displayName", "ReferencedMessageStore"), t.default = new v(u.default, {
     let {
       messages: t
     } = e;
-    return O(Object.values(t), e => O(Object.values(e), e => N(e)))
+    return p(Object.values(t), e => p(Object.values(e), e => N(e)))
   },
-  LOCAL_MESSAGES_LOADED: p,
-  LOAD_MESSAGES_SUCCESS: p,
-  LOAD_MESSAGES_AROUND_SUCCESS: p,
+  LOCAL_MESSAGES_LOADED: O,
+  LOAD_MESSAGES_SUCCESS: O,
+  LOAD_MESSAGES_AROUND_SUCCESS: O,
   SEARCH_FINISH: R,
   MOD_VIEW_SEARCH_FINISH: R,
   GUILD_FEED_FETCH_SUCCESS: function(e) {
     let {
       data: t
     } = e;
-    return O((0, _.getMessagesFromGuildFeedFetch)(t), e => N(e))
+    return p((0, _.getMessagesFromGuildFeedFetch)(t), e => N(e))
   },
   LOAD_THREADS_SUCCESS: D,
   LOAD_ARCHIVED_THREADS_SUCCESS: D,
@@ -213,7 +213,7 @@ f(v, "displayName", "ReferencedMessageStore"), t.default = new v(u.default, {
     let {
       threads: t
     } = e;
-    return O(Object.values(t), e => {
+    return p(Object.values(t), e => {
       let {
         first_message: t
       } = e;
@@ -250,7 +250,7 @@ f(v, "displayName", "ReferencedMessageStore"), t.default = new v(u.default, {
       ids: t,
       channelId: n
     } = e;
-    return O(t, e => g(n, e))
+    return p(t, e => g(n, e))
   },
   CREATE_PENDING_REPLY: function(e) {
     let {

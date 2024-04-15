@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return f
   },
   fetchHighlightedCreatorGuildDetails: function() {
-    return O
+    return p
   },
   getGuildMonetizationRestrictions: function() {
     return N
@@ -31,7 +31,7 @@ n.r(t), n.d(t, {
     return m
   },
   getGuildRoleSubscriptionTrials: function() {
-    return A
+    return h
   },
   getGuildRoleSubscriptionsSettings: function() {
     return _
@@ -46,7 +46,7 @@ n.r(t), n.d(t, {
     return c
   },
   updateGuildRoleSubscriptionsTrial: function() {
-    return h
+    return A
   }
 });
 var i = n("544891"),
@@ -170,7 +170,7 @@ let o = async (e, t) => {
   } catch (e) {
     throw new r.APIError(e)
   }
-}, A = async e => {
+}, h = async e => {
   try {
     return (await i.HTTP.get({
       url: s.Endpoints.GUILD_ROLE_SUBSCRIPTION_TRIALS(e)
@@ -178,7 +178,7 @@ let o = async (e, t) => {
   } catch (e) {
     throw new r.APIError(e)
   }
-}, h = async (e, t, n) => {
+}, A = async (e, t, n) => {
   try {
     return (await i.HTTP.patch({
       url: s.Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTING_TRIAL(e, t),
@@ -207,7 +207,7 @@ let o = async (e, t) => {
   } catch (e) {
     throw new r.APIError(e)
   }
-}, O = async e => {
+}, p = async e => {
   try {
     var t;
     let n = await i.HTTP.get({

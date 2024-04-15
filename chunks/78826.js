@@ -55,7 +55,7 @@ function u(e) {
         return n.delete(e), n
       })
     }, []),
-    A = r.useCallback((e, t) => {
+    h = r.useCallback((e, t) => {
       var n;
       if (I(!0), l(e)) return;
       c(t => {
@@ -75,16 +75,16 @@ function u(e) {
         }), e.removeEventListener("error", n)
       })
     }, [f, S]),
-    h = r.useMemo(() => _.size > 0 || !E, [E, _]);
+    A = r.useMemo(() => _.size > 0 || !E, [E, _]);
   r.useEffect(() => {
-    !h && (T.current = !0)
-  }, [h]);
+    !A && (T.current = !0)
+  }, [A]);
   let m = r.useMemo(() => ({
-    registerAsset: A,
+    registerAsset: h,
     unregisterAsset: S,
     hasError: u,
-    isLoading: h && !T.current
-  }), [A, S, u, h]);
+    isLoading: A && !T.current
+  }), [h, S, u, A]);
   return (0, i.jsx)(o.Provider, {
     value: m,
     children: t

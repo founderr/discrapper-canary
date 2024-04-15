@@ -43,10 +43,10 @@ n.r(t), n.d(t, {
     return M
   },
   MAX_GAME_HOURS: function() {
-    return h
+    return A
   },
   MAX_INTEREST_LENGTH: function() {
-    return A
+    return h
   },
   MAX_NUM_INTERESTS: function() {
     return S
@@ -64,7 +64,7 @@ n.r(t), n.d(t, {
     return G
   },
   PLAYSTYLE_GROUPS: function() {
-    return O
+    return p
   },
   SUGGESTED_TRAITS_SET: function() {
     return U
@@ -82,7 +82,7 @@ n.r(t), n.d(t, {
     return R
   },
   getPlaystyleTitle: function() {
-    return p
+    return O
   },
   toServerClanData: function() {
     return k
@@ -95,12 +95,12 @@ let I = 4,
   T = "ClanSetupModal",
   f = 20,
   S = 50,
-  A = 50,
-  h = 7,
+  h = 50,
+  A = 7,
   m = c()("2024-01-01T00:00:00"),
   N = "LT";
 (o = i || (i = {}))[o.NONE = 0] = "NONE", o[o.SOCIAL = 1] = "SOCIAL", o[o.CASUAL = 2] = "CASUAL", o[o.COMPETITIVE = 3] = "COMPETITIVE", o[o.CREATIVE = 4] = "CREATIVE", o[o.VERY_HARDCORE = 5] = "VERY_HARDCORE";
-let O = {
+let p = {
   0: "NONE",
   4: "NONE",
   1: "CASUAL",
@@ -109,7 +109,7 @@ let O = {
   5: "COMPETITIVE"
 };
 
-function p(e) {
+function O(e) {
   switch (e) {
     case 1:
       return E.default.Messages.CLAN_SETUP_PLAYSTYLE_SOCIAL_TITLE;

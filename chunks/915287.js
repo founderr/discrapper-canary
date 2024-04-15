@@ -31,12 +31,12 @@ function c(e, t, n, s) {
       className: T,
       onScroll: f,
       onResize: S = null,
-      onContentResize: A = null,
-      dir: h = "ltr",
+      onContentResize: h = null,
+      dir: A = "ltr",
       sections: m,
       sectionHeight: N,
-      rowHeight: O,
-      footerHeight: p = 0,
+      rowHeight: p,
+      footerHeight: O = 0,
       sidebarHeight: R,
       listHeaderHeight: C = 0,
       renderSection: g,
@@ -60,7 +60,7 @@ function c(e, t, n, s) {
       innerClassName: j,
       innerTag: W = "div",
       ...K
-    } = s, z = r.useRef(null), X = r.useRef(null), [Q, q] = r.useState(!1), {
+    } = s, z = r.useRef(null), X = r.useRef(null), [q, Q] = r.useState(!1), {
       scrollerRef: Z,
       scrollerState: J,
       getScrollerState: $
@@ -70,7 +70,7 @@ function c(e, t, n, s) {
       className: T,
       specs: o,
       orientation: "vertical",
-      dir: h
+      dir: A
     });
     let {
       spacerTop: ee,
@@ -83,8 +83,8 @@ function c(e, t, n, s) {
     } = (0, d.useVirtualizedState)({
       sections: m,
       sectionHeight: N,
-      rowHeight: O,
-      footerHeight: p,
+      rowHeight: p,
+      footerHeight: O,
       sidebarHeight: R,
       listHeaderHeight: C,
       paddingTop: U,
@@ -92,9 +92,9 @@ function c(e, t, n, s) {
       chunkSize: B,
       getScrollerState: $,
       getAnchorId: P
-    }), eo = (0, d.useScrollSpring)(Z), el = r.useRef(S), eu = r.useRef(A);
+    }), eo = (0, d.useScrollSpring)(Z), el = r.useRef(S), eu = r.useRef(h);
     r.useLayoutEffect(() => {
-      el.current = S, eu.current = A
+      el.current = S, eu.current = h
     });
     let ed = r.useCallback(function() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
@@ -147,8 +147,8 @@ function c(e, t, n, s) {
       ...(0, d.getAnimatedListScrollHelpers)(Z, $, er, eo)
     }), [Z, $, eE, ec, er, eo]);
     let eI = r.useCallback(e => {
-      ed(1), null == z.current ? q(!0) : clearTimeout(z.current), z.current = setTimeout(() => {
-        z.current = null, q(!1)
+      ed(1), null == z.current ? Q(!0) : clearTimeout(z.current), z.current = setTimeout(() => {
+        z.current = null, Q(!1)
       }, 200), null != f && f(e)
     }, [f, ed]);
     return r.useLayoutEffect(() => {
@@ -167,7 +167,7 @@ function c(e, t, n, s) {
         [e]: !0,
         [t]: G,
         [n]: w,
-        [_.scrolling]: Q
+        [_.scrolling]: q
       }),
       style: (0, d.getMergedOrientationStyles)(k),
       ...K,

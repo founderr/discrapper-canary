@@ -1,9 +1,9 @@
 "use strict";
 let i, r, s, a, o, l, u, d, _, c, E, I, T, f;
 n.r(t);
-var S, A, h, m, N = n("979554"),
-  O = n("442837"),
-  p = n("570140"),
+var S, h, A, m, N = n("979554"),
+  p = n("442837"),
+  O = n("570140"),
   R = n("981631");
 let C = R.FormStates.CLOSED,
   g = {};
@@ -31,7 +31,7 @@ function y() {
 function P() {
   E = void 0, I = void 0, T = void 0, f = void 0, c = void 0
 }
-class U extends(m = O.default.Store) {
+class U extends(m = p.default.Store) {
   getFormState() {
     return C
   }
@@ -109,12 +109,12 @@ class U extends(m = O.default.Store) {
     }
   }
 }
-h = "UserSettingsAccountStore", (A = "displayName") in(S = U) ? Object.defineProperty(S, A, {
-  value: h,
+A = "UserSettingsAccountStore", (h = "displayName") in(S = U) ? Object.defineProperty(S, h, {
+  value: A,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : S[A] = h, t.default = new U(p.default, {
+}) : S[h] = A, t.default = new U(O.default, {
   USER_SETTINGS_ACCOUNT_INIT: L,
   USER_SETTINGS_MODAL_INIT: L,
   USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: L,

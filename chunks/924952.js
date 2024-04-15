@@ -1,45 +1,45 @@
 "use strict";
-n.r(t), n.d(t, {
+u.r(t), u.d(t, {
   default: function() {
-    return E
+    return c
   }
 });
-var l = n("735250");
-n("470079");
-var u = n("442837"),
-  a = n("481060"),
-  s = n("889161"),
-  d = n("471253"),
-  i = n("924301"),
-  r = n("482241"),
-  o = n("765305"),
-  c = n("689938");
+var a = u("735250");
+u("470079");
+var n = u("442837"),
+  l = u("481060"),
+  s = u("889161"),
+  d = u("471253"),
+  i = u("924301"),
+  o = u("482241"),
+  r = u("765305"),
+  f = u("689938");
 
-function E(e, t, n) {
+function c(e, t, u) {
   let {
-    canManageGuildEvent: E
-  } = (0, s.useManageResourcePermissions)(null != n ? n : t), f = (0, u.useStateFromStores)([i.default], () => i.default.isActive(e)), _ = (0, u.useStateFromStores)([i.default], () => i.default.getGuildScheduledEvent(e), [e]), T = E(_);
-  if (null == e || !T || !f || (null == _ ? void 0 : _.entity_type) === o.GuildScheduledEventEntityTypes.EXTERNAL) return null;
+    canManageGuildEvent: c
+  } = (0, s.useManageResourcePermissions)(null != u ? u : t), E = (0, n.useStateFromStores)([i.default], () => i.default.isActive(e)), _ = (0, n.useStateFromStores)([i.default], () => i.default.getGuildScheduledEvent(e), [e]), M = c(_);
+  if (null == e || !M || !E || (null == _ ? void 0 : _.entity_type) === r.GuildScheduledEventEntityTypes.EXTERNAL) return null;
   let S = () => {
-    if (null == n ? void 0 : n.isGuildStageVoice()) {
-      (0, d.endStage)(n);
+    if (null == u ? void 0 : u.isGuildStageVoice()) {
+      (0, d.endStage)(u);
       return
     }
-    null != e && r.default.endEvent(e, t.id), (0, a.closeAllModals)()
+    null != e && o.default.endEvent(e, t.id), (0, l.closeAllModals)()
   };
-  return (0, l.jsx)(a.MenuItem, {
-    id: c.default.Messages.END_EVENT,
-    label: c.default.Messages.END_EVENT,
+  return (0, a.jsx)(l.MenuItem, {
+    id: f.default.Messages.END_EVENT,
+    label: f.default.Messages.END_EVENT,
     action: function() {
-      (0, a.openModal)(e => (0, l.jsx)(a.ConfirmModal, {
+      (0, l.openModal)(e => (0, a.jsx)(l.ConfirmModal, {
         ...e,
-        header: c.default.Messages.END_EVENT,
-        confirmText: c.default.Messages.GUILD_EVENT_END_PROMPT_CONFIRM,
-        cancelText: c.default.Messages.CANCEL,
+        header: f.default.Messages.END_EVENT,
+        confirmText: f.default.Messages.GUILD_EVENT_END_PROMPT_CONFIRM,
+        cancelText: f.default.Messages.CANCEL,
         onConfirm: S,
-        children: (0, l.jsx)(a.Text, {
+        children: (0, a.jsx)(l.Text, {
           variant: "text-md/normal",
-          children: c.default.Messages.GUILD_EVENT_EXTERNAL_END_PROMPT_TITLE
+          children: f.default.Messages.GUILD_EVENT_EXTERNAL_END_PROMPT_TITLE
         })
       }))
     },

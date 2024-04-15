@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return _
   },
   useAutomodAvatar: function() {
-    return f
+    return E
   }
 }), n("47120");
 var s = n("735250"),
@@ -16,9 +16,9 @@ var s = n("735250"),
   u = n("998502"),
   d = n("689938"),
   c = n("250259");
-let E = u.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
+let f = u.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
 
-function f() {
+function E() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
     [t, n] = a.useState(!1),
     s = (0, l.useStateFromStores)([r.default], () => r.default.useReducedMotion),
@@ -42,7 +42,7 @@ function _(e) {
   } = e;
   return (0, s.jsx)("div", {
     className: c.avatarContainer,
-    children: (0, s.jsx)(E, {
+    children: (0, s.jsx)(f, {
       src: t,
       size: i.AvatarSizes.SIZE_40,
       "aria-label": d.default.Messages.GUILD_AUTOMOD_USERNAME

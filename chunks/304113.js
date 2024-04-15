@@ -4,9 +4,9 @@ s.r(t), s.d(t, {
     return o
   }
 });
-var a = s("735250");
+var l = s("735250");
 s("470079");
-var l = s("447452"),
+var a = s("447452"),
   i = s("910364"),
   n = s("107889");
 
@@ -16,12 +16,12 @@ function o(e) {
     ...s
   } = e, {
     basicsEnabled: o
-  } = (0, l.useSimplifiedProfileExperiment)({
+  } = (0, a.useSimplifiedProfileExperiment)({
     location: t
   });
-  return o ? (0, a.jsx)(n.default, {
+  return o ? (0, l.jsx)(n.default, {
     ...s
-  }) : (0, a.jsx)(i.default, {
+  }) : (0, l.jsx)(i.default, {
     ...s
   })
 }

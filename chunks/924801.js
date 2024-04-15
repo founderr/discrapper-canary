@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   convertPrimeTimeSelectionToRRule: function() {
-    return O
+    return p
   },
   formatTimesForServer: function() {
     return m
@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return c
   },
   getTimeRangesInNextWeek: function() {
-    return h
+    return A
   },
   primetimeToString: function() {
     return N
@@ -174,7 +174,7 @@ let _ = function() {
         return [r()(e, u.LOCALE_TIME_FORMAT), 2]
     }
   },
-  A = e => {
+  h = e => {
     if (null == e.day || null == e.time) return null;
     let t = r()(),
       n = t.clone().add(1, "day"),
@@ -185,17 +185,17 @@ let _ = function() {
     return e.day === l.DayOptions.WEEKDAYS ? o = i ? t.isAfter(a) ? s ? a.day(n.weekday()) : a.day(1) : a.day(t.weekday()) : e.time.day(1) : e.day === l.DayOptions.WEEKENDS ? i ? o = a.day(6) : t.isAfter(a) && (o = s ? a.day(6) : a.day(n.weekday())) : o = a.day(E(e.day)), t.isAfter(o) && (o = o.add(1, "week")), o
   };
 
-function h(e) {
+function A(e) {
   let t = [];
   return e.forEach(e => {
     if (null == e.day || null == e.time) return null;
     let [n, i] = S(e.time);
     if (e.day === l.DayOptions.WEEKENDS) {
-      let e = A({
+      let e = h({
           day: l.DayOptions.SATURDAY,
           time: n
         }),
-        r = A({
+        r = h({
           day: l.DayOptions.SUNDAY,
           time: n
         });
@@ -207,7 +207,7 @@ function h(e) {
         end: r.clone().add(i, "hour")
       })
     } else if (e.day === l.DayOptions.WEEKDAYS) {
-      let r = A({
+      let r = h({
         day: e.day,
         time: n
       });
@@ -216,7 +216,7 @@ function h(e) {
         end: r.clone().add(i, "hour")
       })
     } else {
-      let r = A({
+      let r = h({
         day: e.day,
         time: n
       });
@@ -234,11 +234,11 @@ function m(e) {
     if (null == e.day || null == e.time) return null;
     let [n, i] = S(e.time);
     if (e.day === l.DayOptions.WEEKENDS) {
-      let e = A({
+      let e = h({
           day: l.DayOptions.SATURDAY,
           time: n
         }),
-        r = A({
+        r = h({
           day: l.DayOptions.SUNDAY,
           time: n
         });
@@ -252,7 +252,7 @@ function m(e) {
         days: [(0, a.convertJSDayToRRuleDay)(r.toDate().getUTCDay()).weekday]
       })
     } else if (e.day === l.DayOptions.WEEKDAYS) {
-      let r = A({
+      let r = h({
         day: e.day,
         time: n
       });
@@ -262,7 +262,7 @@ function m(e) {
         days: (0, a.getValidWeekdays)(r)
       })
     } else {
-      let r = A({
+      let r = h({
         day: e.day,
         time: n
       });
@@ -286,7 +286,7 @@ function N(e) {
   return "".concat(r, " ").concat(n)
 }
 
-function O(e) {
+function p(e) {
   return m(e).map(e => ({
     start: e.scheduled_start_time,
     frequency: e.days.length > 1 ? s.RRule.DAILY : s.RRule.WEEKLY,

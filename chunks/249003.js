@@ -4,14 +4,14 @@ s.r(t), s.d(t, {
     return o
   }
 });
-var a = s("442837"),
-  l = s("314897"),
+var l = s("442837"),
+  a = s("314897"),
   i = s("699516"),
   n = s("981631");
 
 function o(e) {
-  let t = (0, a.useStateFromStores)([l.default], () => l.default.getId() === (null == e ? void 0 : e.id)),
-    s = (0, a.useStateFromStores)([i.default], () => null != e ? i.default.getRelationshipType(e.id) : n.RelationshipTypes.NONE);
+  let t = (0, l.useStateFromStores)([a.default], () => a.default.getId() === (null == e ? void 0 : e.id)),
+    s = (0, l.useStateFromStores)([i.default], () => null != e ? i.default.getRelationshipType(e.id) : n.RelationshipTypes.NONE);
   return null == e || t || s === n.RelationshipTypes.BLOCKED ? {
     relationshipType: s,
     canReceiveMessage: !1,

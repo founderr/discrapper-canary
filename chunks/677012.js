@@ -1,95 +1,95 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return h
   }
 });
 var l = n("735250"),
   a = n("470079"),
-  u = n("477690"),
-  i = n("481060"),
-  o = n("208156"),
-  s = n("962250"),
-  d = n("368874"),
-  r = n("467679"),
+  i = n("477690"),
+  u = n("481060"),
+  r = n("208156"),
+  o = n("962250"),
+  s = n("368874"),
+  d = n("467679"),
   c = n("465670"),
-  E = n("624138"),
-  p = n("293979"),
+  f = n("624138"),
+  I = n("293979"),
   T = n("674563"),
-  f = n("689938"),
-  m = n("995657");
-let _ = (0, E.cssValueToNumber)(u.default.INTERACTION_IFRAME_MODAL_MODAL_MIN_WIDTH),
-  S = (0, E.cssValueToNumber)(u.default.INTERACTION_IFRAME_MODAL_MODAL_MAX_WIDTH),
-  C = (0, E.cssValueToNumber)(u.default.INTERACTION_IFRAME_MODAL_MODAL_MARGIN),
-  I = (0, E.cssValueToNumber)(u.default.INTERACTION_IFRAME_MODAL_MODAL_HEADER_HEIGHT);
+  m = n("689938"),
+  E = n("995657");
+let p = (0, f.cssValueToNumber)(i.default.INTERACTION_IFRAME_MODAL_MODAL_MIN_WIDTH),
+  _ = (0, f.cssValueToNumber)(i.default.INTERACTION_IFRAME_MODAL_MODAL_MAX_WIDTH),
+  N = (0, f.cssValueToNumber)(i.default.INTERACTION_IFRAME_MODAL_MODAL_MARGIN),
+  S = (0, f.cssValueToNumber)(i.default.INTERACTION_IFRAME_MODAL_MODAL_HEADER_HEIGHT);
 
-function N(e) {
+function h(e) {
   var t;
   let {
     title: n,
-    onClose: u
+    onClose: i
   } = e, {
-    applicationIconURL: E,
-    applicationName: N,
-    queryParams: O,
-    iframeUrl: y
-  } = (0, p.useIframeModalState)(e), {
-    width: L,
-    height: A
-  } = (0, s.useScreenDimensions)(), v = a.useMemo(() => {
-    let e = Math.min((A - I - 2 * C) * 16 / 9, S);
-    return Math.max(_, Math.min(L - 2 * C, e))
-  }, [L, A]);
-  return (0, l.jsx)(i.ModalRoot, {
+    applicationIconURL: f,
+    applicationName: h,
+    queryParams: A,
+    iframeUrl: M
+  } = (0, I.useIframeModalState)(e), {
+    width: C,
+    height: O
+  } = (0, o.useScreenDimensions)(), v = a.useMemo(() => {
+    let e = Math.min((O - S - 2 * N) * 16 / 9, _);
+    return Math.max(p, Math.min(C - 2 * N, e))
+  }, [C, O]);
+  return (0, l.jsx)(u.ModalRoot, {
     ...e,
-    size: i.ModalSize.DYNAMIC,
-    className: m.root,
+    size: u.ModalSize.DYNAMIC,
+    className: E.root,
     children: (0, l.jsxs)("div", {
       style: {
         width: v
       },
-      children: [(0, l.jsxs)(i.ModalHeader, {
+      children: [(0, l.jsxs)(u.ModalHeader, {
         separator: !1,
-        className: m.modalHeader,
-        children: [(0, l.jsx)(i.Avatar, {
-          src: E,
-          size: i.AvatarSizes.SIZE_32,
-          "aria-label": N,
-          className: m.applicationIcon
+        className: E.modalHeader,
+        children: [(0, l.jsx)(u.Avatar, {
+          src: f,
+          size: u.AvatarSizes.SIZE_32,
+          "aria-label": h,
+          className: E.applicationIcon
         }), (0, l.jsxs)("div", {
-          className: m.flexRow,
+          className: E.flexRow,
           children: [(0, l.jsxs)("div", {
-            children: [(0, l.jsx)(i.Heading, {
+            children: [(0, l.jsx)(u.Heading, {
               variant: "heading-sm/bold",
-              children: N
-            }), (0, l.jsx)(i.Text, {
+              children: h
+            }), (0, l.jsx)(u.Text, {
               variant: "text-xs/medium",
               color: "interactive-normal",
               children: n
             })]
-          }), (0, l.jsx)(r.default, {
+          }), (0, l.jsx)(d.default, {
             type: T.BotTagTypes.BOT,
-            className: m.botTag,
+            className: E.botTag,
             verified: null === (t = e.application.bot) || void 0 === t ? void 0 : t.verified
           })]
-        }), (0, l.jsx)(i.Button, {
-          onClick: u,
-          innerClassName: m.closeButton,
-          className: m.closeButtonContainer,
-          look: i.Button.Looks.BLANK,
-          size: i.Button.Sizes.NONE,
-          "aria-label": f.default.Messages.DISMISS,
+        }), (0, l.jsx)(u.Button, {
+          onClick: i,
+          innerClassName: E.closeButton,
+          className: E.closeButtonContainer,
+          look: u.Button.Looks.BLANK,
+          size: u.Button.Sizes.NONE,
+          "aria-label": m.default.Messages.DISMISS,
           children: (0, l.jsx)(c.default, {
-            className: m.closeIcon
+            className: E.closeIcon
           })
         })]
-      }), (0, l.jsx)(d.default, {
+      }), (0, l.jsx)(s.default, {
         aspectRatio: 16 / 9,
-        children: (0, l.jsx)(o.EmbedIFrameWithLoadingBackground, {
-          url: y,
+        children: (0, l.jsx)(r.EmbedIFrameWithLoadingBackground, {
+          url: M,
           shouldRefocus: !0,
-          className: m.iframe,
-          queryParams: O
+          className: E.iframe,
+          queryParams: A
         })
       })]
     })

@@ -17,7 +17,7 @@ var r = n("481060"),
   f = n("531578"),
   S = n("981631");
 
-function A(e, t, n) {
+function h(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -25,18 +25,18 @@ function A(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class h extends T.default {
+class A extends T.default {
   _initialize() {
     l.default.init()
   }
   constructor(...e) {
-    super(...e), A(this, "actions", {
+    super(...e), h(this, "actions", {
       VOICE_CHANNEL_SHOW_FEEDBACK: e => this.handleVoiceChannelFeedback(e),
       STREAM_CLOSE: e => this.handleStreamClose(e),
       VIDEO_BACKGROUND_SHOW_FEEDBACK: e => this.handleVideoBackgroundShowFeedback(e),
       EMBEDDED_ACTIVITY_CLOSE: e => this.handleActivityClose(e),
       IN_APP_REPORTS_SHOW_FEEDBACK: e => this.handleInAppReportsFeedback(e)
-    }), A(this, "handleVoiceChannelFeedback", e => {
+    }), h(this, "handleVoiceChannelFeedback", e => {
       let {
         analyticsData: t
       } = e;
@@ -51,7 +51,7 @@ class h extends T.default {
           })
         })
       })
-    }), A(this, "handleStreamClose", e => {
+    }), h(this, "handleStreamClose", e => {
       var t;
       let {
         streamKey: s,
@@ -77,7 +77,7 @@ class h extends T.default {
           })
         })
       })
-    }), A(this, "handleVideoBackgroundShowFeedback", e => {
+    }), h(this, "handleVideoBackgroundShowFeedback", e => {
       let {
         analyticsData: t
       } = e;
@@ -92,7 +92,7 @@ class h extends T.default {
           })
         })
       })
-    }), A(this, "handleActivityClose", e => {
+    }), h(this, "handleActivityClose", e => {
       let {
         applicationId: t,
         channelId: a,
@@ -116,7 +116,7 @@ class h extends T.default {
           contextKey: I
         })
       })
-    }), A(this, "handleInAppReportsFeedback", e => {
+    }), h(this, "handleInAppReportsFeedback", e => {
       let {
         reportId: t,
         reportType: s
@@ -136,4 +136,4 @@ class h extends T.default {
     })
   }
 }
-t.default = new h
+t.default = new A

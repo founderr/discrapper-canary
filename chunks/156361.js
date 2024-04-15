@@ -21,12 +21,12 @@ var i, r = n("735250"),
   T = n("342687"),
   f = n("933557"),
   S = n("471445"),
-  A = n("511618"),
-  h = n("926491"),
+  h = n("511618"),
+  A = n("926491"),
   m = n("378233"),
   N = n("430824"),
-  O = n("699516"),
-  p = n("594174"),
+  p = n("699516"),
+  O = n("594174"),
   R = n("51144"),
   C = n("508688"),
   g = n("286908"),
@@ -279,7 +279,7 @@ y(w, "Generic", class e extends G {
         })
       }), (0, r.jsx)(C.AutocompleteRowContentPrimary, {
         children: (0, r.jsx)(C.AutocompleteRowHeading, {
-          children: (0, f.computeChannelName)(e, p.default, O.default)
+          children: (0, f.computeChannelName)(e, O.default, p.default)
         })
       }), null != t ? (0, r.jsx)(C.AutocompleteRowContentSecondary, {
         children: t.name
@@ -387,7 +387,7 @@ y(w, "Generic", class e extends G {
     } = this.props, {
       hovered: l
     } = this.state;
-    return (0, m.isStandardSticker)(o) ? n = null === (e = h.default.getStickerPack(o.pack_id)) || void 0 === e ? void 0 : e.name : (0, m.isGuildSticker)(o) && (n = null === (t = N.default.getGuild(o.guild_id)) || void 0 === t ? void 0 : t.name), (0, r.jsxs)(C.AutocompleteRowContent, {
+    return (0, m.isStandardSticker)(o) ? n = null === (e = A.default.getStickerPack(o.pack_id)) || void 0 === e ? void 0 : e.name : (0, m.isGuildSticker)(o) && (n = null === (t = N.default.getGuild(o.guild_id)) || void 0 === t ? void 0 : t.name), (0, r.jsxs)(C.AutocompleteRowContent, {
       children: [(0, r.jsx)(C.AutocompleteRowIcon, {
         children: s(o, l || !0 === a)
       }), (0, r.jsxs)(C.AutocompleteRowContentPrimary, {
@@ -409,7 +409,7 @@ y(w, "Generic", class e extends G {
   }
 }), y(w, "EmojiUpsell", class e extends G {
   renderContent() {
-    return (0, r.jsx)(A.default, {
+    return (0, r.jsx)(h.default, {
       emojis: this.props.emojis
     })
   }

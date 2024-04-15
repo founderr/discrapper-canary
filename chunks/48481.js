@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return E
   },
   mergeTopLevelFields: function() {
-    return A
+    return h
   },
   mutateUserChannelSettings: function() {
     return m
@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return N
   },
   mutateUserGuildSettingsInternal: function() {
-    return h
+    return A
   },
   protoToB64: function() {
     return S
@@ -31,10 +31,10 @@ n.r(t), n.d(t, {
     return f
   },
   runMigrations: function() {
-    return O
+    return p
   },
   serializeUsageHistory: function() {
-    return p
+    return O
   }
 }), n("411104"), n("47120"), n("653041");
 var i = n("578012"),
@@ -79,27 +79,27 @@ function S(e, t) {
   return (0, i.base64encode)(e.toBinary(t))
 }
 
-function A(e, t, n) {
+function h(e, t, n) {
   for (let e in t = {
       ...t
     }, n) delete t[e];
   return e.mergePartial(t, n), t
 }
 
-function h(e, t, n) {
+function A(e, t, n) {
   return (null == t || "null" === t) && (t = d.ZERO_STRING_GUILD_ID), !(t in e.guilds) && (e.guilds[t] = o.GuildSettings.create()), n(e.guilds[t])
 }
 
 function m(e, t, n, i) {
   var r, s, a;
-  return r = e, s = t, a = e => N(e, n, i), null == r.guilds && (r.guilds = o.AllGuildSettings.create()), h(r.guilds, s, a)
+  return r = e, s = t, a = e => N(e, n, i), null == r.guilds && (r.guilds = o.AllGuildSettings.create()), A(r.guilds, s, a)
 }
 
 function N(e, t, n) {
   return !(t in e.channels) && (e.channels[t] = o.ChannelSettings.create()), n(e.channels[t])
 }
 
-function O(e, t) {
+function p(e, t) {
   null == e.versions && (e.versions = l.Versions.create());
   let n = 0;
   for (let e of t) {
@@ -129,7 +129,7 @@ function O(e, t) {
   }
 }
 
-function p(e, t) {
+function O(e, t) {
   let n = Object.entries(e);
   if (n.length > t)
     for (n = s().sortBy(n, e => {

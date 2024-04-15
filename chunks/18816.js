@@ -1,12 +1,12 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return p
+    return T
   }
 });
-var a = s("735250");
+var l = s("735250");
 s("470079");
-var l = s("481060"),
+var a = s("481060"),
   i = s("239091"),
   n = s("311819"),
   o = s("69580"),
@@ -17,53 +17,53 @@ var l = s("481060"),
   f = s("572004"),
   S = s("591759"),
   E = s("135431"),
-  m = s("993409"),
-  I = s("981631"),
-  T = s("689938");
+  I = s("993409"),
+  m = s("981631"),
+  _ = s("689938");
 
-function p(e) {
+function T(e) {
   var t;
   let {
     application: s
-  } = e, p = null !== (t = u.default.getChannelId()) && void 0 !== t ? t : I.EMPTY_STRING_SNOWFLAKE_ID, {
-    appsInGDMEnabled: _,
-    availableApplications: N
+  } = e, T = null !== (t = u.default.getChannelId()) && void 0 !== t ? t : m.EMPTY_STRING_SNOWFLAKE_ID, {
+    appsInGDMEnabled: p,
+    availableApplications: A
   } = (0, r.usePrivateChannelIntegrationState)({
-    channelId: p
-  }), x = _ && null != N.find(e => e.id === (null == s ? void 0 : s.id)), A = null != s.customInstallUrl || !S.default.isDiscordUrl(s.customInstallUrl);
-  return (0, a.jsx)(m.default, {
+    channelId: T
+  }), N = p && null != A.find(e => e.id === (null == s ? void 0 : s.id)), v = null != s.customInstallUrl || !S.default.isDiscordUrl(s.customInstallUrl);
+  return (0, l.jsx)(I.default, {
     icon: c.default,
     text: (() => {
-      let e = x ? T.default.Messages.ADD : T.default.Messages.APPLICATION_ADD_BUTTON;
-      return A ? (0, a.jsxs)(a.Fragment, {
-        children: [e, (0, a.jsx)(d.default, {
+      let e = N ? _.default.Messages.ADD : _.default.Messages.APPLICATION_ADD_BUTTON;
+      return v ? (0, l.jsxs)(l.Fragment, {
+        children: [e, (0, l.jsx)(d.default, {
           width: 16,
           height: 16
         })]
       }) : e
     })(),
     onContextMenu: f.SUPPORTS_COPY ? e => {
-      (0, i.openContextMenu)(e, e => (0, a.jsx)(l.Menu, {
+      (0, i.openContextMenu)(e, e => (0, l.jsx)(a.Menu, {
         navId: "component-button",
         onClose: i.closeContextMenu,
-        "aria-label": T.default.Messages.APPLICATION_ADD_BUTTON_ACTIONS,
+        "aria-label": _.default.Messages.APPLICATION_ADD_BUTTON_ACTIONS,
         onSelect: void 0,
         ...e,
-        children: (0, a.jsx)(l.MenuGroup, {
-          children: (0, a.jsx)(l.MenuItem, {
+        children: (0, l.jsx)(a.MenuGroup, {
+          children: (0, l.jsx)(a.MenuItem, {
             id: "copy",
-            label: T.default.Messages.APPLICATION_ADD_BUTTON_ACTIONS_COPY,
+            label: _.default.Messages.APPLICATION_ADD_BUTTON_ACTIONS_COPY,
             action: () => (0, f.copy)((0, n.getApplicationInstallURL)(s))
           })
         })
       }))
     } : void 0,
     onClick: () => {
-      if (x) {
+      if (N) {
         (0, o.openOAuth2Modal)({
-          channelId: p,
+          channelId: T,
           clientId: s.id,
-          scopes: [I.OAuth2Scopes.APPLICATIONS_COMMANDS],
+          scopes: [m.OAuth2Scopes.APPLICATIONS_COMMANDS],
           disableGuildSelect: !0
         });
         return

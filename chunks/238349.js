@@ -15,12 +15,12 @@ var r, s, a, o, l = n("392711"),
   T = n("314897"),
   f = n("592125"),
   S = n("306680"),
-  A = n("944486"),
-  h = n("823379"),
+  h = n("944486"),
+  A = n("823379"),
   m = n("709054"),
   N = n("882252");
-let O = [],
-  p = null,
+let p = [],
+  O = null,
   R = null,
   C = new Set,
   g = d.ThreadSortOrder.LATEST_ACTIVITY,
@@ -28,8 +28,8 @@ let O = [],
   D = [],
   v = !1,
   M = [],
-  y = u().chain(O),
-  P = u().chain(O),
+  y = u().chain(p),
+  P = u().chain(p),
   U = new Set,
   b = new Set;
 
@@ -48,12 +48,12 @@ function w(e) {
 }
 
 function B() {
-  D = [], i = null, R = null, C = new Set, g = d.ThreadSortOrder.LATEST_ACTIVITY, L = 0, M = [], y = u().chain(O), P = u().chain(O), b.clear(), U.clear()
+  D = [], i = null, R = null, C = new Set, g = d.ThreadSortOrder.LATEST_ACTIVITY, L = 0, M = [], y = u().chain(p), P = u().chain(p), b.clear(), U.clear()
 }
 
 function k() {
   var e;
-  let t = A.default.getChannelId();
+  let t = h.default.getChannelId();
   if (null == t || !(null === (e = f.default.getChannel(t)) || void 0 === e ? void 0 : e.isForumLikeChannel())) return B(), !1;
   F({
     refreshThreadIds: !0
@@ -93,7 +93,7 @@ function F(e) {
 }
 class x extends(r = _.default.Store) {
   initialize() {
-    this.waitFor(f.default, E.default, A.default, S.default)
+    this.waitFor(f.default, E.default, h.default, S.default)
   }
   getNewThreadCount() {
     return L
@@ -103,7 +103,7 @@ class x extends(r = _.default.Store) {
   }
   getThreadIds(e, t, n) {
     let i = e !== R,
-      r = !(0, h.areSetsEqual)(n, C),
+      r = !(0, A.areSetsEqual)(n, C),
       s = t !== g;
     return R = e, C = n, g = t, i ? F({
       refreshThreadIds: !0
@@ -115,8 +115,8 @@ class x extends(r = _.default.Store) {
     return D
   }
   getAndDeleteMostRecentUserCreatedThreadId() {
-    let e = p;
-    return p = null, e
+    let e = O;
+    return O = null, e
   }
   getFirstNoReplyThreadId() {
     return i
@@ -155,7 +155,7 @@ o = "ForumActivePostStore", (a = "displayName") in(s = x) ? Object.definePropert
       isNewlyCreated: n
     } = e;
     if (null == t.parent_id || t.parent_id !== R || !n) return !1;
-    t.ownerId !== T.default.getId() ? L++ : p = t.id
+    t.ownerId !== T.default.getId() ? L++ : O = t.id
   },
   THREAD_UPDATE: function(e) {
     let {

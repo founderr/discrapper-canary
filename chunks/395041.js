@@ -7,18 +7,18 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var a = n("735250");
+var s = n("735250");
 n("470079");
-var l = n("597412");
+var a = n("597412");
 
-function s(e, t) {
+function l(e, t) {
   let {
     children: n
   } = e;
-  return (0, a.jsx)("span", {
+  return (0, s.jsx)("span", {
     className: t,
     children: n
   })
 }
-let i = e => s(e, l.searchFilter),
-  r = e => s(e, l.searchAnswer)
+let i = e => l(e, a.searchFilter),
+  r = e => l(e, a.searchAnswer)

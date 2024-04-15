@@ -15,13 +15,13 @@ var i = n("735250"),
   T = n("285651"),
   f = n("373228"),
   S = n("378233"),
-  A = n("419922"),
-  h = n("490095"),
+  h = n("419922"),
+  A = n("490095"),
   m = n("981631"),
   N = n("689938"),
-  O = n("900544");
-let p = (0, l.cssValueToNumber)(O.__invalid_stickerPickerPreviewDimensions),
-  R = (0, l.cssValueToNumber)(O.__invalid_stickerPickerPreviewPadding),
+  p = n("900544");
+let O = (0, l.cssValueToNumber)(p.__invalid_stickerPickerPreviewDimensions),
+  R = (0, l.cssValueToNumber)(p.__invalid_stickerPickerPreviewPadding),
   C = r.memo(function(e) {
     let {
       isDisplayingIndividualStickers: t = !1,
@@ -38,7 +38,7 @@ let p = (0, l.cssValueToNumber)(O.__invalid_stickerPickerPreviewDimensions),
       stickerClassName: U,
       stickerDescriptors: b,
       stickerPadding: G = R,
-      stickerSize: w = p,
+      stickerSize: w = O,
       ownedStickerPacks: B,
       enlargeOnInteraction: k = !1,
       channel: V,
@@ -57,15 +57,15 @@ let p = (0, l.cssValueToNumber)(O.__invalid_stickerPickerPreviewDimensions),
       padding: G
     }), [G, w]);
     return (0, i.jsx)("div", {
-      className: O.row,
+      className: p.row,
       style: j,
       ...null == C ? void 0 : C(P),
       children: b.map(e => {
         var _;
-        let p = e.visibleRowIndex === (null == L ? void 0 : L.rowIndex) && e.columnIndex === (null == L ? void 0 : L.columnIndex),
-          R = e.type === f.StickerGridItemTypes.STICKER && k && p,
+        let O = e.visibleRowIndex === (null == L ? void 0 : L.rowIndex) && e.columnIndex === (null == L ? void 0 : L.columnIndex),
+          R = e.type === f.StickerGridItemTypes.STICKER && k && O,
           C = (0, o.throttle)(() => {
-            (null == D ? void 0 : D.current) !== !0 && (null == v ? void 0 : v.current) !== !0 && !p && (null == M || M(e))
+            (null == D ? void 0 : D.current) !== !0 && (null == v ? void 0 : v.current) !== !0 && !O && (null == M || M(e))
           }, 250),
           {
             ref: g,
@@ -79,8 +79,8 @@ let p = (0, l.cssValueToNumber)(O.__invalid_stickerPickerPreviewDimensions),
               ...Y,
               children: (0, i.jsxs)(u.Clickable, {
                 "aria-label": e.name,
-                className: a()(O.createSticker, U, {
-                  [O.createInspected]: p
+                className: a()(p.createSticker, U, {
+                  [p.createInspected]: O
                 }),
                 innerRef: g,
                 tabIndex: b,
@@ -102,11 +102,11 @@ let p = (0, l.cssValueToNumber)(O.__invalid_stickerPickerPreviewDimensions),
                 },
                 style: W,
                 children: [!k && (0, i.jsx)("div", {
-                  className: O.inspectedIndicator
+                  className: p.inspectedIndicator
                 }), (0, i.jsx)("div", {
-                  className: O.iconWrapper,
+                  className: p.iconWrapper,
                   children: (0, i.jsx)(E.default, {
-                    className: O.icon
+                    className: p.icon
                   })
                 }), (0, i.jsx)(u.Text, {
                   color: "interactive-active",
@@ -121,8 +121,8 @@ let p = (0, l.cssValueToNumber)(O.__invalid_stickerPickerPreviewDimensions),
               ...Y,
               key: e.sticker.id
             }, (0, i.jsxs)(u.Clickable, {
-              className: a()(O.sticker, U, {
-                [O.stickerInspected]: p
+              className: a()(p.sticker, U, {
+                [p.stickerInspected]: O
               }),
               innerRef: g,
               tabIndex: b,
@@ -145,24 +145,24 @@ let p = (0, l.cssValueToNumber)(O.__invalid_stickerPickerPreviewDimensions),
               "data-type": c.PickerContextMenuDataTypes.STICKER,
               "data-id": e.sticker.id,
               children: [(0, i.jsx)(u.HiddenVisually, {
-                children: (0, A.getStickerAltText)(e.sticker)
+                children: (0, h.getStickerAltText)(e.sticker)
               }), (0, i.jsxs)("div", {
                 "aria-hidden": !0,
                 children: [!k && (0, i.jsx)("div", {
-                  className: O.inspectedIndicator
-                }), (0, i.jsx)(A.default, {
-                  className: a()(O.stickerNode, {
-                    [O.stickerNodeDimmed]: k && !p && null != L && -1 !== L.rowIndex && -1 !== L.columnIndex,
-                    [O.stickerNodeHidden]: R,
-                    [O.stickerUnsendable]: x && !(0, T.isSendableSticker)(e.sticker, F, V)
+                  className: p.inspectedIndicator
+                }), (0, i.jsx)(h.default, {
+                  className: a()(p.stickerNode, {
+                    [p.stickerNodeDimmed]: k && !O && null != L && -1 !== L.rowIndex && -1 !== L.columnIndex,
+                    [p.stickerNodeHidden]: R,
+                    [p.stickerUnsendable]: x && !(0, T.isSendableSticker)(e.sticker, F, V)
                   }),
-                  disableAnimation: !p && !s,
+                  disableAnimation: !O && !s,
                   enlargeOnInteraction: k,
-                  isInteracting: p,
-                  maskAsset: p,
+                  isInteracting: O,
+                  maskAsset: O,
                   sticker: e.sticker,
                   size: w
-                }), o ? (0, i.jsx)(h.default, {
+                }), o ? (0, i.jsx)(A.default, {
                   size: 20
                 }) : null]
               })]

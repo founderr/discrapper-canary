@@ -14,12 +14,12 @@ var i, r, s = n("735250"),
 n("5192");
 var f = n("342656"),
   S = n("785717"),
-  A = n("706327"),
-  h = n("285470"),
+  h = n("706327"),
+  A = n("285470"),
   m = n("171368"),
   N = n("228168"),
-  O = n("689938"),
-  p = n("403513");
+  p = n("689938"),
+  O = n("403513");
 (r = i || (i = {}))[r.NOT_CHECKED = 0] = "NOT_CHECKED", r[r.NOT_OVERFLOWING = 1] = "NOT_OVERFLOWING", r[r.OVERFLOWING_LARGE_ONLY = 2] = "OVERFLOWING_LARGE_ONLY", r[r.OVERFLOWING_ALL = 3] = "OVERFLOWING_ALL";
 let R = a.memo(function(e) {
   let {
@@ -33,8 +33,8 @@ let R = a.memo(function(e) {
     analyticsLocations: I
   } = (0, _.default)(), {
     guildId: f,
-    channelId: A,
-    messageId: h,
+    channelId: h,
+    messageId: A,
     roleId: R
   } = (0, S.useUserProfileAnalyticsContext)(), C = a.useMemo(() => {
     var e;
@@ -52,9 +52,9 @@ let R = a.memo(function(e) {
       } = e;
       return t
     })) && void 0 !== e ? e : []
-  }, [i]), L = a.useMemo(() => O.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_SHORT.format({
+  }, [i]), L = a.useMemo(() => p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_SHORT.format({
     count: C.length
-  }), [C]), D = a.useMemo(() => O.default.Messages.USER_PROFILE_MUTUAL_GUILDS_SHORT.format({
+  }), [C]), D = a.useMemo(() => p.default.Messages.USER_PROFILE_MUTUAL_GUILDS_SHORT.format({
     count: g.length
   }), [g]), v = a.useRef(null), [M, y] = a.useState(!1), [P, U] = a.useState(!1), b = a.useCallback(() => {
     if (null != v.current) {
@@ -66,29 +66,29 @@ let R = a.memo(function(e) {
       userId: t.id,
       sourceAnalyticsLocations: I,
       guildId: f,
-      channelId: A,
-      messageId: h,
+      channelId: h,
+      messageId: A,
       roleId: R,
       section: e,
       analyticsLocation: o
     }), null == r || r()
-  }, [o, I, r, t.id, f, A, h, R]);
+  }, [o, I, r, t.id, f, h, A, R]);
   a.useEffect(() => {
     b()
   }, [b, L]);
   let w = C.length > 0,
     B = g.length > 0;
   return (0, s.jsxs)("div", {
-    className: l()(p.compactItemContainer, !M && p.hideElement),
+    className: l()(O.compactItemContainer, !M && O.hideElement),
     ref: v,
     children: [w && (0, s.jsx)(d.Tooltip, {
-      text: O.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP,
+      text: p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP,
       children: e => (0, s.jsxs)(d.Clickable, {
         ...e,
         onClick: G(N.UserProfileSections.MUTUAL_FRIENDS),
-        className: l()(p.avatarAndTextContainer, p.__invalid_friendsContainer),
+        className: l()(O.avatarAndTextContainer, O.__invalid_friendsContainer),
         children: [(0, s.jsx)("div", {
-          className: p.__invalid_avatars,
+          className: O.__invalid_avatars,
           children: (0, s.jsx)(c.default, {
             maxUsers: u,
             users: C,
@@ -97,7 +97,7 @@ let R = a.memo(function(e) {
             disableUsernameTooltip: !0
           })
         }), (0, s.jsx)(d.Text, {
-          className: p.itemizedListText,
+          className: O.itemizedListText,
           variant: "text-sm/normal",
           color: "interactive-normal",
           children: L
@@ -105,15 +105,15 @@ let R = a.memo(function(e) {
       })
     }), w && B && (0, s.jsx)("div", {
       "aria-hidden": "true",
-      className: p.dotSpacer
+      className: O.dotSpacer
     }), B && (0, s.jsx)(d.Tooltip, {
-      text: O.default.Messages.USER_PROFILE_MUTUAL_GUILDS_TOOLTIP,
+      text: p.default.Messages.USER_PROFILE_MUTUAL_GUILDS_TOOLTIP,
       children: e => (0, s.jsxs)(d.Clickable, {
         ...e,
         onClick: G(N.UserProfileSections.MUTUAL_GUILDS),
-        className: l()(p.avatarAndTextContainer, p.serverContainer),
+        className: l()(O.avatarAndTextContainer, O.serverContainer),
         children: [!P && (0, s.jsx)("div", {
-          className: p.__invalid_avatars,
+          className: O.__invalid_avatars,
           children: (0, s.jsx)(E.default, {
             maxGuilds: u,
             guilds: g,
@@ -122,7 +122,7 @@ let R = a.memo(function(e) {
             disableGuildNameTooltip: !0
           })
         }), (0, s.jsx)(d.Text, {
-          className: p.itemizedListText,
+          className: O.itemizedListText,
           variant: "text-sm/normal",
           color: "interactive-normal",
           children: D
@@ -146,13 +146,13 @@ t.default = a.memo(function(e) {
     autoTrackExposure: !1,
     location: E,
     disable: m
-  }), C = (0, h.useMutualGuilds)(i), g = (0, A.useMutualFriends)(i);
+  }), C = (0, A.useMutualGuilds)(i), g = (0, h.useMutualFriends)(i);
   return !N || m || (null == g || 0 === g.length) && 0 === C.length ? null : (0, s.jsxs)("div", {
-    className: l()(p.mainContainer, a),
+    className: l()(O.mainContainer, a),
     children: [(0, s.jsx)(d.Heading, {
       variant: "eyebrow",
-      className: p.__invalid_title,
-      children: O.default.Messages.USER_PROFILE_MUTUALS_TITLE
+      className: O.__invalid_title,
+      children: p.default.Messages.USER_PROFILE_MUTUALS_TITLE
     }), (0, s.jsx)(R, {
       user: i,
       mutualFriends: g,

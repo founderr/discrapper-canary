@@ -26,20 +26,20 @@ function _(e) {
       onConfirm: T,
       onCancel: f,
       onClose: S,
-      onCloseCallback: A,
-      bodyClassName: h,
+      onCloseCallback: h,
+      bodyClassName: A,
       transitionState: m,
       loading: N = !1,
-      confirmButtonColor: O = o.Button.Colors.RED,
-      focusCancel: p = !1
+      confirmButtonColor: p = o.Button.Colors.RED,
+      focusCancel: O = !1
     } = e,
     R = r.useRef(null);
   return r.useEffect(() => {
-    !p && setTimeout(() => {
+    !O && setTimeout(() => {
       var e;
       return null === (e = R.current) || void 0 === e ? void 0 : e.focus()
     }, 0)
-  }, [p]), r.useLayoutEffect(() => () => null == A ? void 0 : A()), null != E && (t = (0, i.jsx)(o.Button, {
+  }, [O]), r.useLayoutEffect(() => () => null == h ? void 0 : h()), null != E && (t = (0, i.jsx)(o.Button, {
     type: "button",
     look: o.Button.Looks.LINK,
     color: o.Button.Colors.PRIMARY,
@@ -47,12 +47,12 @@ function _(e) {
     onClick: () => {
       null == f || f(), S()
     },
-    autoFocus: p,
+    autoFocus: O,
     children: E
   })), null != c && (n = (0, i.jsx)(o.Button, {
     buttonRef: R,
     type: "submit",
-    color: O,
+    color: p,
     submitting: N,
     onClick: async () => {
       try {
@@ -61,7 +61,7 @@ function _(e) {
         throw e
       }
     },
-    autoFocus: !p,
+    autoFocus: !O,
     children: c
   })), (0, i.jsxs)(u.ModalRoot, {
     className: I,
@@ -73,7 +73,7 @@ function _(e) {
         children: s
       })
     }) : null, (0, i.jsx)(u.ModalContent, {
-      className: a()(d.content, h),
+      className: a()(d.content, A),
       children: _
     }), (0, i.jsxs)(u.ModalFooter, {
       children: [n, t]

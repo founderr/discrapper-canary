@@ -1,91 +1,91 @@
 "use strict";
-a.r(t), a.d(t, {
+l.r(t), l.d(t, {
   default: function() {
     return I
   }
 });
-var l = a("735250");
-a("470079");
-var n = a("866442"),
-  u = a("442837"),
-  s = a("481060"),
-  d = a("607070"),
-  r = a("605436"),
-  i = a("910693"),
-  o = a("434404"),
-  f = a("271383"),
-  c = a("430824"),
-  m = a("496675"),
-  M = a("823379"),
-  E = a("981631"),
-  S = a("689938"),
-  _ = a("139877");
+var a = l("735250");
+l("470079");
+var u = l("866442"),
+  n = l("442837"),
+  d = l("481060"),
+  s = l("607070"),
+  r = l("605436"),
+  i = l("910693"),
+  o = l("434404"),
+  f = l("271383"),
+  c = l("430824"),
+  E = l("496675"),
+  m = l("823379"),
+  M = l("981631"),
+  S = l("689938"),
+  _ = l("139877");
 
 function g(e, t) {
-  var a, u;
-  return (0, l.jsxs)("div", {
+  var l, n;
+  return (0, a.jsxs)("div", {
     className: _.roleRow,
-    children: ["dot" === t ? (0, l.jsx)(s.RoleDot, {
+    children: ["dot" === t ? (0, a.jsx)(d.RoleDot, {
       className: _.roleDot,
-      color: null !== (a = e.colorString) && void 0 !== a ? a : (0, n.int2hex)(E.DEFAULT_ROLE_COLOR),
+      color: null !== (l = e.colorString) && void 0 !== l ? l : (0, u.int2hex)(M.DEFAULT_ROLE_COLOR),
       background: !1,
       tooltip: !1
-    }) : (0, l.jsx)(s.RoleCircle, {
+    }) : (0, a.jsx)(d.RoleCircle, {
       className: _.roleDot,
-      color: null !== (u = e.colorString) && void 0 !== u ? u : (0, n.int2hex)(E.DEFAULT_ROLE_COLOR)
-    }), (0, l.jsx)("div", {
+      color: null !== (n = e.colorString) && void 0 !== n ? n : (0, u.int2hex)(M.DEFAULT_ROLE_COLOR)
+    }), (0, a.jsx)("div", {
       children: e.name
     })]
   })
 }
 
 function I(e, t) {
-  let a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-    n = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-    _ = (0, u.useStateFromStores)([c.default], () => c.default.getGuild(t)),
-    I = (0, u.useStateFromStores)([c.default], () => c.default.getRoles(t)),
-    C = (0, u.useStateFromStores)([d.default], () => d.default.roleStyle),
-    R = (0, i.useTrackModerationAction)(t, {
-      location: n,
+  let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+    u = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+    _ = (0, n.useStateFromStores)([c.default], () => c.default.getGuild(t)),
+    I = (0, n.useStateFromStores)([c.default], () => c.default.getRoles(t)),
+    R = (0, n.useStateFromStores)([s.default], () => s.default.roleStyle),
+    C = (0, i.useTrackModerationAction)(t, {
+      location: u,
       targetUserId: e
     }),
     {
-      userRoles: N,
-      isGuildMember: A,
-      canManageRoles: T
-    } = (0, u.useStateFromStoresObject)([f.default, m.default], () => {
-      let a = f.default.getMember(t, e);
+      userRoles: A,
+      isGuildMember: T,
+      canManageRoles: N
+    } = (0, n.useStateFromStoresObject)([f.default, E.default], () => {
+      let l = f.default.getMember(t, e);
       return {
-        userRoles: null != a ? a.roles : [],
-        isGuildMember: null != a,
-        canManageRoles: null != _ && m.default.can(E.Permissions.MANAGE_ROLES, _)
+        userRoles: null != l ? l.roles : [],
+        isGuildMember: null != l,
+        canManageRoles: null != _ && E.default.can(M.Permissions.MANAGE_ROLES, _)
       }
     }, [e, t, _]);
-  if (__OVERLAY__ || null == N || null == _ || !A) return null;
-  let v = m.default.getHighestRole(_),
-    O = Object.values(I).filter(e => !(0, r.isEveryoneRoleId)(_.id, e.id)),
-    h = T ? O.map(a => {
-      let n = a.managed || !m.default.isRoleHigher(_, v, a),
-        u = -1 !== N.indexOf(a.id);
-      return n && !u ? null : (0, l.jsx)(s.MenuCheckboxItem, {
-        id: a.id,
-        label: () => g(a, C),
-        disabled: n,
+  if (__OVERLAY__ || null == A || null == _ || !T) return null;
+  let h = E.default.getHighestRole(_),
+    v = Object.values(I).filter(e => !(0, r.isEveryoneRoleId)(_.id, e.id)),
+    O = N ? v.map(l => {
+      let u = l.managed || !E.default.isRoleHigher(_, h, l),
+        n = -1 !== A.indexOf(l.id);
+      return u && !n ? null : (0, a.jsx)(d.MenuCheckboxItem, {
+        id: l.id,
+        label: () => g(l, R),
+        disabled: u,
         action: () => {
-          var l;
-          return l = a, void(N.includes(l.id) ? (o.default.updateMemberRoles(t, e, N.filter(e => e !== l.id), [], [l.id]), R(i.ModerationActionType.REMOVE_ROLE)) : (o.default.updateMemberRoles(t, e, N.concat([l.id]), [l.id], []), R(i.ModerationActionType.ADD_ROLE)))
+          var a;
+          return a = l, void(A.includes(a.id) ? (o.default.updateMemberRoles(t, e, A.filter(e => e !== a.id), [], [a.id]), C(i.ModerationActionType.REMOVE_ROLE)) : (o.default.updateMemberRoles(t, e, A.concat([a.id]), [a.id], []), C(i.ModerationActionType.ADD_ROLE)))
         },
-        checked: u
-      }, a.id)
-    }) : O.filter(e => -1 !== N.indexOf(e.id)).map(e => (0, r.isEveryoneRoleId)(_.id, e.id) ? null : (0, l.jsx)(s.MenuItem, {
+        checked: n
+      }, l.id)
+    }) : v.filter(e => -1 !== A.indexOf(e.id)).map(e => (0, r.isEveryoneRoleId)(_.id, e.id) ? null : (0, a.jsx)(d.MenuItem, {
       id: e.id,
-      label: () => g(e, C)
+      label: () => g(e, R)
     }, e.id));
-  return 0 === h.filter(M.isNotNullish).length ? null : a ? h : (0, l.jsx)(s.MenuItem, {
+  return 0 === O.filter(m.isNotNullish).length ? null : l ? O : (0, a.jsx)(d.MenuItem, {
     id: "roles",
     label: S.default.Messages.ROLES_LIST.format({
-      numRoles: h.length
+      numRoles: O.length
     }),
-    children: h
+    children: O
   })
 }

@@ -17,11 +17,11 @@ var i, r, s, a, o, l, u = n("735250"),
   f = n("285952"),
   S = n("819869");
 (i = o || (o = {})).DEFAULT = "default", i.SMALL = "small";
-let A = {
+let h = {
     default: S.shineDefault,
     small: S.shineSmall
   },
-  h = {
+  A = {
     default: S.shineInnerDefault,
     small: S.shineInnerSmall
   };
@@ -41,9 +41,9 @@ class m extends(l = d.PureComponent) {
       children: (0, u.jsx)(f.default, {
         align: f.default.Align.CENTER,
         justify: f.default.Justify.CENTER,
-        className: A[t],
+        className: h[t],
         children: (0, u.jsx)("div", {
-          className: h[t]
+          className: A[t]
         })
       })
     })
@@ -69,14 +69,14 @@ let N = e => {
     buttonShineClassName: l,
     onlyShineOnHover: _,
     ...E
-  } = e, f = d.createRef(), A = (0, T.default)(f), h = !i && !r && !0 !== s && (!_ || A);
+  } = e, f = d.createRef(), h = (0, T.default)(f), A = !i && !r && !0 !== s && (!_ || h);
   return (0, u.jsxs)(I.Button, {
     buttonRef: f,
     ...E,
     className: c()(S.shinyButton, n),
     disabled: i,
     submitting: r,
-    children: [t, h ? (0, u.jsx)(m, {
+    children: [t, A ? (0, u.jsx)(m, {
       shinePaused: o,
       className: c()(S.buttonShine, _ ? S.onlyShineOnHover : void 0, l),
       shineSize: a

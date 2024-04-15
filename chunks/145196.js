@@ -15,15 +15,15 @@ var i = n("735250"),
   T = n("672108"),
   f = n("689938"),
   S = n("698377"),
-  A = n("633353");
+  h = n("633353");
 
-function h(e) {
+function A(e) {
   let {
     text: t,
     language: r
   } = e, s = () => (0, i.jsx)("pre", {
     children: (0, i.jsx)("code", {
-      className: a()(A.scrollbarGhostHairline, S.codeView, "hljs"),
+      className: a()(h.scrollbarGhostHairline, S.codeView, "hljs"),
       children: t
     })
   });
@@ -35,7 +35,7 @@ function h(e) {
       let n = e.highlight(r, t, !0);
       return null == n ? s() : (0, i.jsx)("pre", {
         children: (0, i.jsx)("code", {
-          className: a()(A.scrollbarGhostHairline, S.codeView, "hljs", n.language),
+          className: a()(h.scrollbarGhostHairline, S.codeView, "hljs", n.language),
           dangerouslySetInnerHTML: {
             __html: n.value
           }
@@ -109,7 +109,7 @@ function N(e) {
   })
 }
 
-function O(e) {
+function p(e) {
   let {
     language: t,
     setLanguage: n
@@ -153,7 +153,7 @@ function O(e) {
   })
 }
 
-function p(e) {
+function O(e) {
   return (0, i.jsx)(l.Tooltip, {
     text: f.default.Messages.PREVIEW_WHOLE_FILE,
     children: t => (0, i.jsx)(l.Clickable, {
@@ -183,13 +183,13 @@ function R(e) {
     setLanguage: E,
     bytesLeft: I,
     className: T
-  } = e, A = null == o ? void 0 : o.split("\n"), R = null !== (t = null == A ? void 0 : A.length) && void 0 !== t ? t : 0, C = u ? 100 : 6, g = 0 === I, L = "";
+  } = e, h = null == o ? void 0 : o.split("\n"), R = null !== (t = null == h ? void 0 : h.length) && void 0 !== t ? t : 0, C = u ? 100 : 6, g = 0 === I, L = "";
   g && u && R > C ? L = "\n..." : !g && (L = "..."), "" !== L && (g ? L += " " + f.default.Messages.PREVIEW_LINES_LEFT.format({
     lines: R - C
   }) : L += " " + f.default.Messages.PREVIEW_BYTES_LEFT.format({
     formattedBytes: (0, d.formatKbSize)(I)
   }));
-  let D = (null == A ? void 0 : A.slice(0, C).join("\n")) + L,
+  let D = (null == h ? void 0 : h.slice(0, C).join("\n")) + L,
     v = u || C < R;
   return (0, i.jsxs)("div", {
     className: a()(T, S.container),
@@ -199,7 +199,7 @@ function R(e) {
       }),
       children: null == o ? (0, i.jsx)(l.Spinner, {
         className: S.spinner
-      }) : (0, i.jsx)(h, {
+      }) : (0, i.jsx)(A, {
         text: D,
         language: c
       })
@@ -213,7 +213,7 @@ function R(e) {
           setExpanded: _,
           isWholeFile: g,
           numLines: R
-        }), (0, i.jsx)(p, {
+        }), (0, i.jsx)(O, {
           url: n,
           fileName: r,
           fileSize: s,
@@ -227,7 +227,7 @@ function R(e) {
         url: n,
         fileName: r,
         fileSize: s
-      }), (0, i.jsx)(O, {
+      }), (0, i.jsx)(p, {
         language: c,
         setLanguage: E
       })]
@@ -258,7 +258,7 @@ function C(e) {
         className: S.modalTextContainer,
         children: null == u ? (0, i.jsx)(l.Spinner, {
           className: S.spinner
-        }) : (0, i.jsx)(h, {
+        }) : (0, i.jsx)(A, {
           text: I,
           language: c
         })
@@ -272,7 +272,7 @@ function C(e) {
           url: t,
           fileName: n,
           fileSize: s
-        }), (0, i.jsx)(O, {
+        }), (0, i.jsx)(p, {
           language: c,
           setLanguage: E
         })]
@@ -291,8 +291,8 @@ t.default = r.memo(function(e) {
     onContextMenu: d
   } = e, [c, E] = r.useState(!1), [I, T] = r.useState(n.split(".").slice(-1)[0]), {
     fileContents: f,
-    bytesLeft: A,
-    hadError: h
+    bytesLeft: h,
+    hadError: A
   } = function(e, t) {
     let [n, i] = r.useState(!1), [s, a] = r.useState(null), [o, l] = r.useState(1);
     return r.useEffect(() => {
@@ -330,7 +330,7 @@ t.default = r.memo(function(e) {
       hadError: n
     }
   }(t, o);
-  return h ? (0, i.jsx)(_.default, {
+  return A ? (0, i.jsx)(_.default, {
     url: t,
     fileName: n,
     fileSize: s,
@@ -342,7 +342,7 @@ t.default = r.memo(function(e) {
     fileName: n,
     fileSize: s,
     fileContents: f,
-    bytesLeft: A,
+    bytesLeft: h,
     expanded: c,
     setExpanded: E,
     language: I,

@@ -5,7 +5,7 @@ n.r(t), n.d(t, {
     return L
   },
   currentRouteHasBackNavigation: function() {
-    return h
+    return A
   },
   forward: function() {
     return D
@@ -17,10 +17,10 @@ n.r(t), n.d(t, {
     return N
   },
   getLastRouteChangeSource: function() {
-    return O
+    return p
   },
   getLastRouteChangeSourceLocationStack: function() {
-    return p
+    return O
   },
   hasNavigated: function() {
     return g
@@ -35,7 +35,7 @@ n.r(t), n.d(t, {
     return S
   },
   transitionToGuild: function() {
-    return A
+    return h
   }
 }), n("653041"), n("757143");
 var a = n("539528"),
@@ -68,7 +68,7 @@ function S(e, t, n, a) {
   }), r = n, s = a)
 }
 
-function A(e, t, n, i, r) {
+function h(e, t, n, i, r) {
   _.log("transitionToGuild - Transitioning to ".concat(JSON.stringify({
     guildId: e,
     channelId: t,
@@ -76,7 +76,7 @@ function A(e, t, n, i, r) {
   }))), S(d.Routes.CHANNEL(e, t, n), null != r ? r : null, i)
 }
 
-function h() {
+function A() {
   return null != r && u.ChannelBackNavigationSources.has(r)
 }
 
@@ -88,11 +88,11 @@ function N() {
   return i
 }
 
-function O() {
+function p() {
   return r
 }
 
-function p() {
+function O() {
   return s
 }
 

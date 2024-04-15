@@ -1,29 +1,29 @@
 "use strict";
-t.r(s), t.d(s, {
+n.r(t), n.d(t, {
   default: function() {
-    return r
+    return o
   }
 });
-var l = t("735250");
-t("470079");
-var a = t("307187"),
-  n = t("750858"),
-  i = t("739566");
+var i = n("735250");
+n("470079");
+var r = n("307187"),
+  s = n("750858"),
+  a = n("739566");
 
-function r(e) {
-  var s, t;
-  let r = (0, i.default)(e.message),
-    c = (0, a.renderSystemTag)({
+function o(e) {
+  var t, n;
+  let o = (0, a.default)(e.message),
+    l = (0, r.renderSystemTag)({
       message: e.message,
       channel: e.channel,
-      user: null !== (t = null === (s = e.message) || void 0 === s ? void 0 : s.author) && void 0 !== t ? t : e.userOverride,
+      user: null !== (n = null === (t = e.message) || void 0 === t ? void 0 : t.author) && void 0 !== n ? n : e.userOverride,
       compact: !!e.compact,
       isRepliedMessage: !!e.isRepliedMessage
     }),
     u = {};
-  return null != c && (u[n.UsernameDecorationTypes.SYSTEM_TAG] = c), (0, l.jsx)(n.default, {
+  return null != l && (u[s.UsernameDecorationTypes.SYSTEM_TAG] = l), (0, i.jsx)(s.default, {
     ...e,
-    author: r,
+    author: o,
     decorations: u
   })
 }

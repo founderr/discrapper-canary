@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return m
+    return I
   }
 });
-var a = s("735250");
+var l = s("735250");
 s("470079");
-var l = s("120356"),
-  i = s.n(l),
+var a = s("120356"),
+  i = s.n(a),
   n = s("442837"),
   o = s("481060"),
   r = s("129861"),
@@ -18,48 +18,48 @@ var l = s("120356"),
   S = s("689938"),
   E = s("968030");
 
-function m(e) {
+function I(e) {
   let {
     user: t,
     displayProfile: s
-  } = e, l = (0, n.useStateFromStores)([d.default], () => d.default.findActivity(t.id, e => e.type === f.ActivityTypes.CUSTOM_STATUS)), m = c.default.getName(t);
-  return (0, a.jsxs)("div", {
+  } = e, a = (0, n.useStateFromStores)([d.default], () => d.default.findActivity(t.id, e => e.type === f.ActivityTypes.CUSTOM_STATUS)), I = c.default.getName(t);
+  return (0, l.jsxs)("div", {
     className: E.container,
-    children: [null == m && (0, a.jsx)(r.default, {
+    children: [null == I && (0, l.jsx)(r.default, {
       user: t,
       className: E.nameTag,
       usernameClass: E.username,
       discriminatorClass: E.discriminator
-    }), null != m && (0, a.jsxs)("div", {
-      children: [(0, a.jsx)(o.Text, {
+    }), null != I && (0, l.jsxs)("div", {
+      children: [(0, l.jsx)(o.Text, {
         variant: "text-lg/semibold",
         style: {
           marginRight: "12px"
         },
-        children: m
-      }), (0, a.jsx)(r.default, {
+        children: I
+      }), (0, l.jsx)(r.default, {
         user: t,
         forceUsername: !0,
         usernameClass: E.discriminator,
         discriminatorClass: E.discriminator,
         className: i()(E.nameTag, E.nameTagSmall)
       })]
-    }), (null == s ? void 0 : s.pronouns) != null && (null == s ? void 0 : s.pronouns) !== "" && (0, a.jsx)(o.Tooltip, {
+    }), (null == s ? void 0 : s.pronouns) != null && (null == s ? void 0 : s.pronouns) !== "" && (0, l.jsx)(o.Tooltip, {
       text: S.default.Messages.USER_PROFILE_PRONOUNS,
-      children: e => (0, a.jsx)(o.Text, {
+      children: e => (0, l.jsx)(o.Text, {
         ...e,
         variant: "text-sm/normal",
         className: i()(E.pronouns, E.nameTagSmall),
         children: s.pronouns
       })
-    }), null != l ? (0, a.jsx)("div", {
+    }), null != a ? (0, l.jsx)("div", {
       className: E.__invalid_customStatusActivity,
-      children: (0, a.jsx)(o.Text, {
+      children: (0, l.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
         className: E.customStatusText,
-        children: (0, a.jsx)(u.default, {
-          activity: l,
+        children: (0, l.jsx)(u.default, {
+          activity: a,
           className: E.customStatus,
           emojiClassName: E.customStatusEmoji,
           soloEmojiClassName: E.customStatusSoloEmoji

@@ -25,8 +25,8 @@ var i, r, s, a = n("735250"),
   T = n("846519"),
   f = n("186325"),
   S = n("426945"),
-  A = n("607070"),
-  h = n("153850"),
+  h = n("607070"),
+  A = n("153850"),
   m = n("904478");
 
 function N(e, t, n) {
@@ -37,8 +37,8 @@ function N(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }(s = i || (i = {})).PRIMARY = "primary", s.BLACK = "black", s.GREY = "grey", s.BRAND = "brand", s.GREEN = "green", s.YELLOW = "yellow", s.RED = "red", s.CUSTOM = "custom", s.PREMIUM = "premium";
-let O = Object.freeze({}),
-  p = Object.freeze({
+let p = Object.freeze({}),
+  O = Object.freeze({
     top: m.tooltipTop,
     bottom: m.tooltipBottom,
     left: m.tooltipLeft,
@@ -70,7 +70,7 @@ let O = Object.freeze({}),
       disableTooltipPointerEvents: I = !1,
       allowOverflow: T = !1
     } = e, f = "".concat("string" == typeof s ? s : "", ":").concat(i);
-    return (0, a.jsx)(h.AppReferencePositionLayer, {
+    return (0, a.jsx)(A.AppReferencePositionLayer, {
       disablePointerEvents: I,
       reference: t,
       position: i,
@@ -86,7 +86,7 @@ let O = Object.freeze({}),
         } = e;
         return (0, a.jsxs)(c.animated.div, {
           onClick: o,
-          className: u()(m.tooltip, p[null != t ? t : i], p[r], {
+          className: u()(m.tooltip, O[null != t ? t : i], O[r], {
             [m.tooltipDisablePointerEvents]: I
           }, l),
           style: E,
@@ -172,7 +172,7 @@ class v extends(r = o.Component) {
       text: n,
       "aria-label": i
     } = this.props;
-    if (null == n) return t(O);
+    if (null == n) return t(p);
     "string" == typeof i ? e = i : "string" == typeof n && !1 !== i && (e = n);
     let r = {
       onClick: this.handleClick,
@@ -252,7 +252,7 @@ class v extends(r = o.Component) {
     }), N(this, "handleMouseLeave", () => {
       !((E.isMobile || E.isTablet) && !0 === this.props.clickableOnMobile) && this.hide()
     }), N(this, "handleFocus", () => {
-      A.default.keyboardModeEnabled && this.show()
+      h.default.keyboardModeEnabled && this.show()
     }), N(this, "handleBlur", () => {
       this.hide()
     }), N(this, "handleClick", () => {

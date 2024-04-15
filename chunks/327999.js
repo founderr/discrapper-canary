@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return g
   },
   getIntegrationLabel: function() {
-    return p
+    return O
   },
   getJoinSourceTypeLabel: function() {
-    return O
+    return p
   },
   registerFetchedSupplementals: function() {
     return N
@@ -32,11 +32,11 @@ function S(e, t) {
   return e + t
 }
 
-function A(e, t) {
+function h(e, t) {
   return t.map(t => e + t)
 }
 
-function h(e) {
+function A(e) {
   return e.split("-")[1]
 }(a = i || (i = {}))[a.FAILED = 0] = "FAILED", a[a.UNFETCHED = 1] = "UNFETCHED", a[a.PENDING = 2] = "PENDING", a[a.SUCCEEDED = 3] = "SUCCEEDED", a[a.FAILED_NO_RETRY = 4] = "FAILED_NO_RETRY";
 
@@ -51,7 +51,7 @@ function N(e, t) {
     f[e + t] = 3
   })(e, t, 3))
 }(o = r || (r = {}))[o.UNSPECIFIED = 0] = "UNSPECIFIED", o[o.BOT = 1] = "BOT", o[o.INTEGRATION = 2] = "INTEGRATION", o[o.DISCOVERY = 3] = "DISCOVERY", o[o.HUB = 4] = "HUB", o[o.INVITE = 5] = "INVITE", o[o.VANITY_URL = 6] = "VANITY_URL";
-let O = function(e) {
+let p = function(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   switch (e) {
@@ -75,7 +75,7 @@ let O = function(e) {
   }
 };
 (l = s || (s = {})).DISCORD = "discord", l.TWITCH = "twitch", l.YOUTUBE = "youtube", l.GUILD_SUBSCRIPTION = "guild_subscription";
-let p = e => {
+let O = e => {
     switch (e) {
       case "twitch":
         return T.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION_TWITCH;
@@ -101,8 +101,8 @@ function C(e) {
   }
 }
 async function g(e, t) {
-  let n = A(e, t),
-    i = n.filter(e => f[e] <= 1).map(h);
+  let n = h(e, t),
+    i = n.filter(e => f[e] <= 1).map(A);
   if (0 === i.length) return [];
   m(n, 2);
   try {
@@ -121,9 +121,9 @@ async function g(e, t) {
       } = e;
       return s.push(t)
     });
-    let a = A(e, s),
+    let a = h(e, s),
       o = i.filter(e => !s.includes(e)),
-      l = A(e, o);
+      l = h(e, o);
     return m(a, 3), m(l, 0), r
   } catch (e) {
     m(n, 0)

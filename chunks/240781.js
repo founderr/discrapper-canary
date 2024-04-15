@@ -28,7 +28,7 @@ let S = [{
     avatarSize: l.AvatarSizes.SIZE_32,
     showStatus: !0
   }],
-  A = e => {
+  h = e => {
     let {
       purchase: t
     } = e, n = (0, o.useStateFromStores)([_.default], () => _.default.locale), r = (0, u.isPremiumCollectiblesPurchase)(t);
@@ -61,10 +61,10 @@ t.default = e => {
     guildId: n,
     avatarDecorationOverride: r,
     className: _
-  } = e, h = (0, o.useStateFromStores)([c.default], () => c.default.getStatus(t.id)), {
+  } = e, A = (0, o.useStateFromStores)([c.default], () => c.default.getStatus(t.id)), {
     product: m,
     purchase: N
-  } = (0, d.default)(null == r ? void 0 : r.skuId), O = E.default.canUseCollectibles(t), p = (0, u.isPremiumCollectiblesPurchase)(N), R = (0, u.isPremiumCollectiblesProduct)(m), C = !O && p;
+  } = (0, d.default)(null == r ? void 0 : r.skuId), p = E.default.canUseCollectibles(t), O = (0, u.isPremiumCollectiblesPurchase)(N), R = (0, u.isPremiumCollectiblesProduct)(m), C = !p && O;
   return null != m && (null == N || C) ? (0, i.jsxs)("div", {
     className: s()(f.modalPreview, f.shopPreviewContainer, _),
     children: [(0, i.jsx)("div", {
@@ -81,7 +81,7 @@ t.default = e => {
         children: m.name
       }), (0, i.jsx)(l.Text, {
         variant: "text-sm/normal",
-        children: C ? T.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, a.match)([R, O]).with([!0, !0], () => T.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => T.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => T.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
+        children: C ? T.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, a.match)([R, p]).with([!0, !0], () => T.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => T.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => T.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
       })]
     })]
   }) : (0, i.jsxs)("div", {
@@ -109,13 +109,13 @@ t.default = e => {
               guildId: n,
               avatarSize: s,
               avatarDecorationOverride: r,
-              status: a ? h : void 0,
+              status: a ? A : void 0,
               "aria-hidden": !0
             })
           }, "".concat(s).concat(a))
         })
       })]
-    }), null != N && (0, i.jsx)(A, {
+    }), null != N && (0, i.jsx)(h, {
       purchase: N
     })]
   })

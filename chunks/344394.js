@@ -1,12 +1,12 @@
 "use strict";
-r.r(t);
-var a = r("319301");
+t.r(r);
+var a = t("319301");
 let n = {
   figma: {
     category: "chat"
   }
 };
-t.default = (0, a.defineColorTokens)({
+r.default = (0, a.defineColorTokens)({
   "channel-text-area-placeholder": {
     dark: "primary.430",
     light: "primary.400",

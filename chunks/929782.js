@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   enable: function() {
-    return h
+    return A
   },
   isNotSupported: function() {
     return S
@@ -52,14 +52,14 @@ function S() {
   })), !0)
 }
 
-function A(e) {
+function h(e) {
   d.default.track(c.AnalyticEvents.PERMISSIONS_ACKED, {
     type: "audio",
     action: e
   })
 }
 
-function h() {
+function A() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
   return S() ? Promise.resolve(!1) : (d.default.track(c.AnalyticEvents.PERMISSIONS_REQUESTED, {
     type: "audio"
@@ -68,20 +68,20 @@ function h() {
       type: "MEDIA_ENGINE_SET_AUDIO_ENABLED",
       enabled: !0,
       unmute: e
-    }), A(E.NativePermissionStates.ACCEPTED)
+    }), h(E.NativePermissionStates.ACCEPTED)
   }, e => {
     switch (e) {
       case c.UserMediaErrors.NO_DEVICES_FOUND:
-        A(E.NativePermissionStates.NO_DEVICES);
+        h(E.NativePermissionStates.NO_DEVICES);
         break;
       case c.UserMediaErrors.PERMISSION_DENIED:
-        A(E.NativePermissionStates.DENIED);
+        h(E.NativePermissionStates.DENIED);
         break;
       case c.UserMediaErrors.PERMISSION_DISMISSED:
-        A(E.NativePermissionStates.DISMISSED);
+        h(E.NativePermissionStates.DISMISSED);
         break;
       default:
-        A(E.NativePermissionStates.ERROR), T.warn("unknown getUserMedia error: ".concat(e))
+        h(E.NativePermissionStates.ERROR), T.warn("unknown getUserMedia error: ".concat(e))
     }
   }).then(() => !0))
 }

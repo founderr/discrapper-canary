@@ -19,11 +19,11 @@ let f = r.forwardRef(function(e, t) {
     gridNavigatorId: s,
     isFullRow: f,
     onKeyDown: S,
-    onFocus: A,
-    autoFocus: h,
+    onFocus: h,
+    autoFocus: A,
     className: m,
     defaultSearchPlaceholder: N
-  } = e, O = r.useRef(null), p = (0, _.useExpressionPickerStore)(e => e.searchQuery), [R, C] = d.EmojiPickerStore.useStore(e => [e.inspectedExpressionPosition, e.searchPlaceholder], o.default), g = r.useCallback(e => {
+  } = e, p = r.useRef(null), O = (0, _.useExpressionPickerStore)(e => e.searchQuery), [R, C] = d.EmojiPickerStore.useStore(e => [e.inspectedExpressionPosition, e.searchPlaceholder], o.default), g = r.useCallback(e => {
     var t;
     d.EmojiPickerStore.setActiveCategoryIndex("" === e ? 0 : c.INACTIVE_CATEGORY_INDEX), d.EmojiPickerStore.setInspectedExpressionPosition(0, 0), d.EmojiPickerStore.setSearchPlaceholder(null), (0, _.setSearchQuery)(e), null === (t = n.current) || void 0 === t || t.scrollTo(0)
   }, [n]), L = r.useCallback(() => {
@@ -32,12 +32,12 @@ let f = r.forwardRef(function(e, t) {
   return r.useImperativeHandle(t, () => ({
     focus: () => {
       var e;
-      return null === (e = O.current) || void 0 === e ? void 0 : e.focus()
+      return null === (e = p.current) || void 0 === e ? void 0 : e.focus()
     }
   })), (0, i.jsx)(u.default, {
-    autoFocus: h,
-    query: p,
-    ref: O,
+    autoFocus: A,
+    query: O,
+    ref: p,
     size: u.default.Sizes.MEDIUM,
     placeholder: null != C ? C : N,
     onClear: L,
@@ -51,7 +51,7 @@ let f = r.forwardRef(function(e, t) {
       }
       S(e)
     },
-    onFocus: A,
+    onFocus: h,
     onQueryChange: g,
     className: a()(m, {
       [T.searchBarFullRow]: f

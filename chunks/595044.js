@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   shouldShowFraudMenuVariant: function() {
-    return l
+    return r
   }
 });
-let a = (0, n("818083").createExperiment)({
+let i = (0, n("818083").createExperiment)({
   kind: "user",
   id: "2023-08_iar_fraud_impersonation",
   label: "In App Reports Fruad & Impersonation",
@@ -20,10 +20,10 @@ let a = (0, n("818083").createExperiment)({
   }]
 });
 
-function l() {
+function r() {
   let {
     showFraudMenuVariant: e
-  } = a.getCurrentConfig({
+  } = i.getCurrentConfig({
     location: "159afe_2"
   }, {
     autoTrackExposure: !0

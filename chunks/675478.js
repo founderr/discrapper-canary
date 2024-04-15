@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   FrecencyUserSettingsActionCreators: function() {
-    return p
+    return O
   },
   PreloadedUserSettingsActionCreators: function() {
-    return O
+    return p
   },
   UserSettingsActionCreatorsByType: function() {
     return R
@@ -47,7 +47,7 @@ var i = n("512722"),
   f = n("526761"),
   S = n("981631");
 
-function A(e, t, n) {
+function h(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -55,7 +55,7 @@ function A(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let h = "UserSettingsProtoLastWriteTimes",
+let A = "UserSettingsProtoLastWriteTimes",
   m = Date.now();
 d.default.subscribe("CONNECTION_OPEN", () => {
   Date.now()
@@ -130,8 +130,8 @@ class N {
   }
   saveLastSendTime() {
     var e;
-    let t = null !== (e = u.Storage.get(h)) && void 0 !== e ? e : {};
-    t[this.type] = Date.now(), u.Storage.set(h, t)
+    let t = null !== (e = u.Storage.get(A)) && void 0 !== e ? e : {};
+    t[this.type] = Date.now(), u.Storage.set(A, t)
   }
   async loadIfNecessary(e) {
     if (__OVERLAY__) {
@@ -219,7 +219,7 @@ class N {
     })
   }
   constructor(e, t) {
-    A(this, "ProtoClass", void 0), A(this, "type", void 0), A(this, "logger", void 0), A(this, "beforeSendCallbacks", void 0), A(this, "lastSendTime", void 0), A(this, "persistChanges", void 0), this.ProtoClass = e, this.type = t, this.beforeSendCallbacks = [], this.lastSendTime = 0, this.persistChanges = async () => {
+    h(this, "ProtoClass", void 0), h(this, "type", void 0), h(this, "logger", void 0), h(this, "beforeSendCallbacks", void 0), h(this, "lastSendTime", void 0), h(this, "persistChanges", void 0), this.ProtoClass = e, this.type = t, this.beforeSendCallbacks = [], this.lastSendTime = 0, this.persistChanges = async () => {
       r()(!__OVERLAY__, "this cannot run in the overlay"), this.logger.log("Persisting proto");
       let {
         editInfo: e
@@ -278,15 +278,15 @@ class N {
     }, this.logger = new s.Logger(this.ProtoClass.typeName)
   }
 }
-let O = new N(l.PreloadedUserSettings, f.UserSettingsTypes.PRELOADED_USER_SETTINGS),
-  p = new N(o.FrecencyUserSettings, f.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
+let p = new N(l.PreloadedUserSettings, f.UserSettingsTypes.PRELOADED_USER_SETTINGS),
+  O = new N(o.FrecencyUserSettings, f.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
   R = {
-    [f.UserSettingsTypes.PRELOADED_USER_SETTINGS]: O,
-    [f.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: p
+    [f.UserSettingsTypes.PRELOADED_USER_SETTINGS]: p,
+    [f.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: O
   };
 
 function C(e, t, n) {
-  return O.updateAsync("guilds", n => (0, T.mutateUserGuildSettingsInternal)(n, e, t), n)
+  return p.updateAsync("guilds", n => (0, T.mutateUserGuildSettingsInternal)(n, e, t), n)
 }
 
 function g(e, t, n, i) {
@@ -294,27 +294,27 @@ function g(e, t, n, i) {
 }
 
 function L(e) {
-  return O.updateAsync("userContent", t => {
+  return p.updateAsync("userContent", t => {
     if ((0, c.hasBit)(t.dismissedContents, e)) return !1;
     t.dismissedContents = (0, c.addBit)(t.dismissedContents, e)
   }, f.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
 function D(e) {
-  return O.updateAsync("userContent", t => {
+  return p.updateAsync("userContent", t => {
     if (!(0, c.hasBit)(t.dismissedContents, e)) return !1;
     t.dismissedContents = (0, c.removeBit)(t.dismissedContents, e)
   }, f.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
 function v() {
-  return O.updateAsync("userContent", e => {
+  return p.updateAsync("userContent", e => {
     e.dismissedContents = new Uint8Array
   }, f.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
 function M() {
-  return O.updateAsync("userContent", e => {
+  return p.updateAsync("userContent", e => {
     let t = new Uint8Array;
     for (let e of Object.keys(l.DismissibleContent)) t = (0, c.addBit)(t, l.DismissibleContent[e]);
     e.dismissedContents = t

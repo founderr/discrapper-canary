@@ -19,12 +19,12 @@ var i = n("990547"),
   T = n("703656"),
   f = n("920440"),
   S = n("314897"),
-  A = n("592125"),
-  h = n("664915"),
+  h = n("592125"),
+  A = n("664915"),
   m = n("984933"),
   N = n("430824"),
-  O = n("944486"),
-  p = n("914010"),
+  p = n("944486"),
+  O = n("914010"),
   R = n("594174"),
   C = n("626135"),
   g = n("700785"),
@@ -74,8 +74,8 @@ async function G(e) {
     loadId: _
   }));
   try {
-    let t = p.default.getGuildId(),
-      i = e === t && null != N.default.getGuild(e) ? O.default.getChannelId(e) : null,
+    let t = O.default.getGuildId(),
+      i = e === t && null != N.default.getGuild(e) ? p.default.getChannelId(e) : null,
       r = await s.HTTP.put({
         url: M.Endpoints.GUILD_JOIN(e),
         query: {
@@ -381,7 +381,7 @@ t.default = {
     })
   },
   toggleGuildFolderExpand(e) {
-    let t = h.default.isFolderExpanded(e);
+    let t = A.default.isFolderExpanded(e);
     C.default.track(M.AnalyticEvents.GUILD_FOLDER_CLICKED, {
       source: "sidebar",
       action: t ? "collapsed" : "expanded"
@@ -415,7 +415,7 @@ t.default = {
       for (null != (0, c.coerceModalRoute)(e.getCurrentRoute()) && e.goBack();;) {
         let t = (0, c.coerceChannelRoute)(e.getCurrentRoute());
         if (null == t) break;
-        let n = A.default.getChannel(t.params.channelId);
+        let n = h.default.getChannel(t.params.channelId);
         if (null == n || !n.isNSFW()) break;
         e.goBack()
       }

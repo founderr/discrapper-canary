@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return E
   },
   setPendingAccentColor: function() {
-    return h
+    return A
   },
   setPendingBanner: function() {
     return f
@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return S
   },
   setPendingPronouns: function() {
-    return A
+    return h
   },
   setPendingThemeColors: function() {
     return m
@@ -28,10 +28,10 @@ n.r(t), n.d(t, {
     return N
   },
   setTryItOutAvatarDecoration: function() {
-    return O
+    return p
   },
   setTryItOutBanner: function() {
-    return p
+    return O
   },
   setTryItOutThemeColors: function() {
     return R
@@ -121,14 +121,14 @@ function S(e) {
   })
 }
 
-function A(e) {
+function h(e) {
   r.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS",
     pronouns: e
   })
 }
 
-function h(e) {
+function A(e) {
   r.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR",
     color: e
@@ -149,14 +149,14 @@ function N(e) {
   }), c(_.AnalyticsPremiumFeatureNames.ANIMATED_AVATAR)
 }
 
-function O(e) {
+function p(e) {
   r.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION",
     avatarDecoration: e
   }), c(_.AnalyticsPremiumFeatureNames.AVATAR_DECORATION)
 }
 
-function p(e) {
+function O(e) {
   r.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER",
     banner: e

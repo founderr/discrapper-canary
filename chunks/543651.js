@@ -22,15 +22,15 @@ t.default = function(e) {
     applicationId: r,
     title: a,
     guildId: S,
-    className: A
-  } = e, h = (0, d.useGetOrFetchApplication)(r), m = (0, l.useStateFromStoresArray)([c.default], () => {
+    className: h
+  } = e, A = (0, d.useGetOrFetchApplication)(r), m = (0, l.useStateFromStoresArray)([c.default], () => {
     var e;
     return null !== (e = n.map(e => c.default.getUser(e)).filter(I.isNotNullish)) && void 0 !== e ? e : []
-  }), N = null == h ? void 0 : h.name, O = o()(t).fromNow();
+  }), N = null == A ? void 0 : A.name, p = o()(t).fromNow();
   return null == t ? null : (0, i.jsxs)("div", {
-    className: s()(A, f.container),
+    className: s()(h, f.container),
     children: [(0, i.jsx)(E.default, {
-      game: h
+      game: A
     }), (0, i.jsxs)("div", {
       className: f.textSection,
       children: [null != a && "" !== a ? (0, i.jsx)(u.Text, {
@@ -45,7 +45,7 @@ t.default = function(e) {
         variant: "text-xs/medium",
         color: "text-muted",
         className: f.__invalid_subtitle,
-        children: [null != N ? "".concat(N, " • ") : null, O]
+        children: [null != N ? "".concat(N, " • ") : null, p]
       }), (0, i.jsx)(u.Text, {
         variant: "text-xs/medium",
         color: "text-muted",

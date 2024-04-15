@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   Sequencer: function() {
-    return h
+    return A
   }
 }), n("47120");
 var i, r, s, a, o, l, u = n("735250"),
@@ -21,7 +21,7 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }(o = i || (i = {}))[o.ENTERING = 0] = "ENTERING", o[o.LEAVING = 1] = "LEAVING", o[o.APPEARING = 2] = "APPEARING", o[o.STATIC = 3] = "STATIC", (l = r || (r = {})).SLIDE = "slide", l.LIFT = "lift";
-class A extends(s = d.PureComponent) {
+class h extends(s = d.PureComponent) {
   componentDidMount() {
     if (null != this._measureRef.current) {
       let {
@@ -197,10 +197,10 @@ class A extends(s = d.PureComponent) {
     }), S(this, "direction", this.props.getDirection()), S(this, "_measureRef", d.createRef())
   }
 }
-S(A, "contextType", T.AccessibilityPreferencesContext), S(A, "defaultProps", {
+S(h, "contextType", T.AccessibilityPreferencesContext), S(h, "defaultProps", {
   duration: 300
 });
-class h extends(a = d.Component) {
+class A extends(a = d.Component) {
   componentDidMount() {
     this.setPrevSteps()
   }
@@ -230,7 +230,7 @@ class h extends(a = d.Component) {
     return (0, u.jsx)(I.TransitionGroup, {
       component: "div",
       className: c()(f.transitionGroup, t),
-      children: (0, u.jsx)(A, {
+      children: (0, u.jsx)(h, {
         fillParent: l,
         sideMargin: s,
         animationMotionType: null != d ? d : "slide",
@@ -260,7 +260,7 @@ class h extends(a = d.Component) {
     })
   }
 }
-S(h, "defaultProps", {
+S(A, "defaultProps", {
   fillParent: !1,
   animationMotionType: "slide"
 })

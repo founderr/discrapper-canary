@@ -18,7 +18,7 @@ var i, r, s = n("735250"),
   f = n("689938"),
   S = n("196826");
 
-function A(e) {
+function h(e) {
   e.stopPropagation()
 }(i = r || (r = {}))[i.SMALL = 0] = "SMALL", i[i.MEDIUM = 1] = "MEDIUM", i[i.CLIP = 2] = "CLIP";
 t.default = a.forwardRef(function(e, t) {
@@ -28,18 +28,18 @@ t.default = a.forwardRef(function(e, t) {
     className: r,
     children: a,
     actions: o,
-    handleEditModal: h,
+    handleEditModal: A,
     keyboardModeEnabled: m,
     onKeyDown: N,
-    draftType: O,
-    size: p = 1
+    draftType: p,
+    size: O = 1
   } = e, {
     onFocus: R,
     ...C
   } = (0, u.useListItem)(n), {
     handleFocus: g,
     handleBlur: L
-  } = (0, I.useFocusInside)(R), D = 0 === p, v = null != o;
+  } = (0, I.useFocusInside)(R), D = 0 === O, v = null != o;
   return (0, s.jsx)(d.FocusRing, {
     children: (0, s.jsx)("li", {
       ...C,
@@ -49,13 +49,13 @@ t.default = a.forwardRef(function(e, t) {
         if (m) {
           switch (e.which) {
             case T.KeyboardKeys.D:
-              e.preventDefault(), _.default.remove(i, n, O);
+              e.preventDefault(), _.default.remove(i, n, p);
               return;
             case T.KeyboardKeys.E:
-              null != h && (e.preventDefault(), h(e));
+              null != A && (e.preventDefault(), A(e));
               return;
             case T.KeyboardKeys.BACKSPACE:
-              e.ctrlKey ? (e.preventDefault(), _.default.clearAll(i, O)) : (e.preventDefault(), _.default.remove(i, n, O));
+              e.ctrlKey ? (e.preventDefault(), _.default.clearAll(i, p)) : (e.preventDefault(), _.default.remove(i, n, p));
               return;
             case T.KeyboardKeys.ARROW_UP:
               if (e.shiftKey || e.altKey || e.ctrlKey || e.metaKey) return;
@@ -67,7 +67,7 @@ t.default = a.forwardRef(function(e, t) {
         }
       },
       className: l()(S.upload, r, {
-        [S.sizeClip]: 2 === p
+        [S.sizeClip]: 2 === O
       }),
       ref: t,
       children: (0, s.jsxs)("div", {
@@ -78,7 +78,7 @@ t.default = a.forwardRef(function(e, t) {
             className: l()(S.actionBar, {
               [S.smallActionBar]: D
             }),
-            onContextMenu: A,
+            onContextMenu: h,
             "aria-label": f.default.Messages.ATTACHMENT_UTILITIES,
             children: (0, s.jsx)(c.default, {
               className: l()({

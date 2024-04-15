@@ -1,21 +1,21 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   default: function() {
-    return o
+    return l
   }
 });
-var a = r("735250");
-r("470079");
-var n = r("481060"),
-  i = r("468436");
+var a = t("735250");
+t("470079");
+var n = t("481060"),
+  i = t("468436");
 
-function o(e) {
+function l(e) {
   (0, n.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([r.e("99387"), r.e("76815")]).then(r.bind(r, "336977"));
-    return t => (0, a.jsx)(e, {
-      ...t
+    } = await Promise.all([t.e("99387"), t.e("76815")]).then(t.bind(t, "336977"));
+    return r => (0, a.jsx)(e, {
+      ...r
     })
   }, {
     onCloseCallback: e,

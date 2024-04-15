@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return S
   },
   CREATOR_REVENUE_SHARE_PERCENTAGE: function() {
-    return A
+    return h
   },
   GuildRoleSubscriptionBenefitTypes: function() {
     return l
@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return I
   },
   SERVER_SUBSCRIPTIONS_PREMIUM_CHECKLIST_EDUCATIONAL_URLS: function() {
-    return h
+    return A
   },
   TIER_TRIAL_INTERVALS: function() {
     return f
@@ -46,8 +46,8 @@ let f = [{
 }];
 (a = d || (d = {}))[a.NONE = 0] = "NONE", a[a.IN_SUBSCRIPTION_SERVER = 1] = "IN_SUBSCRIPTION_SERVER", a[a.SUBSCRIBED = 2] = "SUBSCRIBED";
 let S = "https://".concat(c.PRIMARY_DOMAIN, "/creators"),
-  A = 90,
-  h = Object.freeze({
+  h = 90,
+  A = Object.freeze({
     PROMO_PAGE_GUIDE: "https://discord.com/creators/say-hello-to-promo-pages-our-new-server-subscriptions-feature",
     CASE_STUDIES: "https://discord.com/creator-portal/learn-from-creators?tab=creator-case-studies",
     SUBSCRIPTION_OFFERING_GUIDE: "https://discord.com/creators/offering-inspiration-",

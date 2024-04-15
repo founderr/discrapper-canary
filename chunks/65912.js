@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useAutomodEditingRuleActions: function() {
-    return N
+    return g
   },
   useAutomodEditingRuleState: function() {
     return O
@@ -109,7 +109,7 @@ let I = Object.freeze({
     }
   }));
 
-function N() {
+function g() {
   return f(e => ({
     hasChanges: e.hasChanges,
     editingRule: e.editingRule,

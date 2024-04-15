@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   Splash: function() {
-    return A
+    return h
   }
 }), n("47120");
 var i, r = n("735250"),
@@ -43,7 +43,7 @@ function S(e, t) {
   }
 }
 
-function A(e) {
+function h(e) {
   let {
     splash: t,
     children: n
@@ -90,7 +90,7 @@ function A(e) {
     })]
   })
 }
-class h extends(i = s.PureComponent) {
+class A extends(i = s.PureComponent) {
   componentWillUnmount() {
     window.removeEventListener("resize", this.handleResize)
   }
@@ -196,6 +196,6 @@ class h extends(i = s.PureComponent) {
     })
   }
 }
-T(h, "defaultProps", {
+T(A, "defaultProps", {
   embedded: !1
-}), t.default = h
+}), t.default = A

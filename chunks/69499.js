@@ -13,9 +13,9 @@ var s = n("735250"),
   u = n("812206"),
   d = n("55563"),
   c = n("73346"),
-  E = n("689938");
+  f = n("689938");
 
-function f(e, t, n) {
+function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -48,7 +48,7 @@ class T extends a.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), f(this, "renderContextMenu", () => {
+    super(...e), E(this, "renderContextMenu", () => {
       let {
         skus: e,
         onSKUSelect: t,
@@ -57,7 +57,7 @@ class T extends a.PureComponent {
       return (0, s.jsx)(i.Menu, {
         onSelect: n,
         navId: "test-skus",
-        "aria-label": E.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
+        "aria-label": f.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
         onClose: r.closeContextMenu,
         children: e.map(e => (0, s.jsx)(i.MenuItem, {
           id: "".concat(e.id),
@@ -67,9 +67,9 @@ class T extends a.PureComponent {
           }
         }, "".concat(e.id)))
       })
-    }), f(this, "handleContextMenu", e => {
+    }), E(this, "handleContextMenu", e => {
       e.stopPropagation(), r.openContextMenu(e, this.renderContextMenu)
-    }), f(this, "handleClick", () => {
+    }), E(this, "handleClick", () => {
       let {
         onSKUSelect: e,
         primarySKU: t

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   dataUriFileSize: function() {
-    return h
+    return A
   },
   dataUrlToBlob: function() {
     return N
@@ -25,13 +25,13 @@ n.r(t), n.d(t, {
     return _
   },
   isPNGAnimated: function() {
-    return O
+    return p
   },
   makeCssUrlString: function() {
     return E
   },
   readFileAsBase64: function() {
-    return A
+    return h
   },
   zoomFit: function() {
     return d
@@ -129,7 +129,7 @@ let f = e => "number" == typeof e ? null : S(e),
     }, i.src = e
   }));
 
-function A(e) {
+function h(e) {
   return new Promise((t, n) => {
     let i = new FileReader;
     i.readAsDataURL(e), i.onload = () => {
@@ -138,7 +138,7 @@ function A(e) {
   })
 }
 
-function h(e) {
+function A(e) {
   let t = e.split(";base64,");
   return r()(2 === t.length, "Input data is not a valid image."), atob(t[1]).length
 }
@@ -160,7 +160,7 @@ function N(e) {
     type: n
   })
 }
-async function O(e) {
+async function p(e) {
   var t;
   if ("image/png" !== (null === (t = e.type) || void 0 === t ? void 0 : t.split(";")[0])) throw Error("File is not a PNG");
   let n = await e.text(),

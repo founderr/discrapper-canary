@@ -1,56 +1,56 @@
 "use strict";
 n.r(t);
-var a = n("735250");
+var i = n("735250");
 n("470079");
-var l = n("442837"),
-  r = n("481060"),
-  s = n("739566"),
-  i = n("25015"),
-  d = n("592125"),
-  o = n("998951"),
-  u = n("113039"),
-  c = n("778947"),
-  m = n("512665"),
-  _ = n("768760"),
-  f = n("689938"),
-  E = n("286424");
+var r = n("442837"),
+  s = n("481060"),
+  a = n("739566"),
+  o = n("25015"),
+  l = n("592125"),
+  u = n("998951"),
+  d = n("113039"),
+  _ = n("778947"),
+  c = n("512665"),
+  E = n("768760"),
+  I = n("689938"),
+  T = n("286424");
 t.default = e => {
   let {
     message: t
-  } = e, n = (0, s.default)(t), h = (0, l.useStateFromStores)([d.default], () => d.default.getChannel(t.channel_id)), {
-    content: v
-  } = (0, i.default)(t, {
+  } = e, n = (0, a.default)(t), f = (0, r.useStateFromStores)([l.default], () => l.default.getChannel(t.channel_id)), {
+    content: S
+  } = (0, o.default)(t, {
     hideSimpleEmbedContent: !1
   });
-  return null == h ? null : (0, a.jsxs)("div", {
-    className: E.container,
-    children: [(0, a.jsx)(r.Heading, {
-      className: E.header,
+  return null == f ? null : (0, i.jsxs)("div", {
+    className: T.container,
+    children: [(0, i.jsx)(s.Heading, {
+      className: T.header,
       variant: "heading-sm/semibold",
-      children: f.default.Messages.MOBILE_REPORTS_MESSAGE_PREVIEW_TITLE
-    }), (0, a.jsx)(r.Scroller, {
-      className: E.messagePreviewContainer,
-      children: (0, a.jsx)(o.default, {
+      children: I.default.Messages.MOBILE_REPORTS_MESSAGE_PREVIEW_TITLE
+    }), (0, i.jsx)(s.Scroller, {
+      className: T.messagePreviewContainer,
+      children: (0, i.jsx)(u.default, {
         childrenMessageContent: (() => {
-          if (null == v || "" === v || Array.isArray(v) && 0 === v.length) {
+          if (null == S || "" === S || Array.isArray(S) && 0 === S.length) {
             let {
               icon: e
-            } = (0, m.renderSingleLineMessage)(t, v, !1, "", {
-              iconClass: E.attachmentIcon,
-              iconSize: _.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
+            } = (0, c.renderSingleLineMessage)(t, S, !1, "", {
+              iconClass: T.attachmentIcon,
+              iconSize: E.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
             });
             return e
           }
-          return (0, a.jsx)(u.default, {
+          return (0, i.jsx)(d.default, {
             message: t,
-            content: v
+            content: S
           })
         })(),
-        childrenHeader: (0, a.jsx)(c.default, {
+        childrenHeader: (0, i.jsx)(_.default, {
           message: t,
-          channel: h,
+          channel: f,
           author: n,
-          guildId: h.guild_id
+          guildId: f.guild_id
         }),
         disableInteraction: !0
       })

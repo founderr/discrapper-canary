@@ -11,19 +11,19 @@ n.r(t), n.d(t, {
     return g
   },
   getEmojiURL: function() {
-    return h
+    return A
   },
   getGuildMemberAvatarURL: function() {
     return R
   },
   getGuildMemberAvatarURLSimple: function() {
-    return p
+    return O
   },
   getGuildMemberBannerURL: function() {
     return L
   },
   getUserAvatarURL: function() {
-    return O
+    return p
   },
   getUserBannerURL: function() {
     return C
@@ -57,7 +57,7 @@ i.DEFAULT_GROUP_DM_AVATARS;
 let f = i.canUseWebp(),
   S = (0, d.isAndroid)();
 
-function A(e) {
+function h(e) {
   let t, {
     endpoint: n,
     path: i,
@@ -77,7 +77,7 @@ function A(e) {
   return null != o && (I.size = (0, l.getBestMediaProxySize)(o * (0, l.getDevicePixelRatio)())), null != d && (I.keep_aspect_ratio = d), t + "?".concat(a.stringify(I))
 }
 
-function h(e) {
+function A(e) {
   let {
     id: t,
     animated: n,
@@ -105,7 +105,7 @@ function N(e) {
     if (e) return e;
     if (null == n && "0000" === r) return T[0]
   }
-  return A({
+  return h({
     endpoint: c.Endpoints.AVATAR,
     path: "avatars",
     id: t,
@@ -116,7 +116,7 @@ function N(e) {
   })
 }
 
-function O(e) {
+function p(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.AVATAR_SIZE,
@@ -124,7 +124,7 @@ function O(e) {
   return null !== (t = N(e, n, i, r)) && void 0 !== t ? t : m(e.id, e.discriminator)
 }
 
-function p(e) {
+function O(e) {
   let t, {
       guildId: n,
       userId: i,
@@ -147,7 +147,7 @@ function R(e) {
     avatar: n,
     guildId: i
   } = e, r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  return null == n ? null : p({
+  return null == n ? null : O({
     userId: t,
     avatar: n,
     guildId: i,
@@ -254,7 +254,7 @@ function P(e) {
     size: i,
     canAnimate: r = !1
   } = e;
-  return A({
+  return h({
     endpoint: c.Endpoints.GUILD_ICON,
     path: "icons",
     id: t,
@@ -271,7 +271,7 @@ function U(e) {
     size: i = c.AVATAR_SIZE,
     canAnimate: r = !1
   } = e;
-  return A({
+  return h({
     endpoint: c.Endpoints.GUILD_TEMPLATE_ICON,
     path: "guild-templates",
     id: t,
@@ -294,7 +294,7 @@ function b(e) {
     let e = N(r, !1, i);
     if (null != e) return e
   }
-  if (null != n) return A({
+  if (null != n) return h({
     endpoint: c.Endpoints.APPLICATION_ICON,
     path: "app-icons",
     id: t,
@@ -317,7 +317,7 @@ function G(e) {
     keepAspectRatio: r = !1,
     format: s
   } = e;
-  return A({
+  return h({
     endpoint: c.Endpoints.APPLICATION_ICON,
     path: "app-icons",
     id: t,
@@ -337,7 +337,7 @@ function w(e) {
     size: r,
     canAnimate: s = !0
   } = e;
-  return A({
+  return h({
     endpoint: (e, r, s) => c.Endpoints.VIDEO_FILTER_ASSET_STORAGE(t, n, i, s),
     path: "video-filter-assets/".concat(t),
     id: n,
@@ -360,7 +360,7 @@ function B(e) {
     icon: a,
     size: l
   })) && void 0 !== t ? t : i.DEFAULT_CHANNEL_ICON;
-  return null !== (n = A({
+  return null !== (n = h({
     endpoint: c.Endpoints.CHANNEL_ICON,
     path: "channel-icons",
     id: s,
@@ -395,10 +395,10 @@ function x(e) {
   }
 }
 t.default = {
-  getUserAvatarURL: O,
+  getUserAvatarURL: p,
   getDefaultAvatarURL: m,
   getGuildMemberAvatarURL: R,
-  getGuildMemberAvatarURLSimple: p,
+  getGuildMemberAvatarURLSimple: O,
   getGuildMemberAvatarSource: function(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
       i = R(e, n);
@@ -411,7 +411,7 @@ t.default = {
     return k(null == e ? void 0 : e.icon)
   },
   isAnimatedIconHash: k,
-  getUserAvatarSource: (e, t, n) => x(O(e, t, n)),
+  getUserAvatarSource: (e, t, n) => x(p(e, t, n)),
   getGuildIconURL: P,
   getGuildSplashURL: D,
   getGuildSplashSource: function(e) {
@@ -428,7 +428,7 @@ t.default = {
       channelId: t,
       icon: n
     } = e;
-    return null == n ? null : A({
+    return null == n ? null : h({
       endpoint: c.Endpoints.GUILD_RESOURCE_CHANNELS_ICON,
       path: "resource-channels",
       id: t,
@@ -442,7 +442,7 @@ t.default = {
       channelId: t,
       icon: n
     } = e;
-    return null == n ? null : A({
+    return null == n ? null : h({
       endpoint: c.Endpoints.GUILD_NEW_MEMBER_ACTIONS_ICON,
       path: "new-member-actions",
       id: t,
@@ -453,7 +453,7 @@ t.default = {
   },
   getGuildTemplateIconURL: U,
   getChannelIconURL: B,
-  getEmojiURL: h,
+  getEmojiURL: A,
   getApplicationIconURL: b,
   getGameAssetURL: G,
   getVideoFilterAssetURL: w,

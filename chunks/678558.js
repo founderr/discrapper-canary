@@ -20,18 +20,18 @@ t.default = e => {
     analyticsLocation: t,
     analyticsSourceLocation: n,
     guild: s,
-    buttonText: A,
-    targetBoostedGuildTier: h,
+    buttonText: h,
+    targetBoostedGuildTier: A,
     onClose: m = () => {},
     closeLayer: N = () => {},
-    pauseAnimation: O = !1,
-    applicationId: p,
+    pauseAnimation: p = !1,
+    applicationId: O,
     handleSubscribeModalClose: R,
     withHighlight: C = !1,
     ...g
   } = e, {
     analyticsLocations: L
-  } = (0, d.default)(), D = (0, u.useAppContext)() === T.AppContext.POPOUT, [v, M] = r.useState(!1), y = null != h ? Math.max((0, E.getNumberOfAppliedBoostsNeededForTier)(s, h), 1) : 1, P = (0, E.generateBlockGuildSubscriptionPurchasesNode)(), U = async () => {
+  } = (0, d.default)(), D = (0, u.useAppContext)() === T.AppContext.POPOUT, [v, M] = r.useState(!1), y = null != A ? Math.max((0, E.getNumberOfAppliedBoostsNeededForTier)(s, A), 1) : 1, P = (0, E.generateBlockGuildSubscriptionPurchasesNode)(), U = async () => {
     M(!0), await (0, I.addAppliedGuildBoosts)({
       analyticsLocations: L,
       analyticsLocation: t,
@@ -41,11 +41,11 @@ t.default = e => {
       onClose: m,
       closeLayer: N,
       inPopout: D,
-      applicationId: p,
+      applicationId: O,
       handleSubscribeModalClose: R
     }), M(!1)
   }, b = _.default.getPremiumTypeSubscription(), G = (0, i.jsx)("span", {
-    children: null != A ? A : f.default.Messages.PREMIUM_GUILD_PERKS_MODAL_BUTTON_SUBSCRIBE_THIS_SERVER
+    children: null != h ? h : f.default.Messages.PREMIUM_GUILD_PERKS_MODAL_BUTTON_SUBSCRIBE_THIS_SERVER
   });
   return ((null == b ? void 0 : b.isPausedOrPausePending) && (G = (0, i.jsxs)("div", {
     className: S.pausedButton,
@@ -61,7 +61,7 @@ t.default = e => {
       ...e,
       disabled: !0,
       size: l.Button.Sizes.SMALL,
-      pauseAnimation: O,
+      pauseAnimation: p,
       ...g,
       children: G
     })
@@ -73,7 +73,7 @@ t.default = e => {
     }),
     submitting: v,
     onClick: U,
-    pauseAnimation: O,
+    pauseAnimation: p,
     children: G
   })
 }

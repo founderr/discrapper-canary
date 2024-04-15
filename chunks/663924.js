@@ -15,21 +15,21 @@ var i = n("735250"),
   T = n("5967"),
   f = n("499254"),
   S = n("541099"),
-  A = n("481370"),
-  h = n("361917"),
+  h = n("481370"),
+  A = n("361917"),
   m = n("981631"),
   N = n("957825"),
-  O = n("470774");
+  p = n("470774");
 t.default = r.memo(function(e) {
   let {
     positionTargetRef: t,
     channel: n,
     closeOnModalOuterClick: s = !1,
-    parentModalKey: p
+    parentModalKey: O
   } = e, R = r.useRef(null), C = r.useRef(null), {
     renderWindow: g,
     windowDispatch: L
-  } = r.useContext(c.default), D = null != p, v = (0, u.useIsModalAtTop)(null != p ? p : ""), M = () => {
+  } = r.useContext(c.default), D = null != O, v = (0, u.useIsModalAtTop)(null != O ? O : ""), M = () => {
     f.dismissAppLauncherPopup()
   }, y = r.useCallback(e => {
     var t;
@@ -58,7 +58,7 @@ t.default = r.memo(function(e) {
   return (0, i.jsx)(_.default, {
     section: m.AnalyticsSections.EXPRESSION_PICKER,
     children: (0, i.jsx)(E.AppReferencePositionLayer, {
-      className: O.positionLayer,
+      className: p.positionLayer,
       reference: t,
       position: "top",
       align: "left",
@@ -69,21 +69,21 @@ t.default = r.memo(function(e) {
           isPositioned: t
         } = e;
         return (0, i.jsx)("section", {
-          className: a()(O.positionContainer),
+          className: a()(p.positionContainer),
           ref: R,
           role: "dialog",
           "aria-label": "Application Launcher",
           children: t ? (0, i.jsxs)("div", {
-            className: O.drawerSizingWrapper,
+            className: p.drawerSizingWrapper,
             ref: C,
             children: [(0, i.jsx)("div", {
-              className: O.resizeHandle
+              className: p.resizeHandle
             }), (0, i.jsxs)("div", {
-              className: O.contentWrapper,
-              children: [(0, i.jsx)(h.default, {
+              className: p.contentWrapper,
+              children: [(0, i.jsx)(A.default, {
                 channel: n,
                 isAppDetailPresent: null != U
-              }), null != U ? (0, i.jsx)(A.default, {
+              }), null != U ? (0, i.jsx)(h.default, {
                 channel: n,
                 appDetail: U
               }, U.id) : null]

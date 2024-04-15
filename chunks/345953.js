@@ -15,13 +15,13 @@ var i = n("392711"),
   T = n("815016"),
   f = n("725380"),
   S = n("340332"),
-  A = n("675478"),
-  h = n("65154");
+  h = n("675478"),
+  A = n("65154");
 let m = e => "AudioContextSettingsMigrated:".concat(e),
-  N = e => e === h.MediaEngineContextTypes.STREAM ? s.AudioSettingsDefaultVolumes.STREAM : s.AudioSettingsDefaultVolumes.USER;
+  N = e => e === A.MediaEngineContextTypes.STREAM ? s.AudioSettingsDefaultVolumes.STREAM : s.AudioSettingsDefaultVolumes.USER;
 
-function O() {
-  (0, T.shouldReadWriteAudioSettings)() && (o.Storage.get(m(c.default.getId())) || A.PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", e => {
+function p() {
+  (0, T.shouldReadWriteAudioSettings)() && (o.Storage.get(m(c.default.getId())) || h.PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", e => {
     let t = !1;
     for (let [n, i] of Object.entries(E.default.getState().settingsByContext)) {
       let r = (0, S.coerceAudioContextForProto)(n);
@@ -48,9 +48,9 @@ function O() {
       }
     }
     return o.Storage.set(m(c.default.getId()), !0), t
-  }, A.UserSettingsDelay.AUTOMATED))
+  }, h.UserSettingsDelay.AUTOMATED))
 }
-let p = r().debounce(() => {
+let O = r().debounce(() => {
     C()
   }, 2e3),
   R = r().debounce(u.remoteAudioSettingsUpdate, 500, {
@@ -58,7 +58,7 @@ let p = r().debounce(() => {
   });
 
 function C() {
-  A.PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", e => {
+  h.PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", e => {
     let t = !1;
     return (0, f.drainPendingAudioSettings)((n, i, r) => {
       let s = function(e, t, n, i) {
@@ -97,7 +97,7 @@ function C() {
       });
       t = t || s
     }), t
-  }, A.UserSettingsDelay.INFREQUENT_USER_ACTION)
+  }, h.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
 function g(e) {
@@ -114,7 +114,7 @@ function g(e) {
     volume: a
   }), t = r, n = s, i = a, (0, f.updatePendingSettings)(t, n, {
     volume: i
-  }), p()
+  }), O()
 }
 
 function L(e) {
@@ -127,7 +127,7 @@ function L(e) {
       var i, r, s;
       i = t, r = n, s = E.default.isLocalMute(n, t), (0, f.updatePendingSettings)(i, r, {
         muted: s
-      }), p.cancel(), C()
+      }), O.cancel(), C()
     }
   }
 }
@@ -142,7 +142,7 @@ function D(e) {
       var i, r, s;
       i = t, r = n, s = _.default.isLocalSoundboardMuted(n), (0, f.updatePendingSettings)(i, r, {
         soundboardMuted: s
-      }), p.cancel(), C()
+      }), O.cancel(), C()
     }
   }
 }
@@ -150,7 +150,7 @@ class v extends l.default {
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
-      POST_CONNECTION_OPEN: O,
+      POST_CONNECTION_OPEN: p,
       AUDIO_SET_LOCAL_VOLUME: g,
       AUDIO_TOGGLE_LOCAL_MUTE: L,
       AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: D

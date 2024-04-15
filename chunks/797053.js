@@ -19,10 +19,10 @@ t.default = e => {
     ...I
   } = e, [T, f] = r.useState(!1), S = r.useCallback(e => {
     f(!0), null == c || c(e)
-  }, [f, c]), A = r.useCallback(e => {
+  }, [f, c]), h = r.useCallback(e => {
     f(!1), null == E || E(e)
-  }, [f, E]), h = {};
-  return null != s && (h = {
+  }, [f, E]), A = {};
+  return null != s && (A = {
     color: (0, o.int2hex)(s),
     backgroundColor: T ? (0, o.int2rgba)(s, .3) : (0, o.int2rgba)(s, .1)
   }), (0, i.jsx)(l.Clickable, {
@@ -33,8 +33,8 @@ t.default = e => {
       interactive: I.onClick
     }),
     onMouseEnter: S,
-    onMouseLeave: A,
-    style: h,
+    onMouseLeave: h,
+    style: A,
     tabIndex: null != I.onClick ? 0 : -1,
     children: null != _ ? (0, i.jsx)(u.default, {
       iconType: _,

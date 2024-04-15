@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   useCanSeeRemixBadge: function() {
-    return i
+    return r
   },
   useIsRemixANitroPerk: function() {
-    return r
+    return s
   }
 }), n("906732");
-let a = (0, n("818083").createExperiment)({
+let i = (0, n("818083").createExperiment)({
   kind: "user",
   id: "2023-08_remix_ga",
   label: "Remix General Available",
@@ -43,16 +43,16 @@ let a = (0, n("818083").createExperiment)({
   }]
 });
 
-function i() {
-  return a.useExperiment({
+function r() {
+  return i.useExperiment({
     location: "canSeeRemixBadge"
   }, {
     autoTrackExposure: !0
   }).canSeeRemixBadge
 }
 
-function r() {
-  return !!a.useExperiment({
+function s() {
+  return !!i.useExperiment({
     location: "isRemixANitroPerkHook"
   }, {
     autoTrackExposure: !0

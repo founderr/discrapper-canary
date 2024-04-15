@@ -1,76 +1,76 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   default: function() {
-    return A
+    return P
   }
-}), r("47120");
-var a = r("735250"),
-  n = r("470079"),
-  i = r("120356"),
-  o = r.n(i),
-  l = r("913527"),
-  s = r.n(l),
-  c = r("442837"),
-  d = r("481060"),
-  u = r("129861"),
-  h = r("594174"),
-  p = r("825185"),
-  m = r("740727"),
-  g = r("502568"),
-  f = r("55935"),
-  b = r("120816"),
-  y = r("31336"),
-  x = r("257785"),
-  k = r("484036"),
-  v = r("681619"),
-  C = r("621060"),
-  S = r("689938"),
-  j = r("403434"),
-  T = r("779869");
-let w = [{
+}), t("47120");
+var a = t("735250"),
+  n = t("470079"),
+  i = t("120356"),
+  l = t.n(i),
+  o = t("913527"),
+  s = t.n(o),
+  c = t("442837"),
+  d = t("481060"),
+  u = t("129861"),
+  h = t("594174"),
+  p = t("825185"),
+  m = t("740727"),
+  g = t("502568"),
+  f = t("55935"),
+  b = t("120816"),
+  y = t("31336"),
+  x = t("257785"),
+  k = t("484036"),
+  v = t("681619"),
+  C = t("621060"),
+  S = t("689938"),
+  j = t("403434"),
+  T = t("779869");
+let N = [{
   key: "event",
   cellClassName: j.eventColumn,
   render(e) {
     let {
-      event: t
+      event: r
     } = e;
-    return t
+    return r
   }
 }, {
   key: "location",
   cellClassName: j.locationColumn,
   render(e) {
     let {
-      properties: t
+      properties: r
     } = e;
-    return t.location
+    return r.location
   }
 }];
 
-function N(e) {
+function w(e) {
   let {
-    children: t
+    children: r
   } = e;
   return (0, a.jsx)(d.ScrollerThin, {
     className: j.customPropertiesContainer,
     children: (0, a.jsx)("dl", {
-      children: t
+      children: r
     })
   })
 }
 
 function E(e) {
   let {
-    name: t,
-    children: r
+    name: r,
+    children: t
   } = e;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("dt", {
       className: j.customPropertiesName,
-      children: t
+      children: r
     }), (0, a.jsx)("dd", {
       className: j.customPropertiesValue,
-      children: r
+      children: t
     })]
   })
 }
@@ -80,20 +80,20 @@ let _ = [{
     render: e => {
       let {
         loggedEvent: {
-          event: t,
-          properties: r,
+          event: r,
+          properties: t,
           timestamp: n,
           fingerprint: i
         }
-      } = e, l = h.default.getUser(i), c = s()(n);
+      } = e, o = h.default.getUser(i), c = s()(n);
       return (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsxs)(g.default, {
-          className: o()(T.headerBar, j.subPanelHeaderBar),
+          className: l()(T.headerBar, j.subPanelHeaderBar),
           children: [(0, a.jsx)(g.default.Icon, {
             icon: p.default,
-            tooltip: t
+            tooltip: r
           }), (0, a.jsx)(g.default.Title, {
-            children: t
+            children: r
           })]
         }), (0, a.jsxs)(x.Properties, {
           className: j.commonProperties,
@@ -104,10 +104,10 @@ let _ = [{
               title: (0, f.dateFormat)(c, "LLLL"),
               children: (0, f.calendarFormat)(c)
             })
-          }), null != l && (0, a.jsx)(x.Property, {
+          }), null != o && (0, a.jsx)(x.Property, {
             name: "User",
             children: (0, a.jsx)(u.default, {
-              user: l
+              user: o
             })
           }), (0, a.jsx)(x.Property, {
             name: "Fingerprint",
@@ -115,18 +115,18 @@ let _ = [{
               children: i
             })
           })]
-        }), (0, a.jsx)(N, {
-          children: Object.entries(r).map(e => {
-            let [t, r] = e;
+        }), (0, a.jsx)(w, {
+          children: Object.entries(t).map(e => {
+            let [r, t] = e;
             return (0, a.jsx)(E, {
-              name: "".concat(t, ":"),
-              children: null != r ? (0, a.jsx)("code", {
-                children: JSON.stringify(r)
+              name: "".concat(r, ":"),
+              children: null != t ? (0, a.jsx)("code", {
+                children: JSON.stringify(t)
               }) : (0, a.jsx)("code", {
                 className: j.emptyProperty,
                 children: "null"
               })
-            }, t)
+            }, r)
           })
         })]
       })
@@ -136,12 +136,12 @@ let _ = [{
     events: {
       label: "Events",
       filter: e => Object.entries(L).filter(e => {
-        let [t] = e;
-        return "events" !== t
-      }).map(t => {
-        let [r, {
+        let [r] = e;
+        return "events" !== r
+      }).map(r => {
+        let [t, {
           filter: a
-        }] = t;
+        }] = r;
         return !a(e)
       }).every(e => e)
     },
@@ -159,17 +159,17 @@ let _ = [{
     }
   };
 
-function A() {
+function P() {
   let e = n.useRef(null),
-    t = (0, c.useStateFromStores)([b.default], () => b.default.loggedEvents),
-    [r, i] = n.useState(Object.keys(L)),
-    l = t.filter(e => {
-      for (let t of r)
-        if (L[t].filter(e)) return !0;
+    r = (0, c.useStateFromStores)([b.default], () => b.default.loggedEvents),
+    [t, i] = n.useState(Object.keys(L)),
+    o = r.filter(e => {
+      for (let r of t)
+        if (L[r].filter(e)) return !0;
       return !1
     }),
     [s, u] = n.useState(void 0),
-    h = l.find(e => e.key === s),
+    h = o.find(e => e.key === s),
     {
       TabBar: p,
       renderSelectedTab: g
@@ -178,7 +178,7 @@ function A() {
     }, []);
   return (0, a.jsxs)("div", {
     ref: e,
-    className: o()(T.panel, j.panel),
+    className: l()(T.panel, j.panel),
     children: [(0, a.jsxs)("div", {
       className: j.toolbar,
       children: [(0, a.jsx)(d.Button, {
@@ -197,22 +197,22 @@ function A() {
       }), (0, a.jsx)("div", {
         className: j.filters,
         children: Object.entries(L).map(e => {
-          let [t, n] = e;
+          let [r, n] = e;
           return (0, a.jsx)(d.Clickable, {
-            className: o()(j.filter, r.includes(t) && j.activeFilter),
+            className: l()(j.filter, t.includes(r) && j.activeFilter),
             onClick: () => {
               var e;
-              return e = t, void i(t => t.includes(e) ? t.filter(t => t !== e) : [...t, e])
+              return e = r, void i(r => r.includes(e) ? r.filter(r => r !== e) : [...r, e])
             },
             children: n.label
-          }, t)
+          }, r)
         })
       })]
     }), (0, a.jsx)(d.ScrollerThin, {
       className: j.tableContainer,
       children: (0, a.jsx)(v.default, {
-        columns: w,
-        data: l,
+        columns: N,
+        data: o,
         selectedRowKey: s,
         onClickRow: u
       })

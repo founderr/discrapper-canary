@@ -1,24 +1,24 @@
 "use strict";
 n.r(t), n.d(t, {
   transitionToChannel: function() {
-    return u
+    return o
   },
   transitionToPage: function() {
-    return o
+    return u
   }
 });
 var s = n("481060"),
-  i = n("475179"),
+  a = n("475179"),
   l = n("925549"),
-  a = n("905423"),
+  i = n("905423"),
   r = n("981631");
 
-function u(e, t) {
+function o(e, t) {
   let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-    u = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-  !(0, s.hasAnyModalOpen)() && (n && l.default.channelListScrollTo(e, t), u && null != t && i.default.updateChatOpen(t, !0), a.default.getState().updatePath(r.Routes.CHANNEL(e, t)))
+    o = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+  !(0, s.hasAnyModalOpen)() && (n && l.default.channelListScrollTo(e, t), o && null != t && a.default.updateChatOpen(t, !0), i.default.getState().updatePath(r.Routes.CHANNEL(e, t)))
 }
 
-function o(e) {
-  !(0, s.hasAnyModalOpen)() && a.default.getState().updatePath(e)
+function u(e) {
+  !(0, s.hasAnyModalOpen)() && i.default.getState().updatePath(e)
 }

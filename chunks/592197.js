@@ -1,15 +1,15 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   default: function() {
-    return o
+    return l
   }
 });
-var a = r("735250");
-r("470079");
-var n = r("702904"),
-  i = r("351930");
+var a = t("735250");
+t("470079");
+var n = t("702904"),
+  i = t("351930");
 
-function o() {
+function l() {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(n.default, {}), (0, a.jsx)(i.default, {})]
   })

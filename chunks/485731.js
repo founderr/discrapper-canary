@@ -1,10 +1,10 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   hqStreamingFrameAnimationPlayed: function() {
     return i
   },
   hqStreamingPopoutDismissed: function() {
-    return o
+    return l
   },
   hqStreamingSetEnabled: function() {
     return n
@@ -13,7 +13,7 @@ r.r(t), r.d(t, {
     return a
   }
 });
-let a = (0, r("652874").default)(() => ({
+let a = (0, t("652874").default)(() => ({
   hqStreamingFrameAnimationPlayed: !1,
   hqStreamingPopoutDismissed: !1,
   hqStreamingIsEnabled: !1,
@@ -22,11 +22,11 @@ let a = (0, r("652874").default)(() => ({
 
 function n(e) {
   let {
-    hqStreamingDidEnable: t
+    hqStreamingDidEnable: r
   } = a.getState();
   a.setState({
     hqStreamingIsEnabled: e,
-    hqStreamingDidEnable: e || t
+    hqStreamingDidEnable: e || r
   })
 }
 
@@ -36,7 +36,7 @@ function i(e) {
   })
 }
 
-function o(e) {
+function l(e) {
   a.setState({
     hqStreamingPopoutDismissed: e
   })

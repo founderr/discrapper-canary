@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   canViewInviteModal: function() {
-    return i
+    return l
   }
 });
-var l = n("981631");
+var a = n("981631");
 
-function i(e, t, n, i) {
-  let a = null != n ? n : t;
-  return null != a && e.can(l.Permissions.CREATE_INSTANT_INVITE, a) || null != t && null != t.vanityURLCode || (null == i ? void 0 : i.invite_code) != null
+function l(e, t, n, l) {
+  let i = null != n ? n : t;
+  return null != i && e.can(a.Permissions.CREATE_INSTANT_INVITE, i) || null != t && null != t.vanityURLCode || (null == l ? void 0 : l.invite_code) != null
 }

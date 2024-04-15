@@ -1,66 +1,66 @@
 "use strict";
-a.r(t), a.d(t, {
+l.r(t), l.d(t, {
   default: function() {
     return f
   }
-}), a("47120");
-var l = a("735250"),
-  n = a("470079"),
-  u = a("442837"),
-  d = a("481060"),
-  s = a("194359"),
-  i = a("699516"),
-  o = a("594174"),
-  r = a("689938");
+}), l("47120");
+var a = l("735250"),
+  u = l("470079"),
+  n = l("442837"),
+  d = l("481060"),
+  s = l("194359"),
+  r = l("699516"),
+  i = l("594174"),
+  o = l("689938");
 
 function f(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "ContextMenu",
     {
-      id: a,
+      id: l,
       username: f,
       bot: c
     } = e,
-    M = (0, u.useStateFromStores)([o.default], () => {
+    E = (0, n.useStateFromStores)([i.default], () => {
       var e;
-      return (null === (e = o.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === a
-    }, [a]),
-    [m, E] = (0, u.useStateFromStoresArray)([i.default], () => [i.default.isFriend(a), i.default.isBlocked(a)], [a]),
-    [g, I] = n.useState(!1);
-  return c || M ? null : m ? (0, l.jsx)(d.MenuItem, {
+      return (null === (e = i.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === l
+    }, [l]),
+    [m, M] = (0, n.useStateFromStoresArray)([r.default], () => [r.default.isFriend(l), r.default.isBlocked(l)], [l]),
+    [S, _] = u.useState(!1);
+  return c || E ? null : m ? (0, a.jsx)(d.MenuItem, {
     id: "remove-friend",
-    label: r.default.Messages.REMOVE_FRIEND,
+    label: o.default.Messages.REMOVE_FRIEND,
     action: function() {
-      (0, d.openModal)(e => (0, l.jsx)(d.ConfirmModal, {
-        header: r.default.Messages.REMOVE_FRIEND_TITLE.format({
+      (0, d.openModal)(e => (0, a.jsx)(d.ConfirmModal, {
+        header: o.default.Messages.REMOVE_FRIEND_TITLE.format({
           name: f
         }),
-        confirmText: r.default.Messages.REMOVE_FRIEND,
-        cancelText: r.default.Messages.CANCEL,
+        confirmText: o.default.Messages.REMOVE_FRIEND,
+        cancelText: o.default.Messages.CANCEL,
         onConfirm: () => {
-          s.default.removeFriend(a, {
+          s.default.removeFriend(l, {
             location: t
-          }), I(!1)
+          }), _(!1)
         },
         ...e,
-        children: (0, l.jsx)(d.Text, {
+        children: (0, a.jsx)(d.Text, {
           variant: "text-md/normal",
-          children: r.default.Messages.REMOVE_FRIEND_BODY.format({
+          children: o.default.Messages.REMOVE_FRIEND_BODY.format({
             name: f
           })
         })
       }))
     }
-  }) : (0, l.jsx)(d.MenuItem, {
+  }) : (0, a.jsx)(d.MenuItem, {
     id: "add-friend",
-    label: g ? r.default.Messages.ADD_FRIEND_BUTTON_AFTER : r.default.Messages.ADD_FRIEND,
+    label: S ? o.default.Messages.ADD_FRIEND_BUTTON_AFTER : o.default.Messages.ADD_FRIEND,
     action: () => {
-      !g && (s.default.addRelationship({
-        userId: a,
+      !S && (s.default.addRelationship({
+        userId: l,
         context: {
           location: t
         }
-      }), I(!0))
+      }), _(!0))
     },
-    disabled: E || g && !m
+    disabled: M || S && !m
   })
 }

@@ -10,12 +10,12 @@ var s, a, o, l, u = n("348327"),
   T = n("503438"),
   f = n("860852"),
   S = n("768419"),
-  A = n("695346"),
-  h = n("581883"),
+  h = n("695346"),
+  A = n("581883"),
   m = n("131704"),
   N = n("780570"),
-  O = n("314897"),
-  p = n("77498"),
+  p = n("314897"),
+  O = n("77498"),
   R = n("517100"),
   C = n("283595"),
   g = n("293273"),
@@ -44,8 +44,8 @@ function F(e) {
       return !1;
     case v.ActivityTypes.PLAYING:
       return null != e.application_id ? V(e.application_id) : function(e) {
-        let t = p.default.getGameByName(e);
-        return null != t ? V(t.id) : A.ShowCurrentGame.getSetting()
+        let t = O.default.getGameByName(e);
+        return null != t ? V(t.id) : h.ShowCurrentGame.getSetting()
       }(e.name);
     case v.ActivityTypes.STREAMING:
     case v.ActivityTypes.WATCHING:
@@ -59,7 +59,7 @@ function x() {
   if (U = null !== (e = R.default.getIdleSince()) && void 0 !== e ? e : 0, G = R.default.isAFK(), w) y = P, H();
   else if (M) y = v.StatusTypes.INVISIBLE;
   else {
-    let e = A.StatusSetting.getSetting();
+    let e = h.StatusSetting.getSetting();
     y = e !== v.StatusTypes.UNKNOWN ? e : v.StatusTypes.ONLINE
   }
   y === v.StatusTypes.ONLINE && U > 0 && (y = v.StatusTypes.IDLE);
@@ -82,7 +82,7 @@ function Y() {
 }
 class j extends(s = E.default.Store) {
   initialize() {
-    this.waitFor(R.default, h.default, g.default, D.default, C.default, p.default), this.syncWith([g.default], x)
+    this.waitFor(R.default, A.default, g.default, D.default, C.default, O.default), this.syncWith([g.default], x)
   }
   getLocalPresence() {
     return {
@@ -161,6 +161,6 @@ l = "SelfPresenceStore", (o = "displayName") in(a = j) ? Object.defineProperty(a
     let {
       channel: t
     } = e;
-    t instanceof m.ChannelRecordBase && (null == t ? void 0 : t.isBroadcastChannel()) && (null == t ? void 0 : t.ownerId) === O.default.getId() && (i = void 0, r = void 0)
+    t instanceof m.ChannelRecordBase && (null == t ? void 0 : t.isBroadcastChannel()) && (null == t ? void 0 : t.ownerId) === p.default.getId() && (i = void 0, r = void 0)
   }
 })

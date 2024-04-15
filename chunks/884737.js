@@ -10,7 +10,7 @@ s.r(t), s.d(t, {
     return M
   },
   EmojiChangeStrings: function() {
-    return v
+    return H
   },
   GuildChangeStrings: function() {
     return f
@@ -34,7 +34,7 @@ s.r(t), s.d(t, {
     return B
   },
   StickerChangeStrings: function() {
-    return H
+    return v
   },
   ThreadChangeStrings: function() {
     return F
@@ -230,11 +230,11 @@ let C = new A.default("AuditLogUtils"),
     [G.AuditLogChangeKeys.AVATAR_HASH]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_AVATAR,
     [G.AuditLogChangeKeys.REASON]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON
   }),
-  v = () => ({
+  H = () => ({
     [G.AuditLogChangeKeys.NAME]: eE(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CHANGE),
     ...R()
   }),
-  H = () => ({
+  v = () => ({
     [G.AuditLogChangeKeys.NAME]: eE(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CHANGE),
     [G.AuditLogChangeKeys.TAGS]: eE(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CHANGE),
     [G.AuditLogChangeKeys.DESCRIPTION]: eE(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CHANGE),

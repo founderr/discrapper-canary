@@ -26,8 +26,8 @@ function I(e) {
     channelId: f,
     onClose: S
   } = e, {
-    activity: A,
-    status: h,
+    activity: h,
+    status: A,
     isMobile: m
   } = (0, r.useStateFromStoresObject)([a.default, o.default], () => {
     let e = null != a.default.getAnyStreamForUser(t.id);
@@ -53,7 +53,7 @@ function I(e) {
     }), (0, i.jsx)(u.UserPopoutAvatar, {
       user: t,
       displayProfile: n,
-      status: (0, s.default)(A) ? c.StatusTypes.STREAMING : h,
+      status: (0, s.default)(h) ? c.StatusTypes.STREAMING : A,
       isMobile: m,
       guildId: T,
       channelId: f,

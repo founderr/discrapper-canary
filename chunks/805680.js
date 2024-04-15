@@ -15,12 +15,12 @@ var i = n("735250"),
   T = n("410575"),
   f = n("347469"),
   S = n("40851"),
-  A = n("367907"),
-  h = n("907040"),
+  h = n("367907"),
+  A = n("907040"),
   m = n("455708"),
   N = n("315744"),
-  O = n("603074"),
-  p = n("453070"),
+  p = n("603074"),
+  O = n("453070"),
   R = n("926491"),
   C = n("457040"),
   g = n("740492"),
@@ -51,7 +51,7 @@ let k = y.MIN_EXPRESSION_PICKER_WIDTH + U.EmojiSize.MEDIUM,
       "aria-controls": t ? o : void 0,
       ...l,
       onClick: () => {
-        A.default.trackWithMetadata(P.AnalyticEvents.EXPRESSION_PICKER_TAB_CLICKED, {
+        h.default.trackWithMetadata(P.AnalyticEvents.EXPRESSION_PICKER_TAB_CLICKED, {
           tab: r,
           badged: !1
         }), (0, M.setExpressionPickerView)(r)
@@ -122,8 +122,8 @@ t.default = r.memo(function(e) {
     position: K,
     align: z,
     positionLayerClassName: X,
-    closeOnModalOuterClick: Q = !1,
-    parentModalKey: q
+    closeOnModalOuterClick: q = !1,
+    parentModalKey: Q
   } = e, Z = r.useRef(null), J = r.useRef(!1), $ = r.useRef(), ee = r.useRef(null), {
     drawerWidth: et,
     handleDrawerResizeHandleMouseDown: en
@@ -131,12 +131,12 @@ t.default = r.memo(function(e) {
     positionContainerRef: Z,
     drawerRef: ee,
     orientation: "left" === z ? f.ResizeOrientation.HORIZONTAL_RIGHT : f.ResizeOrientation.HORIZONTAL_LEFT
-  }), ei = (0, M.useExpressionPickerStore)(e => e.activeView), er = (0, p.useHasSendableSticker)(j), {
+  }), ei = (0, M.useExpressionPickerStore)(e => e.activeView), er = (0, O.useHasSendableSticker)(j), {
     renderWindow: es,
     windowDispatch: ea
-  } = r.useContext(S.default), eo = (0, _.useStateFromStores)([R.default], () => !R.default.hasLoadedStickerPacks), el = (0, N.useSoundmojiExperiment)("expression_picker"), eu = null != q, ed = (0, c.useIsModalAtTop)(null != q ? q : ""), e_ = r.useCallback(e => {
+  } = r.useContext(S.default), eo = (0, _.useStateFromStores)([R.default], () => !R.default.hasLoadedStickerPacks), el = (0, N.useSoundmojiExperiment)("expression_picker"), eu = null != Q, ed = (0, c.useIsModalAtTop)(null != Q ? Q : ""), e_ = r.useCallback(e => {
     var t;
-    if (!eu && (0, c.hasAnyModalOpen)() || eu && !(ed && Q)) return;
+    if (!eu && (0, c.hasAnyModalOpen)() || eu && !(ed && q)) return;
     let {
       target: n
     } = e;
@@ -148,7 +148,7 @@ t.default = r.memo(function(e) {
     }(0, M.closeExpressionPicker)();
     let i = null === (t = (0, v.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
     (null == i || "BODY" === i.tagName) && D.ComponentDispatch.dispatchToLastSubscribed(P.ComponentActions.TEXTAREA_FOCUS)
-  }, [Q, ed, eu]), ec = r.useCallback(() => {
+  }, [q, ed, eu]), ec = r.useCallback(() => {
     (0, M.closeExpressionPicker)()
   }, []);
   r.useLayoutEffect(() => {
@@ -165,7 +165,7 @@ t.default = r.memo(function(e) {
   }, [ed, eu]), r.useEffect(() => {
     if (null != ee.current && !J.current) {
       var e, t, n, i;
-      ei === y.ExpressionPickerViewType.EMOJI ? (null == $ ? void 0 : null === (e = $.current) || void 0 === e ? void 0 : e.onPickerOpen) != null && (null == $ || null === (t = $.current) || void 0 === t || t.onPickerOpen(), J.current = !0) : ei === y.ExpressionPickerViewType.STICKER ? (null == $ ? void 0 : null === (n = $.current) || void 0 === n ? void 0 : n.onPickerOpen) != null && !eo && (null == $ || null === (i = $.current) || void 0 === i || i.onPickerOpen(), J.current = !0) : (A.default.trackWithMetadata(P.AnalyticEvents.EXPRESSION_PICKER_OPENED, {
+      ei === y.ExpressionPickerViewType.EMOJI ? (null == $ ? void 0 : null === (e = $.current) || void 0 === e ? void 0 : e.onPickerOpen) != null && (null == $ || null === (t = $.current) || void 0 === t || t.onPickerOpen(), J.current = !0) : ei === y.ExpressionPickerViewType.STICKER ? (null == $ ? void 0 : null === (n = $.current) || void 0 === n ? void 0 : n.onPickerOpen) != null && !eo && (null == $ || null === (i = $.current) || void 0 === i || i.onPickerOpen(), J.current = !0) : (h.default.trackWithMetadata(P.AnalyticEvents.EXPRESSION_PICKER_OPENED, {
         width: ee.current.offsetWidth,
         tab: ei,
         badged: !1
@@ -265,7 +265,7 @@ t.default = r.memo(function(e) {
                 onSelectGIF: g,
                 hideFavorites: l,
                 persistSearch: !0
-              }) : null, ei === y.ExpressionPickerViewType.EMOJI ? (0, i.jsx)(h.default, {
+              }) : null, ei === y.ExpressionPickerViewType.EMOJI ? (0, i.jsx)(A.default, {
                 hasTabWrapper: !0,
                 persistSearch: !0,
                 channel: j,
@@ -280,7 +280,7 @@ t.default = r.memo(function(e) {
                 }
               }) : null, ei === y.ExpressionPickerViewType.SOUNDBOARD ? (0, i.jsx)("div", {
                 className: B.soundboardContainer,
-                children: (0, i.jsx)(O.default, {
+                children: (0, i.jsx)(p.default, {
                   guildId: j.guild_id,
                   channel: j,
                   containerWidth: et,

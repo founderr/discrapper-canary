@@ -23,7 +23,7 @@ var a = n("735250"),
   g = n("570188"),
   v = n("427679"),
   x = n("930180"),
-  I = n("320596"),
+  I = n("582019"),
   C = n("157925"),
   m = n("981631"),
   A = n("765305"),
@@ -68,8 +68,8 @@ function j(e) {
     header: B,
     error: G,
     loading: y,
-    onSave: w,
-    onEventSave: V,
+    onSave: V,
+    onEventSave: w,
     onClose: U,
     onSelectChannel: k,
     isEvent: H = !1,
@@ -97,7 +97,7 @@ function j(e) {
     };
     if (K) {
       if (!J) return;
-      null == V || V({
+      null == w || w({
         ...t,
         schedule: X,
         description: Y,
@@ -105,7 +105,7 @@ function j(e) {
       });
       return
     }
-    null == w || w(t)
+    null == V || V(t)
   };
   let {
     color: eN,

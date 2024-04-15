@@ -23,12 +23,12 @@ async function T(e) {
     analyticsLocation: T,
     analyticsSourceLocation: f,
     numberOfBoostsToAdd: S,
-    onClose: A,
-    closeLayer: h,
+    onClose: h,
+    closeLayer: A,
     onSubscriptionConfirmation: m,
     guild: N,
-    handleSubscribeModalClose: O,
-    disablePremiumUpsell: p,
+    handleSubscribeModalClose: p,
+    disablePremiumUpsell: O,
     inPopout: R,
     applicationId: C
   } = e, g = R ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT, L = l.default.getCurrentUser();
@@ -58,7 +58,7 @@ async function T(e) {
   let v = (0, c.getAvailableGuildBoostSlots)(u.default.boostSlots),
     M = v.length,
     y = e => {
-      null == A || A(), null == O || O(e)
+      null == h || h(), null == p || p(e)
     };
   if (M > 0 && (null == S || M >= S)) {
     let e;
@@ -94,14 +94,14 @@ async function T(e) {
     analyticsSourceLocation: f,
     guildId: N.id,
     closeLayer: () => {
-      null == A || A(), null == h || h(), _.default.track(I.AnalyticEvents.MODAL_DISMISSED, {
+      null == h || h(), null == A || A(), _.default.track(I.AnalyticEvents.MODAL_DISMISSED, {
         type: I.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
         location_section: T.section
       })
     },
     totalNumberOfSlotsToAssign: null != S ? S : 1,
     onCloseModal: y,
-    disablePremiumUpsell: p,
+    disablePremiumUpsell: O,
     onSubscriptionConfirmation: m,
     inPopout: R,
     applicationId: C

@@ -1,36 +1,36 @@
 "use strict";
-n.r(t), n.d(t, {
+u.r(t), u.d(t, {
   default: function() {
-    return T
+    return E
   }
 });
-var i = n("735250");
-n("470079");
-var a = n("442837"),
-  u = n("481060"),
-  l = n("592125"),
-  d = n("430824"),
-  r = n("496675"),
-  s = n("594174"),
-  o = n("471253"),
-  c = n("88751"),
-  E = n("981631"),
-  f = n("689938");
+var a = u("735250");
+u("470079");
+var l = u("442837"),
+  d = u("481060"),
+  n = u("592125"),
+  s = u("430824"),
+  i = u("496675"),
+  r = u("594174"),
+  o = u("471253"),
+  f = u("88751"),
+  c = u("981631"),
+  S = u("689938");
 
-function T(e, t, n) {
-  var T;
-  let _ = l.default.getChannel(n),
-    I = (0, a.useStateFromStores)([d.default], () => d.default.getGuild(t), [t]),
-    S = (0, a.useStateFromStores)([c.default], () => c.default.getPermissionsForUser(e.id, n), [n, e.id]),
-    p = (null === (T = s.default.getCurrentUser()) || void 0 === T ? void 0 : T.id) === e.id,
-    N = (0, a.useStateFromStores)([r.default], () => null != n && r.default.canWithPartialContext(E.Permissions.MUTE_MEMBERS, {
-      channelId: n
-    }), [n]);
-  return null != _ && null != I && (N || p) && S.speaker ? (0, i.jsx)(u.MenuItem, {
+function E(e, t, u) {
+  var E;
+  let _ = n.default.getChannel(u),
+    M = (0, l.useStateFromStores)([s.default], () => s.default.getGuild(t), [t]),
+    T = (0, l.useStateFromStores)([f.default], () => f.default.getPermissionsForUser(e.id, u), [u, e.id]),
+    A = (null === (E = r.default.getCurrentUser()) || void 0 === E ? void 0 : E.id) === e.id,
+    C = (0, l.useStateFromStores)([i.default], () => null != u && i.default.canWithPartialContext(c.Permissions.MUTE_MEMBERS, {
+      channelId: u
+    }), [u]);
+  return null != _ && null != M && (C || A) && T.speaker ? (0, a.jsx)(d.MenuItem, {
     id: "audience",
-    label: p ? f.default.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE : f.default.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE_OTHER,
+    label: A ? S.default.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE : S.default.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE_OTHER,
     action: () => {
-      p ? (0, o.moveSelfToAudience)(_) : (0, o.moveUserToAudience)(e, _)
+      A ? (0, o.moveSelfToAudience)(_) : (0, o.moveUserToAudience)(e, _)
     }
   }) : null
 }

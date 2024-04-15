@@ -27,8 +27,8 @@ let S = [d.Permissions.KICK_MEMBERS, d.Permissions.BAN_MEMBERS, d.Permissions.AD
   y = !1,
   P = null,
   m = d.AuditLogActions.ALL,
-  v = null,
-  H = {},
+  H = null,
+  v = {},
   V = 0;
 
 function B(e) {
@@ -73,9 +73,9 @@ function B(e) {
     }
     if (l.actionType === d.AuditLogActionTypes.DELETE && (null != T || null != i)) {
       let e = null !== (a = null == T ? void 0 : T.oldValue) && void 0 !== a ? a : null == i ? void 0 : i.oldValue;
-      (l.targetType === d.AuditLogTargetTypes.CHANNEL || l.targetType === d.AuditLogTargetTypes.CHANNEL_OVERWRITE) && null !== A && (0, L.isGuildSelectableChannelType)(A.oldValue) && (e = "#".concat(e)), null == H[l.targetType] ? H[l.targetType] = {
+      (l.targetType === d.AuditLogTargetTypes.CHANNEL || l.targetType === d.AuditLogTargetTypes.CHANNEL_OVERWRITE) && null !== A && (0, L.isGuildSelectableChannelType)(A.oldValue) && (e = "#".concat(e)), null == v[l.targetType] ? v[l.targetType] = {
         [l.targetId]: e
-      } : H[l.targetType][l.targetId] = e
+      } : v[l.targetType][l.targetId] = e
     }
     s = 0, t.unshift(l)
   }), t
@@ -141,13 +141,13 @@ class F extends(E = A.default.Store) {
     return P
   }
   get targetIdFilter() {
-    return v
+    return H
   }
   get actionFilter() {
     return m
   }
   get deletedTargets() {
-    return H
+    return v
   }
   get groupedFetchCount() {
     return V
@@ -209,7 +209,7 @@ n = "GuildSettingsAuditLogStore", (a = "displayName") in(_ = F) ? Object.defineP
     let {
       targetId: t
     } = e;
-    v = t
+    H = t
   },
   GUILD_SETTINGS_SET_SECTION: K,
   GUILD_SETTINGS_INIT: function(e) {
@@ -217,11 +217,11 @@ n = "GuildSettingsAuditLogStore", (a = "displayName") in(_ = F) ? Object.defineP
       guildId: t,
       section: s
     } = e;
-    return N = t, v = null, K({
+    return N = t, H = null, K({
       section: s
     })
   },
   GUILD_SETTINGS_CLOSE: function() {
-    g = [], c = [], m = d.AuditLogActions.ALL, P = null, v = null, H = {}, V = 0, R = !0, D = [], G = [], O = [], U = [], C = []
+    g = [], c = [], m = d.AuditLogActions.ALL, P = null, H = null, v = {}, V = 0, R = !0, D = [], G = [], O = [], U = [], C = []
   }
 })

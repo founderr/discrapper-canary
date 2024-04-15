@@ -4,9 +4,9 @@ s.r(t), s.d(t, {
     return r
   }
 });
-var a = s("735250");
+var l = s("735250");
 s("470079");
-var l = s("693789"),
+var a = s("693789"),
   i = s("481060"),
   n = s("652853"),
   o = s("46781");
@@ -19,27 +19,27 @@ function r(e) {
     ...u
   } = e, {
     primaryProfileColor: d
-  } = (0, n.useUserProfileThemeContext)(), c = null !== d ? o.themeColor : l.ButtonColors.PRIMARY, f = (0, a.jsx)(t, {
+  } = (0, n.useUserProfileThemeContext)(), c = null !== d ? o.themeColor : a.ButtonColors.PRIMARY, f = (0, l.jsx)(t, {
     width: 16,
     height: 16
   });
-  return r ? (0, a.jsx)(i.Tooltip, {
+  return r ? (0, l.jsx)(i.Tooltip, {
     text: s,
-    children: e => (0, a.jsx)(l.Button, {
+    children: e => (0, l.jsx)(a.Button, {
       className: o.compactButton,
       innerClassName: o.compactButtonInner,
       color: c,
-      look: l.Button.Looks.FILLED,
-      size: l.Button.Sizes.ICON,
+      look: a.Button.Looks.FILLED,
+      size: a.Button.Sizes.ICON,
       ...e,
       ...u,
       children: f
     })
-  }) : (0, a.jsxs)(l.Button, {
+  }) : (0, l.jsxs)(a.Button, {
     innerClassName: o.button,
     color: c,
-    look: l.Button.Looks.FILLED,
-    size: l.Button.Sizes.MEDIUM,
+    look: a.Button.Looks.FILLED,
+    size: a.Button.Sizes.MEDIUM,
     ...u,
     children: [f, s]
   })

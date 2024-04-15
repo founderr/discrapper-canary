@@ -31,7 +31,7 @@ n.r(t), n.d(t, {
     return u
   },
   actionsFromServer: function() {
-    return O
+    return p
   },
   isChannelValidForNewMemberAction: function() {
     return L
@@ -46,13 +46,13 @@ n.r(t), n.d(t, {
     return C
   },
   isWelcomeMessageEmpty: function() {
-    return p
+    return O
   },
   newMemberActionFromServer: function() {
-    return A
+    return h
   },
   resourceChannelFromServer: function() {
-    return h
+    return A
   },
   settingsFromServer: function() {
     return m
@@ -75,7 +75,7 @@ let u = 7,
   f = 200,
   S = 7;
 
-function A(e) {
+function h(e) {
   var t;
   return {
     channelId: e.channel_id,
@@ -91,7 +91,7 @@ function A(e) {
   }
 }
 
-function h(e) {
+function A(e) {
   var t, n;
   return {
     channelId: e.channel_id,
@@ -116,11 +116,11 @@ function m(e) {
   } = e, o = {
     authorIds: t.author_ids,
     message: t.message
-  }, l = n.filter(e => (0, a.isNotNullish)(s.default.getChannel(e.channel_id))).map(A);
+  }, l = n.filter(e => (0, a.isNotNullish)(s.default.getChannel(e.channel_id))).map(h);
   return {
     welcomeMessage: o,
     newMemberActions: l,
-    resourceChannels: i.filter(e => (0, a.isNotNullish)(s.default.getChannel(e.channel_id))).map(h),
+    resourceChannels: i.filter(e => (0, a.isNotNullish)(s.default.getChannel(e.channel_id))).map(A),
     enabled: r
   }
 }
@@ -172,19 +172,19 @@ function N(e, t) {
     enabled: u
   }
 }(i = r || (r = {}))[i.VIEW = 0] = "VIEW", i[i.CHAT = 1] = "CHAT";
-let O = e => {
+let p = e => {
   if (null == e) return null;
   let t = {};
   for (let n in e.channel_actions) t[n] = e.channel_actions[n].completed;
   return t
 };
 
-function p(e) {
+function O(e) {
   return null == e || (null == e.message || !(e.message.length > 0)) && (null == e.authorIds || !(e.authorIds.length > 0)) && !0
 }
 
 function R(e) {
-  return null == e || !!p(e.welcomeMessage) && (null == e.newMemberActions || !(e.newMemberActions.length > 0)) && (null == e.resourceChannels || !(e.resourceChannels.length > 0)) && !0
+  return null == e || !!O(e.welcomeMessage) && (null == e.newMemberActions || !(e.newMemberActions.length > 0)) && (null == e.resourceChannels || !(e.resourceChannels.length > 0)) && !0
 }
 
 function C(e) {

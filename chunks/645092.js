@@ -14,8 +14,8 @@ var a = n("120356"),
   u = n("778947"),
   d = n("702346"),
   c = n("787374"),
-  E = n("674563"),
-  f = n("689938"),
+  f = n("674563"),
+  E = n("689938"),
   _ = n("297621");
 
 function T(e) {
@@ -23,22 +23,22 @@ function T(e) {
     message: t,
     compact: n,
     usernameHook: a
-  } = e, T = (0, r.default)(t), I = a(T), {
-    avatarSrc: m,
+  } = e, T = (0, r.default)(t), m = a(T), {
+    avatarSrc: I,
     eventHandlers: {
-      onMouseEnter: N,
-      onMouseLeave: p
+      onMouseEnter: p,
+      onMouseLeave: h
     }
   } = (0, c.useAutomodAvatar)(!0);
   return (0, s.jsx)("div", {
-    onMouseEnter: N,
-    onMouseLeave: p,
+    onMouseEnter: p,
+    onMouseLeave: h,
     children: (0, s.jsx)(d.default, {
       className: l()(_.mainContainer, {
         [_.compact]: n
       }),
       iconNode: n ? null : (0, s.jsx)(c.AutomodAvatar, {
-        src: m
+        src: I
       }),
       iconContainerClassName: _.iconContainer,
       compact: n,
@@ -59,9 +59,9 @@ function T(e) {
               color: "text-brand",
               tag: "span",
               className: _.username,
-              children: f.default.Messages.GUILD_AUTOMOD_USERNAME
+              children: E.default.Messages.GUILD_AUTOMOD_USERNAME
             }), (0, s.jsx)(o.default, {
-              type: E.BotTagTypes.SYSTEM_DM,
+              type: f.BotTagTypes.SYSTEM_DM,
               className: _.systemTag
             })]
           }),
@@ -71,9 +71,9 @@ function T(e) {
           className: l()(_.__invalid_messageContent, {
             [_.compact]: n
           }),
-          children: f.default.Messages.GUILD_REPORT_FALSE_ALARM_SYSTEM_MESSAGE_SHORT.format({
+          children: E.default.Messages.GUILD_REPORT_FALSE_ALARM_SYSTEM_MESSAGE_SHORT.format({
             username: T.nick,
-            usernameHook: I
+            usernameHook: m
           })
         })]
       })

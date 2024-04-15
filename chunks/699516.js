@@ -11,8 +11,8 @@ let I = {},
   T = {},
   f = {},
   S = 0,
-  A = 0,
   h = 0,
+  A = 0,
   m = 0;
 
 function N() {
@@ -20,9 +20,9 @@ function N() {
   let {
     [E.RelationshipTypes.PENDING_INCOMING]: e = 0, [E.RelationshipTypes.PENDING_OUTGOING]: t = 0, [E.RelationshipTypes.FRIEND]: n = 0
   } = l().countBy(Object.values(I), e => e);
-  S = e, A = t, h = n
+  S = e, h = t, A = n
 }
-class O extends(i = u.default.Store) {
+class p extends(i = u.default.Store) {
   initialize() {
     this.waitFor(c.default)
   }
@@ -36,10 +36,10 @@ class O extends(i = u.default.Store) {
     return S
   }
   getOutgoingCount() {
-    return A
+    return h
   }
   getFriendCount() {
-    return h
+    return A
   }
   getRelationshipCount() {
     return m
@@ -64,12 +64,12 @@ class O extends(i = u.default.Store) {
     return _.default.keys(I).filter(e => I[e] === E.RelationshipTypes.FRIEND)
   }
 }
-a = "RelationshipStore", (s = "displayName") in(r = O) ? Object.defineProperty(r, s, {
+a = "RelationshipStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new O(d.default, {
+}) : r[s] = a, t.default = new p(d.default, {
   CONNECTION_OPEN: function(e) {
     I = {}, T = {}, f = {}, e.relationships.forEach(e => {
       I[e.id] = e.type, null != e.nickname && (T[e.id] = e.nickname), null != e.since && (f[e.id] = e.since)

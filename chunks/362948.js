@@ -162,7 +162,7 @@ function S(e) {
   })
 }
 
-function A(e) {
+function h(e) {
   let t;
   let {
     className: n,
@@ -189,7 +189,7 @@ function A(e) {
   })
 }
 
-function h(e) {
+function A(e) {
   let {
     currentTier: t
   } = e, n = function(e) {
@@ -238,7 +238,7 @@ t.default = function(e) {
       children: I.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_HEADING
     }), (0, i.jsxs)("div", {
       className: T.tableWrapper,
-      children: [null != _ && (0, i.jsx)(h, {
+      children: [null != _ && (0, i.jsx)(A, {
         currentTier: _.premiumTier
       }), (0, i.jsxs)("table", {
         className: T.table,
@@ -301,14 +301,14 @@ t.default = function(e) {
                     })
                   })
                 })
-              }), !m && (0, i.jsx)(A, {
+              }), !m && (0, i.jsx)(h, {
                 textVariant: "text-md/normal",
                 value: e.getTier0Value()
-              }), (0, i.jsx)(A, {
+              }), (0, i.jsx)(h, {
                 value: e.getTier1Value()
-              }), (0, i.jsx)(A, {
+              }), (0, i.jsx)(h, {
                 value: e.getTier2Value()
-              }), (0, i.jsx)(A, {
+              }), (0, i.jsx)(h, {
                 value: e.getTier3Value()
               })]
             }, r) : null

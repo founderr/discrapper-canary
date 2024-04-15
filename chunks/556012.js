@@ -1,30 +1,30 @@
 "use strict";
-n.r(t), n.d(t, {
+o.r(t), o.d(t, {
   getActionInfo: function() {
     return E
   }
 });
-var o = n("933557"),
-  l = n("592125"),
-  a = n("699516"),
-  s = n("594174"),
-  r = n("93879"),
-  u = n("862443"),
-  i = n("789695"),
-  A = n("696202"),
-  c = n("273504"),
-  d = n("590433"),
-  _ = n("689938");
+var n = o("933557"),
+  a = o("592125"),
+  l = o("699516"),
+  u = o("594174"),
+  s = o("93879"),
+  r = o("862443"),
+  A = o("789695"),
+  i = o("696202"),
+  d = o("273504"),
+  _ = o("590433"),
+  c = o("689938");
 let C = e => {
-    if (e === c.AutomodActionType.QUARANTINE_USER) return !1;
+    if (e === d.AutomodActionType.QUARANTINE_USER) return !1;
     return !0
   },
   I = e => {
     switch (e) {
-      case c.AutomodActionType.BLOCK_MESSAGE:
-      case c.AutomodActionType.FLAG_TO_CHANNEL:
-      case c.AutomodActionType.USER_COMMUNICATION_DISABLED:
-      case c.AutomodActionType.QUARANTINE_USER:
+      case d.AutomodActionType.BLOCK_MESSAGE:
+      case d.AutomodActionType.FLAG_TO_CHANNEL:
+      case d.AutomodActionType.USER_COMMUNICATION_DISABLED:
+      case d.AutomodActionType.QUARANTINE_USER:
         return !0;
       default:
         return !1
@@ -32,82 +32,82 @@ let C = e => {
   },
   T = e => {
     switch (e) {
-      case c.AutomodActionType.BLOCK_MESSAGE:
-        return _.default.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_NAME;
-      case c.AutomodActionType.FLAG_TO_CHANNEL:
-        return _.default.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_NAME;
-      case c.AutomodActionType.USER_COMMUNICATION_DISABLED:
-        return _.default.Messages.GUILD_AUTOMOD_ACTIONS_DISABLE_GUILD_COMMUNICATION_FOR_USER;
-      case c.AutomodActionType.QUARANTINE_USER:
-        return _.default.Messages.GUILD_AUTOMOD_ACTIONS_QUARANTINE_USER
+      case d.AutomodActionType.BLOCK_MESSAGE:
+        return c.default.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_NAME;
+      case d.AutomodActionType.FLAG_TO_CHANNEL:
+        return c.default.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_NAME;
+      case d.AutomodActionType.USER_COMMUNICATION_DISABLED:
+        return c.default.Messages.GUILD_AUTOMOD_ACTIONS_DISABLE_GUILD_COMMUNICATION_FOR_USER;
+      case d.AutomodActionType.QUARANTINE_USER:
+        return c.default.Messages.GUILD_AUTOMOD_ACTIONS_QUARANTINE_USER
     }
   },
-  L = function(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.AutomodTriggerType.KEYWORD;
+  O = function(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.AutomodTriggerType.KEYWORD;
     switch (e) {
-      case c.AutomodActionType.BLOCK_MESSAGE:
+      case d.AutomodActionType.BLOCK_MESSAGE:
         switch (t) {
-          case c.AutomodTriggerType.MENTION_SPAM:
-            return _.default.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_DESCRIPTION_MENTION_SPAM;
-          case c.AutomodTriggerType.ML_SPAM:
-            return _.default.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_DESCRIPTION_ML_SPAM;
+          case d.AutomodTriggerType.MENTION_SPAM:
+            return c.default.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_DESCRIPTION_MENTION_SPAM;
+          case d.AutomodTriggerType.ML_SPAM:
+            return c.default.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_DESCRIPTION_ML_SPAM;
           default:
-            return _.default.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_DESCRIPTION
+            return c.default.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_DESCRIPTION
         }
-      case c.AutomodActionType.FLAG_TO_CHANNEL:
-        return _.default.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_DESCRIPTION;
-      case c.AutomodActionType.USER_COMMUNICATION_DISABLED:
-        return _.default.Messages.GUILD_AUTOMOD_ACTIONS_DISABLE_GUILD_COMMUNICATION_FOR_USER_DESCRIPTION;
-      case c.AutomodActionType.QUARANTINE_USER:
-        return _.default.Messages.GUILD_AUTOMOD_ACTIONS_QUARANTINE_USER_DESCRIPTION
+      case d.AutomodActionType.FLAG_TO_CHANNEL:
+        return c.default.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_DESCRIPTION;
+      case d.AutomodActionType.USER_COMMUNICATION_DISABLED:
+        return c.default.Messages.GUILD_AUTOMOD_ACTIONS_DISABLE_GUILD_COMMUNICATION_FOR_USER_DESCRIPTION;
+      case d.AutomodActionType.QUARANTINE_USER:
+        return c.default.Messages.GUILD_AUTOMOD_ACTIONS_QUARANTINE_USER_DESCRIPTION
     }
   },
   N = (e, t) => {
-    var n, r, u;
+    var o, s, r;
     switch (e) {
-      case c.AutomodActionType.QUARANTINE_USER:
-      case c.AutomodActionType.BLOCK_MESSAGE:
+      case d.AutomodActionType.QUARANTINE_USER:
+      case d.AutomodActionType.BLOCK_MESSAGE:
         return null;
-      case c.AutomodActionType.FLAG_TO_CHANNEL: {
-        let e = null == t ? void 0 : null === (n = t.metadata) || void 0 === n ? void 0 : n.channelId;
+      case d.AutomodActionType.FLAG_TO_CHANNEL: {
+        let e = null == t ? void 0 : null === (o = t.metadata) || void 0 === o ? void 0 : o.channelId;
         if (null == e) return null;
-        let r = l.default.getChannel(e);
-        if (null == r) return null;
-        let u = (0, o.computeChannelName)(r, s.default, a.default);
-        return _.default.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_DISPLAY_HELPER.format({
-          channelName: u
+        let s = a.default.getChannel(e);
+        if (null == s) return null;
+        let r = (0, n.computeChannelName)(s, u.default, l.default);
+        return c.default.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_DISPLAY_HELPER.format({
+          channelName: r
         })
       }
-      case c.AutomodActionType.USER_COMMUNICATION_DISABLED: {
-        let e = null !== (u = null == t ? void 0 : null === (r = t.metadata) || void 0 === r ? void 0 : r.durationSeconds) && void 0 !== u ? u : 0,
-          n = (0, d.getFriendlyDurationString)(e);
-        if (null == n) return null;
-        return _.default.Messages.GUILD_AUTOMOD_ACTIONS_USER_DISABLE_COMMUNICATION_DISPLAY_HELPER.format({
-          duration: n
+      case d.AutomodActionType.USER_COMMUNICATION_DISABLED: {
+        let e = null !== (r = null == t ? void 0 : null === (s = t.metadata) || void 0 === s ? void 0 : s.durationSeconds) && void 0 !== r ? r : 0,
+          o = (0, _.getFriendlyDurationString)(e);
+        if (null == o) return null;
+        return c.default.Messages.GUILD_AUTOMOD_ACTIONS_USER_DISABLE_COMMUNICATION_DISPLAY_HELPER.format({
+          duration: o
         })
       }
     }
   },
-  O = e => {
+  S = e => {
     switch (e) {
-      case c.AutomodActionType.BLOCK_MESSAGE:
-        return A.default;
-      case c.AutomodActionType.FLAG_TO_CHANNEL:
-        return r.default;
-      case c.AutomodActionType.USER_COMMUNICATION_DISABLED:
+      case d.AutomodActionType.BLOCK_MESSAGE:
         return i.default;
-      case c.AutomodActionType.QUARANTINE_USER:
-        return u.default
+      case d.AutomodActionType.FLAG_TO_CHANNEL:
+        return s.default;
+      case d.AutomodActionType.USER_COMMUNICATION_DISABLED:
+        return A.default;
+      case d.AutomodActionType.QUARANTINE_USER:
+        return r.default
     }
   };
 
-function E(e, t, n) {
-  var o, l, a, s;
+function E(e, t, o) {
+  var n, a, l, u;
   return I(e) ? {
-    headerText: null !== (o = T(e)) && void 0 !== o ? o : "",
-    descriptionText: null !== (l = L(e, n)) && void 0 !== l ? l : "",
-    helperText: null !== (a = N(e, t)) && void 0 !== a ? a : null,
-    icon: null !== (s = O(e)) && void 0 !== s ? s : A.default,
+    headerText: null !== (n = T(e)) && void 0 !== n ? n : "",
+    descriptionText: null !== (a = O(e, o)) && void 0 !== a ? a : "",
+    helperText: null !== (l = N(e, t)) && void 0 !== l ? l : null,
+    icon: null !== (u = S(e)) && void 0 !== u ? u : i.default,
     isEditable: C(e)
   } : null
 }

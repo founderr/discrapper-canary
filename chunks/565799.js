@@ -11,12 +11,12 @@ var i, r, s, a, o = n("348327"),
   T = n("199902"),
   f = n("314897"),
   S = n("592125"),
-  A = n("430824"),
-  h = n("496675"),
+  h = n("430824"),
+  A = n("496675"),
   m = n("699516"),
   N = n("606304"),
-  O = n("594174"),
-  p = n("979651"),
+  p = n("594174"),
+  O = n("979651"),
   R = n("938475"),
   C = n("501655"),
   g = n("88751"),
@@ -127,7 +127,7 @@ function W(e) {
 let K = [];
 class z extends(i = _.default.Store) {
   initialize() {
-    this.waitFor(f.default, O.default, S.default, N.default, p.default, h.default, R.default, A.default, g.default, m.default, L.default, T.default)
+    this.waitFor(f.default, p.default, S.default, N.default, O.default, A.default, R.default, h.default, g.default, m.default, L.default, T.default)
   }
   getParticipantsVersion(e) {
     var t, n;

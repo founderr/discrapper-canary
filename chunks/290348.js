@@ -37,10 +37,10 @@ s.r(t), s.d(t, {
     return p
   },
   useRole: function() {
-    return v
+    return H
   },
   useRoleColor: function() {
-    return H
+    return v
   },
   useRoleIcon: function() {
     return m
@@ -148,7 +148,7 @@ function m(e, t) {
   }, [s]))
 }
 
-function v(e, t) {
+function H(e, t) {
   let s = (0, D.default)(t, e),
     _ = (0, O.useEditStateStore)(t => {
       var s;
@@ -170,7 +170,7 @@ function v(e, t) {
   }, [s, a, _])
 }
 
-function H(e, t) {
+function v(e, t) {
   let s = (0, D.default)(t, e);
   return R(e, "roleColor", E.useMemo(() => {
     var e;

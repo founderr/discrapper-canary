@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return g
   }
 });
 var l = n("735250");
 n("470079");
 var u = n("481060"),
   a = n("239091"),
-  s = n("410575"),
-  d = n("299206"),
+  d = n("410575"),
+  s = n("299206"),
   i = n("70877"),
   r = n("572427"),
   o = n("231259"),
@@ -22,44 +22,44 @@ var u = n("481060"),
   N = n("981631"),
   v = n("689938");
 
-function I(e) {
+function g(e) {
   let {
     guildEventId: t,
     recurrenceId: n,
-    channel: I,
-    guild: g,
-    analyticsContext: m,
-    isRecurrenceItem: M = !1,
+    channel: g,
+    guild: I,
+    analyticsContext: M,
+    isRecurrenceItem: m = !1,
     onSelect: h
-  } = e, p = (0, _.default)({
+  } = e, D = (0, _.default)({
     guildEventId: t,
     recurrenceId: n,
-    guild: g,
-    channel: I
-  }), D = (0, o.default)({
+    guild: I,
+    channel: g
+  }), p = (0, o.default)({
     guildEventId: t,
     recurrenceId: n,
-    guild: g,
-    channel: I
-  }), R = (0, c.default)({
+    guild: I,
+    channel: g
+  }), O = (0, c.default)({
     guildEventId: t,
-    guild: g,
-    channel: I,
+    guild: I,
+    channel: g,
     recurrenceId: n,
-    isRecurrenceItem: M
-  }), O = (0, E.default)(t, g, I), C = (0, S.default)(t, g, I), A = (0, r.default)(t, g.id, n), L = (0, f.default)(t), G = (0, d.default)({
+    isRecurrenceItem: m
+  }), R = (0, E.default)(t, I, g), C = (0, S.default)(t, I, g), A = (0, r.default)(t, I.id, n), L = (0, f.default)(t), G = (0, s.default)({
     id: t,
     label: v.default.Messages.COPY_ID_EVENT
-  }), y = (0, d.default)({
+  }), y = (0, s.default)({
     id: n,
     label: v.default.Messages.COPY_ID_EVENT_RECURRENCE
-  }), P = (0, i.default)(t, g.id, I, n), V = (0, T.default)({
+  }), P = (0, i.default)(t, I.id, g, n), V = (0, T.default)({
     guildEventId: t,
-    guildId: g.id,
+    guildId: I.id,
     recurrenceId: n
   });
-  return (0, l.jsx)(s.default, {
-    context: m,
+  return (0, l.jsx)(d.default, {
+    context: M,
     object: N.AnalyticsObjects.CONTEXT_MENU,
     children: (0, l.jsxs)(u.Menu, {
       navId: "user-context",
@@ -67,8 +67,8 @@ function I(e) {
       "aria-label": v.default.Messages.USER_ACTIONS_MENU_LABEL,
       onSelect: h,
       children: [(0, l.jsxs)(u.MenuGroup, {
-        children: [P, !M && C, R, !M && O, D, p, A, M && V]
-      }), !M && (0, l.jsx)(u.MenuGroup, {
+        children: [P, !m && C, O, !m && R, p, D, A, m && V]
+      }), !m && (0, l.jsx)(u.MenuGroup, {
         children: L
       }), (0, l.jsxs)(u.MenuGroup, {
         children: [G, y]

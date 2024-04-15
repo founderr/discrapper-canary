@@ -32,10 +32,10 @@ function d(e, t) {
       onScroll: T,
       dir: f = "ltr",
       fade: S = !1,
-      customTheme: A = !1,
-      style: h,
+      customTheme: h = !1,
+      style: A,
       ...m
-    } = t, N = r.useRef(null), O = r.useRef(null), [p, R] = r.useState(!1), {
+    } = t, N = r.useRef(null), p = r.useRef(null), [O, R] = r.useState(!1), {
       scrollerRef: C,
       getScrollerState: g
     } = (0, l.useUncachedScrollerState)(), L = (0, l.useScrollSpring)(C);
@@ -57,7 +57,7 @@ function d(e, t) {
       resizeObserver: s,
       listenerMap: n
     }), (0, l.useResizeObserverSubscription)({
-      ref: O,
+      ref: p,
       key: "content",
       onUpdate: E,
       resizeObserver: s,
@@ -66,21 +66,21 @@ function d(e, t) {
       ref: C,
       className: a()(c, {
         [u.fade]: S,
-        [u.customTheme]: A,
+        [u.customTheme]: h,
         [e]: !0,
         [u.managedReactiveScroller]: !0,
-        [u.scrolling]: p && S
+        [u.scrolling]: O && S
       }),
-      style: h,
+      style: A,
       dir: f,
       onScroll: D,
       ...m,
       children: (0, i.jsx)(o.FocusRingScope, {
-        containerRef: O,
+        containerRef: p,
         children: (0, i.jsxs)("div", {
-          ref: O,
+          ref: p,
           className: a()(I, u.content),
-          children: [_, p && (0, i.jsx)("div", {
+          children: [_, O && (0, i.jsx)("div", {
             className: u.pointerCover
           })]
         })

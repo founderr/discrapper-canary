@@ -1,8 +1,8 @@
 "use strict";
 n.r(t), n("47120");
-var s, i = n("735250"),
+var s, a = n("735250"),
   l = n("470079"),
-  a = n("846519");
+  i = n("846519");
 
 function r(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -12,7 +12,7 @@ function r(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class u extends(s = l.Component) {
+class o extends(s = l.Component) {
   static getDerivedStateFromProps(e) {
     return e.disable ? {
       hovered: !1
@@ -29,12 +29,12 @@ class u extends(s = l.Component) {
     this.stopTimer()
   }
   componentDidUpdate(e, t) {
-    let n, s, i, l, {
-      props: a
+    let n, s, a, l, {
+      props: i
     } = this;
-    let r = (n = a, s = this.state, !n.disable && !(s.hovered && n.pauseOnHover));
-    let u = (i = e, l = t, !i.disable && !(l.hovered && i.pauseOnHover));
-    r && !u || e.interval !== a.interval ? this.startTimer() : !r && u && this.stopTimer()
+    let r = (n = i, s = this.state, !n.disable && !(s.hovered && n.pauseOnHover));
+    let o = (a = e, l = t, !a.disable && !(l.hovered && a.pauseOnHover));
+    r && !o || e.interval !== i.interval ? this.startTimer() : !r && o && this.stopTimer()
   }
   startTimer() {
     let {
@@ -60,14 +60,14 @@ class u extends(s = l.Component) {
       onMouseLeave: this.handleResume,
       onBlur: this.handleResume
     };
-    return (0, i.jsx)("div", {
+    return (0, a.jsx)("div", {
       ...s,
       className: t,
       children: e
     })
   }
   constructor(...e) {
-    super(...e), r(this, "timer", new a.Interval), r(this, "state", {
+    super(...e), r(this, "timer", new i.Interval), r(this, "state", {
       hovered: !1
     }), r(this, "handlePause", () => {
       !this.state.hovered && this.setState({
@@ -80,7 +80,7 @@ class u extends(s = l.Component) {
     })
   }
 }
-r(u, "defaultProps", {
+r(o, "defaultProps", {
   disable: !1,
   pauseOnHover: !1
-}), t.default = u
+}), t.default = o

@@ -15,19 +15,19 @@ var i = n("664751"),
   T = n("630388"),
   f = n("877481"),
   S = n("358085"),
-  A = n("278323"),
-  h = n("58642"),
+  h = n("278323"),
+  A = n("58642"),
   m = n("254854"),
   N = n("981631"),
-  O = n("701488"),
-  p = n("689938");
+  p = n("701488"),
+  O = n("689938");
 
 function R(e) {
   let {
     applicationId: t,
     secret: n,
     channelId: i,
-    intent: r = O.ActivityIntent.PLAY,
+    intent: r = p.ActivityIntent.PLAY,
     embedded: a = !1,
     analyticsLocations: o = []
   } = e;
@@ -106,7 +106,7 @@ function C(e, t, n) {
       pids: t
     })
   }).catch(t => {
-    m.default.show(N.NoticeTypes.LAUNCH_GAME_FAILURE, p.default.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND), s.default.dispatch({
+    m.default.show(N.NoticeTypes.LAUNCH_GAME_FAILURE, O.default.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND), s.default.dispatch({
       type: "GAME_LAUNCH_FAIL",
       applicationId: e,
       error: S
@@ -130,7 +130,7 @@ t.default = {
       let e = E.default.getActiveLibraryApplication(n.id);
       if (null != e) {
         let t = T.toggleFlag(e.getFlags(), N.LibraryApplicationFlags.OVERLAY_DISABLED);
-        h.updateFlags(e.id, e.branchId, t);
+        A.updateFlags(e.id, e.branchId, t);
         return
       }
     }
@@ -308,7 +308,7 @@ t.default = {
       applicationId: i,
       channelId: r,
       messageId: a,
-      intent: o = O.ActivityIntent.PLAY,
+      intent: o = p.ActivityIntent.PLAY,
       embedded: l = !1
     } = e;
     if (__OVERLAY__) return s.default.dispatch({
@@ -324,7 +324,7 @@ t.default = {
       applicationId: i
     });
     try {
-      let e = await A.default.getJoinSecret(t, n, i, r, a);
+      let e = await h.default.getJoinSecret(t, n, i, r, a);
       return R({
         applicationId: i,
         secret: e,

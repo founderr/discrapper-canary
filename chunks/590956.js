@@ -22,8 +22,8 @@ var i = n("735250"),
   T = n("524444"),
   f = n("981631"),
   S = n("185923"),
-  A = n("474936"),
-  h = n("924575");
+  h = n("474936"),
+  A = n("924575");
 let m = e => {
     var t;
     let {
@@ -44,7 +44,7 @@ let m = e => {
       position: s,
       shouldShow: !c,
       onTooltipShow: () => {
-        o && O({
+        o && p({
           emojiNode: n,
           isCustomEmoji: !1
         })
@@ -56,8 +56,8 @@ let m = e => {
           var n;
           E(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
         },
-        className: a()(h.emojiContainer, {
-          [h.emojiContainerClickable]: o
+        className: a()(A.emojiContainer, {
+          [A.emojiContainerClickable]: o
         }),
         children: f(t)
       })
@@ -84,7 +84,7 @@ let m = e => {
       isInteracting: n,
       tooltipPosition: s = T.EXPRESSION_TOOLTIP_PROPS.position,
       enableClick: d = !0
-    } = e, [A, m] = r.useState(String(Date.now())), [N, p] = r.useState(!1), [R, C] = r.useState(!1), {
+    } = e, [h, m] = r.useState(String(Date.now())), [N, O] = r.useState(!1), [R, C] = r.useState(!1), {
       enabled: g
     } = c.NitroBadgeOnEmojiHoverExperiment.useExperiment({
       location: "MessageCustomEmoji"
@@ -105,7 +105,7 @@ let m = e => {
       position: s,
       shouldShow: !R,
       onTooltipShow: () => {
-        p(!0), d && (O({
+        O(!0), d && (p({
           emojiNode: t,
           isCustomEmoji: !0,
           nonce: D
@@ -119,16 +119,16 @@ let m = e => {
         },
         onClick: t => {
           var n;
-          p(!1), C(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
+          O(!1), C(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
         },
         onMouseLeave: () => {
           N && (E.default.track(f.AnalyticEvents.CLOSE_POPOUT, {
             nonce: D
-          }), p(!1))
+          }), O(!1))
         },
         tag: "span",
-        className: a()(h.emojiContainer, {
-          [h.emojiContainerClickable]: d
+        className: a()(A.emojiContainer, {
+          [A.emojiContainerClickable]: d
         }),
         children: L(t)
       })
@@ -139,7 +139,7 @@ let m = e => {
       onRequestClose: () => {
         E.default.track(f.AnalyticEvents.CLOSE_POPOUT, {
           nonce: D
-        }), p(!1), C(!1)
+        }), O(!1), C(!1)
       },
       autoInvert: !0,
       nudgeAlignIntoViewport: !0,
@@ -150,18 +150,18 @@ let m = e => {
         refreshPositionKey: () => m(String(Date.now())),
         nonce: D
       }),
-      positionKey: A,
+      positionKey: h,
       children: v
     }) : v()
   },
-  O = e => {
+  p = e => {
     let {
       emojiNode: t,
       isCustomEmoji: n,
       nonce: i
     } = e;
     d.default.trackWithMetadata(f.AnalyticEvents.EXPRESSION_TOOLTIP_VIEWED, {
-      type: A.PremiumUpsellTypes.EMOJI_IN_MESSAGE_HOVER,
+      type: h.PremiumUpsellTypes.EMOJI_IN_MESSAGE_HOVER,
       expression_id: t.emojiId,
       expression_name: t.name,
       is_animated: t.animated,

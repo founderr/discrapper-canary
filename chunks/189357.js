@@ -1,52 +1,52 @@
 "use strict";
 n.r(t), n.d(t, {
   canAccessGuildMemberModViewWithExperiment: function() {
-    return c
+    return _
   },
   useCanAccessGuildMemberModView: function() {
-    return E
+    return c
   }
 }), n("47120");
 var i = n("149765"),
-  a = n("442837"),
-  u = n("430824"),
-  l = n("594174"),
-  d = n("700785"),
-  r = n("686692"),
-  s = n("478743");
-let o = function(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [u.default, l.default];
+  r = n("442837"),
+  s = n("430824"),
+  a = n("594174"),
+  o = n("700785"),
+  l = n("686692"),
+  u = n("478743");
+let d = function(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [s.default, a.default];
     if (null == e) return !1;
-    let [n, a] = t, r = n.getGuild(e);
-    if (null == r) return !1;
-    let o = a.getCurrentUser();
-    return i.hasAny(d.computePermissions({
-      user: o,
-      context: r,
+    let [n, r] = t, l = n.getGuild(e);
+    if (null == l) return !1;
+    let d = r.getCurrentUser();
+    return i.hasAny(o.computePermissions({
+      user: d,
+      context: l,
       checkElevated: !1
-    }), s.MemberSafetyPagePermissions)
+    }), u.MemberSafetyPagePermissions)
   },
-  c = function(e) {
+  _ = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
       n = arguments.length > 2 ? arguments[2] : void 0;
     if (null == e) return !1;
-    let i = o(e),
-      a = (0, r.isInGuildMemberModViewExperiment)(e, {
+    let i = d(e),
+      r = (0, l.isInGuildMemberModViewExperiment)(e, {
         autoTrackExposure: t,
         disable: !i,
         location: n
       });
-    return i && a
+    return i && r
   };
 
-function E(e) {
+function c(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = arguments.length > 2 ? arguments[2] : void 0,
-    i = (0, a.useStateFromStores)([u.default, l.default], () => o(e, [u.default, l.default]), [e]),
-    d = (0, r.useGuildMemberModViewExperiment)(e, {
+    i = (0, r.useStateFromStores)([s.default, a.default], () => d(e, [s.default, a.default]), [e]),
+    o = (0, l.useGuildMemberModViewExperiment)(e, {
       autoTrackExposure: t,
       disable: !i,
       location: n
     });
-  return i && d
+  return i && o
 }

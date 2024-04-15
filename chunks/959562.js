@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+a.r(e), a.d(e, {
   default: function() {
     return u
   }
@@ -10,11 +10,11 @@ var i = a("481060"),
   s = a("545785"),
   l = a("660097");
 
-function u(e) {
+function u(t) {
   let {
-    user: t,
+    user: e,
     size: a
-  } = e, u = (0, i.getAvatarSpecs)(a), r = null != t ? t.getAvatarURL(null, u.size) : l;
+  } = t, u = (0, i.getAvatarSpecs)(a), r = null != e ? e.getAvatarURL(null, u.size) : l;
   return (0, n.jsx)("div", {
     className: s.avatarBackground,
     children: (0, n.jsx)("div", {

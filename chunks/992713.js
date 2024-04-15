@@ -16,16 +16,16 @@ var i = n("505578"),
 let f = new u.default("EntityVersionsManager");
 class S extends o.default {
   _initialize() {
-    a.default.subscribe("CONNECTION_OPEN", h)
+    a.default.subscribe("CONNECTION_OPEN", A)
   }
   _terminate() {
-    a.default.unsubscribe("CONNECTION_OPEN", h)
+    a.default.unsubscribe("CONNECTION_OPEN", A)
   }
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
       GUILD_CREATE: m,
-      DELETED_ENTITY_IDS: A
+      DELETED_ENTITY_IDS: h
     }, n in t ? Object.defineProperty(t, n, {
       value: i,
       enumerable: !0,
@@ -35,7 +35,7 @@ class S extends o.default {
   }
 }
 
-function A(e) {
+function h(e) {
   var t;
   let n = null === (t = E.default.getGuild(e.guild_id)) || void 0 === t ? void 0 : t.name;
   f.fileOnly("received deleted guild entities (id: ".concat(e.guild_id, ", name: ").concat(n, ")")), s.default.Emitter.batched(() => {
@@ -83,7 +83,7 @@ function A(e) {
   })
 }
 
-function h() {
+function A() {
   l.default.getAll().then(e => {
     e.forEach(e => N(e))
   })
@@ -101,15 +101,15 @@ function N(e) {
     var t, n, i;
     let r = null === (t = E.default.getGuild(e)) || void 0 === t ? void 0 : t.name;
     f.fileOnly("requesting deleted guild entities (id: ".concat(e, ", name: ").concat(r, ")"));
-    let s = O(Object.keys(c.default.getMutableBasicGuildChannelsForGuild(e))),
-      a = O(Object.keys(E.default.getRoles(e))),
-      o = O(d.default.getGuildEmoji(e).map(e => e.id)),
-      l = O(null !== (i = null === (n = _.default.getStickersByGuildId(e)) || void 0 === n ? void 0 : n.map(e => e.id)) && void 0 !== i ? i : []);
+    let s = p(Object.keys(c.default.getMutableBasicGuildChannelsForGuild(e))),
+      a = p(Object.keys(E.default.getRoles(e))),
+      o = p(d.default.getGuildEmoji(e).map(e => e.id)),
+      l = p(null !== (i = null === (n = _.default.getStickersByGuildId(e)) || void 0 === n ? void 0 : n.map(e => e.id)) && void 0 !== i ? i : []);
     T.default.getSocket().getDeletedEntityIdsNotMatchingHash(e, s, a, o, l)
   })(e), Math.ceil(2e3 * Math.random()))
 }
 
-function O(e) {
+function p(e) {
   return r().v3(e.sort().join(",")).toString()
 }
 t.default = new S

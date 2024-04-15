@@ -11,20 +11,20 @@ var i, r, s, a, o = n("442837"),
   T = n("588215"),
   f = n("44715"),
   S = n("327999"),
-  A = n("981631");
-let h = !1,
+  h = n("981631");
+let A = !1,
   m = {};
 
 function N(e) {
   return null == m[e] && (m[e] = new I.GuildMemberSafetyPageStore(e)), m[e]
 }
 
-function O(e) {
+function p(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   N(e).reset(t)
 }
 
-function p() {
+function O() {
   return !1
 }
 
@@ -116,9 +116,9 @@ a = "MemberSafetyStore", (s = "displayName") in(r = L) ? Object.defineProperty(r
 }) : r[s] = a;
 let D = new L(l.default, {
   CONNECTION_OPEN: function(e) {
-    return h ? h = !1 : ! function() {
+    return A ? A = !1 : ! function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      for (let t in m) O(t, e)
+      for (let t in m) p(t, e)
     }(!0), g(e)
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
@@ -130,7 +130,7 @@ let D = new L(l.default, {
       members: n
     } = e;
     if (null == t || null == _.default.getGuild(t)) return !1;
-    h = !0;
+    A = !0;
     let i = N(t),
       r = [];
     for (let e of n) null == i.getMember(e.userId) && r.push(e);
@@ -140,7 +140,7 @@ let D = new L(l.default, {
     let {
       guildMembers: t
     } = e, n = !1;
-    return h = !0, E.default.entries(t).forEach(e => {
+    return A = !0, E.default.entries(t).forEach(e => {
       let [t, i] = e;
       n = N(t).updateClientMembers(Object.values(i)) || n
     }), n
@@ -156,7 +156,7 @@ let D = new L(l.default, {
     let {
       guild: t
     } = e, n = N(t.id);
-    O(t.id, n.isInitialized)
+    p(t.id, n.isInitialized)
   },
   GUILD_DELETE: function(e) {
     let {
@@ -164,7 +164,7 @@ let D = new L(l.default, {
         id: t
       }
     } = e;
-    O(t)
+    p(t)
   },
   GUILD_MEMBERS_CHUNK: function(e) {
     let {
@@ -173,8 +173,8 @@ let D = new L(l.default, {
     } = e;
     return N(t).updateServerMembers(n)
   },
-  GUILD_MEMBER_ADD: p,
-  GUILD_MEMBER_UPDATE: p,
+  GUILD_MEMBER_ADD: O,
+  GUILD_MEMBER_UPDATE: O,
   GUILD_MEMBER_UPDATE_LOCAL: function(e) {
     let {
       guildId: t
@@ -323,24 +323,24 @@ let D = new L(l.default, {
     }, {
       memberIds: [],
       memberSupplementals: []
-    }), h = (0, f.syncMemberSupplemental)(u, I);
+    }), A = (0, f.syncMemberSupplemental)(u, I);
     (0, S.registerFetchedSupplementals)(u, E);
     let m = c.updateSearchedMembersByMemberIds(E);
     d.length > 0 && (o = d[0], l = d[d.length - 1]);
-    let [O] = c.updatePaginationState({
+    let [p] = c.updatePaginationState({
       totalResultsCount: _,
       elasticSearchCursor: {
         before: (0, T.createMemberSearchCursor)({
           joinedAt: null == o ? void 0 : null === (t = o.member) || void 0 === t ? void 0 : t.joined_at,
-          userId: null !== (s = null == o ? void 0 : null === (n = o.member) || void 0 === n ? void 0 : n.user.id) && void 0 !== s ? s : A.EMPTY_STRING_SNOWFLAKE_ID
+          userId: null !== (s = null == o ? void 0 : null === (n = o.member) || void 0 === n ? void 0 : n.user.id) && void 0 !== s ? s : h.EMPTY_STRING_SNOWFLAKE_ID
         }),
         after: (0, T.createMemberSearchCursor)({
           joinedAt: null == l ? void 0 : null === (i = l.member) || void 0 === i ? void 0 : i.joined_at,
-          userId: null !== (a = null == l ? void 0 : null === (r = l.member) || void 0 === r ? void 0 : r.user.id) && void 0 !== a ? a : A.EMPTY_STRING_SNOWFLAKE_ID
+          userId: null !== (a = null == l ? void 0 : null === (r = l.member) || void 0 === r ? void 0 : r.user.id) && void 0 !== a ? a : h.EMPTY_STRING_SNOWFLAKE_ID
         })
       }
     }, !1);
-    return h || m || O
+    return A || m || p
   },
   MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH: function(e) {
     let {

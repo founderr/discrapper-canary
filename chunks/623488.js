@@ -1,181 +1,181 @@
 "use strict";
-A.r(t), A.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return T
+    return p
   }
 });
-var a = A("735250");
-A("470079");
-var l = A("120356"),
-  s = A.n(l),
-  n = A("481060"),
-  r = A("240657"),
-  i = A("765400"),
-  o = A("682864"),
-  d = A("153124"),
-  u = A("877453"),
-  c = A("242411"),
-  f = A("916001"),
-  g = A("689938"),
-  C = A("134304");
+var s = n("735250");
+n("470079");
+var a = n("120356"),
+  l = n.n(a),
+  i = n("481060"),
+  r = n("240657"),
+  o = n("765400"),
+  u = n("682864"),
+  d = n("153124"),
+  c = n("877453"),
+  f = n("242411"),
+  E = n("916001"),
+  _ = n("689938"),
+  T = n("134304");
 
-function h(e) {
+function m(e) {
   let {
     hidePurchaseToUnlockBadge: t,
-    showDraftBadge: A,
-    className: l,
+    showDraftBadge: n,
+    className: a,
     children: r
   } = e;
-  return (0, a.jsxs)("div", {
-    className: s()(C.productThumbnailContainer, l),
-    children: [r, !t && (0, a.jsxs)("div", {
-      className: C.purchaseToUnlockBadge,
-      children: [(0, a.jsx)(c.default, {
-        className: C.lockIcon,
+  return (0, s.jsxs)("div", {
+    className: l()(T.productThumbnailContainer, a),
+    children: [r, !t && (0, s.jsxs)("div", {
+      className: T.purchaseToUnlockBadge,
+      children: [(0, s.jsx)(f.default, {
+        className: T.lockIcon,
         width: 16,
         height: 16,
         color: "currentColor",
         "aria-hidden": !0
-      }), (0, a.jsx)(n.Text, {
+      }), (0, s.jsx)(i.Text, {
         variant: "text-sm/normal",
         color: "always-white",
-        className: C.__invalid_unlockText,
-        children: g.default.Messages.GUILD_PRODUCT_CARD_PURCHASE_TO_UNLOCK
+        className: T.__invalid_unlockText,
+        children: _.default.Messages.GUILD_PRODUCT_CARD_PURCHASE_TO_UNLOCK
       })]
-    }), A && (0, a.jsx)("div", {
-      className: C.draftBadge,
-      children: (0, a.jsx)(i.MonetizationListingDraftBadge, {})
+    }), n && (0, s.jsx)("div", {
+      className: T.draftBadge,
+      children: (0, s.jsx)(o.MonetizationListingDraftBadge, {})
     })]
   })
 }
 
-function m(e) {
+function I(e) {
   let {
     onShowFullDescription: t,
-    variant: A
-  } = e, l = (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(n.Text, {
-      variant: A,
+    variant: n
+  } = e, a = (0, s.jsxs)(s.Fragment, {
+    children: [(0, s.jsx)(i.Text, {
+      variant: n,
       color: null != t ? "text-link" : "interactive-hover",
-      children: g.default.Messages.GUILD_PRODUCT_CARD_SEE_FULL_DESCRIPTION
-    }), (0, a.jsx)(u.default, {
-      className: C.arrowIcon,
+      children: _.default.Messages.GUILD_PRODUCT_CARD_SEE_FULL_DESCRIPTION
+    }), (0, s.jsx)(c.default, {
+      className: T.arrowIcon,
       backgroundColor: "currentColor",
       width: 16,
       height: 16
     })]
   });
-  return null == t ? (0, a.jsx)("div", {
-    className: C.showMoreButton,
-    children: l
-  }) : (0, a.jsx)(n.Clickable, {
-    className: s()(C.showMoreButton, C.hasAction),
+  return null == t ? (0, s.jsx)("div", {
+    className: T.showMoreButton,
+    children: a
+  }) : (0, s.jsx)(i.Clickable, {
+    className: l()(T.showMoreButton, T.hasAction),
     onClick: e => {
       e.stopPropagation(), null != t && t()
     },
-    children: l
+    children: a
   })
 }
 
-function T(e) {
+function p(e) {
   let {
     imageUrl: t,
-    name: A,
-    description: l,
-    formattedPrice: i,
-    role: u,
-    ctaComponent: c,
-    shouldShowFullDescriptionButton: T = !0,
-    onShowFullDescription: p,
-    productType: U,
-    onTapCard: v,
-    actionMenu: I,
-    showOpaqueBackground: E = !1,
-    hideRoleTag: x = !1,
-    lineClamp: N = 1,
-    cardWidth: D = 332,
-    cardHeight: q,
-    thumbnailHeight: L = 187,
-    descriptionTextVariant: O = "text-sm/normal",
-    isDraft: R = !1
-  } = e, P = (0, d.uid)(), V = (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(h, {
-      showDraftBadge: R,
+    name: n,
+    description: a,
+    formattedPrice: o,
+    role: c,
+    ctaComponent: f,
+    shouldShowFullDescriptionButton: p = !0,
+    onShowFullDescription: h,
+    productType: N,
+    onTapCard: S,
+    actionMenu: C,
+    showOpaqueBackground: A = !1,
+    hideRoleTag: g = !1,
+    lineClamp: M = 1,
+    cardWidth: R = 332,
+    cardHeight: O,
+    thumbnailHeight: v = 187,
+    descriptionTextVariant: L = "text-sm/normal",
+    isDraft: x = !1
+  } = e, D = (0, d.uid)(), P = (0, s.jsxs)(s.Fragment, {
+    children: [(0, s.jsx)(m, {
+      showDraftBadge: x,
       hidePurchaseToUnlockBadge: !0,
-      children: (0, a.jsx)("img", {
+      children: (0, s.jsx)("img", {
         alt: "",
         src: t,
-        className: C.productThumbnail,
+        className: T.productThumbnail,
         style: {
-          height: L
+          height: v
         }
       })
-    }), (0, a.jsxs)("div", {
-      className: C.productDetails,
-      children: [(0, a.jsxs)("div", {
-        className: C.productDetailContent,
-        children: [(0, a.jsx)(n.Heading, {
+    }), (0, s.jsxs)("div", {
+      className: T.productDetails,
+      children: [(0, s.jsxs)("div", {
+        className: T.productDetailContent,
+        children: [(0, s.jsx)(i.Heading, {
           variant: "text-md/medium",
           color: "header-primary",
-          className: C.productName,
-          id: P,
-          children: A
-        }), (0, a.jsx)(n.FocusBlock, {
-          children: (0, a.jsx)(r.default, {
-            variant: O,
+          className: T.productName,
+          id: D,
+          children: n
+        }), (0, s.jsx)(i.FocusBlock, {
+          children: (0, s.jsx)(r.default, {
+            variant: L,
             color: "text-muted",
-            lineClamp: N,
-            text: l
+            lineClamp: M,
+            text: a
           })
-        }), T && (0, a.jsx)(m, {
-          onShowFullDescription: p,
-          variant: O
-        }), x || null == u || "" === u.name ? null : (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(o.default, {
+        }), p && (0, s.jsx)(I, {
+          onShowFullDescription: h,
+          variant: L
+        }), g || null == c || "" === c.name ? null : (0, s.jsxs)(s.Fragment, {
+          children: [(0, s.jsx)(u.default, {
             size: 16
-          }), (0, a.jsx)(f.default, {
-            role: u
+          }), (0, s.jsx)(E.default, {
+            role: c
           })]
         })]
-      }), I]
-    }), (0, a.jsxs)("div", {
-      className: C.purchaseDetails,
-      children: [(0, a.jsx)(n.Text, {
+      }), C]
+    }), (0, s.jsxs)("div", {
+      className: T.purchaseDetails,
+      children: [(0, s.jsx)(i.Text, {
         variant: "text-md/medium",
         color: "interactive-active",
-        className: C.__invalid_productPrice,
-        children: null != i ? i : g.default.Messages.GUILD_PRODUCT_CARD_EMPTY_PRICE
-      }), (0, a.jsx)(n.Text, {
+        className: T.__invalid_productPrice,
+        children: null != o ? o : _.default.Messages.GUILD_PRODUCT_CARD_EMPTY_PRICE
+      }), (0, s.jsx)(i.Text, {
         variant: "text-xxs/normal",
         color: "text-normal",
-        className: C.__invalid_productType,
-        children: U
-      }), (0, a.jsx)("div", {
-        className: C.productActionButton,
+        className: T.__invalid_productType,
+        children: N
+      }), (0, s.jsx)("div", {
+        className: T.productActionButton,
         onClick: e => {
           e.stopPropagation()
         },
-        children: c
+        children: f
       })]
     })]
   });
-  return null == v ? (0, a.jsx)("article", {
-    className: s()(C.productCard, E ? C.opaqueBackground : C.solidBackground),
-    "aria-labelledby": P,
-    children: V
-  }) : (0, a.jsx)("div", {
+  return null == S ? (0, s.jsx)("article", {
+    className: l()(T.productCard, A ? T.opaqueBackground : T.solidBackground),
+    "aria-labelledby": D,
+    children: P
+  }) : (0, s.jsx)("div", {
     style: {
-      width: D,
-      height: q
+      width: R,
+      height: O
     },
-    children: (0, a.jsx)(n.ClickableContainer, {
+    children: (0, s.jsx)(i.ClickableContainer, {
       tag: "article",
-      "aria-label": g.default.Messages.GUILD_SHOP_LISTING_CARD_A11Y_LABEL.format({
-        productName: A
+      "aria-label": _.default.Messages.GUILD_SHOP_LISTING_CARD_A11Y_LABEL.format({
+        productName: n
       }),
-      className: s()(C.productCard, E ? C.opaqueBackground : C.solidBackground, C.cardClickableContainer),
-      onClick: v,
-      children: V
+      className: l()(T.productCard, A ? T.opaqueBackground : T.solidBackground, T.cardClickableContainer),
+      onClick: S,
+      children: P
     })
   })
 }

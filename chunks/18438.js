@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   clearErrors: function() {
-    return p
+    return O
   },
   closeGuildIdentitySettings: function() {
     return d
@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return u
   },
   resetAllPending: function() {
-    return O
+    return p
   },
   resetAndCloseGuildIdentityForm: function() {
     return _
@@ -40,7 +40,7 @@ n.r(t), n.d(t, {
     return f
   },
   setPendingNickname: function() {
-    return A
+    return h
   },
   setPendingProfileEffectId: function() {
     return I
@@ -49,7 +49,7 @@ n.r(t), n.d(t, {
     return S
   },
   setPendingThemeColors: function() {
-    return h
+    return A
   }
 }), n("411104");
 var i = n("544891"),
@@ -163,14 +163,14 @@ function S(e) {
   })
 }
 
-function A(e) {
+function h(e) {
   r.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME",
     nickname: e
   })
 }
 
-function h(e) {
+function A(e) {
   r.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS",
     themeColors: e
@@ -189,13 +189,13 @@ function N() {
   })
 }
 
-function O() {
+function p() {
   r.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING"
   })
 }
 
-function p() {
+function O() {
   r.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS"
   })

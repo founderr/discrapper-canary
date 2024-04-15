@@ -1,16 +1,16 @@
 "use strict";
-a.r(t), a.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return d
+    return s
   }
 });
-var l = a("442837"),
-  n = a("314897"),
-  u = a("944486"),
-  s = a("590415");
+var a = l("442837"),
+  u = l("314897"),
+  n = l("944486"),
+  d = l("590415");
 
-function d() {
-  let e = (0, l.useStateFromStores)([u.default], () => u.default.getVoiceChannelId()),
-    t = (0, l.useStateFromStores)([n.default], () => n.default.getId());
-  return (0, s.default)(t, e) === s.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK
+function s() {
+  let e = (0, a.useStateFromStores)([n.default], () => n.default.getVoiceChannelId()),
+    t = (0, a.useStateFromStores)([u.default], () => u.default.getId());
+  return (0, d.default)(t, e) === d.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK
 }

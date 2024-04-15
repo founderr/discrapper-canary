@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   },
   default: function() {
-    return A
+    return h
   }
 }), n("47120"), n("411104"), n("177593");
 var i, r, s = n("874141"),
@@ -28,7 +28,7 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }(r = i || (i = {}))[r.AUDIO_BITRATE = 0] = "AUDIO_BITRATE", r[r.VIDEO_RESOLUTION_SCALE = 1] = "VIDEO_RESOLUTION_SCALE", r[r.VIDEO_BITRATE = 2] = "VIDEO_BITRATE", r[r.VIDEO_FRAMERATE = 3] = "VIDEO_FRAMERATE";
-class A extends u.default {
+class h extends u.default {
   interact() {
     for (let e of (this.interacted = !0, Object.keys(this.outputs))) this.outputs[e].play();
     this.input.resumeAudio()

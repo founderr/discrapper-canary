@@ -24,8 +24,8 @@ function i(e) {
     isInteracting: u,
     isAutomodBlockedMessage: d,
     renderThreadAccessory: c,
-    renderComponentAccessory: E,
-    renderSuppressEmbeds: f,
+    renderComponentAccessory: f,
+    renderSuppressEmbeds: E,
     forceAddReactions: _,
     className: T
   } = e;
@@ -40,8 +40,8 @@ function i(e) {
       hasSpoilerEmbeds: r,
       onMediaItemContextMenu: o,
       renderThreadAccessory: c,
-      renderComponentAccessory: E,
-      renderSuppressEmbeds: f,
+      renderComponentAccessory: f,
+      renderSuppressEmbeds: E,
       forceAddReactions: _
     })
   })

@@ -25,12 +25,12 @@ var i = n("735250"),
   T = n("323588"),
   f = n("753194"),
   S = n("598077"),
-  A = n("671533"),
-  h = n("880008"),
+  h = n("671533"),
+  A = n("880008"),
   m = n("49012"),
   N = n("981631"),
-  O = n("856651"),
-  p = n("689938"),
+  p = n("856651"),
+  O = n("689938"),
   R = n("815639");
 
 function C(e) {
@@ -46,9 +46,9 @@ function C(e) {
   } = e;
   null == v && (v = !0);
   let y = null !== (n = S.metadata) && void 0 !== n ? n : {},
-    P = v ? (0, I.getCreatedAtDate)(y[O.MetadataFields.CREATED_AT], g) : null,
+    P = v ? (0, I.getCreatedAtDate)(y[p.MetadataFields.CREATED_AT], g) : null,
     U = (0, u.useToken)(o.default.unsafe_rawColors.TWITTER).hex(),
-    b = p.default.Messages.CONNECTION_VERIFIED;
+    b = O.default.Messages.CONNECTION_VERIFIED;
   if (v) switch (S.type) {
     case N.PlatformTypes.REDDIT:
       r = (0, T.generateRedditMetadataItems)(y);
@@ -57,7 +57,7 @@ function C(e) {
       r = (0, T.generateSteamMetadataItems)(y);
       break;
     case N.PlatformTypes.TWITTER:
-      r = (0, T.generateTwitterMetadataItems)(y), "1" === y[O.MetadataFields.TWITTER_VERIFIED] && (s = U, b = p.default.Messages.CONNECTION_VERIFIED_ON_TWITTER);
+      r = (0, T.generateTwitterMetadataItems)(y), "1" === y[p.MetadataFields.TWITTER_VERIFIED] && (s = U, b = O.default.Messages.CONNECTION_VERIFIED_ON_TWITTER);
       break;
     case N.PlatformTypes.PAYPAL:
       r = (0, T.generatePaypalMetadataItems)(y);
@@ -70,7 +70,7 @@ function C(e) {
   }
   let G = _.default.get((0, E.useLegacyPlatformType)(S.type)),
     w = null == G ? void 0 : null === (t = G.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(G, S);
-  null != M && M ? d = (0, i.jsx)(h.default, {
+  null != M && M ? d = (0, i.jsx)(A.default, {
     className: a()(R.__invalid_connectedAccountOpenIconContainer, R.connectedAccountHideIcon),
     foregroundColor: "currentColor"
   }) : null != w && (d = (0, i.jsx)(u.Anchor, {
@@ -85,9 +85,9 @@ function C(e) {
         trusted: (null == G ? void 0 : G.type) !== N.PlatformTypes.DOMAIN
       }, e)
     },
-    children: (0, i.jsx)(A.default, {
+    children: (0, i.jsx)(h.default, {
       className: R.connectedAccountOpenIcon,
-      direction: A.default.Directions.RIGHT
+      direction: h.default.Directions.RIGHT
     })
   }));
   let B = (0, u.useToken)(o.default.colors.INTERACTIVE_MUTED).hex(),
@@ -107,7 +107,7 @@ function C(e) {
         text: null == G ? void 0 : G.name,
         children: e => (0, i.jsx)("img", {
           ...e,
-          alt: p.default.Messages.IMG_ALT_LOGO.format({
+          alt: O.default.Messages.IMG_ALT_LOGO.format({
             name: null == G ? void 0 : G.name
           }),
           className: R.connectedAccountIcon,
@@ -134,7 +134,7 @@ function C(e) {
         }), null != P ? (0, i.jsx)(u.Text, {
           variant: "text-xs/normal",
           color: "header-secondary",
-          children: p.default.Messages.CONNECTIONS_PROFILE_MEMBER_SINCE.format({
+          children: O.default.Messages.CONNECTIONS_PROFILE_MEMBER_SINCE.format({
             date: P
           })
         }) : null]
@@ -184,7 +184,7 @@ function g(e) {
         children: (0, i.jsx)(u.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
-          children: p.default.Messages.CONNECTIONS_PROFILE_POWERED_BY.format({
+          children: O.default.Messages.CONNECTIONS_PROFILE_POWERED_BY.format({
             applicationHook: () => (0, i.jsxs)("div", {
               className: R.connectedAccountPoweredByText,
               children: [null != t.application.bot ? (0, i.jsx)(d.default, {

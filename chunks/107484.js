@@ -1,24 +1,24 @@
 "use strict";
-i.r(e), i("47120");
-var l, r, a, n, s = i("442837"),
-  o = i("570140");
-let d = new Map;
-class c extends(l = s.default.Store) {
-  getGuildRoleConnectionEligibility(t) {
-    return null != t ? d.get(t) : void 0
+n.r(t), n("47120");
+var i, r, s, a, o = n("442837"),
+  l = n("570140");
+let u = new Map;
+class d extends(i = o.default.Store) {
+  getGuildRoleConnectionEligibility(e) {
+    return null != e ? u.get(e) : void 0
   }
 }
-n = "GuildRoleConnectionEligibilityStore", (a = "displayName") in(r = c) ? Object.defineProperty(r, a, {
-  value: n,
+a = "GuildRoleConnectionEligibilityStore", (s = "displayName") in(r = d) ? Object.defineProperty(r, s, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[a] = n, e.default = new c(o.default, {
-  GUILD_ROLE_CONNECTION_ELIGIBILITY_FETCH_SUCCESS: t => {
+}) : r[s] = a, t.default = new d(l.default, {
+  GUILD_ROLE_CONNECTION_ELIGIBILITY_FETCH_SUCCESS: e => {
     let {
-      roleId: e,
-      roleConnectionEligibility: i
-    } = t;
-    d.set(e, i)
+      roleId: t,
+      roleConnectionEligibility: n
+    } = e;
+    u.set(t, n)
   }
 })

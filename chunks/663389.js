@@ -11,12 +11,12 @@ let E = c.FormStates.CLOSED,
   T = null,
   f = {},
   S = {},
-  A = {},
-  h = null,
+  h = {},
+  A = null,
   m = null,
   N = !1,
-  O = !1,
-  p = null,
+  p = !1,
+  O = null,
   R = null,
   C = null,
   g = [],
@@ -27,8 +27,8 @@ function v(e) {
   var t, n, i, r, s, a;
   let o = _.default.getCurrentUser();
   if (null == o) return M();
-  T = null !== (t = e.section) && void 0 !== t ? t : T, L = null !== (n = e.section) && void 0 !== n ? n : T, null != e.subsection && null != T && (f[T] = e.subsection), null != e.scrollPosition && null != T && (S[T] = e.scrollPosition), O = !!e.openWithoutBackstack, E = c.FormStates.OPEN, A = {}, m = {
-    ...h = {
+  T = null !== (t = e.section) && void 0 !== t ? t : T, L = null !== (n = e.section) && void 0 !== n ? n : T, null != e.subsection && null != T && (f[T] = e.subsection), null != e.scrollPosition && null != T && (S[T] = e.scrollPosition), p = !!e.openWithoutBackstack, E = c.FormStates.OPEN, h = {}, m = {
+    ...A = {
       [c.UserSettingsSections.ACCOUNT]: {
         userId: o.id,
         username: o.username,
@@ -44,18 +44,18 @@ function v(e) {
 }
 
 function M() {
-  E = c.FormStates.CLOSED, N = !1, h = null, L = null, m = null, I = null, T = null, f = {}, S = {}, R = null, C = null, g = [], D = null
+  E = c.FormStates.CLOSED, N = !1, A = null, L = null, m = null, I = null, T = null, f = {}, S = {}, R = null, C = null, g = [], D = null
 }
 
 function y() {
-  E = c.FormStates.OPEN, A = {}
+  E = c.FormStates.OPEN, h = {}
 }
 class P extends(a = u.default.Store) {
   initialize() {
     this.waitFor(_.default)
   }
   hasChanges() {
-    return null != m && null != h && (!!this.isOpen() || p === c.DrawerTabTypes.USER_SETTINGS) && !l().isEqual(m, h)
+    return null != m && null != A && (!!this.isOpen() || O === c.DrawerTabTypes.USER_SETTINGS) && !l().isEqual(m, A)
   }
   isOpen() {
     return N
@@ -73,7 +73,7 @@ class P extends(a = u.default.Store) {
     return null != T ? S[T] : null
   }
   shouldOpenWithoutBackstack() {
-    return O
+    return p
   }
   getProps() {
     return {
@@ -82,9 +82,9 @@ class P extends(a = u.default.Store) {
       subsection: null != T ? f[T] : null,
       scrollPosition: null != T ? S[T] : null,
       settings: m,
-      errors: A,
+      errors: h,
       hasChanges: this.hasChanges(),
-      openWithoutBackstack: O,
+      openWithoutBackstack: p,
       analyticsLocation: C,
       analyticsLocations: g,
       initialSection: L,
@@ -113,7 +113,7 @@ s = "UserSettingsModalStore", (r = "displayName") in(i = P) ? Object.definePrope
   USER_SETTINGS_MODAL_SUBMIT_FAILURE: function(e) {
     var t;
     if (E !== c.FormStates.SUBMITTING) return !1;
-    E = c.FormStates.OPEN, T = c.UserSettingsSections.ACCOUNT, A = null !== (t = e.errors) && void 0 !== t ? t : {}
+    E = c.FormStates.OPEN, T = c.UserSettingsSections.ACCOUNT, h = null !== (t = e.errors) && void 0 !== t ? t : {}
   },
   USER_SETTINGS_MODAL_SET_SECTION: function(e) {
     var t;
@@ -146,7 +146,7 @@ s = "UserSettingsModalStore", (r = "displayName") in(i = P) ? Object.definePrope
   USER_SETTINGS_MODAL_RESET: function() {
     let e = _.default.getCurrentUser();
     y(), null != e && (m = {
-      ...h = {
+      ...A = {
         [c.UserSettingsSections.ACCOUNT]: {
           userId: e.id,
           username: e.username,
@@ -161,7 +161,7 @@ s = "UserSettingsModalStore", (r = "displayName") in(i = P) ? Object.definePrope
     })
   },
   DRAWER_SELECT_TAB: function(e) {
-    return p = e.tab, null == T && p === c.DrawerTabTypes.USER_SETTINGS && v({
+    return O = e.tab, null == T && O === c.DrawerTabTypes.USER_SETTINGS && v({
       type: "USER_SETTINGS_MODAL_INIT",
       section: null,
       subsection: null,

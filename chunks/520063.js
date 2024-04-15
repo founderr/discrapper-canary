@@ -1,38 +1,38 @@
 "use strict";
-a.r(t), a.d(t, {
+l.r(t), l.d(t, {
   default: function() {
     return _
   }
 });
-var l = a("735250"),
-  n = a("470079"),
-  u = a("442837"),
-  s = a("481060"),
-  d = a("58540"),
-  r = a("438536"),
-  i = a("346479"),
-  o = a("665906"),
-  f = a("592125"),
-  c = a("430824"),
-  m = a("496675"),
-  M = a("594174"),
-  E = a("981631"),
-  S = a("689938");
+var a = l("735250"),
+  u = l("470079"),
+  n = l("442837"),
+  d = l("481060"),
+  s = l("58540"),
+  r = l("438536"),
+  i = l("346479"),
+  o = l("665906"),
+  f = l("592125"),
+  c = l("430824"),
+  E = l("496675"),
+  m = l("594174"),
+  M = l("981631"),
+  S = l("689938");
 
 function _(e, t, _) {
-  let g = n.useMemo(() => ({
+  let g = u.useMemo(() => ({
     [t]: [e.id]
   }), [t, e.id]);
-  (0, d.useSubscribeGuildMembers)(g), (0, u.useStateFromStores)([m.default], () => m.default.getGuildVersion(t), [t]);
-  let I = (0, u.useStateFromStores)([f.default], () => f.default.getChannel(_)),
-    C = (0, u.useStateFromStores)([c.default], () => c.default.getGuild(t), [t]),
-    R = (0, u.useStateFromStores)([M.default], () => M.default.getCurrentUser()),
-    N = (0, r.default)(I, "Context Menu"),
-    A = (0, o.useIsThreadModerator)(I);
-  if ((null == R ? void 0 : R.id) === e.id) return [N];
-  if (null == C || null == I || null == R) return [];
-  let T = A || I.ownerId === R.id && I.type === E.ChannelTypes.PRIVATE_THREAD;
-  return [T ? (0, l.jsx)(s.MenuItem, {
+  (0, s.useSubscribeGuildMembers)(g), (0, n.useStateFromStores)([E.default], () => E.default.getGuildVersion(t), [t]);
+  let I = (0, n.useStateFromStores)([f.default], () => f.default.getChannel(_)),
+    R = (0, n.useStateFromStores)([c.default], () => c.default.getGuild(t), [t]),
+    C = (0, n.useStateFromStores)([m.default], () => m.default.getCurrentUser()),
+    A = (0, r.default)(I, "Context Menu"),
+    T = (0, o.useIsThreadModerator)(I);
+  if ((null == C ? void 0 : C.id) === e.id) return [A];
+  if (null == R || null == I || null == C) return [];
+  let N = T || I.ownerId === C.id && I.type === M.ChannelTypes.PRIVATE_THREAD;
+  return [N ? (0, a.jsx)(d.MenuItem, {
     id: "remove",
     label: I.isForumPost() ? S.default.Messages.REMOVE_USER_FROM_FORUM_POST.format({
       user: e.username
@@ -41,39 +41,39 @@ function _(e, t, _) {
     }),
     color: "danger",
     action: () => i.default.removeMember(I, e.id, "Context Menu")
-  }) : null, m.default.canManageUser(E.Permissions.KICK_MEMBERS, e, C) ? (0, l.jsx)(s.MenuItem, {
+  }) : null, E.default.canManageUser(M.Permissions.KICK_MEMBERS, e, R) ? (0, a.jsx)(d.MenuItem, {
     id: "kick",
-    label: T ? S.default.Messages.KICK_USER_FROM_SERVER.format({
+    label: N ? S.default.Messages.KICK_USER_FROM_SERVER.format({
       user: e.username
     }) : S.default.Messages.KICK_USER.format({
       user: e.username
     }),
     color: "danger",
-    action: () => (0, s.openModalLazy)(async () => {
+    action: () => (0, d.openModalLazy)(async () => {
       let {
         default: t
-      } = await Promise.all([a.e("99387"), a.e("5454")]).then(a.bind(a, "854360"));
-      return a => (0, l.jsx)(t, {
-        ...a,
-        guildId: C.id,
+      } = await Promise.all([l.e("99387"), l.e("5454")]).then(l.bind(l, "854360"));
+      return l => (0, a.jsx)(t, {
+        ...l,
+        guildId: R.id,
         user: e
       })
     })
-  }) : null, m.default.canManageUser(E.Permissions.BAN_MEMBERS, e, C) ? (0, l.jsx)(s.MenuItem, {
+  }) : null, E.default.canManageUser(M.Permissions.BAN_MEMBERS, e, R) ? (0, a.jsx)(d.MenuItem, {
     id: "ban",
-    label: T ? S.default.Messages.BAN_USER_FROM_SERVER.format({
+    label: N ? S.default.Messages.BAN_USER_FROM_SERVER.format({
       user: e.username
     }) : S.default.Messages.BAN_USER.format({
       user: e.username
     }),
     color: "danger",
-    action: () => (0, s.openModalLazy)(async () => {
+    action: () => (0, d.openModalLazy)(async () => {
       let {
         default: t
-      } = await Promise.all([a.e("99387"), a.e("43350")]).then(a.bind(a, "98746"));
-      return a => (0, l.jsx)(t, {
-        ...a,
-        guildId: C.id,
+      } = await Promise.all([l.e("99387"), l.e("43350")]).then(l.bind(l, "98746"));
+      return l => (0, a.jsx)(t, {
+        ...l,
+        guildId: R.id,
         user: e
       })
     })

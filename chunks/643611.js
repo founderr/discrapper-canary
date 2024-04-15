@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return T
+    return O
   }
 }), l("47120");
 var n = l("735250"),
@@ -10,19 +10,19 @@ var n = l("735250"),
   s = l("481060"),
   r = l("933557"),
   u = l("592125"),
-  i = l("984933"),
-  A = l("699516"),
+  A = l("984933"),
+  i = l("699516"),
   d = l("594174"),
-  c = l("153124"),
-  _ = l("556012"),
+  _ = l("153124"),
+  c = l("556012"),
   C = l("689938"),
-  L = l("281188");
-let N = e => {
+  N = l("281188");
+let T = e => {
   let {
     guildId: t,
     channel: l,
     onSelectChannel: a
-  } = e, u = (0, o.useStateFromStoresArray)([i.default], () => i.default.getChannels(t)[i.GUILD_SELECTABLE_CHANNELS_KEY].filter(e => {
+  } = e, u = (0, o.useStateFromStoresArray)([A.default], () => A.default.getChannels(t)[A.GUILD_SELECTABLE_CHANNELS_KEY].filter(e => {
     let {
       channel: t
     } = e;
@@ -34,13 +34,13 @@ let N = e => {
     return t
   }), [t]);
   return (0, n.jsx)(s.FormItem, {
-    className: L.channelSelector,
+    className: N.channelSelector,
     required: !0,
     children: (0, n.jsx)(s.SearchableSelect, {
       value: null == l ? void 0 : l.id,
       options: u.map(e => ({
         value: e.id,
-        label: (0, r.computeChannelName)(e, d.default, A.default, !0)
+        label: (0, r.computeChannelName)(e, d.default, i.default, !0)
       })),
       onChange: e => {
         let t = u.find(t => t.id === e);
@@ -51,37 +51,37 @@ let N = e => {
   })
 };
 
-function T(e) {
+function O(e) {
   let {
     action: t,
     triggerType: l,
     guildId: r,
-    isEdit: i,
-    onEditChannel: A,
+    isEdit: A,
+    onEditChannel: i,
     onClose: d,
-    transitionState: T
-  } = e, O = (0, c.useUID)(), [I, E] = a.useState(t.metadata.channelId), [S, M] = a.useState(null), f = (0, o.useStateFromStores)([u.default], () => u.default.getChannel(I), [I]), h = (0, _.getActionInfo)(t.type, t, l);
-  if (null == h) return null;
+    transitionState: O
+  } = e, L = (0, _.useUID)(), [I, E] = a.useState(t.metadata.channelId), [S, M] = a.useState(null), f = (0, o.useStateFromStores)([u.default], () => u.default.getChannel(I), [I]), U = (0, c.getActionInfo)(t.type, t, l);
+  if (null == U) return null;
   let {
-    headerText: U
-  } = h;
+    headerText: D
+  } = U;
   return (0, n.jsxs)(s.ModalRoot, {
-    transitionState: T,
-    "aria-labelledby": O,
+    transitionState: O,
+    "aria-labelledby": L,
     size: s.ModalSize.SMALL,
     children: [(0, n.jsxs)(s.ModalContent, {
-      className: L.actionContentContainer,
+      className: N.actionContentContainer,
       children: [(0, n.jsx)(s.Heading, {
-        id: O,
+        id: L,
         color: "header-primary",
         variant: "heading-lg/semibold",
-        className: L.header,
-        children: U
+        className: N.header,
+        children: D
       }), (0, n.jsx)(s.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
         children: C.default.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_MODAL_DESCRIPTION
-      }), (0, n.jsx)(N, {
+      }), (0, n.jsx)(T, {
         guildId: r,
         channel: f,
         onSelectChannel: e => {
@@ -103,11 +103,11 @@ function T(e) {
             M(C.default.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_MODAL_ERROR_NO_CHANNEL);
             return
           }
-          A(I)
+          i(I)
         },
         color: s.Button.Colors.BRAND,
         size: s.Button.Sizes.SMALL,
-        children: i ? C.default.Messages.EDIT : C.default.Messages.SAVE
+        children: A ? C.default.Messages.EDIT : C.default.Messages.SAVE
       }), (0, n.jsx)(s.Button, {
         onClick: () => {
           d()

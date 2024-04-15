@@ -16,19 +16,19 @@ n.r(t), n.d(t, {
     return y
   },
   isBlockedByOnboarding: function() {
-    return h
+    return A
   },
   isChattableChannel: function() {
     return R
   },
   isChattableChannelId: function() {
-    return p
+    return O
   },
   isGuildOnboardingSettingsAvailable: function() {
-    return A
+    return h
   },
   useChannelCoverageForOnboarding: function() {
-    return O
+    return p
   },
   useChattableDefaultChannels: function() {
     return M
@@ -65,7 +65,7 @@ function S(e) {
   })
 }
 
-function A(e) {
+function h(e) {
   let t = l.default.getGuild(e),
     n = !!(null == t ? void 0 : t.hasFeature(I.GuildFeatures.COMMUNITY)),
     i = u.default.can(I.Permissions.MANAGE_GUILD, t),
@@ -73,7 +73,7 @@ function A(e) {
   return n && i && r
 }
 
-function h(e, t) {
+function A(e, t) {
   var n;
   if (null == e || !e.hasFeature(I.GuildFeatures.GUILD_ONBOARDING) || null == t || null == t.joinedAt || new Date(t.joinedAt) < f) return !1;
   let i = null !== (n = t.flags) && void 0 !== n ? n : 0;
@@ -104,7 +104,7 @@ function N(e, t, n) {
   }))
 }
 
-function O(e, t, n) {
+function p(e, t, n) {
   return m(t, n, (0, i.useStateFromStores)([o.default], () => o.default.getChannels(e))[0, o.GUILD_SELECTABLE_CHANNELS_KEY].map(e => {
     let {
       channel: t
@@ -113,7 +113,7 @@ function O(e, t, n) {
   }))
 }
 
-function p(e) {
+function O(e) {
   return R(a.default.getChannel(e))
 }
 

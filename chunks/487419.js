@@ -12,7 +12,7 @@ var i, r, s, a, o = n("442837"),
 let f = {},
   S = {};
 
-function A() {
+function h() {
   var e;
   let t = null !== (e = u.default.getGuildsProto()) && void 0 !== e ? e : {},
     n = d.default.getGuilds(),
@@ -24,7 +24,7 @@ function A() {
   })
 }
 
-function h(e) {
+function A(e) {
   return null != e && Object.keys(e).length > 0 ? {
     raidDetectedAt: e.raid_detected_at,
     dmSpamDetectedAt: e.dm_spam_detected_at,
@@ -34,7 +34,7 @@ function h(e) {
 }
 class m extends(i = o.default.Store) {
   initialize() {
-    this.waitFor(u.default, d.default, _.default, c.default), this.syncWith([u.default, d.default, _.default, c.default], A)
+    this.waitFor(u.default, d.default, _.default, c.default), this.syncWith([u.default, d.default, _.default, c.default], h)
   }
   getGuildIncident(e) {
     return f[e]
@@ -55,7 +55,7 @@ a = "GuildIncidentsStore", (s = "displayName") in(r = m) ? Object.defineProperty
   CONNECTION_OPEN: function(e) {
     for (let n of (f = {}, e.guilds)) {
       var t;
-      let e = h(null === (t = n.properties) || void 0 === t ? void 0 : t.incidents_data);
+      let e = A(null === (t = n.properties) || void 0 === t ? void 0 : t.incidents_data);
       null != e && ((0, T.hasDetectedActivity)(e) || (0, T.isUnderLockdown)(e)) && (f[n.id] = e)
     }
   },
@@ -63,13 +63,13 @@ a = "GuildIncidentsStore", (s = "displayName") in(r = m) ? Object.defineProperty
     var t;
     let {
       guild: n
-    } = e, i = h(null === (t = n.properties) || void 0 === t ? void 0 : t.incidents_data);
+    } = e, i = A(null === (t = n.properties) || void 0 === t ? void 0 : t.incidents_data);
     null != i && ((0, T.hasDetectedActivity)(i) || (0, T.isUnderLockdown)(i)) && (f[n.id] = i)
   },
   GUILD_UPDATE: function(e) {
     let {
       guild: t
-    } = e, n = h(t.incidents_data);
+    } = e, n = A(t.incidents_data);
     null != n && ((0, T.hasDetectedActivity)(n) || (0, T.isUnderLockdown)(n)) ? f[t.id] = n : delete f[t.id]
   },
   GUILD_DELETE: function(e) {

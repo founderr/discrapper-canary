@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ASSISTANT_WUMPUS_VOICE_USER: function() {
-    return O
+    return p
   },
   mergeUser: function() {
     return L
@@ -28,9 +28,9 @@ var i = n("348327"),
   T = n("412788"),
   f = n("981631"),
   S = n("308083"),
-  A = n("474936");
+  h = n("474936");
 
-function h(e, t, n) {
+function A(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -40,9 +40,9 @@ function h(e, t, n) {
 }
 let m = {},
   N = 0,
-  O = "47835198259242069";
+  p = "47835198259242069";
 
-function p(e, t, n) {
+function O(e, t, n) {
   let i = e;
   i = null == n ? e.removeGuildAvatarHash(t) : e.addGuildAvatarHash(t, n), m[e.id] = i;
   let r = e !== i;
@@ -113,7 +113,7 @@ function D(e, t) {
   if (!e) return t;
   let n = l.default.getPremiumTypeOverride(),
     i = l.default.getPremiumTypeActual();
-  return n === A.UNSELECTED_PREMIUM_TYPE_OVERRIDE ? i : n
+  return n === h.UNSELECTED_PREMIUM_TYPE_OVERRIDE ? i : n
 }
 
 function v(e, t) {
@@ -147,10 +147,10 @@ function y(e) {
   }), i.forEach(e => {
     e.members.forEach(t => {
       let n = m[t.user.id];
-      null != n && (p(n, e.id, t.avatar), R(n, t.user))
+      null != n && (O(n, e.id, t.avatar), R(n, t.user))
     })
-  }), null != m[I.default.getId()] && (m[O] = new _.default({
-    id: O,
+  }), null != m[I.default.getId()] && (m[p] = new _.default({
+    id: p,
     username: "Wumpus",
     discriminator: "0",
     globalName: "Wumpus",
@@ -166,7 +166,7 @@ function P(e) {
   t.forEach(e => {
     e.members.forEach(t => {
       let n = m[t.user.id];
-      null != n && (p(n, e.id, t.avatar), R(n, t.user))
+      null != n && (O(n, e.id, t.avatar), R(n, t.user))
     })
   }), null == n || n.forEach(e => {
     var t;
@@ -284,7 +284,7 @@ function W(e) {
     L(t);
     let r = m[t.id],
       s = null == i ? void 0 : i.avatar;
-    null != r && null != s && p(r, n, s)
+    null != r && null != s && O(r, n, s)
   })
 }
 
@@ -315,7 +315,7 @@ function X(e) {
   return !1
 }
 
-function Q(e) {
+function q(e) {
   let {
     channel: {
       rawRecipients: t
@@ -324,7 +324,7 @@ function Q(e) {
   return null != t && t.forEach(e => L(e)), !1
 }
 
-function q(e) {
+function Q(e) {
   let {
     channels: t
   } = e;
@@ -384,7 +384,7 @@ function ei(e) {
     avatar: i,
     guildId: r
   } = e;
-  return p(n, r, i) || t
+  return O(n, r, i) || t
 }
 
 function er(e) {
@@ -412,14 +412,14 @@ function es(e) {
     let {
       avatar: s
     } = t;
-    return p(r, n, s) || i || e
+    return O(r, n, s) || i || e
   }, !1)
 }
 
 function ea(e) {
   var t;
   let n = !1;
-  for (let i of null !== (t = e.members) && void 0 !== t ? t : []) L(i.user) && (n = !0), null != m[i.user.id] && p(m[i.user.id], e.guildId, i.avatar) && (n = !0);
+  for (let i of null !== (t = e.members) && void 0 !== t ? t : []) L(i.user) && (n = !0), null != m[i.user.id] && O(m[i.user.id], e.guildId, i.avatar) && (n = !0);
   return n
 }
 
@@ -471,7 +471,7 @@ function ed(e) {
       bot: a
     });
     let l = m[n];
-    null != l && p(l, t.id, o)
+    null != l && O(l, t.id, o)
   })
 }
 
@@ -525,7 +525,7 @@ function eS(e) {
   })
 }
 
-function eA(e) {
+function eh(e) {
   let {
     request: t
   } = e, {
@@ -535,7 +535,7 @@ function eA(e) {
   return null != n && (r = r || L(n)), null != i && (r = r || L(i)), r
 }
 
-function eh(e) {
+function eA(e) {
   let {
     integrations: t
   } = e;
@@ -556,7 +556,7 @@ function eN(e) {
   M((0, u.createPrivateChannelIntegration)(t))
 }
 
-function eO(e) {
+function ep(e) {
   let {
     users: t,
     familyCenterTeenActivity: n
@@ -566,7 +566,7 @@ function eO(e) {
   return [...t, ...i].reduce((e, t) => L(t) || e, !1)
 }
 
-function ep(e) {
+function eO(e) {
   let {
     users: t
   } = e;
@@ -696,16 +696,16 @@ class ev extends T.default {
       GUILD_BAN_REMOVE: et,
       CHANNEL_RECIPIENT_ADD: en,
       CHANNEL_RECIPIENT_REMOVE: en,
-      GUILD_JOIN_REQUEST_CREATE: eA,
-      GUILD_JOIN_REQUEST_UPDATE: eA,
+      GUILD_JOIN_REQUEST_CREATE: eh,
+      GUILD_JOIN_REQUEST_UPDATE: eh,
       GUILD_MEMBER_ADD: ei,
       GUILD_MEMBER_UPDATE: ei,
       GUILD_MEMBERS_CHUNK: es,
       GUILD_MEMBER_LIST_UPDATE: er,
       THREAD_MEMBER_LIST_UPDATE: el,
       THREAD_MEMBERS_UPDATE: eu,
-      CHANNEL_CREATE: Q,
-      CHANNEL_UPDATES: q,
+      CHANNEL_CREATE: q,
+      CHANNEL_UPDATES: Q,
       RELATIONSHIP_ADD: e_,
       LOAD_RELATIONSHIPS_SUCCESS: ec,
       FRIEND_SUGGESTION_CREATE: eE,
@@ -724,11 +724,11 @@ class ev extends T.default {
       LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: j,
       PASSIVE_UPDATE_V1: ea,
       LOCAL_MESSAGES_LOADED: eo,
-      FETCH_PRIVATE_CHANNEL_INTEGRATIONS_SUCCESS: eh,
+      FETCH_PRIVATE_CHANNEL_INTEGRATIONS_SUCCESS: eA,
       PRIVATE_CHANNEL_INTEGRATION_CREATE: em,
       PRIVATE_CHANNEL_INTEGRATION_UPDATE: eN,
-      FAMILY_CENTER_INITIAL_LOAD: eO,
-      FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: ep,
+      FAMILY_CENTER_INITIAL_LOAD: ep,
+      FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: eO,
       FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eg,
       FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eL,
       FAMILY_CENTER_REQUEST_LINK_SUCCESS: eR,
@@ -737,4 +737,4 @@ class ev extends T.default {
     })
   }
 }
-h(ev, "displayName", "UserStore"), h(ev, "LATEST_SNAPSHOT_VERSION", 1), t.default = new ev
+A(ev, "displayName", "UserStore"), A(ev, "LATEST_SNAPSHOT_VERSION", 1), t.default = new ev

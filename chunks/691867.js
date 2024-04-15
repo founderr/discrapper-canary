@@ -1,41 +1,41 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   default: function() {
     return d
   }
-}), r("47120");
-var a = r("735250"),
-  n = r("470079"),
-  i = r("442837"),
-  o = r("481060"),
-  l = r("581612"),
-  s = r("91311"),
-  c = r("998699");
+}), t("47120");
+var a = t("735250"),
+  n = t("470079"),
+  i = t("442837"),
+  l = t("481060"),
+  o = t("581612"),
+  s = t("91311"),
+  c = t("998699");
 
 function d() {
   let e = (0, i.useStateFromStores)([s.default], () => s.default.allWithDescriptions(), [], i.statesWillNeverBeEqual),
-    t = n.useMemo(() => e.map(e => {
-      let [t, r, n] = e;
-      return (0, a.jsx)(o.FormItem, {
-        children: (0, a.jsx)(o.FormSwitch, {
-          value: r,
-          note: t,
-          onChange: e => (0, l.toggle)(t, e),
+    r = n.useMemo(() => e.map(e => {
+      let [r, t, n] = e;
+      return (0, a.jsx)(l.FormItem, {
+        children: (0, a.jsx)(l.FormSwitch, {
+          value: t,
+          note: r,
+          onChange: e => (0, o.toggle)(r, e),
           hideBorder: !0,
           children: n
         })
-      }, t)
+      }, r)
     }), [e]);
   return (0, a.jsxs)("div", {
     className: c.container,
-    children: [(0, a.jsx)(o.Button, {
-      onClick: l.clearAll,
+    children: [(0, a.jsx)(l.Button, {
+      onClick: o.clearAll,
       className: c.button,
       fullWidth: !0,
       children: "Clear all"
     }), (0, a.jsx)("div", {
       className: c.rowsContainer,
-      children: t
+      children: r
     })]
   })
 }

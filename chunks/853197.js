@@ -4,25 +4,25 @@ n.r(t), n.d(t, {
     return _
   },
   getDrop: function() {
-    return A
-  },
-  getDropByQuestId: function() {
-    return h
-  },
-  getDropExpired: function() {
     return C
   },
+  getDropByQuestId: function() {
+    return A
+  },
+  getDropExpired: function() {
+    return S
+  },
   getDropsExperiment: function() {
-    return E
+    return f
   },
   getDropsExperimentForDrop: function() {
-    return f
+    return E
   },
   getDropsPartnerGameNameByQuestId: function() {
     return g
   },
   getEligibilityByRunningGameDetection: function() {
-    return m
+    return I
   },
   getEligibleGameLastSeenStartTimeSeconds: function() {
     return T
@@ -31,13 +31,13 @@ n.r(t), n.d(t, {
     return M
   },
   getShowDropsEndedIncompleteBanner: function() {
-    return S
+    return N
   },
   getShowDropsNoticeBanner: function() {
-    return p
+    return h
   },
   isDropGameDetected: function() {
-    return I
+    return m
   }
 });
 var s = n("913527"),
@@ -50,12 +50,12 @@ var s = n("913527"),
   d = n("702512"),
   c = n("689938");
 
-function E(e) {
-  let t = A(e);
-  return null == t ? null : f(t)
+function f(e) {
+  let t = C(e);
+  return null == t ? null : E(t)
 }
 
-function f(e) {
+function E(e) {
   if (e.dropsQuestId === d.FORTNITE_QUEST_ID) return u.DropsForGoLiveFortniteExperiment;
   return null
 }
@@ -73,9 +73,9 @@ function T() {
   return Math.floor(Date.now() / 1e3) - d.DROPS_ELIGIBILITY_SEEN_GAMES_LOOKBACK_SECONDS
 }
 
-function I(e, t, n) {
+function m(e, t, n) {
   var s, a, l, i;
-  if (null == A(e)) return !1;
+  if (null == C(e)) return !1;
   let r = (s = t, a = d.PartnerGameNameToSearchTermMapping[e], null !== (l = s.find(e => _(e.name, a))) && void 0 !== l ? l : null);
   if (null != r) {
     ;
@@ -85,55 +85,55 @@ function I(e, t, n) {
   return !1
 }
 
-function m(e) {
-  return I(e, l.default.getGamesSeen(!1), T())
+function I(e) {
+  return m(e, l.default.getGamesSeen(!1), T())
 }
 
-function N(e, t) {
+function p(e, t) {
   let {
     endDate: n
   } = e, s = a()(), l = a()(n, d.noticeBannerDateFormat), i = a()(s.clone().add(e.dropsNoticeBannerDurationDays, "days").format(d.noticeBannerDateFormat)), r = l.isSameOrBefore(i), o = l.isBefore(s, "minute");
   return r && (t && !o || !t && o)
 }
 
-function p(e) {
+function h(e) {
   var t;
-  let n = A(e);
-  if (null == n || !(null === (t = E(e)) || void 0 === t ? void 0 : t.getCurrentConfig({
+  let n = C(e);
+  if (null == n || !(null === (t = f(e)) || void 0 === t ? void 0 : t.getCurrentConfig({
       location: "1"
     }, {
       autoTrackExposure: !1
     }).dropsEnabled)) return !1;
   let s = i.DropsOptedOut.getSetting(),
-    a = N(n, !0);
+    a = p(n, !0);
   return !s && a
 }
 
-function S(e) {
+function N(e) {
   var t, n;
-  let s = A(e);
-  if (null == s || !(null === (n = E(e)) || void 0 === n ? void 0 : null === (t = n.getCurrentConfig({
+  let s = C(e);
+  if (null == s || !(null === (n = f(e)) || void 0 === n ? void 0 : null === (t = n.getCurrentConfig({
       location: "2"
     }, {
       autoTrackExposure: !1
     })) || void 0 === t ? void 0 : t.dropsEnabled)) return !1;
   let a = i.DropsOptedOut.getSetting(),
-    l = N(s, !1);
-  return C(s) && !a && l
+    l = p(s, !1);
+  return S(s) && !a && l
 }
 
-function C(e) {
+function S(e) {
   let {
     endDate: t
   } = e, n = a()(t, "YYYY-MM-DD HH:mm");
   return a()() > n
 }
 
-function A(e) {
+function C(e) {
   return d.DROPS_GAMES[e]
 }
 
-function h(e) {
+function A(e) {
   return Object.values(d.DROPS_GAMES).find(t => t.dropsQuestId === e)
 }
 

@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return L
   },
   CLIPS_HARDWARE_CLASSIFICATION_VERSION: function() {
-    return A
+    return h
   },
   CLIPS_MAX_PARTICIPANTS: function() {
     return M
@@ -49,7 +49,7 @@ n.r(t), n.d(t, {
     return y
   },
   CLIP_PLAYING_DEBOUNCE_MS: function() {
-    return p
+    return O
   },
   CURRENT_CLIP_METADATA_VERSION: function() {
     return S
@@ -76,7 +76,7 @@ n.r(t), n.d(t, {
     return P
   },
   MIN_CLIP_DURATION_SECONDS: function() {
-    return O
+    return p
   },
   OSX_HARDWARE_AUTO_ENABLE_GPU_REGEX: function() {
     return N
@@ -91,7 +91,7 @@ n.r(t), n.d(t, {
     return m
   },
   WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: function() {
-    return h
+    return A
   }
 });
 var i, r, s, a, o, l, u, d, _ = n("710845"),
@@ -102,12 +102,12 @@ let E = "alt+c",
   T = new _.default("Clips"),
   f = e => "Discord_Clip_".concat(e, ".mp4"),
   S = 3,
-  A = 1,
-  h = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
+  h = 1,
+  A = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
   m = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
   N = /(Apple M[12].*)/,
-  O = .1,
-  p = 25,
+  p = .1,
+  O = 25,
   R = 0,
   C = 200,
   g = "clips-edit",

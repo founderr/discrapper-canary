@@ -1,50 +1,50 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   default: function() {
     return h
   }
 });
-var a = r("735250");
-r("470079");
-var n = r("442837"),
-  i = r("481060"),
-  o = r("800599"),
-  l = r("594174"),
-  s = r("681619"),
-  c = r("64823"),
-  d = r("779869");
+var a = t("735250");
+t("470079");
+var n = t("442837"),
+  i = t("481060"),
+  l = t("800599"),
+  o = t("594174"),
+  s = t("681619"),
+  c = t("64823"),
+  d = t("779869");
 let u = [{
   key: "user",
   cellClassName: c.userCell,
   render(e) {
-    var t;
+    var r;
     let {
-      user: r,
+      user: t,
       key: a
     } = e;
-    return null !== (t = null == r ? void 0 : r.username) && void 0 !== t ? t : a
+    return null !== (r = null == t ? void 0 : t.username) && void 0 !== r ? r : a
   }
 }, {
   key: "affinity",
   cellClassName: c.affinityCell,
   render(e) {
     let {
-      affinity: t
+      affinity: r
     } = e;
-    return "".concat(t)
+    return "".concat(r)
   }
 }];
 
 function h() {
-  let e = (0, n.useStateFromStoresArray)([o.default, l.default], () => o.default.getUserAffinities().map(e => {
+  let e = (0, n.useStateFromStoresArray)([l.default, o.default], () => l.default.getUserAffinities().map(e => {
     let {
-      user_id: t,
-      affinity: r
+      user_id: r,
+      affinity: t
     } = e;
     return {
-      user: l.default.getUser(t),
-      affinity: r,
-      key: t
+      user: o.default.getUser(r),
+      affinity: t,
+      key: r
     }
   }));
   return 0 === e.length ? null : (0, a.jsx)(i.ScrollerThin, {

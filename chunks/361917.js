@@ -23,10 +23,10 @@ function f(e) {
   let {
     channel: s,
     isAppDetailPresent: f
-  } = e, [S, A] = r.useState(""), h = r.useCallback(() => A(""), [A]), {
+  } = e, [S, h] = r.useState(""), A = r.useCallback(() => h(""), [h]), {
     commandsByActiveSection: m,
     sectionDescriptors: N,
-    filterSection: O
+    filterSection: p
   } = u.useDiscovery(s, {
     commandType: l.ApplicationCommandType.CHAT
   }, {
@@ -35,9 +35,9 @@ function f(e) {
     includeFrecency: !0
   });
   r.useEffect(() => {
-    O(I.BuiltInSectionId.FRECENCY)
-  }, [O]);
-  let p = null !== (n = null === (t = m[0]) || void 0 === t ? void 0 : t.data) && void 0 !== n ? n : [],
+    p(I.BuiltInSectionId.FRECENCY)
+  }, [p]);
+  let O = null !== (n = null === (t = m[0]) || void 0 === t ? void 0 : t.data) && void 0 !== n ? n : [],
     R = N.filter(e => e.id !== I.BuiltInSectionId.FRECENCY && e.id !== I.BuiltInSectionId.BUILT_IN),
     C = (0, d.useSortApplicationsViaFrecency)(R);
   return (0, i.jsxs)("div", {
@@ -48,9 +48,9 @@ function f(e) {
       className: T.searchBarContainer,
       children: (0, i.jsx)(_.default, {
         placeholder: "Search Apps & Commands",
-        onChange: A,
+        onChange: h,
         query: S,
-        onClear: h,
+        onClear: A,
         size: _.default.Sizes.MEDIUM
       })
     }), (0, i.jsxs)(o.Scroller, {
@@ -58,7 +58,7 @@ function f(e) {
       fade: !0,
       children: [(0, i.jsx)(c.default, {
         channel: s,
-        commands: p,
+        commands: O,
         sectionDescriptors: N
       }), (0, i.jsx)(E.default, {
         channel: s,

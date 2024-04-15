@@ -1,44 +1,44 @@
 "use strict";
-a.r(t), a.d(t, {
+l.r(t), l.d(t, {
   default: function() {
     return m
   }
 });
-var l = a("735250");
-a("470079");
-var n = a("442837"),
-  u = a("481060"),
-  d = a("493683"),
-  s = a("740492"),
-  i = a("314897"),
-  o = a("592125"),
-  r = a("699516"),
-  f = a("944486"),
-  c = a("981631"),
-  M = a("689938");
+var a = l("735250");
+l("470079");
+var u = l("442837"),
+  n = l("481060"),
+  d = l("493683"),
+  s = l("740492"),
+  r = l("314897"),
+  i = l("592125"),
+  o = l("699516"),
+  f = l("944486"),
+  c = l("981631"),
+  E = l("689938");
 
 function m(e, t) {
-  let m = i.default.getId(),
-    E = t === c.AppContext.POPOUT,
-    g = (0, n.useStateFromStores)([f.default, o.default], () => f.default.getVoiceChannelId() === o.default.getDMFromUserId(e.id)),
-    I = (0, n.useStateFromStores)([r.default], () => r.default.isBlocked(e.id));
-  if (m === e.id || E || g || e.bot) return null;
-  let C = () => d.default.openPrivateChannel(e.id, !0),
-    _ = !s.default.disableCallUserConfirmationPrompt;
-  return (0, l.jsx)(u.MenuItem, {
+  let m = r.default.getId(),
+    M = t === c.AppContext.POPOUT,
+    S = (0, u.useStateFromStores)([f.default, i.default], () => f.default.getVoiceChannelId() === i.default.getDMFromUserId(e.id)),
+    _ = (0, u.useStateFromStores)([o.default], () => o.default.isBlocked(e.id));
+  if (m === e.id || M || S || e.bot) return null;
+  let g = () => d.default.openPrivateChannel(e.id, !0),
+    I = !s.default.disableCallUserConfirmationPrompt;
+  return (0, a.jsx)(n.MenuItem, {
     id: "call",
-    label: M.default.Messages.CALL,
-    action: _ ? () => {
-      (0, u.openModalLazy)(async () => {
+    label: E.default.Messages.CALL,
+    action: I ? () => {
+      (0, n.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([a.e("99387"), a.e("27157")]).then(a.bind(a, "736454"));
-        return t => (0, l.jsx)(e, {
-          onSubmit: C,
+        } = await Promise.all([l.e("99387"), l.e("27157")]).then(l.bind(l, "736454"));
+        return t => (0, a.jsx)(e, {
+          onSubmit: g,
           ...t
         })
       })
-    } : C,
-    disabled: I
+    } : g,
+    disabled: _
   })
 }

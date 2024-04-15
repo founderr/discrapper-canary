@@ -1,35 +1,35 @@
 "use strict";
-i.r(e), i.d(e, {
+n.r(t), n.d(t, {
   default: function() {
-    return s
+    return o
   }
 });
-var l = i("470079"),
-  r = i("937889"),
-  a = i("761910"),
-  n = i("981631");
+var i = n("470079"),
+  r = n("937889"),
+  s = n("761910"),
+  a = n("981631");
 
-function s(t, e) {
+function o(e, t) {
   let {
-    hideSimpleEmbedContent: i,
-    formatInline: s = !1,
-    noStyleAndInteraction: o = !1,
-    isInteracting: d = !1,
-    allowHeading: c = !1,
-    allowList: h = !1,
-    allowLinks: u = !1,
-    allowDevLinks: f = !1,
-    previewLinkTarget: x = !1
-  } = e;
-  return l.useMemo(() => null != t.customRenderedContent ? t.customRenderedContent : t.isCommandType() && 0 === t.content.length || t.hasFlag(n.MessageFlags.LOADING) ? (0, a.default)(t) : (0, r.default)(t, {
-    hideSimpleEmbedContent: i,
-    formatInline: s,
-    noStyleAndInteraction: o,
-    isInteracting: d,
-    allowHeading: c,
-    allowList: h,
-    allowLinks: u,
-    allowDevLinks: f,
-    previewLinkTarget: x
-  }), [t.content, t.customRenderedContent, t.embeds, t.interaction, t.state, t.type, i, s, o, d, c, h, u, x])
+    hideSimpleEmbedContent: n,
+    formatInline: o = !1,
+    noStyleAndInteraction: l = !1,
+    isInteracting: u = !1,
+    allowHeading: d = !1,
+    allowList: _ = !1,
+    allowLinks: c = !1,
+    allowDevLinks: E = !1,
+    previewLinkTarget: I = !1
+  } = t;
+  return i.useMemo(() => null != e.customRenderedContent ? e.customRenderedContent : e.isCommandType() && 0 === e.content.length || e.hasFlag(a.MessageFlags.LOADING) ? (0, s.default)(e) : (0, r.default)(e, {
+    hideSimpleEmbedContent: n,
+    formatInline: o,
+    noStyleAndInteraction: l,
+    isInteracting: u,
+    allowHeading: d,
+    allowList: _,
+    allowLinks: c,
+    allowDevLinks: E,
+    previewLinkTarget: I
+  }), [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, n, o, l, u, d, _, c, I])
 }

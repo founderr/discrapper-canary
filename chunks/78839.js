@@ -15,12 +15,12 @@ var i, r, s, a, o = n("442837"),
 let T = null,
   f = null,
   S = null,
-  A = null,
   h = null,
+  A = null,
   m = !1,
   N = !1,
-  O = null,
-  p = !1,
+  p = null,
+  O = !1,
   R = new u.default("SubscriptionStore");
 
 function C(e) {
@@ -36,7 +36,7 @@ function C(e) {
 }
 
 function g() {
-  T = null, f = null, S = null, A = null, h = null, m = !1, N = !1, O = null, p = !1
+  T = null, f = null, S = null, h = null, A = null, m = !1, N = !1, p = null, O = !1
 }
 
 function L(e) {
@@ -79,7 +79,7 @@ class M extends(i = o.default.Store) {
     return m
   }
   hasFetchedPreviousPremiumTypeSubscription() {
-    return p
+    return O
   }
   getPremiumSubscription() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
@@ -98,10 +98,10 @@ class M extends(i = o.default.Store) {
     return null !== (t = null == T ? void 0 : T[e]) && void 0 !== t ? t : void 0
   }
   getActiveGuildSubscriptions() {
-    return A
+    return h
   }
   getActiveApplicationSubscriptions() {
-    return h
+    return A
   }
   getSubscriptionForPlanIds(e) {
     var t;
@@ -114,7 +114,7 @@ class M extends(i = o.default.Store) {
     return S
   }
   getPreviousPremiumTypeSubscription() {
-    return O
+    return p
   }
 }
 a = "SubscriptionStore", (s = "displayName") in(r = M) ? Object.defineProperty(r, s, {
@@ -140,7 +140,7 @@ a = "SubscriptionStore", (s = "displayName") in(r = M) ? Object.defineProperty(r
       }
       let t = _.SubscriptionRecord.createFromServer(e);
       n[t.id] = t, L(t) && (i[t.id] = t, t.type === I.SubscriptionTypes.GUILD && t.status !== I.SubscriptionStatusTypes.ENDED && r.push(t), t.type === I.SubscriptionTypes.APPLICATION && t.status !== I.SubscriptionStatusTypes.ENDED && s.push(t))
-    }), T = n, f = i, A = r, h = s
+    }), T = n, f = i, h = r, A = s
   },
   BILLING_SUBSCRIPTION_UPDATE_SUCCESS: function(e) {
     let {
@@ -152,11 +152,11 @@ a = "SubscriptionStore", (s = "displayName") in(r = M) ? Object.defineProperty(r
     }, L(n) && (f = {
       ...f,
       [n.id]: n
-    }), null != A && n.type === I.SubscriptionTypes.GUILD && (A = C({
-      activeSubscriptions: A,
-      record: n
-    })), null != h && n.type === I.SubscriptionTypes.APPLICATION && (A = C({
+    }), null != h && n.type === I.SubscriptionTypes.GUILD && (h = C({
       activeSubscriptions: h,
+      record: n
+    })), null != A && n.type === I.SubscriptionTypes.APPLICATION && (h = C({
+      activeSubscriptions: A,
       record: n
     }))
   },
@@ -183,7 +183,7 @@ a = "SubscriptionStore", (s = "displayName") in(r = M) ? Object.defineProperty(r
     let {
       subscription: t
     } = e;
-    if (p = !0, null != t) {
+    if (O = !0, null != t) {
       let e = c.default.getId();
       if (t.user_id !== e && !N) {
         R.log("[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch"), (0, E.captureBillingMessage)("[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch", {
@@ -192,10 +192,10 @@ a = "SubscriptionStore", (s = "displayName") in(r = M) ? Object.defineProperty(r
             subscriptionId: t.id,
             subscriptionUserId: t.user_id
           }
-        }), p = !1, N = !0;
+        }), O = !1, N = !0;
         return
       }
-      O = _.SubscriptionRecord.createFromServer(t)
+      p = _.SubscriptionRecord.createFromServer(t)
     }
   },
   BILLING_SUBSCRIPTION_RESET: g,

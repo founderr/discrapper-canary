@@ -19,26 +19,26 @@ var i = n("735250"),
   T = n("204197"),
   f = n("594174"),
   S = n("467679"),
-  A = n("681426"),
-  h = n("551388"),
+  h = n("681426"),
+  A = n("551388"),
   m = n("709586"),
   N = n("360048"),
-  O = n("624138"),
-  p = n("51144"),
+  p = n("624138"),
+  O = n("51144"),
   R = n("788307"),
   C = n("981631"),
   g = n("674563"),
   L = n("524484"),
   D = n("689938"),
   v = n("581477");
-let M = (0, O.cssValueToNumber)(o.default.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
+let M = (0, p.cssValueToNumber)(o.default.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
 t.default = function(e) {
   var t;
   let {
     selected: n = !1,
     colorString: s,
     colorRoleName: o,
-    isOwner: O,
+    isOwner: p,
     ownerTooltipText: M,
     lostPermissionTooltipText: y,
     isTyping: P = !1,
@@ -58,8 +58,8 @@ t.default = function(e) {
     onMouseDown: K,
     onKeyDown: z,
     onClick: X,
-    onContextMenu: Q,
-    onClickPremiumGuildIcon: q,
+    onContextMenu: q,
+    onClickPremiumGuildIcon: Q,
     onFocus: Z,
     "aria-controls": J,
     "aria-expanded": $,
@@ -68,7 +68,7 @@ t.default = function(e) {
     id: en,
     tabIndex: ei,
     itemProps: er
-  } = e, es = p.default.useName(b), ea = (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === (null == b ? void 0 : b.id), [eo, el] = r.useState(!1), [eu, ed] = r.useState(null), {
+  } = e, es = O.default.useName(b), ea = (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === (null == b ? void 0 : b.id), [eo, el] = r.useState(!1), [eu, ed] = r.useState(null), {
     avatarDecorationSrc: e_,
     avatarSrc: ec,
     eventHandlers: eE
@@ -81,9 +81,9 @@ t.default = function(e) {
     el(!0)
   }, eS = () => {
     el(!1)
-  }, eA = e => {
+  }, eh = e => {
     ed(e)
-  }, eh = () => {
+  }, eA = () => {
     let e = null != w ? w.find(e => e.type === C.ActivityTypes.CUSTOM_STATUS) : null,
       t = null != e && null != b && (0, _.default)(e, b, H);
     return (0, i.jsx)(R.default, {
@@ -98,9 +98,9 @@ t.default = function(e) {
       user: b,
       hasQuest: null != eI
     })
-  }, em = () => null != O && O && null == y ? (0, i.jsx)(l.Tooltip, {
+  }, em = () => null != p && p && null == y ? (0, i.jsx)(l.Tooltip, {
     text: null != M ? M : D.default.Messages.GUILD_OWNER,
-    children: e => (0, i.jsx)(h.default, {
+    children: e => (0, i.jsx)(A.default, {
       ...e,
       className: v.ownerIcon
     })
@@ -109,22 +109,22 @@ t.default = function(e) {
       date: x
     }),
     children: e => (0, i.jsx)(l.Clickable, {
-      onClick: q,
+      onClick: Q,
       tabIndex: -1,
       children: (0, i.jsx)(m.default, {
         ...e,
         className: v.premiumIcon
       })
     })
-  }), eO = () => {
+  }), ep = () => {
     let e = (null == b ? void 0 : b.isClyde()) ? g.BotTagTypes.AI : g.BotTagTypes.BOT;
     return null != b && b.bot ? (0, i.jsx)(S.default, {
       className: v.botTag,
       type: e,
       verified: b.isVerifiedBot()
     }) : null
-  }, ep = () => (0, i.jsxs)(i.Fragment, {
-    children: [eO(), em(), eN()]
+  }, eO = () => (0, i.jsxs)(i.Fragment, {
+    children: [ep(), em(), eN()]
   }), eR = (e, t) => {
     let n = V ? l.AnimatedAvatar : l.Avatar,
       r = (0, u.default)(w) ? C.StatusTypes.STREAMING : k;
@@ -139,7 +139,7 @@ t.default = function(e) {
         "aria-label": e.username,
         statusTooltip: !0,
         avatarDecoration: e_,
-        typingIndicatorRef: eA
+        typingIndicatorRef: eh
       }), (0, i.jsx)(c.default, {
         confettiSpawnRef: eu,
         shouldFire: P && null != G && e.id !== G.id,
@@ -159,7 +159,7 @@ t.default = function(e) {
       className: v.clanTag
     })]
   }), eg = k === C.StatusTypes.OFFLINE;
-  return null == b ? (0, i.jsx)(A.default, {
+  return null == b ? (0, i.jsx)(h.default, {
     avatarSize: l.AvatarSizes.SIZE_32,
     className: v.placeholder
   }) : (0, i.jsx)(l.Popout, {
@@ -183,7 +183,7 @@ t.default = function(e) {
       onClick: X,
       onKeyDown: z,
       onMouseDown: K,
-      onContextMenu: Q,
+      onContextMenu: q,
       onMouseEnter: ef,
       onMouseLeave: eS,
       name: null == y ? (0, i.jsx)("span", {
@@ -198,8 +198,8 @@ t.default = function(e) {
         })
       }),
       avatar: eR(b, eg),
-      subText: eh(),
-      decorators: ep(),
+      subText: eA(),
+      decorators: eO(),
       "aria-controls": J,
       "aria-expanded": $,
       "aria-setsize": et,

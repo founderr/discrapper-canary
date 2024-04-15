@@ -19,12 +19,12 @@ var i = n("735250"),
   T = n("434404"),
   f = n("430824"),
   S = n("496675"),
-  A = n("594174"),
-  h = n("700785"),
+  h = n("594174"),
+  A = n("700785"),
   m = n("785717"),
   N = n("171368"),
-  O = n("981631"),
-  p = n("689938"),
+  p = n("981631"),
+  O = n("689938"),
   R = n("442817");
 let C = (0, E.default)(function(e) {
   let {
@@ -67,16 +67,16 @@ let C = (0, E.default)(function(e) {
     }
     v(t => e < y.length ? e : t)
   }, [E, y]);
-  let U = A.default.getCurrentUser();
+  let U = h.default.getCurrentUser();
   a()(null != U, "MemberRolesList: currentUser cannot be undefined");
-  let b = S.default.can(O.Permissions.MANAGE_ROLES, n),
-    G = h.getHighestRole(n, U.id),
+  let b = S.default.can(p.Permissions.MANAGE_ROLES, n),
+    G = A.getHighestRole(n, U.id),
     w = r.useMemo(() => "roles-".concat((0, o.v4)()), []),
     B = (0, l.default)({
       id: w,
       isEnabled: !0,
-      scrollToStart: O.NOOP_PROMISE,
-      scrollToEnd: O.NOOP_PROMISE,
+      scrollToStart: p.NOOP_PROMISE,
+      scrollToEnd: p.NOOP_PROMISE,
       wrap: !0
     }),
     k = y.map(e => {
@@ -84,7 +84,7 @@ let C = (0, E.default)(function(e) {
       return (0, i.jsx)(c.MemberRole, {
         className: R.role,
         role: e,
-        canRemove: b && h.isRoleHigher(n, U.id, G, e) || (null === (r = e.tags) || void 0 === r ? void 0 : r.guild_connections) === null && t.id === U.id,
+        canRemove: b && A.isRoleHigher(n, U.id, G, e) || (null === (r = e.tags) || void 0 === r ? void 0 : r.guild_connections) === null && t.id === U.id,
         onRemove: () => g(e),
         ref: t => {
           var n, i;
@@ -112,7 +112,7 @@ let C = (0, E.default)(function(e) {
           messageId: x,
           roleId: H,
           analyticsLocation: {
-            section: O.AnalyticsSections.BITE_SIZE_PROFILE_POPOUT
+            section: p.AnalyticsSections.BITE_SIZE_PROFILE_POPOUT
           },
           sourceAnalyticsLocations: Y
         })
@@ -130,9 +130,9 @@ let C = (0, E.default)(function(e) {
       children: [(0, i.jsx)(d.Text, {
         variant: "text-xs/semibold",
         className: R.rolesHeaderText,
-        children: p.default.Messages.ROLES
+        children: O.default.Messages.ROLES
       }), b && (0, i.jsx)(d.Tooltip, {
-        text: p.default.Messages.USER_PROFILE_ADD_ROLE,
+        text: O.default.Messages.USER_PROFILE_ADD_ROLE,
         children: t => (0, i.jsx)("div", {
           ...t,
           children: (0, i.jsx)(c.OverflowAddRolesButton, {
@@ -153,7 +153,7 @@ let C = (0, E.default)(function(e) {
           } = e;
           return (0, i.jsxs)("div", {
             className: R.root,
-            "aria-label": p.default.Messages.ROLES_LIST.format({
+            "aria-label": O.default.Messages.ROLES_LIST.format({
               numRoles: s.length
             }),
             ref: t,

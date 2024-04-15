@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return R
   },
   getGameTileAssetUrl: function() {
-    return p
+    return O
   },
   getHeroAssetUrl: function() {
     return N
@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return D
   },
   getQuestBarHeroAssetUrl: function() {
-    return O
+    return p
   },
   getQuestByApplicationId: function() {
     return E
@@ -34,7 +34,7 @@ n.r(t), n.d(t, {
     return C
   },
   getQuestsFromActivities: function() {
-    return k
+    return B
   },
   getQuestsInstructionsToWinReward: function() {
     return Y
@@ -55,7 +55,7 @@ n.r(t), n.d(t, {
     return G
   },
   isAssetAnimated: function() {
-    return B
+    return k
   },
   isCollectibleReward: function() {
     return U
@@ -85,7 +85,7 @@ n.r(t), n.d(t, {
     return f
   },
   questsEntitlementsFromServer: function() {
-    return h
+    return A
   },
   questsRewardCodeFromServer: function() {
     return S
@@ -204,7 +204,7 @@ function S(e) {
   }
 }
 
-function A(e) {
+function h(e) {
   return {
     skuId: e.sku_id,
     tenantMetadata: function(e) {
@@ -233,10 +233,10 @@ function A(e) {
   }
 }
 
-function h(e) {
+function A(e) {
   return {
     claimedAt: e.claimed_at,
-    items: e.entitlements.map(A),
+    items: e.entitlements.map(h),
     errors: e.errors
   }
 }
@@ -252,8 +252,8 @@ let m = e => {
     return "".concat(_).concat(e.id, "/").concat(r)
   },
   N = e => "".concat(_).concat(e.id, "/").concat(e.config.assets.hero),
-  O = e => "".concat(_).concat(e.id, "/").concat(e.config.assets.questBarHero),
-  p = e => "".concat(_).concat(e.id, "/").concat(e.config.assets.gameTile),
+  p = e => "".concat(_).concat(e.id, "/").concat(e.config.assets.questBarHero),
+  O = e => "".concat(_).concat(e.id, "/").concat(e.config.assets.gameTile),
   R = (e, t) => "".concat(_).concat(e.id, "/").concat(t, "/").concat(e.config.assets.logotype),
   C = e => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);
 
@@ -338,7 +338,7 @@ function w(e, t) {
   })
 }
 
-function k(e, t) {
+function B(e, t) {
   if (null == t || null == e) return null;
   for (let n of t) {
     if (null == n.application_id) continue;
@@ -348,7 +348,7 @@ function k(e, t) {
   return null
 }
 
-function B(e) {
+function k(e) {
   return e.endsWith(".webm") || e.endsWith(".mp4")
 }
 let V = /\.([a-zA-Z]+)$/;

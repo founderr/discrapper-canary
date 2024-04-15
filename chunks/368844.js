@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return R
   },
   useForumPostMediaThumbnail: function() {
-    return p
+    return O
   }
 }), n("789020"), n("47120"), n("724458");
 var i, r, s = n("470079"),
@@ -46,7 +46,7 @@ function S(e, t) {
   return null != n && "#ffffff" === n.toLowerCase() || t ? void 0 : n
 }
 
-function A(e) {
+function h(e) {
   if (null == e) return !1;
   let {
     filename: t,
@@ -56,12 +56,12 @@ function A(e) {
   return (0, a.isImageFile)(t) && null != n && n > 0 && null != i && i > 0
 }
 
-function h(e) {
+function A(e) {
   return null != e && null != e && (0, a.isVideoFile)(e.filename) && null != e.proxy_url
 }
 
 function m(e) {
-  return A(e) || h(e)
+  return h(e) || A(e)
 }(r = i || (i = {})).EMBED = "embed", r.ATTACHMENT = "attachment";
 
 function N(e) {
@@ -106,7 +106,7 @@ function N(e) {
   }(e, l.InlineAttachmentMedia.useSetting())
 }
 
-function O(e, t) {
+function p(e, t) {
   let n = l.InlineEmbedMedia.useSetting(),
     i = l.RenderEmbeds.useSetting();
   if (null == e) return [];
@@ -135,7 +135,7 @@ function O(e, t) {
   }).filter(E.isNotNullish) : []
 }
 
-function p(e, t) {
+function O(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     i = R(e, n);
   return s.useMemo(() => {
@@ -150,19 +150,19 @@ function p(e, t) {
 
 function R(e, t) {
   let n = N(e);
-  return [...n, ...O(e, t)]
+  return [...n, ...p(e, t)]
 }
 
 function C(e, t) {
   var n, i;
   let r = N(e),
-    s = O(e, t);
+    s = p(e, t);
   return null !== (i = null !== (n = r[0]) && void 0 !== n ? n : s[0]) && void 0 !== i ? i : null
 }
 
 function g(e, t) {
   let n = N(e),
-    i = O(e, t);
+    i = p(e, t);
   return null == n[0] && null != i[0]
 }
 
@@ -171,7 +171,7 @@ function L(e, t) {
   let i = u.default.getChannel(t);
   if (null == i) return !1;
   let r = d.default.getMessage(i.id, I.default.castChannelIdAsMessageId(i.id));
-  return null != r && e.length > 0 && null != e.find(e => e.isImage || e.isVideo) && i.isForumPost() && i.ownerId === (null === (n = _.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && 0 === o.default.getCount(i.id) && (0 === r.attachments.length || null == r.attachments.find(e => A(e) || h(e)))
+  return null != r && e.length > 0 && null != e.find(e => e.isImage || e.isVideo) && i.isForumPost() && i.ownerId === (null === (n = _.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && 0 === o.default.getCount(i.id) && (0 === r.attachments.length || null == r.attachments.find(e => h(e) || A(e)))
 }
 
 function D(e) {

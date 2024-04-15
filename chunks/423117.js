@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   archiveSubscriptionListing: function() {
-    return A
+    return h
   },
   createSubscriptionGroupListing: function() {
     return T
@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return I
   },
   fetchMonetizationRestrictions: function() {
-    return p
+    return O
   },
   fetchSubscriptionListingForPlan: function() {
     return f
@@ -25,10 +25,10 @@ n.r(t), n.d(t, {
     return c
   },
   updateSubscriptionListing: function() {
-    return O
+    return p
   },
   updateSubscriptionTrial: function() {
-    return h
+    return A
   },
   updateSubscriptionsSettings: function() {
     return E
@@ -110,14 +110,14 @@ async function S(e, t, n) {
     listingId: n
   })
 }
-async function A(e, t, n) {
+async function h(e, t, n) {
   let i = await d.archiveGuildRoleSubscriptionListing(e, t, n);
   r.default.dispatch({
     type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING",
     listing: i
   })
 }
-async function h(e, t, n) {
+async function A(e, t, n) {
   let i = await d.updateGuildRoleSubscriptionsTrial(e, t, n);
   r.default.dispatch({
     type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTION_TRIAL",
@@ -153,7 +153,7 @@ async function N(e) {
     listing: u
   }), u
 }
-async function O(e) {
+async function p(e) {
   let {
     guildId: t,
     listingId: n,
@@ -167,7 +167,7 @@ async function O(e) {
     includeArchivedListings: !0
   }), a
 }
-async function p(e) {
+async function O(e) {
   let {
     signal: t
   } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = !1;

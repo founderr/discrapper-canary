@@ -11,8 +11,8 @@ let I = {},
   T = {},
   f = new Set,
   S = new Set,
-  A = {},
-  h = {};
+  h = {},
+  A = {};
 
 function m(e) {
   let t = e.skuId;
@@ -21,9 +21,9 @@ function m(e) {
   if (null != n) {
     var i;
     let t = new Set(Object.keys(n.paymentSourcePrices));
-    A[e.id] = t;
-    let r = Array.from(null !== (i = h[e.skuId]) && void 0 !== i ? i : new Set);
-    h[e.skuId] = new Set([...r, ...Array.from(t)])
+    h[e.id] = t;
+    let r = Array.from(null !== (i = A[e.skuId]) && void 0 !== i ? i : new Set);
+    A[e.skuId] = new Set([...r, ...Array.from(t)])
   }
   let r = T[t];
   null != r ? r.add(e.id) : T[t] = new Set([e.id])
@@ -44,13 +44,13 @@ function N() {
   })))
 }
 
-function O(e) {
+function p(e) {
   m(u.default.createFromServer(e))
 }
 N();
 
-function p() {
-  (0, d.clearObject)(I), (0, d.clearObject)(T), f.clear(), S.clear(), (0, d.clearObject)(A), (0, d.clearObject)(h), N()
+function O() {
+  (0, d.clearObject)(I), (0, d.clearObject)(T), f.clear(), S.clear(), (0, d.clearObject)(h), (0, d.clearObject)(A), N()
 }
 let R = [E.SubscriptionIntervalTypes.DAY, E.SubscriptionIntervalTypes.MONTH, E.SubscriptionIntervalTypes.YEAR];
 class C extends(i = o.default.Store) {
@@ -103,14 +103,14 @@ class C extends(i = o.default.Store) {
     S.add(e)
   }
   getPaymentSourcesForPlanId(e) {
-    return A.hasOwnProperty(e) ? A[e] : null
+    return h.hasOwnProperty(e) ? h[e] : null
   }
   getPaymentSourceIds() {
     let e = new Set;
-    return Object.values(A).forEach(t => t.forEach(t => e.add(t))), e
+    return Object.values(h).forEach(t => t.forEach(t => e.add(t))), e
   }
   hasPaymentSourceForSKUId(e, t) {
-    return E.PremiumSubscriptionSKUs.NONE === t || null != h[t] && h[t].has(e)
+    return E.PremiumSubscriptionSKUs.NONE === t || null != A[t] && A[t].has(e)
   }
   hasPaymentSourceForSKUIds(e, t) {
     return t.every(t => this.hasPaymentSourceForSKUId(e, t))
@@ -133,7 +133,7 @@ a = "SubscriptionPlanStore", (s = "displayName") in(r = C) ? Object.defineProper
       skuId: t,
       subscriptionPlans: n
     } = e;
-    T[t] = new Set, h[t] = new Set, n.forEach(O), f.delete(t), S.delete(t)
+    T[t] = new Set, A[t] = new Set, n.forEach(p), f.delete(t), S.delete(t)
   },
   SUBSCRIPTION_PLANS_FETCH_FAILURE: function(e) {
     let {
@@ -141,18 +141,18 @@ a = "SubscriptionPlanStore", (s = "displayName") in(r = C) ? Object.defineProper
     } = e;
     f.delete(t), S.delete(t)
   },
-  SUBSCRIPTION_PLANS_RESET: p,
+  SUBSCRIPTION_PLANS_RESET: O,
   GIFT_CODE_RESOLVE_SUCCESS: function(e) {
     let {
       giftCode: t
     } = e;
-    null != t.subscription_plan && O(t.subscription_plan)
+    null != t.subscription_plan && p(t.subscription_plan)
   },
   ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: function(e) {
     let {
       entitlements: t
     } = e;
-    for (let e of t) null != e.subscription_plan && O(e.subscription_plan)
+    for (let e of t) null != e.subscription_plan && p(e.subscription_plan)
   },
-  LOGOUT: p
+  LOGOUT: O
 })

@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return N
   },
   useMostRecentForumMessage: function() {
-    return O
+    return p
   }
 }), n("47120");
 var i = n("392711"),
@@ -78,9 +78,9 @@ let S = new class e {
       T(this, "requested", void 0), this.requested = new f(() => new Set)
     }
   },
-  A = null;
+  h = null;
 
-function h(e, t) {
+function A(e, t) {
   if ((0, _.isForumActivityExperimentEnabled)(e)) {
     let {
       loaded: e,
@@ -108,18 +108,18 @@ function N(e) {
   }
 }
 
-function O(e, t) {
+function p(e, t) {
   let {
     loaded: n,
     message: i
   } = (0, s.useStateFromStoresObject)([E.default], () => E.default.getMessageState(t.id));
-  return null != e && h(t.guild_id, t.id) && C(e, t.id), {
+  return null != e && A(t.guild_id, t.id) && C(e, t.id), {
     loaded: n,
     mostRecentMessage: i
   }
 }
 
-function p(e, t) {
+function O(e, t) {
   let n = !1;
   t.forEach(t => {
     var i, r;
@@ -127,12 +127,12 @@ function p(e, t) {
       loaded: s,
       firstMessage: a
     } = c.default.getMessage(t);
-    if (i = s, r = a, !i && null == r || h(e.guild_id, t)) S.request(e.id, t), n = !0
-  }), n && null == A && (A = setTimeout(g, 0))
+    if (i = s, r = a, !i && null == r || A(e.guild_id, t)) S.request(e.id, t), n = !0
+  }), n && null == h && (h = setTimeout(g, 0))
 }
 
 function R(e) {
-  p(e, (0, d.computeThreadIdsSnapshot)(e.id).slice(0, 10))
+  O(e, (0, d.computeThreadIdsSnapshot)(e.id).slice(0, 10))
 }
 
 function C(e, t) {
@@ -140,13 +140,13 @@ function C(e, t) {
   let n = (0, d.computeThreadIdsSnapshot)(e.id),
     i = n.findIndex(e => e === t),
     r = n.slice(i, i + 5).filter(t => !S.hasRequested(e.id, t));
-  p(e, r)
+  O(e, r)
 }
 async function g() {
   try {
     for (; S.hasNext();) await L(S.next())
   } finally {
-    A = null
+    h = null
   }
 }
 async function L(e) {

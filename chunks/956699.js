@@ -38,9 +38,9 @@ var a = s("735250"),
   F = s("65982"),
   G = s("850169"),
   k = s("794711"),
-  H = s("633353");
+  w = s("633353");
 
-function w(e, t, s) {
+function H(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -122,13 +122,13 @@ class K extends n.Component {
     })
   }
   constructor(...e) {
-    super(...e), w(this, "handleRemoveBuildOverride", () => {
+    super(...e), H(this, "handleRemoveBuildOverride", () => {
       this.props.onBuildOverrideRemoved(this.props.project)
-    }), w(this, "handleOverrideIdChanged", e => {
+    }), H(this, "handleOverrideIdChanged", e => {
       this.props.onBuildOverrideUpdated(this.props.project, {
         id: e
       })
-    }), w(this, "handleOverrideTypeChanged", e => {
+    }), H(this, "handleOverrideTypeChanged", e => {
       this.props.onBuildOverrideUpdated(this.props.project, {
         type: e,
         id: ""
@@ -302,14 +302,14 @@ class z extends n.Component {
     })
   }
   constructor(...e) {
-    super(...e), w(this, "state", {
+    super(...e), H(this, "state", {
       loading: !0,
       buildOverrides: {},
       loadedBuildOverrides: {},
       errors: {},
       saving: !1,
       didSave: !1
-    }), w(this, "handleAddBuildOverride", async () => {
+    }), H(this, "handleAddBuildOverride", async () => {
       var e;
       let t = await (e = this.getAvailableProjects(), new Promise(t => {
         (0, S.openModal)(s => {
@@ -357,7 +357,7 @@ class z extends n.Component {
       this.setState({
         buildOverrides: s
       })
-    }), w(this, "handleBuildOverrideUpdated", (e, t) => {
+    }), H(this, "handleBuildOverrideUpdated", (e, t) => {
       let {
         buildOverrides: s
       } = this.state, a = {
@@ -370,20 +370,20 @@ class z extends n.Component {
       this.setState({
         buildOverrides: n
       })
-    }), w(this, "handleBuildOverrideRemoved", e => {
+    }), H(this, "handleBuildOverrideRemoved", e => {
       let t = {
         ...this.state.buildOverrides
       };
       delete t[e], this.setState({
         buildOverrides: t
       })
-    }), w(this, "handleDiscardChanges", () => {
+    }), H(this, "handleDiscardChanges", () => {
       this.setState({
         buildOverrides: o().cloneDeep(this.state.loadedBuildOverrides),
         errors: {},
         didSave: !1
       })
-    }), w(this, "handleSaveChanges", async () => {
+    }), H(this, "handleSaveChanges", async () => {
       let {
         buildOverrides: e
       } = this.state;
@@ -412,7 +412,7 @@ class z extends n.Component {
         saving: !1,
         didSave: !1
       })
-    }), w(this, "handleLinkGeneration", () => {
+    }), H(this, "handleLinkGeneration", () => {
       let {
         buildOverrides: e
       } = this.state;
@@ -555,7 +555,7 @@ class Q extends n.Component {
         render: s => {
           let n = s.highlight("json", e, !0);
           return null == n ? t() : (0, a.jsx)("code", {
-            className: "hljs scroller ".concat(n.language, " ").concat(H.scrollbarGhost, " ").concat(F.codebox),
+            className: "hljs scroller ".concat(n.language, " ").concat(w.scrollbarGhost, " ").concat(F.codebox),
             dangerouslySetInnerHTML: {
               __html: n.value
             }
@@ -624,7 +624,7 @@ class Q extends n.Component {
     })
   }
   constructor(...e) {
-    super(...e), w(this, "state", {
+    super(...e), H(this, "state", {
       ttlSeconds: 3600,
       releaseChannel: "all",
       userIds: new Set,
@@ -637,33 +637,33 @@ class Q extends n.Component {
       statusText: null,
       statusTextColor: P.default.Colors.STATUS_RED,
       allowLoggedOut: !1
-    }), w(this, "setUserEntryError", e => {
+    }), H(this, "setUserEntryError", e => {
       this.setState({
         userIdEntryError: e
       })
-    }), w(this, "setStatusMessage", (e, t) => {
+    }), H(this, "setStatusMessage", (e, t) => {
       this.setState({
         statusText: e,
         statusTextColor: null != t ? t : P.default.Colors.STATUS_RED
       })
-    }), w(this, "handleUserIDEntry", e => {
+    }), H(this, "handleUserIDEntry", e => {
       if (!/^[\d\s,]*$/.test(e)) return this.setUserEntryError("User IDs are numbers!");
       let t = new Set(e.split(/[,\s]+/).filter(Boolean));
       this.setState({
         userIdEntry: e,
         userIds: t
       })
-    }), w(this, "setAllowedVersionError", e => {
+    }), H(this, "setAllowedVersionError", e => {
       this.setState({
         allowedVersionEntryError: e
       })
-    }), w(this, "handleAllowedVersionEntry", e => {
+    }), H(this, "handleAllowedVersionEntry", e => {
       this.setState({
         allowedVersionEntry: e
       })
-    }), w(this, "handleAllowedVersionEnter", e => {
+    }), H(this, "handleAllowedVersionEnter", e => {
       e.charCode === y.KeyboardKeys.ENTER && this.handleAddAllowedVersion()
-    }), w(this, "handleAddAllowedVersion", () => {
+    }), H(this, "handleAddAllowedVersion", () => {
       let {
         allowedVersions: e,
         allowedVersionEntry: t
@@ -673,26 +673,26 @@ class Q extends n.Component {
         allowedVersionEntry: "",
         allowedVersionEntryError: ""
       })
-    }), w(this, "handleRemoveAllowedVersion", e => {
+    }), H(this, "handleRemoveAllowedVersion", e => {
       let {
         allowedVersions: t
       } = this.state;
       t = t.filter(t => t !== e), this.setState({
         allowedVersions: t
       })
-    }), w(this, "handleAllowLoggedOut", e => {
+    }), H(this, "handleAllowLoggedOut", e => {
       this.setState({
         allowLoggedOut: e
       })
-    }), w(this, "handleExpirationChange", e => {
+    }), H(this, "handleExpirationChange", e => {
       this.setState({
         ttlSeconds: e
       })
-    }), w(this, "handleReleaseChannelChange", e => {
+    }), H(this, "handleReleaseChannelChange", e => {
       this.setState({
         releaseChannel: e
       })
-    }), w(this, "handleExperiments", e => {
+    }), H(this, "handleExperiments", e => {
       if (0 === e.trim().length) {
         this.setState({
           experimentsError: void 0
@@ -725,7 +725,7 @@ class Q extends n.Component {
         experiments: e,
         experimentsError: void 0
       })
-    }), w(this, "generatePayload", () => ({
+    }), H(this, "generatePayload", () => ({
       overrides: this.props.buildOverrides,
       meta: {
         release_channel: "all" === this.state.releaseChannel ? null : this.state.releaseChannel,
@@ -735,7 +735,7 @@ class Q extends n.Component {
         allow_logged_out: this.state.allowLoggedOut,
         experiments: null == this.state.experiments ? null : JSON.parse(this.state.experiments)
       }
-    })), w(this, "handleGenerateLink", async () => {
+    })), H(this, "handleGenerateLink", async () => {
       if (this.isMobile() && 0 === this.state.allowedVersions.length) {
         this.setAllowedVersionError("You must add at least one allowed version for iOS");
         return

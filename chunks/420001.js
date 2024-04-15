@@ -28,7 +28,7 @@ function S(e) {
   }
   return null
 }
-let A = {
+let h = {
   ...T.default,
   sentinel: void 0,
   focusMode: I.FocusMode.MANUAL,
@@ -136,4 +136,4 @@ let A = {
     }
   }
 };
-t.default = A
+t.default = h

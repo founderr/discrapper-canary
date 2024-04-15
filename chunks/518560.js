@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+a.r(e), a.d(e, {
   default: function() {
     return N
   }
@@ -23,19 +23,19 @@ var n = a("735250"),
   g = a("712266");
 
 function N() {
-  let e = (0, E.default)(),
-    t = (0, S.useSafetyHubInitialized)(),
+  let t = (0, E.default)(),
+    e = (0, S.useSafetyHubInitialized)(),
     a = (0, d.useSafetyHubAccountStanding)(),
     N = (0, _.useSafetyHubFetchError)();
   return (i.useEffect(() => {
     c.getSafetyHubData()
   }, []), i.useEffect(() => {
-    t && (o.default.track(A.AnalyticEvents.SAFETY_HUB_VIEWED, {
+    e && (o.default.track(A.AnalyticEvents.SAFETY_HUB_VIEWED, {
       account_standing: a.state
     }), u.default.increment({
       name: s.MetricEvents.SAFETY_HUB_VIEW
     }))
-  }, [t]), e) ? (0, n.jsx)("div", {
+  }, [e]), t) ? (0, n.jsx)("div", {
     children: (0, n.jsx)(l.Spinner, {})
   }) : null != N ? (0, n.jsxs)(r.default, {
     color: r.NoticeColors.DANGER,

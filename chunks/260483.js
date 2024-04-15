@@ -38,14 +38,14 @@ function S(e) {
   return f(t)
 }
 
-function A(e) {
+function h(e) {
   let {
     threads: t
   } = e;
   t.forEach(m)
 }
 
-function h(e) {
+function A(e) {
   let t = !1;
   for (let n of e.messages)
     for (let e of n) t = m(e.thread) || t;
@@ -127,10 +127,10 @@ a = "ThreadMembersStore", (s = "displayName") in(r = N) ? Object.defineProperty(
     if (null == t) return !1;
     null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview), t.memberCount = e.memberCount
   },
-  SEARCH_FINISH: h,
-  MOD_VIEW_SEARCH_FINISH: h,
-  LOAD_THREADS_SUCCESS: A,
-  LOAD_ARCHIVED_THREADS_SUCCESS: A,
+  SEARCH_FINISH: A,
+  MOD_VIEW_SEARCH_FINISH: A,
+  LOAD_THREADS_SUCCESS: h,
+  LOAD_ARCHIVED_THREADS_SUCCESS: h,
   THREAD_DELETE: function(e) {
     let {
       channel: t

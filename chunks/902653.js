@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return m
   },
   playGiftSound: function() {
-    return A
+    return h
   }
 }), n("47120"), n("411104");
 var i, r, s = n("392711"),
@@ -39,12 +39,12 @@ async function S(e) {
   return null == t && (t = f(e), T.set(e, t)), await t
 }
 
-function A(e, t) {
+function h(e, t) {
   let n = new Audio((0, l.default)(e));
   n.volume = (0, u.default)(t), n.play()
 }
 
-function h() {
+function A() {
   null != window.navigator.mediaDevices && window.navigator.mediaDevices.enumerateDevices().then(e => {
     let t = d.default.getOutputDevices(),
       n = a()(t).sortBy(e => e.index).findIndex(e => e.id === d.default.getOutputDeviceId()),
@@ -56,7 +56,7 @@ function h() {
     I = E
   })
 }
-_.isPlatformEmbedded && (d.default.addChangeListener(h), h());
+_.isPlatformEmbedded && (d.default.addChangeListener(A), A());
 class m {
   get volume() {
     return this._volume

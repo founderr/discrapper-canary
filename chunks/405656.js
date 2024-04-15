@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   clearTokenCache: function() {
-    return p
+    return O
   },
   filterHasAnswer: function() {
     return C
@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return S
   },
   getFlattenedStringArray: function() {
-    return A
+    return h
   },
   getQueryFromTokens: function() {
     return m
@@ -25,7 +25,7 @@ n.r(t), n.d(t, {
     return f
   },
   getTotalResults: function() {
-    return h
+    return A
   },
   refreshSearchTokens: function() {
     return g
@@ -37,7 +37,7 @@ n.r(t), n.d(t, {
     return R
   },
   tokenizeQuery: function() {
-    return O
+    return p
   }
 }), n("47120"), n("724458");
 var i = n("392711"),
@@ -185,7 +185,7 @@ function S(e, t) {
   })
 }
 
-function A(e, t) {
+function h(e, t) {
   let n = [];
   return r()(e).forEach(e => {
     if (null == e || 0 === e.results.length) return;
@@ -203,7 +203,7 @@ function A(e, t) {
   }), n.filter(e => e)
 }
 
-function h(e) {
+function A(e) {
   return e.reduce((e, t) => null == t ? e : t.results.length + e, 0)
 }
 
@@ -212,11 +212,11 @@ function m(e) {
 }
 let N = new s.default;
 
-function O(e) {
+function p(e) {
   return N.tokenize(e)
 }
 
-function p() {
+function O() {
   return N.clearCache()
 }
 

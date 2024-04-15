@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return f
   },
   keyToCode: function() {
-    return A
+    return h
   },
   toBrowserEvents: function() {
-    return p
+    return O
   },
   toCombo: function() {
     return R
@@ -58,7 +58,7 @@ function S(e) {
   }
 }
 
-function A(e) {
+function h(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f(),
     n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.KeyboardDeviceTypes.KEYBOARD_KEY;
   switch (n) {
@@ -84,7 +84,7 @@ function A(e) {
       throw Error("Unrecognized DeviceType ".concat(n, "."))
   }
 }!(0, u.isMac)() && (T["223"] = "`"), Object.freeze(T);
-let h = [
+let A = [
     ["META", "⌘"],
     ["RIGHT META", "RIGHT ⌘"],
     ["SHIFT", "⇧"],
@@ -109,18 +109,18 @@ let h = [
     ["SPACE", "␣"]
   ],
   m = e => {
-    for (let [t, n] of h)
+    for (let [t, n] of A)
       if (t === e.toUpperCase()) return n;
     return e
   },
   N = e => {
-    for (let [t, n] of h)
+    for (let [t, n] of A)
       if (n === e.toUpperCase()) return t.toLowerCase();
     return e
   },
-  O = /shift|meta|ctrl|alt$/;
+  p = /shift|meta|ctrl|alt$/;
 
-function p(e) {
+function O(e) {
   let t = {
     keyCode: 0,
     metaKey: !1,
@@ -137,9 +137,9 @@ function p(e) {
       ...r,
       combo: n
     }), e;
-    if (O.test(i)) return t[i + "Key"] = !0, e.map(e => (e[i + "Key"] = !0, e));
+    if (p.test(i)) return t[i + "Key"] = !0, e.map(e => (e[i + "Key"] = !0, e));
     {
-      let t = A(i, d.KeyboardEnvs.BROWSER);
+      let t = h(i, d.KeyboardEnvs.BROWSER);
       return null != t && (r.keyCode = t), e.push(r), e
     }
   }, [])
@@ -149,7 +149,7 @@ function R(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f(),
     n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.KeyboardDeviceTypes.KEYBOARD_KEY;
   return e.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus").replace(/mod/i, o.default.modKey).split("+").map(e => e.trim().replace("plus", "+")).reduce((e, i) => {
-    let r = A(N(i), t, n);
+    let r = h(N(i), t, n);
     return null != r && e.push([n, r, t]), e
   }, [])
 }

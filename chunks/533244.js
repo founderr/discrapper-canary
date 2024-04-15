@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return c
   },
   getSecurityActionDetailsString: function() {
-    return A
+    return h
   },
   hasDMsDisabled: function() {
     return f
@@ -84,7 +84,7 @@ function S(e) {
   return (null == e ? void 0 : e.invitesDisabledUntil) != null && new Date(e.invitesDisabledUntil) > new Date
 }
 
-function A(e, t) {
+function h(e, t) {
   var n;
   let i = null !== (n = e.dmsDisabledUntil) && void 0 !== n ? n : e.invitesDisabledUntil;
   if (null == i) return "";

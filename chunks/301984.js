@@ -4,9 +4,9 @@ s.r(t), s.d(t, {
     return f
   }
 });
-var a = s("735250");
+var l = s("735250");
 s("470079");
-var l = s("481060"),
+var a = s("481060"),
   i = s("194359"),
   n = s("782089"),
   o = s("877410"),
@@ -23,34 +23,34 @@ function f(e) {
     onClose: S
   } = e, {
     trackUserProfileAction: E
-  } = (0, r.useUserProfileAnalyticsContext)(), m = () => i.default.addRelationship({
+  } = (0, r.useUserProfileAnalyticsContext)(), I = () => i.default.addRelationship({
     userId: t.id,
     friendToken: f
-  }, S), I = () => i.default.cancelFriendRequest(t.id);
-  return s === d.RelationshipTypes.PENDING_INCOMING ? (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(u.default, {
+  }, S), m = () => i.default.cancelFriendRequest(t.id);
+  return s === d.RelationshipTypes.PENDING_INCOMING ? (0, l.jsxs)(l.Fragment, {
+    children: [(0, l.jsx)(u.default, {
       icon: n.default,
       text: c.default.Messages.FRIEND_REQUEST_ACCEPT,
       onClick: () => (E({
         action: "ACCEPT_FRIEND_REQUEST"
-      }), m())
-    }), (0, a.jsx)(u.default, {
+      }), I())
+    }), (0, l.jsx)(u.default, {
       icon: o.default,
       text: c.default.Messages.FRIEND_REQUEST_IGNORE,
-      color: l.ButtonColors.RED,
+      color: a.ButtonColors.RED,
       onClick: () => (E({
         action: "IGNORE_FRIEND_REQUEST"
-      }), I())
+      }), m())
     })]
-  }) : s === d.RelationshipTypes.PENDING_OUTGOING ? (0, a.jsx)(u.default, {
+  }) : s === d.RelationshipTypes.PENDING_OUTGOING ? (0, l.jsx)(u.default, {
     icon: n.default,
     text: c.default.Messages.REQUEST_SENT,
     disabled: !0
-  }) : (0, a.jsx)(u.default, {
+  }) : (0, l.jsx)(u.default, {
     icon: n.default,
     text: c.default.Messages.ADD_FRIEND,
     onClick: () => (E({
       action: "SEND_FRIEND_REQUEST"
-    }), m())
+    }), I())
   })
 }

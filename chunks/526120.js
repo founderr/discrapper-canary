@@ -7,13 +7,13 @@ n.r(t), n.d(t, {
     return S
   },
   fetchNewMemberActions: function() {
-    return A
+    return h
   },
   getBlockForChannelDeletion: function() {
-    return O
+    return p
   },
   selectHomeResourceChannel: function() {
-    return h
+    return A
   },
   selectNewMemberActionChannel: function() {
     return m
@@ -55,7 +55,7 @@ let S = async e => {
       guildId: e
     })
   }
-}, A = async e => {
+}, h = async e => {
   if (!o.default.isFullServerPreview(e)) {
     r.default.dispatch({
       type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_START",
@@ -79,7 +79,7 @@ let S = async e => {
       })
     }
   }
-}, h = function(e, t) {
+}, A = function(e, t) {
   let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
   if (r.default.dispatch({
       type: "SELECT_HOME_RESOURCE_CHANNEL",
@@ -136,7 +136,7 @@ let S = async e => {
     url: f.Endpoints.GUILD_MEMBER_ACTION_UPDATE(e, t)
   })
 };
-async function O(e, t) {
+async function p(e, t) {
   if (null == e || !(0, T.canSeeOnboardingHome)(e)) return !1;
   let n = c.default.getSettings(e);
   return n === c.NO_SETTINGS && (await S(e), n = c.default.getSettings(e)), n !== c.NO_SETTINGS && null != n && (null != n.newMemberActions && null != n.newMemberActions.find(e => e.channelId === t) ? "todo" : null != n.resourceChannels && null != n.resourceChannels.find(e => e.channelId === t) && "resource")

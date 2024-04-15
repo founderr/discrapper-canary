@@ -46,8 +46,8 @@ class I extends(r = o.Component) {
       disablePointerEvents: T,
       ignoreModalClicks: f,
       closeOnScroll: S,
-      useMouseEnter: A,
-      renderPopout: h,
+      useMouseEnter: h,
+      renderPopout: A,
       layerContext: m
     } = this.props;
     return (0, a.jsx)(u.BasePopout, {
@@ -73,7 +73,7 @@ class I extends(r = o.Component) {
       nudgeAlignIntoViewport: d,
       renderPopout: this.renderPopout,
       spacing: _,
-      shouldShow: null != h && t,
+      shouldShow: null != A && t,
       onRequestOpen: i,
       onRequestClose: r,
       onShiftClick: c,
@@ -81,7 +81,7 @@ class I extends(r = o.Component) {
       disablePointerEvents: T,
       ignoreModalClicks: f,
       closeOnScroll: S,
-      useMouseEnter: A,
+      useMouseEnter: h,
       layerContext: m,
       children: e
     })

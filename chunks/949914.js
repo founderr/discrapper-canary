@@ -83,7 +83,7 @@ let G = e => {
       dropdownClassName: F.paymentSourceDropdown
     }) : (0, a.jsx)(d.Spinner, {})
   },
-  H = e => {
+  w = e => {
     let {
       isTrial: t,
       isCancelled: s,
@@ -125,7 +125,7 @@ t.default = e => {
     handleToggleExpanded: g,
     subscriptionInfo: I
   } = (0, v.default)(t), [N, C] = n.useState(!1), R = (0, O.useUID)(), {
-    analyticsLocations: w
+    analyticsLocations: H
   } = (0, f.default)(), {
     shouldHideGuildPurchaseEntryPoints: V
   } = (0, _.useShouldHideGuildPurchaseEntryPoints)(null == o ? void 0 : o.id), Y = (null == t ? void 0 : t.paymentGateway) === b.PaymentGateways.APPLE_PARTNER;
@@ -143,7 +143,7 @@ t.default = e => {
     },
     z = async () => {
       try {
-        C(!0), await u.resubscribeToSubscription(t, w), (0, j.openModal)()
+        C(!0), await u.resubscribeToSubscription(t, H), (0, j.openModal)()
       } finally {
         C(!1)
       }
@@ -260,7 +260,7 @@ t.default = e => {
         }), (0, a.jsx)(k, {
           subscription: t
         })]
-      }), !et && (0, a.jsx)(H, {
+      }), !et && (0, a.jsx)(w, {
         isTrial: ee,
         isCancelled: Q,
         isResubscribing: N,

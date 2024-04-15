@@ -2,8 +2,8 @@
 n.r(t);
 var l, u = n("442837"),
   a = n("570140"),
-  s = n("314897"),
-  d = n("924301"),
+  d = n("314897"),
+  s = n("924301"),
   i = n("658041"),
   r = n("765305");
 
@@ -80,8 +80,8 @@ o(_, "displayName", "UpcomingEventNoticesStore"), o(_, "persistKey", "UpcomingEv
       userId: t,
       guildEventId: n
     } = e;
-    if (t !== s.default.getId()) return;
-    let l = d.default.getGuildScheduledEvent(n);
+    if (t !== d.default.getId()) return;
+    let l = s.default.getGuildScheduledEvent(n);
     if (null == l || l.status !== r.GuildScheduledEventStatus.SCHEDULED || null != c[n]) return;
     let u = E[n];
     if ((0, i.getNextShownUpcomingEventNoticeType)(l, void 0, u, !1) === r.UpcomingGuildEventNoticeTypes.NEW_EVENT) {

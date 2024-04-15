@@ -8,8 +8,8 @@ var l = n("735250");
 n("470079");
 var u = n("442837"),
   a = n("481060"),
-  s = n("726521"),
-  d = n("795295"),
+  d = n("726521"),
+  s = n("795295"),
   i = n("924301"),
   r = n("689938");
 
@@ -18,8 +18,8 @@ function o(e) {
   return null == e || null == t ? null : (0, l.jsx)(a.MenuItem, {
     id: "report-event",
     label: r.default.Messages.REPORT_MODAL_REPORT_EVENT_MENU_ITEM,
-    action: () => (0, s.showReportModalForGuildScheduledEvent)(t),
-    icon: d.default,
+    action: () => (0, d.showReportModalForGuildScheduledEvent)(t),
+    icon: s.default,
     color: "danger"
   })
 }

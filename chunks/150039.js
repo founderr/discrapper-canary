@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return S
   },
   setNewPendingAvatarDecoration: function() {
-    return A
+    return h
   },
   setNewPendingProfileEffectId: function() {
-    return h
+    return A
   },
   setNewPendingUserBio: function() {
     return f
@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return N
   },
   showRemoveBanner: function() {
-    return O
+    return p
   },
   useAvatarsWithGuilds: function() {
     return c
@@ -106,11 +106,11 @@ function S(e, t) {
   (0, s.setPendingAvatar)(e === t ? void 0 : e)
 }
 
-function A(e, t) {
+function h(e, t) {
   (null != e ? a.setPendingAvatarDecoration : s.setPendingAvatarDecoration)(t)
 }
 
-function h(e, t, n) {
+function A(e, t, n) {
   if (e === t) {
     null == n ? (0, s.setPendingProfileEffectId)(void 0) : (0, a.setPendingProfileEffectId)(void 0);
     return
@@ -140,6 +140,6 @@ function N(e, t) {
   return void 0 === e ? null != t : null != e
 }
 
-function O(e, t) {
+function p(e, t) {
   return void 0 === e ? null != t : null != e
 }

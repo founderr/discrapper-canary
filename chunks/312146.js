@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   useEligibleForGuildMediaChannelPostPreviewEmbed: function() {
-    return s
+    return o
   },
   useGuildEligibleForMediaChannels: function() {
-    return a
+    return i
   }
 });
-var i = n("818083"),
-  r = n("981631");
-let l = (0, i.createExperiment)({
+var s = n("818083"),
+  a = n("981631");
+let l = (0, s.createExperiment)({
   kind: "guild",
   id: "2023-03_guild_media_channel",
   label: "Media Channel",
@@ -25,19 +25,19 @@ let l = (0, i.createExperiment)({
   }]
 });
 
-function a(e) {
+function i(e) {
   var t;
   let {
     enabled: n
   } = l.useExperiment({
-    guildId: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : r.EMPTY_STRING_SNOWFLAKE_ID,
+    guildId: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : a.EMPTY_STRING_SNOWFLAKE_ID,
     location: "96e84c_1"
   }, {
     autoTrackExposure: !0
   });
   return (null == e ? void 0 : e.id) != null && n
 }
-let o = (0, i.createExperiment)({
+let r = (0, s.createExperiment)({
   kind: "user",
   id: "2023-04_guild_media_channel_post_preview_embed_users",
   label: "Guild Role Subscription Users",
@@ -53,10 +53,10 @@ let o = (0, i.createExperiment)({
   }]
 });
 
-function s() {
+function o() {
   let {
     enabledForUser: e
-  } = o.useExperiment({
+  } = r.useExperiment({
     location: "96e84c_2"
   }, {
     autoTrackExposure: !0

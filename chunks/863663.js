@@ -7,26 +7,26 @@ n.r(t), n.d(t, {
     return a
   },
   describeProductChangeValidation: function() {
-    return o
-  },
-  describeUploadProgressError: function() {
     return u
   },
+  describeUploadProgressError: function() {
+    return o
+  },
   getGuildProductListingUrl: function() {
-    return d
+    return c
   }
 });
-var i = n("881052");
+var r = n("881052");
 n("496675");
-var r = n("981631"),
+var i = n("981631"),
   l = n("689938");
 let s = "_role";
 
-function u(e) {
+function o(e) {
   if (!(e >= 0)) switch (-e) {
-    case r.AbortCodes.ENTITY_TOO_LARGE:
+    case i.AbortCodes.ENTITY_TOO_LARGE:
       return l.default.Messages.UPLOAD_ERROR_TOO_LARGE;
-    case r.AbortCodes.INVALID_SKU_ATTACHMENT_NO_ARCHIVES:
+    case i.AbortCodes.INVALID_SKU_ATTACHMENT_NO_ARCHIVES:
       return l.default.Messages.GUILD_PRODUCT_ERROR_NO_ARCHIVES;
     case 1:
       return l.default.Messages.ERROR_GENERIC_TITLE;
@@ -37,13 +37,13 @@ function u(e) {
   }
 }
 
-function o(e) {
+function u(e) {
   let {
     newRoleParams: t
   } = e;
   if (null != t && "" === t.name.trim()) {
-    var n, r;
-    return n = s, r = l.default.Messages.GUILD_PRODUCT_ERROR_EMPTY_ROLE_NAME, new i.APIError({
+    var n, i;
+    return n = s, i = l.default.Messages.GUILD_PRODUCT_ERROR_EMPTY_ROLE_NAME, new r.APIError({
       status: 400,
       body: {
         message: "Invalid form body",
@@ -51,7 +51,7 @@ function o(e) {
           [n]: {
             _errors: [{
               code: "",
-              message: r
+              message: i
             }]
           }
         }
@@ -64,19 +64,19 @@ function a(e) {
   var t;
   let {
     guildProductListing: n,
-    name: i,
-    priceTier: r,
+    name: r,
+    priceTier: i,
     description: l,
     image: s,
-    imageName: u,
-    isImageChanged: o,
+    imageName: o,
+    isImageChanged: u,
     newRoleParams: a,
-    hasUnsavedAttachmentChanges: d
-  } = e, c = {};
-  (null == n ? void 0 : n.name) !== i && "" !== i.trim() && (c.name = i), (null !== (t = null == n ? void 0 : n.description) && void 0 !== t ? t : "") !== l && (c.description = l), (null == n ? void 0 : n.price_tier) !== r && null != r && (c.priceTier = r), null != a && "" !== a.name.trim() ? c.createNewRole = !0 : null === a && (c.unlinkRole = !0), s.startsWith("data:") && (o || null == n && (Object.keys(c).length > 0 || d)) && (c.image = s, c.imageName = u);
-  let f = Object.keys(c).length > 0 || d;
+    hasUnsavedAttachmentChanges: c
+  } = e, d = {};
+  (null == n ? void 0 : n.name) !== r && "" !== r.trim() && (d.name = r), (null !== (t = null == n ? void 0 : n.description) && void 0 !== t ? t : "") !== l && (d.description = l), (null == n ? void 0 : n.price_tier) !== i && null != i && (d.priceTier = i), null != a && "" !== a.name.trim() ? d.createNewRole = !0 : null === a && (d.unlinkRole = !0), s.startsWith("data:") && (u || null == n && (Object.keys(d).length > 0 || c)) && (d.image = s, d.imageName = o);
+  let f = Object.keys(d).length > 0 || c;
   return {
-    changes: c,
+    changes: d,
     hasUnsavedChanges: f,
     canSaveForDraft: f,
     canSaveForPublished: f,
@@ -84,6 +84,6 @@ function a(e) {
   }
 }
 
-function d(e, t) {
-  return "".concat(location.protocol, "//").concat(location.host).concat(r.Routes.GUILD_PRODUCT(e, t))
+function c(e, t) {
+  return "".concat(location.protocol, "//").concat(location.host).concat(i.Routes.GUILD_PRODUCT(e, t))
 }

@@ -27,8 +27,8 @@ function _(e) {
   } = e, {
     tooltip: f,
     loading: S,
-    disabled: A,
-    onClick: h
+    disabled: h,
+    onClick: A
   } = (0, u.useSpotifySyncAction)(t, n, c, l.default.getNickname(_, r, n));
   return (0, i.jsx)(a.Tooltip, {
     text: f,
@@ -41,10 +41,10 @@ function _(e) {
         ...T,
         size: s()(E, d.iconButtonSize),
         className: s()(I, d.iconButton),
-        onClick: h,
+        onClick: A,
         onMouseEnter: n,
         onMouseLeave: r,
-        disabled: A,
+        disabled: h,
         submitting: S,
         "aria-label": null != f ? f : t.name,
         children: (0, i.jsx)(o.default, {

@@ -4,9 +4,9 @@ s.r(t), s.d(t, {
     return u
   }
 });
-var a = s("735250");
+var l = s("735250");
 s("470079");
-var l = s("493683"),
+var a = s("493683"),
   i = s("974029"),
   n = s("785717"),
   o = s("993409"),
@@ -20,13 +20,13 @@ function u(e) {
   } = e, {
     trackUserProfileAction: d
   } = (0, n.useUserProfileAnalyticsContext)();
-  return (0, a.jsx)(o.default, {
+  return (0, l.jsx)(o.default, {
     icon: i.default,
     text: r.default.Messages.USER_PROFILE_MESSAGE,
     onClick: () => {
       d({
         action: "SEND_MESSAGE"
-      }), l.default.openPrivateChannel(t.id), null == u || u()
+      }), a.default.openPrivateChannel(t.id), null == u || u()
     },
     compact: s
   })

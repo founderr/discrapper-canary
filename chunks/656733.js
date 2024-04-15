@@ -25,13 +25,13 @@ let E = {
   T = E.MP4,
   f = null,
   S = "",
-  A = "",
-  h = [],
+  h = "",
+  A = [],
   m = [],
   N = [],
-  O = [];
+  p = [];
 
-function p(e) {
+function O(e) {
   return e.replace(/^https?:/, "")
 }
 class R extends(i = o.default.Store) {
@@ -42,10 +42,10 @@ class R extends(i = o.default.Store) {
     return S
   }
   getResultQuery() {
-    return A
+    return h
   }
   getResultItems() {
-    return h
+    return A
   }
   getTrendingCategories() {
     return m
@@ -57,7 +57,7 @@ class R extends(i = o.default.Store) {
     return N
   }
   getTrendingSearchTerms() {
-    return O
+    return p
   }
 }
 a = "GIFPickerViewStore", (s = "displayName") in(r = R) ? Object.defineProperty(r, s, {
@@ -70,11 +70,11 @@ a = "GIFPickerViewStore", (s = "displayName") in(r = R) ? Object.defineProperty(
     f = e.analyticsID
   },
   GIF_PICKER_QUERY: function(e) {
-    "" === (S = e.query) && (A = "", h = [], N = [])
+    "" === (S = e.query) && (h = "", A = [], N = [])
   },
   GIF_PICKER_QUERY_SUCCESS: function(e) {
-    if (null != e.query && S === A) return !1;
-    null != e.query && (A = e.query), h = e.items.map(e => {
+    if (null != e.query && S === h) return !1;
+    null != e.query && (h = e.query), A = e.items.map(e => {
       let {
         width: t,
         height: n,
@@ -86,8 +86,8 @@ a = "GIFPickerViewStore", (s = "displayName") in(r = R) ? Object.defineProperty(
       return {
         width: t,
         height: n,
-        src: p(i),
-        gifSrc: p(r),
+        src: O(i),
+        gifSrc: O(r),
         url: s,
         id: a,
         format: ! function(e) {
@@ -117,7 +117,7 @@ a = "GIFPickerViewStore", (s = "displayName") in(r = R) ? Object.defineProperty(
       query: t
     } = e;
     if (null == t) return !1;
-    A = t, h = []
+    h = t, A = []
   },
   GIF_PICKER_TRENDING_FETCH_SUCCESS: function(e) {
     let t = e.trendingCategories;
@@ -125,11 +125,11 @@ a = "GIFPickerViewStore", (s = "displayName") in(r = R) ? Object.defineProperty(
       type: _.GIFPickerResultTypes.TRENDING_GIFS,
       icon: d.default,
       name: c.default.Messages.GIF_PICKER_RESULT_TYPE_TRENDING_GIFS,
-      src: p(e.trendingGIFPreview.src),
+      src: O(e.trendingGIFPreview.src),
       format: l.GIFType.IMAGE
     }] : [], ...t.map(e => ({
       ...e,
-      src: p(e.src),
+      src: O(e.src),
       type: _.GIFPickerResultTypes.TRENDING_CATEGORY,
       format: l.GIFType.VIDEO
     }))]
@@ -144,6 +144,6 @@ a = "GIFPickerViewStore", (s = "displayName") in(r = R) ? Object.defineProperty(
     let {
       items: t
     } = e;
-    O = t
+    p = t
   }
 })

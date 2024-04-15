@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return N
   },
   ApplicationStreamFPSButtonsWithSuffixLabel: function() {
-    return O
+    return p
   },
   ApplicationStreamPresetValues: function() {
     return I
@@ -28,7 +28,7 @@ n.r(t), n.d(t, {
     return T
   },
   GoLiveDeviceResolutionButtons: function() {
-    return A
+    return h
   },
   getApplicationFramerate: function() {
     return E
@@ -178,11 +178,11 @@ function f(e, t) {
   }
 }
 let S = [f(720), f(1080), f(1440), f(0, () => _.default.Messages.SCREENSHARE_SOURCE)],
-  A = [f(720), f(1080), f(1440)],
-  h = e => "".concat(e, "p"),
-  m = [f(480, () => h(480)), f(720, () => h(720)), f(1080, () => h(1080)), f(1440, () => h(1440)), f(0, () => _.default.Messages.SCREENSHARE_SOURCE)],
+  h = [f(720), f(1080), f(1440)],
+  A = e => "".concat(e, "p"),
+  m = [f(480, () => A(480)), f(720, () => A(720)), f(1080, () => A(1080)), f(1440, () => A(1440)), f(0, () => _.default.Messages.SCREENSHARE_SOURCE)],
   N = [f(15), f(30), f(60)],
-  O = [f(15, () => _.default.Messages.STREAM_FPS_OPTION.format({
+  p = [f(15, () => _.default.Messages.STREAM_FPS_OPTION.format({
     value: 15
   })), f(30, () => _.default.Messages.STREAM_FPS_OPTION.format({
     value: 30

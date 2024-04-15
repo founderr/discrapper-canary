@@ -17,18 +17,18 @@ function r(e) {
       otherUser: u,
       otherUsernameHook: d,
       compact: c,
-      channel: E
+      channel: f
     } = e,
-    f = (0, a.default)(r),
-    _ = f.nick,
-    T = o(f),
-    I = (0, a.useNullableUserAuthor)(u, E);
-  if (null != I && null != d) {
-    let e = d(I);
+    E = (0, a.default)(r),
+    _ = E.nick,
+    T = o(E),
+    m = (0, a.useNullableUserAuthor)(u, f);
+  if (null != m && null != d) {
+    let e = d(m);
     t = i.default.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_HOOK.format({
       username: _,
       usernameHook: T,
-      otherUsername: I.nick,
+      otherUsername: m.nick,
       otherUsernameHook: e
     })
   } else t = i.default.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_SELF_HOOK.format({

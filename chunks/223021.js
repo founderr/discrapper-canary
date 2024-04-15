@@ -1,17 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return a
   }
 });
-var a = n("50182");
-let i = {
-    LATIN12: a.latin12CompactTimeStamp,
-    LATIN24: a.latin24CompactTimeStamp,
-    ASIAN: a.asianCompactTimeStamp
+var i = n("50182");
+let r = {
+    LATIN12: i.latin12CompactTimeStamp,
+    LATIN24: i.latin24CompactTimeStamp,
+    ASIAN: i.asianCompactTimeStamp
   },
-  r = /(AM|PM)$/;
+  s = /(AM|PM)$/;
 
-function s(e) {
-  return null != e.match(r) ? i.LATIN24 : e.length <= 5 ? i.LATIN12 : i.ASIAN
+function a(e) {
+  return null != e.match(s) ? r.LATIN24 : e.length <= 5 ? r.LATIN12 : r.ASIAN
 }

@@ -56,7 +56,7 @@ function S() {
   }
 }
 
-function A(e) {
+function h(e) {
   return {
     ...e,
     kind: "notification-center-item",
@@ -64,8 +64,8 @@ function A(e) {
   }
 }
 
-function h(e) {
-  let t = "NOTIFICATION_CENTER_ITEM_CREATE" === e.type ? A(e.item) : e.item;
+function A(e) {
+  let t = "NOTIFICATION_CENTER_ITEM_CREATE" === e.type ? h(e.item) : e.item;
   if (!T.initialized || !f(t) || T.notifCenterIds.has(t.id)) return !1;
   T.notifCenterIds.add(t.id), T.notifCenterItems = [t, ...T.notifCenterItems], T.notifCenterItems.sort((e, t) => d.default.compare(t.id, e.id))
 }
@@ -82,13 +82,13 @@ function N(e, t, n) {
   return e.type === t && (null === (i = e.other_user) || void 0 === i ? void 0 : i.id) === n
 }
 
-function O(e) {
+function p(e) {
   (0, a.isGuildEventEnded)(e) && (T.notifCenterItems = T.notifCenterItems.map(t => t.type === _.NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED && t.guild_scheduled_event_id === e.id ? {
     ...t,
     disable_action: !0
   } : t))
 }
-class p extends(i = r.default.PersistedStore) {
+class O extends(i = r.default.PersistedStore) {
   initialize(e) {
     if (this.waitFor(u.default), null != e) {
       let t = e.notifCenterItems.map(e => ({
@@ -143,8 +143,8 @@ class p extends(i = r.default.PersistedStore) {
     return T.notifCenterTabFocused
   }
 }
-I(p, "displayName", "NotificationCenterItemsStore"), I(p, "persistKey", "NotificationCenterItemsStore_v2");
-let R = new p(s.default, {
+I(O, "displayName", "NotificationCenterItemsStore"), I(O, "persistKey", "NotificationCenterItemsStore_v2");
+let R = new O(s.default, {
   CONNECTION_OPEN: function(e) {
     S();
     let t = [];
@@ -160,7 +160,7 @@ let R = new p(s.default, {
       t.push((0, c.incomingFriendRequestLocalItem)(s, r))
     }), e.guilds.forEach(e => {
       e.guild_scheduled_events.forEach(e => {
-        O(e)
+        p(e)
       })
     }), T.notifCenterLocalItems = t
   },
@@ -181,9 +181,9 @@ let R = new p(s.default, {
     let {
       guildScheduledEvent: t
     } = e;
-    O(t)
+    p(t)
   },
-  NOTIFICATION_CENTER_ITEM_CREATE: h,
+  NOTIFICATION_CENTER_ITEM_CREATE: A,
   NOTIFICATION_CENTER_ITEM_DELETE: function(e) {
     let {
       id: t
@@ -191,7 +191,7 @@ let R = new p(s.default, {
     if (!T.notifCenterIds.has(t)) return !1;
     T.notifCenterIds.delete(t), T.notifCenterItems = T.notifCenterItems.filter(e => e.id !== t)
   },
-  NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: h,
+  NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: A,
   LOAD_NOTIFICATION_CENTER_ITEMS: function() {
     T.loading = !0
   },
@@ -204,7 +204,7 @@ let R = new p(s.default, {
       hasMore: n,
       cursor: i
     } = e;
-    T.loading && (T.loading = !1, T.initialized = !0, T.errored = !1, T.isDataStale = !1, (null == i || !T.notifCenterIds.has(i)) && (T.paginationHasMore = t.length > 0 && n, T.paginationCursor = t.length > 0 ? i : void 0), T.notifCenterItems = [...T.notifCenterItems, ...t.map(A).filter(e => !T.notifCenterIds.has(e.id))], T.notifCenterItems.sort((e, t) => d.default.compare(t.id, e.id)), t.forEach(e => T.notifCenterIds.add(e.id)))
+    T.loading && (T.loading = !1, T.initialized = !0, T.errored = !1, T.isDataStale = !1, (null == i || !T.notifCenterIds.has(i)) && (T.paginationHasMore = t.length > 0 && n, T.paginationCursor = t.length > 0 ? i : void 0), T.notifCenterItems = [...T.notifCenterItems, ...t.map(h).filter(e => !T.notifCenterIds.has(e.id))], T.notifCenterItems.sort((e, t) => d.default.compare(t.id, e.id)), t.forEach(e => T.notifCenterIds.add(e.id)))
   },
   RESET_NOTIFICATION_CENTER: S,
   NOTIFICATION_CENTER_SET_ACTIVE: function(e) {

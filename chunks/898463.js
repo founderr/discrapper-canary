@@ -22,12 +22,12 @@ var i = n("735250"),
   T = n("68588"),
   f = n("794358"),
   S = n("880008"),
-  A = n("185403"),
-  h = n("740727"),
+  h = n("185403"),
+  A = n("740727"),
   m = n("26290"),
   N = n("810090"),
-  O = n("956664"),
-  p = n("709054"),
+  p = n("956664"),
+  O = n("709054"),
   R = n("273031"),
   C = n("859235"),
   g = n("689938"),
@@ -89,7 +89,7 @@ function M(e) {
       let {
         width: e,
         height: t
-      } = (0, O.zoomFit)(n.width, n.height);
+      } = (0, p.zoomFit)(n.width, n.height);
       E({
         width: e,
         height: t
@@ -222,7 +222,7 @@ function U(e) {
     keyboardModeEnabled: _,
     label: T,
     size: N = C.AttachmentListItemSizes.MEDIUM,
-    canEdit: O = !0,
+    canEdit: p = !0,
     hideFileName: D = !1,
     clip: v
   } = e, M = null != v, y = (N = M ? C.AttachmentListItemSizes.CLIP : N) === C.AttachmentListItemSizes.SMALL, U = (0, o.useStateFromStores)([I.default], () => {
@@ -250,7 +250,7 @@ function U(e) {
   };
   return (0, i.jsxs)(C.default, {
     actions: (0, i.jsxs)(r.Fragment, {
-      children: [O ? (0, i.jsx)(R.default, {
+      children: [p ? (0, i.jsx)(R.default, {
         className: a()({
           [L.action]: y
         }),
@@ -267,13 +267,13 @@ function U(e) {
             [L.actionBarIcon]: y
           })
         })
-      }) : null, O && !M ? (0, i.jsx)(R.default, {
+      }) : null, p && !M ? (0, i.jsx)(R.default, {
         className: a()({
           [L.action]: y
         }),
         tooltip: g.default.Messages.ATTACHMENT_UTILITIES_MODIFY,
         onClick: b,
-        children: (0, i.jsx)(A.default, {
+        children: (0, i.jsx)(h.default, {
           className: a()({
             [L.actionBarIcon]: y
           })
@@ -285,7 +285,7 @@ function U(e) {
         tooltip: M ? g.default.Messages.CLIPS_ATTACHMENT_UTILITIES_REMOVE : g.default.Messages.ATTACHMENT_UTILITIES_REMOVE,
         onClick: () => u.default.remove(t, s.id, n),
         dangerous: !0,
-        children: (0, i.jsx)(h.default, {
+        children: (0, i.jsx)(A.default, {
           className: a()({
             [L.actionBarIcon]: y
           })
@@ -314,7 +314,7 @@ function U(e) {
     }), M && (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(c.default, {
         className: L.clipsFooter,
-        createdAt: p.default.extractTimestamp(v.id),
+        createdAt: O.default.extractTimestamp(v.id),
         participantIds: v.users,
         applicationId: v.applicationId,
         title: v.name,

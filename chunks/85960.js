@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return c
   },
   getDefaultTriggerMetadataForTriggerType: function() {
-    return N
+    return g
   },
   triggerConfigs: function() {
     return E
@@ -130,7 +130,7 @@ function f(e) {
   }), [t])
 }
 
-function N(e, t) {
+function g(e, t) {
   let n = (0, l.isInMentionRaidExperiment)(t);
   switch (e) {
     case d.AutomodTriggerType.DEFAULT_KEYWORD_LIST:

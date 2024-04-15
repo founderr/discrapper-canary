@@ -58,12 +58,12 @@ var i = n("512722"),
   T = n("430824"),
   f = n("944486"),
   S = n("979651"),
-  A = n("934415"),
-  h = n("70956"),
+  h = n("934415"),
+  A = n("70956"),
   m = n("557457"),
   N = n("573261"),
-  O = n("26151"),
-  p = n("493683"),
+  p = n("26151"),
+  O = n("493683"),
   R = n("475179"),
   C = n("287734"),
   g = n("981631"),
@@ -91,7 +91,7 @@ function v(e, t) {
 
 function M(e, t) {
   let n = I.default.getChannel(t);
-  return r()(null != n, "Cannot join a null voice channel"), !S.default.isInChannel(t) && (0, A.isChannelFull)(n, S.default, T.default)
+  return r()(null != n, "Cannot join a null voice channel"), !S.default.isInChannel(t) && (0, h.isChannelFull)(n, S.default, T.default)
 }
 
 function y(e, t) {
@@ -178,7 +178,7 @@ async function w(e, t, n) {
     })
   } catch (t) {
     let e;
-    429 === t.status && (e = t.body.retry_after * h.default.Millis.SECOND), o.default.dispatch({
+    429 === t.status && (e = t.body.retry_after * A.default.Millis.SECOND), o.default.dispatch({
       type: "STREAM_PREVIEW_FETCH_FAIL",
       streamKey: i,
       retryAfter: e
@@ -234,7 +234,7 @@ function x(e) {
       sourceId: i,
       sourceName: r
     }
-  }), null == t ? p.default.createBroadcastPrivateChannel() : D(null, t, {
+  }), null == t ? O.default.createBroadcastPrivateChannel() : D(null, t, {
     pid: n,
     sourceId: i,
     sourceName: r
@@ -245,8 +245,8 @@ function H(e, t) {
   let n = E.default.getId(),
     i = (0, u.decodeStreamKey)(t),
     r = f.default.getVoiceChannelId();
-  null != r && r !== e && C.default.disconnect(), p.default.addRecipient(e, n, void 0, () => {
-    O.default.call(e, !1, !1, null, () => {
+  null != r && r !== e && C.default.disconnect(), O.default.addRecipient(e, n, void 0, () => {
+    p.default.call(e, !1, !1, null, () => {
       U(i)
     })
   })

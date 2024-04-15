@@ -34,21 +34,21 @@ function f(e, t) {
     f = l.ViewNsfwCommands.getSetting(),
     S = d.default.getId(),
     m = null !== (s = null === (n = I.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) && void 0 !== s && s,
-    O = null != T && null !== (a = null === (i = c.default.getMember(T, S)) || void 0 === i ? void 0 : i.roles) && void 0 !== a ? a : [],
-    p = o.default.isViewingRoles(T),
+    p = null != T && null !== (a = null === (i = c.default.getMember(T, S)) || void 0 === i ? void 0 : i.roles) && void 0 !== a ? a : [],
+    O = o.default.isViewingRoles(T),
     {
       computedPermissions: R,
       hasBaseAccessPermissions: C
-    } = h(E);
+    } = A(E);
   return {
     context: E,
     userId: S,
-    roleIds: O,
-    isImpersonating: p,
+    roleIds: p,
+    isImpersonating: O,
     commandType: t,
     computedPermissions: R,
     hasBaseAccessPermissions: C,
-    allowNsfw: A(E, m, f)
+    allowNsfw: h(E, m, f)
   }
 }
 
@@ -76,7 +76,7 @@ function S(e, t) {
     let {
       computedPermissions: e,
       hasBaseAccessPermissions: i
-    } = h(n);
+    } = A(n);
     return {
       context: n,
       userId: E,
@@ -85,16 +85,16 @@ function S(e, t) {
       isImpersonating: S,
       computedPermissions: e,
       hasBaseAccessPermissions: i,
-      allowNsfw: A(n, T, a)
+      allowNsfw: h(n, T, a)
     }
   }, [t, n, S, f, E, T, a])
 }
 
-function A(e, t, n) {
+function h(e, t, n) {
   return !!t && (!(e instanceof u.ChannelRecordBase) || (null != e.guild_id ? e.nsfw : n))
 }
 
-function h(e) {
+function A(e) {
   let t;
   if (e instanceof u.ChannelRecordBase && e.isPrivate()) return {
     computedPermissions: r.deserialize(0),

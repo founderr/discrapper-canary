@@ -39,13 +39,13 @@ function S(e, t, n) {
   }, !0)
 }
 
-function A(e, t) {
+function h(e, t) {
   let n = E.default.getChannel(e);
   if (null == n) return !1;
   S(n, t, 0 === n.rateLimitPerUser ? 0 : n.rateLimitPerUser * c.default.Millis.SECOND + 100)
 }
 
-function h(e) {
+function A(e) {
   let {
     file: t
   } = e, n = E.default.getChannel(t.channelId);
@@ -71,7 +71,7 @@ l = "SlowmodeStore", (o = "displayName") in(a = m) ? Object.defineProperty(a, o,
       channelId: t,
       slowmodeType: n
     } = e;
-    return A(t, n)
+    return h(t, n)
   },
   SLOWMODE_SET_COOLDOWN: function(e) {
     let {
@@ -86,10 +86,10 @@ l = "SlowmodeStore", (o = "displayName") in(a = m) ? Object.defineProperty(a, o,
     let {
       channelId: t
     } = e;
-    return A(t, 0)
+    return h(t, 0)
   },
-  UPLOAD_FAIL: h,
-  UPLOAD_CANCEL_REQUEST: h,
+  UPLOAD_FAIL: A,
+  UPLOAD_CANCEL_REQUEST: A,
   CHANNEL_UPDATES: function(e) {
     let {
       channels: t

@@ -12,7 +12,7 @@ var s, a, o, l = n("392711"),
   f = n("434529"),
   S = n("981631");
 
-function A(e, t, n) {
+function h(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -20,7 +20,7 @@ function A(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }(o = s || (s = {})).REQUIRED = "REQUIRED", o.OPTIONAL = "OPTIONAL", o.OPTIONAL_DEFAULT = "OPTIONAL_DEFAULT";
-let h = "migrated",
+let A = "migrated",
   m = {
     [S.OverlayWidgets.GUILDS]: {
       minSize: {
@@ -123,11 +123,11 @@ function N(e, t) {
   return null != s && t(n, s)
 }
 
-function O(e) {
+function p(e) {
   var t;
   return null === (t = m[e]) || void 0 === t ? void 0 : t.defaultSettings
 }
-class p extends(a = _.default.PersistedStore) {
+class O extends(a = _.default.PersistedStore) {
   initialize(e) {
     null != e && null != e.layouts && null != e.widgets ? (i = function(e) {
       let t = {};
@@ -208,7 +208,7 @@ class p extends(a = _.default.PersistedStore) {
     return m[e]
   }
   getWidgetDefaultSettings(e) {
-    return O(e)
+    return p(e)
   }
   getWidgetType(e) {
     let t = r[e];
@@ -233,7 +233,7 @@ class p extends(a = _.default.PersistedStore) {
     }), t
   }
 }
-A(p, "displayName", "LayoutStore"), A(p, "persistKey", "LayoutStore"), A(p, "migrations", [() => {
+h(O, "displayName", "LayoutStore"), h(O, "persistKey", "LayoutStore"), h(O, "migrations", [() => {
   let {
     pinnedWidgets: e,
     positions: t,
@@ -249,7 +249,7 @@ A(p, "displayName", "LayoutStore"), A(p, "persistKey", "LayoutStore"), A(p, "mig
           s = null != n ? n[e] : null,
           a = {
             id: e,
-            layoutId: h,
+            layoutId: A,
             type: e,
             anchor: r || {
               top: -1,
@@ -268,8 +268,8 @@ A(p, "displayName", "LayoutStore"), A(p, "persistKey", "LayoutStore"), A(p, "mig
       });
     return {
       layouts: [
-        [h, {
-          id: h,
+        [A, {
+          id: A,
           widgets: r
         }]
       ],
@@ -289,7 +289,7 @@ A(p, "displayName", "LayoutStore"), A(p, "persistKey", "LayoutStore"), A(p, "mig
     return !i.has(t)
   }), s = Array.from(t).filter(e => {
     let [t] = e;
-    return t !== h
+    return t !== A
   });
   return s.forEach(e => {
     let [t, n] = e, i = null, s = null;
@@ -302,7 +302,7 @@ A(p, "displayName", "LayoutStore"), A(p, "persistKey", "LayoutStore"), A(p, "mig
       }), i || null == s) return;
     let a = (0, d.v4)();
     n.widgets = [s, a], r.push([a, {
-      ...O(S.OverlayWidgets.GUILDS_TEXT),
+      ...p(S.OverlayWidgets.GUILDS_TEXT),
       type: S.OverlayWidgets.GUILDS_TEXT,
       id: a,
       layoutId: t,
@@ -327,7 +327,7 @@ A(p, "displayName", "LayoutStore"), A(p, "persistKey", "LayoutStore"), A(p, "mig
       return e[n] = i, e
     }, {})
   }
-}]), t.default = new p(E.default, {
+}]), t.default = new O(E.default, {
   LAYOUT_CREATE: function(e) {
     let {
       layoutId: t,
@@ -338,7 +338,7 @@ A(p, "displayName", "LayoutStore"), A(p, "persistKey", "LayoutStore"), A(p, "mig
     let a = [];
     n.forEach((e, t) => {
       let n = function(e) {
-          let t = i[h];
+          let t = i[A];
           if (null != t)
             for (let n of t.widgets) {
               let t = r[n];
@@ -423,7 +423,7 @@ A(p, "displayName", "LayoutStore"), A(p, "persistKey", "LayoutStore"), A(p, "mig
     r = {
       ...r
     }, delete r[t], u().forEach(i, (e, n) => {
-      if (n === h) return;
+      if (n === A) return;
       let r = e.widgets.indexOf(t);
       if (r >= 0) {
         let t = [...e.widgets];

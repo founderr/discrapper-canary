@@ -18,16 +18,16 @@ function r(e) {
     actorUsernameHook: u,
     targetUsernameHook: d,
     compact: c
-  } = e, E = (0, a.default)(t), f = (0, a.useNullableUserAuthor)(o, r), _ = u(E), T = d(null != f ? f : void 0), I = i.default.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_REMOVE.format({
-    actorName: E.nick,
+  } = e, f = (0, a.default)(t), E = (0, a.useNullableUserAuthor)(o, r), _ = u(f), T = d(null != E ? E : void 0), m = i.default.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_REMOVE.format({
+    actorName: f.nick,
     actorHook: _,
-    targetName: null == f ? void 0 : f.nick,
+    targetName: null == E ? void 0 : E.nick,
     targetHook: T
   });
   return (0, s.jsx)(l.default, {
     icon: n("474019"),
     timestamp: t.timestamp,
     compact: c,
-    children: I
+    children: m
   })
 }

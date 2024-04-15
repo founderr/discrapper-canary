@@ -15,15 +15,15 @@ var i = n("302454"),
   T = n("934415"),
   f = n("624138"),
   S = n("699450"),
-  A = n("594199"),
-  h = n("981631"),
+  h = n("594199"),
+  A = n("981631"),
   m = n("689938");
 let N = e => {
   let t = u.default.getChannel(e);
   return null == t ? void 0 : t.getGuildId()
 };
 
-function O(e) {
+function p(e) {
   return {
     type: "guild",
     guildId: e.id,
@@ -36,7 +36,7 @@ function O(e) {
   }
 }
 
-function p(e, t) {
+function O(e, t) {
   let n;
   let i = L((0, f.truncateText)(e.name, 32));
   return {
@@ -122,10 +122,10 @@ function D(e, t, n, i, r) {
     channelId: t,
     messageId: n,
     originalLink: r,
-    inContent: null == s || a ? null : [O(s)],
-    content: [p({
+    inContent: null == s || a ? null : [p(s)],
+    content: [O({
       name: m.default.Messages.UNKNOWN_CHANNEL,
-      type: h.ChannelTypes.UNKNOWN,
+      type: A.ChannelTypes.UNKNOWN,
       iconType: "text"
     }, "italics")]
   }
@@ -136,7 +136,7 @@ function v(e, t, n, i) {
     let n = {
       type: "channel",
       content: [L(e.roleSubscriptionGated ? e.name : m.default.Messages.NO_ACCESS)],
-      channelType: e.roleSubscriptionGated ? e.type : h.ChannelTypes.UNKNOWN,
+      channelType: e.roleSubscriptionGated ? e.type : A.ChannelTypes.UNKNOWN,
       iconType: "locked"
     };
     return {
@@ -161,8 +161,8 @@ function v(e, t, n, i) {
     var a;
     if (e.isDm) return {
       ...r,
-      guildId: h.ME,
-      inContent: [p(e)],
+      guildId: A.ME,
+      inContent: [O(e)],
       content: [R(!1)]
     };
     return null != (a = i) ? g(a) : L("#".concat(m.default.Messages.UNKNOWN_CHANNEL_PLACEHOLDER))
@@ -171,8 +171,8 @@ function v(e, t, n, i) {
   return {
     ...r,
     ... function(e, t, n, i) {
-      let r = O(e),
-        s = p(t),
+      let r = p(e),
+        s = O(t),
         a = R(t.isForumPost);
       if (n && i) {
         if (t.isForumPost) {
@@ -180,7 +180,7 @@ function v(e, t, n, i) {
           if (null != e) {
             var o;
             return {
-              inContent: [p({
+              inContent: [O({
                 name: e.name,
                 type: e.type,
                 iconType: null !== (o = (0, T.getMentionIconType)(e)) && void 0 !== o ? o : "forum"
@@ -210,7 +210,7 @@ function v(e, t, n, i) {
   }
 }
 let M = {
-    order: A.default.order,
+    order: h.default.order,
     requiredFirstCharacters: ["<"],
     match: e => /^<#(\d+)>/.exec(e),
     parse(e, t, n) {

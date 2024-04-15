@@ -1,63 +1,63 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return _
   }
 }), n("653041");
-var l = n("735250"),
-  i = n("470079"),
-  a = n("442837"),
-  d = n("481060"),
-  u = n("139387"),
-  s = n("230711"),
+var a = n("735250"),
+  l = n("470079"),
+  i = n("442837"),
+  u = n("481060"),
+  s = n("139387"),
+  d = n("230711"),
   r = n("213459"),
   o = n("434404"),
   c = n("430824"),
-  p = n("496675"),
+  f = n("496675"),
   E = n("981631"),
-  f = n("689938");
+  S = n("689938");
 
-function I(e) {
+function _(e) {
   let {
     user: t,
     guildId: n,
-    channel: I,
-    context: S
-  } = e, M = c.default.getGuild(n), _ = (0, a.useStateFromStores)([p.default], () => null != M ? p.default.can(E.Permissions.MANAGE_GUILD, M) : null), A = (0, r.useContextIndexState)(I, !0, !0), N = (0, r.useUserIndexState)(!0, !0), {
-    isUserApp: T,
-    isGuildApp: v
-  } = i.useMemo(() => {
-    var e, n, l, i;
+    channel: _,
+    context: T
+  } = e, p = c.default.getGuild(n), A = (0, i.useStateFromStores)([f.default], () => null != p ? f.default.can(E.Permissions.MANAGE_GUILD, p) : null), I = (0, r.useContextIndexState)(_, !0, !0), g = (0, r.useUserIndexState)(!0, !0), {
+    isUserApp: m,
+    isGuildApp: M
+  } = l.useMemo(() => {
+    var e, n, a, l;
     if ((null == t ? void 0 : t.id) == null) return {
       isGuildApp: !1,
       isUserApp: !1
     };
-    let a = Object.values(null !== (l = null === (e = A.result) || void 0 === e ? void 0 : e.sections) && void 0 !== l ? l : {}),
-      d = Object.values(null !== (i = null === (n = N.result) || void 0 === n ? void 0 : n.sections) && void 0 !== i ? i : {});
+    let i = Object.values(null !== (a = null === (e = I.result) || void 0 === e ? void 0 : e.sections) && void 0 !== a ? a : {}),
+      u = Object.values(null !== (l = null === (n = g.result) || void 0 === n ? void 0 : n.sections) && void 0 !== l ? l : {});
     return {
-      isGuildApp: a.some(e => {
+      isGuildApp: i.some(e => {
         var n;
         return (null === (n = e.descriptor.application) || void 0 === n ? void 0 : n.id) === (null == t ? void 0 : t.id)
       }),
-      isUserApp: d.some(e => {
+      isUserApp: u.some(e => {
         var n;
         return (null === (n = e.descriptor.application) || void 0 === n ? void 0 : n.id) === (null == t ? void 0 : t.id)
       })
     }
-  }, [A, N, null == t ? void 0 : t.id]), b = i.useCallback(() => {
-    (null == M ? void 0 : M.id) != null && (o.default.open(M.id, E.GuildSettingsSections.INTEGRATIONS), u.default.setSection(E.IntegrationSettingsSections.APPLICATION, null == t ? void 0 : t.id))
-  }, [null == t ? void 0 : t.id, null == M ? void 0 : M.id]), h = i.useCallback(() => {
-    s.default.open(E.UserSettingsSections.AUTHORIZED_APPS)
-  }, []), O = S === E.AppContext.POPOUT;
-  if (!(null == t ? void 0 : t.bot) || !_ || O || !v && !T) return null;
-  let m = [];
-  return v && m.push((0, l.jsx)(d.MenuItem, {
+  }, [I, g, null == t ? void 0 : t.id]), v = l.useCallback(() => {
+    (null == p ? void 0 : p.id) != null && (o.default.open(p.id, E.GuildSettingsSections.INTEGRATIONS), s.default.setSection(E.IntegrationSettingsSections.APPLICATION, null == t ? void 0 : t.id))
+  }, [null == t ? void 0 : t.id, null == p ? void 0 : p.id]), O = l.useCallback(() => {
+    d.default.open(E.UserSettingsSections.AUTHORIZED_APPS)
+  }, []), N = T === E.AppContext.POPOUT;
+  if (!(null == t ? void 0 : t.bot) || !A || N || !M && !m) return null;
+  let h = [];
+  return M && h.push((0, a.jsx)(u.MenuItem, {
     id: "manage-integration",
-    label: f.default.Messages.MANAGE_INTEGRATION,
-    action: b
-  }, "manage-integration")), T && m.push((0, l.jsx)(d.MenuItem, {
+    label: S.default.Messages.MANAGE_INTEGRATION,
+    action: v
+  }, "manage-integration")), m && h.push((0, a.jsx)(u.MenuItem, {
     id: "manage-authorized-app",
-    label: f.default.Messages.MANAGE_AUTHORIZED_APP,
-    action: h
-  }, "manage-authorized-app")), m
+    label: S.default.Messages.MANAGE_AUTHORIZED_APP,
+    action: O
+  }, "manage-authorized-app")), h
 }
