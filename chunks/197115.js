@@ -41,8 +41,8 @@ t.default = function(e) {
     premiumModalAnalyticsLocation: w,
     showIcon: B = !0,
     disableShine: k,
-    applicationId: V,
-    giftMessage: F,
+    applicationId: F,
+    giftMessage: V,
     overrideDisabledButtonText: x,
     shinyButtonClassName: H,
     ...Y
@@ -135,8 +135,8 @@ t.default = function(e) {
       onSubscribeModalClose: G,
       analyticsLocations: z,
       premiumModalAnalyticsLocation: w,
-      applicationId: V,
-      giftMessage: F
+      applicationId: F,
+      giftMessage: V
     })
   };
   if (M) return (0, i.jsxs)(o.Button, {

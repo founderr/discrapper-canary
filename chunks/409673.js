@@ -90,8 +90,8 @@ t.default = r.forwardRef(function(e, t) {
     forceSecondaryActions: w = !1,
     interactive: B = !0,
     enableSecondaryActions: k = !1,
-    suppressPlaySound: V,
-    onMouseEnter: F,
+    suppressPlaySound: F,
+    onMouseEnter: V,
     onSelectItem: x,
     analyticsLocations: H,
     buttonOverlay: Y = p.SoundButtonOverlay.PLAY,
@@ -159,11 +159,11 @@ t.default = r.forwardRef(function(e, t) {
       className: v.buttonOverlay,
       children: [(0, i.jsx)("div", {
         className: a()({
-          [v.buttonOverlayBackground]: !V
+          [v.buttonOverlayBackground]: !F
         })
       }), (0, i.jsxs)("div", {
         className: v.buttonOverlayActions,
-        children: [ec && eT, !V && !e_ && (0, i.jsx)(A.default, {
+        children: [ec && eT, !F && !e_ && (0, i.jsx)(A.default, {
           className: v.playIcon
         }), ec && eI()]
       })]
@@ -176,7 +176,7 @@ t.default = r.forwardRef(function(e, t) {
   }, [ea]), (0, i.jsxs)("li", {
     ref: t,
     className: v.soundButtonWrapper,
-    onMouseEnter: F,
+    onMouseEnter: V,
     children: [(0, i.jsxs)(_.ClickableContainer, {
       ...j,
       buttonProps: {
@@ -190,7 +190,7 @@ t.default = r.forwardRef(function(e, t) {
       }),
       className: a()(b, v.soundButton, {
         [v.playing]: $,
-        [v.hoverActiveBackground]: V,
+        [v.hoverActiveBackground]: F,
         [v.soundButtonInteractive]: B,
         [v.buttonDisabled]: !B && !w,
         [v.premiumDisabled]: e_ && !w,
@@ -204,7 +204,7 @@ t.default = r.forwardRef(function(e, t) {
           x();
           return
         }
-        V || Z(H)
+        F || Z(H)
       },
       onContextMenu: k && !e_ ? q : void 0,
       children: [(0, i.jsxs)("div", {

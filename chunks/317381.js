@@ -57,7 +57,7 @@ function k(e) {
   return null != e ? e : "0"
 }
 
-function V(e) {
+function F(e) {
   var t, n, i;
   let {
     guildId: r,
@@ -101,14 +101,14 @@ function V(e) {
   A.length > 0 && (M.push(v), P.push(v)), g.set(s, M), C.set(y, P)
 }
 
-function F(e) {
+function V(e) {
   e.embedded_activities.forEach(t => {
     let {
       channel_id: n,
       embedded_activity: i,
       connections: r
     } = t;
-    V({
+    F({
       guildId: e.id,
       channelId: n,
       applicationId: i.application_id,
@@ -299,13 +299,13 @@ let W = new j(a.default, {
     let {
       guilds: t
     } = e;
-    g.clear(), C.clear(), t.forEach(e => F(e))
+    g.clear(), C.clear(), t.forEach(e => V(e))
   },
   GUILD_CREATE: function(e) {
     let {
       guild: t
     } = e;
-    F(t)
+    V(t)
   },
   CALL_CREATE: function(e) {
     let {
@@ -319,7 +319,7 @@ let W = new j(a.default, {
           embedded_activity: n,
           connections: i
         } = e;
-        V({
+        F({
           guildId: null,
           channelId: t,
           applicationId: n.application_id,
@@ -385,7 +385,7 @@ let W = new j(a.default, {
       embeddedActivity: i,
       connections: r
     } = e;
-    V({
+    F({
       guildId: t,
       channelId: n,
       applicationId: i.application_id,
@@ -403,7 +403,7 @@ let W = new j(a.default, {
       location: i,
       participants: r
     } = e;
-    null != u.default.getChannel(i.channel_id) && V({
+    null != u.default.getChannel(i.channel_id) && F({
       guildId: i.guild_id,
       channelId: i.channel_id,
       applicationId: t,

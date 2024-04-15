@@ -60,11 +60,11 @@ let B = f.TriggerDebuggingAAExperiments.map(e => w(e)),
     description: "No description provided"
   };
 
-function V(e, t) {
+function F(e, t) {
   return e || B.includes(t)
 }
 
-function F(e) {
+function V(e) {
   var t;
   return ((null !== (t = e.flags) && void 0 !== t ? t : 0) & S.UserFlags.STAFF) === S.UserFlags.STAFF || null != e.personal_connection_id || !1
 }
@@ -174,7 +174,7 @@ function z(e) {
 }
 
 function X(e) {
-  !b && "CONNECTION_OPEN" === e.type && F(e.user) && (b = !0), v = {}, M = {}, y = {};
+  !b && "CONNECTION_OPEN" === e.type && V(e.user) && (b = !0), v = {}, M = {}, y = {};
   let t = "CONNECTION_OPEN" === e.type || null == e.fingerprint || e.fingerprint === c.default.getFingerprint(),
     {
       experiments: n,
@@ -194,7 +194,7 @@ function Q(e, t) {
       override: 0 === r,
       hashResult: null != a ? a : -1,
       aaMode: 1 === o,
-      triggerDebuggingEnabled: V(1 === l, t)
+      triggerDebuggingEnabled: F(1 === l, t)
     }
   }), null != t && t.forEach(e => {
     let [t, n, i, r, s, a, o, l, u, d] = e;
@@ -217,7 +217,7 @@ function Q(e, t) {
       holdoutName: null != o ? o : null,
       holdoutBucket: null != l ? l : null,
       aaMode: 1 === u,
-      triggerDebuggingEnabled: V(1 === d, t)
+      triggerDebuggingEnabled: F(1 === d, t)
     }
   })
 }
@@ -275,7 +275,7 @@ function J(e) {
     serializedExperimentStore: t,
     user: n
   } = e;
-  !b && F(n) && (b = !0), R = t.hasLoadedExperiments, C = t.trackedExposureExperiments, v = t.loadedUserExperiments, P = t.userExperimentOverrides, U = t.guildExperimentOverrides, M = Z(t.loadedGuildExperiments), y = {}
+  !b && V(n) && (b = !0), R = t.hasLoadedExperiments, C = t.trackedExposureExperiments, v = t.loadedUserExperiments, P = t.userExperimentOverrides, U = t.guildExperimentOverrides, M = Z(t.loadedGuildExperiments), y = {}
 }
 
 function $() {

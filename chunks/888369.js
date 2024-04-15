@@ -106,7 +106,7 @@ function k(e, t, n) {
   return !1
 }
 
-function V(e, t) {
+function F(e, t) {
   let n = U(e),
     i = v(n),
     r = G(n, i),
@@ -128,7 +128,7 @@ function V(e, t) {
   return k(n, r, i)
 }
 
-function F(e, t) {
+function V(e, t) {
   if (null == e) return;
   let n = v(e),
     i = G(e, n);
@@ -239,12 +239,12 @@ function z(e) {
       guild_id: n
     }
   } = e;
-  return V(n, [t])
+  return F(n, [t])
 }
 
 function X() {
   let e = c.default.getChannel(f.default.getChannelId());
-  return null != e && V(e.getGuildId(), [e.id])
+  return null != e && F(e.getGuildId(), [e.id])
 }
 
 function Q(e) {
@@ -259,7 +259,7 @@ function q(e) {
   let {
     channelId: t
   } = e, n = c.default.getChannel(t);
-  return null != n && V(n.getGuildId(), [n.id])
+  return null != n && F(n.getGuildId(), [n.id])
 }
 
 function Z(e) {
@@ -271,7 +271,7 @@ function Z(e) {
     let e = v(n.guild_id);
     if (((n.isThread() ? !o.default.hasJoined(n.id) || o.default.isMuted(n.id) : A.default.isGuildOrCategoryOrChannelMuted(n.guild_id, n.id)) || e.unreadByType[O.ReadStateTypes.CHANNEL]) && 0 === T.default.getMentionCount(t)) return !1
   }
-  return V(n.getGuildId(), [n.id])
+  return F(n.getGuildId(), [n.id])
 }
 
 function J(e) {
@@ -279,21 +279,21 @@ function J(e) {
     channelId: t,
     guildId: n
   } = e;
-  return n !== m.FAVORITES && null != t && V(n, [t])
+  return n !== m.FAVORITES && null != t && F(n, [t])
 }
 
 function $(e) {
   let {
     channel: t
   } = e;
-  return V(t.getGuildId(), [t.id])
+  return F(t.getGuildId(), [t.id])
 }
 
 function ee(e) {
   let {
     channels: t
   } = e;
-  return r()(t).groupBy(e => e.getGuildId()).reduce((e, t, n) => V(n, t.map(e => e.id)) || e, !1)
+  return r()(t).groupBy(e => e.getGuildId()).reduce((e, t, n) => F(n, t.map(e => e.id)) || e, !1)
 }
 
 function et(e) {
@@ -308,28 +308,28 @@ function et(e) {
   }).filter(e => null != c.default.getChannel(e)).groupBy(e => {
     var t;
     return null === (t = c.default.getChannel(e)) || void 0 === t ? void 0 : t.getGuildId()
-  }).reduce((e, t, n) => V(n, t) || e, !1)
+  }).reduce((e, t, n) => F(n, t) || e, !1)
 }
 
 function en(e) {
   let {
     channel: t
   } = e;
-  return V(t.getGuildId(), [t.id, t.parent_id])
+  return F(t.getGuildId(), [t.id, t.parent_id])
 }
 
 function ei(e) {
   let {
     guildScheduledEvent: t
   } = e;
-  return F(t.guild_id, O.ReadStateTypes.GUILD_EVENT)
+  return V(t.guild_id, O.ReadStateTypes.GUILD_EVENT)
 }
 
 function er(e) {
   let {
     guildScheduledEvent: t
   } = e;
-  return F(t.guild_id, O.ReadStateTypes.GUILD_EVENT)
+  return V(t.guild_id, O.ReadStateTypes.GUILD_EVENT)
 }
 
 function es(e) {
@@ -337,7 +337,7 @@ function es(e) {
     id: t,
     ackType: n
   } = e;
-  return F(t, n)
+  return V(t, n)
 }
 
 function ea(e) {
@@ -345,11 +345,11 @@ function ea(e) {
     id: t,
     guildId: n
   } = e;
-  return V(n, [t])
+  return F(n, [t])
 }
 
 function eo(e) {
-  return (0, l.doesThreadMembersActionAffectMe)(e) && V(e.guildId, [e.id])
+  return (0, l.doesThreadMembersActionAffectMe)(e) && F(e.guildId, [e.id])
 }
 
 function el(e) {
@@ -357,11 +357,11 @@ function el(e) {
     threads: t,
     guildId: n
   } = e;
-  return V(n, t.filter(e => o.default.hasJoined(e.id)).map(e => e.id))
+  return F(n, t.filter(e => o.default.hasJoined(e.id)).map(e => e.id))
 }
 
 function eu(e) {
-  return null != e.channels && V(e.guildId, e.channels.map(e => e.id))
+  return null != e.channels && F(e.guildId, e.channels.map(e => e.id))
 }
 
 function ed(e) {

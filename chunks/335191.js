@@ -92,7 +92,7 @@ function C(e) {
   }));
   let B = (0, u.useToken)(o.default.colors.INTERACTIVE_MUTED).hex(),
     k = (0, u.useToken)(o.default.colors.INTERACTIVE_ACTIVE).hex(),
-    V = S.verified ? (0, i.jsx)(f.default, {
+    F = S.verified ? (0, i.jsx)(f.default, {
       className: R.connectedAccountVerifiedIcon,
       color: null != s ? s : B,
       forcedIconColor: k,
@@ -129,7 +129,7 @@ function C(e) {
                 className: R.connectedAccountNameText,
                 children: S.name
               })
-            }), V]
+            }), F]
           }), d]
         }), null != P ? (0, i.jsx)(u.Text, {
           variant: "text-xs/normal",

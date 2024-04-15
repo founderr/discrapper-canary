@@ -1,87 +1,87 @@
 "use strict";
-t.r(n);
-var a = t("735250");
-t("470079");
-var l = t("481060"),
-  u = t("493683"),
-  i = t("239091"),
-  s = t("883385"),
-  r = t("108843"),
-  o = t("947440"),
-  d = t("100527"),
-  c = t("299206"),
-  f = t("895563"),
-  h = t("212205"),
-  M = t("62420"),
-  m = t("122074"),
-  _ = t("314897"),
-  E = t("858687"),
-  C = t("461535"),
-  p = t("776568"),
-  v = t("981631"),
-  g = t("689938");
-n.default = (0, r.default)((0, s.default)(function(e) {
+n.r(t);
+var a = n("735250");
+n("470079");
+var l = n("481060"),
+  u = n("493683"),
+  i = n("239091"),
+  s = n("883385"),
+  r = n("108843"),
+  o = n("947440"),
+  d = n("100527"),
+  c = n("299206"),
+  f = n("895563"),
+  M = n("212205"),
+  h = n("62420"),
+  _ = n("122074"),
+  m = n("314897"),
+  E = n("858687"),
+  C = n("461535"),
+  I = n("776568"),
+  g = n("981631"),
+  p = n("689938");
+t.default = (0, r.default)((0, s.default)(function(e) {
   let {
-    channel: n,
+    channel: t,
     selected: s,
     onSelect: r
-  } = e, d = n.isOwner(_.default.getId()), v = (0, C.default)(n), x = (0, p.default)(n), I = (0, m.default)(), A = (0, E.default)(n, s), N = (0, c.default)({
-    id: n.id,
-    label: g.default.Messages.COPY_ID_CHANNEL
-  }), T = (0, o.default)(n), j = (0, f.useAddToFavoritesItem)(n), G = (0, f.useRemoveFromFavoritesItem)(n), b = (0, h.default)(n), F = (0, M.default)(n);
-  return null == n || n.isManaged() ? null : (0, a.jsxs)(l.Menu, {
+  } = e, d = t.isOwner(m.default.getId()), g = (0, C.default)(t), x = (0, I.default)(t), v = (0, _.default)(), A = (0, E.default)(t, s), T = (0, c.default)({
+    id: t.id,
+    label: p.default.Messages.COPY_ID_CHANNEL
+  }), N = (0, o.default)(t), O = (0, f.useAddToFavoritesItem)(t), G = (0, f.useRemoveFromFavoritesItem)(t), j = (0, M.default)(t), b = (0, h.default)(t);
+  return null == t || t.isManaged() ? null : (0, a.jsxs)(l.Menu, {
     navId: "gdm-context",
-    "aria-label": g.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+    "aria-label": p.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
     onClose: i.closeContextMenu,
     onSelect: r,
     children: [(0, a.jsx)(l.MenuGroup, {
-      children: v
+      children: g
     }), (0, a.jsxs)(l.MenuGroup, {
-      children: [j, b, F]
+      children: [O, j, b]
     }), (0, a.jsxs)(l.MenuGroup, {
       children: [d ? (0, a.jsx)(l.MenuItem, {
         id: "instant-invites",
-        label: g.default.Messages.INSTANT_INVITES,
+        label: p.default.Messages.INSTANT_INVITES,
         action: () => (0, l.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([t.e("49237"), t.e("99387"), t.e("6901")]).then(t.bind(t, "892382"));
-          return t => (0, a.jsx)(e, {
-            channelId: n.id,
-            ...t
+          } = await Promise.all([n.e("49237"), n.e("99387"), n.e("6901")]).then(n.bind(n, "892382"));
+          return n => (0, a.jsx)(e, {
+            channelId: t.id,
+            ...n
           })
         })
       }) : null, (0, a.jsx)(l.MenuControlItem, {
         id: "change-icon",
         showDefaultFocus: !0,
-        control: (e, t) => (0, a.jsx)(l.MenuImageUploadControl, {
-          onChange: t => {
+        control: (e, n) => (0, a.jsx)(l.MenuImageUploadControl, {
+          onChange: n => {
             var a;
-            u.default.setIcon(n.id, t), null === (a = e.onClose) || void 0 === a || a.call(e)
+            u.default.setIcon(t.id, n), null === (a = e.onClose) || void 0 === a || a.call(e)
           },
           multiple: !1,
-          "aria-label": g.default.Messages.CHANGE_ICON,
+          "aria-label": p.default.Messages.CHANGE_ICON,
           ...e,
-          ref: t
+          ref: n
         }),
-        label: g.default.Messages.CHANGE_ICON
-      }), null != n.icon ? (0, a.jsx)(l.MenuItem, {
+        label: p.default.Messages.CHANGE_ICON
+      }), null != t.icon ? (0, a.jsx)(l.MenuItem, {
         id: "remove-icon",
-        label: g.default.Messages.REMOVE_ICON,
-        action: () => u.default.setIcon(n.id, null)
+        label: p.default.Messages.REMOVE_ICON,
+        action: () => u.default.setIcon(t.id, null)
       }) : null]
     }), (0, a.jsx)(l.MenuGroup, {
-      children: T
+      children: N
     }), (0, a.jsxs)(l.MenuGroup, {
-      children: [x, I]
+      children: [x, v]
     }), (0, a.jsx)(l.MenuGroup, {
       children: A
     }), (0, a.jsx)(l.MenuGroup, {
       children: G
     }), (0, a.jsx)(l.MenuGroup, {
-      children: N
+      children: T
     })]
   })
 }, {
-  object: v.AnalyticsObjects.CONTEXT_MENU
+  object: g.AnalyticsObjects.CONTEXT_MENU
 }), [d.default.CONTEXT_MENU, d.default.GROUP_DM_MENU])

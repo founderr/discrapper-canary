@@ -51,11 +51,11 @@ let u = r.memo(r.forwardRef((e, t) => {
       let t = "function" == typeof m ? m(e) : m;
       return null == t ? 0 : t
     }, [m]),
-    V = r.useCallback(e => {
+    F = r.useCallback(e => {
       let t = "function" == typeof A ? A(e) : A;
       return null == t ? 0 : t
     }, [A]),
-    F = r.useRef([]),
+    V = r.useRef([]),
     x = r.useRef([]),
     {
       totalHeight: H,
@@ -90,15 +90,15 @@ let u = r.memo(r.forwardRef((e, t) => {
             offset: s
           }, i = n, e++
         }
-        i += k(a) + V(a), s[a].offset.bottom = i
+        i += k(a) + F(a), s[a].offset.bottom = i
       }
       return {
         totalHeight: i += u[2],
         rowDescriptors: r,
         sectionDescriptors: s
       }
-    }, [w, k, B, V, u, T, f, G]);
-  F.current = j, x.current = Y;
+    }, [w, k, B, F, u, T, f, G]);
+  V.current = j, x.current = Y;
   let W = r.useCallback(() => {
     var e;
     let t = null === (e = P.current) || void 0 === e ? void 0 : e.getScrollerNode();
@@ -183,7 +183,7 @@ let u = r.memo(r.forwardRef((e, t) => {
           animate: n = !1,
           offset: i = 0
         } = t,
-        r = F.current[e];
+        r = V.current[e];
       null != r && window.requestAnimationFrame(() => {
         var t;
         null === (t = P.current) || void 0 === t || t.scrollTo({
@@ -196,7 +196,7 @@ let u = r.memo(r.forwardRef((e, t) => {
       height: M,
       totalHeight: H
     }),
-    getSectionDescriptors: () => F.current,
+    getSectionDescriptors: () => V.current,
     getRowDescriptors: () => x.current,
     getScrollerNode: () => {
       var e;
@@ -234,7 +234,7 @@ let u = r.memo(r.forwardRef((e, t) => {
       if (0 === l) continue;
       let u = B(r),
         I = k(r),
-        T = V(r);
+        T = F(r);
       if (o <= D) n = o;
       else if (o > D && a < e) {
         t = s;
@@ -263,7 +263,7 @@ let u = r.memo(r.forwardRef((e, t) => {
       visibleItems: i,
       listOffset: n
     }
-  }, [w, k, B, V, u, d, _, E, c, D, j, O, I, G, M]), Q = r.useMemo(() => {
+  }, [w, k, B, F, u, d, _, E, c, D, j, O, I, G, M]), Q = r.useMemo(() => {
     var e, t, n;
     return {
       top: X,

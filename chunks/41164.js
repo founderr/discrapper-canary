@@ -6,9 +6,9 @@ var n = a("481060"),
   l = a("230711"),
   s = a("181211"),
   o = a("188879"),
-  d = a("800530"),
-  r = a("981631"),
-  c = a("689938"),
+  r = a("800530"),
+  c = a("981631"),
+  d = a("689938"),
   u = a("653279"),
   m = a("170143");
 t.default = e => {
@@ -17,8 +17,8 @@ t.default = e => {
     onClose: a,
     classificationId: _,
     source: A
-  } = e, f = (0, s.default)(), h = () => {
-    a(), l.default.open(r.UserSettingsSections.PRIVACY_AND_SAFETY, d.SafetyHubView.ACCOUNT_STANDING)
+  } = e, h = (0, s.default)(), f = () => {
+    a(), l.default.open(c.UserSettingsSections.PRIVACY_AND_SAFETY, r.SafetyHubView.ACCOUNT_STANDING)
   };
   return (0, i.jsxs)(n.ModalRoot, {
     className: u.modalRoot,
@@ -35,18 +35,18 @@ t.default = e => {
       })]
     }), (0, i.jsx)(n.ModalContent, {
       className: u.modalContent,
-      children: f ? (0, i.jsx)(n.Spinner, {}) : (0, i.jsx)(o.default, {
+      children: h ? (0, i.jsx)(n.Spinner, {}) : (0, i.jsx)(o.default, {
         classificationId: _,
         source: A,
-        onError: h
+        onError: f
       })
     }), (0, i.jsx)(n.ModalFooter, {
       children: (0, i.jsx)(n.Button, {
         className: u.__invalid_button,
         type: "button",
         color: n.Button.Colors.BRAND,
-        onClick: h,
-        children: c.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2
+        onClick: f,
+        children: d.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2
       })
     })]
   })

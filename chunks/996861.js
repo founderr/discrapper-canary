@@ -19,10 +19,10 @@ n.r(t), n.d(t, {
     return R
   },
   goToThread: function() {
-    return P
+    return G
   },
   markMessageAsReminder: function() {
-    return G
+    return P
   },
   markMessageRemindersAsComplete: function() {
     return D
@@ -123,12 +123,12 @@ function b(e, t) {
   (0, d.openThreadSidebarForCreating)(e, t, "Message")
 }
 
-function P(e, t) {
+function G(e, t) {
   let n = f.default.getChannel(S.default.castMessageIdAsChannelId(t.id));
   null != n && (0, d.openThreadSidebarForViewing)(n)
 }
 
-function G(e, t) {
+function P(e, t) {
   (0, r.addMessageReminders)(t)
 }
 

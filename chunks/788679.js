@@ -19,7 +19,7 @@ function f(e) {
   let {
     channelId: t,
     messageId: n,
-    attachmentId: f,
+    mediaItemUrl: f,
     embedId: E,
     transitionState: M,
     onClose: m

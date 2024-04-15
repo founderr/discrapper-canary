@@ -8,17 +8,17 @@ var a = n("735250");
 n("470079");
 var u = n("481060"),
   i = n("117984"),
-  r = n("593214"),
-  l = n("362658"),
-  s = n("689938");
+  l = n("593214"),
+  s = n("362658"),
+  r = n("689938");
 
 function d(e) {
-  let t = (0, r.useFavoritesGuildSelected)(),
-    n = (0, r.useFavorite)(e.id),
-    d = (0, r.useFavoritesCategories)(),
+  let t = (0, l.useFavoritesGuildSelected)(),
+    n = (0, l.useFavorite)(e.id),
+    d = (0, l.useFavoritesCategories)(),
     {
       isFavoritesPerk: o
-    } = (0, l.useFavoritesServerExperiment)("useChannelMoveToCategory");
+    } = (0, s.useFavoritesServerExperiment)("useChannelMoveToCategory");
   if (__OVERLAY__ || !t || null == n || !o) return null;
   let [f, c] = function(e) {
     let t = [],
@@ -32,7 +32,7 @@ function d(e) {
   }
   return null == f && 0 === c.length ? null : (0, a.jsxs)(u.MenuItem, {
     id: "move-to-category",
-    label: s.default.Messages.MOVE_TO,
+    label: r.default.Messages.MOVE_TO,
     children: [null != f && (0, a.jsx)(u.MenuGroup, {
       children: (0, a.jsx)(u.MenuItem, {
         id: "favorite-uncategorized",

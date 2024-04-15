@@ -73,24 +73,24 @@ function _(e) {
     channelId: L,
     placeholder: D,
     placeholderVersion: P
-  } = e, [F, H] = i.useState(E), W = null != d && null == d.proxyURL, B = i.useCallback(() => H(!1), [H]), U = e => {
-    e.preventDefault(), e.stopPropagation(), null == M || M(!1), H(!0), W && (u.ComponentDispatch.dispatch(T.ComponentActions.VIDEO_EMBED_PLAYBACK_STARTED), u.ComponentDispatch.subscribeOnce(T.ComponentActions.VIDEO_EMBED_PLAYBACK_STARTED, B))
+  } = e, [H, F] = i.useState(E), U = null != d && null == d.proxyURL, W = i.useCallback(() => F(!1), [F]), B = e => {
+    e.preventDefault(), e.stopPropagation(), null == M || M(!1), F(!0), U && (u.ComponentDispatch.dispatch(T.ComponentActions.VIDEO_EMBED_PLAYBACK_STARTED), u.ComponentDispatch.subscribeOnce(T.ComponentActions.VIDEO_EMBED_PLAYBACK_STARTED, W))
   };
   i.useEffect(() => () => {
-    W && u.ComponentDispatch.unsubscribe(T.ComponentActions.VIDEO_EMBED_PLAYBACK_STARTED, B)
-  }, [W, B]);
+    U && u.ComponentDispatch.unsubscribe(T.ComponentActions.VIDEO_EMBED_PLAYBACK_STARTED, W)
+  }, [U, W]);
   let {
     width: G,
-    height: z
+    height: X
   } = o;
-  null != d && (G = d.width, z = d.height);
-  let X = (0, m.fit)({
+  null != d && (G = d.width, X = d.height);
+  let z = (0, m.fit)({
     width: G,
-    height: z,
+    height: X,
     maxWidth: n,
     maxHeight: s
   });
-  G = Math.max(X.width, 150), z = Math.max(X.height, 144);
+  G = Math.max(z.width, 150), X = Math.max(z.height, 144);
   let Y = (0, w.getBestEffortSrcUrl)(o);
   if (null != d && null != d.proxyURL) return (0, r.jsx)("div", {
     className: a()(N.embedVideo, t),
@@ -100,7 +100,7 @@ function _(e) {
       placeholder: D,
       placeholderVersion: P,
       width: G,
-      height: z,
+      height: X,
       responsive: p,
       autoPlay: E,
       onEnded: j,
@@ -117,19 +117,19 @@ function _(e) {
       onControlsShow: _
     })
   });
-  if (F && null != d) {
+  if (H && null != d) {
     let e;
     let i = !0 === I || "function" == typeof I && I(),
       o = {
         width: G,
-        height: z
+        height: X
       },
       u = {
         width: G,
-        height: z
+        height: X
       };
     if (p) {
-      let t = 0 !== G ? z / G : 1;
+      let t = 0 !== G ? X / G : 1;
       o = {
         maxWidth: n,
         maxHeight: s,
@@ -143,7 +143,7 @@ function _(e) {
         top: 0,
         left: 0,
         maxWidth: G,
-        maxHeight: z
+        maxHeight: X
       }
     }
     return (0, r.jsx)("div", {
@@ -157,7 +157,7 @@ function _(e) {
           src: d.url,
           style: e,
           width: G,
-          height: z,
+          height: X,
           allowFullScreen: h,
           autoMute: i
         })
@@ -170,26 +170,26 @@ function _(e) {
       maxWidth: G
     } : {
       width: G,
-      height: z
+      height: X
     },
     children: [f({
       src: Y,
       width: G,
-      height: z,
+      height: X,
       maxWidth: G,
-      maxHeight: z,
+      maxHeight: X,
       responsive: p,
       containerClassName: N.embedVideoImageComponent,
       imageClassName: N.embedVideoImageComponentInner,
       placeholder: D,
       placeholderVersion: P,
-      onClick: y && null != d ? U : null
+      onClick: y && null != d ? B : null
     }), (0, r.jsx)("div", {
       className: N.embedVideoActions,
       children: (0, r.jsx)("div", {
         className: N.centerContent,
         children: y ? (0, r.jsx)(v.default, {
-          onPlay: null != d ? U : null,
+          onPlay: null != d ? B : null,
           externalURL: R,
           renderLinkComponent: x,
           messageId: k,

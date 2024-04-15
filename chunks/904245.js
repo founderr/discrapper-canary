@@ -37,8 +37,8 @@ n("807092");
 var w = n("869765"),
   B = n("926491"),
   k = n("467798"),
-  V = n("346479"),
-  F = n("218543"),
+  F = n("346479"),
+  V = n("218543"),
   x = n("199902"),
   H = n("314897"),
   Y = n("592125");
@@ -332,7 +332,7 @@ let ef = {
           focus: u,
           truncate: c
         })) return;
-      F.default.fetchMessages.recordStart();
+      V.default.fetchMessages.recordStart();
       let f = null != a ? a : void 0;
       null == f && null != u && (f = {
         ...u
@@ -354,7 +354,7 @@ let ef = {
         },
         retries: 2,
         oldFormErrors: !0
-      }).then(e => (F.default.fetchMessages.recordEnd(), F.default.dispatchMessages.measure(() => {
+      }).then(e => (V.default.fetchMessages.recordEnd(), V.default.dispatchMessages.measure(() => {
         let s = e.body,
           l = null != n,
           u = null != i,
@@ -397,19 +397,19 @@ let ef = {
         a = l.default.getOrCreate(e),
         u = _.default.database();
       if (null == u || null == s || null != t || null != n) {
-        F.default.addLocalMessages(e, -1);
+        V.default.addLocalMessages(e, -1);
         return
       }
       if (a.ready && !a.cached) {
-        F.default.addLocalMessages(e, -2);
+        V.default.addLocalMessages(e, -2);
         return
       }
       let d = await (0, c.tryLoadAsync)(() => E.default.load(u, e, i));
       if (null == d) {
-        F.default.addLocalMessages(e, -3);
+        V.default.addLocalMessages(e, -3);
         return
       }
-      if (e_.log("fetched ".concat(d.messages.length, " messages from local database (channel_id: ").concat(e, ", remote_fetch_completed: ").concat(r.completed, ")")), F.default.addLocalMessages(e, d.messages.length), !r.completed && d.messages.length > 0) {
+      if (e_.log("fetched ".concat(d.messages.length, " messages from local database (channel_id: ").concat(e, ", remote_fetch_completed: ").concat(r.completed, ")")), V.default.addLocalMessages(e, d.messages.length), !r.completed && d.messages.length > 0) {
         let t = d.messages.length >= i && d.connectionId === A.default.lastTimeConnectedChanged();
         o.default.dispatch({
           type: "LOCAL_MESSAGES_LOADED",
@@ -629,18 +629,18 @@ let ef = {
         C = null !== (i = n.flags) && void 0 !== i ? i : 0,
         [M, w] = (0, k.default)(l);
       if (M && (l = w, C = (0, et.addFlag)(C, eo.MessageFlags.SUPPRESS_NOTIFICATIONS)), "" === l && null == f && null == h && null == R) return Promise.resolve();
-      let V = null != O ? eo.MessageTypes.REPLY : eo.MessageTypes.DEFAULT,
-        F = null !== (s = n.nonce) && void 0 !== s ? s : (0, D.createNonce)();
+      let F = null != O ? eo.MessageTypes.REPLY : eo.MessageTypes.DEFAULT,
+        V = null !== (s = n.nonce) && void 0 !== s ? s : (0, D.createNonce)();
       if (!1 !== n.eagerDispatch) {
         let t = (0, D.default)({
           channelId: e,
           content: l,
           tts: E,
-          type: V,
+          type: F,
           messageReference: O,
           allowedMentions: p,
           flags: 0 !== C ? C : void 0,
-          nonce: F,
+          nonce: V,
           poll: (0, U.createPollServerDataFromCreateRequest)(R)
         });
         (0, y.updateComboOnMessageSend)(e, t.id), null != h && (t.sticker_items = h.map(e => B.default.getStickerById(e)).filter(e => null != e)), eS.receiveMessage(e, t, !0, n)
@@ -658,7 +658,7 @@ let ef = {
         message: {
           channelId: e,
           content: l,
-          nonce: F,
+          nonce: V,
           tts: E,
           message_reference: O,
           allowed_mentions: p,
@@ -690,7 +690,7 @@ let ef = {
               queueSize: a
             },
             poll: R
-          }), g.default.recordMessageSendApiResponse(F), o.default.dispatch({
+          }), g.default.recordMessageSendApiResponse(V), o.default.dispatch({
             type: "SLOWMODE_RESET_COOLDOWN",
             slowmodeType: Z.SlowmodeType.SendMessage,
             channelId: e
@@ -808,9 +808,9 @@ let ef = {
                 type: "POGGERMODE_TEMPORARILY_DISABLED"
               }) : null != R || eS.sendClydeError(e, u.body.code)
             }
-            t ? eS.deleteMessage(e, F, !0) : (o.default.dispatch({
+            t ? eS.deleteMessage(e, V, !0) : (o.default.dispatch({
               type: "MESSAGE_SEND_FAILED",
-              messageId: F,
+              messageId: V,
               channelId: e
             }), (0, v.logMessageSendFailure)({
               failureCode: u.hasErr ? void 0 : u.status,
@@ -848,7 +848,7 @@ let ef = {
       let {
         content: i
       } = n;
-      await V.default.unarchiveThreadIfNecessary(e);
+      await F.default.unarchiveThreadIfNecessary(e);
       let r = function(e, t) {
           let n = W.default.getMessage(e, t);
           if (null == n || n.type !== eo.MessageTypes.REPLY) return;
@@ -892,7 +892,7 @@ let ef = {
       })
     },
     async suppressEmbeds(e, t) {
-      await V.default.unarchiveThreadIfNecessary(e), s.HTTP.patch({
+      await F.default.unarchiveThreadIfNecessary(e), s.HTTP.patch({
         url: eo.Endpoints.MESSAGE(e, t),
         body: {
           flags: eo.MessageFlags.SUPPRESS_EMBEDS
@@ -901,7 +901,7 @@ let ef = {
       })
     },
     async patchMessageAttachments(e, t, n) {
-      await V.default.unarchiveThreadIfNecessary(e), s.HTTP.patch({
+      await F.default.unarchiveThreadIfNecessary(e), s.HTTP.patch({
         url: eo.Endpoints.MESSAGE(e, t),
         body: {
           attachments: n
@@ -920,7 +920,7 @@ let ef = {
             a.AccessibilityAnnouncer.announce(ed.default.Messages.A11Y_ANNOUNCEMENT_MESSAGE_DELETED)
           })
         };
-      n ? i() : (await V.default.unarchiveThreadIfNecessary(e), s.HTTP.del({
+      n ? i() : (await F.default.unarchiveThreadIfNecessary(e), s.HTTP.del({
         url: eo.Endpoints.MESSAGE(e, t),
         oldFormErrors: !0
       }).then(() => {

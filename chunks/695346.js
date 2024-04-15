@@ -94,7 +94,7 @@ n.r(t), n.d(t, {
     return h
   },
   FriendSourceFlagsSetting: function() {
-    return F
+    return V
   },
   GifAutoPlay: function() {
     return eN
@@ -154,7 +154,7 @@ n.r(t), n.d(t, {
     return f
   },
   RestrictedGuildIds: function() {
-    return V
+    return F
   },
   RtcPanelShowVoiceStates: function() {
     return x
@@ -335,14 +335,14 @@ let M = (0, o.defineProtoSetting)("gameLibrary", "installShortcutDesktop", e => 
   value: e
 }));
 let k = (0, o.defineProtoSetting)("privacy", "defaultGuildsRestricted", e => null != e && e, e => e),
-  V = (0, o.defineProtoSetting)("privacy", "restrictedGuildIds", e => null != e ? e : [], e => e);
+  F = (0, o.defineProtoSetting)("privacy", "restrictedGuildIds", e => null != e ? e : [], e => e);
 (0, o.defineProtoSetting)("privacy", "friendDiscoveryFlags", e => {
   var t;
   return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : 0
 }, e => s.UInt32Value.create({
   value: e
 }));
-let F = (0, o.defineProtoSetting)("privacy", "friendSourceFlags", e => {
+let V = (0, o.defineProtoSetting)("privacy", "friendSourceFlags", e => {
     var t;
     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : d.AllFriendSourceFlags
   }, e => s.UInt32Value.create({

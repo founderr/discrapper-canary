@@ -10,7 +10,7 @@ let p = 0,
   m = [],
   g = [],
   f = !1;
-class y extends(a = c.default.Store) {
+class b extends(a = c.default.Store) {
   initialize() {
     this.waitFor(h.default)
   }
@@ -24,12 +24,12 @@ class y extends(a = c.default.Store) {
     return f
   }
 }
-o = "AnalyticsLogStore", (i = "displayName") in(n = y) ? Object.defineProperty(n, i, {
+o = "AnalyticsLogStore", (i = "displayName") in(n = b) ? Object.defineProperty(n, i, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : n[i] = o, t.default = new y(d.default, {
+}) : n[i] = o, t.default = new b(d.default, {
   TRACK: function(e) {
     let {
       event: t,

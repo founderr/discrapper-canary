@@ -8,18 +8,18 @@ var a = n("735250");
 n("470079");
 var u = n("442837"),
   i = n("481060"),
-  r = n("914010"),
-  l = n("362658"),
-  s = n("981631"),
+  l = n("914010"),
+  s = n("362658"),
+  r = n("981631"),
   d = n("689938");
 
 function o(e) {
-  let t = (0, u.useStateFromStores)([r.default], () => r.default.getGuildId()),
-    o = e.type === s.ChannelTypes.GUILD_CATEGORY,
+  let t = (0, u.useStateFromStores)([l.default], () => l.default.getGuildId()),
+    o = e.type === r.ChannelTypes.GUILD_CATEGORY,
     {
       isFavoritesPerk: f
-    } = (0, l.useFavoritesServerExperiment)("useChannelFavoriteSetNickname");
-  return __OVERLAY__ || t !== s.FAVORITES ? null : (0, a.jsx)(i.MenuItem, {
+    } = (0, s.useFavoritesServerExperiment)("useChannelFavoriteSetNickname");
+  return __OVERLAY__ || t !== r.FAVORITES ? null : (0, a.jsx)(i.MenuItem, {
     id: "set-channel-nickname",
     label: f && o ? d.default.Messages.FAVORITES_RENAME_CATEGORY : d.default.Messages.CHANGE_NICKNAME,
     action: function() {

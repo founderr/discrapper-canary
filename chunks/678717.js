@@ -18,8 +18,8 @@ var a = r("735250"),
   m = r("465670"),
   g = r("54017"),
   f = r("502568"),
-  y = r("31336"),
-  b = r("19759"),
+  b = r("31336"),
+  y = r("19759"),
   x = r("432877");
 r("381996");
 var k = r("392750"),
@@ -50,7 +50,7 @@ function U(e) {
     onResize: r,
     onResizeEnd: n
   } = e, i = (0, d.default)({
-    minDimension: b.DEVTOOLS_SIDEBAR_MIN_WIDTH,
+    minDimension: y.DEVTOOLS_SIDEBAR_MIN_WIDTH,
     resizableDomNodeRef: t,
     onElementResize: r,
     onElementResizeEnd: n,
@@ -146,9 +146,9 @@ function G() {
       selectedTabId: o
     } = (0, D.default)({
       tabs: t,
-      initialSelectedTabId: null !== (e = b.default.lastOpenTabId) && void 0 !== e ? e : void 0,
+      initialSelectedTabId: null !== (e = y.default.lastOpenTabId) && void 0 !== e ? e : void 0,
       onChangeTab: e => {
-        (0, y.updateDevToolsSettings)({
+        (0, b.updateDevToolsSettings)({
           lastOpenTabId: e
         })
       }
@@ -165,7 +165,7 @@ function G() {
       toolbar: (0, a.jsx)(f.default.Icon, {
         icon: m.default,
         tooltip: B.default.Messages.CLOSE,
-        onClick: y.toggleDisplayDevTools
+        onClick: b.toggleDisplayDevTools
       }),
       children: [(0, a.jsx)(f.default.Icon, {
         icon: g.default,
@@ -181,9 +181,9 @@ function G() {
 
 function z() {
   let e = n.useRef(null),
-    t = (0, s.useStateFromStores)([b.default], () => b.default.sidebarWidth),
+    t = (0, s.useStateFromStores)([y.default], () => y.default.sidebarWidth),
     [r, i] = n.useState(null),
-    l = n.useCallback(e => (0, y.updateDevToolsSettings)({
+    l = n.useCallback(e => (0, b.updateDevToolsSettings)({
       sidebarWidth: e
     }), []);
   return (n.useEffect(() => {
@@ -192,7 +192,7 @@ function z() {
     ref: e,
     className: o()(F.container),
     style: {
-      minWidth: b.DEVTOOLS_SIDEBAR_MIN_WIDTH,
+      minWidth: y.DEVTOOLS_SIDEBAR_MIN_WIDTH,
       width: r
     },
     children: [(0, a.jsx)(U, {
@@ -207,7 +207,7 @@ function z() {
 }
 
 function Y() {
-  let e = (0, s.useStateFromStores)([b.default], () => b.default.displayTools);
+  let e = (0, s.useStateFromStores)([y.default], () => y.default.displayTools);
   return e ? (0, a.jsx)("div", {
     className: o()(F.container, F.mobileContainerExpanded),
     children: (0, a.jsx)("div", {
@@ -217,7 +217,7 @@ function Y() {
   }) : (0, a.jsx)("div", {
     className: F.container,
     children: (0, a.jsx)(c.Clickable, {
-      onClick: y.toggleDisplayDevTools,
+      onClick: b.toggleDisplayDevTools,
       children: (0, a.jsxs)(f.default, {
         className: o()(H.headerBar, F.mobileHeaderCollapsed),
         toolbar: (0, a.jsx)(p.default, {

@@ -49,13 +49,13 @@ n.r(t), n.d(t, {
     return U
   },
   getValidWeekdays: function() {
-    return F
+    return V
   },
   hasScheduleChanges: function() {
     return j
   },
   isValidRecurrence: function() {
-    return V
+    return F
   },
   recurrenceOptionToRecurrenceRule: function() {
     return H
@@ -236,7 +236,7 @@ function k(e) {
   return null != n ? u.default.fromTimestamp(Math.floor(n.getTime() / l.default.Millis.SECOND) * l.default.Millis.SECOND) : null
 }
 
-function V(e, t) {
+function F(e, t) {
   if (null == t || null == e) return !1;
   let n = new Date(e.start),
     i = new Date(u.default.extractTimestamp(t));
@@ -251,7 +251,7 @@ function V(e, t) {
   }
 }
 
-function F(e) {
+function V(e) {
   let t = v(e.toDate().getDay()),
     n = v(e.toDate().getUTCDay());
   return n.weekday - t.weekday > 0 ? A : n.weekday - t.weekday < 0 ? S : f
@@ -265,7 +265,7 @@ function x(e) {
 
 function H(e, t) {
   let n = function(e, t) {
-    let n = F(t),
+    let n = V(t),
       i = x(t),
       r = v(t.toDate().getUTCDay()),
       s = Math.ceil(t.toDate().getUTCDate() / 7),
@@ -351,7 +351,7 @@ function Y(e, t) {
     case a.RRule.MONTHLY:
       return d.RecurrenceOptions.MONTHLY;
     case a.RRule.DAILY:
-      if ((0, i.isEqual)(n.options.byweekday, F(e))) return d.RecurrenceOptions.WEEKDAY_ONLY;
+      if ((0, i.isEqual)(n.options.byweekday, V(e))) return d.RecurrenceOptions.WEEKDAY_ONLY;
       if ((0, i.isEqual)(n.options.byweekday, x(e))) return d.RecurrenceOptions.WEEKEND_ONLY;
       return d.RecurrenceOptions.NONE;
     default:

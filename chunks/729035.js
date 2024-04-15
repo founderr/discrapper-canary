@@ -12,9 +12,9 @@ var a, n, i = r("735250"),
   m = r("532901"),
   g = r("378720"),
   f = r("496019"),
-  y = r("633353");
+  b = r("633353");
 
-function b(e, t, r) {
+function y(e, t, r) {
   return t in e ? Object.defineProperty(e, t, {
     value: r,
     enumerable: !0,
@@ -103,7 +103,7 @@ let v = {
       react(e, t, a) {
         let n = () => (0, i.jsx)("pre", {
           children: (0, i.jsx)("code", {
-            className: s()(y.scrollbarGhostHairline, "hljs"),
+            className: s()(b.scrollbarGhostHairline, "hljs"),
             children: k(e)
           })
         }, a.key);
@@ -117,7 +117,7 @@ let v = {
               let r = t.highlight(e.lang, e.content, !0);
               return null == r ? n() : (0, i.jsx)("pre", {
                 children: (0, i.jsx)("code", {
-                  className: s()(y.scrollbarGhostHairline, "hljs", r.language),
+                  className: s()(b.scrollbarGhostHairline, "hljs", r.language),
                   dangerouslySetInnerHTML: {
                     __html: r.value
                   }
@@ -149,7 +149,7 @@ class j extends(n = o.PureComponent) {
     })
   }
 }
-b(j, "rules", v), b(j, "defaultProps", {
+y(j, "rules", v), y(j, "defaultProps", {
   parser: C,
   output: S
 }), t.default = j

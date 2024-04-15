@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return T
+    return x
   }
 });
 var i = s("735250");
@@ -22,7 +22,7 @@ var n = s("392711"),
   m = s("981631"),
   E = s("689938"),
   _ = s("19560");
-let x = e => {
+let T = e => {
   let {
     channel: {
       type: t
@@ -31,7 +31,7 @@ let x = e => {
   return (0, c.isGuildSelectableChannelType)(t) || t === m.ChannelTypes.GUILD_CATEGORY
 };
 
-function T(e) {
+function x(e) {
   var t;
   let {
     guildId: s,
@@ -39,18 +39,18 @@ function T(e) {
   } = e;
   let {
     channels: c,
-    categories: T
+    categories: x
   } = (t = s, (0, l.useStateFromStoresObject)([S.default], () => {
     let e = S.default.getCategories(t);
     return {
-      channels: (0, o.default)(e._categories, e, x),
+      channels: (0, o.default)(e._categories, e, T),
       categories: e
     }
   })), p = a()(c).filter(e => {
     let {
       channel: t
     } = e;
-    return t.type !== m.ChannelTypes.GUILD_CATEGORY || null != T[t.id] && T[t.id].length > 0
+    return t.type !== m.ChannelTypes.GUILD_CATEGORY || null != x[t.id] && x[t.id].length > 0
   }).map(e => {
     let {
       channel: t

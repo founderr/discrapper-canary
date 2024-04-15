@@ -17,16 +17,16 @@ t.default = r.forwardRef(function(e, t) {
     body: n,
     header: s,
     artClassName: v,
-    headerClassName: p,
-    contentClassName: m,
-    tryItText: I,
-    dismissText: N,
-    onTryFeature: g,
+    headerClassName: m,
+    contentClassName: p,
+    tryItText: g,
+    dismissText: I,
+    onTryFeature: N,
     onClose: E,
-    className: H,
+    className: S,
     inlineArt: D = !1,
-    isPremiumFeature: x = !1,
-    shouldUseHorizontalButtons: S = !1,
+    isPremiumFeature: H = !1,
+    shouldUseHorizontalButtons: x = !1,
     showGIFTag: L = !1,
     dismissibleContent: T,
     position: w = "top",
@@ -34,12 +34,12 @@ t.default = r.forwardRef(function(e, t) {
     art: R,
     isPremiumEarlyAccess: V = !1,
     maxWidth: M = 280
-  } = e, j = S ? i.Button.Sizes.LARGE : i.Button.Sizes.MAX, [P, _] = r.useState(!1), {
+  } = e, j = x ? i.Button.Sizes.LARGE : i.Button.Sizes.MAX, [P, _] = r.useState(!1), {
     ref: y,
-    width: k
+    width: b
   } = (0, u.default)();
 
-  function O(e) {
+  function k(e) {
     (0, o.markDismissibleContentAsDismissed)(T, {
       dismissAction: e
     })
@@ -48,15 +48,15 @@ t.default = r.forwardRef(function(e, t) {
     var e, t;
     let n = (null !== (t = null === (e = y.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
     !P && n > M && _(!0)
-  }, [P, k, y, M]), r.useEffect(() => {
+  }, [P, b, y, M]), r.useEffect(() => {
     (0, o.requestMarkDismissibleContentAsShown)(T)
   }, [T]), (0, l.jsx)("div", {
-    className: H,
+    className: S,
     ref: t,
     children: (0, l.jsxs)("div", {
-      className: a()(C.content, m, {
+      className: a()(C.content, p, {
         [C.contentNoArt]: null == v || D,
-        [C.contentPremium]: x || V
+        [C.contentPremium]: H || V
       }),
       children: [(0, l.jsxs)("div", {
         className: a()(v, D ? C.artInline : C.artAbsolute),
@@ -66,10 +66,10 @@ t.default = r.forwardRef(function(e, t) {
       }), (0, l.jsxs)("div", {
         className: C.body,
         children: [(0, l.jsxs)(i.Heading, {
-          className: a()(x ? C.headerWithPremiumIcon : C.header, p),
+          className: a()(H ? C.headerWithPremiumIcon : C.header, m),
           variant: "heading-md/bold",
           color: "always-white",
-          children: [x && !V ? (0, l.jsx)(d.default, {
+          children: [H && !V ? (0, l.jsx)(d.default, {
             className: C.premiumIcon
           }) : null, V ? (0, l.jsxs)(i.Text, {
             color: "always-white",
@@ -89,32 +89,32 @@ t.default = r.forwardRef(function(e, t) {
         }) : n]
       }), (0, l.jsx)("div", {
         ref: y,
-        className: P || !S ? C.buttonContainerVertical : C.buttonContainerHorizontal,
-        children: null != g ? (0, l.jsxs)(l.Fragment, {
+        className: P || !x ? C.buttonContainerVertical : C.buttonContainerHorizontal,
+        children: null != N ? (0, l.jsxs)(l.Fragment, {
           children: [(0, l.jsx)(i.Button, {
             className: C.button,
             size: j,
             onClick: e => {
-              null == E || E(e), g(e), O(f.ContentDismissActionType.PRIMARY)
+              null == E || E(e), N(e), k(f.ContentDismissActionType.PRIMARY)
             },
-            color: x || V ? i.Button.Colors.BRAND : i.Button.Colors.WHITE,
-            look: x || V ? i.Button.Looks.INVERTED : i.Button.Looks.FILLED,
-            children: null != I ? I : h.default.Messages.EDUCATION_NEW_FEATURE_TRY_IT
+            color: H || V ? i.Button.Colors.BRAND : i.Button.Colors.WHITE,
+            look: H || V ? i.Button.Looks.INVERTED : i.Button.Looks.FILLED,
+            children: null != g ? g : h.default.Messages.EDUCATION_NEW_FEATURE_TRY_IT
           }), (0, l.jsx)(i.Button, {
             className: C.button,
             size: j,
             onClick: e => {
-              null == E || E(e), O(f.ContentDismissActionType.DISMISS)
+              null == E || E(e), k(f.ContentDismissActionType.DISMISS)
             },
-            color: x || V ? i.Button.Colors.WHITE : i.Button.Colors.BRAND,
-            look: x || V ? i.Button.Looks.LINK : i.Button.Looks.FILLED,
-            children: null != N ? N : h.default.Messages.EDUCATION_NEW_FEATURE_DISMISS
+            color: H || V ? i.Button.Colors.WHITE : i.Button.Colors.BRAND,
+            look: H || V ? i.Button.Looks.LINK : i.Button.Looks.FILLED,
+            children: null != I ? I : h.default.Messages.EDUCATION_NEW_FEATURE_DISMISS
           })]
         }) : (0, l.jsx)(i.Button, {
           className: C.button,
           size: i.Button.Sizes.MAX,
           onClick: e => {
-            null == E || E(e), O(f.ContentDismissActionType.PRIMARY)
+            null == E || E(e), k(f.ContentDismissActionType.PRIMARY)
           },
           color: i.Button.Colors.WHITE,
           children: h.default.Messages.EDUCATION_NEW_FEATURE_CONFIRM

@@ -130,11 +130,11 @@ t.default = {
       B = l().parserFor(w)(T.whitespaceSanitized, M),
       k = p.whitespaceSanitized,
       {
-        target: V
+        target: F
       } = D;
     return {
       content: B,
-      target: V,
+      target: F,
       title: k
     }
   }

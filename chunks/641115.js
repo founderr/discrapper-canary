@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return b
+    return U
   }
 }), l("47120");
 var a = l("735250"),
@@ -19,8 +19,8 @@ var a = l("735250"),
   E = l("351742"),
   _ = l("386542"),
   C = l("193878"),
-  N = l("594174"),
-  g = l("746124"),
+  g = l("594174"),
+  N = l("746124"),
   h = l("285952"),
   x = l("466111"),
   I = l("74538"),
@@ -65,7 +65,7 @@ function G() {
   })
 }
 
-function U(e) {
+function b(e) {
   let t, l, {
       type: s,
       selected: n,
@@ -130,7 +130,7 @@ function U(e) {
   }
 }
 
-function b(e) {
+function U(e) {
   let {
     onClose: t,
     selectedPreset: l,
@@ -139,10 +139,10 @@ function b(e) {
     onResolutionChange: r,
     onFPSChange: x,
     onPresetChange: G,
-    targetGuildPremiumTier: b,
+    targetGuildPremiumTier: U,
     captureDeviceSelected: F
-  } = e, k = (0, d.useStateFromStores)([N.default], () => {
-    let e = N.default.getCurrentUser();
+  } = e, k = (0, d.useStateFromStores)([g.default], () => {
+    let e = g.default.getCurrentUser();
     return u()(null != e, "StreamSettings: user cannot be undefined"), e
   }), y = I.default.canStreamQuality(I.StreamQuality.MID, k), {
     location: w
@@ -167,11 +167,11 @@ function b(e) {
   }), K = W && C.GradientVariants.includes(z), [Y, Q] = s.useState(!1), Z = F ? R.GoLiveDeviceResolutionButtons : R.ApplicationStreamResolutionButtons, J = {
     ...w,
     section: v.AnalyticsSections.STREAM_SETTINGS
-  }, X = (0, a.jsx)(g.default, {
-    buttons: Z.map(e => U({
+  }, q = (0, a.jsx)(N.default, {
+    buttons: Z.map(e => b({
       type: e,
       selected: e.value === n,
-      needsPremium: !(0, A.default)(l, e.value, i, k, b),
+      needsPremium: !(0, A.default)(l, e.value, i, k, U),
       needsDemo: V && e.value !== R.ApplicationStreamResolutions.RESOLUTION_720,
       analyticsLocation: J,
       useGradient: K,
@@ -179,11 +179,11 @@ function b(e) {
       onClose: t,
       setIsHovering: Q
     }))
-  }), q = (0, a.jsx)(g.default, {
-    buttons: R.ApplicationStreamFPSButtons.map(e => U({
+  }), X = (0, a.jsx)(N.default, {
+    buttons: R.ApplicationStreamFPSButtons.map(e => b({
       type: e,
       selected: e.value === i,
-      needsPremium: !(0, A.default)(l, n, e.value, k, b),
+      needsPremium: !(0, A.default)(l, n, e.value, k, U),
       needsDemo: V && e.value === R.ApplicationStreamFPS.FPS_60,
       analyticsLocation: J,
       useGradient: K,
@@ -224,12 +224,12 @@ function b(e) {
         title: M.default.Messages.STREAM_RESOLUTION,
         className: O.settingsGroup,
         titleClassName: j.formItemTitleSlim,
-        children: X
+        children: q
       }), (0, a.jsx)(c.FormItem, {
         title: M.default.Messages.SCREENSHARE_FRAME_RATE,
         className: O.settingsGroup,
         titleClassName: j.formItemTitleSlim,
-        children: q
+        children: X
       })]
     }), H ? (0, a.jsx)(T.default, {
       onClose: t,

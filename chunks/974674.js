@@ -438,8 +438,8 @@ function L(e) {
   }), [P, S, g, l, c]), {
     avatarCutoutX: B,
     avatarCutoutY: k,
-    avatarCutoutWidth: V,
-    avatarCutoutHeight: F,
+    avatarCutoutWidth: F,
+    avatarCutoutHeight: V,
     avatarCutoutRadius: x,
     fill: H,
     ...Y
@@ -474,8 +474,8 @@ function L(e) {
           color: "black",
           x: B,
           y: k,
-          width: V,
-          height: F,
+          width: F,
+          height: V,
           rx: x,
           ry: x
         })]

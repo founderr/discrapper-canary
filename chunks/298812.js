@@ -21,12 +21,12 @@ var i = s("735250"),
   m = s("324067"),
   E = s("699516"),
   _ = s("9156"),
-  x = s("594174"),
-  T = s("823379"),
+  T = s("594174"),
+  x = s("823379"),
   p = s("621600"),
   C = s("423589"),
-  O = s("221259"),
-  I = s("113449"),
+  I = s("221259"),
+  O = s("113449"),
   M = s("686660"),
   v = s("958648"),
   L = s("569658"),
@@ -42,7 +42,7 @@ function b(e) {
     ignoreMute: !0,
     ignoreUnreadSetting: !1,
     ignoreNotificationSetting: !1
-  }).map(e => g.default.getChannel(e)).filter(T.isNotNullish));
+  }).map(e => g.default.getChannel(e)).filter(x.isNotNullish));
   (0, v.default)(n, () => s());
   let a = (0, r.useStateFromStores)([m.default], () => m.default.getCategories(t)),
     l = n.map((e, t) => (0, i.jsxs)("div", {
@@ -63,7 +63,7 @@ function b(e) {
         null != s && c.default.updateChannelOverrideSettings(t, e, {
           muted: !1,
           message_notifications: _.default.resolvedMessageNotifications(s),
-          flags: (0, I.withChannelUnreadFlags)(_.default.getChannelIdFlags(s.guild_id, s.id), _.default.resolveUnreadSetting(s))
+          flags: (0, O.withChannelUnreadFlags)(_.default.getChannelIdFlags(s.guild_id, s.id), _.default.resolveUnreadSetting(s))
         }, p.NotificationLabels.OverrideCreated)
       }
     }), l.length > 0 && (0, i.jsxs)("div", {
@@ -108,16 +108,16 @@ function U(e) {
   let {
     channel: t,
     categories: s
-  } = e, a = (0, d.useToken)(o.default.unsafe_rawColors.GREEN_360).hex(), c = (0, r.useStateFromStores)([g.default], () => g.default.getChannel(null == t ? void 0 : t.parent_id)), m = (0, O.useChannelPresetSettings)(t), [_, T] = n.useState(!1);
+  } = e, a = (0, d.useToken)(o.default.unsafe_rawColors.GREEN_360).hex(), c = (0, r.useStateFromStores)([g.default], () => g.default.getChannel(null == t ? void 0 : t.parent_id)), m = (0, I.useChannelPresetSettings)(t), [_, x] = n.useState(!1);
   if (null == t) return null;
   let p = A.default.Messages.NO_CATEGORY,
     C = (0, f.getChannelIconComponent)(t);
   t.type === j.ChannelTypes.GUILD_CATEGORY && null != t.guild_id && "" !== t.guild_id ? p = A.default.Messages.NUM_CHANNELS.format({
     num: null != s[t.id] ? s[t.id].length : 0
   }) : null != c && (p = A.default.Messages.IN_CATEGORY.format({
-    categoryName: (0, S.computeChannelName)(c, x.default, E.default)
+    categoryName: (0, S.computeChannelName)(c, T.default, E.default)
   }));
-  let I = _ ? M.Presets.CUSTOM : m.preset;
+  let O = _ ? M.Presets.CUSTOM : m.preset;
   return (0, i.jsx)("div", {
     children: (0, i.jsxs)("div", {
       className: l()(R.row, R.channel),
@@ -131,7 +131,7 @@ function U(e) {
           children: [(0, i.jsx)(d.Text, {
             variant: "text-md/semibold",
             className: R.modColor,
-            children: (0, S.computeChannelName)(t, x.default, E.default)
+            children: (0, S.computeChannelName)(t, T.default, E.default)
           }), (0, i.jsx)(d.Text, {
             variant: "text-xs/medium",
             className: R.modColor,
@@ -145,8 +145,8 @@ function U(e) {
             color: a,
             shape: d.Checkbox.Shapes.ROUND,
             type: d.Checkbox.Types.INVERTED,
-            value: I === M.Presets.ALL_MESSAGES,
-            onChange: () => ((0, O.updateChannelPreset)(t.guild_id, t.id, M.Presets.ALL_MESSAGES), T(!1))
+            value: O === M.Presets.ALL_MESSAGES,
+            onChange: () => ((0, I.updateChannelPreset)(t.guild_id, t.id, M.Presets.ALL_MESSAGES), x(!1))
           })
         })
       }), (0, i.jsx)("div", {
@@ -156,8 +156,8 @@ function U(e) {
             color: a,
             shape: d.Checkbox.Shapes.ROUND,
             type: d.Checkbox.Types.INVERTED,
-            value: I === M.Presets.MENTIONS,
-            onChange: () => ((0, O.updateChannelPreset)(t.guild_id, t.id, M.Presets.MENTIONS), T(!1))
+            value: O === M.Presets.MENTIONS,
+            onChange: () => ((0, I.updateChannelPreset)(t.guild_id, t.id, M.Presets.MENTIONS), x(!1))
           })
         })
       }), (0, i.jsx)("div", {
@@ -167,8 +167,8 @@ function U(e) {
             color: a,
             shape: d.Checkbox.Shapes.ROUND,
             type: d.Checkbox.Types.INVERTED,
-            value: I === M.Presets.NOTHING,
-            onChange: () => ((0, O.updateChannelPreset)(t.guild_id, t.id, M.Presets.NOTHING), T(!1))
+            value: O === M.Presets.NOTHING,
+            onChange: () => ((0, I.updateChannelPreset)(t.guild_id, t.id, M.Presets.NOTHING), x(!1))
           })
         })
       }), (0, i.jsx)("div", {
@@ -181,18 +181,18 @@ function U(e) {
                 "aria-label": A.default.Messages.NOTIFICATION_SETTINGS_CHANNELS_CUSTOM_MENU_ARIA_LABEL,
                 onClose: () => {},
                 onSelect: () => {},
-                children: (0, N.useChannelNotificationCustomSettingsItem)(t, () => T(!1))
+                children: (0, N.useChannelNotificationCustomSettingsItem)(t, () => x(!1))
               }))
             },
             color: a,
             shape: d.Checkbox.Shapes.ROUND,
             type: d.Checkbox.Types.INVERTED,
-            value: I === M.Presets.CUSTOM,
-            onChange: () => T(!0)
+            value: O === M.Presets.CUSTOM,
+            onChange: () => x(!0)
           })
         })
       }), (0, i.jsx)(h.default, {
-        onClick: () => (0, O.updateChannelToGuildDefault)(t.guild_id, t.id),
+        onClick: () => (0, I.updateChannelToGuildDefault)(t.guild_id, t.id),
         className: R.removeButton
       })]
     })

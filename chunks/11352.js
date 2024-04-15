@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   CustomNotificationSoundExperiment: function() {
-    return a
+    return i
   }
 });
-let a = (0, n("818083").createExperiment)({
+let i = (0, n("818083").createExperiment)({
   kind: "user",
   id: "2024-04_custom_notification_sound_web",
   label: "Custom Notification Sound for Desktop",

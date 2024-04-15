@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   ChannelNotificationSettings: function() {
-    return x
+    return T
   }
 }), s("47120");
 var i = s("735250"),
@@ -29,7 +29,7 @@ function _(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class x extends n.PureComponent {
+class T extends n.PureComponent {
   highlight() {
     this.setState({
       highlight: !0

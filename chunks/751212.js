@@ -19,12 +19,12 @@ var i, n, a = s("735250"),
   m = s("798140"),
   E = s("740504"),
   _ = s("933557"),
-  x = s("471445"),
-  T = s("423589"),
+  T = s("471445"),
+  x = s("423589"),
   p = s("74888"),
   C = s("444899"),
-  O = s("11352"),
-  I = s("610617"),
+  I = s("11352"),
+  O = s("610617"),
   M = s("777861"),
   v = s("131704"),
   L = s("592125"),
@@ -37,8 +37,8 @@ var i, n, a = s("735250"),
   F = s("285952"),
   D = s("353872"),
   P = s("823379"),
-  H = s("63063"),
-  y = s("621600"),
+  y = s("63063"),
+  H = s("621600"),
   w = s("981631"),
   k = s("969943"),
   B = s("689938"),
@@ -58,7 +58,7 @@ class W extends l.PureComponent {
       overrides: s,
       channelOverridesProp: i
     } = t;
-    return e.channelOverrides !== i ? (s = new Set(s), (0, T.filterOverrides)(e.channelOverrides).forEach(e => s.add(e)), {
+    return e.channelOverrides !== i ? (s = new Set(s), (0, x.filterOverrides)(e.channelOverrides).forEach(e => s.add(e)), {
       overrides: s,
       channelOverridesProp: e.channelOverrides
     }) : null
@@ -85,7 +85,7 @@ class W extends l.PureComponent {
       let {
         overrides: e
       } = this.state;
-      e = new Set(e), (0, T.filterOverrides)(this.props.channelOverrides).forEach(t => e.add(t)), this.setState({
+      e = new Set(e), (0, x.filterOverrides)(this.props.channelOverrides).forEach(t => e.add(t)), this.setState({
         overrides: e
       })
     }
@@ -145,7 +145,7 @@ class W extends l.PureComponent {
       children: [(0, a.jsx)(f.FormSwitch, {
         hideBorder: !0,
         value: t,
-        onChange: e => this.handleCheckboxChange("muted", e, y.NotificationLabel.muted(e)),
+        onChange: e => this.handleCheckboxChange("muted", e, H.NotificationLabel.muted(e)),
         note: B.default.Messages.FORM_LABEL_MUTE_SERVER_DESCRIPTION,
         children: B.default.Messages.FORM_LABEL_MUTE_SERVER.format({
           name: i.name
@@ -166,7 +166,7 @@ class W extends l.PureComponent {
           })]
         }), (0, a.jsx)(f.SingleSelect, {
           className: Y.muteTimeSelector,
-          options: (0, T.getMuteTimeOptions)(),
+          options: (0, x.getMuteTimeOptions)(),
           value: n,
           onChange: this.handleSelectMuteTime
         })]
@@ -188,7 +188,7 @@ class W extends l.PureComponent {
         children: (0, a.jsx)(f.RadioGroup, {
           disabled: s,
           value: t,
-          onChange: e => this.handleRadioChange("message_notifications", e, y.NotificationLabel.notifications(e.value)),
+          onChange: e => this.handleRadioChange("message_notifications", e, H.NotificationLabel.notifications(e.value)),
           options: (e = i, [{
             name: B.default.Messages.FORM_LABEL_ALL_MESSAGES,
             value: w.UserNotificationSettings.ALL_MESSAGES,
@@ -217,18 +217,18 @@ class W extends l.PureComponent {
     return (0, a.jsxs)(f.FormItem, {
       className: Y.largeSpacing,
       children: [(0, a.jsx)(f.FormSwitch, {
-        onChange: e => this.handleCheckboxChange("suppress_everyone", e, y.NotificationLabel.suppressEveryone(e)),
+        onChange: e => this.handleCheckboxChange("suppress_everyone", e, H.NotificationLabel.suppressEveryone(e)),
         value: e,
         children: B.default.Messages.FORM_LABEL_SUPPRESS_EVERYONE.format()
       }), (0, a.jsx)(f.FormSwitch, {
-        onChange: e => this.handleCheckboxChange("suppress_roles", e, y.NotificationLabel.suppressRoles(e)),
+        onChange: e => this.handleCheckboxChange("suppress_roles", e, H.NotificationLabel.suppressRoles(e)),
         value: t,
         children: B.default.Messages.FORM_LABEL_SUPPRESS_ROLES
       }), (0, a.jsx)(f.FormSwitch, {
         onChange: e => {
           g.default.updateGuildNotificationSettings(r, {
             notify_highlights: e ? w.HighlightSettings.DISABLED : w.HighlightSettings.ENABLED
-          }, y.NotificationLabel.highlights(!e))
+          }, H.NotificationLabel.highlights(!e))
         },
         value: i || l === w.HighlightSettings.DISABLED,
         disabled: i,
@@ -239,7 +239,7 @@ class W extends l.PureComponent {
           }), (0, a.jsx)("div", {
             className: Y.highlightsLink,
             children: (0, a.jsx)(f.Anchor, {
-              href: H.default.getArticleURL(w.HelpdeskArticles.HIGHLIGHTS),
+              href: y.default.getArticleURL(w.HelpdeskArticles.HIGHLIGHTS),
               children: B.default.Messages.HIGHLIGHTS_LEARN_MORE
             })
           })]
@@ -249,12 +249,12 @@ class W extends l.PureComponent {
         })
       }), (0, a.jsx)(f.FormSwitch, {
         value: n,
-        onChange: e => this.handleCheckboxChange("mute_scheduled_events", e, y.NotificationLabel.mutedEvents(e)),
+        onChange: e => this.handleCheckboxChange("mute_scheduled_events", e, H.NotificationLabel.mutedEvents(e)),
         children: B.default.Messages.FORM_LABEL_MUTE_SCHEDULED_EVENTS
       }), (0, a.jsx)(f.FormSwitch, {
         value: !i && s,
         disabled: i,
-        onChange: e => this.handleCheckboxChange("mobile_push", e, y.NotificationLabel.mobilePush(e)),
+        onChange: e => this.handleCheckboxChange("mobile_push", e, H.NotificationLabel.mobilePush(e)),
         children: B.default.Messages.FORM_LABEL_MOBILE_PUSH_NOTIFICATIONS
       })]
     })
@@ -264,7 +264,7 @@ class W extends l.PureComponent {
       shouldShowCustomNotificationSounds: e,
       onClose: t
     } = this.props;
-    if (e) return (0, a.jsx)(I.default, {
+    if (e) return (0, a.jsx)(O.default, {
       onClose: t
     })
   }
@@ -385,7 +385,7 @@ class W extends l.PureComponent {
   }
   constructor(...e) {
     super(...e), V(this, "_scroller", null), V(this, "_channelRefs", {}), V(this, "state", {
-      overrides: new Set((0, T.filterOverrides)(this.props.channelOverrides)),
+      overrides: new Set((0, x.filterOverrides)(this.props.channelOverrides)),
       channelOverridesProp: this.props.channelOverrides,
       lastSelected: null
     }), V(this, "setScrollerRef", e => {
@@ -407,7 +407,7 @@ class W extends l.PureComponent {
           selected_time_window: e,
           end_time: t
         }
-      }, y.NotificationLabels.Muted)
+      }, H.NotificationLabels.Muted)
     }), V(this, "handleDeleteOverride", e => {
       let {
         overrides: t
@@ -421,7 +421,7 @@ class W extends l.PureComponent {
       let s = L.default.getChannel(t.parent_id),
         i = null != s ? s.name : null;
       return (0, a.jsx)(D.default, {
-        icon: (0, x.getChannelIconComponent)(t),
+        icon: (0, T.getChannelIconComponent)(t),
         title: e.label,
         subtitle: i
       })
@@ -458,7 +458,7 @@ function z(e) {
       }),
       notifyHighlights: U.default.getNotifyHighlights(t)
     }
-  }), n = O.CustomNotificationSoundExperiment.useExperiment({
+  }), n = I.CustomNotificationSoundExperiment.useExperiment({
     location: "connected_notification_settings"
   }, {
     autoTrackExposure: !0
@@ -472,7 +472,7 @@ function z(e) {
 }
 
 function X(e) {
-  let t = (0, T.useShouldUseNewNotificationSystem)("NotificationSettingsModal") ? p.default : z;
+  let t = (0, x.useShouldUseNewNotificationSystem)("NotificationSettingsModal") ? p.default : z;
   return (0, a.jsx)(t, {
     ...e
   })

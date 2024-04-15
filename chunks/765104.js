@@ -33,10 +33,10 @@ let y = {},
   B = [],
   k = [];
 
-function V() {
+function F() {
   B = m.default.getProps().results.filter(e => e.type === A.AutocompleterResultTypes.TEXT_CHANNEL && 0 === e.record.type).map(e => e.record.id)
 }
-class F extends(l = T.default.PersistedStore) {
+class V extends(l = T.default.PersistedStore) {
   getState() {
     return {
       shouldShowTopicsBar: i
@@ -44,7 +44,7 @@ class F extends(l = T.default.PersistedStore) {
   }
   initialize(e) {
     var t;
-    i = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t, this.waitFor(N.default, g.default, R.default, O.default, h.default), this.syncWith([m.default], V)
+    i = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t, this.waitFor(N.default, g.default, R.default, O.default, h.default), this.syncWith([m.default], F)
   }
   allSummaries() {
     return y
@@ -120,13 +120,13 @@ class F extends(l = T.default.PersistedStore) {
     return s
   }
 }
-c = "SummaryStore", (_ = "persistKey") in(d = F) ? Object.defineProperty(d, _, {
+c = "SummaryStore", (_ = "persistKey") in(d = V) ? Object.defineProperty(d, _, {
   value: c,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : d[_] = c;
-let x = new F(f.default, {
+let x = new V(f.default, {
   CONNECTION_OPEN: () => !1,
   CHANNEL_SELECT(e) {
     let {

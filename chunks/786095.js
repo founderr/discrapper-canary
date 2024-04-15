@@ -60,13 +60,13 @@ function p(e, t) {
         }
       };
       await p(i, y), R(i)
-    }, P = (0, a.jsx)(a.Fragment, {
+    }, G = (0, a.jsx)(a.Fragment, {
       children: (0, a.jsx)(l.MenuItem, {
         id: "automod-rules-loading",
         label: g.default.Messages.LOADING
       })
     });
-  return !_ && (P = (0, a.jsxs)(a.Fragment, {
+  return !_ && (G = (0, a.jsxs)(a.Fragment, {
     children: [O && (0, a.jsx)(l.MenuItem, {
       id: "add-first-rule",
       label: g.default.Messages.GUILD_SETTINGS_ACTION_FILTER_AUTOMOD_RULE_CREATE,
@@ -114,6 +114,6 @@ function p(e, t) {
     onFocus: () => {
       !h && (A(!0), T())
     },
-    children: P
+    children: G
   })
 }

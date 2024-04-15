@@ -19,8 +19,8 @@ var a = l("735250"),
   E = l("594190"),
   _ = l("695346"),
   C = l("494620"),
-  N = l("592125"),
-  g = l("650774"),
+  g = l("592125"),
+  N = l("650774"),
   h = l("430824"),
   x = l("131951"),
   I = l("944486"),
@@ -36,8 +36,8 @@ var a = l("735250"),
   D = l("823379"),
   P = l("63063"),
   G = l("358085"),
-  U = l("653255"),
-  b = l("989941"),
+  b = l("653255"),
+  U = l("989941"),
   F = l("618407"),
   k = l("586290"),
   y = l("233037"),
@@ -58,7 +58,7 @@ function J(e) {
     selectSource: l,
     sourceChanged: s,
     onChangeSource: n
-  } = e, i = (0, r.useStateFromStores)([E.default, p.default], () => (0, G.isWindows)() ? (0, b.default)(E.default, p.default) : null), o = (0, r.useStateFromStores)([d.default], () => (null == i ? void 0 : i.id) != null ? d.default.getApplication(i.id) : null), c = (0, r.useStateFromStores)([E.default], () => E.default.getRunningGames()), f = (0, r.useStateFromStoresArray)([d.default], () => c.map(e => null != e.id ? d.default.getApplication(e.id) : null).filter(D.isNotNullish), [c]), m = null;
+  } = e, i = (0, r.useStateFromStores)([E.default, p.default], () => (0, G.isWindows)() ? (0, U.default)(E.default, p.default) : null), o = (0, r.useStateFromStores)([d.default], () => (null == i ? void 0 : i.id) != null ? d.default.getApplication(i.id) : null), c = (0, r.useStateFromStores)([E.default], () => E.default.getRunningGames()), f = (0, r.useStateFromStoresArray)([d.default], () => c.map(e => null != e.id ? d.default.getApplication(e.id) : null).filter(D.isNotNullish), [c]), m = null;
   if (null != t ? m = t.name : null != i && (m = i.name), null == m) return null;
   let S = (0, H.default)(i, t, c),
     _ = s ? f.find(e => {
@@ -93,7 +93,7 @@ function J(e) {
   })
 }
 
-function X(e) {
+function q(e) {
   let {
     onChange: t,
     guildId: l
@@ -121,7 +121,7 @@ function X(e) {
   })
 }
 
-function q(e) {
+function X(e) {
   let {
     text: t
   } = e;
@@ -141,9 +141,9 @@ function q(e) {
 function $(e) {
   let {
     guildId: t
-  } = e, l = (0, r.useStateFromStores)([g.default], () => {
+  } = e, l = (0, r.useStateFromStores)([N.default], () => {
     var e;
-    return null !== (e = g.default.getMemberCount(t)) && void 0 !== e ? e : 0
+    return null !== (e = N.default.getMemberCount(t)) && void 0 !== e ? e : 0
   }), n = _.NotifyFriendsOnGoLive.useSetting(), o = s.useCallback((e, t) => {
     _.NotifyFriendsOnGoLive.updateSetting(t), O.default.track(z.AnalyticEvents.NOTIFY_STREAM_SETTING_UPDATE, {
       value: t
@@ -194,7 +194,7 @@ function et(e) {
     sourceChanged: d,
     selectedGuildId: E,
     targetGuildPremiumTier: _,
-    selectSource: g,
+    selectSource: N,
     selectGuild: h,
     sound: p,
     onClose: T,
@@ -205,9 +205,9 @@ function et(e) {
     onChangeSource: j,
     onChangeAudioDevice: O,
     onChangeGuild: D,
-    onChangeSound: b,
+    onChangeSound: U,
     isAnimationDone: B
-  } = e, H = (0, r.useStateFromStores)([I.default, N.default], () => N.default.getChannel(I.default.getVoiceChannelId())), W = (0, r.useStateFromStores)([U.default], () => U.default.GPUDriversOutdated), Z = (0, r.useStateFromStores)([U.default], () => U.default.problematicGPUDriver), et = (0, r.useStateFromStores)([A.default], () => A.default.getCurrentUser()), el = (0, f.useEnableClips)(), ea = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
+  } = e, H = (0, r.useStateFromStores)([I.default, g.default], () => g.default.getChannel(I.default.getVoiceChannelId())), W = (0, r.useStateFromStores)([b.default], () => b.default.GPUDriversOutdated), Z = (0, r.useStateFromStores)([b.default], () => b.default.problematicGPUDriver), et = (0, r.useStateFromStores)([A.default], () => A.default.getCurrentUser()), el = (0, f.useEnableClips)(), ea = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
     autoTrackExposure: !el
   }), es = (0, F.default)();
   null != t && t.id.startsWith("screen") && !x.default.supportsScreenSoundshare() && (es = Y.default.Messages.GO_LIVE_SCREENSHARE_NO_SOUND);
@@ -226,17 +226,17 @@ function et(e) {
       onChangeAudioDevice: O
     }) : (0, a.jsxs)("div", {
       children: [(0, a.jsx)(J, {
-        selectSource: g,
+        selectSource: N,
         sourceChanged: d,
         onChangeSource: j,
         selectedSource: t
-      }), null != es ? (0, a.jsx)(q, {
+      }), null != es ? (0, a.jsx)(X, {
         text: es
       }) : null, (0, G.isWindows)() && null != t && t.id.startsWith("screen") && null == es ? (0, a.jsx)(ee, {
         enabled: p,
-        onChange: b
+        onChange: U
       }) : null]
-    }), h && null != E ? (0, a.jsx)(X, {
+    }), h && null != E ? (0, a.jsx)(q, {
       guildId: E,
       onChange: D
     }) : null, null != H ? (0, a.jsx)(w.default, {
@@ -247,9 +247,9 @@ function et(e) {
       onChangeSelectedChannelId: M
     }), null != E && er && eu ? (0, a.jsx)($, {
       guildId: E
-    }) : null, W ? (0, a.jsx)(q, {
+    }) : null, W ? (0, a.jsx)(X, {
       text: Y.default.Messages.GO_LIVE_VIDEO_DRIVERS_OUTDATED
-    }) : null, Z ? (0, a.jsx)(q, {
+    }) : null, Z ? (0, a.jsx)(X, {
       text: Y.default.Messages.PROBLEMATIC_GPU_DRIVER_DETECTED.format({
         helpCenterLink: P.default.getArticleURL(z.HelpdeskArticles.NVIDIA_DRIVER_ISSUES)
       })
