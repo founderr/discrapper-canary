@@ -87,7 +87,8 @@ t.default = e => {
         className: E.badgeContainer,
         entry: n,
         textColor: "always-white",
-        iconColor: i.tokens.colors.WHITE
+        iconColor: i.tokens.colors.WHITE,
+        forPopout: !0
       })]
     }), (0, a.jsx)(m.PopoutInteractionsContainer, {
       children: (0, a.jsx)(m.PopoutReactor, {
