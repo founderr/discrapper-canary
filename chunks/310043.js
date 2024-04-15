@@ -1,263 +1,230 @@
 "use strict";
-a.r(t), a("47120"), a("789020");
-var n = a("735250"),
-  l = a("470079"),
-  i = a("120356"),
-  s = a.n(i),
-  r = a("512722"),
-  o = a.n(r),
-  d = a("392711"),
-  c = a.n(d),
-  u = a("442837"),
-  h = a("543651"),
-  m = a("592125"),
-  A = a("941797"),
-  _ = a("630388"),
-  g = a("269675"),
-  I = a("768760"),
-  M = a("981631"),
-  p = a("902920");
-let E = Math.round((I.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
-  f = Math.round((I.MEDIA_MOSAIC_MAX_WIDTH - 4) / 2),
-  C = Math.round((I.MEDIA_MOSAIC_MAX_HEIGHT - 4) / 2),
-  x = Math.round(2 * (I.MEDIA_MOSAIC_MAX_WIDTH - 4) / 3),
-  v = x / 2,
-  y = e => {
-    let {
-      mediaAttachments: t,
-      getAttachmentKind: a,
-      footer: l
-    } = e;
-    null != l && o()(1 === t.length, "footer only gets applied to single attachments");
-    let i = t.length;
-    if (1 === i) return (0, n.jsx)(T, {
-      attachmentsForLayout: t,
-      getAttachmentKind: a,
-      isSingleImage: !0,
-      footer: l
-    });
-    if (2 === i) return (0, n.jsx)(S, {
-      attachmentsForLayout: t,
-      getAttachmentKind: a
-    });
-    if (3 === i) return (0, n.jsx)(N, {
-      attachmentsForLayout: t,
-      getAttachmentKind: a
-    });
-    if (4 === i) return (0, n.jsx)(O, {
-      attachmentsForLayout: t,
-      getAttachmentKind: a
-    });
-    let s = i % 3;
-    return (0, n.jsxs)(n.Fragment, {
-      children: [1 === s && (0, n.jsx)(T, {
-        attachmentsForLayout: t.slice(0, s),
-        getAttachmentKind: a
-      }), 2 === s && (0, n.jsx)(S, {
-        attachmentsForLayout: t.slice(0, s),
-        getAttachmentKind: a
-      }), 0 === s ? (0, n.jsx)(j, {
-        attachmentsForLayout: t,
-        getAttachmentKind: a
-      }) : (0, n.jsx)(j, {
-        attachmentsForLayout: t.slice(s),
-        getAttachmentKind: a
-      })]
-    })
-  },
-  T = e => {
-    let {
-      attachmentsForLayout: t,
-      getAttachmentKind: a,
-      isSingleImage: l,
-      footer: i
-    } = e, r = t[0];
-    return (0, n.jsx)("div", {
-      className: s()(p.oneByOneGrid, {
-        [p.oneByOneGridSingle]: l,
-        [p.oneByOneGridMosaic]: !l,
-        [p.hasFooter]: null != i
-      }),
-      children: (0, n.jsx)(F, {
-        props: r,
-        attachmentKind: a(r.attachment.id),
-        useFullWidth: !l,
-        isSingleItem: !0,
-        footer: i
-      })
-    })
-  },
-  S = e => {
-    let {
-      attachmentsForLayout: t,
-      getAttachmentKind: a
-    } = e;
-    return (0, n.jsx)("div", {
-      className: p.oneByTwoGrid,
-      children: t.map(e => (0, n.jsx)("div", {
-        className: p.oneByTwoGridItem,
-        children: (0, n.jsx)(F, {
-          props: e,
-          attachmentKind: a(e.attachment.id),
-          maxWidth: f,
-          maxHeight: f
-        })
-      }, e.attachment.id))
-    })
-  },
-  N = e => {
-    let {
-      attachmentsForLayout: t,
-      getAttachmentKind: a
-    } = e;
-    return (0, n.jsxs)("div", {
-      className: s()(p.oneByTwoGrid, p.oneByTwoLayoutThreeGrid),
-      children: [(0, n.jsx)("div", {
-        className: p.oneByTwoSoloItem,
-        children: (0, n.jsx)(F, {
-          props: t[0],
-          attachmentKind: a(t[0].attachment.id),
-          maxWidth: x
-        })
-      }), (0, n.jsx)("div", {
-        className: p.oneByTwoDuoItem,
-        children: (0, n.jsx)("div", {
-          className: p.twoByOneGrid,
-          children: t.splice(1).map(e => (0, n.jsx)("div", {
-            className: p.twoByOneGridItem,
-            children: (0, n.jsx)(F, {
-              props: e,
-              attachmentKind: a(e.attachment.id),
-              maxWidth: v,
-              maxHeight: C
-            })
-          }, e.attachment.id))
-        })
-      })]
-    })
-  },
-  O = e => {
-    let {
-      attachmentsForLayout: t,
-      getAttachmentKind: a
-    } = e;
-    return (0, n.jsx)("div", {
-      className: p.twoByTwoGrid,
-      children: t.map(e => (0, n.jsx)(F, {
-        props: e,
-        attachmentKind: a(e.attachment.id),
-        maxWidth: f,
-        maxHeight: C
-      }, e.attachment.id))
-    })
-  },
-  j = e => {
-    let {
-      attachmentsForLayout: t,
-      getAttachmentKind: a
-    } = e;
-    return (0, n.jsx)("div", {
-      className: p.threeByThreeGrid,
-      children: t.map(e => (0, n.jsx)(F, {
-        props: e,
-        attachmentKind: a(e.attachment.id),
-        maxWidth: E,
-        maxHeight: E
-      }, e.attachment.id))
-    })
-  },
-  D = e => ({
-    className: s()(e, p.attachmentContentContainer),
-    imgContainerClassName: p.lazyImgContainer,
-    imgClassName: p.lazyImg
-  }),
-  L = e => ({
-    className: s()(e, p.lazyImg)
-  }),
-  F = e => {
-    let {
-      props: t,
-      attachmentKind: a,
-      maxWidth: l = I.MEDIA_MOSAIC_MAX_WIDTH,
-      maxHeight: i = I.MEDIA_MOSAIC_MAX_HEIGHT,
-      useFullWidth: s = !0,
-      isSingleItem: r = !1,
-      footer: o
-    } = e, d = {
-      ...t,
-      ..."IMAGE" === a && D(t.className),
-      ..."VIDEO" === a && L(t.className),
-      mediaLayoutType: I.MediaLayoutType.MOSAIC,
-      maxWidth: l,
-      maxHeight: i,
-      useFullWidth: s,
-      isSingleMosaicItem: r
-    };
-    return (0, n.jsx)(A.GIFAccessoryContext.Provider, {
-      value: t.gifFavoriteButton,
-      children: (0, n.jsx)(g.default, {
-        ...d,
-        footer: o
-      })
-    })
-  };
-t.default = e => {
+n.r(t), n("47120");
+var i = n("735250"),
+  l = n("470079"),
+  a = n("120356"),
+  o = n.n(a),
+  s = n("512722"),
+  r = n.n(s),
+  u = n("392711"),
+  d = n.n(u),
+  c = n("941797"),
+  m = n("69750"),
+  h = n("768760"),
+  I = n("902920");
+let f = Math.round((h.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
+  M = Math.round((h.MEDIA_MOSAIC_MAX_WIDTH - 4) / 2),
+  p = Math.round((h.MEDIA_MOSAIC_MAX_HEIGHT - 4) / 2),
+  g = Math.round(2 * (h.MEDIA_MOSAIC_MAX_WIDTH - 4) / 3),
+  _ = g / 2;
+
+function C(e) {
   let {
-    attachments: t
-  } = e, a = t[0].message.channel_id, i = (0, u.useStateFromStores)([m.default], () => {
-    var e;
-    return null === (e = m.default.getBasicChannel(a)) || void 0 === e ? void 0 : e.guild_id
-  }), s = l.useMemo(() => new Map(t.map(e => [e.attachment.id, (0, g.getAttachmentKind)(e.attachment, e.inlineMedia)])), [t]), r = l.useCallback(e => {
-    var t;
-    return null !== (t = s.get(e)) && void 0 !== t ? t : "INVALID"
-  }, [s]), [o, d] = l.useMemo(() => c().partition(t, e => {
-    var t;
-    return (0, _.hasFlag)(null !== (t = e.attachment.flags) && void 0 !== t ? t : 0, M.MessageAttachmentFlags.IS_CLIP)
-  }), [t]), [A, I] = l.useMemo(() => c().partition(d, e => (0, g.isMediaAttachment)(r(e.attachment.id))), [d, r]);
-  return (0, n.jsxs)(n.Fragment, {
-    children: [A.length > 0 && (0, n.jsx)("div", {
-      className: p.mediaAttachmentsContainer,
-      children: (0, n.jsx)(y, {
-        mediaAttachments: A,
-        getAttachmentKind: r
+    visualMediaItems: t,
+    footer: n
+  } = e;
+  null != n && r()(1 === t.length, "footer only gets applied to single items");
+  let l = t.length;
+  if (1 === l) return (0, i.jsx)(A, {
+    itemsForLayout: t,
+    isSingleImage: !0,
+    footer: n
+  });
+  if (2 === l) return (0, i.jsx)(E, {
+    itemsForLayout: t
+  });
+  if (3 === l) return (0, i.jsx)(x, {
+    itemsForLayout: t
+  });
+  if (4 === l) return (0, i.jsx)(y, {
+    itemsForLayout: t
+  });
+  let a = l % 3;
+  return (0, i.jsxs)(i.Fragment, {
+    children: [1 === a && (0, i.jsx)(A, {
+      itemsForLayout: t.slice(0, a)
+    }), 2 === a && (0, i.jsx)(E, {
+      itemsForLayout: t.slice(0, a)
+    }), 0 === a ? (0, i.jsx)(T, {
+      itemsForLayout: t
+    }) : (0, i.jsx)(T, {
+      itemsForLayout: t.slice(a)
+    })]
+  })
+}
+
+function A(e) {
+  let {
+    itemsForLayout: t,
+    isSingleImage: n,
+    footer: l
+  } = e, a = t[0];
+  return (0, i.jsx)("div", {
+    className: o()(I.oneByOneGrid, {
+      [I.oneByOneGridSingle]: n,
+      [I.oneByOneGridMosaic]: !n,
+      [I.hasFooter]: null != l
+    }),
+    children: (0, i.jsx)(S, {
+      props: a,
+      useFullWidth: !n,
+      isSingleItem: !0,
+      footer: l
+    })
+  })
+}
+
+function E(e) {
+  let {
+    itemsForLayout: t
+  } = e;
+  return (0, i.jsx)("div", {
+    className: I.oneByTwoGrid,
+    children: t.map(e => (0, i.jsx)("div", {
+      className: I.oneByTwoGridItem,
+      children: (0, i.jsx)(S, {
+        props: e,
+        maxWidth: M,
+        maxHeight: M
       })
-    }), I.length > 0 && (0, n.jsx)("div", {
-      className: p.nonMediaAttachmentsContainer,
-      children: I.map(e => (0, n.jsx)("div", {
-        className: p.nonMediaAttachmentItem,
-        children: (0, n.jsx)(F, {
-          props: e,
-          attachmentKind: r(e.attachment.id)
-        })
-      }, e.attachment.id))
-    }), o.length > 0 && o.map(e => {
-      var t;
-      let {
-        id: a,
-        clip_created_at: l,
-        clip_participants: s,
-        title: o,
-        application: d
-      } = e.attachment;
-      return (0, n.jsx)("div", {
-        className: p.mediaAttachmentsContainer,
-        children: (0, n.jsx)(y, {
-          mediaAttachments: [e],
-          getAttachmentKind: r,
-          footer: (0, n.jsx)(h.default, {
-            createdAt: null != l ? Date.parse(l) : void 0,
-            participantIds: null !== (t = null == s ? void 0 : s.map(e => {
-              let {
-                id: t
-              } = e;
-              return t
-            })) && void 0 !== t ? t : [],
-            applicationId: null == d ? void 0 : d.id,
-            title: o,
-            guildId: i
+    }, e.item.uniqueId))
+  })
+}
+
+function x(e) {
+  let {
+    itemsForLayout: t
+  } = e;
+  return (0, i.jsxs)("div", {
+    className: o()(I.oneByTwoGrid, I.oneByTwoLayoutThreeGrid),
+    children: [(0, i.jsx)("div", {
+      className: I.oneByTwoSoloItem,
+      children: (0, i.jsx)(S, {
+        props: t[0],
+        maxWidth: g
+      })
+    }), (0, i.jsx)("div", {
+      className: I.oneByTwoDuoItem,
+      children: (0, i.jsx)("div", {
+        className: I.twoByOneGrid,
+        children: t.splice(1).map(e => (0, i.jsx)("div", {
+          className: I.twoByOneGridItem,
+          children: (0, i.jsx)(S, {
+            props: e,
+            maxWidth: _,
+            maxHeight: p
           })
+        }, e.item.uniqueId))
+      })
+    })]
+  })
+}
+
+function y(e) {
+  let {
+    itemsForLayout: t
+  } = e;
+  return (0, i.jsx)("div", {
+    className: I.twoByTwoGrid,
+    children: t.map(e => (0, i.jsx)(S, {
+      props: e,
+      maxWidth: M,
+      maxHeight: p
+    }, e.item.uniqueId))
+  })
+}
+
+function T(e) {
+  let {
+    itemsForLayout: t
+  } = e;
+  return (0, i.jsx)("div", {
+    className: I.threeByThreeGrid,
+    children: t.map(e => (0, i.jsx)(S, {
+      props: e,
+      maxWidth: f,
+      maxHeight: f
+    }, e.item.uniqueId))
+  })
+}
+let v = e => ({
+    className: o()(e, I.itemContentContainer),
+    imgContainerClassName: I.lazyImgContainer,
+    imgClassName: I.lazyImg
+  }),
+  N = e => ({
+    className: o()(e, I.lazyImg)
+  });
+
+function S(e) {
+  let {
+    props: t,
+    maxWidth: n = h.MEDIA_MOSAIC_MAX_WIDTH,
+    maxHeight: l = h.MEDIA_MOSAIC_MAX_HEIGHT,
+    useFullWidth: a = !0,
+    isSingleItem: o = !1,
+    footer: s
+  } = e, r = t.item.type, u = {
+    ...t,
+    ..."IMAGE" === r && v(t.className),
+    ..."VIDEO" === r && N(t.className),
+    mediaLayoutType: h.MediaLayoutType.MOSAIC,
+    maxWidth: n,
+    maxHeight: l,
+    useFullWidth: a,
+    isSingleMosaicItem: o
+  };
+  return (0, i.jsx)(c.GIFAccessoryContext.Provider, {
+    value: t.gifFavoriteButton,
+    children: (0, i.jsx)(m.default, {
+      ...u,
+      footer: s
+    })
+  })
+}
+t.default = function(e) {
+  let {
+    items: t
+  } = e, {
+    groupableVisualMediaItems: n,
+    nonGroupableVisualMediaItems: a,
+    nonVisualMediaItems: o
+  } = function(e) {
+    return l.useMemo(() => {
+      let [t, n] = d().partition(e, e => (0, m.isVisualMedia)(e.item.type)), [i, l] = d().partition(t, e => (0, m.isGroupableMedia)(e.item.type));
+      return {
+        groupableVisualMediaItems: i,
+        nonGroupableVisualMediaItems: l,
+        nonVisualMediaItems: n
+      }
+    }, [e])
+  }(t);
+  return (0, i.jsxs)(i.Fragment, {
+    children: [n.length > 0 && (0, i.jsx)("div", {
+      className: I.visualMediaItemContainer,
+      children: (0, i.jsx)(C, {
+        visualMediaItems: n
+      })
+    }), a.length > 0 && a.map(e => {
+      let t = e.renderMosaicItemFooter({
+        item: e.item,
+        message: e.message
+      });
+      return (0, i.jsx)("div", {
+        className: I.visualMediaItemContainer,
+        children: (0, i.jsx)(C, {
+          visualMediaItems: [e],
+          footer: t
         })
-      }, a)
+      }, e.item.uniqueId)
+    }), o.length > 0 && (0, i.jsx)("div", {
+      className: I.nonVisualMediaItemContainer,
+      children: o.map(e => (0, i.jsx)("div", {
+        className: I.nonVisualMediaItem,
+        children: (0, i.jsx)(S, {
+          props: e
+        })
+      }, e.item.uniqueId))
     })]
   })
 }

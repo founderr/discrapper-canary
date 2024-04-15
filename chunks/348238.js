@@ -157,7 +157,7 @@ function y(e, t, l, r) {
           ...n,
           message: u,
           channel: a,
-          attachment: t
+          mediaItem: t
         })
       } {
         let {
@@ -167,7 +167,7 @@ function y(e, t, l, r) {
           ...n,
           message: u,
           channel: a,
-          attachment: t,
+          mediaItem: t,
           shouldHideMediaOptions: r
         })
       }

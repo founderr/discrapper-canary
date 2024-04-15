@@ -38,8 +38,8 @@ var i = n("374470"),
   N = n("873699"),
   j = n("134323"),
   b = n("429260"),
-  P = n("1626"),
-  G = n("279329"),
+  G = n("1626"),
+  P = n("279329"),
   D = n("627938"),
   L = n("481300"),
   F = n("689938");
@@ -50,7 +50,7 @@ function U(e) {
       channel: o,
       message: d,
       target: c,
-      attachment: f,
+      mediaItem: f,
       shouldHideMediaOptions: E,
       onSelect: M,
       onHeightUpdate: m
@@ -66,7 +66,7 @@ function U(e) {
   return k({
     message: d,
     channel: o,
-    attachment: f,
+    mediaItem: f,
     textSelection: null !== (n = null === (t = document.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== n ? n : "",
     favoriteableType: S,
     favoriteableId: v,
@@ -89,7 +89,7 @@ function k(e) {
   let {
     message: t,
     channel: n,
-    attachment: i,
+    mediaItem: i,
     textSelection: s,
     favoriteableType: U,
     favoriteableId: k,
@@ -109,7 +109,7 @@ function k(e) {
     type: U,
     id: k,
     name: w
-  }), el = (0, P.default)(t, n), es = (0, T.default)(t, n), eu = (0, y.default)(t), er = (0, v.default)(t, n), eo = (0, p.default)(t, n), ed = (0, x.default)(t, n), ec = (0, N.default)(t, n), ef = (0, h.default)(t, n), eE = (0, b.default)(t), eM = (0, G.default)(t, n), em = (0, c.default)(null != V ? V : K, Y, t, {
+  }), el = (0, G.default)(t, n), es = (0, T.default)(t, n), eu = (0, y.default)(t), er = (0, v.default)(t, n), eo = (0, p.default)(t, n), ed = (0, x.default)(t, n), ec = (0, N.default)(t, n), ef = (0, h.default)(t, n), eE = (0, b.default)(t), eM = (0, P.default)(t, n), em = (0, c.default)(null != V ? V : K, Y, t, {
     shouldHideMediaOptions: q
   }), eg = (0, d.default)(H, t, {
     shouldHideMediaOptions: q
