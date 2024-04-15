@@ -19,10 +19,7 @@ var n, s, l, i, r = a("652874"),
 let u = (0, r.default)(e => ({
   mode: "discovery",
   game: "valorant",
-  selectedGames: [{
-    applicationId: o.VALORANT_ID,
-    name: "Valorant"
-  }],
+  selectedGames: [],
   selectedPlaystyle: {
     id: o.ClanPlaystyles.SOCIAL,
     name: "Very Casual"
