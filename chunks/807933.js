@@ -1,153 +1,164 @@
 "use strict";
 a.r(t), a.d(t, {
   GameSelector: function() {
-    return U
+    return G
   },
   PlayStyleSelector: function() {
-    return D
+    return U
   },
   PrimetimeSelector: function() {
-    return y
+    return b
   },
   TraitSelector: function() {
-    return x
+    return D
   }
 }), a("47120"), a("653041");
 var n = a("735250"),
   s = a("470079"),
-  l = a("803997"),
+  l = a("120356"),
   i = a.n(l),
-  r = a("153832"),
-  o = a("143927"),
-  u = a("981500"),
-  d = a("481060"),
-  c = a("442837"),
-  f = a("924801"),
-  E = a("92373"),
-  h = a("359380"),
-  _ = a("571245"),
-  C = a("898543"),
-  m = a("32966"),
-  S = a("314897"),
-  I = a("77498"),
-  p = a("441674"),
-  T = a("465670"),
-  g = a("950463"),
-  A = a("90062"),
-  N = a("964309"),
-  v = a("729285"),
-  R = a("480222"),
-  O = a("207796"),
-  L = a("308083"),
-  M = a("689938"),
-  P = a("896328");
+  r = a("348327"),
+  o = a.n(r),
+  u = a("153832"),
+  d = a("143927"),
+  c = a("981500"),
+  f = a("481060"),
+  E = a("442837"),
+  h = a("924801"),
+  _ = a("92373"),
+  C = a("359380"),
+  m = a("571245"),
+  S = a("898543"),
+  I = a("32966"),
+  p = a("314897"),
+  T = a("77498"),
+  g = a("441674"),
+  A = a("465670"),
+  N = a("950463"),
+  v = a("90062"),
+  R = a("964309"),
+  O = a("729285"),
+  L = a("480222"),
+  M = a("207796"),
+  P = a("308083"),
+  x = a("689938"),
+  y = a("896328");
 
-function x() {
-  let e = (0, O.useClanDiscoveryUIStore)(e => e.selectedTraits, Object.is),
-    t = (0, O.useClanDiscoveryUIStore)(e => e.setSelectedTraits, o.default),
-    a = s.useMemo(() => M.default.getAvailableLocales().map(e => ({
+function D() {
+  let e = (0, M.useClanDiscoveryUIStore)(e => e.selectedTraits, d.default),
+    t = (0, M.useClanDiscoveryUIStore)(e => e.setSelectedTraits, d.default),
+    a = s.useMemo(() => x.default.getAvailableLocales().map(e => ({
       value: e.value,
       label: e.name
     })), []),
-    [l, i] = s.useMemo(() => [Array.from(e).filter(e => L.LANGUAGES_SET.has(e)), Array.from(e).filter(e => !L.LANGUAGES_SET.has(e))], [e]),
-    r = s.useCallback(e => {
+    l = new Set(e),
+    [i, r] = s.useMemo(() => [e.filter(e => P.LANGUAGES_SET.has(e)), e.filter(e => !P.LANGUAGES_SET.has(e))], [e]),
+    o = s.useCallback(e => {
       let {
         interests: a
       } = e;
-      null != a && t(a)
+      null != a && t(Array.from(a))
     }, [t]),
-    c = s.useCallback(e => {
-      r({
-        interests: new Set([...i, ...e])
+    u = s.useCallback(e => {
+      o({
+        interests: new Set([...r, ...e])
       })
-    }, [r, i]);
-  return (0, n.jsxs)(R.default, {
+    }, [o, r]);
+  return (0, n.jsxs)(L.default, {
     children: [(0, n.jsxs)("div", {
-      className: P.traitHeader,
-      children: [(0, n.jsx)(d.Heading, {
+      className: y.traitHeader,
+      children: [(0, n.jsx)(f.Heading, {
         variant: "heading-xxl/normal",
         color: "header-primary",
-        children: M.default.Messages.CLAN_DISCOVERY_TRAIT_TITLE
-      }), (0, n.jsx)(d.Text, {
+        children: x.default.Messages.CLAN_DISCOVERY_TRAIT_TITLE
+      }), (0, n.jsx)(f.Text, {
         variant: "text-md/normal",
         color: "header-secondary",
-        children: M.default.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE
+        children: x.default.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE
       })]
     }), (0, n.jsxs)("div", {
-      className: P.traits,
+      className: y.traits,
       children: [(0, n.jsx)("div", {
-        className: P.traitCategory,
-        children: (0, n.jsx)(h.TraitSelectionCategory, {
-          title: M.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_VALORANT,
-          icon: C.default,
-          traits: L.VALORANT_TRAITS,
-          interests: e,
-          handleUpdate: r
+        className: y.traitCategory,
+        children: (0, n.jsx)(C.TraitSelectionCategory, {
+          title: x.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_VALORANT,
+          icon: S.default,
+          traits: P.VALORANT_TRAITS,
+          interests: l,
+          handleUpdate: o
         })
       }), (0, n.jsx)("div", {
-        className: P.traitCategory,
-        children: (0, n.jsx)(h.TraitSelectionCategory, {
-          title: M.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_AGE,
-          icon: A.default,
-          traits: L.AGE_TRAITS,
-          interests: e,
-          handleUpdate: r
+        className: y.traitCategory,
+        children: (0, n.jsx)(C.TraitSelectionCategory, {
+          title: x.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_AGE,
+          icon: v.default,
+          traits: P.AGE_TRAITS,
+          interests: l,
+          handleUpdate: o
         })
       }), (0, n.jsx)("div", {
-        className: P.traitCategory,
-        children: (0, n.jsx)(h.TraitSelectionCategory, {
-          title: M.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_IDENTITY,
-          icon: N.default,
-          traits: L.IDENTITY_TRAITS,
-          interests: e,
-          handleUpdate: r
+        className: y.traitCategory,
+        children: (0, n.jsx)(C.TraitSelectionCategory, {
+          title: x.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_IDENTITY,
+          icon: R.default,
+          traits: P.IDENTITY_TRAITS,
+          interests: l,
+          handleUpdate: o
         })
       }), (0, n.jsxs)("div", {
-        className: P.traitCategory,
+        className: y.traitCategory,
         children: [(0, n.jsxs)("div", {
-          className: P.languagesTitle,
-          children: [(0, n.jsx)(u.LanguageIcon, {
-            className: P.languagesIcon
-          }), (0, n.jsx)(d.Text, {
+          className: y.languagesTitle,
+          children: [(0, n.jsx)(c.LanguageIcon, {
+            className: y.languagesIcon
+          }), (0, n.jsx)(f.Text, {
             variant: "text-xs/semibold",
             color: "text-muted",
-            children: M.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_LANGUAGE
+            children: x.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_LANGUAGE
           })]
         }), (0, n.jsx)("div", {
-          className: P.languagesSelect,
-          children: (0, n.jsx)(d.SearchableSelect, {
+          className: y.languagesSelect,
+          children: (0, n.jsx)(f.SearchableSelect, {
             options: a,
-            value: l,
-            onChange: c,
-            placeholder: M.default.Messages.CLAN_SETUP_LANGUAGE_PLACEHOLDER,
+            value: i,
+            onChange: u,
+            placeholder: x.default.Messages.CLAN_SETUP_LANGUAGE_PLACEHOLDER,
             multi: !0
           })
         })]
       }), (0, n.jsx)("div", {
-        className: P.traitCategory,
-        children: (0, n.jsx)(h.TraitSelectionCategory, {
-          title: M.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_LOCALE,
-          icon: g.default,
-          traits: L.LOCALE_TRAITS,
-          interests: e,
-          handleUpdate: r
+        className: y.traitCategory,
+        children: (0, n.jsx)(C.TraitSelectionCategory, {
+          title: x.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_LOCALE,
+          icon: N.default,
+          traits: P.LOCALE_TRAITS,
+          interests: l,
+          handleUpdate: o
         })
       })]
     })]
   })
 }
 
-function y() {
-  let e = s.useMemo(() => (0, f.getDayOptions)(), []),
-    t = (0, O.useClanDiscoveryUIStore)(e => e.selectedPrimetimes, o.default),
-    a = (0, O.useClanDiscoveryUIStore)(e => e.setSelectedPrimetime, o.default),
+function b() {
+  let e = s.useMemo(() => (0, h.getDayOptions)(), []),
+    t = (0, M.useClanDiscoveryUIStore)(e => e.selectedPrimetimes, o()),
+    a = (0, M.useClanDiscoveryUIStore)(e => e.setSelectedPrimetime, d.default),
     l = s.useCallback((e, n) => {
       let s = [...t];
-      s[e].day = n, a(s)
+      s[e] = {
+        id: s[e].id,
+        day: n,
+        time: s[e].time
+      }, a(s)
     }, [t, a]),
-    u = s.useCallback((e, n) => {
+    r = s.useCallback((e, n) => {
       let s = [...t];
-      s[e].time = n, a(s)
+      s[e] = {
+        id: s[e].id,
+        day: s[e].day,
+        time: n
+      }, a(s)
     }, [t, a]),
     c = s.useCallback(e => {
       let n = [...t];
@@ -157,193 +168,193 @@ function y() {
       if (t.length >= 3) return;
       let e = [...t];
       e.push({
-        id: (0, r.v4)(),
+        id: (0, u.v4)(),
         day: void 0,
         time: "morning"
       }), a(e)
     }, [t, a]);
-  return (0, n.jsxs)(R.default, {
+  return (0, n.jsxs)(L.default, {
     children: [(0, n.jsxs)("div", {
-      className: P.playtimeHeader,
-      children: [(0, n.jsx)(d.Heading, {
+      className: y.playtimeHeader,
+      children: [(0, n.jsx)(f.Heading, {
         variant: "heading-xxl/medium",
-        children: M.default.Messages.CLAN_SETUP_PRIMETIME_TITLE
-      }), (0, n.jsx)(d.Text, {
+        children: x.default.Messages.CLAN_SETUP_PRIMETIME_TITLE
+      }), (0, n.jsx)(f.Text, {
         variant: "text-md/normal",
         color: "header-secondary",
-        children: M.default.Messages.CLAN_SETUP_PRIMETIME_SUBTITLE
+        children: x.default.Messages.CLAN_SETUP_PRIMETIME_SUBTITLE
       })]
     }), (0, n.jsxs)("div", {
-      className: P.playtimes,
+      className: y.playtimes,
       children: [t.map((t, a) => (0, n.jsxs)("div", {
-        className: P.timeSelectorRow,
-        children: [(0, n.jsx)(d.SearchableSelect, {
+        className: y.timeSelectorRow,
+        children: [(0, n.jsx)(f.SearchableSelect, {
           value: t.day,
           options: e,
-          placeholder: M.default.Messages.CLAN_PRIMETIME_PLACEHOLDER,
+          placeholder: x.default.Messages.CLAN_PRIMETIME_PLACEHOLDER,
           onChange: e => l(a, e)
-        }), (0, n.jsx)(_.default, {
+        }), (0, n.jsx)(m.default, {
           value: t.time,
-          onChange: e => u(a, e)
-        }), (0, n.jsx)(d.Clickable, {
+          onChange: e => r(a, e)
+        }), (0, n.jsx)(f.Clickable, {
           onClick: () => c(a),
-          className: P.clickable,
-          children: (0, n.jsx)(T.default, {
-            className: P.removeIcon
+          className: y.clickable,
+          children: (0, n.jsx)(A.default, {
+            className: y.removeIcon
           })
         })]
-      }, t.id)), t.length < 3 && (0, n.jsxs)(d.Clickable, {
+      }, t.id)), t.length < 3 && (0, n.jsxs)(f.Clickable, {
         onClick: E,
-        className: i()(P.timeSelectorRow, P.clickable),
-        children: [(0, n.jsx)(v.default, {
-          className: P.plusIcon
-        }), (0, n.jsx)(d.Text, {
+        className: i()(y.timeSelectorRow, y.clickable),
+        children: [(0, n.jsx)(O.default, {
+          className: y.plusIcon
+        }), (0, n.jsx)(f.Text, {
           variant: "text-sm/medium",
-          children: M.default.Messages.CLAN_SETUP_PRIMETIME_ADD
+          children: x.default.Messages.CLAN_SETUP_PRIMETIME_ADD
         })]
       })]
     })]
   })
 }
 
-function D() {
-  let e = (0, d.useToken)(d.tokens.colors.WHITE),
-    t = (0, O.useClanDiscoveryUIStore)(e => e.selectedPlaystyle.id, o.default),
-    a = (0, O.useClanDiscoveryUIStore)(e => e.setSelectedPlaystyle, o.default),
-    l = s.useMemo(() => Object.values((0, L.getPlaystyleOptions)()), []);
-  return (0, n.jsxs)(R.default, {
+function U() {
+  let e = (0, f.useToken)(f.tokens.colors.WHITE),
+    t = (0, M.useClanDiscoveryUIStore)(e => e.selectedPlaystyle.id, d.default),
+    a = (0, M.useClanDiscoveryUIStore)(e => e.setSelectedPlaystyle, d.default),
+    l = s.useMemo(() => Object.values((0, P.getPlaystyleOptions)()), []);
+  return (0, n.jsxs)(L.default, {
     children: [(0, n.jsxs)("div", {
-      className: P.playstyleHeader,
-      children: [(0, n.jsx)(d.Heading, {
+      className: y.playstyleHeader,
+      children: [(0, n.jsx)(f.Heading, {
         variant: "heading-xxl/normal",
         color: "header-primary",
-        children: M.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE
-      }), (0, n.jsx)(d.Text, {
+        children: x.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE
+      }), (0, n.jsx)(f.Text, {
         variant: "text-md/normal",
         color: "header-secondary",
-        children: M.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE
+        children: x.default.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE
       })]
     }), (0, n.jsx)("div", {
-      className: P.playstyles,
-      children: l.map(s => (0, n.jsxs)(d.Clickable, {
-        className: i()(P.playstyleOption, {
-          [P.selectedPlaystyle]: s.type === t
+      className: y.playstyles,
+      children: l.map(s => (0, n.jsxs)(f.Clickable, {
+        className: i()(y.playstyleOption, {
+          [y.selectedPlaystyle]: s.type === t
         }),
         onClick: () => a({
           id: s.type,
           name: s.title
         }),
-        children: [(0, n.jsx)(d.Heading, {
+        children: [(0, n.jsx)(f.Heading, {
           variant: "heading-xxl/medium",
           children: s.emoji
         }), (0, n.jsxs)("div", {
-          children: [(0, n.jsx)(d.Heading, {
+          children: [(0, n.jsx)(f.Heading, {
             variant: "heading-md/medium",
             children: s.title
-          }), (0, n.jsx)(d.Text, {
+          }), (0, n.jsx)(f.Text, {
             variant: "text-xs/normal",
             color: "text-muted",
             children: s.subtitle
           })]
-        }), s.type === t && (0, n.jsx)(p.default, {
+        }), s.type === t && (0, n.jsx)(g.default, {
           backgroundColor: e.hex(),
-          className: P.checkmark
+          className: y.checkmark
         })]
       }, s.type))
     })]
   })
 }
 
-function b(e, t) {
-  return (e !== O.ClanDiscoveryGame.VALORANT || t !== L.VALORANT_ID) && (e !== O.ClanDiscoveryGame.GENSHIN || t !== L.GENSHIN_ID) && !0
+function j(e, t) {
+  return (e !== M.ClanDiscoveryGame.VALORANT || t !== P.VALORANT_ID) && (e !== M.ClanDiscoveryGame.GENSHIN || t !== P.GENSHIN_ID) && !0
 }
 
-function U() {
-  let e = (0, O.useClanDiscoveryUIStore)(e => e.game, o.default),
-    t = (0, O.useClanDiscoveryUIStore)(e => e.selectedGames, o.default),
-    a = (0, O.useClanDiscoveryUIStore)(e => e.setSelectedGames, o.default),
-    l = (0, c.useStateFromStoresArray)([I.default], () => I.default.games, []),
+function G() {
+  let e = (0, M.useClanDiscoveryUIStore)(e => e.game, d.default),
+    t = (0, M.useClanDiscoveryUIStore)(e => e.selectedGames, d.default),
+    a = (0, M.useClanDiscoveryUIStore)(e => e.setSelectedGames, d.default),
+    l = (0, E.useStateFromStoresArray)([T.default], () => T.default.games, []),
     i = s.useMemo(() => l.map(e => ({
       value: e.id,
       label: e.name
     })), [l]),
-    r = (0, c.useStateFromStores)([S.default], () => S.default.getId()),
+    r = (0, E.useStateFromStores)([p.default], () => p.default.getId()),
     {
-      recentGames: u
-    } = (0, m.useUserRecentGames)(r),
-    f = (0, c.useStateFromStoresArray)([I.default], () => null != u ? u.map(e => {
-      let t = I.default.getGameById(e.applicationId);
+      recentGames: o
+    } = (0, I.useUserRecentGames)(r),
+    u = (0, E.useStateFromStoresArray)([T.default], () => null != o ? o.map(e => {
+      let t = T.default.getGameById(e.applicationId);
       return {
         ...e,
         name: null == t ? void 0 : t.name
       }
     }) : []),
-    h = s.useCallback(e => {
+    c = s.useCallback(e => {
       if (3 === t.length) return;
-      let n = I.default.getGameById(e);
+      let n = T.default.getGameById(e);
       null != n && a([...t, {
         applicationId: e,
         name: n.name
       }])
     }, [t, a]),
-    _ = s.useCallback(n => {
-      if (!!b(e, n)) a(t.filter(e => e.applicationId !== n))
+    h = s.useCallback(n => {
+      if (!!j(e, n)) a(t.filter(e => e.applicationId !== n))
     }, [e, t, a]);
-  return (0, n.jsxs)(R.default, {
+  return (0, n.jsxs)(L.default, {
     children: [(0, n.jsxs)("div", {
-      className: P.gameHeader,
-      children: [(0, n.jsx)(d.Heading, {
+      className: y.gameHeader,
+      children: [(0, n.jsx)(f.Heading, {
         variant: "heading-xxl/normal",
         color: "header-primary",
-        children: M.default.Messages.CLAN_DISCOVERY_GAME_TITLE
-      }), (0, n.jsx)(d.Text, {
+        children: x.default.Messages.CLAN_DISCOVERY_GAME_TITLE
+      }), (0, n.jsx)(f.Text, {
         variant: "text-md/normal",
         color: "header-secondary",
-        children: M.default.Messages.CLAN_DISCOVERY_GAME_SUBTITLE
+        children: x.default.Messages.CLAN_DISCOVERY_GAME_SUBTITLE
       })]
     }), (0, n.jsxs)("div", {
-      className: P.games,
+      className: y.games,
       children: [(0, n.jsx)("div", {
-        className: P.gamesInput,
-        children: (0, n.jsx)(d.SearchableSelect, {
+        className: y.gamesInput,
+        children: (0, n.jsx)(f.SearchableSelect, {
           options: i,
           value: "",
-          placeholder: M.default.Messages.CLAN_DISCOVERY_GAMES_SEARCH_PLACEHOLDER,
-          onChange: h,
+          placeholder: x.default.Messages.CLAN_DISCOVERY_GAMES_SEARCH_PLACEHOLDER,
+          onChange: c,
           isDisabled: 3 === t.length
         })
       }), (0, n.jsx)("div", {
-        className: P.selectedGames,
+        className: y.selectedGames,
         children: t.length > 0 && (0, n.jsxs)(n.Fragment, {
-          children: [(0, n.jsx)(d.Text, {
+          children: [(0, n.jsx)(f.Text, {
             variant: "text-xs/medium",
             color: "text-muted",
-            children: M.default.Messages.CLAN_DISCOVERY_GAMES_SELECTED
+            children: x.default.Messages.CLAN_DISCOVERY_GAMES_SELECTED
           }), (0, n.jsx)("div", {
-            className: P.selectedSection,
-            children: t.map(t => (0, n.jsx)(E.default, {
+            className: y.selectedSection,
+            children: t.map(t => (0, n.jsx)(_.default, {
               applicationId: t.applicationId,
               name: t.name,
-              onClick: _,
-              imageContainerClassName: b(e, t.applicationId) ? P.clickable : void 0,
+              onClick: h,
+              imageContainerClassName: j(e, t.applicationId) ? y.clickable : void 0,
               selected: !0
             }, t.applicationId))
           })]
         })
       }), (0, n.jsx)("div", {
-        className: P.recentGames,
-        children: f.length > 0 && (0, n.jsxs)(n.Fragment, {
-          children: [(0, n.jsx)(d.Text, {
+        className: y.recentGames,
+        children: u.length > 0 && (0, n.jsxs)(n.Fragment, {
+          children: [(0, n.jsx)(f.Text, {
             variant: "text-xs/medium",
             color: "text-muted",
-            children: M.default.Messages.RECENT_GAMES
+            children: x.default.Messages.RECENT_GAMES
           }), (0, n.jsx)("div", {
-            className: P.selectedSection,
-            children: f.map(e => (0, n.jsx)(E.default, {
+            className: y.selectedSection,
+            children: u.map(e => (0, n.jsx)(_.default, {
               name: e.name,
               applicationId: e.applicationId,
-              imageContainerClassName: P.clickable,
-              onClick: h
+              imageContainerClassName: y.clickable,
+              onClick: c
             }, e.applicationId))
           })]
         })

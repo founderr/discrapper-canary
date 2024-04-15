@@ -86,7 +86,7 @@ function _(e) {
         children: t.description
       }), (0, n.jsx)("div", {
         className: h.primetimeContainer,
-        children: t.primetime.map(e => (0, n.jsxs)("div", {
+        children: t.primetime.map((e, t) => (0, n.jsxs)("div", {
           className: h.primetime,
           children: [(0, n.jsx)(l.GameControllerIcon, {
             className: h.primetimeIcon,
@@ -96,7 +96,7 @@ function _(e) {
             color: "text-normal",
             children: (0, c.getRRule)(e).toText()
           })]
-        }, e.start))
+        }, "".concat(e.start, "-").concat(t)))
       }), (0, n.jsx)("div", {
         className: h.traitsContainer,
         children: t.traits.map(e => (0, n.jsx)("div", {

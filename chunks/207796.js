@@ -1,10 +1,10 @@
 "use strict";
 a.r(t), a.d(t, {
   ClanDiscoveryGame: function() {
-    return s
+    return i
   },
   ClanDiscoveryMode: function() {
-    return n
+    return l
   },
   buildSearchCriteriaFromUIState: function() {
     return d
@@ -12,10 +12,10 @@ a.r(t), a.d(t, {
   useClanDiscoveryUIStore: function() {
     return u
   }
-}), a("47120");
+});
 var n, s, l, i, r = a("652874"),
   o = a("308083");
-(l = n || (n = {})).DISCOVERY = "discovery", l.PLAYSTYLE = "playstyle", l.PRIMETIME = "primetime", l.TRAITS = "traits", l.GAMES = "games", (i = s || (s = {})).VALORANT = "valorant", i.GENSHIN = "genshin";
+(n = l || (l = {})).DISCOVERY = "discovery", n.PLAYSTYLE = "playstyle", n.PRIMETIME = "primetime", n.TRAITS = "traits", n.GAMES = "games", (s = i || (i = {})).VALORANT = "valorant", s.GENSHIN = "genshin";
 let u = (0, r.default)(e => ({
   mode: "discovery",
   game: "valorant",
@@ -27,7 +27,7 @@ let u = (0, r.default)(e => ({
     id: o.ClanPlaystyles.SOCIAL,
     name: "Very Casual"
   },
-  selectedTraits: new Set,
+  selectedTraits: [],
   selectedPrimetimes: [],
   setMode: t => e({
     mode: t
