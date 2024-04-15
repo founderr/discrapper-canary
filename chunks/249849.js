@@ -1,11 +1,11 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   transformClanBadgeColors: function() {
     return i
   }
 });
-var n = a("688619"),
-  s = a.n(n);
+var a = n("688619"),
+  s = n.n(a);
 let l = [{
   base: 1,
   tint: 5
@@ -16,10 +16,10 @@ let l = [{
 
 function i(e, t) {
   if (!s().valid(t)) return e;
-  let a = s()(t),
-    n = a.luminance();
+  let n = s()(t),
+    a = n.luminance();
   return e.map((e, t) => {
     let i = s()(e);
-    return a.luminance((i.luminance() * l[t].base + n * l[t].tint) / (l[t].base + l[t].tint)).hex()
+    return n.luminance((i.luminance() * l[t].base + a * l[t].tint) / (l[t].base + l[t].tint)).hex()
   })
 }

@@ -1,17 +1,17 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   ClanBadge: function() {
     return i
   }
 });
-var n = a("735250");
-a("470079");
-var s = a("718572"),
-  l = a("116175");
+var a = n("735250");
+n("470079");
+var s = n("718572"),
+  l = n("116175");
 let i = e => {
   let {
     badge: t,
-    ...a
+    ...n
   } = e;
   switch (t) {
     case l.ClanBadgeKind.SWORD:
@@ -35,8 +35,8 @@ let i = e => {
     case l.ClanBadgeKind.SWORD_18:
     case l.ClanBadgeKind.SWORD_19:
     case l.ClanBadgeKind.SWORD_20:
-      return (0, n.jsx)(s.ClanBadgeSword, {
-        ...a
+      return (0, a.jsx)(s.ClanBadgeSword, {
+        ...n
       })
   }
   return null

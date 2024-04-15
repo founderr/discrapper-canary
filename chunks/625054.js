@@ -1,8 +1,8 @@
 "use strict";
-n.r(t);
-var s = n("525654"),
-  a = n.n(s),
-  i = n("643191");
+s.r(t);
+var n = s("525654"),
+  a = s.n(n),
+  l = s("643191");
 t.default = {
   dump(e) {
     let t;
@@ -22,5 +22,5 @@ t.default = {
       memory: t
     })
   },
-  getTimeSinceNavigationStart: () => Date.now() - i.navigationStart
+  getTimeSinceNavigationStart: () => Date.now() - l.navigationStart
 }

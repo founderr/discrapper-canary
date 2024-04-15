@@ -1,28 +1,28 @@
 "use strict";
-a.r(t);
-var n = a("570140"),
-  s = a("846027"),
-  l = a("13245"),
-  i = a("287734"),
-  r = a("872810"),
-  o = a("223245"),
-  u = a("317770"),
-  d = a("924557"),
-  c = a("39604"),
-  f = a("569545"),
-  E = a("722835"),
-  h = a("703656"),
-  _ = a("641015"),
-  C = a("183584"),
-  m = a("199902"),
-  S = a("131951"),
-  I = a("246946"),
-  p = a("808506"),
-  T = a("237997"),
-  g = a("626135"),
-  A = a("554174"),
-  N = a("981631"),
-  v = a("65154");
+n.r(t);
+var a = n("570140"),
+  s = n("846027"),
+  l = n("13245"),
+  i = n("287734"),
+  r = n("872810"),
+  o = n("223245"),
+  u = n("317770"),
+  d = n("924557"),
+  c = n("39604"),
+  f = n("569545"),
+  E = n("722835"),
+  h = n("703656"),
+  _ = n("641015"),
+  C = n("183584"),
+  m = n("199902"),
+  S = n("131951"),
+  I = n("246946"),
+  p = n("808506"),
+  T = n("237997"),
+  g = n("626135"),
+  A = n("554174"),
+  N = n("981631"),
+  v = n("65154");
 let R = {
   [N.GlobalKeybindActions.TOGGLE_PRIORITY_SPEAKER]: {
     onTrigger() {},
@@ -197,10 +197,10 @@ let R = {
     onTrigger(e, t) {
       let {
         params: {
-          channelId: a
+          channelId: n
         }
       } = t;
-      null != a && i.default.selectVoiceChannel(a)
+      null != n && i.default.selectVoiceChannel(n)
     },
     keyEvents: {
       keyup: !0,
@@ -223,7 +223,7 @@ let R = {
 };
 class O extends u.default {
   _initialize() {
-    n.default.wait(() => n.default.dispatch({
+    a.default.wait(() => a.default.dispatch({
       type: "KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS",
       keybinds: R
     }))

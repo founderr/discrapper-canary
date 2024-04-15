@@ -1,18 +1,18 @@
 "use strict";
-a.r(t), a("47120");
-var n = a("748780"),
-  s = a("570140"),
-  l = a("317770"),
-  i = a("716578"),
-  r = a("928518");
+n.r(t), n("47120");
+var a = n("748780"),
+  s = n("570140"),
+  l = n("317770"),
+  i = n("716578"),
+  r = n("928518");
 
-function o(e, t, a) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: a,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = a, e
+  }) : e[t] = n, e
 }
 class u extends l.default {
   _initialize() {
@@ -23,8 +23,8 @@ class u extends l.default {
   }
   injectWindowAnimationFrame(e) {
     let t = t => e.requestAnimationFrame(t),
-      a = t => e.cancelAnimationFrame(t);
-    n.default.inject.RequestAnimationFrame(t), n.default.inject.CancelAnimationFrame(a), i.frameLoop.setRAF(t, a)
+      n = t => e.cancelAnimationFrame(t);
+    a.default.inject.RequestAnimationFrame(t), a.default.inject.CancelAnimationFrame(n), i.frameLoop.setRAF(t, n)
   }
   constructor(...e) {
     super(...e), o(this, "handleMainWindowFocus", e => {

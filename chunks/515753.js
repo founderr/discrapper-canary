@@ -23,9 +23,9 @@ var l = n("735250"),
   C = n("420660"),
   g = n("201895"),
   E = n("43267"),
-  S = n("933557"),
-  I = n("853856"),
-  _ = n("93687"),
+  _ = n("933557"),
+  S = n("853856"),
+  I = n("93687"),
   N = n("276423"),
   T = n("878857"),
   A = n("204197"),
@@ -33,23 +33,23 @@ var l = n("735250"),
   v = n("158776"),
   x = n("306680"),
   R = n("111583"),
-  y = n("9156"),
-  M = n("594174"),
+  M = n("9156"),
+  y = n("594174"),
   O = n("467679"),
   b = n("514342"),
   D = n("28718"),
   j = n("733880"),
-  G = n("465670"),
-  P = n("887208"),
+  P = n("465670"),
+  G = n("887208"),
   U = n("709054"),
   w = n("998502"),
-  B = n("788307"),
-  F = n("960670"),
+  F = n("788307"),
+  B = n("960670"),
   V = n("981631"),
   H = n("689938"),
   k = n("860040");
-let K = w.default.getEnableHardwareAcceleration() ? h.AnimatedAvatar : h.Avatar,
-  Y = {
+let Y = w.default.getEnableHardwareAcceleration() ? h.AnimatedAvatar : h.Avatar,
+  K = {
     offset: {
       top: 2,
       bottom: 2,
@@ -67,11 +67,11 @@ let K = w.default.getEnableHardwareAcceleration() ? h.AnimatedAvatar : h.Avatar,
         right: 6
       }
     },
-    children: (0, l.jsx)(G.default, {
+    children: (0, l.jsx)(P.default, {
       className: k.closeIcon
     })
   }),
-  Z = () => (0, l.jsx)(P.default, {
+  Z = () => (0, l.jsx)(G.default, {
     className: k.favoriteIcon
   });
 class z extends a.Component {
@@ -100,7 +100,7 @@ class z extends a.Component {
       role: m,
       focusProps: {
         within: !0,
-        ...Y
+        ...K
       },
       "aria-posinset": C,
       "aria-setsize": g,
@@ -138,13 +138,13 @@ function X(e) {
     isGDMFacepileEnabled: s,
     selected: r = !1,
     user: c,
-    activities: _,
+    activities: I,
     applicationStream: L,
     isTyping: v,
     status: R,
-    isMobile: M,
-    "aria-posinset": G,
-    "aria-setsize": P
+    isMobile: y,
+    "aria-posinset": P,
+    "aria-setsize": G
   } = e, [U, w] = a.useState(!1), z = a.useRef(null), X = a.useRef(null), {
     avatarSrc: q,
     avatarDecorationSrc: Q,
@@ -153,7 +153,7 @@ function X(e) {
     user: c,
     size: h.AvatarSizes.SIZE_32,
     animateOnHover: !(r || U)
-  }), $ = (0, f.useStateFromStores)([y.default], () => y.default.isChannelMuted(t.getGuildId(), t.id)), ee = (0, f.useStateFromStores)([x.default], () => x.default.getMentionCount(t.id) > 0), et = (0, S.default)(t), en = (0, f.useStateFromStores)([I.default], () => I.default.isFavorite(t.id)), el = () => {
+  }), $ = (0, f.useStateFromStores)([M.default], () => M.default.isChannelMuted(t.getGuildId(), t.id)), ee = (0, f.useStateFromStores)([x.default], () => x.default.getMentionCount(t.id) > 0), et = (0, _.default)(t), en = (0, f.useStateFromStores)([S.default], () => S.default.isFavorite(t.id)), el = () => {
     w(!0)
   }, ea = () => {
     w(!1)
@@ -204,7 +204,7 @@ function X(e) {
       name
     }), a = H.default.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({
       name
-    })), (0, h.openModal)(e => (0, l.jsx)(F.default, {
+    })), (0, h.openModal)(e => (0, l.jsx)(B.default, {
       header: n,
       body: a,
       onSubmit: es,
@@ -224,9 +224,9 @@ function X(e) {
       children: H.default.Messages.MEMBERS_HEADER.format({
         members: t.recipients.length + 1
       })
-    }) : null != _ ? (0, l.jsx)(B.default, {
+    }) : null != I ? (0, l.jsx)(F.default, {
       ...e,
-      activities: _,
+      activities: I,
       applicationStream: L,
       animate: U,
       hideTooltip: !0,
@@ -239,7 +239,7 @@ function X(e) {
       size: (0, h.getAvatarSize)(h.AvatarSizes.SIZE_32),
       isTyping: v,
       status: R
-    }) : (0, l.jsx)(K, {
+    }) : (0, l.jsx)(Y, {
       ...J,
       src: (0, E.getChannelIconURL)(t),
       "aria-hidden": !0,
@@ -250,13 +250,13 @@ function X(e) {
     });
     o()(null != c, "PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel");
     let e = null;
-    return !c.isSystemUser() && (e = (0, C.default)(_) ? V.StatusTypes.STREAMING : R), (0, l.jsx)(K, {
+    return !c.isSystemUser() && (e = (0, C.default)(I) ? V.StatusTypes.STREAMING : R), (0, l.jsx)(Y, {
       ...J,
       size: h.AvatarSizes.SIZE_32,
       src: q,
       avatarDecoration: Q,
       status: e,
-      isMobile: M,
+      isMobile: y,
       isTyping: v,
       className: k.__invalid_avatar,
       "aria-label": c.username,
@@ -274,7 +274,7 @@ function X(e) {
         className: k.channel,
         role: n,
         focusProps: {
-          ...Y,
+          ...K,
           focusTarget: z,
           ringTarget: X
         },
@@ -283,8 +283,8 @@ function X(e) {
         onMouseLeave: ea,
         onMouseDown: ei,
         onContextMenu: eu,
-        "aria-setsize": P,
-        "aria-posinset": G,
+        "aria-setsize": G,
+        "aria-posinset": P,
         children: (0, l.jsxs)(h.Interactive, {
           className: i()(k.interactive, {
             [k.interactiveSystemDM]: em && ep,
@@ -333,11 +333,11 @@ t.default = e => {
     channel: t,
     selected: n,
     ...a
-  } = e, s = (0, f.useStateFromStores)([M.default], () => M.default.getUser(t.getRecipientId())), {
+  } = e, s = (0, f.useStateFromStores)([y.default], () => y.default.getUser(t.getRecipientId())), {
     isStatusIndicatorEnabled: i,
     isTypingIndicatorEnabled: r,
     isFacepileEnabled: o
-  } = _.default.useExperiment({
+  } = I.default.useExperiment({
     location: "private_channel"
   }, {
     autoTrackExposure: !0
@@ -355,10 +355,10 @@ t.default = e => {
       applicationStream: null != u ? L.default.getAnyStreamForUser(u) : null,
       isMobile: null != u && v.default.isMobileOnline(u)
     }
-  }, [u, t, i]), c = (0, f.useStateFromStores)([M.default, R.default], () => {
+  }, [u, t, i]), c = (0, f.useStateFromStores)([y.default, R.default], () => {
     if (t.isMultiUserDM()) return !!r && U.default.keys(R.default.getTypingUsers(t.id)).some(e => {
       var t;
-      return e !== (null === (t = M.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
+      return e !== (null === (t = y.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
     });
     if (null != s) return R.default.isTyping(t.id, t.getRecipientId());
     return !1

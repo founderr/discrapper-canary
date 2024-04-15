@@ -1,15 +1,15 @@
 "use strict";
 
-function n(e) {
+function a(e) {
   let t;
-  let a = !1;
+  let n = !1;
   return function() {
-    for (var n = arguments.length, s = Array(n), l = 0; l < n; l++) s[l] = arguments[l];
-    return !a && (a = !0, t = e(...s)), t
+    for (var a = arguments.length, s = Array(a), l = 0; l < a; l++) s[l] = arguments[l];
+    return !n && (n = !0, t = e(...s)), t
   }
 }
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   callOnce: function() {
-    return n
+    return a
   }
-}), a("47120")
+}), n("47120")

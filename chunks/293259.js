@@ -22,16 +22,16 @@ var a = s("735250"),
   p = s("759231"),
   _ = s("998502"),
   N = s("785717"),
-  A = s("621853"),
-  x = s("204197"),
+  x = s("621853"),
+  A = s("204197"),
   v = s("358794"),
   U = s("735336"),
   h = s("520978"),
   C = s("184325"),
   R = s("496206"),
   P = s("228168"),
-  M = s("981631"),
-  j = s("231338"),
+  j = s("981631"),
+  M = s("231338"),
   g = s("689938"),
   y = s("950114");
 let O = o.AvatarSizes.SIZE_120,
@@ -48,15 +48,15 @@ function F(e) {
     isStreaming: G,
     hasProfileEffect: k,
     onClose: w
-  } = e, z = (0, i.useStateFromStores)([I.default], () => I.default.getRelationshipType(_.id)), V = (0, i.useStateFromStores)([m.default], () => m.default.isMobileOnline(_.id)), Y = (0, i.useStateFromStores)([m.default], () => m.default.getStatus(_.id)), H = (0, i.useStateFromStores)([A.default], () => A.default.getUserProfile(_.id)), Q = (0, i.useStateFromStores)([E.default], () => E.default.getId() === _.id), {
-    profileTheme: K
+  } = e, z = (0, i.useStateFromStores)([I.default], () => I.default.getRelationshipType(_.id)), V = (0, i.useStateFromStores)([m.default], () => m.default.isMobileOnline(_.id)), Y = (0, i.useStateFromStores)([m.default], () => m.default.getStatus(_.id)), H = (0, i.useStateFromStores)([x.default], () => x.default.getUserProfile(_.id)), Q = (0, i.useStateFromStores)([E.default], () => E.default.getId() === _.id), {
+    profileTheme: Z
   } = (0, v.default)(_, t), {
-    trackUserProfileAction: W
+    trackUserProfileAction: K
   } = (0, N.useUserProfileAnalyticsContext)(), {
-    avatarSrc: Z,
+    avatarSrc: W,
     eventHandlers: q,
     avatarDecorationSrc: J
-  } = (0, x.default)({
+  } = (0, A.default)({
     user: _,
     size: O
   }), X = l.useMemo(() => (0, S.shouldDisableUserPresenceInChannel)(_, L), [_, L]);
@@ -66,7 +66,7 @@ function F(e) {
   }
 
   function ee() {
-    W({
+    K({
       action: "REMOVE_FRIEND"
     }), c.default.removeFriend(_.id, {
       location: "User Profile"
@@ -74,21 +74,21 @@ function F(e) {
   }
 
   function et(e) {
-    W({
+    K({
       action: "SEND_MESSAGE"
     }), r.default.openPrivateChannel(_.id, !1, !1, e), $()
   }
 
   function es() {
     try {
-      W({
+      K({
         action: "BLOCK"
       }), c.default.addRelationship({
         userId: _.id,
         context: {
           location: "User Profile"
         },
-        type: M.RelationshipTypes.BLOCKED
+        type: j.RelationshipTypes.BLOCKED
       })
     } catch (e) {
       $()
@@ -97,7 +97,7 @@ function F(e) {
 
   function ea() {
     let e = "@me" === F ? void 0 : F;
-    W({
+    K({
       action: "REPORT"
     }), (0, f.showReportModalForUser)(_, e)
   }
@@ -114,12 +114,12 @@ function F(e) {
       children: [(0, a.jsx)("div", {
         ...q,
         children: (0, a.jsx)(D, {
-          src: Z,
+          src: W,
           avatarDecoration: J,
           size: O,
           className: y.avatar,
-          status: X ? j.StatusTypes.UNKNOWN : G ? j.StatusTypes.STREAMING : Y,
-          statusBackdropColor: (0, o.getStatusBackdropColor)(K),
+          status: X ? M.StatusTypes.UNKNOWN : G ? M.StatusTypes.STREAMING : Y,
+          statusBackdropColor: (0, o.getStatusBackdropColor)(Z),
           isMobile: V,
           statusTooltip: !0,
           "aria-label": _.username
@@ -152,7 +152,7 @@ function F(e) {
             relationshipType: z,
             onAddFriend: function() {
               try {
-                W({
+                K({
                   action: "SEND_FRIEND_REQUEST"
                 }), c.default.addRelationship({
                   userId: _.id,
@@ -167,7 +167,7 @@ function F(e) {
               }
             },
             onIgnoreFriend: function() {
-              W({
+              K({
                 action: "CANCEL_FRIEND_REQUEST"
               }), c.default.cancelFriendRequest(_.id, {
                 location: "User Profile"
@@ -181,7 +181,7 @@ function F(e) {
               }
             },
             onClick: function(e) {
-              W({
+              K({
                 action: "PRESS_OPTIONS"
               }), (0, u.openContextMenuLazy)(e, async () => {
                 let {
@@ -193,7 +193,7 @@ function F(e) {
                   onRemoveFriend: ee,
                   onBlock: es,
                   onReport: ea,
-                  onCopyId: () => W({
+                  onCopyId: () => K({
                     action: "COPY_USER_ID"
                   }),
                   onMessage: () => et("User Profile Modal - Context Menu"),

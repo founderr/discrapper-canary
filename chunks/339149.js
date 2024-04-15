@@ -19,9 +19,9 @@ var l, a = n("735250"),
   C = n("941128"),
   g = n("366966"),
   E = n("943461"),
-  S = n("780570"),
-  I = n("353042"),
-  _ = n("981631"),
+  _ = n("780570"),
+  S = n("353042"),
+  I = n("981631"),
   N = n("689938"),
   T = n("860240");
 
@@ -34,7 +34,7 @@ function A(e, t, n) {
   }) : e[t] = n, e
 }
 let L = {
-  [_.LocalDispatchApplicationStates.INSTALLING]: {
+  [I.LocalDispatchApplicationStates.INSTALLING]: {
     [g.TimeUnits.NONE]: (e, t) => N.default.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({
       name: e
     }),
@@ -51,7 +51,7 @@ let L = {
       timeRemaining: t
     })
   },
-  [_.LocalDispatchApplicationStates.UPDATING]: {
+  [I.LocalDispatchApplicationStates.UPDATING]: {
     [g.TimeUnits.NONE]: (e, t) => N.default.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING.format({
       name: e
     }),
@@ -68,7 +68,7 @@ let L = {
       timeRemaining: t
     })
   },
-  [_.LocalDispatchApplicationStates.REPAIRING]: {
+  [I.LocalDispatchApplicationStates.REPAIRING]: {
     [g.TimeUnits.NONE]: (e, t) => N.default.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({
       name: e
     }),
@@ -92,9 +92,9 @@ class v extends s.PureComponent {
       state: e,
       isPaused: t
     } = this.props;
-    if (e.type === _.LocalDispatchApplicationStates.UPDATING || e.type === _.LocalDispatchApplicationStates.REPAIRING || e.type === _.LocalDispatchApplicationStates.INSTALLING) {
+    if (e.type === I.LocalDispatchApplicationStates.UPDATING || e.type === I.LocalDispatchApplicationStates.REPAIRING || e.type === I.LocalDispatchApplicationStates.INSTALLING) {
       if (t) return N.default.Messages.APPLICATION_PROGRESS_INDICATOR_PAUSED;
-      if (e.stage === _.DispatchApplicationStages.PATCHING || e.stage === _.DispatchApplicationStages.REPAIRING) return (0, a.jsx)(I.default, {
+      if (e.stage === I.DispatchApplicationStages.PATCHING || e.stage === I.DispatchApplicationStages.REPAIRING) return (0, a.jsx)(S.default, {
         getHistoricalTotalBytes: m.default.getHistoricalTotalBytesWritten,
         updateInterval: 5e3,
         children: this.renderProgressBody
@@ -200,7 +200,7 @@ class x extends(l = s.PureComponent) {
       let {
         onClick: t
       } = this.props;
-      e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, p.transitionTo)(_.Routes.APPLICATION_LIBRARY)
+      e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, p.transitionTo)(I.Routes.APPLICATION_LIBRARY)
     })
   }
 }
@@ -223,9 +223,9 @@ t.default = u.default.connectStores([C.default, m.default, h.default], () => {
     {
       total: n,
       progress: l
-    } = S.getCombinedProgress(t);
+    } = _.getCombinedProgress(t);
   return {
-    percent: S.calculateProgressPercentage(l, n),
+    percent: _.calculateProgressPercentage(l, n),
     isPaused: C.default.paused,
     firstApplication: e.length > 0 ? h.default.getApplication(e[0].applicationId) : null,
     firstState: t.length > 0 ? t[0] : null

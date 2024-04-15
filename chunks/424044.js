@@ -1,38 +1,38 @@
 "use strict";
-n.r(t), n("47120");
-var s = n("735250"),
-  a = n("470079"),
-  i = n("442837"),
-  l = n("481060"),
-  r = n("893776"),
-  u = n("232567"),
-  o = n("129293"),
-  d = n("185625"),
-  c = n("551549"),
-  f = n("108427"),
-  E = n("314897"),
-  I = n("828695"),
-  h = n("819570"),
-  _ = n("981631"),
-  p = n("689938"),
-  T = n("794711");
-i.default.initialize();
+s.r(t), s("47120");
+var n = s("735250"),
+  a = s("470079"),
+  l = s("442837"),
+  i = s("481060"),
+  r = s("893776"),
+  u = s("232567"),
+  o = s("129293"),
+  d = s("185625"),
+  c = s("551549"),
+  f = s("108427"),
+  E = s("314897"),
+  I = s("828695"),
+  _ = s("819570"),
+  h = s("981631"),
+  p = s("689938"),
+  T = s("794711");
+l.default.initialize();
 t.default = e => {
   let {
     location: t
-  } = e, n = (0, i.useStateFromStores)([E.default], () => E.default.isAuthenticated()), m = (0, i.useStateFromStores)([I.default], () => I.default.hasLoadedExperiments), N = (0, c.useIsUnauthenticatedReportFormEnabled)("RSL - Landing Page"), [g, A] = a.useState(!1), [S, v] = a.useState(p.default.Messages.AUTHORIZING), [O, C] = a.useState(!0), R = e => {
+  } = e, s = (0, l.useStateFromStores)([E.default], () => E.default.isAuthenticated()), N = (0, l.useStateFromStores)([I.default], () => I.default.hasLoadedExperiments), g = (0, c.useIsUnauthenticatedReportFormEnabled)("RSL - Landing Page"), [m, A] = a.useState(!1), [S, v] = a.useState(p.default.Messages.AUTHORIZING), [C, O] = a.useState(!0), R = e => {
     switch (e) {
-      case _.AbortCodes.INVALID_FORM_BODY:
-      case _.AbortCodes.DSA_RSL_REPORT_NOT_FOUND:
+      case h.AbortCodes.INVALID_FORM_BODY:
+      case h.AbortCodes.DSA_RSL_REPORT_NOT_FOUND:
         v(p.default.Messages.REPORT_SECOND_LOOK_NOT_FOUND_ERROR);
         break;
-      case _.AbortCodes.DSA_RSL_ALREADY_REQUESTED:
+      case h.AbortCodes.DSA_RSL_ALREADY_REQUESTED:
         v(p.default.Messages.REPORT_SECOND_LOOK_ALREADY_REQUESTED_ERROR);
         break;
-      case _.AbortCodes.DSA_RSL_LIMITED_TIME:
+      case h.AbortCodes.DSA_RSL_LIMITED_TIME:
         v(p.default.Messages.REPORT_SECOND_LOOK_LIMITED_TIME_ERROR);
         break;
-      case _.AbortCodes.DSA_RSL_REPORT_INELIGIBLE:
+      case h.AbortCodes.DSA_RSL_REPORT_INELIGIBLE:
         v(p.default.Messages.REPORT_SECOND_LOOK_INELIGIBLE_ERROR);
         break;
       default:
@@ -40,28 +40,28 @@ t.default = e => {
     }
   };
   return a.useEffect(() => {
-    n ? (C(!0), u.fetchCurrentUser({
+    s ? (O(!0), u.fetchCurrentUser({
       withAnalyticsToken: !0
-    }).then(() => C(!1)).catch(() => C(!1))) : C(!1)
-  }, [n]), a.useEffect(() => {
-    !m && !N && r.default.getExperiments()
-  }, [m, N]), a.useEffect(() => {
+    }).then(() => O(!1)).catch(() => O(!1))) : O(!1)
+  }, [s]), a.useEffect(() => {
+    !N && !g && r.default.getExperiments()
+  }, [N, g]), a.useEffect(() => {
     let e = async e => {
-      var t, n;
+      var t, s;
       try {
-        let n = null != e ? await (0, d.submitReportSecondLook)(e) : void 0;
-        null != n ? v(p.default.Messages.REPORT_SECOND_LOOK_SUCCESS_TITLE) : R(null === (t = n.body) || void 0 === t ? void 0 : t.code)
+        let s = null != e ? await (0, d.submitReportSecondLook)(e) : void 0;
+        null != s ? v(p.default.Messages.REPORT_SECOND_LOOK_SUCCESS_TITLE) : R(null === (t = s.body) || void 0 === t ? void 0 : t.code)
       } catch (e) {
-        R(null === (n = e.body) || void 0 === n ? void 0 : n.code)
+        R(null === (s = e.body) || void 0 === s ? void 0 : s.code)
       } finally {
         A(!1)
       }
     };
     A(!0), e((0, o.default)(t)), (0, f.trackAppUIViewed)("report_second_look")
-  }, [t]), N && !O && (0, s.jsxs)(h.default, {
-    children: [(0, s.jsx)(h.Title, {
+  }, [t]), g && !C && (0, n.jsxs)(_.default, {
+    children: [(0, n.jsx)(_.Title, {
       className: T.marginBottom8,
       children: S
-    }), g && (0, s.jsx)(l.Spinner, {})]
+    }), m && (0, n.jsx)(i.Spinner, {})]
   })
 }

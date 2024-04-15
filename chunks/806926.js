@@ -50,8 +50,8 @@ function N(e) {
   let {
     user: T,
     displayProfile: N,
-    initialSection: A = I.UserProfileSections.USER_INFO,
-    autoFocusNote: x,
+    initialSection: x = I.UserProfileSections.USER_INFO,
+    autoFocusNote: A,
     onClose: v
   } = e, U = (0, n.useStateFromStores)([u.default], () => u.default.getId() === T.id), {
     trackUserProfileAction: h
@@ -59,13 +59,13 @@ function N(e) {
     let {
       section: t
     } = e;
-    return t === A
-  })) || void 0 === t ? void 0 : t.section) && void 0 !== c ? c : null === (s = C[0]) || void 0 === s ? void 0 : s.section), M = l.useCallback(e => {
+    return t === x
+  })) || void 0 === t ? void 0 : t.section) && void 0 !== c ? c : null === (s = C[0]) || void 0 === s ? void 0 : s.section), j = l.useCallback(e => {
     h({
       action: "PRESS_SECTION",
       section: e
     }), P(e)
-  }, [h, P]), j = (0, i.match)(R).with(I.UserProfileSections.MUTUAL_FRIENDS, () => (0, a.jsx)(E.default, {
+  }, [h, P]), M = (0, i.match)(R).with(I.UserProfileSections.MUTUAL_FRIENDS, () => (0, a.jsx)(E.default, {
     user: T,
     onClose: v
   })).with(I.UserProfileSections.MUTUAL_GUILDS, () => (0, a.jsx)(m.default, {
@@ -76,14 +76,14 @@ function N(e) {
   })).otherwise(() => (0, a.jsx)(S.default, {
     user: T,
     displayProfile: N,
-    autoFocusNote: x
+    autoFocusNote: A
   }));
-  return U || 0 === C.length ? j : (0, a.jsxs)(a.Fragment, {
+  return U || 0 === C.length ? M : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(o.TabBar, {
       className: p.tabBar,
       type: "top",
       selectedItem: R,
-      onItemSelect: M,
+      onItemSelect: j,
       children: C.map(e => {
         let {
           section: t,
@@ -99,6 +99,6 @@ function N(e) {
           })
         }, t)
       })
-    }), j]
+    }), M]
   })
 }

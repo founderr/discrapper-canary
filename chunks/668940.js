@@ -1,20 +1,20 @@
 "use strict";
-a.r(t);
-var n = a("735250");
-a("470079");
-var s = a("442837"),
-  l = a("481060"),
-  i = a("212093"),
-  r = a("677277"),
-  o = a("285865"),
-  u = a("683301"),
-  d = a("2485"),
-  c = a("150192"),
-  f = a("889010"),
-  E = a("488905"),
-  h = a("347137"),
-  _ = a("731455"),
-  C = a("689938");
+n.r(t);
+var a = n("735250");
+n("470079");
+var s = n("442837"),
+  l = n("481060"),
+  i = n("212093"),
+  r = n("677277"),
+  o = n("285865"),
+  u = n("683301"),
+  d = n("2485"),
+  c = n("150192"),
+  f = n("889010"),
+  E = n("488905"),
+  h = n("347137"),
+  _ = n("731455"),
+  C = n("689938");
 let m = e => {
     switch (e) {
       case _.CategoryId.Activity:
@@ -38,21 +38,21 @@ let m = e => {
     } = (0, s.useStateFromStoresObject)([u.default], () => ({
       currentCategoryId: u.default.getCurrentCategoryId(),
       isViewingSearchResults: u.default.getMostRecentQuery().length > 0
-    })), a = (0, s.useStateFromStores)([c.default], () => c.default.getDiscoveryCategories(), [], c.areDiscoveryCategoriesEqual), d = null == a ? void 0 : a.map(e => ({
+    })), n = (0, s.useStateFromStores)([c.default], () => c.default.getDiscoveryCategories(), [], c.areDiscoveryCategoriesEqual), d = null == n ? void 0 : n.map(e => ({
       ...e,
       icon: m(e.categoryId)
     })), h = e => {
       (0, i.selectCategory)(e, !0), o.default.closeSidebar(), t && (0, i.clearSearch)()
     };
-    return (0, n.jsxs)(l.Scroller, {
-      children: [(0, n.jsx)(E.DiscoverySidebarHeader, {
+    return (0, a.jsxs)(l.Scroller, {
+      children: [(0, a.jsx)(E.DiscoverySidebarHeader, {
         text: C.default.Messages.DISCOVER
-      }), (0, n.jsx)(f.default, {
+      }), (0, a.jsx)(f.default, {
         categories: d,
         handleCategorySelect: h,
         currentCategoryId: e,
         shouldDisplaySelectedCategory: !t
-      }), (0, n.jsx)(r.default, {
+      }), (0, a.jsx)(r.default, {
         handleCategorySelect: h,
         currentCategoryId: e,
         shouldDisplaySelectedCategory: !t
@@ -60,5 +60,5 @@ let m = e => {
     })
   };
 t.default = function() {
-  return (0, d.useClanDiscoveryExperimentEnabled)("guild_discovery_sidebar") ? (0, n.jsx)(h.default, {}) : (0, n.jsx)(S, {})
+  return (0, d.useClanDiscoveryExperimentEnabled)("guild_discovery_sidebar") ? (0, a.jsx)(h.default, {}) : (0, a.jsx)(S, {})
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return j
+    return b
   }
 }), n("47120"), n("789020");
 var s = n("735250");
@@ -14,50 +14,50 @@ var a = n("613828"),
   u = n("2052"),
   d = n("100527"),
   c = n("906732"),
-  f = n("835473"),
-  E = n("522474"),
+  E = n("835473"),
+  f = n("522474"),
   _ = n("523746"),
-  m = n("592125"),
-  T = n("594174"),
-  I = n("158010"),
-  p = n("602623"),
-  h = n("630388"),
-  N = n("823379"),
-  S = n("624138"),
-  C = n("566620"),
-  A = n("317381"),
+  T = n("592125"),
+  I = n("594174"),
+  m = n("158010"),
+  N = n("602623"),
+  p = n("630388"),
+  S = n("823379"),
+  C = n("624138"),
+  A = n("566620"),
+  h = n("317381"),
   g = n("969345"),
   M = n("638880"),
-  R = n("266820"),
-  O = n("147865"),
+  O = n("266820"),
+  R = n("147865"),
   v = n("778569"),
   L = n("513202"),
-  x = n("403404"),
+  P = n("403404"),
   D = n("701488"),
-  P = n("981631"),
+  x = n("981631"),
   y = n("689938"),
   U = n("97661");
-let b = (0, S.cssValueToNumber)(i.default.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
+let j = (0, C.cssValueToNumber)(i.default.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
 
-function j(e) {
-  var t, n, i, S;
+function b(e) {
+  var t, n, i, C;
   let {
-    applicationId: j,
+    applicationId: b,
     message: G
   } = e, {
     analyticsLocations: B
-  } = (0, c.default)(d.default.ACTIVITY_BOOKMARK), F = (0, u.useAnalyticsContext)(), k = G.channel_id, w = (0, l.useStateFromStores)([m.default], () => m.default.getChannel(k), [k]), H = null == w ? void 0 : w.guild_id, V = null != w && (w.isGuildVoice() || w.isPrivate()), Y = (0, l.useStateFromStores)([A.default], () => A.default.getSelfEmbeddedActivityForChannel(k)), K = (null == Y ? void 0 : Y.applicationId) === j, [W, z] = (0, f.default)([j, null !== (n = null == Y ? void 0 : Y.applicationId) && void 0 !== n ? n : ""]), Q = (0, O.default)(null !== (i = null == W ? void 0 : W.maxParticipants) && void 0 !== i ? i : 0), [q] = (0, l.useStateFromStoresArray)([A.default], () => V ? A.default.getEmbeddedActivitiesForChannel(k).filter(e => e.applicationId === j) : [], [j, k, V]), J = Array.from(null !== (S = null == q ? void 0 : q.userIds) && void 0 !== S ? S : []), Z = (0, l.useStateFromStoresArray)([T.default], () => J.map(e => T.default.getUser(e)).filter(N.isNotNullish), [J]), X = (0, v.default)({
-    applicationId: j,
-    size: b
-  }), $ = E.default.getWindowOpen(P.PopoutWindowKeys.CHANNEL_CALL_POPOUT), ee = Z.length > 0 ? y.default.Messages.JOIN : y.default.Messages.START, et = async () => {
+  } = (0, c.default)(d.default.ACTIVITY_BOOKMARK), F = (0, u.useAnalyticsContext)(), k = G.channel_id, w = (0, l.useStateFromStores)([T.default], () => T.default.getChannel(k), [k]), H = null == w ? void 0 : w.guild_id, V = null != w && (w.isGuildVoice() || w.isPrivate()), Y = (0, l.useStateFromStores)([h.default], () => h.default.getSelfEmbeddedActivityForChannel(k)), K = (null == Y ? void 0 : Y.applicationId) === b, [W, z] = (0, E.default)([b, null !== (n = null == Y ? void 0 : Y.applicationId) && void 0 !== n ? n : ""]), Q = (0, R.default)(null !== (i = null == W ? void 0 : W.maxParticipants) && void 0 !== i ? i : 0), [q] = (0, l.useStateFromStoresArray)([h.default], () => V ? h.default.getEmbeddedActivitiesForChannel(k).filter(e => e.applicationId === b) : [], [b, k, V]), J = Array.from(null !== (C = null == q ? void 0 : q.userIds) && void 0 !== C ? C : []), Z = (0, l.useStateFromStoresArray)([I.default], () => J.map(e => I.default.getUser(e)).filter(S.isNotNullish), [J]), X = (0, v.default)({
+    applicationId: b,
+    size: j
+  }), $ = f.default.getWindowOpen(x.PopoutWindowKeys.CHANNEL_CALL_POPOUT), ee = Z.length > 0 ? y.default.Messages.JOIN : y.default.Messages.START, et = async () => {
     if (V) {
       let {
         activityConfigs: e,
         applications: t
-      } = await (0, C.fetchShelf)({
+      } = await (0, A.fetchShelf)({
         guildId: H
       }), n = (0, g.default)({
-        applicationId: j,
+        applicationId: b,
         activityConfigs: e,
         applications: t
       });
@@ -71,7 +71,7 @@ function j(e) {
       });
       else {
         let e = w.isPrivate() && !_.default.isCallActive(k),
-          t = () => (0, R.default)({
+          t = () => (0, O.default)({
             activityItem: n,
             currentEmbeddedApplication: z,
             channelId: k,
@@ -87,16 +87,16 @@ function j(e) {
           body: y.default.Messages.EMBEDDED_ACTIVITIES_DM_START_CONFIRMATION_TEXT
         }) : t()
       }
-    } else(0, x.default)({
+    } else(0, P.default)({
       guildId: H,
       locationObject: F.location,
       openInPopout: $,
-      initialSelectedApplicationId: j,
+      initialSelectedApplicationId: b,
       initialSlide: D.ActivityShelfSlides.SELECT_CHANNEL,
       analyticsLocations: B
     })
   };
-  return null != W && (0, h.hasFlag)(W.flags, P.ApplicationFlags.EMBEDDED) ? (0, s.jsx)(c.AnalyticsLocationProvider, {
+  return null != W && (0, p.hasFlag)(W.flags, x.ApplicationFlags.EMBEDDED) ? (0, s.jsx)(c.AnalyticsLocationProvider, {
     value: B,
     children: (0, s.jsxs)("div", {
       className: U.container,
@@ -121,21 +121,21 @@ function j(e) {
           className: U.learnMore,
           variant: "heading-sm/medium",
           children: (0, s.jsx)(a.Link, {
-            to: P.Routes.ACTIVITY_DETAILS(j),
+            to: x.Routes.ACTIVITY_DETAILS(b),
             children: y.default.Messages.LEARN_MORE
           })
         }), (0, s.jsxs)("div", {
           className: U.cta,
           children: [Z.length > 0 ? (0, s.jsx)("div", {
             className: U.avatars,
-            children: (0, s.jsx)(p.default, {
+            children: (0, s.jsx)(N.default, {
               guildId: H,
               users: Z,
               max: 4
             })
           }) : (0, s.jsxs)("div", {
             className: U.maxParticipants,
-            children: [(0, s.jsx)(I.default, {
+            children: [(0, s.jsx)(m.default, {
               className: U.peopleIcon
             }), (0, s.jsx)(r.Text, {
               variant: "text-xs/semibold",

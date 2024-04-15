@@ -210,7 +210,7 @@ function k() {
   (null == n ? void 0 : n.type) !== I.SidebarType.VIEW_CHANNEL && B(t, e)
 }
 
-function F(e) {
+function V(e) {
   let {
     guildId: t,
     channelId: n,
@@ -222,7 +222,7 @@ function F(e) {
   }), B(t, n))
 }
 
-function V(e) {
+function F(e) {
   let {
     channel: t,
     messageId: n
@@ -319,10 +319,10 @@ class z extends _.default {
       OVERLAY_INITIALIZE: U,
       CHANNEL_SELECT: G,
       VOICE_CHANNEL_SELECT: w,
-      THREAD_CREATE: V,
+      THREAD_CREATE: F,
       THREAD_LIST_SYNC: () => b(),
-      CHANNEL_CREATE: V,
-      CHANNEL_PRELOAD: F,
+      CHANNEL_CREATE: F,
+      CHANNEL_PRELOAD: V,
       THREAD_CREATE_LOCAL: x,
       GUILD_CREATE: () => b(),
       MESSAGE_END_EDIT: H,

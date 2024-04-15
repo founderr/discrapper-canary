@@ -1,24 +1,24 @@
 "use strict";
 n.r(t), n.d(t, {
   usePerksDemo: function() {
-    return a
+    return s
   }
 });
 var l = n("442837"),
   r = n("114064"),
-  s = n("485731");
+  a = n("485731");
 
-function a(e) {
+function s(e) {
   var t, n;
   let {
-    demos: a,
+    demos: s,
     activated: i
   } = (0, l.useStateFromStoresObject)([r.default], () => ({
     demos: r.default.getPerksDemos(),
     activated: r.default.getActivated()
-  })), u = (0, s.usePerksDemosUIStore)();
+  })), u = (0, a.usePerksDemosUIStore)();
   return {
-    available: null !== (t = null == a ? void 0 : a[e]) && void 0 !== t && t,
+    available: null !== (t = null == s ? void 0 : s[e]) && void 0 !== t && t,
     activated: null !== (n = i[e]) && void 0 !== n && n,
     hqStreamingState: u
   }

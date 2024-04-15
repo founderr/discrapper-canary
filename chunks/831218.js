@@ -13,9 +13,9 @@ var l, a, s, i = n("735250"),
   C = n("367907"),
   g = n("453542"),
   E = n("762914"),
-  S = n("518311"),
-  I = n("355298"),
-  _ = n("869404"),
+  _ = n("518311"),
+  S = n("355298"),
+  I = n("869404"),
   N = n("333984"),
   T = n("210887"),
   A = n("592125"),
@@ -23,8 +23,8 @@ var l, a, s, i = n("735250"),
   v = n("55589"),
   x = n("153124"),
   R = n("908773"),
-  y = n("151827"),
-  M = n("515753"),
+  M = n("151827"),
+  y = n("515753"),
   O = n("981631"),
   b = n("689938"),
   D = n("82545");
@@ -37,7 +37,7 @@ function j(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }(s = l || (l = {}))[s.PAGES = 0] = "PAGES", s[s.DMS = 1] = "DMS";
-let G = r.memo(function() {
+let P = r.memo(function() {
   return (0, i.jsxs)("svg", {
     width: "184",
     height: "428",
@@ -164,7 +164,7 @@ let G = r.memo(function() {
     })]
   })
 });
-class P extends(a = r.Component) {
+class G extends(a = r.Component) {
   static getDerivedStateFromProps(e) {
     let {
       children: t,
@@ -304,7 +304,7 @@ class P extends(a = r.Component) {
         totalRowCount: s,
         preRenderedChildren: r
       } = this.state, o = l[n[t]];
-      return null == o ? null : (0, i.jsx)(M.default, {
+      return null == o ? null : (0, i.jsx)(y.default, {
         channel: o,
         selected: o.id === a,
         "aria-posinset": r + t + 1,
@@ -326,19 +326,19 @@ class P extends(a = r.Component) {
       } = e, {
         privateChannelIds: l
       } = this.props;
-      return 0 === t ? this.renderChild(n) : 0 === n && 0 === l.length ? (0, i.jsx)(G, {}, "no-private-channels") : this.renderDM(t, n)
+      return 0 === t ? this.renderChild(n) : 0 === n && 0 === l.length ? (0, i.jsx)(P, {}, "no-private-channels") : this.renderDM(t, n)
     }), j(this, "renderSection", e => {
       let {
         section: t
       } = e, {
         showDMHeader: n
       } = this.props;
-      return 0 !== t && n ? (0, i.jsxs)(y.default, {
+      return 0 !== t && n ? (0, i.jsxs)(M.default, {
         className: D.privateChannelsHeaderContainer,
         children: [(0, i.jsx)("span", {
           className: D.headerText,
           children: b.default.Messages.DIRECT_MESSAGES
-        }), (0, i.jsx)(S.default, {
+        }), (0, i.jsx)(_.default, {
           tooltip: b.default.Messages.CREATE_DM,
           tooltipPosition: "top",
           popoutAlign: "left",
@@ -355,7 +355,7 @@ class P extends(a = r.Component) {
     })
   }
 }
-j(P, "defaultProps", {
+j(G, "defaultProps", {
   padding: 8
 });
 t.default = e => {
@@ -364,9 +364,9 @@ t.default = e => {
     theme: n,
     children: l,
     showDMHeader: a
-  } = e, s = r.Children.count(l), o = A.default.getMutablePrivateChannels(), u = (0, _.filterOutMessageRequestsAndSpam)(o), f = (0, c.useStateFromStoresArray)([v.default, I.default, N.default], () => {
+  } = e, s = r.Children.count(l), o = A.default.getMutablePrivateChannels(), u = (0, I.filterOutMessageRequestsAndSpam)(o), f = (0, c.useStateFromStoresArray)([v.default, S.default, N.default], () => {
     let e = v.default.getPrivateChannelIds(),
-      t = (0, _.filterOutMessageRequestsAndSpamById)(e, [I.default, N.default]);
+      t = (0, I.filterOutMessageRequestsAndSpamById)(e, [S.default, N.default]);
     return (0, E.filterBroadcastingGDMs)(t)
   }, []), h = (0, c.useStateFromStoresObject)([m.default, T.default, A.default], () => ({
     theme: T.default.darkSidebar ? O.ThemeTypes.DARK : n,
@@ -392,7 +392,7 @@ t.default = e => {
     t.scrollToTop({
       callback: () => requestAnimationFrame(() => e())
     })
-  }), []), S = r.useCallback(() => new Promise(e => {
+  }), []), _ = r.useCallback(() => new Promise(e => {
     let t = p.current;
     if (null == t) return e();
     t.scrollToBottom({
@@ -404,13 +404,13 @@ t.default = e => {
     id: "private-channels-".concat(L),
     isEnabled: h.keyboardModeEnabled,
     scrollToStart: g,
-    scrollToEnd: S,
+    scrollToEnd: _,
     defaultFocused: (s + (a ? 1 : 0)).toString(),
     setFocus: C
   });
   return (0, i.jsx)(d.ListNavigatorProvider, {
     navigator: R,
-    children: (0, i.jsx)(P, {
+    children: (0, i.jsx)(G, {
       channels: u,
       privateChannelIds: f,
       listRef: p,

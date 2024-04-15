@@ -1,32 +1,32 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return E
   }
 });
-var n = a("735250");
-a("470079");
-var s = a("481060"),
-  l = a("367907"),
-  i = a("970731"),
-  r = a("810090"),
-  o = a("626135"),
-  u = a("63063"),
-  d = a("981631"),
-  c = a("689938"),
-  f = a("724581");
+var a = n("735250");
+n("470079");
+var s = n("481060"),
+  l = n("367907"),
+  i = n("970731"),
+  r = n("810090"),
+  o = n("626135"),
+  u = n("63063"),
+  d = n("981631"),
+  c = n("689938"),
+  f = n("724581");
 
 function E(e) {
   let {
     guildId: t,
     markAsDismissed: E
-  } = e, h = (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsx)(s.Text, {
+  } = e, h = (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)(s.Text, {
       color: "always-white",
       variant: "text-sm/normal",
       className: f.upsellBody,
       children: c.default.Messages.MEDIA_CHANNEL_UPSELL_BODY
-    }), (0, n.jsx)(s.Text, {
+    }), (0, a.jsx)(s.Text, {
       color: "always-white",
       variant: "text-sm/normal",
       children: c.default.Messages.MEDIA_CHANNEL_LEARN_MORE.format({
@@ -34,10 +34,10 @@ function E(e) {
       })
     })]
   });
-  return (0, n.jsx)(i.default, {
+  return (0, a.jsx)(i.default, {
     header: c.default.Messages.MEDIA_CHANNEL_UPSELL_TITLE,
     content: h,
-    asset: (0, n.jsx)(r.default, {
+    asset: (0, a.jsx)(r.default, {
       className: f.video,
       src: "https://cdn.discordapp.com/assets/media_channel/media_channel_upsell_demo.mp4",
       autoPlay: !0,
@@ -50,9 +50,9 @@ function E(e) {
       }), (0, s.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([a.e("99387"), a.e("45094"), a.e("36494")]).then(a.bind(a, "218613"));
-        return a => (0, n.jsx)(e, {
-          ...a,
+        } = await Promise.all([n.e("99387"), n.e("45094"), n.e("36494")]).then(n.bind(n, "218613"));
+        return n => (0, a.jsx)(e, {
+          ...n,
           channelType: d.ChannelTypes.GUILD_MEDIA,
           guildId: t
         })

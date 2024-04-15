@@ -2,12 +2,12 @@
 let l;
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return a
   }
 });
 var r = n("145597");
 
-function s(e, t) {
+function a(e, t) {
   if (__OVERLAY__) {
     let e = t.getGame(),
       n = (0, r.getPID)();

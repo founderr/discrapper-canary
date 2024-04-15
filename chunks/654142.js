@@ -20,9 +20,9 @@ t.default = a.memo(function(e) {
   } = e, {
     id: g,
     name: E,
-    color: S,
-    children: I
-  } = t, _ = I.map(e => e.id), N = (0, o.default)(e => e.guildId), T = (0, s.useStateFromStores)([u.default], () => u.default.isFolderExpanded(g)), A = function(e) {
+    color: _,
+    children: S
+  } = t, I = S.map(e => e.id), N = (0, o.default)(e => e.guildId), T = (0, s.useStateFromStores)([u.default], () => u.default.isFolderExpanded(g)), A = function(e) {
     let t = e.children.map(e => {
         let t = e.id,
           n = c.default.getGuild(t);
@@ -36,11 +36,11 @@ t.default = a.memo(function(e) {
     mentionCount: v,
     unread: x
   } = (0, s.useStateFromStoresObject)([d.default], () => ({
-    mentionCount: _.map(e => d.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
-    unread: _.some(e => d.default.hasUnread(e))
+    mentionCount: I.map(e => d.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
+    unread: I.some(e => d.default.hasUnread(e))
   })), R = a.useCallback(() => {
     r.default.toggleGuildFolderExpand(g)
-  }, [g]), y = a.useCallback(e => {
+  }, [g]), M = a.useCallback(e => {
     (0, i.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -49,21 +49,21 @@ t.default = a.memo(function(e) {
         ...t,
         folderId: g,
         folderName: E,
-        folderColor: S,
+        folderColor: _,
         unread: x || v > 0
       })
     })
-  }, [g, E, S, x, v]);
+  }, [g, E, _, x, v]);
   return (0, l.jsx)(h.default, {
     ...C,
     folderNode: t,
     expanded: T,
-    selected: null != N && _.includes(N),
+    selected: null != N && I.includes(N),
     mentionCount: v,
     unread: x,
     mediaState: L,
     defaultFolderName: A,
     onExpandCollapse: R,
-    onContextMenu: y
+    onContextMenu: M
   })
 })

@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return R
   },
   GroupDM: function() {
-    return y
+    return M
   },
   Guild: function() {
     return x
@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return D
   },
   User: function() {
-    return M
+    return y
   }
 }), n("47120");
 var l, a = n("735250"),
@@ -37,9 +37,9 @@ var l, a = n("735250"),
   C = n("2093"),
   g = n("366695"),
   E = n("346656"),
-  S = n("409216"),
-  I = n("136033"),
-  _ = n("757698"),
+  _ = n("409216"),
+  S = n("136033"),
+  I = n("757698"),
   N = n("630641"),
   T = n("689938"),
   A = n("539814");
@@ -237,7 +237,7 @@ class R extends(l = s.Component) {
       voiceStates: e,
       channel: t
     } = this.props;
-    return null == e ? null : (0, a.jsx)(S.default, {
+    return null == e ? null : (0, a.jsx)(_.default, {
       className: A.voiceSummaryContainer,
       guildId: t.guild_id,
       users: e.map(e => {
@@ -303,7 +303,7 @@ class R extends(l = s.Component) {
 L(R, "defaultProps", {
   unread: !1
 });
-class y extends s.Component {
+class M extends s.Component {
   renderIcon() {
     let {
       channel: e
@@ -382,7 +382,7 @@ class y extends s.Component {
     })
   }
 }
-class M extends s.Component {
+class y extends s.Component {
   renderIcon() {
     let {
       user: e
@@ -535,10 +535,10 @@ class D extends s.Component {
       link: n,
       children: l
     } = this.props, s = (0, c.tryParseChannelPath)(n.path);
-    return null == s || void 0 === s.messageId ? (e = T.default.Messages.QUICKSWITCHER_LINK_UNKNOWN, t = (0, a.jsx)(_.default, {
+    return null == s || void 0 === s.messageId ? (e = T.default.Messages.QUICKSWITCHER_LINK_UNKNOWN, t = (0, a.jsx)(I.default, {
       width: 16,
       height: 16
-    })) : (0, c.isAccessibleChannelPath)(s) ? (e = T.default.Messages.QUICKSWITCHER_LINK_MESSAGE, t = (0, a.jsx)(I.default, {
+    })) : (0, c.isAccessibleChannelPath)(s) ? (e = T.default.Messages.QUICKSWITCHER_LINK_MESSAGE, t = (0, a.jsx)(S.default, {
       width: 16,
       height: 16
     })) : (e = T.default.Messages.QUICKSWITCHER_LINK_NO_ACCESS, t = (0, a.jsx)(N.default, {

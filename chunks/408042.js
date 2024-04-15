@@ -1,32 +1,32 @@
 "use strict";
-a.r(t), a("47120"), a("653041");
-var n, s = a("442837"),
-  l = a("570140"),
-  i = a("314897"),
-  r = a("592125"),
-  o = a("430824"),
-  u = a("709054"),
-  d = a("231873");
+n.r(t), n("47120"), n("653041");
+var a, s = n("442837"),
+  l = n("570140"),
+  i = n("314897"),
+  r = n("592125"),
+  o = n("430824"),
+  u = n("709054"),
+  d = n("231873");
 
-function c(e, t, a) {
+function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: a,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = a, e
+  }) : e[t] = n, e
 }
 let f = {};
 
 function E(e, t) {
-  let a = f[e];
-  return !(null == a || a.has(t)) && (f[e] = new Set(a.add(t)), !0)
+  let n = f[e];
+  return !(null == n || n.has(t)) && (f[e] = new Set(n.add(t)), !0)
 }
-class h extends(n = s.default.PersistedStore) {
+class h extends(a = s.default.PersistedStore) {
   initialize(e) {
     this.waitFor(i.default, o.default), f = {}, null != e && u.default.keys(e).forEach(t => {
-      let a = e[t];
-      null != a && "function" == typeof a[Symbol.iterator] && (f[t] = new Set(a))
+      let n = e[t];
+      null != n && "function" == typeof n[Symbol.iterator] && (f[t] = new Set(n))
     })
   }
   getProgress(e) {
@@ -70,11 +70,11 @@ c(h, "displayName", "GuildProgressStore"), c(h, "persistKey", "GuildProgressStor
     let {
       guild: {
         id: t,
-        member_count: a
+        member_count: n
       }
-    } = e, n = o.default.getGuild(t);
-    if (null == n) return !1;
-    n.ownerId === i.default.getId() && null != f[n.id] && (null != n.icon && f[n.id].add(d.Steps.AVATAR), a > 1 && f[n.id].add(d.Steps.INVITE))
+    } = e, a = o.default.getGuild(t);
+    if (null == a) return !1;
+    a.ownerId === i.default.getId() && null != f[a.id] && (null != a.icon && f[a.id].add(d.Steps.AVATAR), n > 1 && f[a.id].add(d.Steps.INVITE))
   },
   CHANNEL_CREATE: function(e) {
     let {
@@ -85,9 +85,9 @@ c(h, "displayName", "GuildProgressStore"), c(h, "persistKey", "GuildProgressStor
   CHANNEL_UPDATES: function(e) {
     let {
       channels: t
-    } = e, a = !1;
-    for (let e of t) null != e && null != e.guild_id && null != f[e.guild_id] && !1 !== E(e.guild_id, d.Steps.CHANNEL) && (a = !0);
-    return a
+    } = e, n = !1;
+    for (let e of t) null != e && null != e.guild_id && null != f[e.guild_id] && !1 !== E(e.guild_id, d.Steps.CHANNEL) && (n = !0);
+    return n
   },
   GUILD_SETTINGS_SUBMIT_SUCCESS: function(e) {
     let {
@@ -98,16 +98,16 @@ c(h, "displayName", "GuildProgressStore"), c(h, "persistKey", "GuildProgressStor
   MESSAGE_CREATE: function(e) {
     var t;
     let {
-      channelId: a,
-      message: n
-    } = e, s = r.default.getChannel(a);
-    return (null === (t = n.author) || void 0 === t ? void 0 : t.id) === i.default.getId() && null != s && null != f[s.guild_id] && E(s.guild_id, d.Steps.MESSAGE)
+      channelId: n,
+      message: a
+    } = e, s = r.default.getChannel(n);
+    return (null === (t = a.author) || void 0 === t ? void 0 : t.id) === i.default.getId() && null != s && null != f[s.guild_id] && E(s.guild_id, d.Steps.MESSAGE)
   },
   GUILD_MEMBER_LIST_UPDATE: function(e) {
     let {
       guildId: t,
-      memberCount: a
+      memberCount: n
     } = e;
-    return null != f[t] && !!(a > 1) && E(t, d.Steps.INVITE)
+    return null != f[t] && !!(n > 1) && E(t, d.Steps.INVITE)
   }
 })

@@ -23,16 +23,16 @@ function m(e) {
   } = e, m = (0, n.useStateFromStores)([i.default], () => {
     var e;
     return null === (e = i.default.getCurrentUser()) || void 0 === e ? void 0 : e.email
-  }), [h, R] = a.useState({
+  }), [h, E] = a.useState({
     status: "unknown"
   });
   a.useEffect(() => {
-    R({
+    E({
       status: "loading"
-    }), o.default.verifyResend().then(() => R({
+    }), o.default.verifyResend().then(() => E({
       status: "success"
     }), e => {
-      R({
+      E({
         status: "error"
       }), (0, u.captureQuestsException)(e, {
         tags: {
@@ -41,7 +41,7 @@ function m(e) {
       })
     })
   }, []);
-  let E = () => (0, l.jsx)(r.ModalFooter, {
+  let R = () => (0, l.jsx)(r.ModalFooter, {
     className: f.modalFooter,
     children: (0, l.jsx)(r.Button, {
       color: r.Button.Colors.BRAND,
@@ -78,7 +78,7 @@ function m(e) {
           variant: "text-md/normal",
           children: c.default.Messages.QUESTS_REWARD_VERIFICATION_ERROR
         })
-      }), E()]
+      }), R()]
     }), "success" === h.status && (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(r.ModalContent, {
         className: f.content,
@@ -101,7 +101,7 @@ function m(e) {
             children: c.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CHECK_SPAM
           })]
         })
-      }), E()]
+      }), R()]
     })]
   })
 }

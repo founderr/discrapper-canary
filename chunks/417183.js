@@ -1,23 +1,23 @@
 "use strict";
-a.r(t), a("47120");
-var n = a("735250"),
-  s = a("470079"),
-  l = a("120356"),
-  i = a.n(l),
-  r = a("748780"),
-  o = a("924826"),
-  u = a("481060"),
-  d = a("239091"),
-  c = a("617015"),
-  f = a("886795");
+n.r(t), n("47120");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("120356"),
+  i = n.n(l),
+  r = n("748780"),
+  o = n("924826"),
+  u = n("481060"),
+  d = n("239091"),
+  c = n("617015"),
+  f = n("886795");
 
-function E(e, t, a) {
+function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: a,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = a, e
+  }) : e[t] = n, e
 }
 class h extends s.PureComponent {
   componentWillLeave(e) {
@@ -42,7 +42,7 @@ class h extends s.PureComponent {
     let {
       height: e,
       opacity: t,
-      hovered: a,
+      hovered: n,
       isContextMenuActive: s
     } = this.state, {
       children: l,
@@ -50,14 +50,14 @@ class h extends s.PureComponent {
       onClick: c,
       isActive: E
     } = this.props;
-    return (0, n.jsx)(o.ListNavigatorItem, {
+    return (0, a.jsx)(o.ListNavigatorItem, {
       id: d.id,
-      children: o => (0, n.jsx)(u.FocusRing, {
+      children: o => (0, a.jsx)(u.FocusRing, {
         offset: {
           left: -8,
           right: -8
         },
-        children: (0, n.jsx)(r.default.div, {
+        children: (0, a.jsx)(r.default.div, {
           className: i()(f.peopleListItem, {
             [f.active]: E || s
           }),
@@ -70,7 +70,7 @@ class h extends s.PureComponent {
             opacity: t
           },
           ...o,
-          children: l(a || E || s)
+          children: l(n || E || s)
         })
       })
     })
@@ -85,13 +85,13 @@ class h extends s.PureComponent {
       let {
         isFocused: e,
         isActive: t,
-        onOtherHover: a
+        onOtherHover: n
       } = this.props, {
-        isContextMenuActive: n
+        isContextMenuActive: a
       } = this.state;
       this.setState({
         hovered: e
-      }), e && !t && !n && (null == a || a())
+      }), e && !t && !a && (null == n || n())
     }), E(this, "handleMouseLeave", () => {
       this.setState({
         hovered: !1
@@ -102,9 +102,9 @@ class h extends s.PureComponent {
       }), (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([a.e("99387"), a.e("79695"), a.e("85559"), a.e("64409")]).then(a.bind(a, "881351"));
-        return a => (0, n.jsx)(e, {
-          ...a,
+        } = await Promise.all([n.e("99387"), n.e("79695"), n.e("85559"), n.e("64409")]).then(n.bind(n, "881351"));
+        return n => (0, a.jsx)(e, {
+          ...n,
           user: t
         })
       }, {

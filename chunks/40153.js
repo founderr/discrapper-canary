@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   FolderEndDropTarget: function() {
-    return _
+    return I
   },
   PlaceholderDropTarget: function() {
     return N
@@ -54,7 +54,7 @@ function E(e, t) {
   }
 }
 
-function S(e) {
+function _(e) {
   let {
     name: t,
     targetNode: n,
@@ -78,7 +78,7 @@ function S(e) {
   })
 }
 
-function I(e) {
+function S(e) {
   let {
     name: t,
     targetNode: n,
@@ -112,7 +112,7 @@ function I(e) {
   })
 }
 
-function _(e) {
+function I(e) {
   let {
     name: t,
     targetNode: n
@@ -164,11 +164,11 @@ t.default = a.memo(function(e) {
   return (0, l.jsxs)("div", {
     className: C.wrapper,
     "aria-hidden": !0,
-    children: [(0, l.jsx)(S, {
+    children: [(0, l.jsx)(_, {
       name: t,
       targetNode: n,
       below: s
-    }), r ? (0, l.jsx)(I, {
+    }), r ? (0, l.jsx)(S, {
       name: t,
       targetNode: n,
       onDragOverChanged: i

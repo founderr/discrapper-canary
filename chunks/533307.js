@@ -1,58 +1,58 @@
 "use strict";
-let s;
-i.r(t);
-var n = i("544891"),
-  l = i("570140"),
-  r = i("728345"),
-  a = i("812206"),
-  o = i("625128"),
-  d = i("335131"),
-  u = i("669079"),
-  c = i("981631"),
-  _ = i("474936");
-async function E(e) {
+let a;
+l.r(t);
+var n = l("544891"),
+  i = l("570140"),
+  s = l("728345"),
+  r = l("812206"),
+  d = l("625128"),
+  u = l("335131"),
+  o = l("669079"),
+  c = l("981631"),
+  E = l("474936");
+async function _(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-  l.default.dispatch({
+    l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+  i.default.dispatch({
     type: "GIFT_CODE_RESOLVE",
     code: e
   });
   try {
-    let s = await (0, u.resolveGiftCode)(e, t, i);
-    if (null != s.application_id && s.application_id !== _.PREMIUM_SUBSCRIPTION_APPLICATION) {
-      let e = a.default.getApplication(s.application_id);
+    let a = await (0, o.resolveGiftCode)(e, t, l);
+    if (null != a.application_id && a.application_id !== E.PREMIUM_SUBSCRIPTION_APPLICATION) {
+      let e = r.default.getApplication(a.application_id);
       if (null == e) try {
-        await r.default.fetchApplication(s.application_id)
+        await s.default.fetchApplication(a.application_id)
       } catch (e) {}
     }
-    if (s.application_id === c.COLLECTIBLES_APPLICATION_ID) try {
-      await (0, d.fetchCollectiblesProduct)(s.sku_id)
+    if (a.application_id === c.COLLECTIBLES_APPLICATION_ID) try {
+      await (0, u.fetchCollectiblesProduct)(a.sku_id)
     } catch (e) {}
-    return l.default.dispatch({
+    return i.default.dispatch({
       type: "GIFT_CODE_RESOLVE_SUCCESS",
-      giftCode: s
+      giftCode: a
     }), {
-      giftCode: s
+      giftCode: a
     }
   } catch (t) {
-    throw l.default.dispatch({
+    throw i.default.dispatch({
       type: "GIFT_CODE_RESOLVE_FAILURE",
       code: e,
       error: t
     }), t
   }
 }
-s = i("775644").default, t.default = {
-  resolveGiftCode: E,
+a = l("775644").default, t.default = {
+  resolveGiftCode: _,
   async fetchUserGiftCodesForSKU(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-    l.default.dispatch({
+    i.default.dispatch({
       type: "GIFT_CODES_FETCH",
       skuId: e,
       subscriptionPlanId: t
     });
     try {
-      let i = await n.HTTP.get({
+      let l = await n.HTTP.get({
         url: c.Endpoints.USER_GIFT_CODES,
         query: {
           sku_id: e,
@@ -60,14 +60,14 @@ s = i("775644").default, t.default = {
         },
         oldFormErrors: !0
       });
-      l.default.dispatch({
+      i.default.dispatch({
         type: "GIFT_CODES_FETCH_SUCCESS",
-        giftCodes: i.body,
+        giftCodes: l.body,
         skuId: e,
         subscriptionPlanId: t
       })
-    } catch (i) {
-      l.default.dispatch({
+    } catch (l) {
+      i.default.dispatch({
         type: "GIFT_CODES_FETCH_FAILURE",
         skuId: e,
         subscriptionPlanId: t
@@ -76,28 +76,28 @@ s = i("775644").default, t.default = {
   },
   async createGiftCode(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-      i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-    l.default.dispatch({
+      l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+    i.default.dispatch({
       type: "GIFT_CODE_CREATE_START",
       skuId: e,
       subscriptionPlanId: t
     });
     try {
-      let s = await n.HTTP.post({
+      let a = await n.HTTP.post({
         url: c.Endpoints.USER_GIFT_CODE_CREATE,
         body: {
           sku_id: e,
           subscription_plan_id: t,
-          gift_style: i
+          gift_style: l
         },
         oldFormErrors: !0
       });
-      return l.default.dispatch({
+      return i.default.dispatch({
         type: "GIFT_CODE_CREATE_SUCCESS",
-        giftCode: s.body
-      }), s.body
-    } catch (i) {
-      l.default.dispatch({
+        giftCode: a.body
+      }), a.body
+    } catch (l) {
+      i.default.dispatch({
         type: "GIFT_CODE_CREATE_FAILURE",
         skuId: e,
         subscriptionPlanId: t
@@ -105,7 +105,7 @@ s = i("775644").default, t.default = {
     }
   },
   async revokeGiftCode(e) {
-    l.default.dispatch({
+    i.default.dispatch({
       type: "GIFT_CODE_REVOKE",
       code: e
     });
@@ -113,19 +113,19 @@ s = i("775644").default, t.default = {
       await n.HTTP.del({
         url: c.Endpoints.USER_GIFT_CODE_REVOKE(e),
         oldFormErrors: !0
-      }), l.default.dispatch({
+      }), i.default.dispatch({
         type: "GIFT_CODE_REVOKE_SUCCESS",
         code: e
       })
     } catch (t) {
-      l.default.dispatch({
+      i.default.dispatch({
         type: "GIFT_CODE_REVOKE_FAILURE",
         code: e
       })
     }
   },
   openNativeGiftCodeModal(e) {
-    o.default.openNativeAppModal(e, c.RPCCommands.GIFT_CODE_BROWSER)
+    d.default.openNativeAppModal(e, c.RPCCommands.GIFT_CODE_BROWSER)
   },
-  ...s
+  ...a
 }

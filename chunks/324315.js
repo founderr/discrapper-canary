@@ -16,22 +16,22 @@ var l = n("735250"),
   C = n("476221"),
   g = n("236756"),
   E = n("981631"),
-  S = n("601738");
-let I = {
+  _ = n("601738");
+let S = {
     [E.RTCConnectionQuality.UNKNOWN]: f.Tooltip.Colors.BLACK,
     [E.RTCConnectionQuality.BAD]: f.Tooltip.Colors.RED,
     [E.RTCConnectionQuality.AVERAGE]: f.Tooltip.Colors.YELLOW,
     [E.RTCConnectionQuality.FINE]: f.Tooltip.Colors.GREEN
   },
-  _ = {
-    [E.ConnectionStatus.CONNECTED]: S.rtcConnectionStatusConnected,
-    [E.ConnectionStatus.CONNECTING]: S.rtcConnectionStatusConnecting,
-    [E.ConnectionStatus.ERROR]: S.rtcConnectionStatusError
+  I = {
+    [E.ConnectionStatus.CONNECTED]: _.rtcConnectionStatusConnected,
+    [E.ConnectionStatus.CONNECTING]: _.rtcConnectionStatusConnecting,
+    [E.ConnectionStatus.ERROR]: _.rtcConnectionStatusError
   },
   N = {
-    [E.RTCConnectionQuality.FINE]: S.rtcConnectionQualityFine,
-    [E.RTCConnectionQuality.AVERAGE]: S.rtcConnectionQualityAverage,
-    [E.RTCConnectionQuality.BAD]: S.rtcConnectionQualityBad,
+    [E.RTCConnectionQuality.FINE]: _.rtcConnectionQualityFine,
+    [E.RTCConnectionQuality.AVERAGE]: _.rtcConnectionQualityAverage,
+    [E.RTCConnectionQuality.BAD]: _.rtcConnectionQualityBad,
     [E.RTCConnectionQuality.UNKNOWN]: null
   },
   T = r.default.connectStores([p.default, h.default], () => ({
@@ -67,7 +67,7 @@ class A extends a.PureComponent {
       return (0, l.jsx)(f.Button, {
         look: f.Button.Looks.BLANK,
         size: f.Button.Sizes.NONE,
-        className: i()(e, _[a]),
+        className: i()(e, I[a]),
         onClick: n,
         children: s
       })
@@ -85,7 +85,7 @@ class A extends a.PureComponent {
     } = this.props;
     return s === E.RTCConnectionStates.RTC_CONNECTED && (e = (0, l.jsx)(f.Tooltip, {
       text: t !== E.RTCConnectionQuality.UNKNOWN && null != a ? "".concat(a.toFixed(0), " ms") : null,
-      color: I[t],
+      color: S[t],
       children: e => (0, l.jsx)(L, {
         quality: t,
         smallPing: n,
@@ -93,9 +93,9 @@ class A extends a.PureComponent {
       })
     })), (0, l.jsxs)("div", {
       children: [(0, l.jsxs)("div", {
-        className: i()(S.rtcConnectionStatus, N[t], r),
+        className: i()(_.rtcConnectionStatus, N[t], r),
         children: [e, (0, l.jsx)("div", {
-          className: S.labelWrapper,
+          className: _.labelWrapper,
           children: this.renderStatus()
         })]
       }), o]
@@ -121,10 +121,10 @@ function L(e) {
     ...a
   } = e;
   if (!(0, f.useRedesignIconContext)().enabled) return (0, l.jsx)(m.default, {
-    className: i()(S.ping, {
-      [S.smallPing]: n
+    className: i()(_.ping, {
+      [_.smallPing]: n
     }),
-    foreground: S.pingForeground
+    foreground: _.pingForeground
   });
   {
     let e = {
@@ -134,8 +134,8 @@ function L(e) {
       [E.RTCConnectionQuality.UNKNOWN]: c.ConnectionUnknownIcon
     } [t];
     return (0, l.jsx)(e, {
-      className: i()(S.ping, {
-        [S.smallPing]: n
+      className: i()(_.ping, {
+        [_.smallPing]: n
       }),
       ...a
     })

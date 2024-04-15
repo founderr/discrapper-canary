@@ -16,9 +16,9 @@ var l = n("735250"),
   C = n("979651"),
   g = n("938475"),
   E = n("514342"),
-  S = n("714794"),
-  I = n("135724"),
-  _ = n("25601"),
+  _ = n("714794"),
+  S = n("135724"),
+  I = n("25601"),
   N = n("207055"),
   T = n("981631"),
   A = n("124368"),
@@ -27,7 +27,7 @@ var l = n("735250"),
   x = n("697908"),
   R = n("651483");
 
-function y(e) {
+function M(e) {
   let {
     style: t,
     withGuildIcon: n
@@ -53,19 +53,19 @@ t.default = a.memo(function(e) {
     thread: t,
     isSelectedChannel: s,
     isSelectedVoice: R,
-    isLast: M,
+    isLast: y,
     withGuildIcon: O
   } = e, b = (0, o.useStateFromStores)([g.default], () => g.default.getVoiceStatesForChannel(t), [t]), D = (0, o.useStateFromStores)([C.default], () => C.default.hasVideo(t.id)), {
     unread: j,
-    mentionCount: G
+    mentionCount: P
   } = (0, o.useStateFromStoresObject)([m.default], () => ({
     unread: m.default.hasUnread(t.id),
     mentionCount: m.default.getMentionCount(t.id)
-  })), P = (0, o.useStateFromStores)([f.default], () => f.default.isMuted(t.id)), U = a.useCallback(e => {
+  })), G = (0, o.useStateFromStores)([f.default], () => f.default.isMuted(t.id)), U = a.useCallback(e => {
     (0, h.openThreadSidebarForViewing)(t, !e.shiftKey, A.OpenThreadAnalyticsLocations.CHANNEL_LIST)
   }, [t]), w = a.useCallback(() => {
     d.default.preload(t.guild_id, t.id)
-  }, [t.guild_id, t.id]), B = a.useCallback(e => {
+  }, [t.guild_id, t.id]), F = a.useCallback(e => {
     let a = p.default.getChannel(t.id);
     null != a && (0, c.openContextMenuLazy)(e, async () => {
       let {
@@ -76,12 +76,12 @@ t.default = a.memo(function(e) {
         channel: a
       })
     })
-  }, [t.id]), F = null == b ? 0 : b.length, {
+  }, [t.id]), B = null == b ? 0 : b.length, {
     role: V,
     ...H
-  } = (0, r.useListItem)(t.id), k = a.useRef(null), K = G > 0 ? L.default.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
+  } = (0, r.useListItem)(t.id), k = a.useRef(null), Y = P > 0 ? L.default.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
     channelName: t.name,
-    mentionCount: G
+    mentionCount: P
   }) : j ? L.default.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_UNREADS.format({
     channelName: t.name
   }) : L.default.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL.format({
@@ -92,9 +92,9 @@ t.default = a.memo(function(e) {
     className: i()(v.containerDefault, {
       [v.selected]: s
     }),
-    children: [(0, l.jsx)(y, {
+    children: [(0, l.jsx)(M, {
       withGuildIcon: O
-    }), M ? null : (0, l.jsx)(y, {
+    }), y ? null : (0, l.jsx)(M, {
       withGuildIcon: O,
       style: {
         transform: "rotateX(180deg) translateY(-9px)"
@@ -110,20 +110,20 @@ t.default = a.memo(function(e) {
       children: (0, l.jsxs)("div", {
         className: i()(v.iconVisibility, x.wrapper, x.typeThread, {
           [x.modeSelected]: s,
-          [x.modeMuted]: !s && P,
-          [x.modeUnreadImportant]: !P && !s && j,
+          [x.modeMuted]: !s && G,
+          [x.modeUnreadImportant]: !G && !s && j,
           [x.withGuildIcon]: O
         }),
         onMouseDown: w,
-        onContextMenu: B,
-        children: [!j || P || s ? null : (0, l.jsx)("div", {
+        onContextMenu: F,
+        children: [!j || G || s ? null : (0, l.jsx)("div", {
           className: i()(x.unread, x.unreadImportant)
         }), (0, l.jsx)(u.Clickable, {
           ...H,
           innerRef: k,
           className: x.link,
           onClick: U,
-          "aria-label": K,
+          "aria-label": Y,
           focusProps: {
             enabled: !1
           },
@@ -135,12 +135,12 @@ t.default = a.memo(function(e) {
               children: t.name
             }), (0, l.jsxs)("div", {
               className: x.children,
-              children: [F > 0 && t.userLimit > 0 ? (0, l.jsx)(I.default, {
-                userCount: F,
+              children: [B > 0 && t.userLimit > 0 ? (0, l.jsx)(S.default, {
+                userCount: B,
                 video: D,
                 channel: t
-              }) : null, (0, S.default)(G) ? (0, l.jsx)(_.default, {
-                mentionsCount: G
+              }) : null, (0, _.default)(P) ? (0, l.jsx)(I.default, {
+                mentionsCount: P
               }) : null]
             })]
           })

@@ -87,8 +87,8 @@ class O extends(i = s.PureComponent) {
       placeholderStyle: R(B, g),
       children: e
     });
-    let F = null != P ? P() : null;
-    return F = null != F ? F : D, (0, r.jsx)(u.FocusRing, {
+    let V = null != P ? P() : null;
+    return V = null != V ? V : D, (0, r.jsx)(u.FocusRing, {
       ringTarget: this._containerRef,
       focusTarget: this._clickableRef,
       children: (0, r.jsxs)("div", {
@@ -131,9 +131,9 @@ class O extends(i = s.PureComponent) {
             enabled: !1
           },
           children: e
-        }) : e, null != F ? (0, r.jsx)("div", {
+        }) : e, null != V ? (0, r.jsx)("div", {
           className: A.imageAccessory,
-          children: F
+          children: V
         }) : null]
       })
     })

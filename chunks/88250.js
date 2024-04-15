@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-let s = (0, n("818083").createExperiment)({
+let l = (0, n("818083").createExperiment)({
   kind: "user",
   id: "2023-09_premium_likelihood_discount_offers",
   label: "Premium Likelihood Discount Offers",
@@ -27,4 +27,4 @@ let s = (0, n("818083").createExperiment)({
     }
   }]
 });
-t.default = s
+t.default = l

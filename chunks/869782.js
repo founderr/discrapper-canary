@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return C
   }
 }), n("47120");
 var s = n("735250"),
@@ -13,44 +13,44 @@ var s = n("735250"),
   u = n("419922"),
   d = n("665906"),
   c = n("271383"),
-  f = n("496675"),
-  E = n("594174"),
+  E = n("496675"),
+  f = n("594174"),
   _ = n("626135"),
-  m = n("709054"),
-  T = n("838440"),
-  I = n("981631"),
-  p = n("365004");
+  T = n("709054"),
+  I = n("838440"),
+  m = n("981631"),
+  N = n("365004");
 
-function h(e) {
+function p(e) {
   let {
     assets: t,
     currentUser: n,
     message: s
-  } = e, a = (m.default.extractTimestamp(n.id) + m.default.extractTimestamp(s.id)) % t.length;
+  } = e, a = (T.default.extractTimestamp(n.id) + T.default.extractTimestamp(s.id)) % t.length;
   return t[a]
 }
 
-function N(e) {
+function S(e) {
   let {
     currentUser: t,
     channel: n,
     message: l,
     buttonLabels: d,
     stickers: c,
-    event: f,
-    eventProperties: E
-  } = e, [m, I] = a.useState(!1), N = a.useMemo(() => h({
+    event: E,
+    eventProperties: f
+  } = e, [T, m] = a.useState(!1), S = a.useMemo(() => p({
     assets: c,
     currentUser: t,
     message: l
-  }), [c, t, l]), S = a.useMemo(() => h({
+  }), [c, t, l]), C = a.useMemo(() => p({
     assets: d,
     currentUser: t,
     message: l
-  }), [d, t, l]), C = a.useCallback(async () => {
+  }), [d, t, l]), A = a.useCallback(async () => {
     let {
       valid: e
-    } = await (0, T.applyChatRestrictions)({
+    } = await (0, I.applyChatRestrictions)({
       type: o.ChatInputTypes.FORM,
       content: "",
       channel: n
@@ -70,7 +70,7 @@ function N(e) {
     }({
       channel: n,
       message: l,
-      sticker: N
+      sticker: S
     }), ! function(e) {
       let {
         sticker: t,
@@ -82,28 +82,28 @@ function N(e) {
         sticker_id: t.id
       })
     }({
-      sticker: N,
-      event: f,
-      eventProperties: E
+      sticker: S,
+      event: E,
+      eventProperties: f
     }))
-  }, [n, l, N, f, E]);
+  }, [n, l, S, E, f]);
   return (0, s.jsxs)(i.Button, {
-    className: p.CTAMessageButtonOuter,
-    innerClassName: p.CTAMessageButton,
+    className: N.CTAMessageButtonOuter,
+    innerClassName: N.CTAMessageButton,
     color: i.ButtonColors.PRIMARY,
-    onMouseEnter: () => I(!0),
-    onMouseLeave: () => I(!1),
-    onClick: C,
+    onMouseEnter: () => m(!0),
+    onMouseLeave: () => m(!1),
+    onClick: A,
     children: [(0, s.jsx)(u.default, {
-      className: p.CTAMessageSticker,
-      isInteracting: m,
-      sticker: N,
+      className: N.CTAMessageSticker,
+      isInteracting: T,
+      sticker: S,
       size: 28
-    }), S]
+    }), C]
   })
 }
 
-function S(e) {
+function C(e) {
   let {
     channel: t,
     message: n,
@@ -111,18 +111,18 @@ function S(e) {
     stickers: i,
     event: r,
     eventProperties: o
-  } = e, u = E.default.getCurrentUser(), _ = function(e) {
+  } = e, u = f.default.getCurrentUser(), _ = function(e) {
     let {
       channel: t,
       message: n,
       currentUser: s
     } = e;
-    return (0, l.useStateFromStores)([f.default, c.default], () => {
+    return (0, l.useStateFromStores)([E.default, c.default], () => {
       var e;
       let a = t.guild_id;
       if (null == s || null == a) return !1;
       let l = (0, d.computeIsReadOnlyThread)(t),
-        i = f.default.can(I.Permissions.SEND_MESSAGES, t),
+        i = E.default.can(m.Permissions.SEND_MESSAGES, t),
         r = null === (e = c.default.getMember(a, s.id)) || void 0 === e ? void 0 : e.isPending,
         o = n.author.bot;
       return i && !l && !r && !o
@@ -133,8 +133,8 @@ function S(e) {
     currentUser: u
   });
   return null != u && _ ? (0, s.jsx)("div", {
-    className: p.CTAMessage,
-    children: (0, s.jsx)(N, {
+    className: N.CTAMessage,
+    children: (0, s.jsx)(S, {
       currentUser: u,
       channel: t,
       message: n,

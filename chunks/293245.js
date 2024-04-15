@@ -9,8 +9,8 @@ var o, s, r, c, u = n("442837"),
   h = n("780570"),
   y = n("358085"),
   A = n("209492"),
-  N = n("981631");
-class O extends(o = u.default.Store) {
+  S = n("981631");
+class _ extends(o = u.default.Store) {
   initialize() {
     y.isPlatformEmbedded && A.init(), l = {}, a = new Set, i = []
   }
@@ -22,12 +22,12 @@ class O extends(o = u.default.Store) {
     return a.has(n)
   }
 }
-c = "CloudSyncStore", (r = "displayName") in(s = O) ? Object.defineProperty(s, r, {
+c = "CloudSyncStore", (r = "displayName") in(s = _) ? Object.defineProperty(s, r, {
   value: c,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[r] = c, e.default = new O(d.default, {
+}) : s[r] = c, e.default = new _(d.default, {
   GAME_CLOUD_SYNC_START: function(t) {
     let {
       applicationId: e,
@@ -47,7 +47,7 @@ c = "CloudSyncStore", (r = "displayName") in(s = O) ? Object.defineProperty(s, r
       branchId: n
     } = t, i = (0, h.getComboId)(e, n);
     return a.delete(i), l[i] = {
-      type: N.CloudSyncStateTypes.DONE,
+      type: S.CloudSyncStateTypes.DONE,
       timestamp: Date.now()
     }, !0
   },
@@ -59,7 +59,7 @@ c = "CloudSyncStore", (r = "displayName") in(s = O) ? Object.defineProperty(s, r
       remote: o
     } = t, s = (0, h.getComboId)(e, n);
     l[s] = {
-      type: N.CloudSyncStateTypes.CONFLICT,
+      type: S.CloudSyncStateTypes.CONFLICT,
       next: i,
       remote: o
     }, a.delete(s)
@@ -70,7 +70,7 @@ c = "CloudSyncStore", (r = "displayName") in(s = O) ? Object.defineProperty(s, r
       branchId: n
     } = t, i = (0, h.getComboId)(e, n);
     l[i] = {
-      type: N.CloudSyncStateTypes.ERROR
+      type: S.CloudSyncStateTypes.ERROR
     }, a.delete(i)
   },
   RUNNING_GAMES_CHANGE: function() {

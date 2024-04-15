@@ -1,10 +1,10 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   useIsSafetyConsumerEducationAAEnabled: function() {
     return s
   }
 });
-let n = (0, a("818083").createExperiment)({
+let a = (0, n("818083").createExperiment)({
   kind: "user",
   id: "2023-03_mute_block_aa",
   label: "Safety Consumer Education Block/Mute - A/A",
@@ -30,7 +30,7 @@ let n = (0, a("818083").createExperiment)({
 });
 
 function s() {
-  return n.useExperiment({
+  return a.useExperiment({
     location: "34e1bc_1"
   }, {
     autoTrackExposure: !0

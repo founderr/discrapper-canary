@@ -20,7 +20,7 @@ var l = n("735250"),
   C = n("303335");
 
 function g() {
-  let [e, t] = a.useState(!1), n = (0, s.useStateFromStores)([o.default], () => o.default.getGuildId()), g = (0, s.useStateFromStores)([r.default], () => r.default.hasFetchedRequestToJoinGuilds), E = (0, f.default)(), S = a.useMemo(() => {
+  let [e, t] = a.useState(!1), n = (0, s.useStateFromStores)([o.default], () => o.default.getGuildId()), g = (0, s.useStateFromStores)([r.default], () => r.default.hasFetchedRequestToJoinGuilds), E = (0, f.default)(), _ = a.useMemo(() => {
     let t = (0, c.createFolderNode)({
       folderId: d.SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER,
       folderName: m.default.Messages.MEMBER_VERIFICATION_FOLDER_NAME,
@@ -33,12 +33,12 @@ function g() {
   if (a.useEffect(() => {
       e && !g && i.default.fetchRequestToJoinGuilds()
     }, [e, g]), 0 === E.length) return null;
-  let I = null != n && E.includes(n);
+  let S = null != n && E.includes(n);
   return (0, l.jsx)(h.default, {
-    folderNode: S,
+    folderNode: _,
     expanded: e,
-    useCircleMask: !e && !I,
-    selected: I,
+    useCircleMask: !e && !S,
+    selected: S,
     draggable: !1,
     sorting: !1,
     onExpandCollapse: () => t(!e),

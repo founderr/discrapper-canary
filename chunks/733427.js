@@ -1,9 +1,9 @@
 "use strict";
 n.r(t);
-var s = n("470079");
+var a = n("470079");
 t.default = () => {
-  let e = s.useRef(!0);
-  return s.useEffect(() => () => {
+  let e = a.useRef(!0);
+  return a.useEffect(() => () => {
     e.current = !1
-  }, []), s.useCallback(() => e.current, [])
+  }, []), a.useCallback(() => e.current, [])
 }

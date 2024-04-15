@@ -36,8 +36,8 @@ var i = n("735250"),
   w = n("199902"),
   B = n("314897"),
   k = n("131951"),
-  F = n("699516"),
-  V = n("594174"),
+  V = n("699516"),
+  F = n("594174"),
   x = n("248402"),
   H = n("33039"),
   Y = n("451478"),
@@ -177,7 +177,7 @@ class eo extends r.PureComponent {
       streamId: t,
       participantOnScreen: n,
       isVideoEnabled: r
-    } = this.props, s = (0, O.computeChannelName)(e, V.default, F.default), o = this.isEmptyBroadcast(), l = (null == n ? void 0 : n.id) === B.default.getId() && r, u = this.renderStreamState(), d = null;
+    } = this.props, s = (0, O.computeChannelName)(e, F.default, V.default), o = this.isEmptyBroadcast(), l = (null == n ? void 0 : n.id) === B.default.getId() && r, u = this.renderStreamState(), d = null;
     return (null == n ? void 0 : n.type) !== ei.ParticipantTypes.ACTIVITY && (null != u ? d = u : ((null == n ? void 0 : n.type) === ei.ParticipantTypes.USER || (null == n ? void 0 : n.type) === ei.ParticipantTypes.STREAM) && (d = (0, i.jsx)(Q.default, {
       paused: this.streamerPaused,
       streamId: t,

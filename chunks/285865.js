@@ -1,14 +1,14 @@
 "use strict";
-a.r(t);
-var n = a("570140");
+n.r(t);
+var a = n("570140");
 t.default = {
   closeSidebar() {
-    n.default.dispatch({
+    a.default.dispatch({
       type: "MOBILE_WEB_SIDEBAR_CLOSE"
     })
   },
   openSidebar() {
-    n.default.dispatch({
+    a.default.dispatch({
       type: "MOBILE_WEB_SIDEBAR_OPEN"
     })
   }

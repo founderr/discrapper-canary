@@ -1,21 +1,21 @@
 "use strict";
-a.r(t), a("47120");
-var n = a("735250");
-a("470079");
-var s = a("544891"),
-  l = a("846519"),
-  i = a("481060"),
-  r = a("496929"),
-  o = a("115130"),
-  u = a("812206"),
-  d = a("594174"),
-  c = a("580130"),
-  f = a("695103"),
-  E = a("70956"),
-  h = a("998502"),
-  _ = a("996106"),
-  C = a("186901"),
-  m = a("981631");
+n.r(t), n("47120");
+var a = n("735250");
+n("470079");
+var s = n("544891"),
+  l = n("846519"),
+  i = n("481060"),
+  r = n("496929"),
+  o = n("115130"),
+  u = n("812206"),
+  d = n("594174"),
+  c = n("580130"),
+  f = n("695103"),
+  E = n("70956"),
+  h = n("998502"),
+  _ = n("996106"),
+  C = n("186901"),
+  m = n("981631");
 let S = 10 * E.default.Millis.SECOND;
 t.default = {
   [m.RPCCommands.VALIDATE_APPLICATION]: {
@@ -37,8 +37,8 @@ t.default = {
           errorCode: m.RPCErrors.INVALID_ENTITLEMENT
         }, "SKU does not exist.");
         return Promise.race([(function(e, t) {
-          let a = c.default.isEntitledToSku(d.default.getCurrentUser(), e, t);
-          return null != a ? Promise.resolve(a) : (0, r.fetchUserEntitlementsForApplication)(t).then(() => !0 === c.default.isEntitledToSku(d.default.getCurrentUser(), e, t))
+          let n = c.default.isEntitledToSku(d.default.getCurrentUser(), e, t);
+          return null != n ? Promise.resolve(n) : (0, r.fetchUserEntitlementsForApplication)(t).then(() => !0 === c.default.isEntitledToSku(d.default.getCurrentUser(), e, t))
         })(t, e.id).then(e => {
           if (!e) throw new _.default({
             errorCode: m.RPCErrors.INVALID_ENTITLEMENT
@@ -52,8 +52,8 @@ t.default = {
         throw e.code === m.RPCErrors.INVALID_ENTITLEMENT && (h.default.focus(null, !0), (0, i.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([a.e("99387"), a.e("48748")]).then(a.bind(a, "52004"));
-          return t => (0, n.jsx)(e, {
+          } = await Promise.all([n.e("99387"), n.e("48748")]).then(n.bind(n, "52004"));
+          return t => (0, a.jsx)(e, {
             ...t,
             applicationId: s
           })
@@ -86,8 +86,8 @@ t.default = {
         throw h.default.focus(null, !0), (0, i.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([a.e("99387"), a.e("48748")]).then(a.bind(a, "52004"));
-          return t => (0, n.jsx)(e, {
+          } = await Promise.all([n.e("99387"), n.e("48748")]).then(n.bind(n, "52004"));
+          return t => (0, a.jsx)(e, {
             ...t,
             applicationId: l
           })

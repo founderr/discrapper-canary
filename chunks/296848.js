@@ -1,63 +1,63 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   getOrFetchSubscriptionPlan: function() {
-    return A
+    return S
   },
   getSubscriptionPauseDurations: function() {
-    return p
+    return P
   },
   getSubscriptionSKUs: function() {
-    return f
-  },
-  subscriptionCanDowngrade: function() {
     return _
   },
-  subscriptionCanSwitchImmediately: function() {
+  subscriptionCanDowngrade: function() {
     return E
+  },
+  subscriptionCanSwitchImmediately: function() {
+    return I
   }
-}), r("47120"), r("653041"), r("470079");
-var s = r("512722"),
-  n = r.n(s),
-  a = r("913527"),
-  l = r.n(a),
-  u = r("99945");
-r("442837");
-var c = r("821849"),
-  i = r("509545"),
-  o = r("74538"),
-  d = r("981631"),
-  C = r("474936");
+}), n("47120"), n("653041"), n("470079");
+var a = n("512722"),
+  r = n.n(a),
+  s = n("913527"),
+  l = n.n(s),
+  i = n("99945");
+n("442837");
+var u = n("821849"),
+  o = n("509545"),
+  d = n("74538"),
+  c = n("981631"),
+  f = n("474936");
 
-function f(e) {
+function _(e) {
   return e.items.map(e => {
-    let t = i.default.get(e.planId);
-    return n()(null != t, "Unable to fetch plan"), t
+    let t = o.default.get(e.planId);
+    return r()(null != t, "Unable to fetch plan"), t
   }).map(e => e.skuId)
 }
 
-function E(e, t, r) {
-  let s = e.getCurrentSubscriptionPlanIdForGroup(r);
-  return e.type === d.SubscriptionTypes.PREMIUM && null == s || (n()(null != s, "Current subscription has no plan in group"), n()(!(s === C.SubscriptionPlans.PREMIUM_YEAR_TIER_1 && t === C.SubscriptionPlans.PREMIUM_MONTH_TIER_2), "Unexpected plan switch"), r.indexOf(s) < r.indexOf(t))
+function I(e, t, n) {
+  let a = e.getCurrentSubscriptionPlanIdForGroup(n);
+  return e.type === c.SubscriptionTypes.PREMIUM && null == a || (r()(null != a, "Current subscription has no plan in group"), r()(!(a === f.SubscriptionPlans.PREMIUM_YEAR_TIER_1 && t === f.SubscriptionPlans.PREMIUM_MONTH_TIER_2), "Unexpected plan switch"), n.indexOf(a) < n.indexOf(t))
 }
 
-function _(e, t, r) {
-  return !E(e, t, r)
+function E(e, t, n) {
+  return !I(e, t, n)
 }
 
-function A(e, t) {
-  let r = i.default.get(e);
-  if (null == r) {
-    let r = C.SubscriptionPlanInfo[e];
-    n()(null != r, "Missing hardcoded subscriptionPlan: ".concat(e));
-    let s = (0, o.castPremiumSubscriptionAsSkuId)(r.skuId);
-    !i.default.isFetchingForSKU(s) && (0, c.fetchSubscriptionPlansForSKU)(s, t)
+function S(e, t) {
+  let n = o.default.get(e);
+  if (null == n) {
+    let n = f.SubscriptionPlanInfo[e];
+    r()(null != n, "Missing hardcoded subscriptionPlan: ".concat(e));
+    let a = (0, d.castPremiumSubscriptionAsSkuId)(n.skuId);
+    !o.default.isFetchingForSKU(a) && (0, u.fetchSubscriptionPlansForSKU)(a, t)
   }
-  return r
+  return n
 }
 
-function p(e) {
-  let t = Object.keys(u.PauseDuration).filter(e => isNaN(Number(e)));
-  if (e.status !== d.SubscriptionStatusTypes.PAUSED) return {
+function P(e) {
+  let t = Object.keys(i.PauseDuration).filter(e => isNaN(Number(e)));
+  if (e.status !== c.SubscriptionStatusTypes.PAUSED) return {
     durations: t,
     currentDaysPaused: 0
   };
@@ -66,13 +66,13 @@ function p(e) {
     currentDaysPaused: 0
   };
   {
-    let r = l()(e.currentPeriodStart),
-      s = Math.round(l()(e.pauseEndsAt).diff(r, "days", !0)),
-      n = [];
-    for (let e of t) u.PauseDuration[e] > s && n.push(e);
+    let n = l()(e.currentPeriodStart),
+      a = Math.round(l()(e.pauseEndsAt).diff(n, "days", !0)),
+      r = [];
+    for (let e of t) i.PauseDuration[e] > a && r.push(e);
     return {
-      durations: n,
-      currentDaysPaused: s
+      durations: r,
+      currentDaysPaused: a
     }
   }
 }

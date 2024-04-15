@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return h
   }
 });
-var s = n("735250"),
-  a = n("470079"),
-  l = n("990547"),
+var a = n("735250"),
+  l = n("470079"),
+  s = n("990547"),
   i = n("924826"),
   r = n("481060"),
   o = n("724757"),
@@ -15,54 +15,54 @@ var s = n("735250"),
   c = n("426521"),
   f = n("198751");
 
-function E(e) {
+function h(e) {
   let {
     initialized: t,
     items: n,
-    loading: E,
-    loadMore: _
-  } = e, m = a.useRef(null), T = (0, o.default)("for-you", m);
+    loading: h,
+    loadMore: E
+  } = e, m = l.useRef(null), p = (0, o.default)("for-you", m);
   (0, u.default)({
-    type: l.ImpressionTypes.VIEW,
-    name: l.ImpressionNames.NOTIFICATION_CENTER_LANDING,
+    type: s.ImpressionTypes.VIEW,
+    name: s.ImpressionNames.NOTIFICATION_CENTER_LANDING,
     properties: {
       empty: 0 === n.length
     }
   }, {
     disableTrack: !t
   }, [t]);
-  let I = () => {
+  let S = () => {
     var e;
     let t = null === (e = m.current) || void 0 === e ? void 0 : e.getScrollerState();
-    if (null != t) t.scrollHeight - t.scrollTop - t.offsetHeight < 1500 && _()
+    if (null != t) t.scrollHeight - t.scrollTop - t.offsetHeight < 1500 && E()
   };
-  return t ? 0 === n.length ? (0, s.jsx)(d.ForYouEmptyState, {}) : (0, s.jsx)(s.Fragment, {
-    children: (0, s.jsx)(i.ListNavigatorProvider, {
-      navigator: T,
-      children: (0, s.jsx)(i.ListNavigatorContainer, {
+  return t ? 0 === n.length ? (0, a.jsx)(d.ForYouEmptyState, {}) : (0, a.jsx)(a.Fragment, {
+    children: (0, a.jsx)(i.ListNavigatorProvider, {
+      navigator: p,
+      children: (0, a.jsx)(i.ListNavigatorContainer, {
         children: e => {
           let {
             ref: t,
-            ...a
+            ...l
           } = e;
-          return (0, s.jsxs)(r.AdvancedScroller, {
+          return (0, a.jsxs)(r.AdvancedScroller, {
             className: f.container,
             ref: e => {
               var n;
               m.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
             },
-            ...a,
-            onScroll: I,
-            children: [(0, s.jsx)(c.ForYouItems, {
+            ...l,
+            onScroll: S,
+            children: [(0, a.jsx)(c.ForYouItems, {
               items: n
-            }), E ? (0, s.jsx)(r.Spinner, {
+            }), h ? (0, a.jsx)(r.Spinner, {
               className: f.spinner
             }) : null]
           })
         }
       })
     })
-  }) : (0, s.jsx)(r.Spinner, {
+  }) : (0, a.jsx)(r.Spinner, {
     className: f.loadingPlaceholder
   })
 }

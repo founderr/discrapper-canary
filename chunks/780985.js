@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   useSelectedTeenUser: function() {
     return r
   },
@@ -7,19 +7,19 @@ a.r(t), a.d(t, {
     return o
   }
 });
-var n = a("399606"),
-  s = a("594174"),
-  l = a("914788"),
-  i = a("880257");
+var a = n("399606"),
+  s = n("594174"),
+  l = n("914788"),
+  i = n("880257");
 let r = () => {
     let e = (0, i.default)();
-    return (0, n.useStateFromStores)([l.default, s.default], () => {
+    return (0, a.useStateFromStores)([l.default, s.default], () => {
       if (!e) return s.default.getCurrentUser();
       let t = l.default.getSelectedTeenId();
       if (null !== t) return s.default.getUser(t)
     })
   },
-  o = e => (0, n.useStateFromStores)([s.default], () => {
+  o = e => (0, a.useStateFromStores)([s.default], () => {
     let t = s.default.getUser(e);
     if (null != t) return t
   })

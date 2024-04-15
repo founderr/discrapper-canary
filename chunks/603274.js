@@ -21,9 +21,9 @@ var a = n("120356"),
   C = n("938475"),
   g = n("242315"),
   E = n("944581"),
-  S = n("632184"),
-  I = n("170039"),
-  _ = n("761374"),
+  _ = n("632184"),
+  S = n("170039"),
+  I = n("761374"),
   N = n("602623"),
   T = n("823379"),
   A = n("709054"),
@@ -31,9 +31,9 @@ var a = n("120356"),
   v = n("981631"),
   x = n("689938"),
   R = n("499890"),
-  y = n("337341");
+  M = n("337341");
 
-function M(e, t) {
+function y(e, t) {
   return 0 === t.length ? null : (0, l.jsxs)("div", {
     className: R.row,
     children: [(0, l.jsx)(e, {
@@ -58,7 +58,7 @@ function O() {
       } = e;
       return t
     })), [s]),
-    y = (0, o.useStateFromStoresArray)([c.default], () => r().flatMap(i, e => c.default.getMutableParticipants(e, f.StageChannelParticipantNamedIndex.SPEAKER).filter(e => e.type === f.StageChannelParticipantTypes.VOICE).map(e => {
+    M = (0, o.useStateFromStoresArray)([c.default], () => r().flatMap(i, e => c.default.getMutableParticipants(e, f.StageChannelParticipantNamedIndex.SPEAKER).filter(e => e.type === f.StageChannelParticipantTypes.VOICE).map(e => {
       let {
         user: t
       } = e;
@@ -80,11 +80,11 @@ function O() {
       return t
     }, [a]),
     j = (0, o.useStateFromStoresArray)([m.default], () => D.map(e => m.default.getUser(e)), [D]),
-    G = (0, o.useStateFromStoresArray)([m.default], () => b.map(e => m.default.getUser(e)), [b]),
-    P = M(S.default, x.filter(e => !b.includes(e.id) && !D.includes(e.id)));
-  let U = (e = y, t = O, 0 === e.length ? null : (0, l.jsxs)("div", {
+    P = (0, o.useStateFromStoresArray)([m.default], () => b.map(e => m.default.getUser(e)), [b]),
+    G = y(_.default, x.filter(e => !b.includes(e.id) && !D.includes(e.id)));
+  let U = (e = M, t = O, 0 === e.length ? null : (0, l.jsxs)("div", {
       className: R.row,
-      children: [(0, l.jsx)(I.default, {
+      children: [(0, l.jsx)(S.default, {
         className: R.activityIcon
       }), (0, l.jsx)(N.default, {
         guildId: void 0,
@@ -103,10 +103,10 @@ function O() {
         })]
       })]
     })),
-    w = M(_.default, G.filter(e => null != e && !D.includes(e.id))),
-    B = M(E.default, j);
+    w = y(I.default, P.filter(e => null != e && !D.includes(e.id))),
+    F = y(E.default, j);
   return (0, l.jsxs)(l.Fragment, {
-    children: [U, P, w, B]
+    children: [U, G, w, F]
   })
 }
 
@@ -134,7 +134,7 @@ function D(e) {
     position: "right",
     text: (0, l.jsx)(b, {}),
     "aria-label": t,
-    tooltipClassName: y.listItemTooltip,
+    tooltipClassName: M.listItemTooltip,
     onTooltipShow: n,
     children: e => (0, l.jsx)("div", {
       ...e,

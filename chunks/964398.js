@@ -105,23 +105,23 @@ t.default = a.memo(function(e) {
     itemWidth: C,
     itemHeight: g,
     showDeadZoneIndicator: E,
-    activeItem: S,
-    onItemSelect: I,
-    onItemAction: _,
+    activeItem: _,
+    onItemSelect: S,
+    onItemAction: I,
     interactive: N = !0,
     children: T
-  } = e, A = a.useRef(null), L = a.useRef([]), v = a.useRef(!1), x = a.useRef(null), [R, y] = a.useState(0), [M, O] = a.useState({
+  } = e, A = a.useRef(null), L = a.useRef([]), v = a.useRef(!1), x = a.useRef(null), [R, M] = a.useState(0), [y, O] = a.useState({
     x: 0,
     y: 0
-  }), b = Math.abs(M.x) + Math.abs(M.y) > 0, D = a.useMemo(() => i().chunk(T, h), [T]), j = a.useCallback((e, t) => {
+  }), b = Math.abs(y.x) + Math.abs(y.y) > 0, D = a.useMemo(() => i().chunk(T, h), [T]), j = a.useCallback((e, t) => {
     null == L.current[R] ? L.current[R] = [] : L.current[R][t] = e
-  }, [R]), G = a.useCallback((e, t) => {
-    x.current = t, I(h * e + t)
-  }, [I]), P = a.useCallback(() => {
-    x.current = null, I(null)
-  }, [I]), U = a.useCallback(e => {
-    P(), v.current = e
-  }, [P]), w = a.useCallback((e, t, n) => {
+  }, [R]), P = a.useCallback((e, t) => {
+    x.current = t, S(h * e + t)
+  }, [S]), G = a.useCallback(() => {
+    x.current = null, S(null)
+  }, [S]), U = a.useCallback(e => {
+    G(), v.current = e
+  }, [G]), w = a.useCallback((e, t, n) => {
     if (v.current) {
       O({
         x: 0,
@@ -141,9 +141,9 @@ t.default = a.memo(function(e) {
       x: r / 2,
       y: (s ? Math.max(l.y, -i.y) : Math.min(l.y, i.y)) / 2
     })
-  }, []), B = a.useCallback(e => {
-    null != x.current && (e.preventDefault(), e.stopPropagation(), null == _ || _(h * R + x.current))
-  }, [_, R]), F = a.useMemo(() => (0, s.throttle)(e => {
+  }, []), F = a.useCallback(e => {
+    null != x.current && (e.preventDefault(), e.stopPropagation(), null == I || I(h * R + x.current))
+  }, [I, R]), B = a.useMemo(() => (0, s.throttle)(e => {
     if (null == A.current) return;
     let l = A.current.getBoundingClientRect(),
       a = l.left + l.width / 2,
@@ -156,7 +156,7 @@ t.default = a.memo(function(e) {
         y: e.clientY
       };
     if (w(i, s, Math.max(t, n)), v.current) {
-      null != S && P();
+      null != _ && G();
       return
     }
     let r = (0, o.extendLineSegment)(s, i, Math.max(t, n));
@@ -165,16 +165,16 @@ t.default = a.memo(function(e) {
       if (null == t) continue;
       let n = t.getBoundingClientRect();
       if ((0, o.doesLineSegmentIntersectRectangle)(s, r, n)) {
-        G(R, e);
+        P(R, e);
         return
       }
     }
-    P()
-  }, 16), [S, w, P, G, R, n, t]), V = a.useCallback(e => {
+    G()
+  }, 16), [_, w, G, P, R, n, t]), V = a.useCallback(e => {
     if (!N) return;
     let t = R + (e.deltaY > 0 ? 1 : -1);
-    t >= 0 && t < D.length && (null != x.current && (D[t].length > x.current ? G(t, x.current) : P()), y(t))
-  }, [N, R, D, G, P]), H = a.useMemo(() => D[R].map((e, a) => {
+    t >= 0 && t < D.length && (null != x.current && (D[t].length > x.current ? P(t, x.current) : G()), M(t))
+  }, [N, R, D, P, G]), H = a.useMemo(() => D[R].map((e, a) => {
     let s = f[a];
     if (null == s) throw Error("Too many items supplied ".concat(T.length, " expected max of ").concat(f.length));
     let i = p(s.x, t, C),
@@ -193,9 +193,9 @@ t.default = a.memo(function(e) {
   }), [D, R, t, C, n, g, T.length, j]);
   return (0, l.jsx)(r.Clickable, {
     className: d.chatWheelMouseInput,
-    onMouseMove: F,
+    onMouseMove: B,
     onWheel: V,
-    onClick: B,
+    onClick: F,
     children: (0, l.jsxs)("div", {
       ref: A,
       className: d.chatWheel,
@@ -253,8 +253,8 @@ t.default = a.memo(function(e) {
             r: 28.8
           }), b && (0, l.jsx)("circle", {
             className: d.chatWheelCenter,
-            cx: 144 + M.x,
-            cy: 144 + M.y,
+            cx: 144 + y.x,
+            cy: 144 + y.y,
             r: 28.8
           })]
         }), E && (0, l.jsx)("circle", {

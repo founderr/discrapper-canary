@@ -20,9 +20,9 @@ var l = n("735250"),
   C = n("729285"),
   g = n("40153"),
   E = n("603592"),
-  S = n("981631"),
-  I = n("675999"),
-  _ = n("689938"),
+  _ = n("981631"),
+  S = n("675999"),
+  I = n("689938"),
   N = n("196581");
 let T = {
   origin: {
@@ -52,29 +52,29 @@ function L(e) {
   let {
     disableTooltip: t,
     lastTargetNode: n
-  } = e, o = (0, s.useStateFromStores)([p.default], () => p.default.getGuilds()), L = a.useMemo(() => Object.values(o), [o]), v = (0, s.useStateFromStores)([m.default], () => m.default.getCurrentUser()), x = a.useMemo(() => L.some(e => e.isOwner(v)), [L, v]), R = (0, r.useModalsStore)(e => (0, r.hasModalOpenSelector)(e, I.CREATE_GUILD_MODAL_KEY)), {
-    analyticsLocations: y
-  } = (0, u.default)(), M = (0, r.useRedesignIconContext)().enabled, O = (0, l.jsx)(E.default, {
+  } = e, o = (0, s.useStateFromStores)([p.default], () => p.default.getGuilds()), L = a.useMemo(() => Object.values(o), [o]), v = (0, s.useStateFromStores)([m.default], () => m.default.getCurrentUser()), x = a.useMemo(() => L.some(e => e.isOwner(v)), [L, v]), R = (0, r.useModalsStore)(e => (0, r.hasModalOpenSelector)(e, S.CREATE_GUILD_MODAL_KEY)), {
+    analyticsLocations: M
+  } = (0, u.default)(), y = (0, r.useRedesignIconContext)().enabled, O = (0, l.jsx)(E.default, {
     showPill: !1,
     id: "create-join-button",
     onClick: () => {
       (0, c.isAtGuildCapAndNonPremium)() ? (0, f.default)({
         analyticsSource: {
-          page: S.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL
+          page: _.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL
         },
         analyticsLocation: {
-          page: S.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL,
-          section: S.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
+          page: _.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL,
+          section: _.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
         },
-        analyticsLocations: y
+        analyticsLocations: M
       }) : d.default.openCreateGuildModal({
         location: "Guild List"
       })
     },
     selected: R,
     onContextMenu: A,
-    tooltip: _.default.Messages.ADD_A_SERVER,
-    icon: M ? i.PlusMediumIcon : C.default
+    tooltip: I.default.Messages.ADD_A_SERVER,
+    icon: y ? i.PlusMediumIcon : C.default
   });
   return t ? O : (0, l.jsx)("div", {
     className: N.tutorialContainer,
@@ -83,7 +83,7 @@ function L(e) {
       inlineSpecs: T,
       position: "right",
       children: [O, null != n && (0, l.jsx)(g.default, {
-        name: _.default.Messages.DND_END_OF_LIST,
+        name: I.default.Messages.DND_END_OF_LIST,
         targetNode: n,
         below: !0,
         noCombine: !0

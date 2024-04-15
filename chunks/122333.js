@@ -1,34 +1,34 @@
 "use strict";
-let n;
-a.r(t), a("47120");
-var s = a("735250");
-a("470079");
-var l = a("481060"),
-  i = a("570140"),
-  r = a("317770"),
-  o = a("622822"),
-  u = a("391650"),
-  d = a("305325"),
-  c = a("341298"),
-  f = a("390885"),
-  E = a("524329"),
-  h = a("995532"),
-  _ = a("486472"),
-  C = a("430824"),
-  m = a("914010"),
-  S = a("594174"),
-  I = a("823379"),
-  p = a("358085"),
-  T = a("929809"),
-  g = a("179645"),
-  A = a("701476"),
-  N = a("785997"),
-  v = a("981631"),
-  R = a("188785"),
-  O = a("630724");
+let a;
+n.r(t), n("47120");
+var s = n("735250");
+n("470079");
+var l = n("481060"),
+  i = n("570140"),
+  r = n("317770"),
+  o = n("622822"),
+  u = n("391650"),
+  d = n("305325"),
+  c = n("341298"),
+  f = n("390885"),
+  E = n("524329"),
+  h = n("995532"),
+  _ = n("486472"),
+  C = n("430824"),
+  m = n("914010"),
+  S = n("594174"),
+  I = n("823379"),
+  p = n("358085"),
+  T = n("929809"),
+  g = n("179645"),
+  A = n("701476"),
+  N = n("785997"),
+  v = n("981631"),
+  R = n("188785"),
+  O = n("630724");
 
 function L() {
-  null != n && (0, l.closeModal)(n)
+  null != a && (0, l.closeModal)(a)
 }
 class M extends r.default {
   _initialize() {
@@ -91,18 +91,18 @@ class M extends r.default {
               I.assertNever(e)
           }
         };
-        n = await (0, l.openModalLazy)(async () => {
+        a = await (0, l.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([a.e("49237"), a.e("99387"), a.e("66635"), a.e("42483"), a.e("22458")]).then(a.bind(a, "599219"));
-          return a => (0, s.jsx)(e, {
-            ...a,
+          } = await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("42483"), n.e("22458")]).then(n.bind(n, "599219"));
+          return n => (0, s.jsx)(e, {
+            ...n,
             onSlideChange: t
           })
         }, {
           onCloseRequest: v.NOOP,
           onCloseCallback: e,
-          modalKey: n
+          modalKey: a
         })
       },
       predicate: () => M() && !R.CONFERENCE_MODE_ENABLED
@@ -129,7 +129,7 @@ class M extends r.default {
       open: e => (0, l.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([a.e("99387"), a.e("77578")]).then(a.bind(a, "184782"));
+        } = await Promise.all([n.e("99387"), n.e("77578")]).then(n.bind(n, "184782"));
         return t => (0, s.jsx)(e, {
           ...t,
           guildId: L
@@ -141,9 +141,9 @@ class M extends r.default {
     }], t = () => {
       T.setNewUserFlowCompleted(), f.default.flowStep(O.FlowType.ANY, O.RegistrationSteps.NUF_COMPLETE, !0)
     }, [...e].reverse().forEach(e => {
-      let a = t;
+      let n = t;
       t = () => {
-        e.predicate() ? e.open(a) : a()
+        e.predicate() ? e.open(n) : n()
       }
     }), t()
   }

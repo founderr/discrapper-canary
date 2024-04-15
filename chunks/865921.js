@@ -1,52 +1,52 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   OneTimePaymentPredicateStep: function() {
-    return m
+    return p
   }
-}), r("47120");
-var n = r("735250"),
-  s = r("470079"),
-  a = r("512722"),
-  l = r.n(a),
-  u = r("89057"),
-  i = r("987209"),
-  c = r("598"),
-  d = r("409813"),
-  o = r("456251"),
-  f = r("981631");
+}), n("47120");
+var r = n("735250"),
+  s = n("470079"),
+  a = n("512722"),
+  u = n.n(a),
+  l = n("89057"),
+  i = n("987209"),
+  c = n("598"),
+  d = n("409813"),
+  o = n("456251"),
+  f = n("981631");
 
-function m(e) {
+function p(e) {
   let {
     handleStepChange: t,
-    handleClose: r
+    handleClose: n
   } = e, {
     blockedPayments: a,
-    hasFetchedSkus: m,
-    paymentSources: p,
+    hasFetchedSkus: p,
+    paymentSources: m,
     hasFetchedPaymentSources: h,
     application: x,
     skusById: P,
-    selectedSkuId: C
+    selectedSkuId: g
   } = (0, c.usePaymentContext)(), {
-    isGift: j
-  } = (0, i.useGiftContext)(), [g, E] = s.useState(!0);
+    isGift: C
+  } = (0, i.useGiftContext)(), [E, j] = s.useState(!0);
   return (s.useEffect(() => {
     let e = null != x;
-    m && h && e && E(!1)
-  }, [m, h, x]), s.useEffect(() => {
-    if (g || a) return;
-    l()(null != C, "Expected selectedSkuId");
-    let e = P[C];
-    if (j && (null == e ? void 0 : e.productLine) === f.SKUProductLines.COLLECTIBLES) {
+    p && h && e && j(!1)
+  }, [p, h, x]), s.useEffect(() => {
+    if (E || a) return;
+    u()(null != g, "Expected selectedSkuId");
+    let e = P[g];
+    if (C && (null == e ? void 0 : e.productLine) === f.SKUProductLines.COLLECTIBLES) {
       t(d.Step.GIFT_CUSTOMIZATION);
       return
     }
-    if (0 === Object.keys(p).length) {
+    if (0 === Object.keys(m).length) {
       t(d.Step.ADD_PAYMENT_STEPS);
       return
     }
     t(d.Step.REVIEW)
-  }, [g, a, t, p, j, P, C]), g) ? (0, n.jsx)(o.default, {}) : a ? (0, n.jsx)(u.BlockedPaymentsContentModal, {
-    onClose: r
+  }, [E, a, t, m, C, P, g]), E) ? (0, r.jsx)(o.default, {}) : a ? (0, r.jsx)(l.BlockedPaymentsContentModal, {
+    onClose: n
   }) : null
 }

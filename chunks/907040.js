@@ -36,8 +36,8 @@ var i = n("735250"),
   w = n("111361"),
   B = n("624138"),
   k = n("543241"),
-  F = n("199257"),
-  V = n("636411"),
+  V = n("199257"),
+  F = n("636411"),
   x = n("380331"),
   H = n("170762"),
   Y = n("22363"),
@@ -208,16 +208,16 @@ t.default = r.memo(r.forwardRef(function(e, t) {
     onPickerOpen: e6
   }));
   let {
-    location: eF
+    location: eV
   } = (0, f.useAnalyticsContext)(), {
-    page: eV,
+    page: eF,
     section: ex,
     object: eH,
     openPopoutType: eY
   } = eT, ej = r.useMemo(() => ({
-    ...eF,
+    ...eV,
     section: null != ex ? ex : q.AnalyticsSections.EMOJI_PICKER_POPOUT
-  }), [eF, ex]), {
+  }), [eV, ex]), {
     analyticsLocations: eW
   } = (0, A.default)(S.default.EMOJI_PICKER), {
     diversitySurrogate: eK
@@ -246,7 +246,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
     emojiSpriteSize: C
   }), {
     newlyAddedEmojis: e3
-  } = (0, F.default)(eb, l), {
+  } = (0, V.default)(eb, l), {
     trackOnPickerOpen: e4
   } = (0, k.useTrackEmojiPickerOpened)({
     intention: l,
@@ -278,8 +278,8 @@ t.default = r.memo(r.forwardRef(function(e, t) {
           location: {
             ...ej,
             object: null != eH ? eH : q.AnalyticsObjects.EMOJI,
-            ...null != eV && {
-              page: eV
+            ...null != eF && {
+              page: eF
             }
           },
           pickerIntention: l,
@@ -352,7 +352,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
     onClose: () => eD(null),
     guildId: eL.guildId,
     emojiId: eL.emojiId
-  }) : eG && !ek && (o = (0, i.jsx)(V.default, {
+  }) : eG && !ek && (o = (0, i.jsx)(F.default, {
     onDismiss: () => ew(!1)
   }));
   let ts = (0, i.jsx)(Y.default, {

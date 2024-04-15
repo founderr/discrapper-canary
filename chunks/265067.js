@@ -1,17 +1,17 @@
 "use strict";
-a.r(t), a("653041"), a("47120");
-var n = a("100527"),
-  s = a("208049"),
-  l = a("763296"),
-  i = a("697426"),
-  r = a("242291"),
-  o = a("641015"),
-  u = a("594174"),
-  d = a("996106"),
-  c = a("452426"),
-  f = a("736045"),
-  E = a("186901"),
-  h = a("231338");
+n.r(t), n("653041"), n("47120");
+var a = n("100527"),
+  s = n("208049"),
+  l = n("763296"),
+  i = n("697426"),
+  r = n("242291"),
+  o = n("641015"),
+  u = n("594174"),
+  d = n("996106"),
+  c = n("452426"),
+  f = n("736045"),
+  E = n("186901"),
+  h = n("231338");
 t.default = {
   [h.RPCCommands.GET_SOUNDBOARD_SOUNDS]: {
     scope: {
@@ -36,19 +36,19 @@ t.default = {
       let {
         args: {
           guild_id: t,
-          sound_id: a
+          sound_id: n
         }
       } = e;
       await (0, s.maybeFetchSoundboardSounds)();
       let i = u.default.getCurrentUser(),
-        c = l.default.getSound(t, a),
+        c = l.default.getSound(t, n),
         E = (0, f.default)(),
         _ = null != c && null != i && (0, r.canUseSoundboardSound)(i, c, E);
       if (null == E) throw new d.default({
         errorCode: h.RPCErrors.INVALID_CHANNEL
       }, "Invalid Channel.");
       if (_) {
-        if ((0, o.default)(E)) null != c && (0, r.playSound)(c, E.id, [n.default.RPC]);
+        if ((0, o.default)(E)) null != c && (0, r.playSound)(c, E.id, [a.default.RPC]);
         else throw new d.default({
           errorCode: h.RPCErrors.INVALID_PERMISSIONS
         }, "Invalid Permissions.")

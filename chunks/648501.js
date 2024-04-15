@@ -21,9 +21,9 @@ var a = n("442837"),
   C = n("26290"),
   g = n("968358"),
   E = n("790901"),
-  S = n("714794"),
-  I = n("355363"),
-  _ = n("687352"),
+  _ = n("714794"),
+  S = n("355363"),
+  I = n("687352"),
   N = n("135724"),
   T = n("25601"),
   A = n("981631"),
@@ -36,57 +36,57 @@ function R(e) {
   let {
     channel: n,
     isChannelSelected: R,
-    isChannelCollapsed: y,
-    voiceStates: M,
+    isChannelCollapsed: M,
+    voiceStates: y,
     enableConnectedUserLimit: O,
     enableActivities: b,
     isSubscriptionGated: D,
     needSubscriptionToAccess: j,
-    isNewChannel: G,
-    muted: P,
+    isNewChannel: P,
+    muted: G,
     resolvedUnreadSetting: U
-  } = e, w = (0, a.useStateFromStores)([p.default], () => p.default.getMentionCount(n.id)), B = (0, r.default)(n), F = (0, a.useStateFromStores)([h.default], () => !h.default.can(A.Permissions.CONNECT, n)), V = (0, a.useStateFromStores)([m.default], () => m.default.hasVideo(n.id)), H = (0, d.useStageHasMedia)(n.id) && n.isGuildStageVoice(), k = (0, I.default)({
+  } = e, w = (0, a.useStateFromStores)([p.default], () => p.default.getMentionCount(n.id)), F = (0, r.default)(n), B = (0, a.useStateFromStores)([h.default], () => !h.default.can(A.Permissions.CONNECT, n)), V = (0, a.useStateFromStores)([m.default], () => m.default.hasVideo(n.id)), H = (0, d.useStageHasMedia)(n.id) && n.isGuildStageVoice(), k = (0, S.default)({
     channel: n,
-    locked: F,
+    locked: B,
     video: V || H,
     selected: R
-  }), K = (0, a.useStateFromStores)([c.default], () => c.default.getNewThreadCount(n.guild_id, n.id)), Y = (0, o.useUnreadThreadsCountForParent)(n.guild_id, n.id), W = (0, a.useStateFromStores)([f.default], () => {
+  }), Y = (0, a.useStateFromStores)([c.default], () => c.default.getNewThreadCount(n.guild_id, n.id)), K = (0, o.useUnreadThreadsCountForParent)(n.guild_id, n.id), W = (0, a.useStateFromStores)([f.default], () => {
     var e, t;
     return null !== (t = null === (e = f.default.getGuild(n.guild_id)) || void 0 === e ? void 0 : e.hasFeature(A.GuildFeatures.COMMUNITY)) && void 0 !== t && t
   });
-  if ((0, S.default)(w)) return (0, l.jsx)(T.default, {
+  if ((0, _.default)(w)) return (0, l.jsx)(T.default, {
     mentionsCount: w
   });
   if ((0, u.showPremiumChannelIconButton)(D)) return (0, l.jsx)(u.default, {
     locked: j
   });
-  if (G) return (0, l.jsx)(C.TextBadge, {
+  if (P) return (0, l.jsx)(C.TextBadge, {
     text: v.default.Messages.NEW,
     color: s.default.unsafe_rawColors.BRAND_260.css,
     className: x.newChannel
   });
-  if (!P && U === L.UnreadSetting.ALL_MESSAGES && n.isForumLikeChannel() && null != K && K > 0) return (0, l.jsx)(i.Text, {
+  if (!G && U === L.UnreadSetting.ALL_MESSAGES && n.isForumLikeChannel() && null != Y && Y > 0) return (0, l.jsx)(i.Text, {
     variant: "text-xs/semibold",
     color: "text-brand",
     children: v.default.Messages.CHANNEL_NEW_POSTS_LABEL.format({
-      count: (0, C.getBadgeCountString)(K)
+      count: (0, C.getBadgeCountString)(Y)
     })
   });
-  if (!P && n.isForumLikeChannel() && null != Y && Y > 0) return (0, l.jsx)(i.Text, {
+  if (!G && n.isForumLikeChannel() && null != K && K > 0) return (0, l.jsx)(i.Text, {
     variant: "text-xs/semibold",
     color: "text-muted",
-    children: (0, C.getBadgeCountString)(Y)
+    children: (0, C.getBadgeCountString)(K)
   });
-  let Z = null !== (t = null == M ? void 0 : M.length) && void 0 !== t ? t : 0;
+  let Z = null !== (t = null == y ? void 0 : y.length) && void 0 !== t ? t : 0;
   return null != O && O && k ? (0, l.jsx)(N.default, {
     userCount: Z,
     video: V || H,
     channel: n
-  }) : y && (0, g.hasStream)(M) && W ? (0, l.jsx)(C.TextBadge, {
+  }) : M && (0, g.hasStream)(y) && W ? (0, l.jsx)(C.TextBadge, {
     text: v.default.Messages.LIVE,
     color: s.default.unsafe_rawColors.RED_400.css
-  }) : null != b && b && (0, E.showChannelItemEmbeddedActivities)(B) ? (0, l.jsx)(_.default, {
-    embeddedApps: B,
-    muted: P
+  }) : null != b && b && (0, E.showChannelItemEmbeddedActivities)(F) ? (0, l.jsx)(I.default, {
+    embeddedApps: F,
+    muted: G
   }) : null
 }

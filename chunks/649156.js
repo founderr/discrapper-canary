@@ -1,24 +1,24 @@
 "use strict";
-n.r(t);
-var s = n("735250");
-n("470079");
-var a = n("3570"),
-  i = n("685311"),
-  l = n("186901");
+s.r(t);
+var n = s("735250");
+s("470079");
+var a = s("3570"),
+  l = s("685311"),
+  i = s("186901");
 t.default = function(e) {
   let {
     match: t,
-    location: n
+    location: s
   } = e, r = async (e, t) => {
-    await (0, a.deepLinkRouteIfLandedAndNotAuthed)(l.RPCDeepLinks.PICK_GUILD_SETTINGS, {
+    await (0, a.deepLinkRouteIfLandedAndNotAuthed)(i.RPCDeepLinks.PICK_GUILD_SETTINGS, {
       section: e.params.section,
       subsection: e.params.subsection,
       search: t.search
     })
   };
-  return (0, s.jsx)(i.default, {
+  return (0, n.jsx)(l.default, {
     match: t,
-    location: n,
+    location: s,
     attemptDeepLink: r
   })
 }

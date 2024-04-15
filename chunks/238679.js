@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   activityInstanceConnectedParticipants: function() {
     return f
   },
@@ -13,15 +13,15 @@ a.r(t), a.d(t, {
     return _
   }
 });
-var n = a("392711"),
-  s = a.n(n),
-  l = a("570140"),
-  i = a("317381"),
-  r = a("594174"),
-  o = a("823379"),
-  u = a("5192"),
-  d = a("863141"),
-  c = a("186901");
+var a = n("392711"),
+  s = n.n(a),
+  l = n("570140"),
+  i = n("317381"),
+  r = n("594174"),
+  o = n("823379"),
+  u = n("5192"),
+  d = n("863141"),
+  c = n("186901");
 
 function f() {
   let e = i.default.getCurrentEmbeddedActivity();
@@ -30,15 +30,15 @@ function f() {
   };
   let {
     guildId: t,
-    channelId: a
+    channelId: n
   } = e;
   return {
     participants: Array.from(e.userIds, e => {
-      let n = r.default.getUser(e);
-      if (null == n) return;
-      let s = (0, u.getNickname)(t, a, n);
+      let a = r.default.getUser(e);
+      if (null == a) return;
+      let s = (0, u.getNickname)(t, n, a);
       return {
-        ...(0, d.default)(n),
+        ...(0, d.default)(a),
         nickname: null != s ? s : void 0
       }
     }).filter(o.isNotNullish)
@@ -52,16 +52,16 @@ let E = {
     handler: () => e => {
       let {
         prevState: t,
-        dispatch: a
-      } = e, n = f();
-      return !s().isEqual(n, t) && a(n), n
+        dispatch: n
+      } = e, a = f();
+      return !s().isEqual(a, t) && n(a), a
     }
   };
 
 function _(e) {
   let t = "EMBEDDED_ACTIVITY_UPDATE",
-    a = () => {
+    n = () => {
       e(f())
     };
-  return l.default.subscribe(t, a), () => l.default.unsubscribe(t, a)
+  return l.default.subscribe(t, n), () => l.default.unsubscribe(t, n)
 }

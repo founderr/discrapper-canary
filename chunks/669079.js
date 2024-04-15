@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return K
   },
   getGiftCodeURL: function() {
-    return F
+    return V
   },
   getGiftExperience: function() {
     return P
@@ -43,7 +43,7 @@ n.r(t), n.d(t, {
     return X
   },
   resolveGiftCode: function() {
-    return V
+    return F
   },
   shouldShowCustomGiftExperience: function() {
     return U
@@ -114,12 +114,12 @@ let B = e => (null == e ? void 0 : e.type) === A.MessageTypes.CUSTOM_GIFT && (nu
     return Array.from(n)
   };
 
-function F() {
+function V() {
   let e, t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
     n = window.GLOBAL_ENV.GIFT_CODE_HOST;
   return null == n || (0, I.isAndroid)() ? (n = location.host, e = "/gifts/".concat(t)) : e = "/".concat(t), "".concat(location.protocol, "//").concat(n).concat(e)
 }
-async function V(e) {
+async function F(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   try {

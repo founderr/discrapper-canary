@@ -50,8 +50,8 @@ let w = new f.default("GatewaySocket"),
   B = new D.default;
 
 function k() {}
-let F = 30 * O.default.Millis.SECOND,
-  V = 3 * O.default.Millis.MINUTE,
+let V = 30 * O.default.Millis.SECOND,
+  F = 3 * O.default.Millis.MINUTE,
   x = 1 * O.default.Millis.MINUTE;
 
 function H(e) {
@@ -93,7 +93,7 @@ class j extends y.default {
     o.default.mark("\uD83C\uDF10", "Socket._connect"), w.info("[CONNECT] ".concat(s, ", ") + "encoding: ".concat(r, ", ") + "version: ".concat(a, ", ") + "compression: ".concat(null != i ? i : "none")), null !== this.webSocket && (w.error("_connect called with already existing websocket"), this._cleanup(e => e.close(4e3))), this.connectionStartTime = Date.now(), this.helloTimeout = setTimeout(() => {
       let e = Date.now() - this.connectionStartTime;
       this._handleClose(!1, 0, "The connection timed out after ".concat(e, " ms - did not receive OP_HELLO in time.")), this.setResumeUrl(null)
-    }, F);
+    }, V);
     let l = new URL(s);
     l.searchParams.append("encoding", r), l.searchParams.append("v", a.toString()), null != i && l.searchParams.append("compress", i);
     ! function(e) {
@@ -365,7 +365,7 @@ class j extends y.default {
   }
   _doResumeOrIdentify() {
     let e = Date.now();
-    null !== this.sessionId && (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= V) ? this._doResume() : this._doIdentify(), this._updateLastHeartbeatAckTime()
+    null !== this.sessionId && (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= F) ? this._doResume() : this._doIdentify(), this._updateLastHeartbeatAckTime()
   }
   _updateLastHeartbeatAckTime() {
     this.lastHeartbeatAckTime = Date.now()

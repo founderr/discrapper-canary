@@ -1,31 +1,31 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   getInitialSubscriptionPayload: function() {
     return d
   }
 });
-var n = a("317381"),
-  s = a("573979"),
-  l = a("42352"),
-  i = a("886355"),
-  r = a("238679"),
-  o = a("981631"),
-  u = a("701488");
-async function d(e, t, a) {
+var a = n("317381"),
+  s = n("573979"),
+  l = n("42352"),
+  i = n("886355"),
+  r = n("238679"),
+  o = n("981631"),
+  u = n("701488");
+async function d(e, t, n) {
   var d, c;
   switch (t) {
     case o.RPCEvents.ACTIVITY_PIP_MODE_UPDATE: {
       let t = null === (d = e.application) || void 0 === d ? void 0 : d.id,
-        a = null != t ? n.default.getLayoutModeForApp(t) : null;
-      return null != a ? {
-        is_pip_mode: a !== u.ActivityLayoutMode.FOCUSED
+        n = null != t ? a.default.getLayoutModeForApp(t) : null;
+      return null != n ? {
+        is_pip_mode: n !== u.ActivityLayoutMode.FOCUSED
       } : null
     }
     case o.RPCEvents.ACTIVITY_LAYOUT_MODE_UPDATE: {
       let t = null === (c = e.application) || void 0 === c ? void 0 : c.id,
-        a = null != t ? n.default.getLayoutModeForApp(t) : null;
-      return null != a ? {
-        layout_mode: a
+        n = null != t ? a.default.getLayoutModeForApp(t) : null;
+      return null != n ? {
+        layout_mode: n
       } : null
     }
     case o.RPCEvents.THERMAL_STATE_UPDATE: {
@@ -40,10 +40,10 @@ async function d(e, t, a) {
       if (null == e) return null;
       {
         let t = e ? u.ActivityScreenOrientation.LANDSCAPE : u.ActivityScreenOrientation.PORTRAIT,
-          a = t === u.ActivityScreenOrientation.PORTRAIT ? "portrait" : "landscape";
+          n = t === u.ActivityScreenOrientation.PORTRAIT ? "portrait" : "landscape";
         return {
           screen_orientation: t,
-          orientation: a
+          orientation: n
         }
       }
     }

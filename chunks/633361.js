@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var s = n("88250"),
+var l = n("88250"),
   a = n("866495"),
-  l = n("490476");
+  s = n("490476");
 let i = e => {
   let {
     enabled: t
-  } = s.default.getCurrentConfig({
+  } = l.default.getCurrentConfig({
     location: e
   }, {
     autoTrackExposure: !1
@@ -22,7 +22,7 @@ let i = e => {
     autoTrackExposure: !1
   }), {
     enabled: i
-  } = l.default.getCurrentConfig({
+  } = s.default.getCurrentConfig({
     location: e
   }, {
     autoTrackExposure: !1

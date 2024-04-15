@@ -1,10 +1,10 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   CollectiblesDCToDisplayOptions: function() {
     return S
   },
   CollectiblesMarketingVariant: function() {
-    return n
+    return a
   },
   getCountdownDisplayOptions: function() {
     return I
@@ -12,21 +12,21 @@ a.r(t), a.d(t, {
   getCustomConfettiDisplayOptions: function() {
     return T
   }
-}), a("627341");
-var n, s, l = a("278074"),
-  i = a("180650"),
-  r = a("524437"),
-  o = a("689938"),
-  u = a("160506"),
-  d = a("263660"),
-  c = a("22344"),
-  f = a("165047"),
-  E = a("212813"),
-  h = a("167087"),
-  _ = a("692797"),
-  C = a("186077"),
-  m = a("376477");
-(s = n || (n = {}))[s.NONE = 0] = "NONE", s[s.TOOLTIP = 1] = "TOOLTIP", s[s.COACHTIP = 2] = "COACHTIP";
+}), n("627341");
+var a, s, l = n("278074"),
+  i = n("180650"),
+  r = n("524437"),
+  o = n("689938"),
+  u = n("160506"),
+  d = n("263660"),
+  c = n("22344"),
+  f = n("165047"),
+  E = n("212813"),
+  h = n("167087"),
+  _ = n("692797"),
+  C = n("186077"),
+  m = n("376477");
+(s = a || (a = {}))[s.NONE = 0] = "NONE", s[s.TOOLTIP = 1] = "TOOLTIP", s[s.COACHTIP = 2] = "COACHTIP";
 let S = {
     [r.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE]: {
       type: 1,

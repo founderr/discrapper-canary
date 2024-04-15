@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   NonChannelCategory: function() {
-    return M
+    return y
   },
   ReadonlyCategoryChannel: function() {
     return D
@@ -29,9 +29,9 @@ var l = n("735250"),
   C = n("9156"),
   g = n("514342"),
   E = n("696202"),
-  S = n("605403"),
-  I = n("908773"),
-  _ = n("632184"),
+  _ = n("605403"),
+  S = n("908773"),
+  I = n("632184"),
   N = n("151827"),
   T = n("203818"),
   A = n("438144"),
@@ -42,16 +42,16 @@ var l = n("735250"),
 function R(e) {
   e.stopPropagation()
 }
-let y = a.memo(function(e) {
+let M = a.memo(function(e) {
   let t, {
       channel: s,
       connectChannelDragSource: f,
       connectChannelDropTarget: E,
-      disableManageChannels: _,
+      disableManageChannels: I,
       position: T,
       sortingPosition: A,
-      hideIcon: y,
-      children: M
+      hideIcon: M,
+      children: y
     } = e,
     O = (0, o.useStateFromStores)([C.default], () => C.default.isChannelMuted(s.getGuildId(), s.id)),
     b = (0, o.useStateFromStores)([h.default], () => h.default.isCollapsed(s.id)),
@@ -60,7 +60,7 @@ let y = a.memo(function(e) {
   let j = a.useCallback(() => {
       b ? (0, d.categoryExpand)(s.id) : (0, d.categoryCollapse)(s.id)
     }, [s.id, b]),
-    G = a.useCallback(e => {
+    P = a.useCallback(e => {
       if ("null" !== s.id) {
         let t = p.default.getGuild(s.getGuildId());
         null != t && (0, c.openContextMenuLazy)(e, async () => {
@@ -75,7 +75,7 @@ let y = a.memo(function(e) {
         })
       }
     }, [s]),
-    P = a.useCallback(() => {
+    G = a.useCallback(() => {
       let e = s.type === L.ChannelTypes.GUILD_CATEGORY ? null : s.type,
         t = s.getGuildId();
       null != t && (0, u.openModalLazy)(async () => {
@@ -93,15 +93,15 @@ let y = a.memo(function(e) {
     {
       role: U,
       tabIndex: w,
-      ...B
+      ...F
     } = (0, r.useListItem)(s.id),
-    F = a.useRef(null),
+    B = a.useRef(null),
     V = a.useRef(null),
     H = (0, l.jsxs)("li", {
       className: t,
       "data-dnd-name": s.name,
       children: [(0, l.jsx)(u.FocusRing, {
-        focusTarget: F,
+        focusTarget: B,
         ringTarget: V,
         offset: {
           left: 4,
@@ -114,12 +114,12 @@ let y = a.memo(function(e) {
             [x.muted]: O,
             [x.clickable]: !0
           }),
-          onContextMenu: G,
+          onContextMenu: P,
           children: [(0, l.jsxs)(u.Clickable, {
-            innerRef: F,
+            innerRef: B,
             className: x.mainContent,
             tabIndex: w,
-            ...B,
+            ...F,
             onClick: j,
             "aria-label": v.default.Messages.CATEGORY_A11Y_LABEL.format({
               categoryName: s.name
@@ -128,7 +128,7 @@ let y = a.memo(function(e) {
             focusProps: {
               enabled: !1
             },
-            children: [y ? null : (0, l.jsx)(S.default, {
+            children: [M ? null : (0, l.jsx)(_.default, {
               className: x.icon
             }), (0, l.jsx)(N.default, {
               className: x.name,
@@ -139,7 +139,7 @@ let y = a.memo(function(e) {
           }), (0, l.jsx)("div", {
             onClick: R,
             className: x.children,
-            children: D && !_ ? (0, l.jsx)(u.Tooltip, {
+            children: D && !I ? (0, l.jsx)(u.Tooltip, {
               text: v.default.Messages.CREATE_CHANNEL,
               children: e => {
                 let {
@@ -151,7 +151,7 @@ let y = a.memo(function(e) {
                   look: u.Button.Looks.BLANK,
                   size: u.Button.Sizes.NONE,
                   className: i()(x.addButton, x.forceVisible),
-                  onClick: P,
+                  onClick: G,
                   onMouseEnter: t,
                   onMouseLeave: n,
                   tabIndex: w,
@@ -163,7 +163,7 @@ let y = a.memo(function(e) {
                       left: -4
                     }
                   },
-                  children: (0, l.jsx)(I.default, {
+                  children: (0, l.jsx)(S.default, {
                     width: 18,
                     height: 18,
                     className: x.addButtonIcon
@@ -173,12 +173,12 @@ let y = a.memo(function(e) {
             }) : null
           })]
         })
-      }), M]
+      }), y]
     });
   return null != E && null != f ? E(f(H)) : H
 });
-t.default = (0, f.makeChannelSortable)(y);
-let M = a.memo(function(e) {
+t.default = (0, f.makeChannelSortable)(M);
+let y = a.memo(function(e) {
     let {
       name: t,
       onDismiss: n,
@@ -219,7 +219,7 @@ let M = a.memo(function(e) {
     return n ? (0, l.jsxs)(u.Clickable, {
       className: x.voiceChannelsButton,
       onClick: s,
-      children: [(0, l.jsx)(_.default, {
+      children: [(0, l.jsx)(I.default, {
         className: x.voiceChannelsToggleIcon,
         width: 16,
         height: 16
@@ -230,7 +230,7 @@ let M = a.memo(function(e) {
     }) : (0, l.jsxs)(u.Clickable, {
       className: x.voiceChannelsButton,
       onClick: s,
-      children: [(0, l.jsx)(_.default, {
+      children: [(0, l.jsx)(I.default, {
         className: x.voiceChannelsToggleIcon,
         width: 16,
         height: 16

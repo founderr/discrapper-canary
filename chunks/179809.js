@@ -20,9 +20,9 @@ var l = n("735250"),
   C = n("199540"),
   g = n("40153"),
   E = n("252686"),
-  S = n("682662"),
-  I = n("662146"),
-  _ = n("689938"),
+  _ = n("682662"),
+  S = n("662146"),
+  I = n("689938"),
   N = n("515330"),
   T = n("814886");
 let A = (0, p.cssValueToNumber)(d.default.FOLDER_ITEM_ANIMATION_DURATION),
@@ -38,21 +38,21 @@ function x(e) {
     mediaState: p,
     mentionCount: x = 0,
     unread: R = !1,
-    defaultFolderName: y,
-    useCircleMask: M = !1,
+    defaultFolderName: M,
+    useCircleMask: y = !1,
     draggable: O = !1,
     sorting: b = !1,
     onDragStart: D,
     onDragEnd: j,
-    onExpandCollapse: G,
-    onContextMenu: P,
+    onExpandCollapse: P,
+    onContextMenu: G,
     renderChildNode: U,
     folderIconContent: w
   } = e, {
-    id: B,
-    name: F,
+    id: F,
+    name: B,
     children: V
-  } = t, [H, k] = a.useState(!1), [K, Y] = a.useState(!1), W = H || K;
+  } = t, [H, k] = a.useState(!1), [Y, K] = a.useState(!1), W = H || Y;
   a.useEffect(() => {
     b && k(!1)
   }, [b]);
@@ -71,10 +71,10 @@ function x(e) {
       dragging: e.isDragging()
     })
   }), X = a.useCallback(e => {
-    Y(e)
+    K(e)
   }, []), q = a.useCallback(e => {
-    ("ArrowRight" === e.key && !d || "ArrowLeft" === e.key && d) && G()
-  }, [G, d]), Q = null != F && "" !== F ? F : null != y && "" !== y ? y : _.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(B)), $ = "folder-items-".concat(B), ee = V.length * (L + v), et = (0, o.useTransition)(!Z && d, {
+    ("ArrowRight" === e.key && !d || "ArrowLeft" === e.key && d) && P()
+  }, [P, d]), Q = null != B && "" !== B ? B : null != M && "" !== M ? M : I.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(F)), $ = "folder-items-".concat(F), ee = V.length * (L + v), et = (0, o.useTransition)(!Z && d, {
     from: {
       height: 0
     },
@@ -87,14 +87,14 @@ function x(e) {
     config: {
       duration: A
     }
-  }), en = a.useCallback(e => null == n ? void 0 : n(B, e), [n, B]), el = (0, l.jsxs)(S.ListItem, {
+  }), en = a.useCallback(e => null == n ? void 0 : n(F, e), [n, F]), el = (0, l.jsxs)(_.ListItem, {
     children: [(0, l.jsx)(h.default, {
       disabled: Z || d,
       hovered: H,
       selected: s,
       unread: R,
       className: T.pill
-    }), (0, l.jsx)(I.default, {
+    }), (0, l.jsx)(S.default, {
       text: Q,
       disabled: b,
       selected: s,
@@ -102,20 +102,20 @@ function x(e) {
       children: (0, l.jsx)("div", {
         ref: O ? z : void 0,
         className: i()({
-          [T.wobble]: !Z && K && !d
+          [T.wobble]: !Z && Y && !d
         }),
         "data-dnd-name": Q,
         children: Z ? (0, l.jsx)(E.default, {}) : (0, l.jsx)(C.default, {
           folderNode: t,
           expanded: d,
-          forceCircular: M,
+          forceCircular: y,
           sorting: b,
           mediaState: p,
           mentionCount: x,
           tooltipName: Q,
           folderGroupId: $,
-          onClick: G,
-          onContextMenu: P,
+          onClick: P,
+          onContextMenu: G,
           onHoverChange: k,
           onKeyDown: q,
           treeItemProps: J,

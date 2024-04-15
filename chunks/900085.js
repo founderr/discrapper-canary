@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return K
+    return Y
   }
 }), n("411104"), n("47120");
 var l, a = n("735250"),
@@ -19,9 +19,9 @@ var l, a = n("735250"),
   C = n("592125"),
   g = n("888369"),
   E = n("430824"),
-  S = n("306680"),
-  I = n("944486"),
-  _ = n("938475"),
+  _ = n("306680"),
+  S = n("944486"),
+  I = n("938475"),
   N = n("387204"),
   T = n("107828"),
   A = n("153124"),
@@ -29,8 +29,8 @@ var l, a = n("735250"),
   v = n("63063"),
   x = n("51596"),
   R = n("823385"),
-  y = n("670512"),
-  M = n("981631"),
+  M = n("670512"),
+  y = n("981631"),
   O = n("689938"),
   b = n("13199");
 
@@ -45,7 +45,7 @@ function D(e, t, n) {
 let j = {
     bottom: 10
   },
-  G = () => (0, a.jsxs)("div", {
+  P = () => (0, a.jsxs)("div", {
     className: b.emptyState,
     children: [(0, a.jsx)("div", {
       className: b.emptyStateNote,
@@ -53,12 +53,12 @@ let j = {
     }), (0, a.jsx)("div", {
       className: b.emptyStateCTA,
       children: (0, a.jsx)(d.Anchor, {
-        href: v.default.getArticleURL(M.HelpdeskArticles.QUICK_SWITCHER_TUTORIAL),
+        href: v.default.getArticleURL(y.HelpdeskArticles.QUICK_SWITCHER_TUTORIAL),
         children: O.default.Messages.QUICKSWITCHER_EMPTY_CTA
       })
     })]
   });
-class P extends(l = s.Component) {
+class G extends(l = s.Component) {
   render() {
     let e = E.default.getGuild(this.props.channel.guild_id);
     return (0, a.jsx)(T.Channel, {
@@ -70,29 +70,29 @@ class P extends(l = s.Component) {
     })
   }
 }
-D(P, "defaultProps", {
+D(G, "defaultProps", {
   unread: !1
 });
-let U = u.default.connectStores([S.default, C.default], e => {
+let U = u.default.connectStores([_.default, C.default], e => {
     let {
       channel: t
     } = e;
     return {
-      unread: S.default.hasUnread(t.id),
-      mentions: S.default.getMentionCount(t.id),
+      unread: _.default.hasUnread(t.id),
+      mentions: _.default.getMentionCount(t.id),
       category: C.default.getChannel(t.parent_id)
     }
-  })(P),
-  w = u.default.connectStores([_.default], e => {
+  })(G),
+  w = u.default.connectStores([I.default], e => {
     let {
       channel: t
     } = e;
     if (null == t.guild_id) throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
     return {
-      voiceStates: _.default.getVoiceStates(t.guild_id)[t.id]
+      voiceStates: I.default.getVoiceStates(t.guild_id)[t.id]
     }
-  })(P),
-  B = u.default.connectStores([g.default], e => {
+  })(G),
+  F = u.default.connectStores([g.default], e => {
     let {
       guild: t
     } = e;
@@ -100,20 +100,20 @@ let U = u.default.connectStores([S.default, C.default], e => {
       unread: g.default.hasUnread(t.id)
     }
   })(T.Guild),
-  F = u.default.connectStores([S.default], e => {
+  B = u.default.connectStores([_.default], e => {
     let {
       channel: t
     } = e;
     return {
-      mentions: S.default.getMentionCount(t.id)
+      mentions: _.default.getMentionCount(t.id)
     }
   })(T.GroupDM),
-  V = u.default.connectStores([C.default, S.default], e => {
+  V = u.default.connectStores([C.default, _.default], e => {
     let {
       user: t
     } = e, n = C.default.getDMFromUserId(t.id);
     return {
-      mentions: null != n ? S.default.getMentionCount(n) : 0
+      mentions: null != n ? _.default.getMentionCount(n) : 0
     }
   })(T.User);
 
@@ -195,7 +195,7 @@ class k extends s.PureComponent {
     } = this.state, {
       results: t
     } = this.props;
-    return 0 === t.length && e.length > 0 ? (0, a.jsx)(G, {}) : 0 === t.length ? null : (0, a.jsx)(d.ListAuto, {
+    return 0 === t.length && e.length > 0 ? (0, a.jsx)(P, {}) : 0 === t.length ? null : (0, a.jsx)(d.ListAuto, {
       innerId: this._listId,
       innerRole: "listbox",
       "aria-label": O.default.Messages.QUICK_SWITCHER_RESULTS_LABEL,
@@ -210,7 +210,7 @@ class k extends s.PureComponent {
     })
   }
   focusNode(e) {
-    L.ComponentDispatch.dispatch(M.ComponentActions.QUICKSWITCHER_RESULT_FOCUS, {
+    L.ComponentDispatch.dispatch(y.ComponentActions.QUICKSWITCHER_RESULT_FOCUS, {
       node: e
     })
   }
@@ -228,7 +228,7 @@ class k extends s.PureComponent {
         textChannelSymbolHook: (e, t) => H(t, p.AutocompleterQuerySymbols.TEXT_CHANNEL, O.default.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
         voiceChannelSymbolHook: (e, t) => H(t, p.AutocompleterQuerySymbols.VOICE_CHANNEL, O.default.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
         guildSymbolHook: (e, t) => H(t, p.AutocompleterQuerySymbols.GUILD, O.default.Messages.QUICKSWITCHER_PROTIP_GUILDS),
-        helpdeskArticle: v.default.getArticleURL(M.HelpdeskArticles.QUICK_SWITCHER_TUTORIAL)
+        helpdeskArticle: v.default.getArticleURL(y.HelpdeskArticles.QUICK_SWITCHER_TUTORIAL)
       })
     })
   }
@@ -239,7 +239,7 @@ class k extends s.PureComponent {
       seenTutorial: t,
       results: n
     } = this.props;
-    return t ? null : (0, a.jsx)(y.default, {
+    return t ? null : (0, a.jsx)(M.default, {
       hasQuery: e.length > 0 && n.length > 0
     })
   }
@@ -298,10 +298,10 @@ class k extends s.PureComponent {
             s = E.default.getGuild(l.getGuildId());
           if (null == s) return;
           switch (l.type) {
-            case M.ChannelTypes.GUILD_TEXT:
-            case M.ChannelTypes.GUILD_ANNOUNCEMENT:
-            case M.ChannelTypes.GUILD_FORUM:
-            case M.ChannelTypes.GUILD_MEDIA:
+            case y.ChannelTypes.GUILD_TEXT:
+            case y.ChannelTypes.GUILD_ANNOUNCEMENT:
+            case y.ChannelTypes.GUILD_FORUM:
+            case y.ChannelTypes.GUILD_MEDIA:
               return (0, c.openContextMenuLazy)(e, async () => {
                 let {
                   default: e
@@ -313,8 +313,8 @@ class k extends s.PureComponent {
                   onSelect: x.hide
                 })
               });
-            case M.ChannelTypes.GUILD_VOICE:
-            case M.ChannelTypes.GUILD_STAGE_VOICE:
+            case y.ChannelTypes.GUILD_VOICE:
+            case y.ChannelTypes.GUILD_STAGE_VOICE:
               return (0, c.openContextMenuLazy)(e, async () => {
                 let {
                   default: e
@@ -326,9 +326,9 @@ class k extends s.PureComponent {
                   onSelect: x.hide
                 })
               });
-            case M.ChannelTypes.ANNOUNCEMENT_THREAD:
-            case M.ChannelTypes.PUBLIC_THREAD:
-            case M.ChannelTypes.PRIVATE_THREAD:
+            case y.ChannelTypes.ANNOUNCEMENT_THREAD:
+            case y.ChannelTypes.PUBLIC_THREAD:
+            case y.ChannelTypes.PRIVATE_THREAD:
               return (0, c.openContextMenuLazy)(e, async () => {
                 let {
                   default: e
@@ -339,7 +339,7 @@ class k extends s.PureComponent {
                   onSelect: x.hide
                 })
               });
-            case M.ChannelTypes.GUILD_STORE:
+            case y.ChannelTypes.GUILD_STORE:
               return (0, c.openContextMenuLazy)(e, async () => {
                 let {
                   default: e
@@ -351,7 +351,7 @@ class k extends s.PureComponent {
                   onSelect: x.hide
                 })
               });
-            case M.ChannelTypes.GUILD_DIRECTORY:
+            case y.ChannelTypes.GUILD_DIRECTORY:
               return (0, c.openContextMenuLazy)(e, async () => {
                 let {
                   default: e
@@ -371,7 +371,7 @@ class k extends s.PureComponent {
             return n => (0, a.jsx)(e, {
               ...n,
               channel: t.record,
-              selected: I.default.getChannelId() === t.record.id,
+              selected: S.default.getChannelId() === t.record.id,
               onSelect: x.hide
             })
           });
@@ -473,7 +473,7 @@ class k extends s.PureComponent {
             score: s ? n.score : void 0
           }, "".concat(n.type, "-").concat(n.record.id));
         case p.AutocompleterResultTypes.GUILD:
-          return (0, a.jsx)(B, {
+          return (0, a.jsx)(F, {
             id: this.getRowId(t),
             focused: l >= 0 && t === l,
             onClick: () => this.selectResult(n),
@@ -496,7 +496,7 @@ class k extends s.PureComponent {
             score: s ? n.score : void 0
           }, "".concat(n.type, "-").concat(n.record.id));
         case p.AutocompleterResultTypes.GROUP_DM:
-          return (0, a.jsx)(F, {
+          return (0, a.jsx)(B, {
             id: this.getRowId(t),
             focused: l >= 0 && t === l,
             onClick: () => this.selectResult(n),
@@ -533,7 +533,7 @@ class k extends s.PureComponent {
   }
 }
 
-function K(e) {
+function Y(e) {
   let t = (0, u.useStateFromStoresObject)([R.default], () => R.default.getProps());
   return (0, a.jsx)(k, {
     ...t,

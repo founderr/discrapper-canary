@@ -1,25 +1,25 @@
 "use strict";
-r.r(t), r.d(t, {
+s.r(t), s.d(t, {
   usePaymentModalAnimationScene: function() {
-    return l
+    return i
   }
-}), r("47120");
-var s = r("470079"),
-  n = r("409813"),
-  a = r("45572");
+}), s("47120");
+var n = s("470079"),
+  r = s("409813"),
+  a = s("45572");
 
-function l(e) {
+function i(e) {
   let {
     purchaseState: t,
-    currentStep: r,
-    initialScene: l,
-    purchaseScene: u,
-    errorScene: c,
-    successScene: i
-  } = e, [o, d] = (0, s.useState)(l);
-  return (0, s.useEffect)(() => {
-    t === a.PurchaseState.PURCHASING ? d(u) : t === a.PurchaseState.FAIL && d(c)
-  }, [t, u, c]), (0, s.useEffect)(() => {
-    r === n.Step.CONFIRM && d(i)
-  }, [r, i]), [o, d]
+    currentStep: s,
+    initialScene: i,
+    purchaseScene: l,
+    errorScene: u,
+    successScene: o
+  } = e, [c, d] = (0, n.useState)(i);
+  return (0, n.useEffect)(() => {
+    t === a.PurchaseState.PURCHASING ? d(l) : t === a.PurchaseState.FAIL && d(u)
+  }, [t, l, u]), (0, n.useEffect)(() => {
+    s === r.Step.CONFIRM && d(o)
+  }, [s, o]), [c, d]
 }

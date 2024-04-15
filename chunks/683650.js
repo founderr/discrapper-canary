@@ -14,9 +14,9 @@ var a = n("120356"),
   u = n("981631"),
   d = n("689938"),
   c = n("780134"),
-  f = n("87181");
+  E = n("87181");
 
-function E() {
+function f() {
   return (0, s.jsx)("div", {
     className: c.buttonContainer,
     children: (0, s.jsx)(i.Button, {
@@ -52,11 +52,11 @@ function _() {
         color: "text-normal",
         className: c.__invalid_mobileWebCopy,
         children: d.default.Messages.QUESTS_EMBED_INVALID_BODY
-      }), (0, s.jsx)(E, {})]
+      }), (0, s.jsx)(f, {})]
     }), (0, s.jsx)("div", {
       className: c.imgContainer,
       children: (0, s.jsx)("img", {
-        src: f,
+        src: E,
         alt: "",
         className: c.missingQuestImage
       })

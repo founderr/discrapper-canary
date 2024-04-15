@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   annualDiscountsExperimentEnabled: function() {
-    return u
+    return s
   },
   useAnnualDiscountExperiment: function() {
     return a
   }
 });
-let r = (0, n("818083").createExperiment)({
+let l = (0, n("818083").createExperiment)({
   kind: "user",
   id: "2024-03_annual_discounts_experiment",
   label: "Test price for standard annual plan utilizing discount framework",
@@ -43,17 +43,17 @@ function a(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     {
       enabled: n
-    } = r.useExperiment({
+    } = l.useExperiment({
       location: e
     }, {
       autoTrackExposure: t
     });
   return n
 }
-let u = e => {
+let s = e => {
   let {
     enabled: t
-  } = r.getCurrentConfig({
+  } = l.getCurrentConfig({
     location: e
   }, {
     autoTrackExposure: !1

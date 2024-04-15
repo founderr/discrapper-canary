@@ -30,12 +30,12 @@ function p(e) {
     availableApplications: N
   } = (0, r.usePrivateChannelIntegrationState)({
     channelId: p
-  }), A = _ && null != N.find(e => e.id === (null == s ? void 0 : s.id)), x = null != s.customInstallUrl || !S.default.isDiscordUrl(s.customInstallUrl);
+  }), x = _ && null != N.find(e => e.id === (null == s ? void 0 : s.id)), A = null != s.customInstallUrl || !S.default.isDiscordUrl(s.customInstallUrl);
   return (0, a.jsx)(m.default, {
     icon: c.default,
     text: (() => {
-      let e = A ? T.default.Messages.ADD : T.default.Messages.APPLICATION_ADD_BUTTON;
-      return x ? (0, a.jsxs)(a.Fragment, {
+      let e = x ? T.default.Messages.ADD : T.default.Messages.APPLICATION_ADD_BUTTON;
+      return A ? (0, a.jsxs)(a.Fragment, {
         children: [e, (0, a.jsx)(d.default, {
           width: 16,
           height: 16
@@ -59,7 +59,7 @@ function p(e) {
       }))
     } : void 0,
     onClick: () => {
-      if (A) {
+      if (x) {
         (0, o.openOAuth2Modal)({
           channelId: p,
           clientId: s.id,

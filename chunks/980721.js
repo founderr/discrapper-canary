@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   buildClanFromServer: function() {
     return r
   },
@@ -12,11 +12,11 @@ a.r(t), a.d(t, {
   isUnloadedSearchResult: function() {
     return u
   }
-}), a("536091");
-var n = a("924801"),
-  s = a("854698"),
-  l = a("116175"),
-  i = a("308083");
+}), n("536091");
+var a = n("924801"),
+  s = n("854698"),
+  l = n("116175"),
+  i = n("308083");
 
 function r(e) {
   return {
@@ -52,10 +52,10 @@ function u(e) {
 }
 
 function d(e, t) {
-  let a = 0;
-  if (null != t.games && (a += 2 * t.games.filter(t => e.games.includes(t)).length), null != t.playstyle && (t.playstyle === e.playstyle ? a += 2 : i.PLAYSTYLE_GROUPS[e.playstyle] === i.PLAYSTYLE_GROUPS[t.playstyle] && (a += 1)), null != t.traits && (a += 2 * Array.from(t.traits).filter(t => e.traits.includes(t)).length), null != t.primetimes) {
+  let n = 0;
+  if (null != t.games && (n += 2 * t.games.filter(t => e.games.includes(t)).length), null != t.playstyle && (t.playstyle === e.playstyle ? n += 2 : i.PLAYSTYLE_GROUPS[e.playstyle] === i.PLAYSTYLE_GROUPS[t.playstyle] && (n += 1)), null != t.traits && (n += 2 * Array.from(t.traits).filter(t => e.traits.includes(t)).length), null != t.primetimes) {
     let l = e.primetime.map(e => (0, s.getRRule)(e).between(new Date, new Date(Date.now() + 6048e5))).flat();
-    a += 2 * (0, n.getTimeRangesInNextWeek)(t.primetimes).filter(e => l.some(t => e.start.subtract(1).isBefore(t) && e.end.add(1).isAfter(t))).length
+    n += 2 * (0, a.getTimeRangesInNextWeek)(t.primetimes).filter(e => l.some(t => e.start.subtract(1).isBefore(t) && e.end.add(1).isAfter(t))).length
   }
-  return a
+  return n
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return S
   }
 });
 var l = n("735250"),
@@ -20,14 +20,14 @@ var l = n("735250"),
   C = n("981631"),
   g = n("176505"),
   E = n("490897"),
-  S = n("689938");
+  _ = n("689938");
 
-function I(e) {
+function S(e) {
   let {
     guild: t,
     selected: n
-  } = e, I = (0, s.useListItem)("home-tab-".concat(t.id)), {
-    showBadge: _
+  } = e, S = (0, s.useListItem)("home-tab-".concat(t.id)), {
+    showBadge: I
   } = o.GuildHomeBadgeExperiment.useExperiment({
     location: "487e85_1"
   }, {
@@ -39,15 +39,15 @@ function I(e) {
     })
   }, []);
   let N = (0, d.useCanSeeOnboardingHome)(t.id),
-    T = (0, i.useStateFromStores)([f.default], () => f.default.hasUnread(t.id, E.ReadStateTypes.GUILD_HOME) && _, [t.id, _]);
+    T = (0, i.useStateFromStores)([f.default], () => f.default.hasUnread(t.id, E.ReadStateTypes.GUILD_HOME) && I, [t.id, I]);
   return (0, l.jsx)(m.default, {
-    ...I,
+    ...S,
     renderIcon: e => N ? (0, l.jsx)(p.default, {
       className: e
     }) : (0, l.jsx)(h.default, {
       className: e
     }),
-    text: N ? S.default.Messages.SERVER_GUIDE : S.default.Messages.GUILD_HOME,
+    text: N ? _.default.Messages.SERVER_GUIDE : _.default.Messages.GUILD_HOME,
     showUnread: T,
     selected: n,
     onMouseDown: function() {

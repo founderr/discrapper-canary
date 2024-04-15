@@ -16,9 +16,9 @@ var l = n("735250"),
   C = n("920440"),
   g = n("271383"),
   E = n("771845"),
-  S = n("880080"),
-  I = n("26290"),
-  _ = n("15434"),
+  _ = n("880080"),
+  S = n("26290"),
+  I = n("15434"),
   N = n("727258"),
   T = n("249792"),
   A = n("40153"),
@@ -26,14 +26,14 @@ var l = n("735250"),
   v = n("252686"),
   x = n("682662"),
   R = n("674552"),
-  y = n("981631"),
-  M = n("689938"),
+  M = n("981631"),
+  y = n("689938"),
   O = n("814886");
 let b = {
   analyticsSource: {
-    page: y.AnalyticsPages.GUILD_CHANNEL,
-    section: y.AnalyticsSections.CHANNEL_LIST,
-    object: y.AnalyticsObjects.CHANNEL
+    page: M.AnalyticsPages.GUILD_CHANNEL,
+    section: M.AnalyticsSections.CHANNEL_LIST,
+    object: M.AnalyticsObjects.CHANNEL
   }
 };
 
@@ -51,17 +51,17 @@ function D(e, t) {
 t.default = a.memo(function(e) {
   var t, n, s, h, j;
   let {
-    guildNode: G,
-    setRef: P,
+    guildNode: P,
+    setRef: G,
     onDragStart: U,
     onDragEnd: w,
-    route: B,
-    guild: F,
+    route: F,
+    guild: B,
     animatable: V,
     selected: H = !1,
     unread: k = !1,
-    mediaState: K,
-    unavailable: Y = !1,
+    mediaState: Y,
+    unavailable: K = !1,
     badge: W = 0,
     contextMenu: Z = D,
     draggable: z = !1,
@@ -71,11 +71,11 @@ t.default = a.memo(function(e) {
   } = e, {
     id: J,
     parentId: $
-  } = G, ee = null !== (t = e.upperBadge) && void 0 !== t ? t : Y ? (0, R.renderUnavailableBadge)() : null != K ? (0, R.renderMediaBadge)(K) : void 0, et = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
+  } = P, ee = null !== (t = e.upperBadge) && void 0 !== t ? t : K ? (0, R.renderUnavailableBadge)() : null != Y ? (0, R.renderMediaBadge)(Y) : void 0, et = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
   null == et && W > 0 ? et = null !== (s = (0, R.renderMentionBadge)(W)) && void 0 !== s ? s : void 0 : null == et && null != Q && (et = null !== (h = (0, R.renderGuildJoinRequestBadge)({
     guildJoinRequestStatus: Q
   })) && void 0 !== h ? h : void 0);
-  let en = null !== (j = e.lowerBadgeWidth) && void 0 !== j ? j : (0, I.getBadgeWidthForValue)(W),
+  let en = null !== (j = e.lowerBadgeWidth) && void 0 !== j ? j : (0, S.getBadgeWidthForValue)(W),
     [{
       dragging: el
     }, ea] = (0, r.useDrag)({
@@ -83,8 +83,8 @@ t.default = a.memo(function(e) {
       item: () => (requestAnimationFrame(() => {
         null == U || U()
       }), {
-        type: G.type,
-        nodeId: G.id
+        type: P.type,
+        nodeId: P.id
       }),
       end() {
         null == w || w(), (0, p.saveGuildFolders)(E.default.getCompatibleGuildFolders())
@@ -93,7 +93,7 @@ t.default = a.memo(function(e) {
         dragging: e.isDragging()
       })
     }),
-    es = (0, o.useTreeItem)(null != J ? J : y.EMPTY_STRING_SNOWFLAKE_ID),
+    es = (0, o.useTreeItem)(null != J ? J : M.EMPTY_STRING_SNOWFLAKE_ID),
     [ei, er] = a.useState(!1),
     eo = !X && ei,
     [eu, ed] = a.useState(!1),
@@ -101,43 +101,43 @@ t.default = a.memo(function(e) {
     [eh] = a.useState(() => new d.DelayedCall(70, () => ef(!0)));
   a.useEffect(() => () => eh.cancel(), [eh]);
   let ep = a.useCallback(() => {
-      if (null != B) {
-        (0, m.transitionTo)(B, {
+      if (null != F) {
+        (0, m.transitionTo)(F, {
           state: b
         });
         return
       }(0, C.transitionToGuild)(J, {
         state: b
       })
-    }, [J, B]),
+    }, [J, F]),
     em = a.useCallback(() => {
-      if (null != B || null == F || Y || !q) return;
-      let e = (0, C.getChannelIdForGuildTransition)(F.id);
-      null != e && f.default.preload(F.id, e)
-    }, [B, F, Y, q]),
+      if (null != F || null == B || K || !q) return;
+      let e = (0, C.getChannelIdForGuildTransition)(B.id);
+      null != e && f.default.preload(B.id, e)
+    }, [F, B, K, q]),
     eC = (0, u.useStateFromStores)([g.default], () => g.default.isCurrentUserGuest(J)),
     eg = a.useCallback(e => {
-      null != F && !eC && Z(e, F)
-    }, [F, Z, eC]),
+      null != B && !eC && Z(e, B)
+    }, [B, Z, eC]),
     eE = a.useCallback(e => {
       if ("ArrowLeft" === e.key && null != $) {
         var t;
         null === (t = document.querySelector("[aria-owns=folder-items-".concat($, "]"))) || void 0 === t || t.focus()
       }
     }, [$]),
-    eS = a.useCallback(e => {
+    e_ = a.useCallback(e => {
       if (e) {
         eh.delay();
         return
       }
       eh.cancel(), ef(!1)
     }, [eh]),
-    eI = a.useCallback(e => {
-      null == P || P(J, e)
-    }, [J, P]);
-  if (null == F) return null;
-  let e_ = ec || eu ? (0, l.jsx)(T.default, {
-      guild: F,
+    eS = a.useCallback(e => {
+      null == G || G(J, e)
+    }, [J, G]);
+  if (null == B) return null;
+  let eI = ec || eu ? (0, l.jsx)(T.default, {
+      guild: B,
       show: ec,
       active: H,
       onAnimationStart: function() {
@@ -146,12 +146,12 @@ t.default = a.memo(function(e) {
       onAnimationRest: function() {
         ec || ed(!1)
       }
-    }) : (0, l.jsx)(_.default, {
-      ariaLabel: M.default.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
-        guildName: F.toString(),
+    }) : (0, l.jsx)(I.default, {
+      ariaLabel: y.default.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
+        guildName: B.toString(),
         mentions: W
       }),
-      name: F.toString(),
+      name: B.toString(),
       onClick: ep,
       onMouseEnter: function() {
         X || er(!0)
@@ -162,7 +162,7 @@ t.default = a.memo(function(e) {
       onMouseDown: em,
       onContextMenu: eg,
       onKeyDown: eE,
-      icon: F.getIconURL(96, eo && V),
+      icon: B.getIconURL(96, eo && V),
       selected: H || eo,
       ...es,
       role: "treeitem"
@@ -171,7 +171,7 @@ t.default = a.memo(function(e) {
       children: (0, l.jsx)(v.default, {})
     }) : (0, l.jsx)("div", {
       ref: z ? ea : void 0,
-      "data-dnd-name": F.toString(),
+      "data-dnd-name": B.toString(),
       className: i()(O.blobContainer, {
         [O.sorting]: X,
         [O.wobble]: ec,
@@ -182,24 +182,24 @@ t.default = a.memo(function(e) {
         upperBadge: ee,
         lowerBadge: et,
         lowerBadgeWidth: en,
-        children: e_
+        children: eI
       })
     });
   return (0, l.jsxs)(x.ListItem, {
-    ref: eI,
-    children: [(0, l.jsx)(S.default, {
+    ref: eS,
+    children: [(0, l.jsx)(_.default, {
       hovered: !el && eo,
       selected: !el && H,
       unread: !el && k,
       className: O.pill
     }), (0, l.jsx)(L.default, {
-      guild: F,
+      guild: B,
       disabled: X,
       children: eN
     }), z ? (0, l.jsx)(A.default, {
-      name: F.name,
-      targetNode: G,
-      onDragOverChanged: eS
+      name: B.name,
+      targetNode: P,
+      onDragOverChanged: e_
     }) : null]
   })
 })

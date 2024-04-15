@@ -1,61 +1,61 @@
 "use strict";
-a.r(t), a.d(t, {
+t.r(a), t.d(a, {
   default: function() {
-    return d
+    return r
   }
 });
-var i = a("735250");
-a("470079");
-var n = a("703558"),
-  l = a("403182"),
-  r = a("127654"),
-  s = a("98278"),
-  o = a("790527"),
-  _ = a("474936"),
-  u = a("981631"),
-  E = a("689938");
+var s = t("735250");
+t("470079");
+var n = t("703558"),
+  o = t("403182"),
+  E = t("127654"),
+  _ = t("98278"),
+  i = t("790527"),
+  M = t("474936"),
+  l = t("981631"),
+  L = t("689938");
 
-function d(e) {
-  var t;
+function r(e) {
+  var a;
   let {
-    channel: d,
-    onClose: f,
-    content: p,
+    channel: r,
+    onClose: c,
+    content: u,
     ...A
   } = e;
 
-  function L() {
-    f(), (0, s.navigateToPremiumMarketingPage)(!0)
+  function d() {
+    c(), (0, _.navigateToPremiumMarketingPage)(!0)
   }
-  return (0, i.jsx)(o.default, {
-    artURL: a("990158"),
-    type: _.PremiumUpsellTypes.MESSAGE_LENGTH_UPSELL,
-    title: E.default.Messages.PREMIUM_MESSAGE_LENGTH_ROADBLOCK_MODAL_HEADER,
-    body: E.default.Messages.PREMIUM_MESSAGE_LENGTH_ROADBLOCK_MODAL_BODY.format({
-      maxLength: u.MAX_MESSAGE_LENGTH,
-      onLearnMore: L
+  return (0, s.jsx)(i.default, {
+    artURL: t("990158"),
+    type: M.PremiumUpsellTypes.MESSAGE_LENGTH_UPSELL,
+    title: L.default.Messages.PREMIUM_MESSAGE_LENGTH_ROADBLOCK_MODAL_HEADER,
+    body: L.default.Messages.PREMIUM_MESSAGE_LENGTH_ROADBLOCK_MODAL_BODY.format({
+      maxLength: l.MAX_MESSAGE_LENGTH,
+      onLearnMore: d
     }),
-    context: E.default.Messages.PREMIUM_MESSAGE_LENGTH_ROADBLOCK_MODAL_CONTEXT.format({
-      maxLength: u.MAX_MESSAGE_LENGTH
+    context: L.default.Messages.PREMIUM_MESSAGE_LENGTH_ROADBLOCK_MODAL_CONTEXT.format({
+      maxLength: l.MAX_MESSAGE_LENGTH
     }),
-    glowUp: E.default.Messages.PREMIUM_MESSAGE_LENGTH_ROADBLOCK_MODAL_GLOW_UP.format({
-      onLearnMore: L
+    glowUp: L.default.Messages.PREMIUM_MESSAGE_LENGTH_ROADBLOCK_MODAL_GLOW_UP.format({
+      onLearnMore: d
     }),
     analyticsSource: {
-      page: (null == (t = d) ? void 0 : t.getGuildId()) != null ? u.AnalyticsPages.GUILD_CHANNEL : (null == t ? void 0 : t.isGroupDM()) || (null == t ? void 0 : t.isPrivate()) ? u.AnalyticsPages.DM_CHANNEL : null
+      page: (null == (a = r) ? void 0 : a.getGuildId()) != null ? l.AnalyticsPages.GUILD_CHANNEL : (null == a ? void 0 : a.isGroupDM()) || (null == a ? void 0 : a.isPrivate()) ? l.AnalyticsPages.DM_CHANNEL : null
     },
     analyticsLocation: {
-      section: u.AnalyticsSections.MESSAGE_LENGTH_UPSELL_MODAL,
-      object: u.AnalyticsObjects.BUTTON_CTA
+      section: l.AnalyticsSections.MESSAGE_LENGTH_UPSELL_MODAL,
+      object: l.AnalyticsObjects.BUTTON_CTA
     },
-    onClose: f,
-    secondaryCTA: E.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_MODAL_UPLOAD,
+    onClose: c,
+    secondaryCTA: L.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_MODAL_UPLOAD,
     onSecondaryClick: function() {
-      f();
-      let e = new Blob([p], {
+      c();
+      let e = new Blob([u], {
         type: "text/plain"
       });
-      (0, r.promptToUpload)([(0, l.makeFile)(e, "message.txt")], d, n.DraftType.ChannelMessage, {
+      (0, E.promptToUpload)([(0, o.makeFile)(e, "message.txt")], r, n.DraftType.ChannelMessage, {
         requireConfirm: !0,
         showLargeMessageDialog: !0
       })

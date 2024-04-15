@@ -1,29 +1,29 @@
 "use strict";
-a.r(t);
-var n = a("735250"),
-  s = a("470079"),
-  l = a("143927"),
-  i = a("481060"),
-  r = a("207796"),
-  o = a("689938"),
-  u = a("860484");
+n.r(t);
+var a = n("735250"),
+  s = n("470079"),
+  l = n("143927"),
+  i = n("481060"),
+  r = n("207796"),
+  o = n("689938"),
+  u = n("860484");
 t.default = function(e) {
   let {
     children: t
-  } = e, a = (0, r.useClanDiscoveryUIStore)(e => e.setMode, l.default), d = s.useCallback(() => {
-    a(r.ClanDiscoveryMode.DISCOVERY)
-  }, [a]);
-  return (0, n.jsxs)("div", {
+  } = e, n = (0, r.useClanDiscoveryUIStore)(e => e.setMode, l.default), d = s.useCallback(() => {
+    n(r.ClanDiscoveryMode.DISCOVERY)
+  }, [n]);
+  return (0, a.jsxs)("div", {
     className: u.container,
-    children: [(0, n.jsx)("div", {
+    children: [(0, a.jsx)("div", {
       className: u.saveContainer,
-      children: (0, n.jsx)(i.Button, {
+      children: (0, a.jsx)(i.Button, {
         onClick: d,
         look: i.ButtonLooks.OUTLINED,
         color: i.ButtonColors.PRIMARY,
         children: o.default.Messages.SAVE
       })
-    }), (0, n.jsx)(i.Scroller, {
+    }), (0, a.jsx)(i.Scroller, {
       fade: !0,
       className: u.content,
       children: t

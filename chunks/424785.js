@@ -21,9 +21,9 @@ var a = n("120356"),
   C = n("506936"),
   g = n("359110"),
   E = n("922482"),
-  S = n("431328"),
-  I = n("501655"),
-  _ = n("427679"),
+  _ = n("431328"),
+  S = n("501655"),
+  I = n("427679"),
   N = n("71275"),
   T = n("201469"),
   A = n("680089"),
@@ -31,23 +31,23 @@ var a = n("120356"),
   v = n("430824"),
   x = n("607744"),
   R = n("496675"),
-  y = n("306680"),
-  M = n("9156"),
+  M = n("306680"),
+  y = n("9156"),
   O = n("979651"),
   b = n("514342"),
   D = n("974029"),
   j = n("934415"),
-  G = n("98597"),
-  P = n("648501"),
+  P = n("98597"),
+  G = n("648501"),
   U = n("473403"),
   w = n("207055"),
-  B = n("981631"),
-  F = n("647086"),
+  F = n("981631"),
+  B = n("647086"),
   V = n("689938"),
   H = n("294639"),
   k = n("157511");
 
-function K(e, t, n) {
+function Y(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -55,7 +55,7 @@ function K(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class Y extends G.default {
+class K extends P.default {
   getVoiceStatesCount() {
     var e;
     let {
@@ -92,7 +92,7 @@ class Y extends G.default {
       voiceStates: a,
       collapsed: t,
       tabIndex: n,
-      location: B.AnalyticsLocations.GUILD_CHANNEL_LIST,
+      location: F.AnalyticsLocations.GUILD_CHANNEL_LIST,
       numAudience: s
     })
   }
@@ -116,10 +116,10 @@ class Y extends G.default {
       needSubscriptionToAccess: C,
       unread: g,
       resolvedUnreadSetting: E,
-      mentionCount: S,
-      isFavoriteSuggestion: I
+      mentionCount: _,
+      isFavoriteSuggestion: S
     } = this.props, {
-      shouldShowGuildVerificationPopout: _
+      shouldShowGuildVerificationPopout: I
     } = this.state, N = this.getVoiceStatesCount(), T = (0, l.jsxs)("li", {
       className: s()(this.getModeClass(), {
         [H.disabled]: this.isDisabled()
@@ -130,7 +130,7 @@ class Y extends G.default {
         renderPopout: this.renderPopout,
         spacing: 0,
         onRequestClose: this.closeGuildVerificationPopout,
-        shouldShow: _,
+        shouldShow: I,
         children: () => (0, l.jsx)(r.Tooltip, {
           text: this.getTooltipText(),
           children: i => {
@@ -145,11 +145,11 @@ class Y extends G.default {
                 [k.iconLive]: null != p
               }),
               channel: e,
-              selected: !I && t,
+              selected: !S && t,
               connected: n,
               unread: n ? g : void 0,
               resolvedUnreadSetting: E,
-              mentionCount: S,
+              mentionCount: _,
               locked: a,
               onClick: () => {
                 this.handleClick(), null == r || r()
@@ -159,17 +159,17 @@ class Y extends G.default {
               },
               connectDragPreview: d,
               subtitle: this.renderSubtitle(),
-              isFavoriteSuggestion: I,
+              isFavoriteSuggestion: S,
               "aria-label": (0, f.default)({
                 channel: e,
                 unread: g,
-                mentionCount: S,
+                mentionCount: _,
                 userCount: N,
                 isSubscriptionGated: m,
                 needSubscriptionToAccess: C
               }),
               ...u,
-              children: [I && this.renderAcceptSuggestionButton(), I && this.renderRemoveSuggestionButton(), !I && this.renderOpenChatButton(), !I && this.renderInviteButton(), !I && this.renderEditButton(), !I && this.renderChannelInfo()]
+              children: [S && this.renderAcceptSuggestionButton(), S && this.renderRemoveSuggestionButton(), !S && this.renderOpenChatButton(), !S && this.renderInviteButton(), !S && this.renderEditButton(), !S && this.renderChannelInfo()]
             })
           }
         })
@@ -178,13 +178,13 @@ class Y extends G.default {
     return h && (T = u(T)), c && (T = i(o(T))), T
   }
   constructor(...e) {
-    super(...e), K(this, "state", {
+    super(...e), Y(this, "state", {
       shouldShowGuildVerificationPopout: !1
-    }), K(this, "closeGuildVerificationPopout", () => {
+    }), Y(this, "closeGuildVerificationPopout", () => {
       this.setState({
         shouldShowGuildVerificationPopout: !1
       })
-    }), K(this, "handleClick", () => {
+    }), Y(this, "handleClick", () => {
       let {
         channel: e,
         locked: t,
@@ -194,13 +194,13 @@ class Y extends G.default {
       null != a && (0, p.shouldShowMembershipVerificationGate)(a) && (0, h.openMemberVerificationModal)(a), l && this.setState({
         shouldShowGuildVerificationPopout: !0
       }), !t && !n && !e.isRoleSubscriptionTemplatePreviewChannel() && (0, E.connectAndOpen)(e), !__OVERLAY__ && (0, g.transitionToChannel)(e.id)
-    }), K(this, "handleClickChat", () => {
+    }), Y(this, "handleClickChat", () => {
       let {
         channel: e,
         locked: t
       } = this.props;
       !__OVERLAY__ && !t && (0, g.transitionToChannel)(e.id)
-    }), K(this, "handleContextMenu", e => {
+    }), Y(this, "handleContextMenu", e => {
       let {
         channel: t
       } = this.props, a = v.default.getGuild(t.getGuildId());
@@ -214,7 +214,7 @@ class Y extends G.default {
           guild: a
         })
       })
-    }), K(this, "renderPopout", () => {
+    }), Y(this, "renderPopout", () => {
       let {
         channel: e
       } = this.props, {
@@ -226,7 +226,7 @@ class Y extends G.default {
         closePopout: this.closeGuildVerificationPopout
       });
       throw Error("VoiceChannel.renderPopout: There must always be something to render")
-    }), K(this, "renderOpenChatButton", () => {
+    }), Y(this, "renderOpenChatButton", () => {
       let {
         channel: e,
         locked: t,
@@ -259,12 +259,12 @@ class Y extends G.default {
           })
         }
       })
-    }), K(this, "getTooltipText", () => {
+    }), Y(this, "getTooltipText", () => {
       let {
         connected: e
       } = this.props;
       return this.isFull() && !e ? V.default.Messages.UNABLE_TO_JOIN_CHANNEL_FULL : null
-    }), K(this, "renderSubtitle", () => {
+    }), Y(this, "renderSubtitle", () => {
       var e;
       let t = null === (e = this.props.stageInstance) || void 0 === e ? void 0 : e.topic;
       return null == t ? null : (0, l.jsx)(b.default, {
@@ -273,7 +273,7 @@ class Y extends G.default {
     })
   }
 }
-let W = (0, d.makeChannelSortable)((0, c.makeVoiceUserDroppable)(Y));
+let W = (0, d.makeChannelSortable)((0, c.makeVoiceUserDroppable)(K));
 
 function Z(e) {
   let {
@@ -283,31 +283,31 @@ function Z(e) {
     isFavoriteCategory: s,
     collapsed: r,
     voiceStates: o
-  } = e, u = (0, i.useStateFromStoresObject)([y.default], () => ({
-    unread: y.default.hasUnread(n.id),
-    mentionCount: y.default.getMentionCount(n.id)
-  })), d = (0, i.useStateFromStores)([M.default], () => M.default.resolveUnreadSetting(n)), c = (0, i.useStateFromStoresObject)([L.default, x.default, R.default], () => {
+  } = e, u = (0, i.useStateFromStoresObject)([M.default], () => ({
+    unread: M.default.hasUnread(n.id),
+    mentionCount: M.default.getMentionCount(n.id)
+  })), d = (0, i.useStateFromStores)([y.default], () => y.default.resolveUnreadSetting(n)), c = (0, i.useStateFromStoresObject)([L.default, x.default, R.default], () => {
     let e = L.default.getChannel(n.parent_id),
       l = x.default.getCheck(n.guild_id);
     return {
-      canManageChannel: null != t && R.default.can(B.Permissions.MANAGE_CHANNELS, n),
-      canReorderChannel: !0 !== a && (t.id === F.FAVORITES_RAW_GUILD_ID || (null != e ? R.default.can(B.Permissions.MANAGE_CHANNELS, e) : R.default.can(B.Permissions.MANAGE_CHANNELS, t))),
-      canMoveMembers: R.default.can(B.Permissions.MOVE_MEMBERS, n),
-      locked: !R.default.can(B.Permissions.CONNECT, n),
-      bypassLimit: R.default.can(B.Permissions.MOVE_MEMBERS, n),
+      canManageChannel: null != t && R.default.can(F.Permissions.MANAGE_CHANNELS, n),
+      canReorderChannel: !0 !== a && (t.id === B.FAVORITES_RAW_GUILD_ID || (null != e ? R.default.can(F.Permissions.MANAGE_CHANNELS, e) : R.default.can(F.Permissions.MANAGE_CHANNELS, t))),
+      canMoveMembers: R.default.can(F.Permissions.MOVE_MEMBERS, n),
+      locked: !R.default.can(F.Permissions.CONNECT, n),
+      bypassLimit: R.default.can(F.Permissions.MOVE_MEMBERS, n),
       unverifiedAccount: !l.canChat
     }
-  }), f = (0, i.useStateFromStores)([A.default], () => A.default.isCollapsed(n.parent_id)), h = (0, T.default)(n.id), p = (0, i.useStateFromStores)([_.default], () => _.default.getStageInstanceByChannel(n.id), [n.id]), C = (0, S.useStageParticipantsCount)(n.id, I.StageChannelParticipantNamedIndex.AUDIENCE), {
+  }), f = (0, i.useStateFromStores)([A.default], () => A.default.isCollapsed(n.parent_id)), h = (0, T.default)(n.id), p = (0, i.useStateFromStores)([I.default], () => I.default.getStageInstanceByChannel(n.id), [n.id]), C = (0, _.useStageParticipantsCount)(n.id, S.StageChannelParticipantNamedIndex.AUDIENCE), {
     isSubscriptionGated: g,
     needSubscriptionToAccess: E
-  } = (0, m.default)(n.id), v = (0, i.useStateFromStores)([M.default], () => M.default.isFavorite(t.id, n.id)), O = (0, N.getStageHasMedia)(n.id), b = (0, P.default)({
+  } = (0, m.default)(n.id), v = (0, i.useStateFromStores)([y.default], () => y.default.isFavorite(t.id, n.id)), O = (0, N.getStageHasMedia)(n.id), b = (0, G.default)({
     channel: n,
     isChannelSelected: !1,
     isChannelCollapsed: r,
     voiceStates: o,
     isSubscriptionGated: g,
     needSubscriptionToAccess: E,
-    enableConnectedUserLimit: O || n.userLimit > 0 && n.userLimit < B.MAX_STAGE_VOICE_USER_LIMIT
+    enableConnectedUserLimit: O || n.userLimit > 0 && n.userLimit < F.MAX_STAGE_VOICE_USER_LIMIT
   }), D = e.connected && null == b;
   return (0, l.jsx)(W, {
     categoryCollapsed: f,

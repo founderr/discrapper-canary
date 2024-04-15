@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-let s = (0, n("818083").createExperiment)({
+let l = (0, n("818083").createExperiment)({
   kind: "user",
   id: "2024-03_premium_offer_generic_endpoint",
   label: "Premium Offer Generic Endpoint",
@@ -15,4 +15,4 @@ let s = (0, n("818083").createExperiment)({
     }
   }]
 });
-t.default = s
+t.default = l

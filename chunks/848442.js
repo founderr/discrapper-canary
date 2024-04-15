@@ -21,9 +21,9 @@ var a = n("120356"),
   C = n("886176"),
   g = n("605236"),
   E = n("703656"),
-  S = n("984933"),
-  I = n("430824"),
-  _ = n("696202"),
+  _ = n("984933"),
+  S = n("430824"),
+  I = n("696202"),
   N = n("26290"),
   T = n("626135"),
   A = n("434479"),
@@ -31,52 +31,52 @@ var a = n("120356"),
   v = n("176505"),
   x = n("629481"),
   R = n("689938"),
-  y = n("845051");
+  M = n("845051");
 
-function M(e) {
+function y(e) {
   let {
     guildId: t,
     selected: n,
     handleClick: a
-  } = e, d = (0, p.useIsEligibleForSubscriptionsInGuildShop)(t, "guild_shop_channel_row"), m = (0, i.useStateFromStores)([I.default], () => I.default.getGuild(t)), A = (null == m ? void 0 : m.hasFeature(L.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0, v = "false" === o.Storage.get(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "false"), M = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion);
+  } = e, d = (0, p.useIsEligibleForSubscriptionsInGuildShop)(t, "guild_shop_channel_row"), m = (0, i.useStateFromStores)([S.default], () => S.default.getGuild(t)), A = (null == m ? void 0 : m.hasFeature(L.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0, v = "false" === o.Storage.get(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "false"), y = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion);
   return (0, l.jsx)(u.ClickableContainer, {
     tag: "div",
     onClick: a,
-    className: s()(y.previewChannelRow, {
-      [y.selected]: n,
-      [y.phantomPreview]: v
+    className: s()(M.previewChannelRow, {
+      [M.selected]: n,
+      [M.phantomPreview]: v
     }),
     "aria-label": R.default.Messages.GUILD_SHOP_CHANNEL_LABEL,
     children: (0, l.jsxs)("div", {
-      className: y.previewChannelRowContent,
+      className: M.previewChannelRowContent,
       children: [(0, l.jsx)(C.default, {
-        className: y.shopIcon
+        className: M.shopIcon
       }), (0, l.jsx)("div", {
-        className: y.channelLabel,
+        className: M.channelLabel,
         children: R.default.Messages.GUILD_SHOP_CHANNEL_LABEL
       }), (0, l.jsxs)("div", {
-        className: y.gifSection,
-        children: [M ? (0, l.jsx)(N.TextBadge, {
+        className: M.gifSection,
+        children: [y ? (0, l.jsx)(N.TextBadge, {
           color: u.tokens.unsafe_rawColors.BRAND_260.css,
           text: R.default.Messages.NEW,
-          className: y.newBadge
+          className: M.newBadge
         }) : (0, l.jsx)("img", {
           src: (0, h.getAssetCDNUrl)("server_products/storefront/money.gif"),
-          className: y.money,
+          className: M.money,
           alt: ""
         }), n && (0, l.jsx)(u.Clickable, {
-          className: y.closeButton,
+          className: M.closeButton,
           onClick: e => {
             if (e.stopPropagation(), (0, g.markDismissibleContentAsDismissed)(r.DismissibleContent.SERVER_SHOP_PHANTOM_PREVIEW), T.default.track(L.AnalyticEvents.GUILD_SHOP_PREVIEW_CLICK, {
                 ...(0, f.collectGuildAnalyticsMetadata)(t),
                 action_taken: x.GuildShopPreviewClickActions.DISMISS_CHANNEL_ROW
               }), !d || !A) {
               var n;
-              (0, E.replaceWith)(L.Routes.CHANNEL(t, null === (n = S.default.getDefaultChannel(t)) || void 0 === n ? void 0 : n.id))
+              (0, E.replaceWith)(L.Routes.CHANNEL(t, null === (n = _.default.getDefaultChannel(t)) || void 0 === n ? void 0 : n.id))
             }
           },
           "aria-label": R.default.Messages.DISMISS,
-          children: (0, l.jsx)(_.default, {
+          children: (0, l.jsx)(I.default, {
             width: 16,
             height: 16
           })
@@ -93,7 +93,7 @@ function O(e) {
   } = e, s = (0, m.useGuildShopPreviewVisible)(t, "guild_shop_channel_row"), i = () => {
     o.Storage.set(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "true"), (0, E.transitionTo)(L.Routes.CHANNEL(t.id, v.StaticChannelRoute.GUILD_SHOP))
   };
-  return s ? (0, l.jsx)(M, {
+  return s ? (0, l.jsx)(y, {
     guildId: t.id,
     selected: a,
     handleClick: i

@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   useClanDiscoveryExperimentDefaultGameId: function() {
     return r
   },
@@ -7,9 +7,9 @@ a.r(t), a.d(t, {
     return i
   }
 });
-var n = a("818083"),
-  s = a("308083");
-let l = (0, n.createExperiment)({
+var a = n("818083"),
+  s = n("308083");
+let l = (0, a.createExperiment)({
   kind: "user",
   id: "2024-03_clan_discovery",
   label: "Clan discovery",
@@ -44,23 +44,23 @@ let l = (0, n.createExperiment)({
 function i(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
     {
-      clanDiscoveryEnabled: a
+      clanDiscoveryEnabled: n
     } = l.useExperiment({
       location: e
     }, {
       autoTrackExposure: t
     });
-  return a
+  return n
 }
 
 function r(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
     {
-      defaultGameId: a
+      defaultGameId: n
     } = l.useExperiment({
       location: e
     }, {
       autoTrackExposure: t
     });
-  return a
+  return n
 }

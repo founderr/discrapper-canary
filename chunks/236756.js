@@ -16,9 +16,9 @@ var l = n("735250"),
   C = n("630641"),
   g = n("626135"),
   E = n("572004"),
-  S = n("63063"),
-  I = n("476221"),
-  _ = n("981631"),
+  _ = n("63063"),
+  S = n("476221"),
+  I = n("981631"),
   N = n("65154"),
   T = n("689938"),
   A = n("171030");
@@ -45,7 +45,7 @@ let L = () => {
 };
 t.default = function(e) {
   (0, a.useEffect)(() => {
-    g.default.track(_.AnalyticEvents.OPEN_POPOUT, {
+    g.default.track(I.AnalyticEvents.OPEN_POPOUT, {
       type: "RTC Connection"
     })
   }, []);
@@ -74,7 +74,7 @@ t.default = function(e) {
           }), (0, l.jsx)("div", {
             className: A.popoutText,
             children: (0, l.jsx)("strong", {
-              children: I.default.getShortHostname(t)
+              children: S.default.getShortHostname(t)
             })
           })]
         }), (0, l.jsx)("div", {
@@ -108,24 +108,24 @@ t.default = function(e) {
     } = e,
     o = f.DeveloperMode.getSetting(),
     E = {
-      [_.RTCConnectionStates.AWAITING_ENDPOINT]: T.default.Messages.RTC_CONNECTION_STATE_AWAITING_ENDPOINT.format({
-        url: _.Links.STATUS
+      [I.RTCConnectionStates.AWAITING_ENDPOINT]: T.default.Messages.RTC_CONNECTION_STATE_AWAITING_ENDPOINT.format({
+        url: I.Links.STATUS
       }),
-      [_.RTCConnectionStates.CONNECTING]: T.default.Messages.RTC_CONNECTION_STATE_CONNECTING,
-      [_.RTCConnectionStates.AUTHENTICATING]: T.default.Messages.RTC_CONNECTION_STATE_AUTHENTICATING,
-      [_.RTCConnectionStates.DISCONNECTED]: T.default.Messages.RTC_CONNECTION_STATE_DISCONNECTED,
-      [_.RTCConnectionStates.RTC_CONNECTING]: T.default.Messages.RTC_CONNECTION_STATE_RTC_CONNECTING,
-      [_.RTCConnectionStates.ICE_CHECKING]: T.default.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({
-        url: S.default.getArticleURL(_.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
+      [I.RTCConnectionStates.CONNECTING]: T.default.Messages.RTC_CONNECTION_STATE_CONNECTING,
+      [I.RTCConnectionStates.AUTHENTICATING]: T.default.Messages.RTC_CONNECTION_STATE_AUTHENTICATING,
+      [I.RTCConnectionStates.DISCONNECTED]: T.default.Messages.RTC_CONNECTION_STATE_DISCONNECTED,
+      [I.RTCConnectionStates.RTC_CONNECTING]: T.default.Messages.RTC_CONNECTION_STATE_RTC_CONNECTING,
+      [I.RTCConnectionStates.ICE_CHECKING]: T.default.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({
+        url: _.default.getArticleURL(I.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
       }),
-      [_.RTCConnectionStates.DTLS_CONNECTING]: T.default.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({
-        url: S.default.getArticleURL(_.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
+      [I.RTCConnectionStates.DTLS_CONNECTING]: T.default.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({
+        url: _.default.getArticleURL(I.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
       }),
-      [_.RTCConnectionStates.RTC_CONNECTED]: n,
-      [_.RTCConnectionStates.NO_ROUTE]: T.default.Messages.RTC_CONNECTION_STATE_NO_ROUTE.format({
-        url: S.default.getArticleURL(_.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
+      [I.RTCConnectionStates.RTC_CONNECTED]: n,
+      [I.RTCConnectionStates.NO_ROUTE]: T.default.Messages.RTC_CONNECTION_STATE_NO_ROUTE.format({
+        url: _.default.getArticleURL(I.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
       }),
-      [_.RTCConnectionStates.RTC_DISCONNECTED]: T.default.Messages.RTC_CONNECTION_STATE_DISCONNECTED
+      [I.RTCConnectionStates.RTC_DISCONNECTED]: T.default.Messages.RTC_CONNECTION_STATE_DISCONNECTED
     } [i];
   return (0, l.jsx)("div", {
     className: A.container,
@@ -167,7 +167,7 @@ t.default = function(e) {
           })]
         }), !o && !__OVERLAY__ && (0, l.jsx)(u.Anchor, {
           className: A.debugButton,
-          href: S.default.getArticleURL(_.HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING),
+          href: _.default.getArticleURL(I.HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING),
           children: T.default.Messages.LEARN_MORE
         })]
       })]

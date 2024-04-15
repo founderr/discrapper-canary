@@ -1,27 +1,27 @@
 "use strict";
-a.r(t), a("47120"), a("773603");
-var n = a("735250"),
-  s = a("470079"),
-  l = a("442837"),
-  i = a("447543"),
-  r = a("703656"),
-  o = a("430824"),
-  u = a("701190"),
-  d = a("612744"),
-  c = a("449934"),
-  f = a("650233"),
-  E = a("981631"),
-  h = a("756286"),
-  _ = a("854837");
+n.r(t), n("47120"), n("773603");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("442837"),
+  i = n("447543"),
+  r = n("703656"),
+  o = n("430824"),
+  u = n("701190"),
+  d = n("612744"),
+  c = n("449934"),
+  f = n("650233"),
+  E = n("981631"),
+  h = n("756286"),
+  _ = n("854837");
 t.default = e => {
   let {
     guildId: t,
-    inviteCode: a
-  } = e, [C, m] = s.useState(h.WaveStates.INITIAL), [S, I] = s.useState(null != a);
+    inviteCode: n
+  } = e, [C, m] = s.useState(h.WaveStates.INITIAL), [S, I] = s.useState(null != n);
   s.useEffect(() => {
-    null != a && i.default.resolveInvite(a, "Hub").finally(() => I(!1))
-  }, [a]);
-  let p = (0, l.useStateFromStores)([u.default], () => null != a ? u.default.getInvite(a) : null),
+    null != n && i.default.resolveInvite(n, "Hub").finally(() => I(!1))
+  }, [n]);
+  let p = (0, l.useStateFromStores)([u.default], () => null != n ? u.default.getInvite(n) : null),
     T = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(t));
   s.useEffect(() => {
     null != T && (0, r.transitionTo)(E.Routes.CHANNEL(t))
@@ -30,19 +30,19 @@ t.default = e => {
       m(t => Math.max(t, e))
     }, []),
     A = (0, c.getArtForPath)();
-  return (0, n.jsx)("div", {
+  return (0, a.jsx)("div", {
     className: _.page,
-    children: (0, n.jsxs)(d.default, {
+    children: (0, a.jsxs)(d.default, {
       embedded: !0,
       splash: A,
       waveState: C,
       showLogo: !1,
       updateWaveState: g,
-      children: [(0, n.jsx)("div", {
+      children: [(0, a.jsx)("div", {
         className: _.dragRegion
-      }), (0, n.jsx)("div", {
+      }), (0, a.jsx)("div", {
         className: _.contentWrapper,
-        children: !S && (0, n.jsx)(f.HubEmailConnectionModalView, {
+        children: !S && (0, a.jsx)(f.HubEmailConnectionModalView, {
           invite: p
         })
       })]

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return G
+    return P
   }
 }), n("47120"), n("653041");
 var l, a, s = n("735250"),
@@ -18,9 +18,9 @@ var l, a, s = n("735250"),
   C = n("481060"),
   g = n("612226"),
   E = n("951483"),
-  S = n("714338"),
-  I = n("607070"),
-  _ = n("585483"),
+  _ = n("714338"),
+  S = n("607070"),
+  I = n("585483"),
   N = n("557177"),
   T = n("264549"),
   A = n("981631"),
@@ -41,9 +41,9 @@ let R = {
     LEFT: f().throttle(() => (0, N.playSound)("ddr-left"), 100),
     RIGHT: f().throttle(() => (0, N.playSound)("ddr-right"), 100)
   },
-  y = f()((0, g.getDefaultLayoutContent)()).groupBy(e => e.group).value();
+  M = f()((0, g.getDefaultLayoutContent)()).groupBy(e => e.group).value();
 
-function M(e) {
+function y(e) {
   switch (e.keyCode) {
     case A.KeyboardKeys.ARROW_UP:
       return "UP";
@@ -65,7 +65,7 @@ function b() {
     className: v.keyboardShortcutList,
     children: e.map((t, n) => {
       let l = n === e.length - 1,
-        a = y[t],
+        a = M[t],
         i = (0, g.getNameForKeybindGroup)(t),
         r = (0, g.getDescriptionForKeybindGroup)(t);
       return (0, s.jsxs)("div", {
@@ -106,14 +106,14 @@ function b() {
 }
 class D extends i.PureComponent {
   componentDidMount() {
-    this.lastInputedKeys = [], _.ComponentDispatch.subscribe(A.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), _.ComponentDispatch.subscribe(A.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener("keydown", this.handleKeyDown, {
+    this.lastInputedKeys = [], I.ComponentDispatch.subscribe(A.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), I.ComponentDispatch.subscribe(A.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener("keydown", this.handleKeyDown, {
       capture: !0
     }), window.addEventListener("keyup", this.handleKeyUp, {
       capture: !0
     })
   }
   componentWillUnmount() {
-    _.ComponentDispatch.unsubscribe(A.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), _.ComponentDispatch.unsubscribe(A.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), window.removeEventListener("keydown", this.handleKeyDown, {
+    I.ComponentDispatch.unsubscribe(A.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), I.ComponentDispatch.unsubscribe(A.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), window.removeEventListener("keydown", this.handleKeyDown, {
       capture: !0
     }), window.removeEventListener("keyup", this.handleKeyUp, {
       capture: !0
@@ -279,13 +279,13 @@ class D extends i.PureComponent {
       }]
     })), x(this, "handleKeyDown", e => {
       if (this.lastInputedKeys.push(e.keyCode), this.lastInputedKeys = this.lastInputedKeys.slice(-5), this.lastInputedKeys[0] === A.KeyboardKeys.H && this.lastInputedKeys[1] === A.KeyboardKeys.H && this.lastInputedKeys[2] === A.KeyboardKeys.ARROW_RIGHT && this.lastInputedKeys[3] === A.KeyboardKeys.N && this.lastInputedKeys[4] === A.KeyboardKeys.K && this.props.activateRagingDemon(), this.props.keyboardModeEnabled) return;
-      let t = M(e);
+      let t = y(e);
       null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowDown({
         direction: t
       }))
     }), x(this, "handleKeyUp", e => {
       if (this.props.keyboardModeEnabled) return;
-      let t = M(e);
+      let t = y(e);
       null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowUp({
         direction: t
       }))
@@ -320,11 +320,11 @@ function j(e) {
   })
 }
 
-function G(e) {
+function P(e) {
   let {
     transitionState: t,
     onClose: n
-  } = e, [l, a] = i.useState(!1), r = i.useMemo(() => __OVERLAY__ ? (0, E.getOverlayLayoutContent)() : (0, g.getDefaultLayoutContent)(), []), u = (0, p.useStateFromStores)([I.default], () => I.default.keyboardModeEnabled);
+  } = e, [l, a] = i.useState(!1), r = i.useMemo(() => __OVERLAY__ ? (0, E.getOverlayLayoutContent)() : (0, g.getDefaultLayoutContent)(), []), u = (0, p.useStateFromStores)([S.default], () => S.default.keyboardModeEnabled);
   return (0, s.jsx)(C.ModalRoot, {
     className: o()(v.noBackground, {
       [v.noShadow]: l
@@ -340,7 +340,7 @@ function G(e) {
         content: r,
         keyboardModeEnabled: u,
         activateRagingDemon: function() {
-          S.default.disable(), a(!0)
+          _.default.disable(), a(!0)
         }
       }, "modal")
     })

@@ -1,46 +1,46 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return S
   }
 });
-var r = n("525654"),
-  a = n.n(r),
+var a = n("525654"),
+  r = n.n(a),
   s = n("39612"),
-  i = n("271579"),
-  l = n("756647"),
-  o = n("232567"),
-  u = n("703656"),
+  l = n("271579"),
+  i = n("756647"),
+  u = n("232567"),
+  o = n("703656"),
   d = n("314897"),
   c = n("896797"),
-  p = n("626135"),
-  f = n("954824"),
-  m = n("981631");
-async function g(e) {
+  f = n("626135"),
+  _ = n("954824"),
+  I = n("981631");
+async function E(e) {
   var t, n;
-  let r = null === (t = a().os) || void 0 === t ? void 0 : t.family;
-  if ("Android" === r || "iOS" === r) {
+  let a = null === (t = r().os) || void 0 === t ? void 0 : t.family;
+  if ("Android" === a || "iOS" === a) {
     let t = null !== (n = d.default.getFingerprint()) && void 0 !== n ? n : d.default.getId(),
-      r = (0, i.generateAttemptId)();
+      a = (0, l.generateAttemptId)();
     if (null == t && d.default.isAuthenticated()) try {
-      await (0, o.fetchCurrentUser)(), t = d.default.getId()
+      await (0, u.fetchCurrentUser)(), t = d.default.getId()
     } catch {}
-    return (0, i.default)((0, s.getDefaultDynamicLinkTemplate)(), {
+    return (0, l.default)((0, s.getDefaultDynamicLinkTemplate)(), {
       utmSource: e,
       fingerprint: t,
-      attemptId: r
+      attemptId: a
     })
   }
   return "discord://"
 }
-async function E(e) {
-  let t = await g(e),
-    n = (0, i.parseDynamicLink)(t);
-  null != n && p.default.track(m.AnalyticEvents.DEEP_LINK_CLICKED, {
-    fingerprint: (0, l.maybeExtractId)(n.fingerprint),
+async function S(e) {
+  let t = await E(e),
+    n = (0, l.parseDynamicLink)(t);
+  null != n && f.default.track(I.AnalyticEvents.DEEP_LINK_CLICKED, {
+    fingerprint: (0, i.maybeExtractId)(n.fingerprint),
     attempt_id: n.attemptId,
     source: n.utmSource
-  }), f.default.launch(t, e => {
-    !e && (0, u.replaceWith)(c.default.fallbackRoute)
+  }), _.default.launch(t, e => {
+    !e && (0, o.replaceWith)(c.default.fallbackRoute)
   })
 }

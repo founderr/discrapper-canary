@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   updateAuthInvite: function() {
     return a
   }
 });
-var s = n("570140");
+var n = s("570140");
 
 function a(e) {
-  s.default.dispatch({
+  n.default.dispatch({
     type: "AUTH_INVITE_UPDATE",
     invite: e
   })

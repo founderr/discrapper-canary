@@ -22,8 +22,8 @@ var a = s("735250"),
   p = s("588822"),
   _ = s("81334"),
   N = s("335191"),
-  A = s("347949"),
-  x = s("988246"),
+  x = s("347949"),
+  A = s("988246"),
   v = s("689938"),
   U = s("478741");
 
@@ -38,24 +38,24 @@ function h(e) {
     trackUserProfileAction: R
   } = (0, m.useUserProfileAnalyticsContext)(), P = (0, c.usePlatformAllowed)({
     forUserProfile: !0
-  }), M = (0, o.useStateFromStores)([I.default], () => {
+  }), j = (0, o.useStateFromStores)([I.default], () => {
     var e, t;
     return null !== (t = null === (e = I.default.getUserProfile(s.id)) || void 0 === e ? void 0 : e.connectedAccounts) && void 0 !== t ? t : []
-  }), j = (0, o.useStateFromStores)([E.default], () => E.default.hidePersonalInformation), {
+  }), M = (0, o.useStateFromStores)([E.default], () => E.default.hidePersonalInformation), {
     profileTheme: g
   } = (0, T.default)(s, i), y = (0, o.useStateFromStores)([S.default], () => S.default.locale), O = (0, f.useIsUserRecentGamesEnabled)({
     userId: s.id,
     location: "28tk0bf_3"
-  }), D = l.useMemo(() => M.filter(e => {
+  }), D = l.useMemo(() => j.filter(e => {
     let t = d.default.get(e.type);
     return null != t && P(t)
-  }), [M, P]), F = l.useRef(null);
+  }), [j, P]), F = l.useRef(null);
   return (l.useLayoutEffect(() => {
     if (C) {
       var e;
       null == F || null === (e = F.current) || void 0 === e || e.scrollIntoView()
     }
-  }, [C]), j) ? (0, a.jsx)(x.default, {}) : (0, a.jsxs)(r.ScrollerThin, {
+  }, [C]), M) ? (0, a.jsx)(A.default, {}) : (0, a.jsxs)(r.ScrollerThin, {
     fade: !0,
     className: U.infoScroller,
     children: [(0, a.jsxs)("div", {
@@ -73,7 +73,7 @@ function h(e) {
         userId: s.id,
         headingClassName: U.userInfoSectionHeader,
         textClassName: U.userInfoText
-      }), O && (0, a.jsx)(A.UserProfileRecentGamesContainer, {
+      }), O && (0, a.jsx)(x.UserProfileRecentGamesContainer, {
         userId: s.id,
         maxItems: 6,
         containerClassName: n()(U.userInfoText, U.recentGames)
