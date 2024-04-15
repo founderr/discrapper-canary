@@ -50,8 +50,7 @@ function A(e) {
       children: [(0, i.jsx)("div", {
         children: (0, i.jsx)(E.default, {
           guild: O.guild,
-          iconSize: 40,
-          backupSize: "LARGE"
+          iconSize: 40
         })
       }), (0, i.jsxs)("div", {
         className: S.guildInfoContainer,

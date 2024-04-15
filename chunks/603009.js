@@ -102,7 +102,7 @@ function v(e) {
                 children: [(0, a.jsx)(_.default, {
                   guild: t,
                   iconSize: 64,
-                  backupSize: "LARGER"
+                  className: A.icon
                 }), (0, a.jsx)("div", {
                   className: A.guildTagContainer,
                   children: (0, a.jsx)(T.BaseClanTagChiplet, {
