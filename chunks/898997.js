@@ -11,7 +11,7 @@ var a = s("470079"),
   n = s("140465"),
   o = s("775412"),
   u = s("276444"),
-  d = s("963198"),
+  d = s("520540"),
   c = s("474936");
 let _ = e => {
   let t = (0, i.useStateFromStores)([r.default], () => r.default.getCurrentUser()),
@@ -19,7 +19,7 @@ let _ = e => {
     _ = (0, o.useHasActiveTrial)(),
     {
       enabled: E
-    } = d.default.useExperiment({
+    } = d.ReferralProgramSender.useExperiment({
       location: e
     }, {
       autoTrackExposure: !1

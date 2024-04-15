@@ -134,9 +134,7 @@ let G = e => {
       })]
     })
   },
-  W = (e, t, s, a) => e ? U.default.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER_ALL_SHARED.format({
-    numReferrals: 3,
-    numMonths: 6,
+  W = (e, t, s, a) => e ? U.default.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER_ALL_SHARED_NO_REFRESH.format({
     helpdeskArticle: a
   }) : t ? U.default.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER_AT_LEAST_ONE_SHARED.format({
     numFriends: 3 - s,
