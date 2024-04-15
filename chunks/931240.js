@@ -39,7 +39,13 @@ async function u(e, t) {
         prime_time: I,
         verification_form: {
           form_fields: null !== (c = null === (u = t.verificationForm) || void 0 === u ? void 0 : u.formFields) && void 0 !== c ? c : []
-        }
+        },
+        badge: t.badgeKind,
+        badge_color_primary: t.badgePrimaryColor,
+        badge_color_secondary: t.badgeSecondaryColor,
+        banner: t.banner,
+        brand_color_primary: t.brandPrimaryColor,
+        brand_color_secondary: t.brandSecondaryColor
       }
     }), s.default.dispatch({
       type: "CLAN_SETUP_SUCCESS",
