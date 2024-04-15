@@ -70,6 +70,7 @@ let O = s.forwardRef(function(e, t) {
           className: R.questAcceptedContentHeading,
           children: [(0, n.jsx)(T.default, {
             className: R.questProgressRewardTile,
+            learnMoreStyle: "icon",
             quest: D,
             questContent: m.QuestContent.QUEST_BAR
           }), (0, n.jsxs)("div", {
@@ -151,6 +152,7 @@ let O = s.forwardRef(function(e, t) {
           className: R.details,
           children: [(0, n.jsx)(T.default, {
             className: R.rewardTile,
+            learnMoreStyle: "text",
             quest: D,
             questContent: m.QuestContent.QUEST_BAR
           }), (0, n.jsx)(d.Heading, {

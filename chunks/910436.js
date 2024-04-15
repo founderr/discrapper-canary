@@ -160,7 +160,7 @@ function I(e) {
     }, "rich-presence-".concat(null !== (p = L.session_id) && void 0 !== p ? p : t, "-").concat(x.id))) : (0, u.default)(L) && O((0, n.jsx)(_.default.XboxSection, {
       title: M.name
     }, "xbox-".concat(null !== (N = L.session_id) && void 0 !== N ? N : t)));
-    null != I && O((0, n.jsx)(c.default, {
+    null != I && null != M && M.id === I.config.applicationId && O((0, n.jsx)(c.default, {
       quest: I
     }, "quest-".concat(I.id, "-").concat(null !== (R = L.session_id) && void 0 !== R ? R : t)))
   }), R.length > 0 ? (0, n.jsx)(_.default.Body, {
