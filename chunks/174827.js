@@ -71,12 +71,9 @@ function G(e) {
     location: "d17fd6_3"
   }, {
     autoTrackExposure: !1
-  });
-  (0, c.useAnnualDiscountExperiment)("PremiumPaymentPlanSelectStep", !0);
-  let el = (0, a.useStateFromStores)([S.default], () => S.default.getCurrentUser()),
-    ea = !et && null != J && J === k.PremiumSubscriptionSKUs.TIER_2 && null != el && el.hasHadPremium() && Y && null == K && (0, u.isPaymentSourceEligibleForMultiMonthPlans)(er),
-    eo = (0, _.usePremiumTrialOffer)(Z),
-    eC = !et && null != eo && null != J && (0, k.SubscriptionTrials)[eo.trial_id].skus.includes(J),
+  }), el = (0, a.useStateFromStores)([S.default], () => S.default.getCurrentUser()), ea = !et && null != J && J === k.PremiumSubscriptionSKUs.TIER_2 && null != el && el.hasHadPremium() && Y && null == K && (0, u.isPaymentSourceEligibleForMultiMonthPlans)(er), eo = (0, _.usePremiumTrialOffer)(Z);
+  (0, c.useAnnualDiscountExperiment)("PremiumPaymentPlanSelectStep", null == eo);
+  let eC = !et && null != eo && null != J && (0, k.SubscriptionTrials)[eo.trial_id].skus.includes(J),
     eu = (0, x.usePremiumDiscountOffer)(),
     ed = null == eu ? void 0 : null === (t = eu.discount) || void 0 === t ? void 0 : t.plan_ids.some(e => k.SubscriptionPlanInfo[e].skuId === J),
     ec = !et && null != eu && null != J && ed,
