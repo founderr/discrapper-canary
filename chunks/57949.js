@@ -18,13 +18,13 @@ function d(e) {
     guildProductListing: t,
     guildId: d,
     sourceAnalyticsLocations: c
-  } = e, f = !1, E = (0, a.v4)(), _ = () => {
-    f = !0
+  } = e, E = !1, f = (0, a.v4)(), _ = () => {
+    E = !0
   };
   (0, l.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("40326"), n.e("23357"), n.e("15972"), n.e("58625"), n.e("6416"), n.e("14720"), n.e("63438"), n.e("62511"), n.e("61247"), n.e("58600"), n.e("32776"), n.e("95900"), n.e("83398")]).then(n.bind(n, "578780"));
+    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("40326"), n.e("23357"), n.e("15972"), n.e("58625"), n.e("6416"), n.e("63438"), n.e("61247"), n.e("62511"), n.e("58600"), n.e("32776"), n.e("95900"), n.e("83398")]).then(n.bind(n, "578780"));
     return n => (0, s.jsx)(e, {
       ...n,
       applicationId: t.application_id,
@@ -34,13 +34,13 @@ function d(e) {
         guildProductListingId: t.id,
         guildId: d
       },
-      loadId: E,
+      loadId: f,
       onComplete: _
     })
   }, {
     onCloseCallback: () => {
-      !f && o.default.track(u.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-        load_id: E,
+      !E && o.default.track(u.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
+        load_id: f,
         payment_type: u.PurchaseTypeToAnalyticsPaymentType[u.PurchaseTypes.ONE_TIME],
         is_gift: !1,
         location_stack: Array.isArray(c) ? c : [c]

@@ -12,8 +12,8 @@ var a, n = s("735250"),
   E = s("212895"),
   T = s("709054"),
   f = s("156729"),
-  m = s("244526"),
-  _ = s("981631"),
+  _ = s("244526"),
+  m = s("981631"),
   g = s("689938"),
   I = s("551165");
 
@@ -59,7 +59,7 @@ class N extends(a = l.PureComponent) {
         align: c.default.Align.CENTER,
         justify: c.default.Justify.BETWEEN,
         className: I.paymentSourceRow,
-        children: [(0, n.jsx)(m.default, {
+        children: [(0, n.jsx)(_.default, {
           paymentSource: e,
           isDefault: t,
           isForSubscription: i,
@@ -178,7 +178,7 @@ class p extends l.PureComponent {
       (0, o.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([s.e("49237"), s.e("99387"), s.e("66635"), s.e("40326"), s.e("23357"), s.e("61247"), s.e("58600"), s.e("52619")]).then(s.bind(s, "623573"));
+        } = await Promise.resolve().then(s.bind(s, "623573"));
         return t => (0, n.jsx)(e, {
           ...t,
           onAddPaymentSource: this.handlePaymentSourceAdded
@@ -187,7 +187,7 @@ class p extends l.PureComponent {
         onCloseCallback: () => {
           (0, u.clearError)()
         },
-        onCloseRequest: _.NOOP
+        onCloseRequest: m.NOOP
       })
     })
   }
