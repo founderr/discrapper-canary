@@ -75,7 +75,8 @@ function I(e) {
     url: _.Endpoints.CONNECTION_ACCESS_TOKEN(_.PlatformTypes.SPOTIFY, e),
     oldFormErrors: !0
   }).catch(t => {
-    if (401 === t.status) s.default.dispatch({
+    var n;
+    if ((null === (n = t.body) || void 0 === n ? void 0 : n.code) === _.AbortCodes.CONNECTION_REVOKED) s.default.dispatch({
       type: "SPOTIFY_ACCOUNT_ACCESS_TOKEN_REVOKE",
       accountId: e
     });
