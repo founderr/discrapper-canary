@@ -135,7 +135,7 @@ function S(e) {
 
 function _(e) {
   let t = e.traits.find(e => e.type === s.ContentInventoryTraitType.RESURRECTED);
-  return null == t ? void 0 : t.resurrected
+  return (null == t ? void 0 : t.resurrected_last_played) != null
 }
 
 function T(e) {
