@@ -1,25 +1,25 @@
 "use strict";
 n.r(t), n.d(t, {
   Popout: function() {
-    return j
-  },
-  PopoutAvatar: function() {
-    return B
-  },
-  PopoutHero: function() {
     return P
   },
-  PopoutInteractionsContainer: function() {
-    return U
-  },
-  PopoutJoinPrompt: function() {
+  PopoutAvatar: function() {
     return G
   },
-  PopoutReactor: function() {
+  PopoutHero: function() {
+    return D
+  },
+  PopoutInteractionsContainer: function() {
     return F
   },
+  PopoutJoinPrompt: function() {
+    return V
+  },
+  PopoutReactor: function() {
+    return w
+  },
   PopoutTitle: function() {
-    return D
+    return b
   }
 }), n("47120");
 var a = n("735250"),
@@ -42,42 +42,39 @@ var r = n("442837"),
   S = n("594174"),
   _ = n("626135"),
   T = n("768581"),
-  I = n("162461"),
-  A = n("22211"),
-  v = n("907082"),
-  N = n("69259"),
-  x = n("206295"),
-  M = n("206583"),
-  R = n("981631"),
-  L = n("689938"),
-  y = n("522791");
-let O = e => {
-  _.default.track(R.AnalyticEvents.MEMBERLIST_POPOUT_SHARE_TO_CHANNEL_TOGGLED, {
-    is_send_to_channel: e
-  })
-};
+  I = n("485267"),
+  A = n("162461"),
+  v = n("71585"),
+  N = n("22211"),
+  x = n("907082"),
+  M = n("69259"),
+  R = n("206295"),
+  L = n("206583"),
+  y = n("981631"),
+  O = n("689938"),
+  j = n("522791");
 
-function j(e) {
+function P(e) {
   let {
     children: t
   } = e, n = l.useRef(null);
   return (0, d.useFocusLock)(n), (0, a.jsx)("div", {
-    className: y.popout,
+    className: j.popout,
     ref: n,
     children: t
   })
 }
 
-function P(e) {
+function D(e) {
   let {
     children: t,
     backgroundImgSrc: n
   } = e, {
     primaryColor: l,
     secondaryColor: s
-  } = (0, x.default)(n);
+  } = (0, R.default)(n);
   return (0, a.jsx)("div", {
-    className: y.hero,
+    className: j.hero,
     style: {
       background: "linear-gradient(45deg, ".concat(l, ", ").concat(s, ")")
     },
@@ -85,31 +82,31 @@ function P(e) {
   })
 }
 
-function D(e) {
+function b(e) {
   let {
     children: t
   } = e;
   return (0, a.jsx)(d.Heading, {
-    className: y.popoutTitle,
+    className: j.popoutTitle,
     variant: "heading-md/normal",
     color: "always-white",
     lineClamp: 3,
     children: t
   })
 }
-let b = l.createContext(null);
+let U = l.createContext(null);
 
-function U(e) {
+function F(e) {
   let {
     children: t
   } = e, n = l.useRef(null);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
-      className: y.interactionsContainerHeader,
+      className: j.interactionsContainerHeader,
       ref: e => n.current = e
     }), (0, a.jsx)("div", {
-      className: y.interactionsContainer,
-      children: (0, a.jsx)(b.Provider, {
+      className: j.interactionsContainer,
+      children: (0, a.jsx)(U.Provider, {
         value: n.current,
         children: t
       })
@@ -117,14 +114,14 @@ function U(e) {
   })
 }
 
-function F(e) {
+function w(e) {
   let {
     generateReactionImage: t,
     reactionImageAltText: n,
     entry: s,
     requestId: r,
     ...o
-  } = e, u = (0, v.useIsEligibleForMemberListShareToChannel)({
+  } = e, u = (0, x.useIsEligibleForMemberListShareToChannel)({
     location: "PopoutReactor"
   }), [d, c] = l.useState();
   l.useEffect(() => {
@@ -145,37 +142,32 @@ function F(e) {
       altText: n,
       reply: t
     });
-    let l = a.type === R.ChannelTypes.DM ? M.ContentInventoryInteractionTypes.DM_REACTION_MESSAGE_SENT : M.ContentInventoryInteractionTypes.CHANNEL_REACTION_MESSAGE_SENT;
-    (0, N.trackInteraction)(l, {
+    let l = a.type === y.ChannelTypes.DM ? L.ContentInventoryInteractionTypes.DM_REACTION_MESSAGE_SENT : L.ContentInventoryInteractionTypes.CHANNEL_REACTION_MESSAGE_SENT;
+    (0, M.trackInteraction)(l, {
       entry: s,
       channelId: o.channel.id,
       guildId: o.channel.guild_id,
       requestId: r
     })
   };
-  return u ? (0, a.jsx)(w, {
+  return u ? (0, a.jsx)(k, {
     ...o,
     reactionImage: d,
     onMessageReact: f
-  }) : (0, a.jsx)(k, {
+  }) : (0, a.jsx)(H, {
     ...o,
     reactionImage: d,
     onMessageReact: f
   })
 }
 
-function w(e) {
+function k(e) {
   let {
     channel: t,
     user: n,
     onMessageReact: s,
     closePopout: f
-  } = e, [m, p] = l.useState(!1), [E, S] = l.useState(null), T = l.useRef(null), I = (0, r.useStateFromStores)([g.default], () => g.default.can(R.Permissions.SEND_MESSAGES, t)), A = "#".concat(t.name), v = "@".concat(n.username), N = m ? L.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : L.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, x = () => {
-    p(e => {
-      let t = !e;
-      return O(t), t
-    })
-  }, j = async e => {
+  } = e, m = (0, r.useStateFromStores)([v.default], () => v.default.isChannelReplyMode()), [p, E] = l.useState(null), S = l.useRef(null), T = (0, r.useStateFromStores)([g.default], () => g.default.can(y.Permissions.SEND_MESSAGES, t)), A = "#".concat(t.name), N = "@".concat(n.username), x = m ? O.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : O.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, M = async e => {
     if (m) return f(), await s({
       reply: e,
       channel: t
@@ -191,25 +183,25 @@ function w(e) {
   };
   return (0, a.jsxs)("div", {
     children: [(0, a.jsx)("div", {
-      className: y.emojiHotrailShareToChannel,
-      children: (0, a.jsx)(H, {
+      className: j.emojiHotrailShareToChannel,
+      children: (0, a.jsx)(B, {
         channel: t,
         onClickSuggestion: e => {
-          null != e && null != E && (_.default.track(R.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
-            surface_type: M.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
+          null != e && null != p && (_.default.track(y.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
+            surface_type: L.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
             channel_id: t.id,
             guild_id: t.guild_id
-          }), E.insertEmoji(e, !1, !1), E.focus())
+          }), p.insertEmoji(e, !1, !1), p.focus())
         }
       })
     }), (0, a.jsxs)("div", {
-      className: y.inputContainerShareToChannel,
-      children: [I && (0, a.jsx)(d.Tooltip, {
-        text: N,
+      className: j.inputContainerShareToChannel,
+      children: [T && (0, a.jsx)(d.Tooltip, {
+        text: x,
         children: e => (0, a.jsx)(d.Clickable, {
           ...e,
-          className: y.shareToChannelButton,
-          onClick: x,
+          className: j.shareToChannelButton,
+          onClick: I.toggleContentInventoryReplyMode,
           children: m ? (0, a.jsx)(u.TextIcon, {
             width: 20,
             height: 20
@@ -219,15 +211,15 @@ function w(e) {
           })
         })
       }), (0, a.jsx)(h.ReplyInput, {
-        ref: T,
-        placeholder: L.default.Messages.TEXTAREA_PLACEHOLDER.format({
-          channel: m ? A : v
+        ref: S,
+        placeholder: O.default.Messages.TEXTAREA_PLACEHOLDER.format({
+          channel: m ? A : N
         }),
-        onEnter: j,
-        setEditorRef: e => S(e),
+        onEnter: M,
+        setEditorRef: e => E(e),
         autoCompletePosition: (() => {
-          if (null == T || null == T.current) return "top";
-          let e = T.current.getBoundingClientRect(),
+          if (null == S || null == S.current) return "top";
+          let e = S.current.getBoundingClientRect(),
             t = window.innerHeight;
           return e.top < t / 2 ? "bottom" : "top"
         })(),
@@ -238,14 +230,14 @@ function w(e) {
   })
 }
 
-function k(e) {
+function H(e) {
   let {
     channel: t,
     onMessageReact: n,
     user: s
   } = e, [r, o] = l.useState(null), u = l.useRef(null), d = e => {
-    null != e && null != r && (_.default.track(R.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
-      surface_type: M.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
+    null != e && null != r && (_.default.track(y.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
+      surface_type: L.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
       channel_id: t.id,
       guild_id: t.guild_id
     }), r.insertEmoji(e, !1, !1), r.focus())
@@ -259,8 +251,8 @@ function k(e) {
   };
   return (0, a.jsxs)("div", {
     children: [(0, a.jsxs)("div", {
-      className: y.emojiHotrail,
-      children: [(0, a.jsx)(H, {
+      className: j.emojiHotrail,
+      children: [(0, a.jsx)(B, {
         channel: t,
         onClickSuggestion: d
       }), (0, a.jsx)(h.ReactionPickerButton, {
@@ -268,7 +260,7 @@ function k(e) {
       })]
     }), (0, a.jsx)(h.ReplyInput, {
       ref: u,
-      placeholder: L.default.Messages.TEXTAREA_PLACEHOLDER.format({
+      placeholder: O.default.Messages.TEXTAREA_PLACEHOLDER.format({
         channel: "@".concat(s.username)
       }),
       onEnter: f,
@@ -282,7 +274,7 @@ function k(e) {
     })]
   })
 }
-let H = e => {
+let B = e => {
   let {
     channel: t,
     onClickSuggestion: n
@@ -305,18 +297,18 @@ let H = e => {
       } = e;
       return null != l ? (0, a.jsx)(d.Clickable, {
         onClick: () => n(t),
-        className: y.emojiSuggestionButton,
+        className: j.emojiSuggestionButton,
         children: (0, a.jsx)("img", {
           alt: t.name,
           src: l,
-          className: y.emoji
+          className: j.emoji
         })
       }) : null
     })
   })
 };
 
-function B(e) {
+function G(e) {
   let {
     user: t,
     guildId: n
@@ -328,24 +320,24 @@ function B(e) {
   })
 }
 
-function G(e) {
+function V(e) {
   let {
     entry: t
   } = e, {
     showJoinButton: n
-  } = I.VoiceEnrichmentsExperiment.useExperiment({
+  } = A.VoiceEnrichmentsExperiment.useExperiment({
     location: "popout_join_prompt"
   }), {
     channel: l
-  } = (0, A.default)(t), s = (0, r.useStateFromStores)([S.default], () => S.default.getUser(t.author_id));
+  } = (0, N.default)(t), s = (0, r.useStateFromStores)([S.default], () => S.default.getUser(t.author_id));
   return n && null != l && null != s ? (0, a.jsx)("div", {
-    className: y.joinPromptContainer,
+    className: j.joinPromptContainer,
     children: (0, a.jsx)(d.Button, {
       fullWidth: !0,
       onClick: () => {
         (0, E.transitionToGuild)(l.guild_id), f.default.selectVoiceChannel(l.id)
       },
-      children: L.default.Messages.CONTENT_INVENTORY_JOIN_LIVE_CHANNEL.format({
+      children: O.default.Messages.CONTENT_INVENTORY_JOIN_LIVE_CHANNEL.format({
         channelName: l.name
       })
     })
