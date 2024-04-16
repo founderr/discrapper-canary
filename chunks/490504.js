@@ -3,7 +3,7 @@ n.r(t);
 var i = n("735250");
 n("470079");
 var r = n("960259"),
-  s = n("420166"),
+  s = n("434559"),
   a = n("325767");
 t.default = (0, r.replaceIcon)(function(e) {
   let {
@@ -823,6 +823,6 @@ t.default = (0, r.replaceIcon)(function(e) {
       fill: r
     })]
   })
-}, s.NewUserIcon, void 0, {
+}, s.NewUserLargeIcon, void 0, {
   size: 24
 })

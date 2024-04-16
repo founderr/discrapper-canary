@@ -13,7 +13,7 @@ var a = n("735250"),
   i = n.n(s),
   r = n("442837"),
   o = n("149020"),
-  u = n("420166"),
+  u = n("434559"),
   d = n("324992"),
   c = n("137443"),
   f = n("481060"),
@@ -69,7 +69,7 @@ let N = e => {
       textColor: n
     }) : null, (0, g.isEntryNew)(t) ? (0, a.jsxs)("div", {
       className: v.badgeContainer,
-      children: [(0, a.jsx)(u.NewUserIcon, {
+      children: [(0, a.jsx)(u.NewUserLargeIcon, {
         width: 12,
         height: 12,
         color: null != l ? l : f.tokens.colors.STATUS_POSITIVE
