@@ -92,7 +92,9 @@ class N extends i.default {
   constructor(...e) {
     super(...e), I(this, "_premiumPaymentModalCloseResolve", null), I(this, "_premiumPaymentModalCloseReject", null), I(this, "_maybeFetchPremiumOffer", () => {
       let e = d.default.getCurrentUser(),
-        t = (0, g.annualDiscountsExperimentEnabled)("PremiumManager");
+        {
+          annualDiscountsEnabled: t
+        } = (0, g.getAnnualDiscountsExperimentConfig)("PremiumManager");
       null != e && e.verified && (!(0, f.isPremium)(e) && c.default.shouldFetchOffer() && ((0, E.shouldHitUserOfferEndPoints)("PremiumManager") ? (0, p.fetchUserOffer)() : m.default.fetchUserTrialOffer()), t && c.default.shouldFetchAnnualOffer() && (0, p.fetchAnnualUserOffer)())
     }), I(this, "_handlePremiumPaymentModalOpen", e => {
       (0, o.default)({
