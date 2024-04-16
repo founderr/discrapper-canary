@@ -23,8 +23,8 @@ var i = n("374470"),
   m = n("786095"),
   g = n("36829"),
   S = n("667922"),
-  v = n("941389"),
-  p = n("449751"),
+  p = n("941389"),
+  v = n("449751"),
   I = n("749339"),
   h = n("601184"),
   A = n("6148"),
@@ -57,8 +57,8 @@ function U(e) {
     } = e,
     g = c,
     S = c.getAttribute("data-type"),
-    v = c.getAttribute("data-id"),
-    p = c.getAttribute("data-name");
+    p = c.getAttribute("data-id"),
+    v = c.getAttribute("data-name");
   if (null != f) l = a = u = f.url;
   else
     for (;
@@ -69,8 +69,8 @@ function U(e) {
     mediaItem: f,
     textSelection: null !== (n = null === (t = document.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== n ? n : "",
     favoriteableType: S,
-    favoriteableId: v,
-    favoriteableName: p,
+    favoriteableId: p,
+    favoriteableName: v,
     itemHref: a,
     itemSrc: l,
     itemSafeSrc: u,
@@ -109,15 +109,15 @@ function k(e) {
     type: U,
     id: k,
     name: w
-  }), el = (0, G.default)(t, n), es = (0, T.default)(t, n), eu = (0, y.default)(t), er = (0, v.default)(t, n), eo = (0, p.default)(t, n), ed = (0, x.default)(t, n), ec = (0, N.default)(t, n), ef = (0, h.default)(t, n), eE = (0, b.default)(t), eM = (0, P.default)(t, n), em = (0, c.default)(null != V ? V : K, Y, t, {
+  }), el = (0, G.default)(t, n), es = (0, T.default)(t, n), eu = (0, y.default)(t), er = (0, p.default)(t, n), eo = (0, v.default)(t, n), ed = (0, x.default)(t, n), ec = (0, N.default)(t, n), ef = (0, h.default)(t, n), eE = (0, b.default)(t), eM = (0, P.default)(t, n), em = (0, c.default)(null != V ? V : K, Y, t, {
     shouldHideMediaOptions: q
   }), eg = (0, d.default)(H, t, {
     shouldHideMediaOptions: q
-  }), eS = (0, L.default)(t, i), ev = (0, r.default)({
+  }), eS = (0, L.default)(t, i), ep = (0, r.default)({
     id: t.id,
     label: F.default.Messages.COPY_ID_MESSAGE,
     shiftId: "".concat(t.channel_id, "-").concat(t.id)
-  }), ep = (0, j.default)(t, n), eI = (0, D.default)(t, n), eh = (0, g.default)(t, n, {
+  }), ev = (0, j.default)(t, n), eI = (0, D.default)(t, n), eh = (0, g.default)(t, n, {
     hoist: !0
   }), eA = (0, m.default)(s, n.getGuildId()), e_ = (0, O.default)(t), eT = (0, I.default)(t), eC = (0, M.default)({
     commandType: u.ApplicationCommandType.MESSAGE,
@@ -125,7 +125,7 @@ function k(e) {
     channel: n,
     guildId: void 0,
     onHeightUpdate: X
-  }), eR = (0, E.default)(t, n);
+  }), eR = (0, E.default)(t);
   return (0, a.jsxs)(l.Menu, {
     navId: J,
     onClose: z,
@@ -136,7 +136,7 @@ function k(e) {
     }), (0, a.jsx)(l.MenuGroup, {
       children: Q
     }), (0, a.jsxs)(l.MenuGroup, {
-      children: ["" === s ? ee : null, et, eu, en, ea, ei, ep, eI, eT, eC, el, es, e_, er, eo, eM, eh, eR, ec, ed, ef, B && eE]
+      children: ["" === s ? ee : null, et, eu, en, ea, ei, ev, eI, eT, eC, el, es, e_, er, eo, eM, eh, eR, ec, ed, ef, B && eE]
     }), null != eA && (0, a.jsx)(l.MenuGroup, {
       children: eA
     }), (0, a.jsxs)(l.MenuGroup, {
@@ -144,7 +144,7 @@ function k(e) {
     }), (0, a.jsx)(l.MenuGroup, {
       children: em
     }), (0, a.jsx)(l.MenuGroup, {
-      children: ev
+      children: ep
     })]
   })
 }
