@@ -59,7 +59,7 @@ s.default = function(e) {
   let {
     onClose: s,
     onShare: t
-  } = e, a = (0, n.useStateFromStores)([u.default], () => u.default.getReferralsRemaining()), [L, R] = l.useState(0), [E, g] = l.useState(""), [S, v] = l.useState([]), [y, A] = l.useState(!1), [O, M] = l.useState(!1), F = function(e, s) {
+  } = e, a = (0, n.useStateFromStores)([u.default], () => u.default.getReferralsRemaining()), [L, R] = l.useState(0), [E, g] = l.useState(""), [v, S] = l.useState([]), [y, A] = l.useState(!1), [M, O] = l.useState(!1), F = function(e, s) {
     let [t, i] = l.useState(e);
     return l.useEffect(() => {
       let t = setTimeout(() => {
@@ -69,25 +69,28 @@ s.default = function(e) {
         clearTimeout(t)
       }
     }, [e, s]), t
-  }(E, 400), [w, N] = l.useState(new Set);
+  }(E, 400), [w, N] = l.useState(new Map);
   l.useEffect(() => {
-    v([...w]), R(0)
+    B(0)
   }, [F]), r()(null != a, "Referrals remaining should not be null");
-  let B = async () => {
+  let B = async e => {
     try {
-      if (null == L) return;
+      if (null == e) return;
       A(!0);
-      let e = await (0, f.fetchReferralEligibleUsers)(L, F);
-      v(s => [...s, ...e.users]), R(e.nextIndex)
+      let s = await (0, f.fetchReferralEligibleUsers)(e, F);
+      S(t => {
+        let i = s.users.filter(e => !w.has(e.id));
+        return 0 === e ? [...w.values(), ...i] : [...t, ...i]
+      }), R(s.nextIndex)
     } catch (e) {
-      M(!0)
+      O(!0)
     } finally {
       A(!1)
     }
   }, I = (0, d.useIsVisible)(e => {
-    e && !y && B()
+    e && !y && B(L)
   });
-  return O ? (0, i.jsx)(m, {
+  return M ? (0, i.jsx)(m, {
     onClose: s
   }) : (0, i.jsxs)("div", {
     className: _.container,
@@ -119,14 +122,14 @@ s.default = function(e) {
       })]
     }), (0, i.jsxs)(C.ScrollerAuto, {
       className: _.list,
-      children: [S.map(e => (0, i.jsx)(h.default, {
-        disabled: w.size >= a && !w.has(e),
-        checked: w.has(e),
+      children: [v.map(e => (0, i.jsx)(h.default, {
+        disabled: w.size >= a && !w.has(e.id),
+        checked: w.has(e.id),
         user: e,
-        onChange: function(e, s) {
+        onChange: (e, s) => {
           N(t => {
-            let i = new Set(t);
-            return s ? i.add(e) : i.delete(e), i
+            let i = new Map(t);
+            return s ? i.set(e.id, e) : i.delete(e.id), i
           })
         }
       }, e.id)), y && (0, i.jsx)(o.Spinner, {}), (0, i.jsx)("div", {
@@ -136,7 +139,7 @@ s.default = function(e) {
       className: _.footer,
       children: (0, i.jsx)(o.Button, {
         className: _.submit,
-        onClick: () => t(w),
+        onClick: () => t(new Set([...w.values()])),
         children: p.default.Messages.REFERRAL_PROGRAM_SHARE_TRIAL
       })
     })]
