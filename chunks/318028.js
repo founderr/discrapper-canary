@@ -12,7 +12,7 @@ var o = r("470079"),
 function s(e) {
   let [t, r, s, i] = (0, a.useStateFromStoresArray)([l.default], () => {
     var t;
-    return [l.default.isFetching, l.default.error, null !== (t = l.default.lastFetched) && void 0 !== t ? t : 0, l.default.getCategoryForProduct(e)]
+    return [l.default.isFetchingCategories, l.default.error, null !== (t = l.default.lastFetched) && void 0 !== t ? t : 0, l.default.getCategoryForProduct(e)]
   });
   return (0, o.useEffect)(() => {
     !(null != i || t || r || Date.now() - s < 6e5) && (0, n.fetchCollectiblesCategories)()

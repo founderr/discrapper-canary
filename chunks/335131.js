@@ -107,7 +107,8 @@ let _ = e => {
     }
   }, S = async (e, t) => {
     r.default.dispatch({
-      type: "COLLECTIBLES_PRODUCT_FETCH"
+      type: "COLLECTIBLES_PRODUCT_FETCH",
+      skuId: e
     });
     try {
       let n = {};
@@ -118,13 +119,15 @@ let _ = e => {
       });
       r.default.dispatch({
         type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS",
+        skuId: e,
         product: l.default.fromServer(s.body)
       })
-    } catch (e) {
+    } catch (t) {
       throw r.default.dispatch({
         type: "COLLECTIBLES_PRODUCT_FETCH_FAILURE",
-        error: e
-      }), new a.APIError(e)
+        skuId: e,
+        error: t
+      }), new a.APIError(t)
     }
   }, h = async e => {
     r.default.dispatch({

@@ -65,7 +65,7 @@ function _(e) {
     });
     let [n, l, u, d] = (0, r.useStateFromStoresArray)([o.default], () => {
       var e;
-      return [o.default.isFetching, o.default.error, null !== (e = o.default.lastFetched) && void 0 !== e ? e : 0, o.default.categories]
+      return [o.default.isFetchingCategories, o.default.error, null !== (e = o.default.lastFetched) && void 0 !== e ? e : 0, o.default.categories]
     });
     return (0, i.useEffect)(() => {
       !(n || l || Date.now() - u < 6e5) && (0, a.fetchCollectiblesCategories)(e)
