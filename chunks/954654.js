@@ -1,73 +1,78 @@
 "use strict";
-n.r(l), n.d(l, {
+t.r(n), t.d(n, {
   default: function() {
-    return C
+    return E
   },
   renderComponents: function() {
-    return S
+    return C
   }
 });
-var t = n("735250");
-n("470079");
-var a = n("120356"),
-  s = n.n(a),
-  u = n("911969"),
-  i = n("970184"),
-  o = n("987106"),
-  r = n("927057"),
-  d = n("574597"),
-  c = n("378975"),
-  m = n("413991"),
-  p = n("889515"),
-  f = n("719599");
+var l = t("735250");
+t("470079");
+var a = t("120356"),
+  s = t.n(a),
+  u = t("911969"),
+  i = t("970184"),
+  o = t("987106"),
+  r = t("927057"),
+  d = t("574597"),
+  c = t("378975"),
+  m = t("413991"),
+  p = t("861529"),
+  f = t("889515"),
+  S = t("719599");
 
-function S(e) {
-  return e.map((e, l) => (function(e, l) {
+function C(e) {
+  return e.map((e, n) => (function(e, n) {
     switch (e.type) {
       case u.ComponentType.ACTION_ROW:
-        return (0, t.jsx)(p.default, {
+        return (0, l.jsx)(f.default, {
           ...e,
-          renderComponents: S
-        }, l);
+          renderComponents: C
+        }, n);
       case u.ComponentType.BUTTON:
-        return (0, t.jsx)(o.default, {
+        return (0, l.jsx)(o.default, {
           ...e
-        }, l);
+        }, n);
       case u.ComponentType.STRING_SELECT:
-        return (0, t.jsx)(c.default, {
+        return (0, l.jsx)(c.default, {
           ...e
-        }, l);
+        }, n);
       case u.ComponentType.CHANNEL_SELECT:
-        return (0, t.jsx)(r.default, {
+        return (0, l.jsx)(r.default, {
           ...e
-        }, l);
+        }, n);
       case u.ComponentType.USER_SELECT:
       case u.ComponentType.ROLE_SELECT:
       case u.ComponentType.MENTIONABLE_SELECT:
-        return (0, t.jsx)(d.default, {
+        return (0, l.jsx)(d.default, {
           ...e
-        }, l);
+        }, n);
       case u.ComponentType.INPUT_TEXT:
-        return (0, t.jsx)(m.default, {
+        return (0, l.jsx)(m.default, {
           ...e
-        }, l)
+        }, n);
+      case u.ComponentType.TEXT:
+        return (0, l.jsx)(p.default, {
+          ...e
+        }, n)
     }
-  })(e, l.toString()))
+  })(e, n.toString()))
 }
 
-function C(e) {
+function E(e) {
   let {
-    message: l
+    message: n
   } = e, {
-    components: n
-  } = l;
-  return 0 === n.length ? null : (0, t.jsx)("div", {
-    className: s()([f.container, {
-      [f.containerUikit]: l.isUIKitComponents()
+    components: t
+  } = n;
+  return 0 === t.length ? null : (0, l.jsx)("div", {
+    className: s()([S.container, {
+      [S.containerUikit]: n.isUIKitComponents()
     }]),
-    children: (0, t.jsx)(i.ComponentStateContextProvider, {
-      message: l,
-      children: S(n)
+    children: (0, l.jsx)(i.ComponentStateContextProvider, {
+      message: n,
+      children: C(t)
     })
   })
 }
