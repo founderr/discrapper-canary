@@ -1,74 +1,69 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(l), n.d(l, {
   default: function() {
-    return S
+    return f
   },
   renderComponents: function() {
-    return C
+    return p
   }
 });
-var l = n("735250"),
-  a = n("470079"),
-  s = n("911969"),
-  u = n("592125"),
-  o = n("970184"),
-  i = n("292419"),
-  r = n("987106"),
-  d = n("927057"),
-  c = n("574597"),
-  m = n("378975"),
-  p = n("413991"),
-  f = n("889515"),
-  E = n("719599");
+var t = n("735250");
+n("470079");
+var a = n("911969"),
+  s = n("970184"),
+  u = n("987106"),
+  i = n("927057"),
+  o = n("574597"),
+  r = n("378975"),
+  d = n("413991"),
+  c = n("889515"),
+  m = n("719599");
 
-function C(e) {
-  return e.map((e, t) => (function(e, t) {
+function p(e) {
+  return e.map((e, l) => (function(e, l) {
     switch (e.type) {
-      case s.ComponentType.ACTION_ROW:
-        return (0, l.jsx)(f.default, {
+      case a.ComponentType.ACTION_ROW:
+        return (0, t.jsx)(c.default, {
           ...e,
-          renderComponents: C
-        }, t);
-      case s.ComponentType.BUTTON:
-        return (0, l.jsx)(r.default, {
+          renderComponents: p
+        }, l);
+      case a.ComponentType.BUTTON:
+        return (0, t.jsx)(u.default, {
           ...e
-        }, t);
-      case s.ComponentType.STRING_SELECT:
-        return (0, l.jsx)(m.default, {
+        }, l);
+      case a.ComponentType.STRING_SELECT:
+        return (0, t.jsx)(r.default, {
           ...e
-        }, t);
-      case s.ComponentType.CHANNEL_SELECT:
-        return (0, l.jsx)(d.default, {
+        }, l);
+      case a.ComponentType.CHANNEL_SELECT:
+        return (0, t.jsx)(i.default, {
           ...e
-        }, t);
-      case s.ComponentType.USER_SELECT:
-      case s.ComponentType.ROLE_SELECT:
-      case s.ComponentType.MENTIONABLE_SELECT:
-        return (0, l.jsx)(c.default, {
+        }, l);
+      case a.ComponentType.USER_SELECT:
+      case a.ComponentType.ROLE_SELECT:
+      case a.ComponentType.MENTIONABLE_SELECT:
+        return (0, t.jsx)(o.default, {
           ...e
-        }, t);
-      case s.ComponentType.INPUT_TEXT:
-        return (0, l.jsx)(p.default, {
+        }, l);
+      case a.ComponentType.INPUT_TEXT:
+        return (0, t.jsx)(d.default, {
           ...e
-        }, t)
+        }, l)
     }
-  })(e, t.toString()))
+  })(e, l.toString()))
 }
 
-function S(e) {
+function f(e) {
   let {
-    message: t
-  } = e, n = a.useMemo(() => {
-    var e, n;
-    let l = u.default.getChannel(t.channel_id),
-      a = null == l ? void 0 : l.guild_id;
-    return (0, i.createComponents)(null !== (e = t.components) && void 0 !== e ? e : [], null !== (n = t.applicationId) && void 0 !== n ? n : t.author.id, a)
-  }, [t]);
-  return 0 === n.length ? null : (0, l.jsx)("div", {
-    className: E.container,
-    children: (0, l.jsx)(o.ComponentStateContextProvider, {
-      message: t,
-      children: C(n)
+    message: l
+  } = e, {
+    components: n
+  } = l;
+  return 0 === n.length ? null : (0, t.jsx)("div", {
+    className: m.container,
+    children: (0, t.jsx)(s.ComponentStateContextProvider, {
+      message: l,
+      children: p(n)
     })
   })
 }

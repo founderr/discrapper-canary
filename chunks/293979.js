@@ -1,174 +1,180 @@
 "use strict";
 n.r(t), n.d(t, {
   useIframeModalState: function() {
-    return R
+    return y
+  },
+  useIsFirstTextInputInModal: function() {
+    return h
   },
   useModalState: function() {
-    return g
+    return v
   }
 }), n("47120"), n("315314"), n("610138"), n("216116"), n("78328"), n("815648");
 var l = n("470079"),
-  a = n("512722"),
-  i = n.n(a),
-  u = n("442837"),
-  r = n("544891"),
-  o = n("570140"),
-  s = n("911969"),
-  d = n("81897"),
+  u = n("512722"),
+  a = n.n(u),
+  o = n("442837"),
+  i = n("544891"),
+  r = n("570140"),
+  d = n("911969"),
+  s = n("81897"),
   c = n("155268"),
-  f = n("603721"),
-  I = n("314897"),
-  T = n("592125"),
-  m = n("271383"),
-  E = n("914010"),
-  p = n("768581"),
-  _ = n("70956"),
-  N = n("709054"),
-  S = n("292419"),
-  h = n("471073"),
-  A = n("892902"),
-  M = n("981631"),
-  C = n("689938");
-let O = e => {
+  E = n("603721"),
+  T = n("314897"),
+  f = n("592125"),
+  p = n("271383"),
+  C = n("914010"),
+  S = n("768581"),
+  m = n("70956"),
+  I = n("709054"),
+  _ = n("970184"),
+  N = n("471073"),
+  O = n("892902"),
+  g = n("981631"),
+  M = n("689938");
+let A = e => {
   let t = !0;
   return e.forEach(e => {
     !e() && (t = !1)
   }), t
 };
 
-function v(e) {
+function h(e) {
+  var t;
+  let n = (0, _.useComponentStateContext)(),
+    l = null == n ? void 0 : null === (t = n.modal) || void 0 === t ? void 0 : t.components[0];
+  return (null == l ? void 0 : l.type) === d.ComponentType.ACTION_ROW && l.components[0].id === e
+}
+
+function R(e) {
   return l.useMemo(() => {
-    let t = E.default.getGuildId(),
-      n = null != t && null != e.bot ? m.default.getMember(t, e.bot.id) : void 0,
-      l = p.default.getApplicationIconURL({
+    let t = C.default.getGuildId(),
+      n = null != t && null != e.bot ? p.default.getMember(t, e.bot.id) : void 0,
+      l = S.default.getApplicationIconURL({
         id: e.id,
         icon: e.icon,
         botIconFirst: !0,
         bot: null != n ? e.bot : void 0
       }),
-      a = null != n && null != e.bot ? e.bot.username : e.name;
+      u = null != n && null != e.bot ? e.bot.username : e.name;
     return {
       applicationIconURL: l,
-      applicationName: a,
+      applicationName: u,
       applicationBaseUrl: (0, c.default)(e.id)
     }
   }, [e.id, e.icon, e.name, e.bot])
 }
 
-function g(e, t) {
-  var n;
+function v(e, t) {
   let {
-    application: a,
-    customId: c,
-    components: m,
-    channelId: E
-  } = e, p = null === (n = T.default.getChannel(E)) || void 0 === n ? void 0 : n.guild_id, A = (0, d.default)(), [g, R] = l.useState(null), [D, y] = l.useState(null), L = (0, u.useStateFromStores)([h.default], () => h.default.getModalState(D), [D]), w = l.useMemo(() => (0, S.createComponents)(m, a.id, p), [m, a.id, p]), x = l.useRef(new Set), U = l.useCallback(() => {
-    R(null), y(null), O(x.current) && y(function(e, t) {
-      let n = N.default.fromTimestamp(Date.now()),
+    application: n,
+    customId: u,
+    components: c
+  } = e, p = (0, s.default)(), [C, S] = l.useState(null), [_, O] = l.useState(null), h = (0, o.useStateFromStores)([N.default], () => N.default.getModalState(_), [_]), v = l.useRef(new Set), y = l.useCallback(() => {
+    S(null), O(null), A(v.current) && O(function(e, t) {
+      let n = I.default.fromTimestamp(Date.now()),
         l = e.channelId,
-        a = T.default.getChannel(l);
-      i()(null != a, "expected channel");
-      let u = b(e.customId, e.components, []);
-      (0, f.addQueued)(n, {
+        u = f.default.getChannel(l);
+      a()(null != u, "expected channel");
+      let o = L(e.customId, e.components);
+      (0, E.addQueued)(n, {
         data: {
-          interactionType: s.InteractionTypes.MODAL_SUBMIT
+          interactionType: d.InteractionTypes.MODAL_SUBMIT
         }
       });
-      let o = () => {
-        (null == t || !t.aborted) && r.HTTP.post({
-          url: M.Endpoints.INTERACTIONS,
+      let r = () => {
+        (null == t || !t.aborted) && i.HTTP.post({
+          url: g.Endpoints.INTERACTIONS,
           body: {
-            type: s.InteractionTypes.MODAL_SUBMIT,
+            type: d.InteractionTypes.MODAL_SUBMIT,
             application_id: e.application.id,
-            channel_id: a.id,
-            guild_id: a.guild_id,
+            channel_id: u.id,
+            guild_id: u.guild_id,
             data: {
               id: e.id,
               custom_id: e.customId,
-              components: u
+              components: o
             },
-            session_id: I.default.getSessionId(),
+            session_id: T.default.getSessionId(),
             nonce: n
           },
           signal: t
         }).catch(e => {
-          429 === e.status ? setTimeout(o, e.body.retry_after * _.default.Millis.SECOND) : (0, f.setFailed)(n)
+          429 === e.status ? setTimeout(r, e.body.retry_after * m.default.Millis.SECOND) : (0, E.setFailed)(n)
         })
       };
-      return o(), n
-    }(e, A))
-  }, [A, e]);
+      return r(), n
+    }(e, p))
+  }, [p, e]);
   l.useEffect(() => {
-    L === h.InteractionModalState.SUCCEEDED && (o.default.dispatch({
+    h === N.InteractionModalState.SUCCEEDED && (r.default.dispatch({
       type: "CLEAR_INTERACTION_MODAL_STATE",
-      id: c
-    }), t()), L === h.InteractionModalState.ERRORED && R(C.default.Messages.INTERACTION_FORM_SUBMISSION_FAILED)
-  }, [D, L, t, c]);
+      customId: u
+    }), t()), h === N.InteractionModalState.ERRORED && S(M.default.Messages.INTERACTION_FORM_SUBMISSION_FAILED)
+  }, [_, h, t, u]);
   let {
-    applicationIconURL: j,
-    applicationName: F
-  } = v(a);
+    applicationIconURL: b,
+    applicationName: U
+  } = R(n);
   return {
-    components: w,
-    applicationIconURL: j,
-    applicationName: F,
-    submissionState: L,
-    error: g,
-    validators: x.current,
-    onSubmit: U
+    components: c,
+    applicationIconURL: b,
+    applicationName: U,
+    submissionState: h,
+    error: C,
+    validators: v.current,
+    onSubmit: y
   }
 }
 
-function R(e) {
+function y(e) {
   let {
     application: t,
     customId: n
   } = e, {
     applicationIconURL: l,
-    applicationName: a,
-    applicationBaseUrl: u
-  } = v(t), r = T.default.getChannel(e.channelId);
-  i()(null != r, "channel should not be null");
-  let o = {
+    applicationName: u,
+    applicationBaseUrl: o
+  } = R(t), i = f.default.getChannel(e.channelId);
+  a()(null != i, "channel should not be null");
+  let r = {
     instance_id: "".concat(e.channelId, ":").concat(t.id, ":").concat(n),
     custom_id: n,
     channel_id: e.channelId
   };
-  null != r.guild_id && "" !== r.guild_id && (o.guild_id = r.guild_id);
-  let s = new URL(null != u ? u : "");
-  return s.pathname = e.iframePath, {
+  null != i.guild_id && "" !== i.guild_id && (r.guild_id = i.guild_id);
+  let d = new URL(null != o ? o : "");
+  return d.pathname = e.iframePath, {
     applicationIconURL: l,
-    applicationName: a,
-    applicationBaseUrl: u,
-    queryParams: o,
-    iframeUrl: s.toString()
+    applicationName: u,
+    applicationBaseUrl: o,
+    queryParams: r,
+    iframeUrl: d.toString()
   }
 }
-let b = (e, t, n) => t.map((t, l) => {
-  let a = [...n, l];
+let L = (e, t) => t.map(t => {
   switch (t.type) {
-    case s.ComponentType.ACTION_ROW:
-      var u;
+    case d.ComponentType.ACTION_ROW:
       return {
-        type: t.type, components: b(e, null !== (u = t.components) && void 0 !== u ? u : [], a)
+        type: t.type, components: L(e, t.components)
       };
-    case s.ComponentType.INPUT_TEXT: {
-      let n = A.default.getInteractionComponentState(e, a);
+    case d.ComponentType.INPUT_TEXT: {
+      let n = O.default.getInteractionComponentState(e, t.id);
       return {
         type: t.type,
-        custom_id: t.custom_id,
+        custom_id: t.customId,
         value: (null == n ? void 0 : n.type) === t.type ? n.value : null
       }
     }
-    case s.ComponentType.STRING_SELECT: {
-      let n = A.default.getInteractionComponentState(e, a);
+    case d.ComponentType.STRING_SELECT: {
+      let n = O.default.getInteractionComponentState(e, t.id);
       return {
         type: t.type,
-        custom_id: t.custom_id,
+        custom_id: t.customId,
         values: (null == n ? void 0 : n.type) === t.type ? n.values : null
       }
     }
     default:
-      i()(!1, "unreachable")
+      a()(!1, "unreachable")
   }
 })

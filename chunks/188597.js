@@ -44,7 +44,7 @@ let h = async e => {
     messageId: n,
     messageFlags: i,
     customId: r,
-    indices: a,
+    componentId: a,
     applicationId: o,
     channelId: I,
     guildId: T,
@@ -56,7 +56,7 @@ let h = async e => {
     data: {
       interactionType: l.InteractionTypes.MESSAGE_COMPONENT,
       customId: r,
-      indices: a
+      componentId: a
     },
     onFailure: (e, t) => m(I, e, t)
   }), null != S && (0, c.queueInteractionComponentState)(n, h, S, a);

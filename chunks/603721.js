@@ -23,7 +23,7 @@ function a(e, t, n, i) {
     messageId: e,
     nonce: t,
     state: n,
-    indices: i
+    componentId: i
   })
 }
 

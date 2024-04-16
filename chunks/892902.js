@@ -1,115 +1,108 @@
 "use strict";
 n.r(t), n("47120");
-var l, a, i, u, r = n("442837"),
-  o = n("570140"),
-  s = n("69004");
-let d = new s.default(196606),
+var l, u, a, o, i = n("442837"),
+  r = n("570140"),
+  d = n("69004");
+let s = new d.default(196606),
   c = 0,
-  f = new s.default(196606),
-  I = new s.default(196606);
+  E = new d.default(196606),
+  T = new d.default(196606);
 
-function T(e) {
-  return e.join("-")
-}
-
-function m(e, t, n) {
+function f(e, t, n) {
   var l;
-  let a = T(t),
-    i = null !== (l = d.get(e)) && void 0 !== l ? l : new Map;
-  i.set(a, n), d.set(e, i), c++
+  let u = null !== (l = s.get(e)) && void 0 !== l ? l : new Map;
+  u.set(t, n), s.set(e, u), c++
 }
 
-function E(e) {
-  let t = f.get(e);
-  null != t && I.delete(t), f.delete(e), d.delete(e), c++
+function p(e) {
+  let t = E.get(e);
+  null != t && T.delete(t), E.delete(e), s.delete(e), c++
 }
-class p extends(l = r.default.Store) {
+class C extends(l = i.default.Store) {
   getInteractionComponentStates() {
-    return d
+    return s
   }
   getInteractionComponentStateVersion() {
     return c
   }
   getInteractionComponentState(e, t) {
     var n;
-    let l = d.get(e);
-    if (null == l) return null;
-    let a = T(t);
-    return null !== (n = l.get(a)) && void 0 !== n ? n : null
+    let l = s.get(e);
+    return null == l ? null : null !== (n = l.get(t)) && void 0 !== n ? n : null
   }
 }
-u = "LocalInteractionComponentStateStore", (i = "displayName") in(a = p) ? Object.defineProperty(a, i, {
-  value: u,
+o = "LocalInteractionComponentStateStore", (a = "displayName") in(u = C) ? Object.defineProperty(u, a, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[i] = u, t.default = new p(o.default, {
+}) : u[a] = o, t.default = new C(r.default, {
   LOGOUT: function() {
-    d.clear(), f.clear(), I.clear(), c++
+    s.clear(), E.clear(), T.clear(), c++
   },
   QUEUE_INTERACTION_COMPONENT_STATE: function(e) {
     let {
       messageId: t,
       nonce: n,
-      indices: l,
-      state: a
+      componentId: l,
+      state: u
     } = e;
-    f.set(t, n), I.set(n, {
+    E.set(t, n), T.set(n, {
       messageId: t,
-      indices: l
-    }), m(t, l, a)
+      componentId: l
+    }), f(t, l, u)
   },
   SET_INTERACTION_COMPONENT_STATE: function(e) {
     let {
-      id: t,
-      indices: n,
+      rootContainerId: t,
+      componentId: n,
       state: l
     } = e;
-    m(t, n, l)
+    f(t, n, l)
   },
   MESSAGE_DELETE: function(e) {
     let {
       id: t
     } = e;
-    if (!d.has(t)) return !1;
-    E(t)
+    if (!s.has(t)) return !1;
+    p(t)
   },
   MESSAGE_UPDATE: function(e) {
     let {
       message: t
     } = e;
-    if (null == t.id || !d.has(t.id)) return !1;
-    E(t.id)
+    if (null == t.id || !s.has(t.id)) return !1;
+    p(t.id)
   },
   INTERACTION_SUCCESS: function(e) {
     let {
       nonce: t
     } = e;
     if (null == t) return !1;
-    let n = I.get(t);
+    let n = T.get(t);
     if (null == n) return !1;
-    f.delete(n.messageId), I.delete(t), c++
+    E.delete(n.messageId), T.delete(t), c++
   },
   INTERACTION_FAILURE: function(e) {
     let {
       nonce: t
     } = e;
     if (null == t) return !1;
-    let n = I.get(t);
+    let n = T.get(t);
     if (null == n) return !1;
     ! function(e) {
       let {
-        indices: t,
+        componentId: t,
         messageId: n
-      } = e, l = T(t), a = d.get(n);
-      if (null == a || !a.has(l)) return;
-      a.delete(l), 0 === a.size && d.delete(n), c++
+      } = e, l = s.get(n);
+      if (null == l || !l.has(t)) return;
+      l.delete(t), 0 === l.size && s.delete(n), c++
     }(n)
   },
   CLEAR_INTERACTION_MODAL_STATE: function(e) {
     let {
-      id: t
+      customId: t
     } = e;
-    d.delete(t), c++
+    s.delete(t), c++
   }
 })

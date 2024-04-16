@@ -406,7 +406,7 @@ class eY extends(s = l.Component) {
     }) : null
   }
   renderComponentAccessories(e) {
-    return null == e.components || 0 === e.components.length || !1 === this.props.renderComponentAccessory ? null : (0, a.jsx)(y.default, {
+    return 0 === e.components.length || !1 === this.props.renderComponentAccessory ? null : (0, a.jsx)(y.default, {
       message: e
     })
   }

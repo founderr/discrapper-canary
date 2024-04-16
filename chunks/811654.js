@@ -1,107 +1,118 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(l), n.d(l, {
   MIN_REREQUEST_TIME: function() {
-    return c
+    return p
   },
   getSnowflakeSelectDefaultValues: function() {
-    return T
+    return C
   },
   queryChannels: function() {
-    return I
+    return S
   },
   queryMentionables: function() {
-    return E
+    return f
   }
 }), n("47120");
-var i = n("524846"),
-  r = n("911969"),
+var t = n("524846"),
+  a = n("911969"),
   s = n("592125"),
-  a = n("271383"),
-  o = n("430824"),
-  l = n("594174"),
-  u = n("483360"),
-  d = n("5192"),
-  _ = n("280501");
-let c = 1e3;
+  u = n("271383"),
+  i = n("430824"),
+  o = n("594174"),
+  r = n("483360"),
+  d = n("823379"),
+  c = n("5192"),
+  m = n("280501");
+n("892902");
+let p = 1e3;
 
-function E(e, t, n) {
-  let i = s.default.getChannel(n);
-  if (null == i) return [];
-  let a = e === r.ComponentType.USER_SELECT || e === r.ComponentType.MENTIONABLE_SELECT,
-    o = e === r.ComponentType.ROLE_SELECT || e === r.ComponentType.MENTIONABLE_SELECT,
+function f(e, l, n) {
+  let t = s.default.getChannel(n);
+  if (null == t) return [];
+  let u = e === a.ComponentType.USER_SELECT || e === a.ComponentType.MENTIONABLE_SELECT,
+    i = e === a.ComponentType.ROLE_SELECT || e === a.ComponentType.MENTIONABLE_SELECT,
     {
-      users: l,
-      roles: c
-    } = u.default.queryMentionResults({
-      query: t,
-      channel: i,
+      users: o,
+      roles: d
+    } = r.default.queryMentionResults({
+      query: l,
+      channel: t,
       canMentionEveryone: !1,
       canMentionHere: !1,
-      canMentionUsers: a,
-      canMentionRoles: o,
+      canMentionUsers: u,
+      canMentionRoles: i,
       includeAllGuildUsers: !0,
       includeNonMentionableRoles: !0,
       checkRecentlyTalkedOnEmptyQuery: !1,
       limit: 15
     }),
-    E = l.map(e => {
-      var t;
-      let r = d.default.getNickname(i.getGuildId(), n, e.user);
+    p = o.map(e => {
+      var l;
+      let a = c.default.getNickname(t.getGuildId(), n, e.user);
       return {
-        type: _.SelectOptionType.USER,
+        type: m.SelectOptionType.USER,
         value: e.user.id,
-        label: null !== (t = null != r ? r : e.user.globalName) && void 0 !== t ? t : e.user.username
+        label: null !== (l = null != a ? a : e.user.globalName) && void 0 !== l ? l : e.user.username
       }
     });
-  return [...E, ...c.map(e => ({
-    type: _.SelectOptionType.ROLE,
+  return [...p, ...d.map(e => ({
+    type: m.SelectOptionType.ROLE,
     value: e.id,
     label: e.name
   }))]
 }
 
-function I(e, t, n) {
-  let i = s.default.getChannel(t);
-  return null == i ? [] : u.default.queryApplicationCommandChannelResults({
+function S(e, l, n) {
+  let t = s.default.getChannel(l);
+  return null == t ? [] : r.default.queryApplicationCommandChannelResults({
     query: e,
-    channel: i,
+    channel: t,
     channelTypes: n,
     limit: 15
   }).channels.map(e => ({
-    type: _.SelectOptionType.CHANNEL,
+    type: m.SelectOptionType.CHANNEL,
     value: e.id,
     label: e.name
   }))
 }
 
-function T(e, t) {
+function C(e, l) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
   if (null == e) return;
-  let r = o.default.getGuild(t);
+  let a = i.default.getGuild(l);
   return e.map(e => {
     switch (e.type) {
-      case i.SnowflakeSelectDefaultValueTypes.USER:
-        var t;
-        let u = l.default.getUser(e.id);
-        if (null == u) return null;
-        let d = null != r ? a.default.getNick(r.id, u.id) : void 0;
+      case t.SnowflakeSelectDefaultValueTypes.USER: {
+        var l;
+        let n = o.default.getUser(e.id);
+        if (null == n) return null;
+        let t = null != a ? u.default.getNick(a.id, n.id) : void 0;
         return {
-          type: _.SelectOptionType.USER, value: u.id, label: null !== (t = null != d ? d : u.globalName) && void 0 !== t ? t : u.username
-        };
-      case i.SnowflakeSelectDefaultValueTypes.ROLE:
-        if (null == r) return null;
-        let c = o.default.getRole(r.id, e.id);
-        if (null == c) return null;
-        return {
-          type: _.SelectOptionType.ROLE, value: c.id, label: c.name
-        };
-      case i.SnowflakeSelectDefaultValueTypes.CHANNEL:
-        if (null == r) return null;
-        let E = s.default.getChannel(e.id);
-        if (null == E || E.guild_id !== r.id || n.length > 0 && !n.includes(E.type)) return null;
-        return {
-          type: _.SelectOptionType.CHANNEL, value: E.id, label: E.name
+          type: m.SelectOptionType.USER,
+          value: n.id,
+          label: null !== (l = null != t ? t : n.globalName) && void 0 !== l ? l : n.username
         }
+      }
+      case t.SnowflakeSelectDefaultValueTypes.ROLE: {
+        if (null == a) return null;
+        let l = i.default.getRole(a.id, e.id);
+        if (null == l) return null;
+        return {
+          type: m.SelectOptionType.ROLE,
+          value: l.id,
+          label: l.name
+        }
+      }
+      case t.SnowflakeSelectDefaultValueTypes.CHANNEL: {
+        if (null == a) return null;
+        let l = s.default.getChannel(e.id);
+        if (null == l || l.guild_id !== a.id || n.length > 0 && !n.includes(l.type)) return null;
+        return {
+          type: m.SelectOptionType.CHANNEL,
+          value: l.id,
+          label: l.name
+        }
+      }
     }
-  }).filter(e => null !== e)
+  }).filter(d.isNotNullish)
 }

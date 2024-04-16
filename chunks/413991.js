@@ -1,70 +1,70 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(l), n.d(l, {
   default: function() {
-    return r
+    return d
   }
 }), n("47120");
-var l = n("735250"),
+var t = n("735250"),
   a = n("470079"),
   s = n("481060"),
   u = n("911969"),
-  o = n("970184"),
-  i = n("561684");
+  i = n("970184"),
+  o = n("293979"),
+  r = n("561684");
 
-function r(e) {
-  let t;
+function d(e) {
+  let l;
   let {
     type: n,
-    style: r,
-    label: d,
-    placeholder: c,
-    minLength: m,
-    maxLength: p,
-    required: f,
-    value: E,
-    indices: C
-  } = e, [S, T] = a.useState(null != E ? E : ""), {
-    state: v,
-    executeStateUpdate: N,
-    error: h
-  } = (0, o.useComponentState)(e, null != E ? {
+    style: d,
+    label: c,
+    placeholder: m,
+    minLength: p,
+    maxLength: f,
+    required: S,
+    value: C
+  } = e, [E, v] = a.useState(null != C ? C : ""), {
+    state: N,
+    executeStateUpdate: h,
+    error: T
+  } = (0, i.useComponentState)(e, null != C ? {
     type: n,
-    value: E
-  } : void 0);
+    value: C
+  } : void 0), y = (0, o.useIsFirstTextInputInModal)(e.id);
   a.useEffect(() => {
-    (null == v ? void 0 : v.type) === n && T(v.value)
-  }, [n, v]);
-  let _ = {
-    name: d,
-    value: S,
-    placeholder: c,
-    minLength: m,
-    maxLength: p,
-    required: f,
+    (null == N ? void 0 : N.type) === n && v(N.value)
+  }, [n, N]);
+  let x = {
+    name: c,
+    value: E,
+    placeholder: m,
+    minLength: p,
+    maxLength: f,
+    required: S,
     onChange: e => {
-      T(e), N({
+      v(e), h({
         type: n,
         value: e
       })
     },
-    autoFocus: 0 === C[0]
+    autoFocus: y
   };
-  switch (r) {
+  switch (d) {
     case u.TextComponentStyle.SMALL:
-      t = (0, l.jsx)(s.TextInput, {
-        ..._
+      l = (0, t.jsx)(s.TextInput, {
+        ...x
       });
       break;
     case u.TextComponentStyle.PARAGRAPH:
-      t = (0, l.jsx)(s.TextArea, {
-        ..._
+      l = (0, t.jsx)(s.TextArea, {
+        ...x
       })
   }
-  return (0, l.jsx)(s.FormItem, {
-    title: d,
-    required: f,
-    className: i.formItem,
-    error: h,
-    children: t
+  return (0, t.jsx)(s.FormItem, {
+    title: c,
+    required: S,
+    className: r.formItem,
+    error: T,
+    children: l
   })
 }
