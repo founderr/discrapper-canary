@@ -19,8 +19,8 @@ t.default = e => {
     onClose: _
   } = e, C = s.useRef(null), m = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), {
     progress: S,
-    errors: I,
-    submitting: p
+    errors: p,
+    submitting: I
   } = (0, i.useStateFromStoresObject)([d.default], () => d.default.getStateForGuild(t)), {
     selectedGames: T,
     playstyle: g,
@@ -34,8 +34,9 @@ t.default = e => {
     badgeSecondaryColor: P,
     banner: x,
     brandPrimaryColor: y,
-    brandSecondaryColor: D
-  } = null != S ? S : {}, b = s.useRef(null), U = s.useRef(null), j = s.useRef(null), [G, w] = s.useState(!1), k = async () => {
+    brandSecondaryColor: D,
+    wildcardDescriptors: b
+  } = null != S ? S : {}, U = s.useRef(null), j = s.useRef(null), G = s.useRef(null), [w, k] = s.useState(!1), F = async () => {
     try {
       await u.convertGuildToClan(t, {
         selectedGames: T,
@@ -50,14 +51,15 @@ t.default = e => {
         badgeSecondaryColor: P,
         banner: x,
         brandPrimaryColor: y,
-        brandSecondaryColor: D
+        brandSecondaryColor: D,
+        wildcardDescriptors: b
       })
     } catch (e) {
       return
     }
     _()
-  }, F = (0, l.useSpring)({
-    ref: b,
+  }, H = (0, l.useSpring)({
+    ref: U,
     config: l.config.slow,
     from: {
       flex: 1,
@@ -67,8 +69,8 @@ t.default = e => {
       flex: 1,
       paddingLeft: 120
     }
-  }), H = (0, l.useSpring)({
-    ref: U,
+  }), B = (0, l.useSpring)({
+    ref: j,
     config: l.config.slow,
     from: {
       flex: m ? 1 : 0,
@@ -80,8 +82,8 @@ t.default = e => {
       paddingRight: 120,
       marginLeft: -32
     }
-  }), B = (0, l.useSpring)({
-    ref: j,
+  }), V = (0, l.useSpring)({
+    ref: G,
     config: l.config.default,
     from: {
       opacity: 0
@@ -90,15 +92,15 @@ t.default = e => {
       opacity: 1
     }
   });
-  (0, l.useChain)([b, U, j], [0, 0, 1]);
-  let V = s.useMemo(() => null != I && Object.values(I).some(e => null != e), [I]);
+  (0, l.useChain)([U, j, G], [0, 0, 1]);
+  let Y = s.useMemo(() => null != p && Object.values(p).some(e => null != e), [p]);
   return (0, n.jsxs)("div", {
     className: h.animationContainer,
     children: [(0, n.jsxs)(l.animated.div, {
       className: h.signTextLeft,
       style: {
-        ...F,
-        ...B
+        ...H,
+        ...V
       },
       children: [(0, n.jsx)(r.Heading, {
         variant: "heading-xxl/medium",
@@ -112,15 +114,15 @@ t.default = e => {
       className: h.scrollContainer,
       children: (0, n.jsx)(c.default, {
         guildId: t,
-        signed: G,
-        setSigned: w,
+        signed: w,
+        setSigned: k,
         signRef: C
       })
     }), (0, n.jsxs)(l.animated.div, {
       className: h.signTextRight,
       style: {
-        ...H,
-        ...B
+        ...B,
+        ...V
       },
       children: [(0, n.jsx)(r.Button, {
         className: h.signButton,
@@ -129,7 +131,7 @@ t.default = e => {
           var e;
           null === (e = C.current) || void 0 === e || e.scrollIntoView({
             behavior: "smooth"
-          }), w(!0)
+          }), k(!0)
         },
         children: E.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
       }), (0, n.jsx)(r.Text, {
@@ -153,7 +155,7 @@ t.default = e => {
       children: E.default.Messages.PAGINATION_PREVIOUS
     }), (0, n.jsxs)("div", {
       className: h.finishButton,
-      children: [V && (0, n.jsx)(r.Text, {
+      children: [Y && (0, n.jsx)(r.Text, {
         color: "status-danger",
         variant: "text-sm/normal",
         children: E.default.Messages.CLAN_SUBMIT_ERROR
@@ -161,9 +163,9 @@ t.default = e => {
         look: r.Button.Looks.FILLED,
         size: r.Button.Sizes.MEDIUM,
         color: r.Button.Colors.BRAND,
-        disabled: !G,
-        submitting: p,
-        onClick: k,
+        disabled: !w,
+        submitting: I,
+        onClick: F,
         children: E.default.Messages.FINISH
       })]
     })]

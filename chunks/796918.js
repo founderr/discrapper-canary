@@ -54,6 +54,7 @@ t.default = e => {
     }), (0, n.jsxs)("div", {
       className: f.inputContainer,
       children: [(0, n.jsx)(r.TextInput, {
+        className: f.input,
         value: E,
         onKeyDown: m,
         onChange: h,

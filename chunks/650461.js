@@ -30,6 +30,7 @@ function _() {
     playstyle: d.ClanPlaystyles.NONE,
     interests: new Set,
     description: "",
+    wildcardDescriptors: [d.EMPTY_WILDCARD, d.EMPTY_WILDCARD, d.EMPTY_WILDCARD],
     tag: "",
     primetime: [{
       id: (0, s.v4)(),
@@ -75,6 +76,7 @@ class m extends(n = l.default.PersistedStore) {
           playstyle: e.playstyle,
           interests: new Set(e.interests),
           description: e.description,
+          wildcardDescriptors: e.wildcardDescriptors,
           tag: e.tag,
           primetime: f,
           verificationForm: null !== (t = e.verificationForm) && void 0 !== t ? t : {
@@ -101,6 +103,7 @@ class m extends(n = l.default.PersistedStore) {
         playstyle: t.playstyle,
         interests: Array.from(t.interests),
         description: t.description,
+        wildcardDescriptors: t.wildcardDescriptors,
         tag: t.tag,
         primetime: t.primetime,
         verificationForm: t.verificationForm,
@@ -156,6 +159,7 @@ c(m, "displayName", "ClanSetupStore"), c(m, "persistKey", "ClanSetupStore"), t.d
       selectedGames: a.getFirstFieldErrorMessage("game_application_ids"),
       playstyle: a.getFirstFieldErrorMessage("play_style"),
       description: a.getFirstFieldErrorMessage("description"),
+      wildcardDescriptors: a.getFirstFieldErrorMessage("wildcard_descriptors"),
       interests: a.getFirstFieldErrorMessage("search_terms"),
       tag: a.getFirstFieldErrorMessage("tag"),
       primetime: a.getFirstFieldErrorMessage("prime_time")

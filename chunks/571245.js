@@ -10,21 +10,23 @@ var n = a("735250"),
 t.default = e => {
   let {
     value: t,
-    onChange: a
-  } = e, d = s.useRef(null), c = s.useMemo(() => (0, o.generateTimeOptions)(), []), [f, E] = s.useState("");
+    onChange: a,
+    className: d
+  } = e, c = s.useRef(null), f = s.useMemo(() => (0, o.generateTimeOptions)(), []), [E, h] = s.useState("");
   return (0, n.jsx)(l.SearchableSelect, {
-    ref: d,
-    options: c,
+    ref: c,
+    wrapperClassName: d,
+    options: f,
     value: t,
     onChange: a,
-    onSearchChange: E,
+    onSearchChange: h,
     onKeyDown: function(e) {
       if ("Enter" === e.key) {
         let e;
-        let n = (0, i.convertToTimeOfADay)(u.ARBITRARY_MIDNIGHT, f);
-        if (f in r.ExtendedTimeOptions ? e = f : null != n && (e = n.format(u.LOCALE_TIME_FORMAT)), null != e) {
+        let n = (0, i.convertToTimeOfADay)(u.ARBITRARY_MIDNIGHT, E);
+        if (E in r.ExtendedTimeOptions ? e = E : null != n && (e = n.format(u.LOCALE_TIME_FORMAT)), null != e) {
           var t;
-          a(e), null === (t = d.current) || void 0 === t || t.close()
+          a(e), null === (t = c.current) || void 0 === t || t.close()
         }
       }
     }

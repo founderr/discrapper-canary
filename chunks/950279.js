@@ -21,8 +21,8 @@ t.default = e => {
   } = e, m = (0, l.useStateFromStores)([o.default], () => o.default.getId()), {
     recentGames: S
   } = (0, r.useUserRecentGames)(m), {
-    options: I,
-    matchSorterOptions: p
+    options: p,
+    matchSorterOptions: I
   } = (0, d.useClanSetupGameSelectableSearch)(), T = (0, l.useStateFromStoresArray)([u.default], () => null != S ? S.map(e => {
     let t = u.default.getGameById(e.applicationId);
     return {
@@ -31,8 +31,8 @@ t.default = e => {
     }
   }) : []);
   s.useEffect(() => {
-    null != C && !a.has(C) && I.length > 0 && A(C)
-  }, [I.length, C]);
+    null != C && !a.has(C) && p.length > 0 && A(C)
+  }, [p.length, C]);
   let g = e => {
       if (!a.has(e) || e === C) return;
       let n = new Map(a);
@@ -66,12 +66,13 @@ t.default = e => {
     }), (0, n.jsx)("div", {
       className: h.inputContainer,
       children: (0, n.jsx)(i.SearchableSelect, {
-        options: I,
+        wrapperClassName: h.input,
+        options: p,
         value: "",
         placeholder: E.default.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
         onChange: A,
         isDisabled: a.size === f.MAX_NUM_SELECTED_GAMES,
-        matchSorterOptions: p
+        matchSorterOptions: I
       })
     }), (0, n.jsxs)("div", {
       className: h.contentWithMinHeight,
@@ -110,7 +111,8 @@ t.default = e => {
           children: T.map(e => (0, n.jsx)(c.default, {
             name: e.name,
             applicationId: e.applicationId,
-            onClick: A
+            onClick: A,
+            imageContainerClassName: h.clickable
           }, e.applicationId))
         })]
       })]
