@@ -27,9 +27,9 @@ var a = n("120356"),
   R = n("689938"),
   O = n("506710");
 let v = (e, t, n, s) => n ? s ? R.default.Messages.COLLECTIBLES_USE_NOW : R.default.Messages.QUESTS_SEE_CODE : e || t ? R.default.Messages.QUESTS_CLAIM_REWARD : R.default.Messages.QUESTS_ACCEPT,
-  x = (e, t, n) => e !== h.QuestContent.QUEST_INVENTORY_CARD || n || "lg" !== t ? "lg" === t ? "text-md/medium" : "sm" === t ? "text-sm/medium" : "text-xs/medium" : "text-lg/medium";
+  L = (e, t, n) => e !== h.QuestContent.QUEST_INVENTORY_CARD || n || "lg" !== t ? "lg" === t ? "text-md/medium" : "sm" === t ? "text-sm/medium" : "text-xs/medium" : "text-lg/medium";
 
-function L(e) {
+function x(e) {
   let {
     containerSize: t,
     onClick: n,
@@ -107,7 +107,7 @@ t.default = e => {
     }), (0, s.jsxs)("div", {
       className: l()(O.gridText, O.taskDetails),
       children: [(0, s.jsx)(o.Text, {
-        variant: x(P, y, G),
+        variant: L(P, y, G),
         className: O.taskInstructions,
         children: j ? R.default.Messages.QUESTS_EXPIRED_QUEST_CARD_HEADING.format({
           questName: D.config.messages.questName
@@ -172,7 +172,7 @@ t.default = e => {
       })]
     }), (0, s.jsxs)("div", {
       className: l()(O.ctaButtonContainer, O.gridCtaButtons),
-      children: [X && (0, s.jsx)(L, {
+      children: [X && (0, s.jsx)(x, {
         containerSize: y,
         onClick: () => {
           u.default.open(M.UserSettingsSections.INVENTORY), (0, T.trackQuestContentClicked)({
@@ -182,7 +182,7 @@ t.default = e => {
           })
         },
         children: R.default.Messages.QUESTS_LEARN_MORE_V2
-      }), !j && (0, s.jsx)(o.Tooltip, {
+      }), (!j || b) && (0, s.jsx)(o.Tooltip, {
         text: V,
         tooltipContentClassName: O.ctaTooltipCopy,
         shouldShow: !F && !b,
