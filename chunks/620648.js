@@ -18,9 +18,9 @@ var l = s("735250"),
   E = s("246946"),
   I = s("785717"),
   m = s("621853"),
-  T = s("358794"),
-  _ = s("588822"),
-  A = s("81334"),
+  T = s("588822"),
+  _ = s("81334"),
+  A = s("652853"),
   p = s("335191"),
   v = s("347949"),
   N = s("988246"),
@@ -42,8 +42,8 @@ function h(e) {
     var e, t;
     return null !== (t = null === (e = m.default.getUserProfile(s.id)) || void 0 === e ? void 0 : e.connectedAccounts) && void 0 !== t ? t : []
   }), j = (0, o.useStateFromStores)([E.default], () => E.default.hidePersonalInformation), {
-    profileTheme: g
-  } = (0, T.default)(s, i), y = (0, o.useStateFromStores)([S.default], () => S.default.locale), O = (0, f.useIsUserRecentGamesEnabled)({
+    theme: g
+  } = (0, A.useUserProfileThemeContext)(), y = (0, o.useStateFromStores)([S.default], () => S.default.locale), O = (0, f.useIsUserRecentGamesEnabled)({
     userId: s.id,
     location: "28tk0bf_3"
   }), D = a.useMemo(() => M.filter(e => {
@@ -65,11 +65,11 @@ function h(e) {
           variant: "eyebrow",
           className: U.userInfoSectionHeader,
           children: x.default.Messages.USER_PROFILE_ABOUT_ME
-        }), (0, l.jsx)(_.default, {
+        }), (0, l.jsx)(T.default, {
           className: U.userInfoText,
           userBio: null !== (t = null == i ? void 0 : i.bio) && void 0 !== t ? t : ""
         })]
-      }), (0, l.jsx)(A.default, {
+      }), (0, l.jsx)(_.default, {
         userId: s.id,
         headingClassName: U.userInfoSectionHeader,
         textClassName: U.userInfoText

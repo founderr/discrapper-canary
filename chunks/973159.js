@@ -115,12 +115,12 @@ function em(e) {
 function ef(e) {
   let {
     ...s
-  } = e, t = (0, I.default)(), {
-    profileTheme: r
-  } = (0, U.useUserProfileThemeContext)(), l = (0, x.useThemedColorValue)(K.ThemeColor.INTERACTIVE_ACTIVE, null != r ? r : t);
+  } = e, {
+    theme: t
+  } = (0, U.useUserProfileThemeContext)(), r = (0, x.useThemedColorValue)(K.ThemeColor.INTERACTIVE_ACTIVE, t);
   return (0, a.jsx)(k.default, {
     ...s,
-    color: l.hex
+    color: r.hex
   })
 }
 

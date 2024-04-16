@@ -18,7 +18,7 @@ function r(e) {
     compact: r,
     ...u
   } = e, {
-    primaryProfileColor: d
+    primaryColor: d
   } = (0, n.useUserProfileThemeContext)(), c = null !== d ? o.themeColor : a.ButtonColors.PRIMARY, f = (0, l.jsx)(t, {
     width: 16,
     height: 16

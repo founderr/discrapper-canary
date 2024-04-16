@@ -42,7 +42,7 @@ function R(e) {
     className: j,
     onClose: g
   } = e, {
-    profileTheme: y
+    theme: y
   } = (0, T.useUserProfileThemeContext)(), {
     avatarSrc: O,
     eventHandlers: D,

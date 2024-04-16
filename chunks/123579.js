@@ -217,7 +217,7 @@ t.default = e => {
           user: eh,
           displayProfile: ep,
           profileType: el.UserProfileTypes.PANEL,
-          useDefaultClientTheme: !0,
+          themeOverride: eW,
           children: [eV.shouldShow && (0, a.jsx)(G.default, {
             user: eh,
             upsellSource: V.UserPopoutUpsellSource.PROFILE_PANEL,

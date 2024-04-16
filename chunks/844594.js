@@ -10,7 +10,7 @@ var n = s("735250"),
   t = s("197115"),
   r = s("962746"),
   o = s("318661"),
-  d = s("84244"),
+  d = s("721987"),
   c = s("153124"),
   u = s("626135"),
   p = s("981631"),
@@ -28,7 +28,12 @@ function A(e) {
     uploadType: g,
     onSubscribe: E,
     onClose: x
-  } = e, N = (0, c.useUID)(), v = (0, o.default)(a.id, s), M = (0, d.default)(a, v, {
+  } = e, N = (0, c.useUID)(), v = (0, o.default)(a.id, s), {
+    primaryColor: M,
+    secondaryColor: b
+  } = (0, d.default)({
+    user: a,
+    displayProfile: v,
     pendingAvatar: g === m.UploadTypes.AVATAR ? R : void 0,
     isPreview: !0
   });
@@ -48,7 +53,7 @@ function A(e) {
       disabledInputs: !0,
       pendingAvatar: g === m.UploadTypes.AVATAR ? R : void 0,
       pendingBanner: g === m.UploadTypes.BANNER ? R : void 0,
-      pendingThemeColors: M,
+      pendingThemeColors: [M, b],
       onAvatarChange: p.NOOP,
       onBannerChange: p.NOOP
     }), (0, n.jsxs)("div", {

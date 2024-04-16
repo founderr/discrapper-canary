@@ -24,10 +24,10 @@ var l = s("735250"),
   p = s("785717"),
   v = s("621853"),
   N = s("204197"),
-  x = s("358794"),
-  U = s("735336"),
-  h = s("520978"),
-  C = s("184325"),
+  x = s("735336"),
+  U = s("520978"),
+  h = s("184325"),
+  C = s("652853"),
   P = s("496206"),
   R = s("228168"),
   M = s("981631"),
@@ -49,8 +49,8 @@ function F(e) {
     hasProfileEffect: k,
     onClose: w
   } = e, V = (0, i.useStateFromStores)([m.default], () => m.default.getRelationshipType(A.id)), z = (0, i.useStateFromStores)([I.default], () => I.default.isMobileOnline(A.id)), Y = (0, i.useStateFromStores)([I.default], () => I.default.getStatus(A.id)), H = (0, i.useStateFromStores)([v.default], () => v.default.getUserProfile(A.id)), Q = (0, i.useStateFromStores)([E.default], () => E.default.getId() === A.id), {
-    profileTheme: W
-  } = (0, x.default)(A, t), {
+    theme: W
+  } = (0, C.useUserProfileThemeContext)(), {
     trackUserProfileAction: K
   } = (0, p.useUserProfileAnalyticsContext)(), {
     avatarSrc: Z,
@@ -103,7 +103,7 @@ function F(e) {
   }
   return (0, l.jsxs)("header", {
     className: b,
-    children: [(0, l.jsx)(U.default, {
+    children: [(0, l.jsx)(x.default, {
       displayProfile: t,
       onClose: $,
       user: A,
@@ -134,16 +134,16 @@ function F(e) {
             className: y.warningCircleIcon,
             color: n.default.unsafe_rawColors.YELLOW_300.css
           })
-        }) : (0, l.jsx)(C.default, {
+        }) : (0, l.jsx)(h.default, {
           user: A,
           className: y.badgeList,
           guildId: F,
-          size: C.BadgeSizes.SIZE_24,
+          size: h.BadgeSizes.SIZE_24,
           shrinkAtCount: 8,
-          shrinkToSize: C.BadgeSizes.SIZE_18
+          shrinkToSize: h.BadgeSizes.SIZE_18
         }), (0, l.jsxs)("div", {
           className: y.relationshipButtons,
-          children: [(0, l.jsx)(h.default, {
+          children: [(0, l.jsx)(U.default, {
             className: y.applicationInstallButton,
             application: null == H ? void 0 : H.application
           }), (0, l.jsx)(P.default, {

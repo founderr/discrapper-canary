@@ -3,7 +3,7 @@ s.r(t), s.d(t, {
   default: function() {
     return g
   }
-}), s("47120");
+});
 var a = s("735250");
 s("470079");
 var n = s("120356"),
@@ -14,7 +14,7 @@ var n = s("120356"),
   d = s("481060"),
   u = s("220082"),
   c = s("318661"),
-  S = s("84244"),
+  S = s("721987"),
   E = s("74538"),
   T = s("193528"),
   f = s("993413"),
@@ -33,7 +33,12 @@ function g(e) {
     showPremiumIcon: N = !0,
     showResetThemeButton: p = !1,
     forcedDivider: C
-  } = e, A = (0, c.default)(t.id, I), [O, x] = (0, S.default)(t, A, {
+  } = e, A = (0, c.default)(t.id, I), {
+    primaryColor: O,
+    secondaryColor: x
+  } = (0, S.default)({
+    user: t,
+    displayProfile: A,
     pendingThemeColors: n,
     isPreview: !0
   }), R = E.default.canUsePremiumProfileCustomization(t), M = null != s ? s : t.getAvatarURL(I, 80), v = (0, d.useToken)(o.default.unsafe_rawColors.PRIMARY_530).hex(), D = (0, u.useAvatarColors)(M, v, !1);

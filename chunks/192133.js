@@ -21,7 +21,7 @@ var i = n("735250"),
   S = n("342656"),
   h = n("621853"),
   A = n("895618"),
-  m = n("358794"),
+  m = n("652853"),
   N = n("421486"),
   p = n("347949"),
   O = n("138394"),
@@ -70,8 +70,8 @@ function H(e) {
   }, {
     autoTrackExposure: ea
   }), el = (0, o.useStateFromStores)([E.default], () => E.default.getChannel(X)), {
-    profileTheme: eu
-  } = (0, m.default)(j, W), ed = r.useRef(null), [e_, ec] = r.useState(!0), eE = r.useCallback(() => {
+    theme: eu
+  } = (0, m.useUserProfileThemeContext)(), ed = r.useRef(null), [e_, ec] = r.useState(!0), eE = r.useCallback(() => {
     let {
       current: e
     } = ed;
