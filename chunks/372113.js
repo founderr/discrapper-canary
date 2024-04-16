@@ -68,7 +68,7 @@ t.default = e => {
       questContentCTA: T.QuestContentCTA.ACCEPT_QUEST
     });
     Y()
-  }, Q = (0, i.useStateFromStores)([c.default], () => c.default.locale), q = P === h.QuestContent.QUESTS_EMBED, J = P === h.QuestContent.QUEST_INVENTORY_CARD, Z = J && B, X = J && !G, $ = j && !b, ee = (0, s.jsx)(C.default, {
+  }, Q = (0, i.useStateFromStores)([c.default], () => c.default.locale), q = P === h.QuestContent.QUESTS_EMBED, J = P === h.QuestContent.QUEST_INVENTORY_CARD, Z = J && B, X = j && !b, $ = (0, s.jsx)(C.default, {
     autoplay: U,
     className: l()(O.gridImg, {
       [O.questRewardGiftInventory]: J && "lg" === y,
@@ -76,7 +76,7 @@ t.default = e => {
       [O.questRewardEmbedSm]: "sm" === y,
       [O.questRewardEmbedXs]: "xs" === y
     }),
-    learnMoreStyle: X || J ? null : "text",
+    learnMoreStyle: J ? null : "text",
     quest: D,
     questContent: P
   });
@@ -87,9 +87,9 @@ t.default = e => {
       [O.outerContainerNoProgress]: !k
     }),
     children: [(0, s.jsx)(o.Tooltip, {
-      text: $ ? R.default.Messages.QUESTS_REWARD_TILE_EXPIRED_QUEST : null,
+      text: X ? R.default.Messages.QUESTS_REWARD_TILE_EXPIRED_QUEST : null,
       tooltipContentClassName: O.rewardTileExpirationTooltip,
-      shouldShow: $,
+      shouldShow: X,
       children: e => (0, s.jsxs)("div", {
         className: O.rewardTileWrapper,
         ...e,
@@ -100,9 +100,9 @@ t.default = e => {
           })
         }), Z ? (0, s.jsx)(g.default, {
           questConfig: D.config,
-          fallback: ee,
+          fallback: $,
           isFocused: U
-        }) : ee]
+        }) : $]
       })
     }), (0, s.jsxs)("div", {
       className: l()(O.gridText, O.taskDetails),
@@ -172,7 +172,7 @@ t.default = e => {
       })]
     }), (0, s.jsxs)("div", {
       className: l()(O.ctaButtonContainer, O.gridCtaButtons),
-      children: [X && (0, s.jsx)(x, {
+      children: [!J && (0, s.jsx)(x, {
         containerSize: y,
         onClick: () => {
           u.default.open(M.UserSettingsSections.INVENTORY), (0, T.trackQuestContentClicked)({
