@@ -11,8 +11,8 @@ var r = i("120356"),
   a = i("481060"),
   l = i("422559"),
   o = i("263704"),
-  u = i("465670"),
-  c = i("150740");
+  c = i("465670"),
+  u = i("150740");
 
 function d(e) {
   let {
@@ -23,19 +23,19 @@ function d(e) {
     className: f
   } = e;
   return (0, n.jsxs)("div", {
-    className: s()(c.list, f),
+    className: s()(u.list, f),
     children: [null != t && t.length > 0 ? (0, n.jsxs)(n.Fragment, {
       children: [null != r ? (0, n.jsx)(a.FormTitle, {
-        className: c.permissionHeader,
+        className: u.permissionHeader,
         children: r
       }) : null, (0, n.jsx)("div", {
-        className: c.container,
+        className: u.container,
         children: t.map(e => (0, n.jsxs)("div", {
-          className: c.permission,
+          className: u.permission,
           children: [(0, n.jsx)(o.default, {
             width: 16,
             height: 16,
-            className: c.check
+            className: u.check
           }), (0, n.jsx)(a.Text, {
             variant: "text-sm/normal",
             children: (0, l.getPermissionName)(e)
@@ -44,16 +44,16 @@ function d(e) {
       })]
     }) : null, null != i && i.length > 0 ? (0, n.jsxs)(n.Fragment, {
       children: [null != d ? (0, n.jsx)(a.FormTitle, {
-        className: c.permissionHeader,
+        className: u.permissionHeader,
         children: d
       }) : null, (0, n.jsx)("div", {
-        className: c.container,
+        className: u.container,
         children: i.map(e => (0, n.jsxs)("div", {
-          className: c.permission,
-          children: [(0, n.jsx)(u.default, {
+          className: u.permission,
+          children: [(0, n.jsx)(c.default, {
             width: 16,
             height: 16,
-            className: c.cross
+            className: u.cross
           }), (0, n.jsx)(a.Text, {
             variant: "text-sm/normal",
             children: (0, l.getPermissionName)(e)

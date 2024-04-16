@@ -1,7 +1,7 @@
 "use strict";
-var i, r;
-n.r(t), n.d(t, {
+var l, a;
+t.r(n), t.d(n, {
   SnowflakeSelectDefaultValueTypes: function() {
-    return i
+    return l
   }
-}), (r = i || (i = {})).USER = "user", r.ROLE = "role", r.CHANNEL = "channel"
+}), (a = l || (l = {})).USER = "user", a.ROLE = "role", a.CHANNEL = "channel"

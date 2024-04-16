@@ -117,7 +117,7 @@ function v(e) {
     mentionCount: a
   } = e, i = (0, r.useStateFromStores)([T.default], () => T.default.getGuild(t.guild_id)), u = (0, r.useStateFromStores)([_.default], () => _.default.getChannel(t.parent_id)), d = (0, f.getChannelIconComponent)(t, i), E = (0, c.default)(t, !1), m = null == u ? null == i ? void 0 : i.name : "".concat(null == i ? void 0 : i.name, " › ").concat(u.name), I = t.isMultiUserDM() ? S.default.Messages.MEMBERS_HEADER.format({
     members: t.recipients.length + 1
-  }) : t.isPrivate() ? (0, s.jsx)(L, {
+  }) : t.isPrivate() ? (0, s.jsx)(x, {
     channel: t
   }) : (0, s.jsx)(o.Clickable, {
     className: l()(C.subtext, C.guildName),
@@ -153,7 +153,7 @@ function v(e) {
   })
 }
 
-function L(e) {
+function x(e) {
   let {
     channel: t
   } = e, {

@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   fetchGuildAffinities: function() {
     return i
   }
 });
-var a = n("544891"),
-  s = n("570140"),
-  l = n("981631");
-let i = () => a.HTTP.get({
+var n = a("544891"),
+  s = a("570140"),
+  l = a("981631");
+let i = () => n.HTTP.get({
   url: l.Endpoints.GUILD_AFFINITIES,
   oldFormErrors: !0
 }).then(e => {

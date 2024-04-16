@@ -30,8 +30,8 @@ var s = n("735250"),
   R = n("594174"),
   O = n("976644"),
   v = n("806361"),
-  L = n("768581"),
-  x = n("900849"),
+  x = n("768581"),
+  L = n("900849"),
   D = n("506071"),
   P = n("495114"),
   y = n("170140"),
@@ -68,7 +68,7 @@ function F(e) {
       channel_id: k.id,
       can_access: w.canAccess,
       is_member: Z
-    }), w.canAccess ? (0, p.default)(U.Routes.CHANNEL(w.guildId, w.threadId, w.messageId)) : Z ? (0, p.default)(U.Routes.CHANNEL(w.guildId, w.parentChannelId)) : await x.startLurking(w.guildId, {}, {
+    }), w.canAccess ? (0, p.default)(U.Routes.CHANNEL(w.guildId, w.threadId, w.messageId)) : Z ? (0, p.default)(U.Routes.CHANNEL(w.guildId, w.parentChannelId)) : await L.startLurking(w.guildId, {}, {
       channelId: w.parentChannelId
     }))
   }, [w, k, Z]), ei = a.useCallback(() => (o()((null == w ? void 0 : w.authorId) != null, "Author Id cannot be null when loading user profile"), (0, C.default)(w.authorId, w.avatarUrl, {
@@ -86,7 +86,7 @@ function F(e) {
       roleId: $,
       newAnalyticsLocations: t
     })),
-    eo = (0, L.getAvatarDecorationURL)({
+    eo = (0, x.getAvatarDecorationURL)({
       avatarDecoration: null === (t = w.user) || void 0 === t ? void 0 : t.avatarDecoration,
       size: (0, m.getDecorationSizeForAvatarSize)(f.AvatarSizes.SIZE_40),
       canAnimate: et

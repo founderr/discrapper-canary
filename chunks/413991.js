@@ -1,21 +1,21 @@
 "use strict";
-n.r(l), n.d(l, {
+t.r(n), t.d(n, {
   default: function() {
     return d
   }
-}), n("47120");
-var t = n("735250"),
-  a = n("470079"),
-  s = n("481060"),
-  u = n("911969"),
-  i = n("970184"),
-  o = n("293979"),
-  r = n("561684");
+}), t("47120");
+var l = t("735250"),
+  a = t("470079"),
+  s = t("481060"),
+  u = t("911969"),
+  i = t("970184"),
+  o = t("293979"),
+  r = t("561684");
 
 function d(e) {
-  let l;
+  let n;
   let {
-    type: n,
+    type: t,
     style: d,
     label: c,
     placeholder: m,
@@ -23,18 +23,18 @@ function d(e) {
     maxLength: f,
     required: S,
     value: C
-  } = e, [E, v] = a.useState(null != C ? C : ""), {
-    state: N,
-    executeStateUpdate: h,
-    error: T
+  } = e, [E, N] = a.useState(null != C ? C : ""), {
+    state: v,
+    executeStateUpdate: T,
+    error: h
   } = (0, i.useComponentState)(e, null != C ? {
-    type: n,
+    type: t,
     value: C
-  } : void 0), y = (0, o.useIsFirstTextInputInModal)(e.id);
+  } : void 0), x = (0, o.useIsFirstTextInputInModal)(e.id);
   a.useEffect(() => {
-    (null == N ? void 0 : N.type) === n && v(N.value)
-  }, [n, N]);
-  let x = {
+    (null == v ? void 0 : v.type) === t && N(v.value)
+  }, [t, v]);
+  let y = {
     name: c,
     value: E,
     placeholder: m,
@@ -42,29 +42,29 @@ function d(e) {
     maxLength: f,
     required: S,
     onChange: e => {
-      v(e), h({
-        type: n,
+      N(e), T({
+        type: t,
         value: e
       })
     },
-    autoFocus: y
+    autoFocus: x
   };
   switch (d) {
     case u.TextComponentStyle.SMALL:
-      l = (0, t.jsx)(s.TextInput, {
-        ...x
+      n = (0, l.jsx)(s.TextInput, {
+        ...y
       });
       break;
     case u.TextComponentStyle.PARAGRAPH:
-      l = (0, t.jsx)(s.TextArea, {
-        ...x
+      n = (0, l.jsx)(s.TextArea, {
+        ...y
       })
   }
-  return (0, t.jsx)(s.FormItem, {
+  return (0, l.jsx)(s.FormItem, {
     title: c,
     required: S,
     className: r.formItem,
-    error: T,
-    children: l
+    error: h,
+    children: n
   })
 }

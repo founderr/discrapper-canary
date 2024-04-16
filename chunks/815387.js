@@ -26,8 +26,8 @@ var s = n("735250"),
   R = n("565799"),
   O = n("590415"),
   v = n("911560"),
-  L = n("488131"),
-  x = n("814820"),
+  x = n("488131"),
+  L = n("814820"),
   D = n("314897"),
   P = n("523746"),
   y = n("592125"),
@@ -307,7 +307,7 @@ let eM = Object.freeze({
         message: t,
         compact: n,
         usernameHook: r
-      }), (0, s.jsx)(x.WelcomeCTAContainer, {
+      }), (0, s.jsx)(L.WelcomeCTAContainer, {
         channel: a,
         message: t
       })]
@@ -401,7 +401,7 @@ let eM = Object.freeze({
       if (null != s) {
         await v.default.loadThread(s);
         let t = y.default.getChannel(s);
-        null != t && (0, L.openThreadSidebarForViewing)(t, e.shiftKey)
+        null != t && (0, x.openThreadSidebarForViewing)(t, e.shiftKey)
       }
     }, [t]), c = a.useCallback(() => {
       (0, i.openModalLazy)(async () => {

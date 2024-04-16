@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return s
   }
 });
-var a = n("689938");
+var n = a("689938");
 
-function s(e, t, n) {
-  return n ? a.default.Messages.CONSOLE_CONNECTING_DISABLED : t ? a.default.Messages.SERVER_DEAFENED_DIALOG_TITLE : e ? a.default.Messages.UNDEAFEN : a.default.Messages.DEAFEN
+function s(e, t, a) {
+  return a ? n.default.Messages.CONSOLE_CONNECTING_DISABLED : t ? n.default.Messages.SERVER_DEAFENED_DIALOG_TITLE : e ? n.default.Messages.UNDEAFEN : n.default.Messages.DEAFEN
 }

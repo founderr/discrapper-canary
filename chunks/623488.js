@@ -96,11 +96,11 @@ function p(e) {
     cardWidth: R = 332,
     cardHeight: O,
     thumbnailHeight: v = 187,
-    descriptionTextVariant: L = "text-sm/normal",
-    isDraft: x = !1
+    descriptionTextVariant: x = "text-sm/normal",
+    isDraft: L = !1
   } = e, D = (0, d.uid)(), P = (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(m, {
-      showDraftBadge: x,
+      showDraftBadge: L,
       hidePurchaseToUnlockBadge: !0,
       children: (0, s.jsx)("img", {
         alt: "",
@@ -122,14 +122,14 @@ function p(e) {
           children: n
         }), (0, s.jsx)(i.FocusBlock, {
           children: (0, s.jsx)(r.default, {
-            variant: L,
+            variant: x,
             color: "text-muted",
             lineClamp: M,
             text: a
           })
         }), p && (0, s.jsx)(I, {
           onShowFullDescription: h,
-          variant: L
+          variant: x
         }), g || null == c || "" === c.name ? null : (0, s.jsxs)(s.Fragment, {
           children: [(0, s.jsx)(u.default, {
             size: 16

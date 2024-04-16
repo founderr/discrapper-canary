@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("570140"),
-  s = n("224706"),
-  l = n("710845"),
-  i = n("77498");
+a.r(t), a("47120");
+var n = a("570140"),
+  s = a("224706"),
+  l = a("710845"),
+  i = a("77498");
 let r = {};
 
 function o(e) {
   let {
     name: t,
-    hash: n,
-    missingData: a
+    hash: a,
+    missingData: n
   } = e;
-  for (let e of (i.default.markGameReported(t), a))
+  for (let e of (i.default.markGameReported(t), n))
     if ("icon" === e) {
       let e = r[t];
-      null != e && s.default.uploadIcon(t, n, e);
+      null != e && s.default.uploadIcon(t, a, e);
       return
     } else new l.default("GameStoreIconManager").log("Could not find missing data key: ".concat(e))
 }
@@ -23,12 +23,12 @@ function o(e) {
 function u(e) {
   let {
     gameName: t,
-    icon: n
+    icon: a
   } = e;
-  r[t] = n
+  r[t] = a
 }
 t.default = {
   initialize() {
-    a.default.subscribe("UNVERIFIED_GAME_UPDATE", o), a.default.subscribe("GAME_ICON_UPDATE", u)
+    n.default.subscribe("UNVERIFIED_GAME_UPDATE", o), n.default.subscribe("GAME_ICON_UPDATE", u)
   }
 }

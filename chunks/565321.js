@@ -6,8 +6,8 @@ var n = i("735250"),
   a = i("881052"),
   l = i("484455"),
   o = i("592286"),
-  u = i("689938"),
-  c = i("482249");
+  c = i("689938"),
+  u = i("482249");
 t.default = function(e) {
   let {
     guildId: t,
@@ -32,19 +32,19 @@ t.default = function(e) {
     }
   }, [C, t, i]);
   return (0, n.jsxs)(l.default, {
-    title: u.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_TITLE,
+    title: c.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_TITLE,
     children: [(0, n.jsx)(s.TextArea, {
-      className: c.fieldBackground,
+      className: u.fieldBackground,
       maxLength: o.MAX_DESCRIPTION_LENGTH,
       value: null != C ? C : "",
-      placeholder: u.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_PLACEHOLDER,
+      placeholder: c.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_PLACEHOLDER,
       onChange: e => {
         m(e)
       },
       onBlur: E,
       autosize: !0
     }), null != f && "" !== f ? (0, n.jsx)(s.Text, {
-      className: c.errorText,
+      className: u.errorText,
       variant: "text-xs/normal",
       color: "text-danger",
       children: f

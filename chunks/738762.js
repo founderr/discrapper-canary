@@ -1,35 +1,35 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return f
   }
 });
-var a = n("735250"),
-  s = n("470079"),
-  l = n("481060"),
-  i = n("493683"),
-  r = n("367907"),
-  o = n("205129"),
-  u = n("626135"),
-  d = n("981631"),
-  c = n("689938");
+var n = a("735250"),
+  s = a("470079"),
+  l = a("481060"),
+  i = a("493683"),
+  r = a("367907"),
+  o = a("205129"),
+  u = a("626135"),
+  d = a("981631"),
+  c = a("689938");
 
 function f(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     {
-      priorityMembers: n,
+      priorityMembers: a,
       partiedMembers: f
     } = e,
     E = s.useContext(u.AnalyticsContext),
-    h = n.map(e => {
+    h = a.map(e => {
       let {
         user: t
       } = e;
       return t.id
     }),
-    _ = 1 === f.length && 1 === n.length,
-    C = n.length - f.length > 0;
-  return (_ || t) && !C && 0 !== h.length ? (0, a.jsx)(l.MenuItem, {
+    _ = 1 === f.length && 1 === a.length,
+    C = a.length - f.length > 0;
+  return (_ || t) && !C && 0 !== h.length ? (0, n.jsx)(l.MenuItem, {
     id: "message",
     action: function() {
       i.default.openPrivateChannel(h).then(t => r.default.trackWithMetadata(d.AnalyticEvents.ACTIVITY_FEED_DM_VISITED, {

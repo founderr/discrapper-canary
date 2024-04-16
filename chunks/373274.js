@@ -32,8 +32,8 @@ var l, a = n("735250"),
   v = n("131704"),
   x = n("592125"),
   R = n("796974"),
-  M = n("984933"),
-  y = n("914010"),
+  y = n("984933"),
+  M = n("914010"),
   O = n("153124"),
   b = n("540126"),
   D = n("734307"),
@@ -505,7 +505,7 @@ class eo extends(l = s.PureComponent) {
           case et.ChannelListCommunityRow.GUILD_HUB_HEADER_OPTIONS:
             return (0, a.jsx)(S.default, {
               guild: l,
-              channel: M.default.getDefaultChannel(l.id)
+              channel: y.default.getDefaultChannel(l.id)
             }, et.ChannelListCommunityRow.GUILD_HUB_HEADER_OPTIONS);
           case et.ChannelListCommunityRow.GUILD_PREMIUM_PROGRESS_BAR:
             let s = e.getRows();
@@ -712,7 +712,7 @@ let eu = e => {
     selectedVoiceChannelId: l
   } = e, i = (0, u.useStateFromStores)([p.default], () => p.default.keyboardModeEnabled), {
     analyticsLocations: r
-  } = (0, C.default)(m.default.GUILD_CHANNEL_LIST), d = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(n)), c = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(l)), f = (0, u.useStateFromStores)([y.default], () => y.default.getGuildId()), g = (0, N.useOptInEnabledForGuild)(t), E = s.useRef(null), _ = s.useCallback((e, t) => {
+  } = (0, C.default)(m.default.GUILD_CHANNEL_LIST), d = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(n)), c = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(l)), f = (0, u.useStateFromStores)([M.default], () => M.default.getGuildId()), g = (0, N.useOptInEnabledForGuild)(t), E = s.useRef(null), _ = s.useCallback((e, t) => {
     let n = E.current;
     if (null != n) {
       if (el.ID_REGEX.test(t) || (0, ea.isStaticChannelRoute)(t)) n.scrollToChannel(t, !1, 2 * en.SCROLL_TO_SPACER, () => {

@@ -35,10 +35,10 @@ function h(e) {
     thumbnailHeight: M,
     descriptionTextVariant: R = "text-sm/normal",
     showOpaqueBackground: O = !1
-  } = e, v = (0, a.useStateFromStores)([o.default], () => o.default.getGuild(n), [n]), L = (0, a.useStateFromStores)([o.default], () => {
+  } = e, v = (0, a.useStateFromStores)([o.default], () => o.default.getGuild(n), [n]), x = (0, a.useStateFromStores)([o.default], () => {
     var e;
     return o.default.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : p.EMPTY_STRING_SNOWFLAKE_ID)
-  }), x = (0, l.useListingThumbnailUrl)(t, 600), D = (0, _.useProductType)(t), P = (0, d.useCanManageGuildProduct)(v), {
+  }), L = (0, l.useListingThumbnailUrl)(t, 600), D = (0, _.useProductType)(t), P = (0, d.useCanManageGuildProduct)(v), {
     shouldHideGuildPurchaseEntryPoints: y
   } = (0, r.useShouldHideGuildPurchaseEntryPoints)(n), U = (0, _.usePrice)(t);
   if (null == v || y) return null;
@@ -72,11 +72,11 @@ function h(e) {
       onTestDownload: () => {}
     });
   return (0, s.jsx)(E.default, {
-    imageUrl: x,
+    imageUrl: L,
     name: t.name,
     description: t.description,
     formattedPrice: U,
-    role: L,
+    role: x,
     ctaComponent: (0, s.jsx)(I.default, {
       guildId: n,
       guildProductListingId: t.id,

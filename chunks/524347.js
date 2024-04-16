@@ -42,7 +42,7 @@ let h = null,
   v = (e, t, n) => {
     (!M.completed || e.dropsQuestId !== M.dropsQuestId) && (M.game = t, M.dropsQuestId = e.dropsQuestId, M.gameTitle = e.title, M.completed = !1, M.interrupted = !1, M.streamKey = n, M.retries = 0, M.lastCheckedAt = o().now(), g.start(5e3, () => R(!0)))
   };
-class L extends(i = u.default.Store) {
+class x extends(i = u.default.Store) {
   initialize() {
     this.waitFor(f.default)
   }
@@ -90,12 +90,12 @@ class L extends(i = u.default.Store) {
     return null == t ? 0 : t.percent
   }
 }
-l = "DropsStore", (a = "displayName") in(s = L) ? Object.defineProperty(s, a, {
+l = "DropsStore", (a = "displayName") in(s = x) ? Object.defineProperty(s, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = l, t.default = new L(c.default, {
+}) : s[a] = l, t.default = new x(c.default, {
   DROPS_ELIGIBILITY_FETCH_SUCCESS: e => {
     S[e.dropsQuestId] = e.isEligible
   },

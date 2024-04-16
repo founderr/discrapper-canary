@@ -36,7 +36,7 @@ function O(e) {
     getAcceptInviteContext: O
   } = e, {
     invite: v,
-    inviteError: L
+    inviteError: x
   } = (0, l.useStateFromStoresObject)([m.default], () => ({
     invite: m.default.getInvite(t),
     inviteError: m.default.getInviteError(t)
@@ -44,7 +44,7 @@ function O(e) {
   a.useEffect(() => {
     null == v && i.default.resolveInvite(t)
   }, [t]);
-  let x = null != v ? v : {
+  let L = null != v ? v : {
       state: R.InviteStates.RESOLVING,
       code: ""
     },
@@ -55,10 +55,10 @@ function O(e) {
     y = (0, l.useStateFromStores)([_.default], () => _.default.getId()),
     U = (0, l.useStateFromStores)([u.default], () => {
       var e;
-      return u.default.getGuildScheduledEvent(null === (e = x.guild_scheduled_event) || void 0 === e ? void 0 : e.id)
-    }, [x]),
+      return u.default.getGuildScheduledEvent(null === (e = L.guild_scheduled_event) || void 0 === e ? void 0 : e.id)
+    }, [L]),
     j = () => {
-      null != x.channel && i.default.transitionToInviteSync(x)
+      null != L.channel && i.default.transitionToInviteSync(L)
     },
     b = () => {
       (0, f.isAtGuildCapAndNonPremium)() ? (0, E.default)({
@@ -80,77 +80,77 @@ function O(e) {
       onAcceptInstantInvite: b,
       currentUserId: y,
       guild: P,
-      invite: x,
+      invite: L,
       author: n
     });
-  switch (x.state) {
+  switch (L.state) {
     case R.InviteStates.RESOLVING:
       G = (0, s.jsx)(A.default, {});
       break;
     case R.InviteStates.EXPIRED:
     case R.InviteStates.BANNED:
       G = (0, s.jsx)(C.default, {
-        banned: x.state === R.InviteStates.BANNED,
+        banned: L.state === R.InviteStates.BANNED,
         author: n
       });
       break;
     case R.InviteStates.ERROR:
       G = (0, s.jsx)(p.default, {
         author: n,
-        inviteError: L
+        inviteError: x
       });
       break;
     default:
-      switch ((0, c.getInviteType)(x)) {
+      switch ((0, c.getInviteType)(L)) {
         case c.InviteTypes.GROUP_DM:
           G = (0, s.jsx)(N.default, {
             onTransitionToInviteChannel: j,
             onAcceptInstantInvite: b,
             currentUserId: y,
-            invite: x,
+            invite: L,
             author: n
           });
           break;
         case c.InviteTypes.FRIEND:
           G = (0, s.jsx)(h.default, {
-            invite: x,
+            invite: L,
             author: n,
             getAcceptInviteContext: O
           });
           break;
         default:
-          if ((0, c.isStreamInvite)(x)) {
+          if ((0, c.isStreamInvite)(L)) {
             G = (0, s.jsx)(M.default, {
               onTransitionToInviteChannel: j,
               onAcceptInstantInvite: b,
               currentUserId: y,
               guild: P,
-              invite: x
+              invite: L
             });
             break
           }
-          if ((0, c.isGuildScheduledEventInviteEmbed)(x)) {
+          if ((0, c.isGuildScheduledEventInviteEmbed)(L)) {
             G = (0, s.jsx)(d.default, {
               guildScheduledEvent: U,
-              guild: x.guild,
-              channel: x.channel,
+              guild: L.guild,
+              channel: L.channel,
               isMember: null != P,
               onAcceptInstantInvite: b,
               onTransitionToInviteChannel: j
             });
             break
           }
-          if ((0, c.isStageInviteEmbed)(x)) {
+          if ((0, c.isStageInviteEmbed)(L)) {
             G = (0, s.jsx)(g.default, {
-              stageInstance: x.stage_instance,
-              guild: x.guild,
+              stageInstance: L.stage_instance,
+              guild: L.guild,
               isMember: null != P,
               onTransitionToInviteChannel: j,
               onAcceptInstantInvite: b
             });
             break
-          }(0, c.isEmbeddedApplicationInvite)(x) && (G = (0, s.jsx)(I.default, {
-            invite: x,
+          }(0, c.isEmbeddedApplicationInvite)(L) && (G = (0, s.jsx)(I.default, {
+            invite: L,
             getAcceptInviteContext: O
           }))
       }

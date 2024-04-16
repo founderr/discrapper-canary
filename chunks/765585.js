@@ -30,8 +30,8 @@ t.default = a.forwardRef(function(e, t) {
     showGIFTag: v = !1,
     dismissibleContent: x,
     position: R = "top",
-    align: M = "center",
-    art: y,
+    align: y = "center",
+    art: M,
     isPremiumEarlyAccess: O = !1,
     maxWidth: b = 280
   } = e, D = L ? r.Button.Sizes.LARGE : r.Button.Sizes.MAX, [j, P] = a.useState(!1), {
@@ -62,7 +62,7 @@ t.default = a.forwardRef(function(e, t) {
         className: i()(m, T ? p.artInline : p.artAbsolute),
         children: [v && (0, l.jsx)(d.default, {
           className: p.gifTag
-        }), y]
+        }), M]
       }), (0, l.jsxs)("div", {
         className: p.body,
         children: [(0, l.jsxs)(r.Heading, {
@@ -122,8 +122,8 @@ t.default = a.forwardRef(function(e, t) {
       }), (0, l.jsx)("div", {
         className: i()(p.pointer, {
           [p.bottomPointer]: "top" === R,
-          [p.centerLeftPointer]: "right" === R && "center" === M,
-          [p.topLeftPointer]: "right" === R && "top" === M
+          [p.centerLeftPointer]: "right" === R && "center" === y,
+          [p.topLeftPointer]: "right" === R && "top" === y
         })
       })]
     })

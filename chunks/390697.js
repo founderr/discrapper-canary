@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   useIsClearIncomingFriendRequestsEnabled: function() {
     return s
   }
 });
-let a = (0, n("818083").createExperiment)({
+let n = (0, a("818083").createExperiment)({
   kind: "user",
   id: "2023-05_clear_pending_incoming_friend_requests",
   label: "Enable ability to clear incoming friend requests",
@@ -21,7 +21,7 @@ let a = (0, n("818083").createExperiment)({
 });
 
 function s() {
-  return a.useExperiment({
+  return n.useExperiment({
     location: "ca2288_1"
   }, {
     autoTrackExposure: !0

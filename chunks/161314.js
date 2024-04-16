@@ -37,9 +37,9 @@ function R(e) {
     subscriptionsSettings: O
   } = (0, N.useMonetizationSettings)(n), {
     listingsLoaded: v
-  } = (0, E.useFetchGuildProductListingsForGuild)(n), L = (0, E.useGuildProductsForGuild)(n, {
+  } = (0, E.useFetchGuildProductListingsForGuild)(n), x = (0, E.useGuildProductsForGuild)(n, {
     publishedOnly: !0
-  }), x = a.useCallback(async () => {
+  }), L = a.useCallback(async () => {
     h.default.track(A.AnalyticEvents.GUILD_SHOP_EMBED_CLICKED, {
       ...(0, c.collectGuildAnalyticsMetadata)(n)
     }), await (0, _.default)(A.Routes.SERVER_SHOP(n))
@@ -50,7 +50,7 @@ function R(e) {
   }, {
     disableTrack: null == l
   });
-  let D = L.length > 0 ? new Date(Math.min(...L.map(e => Date.parse(e.published_at)))) : void 0;
+  let D = x.length > 0 ? new Date(Math.min(...x.map(e => Date.parse(e.published_at)))) : void 0;
   return R || !v ? (0, s.jsx)("div", {
     className: i()(M.guildShopEmbed, M.spinnerContainer),
     children: (0, s.jsx)(d.Spinner, {})
@@ -102,7 +102,7 @@ function R(e) {
             variant: "text-sm/normal",
             color: "text-muted",
             children: g.default.Messages.GUILD_SHOP_EMBED_LISTINGS_AVAILABLE.format({
-              listingCount: L.length
+              listingCount: x.length
             })
           })
         }), null != D && (0, s.jsx)("li", {
@@ -116,7 +116,7 @@ function R(e) {
         })]
       }), (0, s.jsx)(d.Button, {
         className: M.guildShopEmbedCta,
-        onClick: x,
+        onClick: L,
         children: (0, s.jsxs)("div", {
           className: M.guildShopEmbedCtaContent,
           children: [(0, s.jsx)(C.default, {

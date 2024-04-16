@@ -41,8 +41,8 @@ let M = n("952265").hasModalOpen,
   K = "",
   z = !1,
   X = null,
-  q = !1,
   Q = !1,
+  q = !1,
   Z = "",
   J = !1,
   $ = !1,
@@ -188,10 +188,10 @@ class eI extends(s = E.default.Store) {
     return z
   }
   getMFATotp() {
-    return q
+    return Q
   }
   getMFABackup() {
-    return Q
+    return q
   }
   getMFAWebAuthn() {
     return X
@@ -201,10 +201,10 @@ class eI extends(s = E.default.Store) {
     return null != X && e.push({
       type: "webauthn",
       challenge: X
-    }), q && e.push({
-      type: "totp",
-      backup_codes_allowed: Q
     }), Q && e.push({
+      type: "totp",
+      backup_codes_allowed: q
+    }), q && e.push({
       type: "backup"
     }), z && e.push({
       type: "sms"
@@ -318,7 +318,7 @@ l = "AuthenticationStore", (o = "displayName") in(a = eI) ? Object.definePropert
       backup: r,
       totp: s
     } = e;
-    null != t && (K = t, z = n, Z = "", X = null != i ? i : null, Q = r, q = s), et = {}, H = D.LoginStates.MFA_STEP
+    null != t && (K = t, z = n, Z = "", X = null != i ? i : null, q = r, Q = s), et = {}, H = D.LoginStates.MFA_STEP
   },
   LOGIN_MFA: function() {
     H = D.LoginStates.LOGGING_IN_MFA

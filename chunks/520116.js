@@ -83,14 +83,14 @@ function v(e) {
     location: "20e3b0_1"
   }, {
     autoTrackExposure: !1
-  }), S = T.MessageDisplayCompact.useSetting(), R = (0, o.useStateFromStores)([I.default], () => I.default.can(A.Permissions.CREATE_INSTANT_INVITE, l)), v = (0, E.isSpamSupported)(l), L = !1, x = 0 === a.messages.length || i()(a.messages[0].timestamp).isSame(i()(), "day"), D = null !== (n = null === (t = p.default.getUser(m.default.getId())) || void 0 === t ? void 0 : t.hasFlag(A.UserFlags.SPAMMER)) && void 0 !== n && n, P = [];
+  }), S = T.MessageDisplayCompact.useSetting(), R = (0, o.useStateFromStores)([I.default], () => I.default.can(A.Permissions.CREATE_INSTANT_INVITE, l)), v = (0, E.isSpamSupported)(l), x = !1, L = 0 === a.messages.length || i()(a.messages[0].timestamp).isSame(i()(), "day"), D = null !== (n = null === (t = p.default.getUser(m.default.getId())) || void 0 === t ? void 0 : t.hasFlag(A.UserFlags.SPAMMER)) && void 0 !== n && n, P = [];
   if (!a.collapsed) {
     let e = null,
       t = null,
       n = a.messages.slice(0, C.MAX_SHOWN_MESSAGES);
     n.forEach(n => {
       if (!(0, c.default)(n, R)) {
-        if (!x && (null == e || !e.isSame(n.timestamp, "day"))) {
+        if (!L && (null == e || !e.isSame(n.timestamp, "day"))) {
           let t = (0, N.dateFormat)(n.timestamp, "LL");
           P.push((0, s.jsx)(h.default, {
             className: M.divider,
@@ -98,7 +98,7 @@ function v(e) {
           }, t)), e = i()(n.timestamp)
         }
         let a = null == t || (0, f.default)(l, t, n);
-        t = n, L = L || (0, E.isSpam)(n), P.push((0, s.jsx)(O, {
+        t = n, x = x || (0, E.isSpam)(n), P.push((0, s.jsx)(O, {
           channel: l,
           message: n,
           compact: S,
@@ -114,7 +114,7 @@ function v(e) {
       children: [g.default.Messages.UNREADS_VIEW_CHANNEL, " ›"]
     }, "view-all")), 0 === P.length && (P = [(0, s.jsx)(u.Spinner, {}, "spinner")])
   }
-  return L && v && d.default.trackExposure({
+  return x && v && d.default.trackExposure({
     location: "20e3b0_2"
   }), (0, s.jsx)("div", {
     className: M.messages,

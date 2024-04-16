@@ -31,9 +31,9 @@ var a = n("120356"),
   v = n("981631"),
   x = n("689938"),
   R = n("499890"),
-  M = n("337341");
+  y = n("337341");
 
-function y(e, t) {
+function M(e, t) {
   return 0 === t.length ? null : (0, l.jsxs)("div", {
     className: R.row,
     children: [(0, l.jsx)(e, {
@@ -58,7 +58,7 @@ function O() {
       } = e;
       return t
     })), [s]),
-    M = (0, o.useStateFromStoresArray)([c.default], () => r().flatMap(i, e => c.default.getMutableParticipants(e, f.StageChannelParticipantNamedIndex.SPEAKER).filter(e => e.type === f.StageChannelParticipantTypes.VOICE).map(e => {
+    y = (0, o.useStateFromStoresArray)([c.default], () => r().flatMap(i, e => c.default.getMutableParticipants(e, f.StageChannelParticipantNamedIndex.SPEAKER).filter(e => e.type === f.StageChannelParticipantTypes.VOICE).map(e => {
       let {
         user: t
       } = e;
@@ -81,8 +81,8 @@ function O() {
     }, [a]),
     j = (0, o.useStateFromStoresArray)([m.default], () => D.map(e => m.default.getUser(e)), [D]),
     P = (0, o.useStateFromStoresArray)([m.default], () => b.map(e => m.default.getUser(e)), [b]),
-    G = y(_.default, x.filter(e => !b.includes(e.id) && !D.includes(e.id)));
-  let U = (e = M, t = O, 0 === e.length ? null : (0, l.jsxs)("div", {
+    G = M(_.default, x.filter(e => !b.includes(e.id) && !D.includes(e.id)));
+  let U = (e = y, t = O, 0 === e.length ? null : (0, l.jsxs)("div", {
       className: R.row,
       children: [(0, l.jsx)(S.default, {
         className: R.activityIcon
@@ -103,8 +103,8 @@ function O() {
         })]
       })]
     })),
-    w = y(I.default, P.filter(e => null != e && !D.includes(e.id))),
-    F = y(E.default, j);
+    w = M(I.default, P.filter(e => null != e && !D.includes(e.id))),
+    F = M(E.default, j);
   return (0, l.jsxs)(l.Fragment, {
     children: [U, G, w, F]
   })
@@ -134,7 +134,7 @@ function D(e) {
     position: "right",
     text: (0, l.jsx)(b, {}),
     "aria-label": t,
-    tooltipClassName: M.listItemTooltip,
+    tooltipClassName: y.listItemTooltip,
     onTooltipShow: n,
     children: e => (0, l.jsx)("div", {
       ...e,

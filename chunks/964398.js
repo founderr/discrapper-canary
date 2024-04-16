@@ -110,10 +110,10 @@ t.default = a.memo(function(e) {
     onItemAction: I,
     interactive: N = !0,
     children: T
-  } = e, A = a.useRef(null), L = a.useRef([]), v = a.useRef(!1), x = a.useRef(null), [R, M] = a.useState(0), [y, O] = a.useState({
+  } = e, A = a.useRef(null), L = a.useRef([]), v = a.useRef(!1), x = a.useRef(null), [R, y] = a.useState(0), [M, O] = a.useState({
     x: 0,
     y: 0
-  }), b = Math.abs(y.x) + Math.abs(y.y) > 0, D = a.useMemo(() => i().chunk(T, h), [T]), j = a.useCallback((e, t) => {
+  }), b = Math.abs(M.x) + Math.abs(M.y) > 0, D = a.useMemo(() => i().chunk(T, h), [T]), j = a.useCallback((e, t) => {
     null == L.current[R] ? L.current[R] = [] : L.current[R][t] = e
   }, [R]), P = a.useCallback((e, t) => {
     x.current = t, S(h * e + t)
@@ -173,7 +173,7 @@ t.default = a.memo(function(e) {
   }, 16), [_, w, G, P, R, n, t]), V = a.useCallback(e => {
     if (!N) return;
     let t = R + (e.deltaY > 0 ? 1 : -1);
-    t >= 0 && t < D.length && (null != x.current && (D[t].length > x.current ? P(t, x.current) : G()), M(t))
+    t >= 0 && t < D.length && (null != x.current && (D[t].length > x.current ? P(t, x.current) : G()), y(t))
   }, [N, R, D, P, G]), H = a.useMemo(() => D[R].map((e, a) => {
     let s = f[a];
     if (null == s) throw Error("Too many items supplied ".concat(T.length, " expected max of ").concat(f.length));
@@ -253,8 +253,8 @@ t.default = a.memo(function(e) {
             r: 28.8
           }), b && (0, l.jsx)("circle", {
             className: d.chatWheelCenter,
-            cx: 144 + y.x,
-            cy: 144 + y.y,
+            cx: 144 + M.x,
+            cy: 144 + M.y,
             r: 28.8
           })]
         }), E && (0, l.jsx)("circle", {

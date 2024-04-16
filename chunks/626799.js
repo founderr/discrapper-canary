@@ -184,7 +184,7 @@ R(O, "defaultProps", {
 });
 let v = [N.default, h.default, p.default, S.default];
 
-function L(e) {
+function x(e) {
   let {
     skuId: t
   } = e, n = N.default.get(t), s = null != n ? I.default.getApplication(n.applicationId) : null;
@@ -197,6 +197,6 @@ function L(e) {
     libraryApplication: null != n ? p.default.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
   }
 }
-let x = (0, m.default)((0, T.default)(O));
-t.default = r.default.connectStores(v, L)(x);
-let D = (0, T.default)(r.default.connectStores(v, L)(O))
+let L = (0, m.default)((0, T.default)(O));
+t.default = r.default.connectStores(v, x)(L);
+let D = (0, T.default)(r.default.connectStores(v, x)(O))

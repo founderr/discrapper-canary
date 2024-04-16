@@ -35,8 +35,8 @@ var s, a, l, i, r = n("470079"),
   R = n("131704"),
   O = n("592125"),
   v = n("984933"),
-  L = n("731290"),
-  x = n("430824"),
+  x = n("731290"),
+  L = n("430824"),
   D = n("375954"),
   P = n("496675"),
   y = n("306680"),
@@ -311,7 +311,7 @@ function W(e, t, n, s) {
   if (!a.isPrivate() && !P.default.can(F.Permissions.READ_MESSAGE_HISTORY, a)) return;
   let l = y.default.ackMessageId(s);
   if (null == l) {
-    let e = x.default.getGuild(a.guild_id);
+    let e = L.default.getGuild(a.guild_id);
     if (null == e || null == e.joinedAt) return;
     l = B.default.fromTimestamp(e.joinedAt.getTime())
   }
@@ -353,7 +353,7 @@ function W(e, t, n, s) {
       }
     }(n, s, r)
   };
-  a.isNSFW() && !L.default.didAgree(a.guild_id) ? t.push({
+  a.isNSFW() && !x.default.didAgree(a.guild_id) ? t.push({
     ...d,
     type: "nsfw"
   }) : a.isForumLikeChannel() ? t.push({

@@ -46,8 +46,8 @@ let w = ["name", "description", "icon", "splash", "banner", "homeHeader", "afkCh
     about: ""
   },
   X = !1,
-  q = z,
   Q = z,
+  q = z,
   Z = null,
   J = 0,
   $ = null,
@@ -69,7 +69,7 @@ function ei(e) {
     location: u
   } = e, _ = D.default.getGuild(n);
   if (null == _) return er();
-  a = o = _, V = U.FormStates.OPEN, F = {}, l = M.default.castGuildIdAsEveryoneGuildRoleId(n), W = o.mfaLevel, Q = q, d = null, K = u, es({
+  a = o = _, V = U.FormStates.OPEN, F = {}, l = M.default.castGuildIdAsEveryoneGuildRoleId(n), W = o.mfaLevel, q = Q, d = null, K = u, es({
     section: null !== (t = null != r ? r : i) && void 0 !== t ? t : U.GuildSettingsSections.OVERVIEW,
     subsection: null != s ? s : null
   })
@@ -159,10 +159,10 @@ class el extends(_ = A.default.Store) {
     this.waitFor(D.default, v.default)
   }
   getMetadata() {
-    return Q
+    return q
   }
   hasChanges() {
-    return !f().isEqual(o, a) || !f().isEqual(Q, q)
+    return !f().isEqual(o, a) || !f().isEqual(q, Q)
   }
   isOpen() {
     return k
@@ -223,7 +223,7 @@ class el extends(_ = A.default.Store) {
       vanityURLUses: j,
       originalGuild: a,
       hasChanges: this.hasChanges(),
-      guildMetadata: Q,
+      guildMetadata: q,
       analyticsLocation: K,
       isGuildMetadataLoaded: X
     }
@@ -396,7 +396,7 @@ I = "GuildSettingsStore", (E = "displayName") in(c = el) ? Object.defineProperty
       guildId: c,
       metadata: E
     } = e;
-    null != o && c === o.id && (!1 === X && (X = !0), Q = q = {
+    null != o && c === o.id && (!1 === X && (X = !0), q = Q = {
       primaryCategoryId: null !== (t = E.primaryCategoryId) && void 0 !== t ? t : b.DEFAULT_DISCOVERY_CATEGORY_ID,
       secondaryCategoryIds: null !== (n = E.secondaryCategoryIds) && void 0 !== n ? n : [],
       keywords: null !== (i = E.keywords) && void 0 !== i ? i : [],
@@ -410,19 +410,19 @@ I = "GuildSettingsStore", (E = "displayName") in(c = el) ? Object.defineProperty
     }, F = {})
   },
   GUILD_DISCOVERY_METADATA_FETCH_FAIL: function() {
-    q = Q = z
+    Q = q = z
   },
   GUILD_DISCOVERY_CATEGORY_ADD: function(e) {
     let {
       guildId: t,
       categoryId: n
     } = e;
-    null != o && t === o.id && (Q = {
-      ...Q,
-      secondaryCategoryIds: [...Q.secondaryCategoryIds, n]
-    }, q = {
+    null != o && t === o.id && (q = {
       ...q,
       secondaryCategoryIds: [...q.secondaryCategoryIds, n]
+    }, Q = {
+      ...Q,
+      secondaryCategoryIds: [...Q.secondaryCategoryIds, n]
     })
   },
   GUILD_DISCOVERY_CATEGORY_DELETE: function(e) {
@@ -431,11 +431,11 @@ I = "GuildSettingsStore", (E = "displayName") in(c = el) ? Object.defineProperty
       categoryId: i
     } = e;
     if (null == o || n !== o.id) return;
-    let r = Q.secondaryCategoryIds.indexOf(i); - 1 !== r && ((t = [...Q.secondaryCategoryIds]).splice(r, 1), Q = {
-      ...Q,
-      secondaryCategoryIds: t
-    }), -1 !== (r = q.secondaryCategoryIds.indexOf(i)) && ((t = [...q.secondaryCategoryIds]).splice(r, 1), q = {
+    let r = q.secondaryCategoryIds.indexOf(i); - 1 !== r && ((t = [...q.secondaryCategoryIds]).splice(r, 1), q = {
       ...q,
+      secondaryCategoryIds: t
+    }), -1 !== (r = Q.secondaryCategoryIds.indexOf(i)) && ((t = [...Q.secondaryCategoryIds]).splice(r, 1), Q = {
+      ...Q,
       secondaryCategoryIds: t
     })
   },
@@ -457,15 +457,15 @@ I = "GuildSettingsStore", (E = "displayName") in(c = el) ? Object.defineProperty
       socialLinks: l,
       about: u
     } = e;
-    null != o && t === o.id && (Q = {
-      ...Q,
-      primaryCategoryId: null != n ? n : Q.primaryCategoryId,
-      keywords: null != i ? i : Q.keywords,
-      emojiDiscoverabilityEnabled: null != r ? r : Q.emojiDiscoverabilityEnabled,
-      isPublished: null != s ? s : Q.isPublished,
-      reasonsToJoin: null != a ? a : Q.reasonsToJoin,
-      socialLinks: null != l ? l : Q.socialLinks,
-      about: null != u ? u : Q.about
+    null != o && t === o.id && (q = {
+      ...q,
+      primaryCategoryId: null != n ? n : q.primaryCategoryId,
+      keywords: null != i ? i : q.keywords,
+      emojiDiscoverabilityEnabled: null != r ? r : q.emojiDiscoverabilityEnabled,
+      isPublished: null != s ? s : q.isPublished,
+      reasonsToJoin: null != a ? a : q.reasonsToJoin,
+      socialLinks: null != l ? l : q.socialLinks,
+      about: null != u ? u : q.about
     })
   },
   GUILD_UPDATE_DISCOVERY_METADATA_FAIL: function(e) {

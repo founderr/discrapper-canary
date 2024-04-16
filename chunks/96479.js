@@ -1,33 +1,33 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return f
   }
 });
-var a = n("735250");
-n("470079");
-var s = n("6025"),
-  l = n("433355"),
-  i = n("626135"),
-  r = n("585483"),
-  o = n("922409"),
-  u = n("545724"),
-  d = n("749405"),
-  c = n("981631");
+var n = a("735250");
+a("470079");
+var s = a("6025"),
+  l = a("433355"),
+  i = a("626135"),
+  r = a("585483"),
+  o = a("922409"),
+  u = a("545724"),
+  d = a("749405"),
+  c = a("981631");
 
 function f(e) {
   let {
     index: t,
-    className: n,
+    className: a,
     channel: f,
     user: E,
     hasSingleMessageRequest: h
   } = e, {
     channelId: _
   } = (0, o.useMessageRequestSidebarState)();
-  return (0, a.jsx)(u.default, {
+  return (0, n.jsx)(u.default, {
     index: t,
-    className: n,
+    className: a,
     isFocused: _ === f.id,
     channel: f,
     user: E,
@@ -46,7 +46,7 @@ function f(e) {
         })
       }, 0)
     },
-    children: e => (0, a.jsx)(d.PendingMessageRequestRowItem, {
+    children: e => (0, n.jsx)(d.PendingMessageRequestRowItem, {
       active: e,
       user: E,
       channel: f

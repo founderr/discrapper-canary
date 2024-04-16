@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   acceptCreatorMonetizationTerms: function() {
-    return c
+    return u
   },
   acceptCreatorMonetizationTermsV2: function() {
     return d
@@ -19,7 +19,7 @@ i.r(t), i.d(t, {
     return p
   },
   getCreatorMonetizationEligibility: function() {
-    return u
+    return c
   },
   getCreatorMonetizationOnboardingMarketing: function() {
     return f
@@ -41,12 +41,12 @@ async function o(e) {
     url: a.Endpoints.CREATOR_MONETIZATION_ENABLE_REQUESTS(e)
   })
 }
-async function u(e) {
+async function c(e) {
   return (await n.HTTP.get({
     url: a.Endpoints.CREATOR_MONETIZATION_ELIGIBILITY(e)
   })).body
 }
-async function c(e, t) {
+async function u(e, t) {
   await n.HTTP.post({
     url: a.Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS(e, t)
   })

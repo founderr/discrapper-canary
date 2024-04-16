@@ -54,8 +54,8 @@ function H(e) {
     guild: K,
     guildMember: z,
     channelId: X,
-    onClose: q,
-    setNote: Q = !1,
+    onClose: Q,
+    setNote: q = !1,
     canDM: Z,
     hideNote: J = !1,
     showCopiableUsername: $ = !1,
@@ -149,7 +149,7 @@ function H(e) {
         }), eS && (0, i.jsx)(N.default, {
           className: F.profileMutuals,
           user: j,
-          onClose: q
+          onClose: Q
         }), (0, i.jsx)(P.default, {
           userId: j.id,
           guild: K,
@@ -163,7 +163,7 @@ function H(e) {
           user: j,
           guild: K,
           channelId: X,
-          onClose: q,
+          onClose: Q,
           analyticsParams: (null == ee ? void 0 : ee.location) != null ? ee : em
         }), eh && (0, i.jsx)(p.UserProfileRecentGamesSection, {
           userId: j.id
@@ -172,7 +172,7 @@ function H(e) {
           commandIds: en.popularApplicationCommandIds,
           channel: el,
           guildId: null == K ? void 0 : K.id,
-          onClick: q
+          onClick: Q
         }) : null, (0, i.jsx)(g.default, {
           user: j,
           guildId: null == K ? void 0 : K.id
@@ -185,21 +185,21 @@ function H(e) {
           userId: j.id,
           channelId: X,
           guild: K,
-          onClose: q,
+          onClose: Q,
           theme: eu
         }), null != en && void 0 !== X && (0, i.jsx)(G.default, {
           channelId: X,
           applicationId: en.id
         }), !et && !J && (0, i.jsx)(U.default, {
           user: j,
-          setNote: Q,
+          setNote: q,
           autoFocus: !Z,
           lastSection: !Z
         }), !j.isNonUserBot() && Z && (0, i.jsx)(y.default, {
           user: j,
-          setNote: Q,
+          setNote: q,
           canDM: Z,
-          onClose: q
+          onClose: Q
         })]
       })]
     })]

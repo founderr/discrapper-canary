@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("846027"),
-  s = n("131951"),
-  l = n("594174"),
-  i = n("996106"),
-  r = n("452426"),
-  o = n("852926"),
-  u = n("186901"),
-  d = n("981631");
+a.r(t), a("47120");
+var n = a("846027"),
+  s = a("131951"),
+  l = a("594174"),
+  i = a("996106"),
+  r = a("452426"),
+  o = a("852926"),
+  u = a("186901"),
+  d = a("981631");
 t.default = {
   [d.RPCCommands.SET_USER_VOICE_SETTINGS]: {
     scope: {
@@ -26,7 +26,7 @@ t.default = {
       let {
         args: {
           user_id: t,
-          pan: n,
+          pan: a,
           volume: r,
           mute: o
         }
@@ -34,9 +34,9 @@ t.default = {
       if (null == l.default.getUser(t) || (null == u ? void 0 : u.id) === t) throw new i.default({
         errorCode: d.RPCErrors.INVALID_USER
       }, "Invalid user id: ".concat(t));
-      if (null != n && a.default.setLocalPan(t, n.left, n.right), null != r && a.default.setLocalVolume(t, r), null != o) {
+      if (null != a && n.default.setLocalPan(t, a.left, a.right), null != r && n.default.setLocalVolume(t, r), null != o) {
         let e = s.default.isLocalMute(t);
-        (e && !o || !e && o) && a.default.toggleLocalMute(t)
+        (e && !o || !e && o) && n.default.toggleLocalMute(t)
       }
       return {
         user_id: t,
@@ -88,7 +88,7 @@ t.default = {
       let {
         args: {
           input: t,
-          output: n,
+          output: a,
           mode: l,
           automatic_gain_control: i,
           echo_cancellation: r,
@@ -99,18 +99,18 @@ t.default = {
           mute: E
         }
       } = e;
-      if (t && (null != t.device_id && a.default.setInputDevice(t.device_id), null != t.volume && a.default.setInputVolume(t.volume)), n && (null != n.device_id && a.default.setOutputDevice(n.device_id), null != n.volume && a.default.setOutputVolume(n.volume)), l) {
+      if (t && (null != t.device_id && n.default.setInputDevice(t.device_id), null != t.volume && n.default.setInputVolume(t.volume)), a && (null != a.device_id && n.default.setOutputDevice(a.device_id), null != a.volume && n.default.setOutputVolume(a.volume)), l) {
         let e = s.default.getMode(),
           t = s.default.getModeOptions();
-        null != l.type && (e = l.type), null != l.auto_threshold && (t.autoThreshold = l.auto_threshold), null != l.threshold && (t.threshold = l.threshold), null != l.shortcut && (t.shortcut = l.shortcut.map(e => [e.type, e.code])), null != l.delay && (t.delay = l.delay), a.default.setMode(e, t)
+        null != l.type && (e = l.type), null != l.auto_threshold && (t.autoThreshold = l.auto_threshold), null != l.threshold && (t.threshold = l.threshold), null != l.shortcut && (t.shortcut = l.shortcut.map(e => [e.type, e.code])), null != l.delay && (t.delay = l.delay), n.default.setMode(e, t)
       }
-      if (null != i && a.default.setAutomaticGainControl(i), null != r && a.default.setEchoCancellation(r), null != u && a.default.setNoiseSuppression(u), null != d && a.default.setQoS(d), null != c && a.default.setSilenceWarning(c), null != f) {
+      if (null != i && n.default.setAutomaticGainControl(i), null != r && n.default.setEchoCancellation(r), null != u && n.default.setNoiseSuppression(u), null != d && n.default.setQoS(d), null != c && n.default.setSilenceWarning(c), null != f) {
         let e = s.default.isSelfDeaf();
-        (e && !f || !e && f) && a.default.toggleSelfDeaf()
+        (e && !f || !e && f) && n.default.toggleSelfDeaf()
       }
       if (null != E) {
         let e = s.default.isSelfMute();
-        (e && !E || !e && E) && a.default.toggleSelfMute()
+        (e && !E || !e && E) && n.default.toggleSelfMute()
       }
       return (0, o.getDeprecatedVoiceSettings)()
     }

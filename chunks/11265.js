@@ -6,8 +6,8 @@ var n = i("735250"),
   a = i.n(s),
   l = i("718017"),
   o = i("442837"),
-  u = i("481060"),
-  c = i("393238"),
+  c = i("481060"),
+  u = i("393238"),
   d = i("607070"),
   f = i("689938"),
   p = i("797332");
@@ -23,10 +23,10 @@ t.default = r.memo(function(e) {
   } = e, E = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), [I, T] = r.useState(!0), [x, g] = r.useState(!1), {
     ref: v,
     height: R = 0
-  } = (0, c.default)(), {
+  } = (0, u.default)(), {
     ref: A,
     height: N = 0
-  } = (0, c.default)(), [S, M] = r.useState(s), L = (0, l.useSpring)({
+  } = (0, u.default)(), [S, M] = r.useState(s), L = (0, l.useSpring)({
     height: S ? N + R : R,
     immediate: I || E || h,
     config: {
@@ -47,7 +47,7 @@ t.default = r.memo(function(e) {
       T(!1)
     }, 100);
     return () => clearTimeout(e)
-  }, []), (0, n.jsx)(u.Clickable, {
+  }, []), (0, n.jsx)(c.Clickable, {
     className: a()(p.editCard, {
       [p.toggled]: s,
       [p.noBackground]: _
@@ -57,7 +57,7 @@ t.default = r.memo(function(e) {
         [p.showOverflow]: s && x
       }),
       style: L,
-      children: [(0, n.jsx)(u.Clickable, {
+      children: [(0, n.jsx)(c.Clickable, {
         innerRef: v,
         onClick: C ? void 0 : m,
         className: a()(p.innerHeader, {

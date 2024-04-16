@@ -10,8 +10,8 @@ var n = i("735250"),
   a = i("442837"),
   l = i("477690"),
   o = i("481060"),
-  u = i("887706"),
-  c = i("34674"),
+  c = i("887706"),
+  u = i("34674"),
   d = i("817460"),
   f = i("703656"),
   p = i("351402"),
@@ -66,8 +66,8 @@ function S(e) {
     activeSubscriptionListing: L
   } = (0, h.useActiveSubscriptionListingForApplication)(t.application_id, s), {
     openModal: j,
-    canOpenModal: O,
-    cannotOpenReason: b
+    canOpenModal: b,
+    cannotOpenReason: O
   } = (0, I.default)({
     listing: t,
     guildId: s,
@@ -76,8 +76,8 @@ function S(e) {
     analyticsLocation: l,
     onComplete: m,
     forcesTransitionToGuild: v
-  }), y = t.subscription_plans[0], F = 0 === y.price, D = (null == L ? void 0 : L.id) === t.id, P = (0, u.default)(), w = P && !O || S, G = () => {
-    P ? j() : (0, c.redirectToLogin)({
+  }), y = t.subscription_plans[0], F = 0 === y.price, D = (null == L ? void 0 : L.id) === t.id, P = (0, c.default)(), w = P && !b || S, G = () => {
+    P ? j() : (0, u.redirectToLogin)({
       [R]: "true"
     })
   };
@@ -117,8 +117,8 @@ function S(e) {
           }) : null;
           return (0, n.jsx)(o.Tooltip, {
             tooltipClassName: g.subscribeButtonTooltip,
-            text: O || !P ? null : b,
-            "aria-label": null !== (e = !O && b) && void 0 !== e && e,
+            text: b || !P ? null : O,
+            "aria-label": null !== (e = !b && O) && void 0 !== e && e,
             children: e => (0, n.jsx)(_.default, {
               ...e,
               disabled: w,

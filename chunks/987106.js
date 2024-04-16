@@ -1,64 +1,64 @@
 "use strict";
-n.r(l), n.d(l, {
+t.r(n), t.d(n, {
   default: function() {
-    return v
+    return N
   }
 });
-var t = n("735250");
-n("470079");
-var a = n("120356"),
-  s = n.n(a),
-  u = n("481060"),
-  i = n("239091"),
-  o = n("596454"),
-  r = n("911969"),
-  d = n("441957"),
-  c = n("572004"),
-  m = n("49012"),
-  p = n("970184"),
-  f = n("280501"),
-  S = n("689938"),
-  C = n("858049");
+var l = t("735250");
+t("470079");
+var a = t("120356"),
+  s = t.n(a),
+  u = t("481060"),
+  i = t("239091"),
+  o = t("596454"),
+  r = t("911969"),
+  d = t("441957"),
+  c = t("572004"),
+  m = t("49012"),
+  p = t("970184"),
+  f = t("280501"),
+  S = t("689938"),
+  C = t("858049");
 
 function E(e) {
   let {
-    url: l,
-    onSelect: n
+    url: n,
+    onSelect: t
   } = e;
-  return c.SUPPORTS_COPY && null != l ? (0, t.jsx)(u.Menu, {
+  return c.SUPPORTS_COPY && null != n ? (0, l.jsx)(u.Menu, {
     navId: "component-button",
     onClose: i.closeContextMenu,
     "aria-label": S.default.Messages.MESSAGE_BUTTON_COMPONENT_LINK_CONTEXT_MENU_NAME,
-    onSelect: n,
-    children: (0, t.jsx)(u.MenuGroup, {
-      children: (0, t.jsx)(u.MenuItem, {
+    onSelect: t,
+    children: (0, l.jsx)(u.MenuGroup, {
+      children: (0, l.jsx)(u.MenuItem, {
         id: "copy",
         label: S.default.Messages.MESSAGE_BUTTON_COMPONENT_LINK_CONTEXT_MENU_COPY,
-        action: () => (0, c.copy)(l)
+        action: () => (0, c.copy)(n)
       })
     })
   }) : null
 }
 
-function v(e) {
-  let l;
+function N(e) {
+  let n;
   let {
-    label: n,
+    label: t,
     style: a,
     disabled: c,
     emoji: S,
-    url: v
+    url: N
   } = e, {
-    executeStateUpdate: N,
-    visualState: h,
-    isDisabled: T
-  } = (0, p.useComponentState)(e), y = null != n && n.length > 0, x = a === r.ButtonStyle.LINK && null != v && v.length > 0, j = h === f.ActionComponentState.LOADING;
-  return l = x ? () => {
+    executeStateUpdate: v,
+    visualState: T,
+    isDisabled: h
+  } = (0, p.useComponentState)(e), x = null != t && t.length > 0, y = a === r.ButtonStyle.LINK && null != N && N.length > 0, j = T === f.ActionComponentState.LOADING;
+  return n = y ? () => {
     (0, m.handleClick)({
-      href: null != v ? v : "",
+      href: null != N ? N : "",
       shouldConfirm: !0
     })
-  } : () => N(), (0, t.jsxs)(u.Button, {
+  } : () => v(), (0, l.jsxs)(u.Button, {
     color: function(e) {
       switch (e) {
         case r.ButtonStyle.PRIMARY:
@@ -72,39 +72,39 @@ function v(e) {
       }
     }(a),
     size: u.Button.Sizes.SMALL,
-    disabled: c || h === f.ActionComponentState.DISABLED || T,
-    onClick: l,
+    disabled: c || T === f.ActionComponentState.DISABLED || h,
+    onClick: n,
     onContextMenu: e => {
-      x && (0, i.openContextMenu)(e, e => (0, t.jsx)(E, {
+      y && (0, i.openContextMenu)(e, e => (0, l.jsx)(E, {
         ...e,
-        url: v
+        url: N
       }))
     },
-    role: x ? "link" : "button",
-    children: [(0, t.jsxs)("div", {
+    role: y ? "link" : "button",
+    children: [(0, l.jsxs)("div", {
       className: s()(C.content, {
         [C.hidden]: j
       }),
       "aria-hidden": j,
-      children: [null != S ? (0, t.jsx)(o.default, {
+      children: [null != S ? (0, l.jsx)(o.default, {
         className: s()({
-          [C.textEmoji]: y
+          [C.textEmoji]: x
         }),
         src: S.src,
         emojiId: S.id,
         emojiName: S.name,
         animated: S.animated
-      }) : null, y ? (0, t.jsx)("div", {
+      }) : null, x ? (0, l.jsx)("div", {
         className: C.label,
-        children: n
-      }) : null, x ? (0, t.jsx)(d.default, {
+        children: t
+      }) : null, y ? (0, l.jsx)(d.default, {
         className: C.launchIcon,
         width: 16,
         height: 16
       }) : null]
-    }), j ? (0, t.jsx)("div", {
+    }), j ? (0, l.jsx)("div", {
       className: C.loading,
-      children: (0, t.jsx)(u.Dots, {
+      children: (0, l.jsx)(u.Dots, {
         dotRadius: 3.5,
         themed: !0
       })

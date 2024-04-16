@@ -1,18 +1,18 @@
 "use strict";
-n.r(t);
-var a = n("735250"),
-  s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
-  r = n("183249"),
-  o = n("481060"),
-  u = n("210753"),
-  d = n("441674"),
-  c = n("343644");
+a.r(t);
+var n = a("735250"),
+  s = a("470079"),
+  l = a("120356"),
+  i = a.n(l),
+  r = a("183249"),
+  o = a("481060"),
+  u = a("210753"),
+  d = a("441674"),
+  c = a("343644");
 t.default = function(e) {
   let {
     applicationId: t,
-    name: n,
+    name: a,
     imageContainerClassName: l,
     onClick: f,
     selected: E
@@ -24,30 +24,30 @@ t.default = function(e) {
     coverImageWidth: 252
   }), m = s.useCallback(() => {
     null == f || f(t)
-  }, [t, f]), S = s.useMemo(() => _ ? null : null == C ? (0, a.jsx)("div", {
+  }, [t, f]), S = s.useMemo(() => _ ? null : null == C ? (0, n.jsx)("div", {
     className: c.gameUnknownImage,
-    children: (0, a.jsx)(r.UnknownGameIcon, {
+    children: (0, n.jsx)(r.UnknownGameIcon, {
       height: 32,
       width: 32
     })
-  }) : (0, a.jsx)("img", {
+  }) : (0, n.jsx)("img", {
     className: c.gameImage,
-    alt: n,
+    alt: a,
     src: C
-  }), [C, _, n]);
-  return (0, a.jsxs)("div", {
+  }), [C, _, a]);
+  return (0, n.jsxs)("div", {
     className: c.selectedGame,
-    children: [(0, a.jsxs)(o.Clickable, {
+    children: [(0, n.jsxs)(o.Clickable, {
       onClick: m,
       className: i()(l, _ ? c.gameImageLoading : void 0, c.gameImageBackground),
-      children: [E && (0, a.jsx)(d.default, {
+      children: [E && (0, n.jsx)(d.default, {
         backgroundColor: h.hex(),
         className: c.selectedGameCheck
       }), S]
-    }), (0, a.jsx)(o.Text, {
+    }), (0, n.jsx)(o.Text, {
       variant: "text-xs/normal",
       color: "header-primary",
-      children: n
+      children: a
     })]
   })
 }

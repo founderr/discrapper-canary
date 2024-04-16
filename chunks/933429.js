@@ -26,8 +26,8 @@ var s, a, l, i, r = n("913527"),
   R = n("615365"),
   O = n("528011"),
   v = n("487419"),
-  L = n("715903"),
-  x = n("223606"),
+  x = n("715903"),
+  L = n("223606"),
   D = n("150340"),
   P = n("160404"),
   y = n("41776"),
@@ -80,8 +80,8 @@ var s, a, l, i, r = n("913527"),
   eR = n("981631"),
   eO = n("188785"),
   ev = n("702512"),
-  eL = n("474936"),
-  ex = n("46140"),
+  ex = n("474936"),
+  eL = n("46140"),
   eD = n("231338"),
   eP = n("65154");
 let ey = {
@@ -186,7 +186,7 @@ let eH = [eR.NoticeTypes.QUARANTINED, eR.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         } = e;
         if (null == n) return !1;
         let s = ee.default.getMember(n, t.id);
-        return null != s && !s.isPending && (0, L.hasAutomodQuarantinedProfile)(s)
+        return null != s && !s.isPending && (0, x.hasAutomodQuarantinedProfile)(s)
       }
     },
     [eR.NoticeTypes.QUARANTINED]: {
@@ -411,17 +411,17 @@ let eH = [eR.NoticeTypes.QUARANTINED, eR.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       predicate: () => X.default.isSuggestedAccountType(eR.PlatformTypes.PLAYSTATION) && null == X.default.getAccount(null, eR.PlatformTypes.PLAYSTATION) && !ew(eR.NoticeTypes.CONNECT_PLAYSTATION)
     },
     [eR.NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING]: {
-      predicate: () => ep.default.getAlmostExpiringTrialOffers([eL.PremiumSubscriptionSKUs.TIER_2]).length > 0 && !ew(eR.NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING)
+      predicate: () => ep.default.getAlmostExpiringTrialOffers([ex.PremiumSubscriptionSKUs.TIER_2]).length > 0 && !ew(eR.NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING)
     },
     [eR.NoticeTypes.PREMIUM_TIER_0_TRIAL_ENDING]: {
-      predicate: () => ep.default.getAlmostExpiringTrialOffers([eL.PremiumSubscriptionSKUs.TIER_0]).length > 0 && !ew(eR.NoticeTypes.PREMIUM_TIER_0_TRIAL_ENDING)
+      predicate: () => ep.default.getAlmostExpiringTrialOffers([ex.PremiumSubscriptionSKUs.TIER_0]).length > 0 && !ew(eR.NoticeTypes.PREMIUM_TIER_0_TRIAL_ENDING)
     },
     [eR.NoticeTypes.PREMIUM_UNCANCEL]: {
       predicate: e => {
         let {
           premiumSubscription: t,
           currentUser: n
-        } = e, s = null != t ? o()(t.currentPeriodEnd).diff(o()().startOf("day"), "days") : 0, a = (null == t ? void 0 : t.canceledAt) != null && (null == t ? void 0 : t.status) === eR.SubscriptionStatusTypes.CANCELED && 1 >= o()().diff(o()(t.canceledAt), "days"), l = null != t && o()(t.currentPeriodEnd).isBefore(o()()), i = null != t && t.status === eR.SubscriptionStatusTypes.CANCELED && !l && s <= 7 && s >= 0 && (0, eC.isPremiumExactly)(n, eL.PremiumTypes.TIER_2) && !a && !n.hasFreePremium() && !t.isPurchasedExternally;
+        } = e, s = null != t ? o()(t.currentPeriodEnd).diff(o()().startOf("day"), "days") : 0, a = (null == t ? void 0 : t.canceledAt) != null && (null == t ? void 0 : t.status) === eR.SubscriptionStatusTypes.CANCELED && 1 >= o()().diff(o()(t.canceledAt), "days"), l = null != t && o()(t.currentPeriodEnd).isBefore(o()()), i = null != t && t.status === eR.SubscriptionStatusTypes.CANCELED && !l && s <= 7 && s >= 0 && (0, eC.isPremiumExactly)(n, ex.PremiumTypes.TIER_2) && !a && !n.hasFreePremium() && !t.isPurchasedExternally;
         return !ew(eR.NoticeTypes.PREMIUM_UNCANCEL) && i
       },
       metadata: e => {
@@ -441,7 +441,7 @@ let eH = [eR.NoticeTypes.QUARANTINED, eR.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         let {
           premiumSubscription: t,
           currentUser: n
-        } = e, s = null != t ? o()(t.currentPeriodEnd).diff(o()().startOf("day"), "days") : 0, a = null != t ? o()(t.currentPeriodEnd).diff(o()(t.currentPeriodStart).startOf("day"), "days") : 0, l = null != t && o()(t.currentPeriodEnd).isBefore(o()()), i = eh.default.applicationIdsFetched.has(eL.PREMIUM_SUBSCRIPTION_APPLICATION), r = eh.default.getForApplication(eL.PREMIUM_SUBSCRIPTION_APPLICATION), u = null != t ? (0, eC.getPremiumPlanItem)(t) : null, d = null != u ? eC.default.getSkuIdForPlan(u.planId) : null, c = null != r && null != u && Array.from(r).filter(e => {
+        } = e, s = null != t ? o()(t.currentPeriodEnd).diff(o()().startOf("day"), "days") : 0, a = null != t ? o()(t.currentPeriodEnd).diff(o()(t.currentPeriodStart).startOf("day"), "days") : 0, l = null != t && o()(t.currentPeriodEnd).isBefore(o()()), i = eh.default.applicationIdsFetched.has(ex.PREMIUM_SUBSCRIPTION_APPLICATION), r = eh.default.getForApplication(ex.PREMIUM_SUBSCRIPTION_APPLICATION), u = null != t ? (0, eC.getPremiumPlanItem)(t) : null, d = null != u ? eC.default.getSkuIdForPlan(u.planId) : null, c = null != r && null != u && Array.from(r).filter(e => {
           let {
             skuId: t,
             consumed: n
@@ -590,7 +590,7 @@ let eH = [eR.NoticeTypes.QUARANTINED, eR.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         let {
           selectedGuildId: t
         } = e, n = null != t ? et.default.getGuild(t) : null;
-        return null != t && null != x.default.getMentionRaidDetected(t) && (null == n ? void 0 : n.hasFeature(eR.GuildFeatures.COMMUNITY)) && !ew(eR.NoticeTypes.AUTO_MODERATION_MENTION_RAID_DETECTION) || !1
+        return null != t && null != L.default.getMentionRaidDetected(t) && (null == n ? void 0 : n.hasFeature(eR.GuildFeatures.COMMUNITY)) && !ew(eR.NoticeTypes.AUTO_MODERATION_MENTION_RAID_DETECTION) || !1
       },
       metadata: e => {
         let {
@@ -599,7 +599,7 @@ let eH = [eR.NoticeTypes.QUARANTINED, eR.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
           dismissUntil: o()().add(2, "hours").toDate()
         };
         if (null != t) {
-          let e = x.default.getMentionRaidDetected(t);
+          let e = L.default.getMentionRaidDetected(t);
           null != e && (n.decisionId = e.decisionId)
         }
         return n
@@ -630,7 +630,7 @@ let eH = [eR.NoticeTypes.QUARANTINED, eR.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         if (null == e) return !1;
         let t = (0, M.encodeStreamKey)(e),
           n = H.default.getStreamHeartbeatFailure(t);
-        return null != n && Date.now() - n.firstFailedAt >= ex.CONSECUTIVE_HEARTBEAT_PERIOD_MS
+        return null != n && Date.now() - n.firstFailedAt >= eL.CONSECUTIVE_HEARTBEAT_PERIOD_MS
       },
       metadata: () => {
         let e = z.default.getCurrentUserActiveStream();

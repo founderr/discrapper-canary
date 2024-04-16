@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   useIsRejectAllMessageRequestsEnabled: function() {
     return s
   }
 });
-let a = (0, n("818083").createExperiment)({
+let n = (0, a("818083").createExperiment)({
   kind: "user",
   id: "2023-01_clear_all_message_requests",
   label: "Safety Experience Reject All Message Requests",
@@ -21,7 +21,7 @@ let a = (0, n("818083").createExperiment)({
 });
 
 function s() {
-  return a.useExperiment({
+  return n.useExperiment({
     location: "c10bec_1"
   }, {
     autoTrackExposure: !0

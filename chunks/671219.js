@@ -41,8 +41,8 @@ function M(e) {
 t.default = a.memo(function(e) {
   var t, n, l, i, R, O;
   let v, {
-      channel: L,
-      messageId: x,
+      channel: x,
+      messageId: L,
       interactionData: D
     } = e,
     {
@@ -51,11 +51,11 @@ t.default = a.memo(function(e) {
     {
       onCopy: y,
       copyRef: U
-    } = (0, c.default)(L, null == D ? void 0 : null === (t = D.application_command) || void 0 === t ? void 0 : t.id),
-    j = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(L.guild_id), [L.guild_id]);
+    } = (0, c.default)(x, null == D ? void 0 : null === (t = D.application_command) || void 0 === t ? void 0 : t.id),
+    j = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(x.guild_id), [x.guild_id]);
   if (a.useEffect(() => {
-      (null == D || D.type === u.ApplicationCommandType.CHAT && void 0 === D.application_command) && f.fetchMessageInteractionData(L.id, x)
-    }, [L.id, x, D]), null == D) v = (0, s.jsx)(o.Spinner, {
+      (null == D || D.type === u.ApplicationCommandType.CHAT && void 0 === D.application_command) && f.fetchMessageInteractionData(x.id, L)
+    }, [x.id, L, D]), null == D) v = (0, s.jsx)(o.Spinner, {
     type: o.Spinner.Type.SPINNING_CIRCLE,
     className: C.spinner
   });
@@ -68,12 +68,12 @@ t.default = a.memo(function(e) {
           option: R,
           channel: O,
           guild: v,
-          messageId: L,
-          parentOptionKey: x,
+          messageId: x,
+          parentOptionKey: L,
           commandOptionSpec: D,
           sourceAnalyticsLocations: P
         } = t,
-        y = null != x ? x + " " + R.name : R.name;
+        y = null != L ? L + " " + R.name : R.name;
       if (R.type === u.ApplicationCommandOptionType.SUB_COMMAND || R.type === u.ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
         let t = [(0, s.jsxs)(a.Fragment, {
             children: [" ", (0, s.jsx)(o.Text, {
@@ -86,7 +86,7 @@ t.default = a.memo(function(e) {
           option: n,
           channel: O,
           guild: v,
-          messageId: L,
+          messageId: x,
           parentOptionKey: y,
           commandOptionSpec: u[n.name],
           sourceAnalyticsLocations: P
@@ -106,7 +106,7 @@ t.default = a.memo(function(e) {
                 userId: t.id,
                 guildId: O.guild_id,
                 channelId: O.id,
-                messageId: L,
+                messageId: x,
                 sourceAnalyticsLocations: P,
                 analyticsLocation: {
                   section: h.AnalyticsSections.CHANNEL_TEXT_AREA_AUTOCOMPLETE
@@ -176,9 +176,9 @@ t.default = a.memo(function(e) {
       }, y)]
     }({
       option: n,
-      channel: L,
+      channel: x,
       guild: j,
-      messageId: x,
+      messageId: L,
       parentOptionKey: null,
       commandOptionSpec: t[n.name],
       sourceAnalyticsLocations: P

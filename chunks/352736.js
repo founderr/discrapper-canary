@@ -75,9 +75,9 @@ t.default = {
         }));
       case I.MessageTypes.CALL:
         let {
-          call: L
+          call: x
         } = e;
-        if (null != L && -1 === L.participants.indexOf(c.default.getId())) return (0, s.astToString)(p.default.Messages.SYSTEM_MESSAGE_CALL_STARTED.astFormat({
+        if (null != x && -1 === x.participants.indexOf(c.default.getId())) return (0, s.astToString)(p.default.Messages.SYSTEM_MESSAGE_CALL_STARTED.astFormat({
           username: O,
           usernameOnClick: I.NOOP
         }));
@@ -131,10 +131,10 @@ t.default = {
         }));
       case I.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION:
         if (e instanceof d.default) return null;
-        let x = (0, r.getMessageAuthor)((0, i.createMessageRecord)(e));
+        let L = (0, r.getMessageAuthor)((0, i.createMessageRecord)(e));
         return (0, s.astToString)((0, o.getApplicationSubscriptionSystemMessageASTContent)({
           application: e.application,
-          username: x.nick
+          username: L.nick
         }));
       case I.MessageTypes.PRIVATE_CHANNEL_INTEGRATION_ADDED:
         if (e instanceof d.default) return null;

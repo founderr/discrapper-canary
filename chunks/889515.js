@@ -1,28 +1,28 @@
 "use strict";
-n.r(l), n.d(l, {
+t.r(n), t.d(n, {
   default: function() {
     return i
   }
 });
-var t = n("735250");
-n("470079");
-var a = n("114484"),
-  s = n("970184"),
-  u = n("588625");
+var l = t("735250");
+t("470079");
+var a = t("114484"),
+  s = t("970184"),
+  u = t("588625");
 
 function i(e) {
   let {
-    components: l,
-    renderComponents: n
+    components: n,
+    renderComponents: t
   } = e, {
     message: i
   } = (0, s.useComponentStateContext)();
-  return null == l || 0 === l.length ? null : (0, t.jsxs)("div", {
+  return null == n || 0 === n.length ? null : (0, l.jsxs)("div", {
     className: u.container,
-    children: [(0, t.jsx)("div", {
+    children: [(0, l.jsx)("div", {
       className: u.children,
-      children: n(l)
-    }), null != i ? (0, t.jsx)(a.default, {
+      children: t(n)
+    }), null != i ? (0, l.jsx)(a.default, {
       className: u.error,
       message: i,
       component: e

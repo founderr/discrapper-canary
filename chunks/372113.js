@@ -27,9 +27,9 @@ var a = n("120356"),
   R = n("689938"),
   O = n("506710");
 let v = (e, t, n, s) => n ? s ? R.default.Messages.COLLECTIBLES_USE_NOW : R.default.Messages.QUESTS_SEE_CODE : e || t ? R.default.Messages.QUESTS_CLAIM_REWARD : R.default.Messages.QUESTS_ACCEPT,
-  L = (e, t, n) => e !== h.QuestContent.QUEST_INVENTORY_CARD || n || "lg" !== t ? "lg" === t ? "text-md/medium" : "sm" === t ? "text-sm/medium" : "text-xs/medium" : "text-lg/medium";
+  x = (e, t, n) => e !== h.QuestContent.QUEST_INVENTORY_CARD || n || "lg" !== t ? "lg" === t ? "text-md/medium" : "sm" === t ? "text-sm/medium" : "text-xs/medium" : "text-lg/medium";
 
-function x(e) {
+function L(e) {
   let {
     containerSize: t,
     onClick: n,
@@ -107,7 +107,7 @@ t.default = e => {
     }), (0, s.jsxs)("div", {
       className: l()(O.gridText, O.taskDetails),
       children: [(0, s.jsx)(o.Text, {
-        variant: L(P, y, G),
+        variant: x(P, y, G),
         className: O.taskInstructions,
         children: j ? R.default.Messages.QUESTS_EXPIRED_QUEST_CARD_HEADING.format({
           questName: D.config.messages.questName
@@ -172,7 +172,7 @@ t.default = e => {
       })]
     }), (0, s.jsxs)("div", {
       className: l()(O.ctaButtonContainer, O.gridCtaButtons),
-      children: [X && (0, s.jsx)(x, {
+      children: [X && (0, s.jsx)(L, {
         containerSize: y,
         onClick: () => {
           u.default.open(M.UserSettingsSections.INVENTORY), (0, T.trackQuestContentClicked)({

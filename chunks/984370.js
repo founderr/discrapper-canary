@@ -49,7 +49,7 @@ function g(e) {
     role: M,
     hideSearch: R,
     showDivider: O
-  } = e, v = (0, r.useStateFromStores)([E.default], () => E.default.getCurrentUser()), L = (null == v ? void 0 : v.isStaff()) || (null == v ? void 0 : v.isStaffPersonal()) || !1;
+  } = e, v = (0, r.useStateFromStores)([E.default], () => E.default.getCurrentUser()), x = (null == v ? void 0 : v.isStaff()) || (null == v ? void 0 : v.isStaffPersonal()) || !1;
   return (0, s.jsx)(_.default, {
     className: n,
     innerClassName: o,
@@ -61,7 +61,7 @@ function g(e) {
           className: C.search
         }, null != l ? l : a) : null, O && (0, s.jsx)(_.default.Divider, {}), (0, s.jsx)(h.default, {}), (0, s.jsx)(d.default, {
           canShowReminder: !0
-        }), (0, s.jsx)(c.default, {}), L ? (0, s.jsx)(p.default, {}) : (0, s.jsx)(I.default, {})]
+        }), (0, s.jsx)(c.default, {}), x ? (0, s.jsx)(p.default, {}) : (0, s.jsx)(I.default, {})]
       })
     }(),
     transparent: u,

@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n("47120");
-var a, s, l, i, r = n("442837"),
-  o = n("433517"),
-  u = n("570140"),
-  d = n("650774"),
-  c = n("430824"),
-  f = n("496675"),
-  E = n("981631");
+a.r(t), a("47120");
+var n, s, l, i, r = a("442837"),
+  o = a("433517"),
+  u = a("570140"),
+  d = a("650774"),
+  c = a("430824"),
+  f = a("496675"),
+  E = a("981631");
 let h = {
   MAX_MEMBER_COUNT: new Set
 };
-class _ extends(a = r.default.Store) {
+class _ extends(n = r.default.Store) {
   initialize() {
     var e;
     this.waitFor(f.default, c.default, d.default), this.syncWith([f.default, c.default, d.default], E.NOOP), o.Storage.remove(E.ChannelNoticeTypes.MAX_MEMBER_COUNT_100), o.Storage.remove(E.ChannelNoticeTypes.MAX_MEMBER_COUNT_250), e = new Set(o.Storage.get(E.ChannelNoticeTypes.MAX_MEMBER_COUNT)), h[E.ChannelNoticeTypes.MAX_MEMBER_COUNT] = void 0 !== e ? e : new Set
@@ -18,9 +18,9 @@ class _ extends(a = r.default.Store) {
   isVisible(e) {
     var t;
     if (null == e) return !1;
-    let n = null !== (t = d.default.getMemberCount(e.id)) && void 0 !== t ? t : 0,
-      a = f.default.can(E.Permissions.ADMINISTRATOR, e);
-    return !e.hasFeature(E.GuildFeatures.CLAN) && !h[E.ChannelNoticeTypes.MAX_MEMBER_COUNT].has(e.id) && a && e.maxMembers > 0 && e.maxMembers - n <= 1e4
+    let a = null !== (t = d.default.getMemberCount(e.id)) && void 0 !== t ? t : 0,
+      n = f.default.can(E.Permissions.ADMINISTRATOR, e);
+    return !e.hasFeature(E.GuildFeatures.CLAN) && !h[E.ChannelNoticeTypes.MAX_MEMBER_COUNT].has(e.id) && n && e.maxMembers > 0 && e.maxMembers - a <= 1e4
   }
 }
 i = "MaxMemberCountChannelNoticeStore", (l = "displayName") in(s = _) ? Object.defineProperty(s, l, {

@@ -30,9 +30,9 @@ var s = n("735250"),
   R = n("981631"),
   O = n("665692"),
   v = n("689938"),
-  L = n("50182");
+  x = n("50182");
 
-function x(e) {
+function L(e) {
   let {
     width: t = 6,
     height: n = 10,
@@ -97,9 +97,9 @@ function D(e) {
           onPopoutRequestClose: E
         } = e;
         if (l && null == a.activityInstance || o) return (0, s.jsx)("div", {
-          className: L.replyBadge,
-          children: (0, s.jsx)(x, {
-            className: L.commandIcon
+          className: x.replyBadge,
+          children: (0, s.jsx)(L, {
+            className: x.commandIcon
           })
         });
         if (null != a.interaction) {
@@ -127,8 +127,8 @@ function D(e) {
             onContextMenu: r,
             onMouseDown: o,
             className: i()({
-              [L.executedCommandAvatar]: !0,
-              [L.clickable]: null != l
+              [x.executedCommandAvatar]: !0,
+              [x.clickable]: null != l
             })
           })
         }({
@@ -197,7 +197,7 @@ function D(e) {
         tag: "span",
         onClick: e,
         children: (0, s.jsx)("div", {
-          className: i()(L.commandName, L.clickable),
+          className: i()(x.commandName, x.clickable),
           children: v.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITY
         })
       })
@@ -233,18 +233,18 @@ function D(e) {
               onClick: r,
               children: (0, s.jsxs)("div", {
                 className: i()({
-                  [L.commandName]: !n
+                  [x.commandName]: !n
                 }, {
-                  [L.appLauncherOnboardingCommandName]: n
-                }, L.clickable),
+                  [x.appLauncherOnboardingCommandName]: n
+                }, x.clickable),
                 children: [n && (0, s.jsx)(S.default, {
                   height: 10,
                   width: 10,
-                  className: L.appsIcon
+                  className: x.appsIcon
                 }), n ? u : O.COMMAND_SENTINEL + u]
               })
             }) : (0, s.jsx)("div", {
-              className: L.commandName,
+              className: x.commandName,
               children: u
             })
           }
@@ -258,7 +258,7 @@ function D(e) {
   return (0, s.jsx)(m.AnalyticsLocationProvider, {
     value: u,
     children: (0, s.jsx)("div", {
-      className: i()(L.repliedMessage, L.executedCommand, U),
+      className: i()(x.repliedMessage, x.executedCommand, U),
       "aria-hidden": !e.compact,
       children: n
     })

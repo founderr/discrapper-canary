@@ -121,8 +121,8 @@ t.default = a.memo(function(e) {
     "aria-controls": v,
     guild: x,
     guildBanner: R,
-    animationOverlayHeight: M,
-    children: y,
+    animationOverlayHeight: y,
+    children: M,
     headerClassName: O,
     communityInfoVisible: b,
     hasSubheader: D
@@ -186,7 +186,7 @@ t.default = a.memo(function(e) {
             })
           }), (0, l.jsx)("div", {
             className: _.headerChildren,
-            children: y
+            children: M
           })]
         }), G && (0, l.jsx)(I, {
           guild: x,
@@ -207,7 +207,7 @@ t.default = a.memo(function(e) {
       },
       onMouseLeave: () => F(!1),
       style: {
-        height: M
+        height: y
       }
     }) : null]
   })

@@ -1,40 +1,40 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var s = n("40146"),
-  l = n("619271"),
-  i = n("104259"),
-  r = n("541561"),
-  o = n("520030"),
-  u = n("600394"),
-  d = n("170039"),
-  c = n("199202"),
-  f = n("360048"),
-  E = n("823379"),
-  h = n("731455"),
-  _ = n("228726");
+a.r(t);
+var n = a("735250");
+a("470079");
+var s = a("40146"),
+  l = a("619271"),
+  i = a("104259"),
+  r = a("541561"),
+  o = a("520030"),
+  u = a("600394"),
+  d = a("170039"),
+  c = a("199202"),
+  f = a("360048"),
+  E = a("823379"),
+  h = a("731455"),
+  _ = a("228726");
 let C = e => {
     switch (e) {
       case h.CategoryIcons.Activity:
-        return (0, a.jsx)(l.default, {});
+        return (0, n.jsx)(l.default, {});
       case h.CategoryIcons.Discover:
-        return (0, a.jsx)(i.default, {});
+        return (0, n.jsx)(i.default, {});
       case h.CategoryIcons.Education:
-        return (0, a.jsx)(r.default, {});
+        return (0, n.jsx)(r.default, {});
       case h.CategoryIcons.Music:
-        return (0, a.jsx)(o.default, {});
+        return (0, n.jsx)(o.default, {});
       case h.CategoryIcons.Science:
-        return (0, a.jsx)(u.default, {});
+        return (0, n.jsx)(u.default, {});
       case h.CategoryIcons.Stage:
-        return (0, a.jsx)(d.default, {
+        return (0, n.jsx)(d.default, {
           height: 22,
           width: 22
         });
       case h.CategoryIcons.Television:
-        return (0, a.jsx)(c.default, {});
+        return (0, n.jsx)(c.default, {});
       case h.CategoryIcons.Server:
-        return (0, a.jsx)(s.ServerIcon, {});
+        return (0, n.jsx)(s.ServerIcon, {});
       default:
         (0, E.assertNever)(e)
     }
@@ -42,12 +42,12 @@ let C = e => {
   m = e => {
     let {
       categories: t,
-      currentCategoryId: n,
+      currentCategoryId: a,
       handleCategorySelect: s,
       shouldDisplaySelectedCategory: l = !0
     } = e;
-    return (0, a.jsx)(a.Fragment, {
-      children: t.map(e => (0, a.jsx)(f.default, {
+    return (0, n.jsx)(n.Fragment, {
+      children: t.map(e => (0, n.jsx)(f.default, {
         avatar: C(e.icon),
         name: e.name,
         focusProps: {
@@ -59,7 +59,7 @@ let C = e => {
         },
         onClick: () => s(e.categoryId),
         wrapContent: !0,
-        selected: l && e.categoryId === n,
+        selected: l && e.categoryId === a,
         className: _.categoryItem,
         selectedClassName: _.selectedCategoryItem,
         innerClassName: _.itemInner

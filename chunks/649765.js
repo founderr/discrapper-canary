@@ -6,14 +6,14 @@ var n = i("735250"),
   a = i.n(s),
   l = i("780384"),
   o = i("481060"),
-  u = i("410030"),
-  c = i("206180"),
+  c = i("410030"),
+  u = i("206180"),
   d = i("714961"),
   f = i("25538"),
   p = i("689938"),
   C = i("281982");
 let m = () => {
-  let e = (0, u.default)(),
+  let e = (0, c.default)(),
     t = (0, l.isThemeLight)(e) ? f.default : d.default;
   return (0, n.jsxs)("div", {
     className: C.coachTipContainer,
@@ -59,13 +59,13 @@ t.default = e => {
         children: p.default.Messages.NEW
       }), (0, n.jsx)("span", {
         className: a()(C.star, C.starLeft),
-        children: (0, n.jsx)(c.default, {
+        children: (0, n.jsx)(u.default, {
           width: 8,
           height: 8
         })
       }), (0, n.jsx)("span", {
         className: a()(C.star, C.starRight),
-        children: (0, n.jsx)(c.default, {
+        children: (0, n.jsx)(u.default, {
           width: 13,
           height: 13
         })

@@ -98,9 +98,9 @@ let v = a.memo(function(e) {
         channelState: t,
         children: [(0, s.jsx)(N.default, {
           channel: r
-        }), (0, s.jsx)(L, {
+        }), (0, s.jsx)(x, {
           ...e
-        }), "nsfw" === t.type ? null : (0, s.jsx)(x, {
+        }), "nsfw" === t.type ? null : (0, s.jsx)(L, {
           ...e
         })]
       }),
@@ -117,7 +117,7 @@ let v = a.memo(function(e) {
   })
 });
 
-function L(e) {
+function x(e) {
   let {
     channel: t,
     markChannelRead: n,
@@ -146,7 +146,7 @@ function L(e) {
   })
 }
 
-function x(e) {
+function L(e) {
   let {
     channel: t,
     toggle: n,

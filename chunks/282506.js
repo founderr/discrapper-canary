@@ -1,54 +1,54 @@
 "use strict";
-let a;
-n.r(t);
-var s = n("570140"),
-  l = n("519938"),
-  i = n("317770"),
-  r = n("317381"),
-  o = n("928518"),
-  u = n("199902"),
-  d = n("592125"),
-  c = n("819640"),
-  f = n("131951"),
-  E = n("366050"),
-  h = n("19780"),
-  _ = n("944486"),
-  C = n("914010"),
-  m = n("979651"),
-  S = n("981631"),
-  I = n("65154");
+let n;
+a.r(t);
+var s = a("570140"),
+  l = a("519938"),
+  i = a("317770"),
+  r = a("317381"),
+  o = a("928518"),
+  u = a("199902"),
+  d = a("592125"),
+  c = a("819640"),
+  f = a("131951"),
+  E = a("366050"),
+  h = a("19780"),
+  _ = a("944486"),
+  C = a("914010"),
+  m = a("979651"),
+  S = a("981631"),
+  I = a("65154");
 
 function p() {
   var e;
-  let t = a;
+  let t = n;
   if (null == t || !E.default.isOpen(t)) return !1;
-  s.default.wait(() => l.close(t)), null === (e = h.default.getRTCConnection()) || void 0 === e || e.setPipOpen(!1), a = null
+  s.default.wait(() => l.close(t)), null === (e = h.default.getRTCConnection()) || void 0 === e || e.setPipOpen(!1), n = null
 }
 
 function T() {
   let e = h.default.getChannelId(),
-    t = a === e;
+    t = n === e;
   return function() {
     let e = h.default.getChannelId(),
       t = _.default.getChannelId();
     if (!f.default.supports(I.Features.VIDEO) || o.default.getWindowOpen(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT)) return !0;
-    let n = u.default.getAllActiveStreams().length > 0,
-      a = null != e && Object.values(m.default.getVideoVoiceStatesForChannel(e)).some(e => {
+    let a = u.default.getAllActiveStreams().length > 0,
+      n = null != e && Object.values(m.default.getVideoVoiceStatesForChannel(e)).some(e => {
         let {
           userId: t
         } = e;
         return !f.default.isLocalVideoDisabled(t)
       });
-    if (!(a || n)) return !0;
+    if (!(n || a)) return !0;
     let s = c.default.hasLayers();
     return !(s && c.default.getLayers().includes(S.Layers.RTC_DEBUG)) && (!!s || e === t || !1)
   }() ? p() : (!t && p(), null != e && function(e) {
     var t;
-    let n = d.default.getChannel(e);
-    if (null == n || E.default.isOpen(e)) return !1;
-    s.default.wait(() => l.open(n.id, S.PictureInPictureComponents.VIDEO, {
-      channel: n
-    })), null === (t = h.default.getRTCConnection()) || void 0 === t || t.setPipOpen(!0), a = e
+    let a = d.default.getChannel(e);
+    if (null == a || E.default.isOpen(e)) return !1;
+    s.default.wait(() => l.open(a.id, S.PictureInPictureComponents.VIDEO, {
+      channel: a
+    })), null === (t = h.default.getRTCConnection()) || void 0 === t || t.setPipOpen(!0), n = e
   }(e))
 }
 class g extends i.default {

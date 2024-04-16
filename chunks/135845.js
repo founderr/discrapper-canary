@@ -37,10 +37,10 @@ function I(e) {
   l()(null != I, "Invite cannot be null");
   let {
     target_type: v,
-    target_user: L
+    target_user: x
   } = I;
-  l()(v === _.InviteTargetTypes.STREAM && null != L, "invalid streaming invite");
-  let x = p === L.id,
+  l()(v === _.InviteTargetTypes.STREAM && null != x, "invalid streaming invite");
+  let L = p === x.id,
     D = I.state === E.InviteStates.ACCEPTING,
     P = null != h;
   if (null == h) {
@@ -49,10 +49,10 @@ function I(e) {
   }
   let y = null != I.channel ? (0, r.createChannelRecordFromInvite)(I.channel) : null,
     U = R ? N : S;
-  P && !O ? a = x ? T.default.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : T.default.Messages.INVITE_BUTTON_STREAM_ENDED.format({
-    name: L.username
-  }) : (t = T.default.Messages.WATCH, n = c.default.Button.Colors.GREEN, R && (t = T.default.Messages.INVITE_BUTTON_STREAM_WATCHING, n = c.default.Button.Colors.PRIMARY), a = x ? T.default.Messages.INVITE_BUTTON_STREAMER : T.default.Messages.INVITE_BUTTON_STREAMING.format({
-    name: L.username
+  P && !O ? a = L ? T.default.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : T.default.Messages.INVITE_BUTTON_STREAM_ENDED.format({
+    name: x.username
+  }) : (t = T.default.Messages.WATCH, n = c.default.Button.Colors.GREEN, R && (t = T.default.Messages.INVITE_BUTTON_STREAM_WATCHING, n = c.default.Button.Colors.PRIMARY), a = L ? T.default.Messages.INVITE_BUTTON_STREAMER : T.default.Messages.INVITE_BUTTON_STREAMING.format({
+    name: x.username
   }));
   let j = A === h.id && null != y ? (0, s.jsx)(c.default.Channel, {
     channel: y

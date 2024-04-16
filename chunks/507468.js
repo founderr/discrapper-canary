@@ -1,21 +1,21 @@
 "use strict";
-n.r(t);
-var a = n("392711"),
-  s = n.n(a),
-  l = n("570140"),
-  i = n("755264"),
-  r = n("315341"),
-  o = n("262847"),
-  u = n("675478"),
-  d = n("581883"),
-  c = n("526761");
+a.r(t);
+var n = a("392711"),
+  s = a.n(n),
+  l = a("570140"),
+  i = a("755264"),
+  r = a("315341"),
+  o = a("262847"),
+  u = a("675478"),
+  d = a("581883"),
+  c = a("526761");
 
 function f() {
   let e = d.default.getFullState(),
     t = e[c.UserSettingsTypes.PRELOADED_USER_SETTINGS];
-  t.editInfo.triggeredMigrations && u.PreloadedUserSettingsActionCreators.markDirtyFromMigration(t.proto, t.editInfo.cleanupFuncs), s().forEach(u.UserSettingsActionCreatorsByType, (t, n) => {
-    let a = e[Number(n)];
-    null != a.editInfo.offlineEditDataVersion && null != a.editInfo.protoToSave && t.scheduleSaveFromOfflineEdit()
+  t.editInfo.triggeredMigrations && u.PreloadedUserSettingsActionCreators.markDirtyFromMigration(t.proto, t.editInfo.cleanupFuncs), s().forEach(u.UserSettingsActionCreatorsByType, (t, a) => {
+    let n = e[Number(a)];
+    null != n.editInfo.offlineEditDataVersion && null != n.editInfo.protoToSave && t.scheduleSaveFromOfflineEdit()
   })
 }
 
@@ -23,13 +23,13 @@ function E(e) {
   let {
     settings: {
       proto: t,
-      type: n
+      type: a
     },
-    delaySeconds: a,
+    delaySeconds: n,
     jitter: s
   } = e;
-  (0, u.UserSettingsActionCreatorsByType)[n].markDirty(t, {
-    delaySeconds: a,
+  (0, u.UserSettingsActionCreatorsByType)[a].markDirty(t, {
+    delaySeconds: n,
     jitter: s
   })
 }

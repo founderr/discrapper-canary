@@ -30,14 +30,14 @@ var s = n("735250"),
   R = n("981631"),
   O = n("689938"),
   v = n("916621");
-let L = {
+let x = {
   offset: {
     left: 4,
     right: -12
   }
 };
 
-function x(e, t, n) {
+function L(e, t, n) {
   let s = t ? N.default.guildFilter : null,
     a = t ? N.default.roleFilter : null,
     l = t ? N.default.everyoneFilter : null,
@@ -65,17 +65,17 @@ function D(e) {
     guildFilter: N.default.guildFilter,
     roleFilter: N.default.roleFilter,
     everyoneFilter: N.default.everyoneFilter
-  })), L = (0, u.default)(S), D = (0, u.default)(A), P = (0, u.default)(g);
+  })), x = (0, u.default)(S), D = (0, u.default)(A), P = (0, u.default)(g);
   a.useEffect(() => {
     if (!N.default.hasLoadedEver) {
-      x(T, !0);
+      L(T, !0);
       return
-    }(null != L && S !== L || null != D && A !== D || null != P && g !== P) && x(T, !0)
-  }, [L, S, D, A, P, g, T, !0]);
+    }(null != x && S !== x || null != D && A !== D || null != P && g !== P) && L(T, !0)
+  }, [x, S, D, A, P, g, T, !0]);
   a.useEffect(() => {
     d.AttachmentLinkRefreshExperiment.getCurrentConfig({
       location: "mentions"
-    }).enabled && (null == I ? void 0 : I.some(c.messageHasExpiredAttachmentUrl)) && (r.default.clearMentions(), x(T, !0))
+    }).enabled && (null == I ? void 0 : I.some(c.messageHasExpiredAttachmentUrl)) && (r.default.clearMentions(), L(T, !0))
   }, []), a.useEffect(() => () => {
     r.default.truncateMentions(R.MAX_MENTIONS_PER_FETCH)
   }, []);
@@ -101,7 +101,7 @@ function D(e) {
       hasMore: p,
       analyticsName: "Recent Mentions",
       loadMore: function() {
-        x(T, !0, null != I && I.length > 0 ? I[I.length - 1].id : null)
+        L(T, !0, null != I && I.length > 0 ? I[I.length - 1].id : null)
       },
       canCloseAllMessages: !0,
       renderHeader: U,
@@ -166,7 +166,7 @@ function U(e) {
         hideAccessories: o,
         compact: E.MessageDisplayCompact.getSetting(),
         animateAvatar: !1,
-        focusProps: L,
+        focusProps: x,
         trackAnnouncementViews: !0
       }, t.id)]
     })]

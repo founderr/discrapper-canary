@@ -1,28 +1,28 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("735250"),
-  s = n("470079"),
-  l = n("481060"),
-  i = n("904245"),
-  r = n("944486"),
-  o = n("82950"),
-  u = n("981631"),
-  d = n("921944"),
-  c = n("689938"),
-  f = n("589148");
+a.r(t), a("47120");
+var n = a("735250"),
+  s = a("470079"),
+  l = a("481060"),
+  i = a("904245"),
+  r = a("944486"),
+  o = a("82950"),
+  u = a("981631"),
+  d = a("921944"),
+  c = a("689938"),
+  f = a("589148");
 
-function E(e, t, n) {
+function E(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: a,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = a, e
 }
 class h extends s.PureComponent {
   render() {
     let e = "".concat(c.default.Messages.INVITE_NOTICE_MESSAGE, "\n").concat(c.default.Messages.INVITE_NOTICE_MESSAGE_PART_2);
-    return (0, a.jsx)(o.default, {
+    return (0, n.jsx)(o.default, {
       guild: this.props.guild,
       onDismissed: this.handleClose,
       onClick: this.handleInvite,
@@ -42,9 +42,9 @@ class h extends s.PureComponent {
       (0, l.openModalLazy)(async () => {
         let {
           default: t
-        } = await Promise.all([n.e("99387"), n.e("7654")]).then(n.bind(n, "560114"));
-        return n => (0, a.jsx)(t, {
-          ...n,
+        } = await Promise.all([a.e("99387"), a.e("7654")]).then(a.bind(a, "560114"));
+        return a => (0, n.jsx)(t, {
+          ...a,
           guild: e,
           source: u.InstantInviteSources.INVITE_NOTICE
         })

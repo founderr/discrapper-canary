@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return v
   },
   default: function() {
-    return L
+    return x
   },
   isPollMessageDirectlyInteractive: function() {
     return O
@@ -101,9 +101,9 @@ function v(e, t) {
   }
   let R = I.size > 0,
     v = A.some(e => !0 === e.me_vote),
-    L = !h && v,
-    x = L || T || N,
-    D = E && M && (!v || h || x),
+    x = !h && v,
+    L = x || T || N,
+    D = E && M && (!v || h || L),
     P = null === (s = u.default.getChannel(e.getChannelId())) || void 0 === s ? void 0 : null === (n = s.getGuildId) || void 0 === n ? void 0 : n.call(s),
     y = null != P ? d.default.getSelfMember(P) : null,
     U = (0, r.hasAutomodQuarantinedProfile)(y),
@@ -111,12 +111,12 @@ function v(e, t) {
   return {
     poll: f,
     canTapAnswers: D,
-    canRemoveVote: L && E && !T,
-    canShowVoteCounts: x,
-    canSubmitVote: !p && R && !L && E && !U && !j,
+    canRemoveVote: x && E && !T,
+    canShowVoteCounts: L,
+    canSubmitVote: !p && R && !x && E && !U && !j,
     expirationLabel: _,
     hasSelectedAnswer: R,
-    hasVoted: L,
+    hasVoted: x,
     hasVoteRecorded: v,
     isEditingVote: h,
     isExpired: T,
@@ -125,12 +125,12 @@ function v(e, t) {
     reactions: A,
     selectedAnswerIds: I,
     submitting: p,
-    tapShouldOpenVotersModal: x,
+    tapShouldOpenVotersModal: L,
     showResults: N
   }
 }
 
-function L(e, t) {
+function x(e, t) {
   var n, r;
   let {
     animateEmoji: o = !1,
@@ -145,11 +145,11 @@ function L(e, t) {
   let C = null === (r = u.default.getChannel(e.getChannelId())) || void 0 === r ? void 0 : null === (n = r.getGuildId) || void 0 === n ? void 0 : n.call(r),
     g = (0, h.getAvatarUrl)(S, C),
     O = m.answers,
-    L = m.layout_type,
-    x = v(e, t, {
+    x = m.layout_type,
+    L = v(e, t, {
       formattedExpirationLabel: c
     });
-  if (null == x) return;
+  if (null == L) return;
   let {
     canTapAnswers: D,
     canRemoveVote: P,
@@ -166,7 +166,7 @@ function L(e, t) {
     submitting: V,
     tapShouldOpenVotersModal: Y,
     showResults: K
-  } = x, W = (0, I.getTotalVotes)(w), z = A.default.Messages.POLL_VOTES_COUNT.format({
+  } = L, W = (0, I.getTotalVotes)(w), z = A.default.Messages.POLL_VOTES_COUNT.format({
     count: W.toLocaleString()
   }), Q = Math.max(...O.map(e => {
     var t, n;
@@ -227,7 +227,7 @@ function L(e, t) {
       style: I,
       shouldAnimateTransition: V,
       votesPercentage: Math.round(100 * (0 === W ? 0 : c / W)),
-      votes: (0, s.match)(L).with(a.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(".concat(c.toLocaleString(), ")")).otherwise(() => A.default.Messages.POLL_VOTES_COUNT.format({
+      votes: (0, s.match)(x).with(a.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(".concat(c.toLocaleString(), ")")).otherwise(() => A.default.Messages.POLL_VOTES_COUNT.format({
         count: c.toLocaleString()
       }))
     }
@@ -340,10 +340,10 @@ function L(e, t) {
       tapShouldOpenVotersModal: !0,
       platform: "web"
     }, () => A.default.Messages.POLL_TAP_FOR_VOTERS_A11Y_ANDROID).otherwise(() => void 0),
-    layoutType: L,
+    layoutType: x,
     resources: (0, N.default)({
       theme: d,
-      layoutType: L
+      layoutType: x
     }),
     containerStyle: "normal",
     primaryAction: J,

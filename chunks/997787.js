@@ -15,8 +15,8 @@ function l(e, t, i) {
 let o = {
     guildNoticeDismissed: []
   },
-  u = new Map,
-  c = new Set;
+  c = new Map,
+  u = new Set;
 class d extends(r = s.default.PersistedStore) {
   initialize() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : o;
@@ -27,14 +27,14 @@ class d extends(r = s.default.PersistedStore) {
   }
   shouldShowChannelNotice(e) {
     var t, i;
-    return !n.guildNoticeDismissed.includes(e) && (null !== (i = null === (t = u.get(e)) || void 0 === t ? void 0 : t.size) && void 0 !== i ? i : 0) > 0
+    return !n.guildNoticeDismissed.includes(e) && (null !== (i = null === (t = c.get(e)) || void 0 === t ? void 0 : t.size) && void 0 !== i ? i : 0) > 0
   }
   canShowOverviewTooltip(e, t) {
     var i;
-    return (null === (i = u.get(e)) || void 0 === i ? void 0 : i.has(t)) === !0
+    return (null === (i = c.get(e)) || void 0 === i ? void 0 : i.has(t)) === !0
   }
   canShowToggleTooltip(e) {
-    return c.has(e)
+    return u.has(e)
   }
 }
 l(d, "displayName", "CommandsMigrationStore"), l(d, "persistKey", "CommandsMigrationStore"), t.default = new d(a.default, {
@@ -43,7 +43,7 @@ l(d, "displayName", "CommandsMigrationStore"), l(d, "persistKey", "CommandsMigra
       guildId: t,
       integrationIdsWithAppCommands: i
     } = e;
-    return u.set(t, new Set(i)), !0
+    return c.set(t, new Set(i)), !0
   },
   COMMANDS_MIGRATION_NOTICE_DISMISSED: function(e) {
     let {
@@ -57,12 +57,12 @@ l(d, "displayName", "CommandsMigrationStore"), l(d, "persistKey", "CommandsMigra
       guildId: i,
       integrationId: n
     } = e;
-    null === (t = u.get(i)) || void 0 === t || t.clear(), c.add(n)
+    null === (t = c.get(i)) || void 0 === t || t.clear(), u.add(n)
   },
   COMMANDS_MIGRATION_TOGGLE_TOOLTIP_DISMISSED: function(e) {
     let {
       integrationId: t
     } = e;
-    c.delete(t)
+    u.delete(t)
   }
 })

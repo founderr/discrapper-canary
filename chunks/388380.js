@@ -1,13 +1,13 @@
 "use strict";
-n.r(t);
-var a = n("544891"),
-  s = n("570140"),
-  l = n("407570"),
-  i = n("981631");
+a.r(t);
+var n = a("544891"),
+  s = a("570140"),
+  l = a("407570"),
+  i = a("981631");
 t.default = {
   async fetch() {
     try {
-      let e = await a.HTTP.get({
+      let e = await n.HTTP.get({
         url: i.Endpoints.FRIEND_SUGGESTIONS
       });
       s.default.dispatch({
@@ -21,11 +21,11 @@ t.default = {
     }
   },
   ignore(e) {
-    a.HTTP.del(i.Endpoints.FRIEND_SUGGESTION(e))
+    n.HTTP.del(i.Endpoints.FRIEND_SUGGESTION(e))
   },
   async viewSuggestions(e) {
     if ((0, l.isInFriendSuggestionSeenStateExperiment)()) try {
-      await a.HTTP.post({
+      await n.HTTP.post({
         url: i.Endpoints.FRIEND_FINDER_VIEWED_SUGGESTIONS,
         body: {
           viewed_user_ids: e

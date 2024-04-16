@@ -30,8 +30,8 @@ var s = n("735250"),
   R = n("263704"),
   O = n("795295"),
   v = n("288176"),
-  L = n("740727"),
-  x = n("622116"),
+  x = n("740727"),
+  L = n("622116"),
   D = n("289565"),
   P = n("778947"),
   y = n("702346"),
@@ -73,7 +73,7 @@ function Y(e) {
 function K(e, t) {
   switch (e) {
     case _.AutomodAlertActionType.DELETE_USER_MESSAGE:
-      return (0, s.jsx)(L.default, {
+      return (0, s.jsx)(x.default, {
         width: 16,
         height: 16,
         className: H.alertActionIcon,
@@ -172,7 +172,7 @@ function Q(e) {
     }
   } = (0, b.useAutomodAvatar)(!0), {
     onFocus: O,
-    ...L
+    ...x
   } = (0, u.useListItem)(null != t ? t : ""), {
     isFocused: U,
     handleFocus: j,
@@ -224,7 +224,7 @@ function Q(e) {
     (0, I.executeAlertAction)(l.id, r, _.AutomodAlertActionType.DELETE_USER_MESSAGE)
   }, [r, l.id]), ef = a.useMemo(() => (0, T.getActionHeaderText)(l, J, () => (0, s.jsx)("div", {
     className: H.channelNameContainer,
-    children: (0, s.jsx)(x.default, {
+    children: (0, s.jsx)(L.default, {
       channel: J,
       className: H.channelName,
       openChatWithoutConnecting: !0
@@ -278,7 +278,7 @@ function Q(e) {
             [H.compact]: n
           }),
           children: (0, s.jsx)(D.default, {
-            ...L,
+            ...x,
             message: l,
             channel: J,
             content: ei,

@@ -25,8 +25,8 @@ var s, a = n("735250"),
   R = n("55563"),
   O = n("695103"),
   v = n("451478"),
-  L = n("976644"),
-  x = n("466111"),
+  x = n("976644"),
+  L = n("466111"),
   D = n("626135"),
   P = n("630388"),
   y = n("74538"),
@@ -135,7 +135,7 @@ class F extends(s = l.Component) {
         submitting: s || !0 === n.submitting,
         onClick: null != n.onClick ? n.onClick : this.handleClick
       };
-    return (t = !0 === n.useShinyButton ? (0, a.jsxs)(L.default, {
+    return (t = !0 === n.useShinyButton ? (0, a.jsxs)(x.default, {
       ...g,
       pauseAnimation: !c || _,
       children: [n.buttonIcon, e]
@@ -168,7 +168,7 @@ class F extends(s = l.Component) {
       isInTestMode: r
     } = this.props, o = {
       useShinyButton: !0,
-      buttonIcon: (0, a.jsx)(x.default, {
+      buttonIcon: (0, a.jsx)(L.default, {
         className: G.premiumIcon
       })
     };
@@ -289,7 +289,7 @@ B(F, "defaultProps", {
       o = null != a ? g.default.isEntitledToSku(t, a, s, r) : null,
       u = y.default.canInstallPremiumApplications(t);
     return [e, t, l, o, u, a]
-  }), m = (0, u.useStateFromStores)([v.default], () => v.default.isFocused()), N = (0, u.useStateFromStores)([M.default], () => M.default.isPurchasingSKU), S = (0, u.useStateFromStores)([C.default], () => C.default.locale), L = (0, I.useAnalyticsContext)();
+  }), m = (0, u.useStateFromStores)([v.default], () => v.default.isFocused()), N = (0, u.useStateFromStores)([M.default], () => M.default.isPurchasingSKU), S = (0, u.useStateFromStores)([C.default], () => C.default.locale), x = (0, I.useAnalyticsContext)();
   if (null != n && null == l) throw Error("Unexpected entitlementBranchId without a channelId");
   return (0, a.jsx)(F, {
     ...r,
@@ -306,7 +306,7 @@ B(F, "defaultProps", {
     isWindowFocused: m,
     isPurchasing: N,
     locale: S,
-    analyticsContext: L,
+    analyticsContext: x,
     ref: t,
     targetSkuId: T
   })

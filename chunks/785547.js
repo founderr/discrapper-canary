@@ -35,7 +35,7 @@ function v(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }(l = s || (s = {})).PLAY = "play", l.NOW_PLAYING = "now_playing", l.INSTALL = "install", l.UPDATE = "update", l.PAUSED = "paused", l.LOCATE = "locate", l.UNINSTALLING = "uninstalling", l.QUEUED = "queued", l.DOWNLOADING = "downloading", l.UNSUPPORTED_OS = "unsupported_os", l.ADD_TO_LIBRARY = "add_to_library", l.PREORDER_WAIT = "preorder_wait";
-let L = Object.freeze({
+let x = Object.freeze({
     [M.LibraryApplicationActions.PLAY]: "play",
     [M.LibraryApplicationActions.INSTALL]: "install",
     [M.LibraryApplicationActions.UPDATE]: "update",
@@ -43,7 +43,7 @@ let L = Object.freeze({
     [M.LibraryApplicationActions.MOVE_UP]: "queued",
     [M.LibraryApplicationActions.RESUME]: "paused"
   }),
-  x = () => [R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_1, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_2, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_3, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_4, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_5, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_6, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_7, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_8, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_9, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_10];
+  L = () => [R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_1, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_2, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_3, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_4, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_5, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_6, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_7, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_8, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_9, R.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_10];
 class D extends(a = r.Component) {
   get analyticsLocation() {
     return {
@@ -63,7 +63,7 @@ class D extends(a = r.Component) {
       case "locate":
         return R.default.Messages.GAME_ACTION_BUTTON_LOCATE;
       case "uninstalling":
-        let t = x();
+        let t = L();
         return null == this._uninstallStringIndex && (this._uninstallStringIndex = Math.floor(Math.random() * t.length)), t[this._uninstallStringIndex];
       case "queued":
         return R.default.Messages.GAME_ACTION_BUTTON_QUEUED;
@@ -85,7 +85,7 @@ class D extends(a = r.Component) {
     } = this.props;
     if (e.isHidden()) return "add_to_library";
     if (e.isPreorder()) return "preorder_wait";
-    let s = null != n ? L[n] : null;
+    let s = null != n ? x[n] : null;
     return null != s ? s : null != t && t.type === M.LocalDispatchApplicationStates.UNINSTALLING ? "uninstalling" : (0, S.isWeb)() ? "play" : "unsupported_os"
   }
   renderPlayButton() {

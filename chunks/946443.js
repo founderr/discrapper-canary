@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   UnreadsCrashed: function() {
-    return L
+    return x
   },
   default: function() {
     return O
@@ -39,8 +39,8 @@ function O(e) {
     showTutorial: l,
     setSeenTutorial: r,
     closePopout: O,
-    badgeState: L
-  } = e, x = a.useRef(null), [D, P] = (0, A.default)(x), {
+    badgeState: x
+  } = e, L = a.useRef(null), [D, P] = (0, A.default)(L), {
     loadState: y,
     channels: U
   } = D, {
@@ -70,7 +70,7 @@ function O(e) {
         to: r.offsetTop
       })
     })
-  })(x, D, P),
+  })(L, D, P),
   function(e, t) {
     a.useEffect(() => {
       let n = () => {
@@ -89,7 +89,7 @@ function O(e) {
     E.default.unsubscribe("CONNECTION_OPEN", O)
   }), [O]);
   let G = (0, d.useStateFromStores)([_.default], () => _.default.messageGroupSpacing),
-    B = (0, T.default)("unreads", x);
+    B = (0, T.default)("unreads", L);
   if (0 === U.length) {
     var F;
     return (0, s.jsxs)("div", {
@@ -97,7 +97,7 @@ function O(e) {
       children: [(0, s.jsx)(S.default, {
         tab: c.InboxTab.UNREADS,
         setTab: t,
-        badgeState: L,
+        badgeState: x,
         closePopout: O
       }), (0, s.jsx)(N.default, {
         Icon: m.default,
@@ -112,7 +112,7 @@ function O(e) {
     children: [(0, s.jsx)(S.default, {
       tab: c.InboxTab.UNREADS,
       setTab: t,
-      badgeState: L,
+      badgeState: x,
       closePopout: O,
       children: (0, s.jsx)(h.default, {
         type: "top-header",
@@ -129,7 +129,7 @@ function O(e) {
           return (0, s.jsxs)(f.AdvancedScrollerThin, {
             ref: e => {
               var n;
-              x.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
+              L.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
             },
             ...a,
             onScroll: y === A.LoadState.Done ? void 0 : j,
@@ -177,7 +177,7 @@ function v(e) {
   })
 }
 
-function L(e) {
+function x(e) {
   let {
     setTab: t,
     badgeState: n,

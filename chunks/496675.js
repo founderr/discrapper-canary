@@ -244,7 +244,7 @@ class X extends(i = d.default.Store) {
   }
 }
 
-function q() {
+function Q() {
   y = {}, M = {}, P = {}, U = 0
 }
 a = "PermissionStore", (s = "displayName") in(r = X) ? Object.defineProperty(r, s, {
@@ -259,7 +259,7 @@ a = "PermissionStore", (s = "displayName") in(r = X) ? Object.defineProperty(r, 
   CACHE_LOADED: V,
   CACHE_LOADED_LAZY: V,
   CONNECTION_CLOSED: function() {
-    q()
+    Q()
   },
   GUILD_CREATE: F,
   GUILD_UPDATE: F,
@@ -336,7 +336,7 @@ a = "PermissionStore", (s = "displayName") in(r = X) ? Object.defineProperty(r, 
   GUILD_ROLE_CREATE: j,
   GUILD_ROLE_UPDATE: j,
   GUILD_ROLE_DELETE: j,
-  LOGOUT: q,
+  LOGOUT: Q,
   STAGE_INSTANCE_CREATE: W,
   STAGE_INSTANCE_UPDATE: W,
   STAGE_INSTANCE_DELETE: W,

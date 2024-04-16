@@ -1,95 +1,95 @@
 "use strict";
-n.r(t), n.d(t, {
+t.r(a), t.d(a, {
   default: function() {
-    return h
+    return T
   }
 });
-var l = n("735250"),
-  a = n("470079"),
-  i = n("477690"),
-  u = n("481060"),
-  r = n("208156"),
-  o = n("962250"),
-  s = n("368874"),
-  d = n("467679"),
-  c = n("465670"),
-  f = n("624138"),
-  I = n("293979"),
-  T = n("674563"),
-  m = n("689938"),
-  E = n("995657");
-let p = (0, f.cssValueToNumber)(i.default.INTERACTION_IFRAME_MODAL_MODAL_MIN_WIDTH),
-  _ = (0, f.cssValueToNumber)(i.default.INTERACTION_IFRAME_MODAL_MODAL_MAX_WIDTH),
-  N = (0, f.cssValueToNumber)(i.default.INTERACTION_IFRAME_MODAL_MODAL_MARGIN),
-  S = (0, f.cssValueToNumber)(i.default.INTERACTION_IFRAME_MODAL_MODAL_HEADER_HEIGHT);
+var i = t("735250"),
+  s = t("470079"),
+  n = t("477690"),
+  r = t("481060"),
+  o = t("208156"),
+  l = t("962250"),
+  d = t("368874"),
+  u = t("467679"),
+  c = t("465670"),
+  h = t("624138"),
+  m = t("293979"),
+  N = t("674563"),
+  f = t("689938"),
+  M = t("995657");
+let v = (0, h.cssValueToNumber)(n.default.INTERACTION_IFRAME_MODAL_MODAL_MIN_WIDTH),
+  I = (0, h.cssValueToNumber)(n.default.INTERACTION_IFRAME_MODAL_MODAL_MAX_WIDTH),
+  A = (0, h.cssValueToNumber)(n.default.INTERACTION_IFRAME_MODAL_MODAL_MARGIN),
+  _ = (0, h.cssValueToNumber)(n.default.INTERACTION_IFRAME_MODAL_MODAL_HEADER_HEIGHT);
 
-function h(e) {
-  var t;
+function T(e) {
+  var a;
   let {
-    title: n,
-    onClose: i
+    title: t,
+    onClose: n
   } = e, {
-    applicationIconURL: f,
-    applicationName: h,
-    queryParams: A,
-    iframeUrl: M
-  } = (0, I.useIframeModalState)(e), {
-    width: C,
-    height: O
-  } = (0, o.useScreenDimensions)(), v = a.useMemo(() => {
-    let e = Math.min((O - S - 2 * N) * 16 / 9, _);
-    return Math.max(p, Math.min(C - 2 * N, e))
-  }, [C, O]);
-  return (0, l.jsx)(u.ModalRoot, {
+    applicationIconURL: h,
+    applicationName: T,
+    queryParams: x,
+    iframeUrl: w
+  } = (0, m.useIframeModalState)(e), {
+    width: p,
+    height: E
+  } = (0, l.useScreenDimensions)(), j = s.useMemo(() => {
+    let e = Math.min((E - _ - 2 * A) * 16 / 9, I);
+    return Math.max(v, Math.min(p - 2 * A, e))
+  }, [p, E]);
+  return (0, i.jsx)(r.ModalRoot, {
     ...e,
-    size: u.ModalSize.DYNAMIC,
-    className: E.root,
-    children: (0, l.jsxs)("div", {
+    size: r.ModalSize.DYNAMIC,
+    className: M.root,
+    children: (0, i.jsxs)("div", {
       style: {
-        width: v
+        width: j
       },
-      children: [(0, l.jsxs)(u.ModalHeader, {
+      children: [(0, i.jsxs)(r.ModalHeader, {
         separator: !1,
-        className: E.modalHeader,
-        children: [(0, l.jsx)(u.Avatar, {
-          src: f,
-          size: u.AvatarSizes.SIZE_32,
-          "aria-label": h,
-          className: E.applicationIcon
-        }), (0, l.jsxs)("div", {
-          className: E.flexRow,
-          children: [(0, l.jsxs)("div", {
-            children: [(0, l.jsx)(u.Heading, {
+        className: M.modalHeader,
+        children: [(0, i.jsx)(r.Avatar, {
+          src: h,
+          size: r.AvatarSizes.SIZE_32,
+          "aria-label": T,
+          className: M.applicationIcon
+        }), (0, i.jsxs)("div", {
+          className: M.flexRow,
+          children: [(0, i.jsxs)("div", {
+            children: [(0, i.jsx)(r.Heading, {
               variant: "heading-sm/bold",
-              children: h
-            }), (0, l.jsx)(u.Text, {
+              children: T
+            }), (0, i.jsx)(r.Text, {
               variant: "text-xs/medium",
               color: "interactive-normal",
-              children: n
+              children: t
             })]
-          }), (0, l.jsx)(d.default, {
-            type: T.BotTagTypes.BOT,
-            className: E.botTag,
-            verified: null === (t = e.application.bot) || void 0 === t ? void 0 : t.verified
+          }), (0, i.jsx)(u.default, {
+            type: N.BotTagTypes.BOT,
+            className: M.botTag,
+            verified: null === (a = e.application.bot) || void 0 === a ? void 0 : a.verified
           })]
-        }), (0, l.jsx)(u.Button, {
-          onClick: i,
-          innerClassName: E.closeButton,
-          className: E.closeButtonContainer,
-          look: u.Button.Looks.BLANK,
-          size: u.Button.Sizes.NONE,
-          "aria-label": m.default.Messages.DISMISS,
-          children: (0, l.jsx)(c.default, {
-            className: E.closeIcon
+        }), (0, i.jsx)(r.Button, {
+          onClick: n,
+          innerClassName: M.closeButton,
+          className: M.closeButtonContainer,
+          look: r.Button.Looks.BLANK,
+          size: r.Button.Sizes.NONE,
+          "aria-label": f.default.Messages.DISMISS,
+          children: (0, i.jsx)(c.default, {
+            className: M.closeIcon
           })
         })]
-      }), (0, l.jsx)(s.default, {
+      }), (0, i.jsx)(d.default, {
         aspectRatio: 16 / 9,
-        children: (0, l.jsx)(r.EmbedIFrameWithLoadingBackground, {
-          url: M,
+        children: (0, i.jsx)(o.EmbedIFrameWithLoadingBackground, {
+          url: w,
           shouldRefocus: !0,
-          className: E.iframe,
-          queryParams: A
+          className: M.iframe,
+          queryParams: x
         })
       })]
     })

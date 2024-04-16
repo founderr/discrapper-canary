@@ -40,7 +40,7 @@ n.r(t), n.d(t, {
     return z
   },
   getDisplayPremiumType: function() {
-    return q
+    return Q
   },
   getExternalPlanDisplayName: function() {
     return $
@@ -103,7 +103,7 @@ n.r(t), n.d(t, {
     return W
   },
   getPremiumTypeDisplayName: function() {
-    return Q
+    return q
   },
   getPrice: function() {
     return F
@@ -470,7 +470,7 @@ function X(e) {
   }), t
 }
 
-function q(e) {
+function Q(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   switch (e) {
     case y.SubscriptionPlans.PREMIUM_MONTH_TIER_0:
@@ -493,7 +493,7 @@ function q(e) {
   }), n
 }
 
-function Q(e) {
+function q(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   switch (e) {
     case y.PremiumTypes.TIER_0:
@@ -1252,7 +1252,7 @@ t.default = Object.freeze({
   getIntervalStringAsNoun: j,
   getPremiumType: W,
   getDisplayName: K,
-  getDisplayPremiumType: q,
+  getDisplayPremiumType: Q,
   getPremiumPlanOptions: ee,
   getUpgradeEligibilities: en,
   getPlanDescription: Z,

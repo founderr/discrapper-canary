@@ -30,8 +30,8 @@ var s = n("735250"),
   R = n("514342"),
   O = n("602623"),
   v = n("624138"),
-  L = n("358595"),
-  x = n("981631"),
+  x = n("358595"),
+  L = n("981631"),
   D = n("245335"),
   P = n("689938"),
   y = n("648332");
@@ -165,7 +165,7 @@ function F(e) {
       })
     }),
     J = S.default.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
-    Z = (0, u.useStateFromStores)([A.default], () => null != J && A.default.can(x.Permissions.USE_EMBEDDED_ACTIVITIES, J), [J]),
+    Z = (0, u.useStateFromStores)([A.default], () => null != J && A.default.can(L.Permissions.USE_EMBEDDED_ACTIVITIES, J), [J]),
     {
       analyticsLocations: X
     } = (0, I.default)(m.default.INVITE_EMBED),
@@ -175,10 +175,10 @@ function F(e) {
     }),
     ee = (0, u.useStateFromStoresArray)([E.default], () => null != J ? E.default.getEmbeddedActivitiesForChannel(J.id).filter(e => e.applicationId === k.id).flatMap(e => Array.from(e.userIds)) : [], [J, k.id]),
     et = (0, u.useStateFromStoresArray)([g.default], () => ee.map(e => g.default.getUser(e)), [ee]),
-    en = d.state === x.InviteStates.ACCEPTING,
+    en = d.state === L.InviteStates.ACCEPTING,
     es = null != W;
   if (null == W) {
-    if (null == d.guild) return (0, s.jsx)(L.default, {});
+    if (null == d.guild) return (0, s.jsx)(x.default, {});
     W = new N.default(d.guild)
   }
   let ea = es && !Z || es && Q,
