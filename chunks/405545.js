@@ -12,24 +12,26 @@ t.default = function(e) {
     formField: t,
     index: i,
     isDragEnabled: r,
-    isDropHovered: u,
-    onDrop: c,
+    isDropHovered: c,
+    onDrop: u,
     onEdit: d,
     onRemove: f,
-    canRemove: p
+    canRemove: p,
+    actionsLocation: C
   } = e, {
-    label: C
+    label: m
   } = t;
   return (0, n.jsx)(l.default, {
     field: t,
     index: i,
     isDragEnabled: r,
-    isDropHovered: u,
-    onDrop: c,
+    isDropHovered: c,
+    onDrop: u,
     onEdit: d,
     onRemove: f,
-    title: C,
+    title: m,
     canRemove: p,
+    actionsLocation: C,
     children: (0, n.jsx)(a.MultipleChoiceFieldBody, {
       field: t,
       value: void 0,

@@ -14,8 +14,8 @@ var r = i("392711"),
   a = i("246364"),
   l = i("405545"),
   o = i("382574"),
-  u = i("279988"),
-  c = i("786127"),
+  c = i("279988"),
+  u = i("786127"),
   d = i("981631"),
   f = i("689938");
 
@@ -30,20 +30,21 @@ function p(e) {
     removeFormField: E,
     updateFormField: I,
     updateFormFieldOrder: T,
-    canRemove: x
-  } = e, g = async () => {
+    canRemove: x,
+    actionsLocation: g
+  } = e, v = async () => {
     await E(C)
-  }, v = async e => {
+  }, R = async e => {
     await I(C, e)
-  }, R = async (e, t, i) => {
+  }, A = async (e, t, i) => {
     await T(e, t, i)
-  }, A = (0, r.uniqueId)(), N = t === C, S = {
-    key: A,
+  }, N = (0, r.uniqueId)(), S = t === C, M = {
+    key: N,
     index: C,
     isDragEnabled: h,
-    isDropHovered: N,
+    isDropHovered: S,
     onEdit: () => {
-      0 === _ ? m(d, v, p) : (0, s.openModalLazy)(async () => {
+      0 === _ ? m(d, R, p) : (0, s.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([i.e("99387"), i.e("74673")]).then(i.bind(i, "394045"));
@@ -51,36 +52,37 @@ function p(e) {
           ...t,
           guildId: p.id,
           submittedGuildJoinRequestsCount: _,
-          onConfirm: () => m(d, v, p)
+          onConfirm: () => m(d, R, p)
         })
       })
     },
-    onRemove: g,
-    onDrop: R,
-    canRemove: x
+    onRemove: v,
+    onDrop: A,
+    canRemove: x,
+    actionsLocation: g
   };
   switch (d.field_type) {
     case a.VerificationFormFieldTypes.TERMS:
-      return (0, n.jsx)(u.default, {
+      return (0, n.jsx)(c.default, {
         channelId: p.rulesChannelId,
         title: f.default.Messages.GUILD_RULES_HEADER,
         formField: d,
-        ...S
+        ...M
       });
     case a.VerificationFormFieldTypes.PARAGRAPH:
       return (0, n.jsx)(o.default, {
         formField: d,
-        ...S
+        ...M
       });
     case a.VerificationFormFieldTypes.TEXT_INPUT:
-      return (0, n.jsx)(c.default, {
+      return (0, n.jsx)(u.default, {
         formField: d,
-        ...S
+        ...M
       });
     case a.VerificationFormFieldTypes.MULTIPLE_CHOICE:
       return (0, n.jsx)(l.default, {
         formField: d,
-        ...S
+        ...M
       });
     default:
       return null

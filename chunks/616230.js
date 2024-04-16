@@ -10,8 +10,8 @@ var n = i("735250"),
   a = i.n(s),
   l = i("442837"),
   o = i("481060"),
-  u = i("11265"),
-  c = i("863249"),
+  c = i("11265"),
+  u = i("863249"),
   d = i("944163"),
   f = i("246364"),
   p = i("571728"),
@@ -29,11 +29,11 @@ function x(e) {
     isExpanded: s,
     emptyFormFields: a,
     hasTermsField: l
-  } = e, u = t.hasVerificationGate(), [d, f] = r.useState(u), p = e => {
+  } = e, c = t.hasVerificationGate(), [d, f] = r.useState(c), p = e => {
     e.preventDefault(), e.stopPropagation()
   }, C = async e => {
     try {
-      f(e), await c.default.enableVerificationForm(t.id, e)
+      f(e), await u.default.enableVerificationForm(t.id, e)
     } catch {
       f(d)
     }
@@ -121,10 +121,10 @@ function x(e) {
   })
 }
 async function g(e, t) {
-  await c.default.updateVerificationForm(e, t)
+  await u.default.updateVerificationForm(e, t)
 }
 async function v(e, t) {
-  await c.default.updateVerificationFormDescription(e, t)
+  await u.default.updateVerificationFormDescription(e, t)
 }
 
 function R(e) {
@@ -141,11 +141,11 @@ function R(e) {
     guildId: o.id
   })) && void 0 !== t ? t : 0, L = (0, l.useStateFromStores)([d.default], () => null != E ? E : d.default.get(o.id)), j = null !== (i = null == L ? void 0 : L.formFields) && void 0 !== i ? i : [];
   r.useEffect(() => {
-    c.default.fetchVerificationForm(o.id)
+    u.default.fetchVerificationForm(o.id)
   }, [o.id]);
-  let O = !m;
-  return (0, n.jsx)(u.default, {
-    renderHeader: O ? (0, n.jsx)(x, {
+  let b = !m;
+  return (0, n.jsx)(c.default, {
+    renderHeader: b ? (0, n.jsx)(x, {
       guild: o,
       isExpanded: R,
       emptyFormFields: (null == j ? void 0 : j.length) == null || (null == j ? void 0 : j.length) === 0,
@@ -154,11 +154,11 @@ function R(e) {
     isExpanded: R,
     onExpand: () => A(!R),
     disableAnimation: m,
-    disableBackground: !O,
+    disableBackground: !b,
     children: (0, n.jsx)("div", {
-      className: a()(I.itemBodyContainer, T.rulesScreeningItems, {
-        [I.noPadding]: !O,
-        [T.rulesScreeningItemsNoBorder]: !O
+      className: a()(I.itemBodyContainer, {
+        [I.noPadding]: !b,
+        [T.rulesScreeningItemsNoBorder]: !b
       }),
       children: null != L && (0, n.jsx)(C.default, {
         guild: o,

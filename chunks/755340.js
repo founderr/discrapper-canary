@@ -6,8 +6,8 @@ var n = i("735250"),
   a = i("467138"),
   l = i("246364"),
   o = i("983736"),
-  u = i("5056"),
-  c = i("565321"),
+  c = i("5056"),
+  u = i("565321"),
   d = i("297619"),
   f = i("456935"),
   p = i("446945"),
@@ -24,7 +24,7 @@ t.default = function(e) {
     formDescription: T,
     onFieldsSave: x,
     onDescriptionSave: g
-  } = e, v = r.useRef(!1), [R, A] = r.useState(null), [N, S] = r.useState(e.formFields), M = r.useRef(e.formFields), L = r.useMemo(() => N.filter(o.isAutomaticApprovalFormField), [N]), j = r.useMemo(() => N.filter(o.isManualApprovalFormField), [N]), O = j.length, b = r.useMemo(() => N.length === m.MAX_FORM_ELEMENTS, [N]), y = r.useMemo(() => N.some(l.isTermsFormField), [N]), F = r.useMemo(() => N.some(e => !(0, l.isTermsFormField)(e)), [N]), D = O > 1, P = (0, a.useIsMemberVerificationManualApproval)(t.id) || I, w = r.useCallback(() => {
+  } = e, v = r.useRef(!1), [R, A] = r.useState(null), [N, S] = r.useState(e.formFields), M = r.useRef(e.formFields), L = r.useMemo(() => N.filter(o.isAutomaticApprovalFormField), [N]), j = r.useMemo(() => N.filter(o.isManualApprovalFormField), [N]), b = j.length, O = r.useMemo(() => N.length === m.MAX_FORM_ELEMENTS, [N]), y = r.useMemo(() => N.some(l.isTermsFormField), [N]), F = r.useMemo(() => N.some(e => !(0, l.isTermsFormField)(e)), [N]), D = b > 1, P = (0, a.useIsMemberVerificationManualApproval)(t.id) || I, w = r.useCallback(() => {
     (0, s.showToast)((0, s.createToast)(h.default.Messages.ERROR_GENERIC_TITLE, s.ToastType.FAILURE))
   }, []), G = r.useCallback(async e => {
     if (!v.current) {
@@ -61,11 +61,11 @@ t.default = function(e) {
   }, [N, G, w]), k = (0, n.jsxs)(n.Fragment, {
     children: [!E && (0, n.jsx)(f.default, {
       guild: t
-    }), (0, n.jsx)(c.default, {
+    }), (0, n.jsx)(u.default, {
       formDescription: T,
       guildId: t.id,
       onSave: g
-    }), !y && !b && (0, n.jsx)(d.default, {
+    }), !y && !O && (0, n.jsx)(d.default, {
       addFormField: B,
       guild: t
     }), L.map(e => (0, C.getFormFieldBuilderComponent)({
@@ -78,13 +78,14 @@ t.default = function(e) {
       removeFormField: H,
       updateFormField: U,
       updateFormFieldOrder: V,
-      canRemove: !0
+      canRemove: !0,
+      actionsLocation: I ? "side" : "footer"
     }))]
   });
   return P ? (0, n.jsxs)(n.Fragment, {
-    children: [!I && k, !F && (0, n.jsx)(u.default, {
+    children: [!I && k, !F && (0, n.jsx)(c.default, {
       addFormField: B,
-      showManualApprovalWarning: !I && !(O > 0),
+      showManualApprovalWarning: !I && !(b > 0),
       guild: t,
       showHeader: !I
     }), j.map(e => (0, C.getFormFieldBuilderComponent)({
@@ -97,8 +98,9 @@ t.default = function(e) {
       removeFormField: H,
       updateFormField: U,
       updateFormFieldOrder: V,
-      canRemove: !(I && j.length <= 1)
-    })), F && !b && (0, n.jsx)(p.default, {
+      canRemove: !(I && j.length <= 1),
+      actionsLocation: I ? "side" : "footer"
+    })), F && !O && (0, n.jsx)(p.default, {
       addFormField: B,
       guild: t
     })]

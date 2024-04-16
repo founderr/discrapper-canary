@@ -11,28 +11,30 @@ t.default = function(e) {
     formField: t,
     index: i,
     isDragEnabled: o,
-    isDropHovered: u,
-    onDrop: c,
+    isDropHovered: c,
+    onDrop: u,
     onEdit: d,
     onRemove: f,
-    canRemove: p
+    canRemove: p,
+    actionsLocation: C
   } = e, {
-    label: C,
-    placeholder: m
+    label: m,
+    placeholder: h
   } = t;
   return (0, n.jsx)(s.default, {
     field: t,
     index: i,
     isDragEnabled: o,
-    isDropHovered: u,
-    onDrop: c,
+    isDropHovered: c,
+    onDrop: u,
     onEdit: d,
     onRemove: f,
-    title: C,
+    title: m,
     canRemove: p,
+    actionsLocation: C,
     children: (0, n.jsx)(r.TextInputFieldBody, {
       className: l.fieldBackground,
-      placeholder: null != m ? m : a.default.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,
+      placeholder: null != h ? h : a.default.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,
       disabled: !0
     })
   })
