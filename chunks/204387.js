@@ -4,9 +4,9 @@ t.r(s), t.d(s, {
     return i
   }
 }), t("47120");
-var i, l, C = t("735250"),
-  a = t("470079"),
-  r = t("481060"),
+var i, l, a = t("735250"),
+  r = t("470079"),
+  C = t("481060"),
   n = t("687555"),
   o = t("596583");
 (l = i || (i = {}))[l.SELECT_FRIENDS = 1] = "SELECT_FRIENDS", l[l.CONFIRMATION = 2] = "CONFIRMATION";
@@ -15,18 +15,19 @@ s.default = e => {
       transitionState: t,
       onClose: i
     } = e,
-    [l, d] = a.useState(1),
-    [c, x] = a.useState(new Set);
+    [l, d] = r.useState(1),
+    [c, x] = r.useState(new Set);
   switch (l) {
     case 1:
-      s = (0, C.jsx)(n.default, {
-        onShare: () => d(2),
-        onClose: i,
-        setSelectedUsers: x
+      s = (0, a.jsx)(n.default, {
+        onShare: e => {
+          d(2), x(e)
+        },
+        onClose: i
       });
       break;
     case 2:
-      s = (0, C.jsx)(o.default, {
+      s = (0, a.jsx)(o.default, {
         selectedUsers: c,
         onClose: i
       });
@@ -34,7 +35,7 @@ s.default = e => {
     default:
       i()
   }
-  return (0, C.jsx)(r.ModalRoot, {
+  return (0, a.jsx)(C.ModalRoot, {
     transitionState: t,
     children: s
   })
