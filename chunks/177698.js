@@ -12,7 +12,7 @@ var s = a("481060"),
 t.default = (0, u.default)((e, t, a, r, o, u, d, c, f, E, h, _, C) => {
   let m = "OAuth2Authorize_".concat(e, "_").concat(E, "_").concat(h);
   return new Promise(S => {
-    let I = e => {
+    let p = e => {
       let {
         location: t
       } = e;
@@ -23,7 +23,7 @@ t.default = (0, u.default)((e, t, a, r, o, u, d, c, f, E, h, _, C) => {
       authorization: t,
       clientId: e,
       scopes: null != a ? a : [],
-      callback: I,
+      callback: p,
       responseType: o,
       redirectUri: u,
       codeChallenge: d,

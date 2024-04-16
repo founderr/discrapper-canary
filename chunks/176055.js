@@ -32,7 +32,7 @@ function P(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class h extends i.PureComponent {
+class M extends i.PureComponent {
   renderMemberInfo() {
     let {
       approximateMemberCount: e,
@@ -147,4 +147,4 @@ t.default = (0, _.default)(o.default.connectStores([I.default, E.default], e => 
     isInGuild: null != I.default.getGuild(t.id) && !s,
     isLurking: s
   }
-})(h))
+})(M))

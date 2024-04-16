@@ -27,8 +27,8 @@ var i = n("470079"),
   N = n("944486"),
   O = n("9156"),
   R = n("823379"),
-  p = n("540126"),
-  L = n("647086"),
+  L = n("540126"),
+  p = n("647086"),
   D = n("231338");
 let h = [a.default, s.default, r.default, E.default, c.default, A.default, C.default, S.default, I.default, f.default, N.default, O.default];
 
@@ -42,7 +42,7 @@ function g() {
 
 function b() {
   let e = s.default.getFavoriteChannels(),
-    t = O.default.isGuildCollapsed(L.FAVORITES_RAW_GUILD_ID),
+    t = O.default.isGuildCollapsed(p.FAVORITES_RAW_GUILD_ID),
     n = N.default.getChannelId(),
     i = C.default.getChannel(n),
     o = N.default.getVoiceChannelId(),
@@ -70,7 +70,7 @@ function b() {
       let r = null != i && (i.id === n.id || o === n.id),
         c = null != i && i.isThread() && i.parent_id === n.id,
         A = null !== (d = r || c || !a ? E.default.getActiveJoinedRelevantThreadsForParent(n.guild_id, n.id) : E.default.getActiveJoinedUnreadThreadsForParent(n.guild_id, n.id)) && void 0 !== d ? d : {},
-        C = (0, p.computeThreadIds)(n, A, i, o, t),
+        C = (0, L.computeThreadIds)(n, A, i, o, t),
         S = T.default.isCollapsed(n.id),
         N = O.default.isChannelMuted(n.guild_id, n.id),
         R = {
@@ -83,7 +83,7 @@ function b() {
           isCollapsed: S,
           isMuted: N,
           isFirstVoiceChannel: !1,
-          subtitle: (0, p.computeSubtitle)(n, S, !1)
+          subtitle: (0, L.computeSubtitle)(n, S, !1)
         };
       return r || c || f.default.getMentionCount(n.id) > 0 ? R : t && N || a && (N || s || (0, _.isVoiceChannel)(n.type) || (0, _.isGuildReadableType)(n.type) && !1 === f.default.hasUnread(n.id)) ? null : R
     }).filter(R.isNotNullish).sortBy(e => {
@@ -111,7 +111,7 @@ function b() {
       let {
         id: n,
         order: i
-      } = e, o = s.default.getCategoryRecord(n), l = null !== (t = r[n]) && void 0 !== t ? t : [], u = O.default.isChannelMuted(L.FAVORITES_RAW_GUILD_ID, n), a = A.default.isCollapsed(n), d = null;
+      } = e, o = s.default.getCategoryRecord(n), l = null !== (t = r[n]) && void 0 !== t ? t : [], u = O.default.isChannelMuted(p.FAVORITES_RAW_GUILD_ID, n), a = A.default.isCollapsed(n), d = null;
       return {
         isMuted: u,
         isCollapsed: a,
@@ -133,15 +133,15 @@ function b() {
       getRow: () => null
     };
   return {
-    id: L.FAVORITES_RAW_GUILD_ID,
+    id: p.FAVORITES_RAW_GUILD_ID,
     hideMutedChannels: t,
     favoritesSectionNumber: 1,
     recentsSectionNumber: 2,
     voiceChannelsSectionNumber: -999,
     getSections: () => [0, 0, 0, h.channelList.length, ...g.map(e => Math.max(1, e.channelList.length))],
-    isPlaceholderRow: (e, t) => !(e < p.SECTION_INDEX_FIRST_NAMED_CATEGORY) && 0 === t && 0 === g[e - p.SECTION_INDEX_FIRST_NAMED_CATEGORY].channelList.length,
-    getCategoryFromSection: e => e === p.SECTION_INDEX_UNCATEGORIZED_CHANNELS ? h : g[e - p.SECTION_INDEX_FIRST_NAMED_CATEGORY],
-    getNamedCategoryFromSection: e => g[e - p.SECTION_INDEX_FIRST_NAMED_CATEGORY],
+    isPlaceholderRow: (e, t) => !(e < L.SECTION_INDEX_FIRST_NAMED_CATEGORY) && 0 === t && 0 === g[e - L.SECTION_INDEX_FIRST_NAMED_CATEGORY].channelList.length,
+    getCategoryFromSection: e => e === L.SECTION_INDEX_UNCATEGORIZED_CHANNELS ? h : g[e - L.SECTION_INDEX_FIRST_NAMED_CATEGORY],
+    getNamedCategoryFromSection: e => g[e - L.SECTION_INDEX_FIRST_NAMED_CATEGORY],
     getChannelFromSectionRow(e, t) {
       let n = this.getCategoryFromSection(e);
       return null == n || null == n.channelList[t] ? null : {
@@ -156,7 +156,7 @@ function b() {
       for (let n = 0; n < t.length; n++)
         for (let i = 0; i < t[n].channelList.length; i++)
           if (t[n].channelList[i].id === e) return [{
-            section: n + p.SECTION_INDEX_UNCATEGORIZED_CHANNELS,
+            section: n + L.SECTION_INDEX_UNCATEGORIZED_CHANNELS,
             row: i
           }];
       return []

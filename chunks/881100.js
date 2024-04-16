@@ -28,8 +28,8 @@ var a = s("399606"),
   N = s("994554"),
   O = s("1549"),
   P = s("13327"),
-  h = s("59137"),
-  M = s("405991"),
+  M = s("59137"),
+  h = s("405991"),
   x = s("24615"),
   L = s("193943"),
   v = s("334347"),
@@ -172,7 +172,7 @@ let G = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
       videoBackground: {
         title: _.default.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_TITLE,
         description: _.default.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_DESCRIPTION,
-        imageSource: G(i, h, M),
+        imageSource: G(i, M, h),
         imageClassName: t.videoBackgroundImage
       }
     }

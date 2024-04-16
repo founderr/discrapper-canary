@@ -31,7 +31,7 @@ t.default = () => {
     [O, P] = i.useState(!1);
   (0, C.useFetchEntitlementsForTenureReward)(), (0, f.useMaybeFetchReferralsRemaining)("SubscriberNitroHome");
   let {
-    enabled: h
+    enabled: M
   } = E.default.useExperiment({
     location: "SubscriberNitroHome"
   }, {
@@ -51,7 +51,7 @@ t.default = () => {
           }), (0, a.jsx)(T.default, {
             variant: S.PerksDiscoverabilityCardSection.WHATS_NEW,
             className: l()(g.whatsNew, {
-              [g.whatsNewWithOriginalHeroHeading]: !h
+              [g.whatsNewWithOriginalHeroHeading]: !M
             }),
             noBackground: !0,
             leftAlignHeaders: !0

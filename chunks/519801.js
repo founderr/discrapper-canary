@@ -26,10 +26,10 @@ function C(e) {
   let C, N, {
       showBenefits: T,
       handleClose: m,
-      onSubscriptionConfirmation: p
+      onSubscriptionConfirmation: O
     } = e,
     {
-      updatedSubscription: O,
+      updatedSubscription: p,
       readySlideId: R,
       selectedSku: L,
       selectedStoreListing: h,
@@ -41,7 +41,7 @@ function C(e) {
     } = r.useContext(i.ConfettiCannonContext),
     b = null !== (t = null == L ? void 0 : L.name) && void 0 !== t ? t : "",
     U = () => {
-      m(), null == p || p()
+      m(), null == O || O()
     },
     x = R === f.Step.CONFIRM,
     D = (0, u.isApplicationUserSubscription)(null !== (n = null == L ? void 0 : L.flags) && void 0 !== n ? n : 0),
@@ -77,11 +77,11 @@ function C(e) {
   })) : C = g ? (0, a.jsx)(d.PurchaseConfirmationLite, {
     tierName: b,
     onConfirm: U,
-    subscription: O
+    subscription: p
   }) : (0, a.jsx)(o.PurchaseConfirmation, {
     tierName: b,
     onConfirm: U,
-    subscription: O
+    subscription: p
   }), r.useEffect(() => {
     l.default.useReducedMotion && x && y(window.innerWidth / 2, window.innerHeight / 2)
   }, [y, x]), (0, a.jsxs)(a.Fragment, {

@@ -20,8 +20,8 @@ var n = a("735250"),
   C = a("257968"),
   m = a("367907"),
   S = a("770471"),
-  I = a("158631"),
-  p = a("143614"),
+  p = a("158631"),
+  I = a("143614"),
   T = a("463119"),
   g = a("377171"),
   A = a("243778"),
@@ -59,11 +59,11 @@ let ee = e => {
     let {
       selected: t,
       ...a
-    } = e, s = (0, o.useListItem)("friends"), l = (0, d.useStateFromStores)([j.default], () => j.default.getPendingCount()), i = (0, p.default)(), {
+    } = e, s = (0, o.useListItem)("friends"), l = (0, d.useStateFromStores)([j.default], () => j.default.getPendingCount()), i = (0, I.default)(), {
       canViewBroadcasts: r
     } = S.default.useExperiment({
       location: "friends_tab_no_track"
-    }), u = (0, I.default)();
+    }), u = (0, p.default)();
     return (0, n.jsxs)(q.LinkButton, {
       selected: t,
       route: X.Routes.FRIENDS,

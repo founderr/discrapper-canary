@@ -51,25 +51,25 @@ t.default = e => {
     showAllPerksButton: m,
     headerClassname: A,
     isFullScreen: g = !0
-  } = e, N = i.useRef(null), O = (0, _.useShouldScrollToWhatsNew)(), P = (0, u.default)("perks-discoverability"), h = (0, d.useMarketingOptimizationExperiment)({
+  } = e, N = i.useRef(null), O = (0, _.useShouldScrollToWhatsNew)(), P = (0, u.default)("perks-discoverability"), M = (0, d.useMarketingOptimizationExperiment)({
     autoTrackExposure: !1
   });
   (0, _.useClearNewBadge)();
-  let M = r === C.PerksDiscoverabilityCardSection.WHATS_NEW,
+  let h = r === C.PerksDiscoverabilityCardSection.WHATS_NEW,
     x = (0, c.useClearTenureBadge)();
   i.useEffect(() => {
-    M && x()
-  }, [x, M]), i.useEffect(() => {
+    h && x()
+  }, [x, h]), i.useEffect(() => {
     let e = N.current;
-    if (null == e || !O || !M) return;
+    if (null == e || !O || !h) return;
     let t = requestAnimationFrame(() => {
       e.scrollIntoView({
         behavior: "smooth"
       })
     });
     return () => cancelAnimationFrame(t)
-  }, [N, O, M]);
-  let L = (0, f.usePerksDiscoverabilityStrings)(M),
+  }, [N, O, h]);
+  let L = (0, f.usePerksDiscoverabilityStrings)(h),
     v = (0, E.default)(),
     j = (0, c.useFreeBoostUserTenureReward)(),
     D = (0, f.getFilteredPerksDiscoverabilityCards)(v, r, P, g, null == j ? void 0 : j.showCard),
@@ -92,13 +92,13 @@ t.default = e => {
         leftAlignHeaders: p,
         title: L.title,
         headerClassname: A
-      }), !h && (0, a.jsx)(o.Text, {
+      }), !M && (0, a.jsx)(o.Text, {
         variant: "text-lg/normal",
         color: "header-primary",
         className: l()(I.subtitle, {
           [I.subtitle]: null == m || p,
           [I.subtitleWithButton]: null != m && !p,
-          [I.fullWidth]: M || p,
+          [I.fullWidth]: h || p,
           [I.moreSubtitleMargin]: b,
           [I.leftAlignSubtitle]: p,
           [I.centerAlignSubtitle]: !p

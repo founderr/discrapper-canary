@@ -20,14 +20,14 @@ let _ = "LATEST_HEARTBEAST_EVENT_TIMESTAMP",
   C = null,
   m = null,
   S = null,
-  I = !1;
-async function p() {
-  if (I) return;
-  I = !0, (0, E.setSessionExtendingEnabled)(!0), f.default.addBreadcrumb({
+  p = !1;
+async function I() {
+  if (p) return;
+  p = !0, (0, E.setSessionExtendingEnabled)(!0), f.default.addBreadcrumb({
     message: "Start Analytics Heartbeat"
   });
   let e = await n.Storage.getAfterRefresh(_).then(E.timestampOrZero);
-  if (!I) return;
+  if (!p) return;
   let t = Date.now(),
     a = 15 * d.default.Millis.MINUTE + e - t;
   a > d.default.Millis.HOUR && f.default.addBreadcrumb({
@@ -55,7 +55,7 @@ async function g() {
     f.default.captureException(Error("Null session when tracking session heartbeat. Waited ".concat(a - e, "ms")));
     return
   }
-  if (!I) {
+  if (!p) {
     f.default.captureException(Error("Heartbeat scheduler not started when tracking session heartbeat.")), T();
     return
   }
@@ -84,10 +84,10 @@ let A = null,
 
 function v() {
   if (N || null != A && A !== h.RTCConnectionStates.DISCONNECTED && A !== h.RTCConnectionStates.RTC_DISCONNECTED) try {
-    p()
+    I()
   } catch (e) {
     f.default.captureException(e)
-  } else !I || (I = !1, f.default.addBreadcrumb({
+  } else !p || (p = !1, f.default.addBreadcrumb({
     message: "Stopping Analytics Heartbeat"
   }), (0, E.setSessionExtendingEnabled)(!1), T(), (0, l.drainClickstream)())
 }

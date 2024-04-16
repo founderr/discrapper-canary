@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return eI
+    return ep
   }
 }), a("47120"), a("653041");
 var n = a("735250"),
@@ -20,8 +20,8 @@ var n = a("735250"),
   C = a("110924"),
   m = a("100527"),
   S = a("906732"),
-  I = a("211242"),
-  p = a("536687"),
+  p = a("211242"),
+  I = a("536687"),
   T = a("745837"),
   g = a("13228"),
   A = a("1259"),
@@ -454,7 +454,7 @@ class eS extends s.PureComponent {
   }
 }
 
-function eI(e) {
+function ep(e) {
   var t;
   let {
     guildId: a,
@@ -484,7 +484,7 @@ function eI(e) {
   s.useEffect(() => {
     a !== es && en(!z)
   }, [a, es, z]);
-  let [er, ec] = (0, N.default)(e => [eu.CHANNEL_NOTICES.some(t => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(ed.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS)]), ef = (0, p.default)(d), eE = (0, c.useModalsStore)(c.hasAnyModalOpenSelector), eh = (0, o.useStateFromStores)([Z.default], () => Z.default.hasLayers()), e_ = (0, o.useStateFromStores)([H.default], () => H.default.shouldShow(eC)), em = T && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !et.ProcessArgs.isDisallowPopupsSet(), eI = (0, o.useStateFromStores)([q.default], () => q.default.getMemberCount(a)), ep = T && null != eI && eI >= 30 && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !et.ProcessArgs.isDisallowPopupsSet(), eT = R && null != d && (d.hasFeature(eo.GuildFeatures.COMMUNITY) || null != eI && eI > 50), eg = (0, x.default)(a), eA = (0, A.useLowerMemberCountRequirements)(a), eN = (null == d ? void 0 : d.hasFeature(eo.GuildFeatures.HUB)) === !0, ev = T && (null == d ? void 0 : d.hasFeature(eo.GuildFeatures.DISCOVERABLE)) === !0, eR = (0, I.useBlockedPaymentsConfig)(), eO = (T || (null == d ? void 0 : d.premiumTier) === eo.BoostedGuildTiers.NONE) && !et.ProcessArgs.isDisallowPopupsSet() && !eR, eL = (0, o.useStateFromStores)([D.default, Z.default], () => null != d && null != w && T && !Z.default.hasLayers() && D.default.shouldShowGuildTemplateDirtyTooltip(a)), eM = (0, o.useStateFromStores)([Y.default], () => Y.default.getChannel(r)), {
+  let [er, ec] = (0, N.default)(e => [eu.CHANNEL_NOTICES.some(t => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(ed.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS)]), ef = (0, I.default)(d), eE = (0, c.useModalsStore)(c.hasAnyModalOpenSelector), eh = (0, o.useStateFromStores)([Z.default], () => Z.default.hasLayers()), e_ = (0, o.useStateFromStores)([H.default], () => H.default.shouldShow(eC)), em = T && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !et.ProcessArgs.isDisallowPopupsSet(), ep = (0, o.useStateFromStores)([q.default], () => q.default.getMemberCount(a)), eI = T && null != ep && ep >= 30 && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !et.ProcessArgs.isDisallowPopupsSet(), eT = R && null != d && (d.hasFeature(eo.GuildFeatures.COMMUNITY) || null != ep && ep > 50), eg = (0, x.default)(a), eA = (0, A.useLowerMemberCountRequirements)(a), eN = (null == d ? void 0 : d.hasFeature(eo.GuildFeatures.HUB)) === !0, ev = T && (null == d ? void 0 : d.hasFeature(eo.GuildFeatures.DISCOVERABLE)) === !0, eR = (0, p.useBlockedPaymentsConfig)(), eO = (T || (null == d ? void 0 : d.premiumTier) === eo.BoostedGuildTiers.NONE) && !et.ProcessArgs.isDisallowPopupsSet() && !eR, eL = (0, o.useStateFromStores)([D.default, Z.default], () => null != d && null != w && T && !Z.default.hasLayers() && D.default.shouldShowGuildTemplateDirtyTooltip(a)), eM = (0, o.useStateFromStores)([Y.default], () => Y.default.getChannel(r)), {
     isPopoutOpen: eP
   } = (0, L.useGuildHeaderPopoutStore)(), ex = null !== (t = null == d ? void 0 : d.hasFeature(eo.GuildFeatures.COMMUNITY)) && void 0 !== t && t, ey = (0, o.useStateFromStores)([k.default], () => !i().isEmpty(k.default.getThreadsForGuild(a))), eD = ee.default.isNewUser(w), eb = ea && !eD, eU = (0, g.default)(w);
   (0, M.default)(d);
@@ -511,7 +511,7 @@ function eI(e) {
     hasChannelNotice: null != ef || er,
     anyLayerOpen: eE || eh,
     showGuildBoostingProgressBarUpsell: em,
-    showGuildBoostingProgressBarSizeUpsell: ep,
+    showGuildBoostingProgressBarSizeUpsell: eI,
     showInviteSplashUpsell: eO,
     showDiscoveryLandingPageSettingsUpsell: ev,
     showGuildHeaderTutorial: e_,
@@ -520,7 +520,7 @@ function eI(e) {
     showDiscoveryTooltip: eA,
     showHubPrivacySettingsTooltip: eN,
     showNewUnreadsBar: ex,
-    showActiveThreadsNotice: y && null != eI && eI >= 200 && ey,
+    showActiveThreadsNotice: y && null != ep && ep >= 200 && ey,
     showGuildSoundboardPermissionUpsell: eT,
     showMediaChannelUpsell: eG,
     showTierTemplatesUpsell: ew,

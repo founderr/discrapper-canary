@@ -33,7 +33,7 @@ t.default = function(e) {
     null != l && (0, f.dismissSignUp)(l.key, l.dismissibleContent)
   }, [l]);
   if (null == l) return null;
-  let I = "url(".concat(l.backgroundAssetUrl, ") black top / cover no-repeat");
+  let p = "url(".concat(l.backgroundAssetUrl, ") black top / cover no-repeat");
   return (0, n.jsx)(o.ThemeContextProvider, {
     theme: h.ThemeTypes.DARK,
     children: (0, n.jsx)("div", {
@@ -41,7 +41,7 @@ t.default = function(e) {
       children: (0, n.jsxs)("div", {
         className: C.card,
         style: {
-          background: I
+          background: p
         },
         children: [(0, n.jsxs)("div", {
           className: C.eyebrow,

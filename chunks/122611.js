@@ -16,8 +16,8 @@ var n = a("735250"),
   C = a("819792"),
   m = a("919285"),
   S = a("118470"),
-  I = a("413307"),
-  p = a("849688"),
+  p = a("413307"),
+  I = a("849688"),
   T = a("374023"),
   g = a("661599"),
   A = a("923608"),
@@ -107,7 +107,7 @@ t.default = e => {
   } = e;
   switch ((0, O.default)(t)) {
     case O.ConnectedChannelNotices.ENABLE_PUBLIC_GUILD:
-      return (0, n.jsx)(I.default, {
+      return (0, n.jsx)(p.default, {
         guild: t
       });
     case O.ConnectedChannelNotices.APPLIED_GUILD_BOOST_GRACE_PERIOD:
@@ -139,7 +139,7 @@ t.default = e => {
         guild: t
       });
     case O.ConnectedChannelNotices.SIGNUP:
-      return (0, n.jsx)(p.default, {
+      return (0, n.jsx)(I.default, {
         guild: t
       });
     case O.ConnectedChannelNotices.CLAN_UPSELL:

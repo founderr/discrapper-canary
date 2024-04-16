@@ -25,8 +25,8 @@ function S(e) {
     user: t,
     nickname: a,
     status: S,
-    isFocused: I
-  } = e, p = s.useContext(c.AnalyticsContext), {
+    isFocused: p
+  } = e, I = s.useContext(c.AnalyticsContext), {
     analyticsLocations: T
   } = (0, i.default)(), g = e => {
     null == e || e.stopPropagation(), l.default.addRelationship({
@@ -42,12 +42,12 @@ function S(e) {
     null == e || e.stopPropagation(), r.default.ignore(t.id)
   }, N = S === _.StatusTypes.OFFLINE ? _.StatusTypes.UNKNOWN : S;
   return (0, n.jsx)(E.default, {
-    isFocused: I,
+    isFocused: p,
     user: t,
     onClick: () => (0, o.openUserProfileModal)({
       userId: t.id,
       sourceAnalyticsLocations: T,
-      analyticsLocation: p.location
+      analyticsLocation: I.location
     }),
     children: e => {
       let s = (0, n.jsxs)(n.Fragment, {

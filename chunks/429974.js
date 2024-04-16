@@ -19,8 +19,8 @@ async function m(e) {
   var t, l, i, m;
   let {
     userId: S,
-    section: I,
-    guildId: p = h.ME,
+    section: p,
+    guildId: I = h.ME,
     channelId: T,
     friendToken: g,
     autoFocusNote: A,
@@ -48,14 +48,14 @@ async function m(e) {
       location: "handleOpenUserProfileModal",
       user: v,
       autoFocusNote: A,
-      guildId: p,
+      guildId: I,
       friendToken: g,
-      initialSection: I,
+      initialSection: p,
       channelId: T
     })
   }), f.default.track(h.AnalyticEvents.OPEN_MODAL, {
     type: "Profile Modal",
-    guild_id: p !== h.ME ? p : null,
+    guild_id: I !== h.ME ? I : null,
     channel_id: T,
     other_user_id: S,
     application_id: null !== (l = null == O ? void 0 : O.application_id) && void 0 !== l ? l : null,
@@ -77,7 +77,7 @@ async function m(e) {
 function S() {
   null != C && (0, s.closeModal)(C), C = null
 }
-class I extends i.default {
+class p extends i.default {
   _initialize() {
     l.default.subscribe("USER_PROFILE_MODAL_OPEN", m), l.default.subscribe("USER_PROFILE_MODAL_CLOSE", S)
   }
@@ -85,4 +85,4 @@ class I extends i.default {
     l.default.unsubscribe("USER_PROFILE_MODAL_OPEN", m), l.default.unsubscribe("USER_PROFILE_MODAL_CLOSE", S)
   }
 }
-t.default = new I
+t.default = new p

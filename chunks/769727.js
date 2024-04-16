@@ -16,8 +16,8 @@ var n = a("735250"),
   C = a("10473"),
   m = a("702646"),
   S = a("207796"),
-  I = a("980721"),
-  p = a("308083"),
+  p = a("980721"),
+  I = a("308083"),
   T = a("689938"),
   g = a("24953");
 
@@ -25,7 +25,7 @@ function A() {
   let e = (0, S.useClanDiscoveryUIStore)(S.buildSearchCriteriaFromUIState, i()),
     t = (0, S.useClanDiscoveryUIStore)(e => e.selectedPlaystyle.name, o.default),
     a = (0, d.useStateFromStores)([C.default], () => C.default.getSearchResult(e), [e]);
-  return (0, I.isUnloadedSearchResult)(a) ? null : (0, I.isLoadedSearchResult)(a) ? (0, n.jsxs)("div", {
+  return (0, p.isUnloadedSearchResult)(a) ? null : (0, p.isLoadedSearchResult)(a) ? (0, n.jsxs)("div", {
     className: g.topPicks,
     children: [(0, n.jsxs)("div", {
       className: g.topPicksHeader,
@@ -44,7 +44,7 @@ function A() {
       className: g.topPicksContent,
       children: a.items.map(t => (0, n.jsx)(h.default, {
         clan: t,
-        affinity: (0, I.getClanDiscoveryAffinity)(t, e)
+        affinity: (0, p.getClanDiscoveryAffinity)(t, e)
       }, t.id))
     })]
   }) : null
@@ -102,10 +102,10 @@ function v() {
     l = (0, f.useClanDiscoveryExperimentDefaultGameId)("clan_discovery"),
     r = (0, d.useStateFromStores)([C.default], () => C.default.hasLoadedStaticClanDiscovery(e));
   return s.useEffect(() => {
-    l === p.VALORANT_ID ? (t(S.ClanDiscoveryGame.VALORANT), a([{
+    l === I.VALORANT_ID ? (t(S.ClanDiscoveryGame.VALORANT), a([{
       applicationId: l,
       name: "Valorant"
-    }])) : l === p.GENSHIN_ID && (t(S.ClanDiscoveryGame.GENSHIN), a([{
+    }])) : l === I.GENSHIN_ID && (t(S.ClanDiscoveryGame.GENSHIN), a([{
       applicationId: l,
       name: "Genshin"
     }]))

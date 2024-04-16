@@ -25,29 +25,29 @@ var i = s("120356"),
   N = s("409100"),
   O = s("474936"),
   P = s("689938"),
-  h = s("374861");
-let M = e => {
+  M = s("374861");
+let h = e => {
     let {
       inOfferExperience: t,
       inTrial: s,
       subscriptionTier: i
     } = e, r = null;
     !t && (r = (0, a.jsxs)("div", {
-      className: h.buttonContainer,
+      className: M.buttonContainer,
       children: [(0, a.jsx)(N.default, {
         forceInverted: !0,
-        className: h.button,
+        className: M.button,
         subscriptionTier: i
       }), (0, a.jsx)(g.default, {
-        className: h.button,
+        className: M.button,
         forceWhite: !0
       })]
     }));
     let l = null;
     return s && (l = (0, a.jsx)("div", {
-      className: h.buttonContainer,
+      className: M.buttonContainer,
       children: (0, a.jsx)(g.default, {
-        className: h.button,
+        className: M.button,
         forceWhite: !0
       })
     })), (0, a.jsxs)(a.Fragment, {
@@ -60,13 +60,13 @@ let M = e => {
     } = e;
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(d.StretchedSparkleStar, {
-        className: t ? h.fullscreenSparkleStar1 : h.settingsSparkleStar1
+        className: t ? M.fullscreenSparkleStar1 : M.settingsSparkleStar1
       }), (0, a.jsx)(d.StretchedSparkleStar, {
-        className: t ? h.fullscreenSparkleStar2 : h.settingsSparkleStar2
+        className: t ? M.fullscreenSparkleStar2 : M.settingsSparkleStar2
       }), (0, a.jsx)(d.StretchedSparkleStar, {
-        className: t ? h.fullscreenSparkleStar3 : h.settingsSparkleStar3
+        className: t ? M.fullscreenSparkleStar3 : M.settingsSparkleStar3
       }), (0, a.jsx)(d.StretchedSparkleStar, {
-        className: t ? h.fullscreenSparkleStar4 : h.settingsSparkleStar4
+        className: t ? M.fullscreenSparkleStar4 : M.settingsSparkleStar4
       })]
     })
   };
@@ -78,7 +78,7 @@ function L(e) {
   return (0, a.jsx)(n.Text, {
     variant: t,
     color: "always-white",
-    className: h.description,
+    className: M.description,
     children: P.default.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({
       cheapestMonthlyPrice: s
     })
@@ -121,15 +121,15 @@ t.default = e => {
   return (0, a.jsx)(u.AnalyticsLocationProvider, {
     value: j,
     children: (0, a.jsxs)("div", {
-      className: r()(h.container, s, {
-        [h.settingsContainer]: !t && !v,
-        [h.affinityHeight]: !t && w && !v
+      className: r()(M.container, s, {
+        [M.settingsContainer]: !t && !v,
+        [M.affinityHeight]: !t && w && !v
       }),
       "data-testid": "v2-marketing-page-hero-header",
       children: [(0, a.jsxs)("div", {
-        className: t ? h.fullscreenTextContainer : h.settingsTextContainer,
+        className: t ? M.fullscreenTextContainer : M.settingsTextContainer,
         children: [(0, a.jsx)(n.Heading, {
-          className: v ? h.header : void 0,
+          className: v ? M.header : void 0,
           variant: t ? "display-lg" : "display-md",
           color: v ? void 0 : "always-white",
           children: P.default.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE
@@ -137,21 +137,21 @@ t.default = e => {
           referrer: k
         }) : w ? (0, a.jsx)("div", {
           className: r()({
-            [h.affinityDescription]: !v,
-            [h.affinityDescriptionNoMargin]: v
+            [M.affinityDescription]: !v,
+            [M.affinityDescriptionNoMargin]: v
           }),
           children: (0, a.jsx)(p.default, {
-            className: v ? h.backgroundColor : void 0,
+            className: v ? M.backgroundColor : void 0,
             textColor: v ? "text-primary" : "always-white",
             smallerText: !t || v
           })
         }) : !v && (0, a.jsx)(L, {}), U || y ? (0, a.jsx)("div", {
-          className: h.buttonContainer,
+          className: M.buttonContainer,
           children: (0, a.jsx)(g.default, {
-            className: h.button,
+            className: M.button,
             forceWhite: !0
           })
-        }) : m ? null : (0, a.jsx)(M, {
+        }) : m ? null : (0, a.jsx)(h, {
           subscriptionTier: i,
           inOfferExperience: b,
           inTrial: D

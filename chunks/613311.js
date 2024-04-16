@@ -24,8 +24,8 @@ var a = s("735250"),
   N = s("646288"),
   O = s("984370"),
   P = s("706454"),
-  h = s("210887"),
-  M = s("430824"),
+  M = s("210887"),
+  h = s("430824"),
   x = s("496675"),
   L = s("525395"),
   v = s("558314"),
@@ -584,7 +584,7 @@ class eE extends i.PureComponent {
     })
   }
 }
-t.default = (0, R.default)((0, S.default)(n.default.connectStores([v.default, h.default, P.default, y.default, b.default, D.default, U.default, p.default, m.default, L.default, M.default, j.default], e => {
+t.default = (0, R.default)((0, S.default)(n.default.connectStores([v.default, M.default, P.default, y.default, b.default, D.default, U.default, p.default, m.default, L.default, h.default, j.default], e => {
   let t, s, a, {
     inputSkuId: i,
     applicationId: r,
@@ -616,8 +616,8 @@ t.default = (0, R.default)((0, S.default)(n.default.connectStores([v.default, h.
     }),
     isInTestMode: null != r && u,
     matureAgree: v.default.didMatureAgree,
-    theme: h.default.theme,
+    theme: M.default.theme,
     locale: P.default.locale,
-    guild: null != o ? M.default.getGuild(o.getGuildId()) : null
+    guild: null != o ? h.default.getGuild(o.getGuildId()) : null
   }
 })(eE)))

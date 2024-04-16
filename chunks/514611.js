@@ -15,8 +15,8 @@ var n, s = a("735250"),
   C = a("695346"),
   m = a("768581"),
   S = a("900849"),
-  I = a("940627"),
-  p = a("806519"),
+  p = a("940627"),
+  I = a("806519"),
   T = a("981631"),
   g = a("689938"),
   A = a("313618"),
@@ -133,14 +133,14 @@ class L extends(n = l.PureComponent) {
                 })
               }) : null, (0, s.jsx)("div", {
                 className: A.guildIcon,
-                children: (0, s.jsx)(p.default, {
-                  mask: p.default.Masks.SQUIRCLE,
+                children: (0, s.jsx)(I.default, {
+                  mask: I.default.Masks.SQUIRCLE,
                   width: 48,
                   height: 48,
                   children: (0, s.jsx)("div", {
                     className: A.iconMask,
-                    children: (0, s.jsx)(p.default, {
-                      mask: p.default.Masks.SQUIRCLE,
+                    children: (0, s.jsx)(I.default, {
+                      mask: I.default.Masks.SQUIRCLE,
                       width: 40,
                       height: 40,
                       children: (0, s.jsx)("img", {
@@ -156,7 +156,7 @@ class L extends(n = l.PureComponent) {
               className: A.guildInfo,
               children: [(0, s.jsxs)("div", {
                 className: A.title,
-                children: [(0, s.jsx)(I.default, {
+                children: [(0, s.jsx)(p.default, {
                   className: A.guildBadge,
                   guild: t,
                   tooltipColor: u.Tooltip.Colors.PRIMARY

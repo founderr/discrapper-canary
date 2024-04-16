@@ -20,9 +20,9 @@ var n = a("735250"),
   C = a("34305"),
   m = a("981631"),
   S = a("689938"),
-  I = a("315361");
+  p = a("315361");
 
-function p(e) {
+function I(e) {
   let {
     applicationViewItems: t,
     restoreApplication: a
@@ -31,30 +31,30 @@ function p(e) {
   let s = t.map(e => {
     let t = e.libraryApplication.getDistributor();
     return (0, n.jsxs)("div", {
-      className: I.hiddenLibraryApplication,
+      className: p.hiddenLibraryApplication,
       children: [(0, n.jsxs)(d.default, {
         direction: d.default.Direction.VERTICAL,
-        className: I.hiddenLibraryApplicationContent,
+        className: p.hiddenLibraryApplicationContent,
         children: [(0, n.jsx)("div", {
-          className: I.applicationName,
+          className: p.applicationName,
           children: e.libraryApplication.getBranchedName(e.application)
         }), null != t ? (0, n.jsx)("div", {
-          className: I.applicationSubText,
+          className: p.applicationSubText,
           children: m.DistributorNames[t]
         }) : null]
       }), (0, n.jsx)(i.Clickable, {
-        className: I.restoreButton,
+        className: p.restoreButton,
         onClick: () => a(e.libraryApplication),
         children: (0, n.jsx)(c.default, {
-          className: I.restoreIcon
+          className: p.restoreIcon
         })
       })]
     }, e.key)
   });
   return (0, n.jsxs)(i.FormSection, {
-    className: I.hiddenLibraryApplications,
+    className: p.hiddenLibraryApplications,
     children: [(0, n.jsx)(i.FormTitle, {
-      className: I.hiddenLibraryApplicationsTitle,
+      className: p.hiddenLibraryApplicationsTitle,
       children: S.default.Messages.SETTINGS_GAMES_HIDDEN_LIBRARY_APPLICATIONS_LABEL
     }), s]
   })
@@ -79,7 +79,7 @@ class T extends s.PureComponent {
       installShortcutStartMenu: a
     } = this.props;
     return (0, n.jsxs)("div", {
-      className: I.body,
+      className: p.body,
       children: [(0, h.isSupportedPlatform)() ? (0, n.jsxs)(s.Fragment, {
         children: [(0, n.jsx)(i.FormSwitch, {
           value: t,
@@ -92,7 +92,7 @@ class T extends s.PureComponent {
           note: S.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU_NOTE,
           children: S.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU
         }), (0, n.jsx)(C.default, {})]
-      }) : null, (0, n.jsx)(p, {
+      }) : null, (0, n.jsx)(I, {
         restoreApplication: this.handleRestoreHiddenLibraryApplication,
         applicationViewItems: e
       })]
@@ -103,7 +103,7 @@ class T extends s.PureComponent {
       children: [(0, n.jsx)(_.default, {
         currentRoute: m.Routes.APPLICATION_LIBRARY_SETTINGS
       }), (0, n.jsx)(i.ScrollerAuto, {
-        className: I.scroller,
+        className: p.scroller,
         children: this.renderBody()
       })]
     })

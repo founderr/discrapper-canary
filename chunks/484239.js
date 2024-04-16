@@ -29,7 +29,7 @@ t.default = e => {
     } = e,
     O = (0, o.useCardVariantsInfo)(g),
     P = (0, n.useFreeBoostUserTenureReward)(),
-    h = (null == P ? void 0 : P.nitroTenureStatus) === d.NitroRewardStatus.REDEEMABLE;
+    M = (null == P ? void 0 : P.nitroTenureStatus) === d.NitroRewardStatus.REDEEMABLE;
   switch (null == P ? void 0 : P.nitroTenureStatus) {
     case d.NitroRewardStatus.REDEEMABLE:
       s = C, i = "unlocked icon";
@@ -67,7 +67,7 @@ t.default = e => {
           className: c.cardComponent,
           children: p
         }), 0 !== A.length && null != S && (0, a.jsx)(l.Button, {
-          disabled: !h,
+          disabled: !M,
           fullWidth: !0,
           onClick: S,
           children: (0, a.jsxs)("div", {

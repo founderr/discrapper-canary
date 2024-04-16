@@ -20,8 +20,8 @@ var n = a("735250"),
   C = a("290297"),
   m = a("918854"),
   S = a("279240"),
-  I = a("765717"),
-  p = a("358221"),
+  p = a("765717"),
+  I = a("358221"),
   T = a("823748"),
   g = a("626421"),
   A = a("118379"),
@@ -74,45 +74,45 @@ var n = a("735250"),
   eC = a("46140"),
   em = a("689938"),
   eS = a("268703");
-let eI = () => (0, n.jsx)("div", {
+let ep = () => (0, n.jsx)("div", {
     className: eS.loader,
     children: (0, n.jsx)(E.Spinner, {})
   }),
-  ep = (0, d.makeLazy)({
+  eI = (0, d.makeLazy)({
     createPromise: () => Promise.all([a.e("99387"), a.e("68614")]).then(a.bind(a, "650788")),
     webpackId: "650788",
     name: "GuildShopPage",
-    renderLoader: eI
+    renderLoader: ep
   }),
   eT = (0, d.makeLazy)({
     createPromise: () => Promise.all([a.e("99387"), a.e("44798")]).then(a.bind(a, "998420")),
     webpackId: "998420",
     name: "GuildMemberApplicationReview",
-    renderLoader: eI
+    renderLoader: ep
   }),
   eg = (0, d.makeLazy)({
     createPromise: () => Promise.all([a.e("99387"), a.e("51373")]).then(a.bind(a, "231588")),
     webpackId: "231588",
     name: "GuildHomePage",
-    renderLoader: eI
+    renderLoader: ep
   }),
   eA = (0, d.makeLazy)({
     createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("85552"), a.e("16600")]).then(a.bind(a, "545918")),
     webpackId: "545918",
     name: "MemberSafetyPage",
-    renderLoader: eI
+    renderLoader: ep
   }),
   eN = (0, d.makeLazy)({
     createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("66635"), a.e("75475"), a.e("58227"), a.e("38359"), a.e("51199")]).then(a.bind(a, "603072")),
     webpackId: "603072",
     name: "ChannelsAndRolesPage",
-    renderLoader: eI
+    renderLoader: ep
   }),
   ev = (0, d.makeLazy)({
     createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("66635"), a.e("75475"), a.e("19878"), a.e("38359"), a.e("50498")]).then(a.bind(a, "599263")),
     webpackId: "599263",
     name: "GuildOnboardingPage",
-    renderLoader: eI
+    renderLoader: ep
   }),
   eR = e => {
     let {
@@ -138,14 +138,14 @@ let eI = () => (0, n.jsx)("div", {
     }), d = (0, N.isEligibleForSubscriptionsInGuildShop)(s, "channel_renderer");
     if (null != s && null != l && (0, eh.isStaticChannelRoute)(l)) switch (l) {
       case eh.StaticChannelRoute.ROLE_SUBSCRIPTIONS:
-        return d ? (0, n.jsx)(ep, {
+        return d ? (0, n.jsx)(eI, {
           guildId: s,
           initialTab: v.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS
         }) : (0, n.jsx)(y.default, {
           guildId: s
         });
       case eh.StaticChannelRoute.GUILD_SHOP:
-        return (0, n.jsx)(ep, {
+        return (0, n.jsx)(eI, {
           guildId: s,
           productId: i,
           initialTab: u
@@ -316,7 +316,7 @@ function eB(e) {
   }), h.UserTriggerAAExperiment.trackExposure({
     location: l
   });
-  let r = (0, f.useStateFromStores)([p.default], () => p.default.isFullscreenInContext());
+  let r = (0, f.useStateFromStores)([I.default], () => I.default.isFullscreenInContext());
   return s ? null : (0, n.jsxs)("div", {
     className: i()(eS.sidebar, (0, el.getThemeClass)(a), {
       [eS.hasNotice]: t,
@@ -394,17 +394,17 @@ function eV() {
             }), (0, n.jsx)(C.default.Provider, {
               value: S,
               children: (0, n.jsxs)(o.Switch, {
-                children: [(0, n.jsx)(I.default, {
+                children: [(0, n.jsx)(p.default, {
                   path: eE.Routes.ACTIVITY,
                   disableTrack: !0,
                   children: (0, n.jsx)(o.Redirect, {
                     to: eE.Routes.ME
                   })
-                }), (0, n.jsx)(I.default, {
+                }), (0, n.jsx)(p.default, {
                   path: eE.Routes.ACTIVITIES_HAPPENING_NOW,
                   render: eG,
                   impressionName: u.ImpressionNames.ACTIVITIES
-                }), (0, n.jsx)(I.default, {
+                }), (0, n.jsx)(p.default, {
                   path: eE.Routes.ACTIVITY_DETAILS(":applicationId"),
                   render: ej,
                   impressionName: u.ImpressionNames.ACTIVITY_DETAILS,
@@ -416,52 +416,52 @@ function eV() {
                       application_id: t.params.applicationId
                     }
                   }
-                }), (0, n.jsx)(I.default, {
+                }), (0, n.jsx)(p.default, {
                   path: eE.Routes.ACTIVITIES,
                   render: eG,
                   impressionName: u.ImpressionNames.ACTIVITIES
-                }), (0, n.jsx)(I.default, {
+                }), (0, n.jsx)(p.default, {
                   path: eE.Routes.APPLICATION_LIBRARY,
                   render: eD,
                   impressionName: u.ImpressionNames.APPLICATION_LIBRARY,
                   disableTrack: !0
-                }), (0, n.jsx)(I.default, {
+                }), (0, n.jsx)(p.default, {
                   path: eE.Routes.APPLICATION_STORE,
                   render: eb,
                   impressionName: u.ImpressionNames.APPLICATION_STORE,
                   disableTrack: !0
-                }), (0, n.jsx)(I.default, {
+                }), (0, n.jsx)(p.default, {
                   path: eE.Routes.COLLECTIBLES_SHOP_FULLSCREEN,
                   render: eU(!0),
                   disableTrack: !0
-                }), (0, n.jsx)(I.default, {
+                }), (0, n.jsx)(p.default, {
                   path: eE.Routes.COLLECTIBLES_SHOP,
                   render: eU(!1),
                   disableTrack: !0
-                }), (0, n.jsx)(I.default, {
+                }), (0, n.jsx)(p.default, {
                   path: eE.Routes.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"),
                   render: eU(!1),
                   disableTrack: !0
-                }), (0, n.jsx)(I.default, {
+                }), (0, n.jsx)(p.default, {
                   path: eE.Routes.MESSAGE_REQUESTS,
                   render: ek,
                   disableTrack: !0
-                }), (0, n.jsx)(I.default, {
+                }), (0, n.jsx)(p.default, {
                   path: eE.Routes.FAMILY_CENTER,
                   render: eF,
                   disableTrack: !0
-                }), (0, n.jsx)(I.default, {
+                }), (0, n.jsx)(p.default, {
                   path: eE.Routes.ME,
                   exact: !0,
                   render: ew,
                   impressionName: u.ImpressionNames.FRIENDS,
                   disableTrack: !0
-                }), (0, n.jsx)(I.default, {
+                }), (0, n.jsx)(p.default, {
                   path: [eE.Routes.CHANNEL_THREAD_VIEW(":guildId", ":channelId", ":threadId", ":messageId?"), eE.Routes.CHANNEL(eE.ME, ":channelId"), eE.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")],
                   render: eM,
                   impressionName: u.ImpressionNames.GUILD_CHANNEL,
                   disableTrack: !0
-                }), (0, n.jsx)(I.default, {
+                }), (0, n.jsx)(p.default, {
                   path: eE.Routes.GUILD_DISCOVERY,
                   render: e => {
                     let {
@@ -471,12 +471,12 @@ function eV() {
                   },
                   impressionName: u.ImpressionNames.GUILD_DISCOVERY,
                   disableTrack: !0
-                }), (0, n.jsx)(I.default, {
+                }), (0, n.jsx)(p.default, {
                   path: eE.Routes.GUILD_MEMBER_VERIFICATION(":guildId", ":inviteCode?"),
                   render: ex,
                   impressionName: u.ImpressionNames.GUILD_MEMBER_VERIFICATION,
                   disableTrack: !0
-                }), (0, n.jsx)(I.default, {
+                }), (0, n.jsx)(p.default, {
                   path: eE.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(":guildId", ":inviteCode?"),
                   render: ey,
                   impressionName: u.ImpressionNames.HUB_EMAIL_SIGNUP,
@@ -488,7 +488,7 @@ function eV() {
                       has_invite: void 0 !== t.params.inviteCode
                     }
                   }
-                }), (0, n.jsx)(I.default, {
+                }), (0, n.jsx)(p.default, {
                   path: eE.Routes.FEATURE(":feature"),
                   exact: !0,
                   render: eH,

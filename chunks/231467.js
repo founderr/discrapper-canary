@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   ClanDiscoveryCardView: function() {
-    return I
+    return p
   }
 });
 var n = a("735250"),
@@ -21,7 +21,7 @@ var n = a("735250"),
   m = a("689938"),
   S = a("563560");
 
-function I(e) {
+function p(e) {
   let {
     clan: t,
     affinity: a
@@ -32,13 +32,13 @@ function I(e) {
       primaryColor: E,
       secondaryColor: h
     }
-  } = t, _ = (0, d.default)(t.games), I = (0, n.jsx)(o.Text, {
+  } = t, _ = (0, d.default)(t.games), p = (0, n.jsx)(o.Text, {
     variant: "text-xs/medium",
     tag: "span",
     className: S.playstyle,
     color: "none",
     children: (0, C.getPlaystyleTitle)(t.playstyle)
-  }), p = m.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
+  }), I = m.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
     count: t.memberCount
   });
   return (0, n.jsxs)("div", {
@@ -82,7 +82,7 @@ function I(e) {
         }), (0, n.jsxs)(o.Text, {
           variant: "text-xs/normal",
           color: "text-secondary",
-          children: [I, " \xb7 ".concat(p)]
+          children: [p, " \xb7 ".concat(I)]
         })]
       }), (0, n.jsx)(o.Text, {
         variant: "text-xs/normal",
@@ -184,7 +184,7 @@ t.default = function(e) {
   return (0, n.jsx)(o.Clickable, {
     onClick: d,
     className: S.clickableCard,
-    children: (0, n.jsx)(I, {
+    children: (0, n.jsx)(p, {
       clan: t,
       affinity: l
     })

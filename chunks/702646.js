@@ -16,8 +16,8 @@ var n = a("735250"),
   C = a("92373"),
   m = a("10473"),
   S = a("207796"),
-  I = a("308083"),
-  p = a("689938"),
+  p = a("308083"),
+  I = a("689938"),
   T = a("60427");
 
 function g() {
@@ -53,7 +53,7 @@ function g() {
       }), (0, n.jsx)(h.Text, {
         variant: "text-xs/medium",
         color: "none",
-        children: p.default.Messages.CLAN_DISCOVERY_GAME_FILTER.format({
+        children: I.default.Messages.CLAN_DISCOVERY_GAME_FILTER.format({
           count: e.length
         })
       })]
@@ -62,7 +62,7 @@ function g() {
 }
 
 function A() {
-  let e = s.useMemo(I.getPlaystyleOptions, []),
+  let e = s.useMemo(p.getPlaystyleOptions, []),
     t = (0, S.useClanDiscoveryUIStore)(e => e.selectedPlaystyle.id, r.default),
     a = (0, S.useClanDiscoveryUIStore)(e => e.selectedPlaystyle.name, r.default),
     l = (0, S.useClanDiscoveryUIStore)(e => e.setMode, r.default),
@@ -149,7 +149,7 @@ function v() {
     }), (0, n.jsx)(h.Text, {
       variant: "text-xs/medium",
       color: "none",
-      children: p.default.Messages.CLAN_DISCOVERY_PRIMETIME_FILTER
+      children: I.default.Messages.CLAN_DISCOVERY_PRIMETIME_FILTER
     })]
   })
 }

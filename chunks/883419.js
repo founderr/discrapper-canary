@@ -30,8 +30,8 @@ function m(e) {
     backButtonEligible: n,
     prevStep: s,
     showGuildPicker: m,
-    handleStepChange: p,
-    trialFooterMessageOverride: O,
+    handleStepChange: O,
+    trialFooterMessageOverride: p,
     reviewWarningMessage: R,
     planGroup: L,
     openInvoiceId: h,
@@ -71,8 +71,8 @@ function m(e) {
     })
   }, [G]);
   let ea = r.useCallback(e => {
-      D(e), p(f.Step.CONFIRM)
-    }, [p, D]),
+      D(e), O(f.Step.CONFIRM)
+    }, [O, D]),
     er = r.useCallback(e => {
       et(e), X({
         ...z,
@@ -118,11 +118,11 @@ function m(e) {
         priceOptions: j,
         currencies: v,
         onCurrencyChange: e => w(e),
-        handlePaymentSourceAdd: () => p(f.Step.ADD_PAYMENT_STEPS),
+        handlePaymentSourceAdd: () => O(f.Step.ADD_PAYMENT_STEPS),
         setHasAcceptedTerms: J,
         legalTermsNodeRef: es,
         hasLegalTermsFlash: q,
-        trialFooterMessageOverride: O,
+        trialFooterMessageOverride: p,
         reviewWarningMessage: R,
         metadata: m || en ? void 0 : z,
         purchaseState: Z,
@@ -133,7 +133,7 @@ function m(e) {
       children: (0, a.jsx)(E.default, {
         premiumSubscription: null != U ? U : null,
         setPurchaseState: V,
-        onBack: () => null != s && p(s),
+        onBack: () => null != s && O(s),
         onNext: ea,
         onPurchaseError: e => K(e),
         legalTermsNodeRef: es,

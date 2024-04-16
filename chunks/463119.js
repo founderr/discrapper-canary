@@ -20,8 +20,8 @@ var n = a("735250"),
   C = a("906732"),
   m = a("821982"),
   S = a("377171"),
-  I = a("633302"),
-  p = a("126900"),
+  p = a("633302"),
+  I = a("126900"),
   T = a("26290"),
   g = a("153066"),
   A = a("335131"),
@@ -55,7 +55,7 @@ let M = e => {
     return (0, n.jsx)(f.LinkButton, {
       selected: t,
       route: R.Routes.COLLECTIBLES_SHOP,
-      icon: p.default,
+      icon: I.default,
       text: O.default.Messages.COLLECTIBLES_SHOP,
       locationState: a,
       ...d,
@@ -152,7 +152,7 @@ let M = e => {
       displayOptions: i
     } = e, r = s.useMemo(() => {
       var e;
-      let t = null != i.emojiName ? null === (e = I.default.getByName(i.emojiName)) || void 0 === e ? void 0 : e.surrogates : null;
+      let t = null != i.emojiName ? null === (e = p.default.getByName(i.emojiName)) || void 0 === e ? void 0 : e.surrogates : null;
       return (0, n.jsxs)(d.Text, {
         variant: "text-sm/medium",
         className: L.marketingBadgeTooltipContent,

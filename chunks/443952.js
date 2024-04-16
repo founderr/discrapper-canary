@@ -17,8 +17,8 @@ var s = a("45792"),
   C = a("592125"),
   m = a("293273"),
   S = a("885110"),
-  I = a("451478"),
-  p = a("630388"),
+  p = a("451478"),
+  I = a("630388"),
   T = a("823379"),
   g = a("591759"),
   A = a("228488"),
@@ -202,7 +202,7 @@ t.default = {
       return new Promise((e, t) => {
         ! function(e, t) {
           var a;
-          let n = I.default.getLastFocusedWindowId(),
+          let n = p.default.getLastFocusedWindowId(),
             s = null == n ? null : null === (a = (0, c.getAppWindowContextValue)(n)) || void 0 === a ? void 0 : a.renderWindow;
           if (null == s) throw new N.default({
             errorCode: x.RPCErrors.UNKNOWN_ERROR
@@ -250,7 +250,7 @@ t.default = {
       if (null == s) throw new N.default({
         errorCode: x.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      if (!(0, p.hasFlag)(null !== (t = a.application.flags) && void 0 !== t ? t : 0, x.ApplicationFlags.EMBEDDED)) throw new N.default({
+      if (!(0, I.hasFlag)(null !== (t = a.application.flags) && void 0 !== t ? t : 0, x.ApplicationFlags.EMBEDDED)) throw new N.default({
         errorCode: x.RPCErrors.INVALID_COMMAND
       }, "This application cannot access this API");
       let l = (0, O.default)();

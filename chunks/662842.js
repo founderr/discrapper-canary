@@ -18,8 +18,8 @@ var n, s, l = a("735250"),
   C = a("924301"),
   m = a("504160"),
   S = a("151864"),
-  I = a("725436"),
-  p = a("497656"),
+  p = a("725436"),
+  I = a("497656"),
   T = a("554747"),
   g = a("230900"),
   A = a("854698"),
@@ -49,7 +49,7 @@ function Y(e) {
   let {
     guild: t,
     isStudyRoomNotice: a = !1
-  } = e, n = (0, p.useActiveEventOrStageInstanceChannel)(t.id), s = (0, T.useGuildActiveEvent)(t.id), r = (0, u.useStateFromStores)([L.default], () => L.default.getStageInstanceByChannel(null == n ? void 0 : n.id), [n]), {
+  } = e, n = (0, I.useActiveEventOrStageInstanceChannel)(t.id), s = (0, T.useGuildActiveEvent)(t.id), r = (0, u.useStateFromStores)([L.default], () => L.default.getStageInstanceByChannel(null == n ? void 0 : n.id), [n]), {
     isStageNoticeHidden: Y,
     isEventNoticeHidden: W
   } = (0, u.useStateFromStoresObject)([S.default], () => ({
@@ -179,7 +179,7 @@ function Y(e) {
         return {
           noticeType: 1,
           title: t.name,
-          location: (0, I.guildEventDetailsParser)(e, !0),
+          location: (0, p.guildEventDetailsParser)(e, !0),
           locationIcon: (0, l.jsx)(G.default, {
             width: 16,
             height: 16,

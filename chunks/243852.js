@@ -11,8 +11,8 @@ var n, s, l, i, r, o = a("442837"),
   C = a("619914"),
   m = a("581883"),
   S = a("70956"),
-  I = a("780570"),
-  p = a("77498"),
+  p = a("780570"),
+  I = a("77498"),
   T = a("283595"),
   g = a("19780"),
   A = a("944486"),
@@ -36,7 +36,7 @@ function y(e) {
     a = Date.now(),
     n = null != e.updatedAt ? a - e.updatedAt : 0;
   n > R + O && (n = 0);
-  let s = (0, I.shouldShareApplicationActivity)(e.applicationId, T.default),
+  let s = (0, p.shouldShareApplicationActivity)(e.applicationId, T.default),
     l = A.default.getVoiceChannelId(),
     i = g.default.getMediaSessionId();
   f.default.updateActivity({
@@ -68,7 +68,7 @@ function D() {
       exePath: s
     }
     of t) {
-    let t = p.default.getGameByName(e);
+    let t = I.default.getGameByName(e);
     if (null != t) a.add(t.id), !(t.id in L) && y({
       applicationId: t.id,
       updatedAt: Date.now(),

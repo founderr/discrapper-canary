@@ -16,8 +16,8 @@ var n = a("735250"),
   C = a("699516"),
   m = a("974042"),
   S = a("451478"),
-  I = a("6048"),
-  p = a("390697"),
+  p = a("6048"),
+  I = a("390697"),
   T = a("434184"),
   g = a("701861"),
   A = a("437314"),
@@ -38,7 +38,7 @@ t.default = function(e) {
   } = (0, h.default)(E.default.FRIENDS_LIST), {
     rows: y,
     section: D
-  } = (0, r.useStateFromStoresObject)([m.default], () => m.default.getState()), b = (0, r.useStateFromStores)([S.default], () => S.default.isFocused()), U = (0, r.useStateFromStores)([C.default], () => C.default.getRelationshipCount()), j = (0, p.useIsClearIncomingFriendRequestsEnabled)(), [G, w] = s.useState(() => {
+  } = (0, r.useStateFromStoresObject)([m.default], () => m.default.getState()), b = (0, r.useStateFromStores)([S.default], () => S.default.isFocused()), U = (0, r.useStateFromStores)([C.default], () => C.default.getRelationshipCount()), j = (0, I.useIsClearIncomingFriendRequestsEnabled)(), [G, w] = s.useState(() => {
     let e = {};
     for (let t of Object.values(M.FriendsSections)) e[t] = "";
     return e
@@ -69,12 +69,12 @@ t.default = function(e) {
     value: l,
     children: (0, n.jsxs)(c.default, {
       section: M.AnalyticsSections.FRIENDS_LIST,
-      children: [(0, n.jsx)(I.default, {
+      children: [(0, n.jsx)(p.default, {
         className: i()(x.searchBar, B ? x.searchEmptyState : null),
         query: G[t],
         onChange: k,
         onClear: F,
-        size: I.default.Sizes.MEDIUM
+        size: p.default.Sizes.MEDIUM
       }), t === M.FriendsSections.ONLINE && "" === G[t] && (0, n.jsx)(_.default, {}), (0, n.jsxs)("div", {
         className: x.sectionTitle,
         children: [(0, n.jsx)(R.default, {

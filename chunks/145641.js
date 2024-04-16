@@ -41,7 +41,7 @@ t.default = function(e) {
       padding: 8,
       callback: () => null == t ? void 0 : t.focus()
     })
-  }, []), I = (0, l.default)({
+  }, []), p = (0, l.default)({
     id: "people-list",
     isEnabled: h,
     scrollToStart: C,
@@ -49,7 +49,7 @@ t.default = function(e) {
     setFocus: S
   });
   return (0, n.jsx)(l.ListNavigatorProvider, {
-    navigator: I,
+    navigator: p,
     children: (0, n.jsx)(l.ListNavigatorContainer, {
       children: e => {
         let {

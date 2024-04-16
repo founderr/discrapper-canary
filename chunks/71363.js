@@ -31,8 +31,8 @@ t.default = e => {
     let [s, a] = t;
     return !1 !== a.canReveal && "upcomingDropUntimed" !== a.name && (e[s] = a), e
   }, {}), {
-    analyticsLocations: h
-  } = (0, _.default)(c.default.PREMIUM_SUBSCRIBER_NITRO_HOME), [M, x] = i.useState(!1), L = (0, E.default)("perks-discoverability"), v = (0, n.useStateFromStores)([d.default], () => d.default.useReducedMotion);
+    analyticsLocations: M
+  } = (0, _.default)(c.default.PREMIUM_SUBSCRIBER_NITRO_HOME), [h, x] = i.useState(!1), L = (0, E.default)("perks-discoverability"), v = (0, n.useStateFromStores)([d.default], () => d.default.useReducedMotion);
   return (0, a.jsx)(u.AdvancedScrollerAuto, {
     className: l()(g.allPerksScroller, {
       [g.open]: t,
@@ -42,7 +42,7 @@ t.default = e => {
     children: (0, a.jsx)("div", {
       className: g.container,
       children: (0, a.jsxs)(_.AnalyticsLocationProvider, {
-        value: h,
+        value: M,
         children: [(0, a.jsx)(T.default, {
           className: g.heroHeading,
           onBackClick: () => {
@@ -86,8 +86,8 @@ t.default = e => {
           className: g.footerSpacing
         }), (0, a.jsx)(o.VisibilitySensor, {
           onChange: e => {
-            e && !M && (f.default.track(m.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-              location_stack: h
+            e && !h && (f.default.track(m.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+              location_stack: M
             }), x(!0))
           },
           children: (0, a.jsx)("div", {

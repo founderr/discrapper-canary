@@ -23,8 +23,8 @@ function S(e, t, a) {
     writable: !0
   }) : e[t] = a, e
 }
-let I = c.default.getArticleURL(h.HelpdeskArticles.VERIFICATION_FAQ);
-class p extends(n = l.PureComponent) {
+let p = c.default.getArticleURL(h.HelpdeskArticles.VERIFICATION_FAQ);
+class I extends(n = l.PureComponent) {
   renderFields() {
     let {
       types: e,
@@ -63,7 +63,7 @@ class p extends(n = l.PureComponent) {
         }), (0, s.jsx)("div", {
           className: r()(C.body, m.marginTop4, m.marginBottom20),
           children: _.default.Messages.VERIFICATION_BODY_WITH_HELP_LINK.format({
-            helpCenterURL: I
+            helpCenterURL: p
           })
         }), (0, s.jsx)(f.default, {
           grow: 0,
@@ -103,8 +103,8 @@ class p extends(n = l.PureComponent) {
     })
   }
 }
-S(p, "defaultProps", {
+S(I, "defaultProps", {
   types: [h.VerificationTypes.CAPTCHA],
   onCaptchaVerify: h.NOOP,
   onLogout: h.NOOP
-}), t.default = p
+}), t.default = I

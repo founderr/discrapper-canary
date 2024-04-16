@@ -30,8 +30,8 @@ function _(e) {
     currencyLoading: N,
     selectedSkuId: T,
     setSelectedSkuId: m,
-    setSelectedPlanId: p,
-    priceOptions: O,
+    setSelectedPlanId: O,
+    priceOptions: p,
     setSubscriptionMetadataRequest: R
   } = (0, d.usePaymentContext)(), {
     isGift: L
@@ -43,20 +43,20 @@ function _(e) {
       guild_id: _
     })
   }, [_, R]), r.useEffect(() => {
-    p(n);
+    O(n);
     let e = null != n ? l.default.get(n) : null;
     !h && !S && (I(t => {
-      let n = null != e ? (0, u.getPrice)(e.id, !1, L, O) : void 0,
+      let n = null != e ? (0, u.getPrice)(e.id, !1, L, p) : void 0,
         a = {
           ...t,
           subscription_plan_id: null == e ? void 0 : e.id,
           price: null == n ? void 0 : n.amount,
           regular_price: null == e ? void 0 : e.price,
-          currency: O.currency
+          currency: p.currency
         };
       return i.default.track(f.AnalyticEvents.PAYMENT_FLOW_STARTED, a), a
     }), null != e && (m(null == e ? void 0 : e.skuId), P(t)))
-  }, [S, n, L, h, O, T, I, p, m, P, t]), h) ? (0, a.jsx)(c.default, {}) : S ? (0, a.jsx)(s.BlockedPaymentsContentModal, {
+  }, [S, n, L, h, p, T, I, O, m, P, t]), h) ? (0, a.jsx)(c.default, {}) : S ? (0, a.jsx)(s.BlockedPaymentsContentModal, {
     onClose: E
   }) : null
 }

@@ -20,9 +20,9 @@ var n = a("735250"),
   C = a("346329"),
   m = a("981631"),
   S = a("689938"),
-  I = a("581245");
+  p = a("581245");
 
-function p(e, t, a) {
+function I(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
     value: a,
     enumerable: !0,
@@ -63,11 +63,11 @@ class T extends s.Component {
     } = this.state;
     return (0, n.jsx)("div", {
       className: i()({
-        [I.libraryFilter]: !0,
-        [I.focused]: t
+        [p.libraryFilter]: !0,
+        [p.focused]: t
       }),
       children: (0, n.jsx)(h.default, {
-        className: I.searchBar,
+        className: p.searchBar,
         ref: this.setRef,
         onChange: d.updateLibraryFilter,
         onFocus: () => this.setState({
@@ -87,11 +87,11 @@ class T extends s.Component {
     })
   }
   constructor(...e) {
-    super(...e), p(this, "searchBarRef", null), p(this, "state", {
+    super(...e), I(this, "searchBarRef", null), I(this, "state", {
       focused: !1
-    }), p(this, "setRef", e => {
+    }), I(this, "setRef", e => {
       this.searchBarRef = e
-    }), p(this, "handleKeyDown", e => {
+    }), I(this, "handleKeyDown", e => {
       var t;
       let {
         activeRowKey: a,

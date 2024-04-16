@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   AwaitingBrowserCheckoutStepBody: function() {
     return C
   },
@@ -7,15 +7,15 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var s = n("735250");
-n("470079");
-var r = n("481060"),
-  i = n("311821"),
-  l = n("285952"),
-  a = n("409813"),
-  o = n("689938");
-let C = () => (0, s.jsx)("div", {
-    children: (0, s.jsx)(r.Heading, {
+var n = s("735250");
+s("470079");
+var r = s("481060"),
+  i = s("311821"),
+  l = s("285952"),
+  a = s("409813"),
+  o = s("689938");
+let C = () => (0, n.jsx)("div", {
+    children: (0, n.jsx)(r.Heading, {
       variant: "heading-xl/bold",
       children: o.default.Messages.PAYMENT_WAITING_FOR_BROWSER_CHECKOUT_MODAL_HEADER
     })
@@ -23,20 +23,20 @@ let C = () => (0, s.jsx)("div", {
   u = e => {
     let {
       onStepChange: t,
-      onBackClick: n
+      onBackClick: s
     } = e;
-    return (0, s.jsx)("div", {
-      children: (0, s.jsxs)(r.ModalFooter, {
+    return (0, n.jsx)("div", {
+      children: (0, n.jsxs)(r.ModalFooter, {
         justify: l.default.Justify.BETWEEN,
         align: l.default.Align.CENTER,
-        children: [(0, s.jsx)(r.Button, {
+        children: [(0, n.jsx)(r.Button, {
           color: r.Button.Colors.BRAND,
           onClick: () => {
             t(a.Step.ADD_PAYMENT_STEPS)
           },
           children: o.default.Messages.PAYMENT_WAITING_FOR_BROWSER_CHECKOUT_MODAL_NEXT_BUTTON
-        }), (0, s.jsx)(i.default, {
-          onClick: n
+        }), (0, n.jsx)(i.default, {
+          onClick: s
         })]
       })
     })

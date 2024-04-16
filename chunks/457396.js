@@ -21,8 +21,8 @@ var s = a("924826"),
   C = a("639119"),
   m = a("655525"),
   S = a("314684"),
-  I = a("52188"),
-  p = a("248042"),
+  p = a("52188"),
+  I = a("248042"),
   T = a("924540"),
   g = a("649765"),
   A = a("565626"),
@@ -46,7 +46,7 @@ let P = "NitroTabButton",
       w = (0, C.usePremiumTrialOffer)(),
       k = (0, _.usePremiumDiscountOffer)(),
       F = (0, l.useStateFromStores)([d.default], () => d.default.isLocalizedPromoEnabled) && null == w,
-      H = (0, p.useIsEligibleForBogoPromotion)(),
+      H = (0, I.useIsEligibleForBogoPromotion)(),
       B = (0, A.default)(),
       V = (0, S.useTenureRewardBadgeDescription)(),
       Y = (0, h.useShouldShowNewOfferBadgeForAprilMarketingMoment)(P),
@@ -73,8 +73,8 @@ let P = "NitroTabButton",
       onSelect: () => (0, o.markDismissibleContentAsDismissed)(i.DismissibleContent.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, {
         dismissAction: O.ContentDismissActionType.TAKE_ACTION
       })
-    }) : F && (a = (0, n.jsx)(I.LocalizedPricingBadgeIcon, {
-      entryPoint: I.BadgeEntryPoint.PrivateMessages
+    }) : F && (a = (0, n.jsx)(p.LocalizedPricingBadgeIcon, {
+      entryPoint: p.BadgeEntryPoint.PrivateMessages
     }), !x && (t = M.localizeBadge)), (0, n.jsx)(r.LinkButton, {
       selected: x,
       route: y,

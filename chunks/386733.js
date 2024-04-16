@@ -24,8 +24,8 @@ var a = s("735250"),
   N = s("976644"),
   O = s("63063"),
   P = s("276444"),
-  h = s("520540"),
-  M = s("197115"),
+  M = s("520540"),
+  h = s("197115"),
   x = s("550473"),
   L = s("578767"),
   v = s("228059"),
@@ -148,11 +148,11 @@ t.default = e => {
     isInSettings: t = !1
   } = e, r = (0, u.useStateFromStoresArray)([P.default], () => P.default.getSentUserIds()), _ = (0, u.useStateFromStoresArray)([g.default], () => r.map(e => g.default.getUser(e)).filter(e => null != e)), f = i.useMemo(() => _.map(e => new A.default(e)), [_]), {
     subscriberHomeVariant: p
-  } = h.ReferralProgramSender.useExperiment({
+  } = M.ReferralProgramSender.useExperiment({
     location: "ReferralProgramProgressBar"
   }, {
     autoTrackExposure: !1
-  }), x = p === h.SubscriberHomeVariant.VARIANT_2;
+  }), x = p === M.SubscriberHomeVariant.VARIANT_2;
   i.useEffect(() => {
     r.forEach(e => {
       (0, C.getUser)(e)
@@ -185,7 +185,7 @@ t.default = e => {
           children: W(j, v, r.length, K)
         }), (0, a.jsxs)("div", {
           className: y.expandedProgressBarButtonContainer,
-          children: [!t && !x && (0, a.jsx)(M.default, {
+          children: [!t && !x && (0, a.jsx)(h.default, {
             color: E.ButtonColors.CUSTOM,
             buttonText: U.default.Messages.GIFT_NITRO,
             className: y.expandedProgressBarGiftingCTA,

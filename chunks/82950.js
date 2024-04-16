@@ -24,8 +24,8 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
       imageMarginX: f,
       imageMarginTop: m,
       trackingSource: S,
-      undismissable: I,
-      onDismissed: p,
+      undismissable: p,
+      onDismissed: I,
       onClick: T,
       cta: g,
       ctaColor: A
@@ -54,11 +54,11 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
     let v = null != f ? "".concat(f, "px") : "16px";
     return (0, n.jsxs)("div", {
       className: _.channelNotice,
-      children: [!0 === I ? null : (0, n.jsx)(r.Clickable, {
+      children: [!0 === p ? null : (0, n.jsx)(r.Clickable, {
         onClick: () => {
           o.default.trackWithMetadata(E.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
             notice_type: c
-          }), null == p || p()
+          }), null == I || I()
         },
         className: _.close,
         "aria-label": h.default.Messages.DISMISS,

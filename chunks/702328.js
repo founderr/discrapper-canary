@@ -24,8 +24,8 @@ var a = s("735250"),
   N = s("639119"),
   O = s("764081"),
   P = s("419854"),
-  h = s("568126"),
-  M = s("605289"),
+  M = s("568126"),
+  h = s("605289"),
   x = s("248042"),
   L = s("823188"),
   v = s("65536"),
@@ -159,7 +159,7 @@ t.default = e => {
         isFullscreen: s,
         inOfferExperience: eS,
         isMarketingPageOptimizationEnabled: E
-      }), !s && eE ? (0, a.jsx)(M.default, {
+      }), !s && eE ? (0, a.jsx)(h.default, {
         localizedPricingPromo: ec,
         smallGap: !0
       }) : (0, a.jsx)(o.VisibilitySensor, {
@@ -196,7 +196,7 @@ t.default = e => {
           isFullscreen: s
         }), (0, a.jsx)(O.default, {
           isFullscreen: s
-        }), s && eE && (0, a.jsx)(h.default, {
+        }), s && eE && (0, a.jsx)(M.default, {
           localizedPricingPromo: ec
         }), (0, a.jsx)(o.VisibilitySensor, {
           onChange: e => G(e),

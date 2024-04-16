@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return p
+    return I
   }
 }), a("47120");
 var n = a("664751"),
@@ -28,8 +28,8 @@ async function S(e, t, a) {
     code_challenge_method: _,
     state: m,
     scope: S,
-    permissions: I,
-    guild_id: p,
+    permissions: p,
+    guild_id: I,
     channel_id: T,
     prompt: g,
     disable_guild_select: A,
@@ -86,12 +86,12 @@ async function S(e, t, a) {
   null == a || a(n.application, T);
   let R = E.NONE;
   try {
-    R = l.deserialize(null != I ? I : 0)
+    R = l.deserialize(null != p ? p : 0)
   } catch (e) {}
-  return t(i, n, v, R, r, o, u, _, m, p, T, g, A)
+  return t(i, n, v, R, r, o, u, _, m, I, T, g, A)
 }
 
-function I(e, t) {
+function p(e, t) {
   if (e.authorization.accessToken) throw new h.default({
     errorCode: C.RPCErrors.INVALID_COMMAND
   }, "Already authenticated");
@@ -136,7 +136,7 @@ function I(e, t) {
   })
 }
 
-function p(e, t) {
+function I(e, t) {
   return {
     [C.RPCCommands.AUTHENTICATE]: (0, r.createRPCCommand)(C.RPCCommands.AUTHENTICATE, {
       handler(a) {
@@ -176,7 +176,7 @@ function p(e, t) {
                   scope: a,
                   expires: Date.now() + n
                 }, o.Storage.set(m, l)
-              }(a, l.access_token, l.scope, l.expires_in), I(s, l.access_token)
+              }(a, l.access_token, l.scope, l.expires_in), p(s, l.access_token)
             });
           return null != (l = function(e, t) {
             let a = o.Storage.get(m);
@@ -185,7 +185,7 @@ function p(e, t) {
               if (!(n.scope !== t || n.expires <= Date.now())) return n.accessToken;
               delete a[e], o.Storage.set(m, a)
             }
-          }(a, i)) ? I(s, l).catch(() => (! function(e) {
+          }(a, i)) ? p(s, l).catch(() => (! function(e) {
             var t;
             let a = null !== (t = o.Storage.get(m)) && void 0 !== t ? t : {};
             delete a[e], o.Storage.set(m, a)
@@ -194,7 +194,7 @@ function p(e, t) {
         if (null == l) throw new h.default({
           errorCode: C.RPCErrors.INVALID_TOKEN
         }, "No access token provided");
-        return I(s, l)
+        return p(s, l)
       }
     }),
     [C.RPCCommands.AUTHORIZE]: {

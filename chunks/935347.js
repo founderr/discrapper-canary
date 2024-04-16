@@ -16,8 +16,8 @@ var n = a("735250"),
   C = a("197344"),
   m = a("474873"),
   S = a("706454"),
-  I = a("215427"),
-  p = a("820254"),
+  p = a("215427"),
+  I = a("820254"),
   T = a("985806"),
   g = a("838949"),
   A = a("70956"),
@@ -139,7 +139,7 @@ class x extends s.PureComponent {
               className: M.statusLink,
               href: O.Links.STATUS,
               target: "_blank",
-              children: [(0, n.jsx)(p.default, {
+              children: [(0, n.jsx)(I.default, {
                 className: M.icon
               }), L.default.Messages.SERVER_STATUS]
             })]
@@ -240,10 +240,10 @@ class x extends s.PureComponent {
     }, this._connectedSound.volume = 1
   }
 }
-t.default = d.default.connectStores([_.default, I.default, m.default, h.default], () => ({
+t.default = d.default.connectStores([_.default, p.default, m.default, h.default], () => ({
   isTryingToConnect: _.default.isTryingToConnect(),
   connected: _.default.isConnected(),
-  incident: I.default.getIncident(),
+  incident: p.default.getIncident(),
   soundpack: m.default.getSoundpack(),
   reducedMotion: h.default.useReducedMotion
 }))(e => {

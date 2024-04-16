@@ -15,7 +15,7 @@ var n, s, l = a("470079"),
   m = a("981631");
 (s = n || (n = {})).DEFAULT = "DEFAULT", s.UNREAD = "UNREAD", s.CONNECTED = "CONNECTED", s.SPEAKING = "SPEAKING", s.MUTED = "MUTED", s.DEAFENED = "DEAFENED";
 let S = (0, _.isMac)() ? null : "DEFAULT";
-class I extends l.PureComponent {
+class p extends l.PureComponent {
   componentDidMount() {
     C.default.setSystemTrayIcon(this.getIcon())
   }
@@ -47,10 +47,10 @@ class I extends l.PureComponent {
     }) : t[a] = n
   }
 }
-let p = () => null;
+let I = () => null;
 _.isPlatformEmbedded && (C.default.on("SYSTEM_TRAY_TOGGLE_MUTE", () => r.default.toggleSelfMute()), C.default.on("SYSTEM_TRAY_TOGGLE_DEAFEN", () => r.default.toggleSelfDeaf()), C.default.on("SYSTEM_TRAY_OPEN_VOICE_SETTINGS", () => {
   o.default.open(m.UserSettingsSections.VOICE)
-}), p = i.default.connectStores([f.default, d.default, h.default, u.default, E.default, c.default], () => {
+}), I = i.default.connectStores([f.default, d.default, h.default, u.default, E.default, c.default], () => {
   let e = u.default.getTotalMentionCount(),
     t = u.default.hasAnyUnread(),
     a = E.default.getPendingCount(),
@@ -62,4 +62,4 @@ _.isPlatformEmbedded && (C.default.on("SYSTEM_TRAY_TOGGLE_MUTE", () => r.default
     deafened: d.default.isSelfDeaf(),
     unread: !n && !!(t || e + a > 0)
   }
-})(I)), t.default = p
+})(p)), t.default = I

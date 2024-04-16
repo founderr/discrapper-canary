@@ -24,7 +24,7 @@ function S(e, t, a) {
   }) : e[t] = a, e
 }
 
-function I(e) {
+function p(e) {
   let t = C.default.getUser(e);
   return {
     user: t,
@@ -32,7 +32,7 @@ function I(e) {
   }
 }
 
-function p(e) {
+function I(e) {
   return {
     status: h.default.getStatus(e),
     isMobile: h.default.isMobileOnline(e),
@@ -65,16 +65,16 @@ class A {
         key: t,
         type: e,
         nickname: _.default.getNickname(t),
-        ...I(t),
         ...p(t),
+        ...I(t),
         ...T(t)
       })),
       t = l().map(d.default.getSuggestions(), e => new g({
         key: e.key,
         type: 99,
         nickname: e.name,
-        ...I(e.key),
         ...p(e.key),
+        ...I(e.key),
         ...T(e.key)
       }));
     return new A(l().concat(e, t))
@@ -160,7 +160,7 @@ function D(e) {
 }
 class b extends(n = i.default.Store) {
   initialize() {
-    this.waitFor(_.default, h.default, C.default, E.default, f.default, c.default, d.default), this.syncWith([_.default], y), this.syncWith([d.default], y), this.syncWith([C.default], D(I)), this.syncWith([h.default, c.default], D(p)), x()
+    this.waitFor(_.default, h.default, C.default, E.default, f.default, c.default, d.default), this.syncWith([_.default], y), this.syncWith([d.default], y), this.syncWith([C.default], D(p)), this.syncWith([h.default, c.default], D(I)), x()
   }
   getState() {
     return {

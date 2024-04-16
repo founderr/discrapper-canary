@@ -19,8 +19,8 @@ var n, s = a("735250"),
   C = a("210887"),
   m = a("819640"),
   S = a("725568"),
-  I = a("585483"),
-  p = a("792125"),
+  p = a("585483"),
+  I = a("792125"),
   T = a("981631"),
   g = a("997171");
 
@@ -120,14 +120,14 @@ class D extends(n = l.PureComponent) {
       opacity: t,
       scale: a
     } = this.state;
-    I.ComponentDispatch.dispatch(T.ComponentActions.LAYER_POP_START), o.default.parallel([o.default.spring(t, {
+    p.ComponentDispatch.dispatch(T.ComponentActions.LAYER_POP_START), o.default.parallel([o.default.spring(t, {
       toValue: 0,
       ...x
     }), o.default.spring(a, {
       toValue: 1.1,
       ...x
     })]).start(() => {
-      e(), I.ComponentDispatch.dispatch(T.ComponentActions.LAYER_POP_COMPLETE)
+      e(), p.ComponentDispatch.dispatch(T.ComponentActions.LAYER_POP_COMPLETE)
     })
   }
   animateUnder() {
@@ -207,10 +207,10 @@ A(D, "defaultProps", {
 }), A(D, "contextType", c.AccessibilityPreferencesContext);
 class b extends l.PureComponent {
   componentDidMount() {
-    I.ComponentDispatch.subscribe(T.ComponentActions.LAYER_POP_ESCAPE_KEY, f.popLayer)
+    p.ComponentDispatch.subscribe(T.ComponentActions.LAYER_POP_ESCAPE_KEY, f.popLayer)
   }
   componentWillUnmount() {
-    I.ComponentDispatch.unsubscribe(T.ComponentActions.LAYER_POP_ESCAPE_KEY, f.popLayer)
+    p.ComponentDispatch.unsubscribe(T.ComponentActions.LAYER_POP_ESCAPE_KEY, f.popLayer)
   }
   renderLayers() {
     let {
@@ -235,7 +235,7 @@ class b extends l.PureComponent {
   }
   renderArtisanalHack() {
     return (0, s.jsx)("div", {
-      className: r()(g.bg, (0, p.getThemeClass)(this.props.sidebarTheme))
+      className: r()(g.bg, (0, I.getThemeClass)(this.props.sidebarTheme))
     })
   }
   render() {

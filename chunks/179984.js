@@ -24,8 +24,8 @@ var a = s("735250"),
   N = s("823188"),
   O = s("21023"),
   P = s("318747"),
-  h = s("409100"),
-  M = s("474936"),
+  M = s("409100"),
+  h = s("474936"),
   x = s("689938"),
   L = s("116511"),
   v = s("102655"),
@@ -55,7 +55,7 @@ let U = e => {
         premiumType: s
       } = e,
       i = (0, c.default)();
-    t = s === M.PremiumTypes.TIER_0 ? (0, o.isThemeDark)(i) ? v : j : (0, o.isThemeDark)(i) ? D : b;
+    t = s === h.PremiumTypes.TIER_0 ? (0, o.isThemeDark)(i) ? v : j : (0, o.isThemeDark)(i) ? D : b;
     let r = (0, I.getPremiumTypeDisplayName)(s);
     return (0, a.jsx)("img", {
       src: t,
@@ -132,7 +132,7 @@ t.default = e => {
       headingOverride: j,
       hidePill: D = !1,
       selectedPlanColumnClassName: b,
-      selectedPlanTier: H = M.PremiumTypes.TIER_2
+      selectedPlanTier: H = h.PremiumTypes.TIER_2
     } = e,
     {
       analyticsLocations: F
@@ -153,16 +153,16 @@ t.default = e => {
   let Y = (0, c.default)(),
     z = (0, o.isThemeLight)(Y),
     Z = (0, n.useStateFromStores)([f.default], () => f.default.getCurrentUser()),
-    X = (0, I.isPremiumExactly)(Z, M.PremiumTypes.TIER_2),
+    X = (0, I.isPremiumExactly)(Z, h.PremiumTypes.TIER_2),
     Q = (0, m.usePremiumTrialOffer)(),
     J = null == Q ? void 0 : null === (t = Q.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
     q = (0, R.useCurrentPremiumTrialTier)(),
     $ = (0, p.usePremiumDiscountOffer)(),
-    ee = null != $ && (0, p.discountOfferHasTier)($, M.PremiumSubscriptionSKUs.TIER_2),
-    et = (0, A.useDiscountedPrice)(M.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
-    es = "".concat(et, "/").concat((0, I.getIntervalStringAsNoun)(M.SubscriptionIntervalTypes.MONTH)),
-    ea = (0, I.getDefaultPrice)(M.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
-    ei = (0, I.getDefaultPrice)(M.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
+    ee = null != $ && (0, p.discountOfferHasTier)($, h.PremiumSubscriptionSKUs.TIER_2),
+    et = (0, A.useDiscountedPrice)(h.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
+    es = "".concat(et, "/").concat((0, I.getIntervalStringAsNoun)(h.SubscriptionIntervalTypes.MONTH)),
+    ea = (0, I.getDefaultPrice)(h.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
+    ei = (0, I.getDefaultPrice)(h.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
     er = (0, O.useGetPlanComparisonTableRows)(ea, ei, ee, es),
     el = (0, g.useIsEligibleForBogoPromotion)();
   if (!W || !K) return null;
@@ -173,10 +173,10 @@ t.default = e => {
       children: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_HEADER
     }),
     column1: (0, a.jsx)(B, {
-      premiumType: M.PremiumTypes.TIER_0
+      premiumType: h.PremiumTypes.TIER_0
     }),
     column2: (0, a.jsx)(B, {
-      premiumType: M.PremiumTypes.TIER_2
+      premiumType: h.PremiumTypes.TIER_2
     })
   };
   v ? er.push({
@@ -190,38 +190,38 @@ t.default = e => {
   }) : er.push({
     label: null,
     column1: (0, a.jsxs)(a.Fragment, {
-      children: [J === M.PremiumSubscriptionSKUs.TIER_2 || el ? (0, a.jsx)(h.default, {
+      children: [J === h.PremiumSubscriptionSKUs.TIER_2 || el ? (0, a.jsx)(M.default, {
         className: L.button,
-        subscriptionTier: M.PremiumSubscriptionSKUs.TIER_0,
+        subscriptionTier: h.PremiumSubscriptionSKUs.TIER_0,
         showIcon: !1,
         look: u.ButtonLooks.OUTLINED,
         color: z ? u.ButtonColors.BRAND_NEW : u.ButtonColors.WHITE,
         buttonShineClassName: void 0
-      }) : (0, a.jsx)(h.default, {
+      }) : (0, a.jsx)(M.default, {
         className: L.button,
-        subscriptionTier: M.PremiumSubscriptionSKUs.TIER_0,
+        subscriptionTier: h.PremiumSubscriptionSKUs.TIER_0,
         showIcon: !1
-      }), q === M.PremiumTypes.TIER_2 || null != J ? null : (0, a.jsx)(P.default, {
+      }), q === h.PremiumTypes.TIER_2 || null != J ? null : (0, a.jsx)(P.default, {
         className: L.button,
-        subscriptionTier: M.PremiumSubscriptionSKUs.TIER_0
+        subscriptionTier: h.PremiumSubscriptionSKUs.TIER_0
       })]
     }),
     column2: (0, a.jsxs)(a.Fragment, {
-      children: [J === M.PremiumSubscriptionSKUs.TIER_0 ? (0, a.jsx)(h.default, {
+      children: [J === h.PremiumSubscriptionSKUs.TIER_0 ? (0, a.jsx)(M.default, {
         className: L.button,
-        subscriptionTier: M.PremiumSubscriptionSKUs.TIER_2,
+        subscriptionTier: h.PremiumSubscriptionSKUs.TIER_2,
         showIcon: !1,
         look: u.ButtonLooks.OUTLINED,
         color: z ? u.ButtonColors.BRAND_NEW : u.ButtonColors.WHITE,
         buttonShineClassName: void 0
-      }) : (0, a.jsx)(h.default, {
+      }) : (0, a.jsx)(M.default, {
         className: L.button,
-        subscriptionTier: M.PremiumSubscriptionSKUs.TIER_2,
+        subscriptionTier: h.PremiumSubscriptionSKUs.TIER_2,
         showIcon: !1,
         isEligibleForBogoPromotion: el
-      }), q === M.PremiumTypes.TIER_0 || null != J ? null : (0, a.jsx)(P.default, {
+      }), q === h.PremiumTypes.TIER_0 || null != J ? null : (0, a.jsx)(P.default, {
         className: L.button,
-        subscriptionTier: M.PremiumSubscriptionSKUs.TIER_2
+        subscriptionTier: h.PremiumSubscriptionSKUs.TIER_2
       })]
     }),
     withBottomBorder: !1,
@@ -230,11 +230,11 @@ t.default = e => {
   }), s = D ? null : null != J || null != q ? (0, a.jsx)(N.PremiumPillWithSparkles, {
     text: null != J ? x.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT : x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
     className: L.freeTrialPillWithSparkles,
-    colorOptions: J === M.PremiumSubscriptionSKUs.TIER_0 ? z ? N.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : N.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : z ? X ? N.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : N.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : N.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
+    colorOptions: J === h.PremiumSubscriptionSKUs.TIER_0 ? z ? N.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : N.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : z ? X ? N.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : N.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : N.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
   }) : el ? (0, a.jsx)(U, {
     isLightTheme: z
   }) : (0, a.jsx)(y, {});
-  let eo = J === M.PremiumSubscriptionSKUs.TIER_0 || q === M.PremiumTypes.TIER_0 || H === M.PremiumTypes.TIER_0;
+  let eo = J === h.PremiumSubscriptionSKUs.TIER_0 || q === h.PremiumTypes.TIER_0 || H === h.PremiumTypes.TIER_0;
   return (0, a.jsx)(E.AnalyticsLocationProvider, {
     value: F,
     children: (0, a.jsxs)("div", {

@@ -15,9 +15,9 @@ var l = a("836560"),
   C = a("852926"),
   m = a("186901"),
   S = a("981631"),
-  I = a("413135").Buffer;
+  p = a("413135").Buffer;
 
-function p(e, t, a) {
+function I(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
     value: a,
     enumerable: !0,
@@ -63,7 +63,7 @@ function O(e, t, a) {
       "Access-Control-Allow-Methods": "POST, GET, PUT, PATCH, DELETE",
       "Access-Control-Allow-Headers": "Content-Type, Authorization"
     } : {};
-  a = a ? JSON.stringify(a) : "", n = 200 === n && 0 === a.length ? 204 : n, t.setHeader("Content-Length", I.byteLength(a).toString()), t.setHeader("Content-Type", "application/json"), t.writeHead(n, {
+  a = a ? JSON.stringify(a) : "", n = 200 === n && 0 === a.length ? 204 : n, t.setHeader("Content-Length", p.byteLength(a).toString()), t.setHeader("Content-Type", "application/json"), t.writeHead(n, {
     ...s,
     ...l
   }), t.end(a)
@@ -86,7 +86,7 @@ class M extends _.default {
     this._socket.close(e, t)
   }
   constructor(e, t, a) {
-    if (super("ws", t, a), p(this, "_socket", void 0), -1 === ["etf", "json"].indexOf(a)) throw new E.default({
+    if (super("ws", t, a), I(this, "_socket", void 0), -1 === ["etf", "json"].indexOf(a)) throw new E.default({
       closeCode: S.RPCCloseCodes.INVALID_ENCODING
     }, "Invalid Encoding: ".concat(a));
     if ("etf" === a && null == n) throw new E.default({
@@ -103,7 +103,7 @@ class P extends _.default {
     this._closeCallback(t, e)
   }
   constructor(e, t, a, n) {
-    if (super("http", a, n), p(this, "_sendCallback", void 0), p(this, "_closeCallback", void 0), "json" !== n) throw new E.default({
+    if (super("http", a, n), I(this, "_sendCallback", void 0), I(this, "_closeCallback", void 0), "json" !== n) throw new E.default({
       closeCode: S.RPCCloseCodes.INVALID_ENCODING
     }, "Invalid Encoding: ".concat(n));
     this._sendCallback = e, this._closeCallback = t

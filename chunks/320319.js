@@ -24,8 +24,8 @@ var a = s("735250"),
   N = s("981631"),
   O = s("921944"),
   P = s("689938"),
-  h = s("622481");
-let M = {
+  M = s("622481");
+let h = {
     xMin: -80,
     xMax: 80,
     yMin: -150,
@@ -76,47 +76,47 @@ let M = {
         card_type: t
       }), null != r && Y(O.ContentDismissActionType.TAKE_ACTION))
     }, [v, j, r, t, Y]), s) ? t === S.PerksDiscoverabilityCardTypes.UPCOMING_DROP_UNTIMED ? (0, a.jsx)("div", {
-      className: l()(h.flipCardContainer, {
-        [h.forceShadow]: I
+      className: l()(M.flipCardContainer, {
+        [M.forceShadow]: I
       }),
       onMouseEnter: X,
       onFocus: X,
       onMouseLeave: Q,
       onBlur: Q,
       children: (0, a.jsxs)("div", {
-        className: l()(h.flipCard, {
-          [h.partialFlipCard]: !Z,
-          [h.ultraFlipCard]: Z,
-          [h.rotateCard]: Z && 3 === z,
-          [h.reducedMotion]: v
+        className: l()(M.flipCard, {
+          [M.partialFlipCard]: !Z,
+          [M.ultraFlipCard]: Z,
+          [M.rotateCard]: Z && 3 === z,
+          [M.reducedMotion]: v
         }),
         children: [(0, a.jsx)("div", {
-          className: h.flipCardFront,
+          className: M.flipCardFront,
           children: (0, a.jsx)(L, {
             ...e,
-            className: h.topCover
+            className: M.topCover
           })
         }), (0, a.jsx)("div", {
-          className: h.flipCardBack,
+          className: M.flipCardBack,
           children: (0, a.jsx)(L, {
             ...e,
-            className: h.topCover
+            className: M.topCover
           })
         })]
       })
     }) : $ ? (0, a.jsx)(a.Fragment, {
       children: (0, a.jsxs)("div", {
         className: l()({
-          [h.noFlipCardContainer]: !W,
-          [h.noFlipCardContainerCarousel]: W,
-          [h.forceShadow]: I,
-          [h.reducedMotion]: v
+          [M.noFlipCardContainer]: !W,
+          [M.noFlipCardContainerCarousel]: W,
+          [M.forceShadow]: I,
+          [M.reducedMotion]: v
         }),
         children: [(0, a.jsx)(L, {
           ...e,
           ref: t === S.PerksDiscoverabilityCardTypes.FREE_BOOST ? q : void 0
         }), H && (0, a.jsx)(T.default, {
-          speedValues: M,
+          speedValues: h,
           numBursts: 3,
           particlesPerBurst: 15,
           confettiTarget: q.current,
@@ -130,41 +130,41 @@ let M = {
         })]
       })
     }) : (0, a.jsx)("div", {
-      className: l()(h.flipCardContainer, {
-        [h.forceShadow]: I
+      className: l()(M.flipCardContainer, {
+        [M.forceShadow]: I
       }),
       children: (0, a.jsxs)(d.Clickable, {
         onClick: () => D(!0),
-        className: l()(h.flipCard, h.clickable, {
-          [h.flipped]: j,
-          [h.partialFlipCard]: !b && !j,
-          [h.reducedMotion]: v
+        className: l()(M.flipCard, M.clickable, {
+          [M.flipped]: j,
+          [M.partialFlipCard]: !b && !j,
+          [M.reducedMotion]: v
         }),
         onTransitionEnd: e => {
-          j && "transform" === e.propertyName && e.target.classList.contains(h.flipCard) && (U(!0), C.default.track(N.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
+          j && "transform" === e.propertyName && e.target.classList.contains(M.flipCard) && (U(!0), C.default.track(N.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
             card_type: t
           }), null != r && Y(O.ContentDismissActionType.TAKE_ACTION))
         },
         children: [(0, a.jsx)("div", {
-          className: h.flipCardHidden,
+          className: M.flipCardHidden,
           "aria-hidden": !0,
           children: (0, a.jsx)(L, {
             ...e
           })
         }), (0, a.jsx)("div", {
-          className: h.flipCardFront,
+          className: M.flipCardFront,
           children: (0, a.jsx)(L, {
             ...K.upcomingDropUntimed,
             pillText: ""
           })
         }), (0, a.jsx)("div", {
-          className: h.flipCardBack,
+          className: M.flipCardBack,
           children: (0, a.jsx)(L, {
             ...e,
             description: ""
           })
         }), (0, a.jsx)("div", {
-          className: h.flipCardButtonContainer,
+          className: M.flipCardButtonContainer,
           children: (0, a.jsx)(d.Button, {
             onClick: () => D(!0),
             children: P.default.Messages.REVEAL
@@ -195,16 +195,16 @@ let L = i.forwardRef((e, t) => {
     onClick: N,
     backgroundImage: O,
     pillText: P,
-    perkImage: M
+    perkImage: h
   } = e, x = g === p.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW || g === p.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW || g === p.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW, L = 0 !== u.length || 0 !== o.length && S === p.CardVariants.REWARD, v = (0, f.useShouldShowConfettiAndGlow)(), [j, D] = i.useState(v);
   i.useEffect(() => {
     v && D(!0)
   }, [v]);
   let b = (0, I.useCardVariantsInfo)(S);
   return (0, a.jsxs)(d.Clickable, {
-    className: l()(h.card, T, !0 === j ? null === (s = b.cardContainer) || void 0 === s ? void 0 : s.className : void 0, {
-      [h.clickable]: null != N,
-      [h.hideOverflow]: x
+    className: l()(M.card, T, !0 === j ? null === (s = b.cardContainer) || void 0 === s ? void 0 : s.className : void 0, {
+      [M.clickable]: null != N,
+      [M.hideOverflow]: x
     }),
     onMouseEnter: C,
     style: {
@@ -213,7 +213,7 @@ let L = i.forwardRef((e, t) => {
     onClick: N,
     children: [null != P && (0, a.jsx)(d.Text, {
       variant: "text-xs/semibold",
-      className: h.pill,
+      className: M.pill,
       children: P
     }), (0, a.jsx)("div", {
       ref: t
@@ -221,12 +221,12 @@ let L = i.forwardRef((e, t) => {
       title: r,
       titleClassName: n,
       subtitle: o,
-      perkImage: M,
+      perkImage: h,
       isCarousel: x,
       descriptionCta: c,
       onCtaClick: E,
       perkComponent: R,
-      subtitleClassName: h.cardSubtitle,
+      subtitleClassName: M.cardSubtitle,
       cardVariant: S
     }), L && (0, a.jsx)(A.default, {
       title: r,
@@ -239,7 +239,7 @@ let L = i.forwardRef((e, t) => {
       cardVariant: S,
       perkComponent: R
     }), (0, a.jsx)("div", {
-      className: l()(h.cover, h.above),
+      className: l()(M.cover, M.above),
       ref: t
     })]
   })

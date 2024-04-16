@@ -17,11 +17,11 @@ var s = a("735250"),
   E = a("250496"),
   m = a("153124"),
   M = a("26290"),
-  R = a("810090"),
-  A = a("626135"),
-  I = a("565216"),
-  O = a("981631"),
-  f = a("921944"),
+  A = a("810090"),
+  I = a("626135"),
+  R = a("565216"),
+  f = a("981631"),
+  O = a("921944"),
   g = a("816277");
 let T = e => {
     let {
@@ -86,37 +86,37 @@ function p(e) {
   } = e, {
     onClose: S,
     transitionState: y
-  } = a, v = (0, m.useUID)(), U = x.length % 2 == 0, j = (0, o.useStateFromStores)([i.default], () => i.default.useReducedMotion), [H, F] = n.useState(Date.now()), [k, w] = n.useState(0), [G, B] = n.useState(0), [V, K] = n.useState(!1), [Y, W] = n.useState(!0), z = n.useRef(H), q = n.useRef(k), Z = n.useRef(G), J = n.useRef(V), Q = n.useRef(Y);
+  } = a, v = (0, m.useUID)(), j = x.length % 2 == 0, H = (0, o.useStateFromStores)([i.default], () => i.default.useReducedMotion), [U, F] = n.useState(Date.now()), [k, G] = n.useState(0), [w, B] = n.useState(0), [V, K] = n.useState(!1), [Y, W] = n.useState(!0), z = n.useRef(U), q = n.useRef(k), Z = n.useRef(w), J = n.useRef(V), Q = n.useRef(Y);
 
   function X() {
     let e = Date.now(),
       t = e - z.current,
       a = q.current,
       s = Z.current;
-    return J.current && (w(a += t), !Q.current && B(s += t)), F(e), [a, s]
+    return J.current && (G(a += t), !Q.current && B(s += t)), F(e), [a, s]
   }
   return n.useEffect(() => {
-    z.current = H, q.current = k, Z.current = G, J.current = V, Q.current = Y
-  }, [H, k, G, V, Y]), n.useEffect(() => () => {
+    z.current = U, q.current = k, Z.current = w, J.current = V, Q.current = Y
+  }, [U, k, w, V, Y]), n.useEffect(() => () => {
     let [e, t] = X();
-    A.default.track(O.AnalyticEvents.CHANGE_LOG_VIDEO_PLAYED, {
+    I.default.track(f.AnalyticEvents.CHANGE_LOG_VIDEO_PLAYED, {
       change_log_id: D,
       seconds_played: Math.round(e / 1e3)
-    }), A.default.track(O.AnalyticEvents.CHANGE_LOG_VIDEO_UNMUTE, {
+    }), I.default.track(f.AnalyticEvents.CHANGE_LOG_VIDEO_UNMUTE, {
       change_log_id: D,
       seconds_unmuted: Math.round(t / 1e3)
     })
   }, [D]), n.useEffect(() => {
     null != T && (0, u.requestMarkDismissibleContentAsShown)(T);
     let e = Date.now();
-    return A.default.track(O.AnalyticEvents.CHANGE_LOG_OPENED, {
+    return I.default.track(f.AnalyticEvents.CHANGE_LOG_OPENED, {
       change_log_id: D
     }), () => {
-      A.default.track(O.AnalyticEvents.CHANGE_LOG_CLOSED, {
+      I.default.track(f.AnalyticEvents.CHANGE_LOG_CLOSED, {
         change_log_id: D,
         seconds_open: Math.round((Date.now() - e) / 1e3)
       }), null != T && (0, u.markDismissibleContentAsDismissed)(T, {
-        dismissAction: f.ContentDismissActionType.DISMISS
+        dismissAction: O.ContentDismissActionType.DISMISS
       })
     }
   }, [T, D]), (0, s.jsxs)(d.ModalRoot, {
@@ -126,7 +126,7 @@ function p(e) {
     children: [(0, s.jsx)(d.ModalCloseButton, {
       className: g.closeButton,
       onClick: S
-    }), (0, s.jsx)(I.default, {
+    }), (0, s.jsx)(R.default, {
       className: g.splash
     }), null == p ? void 0 : p(), (0, s.jsxs)(d.ModalContent, {
       className: g.content,
@@ -134,9 +134,9 @@ function p(e) {
         variant: "display-md",
         className: l()(g.headerText, C),
         children: L
-      }), "video" === r.type ? (0, s.jsx)(R.default, {
+      }), "video" === r.type ? (0, s.jsx)(A.default, {
         className: l()(g.video, M),
-        autoPlay: !j,
+        autoPlay: !H,
         loop: !0,
         muted: !0,
         controls: !0,
@@ -144,7 +144,7 @@ function p(e) {
         src: r.src,
         poster: r.poster,
         onPlay: e => {
-          A.default.track(O.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
+          I.default.track(f.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
             change_log_id: D
           }), F(Date.now()), K(!0), W(e.currentTarget.muted)
         },
@@ -171,7 +171,7 @@ function p(e) {
         renderImageComponent: c.renderImageComponent,
         renderLinkComponent: c.renderMaskedLinkComponent,
         onPlay: () => {
-          A.default.track(O.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
+          I.default.track(f.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
             change_log_id: D
           })
         }
@@ -185,11 +185,11 @@ function p(e) {
         children: N
       }), null == P ? void 0 : P(), (0, s.jsx)("div", {
         className: l()(g.featureCardGroup, {
-          [g.wideStyle]: U
+          [g.wideStyle]: j
         }),
         children: x.map((e, t) => (0, s.jsx)(h, {
           ...e,
-          wideStyle: U
+          wideStyle: j
         }, "".concat(e.header, "_").concat(t)))
       }), b()]
     })]

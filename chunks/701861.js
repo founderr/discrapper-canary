@@ -16,8 +16,8 @@ var n = a("735250"),
   C = a("621113"),
   m = a("51144"),
   S = a("321488"),
-  I = a("417183"),
-  p = a("825682"),
+  p = a("417183"),
+  I = a("825682"),
   T = a("170245"),
   g = a("981631"),
   A = a("65154"),
@@ -101,7 +101,7 @@ class L extends s.PureComponent {
     } = this.props, {
       isActiveRow: r
     } = this.state;
-    return (0, n.jsx)(I.default, {
+    return (0, n.jsx)(p.default, {
       ref: this.peopleListItemRef,
       isFocused: t,
       isActive: r,
@@ -114,7 +114,7 @@ class L extends s.PureComponent {
           user: e,
           status: l,
           isMobile: i,
-          subText: (0, n.jsx)(p.default, {
+          subText: (0, n.jsx)(I.default, {
             hovered: t,
             activities: a,
             applicationStream: s,

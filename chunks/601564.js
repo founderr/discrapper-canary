@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   getPageSize: function() {
-    return M
+    return h
   }
 }), s("47120");
 var a = s("735250"),
@@ -36,12 +36,12 @@ function P(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-let h = (0, T.makeLazy)({
+let M = (0, T.makeLazy)({
   createPromise: () => Promise.all([s.e("49237"), s.e("73206"), s.e("32886")]).then(s.bind(s, "496691")),
   webpackId: "496691"
 });
 
-function M(e) {
+function h(e) {
   return e < A.PAGE_WIDTH_THRESHOLD ? A.PageSizes.SMALL : A.PageSizes.LARGE
 }
 n.default.initialize();
@@ -70,7 +70,7 @@ class x extends i.PureComponent {
     } = this.props, s = e ? (0, a.jsx)("div", {
       className: O.applicationStore,
       children: this.renderContent()
-    }) : (0, a.jsx)(h, {
+    }) : (0, a.jsx)(M, {
       className: O.applicationStore,
       location: t,
       render: this.renderContent
@@ -103,7 +103,7 @@ class x extends i.PureComponent {
           slug: i,
           location: l,
           storeListingId: o.store_listing_id,
-          pageSize: M(n)
+          pageSize: h(n)
         })
       })
     }), P(this, "renderContent", () => (0, a.jsxs)(l.Switch, {

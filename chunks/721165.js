@@ -28,19 +28,19 @@ function P(e) {
     selectedSku: A,
     selectedStoreListing: C,
     application: N
-  } = (0, c.usePaymentContext)(), T = (0, l.default)(E.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY), m = (0, s.useStateFromStores)([d.default], () => d.default.getGuild(null == P ? void 0 : P.guild_id)), p = r.useCallback(() => t(f.Step.REVIEW), [t]);
+  } = (0, c.usePaymentContext)(), T = (0, l.default)(E.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY), m = (0, s.useStateFromStores)([d.default], () => d.default.getGuild(null == P ? void 0 : P.guild_id)), O = r.useCallback(() => t(f.Step.REVIEW), [t]);
   if (null == A) return null;
-  let O = (0, i.isApplicationUserSubscription)(A.flags);
+  let p = (0, i.isApplicationUserSubscription)(A.flags);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(I.PaymentPortalBody, {
       children: T ? (0, a.jsx)(o.BenefitsConfirmationLite, {
         confirmCta: S.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_CONTINUE_BUTTON,
-        onConfirm: p,
+        onConfirm: O,
         onCancel: n,
         title: S.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_LITE_TITLE_V2.format({
           tier: A.name
         }),
-        subtitle: O ? S.default.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_LITE_SUBTITLE : S.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_LITE_SUBTITLE.format({
+        subtitle: p ? S.default.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_LITE_SUBTITLE : S.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_LITE_SUBTITLE.format({
           guildName: null == m ? void 0 : m.name
         }),
         showOpenDiscord: !1
@@ -51,8 +51,8 @@ function P(e) {
         title: S.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_TITLE_V2.format({
           tier: A.name
         }),
-        subtitle: O ? S.default.Messages.APPLICATION_USER_SUBSCRIPTION_LISTING_HEADER : S.default.Messages.APPLICATION_GUILD_SUBSCRIPTION_LISTING_HEADER,
-        description: O ? S.default.Messages.APPLICATION_USER_SUBSCRIPTION_LISTING_DETAILS.format({
+        subtitle: p ? S.default.Messages.APPLICATION_USER_SUBSCRIPTION_LISTING_HEADER : S.default.Messages.APPLICATION_GUILD_SUBSCRIPTION_LISTING_HEADER,
+        description: p ? S.default.Messages.APPLICATION_USER_SUBSCRIPTION_LISTING_DETAILS.format({
           applicationName: null == N ? void 0 : N.name
         }) : S.default.Messages.APPLICATION_GUILD_SUBSCRIPTION_LISTING_DETAILS
       })
@@ -60,7 +60,7 @@ function P(e) {
       children: (0, a.jsx)(_.default, {
         onBack: n,
         backText: S.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_CANCEL_BUTTON,
-        onPrimary: p,
+        onPrimary: O,
         primaryCTA: _.CTAType.CONTINUE,
         primaryText: S.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_CONTINUE_BUTTON
       })
