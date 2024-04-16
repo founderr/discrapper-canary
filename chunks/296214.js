@@ -1,41 +1,41 @@
 "use strict";
 a.r(t), a.d(t, {
   PaymentRequestStepBody: function() {
-    return i
+    return d
   }
 });
 var n = a("735250");
 a("470079");
 var s = a("120356"),
-  r = a.n(s),
-  l = a("481060"),
+  l = a.n(s),
+  r = a("481060"),
   o = a("912454"),
-  u = a("689938"),
-  c = a("708930");
-let i = e => {
+  i = a("689938"),
+  u = a("708930");
+let d = e => {
   let {
     className: t,
     submitting: a,
     stripePaymentMethod: s
   } = e, {
-    card: i
-  } = null != s ? s : {}, d = null != i ? o.default.getType(i.brand) : o.default.Types.UNKNOWN;
-  return (0, n.jsx)(l.FormSection, {
+    card: d
+  } = null != s ? s : {}, c = null != d ? o.default.getType(d.brand) : o.default.Types.UNKNOWN;
+  return (0, n.jsx)(r.FormSection, {
     className: t,
-    title: u.default.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_INFO_TITLE,
+    title: i.default.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_INFO_TITLE,
     children: (0, n.jsxs)("div", {
-      className: c.cardNumberWrapper,
+      className: u.cardNumberWrapper,
       children: [(0, n.jsx)(o.default, {
-        className: r()(c.cardIcon, {
-          [c.submitting]: a
+        className: l()(u.cardIcon, {
+          [u.submitting]: a
         }),
-        type: d
-      }), (0, n.jsx)(l.TextInput, {
-        value: a && null != i ? u.default.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_INFO_CREATING.format(i) : void 0,
+        type: c
+      }), (0, n.jsx)(r.TextInput, {
+        value: a && null != d ? i.default.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_INFO_CREATING.format(d) : void 0,
         editable: !1,
         readOnly: !0,
-        placeholder: u.default.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_INFO_LOADING,
-        inputClassName: c.cardNumberInput
+        placeholder: i.default.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_INFO_LOADING,
+        inputClassName: u.cardNumberInput
       })]
     })
   })

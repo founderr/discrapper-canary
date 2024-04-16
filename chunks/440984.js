@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   PremiumSubscritionDiscountAppliedModal: function() {
-    return T
+    return P
   }
 }), s("47120");
 var a = s("735250"),
@@ -9,72 +9,72 @@ var a = s("735250"),
   i = s("442837"),
   l = s("780384"),
   r = s("481060"),
-  u = s("410030"),
-  o = s("607070"),
+  o = s("410030"),
+  u = s("607070"),
   d = s("530618"),
   c = s("74538"),
-  E = s("937615"),
+  p = s("937615"),
   f = s("230916"),
-  p = s("798769"),
-  _ = s("474936"),
-  m = s("689938"),
-  I = s("720913"),
-  N = s("982404"),
-  S = s("299156");
+  E = s("798769"),
+  m = s("474936"),
+  _ = s("689938"),
+  S = s("720913"),
+  I = s("982404"),
+  N = s("299156");
 
-function T(e) {
+function P(e) {
   let {
     premiumSubscription: t,
     premiumType: s,
-    onClose: T,
+    onClose: P,
     confettiCanvas: C,
-    userWasChurned: P = !1,
-    userDiscountOffer: A
-  } = e, R = (0, u.default)(), M = (0, l.isThemeDark)(R) ? N : S, h = n.useRef(null), [L, g] = n.useState(!1), y = (0, f.useChurnDiscountedPrice)(t, _.SubscriptionPlans.PREMIUM_MONTH_TIER_2, A), x = (0, c.getPrice)(_.SubscriptionPlans.PREMIUM_MONTH_TIER_2), D = (0, E.formatPrice)(x.amount, x.currency), U = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion);
+    userWasChurned: T = !1,
+    userDiscountOffer: h
+  } = e, A = (0, o.default)(), R = (0, l.isThemeDark)(A) ? I : N, y = n.useRef(null), [M, g] = n.useState(!1), L = (0, f.useChurnDiscountedPrice)(t, m.SubscriptionPlans.PREMIUM_MONTH_TIER_2, h), x = (0, c.getPrice)(m.SubscriptionPlans.PREMIUM_MONTH_TIER_2), D = (0, p.formatPrice)(x.amount, x.currency), U = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion);
   if (n.useEffect(() => {
-      null != h.current && null != y && g(!0)
-    }, [h, L, y]), null == A || null == y) return null;
-  let b = m.default.Messages.PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB.format({
-      numMonths: A.discount.user_usage_limit,
-      discountedPrice: y,
+      null != y.current && null != L && g(!0)
+    }, [y, M, L]), null == h || null == L) return null;
+  let b = _.default.Messages.PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB.format({
+      numMonths: h.discount.user_usage_limit,
+      discountedPrice: L,
       regularPrice: D
     }),
     O = (0, a.jsx)("div", {
-      className: I.whatYouLoseButtonContainer,
+      className: S.whatYouLoseButtonContainer,
       children: (0, a.jsx)(r.Button, {
         color: r.Button.Colors.BRAND,
-        onClick: T,
-        children: m.default.Messages.PREMIUM_DISCOUNT_SWEET
+        onClick: P,
+        children: _.default.Messages.PREMIUM_DISCOUNT_SWEET
       })
     });
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(p.default, {
+    children: [(0, a.jsx)(E.default, {
       premiumType: s,
-      className: I.cancellationHeader,
-      onClose: T
+      className: S.cancellationHeader,
+      onClose: P
     }), (0, a.jsx)("div", {
-      ref: h,
+      ref: y,
       children: (0, a.jsx)(r.ModalContent, {
-        className: I.body,
-        children: null != y ? (0, a.jsxs)(a.Fragment, {
+        className: S.body,
+        children: null != L ? (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsxs)("div", {
-            className: I.discountAppliedBody,
+            className: S.discountAppliedBody,
             children: [(0, a.jsx)("img", {
               alt: "",
-              src: M,
-              className: I.nitroIcon
+              src: R,
+              className: S.nitroIcon
             }), (0, a.jsx)(r.Heading, {
               variant: "heading-xl/bold",
-              children: P ? m.default.Messages.PREMIUM_TRIAL_TUTORIAL_WELCOME_BACK : m.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED_PUNCTUATED
+              children: T ? _.default.Messages.PREMIUM_TRIAL_TUTORIAL_WELCOME_BACK : _.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED_PUNCTUATED
             })]
           }), (0, a.jsx)("div", {
-            className: I.bodyString,
+            className: S.bodyString,
             children: b
           }), O]
         }) : (0, a.jsx)(r.Spinner, {})
       })
-    }), !U && L && (0, a.jsx)(d.default, {
-      confettiTarget: h.current,
+    }), !U && M && (0, a.jsx)(d.default, {
+      confettiTarget: y.current,
       confettiCanvas: C,
       confettiVelocityMultiplier: .75
     })]

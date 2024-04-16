@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   deleteWebAuthnCredential: function() {
-    return o
+    return u
   },
   editWebAuthnCredential: function() {
     return d
@@ -10,13 +10,13 @@ s.r(t), s.d(t, {
     return l
   },
   fetchWebAuthnCredentials: function() {
-    return u
+    return o
   },
   fetchWebAuthnPasswordlessChallenge: function() {
     return r
   },
   finishRegisterWebAuthnCredential: function() {
-    return E
+    return p
   },
   startRegisterWebAuthnCredential: function() {
     return c
@@ -32,7 +32,7 @@ async function r() {
   return (await a.HTTP.post(i.Endpoints.WEBAUTHN_PASSWORDLESS_CHALLENGE)).body
 }
 
-function u() {
+function o() {
   n.default.dispatch({
     type: "MFA_WEBAUTHN_CREDENTIALS_LOADING"
   }), a.HTTP.get(i.Endpoints.MFA_WEBAUTHN_CREDENTIALS).then(e => {
@@ -43,7 +43,7 @@ function u() {
   })
 }
 
-function o(e) {
+function u(e) {
   a.HTTP.del(i.Endpoints.MFA_WEBAUTHN_CREDENTIAL(e.id)).then(() => {
     n.default.dispatch({
       type: "AUTHENTICATOR_DELETE",
@@ -78,7 +78,7 @@ async function c() {
     challenge: t
   }
 }
-async function E(e, t, s) {
+async function p(e, t, s) {
   let l = await a.HTTP.post({
     url: i.Endpoints.MFA_WEBAUTHN_CREDENTIALS,
     body: {

@@ -1,58 +1,58 @@
 "use strict";
-t.r(a), t("47120");
-var l = t("735250"),
-  n = t("470079"),
-  s = t("120356"),
-  i = t.n(s),
-  o = t("481060"),
-  r = t("285952"),
-  u = t("451893");
+a.r(t), a("47120");
+var n = a("735250"),
+  s = a("470079"),
+  l = a("120356"),
+  r = a.n(l),
+  o = a("481060"),
+  i = a("285952"),
+  u = a("451893");
 
-function d(e, a, t) {
-  return a in e ? Object.defineProperty(e, a, {
-    value: t,
+function d(e, t, a) {
+  return t in e ? Object.defineProperty(e, t, {
+    value: a,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[a] = t, e
+  }) : e[t] = a, e
 }
-class c extends n.PureComponent {
+class c extends s.PureComponent {
   componentDidUpdate(e) {
     if (this.props.formError !== e.formError) this.setState({
       changedSinceError: new Set
     });
     else if (null != this.props.formError) {
       let {
-        changedSinceError: a
+        changedSinceError: t
       } = this.state;
-      this.getChangedValues(e).forEach(e => a.add(e)), this.setState({
-        changedSinceError: a
+      this.getChangedValues(e).forEach(e => t.add(e)), this.setState({
+        changedSinceError: t
       })
     }
   }
   getChangedValues(e) {
     let {
-      values: a
-    } = this.props, {
       values: t
+    } = this.props, {
+      values: a
     } = e;
-    return Object.keys(a).filter(e => a[e] !== t[e])
+    return Object.keys(t).filter(e => t[e] !== a[e])
   }
   getError(e) {
     let {
-      errors: a,
-      formError: t
+      errors: t,
+      formError: a
     } = this.props;
-    return null != a[e] ? a[e] : null == t || this.state.changedSinceError.has(e) ? null : t.getFieldMessage(e)
+    return null != t[e] ? t[e] : null == a || this.state.changedSinceError.has(e) ? null : a.getFieldMessage(e)
   }
   render() {
     let {
       form: e,
-      className: a
-    } = this.props, t = e.map(this.renderFormRow);
-    return (0, l.jsx)("div", {
-      className: a,
-      children: t
+      className: t
+    } = this.props, a = e.map(this.renderFormRow);
+    return (0, n.jsx)("div", {
+      className: t,
+      children: a
     })
   }
   constructor(...e) {
@@ -60,45 +60,45 @@ class c extends n.PureComponent {
       changedSinceError: new Set
     }), d(this, "renderFormSection", e => {
       let {
-        values: a,
-        onFieldChange: t,
-        onFieldFocus: n,
-        onFieldBlur: s,
-        layout: r,
+        values: t,
+        onFieldChange: a,
+        onFieldFocus: s,
+        onFieldBlur: l,
+        layout: i,
         ...u
       } = this.props, {
         getClassNameForLayout: d,
         renderInput: c,
-        title: I,
-        name: h,
-        id: S,
-        placeholder: m,
-        ...N
-      } = e, E = {
-        ...N,
-        placeholder: null == m ? void 0 : m(),
-        layout: r,
-        error: this.getError(h),
-        value: a[h],
-        name: h,
-        "aria-labelledby": S,
-        onChange: t,
-        onFocus: n,
-        onBlur: s
+        title: E,
+        name: m,
+        id: p,
+        placeholder: S,
+        ..._
+      } = e, f = {
+        ..._,
+        placeholder: null == S ? void 0 : S(),
+        layout: i,
+        error: this.getError(m),
+        value: t[m],
+        name: m,
+        "aria-labelledby": p,
+        onChange: a,
+        onFocus: s,
+        onBlur: l
       };
-      return (0, l.jsx)(o.FormSection, {
-        className: i()(null == d ? void 0 : d(r)),
-        title: I(),
-        titleId: S,
-        children: c(E, u)
-      }, h)
+      return (0, n.jsx)(o.FormSection, {
+        className: r()(null == d ? void 0 : d(i)),
+        title: E(),
+        titleId: p,
+        children: c(f, u)
+      }, m)
     }), d(this, "renderFormRow", e => {
-      let a = e.fields.map(this.renderFormSection);
-      return (0, l.jsx)(r.default, {
-        className: i()(u.row, e.className),
-        children: a
+      let t = e.fields.map(this.renderFormSection);
+      return (0, n.jsx)(i.default, {
+        className: r()(u.row, e.className),
+        children: t
       }, e.fields.map(e => e.name).join(""))
     })
   }
 }
-a.default = c
+t.default = c

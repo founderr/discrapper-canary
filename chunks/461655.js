@@ -1,17 +1,17 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return p
+    return E
   }
 }), s("789020");
 var a, n, i = s("314877"),
   l = s("81825"),
   r = s("630388"),
-  u = s("46141"),
-  o = s("659181"),
+  o = s("46141"),
+  u = s("659181"),
   d = s("255078"),
   c = s("981631"),
-  E = s("474936");
+  p = s("474936");
 
 function f(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -21,12 +21,12 @@ function f(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }(n = a || (a = {}))[n.GIFT = 1] = "GIFT", n[n.PREORDER = 8] = "PREORDER";
-class p extends l.default {
+class E extends l.default {
   static createFromServer(e) {
-    let t = null != e.payment_source ? u.default.createFromServer(e.payment_source) : null,
-      s = null != e.sku ? o.default.createFromServer(e.sku) : null,
+    let t = null != e.payment_source ? o.default.createFromServer(e.payment_source) : null,
+      s = null != e.sku ? u.default.createFromServer(e.sku) : null,
       a = null != e.subscription ? d.default.createFromServer(e.subscription) : null;
-    return new p({
+    return new E({
       id: e.id,
       createdAt: new Date(e.created_at),
       currency: e.currency,
@@ -63,21 +63,21 @@ class p extends l.default {
     return null != this.subscription
   }
   get isPremiumSubscription() {
-    return null != this.subscription && E.PREMIUM_PLANS.has(this.subscription.planId)
+    return null != this.subscription && p.PREMIUM_PLANS.has(this.subscription.planId)
   }
   get isPremiumGuildSubscription() {
     return null != this.subscription && null != this.subscription.additionalPlans.find(e => {
       let {
         planId: t
       } = e;
-      return E.PREMIUM_GUILD_SUBSCRIPTION_PLANS.has(t)
+      return p.PREMIUM_GUILD_SUBSCRIPTION_PLANS.has(t)
     })
   }
   get isGift() {
     return r.hasFlag(this.flags, 1)
   }
   get isPremiumGift() {
-    return this.isGift && Object.values(E.PremiumSubscriptionSKUs).includes(this.skuId)
+    return this.isGift && Object.values(p.PremiumSubscriptionSKUs).includes(this.skuId)
   }
   get isGuildProductPurchase() {
     return null != this.sku && (this.sku.productLine === c.SKUProductLines.GUILD_PRODUCT || r.hasFlag(this.sku.flags, i.SKUFlags.GUILD_PRODUCT))

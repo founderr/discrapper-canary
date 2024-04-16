@@ -22,8 +22,8 @@ function E(e) {
     skuId: E,
     isGift: T = !1,
     giftMessage: f,
-    onClose: _,
-    onComplete: m,
+    onClose: m,
+    onComplete: _,
     analyticsLocations: g,
     analyticsObject: I
   } = e, h = !1, N = (0, n.v4)(), p = e => {
@@ -47,10 +47,10 @@ function E(e) {
         giftMessage: f,
         analyticsLocations: g,
         onClose: e => {
-          s(), null == _ || _(e)
+          s(), null == m || m(e)
         },
         onComplete: () => {
-          h = !0, null == m || m()
+          h = !0, null == _ || _()
         },
         returnRef: n,
         onStepChange: p
@@ -65,7 +65,7 @@ function E(e) {
         location: I,
         is_gift: T,
         location_stack: g
-      }), (0, i.clearError)(), (0, r.clearPurchaseTokenAuthState)(), null == _ || _(h), h && (0, o.fetchCollectiblesPurchases)()
+      }), (0, i.clearError)(), (0, r.clearPurchaseTokenAuthState)(), null == m || m(h), h && (0, o.fetchCollectiblesPurchases)()
     },
     onCloseRequest: () => {
       t === u.Step.REVIEW && (0, l.closeModal)(S)

@@ -1,10 +1,10 @@
 "use strict";
-t.r(a), t.d(a, {
+a.r(t), a.d(t, {
   CanadaProvinces: function() {
-    return l
+    return n
   }
 });
-let l = [{
+let n = [{
   label: "Alberta",
   value: "AB"
 }, {
