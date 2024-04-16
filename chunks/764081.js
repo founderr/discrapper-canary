@@ -22,7 +22,7 @@ t.default = function(e) {
   if (!d.default.useExperiment({
       location: "April2024MarketingBanner"
     }).enabled) return null;
-  let i = new Date;
+  let i = new Date("2024-05-02T06:59:59Z");
   return (0, a.jsx)("div", {
     className: r()(T.banner, {
       [T.bannerFullscreen]: t
@@ -48,13 +48,13 @@ t.default = function(e) {
           variant: "text-sm/medium",
           color: "always-white",
           children: null == s ? f.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_BANNER_BODY_NON_SUB.format({
-            helpCenterLink: u.default.getArticleURL(C.HelpdeskArticles.SUMMER_2023_BOGO)
+            helpCenterLink: u.default.getArticleURL(C.HelpdeskArticles.PREMIUM_APRIL_2024_MARKETING_MOMENT)
           }) : f.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_BANNER_BODY_UPGRADE.format({
-            helpCenterLink: u.default.getArticleURL(C.HelpdeskArticles.SUMMER_2023_BOGO)
+            helpCenterLink: u.default.getArticleURL(C.HelpdeskArticles.PREMIUM_APRIL_2024_MARKETING_MOMENT)
           })
         })]
       }), (0, a.jsx)(_.default, {
-        buttonText: null == s ? f.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_BUTTON_CTA_NON_SUB : f.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_BUTTON_CTA_NON_TIER_2_SUB,
+        buttonText: null == s ? f.default.Messages.BOGO_CLAIM_OFFER : f.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_BUTTON_CTA_NON_TIER_2_SUB,
         buttonTextClassName: T.subscribeButtonText,
         subscriptionTier: E.PremiumSubscriptionSKUs.TIER_2,
         className: T.subscribeButton,

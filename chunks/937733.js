@@ -18,11 +18,11 @@ var n = a("442837"),
   E = a("594174"),
   m = a("976644"),
   M = a("626135"),
-  R = a("63063"),
-  A = a("74538"),
-  I = a("823188"),
-  O = a("290347"),
-  f = a("474936"),
+  A = a("63063"),
+  I = a("74538"),
+  R = a("823188"),
+  f = a("290347"),
+  O = a("474936"),
   g = a("981631"),
   T = a("689938"),
   h = a("364530"),
@@ -41,8 +41,8 @@ function x(e) {
     location: x
   } = (0, d.useAnalyticsContext)(), {
     analyticsLocations: D
-  } = (0, c.default)(u.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), b = (0, n.useStateFromStores)([E.default], () => E.default.getCurrentUser()), S = (0, A.isPremiumExactly)(b, f.PremiumTypes.TIER_2), y = (0, A.isPremium)(b) && !S, v = (0, i.default)(), U = (0, l.isThemeLight)(v) ? I.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : I.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL;
-  return (0, s.jsx)(O.default, {
+  } = (0, c.default)(u.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), b = (0, n.useStateFromStores)([E.default], () => E.default.getCurrentUser()), S = (0, I.isPremiumExactly)(b, O.PremiumTypes.TIER_2), y = (0, I.isPremium)(b) && !S, v = (0, i.default)(), j = (0, l.isThemeLight)(v) ? R.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : R.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL;
+  return (0, s.jsx)(f.default, {
     renderModalProps: t,
     heroArt: {
       type: "video",
@@ -50,15 +50,15 @@ function x(e) {
     },
     modalDismissibleContent: r.DismissibleContent.PREMIUM_2024_APRIL_MARKETING_MODAL,
     header: T.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_HEADER,
-    modalTopExtra: () => (0, s.jsx)(I.PremiumPillWithSparkles, {
+    modalTopExtra: () => (0, s.jsx)(R.PremiumPillWithSparkles, {
       text: T.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_MODAL_TOP_PILL,
       className: h.modalTopPill,
-      colorOptions: U
+      colorOptions: j
     }),
     subHeader: T.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_SUBHEADER,
     subHeaderExtra: () => (0, s.jsx)(o.Anchor, {
       className: h.termsApplyAnchor,
-      href: R.default.getArticleURL(g.HelpdeskArticles.SUMMER_2023_BOGO),
+      href: A.default.getArticleURL(g.HelpdeskArticles.PREMIUM_APRIL_2024_MARKETING_MOMENT),
       children: (0, s.jsx)(o.Heading, {
         variant: "heading-md/normal",
         className: h.termsApplyBodyText,
@@ -94,7 +94,7 @@ function x(e) {
             seconds_open: Math.round((Date.now() - t) / 1e3),
             target: P
           }), (0, _.default)({
-            subscriptionTier: f.PremiumSubscriptionSKUs.TIER_2,
+            subscriptionTier: O.PremiumSubscriptionSKUs.TIER_2,
             analyticsLocations: D,
             analyticsObject: {
               ...x,
@@ -110,7 +110,7 @@ function x(e) {
           alt: "",
           className: h.nitroIconSubHeader,
           src: N
-        }), T.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_BUTTON_CTA_NON_SUB]
+        }), T.default.Messages.BOGO_CLAIM_OFFER]
       })
     }
   })
