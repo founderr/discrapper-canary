@@ -40,8 +40,8 @@ function m(e) {
     children: m,
     className: f,
     errors: p,
-    disabled: _ = !1,
-    hideDivider: S = !1,
+    disabled: S = !1,
+    hideDivider: _ = !1,
     showBorder: I = !1,
     borderType: E,
     hasBackground: P = !1,
@@ -50,8 +50,8 @@ function m(e) {
   } = e;
   return (0, i.jsx)("div", {
     className: a()(c.customizationSection, f, {
-      [c.disabled]: _,
-      [c.hideDivider]: S,
+      [c.disabled]: S,
+      [c.hideDivider]: _,
       [c.showBorder]: I,
       [c.withDivider]: T
     }),

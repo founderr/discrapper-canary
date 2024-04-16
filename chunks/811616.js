@@ -17,8 +17,8 @@ var s = n("120356"),
   m = n("706454"),
   f = n("509545"),
   p = n("669079"),
-  _ = n("930153"),
-  S = n("74538"),
+  S = n("930153"),
+  _ = n("74538"),
   I = n("937615"),
   E = n("104494"),
   P = n("474936"),
@@ -44,8 +44,8 @@ function h(e) {
   let L = null != n && n.planId === s,
     O = L || s === P.SubscriptionPlans.PREMIUM_MONTH_TIER_2 && null != n && [P.SubscriptionPlans.PREMIUM_YEAR_TIER_0, P.SubscriptionPlans.PREMIUM_YEAR_TIER_1].includes(n.planId),
     j = P.DISCOUNTS[s],
-    G = (0, S.getPrice)(s, !1, M, v),
-    D = (0, S.isPrepaidPaymentSource)(v.paymentSourceId),
+    G = (0, _.getPrice)(s, !1, M, v),
+    D = (0, _.isPrepaidPaymentSource)(v.paymentSourceId),
     U = null != j && !x,
     F = (0, E.usePremiumDiscountOffer)(),
     w = y.interval === P.SubscriptionIntervalTypes.YEAR ? T.default.Messages.BILLING_TRIAL_YEARLY_PRICE_AFTER_TRIAL : T.default.Messages.BILLING_TRIAL_MONTHLY_PRICE_AFTER_TRIAL,
@@ -55,7 +55,7 @@ function h(e) {
       color: "always-white",
       className: N.planOptionDiscount,
       children: T.default.Messages.BILLING_PLAN_SELECTION_DISCOUNT.format({
-        discount: (0, _.formatPercent)(g, j / 100)
+        discount: (0, S.formatPercent)(g, j / 100)
       })
     }),
     k = () => y.interval === P.SubscriptionIntervalTypes.YEAR && null != n || U && !L ? y.interval === P.SubscriptionIntervalTypes.YEAR && null != n ? (0, i.jsxs)("span", {
@@ -99,7 +99,7 @@ function h(e) {
               [N.optionSelected]: h || b,
               [N.updatedOptionSelected]: x && (h || b)
             }),
-            children: [(0, S.getIntervalString)(y.interval, M, D, y.intervalCount, b, (0, S.getPremiumType)(y.id)), b && k()]
+            children: [(0, _.getIntervalString)(y.interval, M, D, y.intervalCount, b, (0, _.getPremiumType)(y.id)), b && k()]
           }), b && (0, i.jsx)("div", {
             className: N.planOneTimeCost,
             children: T.default.Messages.ONE_TIME_CHARGE.format({

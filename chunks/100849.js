@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return T
+    return _
   }
 });
 var l = s("735250"),
@@ -18,12 +18,12 @@ var l = s("735250"),
   E = s("58307"),
   I = s("981631"),
   m = s("970903"),
-  _ = s("521170");
+  T = s("521170");
 
-function T(e) {
+function _(e) {
   let {
     user: t
-  } = e, s = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), T = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), p = a.useMemo(() => T.filter(e => e.type !== I.ActivityTypes.CUSTOM_STATUS), [T]), A = T.some(e => e.type === I.ActivityTypes.HANG_STATUS), N = a.useMemo(() => s ? p.find(e => e.type === I.ActivityTypes.PLAYING) : null, [p, s]), v = a.useMemo(() => p.filter(e => e !== N), [N, p]), x = (0, E.useGetVoiceChannelInfoForVoiceActivitySection)(t.id), U = null != x && !s && !A, {
+  } = e, s = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), _ = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), A = a.useMemo(() => _.filter(e => e.type !== I.ActivityTypes.CUSTOM_STATUS), [_]), p = _.some(e => e.type === I.ActivityTypes.HANG_STATUS), v = a.useMemo(() => s ? A.find(e => e.type === I.ActivityTypes.PLAYING) : null, [A, s]), N = a.useMemo(() => A.filter(e => e !== v), [v, A]), x = (0, E.useGetVoiceChannelInfoForVoiceActivitySection)(t.id), U = null != x && !s && !p, {
     showVoiceActivityInProfile: h
   } = S.VoiceActivityProfileExperiment.useExperiment({
     location: "user profile modal"
@@ -32,8 +32,8 @@ function T(e) {
   }), {
     analyticsLocations: C
   } = (0, r.default)(), {
-    trackUserProfileAction: R,
-    ...P
+    trackUserProfileAction: P,
+    ...R
   } = (0, c.useUserProfileAnalyticsContext)(), M = {
     location: {
       page: I.AnalyticsPages.USER_PROFILE,
@@ -41,7 +41,7 @@ function T(e) {
     }
   };
   return (0, l.jsxs)(n.ScrollerThin, {
-    className: _.listScroller,
+    className: T.listScroller,
     fade: !0,
     children: [h && U ? (0, l.jsx)("div", {
       className: m.voiceActivity,
@@ -54,19 +54,19 @@ function T(e) {
       user: t,
       source: "Profile Modal",
       className: m.userProfileActivity,
-      activity: N,
+      activity: v,
       actionColor: m.actionColor,
       analyticsParams: M,
       onAction: () => {
-        R({
+        P({
           action: "JOIN_ACTIVITY"
         }), (0, f.trackUserProfileActivityJoined)({
-          activity: N,
+          activity: v,
           analyticsLocations: C,
-          ...P
+          ...R
         })
       }
-    }) : null, v.map(e => (0, l.jsx)(o.default, {
+    }) : null, N.map(e => (0, l.jsx)(o.default, {
       type: o.UserActivityTypes.PROFILE_V2,
       activity: e,
       user: t,
@@ -76,12 +76,12 @@ function T(e) {
       actionColor: m.actionColor,
       analyticsParams: M,
       onAction: () => {
-        R({
+        P({
           action: "JOIN_ACTIVITY"
         }), (0, f.trackUserProfileActivityJoined)({
           activity: e,
           analyticsLocations: C,
-          ...P
+          ...R
         })
       }
     }, "".concat(e.application_id, "-").concat(e.session_id, "-").concat(e.name)))]

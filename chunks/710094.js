@@ -16,8 +16,8 @@ var i = n("735250"),
   m = n("716534"),
   f = n("664891"),
   p = n("911367"),
-  _ = n("669079"),
-  S = n("987209"),
+  S = n("669079"),
+  _ = n("987209"),
   I = n("598"),
   E = n("409813"),
   P = n("809144"),
@@ -76,13 +76,13 @@ function M(e) {
       isGift: ec,
       giftMessage: ed,
       giftRecipient: em
-    } = (0, S.useGiftContext)();
+    } = (0, _.useGiftContext)();
   r()(null != en, "Step should be set");
   let ef = s.useRef(null),
-    [ep, e_] = (0, l.default)(!1, 500);
+    [ep, eS] = (0, l.default)(!1, 500);
   (0, p.useFetchProfileEffects)();
-  let eS = null !== (n = null != R ? R : U) && void 0 !== n ? n : null,
-    eI = null != eS && (!es || (0, C.SubscriptionTrials)[eS].skus.includes(q)) ? eS : null;
+  let e_ = null !== (n = null != R ? R : U) && void 0 !== n ? n : null,
+    eI = null != e_ && (!es || (0, C.SubscriptionTrials)[e_].skus.includes(q)) ? e_ : null;
   (0, o.useAnnualDiscountExperiment)("PaymentModalReviewStep", !0);
   let eE = (0, d.usePremiumTrialOffer)(U),
     eP = (0, c.usePremiumDiscountOffer)(),
@@ -109,7 +109,7 @@ function M(e) {
     eg = !ec && null != eE && null != q && (0, C.SubscriptionTrials)[eE.trial_id].skus.includes(q),
     ey = null == eP ? void 0 : null === (t = eP.discount) || void 0 === t ? void 0 : t.plan_ids,
     eM = !ec && null != eP && null != ey && null != X && ey.includes(X.id),
-    eR = ec && (0, _.shouldShowCustomGiftExperience)(em),
+    eR = ec && (0, S.shouldShowCustomGiftExperience)(em),
     eb = null == F && null == w && er === g.PurchaseTypes.SUBSCRIPTION,
     eL = (0, N.inOneStepSubscriptionCheckout)({
       isTrial: eg,
@@ -187,7 +187,7 @@ function M(e) {
         onNext: eN,
         onPurchaseError: e => et(e),
         legalTermsNodeRef: ex,
-        flashLegalTerms: () => e_(!0),
+        flashLegalTerms: () => eS(!0),
         invoiceError: eA,
         planError: ev,
         analyticsLocation: D,

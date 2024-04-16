@@ -16,8 +16,8 @@ var i = n("735250"),
   m = n("131704"),
   f = n("474936"),
   p = n("981631"),
-  _ = n("689938"),
-  S = n("746161");
+  S = n("689938"),
+  _ = n("746161");
 let I = (0, m.createChannelRecord)({
   id: "1",
   type: p.ChannelTypes.DM
@@ -44,14 +44,14 @@ function E(e) {
       x(E), C(e)
     }
   }, [m, E]), (0, i.jsx)("div", {
-    className: r()(S.body, P),
+    className: r()(_.body, P),
     children: (0, i.jsxs)(d.default, {
       title: t,
       errors: n,
       disabled: N,
       children: [(0, i.jsx)(c.default, {
-        innerClassName: r()(S.textArea, T),
-        editorClassName: S.editorTextArea,
+        innerClassName: r()(_.textArea, T),
+        editorClassName: _.editorTextArea,
         maxCharacterCount: f.CUSTOM_GIFT_MESSAGE_MAX_LENGTH,
         onChange: function(e, t, n) {
           t !== v && (x(t), C(n), a(t))
@@ -78,7 +78,7 @@ function E(e) {
         },
         disableThemedBackground: h
       }), (0, i.jsx)(l.HiddenVisually, {
-        children: _.default.Messages.MAXIMUM_LENGTH.format({
+        children: S.default.Messages.MAXIMUM_LENGTH.format({
           maxLength: f.CUSTOM_GIFT_MESSAGE_MAX_LENGTH
         })
       })]

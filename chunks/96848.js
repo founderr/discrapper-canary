@@ -35,7 +35,7 @@ function p(e) {
         children: c.default.Messages.GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION
       })]
     }), e]
-  }), _ = e => {
+  }), S = e => {
     null != t && (t(e), o(!1))
   };
   return (0, i.jsx)(a.Popout, {
@@ -52,7 +52,7 @@ function p(e) {
         children: (0, i.jsx)(r.default, {
           analyticsOverride: m,
           closePopout: t,
-          onSelectEmoji: _,
+          onSelectEmoji: S,
           wrapper: "div",
           pickerIntention: f,
           renderHeader: p,

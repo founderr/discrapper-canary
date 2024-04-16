@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return A
+    return p
   }
 }), s("47120"), s("653041"), s("627341");
 var l = s("735250"),
@@ -18,9 +18,9 @@ var l = s("735250"),
   E = s("944546"),
   I = s("470900"),
   m = s("228168"),
-  _ = s("689938"),
-  T = s("727705");
-let p = e => {
+  T = s("689938"),
+  _ = s("727705");
+let A = e => {
   var t;
   let [s, l, a] = (0, n.useStateFromStoresArray)([c.default], () => {
     var t, s, l, a;
@@ -28,61 +28,61 @@ let p = e => {
   }), i = [];
   return (!e.isNonUserBot() || e.isClyde()) && i.push({
     section: m.UserProfileSections.USER_INFO,
-    text: _.default.Messages.USER_PROFILE_ABOUT_ME
+    text: T.default.Messages.USER_PROFILE_ABOUT_ME
   }), !e.bot && i.push({
     section: m.UserProfileSections.MUTUAL_FRIENDS,
-    text: 0 === l ? _.default.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS : _.default.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
+    text: 0 === l ? T.default.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS : T.default.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
       count: l
     })
   }), !e.isClyde() && i.push({
     section: m.UserProfileSections.MUTUAL_GUILDS,
-    text: 0 === a ? _.default.Messages.USER_PROFILE_NO_MUTUAL_SERVERS : _.default.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
+    text: 0 === a ? T.default.Messages.USER_PROFILE_NO_MUTUAL_SERVERS : T.default.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
       count: a
     })
   }), e.bot && (null == s ? void 0 : null === (t = s.application) || void 0 === t ? void 0 : t.id) != null && i.push({
     section: m.UserProfileSections.BOT_DATA_ACCESS,
-    text: _.default.Messages.BOTS_DATA_ACCESS_TAB
+    text: T.default.Messages.BOTS_DATA_ACCESS_TAB
   }), i
 };
 
-function A(e) {
+function p(e) {
   var t, s, c;
   let {
-    user: _,
-    displayProfile: A,
-    initialSection: N = m.UserProfileSections.USER_INFO,
-    autoFocusNote: v,
+    user: T,
+    displayProfile: p,
+    initialSection: v = m.UserProfileSections.USER_INFO,
+    autoFocusNote: N,
     onClose: x
-  } = e, U = (0, n.useStateFromStores)([u.default], () => u.default.getId() === _.id), {
+  } = e, U = (0, n.useStateFromStores)([u.default], () => u.default.getId() === T.id), {
     trackUserProfileAction: h
-  } = (0, d.useUserProfileAnalyticsContext)(), C = p(_), [R, P] = a.useState(null !== (c = null === (t = C.find(e => {
+  } = (0, d.useUserProfileAnalyticsContext)(), C = A(T), [P, R] = a.useState(null !== (c = null === (t = C.find(e => {
     let {
       section: t
     } = e;
-    return t === N
+    return t === v
   })) || void 0 === t ? void 0 : t.section) && void 0 !== c ? c : null === (s = C[0]) || void 0 === s ? void 0 : s.section), M = a.useCallback(e => {
     h({
       action: "PRESS_SECTION",
       section: e
-    }), P(e)
-  }, [h, P]), g = (0, i.match)(R).with(m.UserProfileSections.MUTUAL_FRIENDS, () => (0, l.jsx)(E.default, {
-    user: _,
+    }), R(e)
+  }, [h, R]), j = (0, i.match)(P).with(m.UserProfileSections.MUTUAL_FRIENDS, () => (0, l.jsx)(E.default, {
+    user: T,
     onClose: x
   })).with(m.UserProfileSections.MUTUAL_GUILDS, () => (0, l.jsx)(I.default, {
-    user: _,
+    user: T,
     onClose: x
   })).with(m.UserProfileSections.BOT_DATA_ACCESS, () => (0, l.jsx)(f.default, {
-    user: _
+    user: T
   })).otherwise(() => (0, l.jsx)(S.default, {
-    user: _,
-    displayProfile: A,
-    autoFocusNote: v
+    user: T,
+    displayProfile: p,
+    autoFocusNote: N
   }));
-  return U || 0 === C.length ? g : (0, l.jsxs)(l.Fragment, {
+  return U || 0 === C.length ? j : (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(o.TabBar, {
-      className: T.tabBar,
+      className: _.tabBar,
       type: "top",
-      selectedItem: R,
+      selectedItem: P,
       onItemSelect: M,
       children: C.map(e => {
         let {
@@ -90,7 +90,7 @@ function A(e) {
           text: s
         } = e;
         return (0, l.jsx)(o.TabBar.Item, {
-          className: T.tabBarItem,
+          className: _.tabBarItem,
           id: t,
           "aria-label": s,
           children: (0, l.jsx)(r.Text, {
@@ -99,6 +99,6 @@ function A(e) {
           })
         }, t)
       })
-    }), g]
+    }), j]
   })
 }
