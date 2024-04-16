@@ -91,12 +91,12 @@ t.default = l.memo(e => {
   let {
     index: s,
     ...i
-  } = e, [o, c] = l.useState("default"), m = (0, r.useListItem)("".concat(s)), p = null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(), E = l.useRef(null), C = {
+  } = e, [o, c] = l.useState("default"), m = (0, r.useListItem)("".concat(s)), p = null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(), E = {
     entry: i.entry,
     channelId: i.channel.id,
     guildId: i.channel.guild_id,
     requestId: i.requestId
-  }, g = l.useCallback(e => {
+  }, C = l.useCallback(e => {
     p && (0, d.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -106,7 +106,7 @@ t.default = l.memo(e => {
         requestId: i.requestId
       })
     })
-  }, [i, p]), S = l.useCallback(() => {
+  }, [i, p]), g = l.useCallback(() => {
     c(String(Date.now()))
   }, []);
   return (0, a.jsx)(u.Popout, {
@@ -114,18 +114,15 @@ t.default = l.memo(e => {
       let {
         closePopout: t
       } = e;
-      return (0, a.jsx)("div", {
-        ref: E,
-        children: (0, a.jsx)(N, {
-          closePopout: t,
-          updatePopoutPosition: S,
-          ...i
-        })
+      return (0, a.jsx)(N, {
+        closePopout: t,
+        updatePopoutPosition: g,
+        ...i
       })
     },
     position: "left",
     positionKey: o,
-    onRequestOpen: () => (0, h.trackInteraction)(_.ContentInventoryInteractionTypes.CARD_CLICK, C),
+    onRequestOpen: () => (0, h.trackInteraction)(_.ContentInventoryInteractionTypes.CARD_CLICK, E),
     spacing: 16,
     children: (e, t) => {
       let {
@@ -141,8 +138,8 @@ t.default = l.memo(e => {
         children: (0, a.jsx)("div", {
           ...e,
           ...m,
-          onMouseEnter: () => A(C),
-          onContextMenu: g,
+          onMouseEnter: () => A(E),
+          onContextMenu: C,
           children: (0, a.jsx)(v, {
             ...i,
             selected: n

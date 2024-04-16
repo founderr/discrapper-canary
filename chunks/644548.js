@@ -45,42 +45,41 @@ t.default = e => {
     channel: t,
     entry: n,
     requestId: s,
-    updatePopoutPosition: o,
-    closePopout: C
+    closePopout: o
   } = e, {
-    applicationImageSrc: T,
-    user: I
+    applicationImageSrc: C,
+    user: T
   } = (0, f.useGamingContentData)(n), {
-    primaryColor: A,
-    secondaryColor: v
-  } = (0, c.default)(T), N = (0, u.getEntryDuration)(n), x = (0, u.getAggregateRange)(n), M = l.useCallback(e => {
-    if (null != I && null != N && null != x && (0, f.isAllowedRange)(x)) return (0, d.generateGamingContentImage)({
+    primaryColor: I,
+    secondaryColor: A
+  } = (0, c.default)(C), v = (0, u.getEntryDuration)(n), N = (0, u.getAggregateRange)(n), x = l.useCallback(e => {
+    if (null != T && null != v && null != N && (0, f.isAllowedRange)(N)) return (0, d.generateGamingContentImage)({
       entry: n,
-      applicationImageSrc: T,
-      avatarSrc: I.getAvatarURL(t.guild_id, 128),
-      description: g(n, t, I, x),
+      applicationImageSrc: C,
+      avatarSrc: T.getAvatarURL(t.guild_id, 128),
+      description: g(n, t, T, N),
       timestamp: p.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({
-        hours: Math.round(N / r.default.Seconds.HOUR)
+        hours: Math.round(v / r.default.Seconds.HOUR)
       }),
-      colors: [A, v],
+      colors: [I, A],
       channelId: e
     })
-  }, [T, t, N, n, A, x, v, I]);
-  return null != I && null != N && null != x && (0, f.isAllowedRange)(x) ? (0, a.jsxs)(m.Popout, {
+  }, [C, t, v, n, I, N, A, T]);
+  return null != T && null != v && null != N && (0, f.isAllowedRange)(N) ? (0, a.jsxs)(m.Popout, {
     children: [(0, a.jsxs)(m.PopoutHero, {
-      backgroundImgSrc: T,
+      backgroundImgSrc: C,
       children: [(0, a.jsxs)("div", {
         className: E.heroDetails,
         children: [(0, a.jsxs)("div", {
           children: [(0, a.jsx)(m.PopoutAvatar, {
-            user: I,
+            user: T,
             guildId: t.guild_id
           }), (0, a.jsx)(m.PopoutTitle, {
-            children: S(n, t, I, x)
+            children: S(n, t, T, N)
           })]
         }), (0, a.jsx)(h.ContentImage, {
           size: 80,
-          src: T,
+          src: C,
           className: E.contentImage
         })]
       }), (0, a.jsx)(f.ContentRowBadges, {
@@ -92,12 +91,11 @@ t.default = e => {
       })]
     }), (0, a.jsx)(m.PopoutInteractionsContainer, {
       children: (0, a.jsx)(m.PopoutReactor, {
-        closePopout: C,
-        user: I,
+        closePopout: o,
+        user: T,
         channel: t,
-        updatePopoutPosition: o,
-        generateReactionImage: M,
-        reactionImageAltText: _(n, I),
+        generateReactionImage: x,
+        reactionImageAltText: _(n, T),
         entry: n,
         requestId: s
       })

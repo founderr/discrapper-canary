@@ -43,42 +43,41 @@ t.default = e => {
     channel: t,
     entry: n,
     requestId: o,
-    updatePopoutPosition: p,
-    closePopout: _
+    closePopout: p
   } = e, {
-    user: T,
-    mediaImageSrc: I,
-    episodeDescription: A
+    user: _,
+    mediaImageSrc: T,
+    episodeDescription: I
   } = (0, f.useWatchContentData)(n), {
-    primaryColor: v,
-    secondaryColor: N
-  } = (0, c.default)(I), x = (0, s.useStateFromStores)([r.default], () => r.default.locale), M = l.useCallback(e => {
-    if (null != T && null != I) return (0, d.generateWatchContentImage)({
+    primaryColor: A,
+    secondaryColor: v
+  } = (0, c.default)(T), N = (0, s.useStateFromStores)([r.default], () => r.default.locale), x = l.useCallback(e => {
+    if (null != _ && null != T) return (0, d.generateWatchContentImage)({
       entry: n,
-      mediaImageSrc: I,
-      avatarSrc: T.getAvatarURL(t.guild_id, 128),
-      description: C(n, t, T),
-      timestamp: (0, u.formatEntryTimestamp)(n, x),
-      episodeDescription: A,
-      colors: [v, N],
+      mediaImageSrc: T,
+      avatarSrc: _.getAvatarURL(t.guild_id, 128),
+      description: C(n, t, _),
+      timestamp: (0, u.formatEntryTimestamp)(n, N),
+      episodeDescription: I,
+      colors: [A, v],
       channelId: e
     })
-  }, [t, n, A, x, I, v, N, T]);
-  return null == T ? null : (0, a.jsxs)(m.Popout, {
+  }, [t, n, I, N, T, A, v, _]);
+  return null == _ ? null : (0, a.jsxs)(m.Popout, {
     children: [(0, a.jsxs)(m.PopoutHero, {
-      backgroundImgSrc: I,
+      backgroundImgSrc: T,
       children: [(0, a.jsxs)("div", {
         className: E.heroDetails,
         children: [(0, a.jsxs)("div", {
           children: [(0, a.jsx)(m.PopoutAvatar, {
-            user: T,
+            user: _,
             guildId: t.guild_id
           }), (0, a.jsx)(m.PopoutTitle, {
-            children: g(n, t, T)
+            children: g(n, t, _)
           })]
         }), (0, a.jsx)(h.ContentImage, {
           size: 80,
-          src: I,
+          src: T,
           className: E.contentImage
         })]
       }), (0, a.jsx)(f.ContentRowBadges, {
@@ -86,16 +85,15 @@ t.default = e => {
         entry: n,
         textColor: "always-white",
         iconColor: i.tokens.colors.WHITE,
-        episodeDescription: A
+        episodeDescription: I
       })]
     }), (0, a.jsx)(m.PopoutInteractionsContainer, {
       children: (0, a.jsx)(m.PopoutReactor, {
-        closePopout: _,
-        user: T,
+        closePopout: p,
+        user: _,
         channel: t,
-        updatePopoutPosition: p,
-        generateReactionImage: M,
-        reactionImageAltText: S(n, T),
+        generateReactionImage: x,
+        reactionImageAltText: S(n, _),
         entry: n,
         requestId: o
       })
