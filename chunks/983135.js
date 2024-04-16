@@ -32,8 +32,8 @@ var a = n("570140"),
   _ = n("592125"),
   I = n("430824"),
   E = n("823379"),
-  f = n("434404"),
-  O = n("889369"),
+  O = n("434404"),
+  f = n("889369"),
   S = n("570961"),
   T = n("84658"),
   m = n("176505"),
@@ -55,7 +55,7 @@ function G(e) {
 }
 async function h(e, t) {
   let n = i.default.getEnabled(e),
-    r = Array.from(O.default.editedDefaultChannelIds).filter(e => null != _.default.getChannel(e)),
+    r = Array.from(f.default.editedDefaultChannelIds).filter(e => null != _.default.getChannel(e)),
     [o, u] = (0, d.getChattableDefaultChannels)(e, [...r]);
   if (n && t === D.GuildOnboardingMode.ONBOARDING_DEFAULT && (u.length < D.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING || o.length < D.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN)) {
     l.default.show({
@@ -113,7 +113,7 @@ function R(e, t) {
 }
 async function p(e) {
   let t = I.default.getGuild(e);
-  null != t && (f.default.close(), (0, N.startImpersonating)(t.id, {
+  null != t && (O.default.close(), (0, N.startImpersonating)(t.id, {
     type: c.ImpersonateType.NEW_MEMBER,
     roles: {},
     optInChannels: new Set,

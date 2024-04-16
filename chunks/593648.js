@@ -42,8 +42,8 @@ var a = s("735250"),
   F = s("981631"),
   G = s("468788"),
   k = s("689938"),
-  w = s("993510"),
-  H = s("794711");
+  H = s("993510"),
+  w = s("794711");
 
 function V(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -64,24 +64,24 @@ function Y(e) {
     tooltip: r
   } = e;
   return (0, a.jsx)(u.FormSwitch, {
-    className: w.soundRow,
+    className: H.soundRow,
     value: s,
     onChange: i,
     disabled: n,
     tooltipNote: r,
     children: (0, a.jsxs)("div", {
-      className: w.notificationSound,
+      className: H.notificationSound,
       children: [(0, a.jsx)("div", {
-        className: w.soundName,
+        className: H.soundName,
         children: t
       }), (0, a.jsx)(u.Clickable, {
-        className: w.soundIcon,
+        className: H.soundIcon,
         onClick: l,
         "aria-label": k.default.Messages.USER_SETTINGS_NOTIFICATIONS_PREVIEW_SOUND,
         children: (0, a.jsx)(v.default, {
           width: 16,
           height: 16,
-          className: w.icon,
+          className: H.icon,
           "aria-hidden": !0
         })
       })]
@@ -199,10 +199,10 @@ function W(e) {
     title: k.default.Messages.SOUNDS,
     children: [r ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(u.FormTitle, {
-        className: H.marginBottom20,
+        className: w.marginBottom20,
         children: k.default.Messages.SOUNDPACK_LABEL
       }), (0, a.jsx)(x.default, {
-        className: i()(w.soundpackSelect, H.marginBottom40)
+        className: i()(H.soundpackSelect, w.marginBottom40)
       })]
     }) : null, (0, a.jsx)(u.FormSwitch, {
       note: k.default.Messages.USER_SETTINGS_NOTIFICATIONS_NOTIFY_MESSAGES_IN_SELECTED_CHANNEL_NOTE,
@@ -246,11 +246,11 @@ function K() {
   return 0 === Object.keys(e).length ? null : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(u.Heading, {
       variant: "heading-lg/semibold",
-      className: i()(w.titleWithBeta, H.marginBottom20),
+      className: i()(H.titleWithBeta, w.marginBottom20),
       children: [k.default.Messages.GUILD_COMMUNITY_ALERTS_HEADER, (0, a.jsx)(m.default, {})]
     }), (0, a.jsx)(u.FormText, {
       type: u.FormTextTypes.DESCRIPTION,
-      className: H.marginBottom20,
+      className: w.marginBottom20,
       children: k.default.Messages.GUILD_COMMUNITY_ALERTS_DESCRIPTION
     }), (0, a.jsxs)(u.FormItem, {
       title: k.default.Messages.GUILD_COMMUNITY_ALERTS_CHOOSE_SERVER,
@@ -262,7 +262,7 @@ function K() {
         options: l
       }), null != t ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(u.FormSwitch, {
-          className: i()(H.marginBottom20, H.marginTop20),
+          className: i()(w.marginBottom20, w.marginTop20),
           note: k.default.Messages.GUILD_COMMUNITY_ALERTS_NAG_DESCRIPTION,
           value: !e[t].disableRaidAlertNag,
           onChange: () => {
@@ -272,7 +272,7 @@ function K() {
           },
           children: k.default.Messages.GUILD_COMMUNITY_ALERTS_NAG_HEADER
         }), (0, a.jsx)(u.FormSwitch, {
-          className: H.marginBottom20,
+          className: w.marginBottom20,
           note: k.default.Messages.GUILD_COMMUNITY_ALERTS_PUSH_DESCRIPTION,
           value: !e[t].disableRaidAlertPush,
           onChange: () => {
@@ -285,7 +285,7 @@ function K() {
         })]
       }) : null]
     }), (0, a.jsx)(u.FormDivider, {
-      className: i()(null != t ? H.marginTop20 : H.marginTop40, H.marginBottom40)
+      className: i()(null != t ? w.marginTop20 : w.marginTop40, w.marginBottom40)
     })]
   })
 }
@@ -324,7 +324,7 @@ class z extends n.PureComponent {
       tag: u.FormTitleTags.H1,
       title: k.default.Messages.NOTIFICATIONS,
       children: [(0, a.jsx)(u.FormSwitch, {
-        className: H.marginBottom20,
+        className: w.marginBottom20,
         value: e !== F.DesktopNotificationTypes.NEVER && !c,
         onChange: this.handleDesktopChange,
         note: k.default.Messages.DESKTOP_NOTIFICATIONS_ENABLE_BODY,
@@ -332,13 +332,13 @@ class z extends n.PureComponent {
         tooltipNote: c ? k.default.Messages.QUIET_MODE_DISABLED_BY : void 0,
         children: k.default.Messages.DESKTOP_NOTIFICATIONS_ENABLE
       }), (0, a.jsx)(q, {}), (0, a.jsx)(u.FormSwitch, {
-        className: S ? H.marginBottom20 : H.marginBottom40,
+        className: S ? w.marginBottom20 : w.marginBottom40,
         value: !s,
         note: k.default.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_BADGE_BODY,
         onChange: this.handleToggleShowUnreadBadge,
         children: k.default.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_BADGE_LABEL
       }), S ? (0, a.jsx)(u.FormSwitch, {
-        className: H.marginBottom40,
+        className: w.marginBottom40,
         value: n,
         note: k.default.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_FLASH_BODY,
         onChange: this.handleToggleShowFlash,
@@ -351,13 +351,13 @@ class z extends n.PureComponent {
           options: E
         }), (0, a.jsx)(u.FormText, {
           type: u.FormTextTypes.DESCRIPTION,
-          className: H.marginTop8,
+          className: w.marginTop8,
           children: k.default.Messages.FORM_DESCRIPTION_PUSH_AFK_TIMEOUT
         }), (0, a.jsx)(u.FormDivider, {
-          className: i()(H.marginTop40, H.marginBottom40)
+          className: i()(w.marginTop40, w.marginBottom40)
         })]
       }), this.renderTTS(), (0, a.jsx)(u.FormDivider, {
-        className: i()(H.marginTop40, H.marginBottom40)
+        className: i()(w.marginTop40, w.marginBottom40)
       }), (0, a.jsx)(K, {}), (0, a.jsx)(u.FormItem, {
         children: (0, a.jsx)(W, {
           disabledSounds: l,
@@ -388,7 +388,7 @@ class z extends n.PureComponent {
         title: k.default.Messages.FORM_LABEL_TTS_NOTIFICATIONS,
         children: [(0, a.jsx)(u.FormText, {
           type: u.FormTextTypes.DESCRIPTION,
-          className: H.marginBottom8,
+          className: w.marginBottom8,
           children: k.default.Messages.FORM_DESCRIPTION_TTS
         }), (0, a.jsx)(u.RadioGroup, {
           options: e,
@@ -423,7 +423,7 @@ function q() {
     }).enabled,
     t = (0, d.useStateFromStores)([M.default], () => M.default.mentionOnAllMessages);
   return e ? (0, a.jsx)(u.FormSwitch, {
-    className: H.marginBottom20,
+    className: w.marginBottom20,
     value: t,
     onChange: e => {
       E.default.setAccountFlag(G.AccountNotificationFlags.MENTION_ON_ALL_MESSAGES, e)
@@ -450,7 +450,7 @@ function Z() {
     [l, i] = n.useState(!1);
   return e && (s || t) ? (0, a.jsxs)(a.Fragment, {
     children: [s ? (0, a.jsx)(u.FormSwitch, {
-      className: H.marginBottom40,
+      className: w.marginBottom40,
       style: {
         marginTop: -20
       },
@@ -460,7 +460,7 @@ function Z() {
       onChange: () => X(i),
       children: k.default.Messages.NOTIF_MIGRATION_SETTINGS_TITLE
     }) : t ? (0, a.jsx)(u.FormSwitch, {
-      className: H.marginBottom40,
+      className: w.marginBottom40,
       style: {
         marginTop: -20
       },

@@ -43,8 +43,8 @@ var n = s("990547"),
   F = s("61160"),
   G = s("604227"),
   k = s("38915"),
-  w = s("498639"),
-  H = s("748717"),
+  H = s("498639"),
+  w = s("748717"),
   V = s("419636"),
   Y = s("35426"),
   W = s("799071"),
@@ -174,7 +174,7 @@ function eA(e) {
     section: eh.UserSettingsSections.PREMIUM,
     ariaLabel: eN.default.Messages.PREMIUM,
     label: eN.default.Messages.PREMIUM,
-    element: H.default,
+    element: w.default,
     className: ep.premiumTab
   }, {
     section: eh.UserSettingsSections.GUILD_BOOSTING,
@@ -341,7 +341,7 @@ function eA(e) {
   }, {
     section: eh.UserSettingsSections.PAYMENT_FLOW_MODAL_TEST_PAGE,
     label: "Payment Flow Modals",
-    element: w.default,
+    element: H.default,
     predicate: () => R.default.isDeveloper
   }, {
     section: eh.UserSettingsSections.TEXT_PLAYGROUND,

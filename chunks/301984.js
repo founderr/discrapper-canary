@@ -8,8 +8,8 @@ var l = s("735250");
 s("470079");
 var a = s("481060"),
   i = s("194359"),
-  n = s("782089"),
-  o = s("877410"),
+  o = s("782089"),
+  n = s("877410"),
   r = s("785717"),
   u = s("993409"),
   d = s("981631"),
@@ -29,13 +29,13 @@ function f(e) {
   }, S), m = () => i.default.cancelFriendRequest(t.id);
   return s === d.RelationshipTypes.PENDING_INCOMING ? (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(u.default, {
-      icon: n.default,
+      icon: o.default,
       text: c.default.Messages.FRIEND_REQUEST_ACCEPT,
       onClick: () => (E({
         action: "ACCEPT_FRIEND_REQUEST"
       }), I())
     }), (0, l.jsx)(u.default, {
-      icon: o.default,
+      icon: n.default,
       text: c.default.Messages.FRIEND_REQUEST_IGNORE,
       color: a.ButtonColors.RED,
       onClick: () => (E({
@@ -43,11 +43,11 @@ function f(e) {
       }), m())
     })]
   }) : s === d.RelationshipTypes.PENDING_OUTGOING ? (0, l.jsx)(u.default, {
-    icon: n.default,
+    icon: o.default,
     text: c.default.Messages.REQUEST_SENT,
     disabled: !0
   }) : (0, l.jsx)(u.default, {
-    icon: n.default,
+    icon: o.default,
     text: c.default.Messages.ADD_FRIEND,
     onClick: () => (E({
       action: "SEND_FRIEND_REQUEST"

@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var l = s("735250"),
   a = s("470079"),
   i = s("120356"),
-  n = s.n(i),
-  o = s("442837"),
+  o = s.n(i),
+  n = s("442837"),
   r = s("481060"),
   u = s("666520"),
   d = s("726542"),
@@ -38,12 +38,12 @@ function h(e) {
     trackUserProfileAction: P
   } = (0, I.useUserProfileAnalyticsContext)(), R = (0, c.usePlatformAllowed)({
     forUserProfile: !0
-  }), M = (0, o.useStateFromStores)([m.default], () => {
+  }), M = (0, n.useStateFromStores)([m.default], () => {
     var e, t;
     return null !== (t = null === (e = m.default.getUserProfile(s.id)) || void 0 === e ? void 0 : e.connectedAccounts) && void 0 !== t ? t : []
-  }), j = (0, o.useStateFromStores)([E.default], () => E.default.hidePersonalInformation), {
+  }), j = (0, n.useStateFromStores)([E.default], () => E.default.hidePersonalInformation), {
     theme: g
-  } = (0, A.useUserProfileThemeContext)(), y = (0, o.useStateFromStores)([S.default], () => S.default.locale), O = (0, f.useIsUserRecentGamesEnabled)({
+  } = (0, A.useUserProfileThemeContext)(), y = (0, n.useStateFromStores)([S.default], () => S.default.locale), O = (0, f.useIsUserRecentGamesEnabled)({
     userId: s.id,
     location: "28tk0bf_3"
   }), D = a.useMemo(() => M.filter(e => {
@@ -76,7 +76,7 @@ function h(e) {
       }), O && (0, l.jsx)(v.UserProfileRecentGamesContainer, {
         userId: s.id,
         maxItems: 6,
-        containerClassName: n()(U.userInfoText, U.recentGames)
+        containerClassName: o()(U.userInfoText, U.recentGames)
       }), (0, l.jsx)(r.Heading, {
         variant: "eyebrow",
         className: U.userInfoSectionHeader,

@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var l = s("735250"),
   a = s("470079"),
   i = s("442837"),
-  n = s("692547"),
-  o = s("481060"),
+  o = s("692547"),
+  n = s("481060"),
   r = s("493683"),
   u = s("239091"),
   d = s("37234"),
@@ -34,8 +34,8 @@ var l = s("735250"),
   j = s("231338"),
   g = s("689938"),
   y = s("950114");
-let O = o.AvatarSizes.SIZE_120,
-  D = A.default.getEnableHardwareAcceleration() ? o.AnimatedAvatar : o.Avatar;
+let O = n.AvatarSizes.SIZE_120,
+  D = A.default.getEnableHardwareAcceleration() ? n.AnimatedAvatar : n.Avatar;
 
 function F(e) {
   let {
@@ -119,20 +119,20 @@ function F(e) {
           size: O,
           className: y.avatar,
           status: X ? j.StatusTypes.UNKNOWN : G ? j.StatusTypes.STREAMING : Y,
-          statusBackdropColor: (0, o.getStatusBackdropColor)(W),
+          statusBackdropColor: (0, n.getStatusBackdropColor)(W),
           isMobile: z,
           statusTooltip: !0,
           "aria-label": A.username
         })
       }), (0, l.jsxs)("div", {
         className: y.headerTop,
-        children: [(null == H ? void 0 : H.profileFetchFailed) && !A.isClyde() ? (0, l.jsx)(o.Tooltip, {
+        children: [(null == H ? void 0 : H.profileFetchFailed) && !A.isClyde() ? (0, l.jsx)(n.Tooltip, {
           text: g.default.Messages.USER_PROFILE_LOAD_ERROR,
           spacing: 20,
           children: e => (0, l.jsx)(_.default, {
             ...e,
             className: y.warningCircleIcon,
-            color: n.default.unsafe_rawColors.YELLOW_300.css
+            color: o.default.unsafe_rawColors.YELLOW_300.css
           })
         }) : (0, l.jsx)(h.default, {
           user: A,
@@ -174,7 +174,7 @@ function F(e) {
               })
             },
             onSendMessage: () => et("User Profile Modal - Send Message Button")
-          }), Q || A.isNonUserBot() ? null : (0, l.jsx)(o.Clickable, {
+          }), Q || A.isNonUserBot() ? null : (0, l.jsx)(n.Clickable, {
             focusProps: {
               offset: {
                 left: 8

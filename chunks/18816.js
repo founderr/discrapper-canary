@@ -8,8 +8,8 @@ var l = s("735250");
 s("470079");
 var a = s("481060"),
   i = s("239091"),
-  n = s("311819"),
-  o = s("69580"),
+  o = s("311819"),
+  n = s("69580"),
   r = s("556084"),
   u = s("944486"),
   d = s("441957"),
@@ -53,14 +53,14 @@ function _(e) {
           children: (0, l.jsx)(a.MenuItem, {
             id: "copy",
             label: T.default.Messages.APPLICATION_ADD_BUTTON_ACTIONS_COPY,
-            action: () => (0, f.copy)((0, n.getApplicationInstallURL)(s))
+            action: () => (0, f.copy)((0, o.getApplicationInstallURL)(s))
           })
         })
       }))
     } : void 0,
     onClick: () => {
       if (v) {
-        (0, o.openOAuth2Modal)({
+        (0, n.openOAuth2Modal)({
           channelId: _,
           clientId: s.id,
           scopes: [m.OAuth2Scopes.APPLICATIONS_COMMANDS],

@@ -38,8 +38,8 @@ var a = s("735250"),
   F = s("349728"),
   G = s("494620"),
   k = s("205266"),
-  w = s("216153"),
-  H = s("981631"),
+  H = s("216153"),
+  w = s("981631"),
   V = s("856651"),
   Y = s("921944"),
   W = s("689938"),
@@ -197,7 +197,7 @@ function q(e) {
         n = g.default.get($),
         l = "1" === (null !== (t = e.metadata) && void 0 !== t ? t : {})[V.MetadataFields.TWITTER_VERIFIED],
         i = null;
-      return s.type === H.PlatformTypes.TWITTER && l && (i = (0, a.jsx)(c.Tooltip, {
+      return s.type === w.PlatformTypes.TWITTER && l && (i = (0, a.jsx)(c.Tooltip, {
         text: W.default.Messages.CONNECTION_VERIFIED_ON_TWITTER,
         children: e => (0, a.jsx)(v.default, {
           ...e,
@@ -245,10 +245,10 @@ function q(e) {
           })
         })]
       })
-    }(T), (t = T).twoWayLink ? null : t.type === H.PlatformTypes.XBOX ? (0, a.jsx)("div", {
+    }(T), (t = T).twoWayLink ? null : t.type === w.PlatformTypes.XBOX ? (0, a.jsx)("div", {
       className: K.upsellWrapper,
-      children: (0, a.jsx)(w.XboxTwoWayLinkUpsell, {})
-    }) : t.type === H.PlatformTypes.PLAYSTATION ? (0, a.jsx)("div", {
+      children: (0, a.jsx)(H.XboxTwoWayLinkUpsell, {})
+    }) : t.type === w.PlatformTypes.PLAYSTATION ? (0, a.jsx)("div", {
       className: K.upsellWrapper,
       children: (0, a.jsx)(k.PlayStationTwoWayLinkUpsell, {})
     }) : null, function(e) {
@@ -257,22 +257,22 @@ function q(e) {
         n = null,
         l = (0, h.getCreatedAtDate)(s[V.MetadataFields.CREATED_AT], _);
       switch (e.type) {
-        case H.PlatformTypes.REDDIT:
+        case w.PlatformTypes.REDDIT:
           n = (0, p.generateRedditMetadataItems)(s, K.metadataItem);
           break;
-        case H.PlatformTypes.STEAM:
+        case w.PlatformTypes.STEAM:
           n = (0, p.generateSteamMetadataItems)(s, K.metadataItem);
           break;
-        case H.PlatformTypes.TWITTER:
+        case w.PlatformTypes.TWITTER:
           n = (0, p.generateTwitterMetadataItems)(s, K.metadataItem);
           break;
-        case H.PlatformTypes.EBAY:
+        case w.PlatformTypes.EBAY:
           n = (0, p.generateEbayMetadataItems)(s, K.metadataItem);
           break;
-        case H.PlatformTypes.PAYPAL:
+        case w.PlatformTypes.PAYPAL:
           n = (0, p.generatePaypalMetadataItems)(s, K.metadataItem);
           break;
-        case H.PlatformTypes.TIKTOK:
+        case w.PlatformTypes.TIKTOK:
           n = (0, p.generateTikTokMetadataItems)(s, K.metadataItem)
       }
       null !== l && (null == n && (n = []), null == n || n.push((0, a.jsx)(c.Text, {
@@ -294,7 +294,7 @@ function q(e) {
           variant: "text-xs/normal",
           className: K.connectionMetadataUpsellDescription,
           children: W.default.Messages.CONNECTED_ACCOUNT_ADD_DETAILS_DESCRIPTION.format({
-            helpdeskUrl: y.default.getArticleURL(H.HelpdeskArticles.CONNECTION_DETAILS)
+            helpdeskUrl: y.default.getArticleURL(w.HelpdeskArticles.CONNECTION_DETAILS)
           })
         }, "label")], r = W.default.Messages.CONNECTED_ACCOUNT_ADD_DETAILS
       }
@@ -316,7 +316,7 @@ function q(e) {
         className: K.metadataContainer,
         children: n
       })
-    }(T), (s = ee, H.FRIEND_SYNC_PLATFORM_TYPES.has(T.type) && (i = (0, a.jsx)(c.FormSwitch, {
+    }(T), (s = ee, w.FRIEND_SYNC_PLATFORM_TYPES.has(T.type) && (i = (0, a.jsx)(c.FormSwitch, {
       className: K.connectionOptionSwitch,
       hideBorder: !0,
       value: C,
@@ -325,7 +325,7 @@ function q(e) {
         variant: "text-sm/semibold",
         children: W.default.Messages.SYNC_FRIENDS
       })
-    })), H.ACTIVITY_PLATFORM_TYPES.has(T.type) && (r = (0, a.jsx)(c.FormSwitch, {
+    })), w.ACTIVITY_PLATFORM_TYPES.has(T.type) && (r = (0, a.jsx)(c.FormSwitch, {
       className: K.connectionOptionSwitch,
       hideBorder: !0,
       value: D,
@@ -406,7 +406,7 @@ function Z() {
       variant: "text-xs/normal",
       color: "header-secondary",
       children: W.default.Messages.CONNECTIONS_USER_SETTINGS_CONNECT_ACCOUNTS_DESCRIPTION.format({
-        privacyPolicyUrl: H.MarketingURLs.PRIVACY
+        privacyPolicyUrl: w.MarketingURLs.PRIVACY
       })
     }), (0, a.jsx)(X, {})]
   })
@@ -417,7 +417,7 @@ function X() {
     let t = g.default.get(e);
     (0, N.default)({
       platformType: t.type
-    }), U.default.track(H.AnalyticEvents.ACCOUNT_LINK_STEP, {
+    }), U.default.track(w.AnalyticEvents.ACCOUNT_LINK_STEP, {
       previous_step: "desktop connections",
       current_step: "desktop oauth",
       platform_type: t.type

@@ -8,8 +8,8 @@ var l = s("735250");
 s("470079");
 var a = s("493683"),
   i = s("974029"),
-  n = s("785717"),
-  o = s("993409"),
+  o = s("785717"),
+  n = s("993409"),
   r = s("689938");
 
 function u(e) {
@@ -19,8 +19,8 @@ function u(e) {
     onClose: u
   } = e, {
     trackUserProfileAction: d
-  } = (0, n.useUserProfileAnalyticsContext)();
-  return (0, l.jsx)(o.default, {
+  } = (0, o.useUserProfileAnalyticsContext)();
+  return (0, l.jsx)(n.default, {
     icon: i.default,
     text: r.default.Messages.USER_PROFILE_MESSAGE,
     onClick: () => {

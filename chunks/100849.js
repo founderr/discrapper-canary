@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var l = s("735250"),
   a = s("470079"),
   i = s("442837"),
-  n = s("481060"),
-  o = s("717881"),
+  o = s("481060"),
+  n = s("717881"),
   r = s("906732"),
   u = s("199902"),
   d = s("158776"),
@@ -40,7 +40,7 @@ function _(e) {
       section: I.AnalyticsSections.PROFILE_MODAL
     }
   };
-  return (0, l.jsxs)(n.ScrollerThin, {
+  return (0, l.jsxs)(o.ScrollerThin, {
     className: T.listScroller,
     fade: !0,
     children: [h && U ? (0, l.jsx)("div", {
@@ -49,8 +49,8 @@ function _(e) {
         ...x,
         color: m.actionColor
       })
-    }) : null, s ? (0, l.jsx)(o.default, {
-      type: o.UserActivityTypes.PROFILE_V2,
+    }) : null, s ? (0, l.jsx)(n.default, {
+      type: n.UserActivityTypes.PROFILE_V2,
       user: t,
       source: "Profile Modal",
       className: m.userProfileActivity,
@@ -66,8 +66,8 @@ function _(e) {
           ...R
         })
       }
-    }) : null, N.map(e => (0, l.jsx)(o.default, {
-      type: o.UserActivityTypes.PROFILE_V2,
+    }) : null, N.map(e => (0, l.jsx)(n.default, {
+      type: n.UserActivityTypes.PROFILE_V2,
       activity: e,
       user: t,
       useStoreStream: !1,

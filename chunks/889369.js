@@ -9,12 +9,12 @@ var a, l, s, i, r = n("392711"),
   _ = n("981631");
 let I = !1,
   E = null,
-  f = new Set;
+  O = new Set;
 
-function O() {
+function f() {
   (function() {
     I = !1, E = null
-  })(), null != (E = c.default.getGuildId()) && c.default.getSection() === _.GuildSettingsSections.ONBOARDING && (f = new Set(N.default.getDefaultChannelIds(E)))
+  })(), null != (E = c.default.getGuildId()) && c.default.getSection() === _.GuildSettingsSections.ONBOARDING && (O = new Set(N.default.getDefaultChannelIds(E)))
 }
 class S extends(a = o.default.Store) {
   initialize() {
@@ -23,7 +23,7 @@ class S extends(a = o.default.Store) {
   hasChanges() {
     if (null == E) return !1;
     let e = N.default.getDefaultChannelIds(E).sort(),
-      t = Array.from(f).sort();
+      t = Array.from(O).sort();
     return !d().isEqual(e, t)
   }
   get guildId() {
@@ -33,7 +33,7 @@ class S extends(a = o.default.Store) {
     return I
   }
   get editedDefaultChannelIds() {
-    return f
+    return O
   }
 }
 i = "GuildSettingsDefaultChannelsStore", (s = "displayName") in(l = S) ? Object.defineProperty(l, s, {
@@ -42,11 +42,11 @@ i = "GuildSettingsDefaultChannelsStore", (s = "displayName") in(l = S) ? Object.
   configurable: !0,
   writable: !0
 }) : l[s] = i, t.default = new S(u.default, {
-  GUILD_SETTINGS_INIT: O,
-  GUILD_SETTINGS_SET_SECTION: O,
-  GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: O,
-  GUILD_SETTINGS_DEFAULT_CHANNELS_RESET: O,
-  GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS: O,
+  GUILD_SETTINGS_INIT: f,
+  GUILD_SETTINGS_SET_SECTION: f,
+  GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: f,
+  GUILD_SETTINGS_DEFAULT_CHANNELS_RESET: f,
+  GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS: f,
   GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_FAILED: function() {
     I = !1
   },
@@ -54,7 +54,7 @@ i = "GuildSettingsDefaultChannelsStore", (s = "displayName") in(l = S) ? Object.
     let {
       channelId: t
     } = e;
-    (f = new Set(f)).has(t) ? f.delete(t) : f.add(t)
+    (O = new Set(O)).has(t) ? O.delete(t) : O.add(t)
   },
   GUILD_SETTINGS_DEFAULT_CHANNELS_SUBMIT: function() {
     I = !0

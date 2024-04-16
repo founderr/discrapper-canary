@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var l = s("735250"),
   a = s("470079"),
   i = s("442837"),
-  n = s("481060"),
-  o = s("410575"),
+  o = s("481060"),
+  n = s("410575"),
   r = s("727637"),
   u = s("58540"),
   d = s("420660"),
@@ -41,7 +41,7 @@ function F(e) {
   let {
     user: t,
     isCurrentUser: s,
-    section: o,
+    section: n,
     setSection: r,
     hasActivity: u
   } = e, d = (0, i.useStateFromStores)([v.default], () => {
@@ -72,28 +72,28 @@ function F(e) {
   }, [I, S]);
   return (0, l.jsx)("div", {
     className: D.tabBarContainer,
-    children: (0, l.jsxs)(n.TabBar, {
-      selectedItem: o,
+    children: (0, l.jsxs)(o.TabBar, {
+      selectedItem: n,
       type: "top",
       onItemSelect: r,
       className: D.tabBar,
-      children: [!t.isNonUserBot() || t.isClyde() ? (0, l.jsx)(n.TabBar.Item, {
+      children: [!t.isNonUserBot() || t.isClyde() ? (0, l.jsx)(o.TabBar.Item, {
         className: D.tabBarItem,
         id: g.UserProfileSections.USER_INFO,
         children: O.default.Messages.USER_INFO
-      }) : null, !t.bot && u ? (0, l.jsx)(n.TabBar.Item, {
+      }) : null, !t.bot && u ? (0, l.jsx)(o.TabBar.Item, {
         className: D.tabBarItem,
         id: g.UserProfileSections.ACTIVITY,
         children: O.default.Messages.USER_PROFILE_ACTIVITY
-      }) : null, t.bot || s ? null : (0, l.jsx)(n.TabBar.Item, {
+      }) : null, t.bot || s ? null : (0, l.jsx)(o.TabBar.Item, {
         className: D.tabBarItem,
         id: g.UserProfileSections.MUTUAL_FRIENDS,
         children: m
-      }), s || t.isClyde() ? null : (0, l.jsx)(n.TabBar.Item, {
+      }), s || t.isClyde() ? null : (0, l.jsx)(o.TabBar.Item, {
         className: D.tabBarItem,
         id: g.UserProfileSections.MUTUAL_GUILDS,
         children: T
-      }), t.bot && d ? (0, l.jsx)(n.TabBar.Item, {
+      }), t.bot && d ? (0, l.jsx)(o.TabBar.Item, {
         className: D.tabBarItem,
         id: g.UserProfileSections.BOT_DATA_ACCESS,
         children: O.default.Messages.BOTS_DATA_ACCESS_TAB
@@ -140,7 +140,7 @@ function L(e) {
     ea = a.createRef(),
     ei = (0, r.default)(ea);
   !es && X === g.UserProfileSections.ACTIVITY && $(g.UserProfileSections.USER_INFO);
-  let en = a.useCallback(e => {
+  let eo = a.useCallback(e => {
       (0, p.trackUserProfileAction)({
         action: "PRESS_SECTION",
         layout: "MODAL",
@@ -152,7 +152,7 @@ function L(e) {
         analyticsLocations: Q
       }), J(!0), $(e)
     }, [Y.id, v, U, L, B, Q]),
-    eo = null == H ? void 0 : H.profileEffectId;
+    en = null == H ? void 0 : H.profileEffectId;
   return (0, l.jsx)(f.AnalyticsLocationProvider, {
     value: Q,
     children: (0, l.jsx)(A.UserProfileAnalyticsProvider, {
@@ -162,9 +162,9 @@ function L(e) {
       channelId: U,
       messageId: L,
       roleId: B,
-      children: (0, l.jsx)(o.default, {
+      children: (0, l.jsx)(n.default, {
         section: y.AnalyticsSections.PROFILE_MODAL,
-        children: (0, l.jsxs)(n.ModalRoot, {
+        children: (0, l.jsxs)(o.ModalRoot, {
           transitionState: w,
           className: D.root,
           hideShadow: !0,
@@ -184,9 +184,9 @@ function L(e) {
                 isStreaming: (0, d.default)(K),
                 guildId: v,
                 channelId: U,
-                hasProfileEffect: null != eo
+                hasProfileEffect: null != en
               }), (0, l.jsxs)(C.default.Overlay, {
-                children: [w === n.ModalTransitionState.ENTERED && (0, l.jsx)(h.default, {
+                children: [w === o.ModalTransitionState.ENTERED && (0, l.jsx)(h.default, {
                   onTooltipClose: z
                 }), (0, l.jsxs)("div", {
                   className: D.body,
@@ -196,7 +196,7 @@ function L(e) {
                   }), el ? (0, l.jsx)(F, {
                     user: Y,
                     section: X === g.UserProfileSections.USER_INFO_CONNECTIONS ? g.UserProfileSections.USER_INFO : X,
-                    setSection: en,
+                    setSection: eo,
                     hasActivity: es,
                     isCurrentUser: ee
                   }) : (0, l.jsx)("div", {
@@ -211,8 +211,8 @@ function L(e) {
                 })]
               })]
             })
-          }), null != eo && (0, l.jsx)(S.default, {
-            profileEffectId: eo,
+          }), null != en && (0, l.jsx)(S.default, {
+            profileEffectId: en,
             bannerAdjustment: 0,
             isHovering: ei
           })]

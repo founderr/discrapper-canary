@@ -21,8 +21,8 @@ var l = n("120356"),
   _ = n("150512"),
   I = n("430824"),
   E = n("594174"),
-  f = n("93879"),
-  O = n("263704"),
+  O = n("93879"),
+  f = n("263704"),
   S = n("481479"),
   T = n("316949"),
   m = n("626135"),
@@ -55,13 +55,13 @@ let R = () => [{
     channel: h.default.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_LANDING_1,
     selected: !0
   }, {
-    channelIcon: () => (0, a.jsx)(f.default, {
+    channelIcon: () => (0, a.jsx)(O.default, {
       className: L.channelIcon
     }),
     channel: h.default.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_LANDING_2,
     selected: !0
   }, {
-    channelIcon: () => (0, a.jsx)(f.default, {
+    channelIcon: () => (0, a.jsx)(O.default, {
       className: L.channelIcon
     }),
     channel: h.default.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_LANDING_3,
@@ -121,7 +121,7 @@ function P(e) {
             children: i
           }), d && (0, a.jsx)("div", {
             className: L.checkboxCircle,
-            children: (0, a.jsx)(O.default, {
+            children: (0, a.jsx)(f.default, {
               className: L.checkmark
             })
           })]
@@ -234,13 +234,13 @@ function M() {
             title: h.default.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_1_TITLE,
             subtitle: h.default.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_1_CHANNEL_NAME,
             completed: !0,
-            Icon: f.default,
+            Icon: O.default,
             variant: "static"
           }), (0, a.jsx)(c.NewMemberAction, {
             title: h.default.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_2_TITLE,
             subtitle: h.default.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_2_CHANNEL_NAME,
             completed: !0,
-            Icon: f.default,
+            Icon: O.default,
             variant: "static"
           })]
         })]
@@ -269,7 +269,7 @@ function M() {
                 className: s()(L.checkbox, {
                   [L.selected]: i
                 }),
-                children: i && (0, a.jsx)(O.default, {
+                children: i && (0, a.jsx)(f.default, {
                   className: L.checkmark
                 })
               })]

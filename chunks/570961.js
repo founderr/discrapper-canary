@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return S
   },
   editGuildOnboardingPrompt: function() {
-    return O
+    return f
   },
   editGuildOnboardingPrompts: function() {
     return T
@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return D
   },
   resetGuildOnboardingPrompts: function() {
-    return f
+    return O
   },
   saveGuildOnboardingPrompts: function() {
     return m
@@ -39,13 +39,13 @@ var a = n("544891"),
   I = n("290511"),
   E = n("689938");
 
-function f() {
+function O() {
   l.default.dispatch({
     type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET"
   })
 }
 
-function O(e, t, n) {
+function f(e, t, n) {
   T(e, c.default.editedOnboardingPrompts.map(e => e.id === t ? {
     ...e,
     ...n
@@ -95,14 +95,14 @@ async function m(e, t) {
         type: a.length >= I.ONBOARDING_PROMPT_TYPE_SWITCH_THRESHOLD && n ? I.OnboardingPromptType.DROPDOWN : I.OnboardingPromptType.MULTIPLE_CHOICE
       }
     }),
-    f = _.filter(e => e.inOnboarding),
-    O = _.filter(e => !0 !== e.inOnboarding),
+    O = _.filter(e => e.inOnboarding),
+    f = _.filter(e => !0 !== e.inOnboarding),
     S = _.map(t => g(e, _, t));
   if (S.filter(N.isNotNullish).length > 0) throw l.default.dispatch({
     type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED",
     errors: S
   }), Error("failed to locally validate prompts");
-  if (f.length > I.MAX_NUMBER_OF_ONBOARDING_PROMPTS_IN_ONBOARDING) throw s.default.show({
+  if (O.length > I.MAX_NUMBER_OF_ONBOARDING_PROMPTS_IN_ONBOARDING) throw s.default.show({
     title: E.default.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
     body: E.default.Messages.ONBOARDING_PROMPT_SAVE_TOO_MANY_PROMPTS_IN_ONBOARDING.format({
       numQuestions: I.MAX_NUMBER_OF_ONBOARDING_PROMPTS_IN_ONBOARDING
@@ -111,7 +111,7 @@ async function m(e, t) {
     type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED",
     errors: S
   }), Error("too many prompts in onboarding");
-  let T = [...f, ...O];
+  let T = [...O, ...f];
   l.default.dispatch({
     type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT"
   });

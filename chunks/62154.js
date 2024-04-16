@@ -8,8 +8,8 @@ var l = s("735250");
 s("470079");
 var a = s("100849"),
   i = s("487922"),
-  n = s("620648"),
-  o = s("944546"),
+  o = s("620648"),
+  n = s("944546"),
   r = s("470900"),
   u = s("228168");
 
@@ -32,7 +32,7 @@ function d(e) {
         onClose: f
       });
     case u.UserProfileSections.MUTUAL_FRIENDS:
-      return (0, l.jsx)(o.default, {
+      return (0, l.jsx)(n.default, {
         user: s,
         onClose: f
       });
@@ -43,7 +43,7 @@ function d(e) {
     case u.UserProfileSections.USER_INFO_CONNECTIONS:
     case u.UserProfileSections.USER_INFO:
     default:
-      return (0, l.jsx)(n.default, {
+      return (0, l.jsx)(o.default, {
         displayProfile: t,
         autoFocusNote: c,
         user: s,

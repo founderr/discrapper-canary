@@ -9,25 +9,25 @@ var a, l, s, i, r = n("392711"),
   _ = n("981631"),
   I = n("290511");
 let E = !1,
-  f = null,
-  O = [],
+  O = null,
+  f = [],
   S = !1,
   T = [];
 
 function m() {
   (function() {
-    E = !1, f = null, T = [], S = !1
-  })(), null != (f = c.default.getGuildId()) && c.default.getSection() === _.GuildSettingsSections.ONBOARDING && (O = N.default.getOnboardingPrompts(f), S = N.default.isAdvancedMode(f))
+    E = !1, O = null, T = [], S = !1
+  })(), null != (O = c.default.getGuildId()) && c.default.getSection() === _.GuildSettingsSections.ONBOARDING && (f = N.default.getOnboardingPrompts(O), S = N.default.isAdvancedMode(O))
 }
 class D extends(i = o.default.Store) {
   initialize() {
     this.waitFor(c.default, N.default)
   }
   hasChanges() {
-    return null != f && !d().isEqual(N.default.getOnboardingPrompts(f), O)
+    return null != O && !d().isEqual(N.default.getOnboardingPrompts(O), f)
   }
   get guildId() {
-    return f
+    return O
   }
   get submitting() {
     return E
@@ -36,7 +36,7 @@ class D extends(i = o.default.Store) {
     return T
   }
   get editedOnboardingPrompts() {
-    return O
+    return f
   }
   get advancedMode() {
     return S
@@ -62,7 +62,7 @@ s = "GuildSettingsOnboardingPromptsStore", (l = "displayName") in(a = D) ? Objec
     let {
       prompts: t
     } = e;
-    O = t
+    f = t
   },
   GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT: function() {
     E = !0, T = []

@@ -8,8 +8,8 @@ var l = s("735250");
 s("470079");
 var a = s("442837"),
   i = s("974674"),
-  n = s("696826"),
-  o = s("420660"),
+  o = s("696826"),
+  n = s("420660"),
   r = s("233440"),
   u = s("158776"),
   d = s("135431"),
@@ -57,7 +57,7 @@ function R(e) {
     canReceiveFriendRequest: b
   } = (0, S.default)(t), G = (null == s ? void 0 : s.application) != null && (0, d.canInstallApplication)(s.application), [k, w] = (0, a.useStateFromStoresArray)([u.default], () => {
     let e = u.default.isMobileOnline(t.id);
-    return (0, r.shouldDisableUserPresenceInChannel)(t, M) ? [h.StatusTypes.UNKNOWN, e] : (0, o.default)(i) ? [h.StatusTypes.STREAMING, e] : [u.default.getStatus(t.id), e]
+    return (0, r.shouldDisableUserPresenceInChannel)(t, M) ? [h.StatusTypes.UNKNOWN, e] : (0, n.default)(i) ? [h.StatusTypes.STREAMING, e] : [u.default.getStatus(t.id), e]
   });
   return (0, l.jsxs)("header", {
     className: j,
@@ -76,7 +76,7 @@ function R(e) {
           size: U.AvatarSizes.SIZE_120,
           className: C.avatar,
           status: k,
-          statusBackdropColor: (0, n.getStatusBackdropColor)(y),
+          statusBackdropColor: (0, o.getStatusBackdropColor)(y),
           "aria-label": t.username,
           isMobile: w,
           statusTooltip: !0

@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var l = s("735250"),
   a = s("470079"),
   i = s("278074"),
-  n = s("442837"),
-  o = s("706898"),
+  o = s("442837"),
+  n = s("706898"),
   r = s("481060"),
   u = s("314897"),
   d = s("785717"),
@@ -22,7 +22,7 @@ var l = s("735250"),
   _ = s("727705");
 let A = e => {
   var t;
-  let [s, l, a] = (0, n.useStateFromStoresArray)([c.default], () => {
+  let [s, l, a] = (0, o.useStateFromStoresArray)([c.default], () => {
     var t, s, l, a;
     return [c.default.getUserProfile(e.id), null !== (l = null === (t = c.default.getMutualFriends(e.id)) || void 0 === t ? void 0 : t.length) && void 0 !== l ? l : 0, null !== (a = null === (s = c.default.getMutualGuilds(e.id)) || void 0 === s ? void 0 : s.length) && void 0 !== a ? a : 0]
   }), i = [];
@@ -53,7 +53,7 @@ function p(e) {
     initialSection: v = m.UserProfileSections.USER_INFO,
     autoFocusNote: N,
     onClose: x
-  } = e, U = (0, n.useStateFromStores)([u.default], () => u.default.getId() === T.id), {
+  } = e, U = (0, o.useStateFromStores)([u.default], () => u.default.getId() === T.id), {
     trackUserProfileAction: h
   } = (0, d.useUserProfileAnalyticsContext)(), C = A(T), [P, R] = a.useState(null !== (c = null === (t = C.find(e => {
     let {
@@ -79,7 +79,7 @@ function p(e) {
     autoFocusNote: N
   }));
   return U || 0 === C.length ? j : (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsx)(o.TabBar, {
+    children: [(0, l.jsx)(n.TabBar, {
       className: _.tabBar,
       type: "top",
       selectedItem: P,
@@ -89,7 +89,7 @@ function p(e) {
           section: t,
           text: s
         } = e;
-        return (0, l.jsx)(o.TabBar.Item, {
+        return (0, l.jsx)(n.TabBar.Item, {
           className: _.tabBarItem,
           id: t,
           "aria-label": s,

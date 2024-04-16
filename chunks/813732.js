@@ -56,7 +56,7 @@ function k() {
   })
 }
 
-function w() {
+function H() {
   let e = (0, r.useStateFromStores)([R.default], () => R.default.getForApplication(U.PREMIUM_SUBSCRIPTION_APPLICATION));
   return n.useEffect(() => {
     (0, S.fetchUserEntitlementsForApplication)(U.PREMIUM_SUBSCRIPTION_APPLICATION)
@@ -112,7 +112,7 @@ t.default = function() {
         onClickManageSubscription: () => {
           T.default.setSection(y.UserSettingsSections.SUBSCRIPTIONS, B.APPLICATION_SUBSCRIPTION_SUBSECTION), D.default.track(y.AnalyticEvents.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED)
         }
-      }), (0, a.jsx)(w, {}), null != e ? (0, a.jsx)(j.default, {
+      }), (0, a.jsx)(H, {}), null != e ? (0, a.jsx)(j.default, {
         subscription: e,
         withOverheadSeparator: !1
       }) : null]
