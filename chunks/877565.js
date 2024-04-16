@@ -46,11 +46,10 @@ function o(e) {
     indexOffset: T = 0,
     headerClassName: f,
     headerTrailingContent: S,
-    footer: h,
-    subHeader: A
+    footer: h
   } = e;
   if (null == h && (null == s || 0 === s.length)) return null;
-  let m = null == s ? void 0 : s.map((e, t) => {
+  let A = null == s ? void 0 : s.map((e, t) => {
     let i = t + T,
       s = c(e, i);
     return (0, r.createElement)(_, {
@@ -70,6 +69,6 @@ function o(e) {
       getQuery: E,
       headerClassName: f,
       headerTrailingContent: S
-    }) : null, A, m, h]
+    }) : null, A, h]
   }, I)
 }

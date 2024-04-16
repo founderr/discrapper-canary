@@ -23,6 +23,5 @@ e.exports = {
   emojiRaw: "emojiRaw__8b5d4 emojiImage__5f111",
   icon: "icon_f08b13",
   iconForeground: "iconForeground__65705",
-  premiumEmoji: "premiumEmoji_d4ce86",
   roleDot: "roleDot_bdebbf"
 }
