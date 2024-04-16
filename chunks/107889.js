@@ -18,12 +18,12 @@ var l = s("735250"),
   E = s("785717"),
   I = s("318661"),
   m = s("484404"),
-  _ = s("903843"),
-  T = s("502762"),
-  p = s("664794"),
-  A = s("806926"),
-  N = s("740021"),
-  v = s("228168"),
+  T = s("903843"),
+  _ = s("502762"),
+  A = s("664794"),
+  p = s("806926"),
+  v = s("740021"),
+  N = s("228168"),
   x = s("981631"),
   U = s("689938"),
   h = s("420867");
@@ -33,11 +33,11 @@ function C(e) {
     user: t,
     guildId: s,
     channelId: C,
-    messageId: R,
-    roleId: P,
+    messageId: P,
+    roleId: R,
     friendToken: M,
-    initialSection: g,
-    autoFocusNote: j,
+    initialSection: j,
+    autoFocusNote: g,
     transitionState: y,
     sourceAnalyticsLocations: O = [],
     onClose: D
@@ -48,14 +48,25 @@ function C(e) {
     userId: t.id,
     guildId: F,
     channelId: C,
-    messageId: R,
-    roleId: P
-  }), [b, G] = a.useState(F), k = (0, I.default)(t.id), w = (0, I.default)(t.id, F), V = null == b ? k : w, z = (0, i.useStateFromStores)([f.default], () => f.default.findActivity(t.id, e => {
-    let {
-      type: t
-    } = e;
-    return t !== x.ActivityTypes.CUSTOM_STATUS
-  })), Y = a.createRef(), H = (0, r.default)(Y);
+    messageId: P,
+    roleId: R
+  }), [b, G] = a.useState(F), k = (0, I.default)(t.id), w = (0, I.default)(t.id, F), V = null == b ? k : w, {
+    activity: z,
+    customStatusActivity: Y
+  } = (0, i.useStateFromStoresObject)([f.default], () => ({
+    activity: f.default.findActivity(t.id, e => {
+      let {
+        type: t
+      } = e;
+      return t !== x.ActivityTypes.CUSTOM_STATUS
+    }),
+    customStatusActivity: f.default.findActivity(t.id, e => {
+      let {
+        type: t
+      } = e;
+      return t === x.ActivityTypes.CUSTOM_STATUS
+    })
+  })), H = a.createRef(), Q = (0, r.default)(H);
   return (0, l.jsx)(d.AnalyticsLocationProvider, {
     value: L,
     children: (0, l.jsx)(E.UserProfileAnalyticsProvider, {
@@ -63,22 +74,22 @@ function C(e) {
       userId: t.id,
       guildId: F,
       channelId: C,
-      messageId: R,
-      roleId: P,
+      messageId: P,
+      roleId: R,
       children: (0, l.jsxs)(n.ModalRoot, {
         transitionState: y,
         className: h.root,
         hideShadow: !0,
         "aria-label": U.default.Messages.USER_PROFILE_MODAL,
         children: [(0, l.jsx)("div", {
-          ref: Y,
-          children: (0, l.jsxs)(T.default, {
+          ref: H,
+          children: (0, l.jsxs)(_.default, {
             user: t,
             displayProfile: V,
-            profileType: v.UserProfileTypes.FULL_SIZE,
-            children: [(0, l.jsx)(_.default, {
-              isFaded: (null == V ? void 0 : V.profileEffectId) != null && !H,
-              children: (0, l.jsx)(p.default, {
+            profileType: N.UserProfileTypes.FULL_SIZE,
+            children: [(0, l.jsx)(T.default, {
+              isFaded: (null == V ? void 0 : V.profileEffectId) != null && !Q,
+              children: (0, l.jsx)(A.default, {
                 user: t,
                 guildId: F,
                 onClose: () => {
@@ -110,23 +121,24 @@ function C(e) {
                   }
                 })
               })
-            }), (0, l.jsx)(N.default, {
+            }), (0, l.jsx)(v.default, {
               className: h.header,
               user: t,
               displayProfile: V,
               activity: z,
+              customStatusActivity: Y,
               friendToken: M,
               onClose: D
-            }), (0, l.jsxs)(T.default.Overlay, {
+            }), (0, l.jsxs)(_.default.Overlay, {
               children: [y === n.ModalTransitionState.ENTERED && (0, l.jsx)(m.default, {
                 onTooltipClose: D
               }), (0, l.jsx)("div", {
                 className: h.body,
-                children: (0, l.jsx)(A.default, {
+                children: (0, l.jsx)(p.default, {
                   user: t,
                   displayProfile: V,
-                  initialSection: g,
-                  autoFocusNote: j,
+                  initialSection: j,
+                  autoFocusNote: g,
                   onClose: D
                 })
               })]
@@ -135,7 +147,7 @@ function C(e) {
         }), (null == V ? void 0 : V.profileEffectId) != null && (0, l.jsx)(c.default, {
           profileEffectId: null == V ? void 0 : V.profileEffectId,
           bannerAdjustment: 0,
-          isHovering: H
+          isHovering: Q
         })]
       })
     })
