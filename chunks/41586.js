@@ -31,7 +31,7 @@ let N = s.forwardRef(function(e, t) {
     null != n && N && (0, f.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([l.e("49237"), l.e("99387"), l.e("66635"), l.e("95019")]).then(l.bind(l, "102560"));
+      } = await Promise.all([l.e("99387"), l.e("95019")]).then(l.bind(l, "102560"));
       return t => (0, a.jsx)(e, {
         ...t,
         guild: n

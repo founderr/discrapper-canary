@@ -80,23 +80,6 @@ t.default = {
     url: _.Endpoints.CONNECTION_REFRESH(e, t),
     oldFormErrors: !0
   }),
-  submitPinCode: (e, t) => s.HTTP.get({
-    url: _.Endpoints.CONNECTIONS_CALLBACK_CONTINUATION(t, e),
-    oldFormErrors: !0
-  }).then(e => {
-    let {
-      body: n
-    } = e;
-    return u.default.track(_.AnalyticEvents.ACCOUNT_LINK_STEP, {
-      previous_step: "PIN code entry",
-      current_step: "PIN success",
-      session_id: n.state,
-      platform_type: t
-    }), E(t, {
-      ...n,
-      from_continuation: !0
-    }, !0)
-  }),
   setVisibility(e, t, n) {
     return this.update(e, t, {
       visibility: 1 === n
