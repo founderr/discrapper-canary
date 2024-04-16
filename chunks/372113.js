@@ -68,7 +68,7 @@ t.default = e => {
       questContentCTA: T.QuestContentCTA.ACCEPT_QUEST
     });
     Y()
-  }, Q = (0, i.useStateFromStores)([c.default], () => c.default.locale), q = P === h.QuestContent.QUESTS_EMBED, J = P === h.QuestContent.QUEST_INVENTORY_CARD, Z = J && B, X = J && !G, $ = (0, s.jsx)(C.default, {
+  }, Q = (0, i.useStateFromStores)([c.default], () => c.default.locale), q = P === h.QuestContent.QUESTS_EMBED, J = P === h.QuestContent.QUEST_INVENTORY_CARD, Z = J && B, X = J && !G, $ = j && !b, ee = (0, s.jsx)(C.default, {
     autoplay: U,
     className: l()(O.gridImg, {
       [O.questRewardGiftInventory]: J && "lg" === y,
@@ -87,9 +87,9 @@ t.default = e => {
       [O.outerContainerNoProgress]: !k
     }),
     children: [(0, s.jsx)(o.Tooltip, {
-      text: j ? R.default.Messages.QUESTS_REWARD_TILE_EXPIRED_QUEST : null,
+      text: $ ? R.default.Messages.QUESTS_REWARD_TILE_EXPIRED_QUEST : null,
       tooltipContentClassName: O.rewardTileExpirationTooltip,
-      shouldShow: j,
+      shouldShow: $,
       children: e => (0, s.jsxs)("div", {
         className: O.rewardTileWrapper,
         ...e,
@@ -100,9 +100,9 @@ t.default = e => {
           })
         }), Z ? (0, s.jsx)(g.default, {
           questConfig: D.config,
-          fallback: $,
+          fallback: ee,
           isFocused: U
-        }) : $]
+        }) : ee]
       })
     }), (0, s.jsxs)("div", {
       className: l()(O.gridText, O.taskDetails),
