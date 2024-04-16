@@ -1,19 +1,29 @@
 "use strict";
-n.r(t), n.d(t, {
+t.r(n), t.d(n, {
   MessageAccessoriesComponentContextProvider: function() {
-    return l
+    return o
+  },
+  useMessageAccessoriesComponentContext: function() {
+    return u
   }
-}), n("411104");
-var s = n("735250");
-let a = n("470079").createContext(null);
+}), t("411104");
+var l = t("735250"),
+  a = t("470079");
+let s = a.createContext(null);
 
-function l(e) {
+function u() {
+  let e = a.useContext(s);
+  if (null == e) throw Error("Could not find context for useMessageAccessoriesComponentContext.");
+  return e
+}
+
+function o(e) {
   let {
-    children: t,
-    ...n
+    children: n,
+    ...t
   } = e;
-  return (0, s.jsx)(a.Provider, {
-    value: n,
-    children: t
+  return (0, l.jsx)(s.Provider, {
+    value: t,
+    children: n
   })
 }
