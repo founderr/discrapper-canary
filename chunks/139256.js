@@ -43,8 +43,8 @@ var s, a, l = n("735250"),
   R = n("294608"),
   O = n("65145"),
   v = n("981631"),
-  x = n("689938"),
-  L = n("700363");
+  L = n("689938"),
+  x = n("700363");
 
 function D(e) {
   let {
@@ -52,7 +52,7 @@ function D(e) {
     children: n
   } = e;
   return (0, l.jsx)("ul", {
-    "aria-label": x.default.Messages.POLL_OPTIONS_ARIA,
+    "aria-label": L.default.Messages.POLL_OPTIONS_ARIA,
     className: t,
     children: n
   })
@@ -64,7 +64,7 @@ function P(e) {
     children: n
   } = e;
   return (0, l.jsx)("div", {
-    "aria-label": x.default.Messages.POLL_OPTIONS_ARIA,
+    "aria-label": L.default.Messages.POLL_OPTIONS_ARIA,
     role: "group",
     className: t,
     children: n
@@ -79,7 +79,7 @@ function y(e) {
     orientation: "vertical"
   });
   return (0, l.jsx)("div", {
-    "aria-label": x.default.Messages.POLL_OPTIONS_ARIA,
+    "aria-label": L.default.Messages.POLL_OPTIONS_ARIA,
     ...s,
     className: t,
     children: n
@@ -98,7 +98,7 @@ function U(e) {
   } = (0, O.usePollFocusManager)();
   return (0, l.jsx)(c.Clickable, {
     role: "checkbox",
-    className: o()(t, L.enabled),
+    className: o()(t, x.enabled),
     onClick: n,
     "aria-checked": s,
     ref: a ? r : void 0,
@@ -121,7 +121,7 @@ function j(e) {
   } = (0, O.usePollFocusManager)();
   return (0, l.jsx)(c.Clickable, {
     role: "radio",
-    className: o()(n, L.enabled),
+    className: o()(n, x.enabled),
     onClick: a,
     "aria-checked": i,
     tabIndex: t,
@@ -169,7 +169,7 @@ function b(e) {
   return (0, l.jsx)(f, {
     className: r,
     children: t.map((e, t) => (0, l.jsx)(G, {
-      className: o()(L.__invalid_answer, d),
+      className: o()(x.__invalid_answer, d),
       answer: e,
       isFirstAnswer: 0 === t,
       elementType: E,
@@ -233,7 +233,7 @@ function B(e) {
   } = e, a = (0, C.useIsWindowFocused)(), i = m.GifAutoPlay.useSetting();
   return (0, l.jsx)(I.default, {
     className: s,
-    imageClassName: L.attachmentImage,
+    imageClassName: x.attachmentImage,
     src: null != n.proxy_url && "" !== n.proxy_url ? n.proxy_url : n.url,
     alt: null !== (t = n.description) && void 0 !== t ? t : (0, g.filterOutUUID)(n.filename),
     responsive: !0,
@@ -346,12 +346,12 @@ function V(e) {
   } = e, a = {
     width: n,
     height: n,
-    background: L.radioBackground,
+    background: x.radioBackground,
     "aria-hidden": !0
   };
   return t ? (0, l.jsx)(S.default, {
     ...a,
-    foreground: L.radioForeground,
+    foreground: x.radioForeground,
     className: s
   }) : (0, l.jsx)(N.default, {
     ...a,
@@ -366,8 +366,8 @@ function Y(e) {
     className: s
   } = e, a = .85 * n;
   return (0, l.jsx)("div", {
-    className: o()(L.checkbox, {
-      [L.checkboxSelected]: t
+    className: o()(x.checkbox, {
+      [x.checkboxSelected]: t
     }, s),
     style: {
       width: n,

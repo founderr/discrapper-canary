@@ -26,8 +26,8 @@ var s = n("735250"),
   R = n("453070"),
   O = n("926491"),
   v = n("378233"),
-  x = n("419922"),
-  L = n("688179"),
+  L = n("419922"),
+  x = n("688179"),
   D = n("981631"),
   P = n("474936"),
   y = n("689938"),
@@ -59,7 +59,7 @@ function F(e) {
     description: n
   } = e;
   return (0, s.jsxs)(S.default, {
-    children: [(0, s.jsx)(x.default, {
+    children: [(0, s.jsx)(L.default, {
       sticker: t,
       size: 48,
       isInteracting: !0
@@ -113,7 +113,7 @@ let k = e => {
         children: b(u, f)
       }), (0, s.jsx)("ul", {
         className: U.stickersList,
-        children: E.map(e => (0, s.jsx)(x.default, {
+        children: E.map(e => (0, s.jsx)(L.default, {
           isInteracting: !0,
           size: 80,
           sticker: e
@@ -124,7 +124,7 @@ let k = e => {
           color: o.Button.Colors.PRIMARY,
           size: o.Button.Sizes.SMALL,
           onClick: () => {
-            f && (0, L.navigateToOwnedStickerPack)({
+            f && (0, x.navigateToOwnedStickerPack)({
               stickerPack: u,
               stickerPickerCategories: T
             }), t()
@@ -144,7 +144,7 @@ let k = e => {
       [I, C] = a.useState(null),
       [R, O] = a.useState(!1),
       v = N.default.getCurrentUser(),
-      L = M.default.canUseCustomStickersEverywhere(v),
+      x = M.default.canUseCustomStickersEverywhere(v),
       b = (0, r.useStateFromStores)([h.default], () => h.default.getGuild(n.guild_id)),
       G = null != b,
       [k, w] = a.useState(!1),
@@ -168,12 +168,12 @@ let k = e => {
       z = null != I,
       Q = !1,
       q = "Custom Sticker Popout";
-    L ? t = G ? W ? y.default.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : y.default.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION : z ? y.default.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : y.default.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION : G ? (W ? t = y.default.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION : t = y.default.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION, Q = !0, q = "Custom Sticker Popout (Upsell)") : z ? (t = y.default.Messages.STICKER_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION, Q = !0, q = "Custom Sticker Popout (Upsell)") : (t = y.default.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
+    x ? t = G ? W ? y.default.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : y.default.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION : z ? y.default.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : y.default.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION : G ? (W ? t = y.default.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION : t = y.default.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION, Q = !0, q = "Custom Sticker Popout (Upsell)") : z ? (t = y.default.Messages.STICKER_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION, Q = !0, q = "Custom Sticker Popout (Upsell)") : (t = y.default.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
       openPremiumSettings: () => {
         B(l), T()
       }
     }), q = "Custom Sticker Popout (Soft Upsell)");
-    let J = !Q && !G && z && L;
+    let J = !Q && !G && z && x;
     return (a.useEffect(() => {
       m()
     }, [R, I]), a.useEffect(() => {
@@ -271,7 +271,7 @@ let k = e => {
                       null == a || a(), V(null)
                     },
                     ...l,
-                    children: (0, s.jsx)(x.default, {
+                    children: (0, s.jsx)(L.default, {
                       size: 32,
                       enlargeOnInteraction: !0,
                       enlargeWithName: !1,

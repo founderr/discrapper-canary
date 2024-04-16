@@ -28,7 +28,7 @@ var a = n("120356"),
   A = n("478151");
 
 function g(e) {
-  var t, n, a, g, M, R, O, v, x, L;
+  var t, n, a, g, M, R, O, v, L, x;
   let {
     message: D,
     channel: P
@@ -42,7 +42,7 @@ function g(e) {
       rawName: t
     } = e;
     return "channel_id" === t
-  })) || void 0 === g ? void 0 : g.rawValue, j = (0, i.useStateFromStores)([T.default], () => T.default.getGuild(y)), b = (0, i.useStateFromStores)([_.default], () => _.default.getChannel(U)), G = (0, i.useStateFromStores)([m.default], () => m.default.getCurrentUser()), B = (0, i.useStateFromStores)([], () => D.author.id === (null == G ? void 0 : G.id)), F = null === (O = P.recipients) || void 0 === O ? void 0 : O.find(e => e !== D.author.id), k = (0, i.useStateFromStores)([m.default], () => null != F ? m.default.getUser(F) : null), w = (0, c.default)(D), H = (0, N.useName)(P.getGuildId(), P.id, k), V = (0, i.useStateFromStoresArray)([I.default], () => null != b ? I.default.getVoiceStatesForChannel(b) : [], [b]), Y = V.some(e => e.user.id === (null == G ? void 0 : G.id)), K = null === (L = D.embeds[0]) || void 0 === L ? void 0 : null === (x = L.fields) || void 0 === x ? void 0 : null === (v = x.find(e => {
+  })) || void 0 === g ? void 0 : g.rawValue, j = (0, i.useStateFromStores)([T.default], () => T.default.getGuild(y)), b = (0, i.useStateFromStores)([_.default], () => _.default.getChannel(U)), G = (0, i.useStateFromStores)([m.default], () => m.default.getCurrentUser()), B = (0, i.useStateFromStores)([], () => D.author.id === (null == G ? void 0 : G.id)), F = null === (O = P.recipients) || void 0 === O ? void 0 : O.find(e => e !== D.author.id), k = (0, i.useStateFromStores)([m.default], () => null != F ? m.default.getUser(F) : null), w = (0, c.default)(D), H = (0, N.useName)(P.getGuildId(), P.id, k), V = (0, i.useStateFromStoresArray)([I.default], () => null != b ? I.default.getVoiceStatesForChannel(b) : [], [b]), Y = V.some(e => e.user.id === (null == G ? void 0 : G.id)), K = null === (x = D.embeds[0]) || void 0 === x ? void 0 : null === (L = x.fields) || void 0 === L ? void 0 : null === (v = L.find(e => {
     let {
       rawName: t
     } = e;

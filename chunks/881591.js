@@ -30,8 +30,8 @@ var s = n("735250"),
   R = n("592125"),
   O = n("430824"),
   v = n("375954"),
-  x = n("346656"),
-  L = n("855693"),
+  L = n("346656"),
+  x = n("855693"),
   D = n("568570"),
   P = n("617808"),
   y = n("240126"),
@@ -118,10 +118,10 @@ function w(e) {
       children: [(0, s.jsxs)("div", {
         children: [(0, s.jsxs)("div", {
           className: G.messageInfo,
-          children: [null != U ? (0, s.jsx)(x.default, {
+          children: [null != U ? (0, s.jsx)(L.default, {
             className: G.guildIcon,
             guild: U,
-            size: x.default.Sizes.SMALL,
+            size: L.default.Sizes.SMALL,
             active: !0
           }) : (0, s.jsx)(E.Avatar, {
             "aria-hidden": !0,
@@ -165,7 +165,7 @@ function w(e) {
               })
             }),
             className: G.clock,
-            children: (0, s.jsx)(L.default, {})
+            children: (0, s.jsx)(x.default, {})
           })
         }), (0, s.jsx)(E.Checkbox, {
           type: E.Checkbox.Types.INVERTED,

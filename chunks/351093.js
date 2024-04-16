@@ -6,8 +6,8 @@ l.r(t), l.d(t, {
 });
 var n = l("735250"),
   r = l("470079"),
-  i = l("941797"),
-  s = l("810090"),
+  s = l("941797"),
+  i = l("810090"),
   a = l("981631"),
   o = l("689938");
 
@@ -15,7 +15,7 @@ function d(e) {
   let {
     poster: t,
     src: l,
-    width: i,
+    width: s,
     height: o,
     naturalWidth: d,
     naturalHeight: u,
@@ -29,12 +29,12 @@ function d(e) {
       current: e
     } = g;
     null != e && (c ? e.play() : e.pause())
-  }, [c]), d <= a.MAX_VIDEO_WIDTH && u <= a.MAX_VIDEO_HEIGHT || d <= a.MAX_VIDEO_HEIGHT && u <= a.MAX_VIDEO_WIDTH) ? (0, n.jsx)(s.default, {
+  }, [c]), d <= a.MAX_VIDEO_WIDTH && u <= a.MAX_VIDEO_HEIGHT || d <= a.MAX_VIDEO_HEIGHT && u <= a.MAX_VIDEO_WIDTH) ? (0, n.jsx)(i.default, {
     ref: g,
     className: h,
     poster: t,
     src: l,
-    width: i,
+    width: s,
     height: o,
     responsive: p,
     muted: !0,
@@ -45,7 +45,7 @@ function d(e) {
   }) : (0, n.jsx)("img", {
     alt: "",
     src: t,
-    width: i,
+    width: s,
     height: o
   })
 }
@@ -55,7 +55,7 @@ function u(e) {
     src: t,
     poster: l,
     naturalWidth: r,
-    naturalHeight: s,
+    naturalHeight: i,
     responsive: a,
     autoPlay: u,
     className: c,
@@ -64,7 +64,7 @@ function u(e) {
     alt: p = o.default.Messages.GIF,
     ...g
   } = e;
-  return (0, n.jsx)(i.GIFAccessoryContext.Consumer, {
+  return (0, n.jsx)(s.GIFAccessoryContext.Consumer, {
     children: e => m({
       ...g,
       alt: p,
@@ -78,7 +78,7 @@ function u(e) {
       children(e) {
         let {
           src: l,
-          size: i,
+          size: s,
           animating: o,
           alt: u
         } = e;
@@ -87,10 +87,10 @@ function u(e) {
           className: c,
           poster: l,
           src: t,
-          width: i.width,
-          height: i.height,
+          width: s.width,
+          height: s.height,
           naturalWidth: r,
-          naturalHeight: s,
+          naturalHeight: i,
           responsive: a,
           play: h && o
         })

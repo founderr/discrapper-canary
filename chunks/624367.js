@@ -31,8 +31,8 @@ var a = n("613828"),
   R = n("266820"),
   O = n("147865"),
   v = n("778569"),
-  x = n("513202"),
-  L = n("403404"),
+  L = n("513202"),
+  x = n("403404"),
   D = n("701488"),
   P = n("981631"),
   y = n("689938"),
@@ -65,7 +65,7 @@ function b(e) {
         applicationId: q.applicationId,
         currentEmbeddedApplication: z,
         activityChannelId: k,
-        embeddedActivitiesManager: x.default,
+        embeddedActivitiesManager: L.default,
         locationObject: F.location,
         analyticsLocations: B
       });
@@ -76,7 +76,7 @@ function b(e) {
             currentEmbeddedApplication: z,
             channelId: k,
             guildId: H,
-            embeddedActivitiesManager: x.default,
+            embeddedActivitiesManager: L.default,
             analyticsLocations: B
           });
         e ? o.default.show({
@@ -87,7 +87,7 @@ function b(e) {
           body: y.default.Messages.EMBEDDED_ACTIVITIES_DM_START_CONFIRMATION_TEXT
         }) : t()
       }
-    } else(0, L.default)({
+    } else(0, x.default)({
       guildId: H,
       locationObject: F.location,
       openInPopout: $,

@@ -8,9 +8,9 @@ var l = t("735250"),
   a = t("470079"),
   s = t("481060"),
   u = t("911969"),
-  i = t("970184"),
-  o = t("293979"),
-  r = t("561684");
+  o = t("970184"),
+  r = t("293979"),
+  i = t("561684");
 
 function d(e) {
   let n;
@@ -21,28 +21,28 @@ function d(e) {
     placeholder: m,
     minLength: p,
     maxLength: f,
-    required: S,
-    value: C
-  } = e, [E, N] = a.useState(null != C ? C : ""), {
-    state: v,
-    executeStateUpdate: T,
-    error: h
-  } = (0, i.useComponentState)(e, null != C ? {
+    required: C,
+    value: S
+  } = e, [E, v] = a.useState(null != S ? S : ""), {
+    state: N,
+    executeStateUpdate: h,
+    error: T
+  } = (0, o.useComponentState)(e, null != S ? {
     type: t,
-    value: C
-  } : void 0), x = (0, o.useIsFirstTextInputInModal)(e.id);
+    value: S
+  } : void 0), x = (0, r.useIsFirstTextInputInModal)(e.id);
   a.useEffect(() => {
-    (null == v ? void 0 : v.type) === t && N(v.value)
-  }, [t, v]);
+    (null == N ? void 0 : N.type) === t && v(N.value)
+  }, [t, N]);
   let y = {
     name: c,
     value: E,
     placeholder: m,
     minLength: p,
     maxLength: f,
-    required: S,
+    required: C,
     onChange: e => {
-      N(e), T({
+      v(e), h({
         type: t,
         value: e
       })
@@ -62,9 +62,9 @@ function d(e) {
   }
   return (0, l.jsx)(s.FormItem, {
     title: c,
-    required: S,
-    className: r.formItem,
-    error: h,
+    required: C,
+    className: i.formItem,
+    error: T,
     children: n
   })
 }

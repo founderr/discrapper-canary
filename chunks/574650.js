@@ -31,7 +31,7 @@ t.default = () => {
     R = null,
     O = null,
     v = null,
-    x = [h.notice, N.notice];
+    L = [h.notice, N.notice];
   switch (M) {
     case _.GuildJoinRequestApplicationStatuses.SUBMITTED:
       R = p.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE, O = p.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION, v = () => {
@@ -60,7 +60,7 @@ t.default = () => {
             ...t
           })
         })
-      }, x.push(h.error);
+      }, L.push(h.error);
       break;
     default:
       R = p.default.Messages.MEMBER_VERIFICATION_NOTICE_TEXT, O = p.default.Messages.MEMBER_VERIFICATION_NOTICE_CTA, v = () => {
@@ -68,7 +68,7 @@ t.default = () => {
       }
   }
   return (0, s.jsxs)("div", {
-    className: l()(...x),
+    className: l()(...L),
     children: [(0, s.jsx)(u.Text, {
       className: h.header,
       variant: "text-sm/normal",

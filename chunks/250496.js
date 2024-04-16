@@ -7,8 +7,8 @@ l.r(t), l.d(t, {
     return h
   }
 });
-var n, r, i = l("735250"),
-  s = l("470079"),
+var n, r, s = l("735250"),
+  i = l("470079"),
   a = l("729594"),
   o = l("351233");
 
@@ -16,10 +16,10 @@ function d(e) {
   let {
     autoMute: t,
     ...l
-  } = e, n = s.useRef(null), r = s.useCallback(e => {
+  } = e, n = i.useRef(null), r = i.useCallback(e => {
     if (e.data["x-tiktok-embed"] && "https://www.tiktok.com" === e.origin && "onPlayerReady" === e.data.type) {
-      var l, r, i, s;
-      t && (null === (s = n.current) || void 0 === s || null === (i = s.contentWindow) || void 0 === i || i.postMessage({
+      var l, r, s, i;
+      t && (null === (i = n.current) || void 0 === i || null === (s = i.contentWindow) || void 0 === s || s.postMessage({
         type: "mute",
         "x-tiktok-embed": !0
       }, e.origin)), null === (r = n.current) || void 0 === r || null === (l = r.contentWindow) || void 0 === l || l.postMessage({
@@ -28,7 +28,7 @@ function d(e) {
       }, e.origin)
     }
   }, [t]);
-  return s.useEffect(() => (window.addEventListener("message", r), () => window.removeEventListener("message", r)), [r]), (0, i.jsx)(c, {
+  return i.useEffect(() => (window.addEventListener("message", r), () => window.removeEventListener("message", r)), [r]), (0, s.jsx)(c, {
     ref: n,
     ...l
   })
@@ -45,14 +45,14 @@ function u(e) {
     autoplay: "1",
     auto_play: "1"
   }, l && (r.query.mute = "1"), r.search = null;
-  let s = a.format(r);
-  return (0, i.jsx)(c, {
-    src: s,
+  let i = a.format(r);
+  return (0, s.jsx)(c, {
+    src: i,
     ...n
   })
 }
-let c = s.forwardRef(function(e, t) {
-  return (0, i.jsx)("iframe", {
+let c = i.forwardRef(function(e, t) {
+  return (0, s.jsx)("iframe", {
     ref: t,
     className: o.embedIframe,
     allow: "autoplay",
@@ -66,15 +66,15 @@ let c = s.forwardRef(function(e, t) {
 function h(e) {
   switch (e.provider) {
     case "YouTube":
-      return (0, i.jsx)(u, {
+      return (0, s.jsx)(u, {
         ...e
       });
     case "TikTok":
-      return (0, i.jsx)(d, {
+      return (0, s.jsx)(d, {
         ...e
       });
     default:
-      return (0, i.jsx)(c, {
+      return (0, s.jsx)(c, {
         ...e
       })
   }

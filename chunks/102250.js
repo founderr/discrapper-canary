@@ -30,8 +30,8 @@ var s = n("735250"),
   R = n("103575"),
   O = n("204197"),
   v = n("592125"),
-  x = n("271383"),
-  L = n("594174"),
+  L = n("271383"),
+  x = n("594174"),
   D = n("467679"),
   P = n("630641"),
   y = n("288176"),
@@ -111,7 +111,7 @@ function K(e) {
   let {
     message: n,
     compact: l
-  } = e, i = L.default.getUser((0, S.getUserIdOfAutomodAction)(n)), r = null === (t = v.default.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id, u = null != r && null != i ? x.default.getMember(r, i.id) : null, {
+  } = e, i = x.default.getUser((0, S.getUserIdOfAutomodAction)(n)), r = null === (t = v.default.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id, u = null != r && null != i ? L.default.getMember(r, i.id) : null, {
     avatarSrc: d,
     avatarDecorationSrc: c,
     eventHandlers: f
@@ -202,8 +202,8 @@ function W(e) {
     resolvedReason: A
   } = (0, S.extractAutomodNotificationFields)(l), g = (0, f.useStateFromStores)([v.default], () => v.default.getChannel(l.channel_id), [l.channel_id]), R = null !== (t = null == g ? void 0 : g.guild_id) && void 0 !== t ? t : null, {
     incidentData: O,
-    shouldShowIncidentActions: x
-  } = (0, p.useGuildIncidentsState)(R), L = (0, M.useContextMenuRaidAlert)(l.author.id, l.channel_id), D = a.useCallback(() => {
+    shouldShowIncidentActions: L
+  } = (0, p.useGuildIncidentsState)(R), x = (0, M.useContextMenuRaidAlert)(l.author.id, l.channel_id), D = a.useCallback(() => {
     let e = null == g ? void 0 : g.guild_id;
     null != e && (0, C.openRaidResolveModal)(l.id, e)
   }, [l.id, g]), j = I === c.AutomodRaidAlertTypes.DM_RAID, b = j ? U.default : _.ChatAlertIcon;
@@ -253,7 +253,7 @@ function W(e) {
       className: w.dotSeparatedRow,
       children: [(0, s.jsx)(m.Button, {
         onClick: e => {
-          if (null != R && x) {
+          if (null != R && L) {
             let e = {
               source: h.GuildIncidentActionSources.MESSAGE,
               messageId: l.id,
@@ -269,7 +269,7 @@ function W(e) {
                 analyticsData: e
               })
             })
-          } else L(e)
+          } else x(e)
         },
         color: m.Button.Colors.LINK,
         look: m.Button.Looks.LINK,
@@ -277,7 +277,7 @@ function W(e) {
         className: w.buttonStyle,
         children: (0, s.jsx)("div", {
           className: w.footerAction,
-          children: x ? (0, s.jsxs)(s.Fragment, {
+          children: L ? (0, s.jsxs)(s.Fragment, {
             children: [(0, s.jsx)(P.default, {
               width: 16,
               height: 16,

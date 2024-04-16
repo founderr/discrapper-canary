@@ -36,7 +36,7 @@ function g(e) {
     popoutAlign: O
   } = e, {
     analyticsLocations: v
-  } = (0, d.default)(u.default.NOTIFICATION_CENTER), [x, L] = a.useState(!1), [D, P] = function() {
+  } = (0, d.default)(u.default.NOTIFICATION_CENTER), [L, x] = a.useState(!1), [D, P] = function() {
     let e = (0, i.useStateFromStores)([T.default], () => {
       var e, t;
       return null !== (t = null === (e = T.default.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : r.InboxTab.UNREADS
@@ -65,10 +65,10 @@ function g(e) {
       setSeenTutorial: n
     }
   }(D), j = a.useCallback(() => {
-    L(!1), x && (null == n || n())
-  }, [n, x]), b = a.useCallback(() => {
-    L(!x), x ? null == n || n() : null == t || t()
-  }, [n, t, x]), G = a.useCallback(() => {
+    x(!1), L && (null == n || n())
+  }, [n, L]), b = a.useCallback(() => {
+    x(!L), L ? null == n || n() : null == t || t()
+  }, [n, t, L]), G = a.useCallback(() => {
     b(), P(r.InboxTab.UNREADS)
   }, [P, b]);
   a.useEffect(() => (m.ComponentDispatch.subscribe(C.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, G), () => void m.ComponentDispatch.unsubscribe(C.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, G)), [G]);
@@ -96,7 +96,7 @@ function g(e) {
       position: R,
       align: O,
       autoInvert: !1,
-      shouldShow: x,
+      shouldShow: L,
       onRequestClose: j,
       renderPopout: function() {
         return (0, s.jsx)(o.Dialog, {

@@ -1,97 +1,97 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return h
   },
   openInteractionModal: function() {
-    return p
+    return m
   }
 });
-var n = s("735250");
-s("470079");
-var o = s("481060"),
-  l = s("474333"),
-  r = s("154921"),
-  a = s("970184"),
-  i = s("471073"),
-  u = s("293979"),
-  c = s("954654"),
-  d = s("689938"),
-  f = s("526884");
+var r = n("735250");
+n("470079");
+var l = n("481060"),
+  i = n("474333"),
+  s = n("154921"),
+  o = n("970184"),
+  a = n("471073"),
+  u = n("293979"),
+  d = n("954654"),
+  c = n("689938"),
+  f = n("526884");
 
 function h(e) {
   let {
     title: t,
-    onClose: s,
+    onClose: n,
     transitionState: h
   } = e, {
-    components: p,
-    applicationIconURL: M,
-    applicationName: C,
-    submissionState: I,
-    error: m,
-    validators: x,
-    onSubmit: v
-  } = (0, u.useModalState)(e, s);
-  return (0, n.jsx)("form", {
+    components: m,
+    applicationIconURL: p,
+    applicationName: g,
+    submissionState: M,
+    error: v,
+    validators: I,
+    onSubmit: C
+  } = (0, u.useModalState)(e, n);
+  return (0, r.jsx)("form", {
     onSubmit: e => {
-      e.preventDefault(), v()
+      e.preventDefault(), C()
     },
-    children: (0, n.jsxs)(o.ModalRoot, {
+    children: (0, r.jsxs)(l.ModalRoot, {
       transitionState: h,
-      children: [(0, n.jsxs)(o.ModalHeader, {
+      children: [(0, r.jsxs)(l.ModalHeader, {
         separator: !1,
-        children: [(0, n.jsx)(o.Avatar, {
-          src: M,
-          size: o.AvatarSizes.SIZE_24,
-          "aria-label": C,
+        children: [(0, r.jsx)(l.Avatar, {
+          src: p,
+          size: l.AvatarSizes.SIZE_24,
+          "aria-label": g,
           className: f.applicationIcon
-        }), (0, n.jsx)(r.default, {
-          color: r.default.Colors.HEADER_PRIMARY,
-          size: r.default.Sizes.SIZE_24,
+        }), (0, r.jsx)(s.default, {
+          color: s.default.Colors.HEADER_PRIMARY,
+          size: s.default.Sizes.SIZE_24,
           children: t
-        }), (0, n.jsx)(o.ModalCloseButton, {
-          onClick: s,
+        }), (0, r.jsx)(l.ModalCloseButton, {
+          onClick: n,
           className: f.closeButton
         })]
-      }), (0, n.jsxs)(o.ModalContent, {
-        children: [null != m && "" !== m ? (0, n.jsx)(l.default, {
-          messageType: l.HelpMessageTypes.ERROR,
+      }), (0, r.jsxs)(l.ModalContent, {
+        children: [null != v && "" !== v ? (0, r.jsx)(i.default, {
+          messageType: i.HelpMessageTypes.ERROR,
           className: f.submissionWarning,
-          children: m
-        }) : null, (0, n.jsx)(l.default, {
-          messageType: l.HelpMessageTypes.WARNING,
+          children: v
+        }) : null, (0, r.jsx)(i.default, {
+          messageType: i.HelpMessageTypes.WARNING,
           className: f.submissionWarning,
-          children: d.default.Messages.INTERACTION_FORM_SUBMISSION_APPLICATION.format({
-            applicationName: C
+          children: c.default.Messages.INTERACTION_FORM_SUBMISSION_APPLICATION.format({
+            applicationName: g
           })
-        }), (0, n.jsx)(o.FormSection, {
-          children: (0, n.jsx)(a.ComponentStateContextProvider, {
+        }), (0, r.jsx)(l.FormSection, {
+          children: (0, r.jsx)(o.ComponentStateContextProvider, {
             modal: e,
-            validators: x,
-            children: (0, c.renderComponents)(p)
+            validators: I,
+            children: (0, d.renderComponents)(m)
           })
         })]
-      }), (0, n.jsxs)(o.ModalFooter, {
-        children: [(0, n.jsx)(o.Button, {
+      }), (0, r.jsxs)(l.ModalFooter, {
+        children: [(0, r.jsx)(l.Button, {
           type: "submit",
-          color: o.Button.Colors.BRAND,
-          size: o.Button.Sizes.MEDIUM,
-          submitting: I === i.InteractionModalState.IN_FLIGHT,
-          children: d.default.Messages.SUBMIT
-        }), (0, n.jsx)(o.Button, {
-          look: o.Button.Looks.LINK,
-          color: o.Button.Colors.PRIMARY,
-          onClick: s,
-          children: d.default.Messages.CANCEL
+          color: l.Button.Colors.BRAND,
+          size: l.Button.Sizes.MEDIUM,
+          submitting: M === a.InteractionModalState.IN_FLIGHT,
+          children: c.default.Messages.SUBMIT
+        }), (0, r.jsx)(l.Button, {
+          look: l.Button.Looks.LINK,
+          color: l.Button.Colors.PRIMARY,
+          onClick: n,
+          children: c.default.Messages.CANCEL
         })]
       })]
     })
   })
 }
 
-function p(e) {
-  (0, o.openModal)(t => (0, n.jsx)(h, {
+function m(e) {
+  (0, l.openModal)(t => (0, r.jsx)(h, {
     ...t,
     ...e
   }))

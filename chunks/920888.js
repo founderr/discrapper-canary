@@ -55,10 +55,10 @@ class N extends a.PureComponent {
       visibleReactionsCount: O
     } = this.props, {
       disableTransitionAppear: v
-    } = this.state, x = A ? m : T, L = O > 0;
-    return L || S ? (0, s.jsxs)(r.TransitionGroup, {
+    } = this.state, L = A ? m : T, x = O > 0;
+    return x || S ? (0, s.jsxs)(r.TransitionGroup, {
       component: "div",
-      className: i()(x.reactions, N),
+      className: i()(L.reactions, N),
       transitionAppear: !v,
       role: "group",
       transitionLeave: !1,
@@ -83,10 +83,10 @@ class N extends a.PureComponent {
         onClick: t => {
           t.stopPropagation(), (0, E.showReactionsModal)(h, e)
         },
-        className: i()(x.reaction, C, x.remainingReactions),
+        className: i()(L.reaction, C, L.remainingReactions),
         "aria-label": _.default.Messages.ADD_REACTION,
         children: (0, s.jsxs)(o.Text, {
-          className: x.reactionInner,
+          className: L.reactionInner,
           variant: "text-sm/normal",
           children: ["+", M]
         })
@@ -97,8 +97,8 @@ class N extends a.PureComponent {
         useChatFontScaling: A,
         isHovered: this.state.isHovered,
         className: i()({
-          [x.forceShow]: S && !L,
-          [x.forceShowLook]: S
+          [L.forceShow]: S && !x,
+          [L.forceShowLook]: S
         })
       })]
     }) : null

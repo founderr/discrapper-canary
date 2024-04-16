@@ -146,7 +146,7 @@ let h = t => {
         (0, o.openModalLazy)(async () => {
           let {
             default: t
-          } = await Promise.all([a.e("49237"), a.e("99387"), a.e("52114"), a.e("18831"), a.e("62006")]).then(a.bind(a, "41164"));
+          } = await Promise.all([a.e("49237"), a.e("99387"), a.e("58286"), a.e("18831"), a.e("98154")]).then(a.bind(a, "41164"));
           return e => (0, n.jsx)(t, {
             classificationId: s,
             source: p.SafetyHubAnalyticsActionSource.StandingTab,

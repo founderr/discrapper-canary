@@ -26,8 +26,8 @@ var s = n("735250"),
   R = n("938353"),
   O = n("25015"),
   v = n("689674"),
-  x = n("963550"),
-  L = n("845080"),
+  L = n("963550"),
+  x = n("845080"),
   D = n("295790"),
   P = n("145807"),
   y = n("56744"),
@@ -109,7 +109,7 @@ t.default = a.memo(function e(t) {
       [G.groupStart]: t.isGroupStart
     }),
     childrenRepliedMessage: (0, y.default)(I, l, Y, K, h),
-    childrenHeader: (0, L.default)({
+    childrenHeader: (0, x.default)({
       ...t,
       author: en,
       guildId: l.guild_id
@@ -138,7 +138,7 @@ t.default = a.memo(function e(t) {
       shouldRenderCtaButton: eo
     }),
     childrenExecutedCommand: (0, P.default)(I, l, h),
-    childrenMessageContent: (0, x.default)(t, ee),
+    childrenMessageContent: (0, L.default)(t, ee),
     childrenSystemMessage: (0, D.default)(t),
     onContextMenu: F,
     onClick: k,

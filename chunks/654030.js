@@ -25,8 +25,8 @@ var s, a = n("735250"),
   R = n("283595"),
   O = n("293273"),
   v = n("594174"),
-  x = n("181106"),
-  L = n("417363"),
+  L = n("181106"),
+  x = n("417363"),
   D = n("243769"),
   P = n("768581"),
   y = n("358085"),
@@ -243,7 +243,7 @@ class k extends(s = l.PureComponent) {
 }
 B(k, "defaultProps", {
   isPreview: !1
-}), t.default = i.default.connectStores([p.default, g.default, O.default, R.default, m.default, L.default, A.default, x.default, v.default, M.default], e => {
+}), t.default = i.default.connectStores([p.default, g.default, O.default, R.default, m.default, x.default, A.default, L.default, v.default, M.default], e => {
   let {
     activity: t,
     analyticsLocations: n,
@@ -254,7 +254,7 @@ B(k, "defaultProps", {
   } = e, {
     id: r
   } = null != s ? s : {}, o = null != t && null != t.party && t.party.id === a ? g.default.getParty(t.party.id) : null, u = null != r ? O.default.getApplicationActivity(r) : O.default.findActivity(e => e.type === b.ActivityTypes.LISTENING), d = !1;
-  null != r && (d = x.default.getState(r, b.ActivityActionTypes.JOIN) === b.ActivityActionStates.LOADING);
+  null != r && (d = L.default.getState(r, b.ActivityActionTypes.JOIN) === b.ActivityActionStates.LOADING);
   let c = Array.from(null != o ? o : []).map(e => {
       let t = null != i ? M.default.getMember(i, e) : null,
         n = null != t ? t.nick : null,
@@ -281,7 +281,7 @@ B(k, "defaultProps", {
     isLaunchable: null != r && (0, U.isLaunchable)({
       LibraryApplicationStore: R.default,
       LaunchableGameStore: m.default,
-      DispatchApplicationStore: L.default,
+      DispatchApplicationStore: x.default,
       ConnectedAppsStore: A.default,
       applicationId: r
     })

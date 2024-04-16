@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return G
   },
   useClickMessageAuthorAvatar: function() {
-    return L
+    return x
   },
   useClickMessageAuthorUsername: function() {
     return R
@@ -110,22 +110,22 @@ function v(e, t, n, s) {
   return M(null == e ? void 0 : e.user.id, t.id, a)
 }
 
-function x(e) {
+function L(e) {
   return a.useCallback(t => {
     t.preventDefault(), t.stopPropagation(), e()
   }, [e])
 }
 
-function L(e, t) {
-  return x(g("avatarProfile", e, t))
+function x(e, t) {
+  return L(g("avatarProfile", e, t))
 }
 
 function D(e, t) {
-  return x(g("referencedAvatarProfile", e, t))
+  return L(g("referencedAvatarProfile", e, t))
 }
 
 function P(e, t) {
-  return x(g("interactionAvatarProfile", e, t))
+  return L(g("interactionAvatarProfile", e, t))
 }
 
 function y(e, t, l, r) {

@@ -26,8 +26,8 @@ var s = n("735250"),
   R = n("944486"),
   O = n("914010"),
   v = n("246946"),
-  x = n("594174"),
-  L = n("396525"),
+  L = n("594174"),
+  x = n("396525"),
   D = n("908773"),
   P = n("740727"),
   y = n("585483"),
@@ -61,7 +61,7 @@ let H = f()("2015-05-15").local(),
     if (null == r) return (0, s.jsx)("strong", {
       children: o
     });
-    let u = x.default.getUser(r.id),
+    let u = L.default.getUser(r.id),
       d = C.default.getChannel(e),
       c = (null == d ? void 0 : d.isPrivate()) ? g.default.getNickname(r.id) : null,
       f = null !== (l = null !== (a = A.default.getNick(e, r.id)) && void 0 !== a ? a : c) && void 0 !== l ? l : b.default.getName(r),
@@ -95,10 +95,10 @@ let H = f()("2015-05-15").local(),
       children: [null != r ? (0, s.jsx)(r, {
         className: k.searchResultChannelIcon
       }) : null, (0, s.jsx)("strong", {
-        children: (0, N.computeChannelName)(a, x.default, g.default)
+        children: (0, N.computeChannelName)(a, L.default, g.default)
       }), null != i ? (0, s.jsx)("span", {
         className: k.searchResultChannelCategory,
-        children: (0, N.computeChannelName)(i, x.default, g.default)
+        children: (0, N.computeChannelName)(i, L.default, g.default)
       }) : null]
     })
   },
@@ -248,7 +248,7 @@ let H = f()("2015-05-15").local(),
           children: (0, s.jsx)(T.Anchor, {
             href: U.default.getArticleURL(B.HelpdeskArticles.USING_SEARCH),
             title: F.default.Messages.LEARN_MORE,
-            children: (0, s.jsx)(L.default, {})
+            children: (0, s.jsx)(x.default, {})
           })
         })
       }),

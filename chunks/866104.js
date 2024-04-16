@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return v
   },
   default: function() {
-    return x
+    return L
   }
 }), n("47120");
 var s = n("735250"),
@@ -80,7 +80,7 @@ function v(e) {
   })
 }
 
-function x(e) {
+function L(e) {
   var t, n, l;
   let {
     guild: c,
@@ -99,20 +99,20 @@ function x(e) {
       nickcolor: null !== (t = null == s ? void 0 : s.colorString) && void 0 !== t ? t : void 0
     }
   }, [l])), {
-    isTruncated: x,
-    ExpandableTextContainer: L
+    isTruncated: L,
+    ExpandableTextContainer: x
   } = (0, S.useExpandableTextContainer)(), D = (null !== (n = null == f ? void 0 : null === (t = f.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [P, y] = a.useState(1), U = (0, u.default)("(max-width: ".concat(R.twoColumnWidth, ")")), {
     selectedTab: j,
     isPhantomPreview: b
   } = (0, C.useGuildShopDisplayContext)(), G = j === A.GuildShopTab.GUILD_PRODUCTS_PREVIEW ? M.default.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : M.default.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, B = D ? (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)(L, {
+    children: [(0, s.jsx)(x, {
       lineClamp: U || 2 === P ? 2 : 3,
       children: (0, s.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "text-normal",
         children: null == f ? void 0 : f.description
       })
-    }), x && (0, s.jsxs)(s.Fragment, {
+    }), L && (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(m.default, {
         size: 4
       }), (0, s.jsx)(O, {

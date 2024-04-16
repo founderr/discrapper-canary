@@ -1,49 +1,49 @@
 "use strict";
 n.r(t), n.d(t, {
   AudioComponentForMessageAttachment: function() {
-    return A
+    return v
   },
   GenericFileComponentForMessageAttachment: function() {
-    return y
+    return M
   },
   ImageComponentForMessageAttachment: function() {
-    return _
+    return A
   },
   MosaicItemFooterForMessageAttachment: function() {
-    return T
+    return P
   },
   PlaintextFilePreviewForMessageAttachment: function() {
-    return x
+    return S
   },
   VideoComponentForMessageAttachment: function() {
-    return C
+    return h
   },
   VoiceMessageAudioComponentForMessageAttachment: function() {
-    return E
+    return I
   }
 }), n("789020");
-var i = n("735250"),
-  l = n("470079"),
+var r = n("735250"),
+  i = n("470079"),
   a = n("442837"),
-  o = n("993365"),
-  s = n("981729"),
-  r = n("543651"),
+  l = n("993365"),
+  o = n("981729"),
+  s = n("543651"),
   u = n("519320"),
-  d = n("592125"),
-  c = n("529653"),
-  m = n("52824"),
-  h = n("630388"),
-  I = n("591759"),
-  f = n("524444"),
-  M = n("981631"),
-  p = n("689938"),
-  g = n("722061");
+  c = n("592125"),
+  d = n("529653"),
+  f = n("52824"),
+  m = n("630388"),
+  _ = n("591759"),
+  g = n("524444"),
+  p = n("981631"),
+  C = n("689938"),
+  E = n("722061");
 
-function _(e) {
+function A(e) {
   let t = e.item.originalItem;
-  return (0, f.renderImageComponent)({
+  return (0, g.renderImageComponent)({
     ...e,
-    src: (0, m.getBestEffortSrcUrl)({
+    src: (0, f.getBestEffortSrcUrl)({
       proxyURL: t.proxy_url,
       url: t.url
     }),
@@ -53,22 +53,22 @@ function _(e) {
   })
 }
 
-function C(e) {
+function h(e) {
   let t = e.item.originalItem,
-    n = l.useCallback(() => {
+    n = i.useCallback(() => {
       var e;
-      return (0, h.hasFlag)(null !== (e = t.flags) && void 0 !== e ? e : 0, M.MessageAttachmentFlags.IS_CLIP) ? (0, i.jsxs)(s.TooltipContainer, {
-        text: p.default.Messages.CLIPS_BETA_TAG_HOVER,
-        className: g.clipPill,
-        children: [(0, i.jsx)(c.default, {}), (0, i.jsx)(o.Text, {
+      return (0, m.hasFlag)(null !== (e = t.flags) && void 0 !== e ? e : 0, p.MessageAttachmentFlags.IS_CLIP) ? (0, r.jsxs)(o.TooltipContainer, {
+        text: C.default.Messages.CLIPS_BETA_TAG_HOVER,
+        className: E.clipPill,
+        children: [(0, r.jsx)(d.default, {}), (0, r.jsx)(l.Text, {
           variant: "text-xs/semibold",
           color: "always-white",
-          children: p.default.Messages.CLIP_TAG
+          children: C.default.Messages.CLIP_TAG
         })]
       }) : null
     }, [t]),
-    a = I.default.toURLSafe(t.proxy_url);
-  return null == a ? null : (a.searchParams.append("format", "jpeg"), (0, f.renderVideoComponent)({
+    a = _.default.toURLSafe(t.proxy_url);
+  return null == a ? null : (a.searchParams.append("format", "jpeg"), (0, g.renderVideoComponent)({
     ...e,
     poster: a.toString(),
     fileSize: t.size,
@@ -80,9 +80,9 @@ function C(e) {
   }))
 }
 
-function A(e) {
+function v(e) {
   let t = e.item.originalItem;
-  return (0, f.renderAudioComponent)({
+  return (0, g.renderAudioComponent)({
     ...e,
     fileSize: t.size,
     fileName: t.filename,
@@ -90,34 +90,34 @@ function A(e) {
   })
 }
 
-function E(e) {
+function I(e) {
   let {
     message: t,
     item: n
-  } = e, i = n.originalItem, a = l.useCallback((e, n, l) => {
+  } = e, r = n.originalItem, a = i.useCallback((e, n, i) => {
     var a;
-    (0, u.logVoiceMessagePlaybackStarted)(t.id, null !== (a = i.duration_secs) && void 0 !== a ? a : null, n, t.author.id)
-  }, [t, i.duration_secs]), o = l.useCallback((e, n) => {
-    var l;
-    (0, u.logVoiceMessagePlaybackEnded)(t.id, null !== (l = i.duration_secs) && void 0 !== l ? l : null, e, t.author.id, n)
-  }, [t, i.duration_secs]), s = l.useCallback(e => {
+    (0, u.logVoiceMessagePlaybackStarted)(t.id, null !== (a = r.duration_secs) && void 0 !== a ? a : null, n, t.author.id)
+  }, [t, r.duration_secs]), l = i.useCallback((e, n) => {
+    var i;
+    (0, u.logVoiceMessagePlaybackEnded)(t.id, null !== (i = r.duration_secs) && void 0 !== i ? i : null, e, t.author.id, n)
+  }, [t, r.duration_secs]), o = i.useCallback(e => {
     var n;
     (0, u.logVoiceMessagePlaybackFailed)(t.id, null !== (n = null == e ? void 0 : e.message) && void 0 !== n ? n : null)
   }, [t]);
-  return (0, f.renderVoiceMessageAudioComponent)({
+  return (0, g.renderVoiceMessageAudioComponent)({
     ...e,
-    fileSize: i.size,
-    fileName: i.filename,
-    src: i.url,
+    fileSize: r.size,
+    fileName: r.filename,
+    src: r.url,
     onPlay: a,
-    onPause: o,
-    onError: s
+    onPause: l,
+    onError: o
   })
 }
 
-function x(e) {
+function S(e) {
   let t = e.item.originalItem;
-  return (0, f.renderPlaintextFilePreview)({
+  return (0, g.renderPlaintextFilePreview)({
     ...e,
     url: t.url,
     fileName: t.filename,
@@ -126,9 +126,9 @@ function x(e) {
   })
 }
 
-function y(e) {
+function M(e) {
   let t = e.item.originalItem;
-  return (0, f.renderGenericFileComponent)({
+  return (0, g.renderGenericFileComponent)({
     ...e,
     url: t.url,
     fileName: t.filename,
@@ -136,38 +136,38 @@ function y(e) {
   })
 }
 
-function T(e) {
-  if ("CLIP" === e.item.type) return (0, i.jsx)(v, {
+function P(e) {
+  if ("CLIP" === e.item.type) return (0, r.jsx)(F, {
     attachment: e.item.originalItem,
     message: e.message
   });
   return null
 }
 
-function v(e) {
+function F(e) {
   var t;
   let {
     attachment: n,
-    message: l
-  } = e, o = l.channel_id, s = (0, a.useStateFromStores)([d.default], () => {
+    message: i
+  } = e, l = i.channel_id, o = (0, a.useStateFromStores)([c.default], () => {
     var e;
-    return null === (e = d.default.getBasicChannel(o)) || void 0 === e ? void 0 : e.guild_id
+    return null === (e = c.default.getBasicChannel(l)) || void 0 === e ? void 0 : e.guild_id
   }), {
     clip_created_at: u,
-    clip_participants: c,
-    title: m,
-    application: h
+    clip_participants: d,
+    title: f,
+    application: m
   } = n;
-  return (0, i.jsx)(r.default, {
+  return (0, r.jsx)(s.default, {
     createdAt: null != u ? Date.parse(u) : void 0,
-    participantIds: null !== (t = null == c ? void 0 : c.map(e => {
+    participantIds: null !== (t = null == d ? void 0 : d.map(e => {
       let {
         id: t
       } = e;
       return t
     })) && void 0 !== t ? t : [],
-    applicationId: null == h ? void 0 : h.id,
-    title: m,
-    guildId: s
+    applicationId: null == m ? void 0 : m.id,
+    title: f,
+    guildId: o
   })
 }

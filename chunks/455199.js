@@ -22,8 +22,8 @@ var s, a, l, i, r = n("392711"),
 let R = "recentMentionFilterSettings",
   O = [],
   v = {},
-  x = !1,
-  L = !0,
+  L = !1,
+  x = !0,
   D = d.Storage.get(R, {
     guildFilter: M.RecentMentionsFilters.ALL_SERVERS,
     everyoneFilter: !0,
@@ -132,10 +132,10 @@ class Y extends(s = u.default.Store) {
     return v[e]
   }
   get loading() {
-    return x
+    return L
   }
   get hasMore() {
-    return L
+    return x
   }
   get guildFilter() {
     return D.guildFilter
@@ -160,7 +160,7 @@ i = "RecentMentionsStore", (l = "displayName") in(a = Y) ? Object.defineProperty
     let {
       guildId: t
     } = e;
-    x = !0, null == t && D.guildFilter === M.RecentMentionsFilters.THIS_SERVER && k({
+    L = !0, null == t && D.guildFilter === M.RecentMentionsFilters.THIS_SERVER && k({
       guildFilter: M.RecentMentionsFilters.ALL_SERVERS
     })
   },
@@ -172,10 +172,10 @@ i = "RecentMentionsStore", (l = "displayName") in(a = Y) ? Object.defineProperty
     } = e, a = o().map(n, b);
     s ? O = O.concat(a) : (O = a, v = {}), o().forEach(a, e => {
       v[e.id] = !0
-    }), x = !1, L = t, y = (0, c.now)(), P = !0
+    }), L = !1, x = t, y = (0, c.now)(), P = !0
   },
   LOAD_RECENT_MENTIONS_FAILURE: function() {
-    x = !1
+    L = !1
   },
   SET_RECENT_MENTIONS_FILTER: k,
   CLEAR_MENTIONS: function(e) {
@@ -187,7 +187,7 @@ i = "RecentMentionsStore", (l = "displayName") in(a = Y) ? Object.defineProperty
     } = e;
     for (let e = t; e < O.length; ++e) delete v[O[e].id];
     let n = O.length;
-    n > (O = O.slice(0, t)).length && (L = !0)
+    n > (O = O.slice(0, t)).length && (x = !0)
   },
   CHANNEL_SELECT: function() {
     if (D.guildFilter !== M.RecentMentionsFilters.THIS_SERVER) return !1;

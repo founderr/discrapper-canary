@@ -33,12 +33,12 @@ function p(e) {
     } = e,
     v = O === R.id,
     {
-      channel: x,
-      approximate_member_count: L,
+      channel: L,
+      approximate_member_count: x,
       approximate_presence_count: D
     } = M,
     P = M.state === T.InviteStates.ACCEPTING,
-    y = null != x ? (0, r.createChannelRecordFromInvite)(x) : null,
+    y = null != L ? (0, r.createChannelRecordFromInvite)(L) : null,
     U = null != g,
     j = null != y,
     b = null != y && y.isGuildVocal(),
@@ -91,8 +91,8 @@ function p(e) {
         isBannerVisible: !1
       })
     })]
-  })) : null != L && L >= 5 || null != D && D > 0 ? h = (0, s.jsx)(o.default.Data, {
-    members: L,
+  })) : null != x && x >= 5 || null != D && D > 0 ? h = (0, s.jsx)(o.default.Data, {
+    members: x,
     membersOnline: D
   }) : j && (h = (0, s.jsx)(o.default.Channel, {
     channel: y,

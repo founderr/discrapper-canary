@@ -61,7 +61,7 @@ t.default = e => {
     quest: o,
     location: _,
     size: T
-  } = e, M = (0, r.useStateFromStores)([c.default], () => c.default.getState().theme), R = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), O = a.useMemo(() => (0, p.isAssetAnimated)(o.config.assets.hero), [o]), v = a.useRef(null), x = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, L = (0, m.useQuestFormattedDate)(o.config.expiresAt, {
+  } = e, M = (0, r.useStateFromStores)([c.default], () => c.default.getState().theme), R = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), O = a.useMemo(() => (0, p.isAssetAnimated)(o.config.assets.hero), [o]), v = a.useRef(null), L = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, x = (0, m.useQuestFormattedDate)(o.config.expiresAt, {
     year: "numeric",
     month: "long",
     day: "numeric"
@@ -117,12 +117,12 @@ t.default = e => {
               })
             }), (0, s.jsx)(u.Text, {
               variant: "text-xs/normal",
-              children: x ? C.default.Messages.QUESTS_CLAIM_BY.format({
+              children: L ? C.default.Messages.QUESTS_CLAIM_BY.format({
                 expirationDate: D
               }) : l ? C.default.Messages.QUESTS_EXPIRED_ON.format({
-                expirationDate: L
+                expirationDate: x
               }) : C.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
-                expirationDate: L
+                expirationDate: x
               })
             })]
           })]

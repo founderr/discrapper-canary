@@ -1,42 +1,42 @@
 "use strict";
 t.r(n), t.d(n, {
   default: function() {
-    return N
+    return v
   }
 }), t("47120");
 var l = t("735250"),
   a = t("470079"),
   s = t("120356"),
   u = t.n(s),
-  i = t("481060"),
-  o = t("596454"),
-  r = t("911969"),
+  o = t("481060"),
+  r = t("596454"),
+  i = t("911969"),
   d = t("114484"),
   c = t("970184"),
   m = t("280501"),
   p = t("689938"),
   f = t("706130");
 
-function S(e) {
+function C(e) {
   let {
     emoji: n,
     label: t,
     description: a,
     isDisabled: s,
-    isOffset: i
-  } = e, r = u()(f.labelContainer, {
+    isOffset: o
+  } = e, i = u()(f.labelContainer, {
     [f.disabled]: s,
-    [f.offset]: null == n && i
+    [f.offset]: null == n && o
   });
   return (0, l.jsxs)("div", {
     className: f.option,
-    children: [null != n ? (0, l.jsx)(o.default, {
+    children: [null != n ? (0, l.jsx)(r.default, {
       className: f.emoji,
       emojiId: n.id,
       emojiName: n.name,
       animated: n.animated
     }) : null, (0, l.jsxs)("div", {
-      className: r,
+      className: i,
       children: [(0, l.jsx)("strong", {
         className: f.label,
         children: t
@@ -48,7 +48,7 @@ function S(e) {
   })
 }
 
-function C(e) {
+function S(e) {
   let {
     emoji: n,
     label: t
@@ -57,7 +57,7 @@ function C(e) {
     className: f.option,
     children: (0, l.jsxs)("div", {
       className: u()(f.value, f.singleValue),
-      children: [null != n ? (0, l.jsx)(o.default, {
+      children: [null != n ? (0, l.jsx)(r.default, {
         className: f.emoji,
         src: n.src,
         emojiId: n.id,
@@ -81,7 +81,7 @@ function E(e) {
       className: f.value,
       children: n.map((e, n) => (0, l.jsxs)("div", {
         className: f.optionTag,
-        children: [null != e.emoji ? (0, l.jsx)(o.default, {
+        children: [null != e.emoji ? (0, l.jsx)(r.default, {
           className: f.smallEmoji,
           src: e.emoji.src,
           emojiId: e.emoji.id,
@@ -96,80 +96,80 @@ function E(e) {
   })
 }
 
-function N(e) {
+function v(e) {
   let {
     type: n,
     options: t,
     id: s,
     placeholder: u,
-    maxValues: o,
-    minValues: N,
-    disabled: v
-  } = e, T = a.useMemo(() => t.filter(e => e.default).map(e => e.value), [t]), {
-    state: h,
+    maxValues: r,
+    minValues: v,
+    disabled: N
+  } = e, h = a.useMemo(() => t.filter(e => e.default).map(e => e.value), [t]), {
+    state: T,
     executeStateUpdate: x,
     visualState: y,
-    isDisabled: j,
+    isDisabled: g,
     error: O
   } = (0, c.useComponentState)(e, {
     type: n,
-    values: T
-  }), g = o > 1, I = y === m.ActionComponentState.LOADING, [_, L] = a.useState(!1), [R, M] = a.useState(() => new Set(t.filter(e => e.default).map(e => e.value))), [A, b] = a.useState(R), w = a.useMemo(() => t.some(e => null != e.emoji), [t]);
+    values: h
+  }), I = r > 1, j = y === m.ActionComponentState.LOADING, [_, L] = a.useState(!1), [M, R] = a.useState(() => new Set(t.filter(e => e.default).map(e => e.value))), [A, b] = a.useState(M), P = a.useMemo(() => t.some(e => null != e.emoji), [t]);
   a.useEffect(() => {
-    if ((null == h ? void 0 : h.type) === r.ComponentType.STRING_SELECT) {
-      let e = new Set(h.values);
-      M(e), b(e)
+    if ((null == T ? void 0 : T.type) === i.ComponentType.STRING_SELECT) {
+      let e = new Set(T.values);
+      R(e), b(e)
     } else {
-      let e = new Set(T);
-      M(e), b(e)
+      let e = new Set(h);
+      R(e), b(e)
     }
-  }, [s, T, h]);
-  let D = a.useCallback(() => {
-    A !== R && x({
-      type: r.ComponentType.STRING_SELECT,
-      values: Array.from(R)
-    }) && b(R)
-  }, [R, A, b, x]);
+  }, [s, h, T]);
+  let U = a.useCallback(() => {
+    A !== M && x({
+      type: i.ComponentType.STRING_SELECT,
+      values: Array.from(M)
+    }) && b(M)
+  }, [M, A, b, x]);
   a.useEffect(() => {
-    if (!_) !(R.size === A.size && Array.from(A).every(e => R.has(e))) && D()
-  }, [_, R, A, D]);
-  let P = i.singleSelect;
-  g ? P = i.multiSelect : 0 === N && (P = i.toggleSelect);
-  let U = (0, i.useVariableSelect)({
-    value: R,
-    onChange: e => M(e),
-    onSelectInteraction: P
+    if (!_) !(M.size === A.size && Array.from(A).every(e => M.has(e))) && U()
+  }, [_, M, A, U]);
+  let w = o.singleSelect;
+  I ? w = o.multiSelect : 0 === v && (w = o.toggleSelect);
+  let D = (0, o.useVariableSelect)({
+    value: M,
+    onChange: e => R(e),
+    onSelectInteraction: w
   });
   return (0, l.jsxs)(a.Fragment, {
     children: [(0, l.jsxs)("div", {
       className: f.container,
-      children: [(0, l.jsx)(i.Select, {
-        isDisabled: v || j,
+      children: [(0, l.jsx)(o.Select, {
+        isDisabled: N || g,
         className: f.select,
         options: t.map(e => ({
           ...e,
-          disabled: g && !R.has(e.value) && R.size === o
+          disabled: I && !M.has(e.value) && M.size === r
         })),
         placeholder: null != u ? u : p.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER,
         onClose: () => L(!1),
         onOpen: () => L(!0),
         maxVisibleItems: 5,
-        closeOnSelect: !g,
+        closeOnSelect: !I,
         optionClassName: f.selectOption,
-        renderOptionLabel: e => (0, l.jsx)(S, {
+        renderOptionLabel: e => (0, l.jsx)(C, {
           ...e,
-          isDisabled: g && !R.has(e.value) && R.size === o,
-          isOffset: w
+          isDisabled: I && !M.has(e.value) && M.size === r,
+          isOffset: P
         }),
-        renderOptionValue: e => g ? (0, l.jsx)(E, {
+        renderOptionValue: e => I ? (0, l.jsx)(E, {
           options: e
-        }) : (0, l.jsx)(C, {
+        }) : (0, l.jsx)(S, {
           ...e[0]
         }),
-        ...U
-      }), I ? (0, l.jsx)("div", {
+        ...D
+      }), j ? (0, l.jsx)("div", {
         className: f.__invalid_loading,
-        children: (0, l.jsx)(i.Dots, {
+        children: (0, l.jsx)(o.Dots, {
           dotRadius: 3.5,
           themed: !0
         })

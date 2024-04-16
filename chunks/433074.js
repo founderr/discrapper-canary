@@ -31,7 +31,7 @@ function g(e) {
   let {
     code: g,
     message: M
-  } = e, [R, O, v] = (0, i.useStateFromStoresArray)([p.default], () => [p.default.getApplication(g), p.default.isInvalidApplication(g), p.default.getApplicationFetchState(g)], [g]), x = (0, i.useStateFromStores)([u.default], () => u.default.locale), L = (0, i.useStateFromStores)([c.default], () => {
+  } = e, [R, O, v] = (0, i.useStateFromStoresArray)([p.default], () => [p.default.getApplication(g), p.default.isInvalidApplication(g), p.default.getApplicationFetchState(g)], [g]), L = (0, i.useStateFromStores)([u.default], () => u.default.locale), x = (0, i.useStateFromStores)([c.default], () => {
     var e;
     return null !== (e = c.default.getGuildId()) && void 0 !== e ? e : void 0
   }), D = (0, i.useStateFromStores)([f.default], () => f.default.getCurrentUser()), [P, y] = a.useState(!1), U = a.useCallback(e => {
@@ -44,27 +44,27 @@ function g(e) {
       application_id: g,
       device_platform: l.isMobile ? "mobile_web" : "desktop_web",
       sender_user_id: M.author.id,
-      guild_id: L,
+      guild_id: x,
       channel_id: M.channel_id
     })
-  }, [P, g, null == D ? void 0 : D.id, M.channel_id, L, M.author.id, v]), a.useEffect(() => {
+  }, [P, g, null == D ? void 0 : D.id, M.channel_id, x, M.author.id, v]), a.useEffect(() => {
     P && O && T.default.track(S.AnalyticEvents.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
       device_platform: l.isMobile ? "mobile_web" : "desktop_web",
       sender_user_id: M.author.id,
-      guild_id: L,
+      guild_id: x,
       channel_id: M.channel_id
     })
-  }, [P, L, O, M.author.id, M.channel_id]);
+  }, [P, x, O, M.author.id, M.channel_id]);
   let b = e => {
     T.default.track(S.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
       application_id: g,
       device_platform: l.isMobile ? "mobile_web" : "desktop_web",
       clicked_section: e,
-      guild_id: L,
+      guild_id: x,
       channel_id: M.channel_id
     }), (0, N.goToAppDirectory)({
       view: h.ApplicationDirectoryViews.APPLICATION,
-      guildId: L,
+      guildId: x,
       applicationId: g,
       entrypoint: {
         name: h.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_PROFILE_EMBED
@@ -96,7 +96,7 @@ function g(e) {
       resolving: !0
     })]
   });
-  let G = new Intl.NumberFormat(x, {
+  let G = new Intl.NumberFormat(L, {
     notation: "compact",
     compactDisplay: "short"
   }).format(null !== (n = null === (t = R.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0);
@@ -135,7 +135,7 @@ function g(e) {
             customInstallUrl: R.custom_install_url,
             installParams: R.install_params,
             integrationTypesConfig: R.integration_types_config,
-            guildId: L,
+            guildId: x,
             source: "app_directory_profile_embed"
           })
         },

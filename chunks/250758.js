@@ -172,7 +172,7 @@ function v() {
   (0, _.clearTokenCache)()
 }
 
-function x(e) {
+function L(e) {
   let t = S[e];
   if (null == t) return;
   let {
@@ -192,7 +192,7 @@ function x(e) {
   })
 }
 
-function L() {
+function x() {
   let e = I.default.getCurrentSearchId();
   if (null == e || null == S[e]) return;
   let {
@@ -267,17 +267,17 @@ let P = new D(o.default, {
   },
   CHANNEL_CREATE: v,
   CHANNEL_DELETE: v,
-  STREAMER_MODE_UPDATE: L,
-  SEARCH_MODAL_OPEN: L,
-  SEARCH_SCREEN_OPEN: L,
+  STREAMER_MODE_UPDATE: x,
+  SEARCH_MODAL_OPEN: x,
+  SEARCH_SCREEN_OPEN: x,
   SEARCH_CLEAR_HISTORY: function(e) {
     let {
       searchId: t
     } = e;
-    null != t ? x(t) : Object.keys(S).forEach(x)
+    null != t ? L(t) : Object.keys(S).forEach(L)
   },
   LOGOUT: function() {
-    Object.keys(S).forEach(x)
+    Object.keys(S).forEach(L)
   }
 });
 t.default = P

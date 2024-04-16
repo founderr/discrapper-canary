@@ -30,9 +30,9 @@ var s = n("735250"),
   R = n("689938"),
   O = n("533342"),
   v = n("756688"),
-  x = n("886765");
+  L = n("886765");
 
-function L(e) {
+function x(e) {
   var t, n, a;
   let {
     item: r
@@ -75,7 +75,7 @@ function D(e) {
 function P(e) {
   let {
     item: t
-  } = e, n = x, a = R.default.Messages.NOTIFICATION_CENTER_TODO;
+  } = e, n = L, a = R.default.Messages.NOTIFICATION_CENTER_TODO;
   return t.completed && (n = v, a = R.default.Messages.NOTIFICATION_CENTER_DONE), (0, s.jsxs)("div", {
     className: O.lifecycleContainer,
     children: [(0, s.jsx)("img", {
@@ -141,7 +141,7 @@ let y = a.memo(function(e) {
     i.type === p.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS && null != i.other_user && (v = (0, s.jsx)(A.default, {
       userId: i.other_user.id
     }));
-    let x = null != i.local_id,
+    let L = null != i.local_id,
       y = (0, N.default)(i);
     return (0, s.jsxs)("div", {
       className: O.row,
@@ -164,7 +164,7 @@ let y = a.memo(function(e) {
             variant: "text-md/normal",
             color: E ? "text-muted" : "text-normal",
             children: "string" != typeof y ? y : u.default.parse(y)
-          }), (null === (t = i.message) || void 0 === t ? void 0 : t.content) != null ? (0, s.jsx)(L, {
+          }), (null === (t = i.message) || void 0 === t ? void 0 : t.content) != null ? (0, s.jsx)(x, {
             item: i
           }) : null, null != i.callout ? (0, s.jsx)(D, {
             item: i
@@ -174,7 +174,7 @@ let y = a.memo(function(e) {
             children: (0, h.getRelativeTimestamp)(T.default.extractTimestamp(i.id))
           }), v]
         })]
-      }), x ? null : (0, s.jsx)(g.MoreButton, {
+      }), L ? null : (0, s.jsx)(g.MoreButton, {
         item: i
       })]
     })

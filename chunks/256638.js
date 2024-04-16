@@ -33,8 +33,8 @@ var s = n("735250"),
   R = n("812206"),
   O = n("391650"),
   v = n("605236"),
-  x = n("749277"),
-  L = n("492435"),
+  L = n("749277"),
+  x = n("492435"),
   D = n("353926"),
   P = n("506357"),
   y = n("36459"),
@@ -129,7 +129,7 @@ let eS = a.memo(function() {
       let {
         metadata: e
       } = ec, t = D.default.getUserExperimentDescriptor(e.id);
-      null != t && (0, L.trackExposureToExperiment)(e.id, t), (async () => {
+      null != t && (0, x.trackExposureToExperiment)(e.id, t), (async () => {
         var e, t;
         (null === (e = ec.metadata) || void 0 === e ? void 0 : e.id) != null && await (0, N.surveySeen)(null === (t = ec.metadata) || void 0 === t ? void 0 : t.id)
       })()
@@ -142,7 +142,7 @@ let eS = a.memo(function() {
     return t || null == e ? null : es.typeToDismissibleContent[e]
   }(eA);
   if (null == ec) return null;
-  if (null != eM) return (0, s.jsx)(x.DismissibleContentNotices, {
+  if (null != eM) return (0, s.jsx)(L.DismissibleContentNotices, {
     dismissibleContent: eM,
     noticeType: ec.type
   });
@@ -176,12 +176,12 @@ let eS = a.memo(function() {
       });
     case ef.NoticeTypes.WIN7_8_DEPRECATED_MESSAGE:
       let {
-        dismissUntil: ex
+        dismissUntil: eL
       } = ec.metadata;
       return (0, s.jsxs)(ei.default, {
         color: ei.NoticeColors.WARNING,
         children: [(0, s.jsx)(ei.NoticeCloseButton, {
-          onClick: () => eN(ex),
+          onClick: () => eN(eL),
           noticeType: ef.NoticeTypes.WIN7_8_DEPRECATED_MESSAGE
         }), em.default.Messages.WINDOWS_7_8_DEPRECATED_WARNING.format({
           helpCenterLink: eo.default.getArticleURL(ef.HelpdeskArticles.WIN7_8_DEPRECATE)
@@ -189,12 +189,12 @@ let eS = a.memo(function() {
       });
     case ef.NoticeTypes.MACOS_17_18_DEPRECATED_MESSAGE:
       let {
-        dismissUntil: eL
+        dismissUntil: ex
       } = ec.metadata;
       return (0, s.jsxs)(ei.default, {
         color: ei.NoticeColors.WARNING,
         children: [(0, s.jsx)(ei.NoticeCloseButton, {
-          onClick: () => eN(eL),
+          onClick: () => eN(ex),
           noticeType: ef.NoticeTypes.MACOS_17_18_DEPRECATED_MESSAGE
         }), em.default.Messages.MACOS_DEPRECATED_WARNING.format({
           helpCenterLink: eo.default.getArticleURL(ef.HelpdeskArticles.MACOS_17_18_DEPRECATE)

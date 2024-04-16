@@ -36,18 +36,18 @@ let m = a.memo(function(e) {
       } = e,
       O = R === f.ReactionTypes.BURST,
       v = (0, E.isMeReaction)(p, h, R),
-      x = (0, d.useEmojiColorPalette)(O && null != S ? S : []),
-      L = a ? T : _,
+      L = (0, d.useEmojiColorPalette)(O && null != S ? S : []),
+      x = a ? T : _,
       D = O ? N : I,
       P = (0, c.getMinCounterWidth)(D, E.REACTION_MIN_WIDTH_DIGITS),
       y = {};
-    if (O && null != x) {
+    if (O && null != L) {
       var U;
       let {
         accentColor: e,
         backgroundColor: s,
         opacity: a
-      } = x, l = null !== (U = (0, r.hex2rgb)(null != s ? s : "", a)) && void 0 !== U ? U : "";
+      } = L, l = null !== (U = (0, r.hex2rgb)(null != s ? s : "", a)) && void 0 !== U ? U : "";
       v && (y.borderColor = s), y.background = l, t = e, n = e
     }
     let j = {
@@ -56,21 +56,21 @@ let m = a.memo(function(e) {
       borderColor: n
     };
     return (0, s.jsxs)("div", {
-      className: i()(L.reaction, L.reactionInner, m, {
-        [L.reactionMe]: v,
-        [L.reactionReadOnly]: C && !A && !M && !g
+      className: i()(x.reaction, x.reactionInner, m, {
+        [x.reactionMe]: v,
+        [x.reactionReadOnly]: C && !A && !M && !g
       }),
       style: y,
       children: [(0, s.jsx)(o.default, {
         className: i()({
-          [L.hideEmoji]: l
+          [x.hideEmoji]: l
         }),
         emojiId: u.id,
         emojiName: u.name,
         size: "reaction",
         animated: O && u.animated
       }), (0, s.jsx)("div", {
-        className: L.reactionCount,
+        className: x.reactionCount,
         style: j,
         children: D
       })]

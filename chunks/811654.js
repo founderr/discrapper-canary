@@ -4,10 +4,10 @@ t.r(n), t.d(n, {
     return p
   },
   getSnowflakeSelectDefaultValues: function() {
-    return C
+    return S
   },
   queryChannels: function() {
-    return S
+    return C
   },
   queryMentionables: function() {
     return f
@@ -17,9 +17,9 @@ var l = t("524846"),
   a = t("911969"),
   s = t("592125"),
   u = t("271383"),
-  i = t("430824"),
-  o = t("594174"),
-  r = t("483360"),
+  o = t("430824"),
+  r = t("594174"),
+  i = t("483360"),
   d = t("823379"),
   c = t("5192"),
   m = t("280501");
@@ -30,23 +30,23 @@ function f(e, n, t) {
   let l = s.default.getChannel(t);
   if (null == l) return [];
   let u = e === a.ComponentType.USER_SELECT || e === a.ComponentType.MENTIONABLE_SELECT,
-    i = e === a.ComponentType.ROLE_SELECT || e === a.ComponentType.MENTIONABLE_SELECT,
+    o = e === a.ComponentType.ROLE_SELECT || e === a.ComponentType.MENTIONABLE_SELECT,
     {
-      users: o,
+      users: r,
       roles: d
-    } = r.default.queryMentionResults({
+    } = i.default.queryMentionResults({
       query: n,
       channel: l,
       canMentionEveryone: !1,
       canMentionHere: !1,
       canMentionUsers: u,
-      canMentionRoles: i,
+      canMentionRoles: o,
       includeAllGuildUsers: !0,
       includeNonMentionableRoles: !0,
       checkRecentlyTalkedOnEmptyQuery: !1,
       limit: 15
     }),
-    p = o.map(e => {
+    p = r.map(e => {
       var n;
       let a = c.default.getNickname(l.getGuildId(), t, e.user);
       return {
@@ -62,9 +62,9 @@ function f(e, n, t) {
   }))]
 }
 
-function S(e, n, t) {
+function C(e, n, t) {
   let l = s.default.getChannel(n);
-  return null == l ? [] : r.default.queryApplicationCommandChannelResults({
+  return null == l ? [] : i.default.queryApplicationCommandChannelResults({
     query: e,
     channel: l,
     channelTypes: t,
@@ -76,15 +76,15 @@ function S(e, n, t) {
   }))
 }
 
-function C(e, n) {
+function S(e, n) {
   let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
   if (null == e) return;
-  let a = i.default.getGuild(n);
+  let a = o.default.getGuild(n);
   return e.map(e => {
     switch (e.type) {
       case l.SnowflakeSelectDefaultValueTypes.USER: {
         var n;
-        let t = o.default.getUser(e.id);
+        let t = r.default.getUser(e.id);
         if (null == t) return null;
         let l = null != a ? u.default.getNick(a.id, t.id) : void 0;
         return {
@@ -95,7 +95,7 @@ function C(e, n) {
       }
       case l.SnowflakeSelectDefaultValueTypes.ROLE: {
         if (null == a) return null;
-        let n = i.default.getRole(a.id, e.id);
+        let n = o.default.getRole(a.id, e.id);
         if (null == n) return null;
         return {
           type: m.SelectOptionType.ROLE,

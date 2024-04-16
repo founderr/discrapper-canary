@@ -26,8 +26,8 @@ var s = n("735250"),
   R = n("55563"),
   O = n("285952"),
   v = n("427828"),
-  x = n("199480"),
-  L = n("70613"),
+  L = n("199480"),
+  x = n("70613"),
   D = n("626135"),
   P = n("669079"),
   y = n("74538"),
@@ -344,10 +344,10 @@ class Y extends a.Component {
         });
       return (0, s.jsxs)("div", {
         className: l,
-        children: [!t && B.AllSeasonalGiftStyles.includes(e.giftStyle) && (0, s.jsx)(L.default, {
+        children: [!t && B.AllSeasonalGiftStyles.includes(e.giftStyle) && (0, s.jsx)(x.default, {
           className: k.snow,
           wind: 5
-        }), a && (0, s.jsx)(x.default, {
+        }), a && (0, s.jsx)(L.default, {
           className: k.headerIcon
         }), null != e.giftStyle && (0, s.jsx)(h.default, {
           defaultAnimationState: e.redeemed ? I.AnimationState.LOOP : I.AnimationState.IDLE,

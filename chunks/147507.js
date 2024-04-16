@@ -27,7 +27,7 @@ var s, a, l, i, r = n("735250"),
   O = n("689938"),
   v = n("152209");
 (l = s || (s = {})).ENTER = "enter", l.CONFETTI = "confetti", l.LEAF_PEEL = "leaf_peel", l.LEAF_FALL = "leaf_fall", l.EXIT = "exit";
-let x = {
+let L = {
   enter: {
     BEG: 0,
     END: 22
@@ -50,7 +50,7 @@ let x = {
   }
 };
 (i = a || (a = {})).TOP_LEFT = "TOP_LEFT", i.TOP_RIGHT = "TOP_RIGHT", i.BOTTOM_LEFT = "BOTTOM_LEFT", i.BOTTOM_RIGHT = "BOTTOM_RIGHT";
-let L = ["TOP_LEFT", "TOP_RIGHT"],
+let x = ["TOP_LEFT", "TOP_RIGHT"],
   D = (0, E.cssValueToNumber)(_.default.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
   P = {
     leafPosition: {
@@ -154,7 +154,7 @@ function k(e) {
       case "enter":
         return "confetti";
       case "confetti":
-        if (L.includes(t)) return "leaf_peel";
+        if (x.includes(t)) return "leaf_peel";
         return "exit";
       case "leaf_peel":
         return "leaf_fall";
@@ -163,7 +163,7 @@ function k(e) {
       case "exit":
         return "enter"
     }
-  }(u, _), g = L.includes(_), M = g && "exit" === u, R = o.useCallback(e => {
+  }(u, _), g = x.includes(_), M = g && "exit" === u, R = o.useCallback(e => {
     E(e)
   }, []), O = o.useCallback(() => {
     "exit" === u && (null == t || t())
@@ -273,7 +273,7 @@ function k(e) {
           [v.easterEggAnimationHideLeaf]: M
         }),
         nextScene: A,
-        sceneSegments: x,
+        sceneSegments: L,
         onScenePlay: R,
         onSceneComplete: O,
         importData: F,
@@ -310,11 +310,11 @@ function w(e) {
     [E, _] = o.useState(!1),
     S = o.useRef(null),
     {
-      reducedMotion: x
+      reducedMotion: L
     } = o.useContext(T.AccessibilityPreferencesContext),
-    L = (0, p.getMessageAuthor)(n),
-    D = L.nick,
-    P = l(L);
+    x = (0, p.getMessageAuthor)(n),
+    D = x.nick,
+    P = l(x);
   t = null == u || null == a ? d > 1 ? O.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY_HOOK.format({
     username: D,
     usernameHook: P,
@@ -335,14 +335,14 @@ function w(e) {
     newTierName: (0, M.getTierName)(u)
   });
   let y = o.useCallback(() => {
-      if (!x.enabled) {
+      if (!L.enabled) {
         if (E || 0 !== Math.floor(50 * Math.random())) {
           var e;
           let t = null === (e = S.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
           if (null != t) c(t.left + t.width / 2, t.top + t.height / 2)
         } else _(!0)
       }
-    }, [c, x, E]),
+    }, [c, L, E]),
     j = o.useCallback(() => {
       _(!1)
     }, []),

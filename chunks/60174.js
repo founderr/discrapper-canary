@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ButtonAddReaction: function() {
-    return L
+    return x
   }
 }), n("789020"), n("47120");
 var s = n("735250"),
@@ -31,7 +31,7 @@ var s = n("735250"),
   O = n("903380"),
   v = n("317363");
 
-function x(e, t, n) {
+function L(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -39,7 +39,7 @@ function x(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class L extends a.Component {
+class x extends a.Component {
   render() {
     let {
       type: e,
@@ -97,9 +97,9 @@ class L extends a.Component {
     })
   }
   constructor(...e) {
-    super(...e), x(this, "state", {
+    super(...e), L(this, "state", {
       isReactionPickerActive: !1
-    }), x(this, "onAddReaction", (e, t) => {
+    }), L(this, "onAddReaction", (e, t) => {
       if (null == e) return;
       let {
         channel: n,
@@ -109,11 +109,11 @@ class L extends a.Component {
       (0, _.addReaction)(n.id, s.id, (0, T.toReactionEmoji)(e), a ? _.ReactionLocations.FORUM_TOOLBAR : _.ReactionLocations.MESSAGE, {
         burst: t
       })
-    }), x(this, "handleReactionPickerToggle", () => {
+    }), L(this, "handleReactionPickerToggle", () => {
       this.setState(e => ({
         isReactionPickerActive: !e.isReactionPickerActive
       }))
-    }), x(this, "handleAddReactionClick", e => {
+    }), L(this, "handleAddReactionClick", e => {
       let {
         type: t,
         channel: n
@@ -128,7 +128,7 @@ class L extends a.Component {
           object: A.AnalyticsObjects.INLINE_REACTION_PICKER_UPSELL
         }
       }), this.handleReactionPickerToggle()
-    }), x(this, "renderReactionPopout", e => {
+    }), L(this, "renderReactionPopout", e => {
       let {
         closePopout: t
       } = e, {

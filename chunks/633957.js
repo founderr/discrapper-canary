@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return L
   }
 }), n("47120");
 var s = n("735250"),
@@ -31,20 +31,20 @@ var s = n("735250"),
   O = n("689938"),
   v = n("625369");
 
-function x(e) {
+function L(e) {
   var t;
   let {
     application: n,
-    activityInstance: x,
-    channelId: L,
+    activityInstance: L,
+    channelId: x,
     guildId: D
   } = e, [P, y] = a.useState(!1), {
     analyticsLocations: U
-  } = (0, I.default)(m.default.ACTIVITY_INSTANCE_EMBED), j = (0, r.useAnalyticsContext)(), b = (0, _.default)(), G = (0, l.useStateFromStores)([N.default], () => N.default.getChannel(L)), B = (null == G ? void 0 : null === (t = G.isThread) || void 0 === t ? void 0 : t.call(G)) ? null == G ? void 0 : G.parent_id : L, F = (0, l.useStateFromStores)([h.default], () => h.default.getId()), {
+  } = (0, I.default)(m.default.ACTIVITY_INSTANCE_EMBED), j = (0, r.useAnalyticsContext)(), b = (0, _.default)(), G = (0, l.useStateFromStores)([N.default], () => N.default.getChannel(x)), B = (null == G ? void 0 : null === (t = G.isThread) || void 0 === t ? void 0 : t.call(G)) ? null == G ? void 0 : G.parent_id : x, F = (0, l.useStateFromStores)([h.default], () => h.default.getId()), {
     embeddedActivity: k,
     currentEmbeddedActivity: w
   } = (0, l.useStateFromStoresObject)([u.default], () => ({
-    embeddedActivity: u.default.getEmbeddedActivitiesForChannel(null != B ? B : "").find(e => e.instanceId === x.id),
+    embeddedActivity: u.default.getEmbeddedActivitiesForChannel(null != B ? B : "").find(e => e.instanceId === L.id),
     currentEmbeddedActivity: u.default.getCurrentEmbeddedActivity()
   })), H = (0, l.useStateFromStoresArray)([C.default], () => {
     var e;
@@ -58,7 +58,7 @@ function x(e) {
     return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = R.DEFAULT_EMBEDDED_ACTIVITY_CONFIG), e
   }, [n]), K = (0, E.useEmbeddedActivityJoinability)({
     userId: F,
-    channelId: L,
+    channelId: x,
     application: Y
   }), W = null == k, z = (0, M.useJoinOrStartButtonState)({
     embeddedActivity: k,
@@ -81,7 +81,7 @@ function x(e) {
         await (0, f.default)({
           activityItem: s,
           currentEmbeddedApplication: b,
-          channelId: L,
+          channelId: x,
           guildId: D,
           locationObject: j.location,
           embeddedActivitiesManager: T.default,
@@ -90,7 +90,7 @@ function x(e) {
       } else await (0, c.default)({
         applicationId: k.applicationId,
         currentEmbeddedApplication: b,
-        activityChannelId: L,
+        activityChannelId: x,
         locationObject: j.location,
         embeddedActivitiesManager: T.default,
         analyticsLocations: U

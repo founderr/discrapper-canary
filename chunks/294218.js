@@ -26,14 +26,14 @@ var s = n("735250"),
   R = n("145807"),
   O = n("56744"),
   v = n("981631"),
-  x = n("264558");
+  L = n("264558");
 t.default = a.memo(function(e) {
   var t;
   let {
     message: n,
     compact: a = !1,
     className: l,
-    onContextMenu: L,
+    onContextMenu: x,
     onClick: D,
     disableInteraction: P = !1,
     hideSimpleEmbedContent: y = !0,
@@ -67,8 +67,8 @@ t.default = a.memo(function(e) {
   return (0, s.jsx)(_.default, {
     compact: a,
     className: i()(l, {
-      [x.ephemeral]: (0, T.hasFlag)(n.flags, v.MessageFlags.EPHEMERAL),
-      [x.disableInteraction]: P
+      [L.ephemeral]: (0, T.hasFlag)(n.flags, v.MessageFlags.EPHEMERAL),
+      [L.disableInteraction]: P
     }),
     disableInteraction: P,
     childrenRepliedMessage: (0, O.default)(n, U, K, W, a),
@@ -82,7 +82,7 @@ t.default = a.memo(function(e) {
     childrenAccessories: e.hideAccessories ? void 0 : (0, C.renderSimpleAccessories)(e, Y),
     childrenMessageContent: (0, A.default)(e, V),
     childrenSystemMessage: (0, M.default)(e),
-    onContextMenu: L,
+    onContextMenu: x,
     onClick: D,
     hasThread: B && null != q && n.hasFlag(v.MessageFlags.HAS_THREAD),
     hasReply: n.type === v.MessageTypes.REPLY,

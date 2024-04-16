@@ -30,8 +30,8 @@ var s = n("512722"),
   R = n("316758"),
   O = n("467531"),
   v = n("798628"),
-  x = n("918088"),
-  L = n("981631"),
+  L = n("918088"),
+  x = n("981631"),
   D = n("689938");
 
 function P(e, t) {
@@ -63,7 +63,7 @@ function y(e) {
     cancelText: D.default.Messages.LURKER_MODE_POPOUT_CANCEL,
     onConfirm: () => {
       c.default.joinGuild(t, {
-        source: L.JoinGuildSources.POLL_ALERT
+        source: x.JoinGuildSources.POLL_ALERT
       })
     }
   })
@@ -283,7 +283,7 @@ async function k(e) {
               var n, s;
               return e + (null !== (s = null === (n = t.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== s ? s : 0)
             }, 0) : 0;
-          return _.default.trackWithMetadata(L.AnalyticEvents.POLL_SHOW_RESULTS_CLICKED, {
+          return _.default.trackWithMetadata(x.AnalyticEvents.POLL_SHOW_RESULTS_CLICKED, {
             channel_id: t,
             message_id: n,
             show_results: l,
@@ -409,7 +409,7 @@ t.default = {
       throw a()(null != s, "Tapped on a non-existent poll message"), Error()
     }(l), {
       tapShouldOpenVotersModal: u
-    } = null !== (n = (0, x.computeBasicPollChatData)(o)) && void 0 !== n ? n : {};
+    } = null !== (n = (0, L.computeBasicPollChatData)(o)) && void 0 !== n ? n : {};
     if (!0 === u) {
       U({
         channelId: i,
@@ -428,7 +428,7 @@ t.default = {
             selectedTextAnswersCount: a,
             selectedEmojiAnswersCount: l
           } = P(null === (n = o.poll) || void 0 === n ? void 0 : n.answers, e);
-        return _.default.trackWithMetadata(L.AnalyticEvents.POLL_VOTE_SELECTED, {
+        return _.default.trackWithMetadata(x.AnalyticEvents.POLL_VOTE_SELECTED, {
           channel_id: i,
           message_id: r,
           selected_answer_ids: t,
@@ -457,7 +457,7 @@ t.default = {
         selectedTextAnswersCount: c,
         selectedEmojiAnswersCount: f
       } = P(null === (t = o.poll) || void 0 === t ? void 0 : t.answers, l);
-      return _.default.trackWithMetadata(L.AnalyticEvents.POLL_VOTE_SELECTED, {
+      return _.default.trackWithMetadata(x.AnalyticEvents.POLL_VOTE_SELECTED, {
         channel_id: i,
         message_id: r,
         selected_answer_ids: u,
