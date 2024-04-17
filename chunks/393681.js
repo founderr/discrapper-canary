@@ -16,8 +16,8 @@ var a = s("735250"),
   m = s("952306"),
   _ = s("346585"),
   g = s("347649"),
-  h = s("332473"),
-  I = s("303172"),
+  I = s("332473"),
+  h = s("303172"),
   N = s("484459"),
   p = s("430824"),
   C = s("325067"),
@@ -110,7 +110,7 @@ class H extends n.PureComponent {
         date: (0, _.getLocalizedForcedUUDate)(this.props.locale)
       }) : F.default.Messages.POMELO_ACTION_NEEDED.format(), " ", "", (0, a.jsx)(M.default, {
         className: k.noticeTextButton,
-        onClick: () => (0, I.default)(G.PomeloEntrypoints.USER_SETTINGS),
+        onClick: () => (0, h.default)(G.PomeloEntrypoints.USER_SETTINGS),
         children: F.default.Messages.GET_STARTED
       })]
     }) : null
@@ -301,7 +301,7 @@ t.default = () => {
     t = (0, d.useStateFromStores)([C.default], () => C.default.getBackupCodes()),
     s = (0, d.useStateFromStores)([A.default], () => A.default.hidePersonalInformation),
     n = (0, d.useStateFromStores)([L.default], () => L.default.theme),
-    l = (0, h.useIsEligibleForPomelo)(),
+    l = (0, I.useIsEligibleForPomelo)(),
     i = (0, g.useForceMigration)(),
     r = (0, d.useStateFromStores)([D.default], () => D.default.locale);
   return (0, a.jsx)(H, {

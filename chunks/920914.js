@@ -16,8 +16,8 @@ var a = s("735250"),
   m = s("468026"),
   _ = s("410030"),
   g = s("726542"),
-  h = s("122021"),
-  I = s("275759"),
+  I = s("122021"),
+  h = s("275759"),
   N = s("231757"),
   p = s("323588"),
   C = s("605236"),
@@ -117,7 +117,7 @@ function q(e) {
     [Y, z] = n.useState(null),
     [q, Z] = n.useState(!1),
     [X, J] = n.useState([]),
-    $ = (0, h.useLegacyPlatformType)(T.type),
+    $ = (0, I.useLegacyPlatformType)(T.type),
     ee = g.default.get($);
   n.useEffect(() => {
     A(T.friendSync), x(T.visibility), M(T.metadataVisibility), P(T.showActivity)
@@ -255,7 +255,7 @@ function q(e) {
       var t;
       let s = null !== (t = e.metadata) && void 0 !== t ? t : {},
         n = null,
-        l = (0, I.getCreatedAtDate)(s[V.MetadataFields.CREATED_AT], _);
+        l = (0, h.getCreatedAtDate)(s[V.MetadataFields.CREATED_AT], _);
       switch (e.type) {
         case H.PlatformTypes.REDDIT:
           n = (0, p.generateRedditMetadataItems)(s, K.metadataItem);
@@ -430,7 +430,7 @@ function X() {
       onComplete: e
     })
   }
-  let s = (0, h.usePlatforms)(),
+  let s = (0, I.usePlatforms)(),
     n = (0, c.useRedesignIconContext)().enabled ? 24 : 18;
   return (0, a.jsxs)("div", {
     className: K.connectionsContainer,

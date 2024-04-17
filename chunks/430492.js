@@ -111,7 +111,7 @@ t.default = function(e) {
     drop: m,
     platform: _,
     transitionState: g
-  } = e, h = (0, d.useUID)(), [I, N] = n.useState();
+  } = e, I = (0, d.useUID)(), [h, N] = n.useState();
   n.useEffect(() => {
     null == o && r.default.wait(async () => {
       await (0, u.fetchCodePlatformAvailability)(m.dropsQuestId)
@@ -120,7 +120,7 @@ t.default = function(e) {
   let p = (0, l.useStateFromStores)([c.default], () => c.default.platformAvailability);
   return (0, a.jsx)(i.ModalRoot, {
     transitionState: g,
-    "aria-labelledby": h,
+    "aria-labelledby": I,
     children: (0, a.jsx)(a.Fragment, {
       children: (() => {
         if (null != o) return (0, a.jsx)(f, {
@@ -167,7 +167,7 @@ t.default = function(e) {
                     value: e,
                     label: (0, S.getPlatformLabel)(e)
                   })),
-                  value: n ? p[0] : I,
+                  value: n ? p[0] : h,
                   isDisabled: !e,
                   className: e ? "" : T.selectDangerBorder,
                   look: e ? i.SelectLooks.FILLED : i.SelectLooks.CUSTOM
@@ -186,9 +186,9 @@ t.default = function(e) {
                     let {
                       default: e
                     } = await Promise.all([s.e("99387"), s.e("5004")]).then(s.bind(s, "233070"));
-                    return s => (void 0 !== I || n) && (0, a.jsx)(e, {
+                    return s => (void 0 !== h || n) && (0, a.jsx)(e, {
                       ...s,
-                      platform: void 0 === I ? p[0] : I,
+                      platform: void 0 === h ? p[0] : h,
                       code: o,
                       dropsQuestId: m.dropsQuestId,
                       closeParentModal: t,
@@ -196,7 +196,7 @@ t.default = function(e) {
                     })
                   })
                 },
-                disabled: void 0 === I && !n,
+                disabled: void 0 === h && !n,
                 children: E.default.Messages.UNLOCK_CODE
               }), e ? (0, a.jsx)(i.Button, {
                 onClick: t,

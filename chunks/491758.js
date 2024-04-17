@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("556296"),
   _ = s("924557"),
   g = s("435064"),
-  h = s("894694"),
-  I = s("779618"),
+  I = s("894694"),
+  h = s("779618"),
   N = s("39604"),
   p = s("442334"),
   C = s("356659"),
@@ -51,7 +51,7 @@ function L() {
     }, {
       autoTrackExposure: !1
     }),
-    y = (0, I.default)(f.default),
+    y = (0, h.default)(f.default),
     {
       showClipsHeaderEntrypoint: B
     } = _.ClipsExperiment.useExperiment({
@@ -134,7 +134,7 @@ function L() {
             scrollPosition: x.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION
           })
         })
-      }), j === h.ClipsHardwareClassification.BELOW_MINIMUM ? (0, a.jsx)(T.default, {
+      }), j === I.ClipsHardwareClassification.BELOW_MINIMUM ? (0, a.jsx)(T.default, {
         look: T.InfoBoxLooks.WARNING,
         className: v.formItem,
         children: R.default.Messages.CLIPS_SETTINGS_UNDER_MIN_SPECS

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return h
   }
 });
 var a = s("735250"),
@@ -20,14 +20,14 @@ var a = s("735250"),
   m = s("981631"),
   _ = s("474936"),
   g = s("689938"),
-  h = s("600469");
+  I = s("600469");
 
-function I(e) {
+function h(e) {
   let {
     user: t,
     guild: s,
     className: l,
-    sectionTitle: I,
+    sectionTitle: h,
     forcedDivider: N = !1,
     withTutorial: p = !1,
     showBorder: C = !1,
@@ -56,21 +56,21 @@ function I(e) {
     forcedDivider: N,
     borderType: f.FeatureBorderTypes.PREMIUM,
     hasBackground: !0,
-    title: I,
+    title: h,
     showBorder: C,
     errors: D,
     className: l,
     children: (0, a.jsxs)("div", {
-      className: h.buttonsContainer,
+      className: I.buttonsContainer,
       children: [(0, a.jsx)(b, {
         size: r.Button.Sizes.SMALL,
         onClick: L,
         className: i()({
-          [h.buttonHighlighted]: p
+          [I.buttonHighlighted]: p
         }),
         children: g.default.Messages.USER_SETTINGS_CHANGE_PROFILE_EFFECT
       }), j && (0, a.jsx)(r.Button, {
-        className: h.removeButton,
+        className: I.removeButton,
         color: r.Button.Colors.PRIMARY,
         look: r.Button.Looks.LINK,
         size: r.Button.Sizes.SMALL,

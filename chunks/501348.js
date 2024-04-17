@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("627845"),
   _ = s("514361"),
   g = s("605236"),
-  h = s("786761"),
-  I = s("3148"),
+  I = s("786761"),
+  h = s("3148"),
   N = s("739566"),
   p = s("753206"),
   C = s("594174"),
@@ -58,36 +58,36 @@ let F = {
   V = "1337",
   Y = e => {
     let t = 0;
-    return [(0, h.createMessageRecord)({
-      ...(0, I.default)({
+    return [(0, I.createMessageRecord)({
+      ...(0, h.default)({
         channelId: V,
         content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_1
       }),
       state: P.MessageStates.SENT,
       id: "".concat(t++)
-    }), (0, h.createMessageRecord)({
-      ...(0, I.default)({
+    }), (0, I.createMessageRecord)({
+      ...(0, h.default)({
         channelId: V,
         content: (0, d.isThemeDark)(e) ? U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_DARK : U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_LIGHT
       }),
       state: P.MessageStates.SENT,
       id: "".concat(t++)
-    }), (0, h.createMessageRecord)({
-      ...(0, I.default)({
+    }), (0, I.createMessageRecord)({
+      ...(0, h.default)({
         channelId: V,
         content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_3
       }),
       state: P.MessageStates.SENT,
       id: "".concat(t++)
-    }), (0, h.createMessageRecord)({
-      ...(0, I.default)({
+    }), (0, I.createMessageRecord)({
+      ...(0, h.default)({
         channelId: V,
         content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_4
       }),
       state: P.MessageStates.SENT,
       id: "".concat(t++)
-    }), (0, h.createMessageRecord)({
-      ...(0, I.default)({
+    }), (0, I.createMessageRecord)({
+      ...(0, h.default)({
         channelId: V,
         content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_5
       }),

@@ -21,8 +21,8 @@ var n = s("512722"),
   m = s("134795"),
   _ = s("610966"),
   g = s("513901"),
-  h = s("451392"),
-  I = s("906364"),
+  I = s("451392"),
+  h = s("906364"),
   N = s("676934"),
   p = s("350327"),
   C = s("621853"),
@@ -86,7 +86,7 @@ function L() {
       currentGlobalName: U.globalName,
       pendingGlobalName: G,
       onGlobalNameChange: r.setPendingGlobalNameName
-    }), (0, a.jsx)(I.default, {
+    }), (0, a.jsx)(h.default, {
       sectionTitle: v.default.Messages.USER_SETTINGS_PRONOUNS,
       errors: Y.pronouns,
       onPronounsChange: p.setPendingPronouns,
@@ -110,7 +110,7 @@ function L() {
         errors: Y.banner,
         onBannerChange: p.setPendingBanner,
         forcedDivider: !0
-      }, "banner"), (0, a.jsx)(h.default, {
+      }, "banner"), (0, a.jsx)(I.default, {
         user: U,
         pendingAvatar: B,
         pendingColors: V,

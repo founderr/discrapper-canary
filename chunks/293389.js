@@ -16,8 +16,8 @@ var a = s("735250"),
   m = s("186095"),
   _ = s("797717"),
   g = s("546591"),
-  h = s("794358"),
-  I = s("880008"),
+  I = s("794358"),
+  h = s("880008"),
   N = s("795295"),
   p = s("169278"),
   C = s("931003"),
@@ -189,12 +189,12 @@ function F(e) {
     }), function() {
       let {
         detectable: e
-      } = m, t = e ? (0, a.jsx)(h.default, {
+      } = m, t = e ? (0, a.jsx)(I.default, {
         className: L.toggleIconOn,
         foreground: L.fill,
         width: 24,
         height: 24
-      }) : (0, a.jsx)(I.default, {
+      }) : (0, a.jsx)(h.default, {
         className: L.toggleIconOff,
         background: L.fill,
         foreground: L.fill,

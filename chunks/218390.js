@@ -16,8 +16,8 @@ var a = s("735250"),
   m = s("821849"),
   _ = s("230711"),
   g = s("497321"),
-  h = s("634894"),
-  I = s("410030"),
+  I = s("634894"),
+  h = s("410030"),
   N = s("100527"),
   p = s("906732"),
   C = s("211242"),
@@ -56,7 +56,7 @@ function X() {
     {
       annualDiscountPercentage: n
     } = (0, U.getAnnualDiscountsExperimentConfig)("PremiumManagementSettings"),
-    l = (0, I.default)();
+    l = (0, h.default)();
   if (null == e || null == e.planIdFromItems) return null;
   let r = null != e.trialId,
     u = e.planIdFromItems === Y.SubscriptionPlans.PREMIUM_YEAR_TIER_2,
@@ -212,12 +212,12 @@ t.default = function() {
     c = (0, y.useLocalizedPromoQuery)(),
     f = null == c ? void 0 : c.countryCode,
     _ = (0, d.useStateFromStores)([R.default], () => R.default.enabled),
-    I = "PremiumManagementSettings";
-  (0, h.useTriggerDebuggingAA)({
-    location: I + " auto on",
+    h = "PremiumManagementSettings";
+  (0, I.useTriggerDebuggingAA)({
+    location: h + " auto on",
     autoTrackExposure: !0
-  }), (0, h.useTriggerDebuggingAA)({
-    location: I + " auto off",
+  }), (0, I.useTriggerDebuggingAA)({
+    location: h + " auto off",
     autoTrackExposure: !1
   }), (0, B.useMaybeFetchReferralsRemaining)("PremiumManagementSettings");
   let x = (0, V.useIsEligibleSenderForReferralProgram)("PremiumManagementSettings");

@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("197115"),
   _ = s("350327"),
   g = s("318661"),
-  h = s("996073"),
-  I = s("25990"),
+  I = s("996073"),
+  h = s("25990"),
   N = s("466111"),
   p = s("626135"),
   C = s("74538"),
@@ -56,17 +56,17 @@ function B(e) {
     tryItOutBanner: q,
     tryItOutAvatarDecoration: Z,
     tryItOutProfileEffectId: X
-  } = (0, l.useStateFromStoresObject)([I.default], () => {
-    let e = I.default.getAllPending(),
-      t = I.default.getErrors(),
-      s = I.default.getAllTryItOut();
+  } = (0, l.useStateFromStoresObject)([h.default], () => {
+    let e = h.default.getAllPending(),
+      t = h.default.getErrors(),
+      s = h.default.getAllTryItOut();
     return {
       ...e,
       ...s,
       errors: t
     }
   }), J = (0, c.default)(Z), $ = (0, S.default)(X), ee = n.useRef(null);
-  (0, h.default)(ee, b.ProfileCustomizationScrollPositions.TRY_IT_OUT);
+  (0, I.default)(ee, b.ProfileCustomizationScrollPositions.TRY_IT_OUT);
   let et = (0, g.default)(F.id),
     es = null == et ? void 0 : et.getPreviewBio(K),
     {

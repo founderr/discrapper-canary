@@ -25,15 +25,15 @@ function g(e) {
     user: t,
     showOverlay: s,
     children: g
-  } = e, h = (0, i.default)(), {
-    analyticsLocations: I
+  } = e, I = (0, i.default)(), {
+    analyticsLocations: h
   } = (0, o.default)(r.default.PREMIUM_UPSELL_OVERLAY);
   return (n.useEffect(() => {
     s && u.default.track(S.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      location_stack: I,
+      location_stack: h,
       type: E.PremiumUpsellTypes.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_INLINE
     })
-  }, [s, I]), s) ? (0, a.jsxs)("div", {
+  }, [s, h]), s) ? (0, a.jsxs)("div", {
     className: f.upsellOverlayContainer,
     children: [(0, a.jsx)("div", {
       children: g
@@ -49,7 +49,7 @@ function g(e) {
             case S.ThemeTypes.LIGHT:
               return _
           }
-        }(h)
+        }(I)
       }), (0, a.jsxs)("div", {
         className: f.upsellTextContainer,
         children: [(0, a.jsx)(l.Text, {

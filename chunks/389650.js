@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("612226"),
   _ = s("714338"),
   g = s("924557"),
-  h = s("74299"),
-  I = s("131951"),
+  I = s("74299"),
+  h = s("131951"),
   N = s("556296"),
   p = s("808506"),
   C = s("186095"),
@@ -389,7 +389,7 @@ class H extends n.PureComponent {
 
 function V() {
   let e = (0, d.useStateFromStores)([N.default], () => N.default.getState()),
-    t = (0, d.useStateFromStores)([I.default], () => (0, h.default)(I.default)),
+    t = (0, d.useStateFromStores)([h.default], () => (0, I.default)(h.default)),
     s = (0, d.useStateFromStores)([p.default], () => p.default.isSupported()),
     n = (0, g.useEnableClips)();
   return (0, a.jsx)(H, {

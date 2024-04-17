@@ -1,40 +1,40 @@
 "use strict";
-t.r(n), t.d(n, {
+n.r(t), n.d(t, {
   default: function() {
     return C
   }
 });
-var l = t("735250"),
-  a = t("470079"),
-  s = t("120356"),
-  u = t.n(s),
-  o = t("911969"),
-  r = t("454585"),
-  i = t("937889"),
-  d = t("970184"),
-  c = t("870456"),
-  m = t("308059"),
-  p = t("931093");
+var l = n("735250"),
+  a = n("470079"),
+  s = n("120356"),
+  o = n.n(s),
+  u = n("911969"),
+  r = n("454585"),
+  i = n("937889"),
+  d = n("970184"),
+  c = n("870456"),
+  m = n("308059"),
+  p = n("931093");
 
 function f(e) {
   let {
-    item: n
+    item: t
   } = e, {
-    content: t,
+    content: n,
     style: s
-  } = n, f = function(e) {
-    let n = (0, d.useComponentStateContext)();
+  } = t, f = function(e) {
+    let t = (0, d.useComponentStateContext)();
     return (0, a.useMemo)(() => {
-      let t;
-      return null === n ? null : (t = null != n.message ? (0, i.getInitialParserStateFromMessage)(n.message, c.TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS) : (0, i.getInitialParserState)({
-        channelId: n.channelId,
+      let n;
+      return null === t ? null : (n = null != t.message ? (0, i.getInitialParserStateFromMessage)(t.message, c.TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS) : (0, i.getInitialParserState)({
+        channelId: t.channelId,
         renderOptions: c.TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS
-      }), r.default.parse(e, !0, t))
-    }, [e, n])
-  }(t);
+      }), r.default.parse(e, !0, n))
+    }, [e, t])
+  }(n);
   return (0, l.jsx)("div", {
-    className: u()([p.markup, m.markdownContainer, {
-      [m.contextText]: s === o.TextDisplayContentStyle.CONTEXT
+    className: o()([p.markup, m.markdownContainer, {
+      [m.contextText]: s === u.TextDisplayContentStyle.CONTEXT
     }]),
     children: f
   })
@@ -42,13 +42,13 @@ function f(e) {
 
 function C(e) {
   let {
-    items: n,
-    className: t
+    items: t,
+    className: n
   } = e;
   return (0, l.jsx)("div", {
-    className: t,
-    children: n.map((e, n) => (0, l.jsx)(f, {
+    className: n,
+    children: t.map((e, t) => (0, l.jsx)(f, {
       item: e
-    }, n))
+    }, t))
   })
 }

@@ -1,21 +1,21 @@
 "use strict";
-t.r(n), t.d(n, {
+n.r(t), n.d(t, {
   default: function() {
     return d
   }
-}), t("47120");
-var l = t("735250"),
-  a = t("470079"),
-  s = t("481060"),
-  u = t("911969"),
-  o = t("970184"),
-  r = t("293979"),
-  i = t("561684");
+}), n("47120");
+var l = n("735250"),
+  a = n("470079"),
+  s = n("481060"),
+  o = n("911969"),
+  u = n("970184"),
+  r = n("293979"),
+  i = n("561684");
 
 function d(e) {
-  let n;
+  let t;
   let {
-    type: t,
+    type: n,
     style: d,
     label: c,
     placeholder: m,
@@ -27,13 +27,13 @@ function d(e) {
     state: N,
     executeStateUpdate: h,
     error: T
-  } = (0, o.useComponentState)(e, null != S ? {
-    type: t,
+  } = (0, u.useComponentState)(e, null != S ? {
+    type: n,
     value: S
   } : void 0), x = (0, r.useIsFirstTextInputInModal)(e.id);
   a.useEffect(() => {
-    (null == N ? void 0 : N.type) === t && v(N.value)
-  }, [t, N]);
+    (null == N ? void 0 : N.type) === n && v(N.value)
+  }, [n, N]);
   let y = {
     name: c,
     value: E,
@@ -43,20 +43,20 @@ function d(e) {
     required: C,
     onChange: e => {
       v(e), h({
-        type: t,
+        type: n,
         value: e
       })
     },
     autoFocus: x
   };
   switch (d) {
-    case u.TextComponentStyle.SMALL:
-      n = (0, l.jsx)(s.TextInput, {
+    case o.TextComponentStyle.SMALL:
+      t = (0, l.jsx)(s.TextInput, {
         ...y
       });
       break;
-    case u.TextComponentStyle.PARAGRAPH:
-      n = (0, l.jsx)(s.TextArea, {
+    case o.TextComponentStyle.PARAGRAPH:
+      t = (0, l.jsx)(s.TextArea, {
         ...y
       })
   }
@@ -65,6 +65,6 @@ function d(e) {
     required: C,
     className: i.formItem,
     error: T,
-    children: n
+    children: t
   })
 }

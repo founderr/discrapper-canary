@@ -21,8 +21,8 @@ var n = s("990547"),
   m = s("574755"),
   _ = s("377171"),
   g = s("621628"),
-  h = s("18438"),
-  I = s("778825"),
+  I = s("18438"),
+  h = s("778825"),
   N = s("351780"),
   p = s("231765"),
   C = s("813732"),
@@ -75,8 +75,8 @@ var n = s("990547"),
   em = s("200645"),
   e_ = s("287490"),
   eg = s("168308"),
-  eh = s("277329"),
-  eI = s("674116"),
+  eI = s("277329"),
+  eh = s("674116"),
   eN = s("981631"),
   ep = s("689938"),
   eC = s("480261");
@@ -104,7 +104,7 @@ function eO(e) {
     section: eN.UserSettingsSections.GAMES,
     label: ep.default.Messages.GAMES,
     ariaLabel: ep.default.Messages.GAMES,
-    element: eh.default,
+    element: eI.default,
     predicate: () => eD
   }, {
     section: eN.UserSettingsSections.PROFILE_CUSTOMIZATION,
@@ -116,12 +116,12 @@ function eO(e) {
       text: ep.default.Messages.NEW
     }),
     notice: {
-      stores: [v.default, I.default],
+      stores: [v.default, h.default],
       element: A.default
     },
     onSettingsClose: () => {
       o.default.wait(() => {
-        (0, h.resetAndCloseGuildIdentityForm)(), (0, u.resetAndCloseUserProfileForm)(), c.default.clearSubsection(eN.UserSettingsSections.PROFILE_CUSTOMIZATION)
+        (0, I.resetAndCloseGuildIdentityForm)(), (0, u.resetAndCloseUserProfileForm)(), c.default.clearSubsection(eN.UserSettingsSections.PROFILE_CUSTOMIZATION)
       })
     }
   }, {
@@ -231,7 +231,7 @@ function eO(e) {
   }, {
     section: eN.UserSettingsSections.VOICE,
     label: ep.default.Messages.VOICE_AND_VIDEO,
-    element: eI.default,
+    element: eh.default,
     predicate: () => M.default.isSupported()
   }, {
     section: eN.UserSettingsSections.POGGERMODE,
