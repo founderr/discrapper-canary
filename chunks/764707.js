@@ -1,16 +1,16 @@
 "use strict";
 r.r(t), r("47120");
 var o = r("979590"),
-  a = r.n(o),
-  n = r("399606"),
+  n = r.n(o),
+  a = r("399606"),
   l = r("607070"),
   s = r("168631");
 let i = (e, t) => {
     let r = e.toRgb(),
       o = t.toRgb(),
-      [n, l, i] = (0, s.getValueInColorGradientByPercentage)([r.r, r.g, r.b], [o.r, o.g, o.b], 50);
-    return a()({
-      r: n,
+      [a, l, i] = (0, s.getValueInColorGradientByPercentage)([r.r, r.g, r.b], [o.r, o.g, o.b], 50);
+    return n()({
+      r: a,
       g: l,
       b: i
     })
@@ -43,16 +43,16 @@ let i = (e, t) => {
     let {
       h: r,
       s: o,
-      l: n
+      l: a
     } = e.toHsl();
-    return a()({
+    return n()({
       h: r,
       s: o * t,
-      l: n
+      l: a
     })
   };
 t.default = e => t => {
-  let r = (0, n.useStateFromStores)([l.default], () => l.default.saturation);
+  let r = (0, a.useStateFromStores)([l.default], () => l.default.saturation);
   if (null == t) return {};
   let o = {
     backgroundColors: c(e, t.backgroundColors),
@@ -60,8 +60,7 @@ t.default = e => t => {
     confettiColors: t.confettiColors
   };
   return 1 === r ? {
-    ...o,
-    isDarkText: !!(null != o.backgroundColors && o.backgroundColors.secondary.isLight())
+    ...o
   } : {
     backgroundColors: null != o.backgroundColors ? {
       primary: d(o.backgroundColors.primary, r),
@@ -74,7 +73,6 @@ t.default = e => t => {
       secondary: d(o.buttonColors.secondary, r),
       text: d(o.buttonColors.text, r)
     } : void 0,
-    confettiColors: o.confettiColors.map(e => d(e, r)),
-    isDarkText: !!(null != o.backgroundColors && o.backgroundColors.secondary.isLight())
+    confettiColors: o.confettiColors.map(e => d(e, r))
   }
 }
