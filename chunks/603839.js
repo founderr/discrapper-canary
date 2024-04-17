@@ -20,7 +20,7 @@ t.default = e => {
     gameId: C
   } = e, m = (0, r.useStateFromStores)([d.default], () => null == d.default.getStateForGuild(t).progress), S = (0, r.useStateFromStores)([o.default], () => o.default.useReducedMotion), [p, I] = s.useState(m && !S ? h.ClanSetupModalPages.INTRO_ANIMATION : h.ClanSetupModalPages.SETUP);
   s.useEffect(() => {
-    null != C && (0, u.updateClanSettings)(t, {
+    null != C && (0, u.updateClanSetup)(t, {
       requiredGameId: C
     })
   }, [C, t]);

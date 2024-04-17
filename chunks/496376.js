@@ -179,11 +179,11 @@ t.default = e => {
   s.useEffect(() => {
     u.default.getDetectableGames()
   }, []);
-  let V = s.useCallback(e => E.updateClanSettings(t, {
+  let V = s.useCallback(e => E.updateClanSetup(t, {
       currentStep: e,
       furthestStep: null == k || e > k ? e : k
     }), [t, k]),
-    Y = s.useCallback(e => E.updateClanSettings(t, e), [t]),
+    Y = s.useCallback(e => E.updateClanSetup(t, e), [t]),
     W = s.useCallback(() => {
       B(!1), setTimeout(() => a(R.ClanSetupModalPages.SIGN), 199)
     }, [a]);

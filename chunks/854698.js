@@ -51,6 +51,9 @@ n.r(t), n.d(t, {
   getValidWeekdays: function() {
     return F
   },
+  getValidWeekends: function() {
+    return x
+  },
   hasScheduleChanges: function() {
     return j
   },
