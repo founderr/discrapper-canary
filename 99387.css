@@ -89644,7 +89644,8 @@ div:has(>div>.modal__06f49) {
 .modalInner_e6f542 {
     display: flex;
     flex-direction: column;
-    width: 440px
+    width: 440px;
+    background-color: var(--background-floating)
 }
 
 .modalCloseButton__60130 {
@@ -89676,10 +89677,6 @@ div:has(>div>.modal__06f49) {
 .decorationBanner_f1b54c {
     position: absolute;
     background-position: 50%50%
-}
-
-.bannerBackgroundFallback_ea4dd2 {
-    background-color: var(--background-secondary)
 }
 
 .bannerContainer__879e1 {
