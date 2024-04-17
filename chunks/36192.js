@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("246946"),
   _ = s("594174"),
   g = s("460562"),
-  I = s("465670"),
-  h = s("736921"),
+  h = s("465670"),
+  I = s("736921"),
   N = s("169278"),
   p = s("823379"),
   C = s("981631"),
@@ -44,12 +44,12 @@ function R() {
       clearTimeout(e), (0, E.clearAuthSessions)()
     }
   }, []);
-  let I = () => {
+  let h = () => {
       o.HTTP.post({
         url: C.Endpoints.AUTH_SESSION_NOTIFICATIONS_DEBUG
       })
     },
-    [h, N] = n.useState(new Set);
+    [I, N] = n.useState(new Set);
   return l ? (0, a.jsx)(S.default, {}) : (e = null == t && 0 === s.length ? c ? (0, a.jsx)("div", {
     className: x.loading,
     children: (0, a.jsx)(u.Spinner, {})
@@ -71,17 +71,17 @@ function R() {
         className: x.otherSessions,
         children: [s.map(e => (0, a.jsx)(M, {
           session: e,
-          useChecks: h.size > 0,
-          checked: h.has(e.id_hash),
+          useChecks: I.size > 0,
+          checked: I.has(e.id_hash),
           setChecked: t => {
-            let s = new Set(h);
+            let s = new Set(I);
             t ? s.add(e.id_hash) : s.delete(e.id_hash), N(s)
           }
         }, e.id_hash)), (null == i ? void 0 : i.mfaEnabled) ? null : (0, a.jsx)(v, {})]
       })]
     }), s.length > 0 ? (0, a.jsxs)(u.FormSection, {
       tag: u.FormTitleTags.H5,
-      title: h.size > 0 ? O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_TITLE : O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_TITLE,
+      title: I.size > 0 ? O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_TITLE : O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_TITLE,
       children: [(0, a.jsx)(u.FormText, {
         type: u.FormTextTypes.DESCRIPTION,
         children: O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_DESCRIPTION
@@ -91,10 +91,10 @@ function R() {
         size: u.Button.Sizes.SMALL,
         className: x.logOutAllButton,
         onClick: () => {
-          h.size > 0 ? (0, E.logOutSessions)(Array.from(h)) : (0, E.logOutSessions)(s.map(e => e.id_hash))
+          I.size > 0 ? (0, E.logOutSessions)(Array.from(I)) : (0, E.logOutSessions)(s.map(e => e.id_hash))
         },
-        children: h.size > 0 ? O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_ACTION.format({
-          count: h.size
+        children: I.size > 0 ? O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_ACTION.format({
+          count: I.size
         }) : O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_ACTION
       })]
     }) : null]
@@ -126,7 +126,7 @@ function R() {
           return (0, a.jsx)(u.Button, {
             size: u.Button.Sizes.SMALL,
             color: u.Button.Colors.PRIMARY,
-            onClick: I,
+            onClick: h,
             onMouseEnter: t,
             onMouseLeave: s,
             children: "Trigger Suspicious Sessions Notification"
@@ -159,7 +159,7 @@ function M(e) {
       case "ios":
       case "android":
         return {
-          text: e, icon: h.default
+          text: e, icon: I.default
         };
       default:
         return {
@@ -216,7 +216,7 @@ function M(e) {
         e.shiftKey ? null == c || c(!0) : (0, E.logOutSessions)(o.id_hash)
       },
       "aria-label": O.default.Messages.AUTH_SESSIONS_SESSION_LOG_OUT,
-      children: (0, a.jsx)(I.default, {})
+      children: (0, a.jsx)(h.default, {})
     })]
   }, o.id_hash)
 }

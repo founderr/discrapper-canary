@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("627845"),
   _ = s("514361"),
   g = s("605236"),
-  I = s("786761"),
-  h = s("3148"),
+  h = s("786761"),
+  I = s("3148"),
   N = s("739566"),
   p = s("753206"),
   C = s("594174"),
@@ -40,7 +40,7 @@ var a = s("735250"),
   y = s("357196"),
   B = s("794711");
 
-function F(e, t, s) {
+function G(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -48,7 +48,7 @@ function F(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-let G = {
+let F = {
     COZY: "cozy",
     COMPACT: "compact"
   },
@@ -58,36 +58,36 @@ let G = {
   V = "1337",
   Y = e => {
     let t = 0;
-    return [(0, I.createMessageRecord)({
-      ...(0, h.default)({
+    return [(0, h.createMessageRecord)({
+      ...(0, I.default)({
         channelId: V,
         content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_1
       }),
       state: P.MessageStates.SENT,
       id: "".concat(t++)
-    }), (0, I.createMessageRecord)({
-      ...(0, h.default)({
+    }), (0, h.createMessageRecord)({
+      ...(0, I.default)({
         channelId: V,
         content: (0, d.isThemeDark)(e) ? U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_DARK : U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_LIGHT
       }),
       state: P.MessageStates.SENT,
       id: "".concat(t++)
-    }), (0, I.createMessageRecord)({
-      ...(0, h.default)({
+    }), (0, h.createMessageRecord)({
+      ...(0, I.default)({
         channelId: V,
         content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_3
       }),
       state: P.MessageStates.SENT,
       id: "".concat(t++)
-    }), (0, I.createMessageRecord)({
-      ...(0, h.default)({
+    }), (0, h.createMessageRecord)({
+      ...(0, I.default)({
         channelId: V,
         content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_4
       }),
       state: P.MessageStates.SENT,
       id: "".concat(t++)
-    }), (0, I.createMessageRecord)({
-      ...(0, h.default)({
+    }), (0, h.createMessageRecord)({
+      ...(0, I.default)({
         channelId: V,
         content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_5
       }),
@@ -245,13 +245,13 @@ class W extends n.Component {
       children: [(0, a.jsx)(u.RadioGroup, {
         options: [{
           name: U.default.Messages.COZY_MODE,
-          value: G.COZY
+          value: F.COZY
         }, {
           name: U.default.Messages.COMPACT_MODE,
-          value: G.COMPACT
+          value: F.COMPACT
         }],
         onChange: this.handleMessageDisplayModeChange,
-        value: this.props.messageDisplayCompact ? G.COMPACT : G.COZY
+        value: this.props.messageDisplayCompact ? F.COMPACT : F.COZY
       }), (0, a.jsx)(u.FormSwitch, {
         value: this.props.messageDisplayCompact && this.props.displayCompactAvatars,
         disabled: !this.props.messageDisplayCompact,
@@ -314,15 +314,15 @@ class W extends n.Component {
     (0, T.setZoom)(e)
   }
   constructor(...e) {
-    super(...e), F(this, "darkMessages", Y(P.ThemeTypes.DARK)), F(this, "lightMessages", Y(P.ThemeTypes.LIGHT)), F(this, "handleDisplayCompactAvatarsChanged", e => {
+    super(...e), G(this, "darkMessages", Y(P.ThemeTypes.DARK)), G(this, "lightMessages", Y(P.ThemeTypes.LIGHT)), G(this, "handleDisplayCompactAvatarsChanged", e => {
       c.default.updatedUnsyncedSettings({
         displayCompactAvatars: e
       })
-    }), F(this, "handleMessageDisplayModeChange", e => {
+    }), G(this, "handleMessageDisplayModeChange", e => {
       let {
         value: t
       } = e;
-      v.MessageDisplayCompact.updateSetting(t === G.COMPACT), (0, T.setMessageGroupSpacing)()
+      v.MessageDisplayCompact.updateSetting(t === F.COMPACT), (0, T.setMessageGroupSpacing)()
     })
   }
 }

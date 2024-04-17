@@ -19,8 +19,8 @@ function u(e, t, n, u, c) {
   if (null == h) return null;
   let {
     icon: p,
-    title: m,
-    body: g
+    title: g,
+    body: m
   } = (0, s.makeTextChatNotification)(e, t, n), {
     trackView: E,
     trackClick: S
@@ -38,8 +38,8 @@ function u(e, t, n, u, c) {
   return {
     colorScheme: l.default.ColorSchemes.PRIMARY,
     icon: p,
-    title: m,
-    body: g,
+    title: g,
+    body: m,
     hint: e => (0, l.renderKeybindHint)(e, (0, o.getOverlayKeybind)(), d.default.Messages.OVERLAY_UNLOCK_TO_JOIN),
     onNotificationShow: () => {
       E()

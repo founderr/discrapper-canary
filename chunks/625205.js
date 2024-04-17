@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return h
   }
 }), s("47120");
 var a = s("735250");
@@ -22,12 +22,12 @@ var n = s("392711"),
   _ = s("564129"),
   g = s("794711");
 
-function I() {
+function h() {
   let e, t;
   let n = (0, i.useStateFromStores)([E.default], () => E.default.theme),
     {
-      canSetInputDevice: I,
-      canSetOutputDevice: h,
+      canSetInputDevice: h,
+      canSetOutputDevice: I,
       inputDeviceId: N,
       outputDeviceId: p
     } = (0, i.useStateFromStoresObject)([c.default], () => ({
@@ -38,13 +38,13 @@ function I() {
     })),
     C = (0, i.useStateFromStores)([c.default], () => c.default.getInputDevices()),
     A = (0, i.useStateFromStores)([c.default], () => c.default.getOutputDevices());
-  !I && (e = (0, a.jsx)(o.FormText, {
+  !h && (e = (0, a.jsx)(o.FormText, {
     type: o.FormText.Types.DESCRIPTION,
     className: g.marginTop8,
     children: m.default.Messages.BROWSER_INPUT_DEVICE_WARNING.format({
       onDownloadClick: () => (0, T.openDownloadAppsModal)("Help Text Input Devices")
     })
-  })), !h && (t = (0, a.jsx)(o.FormText, {
+  })), !I && (t = (0, a.jsx)(o.FormText, {
     type: o.FormText.Types.DESCRIPTION,
     className: g.marginTop8,
     children: m.default.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({

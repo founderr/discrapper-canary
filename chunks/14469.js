@@ -1,5 +1,5 @@
-var a = s("263604"),
-  l = s("278759");
+var i = n("263604"),
+  a = n("278759");
 e.exports = function(e) {
-  return l(a(e).toLowerCase())
+  return a(i(e).toLowerCase())
 }

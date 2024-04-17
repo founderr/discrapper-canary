@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-var s, a, l, i, r = n("442837"),
+var a, l, s, i, r = n("442837"),
   o = n("570140");
 let u = "UPDATE_NOT_AVAILABLE";
 
@@ -12,12 +12,12 @@ class c extends(i = r.default.Store) {
     return u
   }
 }
-l = "AutoUpdateStore", (a = "displayName") in(s = c) ? Object.defineProperty(s, a, {
-  value: l,
+s = "AutoUpdateStore", (l = "displayName") in(a = c) ? Object.defineProperty(a, l, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = l, t.default = new c(o.default, {
+}) : a[l] = s, t.default = new c(o.default, {
   CHECKING_FOR_UPDATES: d,
   UPDATE_NOT_AVAILABLE: d,
   UPDATE_AVAILABLE: d,

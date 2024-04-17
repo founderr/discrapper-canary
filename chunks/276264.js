@@ -48,8 +48,8 @@ t.default = function(e) {
     activities: w,
     applicationStream: B,
     status: k,
-    shouldAnimateStatus: V = !1,
-    isMobile: F,
+    shouldAnimateStatus: F = !1,
+    isMobile: V,
     premiumSince: x,
     channel: H,
     guildId: Y,
@@ -126,14 +126,14 @@ t.default = function(e) {
   }, eO = () => (0, i.jsxs)(i.Fragment, {
     children: [ep(), em(), eN()]
   }), eR = (e, t) => {
-    let n = V ? l.AnimatedAvatar : l.Avatar,
+    let n = F ? l.AnimatedAvatar : l.Avatar,
       r = (0, u.default)(w) ? C.StatusTypes.STREAMING : k;
     return r = t ? void 0 : r, (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(n, {
         ...eE,
         size: l.AvatarSizes.SIZE_32,
         src: ec,
-        isMobile: F,
+        isMobile: V,
         isTyping: P,
         status: r,
         "aria-label": e.username,

@@ -16,8 +16,8 @@ var i = n("735250"),
   f = n("287734"),
   h = n("324315"),
   p = n("236756"),
-  m = n("933557"),
-  g = n("430824"),
+  g = n("933557"),
+  m = n("430824"),
   E = n("131951"),
   S = n("699516"),
   v = n("594174"),
@@ -68,7 +68,7 @@ class w extends a.PureComponent {
   renderChannelLink(e) {
     let {
       guild: t
-    } = this.props, n = (0, m.computeChannelName)(e, v.default, S.default), a = null != t ? "".concat(n, " / ").concat(t.name) : n, l = null != t ? t.id : L.ME;
+    } = this.props, n = (0, g.computeChannelName)(e, v.default, S.default), a = null != t ? "".concat(n, " / ").concat(t.name) : n, l = null != t ? t.id : L.ME;
     return (0, i.jsx)(o.Link, {
       to: L.Routes.CHANNEL(l),
       onClick: t => {
@@ -171,7 +171,7 @@ function V(e) {
     lobbyId: n,
     channel: a,
     ...l
-  } = e, s = (0, r.useStateFromStores)([g.default], () => g.default.getGuild(null == a ? void 0 : a.getGuildId())), o = (0, r.useStateFromStores)([T.default], () => null != a && T.default.hasVideo(a.id)), [d, u] = (0, r.useStateFromStoresArray)([E.default], () => [E.default.isSelfMute(t) || E.default.isSelfMutedTemporarily(t), E.default.isSelfDeaf(t)]), [c, f, h] = (0, r.useStateFromStoresArray)([y.default], () => [y.default.getConnectionState(n), y.default.getLastPing(n), y.default.getQuality(n)]);
+  } = e, s = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(null == a ? void 0 : a.getGuildId())), o = (0, r.useStateFromStores)([T.default], () => null != a && T.default.hasVideo(a.id)), [d, u] = (0, r.useStateFromStoresArray)([E.default], () => [E.default.isSelfMute(t) || E.default.isSelfMutedTemporarily(t), E.default.isSelfDeaf(t)]), [c, f, h] = (0, r.useStateFromStoresArray)([y.default], () => [y.default.getConnectionState(n), y.default.getLastPing(n), y.default.getQuality(n)]);
   return (0, i.jsx)(w, {
     ...l,
     context: t,

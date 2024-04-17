@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("358085"),
   _ = s("894939"),
   g = s("321499"),
-  I = s("710808"),
-  h = s("625205"),
+  h = s("710808"),
+  I = s("625205"),
   N = s("325808"),
   p = s("823087"),
   C = s("546997"),
@@ -62,8 +62,8 @@ function y() {
     silenceWarning: v,
     debugLoggingEnabled: y,
     legacyAudioSubsystemSupported: B,
-    experimentalAudioSubsystemSupported: F,
-    qosSupported: G,
+    experimentalAudioSubsystemSupported: G,
+    qosSupported: F,
     attenuationSupported: k
   } = (0, r.useStateFromStoresObject)([S.default], () => ({
     inputMode: S.default.getMode(),
@@ -87,7 +87,7 @@ function y() {
   }, [H, w]), (0, a.jsxs)(o.FormSection, {
     tag: o.FormTitleTags.H1,
     title: L.default.Messages.VOICE_SETTINGS,
-    children: [(0, a.jsx)(h.default, {}), (0, a.jsx)(R.default, {}), (0, a.jsx)(p.default, {}), (0, a.jsx)(o.FormText, {
+    children: [(0, a.jsx)(I.default, {}), (0, a.jsx)(R.default, {}), (0, a.jsx)(p.default, {}), (0, a.jsx)(o.FormText, {
       className: P.marginBottom20,
       type: o.FormText.Types.DESCRIPTION,
       children: L.default.Messages.FORM_HELP_VOICE_VIDEO_TROUBLESHOOTING_GUIDE.format({
@@ -108,7 +108,7 @@ function y() {
         className: P.marginBottom20,
         children: L.default.Messages.SETTINGS_ADVANCED
       }),
-      children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(O.default, {}), G && (0, a.jsx)(o.FormSection, {
+      children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(O.default, {}), F && (0, a.jsx)(o.FormSection, {
         className: P.marginBottom20,
         title: L.default.Messages.FORM_LABEL_QOS,
         children: (0, a.jsx)(o.FormSwitch, {
@@ -145,7 +145,7 @@ function y() {
           onChange: e => d.default.setAttenuation(s, l, e),
           children: L.default.Messages.ATTENUATE_WHILE_SPEAKING_OTHERS
         })]
-      }), (B || F) && (0, a.jsxs)(o.FormSection, {
+      }), (B || G) && (0, a.jsxs)(o.FormSection, {
         className: P.marginBottom20,
         title: L.default.Messages.FORM_LABEL_SUBSYSTEM,
         children: [(0, a.jsx)(o.SingleSelect, {
@@ -163,7 +163,7 @@ function y() {
               value: D.AudioSubsystems.EXPERIMENTAL,
               label: "Experimental"
             }), s
-          }(B, F),
+          }(B, G),
           onChange: e => {
             U(L.default.Messages.SWITCH_SUBSYSTEM, L.default.Messages.SWITCH_SUBSYSTEM_BODY, () => d.default.setAudioSubsystem(e))
           }
@@ -180,7 +180,7 @@ function y() {
             children: L.default.Messages.DISPLAY_SILENCE_WARNING
           })
         })]
-      }), V && (0, a.jsx)(I.default, {}), (0, a.jsx)(o.FormItem, {
+      }), V && (0, a.jsx)(h.default, {}), (0, a.jsx)(o.FormItem, {
         children: (0, a.jsx)(o.Button, {
           look: o.Button.Looks.OUTLINED,
           color: o.Button.Colors.RED,

@@ -50,7 +50,7 @@ t.default = r.forwardRef(function(e, t) {
   if (r.useEffect(() => {
       L(y.isVisible)
     }, [L, y.isVisible]), !y.isVisible || null == y.query || void 0 === B) return null;
-  let V = null !== (s = y.query.typeInfo.renderResults({
+  let F = null !== (s = y.query.typeInfo.renderResults({
     results: y.query.results,
     selectedIndex: y.selectedIndex,
     channel: R,
@@ -60,8 +60,8 @@ t.default = r.forwardRef(function(e, t) {
     onHover: e => P.onResultHover(e),
     onClick: e => P.onResultClick(e)
   })) && void 0 !== s ? s : null;
-  if (null == V) return null;
-  let F = {
+  if (null == F) return null;
+  let V = {
       [m.autocompleteAttached]: null == B,
       [m.autocompletePopout]: null != B,
       [m.bottom]: null == B && "bottom" === e.position
@@ -70,7 +70,7 @@ t.default = r.forwardRef(function(e, t) {
   null != B && (x = (null === (N = C.autocomplete) || void 0 === N ? void 0 : N.small) ? 200 : (null === (p = y.query) || void 0 === p ? void 0 : p.type) === S.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), x = Math.min(window.innerHeight - 175, x);
   let H = (0, i.jsx)(c.default, {
     id: D,
-    className: a()(m.autocomplete, F),
+    className: a()(m.autocomplete, V),
     innerClassName: m.autocompleteInner,
     onMouseDown: e => e.preventDefault(),
     children: (0, i.jsx)(o.ListNavigatorProvider, {
@@ -94,7 +94,7 @@ t.default = r.forwardRef(function(e, t) {
             },
             role: "listbox",
             "aria-labelledby": (0, c.getAutocompleteTitleId)(D),
-            children: V
+            children: F
           })
         }
       })

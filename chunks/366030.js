@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return V
+    return F
   }
 }), n("536091"), n("47120");
 var i = n("735250"),
@@ -191,7 +191,7 @@ function k(e) {
   })
 }
 
-function V(e) {
+function F(e) {
   let {
     userId: t,
     messageId: n,

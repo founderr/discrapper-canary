@@ -12,8 +12,8 @@ var i = n("470079"),
   f = n("271383"),
   h = n("430824"),
   p = n("496675"),
-  m = n("944486"),
-  g = n("914010"),
+  g = n("944486"),
+  m = n("914010"),
   E = n("594174"),
   S = n("237997"),
   v = n("145597"),
@@ -48,10 +48,10 @@ class y extends i.Component {
     return null
   }
 }
-t.default = l.default.connectStores([g.default, m.default, h.default, E.default, S.default, c.default, p.default, f.default], () => {
+t.default = l.default.connectStores([m.default, g.default, h.default, E.default, S.default, c.default, p.default, f.default], () => {
   var e, t, n;
-  let i = g.default.getGuildId(),
-    l = m.default.getChannelId(i),
+  let i = m.default.getGuildId(),
+    l = g.default.getChannelId(i),
     s = h.default.getGuild(i),
     o = E.default.getCurrentUser(),
     r = null !== (t = c.default.getChannels(null == s ? void 0 : s.id)[c.GUILD_SELECTABLE_CHANNELS_KEY]) && void 0 !== t ? t : [],

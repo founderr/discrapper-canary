@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return a
+    return u
   }
-}), n("47120");
-var s = n("470079"),
-  i = n("974180"),
-  r = n("557177");
+}), s("47120");
+var a = s("470079"),
+  n = s("974180"),
+  r = s("557177");
 
-function a() {
-  let [e, t] = s.useState(!1), n = s.useRef(-1);
+function u() {
+  let [e, t] = a.useState(!1), s = a.useRef(-1);
   return {
-    playSound: s.useCallback(() => {
-      t(!0), r.playSound(i.MESSAGE_SOUND, i.MESSAGE_SOUND_VOLUME, () => {
-        clearTimeout(n.current), n.current = setTimeout(() => {
+    playSound: a.useCallback(() => {
+      t(!0), r.playSound(n.MESSAGE_SOUND, n.MESSAGE_SOUND_VOLUME, () => {
+        clearTimeout(s.current), s.current = setTimeout(() => {
           t(!1)
         }, 500)
       })

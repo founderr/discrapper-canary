@@ -1,14 +1,14 @@
 "use strict";
-var n, s;
-a.r(t), a.d(t, {
+var i, r;
+n.r(t), n.d(t, {
   CLAN_BADGE_PALETTE_PRESETS: function() {
-    return l
+    return s
   },
   ClanBadgeKind: function() {
-    return n
+    return i
   }
-}), (s = n || (n = {}))[s.SWORD = 0] = "SWORD", s[s.SWORD_1 = 1] = "SWORD_1", s[s.SWORD_2 = 2] = "SWORD_2", s[s.SWORD_3 = 3] = "SWORD_3", s[s.SWORD_4 = 4] = "SWORD_4", s[s.SWORD_5 = 5] = "SWORD_5", s[s.SWORD_6 = 6] = "SWORD_6", s[s.SWORD_7 = 7] = "SWORD_7", s[s.SWORD_8 = 8] = "SWORD_8", s[s.SWORD_9 = 9] = "SWORD_9", s[s.SWORD_10 = 10] = "SWORD_10", s[s.SWORD_11 = 11] = "SWORD_11", s[s.SWORD_12 = 12] = "SWORD_12", s[s.SWORD_13 = 13] = "SWORD_13", s[s.SWORD_14 = 14] = "SWORD_14", s[s.SWORD_15 = 15] = "SWORD_15", s[s.SWORD_16 = 16] = "SWORD_16", s[s.SWORD_17 = 17] = "SWORD_17", s[s.SWORD_18 = 18] = "SWORD_18", s[s.SWORD_19 = 19] = "SWORD_19", s[s.SWORD_20 = 20] = "SWORD_20";
-let l = [{
+}), (r = i || (i = {}))[r.SWORD = 0] = "SWORD", r[r.SWORD_1 = 1] = "SWORD_1", r[r.SWORD_2 = 2] = "SWORD_2", r[r.SWORD_3 = 3] = "SWORD_3", r[r.SWORD_4 = 4] = "SWORD_4", r[r.SWORD_5 = 5] = "SWORD_5", r[r.SWORD_6 = 6] = "SWORD_6", r[r.SWORD_7 = 7] = "SWORD_7", r[r.SWORD_8 = 8] = "SWORD_8", r[r.SWORD_9 = 9] = "SWORD_9", r[r.SWORD_10 = 10] = "SWORD_10", r[r.SWORD_11 = 11] = "SWORD_11", r[r.SWORD_12 = 12] = "SWORD_12", r[r.SWORD_13 = 13] = "SWORD_13", r[r.SWORD_14 = 14] = "SWORD_14", r[r.SWORD_15 = 15] = "SWORD_15", r[r.SWORD_16 = 16] = "SWORD_16", r[r.SWORD_17 = 17] = "SWORD_17", r[r.SWORD_18 = 18] = "SWORD_18", r[r.SWORD_19 = 19] = "SWORD_19", r[r.SWORD_20 = 20] = "SWORD_20";
+let s = [{
   primary: "#ff1c90",
   secondary: "#ff7fc0"
 }, {

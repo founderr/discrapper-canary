@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return G
   },
   getObscuredMediaForMessage: function() {
-    return F
+    return V
   },
   getShouldObscureForSetting: function() {
     return w
@@ -28,7 +28,7 @@ n.r(t), n.d(t, {
     return Q
   },
   isMediaObscured: function() {
-    return V
+    return F
   },
   isPendingScan: function() {
     return H
@@ -177,7 +177,7 @@ let k = e => {
   })
 };
 
-function V(e, t) {
+function F(e, t) {
   var n, i, r, s;
   if (!t) return !1;
   if (E.default.get("obscure_blur_effect_enabled")) return !0;
@@ -193,13 +193,13 @@ function V(e, t) {
   }
 }
 
-function F(e) {
+function V(e) {
   return B(e) ? {
-    obscuredAttachments: e.attachments.filter(e => V({
+    obscuredAttachments: e.attachments.filter(e => F({
       type: 0,
       media: e
     }, !0)),
-    obscuredEmbeds: e.embeds.filter(e => V({
+    obscuredEmbeds: e.embeds.filter(e => F({
       type: 1,
       media: e
     }, !0))

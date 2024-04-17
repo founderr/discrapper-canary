@@ -16,8 +16,8 @@ var a = s("735250"),
   m = s("821849"),
   _ = s("230711"),
   g = s("497321"),
-  I = s("634894"),
-  h = s("410030"),
+  h = s("634894"),
+  I = s("410030"),
   N = s("100527"),
   p = s("906732"),
   C = s("211242"),
@@ -35,8 +35,8 @@ var a = s("735250"),
   U = s("424082"),
   y = s("91802"),
   B = s("898997"),
-  F = s("197115"),
-  G = s("823188"),
+  G = s("197115"),
+  F = s("823188"),
   k = s("504865"),
   w = s("179984"),
   H = s("386733"),
@@ -56,7 +56,7 @@ function X() {
     {
       annualDiscountPercentage: n
     } = (0, U.getAnnualDiscountsExperimentConfig)("PremiumManagementSettings"),
-    l = (0, h.default)();
+    l = (0, I.default)();
   if (null == e || null == e.planIdFromItems) return null;
   let r = null != e.trialId,
     u = e.planIdFromItems === Y.SubscriptionPlans.PREMIUM_YEAR_TIER_2,
@@ -73,10 +73,10 @@ function X() {
       children: [(0, a.jsx)(D.default, {
         className: i()(z.tierTitle)
       }), E ? (0, a.jsxs)(a.Fragment, {
-        children: [(r || !u) && (0, a.jsx)(G.PremiumPillWithSparkles, {
+        children: [(r || !u) && (0, a.jsx)(F.PremiumPillWithSparkles, {
           text: r ? K.default.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED : K.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED,
           className: z.topRimPill,
-          colorOptions: (0, c.isThemeDark)(l) ? G.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : G.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL
+          colorOptions: (0, c.isThemeDark)(l) ? F.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : F.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL
         }), (r || !u) && (0, a.jsx)("div", {
           className: z.rimGlowTier2
         }), (0, a.jsx)(S.Heading, {
@@ -102,7 +102,7 @@ function X() {
       }) : (0, a.jsx)(k.default, {
         subscriptionTier: Y.PremiumSubscriptionSKUs.TIER_2,
         interval: m.interval
-      }), (0, a.jsx)(G.Tier2FeatureItems, {}), (0, a.jsx)(S.Button, {
+      }), (0, a.jsx)(F.Tier2FeatureItems, {}), (0, a.jsx)(S.Button, {
         className: z.tierCardButton,
         color: S.Button.Colors.WHITE,
         onClick: () => {
@@ -183,7 +183,7 @@ function J() {
         }),
         variant: "text-sm/normal",
         children: s ? K.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : K.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
-      }), (0, a.jsx)(F.default, {
+      }), (0, a.jsx)(G.default, {
         isGift: !0,
         className: i()(z.giftCardButton, s ? z.seasonalColor : z.giftCardButtonColor),
         look: S.Button.Looks.OUTLINED,
@@ -212,12 +212,12 @@ t.default = function() {
     c = (0, y.useLocalizedPromoQuery)(),
     f = null == c ? void 0 : c.countryCode,
     _ = (0, d.useStateFromStores)([R.default], () => R.default.enabled),
-    h = "PremiumManagementSettings";
-  (0, I.useTriggerDebuggingAA)({
-    location: h + " auto on",
+    I = "PremiumManagementSettings";
+  (0, h.useTriggerDebuggingAA)({
+    location: I + " auto on",
     autoTrackExposure: !0
-  }), (0, I.useTriggerDebuggingAA)({
-    location: h + " auto off",
+  }), (0, h.useTriggerDebuggingAA)({
+    location: I + " auto off",
     autoTrackExposure: !1
   }), (0, B.useMaybeFetchReferralsRemaining)("PremiumManagementSettings");
   let x = (0, V.useIsEligibleSenderForReferralProgram)("PremiumManagementSettings");

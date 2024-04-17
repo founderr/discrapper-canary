@@ -13,33 +13,33 @@ var s = n("735250"),
   u = n("924826"),
   d = n("722770"),
   c = n("442837"),
-  f = n("481060"),
-  E = n("607070"),
+  E = n("481060"),
+  f = n("607070"),
   _ = n("313889"),
-  m = n("825829"),
-  T = n("226192"),
-  I = n("36459"),
-  p = n("336197"),
-  h = n("937889"),
-  N = n("507418"),
-  S = n("348238"),
-  C = n("38267"),
-  A = n("496675"),
+  T = n("825829"),
+  I = n("226192"),
+  m = n("36459"),
+  N = n("336197"),
+  p = n("937889"),
+  S = n("507418"),
+  C = n("348238"),
+  A = n("38267"),
+  h = n("496675"),
   g = n("594174"),
   M = n("467679"),
-  R = n("263704"),
-  v = n("795295"),
-  O = n("288176"),
-  x = n("740727"),
-  L = n("622116"),
+  O = n("263704"),
+  R = n("795295"),
+  v = n("288176"),
+  L = n("740727"),
+  P = n("622116"),
   D = n("289565"),
-  P = n("778947"),
+  x = n("778947"),
   y = n("702346"),
   U = n("5192"),
   j = n("51144"),
   b = n("787374"),
-  B = n("981631"),
-  G = n("674563"),
+  G = n("981631"),
+  B = n("674563"),
   F = n("590433"),
   k = n("959517"),
   w = n("689938"),
@@ -73,21 +73,21 @@ function Y(e) {
 function K(e, t) {
   switch (e) {
     case _.AutomodAlertActionType.DELETE_USER_MESSAGE:
-      return (0, s.jsx)(x.default, {
+      return (0, s.jsx)(L.default, {
         width: 16,
         height: 16,
         className: H.alertActionIcon,
         ...t
       });
     case _.AutomodAlertActionType.SET_COMPLETED:
-      return (0, s.jsx)(R.default, {
+      return (0, s.jsx)(O.default, {
         width: 16,
         height: 16,
         className: i()(H.alertActionIcon, H.alertActionSetCompletedIcon),
         ...t
       });
     case _.AutomodAlertActionType.SUBMIT_FEEDBACK:
-      return (0, s.jsx)(v.default, {
+      return (0, s.jsx)(R.default, {
         width: 16,
         height: 16,
         className: i()(H.alertActionIcon),
@@ -135,7 +135,7 @@ function W(e) {
         return i
       }
     }(t, a, n);
-    return (0, s.jsx)(f.Tooltip, {
+    return (0, s.jsx)(E.Tooltip, {
       text: l,
       children: t => K(e, t)
     })
@@ -168,20 +168,20 @@ function Q(e) {
     avatarSrc: o,
     eventHandlers: {
       onMouseEnter: g,
-      onMouseLeave: R
+      onMouseLeave: O
     }
   } = (0, b.useAutomodAvatar)(!0), {
-    onFocus: v,
-    ...x
+    onFocus: R,
+    ...L
   } = (0, u.useListItem)(null != t ? t : ""), {
     isFocused: U,
     handleFocus: j,
     handleBlur: K
-  } = (0, S.useFocusInside)(v), W = (0, c.useStateFromStores)([E.default], () => E.default.keyboardModeEnabled), Q = (0, c.useStateFromStores)([A.default], () => A.default.can(B.Permissions.MANAGE_MESSAGES, r), [r]), {
+  } = (0, C.useFocusInside)(R), W = (0, c.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), Q = (0, c.useStateFromStores)([h.default], () => h.default.can(G.Permissions.MANAGE_MESSAGES, r), [r]), {
     ruleName: q,
-    embedChannel: Z,
-    decisionId: X,
-    keywordMatchedContent: J,
+    embedChannel: J,
+    decisionId: Z,
+    keywordMatchedContent: X,
     keyword: $,
     content: ee,
     flaggedMessageId: et,
@@ -189,7 +189,7 @@ function Q(e) {
     decisionReason: es,
     alertActionsExecution: ea,
     quarantineType: el
-  } = (0, m.default)(l), ei = a.useMemo(() => (0, h.renderAutomodMessageMarkup)(ee, J, r.id), [ee, J, r]), {
+  } = (0, T.default)(l), ei = a.useMemo(() => (0, p.renderAutomodMessageMarkup)(ee, X, r.id), [ee, X, r]), {
     selected: er,
     ...eo
   } = function(e, t) {
@@ -197,10 +197,10 @@ function Q(e) {
       popouts: n,
       selected: s,
       setPopout: l
-    } = (0, C.default)(e.id, k.DEFAULT_POPOUTS), {
+    } = (0, A.default)(e.id, k.DEFAULT_POPOUTS), {
       usernameProfile: i,
       avatarProfile: r
-    } = n, o = (0, S.useContextMenuUser)(e.author.id, t.id), u = (0, S.useContextMenuModerateUser)(e.author.id, t.id, e.id), d = (0, S.useClickMessageAuthorUsername)(e, t, i, l), c = (0, S.useClickMessageAuthorAvatar)(r, l);
+    } = n, o = (0, C.useContextMenuUser)(e.author.id, t.id), u = (0, C.useContextMenuModerateUser)(e.author.id, t.id, e.id), d = (0, C.useClickMessageAuthorUsername)(e, t, i, l), c = (0, C.useClickMessageAuthorAvatar)(r, l);
     return {
       selected: s,
       onContextMenu: o,
@@ -212,27 +212,27 @@ function Q(e) {
         avatarProfile: !1,
         referencedUsernameProfile: !1
       }), [l]),
-      renderPopout: N.default,
+      renderPopout: S.default,
       showAvatarPopout: r,
       showUsernamePopout: i
     }
   }(l, r), eu = a.useCallback(() => {
-    (0, T.openSubmitFeedback)(l.id, ee, X, r)
-  }, [l.id, ee, X, r]), ed = a.useCallback(e => {
-    null != et && null != Z && (e.stopPropagation(), e.preventDefault(), (0, p.default)(B.Routes.CHANNEL(null == Z ? void 0 : Z.guild_id, null == Z ? void 0 : Z.id, et)))
-  }, [Z, et]), ec = a.useCallback(() => {
-    (0, I.executeAlertAction)(l.id, r, _.AutomodAlertActionType.DELETE_USER_MESSAGE)
-  }, [r, l.id]), ef = a.useMemo(() => (0, m.getActionHeaderText)(l, Z, () => (0, s.jsx)("div", {
+    (0, I.openSubmitFeedback)(l.id, ee, Z, r)
+  }, [l.id, ee, Z, r]), ed = a.useCallback(e => {
+    null != et && null != J && (e.stopPropagation(), e.preventDefault(), (0, N.default)(G.Routes.CHANNEL(null == J ? void 0 : J.guild_id, null == J ? void 0 : J.id, et)))
+  }, [J, et]), ec = a.useCallback(() => {
+    (0, m.executeAlertAction)(l.id, r, _.AutomodAlertActionType.DELETE_USER_MESSAGE)
+  }, [r, l.id]), eE = a.useMemo(() => (0, T.getActionHeaderText)(l, J, () => (0, s.jsx)("div", {
     className: H.channelNameContainer,
-    children: (0, s.jsx)(L.default, {
-      channel: Z,
+    children: (0, s.jsx)(P.default, {
+      channel: J,
       className: H.channelName,
       openChatWithoutConnecting: !0
     })
-  })), [l, Z]), eE = (0, F.getFriendlyDurationString)(Number(en)), e_ = null != es, em = Q && null != et && (null == ea || !ea.actions.hasOwnProperty(_.AutomodAlertActionType.DELETE_USER_MESSAGE));
+  })), [l, J]), ef = (0, F.getFriendlyDurationString)(Number(en)), e_ = null != es, eT = Q && null != et && (null == ea || !ea.actions.hasOwnProperty(_.AutomodAlertActionType.DELETE_USER_MESSAGE));
   return (0, s.jsx)("div", {
     onMouseEnter: g,
-    onMouseLeave: R,
+    onMouseLeave: O,
     children: (0, s.jsx)(y.default, {
       className: i()(H.mainContainer, {
         [H.compact]: n
@@ -246,7 +246,7 @@ function Q(e) {
         className: i()(H.content, {
           [H.compact]: n
         }),
-        children: [(0, s.jsx)(P.BaseMessageHeader, {
+        children: [(0, s.jsx)(x.BaseMessageHeader, {
           message: l,
           messageClassname: H.spanCorrection,
           className: i()(H.usernameContainer, H.spanCorrection, {
@@ -254,21 +254,21 @@ function Q(e) {
           }),
           username: (0, s.jsxs)("div", {
             className: H.spanCorrection,
-            children: [(0, s.jsx)(f.Text, {
+            children: [(0, s.jsx)(E.Text, {
               variant: "text-md/normal",
               color: "text-brand",
               tag: "span",
               className: H.username,
               children: w.default.Messages.GUILD_AUTOMOD_USERNAME
             }), (0, s.jsx)(M.default, {
-              type: G.BotTagTypes.SYSTEM_DM,
+              type: B.BotTagTypes.SYSTEM_DM,
               className: H.systemTag
-            }), (0, s.jsx)(f.Text, {
+            }), (0, s.jsx)(E.Text, {
               variant: "text-md/normal",
               color: "header-primary",
               tag: "span",
               className: H.spanCorrection,
-              children: ef
+              children: eE
             })]
           }),
           compact: n,
@@ -278,9 +278,9 @@ function Q(e) {
             [H.compact]: n
           }),
           children: (0, s.jsx)(D.default, {
-            ...x,
+            ...L,
             message: l,
-            channel: Z,
+            channel: J,
             content: ei,
             compact: n,
             withFooter: !0,
@@ -288,13 +288,13 @@ function Q(e) {
             className: i()(H.embedCard, {
               [H.compact]: n,
               [H.selected]: er || W && U,
-              [H.isClickable]: null != et && null != Z
+              [H.isClickable]: null != et && null != J
             }),
             childrenAccessories: (0, s.jsxs)(s.Fragment, {
               children: [(0, s.jsxs)("div", {
                 className: H.centeredRowContainer,
                 children: [null != $ && (0, s.jsxs)(s.Fragment, {
-                  children: [(0, s.jsx)(f.Text, {
+                  children: [(0, s.jsx)(E.Text, {
                     variant: "text-xs/medium",
                     color: "text-muted",
                     tag: "span",
@@ -304,40 +304,40 @@ function Q(e) {
                   }), (0, s.jsx)("div", {
                     className: i()(H.dot, H.dotMargin)
                   })]
-                }), null != q && (0, s.jsx)(f.Text, {
+                }), null != q && (0, s.jsx)(E.Text, {
                   variant: "text-xs/medium",
                   color: "text-muted",
                   tag: "span",
                   children: w.default.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_RULE_NAME.format({
                     ruleName: q
                   })
-                }), null != eE && (0, s.jsxs)(s.Fragment, {
+                }), null != ef && (0, s.jsxs)(s.Fragment, {
                   children: [(0, s.jsx)("div", {
                     className: i()(H.dot, H.dotMargin)
-                  }), (0, s.jsx)(f.Text, {
+                  }), (0, s.jsx)(E.Text, {
                     variant: "text-xs/medium",
                     color: "text-muted",
                     tag: "span",
                     className: H.__invalid_footerText,
                     children: w.default.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_TIMEOUT_DURATION.format({
-                      duration: eE
+                      duration: ef
                     })
                   })]
                 }), null != el && (0, s.jsxs)(s.Fragment, {
                   children: [(0, s.jsx)("div", {
                     className: i()(H.dot, H.dotMargin)
-                  }), (0, s.jsx)(f.Text, {
+                  }), (0, s.jsx)(E.Text, {
                     variant: "text-xs/medium",
                     color: "text-muted",
                     tag: "span",
                     className: H.titleCase,
                     children: w.default.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_REASON.format({
-                      reason: (0, m.getQuarantineReasonString)(el)
+                      reason: (0, T.getQuarantineReasonString)(el)
                     })
                   })]
                 })]
               }), e_ ? (0, s.jsx)(Y, {
-                children: (0, s.jsx)(f.Text, {
+                children: (0, s.jsx)(E.Text, {
                   variant: "text-xs/medium",
                   color: "text-normal",
                   tag: "span",
@@ -357,23 +357,23 @@ function Q(e) {
             className: i()(H.centeredRowContainer, H.buttonContainer, {
               [H.compact]: n
             }),
-            children: [(0, s.jsx)(f.Button, {
+            children: [(0, s.jsx)(E.Button, {
               onClick: e => {
                 var t;
                 null === (t = eo.onContextMenuModerateUser) || void 0 === t || t.call(eo, e)
               },
-              color: f.Button.Colors.LINK,
-              look: f.Button.Looks.LINK,
-              size: f.Button.Sizes.SMALL,
+              color: E.Button.Colors.LINK,
+              look: E.Button.Looks.LINK,
+              size: E.Button.Sizes.SMALL,
               className: H.buttonStyle,
               children: (0, s.jsxs)("div", {
                 className: H.footerAction,
-                children: [(0, s.jsx)(O.default, {
+                children: [(0, s.jsx)(v.default, {
                   width: 16,
                   height: 16,
                   color: d.default.BLUE_345,
                   className: H.footerIcon
-                }), (0, s.jsx)(f.Text, {
+                }), (0, s.jsx)(E.Text, {
                   variant: "text-xs/normal",
                   color: "text-link",
                   children: w.default.Messages.ACTIONS
@@ -381,32 +381,32 @@ function Q(e) {
               })
             }), (0, s.jsx)("div", {
               className: H.dot
-            }), (0, s.jsx)(f.Button, {
+            }), (0, s.jsx)(E.Button, {
               onClick: eu,
-              color: f.Button.Colors.LINK,
-              look: f.Button.Looks.LINK,
-              size: f.Button.Sizes.SMALL,
+              color: E.Button.Colors.LINK,
+              look: E.Button.Looks.LINK,
+              size: E.Button.Sizes.SMALL,
               className: H.buttonStyle,
               children: (0, s.jsx)("div", {
                 className: H.footerAction,
-                children: (0, s.jsx)(f.Text, {
+                children: (0, s.jsx)(E.Text, {
                   variant: "text-xs/normal",
                   color: "text-link",
                   children: w.default.Messages.GUILD_AUTOMOD_REPORT_ISSUES
                 })
               })
-            }), em ? (0, s.jsxs)(s.Fragment, {
+            }), eT ? (0, s.jsxs)(s.Fragment, {
               children: [(0, s.jsx)("div", {
                 className: H.dot
-              }), (0, s.jsx)(f.Button, {
+              }), (0, s.jsx)(E.Button, {
                 onClick: ec,
-                color: f.Button.Colors.LINK,
-                look: f.Button.Looks.LINK,
-                size: f.Button.Sizes.SMALL,
+                color: E.Button.Colors.LINK,
+                look: E.Button.Looks.LINK,
+                size: E.Button.Sizes.SMALL,
                 className: H.buttonStyle,
                 children: (0, s.jsx)("div", {
                   className: H.footerAction,
-                  children: (0, s.jsx)(f.Text, {
+                  children: (0, s.jsx)(E.Text, {
                     variant: "text-xs/normal",
                     color: "text-link",
                     children: w.default.Messages.GUILD_AUTOMOD_ALERT_DELETE_MEMBERS_MESSAGE

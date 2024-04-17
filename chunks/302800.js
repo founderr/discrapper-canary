@@ -1,32 +1,32 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   CollectiblesDCToDisplayOptions: function() {
     return S
   },
   CollectiblesMarketingVariant: function() {
-    return n
+    return a
   },
   getCountdownDisplayOptions: function() {
-    return p
+    return I
   },
   getCustomConfettiDisplayOptions: function() {
     return T
   }
-}), a("627341");
-var n, s, l = a("278074"),
-  i = a("180650"),
-  r = a("524437"),
-  o = a("689938"),
-  u = a("160506"),
-  d = a("263660"),
-  c = a("22344"),
-  f = a("165047"),
-  E = a("167087"),
-  h = a("692797"),
-  _ = a("782984"),
-  C = a("186077"),
-  m = a("376477");
-(s = n || (n = {}))[s.NONE = 0] = "NONE", s[s.TOOLTIP = 1] = "TOOLTIP", s[s.COACHTIP = 2] = "COACHTIP";
+}), n("627341");
+var a, s, l = n("278074"),
+  i = n("180650"),
+  r = n("524437"),
+  o = n("689938"),
+  u = n("160506"),
+  d = n("263660"),
+  c = n("22344"),
+  f = n("165047"),
+  E = n("167087"),
+  h = n("692797"),
+  _ = n("782984"),
+  C = n("186077"),
+  m = n("376477");
+(s = a || (a = {}))[s.NONE = 0] = "NONE", s[s.TOOLTIP = 1] = "TOOLTIP", s[s.COACHTIP = 2] = "COACHTIP";
 let S = {
     [r.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE]: {
       type: 1,
@@ -79,14 +79,14 @@ let S = {
       assetIds: ["a_49c479e15533fb4c02eb320c9c137433", "a_77b7b6a740a9451e1ef39c0252154ef8", "a_e8c11f139e55dac538cdaafb3caa2317"]
     }
   },
-  p = e => (0, l.match)(e).with(i.CollectiblesCategorySkuId.SHY, () => ({
+  I = e => (0, l.match)(e).with(i.CollectiblesCategorySkuId.SHY, () => ({
     label: () => o.default.Messages.COLLECTIBLES_SHY_FOR_A_LIMITED_TIME,
     backgroundColor: "rgba(255, 70, 85, 1)",
     boxShadow: "0 0 12px 0 rgba(255, 70, 85, 0.5)",
     labelColor: "rgba(15, 25, 35, 1)",
     iconSrc: C
   })).otherwise(() => null),
-  I = {
+  p = {
     SHY: {
       confettiAssetSrc: c,
       style: {
@@ -95,4 +95,4 @@ let S = {
       }
     }
   },
-  T = e => (0, l.match)(e).with("1220513977683935373", () => I.SHY).with("1220432647453409384", () => I.SHY).with("1220432697718083614", () => I.SHY).otherwise(() => null)
+  T = e => (0, l.match)(e).with("1220513977683935373", () => p.SHY).with("1220432647453409384", () => p.SHY).with("1220432697718083614", () => p.SHY).otherwise(() => null)

@@ -1,20 +1,20 @@
 "use strict";
-a.r(t);
-var n = a("735250");
-a("470079");
-var s = a("481060"),
-  l = a("570140"),
-  i = a("1964"),
-  r = a("852758"),
-  o = a("314897"),
-  u = a("594174"),
-  d = a("725568"),
-  c = a("78415"),
-  f = a("374023"),
-  E = a("886162"),
-  h = a("981631"),
-  _ = a("815660"),
-  C = a("231338");
+n.r(t);
+var a = n("735250");
+n("470079");
+var s = n("481060"),
+  l = n("570140"),
+  i = n("1964"),
+  r = n("852758"),
+  o = n("314897"),
+  u = n("594174"),
+  d = n("725568"),
+  c = n("78415"),
+  f = n("374023"),
+  E = n("886162"),
+  h = n("981631"),
+  _ = n("815660"),
+  C = n("231338");
 let m = "AGREEMENTS_MODAL_KEY";
 t.default = {
   init() {
@@ -22,10 +22,10 @@ t.default = {
   },
   handleRequiredAction(e) {
     let t = e.requiredAction;
-    !f.ProcessArgs.isDisallowPopupsSet() && null != u.default.getCurrentUser() && (t === h.UserRequiredActions.REQUIRE_CAPTCHA || t === h.UserRequiredActions.REQUIRE_VERIFIED_EMAIL || t === h.UserRequiredActions.REQUIRE_VERIFIED_PHONE || t === h.UserRequiredActions.REQUIRE_REVERIFIED_PHONE || t === h.UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || t === h.UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE || i.default.isEmailReverification(t) ? (0, d.openFullScreenLayer)(() => (0, n.jsx)(r.default, {}), {
+    !f.ProcessArgs.isDisallowPopupsSet() && null != u.default.getCurrentUser() && (t === h.UserRequiredActions.REQUIRE_CAPTCHA || t === h.UserRequiredActions.REQUIRE_VERIFIED_EMAIL || t === h.UserRequiredActions.REQUIRE_VERIFIED_PHONE || t === h.UserRequiredActions.REQUIRE_REVERIFIED_PHONE || t === h.UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || t === h.UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE || i.default.isEmailReverification(t) ? (0, d.openFullScreenLayer)(() => (0, a.jsx)(r.default, {}), {
       layerKey: "verification",
       Layer: c.default
-    }) : t === h.UserRequiredActions.AGREEMENTS ? (0, s.openModal)(e => (0, n.jsx)(E.default, {
+    }) : t === h.UserRequiredActions.AGREEMENTS ? (0, s.openModal)(e => (0, a.jsx)(E.default, {
       ...e
     }), {
       modalKey: m,

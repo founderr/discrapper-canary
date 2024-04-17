@@ -17,8 +17,8 @@ var a = n("120356"),
   f = n("255439"),
   h = n("13140"),
   p = n("981631"),
-  m = n("297188");
-let g = {
+  g = n("297188");
+let m = {
   [p.GlobalKeybindActions.TOGGLE_MUTE]: {
     legacy: {
       slash: f.default,
@@ -39,17 +39,17 @@ function E(e) {
   } = e, o = (0, s.useStateFromStores)([u.default], () => u.default.getKeybindForAction(n, !1, !0)), r = (0, d.useRedesignIconContext)().enabled;
   if (null == o || !a) return null;
   let c = h.toString(o.shortcut),
-    f = r ? g[n].new : g[n].legacy,
+    f = r ? m[n].new : m[n].legacy,
     p = t ? f.slash : f.default;
   return (0, i.jsxs)("div", {
-    className: m.keybindIndicator,
+    className: g.keybindIndicator,
     children: [(0, i.jsx)(p, {
-      className: m.keybindIcon,
+      className: g.keybindIcon,
       width: 16,
       height: 16
     }), (0, i.jsx)(d.Text, {
       variant: "text-xxs/semibold",
-      className: l()(m.keybindIndicatorText),
+      className: l()(g.keybindIndicatorText),
       children: c
     })]
   })

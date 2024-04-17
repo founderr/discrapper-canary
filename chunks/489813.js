@@ -1,99 +1,99 @@
 "use strict";
-n.r(t), n.d(t, {
+i.r(t), i.d(t, {
   QuestionRenderer: function() {
-    return u
+    return c
   },
   RequirementRenderer: function() {
-    return d
+    return u
   },
   RequirementWithActionRenderer: function() {
-    return c
+    return d
   }
 });
-var r = n("735250");
-n("470079");
-var s = n("692547"),
-  o = n("481060"),
-  i = n("441674"),
-  a = n("696202"),
-  l = n("445721");
+var n = i("735250");
+i("470079");
+var r = i("692547"),
+  s = i("481060"),
+  a = i("441674"),
+  l = i("696202"),
+  o = i("445721");
 
-function u(e) {
+function c(e) {
   let {
     title: t,
-    children: n
+    children: i
   } = e;
-  return (0, r.jsxs)("div", {
-    className: l.questionContainer,
-    children: [(0, r.jsx)(o.Text, {
-      className: l.questionTitle,
+  return (0, n.jsxs)("div", {
+    className: o.questionContainer,
+    children: [(0, n.jsx)(s.Text, {
+      className: o.questionTitle,
       variant: "text-md/semibold",
       color: "header-primary",
       children: t
-    }), n]
+    }), i]
+  })
+}
+
+function u(e) {
+  let {
+    icon: t,
+    text: i,
+    meetsRequirement: c
+  } = e;
+  return (0, n.jsxs)("div", {
+    className: o.requirementContainer,
+    children: [(0, n.jsx)(t, {
+      className: o.requirementIcon,
+      height: 20,
+      width: 20
+    }), (0, n.jsx)(s.Text, {
+      className: o.requirementText,
+      variant: "text-md/normal",
+      children: i
+    }), c ? (0, n.jsx)(a.default, {
+      width: 24,
+      height: 24,
+      className: o.requirementSuccess,
+      backgroundColor: r.default.unsafe_rawColors.WHITE_500.css
+    }) : (0, n.jsx)(l.default, {
+      width: 24,
+      height: 24,
+      className: o.requirementFailure,
+      backgroundColor: r.default.unsafe_rawColors.WHITE_500.css
+    })]
   })
 }
 
 function d(e) {
   let {
     icon: t,
-    text: n,
-    meetsRequirement: u
+    text: i,
+    footnote: l,
+    meetsRequirement: c,
+    children: u
   } = e;
-  return (0, r.jsxs)("div", {
-    className: l.requirementContainer,
-    children: [(0, r.jsx)(t, {
-      className: l.requirementIcon,
-      height: 20,
-      width: 20
-    }), (0, r.jsx)(o.Text, {
-      className: l.requirementText,
-      variant: "text-md/normal",
-      children: n
-    }), u ? (0, r.jsx)(i.default, {
-      width: 24,
-      height: 24,
-      className: l.requirementSuccess,
-      backgroundColor: s.default.unsafe_rawColors.WHITE_500.css
-    }) : (0, r.jsx)(a.default, {
-      width: 24,
-      height: 24,
-      className: l.requirementFailure,
-      backgroundColor: s.default.unsafe_rawColors.WHITE_500.css
-    })]
-  })
-}
-
-function c(e) {
-  let {
-    icon: t,
-    text: n,
-    footnote: a,
-    meetsRequirement: u,
-    children: d
-  } = e;
-  return (0, r.jsxs)(r.Fragment, {
-    children: [(0, r.jsxs)("div", {
-      className: l.requirementContainer,
-      children: [(0, r.jsx)(t, {
-        className: l.requirementIcon,
+  return (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsxs)("div", {
+      className: o.requirementContainer,
+      children: [(0, n.jsx)(t, {
+        className: o.requirementIcon,
         height: 20,
         width: 20
-      }), (0, r.jsx)(o.Text, {
-        className: l.requirementText,
+      }), (0, n.jsx)(s.Text, {
+        className: o.requirementText,
         variant: "text-md/normal",
-        children: n
-      }), u ? (0, r.jsx)(i.default, {
+        children: i
+      }), c ? (0, n.jsx)(a.default, {
         width: 24,
         height: 24,
-        className: l.requirementSuccess,
-        backgroundColor: s.default.unsafe_rawColors.WHITE_500.css
-      }) : d]
-    }), null != a && (0, r.jsx)(o.Text, {
+        className: o.requirementSuccess,
+        backgroundColor: r.default.unsafe_rawColors.WHITE_500.css
+      }) : u]
+    }), null != l && (0, n.jsx)(s.Text, {
       color: "header-secondary",
-      className: l.footnote,
+      className: o.footnote,
       variant: "text-xs/normal",
-      children: a
+      children: l
     })]
   })
 }

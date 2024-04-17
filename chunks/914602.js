@@ -8,16 +8,16 @@ var s, a = n("735250"),
   u = n("404133"),
   d = n("86357"),
   c = n("54936"),
-  f = n("55008"),
-  E = n("592771"),
+  E = n("55008"),
+  f = n("592771"),
   _ = n("305177"),
-  m = n("73346"),
-  T = n("568836"),
-  I = n("345898"),
-  p = n("981631"),
-  h = n("656049");
+  T = n("73346"),
+  I = n("568836"),
+  m = n("345898"),
+  N = n("981631"),
+  p = n("656049");
 
-function N(e, t, n) {
+function S(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -25,7 +25,7 @@ function N(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class S extends(s = l.PureComponent) {
+class C extends(s = l.PureComponent) {
   render() {
     let {
       sku: e,
@@ -36,7 +36,7 @@ class S extends(s = l.PureComponent) {
       renderCustomTitle: i,
       renderCustomMedia: r,
       isEmbed: o
-    } = this.props, u = o ? T.ResponsiveEmbedTile : I.default;
+    } = this.props, u = o ? I.ResponsiveEmbedTile : m.default;
     return (0, a.jsx)(u, {
       className: s,
       renderMedia: null != r ? r : this.renderMedia,
@@ -47,7 +47,7 @@ class S extends(s = l.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), N(this, "renderActions", () => {
+    super(...e), S(this, "renderActions", () => {
       let {
         inLibrary: e,
         sku: t,
@@ -56,15 +56,15 @@ class S extends(s = l.PureComponent) {
         showBuyInline: l
       } = this.props, i = (l || !t.requiresPayment) && !e, r = i && s;
       return null != n ? n() : (0, a.jsxs)("div", {
-        className: h.priceOs,
+        className: p.priceOs,
         children: [(0, a.jsx)(d.default, {
           type: d.default.Types.DIRECTORY_TILE,
           sku: t,
           inLibrary: e,
-          className: r ? h.tilePriceWithVisibleBuyButton : h.tilePrice
+          className: r ? p.tilePriceWithVisibleBuyButton : p.tilePrice
         }), (0, a.jsx)(c.OperatingSystemSection, {
-          systems: [p.OperatingSystems.WINDOWS],
-          className: h.platform
+          systems: [N.OperatingSystems.WINDOWS],
+          className: p.platform
         }), i ? (0, a.jsx)(u.default, {
           skuId: t.id,
           applicationId: t.applicationId,
@@ -72,10 +72,10 @@ class S extends(s = l.PureComponent) {
           shouldRenderPrice: !0,
           onStoreListing: !0,
           onClick: e => e.preventDefault(),
-          className: r ? h.tileBuyButtonVisible : h.tileBuyButton
+          className: r ? p.tileBuyButtonVisible : p.tileBuyButton
         }) : null]
       })
-    }), N(this, "renderMedia", () => {
+    }), S(this, "renderMedia", () => {
       let {
         playing: e,
         muted: t,
@@ -87,35 +87,35 @@ class S extends(s = l.PureComponent) {
       } = this.props;
       return (0, a.jsxs)(l.Fragment, {
         children: [(0, a.jsx)(_.default, {
-          className: r()(h.splashContainer, {
-            [h.splashContainerHorizontal]: o
+          className: r()(p.splashContainer, {
+            [p.splashContainerHorizontal]: o
           }),
-          video: null != u.previewVideo ? (0, m.getAssetURL)(i.applicationId, u.previewVideo) : void 0,
-          image: null != u.thumbnail ? (0, m.getAssetURL)(i.applicationId, u.thumbnail, 600) : null,
+          video: null != u.previewVideo ? (0, T.getAssetURL)(i.applicationId, u.previewVideo) : void 0,
+          image: null != u.thumbnail ? (0, T.getAssetURL)(i.applicationId, u.thumbnail, 600) : null,
           title: i.name,
           playing: e,
           muted: t,
           placeholder: n,
           onToggleMute: s,
-          splashClassName: h.splashVideo,
-          splashPlaceholderClassName: h.splashPlaceholder
-        }), i.exclusive ? (0, a.jsx)(f.default, {
-          className: r()(h.exclusiveRegular, {
-            [h.exclusivePlaying]: e
+          splashClassName: p.splashVideo,
+          splashPlaceholderClassName: p.splashPlaceholder
+        }), i.exclusive ? (0, a.jsx)(E.default, {
+          className: r()(p.exclusiveRegular, {
+            [p.exclusivePlaying]: e
           })
-        }) : i.isTheGameAwardsWinner ? (0, a.jsx)(E.default, {
-          className: r()(h.exclusiveRegular, {
-            [h.exclusivePlaying]: e
+        }) : i.isTheGameAwardsWinner ? (0, a.jsx)(f.default, {
+          className: r()(p.exclusiveRegular, {
+            [p.exclusivePlaying]: e
           })
         }) : null]
       })
     })
   }
 }
-N(S, "defaultProps", {
+S(C, "defaultProps", {
   showMediaPlaceholder: !1,
   isMouseOver: !1,
   showBuyInline: !1,
   isHorizontal: !1,
   isEmbed: !1
-}), t.default = S
+}), t.default = C

@@ -1,46 +1,46 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return _
+    return S
   }
 });
-var n = s("735250");
+var a = s("735250");
 s("470079");
-var a = s("481060"),
-  i = s("230711"),
-  o = s("471113"),
-  r = s("197115"),
-  u = s("474936"),
-  l = s("981631"),
-  c = s("689938"),
-  d = s("944411");
+var n = s("481060"),
+  r = s("230711"),
+  u = s("471113"),
+  i = s("197115"),
+  l = s("474936"),
+  E = s("981631"),
+  _ = s("689938"),
+  o = s("944411");
 
-function _(e) {
+function S(e) {
   let {
     onClose: t,
     section: s
   } = e;
-  return (0, n.jsxs)(a.ModalFooter, {
-    children: [(0, n.jsx)(r.default, {
-      className: d.nitroButton,
-      size: a.ButtonSizes.MEDIUM,
-      shinyButtonClassName: d.nitroButton,
-      subscriptionTier: u.PremiumSubscriptionSKUs.TIER_2,
-      buttonText: c.default.Messages.PREMIUM_UPSELL_GET_NITRO,
+  return (0, a.jsxs)(n.ModalFooter, {
+    children: [(0, a.jsx)(i.default, {
+      className: o.nitroButton,
+      size: n.ButtonSizes.MEDIUM,
+      shinyButtonClassName: o.nitroButton,
+      subscriptionTier: l.PremiumSubscriptionSKUs.TIER_2,
+      buttonText: _.default.Messages.PREMIUM_UPSELL_GET_NITRO,
       premiumModalAnalyticsLocation: {
         section: s
       }
-    }), (0, n.jsx)(a.Button, {
-      className: d.perksButton,
-      look: a.Button.Looks.BLANK,
-      color: a.Button.Colors.TRANSPARENT,
-      size: a.ButtonSizes.MEDIUM,
+    }), (0, a.jsx)(n.Button, {
+      className: o.perksButton,
+      look: n.Button.Looks.BLANK,
+      color: n.Button.Colors.TRANSPARENT,
+      size: n.ButtonSizes.MEDIUM,
       onClick: () => {
-        t(), i.default.open(l.UserSettingsSections.PREMIUM)
+        t(), r.default.open(E.UserSettingsSections.PREMIUM)
       },
-      children: (0, n.jsx)(o.default, {
+      children: (0, a.jsx)(u.default, {
         variant: "heading-sm/medium",
-        children: c.default.Messages.PREMIUM_ROADBLOCK_UPSELL_SECONDARY_CTA
+        children: _.default.Messages.PREMIUM_ROADBLOCK_UPSELL_SECONDARY_CTA
       })
     })]
   })

@@ -1,192 +1,192 @@
 "use strict";
-a.r(t), a.d(t, {
+l.r(e), l.d(e, {
   ClanDiscoveryCardView: function() {
-    return p
+    return m
   }
 });
-var n = a("735250"),
-  s = a("470079"),
-  l = a("149020"),
-  i = a("781511"),
-  r = a("981500"),
-  o = a("481060"),
-  u = a("442837"),
-  d = a("835473"),
-  c = a("550271"),
-  f = a("854698"),
-  E = a("703656"),
-  h = a("271383"),
-  _ = a("594174"),
-  C = a("308083"),
-  m = a("689938"),
-  S = a("563560");
+var t = l("735250"),
+  n = l("470079"),
+  i = l("149020"),
+  s = l("781511"),
+  r = l("981500"),
+  d = l("481060"),
+  c = l("442837"),
+  o = l("835473"),
+  H = l("550271"),
+  V = l("854698"),
+  x = l("703656"),
+  h = l("271383"),
+  f = l("594174"),
+  j = l("308083"),
+  u = l("689938"),
+  p = l("563560");
 
-function p(e) {
+function m(a) {
   let {
-    clan: t,
-    affinity: a
-  } = e, {
-    tag: s,
-    badge: u,
+    clan: e,
+    affinity: l
+  } = a, {
+    tag: n,
+    badge: c,
     branding: {
-      primaryColor: E,
+      primaryColor: x,
       secondaryColor: h
     }
-  } = t, _ = (0, d.default)(t.games), p = (0, n.jsx)(o.Text, {
+  } = e, f = (0, o.default)(e.games), m = (0, t.jsx)(d.Text, {
     variant: "text-xs/medium",
     tag: "span",
-    className: S.playstyle,
+    className: p.playstyle,
     color: "none",
-    children: (0, C.getPlaystyleTitle)(t.playstyle)
-  }), I = m.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
-    count: t.memberCount
+    children: (0, j.getPlaystyleTitle)(e.playstyle)
+  }), g = u.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
+    count: e.memberCount
   });
-  return (0, n.jsxs)("div", {
-    className: S.card,
-    children: [(0, n.jsx)("div", {
-      className: S.cardBrandingHeader,
+  return (0, t.jsxs)("div", {
+    className: p.card,
+    children: [(0, t.jsx)("div", {
+      className: p.cardBrandingHeader,
       style: {
-        background: "linear-gradient(90deg, ".concat(E, ", ").concat(h, ")")
+        background: "linear-gradient(90deg, ".concat(x, ", ").concat(h, ")")
       },
-      children: (0, n.jsx)(c.ClanBadge, {
+      children: (0, t.jsx)(H.ClanBadge, {
         width: 32,
         height: 32,
-        className: S.clanBadge,
-        badge: u.badgeKind,
-        primaryTintColor: u.primaryColor,
-        secondaryTintColor: u.secondaryColor
+        className: p.clanBadge,
+        badge: c.badgeKind,
+        primaryTintColor: c.primaryColor,
+        secondaryTintColor: c.secondaryColor
       })
-    }), (0, n.jsxs)("div", {
-      className: S.cardContent,
-      children: [(0, n.jsxs)("div", {
-        children: [(0, n.jsxs)("div", {
-          className: S.cardNameAndTagWrapper,
-          children: [(0, n.jsx)(o.Heading, {
+    }), (0, t.jsxs)("div", {
+      className: p.cardContent,
+      children: [(0, t.jsxs)("div", {
+        children: [(0, t.jsxs)("div", {
+          className: p.cardNameAndTagWrapper,
+          children: [(0, t.jsx)(d.Heading, {
             variant: "heading-md/medium",
             color: "header-primary",
-            children: t.name
-          }), (0, n.jsxs)("div", {
-            className: S.clanTagChiplet,
-            children: [(0, n.jsx)(c.ClanBadge, {
+            children: e.name
+          }), (0, t.jsxs)("div", {
+            className: p.clanTagChiplet,
+            children: [(0, t.jsx)(H.ClanBadge, {
               width: 16,
               height: 16,
-              badge: u.badgeKind,
-              primaryTintColor: u.primaryColor,
-              secondaryTintColor: u.secondaryColor
-            }), (0, n.jsx)(o.Text, {
+              badge: c.badgeKind,
+              primaryTintColor: c.primaryColor,
+              secondaryTintColor: c.secondaryColor
+            }), (0, t.jsx)(d.Text, {
               variant: "text-xs/bold",
               color: "text-primary",
-              children: s
+              children: n
             })]
           })]
-        }), (0, n.jsxs)(o.Text, {
+        }), (0, t.jsxs)(d.Text, {
           variant: "text-xs/normal",
           color: "text-secondary",
-          children: [p, " \xb7 ".concat(I)]
+          children: [m, " \xb7 ".concat(g)]
         })]
-      }), (0, n.jsx)(o.Text, {
+      }), (0, t.jsx)(d.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
-        children: t.description
-      }), (0, n.jsx)("div", {
-        className: S.primetimeContainer,
-        children: t.primetime.map((e, t) => (0, n.jsxs)("div", {
-          className: S.primetime,
-          children: [(0, n.jsx)(l.GameControllerIcon, {
-            className: S.primetimeIcon,
+        children: e.description
+      }), (0, t.jsx)("div", {
+        className: p.primetimeContainer,
+        children: e.primetime.map((a, e) => (0, t.jsxs)("div", {
+          className: p.primetime,
+          children: [(0, t.jsx)(i.GameControllerIcon, {
+            className: p.primetimeIcon,
             color: "currentColor"
-          }), (0, n.jsx)(o.Text, {
+          }), (0, t.jsx)(d.Text, {
             variant: "text-xs/normal",
             color: "text-normal",
-            children: (0, f.getRRule)(e).toText()
+            children: (0, V.getRRule)(a).toText()
           })]
-        }, "".concat(e.start, "-").concat(t)))
-      }), (0, n.jsx)("div", {
-        className: S.traitsContainer,
-        children: t.traits.map(e => (0, n.jsx)("div", {
-          className: S.trait,
-          children: (0, n.jsx)(o.Text, {
+        }, "".concat(a.start, "-").concat(e)))
+      }), (0, t.jsx)("div", {
+        className: p.traitsContainer,
+        children: e.traits.map(a => (0, t.jsx)("div", {
+          className: p.trait,
+          children: (0, t.jsx)(d.Text, {
             variant: "text-xs/normal",
             color: "text-normal",
-            children: e
+            children: a
           })
-        }, e))
+        }, a))
       })]
-    }), (0, n.jsxs)("div", {
-      className: S.cardFooter,
-      children: [(0, n.jsxs)("div", {
-        className: S.cardFooterInfo,
-        children: [(0, n.jsxs)("div", {
-          className: S.cardFooterLocation,
-          children: [(0, n.jsx)(i.GlobeEarthIcon, {
-            className: S.cardFooterLocationIcon,
+    }), (0, t.jsxs)("div", {
+      className: p.cardFooter,
+      children: [(0, t.jsxs)("div", {
+        className: p.cardFooterInfo,
+        children: [(0, t.jsxs)("div", {
+          className: p.cardFooterLocation,
+          children: [(0, t.jsx)(s.GlobeEarthIcon, {
+            className: p.cardFooterLocationIcon,
             color: "currentColor"
-          }), (0, n.jsx)(o.Text, {
+          }), (0, t.jsx)(d.Text, {
             variant: "text-xs/normal",
             color: "text-muted",
-            children: t.location
+            children: e.location
           })]
-        }), (0, n.jsxs)("div", {
-          className: S.cardFooterLanguage,
-          children: [(0, n.jsx)(r.LanguageIcon, {
-            className: S.cardFooterLanguageIcon,
+        }), (0, t.jsxs)("div", {
+          className: p.cardFooterLanguage,
+          children: [(0, t.jsx)(r.LanguageIcon, {
+            className: p.cardFooterLanguageIcon,
             color: "currentColor"
-          }), (0, n.jsx)(o.Text, {
+          }), (0, t.jsx)(d.Text, {
             variant: "text-xs/normal",
             color: "text-muted",
-            children: t.language
+            children: e.language
           })]
         })]
-      }), (0, n.jsx)("div", {
-        className: S.cardFooterGames,
-        children: _.map(e => {
-          if (null == e) return null;
-          let t = e.getIconURL(24);
-          return null == t ? null : (0, n.jsx)("div", {
-            className: S.cardFooterGame,
-            children: (0, n.jsx)("img", {
-              src: t,
-              alt: e.name
+      }), (0, t.jsx)("div", {
+        className: p.cardFooterGames,
+        children: f.map(a => {
+          if (null == a) return null;
+          let e = a.getIconURL(24);
+          return null == e ? null : (0, t.jsx)("div", {
+            className: p.cardFooterGame,
+            children: (0, t.jsx)("img", {
+              src: e,
+              alt: a.name
             })
-          }, e.id)
+          }, a.id)
         })
       })]
-    }), (0, n.jsx)("div", {
-      className: S.cardBrandingFooter,
+    }), (0, t.jsx)("div", {
+      className: p.cardBrandingFooter,
       style: {
-        background: "linear-gradient(90deg, ".concat(E, ", ").concat(h, ")")
+        background: "linear-gradient(90deg, ".concat(x, ", ").concat(h, ")")
       },
-      children: (0, n.jsx)(o.Text, {
+      children: (0, t.jsx)(d.Text, {
         variant: "text-xxs/normal",
-        children: a
+        children: l
       })
     })]
   })
 }
-t.default = function(e) {
+e.default = function(a) {
   let {
-    clan: t,
-    affinity: l
-  } = e, i = (0, u.useStateFromStores)([_.default], () => _.default.getCurrentUser()), r = (0, u.useStateFromStores)([h.default], () => h.default.isMember(t.id, null == i ? void 0 : i.id), [t, i]), d = s.useCallback(() => {
+    clan: e,
+    affinity: i
+  } = a, s = (0, c.useStateFromStores)([f.default], () => f.default.getCurrentUser()), r = (0, c.useStateFromStores)([h.default], () => h.default.isMember(e.id, null == s ? void 0 : s.id), [e, s]), o = n.useCallback(() => {
     if (r) {
-      (0, E.transitionToGuild)(t.id);
+      (0, x.transitionToGuild)(e.id);
       return
-    }(0, o.openModalLazy)(async () => {
+    }(0, d.openModalLazy)(async () => {
       let {
-        default: e
-      } = await Promise.all([a.e("99387"), a.e("81319")]).then(a.bind(a, "767593"));
-      return a => (0, n.jsx)(e, {
-        ...a,
-        clan: t
+        default: a
+      } = await Promise.all([l.e("99387"), l.e("81319")]).then(l.bind(l, "767593"));
+      return l => (0, t.jsx)(a, {
+        ...l,
+        clan: e
       })
     })
-  }, [t, r]);
-  return (0, n.jsx)(o.Clickable, {
-    onClick: d,
-    className: S.clickableCard,
-    children: (0, n.jsx)(p, {
-      clan: t,
-      affinity: l
+  }, [e, r]);
+  return (0, t.jsx)(d.Clickable, {
+    onClick: o,
+    className: p.clickableCard,
+    children: (0, t.jsx)(m, {
+      clan: e,
+      affinity: i
     })
   })
 }

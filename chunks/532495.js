@@ -21,8 +21,8 @@ var n = s("512722"),
   m = s("134795"),
   _ = s("610966"),
   g = s("513901"),
-  I = s("451392"),
-  h = s("906364"),
+  h = s("451392"),
+  I = s("906364"),
   N = s("676934"),
   p = s("350327"),
   C = s("621853"),
@@ -43,8 +43,8 @@ function L() {
     y = (0, i.useStateFromStores)([C.default], () => C.default.getUserProfile(U.id)),
     {
       pendingAvatar: B,
-      pendingGlobalName: F,
-      pendingBanner: G,
+      pendingGlobalName: G,
+      pendingBanner: F,
       pendingBio: k,
       pendingPronouns: w,
       pendingAccentColor: H,
@@ -61,7 +61,7 @@ function L() {
     W = (0, d.useGuildAutomodProfileQuarantineErrors)(),
     K = M.default.canUsePremiumProfileCustomization(U),
     z = (0, u.showRemoveAvatar)(B, U.avatar),
-    Q = (0, u.showRemoveBanner)(G, null == y ? void 0 : y.banner),
+    Q = (0, u.showRemoveBanner)(F, null == y ? void 0 : y.banner),
     q = "DefaultCustomizationSections";
   (0, o.useTriggerDebuggingAA)({
     location: q + " auto on",
@@ -84,9 +84,9 @@ function L() {
       placeholder: U.username,
       errors: J,
       currentGlobalName: U.globalName,
-      pendingGlobalName: F,
+      pendingGlobalName: G,
       onGlobalNameChange: r.setPendingGlobalNameName
-    }), (0, a.jsx)(h.default, {
+    }), (0, a.jsx)(I.default, {
       sectionTitle: v.default.Messages.USER_SETTINGS_PRONOUNS,
       errors: Y.pronouns,
       onPronounsChange: p.setPendingPronouns,
@@ -110,7 +110,7 @@ function L() {
         errors: Y.banner,
         onBannerChange: p.setPendingBanner,
         forcedDivider: !0
-      }, "banner"), (0, a.jsx)(I.default, {
+      }, "banner"), (0, a.jsx)(h.default, {
         user: U,
         pendingAvatar: B,
         pendingColors: V,

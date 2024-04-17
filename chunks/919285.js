@@ -1,31 +1,31 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return d
   }
 });
-var n = a("735250");
-a("470079");
-var s = a("82950"),
-  l = a("434404"),
-  i = a("929507"),
-  r = a("981631"),
-  o = a("689938"),
-  u = a("943935");
+var a = n("735250");
+n("470079");
+var s = n("82950"),
+  l = n("434404"),
+  i = n("929507"),
+  r = n("981631"),
+  o = n("689938"),
+  u = n("943935");
 
 function d(e) {
   let {
     guild: t
-  } = e, a = () => i.default.dismissNotice(t.id);
-  return (0, n.jsx)(s.default, {
+  } = e, n = () => i.default.dismissNotice(t.id);
+  return (0, a.jsx)(s.default, {
     guild: t,
-    onDismissed: a,
+    onDismissed: n,
     cta: o.default.Messages.CHECK_IT_OUT,
     message: o.default.Messages.COMMANDS_SCOPE_MIGRATION_ADMIN_NOTICE.format(),
     type: r.ChannelNoticeTypes.COMMANDS_MIGRATION,
     image: u,
     onClick: () => {
-      a(), l.default.open(t.id, r.GuildSettingsSections.INTEGRATIONS)
+      n(), l.default.open(t.id, r.GuildSettingsSections.INTEGRATIONS)
     },
     imageMarginTop: 15,
     imageMarginX: 22

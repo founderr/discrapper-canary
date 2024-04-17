@@ -20,15 +20,15 @@ var a = s("735250"),
   m = s("210887"),
   _ = s("996073"),
   g = s("526761"),
-  I = s("981631"),
-  h = s("65154"),
+  h = s("981631"),
+  I = s("65154"),
   N = s("689938"),
   p = s("794711");
 let C = s("651714"),
   A = s("297166");
 
 function O(e) {
-  u.default.setAV1Enabled(e), E.default.track(I.AnalyticEvents.VOICE_SETTINGS_CHANGED, {
+  u.default.setAV1Enabled(e), E.default.track(h.AnalyticEvents.VOICE_SETTINGS_CHANGED, {
     av1_disabled: !e,
     av1_enabled: e
   })
@@ -59,7 +59,7 @@ function R() {
     } = (0, r.useStateFromStoresObject)([c.default], () => ({
       openH264: c.default.getOpenH264(),
       hardwareH264: c.default.getHardwareH264(),
-      supportsOpenH264: c.default.supports(h.Features.OPEN_H264),
+      supportsOpenH264: c.default.supports(I.Features.OPEN_H264),
       av1Enabled: c.default.getAv1Enabled()
     })),
     f = n.useRef(null);

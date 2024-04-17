@@ -11,16 +11,16 @@ function n(e) {
     application: t,
     username: s,
     usernameOnClick: n,
-    medium: E
+    medium: r
   } = e;
   return null != t ? a.default.Messages.SYSTEM_MESSAGE_APPLICATION_SUBSCRIPTION_PURCHASE_MOBILE.astFormat({
     username: s,
     applicationName: t.name,
     usernameOnClick: n,
-    medium: E
+    medium: r
   }) : a.default.Messages.SYSTEM_MESSAGE_APPLICATION_SUBSCRIPTION_PURCHASE_FROM_DELETED_APPLICATION_MOBILE.astFormat({
     username: s,
     usernameOnClick: n,
-    medium: E
+    medium: r
   })
 }

@@ -1,46 +1,46 @@
 "use strict";
-a.r(t), a("47120"), a("411104"), a("789020");
-var n = a("735250");
-a("470079");
-var s = a("45792"),
-  l = a("481060"),
-  i = a("278323"),
-  r = a("24124"),
-  o = a("224706"),
-  u = a("45114"),
-  d = a("479531"),
-  c = a("40851"),
-  f = a("566620"),
-  E = a("596223"),
-  h = a("838195"),
-  _ = a("928518"),
-  C = a("592125"),
-  m = a("293273"),
-  S = a("885110"),
-  p = a("451478"),
-  I = a("630388"),
-  T = a("823379"),
-  g = a("591759"),
-  A = a("228488"),
-  N = a("996106"),
-  v = a("914946"),
-  R = a("452426"),
-  O = a("561205"),
-  L = a("600027"),
-  M = a("852926"),
-  P = a("186901"),
-  x = a("981631");
-async function y(e, t, a, n) {
+n.r(t), n("47120"), n("411104"), n("789020");
+var a = n("735250");
+n("470079");
+var s = n("45792"),
+  l = n("481060"),
+  i = n("278323"),
+  r = n("24124"),
+  o = n("224706"),
+  u = n("45114"),
+  d = n("479531"),
+  c = n("40851"),
+  f = n("566620"),
+  E = n("596223"),
+  h = n("838195"),
+  _ = n("928518"),
+  C = n("592125"),
+  m = n("293273"),
+  S = n("885110"),
+  I = n("451478"),
+  p = n("630388"),
+  T = n("823379"),
+  g = n("591759"),
+  A = n("228488"),
+  N = n("996106"),
+  v = n("914946"),
+  R = n("452426"),
+  O = n("561205"),
+  L = n("600027"),
+  P = n("852926"),
+  M = n("186901"),
+  x = n("981631");
+async function y(e, t, n, a) {
   let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
     l = m.default.getApplicationActivity(t);
-  if (null == l || null == l.secrets || !(0, v.validateActivityInvite)(n, l.party, l.secrets)) throw new N.default({
+  if (null == l || null == l.secrets || !(0, v.validateActivityInvite)(a, l.party, l.secrets)) throw new N.default({
     errorCode: x.RPCErrors.NO_ELIGIBLE_ACTIVITY
   }, "No eligible activity for application. Ensure an activity includes a party and appropriate secret.");
   let o = (0, E.default)(l, S.default);
   if (o) {
     let {
       lock: t
-    } = (0, M.unlockOverlay)(e);
+    } = (0, P.unlockOverlay)(e);
     return (0, r.openModal)(l, o).then(() => {
       throw t(), new N.default({
         errorCode: x.RPCErrors.NO_ELIGIBLE_ACTIVITY
@@ -48,8 +48,8 @@ async function y(e, t, a, n) {
     })
   }
   await i.default.sendActivityInviteUser({
-    userId: a,
-    type: n,
+    userId: n,
+    type: a,
     activity: l,
     content: s,
     location: "In-Game Invite"
@@ -58,38 +58,38 @@ async function y(e, t, a, n) {
 t.default = {
   [x.RPCCommands.SEND_ACTIVITY_JOIN_INVITE]: {
     scope: {
-      [P.RPC_SCOPE_CONFIG.ANY]: [x.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE]
+      [M.RPC_SCOPE_CONFIG.ANY]: [x.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE]
     },
     handler(e) {
       let {
         socket: t,
         args: {
-          user_id: a,
-          pid: n
+          user_id: n,
+          pid: a
         }
       } = e, s = t.application.id;
       if (null == s) throw new N.default({
         errorCode: x.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      return y(n, s, a, x.ActivityActionTypes.JOIN)
+      return y(a, s, n, x.ActivityActionTypes.JOIN)
     }
   },
   [x.RPCCommands.CLOSE_ACTIVITY_JOIN_REQUEST]: {
     scope: {
-      [P.RPC_SCOPE_CONFIG.ANY]: [x.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE]
+      [M.RPC_SCOPE_CONFIG.ANY]: [x.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE]
     },
     handler(e) {
       let {
         args: {
           user_id: t
         }
-      } = e, a = C.default.getDMFromUserId(t);
-      null != a && (0, u.ack)(a, !0, !0)
+      } = e, n = C.default.getDMFromUserId(t);
+      null != n && (0, u.ack)(n, !0, !0)
     }
   },
   [x.RPCCommands.ACTIVITY_INVITE_USER]: {
     scope: {
-      [P.RPC_SCOPE_CONFIG.ANY]: [x.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE]
+      [M.RPC_SCOPE_CONFIG.ANY]: [x.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE]
     },
     validation: e => (0, R.default)(e).required().keys({
       user_id: e.string().required(),
@@ -101,8 +101,8 @@ t.default = {
       let {
         socket: t,
         args: {
-          type: a,
-          user_id: n,
+          type: n,
+          user_id: a,
           content: s,
           pid: l
         }
@@ -110,12 +110,12 @@ t.default = {
       if (null == i) throw new N.default({
         errorCode: x.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      return y(l, i, n, a, s)
+      return y(l, i, a, n, s)
     }
   },
   [x.RPCCommands.ACCEPT_ACTIVITY_INVITE]: {
     scope: {
-      [P.RPC_SCOPE_CONFIG.ANY]: [x.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE]
+      [M.RPC_SCOPE_CONFIG.ANY]: [x.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE]
     },
     validation: e => (0, R.default)(e).required().keys({
       type: e.number().required().valid([x.ActivityActionTypes.JOIN]),
@@ -128,8 +128,8 @@ t.default = {
       let {
         socket: t,
         args: {
-          type: a,
-          user_id: n,
+          type: n,
+          user_id: a,
           session_id: s,
           channel_id: l,
           message_id: i
@@ -139,8 +139,8 @@ t.default = {
         errorCode: x.RPCErrors.INVALID_COMMAND
       }, "No application.");
       let u = Promise.resolve(!1);
-      if (a === x.ActivityActionTypes.JOIN) u = o.default.join({
-        userId: n,
+      if (n === x.ActivityActionTypes.JOIN) u = o.default.join({
+        userId: a,
         sessionId: s,
         applicationId: r,
         channelId: l,
@@ -155,7 +155,7 @@ t.default = {
   },
   [x.RPCCommands.OPEN_INVITE_DIALOG]: {
     scope: {
-      [P.RPC_SCOPE_CONFIG.ANY]: [x.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE, P.RPC_AUTHENTICATED_SCOPE]
+      [M.RPC_SCOPE_CONFIG.ANY]: [x.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE, M.RPC_AUTHENTICATED_SCOPE]
     },
     handler(e) {
       let {
@@ -169,9 +169,9 @@ t.default = {
       (0, A.exitFullScreen)({}, null == r ? void 0 : r.document), (0, l.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([a.e("99387"), a.e("7654")]).then(a.bind(a, "560114"));
-        return a => (0, n.jsx)(e, {
-          ...a,
+        } = await Promise.all([n.e("99387"), n.e("7654")]).then(n.bind(n, "560114"));
+        return n => (0, a.jsx)(e, {
+          ...n,
           guild: i,
           channel: s,
           applicationId: t.application.id,
@@ -185,14 +185,14 @@ t.default = {
   },
   [x.RPCCommands.INITIATE_IMAGE_UPLOAD]: (0, s.createRPCCommand)(x.RPCCommands.INITIATE_IMAGE_UPLOAD, {
     scope: {
-      [P.RPC_SCOPE_CONFIG.ANY]: [x.OAuth2Scopes.RPC, P.RPC_LOCAL_SCOPE, P.RPC_AUTHENTICATED_SCOPE]
+      [M.RPC_SCOPE_CONFIG.ANY]: [x.OAuth2Scopes.RPC, M.RPC_LOCAL_SCOPE, M.RPC_AUTHENTICATED_SCOPE]
     },
     handler(e) {
       var t;
       let {
-        socket: a
-      } = e, n = a.application.id;
-      if (null == n) throw new N.default({
+        socket: n
+      } = e, a = n.application.id;
+      if (null == a) throw new N.default({
         errorCode: x.RPCErrors.INVALID_COMMAND
       }, "No application.");
       let s = null === (t = (0, O.default)()) || void 0 === t ? void 0 : t.id;
@@ -201,9 +201,9 @@ t.default = {
       }, "Unable to find selected channel");
       return new Promise((e, t) => {
         ! function(e, t) {
-          var a;
-          let n = p.default.getLastFocusedWindowId(),
-            s = null == n ? null : null === (a = (0, c.getAppWindowContextValue)(n)) || void 0 === a ? void 0 : a.renderWindow;
+          var n;
+          let a = I.default.getLastFocusedWindowId(),
+            s = null == a ? null : null === (n = (0, c.getAppWindowContextValue)(a)) || void 0 === n ? void 0 : n.renderWindow;
           if (null == s) throw new N.default({
             errorCode: x.RPCErrors.UNKNOWN_ERROR
           }, "No valid window found");
@@ -219,8 +219,8 @@ t.default = {
           }), l.addEventListener("cancel", () => {
             i()
           }), s.document.body.addEventListener("focus", i, !0), s.document.body.appendChild(l), l.click()
-        }(async a => {
-          let l = await (0, f.uploadImageAttachment)(n, s, a);
+        }(async n => {
+          let l = await (0, f.uploadImageAttachment)(a, s, n);
           (0, T.isNotNullish)(l) && (0, T.isNotNullish)(l.url) && !(l instanceof d.default) ? e({
             image_url: l.url
           }): t(l)
@@ -235,35 +235,35 @@ t.default = {
   }),
   [x.RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: (0, s.createRPCCommand)(x.RPCCommands.OPEN_SHARE_MOMENT_DIALOG, {
     scope: {
-      [P.RPC_SCOPE_CONFIG.ANY]: [P.RPC_AUTHENTICATED_SCOPE]
+      [M.RPC_SCOPE_CONFIG.ANY]: [M.RPC_AUTHENTICATED_SCOPE]
     },
     handler(e) {
       var t;
       let {
-        socket: a,
+        socket: n,
         args: {
-          mediaUrl: n
+          mediaUrl: a
         }
       } = e;
-      (0, v.validatePostMessageTransport)(a.transport);
-      let s = a.application.id;
+      (0, v.validatePostMessageTransport)(n.transport);
+      let s = n.application.id;
       if (null == s) throw new N.default({
         errorCode: x.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      if (!(0, I.hasFlag)(null !== (t = a.application.flags) && void 0 !== t ? t : 0, x.ApplicationFlags.EMBEDDED)) throw new N.default({
+      if (!(0, p.hasFlag)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, x.ApplicationFlags.EMBEDDED)) throw new N.default({
         errorCode: x.RPCErrors.INVALID_COMMAND
       }, "This application cannot access this API");
       let l = (0, O.default)();
       if (null == l) throw new N.default({
         errorCode: x.RPCErrors.INVALID_COMMAND
       }, "No channel found");
-      if (!g.default.isDiscordCdnUrl(n)) throw new N.default({
+      if (!g.default.isDiscordCdnUrl(a)) throw new N.default({
         errorCode: x.RPCErrors.INVALID_PAYLOAD
       }, "mediaUrl must be a Discord CDN url");
       (0, h.openActivityShareMomentModal)({
         applicationId: s,
         channelId: l.id,
-        mediaUrl: n
+        mediaUrl: a
       })
     }
   })

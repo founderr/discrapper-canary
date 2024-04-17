@@ -1,25 +1,25 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return s
   }
-}), a("47120");
-var n = a("470079");
+}), n("47120");
+var a = n("470079");
 
 function s(e) {
-  let [t, a] = n.useState(0), s = n.useCallback(() => {
+  let [t, n] = a.useState(0), s = a.useCallback(() => {
     let t = window.innerWidth;
-    for (let n of e) {
-      let [e, s] = n;
+    for (let a of e) {
+      let [e, s] = a;
       if (t >= e) {
-        a(s);
+        n(s);
         return
       }
     }
   }, [e]);
-  return n.useEffect(() => {
+  return a.useEffect(() => {
     s()
-  }, [s]), n.useEffect(() => (window.addEventListener("resize", s), () => {
+  }, [s]), a.useEffect(() => (window.addEventListener("resize", s), () => {
     window.removeEventListener("resize", s)
   })), t
 }

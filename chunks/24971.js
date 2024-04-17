@@ -18,9 +18,9 @@ function d(e) {
     message: t,
     compact: n,
     usernameHook: d
-  } = e, c = (0, l.default)(t), f = d(c), E = o.default.Messages.SYSTEM_MESSAGE_STAGE_START_HOOK.format({
+  } = e, c = (0, l.default)(t), E = d(c), f = o.default.Messages.SYSTEM_MESSAGE_STAGE_START_HOOK.format({
     username: c.nick,
-    usernameHook: f,
+    usernameHook: E,
     topic: t.content
   });
   return (0, s.jsx)(r.default, {
@@ -33,6 +33,6 @@ function d(e) {
     iconContainerClassName: u.iconContainer,
     timestamp: t.timestamp,
     compact: n,
-    children: E
+    children: f
   })
 }

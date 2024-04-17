@@ -79,7 +79,7 @@ n.r(t), n.d(t, {
     return U
   },
   canUserUse: function() {
-    return V
+    return F
   }
 });
 var i = n("848246"),
@@ -145,6 +145,6 @@ let b = new _(i.EntitlementFeatureNames.INCREASED_GUILD_LIMIT),
     [l.PremiumSubscriptionSKUs.TIER_2]: new o.default(l.PremiumSubscriptionSKUs.TIER_2, [c, E, I, T, f, S, h, A, m, N, R, C, g, L, D, M, y, P, U, b, G, w, B, O, p, v])
   });
 
-function V(e, t) {
+function F(e, t) {
   return e.getFeatureValue(t)
 }

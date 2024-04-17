@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL: function() {
     return i
   },
@@ -7,13 +7,13 @@ a.r(t), a.d(t, {
     return s
   },
   RELATIONSHIP_COUNT_ANIMATION_THRESHOLD: function() {
-    return n
+    return a
   },
   STATUS_HEADER_HEIGHT: function() {
     return l
   }
 });
-let n = 64,
+let a = 64,
   s = 62,
   l = 24,
   i = 5

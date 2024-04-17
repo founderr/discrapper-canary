@@ -4,55 +4,55 @@ s.r(t), s.d(t, {
     return l
   },
   getPrivateChannelIntegrationAddedSystemMessageContent: function() {
-    return _
-  },
-  getPrivateChannelIntegrationRemovedSystemMessageASTContent: function() {
     return u
   },
+  getPrivateChannelIntegrationRemovedSystemMessageASTContent: function() {
+    return E
+  },
   getPrivateChannelIntegrationRemovedSystemMessageContent: function() {
-    return r
+    return i
   }
 });
 var a = s("63063"),
   n = s("981631"),
-  E = s("689938");
+  r = s("689938");
 
-function _(e) {
+function u(e) {
   let {
     application: t,
     username: s,
-    usernameHook: _ = n.NOOP,
-    applicationNameHook: r = n.NOOP
+    usernameHook: u = n.NOOP,
+    applicationNameHook: i = n.NOOP
   } = e;
-  return null != t ? E.default.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED.format({
+  return null != t ? r.default.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED.format({
     username: s,
     otherUsername: t.name,
-    usernameHook: _,
-    otherUsernameHook: r,
+    usernameHook: u,
+    otherUsernameHook: i,
     helpCenterLink: a.default.getArticleURL(n.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
-  }) : E.default.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED_DELETED_APPLICATION.format({
+  }) : r.default.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED_DELETED_APPLICATION.format({
     username: s,
-    usernameHook: _,
+    usernameHook: u,
     helpCenterLink: a.default.getArticleURL(n.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
   })
 }
 
-function r(e) {
+function i(e) {
   let {
     application: t,
     username: s,
-    usernameHook: _ = n.NOOP,
-    applicationNameHook: r = n.NOOP
+    usernameHook: u = n.NOOP,
+    applicationNameHook: i = n.NOOP
   } = e;
-  return null != t ? E.default.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED.format({
+  return null != t ? r.default.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED.format({
     username: s,
     otherUsername: t.name,
-    usernameHook: _,
-    otherUsernameHook: r,
+    usernameHook: u,
+    otherUsernameHook: i,
     helpCenterLink: a.default.getArticleURL(n.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
-  }) : E.default.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED_DELETED_APPLICATION.format({
+  }) : r.default.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED_DELETED_APPLICATION.format({
     username: s,
-    usernameHook: _,
+    usernameHook: u,
     helpCenterLink: a.default.getArticleURL(n.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
   })
 }
@@ -61,22 +61,22 @@ function l(e) {
   let {
     application: t,
     username: s,
-    usernameOnClick: _,
-    applicationNameOnClick: r,
+    usernameOnClick: u,
+    applicationNameOnClick: i,
     medium: l
   } = e;
-  return null != t ? E.default.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED_MOBILE.astFormat({
+  return null != t ? r.default.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED_MOBILE.astFormat({
     username: s,
     otherUsername: t.name,
-    usernameOnClick: _,
-    otherUsernameOnClick: r,
+    usernameOnClick: u,
+    otherUsernameOnClick: i,
     medium: l,
     helpCenterLink: {
       url: a.default.getArticleURL(n.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
     }
-  }) : E.default.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED_DELETED_APPLICATION_MOBILE.astFormat({
+  }) : r.default.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED_DELETED_APPLICATION_MOBILE.astFormat({
     username: s,
-    usernameOnClick: _,
+    usernameOnClick: u,
     medium: l,
     helpCenterLink: {
       url: a.default.getArticleURL(n.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
@@ -84,26 +84,26 @@ function l(e) {
   })
 }
 
-function u(e) {
+function E(e) {
   let {
     application: t,
     username: s,
-    usernameOnClick: _,
-    applicationNameOnClick: r,
+    usernameOnClick: u,
+    applicationNameOnClick: i,
     medium: l
   } = e;
-  return null != t ? E.default.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED_MOBILE.astFormat({
+  return null != t ? r.default.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED_MOBILE.astFormat({
     username: s,
     otherUsername: t.name,
-    usernameOnClick: _,
-    otherUsernameOnClick: r,
+    usernameOnClick: u,
+    otherUsernameOnClick: i,
     medium: l,
     helpCenterLink: {
       url: a.default.getArticleURL(n.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
     }
-  }) : E.default.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED_DELETED_APPLICATION_MOBILE.astFormat({
+  }) : r.default.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED_DELETED_APPLICATION_MOBILE.astFormat({
     username: s,
-    usernameOnClick: _,
+    usernameOnClick: u,
     medium: l,
     helpCenterLink: {
       url: a.default.getArticleURL(n.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)

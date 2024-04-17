@@ -1,12 +1,12 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   useHeadphonesLottie: function() {
     return r
   }
 });
-var n = a("735250"),
-  s = a("470079"),
-  l = a("709014");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("709014");
 let i = {
     deafen: {
       name: "deafen",
@@ -37,13 +37,13 @@ let i = {
       }, [e]),
       u = s.useCallback(() => {
         if (null == t.current) return;
-        let a = "deafen" === e ? "hover_undeafened" : "hover_deafened";
-        t.current.play(a)
+        let n = "deafen" === e ? "hover_undeafened" : "hover_deafened";
+        t.current.play(n)
       }, [e]),
       d = s.useCallback(() => {
         if (null == t.current) return;
-        let a = "deafen" === e ? "hover_undeafened" : "hover_deafened";
-        t.current.stopIfPlaying(a)
+        let n = "deafen" === e ? "hover_undeafened" : "hover_deafened";
+        t.current.stopIfPlaying(n)
       }, [e]);
     return {
       events: {
@@ -52,9 +52,9 @@ let i = {
         onMouseLeave: d
       },
       play: o,
-      Component: s.useCallback(e => (0, n.jsx)(l.LottieIcon, {
+      Component: s.useCallback(e => (0, a.jsx)(l.LottieIcon, {
         ...e,
-        src: () => a.e("68449").then(a.t.bind(a, "406785", 19)),
+        src: () => n.e("68449").then(n.t.bind(n, "406785", 19)),
         ref: t,
         initialAnimation: r.current,
         markers: i

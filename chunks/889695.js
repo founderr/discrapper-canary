@@ -4,30 +4,30 @@ n.r(t), n.d(t, {
     return N
   }
 }), n("47120"), n("724458"), n("653041");
-var r = n("735250"),
-  i = n("470079"),
+var i = n("735250"),
+  r = n("470079"),
   l = n("658722"),
   s = n.n(l),
-  o = n("392711"),
-  u = n.n(o),
+  u = n("392711"),
+  o = n.n(u),
   a = n("149765"),
-  c = n("442837"),
-  d = n("481060"),
+  d = n("442837"),
+  c = n("481060"),
   f = n("271383"),
   S = n("430824"),
-  g = n("594174"),
-  h = n("700785"),
-  E = n("709054"),
-  p = n("962086"),
-  _ = n("160404"),
-  m = n("225675"),
-  C = n("981631"),
-  I = n("689938"),
-  T = n("591174");
+  E = n("594174"),
+  _ = n("700785"),
+  g = n("709054"),
+  h = n("962086"),
+  p = n("160404"),
+  C = n("225675"),
+  I = n("981631"),
+  T = n("689938"),
+  m = n("591174");
 
-function v(e) {
+function R(e) {
   var t;
-  return (0, r.jsx)("span", {
+  return (0, i.jsx)("span", {
     style: {
       color: null !== (t = e.colorString) && void 0 !== t ? t : "currentColor"
     },
@@ -38,67 +38,67 @@ function v(e) {
 function N(e) {
   let {
     guildId: t
-  } = e, n = (0, c.useStateFromStores)([g.default], () => g.default.getCurrentUser()), l = (0, c.useStateFromStores)([S.default], () => S.default.getGuild(t)), o = (0, c.useStateFromStores)([S.default], () => S.default.getRoles(t)), {
+  } = e, n = (0, d.useStateFromStores)([E.default], () => E.default.getCurrentUser()), l = (0, d.useStateFromStores)([S.default], () => S.default.getGuild(t)), u = (0, d.useStateFromStores)([S.default], () => S.default.getRoles(t)), {
     impersonateType: N,
-    viewingRoles: R
-  } = (0, c.useStateFromStoresObject)([_.default], () => ({
-    impersonateType: _.default.getImpersonateType(t),
-    viewingRoles: _.default.getViewingRoles(t)
-  })), M = N === m.ImpersonateType.SERVER_SHOP, b = (0, c.useStateFromStores)([f.default], () => null != n ? f.default.getTrueMember(t, n.id) : null), [O, A] = (0, d.useMultiSelect)(null == R ? [] : E.default.keys(R)), L = i.useRef(l);
-  i.useEffect(() => {
+    viewingRoles: v
+  } = (0, d.useStateFromStoresObject)([p.default], () => ({
+    impersonateType: p.default.getImpersonateType(t),
+    viewingRoles: p.default.getViewingRoles(t)
+  })), O = N === C.ImpersonateType.SERVER_SHOP, A = (0, d.useStateFromStores)([f.default], () => null != n ? f.default.getTrueMember(t, n.id) : null), [L, M] = (0, c.useMultiSelect)(null == v ? [] : g.default.keys(v)), b = r.useRef(l);
+  r.useEffect(() => {
     let e = {},
-      t = L.current;
+      t = b.current;
     if (null != t && null != N) {
-      for (let t of O) {
-        let n = o[t];
+      for (let t of L) {
+        let n = u[t];
         null != n && (e[t] = n)
-      }(0, p.updateImpersonating)(t.id, {
+      }(0, h.updateImpersonating)(t.id, {
         type: N,
         roles: e
       })
     }
-  }, [O, N, o]);
-  let x = null != l && null != n && null != b ? u()(o).filter(e => -1 !== b.roles.indexOf(e.id)).sortBy(e => -e.position).first() : void 0,
-    P = i.useMemo(() => null != l && null != n ? Object.values(o).filter(e => e.id !== l.id).filter(e => {
+  }, [L, N, u]);
+  let P = null != l && null != n && null != A ? o()(u).filter(e => -1 !== A.roles.indexOf(e.id)).sortBy(e => -e.position).first() : void 0,
+    G = r.useMemo(() => null != l && null != n ? Object.values(u).filter(e => e.id !== l.id).filter(e => {
       var t;
-      return !M || (null === (t = e.tags) || void 0 === t ? void 0 : t.subscription_listing_id) != null
-    }).filter(e => (null == x ? void 0 : x.id) === e.id || h.isRoleHigher(l, n.id, x, e)) : [], [l, n, M, x, o]);
-  if (null == n || null == l || null == b) return null;
-  let y = {};
-  return (b.roles.forEach(e => {
-    let t = o[e];
-    null != t && (y[t.id] = t)
-  }), a.has(h.computePermissionsForRoles({
-    forceRoles: y,
+      return !O || (null === (t = e.tags) || void 0 === t ? void 0 : t.subscription_listing_id) != null
+    }).filter(e => (null == P ? void 0 : P.id) === e.id || _.isRoleHigher(l, n.id, P, e)) : [], [l, n, O, P, u]);
+  if (null == n || null == l || null == A) return null;
+  let x = {};
+  return (A.roles.forEach(e => {
+    let t = u[e];
+    null != t && (x[t.id] = t)
+  }), a.has(_.computePermissionsForRoles({
+    forceRoles: x,
     context: l
-  }), a.combine(C.Permissions.MANAGE_GUILD, C.Permissions.MANAGE_ROLES)) || l.isOwner(n.id)) ? (0, r.jsx)("div", {
-    className: T.container,
-    children: (0, r.jsx)(d.Combobox, {
-      placeholder: I.default.Messages.SEARCH_ROLES,
-      value: O,
-      onChange: A,
+  }), a.combine(I.Permissions.MANAGE_GUILD, I.Permissions.MANAGE_ROLES)) || l.isOwner(n.id)) ? (0, i.jsx)("div", {
+    className: m.container,
+    children: (0, i.jsx)(c.Combobox, {
+      placeholder: T.default.Messages.SEARCH_ROLES,
+      value: L,
+      onChange: M,
       autoFocus: !0,
       children: e => {
-        let t = P.reduce((t, n) => (s()(e.toLowerCase(), n.name.toLowerCase()) && t.push((0, r.jsxs)(d.ComboboxItem, {
+        let t = G.reduce((t, n) => (s()(e.toLowerCase(), n.name.toLowerCase()) && t.push((0, i.jsxs)(c.ComboboxItem, {
             value: n.id,
-            children: [(0, r.jsx)(d.ComboboxItem.Label, {
-              children: v(n)
-            }), (0, r.jsx)(d.ComboboxItem.Checkbox, {})]
+            children: [(0, i.jsx)(c.ComboboxItem.Label, {
+              children: R(n)
+            }), (0, i.jsx)(c.ComboboxItem.Checkbox, {})]
           }, n.id)), t), []),
-          n = o[l.getEveryoneRoleId()];
-        return null != n && t.push((0, r.jsxs)(d.ComboboxItem, {
+          n = u[l.getEveryoneRoleId()];
+        return null != n && t.push((0, i.jsxs)(c.ComboboxItem, {
           value: n.id,
           disabled: !0,
-          children: [(0, r.jsx)(d.ComboboxItem.Label, {
-            children: v(n)
-          }), (0, r.jsx)(d.ComboboxItem.Checkbox, {
+          children: [(0, i.jsx)(c.ComboboxItem.Label, {
+            children: R(n)
+          }), (0, i.jsx)(c.ComboboxItem.Checkbox, {
             checked: !0
           })]
         }, n.id)), t
       }
     })
-  }) : (0, r.jsx)(d.Text, {
+  }) : (0, i.jsx)(c.Text, {
     variant: "text-md/medium",
-    children: I.default.Messages.VIEW_AS_ROLES_NO_ACCESS
+    children: T.default.Messages.VIEW_AS_ROLES_NO_ACCESS
   })
 }

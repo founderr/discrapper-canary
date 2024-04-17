@@ -226,7 +226,7 @@ let U = r.forwardRef(function(e, t) {
   }, [I, eC, ec]), r.useLayoutEffect(() => {
     I && eT("")
   }, [I, eO.length]);
-  let eV = r.useCallback(function(e) {
+  let eF = r.useCallback(function(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     if (null == e) {
       l(I ? [] : void 0);
@@ -249,9 +249,9 @@ let U = r.forwardRef(function(e, t) {
       null === (e = eu.current) || void 0 === e || e.focus()
     }
   }, [B]);
-  let eF = r.useCallback(() => {
-      eT(""), eV(null), eM(!0)
-    }, [eV, eM]),
+  let eV = r.useCallback(() => {
+      eT(""), eF(null), eM(!0)
+    }, [eF, eM]),
     ex = r.useCallback(e => {
       switch (e.key) {
         case "Escape":
@@ -269,7 +269,7 @@ let U = r.forwardRef(function(e, t) {
   }, [eI]), r.useEffect(() => {
     !eN && ef && null !== eI && requestAnimationFrame(() => ew.focusFirstVisibleItem())
   }, [eN, ef, eI]);
-  let eY = I ? F : V;
+  let eY = I ? V : F;
   return (0, i.jsx)(u.ListNavigatorProvider, {
     navigator: ew,
     children: (0, i.jsx)(f.Popout, {
@@ -293,7 +293,7 @@ let U = r.forwardRef(function(e, t) {
           width: el,
           selectedValues: eR,
           closePopout: t,
-          onSelect: eV,
+          onSelect: eF,
           closeOnSelect: T,
           options: eH,
           activeDescendant: ed,
@@ -386,7 +386,7 @@ let U = r.forwardRef(function(e, t) {
                   navigatorId: eD,
                   selectValue: function(e) {
                     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-                    eV(e, t)
+                    eF(e, t)
                   },
                   inputClassNames: Z
                 })
@@ -401,7 +401,7 @@ let U = r.forwardRef(function(e, t) {
             children: [d && (null != eI && "" !== eI || eO.length > 0) ? (0, i.jsx)(_.Clickable, {
               "aria-label": v.default.Messages.CLEAR,
               "aria-controls": ev,
-              onClick: eF,
+              onClick: eV,
               children: (0, i.jsx)(L.default, {
                 width: 16,
                 height: 16,
@@ -652,7 +652,7 @@ function k(e) {
   }) : null
 }
 
-function V(e) {
+function F(e) {
   let {
     selectedOptions: t,
     renderOptionPrefix: n,
@@ -679,7 +679,7 @@ function V(e) {
   })
 }
 
-function F(e) {
+function V(e) {
   let {
     query: t,
     placeholder: n,

@@ -27,8 +27,8 @@ function f() {
     m = c.ViewImageDescriptions.useSetting(),
     _ = c.ConvertEmoticons.useSetting(),
     g = c.InlineAttachmentMedia.useSetting(),
-    I = c.InlineEmbedMedia.useSetting(),
-    h = c.RenderEmbeds.useSetting(),
+    h = c.InlineEmbedMedia.useSetting(),
+    I = c.RenderEmbeds.useSetting(),
     N = c.RenderReactions.useSetting(),
     {
       analyticsLocations: p
@@ -41,7 +41,7 @@ function f() {
       children: E.default.Messages.INLINE_MEDIA_LABEL
     }), (0, a.jsx)(i.FormSwitch, {
       className: l()(T.marginTop8, T.marginBottom20),
-      value: I,
+      value: h,
       onChange: c.InlineEmbedMedia.updateSetting,
       children: E.default.Messages.INLINE_EMBED_MEDIA
     }), (0, a.jsx)(i.FormSwitch, {
@@ -63,7 +63,7 @@ function f() {
       children: E.default.Messages.RENDER_EMBEDS_LABEL
     }), (0, a.jsx)(i.FormSwitch, {
       className: l()(T.marginTop8, T.marginBottom40),
-      value: h,
+      value: I,
       onChange: c.RenderEmbeds.updateSetting,
       children: E.default.Messages.RENDER_EMBEDS
     }), (0, a.jsx)(i.FormTitle, {

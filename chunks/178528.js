@@ -16,8 +16,8 @@ var i = n("735250"),
   f = n("840780"),
   h = n("905423"),
   p = n("680089"),
-  m = n("58468"),
-  g = n("796974"),
+  g = n("58468"),
+  m = n("796974"),
   E = n("324067"),
   S = n("984933"),
   v = n("888369"),
@@ -59,7 +59,7 @@ class P extends a.PureComponent {
       guildId: e
     } = this.props, {
       scrollTop: t
-    } = g.default.getGuildDimensions(e);
+    } = m.default.getGuildDimensions(e);
     this.setAnimatedValue(null != t ? t : 0)
   }
   componentDidUpdate(e) {
@@ -70,7 +70,7 @@ class P extends a.PureComponent {
     if (e.guild !== t) {
       let {
         scrollTop: e
-      } = g.default.getGuildDimensions(n);
+      } = m.default.getGuildDimensions(n);
       this.setAnimatedValue(null != e ? e : 0)
     }
   }
@@ -194,9 +194,9 @@ function k(e) {
   } = (0, s.useStateFromStoresObject)([N.default], () => ({
     mutedChannels: N.default.getMutedChannels(n),
     collapseMuted: N.default.isGuildCollapsed(n)
-  })), f = (0, s.useStateFromStores)([O.default], () => O.default.getVoiceStates(n)), _ = (0, s.useStateFromStores)([m.default], () => m.default.getCollapsed()), {
+  })), f = (0, s.useStateFromStores)([O.default], () => O.default.getVoiceStates(n)), _ = (0, s.useStateFromStores)([g.default], () => g.default.getCollapsed()), {
     scrollTo: C
-  } = (0, s.useStateFromStores)([g.default], () => g.default.getGuildDimensions(n)), A = (0, h.default)(e => {
+  } = (0, s.useStateFromStores)([m.default], () => m.default.getGuildDimensions(n)), A = (0, h.default)(e => {
     let {
       channelId: t
     } = e;

@@ -12,8 +12,8 @@ var i, a, l, s, o = n("735250"),
   f = n.n(c),
   h = n("481060"),
   p = n("981631"),
-  m = n("298119"),
-  g = n("605094");
+  g = n("298119"),
+  m = n("605094");
 let E = p.OverlayWidgetTypes.DEFAULT,
   S = 1,
   v = r.createContext({
@@ -34,7 +34,7 @@ let E = p.OverlayWidgetTypes.DEFAULT,
         } = e;
         return (0, o.jsx)(T.Consumer, {
           children: e => (0, o.jsx)("div", {
-            className: u()(n, m.bar, m[f()(a)]),
+            className: u()(n, g.bar, g[f()(a)]),
             style: e,
             ...i,
             children: t
@@ -53,7 +53,7 @@ class I extends(i = r.PureComponent) {
     return (0, o.jsx)(T.Consumer, {
       children: i => (0, o.jsx)(v.Consumer, {
         children: a => {
-          let l = u()(m.body, m[f()(a.type)], n);
+          let l = u()(g.body, g[f()(a.type)], n);
           return e ? (0, o.jsx)("div", {
             className: l,
             style: i,
@@ -92,7 +92,7 @@ let N = e => {
         opacity: s
       },
       children: (0, o.jsx)("div", {
-        className: u()(m.widget, m[f()(t)], l),
+        className: u()(g.widget, g[f()(t)], l),
         style: {
           width: n,
           height: i
@@ -110,8 +110,8 @@ let N = e => {
     } = e;
     return (0, o.jsx)(T.Consumer, {
       children: e => (0, o.jsx)("div", {
-        className: u()(m.content, n, {
-          [m.staticSize]: !i
+        className: u()(g.content, n, {
+          [g.staticSize]: !i
         }),
         style: e,
         children: t
@@ -157,7 +157,7 @@ N.Background = e => {
   } = e;
   return (0, o.jsx)(h.Tooltip, {
     text: r ? (0, o.jsx)("div", {
-      className: m.tutorialTip,
+      className: g.tutorialTip,
       children: n
     }) : n,
     "aria-label": n,
@@ -175,10 +175,10 @@ N.Background = e => {
         onClick: i,
         onMouseEnter: l,
         onMouseLeave: r,
-        className: u()(m.icon, {
-          [m.toggledIconOn]: a
+        className: u()(g.icon, {
+          [g.toggledIconOn]: a
         }),
-        innerClassName: g.flexCenter,
+        innerClassName: m.flexCenter,
         "aria-label": n,
         children: (0, o.jsx)(t, {
           width: s,

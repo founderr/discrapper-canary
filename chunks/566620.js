@@ -28,10 +28,10 @@ n.r(t), n.d(t, {
     return v
   },
   updateActivityPanelMode: function() {
-    return V
+    return F
   },
   updateFocusedActivityLayout: function() {
-    return F
+    return V
   },
   uploadImageAttachment: function() {
     return P
@@ -329,14 +329,14 @@ async function k(e) {
   }
 }
 
-function V(e) {
+function F(e) {
   s.default.dispatch({
     type: "EMBEDDED_ACTIVITY_SET_PANEL_MODE",
     activityPanelMode: e
   })
 }
 
-function F(e) {
+function V(e) {
   s.default.dispatch({
     type: "EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT",
     focusedActivityLayout: e

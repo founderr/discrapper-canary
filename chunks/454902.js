@@ -19,9 +19,9 @@ var i, a, l, s = n("735250"),
   f = n("465670"),
   h = n("689938"),
   p = n("276411"),
-  m = n("794711");
+  g = n("794711");
 
-function g(e, t, n) {
+function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -199,7 +199,7 @@ class I extends(l = o.PureComponent) {
           className: p.title,
           children: t
         }), null != e ? (0, s.jsx)("div", {
-          className: d()(p.body, m.marginTop4),
+          className: d()(p.body, g.marginTop4),
           style: {
             WebkitLineClamp: n,
             lineClamp: n
@@ -234,25 +234,25 @@ class I extends(l = o.PureComponent) {
     })
   }
   constructor(e) {
-    super(e), g(this, "handleDismiss", e => {
+    super(e), m(this, "handleDismiss", e => {
       e.stopPropagation();
       let {
         onDismissClick: t
       } = this.props;
       null == t || t(e)
-    }), g(this, "handleConfirmClick", e => {
+    }), m(this, "handleConfirmClick", e => {
       e.stopPropagation();
       let {
         onConfirmClick: t
       } = this.props;
       null == t || t(e)
-    }), g(this, "handleCancelClick", e => {
+    }), m(this, "handleCancelClick", e => {
       e.stopPropagation();
       let {
         onCancelClick: t
       } = this.props;
       null == t || t(e)
-    }), g(this, "handleMouseEnter", () => {
+    }), m(this, "handleMouseEnter", () => {
       !this.props.disabled && this.setState({
         expanded: !0
       })
@@ -265,7 +265,7 @@ class I extends(l = o.PureComponent) {
     }
   }
 }
-g(I, "ColorSchemes", a), g(I, "defaultProps", {
+m(I, "ColorSchemes", a), m(I, "defaultProps", {
   maxBodyLines: void 0,
   colorScheme: "PRIMARY",
   expand: !1,

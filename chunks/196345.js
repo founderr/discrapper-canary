@@ -1,102 +1,102 @@
 "use strict";
-n.r(t), n.d(t, {
+i.r(t), i.d(t, {
   DisabledTermsRequirementFormField: function() {
-    return m
+    return C
   },
   TermsFieldBody: function() {
-    return h
-  },
-  TermsFieldCheckbox: function() {
     return f
   },
+  TermsFieldCheckbox: function() {
+    return p
+  },
   TermsFormField: function() {
-    return E
+    return m
   }
-}), n("47120");
-var r = n("735250");
-n("470079");
-var s = n("120356"),
-  o = n.n(s),
-  i = n("481060"),
-  a = n("454585"),
-  l = n("814550"),
-  u = n("489813"),
-  d = n("689938"),
-  c = n("819104");
+}), i("47120");
+var n = i("735250");
+i("470079");
+var r = i("120356"),
+  s = i.n(r),
+  a = i("481060"),
+  l = i("454585"),
+  o = i("814550"),
+  c = i("489813"),
+  u = i("689938"),
+  d = i("819104");
 
-function h(e) {
+function f(e) {
   let {
     terms: t,
-    channelId: n,
-    className: s
+    channelId: i,
+    className: r
   } = e;
-  return (0, r.jsx)("div", {
-    className: o()(c.termsFieldBody, s),
-    children: t.map((e, t) => (0, r.jsxs)("div", {
-      className: c.termsRow,
-      children: [(0, r.jsx)(i.Text, {
+  return (0, n.jsx)("div", {
+    className: s()(d.termsFieldBody, r),
+    children: t.map((e, t) => (0, n.jsxs)("div", {
+      className: d.termsRow,
+      children: [(0, n.jsx)(a.Text, {
         variant: "text-md/normal",
         color: "text-muted",
         children: "".concat(t + 1, ".")
-      }), (0, r.jsx)(i.Text, {
+      }), (0, n.jsx)(a.Text, {
         variant: "text-md/normal",
-        className: c.termsRowContent,
-        children: a.default.parseGuildVerificationFormRule(e, !0, {
-          channelId: n
+        className: d.termsRowContent,
+        children: l.default.parseGuildVerificationFormRule(e, !0, {
+          channelId: i
         })
       })]
     }, "term-".concat(t)))
   })
 }
 
-function f(e) {
+function p(e) {
   let {
     onChange: t,
-    checked: n,
-    disabled: s
+    checked: i,
+    disabled: r
   } = e;
-  return (0, r.jsx)(i.Checkbox, {
+  return (0, n.jsx)(a.Checkbox, {
     size: 20,
-    type: i.Checkbox.Types.INVERTED,
-    value: n,
+    type: a.Checkbox.Types.INVERTED,
+    value: i,
     onChange: t,
-    disabled: s,
+    disabled: r,
     style: {
       borderWidth: 2
     },
-    className: c.checkbox,
-    children: (0, r.jsx)(i.Text, {
+    className: d.checkbox,
+    children: (0, n.jsx)(a.Text, {
       variant: "text-sm/normal",
-      children: d.default.Messages.MEMBER_VERIFICATION_READ_RULES
+      children: u.default.Messages.MEMBER_VERIFICATION_READ_RULES
     })
   })
 }
 
-function m(e) {
+function C(e) {
   let {
     formField: t
   } = e;
-  return (0, r.jsx)(u.RequirementRenderer, {
-    icon: l.default,
-    text: d.default.Messages.MEMBER_VERIFICATION_AGREED_TO_RULES,
+  return (0, n.jsx)(c.RequirementRenderer, {
+    icon: o.default,
+    text: u.default.Messages.MEMBER_VERIFICATION_AGREED_TO_RULES,
     meetsRequirement: !!t.response
   })
 }
-let E = e => {
+let m = e => {
   let {
     channelId: t,
-    formField: n,
-    onChange: s
+    formField: i,
+    onChange: r
   } = e;
-  return (0, r.jsxs)(u.QuestionRenderer, {
-    title: d.default.Messages.SERVER_DISCOVERY_AGREE_TO_RULES,
-    children: [(0, r.jsx)(h, {
-      className: c.fieldBackground,
-      terms: n.values,
+  return (0, n.jsxs)(c.QuestionRenderer, {
+    title: u.default.Messages.SERVER_DISCOVERY_AGREE_TO_RULES,
+    children: [(0, n.jsx)(f, {
+      className: d.fieldBackground,
+      terms: i.values,
       channelId: t
-    }), (0, r.jsx)(f, {
-      onChange: s,
-      checked: n.response
+    }), (0, n.jsx)(p, {
+      onChange: r,
+      checked: i.response
     })]
   })
 }

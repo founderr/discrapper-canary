@@ -2,7 +2,7 @@
 let i;
 n.r(t), n.d(t, {
   default: function() {
-    return em
+    return eg
   }
 }), n("653041");
 var a = n("735250"),
@@ -16,8 +16,8 @@ var a = n("735250"),
   f = n("498607"),
   h = n.n(f),
   p = n("442837"),
-  m = n("481060"),
-  g = n("668781"),
+  g = n("481060"),
+  m = n("668781"),
   E = n("239091"),
   S = n("13245"),
   v = n("425493"),
@@ -96,7 +96,7 @@ let ef = e => {
       onClick: n,
       isPreviewingInGame: i,
       locked: l
-    } = e, s = l ? m.Clickable : "div";
+    } = e, s = l ? g.Clickable : "div";
     return (0, a.jsx)(s, {
       className: o()(eo.overlayBackground, {
         [eo.overlayActive]: !l,
@@ -140,7 +140,7 @@ let ef = e => {
   };
 class ep extends l.Component {
   handleLock() {
-    !(0, m.hasAnyModalOpen)() && !F.default.isOpen() && S.default.setLocked(!0, (0, X.getPID)())
+    !(0, g.hasAnyModalOpen)() && !F.default.isOpen() && S.default.setLocked(!0, (0, X.getPID)())
   }
   handleDeactivate() {
     S.default.deactivateAllRegions()
@@ -218,7 +218,7 @@ class ep extends l.Component {
         message: "set_perf_report_interval",
         interval: 15 * W.default.Millis.MINUTE
       })), K.default.on("REQUEST_OPEN_EXTERNAL_URL", (e, t) => {
-        G.default.getDisableExternalLinkAlert() || t === V.default.getLastURL() ? K.default.send("OPEN_EXTERNAL_URL", t) : g.default.show({
+        G.default.getDisableExternalLinkAlert() || t === V.default.getLastURL() ? K.default.send("OPEN_EXTERNAL_URL", t) : m.default.show({
           title: es.default.Messages.OVERLAY_LINK_ALERT_TITLE,
           body: es.default.Messages.OVERLAY_LINK_ALERT_BODY,
           secondaryConfirmText: es.default.Messages.OVERLAY_LINK_ALERT_SECONDARY,
@@ -264,7 +264,7 @@ class ep extends l.Component {
     } = d;
     if (0 === f || 0 === h || n || !l) return null;
     let p = e || s,
-      m = b.default.getId();
+      g = b.default.getId();
     return (0, a.jsxs)("div", {
       className: eo.overlay,
       children: [(0, a.jsx)(et.default, {}), s && (0, a.jsx)("header", {
@@ -281,7 +281,7 @@ class ep extends l.Component {
           [eo.layoutUnlocked]: !e
         })
       }) : e ? null : this.renderInvalidSizeMessage(), (0, a.jsx)(ei.default, {}), null != u && null != c && (0, a.jsx)(en.default, {
-        streamerId: m,
+        streamerId: g,
         guildId: u.id,
         channelId: c
       }), (0, a.jsx)($.default, {
@@ -315,7 +315,7 @@ class ep extends l.Component {
   }
 }
 
-function em() {
+function eg() {
   let {
     locked: e,
     initialized: t,
@@ -334,7 +334,7 @@ function em() {
     location: "overlay"
   }, {
     autoTrackExposure: !1
-  }), g = (0, C.default)() && null != c, E = (0, p.useStateFromStores)([D.default], () => null != D.default.getCurrentUserActiveStream()), {
+  }), m = (0, C.default)() && null != c, E = (0, p.useStateFromStores)([D.default], () => null != D.default.getCurrentUserActiveStream()), {
     analyticsLocations: S
   } = (0, O.default)(N.default.OVERLAY), {
     showKeybindIndicators: v,
@@ -342,7 +342,7 @@ function em() {
   } = (0, Q.useGetKeybindNotification)();
   return (0, a.jsx)(O.AnalyticsLocationProvider, {
     value: S,
-    children: (0, a.jsx)(m.RedesignIconContextProvider, {
+    children: (0, a.jsx)(g.RedesignIconContextProvider, {
       children: (0, a.jsx)(ep, {
         locked: e,
         initialized: t,
@@ -359,7 +359,7 @@ function em() {
         canGoLive: f,
         isStreaming: E,
         canBroadcast: h,
-        canStartBroadcast: g,
+        canStartBroadcast: m,
         showKeybindNotification: v,
         dismissKeybindNotification: T
       })

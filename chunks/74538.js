@@ -28,7 +28,7 @@ n.r(t), n.d(t, {
     return eh
   },
   getDefaultPrice: function() {
-    return F
+    return V
   },
   getDiscountIntervalString: function() {
     return Y
@@ -91,7 +91,7 @@ n.r(t), n.d(t, {
     return ec
   },
   getPremiumPlanItem: function() {
-    return V
+    return F
   },
   getPremiumPlanOptions: function() {
     return et
@@ -194,11 +194,11 @@ let G = {
     ALL: [P.SubscriptionPlans.NONE_MONTH, P.SubscriptionPlans.NONE_YEAR, P.SubscriptionPlans.PREMIUM_YEAR_TIER_2, P.SubscriptionPlans.PREMIUM_MONTH_TIER_2, P.SubscriptionPlans.PREMIUM_YEAR_TIER_1, P.SubscriptionPlans.PREMIUM_MONTH_TIER_1, P.SubscriptionPlans.PREMIUM_YEAR_TIER_0, P.SubscriptionPlans.PREMIUM_MONTH_TIER_0]
   };
 
-function V(e) {
+function F(e) {
   return e.items.find(e => P.PREMIUM_PLANS.has(e.planId))
 }
 
-function F(e) {
+function V(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -923,7 +923,7 @@ function ec(e) {
 
 function eE(e, t, n) {
   let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-    r = null != t ? x(e.id, !1, i, t) : F(e.id, !1, i),
+    r = null != t ? x(e.id, !1, i, t) : V(e.id, !1, i),
     s = (0, v.formatPrice)(r.amount, r.currency);
   return e.currency !== U.CurrencyCodes.USD && !0 === n && (s = s.concat("*")), s
 }
@@ -1227,7 +1227,7 @@ function eP(e) {
 }
 
 function eU(e) {
-  let t = null != e ? V(e) : null;
+  let t = null != e ? F(e) : null;
   return null != t ? en(t.planId) : null
 }
 
@@ -1240,7 +1240,7 @@ t.default = Object.freeze({
   isPremium: L.isPremium,
   isPremiumExactly: L.isPremiumExactly,
   getPrice: x,
-  getDefaultPrice: F,
+  getDefaultPrice: V,
   getInterval: function(e) {
     let t = P.SubscriptionPlanInfo[e];
     if (null != t) return {
@@ -1403,21 +1403,21 @@ t.default = Object.freeze({
   },
   getBillingReviewSubheader: eh,
   getIntervalForInvoice: eA,
-  getPremiumPlanItem: V,
+  getPremiumPlanItem: F,
   getGuildBoostPlanItem: eP,
   isBoostOnlySubscription: function(e) {
-    return null != e && null == V(e) && null != eP(e)
+    return null != e && null == F(e) && null != eP(e)
   },
   getPremiumSkuIdForSubscription: eU,
   getPremiumTypeFromSubscription: function(e) {
     if (null != e) {
-      let t = V(e);
+      let t = F(e);
       if (null != t) return K(t.planId)
     }
   },
   getPremiumTypeFromSubscriptionRenewalMutations: function(e) {
     if (null != e && null != e.renewalMutations) {
-      let t = V(e.renewalMutations);
+      let t = F(e.renewalMutations);
       if (null != t) return K(t.planId)
     }
   },

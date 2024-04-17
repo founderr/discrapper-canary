@@ -1,41 +1,41 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   adaptAnnouncementModalVariant1: function() {
     return S
   }
 });
-var n = a("735250");
-a("470079");
-var s = a("524437"),
-  l = a("740111"),
-  i = a("481060"),
-  r = a("963249"),
-  o = a("703656"),
-  u = a("976644"),
-  d = a("626135"),
-  c = a("63063"),
-  f = a("823188"),
-  E = a("474936"),
-  h = a("981631"),
-  _ = a("689938"),
-  C = a("464765"),
-  m = a("74316");
+var a = n("735250");
+n("470079");
+var s = n("524437"),
+  l = n("740111"),
+  i = n("481060"),
+  r = n("963249"),
+  o = n("703656"),
+  u = n("976644"),
+  d = n("626135"),
+  c = n("63063"),
+  f = n("823188"),
+  E = n("474936"),
+  h = n("981631"),
+  _ = n("689938"),
+  C = n("464765"),
+  m = n("74316");
 
 function S(e) {
-  var t, a;
+  var t, n;
   let {
     content: S,
-    renderModalProps: p,
-    analyticsLocations: I,
+    renderModalProps: I,
+    analyticsLocations: p,
     analyticsLocation: T,
     isLightTheme: g
   } = e, A = "AnnouncementModalVariant1_".concat(s.DismissibleContent[Number(S.dismissKey)]), {
     onClose: N
-  } = p, v = null != S.button && "" !== S.button.copy ? S.button.copy : _.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, R = (null === (t = S.button) || void 0 === t ? void 0 : t.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", O = (null === (a = S.button) || void 0 === a ? void 0 : a.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? () => {
+  } = I, v = null != S.button && "" !== S.button.copy ? S.button.copy : _.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, R = (null === (t = S.button) || void 0 === t ? void 0 : t.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", O = (null === (n = S.button) || void 0 === n ? void 0 : n.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? () => {
     (0, o.transitionTo)(h.Routes.APPLICATION_STORE), N()
   } : () => (0, r.default)({
     subscriptionTier: E.PremiumSubscriptionSKUs.TIER_2,
-    analyticsLocations: I,
+    analyticsLocations: p,
     analyticsObject: {
       ...T,
       object: h.AnalyticsObjects.BUTTON_CTA,
@@ -44,35 +44,35 @@ function S(e) {
     onClose: e => {
       e && N()
     }
-  }), L = "" !== S.helpArticleId ? () => (0, n.jsx)(i.Anchor, {
+  }), L = "" !== S.helpArticleId ? () => (0, a.jsx)(i.Anchor, {
     className: C.termsApplyAnchor,
     href: c.default.getArticleURL(S.helpArticleId),
-    children: (0, n.jsx)(i.Heading, {
+    children: (0, a.jsx)(i.Heading, {
       variant: "heading-md/normal",
       className: C.termsApplyBodyText,
       children: _.default.Messages.BOGO_TERMS_APPLY
     })
-  }) : void 0, M = {
+  }) : void 0, P = {
     type: "video",
     src: g ? S.heroArtVideoLinkLightTheme : S.videoLink
   };
-  ("" !== S.heroArtImageLinkDarkTheme || "" !== S.heroArtImageLinkLightTheme) && (M = {
+  ("" !== S.heroArtImageLinkDarkTheme || "" !== S.heroArtImageLinkLightTheme) && (P = {
     type: "image",
     src: g ? S.heroArtImageLinkLightTheme : S.heroArtImageLinkDarkTheme
   });
-  let P = g ? f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL,
-    x = "" !== S.modalTopPill ? () => (0, n.jsx)(f.PremiumPillWithSparkles, {
+  let M = g ? f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL,
+    x = "" !== S.modalTopPill ? () => (0, a.jsx)(f.PremiumPillWithSparkles, {
       text: S.modalTopPill,
       className: C.modalTopPill,
-      colorOptions: P
+      colorOptions: M
     }) : void 0;
   return {
-    renderModalProps: p,
+    renderModalProps: I,
     header: S.header,
     modalTopExtra: x,
     subHeader: S.subheader,
     subHeaderExtra: L,
-    heroArt: M,
+    heroArt: P,
     featureCards: S.featureCards.map(e => ({
       header: e.header,
       subHeader: e.body,
@@ -82,7 +82,7 @@ function S(e) {
     changeLogId: A,
     button: () => {
       let e = Date.now();
-      return (0, n.jsxs)(u.default, {
+      return (0, a.jsxs)(u.default, {
         className: C.buttonWide,
         innerClassName: C.innerButton,
         color: i.Button.Colors.GREEN,
@@ -95,7 +95,7 @@ function S(e) {
             target: A
           }), O()
         },
-        children: [(0, n.jsx)("img", {
+        children: [(0, a.jsx)("img", {
           alt: "",
           className: C.nitroIconSubHeader,
           src: m

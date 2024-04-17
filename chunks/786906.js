@@ -16,8 +16,8 @@ var i = n("735250"),
   f = n("984370"),
   h = n("910611"),
   p = n("131704"),
-  m = n("523746"),
-  g = n("592125"),
+  g = n("523746"),
+  m = n("592125"),
   E = n("430824"),
   S = n("699516"),
   v = n("944486"),
@@ -170,10 +170,10 @@ function b(e) {
   let {
     channel: t,
     ...n
-  } = e, a = (0, o.useStateFromStores)([v.default, g.default], () => {
+  } = e, a = (0, o.useStateFromStores)([v.default, m.default], () => {
     let e = v.default.getVoiceChannelId();
-    return g.default.getChannel(e)
-  }), l = (0, o.useStateFromStores)([E.default], () => E.default.getGuild(t.guild_id)), s = (0, o.useStateFromStores)([m.default], () => m.default.isCallActive(t.id)), r = (0, c.default)(t), d = (0, o.useStateFromStores)([S.default], () => !!t.isDM() && null != t.getRecipientId() && S.default.isBlocked(t.getRecipientId()));
+    return m.default.getChannel(e)
+  }), l = (0, o.useStateFromStores)([E.default], () => E.default.getGuild(t.guild_id)), s = (0, o.useStateFromStores)([g.default], () => g.default.isCallActive(t.id)), r = (0, c.default)(t), d = (0, o.useStateFromStores)([S.default], () => !!t.isDM() && null != t.getRecipientId() && S.default.isBlocked(t.getRecipientId()));
   return (0, i.jsx)(D, {
     channel: t,
     channelName: r,

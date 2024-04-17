@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("197115"),
   _ = s("350327"),
   g = s("318661"),
-  I = s("996073"),
-  h = s("25990"),
+  h = s("996073"),
+  I = s("25990"),
   N = s("466111"),
   p = s("626135"),
   C = s("74538"),
@@ -40,12 +40,12 @@ var a = s("735250"),
   y = s("56845");
 
 function B(e) {
-  var t, B, F;
+  var t, B, G;
   let {
-    user: G
+    user: F
   } = e, {
     reducedMotion: k
-  } = n.useContext(i.AccessibilityPreferencesContext), w = C.default.isPremium(G), {
+  } = n.useContext(i.AccessibilityPreferencesContext), w = C.default.isPremium(F), {
     pendingAvatar: H,
     pendingBanner: V,
     pendingThemeColors: Y,
@@ -56,18 +56,18 @@ function B(e) {
     tryItOutBanner: q,
     tryItOutAvatarDecoration: Z,
     tryItOutProfileEffectId: X
-  } = (0, l.useStateFromStoresObject)([h.default], () => {
-    let e = h.default.getAllPending(),
-      t = h.default.getErrors(),
-      s = h.default.getAllTryItOut();
+  } = (0, l.useStateFromStoresObject)([I.default], () => {
+    let e = I.default.getAllPending(),
+      t = I.default.getErrors(),
+      s = I.default.getAllTryItOut();
     return {
       ...e,
       ...s,
       errors: t
     }
   }), J = (0, c.default)(Z), $ = (0, S.default)(X), ee = n.useRef(null);
-  (0, I.default)(ee, b.ProfileCustomizationScrollPositions.TRY_IT_OUT);
-  let et = (0, g.default)(G.id),
+  (0, h.default)(ee, b.ProfileCustomizationScrollPositions.TRY_IT_OUT);
+  let et = (0, g.default)(F.id),
     es = null == et ? void 0 : et.getPreviewBio(K),
     {
       analyticsLocations: ea,
@@ -81,7 +81,7 @@ function B(e) {
       },
       location_stack: en
     })
-  }, [en, G]);
+  }, [en, F]);
   let el = (null === (B = (0, T.usePremiumTrialOffer)()) || void 0 === B ? void 0 : null === (t = B.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === j.PremiumSubscriptionSKUs.TIER_2,
     ei = (0, E.usePremiumDiscountOffer)(),
     er = (0, E.discountOfferHasTier)(ei, j.PremiumSubscriptionSKUs.TIER_2),
@@ -108,12 +108,12 @@ function B(e) {
           }), U.default.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_PREVIEW]
         }),
         profilePreview: (0, a.jsx)(A.default, {
-          user: G,
+          user: F,
           onAvatarChange: _.setTryItOutAvatar,
           onBannerChange: _.setTryItOutBanner,
           pendingPronouns: W,
           pendingBio: K,
-          pendingBanner: null !== (F = null != q ? q : V) && void 0 !== F ? F : s("466045"),
+          pendingBanner: null !== (G = null != q ? q : V) && void 0 !== G ? G : s("466045"),
           pendingAvatar: null != Q ? Q : H,
           pendingThemeColors: null != z ? z : Y,
           pendingAvatarDecoration: J,
@@ -137,7 +137,7 @@ function B(e) {
             })]
           }), (0, a.jsx)(L.default, {
             className: y.customizationSection,
-            user: G,
+            user: F,
             pendingAvatar: null != Q ? Q : H,
             pendingColors: null != z ? z : Y,
             onThemeColorsChange: _.setTryItOutThemeColors,
@@ -159,13 +159,13 @@ function B(e) {
           }), (0, a.jsx)(x.default, {
             isTryItOutFlow: !0,
             className: y.customizationSection,
-            user: G,
+            user: F,
             sectionTitle: U.default.Messages.USER_SETTINGS_AVATAR_DECORATION
           }, "decoration"), (0, a.jsx)(D.default, {
             className: y.customizationSection,
             isTryItOutFlow: !0,
             initialSelectedEffectId: $,
-            user: G,
+            user: F,
             sectionTitle: U.default.Messages.USER_SETTINGS_PROFILE_EFFECT
           }, "effect"), !el && (0, a.jsxs)(a.Fragment, {
             children: [(0, a.jsx)(i.Text, {

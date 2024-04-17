@@ -1,26 +1,26 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   useGuildHasLiveChannelNotice: function() {
     return u
   }
 });
-var n = a("442837"),
-  s = a("427679"),
-  l = a("517334"),
-  i = a("592125"),
-  r = a("151864"),
-  o = a("554747");
+var a = n("442837"),
+  s = n("427679"),
+  l = n("517334"),
+  i = n("592125"),
+  r = n("151864"),
+  o = n("554747");
 
 function u(e) {
   var t;
-  let a = (0, l.default)(e),
-    u = i.default.getChannel(null === (t = a[0]) || void 0 === t ? void 0 : t.id),
-    d = (0, n.useStateFromStores)([s.default], () => s.default.getStageInstanceByChannel(null == u ? void 0 : u.id), [u]),
+  let n = (0, l.default)(e),
+    u = i.default.getChannel(null === (t = n[0]) || void 0 === t ? void 0 : t.id),
+    d = (0, a.useStateFromStores)([s.default], () => s.default.getStageInstanceByChannel(null == u ? void 0 : u.id), [u]),
     c = (0, o.useGuildActiveEvent)(e),
     {
       isStageNoticeHidden: f,
       isEventNoticeHidden: E
-    } = (0, n.useStateFromStoresObject)([r.default], () => ({
+    } = (0, a.useStateFromStoresObject)([r.default], () => ({
       isStageNoticeHidden: r.default.isLiveChannelNoticeHidden({
         stageId: null == d ? void 0 : d.id
       }),

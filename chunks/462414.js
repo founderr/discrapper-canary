@@ -1,13 +1,13 @@
 "use strict";
-a.r(t), a("47120");
-var n = a("846027"),
-  s = a("131951"),
-  l = a("13140"),
-  i = a("996106"),
-  r = a("452426"),
-  o = a("186901"),
-  u = a("981631"),
-  d = a("65154");
+n.r(t), n("47120");
+var a = n("846027"),
+  s = n("131951"),
+  l = n("13140"),
+  i = n("996106"),
+  r = n("452426"),
+  o = n("186901"),
+  u = n("981631"),
+  d = n("65154");
 
 function c(e) {
   let t = e.application.id;
@@ -31,16 +31,16 @@ t.default = {
       let {
         socket: t,
         args: {
-          input_mode: a,
+          input_mode: n,
           self_mute: i,
           self_deaf: r
         }
       } = e, o = c(t);
-      null != a && n.default.setMode(a.type, {
-        shortcut: (0, l.toCombo)(a.shortcut)
-      }, o), null != i && i !== s.default.isSelfMute(o) && n.default.toggleSelfMute({
+      null != n && a.default.setMode(n.type, {
+        shortcut: (0, l.toCombo)(n.shortcut)
+      }, o), null != i && i !== s.default.isSelfMute(o) && a.default.toggleSelfMute({
         context: o
-      }), null != r && r !== s.default.isSelfDeaf(o) && n.default.toggleSelfDeaf({
+      }), null != r && r !== s.default.isSelfDeaf(o) && a.default.toggleSelfDeaf({
         context: o
       })
     }
@@ -56,12 +56,12 @@ t.default = {
       let {
         socket: t,
         args: {
-          user_id: a,
+          user_id: n,
           mute: l,
           volume: i
         }
       } = e, r = c(t);
-      null != l && l !== s.default.isLocalMute(a, r) && n.default.toggleLocalMute(a, r), null != i && n.default.setLocalVolume(a, i, r)
+      null != l && l !== s.default.isLocalMute(n, r) && a.default.toggleLocalMute(n, r), null != i && a.default.setLocalVolume(n, i, r)
     }
   },
   [u.RPCCommands.PUSH_TO_TALK]: {

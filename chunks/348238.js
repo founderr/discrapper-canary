@@ -4,25 +4,25 @@ n.r(t), n.d(t, {
     return w
   },
   useClickInteractionUserAvatar: function() {
-    return P
+    return x
   },
   useClickInteractionUserUsername: function() {
-    return O
+    return v
   },
   useClickMessage: function() {
-    return B
+    return G
   },
   useClickMessageAuthorAvatar: function() {
-    return L
+    return P
   },
   useClickMessageAuthorUsername: function() {
-    return R
+    return O
   },
   useClickReferencedMessageAuthorAvatar: function() {
     return D
   },
   useClickReferencedMessageAuthorUsername: function() {
-    return v
+    return R
   },
   useClickReply: function() {
     return k
@@ -43,7 +43,7 @@ n.r(t), n.d(t, {
     return F
   },
   useHoveredMessage: function() {
-    return G
+    return B
   }
 }), n("789020"), n("47120");
 var s = n("735250"),
@@ -55,18 +55,18 @@ var s = n("735250"),
   u = n("40851"),
   d = n("592125"),
   c = n("323873"),
-  f = n("375954"),
-  E = n("594174"),
+  E = n("375954"),
+  f = n("594174"),
   _ = n("585483"),
-  m = n("5967"),
-  T = n("630388"),
-  I = n("358085"),
-  p = n("51144"),
-  h = n("91047"),
-  N = n("901461"),
-  S = n("50284"),
-  C = n("981631"),
-  A = n("689938");
+  T = n("5967"),
+  I = n("630388"),
+  m = n("358085"),
+  N = n("51144"),
+  p = n("91047"),
+  S = n("901461"),
+  C = n("50284"),
+  A = n("981631"),
+  h = n("689938");
 
 function g(e, t, n) {
   return a.useCallback(() => {
@@ -78,78 +78,78 @@ function g(e, t, n) {
 
 function M(e, t, n) {
   return a.useCallback(s => {
-    let a = E.default.getUser(e);
+    let a = f.default.getUser(e);
     if (null == a) return;
     if (s.preventDefault(), s.stopPropagation(), !s.shiftKey) {
       n();
       return
     }
-    let l = "@".concat(p.default.getUserTag(a, {
+    let l = "@".concat(N.default.getUserTag(a, {
         decoration: "never"
       })),
       i = "<@".concat(e, ">");
-    _.ComponentDispatch.dispatchToLastSubscribed(C.ComponentActions.INSERT_TEXT, {
+    _.ComponentDispatch.dispatchToLastSubscribed(A.ComponentActions.INSERT_TEXT, {
       plainText: l,
       rawText: i
     }), o.default.startTyping(t)
   }, [e, t, n])
 }
 
-function R(e, t, n, s) {
+function O(e, t, n, s) {
   let a = g("usernameProfile", n, s);
   return M(e.author.id, t.id, a)
 }
 
-function v(e, t, n, s) {
+function R(e, t, n, s) {
   let a = g("referencedUsernameProfile", n, s);
   return M(null == e ? void 0 : e.author.id, t.id, a)
 }
 
-function O(e, t, n, s) {
+function v(e, t, n, s) {
   let a = g("interactionUsernameProfile", n, s);
   return M(null == e ? void 0 : e.user.id, t.id, a)
 }
 
-function x(e) {
+function L(e) {
   return a.useCallback(t => {
     t.preventDefault(), t.stopPropagation(), e()
   }, [e])
 }
 
-function L(e, t) {
-  return x(g("avatarProfile", e, t))
+function P(e, t) {
+  return L(g("avatarProfile", e, t))
 }
 
 function D(e, t) {
-  return x(g("referencedAvatarProfile", e, t))
+  return L(g("referencedAvatarProfile", e, t))
 }
 
-function P(e, t) {
-  return x(g("interactionAvatarProfile", e, t))
+function x(e, t) {
+  return L(g("interactionAvatarProfile", e, t))
 }
 
 function y(e, t, l, r) {
   let {
     id: o
   } = t, {
-    id: E,
+    id: f,
     flags: _
-  } = e, m = (0, T.hasFlag)(_, C.MessageFlags.EPHEMERAL), p = (0, N.default)(e), h = (0, u.useAppContext)();
+  } = e, T = (0, I.hasFlag)(_, A.MessageFlags.EPHEMERAL), N = (0, S.default)(e), p = (0, u.useAppContext)();
   return a.useCallback((e, t) => {
-    if (m) return;
-    if (!I.isPlatformEmbedded) {
+    if (T) return;
+    if (!m.isPlatformEmbedded) {
       let t = e.target;
       if ("A" === t.tagName && "" !== t.textContent || null == window.getSelection) return;
       let n = window.getSelection();
       if (null != n && !n.isCollapsed && (n.focusNode === e.target || t.contains(n.focusNode))) return
     }
     let a = d.default.getChannel(o),
-      u = f.default.getMessage(o, E),
-      _ = c.default.isEditing(o, E);
+      u = E.default.getMessage(o, f),
+      _ = c.default.isEditing(o, f);
     null != a && null != u && !_ && (l({
       contextMenu: !0
     }), (0, i.openContextMenuLazy)(e, async () => {
-      if (p) {
+      if (N) {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("37766"), n.e("6532")]).then(n.bind(n, "240678"));
@@ -175,24 +175,24 @@ function y(e, t, l, r) {
       onClose: () => l({
         contextMenu: !1
       }),
-      context: h
+      context: p
     }))
-  }, [m, o, E, l, h, p, r])
+  }, [T, o, f, l, p, N, r])
 }
 
 function U(e, t) {
   return a.useCallback(n => {
-    let s = E.default.getUser(e),
+    let s = f.default.getUser(e),
       a = d.default.getChannel(t);
-    null != s && null != a && (n.stopPropagation(), (0, h.openUserContextMenu)(n, s, a))
+    null != s && null != a && (n.stopPropagation(), (0, p.openUserContextMenu)(n, s, a))
   }, [e, t])
 }
 
 function j(e, t, n) {
   return a.useCallback(s => {
-    let a = E.default.getUser(e),
+    let a = f.default.getUser(e),
       l = d.default.getChannel(t);
-    null != a && null != l && (s.stopPropagation(), (0, h.openModerateUserContextMenu)(s, {
+    null != a && null != l && (s.stopPropagation(), (0, p.openModerateUserContextMenu)(s, {
       user: a,
       channel: l,
       moderationAlertId: n
@@ -202,33 +202,33 @@ function j(e, t, n) {
 
 function b(e, t) {
   return a.useCallback(n => {
-    let s = E.default.getUser(e),
+    let s = f.default.getUser(e),
       a = d.default.getChannel(t);
-    null != s && null != a && (n.stopPropagation(), (0, h.openModerationRaidContextMenu)(n, s, a.guild_id))
+    null != s && null != a && (n.stopPropagation(), (0, p.openModerationRaidContextMenu)(n, s, a.guild_id))
   }, [e, t])
 }
 
-function B(e, t) {
+function G(e, t) {
   let {
     id: n
   } = e, {
     id: s
   } = t;
   return a.useCallback(e => {
-    e.altKey && (e.preventDefault(), (0, S.default)(s, n))
+    e.altKey && (e.preventDefault(), (0, C.default)(s, n))
   }, [s, n])
 }
 
-function G(e, t, n) {
+function B(e, t, n) {
   let s = "".concat(e, ":").concat(t),
     l = a.useRef(n),
     [i, r] = a.useState(n);
   l.current = i || l.current;
   let o = a.useCallback(() => {
-      !i && (_.ComponentDispatch.dispatchKeyed(C.ComponentActionsKeyed.ANIMATE_CHAT_AVATAR, s, !0), r(!0))
+      !i && (_.ComponentDispatch.dispatchKeyed(A.ComponentActionsKeyed.ANIMATE_CHAT_AVATAR, s, !0), r(!0))
     }, [i, s]),
     u = a.useCallback(() => {
-      _.ComponentDispatch.dispatchKeyed(C.ComponentActionsKeyed.ANIMATE_CHAT_AVATAR, s, !1), r(!1)
+      _.ComponentDispatch.dispatchKeyed(A.ComponentActionsKeyed.ANIMATE_CHAT_AVATAR, s, !1), r(!1)
     }, [s]);
   return {
     hasHovered: l.current,
@@ -241,14 +241,14 @@ function G(e, t, n) {
 function F(e, t) {
   let [n, s] = a.useState(!1), [l, i] = a.useState(!1), r = a.useCallback(t => {
     var n, a;
-    let l = null !== (a = null === (n = (0, m.eventOwnerDocument)(t)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== a ? a : null;
+    let l = null !== (a = null === (n = (0, T.eventOwnerDocument)(t)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== a ? a : null;
     (t.target === t.currentTarget || t.currentTarget.contains(l)) && (i(!0), s(!0)), null != e && e(t)
   }, [e]);
   return {
     handleFocus: r,
     handleBlur: a.useCallback(e => {
       var n, a;
-      let l = null !== (a = null === (n = (0, m.eventOwnerDocument)(e)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== a ? a : null;
+      let l = null !== (a = null === (n = (0, T.eventOwnerDocument)(e)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== a ? a : null;
       (e.target === e.currentTarget || !e.currentTarget.contains(l)) && s(!1), null != t && t(e)
     }, [t]),
     isFocused: n,
@@ -260,11 +260,11 @@ function k(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   return a.useCallback(() => {
     null != t && (n ? l.default.show({
-      title: A.default.Messages.UNBLOCK_TO_JUMP_TITLE,
-      body: A.default.Messages.UNBLOCK_TO_JUMP_BODY.format({
+      title: h.default.Messages.UNBLOCK_TO_JUMP_TITLE,
+      body: h.default.Messages.UNBLOCK_TO_JUMP_BODY.format({
         name: t.author.username
       }),
-      confirmText: A.default.Messages.OKAY
+      confirmText: h.default.Messages.OKAY
     }) : r.default.jumpToMessage({
       channelId: t.channel_id,
       messageId: t.id,

@@ -20,8 +20,8 @@ var l = a("735250"),
   b = a("642619"),
   x = a("594174"),
   T = a("725808"),
-  v = a("794358"),
-  L = a("466111"),
+  L = a("794358"),
+  v = a("466111"),
   I = a("26290"),
   N = a("998502"),
   _ = a("335131"),
@@ -33,8 +33,8 @@ var l = a("735250"),
   R = a("558060"),
   P = a("237031"),
   B = a("372654"),
-  D = a("832149"),
-  F = a("474936"),
+  F = a("832149"),
+  D = a("474936"),
   M = a("689938"),
   w = a("321664");
 let H = N.default.getEnableHardwareAcceleration() ? u.AnimatedAvatar : u.Avatar,
@@ -69,7 +69,7 @@ let H = N.default.getEnableHardwareAcceleration() ? u.AnimatedAvatar : u.Avatar,
       innerClassName: w.previewButtonInner,
       "aria-label": M.default.Messages.PREVIEW,
       ...a,
-      children: (0, l.jsx)(v.default, {
+      children: (0, l.jsx)(L.default, {
         width: 24,
         height: 24
       })
@@ -80,7 +80,7 @@ t.default = function(e) {
     product: t,
     category: a,
     onMount: r,
-    isPremiumUser: v = !1,
+    isPremiumUser: L = !1,
     isGiftEasterEggEnabled: N
   } = e, {
     analyticsLocations: z
@@ -96,7 +96,7 @@ t.default = function(e) {
   }), {
     buttonColors: ea,
     backgroundColors: el
-  } = (0, k.default)(t.styles), es = (0, O.getFormattedPriceForCollectiblesProduct)(t, v, !1), er = (0, O.isPremiumCollectiblesProduct)(t), en = (0, O.isFreeCollectiblesProduct)(t), [ei, eo, eu] = (0, o.useStateFromStoresArray)([y.default], () => [y.default.getPurchase(t.skuId), y.default.isClaiming === t.skuId, null != y.default.isClaiming && y.default.isClaiming !== t.skuId]), ec = s.useRef(null);
+  } = (0, k.default)(t.styles), es = (0, O.getFormattedPriceForCollectiblesProduct)(t, L, !1), er = (0, O.isPremiumCollectiblesProduct)(t), en = (0, O.isFreeCollectiblesProduct)(t), [ei, eo, eu] = (0, o.useStateFromStoresArray)([y.default], () => [y.default.getPurchase(t.skuId), y.default.isClaiming === t.skuId, null != y.default.isClaiming && y.default.isClaiming !== t.skuId]), ec = s.useRef(null);
   s.useEffect(() => {
     let {
       current: e
@@ -141,7 +141,7 @@ t.default = function(e) {
         disabled: eu,
         onClick: e => e.stopPropagation(),
         buttonText: M.default.Messages.UNLOCK_WITH_NITRO,
-        subscriptionTier: F.PremiumSubscriptionSKUs.TIER_2
+        subscriptionTier: D.PremiumSubscriptionSKUs.TIER_2
       })
     });
   s.useEffect(() => {
@@ -176,7 +176,7 @@ t.default = function(e) {
       tooltipDelay: 250
     }),
     eS = () => {
-      if (er && !v && !en) return eh();
+      if (er && !L && !en) return eh();
       let e = null != ea ? {
           background: (0, B.getBackgroundGradient)(ea, 90),
           color: ea.text.toHslString()
@@ -186,7 +186,7 @@ t.default = function(e) {
           submittingStartedLabel: M.default.Messages.COLLECTIBLES_COLLECTING,
           submittingFinishedLabel: M.default.Messages.COLLECTIBLES_COLLECTING_FINISHED,
           onClick: async () => {
-            await (0, _.claimPremiumCollectiblesProduct)(t.skuId), (0, D.default)({
+            await (0, _.claimPremiumCollectiblesProduct)(t.skuId), (0, F.default)({
               product: t,
               analyticsLocations: z
             })
@@ -236,7 +236,7 @@ t.default = function(e) {
         children: e => (0, l.jsx)(I.TextBadge, {
           ...e,
           className: w.premiumWheelBadge,
-          text: (0, l.jsx)(L.default, {
+          text: (0, l.jsx)(v.default, {
             className: w.premiumWheel
           })
         })

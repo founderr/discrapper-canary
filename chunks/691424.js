@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return V
+    return F
   }
 }), n("47120");
 var i = n("735250"),
@@ -265,7 +265,7 @@ let k = {
   }
 };
 
-function V(e) {
+function F(e) {
   return {
     ...k,
     link: (0, y.default)(e),

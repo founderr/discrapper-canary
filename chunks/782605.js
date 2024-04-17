@@ -1,26 +1,26 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   getDescriptiveInviteError: function() {
-    return o
+    return u
   },
   getInviteError: function() {
-    return u
+    return o
   }
 });
-var s = n("594174"),
-  a = n("63063"),
-  l = n("74538"),
-  i = n("981631"),
-  r = n("689938");
+var n = s("594174"),
+  a = s("63063"),
+  l = s("74538"),
+  i = s("981631"),
+  r = s("689938");
 
-function o(e) {
+function u(e) {
   switch (e) {
     case i.AbortCodes.TOO_MANY_USER_GUILDS:
-      let t = s.default.getCurrentUser(),
-        n = l.default.canUseIncreasedGuildCap(t) || (null == t ? void 0 : t.isStaff()) ? i.MAX_USER_GUILDS_PREMIUM : i.MAX_USER_GUILDS;
+      let t = n.default.getCurrentUser(),
+        s = l.default.canUseIncreasedGuildCap(t) || (null == t ? void 0 : t.isStaff()) ? i.MAX_USER_GUILDS_PREMIUM : i.MAX_USER_GUILDS;
       return {
         title: r.default.Messages.TOO_MANY_USER_GUILDS_TITLE_2.format({
-          quantity: n
+          quantity: s
         }), description: r.default.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION
       };
     case i.AbortCodes.GUILD_AT_CAPACITY:
@@ -36,7 +36,7 @@ function o(e) {
   }
 }
 
-function u(e) {
+function o(e) {
   switch (e) {
     case i.AbortCodes.TOO_MANY_USER_GUILDS:
       return r.default.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION;

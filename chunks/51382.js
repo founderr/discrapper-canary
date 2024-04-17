@@ -1,21 +1,21 @@
 "use strict";
-a.r(t);
-var n = a("735250");
-a("470079");
-var s = a("82950"),
-  l = a("536442"),
-  i = a("703656"),
-  r = a("922482"),
-  o = a("981631"),
-  u = a("689938"),
-  d = a("882977");
+n.r(t);
+var a = n("735250");
+n("470079");
+var s = n("82950"),
+  l = n("536442"),
+  i = n("703656"),
+  r = n("922482"),
+  o = n("981631"),
+  u = n("689938"),
+  d = n("882977");
 t.default = e => {
   let {
     channel: t,
-    guild: a
+    guild: n
   } = e;
-  return (0, n.jsx)(s.default, {
-    guild: a,
+  return (0, a.jsx)(s.default, {
+    guild: n,
     onDismissed: () => {
       (0, l.hideHotspot)(l.HotspotLocations.HUB_STUDY_ROOM_NOTICE)
     },

@@ -95,7 +95,7 @@ function k(e) {
   }))
 }
 
-function V(e, t, n) {
+function F(e, t, n) {
   let {
     roles: i,
     nick: s,
@@ -125,19 +125,19 @@ function V(e, t, n) {
   })
 }
 
-function F(e) {
+function V(e) {
   let {
     member: t,
     mentions: n,
     author: i,
     guild_id: r
   } = e;
-  null != t && null != r && V(r, i, t), null != n && n.forEach(e => {
+  null != t && null != r && F(r, i, t), null != n && n.forEach(e => {
     if (null != e.member && null != r) {
       let {
         member: t
       } = e;
-      delete e.member, V(r, e, t)
+      delete e.member, F(r, e, t)
     }
   })
 }
@@ -332,7 +332,7 @@ w(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.ChannelLoader.loadGu
     type: "CONNECTION_RESUMED"
   })
 }), G(["TYPING_START"], e => {
-  null != e.member && V(e.guild_id, e.member.user, e.member), k({
+  null != e.member && F(e.guild_id, e.member.user, e.member), k({
     type: "TYPING_START",
     channelId: e.channel_id,
     userId: e.user_id
@@ -353,7 +353,7 @@ w(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.ChannelLoader.loadGu
     messageId: e.message_id
   })
 }), w(["MESSAGE_CREATE"], e => A.ChannelLoader.loadGuildIds([e.guild_id]), e => {
-  F(e), null != e.author && k({
+  V(e), null != e.author && k({
     type: "MESSAGE_CREATE",
     guildId: e.guild_id,
     channelId: e.channel_id,
@@ -362,7 +362,7 @@ w(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.ChannelLoader.loadGu
     isPushNotification: !1
   })
 }), w(["MESSAGE_UPDATE"], e => A.ChannelLoader.loadGuildIds([e.guild_id]), e => {
-  F(e), k({
+  V(e), k({
     type: "MESSAGE_UPDATE",
     guildId: e.guild_id,
     message: e
@@ -748,7 +748,7 @@ w(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.ChannelLoader.loadGu
   })
 }), G(["VOICE_STATE_UPDATE"], e => {
   var t;
-  null != e.member && V(e.guild_id, e.member.user, e.member), k({
+  null != e.member && F(e.guild_id, e.member.user, e.member), k({
     type: "VOICE_STATE_UPDATES",
     voiceStates: [{
       userId: e.user_id,
@@ -939,7 +939,7 @@ w(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.ChannelLoader.loadGu
       let {
         member: n
       } = t;
-      if (V(e.guild_id, n.user, n), null == n.presence) return;
+      if (F(e.guild_id, n.user, n), null == n.presence) return;
       let {
         presence: i
       } = n;

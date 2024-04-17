@@ -16,8 +16,8 @@ var a = s("735250"),
   m = s("584825"),
   _ = s("305342"),
   g = s("333867"),
-  I = s("963249"),
-  h = s("87484"),
+  h = s("963249"),
+  I = s("87484"),
   N = s("197115"),
   p = s("911367"),
   C = s("430824"),
@@ -55,7 +55,7 @@ t.default = function() {
       gift: "true"
     }),
     B = "true" !== U.gift && null != v,
-    [F, G] = n.useState(D.length > 0 ? D[0].value : null),
+    [G, F] = n.useState(D.length > 0 ? D[0].value : null),
     {
       analyticsLocations: k
     } = (0, S.default)(c.default.PAYMENT_FLOW_TEST_PAGE),
@@ -117,7 +117,7 @@ t.default = function() {
           }],
           onChange: e => m(e)
         }), (0, a.jsx)(r.Button, {
-          onClick: () => (0, I.default)({
+          onClick: () => (0, h.default)({
             subscriptionTier: s,
             analyticsLocations: k
           }),
@@ -240,14 +240,14 @@ t.default = function() {
           variant: "text-sm/normal",
           children: "Premium Server Subscription For"
         }), (0, a.jsx)(r.SingleSelect, {
-          value: F,
+          value: G,
           options: D,
-          onChange: e => G(e)
+          onChange: e => F(e)
         })]
       }), (0, a.jsx)(f.GroupListingsFetchContextProvider, {
-        guildId: null == F ? void 0 : F.id,
+        guildId: null == G ? void 0 : G.id,
         children: (0, a.jsx)(M, {
-          selectedGuildForGuildSub: F
+          selectedGuildForGuildSub: G
         })
       }), (0, a.jsx)(r.FormDivider, {
         className: R.formDivider
@@ -291,7 +291,7 @@ t.default = function() {
           value: z,
           onChange: e => Q(e)
         }), (0, a.jsx)(r.Button, {
-          onClick: () => (0, h.default)({
+          onClick: () => (0, I.default)({
             applicationId: W,
             skuId: z,
             analyticsLocations: k

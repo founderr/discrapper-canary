@@ -12,8 +12,8 @@ var i = n("735250"),
   f = n("583883"),
   h = n("434529"),
   p = n("145597"),
-  m = n("382790"),
-  g = n("990673"),
+  g = n("382790"),
+  m = n("990673"),
   E = n("906037"),
   S = n("430036"),
   v = n("839434"),
@@ -47,7 +47,7 @@ let I = {
       locked: t,
       dragStart: n
     } = e;
-    return (0, i.jsx)(m.default, {
+    return (0, i.jsx)(g.default, {
       dragStart: n,
       locked: t
     })
@@ -75,7 +75,7 @@ let I = {
       locked: n,
       dragStart: a
     } = e;
-    return (0, i.jsx)(g.default, {
+    return (0, i.jsx)(m.default, {
       dragStart: a,
       dragging: t,
       locked: n,
@@ -127,8 +127,8 @@ class N extends a.PureComponent {
       zIndex: d,
       size: u,
       anchor: c
-    } = e, p = (0, h.getSizeFromLayoutSize)(u, n), m = (0, h.getAnchorCoordsFromLayoutSize)(c, n), {
-      minSize: g,
+    } = e, p = (0, h.getSizeFromLayoutSize)(u, n), g = (0, h.getAnchorCoordsFromLayoutSize)(c, n), {
+      minSize: m,
       resizeX: S,
       resizeY: v,
       dragAnywhere: T
@@ -145,9 +145,9 @@ class N extends a.PureComponent {
     return (0, i.jsx)(f.default, {
       id: o,
       size: p,
-      anchor: m,
+      anchor: g,
       container: I,
-      minSize: g,
+      minSize: m,
       hidden: !y,
       resizeX: S,
       resizeY: v,
@@ -160,7 +160,7 @@ class N extends a.PureComponent {
       onClick: this.handleFocus,
       onDragStart: this.handleDragStart,
       onDragEnd: this.handleDragEnd,
-      children: this.renderWidget(e, m, p)
+      children: this.renderWidget(e, g, p)
     })
   }
   constructor(...e) {
@@ -181,7 +181,7 @@ class N extends a.PureComponent {
         u = (0, h.getSizePercentageFromSize)(i, l);
       (0, s.setTopWidget)(t), (0, s.setWidgetLayout)(t, r, u);
       let c = e === f.Operations.MOVE,
-        m = (0, h.getFullCoordsFromAnchorCoords)(n, l.width, l.height, a.width, a.height);
+        g = (0, h.getFullCoordsFromAnchorCoords)(n, l.width, l.height, a.width, a.height);
       this.setState({
         lastLayoutUpdate: {
           was_resized: null != o && o.was_resized || !c,
@@ -191,8 +191,8 @@ class N extends a.PureComponent {
           window_height: l.height,
           widget_width: a.width,
           widget_height: a.height,
-          widget_left: m.left,
-          widget_top: m.top
+          widget_left: g.left,
+          widget_top: g.top
         }
       })
     }), y(this, "handleFocus", e => {

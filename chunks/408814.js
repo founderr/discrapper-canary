@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n("47120");
-var l, r = n("735250"),
-  a = n("470079"),
-  o = n("120356"),
-  u = n.n(o),
-  i = n("481060"),
-  s = n("696202"),
+var s, i = n("735250"),
+  l = n("470079"),
+  r = n("120356"),
+  a = n.n(r),
+  o = n("481060"),
+  u = n("696202"),
   c = n("664800"),
   d = n("689938"),
-  _ = n("782613");
+  f = n("782613");
 
 function p(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -18,70 +18,70 @@ function p(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class f extends(l = a.Component) {
+class h extends(s = l.Component) {
   render() {
     let {
       autoFocus: e,
       label: t,
       placeholder: n,
-      searchTerm: l,
-      inputClassName: a,
-      className: o,
+      searchTerm: s,
+      inputClassName: l,
+      className: r,
       onChange: p,
-      onFocus: f,
-      onBlur: E,
-      onKeyPress: I,
-      autoComplete: S,
-      forwardedRef: A,
-      closeIconClassName: T,
-      searchIconClassName: N,
-      cta: g
-    } = this.props, m = null != l && l.length > 0, C = null != A ? A : this._textInputRef;
-    return (0, r.jsx)(i.FocusRing, {
-      focusTarget: C,
+      onFocus: h,
+      onBlur: v,
+      onKeyPress: m,
+      autoComplete: I,
+      forwardedRef: _,
+      closeIconClassName: g,
+      searchIconClassName: C,
+      cta: T
+    } = this.props, A = null != s && s.length > 0, N = null != _ ? _ : this._textInputRef;
+    return (0, i.jsx)(o.FocusRing, {
+      focusTarget: N,
       ringTarget: this._containerRef,
-      children: (0, r.jsxs)("div", {
-        className: u()(_.searchBox, o),
+      children: (0, i.jsxs)("div", {
+        className: a()(f.searchBox, r),
         ref: this._containerRef,
-        children: [(0, r.jsx)(i.TextInput, {
-          inputRef: C,
+        children: [(0, i.jsx)(o.TextInput, {
+          inputRef: N,
           focusProps: {
             enabled: !1
           },
           name: "search",
           maxLength: 100,
-          className: _.searchBoxInputWrapper,
-          inputClassName: u()(_.searchBoxInput, a),
+          className: f.searchBoxInputWrapper,
+          inputClassName: a()(f.searchBoxInput, l),
           onChange: p,
-          onFocus: f,
-          onBlur: E,
-          onKeyPress: I,
-          value: m ? l : "",
+          onFocus: h,
+          onBlur: v,
+          onKeyPress: m,
+          value: A ? s : "",
           placeholder: n,
           autoFocus: e,
           "aria-label": t,
-          autoComplete: S ? "on" : "off"
-        }), null != g ? (0, r.jsx)(i.Text, {
+          autoComplete: I ? "on" : "off"
+        }), null != T ? (0, i.jsx)(o.Text, {
           color: "text-muted",
           variant: "text-xs/normal",
-          className: _.cta,
-          children: g
-        }) : null, m ? (0, r.jsx)(i.Clickable, {
+          className: f.cta,
+          children: T
+        }) : null, A ? (0, i.jsx)(o.Clickable, {
           onClick: this.handleClear,
-          className: _.clear,
+          className: f.clear,
           "aria-label": d.default.Messages.SEARCH_CLEAR,
-          children: (0, r.jsx)(s.default, {
-            className: u()(_.clearIcon, T)
+          children: (0, i.jsx)(u.default, {
+            className: a()(f.clearIcon, g)
           })
-        }) : (0, r.jsx)(c.default, {
-          className: u()(_.searchIcon, N),
+        }) : (0, i.jsx)(c.default, {
+          className: a()(f.searchIcon, C),
           "aria-label": d.default.Messages.SEARCH
         })]
       })
     })
   }
   constructor(...e) {
-    super(...e), p(this, "_textInputRef", a.createRef()), p(this, "_containerRef", a.createRef()), p(this, "handleClear", () => {
+    super(...e), p(this, "_textInputRef", l.createRef()), p(this, "_containerRef", l.createRef()), p(this, "handleClear", () => {
       let {
         onClear: e,
         forwardedRef: t
@@ -92,9 +92,9 @@ class f extends(l = a.Component) {
     })
   }
 }
-p(f, "defaultProps", {
+p(h, "defaultProps", {
   autoComplete: !1
-}), t.default = a.forwardRef((e, t) => (0, r.jsx)(f, {
+}), t.default = l.forwardRef((e, t) => (0, i.jsx)(h, {
   forwardedRef: t,
   ...e
 }))

@@ -1,60 +1,60 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return E
   }
 });
-var n = a("735250"),
-  s = a("470079"),
-  l = a("120356"),
-  i = a.n(l),
-  r = a("481060"),
-  o = a("955204"),
-  u = a("818765"),
-  d = a("674680"),
-  c = a("681101");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("120356"),
+  i = n.n(l),
+  r = n("481060"),
+  o = n("955204"),
+  u = n("818765"),
+  d = n("674680"),
+  c = n("681101");
 let f = e => {
   let {
     color: t
   } = e;
-  return (0, n.jsxs)("svg", {
+  return (0, a.jsxs)("svg", {
     width: "48",
     height: "28",
     viewBox: "0 0 55 34",
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg",
-    children: [(0, n.jsx)("rect", {
+    children: [(0, a.jsx)("rect", {
       x: "10.1968",
       y: "7",
       width: "14.4203",
       height: "14.4203",
       transform: "rotate(45 10.1968 7)",
       className: c.__invalid_toastBG
-    }), (0, n.jsx)("rect", {
+    }), (0, a.jsx)("rect", {
       x: "27.3936",
       y: "0.59021",
       width: "23.4851",
       height: "23.4851",
       transform: "rotate(45 27.3936 0.59021)",
       className: c.__invalid_toastBG
-    }), (0, n.jsx)("rect", {
+    }), (0, a.jsx)("rect", {
       x: "44.5903",
       y: "7",
       width: "14.4203",
       height: "14.4203",
       transform: "rotate(45 44.5903 7)",
       className: c.__invalid_toastBG
-    }), (0, n.jsx)("rect", {
+    }), (0, a.jsx)("rect", {
       x: "10.1968",
       y: "13",
       width: "6",
       height: "6",
       transform: "rotate(45 10.1968 13)",
       fill: t
-    }), (0, n.jsx)("path", {
+    }), (0, a.jsx)("path", {
       d: "M27.3936 4.39355L34.1233 16.2873L27.3936 28.1811L20.6638 16.2873L27.3936 4.39355Z",
       fill: t
-    }), (0, n.jsx)("rect", {
+    }), (0, a.jsx)("rect", {
       x: "44.5903",
       y: "13",
       width: "6",
@@ -68,7 +68,7 @@ let f = e => {
 function E(e) {
   let {
     achievement: t,
-    unlocked: a
+    unlocked: n
   } = e, {
     name: l,
     description: E,
@@ -86,34 +86,34 @@ function E(e) {
       clearTimeout(e)
     }
   }, []);
-  let S = null != C && a,
-    p = S ? r.Clickable : "div";
-  return (0, n.jsxs)(p, {
+  let S = null != C && n,
+    I = S ? r.Clickable : "div";
+  return (0, a.jsxs)(I, {
     className: i()(c.container, S && c.actionable),
     onClick: () => {
       S && C()
     },
-    children: [(0, n.jsx)("div", {
+    children: [(0, a.jsx)("div", {
       className: c.iconContainer,
-      children: (0, n.jsx)(d.default, {
+      children: (0, a.jsx)(d.default, {
         achievementId: t.id,
         size: d.default.Sizes.SIZE_40,
-        unlocked: a
+        unlocked: n
       })
-    }), (0, n.jsxs)("div", {
+    }), (0, a.jsxs)("div", {
       className: c.__invalid_nameContainer,
-      children: [(0, n.jsx)(r.Text, {
+      children: [(0, a.jsx)(r.Text, {
         variant: "text-md/semibold",
         color: "header-primary",
         children: l()
-      }), (0, n.jsx)(r.Text, {
+      }), (0, a.jsx)(r.Text, {
         variant: "text-xs/medium",
         color: "header-secondary",
-        children: _ && !a ? "?????" : E()
+        children: _ && !n ? "?????" : E()
       })]
-    }), (0, n.jsx)("div", {
+    }), (0, a.jsx)("div", {
       className: c.flair,
-      children: (0, n.jsx)(f, {
+      children: (0, a.jsx)(f, {
         color: m
       })
     })]

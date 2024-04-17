@@ -202,13 +202,13 @@ function y(e) {
     foregroundDarkColor: w,
     foregroundLightColor: B,
     premiumBackgroundColor: k,
-    premiumForegroundColor: V
+    premiumForegroundColor: F
   } = D[P];
   if (null == U) return null;
-  y.premium && (t = V, n = k);
-  let F = (0, l.isThemeDark)(v) ? w : B,
+  y.premium && (t = F, n = k);
+  let V = (0, l.isThemeDark)(v) ? w : B,
     x = (0, l.isThemeDark)(v) ? b : G;
-  t = null != t ? t : F, n = null != n ? n : x;
+  t = null != t ? t : V, n = null != n ? n : x;
   let H = e => {
     y.premium && g && !O && (e.stopPropagation(), e.preventDefault(), (0, c.openGuildBoostingMarketingModal)({
       guildId: r.id,

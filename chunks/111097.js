@@ -1,16 +1,16 @@
 "use strict";
-a.r(t), a("411104"), a("47120");
-var n = a("72924"),
-  s = a("100527"),
-  l = a("367207"),
-  i = a("996106"),
-  r = a("452426"),
-  o = a("561205"),
-  u = a("334288"),
-  d = a("852926"),
-  c = a("186901"),
-  f = a("981631"),
-  E = a("474936");
+n.r(t), n("411104"), n("47120");
+var a = n("72924"),
+  s = n("100527"),
+  l = n("367207"),
+  i = n("996106"),
+  r = n("452426"),
+  o = n("561205"),
+  u = n("334288"),
+  d = n("852926"),
+  c = n("186901"),
+  f = n("981631"),
+  E = n("474936");
 let h = [s.default.RPC];
 
 function _(e) {
@@ -26,16 +26,16 @@ function _(e) {
 }
 
 function C(e, t) {
-  let a = {
+  let n = {
     subscriptionTier: E.PremiumSubscriptionSKUs.TIER_2,
     analyticsLocations: h,
     analyticsObject: t
   };
   switch (e) {
     case f.AppContext.APP:
-      return l.default.openPremiumPaymentModalInApp(a);
+      return l.default.openPremiumPaymentModalInApp(n);
     case f.AppContext.OVERLAY:
-      return l.default.openPremiumPaymentModalInOverlay(a);
+      return l.default.openPremiumPaymentModalInOverlay(n);
     default:
       throw Error("Unexpected app context: ".concat(e))
   }
@@ -51,7 +51,7 @@ t.default = {
       let {
         socket: t,
         args: {
-          sku_id: a,
+          sku_id: n,
           pid: s
         }
       } = e;
@@ -72,9 +72,9 @@ t.default = {
       };
       return (async () => {
         try {
-          let e = await (0, n.openIAPPurchaseModal)({
+          let e = await (0, a.openIAPPurchaseModal)({
             applicationId: l,
-            skuId: a,
+            skuId: n,
             openPremiumPaymentModal: () => C(d, E),
             analyticsLocations: h,
             analyticsLocationObject: E,
@@ -104,22 +104,22 @@ t.default = {
       let {
         socket: t,
         args: {
-          pid: a
+          pid: n
         }
       } = e;
       if ((0, u.validateTransportType)(t.transport), null == t.application.id) throw new i.default({
         errorCode: f.RPCErrors.INVALID_COMMAND
       }, "No application.");
       let {
-        lock: n,
+        lock: a,
         context: s
-      } = _(t.transport !== c.TransportTypes.POST_MESSAGE ? a : null);
+      } = _(t.transport !== c.TransportTypes.POST_MESSAGE ? n : null);
       return C(s, {
         page: f.AnalyticsPages.IN_APP
       }).then(() => {
-        n()
+        a()
       }, e => {
-        if (n(), null != e) throw new i.default({
+        if (a(), null != e) throw new i.default({
           errorCode: f.RPCErrors.PURCHASE_ERROR
         }, e);
         throw new i.default({

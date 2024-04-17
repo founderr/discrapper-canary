@@ -10,16 +10,16 @@ s.r(t), s.d(t, {
 var l = s("735250"),
   n = s("470079"),
   i = s("442837"),
-  a = s("430824"),
-  r = s("594174"),
+  r = s("430824"),
+  a = s("594174"),
   u = s("246364"),
   d = s("866319"),
   o = s("118346"),
   c = s("186078"),
   I = s("73880"),
   m = s("276486"),
-  E = s("196345"),
-  f = s("707592"),
+  f = s("196345"),
+  E = s("707592"),
   M = s("981631");
 
 function F(e) {
@@ -27,9 +27,9 @@ function F(e) {
     guildId: t,
     formFields: s,
     updateFormFields: n
-  } = e, r = (0, i.useStateFromStores)([a.default], () => {
+  } = e, a = (0, i.useStateFromStores)([r.default], () => {
     var e;
-    return null === (e = a.default.getGuild(t)) || void 0 === e ? void 0 : e.rulesChannelId
+    return null === (e = r.default.getGuild(t)) || void 0 === e ? void 0 : e.rulesChannelId
   }), d = (e, t) => {
     let l = s[e];
     n([...s.slice(0, e), {
@@ -53,13 +53,13 @@ function F(e) {
   }, M = (e, t) => {
     switch (e.field_type) {
       case u.VerificationFormFieldTypes.TERMS:
-        return (0, l.jsx)(E.TermsFormField, {
-          channelId: r,
+        return (0, l.jsx)(f.TermsFormField, {
+          channelId: a,
           formField: e,
           onChange: (e, s) => d(t, s)
         }, t);
       case u.VerificationFormFieldTypes.TEXT_INPUT:
-        return (0, l.jsx)(f.TextInputFormField, {
+        return (0, l.jsx)(E.TextInputFormField, {
           formField: e,
           onChange: e => o(t, e)
         }, t);
@@ -85,11 +85,11 @@ function R(e) {
     guildId: t,
     formFields: s,
     updateFormFields: n
-  } = e, u = (0, i.useStateFromStores)([a.default], () => a.default.getGuild(t)), c = (0, i.useStateFromStores)([r.default], () => r.default.getCurrentUser()), I = (0, d.useIsPhoneVerificationLevel)({
+  } = e, u = (0, i.useStateFromStores)([r.default], () => r.default.getGuild(t)), c = (0, i.useStateFromStores)([a.default], () => a.default.getCurrentUser()), I = (0, d.useIsPhoneVerificationLevel)({
     guildId: t
-  }) ? m.PreviewPhoneRequirementFormField : o.PreviewEmailRequirementFormField, E = null == u ? void 0 : u.hasFeature(M.GuildFeatures.COMMUNITY);
+  }) ? m.PreviewPhoneRequirementFormField : o.PreviewEmailRequirementFormField, f = null == u ? void 0 : u.hasFeature(M.GuildFeatures.COMMUNITY);
   return null == c ? null : (0, l.jsxs)(l.Fragment, {
-    children: [E && (0, l.jsx)(I, {}), (0, l.jsx)(F, {
+    children: [f && (0, l.jsx)(I, {}), (0, l.jsx)(F, {
       guildId: t,
       formFields: s,
       updateFormFields: n
@@ -102,15 +102,15 @@ function _(e) {
     guildId: t,
     formFields: s,
     updateFormFields: u
-  } = e, c = (0, i.useStateFromStores)([a.default], () => a.default.getGuild(t)), I = (0, i.useStateFromStores)([r.default], () => r.default.getCurrentUser()), {
-    isPhoneVerificationLevel: E,
-    isCurrentUserVerified: f
+  } = e, c = (0, i.useStateFromStores)([r.default], () => r.default.getGuild(t)), I = (0, i.useStateFromStores)([a.default], () => a.default.getCurrentUser()), {
+    isPhoneVerificationLevel: f,
+    isCurrentUserVerified: E
   } = (0, d.useCurrentUserVerificationStatus)({
     guildId: t
-  }), R = n.useRef(f), _ = E ? m.PhoneRequirementFormField : o.EmailRequirementFormField, N = (null == c ? void 0 : c.hasFeature(M.GuildFeatures.COMMUNITY)) && !R.current;
+  }), R = n.useRef(E), _ = f ? m.PhoneRequirementFormField : o.EmailRequirementFormField, N = (null == c ? void 0 : c.hasFeature(M.GuildFeatures.COMMUNITY)) && !R.current;
   return null == I ? null : (0, l.jsxs)(l.Fragment, {
     children: [N && (0, l.jsx)(_, {
-      isUserVerified: f
+      isUserVerified: E
     }), (0, l.jsx)(F, {
       guildId: t,
       formFields: s,

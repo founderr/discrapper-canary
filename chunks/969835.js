@@ -50,11 +50,11 @@ function v(e) {
     channelId: s,
     messageId: a,
     roleId: T
-  }), G = r.useRef(null), w = (0, S.default)(t.id, n), B = (0, u.default)(G), k = (0, o.useStateFromStores)([I.default], () => null != n ? I.default.getGuild(n) : null), V = (0, o.useStateFromStores)([E.default], () => null != n ? E.default.getMember(n, t.id) : null);
+  }), G = r.useRef(null), w = (0, S.default)(t.id, n), B = (0, u.default)(G), k = (0, o.useStateFromStores)([I.default], () => null != n ? I.default.getGuild(n) : null), F = (0, o.useStateFromStores)([E.default], () => null != n ? E.default.getMember(n, t.id) : null);
   r.useEffect(() => {
     null == M || M(null == G ? void 0 : G.current)
   }, [G, M]);
-  let F = e => {
+  let V = e => {
     null == v || v(), (0, O.openUserProfileModal)({
       sourceAnalyticsLocations: U,
       userId: t.id,
@@ -74,7 +74,7 @@ function v(e) {
       channelId: s,
       messageId: a,
       roleId: T,
-      shouldTrackViewOnMount: null == V || null != V.fullProfileLoadedTimestamp,
+      shouldTrackViewOnMount: null == F || null != F.fullProfileLoadedTimestamp,
       children: (0, i.jsxs)(l.Dialog, {
         ref: G,
         "aria-label": t.username,
@@ -103,7 +103,7 @@ function v(e) {
                   b({
                     action: "PRESS_VIEW_PROFILE",
                     analyticsLocations: U
-                  }), F()
+                  }), V()
                 }
               })
             })]
@@ -119,7 +119,7 @@ function v(e) {
             displayProfile: w,
             guild: k,
             channelId: s,
-            onOpenProfile: () => F(!0),
+            onOpenProfile: () => V(!0),
             onClose: v
           })]
         }), (null == w ? void 0 : w.profileEffectId) != null && (0, i.jsx)(c.default, {

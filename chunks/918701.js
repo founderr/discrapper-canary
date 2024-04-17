@@ -46,7 +46,7 @@ n.r(t), n.d(t, {
     return H
   },
   getVideoAssetMimeType: function() {
-    return F
+    return V
   },
   hasQuestCollectibleRewards: function() {
     return b
@@ -351,11 +351,11 @@ function B(e, t) {
 function k(e) {
   return e.endsWith(".webm") || e.endsWith(".mp4")
 }
-let V = /\.([a-zA-Z]+)$/;
+let F = /\.([a-zA-Z]+)$/;
 
-function F(e) {
+function V(e) {
   var t, n;
-  switch (null === (n = V.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase()) {
+  switch (null === (n = F.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase()) {
     case "webm":
       return "video/webm";
     case "mp4":

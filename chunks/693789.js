@@ -138,8 +138,8 @@ function A(e) {
     buttonRef: w,
     focusProps: B,
     "aria-label": k,
-    submittingStartedLabel: V,
-    submittingFinishedLabel: F,
+    submittingStartedLabel: F,
+    submittingFinishedLabel: V,
     ...x
   } = e, H = m || N, Y = H && (null != y || null != P), j = function(e, t) {
     var n, i, r, s;
@@ -155,8 +155,8 @@ function A(e) {
     }
   }(B, t), W = r.useRef(!1);
   r.useEffect(() => {
-    !0 === N && (W.current = !0, l.AccessibilityAnnouncer.announce(null != V ? V : _.default.Messages.A11Y_LOADING_STARTED)), !1 === N && !0 === W.current && l.AccessibilityAnnouncer.announce(null != F ? F : _.default.Messages.A11Y_LOADING_FINISHED)
-  }, [N, V, F]);
+    !0 === N && (W.current = !0, l.AccessibilityAnnouncer.announce(null != F ? F : _.default.Messages.A11Y_LOADING_STARTED)), !1 === N && !0 === W.current && l.AccessibilityAnnouncer.announce(null != V ? V : _.default.Messages.A11Y_LOADING_FINISHED)
+  }, [N, F, V]);
   let K = (0, i.jsx)(u.FocusRing, {
     ...B,
     offset: j,

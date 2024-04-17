@@ -10,31 +10,31 @@ var a = n("230711"),
   u = n("222727"),
   d = n("981631"),
   c = n("921944"),
-  f = n("689938"),
-  E = n("502786");
+  E = n("689938"),
+  f = n("502786");
 t.default = e => {
   let {
     notice: t,
     noticeType: n,
     dismissCurrentNotice: _
-  } = e, m = (null == t ? void 0 : t.metadata.premiumSubscription) != null, T = (0, o.useLocalizedPromoQuery)();
-  if ((0, u.useTrackLocalizedPricingPromoImpression)(d.AnalyticsSections.NOTIFICATION_BAR, null == T ? void 0 : T.countryCode), null == T) return null;
-  let I = T.countryCode,
-    p = T.currency,
-    h = T.paymentSourceTypes.length > 0;
+  } = e, T = (null == t ? void 0 : t.metadata.premiumSubscription) != null, I = (0, o.useLocalizedPromoQuery)();
+  if ((0, u.useTrackLocalizedPricingPromoImpression)(d.AnalyticsSections.NOTIFICATION_BAR, null == I ? void 0 : I.countryCode), null == I) return null;
+  let m = I.countryCode,
+    N = I.currency,
+    p = I.paymentSourceTypes.length > 0;
   return (0, s.jsxs)(i.default, {
-    color: m ? i.NoticeColors.BRAND : i.NoticeColors.PREMIUM_TIER_2,
+    color: T ? i.NoticeColors.BRAND : i.NoticeColors.PREMIUM_TIER_2,
     children: [(0, s.jsx)(i.NoticeCloseButton, {
       onClick: () => _(c.ContentDismissActionType.UNKNOWN),
       noticeType: n
-    }), !m && (0, s.jsx)(l.default, {
-      className: E.premiumIcon
-    }), (0, r.getLocalizedPricingNotice)(I, p, h, m), (0, s.jsx)(i.PrimaryCTANoticeButton, {
+    }), !T && (0, s.jsx)(l.default, {
+      className: f.premiumIcon
+    }), (0, r.getLocalizedPricingNotice)(m, N, p, T), (0, s.jsx)(i.PrimaryCTANoticeButton, {
       onClick: () => {
         _(c.ContentDismissActionType.UNKNOWN), a.default.open(d.UserSettingsSections.PREMIUM)
       },
       noticeType: n,
-      children: f.default.Messages.LEARN_MORE
+      children: E.default.Messages.LEARN_MORE
     })]
   })
 }

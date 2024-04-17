@@ -24,8 +24,8 @@ var l = a("735250"),
   b = a("329067"),
   x = a("981631"),
   T = a("302800"),
-  v = a("689938"),
-  L = a("980673");
+  L = a("689938"),
+  v = a("980673");
 let I = e => {
   let {
     children: t,
@@ -51,7 +51,7 @@ function N(e) {
   } = (0, f.default)(d.default.COLLECTIBLES_SHOP_CARD), {
     confettiColors: R,
     buttonColors: P
-  } = (0, C.default)(t.styles), B = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), D = (0, T.getCustomConfettiDisplayOptions)(t.skuId), [F, M] = s.useState(!1), w = null != P ? {
+  } = (0, C.default)(t.styles), B = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), F = (0, T.getCustomConfettiDisplayOptions)(t.skuId), [D, M] = s.useState(!1), w = null != P ? {
     background: (0, h.getBackgroundGradient)(P, 90),
     color: P.text.toHslString()
   } : void 0, H = (0, E.default)({
@@ -67,19 +67,19 @@ function N(e) {
   };
   return (0, l.jsxs)("div", {
     ref: k,
-    className: L.container,
-    children: [F ? (0, l.jsxs)("div", {
-      className: L.cardDetails,
+    className: v.container,
+    children: [D ? (0, l.jsxs)("div", {
+      className: v.cardDetails,
       children: [(0, l.jsxs)(o.Text, {
         color: "always-white",
         variant: "text-lg/bold",
-        className: L.productName,
+        className: v.productName,
         children: ["You've Collected ", t.name, "!"]
       }), (0, l.jsx)("div", {
-        className: L.innerBlur,
+        className: v.innerBlur,
         children: (0, l.jsx)(o.Text, {
           color: "always-white",
-          className: L.description,
+          className: v.description,
           variant: "text-md/normal",
           children: "This decoration is now part of your collection and can be used anytime!"
         })
@@ -97,14 +97,14 @@ function N(e) {
             analyticsLocations: j
           })
         },
-        children: v.default.Messages.COLLECTIBLES_USE_NOW
+        children: L.default.Messages.COLLECTIBLES_USE_NOW
       })]
     }) : (0, l.jsxs)("div", {
-      className: L.cardDetails,
+      className: v.cardDetails,
       children: [(0, l.jsx)(o.Text, {
         color: "always-white",
         variant: "text-lg/bold",
-        className: L.productName,
+        className: v.productName,
         children: t.name
       }), (0, l.jsx)(S.PaymentContextProvider, {
         loadId: O,
@@ -118,7 +118,7 @@ function N(e) {
           ...U
         })
       })]
-    }), F && !(null != D) && !B && (0, l.jsx)(p.default, {
+    }), D && !(null != F) && !B && (0, l.jsx)(p.default, {
       confettiTarget: k.current,
       confettiCanvas: y,
       sprites: (0, h.getConfettiSprites)(t.categorySkuId),

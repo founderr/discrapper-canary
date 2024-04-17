@@ -12,8 +12,8 @@ var i = n("735250"),
   f = n("481060"),
   h = n("13245"),
   p = n("490029"),
-  m = n("797614"),
-  g = n("703656"),
+  g = n("797614"),
+  m = n("703656"),
   E = n("454902"),
   S = n("254761"),
   v = n("547881"),
@@ -136,7 +136,7 @@ class D extends a.PureComponent {
   }
 }
 let b = r().throttle(() => {
-  m.default.increment({
+  g.default.increment({
     name: c.MetricEvents.APP_CRASHED,
     tags: ["reason:".concat(d.AppCrashedReasons.UNHANDLED_JS_ERROR), "level:".concat(u.ErrorLevels.FATAL)]
   }, !0)
@@ -145,7 +145,7 @@ let b = r().throttle(() => {
 });
 class j extends a.PureComponent {
   componentDidCatch(e, t) {
-    let n = (0, g.getHistory)().location;
+    let n = (0, m.getHistory)().location;
     this.setState({
       error: e,
       info: t

@@ -1,24 +1,24 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return f
   }
 });
-var n = a("735250"),
-  s = a("470079"),
-  l = a("481060"),
-  i = a("725568"),
-  r = a("134726"),
-  o = a("603839"),
-  u = a("308083"),
-  d = a("689938"),
-  c = a("290305");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("481060"),
+  i = n("725568"),
+  r = n("134726"),
+  o = n("603839"),
+  u = n("308083"),
+  d = n("689938"),
+  c = n("290305");
 
 function f(e) {
   let {
     guildId: t
   } = e, {
-    enableClanCreation: a,
+    enableClanCreation: n,
     defaultGameId: f
   } = r.ClanGuildExperiment.useExperiment({
     guildId: t,
@@ -26,10 +26,10 @@ function f(e) {
   }), E = s.useCallback(() => {
     (0, i.openFullScreenLayer)(e => {
       let {
-        closeLayer: a
+        closeLayer: n
       } = e;
-      return (0, n.jsx)(o.default, {
-        onClose: a,
+      return (0, a.jsx)(o.default, {
+        onClose: n,
         guildId: t,
         gameId: f
       })
@@ -37,15 +37,15 @@ function f(e) {
       layerKey: u.CLAN_SETUP_MODAL_LAYER_KEY
     })
   }, [f, t]);
-  return a ? (0, n.jsxs)(l.Clickable, {
+  return n ? (0, a.jsxs)(l.Clickable, {
     onClick: E,
     className: c.upsellContainer,
-    children: [(0, n.jsx)(l.Text, {
+    children: [(0, a.jsx)(l.Text, {
       variant: "text-xs/bold",
       color: "text-warning",
       className: c.exclusive,
       children: d.default.Messages.CLAN_UPSELL_INVITE
-    }), (0, n.jsx)(l.Text, {
+    }), (0, a.jsx)(l.Text, {
       variant: "text-sm/semibold",
       color: "header-primary",
       children: f === u.VALORANT_ID ? d.default.Messages.CLAN_UPSELL_CONTENT_VALORANT : f === u.GENSHIN_ID ? d.default.Messages.CLAN_UPSELL_CONTENT_GENSHIN : d.default.Messages.CLAN_UPSELL_CONTENT

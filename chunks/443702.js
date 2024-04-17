@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("246946"),
   _ = s("594174"),
   g = s("351402"),
-  I = s("853872"),
-  h = s("78839"),
+  h = s("853872"),
+  I = s("78839"),
   N = s("706454"),
   p = s("981631"),
   C = s("689938"),
@@ -81,8 +81,8 @@ class O extends n.PureComponent {
 }
 
 function x() {
-  let e = (0, r.useStateFromStoresObject)([N.default, g.default, I.default, _.default, m.default, h.default], () => {
-    let e = h.default.getPremiumTypeSubscription(),
+  let e = (0, r.useStateFromStoresObject)([N.default, g.default, h.default, _.default, m.default, I.default], () => {
+    let e = I.default.getPremiumTypeSubscription(),
       t = _.default.getCurrentUser();
     return i()(null != t, "UserSettingsBilling: currentUser cannot be undefined"), {
       locale: N.default.locale,
@@ -90,8 +90,8 @@ function x() {
       isClaimed: t.isClaimed(),
       isVerified: t.verified,
       premiumSubscription: e,
-      defaultPaymentSourceId: I.default.defaultPaymentSourceId,
-      paymentSources: I.default.paymentSources,
+      defaultPaymentSourceId: h.default.defaultPaymentSourceId,
+      paymentSources: h.default.paymentSources,
       syncing: g.default.isSyncing,
       isRemovingPaymentSource: g.default.isRemovingPaymentSource,
       isUpdatingPaymentSource: g.default.isUpdatingPaymentSource

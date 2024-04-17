@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-let s = (0, n("818083").createExperiment)({
+let a = (0, n("818083").createExperiment)({
   kind: "user",
   id: "2023-11_xbox_game_invites",
   label: "Xbox Game Invites Experiment",
@@ -15,4 +15,4 @@ let s = (0, n("818083").createExperiment)({
     }
   }]
 });
-t.default = s
+t.default = a

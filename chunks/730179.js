@@ -1,6 +1,6 @@
-var i = n("857673");
-e.exports = function(e) {
-  var t = i(e),
-    n = t % 1;
-  return t == t ? n ? t - n : t : 0
+var n = r("857673");
+t.exports = function(t) {
+  var e = n(t),
+    r = e % 1;
+  return e == e ? r ? e - r : e : 0
 }

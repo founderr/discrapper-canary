@@ -20,8 +20,8 @@ var l = a("735250"),
   b = a("580747"),
   x = a("605236"),
   T = a("984370"),
-  v = a("74179"),
-  L = a("51855"),
+  L = a("74179"),
+  v = a("51855"),
   I = a("479446"),
   N = a("981632"),
   _ = a("290026"),
@@ -33,8 +33,8 @@ var l = a("735250"),
   R = a("74538"),
   P = a("792125"),
   B = a("335131"),
-  D = a("328347"),
-  F = a("186711"),
+  F = a("328347"),
+  D = a("186711"),
   M = a("223143"),
   w = a("298228"),
   H = a("971815"),
@@ -69,15 +69,15 @@ function er(e) {
     showEasterEggToggle: E,
     isFullScreen: g,
     lightningCheckoutEnabled: S
-  } = e, b = s.useRef(10 + 70 * Math.random()), x = (0, H.usePurchasedProductsSort)(r.products), T = (0, i.groupBy)(x, "type"), v = (0, u.useStateFromStores)([D.default], () => D.default.initialProductSkuId), {
-    tallerCardsEnabled: L
-  } = (0, F.useCollectiblesShopTallerCardsExperiment)({
+  } = e, b = s.useRef(10 + 70 * Math.random()), x = (0, H.usePurchasedProductsSort)(r.products), T = (0, i.groupBy)(x, "type"), L = (0, u.useStateFromStores)([F.default], () => F.default.initialProductSkuId), {
+    tallerCardsEnabled: v
+  } = (0, D.useCollectiblesShopTallerCardsExperiment)({
     location: "CollectiblesShop"
   }), _ = V.default;
-  L && S ? _ = K.default : L && (_ = Z.default);
+  v && S ? _ = K.default : v && (_ = Z.default);
   let y = s.useCallback(e => t => {
-      e.skuId === v && (m.current = t.current)
-    }, [v, m]),
+      e.skuId === L && (m.current = t.current)
+    }, [L, m]),
     [O, k] = s.useState(!1),
     A = (0, J.getCountdownDisplayOptions)(r.skuId),
     j = (0, p.useIsVisible)(e => {
@@ -86,13 +86,13 @@ function er(e) {
     R = (e, t) => 0 === e.length ? null : (0, l.jsxs)("div", {
       children: [(0, l.jsx)(f.Text, {
         className: n()(es.itemTypeTitle, {
-          [es.itemTypeTitleForTallerCard]: L
+          [es.itemTypeTitleForTallerCard]: v
         }),
         color: "header-secondary",
         variant: "text-sm/bold",
         children: t
       }), (0, l.jsx)("div", {
-        className: n()(es.cardsContainer, L ? es.tallerShopCard : es.regularShopCard, c),
+        className: n()(es.cardsContainer, v ? es.tallerShopCard : es.regularShopCard, c),
         children: e.map(e => (0, l.jsx)(_, {
           onMount: y(e),
           isPremiumUser: d,
@@ -119,7 +119,7 @@ function er(e) {
       })
     }), (0, l.jsx)(G.default, {
       category: r,
-      className: L ? es.__invalid_tallerShopCardBanner : void 0,
+      className: v ? es.__invalid_tallerShopCardBanner : void 0,
       hideLimitedTimeBadge: null != A
     }), R(null !== (t = T[o.CollectiblesItemType.AVATAR_DECORATION]) && void 0 !== t ? t : [], el.default.Messages.PREMIUM_FEATURE_AVATAR_DECORATIONS_HEADER), R(null !== (a = T[o.CollectiblesItemType.PROFILE_EFFECT]) && void 0 !== a ? a : [], el.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE), null != A && null != r.unpublishedAt && (0, l.jsx)(U.CollectiblesCountdown, {
       unpublishedAt: r.unpublishedAt,
@@ -135,7 +135,7 @@ t.default = function(e) {
   } = e, {
     analyticsSource: a,
     analyticsLocations: r
-  } = (0, u.useStateFromStoresObject)([D.default], () => D.default.getAnalytics()), {
+  } = (0, u.useStateFromStoresObject)([F.default], () => F.default.getAnalytics()), {
     analyticsLocations: i
   } = (0, g.default)([...r, E.default.COLLECTIBLES_SHOP]), p = (0, u.useStateFromStores)([y.default], () => y.default.getLayers().includes(Q.Layers.COLLECTIBLES_SHOP)), I = (0, d.useHasAnyModalOpen)(), {
     onClose: N
@@ -151,17 +151,17 @@ t.default = function(e) {
   let en = (0, w.usePurchasedCategoriesSort)(K),
     {
       tallerCardsEnabled: ei
-    } = (0, F.useCollectiblesShopTallerCardsExperiment)({
+    } = (0, D.useCollectiblesShopTallerCardsExperiment)({
       location: "CollectiblesShop"
     }),
-    eo = L.default.useExperiment({
+    eo = v.default.useExperiment({
       location: E.default.COLLECTIBLES_SHOP
     }, {
       autoTrackExposure: !0
     }),
     {
       defaultPaymentSource: eu
-    } = (0, v.default)({
+    } = (0, L.default)({
       isGift: !1,
       activeSubscription: null
     }),

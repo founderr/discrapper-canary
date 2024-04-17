@@ -1,28 +1,28 @@
 "use strict";
-a.r(t), a("47120");
-var n = a("735250"),
-  s = a("470079"),
-  l = a("120356"),
-  i = a.n(l),
-  r = a("718017"),
-  o = a("442837"),
-  u = a("607070"),
-  d = a("819640"),
-  c = a("617136"),
-  f = a("57655"),
-  E = a("113434"),
-  h = a("569984"),
-  _ = a("497505"),
-  C = a("918701"),
-  m = a("874137"),
-  S = a("78826"),
-  p = a("789563"),
-  I = a("164164"),
-  T = a("46140"),
-  g = a("981631"),
-  A = a("311676");
+n.r(t), n("47120");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("120356"),
+  i = n.n(l),
+  r = n("718017"),
+  o = n("442837"),
+  u = n("607070"),
+  d = n("819640"),
+  c = n("617136"),
+  f = n("57655"),
+  E = n("113434"),
+  h = n("569984"),
+  _ = n("497505"),
+  C = n("918701"),
+  m = n("874137"),
+  S = n("78826"),
+  I = n("789563"),
+  p = n("164164"),
+  T = n("46140"),
+  g = n("981631"),
+  A = n("311676");
 t.default = function() {
-  var e, t, a;
+  var e, t, n;
   let l = (0, f.useIsEligibleForQuests)({
       location: T.QuestsExperimentLocations.QUESTS_BAR
     }),
@@ -31,16 +31,16 @@ t.default = function() {
     R = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()),
     O = s.useRef(-1),
     L = s.useRef(!1),
-    [M, P] = s.useState(!1),
+    [P, M] = s.useState(!1),
     [x, y] = s.useState(!1),
     [D, b] = s.useState(!1),
     [U, j] = s.useState(!0),
     [G, w] = s.useState(240),
     k = s.useRef(null),
     F = (null == v ? void 0 : null === (e = v.userStatus) || void 0 === e ? void 0 : e.enrolledAt) != null,
-    H = s.useRef(F),
-    B = (null == v ? void 0 : null === (t = v.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
-    V = (null == v ? void 0 : null === (a = v.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null,
+    B = s.useRef(F),
+    H = (null == v ? void 0 : null === (t = v.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
+    V = (null == v ? void 0 : null === (n = v.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
     Y = (null == v ? void 0 : v.userStatus) != null && (0, C.isDismissed)(null == v ? void 0 : v.userStatus, _.QuestContent.QUEST_BAR),
     W = (0, E.useIsQuestExpired)(v),
     {
@@ -52,14 +52,14 @@ t.default = function() {
       w((null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 16), y(!0)
     }, []),
     Q = s.useCallback(() => {
-      P(!0)
+      M(!0)
     }, []),
     Z = s.useCallback(() => {
-      P(!1), !L.current && !B && y(!1)
-    }, [B]),
+      M(!1), !L.current && !H && y(!1)
+    }, [H]),
     X = s.useCallback(() => {
-      P(!1), !B && y(!1), L.current = !1
-    }, [B]),
+      M(!1), !H && y(!1), L.current = !1
+    }, [H]),
     J = s.useCallback(function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         {
@@ -68,8 +68,8 @@ t.default = function() {
       t ? O.current = window.setTimeout(q, 75) : q()
     }, [q]),
     $ = s.useCallback(() => {
-      if (window.clearTimeout(O.current), !B && !M) !L.current && y(!1)
-    }, [M, B]),
+      if (window.clearTimeout(O.current), !H && !P) !L.current && y(!1)
+    }, [P, H]),
     ee = s.useCallback(() => {
       null != v && (0, c.trackQuestEvent)({
         questId: v.id,
@@ -82,18 +82,18 @@ t.default = function() {
       L.current = !1, $()
     }, [$]);
   s.useLayoutEffect(() => {
-    B && q()
-  }, [B, q]), s.useLayoutEffect(() => {
-    F && !H.current && L.current && q()
+    H && q()
+  }, [H, q]), s.useLayoutEffect(() => {
+    F && !B.current && L.current && q()
   }, [F, q]), s.useLayoutEffect(() => {
-    !B && F && !H.current && !L.current && y(!1)
-  }, [F, B]);
-  let ea = l && !Y && !V && null != v && !W && !z,
-    en = s.useRef(ea);
+    !H && F && !B.current && !L.current && y(!1)
+  }, [F, H]);
+  let en = l && !Y && !V && null != v && !W && !z,
+    ea = s.useRef(en);
   s.useLayoutEffect(() => {
-    ea !== en.current && j(!1), en.current = ea
-  }, [ea]), s.useEffect(() => {
-    H.current = F
+    en !== ea.current && j(!1), ea.current = en
+  }, [en]), s.useEffect(() => {
+    B.current = F
   }, [F]);
   let {
     expansionSpring: es
@@ -127,7 +127,7 @@ t.default = function() {
       visibilitySpring: 0
     },
     to: {
-      visibilitySpring: ea ? 1 : 0
+      visibilitySpring: en ? 1 : 0
     },
     config: {
       tension: 250,
@@ -142,24 +142,24 @@ t.default = function() {
       j(!1)
     }
   });
-  return l && null != v && (ea || !U || z) && !K ? (0, n.jsx)(m.QuestContentImpressionTracker, {
+  return l && null != v && (en || !U || z) && !K ? (0, a.jsx)(m.QuestContentImpressionTracker, {
     questId: v.id,
     questContent: _.QuestContent.QUEST_BAR,
-    overrideVisibility: !R && ea,
-    children: () => (0, n.jsx)(r.animated.div, {
-      "aria-hidden": !ea,
+    overrideVisibility: !R && en,
+    children: () => (0, a.jsx)(r.animated.div, {
+      "aria-hidden": !en,
       className: i()(A.wrapper, {
-        [A.wrapperInvisible]: !ea,
-        [A.wrapperVisible]: ea && U
+        [A.wrapperInvisible]: !en,
+        [A.wrapperVisible]: en && U
       }),
       style: {
         color: v.config.colors.secondary,
         height: el.to({
           range: [0, 1],
-          output: [0, B && x ? G : 40]
+          output: [0, H && x ? G : 40]
         })
       },
-      children: (0, n.jsxs)(r.animated.div, {
+      children: (0, a.jsxs)(r.animated.div, {
         onMouseLeave: et,
         onMouseEnter: ee,
         onFocus: () => J(),
@@ -179,14 +179,14 @@ t.default = function() {
             output: [100, 0]
           }).to(e => "translateY(".concat(e, "%)"))
         },
-        children: [(0, n.jsx)(p.default, {
+        children: [(0, a.jsx)(I.default, {
           className: A.content,
           expansionSpring: es,
           isExpanded: x,
           isExpansionAnimationComplete: D,
           quest: v,
           useReducedMotion: N
-        }), (0, n.jsx)(I.default, {
+        }), (0, a.jsx)(p.default, {
           className: A.content,
           onCtxMenuOpen: Q,
           onCtxMenuClose: Z,

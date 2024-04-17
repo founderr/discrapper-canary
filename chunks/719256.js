@@ -1,20 +1,20 @@
 "use strict";
-a.r(t), a("47120"), a("653041");
-var n = a("846519"),
-  s = a("570140"),
-  l = a("317770"),
-  i = a("220082"),
-  r = a("594174"),
-  o = a("125268"),
-  u = a("813900");
+n.r(t), n("47120"), n("653041");
+var a = n("846519"),
+  s = n("570140"),
+  l = n("317770"),
+  i = n("220082"),
+  r = n("594174"),
+  o = n("125268"),
+  u = n("813900");
 
-function d(e, t, a) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: a,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = a, e
+  }) : e[t] = n, e
 }
 class c extends l.default {
   _initialize() {
@@ -26,40 +26,40 @@ class c extends l.default {
   _handleVoiceChannelEffectReceived(e) {
     var t;
     let {
-      lineId: a,
-      points: n,
+      lineId: n,
+      points: a,
       userId: s,
       streamerId: l,
       emojiHose: d
     } = e;
     if (null != l && s !== (null === (t = r.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) {
-      if (null != n && null != a) {
+      if (null != a && null != n) {
         let e = r.default.getUser(s);
-        null != e && (0, i.maybeFetchColors)(e.getAvatarURL(null, u.AVATAR_COLOR_AVATAR_SIZE)), (0, o.updateLinePoints)(a, s, l, n)
+        null != e && (0, i.maybeFetchColors)(e.getAvatarURL(null, u.AVATAR_COLOR_AVATAR_SIZE)), (0, o.updateLinePoints)(n, s, l, a)
       } else null != d && (d.lastUpdatedAt = Date.now(), (0, o.updateEmojiHose)(d, s, l))
     }
   }
   constructor(...e) {
-    super(...e), d(this, "linesToUpdate", {}), d(this, "lineBatchTimer", new n.Interval), d(this, "_handleDrawLinePoint", e => {
+    super(...e), d(this, "linesToUpdate", {}), d(this, "lineBatchTimer", new a.Interval), d(this, "_handleDrawLinePoint", e => {
       let {
         channelId: t,
-        lineId: a,
-        streamerId: n,
+        lineId: n,
+        streamerId: a,
         point: s
       } = e;
-      null == this.linesToUpdate[a] ? this.linesToUpdate[a] = {
+      null == this.linesToUpdate[n] ? this.linesToUpdate[n] = {
         channelId: t,
-        streamerId: n,
+        streamerId: a,
         points: [s]
-      } : this.linesToUpdate[a].points.push(s), null == this.lineBatchTimer._ref && this.lineBatchTimer.start(u.EVENT_TICK_RATE, this.sendLineBatch)
+      } : this.linesToUpdate[n].points.push(s), null == this.lineBatchTimer._ref && this.lineBatchTimer.start(u.EVENT_TICK_RATE, this.sendLineBatch)
     }), d(this, "sendLineBatch", () => {
       for (let e in this.linesToUpdate) {
         let {
           channelId: t,
-          points: a,
-          streamerId: n
+          points: n,
+          streamerId: a
         } = this.linesToUpdate[e];
-        (0, o.addLinePoints)(t, e, n, a)
+        (0, o.addLinePoints)(t, e, a, n)
       }
       this.linesToUpdate = {}, this.lineBatchTimer.stop()
     })

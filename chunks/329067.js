@@ -62,8 +62,8 @@ function g(e) {
     analyticsLocations: x
   } = e, {
     application: T,
-    skuPricePreviewsById: v
-  } = (0, f.usePaymentContext)(), [L, I] = s.useState(!1), N = s.useRef(null), _ = v[g], y = null != _ ? _[a.id] : null, O = null != y ? (0, d.formatPrice)(null == y ? void 0 : y.amount, null == y ? void 0 : y.currency) : "";
+    skuPricePreviewsById: L
+  } = (0, f.usePaymentContext)(), [v, I] = s.useState(!1), N = s.useRef(null), _ = L[g], y = null != _ ? _[a.id] : null, O = null != y ? (0, d.formatPrice)(null == y ? void 0 : y.amount, null == y ? void 0 : y.currency) : "";
   return (0, l.jsxs)("div", {
     className: p.reviewContainer,
     children: [(0, l.jsx)(i.FormSection, {
@@ -89,7 +89,7 @@ function g(e) {
     }), (0, l.jsx)(h, {
       style: b,
       className: p.buyButton,
-      submitting: L,
+      submitting: v,
       submittingStartedLabel: "Payment Processing",
       onClick: async () => {
         n()(null != y, "skuPricePreview can't be null"), n()(null != T, "application can't be null"), I(!0), await (0, o.purchaseSKU)(T.id, g, {
@@ -101,7 +101,7 @@ function g(e) {
         }), I(!1), t()
       },
       children: "Pay " + O
-    }), !L && (0, l.jsx)(E, {
+    }), !v && (0, l.jsx)(E, {
       className: p.reviewButton,
       onClick: () => {
         (0, m.default)({

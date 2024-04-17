@@ -14,8 +14,8 @@ var i, a, l = n("735250"),
   f = n("237997"),
   h = n("285952"),
   p = n("739563"),
-  m = n("998502"),
-  g = n("13140"),
+  g = n("998502"),
+  m = n("13140"),
   E = n("658785"),
   S = n("981631"),
   v = n("689938"),
@@ -66,8 +66,8 @@ function C() {
     notifications_position: t ? e : null,
     text_notifications_mode: f.default.getTextChatNotificationMode(),
     text_opacity_slider: f.default.getTextWidgetOpacity(),
-    hotkey: null != n ? (0, g.toString)(n.shortcut) : null,
-    text_activation_hotkey: null != i ? (0, g.toString)(i.shortcut) : null
+    hotkey: null != n ? (0, m.toString)(n.shortcut) : null,
+    text_activation_hotkey: null != i ? (0, m.toString)(i.shortcut) : null
   })
 }
 class A extends s.PureComponent {
@@ -253,7 +253,7 @@ class A extends s.PureComponent {
             value: 4,
             label: "Out of Memory"
           }],
-          onChange: e => null != e && m.default.crash(e)
+          onChange: e => null != e && g.default.crash(e)
         })
       })
     })

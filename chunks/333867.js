@@ -25,8 +25,8 @@ function E(e) {
     onClose: m,
     onComplete: _,
     analyticsLocations: g,
-    analyticsObject: I
-  } = e, h = !1, N = (0, n.v4)(), p = e => {
+    analyticsObject: h
+  } = e, I = !1, N = (0, n.v4)(), p = e => {
     t = e
   };
   (0, l.openModalLazy)(async () => {
@@ -50,7 +50,7 @@ function E(e) {
           s(), null == m || m(e)
         },
         onComplete: () => {
-          h = !0, null == _ || _()
+          I = !0, null == _ || _()
         },
         returnRef: n,
         onStepChange: p
@@ -59,13 +59,13 @@ function E(e) {
   }, {
     modalKey: S,
     onCloseCallback: () => {
-      !h && d.default.track(c.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
+      !I && d.default.track(c.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
         load_id: N,
         payment_type: c.PurchaseTypeToAnalyticsPaymentType[c.PurchaseTypes.ONE_TIME],
-        location: I,
+        location: h,
         is_gift: T,
         location_stack: g
-      }), (0, i.clearError)(), (0, r.clearPurchaseTokenAuthState)(), null == m || m(h), h && (0, o.fetchCollectiblesPurchases)()
+      }), (0, i.clearError)(), (0, r.clearPurchaseTokenAuthState)(), null == m || m(I), I && (0, o.fetchCollectiblesPurchases)()
     },
     onCloseRequest: () => {
       t === u.Step.REVIEW && (0, l.closeModal)(S)

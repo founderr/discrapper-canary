@@ -27,8 +27,8 @@ var l = a("735250"),
   b = a("67938"),
   x = a("372654"),
   T = a("414592"),
-  v = a("474936"),
-  L = a("689938"),
+  L = a("474936"),
+  v = a("689938"),
   I = a("380762");
 let N = (0, h.getLogoSize)(96),
   _ = e => {
@@ -40,13 +40,13 @@ let N = (0, h.getLogoSize)(96),
     return p.default.canUseCollectibles(n) ? (0, l.jsx)(l.Fragment, {
       children: t.summary
     }) : (0, l.jsx)(l.Fragment, {
-      children: L.default.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
+      children: v.default.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
         getPremium: e => (0, l.jsx)(u.Clickable, {
           innerRef: r,
           className: I.getPremiumHook,
           onClick: () => {
             (0, d.default)({
-              subscriptionTier: v.PremiumSubscriptionSKUs.TIER_2,
+              subscriptionTier: L.PremiumSubscriptionSKUs.TIER_2,
               analyticsLocations: a,
               returnRef: r
             })

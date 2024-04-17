@@ -1,7 +1,7 @@
 "use strict";
 n.r(t);
-var s = n("818083");
-t.default = (0, s.createExperiment)({
+var a = n("818083");
+t.default = (0, a.createExperiment)({
   kind: "user",
   id: "2021-12_inferno_spam_redaction",
   label: "Inferno Spam Redaction",

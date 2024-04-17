@@ -15,9 +15,9 @@ var i, a = n("470079"),
   f = n("671999"),
   h = n("358085"),
   p = n("998502"),
-  m = n("145597");
+  g = n("145597");
 
-function g(e, t, n) {
+function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -47,7 +47,7 @@ function y(e, t) {
     if (null != n && (0, d.default)(n.zone, t.zone)) return;
     0 === T.size && window.addEventListener("mousemove", v), T.set(e, t)
   }
-  h.isPlatformEmbedded && ((0, m.isOutOfProcess)() ? c.default.setClickZones(Array.from(T.values()).map(e => {
+  h.isPlatformEmbedded && ((0, g.isOutOfProcess)() ? c.default.setClickZones(Array.from(T.values()).map(e => {
     let {
       zone: t
     } = e;
@@ -98,7 +98,7 @@ class N extends(i = a.PureComponent) {
     (0, f.dispatchEventToPoint)(e, E.x, E.y)
   }
   constructor(...e) {
-    super(...e), g(this, "zone", s().uniqueId("ClickArea")), g(this, "interval", new u.Interval), g(this, "updateZone", () => {
+    super(...e), m(this, "zone", s().uniqueId("ClickArea")), m(this, "interval", new u.Interval), m(this, "updateZone", () => {
       let e = (0, o.findDOMNode)(this);
       if ((0, r.isElement)(e)) {
         let {
@@ -121,7 +121,7 @@ class N extends(i = a.PureComponent) {
     })
   }
 }
-g(N, "defaultProps", {
+m(N, "defaultProps", {
   observe: !0,
   observeInterval: 1e3
 })

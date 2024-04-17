@@ -20,9 +20,9 @@ function f(e, t, n, f) {
       username: "",
       game: n.name
     }),
-    m = t.getAvatarURL(e.guild_id, 80),
+    g = t.getAvatarURL(e.guild_id, 80),
     {
-      trackView: g,
+      trackView: m,
       trackClick: E
     } = (0, r.makeAnalyticsTrackers)(u.OverlayNotificationType.ActivityInvite, {
       notif_type: u.OverlayNotificationType.ActivityInvite,
@@ -32,14 +32,14 @@ function f(e, t, n, f) {
     });
   return {
     colorScheme: o.default.ColorSchemes.PRIMARY,
-    icon: m,
+    icon: g,
     title: h,
     body: p,
     hint: e => (0, o.renderKeybindHint)(e, (0, r.getOverlayKeybind)(), c.default.Messages.OVERLAY_UNLOCK_TO_ANSWER),
     confirmText: c.default.Messages.USER_ACTIVITY_RESPOND_YEAH,
     cancelText: c.default.Messages.USER_ACTIVITY_RESPOND_NOPE,
     onNotificationShow: () => {
-      g()
+      m()
     },
     onConfirmClick: (t, n) => {
       i.default.sendActivityInvite({

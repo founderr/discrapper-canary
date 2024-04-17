@@ -1,17 +1,17 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   useCanSeeSafetyEducationReportingCoachmark: function() {
     return o
   }
 });
-var n = a("399606"),
-  s = a("826004"),
-  l = a("594174"),
-  i = a("51144"),
-  r = a("335865");
+var a = n("399606"),
+  s = n("826004"),
+  l = n("594174"),
+  i = n("51144"),
+  r = n("335865");
 let o = () => {
   let e = (0, s.useIsSafetyConsumerEducationReportingEnabled)(),
-    t = (0, n.useStateFromStores)([l.default], () => l.default.getCurrentUser()),
-    a = (0, r.useUserIsInLargeGuilds)();
-  return e && !(0, i.isNewUser)(t) && a
+    t = (0, a.useStateFromStores)([l.default], () => l.default.getCurrentUser()),
+    n = (0, r.useUserIsInLargeGuilds)();
+  return e && !(0, i.isNewUser)(t) && n
 }

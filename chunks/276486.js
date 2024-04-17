@@ -11,15 +11,15 @@ var l = s("735250");
 s("470079");
 var n = s("481060"),
   i = s("144114"),
-  a = s("736921"),
-  r = s("489813"),
+  r = s("736921"),
+  a = s("489813"),
   u = s("815660"),
   d = s("689938");
 
 function o() {
   return (0, l.jsx)(l.Fragment, {
-    children: (0, l.jsx)(r.RequirementWithActionRenderer, {
-      icon: a.default,
+    children: (0, l.jsx)(a.RequirementWithActionRenderer, {
+      icon: r.default,
       text: d.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_LABEL,
       footnote: d.default.Messages.MEMBER_VERIFICATION_MODAL_PRIVACY_DESCRIPTION,
       meetsRequirement: !1,
@@ -41,8 +41,8 @@ function c(e) {
     isUserVerified: t
   } = e, o = t ? d.default.Messages.MEMBER_VERIFICATION_PHONE_VERIFIED : d.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_LABEL;
   return (0, l.jsx)(l.Fragment, {
-    children: (0, l.jsx)(r.RequirementWithActionRenderer, {
-      icon: a.default,
+    children: (0, l.jsx)(a.RequirementWithActionRenderer, {
+      icon: r.default,
       text: o,
       footnote: d.default.Messages.MEMBER_VERIFICATION_MODAL_PRIVACY_DESCRIPTION,
       meetsRequirement: t,

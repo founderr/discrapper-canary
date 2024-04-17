@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return c
   },
   deleteAllInvites: function() {
-    return E
+    return h
   },
   deleteInvite: function() {
     return f
@@ -19,9 +19,9 @@ n.r(t), n.d(t, {
     return o
   }
 }), n("411104");
-var s = n("544891"),
-  a = n("570140"),
-  l = n("439849"),
+var a = n("544891"),
+  l = n("570140"),
+  s = n("439849"),
   i = n("358085"),
   r = n("981631");
 async function o(e) {
@@ -29,13 +29,13 @@ async function o(e) {
     let t = e.parsed_launch_parameters.titleId,
       n = e.parsed_launch_parameters.inviteToken;
     if (!(0, i.isWindows)() || null == t || null == n) return;
-    let s = await _(t, !1),
-      l = await T(n);
-    a.default.dispatch({
+    let a = await E(t, !1),
+      s = await p(n);
+    l.default.dispatch({
       type: "GAME_INVITE_UPDATE_STATUS",
       inviteId: e.invite_id,
-      installed: s,
-      joinable: l
+      installed: a,
+      joinable: s
     })
   } else throw Error("Unsupported invite platform " + e.platform_type)
 }
@@ -49,45 +49,45 @@ async function u(e) {
 async function d(e) {
   if (e.platform_type === r.PlatformTypes.XBOX) {
     let t = e.parsed_launch_parameters.inviteToken;
-    return !!(0, i.isWindows)() && null != t && await I(t)
+    return !!(0, i.isWindows)() && null != t && await S(t)
   }
   throw Error("Unsupported invite platform " + e.platform_type)
 }
 
 function c() {
-  a.default.dispatch({
+  l.default.dispatch({
     type: "GAME_INVITE_CLEAR_UNSEEN"
   })
 }
 async function f(e) {
-  await s.HTTP.del({
+  await a.HTTP.del({
     url: r.Endpoints.GAME_INVITE(e.invite_id)
   })
 }
-async function E() {
-  await s.HTTP.del({
+async function h() {
+  await a.HTTP.del({
     url: r.Endpoints.GAME_INVITES
   })
 }
-async function _(e, t) {
+async function E(e, t) {
   if (!(0, i.isWindows)()) return !1;
-  let n = await (0, l.default)();
-  return new Promise((s, a) => {
+  let n = await (0, s.default)();
+  return new Promise((a, l) => {
     if ((null == n ? void 0 : n.xboxIsApplicationInstalled) == null) {
-      a(Error("Game utils module not loaded"));
+      l(Error("Game utils module not loaded"));
       return
     }
     n.xboxIsApplicationInstalled(e, t, e => {
-      s(e)
+      a(e)
     })
   })
 }
 async function m(e) {
   if (!(0, i.isWindows)()) return !1;
-  let t = await (0, l.default)();
-  return new Promise((n, s) => {
+  let t = await (0, s.default)();
+  return new Promise((n, a) => {
     if ((null == t ? void 0 : t.xboxLaunchGame) == null) {
-      s(Error("Game utils module not loaded"));
+      a(Error("Game utils module not loaded"));
       return
     }
     t.xboxLaunchGame(e, e => {
@@ -95,12 +95,12 @@ async function m(e) {
     })
   })
 }
-async function T(e) {
+async function p(e) {
   if (!(0, i.isWindows)()) return !1;
-  let t = await (0, l.default)();
-  return new Promise((n, s) => {
+  let t = await (0, s.default)();
+  return new Promise((n, a) => {
     if ((null == t ? void 0 : t.xboxIsInviteTokenValid) == null) {
-      s(Error("Game utils module not loaded"));
+      a(Error("Game utils module not loaded"));
       return
     }
     t.xboxIsInviteTokenValid(e, e => {
@@ -108,12 +108,12 @@ async function T(e) {
     })
   })
 }
-async function I(e) {
+async function S(e) {
   if (!(0, i.isWindows)()) return !1;
-  let t = await (0, l.default)();
-  return new Promise((n, s) => {
+  let t = await (0, s.default)();
+  return new Promise((n, a) => {
     if ((null == t ? void 0 : t.xboxAcceptGameInvite) == null) {
-      s(Error("Game utils module not loaded"));
+      a(Error("Game utils module not loaded"));
       return
     }
     t.xboxAcceptGameInvite(e, e => {

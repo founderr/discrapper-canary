@@ -15,8 +15,8 @@ var i, a = n("735250"),
   f = n("239091"),
   h = n("765250"),
   p = n("13245"),
-  m = n("872810"),
-  g = n("586902"),
+  g = n("872810"),
+  m = n("586902"),
   E = n("835473"),
   S = n("933557"),
   v = n("594190"),
@@ -84,16 +84,16 @@ function ed(e) {
     onClick: f,
     onContextMenu: h,
     context: p,
-    guildId: m,
+    guildId: g,
     voiceState: E
   } = e, {
     showKeybindIndicators: S
   } = ee.default.useExperiment({
     location: "overlay_voice_widget"
-  }), v = (0, r.useStateFromStores)([V.default], () => V.default.showKeybindIndicators), T = (0, r.useStateFromStores)([M.default], () => M.default.getId()), y = (0, r.useStateFromStores)([b.default], () => b.default.isLocalMute(i.id)), I = (0, r.useStateFromStores)([R.default], () => R.default.getCurrentUserActiveStream()), N = (0, r.useStateFromStoresArray)([R.default], () => null != I ? R.default.getViewerIds(I) : []), O = (0, g.default)({
+  }), v = (0, r.useStateFromStores)([V.default], () => V.default.showKeybindIndicators), T = (0, r.useStateFromStores)([M.default], () => M.default.getId()), y = (0, r.useStateFromStores)([b.default], () => b.default.isLocalMute(i.id)), I = (0, r.useStateFromStores)([R.default], () => R.default.getCurrentUserActiveStream()), N = (0, r.useStateFromStoresArray)([R.default], () => null != I ? R.default.getViewerIds(I) : []), O = (0, m.default)({
     userId: i.id,
     context: p
-  }), _ = (0, r.useStateFromStores)([P.default], () => P.default.isPrioritySpeaker(i.id, p)), C = (0, r.useStateFromStores)([R.default], () => null != R.default.getStreamForUser(i.id, m)), A = l.useMemo(() => null != I && I.ownerId !== i.id && N.includes(i.id), [I, i.id, N]);
+  }), _ = (0, r.useStateFromStores)([P.default], () => P.default.isPrioritySpeaker(i.id, p)), C = (0, r.useStateFromStores)([R.default], () => null != R.default.getStreamForUser(i.id, g)), A = l.useMemo(() => null != I && I.ownerId !== i.id && N.includes(i.id), [I, i.id, N]);
   if (u === ea.OverlayDisplayUsers.ONLY_WHILE_SPEAKING && n && !O) return null;
   let x = i.id === T,
     {
@@ -107,7 +107,7 @@ function ed(e) {
     F = D && (!x || !U);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(J.default, {
-      guildId: m,
+      guildId: g,
       onClick: n ? void 0 : e => null == f ? void 0 : f(e, i),
       onContextMenu: n ? void 0 : e => null == h ? void 0 : h(e, i),
       className: o()(eo.voiceUserWrapper, {
@@ -406,7 +406,7 @@ class eu extends(i = l.PureComponent) {
       let {
         stream: e
       } = this.props;
-      null != e && m.stopStream((0, T.encodeStreamKey)(e))
+      null != e && g.stopStream((0, T.encodeStreamKey)(e))
     })
   }
 }

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   QuestsCard: function() {
-    return E
+    return f
   },
   useQuestCardSize: function() {
-    return f
+    return E
   }
 }), n("47120");
 var s = n("735250"),
@@ -17,7 +17,7 @@ var s = n("735250"),
   d = n("206044"),
   c = n("25269");
 
-function f() {
+function E() {
   let {
     ref: e,
     width: t
@@ -27,14 +27,14 @@ function f() {
     size: a.useMemo(() => null == t || t > 460 ? "lg" : t > 280 ? "sm" : "xs", [t])
   }
 }
-let E = e => {
+let f = e => {
   let {
     quest: t,
     location: n
-  } = e, [l, E] = a.useState(!1), _ = a.useCallback(() => E(!0), []), m = a.useCallback(() => E(!1), []), {
-    containerRef: T,
-    size: I
-  } = f(), p = (0, i.useIsQuestExpired)(t);
+  } = e, [l, f] = a.useState(!1), _ = a.useCallback(() => f(!0), []), T = a.useCallback(() => f(!1), []), {
+    containerRef: I,
+    size: m
+  } = E(), N = (0, i.useIsQuestExpired)(t);
   return (0, s.jsx)(o.QuestContentImpressionTracker, {
     questId: t.id,
     questContent: n,
@@ -42,25 +42,25 @@ let E = e => {
     children: e => (0, s.jsx)(s.Fragment, {
       children: (0, s.jsxs)("div", {
         ref: t => {
-          e.current = t, T.current = t
+          e.current = t, I.current = t
         },
         className: c.questsCard,
         onFocus: _,
         onMouseEnter: _,
-        onBlur: m,
-        onMouseLeave: m,
+        onBlur: T,
+        onMouseLeave: T,
         children: [(0, s.jsx)(d.default, {
           isFocused: l,
-          isQuestExpired: p,
+          isQuestExpired: N,
           location: n,
           quest: t,
-          size: I
+          size: m
         }), (0, s.jsx)(u.default, {
           isFocused: l,
-          isQuestExpired: p,
+          isQuestExpired: N,
           location: n,
           quest: t,
-          size: I
+          size: m
         })]
       })
     })

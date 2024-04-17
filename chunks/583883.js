@@ -21,9 +21,9 @@ function p(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let m = (e, t, n, i) => Math.pow(e - n, 2) + Math.pow(t - i, 2);
+let g = (e, t, n, i) => Math.pow(e - n, 2) + Math.pow(t - i, 2);
 (l = i || (i = {})).MOVE = "MOVE", l.RESIZE_NORTH = "RESIZE_NORTH", l.RESIZE_WEST = "RESIZE_WEST", l.RESIZE_EAST = "RESIZE_EAST", l.RESIZE_SOUTH = "RESIZE_SOUTH", l.RESIZE_NORTH_WEST = "RESIZE_NORTH_WEST", l.RESIZE_NORTH_EAST = "RESIZE_NORTH_EAST", l.RESIZE_SOUTH_WEST = "RESIZE_SOUTH_WEST", l.RESIZE_SOUTH_EAST = "RESIZE_SOUTH_EAST";
-let g = new Set(["RESIZE_NORTH", "RESIZE_WEST", "RESIZE_EAST", "RESIZE_SOUTH", "RESIZE_NORTH_WEST", "RESIZE_NORTH_EAST", "RESIZE_SOUTH_WEST", "RESIZE_SOUTH_EAST"]);
+let m = new Set(["RESIZE_NORTH", "RESIZE_WEST", "RESIZE_EAST", "RESIZE_SOUTH", "RESIZE_NORTH_WEST", "RESIZE_NORTH_EAST", "RESIZE_SOUTH_WEST", "RESIZE_SOUTH_EAST"]);
 
 function E(e, t, n) {
   let {
@@ -141,14 +141,14 @@ class I extends(a = o.Component) {
     if (null == n) return null;
     e = Math.max(Math.min(a, e), s), t = Math.max(Math.min(l, t), o);
     let {
-      width: m,
-      height: g
+      width: g,
+      height: m
     } = T(n, this.size), E = t - h, S = e - f, v = (0, c.fitFullCoordsToContainer)((0, c.getFullCoordsFromAnchorCoords)({
       top: E,
       left: S,
       bottom: null,
       right: null
-    }, a, l, m, g)), I = u ? (0, c.getAnchorCoordsFromFullCoords)(v) : y("RESIZE_SOUTH_EAST", v);
+    }, a, l, g, m)), I = u ? (0, c.getAnchorCoordsFromFullCoords)(v) : y("RESIZE_SOUTH_EAST", v);
     this.setDOMPositions(I), !p && (null != r && r(), this.setState({
       operationStarted: !0
     })), null != d && d(i, "MOVE", this.anchor, this.size)
@@ -175,19 +175,19 @@ class I extends(a = o.Component) {
       startX: f,
       startY: h,
       offsetWidth: p,
-      offsetHeight: m
-    } = this.dragState, g = 0, E = 0;
+      offsetHeight: g
+    } = this.dragState, m = 0, E = 0;
     if (null != u) {
       switch (e = Math.max(Math.min(a, e), s), t = Math.max(Math.min(l, t), o), u) {
         case "RESIZE_EAST":
         case "RESIZE_SOUTH_EAST":
         case "RESIZE_NORTH_EAST":
-          g -= f - e;
+          m -= f - e;
           break;
         case "RESIZE_WEST":
         case "RESIZE_SOUTH_WEST":
         case "RESIZE_NORTH_WEST":
-          g += f - e
+          m += f - e
       }
       switch (u) {
         case "RESIZE_SOUTH":
@@ -200,9 +200,9 @@ class I extends(a = o.Component) {
         case "RESIZE_NORTH_EAST":
           E += h - t
       }
-      p = Math.max(p + g, i.width), m = Math.max(m + E, i.height), this.setDOMSize({
+      p = Math.max(p + m, i.width), g = Math.max(g + E, i.height), this.setDOMSize({
         width: p,
-        height: m
+        height: g
       }), !c && (null != r && r(), this.setState({
         operationStarted: !0
       })), null != d && d(n, u, this.anchor, this.size)
@@ -364,7 +364,7 @@ class I extends(a = o.Component) {
           operationStarted: s
         }
       } = this;
-      !(null == l || !s && 3 > m(i, a, t, n)) && ("MOVE" === l ? this.handleDragMove(t, n) : g.has(l) && this.handleResizeMove(t, n))
+      !(null == l || !s && 3 > g(i, a, t, n)) && ("MOVE" === l ? this.handleDragMove(t, n) : m.has(l) && this.handleResizeMove(t, n))
     }), p(this, "handleOperationStart", (e, t, n) => {
       let {
         ref: {

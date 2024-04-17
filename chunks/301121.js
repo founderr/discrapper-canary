@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("809206"),
   _ = s("230711"),
   g = s("651530"),
-  I = s("163268"),
-  h = s("294602"),
+  h = s("163268"),
+  I = s("294602"),
   N = s("610697"),
   p = s("880257"),
   C = s("236289"),
@@ -39,8 +39,8 @@ var a = s("735250"),
   U = s("63063"),
   y = s("78451"),
   B = s("709054"),
-  F = s("88658"),
-  G = s("695346"),
+  G = s("88658"),
+  F = s("695346"),
   k = s("3957"),
   w = s("279743"),
   H = s("973005"),
@@ -108,8 +108,8 @@ function X(e, t) {
 
 function J() {
   let e = (0, N.default)(),
-    t = G.DefaultGuildsRestricted.useSetting(),
-    s = G.MessageRequestRestrictedDefault.useSetting(),
+    t = F.DefaultGuildsRestricted.useSetting(),
+    s = F.MessageRequestRestrictedDefault.useSetting(),
     n = (0, k.useScrollToSetting)(V.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS);
   return e ? null : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
@@ -131,10 +131,10 @@ function J() {
               cancelText: K.default.Messages.YES_TEXT,
               confirmButtonColor: E.Button.Colors.BRAND,
               onConfirm: () => {
-                G.MessageRequestRestrictedDefault.updateSetting(e), X(e, !1)
+                F.MessageRequestRestrictedDefault.updateSetting(e), X(e, !1)
               },
               onCancel: () => {
-                G.MessageRequestRestrictedDefault.updateSetting(e), G.MessageRequestRestrictedGuildIds.updateSetting(e ? B.default.keys(v.default.getGuilds()) : []), X(e, !0)
+                F.MessageRequestRestrictedDefault.updateSetting(e), F.MessageRequestRestrictedGuildIds.updateSetting(e ? B.default.keys(v.default.getGuilds()) : []), X(e, !0)
               }
             })
           },
@@ -158,7 +158,7 @@ function $() {
       explicitContentGuilds: s,
       explicitContentFriendDm: n,
       explicitContentNonFriendDm: l
-    } = (0, h.useExplicitContentSettingOrDefault)(),
+    } = (0, I.useExplicitContentSettingOrDefault)(),
     i = (0, k.useScrollToSetting)(V.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS),
     r = [{
       value: S.ExplicitContentRedaction.BLUR,
@@ -197,7 +197,7 @@ function $() {
         children: (0, a.jsx)(E.SingleSelect, {
           options: r,
           value: n,
-          onChange: e => (0, I.updateExplicitContentSetting)({
+          onChange: e => (0, h.updateExplicitContentSetting)({
             explicitContentFriendDm: e
           })
         })
@@ -208,7 +208,7 @@ function $() {
         children: (0, a.jsx)(E.SingleSelect, {
           options: r,
           value: l,
-          onChange: e => (0, I.updateExplicitContentSetting)({
+          onChange: e => (0, h.updateExplicitContentSetting)({
             explicitContentNonFriendDm: e
           })
         })
@@ -219,7 +219,7 @@ function $() {
         children: (0, a.jsx)(E.SingleSelect, {
           options: o,
           value: s,
-          onChange: e => (0, I.updateExplicitContentSetting)({
+          onChange: e => (0, h.updateExplicitContentSetting)({
             explicitContentGuilds: e
           })
         })
@@ -284,10 +284,10 @@ class es extends n.PureComponent {
       cancelText: K.default.Messages.YES_TEXT,
       confirmButtonColor: E.Button.Colors.BRAND,
       onConfirm: () => {
-        G.DefaultGuildsRestricted.updateSetting(e), this.trackDefaultDmsUpdated(e, !1)
+        F.DefaultGuildsRestricted.updateSetting(e), this.trackDefaultDmsUpdated(e, !1)
       },
       onCancel: () => {
-        G.DefaultGuildsRestricted.updateSetting(e), G.RestrictedGuildIds.updateSetting(e ? B.default.keys(v.default.getGuilds()) : []), this.trackDefaultDmsUpdated(e, !0)
+        F.DefaultGuildsRestricted.updateSetting(e), F.RestrictedGuildIds.updateSetting(e ? B.default.keys(v.default.getGuilds()) : []), this.trackDefaultDmsUpdated(e, !0)
       }
     })
   }
@@ -305,10 +305,10 @@ class es extends n.PureComponent {
       cancelText: K.default.Messages.YES_TEXT,
       confirmButtonColor: E.Button.Colors.BRAND,
       onConfirm: () => {
-        G.MessageRequestRestrictedDefault.updateSetting(e), this.trackDefaultMessageRequestUpdated(e, !1)
+        F.MessageRequestRestrictedDefault.updateSetting(e), this.trackDefaultMessageRequestUpdated(e, !1)
       },
       onCancel: () => {
-        G.MessageRequestRestrictedDefault.updateSetting(e), G.MessageRequestRestrictedGuildIds.updateSetting(e ? B.default.keys(v.default.getGuilds()) : []), this.trackDefaultMessageRequestUpdated(e, !0)
+        F.MessageRequestRestrictedDefault.updateSetting(e), F.MessageRequestRestrictedGuildIds.updateSetting(e ? B.default.keys(v.default.getGuilds()) : []), this.trackDefaultMessageRequestUpdated(e, !0)
       }
     })
   }
@@ -337,9 +337,9 @@ class es extends n.PureComponent {
             let {
               value: s
             } = t;
-            this.props.dmSpamFilter === S.DmSpamFilterV2.DEFAULT_UNSET ? G.DmSpamFilterV2.updateSetting(e).then(() => {
-              G.ExplicitContentFilter.updateSetting(s)
-            }) : G.ExplicitContentFilter.updateSetting(s)
+            this.props.dmSpamFilter === S.DmSpamFilterV2.DEFAULT_UNSET ? F.DmSpamFilterV2.updateSetting(e).then(() => {
+              F.ExplicitContentFilter.updateSetting(s)
+            }) : F.ExplicitContentFilter.updateSetting(s)
           }
         })]
       })
@@ -369,7 +369,7 @@ class es extends n.PureComponent {
               let {
                 value: t
               } = e;
-              return G.DmSpamFilterV2.updateSetting(t)
+              return F.DmSpamFilterV2.updateSetting(t)
             }
           })]
         })]
@@ -396,7 +396,7 @@ class es extends n.PureComponent {
               let {
                 value: t
               } = e;
-              return G.DmSpamFilterV2.updateSetting(t)
+              return F.DmSpamFilterV2.updateSetting(t)
             }
           })]
         })]
@@ -426,13 +426,13 @@ class es extends n.PureComponent {
         value: !!l && e,
         note: K.default.Messages.NSFW_GUILDS_TOGGLE_CAPTION,
         disabled: !l,
-        onChange: G.ViewNsfwGuilds.updateSetting,
+        onChange: F.ViewNsfwGuilds.updateSetting,
         children: K.default.Messages.NSFW_GUILDS_TOGGLE_HEADER
       }), (0, a.jsx)(J, {}), (0, a.jsx)(E.FormSwitch, {
         value: !!l && s,
         note: K.default.Messages.NSFW_DM_COMMANDS_CAPTION,
         disabled: !l,
-        onChange: G.ViewNsfwCommands.updateSetting,
+        onChange: F.ViewNsfwCommands.updateSetting,
         children: K.default.Messages.NSFW_DM_COMMANDS_HEADER
       })]
     })
@@ -495,7 +495,7 @@ class es extends n.PureComponent {
     } = this.props, {
       requestingHarvest: s,
       currentHarvestRequest: l
-    } = this.state, i = (0, F.harvestDisabled)(l, t), r = (0, a.jsx)(E.Tooltip, {
+    } = this.state, i = (0, G.harvestDisabled)(l, t), r = (0, a.jsx)(E.Tooltip, {
       text: t.verified ? null : K.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_TOOLTIP,
       children: e => {
         let {
@@ -573,13 +573,13 @@ class es extends n.PureComponent {
             className: Q.marginBottom8,
             children: K.default.Messages.PRIVACY_SETTINGS_STAFF_ONLY_DESC
           }), (0, a.jsx)(E.RadioGroup, {
-            options: (0, F.generateNonSpamRetrainingOptInSettingOptions)(),
-            value: null == t ? F.NonSpamRetrainingOptInOptions.UNDECIDED : t ? F.NonSpamRetrainingOptInOptions.OPTIN : F.NonSpamRetrainingOptInOptions.OPTOUT,
+            options: (0, G.generateNonSpamRetrainingOptInSettingOptions)(),
+            value: null == t ? G.NonSpamRetrainingOptInOptions.UNDECIDED : t ? G.NonSpamRetrainingOptInOptions.OPTIN : G.NonSpamRetrainingOptInOptions.OPTOUT,
             onChange: e => {
               let {
                 value: t
               } = e;
-              return G.NonSpamRetrainingOptIn.updateSetting(F.NonSpamRetrainingOptInOptionsToValue[t])
+              return F.NonSpamRetrainingOptIn.updateSetting(G.NonSpamRetrainingOptInOptionsToValue[t])
             }
           })]
         })]
@@ -647,7 +647,7 @@ class es extends n.PureComponent {
         defaultGuildsRestricted: !e
       }, () => this.showGuildRestrictionModal(!e))
     }), q(this, "handleChangeDropsOptedOut", () => {
-      G.DropsOptedOut.updateSetting(!this.props.dropsOptedOut)
+      F.DropsOptedOut.updateSetting(!this.props.dropsOptedOut)
     }), q(this, "handleUsageStatisticsChange", () => {
       this.props.usageStatistics ? ee({
         header: K.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_TITLE,
@@ -727,14 +727,14 @@ function ea() {
     i = (0, p.default)();
   return (0, a.jsx)(es, {
     currentUser: e,
-    defaultGuildsRestricted: G.DefaultGuildsRestricted.useSetting(),
-    nonSpamRetrainingOptIn: G.NonSpamRetrainingOptIn.useSetting(),
-    viewNsfwGuilds: G.ViewNsfwGuilds.useSetting(),
-    viewNsfwCommands: G.ViewNsfwCommands.useSetting(),
-    explicitContentFilter: G.ExplicitContentFilter.useSetting(),
-    dmSpamFilter: G.DmSpamFilterV2.useSetting(),
-    showCurrentGame: G.ShowCurrentGame.useSetting(),
-    dropsOptedOut: G.DropsOptedOut.useSetting(),
+    defaultGuildsRestricted: F.DefaultGuildsRestricted.useSetting(),
+    nonSpamRetrainingOptIn: F.NonSpamRetrainingOptIn.useSetting(),
+    viewNsfwGuilds: F.ViewNsfwGuilds.useSetting(),
+    viewNsfwCommands: F.ViewNsfwCommands.useSetting(),
+    explicitContentFilter: F.ExplicitContentFilter.useSetting(),
+    dmSpamFilter: F.DmSpamFilterV2.useSetting(),
+    showCurrentGame: F.ShowCurrentGame.useSetting(),
+    dropsOptedOut: F.DropsOptedOut.useSetting(),
     safetyHubFetchError: s,
     mediaRedactionIsEnabled: l,
     userIsConsideredAdult: null == i || i,

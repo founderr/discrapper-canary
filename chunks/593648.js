@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("688465"),
   _ = s("487419"),
   g = s("378364"),
-  I = s("197344"),
-  h = s("734934"),
+  h = s("197344"),
+  I = s("734934"),
   N = s("223683"),
   p = s("312400"),
   C = s("115345"),
@@ -39,8 +39,8 @@ var a = s("735250"),
   U = s("695346"),
   y = s("675478"),
   B = s("33656"),
-  F = s("981631"),
-  G = s("468788"),
+  G = s("981631"),
+  F = s("468788"),
   k = s("689938"),
   w = s("993510"),
   H = s("794711");
@@ -100,20 +100,20 @@ function W(e) {
     location: "791c79_1"
   }, {
     autoTrackExposure: !1
-  }), o = I.default.useIsRingtoneEligible();
+  }), o = h.default.useIsRingtoneEligible();
   n.useEffect(() => {
     O.default.trackExposure({
       location: "791c79_3"
     })
   }, []);
   let d = n.useRef(),
-    c = (0, h.useFocusModeEnabled)(),
+    c = (0, I.useFocusModeEnabled)(),
     E = n.useCallback((e, t) => {
       t.stopPropagation(), t.preventDefault(), null != d.current && d.current.stop(), d.current = b.playSound(e)
     }, []),
     T = n.useCallback((e, s) => {
       let a = t.filter(t => t !== e);
-      !s && a.push(e), e === g.default.ringtone && D.default.track(F.AnalyticEvents.EVENT_RINGTONE_TOGGLED, {
+      !s && a.push(e), e === g.default.ringtone && D.default.track(G.AnalyticEvents.EVENT_RINGTONE_TOGGLED, {
         toggled_on: s,
         sound_name: e
       }), S.default.setDisabledSounds(a)
@@ -291,11 +291,11 @@ function K() {
 }
 class z extends n.PureComponent {
   handleDesktopChange(e) {
-    let t = e ? F.DesktopNotificationTypes.ALL : F.DesktopNotificationTypes.NEVER;
-    if (t !== F.DesktopNotificationTypes.NEVER) {
+    let t = e ? G.DesktopNotificationTypes.ALL : G.DesktopNotificationTypes.NEVER;
+    if (t !== G.DesktopNotificationTypes.NEVER) {
       var s;
       s = "UserSettingsModal", L.default.requestPermission(e => {
-        let t = e ? F.NotificationPermissionTypes.ENABLED : F.NotificationPermissionTypes.BLOCKED;
+        let t = e ? G.NotificationPermissionTypes.ENABLED : G.NotificationPermissionTypes.BLOCKED;
         S.default.setPermissionsState(t, s)
       })
     } else S.default.setDesktopType(t)
@@ -325,7 +325,7 @@ class z extends n.PureComponent {
       title: k.default.Messages.NOTIFICATIONS,
       children: [(0, a.jsx)(u.FormSwitch, {
         className: H.marginBottom20,
-        value: e !== F.DesktopNotificationTypes.NEVER && !c,
+        value: e !== G.DesktopNotificationTypes.NEVER && !c,
         onChange: this.handleDesktopChange,
         note: k.default.Messages.DESKTOP_NOTIFICATIONS_ENABLE_BODY,
         disabled: c,
@@ -376,13 +376,13 @@ class z extends n.PureComponent {
       if (!T.supported) return null;
       let e = [{
         name: k.default.Messages.TTS_ALLS,
-        value: F.TTSNotificationTypes.ALL_CHANNELS
+        value: G.TTSNotificationTypes.ALL_CHANNELS
       }, {
         name: k.default.Messages.TTS_CURRENT,
-        value: F.TTSNotificationTypes.SELECTED_CHANNEL
+        value: G.TTSNotificationTypes.SELECTED_CHANNEL
       }, {
         name: k.default.Messages.TTS_NEVER,
-        value: F.TTSNotificationTypes.NEVER
+        value: G.TTSNotificationTypes.NEVER
       }];
       return (0, a.jsxs)(u.FormItem, {
         title: k.default.Messages.FORM_LABEL_TTS_NOTIFICATIONS,
@@ -426,7 +426,7 @@ function q() {
     className: H.marginBottom20,
     value: t,
     onChange: e => {
-      E.default.setAccountFlag(G.AccountNotificationFlags.MENTION_ON_ALL_MESSAGES, e)
+      E.default.setAccountFlag(F.AccountNotificationFlags.MENTION_ON_ALL_MESSAGES, e)
     },
     note: "Increments the mention count when receiving a message in a channel set to 'All Messages'",
     children: "Mention on all messages?"
@@ -487,7 +487,7 @@ async function X(e) {
 }
 
 function J(e) {
-  let t = (0, h.useFocusModeEnabled)();
+  let t = (0, I.useFocusModeEnabled)();
   return (0, a.jsx)(z, {
     ...e,
     focusMode: t

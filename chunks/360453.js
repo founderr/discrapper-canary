@@ -1,28 +1,28 @@
 "use strict";
-a.r(t);
-var n = a("735250");
-a("470079");
-var s = a("442837"),
-  l = a("481060"),
-  i = a("949389"),
-  r = a("82950"),
-  o = a("434404"),
-  u = a("899667"),
-  d = a("267642"),
-  c = a("981631"),
-  f = a("689938"),
-  E = a("571472");
+n.r(t);
+var a = n("735250");
+n("470079");
+var s = n("442837"),
+  l = n("481060"),
+  i = n("949389"),
+  r = n("82950"),
+  o = n("434404"),
+  u = n("899667"),
+  d = n("267642"),
+  c = n("981631"),
+  f = n("689938"),
+  E = n("571472");
 t.default = e => {
   let {
     guild: t
-  } = e, a = t.id, h = (0, s.useStateFromStores)([u.default], () => u.default.getAppliedGuildBoostsForGuild(t.id));
-  return null == h || 0 >= (0, d.appliedGuildBoostsRequiredForPerks)(h, a) ? null : (0, n.jsx)(r.default, {
+  } = e, n = t.id, h = (0, s.useStateFromStores)([u.default], () => u.default.getAppliedGuildBoostsForGuild(t.id));
+  return null == h || 0 >= (0, d.appliedGuildBoostsRequiredForPerks)(h, n) ? null : (0, a.jsx)(r.default, {
     guild: t,
     onDismissed: () => {
-      (0, i.hidePremiumGuildGracePeriodNotice)(a)
+      (0, i.hidePremiumGuildGracePeriodNotice)(n)
     },
     onClick: () => {
-      o.default.open(a, c.GuildSettingsSections.GUILD_PREMIUM)
+      o.default.open(n, c.GuildSettingsSections.GUILD_PREMIUM)
     },
     message: f.default.Messages.PREMIUM_GUILD_GRACE_PERIOD_NOTICE,
     trackingSource: c.ChannelNoticeCtaSources.GRACE_PERIOD_NOTICE,

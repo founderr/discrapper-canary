@@ -2,25 +2,25 @@
 n.r(t);
 var a = n("735250");
 n("470079");
-var r = n("960259"),
+var l = n("960259"),
   s = n("289987"),
-  o = n("325767");
-t.default = (0, r.replaceIcon)(function(e) {
+  i = n("325767");
+t.default = (0, l.replaceIcon)(function(e) {
   let {
     width: t = 24,
     height: n = 24,
-    color: r = "currentColor",
+    color: l = "currentColor",
     foreground: s,
-    ...i
+    ...r
   } = e;
   return (0, a.jsx)("svg", {
-    ...(0, o.default)(i),
+    ...(0, i.default)(r),
     width: t,
     height: n,
     viewBox: "0 0 24 24",
     children: (0, a.jsx)("path", {
       className: s,
-      fill: r,
+      fill: l,
       d: "M12 2C6.486 2 2 6.487 2 12C2 17.515 6.486 22 12 22C17.514 22 22 17.515 22 12C22 6.487 17.514 2 12 2ZM12 18.25C11.31 18.25 10.75 17.691 10.75 17C10.75 16.31 11.31 15.75 12 15.75C12.69 15.75 13.25 16.31 13.25 17C13.25 17.691 12.69 18.25 12 18.25ZM13 13.875V15H11V12H12C13.104 12 14 11.103 14 10C14 8.896 13.104 8 12 8C10.896 8 10 8.896 10 10H8C8 7.795 9.795 6 12 6C14.205 6 16 7.795 16 10C16 11.861 14.723 13.429 13 13.875Z"
     })
   })

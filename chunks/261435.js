@@ -4,8 +4,8 @@ var i, a, l, s, o, r, d, u, c = n("512722"),
   f = n.n(c),
   h = n("153832"),
   p = n("442837"),
-  m = n("570140"),
-  g = n("13245"),
+  g = n("570140"),
+  m = n("13245"),
   E = n("836932"),
   S = n("175553"),
   v = n("158979"),
@@ -48,7 +48,7 @@ let Y = 5 * U.default.Millis.SECOND,
   J = [],
   q = (e, t, n) => {
     let i = t ? H.OverlayNotificationStatus.TIMED_OUT : H.OverlayNotificationStatus.DISMISSED;
-    return setTimeout(() => g.default.updateNotificationStatus(e, i), null != n ? n : Y)
+    return setTimeout(() => m.default.updateNotificationStatus(e, i), null != n ? n : Y)
   };
 
 function Q(e) {
@@ -121,7 +121,7 @@ u = "OverlayNotificationsStore", (d = "displayName") in(r = ei) ? Object.defineP
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[d] = u, t.default = new ei(m.default, __OVERLAY__ ? {
+}) : r[d] = u, t.default = new ei(g.default, __OVERLAY__ ? {
   OVERLAY_UPDATE_NOTIFICATION_STATUS: function(e) {
     let {
       notificationId: t,

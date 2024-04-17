@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return E
   },
   useGetKeybindNotification: function() {
-    return g
+    return m
   }
 }), n("47120");
 var i = n("735250");
@@ -20,9 +20,9 @@ var a = n("524437"),
   f = n("987650"),
   h = n("921944"),
   p = n("689938"),
-  m = n("58567");
+  g = n("58567");
 
-function g() {
+function m() {
   let [e, t] = (0, r.useGetDismissibleContent)([a.DismissibleContent.OVERLAY_KEYBIND_NOTIFICATION]), {
     showKeybindIndicators: n
   } = c.default.useExperiment({
@@ -48,9 +48,9 @@ function E(e) {
   return {
     icon: null,
     body: (0, i.jsxs)("div", {
-      className: m.notificationBody,
+      className: g.notificationBody,
       children: [(0, i.jsx)("div", {
-        className: m.iconContainer,
+        className: g.iconContainer,
         children: (0, i.jsx)(u.default, {
           height: 28,
           width: 28

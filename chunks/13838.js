@@ -1,25 +1,25 @@
 "use strict";
-a.r(t), a("47120");
-var n = a("392711"),
-  s = a.n(n),
-  l = a("902704"),
-  i = a("812206"),
-  r = a("594190"),
-  o = a("199902"),
-  u = a("592125"),
-  d = a("430824"),
-  c = a("131951"),
-  f = a("19780"),
-  E = a("594174"),
-  h = a("979651"),
-  _ = a("996106"),
-  C = a("914946"),
-  m = a("238679"),
-  S = a("452426"),
-  p = a("295424"),
-  I = a("863141"),
-  T = a("186901"),
-  g = a("981631");
+n.r(t), n("47120");
+var a = n("392711"),
+  s = n.n(a),
+  l = n("902704"),
+  i = n("812206"),
+  r = n("594190"),
+  o = n("199902"),
+  u = n("592125"),
+  d = n("430824"),
+  c = n("131951"),
+  f = n("19780"),
+  E = n("594174"),
+  h = n("979651"),
+  _ = n("996106"),
+  C = n("914946"),
+  m = n("238679"),
+  S = n("452426"),
+  I = n("295424"),
+  p = n("863141"),
+  T = n("186901"),
+  g = n("981631");
 let A = e => (0, S.default)(e).required().keys({
   channel_id: e.string().required()
 });
@@ -28,13 +28,13 @@ function N(e) {
   var t;
   let {
     args: {
-      channel_id: a
+      channel_id: n
     },
-    socket: n
-  } = e, s = u.default.getChannel(a);
-  if (null == s || !(0, C.hasMessageReadPermission)(s, n.application.id, n.authorization.scopes)) throw new _.default({
+    socket: a
+  } = e, s = u.default.getChannel(n);
+  if (null == s || !(0, C.hasMessageReadPermission)(s, a.application.id, a.authorization.scopes)) throw new _.default({
     errorCode: g.RPCErrors.INVALID_CHANNEL
-  }, "Invalid channel id: ".concat(a));
+  }, "Invalid channel id: ".concat(n));
   if (s.isNSFW() && (null === (t = E.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) !== !0) throw new _.default({
     errorCode: g.RPCErrors.INVALID_CHANNEL
   }, "Invalid nsfw channel id: ".concat(s.id))
@@ -69,9 +69,9 @@ let O = {
         errorCode: g.RPCErrors.INVALID_GUILD
       }, "Invalid guild id: ".concat(t));
       return e => {
-        var a;
+        var n;
         let {
-          prevState: n,
+          prevState: a,
           dispatch: l
         } = e, i = d.default.getGuild(t);
         if (null == i) return;
@@ -79,11 +79,11 @@ let O = {
           guild: {
             id: i.id,
             name: i.name,
-            icon_url: null !== (a = i.getIconURL(128)) && void 0 !== a ? a : null
+            icon_url: null !== (n = i.getIconURL(128)) && void 0 !== n ? n : null
           },
           online: 0
         };
-        return !s().isEqual(n, r) && l(r), r
+        return !s().isEqual(a, r) && l(r), r
       }
     }
   },
@@ -105,18 +105,18 @@ let O = {
       }, "Invalid channel id: ".concat(t));
       return e => {
         let {
-          prevState: a,
-          dispatch: n
+          prevState: n,
+          dispatch: a
         } = e, l = u.default.getChannel(t);
         if (null == l) return;
         let i = l.getGuildId(),
           r = Object.values(h.default.getVoiceStatesForChannel(l.id));
-        return a && s().differenceBy(r, a, e => {
+        return n && s().differenceBy(r, n, e => {
           let {
             userId: t
           } = e;
           return t
-        }).forEach(e => n((0, C.transformVoiceState)(i, l.id, e))), r
+        }).forEach(e => a((0, C.transformVoiceState)(i, l.id, e))), r
       }
     }
   },
@@ -138,18 +138,18 @@ let O = {
       }, "Invalid channel id: ".concat(t));
       return e => {
         let {
-          prevState: a,
-          dispatch: n
+          prevState: n,
+          dispatch: a
         } = e, l = u.default.getChannel(t);
         if (null == l) return;
         let i = l.getGuildId(),
           r = Object.values(h.default.getVoiceStatesForChannel(l.id));
-        return s().differenceBy(a, r, e => {
+        return s().differenceBy(n, r, e => {
           let {
             userId: t
           } = e;
           return t
-        }).forEach(e => n((0, C.transformVoiceState)(i, l.id, e))), r
+        }).forEach(e => a((0, C.transformVoiceState)(i, l.id, e))), r
       }
     }
   },
@@ -171,13 +171,13 @@ let O = {
       }, "Invalid channel id: ".concat(t));
       return e => {
         let {
-          prevState: a,
-          dispatch: n
+          prevState: n,
+          dispatch: a
         } = e, l = u.default.getChannel(t);
         if (null == l) return;
         let i = l.getGuildId(),
           r = Object.values(h.default.getVoiceStatesForChannel(l.id)).map(e => (0, C.transformVoiceState)(i, l.id, e));
-        return s().differenceWith(r, a, s().isEqual).forEach(e => n(e)), r
+        return s().differenceWith(r, n, s().isEqual).forEach(e => a(e)), r
       }
     }
   },
@@ -188,15 +188,15 @@ let O = {
     handler: () => e => {
       let {
         prevState: t,
-        dispatch: a
-      } = e, n = {
+        dispatch: n
+      } = e, a = {
         state: (0, C.getVoiceConnectionState)(f.default.getState()),
         hostname: f.default.getHostname(),
         pings: f.default.getPings(),
         average_ping: f.default.getAveragePing(),
         last_ping: f.default.getLastPing()
       };
-      return !s().isEqual(n, t) && a(n), n
+      return !s().isEqual(a, t) && n(a), a
     }
   },
   [g.RPCEvents.MESSAGE_CREATE]: {
@@ -318,11 +318,11 @@ let O = {
     handler: () => e => {
       let {
         prevState: t,
-        dispatch: a
-      } = e, n = {
+        dispatch: n
+      } = e, a = {
         currentUser: E.default.getCurrentUser()
       };
-      return null != n.currentUser && (null == t || !(0, l.default)(n, t)) && a((0, I.default)(n.currentUser)), n
+      return null != a.currentUser && (null == t || !(0, l.default)(a, t)) && n((0, p.default)(a.currentUser)), a
     }
   },
   [g.RPCEvents.ENTITLEMENT_CREATE]: {
@@ -346,18 +346,18 @@ let O = {
       [T.RPC_SCOPE_CONFIG.ALL]: [T.RPC_LOCAL_SCOPE, g.OAuth2Scopes.RPC_SCREENSHARE_READ]
     },
     handler: () => e => {
-      var t, a;
+      var t, n;
       let {
-        prevState: n,
+        prevState: a,
         dispatch: l
-      } = e, u = o.default.getStreamerActiveStreamMetadata(), d = (null == u ? void 0 : u.pid) != null ? r.default.getGameForPID(u.pid) : null, c = (null == d ? void 0 : d.id) != null ? i.default.getApplication(d.id) : null, f = null != c ? (0, p.default)(c) : null, E = null == u ? void 0 : u.sourceName, h = {
+      } = e, u = o.default.getStreamerActiveStreamMetadata(), d = (null == u ? void 0 : u.pid) != null ? r.default.getGameForPID(u.pid) : null, c = (null == d ? void 0 : d.id) != null ? i.default.getApplication(d.id) : null, f = null != c ? (0, I.default)(c) : null, E = null == u ? void 0 : u.sourceName, h = {
         active: null != u,
         pid: null !== (t = null == u ? void 0 : u.pid) && void 0 !== t ? t : null,
-        application: (a = null != f, a) ? {
+        application: (n = null != f, n) ? {
           name: E
         } : null
       };
-      return !s().isEqual(h, n) && l(h), h
+      return !s().isEqual(h, a) && l(h), h
     }
   },
   [g.RPCEvents.VIDEO_STATE_UPDATE]: {
@@ -367,11 +367,11 @@ let O = {
     handler: () => e => {
       let {
         prevState: t,
-        dispatch: a
-      } = e, n = {
+        dispatch: n
+      } = e, a = {
         active: c.default.isVideoEnabled()
       };
-      return !s().isEqual(n, t) && a(n), n
+      return !s().isEqual(a, t) && n(a), a
     }
   }
 };

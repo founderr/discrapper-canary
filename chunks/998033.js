@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return g
   }
 });
 var i = n("735250");
@@ -18,8 +18,8 @@ var a = n("13245"),
   h = n("987650"),
   p = n("689938");
 
-function m(e, t, n, m) {
-  var g;
+function g(e, t, n, g) {
+  var m;
   let {
     icon: E,
     title: S,
@@ -29,7 +29,7 @@ function m(e, t, n, m) {
     trackClick: y
   } = (0, c.makeAnalyticsTrackers)(h.OverlayNotificationType.TextChat, {
     notif_type: h.OverlayNotificationType.TextChat,
-    notif_user_id: null === (g = t.author) || void 0 === g ? void 0 : g.id,
+    notif_user_id: null === (m = t.author) || void 0 === m ? void 0 : m.id,
     message_id: t.id,
     message_type: t.type,
     guild_id: e.guild_id,
@@ -49,7 +49,7 @@ function m(e, t, n, m) {
     }) : null,
     maxBodyLines: 2,
     onNotificationShow: () => {
-      m && (0, u.playSound)(s.MESSAGE_SOUND, s.MESSAGE_SOUND_VOLUME), T()
+      g && (0, u.playSound)(s.MESSAGE_SOUND, s.MESSAGE_SOUND_VOLUME), T()
     },
     onNotificationClick: () => {
       (0, l.transitionTo)(f.Routes.CHANNEL(e.guild_id, e.id)), y("jump"), o.default.isInstanceUILocked() && a.default.setInstanceLocked(!1)

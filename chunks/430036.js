@@ -16,8 +16,8 @@ var i = n("735250"),
   f = n("430742"),
   h = n("904245"),
   p = n("13245"),
-  m = n("144144"),
-  g = n("738619"),
+  g = n("144144"),
+  m = n("738619"),
   E = n("744061"),
   S = n("36311"),
   v = n("655687"),
@@ -154,7 +154,7 @@ class ei extends a.Component {
           id: i
         }
       } = this.props;
-      f.default.changeDraft(i, this.state.textValue, b.DraftType.ChannelMessage), "" !== t ? m.default.startTyping(i) : m.default.stopTyping(i), this.setState({
+      f.default.changeDraft(i, this.state.textValue, b.DraftType.ChannelMessage), "" !== t ? g.default.startTyping(i) : g.default.stopTyping(i), this.setState({
         textValue: t,
         richValue: n
       })
@@ -262,22 +262,22 @@ class ea extends a.PureComponent {
       pendingReply: p
     } = this.props;
     if (null == t) return null;
-    let m = r || f,
+    let g = r || f,
       E = !l && null != t && t.isNSFW(),
-      v = !m || d;
+      v = !g || d;
     return e = E && null != o ? (0, i.jsx)(S.default, {
       guild: o
     }) : (0, i.jsx)(R.default, {
       channel: t,
       className: ee.messages,
       forceCompact: c,
-      showNewMessagesBar: !m,
+      showNewMessagesBar: !g,
       scrollerClassName: c ? ee.scroller : void 0,
       showingQuarantineBanner: !1
     }, t.id), (0, i.jsx)(H.MessagesInteractionContext.Provider, {
       value: {
         disableInteractions: c && r && !d,
-        disableAnimations: c && m && !d
+        disableAnimations: c && g && !d
       },
       children: (0, i.jsxs)(a.Fragment, {
         children: [!r && !f && (0, i.jsx)(y.default, {
@@ -304,7 +304,7 @@ class ea extends a.PureComponent {
                 pendingReply: p
               }), (0, i.jsx)("div", {
                 className: ee.typingWrapper,
-                children: (0, i.jsx)(g.default, {
+                children: (0, i.jsx)(m.default, {
                   channel: t,
                   className: ee.typing
                 })
@@ -441,7 +441,7 @@ function el(e) {
   let {
     contained: t = !1,
     ...n
-  } = e, a = (0, d.useStateFromStores)([V.default], () => V.default.getGuildId()), l = (0, d.useStateFromStores)([w.default], () => w.default.getChannelId(a)), s = (0, d.useStateFromStores)([D.default], () => D.default.getChannel(l)), o = (0, d.useStateFromStores)([F.default], () => F.default.getOverlayChatKeybind()), r = null != o ? (0, K.toString)(o.shortcut, !0) : "]", [u, c, f] = (0, d.useStateFromStoresArray)([B.default], () => [B.default.getTextWidgetOpacity(), B.default.getActiveRegions(), !t && B.default.isPreviewingInGame()]), h = (0, d.useStateFromStores)([P.default], () => P.default.getGuild(a)), p = (0, d.useStateFromStores)([j.default], () => null != a && j.default.didAgree(a)), m = null != s && s.isPrivate() ? s.getRecipientId() : null, g = (0, d.useStateFromStores)([L.default], () => null != l ? L.default.getPendingReply(l) : void 0), E = (0, d.useStateFromStores)([U.default], () => null != m ? U.default.getUser(m) : null), {
+  } = e, a = (0, d.useStateFromStores)([V.default], () => V.default.getGuildId()), l = (0, d.useStateFromStores)([w.default], () => w.default.getChannelId(a)), s = (0, d.useStateFromStores)([D.default], () => D.default.getChannel(l)), o = (0, d.useStateFromStores)([F.default], () => F.default.getOverlayChatKeybind()), r = null != o ? (0, K.toString)(o.shortcut, !0) : "]", [u, c, f] = (0, d.useStateFromStoresArray)([B.default], () => [B.default.getTextWidgetOpacity(), B.default.getActiveRegions(), !t && B.default.isPreviewingInGame()]), h = (0, d.useStateFromStores)([P.default], () => P.default.getGuild(a)), p = (0, d.useStateFromStores)([j.default], () => null != a && j.default.didAgree(a)), g = null != s && s.isPrivate() ? s.getRecipientId() : null, m = (0, d.useStateFromStores)([L.default], () => null != l ? L.default.getPendingReply(l) : void 0), E = (0, d.useStateFromStores)([U.default], () => null != g ? U.default.getUser(g) : null), {
     placeholder: S
   } = (0, v.default)(s);
   return null != s && null != h && Q.ChannelTypesSets.GUILD_THREADS_ONLY.has(s.type) ? (0, i.jsx)(T.default, {}) : (0, i.jsx)(ea, {
@@ -453,7 +453,7 @@ function el(e) {
     chatKeybind: r,
     activated: c.has(Q.OverlayActiveRegions.TEXT_WIDGET),
     isPreviewingInGame: f,
-    pendingReply: g,
+    pendingReply: m,
     contained: t,
     placeholder: S,
     widget: Q.OverlayWidgets.TEXT,

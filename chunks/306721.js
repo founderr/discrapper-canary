@@ -1,12 +1,12 @@
 "use strict";
-a.r(t);
-var n = a("401430"),
-  s = a("283595"),
-  l = a("695103");
+n.r(t);
+var a = n("401430"),
+  s = n("283595"),
+  l = n("695103");
 t.default = {
   init() {
     s.default.whenInitialized(() => {
-      null != l.default.testModeApplicationId && (0, n.authorizeAndSetTestModeApplication)(l.default.testModeApplicationId, l.default.testModeOriginURL)
+      null != l.default.testModeApplicationId && (0, a.authorizeAndSetTestModeApplication)(l.default.testModeApplicationId, l.default.testModeOriginURL)
     })
   }
 }

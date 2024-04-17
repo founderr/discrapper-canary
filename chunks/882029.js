@@ -1,19 +1,19 @@
 "use strict";
-a.r(t);
-var n, s = a("442837"),
-  l = a("570140"),
-  i = a("314897"),
-  r = a("57562"),
-  o = a("351780"),
-  u = a("843693");
+n.r(t);
+var a, s = n("442837"),
+  l = n("570140"),
+  i = n("314897"),
+  r = n("57562"),
+  o = n("351780"),
+  u = n("843693");
 
-function d(e, t, a) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: a,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = a, e
+  }) : e[t] = n, e
 }
 let c = {
     unlockedAchievements: {}
@@ -21,7 +21,7 @@ let c = {
   f = {
     ...c
   };
-class E extends(n = s.default.PersistedStore) {
+class E extends(a = s.default.PersistedStore) {
   initialize(e) {
     this.waitFor(i.default, u.default);
     let t = null != e ? e : {
@@ -44,10 +44,10 @@ d(E, "displayName", "PoggermodeAchievementStore"), d(E, "persistKey", "Poggermod
   POGGERMODE_ACHIEVEMENT_UNLOCK: function(e) {
     var t;
     let {
-      achievementId: a
+      achievementId: n
     } = e;
     if (!o.default.isEnabled()) return !1;
-    t = a, null != f.unlockedAchievements[t] || (f.unlockedAchievements = {
+    t = n, null != f.unlockedAchievements[t] || (f.unlockedAchievements = {
       ...f.unlockedAchievements,
       [t]: {
         achievementId: t,
