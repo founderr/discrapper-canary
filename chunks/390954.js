@@ -64,7 +64,9 @@ class N extends(a = l.PureComponent) {
           isDefault: t,
           isForSubscription: i,
           locale: r,
-          showSubtext: !0
+          showSubtext: !0,
+          showDefaultLabel: !0,
+          showPaymentSourceIcon: !0
         }), s ? null : (0, n.jsx)(o.Button, {
           color: o.Button.Colors.PRIMARY,
           onClick: this.handleEditClick,

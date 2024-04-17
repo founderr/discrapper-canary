@@ -167,7 +167,9 @@ class A extends(a = l.PureComponent) {
             paymentSource: e,
             isDefault: t,
             isForSubscription: l,
-            locale: s
+            locale: s,
+            showDefaultLabel: !0,
+            showPaymentSourceIcon: !0
           }), e.invalid ? (0, n.jsx)("div", {
             className: N.errorSubText,
             children: h.default.Messages.PAYMENT_SOURCE_INVALID_HELP
