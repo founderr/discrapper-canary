@@ -172,7 +172,7 @@ t.default = function(e) {
   } = (0, T.default)({
     location: "subscription_header"
   });
-  (!L.PAUSE_ELIGIBLE_PLANS.has(l.planId) || !g.SubscriptionStatusTypesSets.ALL_PAUSE.has(l.status)) && (w = !1);
+  (!L.PAUSE_ELIGIBLE_PLANS.has(l.planId) || !g.SubscriptionStatusTypesSets.ALL_PAUSEABLE.has(l.status)) && (w = !1);
   let H = (0, A.usePremiumDiscountOffer)(),
     Y = null == H ? void 0 : null === (t = H.discount) || void 0 === t ? void 0 : t.amount,
     W = (0, h.useHasDiscountApplied)(),
