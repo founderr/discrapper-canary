@@ -1,56 +1,74 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return f
+    return h
   }
 });
-var l = s("735250");
-s("470079");
-var a = s("481060"),
-  i = s("194359"),
-  o = s("782089"),
-  n = s("877410"),
-  r = s("785717"),
-  u = s("993409"),
-  d = s("981631"),
-  c = s("689938");
+var i = n("735250");
+n("470079");
+var r = n("442837"),
+  s = n("124597"),
+  a = n("657147"),
+  o = n("97910"),
+  l = n("481060"),
+  u = n("194359"),
+  d = n("314897"),
+  _ = n("699516"),
+  c = n("465670"),
+  E = n("782089"),
+  I = n("785717"),
+  T = n("537387"),
+  f = n("981631"),
+  S = n("689938");
 
-function f(e) {
+function h(e) {
   let {
     user: t,
-    relationshipType: s,
-    friendToken: f,
-    onClose: S
+    friendToken: n
   } = e, {
-    trackUserProfileAction: E
-  } = (0, r.useUserProfileAnalyticsContext)(), I = () => i.default.addRelationship({
-    userId: t.id,
-    friendToken: f
-  }, S), m = () => i.default.cancelFriendRequest(t.id);
-  return s === d.RelationshipTypes.PENDING_INCOMING ? (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsx)(u.default, {
-      icon: o.default,
-      text: c.default.Messages.FRIEND_REQUEST_ACCEPT,
-      onClick: () => (E({
-        action: "ACCEPT_FRIEND_REQUEST"
-      }), I())
-    }), (0, l.jsx)(u.default, {
-      icon: n.default,
-      text: c.default.Messages.FRIEND_REQUEST_IGNORE,
-      color: a.ButtonColors.RED,
-      onClick: () => (E({
-        action: "IGNORE_FRIEND_REQUEST"
-      }), m())
+    trackUserProfileAction: h
+  } = (0, I.useUserProfileAnalyticsContext)(), A = (0, r.useStateFromStores)([d.default], () => d.default.getId() === (null == t ? void 0 : t.id)), m = (0, r.useStateFromStores)([_.default], () => null != t ? _.default.getRelationshipType(t.id) : f.RelationshipTypes.NONE);
+  return null == t || t.bot || A || m === f.RelationshipTypes.BLOCKED ? null : m === f.RelationshipTypes.FRIEND ? (0, i.jsx)(T.default, {
+    icon: a.UserCheckIcon,
+    text: S.default.Messages.FRIENDS
+  }) : m === f.RelationshipTypes.PENDING_INCOMING ? (0, i.jsxs)(i.Fragment, {
+    children: [(0, i.jsx)(T.default, {
+      icon: e => (0, i.jsx)(s.CheckmarkLargeIcon, {
+        ...e,
+        color: l.tokens.colors.TEXT_BRAND
+      }),
+      text: S.default.Messages.ACCEPT_FRIEND_REQUEST,
+      onClick: () => {
+        h({
+          action: "ACCEPT_FRIEND_REQUEST"
+        }), u.default.addRelationship({
+          userId: t.id,
+          friendToken: n
+        })
+      }
+    }), (0, i.jsx)(T.default, {
+      icon: c.default,
+      text: S.default.Messages.IGNORE_FRIEND_REQUEST,
+      onClick: () => {
+        h({
+          action: "IGNORE_FRIEND_REQUEST"
+        }), u.default.cancelFriendRequest(t.id)
+      }
     })]
-  }) : s === d.RelationshipTypes.PENDING_OUTGOING ? (0, l.jsx)(u.default, {
-    icon: o.default,
-    text: c.default.Messages.REQUEST_SENT,
+  }) : m === f.RelationshipTypes.PENDING_OUTGOING ? (0, i.jsx)(T.default, {
+    icon: o.UserClockIcon,
+    text: S.default.Messages.REQUEST_SENT,
     disabled: !0
-  }) : (0, l.jsx)(u.default, {
-    icon: o.default,
-    text: c.default.Messages.ADD_FRIEND,
-    onClick: () => (E({
-      action: "SEND_FRIEND_REQUEST"
-    }), I())
+  }) : (0, i.jsx)(T.default, {
+    icon: E.default,
+    text: S.default.Messages.ADD_FRIEND,
+    onClick: () => {
+      h({
+        action: "SEND_FRIEND_REQUEST"
+      }), u.default.addRelationship({
+        userId: t.id,
+        friendToken: n
+      })
+    }
   })
 }

@@ -20,7 +20,8 @@ function l(e) {
     ...u
   } = e, d = (0, i.jsx)(t, {
     width: 16,
-    height: 16
+    height: 16,
+    color: "currentColor"
   });
   return null != n ? (0, i.jsx)(a.Tooltip, {
     text: n,
@@ -29,7 +30,8 @@ function l(e) {
       innerClassName: s()(o.buttonInner, l),
       color: o.color,
       look: a.Button.Looks.FILLED,
-      size: a.Button.Sizes.ICON,
+      size: a.Button.Sizes.NONE,
+      grow: !1,
       ...e,
       ...u,
       children: d
@@ -39,7 +41,8 @@ function l(e) {
     innerClassName: s()(o.buttonInner, l),
     color: o.color,
     look: a.Button.Looks.FILLED,
-    size: a.Button.Sizes.ICON,
+    size: a.Button.Sizes.NONE,
+    grow: !1,
     ...u,
     children: d
   })
