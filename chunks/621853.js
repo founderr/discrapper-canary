@@ -124,7 +124,7 @@ function M(e) {
         integrationTypesConfig: v.integration_types_config,
         flags: v.flags,
         popularApplicationCommandIds: v.popular_application_command_ids,
-        store_available: v.store_available
+        storefront_available: v.storefront_available
       } : null,
       badges: e.badges
     }, null != e.guild_member_profile) {
