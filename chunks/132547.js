@@ -29,7 +29,7 @@ t.default = () => {
       analyticsLocations: r
     } = (0, d.default)(u.default.PREMIUM_SUBSCRIBER_NITRO_HOME),
     [O, P] = i.useState(!1);
-  (0, C.useFetchEntitlementsForTenureReward)(), (0, f.useMaybeFetchReferralsRemaining)("SubscriberNitroHome");
+  (0, C.useFetchTenureRewardStatusDetails)(), (0, f.useMaybeFetchReferralsRemaining)("SubscriberNitroHome");
   let {
     enabled: M
   } = E.default.useExperiment({

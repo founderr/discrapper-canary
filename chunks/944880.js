@@ -86,6 +86,12 @@ function R() {
   m()
 }
 class C extends a.default {
+  forceRefreshIfOutdated() {
+    let e = E.default.getState();
+    null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 864e5 && m({
+      forceRefresh: !0
+    })
+  }
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
