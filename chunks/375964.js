@@ -3813,6 +3813,8 @@ e.exports = Object.freeze({
   TEXT: "Text",
   ACTIVITY_STATUS: "Activity Status",
   REGISTERED_GAMES: "Registered Games",
+  GAMES: "Games",
+  MY_GAMES: "My Games",
   ACTIVITY_PRIVACY: "Activity Privacy",
   FRIEND_REQUESTS: "Friend Requests",
   ACTIVITY: "Activity",

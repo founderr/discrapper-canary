@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return eA
+    return eO
   }
 });
 var a = s("735250");
@@ -21,8 +21,8 @@ var n = s("990547"),
   m = s("574755"),
   _ = s("377171"),
   g = s("621628"),
-  I = s("18438"),
-  h = s("778825"),
+  h = s("18438"),
+  I = s("778825"),
   N = s("351780"),
   p = s("231765"),
   C = s("813732"),
@@ -32,348 +32,361 @@ var n = s("990547"),
   R = s("906467"),
   M = s("131951"),
   v = s("25990"),
-  D = s("808506"),
-  L = s("87086"),
-  P = s("759231"),
-  j = s("26290"),
-  b = s("626135"),
-  U = s("49012"),
-  y = s("358085"),
-  B = s("392735"),
-  F = s("61160"),
+  D = s("87086"),
+  L = s("759231"),
+  P = s("26290"),
+  j = s("626135"),
+  b = s("49012"),
+  U = s("358085"),
+  y = s("392735"),
+  B = s("61160"),
   G = s("604227"),
-  k = s("38915"),
-  w = s("498639"),
-  H = s("748717"),
-  V = s("419636"),
-  Y = s("35426"),
-  W = s("799071"),
-  K = s("601433"),
-  z = s("154022"),
-  Q = s("393681"),
-  q = s("309739"),
-  Z = s("64914"),
-  X = s("501348"),
-  J = s("795594"),
-  $ = s("443702"),
-  ee = s("920914"),
-  et = s("956699"),
-  es = s("54942"),
-  ea = s("15780"),
-  en = s("293389"),
-  el = s("88624"),
-  ei = s("387747"),
-  er = s("389650"),
-  eo = s("649157"),
-  ed = s("593648"),
-  eu = s("327885"),
-  ec = s("595242"),
-  eS = s("301121"),
-  eE = s("36192"),
-  eT = s("338345"),
-  ef = s("400287"),
-  em = s("554042"),
-  e_ = s("200645"),
-  eg = s("287490"),
+  F = s("38915"),
+  k = s("498639"),
+  w = s("748717"),
+  H = s("419636"),
+  V = s("35426"),
+  Y = s("799071"),
+  W = s("601433"),
+  K = s("154022"),
+  z = s("393681"),
+  Q = s("309739"),
+  q = s("64914"),
+  Z = s("501348"),
+  X = s("795594"),
+  J = s("443702"),
+  $ = s("920914"),
+  ee = s("956699"),
+  et = s("54942"),
+  es = s("15780"),
+  ea = s("293389"),
+  en = s("88624"),
+  el = s("387747"),
+  ei = s("389650"),
+  er = s("649157"),
+  eo = s("593648"),
+  ed = s("327885"),
+  eu = s("595242"),
+  ec = s("301121"),
+  eS = s("36192"),
+  eE = s("338345"),
+  eT = s("400287"),
+  ef = s("554042"),
+  em = s("200645"),
+  e_ = s("287490"),
+  eg = s("168308"),
+  eh = s("277329"),
   eI = s("674116"),
-  eh = s("981631"),
-  eN = s("689938"),
-  ep = s("480261");
-let eC = e_.default;
+  eN = s("981631"),
+  ep = s("689938"),
+  eC = s("480261");
+let eA = em.default;
 
-function eA(e) {
+function eO(e) {
   let {
     unseenGiftCount: t,
-    showPrepaidPaymentPastDueWarning: eA,
-    impressionSource: eO,
-    numOfPendingFamilyRequests: ex,
-    isClipsBetaTagShowing: eR = !1
+    showPrepaidPaymentPastDueWarning: eO,
+    impressionSource: ex,
+    numOfPendingFamilyRequests: eR,
+    isOverlaySupported: eM,
+    isClipsBetaTagShowing: ev = !1,
+    shouldMergeGameSettings: eD
   } = e;
   return [{
     section: S.SectionTypes.HEADER,
-    label: eN.default.Messages.USER_SETTINGS
+    label: ep.default.Messages.USER_SETTINGS
   }, {
-    section: eh.UserSettingsSections.ACCOUNT,
-    label: eN.default.Messages.USER_SETTINGS_MY_ACCOUNT,
-    ariaLabel: eN.default.Messages.USER_SETTINGS_MY_ACCOUNT,
-    element: Q.default
+    section: eN.UserSettingsSections.ACCOUNT,
+    label: ep.default.Messages.USER_SETTINGS_MY_ACCOUNT,
+    ariaLabel: ep.default.Messages.USER_SETTINGS_MY_ACCOUNT,
+    element: z.default
   }, {
-    section: eh.UserSettingsSections.PROFILE_CUSTOMIZATION,
+    section: eN.UserSettingsSections.GAMES,
+    label: ep.default.Messages.GAMES,
+    ariaLabel: ep.default.Messages.GAMES,
+    element: eh.default,
+    predicate: () => eD
+  }, {
+    section: eN.UserSettingsSections.PROFILE_CUSTOMIZATION,
     type: S.ContentTypes.WIDE,
-    label: eN.default.Messages.USER_SETTINGS_PROFILES,
-    ariaLabel: eN.default.Messages.USER_SETTINGS_PROFILES,
+    label: ep.default.Messages.USER_SETTINGS_PROFILES,
+    ariaLabel: ep.default.Messages.USER_SETTINGS_PROFILES,
     element: O.default,
-    newIndicator: (0, a.jsx)(j.PremiumBadge, {
-      text: eN.default.Messages.NEW
+    newIndicator: (0, a.jsx)(P.PremiumBadge, {
+      text: ep.default.Messages.NEW
     }),
     notice: {
-      stores: [v.default, h.default],
+      stores: [v.default, I.default],
       element: A.default
     },
     onSettingsClose: () => {
       o.default.wait(() => {
-        (0, I.resetAndCloseGuildIdentityForm)(), (0, u.resetAndCloseUserProfileForm)(), c.default.clearSubsection(eh.UserSettingsSections.PROFILE_CUSTOMIZATION)
+        (0, h.resetAndCloseGuildIdentityForm)(), (0, u.resetAndCloseUserProfileForm)(), c.default.clearSubsection(eN.UserSettingsSections.PROFILE_CUSTOMIZATION)
       })
     }
   }, {
-    section: eh.UserSettingsSections.PRIVACY_AND_SAFETY,
-    label: eN.default.Messages.PRIVACY_AND_SAFETY,
-    element: eS.default
+    section: eN.UserSettingsSections.PRIVACY_AND_SAFETY,
+    label: ep.default.Messages.PRIVACY_AND_SAFETY,
+    element: ec.default
   }, {
-    section: eh.UserSettingsSections.FAMILY_CENTER,
-    label: eN.default.Messages.FAMILY_CENTER_SETTINGS_TITLE,
-    ariaLabel: eN.default.Messages.FAMILY_CENTER_SETTINGS_TITLE,
-    element: es.default,
-    badgeCount: ex,
-    newIndicator: (0, a.jsx)(j.TextBadge, {
-      text: eN.default.Messages.NEW,
+    section: eN.UserSettingsSections.FAMILY_CENTER,
+    label: ep.default.Messages.FAMILY_CENTER_SETTINGS_TITLE,
+    ariaLabel: ep.default.Messages.FAMILY_CENTER_SETTINGS_TITLE,
+    element: et.default,
+    badgeCount: eR,
+    newIndicator: (0, a.jsx)(P.TextBadge, {
+      text: ep.default.Messages.NEW,
       color: _.default.BG_BRAND
     }),
     newIndicatorDismissibleContentTypes: [l.DismissibleContent.FAMILY_CENTER_NEW_BADGE]
   }, {
-    section: eh.UserSettingsSections.AUTHORIZED_APPS,
-    label: eN.default.Messages.AUTHORIZED_APPS,
-    element: J.default
+    section: eN.UserSettingsSections.AUTHORIZED_APPS,
+    label: ep.default.Messages.AUTHORIZED_APPS,
+    element: X.default
   }, {
-    section: eh.UserSettingsSections.SESSIONS,
-    label: eN.default.Messages.AUTH_SESSIONS,
-    ariaLabel: eN.default.Messages.AUTH_SESSIONS,
-    element: eE.default,
+    section: eN.UserSettingsSections.SESSIONS,
+    label: ep.default.Messages.AUTH_SESSIONS,
+    ariaLabel: ep.default.Messages.AUTH_SESSIONS,
+    element: eS.default,
     newIndicatorDismissibleContentTypes: [l.DismissibleContent.AUTH_SESSIONS_NEW],
-    predicate: () => B.default.getCurrentConfig({
+    predicate: () => y.default.getCurrentConfig({
       location: "9f7d84_1"
     }, {
       autoTrackExposure: !1
     }).showSettings
   }, {
-    section: eh.UserSettingsSections.CONNECTIONS,
-    label: eN.default.Messages.CONNECTIONS,
-    ariaLabel: eN.default.Messages.CONNECTIONS,
-    element: ee.default,
+    section: eN.UserSettingsSections.CONNECTIONS,
+    label: ep.default.Messages.CONNECTIONS,
+    ariaLabel: ep.default.Messages.CONNECTIONS,
+    element: $.default,
     impressionName: n.ImpressionNames.USER_SETTINGS_CONNECTIONS,
     impressionProperties: {
-      source: eO
+      source: ex
     },
     newIndicatorDismissibleContentTypes: [l.DismissibleContent.NEW_CRUNCHYROLL_CONNECTION]
   }, {
-    section: eh.UserSettingsSections.CLIPS,
-    label: eN.default.Messages.CLIPS,
-    ariaLabel: eN.default.Messages.CLIPS,
-    icon: eR ? (0, a.jsx)(f.default, {}) : void 0,
-    element: m.default
+    section: eN.UserSettingsSections.CLIPS,
+    label: ep.default.Messages.CLIPS,
+    ariaLabel: ep.default.Messages.CLIPS,
+    icon: ev ? (0, a.jsx)(f.default, {}) : void 0,
+    element: m.default,
+    predicate: () => !eD
   }, {
-    section: eh.UserSettingsSections.FRIEND_REQUESTS,
-    label: eN.default.Messages.FRIEND_REQUESTS,
-    element: ea.default
+    section: eN.UserSettingsSections.FRIEND_REQUESTS,
+    label: ep.default.Messages.FRIEND_REQUESTS,
+    element: es.default
   }, {
     section: S.SectionTypes.DIVIDER
   }, {
     section: S.SectionTypes.HEADER,
-    label: eN.default.Messages.BILLING_SETTINGS
+    label: ep.default.Messages.BILLING_SETTINGS
   }, {
-    section: eh.UserSettingsSections.PREMIUM,
-    ariaLabel: eN.default.Messages.PREMIUM,
-    label: eN.default.Messages.PREMIUM,
-    element: H.default,
-    className: ep.premiumTab
+    section: eN.UserSettingsSections.PREMIUM,
+    ariaLabel: ep.default.Messages.PREMIUM,
+    label: ep.default.Messages.PREMIUM,
+    element: w.default,
+    className: eC.premiumTab
   }, {
-    section: eh.UserSettingsSections.GUILD_BOOSTING,
-    label: eN.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TITLE,
-    element: ec.default
+    section: eN.UserSettingsSections.GUILD_BOOSTING,
+    label: ep.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TITLE,
+    element: eu.default
   }, {
-    section: eh.UserSettingsSections.SUBSCRIPTIONS,
-    ariaLabel: eN.default.Messages.SUBSCRIPTIONS_TITLE,
-    label: eN.default.Messages.SUBSCRIPTIONS_TITLE,
+    section: eN.UserSettingsSections.SUBSCRIPTIONS,
+    ariaLabel: ep.default.Messages.SUBSCRIPTIONS_TITLE,
+    label: ep.default.Messages.SUBSCRIPTIONS_TITLE,
     element: C.default,
-    icon: eA ? (0, a.jsx)(P.default, {
+    icon: eO ? (0, a.jsx)(L.default, {
       width: 16,
       height: 16,
       color: i.default.unsafe_rawColors.YELLOW_300.css
     }) : null
   }, {
-    section: eh.UserSettingsSections.INVENTORY,
-    label: eN.default.Messages.GIFT_INVENTORY,
-    element: ei.default,
-    ariaLabel: eN.default.Messages.GIFT_INVENTORY,
+    section: eN.UserSettingsSections.INVENTORY,
+    label: ep.default.Messages.GIFT_INVENTORY,
+    element: el.default,
+    ariaLabel: ep.default.Messages.GIFT_INVENTORY,
     badgeCount: t
   }, {
-    section: eh.UserSettingsSections.BILLING,
-    label: eN.default.Messages.BILLING,
-    element: $.default
+    section: eN.UserSettingsSections.BILLING,
+    label: ep.default.Messages.BILLING,
+    element: J.default
   }, {
     section: S.SectionTypes.DIVIDER
   }, {
     section: S.SectionTypes.HEADER,
-    label: eN.default.Messages.APP_SETTINGS
+    label: ep.default.Messages.APP_SETTINGS
   }, {
-    section: eh.UserSettingsSections.APPEARANCE,
-    label: eN.default.Messages.APPEARANCE,
-    ariaLabel: eN.default.Messages.APPEARANCE,
-    element: X.default,
-    newIndicator: (0, a.jsx)(j.PremiumBadge, {
-      text: eN.default.Messages.NEW
+    section: eN.UserSettingsSections.APPEARANCE,
+    label: ep.default.Messages.APPEARANCE,
+    ariaLabel: ep.default.Messages.APPEARANCE,
+    element: Z.default,
+    newIndicator: (0, a.jsx)(P.PremiumBadge, {
+      text: ep.default.Messages.NEW
     }),
     newIndicatorDismissibleContentTypes: [l.DismissibleContent.CLIENT_THEMES_SETTINGS_BADGE, l.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_BADGE]
   }, {
-    section: eh.UserSettingsSections.ACCESSIBILITY,
-    label: eN.default.Messages.ACCESSIBILITY,
-    element: z.default
+    section: eN.UserSettingsSections.ACCESSIBILITY,
+    label: ep.default.Messages.ACCESSIBILITY,
+    element: K.default
   }, {
-    section: eh.UserSettingsSections.VOICE,
-    label: eN.default.Messages.VOICE_AND_VIDEO,
+    section: eN.UserSettingsSections.VOICE,
+    label: ep.default.Messages.VOICE_AND_VIDEO,
     element: eI.default,
     predicate: () => M.default.isSupported()
   }, {
-    section: eh.UserSettingsSections.POGGERMODE,
-    label: eN.default.Messages.POGGERMODE,
-    ariaLabel: eN.default.Messages.POGGERMODE,
+    section: eN.UserSettingsSections.POGGERMODE,
+    label: ep.default.Messages.POGGERMODE,
+    ariaLabel: ep.default.Messages.POGGERMODE,
     element: p.default,
     predicate: () => N.default.settingsVisible,
     icon: (0, a.jsx)("img", {
       alt: "",
       src: s("348621"),
-      className: ep.poggermodeIcon
+      className: eC.poggermodeIcon
     })
   }, {
-    section: eh.UserSettingsSections.TEXT,
-    label: eN.default.Messages.CHAT,
-    element: ef.default
-  }, {
-    section: eh.UserSettingsSections.NOTIFICATIONS,
-    label: eN.default.Messages.NOTIFICATIONS,
-    element: ed.default
-  }, {
-    section: eh.UserSettingsSections.KEYBINDS,
-    label: eN.default.Messages.KEYBINDS,
-    element: er.default
-  }, {
-    section: eh.UserSettingsSections.LOCALE,
-    label: eN.default.Messages.LANGUAGE,
-    element: eo.default
-  }, {
-    section: eh.UserSettingsSections.WINDOWS,
-    label: eN.default.Messages.USER_SETTINGS_WINDOWS_SETTINGS,
-    element: e_.default,
-    predicate: () => y.isPlatformEmbedded && (0, y.isWindows)()
-  }, {
-    section: eh.UserSettingsSections.LINUX,
-    label: eN.default.Messages.USER_SETTINGS_LINUX_SETTINGS,
-    element: eC,
-    predicate: () => y.isPlatformEmbedded && (0, y.isLinux)()
-  }, {
-    section: eh.UserSettingsSections.STREAMER_MODE,
-    label: eN.default.Messages.STREAMER_MODE,
+    section: eN.UserSettingsSections.TEXT,
+    label: ep.default.Messages.CHAT,
     element: eT.default
   }, {
-    section: eh.UserSettingsSections.SPEED_TEST,
+    section: eN.UserSettingsSections.NOTIFICATIONS,
+    label: ep.default.Messages.NOTIFICATIONS,
+    element: eo.default
+  }, {
+    section: eN.UserSettingsSections.KEYBINDS,
+    label: ep.default.Messages.KEYBINDS,
+    element: ei.default
+  }, {
+    section: eN.UserSettingsSections.LOCALE,
+    label: ep.default.Messages.LANGUAGE,
+    element: er.default
+  }, {
+    section: eN.UserSettingsSections.WINDOWS,
+    label: ep.default.Messages.USER_SETTINGS_WINDOWS_SETTINGS,
+    element: em.default,
+    predicate: () => U.isPlatformEmbedded && (0, U.isWindows)()
+  }, {
+    section: eN.UserSettingsSections.LINUX,
+    label: ep.default.Messages.USER_SETTINGS_LINUX_SETTINGS,
+    element: eA,
+    predicate: () => U.isPlatformEmbedded && (0, U.isLinux)()
+  }, {
+    section: eN.UserSettingsSections.STREAMER_MODE,
+    label: ep.default.Messages.STREAMER_MODE,
+    element: eE.default
+  }, {
+    section: eN.UserSettingsSections.SPEED_TEST,
     label: "Speed Test",
-    element: Y.default,
-    predicate: () => x.default.isSupported() && F.default.getCurrentConfig({
+    element: V.default,
+    predicate: () => x.default.isSupported() && B.default.getCurrentConfig({
       location: "9f7d84_2"
     }).showSettings
   }, {
-    section: eh.UserSettingsSections.ADVANCED,
-    label: eN.default.Messages.SETTINGS_ADVANCED,
-    element: Z.default
-  }, {
-    section: S.SectionTypes.DIVIDER
-  }, {
-    section: S.SectionTypes.HEADER,
-    label: eN.default.Messages.ACTIVITY_SETTINGS
-  }, {
-    section: eh.UserSettingsSections.ACTIVITY_PRIVACY,
-    label: eN.default.Messages.ACTIVITY_PRIVACY,
+    section: eN.UserSettingsSections.ADVANCED,
+    label: ep.default.Messages.SETTINGS_ADVANCED,
     element: q.default
   }, {
-    section: eh.UserSettingsSections.REGISTERED_GAMES,
-    label: eN.default.Messages.REGISTERED_GAMES,
-    element: en.default,
-    predicate: () => y.isPlatformEmbedded
+    section: S.SectionTypes.DIVIDER,
+    predicate: () => !eD
   }, {
-    section: eh.UserSettingsSections.OVERLAY,
-    label: eN.default.Messages.OVERLAY,
-    element: eu.default,
-    predicate: () => D.default.isSupported() || !1
+    section: S.SectionTypes.HEADER,
+    label: ep.default.Messages.ACTIVITY_SETTINGS,
+    predicate: () => !eD
+  }, {
+    section: eN.UserSettingsSections.ACTIVITY_PRIVACY,
+    label: ep.default.Messages.ACTIVITY_PRIVACY,
+    element: Q.default,
+    predicate: () => !eD
+  }, {
+    section: eN.UserSettingsSections.REGISTERED_GAMES,
+    label: ep.default.Messages.REGISTERED_GAMES,
+    element: ea.default,
+    predicate: () => !eD && (0, eg.shouldShowRegisteredGamesSettings)()
+  }, {
+    section: eN.UserSettingsSections.OVERLAY,
+    label: ep.default.Messages.OVERLAY,
+    element: ed.default,
+    predicate: () => !eD && eM
   }, {
     section: S.SectionTypes.DIVIDER
   }, {
     section: "changelog",
     onClick: () => (0, T.openChangelog)(!0),
-    label: eN.default.Messages.WHATS_NEW
+    label: ep.default.Messages.WHATS_NEW
   }, {
     section: "merchandise",
     onClick: () => {
       let e = "https://discordmerch.com/Dsktopprm";
-      b.default.track(eh.AnalyticEvents.USER_SETTINGS_MERCH_LINK_CLICKED), (0, U.handleClick)({
+      j.default.track(eN.AnalyticEvents.USER_SETTINGS_MERCH_LINK_CLICKED), (0, b.handleClick)({
         href: e,
         shouldConfirm: !0,
         onConfirm: () => {
-          b.default.track(eh.AnalyticEvents.USER_SETTINGS_MERCH_LINK_CONFIRMED), (0, E.default)(e)
+          j.default.track(eN.AnalyticEvents.USER_SETTINGS_MERCH_LINK_CONFIRMED), (0, E.default)(e)
         }
       })
     },
-    label: eN.default.Messages.MERCHANDISE,
-    ariaLabel: eN.default.Messages.MERCHANDISE
+    label: ep.default.Messages.MERCHANDISE,
+    ariaLabel: ep.default.Messages.MERCHANDISE
   }, {
-    section: eh.UserSettingsSections.HYPESQUAD_ONLINE,
-    label: eN.default.Messages.USER_SETTINGS_HYPESQUAD,
-    element: el.default
+    section: eN.UserSettingsSections.HYPESQUAD_ONLINE,
+    label: ep.default.Messages.USER_SETTINGS_HYPESQUAD,
+    element: en.default
   }, {
-    section: eh.UserSettingsSections.EXPERIMENTS,
+    section: eN.UserSettingsSections.EXPERIMENTS,
     label: "Experiments",
-    element: eg.default,
+    element: e_.default,
     predicate: () => R.default.isDeveloper
   }, {
-    section: eh.UserSettingsSections.DEVELOPER_OPTIONS,
+    section: eN.UserSettingsSections.DEVELOPER_OPTIONS,
     label: "Developer Options",
-    element: et.default,
+    element: ee.default,
     predicate: () => R.default.isDeveloper
   }, {
-    section: eh.UserSettingsSections.HOTSPOT_OPTIONS,
+    section: eN.UserSettingsSections.HOTSPOT_OPTIONS,
     label: "Hotspot Options",
-    element: k.default,
+    element: F.default,
     predicate: () => R.default.isDeveloper
   }, {
-    section: eh.UserSettingsSections.DISMISSIBLE_CONTENT_OPTIONS,
+    section: eN.UserSettingsSections.DISMISSIBLE_CONTENT_OPTIONS,
     label: "Dismissible Contents",
     element: g.default,
     predicate: () => R.default.isDeveloper
   }, {
-    section: eh.UserSettingsSections.PAYMENT_FLOW_MODAL_TEST_PAGE,
+    section: eN.UserSettingsSections.PAYMENT_FLOW_MODAL_TEST_PAGE,
     label: "Payment Flow Modals",
-    element: w.default,
+    element: k.default,
     predicate: () => R.default.isDeveloper
   }, {
-    section: eh.UserSettingsSections.TEXT_PLAYGROUND,
+    section: eN.UserSettingsSections.TEXT_PLAYGROUND,
     label: "Text Playground",
-    element: em.default,
-    predicate: () => (0, K.shouldShowTextPlayground)() || R.default.isDeveloper
+    element: ef.default,
+    predicate: () => (0, W.shouldShowTextPlayground)() || R.default.isDeveloper
   }, {
-    section: eh.UserSettingsSections.TEXT_COMPONENT,
+    section: eN.UserSettingsSections.TEXT_COMPONENT,
     label: "Text Components",
-    element: W.default,
-    predicate: () => (0, K.shouldShowTextPlayground)() || R.default.isDeveloper
+    element: Y.default,
+    predicate: () => (0, W.shouldShowTextPlayground)() || R.default.isDeveloper
   }, {
     section: S.SectionTypes.DIVIDER
   }, {
     section: "logout",
     onClick() {
       (0, r.openModal)(e => (0, a.jsx)(r.ConfirmModal, {
-        header: eN.default.Messages.LOGOUT,
-        confirmText: eN.default.Messages.LOGOUT,
-        cancelText: eN.default.Messages.CANCEL,
+        header: ep.default.Messages.LOGOUT,
+        confirmText: ep.default.Messages.LOGOUT,
+        cancelText: ep.default.Messages.CANCEL,
         onCancel: e.onClose,
         onConfirm: () => d.default.logout(),
         ...e,
         children: (0, a.jsx)(r.Text, {
           variant: "text-md/normal",
-          children: eN.default.Messages.USER_SETTINGS_CONFIRM_LOGOUT
+          children: ep.default.Messages.USER_SETTINGS_CONFIRM_LOGOUT
         })
       }))
     },
-    label: eN.default.Messages.LOGOUT,
-    ariaLabel: eN.default.Messages.LOGOUT,
-    icon: (0, a.jsx)(L.default, {
+    label: ep.default.Messages.LOGOUT,
+    ariaLabel: ep.default.Messages.LOGOUT,
+    icon: (0, a.jsx)(D.default, {
       width: 16,
       height: 16
     })
@@ -381,7 +394,7 @@ function eA(e) {
     section: S.SectionTypes.DIVIDER
   }, {
     section: S.SectionTypes.CUSTOM,
-    element: V.default
+    element: H.default
   }, {
     section: S.SectionTypes.CUSTOM,
     element: G.default
