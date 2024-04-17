@@ -30920,7 +30920,8 @@ input[type=checkbox]:focus-visible+.label__8e100 {
 
 .badgeList__6b2c7 {
     justify-content: flex-start;
-    padding-left: 0
+    background-color: var(--background-secondary);
+    border-radius: var(--radius-sm)
 }
 
 .fieldList__4e6dd {
