@@ -10,9 +10,9 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("557533"),
-  s = n.n(r),
-  l = n("789978"),
-  a = n("790472"),
+  l = n.n(r),
+  s = n("789978"),
+  a = n("368072"),
   o = n("777207"),
   d = n("752843"),
   c = n("330711"),
@@ -28,12 +28,12 @@ function h(e) {
     subscriptionType: m,
     title: p,
     onDetails: S,
-    benefitItems: x,
-    benefitsSummary: g
+    benefitItems: g,
+    benefitsSummary: x
   } = e;
-  return (0, i.jsx)(l.FocusRing, {
+  return (0, i.jsx)(s.FocusRing, {
     children: (0, i.jsxs)("div", {
-      className: s()(u.container, f.hoverCard),
+      className: l()(u.container, f.hoverCard),
       tabIndex: 0,
       onClick: () => {
         null != S ? S() : null != h && h()
@@ -53,7 +53,7 @@ function h(e) {
             children: null != n ? (0, i.jsx)("img", {
               src: n.toString(),
               alt: ""
-            }) : (0, i.jsx)(a.TicketIcon, {
+            }) : (0, i.jsx)(a.BadgeIcon, {
               color: "white",
               height: 48,
               width: 48
@@ -70,16 +70,16 @@ function h(e) {
             children: t
           })]
         })]
-      }), null != g && (0, i.jsx)("div", {
+      }), null != x && (0, i.jsx)("div", {
         className: u.benefitsSummary,
         children: (0, i.jsx)(o.Text, {
           color: "interactive-normal",
           variant: "text-sm/medium",
           children: c.default.Messages.Storefront.BENEFITS_SUMMARY.format({
-            count: g
+            count: x
           })
         })
-      }), null != x && (0, i.jsx)("div", {
+      }), null != g && (0, i.jsx)("div", {
         className: u.benefits,
         children: (0, i.jsx)("div", {
           className: u.benefitsContainer,
@@ -89,15 +89,15 @@ function h(e) {
               color: "header-secondary",
               variant: "eyebrow",
               children: c.default.Messages.Storefront.BENEFITS_TITLE
-            }), x.length > 3 ? (0, i.jsxs)(i.Fragment, {
-              children: [x.slice(0, 3), (0, i.jsx)(o.Text, {
+            }), g.length > 3 ? (0, i.jsxs)(i.Fragment, {
+              children: [g.slice(0, 3), (0, i.jsx)(o.Text, {
                 variant: "text-md/semibold",
                 color: "text-secondary",
                 children: c.default.Messages.Storefront.MORE_BENEFITS.format({
-                  count: x.length - 3
+                  count: g.length - 3
                 })
               })]
-            }) : x]
+            }) : g]
           })
         })
       })]

@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return x
   }
 }), n("47120");
-var i, r, s = n("735250"),
-  l = n("470079"),
+var i, r, l = n("735250"),
+  s = n("470079"),
   a = n("442837"),
   o = n("481060"),
   d = n("558381"),
@@ -16,21 +16,21 @@ var i, r, s = n("735250"),
   m = n("507608"),
   p = n("981631"),
   S = n("689938"),
-  x = n("1931");
+  g = n("1931");
 
-function g(e) {
+function x(e) {
   let {
     onClose: t,
     transitionState: n,
     appId: i,
     guildId: r,
-    subscriptionGroupListing: g
-  } = e, v = (0, a.useStateFromStores)([u.default], () => u.default.getApplication(i)), [C, T] = l.useState(() => u.default.isFetchingApplication(i) ? {
+    subscriptionGroupListing: x
+  } = e, v = (0, a.useStateFromStores)([u.default], () => u.default.getApplication(i)), [C, T] = s.useState(() => u.default.isFetchingApplication(i) ? {
     status: 1
   } : {
     status: 0
   });
-  l.useEffect(() => {
+  s.useEffect(() => {
     0 === C.status && (T({
       status: 1
     }), c.default.fetchApplication(i).then(() => {
@@ -53,32 +53,33 @@ function g(e) {
         return !1
     }
   }), [i]);
-  if (l.useEffect(() => {
+  if (s.useEffect(() => {
       (0, d.fetchAllStoreListingsForApplication)(i)
     }, [i]), null == v) return null;
   let N = S.default.Messages.STOREFRONT_TITLE.format({
     appName: v.name
   });
-  return (0, s.jsxs)(o.ModalRoot, {
+  return (0, l.jsxs)(o.ModalRoot, {
     transitionState: n,
     "aria-label": N,
     size: o.ModalSize.DYNAMIC,
-    className: x.modal,
-    children: [(0, s.jsxs)(o.ModalHeader, {
-      className: x.modalHeader,
-      children: [(0, s.jsxs)("div", {
-        className: x.modalTitle,
-        children: [(0, s.jsx)(f.default, {}), (0, s.jsx)(o.Heading, {
+    className: g.modal,
+    children: [(0, l.jsxs)(o.ModalHeader, {
+      className: g.modalHeader,
+      children: [(0, l.jsxs)("div", {
+        className: g.modalTitle,
+        children: [(0, l.jsx)(f.default, {}), (0, l.jsx)(o.Heading, {
           variant: "heading-md/semibold",
           children: N
         })]
-      }), (0, s.jsx)(o.ModalCloseButton, {
-        onClick: t
+      }), (0, l.jsx)(o.ModalCloseButton, {
+        onClick: t,
+        className: g.modalCloseBtn
       })]
-    }), (0, s.jsx)(o.ModalContent, {
-      children: (0, s.jsx)(m.default, {
+    }), (0, l.jsx)(o.ModalContent, {
+      children: (0, l.jsx)(m.default, {
         app: v,
-        subscriptionGroupListing: g,
+        subscriptionGroupListing: x,
         guildId: r,
         products: j
       })

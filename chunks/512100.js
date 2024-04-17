@@ -1,106 +1,106 @@
 "use strict";
 n.r(t), n.d(t, {
   CardDetails: function() {
-    return f
+    return u
   }
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("789978"),
-  l = n("727075"),
-  a = n("790472"),
-  o = n("349361"),
-  d = n("777207"),
-  c = n("330711"),
-  u = n("960016");
+  l = n("789978"),
+  s = n("727075"),
+  a = n("349361"),
+  o = n("777207"),
+  d = n("330711"),
+  c = n("960016");
 
-function f(e) {
+function u(e) {
   let {
     benefits: t,
     description: n,
-    imgSrc: f,
-    title: h,
-    onClose: m,
-    tag: p
-  } = e, S = r.useRef(null), [x, g] = r.useState(!0), v = null != f ? {
-    "--custom-background-url": "url(".concat(f.toString(), ")")
+    imgSrc: u,
+    title: f,
+    onClose: h,
+    tag: m,
+    FallbackIcon: p
+  } = e, S = r.useRef(null), [g, x] = r.useState(!0), v = null != u ? {
+    "--custom-background-url": "url(".concat(u.toString(), ")")
   } : void 0, C = () => {
     var e;
-    (null === (e = S.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) === !0 ? g(!1) : g(!0)
+    (null === (e = S.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) === !0 ? x(!1) : x(!0)
   };
   return (0, i.jsxs)("div", {
-    className: u.container,
+    className: c.container,
     children: [(0, i.jsxs)("div", {
-      className: u.header,
+      className: c.header,
       children: [(0, i.jsx)("div", {
-        className: u.headerBackground,
+        className: c.headerBackground,
         style: v
       }), (0, i.jsxs)("div", {
-        className: u.headerTop,
+        className: c.headerTop,
         children: [(0, i.jsx)("div", {
-          children: p
-        }), (0, i.jsx)(s.FocusRing, {
+          children: m
+        }), (0, i.jsx)(l.FocusRing, {
           children: (0, i.jsx)("button", {
-            onClick: m,
-            className: u.closeBtn,
+            onClick: h,
+            className: c.closeBtn,
             type: "button",
-            children: (0, i.jsx)(l.CloseSmallIcon, {
+            children: (0, i.jsx)(s.CloseSmallIcon, {
               height: 24,
               width: 24,
-              color: "var(--white)"
+              color: "var(--header-primary)"
             })
           })
         })]
       }), (0, i.jsx)("div", {
-        className: u.headerImage,
-        children: null != f ? (0, i.jsx)("img", {
-          src: f.toString(),
+        className: c.headerImage,
+        children: null != u ? (0, i.jsx)("img", {
+          src: u.toString(),
           alt: ""
-        }) : (0, i.jsx)(a.TicketIcon, {
-          color: "white",
+        }) : (0, i.jsx)(p, {
+          color: "var(--text-muted)",
           height: 96,
           width: 96
         })
       })]
-    }), (0, i.jsxs)(o.AdvancedScrollerThin, {
-      className: u.scroll,
+    }), (0, i.jsxs)(a.AdvancedScrollerThin, {
+      className: c.scroll,
       fade: !0,
       ref: e => {
         null != e && (S.current = e, C())
       },
       onScroll: C,
       children: [(0, i.jsx)("br", {}), (0, i.jsxs)("div", {
-        className: u.scrollContent,
-        children: [(0, i.jsx)(d.Text, {
+        className: c.scrollContent,
+        children: [(0, i.jsx)(o.Text, {
           color: "header-primary",
           tag: "div",
           variant: "heading-xl/semibold",
-          children: h
+          children: f
         }), (null != n && "" !== n || null != t) && (0, i.jsxs)("div", {
-          className: u.details,
-          children: [(0, i.jsx)(d.Text, {
+          className: c.details,
+          children: [(0, i.jsx)(o.Text, {
             color: "header-primary",
             tag: "div",
             variant: "heading-lg/semibold",
-            children: c.default.Messages.Storefront.PRODUCT_DETAILS
-          }), (0, i.jsx)(d.Text, {
+            children: d.default.Messages.Storefront.PRODUCT_DETAILS
+          }), (0, i.jsx)(o.Text, {
             color: "text-muted",
             variant: "text-md/normal",
-            className: u.description,
+            className: c.description,
             children: n
           }), null != t && (0, i.jsxs)("div", {
-            className: u.benefits,
-            children: [(0, i.jsx)(d.Text, {
+            className: c.benefits,
+            children: [(0, i.jsx)(o.Text, {
               color: "header-secondary",
               variant: "eyebrow",
-              children: c.default.Messages.Storefront.BENEFITS_TITLE
+              children: d.default.Messages.Storefront.BENEFITS_TITLE
             }), t]
           })]
         })]
       })]
     }), (0, i.jsx)("div", {
-      className: u.containerScrollGradient,
-      "data-shown": x
+      className: c.containerScrollGradient,
+      "data-shown": g
     })]
   })
 }

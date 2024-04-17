@@ -20,7 +20,8 @@ var i = t("735250"),
   m = t("7234");
 
 function R() {
-  return (0, i.jsxs)(i.Fragment, {
+  let e = (0, n.useStateFromStores)([f.default], () => f.default.getReferralsRemaining());
+  return r()(null != e, "Referrals remaining should not be null"), (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsxs)("div", {
       className: _.title,
       children: [(0, i.jsx)(c.default, {
@@ -37,7 +38,7 @@ function R() {
       variant: "text-md/medium",
       color: "header-secondary",
       children: p.default.Messages.REFERRAL_PROGRAM_FRIEND_SELECT_HEADER.format({
-        numReferrals: 3
+        numReferrals: e
       })
     })]
   })
@@ -114,7 +115,7 @@ s.default = function(e) {
   let {
     onClose: s,
     onShare: t
-  } = e, a = (0, n.useStateFromStores)([f.default], () => f.default.getReferralsRemaining()), [c, j] = l.useState(0), [L, m] = l.useState(""), [v, A] = l.useState([]), [y, M] = l.useState(!1), [O, F] = l.useState(!1), N = function(e, s) {
+  } = e, a = (0, n.useStateFromStores)([f.default], () => f.default.getReferralsRemaining()), [c, j] = l.useState(0), [L, m] = l.useState(""), [v, A] = l.useState([]), [y, M] = l.useState(!1), [F, O] = l.useState(!1), N = function(e, s) {
     let [t, i] = l.useState(e);
     return l.useEffect(() => {
       let t = setTimeout(() => {
@@ -138,14 +139,14 @@ s.default = function(e) {
         return 0 === e ? [...w.values(), ...i] : [...t, ...i]
       }), j(s.nextIndex)
     } catch (e) {
-      F(!0)
+      O(!0)
     } finally {
       M(!1)
     }
   }, I = (0, o.useIsVisible)(e => {
     e && !y && U(c)
   });
-  if (O) return (0, i.jsx)(S, {
+  if (F) return (0, i.jsx)(S, {
     onClose: s
   });
   let G = N.length > 0 && 0 === v.length;
