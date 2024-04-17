@@ -16,13 +16,13 @@ n.r(t), n.d(t, {
     return U
   },
   can: function() {
-    return V
+    return F
   },
   canEveryone: function() {
     return x
   },
   canEveryoneRole: function() {
-    return F
+    return V
   },
   computePermissions: function() {
     return y
@@ -121,7 +121,7 @@ var i = n("392711"),
   A = n("981631");
 let m = s.deserialize(0),
   N = s.combine(...r().values(A.Permissions)),
-  p = s.combine(A.Permissions.CREATE_INSTANT_INVITE, A.Permissions.CHANGE_NICKNAME, A.Permissions.VIEW_CHANNEL, A.Permissions.SEND_MESSAGES, A.Permissions.EMBED_LINKS, A.Permissions.ATTACH_FILES, A.Permissions.READ_MESSAGE_HISTORY, A.Permissions.MENTION_EVERYONE, A.Permissions.USE_EXTERNAL_EMOJIS, A.Permissions.USE_EXTERNAL_STICKERS, A.Permissions.ADD_REACTIONS, A.Permissions.CREATE_PUBLIC_THREADS, A.Permissions.CREATE_PRIVATE_THREADS, A.Permissions.SEND_MESSAGES_IN_THREADS, A.Permissions.CONNECT, A.Permissions.SPEAK, A.Permissions.USE_VAD, A.Permissions.STREAM, A.Permissions.USE_EMBEDDED_ACTIVITIES, A.Permissions.USE_SOUNDBOARD, A.Permissions.REQUEST_TO_SPEAK, A.Permissions.USE_APPLICATION_COMMANDS, A.Permissions.CREATE_GUILD_EXPRESSIONS, A.Permissions.CREATE_EVENTS),
+  p = s.combine(A.Permissions.CREATE_INSTANT_INVITE, A.Permissions.CHANGE_NICKNAME, A.Permissions.VIEW_CHANNEL, A.Permissions.SEND_MESSAGES, A.Permissions.EMBED_LINKS, A.Permissions.ATTACH_FILES, A.Permissions.READ_MESSAGE_HISTORY, A.Permissions.MENTION_EVERYONE, A.Permissions.USE_EXTERNAL_EMOJIS, A.Permissions.USE_EXTERNAL_STICKERS, A.Permissions.ADD_REACTIONS, A.Permissions.CREATE_PUBLIC_THREADS, A.Permissions.CREATE_PRIVATE_THREADS, A.Permissions.SEND_MESSAGES_IN_THREADS, A.Permissions.SEND_POLLS, A.Permissions.CONNECT, A.Permissions.SPEAK, A.Permissions.USE_VAD, A.Permissions.STREAM, A.Permissions.USE_EMBEDDED_ACTIVITIES, A.Permissions.USE_SOUNDBOARD, A.Permissions.REQUEST_TO_SPEAK, A.Permissions.USE_APPLICATION_COMMANDS, A.Permissions.CREATE_GUILD_EXPRESSIONS, A.Permissions.CREATE_EVENTS),
   O = s.combine(A.Permissions.VIEW_CHANNEL, A.Permissions.READ_MESSAGE_HISTORY),
   R = s.combine(A.Permissions.VIEW_CHANNEL, A.Permissions.SEND_MESSAGES, A.Permissions.CONNECT, A.Permissions.SPEAK, A.Permissions.STREAM, A.Permissions.USE_EMBEDDED_ACTIVITIES, A.Permissions.USE_EXTERNAL_EMOJIS, A.Permissions.USE_EXTERNAL_SOUNDS, A.Permissions.USE_EXTERNAL_STICKERS, A.Permissions.USE_SOUNDBOARD, A.Permissions.USE_VAD),
   C = s.combine(A.Permissions.VIEW_CHANNEL, A.Permissions.READ_MESSAGE_HISTORY),
@@ -284,7 +284,7 @@ function k(e) {
   }
 }
 
-function V(e) {
+function F(e) {
   let {
     permission: t,
     user: n,
@@ -303,7 +303,7 @@ function V(e) {
   }), t)
 }
 
-function F(e, t) {
+function V(e, t) {
   let n;
   let i = {};
   if (t instanceof c.ChannelRecordBase) {

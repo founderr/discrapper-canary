@@ -204,6 +204,11 @@ function A(e, t, n, i) {
       description: r === T.ChannelTypes.GUILD_CATEGORY ? f.default.Messages.ROLE_PERMISSIONS_SEND_VOICE_MESSAGES_DESCRIPTION_CATEGORY : f.default.Messages.ROLE_PERMISSIONS_SEND_VOICE_MESSAGES_DESCRIPTION_TEXT,
       flag: T.Permissions.SEND_VOICE_MESSAGES
     },
+    [T.Permissions.SEND_POLLS.toString()]: {
+      title: f.default.Messages.ROLE_PERMISSIONS_SEND_POLLS,
+      description: r === T.ChannelTypes.GUILD_CATEGORY ? f.default.Messages.ROLE_PERMISSIONS_SEND_POLLS_DESCRIPTION_CATEGORY : f.default.Messages.ROLE_PERMISSIONS_SEND_POLLS_DESCRIPTION_TEXT,
+      flag: T.Permissions.SEND_POLLS
+    },
     [T.Permissions.USE_CLYDE_AI.toString()]: {
       title: f.default.Messages.ROLE_PERMISSIONS_USE_CLYDE_AI,
       description: r === T.ChannelTypes.GUILD_CATEGORY ? f.default.Messages.ROLE_PERMISSIONS_USE_CLYDE_AI_GUILD_DESCRIPTION : f.default.Messages.ROLE_PERMISSIONS_USE_CLYDE_AI_CHANNEL_DESCRIPTION,
