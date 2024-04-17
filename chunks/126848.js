@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return j
+    return A
   }
 });
 var i = n("735250");
@@ -12,66 +12,77 @@ var s = n("120356"),
   o = n("524437"),
   a = n("605236"),
   c = n("328882"),
-  u = n("104494"),
-  d = n("639119"),
-  m = n("655525"),
-  h = n("52188"),
-  p = n("248042"),
-  f = n("924540"),
-  b = n("649765"),
-  S = n("886654"),
-  g = n("487980"),
-  T = n("351402"),
-  x = n("170671"),
-  v = n("921944"),
-  N = n("689938"),
-  C = n("556973");
+  u = n("650032"),
+  d = n("104494"),
+  m = n("639119"),
+  h = n("655525"),
+  p = n("52188"),
+  f = n("248042"),
+  b = n("924540"),
+  S = n("649765"),
+  g = n("886654"),
+  T = n("487980"),
+  x = n("351402"),
+  v = n("170671"),
+  N = n("921944"),
+  C = n("474936"),
+  j = n("689938"),
+  E = n("556973");
+let R = "UserSettingsPremiumLabel";
 
-function j(e) {
+function A(e) {
   let t, {
       decoration: n,
       label: s,
-      isSelected: j
+      isSelected: A
     } = e,
-    E = (0, d.usePremiumTrialOffer)(),
-    A = (0, u.usePremiumDiscountOffer)(),
-    I = (0, p.useIsEligibleForBogoPromotion)(),
-    P = (0, r.useStateFromStores)([T.default], () => T.default.isLocalizedPromoEnabled) && null == E && null == n,
-    R = (0, c.useShouldShowNewOfferBadgeForAprilMarketingMoment)("UserSettingsPremiumLabel"),
-    _ = (0, g.useIsEligibleSenderForReferralProgramTabBadge)("UserSettingsPremiumLabel");
-  return t = I ? (0, i.jsx)(m.default, {}) : R ? (0, i.jsx)(S.default, {
-    copy: N.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_MODAL_TOP_PILL,
-    isSelected: j,
+    I = (0, m.usePremiumTrialOffer)(),
+    P = (0, d.usePremiumDiscountOffer)(),
+    _ = (0, f.useIsEligibleForBogoPromotion)(),
+    M = (0, r.useStateFromStores)([x.default], () => x.default.isLocalizedPromoEnabled) && null == I && null == n,
+    y = (0, c.useShouldShowNewOfferBadgeForAprilMarketingMoment)(R),
+    O = (0, T.useIsEligibleSenderForReferralProgramTabBadge)(R),
+    {
+      enabled: D
+    } = u.ReferralProgramRecipient.useExperiment({
+      location: R
+    }, {
+      autoTrackExposure: !1
+    }),
+    B = D && (null == I ? void 0 : I.trial_id) === C.PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
+  return t = _ ? (0, i.jsx)(h.default, {}) : y ? (0, i.jsx)(g.default, {
+    copy: j.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_MODAL_TOP_PILL,
+    isSelected: A,
     onSelect: () => (0, a.markDismissibleContentAsDismissed)(o.DismissibleContent.PREMIUM_2024_APRIL_MARKETING_BADGE, {
-      dismissAction: v.ContentDismissActionType.TAKE_ACTION
+      dismissAction: N.ContentDismissActionType.TAKE_ACTION
     })
-  }) : null != A ? (0, i.jsx)(f.PremiumDiscountOfferTabBadge, {
-    isTabSelected: j,
-    userDiscount: A,
+  }) : null != P ? (0, i.jsx)(b.PremiumDiscountOfferTabBadge, {
+    isTabSelected: A,
+    userDiscount: P,
     includesAmountOff: !1
-  }) : null != E ? (0, i.jsx)(f.PremiumTrialOfferTabBadge, {
-    isTabSelected: j,
-    trialOffer: E
-  }) : null != n ? n : P ? (0, i.jsx)(h.LocalizedPricingBadgeIcon, {
-    entryPoint: h.BadgeEntryPoint.SettingsMenu
-  }) : _ ? (0, i.jsx)(b.default, {
-    isSelected: j,
+  }) : null == I || B ? null != n ? n : M ? (0, i.jsx)(p.LocalizedPricingBadgeIcon, {
+    entryPoint: p.BadgeEntryPoint.SettingsMenu
+  }) : O ? (0, i.jsx)(S.default, {
+    isSelected: A,
     onSelect: () => (0, a.markDismissibleContentAsDismissed)(o.DismissibleContent.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, {
-      dismissAction: v.ContentDismissActionType.TAKE_ACTION
+      dismissAction: N.ContentDismissActionType.TAKE_ACTION
     })
-  }) : (0, i.jsx)(x.default, {
-    isSelected: j
+  }) : (0, i.jsx)(v.default, {
+    isSelected: A
+  }) : (0, i.jsx)(b.PremiumTrialOfferTabBadge, {
+    isTabSelected: A,
+    trialOffer: I
   }), (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsxs)("div", {
-      className: l()(C.premiumLabel, {
-        [C.selected]: (j || P) && !I
+      className: l()(E.premiumLabel, {
+        [E.selected]: (A || M) && !_
       }),
       children: [s, t]
     }), (0, i.jsx)("div", {
-      className: l()(C.background, {
-        [C.auPromo]: P && !j,
-        [C.auPromoSelected]: P && j,
-        [C.selectedBackground]: !P && !I && j
+      className: l()(E.background, {
+        [E.auPromo]: M && !A,
+        [E.auPromoSelected]: M && A,
+        [E.selectedBackground]: !M && !_ && A
       })
     })]
   })

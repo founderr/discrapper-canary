@@ -6,62 +6,71 @@ var i = s("780384"),
   r = s("481060"),
   l = s("410030"),
   n = s("74538"),
-  o = s("104494"),
-  u = s("639119"),
-  d = s("197115"),
-  c = s("474936"),
-  _ = s("689938"),
-  E = s("154787");
-let C = e => {
+  o = s("650032"),
+  u = s("104494"),
+  d = s("639119"),
+  c = s("197115"),
+  _ = s("474936"),
+  E = s("689938"),
+  C = s("154787");
+let f = e => {
     let {
       showTrialCTA: t,
       subscriptionTier: s,
       shouldShowUpsells: a,
       trialDurationCopy: i,
       isPersistentCTA: r,
-      subscriptionTrial: l
+      shouldShowReferralTrialCopy: l,
+      subscriptionTrial: o
     } = e;
-    if (t && (s === c.PremiumSubscriptionSKUs.TIER_2 || r)) return (0, n.formatTrialCtaIntervalDuration)({
-      intervalType: null == l ? void 0 : l.interval,
-      intervalCount: null == l ? void 0 : l.interval_count
+    if (t && l) return E.default.Messages.REFERRAL_PROGRAM_START_TRIAL;
+    if (t && (s === _.PremiumSubscriptionSKUs.TIER_2 || r)) return (0, n.formatTrialCtaIntervalDuration)({
+      intervalType: null == o ? void 0 : o.interval,
+      intervalCount: null == o ? void 0 : o.interval_count
     });
-    if (t) return _.default.Messages.GET_FREE_TRIAL.format({
+    if (t) return E.default.Messages.GET_FREE_TRIAL.format({
       freeTrialText: i
     });
-    if (a && s === c.PremiumSubscriptionSKUs.TIER_2) return _.default.Messages.BOGO_CHANGE_LOG_REDEEM
+    else if (a && s === _.PremiumSubscriptionSKUs.TIER_2) return E.default.Messages.BOGO_CHANGE_LOG_REDEEM
   },
-  f = (e, t, s, a) => t || s ? _.default.Messages.PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT : e === c.PremiumSubscriptionSKUs.TIER_2 ? _.default.Messages.PREMIUM_DISCOUNT_CTA.format({
+  T = (e, t, s, a) => t || s ? E.default.Messages.PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT : e === _.PremiumSubscriptionSKUs.TIER_2 ? E.default.Messages.PREMIUM_DISCOUNT_CTA.format({
     percent: a
   }) : void 0;
 t.default = e => {
-  var t;
   let {
-    forceInverted: s,
-    subscriptionTier: c,
-    isEligibleForBogoPromotion: T = !1,
-    isPersistentCTA: I = !1,
-    useShorterCTA: R = !1,
-    ...S
-  } = e, p = (0, l.default)(), m = (0, i.isThemeDark)(p) || s, A = null === (t = (0, u.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, g = (0, n.formatTrialOfferIntervalDuration)({
-    intervalType: null == A ? void 0 : A.interval,
-    intervalCount: null == A ? void 0 : A.interval_count
-  }), N = (0, o.usePremiumDiscountOffer)(), O = null != A && c === A.sku_id, P = T ? _.default.Messages.BOGO_CLAIM_OFFER : null != N ? f(c, R, I, N.discount.amount) : C({
-    showTrialCTA: O,
-    subscriptionTier: c,
+    forceInverted: t,
+    subscriptionTier: s,
+    isEligibleForBogoPromotion: I = !1,
+    isPersistentCTA: R = !1,
+    useShorterCTA: S = !1,
+    ...p
+  } = e, m = (0, l.default)(), A = (0, i.isThemeDark)(m) || t, g = (0, d.usePremiumTrialOffer)(), N = null == g ? void 0 : g.subscription_trial, O = (0, n.formatTrialOfferIntervalDuration)({
+    intervalType: null == N ? void 0 : N.interval,
+    intervalCount: null == N ? void 0 : N.interval_count
+  }), P = (0, u.usePremiumDiscountOffer)(), M = null != N && s === N.sku_id, {
+    enabled: h
+  } = o.ReferralProgramRecipient.useExperiment({
+    location: "SubscribeButton"
+  }, {
+    autoTrackExposure: !1
+  }), x = h && (null == g ? void 0 : g.trial_id) === _.PREMIUM_TIER_2_REFERRAL_TRIAL_ID, L = I ? E.default.Messages.BOGO_CLAIM_OFFER : null != P ? T(s, S, R, P.discount.amount) : f({
+    showTrialCTA: M,
+    subscriptionTier: s,
     shouldShowUpsells: !1,
-    trialDurationCopy: g,
-    isPersistentCTA: I,
-    subscriptionTrial: A
+    trialDurationCopy: O,
+    isPersistentCTA: R,
+    shouldShowReferralTrialCopy: x,
+    subscriptionTrial: N
   });
-  return (0, a.jsx)(d.default, {
+  return (0, a.jsx)(c.default, {
     color: r.ButtonColors.BRAND,
-    look: m ? r.ButtonLooks.INVERTED : void 0,
-    buttonShineClassName: "buttonShineClassName" in S ? S.buttonShineClassName : m ? E.brandShine : void 0,
-    trialId: null == A ? void 0 : A.id,
-    buttonText: P,
-    buttonTextClassName: O ? E.freeTrialText : void 0,
+    look: A ? r.ButtonLooks.INVERTED : void 0,
+    buttonShineClassName: "buttonShineClassName" in p ? p.buttonShineClassName : A ? C.brandShine : void 0,
+    trialId: null == N ? void 0 : N.id,
+    buttonText: L,
+    buttonTextClassName: M ? C.freeTrialText : void 0,
     onlyShineOnHover: !0,
-    subscriptionTier: c,
-    ...S
+    subscriptionTier: s,
+    ...p
   })
 }
