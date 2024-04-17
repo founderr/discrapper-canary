@@ -23,9 +23,16 @@ let c = (e, t) => ({
       iconPath: u.GAME_CONTROLLER_ICON_PATH,
       text: t
     }];
-    if ((0, r.isEntryNew)(e) && n.push({
-        iconPath: u.NEW_GAME_ICON_PATH,
-        text: d.default.Messages.MEMBER_LIST_CONTENT_FEED_FIRST_TIME
+    (0, r.isEntryNew)(e) && n.push({
+      iconPath: u.NEW_GAME_ICON_PATH,
+      text: d.default.Messages.MEMBER_LIST_CONTENT_FEED_FIRST_TIME
+    });
+    let a = (0, r.getStreakCount)(e);
+    if (null != a && a > 1 && n.push({
+        iconPath: u.FLASH_ICON_PATH,
+        text: d.default.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
+          days: a
+        })
       }), (0, r.isEntryResurrected)(e) && n.push({
         iconPath: u.RESURRECTED_ICON_PATH,
         text: d.default.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED

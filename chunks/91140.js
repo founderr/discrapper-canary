@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   ContentRowBadges: function() {
-    return x
+    return M
   },
   useGamingContentData: function() {
-    return N
+    return x
   }
 });
 var a = n("735250"),
@@ -12,32 +12,33 @@ var a = n("735250"),
   s = n("120356"),
   i = n.n(s),
   r = n("442837"),
-  o = n("149020"),
-  u = n("434559"),
-  d = n("324992"),
-  c = n("137443"),
-  f = n("481060"),
-  h = n("835473"),
-  m = n("594174"),
-  p = n("823379"),
-  E = n("162461"),
-  C = n("22211"),
-  g = n("561308"),
-  S = n("44180"),
-  _ = n("443487"),
-  T = n("43205"),
-  I = n("371991"),
-  A = n("689938"),
-  v = n("138317");
-let N = e => {
-    let t = (0, h.useGetOrFetchApplication)(e.extra.application_id),
+  o = n("213602"),
+  u = n("149020"),
+  d = n("434559"),
+  c = n("324992"),
+  f = n("137443"),
+  h = n("481060"),
+  m = n("835473"),
+  p = n("594174"),
+  E = n("823379"),
+  C = n("162461"),
+  g = n("22211"),
+  S = n("561308"),
+  _ = n("44180"),
+  T = n("443487"),
+  I = n("43205"),
+  A = n("371991"),
+  v = n("689938"),
+  N = n("138317");
+let x = e => {
+    let t = (0, m.useGetOrFetchApplication)(e.extra.application_id),
       n = null == t ? void 0 : t.getIconURL(128);
     return {
       applicationImageSrc: n,
-      user: (0, r.useStateFromStores)([m.default], () => m.default.getUser(e.author_id))
+      user: (0, r.useStateFromStores)([p.default], () => p.default.getUser(e.author_id))
     }
   },
-  x = e => {
+  M = e => {
     let {
       entry: t,
       textColor: n = "text-secondary",
@@ -45,65 +46,81 @@ let N = e => {
       className: s,
       maxBadgesCount: r
     } = e, {
-      channel: h
-    } = (0, C.default)(t), {
-      showBadge: m
-    } = E.VoiceEnrichmentsExperiment.useExperiment({
+      channel: m
+    } = (0, g.default)(t), {
+      showBadge: p
+    } = C.VoiceEnrichmentsExperiment.useExperiment({
       location: "content_badge"
-    }), _ = [(() => {
-      let e = (0, g.isEntryActive)(t);
+    }), T = [(() => {
+      let e = (0, S.isEntryActive)(t);
       return (0, a.jsxs)("div", {
-        className: v.badgeContainer,
-        children: [(0, a.jsx)(o.GameControllerIcon, {
+        className: N.badgeContainer,
+        children: [(0, a.jsx)(u.GameControllerIcon, {
           width: 12,
           height: 12,
-          color: null != l ? l : e ? f.tokens.colors.REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_PRESSED_TEXT : void 0
-        }), (0, a.jsx)(I.default, {
+          color: null != l ? l : e ? h.tokens.colors.REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_PRESSED_TEXT : void 0
+        }), (0, a.jsx)(A.default, {
           entry: t,
           textColor: n
         })]
       })
-    })(), m && null != h ? (0, a.jsx)(S.default, {
-      channel: h,
+    })(), p && null != m ? (0, a.jsx)(_.default, {
+      channel: m,
       iconColor: l,
       textColor: n
-    }) : null, (0, g.isEntryNew)(t) ? (0, a.jsxs)("div", {
-      className: v.badgeContainer,
-      children: [(0, a.jsx)(u.NewUserLargeIcon, {
+    }) : null, (0, S.isEntryNew)(t) ? (0, a.jsxs)("div", {
+      className: N.badgeContainer,
+      children: [(0, a.jsx)(d.NewUserLargeIcon, {
         width: 12,
         height: 12,
-        color: null != l ? l : f.tokens.colors.STATUS_POSITIVE
-      }), (0, a.jsx)(f.Text, {
+        color: null != l ? l : h.tokens.colors.STATUS_POSITIVE
+      }), (0, a.jsx)(h.Text, {
         variant: "text-xs/normal",
         color: n,
-        children: A.default.Messages.MEMBER_LIST_CONTENT_FEED_FIRST_TIME
+        children: v.default.Messages.MEMBER_LIST_CONTENT_FEED_FIRST_TIME
       })]
-    }) : null, (0, g.isEntryResurrected)(t) ? (0, a.jsxs)("div", {
-      className: v.badgeContainer,
-      children: [(0, a.jsx)(d.RetryIcon, {
+    }) : null, (() => {
+      let e = (0, S.getStreakCount)(t);
+      return null == e || e < 2 ? null : (0, a.jsxs)("div", {
+        className: N.badgeContainer,
+        children: [(0, a.jsx)(o.FlashIcon, {
+          width: 12,
+          height: 12,
+          color: l
+        }), (0, a.jsx)(h.Text, {
+          variant: "text-xs/normal",
+          color: n,
+          children: v.default.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
+            days: e
+          })
+        })]
+      })
+    })(), (0, S.isEntryResurrected)(t) ? (0, a.jsxs)("div", {
+      className: N.badgeContainer,
+      children: [(0, a.jsx)(c.RetryIcon, {
         width: 12,
         height: 12,
         color: l
-      }), (0, a.jsx)(f.Text, {
+      }), (0, a.jsx)(h.Text, {
         variant: "text-xs/normal",
         color: n,
-        children: A.default.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED
+        children: v.default.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED
       })]
-    }) : null, (0, g.isEntryMarathon)(t) ? (0, a.jsxs)("div", {
-      className: v.badgeContainer,
-      children: [(0, a.jsx)(c.TimerIcon, {
+    }) : null, (0, S.isEntryMarathon)(t) ? (0, a.jsxs)("div", {
+      className: N.badgeContainer,
+      children: [(0, a.jsx)(f.TimerIcon, {
         width: 12,
         height: 12,
         color: l
-      }), (0, a.jsx)(f.Text, {
+      }), (0, a.jsx)(h.Text, {
         variant: "text-xs/normal",
         color: n,
-        children: A.default.Messages.MEMBER_LIST_CONTENT_FEED_MARATHON
+        children: v.default.Messages.MEMBER_LIST_CONTENT_FEED_MARATHON
       })]
     }) : null];
-    return null != r && (_ = _.filter(p.isNotNullish).slice(0, r)), (0, a.jsx)("div", {
-      className: i()(v.badgeRow, s),
-      children: _
+    return null != r && (T = T.filter(E.isNotNullish).slice(0, r)), (0, a.jsx)("div", {
+      className: i()(N.badgeRow, s),
+      children: T
     })
   };
 t.default = l.memo(e => {
@@ -113,27 +130,27 @@ t.default = l.memo(e => {
     selected: l
   } = e, {
     applicationImageSrc: s
-  } = N(t);
-  return (0, a.jsxs)(_.Card, {
+  } = x(t);
+  return (0, a.jsxs)(T.Card, {
     selected: l,
-    children: [(0, a.jsxs)(_.CardInfoSection, {
-      children: [(0, a.jsx)(_.CardUser, {
+    children: [(0, a.jsxs)(T.CardInfoSection, {
+      children: [(0, a.jsx)(T.CardUser, {
         userId: t.author_id,
         channelId: n.id,
         guildId: n.guild_id
-      }), (0, a.jsx)(_.CardTitle, {
+      }), (0, a.jsx)(T.CardTitle, {
         children: function(e) {
-          return (0, g.isEntryActive)(e) ? A.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYING_GAME.format({
+          return (0, S.isEntryActive)(e) ? v.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYING_GAME.format({
             gameName: e.extra.game_name
-          }) : A.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYED_GAME.format({
+          }) : v.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYED_GAME.format({
             gameName: e.extra.game_name
           })
         }(t)
-      }), (0, a.jsx)(x, {
+      }), (0, a.jsx)(M, {
         entry: t,
         maxBadgesCount: 2
       })]
-    }), (0, a.jsx)(T.ContentImage, {
+    }), (0, a.jsx)(I.ContentImage, {
       src: s,
       size: 48
     })]

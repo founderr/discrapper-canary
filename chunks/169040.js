@@ -1,5 +1,8 @@
 "use strict";
 n.r(t), n.d(t, {
+  FLASH_ICON_PATH: function() {
+    return d
+  },
   GAME_CONTROLLER_ICON_PATH: function() {
     return a
   },
@@ -22,43 +25,43 @@ n.r(t), n.d(t, {
     return s
   },
   applicationImageSize: function() {
-    return p
-  },
-  avatarImageSize: function() {
     return E
   },
-  badgeIconPosition: function() {
-    return S
-  },
-  badgeTextPosition: function() {
-    return _
-  },
-  betaTagHeight: function() {
-    return m
-  },
-  betaTagWidth: function() {
-    return h
-  },
-  descriptionIndent: function() {
+  avatarImageSize: function() {
     return C
   },
-  descriptionMaxWidth: function() {
+  badgeIconPosition: function() {
+    return _
+  },
+  badgeTextPosition: function() {
+    return T
+  },
+  betaTagHeight: function() {
+    return p
+  },
+  betaTagWidth: function() {
+    return m
+  },
+  descriptionIndent: function() {
     return g
   },
-  imageHeight: function() {
-    return c
+  descriptionMaxWidth: function() {
+    return S
   },
-  imagePadding: function() {
+  imageHeight: function() {
     return f
   },
+  imagePadding: function() {
+    return h
+  },
   imageWidth: function() {
-    return d
+    return c
   },
   spaceBetweenBadgeIconAndText: function() {
-    return I
+    return A
   },
   spaceBetweenBadges: function() {
-    return T
+    return I
   }
 });
 let a = "M20.97 4.06c0 .18.08.35.24.43.55.28.9.82 1.04 1.42.3 1.24.75 3.7.75 7.09v4.91a3.09 3.09 0 0 1-5.85 1.38l-1.76-3.51a1.09 1.09 0 0 0-1.23-.55c-.57.13-1.36.27-2.16.27s-1.6-.14-2.16-.27c-.49-.11-1 .1-1.23.55l-1.76 3.51A3.09 3.09 0 0 1 1 17.91V13c0-3.38.46-5.85.75-7.1.15-.6.49-1.13 1.04-1.4a.47.47 0 0 0 .24-.44c0-.7.48-1.32 1.2-1.47l2.93-.62c.5-.1 1 .06 1.36.4.35.34.78.71 1.28.68a42.4 42.4 0 0 1 4.4 0c.5.03.93-.34 1.28-.69.35-.33.86-.5 1.36-.39l2.94.62c.7.15 1.19.78 1.19 1.47ZM20 7.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM15.5 12a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM5 7a1 1 0 0 1 2 0v1h1a1 1 0 0 1 0 2H7v1a1 1 0 1 1-2 0v-1H4a1 1 0 1 1 0-2h1V7Z",
@@ -68,16 +71,17 @@ let a = "M20.97 4.06c0 .18.08.35.24.43.55.28.9.82 1.04 1.42.3 1.24.75 3.7.75 7.0
   r = "M12 22a9 9 0 0 0 7.03-14.62l.68-.67a1 1 0 0 0-1.42-1.42l-.67.68A8.96 8.96 0 0 0 13 4.05V3h2a1 1 0 1 0 0-2H9a1 1 0 0 0 0 2h2v1.05c-1.74.2-3.32.88-4.62 1.92l-.67-.68a1 1 0 0 0-1.42 1.42l.68.67A9 9 0 0 0 12 22Zm3.7-11.3a1 1 0 0 0-1.4-1.4l-3 3a1 1 0 0 0 1.4 1.4l3-3Z",
   o = "M8 20a1 1 0 0 0-1 1v.5c0 .28.22.5.5.5h9a.5.5 0 0 0 .5-.5V21a1 1 0 0 0-1-1h-1a2 2 0 0 1-2-2v-.48c0-.95.7-1.73 1.5-2.23a5.7 5.7 0 0 0 1.23-1.08l2.3-.7A7 7 0 0 0 23 6.81V6a2 2 0 0 0-2-2h-2.24A2.85 2.85 0 0 0 16 2H8c-1.3 0-2.43.84-2.76 2H3a2 2 0 0 0-2 2v.82a7 7 0 0 0 4.96 6.7l2.31.7c.37.42.79.78 1.24 1.07.8.5 1.49 1.28 1.49 2.23V18a2 2 0 0 1-2 2H8Zm9.29-8.35.17-.05A5 5 0 0 0 21 6.82V6h-2.27a21.75 21.75 0 0 1-1.44 5.65Zm-10.58 0-.17-.05A5 5 0 0 1 3 6.82V6h2.27c.25 1.94.7 3.95 1.44 5.65Z",
   u = "M4 12a8 8 0 0 1 14.93-4H15a1 1 0 1 0 0 2h6a1 1 0 0 0 1-1V3a1 1 0 1 0-2 0v3a9.98 9.98 0 0 0-18 6 10 10 0 0 0 16.29 7.78 1 1 0 0 0-1.26-1.56A8 8 0 0 1 4 12Z",
-  d = 400,
-  c = 120,
-  f = 12,
-  h = 34,
-  m = 20,
-  p = 96,
-  E = 32,
-  C = 120,
-  g = 260,
-  S = 88,
-  _ = 99,
-  T = 12,
-  I = 18
+  d = "M7.65 21.75a1 1 0 0 0 1.64.96l11.24-9.96a1 1 0 0 0-.66-1.75h-4.81a.5.5 0 0 1-.5-.6l1.79-8.15a1 1 0 0 0-1.64-.96L3.47 11.25A1 1 0 0 0 4.13 13h4.81c.32 0 .56.3.5.6l-1.79 8.15Z",
+  c = 400,
+  f = 120,
+  h = 12,
+  m = 34,
+  p = 20,
+  E = 96,
+  C = 32,
+  g = 120,
+  S = 260,
+  _ = 88,
+  T = 99,
+  I = 12,
+  A = 18
