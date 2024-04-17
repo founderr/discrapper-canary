@@ -259,33 +259,34 @@ class X extends u.default {
     }), w(this, "handleActivityLaunchFail", e => {
       let {
         error: t,
-        guildId: n
+        applicationId: n,
+        guildId: i
       } = e;
-      if (null == n) return;
-      let i = G.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC;
+      if (delete k[n], null == i) return;
+      let r = G.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC;
       switch (t.code) {
         case b.AbortCodes.INVALID_ACTIVITY_LAUNCH_NO_ACCESS:
-          i = G.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_ACCESS;
+          r = G.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_ACCESS;
           break;
         case b.AbortCodes.INVALID_ACTIVITY_LAUNCH_PREMIUM_TIER:
-          i = G.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_PREMIUM;
+          r = G.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_PREMIUM;
           break;
         case b.AbortCodes.INVALID_ACTIVITY_LAUNCH_CONCURRENT_ACTIVITIES:
-          i = G.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_CONCURRENT;
+          r = G.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_CONCURRENT;
           break;
         case b.AbortCodes.INVALID_PERMISSIONS:
-          i = G.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS;
+          r = G.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS;
           break;
         case b.AbortCodes.INVALID_ACTIVITY_LAUNCH_AFK_CHANNEL:
-          i = G.default.Messages.EMBEDDED_ACTIVITIES_INVALID_CHANNEL;
+          r = G.default.Messages.EMBEDDED_ACTIVITIES_INVALID_CHANNEL;
           break;
         case b.AbortCodes.INVALID_ACTIVITY_LAUNCH_AGE_GATED:
-          i = G.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_AGE_GATE;
+          r = G.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_AGE_GATE;
           break;
         case b.AbortCodes.INVALID_ACTIVITY_LAUNCH_DEV_PREVIEW_GUILD_SIZE:
-          i = G.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE
+          r = G.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE
       }
-      this.showLaunchErrorModal(i)
+      this.showLaunchErrorModal(r)
     }), w(this, "superHandleRPCDisconnect", e => {
       let {
         reason: t,
