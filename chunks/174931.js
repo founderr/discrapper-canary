@@ -76,7 +76,7 @@ function S(e) {
     analyticsLocation: l,
     onComplete: m,
     forcesTransitionToGuild: v
-  }), y = t.subscription_plans[0], F = 0 === y.price, D = (null == L ? void 0 : L.id) === t.id, P = (0, c.default)(), w = P && !b || S, G = () => {
+  }), y = t.subscription_plans[0], F = 0 === y.price, D = (null == L ? void 0 : L.id) === t.id, P = (0, c.default)(), w = P && !b || S, B = () => {
     P ? j() : (0, u.redirectToLogin)({
       [R]: "true"
     })
@@ -123,7 +123,7 @@ function S(e) {
               ...e,
               disabled: w,
               submitting: !1,
-              onClick: G,
+              onClick: B,
               children: x.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBE_LABEL
             })
           })

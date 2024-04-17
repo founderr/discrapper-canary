@@ -26,7 +26,7 @@ t.default = function(e) {
     onDescriptionSave: g
   } = e, v = r.useRef(!1), [R, A] = r.useState(null), [N, S] = r.useState(e.formFields), M = r.useRef(e.formFields), L = r.useMemo(() => N.filter(o.isAutomaticApprovalFormField), [N]), j = r.useMemo(() => N.filter(o.isManualApprovalFormField), [N]), b = j.length, O = r.useMemo(() => N.length === m.MAX_FORM_ELEMENTS, [N]), y = r.useMemo(() => N.some(l.isTermsFormField), [N]), F = r.useMemo(() => N.some(e => !(0, l.isTermsFormField)(e)), [N]), D = b > 1, P = (0, a.useIsMemberVerificationManualApproval)(t.id) || I, w = r.useCallback(() => {
     (0, s.showToast)((0, s.createToast)(h.default.Messages.ERROR_GENERIC_TITLE, s.ToastType.FAILURE))
-  }, []), G = r.useCallback(async e => {
+  }, []), B = r.useCallback(async e => {
     if (!v.current) {
       v.current = !0, I && (e = e.filter(e => e.field_type !== l.VerificationFormFieldTypes.TERMS));
       try {
@@ -37,28 +37,28 @@ t.default = function(e) {
         null != R && A(null), v.current = !1
       }
     }
-  }, [R, t.id, _, x, I]), B = r.useCallback(async e => {
+  }, [R, t.id, _, x, I]), G = r.useCallback(async e => {
     let t = e.field_type === l.VerificationFormFieldTypes.TERMS ? [e, ...N] : [...N, e];
-    await G(t)
-  }, [N, G]), U = r.useCallback(async (e, t) => {
+    await B(t)
+  }, [N, B]), U = r.useCallback(async (e, t) => {
     if (N[e] === t) return;
     let i = [...N];
-    i[e] = t, await G(i)
-  }, [N, G]), V = r.useCallback(async (e, t, i) => {
+    i[e] = t, await B(i)
+  }, [N, B]), V = r.useCallback(async (e, t, i) => {
     let n = N.indexOf(e),
       r = [...N];
     if (null != t && t !== n && (r.splice(n, 1), r.splice(t, 0, e), S(r)), i) try {
-      await G(r), null !== R && A(null)
+      await B(r), null !== R && A(null)
     } catch (e) {
       w()
     } else R !== t && A(t)
-  }, [R, N, G, w]), H = r.useCallback(async e => {
+  }, [R, N, B, w]), H = r.useCallback(async e => {
     try {
-      await G([...N.slice(0, e), ...N.slice(e + 1)])
+      await B([...N.slice(0, e), ...N.slice(e + 1)])
     } catch (e) {
       w()
     }
-  }, [N, G, w]), k = (0, n.jsxs)(n.Fragment, {
+  }, [N, B, w]), k = (0, n.jsxs)(n.Fragment, {
     children: [!E && (0, n.jsx)(f.default, {
       guild: t
     }), (0, n.jsx)(u.default, {
@@ -66,7 +66,7 @@ t.default = function(e) {
       guildId: t.id,
       onSave: g
     }), !y && !O && (0, n.jsx)(d.default, {
-      addFormField: B,
+      addFormField: G,
       guild: t
     }), L.map(e => (0, C.getFormFieldBuilderComponent)({
       dropHoveredIndex: R,
@@ -84,7 +84,7 @@ t.default = function(e) {
   });
   return P ? (0, n.jsxs)(n.Fragment, {
     children: [!I && k, !F && (0, n.jsx)(c.default, {
-      addFormField: B,
+      addFormField: G,
       showManualApprovalWarning: !I && !(b > 0),
       guild: t,
       showHeader: !I
@@ -101,7 +101,7 @@ t.default = function(e) {
       canRemove: !(I && j.length <= 1),
       actionsLocation: I ? "side" : "footer"
     })), F && !O && (0, n.jsx)(p.default, {
-      addFormField: B,
+      addFormField: G,
       guild: t
     })]
   }) : k

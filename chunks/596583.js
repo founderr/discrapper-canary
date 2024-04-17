@@ -7,12 +7,12 @@ var l = t("727075"),
   r = t("481060"),
   C = t("493683"),
   n = t("410030"),
-  o = t("204197"),
-  d = t("63063"),
+  d = t("204197"),
+  o = t("63063"),
   c = t("51144"),
   x = t("792451"),
-  f = t("814667"),
-  u = t("981631"),
+  u = t("814667"),
+  f = t("981631"),
   h = t("689938"),
   p = t("970422");
 let _ = (e, s) => {
@@ -25,7 +25,7 @@ let _ = (e, s) => {
     } = e, {
       avatarSrc: l,
       eventHandlers: a
-    } = (0, o.default)({
+    } = (0, d.default)({
       user: s,
       size: r.AvatarSizes.SIZE_56
     }), C = c.default.getName(s), n = s.username !== C;
@@ -73,7 +73,7 @@ s.default = e => {
   } = e, C = [...s].map(e => (0, i.jsx)(j, {
     user: e,
     onClose: t
-  }, e.id)), o = (0, n.useTheme)(), c = (0, a.isThemeLight)(o) ? f.default : x.default;
+  }, e.id)), d = (0, n.useTheme)(), c = (0, a.isThemeLight)(d) ? u.default : x.default;
   return (0, i.jsxs)("div", {
     className: p.confrimationContainer,
     children: [(0, i.jsx)(r.Clickable, {
@@ -98,7 +98,7 @@ s.default = e => {
       variant: "text-md/medium",
       children: h.default.Messages.REFERRAL_PROGRAM_FRIEND_SELECT_COMPLETE_SUBHEADER.format({
         days: 10,
-        helpdeskArticle: d.default.getArticleURL(u.HelpdeskArticles.REFERRAL_PROGRAM)
+        helpdeskArticle: o.default.getArticleURL(f.HelpdeskArticles.REFERRAL_PROGRAM)
       })
     })]
   })
