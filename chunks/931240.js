@@ -1,25 +1,25 @@
 "use strict";
 n.r(t), n.d(t, {
   adoptClanIdentity: function() {
-    return _
+    return c
   },
   convertGuildToClan: function() {
-    return u
-  },
-  fetchClanSettings: function() {
-    return T
-  },
-  getClanInfo: function() {
     return d
   },
-  saveClanSettings: function() {
+  fetchClanSettings: function() {
     return f
   },
+  getClanInfo: function() {
+    return _
+  },
+  saveClanSettings: function() {
+    return S
+  },
   updateClanSettings: function() {
-    return E
+    return I
   },
   updateClanSetup: function() {
-    return c
+    return E
   }
 }), n("47120");
 var i = n("392711"),
@@ -27,8 +27,9 @@ var i = n("392711"),
   s = n("570140"),
   a = n("479531"),
   o = n("924801"),
-  l = n("981631");
-async function u(e, t) {
+  l = n("981631"),
+  u = n("976757");
+async function d(e, t) {
   var n, u, d, _, c;
   let E = (0, i.uniqWith)(null !== (n = t.primetime) && void 0 !== n ? n : [], i.isEqual),
     I = (0, o.formatTimesForServer)(E);
@@ -69,12 +70,13 @@ async function u(e, t) {
     }), t
   }
 }
-async function d(e) {
-  return (await r.HTTP.get({
-    url: l.Endpoints.GUILD_CLAN_INFO(e)
-  })).body
+async function _(e) {
+  let t = await r.HTTP.get({
+    url: l.Endpoints.GUILD_CLAN_DISCOVERY_INFO(e)
+  });
+  return (0, u.buildClanFromServer)(t.body)
 }
-async function _(e, t) {
+async function c(e, t) {
   try {
     let n = await r.HTTP.put({
       url: l.Endpoints.USER_SET_CLAN_IDENTITY,
@@ -92,7 +94,7 @@ async function _(e, t) {
   }
 }
 
-function c(e, t) {
+function E(e, t) {
   s.default.dispatch({
     type: "CLAN_SETUP_UPDATE",
     guildId: e,
@@ -100,14 +102,14 @@ function c(e, t) {
   })
 }
 
-function E(e, t) {
+function I(e, t) {
   s.default.dispatch({
     type: "CLAN_SETTINGS_UPDATE",
     guildId: e,
     updates: t
   })
 }
-let I = e => {
+let T = e => {
   var t, n, i, r, s, a;
   return {
     tag: e.tag,
@@ -130,7 +132,7 @@ let I = e => {
     brandSecondaryColor: e.brand_color_secondary
   }
 };
-async function T(e) {
+async function f(e) {
   s.default.dispatch({
     type: "CLAN_SETTINGS_FETCH_START"
   });
@@ -140,10 +142,10 @@ async function T(e) {
   s.default.dispatch({
     type: "CLAN_SETTINGS_FETCH_SUCCESS",
     guildId: e,
-    settings: I(t.body)
+    settings: T(t.body)
   })
 }
-async function f(e, t) {
+async function S(e, t) {
   var n, i, s, a;
   return await r.HTTP.patch({
     url: l.Endpoints.CLAN_SETTINGS(e),
