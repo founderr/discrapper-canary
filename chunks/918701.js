@@ -253,7 +253,7 @@ let m = e => {
   },
   N = e => "".concat(_).concat(e.id, "/").concat(e.config.assets.hero),
   p = e => "".concat(_).concat(e.id, "/").concat(e.config.assets.questBarHero),
-  O = e => "".concat(_).concat(e.id, "/").concat(e.config.assets.gameTile),
+  O = (e, t) => "".concat(_).concat(e.id, "/").concat(t, "/").concat(e.config.assets.gameTile),
   R = (e, t) => "".concat(_).concat(e.id, "/").concat(t, "/").concat(e.config.assets.logotype),
   C = e => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);
 

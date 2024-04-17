@@ -20,7 +20,7 @@ t.default = function(e) {
     gameTileSize: n = 24,
     quest: s,
     theme: a = c.ThemeTypes.DARK
-  } = e;
+  } = e, i = (0, o.isThemeDark)(a) ? c.ThemeTypes.DARK : c.ThemeTypes.LIGHT;
   return (0, l.jsxs)("div", {
     className: r()(f.partnerBranding, t),
     children: [(0, l.jsx)(d.QuestsAsset, {
@@ -29,7 +29,7 @@ t.default = function(e) {
         ref: e,
         className: f.partnerBrandingGameTile,
         alt: "",
-        src: (0, u.getGameTileAssetUrl)(s),
+        src: (0, u.getGameTileAssetUrl)(s, i),
         style: {
           borderRadius: function(e) {
             switch (e) {
@@ -49,7 +49,7 @@ t.default = function(e) {
         ref: e,
         className: f.partnerBrandingLogotype,
         alt: s.config.messages.gameTitle,
-        src: (0, u.getGameLogotypeAssetUrl)(s, (0, o.isThemeDark)(a) ? c.ThemeTypes.DARK : c.ThemeTypes.LIGHT)
+        src: (0, u.getGameLogotypeAssetUrl)(s, i)
       })
     })]
   })
