@@ -17123,7 +17123,6 @@ e.exports = Object.freeze({
   STOREFRONT_SUBSCRIPTION_BENEFITS: "Subscription Benefits",
   STOREFRONT_PURCHASE_FOR: "Buy for {price}",
   STOREFRONT_ONE_TIME_PURCHASE: "One-Time Purchase",
-  STOREFRONT_PREMIUM_ITEMS: "Premium Items",
   STOREFRONT_DURABLE_AVAILABILITY: "1 / 1 Available",
   STOREFRONT_MUST_LOGIN: "Login to browse store",
   QUIET_MODE_DISABLED: "Focus Mode Disabled",
