@@ -28,14 +28,14 @@ var s = n("735250"),
   y = n("285952"),
   M = n("669079"),
   A = n("63063"),
-  g = n("74538"),
-  I = n("987209"),
+  I = n("74538"),
+  g = n("987209"),
   T = n("598"),
   v = n("409813"),
   N = n("51499"),
   O = n("456251"),
-  b = n("614277"),
-  R = n("809144"),
+  R = n("614277"),
+  b = n("809144"),
   U = n("698708"),
   k = n("981631"),
   B = n("474936"),
@@ -68,7 +68,7 @@ function G(e) {
     isGift: er,
     giftRecipient: el,
     giftMessage: ea
-  } = (0, I.useGiftContext)(), eo = null != q ? X[q] : null, {
+  } = (0, g.useGiftContext)(), eo = null != q ? X[q] : null, {
     newPlans: eC
   } = u.default.useExperiment({
     location: "d17fd6_3"
@@ -88,7 +88,7 @@ function G(e) {
     }, {
       autoTrackExposure: !1
     }),
-    eS = i.useMemo(() => (0, g.getPremiumPlanOptions)({
+    eS = i.useMemo(() => (0, I.getPremiumPlanOptions)({
       skuId: Q,
       isPremium: es,
       multiMonthPlans: ed ? eC : [],
@@ -115,8 +115,8 @@ function G(e) {
       currency: en.currency
     }),
     {
-      annualInvoicePreview: eg,
-      annualInvoicePreviewError: eI,
+      annualInvoicePreview: eI,
+      annualInvoicePreviewError: eg,
       isEligibleForAnnualDiscount: eT
     } = (0, h.useGetAnnualDiscountInvoicePreview)({
       priceOptions: en,
@@ -126,24 +126,24 @@ function G(e) {
       planGroup: V,
       activeSubscription: z
     });
-  null != eg && ei(eg), i.useEffect(() => {
+  null != eI && ei(eI), i.useEffect(() => {
     em && ey((null == eM ? void 0 : eM.subscriptionPeriodEnd) == null)
   }, [eM, em]), (0, C.default)("Payment Modal Plan Select Step", eP, 5, {
     proratedInvoicePreview: eM,
-    annualInvoicePreview: eg,
+    annualInvoicePreview: eI,
     proratedInvoiceError: eA,
-    annualInvoicePreviewError: eI,
+    annualInvoicePreviewError: eg,
     isEligibleForOffer: em
   }, {
     tags: {
       app_context: "billing"
     }
   });
-  let ev = eT && null == eI,
-    eN = null !== (G = null !== (r = null == eA ? void 0 : eA.message) && void 0 !== r ? r : null == eI ? void 0 : eI.message) && void 0 !== G ? G : w.default.Messages.ERROR_GENERIC_TITLE,
+  let ev = eT && null == eg,
+    eN = null !== (G = null !== (r = null == eA ? void 0 : eA.message) && void 0 !== r ? r : null == eg ? void 0 : eg.message) && void 0 !== G ? G : w.default.Messages.ERROR_GENERIC_TITLE,
     eO = em && null == eA || ev,
-    eb = em && null != eA || eT && null != eI,
-    eR = eO && null == z && !!em && (null == eM ? void 0 : eM.subscriptionPeriodEnd) == null || ev && (null == eg ? void 0 : eg.subscriptionPeriodEnd) == null,
+    eR = em && null != eA || eT && null != eg,
+    eb = eO && null == z && !!em && (null == eM ? void 0 : eM.subscriptionPeriodEnd) == null || ev && (null == eI ? void 0 : eI.subscriptionPeriodEnd) == null,
     {
       enabled: eU
     } = p.ReferralProgramRecipient.useExperiment({
@@ -154,15 +154,15 @@ function G(e) {
     ek = !er && (null == eh ? void 0 : eh.skuId) === B.PremiumSubscriptionSKUs.TIER_2 && (null == ec ? void 0 : ec.referrer_id) != null && eU,
     eB = (0, E.useIsEligibleForBogoPromotion)() && !er && (null == eh ? void 0 : eh.skuId) === B.PremiumSubscriptionSKUs.TIER_2,
     ew = null;
-  return (ek ? ew = (0, s.jsx)(S.default, {}) : eB && (ew = (0, s.jsx)(m.default, {})), eR) ? (0, s.jsx)(O.default, {}) : (l()(null != ee, "Step should be set"), l()(eS.length > 0, "Premium plan options should be set"), (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)(R.GiftNote, {
+  return (ek ? ew = (0, s.jsx)(S.default, {}) : eB && (ew = (0, s.jsx)(m.default, {})), eb) ? (0, s.jsx)(O.default, {}) : (l()(null != ee, "Step should be set"), l()(eS.length > 0, "Premium plan options should be set"), (0, s.jsxs)(s.Fragment, {
+    children: [(0, s.jsx)(b.GiftNote, {
       giftMessage: ea
     }), !(er && (0, M.shouldShowCustomGiftExperience)(el)) && (0, s.jsx)(N.default, {
       isEligibleForTrial: ep
-    }), (0, s.jsxs)(b.PaymentPortalBody, {
+    }), (0, s.jsxs)(R.PaymentPortalBody, {
       children: [eO && (0, s.jsx)("hr", {
         className: F.planSelectSeparatorUpper
-      }), ew, (0, s.jsx)(U.default, {}), eb ? (0, s.jsx)(o.FormErrorBlock, {
+      }), ew, (0, s.jsx)(U.default, {}), eR ? (0, s.jsx)(o.FormErrorBlock, {
         children: eN
       }) : (0, s.jsx)(L.PremiumSwitchPlanSelectBody, {
         planOptions: eS,
@@ -182,7 +182,7 @@ function G(e) {
           })
         })]
       })]
-    }), (0, s.jsx)(b.PaymentPortalFooter, {
+    }), (0, s.jsx)(R.PaymentPortalFooter, {
       children: (0, s.jsx)(o.ModalFooter, {
         justify: y.default.Justify.BETWEEN,
         align: y.default.Align.CENTER,

@@ -9,8 +9,8 @@ s("470079");
 var a = s("100849"),
   i = s("487922"),
   o = s("620648"),
-  n = s("944546"),
-  r = s("470900"),
+  r = s("944546"),
+  n = s("470900"),
   u = s("228168");
 
 function d(e) {
@@ -27,12 +27,12 @@ function d(e) {
         user: s
       });
     case u.UserProfileSections.MUTUAL_GUILDS:
-      return (0, l.jsx)(r.default, {
+      return (0, l.jsx)(n.default, {
         user: s,
         onClose: f
       });
     case u.UserProfileSections.MUTUAL_FRIENDS:
-      return (0, l.jsx)(n.default, {
+      return (0, l.jsx)(r.default, {
         user: s,
         onClose: f
       });

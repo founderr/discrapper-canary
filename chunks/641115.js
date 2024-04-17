@@ -159,12 +159,12 @@ function U(e) {
     available: V
   } = (0, _.usePerksDemo)(o.EntitlementFeatureNames.STREAM_HIGH_QUALITY), H = !y && !B && !V, {
     enabled: W,
-    variant: z
+    variant: K
   } = C.default.useExperiment({
     location: "StreamSettingsUpsellBanner"
   }, {
     autoTrackExposure: H
-  }), K = W && C.GradientVariants.includes(z), [Y, Q] = s.useState(!1), Z = F ? R.GoLiveDeviceResolutionButtons : R.ApplicationStreamResolutionButtons, J = {
+  }), z = W && C.GradientVariants.includes(K), [Y, Q] = s.useState(!1), Z = F ? R.GoLiveDeviceResolutionButtons : R.ApplicationStreamResolutionButtons, J = {
     ...w,
     section: v.AnalyticsSections.STREAM_SETTINGS
   }, q = (0, a.jsx)(N.default, {
@@ -174,7 +174,7 @@ function U(e) {
       needsPremium: !(0, A.default)(l, e.value, i, k, U),
       needsDemo: V && e.value !== R.ApplicationStreamResolutions.RESOLUTION_720,
       analyticsLocation: J,
-      useGradient: K,
+      useGradient: z,
       onClick: () => r(e.value),
       onClose: t,
       setIsHovering: Q
@@ -186,7 +186,7 @@ function U(e) {
       needsPremium: !(0, A.default)(l, n, e.value, k, U),
       needsDemo: V && e.value === R.ApplicationStreamFPS.FPS_60,
       analyticsLocation: J,
-      useGradient: K,
+      useGradient: z,
       onClick: () => x(e.value),
       onClose: t,
       setIsHovering: Q
@@ -234,7 +234,7 @@ function U(e) {
     }), H ? (0, a.jsx)(T.default, {
       onClose: t,
       openStreamUpsellModal: P,
-      glow: Y && K
+      glow: Y && z
     }) : null, V ? (0, a.jsx)(p.default, {
       glow: Y
     }) : null]

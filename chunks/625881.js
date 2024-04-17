@@ -26,7 +26,7 @@ t.default = function(e) {
     onClose: i,
     onConfirm: T,
     userDiscountOffer: h
-  } = e, [A, R] = n.useState(!1), [y, M] = n.useState(!1), L = async e => {
+  } = e, [A, R] = n.useState(!1), [y, M] = n.useState(!1), g = async e => {
     try {
       M(!0), R(!1), await r.HTTP.post({
         url: S.Endpoints.USER_OFFER_REDEEM,
@@ -38,7 +38,7 @@ t.default = function(e) {
       R(!0)
     }
     M(!1)
-  }, g = (0, d.default)(), x = (0, o.isThemeDark)(g) ? P : C, D = (0, E.useChurnDiscountedPrice)(t, _.SubscriptionPlans.PREMIUM_MONTH_TIER_2, h), U = (0, p.getPrice)(_.SubscriptionPlans.PREMIUM_MONTH_TIER_2), b = (0, f.formatPrice)(U.amount, U.currency);
+  }, L = (0, d.default)(), x = (0, o.isThemeDark)(L) ? P : C, D = (0, E.useChurnDiscountedPrice)(t, _.SubscriptionPlans.PREMIUM_MONTH_TIER_2, h), U = (0, p.getPrice)(_.SubscriptionPlans.PREMIUM_MONTH_TIER_2), b = (0, f.formatPrice)(U.amount, U.currency);
   return null == h ? null : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(m.default, {
       premiumType: s,
@@ -98,7 +98,7 @@ t.default = function(e) {
           }), (0, a.jsx)(u.Button, {
             size: u.ButtonSizes.SMALL,
             submitting: y,
-            onClick: () => L(h.id),
+            onClick: () => g(h.id),
             children: I.default.Messages.CHURN_DISCOUNT_CONFIRM_DISCOUNT
           })]
         })]

@@ -34,8 +34,8 @@ var s = n("735250"),
   y = n("174827"),
   M = n("846464"),
   A = n("184160"),
-  g = n("48175"),
-  I = n("981631"),
+  I = n("48175"),
+  g = n("981631"),
   T = n("474936"),
   v = n("689938");
 let N = [x.Step.PLAN_SELECT, x.Step.ADD_PAYMENT_STEPS, x.Step.REVIEW, x.Step.CONFIRM];
@@ -57,12 +57,12 @@ function O(e) {
     onSubscriptionConfirmation: y,
     renderPurchaseConfirmation: M,
     postSuccessGuild: A,
-    followupSKUInfo: g,
+    followupSKUInfo: I,
     renderHeader: v,
     applicationId: N,
     guildId: O,
-    referralTrialOfferId: b,
-    skuId: R,
+    referralTrialOfferId: R,
+    skuId: b,
     returnRef: U,
     skipConfirm: k = !1
   } = e, {
@@ -83,7 +83,7 @@ function O(e) {
     analyticsLocation: t,
     analyticsObject: n,
     analyticsSourceLocation: r,
-    analyticsSubscriptionType: I.SubscriptionTypes.PREMIUM,
+    analyticsSubscriptionType: g.SubscriptionTypes.PREMIUM,
     onComplete: o,
     transitionState: d,
     initialPlanId: m,
@@ -99,12 +99,12 @@ function O(e) {
     onSubscriptionConfirmation: y,
     renderPurchaseConfirmation: M,
     postSuccessGuild: A,
-    followupSKUInfo: g,
+    followupSKUInfo: I,
     renderHeader: v,
     applicationId: N,
     guildId: O,
-    referralTrialOfferId: b,
-    skuId: R,
+    referralTrialOfferId: R,
+    skuId: b,
     shakeWhilePurchasing: !0,
     isLargeModal: D,
     returnRef: U,
@@ -112,7 +112,7 @@ function O(e) {
   })
 }
 
-function b(e) {
+function R(e) {
   let {
     startedPaymentFlowWithPaymentSourcesRef: t,
     selectedSkuId: n
@@ -127,7 +127,7 @@ function b(e) {
   })
 }
 
-function R(e) {
+function b(e) {
   let {
     initialPlanId: t,
     handleStepChange: n,
@@ -137,7 +137,7 @@ function R(e) {
     selectedSkuId: l
   } = (0, f.usePaymentContext)(), {
     isGift: a
-  } = (0, p.useGiftContext)(), o = b((0, g.default)({
+  } = (0, p.useGiftContext)(), o = R((0, I.default)({
     isGift: a,
     skuId: l,
     referralTrialOfferId: i
@@ -185,18 +185,18 @@ let U = [{
   }),
   options: {
     renderHeader: !0,
-    useBreadcrumbLabel: e => b(e) ? null : v.default.Messages.BILLING_STEP_SELECT_PLAN
+    useBreadcrumbLabel: e => R(e) ? null : v.default.Messages.BILLING_STEP_SELECT_PLAN
   }
 }, {
   key: x.Step.ADD_PAYMENT_STEPS,
   renderStep: e => (0, s.jsx)(s.Fragment, {
-    children: (0, s.jsx)(R, {
+    children: (0, s.jsx)(b, {
       ...e
     })
   }),
   options: {
     renderHeader: !0,
-    useBreadcrumbLabel: e => b(e) ? null : v.default.Messages.BILLING_STEP_PAYMENT
+    useBreadcrumbLabel: e => R(e) ? null : v.default.Messages.BILLING_STEP_PAYMENT
   }
 }, {
   key: x.Step.AWAITING_BROWSER_CHECKOUT,
@@ -216,7 +216,7 @@ let U = [{
   }),
   options: {
     renderHeader: !0,
-    useBreadcrumbLabel: e => b(e) ? v.default.Messages.BILLING_STEP_PLAN_AND_PAYMENT : v.default.Messages.BILLING_STEP_REVIEW
+    useBreadcrumbLabel: e => R(e) ? v.default.Messages.BILLING_STEP_PLAN_AND_PAYMENT : v.default.Messages.BILLING_STEP_REVIEW
   }
 }, {
   key: x.Step.CONFIRM,

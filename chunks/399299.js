@@ -46,8 +46,8 @@ var a = l("735250"),
   V = l("641115"),
   H = l("143135"),
   W = l("70722"),
-  z = l("981631"),
-  K = l("526761"),
+  K = l("981631"),
+  z = l("526761"),
   Y = l("689938"),
   Q = l("534079"),
   Z = l("223318");
@@ -145,7 +145,7 @@ function $(e) {
     var e;
     return null !== (e = N.default.getMemberCount(t)) && void 0 !== e ? e : 0
   }), n = _.NotifyFriendsOnGoLive.useSetting(), o = s.useCallback((e, t) => {
-    _.NotifyFriendsOnGoLive.updateSetting(t), O.default.track(z.AnalyticEvents.NOTIFY_STREAM_SETTING_UPDATE, {
+    _.NotifyFriendsOnGoLive.updateSetting(t), O.default.track(K.AnalyticEvents.NOTIFY_STREAM_SETTING_UPDATE, {
       value: t
     })
   }, []);
@@ -251,15 +251,15 @@ function et(e) {
       text: Y.default.Messages.GO_LIVE_VIDEO_DRIVERS_OUTDATED
     }) : null, Z ? (0, a.jsx)(X, {
       text: Y.default.Messages.PROBLEMATIC_GPU_DRIVER_DETECTED.format({
-        helpCenterLink: P.default.getArticleURL(z.HelpdeskArticles.NVIDIA_DRIVER_ISSUES)
+        helpCenterLink: P.default.getArticleURL(K.HelpdeskArticles.NVIDIA_DRIVER_ISSUES)
       })
     }) : null, eo && (0, a.jsx)(C.default, {
       look: C.InfoBoxLooks.WARNING,
       className: Q.hardwareWarning,
       children: Y.default.Messages.GO_LIVE_MODAL_HARDWARE_WARNING_INFOBOX.format({
         onClick: () => {
-          T(), o.default.open(z.UserSettingsSections.VOICE, null, {
-            scrollPosition: K.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION
+          T(), o.default.open(K.UserSettingsSections.VOICE, null, {
+            scrollPosition: z.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION
           })
         }
       })

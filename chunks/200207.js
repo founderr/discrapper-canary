@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("557533"),
-  s = n.n(r),
-  l = n("789978"),
+  l = n.n(r),
+  s = n("789978"),
   a = n("790472"),
   o = n("777207"),
   d = n("431674"),
@@ -24,9 +24,9 @@ function u(e) {
     PurchaseButton: h,
     availabilityLabel: m
   } = e;
-  return (0, i.jsx)(l.FocusRing, {
+  return (0, i.jsx)(s.FocusRing, {
     children: (0, i.jsxs)("div", {
-      className: s()(d.wrapper, c.hoverCard),
+      className: l()(d.wrapper, c.hoverCard),
       tabIndex: 0,
       onClick: () => {
         null != u ? u() : null != f && f()

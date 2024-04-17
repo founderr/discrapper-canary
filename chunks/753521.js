@@ -34,8 +34,8 @@ function _(e) {
     saveSettings: A
   } = (0, o.useSaveSettings)(s), {
     guildPlans: R,
-    overrideGuild: p,
-    getDebug: E
+    overrideGuild: E,
+    getDebug: p
   } = (0, o.useGuildMigrationSteps)(_, j), b = l.useRef(null);
   return l.useEffect(() => {
     c.default.track(T.AnalyticEvents.OPEN_MODAL, {
@@ -54,8 +54,8 @@ function _(e) {
       ref: b
     }) : g === x.Tab.Customize ? (0, a.jsx)(v, {
       guildPlans: R,
-      overrideGuild: p,
-      getDebug: E
+      overrideGuild: E,
+      getDebug: p
     }) : (0, a.jsx)(N.default, {
       count: Object.values(R).filter(e => {
         var s;

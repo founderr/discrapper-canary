@@ -9,17 +9,17 @@ s("470079");
 var a = s("481060"),
   i = s("860719"),
   o = s("689938"),
-  n = s("99441");
+  r = s("99441");
 
-function r(e) {
+function n(e) {
   let {
     content: t,
     heading: s
   } = e;
   return (0, l.jsxs)("div", {
-    className: n.row,
+    className: r.row,
     children: [null != s ? (0, l.jsx)(a.Heading, {
-      className: n.heading,
+      className: r.heading,
       variant: "text-sm/normal",
       children: s
     }) : null, (0, l.jsx)(a.Text, {
@@ -43,19 +43,19 @@ function u(e) {
   });
   if (null == t) return null;
   let f = [];
-  return u && f.push((0, l.jsx)(r, {
+  return u && f.push((0, l.jsx)(n, {
     heading: o.default.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_HEADER,
     content: o.default.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_BODY
-  })), d && f.push((0, l.jsx)(r, {
+  })), d && f.push((0, l.jsx)(n, {
     heading: o.default.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_HEADER,
     content: o.default.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_BODY
-  })), c && f.push((0, l.jsx)(r, {
+  })), c && f.push((0, l.jsx)(n, {
     heading: o.default.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_HEADER,
     content: o.default.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_BODY
   })), f.length > 0 && f.push((0, l.jsx)("div", {
-    className: n.divider,
+    className: r.divider,
     children: (0, l.jsx)(a.FormDivider, {})
-  })), f.push((0, l.jsx)(r, {
+  })), f.push((0, l.jsx)(n, {
     content: o.default.Messages.BOTS_DATA_ACCESS_BASELINE.format({
       helpCenterUrl: "https://support.discord.com/hc/articles/7933951485975"
     })

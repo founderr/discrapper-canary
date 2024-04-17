@@ -1,10 +1,10 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   ReferralProgramRecipient: function() {
-    return a
+    return i
   }
 });
-let a = (0, s("818083").createExperiment)({
+let i = (0, n("818083").createExperiment)({
   kind: "user",
   id: "2024-03_referral_program_recipient",
   label: "Referral Program Recipient Experience",

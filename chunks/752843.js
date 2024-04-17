@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("628028"),
-  s = n("220427"),
-  l = n("777207"),
+  l = n("220427"),
+  s = n("777207"),
   a = n("330711"),
   o = n("381585");
 let d = {
@@ -24,7 +24,7 @@ function c(e) {
     type: t
   } = e;
   return (0, i.jsx)(u, {
-    icon: "user" === t ? (0, i.jsx)(s.UserIcon, {
+    icon: "user" === t ? (0, i.jsx)(l.UserIcon, {
       ...d,
       color: "var(--text-positive)"
     }) : (0, i.jsx)(r.ServerIcon, {
@@ -42,7 +42,7 @@ function u(e) {
   } = e;
   return (0, i.jsxs)("div", {
     className: o.container,
-    children: [t, (0, i.jsx)(l.Text, {
+    children: [t, (0, i.jsx)(s.Text, {
       color: "interactive-normal",
       variant: "text-sm/medium",
       children: n

@@ -16,10 +16,10 @@ n.r(t), n.d(t, {
     return v
   },
   goToSKUStoreListing: function() {
-    return g
+    return x
   },
   joinPublishedStoreListingSkuGuild: function() {
-    return x
+    return g
   },
   matureAgree: function() {
     return p
@@ -30,9 +30,9 @@ n.r(t), n.d(t, {
 });
 var i = n("544891"),
   r = n("570140"),
-  s = n("115130");
+  l = n("115130");
 n("812206");
-var l = n("703656"),
+var s = n("703656"),
   a = n("55563");
 n("551428");
 var o = n("695103"),
@@ -54,7 +54,7 @@ function u(e) {
 
 function f(e) {
   let t = a.default.get(e),
-    n = null != t && (o.default.inTestModeForApplication(t.applicationId) || s.default.inDevModeForApplication(t.applicationId));
+    n = null != t && (o.default.inTestModeForApplication(t.applicationId) || l.default.inDevModeForApplication(t.applicationId));
   return (0, d.httpGetWithCountryCodeQuery)(n ? c.Endpoints.STORE_LISTINGS_SKU(e) : c.Endpoints.STORE_PUBLISHED_LISTINGS_SKU(e)).then(e => {
     n ? r.default.dispatch({
       type: "STORE_LISTINGS_FETCH_SUCCESS",
@@ -91,22 +91,22 @@ function p() {
 }
 
 function S() {
-  (0, l.transitionTo)(c.Routes.APPLICATION_STORE)
+  (0, s.transitionTo)(c.Routes.APPLICATION_STORE)
 }
 
-function x(e) {
+function g(e) {
   return i.HTTP.post({
     url: c.Endpoints.STORE_PUBLISHED_LISTINGS_SKU_JOIN_GUILD(e),
     oldFormErrors: !0
   })
 }
 
-function g(e, t) {
+function x(e, t) {
   let {
     pathname: n,
     ...i
   } = (0, d.getStoreListingLocation)(e, t);
-  (0, l.transitionTo)(n, i)
+  (0, s.transitionTo)(n, i)
 }
 
 function v(e, t) {
@@ -114,5 +114,5 @@ function v(e, t) {
     pathname: n,
     ...i
   } = (0, d.getApplicationStoreListingLocation)(e, t);
-  (0, l.transitionTo)(n, i)
+  (0, s.transitionTo)(n, i)
 }

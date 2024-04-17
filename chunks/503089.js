@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return j
   },
   SHAKE_INTENSITY_INCREMENT: function() {
-    return A
+    return R
   },
   SHAKE_INTENSITY_MAX: function() {
     return E
@@ -45,9 +45,9 @@ let C = Object.freeze({
   }),
   j = 1.4,
   E = 15,
-  A = 2;
+  R = 2;
 
-function I(e) {
+function A(e) {
   var t, n;
   let {
     section: s,
@@ -70,7 +70,7 @@ function I(e) {
     })
   })
 }
-class P extends s.PureComponent {
+class I extends s.PureComponent {
   componentDidMount() {
     this.getPredicateSections().forEach(e => {
       let {
@@ -110,7 +110,7 @@ class P extends s.PureComponent {
     return null != n && n.stores.some(e => e.showNotice() && !(null != e.canCloseEarly && e.canCloseEarly())) ? (f.ComponentDispatch.dispatch(T.ComponentActions.SHAKE_APP, {
       duration: 300,
       intensity: this._intensity
-    }), this._intensity = Math.min(this._intensity + A, E), f.ComponentDispatch.dispatch(T.ComponentActions.EMPHASIZE_NOTICE), !1) : (this._intensity = j, !0)
+    }), this._intensity = Math.min(this._intensity + R, E), f.ComponentDispatch.dispatch(T.ComponentActions.EMPHASIZE_NOTICE), !1) : (this._intensity = j, !0)
   }
   renderSidebar(e) {
     let {
@@ -182,7 +182,7 @@ class P extends s.PureComponent {
         scrollerRef: this.scrollerRef,
         section: n,
         sidebar: this.renderSidebar(o),
-        content: (0, i.jsx)(I, {
+        content: (0, i.jsx)(A, {
           section: a,
           setPreventNavigation: this.setPreventNavigation,
           scrollerRef: this.scrollerRef
@@ -285,4 +285,4 @@ class P extends s.PureComponent {
     })
   }
 }
-t.default = P
+t.default = I

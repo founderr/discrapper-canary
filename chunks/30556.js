@@ -9,8 +9,8 @@ s("470079");
 var a = s("493683"),
   i = s("974029"),
   o = s("785717"),
-  n = s("993409"),
-  r = s("689938");
+  r = s("993409"),
+  n = s("689938");
 
 function u(e) {
   let {
@@ -20,9 +20,9 @@ function u(e) {
   } = e, {
     trackUserProfileAction: d
   } = (0, o.useUserProfileAnalyticsContext)();
-  return (0, l.jsx)(n.default, {
+  return (0, l.jsx)(r.default, {
     icon: i.default,
-    text: r.default.Messages.USER_PROFILE_MESSAGE,
+    text: n.default.Messages.USER_PROFILE_MESSAGE,
     onClick: () => {
       d({
         action: "SEND_MESSAGE"

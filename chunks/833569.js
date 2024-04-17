@@ -30,8 +30,8 @@ var a, n, i = s("735250"),
   R = s("74538"),
   y = s("937615"),
   M = s("374649"),
-  L = s("140465"),
-  g = s("314684"),
+  g = s("140465"),
+  L = s("314684"),
   x = s("653798"),
   D = s("625881"),
   U = s("440984"),
@@ -146,7 +146,7 @@ function V(e) {
         planPremiumType: R.default.getDisplayPremiumType(s.planId)
       })
     }),
-    L = (0, i.jsx)(E.Button, {
+    g = (0, i.jsx)(E.Button, {
       look: E.Button.Looks.LINK,
       color: (0, f.isThemeLight)(P) ? E.Button.Colors.PRIMARY : E.Button.Colors.WHITE,
       onClick: r,
@@ -179,7 +179,7 @@ function V(e) {
       })]
     }), (0, i.jsxs)(E.ModalFooter, {
       justify: C.default.Justify.START,
-      children: [M, L]
+      children: [M, g]
     })]
   })
 }
@@ -311,7 +311,7 @@ function X(e) {
     } = e,
     m = l.useRef(new u.Environment),
     [N, P] = l.useState(null),
-    C = (0, g.useFreeBoostUserTenureReward)(),
+    C = (0, L.useFreeBoostUserTenureReward)(),
     A = (null == C ? void 0 : C.showCard) === !0,
     y = null === (t = (0, R.getPremiumPlanItem)(a)) || void 0 === t ? void 0 : t.planId,
     M = null != y ? R.default.getPremiumType(y) : null;
@@ -348,11 +348,11 @@ function X(e) {
         ...Z(a)
       })
     },
-    ee = (0, L.useShouldFetchChurnOffer)(),
+    ee = (0, g.useShouldFetchChurnOffer)(),
     {
       churnUserDiscountOffer: et,
       isFetchingChurnDiscountOffer: es
-    } = (0, L.useFetchChurnUserDiscountOffer)(!ee || 1 !== j);
+    } = (0, g.useFetchChurnUserDiscountOffer)(!ee || 1 !== j);
   switch (j) {
     case 6:
       s = (0, i.jsx)(b.PremiumSubscriptionPauseModalSelect, {

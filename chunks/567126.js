@@ -122,7 +122,7 @@ function U(e) {
       }
       return null
     }, [a, e, t, l])
-  }((0, o.useStateFromStores)([_.default], () => _.default.quests), H, h), z = s.useMemo(() => null == h ? null : [...h].sort((e, t) => (null == W ? void 0 : W.source.id) === e.id ? -1 : (null == W ? void 0 : W.source.id) === t.id ? 1 : b(t) - b(e)), [W, h]);
+  }((0, o.useStateFromStores)([_.default], () => _.default.quests), H, h), K = s.useMemo(() => null == h ? null : [...h].sort((e, t) => (null == W ? void 0 : W.source.id) === e.id ? -1 : (null == W ? void 0 : W.source.id) === t.id ? 1 : b(t) - b(e)), [W, h]);
   s.useEffect(() => {
     let e = V.current;
     return P().then(e => {
@@ -143,7 +143,7 @@ function U(e) {
       e.stop()
     }
   }, []);
-  let K = s.useCallback(e => {
+  let z = s.useCallback(e => {
       if (null !== e) {
         var t;
         B.current = e, w((t = !e.isScrolledToTop(), t))
@@ -152,7 +152,7 @@ function U(e) {
     Y = function(e) {
       switch (e) {
         case u.DesktopSources.WINDOW:
-          return z;
+          return K;
         case u.DesktopSources.SCREEN:
           return d;
         case u.DesktopSources.CAMERA:
@@ -217,7 +217,7 @@ function U(e) {
     }), F === u.DesktopSources.CAMERA ? (0, a.jsx)("div", {
       className: D.sourceContainer,
       children: (0, a.jsx)(f.AdvancedScroller, {
-        ref: K,
+        ref: z,
         className: D.sourceScroller,
         onScroll: Z,
         children: (0, a.jsx)(I.default, {
@@ -228,7 +228,7 @@ function U(e) {
         })
       })
     }) : (0, a.jsxs)(f.AdvancedScroller, {
-      ref: K,
+      ref: z,
       className: D.sourceScroller,
       onScroll: Z,
       children: [F === u.DesktopSources.WINDOW && null != W && (0, a.jsx)(g.default, {

@@ -225,11 +225,11 @@ function eo(e) {
             isOnHubVerificationRoute: eI
           }), (0, l.jsx)(F.default, {}), ex, g.map(e => (0, l.jsx)(J.default, {
             guildId: e
-          }, e)), (0, l.jsx)(Q.default, {}), !n && eA ? (0, l.jsx)(Y.default, {
+          }, e)), !n && eA ? (0, l.jsx)(Y.default, {
             ref: eg.guildDiscoveryRef,
             selected: eS,
             tooltip: ee.default.Messages.GUILD_DISCOVERY_TOOLTIP
-          }) : null, (0, l.jsx)(Z.default, {}), (0, l.jsx)("div", {
+          }) : null, (0, l.jsx)(Q.default, {}), (0, l.jsx)(Z.default, {}), (0, l.jsx)("div", {
             "aria-label": ee.default.Messages.SERVERS,
             children: eL.map(function e(t) {
               switch (t.type) {

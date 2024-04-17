@@ -33,46 +33,46 @@ function E(e) {
     {
       activeSubscription: M,
       paymentSources: A,
-      paymentSourceId: g,
-      selectedPlan: I,
+      paymentSourceId: I,
+      selectedPlan: g,
       selectedSkuId: T,
       step: v,
       updatedSubscription: N,
       startingPremiumSubscriptionPlanIdRef: O
     } = (0, x.usePaymentContext)(),
     {
-      isGift: b,
-      giftRecipient: R,
+      isGift: R,
+      giftRecipient: b,
       giftCode: U,
       hasSentMessage: k,
       isSendingMessage: B,
       sendGiftMessage: w
     } = (0, f.useGiftContext)();
-  l()(null != I, "Expected plan to selected"), l()(null != T, "Expected selectedSkuId"), l()(null != v, "Step should be set");
+  l()(null != g, "Expected plan to selected"), l()(null != T, "Expected selectedSkuId"), l()(null != v, "Step should be set");
   let F = i.useCallback(() => {
     S(), null == h || h()
   }, [S, h]);
   return i.useEffect(() => {
-    if (!(!b || null == R || null == U || k || B || (0, c.shouldShowCustomGiftExperience)(R))) C.AutomatedGiftCodeMessageExperiment.getCurrentConfig({
+    if (!(!R || null == b || null == U || k || B || (0, c.shouldShowCustomGiftExperience)(b))) C.AutomatedGiftCodeMessageExperiment.getCurrentConfig({
       location: "36b986_1"
     }).enabled && w({
       onSubscriptionConfirmation: h
     })
-  }, [w, b, R, U, k, B, h]), E = null != j ? j(I, F, N) : b ? (0, s.jsx)(d.PremiumSubscriptionGiftPurchaseConfirmation, {
-    planId: I.id,
+  }, [w, R, b, U, k, B, h]), E = null != j ? j(g, F, N) : R ? (0, s.jsx)(d.PremiumSubscriptionGiftPurchaseConfirmation, {
+    planId: g.id,
     onClose: F
-  }) : O.current === I.id ? (0, s.jsx)(d.default, {
-    planId: I.id,
+  }) : O.current === g.id ? (0, s.jsx)(d.default, {
+    planId: g.id,
     postSuccessGuild: P,
     onClose: F,
-    paymentSourceType: null === (t = A[null != g ? g : ""]) || void 0 === t ? void 0 : t.type
+    paymentSourceType: null === (t = A[null != I ? I : ""]) || void 0 === t ? void 0 : t.type
   }) : (0, s.jsx)(d.default, {
     followupSKUInfo: y,
     startingPremiumSubscriptionPlanId: O.current,
-    planId: I.id,
+    planId: g.id,
     onClose: F,
-    isDowngrade: null != M && (0, p.subscriptionCanDowngrade)(M, I.id, L),
-    paymentSourceType: null === (r = A[null != g ? g : ""]) || void 0 === r ? void 0 : r.type
+    isDowngrade: null != M && (0, p.subscriptionCanDowngrade)(M, g.id, L),
+    paymentSourceType: null === (r = A[null != I ? I : ""]) || void 0 === r ? void 0 : r.type
   }), i.useEffect(() => {
     u.default.isAprilMarketingDecoEntitlementCreated && (o.default.dispatch({
       type: "PREMIUM_APRIL_MARKETING_DECO_ENTITLEMENT_RESET"

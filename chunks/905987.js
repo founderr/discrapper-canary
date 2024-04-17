@@ -78,16 +78,16 @@ function R(e) {
       })]
     }), (0, a.jsxs)("div", {
       className: A.container,
-      children: [(0, a.jsx)(p, {
+      children: [(0, a.jsx)(E, {
         hidden: "channel" === t
-      }), (0, a.jsx)(E, {
+      }), (0, a.jsx)(p, {
         hidden: "server" === t
       })]
     })]
   })
 }
 
-function p(e) {
+function E(e) {
   let {
     hidden: s
   } = e, t = (0, d.useStateFromStores)([c.default, o.default], () => {
@@ -261,7 +261,7 @@ function p(e) {
   })
 }
 
-function E(e) {
+function p(e) {
   let {
     hidden: s
   } = e, [t, i] = l.useState(0);

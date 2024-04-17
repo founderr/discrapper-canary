@@ -44,8 +44,8 @@ var a, s, n = l("735250"),
   V = l("143135"),
   H = l("37113"),
   W = l("981631"),
-  z = l("761274"),
-  K = l("689938"),
+  K = l("761274"),
+  z = l("689938"),
   Y = l("223318");
 (s = a || (a = {}))[s.GUILD = 0] = "GUILD", s[s.SOURCE = 1] = "SOURCE", s[s.CONFIRM = 2] = "CONFIRM";
 
@@ -103,11 +103,11 @@ function Q(e) {
       audioSourceId: ep,
       sound: eD
     }), (async () => {
-      !await N.default.hasPermission(z.NativePermissionTypes.SCREEN_RECORDING, {
+      !await N.default.hasPermission(K.NativePermissionTypes.SCREEN_RECORDING, {
         showAuthorizationError: !1
       }) && m.default.show({
-        title: K.default.Messages.WARNING_SCREEN_RECORDING_PERMISSION_TITLE,
-        body: K.default.Messages.WARNING_SCREEN_RECORDING_PERMISSION_BODY
+        title: z.default.Messages.WARNING_SCREEN_RECORDING_PERMISSION_TITLE,
+        body: z.default.Messages.WARNING_SCREEN_RECORDING_PERMISSION_BODY
       })
     })()
   }
@@ -148,14 +148,14 @@ function Q(e) {
           source_id: s,
           screens: i.length
         }), (0, f.openModal)(e => (0, n.jsx)(f.ConfirmModal, {
-          header: K.default.Messages.SCREENSHARE_RELAUNCH,
-          confirmText: K.default.Messages.OKAY,
-          cancelText: K.default.Messages.CANCEL,
+          header: z.default.Messages.SCREENSHARE_RELAUNCH,
+          confirmText: z.default.Messages.OKAY,
+          cancelText: z.default.Messages.CANCEL,
           onConfirm: () => b.default.relaunch(),
           ...e,
           children: (0, n.jsx)(f.Text, {
             variant: "text-md/normal",
-            children: K.default.Messages.SCREENSHARE_RELAUNCH_BODY
+            children: z.default.Messages.SCREENSHARE_RELAUNCH_BODY
           })
         }));
         return
@@ -185,11 +185,11 @@ function Q(e) {
     eH = function(e) {
       switch (e) {
         case 1:
-          return K.default.Messages.GO_LIVE_MODAL_DESCRIPTION_SELECT_SOURCE;
+          return z.default.Messages.GO_LIVE_MODAL_DESCRIPTION_SELECT_SOURCE;
         case 2:
           return null;
         default:
-          return K.default.Messages.GO_LIVE_MODAL_DESCRIPTION_GENERIC
+          return z.default.Messages.GO_LIVE_MODAL_DESCRIPTION_GENERIC
       }
     }(eS),
     eW = (0, n.jsx)(f.ModalHeader, {
@@ -203,7 +203,7 @@ function Q(e) {
           variant: "heading-xl/semibold",
           id: em,
           className: Y.headerText,
-          children: K.default.Messages.GO_LIVE_MODAL_TITLE
+          children: z.default.Messages.GO_LIVE_MODAL_TITLE
         }), null != eH ? (0, n.jsx)(f.Text, {
           className: Y.headerDescription,
           variant: "text-md/normal",
@@ -212,7 +212,7 @@ function Q(e) {
         }) : null]
       })
     }),
-    ez = (0, n.jsxs)(f.Slides, {
+    eK = (0, n.jsxs)(f.Slides, {
       springConfig: {
         ...o.config.stiff,
         clamp: !0
@@ -268,7 +268,7 @@ function Q(e) {
         })
       })]
     }),
-    eK = function(e, t, l, a) {
+    ez = function(e, t, l, a) {
       switch (e) {
         case 1:
           return t ? 0 : null;
@@ -282,25 +282,25 @@ function Q(e) {
     }(eS, Z, J, eg),
     eY = 2 !== eS || null == eI && null == ei || null == eU,
     eQ = (0, n.jsxs)(f.ModalFooter, {
-      justify: null == eK ? O.default.Justify.START : O.default.Justify.BETWEEN,
+      justify: null == ez ? O.default.Justify.START : O.default.Justify.BETWEEN,
       children: [(0, n.jsx)(f.Button, {
         type: "submit",
         size: f.Button.Sizes.SMALL,
         disabled: eY,
         autoFocus: !0,
-        children: K.default.Messages.GO_LIVE_MODAL_CTA
-      }), null == eK ? (0, n.jsx)(f.Button, {
+        children: z.default.Messages.GO_LIVE_MODAL_CTA
+      }), null == ez ? (0, n.jsx)(f.Button, {
         className: Y.cancelButton,
         look: f.Button.Looks.LINK,
         size: f.Button.Sizes.SMALL,
         color: f.ButtonColors.PRIMARY,
         onClick: $,
-        children: K.default.Messages.CANCEL
+        children: z.default.Messages.CANCEL
       }) : (0, n.jsx)(f.Button, {
         size: f.Button.Sizes.SMALL,
         color: f.ButtonColors.PRIMARY,
-        onClick: () => eE(eK),
-        children: K.default.Messages.BACK
+        onClick: () => eE(ez),
+        children: z.default.Messages.BACK
       })]
     });
   return (0, n.jsx)(_.default, {
@@ -317,7 +317,7 @@ function Q(e) {
         className: Y.art
       }), (0, n.jsxs)("form", {
         onSubmit: ew,
-        children: [eW, ez, eQ]
+        children: [eW, eK, eQ]
       })]
     })
   })
