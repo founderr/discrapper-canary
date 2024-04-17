@@ -8,31 +8,32 @@ var n = a("735250"),
   o = a("481060"),
   u = a("224706"),
   d = a("607070"),
-  c = a("246364"),
-  f = a("931240"),
-  E = a("650461"),
-  h = a("620929"),
-  _ = a("94963"),
-  C = a("745628"),
-  m = a("950279"),
-  S = a("796918"),
-  p = a("22035"),
-  I = a("513532"),
-  T = a("741595"),
-  g = a("884486"),
-  A = a("974842"),
-  N = a("359380"),
-  v = a("308083"),
-  R = a("689938"),
-  O = a("653196");
-let L = [v.ClanSetupSteps.FOUNDATIONAL_INTRO, v.ClanSetupSteps.GAMES, v.ClanSetupSteps.PLAYSTYLE, v.ClanSetupSteps.PERSONALITY_INTRO, v.ClanSetupSteps.UTILITY_TRAITS, v.ClanSetupSteps.INTERESTS, v.ClanSetupSteps.DESCRIPTION, v.ClanSetupSteps.PRIMETIME, v.ClanSetupSteps.IDENTITY_INTRO, v.ClanSetupSteps.CUSTOMIZE_TAG_BADGE, v.ClanSetupSteps.CUSTOMIZE_BANNER, v.ClanSetupSteps.APPLICATION_INTRO, v.ClanSetupSteps.MEMBER_APPLICATION],
-  M = {
-    [v.ClanSetupSteps.FOUNDATIONAL_INTRO]: [v.ClanSetupSteps.GAMES, v.ClanSetupSteps.PLAYSTYLE],
-    [v.ClanSetupSteps.PERSONALITY_INTRO]: [v.ClanSetupSteps.UTILITY_TRAITS, v.ClanSetupSteps.INTERESTS, v.ClanSetupSteps.DESCRIPTION, v.ClanSetupSteps.PRIMETIME],
-    [v.ClanSetupSteps.IDENTITY_INTRO]: [v.ClanSetupSteps.CUSTOMIZE_TAG_BADGE, v.ClanSetupSteps.CUSTOMIZE_BANNER],
-    [v.ClanSetupSteps.APPLICATION_INTRO]: [v.ClanSetupSteps.MEMBER_APPLICATION]
+  c = a("132580"),
+  f = a("246364"),
+  E = a("931240"),
+  h = a("650461"),
+  _ = a("620929"),
+  C = a("94963"),
+  m = a("745628"),
+  S = a("950279"),
+  p = a("796918"),
+  I = a("22035"),
+  T = a("513532"),
+  g = a("741595"),
+  A = a("884486"),
+  N = a("974842"),
+  v = a("359380"),
+  R = a("308083"),
+  O = a("689938"),
+  L = a("653196");
+let M = [R.ClanSetupSteps.FOUNDATIONAL_INTRO, R.ClanSetupSteps.GAMES, R.ClanSetupSteps.PLAYSTYLE, R.ClanSetupSteps.PERSONALITY_INTRO, R.ClanSetupSteps.UTILITY_TRAITS, R.ClanSetupSteps.INTERESTS, R.ClanSetupSteps.DESCRIPTION, R.ClanSetupSteps.PRIMETIME, R.ClanSetupSteps.IDENTITY_INTRO, R.ClanSetupSteps.CUSTOMIZE_TAG_BADGE, R.ClanSetupSteps.CUSTOMIZE_BANNER, R.ClanSetupSteps.APPLICATION_INTRO, R.ClanSetupSteps.MEMBER_APPLICATION],
+  P = {
+    [R.ClanSetupSteps.FOUNDATIONAL_INTRO]: [R.ClanSetupSteps.GAMES, R.ClanSetupSteps.PLAYSTYLE],
+    [R.ClanSetupSteps.PERSONALITY_INTRO]: [R.ClanSetupSteps.UTILITY_TRAITS, R.ClanSetupSteps.INTERESTS, R.ClanSetupSteps.DESCRIPTION, R.ClanSetupSteps.PRIMETIME],
+    [R.ClanSetupSteps.IDENTITY_INTRO]: [R.ClanSetupSteps.CUSTOMIZE_TAG_BADGE, R.ClanSetupSteps.CUSTOMIZE_BANNER],
+    [R.ClanSetupSteps.APPLICATION_INTRO]: [R.ClanSetupSteps.MEMBER_APPLICATION]
   },
-  P = e => {
+  x = e => {
     var t, a;
     let {
       setCurrentStep: l,
@@ -40,82 +41,82 @@ let L = [v.ClanSetupSteps.FOUNDATIONAL_INTRO, v.ClanSetupSteps.GAMES, v.ClanSetu
       onLastStep: u
     } = e, {
       currentStep: d,
-      selectedGames: f,
-      playstyle: E,
-      interests: h,
-      description: _,
-      tag: C,
-      primetime: m,
-      verificationForm: S,
-      furthestStep: p
-    } = r, I = d === L.length - 1, T = null != S && S.formFields.some(e => !(0, c.isTermsFormField)(e)), g = s.useMemo(() => ({
-      [v.ClanSetupSteps.FOUNDATIONAL_INTRO]: {
+      selectedGames: E,
+      playstyle: h,
+      interests: _,
+      description: C,
+      tag: m,
+      primetime: S,
+      verificationForm: p,
+      furthestStep: I
+    } = r, T = d === M.length - 1, g = null != p && p.formFields.some(e => !(0, f.isTermsFormField)(e)), A = s.useMemo(() => ({
+      [R.ClanSetupSteps.FOUNDATIONAL_INTRO]: {
         disableNextStep: !1
       },
-      [v.ClanSetupSteps.GAMES]: {
-        disableNextStep: 0 === f.size
+      [R.ClanSetupSteps.GAMES]: {
+        disableNextStep: 0 === E.size
       },
-      [v.ClanSetupSteps.PLAYSTYLE]: {
-        disableNextStep: E === v.ClanPlaystyles.NONE
+      [R.ClanSetupSteps.PLAYSTYLE]: {
+        disableNextStep: h === R.ClanPlaystyles.NONE
       },
-      [v.ClanSetupSteps.PERSONALITY_INTRO]: {
+      [R.ClanSetupSteps.PERSONALITY_INTRO]: {
         disableNextStep: !1
       },
-      [v.ClanSetupSteps.UTILITY_TRAITS]: {
-        disableNextStep: 0 === h.size
+      [R.ClanSetupSteps.UTILITY_TRAITS]: {
+        disableNextStep: 0 === _.size
       },
-      [v.ClanSetupSteps.INTERESTS]: {
-        disableNextStep: 0 === h.size
+      [R.ClanSetupSteps.INTERESTS]: {
+        disableNextStep: 0 === _.size
       },
-      [v.ClanSetupSteps.DESCRIPTION]: {
-        disableNextStep: 0 === _.length
+      [R.ClanSetupSteps.DESCRIPTION]: {
+        disableNextStep: 0 === C.length
       },
-      [v.ClanSetupSteps.PRIMETIME]: {
-        disableNextStep: m.some(e => null == e.day || null == e.time)
+      [R.ClanSetupSteps.PRIMETIME]: {
+        disableNextStep: S.some(e => null == e.day || null == e.time)
       },
-      [v.ClanSetupSteps.IDENTITY_INTRO]: {
+      [R.ClanSetupSteps.IDENTITY_INTRO]: {
         disableNextStep: !1
       },
-      [v.ClanSetupSteps.CUSTOMIZE_TAG_BADGE]: {
-        disableNextStep: C.length < 2
+      [R.ClanSetupSteps.CUSTOMIZE_TAG_BADGE]: {
+        disableNextStep: m.length < 2
       },
-      [v.ClanSetupSteps.CUSTOMIZE_BANNER]: {
+      [R.ClanSetupSteps.CUSTOMIZE_BANNER]: {
         disableNextStep: !1
       },
-      [v.ClanSetupSteps.APPLICATION_INTRO]: {
+      [R.ClanSetupSteps.APPLICATION_INTRO]: {
         disableNextStep: !1
       },
-      [v.ClanSetupSteps.MEMBER_APPLICATION]: {
-        disableNextStep: !T
+      [R.ClanSetupSteps.MEMBER_APPLICATION]: {
+        disableNextStep: !g
       }
-    }), [_.length, h.size, E, m, f.size, C.length, T]);
+    }), [C.length, _.size, h, S, E.size, m.length, g]);
     return (0, n.jsxs)("div", {
-      className: O.footer,
+      className: L.footer,
       children: [(0, n.jsx)("div", {
-        className: O.progressContainer,
-        children: Object.entries(M).map(e => {
+        className: L.progressContainer,
+        children: Object.entries(P).map(e => {
           let [t, a] = e;
           return (0, n.jsx)("div", {
-            className: O.progressStep,
+            className: L.progressStep,
             children: a.map(e => {
-              let t = !g[e].disableNextStep && p >= e,
-                a = e <= p;
+              let t = !A[e].disableNextStep && I >= e,
+                a = e <= I;
               return (0, n.jsx)(o.Clickable, {
-                "aria-label": R.default.Messages.STEP_NUMBER.format({
+                "aria-label": O.default.Messages.STEP_NUMBER.format({
                   number: e
                 }),
                 onClick: () => a ? l(e) : null,
-                className: i()(O.progressSubStep, {
-                  [O.clickable]: a,
-                  [O.currentStep]: e === d,
-                  [O.progressStepFill]: t || e === d
+                className: i()(L.progressSubStep, {
+                  [L.clickable]: a,
+                  [L.currentStep]: e === d,
+                  [L.progressStepFill]: t || e === d
                 })
               }, "step-".concat(e))
             })
           }, "step-".concat(t))
         })
       }), (0, n.jsxs)("div", {
-        className: O.buttonsContainer,
+        className: L.buttonsContainer,
         children: [(0, n.jsx)(o.Button, {
           look: o.Button.Looks.OUTLINED,
           size: o.Button.Sizes.MEDIUM,
@@ -124,19 +125,27 @@ let L = [v.ClanSetupSteps.FOUNDATIONAL_INTRO, v.ClanSetupSteps.GAMES, v.ClanSetu
             l(d - 1)
           },
           disabled: 0 === d,
-          children: R.default.Messages.PAGINATION_PREVIOUS
+          children: O.default.Messages.PAGINATION_PREVIOUS
+        }), (0, n.jsxs)("div", {
+          className: L.footerAlphaMsg,
+          children: [(0, n.jsx)(c.default, {
+            className: L.footerAlphaTag
+          }), (0, n.jsx)(o.Text, {
+            variant: "text-sm/medium",
+            children: "This is currently in Alpha, use test servers only!"
+          })]
         }), (0, n.jsx)(o.Button, {
           look: o.Button.Looks.FILLED,
           size: o.Button.Sizes.MEDIUM,
           onClick: () => {
-            if (I) {
+            if (T) {
               u();
               return
             }
             l(d + 1)
           },
-          disabled: null !== (a = null === (t = g[d]) || void 0 === t ? void 0 : t.disableNextStep) && void 0 !== a && a,
-          children: R.default.Messages.PAGINATION_NEXT
+          disabled: null !== (a = null === (t = A[d]) || void 0 === t ? void 0 : t.disableNextStep) && void 0 !== a && a,
+          children: O.default.Messages.PAGINATION_NEXT
         })]
       })]
     })
@@ -148,16 +157,16 @@ t.default = e => {
     onClose: l
   } = e, {
     progress: c,
-    errors: M
-  } = (0, r.useStateFromStoresObject)([E.default], () => {
+    errors: f
+  } = (0, r.useStateFromStoresObject)([h.default], () => {
     var e, a;
-    let n = E.default.getStateForGuild(t);
+    let n = h.default.getStateForGuild(t);
     return {
-      progress: null !== (e = n.progress) && void 0 !== e ? e : (0, E.newClanProgress)(),
+      progress: null !== (e = n.progress) && void 0 !== e ? e : (0, h.newClanProgress)(),
       errors: null !== (a = n.errors) && void 0 !== a ? a : {}
     }
   }), {
-    requiredGameId: x,
+    requiredGameId: P,
     selectedGames: y,
     playstyle: D,
     interests: b,
@@ -170,136 +179,136 @@ t.default = e => {
   s.useEffect(() => {
     u.default.getDetectableGames()
   }, []);
-  let V = s.useCallback(e => f.updateClanSettings(t, {
+  let V = s.useCallback(e => E.updateClanSettings(t, {
       currentStep: e,
       furthestStep: null == k || e > k ? e : k
     }), [t, k]),
-    Y = s.useCallback(e => f.updateClanSettings(t, e), [t]),
+    Y = s.useCallback(e => E.updateClanSettings(t, e), [t]),
     W = s.useCallback(() => {
-      B(!1), setTimeout(() => a(v.ClanSetupModalPages.SIGN), 199)
+      B(!1), setTimeout(() => a(R.ClanSetupModalPages.SIGN), 199)
     }, [a]);
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(o.Button, {
-      className: O.closeButton,
+      className: L.closeButton,
       look: o.Button.Looks.OUTLINED,
       size: o.Button.Sizes.SMALL,
       color: o.Button.Colors.PRIMARY,
       onClick: l,
-      children: R.default.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
+      children: O.default.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
     }), (0, n.jsxs)("div", {
-      className: i()(O.mainContent, O.fadeIn, {
-        [O.fadeOut]: !H
+      className: i()(L.mainContent, L.fadeIn, {
+        [L.fadeOut]: !H
       }),
       children: [(0, n.jsx)(o.Sequencer, {
         step: w,
-        steps: L,
+        steps: M,
         sideMargin: 24,
         verticalMargin: 24,
-        className: O.sequencer,
-        innerClassName: O.sequencer,
-        animatedNodeClassName: O.sequencer,
+        className: L.sequencer,
+        innerClassName: L.sequencer,
+        animatedNodeClassName: L.sequencer,
         children: (0, n.jsx)(o.ScrollerThin, {
-          className: O.scroller,
+          className: L.scroller,
           fade: !0,
           children: (() => {
             switch (w) {
-              case v.ClanSetupSteps.GAMES:
-                return (0, n.jsx)(m.default, {
+              case R.ClanSetupSteps.GAMES:
+                return (0, n.jsx)(S.default, {
                   handleUpdate: Y,
                   selectedGames: y,
-                  requiredGameId: x,
-                  error: M.selectedGames
+                  requiredGameId: P,
+                  error: f.selectedGames
                 });
-              case v.ClanSetupSteps.PLAYSTYLE:
-                return (0, n.jsx)(T.default, {
+              case R.ClanSetupSteps.PLAYSTYLE:
+                return (0, n.jsx)(g.default, {
                   handleUpdate: Y,
                   playstyle: D,
-                  error: M.playstyle
+                  error: f.playstyle
                 });
-              case v.ClanSetupSteps.UTILITY_TRAITS:
-                return (0, n.jsx)(N.default, {
-                  requiredGameId: x,
+              case R.ClanSetupSteps.UTILITY_TRAITS:
+                return (0, n.jsx)(v.default, {
+                  requiredGameId: P,
                   handleUpdate: Y,
                   interests: b
                 });
-              case v.ClanSetupSteps.INTERESTS:
-                return (0, n.jsx)(S.default, {
+              case R.ClanSetupSteps.INTERESTS:
+                return (0, n.jsx)(p.default, {
                   handleUpdate: Y,
                   interests: b,
-                  error: M.interests
+                  error: f.interests
                 });
-              case v.ClanSetupSteps.DESCRIPTION:
-                return (0, n.jsx)(C.default, {
+              case R.ClanSetupSteps.DESCRIPTION:
+                return (0, n.jsx)(m.default, {
                   handleUpdate: Y,
                   description: U,
                   wildcardDescriptors: c.wildcardDescriptors,
-                  errors: M
+                  errors: f
                 });
-              case v.ClanSetupSteps.PRIMETIME:
-                return (0, n.jsx)(g.default, {
-                  handleUpdate: Y,
-                  selectedTimes: G,
-                  error: M.primetime
-                });
-              case v.ClanSetupSteps.CUSTOMIZE_TAG_BADGE:
+              case R.ClanSetupSteps.PRIMETIME:
                 return (0, n.jsx)(A.default, {
                   handleUpdate: Y,
+                  selectedTimes: G,
+                  error: f.primetime
+                });
+              case R.ClanSetupSteps.CUSTOMIZE_TAG_BADGE:
+                return (0, n.jsx)(N.default, {
+                  handleUpdate: Y,
                   tag: j,
-                  error: M.tag,
+                  error: f.tag,
                   badge: c.badgeKind,
                   primaryColor: c.badgePrimaryColor,
                   secondaryColor: c.badgeSecondaryColor,
                   furthestStep: k
                 });
-              case v.ClanSetupSteps.CUSTOMIZE_BANNER:
-                return (0, n.jsx)(_.default, {
+              case R.ClanSetupSteps.CUSTOMIZE_BANNER:
+                return (0, n.jsx)(C.default, {
                   handleUpdate: Y,
                   progress: c,
                   guildId: t
                 });
-              case v.ClanSetupSteps.MEMBER_APPLICATION:
-                return (0, n.jsx)(I.default, {
+              case R.ClanSetupSteps.MEMBER_APPLICATION:
+                return (0, n.jsx)(T.default, {
                   guildId: t
                 });
-              case v.ClanSetupSteps.FOUNDATIONAL_INTRO:
-                return (0, n.jsx)(p.default, {
+              case R.ClanSetupSteps.FOUNDATIONAL_INTRO:
+                return (0, n.jsx)(I.default, {
                   stepNum: 1,
-                  title: R.default.Messages.CLAN_SETUP_FOUNDATIONAL_INTRO_TITLE,
-                  subtitle: R.default.Messages.CLAN_SETUP_FOUNDATIONAL_INTRO_SUBTITLE
+                  title: O.default.Messages.CLAN_SETUP_FOUNDATIONAL_INTRO_TITLE,
+                  subtitle: O.default.Messages.CLAN_SETUP_FOUNDATIONAL_INTRO_SUBTITLE
                 });
-              case v.ClanSetupSteps.PERSONALITY_INTRO:
-                return (0, n.jsx)(p.default, {
+              case R.ClanSetupSteps.PERSONALITY_INTRO:
+                return (0, n.jsx)(I.default, {
                   stepNum: 2,
-                  title: R.default.Messages.CLAN_SETUP_PERSONALITY_INTRO_TITLE,
-                  subtitle: R.default.Messages.CLAN_SETUP_PERSONALITY_INTRO_SUBTITLE
+                  title: O.default.Messages.CLAN_SETUP_PERSONALITY_INTRO_TITLE,
+                  subtitle: O.default.Messages.CLAN_SETUP_PERSONALITY_INTRO_SUBTITLE
                 });
-              case v.ClanSetupSteps.IDENTITY_INTRO:
-                return (0, n.jsx)(p.default, {
+              case R.ClanSetupSteps.IDENTITY_INTRO:
+                return (0, n.jsx)(I.default, {
                   stepNum: 3,
-                  title: R.default.Messages.CLAN_SETUP_IDENTITY_INTRO_TITLE,
-                  subtitle: R.default.Messages.CLAN_SETUP_IDENTITY_INTRO_SUBTITLE
+                  title: O.default.Messages.CLAN_SETUP_IDENTITY_INTRO_TITLE,
+                  subtitle: O.default.Messages.CLAN_SETUP_IDENTITY_INTRO_SUBTITLE
                 });
-              case v.ClanSetupSteps.APPLICATION_INTRO:
-                return (0, n.jsx)(p.default, {
+              case R.ClanSetupSteps.APPLICATION_INTRO:
+                return (0, n.jsx)(I.default, {
                   stepNum: 4,
-                  title: R.default.Messages.CLAN_SETUP_APPLICATION_INTRO_TITLE,
-                  subtitle: R.default.Messages.CLAN_SETUP_APPLICATION_INTRO_SUBTITLE
+                  title: O.default.Messages.CLAN_SETUP_APPLICATION_INTRO_TITLE,
+                  subtitle: O.default.Messages.CLAN_SETUP_APPLICATION_INTRO_SUBTITLE
                 });
               default:
                 return null
             }
           })()
         })
-      }), (0, n.jsx)(P, {
+      }), (0, n.jsx)(x, {
         setCurrentStep: V,
         progress: c,
         onLastStep: W
       })]
     }), (0, n.jsx)("div", {
-      className: i()(O.overviewSidebar, {
-        [O.fadeOut]: F && !H
+      className: i()(L.overviewSidebar, {
+        [L.fadeOut]: F && !H
       }),
-      children: (0, n.jsx)(h.default, {
+      children: (0, n.jsx)(_.default, {
         guildId: t
       })
     })]
