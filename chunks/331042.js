@@ -28,8 +28,8 @@ var o = r("735250"),
   I = r("141011"),
   L = r("372654"),
   T = r("302800"),
-  k = r("414592"),
-  A = r("689938"),
+  A = r("414592"),
+  k = r("689938"),
   N = r("176929"),
   O = r("660097");
 let _ = e => {
@@ -42,52 +42,48 @@ let _ = e => {
     hideConfetti: F = !1,
     analyticsLocations: M
   } = e, {
-    confettiColors: R,
-    buttonColors: j
-  } = (0, h.default)(a.styles), B = null != j ? {
-    background: (0, L.getBackgroundGradient)(j, 90),
-    color: j.text.toHslString()
-  } : void 0, D = (0, c.useStateFromStores)([E.default], () => {
+    confettiColors: R
+  } = (0, h.default)(a.styles), j = (0, c.useStateFromStores)([E.default], () => {
     let e = E.default.getCurrentUser();
     return s()(null != e, "User cannot be undefined"), e
-  }), z = (0, c.useStateFromStores)([f.default], () => f.default.useReducedMotion), [P] = a.items, {
-    avatarDecorationSrc: H
+  }), B = (0, c.useStateFromStores)([f.default], () => f.default.useReducedMotion), [D] = a.items, {
+    avatarDecorationSrc: z
   } = (0, b.default)({
-    user: D,
-    avatarDecorationOverride: (null == P ? void 0 : P.type) === i.CollectiblesItemType.AVATAR_DECORATION ? P : null,
+    user: j,
+    avatarDecorationOverride: (null == D ? void 0 : D.type) === i.CollectiblesItemType.AVATAR_DECORATION ? D : null,
     size: (0, p.getDecorationSizeForAvatarSize)(u.AvatarSizes.SIZE_120)
-  }), w = n.useRef(null), {
-    analyticsLocations: W
-  } = (0, g.default)([...M, C.default.COLLECTIBLES_COLLECTED_MODAL]), G = (0, m.default)({
-    analyticsLocations: W
+  }), P = n.useRef(null), {
+    analyticsLocations: H
+  } = (0, g.default)([...M, C.default.COLLECTIBLES_COLLECTED_MODAL]), w = (0, m.default)({
+    analyticsLocations: H
   }), {
-    category: U,
-    isFetching: V
-  } = (0, S.useFetchCollectiblesProductCategory)(a.skuId), K = null !== (r = null == U ? void 0 : U.successModalBg) && void 0 !== r ? r : a.banner;
+    category: W,
+    isFetching: U
+  } = (0, S.useFetchCollectiblesProductCategory)(a.skuId), G = null !== (r = null == W ? void 0 : W.successModalBg) && void 0 !== r ? r : a.banner;
   return (0, o.jsxs)(g.AnalyticsLocationProvider, {
-    value: W,
+    value: H,
     children: [(0, o.jsxs)("div", {
       className: N.modalInner,
-      ref: w,
+      ref: P,
       children: [(0, o.jsxs)("div", {
         className: N.bannerContainer,
         children: [(0, o.jsx)(I.default, {
-          asset: V ? void 0 : K,
-          addGradient: null === (t = k.categoryBannerOverrides[a.categorySkuId]) || void 0 === t ? void 0 : t.addGradient,
+          asset: U ? void 0 : G,
+          addGradient: null === (t = A.categoryBannerOverrides[a.categorySkuId]) || void 0 === t ? void 0 : t.addGradient,
           size: (0, L.getAssetSizeByHeight)(880),
           className: N.decorationBanner,
           blur: !0
-        }), (null == P ? void 0 : P.type) === i.CollectiblesItemType.AVATAR_DECORATION && (0, o.jsx)(u.Avatar, {
+        }), (null == D ? void 0 : D.type) === i.CollectiblesItemType.AVATAR_DECORATION && (0, o.jsx)(u.Avatar, {
           size: u.AvatarSizes.SIZE_120,
           src: O,
-          avatarDecoration: H,
+          avatarDecoration: z,
           className: N.avatarDecoration,
           "aria-label": a.name
-        }), (null == P ? void 0 : P.type) === i.CollectiblesItemType.PROFILE_EFFECT && (0, o.jsx)("div", {
+        }), (null == D ? void 0 : D.type) === i.CollectiblesItemType.PROFILE_EFFECT && (0, o.jsx)("div", {
           className: N.profileEffectShopPreview,
           children: (0, o.jsx)(v.default, {
             forCollectedModal: !0,
-            profileEffectId: P.id
+            profileEffectId: D.id
           })
         })]
       }), (0, o.jsxs)("div", {
@@ -96,36 +92,35 @@ let _ = e => {
           className: N.collectedTextContainer,
           children: [(0, o.jsx)(u.Heading, {
             variant: "heading-lg/bold",
-            children: A.default.Messages.COLLECTIBLES_YOU_COLLECTED.format({
+            children: k.default.Messages.COLLECTIBLES_YOU_COLLECTED.format({
               itemName: a.name
             })
           }), (0, o.jsx)(u.Text, {
             variant: "text-sm/normal",
-            children: (null == P ? void 0 : P.type) === i.CollectiblesItemType.PROFILE_EFFECT ? A.default.Messages.COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION : A.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION
+            children: (null == D ? void 0 : D.type) === i.CollectiblesItemType.PROFILE_EFFECT ? k.default.Messages.COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION : k.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION
           })]
         }), (0, o.jsx)(u.Button, {
           onClick: () => {
-            if (l(), (0, d.popLayer)(), G(), (null == P ? void 0 : P.type) === i.CollectiblesItemType.AVATAR_DECORATION) {
+            if (l(), (0, d.popLayer)(), w(), (null == D ? void 0 : D.type) === i.CollectiblesItemType.AVATAR_DECORATION) {
               (0, p.openAvatarDecorationModal)({
-                initialSelectedDecoration: P,
-                analyticsLocations: W
+                initialSelectedDecoration: D,
+                analyticsLocations: H
               });
               return
-            }(null == P ? void 0 : P.type) === i.CollectiblesItemType.PROFILE_EFFECT && (0, y.openProfileEffectModal)({
-              initialSelectedEffectId: P.id,
-              analyticsLocations: W
+            }(null == D ? void 0 : D.type) === i.CollectiblesItemType.PROFILE_EFFECT && (0, y.openProfileEffectModal)({
+              initialSelectedEffectId: D.id,
+              analyticsLocations: H
             })
           },
-          style: B,
-          children: A.default.Messages.COLLECTIBLES_USE_NOW
+          children: k.default.Messages.COLLECTIBLES_USE_NOW
         })]
       }), (0, o.jsx)(u.ModalCloseButton, {
         onClick: l,
         className: N.modalCloseButton,
         withCircleBackground: !0
       })]
-    }), !F && !z && (0, o.jsx)(x.default, {
-      confettiTarget: null != T ? T : w.current,
+    }), !F && !B && (0, o.jsx)(x.default, {
+      confettiTarget: null != T ? T : P.current,
       confettiCanvas: _,
       sprites: (0, L.getConfettiSprites)(a.categorySkuId),
       colors: null == R ? void 0 : R.map(e => e.toHexString())
