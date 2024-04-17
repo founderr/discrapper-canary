@@ -6250,8 +6250,8 @@ html .invoiceCancelRow_aa7946 {
 
 .message__702f7 {
     font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -119665,7 +119665,8 @@ html .invoiceCancelRow__6ff3e {
 .nitroWheel__7ee03 {
     width: 20px;
     height: 20px;
-    margin-left: var(--spacing-4)
+    margin-left: var(--spacing-4);
+    color: var(--text-normal)
 }
 
 .newBadge__242e8 {
