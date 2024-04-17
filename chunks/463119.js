@@ -44,14 +44,17 @@ let M = e => {
     let {
       selected: t,
       locationState: a,
-      onMouseEnter: s,
-      onMouseLeave: l,
-      onButtonClick: i,
+      onMouseEnter: l,
+      onMouseLeave: i,
       children: o,
       ...u
     } = e, d = (0, r.useListItem)("shop"), c = _.default.HOME_PAGE_SHOP_TAB, {
       analyticsLocations: E
-    } = (0, C.default)(c);
+    } = (0, C.default)(c), h = s.useCallback(() => (0, A.openCollectiblesShop)({
+      openInLayer: !1,
+      analyticsSource: c,
+      analyticsLocations: E
+    }), [c, E]);
     return (0, n.jsx)(f.LinkButton, {
       selected: t,
       route: R.Routes.COLLECTIBLES_SHOP,
@@ -60,15 +63,9 @@ let M = e => {
       locationState: a,
       ...d,
       ...u,
-      onMouseEnter: s,
-      onMouseLeave: l,
-      onClick: () => {
-        (0, A.openCollectiblesShop)({
-          openInLayer: !1,
-          analyticsSource: c,
-          analyticsLocations: E
-        }), null == i || i()
-      },
+      onMouseEnter: l,
+      onMouseLeave: i,
+      onClick: h,
       children: o
     })
   },
@@ -105,41 +102,39 @@ let M = e => {
     let {
       selected: t,
       locationState: a,
-      onButtonClick: l,
-      displayOptions: r
-    } = e, [o, c] = s.useState(0), [f, h] = s.useState(!1), _ = (0, E.default)(), C = r.entrypointDecorationAssets, m = s.useCallback(e => {
-      c(e => (e + 1) % r.assetIds.length), h(!0), null == e || e()
-    }, [r.assetIds]), S = s.useCallback(e => {
-      h(!1), null == e || e()
+      displayOptions: l
+    } = e, [r, o] = s.useState(0), [c, f] = s.useState(!1), h = (0, E.default)(), _ = l.entrypointDecorationAssets, C = s.useCallback(e => {
+      o(e => (e + 1) % l.assetIds.length), f(!0), null == e || e()
+    }, [l.assetIds]), m = s.useCallback(e => {
+      f(!1), null == e || e()
     }, []);
     return (0, n.jsx)(d.Tooltip, {
       text: (0, n.jsx)(x, {
-        displayOptions: r,
-        assetId: r.assetIds[o]
+        displayOptions: l,
+        assetId: l.assetIds[r]
       }),
       tooltipClassName: L.marketingBadgeTooltip,
       position: "right",
       delay: 100,
       allowOverflow: !0,
       hideOnClick: !1,
-      "aria-label": r.title(),
+      "aria-label": l.title(),
       children: e => (0, n.jsxs)(P, {
-        className: null != r.entryPointClassName ? (0, g.getClass)(L, r.entryPointClassName) : void 0,
+        className: null != l.entryPointClassName ? (0, g.getClass)(L, l.entryPointClassName) : void 0,
         selected: t,
         locationState: a,
         ...e,
-        onMouseEnter: () => m(e.onMouseEnter),
-        onMouseLeave: () => S(e.onMouseLeave),
-        onButtonClick: l,
-        children: [null != C && (0, n.jsx)("img", {
-          src: (0, u.isThemeDark)(_) ? C.srcDark : C.srcLight,
+        onMouseEnter: () => C(e.onMouseEnter),
+        onMouseLeave: () => m(e.onMouseLeave),
+        children: [null != _ && (0, n.jsx)("img", {
+          src: (0, u.isThemeDark)(h) ? _.srcDark : _.srcLight,
           className: i()(L.marketingButtonImage, {
-            [L.marketingButtonImageHovered]: f
+            [L.marketingButtonImageHovered]: c
           }),
           alt: "",
           "aria-hidden": !0
         }), (0, n.jsx)(M, {
-          color: r.badgeColor
+          color: l.badgeColor
         })]
       })
     })
@@ -148,33 +143,31 @@ let M = e => {
     let {
       selected: t,
       locationState: a,
-      onButtonClick: l,
-      displayOptions: i
-    } = e, r = s.useMemo(() => {
+      displayOptions: l
+    } = e, i = s.useMemo(() => {
       var e;
-      let t = null != i.emojiName ? null === (e = p.default.getByName(i.emojiName)) || void 0 === e ? void 0 : e.surrogates : null;
+      let t = null != l.emojiName ? null === (e = p.default.getByName(l.emojiName)) || void 0 === e ? void 0 : e.surrogates : null;
       return (0, n.jsxs)(d.Text, {
         variant: "text-sm/medium",
         className: L.marketingBadgeTooltipContent,
         children: [null != t && (0, n.jsx)(c.default, {
           emojiName: t
-        }), i.title()]
+        }), l.title()]
       })
-    }, [i]);
+    }, [l]);
     return (0, n.jsx)(d.Tooltip, {
-      text: r,
+      text: i,
       tooltipClassName: L.marketingBadgeTooltip,
       position: "right",
       delay: 100,
       hideOnClick: !1,
-      "aria-label": i.title(),
+      "aria-label": l.title(),
       children: e => (0, n.jsx)(P, {
         selected: t,
         locationState: a,
         ...e,
-        onButtonClick: l,
         children: (0, n.jsx)(M, {
-          color: i.badgeColor
+          color: l.badgeColor
         })
       })
     })
@@ -184,22 +177,19 @@ let M = e => {
       selected: t,
       locationState: a
     } = e, {
-      collectiblesShopTabNewBadgeDisplayOptions: s,
-      dismissCollectiblesShopTabNewBadge: l
+      collectiblesShopTabNewBadgeDisplayOptions: s
     } = (0, N.default)();
     if (null != s) switch (s.type) {
       case v.CollectiblesMarketingVariant.TOOLTIP:
         return (0, n.jsx)(D, {
           selected: t,
           locationState: a,
-          onButtonClick: l,
           displayOptions: s
         });
       case v.CollectiblesMarketingVariant.COACHTIP:
         return (0, n.jsx)(y, {
           selected: t,
           locationState: a,
-          onButtonClick: l,
           displayOptions: s
         })
     }
