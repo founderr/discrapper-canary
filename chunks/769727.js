@@ -102,13 +102,7 @@ function v() {
     l = (0, f.useClanDiscoveryExperimentDefaultGameId)("clan_discovery"),
     r = (0, d.useStateFromStores)([C.default], () => C.default.hasLoadedStaticClanDiscovery(e));
   return s.useEffect(() => {
-    l === I.VALORANT_ID ? (t(S.ClanDiscoveryGame.VALORANT), a([{
-      applicationId: l,
-      name: "Valorant"
-    }])) : l === I.GENSHIN_ID && (t(S.ClanDiscoveryGame.GENSHIN), a([{
-      applicationId: l,
-      name: "Genshin"
-    }]))
+    l === I.VALORANT_ID ? (t(S.ClanDiscoveryGame.VALORANT), a([l])) : l === I.GENSHIN_ID && (t(S.ClanDiscoveryGame.GENSHIN), a([l]))
   }, [t, a, l]), s.useEffect(() => {
     !r && (0, E.loadStaticClanDiscovery)(e)
   }, [e, r]), s.useEffect(() => {

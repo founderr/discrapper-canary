@@ -8,7 +8,7 @@ var a, s, l, i, r = n("153832"),
   S = n("116175"),
   T = n("308083");
 let E = () => ({
-    selectedGames: new Map,
+    gameApplicationIds: new Set,
     playstyle: T.ClanPlaystyles.NONE,
     interests: new Set,
     description: "",
@@ -29,16 +29,16 @@ let E = () => ({
     brandPrimaryColor: T.CLAN_BRAND_PALETTE_PRESETS["0"].primary,
     brandSecondaryColor: T.CLAN_BRAND_PALETTE_PRESETS["0"].secondary
   }),
-  C = E(),
-  p = !1,
+  p = E(),
+  C = !1,
   m = {},
   N = null;
 class I extends(a = o.default.Store) {
   getState(e) {
     return e !== N ? {} : {
-      settings: C,
+      settings: p,
       errors: m,
-      submitting: p
+      submitting: C
     }
   }
 }
@@ -53,7 +53,7 @@ i = "ClanSettingsStore", (l = "displayName") in(s = I) ? Object.defineProperty(s
       guildId: t,
       settings: n
     } = e;
-    N = t, C = {
+    N = t, p = {
       ...E(),
       ...n
     }
@@ -63,15 +63,15 @@ i = "ClanSettingsStore", (l = "displayName") in(s = I) ? Object.defineProperty(s
       guildId: t,
       updates: n
     } = e;
-    for (let e in N !== t ? (C = {
+    for (let e in N !== t ? (p = {
         ...E(),
         ...n
-      }, N = t) : C = {
-        ...C,
+      }, N = t) : p = {
+        ...p,
         ...n
       }, n) delete m[e]
   },
   CLAN_SETTINGS_SUBMIT: function() {
-    p = !0, m = {}
+    C = !0, m = {}
   }
 })

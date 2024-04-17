@@ -48,7 +48,7 @@ let u = (0, r.default)(e => ({
 
 function d(e) {
   var t;
-  let a = e.selectedGames.map(e => e.applicationId),
+  let a = e.selectedGames,
     n = null === (t = e.selectedPlaystyle) || void 0 === t ? void 0 : t.id,
     s = e.selectedTraits;
   return {

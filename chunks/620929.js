@@ -12,127 +12,114 @@ var n = a("735250"),
   f = a("430824"),
   E = a("594174"),
   h = a("823379"),
-  _ = a("650461"),
-  C = a("924801"),
-  m = a("308083"),
-  S = a("689938"),
-  p = a("653196");
-let I = e => {
-  if (1 === e.length) return e[0];
-  if (2 === e.length) return S.default.Messages.CLAN_OVERVIEW_LIST_TWO_ITEMS.format({
-    item1: e[0],
-    item2: e[1]
-  });
-  {
-    let t = e.slice(0, -1).join(", "),
-      a = e[e.length - 1];
-    return S.default.Messages.CLAN_OVERVIEW_LIST_MULTIPLE_ITEMS.format({
-      items: t,
-      last: a
-    })
-  }
-};
+  _ = a("45680"),
+  C = a("650461"),
+  m = a("353093"),
+  S = a("924801"),
+  p = a("308083"),
+  I = a("689938"),
+  T = a("653196");
 t.default = e => {
   var t;
   let {
     guildId: a,
     signed: l,
     setSigned: r,
-    animatedTextStyle: T,
-    signRef: g
-  } = e, A = (0, d.useStateFromStores)([f.default], () => {
+    animatedTextStyle: g,
+    signRef: A
+  } = e, N = (0, d.useStateFromStores)([f.default], () => {
     var e, t;
     return null !== (t = null === (e = f.default.getGuild(a)) || void 0 === e ? void 0 : e.name) && void 0 !== t ? t : ""
   }), {
-    selectedGames: N,
-    playstyle: v,
-    interests: R,
-    primetime: O
-  } = (0, d.useStateFromStoresObject)([_.default], () => {
+    gameApplicationIds: v,
+    playstyle: R,
+    interests: O,
+    primetime: L
+  } = (0, d.useStateFromStoresObject)([C.default], () => {
     var e;
-    return null !== (e = _.default.getStateForGuild(a).progress) && void 0 !== e ? e : {}
-  }), L = s.useMemo(() => (null == N ? void 0 : N.size) > 0 ? I(Array.from(N.values()).map(e => e.name)) : null, [N]), M = s.useMemo(() => (0, m.getPlaystyleTitle)(v), [v]), P = s.useMemo(() => (null == R ? void 0 : R.size) > 0 ? I(Array.from(R)) : null, [R]), x = s.useMemo(() => {
-    let e = (null == O ? void 0 : O.length) > 0 ? O.map(e => (0, C.primetimeToString)(e)).filter(h.isNotNullish) : [];
-    return (null == e ? void 0 : e.length) > 0 ? I(e) : null
-  }, [O]);
+    return null !== (e = C.default.getStateForGuild(a).progress) && void 0 !== e ? e : {}
+  }), M = (0, _.useGameNamesString)(Array.from(null != v ? v : new Set)), P = s.useMemo(() => (0, p.getPlaystyleTitle)(R), [R]), x = s.useMemo(() => (null == O ? void 0 : O.size) > 0 ? (0, m.formatSelectionList)(Array.from(O)) : null, [O]), y = s.useMemo(() => {
+    let e = (null == L ? void 0 : L.length) > 0 ? L.map(e => (0, S.primetimeToString)(e)).filter(h.isNotNullish) : [];
+    return (null == e ? void 0 : e.length) > 0 ? (0, m.formatSelectionList)(e) : null
+  }, [L]);
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)("div", {
-      className: p.scrollBg,
+      className: T.scrollBg,
       children: [(0, n.jsx)("div", {
-        className: p.scrollBgTop
+        className: T.scrollBgTop
       }), (0, n.jsx)("div", {
-        className: p.scrollBgBottom
+        className: T.scrollBgBottom
       })]
     }), (0, n.jsx)("div", {
-      className: p.overviewSidebarWrapper,
+      className: T.overviewSidebarWrapper,
       children: (0, n.jsx)(u.animated.div, {
-        className: p.flex,
-        style: T,
+        className: T.flex,
+        style: g,
         children: (0, n.jsxs)(c.ScrollerNone, {
           fade: !0,
-          className: p.overviewSidebarContent,
+          className: T.overviewSidebarContent,
           children: [(0, n.jsx)(c.Heading, {
             variant: "heading-xl/normal",
             color: "text-muted",
-            className: p.overviewHeaderText,
-            children: S.default.Messages.CLAN_SETUP_OVERVIEW_TITLE.format({
-              guildName: A
+            className: T.overviewHeaderText,
+            children: I.default.Messages.CLAN_SETUP_OVERVIEW_TITLE.format({
+              guildName: N
             })
           }), (0, n.jsx)(c.Text, {
             variant: "text-sm/normal",
             color: "text-muted",
-            className: p.overviewText,
-            children: S.default.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({
+            className: T.overviewText,
+            children: I.default.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({
               date: o()().format("MMMM YYYY")
             })
-          }), null != L ? null != M ? (0, n.jsx)(c.Text, {
+          }), null != M ? null != P ? (0, n.jsx)(c.Text, {
             variant: "text-sm/normal",
             color: "text-muted",
-            className: p.overviewText,
-            children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMES_AND_PLAYSTYLE.format({
-              playstyle: M,
-              games: L
+            className: T.overviewText,
+            children: I.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMES_AND_PLAYSTYLE.format({
+              playstyle: P,
+              games: M
             })
           }) : (0, n.jsx)(c.Text, {
             variant: "text-sm/normal",
             color: "text-muted",
-            className: p.overviewText,
-            children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMES.format({
-              games: L
+            className: T.overviewText,
+            children: I.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMES.format({
+              games: M
             })
           }) : (0, n.jsx)(c.Text, {
             variant: "text-sm/normal",
             color: "text-muted",
-            className: p.overviewText,
-            children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_DEFAULT
-          }), null != P ? (0, n.jsx)(c.Text, {
+            className: T.overviewText,
+            children: I.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_DEFAULT
+          }), null != x ? (0, n.jsx)(c.Text, {
             variant: "text-sm/normal",
             color: "text-muted",
-            className: p.overviewText,
-            children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_TRAITS.format({
-              traits: P
+            className: T.overviewText,
+            children: I.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_TRAITS.format({
+              traits: x
             })
-          }) : null, null != x ? (0, n.jsx)(c.Text, {
+          }) : null, null != y ? (0, n.jsx)(c.Text, {
             variant: "text-sm/normal",
             color: "text-muted",
-            className: p.overviewText,
-            children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMETIME.format({
-              selectedTimes: x
+            className: T.overviewText,
+            children: I.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMETIME.format({
+              selectedTimes: y
             })
           }) : null, (0, n.jsx)(c.Text, {
             variant: "text-sm/normal",
             color: "text-muted",
-            className: i()(p.overviewText, p.lastParagraph),
-            children: S.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_WRAP
+            className: i()(T.overviewText, T.lastParagraph),
+            children: I.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_WRAP
           }), (0, n.jsxs)(c.Clickable, {
             onClick: () => {
               null == r || r(!0)
             },
-            className: i()(p.signatureBlock, {
-              [p.clickable]: null != r
+            className: i()(T.signatureBlock, {
+              [T.clickable]: null != r
             }),
             children: [(0, n.jsx)("div", {
-              ref: g
+              ref: A
             }), (0, n.jsx)(c.Text, {
               variant: "text-md/normal",
               color: "none",
@@ -140,13 +127,13 @@ t.default = e => {
             }), l ? (0, n.jsx)(c.Text, {
               variant: "text-lg/normal",
               color: "header-primary",
-              className: p.signatureText,
+              className: T.signatureText,
               children: null === (t = E.default.getCurrentUser()) || void 0 === t ? void 0 : t.username
             }) : (0, n.jsx)(c.Text, {
               variant: "text-lg/normal",
               color: "none",
-              className: p.signatureText,
-              children: S.default.Messages.CLAN_SETUP_OVERVIEW_SIGNATURE
+              className: T.signatureText,
+              children: I.default.Messages.CLAN_SETUP_OVERVIEW_SIGNATURE
             })]
           })]
         })

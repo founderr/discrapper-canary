@@ -280,15 +280,10 @@ function j() {
       }
     }) : []),
     c = s.useCallback(e => {
-      if (3 === t.length) return;
-      let n = T.default.getGameById(e);
-      null != n && a([...t, {
-        applicationId: e,
-        name: n.name
-      }])
+      if (3 !== t.length) null != T.default.getGameById(e) && a([...t, e])
     }, [t, a]),
     h = s.useCallback(n => {
-      if (!!U(e, n)) a(t.filter(e => e.applicationId !== n))
+      if (!!U(e, n)) a(t.filter(e => e !== n))
     }, [e, t, a]);
   return (0, n.jsxs)(O.default, {
     children: [(0, n.jsxs)("div", {
@@ -323,12 +318,11 @@ function j() {
           }), (0, n.jsx)("div", {
             className: x.selectedSection,
             children: t.map(t => (0, n.jsx)(_.default, {
-              applicationId: t.applicationId,
-              name: t.name,
+              applicationId: t,
               onClick: h,
-              imageContainerClassName: U(e, t.applicationId) ? x.clickable : void 0,
+              imageContainerClassName: U(e, t) ? x.clickable : void 0,
               selected: !0
-            }, t.applicationId))
+            }, t))
           })]
         })
       }), (0, n.jsx)("div", {
@@ -341,7 +335,6 @@ function j() {
           }), (0, n.jsx)("div", {
             className: x.selectedSection,
             children: u.map(e => (0, n.jsx)(_.default, {
-              name: e.name,
               applicationId: e.applicationId,
               imageContainerClassName: x.clickable,
               onClick: c

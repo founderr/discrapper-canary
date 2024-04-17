@@ -15,7 +15,7 @@ var n = a("735250"),
 t.default = e => {
   let {
     handleUpdate: t,
-    selectedGames: a,
+    gameApplicationIds: a,
     error: _,
     requiredGameId: C
   } = e, m = (0, l.useStateFromStores)([o.default], () => o.default.getId()), {
@@ -23,33 +23,22 @@ t.default = e => {
   } = (0, r.useUserRecentGames)(m), {
     options: p,
     matchSorterOptions: I
-  } = (0, d.useClanSetupGameSelectableSearch)(), T = (0, l.useStateFromStoresArray)([u.default], () => null != S ? S.map(e => {
-    let t = u.default.getGameById(e.applicationId);
-    return {
-      ...e,
-      name: null == t ? void 0 : t.name
-    }
-  }) : []);
+  } = (0, d.useClanSetupGameSelectableSearch)();
   s.useEffect(() => {
-    null != C && !a.has(C) && p.length > 0 && A(C)
+    null != C && !a.has(C) && p.length > 0 && g(C)
   }, [p.length, C]);
-  let g = e => {
+  let T = e => {
       if (!a.has(e) || e === C) return;
-      let n = new Map(a);
+      let n = new Set(a);
       n.delete(e), t({
-        selectedGames: n
+        gameApplicationIds: n
       })
     },
-    A = e => {
-      if (a.size === f.MAX_NUM_SELECTED_GAMES || a.has(e)) return;
-      let n = u.default.getGameById(e);
-      if (null == n) return;
-      let s = new Map(a);
-      s.set(e, {
-        id: e,
-        name: n.name
-      }), t({
-        selectedGames: s
+    g = e => {
+      if (a.size === f.MAX_NUM_SELECTED_GAMES || a.has(e) || null == u.default.getGameById(e)) return;
+      let n = new Set(a);
+      n.add(e), t({
+        gameApplicationIds: n
       })
     };
   return (0, n.jsxs)("div", {
@@ -70,7 +59,7 @@ t.default = e => {
         options: p,
         value: "",
         placeholder: E.default.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
-        onChange: A,
+        onChange: g,
         isDisabled: a.size === f.MAX_NUM_SELECTED_GAMES,
         matchSorterOptions: I
       })
@@ -89,18 +78,14 @@ t.default = e => {
           children: E.default.Messages.CLAN_SETUP_SELECTED_GAMES
         }), (0, n.jsx)("div", {
           className: h.selectedSection,
-          children: Array.from(a.entries()).map(e => {
-            let [t, a] = e;
-            return (0, n.jsx)(c.default, {
-              applicationId: t,
-              name: a.name,
-              onClick: t !== C ? g : void 0,
-              imageContainerClassName: t !== C ? h.removableGame : void 0,
-              selected: !0
-            }, t)
-          })
+          children: Array.from(a).map(e => (0, n.jsx)(c.default, {
+            applicationId: e,
+            onClick: e !== C ? T : void 0,
+            imageContainerClassName: e !== C ? h.removableGame : void 0,
+            selected: !0
+          }, e))
         })]
-      }), T.length > 0 && (0, n.jsxs)(n.Fragment, {
+      }), null != S && S.length > 0 && (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)(i.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
@@ -108,10 +93,9 @@ t.default = e => {
           children: E.default.Messages.RECENT_GAMES
         }), (0, n.jsx)("div", {
           className: h.selectedSection,
-          children: T.map(e => (0, n.jsx)(c.default, {
-            name: e.name,
+          children: S.map(e => (0, n.jsx)(c.default, {
             applicationId: e.applicationId,
-            onClick: A,
+            onClick: g,
             imageContainerClassName: h.clickable
           }, e.applicationId))
         })]

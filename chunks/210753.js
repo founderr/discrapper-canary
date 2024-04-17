@@ -47,7 +47,7 @@ function f(e, t) {
   } : void 0, [t]);
   return (0, i.useStateFromStoresObject)([u.default], () => ({
     isFetching: u.default.isFetching(e),
-    name: u.default.getLocalizedName(e),
+    localizedName: u.default.getLocalizedName(e),
     themes: u.default.getThemes(e),
     coverImageUrl: u.default.getCoverImageUrl(e, a)
   }))

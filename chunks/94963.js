@@ -207,7 +207,7 @@ t.default = e => {
             name: null !== (a = null == d ? void 0 : d.name) && void 0 !== a ? a : "",
             description: o.description,
             memberCount: c,
-            games: Array.from(o.selectedGames.keys()),
+            games: Array.from(o.gameApplicationIds),
             playstyle: o.playstyle,
             traits: Array.from(o.interests),
             primetime: (0, p.convertPrimeTimeSelectionToRRule)(o.primetime),

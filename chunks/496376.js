@@ -41,7 +41,7 @@ let M = [R.ClanSetupSteps.FOUNDATIONAL_INTRO, R.ClanSetupSteps.GAMES, R.ClanSetu
       onLastStep: u
     } = e, {
       currentStep: d,
-      selectedGames: E,
+      gameApplicationIds: E,
       playstyle: h,
       interests: _,
       description: C,
@@ -63,7 +63,7 @@ let M = [R.ClanSetupSteps.FOUNDATIONAL_INTRO, R.ClanSetupSteps.GAMES, R.ClanSetu
         disableNextStep: !1
       },
       [R.ClanSetupSteps.UTILITY_TRAITS]: {
-        disableNextStep: 0 === _.size
+        disableNextStep: !1
       },
       [R.ClanSetupSteps.INTERESTS]: {
         disableNextStep: 0 === _.size
@@ -167,7 +167,7 @@ t.default = e => {
     }
   }), {
     requiredGameId: P,
-    selectedGames: y,
+    gameApplicationIds: y,
     playstyle: D,
     interests: b,
     description: U,
@@ -215,9 +215,9 @@ t.default = e => {
               case R.ClanSetupSteps.GAMES:
                 return (0, n.jsx)(S.default, {
                   handleUpdate: Y,
-                  selectedGames: y,
+                  gameApplicationIds: y,
                   requiredGameId: P,
-                  error: f.selectedGames
+                  error: f.gameApplicationIds
                 });
               case R.ClanSetupSteps.PLAYSTYLE:
                 return (0, n.jsx)(g.default, {

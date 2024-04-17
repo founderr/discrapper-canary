@@ -26,7 +26,7 @@ let f = {},
 
 function _() {
   return {
-    selectedGames: new Map,
+    gameApplicationIds: new Set,
     playstyle: d.ClanPlaystyles.NONE,
     interests: new Set,
     description: "",
@@ -72,7 +72,7 @@ class m extends(n = l.default.PersistedStore) {
           }
         });
         return {
-          selectedGames: new Map(Object.entries(e.selectedGames)),
+          gameApplicationIds: new Set(e.gameApplicationIds),
           playstyle: e.playstyle,
           interests: new Set(e.interests),
           description: e.description,
@@ -99,7 +99,7 @@ class m extends(n = l.default.PersistedStore) {
     for (let a in f) {
       var t;
       e[a] = {
-        selectedGames: Object.fromEntries((t = f[a]).selectedGames.entries()),
+        gameApplicationIds: Array.from((t = f[a]).gameApplicationIds),
         playstyle: t.playstyle,
         interests: Array.from(t.interests),
         description: t.description,
@@ -156,7 +156,7 @@ c(m, "displayName", "ClanSetupStore"), c(m, "persistKey", "ClanSetupStore"), t.d
       error: a
     } = e;
     E = !1, h[t] = {
-      selectedGames: a.getFirstFieldErrorMessage("game_application_ids"),
+      gameApplicationIds: a.getFirstFieldErrorMessage("game_application_ids"),
       playstyle: a.getFirstFieldErrorMessage("play_style"),
       description: a.getFirstFieldErrorMessage("description"),
       wildcardDescriptors: a.getFirstFieldErrorMessage("wildcard_descriptors"),
