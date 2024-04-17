@@ -119630,10 +119630,14 @@ html .invoiceCancelRow__6ff3e {
     align-items: center
 }
 
+.separator__391be {
+    height: 1px;
+    margin: 0 10px;
+    box-shadow: 0 -1px 0 hsl(var(--white-500-hsl)/4%)
+}
+
 .footer__3caf5 {
     display: flex;
-    border-top: 1px solid#272a2e;
-    height: 81px;
     align-items: center;
     align-content: center;
     width: 100%

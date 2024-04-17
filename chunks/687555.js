@@ -15,8 +15,8 @@ var i = t("735250"),
   h = t("529840"),
   p = t("689938"),
   _ = t("415687"),
-  L = t("99713"),
-  j = t("7234");
+  j = t("99713"),
+  L = t("7234");
 
 function m(e) {
   let {
@@ -41,10 +41,12 @@ function m(e) {
     }), (0, i.jsx)("div", {
       className: _.erroredContent,
       children: (0, i.jsx)(c.default, {
-        src: L,
+        src: j,
         width: 178,
         height: 190
       })
+    }), (0, i.jsx)("div", {
+      className: _.separator
     }), (0, i.jsx)("div", {
       className: _.footer,
       children: (0, i.jsx)(o.Button, {
@@ -59,7 +61,7 @@ s.default = function(e) {
   let {
     onClose: s,
     onShare: t
-  } = e, a = (0, n.useStateFromStores)([u.default], () => u.default.getReferralsRemaining()), [L, R] = l.useState(0), [E, g] = l.useState(""), [v, S] = l.useState([]), [y, A] = l.useState(!1), [M, O] = l.useState(!1), F = function(e, s) {
+  } = e, a = (0, n.useStateFromStores)([u.default], () => u.default.getReferralsRemaining()), [j, R] = l.useState(0), [E, g] = l.useState(""), [v, S] = l.useState([]), [y, A] = l.useState(!1), [M, O] = l.useState(!1), F = function(e, s) {
     let [t, i] = l.useState(e);
     return l.useEffect(() => {
       let t = setTimeout(() => {
@@ -88,7 +90,7 @@ s.default = function(e) {
       A(!1)
     }
   }, I = (0, d.useIsVisible)(e => {
-    e && !y && B(L)
+    e && !y && B(j)
   });
   return M ? (0, i.jsx)(m, {
     onClose: s
@@ -100,7 +102,7 @@ s.default = function(e) {
         className: _.title,
         children: [(0, i.jsx)(c.default, {
           className: _.titleImage,
-          src: j,
+          src: L,
           width: 55,
           height: 38
         }), (0, i.jsx)(o.Heading, {
@@ -135,6 +137,8 @@ s.default = function(e) {
       }, e.id)), y && (0, i.jsx)(o.Spinner, {}), (0, i.jsx)("div", {
         ref: I
       })]
+    }), (0, i.jsx)("div", {
+      className: _.separator
     }), (0, i.jsx)("div", {
       className: _.footer,
       children: (0, i.jsx)(o.Button, {
