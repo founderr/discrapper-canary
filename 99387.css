@@ -82945,6 +82945,17 @@ input::-webkit-inner-spin-button {
     font-weight: 600
 }
 
+.annualPlanOptionDiscount_b32fc7 {
+    margin-top: 3px;
+    align-content: center;
+    border-radius: 8px;
+    background-color: var(--green-360);
+    font-weight: 600;
+    padding: 0 6px;
+    margin-right: 8px;
+    position: relative
+}
+
 .planOptionSubtextContainer__0e562 {
     display: flex;
     justify-content: flex-end;
