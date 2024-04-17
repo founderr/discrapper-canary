@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n("47120");
-var a, s, l, i, r = n("153832"),
-  o = n("442837"),
-  c = n("570140"),
-  d = n("944163"),
-  u = n("227120"),
-  S = n("116175"),
-  T = n("308083");
+s.r(t), s("47120");
+var n, a, l, i, r = s("153832"),
+  o = s("442837"),
+  d = s("570140"),
+  c = s("944163"),
+  u = s("227120"),
+  S = s("116175"),
+  T = s("308083");
 let E = () => ({
     gameApplicationIds: new Set,
     playstyle: T.ClanPlaystyles.NONE,
@@ -20,7 +20,7 @@ let E = () => ({
       time: u.ExtendedTimeOptions.MORNING
     }],
     verificationForm: {
-      ...d.NO_MEMBER_VERIFICATION_FORM
+      ...c.NO_MEMBER_VERIFICATION_FORM
     },
     badgeKind: S.ClanBadgeKind.SWORD,
     badgePrimaryColor: S.CLAN_BADGE_PALETTE_PRESETS["0"].primary,
@@ -31,47 +31,62 @@ let E = () => ({
   }),
   p = E(),
   C = !1,
-  m = {},
-  N = null;
-class I extends(a = o.default.Store) {
-  getState(e) {
-    return e !== N ? {} : {
+  m = {};
+class _ extends(n = o.default.Store) {
+  getState() {
+    return {
       settings: p,
       errors: m,
       submitting: C
     }
   }
 }
-i = "ClanSettingsStore", (l = "displayName") in(s = I) ? Object.defineProperty(s, l, {
+i = "ClanSettingsStore", (l = "displayName") in(a = _) ? Object.defineProperty(a, l, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[l] = i, t.default = new I(c.default, {
-  CLAN_SETTINGS_FETCH: function(e) {
+}) : a[l] = i, t.default = new _(d.default, {
+  CLAN_SETTINGS_FETCH_START: function() {
+    C = !1, p = E(), m = {}
+  },
+  CLAN_SETTINGS_FETCH_SUCCESS: function(e) {
     let {
-      guildId: t,
-      settings: n
+      settings: t
     } = e;
-    N = t, p = {
+    p = {
       ...E(),
-      ...n
+      ...t
     }
   },
   CLAN_SETTINGS_UPDATE: function(e) {
     let {
-      guildId: t,
-      updates: n
+      updates: t
     } = e;
-    for (let e in N !== t ? (p = {
-        ...E(),
-        ...n
-      }, N = t) : p = {
+    for (let e in p = {
         ...p,
-        ...n
-      }, n) delete m[e]
+        ...t
+      }, t) delete m[e]
   },
   CLAN_SETTINGS_SUBMIT: function() {
     C = !0, m = {}
+  },
+  CLAN_SETTINGS_SUBMIT_SUCCESS: function() {
+    C = !1, m = {}
+  },
+  CLAN_SETTINGS_SUBMIT_ERROR: function(e) {
+    var t;
+    let {
+      error: s
+    } = e;
+    C = !1, m = {
+      gameApplicationIds: s.getFirstFieldErrorMessage("game_application_ids"),
+      playstyle: s.getFirstFieldErrorMessage("play_style"),
+      description: s.getFirstFieldErrorMessage("description"),
+      wildcardDescriptors: s.getFirstFieldErrorMessage("wildcard_descriptors"),
+      interests: s.getFirstFieldErrorMessage("search_terms"),
+      tag: s.getFirstFieldErrorMessage("tag"),
+      primetime: null !== (t = s.getFirstFieldErrorMessage("prime_time_updates")) && void 0 !== t ? t : s.getFirstFieldErrorMessage("new_prime_times")
+    }
   }
 })

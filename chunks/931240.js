@@ -7,10 +7,16 @@ n.r(t), n.d(t, {
     return u
   },
   fetchClanSettings: function() {
-    return I
+    return T
   },
   getClanInfo: function() {
     return d
+  },
+  saveClanSettings: function() {
+    return f
+  },
+  updateClanSettings: function() {
+    return E
   },
   updateClanSetup: function() {
     return c
@@ -31,7 +37,7 @@ async function u(e, t) {
     guildId: e
   });
   try {
-    await r.HTTP.put({
+    await r.HTTP.post({
       url: l.Endpoints.GUILD_CONVERT_TO_CLAN(e),
       body: {
         tag: t.tag,
@@ -93,7 +99,15 @@ function c(e, t) {
     updates: t
   })
 }
-let E = e => {
+
+function E(e, t) {
+  s.default.dispatch({
+    type: "CLAN_SETTINGS_UPDATE",
+    guildId: e,
+    updates: t
+  })
+}
+let I = e => {
   var t, n, i, r, s, a;
   return {
     tag: e.tag,
@@ -116,13 +130,39 @@ let E = e => {
     brandSecondaryColor: e.brand_color_secondary
   }
 };
-async function I(e) {
+async function T(e) {
+  s.default.dispatch({
+    type: "CLAN_SETTINGS_FETCH_START"
+  });
   let t = await r.HTTP.get({
     url: l.Endpoints.CLAN_SETTINGS(e)
   });
   s.default.dispatch({
-    type: "CLAN_SETTINGS_FETCH",
+    type: "CLAN_SETTINGS_FETCH_SUCCESS",
     guildId: e,
-    settings: E(t.body)
+    settings: I(t.body)
+  })
+}
+async function f(e, t) {
+  var n, i, s, a;
+  return await r.HTTP.patch({
+    url: l.Endpoints.CLAN_SETTINGS(e),
+    body: {
+      tag: t.tag,
+      description: t.description,
+      play_style: t.playstyle,
+      search_terms: Array.from(null !== (i = t.interests) && void 0 !== i ? i : new Set),
+      game_application_ids: Array.from(null !== (s = t.gameApplicationIds) && void 0 !== s ? s : new Set),
+      verification_form: {
+        form_fields: null !== (a = null === (n = t.verificationForm) || void 0 === n ? void 0 : n.formFields) && void 0 !== a ? a : []
+      },
+      badge: t.badgeKind,
+      badge_color_primary: t.badgePrimaryColor,
+      badge_color_secondary: t.badgeSecondaryColor,
+      banner: t.banner,
+      brand_color_primary: t.brandPrimaryColor,
+      brand_color_secondary: t.brandSecondaryColor,
+      wildcard_descriptors: t.wildcardDescriptors
+    }
   })
 }
