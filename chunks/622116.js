@@ -17,8 +17,8 @@ var a = n("442837"),
   f = n("430824"),
   E = n("699516"),
   _ = n("594174"),
-  T = n("797053"),
-  m = n("934415"),
+  m = n("797053"),
+  T = n("934415"),
   I = n("900849"),
   p = n("981631");
 
@@ -38,7 +38,7 @@ function h(e) {
         onMouseEnter: a,
         onMouseLeave: o
       } = e;
-      return (0, s.jsx)(T.default, {
+      return (0, s.jsx)(m.default, {
         role: "link",
         className: N,
         onClick: e => {
@@ -65,7 +65,7 @@ function h(e) {
         },
         onMouseEnter: a,
         onMouseLeave: o,
-        iconType: (0, m.getMentionIconType)(t),
+        iconType: (0, T.getMentionIconType)(t),
         children: C
       })
     }

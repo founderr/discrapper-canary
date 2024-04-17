@@ -12,8 +12,8 @@ var s = n("735250"),
   f = n("264674"),
   E = n("502568"),
   _ = n("35818"),
-  T = n("689938"),
-  m = n("210652");
+  m = n("689938"),
+  T = n("210652");
 
 function I(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -41,16 +41,16 @@ class p extends a.PureComponent {
       case "UPDATE_AVAILABLE":
         return (0, s.jsx)(E.Icon, {
           hideOnClick: !1,
-          tooltip: T.default.Messages.UPDATE_AVAILABLE,
-          foreground: m.downloadArrow,
-          background: m.cloud,
+          tooltip: m.default.Messages.UPDATE_AVAILABLE,
+          foreground: T.downloadArrow,
+          background: T.cloud,
           icon: f.default
         });
       case "UPDATE_MANUALLY":
       case "UPDATE_DOWNLOADED":
         return (0, s.jsx)(E.Icon, {
-          tooltip: T.default.Messages.UPDATE_DOWNLOADED,
-          foreground: m.updateIconForeground,
+          tooltip: m.default.Messages.UPDATE_DOWNLOADED,
+          foreground: T.updateIconForeground,
           onClick: this.handleInstallDownload,
           icon: c.default
         });
@@ -64,11 +64,11 @@ class p extends a.PureComponent {
       clicked: !1
     }), I(this, "handleInstallDownload", () => {
       d.default.isConnected() ? r.default.show({
-        title: T.default.Messages.UPDATE_DURING_CALL_TITLE,
-        body: T.default.Messages.UPDATE_DURING_CALL_BODY,
+        title: m.default.Messages.UPDATE_DURING_CALL_TITLE,
+        body: m.default.Messages.UPDATE_DURING_CALL_BODY,
         onConfirm: this.doUpdate,
-        cancelText: T.default.Messages.CANCEL,
-        confirmText: T.default.Messages.UPDATE_DURING_CALL_CONTINUE
+        cancelText: m.default.Messages.CANCEL,
+        confirmText: m.default.Messages.UPDATE_DURING_CALL_CONTINUE
       }) : this.doUpdate()
     }), I(this, "doUpdate", () => {
       !this.state.clicked && (this.setState({

@@ -46,8 +46,8 @@ function L() {
       pendingGlobalName: F,
       pendingBanner: G,
       pendingBio: k,
-      pendingPronouns: H,
-      pendingAccentColor: w,
+      pendingPronouns: w,
+      pendingAccentColor: H,
       pendingThemeColors: V,
       errors: Y
     } = (0, i.useStateFromStoresObject)([x.default], () => {
@@ -90,7 +90,7 @@ function L() {
       sectionTitle: v.default.Messages.USER_SETTINGS_PRONOUNS,
       errors: Y.pronouns,
       onPronounsChange: p.setPendingPronouns,
-      pendingPronouns: H,
+      pendingPronouns: w,
       currentPronouns: null !== (j = null == y ? void 0 : y.pronouns) && void 0 !== j ? j : ""
     }, "pronouns"), (0, a.jsx)(E.default, {
       onAvatarChange: r.setPendingAvatar,
@@ -120,7 +120,7 @@ function L() {
     }) : (0, a.jsx)(_.default, {
       user: U,
       savedUserColor: null == y ? void 0 : y.accentColor,
-      pendingColor: w,
+      pendingColor: H,
       setPendingAccentColor: p.setPendingAccentColor
     }, "color"), (0, a.jsx)(c.default, {
       sectionTitle: v.default.Messages.USER_SETTINGS_ABOUT_ME,

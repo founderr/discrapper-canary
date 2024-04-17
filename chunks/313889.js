@@ -1,15 +1,15 @@
 "use strict";
-var o, u;
+var o, _;
 n.r(t), n.d(t, {
   AutomodAlertActionType: function() {
     return o
   },
   parseAlertActionsExecution: function() {
-    return r
+    return u
   }
-}), (u = o || (o = {}))[u.SET_COMPLETED = 1] = "SET_COMPLETED", u[u.UNSET_COMPLETED = 2] = "UNSET_COMPLETED", u[u.DELETE_USER_MESSAGE = 3] = "DELETE_USER_MESSAGE", u[u.SUBMIT_FEEDBACK = 4] = "SUBMIT_FEEDBACK";
+}), (_ = o || (o = {}))[_.SET_COMPLETED = 1] = "SET_COMPLETED", _[_.UNSET_COMPLETED = 2] = "UNSET_COMPLETED", _[_.DELETE_USER_MESSAGE = 3] = "DELETE_USER_MESSAGE", _[_.SUBMIT_FEEDBACK = 4] = "SUBMIT_FEEDBACK";
 
-function r(e) {
+function u(e) {
   if (null == e) return null;
   let t = function(e) {
     if (null == e) return null;

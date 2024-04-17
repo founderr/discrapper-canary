@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   computeBasicPollChatData: function() {
-    return L
-  },
-  default: function() {
     return x
   },
+  default: function() {
+    return L
+  },
   isPollMessageDirectlyInteractive: function() {
-    return v
+    return O
   },
   reactionForId: function() {
     return R
@@ -25,8 +25,8 @@ var s = n("278074"),
   f = n("375954"),
   E = n("594174"),
   _ = n("768581"),
-  T = n("176354"),
-  m = n("358085"),
+  m = n("176354"),
+  T = n("358085"),
   I = n("798628"),
   p = n("79390"),
   h = n("839963"),
@@ -47,7 +47,7 @@ function R(e, t) {
   for (let n of e)
     if (("number" == typeof n.emoji.id ? "".concat(n.emoji.id) : n.emoji.id) === t) return n
 }
-let O = e => (0, s.match)(e).with({
+let v = e => (0, s.match)(e).with({
   isExpired: !0,
   isLeader: !0,
   didSelfVote: !0
@@ -73,11 +73,11 @@ let O = e => (0, s.match)(e).with({
   showResults: !0
 }, () => "notVoted").otherwise(() => "normalVote");
 
-function v(e) {
+function O(e) {
   return f.default.getMessage(e.channel_id, e.id) === e && !0
 }
 
-function L(e, t) {
+function x(e, t) {
   var n, s, a, l;
   let {
     formattedExpirationLabel: i
@@ -87,24 +87,24 @@ function L(e, t) {
   if (null == r) return;
   let E = e.state === A.MessageStates.SENT,
     _ = E ? null != i ? i : (0, C.formatExpirationLabel)(r.expiry) : "",
-    T = null == _ && E,
+    m = null == _ && E,
     {
-      selectedAnswerIds: m,
+      selectedAnswerIds: T,
       submitting: p,
       editing: h,
       showResults: N
     } = null !== (a = null != t ? t : (0, I.getPollState)(e.getChannelId(), e.id)) && void 0 !== a ? a : M,
     S = e.reactions,
     g = !0;
-  if (!v(e)) {
+  if (!O(e)) {
     let t = f.default.getMessage(e.channel_id, e.id);
     g = !e.isSearchHit && null != t, S = null !== (l = null == t ? void 0 : t.reactions) && void 0 !== l ? l : S
   }
-  let R = m.size > 0,
-    O = S.some(e => !0 === e.me_vote),
-    L = !h && O,
-    x = L || T || N,
-    D = E && g && (!O || h || x),
+  let R = T.size > 0,
+    v = S.some(e => !0 === e.me_vote),
+    x = !h && v,
+    L = x || m || N,
+    D = E && g && (!v || h || L),
     P = null === (s = d.default.getChannel(e.getChannelId())) || void 0 === s ? void 0 : null === (n = s.getGuildId) || void 0 === n ? void 0 : n.call(s),
     y = null != P ? c.default.getSelfMember(P) : null,
     U = (0, o.hasAutomodQuarantinedProfile)(y),
@@ -112,26 +112,26 @@ function L(e, t) {
   return {
     poll: r,
     canTapAnswers: D,
-    canRemoveVote: L && E && !T,
-    canShowVoteCounts: x,
-    canSubmitVote: !p && R && !L && E && !U && !j,
+    canRemoveVote: x && E && !m,
+    canShowVoteCounts: L,
+    canSubmitVote: !p && R && !x && E && !U && !j,
     expirationLabel: _,
     hasSelectedAnswer: R,
-    hasVoted: L,
-    hasVoteRecorded: O,
+    hasVoted: x,
+    hasVoteRecorded: v,
     isEditingVote: h,
-    isExpired: T,
+    isExpired: m,
     isInteractive: g,
     isSent: E,
     reactions: S,
-    selectedAnswerIds: m,
+    selectedAnswerIds: T,
     submitting: p,
-    tapShouldOpenVotersModal: x,
+    tapShouldOpenVotersModal: L,
     showResults: N
   }
 }
 
-function x(e, t) {
+function L(e, t) {
   var n, o;
   let {
     animateEmoji: u = !1,
@@ -145,10 +145,10 @@ function x(e, t) {
   if (null == C) return;
   let A = l.default.useReducedMotion,
     M = null === (o = d.default.getChannel(e.getChannelId())) || void 0 === o ? void 0 : null === (n = o.getGuildId) || void 0 === n ? void 0 : n.call(o),
-    v = (0, N.getAvatarUrl)(C, M),
-    x = I.answers,
+    O = (0, N.getAvatarUrl)(C, M),
+    L = I.answers,
     D = I.layout_type,
-    P = L(e, t, {
+    P = x(e, t, {
       formattedExpirationLabel: f
     });
   if (null == P) return;
@@ -157,8 +157,8 @@ function x(e, t) {
     canRemoveVote: U,
     canShowVoteCounts: j,
     canSubmitVote: b,
-    expirationLabel: G = g.default.Messages.POLL_EXPIRED,
-    hasSelectedAnswer: B,
+    expirationLabel: B = g.default.Messages.POLL_EXPIRED,
+    hasSelectedAnswer: G,
     hasVoted: F,
     isEditingVote: k,
     isExpired: w,
@@ -170,20 +170,20 @@ function x(e, t) {
     showResults: z
   } = P, Q = (0, p.getTotalVotes)(V), q = g.default.Messages.POLL_VOTES_COUNT.format({
     count: Q.toLocaleString()
-  }), J = Math.max(...x.map(e => {
+  }), Z = Math.max(...L.map(e => {
     var t, n;
     let s = R(V, "".concat(e.answer_id));
     return null !== (n = null == s ? void 0 : null === (t = s.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0
-  })), Z = x.map(e => {
+  })), X = L.map(e => {
     var t, n, l;
     let o = "".concat(e.answer_id),
       d = R(V, o),
       c = null !== (n = null == d ? void 0 : null === (t = d.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0,
       f = Y.has(o),
-      E = c >= J && 0 !== c,
-      m = F && null !== (l = null == d ? void 0 : d.me_vote) && void 0 !== l && l,
-      I = O({
-        didSelfVote: m,
+      E = c >= Z && 0 !== c,
+      T = F && null !== (l = null == d ? void 0 : d.me_vote) && void 0 !== l && l,
+      I = v({
+        didSelfVote: T,
         hasVoted: F,
         isExpired: w,
         isSelected: f,
@@ -210,7 +210,7 @@ function x(e, t) {
             id: null == e.id ? null : "".concat(e.id),
             name: e.name,
             displayName: null == e.id ? r.default.convertSurrogateToName(e.name) : e.name,
-            src: null == e.id ? T.default.getURL(e.name) : _.default.getEmojiURL({
+            src: null == e.id ? m.default.getURL(e.name) : _.default.getEmojiURL({
               id: e.id,
               animated: o,
               size: n
@@ -225,7 +225,7 @@ function x(e, t) {
       },
       isSelected: f,
       isVictor: w && E,
-      didSelfVote: m,
+      didSelfVote: T,
       style: I,
       shouldAnimateTransition: K && !A,
       votesPercentage: Math.round(100 * (0 === Q ? 0 : c / Q)),
@@ -233,7 +233,7 @@ function x(e, t) {
         count: c.toLocaleString()
       }))
     }
-  }), X = (0, s.match)({
+  }), J = (0, s.match)({
     isExpired: w,
     canSubmitVote: b,
     hasVoted: F,
@@ -250,7 +250,7 @@ function x(e, t) {
   }, () => ({
     label: g.default.Messages.POLL_SUBMIT_VOTE,
     presentation: "button",
-    enabled: B,
+    enabled: G,
     type: "submit"
   })).with({
     canRemoveVote: !0
@@ -292,7 +292,7 @@ function x(e, t) {
     type: "cancel"
   })).otherwise(() => ({
     label: q,
-    secondaryLabel: G,
+    secondaryLabel: B,
     presentation: "text",
     enabled: !0,
     type: "showVoterDetails"
@@ -315,7 +315,7 @@ function x(e, t) {
   return {
     question: I.question,
     promptLabel: en,
-    answers: Z,
+    answers: X,
     answersInteraction: (0, s.match)({
       tapShouldOpenVotersModal: W,
       canTapAnswers: y,
@@ -331,7 +331,7 @@ function x(e, t) {
     }, () => h.PollChatAnswerInteractionType.CHECKBOXES).exhaustive(),
     answerTapAccessibilityLabel: (0, s.match)({
       tapShouldOpenVotersModal: W,
-      platform: (0, m.getNativePlatform)()
+      platform: (0, T.getNativePlatform)()
     }).with({
       tapShouldOpenVotersModal: !0,
       platform: "android"
@@ -348,15 +348,15 @@ function x(e, t) {
       layoutType: D
     }),
     containerStyle: "normal",
-    primaryAction: X,
+    primaryAction: J,
     isInteractive: H,
     canTapAnswers: y,
     canSelectMultipleAnswers: et,
-    hasSelectedAnswer: B,
+    hasSelectedAnswer: G,
     canShowVoteCounts: j,
     hasVoted: F,
     isExpired: w,
-    myAvatarUrl: v,
+    myAvatarUrl: O,
     secondaryAction: $,
     tertiaryAction: ee
   }

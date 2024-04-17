@@ -17,8 +17,8 @@ var a = n("399606"),
   f = n("612111"),
   E = n("623488"),
   _ = n("942833"),
-  T = n("391181"),
-  m = n("964793"),
+  m = n("391181"),
+  T = n("964793"),
   I = n("226060"),
   p = n("981631");
 
@@ -34,20 +34,20 @@ function h(e) {
     cardHeight: g,
     thumbnailHeight: M,
     descriptionTextVariant: R = "text-sm/normal",
-    showOpaqueBackground: O = !1
-  } = e, v = (0, a.useStateFromStores)([o.default], () => o.default.getGuild(n), [n]), L = (0, a.useStateFromStores)([o.default], () => {
+    showOpaqueBackground: v = !1
+  } = e, O = (0, a.useStateFromStores)([o.default], () => o.default.getGuild(n), [n]), x = (0, a.useStateFromStores)([o.default], () => {
     var e;
     return o.default.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : p.EMPTY_STRING_SNOWFLAKE_ID)
-  }), x = (0, l.useListingThumbnailUrl)(t, 600), D = (0, _.useProductType)(t), P = (0, d.useCanManageGuildProduct)(v), {
+  }), L = (0, l.useListingThumbnailUrl)(t, 600), D = (0, _.useProductType)(t), P = (0, d.useCanManageGuildProduct)(O), {
     shouldHideGuildPurchaseEntryPoints: y
   } = (0, r.useShouldHideGuildPurchaseEntryPoints)(n), U = (0, _.usePrice)(t);
-  if (null == v || y) return null;
-  let j = () => (0, m.openGuildProductInfoModal)({
+  if (null == O || y) return null;
+  let j = () => (0, T.openGuildProductInfoModal)({
       guildId: n,
       guildProductListingId: t.id,
       analyticsLocation: h
     }),
-    b = (0, s.jsx)(T.GuildProductListingPopout, {
+    b = (0, s.jsx)(m.GuildProductListingPopout, {
       product: t,
       guildId: n,
       showEditProduct: P,
@@ -57,7 +57,7 @@ function h(e) {
       showDeleteProduct: !1,
       showReportProduct: !0,
       onEditProduct: P ? () => {
-        f.openModal(v.id, t.id)
+        f.openModal(O.id, t.id)
       } : () => {},
       onUnpublishProduct: () => {},
       onDeleteProduct: () => {},
@@ -72,11 +72,11 @@ function h(e) {
       onTestDownload: () => {}
     });
   return (0, s.jsx)(E.default, {
-    imageUrl: x,
+    imageUrl: L,
     name: t.name,
     description: t.description,
     formattedPrice: U,
-    role: L,
+    role: x,
     ctaComponent: (0, s.jsx)(I.default, {
       guildId: n,
       guildProductListingId: t.id,
@@ -87,7 +87,7 @@ function h(e) {
     onShowFullDescription: j,
     onTapCard: j,
     actionMenu: b,
-    showOpaqueBackground: O,
+    showOpaqueBackground: v,
     hideRoleTag: S,
     lineClamp: C,
     cardWidth: A,

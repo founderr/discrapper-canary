@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("594174"),
   E = n("897285"),
   _ = n("924301"),
-  T = n("482241"),
-  m = n("11868"),
+  m = n("482241"),
+  T = n("11868"),
   I = n("231338");
 
 function p(e) {
@@ -41,8 +41,8 @@ function p(e) {
     }
   }, [n, p]);
   return a.useEffect(() => {
-    (null == N ? void 0 : N.id) == null && T.default.fetchGuildEvent(n, p), E.default.getGuildEventUserCounts(n, p, null != h ? [h] : []), E.default.getGuildEventsForCurrentUser(n)
-  }, [p, n, null == N ? void 0 : N.id, h]), (0, s.jsx)(m.default, {
+    (null == N ? void 0 : N.id) == null && m.default.fetchGuildEvent(n, p), E.default.getGuildEventUserCounts(n, p, null != h ? [h] : []), E.default.getGuildEventsForCurrentUser(n)
+  }, [p, n, null == N ? void 0 : N.id, h]), (0, s.jsx)(T.default, {
     guild: S,
     channel: C,
     guildScheduledEvent: N,
@@ -52,7 +52,7 @@ function p(e) {
       if ((0, r.shouldShowMembershipVerificationGate)(n)) {
         (0, i.openMemberVerificationModal)(n);
         return
-      }(null == C ? void 0 : C.isGuildStageVoice()) ? (0, o.connectAndOpen)(C) : (null == C ? void 0 : C.isGuildVoice()) && T.default.joinVoiceEvent(C.guild_id, C.id)
+      }(null == C ? void 0 : C.isGuildStageVoice()) ? (0, o.connectAndOpen)(C) : (null == C ? void 0 : C.isGuildVoice()) && m.default.joinVoiceEvent(C.guild_id, C.id)
     },
     recurrenceId: h
   })

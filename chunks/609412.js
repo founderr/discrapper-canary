@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return A
   },
   getBackground: function() {
-    return v
+    return O
   },
   getIcon: function() {
     return M
@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return R
   },
   getMask: function() {
-    return O
+    return v
   }
 });
 var s, a, l, i, r = n("692547"),
@@ -24,8 +24,8 @@ var s, a, l, i, r = n("692547"),
   f = n("387661"),
   E = n("659953"),
   _ = n("319707"),
-  T = n("584914"),
-  m = n("334702"),
+  m = n("584914"),
+  T = n("334702"),
   I = n("333722"),
   p = n("549931"),
   h = n("178561"),
@@ -41,9 +41,9 @@ let C = {
 (a = i || (i = {})).MISSED_MESSAGES = "MISSED_MESSAGES", a.FRIEND_REQUEST_REMINDER = "FRIEND_REQUEST_REMINDER", a.SCHEDULED_GUILD_EVENT = "SCHEDULED_GUILD_EVENT", a.TOP_MESSAGES = "TOP_MESSAGES", a.NOTIFICATION_CENTER = "NOTIFICATION_CENTER", a.UPDATE_PROFILE = "UPDATE_PROFILE", a.FIND_FRIENDS = "FIND_FRIENDS", a.ADD_FRIEND = "ADD_FRIEND", a.FIRST_MESSAGE = "FIRST_MESSAGE";
 let A = {
     MISSED_MESSAGES: I,
-    FRIEND_REQUEST_REMINDER: T,
+    FRIEND_REQUEST_REMINDER: m,
     SCHEDULED_GUILD_EVENT: E,
-    TOP_MESSAGES: m,
+    TOP_MESSAGES: T,
     NOTIFICATION_CENTER: c,
     UPDATE_PROFILE: S,
     FIND_FRIENDS: d,
@@ -84,7 +84,7 @@ let A = {
     if ("icHighlight" === e) return "TOP_MESSAGES";
     return "NOTIFICATION_CENTER"
   },
-  O = e => {
+  v = e => {
     switch (e) {
       case o.NotificationCenterItems.GO_LIVE_PUSH:
         return {
@@ -112,7 +112,7 @@ let A = {
         return null
     }
   },
-  v = e => {
+  O = e => {
     switch (e.item_enum) {
       case o.ItemEnum.UPDATE_PROFILE:
         return u.PROFILE_BACKGROUND;

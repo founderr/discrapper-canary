@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("197409"),
   E = n("51144"),
   _ = n("981631"),
-  T = n("689938"),
-  m = n("558338");
+  m = n("689938"),
+  T = n("558338");
 
 function I(e) {
   var t;
@@ -38,25 +38,25 @@ function I(e) {
   }, [n.code, I]);
   if (null == n.inviter) return null;
   let g = S ? C : A,
-    M = T.default.Messages.INVITE_BUTTON_ADD_FRIEND,
+    M = m.default.Messages.INVITE_BUTTON_ADD_FRIEND,
     R = f.default.Button.Colors.GREEN;
-  S ? (M = T.default.Messages.INVITE_BUTTON_ALREADY_FRIENDS, R = f.default.Button.Colors.PRIMARY) : h && (M = T.default.Messages.INVITE_BUTTON_ADD_FRIEND, R = f.default.Button.Colors.PRIMARY);
-  let O = h ? T.default.Messages.INVITE_BUTTON_TITLE_INVITER_FRIEND : T.default.Messages.INVITE_BUTTON_TITLE_INVITED_FRIEND,
-    v = null != n.inviter ? "".concat(n.inviter.username) : "",
-    L = null != n.inviter ? E.default.getUserTag(n.inviter) : "";
+  S ? (M = m.default.Messages.INVITE_BUTTON_ALREADY_FRIENDS, R = f.default.Button.Colors.PRIMARY) : h && (M = m.default.Messages.INVITE_BUTTON_ADD_FRIEND, R = f.default.Button.Colors.PRIMARY);
+  let v = h ? m.default.Messages.INVITE_BUTTON_TITLE_INVITER_FRIEND : m.default.Messages.INVITE_BUTTON_TITLE_INVITED_FRIEND,
+    O = null != n.inviter ? "".concat(n.inviter.username) : "",
+    x = null != n.inviter ? E.default.getUserTag(n.inviter) : "";
   return (0, s.jsxs)(f.default, {
     children: [(0, s.jsx)(f.default.Header, {
-      text: O
+      text: v
     }), (0, s.jsxs)(f.default.Body, {
       children: [(0, s.jsxs)("div", {
-        className: m.headerLine,
+        className: T.headerLine,
         children: [(0, s.jsx)(f.default.Icon, {
           user: new o.default(n.inviter),
           onClick: S ? g : void 0
         }), (0, s.jsx)(f.default.Info, {
-          title: v,
+          title: O,
           onClick: S ? g : void 0,
-          children: L
+          children: x
         })]
       }), (0, s.jsx)(f.default.Button, {
         onClick: g,

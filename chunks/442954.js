@@ -5,12 +5,12 @@ t.r(r), t.d(r, {
   }
 }), t("47120");
 var a = t("735250"),
-  n = t("470079"),
-  i = t("120356"),
-  l = t.n(i),
+  i = t("470079"),
+  l = t("120356"),
+  n = t.n(l),
   o = t("481060"),
-  s = t("246992"),
-  c = t("779869"),
+  c = t("246992"),
+  s = t("779869"),
   d = t("534477");
 
 function u() {
@@ -44,9 +44,9 @@ function u() {
       label: e,
       value: e
     })),
-    [i, u] = n.useState(r[0].value);
+    [l, u] = i.useState(r[0].value);
   return (0, a.jsx)(o.ScrollerThin, {
-    className: l()(c.panel),
+    className: n()(s.panel),
     children: (0, a.jsx)("div", {
       className: d.panelInner,
       children: (0, a.jsxs)("section", {
@@ -59,14 +59,14 @@ function u() {
           children: [(0, a.jsx)(o.Select, {
             className: d.input,
             options: r,
-            isSelected: e => i === e,
+            isSelected: e => l === e,
             placeholder: "Trial ID",
             serialize: e => String(e),
             select: e => u(e),
-            popoutLayerContext: s.devToolsLayerContext
+            popoutLayerContext: c.devToolsLayerContext
           }), (0, a.jsx)(o.Button, {
             onClick: () => {
-              (0, o.openModalLazy)(e[i])
+              (0, o.openModalLazy)(e[l])
             },
             children: "Open"
           })]

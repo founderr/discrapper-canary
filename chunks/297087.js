@@ -1,25 +1,25 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return a
+    return n
   }
 });
 var i = s("735250");
 s("470079");
-var n = s("325767");
+var a = s("325767");
 
-function a(e) {
+function n(e) {
   let {
     width: t = 24,
     height: s = 24,
-    viewBox: a = "0 0 18 18",
+    viewBox: n = "0 0 18 18",
     ...l
   } = e;
   return (0, i.jsxs)("svg", {
-    ...(0, n.default)(l),
+    ...(0, a.default)(l),
     width: t,
     height: s,
-    viewBox: a,
+    viewBox: n,
     children: [(0, i.jsx)("path", {
       d: "M11.25 10.5C12.0784 10.5 12.75 9.82843 12.75 9C12.75 8.17157 12.0784 7.5 11.25 7.5C10.4216 7.5 9.75 8.17157 9.75 9C9.75 9.82843 10.4216 10.5 11.25 10.5Z",
       fill: "url(#paint0_linear_1656_102067)"

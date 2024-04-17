@@ -6,16 +6,16 @@ t.r(r), t.d(r, {
 });
 var a = t("735250");
 t("470079");
-var n = t("442837"),
-  i = t("481060"),
-  l = t("800599"),
+var i = t("442837"),
+  l = t("481060"),
+  n = t("800599"),
   o = t("594174"),
-  s = t("681619"),
-  c = t("64823"),
+  c = t("681619"),
+  s = t("64823"),
   d = t("779869");
 let u = [{
   key: "user",
-  cellClassName: c.userCell,
+  cellClassName: s.userCell,
   render(e) {
     var r;
     let {
@@ -26,7 +26,7 @@ let u = [{
   }
 }, {
   key: "affinity",
-  cellClassName: c.affinityCell,
+  cellClassName: s.affinityCell,
   render(e) {
     let {
       affinity: r
@@ -36,7 +36,7 @@ let u = [{
 }];
 
 function h() {
-  let e = (0, n.useStateFromStoresArray)([l.default, o.default], () => l.default.getUserAffinities().map(e => {
+  let e = (0, i.useStateFromStoresArray)([n.default, o.default], () => n.default.getUserAffinities().map(e => {
     let {
       user_id: r,
       affinity: t
@@ -47,11 +47,11 @@ function h() {
       key: r
     }
   }));
-  return 0 === e.length ? null : (0, a.jsx)(i.ScrollerThin, {
-    children: (0, a.jsx)(s.default, {
+  return 0 === e.length ? null : (0, a.jsx)(l.ScrollerThin, {
+    children: (0, a.jsx)(c.default, {
       className: d.panel,
       columns: u,
-      rowClassName: c.row,
+      rowClassName: s.row,
       data: e
     })
   })

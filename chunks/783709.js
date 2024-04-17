@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("867176"),
   E = n("566620"),
   _ = n("403404"),
-  T = n("100527"),
-  m = n("906732"),
+  m = n("100527"),
+  T = n("906732"),
   I = n("424602"),
   p = n("739566"),
   h = n("223021"),
@@ -28,11 +28,11 @@ var s = n("735250"),
   g = n("671219"),
   M = n("750858"),
   R = n("981631"),
-  O = n("665692"),
-  v = n("689938"),
-  L = n("50182");
+  v = n("665692"),
+  O = n("689938"),
+  x = n("50182");
 
-function x(e) {
+function L(e) {
   let {
     width: t = 6,
     height: n = 10,
@@ -63,7 +63,7 @@ function D(e) {
     channel: r
   } = e, {
     analyticsLocations: u
-  } = (0, m.default)(T.default.EXECUTED_COMMAND), D = a.useMemo(() => (e, t, n) => (o()(null != r && null != t, "ExecuteCommand: user and channel cannot be undefined"), (0, s.jsx)(N.default, {
+  } = (0, T.default)(m.default.EXECUTED_COMMAND), D = a.useMemo(() => (e, t, n) => (o()(null != r && null != t, "ExecuteCommand: user and channel cannot be undefined"), (0, s.jsx)(N.default, {
     ...e,
     location: "ExecutedCommand",
     channelId: r.id,
@@ -82,9 +82,9 @@ function D(e) {
     location: "Executed Command"
   }, {
     autoTrackExposure: !1
-  }), G = l.interaction;
-  if (null == G || null == y) return null;
-  let B = () => {
+  }), B = l.interaction;
+  if (null == B || null == y) return null;
+  let G = () => {
     let t = function(e, t) {
         let n, {
           message: a,
@@ -97,19 +97,19 @@ function D(e) {
           onPopoutRequestClose: E
         } = e;
         if (l && null == a.activityInstance || o) return (0, s.jsx)("div", {
-          className: L.replyBadge,
-          children: (0, s.jsx)(x, {
-            className: L.commandIcon
+          className: x.replyBadge,
+          children: (0, s.jsx)(L, {
+            className: x.commandIcon
           })
         });
         if (null != a.interaction) {
-          var _, T, m;
+          var _, m, T;
           let e = (0, p.getUserAuthor)(a.interaction.user, r);
-          n = null !== (m = C.default.getGuildMemberAvatarURL({
+          n = null !== (T = C.default.getGuildMemberAvatarURL({
             avatar: null !== (_ = e.guildMemberAvatar) && void 0 !== _ ? _ : void 0,
             userId: a.interaction.user.id,
-            guildId: null !== (T = null == r ? void 0 : r.guild_id) && void 0 !== T ? T : ""
-          })) && void 0 !== m ? m : void 0
+            guildId: null !== (m = null == r ? void 0 : r.guild_id) && void 0 !== m ? m : ""
+          })) && void 0 !== T ? T : void 0
         }
         let I = () => null != a.interaction && function(e) {
           let {
@@ -127,8 +127,8 @@ function D(e) {
             onContextMenu: r,
             onMouseDown: o,
             className: i()({
-              [L.executedCommandAvatar]: !0,
-              [L.clickable]: null != l
+              [x.executedCommandAvatar]: !0,
+              [x.clickable]: null != l
             })
           })
         }({
@@ -145,7 +145,7 @@ function D(e) {
           onRequestClose: E,
           children: I
         }) : I()
-      }(e, e => D(e, G.user, [T.default.AVATAR])),
+      }(e, e => D(e, B.user, [m.default.AVATAR])),
       n = function(e, t, n) {
         var a;
         let {
@@ -168,7 +168,7 @@ function D(e) {
           onContextMenu: u,
           onPopoutRequestClose: d
         })
-      }(e, y, e => D(e, G.user));
+      }(e, y, e => D(e, B.user));
     return (0, s.jsxs)(a.Fragment, {
       children: [t, n]
     }, "user")
@@ -191,21 +191,21 @@ function D(e) {
         guildId: r.guild_id
       })
     };
-    n = j ? v.default.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
-      userHook: B,
+    n = j ? O.default.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
+      userHook: G,
       activityHook: () => (0, s.jsx)(c.Clickable, {
         tag: "span",
         onClick: e,
         children: (0, s.jsx)("div", {
-          className: i()(L.commandName, L.clickable),
-          children: v.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITY
+          className: i()(x.commandName, x.clickable),
+          children: O.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITY
         })
       })
-    }) : v.default.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH.format({
-      userHook: B
+    }) : O.default.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH.format({
+      userHook: G
     })
-  } else n = v.default.Messages.APPLICATION_COMMAND_USED_SHORT.format({
-    userHook: B,
+  } else n = O.default.Messages.APPLICATION_COMMAND_USED_SHORT.format({
+    userHook: G,
     commandHook: () => {
       let t = function(e, t, n) {
         let {
@@ -233,18 +233,18 @@ function D(e) {
               onClick: r,
               children: (0, s.jsxs)("div", {
                 className: i()({
-                  [L.commandName]: !n
+                  [x.commandName]: !n
                 }, {
-                  [L.appLauncherOnboardingCommandName]: n
-                }, L.clickable),
+                  [x.appLauncherOnboardingCommandName]: n
+                }, x.clickable),
                 children: [n && (0, s.jsx)(S.default, {
                   height: 10,
                   width: 10,
-                  className: L.appsIcon
-                }), n ? u : O.COMMAND_SENTINEL + u]
+                  className: x.appsIcon
+                }), n ? u : v.COMMAND_SENTINEL + u]
               })
             }) : (0, s.jsx)("div", {
-              className: L.commandName,
+              className: x.commandName,
               children: u
             })
           }
@@ -255,10 +255,10 @@ function D(e) {
       }, "command")
     }
   });
-  return (0, s.jsx)(m.AnalyticsLocationProvider, {
+  return (0, s.jsx)(T.AnalyticsLocationProvider, {
     value: u,
     children: (0, s.jsx)("div", {
-      className: i()(L.repliedMessage, L.executedCommand, U),
+      className: i()(x.repliedMessage, x.executedCommand, U),
       "aria-hidden": !e.compact,
       children: n
     })

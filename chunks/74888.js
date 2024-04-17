@@ -5,19 +5,19 @@ s.r(t), s.d(t, {
   }
 });
 var i = s("735250"),
-  n = s("470079"),
-  a = s("120356"),
-  l = s.n(a),
+  a = s("470079"),
+  n = s("120356"),
+  l = s.n(n),
   r = s("481060"),
-  o = s("808602"),
-  d = s("413684"),
+  d = s("808602"),
+  o = s("413684"),
   u = s("298812"),
   c = s("200115"),
   h = s("406205"),
   S = s("689938"),
   N = s("75217");
 
-function f(e) {
+function g(e) {
   return (0, i.jsx)("div", {
     className: N.sectionHeader,
     children: (0, i.jsx)(r.Heading, {
@@ -29,9 +29,9 @@ function f(e) {
   })
 }
 
-function g(e) {
+function f(e) {
   return (0, i.jsxs)("div", {
-    children: [null != e.title && (0, i.jsx)(f, {
+    children: [null != e.title && (0, i.jsx)(g, {
       title: e.title
     }), (0, i.jsx)("div", {
       className: l()(N.sectionContent, {
@@ -50,7 +50,7 @@ function m(e) {
     className: N.header,
     children: [(0, i.jsxs)("div", {
       className: N.headerLeft,
-      children: [(0, i.jsx)(o.default, {
+      children: [(0, i.jsx)(d.default, {
         className: N.headerBell
       }), (0, i.jsx)(r.Heading, {
         variant: "heading-lg/semibold",
@@ -63,7 +63,7 @@ function m(e) {
 }
 
 function E(e) {
-  let t = n.useRef(null);
+  let t = a.useRef(null);
   return (0, i.jsxs)(r.ModalRoot, {
     size: r.ModalSize.MEDIUM,
     transitionState: e.transitionState,
@@ -73,22 +73,22 @@ function E(e) {
     }), (0, i.jsxs)(r.ModalContent, {
       className: N.content,
       scrollerRef: t,
-      children: [(0, i.jsx)(g, {
+      children: [(0, i.jsx)(f, {
         children: (0, i.jsx)(c.default, {
           guildId: e.guildId
         })
-      }), (0, i.jsx)(g, {
+      }), (0, i.jsx)(f, {
         title: S.default.Messages.NOTIFICATION_SETTINGS_PRESETS,
         noPadding: !0,
         children: (0, i.jsx)(h.default, {
           guildId: e.guildId
         })
-      }), (0, i.jsx)(g, {
+      }), (0, i.jsx)(f, {
         title: S.default.Messages.NOTIFICATION_SETTINGS_ADVANCED,
-        children: (0, i.jsx)(d.default, {
+        children: (0, i.jsx)(o.default, {
           guildId: e.guildId
         })
-      }), (0, i.jsx)(f, {
+      }), (0, i.jsx)(g, {
         title: S.default.Messages.CHANNEL_NOTIFICATION_OVERRIDES
       }), (0, i.jsx)(u.default, {
         guildId: e.guildId,

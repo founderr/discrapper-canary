@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("481060"),
   E = n("607070"),
   _ = n("313889"),
-  T = n("825829"),
-  m = n("226192"),
+  m = n("825829"),
+  T = n("226192"),
   I = n("36459"),
   p = n("336197"),
   h = n("937889"),
@@ -28,18 +28,18 @@ var s = n("735250"),
   g = n("594174"),
   M = n("467679"),
   R = n("263704"),
-  O = n("795295"),
-  v = n("288176"),
-  L = n("740727"),
-  x = n("622116"),
+  v = n("795295"),
+  O = n("288176"),
+  x = n("740727"),
+  L = n("622116"),
   D = n("289565"),
   P = n("778947"),
   y = n("702346"),
   U = n("5192"),
   j = n("51144"),
   b = n("787374"),
-  G = n("981631"),
-  B = n("674563"),
+  B = n("981631"),
+  G = n("674563"),
   F = n("590433"),
   k = n("959517"),
   w = n("689938"),
@@ -73,7 +73,7 @@ function Y(e) {
 function K(e, t) {
   switch (e) {
     case _.AutomodAlertActionType.DELETE_USER_MESSAGE:
-      return (0, s.jsx)(L.default, {
+      return (0, s.jsx)(x.default, {
         width: 16,
         height: 16,
         className: H.alertActionIcon,
@@ -87,7 +87,7 @@ function K(e, t) {
         ...t
       });
     case _.AutomodAlertActionType.SUBMIT_FEEDBACK:
-      return (0, s.jsx)(O.default, {
+      return (0, s.jsx)(v.default, {
         width: 16,
         height: 16,
         className: i()(H.alertActionIcon),
@@ -171,17 +171,17 @@ function Q(e) {
       onMouseLeave: R
     }
   } = (0, b.useAutomodAvatar)(!0), {
-    onFocus: O,
-    ...L
+    onFocus: v,
+    ...x
   } = (0, u.useListItem)(null != t ? t : ""), {
     isFocused: U,
     handleFocus: j,
     handleBlur: K
-  } = (0, S.useFocusInside)(O), W = (0, c.useStateFromStores)([E.default], () => E.default.keyboardModeEnabled), Q = (0, c.useStateFromStores)([A.default], () => A.default.can(G.Permissions.MANAGE_MESSAGES, r), [r]), {
+  } = (0, S.useFocusInside)(v), W = (0, c.useStateFromStores)([E.default], () => E.default.keyboardModeEnabled), Q = (0, c.useStateFromStores)([A.default], () => A.default.can(B.Permissions.MANAGE_MESSAGES, r), [r]), {
     ruleName: q,
-    embedChannel: J,
-    decisionId: Z,
-    keywordMatchedContent: X,
+    embedChannel: Z,
+    decisionId: X,
+    keywordMatchedContent: J,
     keyword: $,
     content: ee,
     flaggedMessageId: et,
@@ -189,7 +189,7 @@ function Q(e) {
     decisionReason: es,
     alertActionsExecution: ea,
     quarantineType: el
-  } = (0, T.default)(l), ei = a.useMemo(() => (0, h.renderAutomodMessageMarkup)(ee, X, r.id), [ee, X, r]), {
+  } = (0, m.default)(l), ei = a.useMemo(() => (0, h.renderAutomodMessageMarkup)(ee, J, r.id), [ee, J, r]), {
     selected: er,
     ...eo
   } = function(e, t) {
@@ -217,19 +217,19 @@ function Q(e) {
       showUsernamePopout: i
     }
   }(l, r), eu = a.useCallback(() => {
-    (0, m.openSubmitFeedback)(l.id, ee, Z, r)
-  }, [l.id, ee, Z, r]), ed = a.useCallback(e => {
-    null != et && null != J && (e.stopPropagation(), e.preventDefault(), (0, p.default)(G.Routes.CHANNEL(null == J ? void 0 : J.guild_id, null == J ? void 0 : J.id, et)))
-  }, [J, et]), ec = a.useCallback(() => {
+    (0, T.openSubmitFeedback)(l.id, ee, X, r)
+  }, [l.id, ee, X, r]), ed = a.useCallback(e => {
+    null != et && null != Z && (e.stopPropagation(), e.preventDefault(), (0, p.default)(B.Routes.CHANNEL(null == Z ? void 0 : Z.guild_id, null == Z ? void 0 : Z.id, et)))
+  }, [Z, et]), ec = a.useCallback(() => {
     (0, I.executeAlertAction)(l.id, r, _.AutomodAlertActionType.DELETE_USER_MESSAGE)
-  }, [r, l.id]), ef = a.useMemo(() => (0, T.getActionHeaderText)(l, J, () => (0, s.jsx)("div", {
+  }, [r, l.id]), ef = a.useMemo(() => (0, m.getActionHeaderText)(l, Z, () => (0, s.jsx)("div", {
     className: H.channelNameContainer,
-    children: (0, s.jsx)(x.default, {
-      channel: J,
+    children: (0, s.jsx)(L.default, {
+      channel: Z,
       className: H.channelName,
       openChatWithoutConnecting: !0
     })
-  })), [l, J]), eE = (0, F.getFriendlyDurationString)(Number(en)), e_ = null != es, eT = Q && null != et && (null == ea || !ea.actions.hasOwnProperty(_.AutomodAlertActionType.DELETE_USER_MESSAGE));
+  })), [l, Z]), eE = (0, F.getFriendlyDurationString)(Number(en)), e_ = null != es, em = Q && null != et && (null == ea || !ea.actions.hasOwnProperty(_.AutomodAlertActionType.DELETE_USER_MESSAGE));
   return (0, s.jsx)("div", {
     onMouseEnter: g,
     onMouseLeave: R,
@@ -261,7 +261,7 @@ function Q(e) {
               className: H.username,
               children: w.default.Messages.GUILD_AUTOMOD_USERNAME
             }), (0, s.jsx)(M.default, {
-              type: B.BotTagTypes.SYSTEM_DM,
+              type: G.BotTagTypes.SYSTEM_DM,
               className: H.systemTag
             }), (0, s.jsx)(f.Text, {
               variant: "text-md/normal",
@@ -278,9 +278,9 @@ function Q(e) {
             [H.compact]: n
           }),
           children: (0, s.jsx)(D.default, {
-            ...L,
+            ...x,
             message: l,
-            channel: J,
+            channel: Z,
             content: ei,
             compact: n,
             withFooter: !0,
@@ -288,7 +288,7 @@ function Q(e) {
             className: i()(H.embedCard, {
               [H.compact]: n,
               [H.selected]: er || W && U,
-              [H.isClickable]: null != et && null != J
+              [H.isClickable]: null != et && null != Z
             }),
             childrenAccessories: (0, s.jsxs)(s.Fragment, {
               children: [(0, s.jsxs)("div", {
@@ -332,7 +332,7 @@ function Q(e) {
                     tag: "span",
                     className: H.titleCase,
                     children: w.default.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_REASON.format({
-                      reason: (0, T.getQuarantineReasonString)(el)
+                      reason: (0, m.getQuarantineReasonString)(el)
                     })
                   })]
                 })]
@@ -368,7 +368,7 @@ function Q(e) {
               className: H.buttonStyle,
               children: (0, s.jsxs)("div", {
                 className: H.footerAction,
-                children: [(0, s.jsx)(v.default, {
+                children: [(0, s.jsx)(O.default, {
                   width: 16,
                   height: 16,
                   color: d.default.BLUE_345,
@@ -395,7 +395,7 @@ function Q(e) {
                   children: w.default.Messages.GUILD_AUTOMOD_REPORT_ISSUES
                 })
               })
-            }), eT ? (0, s.jsxs)(s.Fragment, {
+            }), em ? (0, s.jsxs)(s.Fragment, {
               children: [(0, s.jsx)("div", {
                 className: H.dot
               }), (0, s.jsx)(f.Button, {

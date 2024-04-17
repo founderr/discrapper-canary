@@ -1,16 +1,16 @@
 "use strict";
-t.r(r), t.d(r, {
+s.r(t), s.d(t, {
   updateClientPremiumTypeOverride: function() {
     return n
   }
 });
-var a = t("570140");
-let n = (e, r) => {
+var a = s("570140");
+let n = (e, t) => {
   a.default.dispatch({
     type: "SET_PREMIUM_TYPE_OVERRIDE",
     premiumType: e
   }), a.default.dispatch({
     type: "UPDATE_CLIENT_PREMIUM_TYPE",
-    user: r
+    user: t
   })
 }

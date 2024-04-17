@@ -1,16 +1,16 @@
 "use strict";
 a.r(t);
 var n = a("735250"),
-  s = a("470079"),
-  l = a("442837"),
+  l = a("470079"),
+  s = a("442837"),
   r = a("481060"),
   o = a("873115"),
-  i = a("618541"),
-  u = a("975060"),
+  u = a("618541"),
+  i = a("975060"),
   d = a("912454"),
   c = a("689938"),
   E = a("646615");
-class m extends s.PureComponent {
+class p extends l.PureComponent {
   componentDidMount() {
     null != this.props.paypalClient && o.tokenizePayPal()
   }
@@ -42,7 +42,7 @@ class m extends s.PureComponent {
     })
   }
 }
-t.default = l.default.connectStores([i.default, u.default], () => ({
-  braintreeEmail: u.default.braintreeEmail,
-  paypalClient: i.default.getPayPalClient()
-}))(m)
+t.default = s.default.connectStores([u.default, i.default], () => ({
+  braintreeEmail: i.default.braintreeEmail,
+  paypalClient: u.default.getPayPalClient()
+}))(p)

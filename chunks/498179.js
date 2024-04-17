@@ -22,8 +22,8 @@ function f(e) {
     size: f = l.Button.Sizes.LARGE,
     color: E,
     customDisabledColor: _,
-    hideNotLaunchable: T,
-    tooltipPosition: m,
+    hideNotLaunchable: m,
+    tooltipPosition: T,
     onClick: I,
     className: p,
     source: h,
@@ -36,17 +36,17 @@ function f(e) {
     size: f,
     color: E,
     customDisabledColor: _,
-    tooltipPosition: m,
+    tooltipPosition: T,
     onClick: I,
     className: p,
     hover: C,
     innerClassName: A
-  }, M = (0, a.useStateFromStores)([i.default], () => i.default.getActiveLibraryApplication(t.id)), R = null != M ? M.sku.id : null, O = null != R ? R : t.primarySkuId, v = (0, a.useStateFromStores)([r.default], () => null != O && !r.default.didFetchingSkuFail(O));
+  }, M = (0, a.useStateFromStores)([i.default], () => i.default.getActiveLibraryApplication(t.id)), R = null != M ? M.sku.id : null, v = null != R ? R : t.primarySkuId, O = (0, a.useStateFromStores)([r.default], () => null != v && !r.default.didFetchingSkuFail(v));
   return null != M && (0, o.isUserEntitledToLibraryApplication)(M) ? (0, s.jsx)(c.default, {
     ...g,
     libraryApplication: M,
     source: h
-  }) : v ? (0, s.jsx)(u.default, {
+  }) : O ? (0, s.jsx)(u.default, {
     ...g,
     skuId: null != M ? M.sku.id : null,
     applicationId: t.id,
@@ -54,7 +54,7 @@ function f(e) {
     storeListingAnalyticsProperties: N
   }) : (0, s.jsx)(d.default, {
     ...g,
-    hideNotLaunchable: T,
+    hideNotLaunchable: m,
     applicationId: t.id
   })
 }

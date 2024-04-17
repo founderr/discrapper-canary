@@ -10,52 +10,52 @@ a.r(t), a.d(t, {
     return c
   },
   reopenPayPalWindow: function() {
-    return A
+    return N
   },
   reopenVenmoWindow: function() {
     return I
   },
   teardownClients: function() {
-    return N
+    return A
   },
   teardownPaypal: function() {
-    return _
+    return S
   },
   teardownVenmo: function() {
-    return f
+    return _
   },
   tokenizePayPal: function() {
-    return m
+    return p
   },
   tokenizeVenmo: function() {
-    return p
+    return m
   }
 }), a("411104"), a("47120");
 var n = a("544891"),
-  s = a("570140"),
-  l = a("618541"),
+  l = a("570140"),
+  s = a("618541"),
   r = a("751767"),
   o = a("358085"),
-  i = a("355467"),
-  u = a("981631");
+  u = a("355467"),
+  i = a("981631");
 
 function d() {
   (0, r.getBraintreeSDK)().then(e => {
     e.client.create({
-      authorization: u.PaymentSettings.BRAINTREE.KEY
+      authorization: i.PaymentSettings.BRAINTREE.KEY
     }).then(e => {
-      s.default.dispatch({
+      l.default.dispatch({
         type: "BRAINTREE_CREATE_CLIENT_SUCCESS",
         client: e
       }), E(), c()
-    }).catch(() => s.default.dispatch({
+    }).catch(() => l.default.dispatch({
       type: "BRAINTREE_CREATE_CLIENT_FAIL"
     }))
   })
 }
 
 function c() {
-  let e = l.default.getClient();
+  let e = s.default.getClient();
   if (null == e) throw Error("Braintree client must be initialized before creating Venmo client.");
   (0, r.getBraintreeSDK)().then(t => {
     t.venmo.create({
@@ -63,12 +63,12 @@ function c() {
       allowDesktop: !0,
       paymentMethodUsage: "multi_use"
     }).then(e => {
-      s.default.dispatch({
+      l.default.dispatch({
         type: "BRAINTREE_CREATE_VENMO_CLIENT_SUCCESS",
         venmoClient: e
       })
     }).catch(() => {
-      s.default.dispatch({
+      l.default.dispatch({
         type: "BRAINTREE_CREATE_VENMO_CLIENT_FAIL"
       })
     })
@@ -76,7 +76,7 @@ function c() {
 }
 
 function E() {
-  let e = l.default.getClient();
+  let e = s.default.getClient();
   if (null == e) throw Error("braintree client must be initialized before calling this");
   (0, r.getBraintreeSDK)().then(t => {
     t.paypal.create({
@@ -86,7 +86,7 @@ function E() {
       e._navigateFrameToAuth = function(e) {
         let t = this._formatPaymentResourceData(e);
         return n.HTTP.post({
-          url: u.Endpoints.BILLING_PAYPAL_BILLING_AGREEMENT_TOKENS,
+          url: i.Endpoints.BILLING_PAYPAL_BILLING_AGREEMENT_TOKENS,
           oldFormErrors: !0,
           body: {
             return_url: t.returnUrl,
@@ -99,48 +99,48 @@ function E() {
             }
           } = e;
           this._frameService.redirect(function(e) {
-            let t = u.PaymentSettings.BRAINTREE.KEY.startsWith("production_") ? "https://www.paypal.com" : "https://sandbox.paypal.com";
+            let t = i.PaymentSettings.BRAINTREE.KEY.startsWith("production_") ? "https://www.paypal.com" : "https://sandbox.paypal.com";
             return "".concat(t, "/agreements/approve?nolegacy=1&ba_token=").concat(e)
           }(t))
         }).catch(e => (this._frameService.close(), this._authorizationInProgress = !1, Promise.reject(Error(e.body && e.body.message))))
-      }, s.default.dispatch({
+      }, l.default.dispatch({
         type: "BRAINTREE_CREATE_PAYPAL_CLIENT_SUCCESS",
         paypalClient: e
       })
-    }).catch(() => s.default.dispatch({
+    }).catch(() => l.default.dispatch({
       type: "BRAINTREE_CREATE_PAYPAL_CLIENT_FAIL"
     }))
   })
 }
 
-function m() {
-  let e = l.default.getPayPalClient();
+function p() {
+  let e = s.default.getPayPalClient();
   if (null == e) throw Error("braintree paypal client must be initialized before calling this");
-  s.default.dispatch({
+  l.default.dispatch({
     type: "BRAINTREE_TOKENIZE_PAYPAL_START"
   });
   let t = Promise.resolve("");
-  (0, o.isDesktop)() && (t = (0, i.popupBridgeState)(u.PaymentSourceTypes.PAYPAL)), t.then(() => e.tokenize({
+  (0, o.isDesktop)() && (t = (0, u.popupBridgeState)(i.PaymentSourceTypes.PAYPAL)), t.then(() => e.tokenize({
     flow: "vault"
   })).then(e => {
     let {
       email: t,
       firstName: a,
       lastName: n,
-      billingAddress: l
+      billingAddress: s
     } = e.details;
-    s.default.dispatch({
+    l.default.dispatch({
       type: "BRAINTREE_TOKENIZE_PAYPAL_SUCCESS",
       nonce: e.nonce,
       email: t,
       billingAddress: {
         name: "".concat(a, " ").concat(n),
-        line1: l.line1,
-        line2: l.line2,
-        city: l.city,
-        state: l.state,
-        country: l.countryCode,
-        postalCode: l.postalCode
+        line1: s.line1,
+        line2: s.line2,
+        city: s.city,
+        state: s.state,
+        country: s.countryCode,
+        postalCode: s.postalCode
       }
     })
   }).catch(e => {
@@ -148,9 +148,9 @@ function m() {
       message: t,
       code: a
     } = e;
-    a === u.BraintreeErrors.PAYPAL_POPUP_CLOSED || null == a ? s.default.dispatch({
+    a === i.BraintreeErrors.PAYPAL_POPUP_CLOSED || null == a ? l.default.dispatch({
       type: "BRAINTREE_TOKENIZE_PAYPAL_FAIL_WINDOW_CLOSED"
-    }) : s.default.dispatch({
+    }) : l.default.dispatch({
       type: "BRAINTREE_TOKENIZE_PAYPAL_FAIL",
       message: t,
       code: a
@@ -158,16 +158,16 @@ function m() {
   })
 }
 
-function p() {
-  let e = l.default.getVenmoClient();
+function m() {
+  let e = s.default.getVenmoClient();
   if (null == e) throw Error("Braintree Venmo client must be initialized before calling tokenize.");
-  s.default.dispatch({
+  l.default.dispatch({
     type: "BRAINTREE_TOKENIZE_VENMO_START"
   }), e.tokenize().then(e => {
     let {
       username: t
     } = e.details;
-    s.default.dispatch({
+    l.default.dispatch({
       type: "BRAINTREE_TOKENIZE_VENMO_SUCCESS",
       nonce: e.nonce,
       username: t
@@ -177,9 +177,9 @@ function p() {
       message: t,
       code: a
     } = e;
-    a === u.BraintreeErrors.VENMO_APP_CANCELED || a === u.BraintreeErrors.VENMO_CANCELED ? s.default.dispatch({
+    a === i.BraintreeErrors.VENMO_APP_CANCELED || a === i.BraintreeErrors.VENMO_CANCELED ? l.default.dispatch({
       type: "BRAINTREE_TOKENIZE_VENMO_FAIL_CANCELED"
-    }) : s.default.dispatch({
+    }) : l.default.dispatch({
       type: "BRAINTREE_TOKENIZE_VENMO_FAIL",
       message: t,
       code: a
@@ -187,9 +187,9 @@ function p() {
   })
 }
 
-function S(e, t) {
+function f(e, t) {
   if (null == e) return Promise.resolve();
-  s.default.dispatch(t);
+  l.default.dispatch(t);
   try {
     return Promise.resolve(e.teardown())
   } catch (e) {
@@ -197,29 +197,29 @@ function S(e, t) {
   }
 }
 
-function _() {
-  return S(l.default.getPayPalClient(), {
+function S() {
+  return f(s.default.getPayPalClient(), {
     type: "BRAINTREE_TEARDOWN_PAYPAL_CLIENT"
   })
 }
 
-function f() {
-  return S(l.default.getVenmoClient(), {
+function _() {
+  return f(s.default.getVenmoClient(), {
     type: "BRAINTREE_TEARDOWN_VENMO_CLIENT"
   })
 }
 
-function N() {
-  return Promise.all([_(), f()])
+function A() {
+  return Promise.all([S(), _()])
 }
 
-function A() {
-  let e = l.default.getLastURL();
-  null == e ? m() : (s.default.dispatch({
+function N() {
+  let e = s.default.getLastURL();
+  null == e ? p() : (l.default.dispatch({
     type: "BRAINTREE_TOKENIZE_PAYPAL_START"
   }), window.open(e))
 }
 
 function I() {
-  p()
+  m()
 }

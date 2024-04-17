@@ -23,7 +23,7 @@ function o(e) {
     analyticsLocations: _
   } = e;
   d && (0, l.default)(r.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
-  let T = d ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
+  let m = d ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
   return (0, a.openModalLazy)(async () => {
     let {
       default: e
@@ -40,6 +40,6 @@ function o(e) {
     })
   }, {
     modalKey: i.ACTIVITY_SHELF_WEB_MODAL_KEY,
-    contextKey: T
+    contextKey: m
   })
 }

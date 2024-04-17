@@ -53,8 +53,8 @@ let G = {
     COMPACT: "compact"
   },
   k = (0, O.uid)(),
-  H = (0, O.uid)(),
   w = (0, O.uid)(),
+  H = (0, O.uid)(),
   V = "1337",
   Y = e => {
     let t = 0;
@@ -125,7 +125,7 @@ class W extends n.Component {
     return (0, a.jsxs)(u.FormItem, {
       className: B.marginTop20,
       children: [(0, a.jsx)(u.FormTitle, {
-        id: H,
+        id: w,
         tag: u.FormTitleTags.H5,
         className: B.marginBottom8,
         children: U.default.Messages.ACCESSIBILITY_FONT_SCALING_LABEL
@@ -141,7 +141,7 @@ class W extends n.Component {
           onValueRender: this.handleSliderRenderPX,
           onMarkerRender: this.handleSliderRenderPX,
           getAriaValueText: this.handleSliderValueText,
-          "aria-labelledby": H
+          "aria-labelledby": w
         })
       })]
     })
@@ -154,7 +154,7 @@ class W extends n.Component {
     return (0, a.jsxs)(u.FormItem, {
       className: B.marginTop20,
       children: [(0, a.jsx)(u.FormTitle, {
-        id: w,
+        id: H,
         tag: u.FormTitleTags.H5,
         className: B.marginBottom8,
         children: U.default.Messages.ACCESSIBILITY_MESSAGE_GROUP_SPACING
@@ -168,7 +168,7 @@ class W extends n.Component {
         onValueRender: this.handleSliderRenderPX,
         onMarkerRender: this.handleSliderRenderPX,
         getAriaValueText: this.handleSliderValueText,
-        "aria-labelledby": w
+        "aria-labelledby": H
       })]
     })
   }

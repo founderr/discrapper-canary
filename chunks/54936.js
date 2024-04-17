@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   OperatingSystemSection: function() {
-    return T
+    return m
   }
 }), n("411104");
 var s = n("735250");
@@ -45,7 +45,7 @@ function _(e) {
     })
   })
 }
-let T = e => {
+let m = e => {
   let {
     systems: t,
     className: n,

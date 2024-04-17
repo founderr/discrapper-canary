@@ -1,7 +1,7 @@
 "use strict";
 t.r(r);
 var a = t("319301");
-let n = {
+let i = {
   figma: {
     category: "forms"
   }
@@ -10,12 +10,12 @@ r.default = (0, a.defineColorTokens)({
   "input-background": {
     dark: "primary.700",
     light: "primary.200",
-    meta: n
+    meta: i
   },
   "input-placeholder-text": {
     dark: "input-placeholder-text-dark",
     light: "primary.560",
-    meta: n
+    meta: i
   },
   "redesign-input-control-selected": {
     dark: "brand.500",

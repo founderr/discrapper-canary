@@ -1,46 +1,46 @@
 "use strict";
-n.r(t), n.d(t, {
+t.r(n), t.d(n, {
   default: function() {
-    return d
+    return r
   }
 });
-var a = n("735250"),
-  l = n("470079"),
-  u = n("481060"),
-  i = n("493683"),
-  s = n("960670"),
-  r = n("933557"),
-  o = n("689938");
+var a = t("735250"),
+  u = t("470079"),
+  i = t("481060"),
+  l = t("493683"),
+  o = t("960670"),
+  s = t("933557"),
+  d = t("689938");
 
-function d(e, t) {
-  let n = (0, r.default)(e),
-    d = l.useCallback(() => {
-      let l = o.default.Messages.LEAVE_GROUP_DM_TITLE.format({
-          name: n
+function r(e, n) {
+  let t = (0, s.default)(e),
+    r = u.useCallback(() => {
+      let u = d.default.Messages.LEAVE_GROUP_DM_TITLE.format({
+          name: t
         }),
-        r = o.default.Messages.LEAVE_GROUP_DM_BODY.format({
-          name: n
+        s = d.default.Messages.LEAVE_GROUP_DM_BODY.format({
+          name: t
         });
-      e.isManaged() && (l = o.default.Messages.LEAVE_GROUP_DM_MANAGED_TITLE.format({
-        name: n
-      }), r = o.default.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({
-        name: n
+      e.isManaged() && (u = d.default.Messages.LEAVE_GROUP_DM_MANAGED_TITLE.format({
+        name: t
+      }), s = d.default.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({
+        name: t
       }));
-      let d = function(n) {
+      let r = function(t) {
         let a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        i.default.closePrivateChannel(e.id, t, a)
+        l.default.closePrivateChannel(e.id, n, a)
       };
-      (0, u.openModal)(e => (0, a.jsx)(s.default, {
-        header: l,
-        body: r,
-        onSubmit: d,
+      (0, i.openModal)(e => (0, a.jsx)(o.default, {
+        header: u,
+        body: s,
+        onSubmit: r,
         ...e
       }))
-    }, [e, n, t]);
-  return (0, a.jsx)(u.MenuItem, {
+    }, [e, t, n]);
+  return (0, a.jsx)(i.MenuItem, {
     id: "leave-channel",
-    label: o.default.Messages.LEAVE_GROUP_DM,
-    action: d,
+    label: d.default.Messages.LEAVE_GROUP_DM,
+    action: r,
     color: "danger"
   })
 }

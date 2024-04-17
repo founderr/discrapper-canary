@@ -22,8 +22,8 @@ var s = n("470079"),
   f = n("914010"),
   E = n("715903"),
   _ = n("981631"),
-  T = n("372897"),
-  m = n("526761"),
+  m = n("372897"),
+  T = n("526761"),
   I = n("689938");
 
 function p(e) {
@@ -48,7 +48,7 @@ function h(e) {
       i = u.default.getMember(s, l),
       r = (0, E.getAutomodQuarantinedProfileFlags)(null == i ? void 0 : i.flags);
     if (0 === r.size) return t;
-    if (r.has(T.GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME)) {
+    if (r.has(m.GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME)) {
       if (null == e) {
         var c;
         t.nick = [I.default.Messages.GUILD_AUTOMOD_PROFILE_ERROR_QUARANTINE_USERNAME_IN_GUILD.format({
@@ -56,7 +56,7 @@ function h(e) {
         })]
       } else t.nick = [I.default.Messages.GUILD_AUTOMOD_PROFILE_ERROR_QUARANTINE_USERNAME]
     }
-    return r.has(T.GuildMemberFlags.AUTOMOD_QUARANTINED_BIO) && (t.bio = [I.default.Messages.GUILD_AUTOMOD_PROFILE_ERROR_QUARANTINE_BIO]), t
+    return r.has(m.GuildMemberFlags.AUTOMOD_QUARANTINED_BIO) && (t.bio = [I.default.Messages.GUILD_AUTOMOD_PROFILE_ERROR_QUARANTINE_BIO]), t
   }, [e])
 }
 
@@ -69,16 +69,16 @@ function N(e) {
     openWithoutBackstack: f
   } = e, {
     analyticsLocations: E
-  } = (0, i.default)(), T = (0, a.useStateFromStores)([d.default], () => d.default.getGuild(t), [t]), I = (0, a.useStateFromStores)([c.default], () => null != T && c.default.can(_.Permissions.CHANGE_NICKNAME, T), [T]);
+  } = (0, i.default)(), m = (0, a.useStateFromStores)([d.default], () => d.default.getGuild(t), [t]), I = (0, a.useStateFromStores)([c.default], () => null != m && c.default.can(_.Permissions.CHANGE_NICKNAME, m), [m]);
   return [s.useCallback(() => {
-    if (null == T) return;
+    if (null == m) return;
     let e = _.UserSettingsSections.PROFILE_CUSTOMIZATION,
-      t = m.ProfileCustomizationSubsection.GUILD;
-    I ? (0, r.initGuildIdentitySettings)(T, null != u ? u : E) : t = m.ProfileCustomizationSubsection.USER_PROFILE, l.default.open(e, t, {
+      t = T.ProfileCustomizationSubsection.GUILD;
+    I ? (0, r.initGuildIdentitySettings)(m, null != u ? u : E) : t = T.ProfileCustomizationSubsection.USER_PROFILE, l.default.open(e, t, {
       scrollPosition: n,
       analyticsLocation: o,
       analyticsLocations: u,
       openWithoutBackstack: f
     })
-  }, [I, n, o, u, f, T, E]), I]
+  }, [I, n, o, u, f, m, E]), I]
 }

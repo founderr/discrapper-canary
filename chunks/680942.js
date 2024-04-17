@@ -63,26 +63,26 @@ t.default = e => {
     product: t,
     returnRef: a,
     onSuccess: h,
-    tooltipDelay: g,
-    isGiftEasterEggEnabled: E,
-    disableCustomColor: b = !1
+    tooltipDelay: E,
+    isGiftEasterEggEnabled: g,
+    disableCustomColor: S = !1
   } = e, {
-    analyticsLocations: S
-  } = (0, i.default)(), T = s.useRef(null), x = (0, n.default)(T), {
+    analyticsLocations: b
+  } = (0, i.default)(), x = s.useRef(null), T = (0, n.default)(x), {
     buttonColors: v
-  } = (0, d.default)(t.styles), L = null == v || b ? void 0 : {
+  } = (0, d.default)(t.styles), L = null == v || S ? void 0 : {
     background: v.secondary.toHslString(),
     color: v.text.toHslString()
-  }, I = b || (null == v ? void 0 : v.text.isDark()) ? f.ThemeTypes.DARK : f.ThemeTypes.LIGHT;
+  }, I = S || (null == v ? void 0 : v.text.isDark()) ? f.ThemeTypes.DARK : f.ThemeTypes.LIGHT;
   return (0, l.jsx)(r.Tooltip, {
     text: m.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
-    delay: g,
+    delay: E,
     children: e => (0, l.jsx)(r.Button, {
       ...e,
-      buttonRef: T,
+      buttonRef: x,
       style: L,
       className: C.giftButton,
-      color: b ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
+      color: S ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
       look: r.Button.Looks.FILLED,
       size: r.ButtonSizes.ICON,
       innerClassName: C.giftButtonInner,
@@ -91,15 +91,15 @@ t.default = e => {
         e.stopPropagation(), (0, u.default)({
           skuId: t.skuId,
           isGift: !0,
-          analyticsLocations: S,
+          analyticsLocations: b,
           returnRef: a,
           onClose: null != h ? e => {
             e && h()
           } : void 0
         })
       },
-      children: E ? (0, l.jsx)(o.SeasonalGiftIcon, {
-        hovered: x,
+      children: g ? (0, l.jsx)(o.SeasonalGiftIcon, {
+        hovered: T,
         isContentDismissed: !0,
         themeOverride: I,
         boxColors: p

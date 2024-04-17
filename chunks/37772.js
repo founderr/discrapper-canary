@@ -12,8 +12,8 @@ var s = n("735250"),
   f = n("977683"),
   E = n("869765"),
   _ = n("695346"),
-  T = n("592125"),
-  m = n("699516"),
+  m = n("592125"),
+  T = n("699516"),
   I = n("465670"),
   p = n("998951"),
   h = n("702346"),
@@ -24,19 +24,19 @@ var s = n("735250"),
   g = n("739566"),
   M = n("443877"),
   R = n("938353"),
-  O = n("25015"),
-  v = n("689674"),
-  L = n("963550"),
-  x = n("845080"),
+  v = n("25015"),
+  O = n("689674"),
+  x = n("963550"),
+  L = n("845080"),
   D = n("295790"),
   P = n("145807"),
   y = n("56744"),
   U = n("981631"),
   j = n("689938"),
   b = n("331225"),
-  G = n("264558");
+  B = n("264558");
 
-function B(e) {
+function G(e) {
   let {
     className: t,
     count: n,
@@ -75,18 +75,18 @@ t.default = a.memo(function e(t) {
     disableInteraction: w = !1,
     hasThread: H,
     treatSpam: V
-  } = t, Y = U.MessageTypesWithLazyLoadedReferences.has(I.type) ? I.messageReference : void 0, K = (0, r.useStateFromStores)([E.default], () => E.default.getMessageByReference(Y)), W = (0, r.useStateFromStores)([T.default], () => I.type === U.MessageTypes.THREAD_STARTER_MESSAGE && K.state === E.ReferencedMessageState.LOADED ? T.default.getChannel(K.message.channel_id) : null), z = _.InlineAttachmentMedia.useSetting(), Q = _.InlineEmbedMedia.useSetting(), q = _.RenderEmbeds.useSetting(), J = _.GifAutoPlay.useSetting(), Z = (0, d.isMessageNewerThanImprovedMarkdownEpoch)((null !== (n = I.editedTimestamp) && void 0 !== n ? n : I.timestamp).valueOf()), X = (0, c.default)(null == l ? void 0 : l.id), {
+  } = t, Y = U.MessageTypesWithLazyLoadedReferences.has(I.type) ? I.messageReference : void 0, K = (0, r.useStateFromStores)([E.default], () => E.default.getMessageByReference(Y)), W = (0, r.useStateFromStores)([m.default], () => I.type === U.MessageTypes.THREAD_STARTER_MESSAGE && K.state === E.ReferencedMessageState.LOADED ? m.default.getChannel(K.message.channel_id) : null), z = _.InlineAttachmentMedia.useSetting(), Q = _.InlineEmbedMedia.useSetting(), q = _.RenderEmbeds.useSetting(), Z = _.GifAutoPlay.useSetting(), X = (0, d.isMessageNewerThanImprovedMarkdownEpoch)((null !== (n = I.editedTimestamp) && void 0 !== n ? n : I.timestamp).valueOf()), J = (0, c.default)(null == l ? void 0 : l.id), {
     disableReactionCreates: $
   } = (0, M.default)(l), {
     content: ee,
     hasSpoilerEmbeds: et
-  } = (0, O.default)(I, {
+  } = (0, v.default)(I, {
     hideSimpleEmbedContent: Q && q,
-    allowList: Z,
-    allowHeading: Z,
+    allowList: X,
+    allowHeading: X,
     allowLinks: !0,
     previewLinkTarget: !0
-  }), en = (0, g.default)(I), es = (0, r.useStateFromStores)([T.default], () => I.hasFlag(U.MessageFlags.HAS_THREAD) && T.default.getChannel(S.default.castMessageIdAsChannelId(I.id))), ea = I.type === U.MessageTypes.THREAD_STARTER_MESSAGE && K.state === E.ReferencedMessageState.LOADED && null != W, el = !ea && void 0 === a, ei = (0, v.default)({
+  }), en = (0, g.default)(I), es = (0, r.useStateFromStores)([m.default], () => I.hasFlag(U.MessageFlags.HAS_THREAD) && m.default.getChannel(S.default.castMessageIdAsChannelId(I.id))), ea = I.type === U.MessageTypes.THREAD_STARTER_MESSAGE && K.state === E.ReferencedMessageState.LOADED && null != W, el = !ea && void 0 === a, ei = (0, O.default)({
     message: I,
     channel: l,
     enabled: el
@@ -96,7 +96,7 @@ t.default = a.memo(function e(t) {
     message: K.message,
     channel: W,
     hasThread: !1
-  }) : (m.default.isBlocked(I.author.id) ? a = j.default.Messages.BLOCKED_MESSAGE_COUNT : (0, C.isSpam)(I) && V && (a = j.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== a) ? (0, s.jsx)(B, {
+  }) : (T.default.isBlocked(I.author.id) ? a = j.default.Messages.BLOCKED_MESSAGE_COUNT : (0, C.isSpam)(I) && V && (a = j.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== a) ? (0, s.jsx)(G, {
     className: b,
     compact: h,
     count: 1,
@@ -104,12 +104,12 @@ t.default = a.memo(function e(t) {
   }) : (0, s.jsx)(p.default, {
     compact: h,
     className: i()(b, {
-      [G.ephemeral]: (0, N.hasFlag)(I.flags, U.MessageFlags.EPHEMERAL),
-      [G.disableInteraction]: w,
-      [G.groupStart]: t.isGroupStart
+      [B.ephemeral]: (0, N.hasFlag)(I.flags, U.MessageFlags.EPHEMERAL),
+      [B.disableInteraction]: w,
+      [B.groupStart]: t.isGroupStart
     }),
     childrenRepliedMessage: (0, y.default)(I, l, Y, K, h),
-    childrenHeader: (0, x.default)({
+    childrenHeader: (0, L.default)({
       ...t,
       author: en,
       guildId: l.guild_id
@@ -129,16 +129,16 @@ t.default = a.memo(function e(t) {
       inlineAttachmentMedia: z,
       inlineEmbedMedia: Q,
       renderEmbeds: q,
-      gifAutoPlay: J,
+      gifAutoPlay: Z,
       poll: eu,
-      showListsAndHeaders: Z,
-      showMaskedLinks: Z,
-      shouldHideMediaOptions: X,
+      showListsAndHeaders: X,
+      showMaskedLinks: X,
+      shouldHideMediaOptions: J,
       shouldRedactExplicitContent: er,
       shouldRenderCtaButton: eo
     }),
     childrenExecutedCommand: (0, P.default)(I, l, h),
-    childrenMessageContent: (0, L.default)(t, ee),
+    childrenMessageContent: (0, x.default)(t, ee),
     childrenSystemMessage: (0, D.default)(t),
     onContextMenu: F,
     onClick: k,

@@ -29,8 +29,8 @@ var s, a, l = n("735250"),
   f = n("596454"),
   E = n("44315"),
   _ = n("377171"),
-  T = n("339085"),
-  m = n("695346"),
+  m = n("339085"),
+  T = n("695346"),
   I = n("261922"),
   p = n("263704"),
   h = n("441674"),
@@ -41,10 +41,10 @@ var s, a, l = n("735250"),
   g = n("79390"),
   M = n("839963"),
   R = n("294608"),
-  O = n("65145"),
-  v = n("981631"),
-  L = n("689938"),
-  x = n("700363");
+  v = n("65145"),
+  O = n("981631"),
+  x = n("689938"),
+  L = n("700363");
 
 function D(e) {
   let {
@@ -52,7 +52,7 @@ function D(e) {
     children: n
   } = e;
   return (0, l.jsx)("ul", {
-    "aria-label": L.default.Messages.POLL_OPTIONS_ARIA,
+    "aria-label": x.default.Messages.POLL_OPTIONS_ARIA,
     className: t,
     children: n
   })
@@ -64,7 +64,7 @@ function P(e) {
     children: n
   } = e;
   return (0, l.jsx)("div", {
-    "aria-label": L.default.Messages.POLL_OPTIONS_ARIA,
+    "aria-label": x.default.Messages.POLL_OPTIONS_ARIA,
     role: "group",
     className: t,
     children: n
@@ -79,7 +79,7 @@ function y(e) {
     orientation: "vertical"
   });
   return (0, l.jsx)("div", {
-    "aria-label": L.default.Messages.POLL_OPTIONS_ARIA,
+    "aria-label": x.default.Messages.POLL_OPTIONS_ARIA,
     ...s,
     className: t,
     children: n
@@ -95,10 +95,10 @@ function U(e) {
     children: i
   } = e, {
     pollAnswerRef: r
-  } = (0, O.usePollFocusManager)();
+  } = (0, v.usePollFocusManager)();
   return (0, l.jsx)(c.Clickable, {
     role: "checkbox",
-    className: o()(t, x.enabled),
+    className: o()(t, L.enabled),
     onClick: n,
     "aria-checked": s,
     ref: a ? r : void 0,
@@ -118,10 +118,10 @@ function j(e) {
   t = r ? i ? 0 : -1 : u ? 0 : -1;
   let {
     pollAnswerRef: d
-  } = (0, O.usePollFocusManager)();
+  } = (0, v.usePollFocusManager)();
   return (0, l.jsx)(c.Clickable, {
     role: "radio",
-    className: o()(n, x.enabled),
+    className: o()(n, L.enabled),
     onClick: a,
     "aria-checked": i,
     tabIndex: t,
@@ -168,8 +168,8 @@ function b(e) {
   }));
   return (0, l.jsx)(f, {
     className: r,
-    children: t.map((e, t) => (0, l.jsx)(G, {
-      className: o()(x.__invalid_answer, d),
+    children: t.map((e, t) => (0, l.jsx)(B, {
+      className: o()(L.__invalid_answer, d),
       answer: e,
       isFirstAnswer: 0 === t,
       elementType: E,
@@ -180,7 +180,7 @@ function b(e) {
   })
 }
 
-function G(e) {
+function B(e) {
   let {
     className: t,
     answer: n,
@@ -225,15 +225,15 @@ function G(e) {
   }
 }
 
-function B(e) {
+function G(e) {
   var t;
   let {
     attachment: n,
     className: s
-  } = e, a = (0, C.useIsWindowFocused)(), i = m.GifAutoPlay.useSetting();
+  } = e, a = (0, C.useIsWindowFocused)(), i = T.GifAutoPlay.useSetting();
   return (0, l.jsx)(I.default, {
     className: s,
-    imageClassName: x.attachmentImage,
+    imageClassName: L.attachmentImage,
     src: null != n.proxy_url && "" !== n.proxy_url ? n.proxy_url : n.url,
     alt: null !== (t = n.description) && void 0 !== t ? t : (0, g.filterOutUUID)(n.filename),
     responsive: !0,
@@ -250,9 +250,9 @@ function F(e) {
   let {
     className: n,
     emoji: s
-  } = e, a = (0, d.useStateFromStores)([T.default], () => {
+  } = e, a = (0, d.useStateFromStores)([m.default], () => {
     var e;
-    return T.default.getCustomEmojiById(null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : "")
+    return m.default.getCustomEmojiById(null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : "")
   }, [s.id]), i = (null == s ? void 0 : s.name) !== "" ? s.name : null == a ? void 0 : a.name;
   return (0, l.jsx)(f.default, {
     className: n,
@@ -287,7 +287,7 @@ function w(e) {
       var n;
       return e.id === (null === (n = t.attachmentIds) || void 0 === n ? void 0 : n[0])
     });
-    if (null != e) return k(n, (0, l.jsx)(B, {
+    if (null != e) return k(n, (0, l.jsx)(G, {
       className: s,
       attachment: e
     }))
@@ -317,7 +317,7 @@ function H(e) {
     isVictor: !0
   }, () => ({
     color: _.default.BUTTON_POSITIVE_BACKGROUND,
-    backgroundColor: (0, E.getColor)(v.Color.WHITE_500)
+    backgroundColor: (0, E.getColor)(O.Color.WHITE_500)
   })).with({
     isExpired: !0,
     isVictor: !1
@@ -325,8 +325,8 @@ function H(e) {
     color: _.default.ICON_PRIMARY,
     backgroundColor: _.default.BG_MOD_FAINT
   })).otherwise(() => ({
-    color: (0, E.getColor)(v.Color.BRAND_500),
-    backgroundColor: (0, E.getColor)(v.Color.WHITE_500)
+    color: (0, E.getColor)(O.Color.BRAND_500),
+    backgroundColor: (0, E.getColor)(O.Color.WHITE_500)
   }));
   return (0, l.jsx)(h.default, {
     width: s,
@@ -346,12 +346,12 @@ function V(e) {
   } = e, a = {
     width: n,
     height: n,
-    background: x.radioBackground,
+    background: L.radioBackground,
     "aria-hidden": !0
   };
   return t ? (0, l.jsx)(S.default, {
     ...a,
-    foreground: x.radioForeground,
+    foreground: L.radioForeground,
     className: s
   }) : (0, l.jsx)(N.default, {
     ...a,
@@ -366,8 +366,8 @@ function Y(e) {
     className: s
   } = e, a = .85 * n;
   return (0, l.jsx)("div", {
-    className: o()(x.checkbox, {
-      [x.checkboxSelected]: t
+    className: o()(L.checkbox, {
+      [L.checkboxSelected]: t
     }, s),
     style: {
       width: n,
@@ -377,7 +377,7 @@ function Y(e) {
     children: t && (0, l.jsx)(p.default, {
       width: a,
       height: a,
-      color: (0, E.getColor)(v.Color.WHITE_500)
+      color: (0, E.getColor)(O.Color.WHITE_500)
     })
   })
 }(a = s || (s = {}))[a.LIST_ITEM = 0] = "LIST_ITEM", a[a.RADIO = 1] = "RADIO", a[a.CHECKBOX = 2] = "CHECKBOX", a[a.LIST_ITEM_BUTTON = 3] = "LIST_ITEM_BUTTON"

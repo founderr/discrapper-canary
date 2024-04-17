@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   LOGO_SIZE: function() {
-    return _
+    return N
   },
   default: function() {
     return y
@@ -21,17 +21,17 @@ var l = a("735250"),
   C = a("754347"),
   p = a("74538"),
   h = a("884697"),
-  g = a("624377"),
-  E = a("141011"),
-  b = a("813083"),
-  S = a("67938"),
-  T = a("372654"),
-  x = a("414592"),
+  E = a("624377"),
+  g = a("141011"),
+  S = a("813083"),
+  b = a("67938"),
+  x = a("372654"),
+  T = a("414592"),
   v = a("474936"),
   L = a("689938"),
   I = a("380762");
-let _ = (0, h.getLogoSize)(96),
-  N = e => {
+let N = (0, h.getLogoSize)(96),
+  _ = e => {
     let {
       category: t
     } = e, {
@@ -71,14 +71,14 @@ function y(e) {
     hideLimitedTimeBadge: o = !1
   } = e, {
     backgroundColors: c
-  } = (0, g.default)(s.styles), d = !!(null === (t = x.categoryBannerOverrides[s.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText);
-  return s.skuId === i.CollectiblesCategorySkuId.SHY ? (0, l.jsx)(S.ShyBanner, {
+  } = (0, E.default)(s.styles), d = !!(null === (t = T.categoryBannerOverrides[s.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText);
+  return s.skuId === i.CollectiblesCategorySkuId.SHY ? (0, l.jsx)(b.ShyBanner, {
     category: s
-  }) : (0, l.jsxs)(E.default, {
+  }) : (0, l.jsxs)(g.default, {
     asset: s.banner,
     className: n()(I.shopBanner, r),
     style: null != c ? {
-      background: "".concat((0, T.getBackgroundGradient)(c), " border-box border-box"),
+      background: "".concat((0, x.getBackgroundGradient)(c), " border-box border-box"),
       outlineColor: c.border.toHslString()
     } : void 0,
     children: [(0, l.jsxs)("div", {
@@ -91,21 +91,21 @@ function y(e) {
     }), (0, l.jsx)("img", {
       className: I.categoryLogo,
       src: (0, h.getCollectiblesAssetURL)(s.logo, {
-        size: _
+        size: N
       }),
       alt: s.name,
       style: {
-        maxWidth: null === (a = x.categoryBannerOverrides[s.skuId]) || void 0 === a ? void 0 : a.logoMaxWidth
+        maxWidth: null === (a = T.categoryBannerOverrides[s.skuId]) || void 0 === a ? void 0 : a.logoMaxWidth
       }
     }), (0, l.jsx)(u.Text, {
       className: n()(I.summary, {
         [I.blackSummary]: d
       }),
       variant: "text-md/normal",
-      children: s.skuId === i.CollectiblesCategorySkuId.DISXCORE ? (0, l.jsx)(N, {
+      children: s.skuId === i.CollectiblesCategorySkuId.DISXCORE ? (0, l.jsx)(_, {
         category: s
       }) : s.summary
-    }), !o && (0, l.jsx)(b.default, {
+    }), !o && (0, l.jsx)(S.default, {
       category: s,
       className: I.limitedTimeBadge,
       display: "banner"

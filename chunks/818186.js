@@ -17,17 +17,17 @@ var a = n("442837"),
   f = n("26290"),
   E = n("626135"),
   _ = n("981631"),
-  T = n("689938"),
-  m = n("410506");
+  m = n("689938"),
+  T = n("410506");
 
 function I(e) {
   let {
     closePopout: t
   } = e, n = (0, a.useStateFromStores)([d.default], () => d.default.getPendingCount());
   return (0, s.jsx)(l.TooltipContainer, {
-    text: T.default.Messages.VIEW_FRIEND_REQUESTS,
+    text: m.default.Messages.VIEW_FRIEND_REQUESTS,
     children: (0, s.jsxs)(l.Clickable, {
-      className: m.friendRequestsButton,
+      className: T.friendRequestsButton,
       onClick: () => {
         E.default.track(_.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
           action_type: o.NotificationCenterActionTypes.FRIEND_REQUESTS_BUTTON_CLICK

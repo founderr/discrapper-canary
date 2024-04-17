@@ -42,8 +42,8 @@ var a = s("735250"),
   F = s("88658"),
   G = s("695346"),
   k = s("3957"),
-  H = s("279743"),
-  w = s("973005"),
+  w = s("279743"),
+  H = s("973005"),
   V = s("526761"),
   Y = s("981631"),
   W = s("800530"),
@@ -88,7 +88,7 @@ function Z() {
           onChange: R.updateDmSafetyAlertsSetting,
           hideBorder: !0,
           children: K.default.Messages.SAFETY_ALERTS_SETTING_TITLE
-        }), (0, a.jsx)(H.default, {
+        }), (0, a.jsx)(w.default, {
           animationDelay: 1e3,
           scrollPosition: V.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS
         })]
@@ -141,7 +141,7 @@ function J() {
           hideBorder: !0,
           children: K.default.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_HEADER
         })
-      }), (0, a.jsx)(H.default, {
+      }), (0, a.jsx)(w.default, {
         animationDelay: 700,
         scrollPosition: V.PrivacyAndSafetyScrollPositions.MESSAGE_REQUESTS
       })]
@@ -223,7 +223,7 @@ function $() {
             explicitContentGuilds: e
           })
         })
-      }), (0, a.jsx)(H.default, {
+      }), (0, a.jsx)(w.default, {
         scrollPosition: V.PrivacyAndSafetyScrollPositions.EXPLICIT_MEDIA_REDACTION
       })]
     }), (0, a.jsx)(E.FormDivider, {
@@ -347,7 +347,7 @@ class es extends n.PureComponent {
   }
   renderDMSafety() {
     var e;
-    let t = this.props.dmSpamFilter !== S.DmSpamFilterV2.DEFAULT_UNSET ? this.props.dmSpamFilter : null !== (e = w.ExplicitContentFilterToDmSpamFilterV2.get(this.props.explicitContentFilter)) && void 0 !== e ? e : S.DmSpamFilterV2.NON_FRIENDS;
+    let t = this.props.dmSpamFilter !== S.DmSpamFilterV2.DEFAULT_UNSET ? this.props.dmSpamFilter : null !== (e = H.ExplicitContentFilterToDmSpamFilterV2.get(this.props.explicitContentFilter)) && void 0 !== e ? e : S.DmSpamFilterV2.NON_FRIENDS;
     return this.props.mediaRedactionIsEnabled ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)(E.FormSection, {
         tag: E.FormTitleTags.H3,

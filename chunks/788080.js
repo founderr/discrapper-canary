@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   capitalizeText: function() {
-    return m
+    return T
   },
   getAppealSignalDisplayText: function() {
-    return T
+    return m
   },
   getAttachmentFilename: function() {
     return f
@@ -63,13 +63,13 @@ function _(e) {
   if (e.type === i.ContentIdType.MESSAGE) return "" === e.content && 0 === e.attachments.length;
   return !0
 }
-let T = e => ({
+let m = e => ({
     [r.AppealIngestionSignal.DIDNT_VIOLATE_POLICY]: d.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DIDNT_VIOLATE_POLICY,
     [r.AppealIngestionSignal.TOO_STRICT_UNFAIR]: d.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_TOO_STRICT_UNFAIR,
     [r.AppealIngestionSignal.DONT_AGREE_PENALTY]: d.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DONT_AGREE_PENALTY,
     [r.AppealIngestionSignal.SOMETHING_ELSE]: d.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_SOMETHING_ELSE
   })[e],
-  m = e => null == e || 0 === e.length ? "" : 1 === e.length ? e.toUpperCase() : "".concat(e.charAt(0).toUpperCase()).concat(e.slice(1));
+  T = e => null == e || 0 === e.length ? "" : 1 === e.length ? e.toUpperCase() : "".concat(e.charAt(0).toUpperCase()).concat(e.slice(1));
 
 function I(e) {
   return null != e && null != e.guild_metadata

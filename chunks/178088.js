@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("641051"),
   E = n("360629"),
   _ = n("675478"),
-  T = n("581883"),
-  m = n("585483"),
+  m = n("581883"),
+  T = n("585483"),
   I = n("153209"),
   p = n("881591"),
   h = n("903672"),
@@ -33,13 +33,13 @@ function g(e) {
     children: g,
     badgeState: M,
     popoutPosition: R,
-    popoutAlign: O
+    popoutAlign: v
   } = e, {
-    analyticsLocations: v
-  } = (0, d.default)(u.default.NOTIFICATION_CENTER), [L, x] = a.useState(!1), [D, P] = function() {
-    let e = (0, i.useStateFromStores)([T.default], () => {
+    analyticsLocations: O
+  } = (0, d.default)(u.default.NOTIFICATION_CENTER), [x, L] = a.useState(!1), [D, P] = function() {
+    let e = (0, i.useStateFromStores)([m.default], () => {
       var e, t;
-      return null !== (t = null === (e = T.default.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : r.InboxTab.UNREADS
+      return null !== (t = null === (e = m.default.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : r.InboxTab.UNREADS
     });
     return [e, a.useCallback(e => {
       _.PreloadedUserSettingsActionCreators.updateAsync("inbox", t => {
@@ -51,9 +51,9 @@ function g(e) {
     showTutorial: y,
     setSeenTutorial: U
   } = function(e) {
-    let t = (0, i.useStateFromStores)([T.default], () => {
+    let t = (0, i.useStateFromStores)([m.default], () => {
         var e, t;
-        return null !== (t = null === (e = T.default.settings.inbox) || void 0 === e ? void 0 : e.viewedTutorial) && void 0 !== t && t
+        return null !== (t = null === (e = m.default.settings.inbox) || void 0 === e ? void 0 : e.viewedTutorial) && void 0 !== t && t
       }),
       n = a.useCallback(() => {
         _.PreloadedUserSettingsActionCreators.updateAsync("inbox", e => {
@@ -65,15 +65,15 @@ function g(e) {
       setSeenTutorial: n
     }
   }(D), j = a.useCallback(() => {
-    x(!1), L && (null == n || n())
-  }, [n, L]), b = a.useCallback(() => {
-    x(!L), L ? null == n || n() : null == t || t()
-  }, [n, t, L]), G = a.useCallback(() => {
+    L(!1), x && (null == n || n())
+  }, [n, x]), b = a.useCallback(() => {
+    L(!x), x ? null == n || n() : null == t || t()
+  }, [n, t, x]), B = a.useCallback(() => {
     b(), P(r.InboxTab.UNREADS)
   }, [P, b]);
-  a.useEffect(() => (m.ComponentDispatch.subscribe(C.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, G), () => void m.ComponentDispatch.unsubscribe(C.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, G)), [G]);
+  a.useEffect(() => (T.ComponentDispatch.subscribe(C.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, B), () => void T.ComponentDispatch.unsubscribe(C.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, B)), [B]);
   let {
-    showReminders: B
+    showReminders: G
   } = f.default.useExperiment({
     location: "RecentsPopout"
   }, {
@@ -84,19 +84,19 @@ function g(e) {
     location: "RecentsPopout"
   });
   a.useEffect(() => {
-    !B && D === r.InboxTab.TODOS && P(r.InboxTab.MENTIONS)
+    !G && D === r.InboxTab.TODOS && P(r.InboxTab.MENTIONS)
   });
   let w = a.useCallback(e => {
     !e.shiftKey && j()
   }, [j]);
   return (0, s.jsx)(d.AnalyticsLocationProvider, {
-    value: v,
+    value: O,
     children: (0, s.jsx)(o.Popout, {
       animation: o.Popout.Animation.NONE,
       position: R,
-      align: O,
+      align: v,
       autoInvert: !1,
-      shouldShow: L,
+      shouldShow: x,
       onRequestClose: j,
       renderPopout: function() {
         return (0, s.jsx)(o.Dialog, {
@@ -114,7 +114,7 @@ function g(e) {
             setTab: P,
             badgeState: M,
             closePopout: j
-          }) : B && D === r.InboxTab.TODOS ? (0, s.jsx)(p.default, {
+          }) : G && D === r.InboxTab.TODOS ? (0, s.jsx)(p.default, {
             setTab: P,
             onJump: w,
             closePopout: j

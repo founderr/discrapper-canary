@@ -1,35 +1,35 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return g
+    return f
   }
 });
 var i = s("735250");
 s("470079");
-var n = s("913527"),
-  a = s.n(n),
+var a = s("913527"),
+  n = s.n(a),
   l = s("399606"),
   r = s("481060"),
-  o = s("92114"),
-  d = s("430824"),
+  d = s("92114"),
+  o = s("430824"),
   u = s("9156"),
   c = s("621600"),
   h = s("423589"),
   S = s("969943"),
   N = s("689938"),
-  f = s("510230");
+  g = s("510230");
 
-function g(e) {
+function f(e) {
   var t;
   let {
     guildId: s
-  } = e, n = (0, l.useStateFromStores)([d.default], () => d.default.getGuild(s)), g = (0, l.useStateFromStores)([u.default], () => u.default.isMuted(s)), m = (0, l.useStateFromStores)([u.default], () => u.default.getMuteConfig(s));
-  return null == n ? null : (0, i.jsxs)(r.FormItem, {
+  } = e, a = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(s)), f = (0, l.useStateFromStores)([u.default], () => u.default.isMuted(s)), m = (0, l.useStateFromStores)([u.default], () => u.default.getMuteConfig(s));
+  return null == a ? null : (0, i.jsxs)(r.FormItem, {
     children: [(0, i.jsx)(r.FormSwitch, {
       hideBorder: !0,
-      value: g,
+      value: f,
       onChange: e => {
-        o.default.updateGuildNotificationSettings(s, {
+        d.default.updateGuildNotificationSettings(s, {
           muted: e
         }, c.NotificationLabel.muted(e))
       },
@@ -38,10 +38,10 @@ function g(e) {
       },
       note: N.default.Messages.FOR_LABEL_MUTE_SEVER_DESCRIPTION_V2,
       children: N.default.Messages.FORM_LABEL_MUTE_SERVER.format({
-        name: n.name
+        name: a.name
       })
-    }), g && (0, i.jsxs)("div", {
-      className: f.mutedConfig,
+    }), f && (0, i.jsxs)("div", {
+      className: g.mutedConfig,
       children: [(0, i.jsxs)("div", {
         children: [(0, i.jsx)(r.FormTitle, {
           tag: "h3",
@@ -62,8 +62,8 @@ function g(e) {
         })]
       }), (0, i.jsx)(r.SingleSelect, {
         onChange: e => {
-          let t = e > 0 ? a()().add(e, "second").toISOString() : null;
-          o.default.updateGuildNotificationSettings(s, {
+          let t = e > 0 ? n()().add(e, "second").toISOString() : null;
+          d.default.updateGuildNotificationSettings(s, {
             mute_config: {
               selected_time_window: e,
               end_time: t

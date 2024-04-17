@@ -20,8 +20,8 @@ var a = n("512722"),
   f = n("724870"),
   E = n("87484"),
   _ = n("928518"),
-  T = n("106976"),
-  m = n("689011"),
+  m = n("106976"),
+  T = n("689011"),
   I = n("853872"),
   p = n("55563"),
   h = n("981631");
@@ -40,7 +40,7 @@ async function S(e) {
   } = e, o = p.default.get(n);
   if (null == o) {
     let e = (await (0, u.fetchAllStoreListingsForApplication)(t)).find(e => e.sku.id === n);
-    l()(null != e, "Could not find store listing for sku"), e.sku.type === h.SKUTypes.SUBSCRIPTION_GROUP && await (0, T.fetchAllSubscriptionListingsDataForApplication)(t, e.id)
+    l()(null != e, "Could not find store listing for sku"), e.sku.type === h.SKUTypes.SUBSCRIPTION_GROUP && await (0, m.fetchAllSubscriptionListingsDataForApplication)(t, e.id)
   }
   o = null != o ? o : p.default.get(n), l()(null != o && o.applicationId === t, "SKU must belong to application"), o.type === h.SKUTypes.SUBSCRIPTION && !(0, c.getSubscriptionPlansLoaded)([o.id]) && await (0, d.fetchSubscriptionPlansForSKU)(o.id);
   let _ = N();
@@ -69,7 +69,7 @@ async function S(e) {
       initialPlanId: n,
       analyticsLocationObject: a,
       analyticsLocations: l,
-      renderHeader: (e, t, n) => (0, s.jsx)(m.PurchaseHeader, {
+      renderHeader: (e, t, n) => (0, s.jsx)(T.PurchaseHeader, {
         step: n,
         onClose: () => t(!1)
       })

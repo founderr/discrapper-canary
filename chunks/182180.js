@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("35125"),
   E = n("626751"),
   _ = n("891614"),
-  T = n("981631"),
-  m = n("176505"),
+  m = n("981631"),
+  T = n("176505"),
   I = n("689938"),
   p = n("658540");
 
@@ -87,7 +87,7 @@ function S(e) {
     })(t), {
       analyticsLocations: c
     } = (0, r.default)(i.default.GUILD_ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE), E = s.roleSubscriptionData, _ = a.useCallback(() => {
-      (0, d.transitionTo)(T.Routes.CHANNEL(l, m.StaticChannelRoute.ROLE_SUBSCRIPTIONS), null, null, c), (null == E ? void 0 : E.role_subscription_listing_id) != null && (0, f.trackRoleSubscriptionPurchaseMessageTierClick)(l, n.id, s.id, E.role_subscription_listing_id)
+      (0, d.transitionTo)(m.Routes.CHANNEL(l, T.StaticChannelRoute.ROLE_SUBSCRIPTIONS), null, null, c), (null == E ? void 0 : E.role_subscription_listing_id) != null && (0, f.trackRoleSubscriptionPurchaseMessageTierClick)(l, n.id, s.id, E.role_subscription_listing_id)
     }, [l, n, s, E, c]);
     return null == E ? null : (0, f.getRoleSubscriptionPurchaseSystemMessageFormattedContent)({
       username: t.nick,

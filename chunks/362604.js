@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("642113"),
   E = n("180277"),
   _ = n("702346"),
-  T = n("626135"),
-  m = n("585483"),
+  m = n("626135"),
+  T = n("585483"),
   I = n("115610"),
   p = n("981631"),
   h = n("689938"),
@@ -59,12 +59,12 @@ function S(e) {
         children: (0, s.jsx)(o.Button, {
           color: o.Button.Colors.PRIMARY,
           onClick: () => {
-            T.default.track(p.AnalyticEvents.CHANNEL_PROMPT_ACTION_CLICKED, {
+            m.default.track(p.AnalyticEvents.CHANNEL_PROMPT_ACTION_CLICKED, {
               message_id: t.id,
               channel_id: l.id,
               guild_id: l.guild_id,
               action_type: "upload_file"
-            }), m.ComponentDispatch.dispatch(p.ComponentActions.UPLOAD_FILE), (0, u.createPendingReply)({
+            }), T.ComponentDispatch.dispatch(p.ComponentActions.UPLOAD_FILE), (0, u.createPendingReply)({
               message: t,
               channel: l,
               shouldMention: !0
@@ -77,7 +77,7 @@ function S(e) {
         children: (0, s.jsx)(o.Button, {
           color: o.Button.Colors.PRIMARY,
           onClick: () => {
-            T.default.track(p.AnalyticEvents.CHANNEL_PROMPT_ACTION_CLICKED, {
+            m.default.track(p.AnalyticEvents.CHANNEL_PROMPT_ACTION_CLICKED, {
               message_id: t.id,
               channel_id: l.id,
               guild_id: l.guild_id,

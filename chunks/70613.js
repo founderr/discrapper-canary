@@ -1,16 +1,16 @@
 "use strict";
-s.r(t), s.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return c
   }
-}), s("47120");
-var n = s("735250"),
-  a = s("470079"),
-  r = s("236471");
-let i = [s("992134")],
-  l = ["#FFFFFF"],
+}), a("47120");
+var n = a("735250"),
+  r = a("470079"),
+  s = a("236471");
+let o = [a("992134")],
+  i = ["#FFFFFF"],
   u = 1e3 / 60,
-  o = {
+  l = {
     velocity: {
       type: "static-random",
       minValue: {
@@ -66,16 +66,16 @@ let i = [s("992134")],
 function c(e) {
   let {
     className: t,
-    firing: s = !0,
+    firing: a = !0,
     wind: c = 2
-  } = e, [d, C] = a.useState(null), [p, E] = a.useState(null), A = (0, r.useConfettiCannon)(p, d), f = a.useMemo(() => new r.Environment({
+  } = e, [d, p] = r.useState(null), [f, y] = r.useState(null), C = (0, s.useConfettiCannon)(f, d), A = r.useMemo(() => new s.Environment({
     wind: c
-  }), [c]), m = a.useCallback(() => {
-    let e = null == p ? void 0 : p.getCanvas();
+  }), [c]), P = r.useCallback(() => {
+    let e = null == f ? void 0 : f.getCanvas();
     if (null == e) return;
     let t = e.getBoundingClientRect();
-    A.createConfetti({
-      ...o,
+    C.createConfetti({
+      ...l,
       position: {
         type: "static-random",
         minValue: {
@@ -88,19 +88,19 @@ function c(e) {
         }
       }
     })
-  }, [A, p]);
-  return a.useEffect(() => {
-    let e = s ? setInterval(m, u) : null;
+  }, [C, f]);
+  return r.useEffect(() => {
+    let e = a ? setInterval(P, u) : null;
     return () => clearInterval(e)
-  }, [s, m]), (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsx)(r.ConfettiCanvas, {
-      ref: E,
+  }, [a, P]), (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsx)(s.ConfettiCanvas, {
+      ref: y,
       className: t,
-      environment: f
-    }), (0, n.jsx)(r.SpriteCanvas, {
-      ref: C,
-      colors: l,
-      sprites: i,
+      environment: A
+    }), (0, n.jsx)(s.SpriteCanvas, {
+      ref: p,
+      colors: i,
+      sprites: o,
       spriteWidth: 6,
       spriteHeight: 6
     })]

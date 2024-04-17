@@ -6,12 +6,12 @@ s.r(t), s.d(t, {
 });
 var i = s("735250");
 s("470079");
-var n = s("481060"),
-  a = s("230711"),
+var a = s("481060"),
+  n = s("230711"),
   l = s("499150"),
   r = s("297087"),
-  o = s("197115"),
-  d = s("474936"),
+  d = s("197115"),
+  o = s("474936"),
   u = s("981631"),
   c = s("689938"),
   h = s("578808");
@@ -24,25 +24,25 @@ function S(e) {
     className: h.container,
     children: [(0, i.jsx)(r.default, {
       className: h.nitroWheel
-    }), (0, i.jsx)(n.Text, {
+    }), (0, i.jsx)(a.Text, {
       className: h.text,
       variant: "text-sm/normal",
       children: "Set custom notification sounds with Nitro."
-    }), (0, i.jsx)(n.Text, {
+    }), (0, i.jsx)(a.Text, {
       className: h.text,
       variant: "text-sm/normal",
       children: (0, i.jsx)(l.default, {
         onClick: () => {
-          t(), a.default.open(u.UserSettingsSections.PREMIUM)
+          t(), n.default.open(u.UserSettingsSections.PREMIUM)
         },
         children: c.default.Messages.LEARN_MORE
       })
-    }), (0, i.jsx)(o.default, {
+    }), (0, i.jsx)(d.default, {
       className: h.nitroButton,
       buttonText: c.default.Messages.PREMIUM_UPSELL_GET_NITRO,
-      size: n.Button.Sizes.SMALL,
+      size: a.Button.Sizes.SMALL,
       shinyButtonClassName: h.nitroButton,
-      subscriptionTier: d.PremiumSubscriptionSKUs.TIER_2,
+      subscriptionTier: o.PremiumSubscriptionSKUs.TIER_2,
       premiumModalAnalyticsLocation: {
         section: u.AnalyticsSections.PREMIUM_CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPSELL
       }

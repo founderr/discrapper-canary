@@ -11,8 +11,8 @@ var s, a = n("735250"),
   f = n("401131"),
   E = n("16084"),
   _ = n("558381"),
-  T = n("230711"),
-  m = n("72924"),
+  m = n("230711"),
+  T = n("72924"),
   I = n("2052"),
   p = n("115130"),
   h = n("812206"),
@@ -23,19 +23,19 @@ var s, a = n("735250"),
   g = n("580130"),
   M = n("855775"),
   R = n("55563"),
-  O = n("695103"),
-  v = n("451478"),
-  L = n("976644"),
-  x = n("466111"),
+  v = n("695103"),
+  O = n("451478"),
+  x = n("976644"),
+  L = n("466111"),
   D = n("626135"),
   P = n("630388"),
   y = n("74538"),
   U = n("814225"),
   j = n("981631"),
   b = n("689938"),
-  G = n("53970");
+  B = n("53970");
 
-function B(e, t, n) {
+function G(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -90,12 +90,12 @@ class F extends(s = l.Component) {
       tooltipPosition: s
     } = this.props;
     return (0, a.jsxs)("div", {
-      className: r()(G.disabledButtonWrapper, n),
+      className: r()(B.disabledButtonWrapper, n),
       children: [e, (0, a.jsx)(d.Tooltip, {
         text: t,
         position: s,
         children: e => (0, a.jsx)("div", {
-          className: G.disabledButtonOverlay,
+          className: B.disabledButtonOverlay,
           ...e
         })
       })]
@@ -113,15 +113,15 @@ class F extends(s = l.Component) {
         color: f,
         customDisabledColor: E,
         pauseAnimation: _,
-        isEntitled: T,
-        asGift: m,
+        isEntitled: m,
+        asGift: T,
         sku: I,
         entitlementBranchId: p,
         isInTestMode: h,
         innerClassName: N
       } = this.props,
-      S = !0 === T && (null == I || I.type !== j.SKUTypes.CONSUMABLE),
-      C = !0 === n.disabled || null != I && !I.available && !(null != p) && !h || S && !m,
+      S = !0 === m && (null == I || I.type !== j.SKUTypes.CONSUMABLE),
+      C = !0 === n.disabled || null != I && !I.available && !(null != p) && !h || S && !T,
       A = n.disabledTooltipText,
       g = {
         wrapperClassName: l,
@@ -130,12 +130,12 @@ class F extends(s = l.Component) {
         size: u,
         color: C && null != E ? E : null != f ? f : d.Button.Colors.GREEN,
         hover: this.hover,
-        innerClassName: r()(null != N ? N : null, G.applicationBuyButton),
+        innerClassName: r()(null != N ? N : null, B.applicationBuyButton),
         disabled: C,
         submitting: s || !0 === n.submitting,
         onClick: null != n.onClick ? n.onClick : this.handleClick
       };
-    return (t = !0 === n.useShinyButton ? (0, a.jsxs)(L.default, {
+    return (t = !0 === n.useShinyButton ? (0, a.jsxs)(x.default, {
       ...g,
       pauseAnimation: !c || _,
       children: [n.buttonIcon, e]
@@ -168,8 +168,8 @@ class F extends(s = l.Component) {
       isInTestMode: r
     } = this.props, o = {
       useShinyButton: !0,
-      buttonIcon: (0, a.jsx)(x.default, {
-        className: G.premiumIcon
+      buttonIcon: (0, a.jsx)(L.default, {
+        className: B.premiumIcon
       })
     };
     if (null == t) return this.renderButton(null, {
@@ -193,7 +193,7 @@ class F extends(s = l.Component) {
     })
   }
   constructor(...e) {
-    super(...e), B(this, "handleViewInStore", e => {
+    super(...e), G(this, "handleViewInStore", e => {
       let {
         sku: t,
         skuId: n,
@@ -208,7 +208,7 @@ class F extends(s = l.Component) {
         analyticsSource: this.analyticsLocation,
         slug: s.slug
       })
-    }), B(this, "handleClick", async e => {
+    }), G(this, "handleClick", async e => {
       let {
         isAuthenticated: t,
         applicationId: n,
@@ -240,7 +240,7 @@ class F extends(s = l.Component) {
       if (!s.premium || _ || i || u || I) {
         if ((s.requiresPayment || _) && !I) {
           if (null != a) try {
-            await (0, m.openSKUPaymentModal)(n, a, this.analyticsLocation, {
+            await (0, T.openSKUPaymentModal)(n, a, this.analyticsLocation, {
               promotionId: null != d ? d.promotionId : null,
               isGift: E
             })
@@ -261,12 +261,12 @@ class F extends(s = l.Component) {
         var p;
         p = this.analyticsLocation, D.default.track(j.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
           location: p
-        }), T.default.open(j.UserSettingsSections.PREMIUM)
+        }), m.default.open(j.UserSettingsSections.PREMIUM)
       }
     })
   }
 }
-B(F, "defaultProps", {
+G(F, "defaultProps", {
   tooltipPosition: "top",
   onStoreListing: !1,
   shouldRenderPrice: !1,
@@ -280,7 +280,7 @@ B(F, "defaultProps", {
     channelId: l,
     skuId: i,
     ...r
-  } = e, o = (0, u.useStateFromStores)([p.default, O.default], () => O.default.inTestModeForApplication(s) || p.default.inDevModeForApplication(s), [s]), [d, c, f, E, _, T] = (0, u.useStateFromStoresArray)([h.default, A.default, R.default, g.default], () => {
+  } = e, o = (0, u.useStateFromStores)([p.default, v.default], () => v.default.inTestModeForApplication(s) || p.default.inDevModeForApplication(s), [s]), [d, c, f, E, _, m] = (0, u.useStateFromStoresArray)([h.default, A.default, R.default, g.default], () => {
     let e = h.default.getApplication(s),
       t = A.default.getCurrentUser(),
       a = null == i && null != e ? e.destinationSkuId : i,
@@ -289,7 +289,7 @@ B(F, "defaultProps", {
       o = null != a ? g.default.isEntitledToSku(t, a, s, r) : null,
       u = y.default.canInstallPremiumApplications(t);
     return [e, t, l, o, u, a]
-  }), m = (0, u.useStateFromStores)([v.default], () => v.default.isFocused()), N = (0, u.useStateFromStores)([M.default], () => M.default.isPurchasingSKU), S = (0, u.useStateFromStores)([C.default], () => C.default.locale), L = (0, I.useAnalyticsContext)();
+  }), T = (0, u.useStateFromStores)([O.default], () => O.default.isFocused()), N = (0, u.useStateFromStores)([M.default], () => M.default.isPurchasingSKU), S = (0, u.useStateFromStores)([C.default], () => C.default.locale), x = (0, I.useAnalyticsContext)();
   if (null != n && null == l) throw Error("Unexpected entitlementBranchId without a channelId");
   return (0, a.jsx)(F, {
     ...r,
@@ -303,11 +303,11 @@ B(F, "defaultProps", {
     isInTestMode: o,
     isEntitled: E,
     isUserPremium: _,
-    isWindowFocused: m,
+    isWindowFocused: T,
     isPurchasing: N,
     locale: S,
-    analyticsContext: L,
+    analyticsContext: x,
     ref: t,
-    targetSkuId: T
+    targetSkuId: m
   })
 })

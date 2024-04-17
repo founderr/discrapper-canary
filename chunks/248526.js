@@ -5,23 +5,23 @@ t.r(r), t.d(r, {
   }
 }), t("47120");
 var a = t("735250"),
-  n = t("470079"),
-  i = t("848246"),
-  l = t("442837"),
+  i = t("470079"),
+  l = t("848246"),
+  n = t("442837"),
   o = t("481060"),
-  s = t("570140"),
-  c = t("485731"),
+  c = t("570140"),
+  s = t("485731"),
   d = t("594174"),
   u = t("246992"),
   h = t("519634");
-let p = [{
+let m = [{
     label: "No Override",
     value: !1
   }, {
     label: "Available: true",
     value: !0
   }],
-  m = [{
+  p = [{
     label: "No Override",
     value: !1
   }, {
@@ -30,9 +30,9 @@ let p = [{
   }];
 
 function g() {
-  let e = (0, l.useStateFromStores)([d.default], () => d.default.getCurrentUser()),
-    [r, t] = n.useState(!1),
-    [g, f] = n.useState(!1);
+  let e = (0, n.useStateFromStores)([d.default], () => d.default.getCurrentUser()),
+    [r, t] = i.useState(!1),
+    [g, f] = i.useState(!1);
   return (0, a.jsxs)("div", {
     className: h.container,
     children: [(0, a.jsx)(o.FormSection, {
@@ -40,7 +40,7 @@ function g() {
       className: h.formElement,
       tag: o.FormTitleTags.H3,
       children: (0, a.jsx)(o.SingleSelect, {
-        options: p,
+        options: m,
         value: r,
         onChange: e => {
           t(e)
@@ -52,7 +52,7 @@ function g() {
       className: h.formElement,
       tag: o.FormTitleTags.H3,
       children: (0, a.jsx)(o.SingleSelect, {
-        options: m,
+        options: p,
         value: g,
         onChange: e => {
           f(e)
@@ -60,13 +60,13 @@ function g() {
         popoutLayerContext: u.devToolsLayerContext
       })
     }), (0, a.jsx)(o.Button, {
-      onClick: () => void(s.default.dispatch({
+      onClick: () => void(c.default.dispatch({
         type: "PREMIUM_PERKS_DEMO_OVERRIDE",
-        perkType: i.EntitlementFeatureNames.STREAM_HIGH_QUALITY,
+        perkType: l.EntitlementFeatureNames.STREAM_HIGH_QUALITY,
         user: e,
         available: r,
         activateSuccess: g
-      }), (0, c.hqStreamingSetEnabled)(!1), (0, c.hqStreamingPopoutDismissed)(!1), (0, c.hqStreamingFrameAnimationPlayed)(!1)),
+      }), (0, s.hqStreamingSetEnabled)(!1), (0, s.hqStreamingPopoutDismissed)(!1), (0, s.hqStreamingFrameAnimationPlayed)(!1)),
       children: "Update"
     })]
   })

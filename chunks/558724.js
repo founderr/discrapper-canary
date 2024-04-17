@@ -14,9 +14,9 @@ var o = n("570140"),
   f = n("496675"),
   E = n("914010"),
   _ = n("594174"),
-  T = n("981631");
+  m = n("981631");
 
-function m(e, t, n) {
+function T(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -59,7 +59,7 @@ function A(e) {
           continue
         }
       }
-      if (t.includes("is_community") && !r.hasFeature(T.GuildFeatures.COMMUNITY) || t.includes("is_hub") && !r.hasFeature(T.GuildFeatures.HUB)) continue;
+      if (t.includes("is_community") && !r.hasFeature(m.GuildFeatures.COMMUNITY) || t.includes("is_hub") && !r.hasFeature(m.GuildFeatures.HUB)) continue;
       if (t.includes("guild_permissions")) {
         if (0 === s.length) continue;
         let e = !1;
@@ -74,11 +74,11 @@ function A(e) {
       }
       let o = _.default.getCurrentUser(),
         u = (null == o ? void 0 : o.id) === r.ownerId,
-        c = f.default.can(T.Permissions.ADMINISTRATOR, r);
+        c = f.default.can(m.Permissions.ADMINISTRATOR, r);
       if (t.includes("is_owner") && !u || t.includes("is_admin") && !c) continue;
       null == (h = null != h ? h : {})[e.key] && (h[e.key] = e);
-      let m = E.default.getGuildId(),
-        I = null != m && m === r.id;
+      let T = E.default.getGuildId(),
+        I = null != T && T === r.id;
       if ((!t.includes("is_viewing") || I) && !a) return !0
     }
     return !!a && !!l || !1
@@ -127,7 +127,7 @@ class R extends(a = r.default.PersistedStore) {
     return p.lastSeen
   }
 }
-m(R, "displayName", "SurveyStore"), m(R, "persistKey", "SurveyStore"), m(R, "migrations", [e => {
+T(R, "displayName", "SurveyStore"), T(R, "persistKey", "SurveyStore"), T(R, "migrations", [e => {
   let t = {
     ...e
   };

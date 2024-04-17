@@ -1,17 +1,17 @@
 "use strict";
 t.r(r), t.d(r, {
   clearAll: function() {
-    return l
+    return n
   },
   toggle: function() {
-    return i
+    return l
   }
 });
 var a = t("570140"),
-  n = t("91311");
+  i = t("91311");
 
-function i(e, r) {
-  let t = "boolean" == typeof r ? r : !n.default.get(e);
+function l(e, r) {
+  let t = "boolean" == typeof r ? r : !i.default.get(e);
   a.default.dispatch({
     type: "DEV_TOOLS_DESIGN_TOGGLE_WEB_SET",
     toggle: e,
@@ -19,6 +19,6 @@ function i(e, r) {
   })
 }
 
-function l() {
-  for (let e in n.default.all()) i(e, !1)
+function n() {
+  for (let e in i.default.all()) l(e, !1)
 }

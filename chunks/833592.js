@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return _
   },
   markNotificationCenterItemAcked: function() {
-    return T
+    return m
   },
   resetNotificationCenter: function() {
     return E
@@ -76,7 +76,7 @@ async function _(e, t) {
   }
 }
 
-function T(e) {
+function m(e) {
   null != e.local_id ? function(e) {
     i.default.dispatch({
       type: "NOTIFICATION_CENTER_ITEMS_LOCAL_ACK",
@@ -88,9 +88,9 @@ function T(e) {
       optimistic: !0,
       ids: [e]
     })
-  }(e.id) : m(e.id)
+  }(e.id) : T(e.id)
 }
-async function m(e) {
+async function T(e) {
   try {
     i.default.dispatch({
       type: "NOTIFICATION_CENTER_ITEMS_ACK",

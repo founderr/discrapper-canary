@@ -8,8 +8,8 @@ var s, a, l, i, r = n("913527"),
   f = n("594190"),
   E = n("569545"),
   _ = n("314897"),
-  T = n("70956"),
-  m = n("960359"),
+  m = n("70956"),
+  T = n("960359"),
   I = n("853197"),
   p = n("702512");
 let h = null,
@@ -32,17 +32,17 @@ let h = null,
       completed: a,
       gameTitle: l
     } = M;
-    !(null == t || null == l || a || null == s || null == n || g.isStarted()) && (e ? (0, m.sendHeartbeat)(t, n, s.pid) : g.start(1 * T.default.Millis.MINUTE, () => {
-      (0, m.sendHeartbeat)(t, n, s.pid)
+    !(null == t || null == l || a || null == s || null == n || g.isStarted()) && (e ? (0, T.sendHeartbeat)(t, n, s.pid) : g.start(1 * m.default.Millis.MINUTE, () => {
+      (0, T.sendHeartbeat)(t, n, s.pid)
     }))
   },
-  O = e => {
+  v = e => {
     M.retries = 0, M.completed = e.completed, M.initialProgressFetched = !0, M.progress = e.progress, M.lastCheckedAt = o().now(), A = M.completed ? p.TooltipActions.QUEST_COMPLETION : p.TooltipActions.TRACK_PROGRESS
   },
-  v = (e, t, n) => {
+  O = (e, t, n) => {
     (!M.completed || e.dropsQuestId !== M.dropsQuestId) && (M.game = t, M.dropsQuestId = e.dropsQuestId, M.gameTitle = e.title, M.completed = !1, M.interrupted = !1, M.streamKey = n, M.retries = 0, M.lastCheckedAt = o().now(), g.start(5e3, () => R(!0)))
   };
-class L extends(i = u.default.Store) {
+class x extends(i = u.default.Store) {
   initialize() {
     this.waitFor(f.default)
   }
@@ -90,12 +90,12 @@ class L extends(i = u.default.Store) {
     return null == t ? 0 : t.percent
   }
 }
-l = "DropsStore", (a = "displayName") in(s = L) ? Object.defineProperty(s, a, {
+l = "DropsStore", (a = "displayName") in(s = x) ? Object.defineProperty(s, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = l, t.default = new L(c.default, {
+}) : s[a] = l, t.default = new x(c.default, {
   DROPS_ELIGIBILITY_FETCH_SUCCESS: e => {
     S[e.dropsQuestId] = e.isEligible
   },
@@ -115,12 +115,12 @@ l = "DropsStore", (a = "displayName") in(s = L) ? Object.defineProperty(s, a, {
       enrolledUser: e.enrolledUser
     }
   },
-  DROPS_FETCH_PROGRESS_SUCCESS: O,
+  DROPS_FETCH_PROGRESS_SUCCESS: v,
   DROPS_FETCH_PROGRESS_FAILURE: e => {
     !M.initialProgressFetched && (M.initialProgressFetched = !0, A = p.TooltipActions.STREAM_CTA)
   },
   DROPS_HEARTBEAT_SUCCESS: e => {
-    O(e), S[e.dropsQuestId] = !0, R()
+    v(e), S[e.dropsQuestId] = !0, R()
   },
   DROPS_HEARTBEAT_FAILURE: e => {
     let {
@@ -176,9 +176,9 @@ l = "DropsStore", (a = "displayName") in(s = L) ? Object.defineProperty(s, a, {
     });
     if (null == u || !u.dropsEnabled) return;
     let d = u.autoEnrollment;
-    null != C[o.dropsQuestId] && C[o.dropsQuestId].isEnrolled || d ? v(o, r, i) : c.default.wait(async () => {
+    null != C[o.dropsQuestId] && C[o.dropsQuestId].isEnrolled || d ? O(o, r, i) : c.default.wait(async () => {
       var e;
-      await (0, m.fetchEnrolledUser)(o.dropsQuestId), (null === (e = C[o.dropsQuestId]) || void 0 === e ? void 0 : e.isEnrolled) && v(o, r, i)
+      await (0, T.fetchEnrolledUser)(o.dropsQuestId), (null === (e = C[o.dropsQuestId]) || void 0 === e ? void 0 : e.isEnrolled) && O(o, r, i)
     })
   },
   LOGOUT: function() {

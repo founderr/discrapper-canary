@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("390322"),
   E = n("572004"),
   _ = n("49012"),
-  T = n("617136"),
-  m = n("272008"),
+  m = n("617136"),
+  T = n("272008"),
   I = n("918701"),
   p = n("981631"),
   h = n("231338"),
@@ -42,10 +42,10 @@ function S(e) {
           (0, _.handleClick)({
             href: e.quest.config.getGameLink,
             onConfirm: () => {
-              (0, T.trackQuestContentClicked)({
+              (0, m.trackQuestContentClicked)({
                 questId: e.quest.id,
                 questContent: e.questContent,
-                questContentCTA: T.QuestContentCTA.CONTEXT_MENU_OPEN_GAME_LINK
+                questContentCTA: m.QuestContentCTA.CONTEXT_MENU_OPEN_GAME_LINK
               }), (0, c.default)(e.quest.config.getGameLink)
             }
           })
@@ -55,10 +55,10 @@ function S(e) {
         id: "share-link",
         label: N.default.Messages.COPY_LINK,
         action: () => {
-          (0, T.trackQuestContentClicked)({
+          (0, m.trackQuestContentClicked)({
             questId: e.quest.id,
             questContent: e.questContent,
-            questContentCTA: T.QuestContentCTA.CONTEXT_MENU_COPY_LINK
+            questContentCTA: m.QuestContentCTA.CONTEXT_MENU_COPY_LINK
           }), (0, E.copy)((0, I.getQuestUrl)(e.quest.id))
         },
         icon: l.CopyIcon
@@ -68,20 +68,20 @@ function S(e) {
         id: "learn-more",
         label: N.default.Messages.QUESTS_LEARN_MORE_V2,
         action: () => {
-          (0, T.trackQuestContentClicked)({
+          (0, m.trackQuestContentClicked)({
             questId: e.quest.id,
             questContent: e.questContent,
-            questContentCTA: T.QuestContentCTA.CONTEXT_MENU_LEARN_MORE
+            questContentCTA: m.QuestContentCTA.CONTEXT_MENU_LEARN_MORE
           }), d.default.open(p.UserSettingsSections.INVENTORY)
         }
       }), e.shouldShowDisclosure && (0, s.jsx)(o.MenuItem, {
         id: "display-disclosure",
         label: N.default.Messages.QUESTS_DISCLOSURE_LABEL,
         action: () => {
-          (0, T.trackQuestContentClicked)({
+          (0, m.trackQuestContentClicked)({
             questId: e.quest.id,
             questContent: e.questContent,
-            questContentCTA: T.QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE
+            questContentCTA: m.QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE
           }), (0, r.openModalLazy)(async () => {
             let {
               default: t
@@ -97,11 +97,11 @@ function S(e) {
         id: "hide-entrypoint",
         label: N.default.Messages.QUESTS_HIDE_THIS,
         action: () => {
-          (0, T.trackQuestContentClicked)({
+          (0, m.trackQuestContentClicked)({
             questId: e.quest.id,
             questContent: e.questContent,
-            questContentCTA: T.QuestContentCTA.CONTEXT_MENU_HIDE_CONTENT
-          }), (0, I.isDismissible)(e.questContent) && (0, m.dismissQuestContent)(e.quest.id, e.questContent)
+            questContentCTA: m.QuestContentCTA.CONTEXT_MENU_HIDE_CONTENT
+          }), (0, I.isDismissible)(e.questContent) && (0, T.dismissQuestContent)(e.quest.id, e.questContent)
         },
         subtext: N.default.Messages.QUESTS_FIND_QUEST
       })]
@@ -111,19 +111,19 @@ function S(e) {
         id: "dismiss",
         label: "Reset Dismissibility",
         action: () => {
-          (0, m.resetQuestDismissibilityStatus)(e.quest.id)
+          (0, T.resetQuestDismissibilityStatus)(e.quest.id)
         }
       }), (0, s.jsx)(o.MenuItem, {
         id: "enrollment",
         label: "Reset Quest",
         action: () => {
-          (0, m.resetQuestPreviewStatus)(e.quest.id)
+          (0, T.resetQuestPreviewStatus)(e.quest.id)
         }
       }), (0, s.jsx)(o.MenuItem, {
         id: "complete",
         label: "Complete Quest",
         action: () => {
-          (0, m.completeQuestPreview)(e.quest.id)
+          (0, T.completeQuestPreview)(e.quest.id)
         }
       })]
     }, "preview-controls")]
@@ -140,10 +140,10 @@ function C(e) {
     questContent: u,
     ...d
   } = e, c = a.useCallback(() => {
-    (0, T.trackQuestContentClicked)({
+    (0, m.trackQuestContentClicked)({
       questId: r.id,
       questContent: u,
-      questContentCTA: T.QuestContentCTA.OPEN_CONTEXT_MENU
+      questContentCTA: m.QuestContentCTA.OPEN_CONTEXT_MENU
     }), null != n && n()
   }, [n, r, u]);
   return (0, s.jsx)(o.Popout, {

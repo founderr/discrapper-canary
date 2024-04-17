@@ -16,9 +16,9 @@ let r = e => {
     n = (0, a.useStateFromStores)([u.default], () => u.default.getCurrentUser()),
     r = (0, s.useInappropriateConversationBannerForChannel)(e.id, "context-menu-item");
   if ((null == n ? void 0 : n.isStaff()) !== !0 || !t || !e.isDM()) return null;
-  let d = (null == r ? void 0 : r.type) === i.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1;
+  let o = (null == r ? void 0 : r.type) === i.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1;
   return {
-    isTier1: d,
+    isTier1: o,
     isTier2: (null == r ? void 0 : r.type) === i.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2
   }
 }

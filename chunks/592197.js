@@ -1,16 +1,16 @@
 "use strict";
 t.r(r), t.d(r, {
   default: function() {
-    return l
+    return n
   }
 });
 var a = t("735250");
 t("470079");
-var n = t("702904"),
-  i = t("351930");
+var i = t("702904"),
+  l = t("351930");
 
-function l() {
+function n() {
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(n.default, {}), (0, a.jsx)(i.default, {})]
+    children: [(0, a.jsx)(i.default, {}), (0, a.jsx)(l.default, {})]
   })
 }

@@ -5,49 +5,49 @@ t.r(r), t.d(r, {
   }
 });
 var a = t("735250"),
-  n = t("470079"),
-  i = t("120356"),
-  l = t.n(i),
+  i = t("470079"),
+  l = t("120356"),
+  n = t.n(l),
   o = t("481060"),
-  s = t("151011"),
-  c = t("779869");
+  c = t("151011"),
+  s = t("779869");
 
 function d(e) {
   let {
     columns: r,
     rowComponent: t,
-    headerClassName: i,
+    headerClassName: l,
     stickyHeader: d,
     onClickRow: u,
     selectedRowKey: h,
-    ...p
-  } = e, m = n.useMemo(() => r.map(e => ({
+    ...m
+  } = e, p = i.useMemo(() => r.map(e => ({
     renderHeader: () => (0, a.jsx)(o.Text, {
       variant: "text-sm/semibold",
       children: e.key
     }),
     ...e
   })), [r]);
-  return (0, a.jsx)(s.default, {
-    ...p,
-    columns: m,
+  return (0, a.jsx)(c.default, {
+    ...m,
+    columns: p,
     rowComponent: null != t ? t : e => {
       let {
         item: r,
         children: t
-      } = e, n = l()(c.tableRow, {
-        [c.selectedTableRow]: r.key === h
+      } = e, i = n()(s.tableRow, {
+        [s.selectedTableRow]: r.key === h
       });
       return null != u ? (0, a.jsx)(o.Clickable, {
-        className: n,
+        className: i,
         onClick: () => u(r.key),
         children: t
       }) : (0, a.jsx)("div", {
-        className: n,
+        className: i,
         children: t
       })
     },
-    headerClassName: l()(c.tableHeader, i),
+    headerClassName: n()(s.tableHeader, l),
     stickyHeader: null == d || d
   })
 }

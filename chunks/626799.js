@@ -15,8 +15,8 @@ var s, a = n("735250"),
   f = n("86357"),
   E = n("914602"),
   _ = n("568836"),
-  T = n("730749"),
-  m = n("112724"),
+  m = n("730749"),
+  T = n("112724"),
   I = n("812206"),
   p = n("283595"),
   h = n("558314"),
@@ -35,7 +35,7 @@ function R(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class O extends(s = l.Component) {
+class v extends(s = l.Component) {
   get analyticsLocation() {
     let {
       analyticsContext: {
@@ -179,12 +179,12 @@ class O extends(s = l.Component) {
     })
   }
 }
-R(O, "defaultProps", {
+R(v, "defaultProps", {
   renderFallback: A.NOOP
 });
-let v = [N.default, h.default, p.default, S.default];
+let O = [N.default, h.default, p.default, S.default];
 
-function L(e) {
+function x(e) {
   let {
     skuId: t
   } = e, n = N.default.get(t), s = null != n ? I.default.getApplication(n.applicationId) : null;
@@ -197,6 +197,6 @@ function L(e) {
     libraryApplication: null != n ? p.default.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
   }
 }
-let x = (0, m.default)((0, T.default)(O));
-t.default = r.default.connectStores(v, L)(x);
-let D = (0, T.default)(r.default.connectStores(v, L)(O))
+let L = (0, T.default)((0, m.default)(v));
+t.default = r.default.connectStores(O, x)(L);
+let D = (0, m.default)(r.default.connectStores(O, x)(v))

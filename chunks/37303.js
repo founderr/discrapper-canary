@@ -31,8 +31,8 @@ let E = e => {
   let {
     quest: t,
     location: n
-  } = e, [l, E] = a.useState(!1), _ = a.useCallback(() => E(!0), []), T = a.useCallback(() => E(!1), []), {
-    containerRef: m,
+  } = e, [l, E] = a.useState(!1), _ = a.useCallback(() => E(!0), []), m = a.useCallback(() => E(!1), []), {
+    containerRef: T,
     size: I
   } = f(), p = (0, i.useIsQuestExpired)(t);
   return (0, s.jsx)(o.QuestContentImpressionTracker, {
@@ -42,13 +42,13 @@ let E = e => {
     children: e => (0, s.jsx)(s.Fragment, {
       children: (0, s.jsxs)("div", {
         ref: t => {
-          e.current = t, m.current = t
+          e.current = t, T.current = t
         },
         className: c.questsCard,
         onFocus: _,
         onMouseEnter: _,
-        onBlur: T,
-        onMouseLeave: T,
+        onBlur: m,
+        onMouseLeave: m,
         children: [(0, s.jsx)(d.default, {
           isFocused: l,
           isQuestExpired: p,

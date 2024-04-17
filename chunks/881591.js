@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("524437"),
   E = n("481060"),
   _ = n("239091"),
-  T = n("904245"),
-  m = n("43267"),
+  m = n("904245"),
+  T = n("43267"),
   I = n("933557"),
   p = n("822893"),
   h = n("329461"),
@@ -28,18 +28,18 @@ var s = n("735250"),
   g = n("703656"),
   M = n("695346"),
   R = n("592125"),
-  O = n("430824"),
-  v = n("375954"),
-  L = n("346656"),
-  x = n("855693"),
+  v = n("430824"),
+  O = n("375954"),
+  x = n("346656"),
+  L = n("855693"),
   D = n("568570"),
   P = n("617808"),
   y = n("240126"),
   U = n("791914"),
   j = n("981631"),
   b = n("689938"),
-  G = n("83307"),
-  B = n("916621");
+  B = n("83307"),
+  G = n("916621");
 let F = {
   offset: {
     left: 4,
@@ -57,13 +57,13 @@ function k(e) {
   }, []);
   let [i, r] = a.useState(!1), o = a.useMemo(() => l.filter(e => null == e.dueAt || e.dueAt < new Date), [l]), u = i ? l : o, d = u.filter(e => !(0, N.savedMessageHasMetadata)(e));
   return (0, S.useMessageRemindersLoader)(d), (0, s.jsxs)("div", {
-    className: G.container,
+    className: B.container,
     children: [(0, s.jsx)(U.default, {
       tab: f.InboxTab.TODOS,
       setTab: t,
       closePopout: n
     }), (0, s.jsxs)("div", {
-      className: G.headerText,
+      className: B.headerText,
       children: [(0, s.jsx)(E.Heading, {
         variant: "heading-lg/bold",
         children: i ? b.default.Messages.MESSAGE_REMINDERS_HEADER_ALL : b.default.Messages.MESSAGE_REMINDERS_HEADER_OVERDUE
@@ -96,7 +96,7 @@ function w(e) {
     l = (0, c.useStateFromStores)([h.default], () => h.default.getMessageReminders().find(e => e.messageId === a));
   o()(null != l, "should not be rendering a to-do message without a to-do message");
   let r = l.complete,
-    u = (0, c.useStateFromStores)([v.default], () => v.default.getMessage(l.channelId, l.messageId)),
+    u = (0, c.useStateFromStores)([O.default], () => O.default.getMessage(l.channelId, l.messageId)),
     {
       message: f,
       channel: N
@@ -104,24 +104,24 @@ function w(e) {
     S = R.default.getChannel(N.id),
     D = (0, I.default)(S, !0),
     y = null != D ? D : N.name,
-    U = (0, c.useStateFromStores)([O.default], () => O.default.getGuild(null == N ? void 0 : N.guild_id)),
-    k = null != N ? (0, m.getChannelIconURL)(N) : null,
+    U = (0, c.useStateFromStores)([v.default], () => v.default.getGuild(null == N ? void 0 : N.guild_id)),
+    k = null != N ? (0, T.getChannelIconURL)(N) : null,
     w = null;
   return null != l.dueAt && (l.dueAt > new Date ? (t = "text-muted", w = b.default.Messages.MESSAGE_REMINDERS_DUE_IN.format({
     duration: d().duration(l.dueAt.getTime() - Date.now(), "millisecond").humanize()
   })) : (t = "text-danger", w = b.default.Messages.MESSAGE_REMINDERS_OVERDUE.format({
     duration: d().duration(Date.now() - l.dueAt.getTime(), "millisecond").humanize()
   }))), (0, s.jsxs)("div", {
-    className: B.container,
+    className: G.container,
     children: [(0, s.jsxs)("div", {
-      className: G.messageHeader,
+      className: B.messageHeader,
       children: [(0, s.jsxs)("div", {
         children: [(0, s.jsxs)("div", {
-          className: G.messageInfo,
-          children: [null != U ? (0, s.jsx)(L.default, {
-            className: G.guildIcon,
+          className: B.messageInfo,
+          children: [null != U ? (0, s.jsx)(x.default, {
+            className: B.guildIcon,
             guild: U,
-            size: L.default.Sizes.SMALL,
+            size: x.default.Sizes.SMALL,
             active: !0
           }) : (0, s.jsx)(E.Avatar, {
             "aria-hidden": !0,
@@ -136,7 +136,7 @@ function w(e) {
         }), null != l.notes && l.notes.length > 0 ? (0, s.jsxs)(E.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
-          className: G.notes,
+          className: B.notes,
           selectable: !0,
           children: [(0, s.jsx)(P.default, {
             width: 12,
@@ -151,7 +151,7 @@ function w(e) {
           children: w
         }) : null]
       }), (0, s.jsxs)("div", {
-        className: G.reminderActions,
+        className: B.reminderActions,
         children: [(0, s.jsx)(E.TooltipContainer, {
           text: b.default.Messages.MESSAGE_REMINDERS_SNOOZE,
           children: (0, s.jsx)(E.Clickable, {
@@ -164,8 +164,8 @@ function w(e) {
                 message: f
               })
             }),
-            className: G.clock,
-            children: (0, s.jsx)(x.default, {})
+            className: B.clock,
+            children: (0, s.jsx)(L.default, {})
           })
         }), (0, s.jsx)(E.Checkbox, {
           type: E.Checkbox.Types.INVERTED,
@@ -176,22 +176,22 @@ function w(e) {
         })]
       })]
     }), (0, s.jsxs)("div", {
-      className: i()(B.messageContainer, G.unloadedMessage, {
-        [G.disabledMessage]: r
+      className: i()(G.messageContainer, B.unloadedMessage, {
+        [B.disabledMessage]: r
       }),
       children: [(0, s.jsx)(A.default, {
         message: f,
         channel: N,
-        className: B.message,
+        className: G.message,
         compact: M.MessageDisplayCompact.getSetting(),
         animateAvatar: !1,
         focusProps: F,
         trackAnnouncementViews: !0
       }, f.id), (0, s.jsxs)("div", {
-        className: G.actions,
+        className: B.actions,
         children: [null == u ? (0, s.jsx)(E.Button, {
           onClick: () => {
-            T.default.fetchMessages({
+            m.default.fetchMessages({
               channelId: l.channelId,
               limit: 1,
               jump: {
@@ -203,7 +203,7 @@ function w(e) {
           },
           size: E.Button.Sizes.MIN,
           color: E.Button.Colors.TRANSPARENT,
-          className: G.loadButton,
+          className: B.loadButton,
           children: (0, s.jsx)(E.Text, {
             variant: "text-xs/normal",
             children: "Load"
@@ -214,7 +214,7 @@ function w(e) {
           },
           size: E.Button.Sizes.MIN,
           color: E.Button.Colors.TRANSPARENT,
-          className: G.loadButton,
+          className: B.loadButton,
           children: (0, s.jsx)(E.Text, {
             variant: "text-xs/normal",
             children: b.default.Messages.JUMP

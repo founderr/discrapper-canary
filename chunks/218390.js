@@ -38,8 +38,8 @@ var a = s("735250"),
   F = s("197115"),
   G = s("823188"),
   k = s("504865"),
-  H = s("179984"),
-  w = s("386733"),
+  w = s("179984"),
+  H = s("386733"),
   V = s("487980"),
   Y = s("474936"),
   W = s("981631"),
@@ -240,9 +240,9 @@ t.default = function() {
     children: (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)("div", {
         className: z.__invalid_container,
-        children: [(0, a.jsx)(X, {}), x && (0, a.jsx)(w.default, {
+        children: [(0, a.jsx)(X, {}), x && (0, a.jsx)(H.default, {
           isInSettings: !0
-        }), (0, a.jsx)(J, {}), (0, a.jsx)(H.default, {
+        }), (0, a.jsx)(J, {}), (0, a.jsx)(w.default, {
           className: z.__invalid_planComparisonTable,
           hideCTAs: !0,
           headingOverride: K.default.Messages.PREMIUM_COMPARISON_TABLE_WHAT_YOU_HAVE_GOT_TITLE,

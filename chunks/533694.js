@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return T
   }
 });
 var s = n("735250");
@@ -18,7 +18,7 @@ var a = n("399606"),
   E = n("689938"),
   _ = n("315752");
 
-function T(e) {
+function m(e) {
   let {
     guildId: t,
     user: n,
@@ -55,19 +55,19 @@ function T(e) {
   })
 }
 
-function m(e) {
+function T(e) {
   var t, a, l;
   let {
     channel: i,
     message: c,
     compact: _
-  } = e, m = (0, r.default)(c), I = (0, o.useUsernameHook)({
+  } = e, T = (0, r.default)(c), I = (0, o.useUsernameHook)({
     user: c.author,
     channelId: i.id,
     guildId: i.guild_id,
     messageId: c.id
-  })(m), p = E.default.Messages.SYSTEM_MESSAGE_GUILD_PRODUCT_PURCHASE.format({
-    username: m.nick,
+  })(T), p = E.default.Messages.SYSTEM_MESSAGE_GUILD_PRODUCT_PURCHASE.format({
+    username: T.nick,
     usernameHook: I,
     productName: null !== (l = null === (a = c.purchaseNotification) || void 0 === a ? void 0 : null === (t = a.guild_product_purchase) || void 0 === t ? void 0 : t.product_name) && void 0 !== l ? l : "",
     handleProductListingClick: () => {
@@ -81,8 +81,8 @@ function m(e) {
       timestamp: c.timestamp,
       compact: _,
       children: p
-    }), (0, s.jsx)(T, {
-      username: m.nick,
+    }), (0, s.jsx)(m, {
+      username: T.nick,
       guildId: i.guild_id,
       user: c.author
     })]

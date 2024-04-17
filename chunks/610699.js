@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("447543"),
   E = n("317381"),
   _ = n("778569"),
-  T = n("182906"),
-  m = n("100527"),
+  m = n("182906"),
+  T = n("100527"),
   I = n("906732"),
   p = n("835473"),
   h = n("471445"),
@@ -28,18 +28,18 @@ var s = n("735250"),
   g = n("594174"),
   M = n("197409"),
   R = n("514342"),
-  O = n("602623"),
-  v = n("624138"),
-  L = n("358595"),
-  x = n("981631"),
+  v = n("602623"),
+  O = n("624138"),
+  x = n("358595"),
+  L = n("981631"),
   D = n("245335"),
   P = n("689938"),
   y = n("648332");
-let U = (0, v.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
-  j = (0, v.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
-  b = (0, v.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
+let U = (0, O.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
+  j = (0, O.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
+  b = (0, O.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
 
-function G(e) {
+function B(e) {
   let {
     members: t,
     membersOnline: n,
@@ -77,7 +77,7 @@ function G(e) {
   })
 }
 
-function B(e) {
+function G(e) {
   let {
     channel: t,
     guild: n,
@@ -130,7 +130,7 @@ function F(e) {
     } = e,
     {
       approximate_member_count: R,
-      approximate_presence_count: v,
+      approximate_presence_count: O,
       target_type: F,
       target_application: k
     } = d;
@@ -164,32 +164,32 @@ function F(e) {
         return k.id === t
       })
     }),
-    J = S.default.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
-    Z = (0, u.useStateFromStores)([A.default], () => null != J && A.default.can(x.Permissions.USE_EMBEDDED_ACTIVITIES, J), [J]),
+    Z = S.default.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
+    X = (0, u.useStateFromStores)([A.default], () => null != Z && A.default.can(L.Permissions.USE_EMBEDDED_ACTIVITIES, Z), [Z]),
     {
-      analyticsLocations: X
-    } = (0, I.default)(m.default.INVITE_EMBED),
+      analyticsLocations: J
+    } = (0, I.default)(T.default.INVITE_EMBED),
     $ = (0, _.default)({
       applicationId: k.id,
       size: U
     }),
-    ee = (0, u.useStateFromStoresArray)([E.default], () => null != J ? E.default.getEmbeddedActivitiesForChannel(J.id).filter(e => e.applicationId === k.id).flatMap(e => Array.from(e.userIds)) : [], [J, k.id]),
+    ee = (0, u.useStateFromStoresArray)([E.default], () => null != Z ? E.default.getEmbeddedActivitiesForChannel(Z.id).filter(e => e.applicationId === k.id).flatMap(e => Array.from(e.userIds)) : [], [Z, k.id]),
     et = (0, u.useStateFromStoresArray)([g.default], () => ee.map(e => g.default.getUser(e)), [ee]),
-    en = d.state === x.InviteStates.ACCEPTING,
+    en = d.state === L.InviteStates.ACCEPTING,
     es = null != W;
   if (null == W) {
-    if (null == d.guild) return (0, s.jsx)(L.default, {});
+    if (null == d.guild) return (0, s.jsx)(x.default, {});
     W = new N.default(d.guild)
   }
-  let ea = es && !Z || es && Q,
+  let ea = es && !X || es && Q,
     el = () => {
       f.default.acceptInviteAndTransitionToInviteChannel({
         inviteKey: d.code,
         context: h("Invite Button Embed"),
-        analyticsLocations: X
+        analyticsLocations: J
       })
     };
-  return (es && Q && (l = P.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !Z && (l = P.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), r = Q ? P.default.Messages.INVITE_EMBED_JOINED : q || !es ? P.default.Messages.JOIN : P.default.Messages.START, null == d.code || "" === d.code) ? null : (0, s.jsxs)("div", {
+  return (es && Q && (l = P.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (l = P.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), r = Q ? P.default.Messages.INVITE_EMBED_JOINED : q || !es ? P.default.Messages.JOIN : P.default.Messages.START, null == d.code || "" === d.code) ? null : (0, s.jsxs)("div", {
     className: y.container,
     ref: w,
     children: [(0, s.jsx)("div", {
@@ -197,7 +197,7 @@ function F(e) {
         [y.large]: H,
         [y.stacked]: Y
       }),
-      children: (0, s.jsx)(T.default, {
+      children: (0, s.jsx)(m.default, {
         imageBackground: $,
         applicationName: null !== (n = null == z ? void 0 : z.name) && void 0 !== n ? n : "",
         imageClassName: i()(y.img, {
@@ -222,8 +222,8 @@ function F(e) {
           className: y.heading,
           variant: "heading-xl/semibold",
           children: null == z ? void 0 : z.name
-        }), (0, s.jsx)(B, {
-          channel: J,
+        }), (0, s.jsx)(G, {
+          channel: Z,
           guild: W,
           isStacked: Y,
           hasEnded: !q
@@ -244,16 +244,16 @@ function F(e) {
             variant: "text-xs/medium",
             children: P.default.Messages.EMBEDDED_ACTIVITIES_EMBED_START
           })]
-        }) : null, es ? null : (0, s.jsx)(G, {
+        }) : null, es ? null : (0, s.jsx)(B, {
           members: R,
-          membersOnline: v,
+          membersOnline: O,
           isLarge: H,
           isStacked: Y
         }), (0, s.jsxs)("div", {
           className: y.cta,
           children: [null != W && q ? (0, s.jsx)("div", {
             className: y.avatars,
-            children: (0, s.jsx)(O.default, {
+            children: (0, s.jsx)(v.default, {
               guildId: W.id,
               users: et,
               max: 4

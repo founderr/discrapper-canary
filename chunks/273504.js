@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   AutomodActionType: function() {
-    return r.AutomodActionType
+    return u.AutomodActionType
   },
   AutomodEventType: function() {
-    return _.AutomodEventType
+    return r.AutomodEventType
   },
   AutomodTriggerType: function() {
-    return i.AutomodTriggerType
+    return a.AutomodTriggerType
   },
   KeywordPreset: function() {
-    return u
+    return _
   },
   MAX_BLOCK_ACTION_CUSTOM_MESSAGE_LENGTH: function() {
     return R
@@ -22,10 +22,10 @@ n.r(t), n.d(t, {
     return s
   },
   MAX_KEYWORDS_PER_ALLOWLIST_KEYWORD_FILTER_RULE: function() {
-    return E
+    return i
   },
   MAX_KEYWORDS_PER_KEYWORD_FILTER: function() {
-    return a
+    return E
   },
   MAX_MENTION_SPAM_LIMIT: function() {
     return c
@@ -37,7 +37,7 @@ n.r(t), n.d(t, {
     return N
   },
   MAX_RULE_NAME_LENGTH: function() {
-    return I
+    return O
   },
   MENTION_SPAM_LIMIT_DEFAULT: function() {
     return M
@@ -46,30 +46,30 @@ n.r(t), n.d(t, {
     return T
   },
   MIN_MENTION_SPAM_LIMIT: function() {
-    return O
+    return I
   },
   MIN_REGEX_PATTERN_LENGTH: function() {
     return l
   },
   QUARANTINE_USER_ALERT_KEY: function() {
-    return S
+    return D
   }
 });
-var o, u, r = n("401653"),
-  _ = n("95930"),
-  i = n("41381");
-(o = u || (u = {}))[o.PROFANITY = 1] = "PROFANITY", o[o.SEXUAL_CONTENT = 2] = "SEXUAL_CONTENT", o[o.SLURS = 3] = "SLURS", i.AutomodTriggerType.USER_PROFILE, i.AutomodTriggerType.SERVER_POLICY, i.AutomodTriggerType.MENTION_SPAM, i.AutomodTriggerType.ML_SPAM, i.AutomodTriggerType.DEFAULT_KEYWORD_LIST, i.AutomodTriggerType.KEYWORD;
-let a = 1e3,
-  E = 100,
+var o, _, u = n("401653"),
+  r = n("95930"),
+  a = n("41381");
+(o = _ || (_ = {}))[o.PROFANITY = 1] = "PROFANITY", o[o.SEXUAL_CONTENT = 2] = "SEXUAL_CONTENT", o[o.SLURS = 3] = "SLURS", a.AutomodTriggerType.USER_PROFILE, a.AutomodTriggerType.SERVER_POLICY, a.AutomodTriggerType.MENTION_SPAM, a.AutomodTriggerType.ML_SPAM, a.AutomodTriggerType.DEFAULT_KEYWORD_LIST, a.AutomodTriggerType.KEYWORD;
+let E = 1e3,
+  i = 100,
   s = 1e3,
   A = 10,
   d = 60,
   T = 1,
   l = 1,
   N = 260,
-  I = 100,
-  O = 1,
+  O = 100,
+  I = 1,
   c = 50,
   M = 20,
   R = 150,
-  S = "automod-profile-quarantine-alert"
+  D = "automod-profile-quarantine-alert"

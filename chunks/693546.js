@@ -94,7 +94,7 @@ let d = async e => {
     status: i.body.application_status,
     request: i.body
   })
-}, T = async (e, t) => {
+}, m = async (e, t) => {
   let n = await s.HTTP.patch({
     url: u.Endpoints.GUILD_JOIN_REQUESTS(e),
     body: {
@@ -106,7 +106,7 @@ let d = async e => {
     guildId: e,
     action: t
   }), n.body
-}, m = async e => {
+}, T = async e => {
   try {
     let {
       body: t
@@ -146,8 +146,8 @@ t.default = {
   ackUserGuildJoinRequest: E,
   removeGuildJoinRequest: f,
   updateGuildJoinRequest: _,
-  actionAllPendingJoinRequests: T,
-  resetGuildJoinRequest: m,
+  actionAllPendingJoinRequests: m,
+  resetGuildJoinRequest: T,
   fetchRequestToJoinGuilds: I,
   setSelectedApplicationTab: (e, t) => {
     a.default.dispatch({

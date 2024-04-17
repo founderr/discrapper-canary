@@ -5,8 +5,8 @@ var a = s("735250"),
   i = s("120356"),
   l = s.n(i),
   r = s("481060"),
-  o = s("292937"),
-  u = s("692437"),
+  u = s("292937"),
+  o = s("692437"),
   d = s("689938"),
   c = s("560951");
 t.default = n.forwardRef(function(e, t) {
@@ -15,14 +15,14 @@ t.default = n.forwardRef(function(e, t) {
     numPages: n,
     onChangePage: i,
     children: p,
-    className: f,
+    className: m,
     showPageCount: E = !0,
-    ...m
-  } = e, _ = s <= 0, S = s >= n - 1;
+    ...f
+  } = e, _ = s <= 0, I = s >= n - 1;
   return (0, a.jsxs)("div", {
-    className: l()(c.__invalid_paginator, f),
+    className: l()(c.__invalid_paginator, m),
     ref: t,
-    ...m,
+    ...f,
     children: [p, (0, a.jsxs)("div", {
       className: c.pageActions,
       children: [(0, a.jsx)(r.Clickable, {
@@ -31,7 +31,7 @@ t.default = n.forwardRef(function(e, t) {
         }),
         tabIndex: _ ? -1 : 0,
         onClick: _ ? void 0 : () => i(s - 1),
-        children: (0, a.jsx)(o.default, {
+        children: (0, a.jsx)(u.default, {
           className: c.pageButtonIcon,
           "aria-label": d.default.Messages.PAGINATION_PREVIOUS
         })
@@ -48,11 +48,11 @@ t.default = n.forwardRef(function(e, t) {
         })
       }), (0, a.jsx)(r.Clickable, {
         className: l()(c.pageButtonNext, {
-          [c.disabled]: S
+          [c.disabled]: I
         }),
-        tabIndex: S ? -1 : 0,
-        onClick: S ? void 0 : () => i(s + 1),
-        children: (0, a.jsx)(u.default, {
+        tabIndex: I ? -1 : 0,
+        onClick: I ? void 0 : () => i(s + 1),
+        children: (0, a.jsx)(o.default, {
           className: c.pageButtonIcon,
           "aria-label": d.default.Messages.PAGINATION_NEXT
         })

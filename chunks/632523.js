@@ -21,7 +21,7 @@ function E(e) {
     items: n,
     loading: E,
     loadMore: _
-  } = e, T = a.useRef(null), m = (0, o.default)("for-you", T);
+  } = e, m = a.useRef(null), T = (0, o.default)("for-you", m);
   (0, u.default)({
     type: l.ImpressionTypes.VIEW,
     name: l.ImpressionNames.NOTIFICATION_CENTER_LANDING,
@@ -33,12 +33,12 @@ function E(e) {
   }, [t]);
   let I = () => {
     var e;
-    let t = null === (e = T.current) || void 0 === e ? void 0 : e.getScrollerState();
+    let t = null === (e = m.current) || void 0 === e ? void 0 : e.getScrollerState();
     if (null != t) t.scrollHeight - t.scrollTop - t.offsetHeight < 1500 && _()
   };
   return t ? 0 === n.length ? (0, s.jsx)(d.ForYouEmptyState, {}) : (0, s.jsx)(s.Fragment, {
     children: (0, s.jsx)(i.ListNavigatorProvider, {
-      navigator: m,
+      navigator: T,
       children: (0, s.jsx)(i.ListNavigatorContainer, {
         children: e => {
           let {
@@ -49,7 +49,7 @@ function E(e) {
             className: f.container,
             ref: e => {
               var n;
-              T.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
+              m.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
             },
             ...a,
             onScroll: I,

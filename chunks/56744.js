@@ -21,16 +21,16 @@ let f = a.memo(function(e) {
     compact: f = !1
   } = e, E = c.state === i.ReferencedMessageState.LOADED ? c.message : void 0, _ = a.useMemo(() => (null == E ? void 0 : E.content) != null && "" !== E.content ? (0, u.default)(E, {
     formatInline: !0
-  }).content : null, [E]), T = (0, l.useStateFromStores)([r.default], () => null != E && r.default.isBlocked(E.author.id), [E]), m = (0, d.useNullableMessageAuthor)(E), I = (0, d.useNullableMessageAuthor)(t);
+  }).content : null, [E]), m = (0, l.useStateFromStores)([r.default], () => null != E && r.default.isBlocked(E.author.id), [E]), T = (0, d.useNullableMessageAuthor)(E), I = (0, d.useNullableMessageAuthor)(t);
   return (0, s.jsx)(o.default, {
-    repliedAuthor: m,
+    repliedAuthor: T,
     baseAuthor: I,
     baseMessage: t,
     channel: n,
     referencedMessage: c,
     content: _,
     compact: f,
-    isReplyAuthorBlocked: T
+    isReplyAuthorBlocked: m
   })
 });
 

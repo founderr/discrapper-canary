@@ -6,12 +6,12 @@ t.r(r), t.d(r, {
 });
 var a = t("735250");
 t("470079");
-var n = t("120356"),
-  i = t.n(n),
-  l = t("481060"),
+var i = t("120356"),
+  l = t.n(i),
+  n = t("481060"),
   o = t("423932"),
-  s = t("601948"),
-  c = t("85624"),
+  c = t("601948"),
+  s = t("85624"),
   d = t("794711");
 let u = () => {
   Promise.all([t.e("99387"), t.e("52030"), t.e("85281")]).then(t.bind(t, "24031")).then(e => {
@@ -38,19 +38,19 @@ let u = () => {
 function h() {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
-      className: i()(c.buttonsContainer, d.marginBottom20),
-      children: (0, a.jsx)(s.OverridePremiumTypeDropDown, {
+      className: l()(s.buttonsContainer, d.marginBottom20),
+      children: (0, a.jsx)(c.OverridePremiumTypeDropDown, {
         isDevTools: !0
       })
     }), (0, a.jsx)("div", {
-      className: i()(c.buttonsContainer, d.marginBottom20),
-      children: (0, a.jsx)(l.Button, {
+      className: l()(s.buttonsContainer, d.marginBottom20),
+      children: (0, a.jsx)(n.Button, {
         onClick: u,
         children: "Launch MFA"
       })
     }), (0, a.jsx)("div", {
-      className: i()(c.buttonsContainer, d.marginBottom20),
-      children: (0, a.jsx)(l.Button, {
+      className: l()(s.buttonsContainer, d.marginBottom20),
+      children: (0, a.jsx)(n.Button, {
         onClick: () => (0, o.default)(),
         children: "Launch Vibing Wumpus"
       })

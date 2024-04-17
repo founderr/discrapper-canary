@@ -1,32 +1,32 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return l
+    return u
   }
 });
-var s = i("442837"),
-  n = i("496675"),
+var n = i("442837"),
+  s = i("496675"),
   a = i("981631");
 
-function l(e) {
+function u(e) {
   let {
     canManageGuild: t,
     canManageRoles: i,
-    canBanMembers: l,
-    canManageNicknames: u,
+    canBanMembers: u,
+    canManageNicknames: l,
     canCreateEmojisAndStickers: o,
     canManageEmojisAndStickers: d,
     canManageWebhooks: r,
     canViewAuditLog: c
-  } = (0, s.useStateFromStoresObject)([n.default], () => ({
-    canManageGuild: n.default.can(a.Permissions.MANAGE_GUILD, e),
-    canManageRoles: n.default.can(a.Permissions.MANAGE_ROLES, e),
-    canBanMembers: n.default.can(a.Permissions.BAN_MEMBERS, e),
-    canManageNicknames: n.default.can(a.Permissions.MANAGE_NICKNAMES, e),
-    canCreateEmojisAndStickers: n.default.can(a.Permissions.CREATE_GUILD_EXPRESSIONS, e),
-    canManageEmojisAndStickers: n.default.can(a.Permissions.MANAGE_GUILD_EXPRESSIONS, e),
-    canManageWebhooks: n.default.can(a.Permissions.MANAGE_WEBHOOKS, e),
-    canViewAuditLog: n.default.can(a.Permissions.VIEW_AUDIT_LOG, e)
+  } = (0, n.useStateFromStoresObject)([s.default], () => ({
+    canManageGuild: s.default.can(a.Permissions.MANAGE_GUILD, e),
+    canManageRoles: s.default.can(a.Permissions.MANAGE_ROLES, e),
+    canBanMembers: s.default.can(a.Permissions.BAN_MEMBERS, e),
+    canManageNicknames: s.default.can(a.Permissions.MANAGE_NICKNAMES, e),
+    canCreateEmojisAndStickers: s.default.can(a.Permissions.CREATE_GUILD_EXPRESSIONS, e),
+    canManageEmojisAndStickers: s.default.can(a.Permissions.MANAGE_GUILD_EXPRESSIONS, e),
+    canManageWebhooks: s.default.can(a.Permissions.MANAGE_WEBHOOKS, e),
+    canViewAuditLog: s.default.can(a.Permissions.VIEW_AUDIT_LOG, e)
   }), [e]);
-  return t || i || l || u || o || d || r || c
+  return t || i || u || l || o || d || r || c
 }

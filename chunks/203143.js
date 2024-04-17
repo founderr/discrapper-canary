@@ -16,8 +16,8 @@ var s = n("512722"),
   f = n("904245"),
   E = n("881052"),
   _ = n("367907"),
-  T = n("41776"),
-  m = n("566006"),
+  m = n("41776"),
+  T = n("566006"),
   I = n("3148"),
   p = n("869765"),
   h = n("314897"),
@@ -28,10 +28,10 @@ var s = n("512722"),
   g = n("117530"),
   M = n("553803"),
   R = n("316758"),
-  O = n("467531"),
-  v = n("798628"),
-  L = n("918088"),
-  x = n("981631"),
+  v = n("467531"),
+  O = n("798628"),
+  x = n("918088"),
+  L = n("981631"),
   D = n("689938");
 
 function P(e, t) {
@@ -63,7 +63,7 @@ function y(e) {
     cancelText: D.default.Messages.LURKER_MODE_POPOUT_CANCEL,
     onConfirm: () => {
       c.default.joinGuild(t, {
-        source: x.JoinGuildSources.POLL_ALERT
+        source: L.JoinGuildSources.POLL_ALERT
       })
     }
   })
@@ -76,7 +76,7 @@ function U(e) {
     answerId: s
   } = e, a = N.default.getChannel(t);
   if (null == a) return;
-  if (T.default.isLurking(a.guild_id)) {
+  if (m.default.isLurking(a.guild_id)) {
     y({
       guildId: a.guild_id,
       title: D.default.Messages.POLL_LURKING_SEE_VOTES_TITLE,
@@ -99,7 +99,7 @@ function j(e) {
     messageId: n,
     isEditing: s
   } = e;
-  (0, v.updatePollState)(t, n, e => {
+  (0, O.updatePollState)(t, n, e => {
     var n;
     return {
       channelId: t,
@@ -118,7 +118,7 @@ function b(e) {
   } = e, s = A.default.getMessage(t, n);
   return null == s ? [] : s.reactions.flatMap(e => !0 === e.me_vote ? e.emoji.name : [])
 }
-async function G(e) {
+async function B(e) {
   let {
     channelId: t,
     messageId: n,
@@ -148,19 +148,19 @@ async function G(e) {
       },
       userId: d,
       optimistic: !0,
-      reactionType: m.ReactionTypes.VOTE
+      reactionType: T.ReactionTypes.VOTE
     });
     return e
   });
   null != f && await f
 }
-async function B(e) {
+async function G(e) {
   let {
     channelId: t,
     messageId: n
   } = e, s = N.default.getChannel(t);
   if (null == s) return;
-  if (T.default.isLurking(s.guild_id)) {
+  if (m.default.isLurking(s.guild_id)) {
     y({
       guildId: s.guild_id,
       title: D.default.Messages.POLL_LURKING_VOTE_TITLE,
@@ -175,7 +175,7 @@ async function B(e) {
     });
     return
   }
-  let l = (0, v.getPollState)(t, n);
+  let l = (0, O.getPollState)(t, n);
   a()(null != l, "Must not be able to vote without existing state!");
   let i = b({
     channelId: t,
@@ -183,29 +183,29 @@ async function B(e) {
   });
   try {
     let e = [...l.selectedAnswerIds.values()];
-    (0, v.updatePollState)(t, n, e => (a()(null != e, "Must not be able to vote without existing state!"), {
+    (0, O.updatePollState)(t, n, e => (a()(null != e, "Must not be able to vote without existing state!"), {
       ...e,
       submitting: !0,
       editing: !1
-    })), await G({
+    })), await B({
       channelId: t,
       messageId: n,
       answerIds: e
-    }), await O.submitPollVote({
+    }), await v.submitPollVote({
       channelId: t,
       messageId: n,
       answerIds: e
-    }), (0, v.updatePollState)(t, n, () => void 0)
+    }), (0, O.updatePollState)(t, n, () => void 0)
   } catch (e) {
     var r, o, u;
     d.default.show({
       title: D.default.Messages.GENERIC_ERROR_TITLE,
       body: null !== (u = null !== (o = null === (r = e.getAnyErrorMessage) || void 0 === r ? void 0 : r.call(e)) && void 0 !== o ? o : e.message) && void 0 !== u ? u : D.default.Messages.GENERIC_ERROR_BODY
-    }), await G({
+    }), await B({
       channelId: t,
       messageId: n,
       answerIds: i
-    }), (0, v.updatePollState)(t, n, e => {
+    }), (0, O.updatePollState)(t, n, e => {
       if (null != e) return {
         ...e,
         submitting: !1,
@@ -220,7 +220,7 @@ async function F(e) {
     messageId: n
   } = e, s = N.default.getChannel(t);
   if (null != s) {
-    if (T.default.isLurking(s.guild_id)) {
+    if (m.default.isLurking(s.guild_id)) {
       y({
         guildId: s.guild_id,
         title: D.default.Messages.POLL_LURKING_UNVOTE_TITLE,
@@ -228,7 +228,7 @@ async function F(e) {
       });
       return
     }
-    return (0, v.updatePollState)(t, n, e => {
+    return (0, O.updatePollState)(t, n, e => {
       var n;
       return {
         channelId: t,
@@ -237,7 +237,7 @@ async function F(e) {
         editing: !1,
         showResults: null !== (n = null == e ? void 0 : e.showResults) && void 0 !== n && n
       }
-    }), await B({
+    }), await G({
       channelId: t,
       messageId: n
     })
@@ -251,7 +251,7 @@ async function k(e) {
   } = e;
   switch (s) {
     case "submit":
-      await B({
+      await G({
         channelId: t,
         messageId: n
       });
@@ -275,7 +275,7 @@ async function k(e) {
           channelId: t,
           messageId: n
         } = e;
-        (0, v.updatePollState)(t, n, e => {
+        (0, O.updatePollState)(t, n, e => {
           var s, a;
           let l = null == e || !e.showResults,
             i = A.default.getMessage(t, n),
@@ -283,7 +283,7 @@ async function k(e) {
               var n, s;
               return e + (null !== (s = null === (n = t.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== s ? s : 0)
             }, 0) : 0;
-          return _.default.trackWithMetadata(x.AnalyticEvents.POLL_SHOW_RESULTS_CLICKED, {
+          return _.default.trackWithMetadata(L.AnalyticEvents.POLL_SHOW_RESULTS_CLICKED, {
             channel_id: t,
             message_id: n,
             show_results: l,
@@ -375,7 +375,7 @@ async function H(e) {
   await d.default.confirm({
     title: D.default.Messages.POLL_END_EARLY_CONFIRMATION_TITLE,
     body: D.default.Messages.POLL_END_EARLY_CONFIRMATION_TEXT
-  }) && await O.endPollEarly({
+  }) && await v.endPollEarly({
     channelId: t,
     messageId: n
   })
@@ -409,7 +409,7 @@ t.default = {
       throw a()(null != s, "Tapped on a non-existent poll message"), Error()
     }(l), {
       tapShouldOpenVotersModal: u
-    } = null !== (n = (0, L.computeBasicPollChatData)(o)) && void 0 !== n ? n : {};
+    } = null !== (n = (0, x.computeBasicPollChatData)(o)) && void 0 !== n ? n : {};
     if (!0 === u) {
       U({
         channelId: i,
@@ -419,7 +419,7 @@ t.default = {
       return
     }
     let d = null === (t = o.poll) || void 0 === t ? void 0 : t.allow_multiselect;
-    (0, v.updatePollState)(i, r, e => {
+    (0, O.updatePollState)(i, r, e => {
       var t, n;
       if (null == e) {
         let e = new Set([s]),
@@ -428,7 +428,7 @@ t.default = {
             selectedTextAnswersCount: a,
             selectedEmojiAnswersCount: l
           } = P(null === (n = o.poll) || void 0 === n ? void 0 : n.answers, e);
-        return _.default.trackWithMetadata(x.AnalyticEvents.POLL_VOTE_SELECTED, {
+        return _.default.trackWithMetadata(L.AnalyticEvents.POLL_VOTE_SELECTED, {
           channel_id: i,
           message_id: r,
           selected_answer_ids: t,
@@ -457,7 +457,7 @@ t.default = {
         selectedTextAnswersCount: c,
         selectedEmojiAnswersCount: f
       } = P(null === (t = o.poll) || void 0 === t ? void 0 : t.answers, l);
-      return _.default.trackWithMetadata(x.AnalyticEvents.POLL_VOTE_SELECTED, {
+      return _.default.trackWithMetadata(L.AnalyticEvents.POLL_VOTE_SELECTED, {
         channel_id: i,
         message_id: r,
         selected_answer_ids: u,
@@ -466,7 +466,7 @@ t.default = {
       }), a
     })
   },
-  handlePollSubmitVote: B,
+  handlePollSubmitVote: G,
   handleUpdateVoteEditingState: j,
   handlePollActionTapped: k,
   createPoll: w,

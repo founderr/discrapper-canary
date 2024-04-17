@@ -16,7 +16,7 @@ var a = n("430824"),
   c = n("689938");
 
 function f(e) {
-  var t, n, f, E, _, T, m, I, p, h, N, S, C, A, g;
+  var t, n, f, E, _, m, T, I, p, h, N, S, C, A, g;
   let M = null !== (f = null === (t = e.other_user) || void 0 === t ? void 0 : t.id) && void 0 !== f ? f : d.EMPTY_STRING_SNOWFLAKE_ID,
     R = o.default.getName(i.default.getUser(null === (n = e.other_user) || void 0 === n ? void 0 : n.id));
   switch (e.type) {
@@ -25,17 +25,17 @@ function f(e) {
         username: "**".concat(R, "**")
       });
     case u.NotificationCenterLocalItems.FRIEND_REQUESTS_GROUPED:
-      let O = o.default.getName(i.default.getUser(null === (_ = e.other_users) || void 0 === _ ? void 0 : null === (E = _[0]) || void 0 === E ? void 0 : E.id)),
-        v = o.default.getName(i.default.getUser(null === (m = e.other_users) || void 0 === m ? void 0 : null === (T = m[1]) || void 0 === T ? void 0 : T.id)),
-        L = Math.max((null !== (p = null === (I = e.other_users) || void 0 === I ? void 0 : I.length) && void 0 !== p ? p : 0) - 2, 0);
+      let v = o.default.getName(i.default.getUser(null === (_ = e.other_users) || void 0 === _ ? void 0 : null === (E = _[0]) || void 0 === E ? void 0 : E.id)),
+        O = o.default.getName(i.default.getUser(null === (T = e.other_users) || void 0 === T ? void 0 : null === (m = T[1]) || void 0 === m ? void 0 : m.id)),
+        x = Math.max((null !== (p = null === (I = e.other_users) || void 0 === I ? void 0 : I.length) && void 0 !== p ? p : 0) - 2, 0);
       return c.default.Messages.NOTIFICATION_CENTER_INCOMING_FRIEND_REQUESTS.format({
-        user: O,
-        user2: v,
-        count: L
+        user: v,
+        user2: O,
+        count: x
       });
     case u.NotificationCenterLocalItems.MOBILE_NATIVE_UPDATE_AVAILABLE:
-      let x = null !== (N = null === (h = e.local_id) || void 0 === h ? void 0 : h.split("_").pop()) && void 0 !== N ? N : "unknown";
-      return "Update to build ".concat(x, " available!");
+      let L = null !== (N = null === (h = e.local_id) || void 0 === h ? void 0 : h.split("_").pop()) && void 0 !== N ? N : "unknown";
+      return "Update to build ".concat(L, " available!");
     case u.NotificationCenterItems.FRIEND_SUGGESTION_CREATED:
       let D = l.default.getRelationshipType(M) === d.RelationshipTypes.PENDING_OUTGOING;
       return null !== (S = e.body) && void 0 !== S ? S : "";

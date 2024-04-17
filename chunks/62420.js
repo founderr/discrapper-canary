@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return o
   }
 }), n("653041"), n("47120");
 var a = n("735250");
@@ -12,22 +12,22 @@ var u = n("481060"),
   s = n("362658"),
   r = n("689938");
 
-function d(e) {
+function o(e) {
   let t = (0, l.useFavoritesGuildSelected)(),
     n = (0, l.useFavorite)(e.id),
-    d = (0, l.useFavoritesCategories)(),
+    o = (0, l.useFavoritesCategories)(),
     {
-      isFavoritesPerk: o
+      isFavoritesPerk: d
     } = (0, s.useFavoritesServerExperiment)("useChannelMoveToCategory");
-  if (__OVERLAY__ || !t || null == n || !o) return null;
+  if (__OVERLAY__ || !t || null == n || !d) return null;
   let [f, c] = function(e) {
     let t = [],
       n = null;
     for (let a of e) null == a.id ? n = a : t.push(a);
     return [n, t]
-  }(d.filter(e => e.id !== (null == n ? void 0 : n.parentId)));
+  }(o.filter(e => e.id !== (null == n ? void 0 : n.parentId)));
 
-  function _(e) {
+  function S(e) {
     null != n && (0, i.updateFavoriteChannelParent)(n.id, e)
   }
   return null == f && 0 === c.length ? null : (0, a.jsxs)(u.MenuItem, {
@@ -37,7 +37,7 @@ function d(e) {
       children: (0, a.jsx)(u.MenuItem, {
         id: "favorite-uncategorized",
         label: f.name,
-        action: () => _(f.id)
+        action: () => S(f.id)
       })
     }), c.length > 0 && (0, a.jsx)(u.MenuGroup, {
       children: c.map(e => {
@@ -48,7 +48,7 @@ function d(e) {
         return (0, a.jsx)(u.MenuItem, {
           id: "favorite-".concat(t),
           label: n,
-          action: () => _(t)
+          action: () => S(t)
         }, t)
       })
     })]

@@ -12,8 +12,8 @@ var s = n("735250"),
   f = n("367907"),
   E = n("717680"),
   _ = n("703656"),
-  T = n("592125"),
-  m = n("836946"),
+  m = n("592125"),
+  T = n("836946"),
   I = n("259580"),
   p = n("263704"),
   h = n("568570"),
@@ -24,7 +24,7 @@ var s = n("735250"),
   g = n("981631"),
   M = n("689938"),
   R = n("632709");
-let O = a.memo(function(e) {
+let v = a.memo(function(e) {
   let {
     channel: t,
     deleteChannel: n
@@ -61,19 +61,19 @@ let O = a.memo(function(e) {
   return (0, s.jsx)(r.animated.div, {
     ref: l,
     style: E,
-    children: (0, s.jsx)(v, {
+    children: (0, s.jsx)(O, {
       ...e
     })
   })
 });
-t.default = O;
-let v = a.memo(function(e) {
+t.default = v;
+let O = a.memo(function(e) {
   let {
     channel: t,
     onJump: n,
     deleteChannel: l,
     toggle: i
-  } = e, r = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(t.channelId));
+  } = e, r = (0, o.useStateFromStores)([m.default], () => m.default.getChannel(t.channelId));
   if (a.useEffect(() => {
       null != r && t.isFullyLoaded && !t.hasError && !t.collapsed && "messages" === t.type && 0 === t.messages.length && d.default.wait(() => {
         (0, c.ack)(t.channelId, !0), l(t.channelId)
@@ -98,9 +98,9 @@ let v = a.memo(function(e) {
         channelState: t,
         children: [(0, s.jsx)(N.default, {
           channel: r
-        }), (0, s.jsx)(L, {
+        }), (0, s.jsx)(x, {
           ...e
-        }), "nsfw" === t.type ? null : (0, s.jsx)(x, {
+        }), "nsfw" === t.type ? null : (0, s.jsx)(L, {
           ...e
         })]
       }),
@@ -117,17 +117,17 @@ let v = a.memo(function(e) {
   })
 });
 
-function L(e) {
+function x(e) {
   let {
     channel: t,
     markChannelRead: n,
     markGuildRead: a,
     getNumUnreadChannels: l
   } = e, i = (0, E.default)() && null != t.guildId;
-  return (0, s.jsx)(m.default, {
+  return (0, s.jsx)(T.default, {
     className: R.markReadButton,
     tooltip: i ? M.default.Messages.MARK_GUILD_AS_READ : M.default.Messages.MARK_AS_READ,
-    color: m.CircleIconButtonColors.TERTIARY,
+    color: T.CircleIconButtonColors.TERTIARY,
     icon: i ? (0, s.jsx)(h.default, {
       width: 16,
       height: 16
@@ -146,7 +146,7 @@ function L(e) {
   })
 }
 
-function x(e) {
+function L(e) {
   let {
     channel: t,
     toggle: n,

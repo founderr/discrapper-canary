@@ -17,9 +17,9 @@ t.default = e => {
   let {
     channel: n,
     message: _,
-    hideParty: T
+    hideParty: m
   } = e, {
-    analyticsLocations: m
+    analyticsLocations: T
   } = (0, i.default)(), I = (0, a.useStateFromStores)([u.default], () => u.default.getId()), p = (0, a.useStateFromStores)([d.default], () => {
     if (null == _.application) return d.default.findActivity(_.author.id, e => e.type === c.ActivityTypes.LISTENING);
     {
@@ -38,8 +38,8 @@ t.default = e => {
     message: _,
     channelId: n.id,
     guildId: n.getGuildId(),
-    hideParty: T,
+    hideParty: m,
     isSender: _.author.id === I,
-    analyticsLocations: m
+    analyticsLocations: T
   })
 }

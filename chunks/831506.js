@@ -8,21 +8,21 @@ var s, a, l, i, r = n("392711"),
   f = n("699516"),
   E = n("885110"),
   _ = n("981631");
-let T = {},
-  m = {};
+let m = {},
+  T = {};
 
 function I(e, t) {
   var n;
-  return (null !== (n = T[e]) && void 0 !== n ? n : {})[t]
+  return (null !== (n = m[e]) && void 0 !== n ? n : {})[t]
 }
 
 function p(e, t) {
   let n = I(e, t);
   if (null == n) return;
-  let s = T[e];
-  delete s[t], o().isEmpty(s) && delete T[e];
-  let a = m[n];
-  null != a && (a.delete(e), 0 === a.size && delete m[n])
+  let s = m[e];
+  delete s[t], o().isEmpty(s) && delete m[e];
+  let a = T[n];
+  null != a && (a.delete(e), 0 === a.size && delete T[n])
 }
 
 function h(e, t, n, s) {
@@ -35,10 +35,10 @@ function h(e, t, n, s) {
     p(t, e)
   }! function(e, t, n) {
     var s;
-    let a = T[e];
-    if (null == a && (a = T[e] = {}), a[t] = n, f.default.isBlocked(e)) return;
-    let l = null !== (s = m[n]) && void 0 !== s ? s : new Set;
-    m[n] = l, l.add(e)
+    let a = m[e];
+    if (null == a && (a = m[e] = {}), a[t] = n, f.default.isBlocked(e)) return;
+    let l = null !== (s = T[n]) && void 0 !== s ? s : new Set;
+    T[n] = l, l.add(e)
   }(t, e, l)
 }
 
@@ -72,13 +72,13 @@ class A extends(s = u.default.Store) {
     this.syncWith([E.default], C), this.waitFor(E.default, f.default)
   }
   getParty(e) {
-    return null != e && null != m[e] ? m[e] : null
+    return null != e && null != T[e] ? T[e] : null
   }
   getUserParties() {
-    return T
+    return m
   }
   getParties() {
-    return m
+    return T
   }
 }
 i = "GamePartyStore", (l = "displayName") in(a = A) ? Object.defineProperty(a, l, {
@@ -108,9 +108,9 @@ i = "GamePartyStore", (l = "displayName") in(a = A) ? Object.defineProperty(a, l
       parties: t,
       userParties: n
     } = e;
-    m = {}, T = {
+    T = {}, m = {
       ...n
-    }, Object.keys(t).forEach(e => m[e] = new Set(t[e]))
+    }, Object.keys(t).forEach(e => T[e] = new Set(t[e]))
   },
   GUILD_CREATE: N,
   PRESENCES_REPLACE: function(e) {
@@ -157,20 +157,20 @@ i = "GamePartyStore", (l = "displayName") in(a = A) ? Object.defineProperty(a, l
       relationship: t
     } = e;
     if (!f.default.isBlocked(t.id)) return !1;
-    let n = T[t.id];
+    let n = m[t.id];
     if (null == n) return !1;
     for (let e of o().values(n)) {
-      let n = m[e];
+      let n = T[e];
       null != n && n.delete(t.id)
     }
   },
   RELATIONSHIP_REMOVE: function(e) {
     let {
       relationship: t
-    } = e, n = T[t.id];
+    } = e, n = m[t.id];
     if (null == n) return !1;
     for (let e of o().values(n)) {
-      let n = m[e];
+      let n = T[e];
       null != n && n.add(t.id)
     }
   }

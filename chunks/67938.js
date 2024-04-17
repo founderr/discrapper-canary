@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   ShyBanner: function() {
-    return g
+    return E
   }
 });
 var l = a("735250");
@@ -20,7 +20,7 @@ var s = a("120356"),
   p = a("767247"),
   h = a("621881");
 
-function g(e) {
+function E(e) {
   let {
     category: t
   } = e, a = (0, n.useStateFromStores)([o.default], () => o.default.useReducedMotion);
