@@ -13,10 +13,10 @@ function s(e) {
     width: t = 24,
     height: n = 24,
     color: s = "currentColor",
-    ...a
+    ...l
   } = e;
   return (0, i.jsxs)("svg", {
-    ...(0, r.default)(a),
+    ...(0, r.default)(l),
     xmlns: "http://www.w3.org/2000/svg",
     width: t,
     height: n,

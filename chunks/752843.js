@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   SubscriptionTag: function() {
-    return d
+    return c
   },
   Tag: function() {
     return u
@@ -11,27 +11,27 @@ var i = n("735250");
 n("470079");
 var r = n("628028"),
   s = n("220427"),
-  a = n("777207"),
-  l = n("330711"),
+  l = n("777207"),
+  a = n("330711"),
   o = n("381585");
-let c = {
+let d = {
   width: 12,
   height: 12
 };
 
-function d(e) {
+function c(e) {
   let {
     type: t
   } = e;
   return (0, i.jsx)(u, {
     icon: "user" === t ? (0, i.jsx)(s.UserIcon, {
-      ...c,
+      ...d,
       color: "var(--text-positive)"
     }) : (0, i.jsx)(r.ServerIcon, {
-      ...c,
+      ...d,
       color: "var(--text-brand)"
     }),
-    text: "user" === t ? l.default.Messages.Storefront.USER_SUBSCRIPTION : l.default.Messages.Storefront.SERVER_SUBSCRIPTION
+    text: "user" === t ? a.default.Messages.Storefront.USER_SUBSCRIPTION : a.default.Messages.Storefront.SERVER_SUBSCRIPTION
   })
 }
 
@@ -42,7 +42,7 @@ function u(e) {
   } = e;
   return (0, i.jsxs)("div", {
     className: o.container,
-    children: [t, (0, i.jsx)(a.Text, {
+    children: [t, (0, i.jsx)(l.Text, {
       color: "interactive-normal",
       variant: "text-sm/medium",
       children: n

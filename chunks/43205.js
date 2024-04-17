@@ -4,32 +4,32 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var a = n("735250");
+var i = n("735250");
 n("470079");
-var l = n("120356"),
-  s = n.n(l),
-  i = n("410030"),
-  r = n("438071"),
-  o = n("820401");
+var r = n("120356"),
+  s = n.n(r),
+  a = n("410030"),
+  o = n("438071"),
+  l = n("820401");
 
 function u(e) {
   let {
     src: t,
     size: n,
-    className: l,
+    className: r,
     alt: u = "icon"
-  } = e, d = (0, i.default)();
-  return null == t ? (0, a.jsx)(r.default, {
+  } = e, d = (0, a.default)();
+  return null == t ? (0, i.jsx)(o.default, {
     width: n,
     height: n,
     color: "dark" === d ? "white" : "black",
-    className: s()(o.contentImage, l)
-  }) : (0, a.jsx)("img", {
+    className: s()(l.contentImage, r)
+  }) : (0, i.jsx)("img", {
     style: {
       width: "".concat(n, "px"),
       height: "".concat(n, "px")
     },
-    className: s()(o.contentImage, l),
+    className: s()(l.contentImage, r),
     src: t,
     alt: u
   })

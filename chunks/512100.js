@@ -7,11 +7,11 @@ n.r(t), n.d(t, {
 var i = n("735250"),
   r = n("470079"),
   s = n("789978"),
-  a = n("727075"),
-  l = n("790472"),
+  l = n("727075"),
+  a = n("790472"),
   o = n("349361"),
-  c = n("777207"),
-  d = n("330711"),
+  d = n("777207"),
+  c = n("330711"),
   u = n("960016");
 
 function f(e) {
@@ -24,7 +24,7 @@ function f(e) {
     tag: p
   } = e, S = r.useRef(null), [x, g] = r.useState(!0), v = null != f ? {
     "--custom-background-url": "url(".concat(f.toString(), ")")
-  } : void 0, T = () => {
+  } : void 0, C = () => {
     var e;
     (null === (e = S.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) === !0 ? g(!1) : g(!0)
   };
@@ -44,7 +44,7 @@ function f(e) {
             onClick: m,
             className: u.closeBtn,
             type: "button",
-            children: (0, i.jsx)(a.CloseSmallIcon, {
+            children: (0, i.jsx)(l.CloseSmallIcon, {
               height: 24,
               width: 24,
               color: "var(--white)"
@@ -56,7 +56,7 @@ function f(e) {
         children: null != f ? (0, i.jsx)("img", {
           src: f.toString(),
           alt: ""
-        }) : (0, i.jsx)(l.TicketIcon, {
+        }) : (0, i.jsx)(a.TicketIcon, {
           color: "white",
           height: 96,
           width: 96
@@ -66,34 +66,34 @@ function f(e) {
       className: u.scroll,
       fade: !0,
       ref: e => {
-        null != e && (S.current = e, T())
+        null != e && (S.current = e, C())
       },
-      onScroll: T,
+      onScroll: C,
       children: [(0, i.jsx)("br", {}), (0, i.jsxs)("div", {
         className: u.scrollContent,
-        children: [(0, i.jsx)(c.Text, {
+        children: [(0, i.jsx)(d.Text, {
           color: "header-primary",
           tag: "div",
           variant: "heading-xl/semibold",
           children: h
         }), (null != n && "" !== n || null != t) && (0, i.jsxs)("div", {
           className: u.details,
-          children: [(0, i.jsx)(c.Text, {
+          children: [(0, i.jsx)(d.Text, {
             color: "header-primary",
             tag: "div",
             variant: "heading-lg/semibold",
-            children: d.default.Messages.Storefront.PRODUCT_DETAILS
-          }), (0, i.jsx)(c.Text, {
+            children: c.default.Messages.Storefront.PRODUCT_DETAILS
+          }), (0, i.jsx)(d.Text, {
             color: "text-muted",
             variant: "text-md/normal",
             className: u.description,
             children: n
           }), null != t && (0, i.jsxs)("div", {
             className: u.benefits,
-            children: [(0, i.jsx)(c.Text, {
+            children: [(0, i.jsx)(d.Text, {
               color: "header-secondary",
               variant: "eyebrow",
-              children: d.default.Messages.Storefront.BENEFITS_TITLE
+              children: c.default.Messages.Storefront.BENEFITS_TITLE
             }), t]
           })]
         })]

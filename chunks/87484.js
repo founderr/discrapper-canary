@@ -1,22 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return c
   }
 });
 var i = n("735250");
 n("470079");
 var r = n("153832"),
   s = n("481060"),
-  a = n("976255"),
-  l = n("667"),
+  l = n("976255"),
+  a = n("667"),
   o = n("626135"),
-  c = n("981631");
+  d = n("981631");
 
-function d(e) {
+function c(e) {
   let {
     applicationId: t,
-    skuId: d,
+    skuId: c,
     onClose: u,
     onComplete: f,
     analyticsLocations: h,
@@ -36,7 +36,7 @@ function d(e) {
         ...s,
         loadId: x,
         applicationId: t,
-        skuId: d,
+        skuId: c,
         analyticsLocations: h,
         analyticsLocationObject: m,
         onClose: e => {
@@ -50,15 +50,15 @@ function d(e) {
   }, {
     contextKey: p,
     onCloseCallback: () => {
-      !S && o.default.track(c.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
+      !S && o.default.track(d.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
         load_id: x,
-        payment_type: c.PurchaseTypeToAnalyticsPaymentType[c.PurchaseTypes.ONE_TIME],
+        payment_type: d.PurchaseTypeToAnalyticsPaymentType[d.PurchaseTypes.ONE_TIME],
         location: m,
         is_gift: !1,
         application_id: t,
         location_stack: h
-      }), (0, a.clearError)(), (0, l.clearPurchaseTokenAuthState)(), null == u || u(S)
+      }), (0, l.clearError)(), (0, a.clearPurchaseTokenAuthState)(), null == u || u(S)
     },
-    onCloseRequest: c.NOOP
+    onCloseRequest: d.NOOP
   })
 }

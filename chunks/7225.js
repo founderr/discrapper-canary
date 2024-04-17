@@ -5,11 +5,11 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var i, r, s = n("735250"),
-  a = n("470079"),
-  l = n("442837"),
+  l = n("470079"),
+  a = n("442837"),
   o = n("481060"),
-  c = n("558381"),
-  d = n("728345"),
+  d = n("558381"),
+  c = n("728345"),
   u = n("812206"),
   f = n("886176"),
   h = n("55563"),
@@ -25,26 +25,26 @@ function g(e) {
     appId: i,
     guildId: r,
     subscriptionGroupListing: g
-  } = e, v = (0, l.useStateFromStores)([u.default], () => u.default.getApplication(i)), [T, C] = a.useState(() => u.default.isFetchingApplication(i) ? {
+  } = e, v = (0, a.useStateFromStores)([u.default], () => u.default.getApplication(i)), [C, T] = l.useState(() => u.default.isFetchingApplication(i) ? {
     status: 1
   } : {
     status: 0
   });
-  a.useEffect(() => {
-    0 === T.status && (C({
+  l.useEffect(() => {
+    0 === C.status && (T({
       status: 1
-    }), d.default.fetchApplication(i).then(() => {
-      C({
+    }), c.default.fetchApplication(i).then(() => {
+      T({
         status: 2
       })
     }).catch(e => {
-      C({
+      T({
         status: 3,
         error: e.message
       })
     }))
-  }, [i, T.status]);
-  let j = (0, l.useStateFromStoresArray)([h.default], () => h.default.getForApplication(i).filter(e => {
+  }, [i, C.status]);
+  let j = (0, a.useStateFromStoresArray)([h.default], () => h.default.getForApplication(i).filter(e => {
     switch (e.type) {
       case p.SKUTypes.DURABLE:
       case p.SKUTypes.CONSUMABLE:
@@ -53,8 +53,8 @@ function g(e) {
         return !1
     }
   }), [i]);
-  if (a.useEffect(() => {
-      (0, c.fetchAllStoreListingsForApplication)(i)
+  if (l.useEffect(() => {
+      (0, d.fetchAllStoreListingsForApplication)(i)
     }, [i]), null == v) return null;
   let N = S.default.Messages.STOREFRONT_TITLE.format({
     appName: v.name
