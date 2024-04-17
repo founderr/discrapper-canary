@@ -166,14 +166,6 @@ let N = {
     throttlePeriod: 6e4,
     throttleKeys: e => [e.type]
   },
-  [E.AnalyticEvents.CHANNEL_HIGHLIGHTS_VIEWED]: {
-    throttlePeriod: 36e5,
-    throttleKeys: e => [e.guild_id, e.channel_id]
-  },
-  [E.AnalyticEvents.GUILD_CHANNEL_HIGHLIGHTS_LOADED]: {
-    throttlePeriod: 36e5,
-    throttleKeys: e => [e.guild_id]
-  },
   [E.AnalyticEvents.FORUM_CHANNEL_SEARCHED]: {
     throttlePeriod: 6e4,
     throttleKeys: e => [e.guild_id, e.channel_id]
