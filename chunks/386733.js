@@ -168,7 +168,17 @@ t.default = e => {
     {
       analyticsLocations: Y
     } = (0, I.default)(T.default.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
-    z = (0, a.jsxs)(a.Fragment, {
+    z = () => {
+      (0, E.openModalLazy)(async () => {
+        let {
+          default: e
+        } = await Promise.all([s.e("99387"), s.e("47435")]).then(s.bind(s, "204387"));
+        return t => (0, a.jsx)(e, {
+          ...t
+        })
+      })
+    },
+    Z = (0, a.jsxs)(a.Fragment, {
       children: [j ? (0, a.jsx)(G, {}) : (0, a.jsx)(k, {}), (0, a.jsxs)("div", {
         className: l()(y.expandedProgressBarContent, {
           [y.expandedProgressBarContentVariant1]: !x,
@@ -194,16 +204,7 @@ t.default = e => {
           }), (0, a.jsx)(N.default, {
             className: y.expandedProgressBarSelectFriendsCTA,
             color: E.ButtonColors.CUSTOM,
-            onClick: () => {
-              (0, E.openModalLazy)(async () => {
-                let {
-                  default: e
-                } = await Promise.all([s.e("99387"), s.e("47435")]).then(s.bind(s, "204387"));
-                return t => (0, a.jsx)(e, {
-                  ...t
-                })
-              })
-            },
+            onClick: z,
             onlyShineOnHover: !0,
             children: (0, a.jsxs)("div", {
               className: y.expandedProgressBarSelectFriendsCTAInner,
@@ -217,7 +218,7 @@ t.default = e => {
         })]
       })]
     });
-  return H && (z = (0, a.jsxs)(a.Fragment, {
+  return H && (Z = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
       className: y.collapsedProgressBarIconContainer,
       children: j ? (0, a.jsx)(G, {
@@ -248,6 +249,7 @@ t.default = e => {
         })
       }), (0, a.jsx)(E.Clickable, {
         className: y.collapsedShareReferralButton,
+        onClick: z,
         children: (0, a.jsx)(D.default, {
           width: 28,
           height: 28
@@ -278,7 +280,7 @@ t.default = e => {
           width: t ? 20 : 24,
           height: t ? 20 : 24
         })
-      }), z]
+      }), Z]
     })
   })
 }
