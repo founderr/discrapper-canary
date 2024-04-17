@@ -53,14 +53,15 @@ function D(e) {
   r.useEffect(() => {
     null == v || v(null == b ? void 0 : b.current)
   }, [b, v]);
-  let V = () => {
+  let F = e => {
     null == D || D(), (0, p.openUserProfileModal)({
       sourceAnalyticsLocations: P,
       userId: t.id,
       guildId: n,
       channelId: s,
       messageId: a,
-      roleId: T
+      roleId: T,
+      autoFocusNote: e
     })
   };
   return (0, i.jsx)(_.AnalyticsLocationProvider, {
@@ -99,7 +100,7 @@ function D(e) {
                   U({
                     action: "PRESS_VIEW_PROFILE",
                     analyticsLocations: P
-                  }), V()
+                  }), F()
                 }
               })
             })]
@@ -115,7 +116,7 @@ function D(e) {
             displayProfile: G,
             guild: B,
             channelId: s,
-            onOpenProfile: V,
+            onOpenProfile: () => F(!0),
             onClose: D
           })]
         }), (null == G ? void 0 : G.profileEffectId) != null && (0, i.jsx)(c.default, {
