@@ -8,14 +8,14 @@ var i = n("735250");
 n("470079");
 var s = n("723484"),
   a = n("51499"),
-  r = n("614277"),
-  l = n("401084");
+  l = n("614277"),
+  r = n("401084");
 
 function u() {
   return (0, i.jsxs)(i.Fragment, {
-    children: [(0, i.jsx)(a.default, {}), (0, i.jsx)(r.PaymentPortalBody, {
+    children: [(0, i.jsx)(a.default, {}), (0, i.jsx)(l.PaymentPortalBody, {
       children: (0, i.jsx)(s.AwaitingAuthenticationStepBody, {
-        className: l.awaitingAuthenticationStep
+        className: r.awaitingAuthenticationStep
       })
     })]
   })

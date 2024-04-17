@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return v
   }
 }), n("47120"), n("724458");
 var a = n("735250"),
@@ -19,14 +19,14 @@ var a = n("735250"),
   m = n("273504"),
   g = n("689938"),
   S = n("454775");
-let v = m.AutomodTriggerType.KEYWORD;
+let p = m.AutomodTriggerType.KEYWORD;
 
-function p(e, t) {
+function v(e, t) {
   let {
     perGuildMaxCount: n
-  } = r.triggerConfigs[v], {
+  } = r.triggerConfigs[p], {
     isLoading: m,
-    saveRule: p
+    saveRule: v
   } = (0, d.useAutomodEditingRuleActions)(), {
     createNewEditingRule: I
   } = (0, d.useAutomodEditingRuleState)(), [h, A] = i.useState(!1), [_, T] = (0, u.useSyncAutomodRules)(t), {
@@ -34,13 +34,13 @@ function p(e, t) {
     updateRule: R
   } = (0, u.useAutomodRulesList)(t), y = i.useMemo(() => {
     var e;
-    return null !== (e = C[v]) && void 0 !== e ? e : []
+    return null !== (e = C[p]) && void 0 !== e ? e : []
   }, [C]), O = 0 === y.length, x = n > y.length && !O;
   if (!i.useMemo(() => (0, o.canCurrentUserManageMessageFilters)(t), [t]) || null == e || 0 === e.length || null == t) return null;
   let N = e.split(" ").length,
     j = () => {
       null != t && ((0, s.closeContextMenu)(), E.default.open(t, M.GuildSettingsSections.GUILD_AUTOMOD), setTimeout(() => {
-        I(t, v, {
+        I(t, p, {
           triggerMetadata: {
             keywordFilter: [e],
             regexPatterns: [],
@@ -59,7 +59,7 @@ function p(e, t) {
           keywordFilter: [...null !== (a = null === (n = t.triggerMetadata) || void 0 === n ? void 0 : n.keywordFilter) && void 0 !== a ? a : [], e]
         }
       };
-      await p(i, y), R(i)
+      await v(i, y), R(i)
     }, G = (0, a.jsx)(a.Fragment, {
       children: (0, a.jsx)(l.MenuItem, {
         id: "automod-rules-loading",
@@ -73,7 +73,7 @@ function p(e, t) {
       action: j,
       disabled: m
     }), y.map(e => {
-      let t = (0, r.getAvailableActionTypes)(v).reduce((t, n) => {
+      let t = (0, r.getAvailableActionTypes)(p).reduce((t, n) => {
         let a = e.actions.find(e => {
           let {
             type: t

@@ -1,92 +1,92 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   PremiumPaymentConfirmStep: function() {
-    return L
+    return E
   }
 });
-var n = s("735250"),
-  r = s("470079"),
-  i = s("512722"),
-  l = s.n(i),
-  a = s("481060"),
-  o = s("570140"),
-  C = s("881602"),
-  u = s("546650"),
-  d = s("317269"),
-  c = s("669079"),
-  p = s("296848"),
-  f = s("987209"),
-  x = s("598"),
-  _ = s("614277"),
-  m = s("698708");
+var s = n("735250"),
+  i = n("470079"),
+  r = n("512722"),
+  l = n.n(r),
+  a = n("481060"),
+  o = n("570140"),
+  C = n("881602"),
+  u = n("546650"),
+  d = n("317269"),
+  c = n("669079"),
+  p = n("296848"),
+  f = n("987209"),
+  x = n("598"),
+  _ = n("614277"),
+  m = n("698708");
 
-function L(e) {
-  var t, i;
-  let L, {
+function E(e) {
+  var t, r;
+  let E, {
       handleClose: S,
-      planGroup: h,
-      onSubscriptionConfirmation: E,
+      planGroup: L,
+      onSubscriptionConfirmation: h,
       renderPurchaseConfirmation: j,
       postSuccessGuild: P,
-      followupSKUInfo: M
+      followupSKUInfo: y
     } = e,
     {
-      activeSubscription: g,
-      paymentSources: y,
-      paymentSourceId: A,
-      selectedPlan: T,
-      selectedSkuId: I,
-      step: N,
-      updatedSubscription: v,
+      activeSubscription: M,
+      paymentSources: A,
+      paymentSourceId: g,
+      selectedPlan: I,
+      selectedSkuId: T,
+      step: v,
+      updatedSubscription: N,
       startingPremiumSubscriptionPlanIdRef: O
     } = (0, x.usePaymentContext)(),
     {
-      isGift: R,
-      giftRecipient: b,
+      isGift: b,
+      giftRecipient: R,
       giftCode: U,
       hasSentMessage: k,
       isSendingMessage: B,
-      sendGiftMessage: H
+      sendGiftMessage: w
     } = (0, f.useGiftContext)();
-  l()(null != T, "Expected plan to selected"), l()(null != I, "Expected selectedSkuId"), l()(null != N, "Step should be set");
-  let G = r.useCallback(() => {
-    S(), null == E || E()
-  }, [S, E]);
-  return r.useEffect(() => {
-    if (!(!R || null == b || null == U || k || B || (0, c.shouldShowCustomGiftExperience)(b))) C.AutomatedGiftCodeMessageExperiment.getCurrentConfig({
+  l()(null != I, "Expected plan to selected"), l()(null != T, "Expected selectedSkuId"), l()(null != v, "Step should be set");
+  let F = i.useCallback(() => {
+    S(), null == h || h()
+  }, [S, h]);
+  return i.useEffect(() => {
+    if (!(!b || null == R || null == U || k || B || (0, c.shouldShowCustomGiftExperience)(R))) C.AutomatedGiftCodeMessageExperiment.getCurrentConfig({
       location: "36b986_1"
-    }).enabled && H({
-      onSubscriptionConfirmation: E
+    }).enabled && w({
+      onSubscriptionConfirmation: h
     })
-  }, [H, R, b, U, k, B, E]), L = null != j ? j(T, G, v) : R ? (0, n.jsx)(d.PremiumSubscriptionGiftPurchaseConfirmation, {
-    planId: T.id,
-    onClose: G
-  }) : O.current === T.id ? (0, n.jsx)(d.default, {
-    planId: T.id,
+  }, [w, b, R, U, k, B, h]), E = null != j ? j(I, F, N) : b ? (0, s.jsx)(d.PremiumSubscriptionGiftPurchaseConfirmation, {
+    planId: I.id,
+    onClose: F
+  }) : O.current === I.id ? (0, s.jsx)(d.default, {
+    planId: I.id,
     postSuccessGuild: P,
-    onClose: G,
-    paymentSourceType: null === (t = y[null != A ? A : ""]) || void 0 === t ? void 0 : t.type
-  }) : (0, n.jsx)(d.default, {
-    followupSKUInfo: M,
+    onClose: F,
+    paymentSourceType: null === (t = A[null != g ? g : ""]) || void 0 === t ? void 0 : t.type
+  }) : (0, s.jsx)(d.default, {
+    followupSKUInfo: y,
     startingPremiumSubscriptionPlanId: O.current,
-    planId: T.id,
-    onClose: G,
-    isDowngrade: null != g && (0, p.subscriptionCanDowngrade)(g, T.id, h),
-    paymentSourceType: null === (i = y[null != A ? A : ""]) || void 0 === i ? void 0 : i.type
-  }), r.useEffect(() => {
+    planId: I.id,
+    onClose: F,
+    isDowngrade: null != M && (0, p.subscriptionCanDowngrade)(M, I.id, L),
+    paymentSourceType: null === (r = A[null != g ? g : ""]) || void 0 === r ? void 0 : r.type
+  }), i.useEffect(() => {
     u.default.isAprilMarketingDecoEntitlementCreated && (o.default.dispatch({
       type: "PREMIUM_APRIL_MARKETING_DECO_ENTITLEMENT_RESET"
-    }), G(), !(0, a.hasAnyModalOpen)() && (0, a.openModalLazy)(async () => {
+    }), F(), !(0, a.hasAnyModalOpen)() && (0, a.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.resolve().then(s.bind(s, "731433"));
-      return t => (0, n.jsx)(e, {
+      } = await Promise.resolve().then(n.bind(n, "731433"));
+      return t => (0, s.jsx)(e, {
         ...t
       })
     }))
-  }, []), (0, n.jsx)(n.Fragment, {
-    children: (0, n.jsxs)(_.PaymentPortalBody, {
-      children: [(0, n.jsx)(m.default, {}), L]
+  }, []), (0, s.jsx)(s.Fragment, {
+    children: (0, s.jsxs)(_.PaymentPortalBody, {
+      children: [(0, s.jsx)(m.default, {}), E]
     })
   })
 }

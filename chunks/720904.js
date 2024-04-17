@@ -20,8 +20,8 @@ var i = n("120356"),
   m = n("176354"),
   g = n("981631"),
   S = n("185923"),
-  v = n("689938"),
-  p = n("961688");
+  p = n("689938"),
+  v = n("961688");
 let I = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
 
 function h(e) {
@@ -44,19 +44,19 @@ function h(e) {
     spacing: 16,
     forceOpen: i,
     children: e => (0, a.jsx)("div", {
-      "aria-label": v.default.Messages.ADD_REACTION_NAMED.format({
+      "aria-label": p.default.Messages.ADD_REACTION_NAMED.format({
         emojiName: n.name
       }),
-      className: l()(p.button, {
-        [p.focused]: i
+      className: l()(v.button, {
+        [v.focused]: i
       }),
       ...e,
       children: null == r || "" === r.trim() ? (0, a.jsx)("span", {
-        className: l()("emoji", "emoji-text", p.icon),
+        className: l()("emoji", "emoji-text", v.icon),
         ...e,
         children: o
       }) : (0, a.jsx)("img", {
-        className: p.icon,
+        className: v.icon,
         src: r,
         alt: ""
       })
@@ -77,11 +77,11 @@ function A(e, t) {
   let i = f.RenderReactions.useSetting(),
     l = (0, c.useIsActiveChannelOrUnarchivableThread)(t),
     M = (0, s.useStateFromStores)([E.default], () => i && l && (t.isPrivate() || E.default.can(g.Permissions.ADD_REACTIONS, t)), [t, l, i]),
-    v = n => {
+    p = n => {
       (0, o.addReaction)(t.id, e.id, (0, d.toReactionEmoji)(n), void 0)
     };
   return M && n.length > 0 ? (0, a.jsx)(u.MenuGroup, {
-    className: p.wrapper,
+    className: v.wrapper,
     children: n.map((e, t) => {
       var n;
       return (0, a.jsx)(u.MenuItem, {
@@ -95,7 +95,7 @@ function A(e, t) {
             isFocused: n
           })
         },
-        action: () => v(e),
+        action: () => p(e),
         dontCloseOnActionIfHoldingShiftKey: !0
       }, t)
     })

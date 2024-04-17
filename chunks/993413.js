@@ -8,8 +8,8 @@ var i = n("735250");
 n("470079");
 var s = n("120356"),
   a = n.n(s),
-  r = n("481060"),
-  l = n("403182"),
+  l = n("481060"),
+  r = n("403182"),
   u = n("587446"),
   o = n("504983"),
   c = n("669967");
@@ -19,13 +19,13 @@ function d(e) {
     errors: t
   } = e;
   return (0, i.jsx)(i.Fragment, {
-    children: t.map((e, t) => (0, i.jsx)(r.Text, {
+    children: t.map((e, t) => (0, i.jsx)(l.Text, {
       variant: "text-xs/normal",
       color: "text-danger",
       className: c.errorMessage,
       children: e.replace(/[0-9.,]+ ?kb/g, e => {
         let t = 1024 * parseInt(e, 10);
-        return isNaN(t) ? e : (0, l.sizeString)(t)
+        return isNaN(t) ? e : (0, r.sizeString)(t)
       })
     }, t))
   })
@@ -36,12 +36,12 @@ function m(e) {
     title: t,
     titleIcon: n,
     titleId: s,
-    description: l,
+    description: r,
     children: m,
     className: f,
     errors: p,
-    disabled: S = !1,
-    hideDivider: _ = !1,
+    disabled: _ = !1,
+    hideDivider: S = !1,
     showBorder: I = !1,
     borderType: E,
     hasBackground: P = !1,
@@ -50,8 +50,8 @@ function m(e) {
   } = e;
   return (0, i.jsx)("div", {
     className: a()(c.customizationSection, f, {
-      [c.disabled]: S,
-      [c.hideDivider]: _,
+      [c.disabled]: _,
+      [c.hideDivider]: S,
       [c.showBorder]: I,
       [c.withDivider]: T
     }),
@@ -61,14 +61,14 @@ function m(e) {
       isShown: I,
       type: E,
       hasBackground: P,
-      children: [(0, i.jsxs)(r.FormTitle, {
+      children: [(0, i.jsxs)(l.FormTitle, {
         className: c.title,
         id: s,
         children: [t, N && (0, i.jsx)(u.default, {}), n]
-      }), null != l ? (0, i.jsx)(r.FormText, {
-        type: r.FormText.Types.DESCRIPTION,
+      }), null != r ? (0, i.jsx)(l.FormText, {
+        type: l.FormText.Types.DESCRIPTION,
         className: c.sectionDescription,
-        children: l
+        children: r
       }) : null, m, null != p && (0, i.jsx)(d, {
         errors: p
       })]

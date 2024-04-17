@@ -30,13 +30,13 @@ function P(e) {
     confettiCanvas: C,
     userWasChurned: T = !1,
     userDiscountOffer: h
-  } = e, A = (0, o.default)(), R = (0, l.isThemeDark)(A) ? I : N, y = n.useRef(null), [M, g] = n.useState(!1), L = (0, f.useChurnDiscountedPrice)(t, m.SubscriptionPlans.PREMIUM_MONTH_TIER_2, h), x = (0, c.getPrice)(m.SubscriptionPlans.PREMIUM_MONTH_TIER_2), D = (0, p.formatPrice)(x.amount, x.currency), U = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion);
+  } = e, A = (0, o.default)(), R = (0, l.isThemeDark)(A) ? I : N, y = n.useRef(null), [M, L] = n.useState(!1), g = (0, f.useChurnDiscountedPrice)(t, m.SubscriptionPlans.PREMIUM_MONTH_TIER_2, h), x = (0, c.getPrice)(m.SubscriptionPlans.PREMIUM_MONTH_TIER_2), D = (0, p.formatPrice)(x.amount, x.currency), U = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion);
   if (n.useEffect(() => {
-      null != y.current && null != L && g(!0)
-    }, [y, M, L]), null == h || null == L) return null;
+      null != y.current && null != g && L(!0)
+    }, [y, M, g]), null == h || null == g) return null;
   let b = _.default.Messages.PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB.format({
       numMonths: h.discount.user_usage_limit,
-      discountedPrice: L,
+      discountedPrice: g,
       regularPrice: D
     }),
     O = (0, a.jsx)("div", {
@@ -56,7 +56,7 @@ function P(e) {
       ref: y,
       children: (0, a.jsx)(r.ModalContent, {
         className: S.body,
-        children: null != L ? (0, a.jsxs)(a.Fragment, {
+        children: null != g ? (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsxs)("div", {
             className: S.discountAppliedBody,
             children: [(0, a.jsx)("img", {

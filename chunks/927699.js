@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250"),
   s = n("470079"),
   a = n("120356"),
-  r = n.n(a),
-  l = n("481060"),
+  l = n.n(a),
+  r = n("481060"),
   u = n("541716"),
   o = n("752305"),
   c = n("893718"),
@@ -16,8 +16,8 @@ var i = n("735250"),
   m = n("131704"),
   f = n("474936"),
   p = n("981631"),
-  S = n("689938"),
-  _ = n("746161");
+  _ = n("689938"),
+  S = n("746161");
 let I = (0, m.createChannelRecord)({
   id: "1",
   type: p.ChannelTypes.DM
@@ -34,40 +34,40 @@ function E(e) {
     className: P,
     innerClassName: T,
     disabled: N = !1,
-    disableThemedBackground: h = !1
-  } = e, [v, x] = s.useState(null != m ? m : E), [A, C] = s.useState((0, o.toRichValue)(v)), g = s.useRef(!1);
+    disableThemedBackground: v = !1
+  } = e, [h, x] = s.useState(null != m ? m : E), [A, C] = s.useState((0, o.toRichValue)(h)), y = s.useRef(!1);
   return s.useEffect(() => {
-    g.current = !0
+    y.current = !0
   }, []), s.useEffect(() => {
     if (void 0 === m) {
       let e = (0, o.toRichValue)(E);
       x(E), C(e)
     }
   }, [m, E]), (0, i.jsx)("div", {
-    className: r()(_.body, P),
+    className: l()(S.body, P),
     children: (0, i.jsxs)(d.default, {
       title: t,
       errors: n,
       disabled: N,
       children: [(0, i.jsx)(c.default, {
-        innerClassName: r()(_.textArea, T),
-        editorClassName: _.editorTextArea,
+        innerClassName: l()(S.textArea, T),
+        editorClassName: S.editorTextArea,
         maxCharacterCount: f.CUSTOM_GIFT_MESSAGE_MAX_LENGTH,
         onChange: function(e, t, n) {
-          t !== v && (x(t), C(n), a(t))
+          t !== h && (x(t), C(n), a(t))
         },
         placeholder: p,
         channel: I,
-        textValue: v,
+        textValue: h,
         richValue: A,
         type: u.ChatInputTypes.CUSTOM_GIFT,
         onBlur: () => {
-          g.current = !1
+          y.current = !1
         },
         onFocus: () => {
-          g.current = !0
+          y.current = !0
         },
-        focused: g.current,
+        focused: y.current,
         onSubmit: function() {
           return new Promise(e => {
             e({
@@ -76,9 +76,9 @@ function E(e) {
             })
           })
         },
-        disableThemedBackground: h
-      }), (0, i.jsx)(l.HiddenVisually, {
-        children: S.default.Messages.MAXIMUM_LENGTH.format({
+        disableThemedBackground: v
+      }), (0, i.jsx)(r.HiddenVisually, {
+        children: _.default.Messages.MAXIMUM_LENGTH.format({
           maxLength: f.CUSTOM_GIFT_MESSAGE_MAX_LENGTH
         })
       })]

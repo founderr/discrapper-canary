@@ -1,12 +1,12 @@
 "use strict";
 s.r(t);
-var l, a = s("735250"),
-  n = s("470079"),
+var l, n = s("735250"),
+  a = s("470079"),
   r = s("120356"),
   o = s.n(r),
   i = s("846519"),
-  d = s("481060"),
-  u = s("581874"),
+  u = s("481060"),
+  d = s("581874"),
   c = s("572004"),
   f = s("689938"),
   C = s("932207");
@@ -19,7 +19,7 @@ function m(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class h extends(l = n.PureComponent) {
+class h extends(l = a.PureComponent) {
   componentWillUnmount() {
     this._timeout.stop()
   }
@@ -29,24 +29,24 @@ class h extends(l = n.PureComponent) {
       value: t,
       text: s,
       className: l,
-      inputClassName: n
+      inputClassName: a
     } = this.props, {
       mode: r
-    } = this.state, i = r === u.default.Modes.SUCCESS ? f.default.Messages.COPIED : s;
-    return e ? (0, a.jsxs)("div", {
+    } = this.state, i = r === d.default.Modes.SUCCESS ? f.default.Messages.COPIED : s;
+    return e ? (0, n.jsxs)("div", {
       className: o()(l, r),
-      children: [(0, a.jsx)(d.TextInput, {
+      children: [(0, n.jsx)(u.TextInput, {
         value: t,
-        inputClassName: n
-      }), (0, a.jsx)(d.Button, {
+        inputClassName: a
+      }), (0, n.jsx)(u.Button, {
         className: C.button,
         onClick: this.handleCopy,
-        size: d.Button.Sizes.MIN,
+        size: u.Button.Sizes.MIN,
         color: this.getVerticalButtonColor(r),
-        look: d.Button.Looks.FILLED,
+        look: u.Button.Looks.FILLED,
         children: i
       })]
-    }) : (0, a.jsx)(u.default, {
+    }) : (0, n.jsx)(d.default, {
       ...this.props,
       onCopy: this.handleCopy,
       mode: r,
@@ -60,24 +60,24 @@ class h extends(l = n.PureComponent) {
       delay: s
     } = this.props, l = (0, c.copy)(t);
     this.setState({
-      mode: l ? u.default.Modes.SUCCESS : u.default.Modes.ERROR
+      mode: l ? d.default.Modes.SUCCESS : d.default.Modes.ERROR
     }), this._timeout.start(s, () => this.setState({
-      mode: u.default.Modes.DEFAULT
+      mode: d.default.Modes.DEFAULT
     })), null == e || e()
   }
   getVerticalButtonColor(e) {
     switch (e) {
-      case u.default.Modes.SUCCESS:
-        return d.Button.Colors.GREEN;
-      case u.default.Modes.ERROR:
-        return d.Button.Colors.RED;
+      case d.default.Modes.SUCCESS:
+        return u.Button.Colors.GREEN;
+      case d.default.Modes.ERROR:
+        return u.Button.Colors.RED;
       default:
-        return d.Button.Colors.BRAND
+        return u.Button.Colors.BRAND
     }
   }
   constructor(e) {
     super(e), m(this, "_timeout", void 0), this.state = {
-      mode: u.default.Modes.DEFAULT
+      mode: d.default.Modes.DEFAULT
     }, this._timeout = new i.Timeout, this.handleCopy = this.handleCopy.bind(this)
   }
 }

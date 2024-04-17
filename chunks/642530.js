@@ -1,11 +1,11 @@
 "use strict";
-s.r(t);
-var n = s("735250");
-s("470079");
-var r = s("196567"),
-  i = s("689938"),
-  l = s("576688");
-t.default = () => (0, n.jsx)(r.default, {
-  copy: i.default.Messages.BOGO_ANNOUNCEMENT_MODAL_UPGRADE_HEADER,
+n.r(t);
+var s = n("735250");
+n("470079");
+var i = n("196567"),
+  r = n("689938"),
+  l = n("576688");
+t.default = () => (0, s.jsx)(i.default, {
+  copy: r.default.Messages.BOGO_ANNOUNCEMENT_MODAL_UPGRADE_HEADER,
   bannerImage: l
 })

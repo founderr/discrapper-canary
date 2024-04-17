@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("512722"),
   s = n.n(i),
   a = n("207561"),
-  r = n("639119"),
-  l = n("3409"),
+  l = n("639119"),
+  r = n("3409"),
   u = n("626135"),
   o = n("987209"),
   c = n("598"),
@@ -22,39 +22,39 @@ function p(e) {
     initialPlanId: n,
     breadcrumbSteps: i,
     handleStepChange: p,
-    referralTrialOfferId: S,
-    onReturn: _
+    referralTrialOfferId: _,
+    onReturn: S
   } = e, {
     contextMetadata: I,
     step: E,
     paymentSources: P,
     paymentSourceId: T,
     setPaymentSourceId: N,
-    purchaseError: h,
-    setPurchaseError: v,
+    purchaseError: v,
+    setPurchaseError: h,
     purchaseErrorBlockRef: x,
     paymentAuthenticationState: A,
     selectedSkuId: C
   } = (0, c.usePaymentContext)(), {
-    isGift: g
-  } = (0, o.useGiftContext)(), y = {
-    ...(0, l.useSharedPaymentModal)(),
+    isGift: y
+  } = (0, o.useGiftContext)(), g = {
+    ...(0, r.useSharedPaymentModal)(),
     paymentSources: P,
     paymentSourceId: T,
     setPaymentSourceId: N,
-    purchaseError: h,
-    setPurchaseError: v,
+    purchaseError: v,
+    setPurchaseError: h,
     purchaseErrorBlockRef: x,
     paymentAuthenticationState: A
-  }, M = (0, r.usePremiumTrialOffer)(S), R = !g && null != M && null != C && (0, f.SubscriptionTrials)[M.trial_id].skus.includes(C), b = null != _ ? _ : () => {
+  }, M = (0, l.usePremiumTrialOffer)(_), R = !y && null != M && null != C && (0, f.SubscriptionTrials)[M.trial_id].skus.includes(C), b = null != S ? S : () => {
     p(Object.values(P).length < 1 && null == n ? d.Step.PLAN_SELECT : d.Step.REVIEW, {
       trackedFromStep: d.Step.PAYMENT_TYPE
     })
   };
   s()(E, "Step should be set here");
   let L = (0, a.useStableMemo)(() => Date.now(), [E]);
-  return (0, l.AddPaymentFlow)({
-    paymentModalArgs: y,
+  return (0, r.AddPaymentFlow)({
+    paymentModalArgs: g,
     initialStep: d.Step.PAYMENT_TYPE,
     prependSteps: [d.Step.PROMOTION_INFO],
     appendSteps: [d.Step.REVIEW, d.Step.CONFIRM],

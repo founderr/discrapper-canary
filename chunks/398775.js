@@ -120,23 +120,23 @@ function C(e) {
     analyticsLocation: d
   } = e, [E, P] = n.useState(!1), {
     analyticsLocations: C
-  } = (0, p.default)(), [T, h] = n.useState(!1), A = (0, c.default)(), R = null, y = null, M = [_.SubscriptionStatusTypes.PAST_DUE, _.SubscriptionStatusTypes.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd, g = l()(M).add(r, "days").toDate();
+  } = (0, p.default)(), [T, h] = n.useState(!1), A = (0, c.default)(), R = null, y = null, M = [_.SubscriptionStatusTypes.PAST_DUE, _.SubscriptionStatusTypes.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd, L = l()(M).add(r, "days").toDate();
   switch (t.status) {
     case _.SubscriptionStatusTypes.PAST_DUE:
       y = S.default.Messages.PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY.format({
         pauseDuration: r,
-        resumeDate: g
+        resumeDate: L
       });
       break;
     case _.SubscriptionStatusTypes.PAUSED:
       y = S.default.Messages.PREMIUM_PAUSE_EXTEND_CONFIRM_BODY.format({
-        resumeDate: g
+        resumeDate: L
       });
       break;
     default:
       y = S.default.Messages.PREMIUM_PAUSE_CONFIRM_BODY.format({
         pauseDate: M,
-        resumeDate: g,
+        resumeDate: L,
         pauseDuration: r
       })
   }

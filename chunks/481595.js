@@ -8,8 +8,8 @@ var i = n("735250");
 n("470079");
 var s = n("512722"),
   a = n.n(s),
-  r = n("742280"),
-  l = n("399606"),
+  l = n("742280"),
+  r = n("399606"),
   u = n("481060"),
   o = n("224550"),
   c = n("609194"),
@@ -17,20 +17,20 @@ var s = n("512722"),
   m = n("672971"),
   f = n("115130"),
   p = n("653798"),
-  S = n("314182"),
-  _ = n("251660"),
+  _ = n("314182"),
+  S = n("251660"),
   I = n("246946"),
   E = n("351402"),
   P = n("855775"),
   T = n("695103"),
   N = n("366695"),
-  h = n("4912"),
-  v = n("669079"),
+  v = n("4912"),
+  h = n("669079"),
   x = n("937615"),
   A = n("987209"),
   C = n("598"),
-  g = n("45572"),
-  y = n("916616"),
+  y = n("45572"),
+  g = n("916616"),
   M = n("981631"),
   R = n("689938"),
   b = n("812011");
@@ -105,22 +105,22 @@ function j(e) {
   } = (0, C.usePaymentContext)(), {
     isGift: H,
     giftRecipient: W
-  } = (0, A.useGiftContext)(), Y = H && (0, v.shouldShowCustomGiftExperience)(W);
+  } = (0, A.useGiftContext)(), Y = H && (0, h.shouldShowCustomGiftExperience)(W);
   a()(null != w, "Expected selectedSkuId");
   let K = U[w],
     V = F[w],
     Z = null != G ? G : P.NO_PAYMENT_SOURCE,
     z = null != V ? V[Z] : null;
   a()(null != K, "SKU must exist and be fetched."), a()(null != N, "Application must exist.");
-  let J = (0, l.useStateFromStores)([f.default, T.default], () => T.default.inTestModeForApplication(N.id) || f.default.inDevModeForApplication(N.id), [N.id]),
-    X = (0, l.useStateFromStores)([I.default], () => I.default.enabled),
-    q = r.CountryCodesSets.EEA_COUNTRIES.has(E.default.ipCountryCodeWithFallback),
-    Q = x === g.PurchaseState.PURCHASING || x === g.PurchaseState.COMPLETED,
+  let J = (0, r.useStateFromStores)([f.default, T.default], () => T.default.inTestModeForApplication(N.id) || f.default.inDevModeForApplication(N.id), [N.id]),
+    X = (0, r.useStateFromStores)([I.default], () => I.default.enabled),
+    q = l.CountryCodesSets.EEA_COUNTRIES.has(E.default.ipCountryCodeWithFallback),
+    Q = x === y.PurchaseState.PURCHASING || x === y.PurchaseState.COMPLETED,
     $ = null != G ? j[G].type : null;
   return (0, i.jsxs)("div", {
     className: b.stepBody,
     children: [J && (0, i.jsx)(c.default, {
-      icon: h.default,
+      icon: v.default,
       iconSize: c.default.Sizes.SMALL,
       color: c.default.Colors.WARNING,
       className: b.errorBlock,
@@ -129,9 +129,9 @@ function j(e) {
       application: N,
       sku: K,
       isEmbeddedIAP: B
-    }), Y && (0, i.jsx)(y.default, {
+    }), Y && (0, i.jsx)(g.default, {
       sku: K
-    }), null != W ? (0, i.jsx)(_.SendGiftToUser, {
+    }), null != W ? (0, i.jsx)(S.SendGiftToUser, {
       giftRecipient: W
     }) : null, (0, i.jsx)(u.FormTitle, {
       tag: u.FormTitleTags.H5,
@@ -154,7 +154,7 @@ function j(e) {
         onPaymentSourceAdd: p,
         hidePersonalInformation: X
       })]
-    }), (0, i.jsx)(S.default, {
+    }), (0, i.jsx)(_.default, {
       isActive: t,
       ref: n,
       children: (0, i.jsx)(m.default, {

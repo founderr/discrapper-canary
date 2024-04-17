@@ -4,15 +4,15 @@ var i = n("735250");
 n("470079");
 var s = n("882485"),
   a = n("481060"),
-  r = n("752803");
+  l = n("752803");
 t.default = function(e) {
   let {
     message: t
   } = e;
   return (0, i.jsxs)("div", {
-    className: r.container,
+    className: l.container,
     children: [(0, i.jsx)(s.CircleInformationIcon, {
-      className: r.icon,
+      className: l.icon,
       width: 20,
       height: 20,
       color: a.tokens.colors.TEXT_WARNING

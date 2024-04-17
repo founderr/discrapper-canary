@@ -18,7 +18,7 @@ var l = t("727075"),
 let _ = (e, s) => {
     C.default.openPrivateChannel(e), s()
   },
-  L = e => {
+  j = e => {
     let {
       user: s,
       onClose: t
@@ -70,7 +70,7 @@ s.default = e => {
   let {
     selectedUsers: s,
     onClose: t
-  } = e, C = [...s].map(e => (0, i.jsx)(L, {
+  } = e, C = [...s].map(e => (0, i.jsx)(j, {
     user: e,
     onClose: t
   }, e.id)), o = (0, n.useTheme)(), c = (0, a.isThemeLight)(o) ? f.default : x.default;

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return L
+    return g
   }
 }), s("47120"), s("411104");
 var a = s("735250"),
@@ -29,22 +29,22 @@ var a = s("735250"),
   R = s("981631"),
   y = s("689938"),
   M = s("185786"),
-  g = s("605094");
+  L = s("605094");
 
-function L(e) {
+function g(e) {
   let {
     subscription: t,
     onPaymentSourceAdded: s,
     highlightAddPaymentMethodButton: i,
     dropdownClassName: r,
-    analyticsLocation: L,
+    analyticsLocation: g,
     currentInvoicePreview: D,
     disabled: U = !1
   } = e, b = (0, u.useStateFromStores)([I.default], () => I.default.hidePersonalInformation), [O, v] = (0, u.useStateFromStoresArray)([N.default], () => [N.default.paymentSources, N.default.hasFetchedPaymentSources]), B = (0, S.useSubscriptionPlansLoaded)((0, h.getSubscriptionSKUs)(t)), {
     analyticsLocations: j
   } = (0, _.default)(), G = n.useMemo(() => Object.values(O).filter(e => !e.invalid), [O]), [k, F] = n.useState(!1), [w, Y] = n.useState(t.currency), H = async (e, s) => {
     if (null == t) throw Error("missing subscription and paymentSource");
-    null == e ? await p.changeSubscriptionCurrency(t, s, j, L) : await p.changePaymentSource(t, e, s, j, L), F(!1), Y(s)
+    null == e ? await p.changeSubscriptionCurrency(t, s, j, g) : await p.changePaymentSource(t, e, s, j, g), F(!1), Y(s)
   }, W = async (e, s, a) => {
     F(!0);
     let n = await (0, A.updateSubscriptionInvoicePreview)({
@@ -53,7 +53,7 @@ function L(e) {
       renewal: !0,
       currency: s,
       analyticsLocations: j,
-      analyticsLocation: L
+      analyticsLocation: g
     });
     D.currency !== n.currency || D.currency === n.currency && D.total !== n.total ? await x(n, () => {
       a(e, s)
@@ -75,7 +75,7 @@ function L(e) {
     (0, d.openModalLazy)(async () => e => (0, a.jsx)(f.default, {
       ...e,
       onAddPaymentSource: z,
-      analyticsLocation: L
+      analyticsLocation: g
     }), {
       onCloseCallback: () => {
         (0, c.clearError)()
@@ -130,7 +130,7 @@ function L(e) {
       })(), null != t.paymentSourceId ? (0, a.jsx)(E.CurrencyWrapper, {
         currencies: s,
         children: (0, a.jsxs)("div", {
-          className: l()(M.currency, g.flex, g.alignCenter),
+          className: l()(M.currency, L.flex, L.alignCenter),
           children: [(0, a.jsx)("div", {
             children: y.default.Messages.PAYMENT_CURRENCY_PAYING_IN
           }), (0, a.jsx)(E.default, {

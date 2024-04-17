@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250"),
   s = n("470079"),
   a = n("692547"),
-  r = n("467949"),
-  l = n("481060"),
+  l = n("467949"),
+  r = n("481060"),
   u = n("697426"),
   o = n("603074"),
   c = n("689938"),
@@ -21,17 +21,17 @@ function f(e) {
     sound: n
   } = e, [f, p] = s.useState(!1);
 
-  function S(e) {
+  function _(e) {
     p(!1), null == t || t(e)
   }
-  let _ = e => (0, i.jsxs)("div", {
+  let S = e => (0, i.jsxs)("div", {
     className: d.customGiftHeader,
     children: [(0, i.jsxs)("div", {
       className: d.__invalid_customGiftHeaderText,
-      children: [(0, i.jsx)(l.Text, {
+      children: [(0, i.jsx)(r.Text, {
         variant: "text-md/bold",
         children: c.default.Messages.GIFT_SELECT_SOUND
-      }), (0, i.jsx)(l.Text, {
+      }), (0, i.jsx)(r.Text, {
         variant: "text-sm/normal",
         children: c.default.Messages.GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION
       })]
@@ -40,7 +40,7 @@ function f(e) {
       children: e
     })]
   });
-  return (0, i.jsx)(l.Popout, {
+  return (0, i.jsx)(r.Popout, {
     shouldShow: f,
     position: "bottom",
     align: "left",
@@ -49,42 +49,42 @@ function f(e) {
       let {
         closePopout: t
       } = e;
-      return (0, i.jsx)(l.Dialog, {
+      return (0, i.jsx)(r.Dialog, {
         children: (0, i.jsx)(o.default, {
           suppressPlaySound: !0,
           shouldShowUpsell: !1,
           guildId: null,
           channel: null,
           onClose: t,
-          onSelect: S,
+          onSelect: _,
           analyticsSource: "gift soundboard",
           soundButtonOverlay: u.SoundButtonOverlay.ADD,
           listPadding: m,
-          renderHeader: _,
+          renderHeader: S,
           defaultSoundsOnly: !0
         })
       })
     },
-    children: () => (0, i.jsx)(l.Clickable, {
+    children: () => (0, i.jsx)(r.Clickable, {
       className: d.sound,
       onClick: () => p(!0),
       children: null == n ? (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(r.SoundboardIcon, {
+        children: [(0, i.jsx)(l.SoundboardIcon, {
           color: a.default.colors.WHITE,
           className: d.soundIcon,
           width: 14,
           height: 14
-        }), (0, i.jsx)(l.Text, {
+        }), (0, i.jsx)(r.Text, {
           className: d.text,
           variant: "text-sm/semibold",
           children: c.default.Messages.GIFT_SELECT_SOUND
         })]
       }) : (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(l.Text, {
+        children: [(0, i.jsx)(r.Text, {
           className: d.textSelected,
           variant: "text-sm/semibold",
           children: n.emojiName
-        }), (0, i.jsx)(l.Text, {
+        }), (0, i.jsx)(r.Text, {
           className: d.text,
           variant: "text-sm/semibold",
           children: n.name
