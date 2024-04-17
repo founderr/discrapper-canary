@@ -1,87 +1,87 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var l = n("481060"),
-  u = n("493683"),
-  i = n("239091"),
-  s = n("883385"),
-  r = n("108843"),
-  o = n("947440"),
-  d = n("100527"),
-  c = n("299206"),
-  f = n("895563"),
-  M = n("212205"),
-  h = n("62420"),
-  _ = n("122074"),
-  m = n("314897"),
-  E = n("858687"),
-  C = n("461535"),
-  I = n("776568"),
-  g = n("981631"),
-  p = n("689938");
-t.default = (0, r.default)((0, s.default)(function(e) {
+t.r(n);
+var a = t("735250");
+t("470079");
+var u = t("481060"),
+  i = t("493683"),
+  l = t("239091"),
+  o = t("883385"),
+  s = t("108843"),
+  d = t("947440"),
+  r = t("100527"),
+  c = t("299206"),
+  f = t("895563"),
+  M = t("212205"),
+  m = t("62420"),
+  h = t("122074"),
+  C = t("314897"),
+  _ = t("858687"),
+  v = t("461535"),
+  E = t("776568"),
+  I = t("981631"),
+  S = t("689938");
+n.default = (0, s.default)((0, o.default)(function(e) {
   let {
-    channel: t,
-    selected: s,
-    onSelect: r
-  } = e, d = t.isOwner(m.default.getId()), g = (0, C.default)(t), x = (0, I.default)(t), v = (0, _.default)(), A = (0, E.default)(t, s), T = (0, c.default)({
-    id: t.id,
-    label: p.default.Messages.COPY_ID_CHANNEL
-  }), N = (0, o.default)(t), O = (0, f.useAddToFavoritesItem)(t), G = (0, f.useRemoveFromFavoritesItem)(t), j = (0, M.default)(t), b = (0, h.default)(t);
-  return null == t || t.isManaged() ? null : (0, a.jsxs)(l.Menu, {
+    channel: n,
+    selected: o,
+    onSelect: s
+  } = e, r = n.isOwner(C.default.getId()), g = (0, v.default)(n), N = (0, E.default)(n), p = (0, h.default)(I.ZERO_STRING_GUILD_ID, n.id), A = (0, _.default)(n, o), T = (0, c.default)({
+    id: n.id,
+    label: S.default.Messages.COPY_ID_CHANNEL
+  }), x = (0, d.default)(n), O = (0, f.useAddToFavoritesItem)(n), G = (0, f.useRemoveFromFavoritesItem)(n), F = (0, M.default)(n), R = (0, m.default)(n);
+  return null == n || n.isManaged() ? null : (0, a.jsxs)(u.Menu, {
     navId: "gdm-context",
-    "aria-label": p.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-    onClose: i.closeContextMenu,
-    onSelect: r,
-    children: [(0, a.jsx)(l.MenuGroup, {
+    "aria-label": S.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+    onClose: l.closeContextMenu,
+    onSelect: s,
+    children: [(0, a.jsx)(u.MenuGroup, {
       children: g
-    }), (0, a.jsxs)(l.MenuGroup, {
-      children: [O, j, b]
-    }), (0, a.jsxs)(l.MenuGroup, {
-      children: [d ? (0, a.jsx)(l.MenuItem, {
+    }), (0, a.jsxs)(u.MenuGroup, {
+      children: [O, F, R]
+    }), (0, a.jsxs)(u.MenuGroup, {
+      children: [r ? (0, a.jsx)(u.MenuItem, {
         id: "instant-invites",
-        label: p.default.Messages.INSTANT_INVITES,
-        action: () => (0, l.openModalLazy)(async () => {
+        label: S.default.Messages.INSTANT_INVITES,
+        action: () => (0, u.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([n.e("49237"), n.e("99387"), n.e("6901")]).then(n.bind(n, "892382"));
-          return n => (0, a.jsx)(e, {
-            channelId: t.id,
-            ...n
+          } = await Promise.all([t.e("49237"), t.e("99387"), t.e("6901")]).then(t.bind(t, "892382"));
+          return t => (0, a.jsx)(e, {
+            channelId: n.id,
+            ...t
           })
         })
-      }) : null, (0, a.jsx)(l.MenuControlItem, {
+      }) : null, (0, a.jsx)(u.MenuControlItem, {
         id: "change-icon",
         showDefaultFocus: !0,
-        control: (e, n) => (0, a.jsx)(l.MenuImageUploadControl, {
-          onChange: n => {
+        control: (e, t) => (0, a.jsx)(u.MenuImageUploadControl, {
+          onChange: t => {
             var a;
-            u.default.setIcon(t.id, n), null === (a = e.onClose) || void 0 === a || a.call(e)
+            i.default.setIcon(n.id, t), null === (a = e.onClose) || void 0 === a || a.call(e)
           },
           multiple: !1,
-          "aria-label": p.default.Messages.CHANGE_ICON,
+          "aria-label": S.default.Messages.CHANGE_ICON,
           ...e,
-          ref: n
+          ref: t
         }),
-        label: p.default.Messages.CHANGE_ICON
-      }), null != t.icon ? (0, a.jsx)(l.MenuItem, {
+        label: S.default.Messages.CHANGE_ICON
+      }), null != n.icon ? (0, a.jsx)(u.MenuItem, {
         id: "remove-icon",
-        label: p.default.Messages.REMOVE_ICON,
-        action: () => u.default.setIcon(t.id, null)
+        label: S.default.Messages.REMOVE_ICON,
+        action: () => i.default.setIcon(n.id, null)
       }) : null]
-    }), (0, a.jsx)(l.MenuGroup, {
-      children: N
-    }), (0, a.jsxs)(l.MenuGroup, {
-      children: [x, v]
-    }), (0, a.jsx)(l.MenuGroup, {
+    }), (0, a.jsx)(u.MenuGroup, {
+      children: x
+    }), (0, a.jsxs)(u.MenuGroup, {
+      children: [N, p]
+    }), (0, a.jsx)(u.MenuGroup, {
       children: A
-    }), (0, a.jsx)(l.MenuGroup, {
+    }), (0, a.jsx)(u.MenuGroup, {
       children: G
-    }), (0, a.jsx)(l.MenuGroup, {
+    }), (0, a.jsx)(u.MenuGroup, {
       children: T
     })]
   })
 }, {
-  object: g.AnalyticsObjects.CONTEXT_MENU
-}), [d.default.CONTEXT_MENU, d.default.GROUP_DM_MENU])
+  object: I.AnalyticsObjects.CONTEXT_MENU
+}), [r.default.CONTEXT_MENU, r.default.GROUP_DM_MENU])
