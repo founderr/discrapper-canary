@@ -38,45 +38,48 @@ var l = n("735250"),
   w = n("914923"),
   F = n("165393"),
   B = n("989941"),
-  V = n("803647"),
-  H = n("131704"),
-  k = n("199902"),
-  Y = n("314897"),
-  K = n("592125"),
-  W = n("984933"),
-  Z = n("430824"),
-  z = n("131951"),
-  X = n("496675"),
-  q = n("158776"),
-  Q = n("699516"),
-  J = n("944486"),
-  $ = n("885110"),
-  ee = n("594174"),
-  et = n("449224"),
-  en = n("366695"),
-  el = n("499150"),
-  ea = n("301822"),
-  es = n("119828"),
-  ei = n("87086"),
-  er = n("782089"),
-  eo = n("990138"),
-  eu = n("761374"),
-  ed = n("976401"),
-  ec = n("333454"),
-  ef = n("864441"),
-  eh = n("26290"),
-  ep = n("368666"),
-  em = n("626135"),
-  eC = n("358085"),
-  eg = n("793224"),
-  eE = n("978769"),
-  e_ = n("981631"),
-  eS = n("918559"),
-  eI = n("702512"),
-  eN = n("689938"),
-  eT = n("810618");
+  H = n("803647"),
+  V = n("231664"),
+  k = n("471113"),
+  Y = n("131704"),
+  K = n("199902"),
+  W = n("314897"),
+  Z = n("592125"),
+  z = n("984933"),
+  X = n("430824"),
+  Q = n("131951"),
+  q = n("496675"),
+  J = n("158776"),
+  $ = n("699516"),
+  ee = n("944486"),
+  et = n("885110"),
+  en = n("594174"),
+  el = n("449224"),
+  ea = n("366695"),
+  es = n("499150"),
+  ei = n("301822"),
+  er = n("119828"),
+  eo = n("87086"),
+  eu = n("297087"),
+  ed = n("782089"),
+  ec = n("990138"),
+  ef = n("761374"),
+  eh = n("976401"),
+  ep = n("333454"),
+  em = n("864441"),
+  eC = n("26290"),
+  eg = n("368666"),
+  eE = n("626135"),
+  e_ = n("358085"),
+  eS = n("793224"),
+  eI = n("978769"),
+  eN = n("981631"),
+  eT = n("918559"),
+  eA = n("702512"),
+  eL = n("689938"),
+  ev = n("810618");
 
-function eA(e, t, n) {
+function ex(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -84,15 +87,15 @@ function eA(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let eL = (0, g.default)(function(e) {
+let eR = (0, g.default)(function(e) {
   let {
     message: t
   } = e;
-  return (0, l.jsx)(ec.default, {
+  return (0, l.jsx)(ep.default, {
     children: t
   })
 });
-class ev extends a.PureComponent {
+class ey extends a.PureComponent {
   componentDidUpdate(e) {
     !e.dropsActivityPanelExperienceBlocked && this.props.dropsActivityPanelExperienceBlocked && this.setState({
       isDropsActivityPanelTooltipOpen: !1
@@ -104,7 +107,7 @@ class ev extends a.PureComponent {
       activity: t,
       embeddedActivity: n
     } = this.props;
-    return null != e && (null != n ? n.applicationId === e.id : null != t && t.application_id === e.id && t.type === e_.ActivityTypes.PLAYING && (0, N.default)(t, e_.ActivityFlags.JOIN))
+    return null != e && (null != n ? n.applicationId === e.id : null != t && t.application_id === e.id && t.type === eN.ActivityTypes.PLAYING && (0, N.default)(t, eN.ActivityFlags.JOIN))
   }
   renderGoLiveButton() {
     let e, t, n, a;
@@ -117,16 +120,16 @@ class ev extends a.PureComponent {
       runningGame: d,
       embeddedActivity: c
     } = this.props;
-    return (null != d || null == c) && (r || s && null != d) ? (r ? (e = !1, t = this.handleClickStopStreamingButton, n = eo.default, a = eN.default.Messages.STOP_STREAMING) : u ? (e = !1, t = this.handleClickGoLiveButton, n = eu.default, a = null != d ? eN.default.Messages.ACTIVITY_PANEL_GO_LIVE_STREAM_GAME.format({
+    return (null != d || null == c) && (r || s && null != d) ? (r ? (e = !1, t = this.handleClickStopStreamingButton, n = ec.default, a = eL.default.Messages.STOP_STREAMING) : u ? (e = !1, t = this.handleClickGoLiveButton, n = ef.default, a = null != d ? eL.default.Messages.ACTIVITY_PANEL_GO_LIVE_STREAM_GAME.format({
       game: d.name
-    }) : eN.default.Messages.ACTIVITY_PANEL_GO_LIVE) : (e = !0, t = null, n = eu.default, a = null != o && (0, H.isVoiceChannel)(o.type) ? eN.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE : null != i ? eN.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_GUILD : eN.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NOT_IN_GUILD), (0, l.jsx)("div", {
-      className: eT.panelButtonContainer,
-      children: (0, l.jsx)(ed.default, {
+    }) : eL.default.Messages.ACTIVITY_PANEL_GO_LIVE) : (e = !0, t = null, n = ef.default, a = null != o && (0, Y.isVoiceChannel)(o.type) ? eL.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE : null != i ? eL.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_GUILD : eL.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NOT_IN_GUILD), (0, l.jsx)("div", {
+      className: ev.panelButtonContainer,
+      children: (0, l.jsx)(eh.default, {
         tooltipText: a,
         disabled: e,
         onClick: t,
         icon: n,
-        iconForeground: eT.__invalid_actionIcon
+        iconForeground: ev.__invalid_actionIcon
       })
     })) : null
   }
@@ -134,11 +137,11 @@ class ev extends a.PureComponent {
     let {
       embeddedActivity: e
     } = this.props;
-    return this.isJoinableActivity() && null == e ? (0, l.jsx)(ed.default, {
-      tooltipText: eN.default.Messages.INVITE_EMBED_INVITE_TO_JOIN,
+    return this.isJoinableActivity() && null == e ? (0, l.jsx)(eh.default, {
+      tooltipText: eL.default.Messages.INVITE_EMBED_INVITE_TO_JOIN,
       onClick: this.handleClickInviteButton,
-      icon: er.default,
-      iconForeground: eT.__invalid_actionIcon
+      icon: ed.default,
+      iconForeground: ev.__invalid_actionIcon
     }) : null
   }
   renderDropsButton() {
@@ -162,9 +165,9 @@ class ev extends a.PureComponent {
         onClose: a
       }),
       children: () => (0, l.jsxs)(l.Fragment, {
-        children: [this.state.showDropsSparkles && this.renderSparkles(), (0, l.jsx)(ed.default, {
-          "aria-label": eN.default.Messages.DROPS_ENABLED,
-          tooltipText: n ? null : eN.default.Messages.DROPS_ENABLED,
+        children: [this.state.showDropsSparkles && this.renderSparkles(), (0, l.jsx)(eh.default, {
+          "aria-label": eL.default.Messages.DROPS_ENABLED,
+          tooltipText: n ? null : eL.default.Messages.DROPS_ENABLED,
           onClick: this.handleClickDropsButton,
           icon: b.default
         })]
@@ -176,24 +179,24 @@ class ev extends a.PureComponent {
       embeddedActivity: e,
       channel: t
     } = this.props;
-    return null == e || null == t ? null : (0, l.jsx)(ed.default, {
-      tooltipText: eN.default.Messages.EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY,
+    return null == e || null == t ? null : (0, l.jsx)(eh.default, {
+      tooltipText: eL.default.Messages.EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY,
       onClick: this.handleClickLeaveEmbeddedActivityButton(e.applicationId, t),
-      icon: ei.default,
-      iconForeground: eT.__invalid_actionIcon
+      icon: eo.default,
+      iconForeground: ev.__invalid_actionIcon
     })
   }
   renderBroadcastButton() {
     let {
       channel: e
     } = this.props;
-    return null != e && (0, H.isVoiceChannel)(e.type) ? null : (0, l.jsx)(eg.default, {})
+    return null != e && (0, Y.isVoiceChannel)(e.type) ? null : (0, l.jsx)(eS.default, {})
   }
   renderBroadcastSettingsButton() {
     let {
       broadcast: e
     } = this.props;
-    return null == e ? null : (0, l.jsx)(eE.default, {})
+    return null == e ? null : (0, l.jsx)(eI.default, {})
   }
   renderSparkles() {
     let {
@@ -206,11 +209,11 @@ class ev extends a.PureComponent {
       return e
     }
     return (0, l.jsx)("div", {
-      className: eT.sparkleContainer,
-      children: (0, l.jsx)(ea.default, {
+      className: ev.sparkleContainer,
+      children: (0, l.jsx)(ei.default, {
         importData: t,
         shouldAnimate: !e,
-        className: eT.sparkles
+        className: ev.sparkles
       })
     })
   }
@@ -223,7 +226,7 @@ class ev extends a.PureComponent {
       i = this.renderBroadcastButton(),
       r = this.renderBroadcastSettingsButton();
     return null == e && null == n && null == a ? null : (0, l.jsxs)("div", {
-      className: eT.actions,
+      className: ev.actions,
       children: [i, e, r, n, null == e ? a : s, t]
     })
   }
@@ -232,7 +235,7 @@ class ev extends a.PureComponent {
       runningGame: e,
       application: t
     } = this.props;
-    return null != t ? t.name : null != e ? e.name : eN.default.Messages.STATUS_UNKNOWN
+    return null != t ? t.name : null != e ? e.name : eL.default.Messages.STATUS_UNKNOWN
   }
   renderGame() {
     let {
@@ -242,31 +245,31 @@ class ev extends a.PureComponent {
       runningGame: a
     } = this.props, s = this.getGameName();
     return (0, l.jsxs)("div", {
-      className: i()(eT.gameWrapper, {
-        [eT.clickableGameWrapper]: null != n
+      className: i()(ev.gameWrapper, {
+        [ev.clickableGameWrapper]: null != n
       }),
       children: [(0, l.jsxs)("div", {
-        className: eT.gameIconWrapper,
-        children: [(0, l.jsx)(en.default, {
-          className: eT.gameIcon,
+        className: ev.gameIconWrapper,
+        children: [(0, l.jsx)(ea.default, {
+          className: ev.gameIcon,
           game: n,
           pid: null == a ? void 0 : a.pid
-        }), e ? (0, l.jsx)(es.default, {
-          className: eT.liveBadge
+        }), e ? (0, l.jsx)(er.default, {
+          className: ev.liveBadge
         }) : null]
       }), (0, l.jsx)("div", {
-        className: i()(eT.info, {
-          [eT.infoWithDrops]: null != t
+        className: i()(ev.info, {
+          [ev.infoWithDrops]: null != t
         }),
         children: null != s ? (0, l.jsxs)(l.Fragment, {
-          children: [(0, l.jsx)(ef.default, {
+          children: [(0, l.jsx)(em.default, {
             children: s
           }), null != t && (0, l.jsx)("div", {
-            className: eT.dropsBadgeWrapper,
-            children: (0, l.jsx)(eh.TextBadge, {
-              text: eN.default.Messages.DROPS_AVAILABLE,
+            className: ev.dropsBadgeWrapper,
+            children: (0, l.jsx)(eC.TextBadge, {
+              text: eL.default.Messages.DROPS_AVAILABLE,
               color: c.default.unsafe_rawColors.BRAND_500.css,
-              className: eT.dropsBadge
+              className: ev.dropsBadge
             })
           })]
         }) : null
@@ -277,31 +280,45 @@ class ev extends a.PureComponent {
     let {
       isStreaming: e,
       dropsPartnerGame: t,
-      streamMetadata: n
+      streamMetadata: n,
+      streamQualityIndicator: a
     } = this.props, {
-      title: a,
-      sanitizedTitle: s
+      title: s,
+      sanitizedTitle: r
     } = (0, w.default)(n);
     return (0, l.jsxs)("div", {
-      className: eT.gameWrapper,
+      className: ev.gameWrapper,
       children: [e ? (0, l.jsx)(F.default, {
-        title: s
-      }) : (0, l.jsx)(ep.default, {
-        look: ep.default.Looks.GRAY,
-        size: ep.default.Sizes.SMALL,
-        className: eT.liveIndicator
-      }), (0, l.jsxs)("div", {
-        className: i()(eT.info, {
-          [eT.infoWithDrops]: null != t
+        className: i()({
+          [ev.streamingIconGlow]: null != a
         }),
-        children: [(0, l.jsx)(ef.default, {
-          children: a
+        title: r
+      }) : (0, l.jsx)(eg.default, {
+        look: eg.default.Looks.GRAY,
+        size: eg.default.Sizes.SMALL,
+        className: ev.liveIndicator
+      }), (0, l.jsxs)("div", {
+        className: i()(ev.info, {
+          [ev.infoWithDrops]: null != t
+        }),
+        children: [(0, l.jsx)(em.default, {
+          children: s
+        }), null != a && (0, l.jsxs)("div", {
+          className: ev.perksDemoContainer,
+          children: [(0, l.jsx)(eu.default, {
+            width: 12,
+            height: 12
+          }), (0, l.jsx)(k.default, {
+            className: ev.perksDemoText,
+            variant: "text-xxs/semibold",
+            children: a
+          })]
         }), null != t && (0, l.jsx)("div", {
-          className: eT.dropsBadgeWrapper,
-          children: (0, l.jsx)(eh.TextBadge, {
-            text: eN.default.Messages.DROPS_AVAILABLE,
+          className: ev.dropsBadgeWrapper,
+          children: (0, l.jsx)(eC.TextBadge, {
+            text: eL.default.Messages.DROPS_AVAILABLE,
             color: c.default.unsafe_rawColors.BRAND_500.css,
-            className: eT.dropsBadge
+            className: ev.dropsBadge
           })
         })]
       })]
@@ -321,30 +338,30 @@ class ev extends a.PureComponent {
         start: n.connectedSince
       },
       o = s;
-    null != i ? (e = e_.Routes.CHANNEL(i.id, a.id), o = "".concat(o, " / ").concat(i.name)) : e = e_.Routes.CHANNEL(e_.ME, a.id);
-    let u = (0, l.jsx)(el.default, {
+    null != i ? (e = eN.Routes.CHANNEL(i.id, a.id), o = "".concat(o, " / ").concat(i.name)) : e = eN.Routes.CHANNEL(eN.ME, a.id);
+    let u = (0, l.jsx)(es.default, {
       href: e,
       onClick: this.handleApplicationLinkClick,
-      children: (0, l.jsx)(ec.default, {
-        className: eT.channel,
+      children: (0, l.jsx)(ep.default, {
+        className: ev.channel,
         children: o
       })
     });
     return (0, l.jsxs)("div", {
-      className: eT.gameWrapper,
-      children: [(0, l.jsx)(en.default, {
-        className: eT.gameIcon,
+      className: ev.gameWrapper,
+      children: [(0, l.jsx)(ea.default, {
+        className: ev.gameIcon,
         game: t
       }), (0, l.jsxs)("div", {
-        className: eT.info,
-        children: [(0, l.jsx)(el.default, {
+        className: ev.info,
+        children: [(0, l.jsx)(es.default, {
           href: e,
           onClick: this.handleApplicationLinkClick,
-          children: (0, l.jsx)(ef.default, {
-            className: eT.activityName,
+          children: (0, l.jsx)(em.default, {
+            className: ev.activityName,
             children: t.name
           })
-        }), (0, H.isTextChannel)(a.type) ? u : (0, l.jsx)(eL, {
+        }), (0, Y.isTextChannel)(a.type) ? u : (0, l.jsx)(eR, {
           timestamps: r
         })]
       })]
@@ -360,33 +377,33 @@ class ev extends a.PureComponent {
       className: r
     } = this.props;
     return a || (this.isJoinableActivity() || e) && (null != n || null != t) ? (0, l.jsx)("div", {
-      className: i()(eT.panel, r),
+      className: i()(ev.panel, r),
       children: (0, l.jsxs)("div", {
-        className: eT.body,
+        className: ev.body,
         children: [(() => null == n || a && (null == s ? void 0 : s.pid) == null ? null != t ? this.renderEmbeddedActivity() : this.renderScreenshare() : this.renderGame())(), this.renderActions()]
       })
     }) : null
   }
   constructor(...e) {
-    super(...e), eA(this, "modalKey", void 0), eA(this, "state", {
+    super(...e), ex(this, "modalKey", void 0), ex(this, "state", {
       isDropsActivityPanelTooltipOpen: !1,
       showDropsSparkles: this.props.showDropsSparkles
-    }), eA(this, "startBroadcast", () => {
+    }), ex(this, "startBroadcast", () => {
       let {
         stream: e,
         channel: t,
         runningGame: n
-      } = this.props, l = null != t && (0, H.isVoiceChannel)(t.type) ? t : null;
+      } = this.props, l = null != t && (0, Y.isVoiceChannel)(t.type) ? t : null;
       null != l && null != n && (null == e ? (0, C.createBroadcastChannelOrStartStream)({
         channelId: l.id,
         pid: n.pid
       }) : (0, A.startBroadcastForStream)((0, P.encodeStreamKey)(e), n.pid))
-    }), eA(this, "handleClickGoLiveButton", () => {
+    }), ex(this, "handleClickGoLiveButton", () => {
       let {
         guildId: e,
         channel: t,
         canStartBroadcast: a
-      } = this.props, s = null != t && (0, H.isVoiceChannel)(t.type) ? t : null, i = null != s ? s.getGuildId() : e;
+      } = this.props, s = null != t && (0, Y.isVoiceChannel)(t.type) ? t : null, i = null != s ? s.getGuildId() : e;
       if ((null == s ? void 0 : s.isBroadcastChannel()) && a) {
         (0, v.openStartBroadcastConfirmModal)(this.startBroadcast);
         return
@@ -398,32 +415,32 @@ class ev extends a.PureComponent {
           ...t,
           selectSource: !1,
           guildId: i,
-          analyticsLocation: e_.AnalyticsLocations.ACTIVITY_PANEL
+          analyticsLocation: eN.AnalyticsLocations.ACTIVITY_PANEL
         })
       }).then(e => {
         null != e && (this.modalKey = e)
       })
-    }), eA(this, "handleClickStopStreamingButton", () => {
+    }), ex(this, "handleClickStopStreamingButton", () => {
       let {
         stream: e,
         channel: t,
         userId: n
-      } = this.props, l = null != t && (0, H.isVoiceChannel)(t.type) ? t : null;
+      } = this.props, l = null != t && (0, Y.isVoiceChannel)(t.type) ? t : null;
       if ((null == l ? void 0 : l.isBroadcastChannel()) && (null == l ? void 0 : l.isOwner(n))) {
-        (0, v.openStopBroadcastConfirmModal)(() => (0, V.default)(e));
+        (0, v.openStopBroadcastConfirmModal)(() => (0, H.default)(e));
         return
-      }(0, V.default)(e)
-    }), eA(this, "handleClickInviteButton", () => {
+      }(0, H.default)(e)
+    }), ex(this, "handleClickInviteButton", () => {
       let {
         activity: e,
         analyticsContext: t
       } = this.props;
-      o()(null != e, "Received null activity"), em.default.track(e_.AnalyticEvents.OPEN_MODAL, {
+      o()(null != e, "Received null activity"), eE.default.track(eN.AnalyticEvents.OPEN_MODAL, {
         type: "Send Join Invite",
         application_id: e.application_id,
         location: t.location
       }), (0, h.openModal)(e, !1)
-    }), eA(this, "handleClickDropsButton", () => {
+    }), ex(this, "handleClickDropsButton", () => {
       let {
         dropsPartnerGame: e,
         dropsTooltipAction: t,
@@ -431,7 +448,7 @@ class ev extends a.PureComponent {
       } = this.props;
       if (null == e) return;
       let l = (0, O.getDrop)(e);
-      null != l && (em.default.track(e_.AnalyticEvents.DROPS_ACTIVITY_PANEL_BUTTON_CLICK, {
+      null != l && (eE.default.track(eN.AnalyticEvents.DROPS_ACTIVITY_PANEL_BUTTON_CLICK, {
         user_id: n,
         drops_quest_id: l.dropsQuestId,
         game_id: l.dropsGameId,
@@ -442,23 +459,23 @@ class ev extends a.PureComponent {
         isDropsActivityPanelTooltipOpen: !this.state.isDropsActivityPanelTooltipOpen,
         showDropsSparkles: !1
       }))
-    }), eA(this, "handleClickLeaveEmbeddedActivityButton", (e, t) => () => {
+    }), ex(this, "handleClickLeaveEmbeddedActivityButton", (e, t) => () => {
       (0, S.stopEmbeddedActivity)({
         channelId: t.id,
         applicationId: e
       })
-    }), eA(this, "renderClipsButton", () => {
+    }), ex(this, "renderClipsButton", () => {
       let {
         stream: e
       } = this.props;
       return null == e ? null : (0, l.jsx)(R.default, {})
-    }), eA(this, "handleApplicationLinkClick", () => {
+    }), ex(this, "handleApplicationLinkClick", () => {
       var e;
       let {
         channel: t,
         embeddedActivity: n
       } = this.props;
-      o()(null != t, "Channel is null during navigation click"), o()(null != n, "Activity null during navigation click"), (0, H.isVoiceChannel)(t.type) && p.default.selectParticipant(t.id, n.applicationId), m.default.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : e_.ME, t.id), (0, H.isTextChannel)(t.type) && (0, S.updateActivityPanelMode)(eS.ActivityPanelModes.PANEL)
+      o()(null != t, "Channel is null during navigation click"), o()(null != n, "Activity null during navigation click"), (0, Y.isVoiceChannel)(t.type) && p.default.selectParticipant(t.id, n.applicationId), m.default.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : eN.ME, t.id), (0, Y.isTextChannel)(t.type) && (0, S.updateActivityPanelMode)(eT.ActivityPanelModes.PANEL)
     })
   }
 }
@@ -467,16 +484,16 @@ t.default = (0, E.default)(function(e) {
   let {
     guildId: n,
     ...a
-  } = e, s = (0, u.useStateFromStores)([Y.default], () => Y.default.getId()), i = (0, u.useStateFromStores)([j.default, et.default], () => (0, B.default)(j.default, et.default)), r = (0, u.useStateFromStores)([J.default, K.default], () => K.default.getChannel(J.default.getVoiceChannelId())), o = (0, u.useStateFromStores)([I.default], () => I.default.getConnectedActivityChannelId()), c = (0, u.useStateFromStores)([K.default], () => K.default.getChannel(o)), f = (0, u.useStateFromStores)([Z.default], () => Z.default.getGuild(null == c ? void 0 : c.guild_id)), [h, p] = (0, u.useStateFromStoresArray)([k.default], () => [k.default.getCurrentUserActiveStream(), k.default.getStreamerActiveStreamMetadata()]), m = (0, u.useStateFromStores)([_.default], () => _.default.useReducedMotion), C = (0, u.useStateFromStores)([M.default], () => M.default.getActivityPanelTooltipAction()), {
+  } = e, s = (0, u.useStateFromStores)([W.default], () => W.default.getId()), i = (0, u.useStateFromStores)([j.default, el.default], () => (0, B.default)(j.default, el.default)), r = (0, u.useStateFromStores)([ee.default, Z.default], () => Z.default.getChannel(ee.default.getVoiceChannelId())), o = (0, u.useStateFromStores)([I.default], () => I.default.getConnectedActivityChannelId()), c = (0, u.useStateFromStores)([Z.default], () => Z.default.getChannel(o)), f = (0, u.useStateFromStores)([X.default], () => X.default.getGuild(null == c ? void 0 : c.guild_id)), [h, p] = (0, u.useStateFromStoresArray)([K.default], () => [K.default.getCurrentUserActiveStream(), K.default.getStreamerActiveStreamMetadata()]), m = (0, u.useStateFromStores)([_.default], () => _.default.useReducedMotion), C = (0, u.useStateFromStores)([M.default], () => M.default.getActivityPanelTooltipAction()), {
     partnerGame: g,
     dropsActivityPanelExperienceBlocked: E,
     showDropsSparkles: S
-  } = (0, y.useActivityPanelDrop)(eI.PartnerGame.FORTNITE, i, d.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP, d.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP), N = (0, u.useStateFromStores)([I.default], () => null != c ? I.default.getSelfEmbeddedActivityForChannel(c.id) : null), A = (0, u.useStateFromStores)([Z.default, X.default, W.default], () => null != r ? G.canStreamInChannel(r, Z.default, X.default, !1) : null != n && G.getStreamEligibleChannels(W.default.getChannels(n), Z.default, X.default).length > 0), [v] = (0, T.default)([null !== (t = function() {
+  } = (0, y.useActivityPanelDrop)(eA.PartnerGame.FORTNITE, i, d.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP, d.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP), N = (0, u.useStateFromStores)([I.default], () => null != c ? I.default.getSelfEmbeddedActivityForChannel(c.id) : null), A = (0, u.useStateFromStores)([X.default, q.default, z.default], () => null != r ? G.canStreamInChannel(r, X.default, q.default, !1) : null != n && G.getStreamEligibleChannels(z.default.getChannels(n), X.default, q.default).length > 0), [v] = (0, T.default)([null !== (t = function() {
     if (null != p && null != p.id) return p.id;
     if (null != i && null != i.id) return i.id;
     if (null != N) return N.applicationId
-  }()) && void 0 !== t ? t : ""]), R = (0, u.useStateFromStores)([z.default], () => (0, U.default)(z.default) && (0, eC.isWindows)()), O = (0, u.useStateFromStores)([q.default], () => null != s ? q.default.findActivity(s, e => e.type === e_.ActivityTypes.PLAYING) : null), b = null != h && h.ownerId === s && h.state !== e_.ApplicationStreamStates.ENDED, D = (0, u.useStateFromStores)([$.default], () => $.default.getBroadcast()), P = (0, L.default)() && null != i, w = (0, u.useStateFromStores)([ee.default, Q.default], () => null != c ? (0, x.computeChannelName)(c, ee.default, Q.default) : void 0);
-  return (0, l.jsx)(ev, {
+  }()) && void 0 !== t ? t : ""]), R = (0, u.useStateFromStores)([Q.default], () => (0, U.default)(Q.default) && (0, e_.isWindows)()), O = (0, u.useStateFromStores)([J.default], () => null != s ? J.default.findActivity(s, e => e.type === eN.ActivityTypes.PLAYING) : null), b = null != h && h.ownerId === s && h.state !== eN.ApplicationStreamStates.ENDED, D = (0, u.useStateFromStores)([et.default], () => et.default.getBroadcast()), P = (0, L.default)() && null != i, w = (0, u.useStateFromStores)([en.default, $.default], () => null != c ? (0, x.computeChannelName)(c, en.default, $.default) : void 0), F = (0, V.default)(null == r ? void 0 : r.id, s);
+  return (0, l.jsx)(ey, {
     ...a,
     guildId: n,
     canGoLive: R,
@@ -498,6 +515,7 @@ t.default = (0, E.default)(function(e) {
     broadcast: D,
     canStartBroadcast: P,
     channelName: w,
-    guildForConnectedChannel: f
+    guildForConnectedChannel: f,
+    streamQualityIndicator: F
   })
 })
