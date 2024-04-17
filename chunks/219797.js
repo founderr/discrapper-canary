@@ -43,6 +43,7 @@ function A(e) {
   let t = e.item.originalItem;
   return (0, g.renderImageComponent)({
     ...e,
+    alt: t.description,
     src: (0, f.getBestEffortSrcUrl)({
       proxyURL: t.proxy_url,
       url: t.url
@@ -70,6 +71,7 @@ function h(e) {
     a = _.default.toURLSafe(t.proxy_url);
   return null == a ? null : (a.searchParams.append("format", "jpeg"), (0, g.renderVideoComponent)({
     ...e,
+    alt: t.description,
     poster: a.toString(),
     fileSize: t.size,
     fileName: t.filename,
