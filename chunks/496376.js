@@ -108,8 +108,7 @@ let M = [R.ClanSetupSteps.FOUNDATIONAL_INTRO, R.ClanSetupSteps.GAMES, R.ClanSetu
                 onClick: () => a ? l(e) : null,
                 className: i()(L.progressSubStep, {
                   [L.clickable]: a,
-                  [L.currentStep]: e === d,
-                  [L.progressStepFill]: t || e === d
+                  [L.progressStepFill]: t
                 })
               }, "step-".concat(e))
             })
@@ -191,7 +190,7 @@ t.default = e => {
     children: [(0, n.jsx)(o.Button, {
       className: L.closeButton,
       look: o.Button.Looks.OUTLINED,
-      size: o.Button.Sizes.SMALL,
+      size: o.Button.Sizes.MEDIUM,
       color: o.Button.Colors.PRIMARY,
       onClick: l,
       children: O.default.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT

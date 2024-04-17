@@ -142,7 +142,7 @@ t.default = e => {
     }), (0, n.jsx)(r.Button, {
       className: h.closeButton,
       look: r.Button.Looks.OUTLINED,
-      size: r.Button.Sizes.SMALL,
+      size: r.Button.Sizes.MEDIUM,
       color: r.Button.Colors.PRIMARY,
       onClick: _,
       children: E.default.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
