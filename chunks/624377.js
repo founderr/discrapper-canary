@@ -1,13 +1,13 @@
 "use strict";
 r.r(t);
 var o = r("979590"),
-  a = r.n(o),
-  n = r("692547"),
+  n = r.n(o),
+  a = r("692547"),
   l = r("764707");
-let s = a()(n.default.unsafe_rawColors.WHITE_500.resolve({
+let s = n()(a.default.unsafe_rawColors.WHITE_500.resolve({
     saturation: 1
   }).hex()),
-  i = a()(n.default.unsafe_rawColors.BLACK_500.resolve({
+  i = n()(a.default.unsafe_rawColors.BLACK_500.resolve({
     saturation: 1
   }).hex()),
   c = (0, l.default)({

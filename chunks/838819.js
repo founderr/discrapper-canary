@@ -20,8 +20,8 @@ var l = a("735250"),
   S = a("580747"),
   T = a("605236"),
   x = a("984370"),
-  L = a("479446"),
-  v = a("981632"),
+  v = a("479446"),
+  L = a("981632"),
   I = a("290026"),
   _ = a("819640"),
   N = a("594174"),
@@ -34,8 +34,8 @@ var l = a("735250"),
   P = a("328347"),
   B = a("186711"),
   F = a("223143"),
-  D = a("298228"),
-  M = a("971815"),
+  M = a("298228"),
+  D = a("971815"),
   w = a("853748"),
   H = a("426171"),
   U = a("823941"),
@@ -65,7 +65,7 @@ function ea(e) {
     setIsGiftEasterEggEnabled: h,
     showEasterEggToggle: g,
     isFullScreen: E
-  } = e, b = s.useRef(10 + 70 * Math.random()), S = (0, M.usePurchasedProductsSort)(r.products), T = (0, i.groupBy)(S, "type"), x = (0, u.useStateFromStores)([P.default], () => P.default.initialProductSkuId), {
+  } = e, b = s.useRef(10 + 70 * Math.random()), S = (0, D.usePurchasedProductsSort)(r.products), T = (0, i.groupBy)(S, "type"), x = (0, u.useStateFromStores)([P.default], () => P.default.initialProductSkuId), {
     tallerCardsEnabled: I
   } = (0, B.useCollectiblesShopTallerCardsExperiment)({
     location: "CollectiblesShop"
@@ -103,8 +103,8 @@ function ea(e) {
       style: {
         left: "".concat(b.current, "%")
       },
-      children: (0, l.jsx)(v.default, {
-        idleAnimationState: L.AnimationState.IDLE,
+      children: (0, l.jsx)(L.default, {
+        idleAnimationState: v.AnimationState.IDLE,
         giftStyle: Q.PremiumGiftStyles.BOX
       })
     }), (0, l.jsx)(U.default, {
@@ -127,9 +127,9 @@ t.default = function(e) {
     analyticsLocations: r
   } = (0, u.useStateFromStoresObject)([P.default], () => P.default.getAnalytics()), {
     analyticsLocations: i
-  } = (0, E.default)([...r, g.default.COLLECTIBLES_SHOP]), p = (0, u.useStateFromStores)([_.default], () => _.default.getLayers().includes(q.Layers.COLLECTIBLES_SHOP)), L = (0, d.useHasAnyModalOpen)(), {
-    onClose: v
-  } = (0, V.useCollectiblesShopRouting)(), M = (0, u.useStateFromStores)([N.default], () => N.default.getCurrentUser()), w = A.default.canUseCollectibles(M), U = (0, S.default)("shop_disable_cache"), W = (0, S.default)("shop_include_unpublished"), {
+  } = (0, E.default)([...r, g.default.COLLECTIBLES_SHOP]), p = (0, u.useStateFromStores)([_.default], () => _.default.getLayers().includes(q.Layers.COLLECTIBLES_SHOP)), v = (0, d.useHasAnyModalOpen)(), {
+    onClose: L
+  } = (0, V.useCollectiblesShopRouting)(), D = (0, u.useStateFromStores)([N.default], () => N.default.getCurrentUser()), w = A.default.canUseCollectibles(D), U = (0, S.default)("shop_disable_cache"), W = (0, S.default)("shop_include_unpublished"), {
     categories: K,
     isFetchingCategories: Z,
     error: el
@@ -138,7 +138,7 @@ t.default = function(e) {
     includeUnpublished: W
   });
   (0, I.useReloadProfileEffectWhenConfigsAreMissing)();
-  let es = (0, D.usePurchasedCategoriesSort)(K),
+  let es = (0, M.usePurchasedCategoriesSort)(K),
     {
       tallerCardsEnabled: er
     } = (0, B.useCollectiblesShopTallerCardsExperiment)({
@@ -183,12 +183,12 @@ t.default = function(e) {
       itemTypes: [o.CollectiblesItemType.AVATAR_DECORATION, o.CollectiblesItemType.PROFILE_EFFECT]
     })
   }, [K]), s.useEffect(() => {
-    if (!t || p || L) return;
+    if (!t || p || v) return;
     let e = e => {
-      e.key === J.KeyboardEventKey.Escape && v()
+      e.key === J.KeyboardEventKey.Escape && L()
     };
     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
-  }, [t, p, L, v]);
+  }, [t, p, v, L]);
   let em = s.useCallback(() => {
       (0, j.fetchCollectiblesCategories)({
         noCache: U,
@@ -227,7 +227,7 @@ t.default = function(e) {
         className: et.closeWrapper,
         children: (0, l.jsx)(C.default, {
           className: et.close,
-          closeAction: p ? j.closeCollectiblesShop : v,
+          closeAction: p ? j.closeCollectiblesShop : L,
           keybind: "ESC"
         })
       }), (0, l.jsx)(f.AdvancedScroller, {

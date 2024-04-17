@@ -69,18 +69,18 @@ t.default = e => {
   } = e, {
     analyticsLocations: S
   } = (0, i.default)(), T = s.useRef(null), x = (0, n.default)(T), {
-    buttonColors: L
-  } = (0, d.default)(t.styles), v = null == L || b ? void 0 : {
-    background: L.secondary.toHslString(),
-    color: L.text.toHslString()
-  }, I = b || (null == L ? void 0 : L.text.isDark()) ? f.ThemeTypes.DARK : f.ThemeTypes.LIGHT;
+    buttonColors: v
+  } = (0, d.default)(t.styles), L = null == v || b ? void 0 : {
+    background: v.secondary.toHslString(),
+    color: v.text.toHslString()
+  }, I = b || (null == v ? void 0 : v.text.isDark()) ? f.ThemeTypes.DARK : f.ThemeTypes.LIGHT;
   return (0, l.jsx)(r.Tooltip, {
     text: m.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
     delay: g,
     children: e => (0, l.jsx)(r.Button, {
       ...e,
       buttonRef: T,
-      style: v,
+      style: L,
       className: C.giftButton,
       color: b ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
       look: r.Button.Looks.FILLED,
