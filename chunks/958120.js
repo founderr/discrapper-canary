@@ -28,21 +28,21 @@ function N(e) {
   let {
     user: t,
     displayProfile: n,
-    guild: N,
-    channelId: p,
-    onOpenProfile: O,
+    onOpenProfile: N,
+    guild: p,
+    channelId: O,
     onClose: R
   } = e, {
     moreUserDetailsEnabled: C
   } = (0, l.useSimplifiedProfileExperiment)({
     location: "BiteSizeProfileBody"
-  }), g = o.default.getName(null == N ? void 0 : N.id, p, t), L = (0, u.default)(t.id, null == N ? void 0 : N.id), D = (0, r.useStateFromStores)([a.default], () => a.default.hidePersonalInformation), v = (0, r.useStateFromStores)([s.default], () => s.default.findActivity(t.id, e => e.type === A.ActivityTypes.PLAYING), [t]);
+  }), g = o.default.getName(null == p ? void 0 : p.id, O, t), L = (0, u.default)(t.id, null == p ? void 0 : p.id), D = (0, r.useStateFromStores)([a.default], () => a.default.hidePersonalInformation), v = (0, r.useStateFromStores)([s.default], () => s.default.findActivity(t.id, e => e.type === A.ActivityTypes.PLAYING), [t]);
   return t.isSystemUser() ? null : (0, i.jsxs)("div", {
     className: m.body,
     children: [(0, i.jsx)(c.default, {
       user: t,
-      guildId: null == N ? void 0 : N.id,
-      usernameIcon: t.hasAvatarForGuild(null == N ? void 0 : N.id) && (0, i.jsx)(I.default, {
+      guildId: null == p ? void 0 : p.id,
+      usernameIcon: t.hasAvatarForGuild(null == p ? void 0 : p.id) && (0, i.jsx)(I.default, {
         user: t,
         nickname: g
       }),
@@ -51,12 +51,12 @@ function N(e) {
           pronouns: null == n ? void 0 : n.pronouns
         }), (0, i.jsx)(E.UserProfileBadgesTag, {
           user: t,
-          guildId: null == N ? void 0 : N.id
+          guildId: null == p ? void 0 : p.id
         })]
       }),
       nicknameIcon: C && !D ? (0, i.jsx)(_.default, {
         user: t,
-        onOpenProfile: O
+        onOpenProfile: N
       }) : null
     }), C && (0, i.jsx)(S.default, {
       user: t
@@ -69,7 +69,8 @@ function N(e) {
       activity: v
     }), (0, i.jsx)(h.default, {
       user: t,
-      guild: N
+      guild: p,
+      onClose: R
     }), L && (0, i.jsx)(f.default, {
       user: t
     })]

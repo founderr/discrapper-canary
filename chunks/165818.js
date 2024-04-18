@@ -13,11 +13,13 @@ var r = n("442837"),
 function o(e) {
   let {
     user: t,
-    guild: n
-  } = e, o = (0, r.useStateFromStores)([s.default], () => null != n ? s.default.getMember(n.id, t.id) : null);
-  return null == n || null == o || 0 === o.roles.length ? null : (0, i.jsx)(a.default, {
+    guild: n,
+    onClose: o
+  } = e, l = (0, r.useStateFromStores)([s.default], () => null != n ? s.default.getMember(n.id, t.id) : null);
+  return null == n || null == l || 0 === l.roles.length ? null : (0, i.jsx)(a.default, {
     guild: n,
     user: t,
-    userRoles: o.roles
+    userRoles: l.roles,
+    onClose: o
   })
 }
