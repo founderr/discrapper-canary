@@ -1,34 +1,34 @@
 "use strict";
-t.r(s), t("47120");
-var i = t("735250");
-t("470079");
-var a = t("727075"),
-  l = t("780384"),
-  r = t("481060"),
-  C = t("493683"),
-  n = t("410030"),
-  d = t("204197"),
-  o = t("63063"),
-  c = t("51144"),
-  u = t("792451"),
-  f = t("814667"),
-  x = t("981631"),
-  h = t("689938"),
-  p = t("970422");
-let _ = (e, s) => {
-    C.default.openPrivateChannel(e), s()
+s.r(t), s("47120");
+var i = s("735250");
+s("470079");
+var a = s("727075"),
+  l = s("780384"),
+  r = s("481060"),
+  C = s("493683"),
+  n = s("410030"),
+  d = s("204197"),
+  o = s("63063"),
+  c = s("51144"),
+  f = s("792451"),
+  u = s("814667"),
+  x = s("981631"),
+  h = s("689938"),
+  p = s("970422");
+let _ = (e, t) => {
+    C.default.openPrivateChannel(e), t()
   },
   j = e => {
     let {
-      user: s,
-      onClose: t
+      user: t,
+      onClose: s
     } = e, {
       avatarSrc: a,
       eventHandlers: l
     } = (0, d.default)({
-      user: s,
+      user: t,
       size: r.AvatarSizes.SIZE_56
-    }), C = c.default.getName(s), n = s.username !== C;
+    }), C = c.default.getName(t), n = t.username !== C;
     return (0, i.jsxs)("div", {
       className: p.referredUserRowContainer,
       children: [(0, i.jsx)(r.Avatar, {
@@ -47,7 +47,7 @@ let _ = (e, s) => {
               onMouseLeave: l
             } = e;
             return (0, i.jsx)(r.Clickable, {
-              onClick: () => _(s.id, t),
+              onClick: () => _(t.id, s),
               className: p.displayNameClickableContainer,
               onMouseEnter: a,
               onMouseLeave: l,
@@ -61,23 +61,23 @@ let _ = (e, s) => {
         }), n && (0, i.jsx)(r.Text, {
           variant: "text-md/medium",
           className: p.userName,
-          children: s.username
+          children: t.username
         })]
       })]
     })
   };
-s.default = e => {
+t.default = e => {
   let {
-    selectedUsers: s,
-    onClose: t
-  } = e, C = [...s].map(e => (0, i.jsx)(j, {
+    selectedUsers: t,
+    onClose: s
+  } = e, C = [...t].map(e => (0, i.jsx)(j, {
     user: e,
-    onClose: t
-  }, e.id)), d = (0, n.useTheme)(), c = (0, l.isThemeLight)(d) ? f.default : u.default;
+    onClose: s
+  }, e.id)), d = (0, n.useTheme)(), c = (0, l.isThemeLight)(d) ? u.default : f.default;
   return (0, i.jsxs)("div", {
     className: p.confrimationContainer,
     children: [(0, i.jsx)(r.Clickable, {
-      onClick: t,
+      onClick: s,
       className: p.closeButtonContainer,
       children: (0, i.jsx)(a.CloseSmallIcon, {
         width: 20,
