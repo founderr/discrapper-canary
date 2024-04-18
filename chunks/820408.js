@@ -1,50 +1,63 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return S
+    return E
   }
-});
-var i = s("735250");
-s("470079");
-var a = s("481060"),
-  n = s("230711"),
-  l = s("499150"),
-  r = s("297087"),
-  d = s("197115"),
-  o = s("474936"),
-  u = s("981631"),
-  c = s("689938"),
-  h = s("578808");
+}), s("47120");
+var i = s("735250"),
+  a = s("470079"),
+  n = s("481060"),
+  l = s("230711"),
+  r = s("2052"),
+  d = s("434650"),
+  o = s("906732"),
+  u = s("499150"),
+  c = s("297087"),
+  h = s("626135"),
+  S = s("197115"),
+  N = s("474936"),
+  g = s("981631"),
+  f = s("689938"),
+  m = s("578808");
 
-function S(e) {
+function E(e) {
   let {
     onClose: t
-  } = e;
+  } = e, s = (0, r.useAnalyticsContext)(), {
+    analyticsLocations: E
+  } = (0, o.default)(), [_, T] = a.useState(!1), x = a.useCallback(e => {
+    !_ && e && (h.default.track(g.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+      type: N.PremiumUpsellTypes.CUSTOM_NOTIFICATION_SOUNDS_SETTINGS_UPSELL,
+      location: s.location,
+      location_stack: E
+    }), T(!0))
+  }, [s.location, E, _]), I = (0, d.useIsVisible)(x, .8, !0);
   return (0, i.jsxs)("div", {
-    className: h.container,
-    children: [(0, i.jsx)(r.default, {
-      className: h.nitroWheel
-    }), (0, i.jsx)(a.Text, {
-      className: h.text,
+    ref: I,
+    className: m.container,
+    children: [(0, i.jsx)(c.default, {
+      className: m.nitroWheel
+    }), (0, i.jsx)(n.Text, {
+      className: m.text,
       variant: "text-sm/normal",
-      children: "Set custom notification sounds with Nitro."
-    }), (0, i.jsx)(a.Text, {
-      className: h.text,
+      children: f.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_NOTIFICATION_SETTINGS_UPSELL
+    }), (0, i.jsx)(n.Text, {
+      className: m.text,
       variant: "text-sm/normal",
-      children: (0, i.jsx)(l.default, {
+      children: (0, i.jsx)(u.default, {
         onClick: () => {
-          t(), n.default.open(u.UserSettingsSections.PREMIUM)
+          t(), l.default.open(g.UserSettingsSections.PREMIUM)
         },
-        children: c.default.Messages.LEARN_MORE
+        children: f.default.Messages.LEARN_MORE
       })
-    }), (0, i.jsx)(d.default, {
-      className: h.nitroButton,
-      buttonText: c.default.Messages.PREMIUM_UPSELL_GET_NITRO,
-      size: a.Button.Sizes.SMALL,
-      shinyButtonClassName: h.nitroButton,
-      subscriptionTier: o.PremiumSubscriptionSKUs.TIER_2,
+    }), (0, i.jsx)(S.default, {
+      className: m.nitroButton,
+      buttonText: f.default.Messages.PREMIUM_UPSELL_GET_NITRO,
+      size: n.Button.Sizes.SMALL,
+      shinyButtonClassName: m.nitroButton,
+      subscriptionTier: N.PremiumSubscriptionSKUs.TIER_2,
       premiumModalAnalyticsLocation: {
-        section: u.AnalyticsSections.PREMIUM_CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPSELL
+        section: g.AnalyticsSections.PREMIUM_CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPSELL
       }
     })]
   })
