@@ -6,52 +6,60 @@ var n = a("735250"),
   i = a.n(l),
   r = a("718017"),
   o = a("143927"),
-  u = a("481060"),
-  d = a("442837"),
-  c = a("224706"),
-  f = a("2485"),
-  E = a("229765"),
-  h = a("231467"),
-  _ = a("807933"),
-  C = a("10473"),
-  m = a("702646"),
-  S = a("207796"),
-  I = a("976757"),
-  p = a("308083"),
-  T = a("689938"),
-  g = a("24953");
+  u = a("71970"),
+  d = a("481060"),
+  c = a("442837"),
+  f = a("224706"),
+  E = a("2485"),
+  h = a("229765"),
+  _ = a("231467"),
+  C = a("807933"),
+  m = a("10473"),
+  S = a("702646"),
+  I = a("207796"),
+  p = a("976757"),
+  T = a("308083"),
+  g = a("689938"),
+  A = a("24953");
 
-function A() {
-  let e = (0, S.useClanDiscoveryUIStore)(S.buildSearchCriteriaFromUIState, i()),
-    t = (0, S.useClanDiscoveryUIStore)(e => e.selectedPlaystyle.name, o.default),
-    a = (0, d.useStateFromStores)([C.default], () => C.default.getSearchResult(e), [e]);
-  return (0, I.isUnloadedSearchResult)(a) ? null : (0, I.isLoadedSearchResult)(a) ? (0, n.jsxs)("div", {
-    className: g.topPicks,
+function N() {
+  let e = (0, I.useClanDiscoveryUIStore)(I.buildSearchCriteriaFromUIState, i()),
+    t = (0, I.useClanDiscoveryUIStore)(e => e.selectedPlaystyle.name, o.default),
+    a = (0, c.useStateFromStores)([m.default], () => m.default.getSearchResult(e), [e]);
+  return (0, p.isUnloadedSearchResult)(a) ? null : (0, p.isLoadedSearchResult)(a) ? (0, n.jsxs)("div", {
+    className: A.topPicks,
     children: [(0, n.jsxs)("div", {
-      className: g.topPicksHeader,
-      children: [(0, n.jsx)(u.Heading, {
-        variant: "heading-md/medium",
-        color: "header-primary",
-        children: T.default.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE
-      }), (0, n.jsx)(u.Text, {
-        variant: "text-xs/normal",
+      className: A.topPicksHeader,
+      children: [(0, n.jsxs)("div", {
+        className: A.topPicksTitle,
+        children: [(0, n.jsx)(u.TrophyIcon, {
+          color: "currentColor"
+        }), (0, n.jsx)(d.Heading, {
+          variant: "heading-md/medium",
+          color: "header-primary",
+          children: g.default.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE
+        })]
+      }), (0, n.jsx)("div", {
+        className: A.topPicksSpacer
+      }), (0, n.jsx)(d.Text, {
+        variant: "text-sm/normal",
         color: "text-muted",
-        children: T.default.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE.format({
+        children: g.default.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE.format({
           playstyle: t
         })
       })]
     }), (0, n.jsx)("div", {
-      className: g.topPicksContent,
-      children: a.items.map(t => (0, n.jsx)(h.default, {
+      className: A.topPicksContent,
+      children: a.items.map(t => (0, n.jsx)(_.default, {
         clan: t,
-        affinity: (0, I.getClanDiscoveryAffinity)(t, e)
+        affinity: (0, p.getClanDiscoveryAffinity)(t, e)
       }, t.id))
     })]
   }) : null
 }
 
-function N() {
-  let e = (0, S.useClanDiscoveryUIStore)(e => e.mode, o.default),
+function v() {
+  let e = (0, I.useClanDiscoveryUIStore)(e => e.mode, o.default),
     [, t] = s.useState(0),
     a = (0, r.useTransition)([e], {
       key: e => e,
@@ -74,14 +82,14 @@ function N() {
     }),
     l = e => {
       switch (e) {
-        case S.ClanDiscoveryMode.PLAYSTYLE:
-          return (0, n.jsx)(_.PlayStyleSelector, {});
-        case S.ClanDiscoveryMode.PRIMETIME:
-          return (0, n.jsx)(_.PrimetimeSelector, {});
-        case S.ClanDiscoveryMode.TRAITS:
-          return (0, n.jsx)(_.TraitSelector, {});
-        case S.ClanDiscoveryMode.GAMES:
-          return (0, n.jsx)(_.GameSelector, {});
+        case I.ClanDiscoveryMode.PLAYSTYLE:
+          return (0, n.jsx)(C.PlayStyleSelector, {});
+        case I.ClanDiscoveryMode.PRIMETIME:
+          return (0, n.jsx)(C.PrimetimeSelector, {});
+        case I.ClanDiscoveryMode.TRAITS:
+          return (0, n.jsx)(C.TraitSelector, {});
+        case I.ClanDiscoveryMode.GAMES:
+          return (0, n.jsx)(C.GameSelector, {});
         default:
           return null
       }
@@ -94,29 +102,33 @@ function N() {
   })
 }
 
-function v() {
-  let e = (0, S.useClanDiscoveryUIStore)(e => e.game, o.default),
-    t = (0, S.useClanDiscoveryUIStore)(e => e.setGame, o.default),
-    a = (0, S.useClanDiscoveryUIStore)(e => e.setSelectedGames, o.default),
-    n = (0, S.useClanDiscoveryUIStore)(S.buildSearchCriteriaFromUIState, i()),
-    l = (0, f.useClanDiscoveryExperimentDefaultGameId)("clan_discovery"),
-    r = (0, d.useStateFromStores)([C.default], () => C.default.hasLoadedStaticClanDiscovery(e));
+function R() {
+  let e = (0, I.useClanDiscoveryUIStore)(e => e.game, o.default),
+    t = (0, I.useClanDiscoveryUIStore)(e => e.setGame, o.default),
+    a = (0, I.useClanDiscoveryUIStore)(e => e.setSelectedGames, o.default),
+    n = (0, I.useClanDiscoveryUIStore)(I.buildSearchCriteriaFromUIState, i()),
+    l = (0, E.useClanDiscoveryExperimentDefaultGameId)("clan_discovery"),
+    r = (0, c.useStateFromStores)([m.default], () => m.default.hasLoadedStaticClanDiscovery(e));
   return s.useEffect(() => {
-    l === p.VALORANT_ID ? (t(S.ClanDiscoveryGame.VALORANT), a([l])) : l === p.GENSHIN_ID && (t(S.ClanDiscoveryGame.GENSHIN), a([l]))
+    l === T.VALORANT_ID ? (t(I.ClanDiscoveryGame.VALORANT), a([l])) : l === T.GENSHIN_ID && (t(I.ClanDiscoveryGame.GENSHIN), a([l]))
   }, [t, a, l]), s.useEffect(() => {
-    !r && (0, E.loadStaticClanDiscovery)(e)
+    !r && (0, h.loadStaticClanDiscovery)(e)
   }, [e, r]), s.useEffect(() => {
-    r && (0, E.searchClanDiscovery)(e, n)
+    r && (0, h.searchClanDiscovery)(e, n)
   }, [e, n, r]), s.useEffect(() => {
-    c.default.getDetectableGames()
+    f.default.getDetectableGames()
   }, []), null
 }
 t.default = function() {
   return (0, n.jsxs)("main", {
-    className: g.container,
-    children: [(0, n.jsx)(v, {}), (0, n.jsx)(m.default, {}), (0, n.jsx)("div", {
-      className: g.content,
-      children: (0, n.jsx)(A, {})
-    }), (0, n.jsx)(N, {})]
+    className: A.container,
+    children: [(0, n.jsx)(R, {}), (0, n.jsxs)(d.ScrollerAuto, {
+      fade: !0,
+      className: A.scroller,
+      children: [(0, n.jsx)(S.default, {}), (0, n.jsx)("div", {
+        className: A.content,
+        children: (0, n.jsx)(N, {})
+      })]
+    }), (0, n.jsx)(v, {})]
   })
 }
