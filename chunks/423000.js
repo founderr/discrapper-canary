@@ -1,28 +1,21 @@
 "use strict";
 a.r(t), a.d(t, {
   handleInaccessiblePage: function() {
-    return d
+    return u
   }
 });
-var n = a("735250");
-a("470079");
-var s = a("481060"),
-  l = a("703656"),
-  i = a("896797"),
-  r = a("984933"),
-  o = a("944486"),
-  u = a("981631");
+var n = a("927723"),
+  s = a("703656"),
+  l = a("896797"),
+  i = a("984933"),
+  r = a("944486"),
+  o = a("981631");
 
-function d(e, t) {
-  if ((0, s.openModalLazy)(async () => {
-      let {
-        default: e
-      } = await Promise.all([a.e("99387"), a.e("22706")]).then(a.bind(a, "438725"));
-      return t => (0, n.jsx)(e, {
-        ...t
-      })
-    }), o.default.getChannelId(e) === t) {
-    var d;
-    (0, l.replaceWith)(u.Routes.CHANNEL(e, null === (d = r.default.getDefaultChannel(e)) || void 0 === d ? void 0 : d.id))
-  } else(0, l.replaceWith)(i.default.defaultRoute)
+function u(e, t) {
+  if ((0, n.showInaccessibleLinkModal)({
+      kind: "channel"
+    }), r.default.getChannelId(e) === t) {
+    var a;
+    (0, s.replaceWith)(o.Routes.CHANNEL(e, null === (a = i.default.getDefaultChannel(e)) || void 0 === a ? void 0 : a.id))
+  } else(0, s.replaceWith)(l.default.defaultRoute)
 }

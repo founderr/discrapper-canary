@@ -10,17 +10,18 @@ var l = t("481060"),
   o = t("153124"),
   n = t("154921"),
   i = t("689938"),
-  c = t("465853"),
+  c = t("372302"),
   r = t("462991");
 
 function d(e) {
   let {
     onClose: s,
-    transitionState: t
-  } = e, d = (0, o.useUID)();
+    transitionState: t,
+    kind: d
+  } = e, u = (0, o.useUID)();
   return (0, a.jsxs)(l.ModalRoot, {
     transitionState: t,
-    "aria-labelledby": d,
+    "aria-labelledby": u,
     size: l.ModalSize.SMALL,
     children: [(0, a.jsxs)(l.ModalContent, {
       className: c.content,
@@ -33,7 +34,7 @@ function d(e) {
         alt: ""
       }), (0, a.jsx)(n.default, {
         className: c.title,
-        id: d,
+        id: u,
         size: n.default.Sizes.SIZE_24,
         color: n.default.Colors.HEADER_PRIMARY,
         children: i.default.Messages.INACCESSIBLE_CHANNEL_LINK_TITLE
@@ -41,7 +42,7 @@ function d(e) {
         className: c.subtitle,
         variant: "text-md/normal",
         color: "header-secondary",
-        children: i.default.Messages.INACCESSIBLE_CHANNEL_LINK_SUBTITLE
+        children: "user" === d ? i.default.Messages.INACCESSIBLE_USER_LINK_SUBTITLE : i.default.Messages.INACCESSIBLE_CHANNEL_LINK_SUBTITLE
       })]
     }), (0, a.jsx)(l.ModalFooter, {
       children: (0, a.jsx)(l.Button, {
