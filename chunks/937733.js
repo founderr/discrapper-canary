@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return x
+    return D
   }
 });
 var s = a("735250");
@@ -18,88 +18,89 @@ var n = a("442837"),
   E = a("594174"),
   m = a("976644"),
   M = a("626135"),
-  A = a("63063"),
-  I = a("74538"),
-  R = a("823188"),
-  f = a("290347"),
-  O = a("474936"),
-  g = a("981631"),
-  T = a("689938"),
-  h = a("364530"),
-  p = a("913907"),
-  L = a("82341"),
-  C = a("309539"),
-  N = a("74316");
-let P = "AnnouncementModalVariant1_PREMIUM_2024_APRIL_MARKETING_MODAL";
+  f = a("63063"),
+  A = a("74538"),
+  I = a("823188"),
+  R = a("290347"),
+  g = a("474936"),
+  O = a("981631"),
+  p = a("689938"),
+  T = a("364530"),
+  h = a("891594"),
+  L = a("607139"),
+  C = a("956723"),
+  N = a("103052"),
+  P = a("74316");
+let x = "AnnouncementModalVariant1_PREMIUM_2024_APRIL_MARKETING_MODAL";
 
-function x(e) {
+function D(e) {
   let {
     renderModalProps: t
   } = e, {
     onClose: a
   } = t, {
-    location: x
+    location: D
   } = (0, d.useAnalyticsContext)(), {
-    analyticsLocations: D
-  } = (0, c.default)(u.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), b = (0, n.useStateFromStores)([E.default], () => E.default.getCurrentUser()), S = (0, I.isPremiumExactly)(b, O.PremiumTypes.TIER_2), y = (0, I.isPremium)(b) && !S, v = (0, i.default)(), j = (0, l.isThemeLight)(v) ? R.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : R.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL;
-  return (0, s.jsx)(f.default, {
+    analyticsLocations: b
+  } = (0, c.default)(u.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), S = (0, n.useStateFromStores)([E.default], () => E.default.getCurrentUser()), y = (0, A.isPremiumExactly)(S, g.PremiumTypes.TIER_2), v = (0, A.isPremium)(S) && !y, j = (0, i.default)(), H = (0, l.isThemeLight)(j) ? I.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : I.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL;
+  return (0, s.jsx)(R.default, {
     renderModalProps: t,
     heroArt: {
-      type: "video",
-      src: ""
+      type: "image",
+      src: N
     },
     modalDismissibleContent: r.DismissibleContent.PREMIUM_2024_APRIL_MARKETING_MODAL,
-    header: T.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_HEADER,
-    modalTopExtra: () => (0, s.jsx)(R.PremiumPillWithSparkles, {
-      text: T.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_MODAL_TOP_PILL,
-      className: h.modalTopPill,
-      colorOptions: j
+    header: p.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_HEADER,
+    modalTopExtra: () => (0, s.jsx)(I.PremiumPillWithSparkles, {
+      text: p.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_MODAL_TOP_PILL,
+      className: T.modalTopPill,
+      colorOptions: H
     }),
-    subHeader: T.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_SUBHEADER,
+    subHeader: p.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_SUBHEADER,
     subHeaderExtra: () => (0, s.jsx)(o.Anchor, {
-      className: h.termsApplyAnchor,
-      href: A.default.getArticleURL(g.HelpdeskArticles.PREMIUM_APRIL_2024_MARKETING_MOMENT),
+      className: T.termsApplyAnchor,
+      href: f.default.getArticleURL(O.HelpdeskArticles.PREMIUM_APRIL_2024_MARKETING_MOMENT),
       children: (0, s.jsx)(o.Heading, {
         variant: "heading-md/normal",
-        className: h.termsApplyBodyText,
-        children: T.default.Messages.BOGO_TERMS_APPLY
+        className: T.termsApplyBodyText,
+        children: p.default.Messages.BOGO_TERMS_APPLY
       })
     }),
     featureCards: [{
-      header: T.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_CUSTOM_PROFILE_TILE_HEADER,
-      subHeader: T.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_CUSTOM_PROFILE_TILE_BODY,
-      imageSrc: p
-    }, {
-      header: T.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_COLOR_THEMES_TILE_HEADER,
-      subHeader: T.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_COLOR_THEMES_TILE_BODY,
+      header: p.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_CUSTOM_PROFILE_TILE_HEADER,
+      subHeader: p.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_CUSTOM_PROFILE_TILE_BODY,
       imageSrc: C
     }, {
-      header: T.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_APP_ICONS_TILE_HEADER,
-      subHeader: T.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_APP_ICONS_TILE_BODY,
+      header: p.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_COLOR_THEMES_TILE_HEADER,
+      subHeader: p.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_COLOR_THEMES_TILE_BODY,
+      imageSrc: h
+    }, {
+      header: p.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_APP_ICONS_TILE_HEADER,
+      subHeader: p.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_APP_ICONS_TILE_BODY,
       imageSrc: L
     }],
-    changeLogId: P,
+    changeLogId: x,
     button: () => {
-      let e = y ? "upgrade_plan_button" : "get_nitro_button",
+      let e = v ? "upgrade_plan_button" : "get_nitro_button",
         t = Date.now();
       return (0, s.jsxs)(m.default, {
-        className: h.buttonWide,
-        innerClassName: h.innerButton,
+        className: T.buttonWide,
+        innerClassName: T.innerButton,
         color: o.Button.Colors.GREEN,
         size: o.Button.Sizes.SMALL,
         onClick: () => {
-          M.default.track(g.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
-            change_log_id: P,
+          M.default.track(O.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
+            change_log_id: x,
             cta_type: e,
             seconds_open: Math.round((Date.now() - t) / 1e3),
-            target: P
+            target: x
           }), (0, _.default)({
-            subscriptionTier: O.PremiumSubscriptionSKUs.TIER_2,
-            analyticsLocations: D,
+            subscriptionTier: g.PremiumSubscriptionSKUs.TIER_2,
+            analyticsLocations: b,
             analyticsObject: {
-              ...x,
-              object: g.AnalyticsObjects.BUTTON_CTA,
-              objectType: g.AnalyticsObjectTypes.TIER_2
+              ...D,
+              object: O.AnalyticsObjects.BUTTON_CTA,
+              objectType: O.AnalyticsObjectTypes.TIER_2
             },
             onClose: e => {
               e && a()
@@ -108,9 +109,9 @@ function x(e) {
         },
         children: [(0, s.jsx)("img", {
           alt: "",
-          className: h.nitroIconSubHeader,
-          src: N
-        }), T.default.Messages.BOGO_CLAIM_OFFER]
+          className: T.nitroIconSubHeader,
+          src: P
+        }), p.default.Messages.BOGO_CLAIM_OFFER]
       })
     }
   })

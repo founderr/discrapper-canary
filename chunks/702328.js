@@ -194,9 +194,7 @@ t.default = e => {
         }),
         children: [(0, a.jsx)(P.default, {
           isFullscreen: s
-        }), (0, a.jsx)(O.default, {
-          isFullscreen: s
-        }), s && eE && (0, a.jsx)(M.default, {
+        }), (0, a.jsx)(O.default, {}), s && eE && (0, a.jsx)(M.default, {
           localizedPricingPromo: ec
         }), (0, a.jsx)(o.VisibilitySensor, {
           onChange: e => G(e),
