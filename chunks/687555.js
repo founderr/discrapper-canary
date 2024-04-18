@@ -181,6 +181,7 @@ s.default = function(e) {
       className: _.footer,
       children: (0, i.jsx)(d.Button, {
         className: _.submit,
+        disabled: 0 === w.size && !G,
         onClick: () => {
           if (G) {
             s();
