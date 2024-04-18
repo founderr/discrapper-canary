@@ -8,7 +8,7 @@ var i = n("735250");
 n("470079");
 var r = n("692547"),
   s = n("10683"),
-  a = n("955623"),
+  a = n("793080"),
   o = n("481060"),
   l = n("785717"),
   u = n("702557"),
@@ -21,21 +21,19 @@ function c(e) {
     onOpenProfile: n
   } = e, {
     trackUserProfileAction: c
-  } = (0, l.useUserProfileAnalyticsContext)(), E = (0, u.default)(t.id), I = null == E.note ? d.default.Messages.ADD_NOTE : (0, i.jsxs)("div", {
+  } = (0, l.useUserProfileAnalyticsContext)(), {
+    loading: E,
+    note: I
+  } = (0, u.default)(t.id), T = !E && null != I && I.length > 0, f = T ? (0, i.jsx)("div", {
     className: _.noteText,
-    children: [(0, i.jsx)(o.TextAreaAutosize, {
+    children: (0, i.jsx)(o.TextAreaAutosize, {
       className: _.noteTextArea,
-      value: E.note
-    }), (0, i.jsx)(a.PencilIcon, {
-      className: _.noteIcon,
-      height: 14,
-      width: 14,
-      color: r.default.colors.INTERACTIVE_MUTED
-    })]
-  }), T = null == E.note ? d.default.Messages.ADD_NOTE : E.note;
+      value: I
+    })
+  }) : d.default.Messages.ADD_NOTE, S = T ? I : d.default.Messages.ADD_NOTE, h = T ? s.PaperIcon : a.PaperPlusIcon;
   return (0, i.jsx)(o.TooltipContainer, {
-    text: I,
-    "aria-label": T,
+    text: f,
+    "aria-label": S,
     children: (0, i.jsx)(o.Clickable, {
       onClick: () => {
         c({
@@ -43,10 +41,10 @@ function c(e) {
         }), n()
       },
       className: _.noteClickable,
-      children: (0, i.jsx)(s.PaperIcon, {
+      children: (0, i.jsx)(h, {
         height: 16,
         width: 16,
-        color: r.default.colors.INTERACTIVE_MUTED
+        color: r.default.colors.INTERACTIVE_NORMAL
       })
     })
   })
