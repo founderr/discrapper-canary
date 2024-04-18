@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   hideEnablePublicGuildUpsellNotice: function() {
     return l
   },
@@ -10,24 +10,24 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var a = n("570140");
+var n = a("570140");
 
 function s(e) {
-  a.default.dispatch({
+  n.default.dispatch({
     type: "BOOSTED_GUILD_GRACE_PERIOD_NOTICE_DISMISS",
     guildId: e
   })
 }
 
 function l(e) {
-  a.default.dispatch({
+  n.default.dispatch({
     type: "PUBLIC_UPSELL_NOTICE_DISMISS",
     guildId: e
   })
 }
 
 function i(e) {
-  a.default.dispatch({
+  n.default.dispatch({
     type: "MAX_MEMBER_COUNT_NOTICE_DISMISS",
     guildId: e
   })

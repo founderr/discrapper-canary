@@ -93,7 +93,7 @@ t.default = e => {
       immediate: j
     },
     [F, B] = (0, r.useSpring)(() => w),
-    V = () => {
+    H = () => {
       (0, p.trackWithMetadata)(L.AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, {
         location: {
           section: L.AnalyticsSections.PREMIUM_GUILD_PROGRESS_BAR
@@ -112,14 +112,14 @@ t.default = e => {
         perkIntro: v.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_MODAL_PROGRESS_BAR_HEADER
       })
     },
-    H = v.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_GOAL.format({
+    V = v.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_GOAL.format({
       levelName: (0, _.getShortenedTierName)(O)
     }),
     k = v.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_BLURB.format({
       numBoosts: u,
       numTotal: (0, _.getAppliedGuildBoostsRequired)(t.id)[O]
     });
-  return M && (H = (0, _.getShortenedTierName)(O), k = v.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_COMPLETED_BLURB.format({
+  return M && (V = (0, _.getShortenedTierName)(O), k = v.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_COMPLETED_BLURB.format({
     numBoosts: u
   })), (0, l.jsx)(d.Tooltip, {
     text: M ? v.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP_COMPLETE : v.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP.format({
@@ -131,7 +131,7 @@ t.default = e => {
     hideOnClick: !0,
     children: e => (0, l.jsxs)(d.Clickable, {
       ...e,
-      onClick: V,
+      onClick: H,
       onMouseEnter: () => {
         var t;
         null === (t = e.onMouseEnter) || void 0 === t || t.call(e), B(w)
@@ -153,7 +153,7 @@ t.default = e => {
             className: x.goalText,
             color: "interactive-active",
             variant: "text-xs/bold",
-            children: H
+            children: V
           })
         }), (0, l.jsxs)("div", {
           className: x.progressFraction,

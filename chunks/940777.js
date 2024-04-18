@@ -60,8 +60,8 @@ function j() {
     F = (0, o.useStateFromStores)([E.default], () => E.default.getChannel(w)),
     B = (0, C.default)(e => e.guildId) === M.FAVORITES,
     {
-      badge: V,
-      unread: H
+      badge: H,
+      unread: V
     } = (0, x.default)(U),
     k = function(e) {
       let t = (0, o.useStateFromStores)([_.default], () => _.default.getVoiceChannelId()),
@@ -94,7 +94,7 @@ function j() {
         activity: m
       })
     }(U),
-    Y = V > 0 ? (0, m.renderMentionBadge)(V) : null,
+    Y = H > 0 ? (0, m.renderMentionBadge)(H) : null,
     K = a.useCallback(() => {
       s()
     }, [s]);
@@ -102,7 +102,7 @@ function j() {
     children: [(0, l.jsx)(N.default, {
       selected: B,
       hovered: j,
-      unread: H && !G,
+      unread: V && !G,
       className: b.pill
     }), (0, l.jsx)(y.default, {
       onShow: K,
@@ -115,7 +115,7 @@ function j() {
             ...e,
             ariaLabel: O.default.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
               guildName: O.default.Messages.FAVORITES_GUILD_NAME,
-              mentions: V
+              mentions: H
             }),
             to: {
               pathname: M.Routes.CHANNEL(M.FAVORITES, w),

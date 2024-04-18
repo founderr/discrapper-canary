@@ -1,48 +1,48 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("735250"),
-  s = n("470079"),
-  l = n("348327"),
-  i = n.n(l),
-  r = n("718017"),
-  o = n("143927"),
-  u = n("481060"),
-  d = n("442837"),
-  c = n("224706"),
-  f = n("2485"),
-  E = n("229765"),
-  h = n("231467"),
-  _ = n("807933"),
-  C = n("10473"),
-  m = n("702646"),
-  S = n("207796"),
-  I = n("976757"),
-  p = n("308083"),
-  T = n("689938"),
-  g = n("24953");
+a.r(t), a("47120");
+var n = a("735250"),
+  s = a("470079"),
+  l = a("348327"),
+  i = a.n(l),
+  r = a("718017"),
+  o = a("143927"),
+  u = a("481060"),
+  d = a("442837"),
+  c = a("224706"),
+  f = a("2485"),
+  E = a("229765"),
+  h = a("231467"),
+  _ = a("807933"),
+  C = a("10473"),
+  m = a("702646"),
+  S = a("207796"),
+  I = a("976757"),
+  p = a("308083"),
+  T = a("689938"),
+  g = a("24953");
 
 function A() {
   let e = (0, S.useClanDiscoveryUIStore)(S.buildSearchCriteriaFromUIState, i()),
     t = (0, S.useClanDiscoveryUIStore)(e => e.selectedPlaystyle.name, o.default),
-    n = (0, d.useStateFromStores)([C.default], () => C.default.getSearchResult(e), [e]);
-  return (0, I.isUnloadedSearchResult)(n) ? null : (0, I.isLoadedSearchResult)(n) ? (0, a.jsxs)("div", {
+    a = (0, d.useStateFromStores)([C.default], () => C.default.getSearchResult(e), [e]);
+  return (0, I.isUnloadedSearchResult)(a) ? null : (0, I.isLoadedSearchResult)(a) ? (0, n.jsxs)("div", {
     className: g.topPicks,
-    children: [(0, a.jsxs)("div", {
+    children: [(0, n.jsxs)("div", {
       className: g.topPicksHeader,
-      children: [(0, a.jsx)(u.Heading, {
+      children: [(0, n.jsx)(u.Heading, {
         variant: "heading-md/medium",
         color: "header-primary",
         children: T.default.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE
-      }), (0, a.jsx)(u.Text, {
+      }), (0, n.jsx)(u.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
         children: T.default.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE.format({
           playstyle: t
         })
       })]
-    }), (0, a.jsx)("div", {
+    }), (0, n.jsx)("div", {
       className: g.topPicksContent,
-      children: n.items.map(t => (0, a.jsx)(h.default, {
+      children: a.items.map(t => (0, n.jsx)(h.default, {
         clan: t,
         affinity: (0, I.getClanDiscoveryAffinity)(t, e)
       }, t.id))
@@ -53,7 +53,7 @@ function A() {
 function N() {
   let e = (0, S.useClanDiscoveryUIStore)(e => e.mode, o.default),
     [, t] = s.useState(0),
-    n = (0, r.useTransition)([e], {
+    a = (0, r.useTransition)([e], {
       key: e => e,
       config: {
         mass: 1,
@@ -75,19 +75,19 @@ function N() {
     l = e => {
       switch (e) {
         case S.ClanDiscoveryMode.PLAYSTYLE:
-          return (0, a.jsx)(_.PlayStyleSelector, {});
+          return (0, n.jsx)(_.PlayStyleSelector, {});
         case S.ClanDiscoveryMode.PRIMETIME:
-          return (0, a.jsx)(_.PrimetimeSelector, {});
+          return (0, n.jsx)(_.PrimetimeSelector, {});
         case S.ClanDiscoveryMode.TRAITS:
-          return (0, a.jsx)(_.TraitSelector, {});
+          return (0, n.jsx)(_.TraitSelector, {});
         case S.ClanDiscoveryMode.GAMES:
-          return (0, a.jsx)(_.GameSelector, {});
+          return (0, n.jsx)(_.GameSelector, {});
         default:
           return null
       }
     };
-  return (0, a.jsx)("div", {
-    children: n((e, t) => (0, a.jsx)(r.animated.div, {
+  return (0, n.jsx)("div", {
+    children: a((e, t) => (0, n.jsx)(r.animated.div, {
       style: e,
       children: l(t)
     }, t))
@@ -97,26 +97,26 @@ function N() {
 function v() {
   let e = (0, S.useClanDiscoveryUIStore)(e => e.game, o.default),
     t = (0, S.useClanDiscoveryUIStore)(e => e.setGame, o.default),
-    n = (0, S.useClanDiscoveryUIStore)(e => e.setSelectedGames, o.default),
-    a = (0, S.useClanDiscoveryUIStore)(S.buildSearchCriteriaFromUIState, i()),
+    a = (0, S.useClanDiscoveryUIStore)(e => e.setSelectedGames, o.default),
+    n = (0, S.useClanDiscoveryUIStore)(S.buildSearchCriteriaFromUIState, i()),
     l = (0, f.useClanDiscoveryExperimentDefaultGameId)("clan_discovery"),
     r = (0, d.useStateFromStores)([C.default], () => C.default.hasLoadedStaticClanDiscovery(e));
   return s.useEffect(() => {
-    l === p.VALORANT_ID ? (t(S.ClanDiscoveryGame.VALORANT), n([l])) : l === p.GENSHIN_ID && (t(S.ClanDiscoveryGame.GENSHIN), n([l]))
-  }, [t, n, l]), s.useEffect(() => {
+    l === p.VALORANT_ID ? (t(S.ClanDiscoveryGame.VALORANT), a([l])) : l === p.GENSHIN_ID && (t(S.ClanDiscoveryGame.GENSHIN), a([l]))
+  }, [t, a, l]), s.useEffect(() => {
     !r && (0, E.loadStaticClanDiscovery)(e)
   }, [e, r]), s.useEffect(() => {
-    r && (0, E.searchClanDiscovery)(e, a)
-  }, [e, a, r]), s.useEffect(() => {
+    r && (0, E.searchClanDiscovery)(e, n)
+  }, [e, n, r]), s.useEffect(() => {
     c.default.getDetectableGames()
   }, []), null
 }
 t.default = function() {
-  return (0, a.jsxs)("main", {
+  return (0, n.jsxs)("main", {
     className: g.container,
-    children: [(0, a.jsx)(v, {}), (0, a.jsx)(m.default, {}), (0, a.jsx)("div", {
+    children: [(0, n.jsx)(v, {}), (0, n.jsx)(m.default, {}), (0, n.jsx)("div", {
       className: g.content,
-      children: (0, a.jsx)(A, {})
-    }), (0, a.jsx)(N, {})]
+      children: (0, n.jsx)(A, {})
+    }), (0, n.jsx)(N, {})]
   })
 }

@@ -1,28 +1,28 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return f
   }
 });
-var a = n("735250");
-n("470079");
-var s = n("481060"),
-  l = n("740492"),
-  i = n("626135"),
-  r = n("358085"),
-  o = n("998502"),
-  u = n("258220"),
-  d = n("981631");
+var n = a("735250");
+a("470079");
+var s = a("481060"),
+  l = a("740492"),
+  i = a("626135"),
+  r = a("358085"),
+  o = a("998502"),
+  u = a("258220"),
+  d = a("981631");
 let c = "activity-hardware-acceleration-modal";
 
 function f(e) {
   !l.default.disableActivityHardwareAccelerationPrompt && r.isPlatformEmbedded && !o.default.getEnableHardwareAcceleration() && (0, s.openModalLazy)(async () => {
     let {
       default: t
-    } = await Promise.resolve().then(n.bind(n, "258220"));
-    return n => (0, a.jsx)(t, {
+    } = await Promise.resolve().then(a.bind(a, "258220"));
+    return a => (0, n.jsx)(t, {
       applicationId: e,
-      ...n
+      ...a
     })
   }, {
     modalKey: c,

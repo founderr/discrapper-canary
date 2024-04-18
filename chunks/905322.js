@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  l = n("777207"),
-  s = n("764254");
+  s = n("777207"),
+  l = n("764254");
 
 function a(e) {
   let {
@@ -15,8 +15,8 @@ function a(e) {
     subtitle: n,
     iconSrc: a,
     backgroundSrc: o,
-    animatedBackgroundSrc: d,
-    prefersReducedMotion: c = !0
+    animatedBackgroundSrc: c,
+    prefersReducedMotion: d = !0
   } = e, u = r.useMemo(() => {
     let e = null != o ? o : a;
     if (null != e) return {
@@ -27,33 +27,33 @@ function a(e) {
     let e = {
       "--custom-background-static": "url(".concat(o.toString())
     };
-    return !c && null != d && (e["--custom-background-animated"] = "url(".concat(d.toString(), ")")), e
-  }, [d, o, c]);
+    return !d && null != c && (e["--custom-background-animated"] = "url(".concat(c.toString(), ")")), e
+  }, [c, o, d]);
   return (0, i.jsxs)("div", {
-    className: s.wrapper,
+    className: l.wrapper,
     children: [(0, i.jsx)("div", {
-      className: s.background,
+      className: l.background,
       style: u
     }), (0, i.jsxs)("div", {
-      className: s.content,
+      className: l.content,
       children: [null != a && (0, i.jsx)("div", {
-        className: s.icon,
+        className: l.icon,
         children: (0, i.jsx)("img", {
           src: a.toString(),
           alt: ""
         })
       }), (0, i.jsxs)("div", {
-        children: [(0, i.jsx)(l.Text, {
+        children: [(0, i.jsx)(s.Text, {
           variant: "heading-xl/bold",
           tag: "div",
           children: t
-        }), null != n && (0, i.jsxs)(l.Text, {
+        }), null != n && (0, i.jsxs)(s.Text, {
           variant: "text-sm/normal",
           children: ["“", n, "”"]
         })]
       })]
     }), null != o ? (0, i.jsx)("div", {
-      className: s.image,
+      className: l.image,
       style: f
     }) : null]
   })

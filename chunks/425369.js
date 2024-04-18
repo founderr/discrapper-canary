@@ -1,38 +1,38 @@
 "use strict";
-n.r(t);
-var a = n("735250"),
-  s = n("470079"),
-  l = n("613828"),
-  i = n("410575"),
-  r = n("765717"),
-  o = n("252618"),
-  u = n("108427"),
-  d = n("895991"),
-  c = n("993977"),
-  f = n("981631"),
-  E = n("689938"),
-  h = n("149817");
+a.r(t);
+var n = a("735250"),
+  s = a("470079"),
+  l = a("613828"),
+  i = a("410575"),
+  r = a("765717"),
+  o = a("252618"),
+  u = a("108427"),
+  d = a("895991"),
+  c = a("993977"),
+  f = a("981631"),
+  E = a("689938"),
+  h = a("149817");
 
 function _() {
-  return (0, a.jsxs)(l.Switch, {
-    children: [(0, a.jsx)(r.default, {
+  return (0, n.jsxs)(l.Switch, {
+    children: [(0, n.jsx)(r.default, {
       path: f.Routes.APPLICATION_LIBRARY_SETTINGS,
       exact: !0,
-      children: (0, a.jsxs)(i.default, {
+      children: (0, n.jsxs)(i.default, {
         page: f.AnalyticsPages.LIBRARY_SETTINGS,
         root: !0,
-        children: [(0, a.jsx)(o.AppPageTitle, {
+        children: [(0, n.jsx)(o.AppPageTitle, {
           subsection: E.default.Messages.SETTINGS
-        }), (0, a.jsx)(c.default, {})]
+        }), (0, n.jsx)(c.default, {})]
       })
-    }), (0, a.jsx)(r.default, {
+    }), (0, n.jsx)(r.default, {
       path: f.Routes.APPLICATION_LIBRARY,
-      children: (0, a.jsxs)(i.default, {
+      children: (0, n.jsxs)(i.default, {
         page: f.AnalyticsPages.LIBRARY,
         root: !0,
-        children: [(0, a.jsx)(o.AppPageTitle, {
+        children: [(0, n.jsx)(o.AppPageTitle, {
           subsection: E.default.Messages.APPLICATION_LIBRARY_MY_GAMES
-        }), (0, a.jsx)(d.default, {})]
+        }), (0, n.jsx)(d.default, {})]
       })
     })]
   })
@@ -40,10 +40,10 @@ function _() {
 t.default = s.memo(function() {
   return s.useEffect(() => {
     (0, u.trackAppUIViewed)("application_library")
-  }, []), (0, a.jsxs)("div", {
+  }, []), (0, n.jsxs)("div", {
     className: h.container,
-    children: [(0, a.jsx)(o.AppPageTitle, {
+    children: [(0, n.jsx)(o.AppPageTitle, {
       location: E.default.Messages.LIBRARY
-    }), (0, a.jsx)(_, {})]
+    }), (0, n.jsx)(_, {})]
   })
 })

@@ -1,24 +1,24 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   PremiumMarketingComponentProperties: function() {
     return i
   }
-}), n("47120"), n("411104");
-var a = n("578012"),
-  s = n("740111");
-class l extends a.MessageType {
+}), a("47120"), a("411104");
+var n = a("578012"),
+  s = a("740111");
+class l extends n.MessageType {
   create(e) {
     let t = {
       properties: {
         oneofKind: void 0
       }
     };
-    return globalThis.Object.defineProperty(t, a.MESSAGE_TYPE, {
+    return globalThis.Object.defineProperty(t, n.MESSAGE_TYPE, {
       enumerable: !1,
       value: this
-    }), void 0 !== e && (0, a.reflectionMergePartial)(this, t, e), t
+    }), void 0 !== e && (0, n.reflectionMergePartial)(this, t, e), t
   }
-  internalBinaryRead(e, t, n, l) {
+  internalBinaryRead(e, t, a, l) {
     let i = null != l ? l : this.create(),
       r = e.pos + t;
     for (; e.pos < r;) {
@@ -33,22 +33,22 @@ class l extends a.MessageType {
         case 2:
           i.properties = {
             oneofKind: "announcementModalVariant1",
-            announcementModalVariant1: s.AnnouncementModalVariant1Properties.internalBinaryRead(e, e.uint32(), n, i.properties.announcementModalVariant1)
+            announcementModalVariant1: s.AnnouncementModalVariant1Properties.internalBinaryRead(e, e.uint32(), a, i.properties.announcementModalVariant1)
           };
           break;
         default:
-          let r = n.readUnknownField;
+          let r = a.readUnknownField;
           if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(l, ") for ").concat(this.typeName));
           let o = e.skip(l);
-          !1 !== r && (!0 === r ? a.UnknownFieldHandler.onRead : r)(this.typeName, i, t, l, o)
+          !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, i, t, l, o)
       }
     }
     return i
   }
-  internalBinaryWrite(e, t, n) {
-    "placeholder" === e.properties.oneofKind && t.tag(1, a.WireType.LengthDelimited).string(e.properties.placeholder), "announcementModalVariant1" === e.properties.oneofKind && s.AnnouncementModalVariant1Properties.internalBinaryWrite(e.properties.announcementModalVariant1, t.tag(2, a.WireType.LengthDelimited).fork(), n).join();
-    let l = n.writeUnknownFields;
-    return !1 !== l && (!0 == l ? a.UnknownFieldHandler.onWrite : l)(this.typeName, e, t), t
+  internalBinaryWrite(e, t, a) {
+    "placeholder" === e.properties.oneofKind && t.tag(1, n.WireType.LengthDelimited).string(e.properties.placeholder), "announcementModalVariant1" === e.properties.oneofKind && s.AnnouncementModalVariant1Properties.internalBinaryWrite(e.properties.announcementModalVariant1, t.tag(2, n.WireType.LengthDelimited).fork(), a).join();
+    let l = a.writeUnknownFields;
+    return !1 !== l && (!0 == l ? n.UnknownFieldHandler.onWrite : l)(this.typeName, e, t), t
   }
   constructor() {
     super("discord_protos.premium_marketing.v1.PremiumMarketingComponentProperties", [{

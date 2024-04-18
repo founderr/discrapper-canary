@@ -1,24 +1,24 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   handleInaccessiblePage: function() {
     return d
   }
 });
-var a = n("735250");
-n("470079");
-var s = n("481060"),
-  l = n("703656"),
-  i = n("896797"),
-  r = n("984933"),
-  o = n("944486"),
-  u = n("981631");
+var n = a("735250");
+a("470079");
+var s = a("481060"),
+  l = a("703656"),
+  i = a("896797"),
+  r = a("984933"),
+  o = a("944486"),
+  u = a("981631");
 
 function d(e, t) {
   if ((0, s.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("22706")]).then(n.bind(n, "438725"));
-      return t => (0, a.jsx)(e, {
+      } = await Promise.all([a.e("99387"), a.e("22706")]).then(a.bind(a, "438725"));
+      return t => (0, n.jsx)(e, {
         ...t
       })
     }), o.default.getChannelId(e) === t) {

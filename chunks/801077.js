@@ -34,8 +34,8 @@ var l, a, s, i, r = n("392711"),
   w = n("823379"),
   F = n("981631");
 let B = !1,
-  V = !1,
-  H = [],
+  H = !1,
+  V = [],
   k = [],
   Y = {},
   K = {},
@@ -51,7 +51,7 @@ function X(e) {
   return D.default.findActivity(e, e => e.type !== F.ActivityTypes.CUSTOM_STATUS)
 }
 
-function q(e) {
+function Q(e) {
   return null == Y[e] && (Y = {
     ...Y,
     [e]: new L.default({
@@ -60,7 +60,7 @@ function q(e) {
   }), Y[e]
 }
 
-function Q(e) {
+function q(e) {
   return null == K[e] && (K = {
     ...K,
     [e]: new A.default({
@@ -76,7 +76,7 @@ function J(e) {
 function $(e) {
   if ((0, p.default)(e)) return T.SpotifyApplication;
   let t = null != e.application_id ? E.default.getApplication(e.application_id) : null;
-  return null != t ? t : (0, m.default)(e) ? q(e.name) : (0, C.default)(e) && null != e.url ? Q(e.url) : (null != e.application_id && J(e.application_id), t)
+  return null != t ? t : (0, m.default)(e) ? Q(e.name) : (0, C.default)(e) && null != e.url ? q(e.url) : (null != e.application_id && J(e.application_id), t)
 }
 
 function ee(e) {
@@ -121,7 +121,7 @@ function en(e, t, n) {
           tags: {
             source: "ACTIVITIES"
           }
-        }), null) : e === T.SPOTIFY_APPLICATION_ID ? T.SpotifyApplication : e.startsWith(L.XBOX_APPLICATION_ID_PREFIX) ? q(e.slice(L.XBOX_APPLICATION_ID_PREFIX.length)) : e.startsWith(A.TWITCH_APPLICATION_ID_PREFIX) ? Q(e.slice(A.TWITCH_APPLICATION_ID_PREFIX.length)) : (J(e), null)
+        }), null) : e === T.SPOTIFY_APPLICATION_ID ? T.SpotifyApplication : e.startsWith(L.XBOX_APPLICATION_ID_PREFIX) ? Q(e.slice(L.XBOX_APPLICATION_ID_PREFIX.length)) : e.startsWith(A.TWITCH_APPLICATION_ID_PREFIX) ? q(e.slice(A.TWITCH_APPLICATION_ID_PREFIX.length)) : (J(e), null)
       }(u),
       C = null === (a = r.timestamps) || void 0 === a ? void 0 : a.start;
     if ((0, h.default)(r)) {
@@ -159,15 +159,15 @@ function en(e, t, n) {
     })
   }
   let B = 1 === g.length,
-    V = [],
-    H = new Set,
+    H = [],
+    V = new Set,
     k = new Set;
   for (let e of t) {
     let n = ee(e.id),
       l = x.default.getChannel(n),
       a = null != l ? l.getGuildId() : null,
       s = O.default.getGuild(a);
-    if (k.has(a) && H.has(n) || null == l || null == s || l.id === s.afkChannelId) null == l && (d = null, B = !0);
+    if (k.has(a) && V.has(n) || null == l || null == s || l.id === s.afkChannelId) null == l && (d = null, B = !0);
     else {
       let e = o()(U.default.getVoiceStatesForChannel(l.id)).map(e => {
         let {
@@ -175,7 +175,7 @@ function en(e, t, n) {
         } = e;
         return G.default.getUser(t)
       }).filter(w.isNotNullish).orderBy([et], ["desc"]).value();
-      e.filter(e => !C.includes(e.id)).forEach(e => t.push(e)), B ? !k.has(a) && (d = null) : (d = s, B = !0), k.add(a), H.add(n), V.push({
+      e.filter(e => !C.includes(e.id)).forEach(e => t.push(e)), B ? !k.has(a) && (d = null) : (d = s, B = !0), k.add(a), V.add(n), H.push({
         channel: l,
         guild: s,
         members: e
@@ -184,7 +184,7 @@ function en(e, t, n) {
   }
   return {
     id: n,
-    voiceChannels: V,
+    voiceChannels: H,
     isSpotifyActivity: P,
     priorityMembers: g.map(e => ({
       user: e,
@@ -208,7 +208,7 @@ let ea = o().throttle(() => {
   ! function() {
     var e;
     if (!el()) return;
-    W.clear(), k = (H = (function(e) {
+    W.clear(), k = (V = (function(e) {
       let t = z(),
         n = en.bind(null, t);
       return o()(e).mapValues(n)
@@ -228,7 +228,7 @@ let ea = o().throttle(() => {
         let e = Array.from(W);
         g.default.fetchApplications(e), e.forEach(e => Z.add(e)), W.clear()
       }
-    }(), V = !0
+    }(), H = !0
   }(), er.emitChange()
 }, 1e3);
 
@@ -240,7 +240,7 @@ class ei extends(l = u.default.Store) {
     this.syncWith([G.default, E.default, D.default, y.default, U.default, v.default, j.default, R.default, P.default], es), this.waitFor(S.default, O.default, E.default, G.default, P.default)
   }
   get currentActivityParties() {
-    return H
+    return V
   }
   get nowPlayingCards() {
     return k
@@ -249,7 +249,7 @@ class ei extends(l = u.default.Store) {
     return B
   }
   get loaded() {
-    return V
+    return H
   }
 }
 i = "NowPlayingViewStore", (s = "displayName") in(a = ei) ? Object.defineProperty(a, s, {
@@ -260,7 +260,7 @@ i = "NowPlayingViewStore", (s = "displayName") in(a = ei) ? Object.definePropert
 }) : a[s] = i;
 let er = new ei(d.default, {
   LOGOUT: function() {
-    B = !1, H = [], k = [], W.clear()
+    B = !1, V = [], k = [], W.clear()
   },
   NOW_PLAYING_MOUNTED: function() {
     B = !0, ea()

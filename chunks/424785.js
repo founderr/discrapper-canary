@@ -43,8 +43,8 @@ var a = n("120356"),
   w = n("207055"),
   F = n("981631"),
   B = n("647086"),
-  V = n("689938"),
-  H = n("294639"),
+  H = n("689938"),
+  V = n("294639"),
   k = n("157511");
 
 function Y(e, t, n) {
@@ -75,9 +75,9 @@ class K extends P.default {
       sortingPosition: t,
       isUserOver: n
     } = this.props;
-    if (n) return H.containerUserOver;
-    if (null != t) return e > t ? H.containerDragAfter : H.containerDragBefore;
-    return H.containerDefault
+    if (n) return V.containerUserOver;
+    if (null != t) return e > t ? V.containerDragAfter : V.containerDragBefore;
+    return V.containerDefault
   }
   renderVoiceUsers() {
     let {
@@ -122,7 +122,7 @@ class K extends P.default {
       shouldShowGuildVerificationPopout: I
     } = this.state, N = this.getVoiceStatesCount(), T = (0, l.jsxs)("li", {
       className: s()(this.getModeClass(), {
-        [H.disabled]: this.isDisabled()
+        [V.disabled]: this.isDisabled()
       }),
       "data-dnd-name": e.name,
       children: [(0, l.jsx)(r.Popout, {
@@ -140,7 +140,7 @@ class K extends P.default {
               ...u
             } = i;
             return (0, l.jsxs)(U.default, {
-              className: H.iconVisibility,
+              className: V.iconVisibility,
               iconClassName: s()({
                 [k.iconLive]: null != p
               }),
@@ -233,7 +233,7 @@ class K extends P.default {
         forceShowButtons: n
       } = this.props;
       if (!t) return (0, l.jsx)(r.Tooltip, {
-        text: V.default.Messages.OPEN_CHAT,
+        text: H.default.Messages.OPEN_CHAT,
         children: t => {
           let {
             onMouseEnter: a,
@@ -242,11 +242,11 @@ class K extends P.default {
             onBlur: d
           } = t;
           return (0, l.jsx)(r.Clickable, {
-            className: s()(H.iconItem, n ? H.alwaysShown : null),
+            className: s()(V.iconItem, n ? V.alwaysShown : null),
             onClick: () => {
               o.default.updateChatOpen(e.id, !0), this.handleClickChat()
             },
-            "aria-label": V.default.Messages.OPEN_CHAT,
+            "aria-label": H.default.Messages.OPEN_CHAT,
             onMouseEnter: a,
             onMouseLeave: i,
             onFocus: u,
@@ -254,7 +254,7 @@ class K extends P.default {
             children: (0, l.jsx)(D.default, {
               width: 16,
               height: 16,
-              className: H.actionIcon
+              className: V.actionIcon
             })
           })
         }
@@ -263,7 +263,7 @@ class K extends P.default {
       let {
         connected: e
       } = this.props;
-      return this.isFull() && !e ? V.default.Messages.UNABLE_TO_JOIN_CHANNEL_FULL : null
+      return this.isFull() && !e ? H.default.Messages.UNABLE_TO_JOIN_CHANNEL_FULL : null
     }), Y(this, "renderSubtitle", () => {
       var e;
       let t = null === (e = this.props.stageInstance) || void 0 === e ? void 0 : e.topic;

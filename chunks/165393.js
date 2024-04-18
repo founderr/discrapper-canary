@@ -32,13 +32,13 @@ function h(e) {
   return a.useEffect(() => {
     c(f(n))
   }, [n]), (0, l.jsxs)("div", {
-    className: d.wrapper,
+    className: i()(d.wrapper, s),
     children: [(0, l.jsx)(u.default, {
       mask: u.default.Masks.STATUS_SCREENSHARE,
       width: 32,
       height: 32,
       children: (0, l.jsx)("div", {
-        className: i()(d.icon, s),
+        className: d.icon,
         style: {
           backgroundColor: r
         },

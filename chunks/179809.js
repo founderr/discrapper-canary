@@ -51,8 +51,8 @@ function x(e) {
   } = e, {
     id: F,
     name: B,
-    children: V
-  } = t, [H, k] = a.useState(!1), [Y, K] = a.useState(!1), W = H || Y;
+    children: H
+  } = t, [V, k] = a.useState(!1), [Y, K] = a.useState(!1), W = V || Y;
   a.useEffect(() => {
     b && k(!1)
   }, [b]);
@@ -72,9 +72,9 @@ function x(e) {
     })
   }), X = a.useCallback(e => {
     K(e)
-  }, []), q = a.useCallback(e => {
+  }, []), Q = a.useCallback(e => {
     ("ArrowRight" === e.key && !d || "ArrowLeft" === e.key && d) && P()
-  }, [P, d]), Q = null != B && "" !== B ? B : null != y && "" !== y ? y : I.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(F)), $ = "folder-items-".concat(F), ee = V.length * (L + v), et = (0, o.useTransition)(!Z && d, {
+  }, [P, d]), q = null != B && "" !== B ? B : null != y && "" !== y ? y : I.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(F)), $ = "folder-items-".concat(F), ee = H.length * (L + v), et = (0, o.useTransition)(!Z && d, {
     from: {
       height: 0
     },
@@ -90,12 +90,12 @@ function x(e) {
   }), en = a.useCallback(e => null == n ? void 0 : n(F, e), [n, F]), el = (0, l.jsxs)(_.ListItem, {
     children: [(0, l.jsx)(h.default, {
       disabled: Z || d,
-      hovered: H,
+      hovered: V,
       selected: s,
       unread: R,
       className: T.pill
     }), (0, l.jsx)(S.default, {
-      text: Q,
+      text: q,
       disabled: b,
       selected: s,
       disableWrapper: !0,
@@ -104,7 +104,7 @@ function x(e) {
         className: i()({
           [T.wobble]: !Z && Y && !d
         }),
-        "data-dnd-name": Q,
+        "data-dnd-name": q,
         children: Z ? (0, l.jsx)(E.default, {}) : (0, l.jsx)(C.default, {
           folderNode: t,
           expanded: d,
@@ -112,18 +112,18 @@ function x(e) {
           sorting: b,
           mediaState: p,
           mentionCount: x,
-          tooltipName: Q,
+          tooltipName: q,
           folderGroupId: $,
           onClick: P,
           onContextMenu: G,
           onHoverChange: k,
-          onKeyDown: q,
+          onKeyDown: Q,
           treeItemProps: J,
           folderIconContent: w
         })
       })
     }), O ? (0, l.jsx)(g.default, {
-      name: Q,
+      name: q,
       targetNode: t,
       onDragOverChanged: X
     }) : null]
@@ -147,10 +147,10 @@ function x(e) {
         },
         className: N.__invalid_expandedGuilds,
         role: "group",
-        children: V.map(U)
+        children: H.map(U)
       }, a)
     }), O && d ? (0, l.jsx)(g.FolderEndDropTarget, {
-      name: Q,
+      name: q,
       targetNode: t
     }) : null]
   })

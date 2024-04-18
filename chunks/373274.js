@@ -44,8 +44,8 @@ var l, a = n("735250"),
   w = n("906817"),
   F = n("429122"),
   B = n("285573"),
-  V = n("519358"),
-  H = n("910595"),
+  H = n("519358"),
+  V = n("910595"),
   k = n("466935"),
   Y = n("120818"),
   K = n("61642"),
@@ -53,8 +53,8 @@ var l, a = n("735250"),
   Z = n("53425"),
   z = n("424785"),
   X = n("770202"),
-  q = n("79556"),
-  Q = n("428127"),
+  Q = n("79556"),
+  q = n("428127"),
   J = n("950969"),
   $ = n("233657"),
   ee = n("831700"),
@@ -258,14 +258,14 @@ class eo extends(l = s.PureComponent) {
           children: n ? (0, a.jsxs)(s.Fragment, {
             children: [(0, a.jsx)("div", {
               className: ei.positionedContainer,
-              children: (0, a.jsx)(Q.default, {
+              children: (0, a.jsx)(q.default, {
                 position: "top",
                 guildChannels: e,
                 guildChannelsVersion: t,
                 jumpToVoiceChannels: this.jumpToVoiceChannels,
                 jumpToChannel: this.jumpToChannel
               })
-            }), this.renderList(), (0, a.jsx)(Q.default, {
+            }), this.renderList(), (0, a.jsx)(q.default, {
               position: "bottom",
               guildChannels: e,
               guildChannelsVersion: t,
@@ -514,7 +514,7 @@ class eo extends(l = s.PureComponent) {
               withMargin: s.length > 1
             }, et.ChannelListCommunityRow.GUILD_PREMIUM_PROGRESS_BAR);
           case et.ChannelListCommunityRow.GUILD_HOME:
-            return (0, a.jsx)(H.default, {
+            return (0, a.jsx)(V.default, {
               guild: l,
               selected: r === ea.StaticChannelRoute.GUILD_HOME
             }, et.ChannelListCommunityRow.GUILD_HOME);
@@ -543,7 +543,7 @@ class eo extends(l = s.PureComponent) {
               guild: l
             });
           case et.ChannelListCommunityRow.CHANNELS_AND_ROLES:
-            return (0, a.jsx)(V.GuildBrowseChannelsRow, {
+            return (0, a.jsx)(H.GuildBrowseChannelsRow, {
               guild: l,
               selected: r === ea.StaticChannelRoute.CHANNEL_BROWSER || r === ea.StaticChannelRoute.CUSTOMIZE_COMMUNITY
             }, et.ChannelListCommunityRow.CHANNELS_AND_ROLES);
@@ -577,7 +577,7 @@ class eo extends(l = s.PureComponent) {
         case el.ChannelTypes.DM:
         case el.ChannelTypes.GROUP_DM:
           return (0, a.jsxs)(s.Fragment, {
-            children: [(0, a.jsx)(q.default, {
+            children: [(0, a.jsx)(Q.default, {
               channel: T,
               guild: l,
               position: I.position,
@@ -639,7 +639,7 @@ class eo extends(l = s.PureComponent) {
           }, "readonly-".concat(T.id));
         case el.ChannelTypes.PUBLIC_THREAD:
         case el.ChannelTypes.PRIVATE_THREAD:
-          return (0, a.jsx)(q.default, {
+          return (0, a.jsx)(Q.default, {
             channel: T,
             guild: l,
             position: I.position,

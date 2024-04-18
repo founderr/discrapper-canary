@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   initSessionHeartbeatScheduler: function() {
     return R
   }
-}), n("411104");
-var a = n("433517"),
-  s = n("570140"),
-  l = n("188471"),
-  i = n("581567"),
-  r = n("594190"),
-  o = n("19780"),
-  u = n("626135"),
-  d = n("70956"),
-  c = n("848479"),
-  f = n("960048"),
-  E = n("844889"),
-  h = n("981631");
+}), a("411104");
+var n = a("433517"),
+  s = a("570140"),
+  l = a("188471"),
+  i = a("581567"),
+  r = a("594190"),
+  o = a("19780"),
+  u = a("626135"),
+  d = a("70956"),
+  c = a("848479"),
+  f = a("960048"),
+  E = a("844889"),
+  h = a("981631");
 let _ = "LATEST_HEARTBEAST_EVENT_TIMESTAMP",
   C = null,
   m = null,
@@ -26,19 +26,19 @@ async function p() {
   I = !0, (0, E.setSessionExtendingEnabled)(!0), f.default.addBreadcrumb({
     message: "Start Analytics Heartbeat"
   });
-  let e = await a.Storage.getAfterRefresh(_).then(E.timestampOrZero);
+  let e = await n.Storage.getAfterRefresh(_).then(E.timestampOrZero);
   if (!I) return;
   let t = Date.now(),
-    n = 15 * d.default.Millis.MINUTE + e - t;
-  n > d.default.Millis.HOUR && f.default.addBreadcrumb({
-    message: "Received invalid Date.now() when generating a heartbeat. Date.now() = ".concat(t, ", timeUntilNextHeartbeat = ").concat(n, ", latestHeartbeatEventTimestamp = ").concat(e)
-  }), e > t && (n = 0), f.default.addBreadcrumb({
-    message: "Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: ".concat(n / 1e3, " seconds. Scheduling Heartbeat")
+    a = 15 * d.default.Millis.MINUTE + e - t;
+  a > d.default.Millis.HOUR && f.default.addBreadcrumb({
+    message: "Received invalid Date.now() when generating a heartbeat. Date.now() = ".concat(t, ", timeUntilNextHeartbeat = ").concat(a, ", latestHeartbeatEventTimestamp = ").concat(e)
+  }), e > t && (a = 0), f.default.addBreadcrumb({
+    message: "Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: ".concat(a / 1e3, " seconds. Scheduling Heartbeat")
   }), T(!1), m = setTimeout(() => {
     g(), C = setInterval(() => {
       g()
     }, 15 * d.default.Millis.MINUTE)
-  }, Math.max(n, 0))
+  }, Math.max(a, 0))
 }
 
 function T() {
@@ -50,9 +50,9 @@ function T() {
 async function g() {
   let e = Date.now(),
     t = await (0, E.getSession)(),
-    n = Date.now();
+    a = Date.now();
   if (null == t) {
-    f.default.captureException(Error("Null session when tracking session heartbeat. Waited ".concat(n - e, "ms")));
+    f.default.captureException(Error("Null session when tracking session heartbeat. Waited ".concat(a - e, "ms")));
     return
   }
   if (!I) {
@@ -77,7 +77,7 @@ async function g() {
     let e = r.default.getCurrentGameForAnalytics();
     null != e && (s.client_heartbeat_current_game_id = e.id, s.client_heartbeat_current_game_name = e.name, s.client_heartbeat_current_game_executable = (0, i.removeExecutablePathPrefix)(e.exePath), s.client_heartbeat_current_game_distributor = e.distributor)
   }
-  u.default.track(h.AnalyticEvents.CLIENT_HEARTBEAT, s), a.Storage.set(_, Date.now().toString()), (0, l.drainClickstream)()
+  u.default.track(h.AnalyticEvents.CLIENT_HEARTBEAT, s), n.Storage.set(_, Date.now().toString()), (0, l.drainClickstream)()
 }
 let A = null,
   N = !0;

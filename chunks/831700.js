@@ -43,8 +43,8 @@ var a = n("120356"),
   w = n("934415"),
   F = n("98597"),
   B = n("648501"),
-  V = n("473403"),
-  H = n("830993"),
+  H = n("473403"),
+  V = n("830993"),
   k = n("653577"),
   Y = n("207055"),
   K = n("981631"),
@@ -60,7 +60,7 @@ function X(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class q extends F.default {
+class Q extends F.default {
   componentWillUnmount() {
     this.activitiesHideTimeout.stop()
   }
@@ -182,7 +182,7 @@ class q extends F.default {
                 onContextMenu: c,
                 ...f
               } = o;
-              return (0, l.jsxs)(V.default, {
+              return (0, l.jsxs)(H.default, {
                 className: z.iconVisibility,
                 iconClassName: s()({
                   [z.iconLive]: I
@@ -319,7 +319,7 @@ class q extends F.default {
       } = this.state;
       if (r && !n && !a && !o) {
         let n = y.ActivityRestrictedGuilds.getSetting().includes(i.id);
-        return (0, l.jsx)(H.default, {
+        return (0, l.jsx)(V.default, {
           onAction: this.closePopout,
           guild: i,
           channel: e,
@@ -375,7 +375,7 @@ class q extends F.default {
     })
   }
 }
-let Q = (0, c.makeChannelSortable)((0, f.makeVoiceUserDroppable)(q));
+let q = (0, c.makeChannelSortable)((0, f.makeVoiceUserDroppable)(Q));
 
 function J(e) {
   let {
@@ -421,7 +421,7 @@ function J(e) {
     enableConnectedUserLimit: !0,
     enableActivities: !0
   }), U = x && null == O;
-  return (0, l.jsx)(Q, {
+  return (0, l.jsx)(q, {
     channelName: C,
     embeddedApps: m,
     embeddedActivityType: K.ActivityTypes.PLAYING,

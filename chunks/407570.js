@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   isInFriendSuggestionSeenStateExperiment: function() {
     return l
   }
-}), n("399606");
-var a = n("818083");
-n("553795"), n("594174"), n("981631"), (0, a.createExperiment)({
+}), a("399606");
+var n = a("818083");
+a("553795"), a("594174"), a("981631"), (0, n.createExperiment)({
   kind: "user",
   id: "2024-03_friend_finder_selected_states",
   label: "Friend Finder State Experiment",
@@ -19,7 +19,7 @@ n("553795"), n("594174"), n("981631"), (0, a.createExperiment)({
       enabled: !0
     }
   }]
-}), (0, a.createExperiment)({
+}), (0, n.createExperiment)({
   kind: "user",
   id: "2023-10_friend_finder_launch",
   label: "Friend Finder Launch Experiment",
@@ -33,7 +33,7 @@ n("553795"), n("594174"), n("981631"), (0, a.createExperiment)({
       enabled: !0
     }
   }]
-}), (0, a.createExperiment)({
+}), (0, n.createExperiment)({
   kind: "user",
   id: "2023-03_friend_finder_employees",
   label: "Friend Finder Employees User Experiment",
@@ -47,7 +47,7 @@ n("553795"), n("594174"), n("981631"), (0, a.createExperiment)({
       enabled: !0
     }
   }]
-}), (0, a.createExperiment)({
+}), (0, n.createExperiment)({
   kind: "user",
   id: "2023-06_guild_contact_invite_imessage_overlay",
   label: "Friend Finder guild contact invite imessage overlay",
@@ -61,7 +61,7 @@ n("553795"), n("594174"), n("981631"), (0, a.createExperiment)({
       enabled: !0
     }
   }]
-}), (0, a.createExperiment)({
+}), (0, n.createExperiment)({
   kind: "user",
   id: "2023-10_username_lookup_killswitch",
   label: "Friend Finder Username Lookup Killswitch",
@@ -75,7 +75,7 @@ n("553795"), n("594174"), n("981631"), (0, a.createExperiment)({
       enabled: !0
     }
   }]
-}), (0, a.createExperiment)({
+}), (0, n.createExperiment)({
   kind: "user",
   id: "2023-11_friend_finder_sync",
   label: "Friend Finder Sync",
@@ -90,7 +90,7 @@ n("553795"), n("594174"), n("981631"), (0, a.createExperiment)({
     }
   }]
 });
-let s = (0, a.createExperiment)({
+let s = (0, n.createExperiment)({
   kind: "user",
   id: "2023-12_friend_suggestion_seen_state",
   label: "Friend Suggestions Seen State",

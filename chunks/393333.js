@@ -1,28 +1,28 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   UserSafetyEducationReportingCoachmark: function() {
     return f
   }
 });
-var a = n("735250");
-n("470079");
-var s = n("399606"),
-  l = n("607070"),
-  i = n("970731"),
-  r = n("810090"),
-  o = n("111653"),
-  u = n("921944"),
-  d = n("689938"),
-  c = n("538292");
+var n = a("735250");
+a("470079");
+var s = a("399606"),
+  l = a("607070"),
+  i = a("970731"),
+  r = a("810090"),
+  o = a("111653"),
+  u = a("921944"),
+  d = a("689938"),
+  c = a("538292");
 let f = e => {
   let {
     markAsDismissed: t
-  } = e, n = (0, s.useStateFromStores)([l.default], () => l.default.useReducedMotion);
-  return (0, o.useCanSeeSafetyEducationReportingCoachmark)() ? (0, a.jsx)(i.default, {
-    asset: (0, a.jsx)(r.default, {
+  } = e, a = (0, s.useStateFromStores)([l.default], () => l.default.useReducedMotion);
+  return (0, o.useCanSeeSafetyEducationReportingCoachmark)() ? (0, n.jsx)(i.default, {
+    asset: (0, n.jsx)(r.default, {
       src: "https://cdn.discordapp.com/attachments/1063579271815245944/1095089224421740695/CEC_Reporting_Animation_v03_EN_1x1_Music_1.mp4",
       loop: !0,
-      autoPlay: !n,
+      autoPlay: !a,
       className: c.video,
       width: "100%"
     }),

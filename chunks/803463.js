@@ -1,29 +1,29 @@
 "use strict";
-s.r(t), s.d(t, {
+t.r(s), t.d(s, {
   default: function() {
     return d
   }
 });
-var n = s("735250");
-s("470079");
-var a = s("481060"),
-  i = s("905661"),
-  o = s("302945"),
-  r = s("474936"),
-  u = s("981631"),
-  l = s("689938"),
-  c = s("758108");
+var n = t("735250");
+t("470079");
+var a = t("481060"),
+  i = t("905661"),
+  o = t("302945"),
+  l = t("474936"),
+  r = t("981631"),
+  u = t("689938"),
+  c = t("758108");
 
 function d(e) {
   let {
-    transitionState: t,
+    transitionState: s,
     onClose: d
   } = e;
   return (0, n.jsxs)(a.ModalRoot, {
-    transitionState: t,
+    transitionState: s,
     children: [(0, n.jsx)("img", {
       className: c.image,
-      src: s("279360"),
+      src: t("279360"),
       alt: ""
     }), (0, n.jsx)(a.ModalCloseButton, {
       className: c.close,
@@ -33,19 +33,19 @@ function d(e) {
       children: [(0, n.jsx)(a.Heading, {
         className: c.title,
         variant: "heading-xl/bold",
-        children: l.default.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_ENDED_UPSELL_TITLE
+        children: u.default.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_ENDED_UPSELL_TITLE
       }), (0, n.jsx)(o.default, {
         forceShow: !0,
         className: c.usersContainer,
-        premiumUpsellType: r.PremiumUpsellTypes.STREAM_QUALITY_UPSELL
+        premiumUpsellType: l.PremiumUpsellTypes.STREAM_QUALITY_UPSELL
       }), (0, n.jsx)(a.Text, {
         className: c.description,
         variant: "text-sm/medium",
-        children: l.default.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_ENDED_UPSELL_BODY
+        children: u.default.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_ENDED_UPSELL_BODY
       })]
     }), (0, n.jsx)(i.default, {
       onClose: d,
-      section: u.AnalyticsSections.PREMIUM_PERKS_DEMO_UPSELL_MODAL
+      section: r.AnalyticsSections.PREMIUM_PERKS_DEMO_UPSELL_MODAL
     })]
   })
 }

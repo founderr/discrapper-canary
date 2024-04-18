@@ -1,31 +1,31 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return p
   }
 });
-var a = n("735250"),
-  s = n("470079"),
-  l = n("692547"),
-  i = n("194359"),
-  r = n("906732"),
-  o = n("171368"),
-  u = n("594174"),
-  d = n("263704"),
-  c = n("465670"),
-  f = n("26290"),
-  E = n("626135"),
-  h = n("321488"),
-  _ = n("417183"),
-  C = n("170245"),
-  m = n("981631"),
-  S = n("689938"),
-  I = n("220503");
+var n = a("735250"),
+  s = a("470079"),
+  l = a("692547"),
+  i = a("194359"),
+  r = a("906732"),
+  o = a("171368"),
+  u = a("594174"),
+  d = a("263704"),
+  c = a("465670"),
+  f = a("26290"),
+  E = a("626135"),
+  h = a("321488"),
+  _ = a("417183"),
+  C = a("170245"),
+  m = a("981631"),
+  S = a("689938"),
+  I = a("220503");
 
 function p(e) {
   let {
     user: t,
-    type: n,
+    type: a,
     status: p,
     isFocused: T
   } = e, g = s.useContext(E.AnalyticsContext), {
@@ -41,8 +41,8 @@ function p(e) {
         location: "Friends"
       }
     })
-  }, R = p === m.StatusTypes.OFFLINE ? m.StatusTypes.UNKNOWN : p, O = n === m.RelationshipTypes.PENDING_INCOMING ? S.default.Messages.INCOMING_FRIEND_REQUEST : S.default.Messages.OUTGOING_FRIEND_REQUEST;
-  return (0, a.jsx)(_.default, {
+  }, R = p === m.StatusTypes.OFFLINE ? m.StatusTypes.UNKNOWN : p, O = a === m.RelationshipTypes.PENDING_INCOMING ? S.default.Messages.INCOMING_FRIEND_REQUEST : S.default.Messages.OUTGOING_FRIEND_REQUEST;
+  return (0, n.jsx)(_.default, {
     isFocused: T,
     user: t,
     onClick: () => (0, o.openUserProfileModal)({
@@ -52,43 +52,43 @@ function p(e) {
     }),
     children: e => {
       var s;
-      let i = n === m.RelationshipTypes.PENDING_INCOMING ? (0, a.jsxs)(a.Fragment, {
-        children: [(null === (s = u.default.getCurrentUser()) || void 0 === s ? void 0 : s.isStaff()) && (null == t ? void 0 : t.isStaff()) && (0, a.jsx)("div", {
+      let i = a === m.RelationshipTypes.PENDING_INCOMING ? (0, n.jsxs)(n.Fragment, {
+        children: [(null === (s = u.default.getCurrentUser()) || void 0 === s ? void 0 : s.isStaff()) && (null == t ? void 0 : t.isStaff()) && (0, n.jsx)("div", {
           className: I.staffIndicator,
-          children: (0, a.jsx)(f.TextBadge, {
+          children: (0, n.jsx)(f.TextBadge, {
             color: l.default.unsafe_rawColors.BRAND_500.css,
             text: S.default.Messages.STAFF_BADGE_TOOLTIP
           })
-        }), (0, a.jsx)(h.default, {
+        }), (0, n.jsx)(h.default, {
           icon: d.default,
           actionType: h.default.ActionTypes.ACCEPT,
           tooltip: S.default.Messages.FRIEND_REQUEST_ACCEPT,
           onClick: v,
           shouldHighlight: e
-        }), (0, a.jsx)(h.default, {
+        }), (0, n.jsx)(h.default, {
           icon: c.default,
           actionType: h.default.ActionTypes.DENY,
           tooltip: S.default.Messages.FRIEND_REQUEST_IGNORE,
           onClick: N,
           shouldHighlight: e
         })]
-      }) : (0, a.jsx)(h.default, {
+      }) : (0, n.jsx)(h.default, {
         icon: c.default,
         actionType: h.default.ActionTypes.DENY,
         tooltip: S.default.Messages.FRIEND_REQUEST_CANCEL,
         onClick: N,
         shouldHighlight: e
       });
-      return (0, a.jsxs)("div", {
+      return (0, n.jsxs)("div", {
         className: I.listItemContents,
-        children: [(0, a.jsx)(C.default, {
+        children: [(0, n.jsx)(C.default, {
           user: t,
           hovered: e,
           showAccountIdentifier: !0,
           status: R,
           subText: O,
           className: I.userInfo
-        }), (0, a.jsx)("div", {
+        }), (0, n.jsx)("div", {
           className: I.actions,
           children: i
         })]

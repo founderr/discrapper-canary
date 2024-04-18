@@ -1,6 +1,6 @@
 "use strict";
-n.r(t);
-let a = (0, n("818083").createExperiment)({
+a.r(t);
+let n = (0, a("818083").createExperiment)({
   kind: "user",
   id: "2023-12_marketing_automation_experiment",
   label: "Marketing Automation",
@@ -15,4 +15,4 @@ let a = (0, n("818083").createExperiment)({
     }
   }]
 });
-t.default = a
+t.default = n

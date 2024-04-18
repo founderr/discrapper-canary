@@ -108,7 +108,7 @@ let U = u.default.connectStores([_.default, C.default], e => {
       mentions: _.default.getMentionCount(t.id)
     }
   })(T.GroupDM),
-  V = u.default.connectStores([C.default, _.default], e => {
+  H = u.default.connectStores([C.default, _.default], e => {
     let {
       user: t
     } = e, n = C.default.getDMFromUserId(t.id);
@@ -117,7 +117,7 @@ let U = u.default.connectStores([_.default, C.default], e => {
     }
   })(T.User);
 
-function H(e, t, n) {
+function V(e, t, n) {
   return (0, a.jsx)(d.Tooltip, {
     text: n,
     children: e => (0, a.jsx)("span", {
@@ -224,10 +224,10 @@ class k extends s.PureComponent {
       }),
       type: N.default.Types.INLINE,
       children: O.default.Messages.QUICKSWITCHER_PROTIP.format({
-        userSymbolHook: (e, t) => H(t, p.AutocompleterQuerySymbols.USER, O.default.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
-        textChannelSymbolHook: (e, t) => H(t, p.AutocompleterQuerySymbols.TEXT_CHANNEL, O.default.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
-        voiceChannelSymbolHook: (e, t) => H(t, p.AutocompleterQuerySymbols.VOICE_CHANNEL, O.default.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
-        guildSymbolHook: (e, t) => H(t, p.AutocompleterQuerySymbols.GUILD, O.default.Messages.QUICKSWITCHER_PROTIP_GUILDS),
+        userSymbolHook: (e, t) => V(t, p.AutocompleterQuerySymbols.USER, O.default.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
+        textChannelSymbolHook: (e, t) => V(t, p.AutocompleterQuerySymbols.TEXT_CHANNEL, O.default.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
+        voiceChannelSymbolHook: (e, t) => V(t, p.AutocompleterQuerySymbols.VOICE_CHANNEL, O.default.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
+        guildSymbolHook: (e, t) => V(t, p.AutocompleterQuerySymbols.GUILD, O.default.Messages.QUICKSWITCHER_PROTIP_GUILDS),
         helpdeskArticle: v.default.getArticleURL(M.HelpdeskArticles.QUICK_SWITCHER_TUTORIAL)
       })
     })
@@ -484,7 +484,7 @@ class k extends s.PureComponent {
             score: s ? n.score : void 0
           }, "".concat(n.type, "-").concat(n.record.id));
         case p.AutocompleterResultTypes.USER:
-          return (0, a.jsx)(V, {
+          return (0, a.jsx)(H, {
             id: this.getRowId(t),
             focused: l >= 0 && t === l,
             onClick: () => this.selectResult(n),

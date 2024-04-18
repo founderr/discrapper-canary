@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n("47120");
-var a, s, l, i, r = n("442837"),
-  o = n("433517"),
-  u = n("570140"),
-  d = n("695346"),
-  c = n("581883"),
-  f = n("314897"),
-  E = n("592125"),
-  h = n("885110"),
-  _ = n("981631");
+a.r(t), a("47120");
+var n, s, l, i, r = a("442837"),
+  o = a("433517"),
+  u = a("570140"),
+  d = a("695346"),
+  c = a("581883"),
+  f = a("314897"),
+  E = a("592125"),
+  h = a("885110"),
+  _ = a("981631");
 let C = "IncomingCallStore",
   m = {
     width: 232,
@@ -30,26 +30,26 @@ function v(e) {
 function R(e) {
   let {
     channelId: t,
-    ringing: n
-  } = e, a = n.includes(f.default.getId());
-  if (!T.has(t) && a) {
+    ringing: a
+  } = e, n = a.includes(f.default.getId());
+  if (!T.has(t) && n) {
     let e = E.default.getChannel(t);
     if (null == e) return !1;
-    let n = 10 * T.size;
+    let a = 10 * T.size;
     p.set(t, {
       channel: e,
-      x: g + n,
-      y: A + n
+      x: g + a,
+      y: A + a
     }), (T = new Set(T)).add(t)
   } else {
-    if (!T.has(t) || a) return !1;
+    if (!T.has(t) || n) return !1;
     v(t)
   }
 }! function() {
   let e = o.Storage.get(C);
   if (null != e) g = +e.x, A = +e.y;
   else {
-    let e = n("451478").default.windowSize();
+    let e = a("451478").default.windowSize();
     g = e.width / 2 - m.width / 2, A = e.height / 2 - m.height / 2
   }
 }();
@@ -57,7 +57,7 @@ function R(e) {
 function O() {
   N = h.default.getStatus() === _.StatusTypes.DND || d.FocusMode.getSetting()
 }
-class L extends(a = r.default.Store) {
+class L extends(n = r.default.Store) {
   initialize() {
     this.waitFor(E.default, h.default), this.syncWith([h.default], O), this.syncWith([c.default], O)
   }
@@ -97,9 +97,9 @@ i = "IncomingCallStore", (l = "displayName") in(s = L) ? Object.defineProperty(s
   INCOMING_CALL_MOVE: function(e) {
     let {
       x: t,
-      y: n
+      y: a
     } = e;
-    return g = t, A = n, o.Storage.set(C, {
+    return g = t, A = a, o.Storage.set(C, {
       x: g,
       y: A
     }), !1

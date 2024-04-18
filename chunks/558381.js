@@ -13,13 +13,13 @@ n.r(t), n.d(t, {
     return f
   },
   goToApplicationStoreListing: function() {
-    return v
-  },
-  goToSKUStoreListing: function() {
     return x
   },
-  joinPublishedStoreListingSkuGuild: function() {
+  goToSKUStoreListing: function() {
     return g
+  },
+  joinPublishedStoreListingSkuGuild: function() {
+    return v
   },
   matureAgree: function() {
     return p
@@ -30,18 +30,18 @@ n.r(t), n.d(t, {
 });
 var i = n("544891"),
   r = n("570140"),
-  l = n("115130");
+  s = n("115130");
 n("812206");
-var s = n("703656"),
+var l = n("703656"),
   a = n("55563");
 n("551428");
 var o = n("695103"),
-  d = n("73346"),
-  c = n("981631");
+  c = n("73346"),
+  d = n("981631");
 
 function u(e) {
-  return (0, d.httpGetWithCountryCodeQuery)({
-    url: c.Endpoints.STORE_PUBLISHED_LISTINGS_SKUS,
+  return (0, c.httpGetWithCountryCodeQuery)({
+    url: d.Endpoints.STORE_PUBLISHED_LISTINGS_SKUS,
     query: {
       application_id: e
     },
@@ -54,8 +54,8 @@ function u(e) {
 
 function f(e) {
   let t = a.default.get(e),
-    n = null != t && (o.default.inTestModeForApplication(t.applicationId) || l.default.inDevModeForApplication(t.applicationId));
-  return (0, d.httpGetWithCountryCodeQuery)(n ? c.Endpoints.STORE_LISTINGS_SKU(e) : c.Endpoints.STORE_PUBLISHED_LISTINGS_SKU(e)).then(e => {
+    n = null != t && (o.default.inTestModeForApplication(t.applicationId) || s.default.inDevModeForApplication(t.applicationId));
+  return (0, c.httpGetWithCountryCodeQuery)(n ? d.Endpoints.STORE_LISTINGS_SKU(e) : d.Endpoints.STORE_PUBLISHED_LISTINGS_SKU(e)).then(e => {
     n ? r.default.dispatch({
       type: "STORE_LISTINGS_FETCH_SUCCESS",
       storeListings: e.body
@@ -67,7 +67,7 @@ function f(e) {
 }
 
 function h(e) {
-  return (0, d.httpGetWithCountryCodeQuery)(c.Endpoints.STORE_LISTING(e)).then(e => {
+  return (0, c.httpGetWithCountryCodeQuery)(d.Endpoints.STORE_LISTING(e)).then(e => {
     r.default.dispatch({
       type: "STORE_LISTING_FETCH_SUCCESS",
       storeListing: e.body
@@ -76,7 +76,7 @@ function h(e) {
 }
 
 function m(e) {
-  return (0, d.httpGetWithCountryCodeQuery)(c.Endpoints.STORE_PUBLISHED_LISTINGS_APPLICATION(e)).then(e => {
+  return (0, c.httpGetWithCountryCodeQuery)(d.Endpoints.STORE_PUBLISHED_LISTINGS_APPLICATION(e)).then(e => {
     r.default.dispatch({
       type: "STORE_LISTING_FETCH_SUCCESS",
       storeListing: e.body
@@ -91,28 +91,28 @@ function p() {
 }
 
 function S() {
-  (0, s.transitionTo)(c.Routes.APPLICATION_STORE)
+  (0, l.transitionTo)(d.Routes.APPLICATION_STORE)
 }
 
-function g(e) {
+function v(e) {
   return i.HTTP.post({
-    url: c.Endpoints.STORE_PUBLISHED_LISTINGS_SKU_JOIN_GUILD(e),
+    url: d.Endpoints.STORE_PUBLISHED_LISTINGS_SKU_JOIN_GUILD(e),
     oldFormErrors: !0
   })
+}
+
+function g(e, t) {
+  let {
+    pathname: n,
+    ...i
+  } = (0, c.getStoreListingLocation)(e, t);
+  (0, l.transitionTo)(n, i)
 }
 
 function x(e, t) {
   let {
     pathname: n,
     ...i
-  } = (0, d.getStoreListingLocation)(e, t);
-  (0, s.transitionTo)(n, i)
-}
-
-function v(e, t) {
-  let {
-    pathname: n,
-    ...i
-  } = (0, d.getApplicationStoreListingLocation)(e, t);
-  (0, s.transitionTo)(n, i)
+  } = (0, c.getApplicationStoreListingLocation)(e, t);
+  (0, l.transitionTo)(n, i)
 }

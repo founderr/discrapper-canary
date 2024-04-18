@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   getPartyMetadata: function() {
     return l
   }
 });
-var a = n("603113"),
-  s = n("122810");
+var n = a("603113"),
+  s = a("122810");
 
 function l(e) {
   return {
@@ -17,6 +17,6 @@ function l(e) {
       } = e;
       return (0, s.default)(t)
     }),
-    game_platform: e.currentActivities.length > 0 ? (0, a.default)(e.currentActivities[0].activity) : null
+    game_platform: e.currentActivities.length > 0 ? (0, n.default)(e.currentActivities[0].activity) : null
   }
 }

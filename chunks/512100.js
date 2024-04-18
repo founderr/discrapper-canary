@@ -6,12 +6,12 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  l = n("789978"),
-  s = n("727075"),
+  s = n("789978"),
+  l = n("727075"),
   a = n("349361"),
   o = n("777207"),
-  d = n("330711"),
-  c = n("960016");
+  c = n("330711"),
+  d = n("960016");
 
 function u(e) {
   let {
@@ -22,29 +22,29 @@ function u(e) {
     onClose: h,
     tag: m,
     FallbackIcon: p
-  } = e, S = r.useRef(null), [g, x] = r.useState(!0), v = null != u ? {
+  } = e, S = r.useRef(null), [v, g] = r.useState(!0), x = null != u ? {
     "--custom-background-url": "url(".concat(u.toString(), ")")
   } : void 0, C = () => {
     var e;
-    (null === (e = S.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) === !0 ? x(!1) : x(!0)
+    (null === (e = S.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) === !0 ? g(!1) : g(!0)
   };
   return (0, i.jsxs)("div", {
-    className: c.container,
+    className: d.container,
     children: [(0, i.jsxs)("div", {
-      className: c.header,
+      className: d.header,
       children: [(0, i.jsx)("div", {
-        className: c.headerBackground,
-        style: v
+        className: d.headerBackground,
+        style: x
       }), (0, i.jsxs)("div", {
-        className: c.headerTop,
+        className: d.headerTop,
         children: [(0, i.jsx)("div", {
           children: m
-        }), (0, i.jsx)(l.FocusRing, {
+        }), (0, i.jsx)(s.FocusRing, {
           children: (0, i.jsx)("button", {
             onClick: h,
-            className: c.closeBtn,
+            className: d.closeBtn,
             type: "button",
-            children: (0, i.jsx)(s.CloseSmallIcon, {
+            children: (0, i.jsx)(l.CloseSmallIcon, {
               height: 24,
               width: 24,
               color: "var(--header-primary)"
@@ -52,7 +52,7 @@ function u(e) {
           })
         })]
       }), (0, i.jsx)("div", {
-        className: c.headerImage,
+        className: d.headerImage,
         children: null != u ? (0, i.jsx)("img", {
           src: u.toString(),
           alt: ""
@@ -63,44 +63,44 @@ function u(e) {
         })
       })]
     }), (0, i.jsxs)(a.AdvancedScrollerThin, {
-      className: c.scroll,
+      className: d.scroll,
       fade: !0,
       ref: e => {
         null != e && (S.current = e, C())
       },
       onScroll: C,
       children: [(0, i.jsx)("br", {}), (0, i.jsxs)("div", {
-        className: c.scrollContent,
+        className: d.scrollContent,
         children: [(0, i.jsx)(o.Text, {
           color: "header-primary",
           tag: "div",
           variant: "heading-xl/semibold",
           children: f
         }), (null != n && "" !== n || null != t) && (0, i.jsxs)("div", {
-          className: c.details,
+          className: d.details,
           children: [(0, i.jsx)(o.Text, {
             color: "header-primary",
             tag: "div",
             variant: "heading-lg/semibold",
-            children: d.default.Messages.Storefront.PRODUCT_DETAILS
+            children: c.default.Messages.Storefront.PRODUCT_DETAILS
           }), (0, i.jsx)(o.Text, {
             color: "text-muted",
             variant: "text-md/normal",
-            className: c.description,
+            className: d.description,
             children: n
           }), null != t && (0, i.jsxs)("div", {
-            className: c.benefits,
+            className: d.benefits,
             children: [(0, i.jsx)(o.Text, {
               color: "header-secondary",
               variant: "eyebrow",
-              children: d.default.Messages.Storefront.BENEFITS_TITLE
+              children: c.default.Messages.Storefront.BENEFITS_TITLE
             }), t]
           })]
         })]
       })]
     }), (0, i.jsx)("div", {
-      className: c.containerScrollGradient,
-      "data-shown": g
+      className: d.containerScrollGradient,
+      "data-shown": v
     })]
   })
 }

@@ -4,16 +4,16 @@
 
   function n() {
     for (var e = "", r = 0; r < arguments.length; r++) {
-      var l = arguments[r];
-      l && (e = i(e, function(e) {
+      var s = arguments[r];
+      s && (e = i(e, function(e) {
         if ("string" == typeof e || "number" == typeof e) return e;
         if ("object" != typeof e) return "";
         if (Array.isArray(e)) return n.apply(null, e);
         if (e.toString !== Object.prototype.toString && !e.toString.toString().includes("[native code]")) return e.toString();
         var r = "";
-        for (var l in e) t.call(e, l) && e[l] && (r = i(r, l));
+        for (var s in e) t.call(e, s) && e[s] && (r = i(r, s));
         return r
-      }(l)))
+      }(s)))
     }
     return e
   }

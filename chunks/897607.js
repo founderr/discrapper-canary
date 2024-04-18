@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("735250");
-n("470079");
-var s = n("392711"),
-  l = n.n(s),
-  i = n("481060"),
-  r = n("463395"),
-  o = n("820486"),
-  u = n("131951"),
-  d = n("65154");
+a.r(t), a("47120");
+var n = a("735250");
+a("470079");
+var s = a("392711"),
+  l = a.n(s),
+  i = a("481060"),
+  r = a("463395"),
+  o = a("820486"),
+  u = a("131951"),
+  d = a("65154");
 let c = new Set(["DisplayPort"]),
   f = !1;
 
@@ -28,13 +28,13 @@ function E() {
   null != m && (o.default.initialized && null != C && (r.default.isCertified(o.default.inputDevices[C]) ? e = r.default.getCertifiedDevice(o.default.inputDevices[C]) : r.default.isCertified(o.default.outputDevices[C]) && (e = r.default.getCertifiedDevice(o.default.outputDevices[C]))), f = !0, (0, i.openModalLazy)(async () => {
     let {
       default: t
-    } = await Promise.all([n.e("99387"), n.e("83536")]).then(n.bind(n, "43991"));
-    return n => {
+    } = await Promise.all([a.e("99387"), a.e("83536")]).then(a.bind(a, "43991"));
+    return a => {
       let {
         transitionState: s,
         onClose: l
-      } = n;
-      return (0, a.jsx)(t, {
+      } = a;
+      return (0, n.jsx)(t, {
         device: m,
         certifiedDeviceMetadata: e,
         transitionState: s,

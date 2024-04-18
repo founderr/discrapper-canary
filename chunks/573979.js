@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return o
   }
 });
-var a, s, l, i, r = n("358085");
+var n, s, l, i, r = a("358085");
 
 function o(e) {
   if ((0, r.isIOS)()) return e;
@@ -24,4 +24,4 @@ function o(e) {
     default:
       return -1
   }
-}(a = l || (l = {}))[a.UNHANDLED = -1] = "UNHANDLED", a[a.NOMINAL = 0] = "NOMINAL", a[a.FAIR = 1] = "FAIR", a[a.SERIOUS = 2] = "SERIOUS", a[a.CRITICAL = 3] = "CRITICAL", (s = i || (i = {}))[s.NONE = 0] = "NONE", s[s.LIGHT = 1] = "LIGHT", s[s.MODERATE = 2] = "MODERATE", s[s.SEVERE = 3] = "SEVERE", s[s.CRITICAL = 4] = "CRITICAL", s[s.EMERGENCY = 5] = "EMERGENCY", s[s.SHUTDOWN = 6] = "SHUTDOWN"
+}(n = l || (l = {}))[n.UNHANDLED = -1] = "UNHANDLED", n[n.NOMINAL = 0] = "NOMINAL", n[n.FAIR = 1] = "FAIR", n[n.SERIOUS = 2] = "SERIOUS", n[n.CRITICAL = 3] = "CRITICAL", (s = i || (i = {}))[s.NONE = 0] = "NONE", s[s.LIGHT = 1] = "LIGHT", s[s.MODERATE = 2] = "MODERATE", s[s.SEVERE = 3] = "SEVERE", s[s.CRITICAL = 4] = "CRITICAL", s[s.EMERGENCY = 5] = "EMERGENCY", s[s.SHUTDOWN = 6] = "SHUTDOWN"

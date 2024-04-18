@@ -1,9 +1,9 @@
 "use strict";
-n.r(t), n("411104");
-var a = n("570140"),
-  s = n("51025"),
-  l = n("314897"),
-  i = n("804739");
+a.r(t), a("411104");
+var n = a("570140"),
+  s = a("51025"),
+  l = a("314897"),
+  i = a("804739");
 
 function r() {
   if (!(0, i.isSupportedPlatform)()) return;
@@ -18,6 +18,6 @@ function o() {
 }
 t.default = {
   init() {
-    a.default.subscribe("CONNECTION_OPEN", r), a.default.subscribe("LOGOUT", o)
+    n.default.subscribe("CONNECTION_OPEN", r), n.default.subscribe("LOGOUT", o)
   }
 }

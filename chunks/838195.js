@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   openActivityShareMomentModal: function() {
     return r
   }
 });
-var a = n("735250");
-n("470079");
-var s = n("481060"),
-  l = n("522474"),
-  i = n("981631");
+var n = a("735250");
+a("470079");
+var s = a("481060"),
+  l = a("522474"),
+  i = a("981631");
 
 function r(e) {
   let {
@@ -19,12 +19,12 @@ function r(e) {
   (0, s.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([n.e("99387"), n.e("4530")]).then(n.bind(n, "899201"));
-    return n => (0, a.jsx)(e, {
+    } = await Promise.all([a.e("99387"), a.e("4530")]).then(a.bind(a, "899201"));
+    return a => (0, n.jsx)(e, {
       applicationId: t,
       channelId: r,
       mediaUrl: o,
-      ...n
+      ...a
     })
   }, {
     modalKey: "activity-share-moment-modal",

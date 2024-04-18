@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   fetchEmailSettings: function() {
     return u
   },
@@ -9,24 +9,24 @@ n.r(t), n.d(t, {
   updateMarketingEmailSettings: function() {
     return c
   }
-}), n("724458");
-var a = n("990547"),
-  s = n("283693"),
-  l = n("570140"),
-  i = n("573261"),
-  r = n("930441"),
-  o = n("981631");
+}), a("724458");
+var n = a("990547"),
+  s = a("283693"),
+  l = a("570140"),
+  i = a("573261"),
+  r = a("930441"),
+  o = a("981631");
 async function u() {
   try {
     let e = await i.default.get({
       url: o.Endpoints.EMAIL_SETTINGS,
       trackedActionData: {
-        event: a.NetworkActionNames.EMAIL_SETTINGS_FETCH,
+        event: n.NetworkActionNames.EMAIL_SETTINGS_FETCH,
         properties: e => {
           var t;
-          let n = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.initialized;
+          let a = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.initialized;
           return (0, s.exact)({
-            initialized: n
+            initialized: a
           })
         }
       }
@@ -49,7 +49,7 @@ async function d(e, t) {
     }
   });
   try {
-    let n = await i.default.patch({
+    let a = await i.default.patch({
       url: o.Endpoints.EMAIL_SETTINGS,
       body: {
         settings: {
@@ -59,7 +59,7 @@ async function d(e, t) {
         }
       },
       trackedActionData: {
-        event: a.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
+        event: n.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
         properties: {
           category: e,
           value: t
@@ -68,7 +68,7 @@ async function d(e, t) {
     });
     l.default.dispatch({
       type: "EMAIL_SETTINGS_UPDATE_SUCCESS",
-      settings: n.body
+      settings: a.body
     })
   } catch (e) {
     l.default.dispatch({
@@ -94,7 +94,7 @@ async function c() {
         }
       },
       trackedActionData: {
-        event: a.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
+        event: n.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
         properties: {
           category: "marketing",
           value: !1

@@ -1,9 +1,9 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var s = n("481060"),
-  l = n("570140");
+a.r(t);
+var n = a("735250");
+a("470079");
+var s = a("481060"),
+  l = a("570140");
 let i = !1,
   r = null;
 t.default = {
@@ -18,15 +18,15 @@ t.default = {
         l = r, i || (i = !0, (0, s.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([n.e("99387"), n.e("62903")]).then(n.bind(n, "645586"));
+          } = await Promise.all([a.e("99387"), a.e("62903")]).then(a.bind(a, "645586"));
           return t => {
             let {
-              transitionState: n,
+              transitionState: a,
               onClose: s
             } = t;
-            return (0, a.jsx)(e, {
+            return (0, n.jsx)(e, {
               pendingPayment: l,
-              transitionState: n,
+              transitionState: a,
               onClose: () => (i = !1, s())
             })
           }

@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n("653041");
-var a, s = n("442837"),
-  l = n("570140"),
-  i = n("695346"),
-  r = n("885110"),
-  o = n("70956"),
-  u = n("981631");
+a.r(t), a("653041");
+var n, s = a("442837"),
+  l = a("570140"),
+  i = a("695346"),
+  r = a("885110"),
+  o = a("70956"),
+  u = a("981631");
 
-function d(e, t, n) {
+function d(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: a,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = a, e
 }
 let c = [],
   f = !1;
@@ -21,7 +21,7 @@ let c = [],
 function E() {
   return c.length >= 4 && c.some(e => e < Date.now() - 3 * o.default.Millis.DAY)
 }
-class h extends(a = s.default.PersistedStore) {
+class h extends(n = s.default.PersistedStore) {
   initialize(e) {
     null != e && Array.isArray(e.sessionStartsWithDND) && (c = e.sessionStartsWithDND)
   }

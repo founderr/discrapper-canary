@@ -1,13 +1,13 @@
 "use strict";
-n.r(t);
-var a = n("857192"),
-  s = n("901077"),
-  l = n("915357"),
-  i = n("981631");
+a.r(t);
+var n = a("857192"),
+  s = a("901077"),
+  l = a("915357"),
+  i = a("981631");
 t.default = e => {
   let {
     origin: t,
-    postMessageToRPCClient: n,
+    postMessageToRPCClient: a,
     frameId: r,
     version: o,
     encoding: u,
@@ -16,14 +16,14 @@ t.default = e => {
   } = e;
   return new l.default({
     origin: t,
-    postMessageToRPCClient: n,
+    postMessageToRPCClient: a,
     frameId: r,
     version: o,
     encoding: u,
     logger: d,
     postClose: c,
     onSendingToRPCClient: (e, t) => {
-      (a.default.isLoggingOverlayEvents || e.cmd !== i.RPCCommands.OVERLAY && e.evt !== i.RPCEvents.OVERLAY) && d.info("Socket Emit: ".concat(t), (0, s.default)(e))
+      (n.default.isLoggingOverlayEvents || e.cmd !== i.RPCCommands.OVERLAY && e.evt !== i.RPCEvents.OVERLAY) && d.info("Socket Emit: ".concat(t), (0, s.default)(e))
     }
   })
 }

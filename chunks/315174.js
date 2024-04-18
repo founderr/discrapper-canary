@@ -126,12 +126,12 @@ t.default = a.memo(function(e) {
     headerClassName: O,
     communityInfoVisible: b,
     hasSubheader: D
-  } = e, j = x.hasFeature(C.GuildFeatures.ANIMATED_BANNER), P = (0, d.default)(x), G = !P && x.hasCommunityInfoSubheader(), U = (0, p.isAnimatedIconHash)(R) && j && !A, [w, F] = a.useState(!1), B = a.useRef(), V = a.useRef(null), H = a.useRef(), k = c.GifAutoPlay.getSetting();
+  } = e, j = x.hasFeature(C.GuildFeatures.ANIMATED_BANNER), P = (0, d.default)(x), G = !P && x.hasCommunityInfoSubheader(), U = (0, p.isAnimatedIconHash)(R) && j && !A, [w, F] = a.useState(!1), B = a.useRef(), H = a.useRef(null), V = a.useRef(), k = c.GifAutoPlay.getSetting();
   a.useEffect(() => {
-    if (U && n && !B.current && k) return F(!0), H.current = setTimeout(() => {
+    if (U && n && !B.current && k) return F(!0), V.current = setTimeout(() => {
       F(!1)
     }, 5e3), () => {
-      clearTimeout(H.current)
+      clearTimeout(V.current)
     }
   }, [U, n, k]), a.useEffect(() => {
     B.current = n
@@ -145,7 +145,7 @@ t.default = a.memo(function(e) {
   };
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)("div", {
-      ref: V,
+      ref: H,
       className: i()(r, {
         [_.container]: !0,
         [_.clickable]: null != f,
@@ -176,7 +176,7 @@ t.default = a.memo(function(e) {
             "aria-controls": v,
             "aria-expanded": L,
             focusProps: {
-              ringTarget: V,
+              ringTarget: H,
               offset: 4
             },
             onClick: f,
@@ -203,7 +203,7 @@ t.default = a.memo(function(e) {
     }), U && Y() ? (0, l.jsx)("div", {
       className: _.animatedBannerHoverLayer,
       onMouseEnter: () => {
-        F(!0), clearTimeout(H.current)
+        F(!0), clearTimeout(V.current)
       },
       onMouseLeave: () => F(!1),
       style: {

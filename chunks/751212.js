@@ -22,14 +22,14 @@ var i, a, n = s("735250"),
   T = s("471445"),
   x = s("423589"),
   I = s("74888"),
-  C = s("444899"),
-  p = s("11352"),
-  O = s("610617"),
+  O = s("444899"),
+  C = s("11352"),
+  p = s("610617"),
   M = s("777861"),
   v = s("131704"),
   L = s("592125"),
-  j = s("324067"),
-  A = s("650774"),
+  A = s("324067"),
+  j = s("650774"),
   R = s("430824"),
   b = s("699516"),
   U = s("9156"),
@@ -40,8 +40,8 @@ var i, a, n = s("735250"),
   H = s("63063"),
   y = s("621600"),
   w = s("981631"),
-  B = s("969943"),
-  k = s("689938"),
+  k = s("969943"),
+  B = s("689938"),
   Y = s("154460");
 
 function V(e, t, s) {
@@ -111,7 +111,7 @@ class W extends l.PureComponent {
       children: [(0, n.jsxs)(F.default.Child, {
         children: [(0, n.jsx)(g.Heading, {
           variant: "heading-lg/semibold",
-          children: k.default.Messages.NOTIFICATION_SETTINGS
+          children: B.default.Messages.NOTIFICATION_SETTINGS
         }), (0, n.jsx)(g.Text, {
           variant: "text-md/normal",
           className: Y.guildName,
@@ -129,7 +129,7 @@ class W extends l.PureComponent {
     return (0, n.jsx)(g.ModalFooter, {
       children: (0, n.jsx)(g.Button, {
         onClick: this.props.onClose,
-        children: k.default.Messages.DONE
+        children: B.default.Messages.DONE
       })
     })
   }
@@ -139,15 +139,15 @@ class W extends l.PureComponent {
       muted: t,
       muteConfig: s,
       guild: i
-    } = this.props, a = null !== (e = null == s ? void 0 : s.selected_time_window) && void 0 !== e ? e : B.MuteUntilSeconds.ALWAYS;
+    } = this.props, a = null !== (e = null == s ? void 0 : s.selected_time_window) && void 0 !== e ? e : k.MuteUntilSeconds.ALWAYS;
     return null == i ? null : (0, n.jsxs)(g.FormItem, {
       className: Y.largeSpacing,
       children: [(0, n.jsx)(g.FormSwitch, {
         hideBorder: !0,
         value: t,
         onChange: e => this.handleCheckboxChange("muted", e, y.NotificationLabel.muted(e)),
-        note: k.default.Messages.FORM_LABEL_MUTE_SERVER_DESCRIPTION,
-        children: k.default.Messages.FORM_LABEL_MUTE_SERVER.format({
+        note: B.default.Messages.FORM_LABEL_MUTE_SERVER_DESCRIPTION,
+        children: B.default.Messages.FORM_LABEL_MUTE_SERVER.format({
           name: i.name
         })
       }), t ? (0, n.jsxs)(F.default, {
@@ -159,7 +159,7 @@ class W extends l.PureComponent {
           children: [(0, n.jsx)(g.FormTitle, {
             tag: "h3",
             className: Y.muteUntilTitle,
-            children: k.default.Messages.MUTE_UNTIL
+            children: B.default.Messages.MUTE_UNTIL
           }), (0, n.jsx)(M.default, {
             className: Y.muteUntilText,
             muteConfig: s
@@ -183,21 +183,21 @@ class W extends l.PureComponent {
     return (0, n.jsxs)("div", {
       className: Y.spacing,
       children: [(0, n.jsx)(g.FormItem, {
-        title: k.default.Messages.FORM_LABEL_SERVER_NOTIFICATION_SETTINGS,
+        title: B.default.Messages.FORM_LABEL_SERVER_NOTIFICATION_SETTINGS,
         className: Y.largeSpacing,
         children: (0, n.jsx)(g.RadioGroup, {
           disabled: s,
           value: t,
           onChange: e => this.handleRadioChange("message_notifications", e, y.NotificationLabel.notifications(e.value)),
           options: (e = i, [{
-            name: k.default.Messages.FORM_LABEL_ALL_MESSAGES,
+            name: B.default.Messages.FORM_LABEL_ALL_MESSAGES,
             value: w.UserNotificationSettings.ALL_MESSAGES,
-            desc: null != e && e >= w.MAX_MEMBERS_NOTIFY_ALL_MESSAGES ? k.default.Messages.LARGE_GUILD_NOTIFY_ALL_MESSAGES_DESCRIPTION : null
+            desc: null != e && e >= w.MAX_MEMBERS_NOTIFY_ALL_MESSAGES ? B.default.Messages.LARGE_GUILD_NOTIFY_ALL_MESSAGES_DESCRIPTION : null
           }, {
-            name: k.default.Messages.FORM_LABEL_ONLY_MENTIONS.format(),
+            name: B.default.Messages.FORM_LABEL_ONLY_MENTIONS.format(),
             value: w.UserNotificationSettings.ONLY_MENTIONS
           }, {
-            name: k.default.Messages.FORM_LABEL_NOTHING,
+            name: B.default.Messages.FORM_LABEL_NOTHING,
             value: w.UserNotificationSettings.NO_MESSAGES
           }])
         })
@@ -219,11 +219,11 @@ class W extends l.PureComponent {
       children: [(0, n.jsx)(g.FormSwitch, {
         onChange: e => this.handleCheckboxChange("suppress_everyone", e, y.NotificationLabel.suppressEveryone(e)),
         value: e,
-        children: k.default.Messages.FORM_LABEL_SUPPRESS_EVERYONE.format()
+        children: B.default.Messages.FORM_LABEL_SUPPRESS_EVERYONE.format()
       }), (0, n.jsx)(g.FormSwitch, {
         onChange: e => this.handleCheckboxChange("suppress_roles", e, y.NotificationLabel.suppressRoles(e)),
         value: t,
-        children: k.default.Messages.FORM_LABEL_SUPPRESS_ROLES
+        children: B.default.Messages.FORM_LABEL_SUPPRESS_ROLES
       }), (0, n.jsx)(g.FormSwitch, {
         onChange: e => {
           f.default.updateGuildNotificationSettings(r, {
@@ -235,27 +235,27 @@ class W extends l.PureComponent {
         note: (0, n.jsxs)(n.Fragment, {
           children: [(0, n.jsx)(g.Text, {
             variant: "text-sm/normal",
-            children: k.default.Messages.HIGHLIGHTS_NOTE_SUBTEXT
+            children: B.default.Messages.HIGHLIGHTS_NOTE_SUBTEXT
           }), (0, n.jsx)("div", {
             className: Y.highlightsLink,
             children: (0, n.jsx)(g.Anchor, {
               href: H.default.getArticleURL(w.HelpdeskArticles.HIGHLIGHTS),
-              children: k.default.Messages.HIGHLIGHTS_LEARN_MORE
+              children: B.default.Messages.HIGHLIGHTS_LEARN_MORE
             })
           })]
         }),
         children: (0, n.jsx)(n.Fragment, {
-          children: k.default.Messages.FORM_LABEL_SUPPRESS_HIGHLIGHTS
+          children: B.default.Messages.FORM_LABEL_SUPPRESS_HIGHLIGHTS
         })
       }), (0, n.jsx)(g.FormSwitch, {
         value: a,
         onChange: e => this.handleCheckboxChange("mute_scheduled_events", e, y.NotificationLabel.mutedEvents(e)),
-        children: k.default.Messages.FORM_LABEL_MUTE_SCHEDULED_EVENTS
+        children: B.default.Messages.FORM_LABEL_MUTE_SCHEDULED_EVENTS
       }), (0, n.jsx)(g.FormSwitch, {
         value: !i && s,
         disabled: i,
         onChange: e => this.handleCheckboxChange("mobile_push", e, y.NotificationLabel.mobilePush(e)),
-        children: k.default.Messages.FORM_LABEL_MOBILE_PUSH_NOTIFICATIONS
+        children: B.default.Messages.FORM_LABEL_MOBILE_PUSH_NOTIFICATIONS
       })]
     })
   }
@@ -265,7 +265,7 @@ class W extends l.PureComponent {
       guildId: t,
       onClose: s
     } = this.props;
-    if (e) return (0, n.jsx)(O.default, {
+    if (e) return (0, n.jsx)(p.default, {
       guildId: t,
       onClose: s
     })
@@ -289,15 +289,15 @@ class W extends l.PureComponent {
       }
     }).value();
     return (0, n.jsxs)(g.FormItem, {
-      title: k.default.Messages.NOTIFICATION_OVERRIDES,
+      title: B.default.Messages.NOTIFICATION_OVERRIDES,
       className: Y.largeSpacing,
       children: [(0, n.jsx)(g.FormText, {
         type: g.FormText.Types.DESCRIPTION,
         className: Y.smallSpacing,
-        children: k.default.Messages.ADD_CHANNEL_TO_OVERRIDE
+        children: B.default.Messages.ADD_CHANNEL_TO_OVERRIDE
       }), (0, n.jsx)(g.SearchableSelect, {
         value: w.EMPTY_STRING_SNOWFLAKE_ID,
-        placeholder: k.default.Messages.SELECT_CHANNEL_OR_CATEGORY,
+        placeholder: B.default.Messages.SELECT_CHANNEL_OR_CATEGORY,
         renderOptionLabel: this.renderOptionLabel,
         options: s,
         onChange: this.handleSelectChange
@@ -320,7 +320,7 @@ class W extends l.PureComponent {
       } = s;
       if (!r.has(d.id) || null != a[d.id] && 0 === a[d.id].length) return null;
       let o = e[d.id];
-      return (0, n.jsx)(C.ChannelNotificationSettings, {
+      return (0, n.jsx)(O.ChannelNotificationSettings, {
         ref: e => {
           this._channelRefs[d.id] = e
         },
@@ -338,7 +338,7 @@ class W extends l.PureComponent {
       children: (0, n.jsx)(g.Text, {
         className: Y.overrideHeader,
         variant: "text-sm/semibold",
-        children: k.default.Messages.ADD_CHANNEL_TO_OVERRIDE
+        children: B.default.Messages.ADD_CHANNEL_TO_OVERRIDE
       })
     }, "placeholder")), (0, n.jsxs)("div", {
       className: Y.overrideList,
@@ -346,28 +346,28 @@ class W extends l.PureComponent {
         children: [(0, n.jsx)(g.Heading, {
           variant: "eyebrow",
           className: Y.headerName,
-          children: k.default.Messages.CHANNEL_OR_CATEGORY
+          children: B.default.Messages.CHANNEL_OR_CATEGORY
         }), (0, n.jsx)(g.Heading, {
           variant: "eyebrow",
           className: Y.headerOption,
-          children: k.default.Messages.FORM_LABEL_ALL
+          children: B.default.Messages.FORM_LABEL_ALL
         }), (0, n.jsx)(g.Heading, {
           variant: "eyebrow",
           className: Y.headerOption,
-          children: k.default.Messages.FORM_LABEL_MENTIONS
+          children: B.default.Messages.FORM_LABEL_MENTIONS
         }), (0, n.jsx)(g.Heading, {
           variant: "eyebrow",
           className: Y.headerOption,
-          children: k.default.Messages.FORM_LABEL_NOTHING
+          children: B.default.Messages.FORM_LABEL_NOTHING
         }), (0, n.jsx)(g.Heading, {
           variant: "eyebrow",
           className: Y.headerOption,
           children: (0, n.jsx)(g.Tooltip, {
-            text: k.default.Messages.FORM_LABEL_MUTE_SERVER_DESCRIPTION,
+            text: B.default.Messages.FORM_LABEL_MUTE_SERVER_DESCRIPTION,
             position: "bottom",
             children: e => (0, n.jsx)("span", {
               ...e,
-              children: k.default.Messages.SOUND_MUTE
+              children: B.default.Messages.SOUND_MUTE
             })
           })
         })]
@@ -376,7 +376,7 @@ class W extends l.PureComponent {
   }
   render() {
     return (0, n.jsxs)(g.ModalRoot, {
-      "aria-label": k.default.Messages.NOTIFICATION_SETTINGS,
+      "aria-label": B.default.Messages.NOTIFICATION_SETTINGS,
       size: g.ModalSize.MEDIUM,
       transitionState: this.props.transitionState,
       children: [this.renderHeader(), (0, n.jsxs)(g.ModalContent, {
@@ -435,13 +435,13 @@ function z(e) {
   let {
     guildId: t,
     ...s
-  } = e, i = (0, S.useStateFromStoresObject)([j.default, R.default, A.default, U.default], () => {
-    let e = j.default.getCategories(t);
+  } = e, i = (0, S.useStateFromStoresObject)([A.default, R.default, j.default, U.default], () => {
+    let e = A.default.getCategories(t);
     return {
       guildId: t,
       categories: e,
       guild: R.default.getGuild(t),
-      memberCount: A.default.getMemberCount(t),
+      memberCount: j.default.getMemberCount(t),
       suppressEveryone: U.default.isSuppressEveryoneEnabled(t),
       suppressRoles: U.default.isSuppressRolesEnabled(t),
       muteEvents: U.default.isMuteScheduledEventsEnabled(t),
@@ -460,7 +460,7 @@ function z(e) {
       }),
       notifyHighlights: U.default.getNotifyHighlights(t)
     }
-  }), a = p.CustomNotificationSoundExperiment.useExperiment({
+  }), a = C.CustomNotificationSoundExperiment.useExperiment({
     location: "connected_notification_settings"
   }, {
     autoTrackExposure: !0

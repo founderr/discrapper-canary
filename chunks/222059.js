@@ -42,8 +42,8 @@ var l = n("735250"),
   w = n("981631"),
   F = n("474936"),
   B = n("689938"),
-  V = n("111790");
-let H = {
+  H = n("111790");
+let V = {
   origin: {
     x: -16,
     y: 0
@@ -82,15 +82,15 @@ function k(e) {
   });
   let X = null;
   !t && m ? X = (0, l.jsx)(u.default, {
-    className: V.downloadProgress,
+    className: H.downloadProgress,
     determineOwnVisibility: !1
   }) : K && (X = (0, l.jsx)(R.default, {
-    className: V.broadcastBadge
+    className: H.broadcastBadge
   }));
-  let q = t || I || _,
-    Q = (0, l.jsx)(o.BlobMask, {
+  let Q = t || I || _,
+    q = (0, l.jsx)(o.BlobMask, {
       highlight: K,
-      selected: q,
+      selected: Q,
       lowerBadge: f > 0 ? (0, U.renderMentionBadge)(f) : null,
       upperBadge: X,
       lowerBadgeWidth: (0, M.getBadgeWidthForValue)(f),
@@ -106,7 +106,7 @@ function k(e) {
             }, 1e3)
           }
         },
-        selected: q,
+        selected: Q,
         ariaLabel: B.default.Messages.DIRECT_MESSAGES,
         ...W,
         to: {
@@ -137,10 +137,10 @@ function k(e) {
       },
       spacing: 8,
       shouldShow: j,
-      children: () => Q
+      children: () => q
     }) : null;
   return (0, l.jsx)("div", {
-    className: V.tutorialContainer,
+    className: H.tutorialContainer,
     onMouseEnter: () => {
       F(!0)
     },
@@ -150,20 +150,20 @@ function k(e) {
       }, 250)
     },
     children: (0, l.jsx)(S.default, {
-      inlineSpecs: H,
+      inlineSpecs: V,
       tutorialId: "friends-list",
       position: "right",
       children: (0, l.jsxs)(P.ListItem, {
         children: [(0, l.jsx)(y.default, {
           selected: t,
           hovered: I,
-          className: V.pill
+          className: H.pill
         }), null != J ? J : (0, l.jsx)(G.default, {
           color: o.Tooltip.Colors.PRIMARY,
           hideOnClick: !0,
           text: z,
           selected: t,
-          children: Q
+          children: q
         })]
       })
     })

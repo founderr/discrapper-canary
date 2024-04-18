@@ -39,20 +39,20 @@ function x(e) {
   let {
     guildId: t,
     onClose: s
-  } = e, n = (0, r.useStateFromStores)([c.default], () => c.default.getGuild(t)), x = (0, r.useStateFromStores)([h.default], () => h.default.getCurrentUser()), [I, C] = a.useState(0), {
-    playSound: p,
-    isPlaying: O
+  } = e, n = (0, r.useStateFromStores)([c.default], () => c.default.getGuild(t)), x = (0, r.useStateFromStores)([h.default], () => h.default.getCurrentUser()), [I, O] = a.useState(0), {
+    playSound: C,
+    isPlaying: p
   } = (0, g.default)(), M = T.map((e, t) => {
     var s, i, a;
     return {
       name: e.name,
       value: t,
       desc: e.description,
-      radioBarClassName: (s = t, i = I, a = O, l()(_.option, {
+      radioBarClassName: (s = t, i = I, a = p, l()(_.option, {
         [_.optionPlaying]: s === i && a
       }))
     }
-  }), [v, L] = (0, u.useSelectedDismissibleContent)([d.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]), j = v === d.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE;
+  }), [v, L] = (0, u.useSelectedDismissibleContent)([d.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]), A = v === d.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE;
   return (a.useEffect(() => () => {
     L(m.ContentDismissActionType.AUTO_DISMISS)
   }, [L]), null == x) ? null : (0, i.jsxs)("div", {
@@ -64,7 +64,7 @@ function x(e) {
         children: E.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND
       }), (0, i.jsx)(S.default, {
         className: _.nitroWheel
-      }), j && (0, i.jsx)(N.TextBadge, {
+      }), A && (0, i.jsx)(N.TextBadge, {
         className: _.newBadge,
         text: E.default.Messages.NEW
       })]
@@ -85,7 +85,7 @@ function x(e) {
         className: _.options,
         value: I,
         onChange: e => {
-          p(), C(e.value)
+          C(), O(e.value)
         },
         options: M
       })

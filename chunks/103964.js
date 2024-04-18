@@ -1,7 +1,7 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   RPCCommand: function() {
-    return a.RPCCommands
+    return n.RPCCommands
   },
   joiEnum: function() {
     return l
@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var a = n("231338");
+var n = a("231338");
 
 function s(e) {
   return e.required().unknown(!0)

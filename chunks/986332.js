@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   useChannelNoticeRedesignExperiment: function() {
     return s
   }
 });
-let a = (0, n("818083").createExperiment)({
+let n = (0, a("818083").createExperiment)({
   kind: "user",
   id: "2022-12_channel_notice_redesign",
   label: "Channel Notice Redesign",
@@ -40,14 +40,14 @@ function s() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
     {
       showRedesignedChannelNotice: t,
-      showRedesignedLiveChannelNotice: n
-    } = a.useExperiment({
+      showRedesignedLiveChannelNotice: a
+    } = n.useExperiment({
       location: "c0d6eb_1"
     }, {
       autoTrackExposure: e
     });
   return {
     showRedesignedChannelNotice: t,
-    showRedesignedLiveChannelNotice: n
+    showRedesignedLiveChannelNotice: a
   }
 }

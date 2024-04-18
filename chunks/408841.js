@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   deprecatedCommand: function() {
     return l
   }
 });
-var a = n("996106"),
-  s = n("981631");
+var n = a("996106"),
+  s = a("981631");
 let l = {
   handler(e) {
-    throw new a.default({
+    throw new n.default({
       errorCode: s.RPCErrors.INVALID_COMMAND
     }, "Deprecated command: ".concat(e.cmd))
   }

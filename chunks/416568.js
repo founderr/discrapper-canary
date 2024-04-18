@@ -38,8 +38,8 @@ var l = n("735250"),
   w = n("474109"),
   F = n("741616"),
   B = n("187835"),
-  V = n("162050"),
-  H = n("118122"),
+  H = n("162050"),
+  V = n("118122"),
   k = n("193154"),
   Y = n("602147"),
   K = n("222059"),
@@ -47,8 +47,8 @@ var l = n("735250"),
   Z = n("65721"),
   z = n("843343"),
   X = n("654142"),
-  q = n("695301"),
-  Q = n("836697"),
+  Q = n("695301"),
+  q = n("836697"),
   J = n("921230"),
   $ = n("981631"),
   ee = n("689938"),
@@ -221,7 +221,7 @@ function eo(e) {
           }),
           ref: eg.scrollerRef,
           onScroll: eg.handleScroll,
-          children: [(0, l.jsx)(K.HomeButton, {}), ev ? (0, l.jsx)(A.default, {}) : null, (0, l.jsx)(V.default, {}), (0, l.jsx)(W.default, {
+          children: [(0, l.jsx)(K.HomeButton, {}), ev ? (0, l.jsx)(A.default, {}) : null, (0, l.jsx)(H.default, {}), (0, l.jsx)(W.default, {
             isOnHubVerificationRoute: eI
           }), (0, l.jsx)(F.default, {}), ex, g.map(e => (0, l.jsx)(J.default, {
             guildId: e
@@ -229,7 +229,7 @@ function eo(e) {
             ref: eg.guildDiscoveryRef,
             selected: eS,
             tooltip: ee.default.Messages.GUILD_DISCOVERY_TOOLTIP
-          }) : null, (0, l.jsx)(Q.default, {}), (0, l.jsx)(Z.default, {}), (0, l.jsx)("div", {
+          }) : null, (0, l.jsx)(q.default, {}), (0, l.jsx)(Z.default, {}), (0, l.jsx)("div", {
             "aria-label": ee.default.Messages.SERVERS,
             children: eL.map(function e(t) {
               switch (t.type) {
@@ -244,7 +244,7 @@ function eo(e) {
                     renderChildNode: e
                   }, t.id);
                 case G.GuildsNodeType.GUILD:
-                  return (0, l.jsx)(q.default, {
+                  return (0, l.jsx)(Q.default, {
                     guildNode: t,
                     setRef: eg.setNodeRef,
                     draggable: !0,
@@ -256,7 +256,7 @@ function eo(e) {
                   return null
               }
             })
-          }), eR, n ? null : (0, l.jsx)(H.default, {
+          }), eR, n ? null : (0, l.jsx)(V.default, {
             disableTooltip: f.length > 0,
             lastTargetNode: eL[eL.length - 1]
           }), n || eA ? null : (0, l.jsx)(Y.default, {

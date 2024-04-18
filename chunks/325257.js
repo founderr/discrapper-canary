@@ -57,8 +57,8 @@ t.default = a.memo(function(e) {
     onDragEnd: w,
     route: F,
     guild: B,
-    animatable: V,
-    selected: H = !1,
+    animatable: H,
+    selected: V = !1,
     unread: k = !1,
     mediaState: Y,
     unavailable: K = !1,
@@ -66,14 +66,14 @@ t.default = a.memo(function(e) {
     contextMenu: Z = D,
     draggable: z = !1,
     sorting: X = !1,
-    preloadOnClick: q = !0,
-    guildJoinRequestStatus: Q
+    preloadOnClick: Q = !0,
+    guildJoinRequestStatus: q
   } = e, {
     id: J,
     parentId: $
   } = P, ee = null !== (t = e.upperBadge) && void 0 !== t ? t : K ? (0, R.renderUnavailableBadge)() : null != Y ? (0, R.renderMediaBadge)(Y) : void 0, et = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
-  null == et && W > 0 ? et = null !== (s = (0, R.renderMentionBadge)(W)) && void 0 !== s ? s : void 0 : null == et && null != Q && (et = null !== (h = (0, R.renderGuildJoinRequestBadge)({
-    guildJoinRequestStatus: Q
+  null == et && W > 0 ? et = null !== (s = (0, R.renderMentionBadge)(W)) && void 0 !== s ? s : void 0 : null == et && null != q && (et = null !== (h = (0, R.renderGuildJoinRequestBadge)({
+    guildJoinRequestStatus: q
   })) && void 0 !== h ? h : void 0);
   let en = null !== (j = e.lowerBadgeWidth) && void 0 !== j ? j : (0, S.getBadgeWidthForValue)(W),
     [{
@@ -111,10 +111,10 @@ t.default = a.memo(function(e) {
       })
     }, [J, F]),
     em = a.useCallback(() => {
-      if (null != F || null == B || K || !q) return;
+      if (null != F || null == B || K || !Q) return;
       let e = (0, C.getChannelIdForGuildTransition)(B.id);
       null != e && f.default.preload(B.id, e)
-    }, [F, B, K, q]),
+    }, [F, B, K, Q]),
     eC = (0, u.useStateFromStores)([g.default], () => g.default.isCurrentUserGuest(J)),
     eg = a.useCallback(e => {
       null != B && !eC && Z(e, B)
@@ -139,7 +139,7 @@ t.default = a.memo(function(e) {
   let eI = ec || eu ? (0, l.jsx)(T.default, {
       guild: B,
       show: ec,
-      active: H,
+      active: V,
       onAnimationStart: function() {
         ed(ec)
       },
@@ -162,8 +162,8 @@ t.default = a.memo(function(e) {
       onMouseDown: em,
       onContextMenu: eg,
       onKeyDown: eE,
-      icon: B.getIconURL(96, eo && V),
-      selected: H || eo,
+      icon: B.getIconURL(96, eo && H),
+      selected: V || eo,
       ...es,
       role: "treeitem"
     }),
@@ -175,10 +175,10 @@ t.default = a.memo(function(e) {
       className: i()(O.blobContainer, {
         [O.sorting]: X,
         [O.wobble]: ec,
-        [O.selected]: ec || H
+        [O.selected]: ec || V
       }),
       children: (0, l.jsx)(c.BlobMask, {
-        selected: ec || H || eo,
+        selected: ec || V || eo,
         upperBadge: ee,
         lowerBadge: et,
         lowerBadgeWidth: en,
@@ -189,7 +189,7 @@ t.default = a.memo(function(e) {
     ref: eS,
     children: [(0, l.jsx)(_.default, {
       hovered: !el && eo,
-      selected: !el && H,
+      selected: !el && V,
       unread: !el && k,
       className: O.pill
     }), (0, l.jsx)(L.default, {

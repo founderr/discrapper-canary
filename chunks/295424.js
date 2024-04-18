@@ -1,6 +1,6 @@
 "use strict";
 
-function a(e) {
+function n(e) {
   return {
     name: e.name,
     id: e.id,
@@ -9,8 +9,8 @@ function a(e) {
     type: e.type
   }
 }
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
-    return a
+    return n
   }
 })
