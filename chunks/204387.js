@@ -7,28 +7,31 @@ t.r(s), t.d(s, {
 var i, l, a = t("735250"),
   r = t("470079"),
   C = t("481060"),
-  n = t("687555"),
-  d = t("596583");
+  n = t("281494"),
+  d = t("687555"),
+  o = t("596583");
 (l = i || (i = {}))[l.SELECT_FRIENDS = 1] = "SELECT_FRIENDS", l[l.CONFIRMATION = 2] = "CONFIRMATION";
 s.default = e => {
   let s, {
       transitionState: t,
       onClose: i
     } = e,
-    [l, o] = r.useState(1),
-    [c, x] = r.useState(new Set);
+    [l, c] = r.useState(1),
+    [x, u] = r.useState(new Set);
   switch (l) {
     case 1:
-      s = (0, a.jsx)(n.default, {
-        onShare: e => {
-          o(2), x(e)
+      s = (0, a.jsx)(d.default, {
+        onShare: async e => {
+          try {
+            await (0, n.createReferralTrials)(e.map(e => e.id)), c(2), u(new Set(e))
+          } catch {}
         },
         onClose: i
       });
       break;
     case 2:
-      s = (0, a.jsx)(d.default, {
-        selectedUsers: c,
+      s = (0, a.jsx)(o.default, {
+        selectedUsers: x,
         onClose: i
       });
       break;

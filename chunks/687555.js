@@ -115,7 +115,7 @@ s.default = function(e) {
   let {
     onClose: s,
     onShare: t
-  } = e, a = (0, n.useStateFromStores)([f.default], () => f.default.getReferralsRemaining()), [c, j] = l.useState(0), [L, m] = l.useState(""), [v, A] = l.useState([]), [y, M] = l.useState(!1), [F, O] = l.useState(!1), N = function(e, s) {
+  } = e, a = (0, n.useStateFromStores)([f.default], () => f.default.getReferralsRemaining()), [c, j] = l.useState(0), [L, m] = l.useState(""), [v, y] = l.useState([]), [A, M] = l.useState(!1), [F, O] = l.useState(!1), N = function(e, s) {
     let [t, i] = l.useState(e);
     return l.useEffect(() => {
       let t = setTimeout(() => {
@@ -134,7 +134,7 @@ s.default = function(e) {
       if (null == e) return;
       M(!0);
       let s = await (0, u.fetchReferralEligibleUsers)(e, N);
-      A(t => {
+      y(t => {
         let i = s.users.filter(e => !w.has(e.id));
         return 0 === e ? [...w.values(), ...i] : [...t, ...i]
       }), j(s.nextIndex)
@@ -144,7 +144,7 @@ s.default = function(e) {
       M(!1)
     }
   }, I = (0, o.useIsVisible)(e => {
-    e && !y && U(c)
+    e && !A && U(c)
   });
   if (F) return (0, i.jsx)(S, {
     onClose: s
@@ -172,7 +172,7 @@ s.default = function(e) {
             return s ? i.set(e.id, e) : i.delete(e.id), i
           })
         }
-      }, e.id)), y && (0, i.jsx)(d.Spinner, {}), (0, i.jsx)("div", {
+      }, e.id)), A && (0, i.jsx)(d.Spinner, {}), (0, i.jsx)("div", {
         ref: I
       })]
     }), (0, i.jsx)("div", {
@@ -186,7 +186,7 @@ s.default = function(e) {
             s();
             return
           }
-          t(new Set([...w.values()]))
+          t([...w.values()])
         },
         children: G ? p.default.Messages.REFERRAL_PROGRAM_CLOSE : p.default.Messages.REFERRAL_PROGRAM_SHARE_TRIAL
       })
