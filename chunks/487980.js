@@ -4,15 +4,16 @@ i.r(t), i.d(t, {
     return c
   },
   useIsEligibleSenderForReferralProgramTabBadge: function() {
-    return o
+    return u
   }
 });
 var n = i("442837"),
   r = i("524437"),
   s = i("605236"),
   a = i("276444"),
-  l = i("520540");
-let o = e => {
+  l = i("520540"),
+  o = i("898997");
+let u = e => {
     let t = c(e),
       i = (0, s.useIsDismissibleContentDismissed)(r.DismissibleContent.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
     return t && !i
@@ -24,6 +25,8 @@ let o = e => {
       location: e
     }, {
       autoTrackExposure: !1
-    }), i = (0, n.useStateFromStores)([a.default], () => a.default.getIsEligibleToSendReferrals());
+    });
+    (0, o.useMaybeFetchReferralsRemaining)(e, !t);
+    let i = (0, n.useStateFromStores)([a.default], () => a.default.getIsEligibleToSendReferrals());
     return t && i
   }

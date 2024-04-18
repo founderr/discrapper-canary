@@ -1,31 +1,32 @@
 "use strict";
-s.r(t), s.d(t, {
+i.r(t), i.d(t, {
   useMaybeFetchReferralsRemaining: function() {
-    return _
+    return f
   }
 });
-var a = s("470079"),
-  i = s("442837"),
-  r = s("594174"),
-  l = s("74538"),
-  n = s("140465"),
-  o = s("775412"),
-  u = s("276444"),
-  d = s("520540"),
-  c = s("474936");
-let _ = e => {
-  let t = (0, i.useStateFromStores)([r.default], () => r.default.getCurrentUser()),
-    s = (0, n.useHasDiscountApplied)(),
-    _ = (0, o.useHasActiveTrial)(),
+var n = i("470079"),
+  r = i("442837"),
+  s = i("594174"),
+  a = i("74538"),
+  l = i("140465"),
+  o = i("775412"),
+  u = i("276444"),
+  c = i("520540"),
+  d = i("474936");
+let f = function(e) {
+  let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+    i = (0, r.useStateFromStores)([s.default], () => s.default.getCurrentUser()),
+    f = (0, l.useHasDiscountApplied)(),
+    p = (0, o.useHasActiveTrial)(),
     {
-      enabled: E
-    } = d.ReferralProgramSender.useExperiment({
+      enabled: C
+    } = c.ReferralProgramSender.useExperiment({
       location: e
     }, {
       autoTrackExposure: !1
     }),
-    C = E && null != t && t.verified && (0, l.isPremiumExactly)(t, c.PremiumTypes.TIER_2) && !s && !_;
-  a.useEffect(() => {
-    C && u.default.checkAndFetchReferralsRemaining()
-  }, [C])
+    m = C && null != i && i.verified && (0, a.isPremiumExactly)(i, d.PremiumTypes.TIER_2) && !f && !p;
+  n.useEffect(() => {
+    m && !t && u.default.checkAndFetchReferralsRemaining()
+  }, [m, t])
 }
