@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a("47120"), a("315314"), a("610138"), a("216116"), a("78328"), a("815648"), a("757143");
+a.r(t), a("47120"), a("315314"), a("610138"), a("216116"), a("78328"), a("815648");
 var n = a("735250"),
   s = a("470079"),
   l = a("120356"),
@@ -48,7 +48,7 @@ t.default = e => {
         N.current.width = l.width, N.current.height = l.height;
         let e = N.current.getContext("2d");
         if (null != e) e.drawImage(l, 0, 0), URL.revokeObjectURL(s), t({
-          badgeImage: N.current.toDataURL("image/png").replace("image/png", "image/octet-stream")
+          badgeImage: N.current.toDataURL("image/png")
         })
       }, l.src = s
     }
