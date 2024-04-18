@@ -10,10 +10,10 @@ t.default = e => {
     animationClassName: u,
     initialPercentage: a = 0,
     progressCircleStrokeSize: l = 2
-  } = e, o = 43 + l / 2, d = 2 * Math.PI * o, [_, c] = s.useState(a);
+  } = e, o = 43 + l / 2, d = 2 * Math.PI * o, [c, _] = s.useState(a);
   return s.useEffect(() => {
     let e = setTimeout(() => {
-      c(t)
+      _(t)
     }, 200);
     return () => clearTimeout(e)
   }, [t]), (0, n.jsxs)("div", {
@@ -35,7 +35,7 @@ t.default = e => {
         strokeDasharray: "".concat(d, " ").concat(d),
         className: u,
         style: {
-          strokeDashoffset: (1 - _ / 100) * d
+          strokeDashoffset: (1 - c / 100) * d
         },
         r: "".concat(o),
         cx: "50%",

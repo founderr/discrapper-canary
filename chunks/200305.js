@@ -5,9 +5,9 @@ s.r(t), s.d(t, {
   }
 }), s("47120");
 var l, n, i = s("735250"),
-  r = s("470079"),
-  a = s("120356"),
-  u = s.n(a),
+  a = s("470079"),
+  r = s("120356"),
+  u = s.n(r),
   d = s("442837"),
   o = s("481060"),
   c = s("893776"),
@@ -45,8 +45,8 @@ let D = e => {
       email: s,
       password: l,
       setEmail: n,
-      setPassword: r,
-      emailError: a,
+      setPassword: a,
+      emailError: r,
       passwordError: u
     } = e;
     return (0, i.jsxs)("div", {
@@ -74,7 +74,7 @@ let D = e => {
         className: B.formItem,
         children: (0, i.jsx)(o.TextInput, {
           value: s,
-          error: a,
+          error: r,
           onChange: n,
           autoFocus: !0
         })
@@ -85,7 +85,7 @@ let D = e => {
           type: "password",
           value: l,
           error: u,
-          onChange: r
+          onChange: a
         })
       })]
     })
@@ -127,11 +127,11 @@ let D = e => {
       guildId: s,
       formState: l,
       updateFormState: n,
-      isPreview: r = !1
-    } = e, a = (0, d.useStateFromStores)([v.default], () => v.default.get(s));
-    if (null == a) return null;
-    let u = null !== (t = null != l ? l : null == a ? void 0 : a.formFields) && void 0 !== t ? t : [],
-      o = r ? S.PreviewFormRenderer : S.ApplicantFormRenderer;
+      isPreview: a = !1
+    } = e, r = (0, d.useStateFromStores)([v.default], () => v.default.get(s));
+    if (null == r) return null;
+    let u = null !== (t = null != l ? l : null == r ? void 0 : r.formFields) && void 0 !== t ? t : [],
+      o = a ? S.PreviewFormRenderer : S.ApplicantFormRenderer;
     return (0, i.jsx)(o, {
       guildId: s,
       formFields: u,
@@ -150,8 +150,8 @@ let D = e => {
       guildId: s,
       formState: l,
       updateFormState: n,
-      useReducedMotion: r,
-      isPreview: a = !1
+      useReducedMotion: a,
+      isPreview: r = !1
     } = e;
     return (0, i.jsxs)("div", {
       className: B.content,
@@ -163,7 +163,7 @@ let D = e => {
           className: u()(B.sparkleIcon, B.sparkleBottom)
         }), (0, i.jsx)(x.default, {
           importData: q,
-          shouldAnimate: !r,
+          shouldAnimate: !a,
           className: B.animation
         }), (0, i.jsx)("img", {
           alt: L.default.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
@@ -186,7 +186,7 @@ let D = e => {
         guildId: s,
         formState: l,
         updateFormState: n,
-        isPreview: a
+        isPreview: r
       })]
     })
   };
@@ -195,7 +195,7 @@ t.default = e => {
   let {
     headerId: l,
     guildId: n,
-    onClose: a,
+    onClose: r,
     onComplete: c,
     inviteCode: x,
     isPreview: S = !1
@@ -205,11 +205,11 @@ t.default = e => {
   } = (0, d.useStateFromStoresObject)([M.default], () => ({
     storeMemberCount: M.default.getMemberCount(n),
     storeOnlineCount: M.default.getOnlineCount(n)
-  })), [J, X] = r.useState(null !== (t = null == y ? void 0 : y.formFields) && void 0 !== t ? t : []), [Q, Z] = r.useState(!1), [$, ee] = r.useState(null), [et, es] = r.useState(q ? 0 : 2), [el, en] = r.useState(""), [ei, er] = r.useState(""), [ea, eu] = r.useState(null), [ed, eo] = r.useState(null), ec = null == y ? void 0 : y.guild, eI = r.useMemo(() => null != P ? P : null != ec ? new E.default(ec) : null, [P, ec]), em = null !== (s = null == eI ? void 0 : eI.hasFeature(V.GuildFeatures.CLAN)) && void 0 !== s && s, {
+  })), [J, X] = a.useState(null !== (t = null == y ? void 0 : y.formFields) && void 0 !== t ? t : []), [Q, Z] = a.useState(!1), [$, ee] = a.useState(null), [et, es] = a.useState(q ? 0 : 2), [el, en] = a.useState(""), [ei, ea] = a.useState(""), [er, eu] = a.useState(null), [ed, eo] = a.useState(null), ec = null == y ? void 0 : y.guild, eI = a.useMemo(() => null != P ? P : null != ec ? new E.default(ec) : null, [P, ec]), em = null !== (s = null == eI ? void 0 : eI.hasFeature(V.GuildFeatures.CLAN)) && void 0 !== s && s, {
     emojisToRender: ef,
     remainingEmojis: eE,
     numGuildEmoji: eM
-  } = r.useMemo(() => {
+  } = a.useMemo(() => {
     var e;
     let t = [...null !== (e = 0 === z.length ? null == ec ? void 0 : ec.emojis : z) && void 0 !== e ? e : []].reverse(),
       s = 0,
@@ -220,26 +220,26 @@ t.default = e => {
       numGuildEmoji: l
     }
   }, [ec, z]), eF = null != W ? W : null == ec ? void 0 : ec.approximate_member_count, eR = null != K ? K : null == ec ? void 0 : ec.approximate_presence_count;
-  r.useEffect(() => ((0, j.setHasUnsubmittedChanges)(!1), () => {
+  a.useEffect(() => ((0, j.setHasUnsubmittedChanges)(!1), () => {
     (0, j.setHasUnsubmittedChanges)(!1)
-  }), []), r.useEffect(() => {
+  }), []), a.useEffect(() => {
     g.default.fetchVerificationForm(n, x)
-  }, [n, x]), r.useEffect(() => {
+  }, [n, x]), a.useEffect(() => {
     null != y && X(y.formFields)
-  }, [y]), r.useEffect(() => {
+  }, [y]), a.useEffect(() => {
     null != H && H.isClaimed() && es(2)
-  }, [H]), r.useEffect(() => {
+  }, [H]), a.useEffect(() => {
     1 === et && G && es(2)
-  }, [et, G]), r.useEffect(() => {
+  }, [et, G]), a.useEffect(() => {
     null != n && C.default.track(V.AnalyticEvents.OPEN_MODAL, {
       type: p.MEMBER_VERIFICATION_TYPE,
       guild_id: n
     })
-  }, [n]), r.useEffect(() => {
+  }, [n]), a.useEffect(() => {
     let e = J.some(e => e.field_type !== A.VerificationFormFieldTypes.TERMS && (0, O.isValidFormResponse)(e));
     e && !b ? (0, j.setHasUnsubmittedChanges)(!0) : !e && b && (0, j.setHasUnsubmittedChanges)(!1)
   }, [J, b]);
-  let e_ = r.useMemo(() => !(((null == eI ? void 0 : eI.verificationLevel) !== V.VerificationLevels.VERY_HIGH || (null == H ? void 0 : H.isStaff())) && G || Y) || J.some(e => !(0, O.isValidFormResponse)(e)), [J, eI, Y, G, H]),
+  let e_ = a.useMemo(() => !(((null == eI ? void 0 : eI.verificationLevel) !== V.VerificationLevels.VERY_HIGH || (null == H ? void 0 : H.isStaff())) && G || Y) || J.some(e => !(0, O.isValidFormResponse)(e)), [J, eI, Y, G, H]),
     eN = (0, d.useStateFromStores)([m.default], () => m.default.useReducedMotion);
   if (null == eI) return null;
   let eh = async () => {
@@ -259,14 +259,14 @@ t.default = e => {
     Z(!0), ee(null);
     let e = null != H ? F.default.getMember(n, H.id) : null;
     if (null != e && !e.isPending) {
-      null == a || a(!0);
+      null == r || r(!0);
       return
     }
     try {
       await (null == c ? void 0 : c({
         ...null != y ? y : v.NO_MEMBER_VERIFICATION_FORM,
         formFields: J
-      })), null == a || a(!0)
+      })), null == r || r(!0)
     } catch (l) {
       var t, s;
       let e = null == l ? void 0 : l.body;
@@ -371,8 +371,8 @@ t.default = e => {
                   email: el,
                   password: ei,
                   setEmail: en,
-                  setPassword: er,
-                  emailError: ea,
+                  setPassword: ea,
+                  emailError: er,
                   passwordError: ed
                 });
               case 1:

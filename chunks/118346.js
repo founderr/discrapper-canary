@@ -10,18 +10,18 @@ s.r(t), s.d(t, {
 var l = s("735250"),
   n = s("470079"),
   i = s("481060"),
-  r = s("893776"),
-  a = s("916187"),
+  a = s("893776"),
+  r = s("916187"),
   u = s("489813"),
   d = s("689938"),
   o = s("819104");
 
 function c() {
-  let [e, t] = n.useState(!1), [s, a] = n.useState(!1), [u, c] = n.useState(!1);
+  let [e, t] = n.useState(!1), [s, r] = n.useState(!1), [u, c] = n.useState(!1);
   n.useEffect(() => {
     let e;
     return s && (e = setTimeout(() => {
-      a(!1)
+      r(!1)
     }, 2e3)), () => {
       null != e && clearTimeout(e)
     }
@@ -30,7 +30,7 @@ function c() {
     if (!e) {
       t(!0);
       try {
-        await r.default.verifyResend(), a(!0), c(!0)
+        await a.default.verifyResend(), r(!0), c(!0)
       } catch (e) {} finally {
         t(!1)
       }
@@ -51,7 +51,7 @@ function c() {
 
 function I() {
   return (0, l.jsx)(u.RequirementWithActionRenderer, {
-    icon: a.default,
+    icon: r.default,
     text: d.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_LABEL,
     footnote: d.default.Messages.MEMBER_VERIFICATION_MODAL_PRIVACY_DESCRIPTION,
     meetsRequirement: !1,
@@ -72,7 +72,7 @@ function m(e) {
     isUserVerified: t
   } = e, s = t ? d.default.Messages.MEMBER_VERIFICATION_EMAIL_VERIFIED : d.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_LABEL;
   return (0, l.jsx)(u.RequirementWithActionRenderer, {
-    icon: a.default,
+    icon: r.default,
     text: s,
     footnote: d.default.Messages.MEMBER_VERIFICATION_MODAL_PRIVACY_DESCRIPTION,
     meetsRequirement: t,

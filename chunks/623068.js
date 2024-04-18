@@ -9,8 +9,8 @@ var s = r("120356"),
   l = r("314684"),
   o = r("967538"),
   d = r("914677"),
-  _ = r("735825"),
-  c = r("527752");
+  c = r("735825"),
+  _ = r("527752");
 t.default = e => {
   let {
     showAnimations: t = !0,
@@ -24,19 +24,19 @@ t.default = e => {
   let {
     redeemableInDays: m = 0,
     tenureRewardSkuId: A
-  } = S, D = _.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH === A ? _.NUM_DAYS_REQUIRED_1_MONTH_VARIANT : _.NUM_DAYS_3_REQUIRED_MONTH_VARIANT, w = Math.min(D, Math.max(D - m, 0)), I = 100 * w / D, O = f ? 100 * Math.max(w - .25 * D, 0) / D : I;
+  } = S, D = c.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH === A ? c.NUM_DAYS_REQUIRED_1_MONTH_VARIANT : c.NUM_DAYS_3_REQUIRED_MONTH_VARIANT, w = Math.min(D, Math.max(D - m, 0)), I = 100 * w / D, O = f ? 100 * Math.max(w - .25 * D, 0) / D : I;
   return (0, n.jsx)("div", {
-    className: i()(c.gemProgressCircle, r),
+    className: i()(_.gemProgressCircle, r),
     children: (0, n.jsx)(d.default, {
-      animationClassName: i()(c.activeProgressCircle, {
-        [c.activeProgressCircleAnimation]: f
+      animationClassName: i()(_.activeProgressCircle, {
+        [_.activeProgressCircleAnimation]: f
       }),
       progressCircleStrokeSize: R,
       percentage: null != s ? s : I,
       initialPercentage: null != s ? s : O,
       children: (0, n.jsx)(o.default, {
-        className: f ? c.nitroGemAnimation : void 0,
-        backgroundColor: i()(c.gemBackgroundFill, E),
+        className: f ? _.nitroGemAnimation : void 0,
+        backgroundColor: i()(_.gemBackgroundFill, E),
         backgroundCircleSize: T
       })
     })

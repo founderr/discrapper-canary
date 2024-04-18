@@ -1,29 +1,29 @@
 "use strict";
 n.r(t), n.d(t, {
   isInMentionRaidExperiment: function() {
-    return a
+    return i
   },
   useIsMentionRaidExperimentEnabled: function() {
-    return l
+    return d
   }
 });
-var i = n("460083");
+var a = n("460083");
 
-function a(e) {
+function i(e) {
   let {
     enabled: t
-  } = i.AutomodMentionRaidLimit.getCurrentConfig({
+  } = a.AutomodMentionRaidLimit.getCurrentConfig({
     guildId: e,
     location: "988d4e_3"
   });
   return t
 }
 
-function l(e) {
+function d(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
     {
       enabled: n
-    } = i.AutomodMentionRaidLimit.useExperiment({
+    } = a.AutomodMentionRaidLimit.useExperiment({
       guildId: e,
       location: "988d4e_4"
     }, {
