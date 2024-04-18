@@ -397,7 +397,8 @@ t.default = () => {
       subtitle: s,
       description: a,
       pillText: i,
-      ctaDescription: l
+      ctaDescription: l,
+      dismissibleContentType: n
     } = el;
     ed.freeBoost = {
       name: "freeBoost",
@@ -413,7 +414,7 @@ t.default = () => {
       },
       cardVariant: g.CardVariants.REWARD,
       pillText: i,
-      dismissibleContentType: n.DismissibleContent.TENURE_REWARD_REDEEMABLE_CONFETTI
+      dismissibleContentType: n
     }
   }
   return (0, C.default)("usePerksDiscoverabilityCard") === C.CollectiblesShopMarketingVariants.SHY && Date.now() < et.getTime() && (ed.shyProject = {
