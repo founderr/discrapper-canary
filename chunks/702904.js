@@ -15,8 +15,8 @@ var a = t("735250"),
   u = t("244526"),
   h = t("853872"),
   m = t("246992"),
-  p = t("779869"),
-  g = t("534477");
+  g = t("779869"),
+  p = t("534477");
 let f = [{
   label: "VISA",
   value: "pm_card_us"
@@ -64,9 +64,9 @@ function b() {
   return i.useEffect(() => {
     (0, d.fetchPaymentSources)()
   }, []), (0, a.jsx)(s.ScrollerThin, {
-    className: n()(p.panel),
+    className: n()(g.panel),
     children: (0, a.jsxs)("div", {
-      className: g.panelInner,
+      className: p.panelInner,
       children: [(0, a.jsxs)(s.Text, {
         style: {
           marginBottom: "16px"
@@ -74,7 +74,7 @@ function b() {
         variant: "text-lg/bold",
         children: [" ", "Manage Payment Sources", " "]
       }), (0, a.jsxs)("div", {
-        className: g.buttons,
+        className: p.buttons,
         children: [(0, a.jsx)(s.Text, {
           variant: "text-md/normal",
           children: " Card Type "
@@ -112,7 +112,7 @@ function y(e) {
     paymentSource: r
   } = e;
   return (0, a.jsxs)("div", {
-    className: g.inputRow,
+    className: p.inputRow,
     children: [(0, a.jsx)(u.default, {
       locale: "en-US",
       paymentSource: r,

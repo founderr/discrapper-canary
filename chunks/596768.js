@@ -15,8 +15,8 @@ var a = t("735250"),
   u = t("442837"),
   h = t("481060"),
   m = t("570140"),
-  p = t("6048"),
-  g = t("825185"),
+  g = t("6048"),
+  p = t("825185"),
   f = t("740727"),
   b = t("502568"),
   y = t("55935"),
@@ -76,7 +76,7 @@ let L = [{
         children: [(0, a.jsxs)(b.default, {
           className: n()(T.headerBar, N.subPanelHeaderBar),
           children: [(0, a.jsx)(b.default.Icon, {
-            icon: g.default,
+            icon: p.default,
             tooltip: r
           }), (0, a.jsx)(b.default.Title, {
             children: r
@@ -137,7 +137,7 @@ let L = [{
   }];
 
 function _() {
-  let [e, r] = i.useState(""), t = i.useRef(null), l = (0, u.useStateFromStoresArray)([x.default], () => x.default.loggedTriggers), o = i.useMemo(() => l.filter(r => 0 === e.length || c()(e, r.experimentId)).sort((e, r) => r.timestamp.getTime() - e.timestamp.getTime()), [l, e]), [s, d] = i.useState(void 0), g = o.find(e => e.key === s), {
+  let [e, r] = i.useState(""), t = i.useRef(null), l = (0, u.useStateFromStoresArray)([x.default], () => x.default.loggedTriggers), o = i.useMemo(() => l.filter(r => 0 === e.length || c()(e, r.experimentId)).sort((e, r) => r.timestamp.getTime() - e.timestamp.getTime()), [l, e]), [s, d] = i.useState(void 0), p = o.find(e => e.key === s), {
     TabBar: b,
     renderSelectedTab: y
   } = (0, w.default)({
@@ -172,7 +172,7 @@ function _() {
             "aria-label": S.default.Messages.CLEAR
           })
         })
-      }), (0, a.jsx)(p.default, {
+      }), (0, a.jsx)(g.default, {
         className: N.searchBar,
         query: e,
         onChange: r,
@@ -187,12 +187,12 @@ function _() {
         selectedRowKey: s,
         onClickRow: d
       })
-    }), null != g && (0, a.jsxs)(j.default, {
+    }), null != p && (0, a.jsxs)(j.default, {
       className: N.subPanel,
       minHeight: 100,
       initialHeight: null != t.current ? t.current.clientHeight / 2 : 300,
       children: [(0, a.jsx)(b, {}), y({
-        loggedTrigger: g
+        loggedTrigger: p
       })]
     })]
   })

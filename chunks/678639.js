@@ -15,8 +15,8 @@ var a = t("735250"),
   u = t("502568"),
   h = t("428530"),
   m = t("484036"),
-  p = t("681619"),
-  g = t("621060"),
+  g = t("681619"),
+  p = t("621060"),
   f = t("779869"),
   b = t("852535");
 
@@ -89,7 +89,7 @@ function j(e) {
   } = e, {
     TabBar: i,
     renderSelectedTab: l
-  } = (0, g.default)({
+  } = (0, p.default)({
     tabs: v
   }, []);
   return (0, a.jsxs)(m.default, {
@@ -141,7 +141,7 @@ function C() {
       })
     }), (0, a.jsx)(c.ScrollerThin, {
       className: b.tableContainer,
-      children: (0, a.jsx)(p.default, {
+      children: (0, a.jsx)(g.default, {
         columns: k,
         data: d,
         selectedRowKey: u,

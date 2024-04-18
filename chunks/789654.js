@@ -15,8 +15,8 @@ var a = t("735250"),
   u = t("445131"),
   h = t("433517"),
   m = t("640971"),
-  p = t("544342"),
-  g = t("203165"),
+  g = t("544342"),
+  p = t("203165"),
   f = t("559760"),
   b = t("481060"),
   y = t("410030"),
@@ -49,7 +49,7 @@ function S() {
 let N = {
     ...f.semanticColorTokens,
     ...m.componentColorTokens,
-    ...p.gradients
+    ...g.gradients
   },
   T = {
     ...R(f.semanticColorTokens),
@@ -112,10 +112,10 @@ function I() {
       }, [l, n]), u = l < t.length - 1;
       return [o, c, s, d, u, l > 0]
     }("color-override-03-03-23", {
-      rawPalette: g.rawPalette,
+      rawPalette: p.rawPalette,
       semanticTokens: T
     }),
-    [p, f] = i.useState(""),
+    [g, f] = i.useState(""),
     [C, N] = i.useState({}),
     [E, _] = i.useState({}),
     R = i.useMemo(() => Object.keys(r).reduce((e, r) => [...e, {
@@ -271,7 +271,7 @@ function I() {
           color: b.Button.Colors.RED,
           onClick: () => {
             l({
-              rawPalette: g.rawPalette,
+              rawPalette: p.rawPalette,
               semanticTokens: T
             })
           },
@@ -286,7 +286,7 @@ function I() {
         },
         children: [(0, a.jsx)(x.default, {
           size: x.default.Sizes.SMALL,
-          query: p,
+          query: g,
           onChange: f,
           onClear: () => f(""),
           placeholder: "Search tokens",
@@ -302,7 +302,7 @@ function I() {
           margin: 8,
           alignItems: "center"
         },
-        children: Object.keys(T).filter(e => "" === p || e.toLowerCase().includes(p)).map(r => {
+        children: Object.keys(T).filter(e => "" === g || e.toLowerCase().includes(g)).map(r => {
           var l;
           let n = T[r][e],
             o = null == t[r] ? {

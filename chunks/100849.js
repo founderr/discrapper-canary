@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return _
+    return A
   }
 });
 var l = s("735250"),
@@ -20,10 +20,10 @@ var l = s("735250"),
   I = s("970903"),
   v = s("521170");
 
-function _(e) {
+function A(e) {
   let {
     user: t
-  } = e, s = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), _ = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), A = a.useMemo(() => _.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [_]), T = _.some(e => e.type === m.ActivityTypes.HANG_STATUS), x = a.useMemo(() => s ? A.find(e => e.type === m.ActivityTypes.PLAYING) : null, [A, s]), N = a.useMemo(() => A.filter(e => e !== x), [x, A]), U = (0, E.useGetVoiceChannelInfoForVoiceActivitySection)(t.id), p = null != U && !s && !T, {
+  } = e, s = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), A = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), _ = a.useMemo(() => A.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [A]), T = A.some(e => e.type === m.ActivityTypes.HANG_STATUS), x = a.useMemo(() => s ? _.find(e => e.type === m.ActivityTypes.PLAYING) : null, [_, s]), N = a.useMemo(() => _.filter(e => e !== x), [x, _]), U = (0, E.useGetVoiceChannelInfoForVoiceActivitySection)(t.id), p = null != U && !s && !T, {
     showVoiceActivityInProfile: h
   } = S.VoiceActivityProfileExperiment.useExperiment({
     location: "user profile modal"
@@ -34,7 +34,7 @@ function _(e) {
   } = (0, n.default)(), {
     trackUserProfileAction: P,
     ...j
-  } = (0, c.useUserProfileAnalyticsContext)(), M = {
+  } = (0, c.useUserProfileAnalyticsContext)(), y = {
     location: {
       page: m.AnalyticsPages.USER_PROFILE,
       section: m.AnalyticsSections.PROFILE_MODAL
@@ -56,7 +56,7 @@ function _(e) {
       className: I.userProfileActivity,
       activity: x,
       actionColor: I.actionColor,
-      analyticsParams: M,
+      analyticsParams: y,
       onAction: () => {
         P({
           action: "JOIN_ACTIVITY"
@@ -74,7 +74,7 @@ function _(e) {
       source: "Profile Modal",
       className: I.userProfileActivity,
       actionColor: I.actionColor,
-      analyticsParams: M,
+      analyticsParams: y,
       onAction: () => {
         P({
           action: "JOIN_ACTIVITY"

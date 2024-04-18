@@ -6,8 +6,8 @@ t.r(s), t.d(s, {
 });
 var i = t("735250");
 t("470079");
-var l = t("120356"),
-  a = t.n(l),
+var a = t("120356"),
+  l = t.n(a),
   r = t("481060"),
   C = t("204197"),
   n = t("859709");
@@ -16,38 +16,38 @@ function d(e) {
   var s;
   let {
     user: t,
-    checked: l,
+    checked: a,
     onChange: d,
     disabled: o
   } = e, {
     avatarSrc: c,
-    eventHandlers: x
+    eventHandlers: u
   } = (0, C.default)({
     user: t,
     size: r.AvatarSizes.SIZE_32
-  }), u = null !== (s = t.globalName) && void 0 !== s ? s : t.username;
+  }), f = null !== (s = t.globalName) && void 0 !== s ? s : t.username;
   return (0, i.jsxs)("div", {
     className: n.container,
     children: [(0, i.jsxs)("div", {
       className: n.user,
       children: [(0, i.jsx)(r.Avatar, {
-        className: a()({
+        className: l()({
           [n.muted]: o
         }),
         src: c,
-        "aria-label": u,
+        "aria-label": f,
         size: r.AvatarSizes.SIZE_32,
-        ...x
+        ...u
       }), (0, i.jsx)(r.Text, {
         color: o ? "text-muted" : "text-normal",
         variant: "text-md/semibold",
-        children: u
+        children: f
       })]
     }), (0, i.jsx)("div", {
       className: n.checkbox,
       children: (0, i.jsx)(r.Checkbox, {
         disabled: o,
-        value: l,
+        value: a,
         onChange: (e, s) => d(t, s)
       })
     })]

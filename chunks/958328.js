@@ -16,8 +16,8 @@ var i = t("120356"),
   u = t("430824"),
   h = t("496675"),
   m = t("944486"),
-  p = t("914010"),
-  g = t("263704"),
+  g = t("914010"),
+  p = t("263704"),
   f = t("465670"),
   b = t("233608"),
   y = t("71080"),
@@ -28,7 +28,7 @@ function v(e) {
   let {
     title: r,
     can: t
-  } = e, i = t ? g.default : f.default, n = (0, a.jsx)("div", {
+  } = e, i = t ? p.default : f.default, n = (0, a.jsx)("div", {
     className: l()(x.iconOuter, t ? x.iconCheck : x.iconCross),
     children: (0, a.jsx)(i, {
       className: x.icon
@@ -48,10 +48,10 @@ function v(e) {
 
 function j() {
   let e = (0, o.useStateFromStores)([m.default], () => m.default.getChannelId()),
-    r = (0, o.useStateFromStores)([p.default], () => p.default.getGuildId()),
+    r = (0, o.useStateFromStores)([g.default], () => g.default.getGuildId()),
     t = (0, o.useStateFromStores)([d.default], () => d.default.getChannel(e)),
     i = (0, o.useStateFromStores)([u.default], () => u.default.getGuild(r)),
-    g = (0, o.useStateFromStores)([h.default], () => h.default.computePermissions(t)),
+    p = (0, o.useStateFromStores)([h.default], () => h.default.computePermissions(t)),
     f = (0, o.useStateFromStores)([h.default], () => h.default.computePermissions(i)),
     j = (0, s.default)(t, !0),
     C = null != t ? (0, y.getChannelPermissionSpecMap)(t, !1, !0) : null,
@@ -60,7 +60,7 @@ function j() {
       let {
         title: r,
         flag: t
-      } = e, i = n.has(g, t);
+      } = e, i = n.has(p, t);
       return (0, a.jsx)(v, {
         title: r,
         can: i

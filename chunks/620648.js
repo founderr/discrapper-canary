@@ -19,8 +19,8 @@ var l = s("735250"),
   m = s("785717"),
   I = s("621853"),
   v = s("588822"),
-  _ = s("81334"),
-  A = s("652853"),
+  A = s("81334"),
+  _ = s("652853"),
   T = s("335191"),
   x = s("347949"),
   N = s("988246"),
@@ -38,24 +38,24 @@ function h(e) {
     trackUserProfileAction: P
   } = (0, m.useUserProfileAnalyticsContext)(), j = (0, c.usePlatformAllowed)({
     forUserProfile: !0
-  }), M = (0, r.useStateFromStores)([I.default], () => {
+  }), y = (0, r.useStateFromStores)([I.default], () => {
     var e, t;
     return null !== (t = null === (e = I.default.getUserProfile(s.id)) || void 0 === e ? void 0 : e.connectedAccounts) && void 0 !== t ? t : []
-  }), y = (0, r.useStateFromStores)([E.default], () => E.default.hidePersonalInformation), {
+  }), M = (0, r.useStateFromStores)([E.default], () => E.default.hidePersonalInformation), {
     theme: R
-  } = (0, A.useUserProfileThemeContext)(), g = (0, r.useStateFromStores)([S.default], () => S.default.locale), O = (0, f.useIsUserRecentGamesEnabled)({
+  } = (0, _.useUserProfileThemeContext)(), g = (0, r.useStateFromStores)([S.default], () => S.default.locale), O = (0, f.useIsUserRecentGamesEnabled)({
     userId: s.id,
     location: "28tk0bf_3"
-  }), F = a.useMemo(() => M.filter(e => {
+  }), F = a.useMemo(() => y.filter(e => {
     let t = d.default.get(e.type);
     return null != t && j(t)
-  }), [M, j]), L = a.useRef(null);
+  }), [y, j]), L = a.useRef(null);
   return (a.useLayoutEffect(() => {
     if (C) {
       var e;
       null == L || null === (e = L.current) || void 0 === e || e.scrollIntoView()
     }
-  }, [C]), y) ? (0, l.jsx)(N.default, {}) : (0, l.jsxs)(n.ScrollerThin, {
+  }, [C]), M) ? (0, l.jsx)(N.default, {}) : (0, l.jsxs)(n.ScrollerThin, {
     fade: !0,
     className: p.infoScroller,
     children: [(0, l.jsxs)("div", {
@@ -69,7 +69,7 @@ function h(e) {
           className: p.userInfoText,
           userBio: null !== (t = null == i ? void 0 : i.bio) && void 0 !== t ? t : ""
         })]
-      }), (0, l.jsx)(_.default, {
+      }), (0, l.jsx)(A.default, {
         userId: s.id,
         headingClassName: p.userInfoSectionHeader,
         textClassName: p.userInfoText

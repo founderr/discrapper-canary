@@ -18,9 +18,9 @@ var a = l("735250"),
   S = l("98131"),
   E = l("594190"),
   _ = l("695346"),
-  N = l("494620"),
-  g = l("592125"),
-  C = l("650774"),
+  g = l("494620"),
+  C = l("592125"),
+  N = l("650774"),
   h = l("430824"),
   A = l("131951"),
   x = l("944486"),
@@ -31,8 +31,8 @@ var a = l("735250"),
   v = l("346656"),
   L = l("169278"),
   M = l("759231"),
-  O = l("360001"),
-  j = l("626135"),
+  j = l("360001"),
+  O = l("626135"),
   D = l("823379"),
   P = l("63063"),
   b = l("358085"),
@@ -50,9 +50,9 @@ var a = l("735250"),
   z = l("526761"),
   Y = l("689938"),
   Q = l("534079"),
-  Z = l("223318");
+  q = l("223318");
 
-function J(e) {
+function Z(e) {
   let {
     selectedSource: t,
     selectSource: l,
@@ -67,17 +67,17 @@ function J(e) {
       } = e;
       return t === (null == S ? void 0 : S.id)
     }) : o,
-    N = null != t && t.id.startsWith("screen") ? L.default : O.default;
+    g = null != t && t.id.startsWith("screen") ? L.default : j.default;
   return (0, a.jsx)(u.FormItem, {
     title: Y.default.Messages.GO_LIVE_MODAL_APPLICATION_FORM_TITLE,
-    className: Z.modalContent,
-    titleClassName: Z.formItemTitleVerySlim,
+    className: q.modalContent,
+    titleClassName: q.formItemTitleVerySlim,
     children: (0, a.jsxs)(w.default, {
       children: [null != _ ? (0, a.jsx)(R.default, {
         game: _,
         size: R.default.Sizes.XSMALL,
         className: Q.selectedIcon
-      }) : (0, a.jsx)(N, {
+      }) : (0, a.jsx)(g, {
         className: Q.selectedIcon
       }), (0, a.jsx)("span", {
         className: Q.ellipsisText,
@@ -93,15 +93,15 @@ function J(e) {
   })
 }
 
-function q(e) {
+function J(e) {
   let {
     onChange: t,
     guildId: l
   } = e, n = (0, r.useStateFromStores)([h.default], () => h.default.getGuild(l));
   return null == n ? (t(), null) : (0, a.jsx)(u.FormItem, {
     title: Y.default.Messages.GO_LIVE_MODAL_GUILD_FORM_TITLE,
-    className: Z.modalContent,
-    titleClassName: Z.formItemTitle,
+    className: q.modalContent,
+    titleClassName: q.formItemTitle,
     children: (0, a.jsxs)(w.default, {
       children: [(0, a.jsx)(v.default, {
         guild: n,
@@ -141,16 +141,16 @@ function X(e) {
 function $(e) {
   let {
     guildId: t
-  } = e, l = (0, r.useStateFromStores)([C.default], () => {
+  } = e, l = (0, r.useStateFromStores)([N.default], () => {
     var e;
-    return null !== (e = C.default.getMemberCount(t)) && void 0 !== e ? e : 0
+    return null !== (e = N.default.getMemberCount(t)) && void 0 !== e ? e : 0
   }), s = _.NotifyFriendsOnGoLive.useSetting(), o = n.useCallback((e, t) => {
-    _.NotifyFriendsOnGoLive.updateSetting(t), j.default.track(K.AnalyticEvents.NOTIFY_STREAM_SETTING_UPDATE, {
+    _.NotifyFriendsOnGoLive.updateSetting(t), O.default.track(K.AnalyticEvents.NOTIFY_STREAM_SETTING_UPDATE, {
       value: t
     })
   }, []);
   return l >= 2 && l <= W.STREAM_NOTIFY_GUILD_MAX_SIZE ? (0, a.jsx)(u.FormItem, {
-    className: i()(Z.modalContent, Q.checkboxRow),
+    className: i()(q.modalContent, Q.checkboxRow),
     children: (0, a.jsx)(u.Checkbox, {
       value: !!s,
       type: u.Checkbox.Types.INVERTED,
@@ -171,7 +171,7 @@ function ee(e) {
     l(t)
   }, [l]);
   return (0, a.jsx)(u.FormItem, {
-    className: i()(Z.modalContent, Q.checkboxRow),
+    className: i()(q.modalContent, Q.checkboxRow),
     children: (0, a.jsx)(u.Checkbox, {
       value: t,
       type: u.Checkbox.Types.INVERTED,
@@ -194,7 +194,7 @@ function et(e) {
     sourceChanged: d,
     selectedGuildId: E,
     targetGuildPremiumTier: _,
-    selectSource: C,
+    selectSource: N,
     selectGuild: h,
     sound: p,
     onClose: T,
@@ -202,12 +202,12 @@ function et(e) {
     onChangeSelectedResolution: v,
     onChangeSelectedPreset: L,
     onChangeSelectedChannelId: M,
-    onChangeSource: O,
-    onChangeAudioDevice: j,
+    onChangeSource: j,
+    onChangeAudioDevice: O,
     onChangeGuild: D,
     onChangeSound: U,
     isAnimationDone: w
-  } = e, H = (0, r.useStateFromStores)([x.default, g.default], () => g.default.getChannel(x.default.getVoiceChannelId())), W = (0, r.useStateFromStores)([G.default], () => G.default.GPUDriversOutdated), Z = (0, r.useStateFromStores)([G.default], () => G.default.problematicGPUDriver), et = (0, r.useStateFromStores)([I.default], () => I.default.getCurrentUser()), el = (0, f.useEnableClips)(), ea = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
+  } = e, H = (0, r.useStateFromStores)([x.default, C.default], () => C.default.getChannel(x.default.getVoiceChannelId())), W = (0, r.useStateFromStores)([G.default], () => G.default.GPUDriversOutdated), q = (0, r.useStateFromStores)([G.default], () => G.default.problematicGPUDriver), et = (0, r.useStateFromStores)([I.default], () => I.default.getCurrentUser()), el = (0, f.useEnableClips)(), ea = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
     autoTrackExposure: !el
   }), en = (0, k.default)();
   null != t && t.id.startsWith("screen") && !A.default.supportsScreenSoundshare() && (en = Y.default.Messages.GO_LIVE_SCREENSHARE_NO_SOUND);
@@ -222,13 +222,13 @@ function et(e) {
   return (0, a.jsxs)(n.Fragment, {
     children: [ei ? (0, a.jsx)(F.default, {
       selectedSource: t,
-      onChangeVideoDeviceSource: O,
-      onChangeAudioDevice: j
+      onChangeVideoDeviceSource: j,
+      onChangeAudioDevice: O
     }) : (0, a.jsxs)("div", {
-      children: [(0, a.jsx)(J, {
-        selectSource: C,
+      children: [(0, a.jsx)(Z, {
+        selectSource: N,
         sourceChanged: d,
-        onChangeSource: O,
+        onChangeSource: j,
         selectedSource: t
       }), null != en ? (0, a.jsx)(X, {
         text: en
@@ -236,7 +236,7 @@ function et(e) {
         enabled: p,
         onChange: U
       }) : null]
-    }), h && null != E ? (0, a.jsx)(q, {
+    }), h && null != E ? (0, a.jsx)(J, {
       guildId: E,
       onChange: D
     }) : null, null != H ? (0, a.jsx)(V.default, {
@@ -249,12 +249,12 @@ function et(e) {
       guildId: E
     }) : null, W ? (0, a.jsx)(X, {
       text: Y.default.Messages.GO_LIVE_VIDEO_DRIVERS_OUTDATED
-    }) : null, Z ? (0, a.jsx)(X, {
+    }) : null, q ? (0, a.jsx)(X, {
       text: Y.default.Messages.PROBLEMATIC_GPU_DRIVER_DETECTED.format({
         helpCenterLink: P.default.getArticleURL(K.HelpdeskArticles.NVIDIA_DRIVER_ISSUES)
       })
-    }) : null, eo && (0, a.jsx)(N.default, {
-      look: N.InfoBoxLooks.WARNING,
+    }) : null, eo && (0, a.jsx)(g.default, {
+      look: g.InfoBoxLooks.WARNING,
       className: Q.hardwareWarning,
       children: Y.default.Messages.GO_LIVE_MODAL_HARDWARE_WARNING_INFOBOX.format({
         onClick: () => {

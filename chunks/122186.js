@@ -26,18 +26,18 @@ function E(e) {
     glow: E = !1
   } = e, {
     enabled: _,
-    variant: N
+    variant: g
   } = r.default.useExperiment({
     location: "StreamSettingsUpsellBanner"
   }, {
     autoTrackExposure: !0
-  }), g = _ && r.GradientVariants.includes(N), C = _ && [r.EnhancedHDStreamingRoadblockVariants.VARIANT_1A, r.EnhancedHDStreamingRoadblockVariants.VARIANT_1B].includes(N), h = {
+  }), C = _ && r.GradientVariants.includes(g), N = _ && [r.EnhancedHDStreamingRoadblockVariants.VARIANT_1A, r.EnhancedHDStreamingRoadblockVariants.VARIANT_1B].includes(g), h = {
     section: c.AnalyticsSections.STREAM_SETTINGS,
     object: c.AnalyticsObjects.PREMIUM_UPSELL_BANNER,
     objectType: c.AnalyticsObjectTypes.BUY
   }, A = () => (0, a.jsx)(u.default, {
     className: s()(S.enhancedCTA, {
-      [S.ctaGradientBackground]: g
+      [S.ctaGradientBackground]: C
     }),
     iconClassName: S.premiumIcon,
     subscriptionTier: f.PremiumSubscriptionSKUs.TIER_2,
@@ -56,7 +56,7 @@ function E(e) {
       }), (0, a.jsx)(i.Text, {
         variant: "text-sm/medium",
         className: s()(S.upsellText, S.enhancedUpsellText),
-        children: null != t ? t : C ? m.default.Messages.STREAM_PREMIUM_UPSELL_BANNER_V2 : m.default.Messages.STREAM_PREMIUM_UPSELL_BANNER_LEARN_MORE_V2.format({
+        children: null != t ? t : N ? m.default.Messages.STREAM_PREMIUM_UPSELL_BANNER_V2 : m.default.Messages.STREAM_PREMIUM_UPSELL_BANNER_LEARN_MORE_V2.format({
           onClick: () => n({
             analyticsLocation: h,
             onClose: l
@@ -65,10 +65,10 @@ function E(e) {
       })]
     }), (0, a.jsx)("div", {
       className: S.enhancedCTAs,
-      children: C ? (0, a.jsxs)(a.Fragment, {
+      children: N ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(i.Button, {
           className: s()(S.enhancedCTA, S.learnMoreCTA),
-          color: g ? i.Button.Colors.CUSTOM : i.Button.Colors.TRANSPARENT,
+          color: C ? i.Button.Colors.CUSTOM : i.Button.Colors.TRANSPARENT,
           onClick: () => n({
             analyticsLocation: h,
             onClose: l

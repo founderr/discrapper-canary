@@ -2,17 +2,17 @@
 t.r(s), t("47120");
 var i = t("735250");
 t("470079");
-var l = t("727075"),
-  a = t("780384"),
+var a = t("727075"),
+  l = t("780384"),
   r = t("481060"),
   C = t("493683"),
   n = t("410030"),
   d = t("204197"),
   o = t("63063"),
   c = t("51144"),
-  x = t("792451"),
-  u = t("814667"),
-  f = t("981631"),
+  u = t("792451"),
+  f = t("814667"),
+  x = t("981631"),
   h = t("689938"),
   p = t("970422");
 let _ = (e, s) => {
@@ -23,8 +23,8 @@ let _ = (e, s) => {
       user: s,
       onClose: t
     } = e, {
-      avatarSrc: l,
-      eventHandlers: a
+      avatarSrc: a,
+      eventHandlers: l
     } = (0, d.default)({
       user: s,
       size: r.AvatarSizes.SIZE_56
@@ -32,10 +32,10 @@ let _ = (e, s) => {
     return (0, i.jsxs)("div", {
       className: p.referredUserRowContainer,
       children: [(0, i.jsx)(r.Avatar, {
-        src: l,
+        src: a,
         "aria-label": C,
         size: r.AvatarSizes.SIZE_56,
-        ...a
+        ...l
       }), (0, i.jsxs)("div", {
         className: p.referredUserRowBody,
         children: [(0, i.jsx)(r.Tooltip, {
@@ -43,14 +43,14 @@ let _ = (e, s) => {
           position: "right",
           children: e => {
             let {
-              onMouseEnter: l,
-              onMouseLeave: a
+              onMouseEnter: a,
+              onMouseLeave: l
             } = e;
             return (0, i.jsx)(r.Clickable, {
               onClick: () => _(s.id, t),
               className: p.displayNameClickableContainer,
-              onMouseEnter: l,
-              onMouseLeave: a,
+              onMouseEnter: a,
+              onMouseLeave: l,
               children: (0, i.jsx)(r.Text, {
                 variant: "text-md/medium",
                 className: p.displayName,
@@ -73,13 +73,13 @@ s.default = e => {
   } = e, C = [...s].map(e => (0, i.jsx)(j, {
     user: e,
     onClose: t
-  }, e.id)), d = (0, n.useTheme)(), c = (0, a.isThemeLight)(d) ? u.default : x.default;
+  }, e.id)), d = (0, n.useTheme)(), c = (0, l.isThemeLight)(d) ? f.default : u.default;
   return (0, i.jsxs)("div", {
     className: p.confrimationContainer,
     children: [(0, i.jsx)(r.Clickable, {
       onClick: t,
       className: p.closeButtonContainer,
-      children: (0, i.jsx)(l.CloseSmallIcon, {
+      children: (0, i.jsx)(a.CloseSmallIcon, {
         width: 20,
         height: 20
       })
@@ -98,7 +98,7 @@ s.default = e => {
       variant: "text-md/medium",
       children: h.default.Messages.REFERRAL_PROGRAM_FRIEND_SELECT_COMPLETE_SUBHEADER.format({
         days: 10,
-        helpdeskArticle: o.default.getArticleURL(f.HelpdeskArticles.REFERRAL_PROGRAM)
+        helpdeskArticle: o.default.getArticleURL(x.HelpdeskArticles.REFERRAL_PROGRAM)
       })
     })]
   })

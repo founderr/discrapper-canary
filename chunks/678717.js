@@ -15,8 +15,8 @@ var a = t("735250"),
   u = t("213609"),
   h = t("906467"),
   m = t("259580"),
-  p = t("465670"),
-  g = t("54017"),
+  g = t("465670"),
+  p = t("54017"),
   f = t("502568"),
   b = t("31336"),
   y = t("19759"),
@@ -163,12 +163,12 @@ function z() {
     children: [(0, a.jsxs)(f.default, {
       className: H.headerBar,
       toolbar: (0, a.jsx)(f.default.Icon, {
-        icon: p.default,
+        icon: g.default,
         tooltip: M.default.Messages.CLOSE,
         onClick: b.toggleDisplayDevTools
       }),
       children: [(0, a.jsx)(f.default.Icon, {
-        icon: g.default,
+        icon: p.default,
         tooltip: "DevTools"
       }), (0, a.jsx)(f.default.Title, {
         children: "DevTools"
@@ -224,7 +224,7 @@ function V() {
           direction: m.default.Directions.UP
         }),
         children: [(0, a.jsx)(f.default.Icon, {
-          icon: g.default,
+          icon: p.default,
           tooltip: "DevTools"
         }), (0, a.jsx)(f.default.Title, {
           children: "DevTools"

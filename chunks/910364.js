@@ -19,8 +19,8 @@ var l = s("735250"),
   m = s("314897"),
   I = s("158776"),
   v = s("594174"),
-  _ = s("342656"),
-  A = s("785717"),
+  A = s("342656"),
+  _ = s("785717"),
   T = s("221292"),
   x = s("621853"),
   N = s("895618"),
@@ -30,8 +30,8 @@ var l = s("735250"),
   C = s("502762"),
   P = s("58307"),
   j = s("62154"),
-  M = s("293259"),
-  y = s("725954"),
+  y = s("293259"),
+  M = s("725954"),
   R = s("228168"),
   g = s("981631"),
   O = s("689938"),
@@ -49,7 +49,7 @@ function L(e) {
     return (null === (s = x.default.getUserProfile(t.id)) || void 0 === s ? void 0 : null === (e = s.application) || void 0 === e ? void 0 : e.id) != null
   }), f = (0, p.useMutualFriends)(t), S = (0, i.useStateFromStores)([x.default], () => x.default.getMutualGuilds(t.id)), E = t.bot || s, {
     enabled: m
-  } = (0, _.useProfileMutualsExperiment)({
+  } = (0, A.useProfileMutualsExperiment)({
     autoTrackExposure: !0,
     location: c.default.PROFILE_MODAL,
     disable: E
@@ -105,7 +105,7 @@ function L(e) {
 function D(e) {
   var t, s;
   let {
-    user: _,
+    user: A,
     guildId: x,
     channelId: p,
     messageId: D,
@@ -116,7 +116,7 @@ function D(e) {
     transitionState: w,
     sourceAnalyticsLocations: V = [],
     onClose: z
-  } = e, Y = null !== (t = (0, i.useStateFromStores)([v.default], () => v.default.getUser(_.id))) && void 0 !== t ? t : _, H = (0, U.default)(null !== (s = Y.id) && void 0 !== s ? s : ""), {
+  } = e, Y = null !== (t = (0, i.useStateFromStores)([v.default], () => v.default.getUser(A.id))) && void 0 !== t ? t : A, H = (0, U.default)(null !== (s = Y.id) && void 0 !== s ? s : ""), {
     analyticsLocations: W
   } = (0, f.default)([...V, c.default.PROFILE_MODAL]);
   (0, u.useSubscribeGuildMembers)({
@@ -155,7 +155,7 @@ function D(e) {
     er = null == H ? void 0 : H.profileEffectId;
   return (0, l.jsx)(f.AnalyticsLocationProvider, {
     value: W,
-    children: (0, l.jsx)(A.UserProfileAnalyticsProvider, {
+    children: (0, l.jsx)(_.UserProfileAnalyticsProvider, {
       layout: "MODAL",
       userId: Y.id,
       guildId: x,
@@ -175,7 +175,7 @@ function D(e) {
               user: Y,
               displayProfile: H,
               profileType: R.UserProfileTypes.MODAL,
-              children: [(0, l.jsx)(M.default, {
+              children: [(0, l.jsx)(y.default, {
                 className: F.topSection,
                 displayProfile: H,
                 user: Y,
@@ -190,7 +190,7 @@ function D(e) {
                   onTooltipClose: z
                 }), (0, l.jsxs)("div", {
                   className: F.body,
-                  children: [(0, l.jsx)(y.default, {
+                  children: [(0, l.jsx)(M.default, {
                     user: Y,
                     displayProfile: H
                   }), el ? (0, l.jsx)(L, {

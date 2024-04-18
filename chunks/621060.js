@@ -1,7 +1,7 @@
 "use strict";
 t.r(r), t.d(r, {
   default: function() {
-    return p
+    return g
   }
 }), t("47120"), t("653041");
 var a = t("735250"),
@@ -36,13 +36,13 @@ function m(e) {
     tabs: r,
     selectedTabId: t,
     onSelectTab: l
-  } = e, n = i.useRef(null), m = i.useRef(0), p = i.useRef(new Map), [g, f] = i.useState([]), b = i.useCallback(() => {
+  } = e, n = i.useRef(null), m = i.useRef(0), g = i.useRef(new Map), [p, f] = i.useState([]), b = i.useCallback(() => {
     var e, a, i, l;
     if (null == n.current) return;
     let o = [],
       c = n.current.getBoundingClientRect().width;
     if (c !== m.current) {
-      for (let n of (m.current = c, c -= null !== (a = null === (e = p.current.get(t)) || void 0 === e ? void 0 : e.width) && void 0 !== a ? a : 0, r)) n.id !== t && (c -= null !== (l = null === (i = p.current.get(n.id)) || void 0 === i ? void 0 : i.width) && void 0 !== l ? l : 0) < 0 && o.push(n.id);
+      for (let n of (m.current = c, c -= null !== (a = null === (e = g.current.get(t)) || void 0 === e ? void 0 : e.width) && void 0 !== a ? a : 0, r)) n.id !== t && (c -= null !== (l = null === (i = g.current.get(n.id)) || void 0 === i ? void 0 : i.width) && void 0 !== l ? l : 0) < 0 && o.push(n.id);
       f(o)
     }
   }, [r, t]), y = i.useRef(null);
@@ -65,14 +65,14 @@ function m(e) {
           id: r,
           name: i
         } = e;
-        return g.includes(r) && t !== r ? (0, a.jsx)(o.MenuItem, {
+        return p.includes(r) && t !== r ? (0, a.jsx)(o.MenuItem, {
           id: r,
           label: i,
           action: () => l(r)
         }, r) : null
       }).filter(s.isNotNullish)
     })
-  }, [r, g, l, t]);
+  }, [r, p, l, t]);
   return (0, a.jsxs)("div", {
     className: u.tabBar,
     ref: n,
@@ -81,13 +81,13 @@ function m(e) {
         id: r,
         name: i
       } = e;
-      if (!g.includes(r)) return (0, a.jsx)(h, {
+      if (!p.includes(r)) return (0, a.jsx)(h, {
         id: r,
         selected: t === r,
         ref: e => {
           var t, a, i;
-          let l = null !== (a = null === (t = p.current.get(r)) || void 0 === t ? void 0 : t.width) && void 0 !== a ? a : 0;
-          p.current.set(r, {
+          let l = null !== (a = null === (t = g.current.get(r)) || void 0 === t ? void 0 : t.width) && void 0 !== a ? a : 0;
+          g.current.set(r, {
             node: e,
             width: null !== (i = null == e ? void 0 : e.getBoundingClientRect().width) && void 0 !== i ? i : l
           })
@@ -95,7 +95,7 @@ function m(e) {
         onClick: t !== r ? () => l(r) : void 0,
         children: i
       }, r)
-    }).filter(s.isNotNullish), g.length > 0 && (0, a.jsx)(a.Fragment, {
+    }).filter(s.isNotNullish), p.length > 0 && (0, a.jsx)(a.Fragment, {
       children: (0, a.jsx)(o.Popout, {
         layerContext: d.devToolsLayerContext,
         renderPopout: x,
@@ -118,7 +118,7 @@ function m(e) {
   })
 }
 
-function p(e, r) {
+function g(e, r) {
   var t, l, n;
   let {
     tabs: o,
