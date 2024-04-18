@@ -16,15 +16,15 @@ var u = n("481060"),
   I = n("776568"),
   M = n("299206"),
   E = n("895563"),
-  m = n("212205"),
-  p = n("62420"),
-  C = n("455395"),
-  g = n("581052"),
+  p = n("212205"),
+  m = n("62420"),
+  g = n("455395"),
+  C = n("581052"),
   T = n("875252"),
   v = n("122074"),
   h = n("819403"),
-  N = n("777658"),
-  A = n("858488"),
+  A = n("777658"),
+  N = n("858488"),
   R = n("185457"),
   x = n("570870"),
   O = n("389052"),
@@ -47,19 +47,19 @@ t.default = (0, s.default)((0, l.default)(function(e) {
     showMute: s = !0,
     showMediaItems: d = !1,
     showChannelCallItems: W = !1,
-    showModalItems: w = !0,
-    targetIsUser: Y = !1,
+    showModalItems: Y = !0,
+    targetIsUser: w = !1,
     context: K,
     onSelect: q,
     onHeightUpdate: B
   } = e, H = (0, b.default)(t.id, null), Q = (0, F.default)(t, K), X = (0, R.default)({
     user: t,
     context: K
-  }), z = (0, A.default)({
+  }), z = (0, N.default)({
     user: t
   }), J = (0, k.default)(t.id), Z = (0, U.default)(n.id, l), $ = (0, j.default)({
     user: t
-  }), ee = (0, o.default)(null, t), et = (0, D.default)(t.id), en = (0, y.default)(t.id, n.id), ea = (0, N.default)(t), eu = (0, P.default)(t.id), ei = (0, G.default)(t.id, n.id), el = (0, O.default)({
+  }), ee = (0, o.default)(null, t), et = (0, D.default)(t.id), en = (0, y.default)(t.id, n.id), ea = (0, A.default)(t), eu = (0, P.default)(t.id), ei = (0, G.default)(t.id, n.id), el = (0, O.default)({
     user: t
   }), es = (0, I.default)(n), er = (0, v.default)(L.ZERO_STRING_GUILD_ID, n.id), eo = (0, M.default)({
     id: t.id,
@@ -73,44 +73,44 @@ t.default = (0, s.default)((0, l.default)(function(e) {
     channel: n,
     guildId: void 0,
     onHeightUpdate: B
-  }), eE = (0, E.useAddToFavoritesItem)(n), em = (0, E.useRemoveFromFavoritesItem)(n), ep = (0, m.default)(n), eC = (0, p.default)(n), eg = (0, g.useMessageRequestItem)(n), eT = (0, C.useInappropriateConversationItem)(n), ev = (0, T.useSafetyWarningsItem)(n), eh = n.isManaged(), eN = t.isNonUserBot();
+  }), eE = (0, E.useAddToFavoritesItem)(n), ep = (0, E.useRemoveFromFavoritesItem)(n), em = (0, p.default)(n), eg = (0, m.default)(n), eC = (0, C.useMessageRequestItem)(n), eT = (0, g.useInappropriateConversationItem)(n), ev = (0, T.useSafetyWarningsItem)(n), eh = n.isManaged(), eA = t.isNonUserBot();
   return (0, a.jsxs)(u.Menu, {
     navId: "user-context",
     onClose: i.closeContextMenu,
     "aria-label": V.default.Messages.USER_ACTIONS_MENU_LABEL,
     onSelect: q,
     children: [(0, a.jsx)(u.MenuGroup, {
-      children: !eN && ef
+      children: !eA && ef
     }), (0, a.jsx)(u.MenuGroup, {
-      children: eg
+      children: eC
     }), (0, a.jsx)(u.MenuGroup, {
       children: ev
     }), (0, a.jsx)(u.MenuGroup, {
       children: eT
     }), (0, a.jsxs)(u.MenuGroup, {
-      children: [eE, ep, eC]
+      children: [eE, em, eg]
     }), (0, a.jsx)(u.MenuGroup, {
-      children: !eN && e_
+      children: !eA && e_
     }), (0, a.jsxs)(u.MenuGroup, {
-      children: [!eN && (0, a.jsxs)(a.Fragment, {
-        children: [w && H, Q, !eh && en, w && X, w && z, J]
+      children: [!eA && (0, a.jsxs)(a.Fragment, {
+        children: [Y && H, Q, !eh && en, Y && X, Y && z, J]
       }), Z]
-    }), !eN && (0, a.jsxs)(a.Fragment, {
+    }), !eA && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(u.MenuGroup, {
         children: d && et
       }), (0, a.jsx)(u.MenuGroup, {
-        children: w && ee
+        children: Y && ee
       }), (0, a.jsxs)(u.MenuGroup, {
-        children: [d && eu, d && ei, eM, w && $, ea, w && el, d && eI]
+        children: [d && eu, d && ei, eM, Y && $, ea, Y && el, d && eI]
       }), (0, a.jsxs)(u.MenuGroup, {
         children: [s && es, er]
       }), W && (0, a.jsxs)(u.MenuGroup, {
         children: [eS, ec]
       })]
     }), (0, a.jsx)(u.MenuGroup, {
-      children: em
+      children: ep
     }), (0, a.jsxs)(u.MenuGroup, {
-      children: [eo, !Y && ed]
+      children: [eo, !w && ed]
     })]
   })
 }, {

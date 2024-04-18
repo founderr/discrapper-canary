@@ -6,8 +6,8 @@ l.r(t), l.d(t, {
 });
 var a = l("735250");
 l("470079");
-var s = l("120356"),
-  n = l.n(s),
+var n = l("120356"),
+  s = l.n(n),
   i = l("481060"),
   r = l("933557"),
   u = l("995123"),
@@ -20,7 +20,7 @@ function m(e) {
   let {
     channel: t,
     users: l,
-    selected: s = !1
+    selected: n = !1
   } = e, m = (0, r.default)(t), S = null;
   null != l && l.length > 0 && (S = (0, a.jsx)(o.default, {
     guildId: t.guild_id,
@@ -29,11 +29,11 @@ function m(e) {
     renderUser: e => {
       if (null == e) return null;
       let l = d.default.getName(t.guild_id, t.id, e),
-        s = e.getAvatarURL(t.guild_id, 24);
+        n = e.getAvatarURL(t.guild_id, 24);
       return (0, a.jsx)(i.TooltipContainer, {
         text: l,
         children: (0, a.jsx)("img", {
-          src: null != s ? s : void 0,
+          src: null != n ? n : void 0,
           "aria-label": e.username,
           alt: "",
           className: f.avatar
@@ -41,7 +41,7 @@ function m(e) {
       })
     },
     renderMoreUsers: e => {
-      let s = function(e, t) {
+      let n = function(e, t) {
         let l = t.id,
           a = t.guild_id;
         return e.length <= 1 ? null : 2 === e.length ? c.default.Messages.GO_LIVE_MODAL_OVERFLOW_TWO_USERS.format({
@@ -59,7 +59,7 @@ function m(e) {
       }(l.slice(4), t);
       return (0, a.jsx)("div", {
         children: (0, a.jsx)(i.TooltipContainer, {
-          text: s,
+          text: n,
           children: (0, a.jsx)("div", {
             className: f.userListOverflow,
             children: e
@@ -72,8 +72,8 @@ function m(e) {
   }));
   let E = (0, u.default)(t);
   return (0, a.jsxs)("div", {
-    className: n()(f.channelInfo, {
-      [f.selected]: s
+    className: s()(f.channelInfo, {
+      [f.selected]: n
     }),
     children: [(0, a.jsx)(E, {
       className: f.channelIcon

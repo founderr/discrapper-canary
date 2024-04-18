@@ -1,13 +1,13 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return I
+    return x
   }
 }), l("390547");
 var a = l("735250");
 l("470079");
-var s = l("120356"),
-  n = l.n(s),
+var n = l("120356"),
+  s = l.n(n),
   i = l("392711"),
   r = l.n(i),
   u = l("442837"),
@@ -19,32 +19,32 @@ var s = l("120356"),
   S = l("346656"),
   E = l("259580"),
   _ = l("102172"),
-  C = l("148381"),
+  N = l("148381"),
   g = l("689938"),
-  N = l("223318"),
+  C = l("223318"),
   h = l("578606");
 
-function x(e) {
+function A(e) {
   let {
     guildId: t,
     onClick: l
-  } = e, s = (0, u.useStateFromStores)([c.default], () => c.default.getGuild(t)), n = (0, u.useStateFromStores)([d.default, c.default, f.default], () => d.default.getChannels(t)[d.GUILD_VOCAL_CHANNELS_KEY].some(e => {
+  } = e, n = (0, u.useStateFromStores)([c.default], () => c.default.getGuild(t)), s = (0, u.useStateFromStores)([d.default, c.default, f.default], () => d.default.getChannels(t)[d.GUILD_VOCAL_CHANNELS_KEY].some(e => {
     let {
       channel: t
     } = e;
     return (0, _.canStreamInChannel)(t, c.default, f.default)
   }));
-  return null != s && n ? (0, a.jsxs)(o.Clickable, {
+  return null != n && s ? (0, a.jsxs)(o.Clickable, {
     onClick: () => l(t),
     className: h.guildRow,
     children: [(0, a.jsx)(S.default, {
-      guild: s,
+      guild: n,
       size: S.default.Sizes.SMALL,
       className: h.guildIcon
     }), (0, a.jsx)(o.Text, {
       variant: "text-md/normal",
       className: h.guildName,
-      children: s.toString()
+      children: n.toString()
     }), (0, a.jsx)(E.default, {
       direction: E.default.Directions.RIGHT,
       className: h.guildArrow
@@ -52,18 +52,18 @@ function x(e) {
   }) : null
 }
 
-function I(e) {
+function x(e) {
   let {
     onSelectGuild: t
   } = e, l = (0, u.useStateFromStores)([m.default], () => m.default.getGuildFolders());
-  return (0, a.jsx)(C.default, {
+  return (0, a.jsx)(N.default, {
     title: g.default.Messages.GO_LIVE_MODAL_SELECT_GUILD_FORM_TITLE,
-    scrollerClassName: n()(h.guildScroller, N.marginBottom),
+    scrollerClassName: s()(h.guildScroller, C.marginBottom),
     children: r().flatMap(l, e => {
       let {
         guildIds: l
       } = e;
-      return l.map(e => (0, a.jsx)(x, {
+      return l.map(e => (0, a.jsx)(A, {
         guildId: e,
         onClick: t
       }, e))

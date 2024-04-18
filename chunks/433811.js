@@ -2,8 +2,8 @@
 l.r(t);
 var a = l("735250");
 l("470079");
-var s = l("442837"),
-  n = l("780384"),
+var n = l("442837"),
+  s = l("780384"),
   i = l("481060"),
   r = l("210887"),
   u = l("918701"),
@@ -13,7 +13,7 @@ var s = l("442837"),
 t.default = function(e) {
   let {
     quest: t
-  } = e, l = (0, s.useStateFromStores)([r.default], () => r.default.getState().theme), f = (0, n.isThemeDark)(l) ? o.ThemeTypes.DARK : o.ThemeTypes.LIGHT;
+  } = e, l = (0, n.useStateFromStores)([r.default], () => r.default.getState().theme), f = (0, s.isThemeDark)(l) ? o.ThemeTypes.DARK : o.ThemeTypes.LIGHT;
   return (0, a.jsx)("div", {
     className: c.wrapper,
     children: (0, a.jsxs)("div", {

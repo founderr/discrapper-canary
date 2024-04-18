@@ -1,43 +1,43 @@
 "use strict";
 n.r(t), n.d(t, {
   categoryCollapse: function() {
-    return a
+    return i
   },
   categoryCollapseAll: function() {
-    return l
-  },
-  categoryExpand: function() {
     return s
   },
+  categoryExpand: function() {
+    return r
+  },
   categoryExpandAll: function() {
-    return u
+    return o
   }
 });
-var i = n("570140");
+var a = n("570140");
 
-function a(e) {
-  i.default.dispatch({
+function i(e) {
+  a.default.dispatch({
     type: "CATEGORY_COLLAPSE",
     id: e
   })
 }
 
-function s(e) {
-  i.default.dispatch({
+function r(e) {
+  a.default.dispatch({
     type: "CATEGORY_EXPAND",
     id: e
   })
 }
 
-function l(e) {
-  i.default.dispatch({
+function s(e) {
+  a.default.dispatch({
     type: "CATEGORY_COLLAPSE_ALL",
     guildId: e
   })
 }
 
-function u(e) {
-  i.default.dispatch({
+function o(e) {
+  a.default.dispatch({
     type: "CATEGORY_EXPAND_ALL",
     guildId: e
   })

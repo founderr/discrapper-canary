@@ -3,8 +3,8 @@ t.r(n);
 var a = t("735250");
 t("470079");
 var u = t("481060"),
-  i = t("493683"),
-  l = t("239091"),
+  l = t("493683"),
+  i = t("239091"),
   o = t("883385"),
   s = t("108843"),
   d = t("947440"),
@@ -12,9 +12,9 @@ var u = t("481060"),
   c = t("299206"),
   f = t("895563"),
   M = t("212205"),
-  m = t("62420"),
-  h = t("122074"),
-  C = t("314897"),
+  h = t("62420"),
+  C = t("122074"),
+  m = t("314897"),
   _ = t("858687"),
   v = t("461535"),
   E = t("776568"),
@@ -25,14 +25,14 @@ n.default = (0, s.default)((0, o.default)(function(e) {
     channel: n,
     selected: o,
     onSelect: s
-  } = e, r = n.isOwner(C.default.getId()), g = (0, v.default)(n), N = (0, E.default)(n), p = (0, h.default)(I.ZERO_STRING_GUILD_ID, n.id), A = (0, _.default)(n, o), T = (0, c.default)({
+  } = e, r = n.isOwner(m.default.getId()), g = (0, v.default)(n), N = (0, E.default)(n), p = (0, C.default)(I.ZERO_STRING_GUILD_ID, n.id), A = (0, _.default)(n, o), T = (0, c.default)({
     id: n.id,
     label: S.default.Messages.COPY_ID_CHANNEL
-  }), x = (0, d.default)(n), O = (0, f.useAddToFavoritesItem)(n), G = (0, f.useRemoveFromFavoritesItem)(n), F = (0, M.default)(n), R = (0, m.default)(n);
+  }), x = (0, d.default)(n), O = (0, f.useAddToFavoritesItem)(n), G = (0, f.useRemoveFromFavoritesItem)(n), F = (0, M.default)(n), R = (0, h.default)(n);
   return null == n || n.isManaged() ? null : (0, a.jsxs)(u.Menu, {
     navId: "gdm-context",
     "aria-label": S.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-    onClose: l.closeContextMenu,
+    onClose: i.closeContextMenu,
     onSelect: s,
     children: [(0, a.jsx)(u.MenuGroup, {
       children: g
@@ -57,7 +57,7 @@ n.default = (0, s.default)((0, o.default)(function(e) {
         control: (e, t) => (0, a.jsx)(u.MenuImageUploadControl, {
           onChange: t => {
             var a;
-            i.default.setIcon(n.id, t), null === (a = e.onClose) || void 0 === a || a.call(e)
+            l.default.setIcon(n.id, t), null === (a = e.onClose) || void 0 === a || a.call(e)
           },
           multiple: !1,
           "aria-label": S.default.Messages.CHANGE_ICON,
@@ -68,7 +68,7 @@ n.default = (0, s.default)((0, o.default)(function(e) {
       }), null != n.icon ? (0, a.jsx)(u.MenuItem, {
         id: "remove-icon",
         label: S.default.Messages.REMOVE_ICON,
-        action: () => i.default.setIcon(n.id, null)
+        action: () => l.default.setIcon(n.id, null)
       }) : null]
     }), (0, a.jsx)(u.MenuGroup, {
       children: x

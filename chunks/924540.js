@@ -13,8 +13,8 @@ var n = i("735250"),
   a = i.n(s),
   l = i("481060"),
   o = i("774078"),
-  c = i("855693"),
-  u = i("55935"),
+  u = i("855693"),
+  c = i("55935"),
   d = i("74538"),
   f = i("639119"),
   p = i("474936"),
@@ -28,7 +28,7 @@ function h(e) {
     trialDuration: s
   } = e, d = r.useMemo(() => Date.parse(i), [i]), f = (0, o.default)(d, 6e4);
   return Object.values(f).every(e => 0 === e) ? null : (0, n.jsx)(l.Tooltip, {
-    text: (0, u.unitsAsStrings)(f, {
+    text: (0, c.unitsAsStrings)(f, {
       days: C.default.Messages.PREMIUM_TRIAL_REMAINING_AVAILABILITY_DAYS,
       hours: C.default.Messages.PREMIUM_TRIAL_REMAINING_AVAILABILITY_HOURS,
       minutes: C.default.Messages.PREMIUM_TRIAL_REMAINING_AVAILABILITY_MINUTES
@@ -38,7 +38,7 @@ function h(e) {
       className: a()(m.premiumTrialBadge, m.premiumTrialAcknowledgedBadge, {
         [m.premiumTrialBadgeSelected]: t
       }),
-      children: [(0, n.jsx)(c.default, {
+      children: [(0, n.jsx)(u.default, {
         className: m.premiumTrialBadgeIcon
       }), s]
     })

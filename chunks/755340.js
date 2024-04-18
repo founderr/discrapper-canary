@@ -6,8 +6,8 @@ var n = i("735250"),
   a = i("467138"),
   l = i("246364"),
   o = i("983736"),
-  c = i("5056"),
-  u = i("565321"),
+  u = i("5056"),
+  c = i("565321"),
   d = i("297619"),
   f = i("456935"),
   p = i("446945"),
@@ -61,7 +61,7 @@ t.default = function(e) {
   }, [N, B, w]), k = (0, n.jsxs)(n.Fragment, {
     children: [!E && (0, n.jsx)(f.default, {
       guild: t
-    }), (0, n.jsx)(u.default, {
+    }), (0, n.jsx)(c.default, {
       formDescription: T,
       guildId: t.id,
       onSave: g
@@ -83,7 +83,7 @@ t.default = function(e) {
     }))]
   });
   return P ? (0, n.jsxs)(n.Fragment, {
-    children: [!I && k, !F && (0, n.jsx)(c.default, {
+    children: [!I && k, !F && (0, n.jsx)(u.default, {
       addFormField: G,
       showManualApprovalWarning: !I && !(b > 0),
       guild: t,

@@ -6,8 +6,8 @@ l.r(t), l.d(t, {
 });
 var a = l("735250");
 l("470079");
-var s = l("442837"),
-  n = l("481060"),
+var n = l("442837"),
+  s = l("481060"),
   i = l("984933"),
   r = l("430824"),
   u = l("496675"),
@@ -24,16 +24,16 @@ function _(e) {
     selectedChannelId: t,
     guildId: l,
     onChangeSelectedChannelId: _
-  } = e, C = (0, s.useStateFromStores)([o.default], () => o.default.getCurrentUser()), g = (0, s.useStateFromStores)([r.default, i.default, u.default], () => (0, c.getStreamEligibleChannels)(i.default.getChannels(l), r.default, u.default)), N = (0, s.useStateFromStores)([d.default], () => d.default.getVoiceStates(l)), h = g.map(e => {
+  } = e, N = (0, n.useStateFromStores)([o.default], () => o.default.getCurrentUser()), g = (0, n.useStateFromStores)([r.default, i.default, u.default], () => (0, c.getStreamEligibleChannels)(i.default.getChannels(l), r.default, u.default)), C = (0, n.useStateFromStores)([d.default], () => d.default.getVoiceStates(l)), h = g.map(e => {
     var l;
     return {
       name: (0, a.jsx)(f.default, {
         channel: e,
-        users: null === (l = N[e.id]) || void 0 === l ? void 0 : l.filter(e => {
+        users: null === (l = C[e.id]) || void 0 === l ? void 0 : l.filter(e => {
           let {
             user: t
           } = e;
-          return t.id !== (null == C ? void 0 : C.id)
+          return t.id !== (null == N ? void 0 : N.id)
         }).map(e => {
           let {
             user: t
@@ -48,7 +48,7 @@ function _(e) {
   return (0, a.jsx)(m.default, {
     title: S.default.Messages.GO_LIVE_MODAL_SELECT_CHANNEL_FORM_TITLE,
     scrollerInnerClassName: E.channelSelectScrollerInner,
-    children: (0, a.jsx)(n.RadioGroup, {
+    children: (0, a.jsx)(s.RadioGroup, {
       options: h,
       value: t,
       itemInfoClassName: E.channelInfoWrapper,

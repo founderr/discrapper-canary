@@ -2,8 +2,8 @@
 l.r(t);
 var a = l("735250");
 l("470079");
-var s = l("120356"),
-  n = l.n(s),
+var n = l("120356"),
+  s = l.n(n),
   i = l("481060"),
   r = l("132485");
 let u = e => {
@@ -11,7 +11,7 @@ let u = e => {
     data: t,
     disabled: l
   } = e, {
-    content: s,
+    content: n,
     className: u,
     onClick: o,
     disabled: d
@@ -19,10 +19,10 @@ let u = e => {
   return (0, a.jsx)(i.FocusRing, {
     children: (0, a.jsx)("button", {
       type: "button",
-      className: n()(r.item, u),
+      className: s()(r.item, u),
       onClick: o,
       disabled: l || d,
-      children: s
+      children: n
     })
   })
 };
@@ -30,11 +30,11 @@ t.default = e => {
   let {
     buttons: t,
     disabled: l,
-    className: s
+    className: n
   } = e;
   return (0, a.jsx)("div", {
     role: "group",
-    className: n()(r.group, s),
+    className: s()(r.group, n),
     children: t.map((e, t) => (0, a.jsx)(u, {
       data: e,
       disabled: l

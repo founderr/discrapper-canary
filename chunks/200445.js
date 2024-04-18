@@ -6,8 +6,8 @@ l.r(t), l.d(t, {
 });
 var a = l("735250");
 l("470079");
-var s = l("120356"),
-  n = l.n(s),
+var n = l("120356"),
+  s = l.n(n),
   i = l("481060"),
   r = l("301822"),
   u = l("689938"),
@@ -24,7 +24,7 @@ function c(e) {
     glow: t
   } = e;
   return (0, a.jsx)("div", {
-    className: n()(o.container, {
+    className: s()(o.container, {
       [o.gradientGlow]: t
     }),
     children: (0, a.jsxs)("div", {

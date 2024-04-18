@@ -1,9 +1,9 @@
 "use strict";
 l.r(t), l("47120");
 var a = l("735250"),
-  s = l("470079"),
-  n = l("512722"),
-  i = l.n(n),
+  n = l("470079"),
+  s = l("512722"),
+  i = l.n(s),
   r = l("442837"),
   u = l("524437"),
   o = l("481060"),
@@ -14,21 +14,21 @@ var a = l("735250"),
   S = l("63063"),
   E = l("13140"),
   _ = l("435064"),
-  C = l("894694"),
+  N = l("894694"),
   g = l("39604"),
-  N = l("981631"),
+  C = l("981631"),
   h = l("921944"),
-  x = l("689938"),
-  I = l("578231"),
-  A = l("223318");
+  A = l("689938"),
+  x = l("578231"),
+  I = l("223318");
 let p = e => {
   let {
     clipsEnabled: t,
     isAnimationDone: l,
-    guildId: n,
+    guildId: s,
     children: i
-  } = e, m = (0, r.useStateFromStores)([_.default], () => _.default.getHardwareClassification()), E = m === C.ClipsHardwareClassification.MEETS_MINIMUM || m === C.ClipsHardwareClassification.UNKNOWN, A = m === C.ClipsHardwareClassification.BELOW_MINIMUM, p = l && (E || A) && !t, [T, R] = (0, c.useGetDismissibleContent)(p ? [u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK] : []), v = T === u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK;
-  s.useEffect(() => {
+  } = e, m = (0, r.useStateFromStores)([_.default], () => _.default.getHardwareClassification()), E = m === N.ClipsHardwareClassification.MEETS_MINIMUM || m === N.ClipsHardwareClassification.UNKNOWN, I = m === N.ClipsHardwareClassification.BELOW_MINIMUM, p = l && (E || I) && !t, [T, R] = (0, c.useGetDismissibleContent)(p ? [u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK] : []), v = T === u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK;
+  n.useEffect(() => {
     t && (0, d.markDismissibleContentAsDismissed)(u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK, {
       forceTrack: !0
     })
@@ -48,29 +48,29 @@ let p = e => {
         dismissibleContent: u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK,
         shouldUseHorizontalButtons: !0,
         inlineArt: !0,
-        artClassName: I.clipsEducationArt,
+        artClassName: x.clipsEducationArt,
         position: "right",
-        header: x.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_TITLE,
-        headerClassName: I.clipsEducationHeader,
+        header: A.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_TITLE,
+        headerClassName: x.clipsEducationHeader,
         body: (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(o.Text, {
             variant: "text-sm/normal",
             color: "always-white",
-            children: x.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_BODY
-          }), A ? (0, a.jsx)(o.Text, {
+            children: A.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_BODY
+          }), I ? (0, a.jsx)(o.Text, {
             variant: "text-sm/normal",
             color: "always-white",
-            className: I.warningText,
-            children: x.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_HARDWARE_IMPACT_WARNING.format({
-              url: S.default.getArticleURL(N.HelpdeskArticles.CLIPS)
+            className: x.warningText,
+            children: A.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_HARDWARE_IMPACT_WARNING.format({
+              url: S.default.getArticleURL(C.HelpdeskArticles.CLIPS)
             })
           }) : null]
         }),
-        tryItText: x.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS,
+        tryItText: A.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS,
         onTryFeature: e => {
           (0, g.updateClipsEnabled)({
             clipsEnabled: !0,
-            guildId: n,
+            guildId: s,
             trackAnalytics: !0
           }), L(e)
         },
@@ -86,40 +86,40 @@ t.default = function(e) {
   let {
     isAnimationDone: t,
     guildId: l
-  } = e, s = (0, r.useStateFromStores)([_.default], () => _.default.getSettings().clipsEnabled), n = (0, r.useStateFromStores)([m.default], () => m.default.getKeybindForAction(N.GlobalKeybindActions.SAVE_CLIP));
-  i()(null != n, "Clips keybind should be set");
-  let u = E.toString(n.shortcut, !0);
+  } = e, n = (0, r.useStateFromStores)([_.default], () => _.default.getSettings().clipsEnabled), s = (0, r.useStateFromStores)([m.default], () => m.default.getKeybindForAction(C.GlobalKeybindActions.SAVE_CLIP));
+  i()(null != s, "Clips keybind should be set");
+  let u = E.toString(s.shortcut, !0);
   return (0, a.jsx)(o.FormItem, {
-    title: x.default.Messages.CLIPS_SETTINGS,
-    titleClassName: A.formItemTitle,
-    className: A.modalContent,
+    title: A.default.Messages.CLIPS_SETTINGS,
+    titleClassName: I.formItemTitle,
+    className: I.modalContent,
     children: (0, a.jsxs)("div", {
-      className: I.container,
+      className: x.container,
       children: [(0, a.jsx)(p, {
-        clipsEnabled: s,
+        clipsEnabled: n,
         guildId: l,
         isAnimationDone: t,
         children: (0, a.jsx)(o.FormSwitch, {
-          className: I.formSwitch,
-          value: s,
+          className: x.formSwitch,
+          value: n,
           onChange: e => (0, g.updateClipsEnabled)({
             clipsEnabled: e,
             guildId: l,
             trackAnalytics: !0
           }),
           hideBorder: !0,
-          children: x.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS
+          children: A.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS
         })
       }), (0, a.jsx)(o.Text, {
         variant: "text-xs/normal",
         color: "interactive-normal",
-        className: I.description,
-        children: x.default.Messages.CLIPS_SETTINGS_HELP_IN_GO_LIVE_CTA.format({
+        className: x.description,
+        children: A.default.Messages.CLIPS_SETTINGS_HELP_IN_GO_LIVE_CTA.format({
           keybind: u,
           keybindHook: () => (0, a.jsx)("span", {
-            className: I.keybindHintKeys,
+            className: x.keybindHintKeys,
             children: (0, a.jsx)(o.KeyCombo, {
-              className: I.keybindShortcut,
+              className: x.keybindShortcut,
               shortcut: u
             })
           })

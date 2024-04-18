@@ -88,7 +88,7 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
         w && b && (0, f.openModalLazy)(async () => {
           let {
             default: e
-          } = await n.e("28479").then(n.bind(n, "78865"));
+          } = await n.e("41549").then(n.bind(n, "78865"));
           return t => (0, a.jsx)(e, {
             ...t,
             analyticsSource: U

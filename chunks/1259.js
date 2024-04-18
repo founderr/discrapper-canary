@@ -13,8 +13,8 @@ var n = i("470079"),
   a = i("650774"),
   l = i("430824"),
   o = i("496675"),
-  c = i("946314"),
-  u = i("981631");
+  u = i("946314"),
+  c = i("981631");
 let d = (0, s.createExperiment)({
   kind: "guild",
   id: "2021-12_discovery_requirements_m2",
@@ -33,10 +33,10 @@ let d = (0, s.createExperiment)({
 
 function f(e) {
   let t = (0, r.useStateFromStores)([l.default], () => l.default.getGuild(e)),
-    i = (0, r.useStateFromStores)([o.default], () => o.default.can(u.Permissions.ADMINISTRATOR, t)),
-    s = null == t ? void 0 : t.hasFeature(u.GuildFeatures.COMMUNITY),
+    i = (0, r.useStateFromStores)([o.default], () => o.default.can(c.Permissions.ADMINISTRATOR, t)),
+    s = null == t ? void 0 : t.hasFeature(c.GuildFeatures.COMMUNITY),
     [f] = (0, r.useStateFromStoresArray)([a.default], () => [a.default.getMemberCount(e)], [e]),
-    p = (null != f ? f : 0) >= c.LOWERED_MINIMUM_SIZE && (null != f ? f : 0) < c.DEFAULT_MINIMUM_SIZE,
+    p = (null != f ? f : 0) >= u.LOWERED_MINIMUM_SIZE && (null != f ? f : 0) < u.DEFAULT_MINIMUM_SIZE,
     C = i && s && p;
   n.useEffect(() => {
     C && d.trackExposure({

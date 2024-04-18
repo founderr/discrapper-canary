@@ -1,13 +1,13 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return N
+    return C
   }
 }), l("724458"), l("47120");
 var a = l("735250"),
-  s = l("470079"),
-  n = l("512722"),
-  i = l.n(n),
+  n = l("470079"),
+  s = l("512722"),
+  i = l.n(s),
   r = l("392711"),
   u = l.n(r),
   o = l("856901"),
@@ -18,30 +18,30 @@ var a = l("735250"),
   S = l("176940"),
   E = l("689938"),
   _ = l("981213"),
-  C = l("223318"),
+  N = l("223318"),
   g = l("794711");
 
-function N(e) {
+function C(e) {
   let {
     selectedSource: t,
     onChangeVideoDeviceSource: l,
-    onChangeAudioDevice: n
+    onChangeAudioDevice: s
   } = e;
   i()(null != t, "Camera capture device cannot be null");
   let r = (0, S.default)(),
-    N = (0, d.useStateFromStores)([f.default], () => f.default.getInputDevices()),
-    [h, x] = s.useState(function(e, t, l) {
+    C = (0, d.useStateFromStores)([f.default], () => f.default.getInputDevices()),
+    [h, A] = n.useState(function(e, t, l) {
       if (null != t && null != l) {
         let a = t.find(t => t.id === e);
         if (null == a) return;
-        let s = u().reduce(l, (e, t) => (0, o.stringSimilarity)(a.name, t.name) > (0, o.stringSimilarity)(a.name, e.name) ? t : e);
-        if (null != s) return s.id
+        let n = u().reduce(l, (e, t) => (0, o.stringSimilarity)(a.name, t.name) > (0, o.stringSimilarity)(a.name, e.name) ? t : e);
+        if (null != n) return n.id
       }
-    }(t.id, r, N));
-  return null != h && n(h), (0, a.jsx)(s.Fragment, {
+    }(t.id, r, C));
+  return null != h && s(h), (0, a.jsx)(n.Fragment, {
     children: (0, a.jsxs)(c.FormItem, {
       title: "Capture Device",
-      className: C.modalContent,
+      className: N.modalContent,
       children: [(0, a.jsx)(c.FormItem, {
         className: g.marginTop8,
         children: (0, a.jsxs)(m.default, {
@@ -63,9 +63,9 @@ function N(e) {
           value: h,
           className: g.__invalid_marginaTop8,
           onChange: e => {
-            x(e), n(e)
+            A(e), s(e)
           },
-          options: u().map(N, e => {
+          options: u().map(C, e => {
             let {
               id: t,
               name: l

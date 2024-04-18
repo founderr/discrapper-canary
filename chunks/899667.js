@@ -2,8 +2,8 @@
 i.r(t), i("47120");
 var n, r, s, a, l = i("442837"),
   o = i("570140");
-let c = {},
-  u = null,
+let u = {},
+  c = null,
   d = [],
   f = !1,
   p = !1,
@@ -15,10 +15,10 @@ function h() {
 }
 class _ extends(n = l.default.Store) {
   getAppliedGuildBoostsForGuild(e) {
-    return null != c[e] ? c[e].subscriptions : null
+    return null != u[e] ? u[e].subscriptions : null
   }
   getLastFetchedAtForGuild(e) {
-    return null != c[e] ? c[e].lastFetchedAt : null
+    return null != u[e] ? u[e].lastFetchedAt : null
   }
   getCurrentUserAppliedBoosts() {
     return d
@@ -36,7 +36,7 @@ class _ extends(n = l.default.Store) {
     return m
   }
   get cooldownEndsAt() {
-    return u
+    return c
   }
   get isFetchingCurrentUserAppliedBoosts() {
     return f
@@ -53,7 +53,7 @@ a = "AppliedGuildBoostStore", (s = "displayName") in(r = _) ? Object.definePrope
       guildId: t,
       appliedBoosts: i
     } = e;
-    c[t] = {
+    u[t] = {
       subscriptions: i,
       lastFetchedAt: Date.now()
     }
@@ -68,7 +68,7 @@ a = "AppliedGuildBoostStore", (s = "displayName") in(r = _) ? Object.definePrope
     let {
       endsAt: t
     } = e;
-    u = t
+    c = t
   },
   GUILD_UNAPPLY_BOOST_START: h,
   GUILD_APPLY_BOOST_START: h,

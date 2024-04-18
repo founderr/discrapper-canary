@@ -6,8 +6,8 @@ l.r(t), l.d(t, {
 });
 var a = l("735250");
 l("470079");
-var s = l("442837"),
-  n = l("481060"),
+var n = l("442837"),
+  s = l("481060"),
   i = l("314897"),
   r = l("938475"),
   u = l("499596"),
@@ -18,8 +18,8 @@ var s = l("442837"),
 function f(e) {
   let {
     channel: t
-  } = e, l = (0, s.useStateFromStores)([i.default], () => i.default.getId()), f = (0, s.useStateFromStores)([r.default], () => r.default.getVoiceStatesForChannel(t), [t]);
-  return (0, a.jsx)(n.FormItem, {
+  } = e, l = (0, n.useStateFromStores)([i.default], () => i.default.getId()), f = (0, n.useStateFromStores)([r.default], () => r.default.getVoiceStatesForChannel(t), [t]);
+  return (0, a.jsx)(s.FormItem, {
     title: d.default.Messages.GO_LIVE_MODAL_CURRENT_CHANNEL_FORM_TITLE,
     className: c.modalContent,
     titleClassName: c.formItemTitle,

@@ -1,10 +1,10 @@
 "use strict";
 i.r(t), i.d(t, {
   QuestionRenderer: function() {
-    return c
+    return u
   },
   RequirementRenderer: function() {
-    return u
+    return c
   },
   RequirementWithActionRenderer: function() {
     return d
@@ -18,7 +18,7 @@ var r = i("692547"),
   l = i("696202"),
   o = i("445721");
 
-function c(e) {
+function u(e) {
   let {
     title: t,
     children: i
@@ -34,11 +34,11 @@ function c(e) {
   })
 }
 
-function u(e) {
+function c(e) {
   let {
     icon: t,
     text: i,
-    meetsRequirement: c
+    meetsRequirement: u
   } = e;
   return (0, n.jsxs)("div", {
     className: o.requirementContainer,
@@ -50,7 +50,7 @@ function u(e) {
       className: o.requirementText,
       variant: "text-md/normal",
       children: i
-    }), c ? (0, n.jsx)(a.default, {
+    }), u ? (0, n.jsx)(a.default, {
       width: 24,
       height: 24,
       className: o.requirementSuccess,
@@ -69,8 +69,8 @@ function d(e) {
     icon: t,
     text: i,
     footnote: l,
-    meetsRequirement: c,
-    children: u
+    meetsRequirement: u,
+    children: c
   } = e;
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)("div", {
@@ -83,12 +83,12 @@ function d(e) {
         className: o.requirementText,
         variant: "text-md/normal",
         children: i
-      }), c ? (0, n.jsx)(a.default, {
+      }), u ? (0, n.jsx)(a.default, {
         width: 24,
         height: 24,
         className: o.requirementSuccess,
         backgroundColor: r.default.unsafe_rawColors.WHITE_500.css
-      }) : u]
+      }) : c]
     }), null != l && (0, n.jsx)(s.Text, {
       color: "header-secondary",
       className: o.footnote,

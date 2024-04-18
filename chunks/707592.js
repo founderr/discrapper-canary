@@ -4,7 +4,7 @@ i.r(t), i.d(t, {
     return d
   },
   TextInputFieldBody: function() {
-    return u
+    return c
   },
   TextInputFormField: function() {
     return f
@@ -17,25 +17,25 @@ var r = i("120356"),
   a = i("481060"),
   l = i("489813"),
   o = i("592286"),
-  c = i("819104");
+  u = i("819104");
 
-function u(e) {
+function c(e) {
   let {
     value: t,
     placeholder: i,
     onChange: r,
     disabled: l,
-    autofocus: u,
+    autofocus: c,
     className: d
   } = e;
   return (0, n.jsx)(a.TextInput, {
-    inputClassName: s()(c.textInputFieldBodyInput, d),
+    inputClassName: s()(u.textInputFieldBodyInput, d),
     maxLength: o.MAX_TEXT_RESPONSE_LENGTH,
     value: null != t ? t : "",
     placeholder: i,
     onChange: r,
     disabled: l,
-    autoFocus: u
+    autoFocus: c
   })
 }
 
@@ -45,8 +45,8 @@ function d(e) {
   } = e;
   return (0, n.jsx)(l.QuestionRenderer, {
     title: t.label,
-    children: (0, n.jsx)(u, {
-      className: c.fieldBackground,
+    children: (0, n.jsx)(c, {
+      className: u.fieldBackground,
       value: t.response,
       disabled: !0
     })
@@ -61,8 +61,8 @@ function f(e) {
   } = e;
   return (0, n.jsx)(l.QuestionRenderer, {
     title: t.label,
-    children: (0, n.jsx)(u, {
-      className: c.fieldBackground,
+    children: (0, n.jsx)(c, {
+      className: u.fieldBackground,
       onChange: r,
       value: t.response,
       autofocus: i

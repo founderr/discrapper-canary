@@ -12,8 +12,8 @@ i("470079");
 var a = i("120356"),
   l = i.n(a),
   o = i("442837"),
-  c = i("246946"),
-  u = i("91802"),
+  u = i("246946"),
+  c = i("91802"),
   d = i("222727"),
   f = i("981631"),
   p = i("503330"),
@@ -109,7 +109,7 @@ function en(e) {
   let {
     entryPoint: t,
     className: i
-  } = e, r = (0, o.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), a = (0, u.useLocalizedPromoQuery)(), C = null == a ? void 0 : a.countryCode;
+  } = e, r = (0, o.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), a = (0, c.useLocalizedPromoQuery)(), C = null == a ? void 0 : a.countryCode;
   if ((0, d.useTrackLocalizedPricingPromoImpression)(f.AnalyticsSections.SETTINGS_PREMIUM, C), null == C || !ei.has(C) || r) return null;
   let m = ei.get(C),
     h = "badgeIcon" + n[t];

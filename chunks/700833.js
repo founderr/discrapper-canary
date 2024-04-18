@@ -14,8 +14,8 @@ var r = i("392711"),
   a = i("246364"),
   l = i("405545"),
   o = i("382574"),
-  c = i("279988"),
-  u = i("786127"),
+  u = i("279988"),
+  c = i("786127"),
   d = i("981631"),
   f = i("689938");
 
@@ -63,7 +63,7 @@ function p(e) {
   };
   switch (d.field_type) {
     case a.VerificationFormFieldTypes.TERMS:
-      return (0, n.jsx)(c.default, {
+      return (0, n.jsx)(u.default, {
         channelId: p.rulesChannelId,
         title: f.default.Messages.GUILD_RULES_HEADER,
         formField: d,
@@ -75,7 +75,7 @@ function p(e) {
         ...M
       });
     case a.VerificationFormFieldTypes.TEXT_INPUT:
-      return (0, n.jsx)(u.default, {
+      return (0, n.jsx)(c.default, {
         formField: d,
         ...M
       });

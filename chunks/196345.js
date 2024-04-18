@@ -20,8 +20,8 @@ var r = i("120356"),
   a = i("481060"),
   l = i("454585"),
   o = i("814550"),
-  c = i("489813"),
-  u = i("689938"),
+  u = i("489813"),
+  c = i("689938"),
   d = i("819104");
 
 function f(e) {
@@ -67,7 +67,7 @@ function p(e) {
     className: d.checkbox,
     children: (0, n.jsx)(a.Text, {
       variant: "text-sm/normal",
-      children: u.default.Messages.MEMBER_VERIFICATION_READ_RULES
+      children: c.default.Messages.MEMBER_VERIFICATION_READ_RULES
     })
   })
 }
@@ -76,9 +76,9 @@ function C(e) {
   let {
     formField: t
   } = e;
-  return (0, n.jsx)(c.RequirementRenderer, {
+  return (0, n.jsx)(u.RequirementRenderer, {
     icon: o.default,
-    text: u.default.Messages.MEMBER_VERIFICATION_AGREED_TO_RULES,
+    text: c.default.Messages.MEMBER_VERIFICATION_AGREED_TO_RULES,
     meetsRequirement: !!t.response
   })
 }
@@ -88,8 +88,8 @@ let m = e => {
     formField: i,
     onChange: r
   } = e;
-  return (0, n.jsxs)(c.QuestionRenderer, {
-    title: u.default.Messages.SERVER_DISCOVERY_AGREE_TO_RULES,
+  return (0, n.jsxs)(u.QuestionRenderer, {
+    title: c.default.Messages.SERVER_DISCOVERY_AGREE_TO_RULES,
     children: [(0, n.jsx)(f, {
       className: d.fieldBackground,
       terms: i.values,
