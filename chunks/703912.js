@@ -27,13 +27,14 @@ async function S(e, t, a) {
     code_challenge: u,
     code_challenge_method: _,
     state: m,
-    scope: S,
-    permissions: I,
-    guild_id: p,
-    channel_id: T,
-    prompt: g,
-    disable_guild_select: A,
-    integration_type: N
+    nonce: S,
+    scope: I,
+    permissions: p,
+    guild_id: T,
+    channel_id: g,
+    prompt: A,
+    disable_guild_select: N,
+    integration_type: v
   } = e;
   if (null == i) throw new h.default({
     errorCode: C.RPCErrors.OAUTH2_ERROR
@@ -41,14 +42,14 @@ async function S(e, t, a) {
   if (null != o) throw new h.default({
     errorCode: C.RPCErrors.OAUTH2_ERROR
   }, "Redirect URI cannot be used in the RPC OAuth2 Authorization flow");
-  let v = [];
-  if ("string" == typeof S ? v = S.split(" ").filter(e => e.length > 0) : Array.isArray(S) && (v = S), null == f.default.getCurrentUser()) throw new h.default({
+  let R = [];
+  if ("string" == typeof I ? R = I.split(" ").filter(e => e.length > 0) : Array.isArray(I) && (R = I), null == f.default.getCurrentUser()) throw new h.default({
     errorCode: C.RPCErrors.OAUTH2_ERROR
   }, "Client is not logged in");
   try {
     n = await (0, d.fetchAuthorization)({
       clientId: i,
-      scopes: v,
+      scopes: R,
       responseType: r,
       redirectUri: o,
       codeChallenge: u,
@@ -63,17 +64,18 @@ async function S(e, t, a) {
       errorCode: C.RPCErrors.OAUTH2_ERROR
     }, "OAuth2 Authorization Error: ".concat(e.message || "Unknown Error"))
   }
-  if (g === c.OAuth2Prompts.NONE && null != n && n.authorized) try {
+  if (A === c.OAuth2Prompts.NONE && null != n && n.authorized) try {
     return (await (0, d.authorize)({
       authorize: !0,
       clientId: i,
-      scopes: v,
+      scopes: R,
       responseType: r,
       redirectUri: o,
       codeChallenge: u,
       codeChallengeMethod: _,
       state: m,
-      integrationType: null == N ? s.ApplicationIntegrationType.GUILD_INSTALL : Number(N)
+      nonce: S,
+      integrationType: null == v ? s.ApplicationIntegrationType.GUILD_INSTALL : Number(v)
     })).location
   } catch (t) {
     let {
@@ -83,12 +85,12 @@ async function S(e, t, a) {
       errorCode: C.RPCErrors.OAUTH2_ERROR
     }, "OAuth2 Authorize Error: ".concat(e.message || "Unknown Error"))
   }
-  null == a || a(n.application, T);
-  let R = E.NONE;
+  null == a || a(n.application, g);
+  let O = E.NONE;
   try {
-    R = l.deserialize(null != I ? I : 0)
+    O = l.deserialize(null != p ? p : 0)
   } catch (e) {}
-  return t(i, n, v, R, r, o, u, _, m, p, T, g, A)
+  return t(i, n, R, O, r, o, u, _, m, T, g, A, N)
 }
 
 function I(e, t) {
