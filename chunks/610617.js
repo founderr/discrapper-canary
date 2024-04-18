@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return x
+    return I
   }
 }), s("47120");
 var i = s("735250"),
@@ -16,12 +16,13 @@ var i = s("735250"),
   h = s("594174"),
   S = s("466111"),
   N = s("26290"),
-  g = s("552958"),
-  f = s("820408"),
-  m = s("921944"),
-  E = s("689938"),
-  _ = s("998799");
-let T = [{
+  g = s("74538"),
+  f = s("552958"),
+  m = s("820408"),
+  E = s("921944"),
+  _ = s("689938"),
+  T = s("998799");
+let x = [{
   name: "Discord Default",
   description: "Wumpus’ Favorite"
 }, {
@@ -35,43 +36,45 @@ let T = [{
   description: "Wumpus’ Favorite"
 }];
 
-function x(e) {
+function I(e) {
   let {
     guildId: t,
     onClose: s
-  } = e, n = (0, r.useStateFromStores)([c.default], () => c.default.getGuild(t)), x = (0, r.useStateFromStores)([h.default], () => h.default.getCurrentUser()), [I, O] = a.useState(0), {
-    playSound: C,
-    isPlaying: p
-  } = (0, g.default)(), M = T.map((e, t) => {
+  } = e, n = (0, r.useStateFromStores)([c.default], () => c.default.getGuild(t)), I = (0, r.useStateFromStores)([h.default], () => h.default.getCurrentUser()), [O, C] = a.useState(0), {
+    playSound: p,
+    isPlaying: M
+  } = (0, f.default)(), v = x.map((e, t) => {
     var s, i, a;
     return {
       name: e.name,
       value: t,
       desc: e.description,
-      radioBarClassName: (s = t, i = I, a = p, l()(_.option, {
-        [_.optionPlaying]: s === i && a
+      radioBarClassName: (s = t, i = O, a = M, l()(T.option, {
+        [T.optionPlaying]: s === i && a
       }))
     }
-  }), [v, L] = (0, u.useSelectedDismissibleContent)([d.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]), A = v === d.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE;
-  return (a.useEffect(() => () => {
-    L(m.ContentDismissActionType.AUTO_DISMISS)
-  }, [L]), null == x) ? null : (0, i.jsxs)("div", {
-    className: _.container,
+  }), [L, A] = (0, u.useSelectedDismissibleContent)([d.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]), j = L === d.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE;
+  a.useEffect(() => () => {
+    A(E.ContentDismissActionType.AUTO_DISMISS)
+  }, [A]);
+  let R = g.default.canUseCustomNotificationSounds(I);
+  return null == I ? null : (0, i.jsxs)("div", {
+    className: T.container,
     children: [(0, i.jsxs)("div", {
-      className: _.header,
+      className: T.header,
       children: [(0, i.jsx)(o.Heading, {
         variant: "heading-md/semibold",
-        children: E.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND
+        children: _.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND
       }), (0, i.jsx)(S.default, {
-        className: _.nitroWheel
-      }), A && (0, i.jsx)(N.TextBadge, {
-        className: _.newBadge,
-        text: E.default.Messages.NEW
+        className: T.nitroWheel
+      }), j && (0, i.jsx)(N.TextBadge, {
+        className: T.newBadge,
+        text: _.default.Messages.NEW
       })]
     }), (0, i.jsx)(o.Text, {
-      className: _.subheader,
+      className: T.subheader,
       variant: "text-sm/normal",
-      children: E.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_NOTIFICATION_SETTINGS_DESCRIPTION_V2.format({
+      children: _.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_NOTIFICATION_SETTINGS_DESCRIPTION_V2.format({
         guildName: (e, t) => (0, i.jsx)(o.Text, {
           tag: "span",
           variant: "text-sm/medium",
@@ -79,20 +82,20 @@ function x(e) {
         }, t)
       })
     }), (0, i.jsx)(o.FormItem, {
-      className: _.optionsContainer,
-      title: E.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_NOTIFICATION_SETTINGS_LABEL,
+      className: T.optionsContainer,
+      title: _.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_NOTIFICATION_SETTINGS_LABEL,
       children: (0, i.jsx)(o.RadioGroup, {
-        className: _.options,
-        value: I,
+        className: T.options,
+        value: O,
         onChange: e => {
-          C(), O(e.value)
+          p(), C(e.value)
         },
-        options: M
+        options: v
       })
-    }), (0, i.jsx)(f.default, {
+    }), !R && (0, i.jsx)(m.default, {
       onClose: s
     }), (0, i.jsx)(o.FormDivider, {
-      className: _.divider
+      className: T.divider
     })]
   })
 }
