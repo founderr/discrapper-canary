@@ -45,13 +45,15 @@ function E(e) {
         children: (0, a.jsx)(c.default, {
           width: 24,
           height: 24,
-          className: m.closeIcon
+          className: m.closeIcon,
+          color: "white"
         })
       })]
     }), (0, a.jsx)("div", {
       className: m.textContainer,
       children: (0, a.jsx)(r.Text, {
         variant: "text-md/semibold",
+        color: "always-white",
         children: h.default.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_UPSELL_TOOLTIP
       })
     }), (0, a.jsxs)("div", {
@@ -60,6 +62,7 @@ function E(e) {
         isSelected: !0
       }), (0, a.jsx)(r.Text, {
         variant: "text-xs/medium",
+        color: "always-white",
         children: h.default.Messages.POWERED_BY_NITRO
       })]
     })]

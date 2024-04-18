@@ -136,17 +136,17 @@ function ev(e) {
       streamActive: null != d,
       isSelfStream: !0,
       onPopoutClick: l ? function(e) {
-        !E.hqStreamingPopoutDismissed && (0, Y.hqStreamingPopoutDismissed)(!0), null == n || n(e)
+        E.hqStreamingIsEnabled && !E.hqStreamingPopoutDismissed && (0, Y.hqStreamingPopoutDismissed)(!0), null == n || n(e)
       } : null,
       popoutOpen: t,
       shouldShowTooltip: !t,
-      premiumGlow: g && !E.hqStreamingPopoutDismissed,
+      premiumGlow: g && E.hqStreamingIsEnabled && !E.hqStreamingPopoutDismissed,
       buttonRef: _,
       onClick: null != d ? j : O
     })
   };
   return M ? P() : (0, s.jsxs)(s.Fragment, {
-    children: [g ? (0, s.jsx)(z.StreamButtonDemoPopout, {
+    children: [g && E.hqStreamingIsEnabled ? (0, s.jsx)(z.StreamButtonDemoPopout, {
       buttonRef: _,
       dismissed: E.hqStreamingPopoutDismissed,
       onDismiss: () => {

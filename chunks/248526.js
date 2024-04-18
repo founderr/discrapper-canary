@@ -1,7 +1,7 @@
 "use strict";
 t.r(r), t.d(r, {
   default: function() {
-    return g
+    return p
   }
 }), t("47120");
 var a = t("735250"),
@@ -21,7 +21,7 @@ let m = [{
     label: "Available: true",
     value: !0
   }],
-  p = [{
+  g = [{
     label: "No Override",
     value: !1
   }, {
@@ -29,10 +29,10 @@ let m = [{
     value: !0
   }];
 
-function g() {
+function p() {
   let e = (0, n.useStateFromStores)([d.default], () => d.default.getCurrentUser()),
     [r, t] = i.useState(!1),
-    [g, f] = i.useState(!1);
+    [p, f] = i.useState(!1);
   return (0, a.jsxs)("div", {
     className: h.container,
     children: [(0, a.jsx)(o.FormSection, {
@@ -52,8 +52,8 @@ function g() {
       className: h.formElement,
       tag: o.FormTitleTags.H3,
       children: (0, a.jsx)(o.SingleSelect, {
-        options: p,
-        value: g,
+        options: g,
+        value: p,
         onChange: e => {
           f(e)
         },
@@ -65,8 +65,8 @@ function g() {
         perkType: l.EntitlementFeatureNames.STREAM_HIGH_QUALITY,
         user: e,
         available: r,
-        activateSuccess: g
-      }), (0, s.hqStreamingSetEnabled)(!1), (0, s.hqStreamingPopoutDismissed)(!1), (0, s.hqStreamingFrameAnimationPlayed)(!1)),
+        activateSuccess: p
+      }), (0, s.hqStreamingSetEnabled)(!1), (0, s.hqStreamingPopoutDismissed)(!1), (0, s.hqStreamingFrameAnimationPlayed)(!1), (0, s.hqStreamingUnlockAnimationPlayed)(!1)),
       children: "Update"
     })]
   })
