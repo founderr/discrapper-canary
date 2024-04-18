@@ -16,8 +16,8 @@ var l = a("735250"),
   h = a("333867"),
   E = a("197115"),
   g = a("300284"),
-  S = a("876917"),
-  b = a("642619"),
+  b = a("876917"),
+  S = a("642619"),
   x = a("594174"),
   T = a("725808"),
   L = a("794358"),
@@ -117,7 +117,7 @@ t.default = function(e) {
           analyticsLocations: z
         });
         return
-      }(null == J ? void 0 : J.type) === i.CollectiblesItemType.PROFILE_EFFECT && (0, b.openProfileEffectModal)({
+      }(null == J ? void 0 : J.type) === i.CollectiblesItemType.PROFILE_EFFECT && (0, S.openProfileEffectModal)({
         initialSelectedEffectId: J.id,
         analyticsLocations: z
       })
@@ -175,7 +175,7 @@ t.default = function(e) {
       isGiftEasterEggEnabled: N,
       tooltipDelay: 250
     }),
-    eS = () => {
+    eb = () => {
       if (er && !L && !en) return eh();
       let e = null != ea ? {
           background: (0, B.getBackgroundGradient)(ea, 90),
@@ -216,7 +216,7 @@ t.default = function(e) {
         }), eg()]
       })
     },
-    eb = null != el ? {
+    eS = null != el ? {
       background: "".concat((0, B.getBackgroundGradient)(el), " border-box border-box"),
       borderColor: el.border.toHslString(),
       boxShadow: q ? "0 0 25px 1px ".concat(el.primary.toHslString()) : "none"
@@ -227,7 +227,7 @@ t.default = function(e) {
       className: w.shopCard,
       onBlur: () => Z(!1),
       onClick: eC,
-      style: eb,
+      style: eS,
       id: "shop-item-".concat(t.skuId),
       children: [er && (0, l.jsx)(u.Tooltip, {
         tooltipContentClassName: w.premiumWheelTooltipContent,
@@ -242,7 +242,7 @@ t.default = function(e) {
         })
       }), (null == J ? void 0 : J.type) === i.CollectiblesItemType.PROFILE_EFFECT && (0, l.jsx)("div", {
         className: w.profileEffectShopPreview,
-        children: (0, l.jsx)(S.default, {
+        children: (0, l.jsx)(b.default, {
           isHovering: q,
           profileEffectId: J.id,
           isPurchased: null != ei
@@ -284,7 +284,7 @@ t.default = function(e) {
             }), eE()]
           }), (0, l.jsx)("div", {
             className: w.innerHover,
-            children: eS()
+            children: eb()
           })]
         })]
       }), (0, l.jsx)(A.default, {

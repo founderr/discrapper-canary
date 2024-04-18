@@ -53,7 +53,7 @@ function M(e) {
 }
 
 function R(e) {
-  P[e.joinRequestId] = e, O.set(e.joinRequestId, e), (0, I.isSubmittedApplicationStatus)(e.applicationStatus) && (C.delete(e.joinRequestId), U.set(e.joinRequestId, e)), (0, I.isActionedApplicationStatus)(e.applicationStatus) && (U.delete(e.joinRequestId), C.set(e.joinRequestId, e))
+  y[e.joinRequestId] = e, O.set(e.joinRequestId, e), (0, I.isSubmittedApplicationStatus)(e.applicationStatus) && (C.delete(e.joinRequestId), U.set(e.joinRequestId, e)), (0, I.isActionedApplicationStatus)(e.applicationStatus) && (U.delete(e.joinRequestId), C.set(e.joinRequestId, e))
 }
 
 function f(e) {
@@ -68,11 +68,11 @@ function f(e) {
 }
 let h = {},
   p = {},
-  y = {},
-  P = {};
+  P = {},
+  y = {};
 class m extends(E = T.default.Store) {
   getRequest(e) {
-    return P[e]
+    return y[e]
   }
   getRequests(e, t) {
     let s = c.GUILD_JOIN_REQUESTS_BY_STATUS(e, t);
@@ -96,7 +96,7 @@ class m extends(E = T.default.Store) {
   }
   getSelectedGuildJoinRequest(e) {
     var t;
-    let s = y[e];
+    let s = P[e];
     return null != s ? (t = s.joinRequestId, O.get(t)) : null
   }
 }
@@ -156,7 +156,7 @@ n = "GuildJoinRequestStoreV2", (a = "displayName") in(_ = m) ? Object.defineProp
     let a = (t = E, O.get(t));
     if (null != a) {
       ;
-      g(_, null, a.applicationStatus), s = E, delete P[s], O.delete(s), U.delete(s), C.delete(s)
+      g(_, null, a.applicationStatus), s = E, delete y[s], O.delete(s), U.delete(s), C.delete(s)
     }
   },
   GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB: function(e) {
@@ -182,6 +182,6 @@ n = "GuildJoinRequestStoreV2", (a = "displayName") in(_ = m) ? Object.defineProp
       guildId: t,
       request: s
     } = e;
-    y[t] = s
+    P[t] = s
   }
 })

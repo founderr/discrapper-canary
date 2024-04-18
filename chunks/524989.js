@@ -4,8 +4,8 @@ var t = l("735250"),
   i = l("470079"),
   n = l("120356"),
   s = l.n(n),
-  d = l("393903"),
-  r = l("206771");
+  r = l("393903"),
+  d = l("206771");
 
 function c(e, a) {
   let l = [],
@@ -13,17 +13,17 @@ function c(e, a) {
     i = 0,
     n = 0,
     s = !1;
-  for (var d = 0; d < e.length; d++) {
-    let r = e[d],
-      c = a.widths[d],
-      o = d === e.length - 1,
-      V = n === a.maxLines - 1,
-      h = n + 2 < a.maxLines,
-      H = c > a.parentWidth,
-      x = V && !o ? a.overflowWidth : 0,
+  for (var r = 0; r < e.length; r++) {
+    let d = e[r],
+      c = a.widths[r],
+      o = r === e.length - 1,
+      h = n === a.maxLines - 1,
+      x = n + 2 < a.maxLines,
+      V = c > a.parentWidth,
+      H = h && !o ? a.overflowWidth : 0,
       u = 0 === a.parentWidth,
-      f = !s && i + c + a.spacing + x < a.parentWidth;
-    u || f ? (i += c + a.spacing, l.push(r)) : n < a.maxLines - 1 ? (n++, i = c + a.spacing, l.push(r)) : H && !V && 0 === i ? (n++, l.push(r)) : H && h && i > 0 ? (l.push(r), n += 2) : (s = !0, t.push(r))
+      f = !s && i + c + a.spacing + H < a.parentWidth;
+    u || f ? (i += c + a.spacing, l.push(d)) : n < a.maxLines - 1 ? (n++, i = c + a.spacing, l.push(d)) : V && !h && 0 === i ? (n++, l.push(d)) : V && x && i > 0 ? (l.push(d), n += 2) : (s = !0, t.push(d))
   }
   return {
     ...a,
@@ -37,20 +37,20 @@ a.default = function(e) {
     renderItem: l,
     renderOverflow: n,
     className: o,
-    maxLines: V,
-    overflowWidth: h = 65,
-    spacing: H = 8
-  } = e, [x, u] = i.useState(() => ({
+    maxLines: h,
+    overflowWidth: x = 65,
+    spacing: V = 8
+  } = e, [H, u] = i.useState(() => ({
     parentWidth: 0,
     visible: a,
     overflow: [],
     widths: Array(a.length).fill(0),
-    maxLines: V,
-    overflowWidth: h,
-    spacing: H
+    maxLines: h,
+    overflowWidth: x,
+    spacing: V
   })), f = {
-    visibility: 0 === x.parentWidth ? "hidden" : "visible"
-  }, p = (0, d.useResizeObserver)(e => {
+    visibility: 0 === H.parentWidth ? "hidden" : "visible"
+  }, p = (0, r.useResizeObserver)(e => {
     u(l => c(a, {
       ...l,
       parentWidth: e.contentRect.width
@@ -70,8 +70,8 @@ a.default = function(e) {
     })
   }, [p, a, u]), (0, t.jsxs)("div", {
     style: f,
-    className: s()(r.container, o),
+    className: s()(d.container, o),
     ref: p,
-    children: [x.visible.map(l), x.overflow.length > 0 ? n(x.overflow) : null]
+    children: [H.visible.map(l), H.overflow.length > 0 ? n(H.overflow) : null]
   })
 }

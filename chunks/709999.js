@@ -16,8 +16,8 @@ var l = a("735250"),
   h = a("906732"),
   E = a("1585"),
   g = a("125988"),
-  S = a("333867"),
-  b = a("197115"),
+  b = a("333867"),
+  S = a("197115"),
   x = a("300284"),
   T = a("876917"),
   L = a("642619"),
@@ -117,7 +117,7 @@ t.default = function(e) {
       analyticsLocations: q
     }),
     eg = s.useRef(null),
-    eS = () => {
+    eb = () => {
       if ((0, m.popLayer)(), eE(), (null == el ? void 0 : el.type) === o.CollectiblesItemType.AVATAR_DECORATION) {
         (0, E.openAvatarDecorationModal)({
           initialSelectedDecoration: el,
@@ -129,7 +129,7 @@ t.default = function(e) {
         analyticsLocations: q
       })
     },
-    eb = e => l => {
+    eS = e => l => {
       eg.current = l.currentTarget, (0, H.openCollectiblesShopProductDetailsModal)({
         product: t,
         category: a,
@@ -138,11 +138,11 @@ t.default = function(e) {
         returnRef: eg
       })
     },
-    ex = eb(p.default.COLLECTIBLES_SHOP_CARD),
-    eT = eb(p.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
+    ex = eS(p.default.COLLECTIBLES_SHOP_CARD),
+    eT = eS(p.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
     eL = () => (0, l.jsx)("div", {
       className: V.hoverUpsellContainer,
-      children: (0, l.jsx)(b.default, {
+      children: (0, l.jsx)(S.default, {
         fullWidth: !0,
         className: V.__invalid_premiumSubscribeButton,
         disabled: em,
@@ -190,7 +190,7 @@ t.default = function(e) {
           })
         }
       } : {
-        onClick: () => (0, S.default)({
+        onClick: () => (0, b.default)({
           skuId: t.skuId,
           analyticsLocations: q,
           returnRef: $
@@ -207,7 +207,7 @@ t.default = function(e) {
           })
         }) : (0, l.jsx)(X, {
           disabled: em,
-          onClick: eS,
+          onClick: eb,
           children: G.default.Messages.COLLECTIBLES_USE_NOW
         }), eI()]
       })

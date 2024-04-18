@@ -13,7 +13,7 @@ s.r(t), s.d(t, {
     return q
   },
   useDescription: function() {
-    return y
+    return P
   },
   useEditStateIds: function() {
     return $
@@ -25,7 +25,7 @@ s.r(t), s.d(t, {
     return J
   },
   useImage: function() {
-    return P
+    return y
   },
   useIntangibleBenefits: function() {
     return x
@@ -122,7 +122,7 @@ function p(e) {
   return R(e, "priceTier", t)
 }
 
-function y(e) {
+function P(e) {
   let t = f(e, e => {
     var t;
     return null !== (t = null == e ? void 0 : e.description) && void 0 !== t ? t : ""
@@ -130,7 +130,7 @@ function y(e) {
   return R(e, "description", t)
 }
 
-function P(e, t) {
+function y(e, t) {
   let s = f(e, e => {
     if ((null == e ? void 0 : e.image_asset) != null) return (0, L.getAssetURL)(e.application_id, e.image_asset, t)
   });

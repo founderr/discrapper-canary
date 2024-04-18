@@ -24,8 +24,8 @@ let S = [d.Permissions.KICK_MEMBERS, d.Permissions.BAN_MEMBERS, d.Permissions.AD
   f = !1,
   h = !1,
   p = !0,
-  y = !1,
-  P = null,
+  P = !1,
+  y = null,
   m = d.AuditLogActions.ALL,
   H = null,
   v = {},
@@ -132,13 +132,13 @@ class F extends(E = A.default.Store) {
     return p
   }
   get hasError() {
-    return y
+    return P
   }
   get userIds() {
     return c
   }
   get userIdFilter() {
-    return P
+    return y
   }
   get targetIdFilter() {
     return H
@@ -164,10 +164,10 @@ n = "GuildSettingsAuditLogStore", (a = "displayName") in(_ = F) ? Object.defineP
   },
   AUDIT_LOG_FETCH_SUCCESS: function(e) {
     var t;
-    V = 0, R = !1, f = !1, p = !0, y = !1, g = B(e.logs), D = e.integrations, G = e.webhooks, O = e.guildScheduledEvents, U = null !== (t = e.automodRules) && void 0 !== t ? t : [], C = e.threads, M = e.applicationCommands, e.logs.length < d.AUDIT_LOG_PAGE_LIMIT && (p = !1)
+    V = 0, R = !1, f = !1, p = !0, P = !1, g = B(e.logs), D = e.integrations, G = e.webhooks, O = e.guildScheduledEvents, U = null !== (t = e.automodRules) && void 0 !== t ? t : [], C = e.threads, M = e.applicationCommands, e.logs.length < d.AUDIT_LOG_PAGE_LIMIT && (p = !1)
   },
   AUDIT_LOG_FETCH_FAIL: function() {
-    f = !1, y = !0, g = []
+    f = !1, P = !0, g = []
   },
   AUDIT_LOG_FETCH_NEXT_PAGE_START: function(e) {
     let {
@@ -203,7 +203,7 @@ n = "GuildSettingsAuditLogStore", (a = "displayName") in(_ = F) ? Object.defineP
     let {
       userId: t
     } = e;
-    P = t
+    y = t
   },
   AUDIT_LOG_FILTER_BY_TARGET: function(e) {
     let {
@@ -222,6 +222,6 @@ n = "GuildSettingsAuditLogStore", (a = "displayName") in(_ = F) ? Object.defineP
     })
   },
   GUILD_SETTINGS_CLOSE: function() {
-    g = [], c = [], m = d.AuditLogActions.ALL, P = null, H = null, v = {}, V = 0, R = !0, D = [], G = [], O = [], U = [], C = []
+    g = [], c = [], m = d.AuditLogActions.ALL, y = null, H = null, v = {}, V = 0, R = !0, D = [], G = [], O = [], U = [], C = []
   }
 })

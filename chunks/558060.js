@@ -27,14 +27,14 @@ function g(e) {
     className: a,
     innerClassName: s,
     disableTooltipPointerEvents: g,
-    alwaysWhiteText: S = !0,
-    nitroWheelColor: b
+    alwaysWhiteText: b = !0,
+    nitroWheelColor: S
   } = e, x = (0, n.useStateFromStores)([c.default], () => c.default.getCurrentUser()), T = (0, n.useStateFromStores)([u.default], () => (0, i.isThemeDark)(u.default.theme)), L = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.DEFAULT);
   if (null == L) return null;
   if (L.amount <= 0) return (0, l.jsx)("div", {
     className: r()(E.priceTagsContainer, a),
     children: (0, l.jsx)(C.default, {
-      alwaysWhiteText: S,
+      alwaysWhiteText: b,
       price: L,
       className: s
     })
@@ -44,12 +44,12 @@ function g(e) {
   return (0, l.jsxs)("div", {
     className: r()(E.priceTagsContainer, a),
     children: [(0, l.jsx)(C.default, {
-      alwaysWhiteText: S,
+      alwaysWhiteText: b,
       price: L,
       className: r()([s, I ? void 0 : E.strikedPrice])
     }), null != v && (0, l.jsx)(C.default, {
       price: v,
-      alwaysWhiteText: S,
+      alwaysWhiteText: b,
       renderPrice: I ? e => h.default.Messages.COLLECTIBLES_NON_PREMIUM_PRICE.format({
         price: e
       }) : void 0,
@@ -68,7 +68,7 @@ function g(e) {
             className: r()(E.premiumIcon, {
               [E.fullPrice]: I
             }),
-            color: null != b ? b : S || T ? "white" : "black"
+            color: null != S ? S : b || T ? "white" : "black"
           })
         }
       })

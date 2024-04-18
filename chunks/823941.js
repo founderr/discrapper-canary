@@ -23,8 +23,8 @@ var l = a("735250"),
   h = a("884697"),
   E = a("624377"),
   g = a("141011"),
-  S = a("813083"),
-  b = a("67938"),
+  b = a("813083"),
+  S = a("67938"),
   x = a("372654"),
   T = a("414592"),
   L = a("474936"),
@@ -72,7 +72,7 @@ function y(e) {
   } = e, {
     backgroundColors: c
   } = (0, E.default)(s.styles), d = !!(null === (t = T.categoryBannerOverrides[s.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText);
-  return s.skuId === i.CollectiblesCategorySkuId.SHY ? (0, l.jsx)(b.ShyBanner, {
+  return s.skuId === i.CollectiblesCategorySkuId.SHY ? (0, l.jsx)(S.ShyBanner, {
     category: s
   }) : (0, l.jsxs)(g.default, {
     asset: s.banner,
@@ -105,7 +105,7 @@ function y(e) {
       children: s.skuId === i.CollectiblesCategorySkuId.DISXCORE ? (0, l.jsx)(_, {
         category: s
       }) : s.summary
-    }), !o && (0, l.jsx)(S.default, {
+    }), !o && (0, l.jsx)(b.default, {
       category: s,
       className: I.limitedTimeBadge,
       display: "banner"

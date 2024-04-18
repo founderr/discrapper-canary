@@ -20,8 +20,8 @@ var l = a("735250"),
   h = a("372654"),
   E = a("300284"),
   g = a("642619"),
-  S = a("598"),
-  b = a("329067"),
+  b = a("598"),
+  S = a("329067"),
   x = a("981631"),
   T = a("302800"),
   L = a("689938"),
@@ -106,7 +106,7 @@ function N(e) {
         variant: "text-lg/bold",
         className: v.productName,
         children: t.name
-      }), (0, l.jsx)(S.PaymentContextProvider, {
+      }), (0, l.jsx)(b.PaymentContextProvider, {
         loadId: O,
         stepConfigs: [],
         applicationId: x.COLLECTIBLES_APPLICATION_ID,
@@ -114,7 +114,7 @@ function N(e) {
         isGift: !1,
         activeSubscription: null,
         purchaseType: x.PurchaseTypes.ONE_TIME,
-        children: (0, l.jsx)(b.default, {
+        children: (0, l.jsx)(S.default, {
           ...U
         })
       })]

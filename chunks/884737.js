@@ -22,13 +22,13 @@ s.r(t), s.d(t, {
     return V
   },
   InviteChangeStrings: function() {
-    return P
+    return y
   },
   NotRenderedChanges: function() {
     return b
   },
   RoleChangeStrings: function() {
-    return y
+    return P
   },
   StageInstanceChangeStrings: function() {
     return B
@@ -187,7 +187,7 @@ let C = new A.default("AuditLogUtils"),
     [G.AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_TRIGGERED_RULE_NAME_CHANGE,
     ...R()
   }),
-  y = () => ({
+  P = () => ({
     [G.AuditLogChangeKeys.NAME]: eE(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CHANGE),
     [G.AuditLogChangeKeys.PERMISSIONS_GRANTED]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PERMISSIONS_GRANTED,
     [G.AuditLogChangeKeys.PERMISSIONS_DENIED]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PERMISSIONS_DENIED,
@@ -207,7 +207,7 @@ let C = new A.default("AuditLogUtils"),
     [G.AuditLogChangeKeys.UNICODE_EMOJI]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_UNICODE_EMOJI_CHANGE,
     ...R()
   }),
-  P = () => ({
+  y = () => ({
     [G.AuditLogChangeKeys.CODE]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CODE_CREATE,
     [G.AuditLogChangeKeys.CHANNEL_ID]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CHANNEL_CREATE,
     [G.AuditLogChangeKeys.MAX_USES]: {

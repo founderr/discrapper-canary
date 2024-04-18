@@ -9,19 +9,19 @@ l("470079");
 var i = l("331595"),
   n = l("249849");
 let s = ["#666666"],
-  d = ["#b8b8b8", "#e8e8e8"],
-  r = ["#ffb84b"],
+  r = ["#b8b8b8", "#e8e8e8"],
+  d = ["#ffb84b"],
   c = ["#c8c8c8", "#e4e4e4"],
   o = e => {
     let {
       width: a = 24,
       height: l = 24,
       primaryTintColor: o,
-      secondaryTintColor: V,
-      ...h
-    } = e, H = null != o ? (0, n.transformClanBadgeColors)(s, o) : r, x = null != V ? (0, n.transformClanBadgeColors)(d, V) : c;
+      secondaryTintColor: h,
+      ...x
+    } = e, V = null != o ? (0, n.transformClanBadgeColors)(s, o) : d, H = null != h ? (0, n.transformClanBadgeColors)(r, h) : c;
     return (0, t.jsxs)("svg", {
-      ...(0, i.default)(h),
+      ...(0, i.default)(x),
       width: a,
       height: l,
       viewBox: "0 0 16 16",
@@ -31,16 +31,16 @@ let s = ["#666666"],
         "clip-path": "url(#clip0_42_3511)",
         children: [(0, t.jsx)("path", {
           d: "M11 1V2H10V3H9V4H8V5H7V7H6V8H8V10H9V9H11V8H12V7H13V6H14V5H15V1H11Z",
-          fill: x[0]
+          fill: H[0]
         }), (0, t.jsx)("path", {
           d: "M3 9H4V10H6V12H7V13H9V14H11V12H9V11H8V10H7V9H6V8H5V7H4V5H2V7H3V9Z",
-          fill: H[0]
+          fill: V[0]
         }), (0, t.jsx)("path", {
           d: "M5 11H3V13H5V11Z",
-          fill: H[0]
+          fill: V[0]
         }), (0, t.jsx)("path", {
           d: "M3 13H1V15H3V13Z",
-          fill: H[0]
+          fill: V[0]
         }), (0, t.jsx)("path", {
           d: "M11 1H10V2H11V1Z",
           fill: "#1E1F22"
@@ -142,7 +142,7 @@ let s = ["#666666"],
           fill: "white"
         }), (0, t.jsx)("path", {
           d: "M12 1H11V2H10V3H9V4H8V5H7V6V7H6V8H8V7H9V6H10V5H11V4H12V3H13V2H14V1H12Z",
-          fill: x[1]
+          fill: H[1]
         }), (0, t.jsx)("path", {
           d: "M8 5H7V6H10V5H9V4H8V5Z",
           fill: "white"

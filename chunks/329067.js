@@ -57,8 +57,8 @@ function g(e) {
     paymentSource: a,
     loadId: r,
     skuId: g,
-    isGift: S = !1,
-    customButtonStyle: b,
+    isGift: b = !1,
+    customButtonStyle: S,
     analyticsLocations: x
   } = e, {
     application: T,
@@ -87,7 +87,7 @@ function g(e) {
         })]
       })
     }), (0, l.jsx)(h, {
-      style: b,
+      style: S,
       className: p.buyButton,
       submitting: v,
       submittingStartedLabel: "Payment Processing",
@@ -95,7 +95,7 @@ function g(e) {
         n()(null != y, "skuPricePreview can't be null"), n()(null != T, "application can't be null"), I(!0), await (0, o.purchaseSKU)(T.id, g, {
           expectedAmount: y.amount,
           expectedCurrency: y.currency,
-          isGift: S,
+          isGift: b,
           paymentSource: a,
           loadId: r
         }), I(!1), t()
