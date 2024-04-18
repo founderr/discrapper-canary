@@ -37,8 +37,8 @@ var i, a, n = s("735250"),
   F = s("285952"),
   D = s("353872"),
   P = s("823379"),
-  H = s("63063"),
-  y = s("621600"),
+  y = s("63063"),
+  H = s("621600"),
   w = s("981631"),
   k = s("969943"),
   B = s("689938"),
@@ -145,7 +145,7 @@ class W extends l.PureComponent {
       children: [(0, n.jsx)(g.FormSwitch, {
         hideBorder: !0,
         value: t,
-        onChange: e => this.handleCheckboxChange("muted", e, y.NotificationLabel.muted(e)),
+        onChange: e => this.handleCheckboxChange("muted", e, H.NotificationLabel.muted(e)),
         note: B.default.Messages.FORM_LABEL_MUTE_SERVER_DESCRIPTION,
         children: B.default.Messages.FORM_LABEL_MUTE_SERVER.format({
           name: i.name
@@ -188,7 +188,7 @@ class W extends l.PureComponent {
         children: (0, n.jsx)(g.RadioGroup, {
           disabled: s,
           value: t,
-          onChange: e => this.handleRadioChange("message_notifications", e, y.NotificationLabel.notifications(e.value)),
+          onChange: e => this.handleRadioChange("message_notifications", e, H.NotificationLabel.notifications(e.value)),
           options: (e = i, [{
             name: B.default.Messages.FORM_LABEL_ALL_MESSAGES,
             value: w.UserNotificationSettings.ALL_MESSAGES,
@@ -217,18 +217,18 @@ class W extends l.PureComponent {
     return (0, n.jsxs)(g.FormItem, {
       className: Y.largeSpacing,
       children: [(0, n.jsx)(g.FormSwitch, {
-        onChange: e => this.handleCheckboxChange("suppress_everyone", e, y.NotificationLabel.suppressEveryone(e)),
+        onChange: e => this.handleCheckboxChange("suppress_everyone", e, H.NotificationLabel.suppressEveryone(e)),
         value: e,
         children: B.default.Messages.FORM_LABEL_SUPPRESS_EVERYONE.format()
       }), (0, n.jsx)(g.FormSwitch, {
-        onChange: e => this.handleCheckboxChange("suppress_roles", e, y.NotificationLabel.suppressRoles(e)),
+        onChange: e => this.handleCheckboxChange("suppress_roles", e, H.NotificationLabel.suppressRoles(e)),
         value: t,
         children: B.default.Messages.FORM_LABEL_SUPPRESS_ROLES
       }), (0, n.jsx)(g.FormSwitch, {
         onChange: e => {
           f.default.updateGuildNotificationSettings(r, {
             notify_highlights: e ? w.HighlightSettings.DISABLED : w.HighlightSettings.ENABLED
-          }, y.NotificationLabel.highlights(!e))
+          }, H.NotificationLabel.highlights(!e))
         },
         value: i || l === w.HighlightSettings.DISABLED,
         disabled: i,
@@ -239,7 +239,7 @@ class W extends l.PureComponent {
           }), (0, n.jsx)("div", {
             className: Y.highlightsLink,
             children: (0, n.jsx)(g.Anchor, {
-              href: H.default.getArticleURL(w.HelpdeskArticles.HIGHLIGHTS),
+              href: y.default.getArticleURL(w.HelpdeskArticles.HIGHLIGHTS),
               children: B.default.Messages.HIGHLIGHTS_LEARN_MORE
             })
           })]
@@ -249,12 +249,12 @@ class W extends l.PureComponent {
         })
       }), (0, n.jsx)(g.FormSwitch, {
         value: a,
-        onChange: e => this.handleCheckboxChange("mute_scheduled_events", e, y.NotificationLabel.mutedEvents(e)),
+        onChange: e => this.handleCheckboxChange("mute_scheduled_events", e, H.NotificationLabel.mutedEvents(e)),
         children: B.default.Messages.FORM_LABEL_MUTE_SCHEDULED_EVENTS
       }), (0, n.jsx)(g.FormSwitch, {
         value: !i && s,
         disabled: i,
-        onChange: e => this.handleCheckboxChange("mobile_push", e, y.NotificationLabel.mobilePush(e)),
+        onChange: e => this.handleCheckboxChange("mobile_push", e, H.NotificationLabel.mobilePush(e)),
         children: B.default.Messages.FORM_LABEL_MOBILE_PUSH_NOTIFICATIONS
       })]
     })
@@ -409,7 +409,7 @@ class W extends l.PureComponent {
           selected_time_window: e,
           end_time: t
         }
-      }, y.NotificationLabels.Muted)
+      }, H.NotificationLabels.Muted)
     }), V(this, "handleDeleteOverride", e => {
       let {
         overrides: t
