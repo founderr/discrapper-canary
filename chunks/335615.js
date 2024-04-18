@@ -71,9 +71,6 @@ let K = G.default.getEnableHardwareAcceleration(),
     }
   };
 class X extends l.Component {
-  handleClosePopout() {
-    this.closePopoutRef()
-  }
   shouldComponentUpdate(e) {
     return !(0, f.default)(this.props, e, ["channelId"])
   }
@@ -133,7 +130,9 @@ class X extends l.Component {
     })
   }
   constructor(...e) {
-    super(...e), z(this, "closePopoutRef", V.NOOP), z(this, "renderUserContextMenu", e => {
+    super(...e), z(this, "closePopoutRef", V.NOOP), z(this, "handleClosePopout", () => {
+      this.closePopoutRef()
+    }), z(this, "renderUserContextMenu", e => {
       (0, m.openContextMenuLazy)(e, async () => {
         let {
           default: e
