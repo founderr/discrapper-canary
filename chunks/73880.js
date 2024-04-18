@@ -25,7 +25,8 @@ function u(e) {
     placeholder: i,
     onChange: r,
     disabled: l,
-    className: u
+    className: u,
+    autofocus: d
   } = e;
   return (0, n.jsx)(a.TextArea, {
     className: s()(c.paragraphFieldBody, u),
@@ -34,6 +35,7 @@ function u(e) {
     placeholder: null != i ? i : "",
     onChange: r,
     disabled: l,
+    autoFocus: d,
     autosize: !0
   })
 }
@@ -55,14 +57,16 @@ function d(e) {
 function f(e) {
   let {
     formField: t,
-    onChange: i
+    autofocus: i,
+    onChange: r
   } = e;
   return (0, n.jsx)(l.QuestionRenderer, {
     title: t.label,
     children: (0, n.jsx)(u, {
       className: c.fieldBackground,
       value: t.response,
-      onChange: i
+      onChange: r,
+      autofocus: i
     })
   })
 }

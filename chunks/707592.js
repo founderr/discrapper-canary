@@ -25,15 +25,17 @@ function u(e) {
     placeholder: i,
     onChange: r,
     disabled: l,
-    className: u
+    autofocus: u,
+    className: d
   } = e;
   return (0, n.jsx)(a.TextInput, {
-    inputClassName: s()(c.textInputFieldBodyInput, u),
+    inputClassName: s()(c.textInputFieldBodyInput, d),
     maxLength: o.MAX_TEXT_RESPONSE_LENGTH,
     value: null != t ? t : "",
     placeholder: i,
     onChange: r,
-    disabled: l
+    disabled: l,
+    autoFocus: u
   })
 }
 
@@ -54,14 +56,16 @@ function d(e) {
 function f(e) {
   let {
     formField: t,
-    onChange: i
+    autofocus: i,
+    onChange: r
   } = e;
   return (0, n.jsx)(l.QuestionRenderer, {
     title: t.label,
     children: (0, n.jsx)(u, {
       className: c.fieldBackground,
-      onChange: i,
-      value: t.response
+      onChange: r,
+      value: t.response,
+      autofocus: i
     })
   })
 }
