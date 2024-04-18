@@ -1,7 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
-  useSimplifiedProfileExperiment: function() {
+  getSimplifiedProfileExperimentConfig: function() {
     return r
+  },
+  useSimplifiedProfileExperiment: function() {
+    return s
   }
 });
 let i = (0, n("818083").createExperiment)({
@@ -29,6 +32,19 @@ let i = (0, n("818083").createExperiment)({
     }]
   }),
   r = e => {
+    let {
+      location: t,
+      autoTrackExposure: n = !0,
+      trackExposureOptions: r = {}
+    } = e;
+    return i.getCurrentConfig({
+      location: t
+    }, {
+      autoTrackExposure: n,
+      trackExposureOptions: r
+    })
+  },
+  s = e => {
     let {
       location: t,
       autoTrackExposure: n = !0,
