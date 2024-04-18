@@ -206,53 +206,56 @@ class ek extends l.PureComponent {
     }
   }
   renderContent(e) {
+    var t;
     let {
-      selectedParticipant: t,
-      inCall: n,
-      hasConnectPermission: l,
-      mode: s,
-      popoutWindow: i,
-      participantsOpen: r,
-      participants: o,
-      filteredParticipants: u,
-      participantsVersion: d,
-      channel: c,
-      guild: f,
-      layout: h,
-      forceShowControls: m,
-      awaitingRemoteSessionInfo: p
-    } = this.props, E = h === eP.ChannelLayouts.MINIMUM, C = E || h === eP.ChannelLayouts.NORMAL, g = n && s === eP.ChannelModes.VIDEO;
+      selectedParticipant: n,
+      inCall: l,
+      hasConnectPermission: s,
+      mode: i,
+      popoutWindow: r,
+      participantsOpen: o,
+      participants: u,
+      filteredParticipants: d,
+      participantsVersion: c,
+      channel: f,
+      guild: h,
+      layout: m,
+      forceShowControls: p,
+      awaitingRemoteSessionInfo: E,
+      currentChannelActivities: C
+    } = this.props, g = m === eP.ChannelLayouts.MINIMUM, S = g || m === eP.ChannelLayouts.NORMAL, _ = l && i === eP.ChannelModes.VIDEO, T = (null !== (t = null == C ? void 0 : C.length) && void 0 !== t ? t : 0) > 0 && f.isPrivate();
     return this._lastIdleProps = e, (0, a.jsx)(Z.default, {
       renderHeader: this.renderHeader,
       renderBottomLeft: this.renderBottomLeft,
       renderBottomCenter: this.renderBottomCenter,
       renderBottomRight: this.renderBottomRight,
-      renderChatButton: c.isGuildVoice() ? this.renderChatButton : void 0,
-      renderChatToasts: c.isGuildVoice() ? this.renderChatToasts : void 0,
+      renderChatButton: f.isGuildVoice() ? this.renderChatButton : void 0,
+      renderChatToasts: f.isGuildVoice() ? this.renderChatToasts : void 0,
       renderVoiceChannelEffects: this.renderVoiceChannelEffects,
       ...e,
       screenMessage: this.screenMessage,
-      disableGradients: E,
-      idle: !m && n && !E && e.idle,
-      children: n && this.popoutOpen && !this.inPopout ? null : (0, a.jsx)(V.default, {
+      disableGradients: g,
+      idle: !p && l && !g && e.idle,
+      children: l && this.popoutOpen && !this.inPopout ? null : (0, a.jsx)(V.default, {
         ref: this._contentRef,
-        inCall: n,
+        inCall: l,
         paused: this.paused,
-        channel: c,
-        hasConnectPermission: l,
-        guild: f,
-        participants: o,
-        filteredParticipants: u,
-        participantsVersion: d,
-        selectedParticipant: g ? t : null,
-        layout: h,
+        channel: f,
+        hasConnectPermission: s,
+        guild: h,
+        participants: u,
+        filteredParticipants: d,
+        participantsVersion: c,
+        selectedParticipant: _ ? n : null,
+        layout: m,
         idle: e.idle,
-        mode: s,
+        mode: i,
         onSelectParticipant: this.handleSelectParticipant,
         onContextMenuParticipant: this.handleContextMenu,
-        showParticipants: r && !C,
-        popoutWindow: this.inPopout ? i : null,
-        awaitingRemoteSessionInfo: p
+        showParticipants: o && (!S || T),
+        popoutWindow: this.inPopout ? r : null,
+        awaitingRemoteSessionInfo: E,
+        forceShowToggleParticipants: T
       })
     })
   }
@@ -727,7 +730,8 @@ t.default = function(e) {
     eE = (0, j.useIsContentShown)(d.DismissibleContent.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
     {
       analyticsLocations: eC
-    } = (0, O.default)(L.default.CHANNEL_CALL);
+    } = (0, O.default)(L.default.CHANNEL_CALL),
+    eg = N.default.getEmbeddedActivitiesForChannel(n.id);
   return (0, a.jsx)(O.AnalyticsLocationProvider, {
     value: eC,
     children: (0, a.jsx)(_.default, {
@@ -773,7 +777,8 @@ t.default = function(e) {
             width: r,
             maxHeight: i,
             forceShowControls: eE,
-            awaitingRemoteSessionInfo: $
+            awaitingRemoteSessionInfo: $,
+            currentChannelActivities: eg
           }), !n.isPrivate() && (0, a.jsx)(ey.VoiceChannelEffectsLayerContainer, {}), (0, a.jsx)(eN.ChannelCallChatLayerContainer, {})]
         })
       })

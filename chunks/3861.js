@@ -38,12 +38,13 @@ t.default = (0, r.default)(e => {
     idle: j,
     mode: P,
     popoutWindow: D,
-    awaitingRemoteSessionInfo: b
+    awaitingRemoteSessionInfo: b,
+    forceShowToggleParticipants: U
   } = e;
   l.useEffect(() => {
     c.ComponentDispatch.dispatch(C.ComponentActions.REMEASURE_TARGET)
   }, [y, O]);
-  let U = l.useMemo(() => n.filter(e => e.type !== g.ParticipantTypes.ACTIVITY || !e.participants.has(u.default.getId())), [n, r]);
+  let F = l.useMemo(() => n.filter(e => e.type !== g.ParticipantTypes.ACTIVITY || !e.participants.has(u.default.getId())), [n, r]);
   if ((null == b ? void 0 : b.channelId) === v.id) return (0, a.jsx)(h.default, {
     height: O
   });
@@ -70,7 +71,7 @@ t.default = (0, r.default)(e => {
     children: (0, a.jsx)(m.default, {
       channel: v,
       className: S.videoGrid,
-      participants: U,
+      participants: F,
       totalNumberOfParticipants: t.length,
       onClick: T,
       onDoubleClick: A,
@@ -84,7 +85,7 @@ t.default = (0, r.default)(e => {
     onContextMenuParticipant: I,
     onSelectParticipant: T,
     selectedParticipant: s,
-    filteredParticipants: U,
+    filteredParticipants: F,
     participants: t,
     popoutWindow: D,
     className: x,
@@ -94,6 +95,7 @@ t.default = (0, r.default)(e => {
     layout: _,
     inCall: M,
     channel: v,
-    showParticipants: R
+    showParticipants: R,
+    forceShowToggleParticipants: U
   })
 })
