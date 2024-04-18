@@ -124,7 +124,11 @@ let v = r.memo(function(e) {
     showEyeDropper: I,
     wrapperComponentType: T,
     className: x
-  } = e, g = (0, c.default)(), v = "string" == typeof t ? (0, o.hex2int)(t) : t, R = null != v ? v : 0, A = (0, o.int2hex)(R), N = (0, o.int2hslRaw)(R), [S, M] = r.useState({
+  } = e, g = (0, c.default)(), v = function(e) {
+    if (null == e) return null;
+    if ("string" == typeof e) return (0, o.isValidHex)(e) ? (0, o.hex2int)(e) : null;
+    return e
+  }(t), R = null != v ? v : 0, A = (0, o.int2hex)(R), N = (0, o.int2hslRaw)(R), [S, M] = r.useState({
     current: R,
     pending: {
       hex: A,
