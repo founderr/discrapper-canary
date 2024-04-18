@@ -30,7 +30,7 @@ function n(e, t, n) {
   }) : n.isDM() ? (0, i.openContextMenuLazy)(e, async () => {
     let {
       default: e
-    } = await Promise.all([l.e("99387"), l.e("79695"), l.e("1502"), l.e("70866"), l.e("56826"), l.e("6022")]).then(l.bind(l, "131404"));
+    } = await Promise.all([l.e("99387"), l.e("79695"), l.e("1502"), l.e("70866"), l.e("56826"), l.e("99526")]).then(l.bind(l, "131404"));
     return l => (0, a.jsx)(e, {
       ...l,
       user: t,
