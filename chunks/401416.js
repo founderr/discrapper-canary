@@ -1,14 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   acknowledgeDmSettingsUpsell: function() {
-    return l
+    return u
   }
 }), n("47120");
 var i = n("544891"),
   r = n("147913"),
   s = n("25733"),
-  a = n("981631");
-class o extends r.default {
+  a = n("704587"),
+  o = n("981631");
+class l extends r.default {
+  intialize() {
+    a.DmSettingsUpsellExperiment.getCurrentConfig({
+      location: "initializer"
+    }, {
+      autoTrackExposure: !1
+    })
+  }
   handleDmSettingsUpsellShow(e) {
     s.default.openDmSettingsUpsellModal(e.guildId)
   }
@@ -25,9 +33,9 @@ class o extends r.default {
   }
 }
 
-function l(e) {
+function u(e) {
   return i.HTTP.post({
-    url: a.Endpoints.DM_SETTINGS_UPSELL_ACK(e)
+    url: o.Endpoints.DM_SETTINGS_UPSELL_ACK(e)
   })
 }
-t.default = new o
+t.default = new l
