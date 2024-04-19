@@ -120340,6 +120340,16 @@ html .invoiceCancelRow__6ff3e {
     box-shadow: 0 -1px 0 hsl(var(--primary-100-hsl)/.6)
 }
 
+.remindContainer__81257 {
+    height: 497px
+}
+
+.remindHeader__63284 {
+    height: 126px;
+    box-sizing: border-box;
+    padding-top: 24px
+}
+
 .confrimationContainer__3c695 {
     display: flex;
     flex-direction: column;
