@@ -2,6 +2,7 @@
 e.exports = {
   container: "container_df7ce7",
   nickname: "nickname__745d1",
+  nicknameIcon: "nicknameIcon__13099",
   tags: "tags__18aee",
   userTag: "userTag_eb9b2a",
   userTagDiscriminator: "userTagDiscriminator_dd0ae5",

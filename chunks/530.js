@@ -32,7 +32,10 @@ function d(e) {
         className: u.nickname,
         variant: I,
         children: l.default.getName(n, r, t)
-      }), c]
+      }), (0, i.jsx)("div", {
+        className: u.nicknameIcon,
+        children: c
+      })]
     }), (0, i.jsxs)("div", {
       className: u.tags,
       children: [(0, i.jsx)(o.default, {
