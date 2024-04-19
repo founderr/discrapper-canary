@@ -13569,8 +13569,7 @@ html .invoiceCancelRow_aa7946 {
 }
 
 .wrapper__38bac {
-    background-color: var(--background-secondary);
-    overflow: hidden
+    background: var(--bg-overlay-chat, var(--background-secondary))
 }
 
 .container_bad367 {
