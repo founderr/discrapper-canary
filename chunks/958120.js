@@ -58,7 +58,7 @@ function N(e) {
         user: t,
         onOpenProfile: N
       }) : null
-    }), C && (0, i.jsx)(S.default, {
+    }), (0, i.jsx)(S.default, {
       user: t,
       onClose: R
     }), C && (0, i.jsx)(T.default, {
