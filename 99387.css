@@ -70626,7 +70626,8 @@ input::-webkit-inner-spin-button {
     overflow: hidden;
     box-sizing: border-box;
     cursor: pointer;
-    border-top: 1px solid var(--background-modifier-accent)
+    border-top: 1px solid var(--background-modifier-accent);
+    border-bottom: 1px solid transparent
 }
 
 .peopleListItem_dab480:hover+.peopleListItem_dab480,
