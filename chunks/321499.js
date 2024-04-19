@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return R
+    return C
   }
 });
 var a = s("735250"),
@@ -14,106 +14,80 @@ var a = s("735250"),
   u = s("846027"),
   c = s("131951"),
   S = s("285952"),
-  E = s("626135"),
-  T = s("358085"),
-  f = s("998502"),
-  m = s("210887"),
-  _ = s("996073"),
-  g = s("526761"),
-  I = s("981631"),
-  h = s("65154"),
-  N = s("689938"),
-  p = s("794711");
-let C = s("651714"),
-  A = s("297166");
+  E = s("998502"),
+  T = s("210887"),
+  f = s("996073"),
+  m = s("526761"),
+  _ = s("65154"),
+  g = s("689938"),
+  I = s("794711");
+let h = s("651714"),
+  N = s("297166");
 
-function O(e) {
-  u.default.setAV1Enabled(e), E.default.track(I.AnalyticEvents.VOICE_SETTINGS_CHANGED, {
-    av1_disabled: !e,
-    av1_enabled: e
-  })
-}
-
-function x() {
+function p() {
   let {
     experimentalEncoders: e
   } = (0, r.useStateFromStoresObject)([c.default], () => ({
     experimentalEncoders: c.default.getExperimentalEncoders()
   }));
-  return "stable" !== f.default.releaseChannel && c.default.isExperimentalEncodersSupported() ? (0, a.jsx)(d.FormSwitch, {
-    className: i()(p.marginTop8, p.marginBottom20),
+  return "stable" !== E.default.releaseChannel && c.default.isExperimentalEncodersSupported() ? (0, a.jsx)(d.FormSwitch, {
+    className: i()(I.marginTop8, I.marginBottom20),
     value: e,
     onChange: e => u.default.setExperimentalEncoders(e),
     disabled: !1,
-    children: N.default.Messages.EXPERIMENTAL_ENCODERS
+    children: g.default.Messages.EXPERIMENTAL_ENCODERS
   }) : null
 }
 
-function R() {
-  let e = (0, r.useStateFromStores)([m.default], () => m.default.theme),
+function C() {
+  let e = (0, r.useStateFromStores)([T.default], () => T.default.theme),
     {
       openH264: t,
       hardwareH264: s,
-      supportsOpenH264: l,
-      av1Enabled: E
+      supportsOpenH264: l
     } = (0, r.useStateFromStoresObject)([c.default], () => ({
       openH264: c.default.getOpenH264(),
       hardwareH264: c.default.getHardwareH264(),
-      supportsOpenH264: c.default.supports(h.Features.OPEN_H264),
-      av1Enabled: c.default.getAv1Enabled()
+      supportsOpenH264: c.default.supports(_.Features.OPEN_H264)
     })),
-    f = n.useRef(null);
-  return (0, _.default)(f, g.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION), (0, a.jsxs)(a.Fragment, {
+    E = n.useRef(null);
+  return (0, f.default)(E, m.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(d.FormSection, {
-      className: p.marginBottom20,
-      title: N.default.Messages.USER_SETTINGS_VOICE_CODEC_TITLE,
+      className: I.marginBottom20,
+      title: g.default.Messages.USER_SETTINGS_VOICE_CODEC_TITLE,
       children: (0, a.jsx)(d.FormNotice, {
-        className: p.marginBottom20,
+        className: I.marginBottom20,
         type: d.FormNoticeTypes.PRIMARY,
         imageData: {
-          src: (0, o.isThemeLight)(e) ? C : A,
+          src: (0, o.isThemeLight)(e) ? h : N,
           width: 70,
           height: 40
         },
         align: S.default.Align.CENTER,
-        body: N.default.Messages.USER_SETTINGS_VOICE_CODEC_DESCRIPTION
+        body: g.default.Messages.USER_SETTINGS_VOICE_CODEC_DESCRIPTION
       })
     }), l && (0, a.jsxs)(d.FormSection, {
-      className: p.marginBottom20,
-      title: N.default.Messages.USER_SETTINGS_VOICE_VIDEO_CODEC_TITLE,
+      className: I.marginBottom20,
+      title: g.default.Messages.USER_SETTINGS_VOICE_VIDEO_CODEC_TITLE,
       children: [(0, a.jsx)(d.FormSwitch, {
-        className: i()(p.marginTop8, p.marginBottom20),
+        className: i()(I.marginTop8, I.marginBottom20),
         value: t,
-        onChange: e => {
-          u.default.setOpenH264(e), u.default.setHardwareH264(e)
-        },
+        onChange: e => u.default.setOpenH264(e),
         disabled: !1,
-        note: N.default.Messages.FORM_HELP_OPEN_H264,
-        children: N.default.Messages.USER_SETTINGS_VOICE_OPEN_H264
+        note: g.default.Messages.FORM_HELP_OPEN_H264,
+        children: g.default.Messages.USER_SETTINGS_VOICE_OPEN_H264
       }), (0, a.jsx)("div", {
         style: {
           scrollMarginTop: "48px"
         },
-        ref: f
+        ref: E
       }), (0, a.jsx)(d.FormSwitch, {
-        className: i()(p.marginTop8, p.marginBottom20),
+        className: i()(I.marginTop8, I.marginBottom20),
         value: s,
-        onChange: e => {
-          (0, T.isWindows)() && u.default.setAV1Enabled(e && E), u.default.setHardwareH264(e)
-        },
-        disabled: !t,
-        note: N.default.Messages.FORM_HELP_HARDWARE_H264,
-        children: N.default.Messages.USER_SETTINGS_VOICE_HARDWARE_H264
-      }), (0, T.isWindows)() && (0, a.jsx)(d.FormSwitch, {
-        className: i()(p.marginTop8, p.marginBottom20),
-        value: (0, T.isWindows)() ? E && s : E,
-        onChange: e => {
-          (0, T.isWindows)() ? O(e && s): O(e)
-        },
-        note: (0, T.isWindows)() && N.default.Messages.FORM_HELP_HARDWARE_AV1,
-        disabled: (0, T.isWindows)() && !s,
-        children: N.default.Messages.USER_SETTINGS_VOICE_AV1
-      }), (0, a.jsx)(x, {})]
+        onChange: e => u.default.setHardwareH264(e),
+        note: g.default.Messages.FORM_HELP_HARDWARE_H264,
+        children: g.default.Messages.USER_SETTINGS_VOICE_HARDWARE_H264
+      }), (0, a.jsx)(p, {})]
     })]
   })
 }
