@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   useCanSeeSafetyEducationBlockMuteCoachmark: function() {
     return u
   },
@@ -7,16 +7,16 @@ a.r(t), a.d(t, {
     return d
   }
 });
-var n = a("399606"),
-  s = a("650598"),
-  l = a("941129"),
-  i = a("594174"),
-  r = a("51144"),
-  o = a("335865");
+var a = n("399606"),
+  s = n("650598"),
+  l = n("941129"),
+  i = n("594174"),
+  r = n("51144"),
+  o = n("335865");
 let u = () => {
     let e = (0, l.useIsSafetyConsumerEducationBlockMuteEnabled)(),
-      t = (0, n.useStateFromStores)([i.default], () => i.default.getCurrentUser()),
-      a = (0, o.useUserIsInLargeGuilds)();
-    return e && !(0, r.isNewUser)(t) && a
+      t = (0, a.useStateFromStores)([i.default], () => i.default.getCurrentUser()),
+      n = (0, o.useUserIsInLargeGuilds)();
+    return e && !(0, r.isNewUser)(t) && n
   },
   d = () => (0, s.useIsSafetyConsumerEducationAAEnabled)()

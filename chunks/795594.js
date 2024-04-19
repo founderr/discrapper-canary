@@ -16,8 +16,8 @@ var a = s("735250"),
   m = s("317381"),
   _ = s("713938"),
   g = s("881998"),
-  I = s("246946"),
-  h = s("186095"),
+  h = s("246946"),
+  I = s("186095"),
   N = s("285952"),
   p = s("6048"),
   C = s("507893"),
@@ -32,7 +32,7 @@ var a = s("735250"),
   P = s("794711");
 let j = d.default.connectStores([O.default], () => ({
   theme: O.default.theme
-}))(h.default);
+}))(I.default);
 
 function b(e) {
   let {
@@ -149,7 +149,7 @@ let U = e => {
   })
 };
 t.default = () => {
-  let e = (0, d.useStateFromStores)([I.default], () => I.default.hidePersonalInformation),
+  let e = (0, d.useStateFromStores)([h.default], () => h.default.hidePersonalInformation),
     t = (0, d.useStateFromStores)([g.default], () => g.default.getApps()),
     l = (0, d.useStateFromStores)([m.default], () => m.default.getSelfEmbeddedActivities());
   n.useEffect(() => {
@@ -187,12 +187,12 @@ t.default = () => {
     }),
     C = (e, t) => (0, a.jsxs)(j, {
       className: L.__invalid_marginTop20,
-      children: [(0, a.jsx)(h.EmptyStateImage, {
+      children: [(0, a.jsx)(I.EmptyStateImage, {
         darkSrc: s("701972"),
         lightSrc: s("818658"),
         width: 380,
         height: 282
-      }), (0, a.jsx)(h.EmptyStateText, {
+      }), (0, a.jsx)(I.EmptyStateText, {
         note: e,
         children: t
       })]

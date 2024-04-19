@@ -23,8 +23,8 @@ var a = s("735250"),
   m = s("709054"),
   _ = s("357956"),
   g = s("275909"),
-  I = s("300037"),
-  h = s("981631"),
+  h = s("300037"),
+  I = s("981631"),
   N = s("474936"),
   p = s("689938"),
   C = s("892645");
@@ -45,7 +45,7 @@ function A(e) {
       date: new Date(e)
     })
   }, [s, o, d]), c = n.useMemo(() => (function(e) {
-    if (null == e || e === h.BoostedGuildTiers.NONE) return "";
+    if (null == e || e === I.BoostedGuildTiers.NONE) return "";
     let t = [p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_EMOJI_SLOTS.format({
       numEmojiSlots: N.BoostedGuildFeatures[e].limits.emoji
     }), p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_STICKER_SLOTS.format({
@@ -62,7 +62,7 @@ function A(e) {
     }), p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_VIDEO_STAGE_SEATS.format({
       numVideoStageSeats: N.BoostedGuildFeatures[e].limits.stageVideoUsers
     }), p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_ANIMATED_GUILD_ICON, p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_GUILD_INVITE_BACKGROUND];
-    e >= h.BoostedGuildTiers.TIER_2 && (t.push(p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_GUILD_BANNER), t.push(p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_CUSTOM_ROLE_ICONS)), e >= h.BoostedGuildTiers.TIER_3 && t.push(p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_VANITY_URL);
+    e >= I.BoostedGuildTiers.TIER_2 && (t.push(p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_GUILD_BANNER), t.push(p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_CUSTOM_ROLE_ICONS)), e >= I.BoostedGuildTiers.TIER_3 && t.push(p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_VANITY_URL);
     let s = t[Math.floor(Math.random() * t.length)];
     return p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_TEMPLATE.format({
       perk: s
@@ -78,7 +78,7 @@ function A(e) {
       opacity: 0
     }
   });
-  return o || t === h.BoostedGuildTiers.NONE ? (0, a.jsx)("div", {
+  return o || t === I.BoostedGuildTiers.NONE ? (0, a.jsx)("div", {
     className: C.boostDescriptionInnerContainer,
     children: (0, a.jsx)(r.Text, {
       variant: "text-sm/medium",
@@ -104,25 +104,25 @@ function O(e) {
     hasCancelableGuildBoostSlot: d,
     showAltText: c,
     isLastGuildBoostSlot: S
-  } = e, E = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), m = n.useMemo(() => null != s.cooldownEndsAt ? new Date(s.cooldownEndsAt) : null, [s]), I = n.useMemo(() => null != m && m > new Date, [m]), h = (0, f.isGuildBoostSlotCanceled)(s);
+  } = e, E = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), m = n.useMemo(() => null != s.cooldownEndsAt ? new Date(s.cooldownEndsAt) : null, [s]), h = n.useMemo(() => null != m && m > new Date, [m]), I = (0, f.isGuildBoostSlotCanceled)(s);
   return (0, a.jsxs)("div", {
     className: C.boostContainer,
     children: [(0, a.jsxs)("div", {
       className: C.boostInnerContainer,
       children: [(0, a.jsx)(g.default, {
-        isCanceled: h,
-        hasCooldown: I,
+        isCanceled: I,
+        hasCooldown: h,
         useReducedMotion: E
       }), (0, a.jsx)("div", {
         className: C.boostDescriptionContainer,
-        children: null != m && I && !h ? (0, a.jsx)(_.default, {
+        children: null != m && h && !I ? (0, a.jsx)(_.default, {
           className: C.boostDescriptionInnerContainer,
           cooldown: m.getTime()
         }) : (0, a.jsx)(A, {
           guildTier: t,
           guildBoostSlot: s,
           showAltText: c,
-          isCanceled: h,
+          isCanceled: I,
           premiumSubscription: l
         })
       }), (0, a.jsx)(r.Popout, {
@@ -162,7 +162,7 @@ function x(e) {
   } = e, o = (0, i.useStateFromStores)([E.default], () => E.default.getGuild(t), [t]);
   return (0, a.jsxs)("div", {
     className: C.appliedBoostContainer,
-    children: [(0, a.jsx)(I.default, {
+    children: [(0, a.jsx)(h.default, {
       guildId: t,
       boostingVariant: !1
     }), s.map((e, t) => (0, a.jsx)(O, {
@@ -197,7 +197,7 @@ function R(e) {
   }, n);
   return (0, a.jsxs)("div", {
     className: C.appliedBoostContainer,
-    children: [(0, a.jsx)(I.default, {
+    children: [(0, a.jsx)(h.default, {
       guildId: t,
       boostingVariant: !1
     }), s.map((e, t) => (0, a.jsx)(O, {

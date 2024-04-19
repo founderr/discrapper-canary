@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   ClanDiscoveryGame: function() {
     return i
   },
@@ -13,9 +13,9 @@ a.r(t), a.d(t, {
     return u
   }
 });
-var n, s, l, i, r = a("652874"),
-  o = a("308083");
-(n = l || (l = {})).DISCOVERY = "discovery", n.PLAYSTYLE = "playstyle", n.PRIMETIME = "primetime", n.TRAITS = "traits", n.GAMES = "games", (s = i || (i = {})).VALORANT = "valorant", s.GENSHIN = "genshin";
+var a, s, l, i, r = n("652874"),
+  o = n("308083");
+(a = l || (l = {})).DISCOVERY = "discovery", a.PLAYSTYLE = "playstyle", a.PRIMETIME = "primetime", a.TRAITS = "traits", a.GAMES = "games", (s = i || (i = {})).VALORANT = "valorant", s.GENSHIN = "genshin";
 let u = (0, r.default)(e => ({
   mode: "discovery",
   game: "valorant",
@@ -48,12 +48,12 @@ let u = (0, r.default)(e => ({
 
 function d(e) {
   var t;
-  let a = e.selectedGames,
-    n = null === (t = e.selectedPlaystyle) || void 0 === t ? void 0 : t.id,
+  let n = e.selectedGames,
+    a = null === (t = e.selectedPlaystyle) || void 0 === t ? void 0 : t.id,
     s = e.selectedTraits;
   return {
-    games: a,
-    playstyle: n,
+    games: n,
+    playstyle: a,
     traits: s,
     primetimes: e.selectedPrimetimes
   }

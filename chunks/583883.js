@@ -55,7 +55,7 @@ function v(e) {
   return "auto" === e || null == e ? "auto" : "".concat(e, "px")
 }
 
-function T(e, t) {
+function y(e, t) {
   let n = 0,
     i = 0;
   return n = "auto" === t.width ? null != e ? e.clientWidth : 0 : t.width, {
@@ -64,7 +64,7 @@ function T(e, t) {
   }
 }
 
-function y(e, t) {
+function O(e, t) {
   let {
     top: n,
     left: i,
@@ -96,7 +96,7 @@ function y(e, t) {
       throw Error("getOrientedCoords: Invalid orientation: ".concat(e))
   }
 }
-class I extends(a = o.Component) {
+class T extends(a = o.Component) {
   shouldComponentUpdate(e, t) {
     return !(0, u.default)(t, this.state) || !(0, u.default)(e, this.props, ["anchor", "size", "minSize", "container"]) || !(0, u.default)(e.anchor, this.props.anchor) || !(0, u.default)(e.size, this.props.size) || !(0, u.default)(e.minSize, this.props.minSize) || !(0, u.default)(e.container, this.props.container)
   }
@@ -143,13 +143,13 @@ class I extends(a = o.Component) {
     let {
       width: g,
       height: m
-    } = T(n, this.size), E = t - h, S = e - f, v = (0, c.fitFullCoordsToContainer)((0, c.getFullCoordsFromAnchorCoords)({
+    } = y(n, this.size), E = t - h, S = e - f, v = (0, c.fitFullCoordsToContainer)((0, c.getFullCoordsFromAnchorCoords)({
       top: E,
       left: S,
       bottom: null,
       right: null
-    }, a, l, g, m)), I = u ? (0, c.getAnchorCoordsFromFullCoords)(v) : y("RESIZE_SOUTH_EAST", v);
-    this.setDOMPositions(I), !p && (null != r && r(), this.setState({
+    }, a, l, g, m)), T = u ? (0, c.getAnchorCoordsFromFullCoords)(v) : O("RESIZE_SOUTH_EAST", v);
+    this.setDOMPositions(T), !p && (null != r && r(), this.setState({
       operationStarted: !0
     })), null != d && d(i, "MOVE", this.anchor, this.size)
   }
@@ -382,7 +382,7 @@ class I extends(a = o.Component) {
       let {
         width: o,
         height: r
-      } = T(i, this.size), d = (0, c.getFullCoordsFromAnchorCoords)(this.anchor, l, s, o, r);
+      } = y(i, this.size), d = (0, c.getFullCoordsFromAnchorCoords)(this.anchor, l, s, o, r);
       if ("MOVE" === e) {
         let {
           x: e,
@@ -405,7 +405,7 @@ class I extends(a = o.Component) {
           offsetY: n - i
         }
       } else {
-        let i = y(e, d);
+        let i = O(e, d);
         this.setDOMPositions(i), this.dragState = {
           ...this.dragState,
           startX: t,
@@ -433,7 +433,7 @@ class I extends(a = o.Component) {
           onUpdate: t,
           id: n
         } = this.props;
-        t(e, n, this.anchor, this.size, T(this.ref.current, this.size))
+        t(e, n, this.anchor, this.size, y(this.ref.current, this.size))
       } : void 0;
       if (t) {
         let {
@@ -442,7 +442,7 @@ class I extends(a = o.Component) {
         } = this.props.container, {
           width: i,
           height: a
-        } = T(this.ref.current, this.size), l = (0, c.getFullCoordsFromAnchorCoords)(this.anchor, e, t, i, a), s = (0, c.getAnchorCoordsFromFullCoords)(l);
+        } = y(this.ref.current, this.size), l = (0, c.getFullCoordsFromAnchorCoords)(this.anchor, e, t, i, a), s = (0, c.getAnchorCoordsFromFullCoords)(l);
         this.setDOMPositions(s), this.setDOMSize({
           width: i,
           height: a
@@ -455,7 +455,7 @@ class I extends(a = o.Component) {
     }), this.anchor = S(e.anchor), this.size = E(e.size, e.minSize.width, e.minSize.height)
   }
 }
-p(I, "Operations", i), p(I, "defaultProps", {
+p(T, "Operations", i), p(T, "defaultProps", {
   snapOrientation: !0,
   minSize: {
     width: 0,
@@ -472,4 +472,4 @@ p(I, "Operations", i), p(I, "defaultProps", {
   hidden: !1,
   dragAnywhere: !0,
   active: !0
-}), t.default = I
+}), t.default = T

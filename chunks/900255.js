@@ -1,11 +1,11 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   sortChannelIds: function() {
     return s
   }
 });
-var n = a("709054");
+var a = n("709054");
 
 function s(e) {
-  return e.sort((e, t) => n.default.compare(e.lastMessageId, t.lastMessageId)).reverse()
+  return e.sort((e, t) => a.default.compare(e.lastMessageId, t.lastMessageId)).reverse()
 }

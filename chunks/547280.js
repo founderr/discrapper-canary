@@ -1,50 +1,50 @@
 "use strict";
-s.r(e), s.d(e, {
+n.r(t), n.d(t, {
   completeSignUp: function() {
-    return d
+    return u
   },
   dismissSignUp: function() {
-    return r
+    return d
   }
 });
-var i = s("570140"),
-  n = s("605236"),
-  a = s("626135"),
-  c = s("445507"),
-  l = s("981631"),
-  o = s("921944");
+var a = n("570140"),
+  s = n("605236"),
+  l = n("626135"),
+  i = n("445507"),
+  r = n("981631"),
+  o = n("921944");
 
-function d(t) {
+function u(e) {
   let {
-    targetKey: e,
-    dismissibleContent: s,
-    data: d,
-    completed: r
-  } = t;
-  null != d.selectedOptionKey && (!(0, n.isDismissibleContentDismissed)(s) && a.default.track(l.AnalyticEvents.SIGNUP_COMPLETED, {
-    target_key: e,
-    selected_option_key: d.selectedOptionKey,
-    email: d.email,
-    guild_id: d.guildId,
-    metadata: (0, c.extractMetadata)(d),
-    completed: r
-  }), (0, n.markDismissibleContentAsDismissed)(s, {
+    targetKey: t,
+    dismissibleContent: n,
+    data: u,
+    completed: d
+  } = e;
+  null != u.selectedOptionKey && (!(0, s.isDismissibleContentDismissed)(n) && l.default.track(r.AnalyticEvents.SIGNUP_COMPLETED, {
+    target_key: t,
+    selected_option_key: u.selectedOptionKey,
+    email: u.email,
+    guild_id: u.guildId,
+    metadata: (0, i.extractMetadata)(u),
+    completed: d
+  }), (0, s.markDismissibleContentAsDismissed)(n, {
     dismissAction: o.ContentDismissActionType.PRIMARY,
     forceTrack: !0
-  }), i.default.dispatch({
+  }), a.default.dispatch({
     type: "COMPLETE_SIGN_UP",
-    email: d.email,
-    targetKey: e,
-    selectedOptionKey: d.selectedOptionKey
+    email: u.email,
+    targetKey: t,
+    selectedOptionKey: u.selectedOptionKey
   }))
 }
 
-function r(t, e) {
-  (0, n.markDismissibleContentAsDismissed)(e, {
+function d(e, t) {
+  (0, s.markDismissibleContentAsDismissed)(t, {
     dismissAction: o.ContentDismissActionType.DISMISS,
     forceTrack: !0
-  }), i.default.dispatch({
+  }), a.default.dispatch({
     type: "DISMISS_SIGN_UP",
-    targetKey: t
+    targetKey: e
   })
 }

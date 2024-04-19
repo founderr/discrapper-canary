@@ -27,7 +27,7 @@ var l = n("735250"),
   x = n("697908"),
   R = n("651483");
 
-function y(e) {
+function M(e) {
   let {
     style: t,
     withGuildIcon: n
@@ -53,7 +53,7 @@ t.default = a.memo(function(e) {
     thread: t,
     isSelectedChannel: s,
     isSelectedVoice: R,
-    isLast: M,
+    isLast: y,
     withGuildIcon: O
   } = e, b = (0, o.useStateFromStores)([g.default], () => g.default.getVoiceStatesForChannel(t), [t]), D = (0, o.useStateFromStores)([C.default], () => C.default.hasVideo(t.id)), {
     unread: j,
@@ -92,9 +92,9 @@ t.default = a.memo(function(e) {
     className: i()(v.containerDefault, {
       [v.selected]: s
     }),
-    children: [(0, l.jsx)(y, {
+    children: [(0, l.jsx)(M, {
       withGuildIcon: O
-    }), M ? null : (0, l.jsx)(y, {
+    }), y ? null : (0, l.jsx)(M, {
       withGuildIcon: O,
       style: {
         transform: "rotateX(180deg) translateY(-9px)"

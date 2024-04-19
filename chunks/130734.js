@@ -1,8 +1,8 @@
 "use strict";
-a.r(t);
-var n, s, l, i, r = a("442837"),
-  o = a("433517"),
-  u = a("570140");
+n.r(t);
+var a, s, l, i, r = n("442837"),
+  o = n("433517"),
+  u = n("570140");
 let d = "hasSeenGuildTemplatePromotionTooltip",
   c = {},
   f = !0 === o.Storage.get(d);
@@ -25,12 +25,12 @@ class h extends(i = r.default.Store) {
     return !f
   }
 }
-l = "GuildTemplateTooltipStore", (s = "displayName") in(n = h) ? Object.defineProperty(n, s, {
+l = "GuildTemplateTooltipStore", (s = "displayName") in(a = h) ? Object.defineProperty(a, s, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : n[s] = l, t.default = new h(u.default, {
+}) : a[s] = l, t.default = new h(u.default, {
   GUILD_TEMPLATE_DIRTY_TOOLTIP_REFRESH: function(e) {
     let {
       guildTemplate: t

@@ -21,8 +21,8 @@ var n = s("990547"),
   m = s("574755"),
   _ = s("377171"),
   g = s("621628"),
-  I = s("18438"),
-  h = s("778825"),
+  h = s("18438"),
+  I = s("778825"),
   N = s("351780"),
   p = s("231765"),
   C = s("813732"),
@@ -43,12 +43,12 @@ var n = s("990547"),
   G = s("604227"),
   F = s("38915"),
   k = s("498639"),
-  w = s("748717"),
-  H = s("419636"),
+  H = s("748717"),
+  w = s("419636"),
   V = s("35426"),
   Y = s("799071"),
-  K = s("601433"),
-  W = s("154022"),
+  W = s("601433"),
+  K = s("154022"),
   z = s("393681"),
   Q = s("309739"),
   q = s("64914"),
@@ -75,8 +75,8 @@ var n = s("990547"),
   em = s("200645"),
   e_ = s("287490"),
   eg = s("168308"),
-  eI = s("277329"),
-  eh = s("674116"),
+  eh = s("277329"),
+  eI = s("674116"),
   eN = s("981631"),
   ep = s("689938"),
   eC = s("480261");
@@ -104,7 +104,7 @@ function eO(e) {
     section: eN.UserSettingsSections.GAMES,
     label: ep.default.Messages.GAMES,
     ariaLabel: ep.default.Messages.GAMES,
-    element: eI.default,
+    element: eh.default,
     predicate: () => eD
   }, {
     section: eN.UserSettingsSections.PROFILE_CUSTOMIZATION,
@@ -116,12 +116,12 @@ function eO(e) {
       text: ep.default.Messages.NEW
     }),
     notice: {
-      stores: [v.default, h.default],
+      stores: [v.default, I.default],
       element: A.default
     },
     onSettingsClose: () => {
       o.default.wait(() => {
-        (0, I.resetAndCloseGuildIdentityForm)(), (0, u.resetAndCloseUserProfileForm)(), c.default.clearSubsection(eN.UserSettingsSections.PROFILE_CUSTOMIZATION)
+        (0, h.resetAndCloseGuildIdentityForm)(), (0, u.resetAndCloseUserProfileForm)(), c.default.clearSubsection(eN.UserSettingsSections.PROFILE_CUSTOMIZATION)
       })
     }
   }, {
@@ -184,7 +184,7 @@ function eO(e) {
     section: eN.UserSettingsSections.PREMIUM,
     ariaLabel: ep.default.Messages.PREMIUM,
     label: ep.default.Messages.PREMIUM,
-    element: w.default,
+    element: H.default,
     className: eC.premiumTab
   }, {
     section: eN.UserSettingsSections.GUILD_BOOSTING,
@@ -227,11 +227,11 @@ function eO(e) {
   }, {
     section: eN.UserSettingsSections.ACCESSIBILITY,
     label: ep.default.Messages.ACCESSIBILITY,
-    element: W.default
+    element: K.default
   }, {
     section: eN.UserSettingsSections.VOICE,
     label: ep.default.Messages.VOICE_AND_VIDEO,
-    element: eh.default,
+    element: eI.default,
     predicate: () => M.default.isSupported()
   }, {
     section: eN.UserSettingsSections.POGGERMODE,
@@ -360,12 +360,12 @@ function eO(e) {
     section: eN.UserSettingsSections.TEXT_PLAYGROUND,
     label: "Text Playground",
     element: ef.default,
-    predicate: () => (0, K.shouldShowTextPlayground)() || R.default.isDeveloper
+    predicate: () => (0, W.shouldShowTextPlayground)() || R.default.isDeveloper
   }, {
     section: eN.UserSettingsSections.TEXT_COMPONENT,
     label: "Text Components",
     element: Y.default,
-    predicate: () => (0, K.shouldShowTextPlayground)() || R.default.isDeveloper
+    predicate: () => (0, W.shouldShowTextPlayground)() || R.default.isDeveloper
   }, {
     section: S.SectionTypes.DIVIDER
   }, {
@@ -394,7 +394,7 @@ function eO(e) {
     section: S.SectionTypes.DIVIDER
   }, {
     section: S.SectionTypes.CUSTOM,
-    element: H.default
+    element: w.default
   }, {
     section: S.SectionTypes.CUSTOM,
     element: G.default

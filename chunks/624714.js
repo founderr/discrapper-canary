@@ -1,18 +1,18 @@
 "use strict";
-a.r(t), a("47120"), a("789020");
-var n = a("544891"),
-  s = a("115130"),
-  l = a("287545"),
-  i = a("812206"),
-  r = a("695103"),
-  o = a("626135"),
-  u = a("630388"),
-  d = a("996106"),
-  c = a("914946"),
-  f = a("452426"),
-  E = a("561205"),
-  h = a("186901"),
-  _ = a("981631");
+n.r(t), n("47120"), n("789020");
+var a = n("544891"),
+  s = n("115130"),
+  l = n("287545"),
+  i = n("812206"),
+  r = n("695103"),
+  o = n("626135"),
+  u = n("630388"),
+  d = n("996106"),
+  c = n("914946"),
+  f = n("452426"),
+  E = n("561205"),
+  h = n("186901"),
+  _ = n("981631");
 t.default = {
   [_.RPCCommands.SEND_ANALYTICS_EVENT]: {
     validation: e => (0, f.default)(e).required().keys({
@@ -22,14 +22,14 @@ t.default = {
     handler(e) {
       var t;
       let {
-        socket: a,
+        socket: n,
         args: {
-          event_name: n,
+          event_name: a,
           event_properties: s
         }
       } = e;
-      (0, c.validatePostMessageTransport)(a.transport), (0, c.validateApplication)(a.application);
-      let r = a.application.id,
+      (0, c.validatePostMessageTransport)(n.transport), (0, c.validateApplication)(n.application);
+      let r = n.application.id,
         f = (0, E.default)(),
         h = null == f ? void 0 : f.getGuildId();
       if (null == f) throw new d.default({
@@ -46,7 +46,7 @@ t.default = {
           activity_guild_id: h,
           activity_user_session_id: null == m ? void 0 : m.activityUserSessionId
         };
-      o.default.track(n, {
+      o.default.track(a, {
         ...S,
         ...s
       })
@@ -57,14 +57,14 @@ t.default = {
     handler(e) {
       let {
         socket: t
-      } = e, a = t.application.id;
-      if (null == a) throw new d.default({
+      } = e, n = t.application.id;
+      if (null == n) throw new d.default({
         errorCode: _.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      return n.HTTP.post({
-        url: _.Endpoints.APPLICATION_TICKET(a),
+      return a.HTTP.post({
+        url: _.Endpoints.APPLICATION_TICKET(n),
         body: {
-          test_mode: r.default.inTestModeForApplication(a) || s.default.inDevModeForApplication(a)
+          test_mode: r.default.inTestModeForApplication(n) || s.default.inDevModeForApplication(n)
         },
         retries: 3,
         oldFormErrors: !0

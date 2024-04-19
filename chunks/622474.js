@@ -16,8 +16,8 @@ var a = s("735250"),
   m = s("430492"),
   _ = s("688465"),
   g = s("594174"),
-  I = s("55935"),
-  h = s("702512"),
+  h = s("55935"),
+  I = s("702512"),
   N = s("689938"),
   p = s("561997");
 let C = "YYYY-MM-DD HH:mm";
@@ -42,9 +42,9 @@ function A(e) {
     endDate: m,
     dropsQuestId: _,
     assets: g,
-    articleUrl: I
-  } = t, h = (0, f.getDropByQuestId)(_);
-  if (null == h) return null;
+    articleUrl: h
+  } = t, I = (0, f.getDropByQuestId)(_);
+  if (null == I) return null;
   let C = () => {
     (0, T.enrollDropsUser)(_).then(() => {
       S.default.wait(async () => {
@@ -106,14 +106,14 @@ function A(e) {
           color: "text-muted",
           variant: "text-sm/normal",
           className: p.dropCriteriaText,
-          children: h.messages.giftInfo()
+          children: I.messages.giftInfo()
         })
       }), (0, a.jsx)(c.Text, {
         color: "text-muted",
         variant: "text-sm/normal",
         className: p.dropLearnMore,
         children: N.default.Messages.DROPS_LEARN_MORE.format({
-          faqUrl: I
+          faqUrl: h
         })
       })]
     })]
@@ -125,7 +125,7 @@ function O(e) {
     drop: t,
     code: s,
     platform: l
-  } = e, [r, d] = n.useState(!1), u = void 0 !== s, S = (0, I.dateFormat)(o()(t.endDate), "LL"), E = N.default.Messages.DROPS_CARD_REDEEM_UNTIL.format({
+  } = e, [r, d] = n.useState(!1), u = void 0 !== s, S = (0, h.dateFormat)(o()(t.endDate), "LL"), E = N.default.Messages.DROPS_CARD_REDEEM_UNTIL.format({
     endDate: S
   }), T = u ? N.default.Messages.OUTBOUND_PROMOTION_SEE_CODE : N.default.Messages.PROMOTION_CARD_ACTION_CLAIM, f = n.useCallback(() => d(!1), []);
   return (0, a.jsxs)(a.Fragment, {
@@ -232,7 +232,7 @@ t.default = function(e) {
     }), (0, a.jsx)("div", {
       className: p.dropsHelpText,
       children: N.default.Messages.DROPS_READ_BLOG_TO_ENABLE.format({
-        blogURL: h.DropsFaqUrl
+        blogURL: I.DropsFaqUrl
       })
     })]
   }) : 0 === l.length && 0 === i.length ? null : (0, a.jsxs)(c.FormSection, {

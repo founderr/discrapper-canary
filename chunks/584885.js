@@ -1,16 +1,16 @@
 "use strict";
-a.r(t), a("653041");
-var n = a("735250"),
-  s = a("470079"),
-  l = a("481060"),
-  i = a("570140"),
-  r = a("906732"),
-  o = a("451603"),
-  u = a("885714"),
-  d = a("514611"),
-  c = a("127541"),
-  f = a("981631"),
-  E = a("912625");
+n.r(t), n("653041");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("481060"),
+  i = n("570140"),
+  r = n("906732"),
+  o = n("451603"),
+  u = n("885714"),
+  d = n("514611"),
+  c = n("127541"),
+  f = n("981631"),
+  E = n("912625");
 let h = [
     [1696, 20],
     [1432, 16],
@@ -25,7 +25,7 @@ let h = [
   ];
 t.default = e => {
   let t, {
-    title: a,
+    title: n,
     subtitle: C,
     guildsData: m,
     analyticsContext: S,
@@ -47,10 +47,10 @@ t.default = e => {
     } = (0, r.default)();
   if (null == m) return null;
   let {
-    guilds: P,
-    loading: M
-  } = m, x = null == P || 0 === P.length;
-  if (!M && x) return null;
+    guilds: M,
+    loading: P
+  } = m, x = null == M || 0 === M.length;
+  if (!P && x) return null;
   let y = async e => {
     if ((0, o.isAtGuildCapAndNonPremium)())(0, u.default)({
       analyticsSource: {
@@ -63,15 +63,15 @@ t.default = e => {
       analyticsLocations: L
     });
     else {
-      let t = P.findIndex(t => t.id === e);
+      let t = M.findIndex(t => t.id === e);
       await p(e, t, S, N)
     }
   };
-  if (M || null == P) {
+  if (P || null == M) {
     let e = [];
-    for (let t = 0; t < O; t++) e.push((0, n.jsx)(d.default.Placeholder, {}, t));
+    for (let t = 0; t < O; t++) e.push((0, a.jsx)(d.default.Placeholder, {}, t));
     t = e
-  } else t = P.slice(0, O).map(e => (0, n.jsx)(d.default, {
+  } else t = M.slice(0, O).map(e => (0, a.jsx)(d.default, {
     className: E.__invalid_guildCard,
     guild: e,
     onView: y,
@@ -79,20 +79,20 @@ t.default = e => {
     onGuildCardSeen: g,
     onTagClick: v
   }, e.id));
-  return (0, n.jsx)("section", {
+  return (0, a.jsx)("section", {
     className: E.guildListSection,
-    children: (0, n.jsxs)(l.HeadingLevel, {
-      component: (0, n.jsx)(l.Heading, {
+    children: (0, a.jsxs)(l.HeadingLevel, {
+      component: (0, a.jsx)(l.Heading, {
         className: E.__invalid_title,
         variant: "heading-lg/semibold",
-        children: a
+        children: n
       }),
-      children: [null != C && (0, n.jsx)(l.Text, {
+      children: [null != C && (0, a.jsx)(l.Text, {
         className: E.subtitle,
         variant: "text-sm/normal",
         color: "header-secondary",
         children: C
-      }), (0, n.jsx)("div", {
+      }), (0, a.jsx)("div", {
         className: E.guildList,
         children: t
       })]

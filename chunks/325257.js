@@ -26,14 +26,14 @@ var l = n("735250"),
   v = n("252686"),
   x = n("682662"),
   R = n("674552"),
-  y = n("981631"),
-  M = n("689938"),
+  M = n("981631"),
+  y = n("689938"),
   O = n("814886");
 let b = {
   analyticsSource: {
-    page: y.AnalyticsPages.GUILD_CHANNEL,
-    section: y.AnalyticsSections.CHANNEL_LIST,
-    object: y.AnalyticsObjects.CHANNEL
+    page: M.AnalyticsPages.GUILD_CHANNEL,
+    section: M.AnalyticsSections.CHANNEL_LIST,
+    object: M.AnalyticsObjects.CHANNEL
   }
 };
 
@@ -63,8 +63,8 @@ t.default = a.memo(function(e) {
     mediaState: Y,
     unavailable: K = !1,
     badge: W = 0,
-    contextMenu: Z = D,
-    draggable: z = !1,
+    contextMenu: z = D,
+    draggable: Z = !1,
     sorting: X = !1,
     preloadOnClick: Q = !0,
     guildJoinRequestStatus: q
@@ -93,7 +93,7 @@ t.default = a.memo(function(e) {
         dragging: e.isDragging()
       })
     }),
-    es = (0, o.useTreeItem)(null != J ? J : y.EMPTY_STRING_SNOWFLAKE_ID),
+    es = (0, o.useTreeItem)(null != J ? J : M.EMPTY_STRING_SNOWFLAKE_ID),
     [ei, er] = a.useState(!1),
     eo = !X && ei,
     [eu, ed] = a.useState(!1),
@@ -117,8 +117,8 @@ t.default = a.memo(function(e) {
     }, [F, B, K, Q]),
     eC = (0, u.useStateFromStores)([g.default], () => g.default.isCurrentUserGuest(J)),
     eg = a.useCallback(e => {
-      null != B && !eC && Z(e, B)
-    }, [B, Z, eC]),
+      null != B && !eC && z(e, B)
+    }, [B, z, eC]),
     eE = a.useCallback(e => {
       if ("ArrowLeft" === e.key && null != $) {
         var t;
@@ -147,7 +147,7 @@ t.default = a.memo(function(e) {
         ec || ed(!1)
       }
     }) : (0, l.jsx)(I.default, {
-      ariaLabel: M.default.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
+      ariaLabel: y.default.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
         guildName: B.toString(),
         mentions: W
       }),
@@ -170,7 +170,7 @@ t.default = a.memo(function(e) {
     eN = el ? (0, l.jsx)(A.PlaceholderDropTarget, {
       children: (0, l.jsx)(v.default, {})
     }) : (0, l.jsx)("div", {
-      ref: z ? ea : void 0,
+      ref: Z ? ea : void 0,
       "data-dnd-name": B.toString(),
       className: i()(O.blobContainer, {
         [O.sorting]: X,
@@ -196,7 +196,7 @@ t.default = a.memo(function(e) {
       guild: B,
       disabled: X,
       children: eN
-    }), z ? (0, l.jsx)(A.default, {
+    }), Z ? (0, l.jsx)(A.default, {
       name: B.name,
       targetNode: P,
       onDragOverChanged: e_

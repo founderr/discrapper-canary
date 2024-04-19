@@ -27,7 +27,7 @@ function g(e) {
     className: l,
     sectionTitle: E,
     forcedDivider: g = !1,
-    withTutorial: h = !1,
+    withTutorial: I = !1,
     isTryItOutFlow: N = !1
   } = e, {
     analyticsLocations: p
@@ -40,7 +40,7 @@ function g(e) {
     analyticsLocations: p,
     isTryItOutFlow: N,
     guild: s
-  }), [p, N, s]), D = N || void 0 !== x ? null != x : (C ? O : A) != null, L = h ? S.default : r.Button;
+  }), [p, N, s]), D = N || void 0 !== x ? null != x : (C ? O : A) != null, L = I ? S.default : r.Button;
   return (0, a.jsxs)(f.default, {
     className: l,
     forcedDivider: g,
@@ -53,7 +53,7 @@ function g(e) {
         size: r.Button.Sizes.SMALL,
         onClick: v,
         className: i()({
-          [_.buttonHighlighted]: h
+          [_.buttonHighlighted]: I
         }),
         children: m.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
       }), D && (0, a.jsx)(r.Button, {
@@ -66,12 +66,12 @@ function g(e) {
         },
         children: (0, d.hasGlobalDefaultAvatarDecoration)(t, s) ? m.default.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : m.default.Messages.USER_SETTINGS_REMOVE_AVATAR_DECORATION
       })]
-    }), t.isStaff() && M && (0, a.jsx)(I, {
+    }), t.isStaff() && M && (0, a.jsx)(h, {
       user: t
     })]
   })
 }
-let I = e => {
+let h = e => {
   let {
     user: t
   } = e;

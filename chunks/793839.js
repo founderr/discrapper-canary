@@ -1,11 +1,11 @@
 "use strict";
-a.r(t), a("47120");
-var n = a("392711"),
-  s = a.n(n),
-  l = a("430824"),
-  i = a("996106"),
-  r = a("452426"),
-  o = a("981631");
+n.r(t), n("47120");
+var a = n("392711"),
+  s = n.n(a),
+  l = n("430824"),
+  i = n("996106"),
+  r = n("452426"),
+  o = n("981631");
 t.default = {
   [o.RPCCommands.GET_GUILD]: {
     scope: o.OAuth2Scopes.RPC,
@@ -16,13 +16,13 @@ t.default = {
     handler(e) {
       let {
         socket: t,
-        server: a,
+        server: n,
         args: {
-          guild_id: n,
+          guild_id: a,
           timeout: s = 0
         }
       } = e;
-      return a.storeWait(t, () => l.default.getGuild(n), s).catch(() => {
+      return n.storeWait(t, () => l.default.getGuild(a), s).catch(() => {
         throw new i.default({
           errorCode: o.RPCErrors.GET_GUILD_TIMED_OUT
         }, "Request to get guild timed out.")
@@ -30,7 +30,7 @@ t.default = {
         var t;
         if (null == e) throw new i.default({
           errorCode: o.RPCErrors.INVALID_GUILD
-        }, "Invalid guild id: ".concat(n));
+        }, "Invalid guild id: ".concat(a));
         return {
           id: e.id,
           name: e.name,

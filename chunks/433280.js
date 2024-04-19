@@ -1,31 +1,31 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return _
   }
 });
-var n = a("735250");
-a("470079");
-var s = a("990547"),
-  l = a("399606"),
-  i = a("213609"),
-  r = a("434404"),
-  o = a("970731"),
-  u = a("430824"),
-  d = a("594174"),
-  c = a("981631"),
-  f = a("689938"),
-  E = a("77126"),
-  h = a("217110");
+var a = n("735250");
+n("470079");
+var s = n("990547"),
+  l = n("399606"),
+  i = n("213609"),
+  r = n("434404"),
+  o = n("970731"),
+  u = n("430824"),
+  d = n("594174"),
+  c = n("981631"),
+  f = n("689938"),
+  E = n("77126"),
+  h = n("217110");
 
 function _(e) {
   let {
     guildId: t,
-    markAsDismissed: a
+    markAsDismissed: n
   } = e, _ = (0, l.useStateFromStores)([u.default, d.default], () => {
     let e = d.default.getCurrentUser(),
-      a = u.default.getGuild(t);
-    return (null == a ? void 0 : a.isOwner(e)) === !0
+      n = u.default.getGuild(t);
+    return (null == n ? void 0 : n.isOwner(e)) === !0
   });
   return (0, i.default)({
     type: s.ImpressionTypes.POPOUT,
@@ -34,14 +34,14 @@ function _(e) {
       guild_id: t,
       is_owner: _
     }
-  }), (0, n.jsx)("div", {
+  }), (0, a.jsx)("div", {
     className: E.container,
-    children: (0, n.jsx)(o.default, {
+    children: (0, a.jsx)(o.default, {
       header: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_UPSELL_HEADER,
       content: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_UPSELL_BODY,
-      asset: (0, n.jsx)("div", {
+      asset: (0, a.jsx)("div", {
         className: E.image,
-        children: (0, n.jsx)("img", {
+        children: (0, a.jsx)("img", {
           alt: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_UPSELL_IMG_ALT,
           src: h,
           className: E.image
@@ -52,7 +52,7 @@ function _(e) {
         r.default.open(t, c.GuildSettingsSections.ROLE_SUBSCRIPTIONS)
       },
       secondaryButtonCTA: f.default.Messages.DISMISS,
-      markAsDismissed: a
+      markAsDismissed: n
     })
   })
 }

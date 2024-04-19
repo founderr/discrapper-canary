@@ -1,29 +1,29 @@
 "use strict";
-a.r(t);
-var n, s, l, i, r = a("735250"),
-  o = a("470079"),
-  u = a("120356"),
-  d = a.n(u),
-  c = a("182493");
+n.r(t);
+var a, s, l, i, r = n("735250"),
+  o = n("470079"),
+  u = n("120356"),
+  d = n.n(u),
+  c = n("182493");
 class f extends(i = o.PureComponent) {
   render() {
     let {
       tag: e,
       children: t,
-      hoverText: a,
-      className: n,
+      hoverText: n,
+      className: a,
       forceHover: s,
       ...l
     } = this.props;
     return (0, r.jsxs)("div", {
       ...l,
-      className: d()(n, c.hoverRoll, {
-        [c.disabled]: null == a,
+      className: d()(a, c.hoverRoll, {
+        [c.disabled]: null == n,
         [c.forceHover]: s
       }),
       children: [(0, r.jsx)(e, {
         className: c.hovered,
-        children: a
+        children: n
       }), (0, r.jsx)(e, {
         className: c.default,
         children: t
@@ -34,9 +34,9 @@ class f extends(i = o.PureComponent) {
 l = {
   tag: "div",
   forceHover: !1
-}, (s = "defaultProps") in(n = f) ? Object.defineProperty(n, s, {
+}, (s = "defaultProps") in(a = f) ? Object.defineProperty(a, s, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : n[s] = l, t.default = f
+}) : a[s] = l, t.default = f

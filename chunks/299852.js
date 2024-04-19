@@ -1,36 +1,36 @@
 "use strict";
-s.r(t), s("47120");
-var n, a = s("735250"),
-  l = s("470079"),
-  i = s("593473"),
-  r = s("442837"),
-  u = s("544891"),
-  o = s("481060"),
-  d = s("129293"),
-  c = s("108427"),
-  f = s("598077"),
-  E = s("896797"),
-  I = s("819570"),
-  _ = s("981631"),
-  h = s("930441"),
-  p = s("689938"),
-  T = s("794711");
+n.r(t), n("47120");
+var s, a = n("735250"),
+  l = n("470079"),
+  i = n("593473"),
+  r = n("442837"),
+  u = n("544891"),
+  o = n("481060"),
+  d = n("129293"),
+  c = n("108427"),
+  f = n("598077"),
+  E = n("896797"),
+  _ = n("819570"),
+  I = n("981631"),
+  p = n("930441"),
+  h = n("689938"),
+  T = n("794711");
 
-function N(e, t, s) {
+function N(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: s,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = s, e
+  }) : e[t] = n, e
 }
 r.default.initialize();
-class g extends(n = l.PureComponent) {
+class g extends(s = l.PureComponent) {
   componentDidMount() {
     let e = (0, d.default)(this.props.location),
       t = (0, i.parse)(this.props.location.search);
     u.HTTP.post({
-      url: _.Endpoints.DISABLE_EMAIL_NOTIFICATIONS,
+      url: I.Endpoints.DISABLE_EMAIL_NOTIFICATIONS,
       body: {
         token: e,
         pixel_uuid: t.hash,
@@ -41,13 +41,13 @@ class g extends(n = l.PureComponent) {
     }).then(e => {
       let {
         body: {
-          user: s
+          user: n
         }
-      } = e, n = new f.default(s);
+      } = e, s = new f.default(n);
       this.setState({
         success: !0,
         busy: !1,
-        user: n,
+        user: s,
         category: t.category
       })
     }, () => this.setState({
@@ -56,33 +56,33 @@ class g extends(n = l.PureComponent) {
     })), (0, c.trackAppUIViewed)("disable_email_notifications")
   }
   renderBusy() {
-    return (0, a.jsx)(I.default, {
-      children: (0, a.jsx)(I.AuthSpinner, {})
+    return (0, a.jsx)(_.default, {
+      children: (0, a.jsx)(_.AuthSpinner, {})
     })
   }
   renderCategorySuccess(e, t) {
     let {
-      defaultRoute: s,
-      transitionTo: n
-    } = this.props, l = p.default.Messages.EMAIL_CATEGORY_UNSUBSCRIBE_EMAIL_BODY.format({
+      defaultRoute: n,
+      transitionTo: s
+    } = this.props, l = h.default.Messages.EMAIL_CATEGORY_UNSUBSCRIBE_EMAIL_BODY.format({
       category: t
     });
-    return (0, a.jsxs)(I.default, {
-      children: [(0, a.jsx)(I.Title, {
+    return (0, a.jsxs)(_.default, {
+      children: [(0, a.jsx)(_.Title, {
         className: T.marginBottom8,
-        children: p.default.Messages.EMAIL_CATEGORY_UNSUBSCRIBE_HEADER
-      }), (0, a.jsx)(I.SubTitle, {
+        children: h.default.Messages.EMAIL_CATEGORY_UNSUBSCRIBE_HEADER
+      }), (0, a.jsx)(_.SubTitle, {
         children: l
-      }), (0, a.jsx)(I.Button, {
+      }), (0, a.jsx)(_.Button, {
         className: T.marginTop20,
-        onClick: () => n(s),
-        children: p.default.Messages.CONTINUE_TO_WEBAPP
-      }), (0, a.jsx)(I.Button, {
+        onClick: () => s(n),
+        children: h.default.Messages.CONTINUE_TO_WEBAPP
+      }), (0, a.jsx)(_.Button, {
         className: T.marginTop8,
-        color: I.Button.Colors.LINK,
-        look: I.Button.Looks.LINK,
-        onClick: () => n(_.Routes.SETTINGS("notifications", h.EMAILS_SUBSECTION)),
-        children: p.default.Messages.EMAIL_CATEGORY_MANAGE_SETTING_LABEL
+        color: _.Button.Colors.LINK,
+        look: _.Button.Looks.LINK,
+        onClick: () => s(I.Routes.SETTINGS("notifications", p.EMAILS_SUBSECTION)),
+        children: h.default.Messages.EMAIL_CATEGORY_MANAGE_SETTING_LABEL
       })]
     })
   }
@@ -91,27 +91,27 @@ class g extends(n = l.PureComponent) {
       defaultRoute: e,
       transitionTo: t
     } = this.props, {
-      user: s,
-      category: n
+      user: n,
+      category: s
     } = this.state;
-    if (null != n) {
-      let e = h.EmailCategoriesList.find(e => e.category === n);
-      if (null != e) return this.renderCategorySuccess(n, e.label())
+    if (null != s) {
+      let e = p.EmailCategoriesList.find(e => e.category === s);
+      if (null != e) return this.renderCategorySuccess(s, e.label())
     }
-    return (0, a.jsxs)(I.default, {
-      children: [(0, a.jsx)(I.Avatar, {
-        src: null == s ? void 0 : s.getAvatarURL(void 0, 100),
+    return (0, a.jsxs)(_.default, {
+      children: [(0, a.jsx)(_.Avatar, {
+        src: null == n ? void 0 : n.getAvatarURL(void 0, 100),
         size: o.AvatarSizes.DEPRECATED_SIZE_100,
         className: T.marginBottom20
-      }), (0, a.jsx)(I.Title, {
+      }), (0, a.jsx)(_.Title, {
         className: T.marginBottom8,
-        children: p.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_SUCCESS_HEADER
-      }), (0, a.jsx)(I.SubTitle, {
-        children: p.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_SUCCESS_BODY
-      }), (0, a.jsx)(I.Button, {
+        children: h.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_SUCCESS_HEADER
+      }), (0, a.jsx)(_.SubTitle, {
+        children: h.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_SUCCESS_BODY
+      }), (0, a.jsx)(_.Button, {
         className: T.marginTop40,
         onClick: () => t(e),
-        children: p.default.Messages.CONTINUE_TO_WEBAPP
+        children: h.default.Messages.CONTINUE_TO_WEBAPP
       })]
     })
   }
@@ -120,19 +120,19 @@ class g extends(n = l.PureComponent) {
       defaultRoute: e,
       transitionTo: t
     } = this.props;
-    return (0, a.jsxs)(I.default, {
-      children: [(0, a.jsx)(I.Image, {
-        src: s("105020"),
+    return (0, a.jsxs)(_.default, {
+      children: [(0, a.jsx)(_.Image, {
+        src: n("105020"),
         className: T.marginBottom20
-      }), (0, a.jsx)(I.Title, {
+      }), (0, a.jsx)(_.Title, {
         className: T.marginBottom8,
-        children: p.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_HEADER
-      }), (0, a.jsx)(I.SubTitle, {
-        children: p.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_BODY
-      }), (0, a.jsx)(I.Button, {
+        children: h.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_HEADER
+      }), (0, a.jsx)(_.SubTitle, {
+        children: h.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_BODY
+      }), (0, a.jsx)(_.Button, {
         className: T.marginTop40,
         onClick: () => t(e),
-        children: p.default.Messages.CONTINUE_TO_WEBAPP
+        children: h.default.Messages.CONTINUE_TO_WEBAPP
       })]
     })
   }
@@ -153,7 +153,7 @@ class g extends(n = l.PureComponent) {
   }
 }
 N(g, "defaultProps", {
-  transitionTo: e => s.g.location.assign(e)
+  transitionTo: e => n.g.location.assign(e)
 }), t.default = r.default.connectStores([E.default], () => ({
   defaultRoute: E.default.defaultRoute
 }))(g)

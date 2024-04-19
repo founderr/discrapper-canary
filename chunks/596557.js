@@ -1,21 +1,21 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return _
   }
 });
-var n = a("735250"),
-  s = a("470079"),
-  l = a("524437"),
-  i = a("481060"),
-  r = a("785697"),
-  o = a("626135"),
-  u = a("700785"),
-  d = a("645041"),
-  c = a("981631"),
-  f = a("921944"),
-  E = a("647086"),
-  h = a("135899");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("524437"),
+  i = n("481060"),
+  r = n("785697"),
+  o = n("626135"),
+  u = n("700785"),
+  d = n("645041"),
+  c = n("981631"),
+  f = n("921944"),
+  E = n("647086"),
+  h = n("135899");
 
 function _(e) {
   var t;
@@ -35,12 +35,12 @@ function _(e) {
       (0, i.openModalLazy)(async () => {
         let {
           default: t
-        } = await Promise.all([a.e("99387"), a.e("54597")]).then(a.bind(a, "29022"));
-        return a => (0, n.jsx)(t, {
+        } = await Promise.all([n.e("99387"), n.e("54597")]).then(n.bind(n, "29022"));
+        return n => (0, a.jsx)(t, {
           guild: e,
           canEveryoneModerate: C,
           isDefaultNotificationsAllMessages: m,
-          ...a
+          ...n
         })
       }, {
         onCloseCallback: p

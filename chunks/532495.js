@@ -21,8 +21,8 @@ var n = s("512722"),
   m = s("134795"),
   _ = s("610966"),
   g = s("513901"),
-  I = s("451392"),
-  h = s("906364"),
+  h = s("451392"),
+  I = s("906364"),
   N = s("676934"),
   p = s("350327"),
   C = s("621853"),
@@ -46,8 +46,8 @@ function L() {
       pendingGlobalName: G,
       pendingBanner: F,
       pendingBio: k,
-      pendingPronouns: w,
-      pendingAccentColor: H,
+      pendingPronouns: H,
+      pendingAccentColor: w,
       pendingThemeColors: V,
       errors: Y
     } = (0, i.useStateFromStoresObject)([x.default], () => {
@@ -58,8 +58,8 @@ function L() {
         errors: t
       }
     }),
-    K = (0, d.useGuildAutomodProfileQuarantineErrors)(),
-    W = M.default.canUsePremiumProfileCustomization(U),
+    W = (0, d.useGuildAutomodProfileQuarantineErrors)(),
+    K = M.default.canUsePremiumProfileCustomization(U),
     z = (0, u.showRemoveAvatar)(B, U.avatar),
     Q = (0, u.showRemoveBanner)(F, null == y ? void 0 : y.banner),
     q = "DefaultCustomizationSections";
@@ -72,8 +72,8 @@ function L() {
   });
   let Z = (0, A.default)(U.id),
     X = null == Z ? void 0 : Z.getLegacyUsername(),
-    J = (null !== (s = null === (e = Y.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== s ? s : 0) > 0 ? Y.global_name : null !== (n = null == K ? void 0 : K.nick) && void 0 !== n ? n : [],
-    $ = (null !== (L = null === (t = Y.bio) || void 0 === t ? void 0 : t.length) && void 0 !== L ? L : 0) > 0 ? Y.bio : null !== (P = null == K ? void 0 : K.bio) && void 0 !== P ? P : [],
+    J = (null !== (s = null === (e = Y.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== s ? s : 0) > 0 ? Y.global_name : null !== (n = null == W ? void 0 : W.nick) && void 0 !== n ? n : [],
+    $ = (null !== (L = null === (t = Y.bio) || void 0 === t ? void 0 : t.length) && void 0 !== L ? L : 0) > 0 ? Y.bio : null !== (P = null == W ? void 0 : W.bio) && void 0 !== P ? P : [],
     ee = (0, O.useUserIsRecentGamesExperimentEnabled)({
       location: "28tk0bf_7",
       autoTrackExposure: !0
@@ -86,11 +86,11 @@ function L() {
       currentGlobalName: U.globalName,
       pendingGlobalName: G,
       onGlobalNameChange: r.setPendingGlobalNameName
-    }), (0, a.jsx)(h.default, {
+    }), (0, a.jsx)(I.default, {
       sectionTitle: v.default.Messages.USER_SETTINGS_PRONOUNS,
       errors: Y.pronouns,
       onPronounsChange: p.setPendingPronouns,
-      pendingPronouns: w,
+      pendingPronouns: H,
       currentPronouns: null !== (j = null == y ? void 0 : y.pronouns) && void 0 !== j ? j : ""
     }, "pronouns"), (0, a.jsx)(E.default, {
       onAvatarChange: r.setPendingAvatar,
@@ -104,13 +104,13 @@ function L() {
     }, "decoration"), (0, a.jsx)(g.default, {
       user: U,
       sectionTitle: v.default.Messages.USER_SETTINGS_PROFILE_EFFECT
-    }, "effect"), W ? (0, a.jsxs)(a.Fragment, {
+    }, "effect"), K ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(m.default, {
         showRemoveBannerButton: Q,
         errors: Y.banner,
         onBannerChange: p.setPendingBanner,
         forcedDivider: !0
-      }, "banner"), (0, a.jsx)(I.default, {
+      }, "banner"), (0, a.jsx)(h.default, {
         user: U,
         pendingAvatar: B,
         pendingColors: V,
@@ -120,7 +120,7 @@ function L() {
     }) : (0, a.jsx)(_.default, {
       user: U,
       savedUserColor: null == y ? void 0 : y.accentColor,
-      pendingColor: H,
+      pendingColor: w,
       setPendingAccentColor: p.setPendingAccentColor
     }, "color"), (0, a.jsx)(c.default, {
       sectionTitle: v.default.Messages.USER_SETTINGS_ABOUT_ME,

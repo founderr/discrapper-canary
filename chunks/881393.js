@@ -1,32 +1,32 @@
 "use strict";
-a.r(t), a("47120"), a("653041");
-var n = a("496929"),
-  s = a("16084"),
-  l = a("558381"),
-  i = a("115130"),
-  r = a("106976"),
-  o = a("695103"),
-  u = a("996106"),
-  d = a("334288"),
-  c = a("186901"),
-  f = a("981631");
+n.r(t), n("47120"), n("653041");
+var a = n("496929"),
+  s = n("16084"),
+  l = n("558381"),
+  i = n("115130"),
+  r = n("106976"),
+  o = n("695103"),
+  u = n("996106"),
+  d = n("334288"),
+  c = n("186901"),
+  f = n("981631");
 async function E(e, t) {
-  let a = t.filter(e => e.type === f.SKUTypes.SUBSCRIPTION_GROUP),
-    n = await Promise.all(a.map(async t => await (0, r.fetchAllSubscriptionListingsDataForApplication)(e, t.id))),
+  let n = t.filter(e => e.type === f.SKUTypes.SUBSCRIPTION_GROUP),
+    a = await Promise.all(n.map(async t => await (0, r.fetchAllSubscriptionListingsDataForApplication)(e, t.id))),
     s = [];
-  return n.forEach(e => {
+  return a.forEach(e => {
     if (null == e) return null;
-    let a = e.subscription_listings;
-    if (null == a) return null;
-    let n = [];
-    a.forEach(e => {
-      e.subscription_plans.forEach(a => {
+    let n = e.subscription_listings;
+    if (null == n) return null;
+    let a = [];
+    n.forEach(e => {
+      e.subscription_plans.forEach(n => {
         var s;
-        let l = null == a ? void 0 : a.price,
-          i = t.find(e => e.id === a.sku_id);
+        let l = null == n ? void 0 : n.price,
+          i = t.find(e => e.id === n.sku_id);
         if (null == i) return;
         let r = {
-          id: a.sku_id,
+          id: n.sku_id,
           name: i.name,
           type: i.type,
           price: {
@@ -37,9 +37,9 @@ async function E(e, t) {
           flags: e.sku_flags,
           release_date: null !== (s = i.release_date) && void 0 !== s ? s : null
         };
-        n.push(r)
+        a.push(r)
       })
-    }), n.filter(e => (null == e ? void 0 : e.price) != null).forEach(e => s.push(e))
+    }), a.filter(e => (null == e ? void 0 : e.price) != null).forEach(e => s.push(e))
   }), s
 }
 async function h(e) {
@@ -47,18 +47,18 @@ async function h(e) {
     socket: t
   } = e;
   (0, d.validateTransportType)(t.transport);
-  let a = t.application.id;
-  if (null == a) throw new u.default({
+  let n = t.application.id;
+  if (null == n) throw new u.default({
     errorCode: f.RPCErrors.INVALID_COMMAND
   }, "No application.");
-  if (o.default.inTestModeForApplication(a) || i.default.inDevModeForApplication(a)) {
-    let e = await s.fetchTestSKUsForApplication(a, !1),
-      t = await E(a, e);
+  if (o.default.inTestModeForApplication(n) || i.default.inDevModeForApplication(n)) {
+    let e = await s.fetchTestSKUsForApplication(n, !1),
+      t = await E(n, e);
     return [...e.filter(e => null != e.price), ...t]
   }
-  let n = await l.fetchAllStoreListingsForApplication(a),
-    r = n.filter(e => e.sku.type !== f.SKUTypes.SUBSCRIPTION_GROUP).map(e => e.sku).filter(e => null != e.price);
-  return [...r, ...await E(a, n.map(e => e.sku))]
+  let a = await l.fetchAllStoreListingsForApplication(n),
+    r = a.filter(e => e.sku.type !== f.SKUTypes.SUBSCRIPTION_GROUP).map(e => e.sku).filter(e => null != e.price);
+  return [...r, ...await E(n, a.map(e => e.sku))]
 }
 
 function _(e) {
@@ -66,11 +66,11 @@ function _(e) {
     socket: t
   } = e;
   (0, d.validateTransportType)(t.transport);
-  let a = t.application.id;
-  if (null == a) throw new u.default({
+  let n = t.application.id;
+  if (null == n) throw new u.default({
     errorCode: f.RPCErrors.INVALID_COMMAND
   }, "No application.");
-  return n.fetchUserEntitlementsForApplication(a)
+  return a.fetchUserEntitlementsForApplication(n)
 }
 t.default = {
   [f.RPCCommands.GET_SKUS]: {

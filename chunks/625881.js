@@ -11,14 +11,14 @@ var a = s("735250"),
   c = s("63063"),
   p = s("74538"),
   m = s("937615"),
-  E = s("230916"),
-  f = s("798769"),
+  f = s("230916"),
+  E = s("798769"),
   _ = s("474936"),
   I = s("981631"),
   S = s("689938"),
   N = s("248928"),
-  C = s("982404"),
-  P = s("299156");
+  P = s("982404"),
+  C = s("299156");
 t.default = function(e) {
   let {
     premiumSubscription: t,
@@ -38,9 +38,9 @@ t.default = function(e) {
       R(!0)
     }
     M(!1)
-  }, g = (0, d.default)(), x = (0, u.isThemeDark)(g) ? C : P, D = (0, E.useChurnDiscountedPrice)(t, _.SubscriptionPlans.PREMIUM_MONTH_TIER_2, T), b = (0, p.getPrice)(_.SubscriptionPlans.PREMIUM_MONTH_TIER_2), U = (0, m.formatPrice)(b.amount, b.currency);
+  }, g = (0, d.default)(), x = (0, u.isThemeDark)(g) ? P : C, D = (0, f.useChurnDiscountedPrice)(t, _.SubscriptionPlans.PREMIUM_MONTH_TIER_2, T), U = (0, p.getPrice)(_.SubscriptionPlans.PREMIUM_MONTH_TIER_2), b = (0, m.formatPrice)(U.amount, U.currency);
   return null == T ? null : (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(f.default, {
+    children: [(0, a.jsx)(E.default, {
       premiumType: s,
       onClose: i
     }), (0, a.jsx)(o.ModalContent, {
@@ -63,7 +63,7 @@ t.default = function(e) {
             children: S.default.Messages.CHURN_DISCOUNT_CONFIRM_DESCRIPTION.format({
               percent: T.discount.amount,
               numMonths: T.discount.user_usage_limit,
-              price: U
+              price: b
             })
           })]
         }), (0, a.jsx)("div", {
@@ -75,7 +75,7 @@ t.default = function(e) {
               discountedPrice: D,
               billingPeriod: (0, p.getDiscountIntervalString)(T.discount.user_usage_limit_interval),
               numMonths: T.discount.user_usage_limit,
-              fullPrice: U,
+              fullPrice: b,
               helpdeskArticle: c.default.getArticleURL(I.HelpdeskArticles.PAID_TERMS)
             })
           })

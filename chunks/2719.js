@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("299206"),
   _ = s("295474"),
   g = s("144114"),
-  I = s("918505"),
-  h = s("332473"),
+  h = s("918505"),
+  I = s("332473"),
   N = s("318661"),
   p = s("735336"),
   C = s("184325"),
@@ -43,12 +43,12 @@ var a = s("735250"),
   F = s("557013");
 let k = L.default.getEnableHardwareAcceleration() ? c.AnimatedAvatar : c.Avatar;
 
-function w(e) {
+function H(e) {
   var t, l;
   let {
     className: r,
     user: o
-  } = e, d = n.useRef(null), S = (0, I.usePomeloEligibility)(), E = (0, h.useIsEligibleForPomelo)(), T = (0, _.useGuildAutomodProfileQuarantineErrors)(), f = null !== (l = null == T ? void 0 : null === (t = T.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : null, [m, g] = n.useState(!1);
+  } = e, d = n.useRef(null), S = (0, h.usePomeloEligibility)(), E = (0, I.useIsEligibleForPomelo)(), T = (0, _.useGuildAutomodProfileQuarantineErrors)(), f = null !== (l = null == T ? void 0 : null === (t = T.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : null, [m, g] = n.useState(!1);
   n.useEffect(() => {
     g(null != d.current && d.current.scrollWidth > d.current.clientWidth)
   }, [o.username]);
@@ -132,7 +132,7 @@ function w(e) {
   })
 }
 
-function H(e) {
+function w(e) {
   var t, s;
   let {
     user: l,
@@ -279,7 +279,7 @@ function Y(e) {
   })
 }
 
-function K(e) {
+function W(e) {
   let t, {
     className: n,
     user: l
@@ -353,7 +353,7 @@ function K(e) {
   })
 }
 
-function W(e) {
+function K(e) {
   let {
     user: t
   } = e, s = (0, m.default)({
@@ -431,7 +431,7 @@ function Q() {
             user: t,
             className: F.userTag,
             discriminatorClass: F.discriminator
-          }), (0, a.jsx)(W, {
+          }), (0, a.jsx)(K, {
             user: t
           })]
         }), (0, a.jsx)(C.default, {
@@ -453,15 +453,15 @@ function Q() {
         children: i
       }) : null, (0, a.jsxs)("div", {
         className: F.fieldList,
-        children: [(0, a.jsx)(H, {
+        children: [(0, a.jsx)(w, {
           className: F.fieldSpacerBottom,
           user: t
-        }), (0, a.jsx)(w, {
+        }), (0, a.jsx)(H, {
           user: t
         }), (0, a.jsx)(Y, {
           className: F.fieldSpacer,
           user: t
-        }), (0, a.jsx)(K, {
+        }), (0, a.jsx)(W, {
           className: F.fieldSpacer,
           user: t
         })]

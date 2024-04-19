@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("474333"),
   _ = s("466111"),
   g = s("632184"),
-  I = s("63063"),
-  h = s("581883"),
+  h = s("63063"),
+  I = s("581883"),
   N = s("918257"),
   p = s("981631"),
   C = s("710111"),
@@ -43,7 +43,7 @@ function R(e) {
 function M() {
   let {
     analyticsLocations: e
-  } = (0, o.default)(), [t, s] = n.useState(C.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID), r = (0, T.useCustomJoinSound)(t), g = R(r), h = (0, l.useStateFromStores)([S.default], () => S.default.hasFetchedAllSounds()), M = (null == r ? void 0 : r.type) === T.CustomSoundType.GLOBAL, D = h && null != r && null == g;
+  } = (0, o.default)(), [t, s] = n.useState(C.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID), r = (0, T.useCustomJoinSound)(t), g = R(r), I = (0, l.useStateFromStores)([S.default], () => S.default.hasFetchedAllSounds()), M = (null == r ? void 0 : r.type) === T.CustomSoundType.GLOBAL, D = I && null != r && null == g;
   n.useEffect(() => {
     D && (0, E.trackCustomCallSoundExternallyDeleted)({
       location: e
@@ -75,7 +75,7 @@ function M() {
       variant: "text-sm/medium",
       color: "header-secondary",
       children: A.default.Messages.CALL_SOUNDS_SETTINGS_DESCRIPTION_2.format({
-        helpdeskArticle: I.default.getArticleURL(p.HelpdeskArticles.SOUNDBOARD)
+        helpdeskArticle: h.default.getArticleURL(p.HelpdeskArticles.SOUNDBOARD)
       })
     }), (0, a.jsx)(d.default, {
       guildId: t,
@@ -113,9 +113,9 @@ function M() {
 function v(e) {
   let {
     guildId: t
-  } = e, s = (0, l.useStateFromStores)([h.default], () => {
+  } = e, s = (0, l.useStateFromStores)([I.default], () => {
     var e, s, a;
-    return null === (a = h.default.settings.guilds) || void 0 === a ? void 0 : null === (s = a.guilds) || void 0 === s ? void 0 : null === (e = s[t]) || void 0 === e ? void 0 : e.joinSound
+    return null === (a = I.default.settings.guilds) || void 0 === a ? void 0 : null === (s = a.guilds) || void 0 === s ? void 0 : null === (e = s[t]) || void 0 === e ? void 0 : e.joinSound
   }), n = R(s);
   if (null == s || null == n) return null;
   let {

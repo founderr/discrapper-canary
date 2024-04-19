@@ -17,10 +17,10 @@ function a(e) {
 }
 n.r(t), n.d(t, {
   get: function() {
-    return p
+    return m
   },
   parseRequestOptionsFromJSON: function() {
-    return m
+    return _
   }
 });
 var i = "copy",
@@ -109,7 +109,7 @@ u({
     return (null == (t = e.getTransports) ? void 0 : t.call(e)) || []
   })
 }), o(h, e => e.getClientExtensionResults());
-var g = {
+var E = {
     mediation: d(i),
     publicKey: u({
       challenge: u(r),
@@ -121,7 +121,7 @@ var g = {
     }),
     signal: d(i)
   },
-  E = {
+  g = {
     type: u(i),
     id: u(i),
     rawId: u(r),
@@ -135,10 +135,10 @@ var g = {
     clientExtensionResults: o(h, e => e.getClientExtensionResults())
   };
 
-function m(e) {
-  return l(s, g, e)
+function _(e) {
+  return l(s, E, e)
 }
-async function p(e) {
+async function m(e) {
   let t = await navigator.credentials.get(e);
-  return t.toJSON = () => l(a, E, t), t
+  return t.toJSON = () => l(a, g, t), t
 }

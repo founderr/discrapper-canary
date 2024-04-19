@@ -21,18 +21,18 @@ var i = n("735250"),
   E = n("131951"),
   S = n("699516"),
   v = n("594174"),
-  T = n("979651"),
-  y = n("362446"),
-  I = n("285952"),
-  N = n("389320"),
-  O = n("242315"),
-  _ = n("381238"),
-  C = n("357727"),
+  y = n("979651"),
+  O = n("362446"),
+  T = n("285952"),
+  C = n("389320"),
+  N = n("242315"),
+  I = n("381238"),
+  _ = n("357727"),
   A = n("255439"),
   x = n("547881"),
   R = n("976401"),
-  M = n("333454"),
-  L = n("981631"),
+  L = n("333454"),
+  M = n("981631"),
   D = n("689938"),
   b = n("838525"),
   j = n("815668");
@@ -49,13 +49,13 @@ function P(e, t, n) {
 function k(e) {
   let {
     lobbyId: t
-  } = e, n = (0, r.useStateFromStoresObject)([y.default], () => ({
-    connectionState: y.default.getConnectionState(t),
-    hostname: y.default.getHostname(t),
-    averagePing: y.default.getAveragePing(t),
-    lastPing: y.default.getLastPing(t),
-    pings: y.default.getPings(),
-    outboundLossRate: y.default.getOutboundLossRate(t)
+  } = e, n = (0, r.useStateFromStoresObject)([O.default], () => ({
+    connectionState: O.default.getConnectionState(t),
+    hostname: O.default.getHostname(t),
+    averagePing: O.default.getAveragePing(t),
+    lastPing: O.default.getLastPing(t),
+    pings: O.default.getPings(),
+    outboundLossRate: O.default.getOutboundLossRate(t)
   }));
   return (0, i.jsx)(p.default, {
     ...n
@@ -68,13 +68,13 @@ class w extends a.PureComponent {
   renderChannelLink(e) {
     let {
       guild: t
-    } = this.props, n = (0, g.computeChannelName)(e, v.default, S.default), a = null != t ? "".concat(n, " / ").concat(t.name) : n, l = null != t ? t.id : L.ME;
+    } = this.props, n = (0, g.computeChannelName)(e, v.default, S.default), a = null != t ? "".concat(n, " / ").concat(t.name) : n, l = null != t ? t.id : M.ME;
     return (0, i.jsx)(o.Link, {
-      to: L.Routes.CHANNEL(l),
+      to: M.Routes.CHANNEL(l),
       onClick: t => {
         t.stopPropagation(), c.default.channelListScrollTo(l, e.id)
       },
-      children: (0, i.jsx)(M.default, {
+      children: (0, i.jsx)(L.default, {
         className: j.channel,
         children: a
       })
@@ -118,22 +118,22 @@ class w extends a.PureComponent {
               })
             })
           })
-        }), (0, i.jsxs)(I.default, {
+        }), (0, i.jsxs)(T.default, {
           grow: 0,
           children: [(0, i.jsx)(R.default, {
             tooltipText: p ? D.default.Messages.UNMUTE : D.default.Messages.MUTE,
-            icon: p ? A.default : C.default,
+            icon: p ? A.default : _.default,
             iconForeground: p ? b.strikethrough : null,
             onClick: this.handleToggleSelfMute
           }), (0, i.jsx)(R.default, {
             tooltipText: f ? D.default.Messages.UNDEAFEN : D.default.Messages.DEAFEN,
-            icon: f ? _.default : O.default,
+            icon: f ? I.default : N.default,
             onClick: this.handleToggleSelfDeaf,
             iconForeground: f ? b.strikethrough : null
           }), null == a && (0, i.jsx)(R.default, {
             tooltipText: D.default.Messages.DISCONNECT_SELF,
             onClick: this.handleDisconnect,
-            icon: N.default
+            icon: C.default
           })]
         })]
       })
@@ -171,7 +171,7 @@ function V(e) {
     lobbyId: n,
     channel: a,
     ...l
-  } = e, s = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(null == a ? void 0 : a.getGuildId())), o = (0, r.useStateFromStores)([T.default], () => null != a && T.default.hasVideo(a.id)), [d, u] = (0, r.useStateFromStoresArray)([E.default], () => [E.default.isSelfMute(t) || E.default.isSelfMutedTemporarily(t), E.default.isSelfDeaf(t)]), [c, f, h] = (0, r.useStateFromStoresArray)([y.default], () => [y.default.getConnectionState(n), y.default.getLastPing(n), y.default.getQuality(n)]);
+  } = e, s = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(null == a ? void 0 : a.getGuildId())), o = (0, r.useStateFromStores)([y.default], () => null != a && y.default.hasVideo(a.id)), [d, u] = (0, r.useStateFromStoresArray)([E.default], () => [E.default.isSelfMute(t) || E.default.isSelfMutedTemporarily(t), E.default.isSelfDeaf(t)]), [c, f, h] = (0, r.useStateFromStoresArray)([O.default], () => [O.default.getConnectionState(n), O.default.getLastPing(n), O.default.getQuality(n)]);
   return (0, i.jsx)(w, {
     ...l,
     context: t,

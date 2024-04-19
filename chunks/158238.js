@@ -1,10 +1,10 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   QuietModeExperiment: function() {
-    return n
+    return a
   }
 });
-let n = (0, a("818083").createExperiment)({
+let a = (0, n("818083").createExperiment)({
   kind: "user",
   id: "2024-01_quiet_mode",
   label: "Quiet Mode (dnd-equivalent) Experiment ",

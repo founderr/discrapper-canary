@@ -1,23 +1,23 @@
 "use strict";
-s.r(t), s("47120");
-var n = s("735250"),
-  a = s("470079"),
-  l = s("990547"),
-  i = s("442837"),
-  r = s("481060"),
-  u = s("893776"),
-  o = s("232567"),
-  d = s("82554"),
-  c = s("726521"),
-  f = s("185625"),
-  E = s("314897"),
-  I = s("828695"),
-  _ = s("819570"),
-  h = s("63063"),
-  p = s("981631"),
-  T = s("689938"),
-  N = s("78019"),
-  g = s("794711");
+n.r(t), n("47120");
+var s = n("735250"),
+  a = n("470079"),
+  l = n("990547"),
+  i = n("442837"),
+  r = n("481060"),
+  u = n("893776"),
+  o = n("232567"),
+  d = n("82554"),
+  c = n("726521"),
+  f = n("185625"),
+  E = n("314897"),
+  _ = n("828695"),
+  I = n("819570"),
+  p = n("63063"),
+  h = n("981631"),
+  T = n("689938"),
+  N = n("78019"),
+  g = n("794711");
 i.default.initialize();
 let m = e => {
   let {
@@ -27,8 +27,8 @@ let m = e => {
     (0, r.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([s.e("99387"), s.e("93288")]).then(s.bind(s, "396410"));
-      return t => (0, n.jsx)(e, {
+      } = await Promise.all([n.e("99387"), n.e("93288")]).then(n.bind(n, "396410"));
+      return t => (0, s.jsx)(e, {
         ...t,
         onSuccess: u,
         headerText: T.default.Messages.ENTER_EMAIL,
@@ -47,9 +47,9 @@ let m = e => {
     t(), (0, r.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([s.e("99387"), s.e("94566")]).then(s.bind(s, "965072"));
-      return s => (0, n.jsx)(e, {
-        ...s,
+      } = await Promise.all([n.e("99387"), n.e("94566")]).then(n.bind(n, "965072"));
+      return n => (0, s.jsx)(e, {
+        ...n,
         onFormSubmit: i,
         onResend: t,
         onSuccess: u,
@@ -60,9 +60,9 @@ let m = e => {
       })
     })
   };
-  return (0, n.jsx)("div", {
+  return (0, s.jsx)("div", {
     className: N.buttonColumn,
-    children: (0, n.jsx)(r.Button, {
+    children: (0, s.jsx)(r.Button, {
       className: g.__invalid_reportButton,
       fullWidth: !0,
       color: r.Button.Colors.BRAND_NEW,
@@ -73,7 +73,7 @@ let m = e => {
   })
 };
 t.default = () => {
-  let [e, t] = a.useState(!0), [s, l] = a.useState(!1), c = (0, i.useStateFromStores)([E.default], () => E.default.isAuthenticated()), A = (0, i.useStateFromStores)([I.default], () => I.default.hasLoadedExperiments), S = () => {
+  let [e, t] = a.useState(!0), [n, l] = a.useState(!1), c = (0, i.useStateFromStores)([E.default], () => E.default.isAuthenticated()), A = (0, i.useStateFromStores)([_.default], () => _.default.hasLoadedExperiments), S = () => {
     (0, f.getDsaExperiment)().then(() => {
       t(!1), l(!0)
     }).catch(() => {
@@ -88,23 +88,23 @@ t.default = () => {
     (async () => {
       !A && (await u.default.getLocationMetadata(), u.default.getExperiments())
     })()
-  }, [A]), e || !A ? (0, n.jsx)(_.default, {
-    children: (0, n.jsx)(r.Spinner, {})
-  }) : s && (0, n.jsxs)(_.default, {
-    children: [(0, n.jsx)(_.Title, {
+  }, [A]), e || !A ? (0, s.jsx)(I.default, {
+    children: (0, s.jsx)(r.Spinner, {})
+  }) : n && (0, s.jsxs)(I.default, {
+    children: [(0, s.jsx)(I.Title, {
       className: g.marginBottom8,
       children: T.default.Messages.URF_LANDING_PAGE_TITLE
-    }), (0, n.jsx)(_.SubTitle, {
+    }), (0, s.jsx)(I.SubTitle, {
       className: g.marginBottom8,
       children: T.default.Messages.URF_LANDING_PAGE_SUBTITLE.format({
-        supportURL: h.default.getArticleURL(p.HelpdeskArticles.COPYRIGHT_AND_IP_POLICY)
+        supportURL: p.default.getArticleURL(h.HelpdeskArticles.COPYRIGHT_AND_IP_POLICY)
       })
-    }), (0, n.jsxs)("div", {
+    }), (0, s.jsxs)("div", {
       className: N.container,
-      children: [(0, n.jsx)(m, {
+      children: [(0, s.jsx)(m, {
         title: T.default.Messages.URF_LANDING_PAGE_REPORT_MESSAGE_BUTTON,
         menuType: d.UnauthenticatedReportNames.MESSAGE
-      }), (0, n.jsx)(m, {
+      }), (0, s.jsx)(m, {
         title: T.default.Messages.URF_LANDING_PAGE_REPORT_USER_PROFILE_BUTTON,
         menuType: d.UnauthenticatedReportNames.USER
       })]

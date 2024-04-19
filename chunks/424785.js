@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return Z
+    return z
   }
 }), n("47120"), n("411104");
 var l = n("735250");
@@ -31,8 +31,8 @@ var a = n("120356"),
   v = n("430824"),
   x = n("607744"),
   R = n("496675"),
-  y = n("306680"),
-  M = n("9156"),
+  M = n("306680"),
+  y = n("9156"),
   O = n("979651"),
   b = n("514342"),
   D = n("974029"),
@@ -275,7 +275,7 @@ class K extends P.default {
 }
 let W = (0, d.makeChannelSortable)((0, c.makeVoiceUserDroppable)(K));
 
-function Z(e) {
+function z(e) {
   let {
     guild: t,
     channel: n,
@@ -283,10 +283,10 @@ function Z(e) {
     isFavoriteCategory: s,
     collapsed: r,
     voiceStates: o
-  } = e, u = (0, i.useStateFromStoresObject)([y.default], () => ({
-    unread: y.default.hasUnread(n.id),
-    mentionCount: y.default.getMentionCount(n.id)
-  })), d = (0, i.useStateFromStores)([M.default], () => M.default.resolveUnreadSetting(n)), c = (0, i.useStateFromStoresObject)([L.default, x.default, R.default], () => {
+  } = e, u = (0, i.useStateFromStoresObject)([M.default], () => ({
+    unread: M.default.hasUnread(n.id),
+    mentionCount: M.default.getMentionCount(n.id)
+  })), d = (0, i.useStateFromStores)([y.default], () => y.default.resolveUnreadSetting(n)), c = (0, i.useStateFromStoresObject)([L.default, x.default, R.default], () => {
     let e = L.default.getChannel(n.parent_id),
       l = x.default.getCheck(n.guild_id);
     return {
@@ -300,7 +300,7 @@ function Z(e) {
   }), f = (0, i.useStateFromStores)([A.default], () => A.default.isCollapsed(n.parent_id)), h = (0, T.default)(n.id), p = (0, i.useStateFromStores)([I.default], () => I.default.getStageInstanceByChannel(n.id), [n.id]), C = (0, _.useStageParticipantsCount)(n.id, S.StageChannelParticipantNamedIndex.AUDIENCE), {
     isSubscriptionGated: g,
     needSubscriptionToAccess: E
-  } = (0, m.default)(n.id), v = (0, i.useStateFromStores)([M.default], () => M.default.isFavorite(t.id, n.id)), O = (0, N.getStageHasMedia)(n.id), b = (0, G.default)({
+  } = (0, m.default)(n.id), v = (0, i.useStateFromStores)([y.default], () => y.default.isFavorite(t.id, n.id)), O = (0, N.getStageHasMedia)(n.id), b = (0, G.default)({
     channel: n,
     isChannelSelected: !1,
     isChannelCollapsed: r,

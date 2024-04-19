@@ -1,24 +1,24 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   newClanProgress: function() {
     return _
   }
-}), a("47120");
-var n, s = a("153832"),
-  l = a("442837"),
-  i = a("570140"),
-  r = a("944163"),
-  o = a("227120"),
-  u = a("116175"),
-  d = a("308083");
+}), n("47120");
+var a, s = n("153832"),
+  l = n("442837"),
+  i = n("570140"),
+  r = n("944163"),
+  o = n("227120"),
+  u = n("116175"),
+  d = n("308083");
 
-function c(e, t, a) {
+function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: a,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = a, e
+  }) : e[t] = n, e
 }
 let f = {},
   E = !1,
@@ -53,18 +53,18 @@ function _() {
 }
 
 function C(e, t) {
-  let a = null != f[e] ? f[e] : _();
+  let n = null != f[e] ? f[e] : _();
   if (f[e] = {
-      ...a,
+      ...n,
       ...t
     }, null != h[e])
-    for (let a in t) delete h[e][a]
+    for (let n in t) delete h[e][n]
 }
-class m extends(n = l.default.PersistedStore) {
+class m extends(a = l.default.PersistedStore) {
   initialize(e) {
     if (null != e)
       for (let t in e.progressByGuild) f[t] = function(e) {
-        var t, a, n, l, i, o, c;
+        var t, n, a, l, i, o, c;
         let f = e.primetime.map(e => {
           var t;
           return {
@@ -83,8 +83,8 @@ class m extends(n = l.default.PersistedStore) {
           verificationForm: null !== (t = e.verificationForm) && void 0 !== t ? t : {
             ...r.NO_MEMBER_VERIFICATION_FORM
           },
-          badgeKind: null !== (a = e.badgeKind) && void 0 !== a ? a : u.ClanBadgeKind.SWORD,
-          badgePrimaryColor: null !== (n = e.badgePrimaryColor) && void 0 !== n ? n : u.CLAN_BADGE_PALETTE_PRESETS["0"].primary,
+          badgeKind: null !== (n = e.badgeKind) && void 0 !== n ? n : u.ClanBadgeKind.SWORD,
+          badgePrimaryColor: null !== (a = e.badgePrimaryColor) && void 0 !== a ? a : u.CLAN_BADGE_PALETTE_PRESETS["0"].primary,
           badgeSecondaryColor: null !== (l = e.badgeSecondaryColor) && void 0 !== l ? l : u.CLAN_BADGE_PALETTE_PRESETS["0"].secondary,
           banner: null !== (i = e.banner) && void 0 !== i ? i : d.ClanBannerKind.PIXEL_RUSH,
           brandPrimaryColor: null !== (o = e.brandPrimaryColor) && void 0 !== o ? o : d.CLAN_BRAND_PALETTE_PRESETS["0"].primary,
@@ -98,10 +98,10 @@ class m extends(n = l.default.PersistedStore) {
   }
   getState() {
     let e = {};
-    for (let a in f) {
+    for (let n in f) {
       var t;
-      e[a] = {
-        gameApplicationIds: Array.from((t = f[a]).gameApplicationIds),
+      e[n] = {
+        gameApplicationIds: Array.from((t = f[n]).gameApplicationIds),
         playstyle: t.playstyle,
         interests: Array.from(t.interests),
         description: t.description,
@@ -137,9 +137,9 @@ c(m, "displayName", "ClanSetupStore"), c(m, "persistKey", "ClanSetupStore"), t.d
   CLAN_SETUP_UPDATE: function(e) {
     let {
       guildId: t,
-      updates: a
+      updates: n
     } = e;
-    C(t, a)
+    C(t, n)
   },
   CLAN_SETUP_SUBMIT: function(e) {
     let {
@@ -156,29 +156,29 @@ c(m, "displayName", "ClanSetupStore"), c(m, "persistKey", "ClanSetupStore"), t.d
   CLAN_SETUP_ERROR: function(e) {
     let {
       guildId: t,
-      error: a
+      error: n
     } = e;
     E = !1, h[t] = {
-      gameApplicationIds: a.getFirstFieldErrorMessage("game_application_ids"),
-      playstyle: a.getFirstFieldErrorMessage("play_style"),
-      description: a.getFirstFieldErrorMessage("description"),
-      wildcardDescriptors: a.getFirstFieldErrorMessage("wildcard_descriptors"),
-      interests: a.getFirstFieldErrorMessage("search_terms"),
-      tag: a.getFirstFieldErrorMessage("tag"),
-      primetime: a.getFirstFieldErrorMessage("prime_time")
+      gameApplicationIds: n.getFirstFieldErrorMessage("game_application_ids"),
+      playstyle: n.getFirstFieldErrorMessage("play_style"),
+      description: n.getFirstFieldErrorMessage("description"),
+      wildcardDescriptors: n.getFirstFieldErrorMessage("wildcard_descriptors"),
+      interests: n.getFirstFieldErrorMessage("search_terms"),
+      tag: n.getFirstFieldErrorMessage("tag"),
+      primetime: n.getFirstFieldErrorMessage("prime_time")
     }
   },
   MEMBER_VERIFICATION_FORM_UPDATE: function(e) {
     let t;
     let {
-      form: a,
-      guildId: n,
+      form: n,
+      guildId: a,
       isLocalUpdate: s
     } = e;
-    s && (t = null == a ? r.NO_MEMBER_VERIFICATION_FORM : {
-      ...(null != f[n] ? f[n] : _()).verificationForm,
-      ...a
-    }, C(n, {
+    s && (t = null == n ? r.NO_MEMBER_VERIFICATION_FORM : {
+      ...(null != f[a] ? f[a] : _()).verificationForm,
+      ...n
+    }, C(a, {
       verificationForm: t
     }))
   }

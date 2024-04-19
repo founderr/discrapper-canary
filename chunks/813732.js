@@ -16,8 +16,8 @@ var a = s("735250"),
   m = s("167354"),
   _ = s("15640"),
   g = s("406174"),
-  I = s("810762"),
-  h = s("681833"),
+  h = s("810762"),
+  I = s("681833"),
   N = s("856888"),
   p = s("246946"),
   C = s("663389"),
@@ -56,7 +56,7 @@ function k() {
   })
 }
 
-function w() {
+function H() {
   let e = (0, r.useStateFromStores)([R.default], () => R.default.getForApplication(U.PREMIUM_SUBSCRIPTION_APPLICATION));
   return n.useEffect(() => {
     (0, S.fetchUserEntitlementsForApplication)(U.PREMIUM_SUBSCRIPTION_APPLICATION)
@@ -90,7 +90,7 @@ t.default = function() {
     (0, E.fetchPremiumSubscriptionPlans)(), u.fetchSubscriptions(), (0, c.fetchGuildBoostSlots)(), u.fetchPaymentSources()
   }), function() {
     T.default.clearSubsection()
-  }), []), p.default.enabled) ? (0, a.jsx)(f.default, {}) : S && M ? v === B.ROLE_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(I.default, {
+  }), []), p.default.enabled) ? (0, a.jsx)(f.default, {}) : S && M ? v === B.ROLE_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(h.default, {
     onGoBack: () => T.default.clearSubsection()
   }) : v === B.APPLICATION_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(N.default, {
     onGoBack: () => T.default.clearSubsection()
@@ -108,11 +108,11 @@ t.default = function() {
         className: F.subscriptionDetails
       }), (0, a.jsx)(g.default, {
         onClickManageSubscription: () => T.default.setSection(y.UserSettingsSections.SUBSCRIPTIONS, B.ROLE_SUBSCRIPTION_SUBSECTION)
-      }), (0, a.jsx)(h.default, {
+      }), (0, a.jsx)(I.default, {
         onClickManageSubscription: () => {
           T.default.setSection(y.UserSettingsSections.SUBSCRIPTIONS, B.APPLICATION_SUBSCRIPTION_SUBSECTION), D.default.track(y.AnalyticEvents.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED)
         }
-      }), (0, a.jsx)(w, {}), null != e ? (0, a.jsx)(j.default, {
+      }), (0, a.jsx)(H, {}), null != e ? (0, a.jsx)(j.default, {
         subscription: e,
         withOverheadSeparator: !1
       }) : null]

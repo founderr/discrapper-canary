@@ -1,64 +1,64 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return g
   }
-}), a("47120");
-var n = a("735250"),
-  s = a("470079"),
-  l = a("120356"),
-  i = a.n(l),
-  r = a("481060"),
-  o = a("570140"),
-  u = a("150063"),
-  d = a("274616"),
-  c = a("827837"),
-  f = a("410575"),
-  E = a("3570"),
-  h = a("237919"),
-  _ = a("957657"),
-  C = a("665307"),
-  m = a("530151"),
-  S = a("981631"),
-  I = a("186901"),
-  p = a("872592");
+}), n("47120");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("120356"),
+  i = n.n(l),
+  r = n("481060"),
+  o = n("570140"),
+  u = n("150063"),
+  d = n("274616"),
+  c = n("827837"),
+  f = n("410575"),
+  E = n("3570"),
+  h = n("237919"),
+  _ = n("957657"),
+  C = n("665307"),
+  m = n("530151"),
+  S = n("981631"),
+  I = n("186901"),
+  p = n("872592");
 
-function T(e, t, a) {
+function T(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: a,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = a, e
+  }) : e[t] = n, e
 }
 class g extends s.PureComponent {
   componentDidMount() {
     u.setHomeLink(S.Routes.APPLICATION_LIBRARY), (0, E.deepLinkRouteIfLanded)(I.RPCDeepLinks.LIBRARY), o.default.wait(() => (0, d.fetchBranches)()), (0, c.fetchActivityStatistics)(), null != this._scrollToOnMount && null != this._scrollerRef.current && this.scrollToRow(this._scrollToOnMount, this._scrollToPadding)
   }
   renderToolbar() {
-    return (0, n.jsx)(h.default, {})
+    return (0, a.jsx)(h.default, {})
   }
   render() {
     let {
       includeUpdatesInScroller: e
-    } = this.state, t = (0, n.jsx)("div", {
-      children: (0, n.jsx)(f.default, {
+    } = this.state, t = (0, a.jsx)("div", {
+      children: (0, a.jsx)(f.default, {
         section: S.AnalyticsSections.LIBRARY_INSTALL_MODULE,
-        children: (0, n.jsx)(m.default, {
+        children: (0, a.jsx)(m.default, {
           onHeightTallerThanHalfViewportChange: this.handleHeightTallerThanHalfViewportChange
         })
       })
     });
-    return (0, n.jsxs)(s.Fragment, {
-      children: [(0, n.jsx)(_.default, {
+    return (0, a.jsxs)(s.Fragment, {
+      children: [(0, a.jsx)(_.default, {
         currentRoute: S.Routes.APPLICATION_LIBRARY,
         renderToolbar: this.renderToolbar
-      }), e ? null : t, (0, n.jsxs)(r.AdvancedScrollerAuto, {
+      }), e ? null : t, (0, a.jsxs)(r.AdvancedScrollerAuto, {
         className: i()(p.container, p.scroller),
         ref: this._scrollerRef,
-        children: [e ? t : null, (0, n.jsx)(f.default, {
+        children: [e ? t : null, (0, a.jsx)(f.default, {
           section: S.AnalyticsSections.LIBRARY_APPLICATION_LIST,
-          children: (0, n.jsx)(C.default, {
+          children: (0, a.jsx)(C.default, {
             stickyHeader: !e,
             scrollToRow: this.scrollToRow
           })
@@ -74,8 +74,8 @@ class g extends s.PureComponent {
         includeUpdatesInScroller: e
       })
     }), T(this, "scrollToRow", (e, t) => {
-      let a = this._scrollerRef.current;
-      null != a ? (e.focus(), a.scrollIntoViewRect({
+      let n = this._scrollerRef.current;
+      null != n ? (e.focus(), n.scrollIntoViewRect({
         start: t,
         end: t
       }), this._scrollToOnMount = null) : (this._scrollToOnMount = e, this._scrollToPadding = t)

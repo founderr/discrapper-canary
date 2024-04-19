@@ -1,12 +1,12 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   useHubStudyGroupExperiment: function() {
     return r
   }
 });
-var n = a("470079"),
-  s = a("818083"),
-  l = a("981631");
+var a = n("470079"),
+  s = n("818083"),
+  l = n("981631");
 let i = (0, s.createExperiment)({
     kind: "guild",
     id: "2021-10_study_group",
@@ -24,7 +24,7 @@ let i = (0, s.createExperiment)({
   }),
   r = e => {
     var t;
-    return n.useEffect(() => {
+    return a.useEffect(() => {
       null != e && e.hasFeature(l.GuildFeatures.HUB) && i.trackExposure({
         guildId: e.id,
         location: "467c32_1"

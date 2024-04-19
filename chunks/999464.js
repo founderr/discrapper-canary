@@ -1,83 +1,83 @@
 "use strict";
-t.r(s), t("47120");
-var a = t("735250"),
-  l = t("470079"),
-  n = t("120356"),
-  i = t.n(n),
-  o = t("481060"),
-  r = t("231239"),
-  d = t("881052"),
-  c = t("153124"),
-  u = t("888592"),
-  N = t("981631"),
-  m = t("689938"),
-  _ = t("670809");
-let E = (0, c.uid)();
-s.default = e => {
+s.r(t), s("47120");
+var a = s("735250"),
+  n = s("470079"),
+  l = s("120356"),
+  i = s.n(l),
+  r = s("481060"),
+  o = s("231239"),
+  c = s("881052"),
+  d = s("153124"),
+  u = s("888592"),
+  _ = s("981631"),
+  N = s("689938"),
+  E = s("670809");
+let m = (0, d.uid)();
+t.default = e => {
   let {
-    email: s,
-    setStep: t,
-    onBack: n,
-    school: c,
+    email: t,
+    setStep: s,
+    onBack: l,
+    school: d,
     setSchool: I
-  } = e, [C, x] = l.useState(null), [f, h] = l.useState(!1), T = async () => {
-    x(null), h(!0);
+  } = e, [f, C] = n.useState(null), [T, S] = n.useState(!1), g = async () => {
+    C(null), S(!0);
     try {
-      await r.default.signup(s, c), t(u.HubEmailConnectionSteps.EMAIL_WAITLIST)
+      await o.default.signup(t, d), s(u.HubEmailConnectionSteps.EMAIL_WAITLIST)
     } catch (e) {
-      x(new d.APIError(e))
+      C(new c.APIError(e))
     } finally {
-      h(!1)
+      S(!1)
     }
-  }, g = async e => {
-    null != c && "" !== c && e.charCode === N.KeyboardKeys.ENTER && await T()
+  }, h = async e => {
+    null != d && "" !== d && e.charCode === _.KeyboardKeys.ENTER && await g()
   };
   return (0, a.jsxs)("div", {
-    className: _.container,
+    className: E.container,
     children: [(0, a.jsx)("div", {
-      className: _.__invalid_topImage
-    }), (0, a.jsx)(o.Heading, {
-      className: i()(_.centerText, _.header),
+      className: E.__invalid_topImage
+    }), (0, a.jsx)(r.Heading, {
+      className: i()(E.centerText, E.header),
       variant: "heading-xl/semibold",
-      children: m.default.Messages.HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_HEADER
+      children: N.default.Messages.HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_HEADER
     }), (0, a.jsx)("div", {
-      className: _.descriptionWidth,
-      children: (0, a.jsx)(o.Text, {
-        className: _.centerText,
+      className: E.descriptionWidth,
+      children: (0, a.jsx)(r.Text, {
+        className: E.centerText,
         variant: "text-sm/normal",
         color: "header-secondary",
-        children: m.default.Messages.HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_DESCRIPTION
+        children: N.default.Messages.HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_DESCRIPTION
       })
-    }), (0, a.jsxs)(o.FormItem, {
-      className: _.formItem,
-      children: [(0, a.jsx)(o.FormTitle, {
-        id: E,
-        children: m.default.Messages.HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_INPUT_HEADER
-      }), (0, a.jsx)(o.TextInput, {
-        onKeyPress: g,
-        placeholder: m.default.Messages.HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_INPUT_PLACEHOLDER,
+    }), (0, a.jsxs)(r.FormItem, {
+      className: E.formItem,
+      children: [(0, a.jsx)(r.FormTitle, {
+        id: m,
+        children: N.default.Messages.HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_INPUT_HEADER
+      }), (0, a.jsx)(r.TextInput, {
+        onKeyPress: h,
+        placeholder: N.default.Messages.HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_INPUT_PLACEHOLDER,
         onChange: e => {
           I(e)
         },
-        error: null == C ? void 0 : C.getAnyErrorMessage(),
-        "aria-labelledby": E
+        error: null == f ? void 0 : f.getAnyErrorMessage(),
+        "aria-labelledby": m
       })]
     }), (0, a.jsxs)("div", {
-      className: _.footer,
-      children: [(0, a.jsx)(o.Button, {
-        className: _.backButton,
-        onClick: n,
-        look: o.Button.Looks.LINK,
-        size: o.Button.Sizes.NONE,
-        color: o.Button.Colors.PRIMARY,
-        children: m.default.Messages.BACK
-      }), (0, a.jsx)(o.Button, {
-        onClick: T,
-        size: o.Button.Sizes.MEDIUM,
-        color: o.Button.Colors.BRAND,
-        className: _.__invalid_submitButton,
-        submitting: f,
-        children: m.default.Messages.JOIN_WAITLIST
+      className: E.footer,
+      children: [(0, a.jsx)(r.Button, {
+        className: E.backButton,
+        onClick: l,
+        look: r.Button.Looks.LINK,
+        size: r.Button.Sizes.NONE,
+        color: r.Button.Colors.PRIMARY,
+        children: N.default.Messages.BACK
+      }), (0, a.jsx)(r.Button, {
+        onClick: g,
+        size: r.Button.Sizes.MEDIUM,
+        color: r.Button.Colors.BRAND,
+        className: E.__invalid_submitButton,
+        submitting: T,
+        children: N.default.Messages.JOIN_WAITLIST
       })]
     })]
   })

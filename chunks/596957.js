@@ -1,38 +1,38 @@
 "use strict";
-a.r(t), a("47120");
-var n = a("735250"),
-  s = a("470079"),
-  l = a("120356"),
-  i = a.n(l),
-  r = a("442837"),
-  o = a("481060"),
-  u = a("758059"),
-  d = a("194359"),
-  c = a("410575"),
-  f = a("607070"),
-  E = a("100527"),
-  h = a("906732"),
-  _ = a("205976"),
-  C = a("699516"),
-  m = a("974042"),
-  S = a("451478"),
-  I = a("6048"),
-  p = a("390697"),
-  T = a("434184"),
-  g = a("701861"),
-  A = a("437314"),
-  N = a("696577"),
-  v = a("163417"),
-  R = a("492347"),
-  O = a("42575"),
-  L = a("617015"),
-  P = a("981631"),
-  M = a("689938"),
-  x = a("488324");
+n.r(t), n("47120");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("120356"),
+  i = n.n(l),
+  r = n("442837"),
+  o = n("481060"),
+  u = n("758059"),
+  d = n("194359"),
+  c = n("410575"),
+  f = n("607070"),
+  E = n("100527"),
+  h = n("906732"),
+  _ = n("205976"),
+  C = n("699516"),
+  m = n("974042"),
+  S = n("451478"),
+  I = n("6048"),
+  p = n("390697"),
+  T = n("434184"),
+  g = n("701861"),
+  A = n("437314"),
+  N = n("696577"),
+  v = n("163417"),
+  R = n("492347"),
+  O = n("42575"),
+  L = n("617015"),
+  M = n("981631"),
+  P = n("689938"),
+  x = n("488324");
 t.default = function(e) {
   let {
     sectionFilter: t,
-    titleId: a
+    titleId: n
   } = e, {
     analyticsLocations: l
   } = (0, h.default)(E.default.FRIENDS_LIST), {
@@ -40,7 +40,7 @@ t.default = function(e) {
     section: D
   } = (0, r.useStateFromStoresObject)([m.default], () => m.default.getState()), b = (0, r.useStateFromStores)([S.default], () => S.default.isFocused()), U = (0, r.useStateFromStores)([C.default], () => C.default.getRelationshipCount()), j = (0, p.useIsClearIncomingFriendRequestsEnabled)(), [G, w] = s.useState(() => {
     let e = {};
-    for (let t of Object.values(P.FriendsSections)) e[t] = "";
+    for (let t of Object.values(M.FriendsSections)) e[t] = "";
     return e
   }), k = s.useCallback(e => {
     w({
@@ -53,57 +53,57 @@ t.default = function(e) {
       [t]: ""
     })
   }, [G, t]), B = y.filter(t, G[t]);
-  if (0 === B.length && "" === G[t]) return (0, n.jsxs)("div", {
+  if (0 === B.length && "" === G[t]) return (0, a.jsxs)("div", {
     className: x.emptyStateContainer,
-    children: [t === P.FriendsSections.ONLINE && (0, n.jsx)(_.default, {}), (0, n.jsx)(A.default, {
+    children: [t === M.FriendsSections.ONLINE && (0, a.jsx)(_.default, {}), (0, a.jsx)(A.default, {
       type: t,
       onClick: () => {
-        u.default.setSection(P.FriendsSections.ADD_FRIEND)
+        u.default.setSection(M.FriendsSections.ADD_FRIEND)
       }
     }, D)]
   });
   let H = 0 === B.length && "" !== G[t],
-    V = B.filter(e => e.type === P.RelationshipTypes.PENDING_INCOMING).length,
-    Y = t === P.FriendsSections.PENDING && V > 0 && j && V >= L.MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
-  return (0, n.jsx)(h.AnalyticsLocationProvider, {
+    V = B.filter(e => e.type === M.RelationshipTypes.PENDING_INCOMING).length,
+    Y = t === M.FriendsSections.PENDING && V > 0 && j && V >= L.MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
+  return (0, a.jsx)(h.AnalyticsLocationProvider, {
     value: l,
-    children: (0, n.jsxs)(c.default, {
-      section: P.AnalyticsSections.FRIENDS_LIST,
-      children: [(0, n.jsx)(I.default, {
+    children: (0, a.jsxs)(c.default, {
+      section: M.AnalyticsSections.FRIENDS_LIST,
+      children: [(0, a.jsx)(I.default, {
         className: i()(x.searchBar, H ? x.searchEmptyState : null),
         query: G[t],
         onChange: k,
         onClear: F,
         size: I.default.Sizes.MEDIUM
-      }), t === P.FriendsSections.ONLINE && "" === G[t] && (0, n.jsx)(_.default, {}), (0, n.jsxs)("div", {
+      }), t === M.FriendsSections.ONLINE && "" === G[t] && (0, a.jsx)(_.default, {}), (0, a.jsxs)("div", {
         className: x.sectionTitle,
-        children: [(0, n.jsx)(R.default, {
-          id: a,
+        children: [(0, a.jsx)(R.default, {
+          id: n,
           title: function(e, t) {
             switch (e) {
-              case P.FriendsSections.ONLINE:
-                return M.default.Messages.FRIENDS_ONLINE_HEADER.format({
+              case M.FriendsSections.ONLINE:
+                return P.default.Messages.FRIENDS_ONLINE_HEADER.format({
                   online: t.toString()
                 });
-              case P.FriendsSections.PENDING:
-                return M.default.Messages.FRIENDS_PENDING_HEADER.format({
+              case M.FriendsSections.PENDING:
+                return P.default.Messages.FRIENDS_PENDING_HEADER.format({
                   count: t.toString()
                 });
-              case P.FriendsSections.SUGGESTIONS:
-                return M.default.Messages.FRIENDS_FRIEND_SUGGESTIONS_HEADER.format({
+              case M.FriendsSections.SUGGESTIONS:
+                return P.default.Messages.FRIENDS_FRIEND_SUGGESTIONS_HEADER.format({
                   count: t.toString()
                 });
-              case P.FriendsSections.BLOCKED:
-                return M.default.Messages.FRIENDS_BLOCKED_HEADER.format({
+              case M.FriendsSections.BLOCKED:
+                return P.default.Messages.FRIENDS_BLOCKED_HEADER.format({
                   count: t.toString()
                 });
               default:
-                return M.default.Messages.FRIENDS_ALL_HEADER.format({
+                return P.default.Messages.FRIENDS_ALL_HEADER.format({
                   count: t.toString()
                 })
             }
           }(t, B.length)
-        }), Y && (0, n.jsx)(o.Button, {
+        }), Y && (0, a.jsx)(o.Button, {
           look: o.ButtonLooks.LINK,
           color: o.ButtonColors.LINK,
           className: x.clearButton,
@@ -111,38 +111,38 @@ t.default = function(e) {
           onClick: e => {
             e.stopPropagation(), d.default.confirmClearPendingRelationships(V)
           },
-          "aria-label": M.default.Messages.CLEAR_INCOMING_REQUESTS_BUTTON,
-          children: M.default.Messages.CLEAR_INCOMING_REQUESTS_BUTTON
+          "aria-label": P.default.Messages.CLEAR_INCOMING_REQUESTS_BUTTON,
+          children: P.default.Messages.CLEAR_INCOMING_REQUESTS_BUTTON
         })]
-      }), H ? (0, n.jsx)("div", {
+      }), H ? (0, a.jsx)("div", {
         className: x.emptyStateContainer,
-        children: (0, n.jsx)(A.default, {
+        children: (0, a.jsx)(A.default, {
           type: A.FriendsSearchStatus.SECTION_NO_RESULTS
         }, D)
-      }) : (0, n.jsx)(v.default, {
+      }) : (0, a.jsx)(v.default, {
         relationshipCount: U,
         statusSections: [B],
         renderRow: function(e) {
           switch (t) {
-            case P.FriendsSections.BLOCKED:
-              return (0, n.jsx)(T.default, {
+            case M.FriendsSections.BLOCKED:
+              return (0, a.jsx)(T.default, {
                 ...e,
                 isFocused: b
               });
-            case P.FriendsSections.PENDING:
-              return (0, n.jsx)(N.default, {
+            case M.FriendsSections.PENDING:
+              return (0, a.jsx)(N.default, {
                 ...e,
                 isFocused: b
               });
-            case P.FriendsSections.SUGGESTIONS:
-              return (0, n.jsx)(O.default, {
+            case M.FriendsSections.SUGGESTIONS:
+              return (0, a.jsx)(O.default, {
                 ...e,
                 isFocused: b
               });
-            case P.FriendsSections.ONLINE:
-            case P.FriendsSections.ALL:
+            case M.FriendsSections.ONLINE:
+            case M.FriendsSections.ALL:
             default:
-              return (0, n.jsx)(g.default, {
+              return (0, a.jsx)(g.default, {
                 ...e,
                 isFocused: b
               })

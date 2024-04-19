@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("957730"),
   _ = s("962746"),
   g = s("296810"),
-  I = s("935147"),
-  h = s("350327"),
+  h = s("935147"),
+  I = s("350327"),
   N = s("246946"),
   p = s("25990"),
   C = s("594174"),
@@ -67,7 +67,7 @@ function M() {
       canUsePremiumCustomization: y,
       onUpsellClick: x.default,
       onAvatarChange: u.setPendingAvatar,
-      onBannerChange: h.setPendingBanner,
+      onBannerChange: I.setPendingBanner,
       pendingBanner: l,
       pendingBio: U,
       pendingPronouns: v,
@@ -94,7 +94,7 @@ function M() {
           pendingAccentColor: L
         }),
         children: (0, a.jsx)(R.default, {})
-      }), !A.default.canUsePremiumProfileCustomization(e) && (0, a.jsx)(I.default, {
+      }), !A.default.canUsePremiumProfileCustomization(e) && (0, a.jsx)(h.default, {
         user: e
       })]
     })

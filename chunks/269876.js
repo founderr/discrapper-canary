@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("689938"),
   _ = s("190103"),
   g = s("605094"),
-  I = s("794711");
-let h = (0, T.uid)();
+  h = s("794711");
+let I = (0, T.uid)();
 
 function N() {
   let [e, t] = n.useState(-100), [s, l] = n.useState(!1), {
@@ -67,7 +67,7 @@ function N() {
       fillStyles: {
         background: u.default.unsafe_rawColors.YELLOW_300.css
       },
-      "aria-labelledby": h,
+      "aria-labelledby": I,
       children: (0, a.jsxs)("div", {
         className: i()(_.sliderBar, _.microphone, _.inputSensitivityBar),
         children: [(0, a.jsx)("div", {
@@ -92,23 +92,23 @@ function N() {
       })
     }), (0, a.jsx)(c.FormText, {
       type: c.FormText.Types.DESCRIPTION,
-      className: I.marginBottom8,
+      className: h.marginBottom8,
       children: m.default.Messages.FORM_HELP_AUTOMATIC_VAD
     })]
   })), (0, a.jsxs)(c.FormItem, {
     className: _.sensitivity,
     children: [(0, a.jsx)(c.FormTitle, {
-      id: h,
+      id: I,
       tag: c.FormTitleTags.H5,
-      className: I.marginBottom8,
+      className: h.marginBottom8,
       children: m.default.Messages.FORM_LABEL_INPUT_SENSITIVTY
     }), (0, a.jsxs)("div", {
       children: [A && (0, a.jsx)(T.UID, {
         children: e => (0, a.jsxs)("div", {
-          className: i()(g.horizontal, I.marginBottom4),
+          className: i()(g.horizontal, h.marginBottom4),
           children: [(0, a.jsx)(c.FormTitle, {
             tag: c.FormTitleTags.H3,
-            className: I.marginReset,
+            className: h.marginReset,
             children: (0, a.jsx)("label", {
               htmlFor: e,
               children: m.default.Messages.FORM_LABEL_AUTOMATIC_VAD
@@ -122,7 +122,7 @@ function N() {
       }), M]
     }), !O && (0, a.jsx)(c.FormText, {
       type: c.FormText.Types.DESCRIPTION,
-      className: i()(_.inputDisabledWarning, I.marginBottom8),
+      className: i()(_.inputDisabledWarning, h.marginBottom8),
       children: m.default.Messages.FORM_WARNING_INPUT_SENSITIVTY.format({
         onEnableClick: S.default.enable
       })

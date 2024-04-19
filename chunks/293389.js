@@ -16,8 +16,8 @@ var a = s("735250"),
   m = s("186095"),
   _ = s("797717"),
   g = s("546591"),
-  I = s("794358"),
-  h = s("880008"),
+  h = s("794358"),
+  I = s("880008"),
   N = s("795295"),
   p = s("169278"),
   C = s("931003"),
@@ -105,7 +105,7 @@ function F(e) {
     u.default.toggleDetection(m)
   }
 
-  function w() {
+  function H() {
     if (x) return;
     let e = null != m.id ? T.default.getDetectableGame(m.id) : null;
     O.default.track(v.AnalyticEvents.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
@@ -174,7 +174,7 @@ function F(e) {
           return (0, a.jsx)(d.Clickable, {
             "aria-label": D.default.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION,
             className: L.toggleIcon,
-            onClick: w,
+            onClick: H,
             onMouseEnter: t,
             onMouseLeave: s,
             children: (0, a.jsx)(N.default, {
@@ -189,12 +189,12 @@ function F(e) {
     }), function() {
       let {
         detectable: e
-      } = m, t = e ? (0, a.jsx)(I.default, {
+      } = m, t = e ? (0, a.jsx)(h.default, {
         className: L.toggleIconOn,
         foreground: L.fill,
         width: 24,
         height: 24
-      }) : (0, a.jsx)(h.default, {
+      }) : (0, a.jsx)(I.default, {
         className: L.toggleIconOff,
         background: L.fill,
         foreground: L.fill,
@@ -285,7 +285,7 @@ function k() {
   })
 }
 
-function w(e) {
+function H(e) {
   let {
     children: t
   } = e;
@@ -299,7 +299,7 @@ function w(e) {
     }), t]
   })
 }
-let H = (0, x.cachedFunction)(function() {
+let w = (0, x.cachedFunction)(function() {
   for (var e = arguments.length, t = Array(e), s = 0; s < e; s++) t[s] = arguments[s];
   return new Set(t.map(e => e.exePath))
 });
@@ -310,7 +310,7 @@ t.default = function() {
       overrideExePaths: s
     } = (0, r.useStateFromStoresObject)([S.default], () => ({
       runningGame: S.default.getVisibleGame(),
-      overrideExePaths: H(...S.default.getOverrides())
+      overrideExePaths: w(...S.default.getOverrides())
     }));
   return n.useEffect(() => ((0, E.watchCandidateGames)(), E.stopWatchingCandidateGames), []), (0, a.jsxs)(d.FormSection, {
     tag: "h1",
@@ -342,7 +342,7 @@ t.default = function() {
           children: D.default.Messages.SETTINGS_GAMES_ADD_GAME
         })
       })]
-    }), 0 === e.length ? (0, a.jsx)(w, {
+    }), 0 === e.length ? (0, a.jsx)(H, {
       children: (0, a.jsx)(m.EmptyStateText, {
         children: D.default.Messages.SETTINGS_GAMES_NO_GAMES_HEADER
       })

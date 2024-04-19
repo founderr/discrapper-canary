@@ -17,9 +17,9 @@ var i = n("735250"),
   E = n("906037"),
   S = n("430036"),
   v = n("839434"),
-  T = n("981631");
+  y = n("981631");
 
-function y(e, t, n) {
+function O(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -27,8 +27,8 @@ function y(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let I = {
-  [T.OverlayWidgets.TEXT](e) {
+let T = {
+  [y.OverlayWidgets.TEXT](e) {
     let {
       dragging: t,
       locked: n,
@@ -42,7 +42,7 @@ let I = {
       dragging: t
     })
   },
-  [T.OverlayWidgets.GUILDS](e) {
+  [y.OverlayWidgets.GUILDS](e) {
     let {
       locked: t,
       dragStart: n
@@ -52,7 +52,7 @@ let I = {
       locked: t
     })
   },
-  [T.OverlayWidgets.VOICE](e) {
+  [y.OverlayWidgets.VOICE](e) {
     let {
       id: t,
       anchor: n,
@@ -65,11 +65,11 @@ let I = {
       id: t,
       locked: l,
       pinned: s,
-      widget: T.OverlayWidgets.VOICE,
+      widget: y.OverlayWidgets.VOICE,
       isPreviewingInGame: a
     })
   },
-  [T.OverlayWidgets.GUILDS_TEXT](e) {
+  [y.OverlayWidgets.GUILDS_TEXT](e) {
     let {
       dragging: t,
       locked: n,
@@ -83,9 +83,9 @@ let I = {
     })
   }
 };
-class N extends a.PureComponent {
+class C extends a.PureComponent {
   componentDidUpdate(e) {
-    this.props.locked && !e.locked && null != this.state.lastLayoutUpdate && (o.default.track(T.AnalyticEvents.OVERLAY_LAYOUT_UPDATED, this.state.lastLayoutUpdate), this.setState({
+    this.props.locked && !e.locked && null != this.state.lastLayoutUpdate && (o.default.track(y.AnalyticEvents.OVERLAY_LAYOUT_UPDATED, this.state.lastLayoutUpdate), this.setState({
       lastLayoutUpdate: null
     }))
   }
@@ -98,7 +98,7 @@ class N extends a.PureComponent {
       state: {
         dragging: l
       }
-    } = this, s = I[e.type];
+    } = this, s = T[e.type];
     if (null == s) throw Error("OverlayLayout: Widget does not exist in WidgetMap");
     return o => s({
       id: e.id,
@@ -131,12 +131,12 @@ class N extends a.PureComponent {
       minSize: m,
       resizeX: S,
       resizeY: v,
-      dragAnywhere: T
-    } = t, y = (0, E.isWidgetContainerVisible)({
+      dragAnywhere: y
+    } = t, O = (0, E.isWidgetContainerVisible)({
       locked: a,
       isPreviewingInGame: l,
       pinned: r
-    }), I = {
+    }), T = {
       minX: 0,
       minY: 0,
       maxX: n.width,
@@ -146,15 +146,15 @@ class N extends a.PureComponent {
       id: o,
       size: p,
       anchor: g,
-      container: I,
+      container: T,
       minSize: m,
-      hidden: !y,
+      hidden: !O,
       resizeX: S,
       resizeY: v,
       style: {
         zIndex: d
       },
-      dragAnywhere: T,
+      dragAnywhere: y,
       active: !a || s,
       onUpdate: this.handleUpdate,
       onClick: this.handleFocus,
@@ -164,10 +164,10 @@ class N extends a.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), y(this, "state", {
+    super(...e), O(this, "state", {
       lastLayoutUpdate: null,
       dragging: !1
-    }), y(this, "handleUpdate", (e, t, n, i, a) => {
+    }), O(this, "handleUpdate", (e, t, n, i, a) => {
       let {
         props: {
           layoutSize: l
@@ -195,19 +195,19 @@ class N extends a.PureComponent {
           widget_top: g.top
         }
       })
-    }), y(this, "handleFocus", e => {
+    }), O(this, "handleFocus", e => {
       let {
         layoutSize: t
       } = this.props;
       (0, p.validResolution)(t) && (0, s.setTopWidget)(e)
-    }), y(this, "handleDragStart", () => {
+    }), O(this, "handleDragStart", () => {
       let {
         widget: e
       } = this.props;
       null != e && (e.pinned && o.default.setPreviewInGameMode(!0), this.setState({
         dragging: !0
       }))
-    }), y(this, "handleDragEnd", () => {
+    }), O(this, "handleDragEnd", () => {
       let {
         widget: e
       } = this.props;
@@ -217,7 +217,7 @@ class N extends a.PureComponent {
     })
   }
 }
-let O = l.default.connectStores([d.default, u.default], e => {
+let N = l.default.connectStores([d.default, u.default], e => {
   let {
     widgetId: t
   } = e, n = d.default.getWidget(t), i = u.default.getActiveRegions();
@@ -226,12 +226,12 @@ let O = l.default.connectStores([d.default, u.default], e => {
     widgetConfig: null != n ? d.default.getWidgetConfig(n.type) : null,
     locked: u.default.isInstanceUILocked(),
     isPreviewingInGame: u.default.isPreviewingInGame(),
-    isActiveRegion: null != n && n.type === T.OverlayWidgets.TEXT && i.has(T.OverlayActiveRegions.TEXT_WIDGET)
+    isActiveRegion: null != n && n.type === y.OverlayWidgets.TEXT && i.has(y.OverlayActiveRegions.TEXT_WIDGET)
   }
-})(N);
+})(C);
 
-function _(e, t) {
-  return (0, i.jsx)(O, {
+function I(e, t) {
+  return (0, i.jsx)(N, {
     widgetId: e,
     layoutSize: t
   }, e)
@@ -239,5 +239,5 @@ function _(e, t) {
 t.default = l.default.connectStores([d.default, c.default], () => ({
   layout: d.default.getLayout(p.OVERLAY_LAYOUT_ID),
   layoutSize: c.default.windowSize(),
-  renderWidget: _
+  renderWidget: I
 }))(r.default)

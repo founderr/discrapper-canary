@@ -17,8 +17,8 @@ var n = s("525654"),
 function c() {
   var e, t, s, n, c;
   let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-    E = "286113",
-    T = (e = "47810ade3b4ab6cf881db3fc5ef44ce637c8b040", e.substring(0, 7)),
+    E = "286199",
+    T = (e = "b62af297c0d41f3e626b0668abbd11d1c36dd40c", e.substring(0, 7)),
     f = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
     m = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
     _ = null === r.default || void 0 === r.default ? void 0 : null === (n = (c = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(c),
@@ -30,9 +30,9 @@ function c() {
         [a, n, i] = s.split(".").map(e => parseInt(e, 10));
       return t.includes("Windows 10") && void 0 !== i && i >= 22e3 && (t = t.replace("Windows 10", "Windows 11")), t.includes("OS X 10.15.7") && void 0 !== a && a >= 20 && (t = "macOS ".concat(a - 9)), "".concat(t, " (").concat(s, ")")
     }(),
-    I = [S, E, "(".concat(T, ")")];
-  return null != f && (I.push("Host ".concat(f)), null != _ && I.push(_.toLowerCase()), null != m && I.push("(".concat(m, ")"))), null != g && I.push(g), (0, a.jsx)(o.CopiableField, {
-    copyValue: I.join(" "),
+    h = [S, E, "(".concat(T, ")")];
+  return null != f && (h.push("Host ".concat(f)), null != _ && h.push(_.toLowerCase()), null != m && h.push("(".concat(m, ")"))), null != g && h.push(g), (0, a.jsx)(o.CopiableField, {
+    copyValue: h.join(" "),
     disableCopy: !1,
     copyTooltip: d.default.Messages.COPY_VERSION,
     showCopyIcon: !1,

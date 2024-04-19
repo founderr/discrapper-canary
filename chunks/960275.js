@@ -1,29 +1,29 @@
 "use strict";
-a.r(t), a("47120");
-var n = a("570140"),
-  s = a("317770"),
-  l = a("314897"),
-  i = a("57562"),
-  r = a("882029"),
-  o = a("955204"),
-  u = a("351780"),
-  d = a("843693");
+n.r(t), n("47120");
+var a = n("570140"),
+  s = n("317770"),
+  l = n("314897"),
+  i = n("57562"),
+  r = n("882029"),
+  o = n("955204"),
+  u = n("351780"),
+  d = n("843693");
 
-function c(e, t, a) {
+function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: a,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = a, e
+  }) : e[t] = n, e
 }
 let f = new Set;
 class E extends s.default {
   _initialize() {
-    n.default.subscribe("MESSAGE_CREATE", this.handleMessageCreate), n.default.subscribe("POGGERMODE_SETTINGS_UPDATE", this.handleSettingsUpdate)
+    a.default.subscribe("MESSAGE_CREATE", this.handleMessageCreate), a.default.subscribe("POGGERMODE_SETTINGS_UPDATE", this.handleSettingsUpdate)
   }
   _terminate() {
-    n.default.unsubscribe("MESSAGE_CREATE", this.handleMessageCreate), n.default.unsubscribe("POGGERMODE_SETTINGS_UPDATE", this.handleSettingsUpdate)
+    a.default.unsubscribe("MESSAGE_CREATE", this.handleMessageCreate), a.default.unsubscribe("POGGERMODE_SETTINGS_UPDATE", this.handleSettingsUpdate)
   }
   constructor(...e) {
     super(...e), c(this, "handleSettingsUpdate", e => {
@@ -34,17 +34,17 @@ class E extends s.default {
     }), c(this, "handleMessageCreate", e => {
       var t;
       let {
-        channelId: a,
+        channelId: n,
         message: {
-          author: n,
+          author: a,
           nonce: s,
           mentions: c
         }
       } = e;
       if (!u.default.isEnabled()) return !1;
       let E = l.default.getId();
-      if ((null == c ? void 0 : c.find(e => e.id === E)) != null ? (0, i.unlockAchievement)(o.PoggermodeAchievementId.PING_ME) : (null !== (t = null == c ? void 0 : c.length) && void 0 !== t ? t : 0) > 0 && (null == n ? void 0 : n.id) === E && (0, i.unlockAchievement)(o.PoggermodeAchievementId.PING_SOMEONE), !(0, d.shouldTrackMessage)(null == n ? void 0 : n.id, E, s, f)) return !1;
-      let h = d.default.getMostRecentMessageCombo(a),
+      if ((null == c ? void 0 : c.find(e => e.id === E)) != null ? (0, i.unlockAchievement)(o.PoggermodeAchievementId.PING_ME) : (null !== (t = null == c ? void 0 : c.length) && void 0 !== t ? t : 0) > 0 && (null == a ? void 0 : a.id) === E && (0, i.unlockAchievement)(o.PoggermodeAchievementId.PING_SOMEONE), !(0, d.shouldTrackMessage)(null == a ? void 0 : a.id, E, s, f)) return !1;
+      let h = d.default.getMostRecentMessageCombo(n),
         {
           combo: _
         } = null != h ? h : {};
@@ -52,8 +52,8 @@ class E extends s.default {
       Object.values(o.PoggermodeAchievementId).forEach(e => {
         if (null != r.default.getUnlocked(e)) return;
         let t = (0, o.getPoggermodeAchievementData)(e),
-          a = null == t ? void 0 : t.checkUnlock;
-        if (null != a) !1 !== a(_) && (0, i.unlockAchievement)(e)
+          n = null == t ? void 0 : t.checkUnlock;
+        if (null != n) !1 !== n(_) && (0, i.unlockAchievement)(e)
       })
     })
   }

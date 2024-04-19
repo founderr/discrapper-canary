@@ -1,32 +1,32 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   FriendsSearchStatus: function() {
-    return n
+    return a
   }
-}), a("411104"), a("47120");
-var n, s = a("735250"),
-  l = a("470079"),
-  i = a("748780"),
-  r = a("442837"),
-  o = a("481060"),
-  u = a("210887"),
-  d = a("186095"),
-  c = a("981631"),
-  f = a("689938"),
-  E = a("521063");
+}), n("411104"), n("47120");
+var a, s = n("735250"),
+  l = n("470079"),
+  i = n("748780"),
+  r = n("442837"),
+  o = n("481060"),
+  u = n("210887"),
+  d = n("186095"),
+  c = n("981631"),
+  f = n("689938"),
+  E = n("521063");
 
-function h(e, t, a) {
+function h(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: a,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = a, e
-}(n || (n = {})).SECTION_NO_RESULTS = "SECTION_NO_RESULTS";
+  }) : e[t] = n, e
+}(a || (a = {})).SECTION_NO_RESULTS = "SECTION_NO_RESULTS";
 let _ = Object.freeze({
     SECTION_ALL: {
-      lightSrc: a("900933"),
-      darkSrc: a("67764"),
+      lightSrc: n("900933"),
+      darkSrc: n("67764"),
       width: 376,
       height: 162,
       renderContent: e => (0, s.jsxs)(l.Fragment, {
@@ -40,8 +40,8 @@ let _ = Object.freeze({
       })
     },
     SECTION_ONLINE: {
-      lightSrc: a("55346"),
-      darkSrc: a("917847"),
+      lightSrc: n("55346"),
+      darkSrc: n("917847"),
       width: 421,
       height: 218,
       renderContent: () => (0, s.jsx)(d.default.Text, {
@@ -49,8 +49,8 @@ let _ = Object.freeze({
       })
     },
     SECTION_BLOCKED: {
-      lightSrc: a("459505"),
-      darkSrc: a("356634"),
+      lightSrc: n("459505"),
+      darkSrc: n("356634"),
       width: 433,
       height: 232,
       renderContent: () => (0, s.jsx)(d.default.Text, {
@@ -58,8 +58,8 @@ let _ = Object.freeze({
       })
     },
     SECTION_PENDING: {
-      lightSrc: a("979770"),
-      darkSrc: a("138715"),
+      lightSrc: n("979770"),
+      darkSrc: n("138715"),
       width: 415,
       height: 200,
       renderContent: () => (0, s.jsx)(d.default.Text, {
@@ -67,8 +67,8 @@ let _ = Object.freeze({
       })
     },
     SECTION_SUGGESTIONS: {
-      lightSrc: a("979770"),
-      darkSrc: a("138715"),
+      lightSrc: n("979770"),
+      darkSrc: n("138715"),
       width: 415,
       height: 200,
       renderContent: () => (0, s.jsx)(d.default.Text, {
@@ -76,8 +76,8 @@ let _ = Object.freeze({
       })
     },
     SECTION_NO_RESULTS: {
-      lightSrc: a("55346"),
-      darkSrc: a("917847"),
+      lightSrc: n("55346"),
+      darkSrc: n("917847"),
       width: 421,
       height: 218,
       renderContent: () => (0, s.jsx)(d.default.Text, {
@@ -88,17 +88,17 @@ let _ = Object.freeze({
   C = e => {
     let {
       theme: t
-    } = e, a = f.default.Messages.FRIENDS_EMPTY_STATE_ALL, n = _.SECTION_ALL;
+    } = e, n = f.default.Messages.FRIENDS_EMPTY_STATE_ALL, a = _.SECTION_ALL;
     return (0, s.jsx)(l.Fragment, {
       children: (0, s.jsxs)(d.default, {
         theme: t,
         children: [(0, s.jsx)(d.default.Image, {
-          width: n.width,
-          height: n.height,
-          lightSrc: n.lightSrc,
-          darkSrc: n.darkSrc
+          width: a.width,
+          height: a.height,
+          lightSrc: a.lightSrc,
+          darkSrc: a.darkSrc
         }), (0, s.jsx)(d.default.Text, {
-          note: a
+          note: n
         })]
       })
     })
@@ -108,8 +108,8 @@ class m extends l.PureComponent {
     let {
       type: e,
       onClick: t,
-      theme: a
-    } = this.props, n = {
+      theme: n
+    } = this.props, a = {
       opacity: this.state.opacity
     }, l = function(e) {
       switch (e) {
@@ -132,15 +132,15 @@ class m extends l.PureComponent {
     }(e);
     return e === c.FriendsSections.ADD_FRIEND ? (0, s.jsx)(i.default.div, {
       className: E.friendsEmpty,
-      style: n,
+      style: a,
       children: (0, s.jsx)(C, {
-        theme: a
+        theme: n
       })
     }) : (0, s.jsx)(i.default.div, {
       className: E.friendsEmpty,
-      style: n,
+      style: a,
       children: (0, s.jsxs)(d.default, {
-        theme: a,
+        theme: n,
         children: [(0, s.jsx)(d.default.Image, {
           width: l.width,
           height: l.height,

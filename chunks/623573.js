@@ -16,14 +16,14 @@ var a, n, i = s("735250"),
   c = s("481060"),
   p = s("570140"),
   m = s("355467"),
-  E = s("873115"),
-  f = s("976255"),
+  f = s("873115"),
+  E = s("976255"),
   _ = s("598"),
   I = s("409813"),
   S = s("3409"),
   N = s("351402"),
-  C = s("975060"),
-  P = s("505649"),
+  P = s("975060"),
+  C = s("505649"),
   h = s("66579"),
   T = s("285952"),
   A = s("358085"),
@@ -34,8 +34,8 @@ var a, n, i = s("735250"),
   g = s("738342"),
   x = s("228666"),
   D = s("296214"),
-  b = s("981631"),
-  U = s("689938"),
+  U = s("981631"),
+  b = s("689938"),
   v = s("255235"),
   B = s("605094");
 
@@ -50,10 +50,10 @@ function O(e, t, s) {
 let j = ["payment_type", "card_info", "billing_address"],
   G = ["payment_type", "sofort_info", "billing_address"],
   k = ["payment_type", "paypal", "billing_address"],
-  F = ["payment_type", "payment_request_info"],
-  w = ["payment_type", "billing_address"],
-  H = ["payment_type", "przelewy24_info", "billing_address"],
-  Y = ["payment_type", "billing_address"];
+  w = ["payment_type", "payment_request_info"],
+  F = ["payment_type", "billing_address"],
+  Y = ["payment_type", "przelewy24_info", "billing_address"],
+  H = ["payment_type", "billing_address"];
 
 function W(e) {
   return e.hasCardError() ? "card_info" : e.hasAddressError() ? "billing_address" : null
@@ -75,14 +75,14 @@ class V extends l.PureComponent {
     } : null
   }
   async componentDidMount() {
-    E.createClient();
+    f.createClient();
     let e = await (0, R.getStripe)();
     this.setState({
       stripe: e
     })
   }
   componentWillUnmount() {
-    p.default.wait(() => E.teardownClients()), (0, f.clearCardInfo)()
+    p.default.wait(() => f.teardownClients()), (0, E.clearCardInfo)()
   }
   get stepData() {
     let {
@@ -93,23 +93,23 @@ class V extends l.PureComponent {
   }
   getSteps(e) {
     switch (null != e ? e : this.state.type) {
-      case b.PaymentSourceTypes.PAYMENT_REQUEST:
-        return F;
-      case b.PaymentSourceTypes.PAYPAL:
-        return k;
-      case b.PaymentSourceTypes.SOFORT:
-        return G;
-      case b.PaymentSourceTypes.GIROPAY:
+      case U.PaymentSourceTypes.PAYMENT_REQUEST:
         return w;
-      case b.PaymentSourceTypes.PRZELEWY24:
-        return H;
-      case b.PaymentSourceTypes.PAYSAFE_CARD:
-      case b.PaymentSourceTypes.GCASH:
-      case b.PaymentSourceTypes.GRABPAY_MY:
-      case b.PaymentSourceTypes.MOMO_WALLET:
-      case b.PaymentSourceTypes.KAKAOPAY:
-      case b.PaymentSourceTypes.GOPAY_WALLET:
+      case U.PaymentSourceTypes.PAYPAL:
+        return k;
+      case U.PaymentSourceTypes.SOFORT:
+        return G;
+      case U.PaymentSourceTypes.GIROPAY:
+        return F;
+      case U.PaymentSourceTypes.PRZELEWY24:
         return Y;
+      case U.PaymentSourceTypes.PAYSAFE_CARD:
+      case U.PaymentSourceTypes.GCASH:
+      case U.PaymentSourceTypes.GRABPAY_MY:
+      case U.PaymentSourceTypes.MOMO_WALLET:
+      case U.PaymentSourceTypes.KAKAOPAY:
+      case U.PaymentSourceTypes.GOPAY_WALLET:
+        return H;
       default:
         return j
     }
@@ -134,7 +134,7 @@ class V extends l.PureComponent {
     e.preventDefault()
   }
   handleReopenPaypal() {
-    E.reopenPayPalWindow()
+    f.reopenPayPalWindow()
   }
   renderGenericError() {
     let {
@@ -155,7 +155,7 @@ class V extends l.PureComponent {
           color: c.Button.Colors.PRIMARY,
           look: c.Button.Looks.LINK,
           size: c.Button.Sizes.MIN,
-          children: U.default.Messages.BACK
+          children: b.default.Messages.BACK
         }), e.renderNextButton()]
       })
     })
@@ -171,30 +171,30 @@ class V extends l.PureComponent {
       label: function(e) {
         switch (e) {
           case "payment_type":
-            return U.default.Messages.PAYMENT_SOURCE_TYPE;
+            return b.default.Messages.PAYMENT_SOURCE_TYPE;
           case "payment_request_info":
-            return U.default.Messages.BILLING_STEP_PAYMENT_INFO;
+            return b.default.Messages.BILLING_STEP_PAYMENT_INFO;
           case "card_info":
-            return U.default.Messages.PAYMENT_SOURCE_INFORMATION;
+            return b.default.Messages.PAYMENT_SOURCE_INFORMATION;
           case "billing_address":
-            return U.default.Messages.BILLING_ADDRESS;
+            return b.default.Messages.BILLING_ADDRESS;
           case "paypal":
-            return U.default.Messages.PAYMENT_SOURCE_PAYPAL_DETAILS;
+            return b.default.Messages.PAYMENT_SOURCE_PAYPAL_DETAILS;
           case "sofort_info":
-            return U.default.Messages.PAYMENT_SOURCE_SOFORT_INFO;
+            return b.default.Messages.PAYMENT_SOURCE_SOFORT_INFO;
           case "przelewy24_info":
-            return U.default.Messages.PAYMENT_SOURCE_PRZELEWY24_INFO
+            return b.default.Messages.PAYMENT_SOURCE_PRZELEWY24_INFO
         }
       }(e)
     }));
     return (0, i.jsx)(r.Elements, {
-      options: b.StripeElementsOptions,
+      options: U.StripeElementsOptions,
       stripe: this.state.stripe,
       children: (0, i.jsx)(c.ModalRoot, {
         transitionState: s,
         size: c.ModalSize.SMALL,
         className: v.modal,
-        "aria-label": U.default.Messages.PAYMENT_SOURCES_ADD,
+        "aria-label": b.default.Messages.PAYMENT_SOURCES_ADD,
         children: (0, i.jsxs)("form", {
           className: v.form,
           onSubmit: this.preventDefault,
@@ -208,7 +208,7 @@ class V extends l.PureComponent {
               align: T.default.Align.CENTER,
               children: [(0, i.jsx)(c.FormTitle, {
                 tag: c.FormTitleTags.H4,
-                children: U.default.Messages.PAYMENT_SOURCES_ADD
+                children: b.default.Messages.PAYMENT_SOURCES_ADD
               }), (0, i.jsx)(c.ModalCloseButton, {
                 onClick: this.handleClose
               })]
@@ -234,7 +234,7 @@ class V extends l.PureComponent {
   }
   constructor(...e) {
     super(...e), O(this, "state", {
-      type: b.PaymentSourceTypes.CARD,
+      type: U.PaymentSourceTypes.CARD,
       step: "payment_type",
       steps: j,
       errorStep: null,
@@ -268,7 +268,7 @@ class V extends l.PureComponent {
             type: "submit",
             disabled: "" === t.name || "" === t.email || "" === s,
             onClick: this.handleNextClick,
-            children: U.default.Messages.NEXT
+            children: b.default.Messages.NEXT
           })
         }
       },
@@ -292,7 +292,7 @@ class V extends l.PureComponent {
             type: "submit",
             disabled: "" === e.name || "" === e.email,
             onClick: this.handleNextClick,
-            children: U.default.Messages.NEXT
+            children: b.default.Messages.NEXT
           })
         }
       },
@@ -333,7 +333,7 @@ class V extends l.PureComponent {
           return (0, i.jsxs)(i.Fragment, {
             children: [t ? (0, i.jsx)(c.FormErrorBlock, {
               className: v.errorBlock,
-              children: U.default.Messages.BILLING_ERROR_SECTION_CARD
+              children: b.default.Messages.BILLING_ERROR_SECTION_CARD
             }) : null, (0, i.jsx)(y.default, {
               onCardInfoChange: this.handleCardInfoChange,
               error: t ? e : null
@@ -358,7 +358,7 @@ class V extends l.PureComponent {
                 },
                 type: "submit",
                 submitting: t,
-                children: U.default.Messages.NEXT
+                children: b.default.Messages.NEXT
               })
             }
           })
@@ -390,7 +390,7 @@ class V extends l.PureComponent {
             submitting: e,
             disabled: !t || s,
             onClick: this.handleSave,
-            children: U.default.Messages.SAVE
+            children: b.default.Messages.SAVE
           })
         }
       },
@@ -406,7 +406,7 @@ class V extends l.PureComponent {
             submitting: e,
             color: a ? c.Button.Colors.BRAND : c.Button.Colors.PRIMARY,
             onClick: a ? this.handleNextClick : this.handleReopenPaypal,
-            children: a ? U.default.Messages.NEXT : U.default.Messages.PAYMENT_SOURCE_CONNECT_TO_PAYPAL
+            children: a ? b.default.Messages.NEXT : b.default.Messages.PAYMENT_SOURCE_CONNECT_TO_PAYPAL
           })
         }
       }
@@ -419,12 +419,12 @@ class V extends l.PureComponent {
         step: s
       })
     }), O(this, "handleCardInfoChange", (e, t) => {
-      p.default.wait(() => (0, f.updateCardInfo)(e, t))
+      p.default.wait(() => (0, E.updateCardInfo)(e, t))
     }), O(this, "handlePaymentDetailsChange", e => {
       let {
         billingAddressInfo: t
       } = this.props;
-      t.name = e.name, p.default.wait(() => (0, f.updateAddressInfo)({
+      t.name = e.name, p.default.wait(() => (0, E.updateAddressInfo)({
         ...t,
         ...e
       }, !1))
@@ -438,14 +438,14 @@ class V extends l.PureComponent {
       let {
         billingAddressInfo: s
       } = this.props;
-      p.default.wait(() => (0, f.updateAddressInfo)({
+      p.default.wait(() => (0, E.updateAddressInfo)({
         ...s,
         ...e
       }, t))
     }), O(this, "handleBackClick", () => {
       let e = this.getPreviousStep();
       if (null != e) {
-        "payment_type" === e && (0, f.clearError)();
+        "payment_type" === e && (0, E.clearError)();
         this.setState({
           step: e
         })
@@ -456,9 +456,9 @@ class V extends l.PureComponent {
         step: e
       })
     }), O(this, "handleClose", () => {
-      (0, f.clearError)(), this.props.onClose()
+      (0, E.clearError)(), this.props.onClose()
     }), O(this, "handleStripePaymentMethod", e => {
-      if ((0, f.updateStripePaymentRequest)(e), null == e) {
+      if ((0, E.updateStripePaymentRequest)(e), null == e) {
         this.handleBackClick();
         return
       }
@@ -493,18 +493,18 @@ class V extends l.PureComponent {
         type: e
       } = this.state;
       switch (e) {
-        case b.PaymentSourceTypes.PAYPAL:
+        case U.PaymentSourceTypes.PAYPAL:
           return this.handlePaypalSave();
-        case b.PaymentSourceTypes.CARD:
+        case U.PaymentSourceTypes.CARD:
           return this.handleCardSave();
-        case b.PaymentSourceTypes.SOFORT:
+        case U.PaymentSourceTypes.SOFORT:
           return this.handleSofortSave();
-        case b.PaymentSourceTypes.GIROPAY:
+        case U.PaymentSourceTypes.GIROPAY:
           return this.handleGiropaySave();
-        case b.PaymentSourceTypes.PRZELEWY24:
+        case U.PaymentSourceTypes.PRZELEWY24:
           return this.handlePrzelewy24Save();
-        case b.PaymentSourceTypes.PAYSAFE_CARD:
-        case b.PaymentSourceTypes.GRABPAY_MY:
+        case U.PaymentSourceTypes.PAYSAFE_CARD:
+        case U.PaymentSourceTypes.GRABPAY_MY:
           return this.handleAdyenPrepaidPaymentMethodSave(e);
         default:
           m.dispatchConfirmationError("user used a unsupported payment type: ".concat(e))
@@ -584,24 +584,24 @@ class V extends l.PureComponent {
         stripe: n
       } = this.state;
       if (t) try {
-        let t = await m.createStripePaymentSource(n, e, b.PaymentSourceTypes.GIROPAY, a);
+        let t = await m.createStripePaymentSource(n, e, U.PaymentSourceTypes.GIROPAY, a);
         null == s || s(t), this.handleClose()
       } catch (e) {}
     })
   }
 }
-let K = d.default.connectStores([C.default, N.default, P.default], () => ({
-  braintreeEmail: C.default.braintreeEmail,
-  braintreeNonce: C.default.braintreeNonce,
-  stripePaymentMethod: C.default.stripePaymentMethod,
-  creditCardInfo: C.default.getCreditCardInfo(),
-  isCreditCardInfoValid: C.default.isCardInfoValid,
-  billingAddressInfo: C.default.getBillingAddressInfo(),
-  isBillingAddressInfoValid: C.default.isBillingAddressInfoValid,
-  error: C.default.error,
-  popupCallbackCalled: C.default.popupCallbackCalled,
+let K = d.default.connectStores([P.default, N.default, C.default], () => ({
+  braintreeEmail: P.default.braintreeEmail,
+  braintreeNonce: P.default.braintreeNonce,
+  stripePaymentMethod: P.default.stripePaymentMethod,
+  creditCardInfo: P.default.getCreditCardInfo(),
+  isCreditCardInfoValid: P.default.isCardInfoValid,
+  billingAddressInfo: P.default.getBillingAddressInfo(),
+  isBillingAddressInfoValid: P.default.isBillingAddressInfoValid,
+  error: P.default.error,
+  popupCallbackCalled: P.default.popupCallbackCalled,
   submitting: N.default.isBusy,
-  isAuthenticating: P.default.isAwaitingAuthentication
+  isAuthenticating: C.default.isAwaitingAuthentication
 }))(V);
 
 function z(e) {
@@ -626,7 +626,7 @@ function z(e) {
       className: o()(v.modalTitle, B.flex, B.justifyBetween, B.alignCenter),
       children: [(0, i.jsx)(c.FormTitle, {
         tag: c.FormTitleTags.H4,
-        children: U.default.Messages.PAYMENT_SOURCES_ADD
+        children: b.default.Messages.PAYMENT_SOURCES_ADD
       }), (0, i.jsx)(c.ModalCloseButton, {
         onClick: a
       })]
@@ -638,7 +638,7 @@ function z(e) {
     transitionState: t,
     size: c.ModalSize.SMALL,
     className: v.modal,
-    "aria-label": U.default.Messages.PAYMENT_SOURCES_ADD,
+    "aria-label": b.default.Messages.PAYMENT_SOURCES_ADD,
     children: (0, i.jsx)("form", {
       className: v.form,
       onSubmit: function(e) {

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return E
+    return f
   }
 }), s("789020");
 var a, n, i = s("314877"),
@@ -21,12 +21,12 @@ function m(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }(n = a || (a = {}))[n.GIFT = 1] = "GIFT", n[n.PREORDER = 8] = "PREORDER";
-class E extends l.default {
+class f extends l.default {
   static createFromServer(e) {
     let t = null != e.payment_source ? u.default.createFromServer(e.payment_source) : null,
       s = null != e.sku ? o.default.createFromServer(e.sku) : null,
       a = null != e.subscription ? d.default.createFromServer(e.subscription) : null;
-    return new E({
+    return new f({
       id: e.id,
       createdAt: new Date(e.created_at),
       currency: e.currency,

@@ -1,10 +1,10 @@
 "use strict";
-a.r(t), a("47120");
-var n = a("920456"),
-  s = a("996106"),
-  l = a("452426"),
-  i = a("186901"),
-  r = a("981631");
+n.r(t), n("47120");
+var a = n("920456"),
+  s = n("996106"),
+  l = n("452426"),
+  i = n("186901"),
+  r = n("981631");
 t.default = {
   [r.RPCCommands.SET_USER_ACHIEVEMENT]: {
     scope: {
@@ -18,17 +18,17 @@ t.default = {
       let {
         socket: t,
         args: {
-          achievement_id: a,
+          achievement_id: n,
           percent_complete: l
         }
       } = e, i = t.application.id;
       if (null == i) throw new s.default({
         errorCode: r.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      return n.default.setUserAchievement(i, a, l).catch(e => {
+      return a.default.setUserAchievement(i, n, l).catch(e => {
         let {
           status: t,
-          body: a
+          body: n
         } = e;
         switch (t) {
           case 429:
@@ -36,7 +36,7 @@ t.default = {
               errorCode: r.RPCErrors.RATE_LIMITED
             }, "You are being rate limited.");
           case 403:
-            if (null != a && a.code === r.AbortCodes.USER_NOT_AUTHORIZED_FOR_APPLICATION) throw new s.default({
+            if (null != n && n.code === r.AbortCodes.USER_NOT_AUTHORIZED_FOR_APPLICATION) throw new s.default({
               errorCode: r.RPCErrors.UNAUTHORIZED_FOR_ACHIEVEMENT
             }, "Not authorized to update this achievement.");
             throw new s.default({
@@ -57,11 +57,11 @@ t.default = {
     handler(e) {
       let {
         socket: t
-      } = e, a = t.application.id;
-      if (null == a) throw new s.default({
+      } = e, n = t.application.id;
+      if (null == n) throw new s.default({
         errorCode: r.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      return n.default.fetchForApplication(a).then(e => e || [])
+      return a.default.fetchForApplication(n).then(e => e || [])
     }
   }
 }

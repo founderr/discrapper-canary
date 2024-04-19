@@ -1,6 +1,6 @@
 "use strict";
-a.r(t);
-let n = (0, a("818083").createExperiment)({
+n.r(t);
+let a = (0, n("818083").createExperiment)({
   kind: "user",
   id: "2024-01_shop_lunar_new_year_drop_upsell",
   label: "Shop Lunar New Year In App Marketing Experiment",
@@ -19,7 +19,7 @@ t.default = e => {
   let {
     location: t
   } = e;
-  return n.useExperiment({
+  return a.useExperiment({
     location: t
   })
 }

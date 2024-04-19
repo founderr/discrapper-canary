@@ -1,49 +1,49 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   GuildInfoCard: function() {
-    return I
+    return _
   },
   default: function() {
-    return _
+    return I
   }
 });
-var n = s("735250");
-s("470079");
-var a = s("481060"),
-  l = s("742593"),
-  i = s("390072"),
-  r = s("601964"),
-  u = s("940627"),
-  o = s("346656"),
-  d = s("230224"),
-  c = s("689938"),
-  f = s("503080");
+var s = n("735250");
+n("470079");
+var a = n("481060"),
+  l = n("742593"),
+  i = n("390072"),
+  r = n("601964"),
+  u = n("940627"),
+  o = n("346656"),
+  d = n("230224"),
+  c = n("689938"),
+  f = n("503080");
 
 function E(e) {
   var t;
   let {
-    guildScheduledEvent: s,
+    guildScheduledEvent: n,
     channel: r,
     onAcceptInvite: u,
     isSubmitting: o
   } = e;
-  return (0, n.jsxs)("div", {
+  return (0, s.jsxs)("div", {
     className: f.guildEventCard,
-    children: [(0, n.jsx)(l.default, {
-      name: s.name,
-      description: null !== (t = s.description) && void 0 !== t ? t : void 0,
+    children: [(0, s.jsx)(l.default, {
+      name: n.name,
+      description: null !== (t = n.description) && void 0 !== t ? t : void 0,
       headerVariant: "heading-md/medium",
       descriptionClassName: f.__invalid_channelDescription,
-      guildId: s.guild_id,
-      guildEventId: s.id,
-      eventPreview: s
-    }), null != r && (0, n.jsx)("div", {
+      guildId: n.guild_id,
+      guildEventId: n.id,
+      eventPreview: n
+    }), null != r && (0, s.jsx)("div", {
       className: f.channelInfo,
-      children: (0, n.jsx)(i.default, {
-        guildScheduledEvent: s,
+      children: (0, s.jsx)(i.default, {
+        guildScheduledEvent: n,
         channel: r
       })
-    }), (0, n.jsx)(a.Button, {
+    }), (0, s.jsx)(a.Button, {
       className: f.acceptButton,
       color: a.Button.Colors.GREEN,
       onClick: u,
@@ -53,46 +53,46 @@ function E(e) {
   })
 }
 
-function I(e) {
+function _(e) {
   var t;
   let {
-    invite: s
-  } = e, l = null != s.guild ? new r.default(s.guild) : null;
+    invite: n
+  } = e, l = null != n.guild ? new r.default(n.guild) : null;
   if (null == l) return null;
   let i = null !== (t = l.description) && void 0 !== t ? t : "";
-  return (0, n.jsxs)("div", {
+  return (0, s.jsxs)("div", {
     className: f.guildInfoCard,
-    children: [(0, n.jsx)(a.Heading, {
+    children: [(0, s.jsx)(a.Heading, {
       className: f.presentedBy,
       variant: "text-sm/medium",
       children: c.default.Messages.STAGE_INVITE_GUILD_HEADER
-    }), (0, n.jsxs)("div", {
+    }), (0, s.jsxs)("div", {
       className: f.guildContainer,
-      children: [(0, n.jsx)(o.default, {
+      children: [(0, s.jsx)(o.default, {
         guild: l,
         active: !0,
         size: o.default.Sizes.MEDIUM
-      }), (0, n.jsxs)("div", {
+      }), (0, s.jsxs)("div", {
         className: f.guildDetailsContanier,
-        children: [(0, n.jsxs)(a.Text, {
+        children: [(0, s.jsxs)(a.Text, {
           className: f.guildName,
           color: "header-primary",
           variant: "text-sm/medium",
           tag: "span",
-          children: [l.name, (0, n.jsx)(u.default, {
+          children: [l.name, (0, s.jsx)(u.default, {
             guild: l,
             className: f.guildBadge,
             tooltipPosition: "left"
           })]
-        }), (0, n.jsx)(d.InviteMemberCounts, {
-          invite: s,
+        }), (0, s.jsx)(d.InviteMemberCounts, {
+          invite: n,
           textClassName: f.guildInfoMemberCountText,
           className: f.guildInfoMemberCount
         })]
       })]
-    }), i.length > 0 && (0, n.jsx)("details", {
+    }), i.length > 0 && (0, s.jsx)("details", {
       className: f.guildDescriptionContainer,
-      children: (0, n.jsx)(a.Text, {
+      children: (0, s.jsx)(a.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
         children: i
@@ -101,18 +101,18 @@ function I(e) {
   })
 }
 
-function _(e) {
+function I(e) {
   let {
     invite: t,
-    channel: s,
+    channel: n,
     isSubmitting: a,
     onAcceptInvite: l
   } = e, {
     guild_scheduled_event: i
   } = t;
-  return null != i ? (0, n.jsx)(E, {
+  return null != i ? (0, s.jsx)(E, {
     guildScheduledEvent: i,
-    channel: s,
+    channel: n,
     isSubmitting: a,
     onAcceptInvite: l
   }) : null

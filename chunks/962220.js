@@ -1,33 +1,33 @@
 "use strict";
 n.r(t);
-var l = n("39612"),
-  a = n("271579"),
-  u = n("756647"),
-  r = n("625128"),
-  i = n("626135"),
-  s = n("954824"),
-  o = n("751189"),
-  _ = n("981631");
+var a = n("39612"),
+  s = n("271579"),
+  l = n("756647"),
+  i = n("625128"),
+  r = n("626135"),
+  o = n("954824"),
+  u = n("751189"),
+  d = n("981631");
 let c = "template";
 t.default = {
-  ...o.default,
+  ...u.default,
   openNativeAppModal(e) {
-    r.default.openNativeAppModal(e, _.RPCCommands.GUILD_TEMPLATE_BROWSER)
+    i.default.openNativeAppModal(e, d.RPCCommands.GUILD_TEMPLATE_BROWSER)
   },
   openMobileApp(e, t) {
     if (null != platform.ua && platform.ua.toLowerCase().indexOf("googlebot") > -1) return;
-    let n = null != e ? (0, l.getGuildTemplateDynamicLinkTemplate)(e) : (0, l.getDefaultDynamicLinkTemplate)(),
-      r = (0, a.generateAttemptId)(),
-      o = (0, a.default)(n, {
+    let n = null != e ? (0, a.getGuildTemplateDynamicLinkTemplate)(e) : (0, a.getDefaultDynamicLinkTemplate)(),
+      i = (0, s.generateAttemptId)(),
+      u = (0, s.default)(n, {
         utmSource: c,
         fingerprint: t,
-        attemptId: r
+        attemptId: i
       });
-    i.default.track(_.AnalyticEvents.DEEP_LINK_CLICKED, {
-      fingerprint: (0, u.maybeExtractId)(t),
-      attempt_id: r,
+    r.default.track(d.AnalyticEvents.DEEP_LINK_CLICKED, {
+      fingerprint: (0, l.maybeExtractId)(t),
+      attempt_id: i,
       source: c,
       guild_template_code: e
-    }), s.default.launch(o, () => {})
+    }), o.default.launch(u, () => {})
   }
 }
