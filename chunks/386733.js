@@ -159,16 +159,15 @@ t.default = e => {
     })
   }, [r]);
   let L = r.length,
-    v = L > 0,
-    j = 3 === L,
-    H = (0, R.useIsDismissibleContentDismissed)(d.DismissibleContent.REFERRAL_PROGRAM_PROGRESS_BAR_TOGGLE),
-    F = H ? () => (0, m.removeDismissedContent)(d.DismissibleContent.REFERRAL_PROGRAM_PROGRESS_BAR_TOGGLE) : () => (0, R.markDismissibleContentAsDismissed)(d.DismissibleContent.REFERRAL_PROGRAM_PROGRESS_BAR_TOGGLE),
-    K = O.default.getArticleURL(b.HelpdeskArticles.REFERRAL_PROGRAM),
-    V = j ? U.default.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : U.default.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
+    v = 3 === L,
+    j = (0, R.useIsDismissibleContentDismissed)(d.DismissibleContent.REFERRAL_PROGRAM_PROGRESS_BAR_TOGGLE),
+    H = j ? () => (0, m.removeDismissedContent)(d.DismissibleContent.REFERRAL_PROGRAM_PROGRESS_BAR_TOGGLE) : () => (0, R.markDismissibleContentAsDismissed)(d.DismissibleContent.REFERRAL_PROGRAM_PROGRESS_BAR_TOGGLE),
+    F = O.default.getArticleURL(b.HelpdeskArticles.REFERRAL_PROGRAM),
+    K = v ? U.default.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : U.default.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
     {
-      analyticsLocations: Y
+      analyticsLocations: V
     } = (0, I.default)(T.default.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
-    z = () => {
+    Y = () => {
       (0, E.openModalLazy)(async () => {
         let {
           default: e
@@ -178,8 +177,8 @@ t.default = e => {
         })
       })
     },
-    Z = (0, a.jsxs)(a.Fragment, {
-      children: [j ? (0, a.jsx)(G, {}) : (0, a.jsx)(k, {}), (0, a.jsxs)("div", {
+    z = (0, a.jsxs)(a.Fragment, {
+      children: [v ? (0, a.jsx)(G, {}) : (0, a.jsx)(k, {}), (0, a.jsxs)("div", {
         className: l()(y.expandedProgressBarContent, {
           [y.expandedProgressBarContentVariant1]: !x,
           [y.expandedProgressBarContentVariant2]: x
@@ -187,12 +186,12 @@ t.default = e => {
         children: [(0, a.jsx)(E.Heading, {
           variant: "heading-xxl/extrabold",
           className: y.expandedProgressBarHeader,
-          children: V
+          children: K
         }), (0, a.jsx)(w, {
           userRecords: f
         }), (0, a.jsx)(E.Text, {
           variant: t ? "text-sm/normal" : "text-lg/medium",
-          children: W(j, v, r.length, K)
+          children: W(v, L > 0, r.length, F)
         }), (0, a.jsxs)("div", {
           className: y.expandedProgressBarButtonContainer,
           children: [!t && !x && (0, a.jsx)(h.default, {
@@ -204,7 +203,7 @@ t.default = e => {
           }), (0, a.jsx)(N.default, {
             className: y.expandedProgressBarSelectFriendsCTA,
             color: E.ButtonColors.CUSTOM,
-            onClick: z,
+            onClick: Y,
             onlyShineOnHover: !0,
             children: (0, a.jsxs)("div", {
               className: y.expandedProgressBarSelectFriendsCTAInner,
@@ -218,10 +217,10 @@ t.default = e => {
         })]
       })]
     });
-  return H && (Z = (0, a.jsxs)(a.Fragment, {
+  return j && (z = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
       className: y.collapsedProgressBarIconContainer,
-      children: j ? (0, a.jsx)(G, {
+      children: v ? (0, a.jsx)(G, {
         height: t ? 96 : 68,
         width: t ? 66 : 87
       }) : (0, a.jsx)(k, {
@@ -231,7 +230,7 @@ t.default = e => {
     }), (0, a.jsxs)("div", {
       children: [(0, a.jsx)(E.Heading, {
         variant: "heading-xl/extrabold",
-        children: V
+        children: K
       }), (0, a.jsx)(w, {
         userRecords: f
       })]
@@ -240,7 +239,7 @@ t.default = e => {
       children: [!t && !x && (0, a.jsx)(E.Clickable, {
         onClick: () => (0, S.default)({
           isGift: !0,
-          analyticsLocations: Y
+          analyticsLocations: V
         }),
         className: y.collapsedGiftButton,
         children: (0, a.jsx)(o.GiftIcon, {
@@ -249,7 +248,7 @@ t.default = e => {
         })
       }), (0, a.jsx)(E.Clickable, {
         className: y.collapsedShareReferralButton,
-        onClick: z,
+        onClick: Y,
         children: (0, a.jsx)(D.default, {
           width: 28,
           height: 28
@@ -257,13 +256,13 @@ t.default = e => {
       })]
     })]
   })), (0, a.jsx)(I.AnalyticsLocationProvider, {
-    value: Y,
+    value: V,
     children: (0, a.jsxs)("div", {
       className: l()({
-        [y.expandedProgressBarContainer]: !H && !t,
-        [y.expandedProgressBarContainerSettingsPage]: !H && t,
-        [y.collapsedProgressBarContainer]: H && !t,
-        [y.collapsedProgressBarContainerSettingsPage]: H && t,
+        [y.expandedProgressBarContainer]: !j && !t,
+        [y.expandedProgressBarContainerSettingsPage]: !j && t,
+        [y.collapsedProgressBarContainer]: j && !t,
+        [y.collapsedProgressBarContainerSettingsPage]: j && t,
         [y.expandedProgressBarContainerVariant1]: !x && !t,
         [y.expandedProgressBarContainerVariant2]: x && !t,
         [y.allReferralsSentBorder]: 3 === r.length
@@ -272,15 +271,15 @@ t.default = e => {
         className: l()(y.collapseToggle, {
           [y.collapseToggleInSettings]: t
         }),
-        onClick: () => F(),
-        children: H ? (0, a.jsx)(n.ChevronSmallDownIcon, {
+        onClick: () => H(),
+        children: j ? (0, a.jsx)(n.ChevronSmallDownIcon, {
           width: t ? 20 : 24,
           height: t ? 20 : 24
         }) : (0, a.jsx)(c.ChevronSmallUpIcon, {
           width: t ? 20 : 24,
           height: t ? 20 : 24
         })
-      }), Z]
+      }), z]
     })
   })
 }
