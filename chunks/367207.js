@@ -18,12 +18,11 @@ var a = n("848246"),
   g = n("316941"),
   E = n("485731"),
   _ = n("841174"),
-  S = n("424082"),
-  I = n("11352"),
-  N = n("633361"),
-  T = n("981631");
+  S = n("11352"),
+  I = n("633361"),
+  N = n("981631");
 
-function A(e, t, n) {
+function T(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -31,7 +30,7 @@ function A(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class L extends r.default {
+class A extends r.default {
   _initialize() {
     __OVERLAY__ ? i.default.subscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen) : (i.default.subscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose), i.default.subscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell), i.default.subscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer), i.default.subscribe("POST_CONNECTION_OPEN", this._trackCustomNotificationSoundsExposure), i.default.subscribe("RTC_CONNECTION_STATE", this.maybeShowHDStreamingPerksDemoPostUpsellModal))
   }
@@ -89,7 +88,7 @@ class L extends r.default {
         location: "PremiumManager"
       }, {
         autoTrackExposure: !1
-      }).enabled || e.state !== T.RTCConnectionStates.DISCONNECTED || e.willReconnect) return;
+      }).enabled || e.state !== N.RTCConnectionStates.DISCONNECTED || e.willReconnect) return;
     let n = d.default.getChannel(e.channelId);
     if (null == n || !(null === (t = m.default.getPerksDemos()) || void 0 === t ? void 0 : t[a.EntitlementFeatureNames.STREAM_HIGH_QUALITY])) return;
     let l = m.default.getActivated()[a.EntitlementFeatureNames.STREAM_HIGH_QUALITY];
@@ -99,17 +98,17 @@ class L extends r.default {
     }), l && E.usePerksDemosUIStore.getState().hqStreamingDidEnable && (0, _.default)(n.guild_id)
   }
   constructor(...e) {
-    super(...e), A(this, "_premiumPaymentModalCloseResolve", null), A(this, "_premiumPaymentModalCloseReject", null), A(this, "_maybeFetchPremiumOffer", () => {
-      let e = c.default.getCurrentUser(),
-        {
-          annualDiscountsEnabled: t
-        } = (0, S.getAnnualDiscountsExperimentConfig)("PremiumManager");
-      null != e && e.verified && (!(0, h.isPremium)(e) && f.default.shouldFetchOffer() && ((0, N.shouldHitUserOfferEndPoints)("PremiumManager") ? (0, C.fetchUserOffer)() : g.default.fetchUserTrialOffer()), t && f.default.shouldFetchAnnualOffer() && (0, C.fetchAnnualUserOffer)())
-    }), A(this, "_trackCustomNotificationSoundsExposure", () => {
-      I.CustomNotificationSoundExperiment.trackExposure({
+    super(...e), T(this, "_premiumPaymentModalCloseResolve", null), T(this, "_premiumPaymentModalCloseReject", null), T(this, "_maybeFetchPremiumOffer", () => {
+      let e = c.default.getCurrentUser();
+      if (null != e && e.verified) {
+        let t = !(0, h.isPremium)(e) && f.default.shouldFetchOffer();
+        (0, I.shouldHitUserOfferEndPoints)("PremiumManager") ? (0, C.fetchUserOffer)(t) : t && g.default.fetchUserTrialOffer()
+      }
+    }), T(this, "_trackCustomNotificationSoundsExposure", () => {
+      S.CustomNotificationSoundExperiment.trackExposure({
         location: "PremiumManager"
       })
-    }), A(this, "_handlePremiumPaymentModalOpen", e => {
+    }), T(this, "_handlePremiumPaymentModalOpen", e => {
       (0, u.default)({
         ...e,
         analyticsLocations: [o.default.OVERLAY],
@@ -120,7 +119,7 @@ class L extends r.default {
           })
         }
       })
-    }), A(this, "_handlePremiumPaymentModalClose", e => {
+    }), T(this, "_handlePremiumPaymentModalClose", e => {
       let {
         didSucceed: t
       } = e;
@@ -128,4 +127,4 @@ class L extends r.default {
     })
   }
 }
-t.default = new L
+t.default = new A
