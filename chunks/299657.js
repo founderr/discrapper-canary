@@ -26,8 +26,8 @@ var a = s("735250"),
   P = s("316941"),
   M = s("91802"),
   h = s("104494"),
-  x = s("639119"),
-  L = s("633361"),
+  L = s("639119"),
+  x = s("633361"),
   v = s("2359"),
   j = s("132547"),
   D = s("474936"),
@@ -39,7 +39,7 @@ t.default = function(e) {
   } = e, s = (0, T.useBlockedPaymentsConfig)(), {
     sourceAnalyticsLocations: r,
     analyticsLocations: y
-  } = (0, f.default)(C.default.PREMIUM_MARKETING), B = (0, n.useStateFromStores)([m.default], () => m.default.hasFetchedSubscriptions()), G = (0, n.useStateFromStores)([p.default], () => p.default.getCurrentUser()), k = (0, x.usePremiumTrialOffer)(), H = (0, h.usePremiumDiscountOffer)(), F = (0, I.useSubscriptionPlansLoaded)(), [w, W] = i.useState(!0), K = i.useRef(0), V = (0, N.isPremiumExactly)(G, D.PremiumTypes.TIER_2), Y = (0, M.useLocalizedPromoQuery)(), z = null == Y ? void 0 : Y.countryCode, Z = (0, n.useStateFromStores)([g.default], () => g.default.hasFetched);
+  } = (0, f.default)(C.default.PREMIUM_MARKETING), B = (0, n.useStateFromStores)([m.default], () => m.default.hasFetchedSubscriptions()), G = (0, n.useStateFromStores)([p.default], () => p.default.getCurrentUser()), k = (0, L.usePremiumTrialOffer)(), H = (0, h.usePremiumDiscountOffer)(), F = (0, I.useSubscriptionPlansLoaded)(), [w, W] = i.useState(!0), K = i.useRef(0), V = (0, N.isPremiumExactly)(G, D.PremiumTypes.TIER_2), Y = (0, M.useLocalizedPromoQuery)(), z = null == Y ? void 0 : Y.countryCode, Z = (0, n.useStateFromStores)([g.default], () => g.default.hasFetched);
   return (i.useEffect(() => {
     !Z && d.getNitroAffinity()
   }, [Z]), i.useEffect(() => {
@@ -48,7 +48,7 @@ t.default = function(e) {
       await Promise.all([d.fetchSubscriptions(), (0, c.fetchGuildBoostSlots)(), d.fetchPaymentSources(), (0, _.fetchPremiumSubscriptionPlans)(z, null, b.RevenueSurfaces.DISCOVERY)]), K.current = Date.now() - e, W(!1)
     })
   }, [z]), i.useEffect(() => {
-    s && (null != k || null != H) && ((0, L.shouldHitUserOfferEndPoints)("PremiumMarketingPage") ? (0, O.acknowledgeUserOffer)(k, H) : null != k && null == k.expires_at && P.default.acknowledgeUserTrialOffer(k))
+    s && (null != k || null != H) && ((0, x.shouldHitUserOfferEndPoints)("PremiumMarketingPage") ? (0, O.acknowledgeUserOffer)(k, H) : null != k && null == k.expires_at && P.default.acknowledgeUserTrialOffer(k))
   }, [s, k, H]), i.useEffect(() => {
     !w && A.default.track(b.AnalyticEvents.PREMIUM_MARKETING_PAGE_VIEWED, {
       location_stack: r,

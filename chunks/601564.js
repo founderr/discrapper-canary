@@ -45,7 +45,7 @@ function h(e) {
   return e < A.PAGE_WIDTH_THRESHOLD ? A.PageSizes.SMALL : A.PageSizes.LARGE
 }
 n.default.initialize();
-class x extends i.PureComponent {
+class L extends i.PureComponent {
   componentDidMount() {
     (0, o.updateLocation)(this.props.location), this.stopListeningToHistory = (0, R.getHistory)().listen(e => {
       e.pathname.startsWith(N.Routes.APPLICATION_STORE) && (0, o.updateLocation)(e)
@@ -133,4 +133,4 @@ class x extends i.PureComponent {
     }))
   }
 }
-t.default = (0, l.withRouter)((0, c.default)((0, _.default)(x)))
+t.default = (0, l.withRouter)((0, c.default)((0, _.default)(L)))

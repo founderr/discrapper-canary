@@ -26,8 +26,8 @@ var a = s("735250"),
   P = s("981631"),
   M = s("689938"),
   h = s("347584"),
-  x = s("691766");
-let L = e => {
+  L = s("691766");
+let x = e => {
     let {
       height: t,
       width: s
@@ -171,7 +171,7 @@ t.default = e => {
     window.removeEventListener("resize", k)
   }), []);
   let H = (0, a.jsxs)(a.Fragment, {
-    children: [g ? (0, a.jsx)(L, {}) : (0, a.jsx)(v, {}), (0, a.jsxs)("div", {
+    children: [g ? (0, a.jsx)(x, {}) : (0, a.jsx)(v, {}), (0, a.jsxs)("div", {
       className: l()(h.expandedProgressBarContent, {
         [h.expandedProgressBarContentVariant1]: !A,
         [h.expandedProgressBarContentVariant2]: A
@@ -216,7 +216,7 @@ t.default = e => {
           children: (0, a.jsxs)("div", {
             className: h.expandedProgressBarSelectFriendsCTAInner,
             children: [(0, a.jsx)("img", {
-              src: x,
+              src: L,
               alt: "",
               className: h.expandedProgressBarSelectFriendsIcon
             }), g ? M.default.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS : M.default.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS]

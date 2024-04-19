@@ -26,8 +26,8 @@ var a = s("735250"),
   P = s("706454"),
   M = s("210887"),
   h = s("430824"),
-  x = s("496675"),
-  L = s("525395"),
+  L = s("496675"),
+  x = s("525395"),
   v = s("558314"),
   j = s("580130"),
   D = s("55563"),
@@ -457,7 +457,7 @@ class eE extends i.PureComponent {
         channel: e,
         guild: t
       } = this.props;
-      return null != e && null != t && (x.default.can(eo.Permissions.CREATE_INSTANT_INVITE, t) || null != t.vanityURLCode) ? (0, a.jsx)(d.Button, {
+      return null != e && null != t && (L.default.can(eo.Permissions.CREATE_INSTANT_INVITE, t) || null != t.vanityURLCode) ? (0, a.jsx)(d.Button, {
         "aria-label": ed.default.Messages.CREATE_INSTANT_INVITE,
         look: d.Button.Looks.BLANK,
         size: d.Button.Sizes.NONE,
@@ -584,7 +584,7 @@ class eE extends i.PureComponent {
     })
   }
 }
-t.default = (0, R.default)((0, S.default)(n.default.connectStores([v.default, M.default, P.default, y.default, b.default, D.default, U.default, p.default, m.default, L.default, h.default, j.default], e => {
+t.default = (0, R.default)((0, S.default)(n.default.connectStores([v.default, M.default, P.default, y.default, b.default, D.default, U.default, p.default, m.default, x.default, h.default, j.default], e => {
   let t, s, a, {
     inputSkuId: i,
     applicationId: r,
@@ -605,7 +605,7 @@ t.default = (0, R.default)((0, S.default)(n.default.connectStores([v.default, M.
     application: null != r ? m.default.getApplication(r) : null,
     isFetchingEntitlements: null != r && j.default.applicationIdsFetching.has(r),
     didFetchEntitlements: null != r && j.default.applicationIdsFetched.has(r),
-    shouldFetchStatistics: n && null != r && L.default.shouldFetchStatisticsForApplication(r),
+    shouldFetchStatistics: n && null != r && x.default.shouldFetchStatisticsForApplication(r),
     sku: s,
     isFocused: y.default.isFocused(),
     storeListing: b.default.getStoreListing({

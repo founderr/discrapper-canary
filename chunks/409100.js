@@ -53,13 +53,13 @@ t.default = e => {
     location: "SubscribeButton"
   }, {
     autoTrackExposure: !1
-  }), x = h && (null == N ? void 0 : N.trial_id) === _.PREMIUM_TIER_2_REFERRAL_TRIAL_ID, L = I ? E.default.Messages.BOGO_CLAIM_OFFER : null != P ? T(s, S, R, P.discount.amount) : f({
+  }), L = h && (null == N ? void 0 : N.trial_id) === _.PREMIUM_TIER_2_REFERRAL_TRIAL_ID, x = I ? E.default.Messages.BOGO_CLAIM_OFFER : null != P ? T(s, S, R, P.discount.amount) : f({
     showTrialCTA: M,
     subscriptionTier: s,
     shouldShowUpsells: !1,
     trialDurationCopy: O,
     isPersistentCTA: R,
-    shouldShowReferralTrialCopy: x,
+    shouldShowReferralTrialCopy: L,
     subscriptionTrial: g
   });
   return (0, a.jsx)(c.default, {
@@ -67,7 +67,7 @@ t.default = e => {
     look: A ? r.ButtonLooks.INVERTED : void 0,
     buttonShineClassName: "buttonShineClassName" in p ? p.buttonShineClassName : A ? C.brandShine : void 0,
     trialId: null == g ? void 0 : g.id,
-    buttonText: L,
+    buttonText: x,
     buttonTextClassName: M ? C.freeTrialText : void 0,
     onlyShineOnHover: !0,
     subscriptionTier: s,

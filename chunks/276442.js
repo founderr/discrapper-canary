@@ -6,9 +6,9 @@ n.r(t), n.d(t, {
 });
 var i = n("512722"),
   s = n.n(i),
-  a = n("207561"),
-  l = n("639119"),
-  r = n("3409"),
+  l = n("207561"),
+  r = n("639119"),
+  a = n("3409"),
   u = n("626135"),
   o = n("987209"),
   c = n("598"),
@@ -22,44 +22,44 @@ function p(e) {
     initialPlanId: n,
     breadcrumbSteps: i,
     handleStepChange: p,
-    referralTrialOfferId: _,
+    referralTrialOfferId: I,
     onReturn: S
   } = e, {
-    contextMetadata: I,
-    step: E,
-    paymentSources: P,
+    contextMetadata: _,
+    step: P,
+    paymentSources: E,
     paymentSourceId: T,
     setPaymentSourceId: N,
     purchaseError: v,
     setPurchaseError: h,
     purchaseErrorBlockRef: x,
     paymentAuthenticationState: A,
-    selectedSkuId: C
+    selectedSkuId: y
   } = (0, c.usePaymentContext)(), {
-    isGift: y
-  } = (0, o.useGiftContext)(), g = {
-    ...(0, r.useSharedPaymentModal)(),
-    paymentSources: P,
+    isGift: g
+  } = (0, o.useGiftContext)(), C = {
+    ...(0, a.useSharedPaymentModal)(),
+    paymentSources: E,
     paymentSourceId: T,
     setPaymentSourceId: N,
     purchaseError: v,
     setPurchaseError: h,
     purchaseErrorBlockRef: x,
     paymentAuthenticationState: A
-  }, M = (0, l.usePremiumTrialOffer)(_), R = !y && null != M && null != C && (0, f.SubscriptionTrials)[M.trial_id].skus.includes(C), b = null != S ? S : () => {
-    p(Object.values(P).length < 1 && null == n ? d.Step.PLAN_SELECT : d.Step.REVIEW, {
+  }, M = (0, r.usePremiumTrialOffer)(I), R = !g && null != M && null != y && (0, f.SubscriptionTrials)[M.trial_id].skus.includes(y), b = null != S ? S : () => {
+    p(Object.values(E).length < 1 && null == n ? d.Step.PLAN_SELECT : d.Step.REVIEW, {
       trackedFromStep: d.Step.PAYMENT_TYPE
     })
   };
-  s()(E, "Step should be set here");
-  let L = (0, a.useStableMemo)(() => Date.now(), [E]);
-  return (0, r.AddPaymentFlow)({
-    paymentModalArgs: g,
+  s()(P, "Step should be set here");
+  let L = (0, l.useStableMemo)(() => Date.now(), [P]);
+  return (0, a.AddPaymentFlow)({
+    paymentModalArgs: C,
     initialStep: d.Step.PAYMENT_TYPE,
     prependSteps: [d.Step.PROMOTION_INFO],
     appendSteps: [d.Step.REVIEW, d.Step.CONFIRM],
     breadcrumpSteps: i,
-    currentBreadcrumpStep: E,
+    currentBreadcrumpStep: P,
     usePaymentModalStep: !0,
     onReturn: b,
     onComplete: e => {
@@ -77,7 +77,7 @@ function p(e) {
         from_step: n,
         to_step: i,
         step_duration_ms: s - L,
-        flow_duration_ms: s - I.startTime
+        flow_duration_ms: s - _.startTime
       })
     },
     isEligibleForTrial: R

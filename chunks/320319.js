@@ -31,7 +31,7 @@ let h = {
     yMin: -150,
     yMax: -20
   },
-  x = i.memo(e => {
+  L = i.memo(e => {
     let {
       name: t,
       canReveal: s = !0,
@@ -92,13 +92,13 @@ let h = {
         }),
         children: [(0, a.jsx)("div", {
           className: M.flipCardFront,
-          children: (0, a.jsx)(L, {
+          children: (0, a.jsx)(x, {
             ...e,
             className: M.topCover
           })
         }), (0, a.jsx)("div", {
           className: M.flipCardBack,
-          children: (0, a.jsx)(L, {
+          children: (0, a.jsx)(x, {
             ...e,
             className: M.topCover
           })
@@ -112,7 +112,7 @@ let h = {
           [M.forceShadow]: I,
           [M.reducedMotion]: v
         }),
-        children: [(0, a.jsx)(L, {
+        children: [(0, a.jsx)(x, {
           ...e,
           ref: t === S.PerksDiscoverabilityCardTypes.FREE_BOOST ? q : void 0
         }), H && (0, a.jsx)(T.default, {
@@ -148,18 +148,18 @@ let h = {
         children: [(0, a.jsx)("div", {
           className: M.flipCardHidden,
           "aria-hidden": !0,
-          children: (0, a.jsx)(L, {
+          children: (0, a.jsx)(x, {
             ...e
           })
         }), (0, a.jsx)("div", {
           className: M.flipCardFront,
-          children: (0, a.jsx)(L, {
+          children: (0, a.jsx)(x, {
             ...K.upcomingDropUntimed,
             pillText: ""
           })
         }), (0, a.jsx)("div", {
           className: M.flipCardBack,
-          children: (0, a.jsx)(L, {
+          children: (0, a.jsx)(x, {
             ...e,
             description: ""
           })
@@ -171,13 +171,13 @@ let h = {
           })
         })]
       })
-    }) : (0, a.jsx)(x, {
+    }) : (0, a.jsx)(L, {
       ...K.upcomingDropUntimed,
       forceShadow: I
     })
   });
-x.displayName = "PerkDiscoverabilityCard";
-let L = i.forwardRef((e, t) => {
+L.displayName = "PerkDiscoverabilityCard";
+let x = i.forwardRef((e, t) => {
   var s;
   let {
     title: r,
@@ -196,7 +196,7 @@ let L = i.forwardRef((e, t) => {
     backgroundImage: O,
     pillText: P,
     perkImage: h
-  } = e, x = N === p.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW || N === p.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW || N === p.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW, L = 0 !== u.length || 0 !== o.length && S === p.CardVariants.REWARD, v = (0, f.useShouldShowConfettiAndGlow)(), [j, D] = i.useState(v);
+  } = e, L = N === p.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW || N === p.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW || N === p.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW, x = 0 !== u.length || 0 !== o.length && S === p.CardVariants.REWARD, v = (0, f.useShouldShowConfettiAndGlow)(), [j, D] = i.useState(v);
   i.useEffect(() => {
     v && D(!0)
   }, [v]);
@@ -204,7 +204,7 @@ let L = i.forwardRef((e, t) => {
   return (0, a.jsxs)(d.Clickable, {
     className: l()(M.card, T, !0 === j ? null === (s = b.cardContainer) || void 0 === s ? void 0 : s.className : void 0, {
       [M.clickable]: null != g,
-      [M.hideOverflow]: x
+      [M.hideOverflow]: L
     }),
     onMouseEnter: C,
     style: {
@@ -222,13 +222,13 @@ let L = i.forwardRef((e, t) => {
       titleClassName: n,
       subtitle: o,
       perkImage: h,
-      isCarousel: x,
+      isCarousel: L,
       descriptionCta: c,
       onCtaClick: E,
       perkComponent: R,
       subtitleClassName: M.cardSubtitle,
       cardVariant: S
-    }), L && (0, a.jsx)(A.default, {
+    }), x && (0, a.jsx)(A.default, {
       title: r,
       titleClassName: n,
       subtitle: o,
@@ -244,4 +244,4 @@ let L = i.forwardRef((e, t) => {
     })]
   })
 });
-L.displayName = "PerkCardContent", t.default = x
+x.displayName = "PerkCardContent", t.default = L

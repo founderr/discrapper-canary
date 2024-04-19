@@ -26,8 +26,8 @@ var a = s("735250"),
   P = s("419854"),
   M = s("568126"),
   h = s("605289"),
-  x = s("248042"),
-  L = s("823188"),
+  L = s("248042"),
+  x = s("823188"),
   v = s("65536"),
   j = s("135785"),
   D = s("498765"),
@@ -126,7 +126,7 @@ t.default = e => {
     entrypoint: r
   } = e, E = (0, m.useMarketingOptimizationExperiment)({
     autoTrackExposure: !0
-  }), v = i.useRef(null), [D, y] = i.useState(!1), [B, G] = i.useState(!1), [K, X] = i.useState(!1), es = !D && !B || E, [ea, ei] = i.useState(!1), er = (0, n.useStateFromStores)([T.default], () => T.default.getPremiumTypeSubscription()), [el, en] = i.useState(E ? V.PremiumTypes.TIER_2 : void 0), eo = null != er ? (0, S.getPremiumPlanItem)(er) : null, eu = null != eo ? S.default.getSkuIdForPlan(eo.planId) : null, ed = null !== eu && eu !== V.PremiumSubscriptionSKUs.TIER_2 ? V.PremiumSubscriptionSKUs.TIER_2 : null, ec = (0, A.useLocalizedPromoQuery)(), e_ = (0, u.isThemeLight)((0, _.default)()), eE = null != ec, [eC, ef] = i.useState(!1), eT = (0, N.usePremiumDiscountOffer)(), eI = (0, g.usePremiumTrialOffer)(), eR = null == eI ? void 0 : null === (t = eI.subscription_trial) || void 0 === t ? void 0 : t.sku_id, eS = (0, p.useIsInPremiumOfferExperience)(), ep = (0, x.useIsEligibleForBogoPromotion)(), {
+  }), v = i.useRef(null), [D, y] = i.useState(!1), [B, G] = i.useState(!1), [K, X] = i.useState(!1), es = !D && !B || E, [ea, ei] = i.useState(!1), er = (0, n.useStateFromStores)([T.default], () => T.default.getPremiumTypeSubscription()), [el, en] = i.useState(E ? V.PremiumTypes.TIER_2 : void 0), eo = null != er ? (0, S.getPremiumPlanItem)(er) : null, eu = null != eo ? S.default.getSkuIdForPlan(eo.planId) : null, ed = null !== eu && eu !== V.PremiumSubscriptionSKUs.TIER_2 ? V.PremiumSubscriptionSKUs.TIER_2 : null, ec = (0, A.useLocalizedPromoQuery)(), e_ = (0, u.isThemeLight)((0, _.default)()), eE = null != ec, [eC, ef] = i.useState(!1), eT = (0, N.usePremiumDiscountOffer)(), eI = (0, g.usePremiumTrialOffer)(), eR = null == eI ? void 0 : null === (t = eI.subscription_trial) || void 0 === t ? void 0 : t.sku_id, eS = (0, p.useIsInPremiumOfferExperience)(), ep = (0, L.useIsEligibleForBogoPromotion)(), {
     analyticsLocations: em
   } = (0, f.default)(C.default.PREMIUM_MARKETING), eA = "PremiumMarketingHome";
   (0, c.useTriggerDebuggingAA)({
@@ -200,9 +200,9 @@ t.default = e => {
           onChange: e => G(e),
           threshold: .1,
           active: !0,
-          children: (0, a.jsx)(L.default, {
+          children: (0, a.jsx)(x.default, {
             showWumpus: !E,
-            variant: E ? L.PremiumTierCardsVariant.STACKED : L.PremiumTierCardsVariant.DEFAULT,
+            variant: E ? x.PremiumTierCardsVariant.STACKED : x.PremiumTierCardsVariant.DEFAULT,
             isFullScreen: s,
             selectedPremiumType: E ? el : void 0,
             tier0CTAButton: eR === V.PremiumSubscriptionSKUs.TIER_2 || ep || null != eT ? (0, a.jsx)(F.default, {

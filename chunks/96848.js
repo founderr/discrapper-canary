@@ -6,9 +6,9 @@ n.r(t), n.d(t, {
 }), n("47120"), n("757143");
 var i = n("735250"),
   s = n("470079"),
-  a = n("481060"),
-  l = n("907040"),
-  r = n("642113"),
+  l = n("481060"),
+  r = n("907040"),
+  a = n("642113"),
   u = n("981631"),
   o = n("185923"),
   c = n("689938"),
@@ -27,18 +27,18 @@ function p(e) {
     className: d.customGiftContent,
     children: [(0, i.jsxs)("div", {
       className: d.customGiftHeader,
-      children: [(0, i.jsx)(a.Text, {
+      children: [(0, i.jsx)(l.Text, {
         variant: "text-md/bold",
         children: c.default.Messages.GIFT_SELECT_EMOJI
-      }), (0, i.jsx)(a.Text, {
+      }), (0, i.jsx)(l.Text, {
         variant: "text-sm/normal",
         children: c.default.Messages.GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION
       })]
     }), e]
-  }), _ = e => {
+  }), I = e => {
     null != t && (t(e), o(!1))
   };
-  return (0, i.jsx)(a.Popout, {
+  return (0, i.jsx)(l.Popout, {
     shouldShow: u,
     position: "bottom",
     align: "left",
@@ -48,11 +48,11 @@ function p(e) {
       let {
         closePopout: t
       } = e;
-      return (0, i.jsx)(a.Dialog, {
-        children: (0, i.jsx)(l.default, {
+      return (0, i.jsx)(l.Dialog, {
+        children: (0, i.jsx)(r.default, {
           analyticsOverride: m,
           closePopout: t,
-          onSelectEmoji: _,
+          onSelectEmoji: I,
           wrapper: "div",
           pickerIntention: f,
           renderHeader: p,
@@ -67,25 +67,25 @@ function p(e) {
     },
     children: () => (0, i.jsx)("div", {
       className: d.container,
-      children: (0, i.jsx)(a.Clickable, {
+      children: (0, i.jsx)(l.Clickable, {
         className: d.emoji,
         onClick: () => o(!0),
         children: (null == n ? void 0 : n.name) == null ? (0, i.jsxs)(i.Fragment, {
-          children: [(0, i.jsx)(r.default, {
+          children: [(0, i.jsx)(a.default, {
             className: d.emojiIcon,
             width: 14,
             height: 14
-          }), (0, i.jsx)(a.Text, {
+          }), (0, i.jsx)(l.Text, {
             className: d.text,
             variant: "text-sm/semibold",
             children: c.default.Messages.GIFT_SELECT_EMOJI
           })]
         }) : (0, i.jsxs)(i.Fragment, {
-          children: [(0, i.jsx)(a.Text, {
+          children: [(0, i.jsx)(l.Text, {
             className: d.textSelected,
             variant: "text-sm/semibold",
             children: n.optionallyDiverseSequence
-          }), (0, i.jsx)(a.Text, {
+          }), (0, i.jsx)(l.Text, {
             className: d.text,
             variant: "text-sm/semibold",
             children: n.name.replace(/_/g, " ")

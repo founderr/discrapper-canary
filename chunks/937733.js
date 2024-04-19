@@ -17,14 +17,14 @@ var n = a("442837"),
   _ = a("963249"),
   E = a("594174"),
   m = a("976644"),
-  M = a("626135"),
-  f = a("63063"),
+  f = a("626135"),
+  M = a("63063"),
   A = a("74538"),
   I = a("823188"),
   R = a("290347"),
   g = a("474936"),
-  O = a("981631"),
-  p = a("689938"),
+  p = a("981631"),
+  O = a("689938"),
   T = a("364530"),
   h = a("891594"),
   L = a("607139"),
@@ -42,7 +42,7 @@ function D(e) {
     location: D
   } = (0, d.useAnalyticsContext)(), {
     analyticsLocations: b
-  } = (0, c.default)(u.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), S = (0, n.useStateFromStores)([E.default], () => E.default.getCurrentUser()), y = (0, A.isPremiumExactly)(S, g.PremiumTypes.TIER_2), v = (0, A.isPremium)(S) && !y, j = (0, i.default)(), H = (0, l.isThemeLight)(j) ? I.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : I.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL;
+  } = (0, c.default)(u.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), y = (0, n.useStateFromStores)([E.default], () => E.default.getCurrentUser()), S = (0, A.isPremiumExactly)(y, g.PremiumTypes.TIER_2), v = (0, A.isPremium)(y) && !S, j = (0, i.default)(), H = (0, l.isThemeLight)(j) ? I.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : I.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL;
   return (0, s.jsx)(R.default, {
     renderModalProps: t,
     heroArt: {
@@ -50,33 +50,33 @@ function D(e) {
       src: N
     },
     modalDismissibleContent: r.DismissibleContent.PREMIUM_2024_APRIL_MARKETING_MODAL,
-    header: p.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_HEADER,
+    header: O.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_HEADER,
     modalTopExtra: () => (0, s.jsx)(I.PremiumPillWithSparkles, {
-      text: p.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_MODAL_TOP_PILL,
+      text: O.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_MODAL_TOP_PILL,
       className: T.modalTopPill,
       colorOptions: H
     }),
-    subHeader: p.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_SUBHEADER,
+    subHeader: O.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_SUBHEADER,
     subHeaderExtra: () => (0, s.jsx)(o.Anchor, {
       className: T.termsApplyAnchor,
-      href: f.default.getArticleURL(O.HelpdeskArticles.PREMIUM_APRIL_2024_MARKETING_MOMENT),
+      href: M.default.getArticleURL(p.HelpdeskArticles.PREMIUM_APRIL_2024_MARKETING_MOMENT),
       children: (0, s.jsx)(o.Heading, {
         variant: "heading-md/normal",
         className: T.termsApplyBodyText,
-        children: p.default.Messages.BOGO_TERMS_APPLY
+        children: O.default.Messages.BOGO_TERMS_APPLY
       })
     }),
     featureCards: [{
-      header: p.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_CUSTOM_PROFILE_TILE_HEADER,
-      subHeader: p.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_CUSTOM_PROFILE_TILE_BODY,
+      header: O.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_CUSTOM_PROFILE_TILE_HEADER,
+      subHeader: O.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_CUSTOM_PROFILE_TILE_BODY,
       imageSrc: C
     }, {
-      header: p.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_COLOR_THEMES_TILE_HEADER,
-      subHeader: p.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_COLOR_THEMES_TILE_BODY,
+      header: O.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_COLOR_THEMES_TILE_HEADER,
+      subHeader: O.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_COLOR_THEMES_TILE_BODY,
       imageSrc: h
     }, {
-      header: p.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_APP_ICONS_TILE_HEADER,
-      subHeader: p.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_APP_ICONS_TILE_BODY,
+      header: O.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_APP_ICONS_TILE_HEADER,
+      subHeader: O.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_APP_ICONS_TILE_BODY,
       imageSrc: L
     }],
     changeLogId: x,
@@ -89,7 +89,7 @@ function D(e) {
         color: o.Button.Colors.GREEN,
         size: o.Button.Sizes.SMALL,
         onClick: () => {
-          M.default.track(O.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
+          f.default.track(p.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
             change_log_id: x,
             cta_type: e,
             seconds_open: Math.round((Date.now() - t) / 1e3),
@@ -99,8 +99,8 @@ function D(e) {
             analyticsLocations: b,
             analyticsObject: {
               ...D,
-              object: O.AnalyticsObjects.BUTTON_CTA,
-              objectType: O.AnalyticsObjectTypes.TIER_2
+              object: p.AnalyticsObjects.BUTTON_CTA,
+              objectType: p.AnalyticsObjectTypes.TIER_2
             },
             onClose: e => {
               e && a()
@@ -111,7 +111,7 @@ function D(e) {
           alt: "",
           className: T.nitroIconSubHeader,
           src: P
-        }), p.default.Messages.BOGO_CLAIM_OFFER]
+        }), O.default.Messages.BOGO_CLAIM_OFFER]
       })
     }
   })

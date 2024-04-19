@@ -29,7 +29,7 @@ function m(e) {
     title: p,
     onDetails: S,
     benefitItems: v,
-    benefitsSummary: g
+    benefitsSummary: x
   } = e;
   return (0, i.jsx)(s.FocusRing, {
     children: (0, i.jsxs)("div", {
@@ -70,13 +70,13 @@ function m(e) {
             children: t
           })]
         })]
-      }), null != g && (0, i.jsx)("div", {
+      }), null != x && (0, i.jsx)("div", {
         className: u.benefitsSummary,
         children: (0, i.jsx)(o.Text, {
           color: "interactive-normal",
           variant: "text-sm/medium",
           children: d.default.Messages.Storefront.BENEFITS_SUMMARY.format({
-            count: g
+            count: x
           })
         })
       }), null != v && (0, i.jsx)("div", {

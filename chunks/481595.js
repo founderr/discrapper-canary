@@ -7,9 +7,9 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var s = n("512722"),
-  a = n.n(s),
-  l = n("742280"),
-  r = n("399606"),
+  l = n.n(s),
+  r = n("742280"),
+  a = n("399606"),
   u = n("481060"),
   o = n("224550"),
   c = n("609194"),
@@ -17,20 +17,20 @@ var s = n("512722"),
   m = n("672971"),
   f = n("115130"),
   p = n("653798"),
-  _ = n("314182"),
+  I = n("314182"),
   S = n("251660"),
-  I = n("246946"),
-  E = n("351402"),
-  P = n("855775"),
+  _ = n("246946"),
+  P = n("351402"),
+  E = n("855775"),
   T = n("695103"),
   N = n("366695"),
   v = n("4912"),
   h = n("669079"),
   x = n("937615"),
   A = n("987209"),
-  C = n("598"),
-  y = n("45572"),
-  g = n("916616"),
+  y = n("598"),
+  g = n("45572"),
+  C = n("916616"),
   M = n("981631"),
   R = n("689938"),
   b = n("812011");
@@ -40,7 +40,7 @@ function L(e) {
     sku: t,
     skuPricePreview: n
   } = e;
-  a()(null != n.amount, "SKU must have a price set.");
+  l()(null != n.amount, "SKU must have a price set.");
   let s = n.amount - n.tax;
   return !n.tax_inclusive && n.tax > 0 ? (0, i.jsxs)(p.PremiumInvoiceTable, {
     className: b.invoice,
@@ -98,24 +98,24 @@ function j(e) {
     paymentSourceId: G,
     setHasAcceptedTerms: D,
     skusById: U,
-    skuPricePreviewsById: F,
-    selectedSkuId: w,
+    skuPricePreviewsById: w,
+    selectedSkuId: F,
     isEmbeddedIAP: B,
     purchaseType: k
-  } = (0, C.usePaymentContext)(), {
+  } = (0, y.usePaymentContext)(), {
     isGift: H,
     giftRecipient: W
   } = (0, A.useGiftContext)(), Y = H && (0, h.shouldShowCustomGiftExperience)(W);
-  a()(null != w, "Expected selectedSkuId");
-  let K = U[w],
-    V = F[w],
-    Z = null != G ? G : P.NO_PAYMENT_SOURCE,
+  l()(null != F, "Expected selectedSkuId");
+  let K = U[F],
+    V = w[F],
+    Z = null != G ? G : E.NO_PAYMENT_SOURCE,
     z = null != V ? V[Z] : null;
-  a()(null != K, "SKU must exist and be fetched."), a()(null != N, "Application must exist.");
-  let J = (0, r.useStateFromStores)([f.default, T.default], () => T.default.inTestModeForApplication(N.id) || f.default.inDevModeForApplication(N.id), [N.id]),
-    X = (0, r.useStateFromStores)([I.default], () => I.default.enabled),
-    q = l.CountryCodesSets.EEA_COUNTRIES.has(E.default.ipCountryCodeWithFallback),
-    Q = x === y.PurchaseState.PURCHASING || x === y.PurchaseState.COMPLETED,
+  l()(null != K, "SKU must exist and be fetched."), l()(null != N, "Application must exist.");
+  let J = (0, a.useStateFromStores)([f.default, T.default], () => T.default.inTestModeForApplication(N.id) || f.default.inDevModeForApplication(N.id), [N.id]),
+    X = (0, a.useStateFromStores)([_.default], () => _.default.enabled),
+    q = r.CountryCodesSets.EEA_COUNTRIES.has(P.default.ipCountryCodeWithFallback),
+    Q = x === g.PurchaseState.PURCHASING || x === g.PurchaseState.COMPLETED,
     $ = null != G ? j[G].type : null;
   return (0, i.jsxs)("div", {
     className: b.stepBody,
@@ -129,7 +129,7 @@ function j(e) {
       application: N,
       sku: K,
       isEmbeddedIAP: B
-    }), Y && (0, i.jsx)(g.default, {
+    }), Y && (0, i.jsx)(C.default, {
       sku: K
     }), null != W ? (0, i.jsx)(S.SendGiftToUser, {
       giftRecipient: W
@@ -154,7 +154,7 @@ function j(e) {
         onPaymentSourceAdd: p,
         hidePersonalInformation: X
       })]
-    }), (0, i.jsx)(_.default, {
+    }), (0, i.jsx)(I.default, {
       isActive: t,
       ref: n,
       children: (0, i.jsx)(m.default, {

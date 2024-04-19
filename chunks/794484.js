@@ -56,10 +56,10 @@ t.default = e => {
   });
   (0, _.useClearNewBadge)();
   let h = r === C.PerksDiscoverabilityCardSection.WHATS_NEW,
-    x = (0, c.useClearTenureBadge)();
+    L = (0, c.useClearTenureBadge)();
   i.useEffect(() => {
-    h && x()
-  }, [x, h]), i.useEffect(() => {
+    h && L()
+  }, [L, h]), i.useEffect(() => {
     let e = g.current;
     if (null == e || !O || !h) return;
     let t = requestAnimationFrame(() => {
@@ -69,7 +69,7 @@ t.default = e => {
     });
     return () => cancelAnimationFrame(t)
   }, [g, O, h]);
-  let L = (0, f.usePerksDiscoverabilityStrings)(h),
+  let x = (0, f.usePerksDiscoverabilityStrings)(h),
     v = (0, E.default)(),
     j = (0, c.useFreeBoostUserTenureReward)(),
     D = (0, f.getFilteredPerksDiscoverabilityCards)(v, r, P, N, null == j ? void 0 : j.showCard),
@@ -90,7 +90,7 @@ t.default = e => {
       children: [(0, a.jsx)(R, {
         showAllPerksButton: m,
         leftAlignHeaders: p,
-        title: L.title,
+        title: x.title,
         headerClassname: A
       }), !M && (0, a.jsx)(o.Text, {
         variant: "text-lg/normal",
@@ -103,7 +103,7 @@ t.default = e => {
           [I.leftAlignSubtitle]: p,
           [I.centerAlignSubtitle]: !p
         }),
-        children: L.subtitle
+        children: x.subtitle
       }), !p && null != m && (0, a.jsx)("div", {
         className: l()(I.showAllPerksButtonCenter),
         children: m

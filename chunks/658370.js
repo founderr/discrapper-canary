@@ -38,12 +38,12 @@ t.default = e => {
     onDiscountOffer: f.default.Messages.PREMIUM_DISCOUNT_CTA.format({
       percent: null == P ? void 0 : P.discount.amount
     })
-  }), x = (0, c.useCardVariantsInfo)(N);
+  }), L = (0, c.useCardVariantsInfo)(N);
   return (0, a.jsxs)("div", {
-    className: r()(T.cardDescription, null == x ? void 0 : null === (t = x.description) || void 0 === t ? void 0 : t.className),
+    className: r()(T.cardDescription, null == L ? void 0 : null === (t = L.description) || void 0 === t ? void 0 : t.className),
     children: [(0, a.jsx)(_.default, {
       title: i,
-      cardVariantStyleInfo: x,
+      cardVariantStyleInfo: L,
       titleClassName: I,
       subtitle: R,
       description: S
@@ -52,7 +52,7 @@ t.default = e => {
       buttonText: h,
       color: l.Button.Colors.GREEN,
       look: l.Button.Looks.FILLED
-    }), 0 !== p.length && (null == (s = null == x ? void 0 : x.descriptionCta) ? void 0 : s.hideOnHoverComponent) !== !0 && null != A && (0, a.jsx)(l.Button, {
+    }), 0 !== p.length && (null == (s = null == L ? void 0 : L.descriptionCta) ? void 0 : s.hideOnHoverComponent) !== !0 && null != A && (0, a.jsx)(l.Button, {
       onClick: A,
       children: p
     })]
