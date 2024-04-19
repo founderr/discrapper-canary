@@ -59,7 +59,8 @@ function N(e) {
         onOpenProfile: N
       }) : null
     }), C && (0, i.jsx)(S.default, {
-      user: t
+      user: t,
+      onClose: R
     }), C && (0, i.jsx)(T.default, {
       user: t,
       bio: null == n ? void 0 : n.bio,
