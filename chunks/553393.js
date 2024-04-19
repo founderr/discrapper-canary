@@ -52,11 +52,9 @@ t.default = function(e) {
     height: Z
   } = (0, E.default)(), [J, $] = r.useState(Q), ee = (0, s.useSpring)({
     from: {
-      height: 0,
-      opacity: .7
+      height: 0
     },
     height: null != Z ? Z : 0,
-    opacity: 1,
     config: {
       mass: 1,
       tension: 170,
@@ -66,9 +64,18 @@ t.default = function(e) {
     },
     immediate: Q,
     onRest: () => $(!0)
-  });
+  }), et = (0, s.useTransition)(J, {
+    from: {
+      opacity: 0,
+      scale: 0
+    },
+    enter: {
+      opacity: 1,
+      scale: 1
+    }
+  }), en = "top" === F ? "".concat("4px", " ").concat("4px", " 0 0") : "0 0 ".concat("4px", " ").concat("4px");
   if (null == w || Y || j && !(null != k)) return null;
-  let et = () => {
+  let ei = () => {
       (0, p.trackQuestContentClicked)({
         questId: w.id,
         questContent: R.QuestContent.MEMBERS_LIST,
@@ -85,7 +92,7 @@ t.default = function(e) {
         })
       })
     },
-    en = () => {
+    er = () => {
       (0, p.trackQuestContentClicked)({
         questId: w.id,
         questContent: R.QuestContent.MEMBERS_LIST,
@@ -93,10 +100,10 @@ t.default = function(e) {
         trackGuildAndChannelMetadata: !0
       }), c.default.open(v.UserSettingsSections.INVENTORY)
     },
-    ei = e => {
-      e.stopPropagation(), et()
+    es = e => {
+      e.stopPropagation(), ei()
     },
-    er = () => {
+    ea = () => {
       if (null != k) {
         let e = h.default.getChannel(k.channelId);
         if (null != e && (0, f.canWatchStream)(e, N.default, A.default, m.default, T.default)[0]) return (0, p.trackQuestContentClicked)({
@@ -106,12 +113,12 @@ t.default = function(e) {
           trackGuildAndChannelMetadata: !0
         }), d.default.selectVoiceChannel(e.id), (0, _.watchStreamAndTransitionToStream)(k)
       }
-      en()
+      er()
     },
-    es = (() => null != k ? {
+    eo = (() => null != k ? {
       headerText: y.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
       ctaText: y.default.Messages.QUESTS_MEMBERS_LIST_STREAM_CTA,
-      handleClickCta: er,
+      handleClickCta: ea,
       tileAssetType: "game"
     } : K && !j ? {
       headerText: y.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD,
@@ -121,12 +128,12 @@ t.default = function(e) {
     } : W ? {
       headerText: y.default.Messages.QUESTS_MEMBERS_LIST_FINISH,
       ctaText: y.default.Messages.QUESTS_MEMBERS_LIST_FINISH_CTA,
-      handleClickCta: en,
+      handleClickCta: er,
       tileAssetType: "reward"
     } : {
       headerText: y.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
       ctaText: y.default.Messages.QUESTS_MEMBERS_LIST_START_CTA,
-      handleClickCta: en,
+      handleClickCta: er,
       tileAssetType: "game"
     })();
   return (0, i.jsx)(g.QuestContentImpressionTracker, {
@@ -142,25 +149,28 @@ t.default = function(e) {
       style: {
         width: B,
         height: ee.height,
-        opacity: ee.opacity,
-        borderRadius: "top" === F ? "".concat("4px", " ").concat("4px", " 0 0") : "0 0 ".concat("4px", " ").concat("4px")
+        overflow: J ? "visible" : "hidden",
+        borderRadius: en
       },
       children: (0, i.jsxs)("div", {
         ref: e => {
           q.current = e
         },
         className: P.container,
+        style: {
+          borderRadius: en
+        },
         children: [(0, i.jsxs)("div", {
           className: P.top,
           children: [(0, i.jsxs)("div", {
             className: P.left,
             children: [(0, i.jsx)(u.Heading, {
               variant: "heading-sm/semibold",
-              children: es.headerText
+              children: eo.headerText
             }), (0, i.jsxs)(u.Clickable, {
               className: P.help,
               onClick: e => {
-                x(), null == V || V(), ei(e)
+                x(), null == V || V(), es(e)
               },
               children: [(0, i.jsx)(u.Text, {
                 variant: "text-xs/medium",
@@ -180,16 +190,17 @@ t.default = function(e) {
             className: P.right,
             children: (0, i.jsxs)("div", {
               className: P.imgWrapper,
-              children: [(0, i.jsx)("div", {
+              children: [et((e, t) => t && (0, i.jsx)(s.animated.div, {
+                style: e,
                 className: P.imgUnderlay
-              }), "game" === es.tileAssetType && (0, i.jsx)("img", {
+              })), "game" === eo.tileAssetType && (0, i.jsx)("img", {
                 alt: y.default.Messages.QUESTS_MEMBERS_LIST_GAME_TILE_ALT.format({
                   gameTitle: w.config.messages.gameTitle,
                   gamePublisher: w.config.messages.gamePublisher
                 }),
                 className: P.assetTile,
                 src: (0, C.getGameTileAssetUrl)(w, X)
-              }), "reward" === es.tileAssetType && (0, i.jsx)(L.default, {
+              }), "reward" === eo.tileAssetType && (0, i.jsx)(L.default, {
                 className: P.assetTile,
                 quest: w,
                 questContent: R.QuestContent.MEMBERS_LIST,
@@ -199,12 +210,12 @@ t.default = function(e) {
           })]
         }), (0, i.jsx)(u.Button, {
           onClick: () => {
-            x(), null == V || V(), es.handleClickCta()
+            x(), null == V || V(), eo.handleClickCta()
           },
           color: u.Button.Colors.CUSTOM,
           hover: u.Button.Hovers.PRIMARY,
           className: P.ctaButton,
-          children: es.ctaText
+          children: eo.ctaText
         })]
       })
     })
