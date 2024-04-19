@@ -1,23 +1,23 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   Flex: function() {
     return S
   }
 });
-var a, s, l = n("735250"),
-  i = n("470079"),
-  r = n("557533"),
-  o = n.n(r),
-  u = n("997466"),
-  d = n("933658");
+var n, s, l = a("735250"),
+  i = a("470079"),
+  r = a("557533"),
+  o = a.n(r),
+  u = a("997466"),
+  d = a("933658");
 
-function c(e, t, n) {
+function c(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: a,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = a, e
 }
 let f = {
     VERTICAL: u.flexVertical,
@@ -46,21 +46,21 @@ let f = {
     SMALL: d.flexGutterSmall,
     LARGE: d.flexGutterLarge
   };
-class m extends(a = i.PureComponent) {
+class m extends(n = i.PureComponent) {
   render() {
     let {
       children: e,
       className: t,
-      shrink: n,
-      grow: a,
+      shrink: a,
+      grow: n,
       basis: s,
       style: r,
       wrap: u,
       ...c
     } = this.props, f = {
       style: {
-        flexGrow: a,
-        flexShrink: n,
+        flexGrow: n,
+        flexShrink: a,
         flexBasis: s,
         ...r
       },
@@ -68,11 +68,11 @@ class m extends(a = i.PureComponent) {
       ...c
     };
     if (!u && "string" != typeof e && 1 === i.Children.count(e)) {
-      let n = i.Children.only(e);
+      let a = i.Children.only(e);
       return f.style = {
         ...f.style,
-        ...n.props.style
-      }, f.className = o()(n.props.className, t), i.cloneElement(n, f)
+        ...a.props.style
+      }, f.className = o()(a.props.className, t), i.cloneElement(a, f)
     }
     return (0, l.jsx)("div", {
       ...f,
@@ -90,8 +90,8 @@ class S extends(s = i.PureComponent) {
     let {
       children: e,
       className: t,
-      direction: n,
-      justify: a,
+      direction: a,
+      justify: n,
       align: s,
       wrap: i,
       shrink: r,
@@ -108,7 +108,7 @@ class S extends(s = i.PureComponent) {
     };
     return (0, l.jsx)("div", {
       style: _,
-      className: o()(d.flex, n, a, s, i, E, t),
+      className: o()(d.flex, a, n, s, i, E, t),
       ...h,
       children: e
     })

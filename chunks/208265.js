@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return S
+    return A
   }
 }), a("47120");
 var l = a("735250"),
@@ -15,21 +15,21 @@ var l = a("735250"),
   u = a("670199"),
   E = a("800530"),
   _ = a("981631"),
-  A = a("511385");
+  S = a("511385");
 
-function S(e) {
+function A(e) {
   let {
     classificationId: t,
     transitionState: a,
-    initialSlide: S = E.AppealIngestionSlideTypes.SPEED_BUMP,
+    initialSlide: A = E.AppealIngestionSlideTypes.SPEED_BUMP,
     onClose: N
-  } = e, [I, x] = s.useState(S), {
+  } = e, [I, x] = s.useState(A), {
     classification: f,
     isDsaEligible: T
   } = (0, i.useSafetyHubClassification)(null != t ? t : _.EMPTY_STRING_SNOWFLAKE_ID), g = (null == f ? void 0 : f.is_spam) || !1, p = (null == f ? void 0 : f.is_coppa) || !1;
   s.useEffect(() => {
-    T ? x(S) : x(E.AppealIngestionSlideTypes.COLLECT_SIGNAL)
-  }, [x, S, T]);
+    T ? x(A) : x(E.AppealIngestionSlideTypes.COLLECT_SIGNAL)
+  }, [x, A, T]);
   let m = s.useCallback(() => {
       r.default.close(), N()
     }, [N]),
@@ -48,7 +48,7 @@ function S(e) {
     disableTrack: !0,
     size: n.ModalSize.DYNAMIC,
     children: (0, l.jsx)("div", {
-      className: A.container,
+      className: S.container,
       children: (0, l.jsxs)(n.Slides, {
         activeSlide: I,
         width: 500,

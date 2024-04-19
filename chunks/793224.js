@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return M
+    return y
   }
 }), n("653041");
 var l = n("735250");
@@ -32,33 +32,33 @@ var a = n("442837"),
   x = n("921944"),
   R = n("689938");
 
-function M() {
+function y() {
   let e = (0, a.useStateFromStores)([I.default], () => I.default.getVoiceChannelId()),
     t = (0, a.useStateFromStores)([S.default], () => S.default.getId()),
     n = (0, a.useStateFromStores)([C.default, T.default], () => (0, E.default)(C.default, T.default)),
     {
-      canBroadcast: M
+      canBroadcast: y
     } = d.default.useExperiment({
       location: "broadcast_button_rtc_panel_no_track"
     }, {
       autoTrackExposure: !1
     }),
-    y = (0, c.default)() && null != n,
+    M = (0, c.default)() && null != n,
     O = (0, a.useStateFromStores)([N.default], () => null != N.default.getBroadcast()),
     b = (0, a.useStateFromStoresArray)([_.default], () => _.default.getAllActiveStreams());
-  if (!y && !O) return null;
+  if (!M && !O) return null;
   if (d.default.trackExposure({
       location: "broadcast_button_rtc_panel"
-    }), !M) return null;
+    }), !y) return null;
   let D = [];
-  y && D.push(s.DismissibleContent.BROADCASTING_BROADCASTER_TOOLTIP);
+  M && D.push(s.DismissibleContent.BROADCASTING_BROADCASTER_TOOLTIP);
   let j = () => {
       o.default.trackWithMetadata(v.AnalyticEvents.BROADCAST_START_BUTTON_HOVERED, {
         game_id: null == n ? void 0 : n.id
       })
     },
     P = () => {
-      if (y) {
+      if (M) {
         let l = b.find(e => e.ownerId === t);
         null == l ? (0, p.openBroadcastingPrivacySettingsModal)(R.default.Messages.START_BROADCASTING, R.default.Messages.START_BROADCASTING_CTA, () => {
           (0, r.createBroadcastChannelOrStartStream)({
@@ -69,12 +69,12 @@ function M() {
       } else(0, u.stopBroadcast)()
     },
     G = e => (0, l.jsx)(L.default, {
-      tooltipText: y ? R.default.Messages.START_BROADCASTING : R.default.Messages.STOP_BROADCASTING,
+      tooltipText: M ? R.default.Messages.START_BROADCASTING : R.default.Messages.STOP_BROADCASTING,
       onClick: () => {
         P(), null == e || e(x.ContentDismissActionType.UNKNOWN)
       },
       onMouseEnter: j,
-      icon: y ? A.default : () => (0, l.jsx)(h.default, {
+      icon: M ? A.default : () => (0, l.jsx)(h.default, {
         width: 20,
         height: 20
       })

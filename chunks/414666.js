@@ -15,9 +15,9 @@ var l, i, n = t("735250"),
   m = t("689938"),
   v = t("609135"),
   p = t("508840"),
-  g = t("576909");
+  h = t("576909");
 (i = l || (l = {}))[i.WUMPUS = 0] = "WUMPUS", i[i.PHIBI = 1] = "PHIBI";
-let h = {
+let g = {
   0: v.activityCharacterWumpus,
   1: v.activityCharacterPhibi
 };
@@ -63,10 +63,10 @@ a.default = r.memo(function(e) {
     }), (0, n.jsxs)("div", {
       className: v.fakeActivityLayout,
       children: [(0, n.jsx)("div", {
-        className: o()(v.fakeActivityIcon, h[t]),
+        className: o()(v.fakeActivityIcon, g[t]),
         children: (0, n.jsx)(u.animated.img, {
           className: v.fakeActivityPencil,
-          src: 0 === t ? g : p,
+          src: 0 === t ? h : p,
           style: S
         })
       }), (0, n.jsxs)("div", {

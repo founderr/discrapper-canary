@@ -7,7 +7,7 @@ n.r(e), n.d(e, {
     return c
   },
   requestReview: function() {
-    return d
+    return f
   }
 });
 var i = n("544891"),
@@ -38,7 +38,7 @@ async function r() {
       guild_classifications: i,
       account_standing: u,
       is_dsa_eligible: l
-    } = e, s = n.map(t => (f(t), t));
+    } = e, s = n.map(t => (d(t), t));
     a.default.dispatch({
       type: "SAFETY_HUB_FETCH_SUCCESS",
       classifications: s.concat(null != i ? i : []),
@@ -76,7 +76,7 @@ async function c(t) {
       account_standing: u,
       is_dsa_eligible: l
     } = n, s = i.find(e => e.id === t);
-    null != s ? (f(s), a.default.dispatch({
+    null != s ? (d(s), a.default.dispatch({
       type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS",
       classification: s,
       accountStanding: u,
@@ -96,7 +96,7 @@ async function c(t) {
   })
 }
 
-function f(t) {
+function d(t) {
   if (null != t.flagged_content && t.flagged_content.length > 0) {
     let e = t.flagged_content[0];
     e.attachments = e.attachments.filter(t => {
@@ -107,7 +107,7 @@ function f(t) {
     }), t.flagged_content = (0, s.isFlaggedContentEmpty)(e) ? [] : [e]
   }
 }
-async function d(t, e, n) {
+async function f(t, e, n) {
   let u = l.default.getSuspendedUserToken(),
     s = null != u ? o.Endpoints.SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW(t) : o.Endpoints.SAFETY_HUB_REQUEST_REVIEW(t),
     r = null != u ? i.HTTP.put({

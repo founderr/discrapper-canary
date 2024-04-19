@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   DiscoveryTagsExperiment: function() {
-    return a
+    return n
   }
 });
-let a = (0, n("818083").createExperiment)({
+let n = (0, a("818083").createExperiment)({
   kind: "user",
   id: "2021-11_discovery_tags",
   label: "Discovery Tags",

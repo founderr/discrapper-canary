@@ -25,7 +25,7 @@ function v(e, t, n) {
   }) : e[t] = n, e
 }
 
-function y(e) {
+function T(e) {
   let {
     closePopout: t
   } = e;
@@ -33,7 +33,7 @@ function y(e) {
     onClose: t
   })
 }
-class O extends(i = l.PureComponent) {
+class y extends(i = l.PureComponent) {
   render() {
     let {
       selectedGuildId: e,
@@ -44,7 +44,7 @@ class O extends(i = l.PureComponent) {
       onDragStart: this.onDragStart
     }, e) : (0, a.jsx)(m.default, {
       title: E.default.Messages.DIRECT_MESSAGES,
-      renderSettings: y,
+      renderSettings: T,
       onDragStart: this.onDragStart,
       children: (0, a.jsx)(g.default, {})
     }), l = n ? "div" : f.default;
@@ -68,8 +68,8 @@ class O extends(i = l.PureComponent) {
     })
   }
 }
-v(O, "defaultProps", {
+v(y, "defaultProps", {
   contained: !1
 }), t.default = r.default.connectStores([u.default], () => ({
   selectedGuildId: u.default.getGuildId()
-}))(O)
+}))(y)

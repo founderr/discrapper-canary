@@ -21,19 +21,19 @@ var i = n("735250"),
   E = n("430824"),
   S = n("699516"),
   v = n("944486"),
-  y = n("125015"),
-  O = n("389320"),
-  T = n("465670"),
-  C = n("548343"),
-  N = n("339983"),
-  I = n("823779"),
-  _ = n("118717"),
+  T = n("125015"),
+  y = n("389320"),
+  I = n("465670"),
+  N = n("548343"),
+  O = n("339983"),
+  _ = n("823779"),
+  C = n("118717"),
   A = n("547881"),
   x = n("707878"),
   R = n("689938"),
-  L = n("144421");
+  M = n("144421");
 
-function M(e, t, n) {
+function L(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -56,9 +56,9 @@ class D extends a.Component {
       isBlocked: s
     } = this.props;
     if (!(0, p.isPrivate)(n.type)) return null;
-    let o = y.default,
+    let o = T.default,
       d = !1;
-    return a ? l ? (e = R.default.Messages.LEAVE_CALL, o = O.default) : e = R.default.Messages.JOIN_CALL : s ? (e = R.default.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, t = r.Tooltip.Colors.RED, d = !0) : e = R.default.Messages.START_VOICE_CALL, (0, i.jsx)(f.default.Icon, {
+    return a ? l ? (e = R.default.Messages.LEAVE_CALL, o = y.default) : e = R.default.Messages.JOIN_CALL : s ? (e = R.default.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, t = r.Tooltip.Colors.RED, d = !0) : e = R.default.Messages.START_VOICE_CALL, (0, i.jsx)(f.default.Icon, {
       icon: o,
       tooltip: e,
       onClick: this.handleClickCall,
@@ -82,16 +82,16 @@ class D extends a.Component {
       showOpacitySlider: p
     } = this.state;
     return p && !n ? (0, i.jsxs)(A.default.Bar, {
-      className: L.opacityHeader,
+      className: M.opacityHeader,
       children: [(0, i.jsx)(x.default, {}), (0, i.jsx)(f.default.Icon, {
-        icon: T.default,
+        icon: I.default,
         onClick: this.handleCloseOpacitySettings,
         tooltip: R.default.Messages.CLOSE
       })]
     }) : (0, i.jsx)(A.default.Background, {
       opacityOverride: n || u ? null : 1,
       children: (0, i.jsx)("div", {
-        className: s()(e, t, L.headerContainer),
+        className: s()(e, t, M.headerContainer),
         onMouseDown: r,
         onContextMenu: d,
         children: (0, i.jsxs)(f.default, {
@@ -99,8 +99,8 @@ class D extends a.Component {
           channelId: a.id,
           toolbar: this.renderWidgetButtons(),
           transparent: !0,
-          children: [u || n || c ? null : (0, i.jsx)(C.default, {
-            className: s()(L.dragIcon, t),
+          children: [u || n || c ? null : (0, i.jsx)(N.default, {
+            className: s()(M.dragIcon, t),
             width: 20,
             height: 20
           }), (0, h.renderTitle)({
@@ -112,9 +112,9 @@ class D extends a.Component {
     })
   }
   constructor(...e) {
-    super(...e), M(this, "state", {
+    super(...e), L(this, "state", {
       showOpacitySlider: !1
-    }), M(this, "handleClickCall", e => {
+    }), L(this, "handleClickCall", e => {
       let {
         channel: t,
         userIsInChannelCall: n,
@@ -125,26 +125,26 @@ class D extends a.Component {
         let n = !i && !e.shiftKey;
         d.default.callPrivateChannel(t.id, n)
       }
-    }), M(this, "handleOpenOpacitySettings", () => {
+    }), L(this, "handleOpenOpacitySettings", () => {
       let {
         pinned: e
       } = this.props;
       this.setState({
         showOpacitySlider: !0
       }), e && d.default.setPreviewInGameMode(!0)
-    }), M(this, "handleCloseOpacitySettings", () => {
+    }), L(this, "handleCloseOpacitySettings", () => {
       let {
         pinned: e
       } = this.props;
       this.setState({
         showOpacitySlider: !1
       }), e && d.default.setPreviewInGameMode(!1)
-    }), M(this, "handleMouseDown", e => {
+    }), L(this, "handleMouseDown", e => {
       let {
         onMouseDown: t
       } = this.props;
       null != t && t(e)
-    }), M(this, "renderWidgetButtons", () => {
+    }), L(this, "renderWidgetButtons", () => {
       let {
         locked: e,
         handlePin: t,
@@ -152,11 +152,11 @@ class D extends a.Component {
       } = this.props, l = n ? R.default.Messages.OVERLAY_WIDGET_HIDE_IN_GAME : R.default.Messages.OVERLAY_WIDGET_SHOW_IN_GAME;
       return e ? null : (0, i.jsxs)(a.Fragment, {
         children: [this.renderCallButton(), n ? (0, i.jsx)(f.default.Icon, {
-          icon: N.default,
+          icon: O.default,
           tooltip: R.default.Messages.FORM_LABEL_OVERLAY_CHAT_OPACITY,
           onClick: this.handleOpenOpacitySettings
         }) : null, (0, i.jsx)(f.default.Icon, {
-          icon: n ? _.default : I.default,
+          icon: n ? C.default : _.default,
           tooltip: l,
           selected: n,
           onClick: t

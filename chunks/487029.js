@@ -48,7 +48,7 @@ function N(e) {
         };
       return a.forEach(e => s(e, !0)), a.forEach(e => s(e, !1)), l
     }, [t, n, e])
-  }((0, g.useSortedGuildIdsForSoundboard)(n, !0)), M = (0, C.useGuildIdsToFetchSoundsFor)(), y = a.useRef(null), [O, b] = a.useState(void 0), D = (0, i.useStateFromStores)([c.default], () => c.default.getMediaSessionId()), {
+  }((0, g.useSortedGuildIdsForSoundboard)(n, !0)), y = (0, C.useGuildIdsToFetchSoundsFor)(), M = a.useRef(null), [O, b] = a.useState(void 0), D = (0, i.useStateFromStores)([c.default], () => c.default.getMediaSessionId()), {
     analyticsLocations: j
   } = (0, o.default)(r.default.SOUNDBOARD_WHEEL), P = a.useCallback(e => {
     (0, m.playSound)(e, n.id, j), x()
@@ -56,9 +56,9 @@ function N(e) {
   a.useEffect(() => {
     h.maybeFetchSoundboardSounds(), d.FrecencyUserSettingsActionCreators.loadIfNecessary()
   }, []), a.useEffect(() => {
-    0 === R.length && 0 === M.length && x()
-  }, [R.length, M, x]), a.useEffect(() => () => {
-    let e = y.current;
+    0 === R.length && 0 === y.length && x()
+  }, [R.length, y, x]), a.useEffect(() => () => {
+    let e = M.current;
     !A && null != e && P(e)
   }, [A, P]), (0, u.default)({
     type: s.ImpressionTypes.POPOUT,
@@ -72,7 +72,7 @@ function N(e) {
     disableTrack: !L
   });
   let G = a.useCallback(e => {
-      y.current = e, b(null == e ? void 0 : e.soundId)
+      M.current = e, b(null == e ? void 0 : e.soundId)
     }, []),
     U = a.useCallback(e => {
       if (null == e) {

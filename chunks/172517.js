@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   decodeEncodedUserRecord: function() {
-    return g
+    return E
   },
   decryptEncodedCiphertext: function() {
     return h
   },
   decryptNonce: function() {
-    return E
+    return g
   },
   generateRsaKeyPair: function() {
     return r
@@ -64,10 +64,10 @@ async function h(e, t) {
     s = await f(e, d(t));
   return n.decode(s)
 }
-async function E(e, t) {
+async function g(e, t) {
   return u(await f(e, d(t)))
 }
-async function g(e, t) {
+async function E(e, t) {
   t = await h(e, t);
   let n = t.match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
   if (null == n) throw Error("Invalid encoded user record.");

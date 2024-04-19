@@ -53,13 +53,13 @@ function d(e) {
   } = e, {
     content: d,
     timestamp: c,
-    messageReference: E
-  } = a, f = (0, i.default)(a), _ = t(f), T = o.default.Messages.SYSTEM_MESSAGE_CHANNEL_FOLLOW_ADD_HOOK.format({
-    username: f.nick,
+    messageReference: f
+  } = a, E = (0, i.default)(a), _ = t(E), m = o.default.Messages.SYSTEM_MESSAGE_CHANNEL_FOLLOW_ADD_HOOK.format({
+    username: E.nick,
     usernameHook: _,
     webhookName: d,
     webhookNameHook: (e, t) => (0, s.jsx)(u, {
-      messageReference: E,
+      messageReference: f,
       children: e
     }, t)
   });
@@ -67,6 +67,6 @@ function d(e) {
     icon: n("570111"),
     timestamp: c,
     compact: l,
-    children: T
+    children: m
   })
 }

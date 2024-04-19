@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("735250");
 s("470079");
-var i = s("120356"),
-  l = s.n(i),
+var l = s("120356"),
+  i = s.n(l),
   r = s("481060"),
   C = s("204197"),
   n = s("859709");
@@ -16,7 +16,7 @@ function d(e) {
   var t;
   let {
     user: s,
-    checked: i,
+    checked: l,
     onChange: d,
     disabled: o
   } = e, {
@@ -31,7 +31,7 @@ function d(e) {
     children: [(0, a.jsxs)("div", {
       className: n.user,
       children: [(0, a.jsx)(r.Avatar, {
-        className: l()({
+        className: i()({
           [n.muted]: o
         }),
         src: c,
@@ -47,7 +47,7 @@ function d(e) {
       className: n.checkbox,
       children: (0, a.jsx)(r.Checkbox, {
         disabled: o,
-        value: i,
+        value: l,
         onChange: (e, t) => d(s, t)
       })
     })]

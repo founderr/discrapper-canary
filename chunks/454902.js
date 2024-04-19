@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return a
   },
   renderKeybindHint: function() {
-    return y
+    return T
   },
   renderSubtleHint: function() {
-    return O
+    return y
   }
 });
 var i, a, l, s = n("735250"),
@@ -39,7 +39,7 @@ let E = e => e.stopPropagation(),
   v = () => (0, s.jsx)("div", {
     className: p.divider
   }),
-  y = (e, t, n) => (0, s.jsx)("div", {
+  T = (e, t, n) => (0, s.jsx)("div", {
     className: p.keybindMessage,
     children: n.format({
       keybind: t,
@@ -49,12 +49,12 @@ let E = e => e.stopPropagation(),
       }, n)
     })
   }),
-  O = (e, t) => (0, s.jsx)("div", {
+  y = (e, t) => (0, s.jsx)("div", {
     className: p.hintSubtleText,
     children: t
   });
 (i = a || (a = {})).PRIMARY = "PRIMARY", i.BRAND = "BRAND", i.DANGER = "DANGER";
-class T extends(l = o.PureComponent) {
+class I extends(l = o.PureComponent) {
   static getDerivedStateFromProps(e, t) {
     let {
       expand: n
@@ -265,9 +265,9 @@ class T extends(l = o.PureComponent) {
     }
   }
 }
-m(T, "ColorSchemes", a), m(T, "defaultProps", {
+m(I, "ColorSchemes", a), m(I, "defaultProps", {
   maxBodyLines: void 0,
   colorScheme: "PRIMARY",
   expand: !1,
   disabled: !1
-}), t.default = T
+}), t.default = I

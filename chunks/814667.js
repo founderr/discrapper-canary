@@ -6,11 +6,11 @@ t.default = e => {
   let {
     className: t,
     width: s = 214,
-    height: i = 165
+    height: l = 165
   } = e;
   return (0, a.jsxs)("svg", {
     width: s,
-    height: i,
+    height: l,
     viewBox: "0 0 214 165",
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg",

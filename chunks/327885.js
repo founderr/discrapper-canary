@@ -21,8 +21,8 @@ var n = s("512722"),
   m = s("556296"),
   _ = s("808506"),
   g = s("237997"),
-  h = s("739563"),
-  I = s("626135");
+  I = s("739563"),
+  h = s("626135");
 s("63063");
 var N = s("13140"),
   p = s("981631"),
@@ -88,21 +88,21 @@ function M() {
   }), P = (0, E.isHookModuleTooOld)();
 
   function j(e) {
-    c.default.setEnabled(e, t), I.default.track(p.AnalyticEvents.OVERLAY_TOGGLED, {
+    c.default.setEnabled(e, t), h.default.track(p.AnalyticEvents.OVERLAY_TOGGLED, {
       enabled: e,
       setting_type: "overlay toggled - global"
     })
   }
 
   function b(t) {
-    c.default.setEnabled(e, t), I.default.track(p.AnalyticEvents.OVERLAY_TOGGLED, {
+    c.default.setEnabled(e, t), h.default.track(p.AnalyticEvents.OVERLAY_TOGGLED, {
       enabled: t,
       setting_type: "overlay toggled - legacy"
     })
   }
   return ! function() {
     let e = x(O);
-    !r().isEqual(e, O) && (I.default.track(p.AnalyticEvents.OVERLAY_SETTINGS_UPDATED, e), O = e)
+    !r().isEqual(e, O) && (h.default.track(p.AnalyticEvents.OVERLAY_SETTINGS_UPDATED, e), O = e)
   }(), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(d.FormSection, {
       tag: d.FormTitleTags.H1,
@@ -226,7 +226,7 @@ function M() {
         title: C.default.Messages.FORM_LABEL_NOTIFICATION_POSITION,
         children: (0, a.jsx)("div", {
           className: A.notificationSettings,
-          children: (0, a.jsx)(h.default, {
+          children: (0, a.jsx)(I.default, {
             position: N,
             onChange: (e, t) => c.default.setNotificationPositionMode(t)
           })

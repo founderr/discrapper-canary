@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   markView: function() {
     return s
   }
 });
-var a = n("570140");
+var n = a("570140");
 
 function s(e) {
-  a.default.dispatch({
+  n.default.dispatch({
     type: "VIEW_HISTORY_MARK_VIEW",
     key: e
   })

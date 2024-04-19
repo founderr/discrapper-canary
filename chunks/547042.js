@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   EmbeddedActivityTutorial: function() {
     return A
   },
@@ -7,30 +7,30 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var a, s, l = n("735250"),
-  i = n("470079"),
-  r = n("442837"),
-  o = n("481060"),
-  u = n("40851"),
-  d = n("566620"),
-  c = n("403404"),
-  f = n("100527"),
-  E = n("906732"),
-  h = n("592125"),
-  _ = n("810090"),
-  C = n("626135"),
-  m = n("981631"),
-  S = n("921944"),
-  I = n("689938"),
-  p = n("198940");
-(a = s || (s = {})).BOOSTING = "BOOSTING", a.NITRO = "NITRO", a.BASH_OUT = "BASH_OUT", a.GAME_NIGHT = "GAME_NIGHT";
+var n, s, l = a("735250"),
+  i = a("470079"),
+  r = a("442837"),
+  o = a("481060"),
+  u = a("40851"),
+  d = a("566620"),
+  c = a("403404"),
+  f = a("100527"),
+  E = a("906732"),
+  h = a("592125"),
+  _ = a("810090"),
+  C = a("626135"),
+  m = a("981631"),
+  S = a("921944"),
+  I = a("689938"),
+  p = a("198940");
+(n = s || (s = {})).BOOSTING = "BOOSTING", n.NITRO = "NITRO", n.BASH_OUT = "BASH_OUT", n.GAME_NIGHT = "GAME_NIGHT";
 let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4",
   g = "https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png",
   A = e => {
     let {
       channelId: t,
-      markAsDismissed: n,
-      tutorialType: a
+      markAsDismissed: a,
+      tutorialType: n
     } = e, {
       analyticsLocation: s,
       analyticsType: A,
@@ -39,8 +39,8 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
       description: R,
       learnMore: O,
       title: L,
-      videoPosterUrl: M,
-      videoUrl: P,
+      videoPosterUrl: P,
+      videoUrl: M,
       ctaOnClick: x
     } = function(e) {
       switch (e) {
@@ -65,7 +65,7 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
             analyticsLocation: f.default.ACTIVITY_COACH_MARK_NITRO, analyticsType: "", description: "", learnMore: !1, title: "", videoPosterUrl: "", videoUrl: "", ctaText: "", dismissText: ""
           }
       }
-    }(a), {
+    }(n), {
       analyticsLocations: y
     } = (0, E.default)(s);
     i.useEffect(() => {
@@ -85,8 +85,8 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
             className: p.content,
             children: [(0, l.jsx)(_.default, {
               className: p.video,
-              src: P,
-              poster: M,
+              src: M,
+              poster: P,
               width: 224,
               height: 126,
               loop: !0,
@@ -116,14 +116,14 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
               children: [(0, l.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,
                 onClick: () => {
-                  n(S.ContentDismissActionType.UNKNOWN)
+                  a(S.ContentDismissActionType.UNKNOWN)
                 },
                 children: v
               }), (0, l.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,
                 look: o.Button.Looks.INVERTED,
                 onClick: null != x ? x : () => {
-                  n(S.ContentDismissActionType.UNKNOWN), null != b && ((0, c.default)({
+                  a(S.ContentDismissActionType.UNKNOWN), null != b && ((0, c.default)({
                     channel: b.isGuildVoice() ? b : void 0,
                     guildId: b.guild_id,
                     locationObject: {

@@ -15,14 +15,14 @@ var a = s("735250"),
   c = s("481060"),
   p = s("355467"),
   m = s("100527"),
-  f = s("906732"),
-  E = s("210887"),
+  E = s("906732"),
+  f = s("210887"),
   _ = s("301766"),
   I = s("509545"),
   S = s("285952"),
   N = s("759231"),
-  P = s("74538"),
-  C = s("937615"),
+  C = s("74538"),
+  P = s("937615"),
   h = s("689938"),
   T = s("643311");
 
@@ -33,19 +33,19 @@ function A(e) {
     transitionState: n,
     onClose: i,
     analyticsLocation: l
-  } = e, r = (0, o.useStateFromStores)([E.default], () => E.default.theme), {
+  } = e, r = (0, o.useStateFromStores)([f.default], () => f.default.theme), {
     analyticsLocations: N
-  } = (0, f.default)(m.default.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL);
+  } = (0, E.default)(m.default.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL);
   async function A() {
     await (0, p.upgradeSubscription)(t, t.planId, N, l), i()
   }
   let R = I.default.get(t.planId);
   u()(null != R, "Missing subscriptionPlan");
-  let y = (0, P.getPrice)(t.planId, !1, !1, {
+  let y = (0, C.getPrice)(t.planId, !1, !1, {
       paymentSourceId: t.paymentSourceId,
       currency: t.currency
     }),
-    M = (0, C.formatRate)((0, C.formatPrice)(y.amount, y.currency), R.interval, R.intervalCount);
+    M = (0, P.formatRate)((0, P.formatPrice)(y.amount, y.currency), R.interval, R.intervalCount);
   return (0, a.jsxs)(c.ModalRoot, {
     transitionState: n,
     "aria-label": h.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER,
@@ -61,11 +61,11 @@ function A(e) {
     }), (0, a.jsx)(c.ModalContent, {
       className: T.modalBody,
       children: (0, _.isNoneSubscription)(t.planId) ? h.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY_NO_EXISTING_PLAN.format({
-        downgradedPlan: P.default.getDisplayName(s.planId),
+        downgradedPlan: C.default.getDisplayName(s.planId),
         existingRate: M
       }) : h.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY.format({
-        existingPlan: P.default.getDisplayName(t.planId),
-        downgradedPlan: P.default.getDisplayName(s.planId),
+        existingPlan: C.default.getDisplayName(t.planId),
+        downgradedPlan: C.default.getDisplayName(s.planId),
         existingRate: M
       })
     }), (0, a.jsxs)(c.ModalFooter, {
@@ -96,7 +96,7 @@ function R(e) {
     }), (0, a.jsx)("div", {
       className: T.text,
       children: h.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_NOTICE.format({
-        planName: t.hasExternalPlanChange ? (0, P.getExternalPlanDisplayName)(s) : P.default.getDisplayName(s.planId),
+        planName: t.hasExternalPlanChange ? (0, C.getExternalPlanDisplayName)(s) : C.default.getDisplayName(s.planId),
         date: t.currentPeriodEnd
       })
     }), t.isPurchasedExternally ? null : (0, a.jsx)(c.Anchor, {

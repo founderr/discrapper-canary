@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("474936"),
   _ = s("689938"),
   g = s("430040"),
-  h = s("794711");
-let I = () => {
+  I = s("794711");
+let h = () => {
     r.default.dispatch({
       type: "APP_ICON_EDITOR_OPEN"
     }), (0, o.popLayer)()
@@ -43,7 +43,7 @@ let I = () => {
           className: g.tryItOutButtons,
           children: [(0, a.jsx)(i.Button, {
             color: t ? i.Button.Colors.PRIMARY : i.Button.Colors.BRAND,
-            onClick: () => I(),
+            onClick: () => h(),
             children: _.default.Messages.APP_ICON_PREVIEW_TITLE
           }), t ? (0, a.jsx)(E.default, {
             subscriptionTier: m.PremiumSubscriptionSKUs.TIER_2,
@@ -51,7 +51,7 @@ let I = () => {
           }) : null]
         })
       }), (0, a.jsx)(i.FormDivider, {
-        className: h.marginTop20
+        className: I.marginTop20
       })]
     })
   }

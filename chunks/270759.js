@@ -1,55 +1,55 @@
 "use strict";
-n.r(t), n("610138"), n("216116"), n("78328"), n("815648"), n("47120"), n("757143");
-var a = n("735250"),
-  s = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
-  r = n("613828"),
-  o = n("873546"),
-  u = n("442837"),
-  d = n("481060"),
-  c = n("570140"),
-  f = n("150063"),
-  E = n("758059"),
-  h = n("252618"),
-  _ = n("5254"),
-  C = n("984370"),
-  m = n("518311"),
-  S = n("199104"),
-  I = n("108427"),
-  p = n("210887"),
-  T = n("974042"),
-  g = n("153124"),
-  A = n("988951"),
-  N = n("26290"),
-  v = n("792125"),
-  R = n("666286"),
-  O = n("596957"),
-  L = n("981631"),
-  M = n("723359"),
-  P = n("689938"),
-  x = n("272212");
+a.r(t), a("610138"), a("216116"), a("78328"), a("815648"), a("47120"), a("757143");
+var n = a("735250"),
+  s = a("470079"),
+  l = a("120356"),
+  i = a.n(l),
+  r = a("613828"),
+  o = a("873546"),
+  u = a("442837"),
+  d = a("481060"),
+  c = a("570140"),
+  f = a("150063"),
+  E = a("758059"),
+  h = a("252618"),
+  _ = a("5254"),
+  C = a("984370"),
+  m = a("518311"),
+  S = a("199104"),
+  I = a("108427"),
+  p = a("210887"),
+  T = a("974042"),
+  g = a("153124"),
+  A = a("988951"),
+  N = a("26290"),
+  v = a("792125"),
+  R = a("666286"),
+  O = a("596957"),
+  L = a("981631"),
+  P = a("723359"),
+  M = a("689938"),
+  x = a("272212");
 
 function y() {
-  return (0, a.jsxs)("div", {
+  return (0, n.jsxs)("div", {
     className: x.inviteToolbar,
-    children: [(0, a.jsx)(m.default, {
-      tooltip: P.default.Messages.NEW_GROUP_DM
-    }), (0, a.jsx)(C.default.Divider, {})]
+    children: [(0, n.jsx)(m.default, {
+      tooltip: M.default.Messages.NEW_GROUP_DM
+    }), (0, n.jsx)(C.default.Divider, {})]
   })
 }
 t.default = function(e) {
   let {
     initialSection: t
-  } = e, n = (0, r.useLocation)(), l = (0, r.useHistory)();
+  } = e, a = (0, r.useLocation)(), l = (0, r.useHistory)();
   s.useEffect(() => {
-    "true" === new URLSearchParams(n.search).get("confirm-age") && c.default.dispatch({
+    "true" === new URLSearchParams(a.search).get("confirm-age") && c.default.dispatch({
       type: "AGE_GATE_MODAL_OPEN",
-      source: M.AgeGateSource.DEEP_LINK_PROMPT
+      source: P.AgeGateSource.DEEP_LINK_PROMPT
     }).then(() => {
       l.replace(L.Routes.ME)
     })
-  }, [l, n]), s.useEffect(() => {
+  }, [l, a]), s.useEffect(() => {
     f.setHomeLink(L.Routes.FRIENDS), (0, I.trackAppUIViewed)("friends")
   }, []), s.useEffect(() => {
     null != t && E.default.setInitialSection(t)
@@ -62,87 +62,87 @@ t.default = function(e) {
     U = (0, u.useStateFromStoresObject)([_.default], () => _.default.getSuggestionCount()),
     j = (0, g.useUID)(),
     G = (0, g.useUID)();
-  return (0, a.jsxs)("main", {
+  return (0, n.jsxs)("main", {
     className: x.container,
-    "aria-label": P.default.Messages.FRIENDS,
-    children: [(0, a.jsx)(h.AppPageTitle, {
-      location: P.default.Messages.FRIENDS
-    }), (0, a.jsxs)(C.default, {
+    "aria-label": M.default.Messages.FRIENDS,
+    children: [(0, n.jsx)(h.AppPageTitle, {
+      location: M.default.Messages.FRIENDS
+    }), (0, n.jsxs)(C.default, {
       className: (0, v.getThemeClass)(m),
-      toolbar: (0, a.jsx)(y, {}),
+      toolbar: (0, n.jsx)(y, {}),
       scrollable: o.isMobile,
       role: "navigation",
       "aria-labelledby": j,
-      children: [(0, a.jsx)(C.default.Icon, {
+      children: [(0, n.jsx)(C.default.Icon, {
         icon: A.default,
         "aria-hidden": !0
-      }), (0, a.jsx)(C.default.Title, {
+      }), (0, n.jsx)(C.default.Title, {
         id: j,
-        children: P.default.Messages.FRIENDS
-      }), (0, a.jsx)(C.default.Divider, {}), (0, a.jsxs)(d.TabBar, {
-        "aria-label": P.default.Messages.FRIENDS,
+        children: M.default.Messages.FRIENDS
+      }), (0, n.jsx)(C.default.Divider, {}), (0, n.jsxs)(d.TabBar, {
+        "aria-label": M.default.Messages.FRIENDS,
         selectedItem: D,
         type: "top-pill",
         onItemSelect: e => {
           E.default.setSection(e)
         },
         className: x.tabBar,
-        children: [(0, a.jsx)(d.TabBar.Item, {
+        children: [(0, n.jsx)(d.TabBar.Item, {
           id: L.FriendsSections.ONLINE,
           className: x.item,
-          children: P.default.Messages.FRIENDS_SECTION_ONLINE
-        }), (0, a.jsx)(d.TabBar.Item, {
+          children: M.default.Messages.FRIENDS_SECTION_ONLINE
+        }), (0, n.jsx)(d.TabBar.Item, {
           id: L.FriendsSections.ALL,
           className: x.item,
-          children: P.default.Messages.FRIENDS_SECTION_ALL
-        }), (0, a.jsxs)(d.TabBar.Item, {
+          children: M.default.Messages.FRIENDS_SECTION_ALL
+        }), (0, n.jsxs)(d.TabBar.Item, {
           id: L.FriendsSections.PENDING,
           className: x.item,
-          "aria-label": P.default.Messages.FRIENDS_SECTION_PENDING,
-          children: [P.default.Messages.FRIENDS_SECTION_PENDING, b > 0 ? (0, a.jsx)(N.NumberBadge, {
+          "aria-label": M.default.Messages.FRIENDS_SECTION_PENDING,
+          children: [M.default.Messages.FRIENDS_SECTION_PENDING, b > 0 ? (0, n.jsx)(N.NumberBadge, {
             count: b,
             className: x.badge,
             style: {
               paddingRight: 0
             }
           }) : null]
-        }), U > 0 ? (0, a.jsxs)(d.TabBar.Item, {
+        }), U > 0 ? (0, n.jsxs)(d.TabBar.Item, {
           id: L.FriendsSections.SUGGESTIONS,
           className: x.item,
-          "aria-label": P.default.Messages.FRIENDS_SECTION_SUGGESTIONS,
-          children: [P.default.Messages.FRIENDS_SECTION_SUGGESTIONS, (0, a.jsx)(N.NumberBadge, {
+          "aria-label": M.default.Messages.FRIENDS_SECTION_SUGGESTIONS,
+          children: [M.default.Messages.FRIENDS_SECTION_SUGGESTIONS, (0, n.jsx)(N.NumberBadge, {
             count: U,
             className: x.badge,
             style: {
               paddingRight: 0
             }
           })]
-        }) : null, (0, a.jsx)(d.TabBar.Item, {
+        }) : null, (0, n.jsx)(d.TabBar.Item, {
           id: L.FriendsSections.BLOCKED,
           className: x.item,
-          children: P.default.Messages.BLOCKED
-        }), (0, a.jsx)(d.TabBar.Item, {
-          "aria-label": P.default.Messages.FRIENDS_SECTION_ADD_FRIEND,
+          children: M.default.Messages.BLOCKED
+        }), (0, n.jsx)(d.TabBar.Item, {
+          "aria-label": M.default.Messages.FRIENDS_SECTION_ADD_FRIEND,
           className: i()(x.item, x.addFriend),
           id: L.FriendsSections.ADD_FRIEND,
-          children: (0, a.jsx)("span", {
-            children: P.default.Messages.FRIENDS_SECTION_ADD_FRIEND
+          children: (0, n.jsx)("span", {
+            children: M.default.Messages.FRIENDS_SECTION_ADD_FRIEND
           })
         })]
       })]
-    }), (0, a.jsxs)("div", {
+    }), (0, n.jsxs)("div", {
       className: x.tabBody,
-      children: [(0, a.jsx)(d.TabBar.Panel, {
+      children: [(0, n.jsx)(d.TabBar.Panel, {
         id: D,
         className: x.peopleColumn,
         "aria-labelledby": G,
-        children: D === L.FriendsSections.ADD_FRIEND ? (0, a.jsx)(R.default, {}) : (0, a.jsx)(O.default, {
+        children: D === L.FriendsSections.ADD_FRIEND ? (0, n.jsx)(R.default, {}) : (0, n.jsx)(O.default, {
           titleId: G,
           sectionFilter: D
         })
-      }), (0, a.jsx)("div", {
+      }), (0, n.jsx)("div", {
         className: x.nowPlayingColumn,
-        children: (0, a.jsx)(S.default, {})
+        children: (0, n.jsx)(S.default, {})
       })]
     })]
   })

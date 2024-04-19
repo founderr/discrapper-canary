@@ -1,25 +1,25 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   useUsernameLiveCheck: function() {
-    return u
+    return d
   }
 });
-var s = a("470079"),
-  i = a("392711"),
-  n = a("399606"),
-  l = a("986197"),
-  o = a("654344"),
-  r = a("135200"),
-  d = a("346585");
-let u = function(e) {
+var s = n("470079"),
+  a = n("392711"),
+  i = n("399606"),
+  r = n("986197"),
+  l = n("654344"),
+  o = n("135200"),
+  u = n("346585");
+let d = function(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-    a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-    u = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-    c = (0, n.useStateFromStores)([r.default], () => r.default.validate(e), [e]),
-    E = (0, n.useStateFromStores)([r.default], () => r.default.isRateLimited()),
-    m = (0, o.usePomeloDebounceDelay)(),
-    S = s.useMemo(() => (0, i.debounce)(e => l.default.attemptPomelo(e, a ? "registration" : "modal", a, u), m), [m, a, u]);
+    n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+    d = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+    c = (0, i.useStateFromStores)([o.default], () => o.default.validate(e), [e]),
+    f = (0, i.useStateFromStores)([o.default], () => o.default.isRateLimited()),
+    h = (0, l.usePomeloDebounceDelay)(),
+    g = s.useMemo(() => (0, a.debounce)(e => r.default.attemptPomelo(e, n ? "registration" : "modal", n, d), h), [h, n, d]);
   return s.useEffect(() => {
-    t && !E && null == c && "" !== e && S(e)
-  }, [t, E, c, e, S]), s.useMemo(() => null != c ? (0, d.formatUsernameLiveCheckValidation)(c) : void 0, [c])
+    t && !f && null == c && "" !== e && g(e)
+  }, [t, f, c, e, g]), s.useMemo(() => null != c ? (0, u.formatUsernameLiveCheckValidation)(c) : void 0, [c])
 }

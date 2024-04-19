@@ -1,36 +1,36 @@
 "use strict";
-let a;
-n.r(t), n("47120");
-var s = n("735250");
-n("470079");
-var l = n("481060"),
-  i = n("570140"),
-  r = n("317770"),
-  o = n("622822"),
-  u = n("391650"),
-  d = n("305325"),
-  c = n("341298"),
-  f = n("390885"),
-  E = n("524329"),
-  h = n("995532"),
-  _ = n("486472"),
-  C = n("430824"),
-  m = n("914010"),
-  S = n("594174"),
-  I = n("823379"),
-  p = n("358085"),
-  T = n("929809"),
-  g = n("179645"),
-  A = n("701476"),
-  N = n("785997"),
-  v = n("981631"),
-  R = n("188785"),
-  O = n("630724");
+let n;
+a.r(t), a("47120");
+var s = a("735250");
+a("470079");
+var l = a("481060"),
+  i = a("570140"),
+  r = a("317770"),
+  o = a("622822"),
+  u = a("391650"),
+  d = a("305325"),
+  c = a("341298"),
+  f = a("390885"),
+  E = a("524329"),
+  h = a("995532"),
+  _ = a("486472"),
+  C = a("430824"),
+  m = a("914010"),
+  S = a("594174"),
+  I = a("823379"),
+  p = a("358085"),
+  T = a("929809"),
+  g = a("179645"),
+  A = a("701476"),
+  N = a("785997"),
+  v = a("981631"),
+  R = a("188785"),
+  O = a("630724");
 
 function L() {
-  null != a && (0, l.closeModal)(a)
+  null != n && (0, l.closeModal)(n)
 }
-class M extends r.default {
+class P extends r.default {
   _initialize() {
     i.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), i.default.subscribe("LOGOUT", L)
   }
@@ -57,8 +57,8 @@ class M extends r.default {
       let e = C.default.getGuild(L);
       (null == e ? void 0 : e.hasVerificationGate()) && (r = !0, (0, E.fetchWelcomeScreen)(e.id))
     }
-    let M = () => 0 === _.default.totalGuilds && !p.isPlatformEmbedded,
-      P = o.userNeedsAgeGate();
+    let P = () => 0 === _.default.totalGuilds && !p.isPlatformEmbedded,
+      M = o.userNeedsAgeGate();
     e = [{
       key: "Unified NUF Modal",
       open: async function e(e) {
@@ -91,25 +91,25 @@ class M extends r.default {
               I.assertNever(e)
           }
         };
-        a = await (0, l.openModalLazy)(async () => {
+        n = await (0, l.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("42483"), n.e("22458")]).then(n.bind(n, "599219"));
-          return n => (0, s.jsx)(e, {
-            ...n,
+          } = await Promise.all([a.e("49237"), a.e("99387"), a.e("66635"), a.e("42483"), a.e("22458")]).then(a.bind(a, "599219"));
+          return a => (0, s.jsx)(e, {
+            ...a,
             onSlideChange: t
           })
         }, {
           onCloseRequest: v.NOOP,
           onCloseCallback: e,
-          modalKey: a
+          modalKey: n
         })
       },
-      predicate: () => M() && !R.CONFERENCE_MODE_ENABLED
+      predicate: () => P() && !R.CONFERENCE_MODE_ENABLED
     }, {
       key: "New User Age Gate",
       open: u.openNewUserAgeGateModal,
-      predicate: () => P && !M() && !R.CONFERENCE_MODE_ENABLED
+      predicate: () => M && !P() && !R.CONFERENCE_MODE_ENABLED
     }, {
       key: "Claim Account Modal",
       open: e => u.openClaimAccountModal(p.isPlatformEmbedded, e),
@@ -129,7 +129,7 @@ class M extends r.default {
       open: e => (0, l.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("77578")]).then(n.bind(n, "184782"));
+        } = await Promise.all([a.e("99387"), a.e("77578")]).then(a.bind(a, "184782"));
         return t => (0, s.jsx)(e, {
           ...t,
           guildId: L
@@ -141,11 +141,11 @@ class M extends r.default {
     }], t = () => {
       T.setNewUserFlowCompleted(), f.default.flowStep(O.FlowType.ANY, O.RegistrationSteps.NUF_COMPLETE, !0)
     }, [...e].reverse().forEach(e => {
-      let n = t;
+      let a = t;
       t = () => {
-        e.predicate() ? e.open(n) : n()
+        e.predicate() ? e.open(a) : a()
       }
     }), t()
   }
 }
-t.default = new M
+t.default = new P

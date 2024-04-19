@@ -1,41 +1,41 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return o
+    return d
   }
 });
-var a = s("735250");
-s("470079");
-var n = s("120356"),
-  r = s.n(n),
-  _ = s("960524"),
-  l = s("793030"),
-  u = s("481060"),
-  E = s("471113"),
-  i = s("552958"),
-  S = s("169776");
+var s = n("735250");
+n("470079");
+var a = n("120356"),
+  r = n.n(a),
+  i = n("960524"),
+  o = n("793030"),
+  u = n("481060"),
+  l = n("471113"),
+  c = n("552958"),
+  _ = n("169776");
 
-function o(e) {
+function d(e) {
   let {
     showGradient: t,
-    className: s
+    className: n
   } = e, {
-    playSound: n,
-    isPlaying: o
-  } = (0, i.default)(), M = t ? E.default : l.Text;
-  return (0, a.jsxs)(u.Clickable, {
-    className: r()(S.container, {
-      [S.containerActive]: o
-    }, s),
-    onClick: () => n(),
-    children: [(0, a.jsx)(_.CirclePlayIcon, {
-      className: S.playButton,
-      color: o ? u.tokens.colors.INTERACTIVE_ACTIVE : u.tokens.colors.INTERACTIVE_NORMAL
-    }), (0, a.jsxs)("div", {
-      children: [(0, a.jsx)(M, {
+    playSound: a,
+    isPlaying: d
+  } = (0, c.default)(), S = t ? l.default : o.Text;
+  return (0, s.jsxs)(u.Clickable, {
+    className: r()(_.container, {
+      [_.containerActive]: d
+    }, n),
+    onClick: () => a(),
+    children: [(0, s.jsx)(i.CirclePlayIcon, {
+      className: _.playButton,
+      color: d ? u.tokens.colors.INTERACTIVE_ACTIVE : u.tokens.colors.INTERACTIVE_NORMAL
+    }), (0, s.jsxs)("div", {
+      children: [(0, s.jsx)(S, {
         variant: "text-md/medium",
         children: "Dicord default"
-      }), (0, a.jsx)(l.Text, {
+      }), (0, s.jsx)(o.Text, {
         variant: "text-xs/normal",
         children: "Lo-Fi"
       })]

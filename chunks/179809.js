@@ -38,8 +38,8 @@ function x(e) {
     mediaState: p,
     mentionCount: x = 0,
     unread: R = !1,
-    defaultFolderName: M,
-    useCircleMask: y = !1,
+    defaultFolderName: y,
+    useCircleMask: M = !1,
     draggable: O = !1,
     sorting: b = !1,
     onDragStart: D,
@@ -57,8 +57,8 @@ function x(e) {
     b && k(!1)
   }, [b]);
   let [{
-    dragging: z
-  }, Z] = (0, r.useDrag)({
+    dragging: Z
+  }, z] = (0, r.useDrag)({
     type: m.GuildsNodeType.FOLDER,
     item: () => (null == D || D(), {
       type: m.GuildsNodeType.FOLDER,
@@ -74,7 +74,7 @@ function x(e) {
     K(e)
   }, []), Q = a.useCallback(e => {
     ("ArrowRight" === e.key && !d || "ArrowLeft" === e.key && d) && P()
-  }, [P, d]), q = null != B && "" !== B ? B : null != M && "" !== M ? M : I.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(F)), $ = "folder-items-".concat(F), ee = H.length * (L + v), et = (0, o.useTransition)(!z && d, {
+  }, [P, d]), q = null != B && "" !== B ? B : null != y && "" !== y ? y : I.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(F)), $ = "folder-items-".concat(F), ee = H.length * (L + v), et = (0, o.useTransition)(!Z && d, {
     from: {
       height: 0
     },
@@ -89,7 +89,7 @@ function x(e) {
     }
   }), en = a.useCallback(e => null == n ? void 0 : n(F, e), [n, F]), el = (0, l.jsxs)(_.ListItem, {
     children: [(0, l.jsx)(h.default, {
-      disabled: z || d,
+      disabled: Z || d,
       hovered: V,
       selected: s,
       unread: R,
@@ -100,15 +100,15 @@ function x(e) {
       selected: s,
       disableWrapper: !0,
       children: (0, l.jsx)("div", {
-        ref: O ? Z : void 0,
+        ref: O ? z : void 0,
         className: i()({
-          [T.wobble]: !z && Y && !d
+          [T.wobble]: !Z && Y && !d
         }),
         "data-dnd-name": q,
-        children: z ? (0, l.jsx)(E.default, {}) : (0, l.jsx)(C.default, {
+        children: Z ? (0, l.jsx)(E.default, {}) : (0, l.jsx)(C.default, {
           folderNode: t,
           expanded: d,
-          forceCircular: y,
+          forceCircular: M,
           sorting: b,
           mediaState: p,
           mentionCount: x,
@@ -131,7 +131,7 @@ function x(e) {
   return (0, l.jsxs)("div", {
     ref: en,
     className: N.wrapper,
-    children: [!z && (0, l.jsx)("span", {
+    children: [!Z && (0, l.jsx)("span", {
       className: i()(N.expandedFolderBackground, {
         [N.collapsed]: !d,
         [N.hover]: W

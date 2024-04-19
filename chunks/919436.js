@@ -25,9 +25,9 @@ var l, a = n("735250"),
   v = n("662146"),
   x = n("674552"),
   R = n("981631"),
-  M = n("538777");
+  y = n("538777");
 
-function y(e, t, n) {
+function M(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -142,7 +142,7 @@ class D extends(l = s.PureComponent) {
           hovered: !C && p,
           selected: !C && n,
           unread: !C && f,
-          className: M.pill
+          className: y.pill
         }), (0, a.jsx)(v.default, {
           text: null != t ? t : "",
           selected: n,
@@ -187,7 +187,7 @@ class D extends(l = s.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), y(this, "state", {
+    super(...e), M(this, "state", {
       hovered: !1,
       animating: !0,
       controller: new i.Controller({
@@ -196,7 +196,7 @@ class D extends(l = s.PureComponent) {
         opacity: 0,
         config: b
       })
-    }), y(this, "handleContextMenu", e => {
+    }), M(this, "handleContextMenu", e => {
       let {
         channel: t
       } = this.props, l = t.type === R.ChannelTypes.DM ? S.default.getUser(t.getRecipientId()) : null;
@@ -222,7 +222,7 @@ class D extends(l = s.PureComponent) {
     })
   }
 }
-y(D, "defaultProps", {
+M(D, "defaultProps", {
   badge: 0,
   audio: !1,
   video: !1,

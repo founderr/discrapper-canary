@@ -16,8 +16,8 @@ var a = s("442837"),
   c = s("894374"),
   f = s("616140"),
   S = s("981631"),
-  E = s("602091"),
-  m = s("727705");
+  m = s("602091"),
+  E = s("727705");
 
 function I(e) {
   let {
@@ -25,15 +25,15 @@ function I(e) {
     displayProfile: s,
     initialSection: I,
     autoFocusNote: v,
-    transitionState: A,
-    onClose: _
-  } = e, T = (0, a.useStateFromStores)([i.default], () => i.default.findActivity(t.id, e => e.type === S.ActivityTypes.PLAYING), [t]);
+    transitionState: x,
+    onClose: N
+  } = e, _ = (0, a.useStateFromStores)([i.default], () => i.default.findActivity(t.id, e => e.type === S.ActivityTypes.PLAYING), [t]);
   return (0, l.jsxs)("div", {
-    className: m.container,
+    className: E.container,
     children: [(0, l.jsxs)("div", {
-      className: m.usernameBadgeList,
+      className: E.usernameBadgeList,
       children: [(0, l.jsx)(d.default, {
-        className: m.username,
+        className: E.username,
         user: t,
         guildId: null == s ? void 0 : s.guildId,
         nicknameVariant: "heading-xl/bold",
@@ -41,22 +41,22 @@ function I(e) {
           pronouns: null == s ? void 0 : s.pronouns
         })
       }), (0, l.jsx)(n.default, {
-        className: m.badgeList,
+        className: E.badgeList,
         user: t,
         guildId: null == s ? void 0 : s.guildId,
         size: n.BadgeSizes.SIZE_24
       })]
-    }), null != T && (0, l.jsx)(r.default, {
-      activity: T
+    }), null != _ && (0, l.jsx)(r.default, {
+      activity: _
     }), (0, l.jsxs)(u.default.Overlay, {
-      children: [A === E.ModalTransitionState.ENTERED && (0, l.jsx)(o.default, {
-        onTooltipClose: _
+      children: [x === m.ModalTransitionState.ENTERED && (0, l.jsx)(o.default, {
+        onTooltipClose: N
       }), (0, l.jsx)(f.default, {
         user: t,
         displayProfile: s,
         initialSection: I,
         autoFocusNote: v,
-        onClose: _
+        onClose: N
       })]
     })]
   })

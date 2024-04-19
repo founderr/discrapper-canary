@@ -1,7 +1,7 @@
 "use strict";
-u.r(e), u.d(e, {
+r.r(e), r.d(e, {
   deleteGuildProductListing: function() {
-    return a
+    return c
   },
   fetchGuildProduct: function() {
     return o
@@ -10,58 +10,58 @@ u.r(e), u.d(e, {
     return l
   },
   updateGuildProductListing: function() {
-    return c
+    return a
   }
 });
-var r = u("570140"),
-  n = u("881052"),
-  i = u("824389");
+var n = r("570140"),
+  u = r("881052"),
+  i = r("824389");
 let l = async t => {
-  r.default.dispatch({
+  n.default.dispatch({
     type: "GUILD_PRODUCTS_FETCH",
     guildId: t
   });
   try {
     let e = await i.getGuildProductListingsForGuild(t);
-    r.default.dispatch({
+    n.default.dispatch({
       type: "GUILD_PRODUCTS_FETCH_SUCCESS",
       guildId: t,
       products: e
     })
   } catch (e) {
-    r.default.dispatch({
+    n.default.dispatch({
       type: "GUILD_PRODUCTS_FETCH_FAILURE",
       guildId: t
     })
   }
 }, o = async (t, e) => {
-  r.default.dispatch({
+  n.default.dispatch({
     type: "GUILD_PRODUCT_FETCH",
     productId: e
   });
   try {
-    let u = await i.getGuildProductListing(t, e);
-    return r.default.dispatch({
+    let r = await i.getGuildProductListing(t, e);
+    return n.default.dispatch({
       type: "GUILD_PRODUCT_FETCH_SUCCESS",
-      product: u
-    }), u
+      product: r
+    }), r
   } catch (t) {
-    throw r.default.dispatch({
+    throw n.default.dispatch({
       type: "GUILD_PRODUCT_FETCH_FAILURE",
       productId: e,
-      error: new n.APIError(t)
+      error: new u.APIError(t)
     }), t
   }
 };
-async function c(t, e, u) {
-  let n = await i.updateGuildProductListing(t, e, u);
-  return r.default.dispatch({
+async function a(t, e, r) {
+  let u = await i.updateGuildProductListing(t, e, r);
+  return n.default.dispatch({
     type: "GUILD_PRODUCT_UPDATE",
-    product: n
-  }), n
+    product: u
+  }), u
 }
-async function a(t, e) {
-  return await i.deleteGuildProductListing(t, e), r.default.dispatch({
+async function c(t, e) {
+  return await i.deleteGuildProductListing(t, e), n.default.dispatch({
     type: "GUILD_PRODUCT_DELETE",
     productId: e
   }), !0

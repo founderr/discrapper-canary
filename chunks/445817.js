@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return h
+    return I
   }
 }), s("47120");
 var a = s("735250"),
@@ -24,15 +24,15 @@ let g = {
   height: 218
 };
 
-function h(e) {
+function I(e) {
   let {
     previewEnabled: t,
     onEnablePreview: s
-  } = e, h = E.default.getCameraComponent(), [I, N] = n.useState((0, d.getLastUsedVideoBackgroundOption)(T.default.getCurrentUser())), p = n.useRef(!1), C = n.useRef(I), A = (0, o.useAnalyticsContext)(), O = (0, l.useStateFromStores)([E.default], () => Object.values(E.default.getVideoDevices()).length > 0);
+  } = e, I = E.default.getCameraComponent(), [h, N] = n.useState((0, d.getLastUsedVideoBackgroundOption)(T.default.getCurrentUser())), p = n.useRef(!1), C = n.useRef(h), A = (0, o.useAnalyticsContext)(), O = (0, l.useStateFromStores)([E.default], () => Object.values(E.default.getVideoDevices()).length > 0);
   return n.useEffect(() => () => {
     p.current && r.default.wait(() => (0, u.saveLastUsedBackgroundOption)(C.current))
   }, []), (0, a.jsx)(S.default, {
-    selectedBackgroundOption: I,
+    selectedBackgroundOption: h,
     onSelectBackgroundOption: e => {
       p.current = !0, C.current = e, N(e), (0, c.applyBackgroundOptionLive)(e, {
         location: A.location
@@ -42,7 +42,7 @@ function h(e) {
       className: _.cameraWrapper,
       children: (0, a.jsxs)("div", {
         className: _.camera,
-        children: [(0, a.jsx)(h, {
+        children: [(0, a.jsx)(I, {
           deviceId: e,
           width: g.width,
           height: g.height,

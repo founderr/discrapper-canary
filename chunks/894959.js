@@ -1,11 +1,11 @@
 "use strict";
-n.r(t);
-var a = n("45792"),
-  s = n("914946"),
-  l = n("238679"),
-  i = n("981631");
+a.r(t);
+var n = a("45792"),
+  s = a("914946"),
+  l = a("238679"),
+  i = a("981631");
 t.default = {
-  [i.RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: (0, a.createRPCCommand)(i.RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS, {
+  [i.RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: (0, n.createRPCCommand)(i.RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS, {
     scope: l.activityInstanceConnectedParticipantsScope,
     handler(e) {
       let {

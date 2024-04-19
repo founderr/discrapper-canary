@@ -1,32 +1,32 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return h
   }
 });
-var a = n("735250");
-n("470079");
-var s = n("100527"),
-  l = n("906732"),
-  i = n("82950"),
-  r = n("26323"),
-  o = n("267642"),
-  u = n("981631"),
-  d = n("921944"),
-  c = n("30513"),
-  f = n("689938"),
-  E = n("420569");
+var n = a("735250");
+a("470079");
+var s = a("100527"),
+  l = a("906732"),
+  i = a("82950"),
+  r = a("26323"),
+  o = a("267642"),
+  u = a("981631"),
+  d = a("921944"),
+  c = a("30513"),
+  f = a("689938"),
+  E = a("420569");
 
 function h(e) {
   let {
     guild: t,
-    markAsDismissed: n
+    markAsDismissed: a
   } = e, h = (0, o.getNumberOfAppliedBoostsNeededForTier)(t, u.BoostedGuildTiers.TIER_2), {
     analyticsLocations: _
   } = (0, l.default)(s.default.GUILD_BANNER_NOTICE);
-  return (0, a.jsx)(i.default, {
+  return (0, n.jsx)(i.default, {
     guild: t,
-    onDismissed: () => n(d.ContentDismissActionType.UNKNOWN),
+    onDismissed: () => a(d.ContentDismissActionType.UNKNOWN),
     cta: f.default.Messages.GUILD_BANNER_NOTICE_CTA,
     message: f.default.Messages.GUILD_BANNER_NOTICE.format({
       boostsNeeded: h

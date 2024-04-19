@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s.d(t, {
   PremiumSubscriptionPauseModalConfirm: function() {
-    return C
+    return P
   },
   PremiumSubscriptionPauseModalSelect: function() {
-    return P
+    return C
   }
 }), s("653041"), s("47120");
 var a = s("735250"),
@@ -18,8 +18,8 @@ var a = s("735250"),
   c = s("410030"),
   p = s("906732"),
   m = s("285952"),
-  f = s("296848"),
-  E = s("798769"),
+  E = s("296848"),
+  f = s("798769"),
   _ = s("981631"),
   I = s("689938"),
   S = s("470510");
@@ -42,7 +42,7 @@ async function N(e) {
   }
 }
 
-function P(e) {
+function C(e) {
   let {
     premiumType: t,
     onClose: s,
@@ -57,7 +57,7 @@ function P(e) {
     l(t)
   }, [l]), p = d.status === _.SubscriptionStatusTypes.PAUSED ? I.default.Messages.PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE : I.default.Messages.PREMIUM_PAUSE_SELECT_SUBTITLE;
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(E.default, {
+    children: [(0, a.jsx)(f.default, {
       premiumType: t,
       onClose: s
     }), (0, a.jsx)(o.ModalHeader, {
@@ -82,7 +82,7 @@ function P(e) {
             {
               durations: s,
               currentDaysPaused: a
-            } = (0, f.getSubscriptionPauseDurations)(e),
+            } = (0, E.getSubscriptionPauseDurations)(e),
             n = [];
           for (let e of s) {
             let s = r.PauseDuration[e];
@@ -111,15 +111,15 @@ function P(e) {
   })
 }
 
-function C(e) {
+function P(e) {
   let {
     premiumSubscription: t,
     premiumType: s,
     onClose: i,
     pauseDuration: r,
     analyticsLocation: d
-  } = e, [f, P] = n.useState(!1), {
-    analyticsLocations: C
+  } = e, [E, C] = n.useState(!1), {
+    analyticsLocations: P
   } = (0, p.default)(), [h, T] = n.useState(!1), A = (0, c.default)(), R = null, y = null, M = [_.SubscriptionStatusTypes.PAST_DUE, _.SubscriptionStatusTypes.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd, L = l()(M).add(r, "days").toDate();
   switch (t.status) {
     case _.SubscriptionStatusTypes.PAST_DUE:
@@ -144,7 +144,7 @@ function C(e) {
     className: S.body,
     children: y
   }), (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(E.default, {
+    children: [(0, a.jsx)(f.default, {
       premiumType: s,
       onClose: i
     }), (0, a.jsx)(o.ModalHeader, {
@@ -159,7 +159,7 @@ function C(e) {
       })
     }), (0, a.jsxs)(o.ModalContent, {
       className: S.body,
-      children: [f ? (0, a.jsx)(o.FormErrorBlock, {
+      children: [E ? (0, a.jsx)(o.FormErrorBlock, {
         className: S.errorBlock,
         children: I.default.Messages.BILLING_ERROR_GENERIC
       }) : null, R]
@@ -175,9 +175,9 @@ function C(e) {
               premiumSubscription: t,
               pauseDuration: r,
               setIsCancelling: T,
-              setHasError: P,
+              setHasError: C,
               onClose: i,
-              analyticsLocations: C,
+              analyticsLocations: P,
               analyticsLocation: d
             })
           },

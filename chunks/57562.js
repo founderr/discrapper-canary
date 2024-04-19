@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   showAchievementToast: function() {
     return d
   },
@@ -7,13 +7,13 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var a = n("735250");
-n("470079");
-var s = n("481060"),
-  l = n("570140"),
-  i = n("955204"),
-  r = n("510273"),
-  o = n("689938");
+var n = a("735250");
+a("470079");
+var s = a("481060"),
+  l = a("570140"),
+  i = a("955204"),
+  r = a("510273"),
+  o = a("689938");
 
 function u(e) {
   l.default.dispatch({
@@ -23,11 +23,11 @@ function u(e) {
 }
 
 function d(e, t) {
-  let n = (0, i.getPoggermodeAchievementData)(e);
-  null != n && (0, s.showToast)((0, s.createToast)(o.default.Messages.POGGERMODE_ACHIEVEMENTS, s.ToastType.CUSTOM, {
+  let a = (0, i.getPoggermodeAchievementData)(e);
+  null != a && (0, s.showToast)((0, s.createToast)(o.default.Messages.POGGERMODE_ACHIEVEMENTS, s.ToastType.CUSTOM, {
     position: s.ToastPosition.BOTTOM,
-    component: (0, a.jsx)(r.default, {
-      achievement: n,
+    component: (0, n.jsx)(r.default, {
+      achievement: a,
       unlocked: t
     }),
     duration: 6e3

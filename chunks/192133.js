@@ -157,8 +157,7 @@ function j(e) {
           onClose: Z
         }), (0, i.jsx)(b.default, {
           userId: K.id,
-          guild: X,
-          guildMember: Q
+          guildId: null == X ? void 0 : X.id
         }), eu && el && (0, i.jsx)(V.default, {
           voiceChannel: ea.voiceChannel,
           voiceGuild: ea.voiceGuild,

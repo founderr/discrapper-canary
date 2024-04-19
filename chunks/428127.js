@@ -81,13 +81,13 @@ function A(e) {
     mode: L,
     mentionCount: v,
     targetChannelId: x
-  } = "bottom" === t ? p : g, R = L === _.UnreadBarMode.HIDDEN, M = (0, r.useSpring)({
+  } = "bottom" === t ? p : g, R = L === _.UnreadBarMode.HIDDEN, y = (0, r.useSpring)({
     to: {
       transform: R ? "bottom" === t ? "translateY(180%)" : "translateY(-180%)" : "translateY(0%)"
     },
     config: N,
     immediate: E || !A
-  }), y = a.useCallback(e => {
+  }), M = a.useCallback(e => {
     e.preventDefault(), e.stopPropagation(), null != x && f(x)
   }, [f, x]);
   return (0, l.jsx)("div", {
@@ -97,13 +97,13 @@ function A(e) {
     }),
     children: (0, l.jsx)(r.animated.div, {
       className: I.containerPadding,
-      style: M,
+      style: y,
       "aria-hidden": R,
       children: L === _.UnreadBarMode.HIDDEN ? (0, l.jsx)("div", {
         className: i()(I.bar, I.emptyBar)
       }) : L === _.UnreadBarMode.UNREAD ? (0, l.jsxs)(d.Clickable, {
         className: I.bar,
-        onClick: y,
+        onClick: M,
         children: ["bottom" === t ? (0, l.jsx)(m.default, {
           className: I.unreadIcon,
           height: 14,
@@ -120,7 +120,7 @@ function A(e) {
         })]
       }) : L === _.UnreadBarMode.MENTIONS ? (0, l.jsx)(d.Clickable, {
         className: i()(I.bar, I.mentionsBar),
-        onClick: y,
+        onClick: M,
         children: (0, l.jsx)(d.Text, {
           variant: "text-xs/semibold",
           color: "status-danger-text",

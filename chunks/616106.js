@@ -5,21 +5,21 @@ var s, a, l, i, r = n("913527"),
   u = n("442837"),
   d = n("570140"),
   c = n("255078"),
-  E = n("594174"),
-  f = n("74538");
+  f = n("594174"),
+  E = n("74538");
 let _ = !1;
-class T extends(i = u.default.Store) {
+class m extends(i = u.default.Store) {
   shouldShowReactivateNotice() {
-    let e = E.default.getCurrentUser();
-    return !(0, f.isPremium)(e) && _
+    let e = f.default.getCurrentUser();
+    return !(0, E.isPremium)(e) && _
   }
 }
-l = "SubscriptionRemindersStore", (a = "displayName") in(s = T) ? Object.defineProperty(s, a, {
+l = "SubscriptionRemindersStore", (a = "displayName") in(s = m) ? Object.defineProperty(s, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = l, t.default = new T(d.default, {
+}) : s[a] = l, t.default = new m(d.default, {
   BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: function(e) {
     let {
       subscription: t
@@ -27,7 +27,7 @@ l = "SubscriptionRemindersStore", (a = "displayName") in(s = T) ? Object.defineP
     if (null != t) {
       var n;
       let e = c.default.createFromServer(t);
-      if (null == (0, f.getPremiumPlanItem)(e) || (null === (n = e.metadata) || void 0 === n ? void 0 : n.ended_at) == null) return;
+      if (null == (0, E.getPremiumPlanItem)(e) || (null === (n = e.metadata) || void 0 === n ? void 0 : n.ended_at) == null) return;
       let s = o()(e.metadata.ended_at);
       o()().isBetween(s.clone().add(4, "days"), s.clone().add(11, "days")) && (_ = !0)
     }

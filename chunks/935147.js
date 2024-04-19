@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("197115"),
   _ = s("350327"),
   g = s("318661"),
-  h = s("996073"),
-  I = s("25990"),
+  I = s("996073"),
+  h = s("25990"),
   N = s("466111"),
   p = s("626135"),
   C = s("74538"),
@@ -45,30 +45,30 @@ function B(e) {
     user: F
   } = e, {
     reducedMotion: k
-  } = n.useContext(i.AccessibilityPreferencesContext), H = C.default.isPremium(F), {
-    pendingAvatar: w,
+  } = n.useContext(i.AccessibilityPreferencesContext), w = C.default.isPremium(F), {
+    pendingAvatar: H,
     pendingBanner: V,
     pendingThemeColors: Y,
-    pendingPronouns: W,
-    pendingBio: K,
+    pendingPronouns: K,
+    pendingBio: W,
     tryItOutThemeColors: z,
     tryItOutAvatar: Q,
     tryItOutBanner: q,
     tryItOutAvatarDecoration: Z,
     tryItOutProfileEffectId: X
-  } = (0, l.useStateFromStoresObject)([I.default], () => {
-    let e = I.default.getAllPending(),
-      t = I.default.getErrors(),
-      s = I.default.getAllTryItOut();
+  } = (0, l.useStateFromStoresObject)([h.default], () => {
+    let e = h.default.getAllPending(),
+      t = h.default.getErrors(),
+      s = h.default.getAllTryItOut();
     return {
       ...e,
       ...s,
       errors: t
     }
   }), J = (0, c.default)(Z), $ = (0, S.default)(X), ee = n.useRef(null);
-  (0, h.default)(ee, b.ProfileCustomizationScrollPositions.TRY_IT_OUT);
+  (0, I.default)(ee, b.ProfileCustomizationScrollPositions.TRY_IT_OUT);
   let et = (0, g.default)(F.id),
-    es = null == et ? void 0 : et.getPreviewBio(K),
+    es = null == et ? void 0 : et.getPreviewBio(W),
     {
       analyticsLocations: ea,
       sourceAnalyticsLocations: en
@@ -111,14 +111,14 @@ function B(e) {
           user: F,
           onAvatarChange: _.setTryItOutAvatar,
           onBannerChange: _.setTryItOutBanner,
-          pendingPronouns: W,
-          pendingBio: K,
+          pendingPronouns: K,
+          pendingBio: W,
           pendingBanner: null !== (G = null != q ? q : V) && void 0 !== G ? G : s("466045"),
-          pendingAvatar: null != Q ? Q : w,
+          pendingAvatar: null != Q ? Q : H,
           pendingThemeColors: null != z ? z : Y,
           pendingAvatarDecoration: J,
           pendingProfileEffectId: $,
-          avatarClassName: null != Q || null != w || k.enabled ? void 0 : y.spinningAvatar,
+          avatarClassName: null != Q || null != H || k.enabled ? void 0 : y.spinningAvatar,
           canUsePremiumCustomization: !0,
           isTryItOutFlow: !0,
           hideExampleButton: !0,
@@ -138,7 +138,7 @@ function B(e) {
           }), (0, a.jsx)(L.default, {
             className: y.customizationSection,
             user: F,
-            pendingAvatar: null != Q ? Q : w,
+            pendingAvatar: null != Q ? Q : H,
             pendingColors: null != z ? z : Y,
             onThemeColorsChange: _.setTryItOutThemeColors,
             showPremiumIcon: !1,
@@ -179,7 +179,7 @@ function B(e) {
               subscriptionTier: j.PremiumSubscriptionSKUs.TIER_2,
               className: y.premiumSubscribeButton,
               size: i.Button.Sizes.MEDIUM,
-              buttonText: H ? U.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE : er ? U.default.Messages.PREMIUM_DISCOUNT_CTA.format({
+              buttonText: w ? U.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE : er ? U.default.Messages.PREMIUM_DISCOUNT_CTA.format({
                 percent: null == ei ? void 0 : ei.discount.amount
               }) : U.default.Messages.PREMIUM_UPSELL_GET_NITRO
             })]

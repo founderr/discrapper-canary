@@ -2,8 +2,8 @@
 s.r(t), s("47120");
 var a = s("735250");
 s("470079");
-var i = s("512722"),
-  l = s.n(i),
+var l = s("512722"),
+  i = s.n(l),
   r = s("727075"),
   C = s("442837"),
   n = s("780384"),
@@ -27,8 +27,8 @@ let m = (e, t) => {
       user: t,
       onClose: s
     } = e, {
-      avatarSrc: i,
-      eventHandlers: l
+      avatarSrc: l,
+      eventHandlers: i
     } = (0, u.default)({
       user: t,
       size: d.AvatarSizes.SIZE_56
@@ -36,10 +36,10 @@ let m = (e, t) => {
     return (0, a.jsxs)("div", {
       className: R.referredUserRowContainer,
       children: [(0, a.jsx)(d.Avatar, {
-        src: i,
+        src: l,
         "aria-label": r,
         size: d.AvatarSizes.SIZE_56,
-        ...l
+        ...i
       }), (0, a.jsxs)("div", {
         className: R.referredUserRowBody,
         children: [(0, a.jsx)(d.Tooltip, {
@@ -47,14 +47,14 @@ let m = (e, t) => {
           position: "right",
           children: e => {
             let {
-              onMouseEnter: i,
-              onMouseLeave: l
+              onMouseEnter: l,
+              onMouseLeave: i
             } = e;
             return (0, a.jsx)(d.Clickable, {
               onClick: () => m(t.id, s),
               className: R.displayNameClickableContainer,
-              onMouseEnter: i,
-              onMouseLeave: l,
+              onMouseEnter: l,
+              onMouseLeave: i,
               children: (0, a.jsx)(d.Text, {
                 variant: "text-md/medium",
                 className: R.displayName,
@@ -74,16 +74,16 @@ t.default = e => {
   let {
     selectedUsers: t,
     onClose: s
-  } = e, i = [...t].map(e => (0, a.jsx)(E, {
+  } = e, l = [...t].map(e => (0, a.jsx)(E, {
     user: e,
     onClose: s
   }, e.id)), o = (0, C.useStateFromStores)([h.default], () => h.default.getReferralsRemaining());
-  l()(null !== o, "Referrals remaining should not be null");
+  i()(null !== o, "Referrals remaining should not be null");
   let u = (0, c.useTheme)(),
     x = (0, n.isThemeLight)(u) ? _.default : p.default,
     m = L.default.Messages.REFERRAL_PROGRAM_FRIEND_SELECT_RESENT_COMPLETE_HEADER;
   return o > 0 && (m = L.default.Messages.REFERRAL_PROGRAM_FRIEND_SELECT_COMPLETE_HEADER.format({
-    numReferrals: i.length
+    numReferrals: l.length
   })), (0, a.jsxs)("div", {
     className: R.confrimationContainer,
     children: [(0, a.jsx)(d.Clickable, {
@@ -101,7 +101,7 @@ t.default = e => {
       children: m
     }), (0, a.jsx)("div", {
       className: R.confirmedUserContainer,
-      children: i
+      children: l
     }), (0, a.jsx)(d.Text, {
       variant: "text-md/medium",
       children: L.default.Messages.REFERRAL_PROGRAM_FRIEND_SELECT_COMPLETE_SUBHEADER.format({

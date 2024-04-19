@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   SafetyPolicyNotice: function() {
-    return f
+    return E
   }
 });
 var s = n("735250");
@@ -14,24 +14,24 @@ var a = n("913527"),
   u = n("800530"),
   d = n("689938"),
   c = n("493345");
-let E = e => l()().diff(l().unix(e), "days");
+let f = e => l()().diff(l().unix(e), "days");
 
-function f(e) {
-  var t, a, l, f, _;
+function E(e) {
+  var t, a, l, E, _;
   if (null == e.message.embeds || null == e.message.embeds[0].fields) return null;
-  let T = e.message.embeds[0],
-    I = null !== (l = null === (t = T.fields) || void 0 === t ? void 0 : t.find(e => e.rawName === u.SafetyHubPolicyNoticeKeys.CLASSIFICATION_ID)) && void 0 !== l ? l : void 0,
-    m = null !== (f = null == I ? void 0 : I.rawValue) && void 0 !== f ? f : void 0,
-    N = null !== (_ = null === (a = T.fields) || void 0 === a ? void 0 : a.find(e => e.rawName === u.SafetyHubPolicyNoticeKeys.INCIDENT_TIMESTAMP)) && void 0 !== _ ? _ : void 0,
-    p = null == N || null == N.rawValue ? void 0 : parseFloat(N.rawValue);
-  return null == m || null == p ? null : (0, s.jsxs)(o.Clickable, {
+  let m = e.message.embeds[0],
+    T = null !== (l = null === (t = m.fields) || void 0 === t ? void 0 : t.find(e => e.rawName === u.SafetyHubPolicyNoticeKeys.CLASSIFICATION_ID)) && void 0 !== l ? l : void 0,
+    I = null !== (E = null == T ? void 0 : T.rawValue) && void 0 !== E ? E : void 0,
+    p = null !== (_ = null === (a = m.fields) || void 0 === a ? void 0 : a.find(e => e.rawName === u.SafetyHubPolicyNoticeKeys.INCIDENT_TIMESTAMP)) && void 0 !== _ ? _ : void 0,
+    h = null == p || null == p.rawValue ? void 0 : parseFloat(p.rawValue);
+  return null == I || null == h ? null : (0, s.jsxs)(o.Clickable, {
     onClick: () => {
       (0, o.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([n.e("99387"), n.e("18831"), n.e("34842")]).then(n.bind(n, "41164"));
         return t => (0, s.jsx)(e, {
-          classificationId: m,
+          classificationId: I,
           source: u.SafetyHubAnalyticsActionSource.SystemDM,
           transitionState: t.transitionState,
           onClose: t.onClose
@@ -55,7 +55,7 @@ function f(e) {
         children: (0, s.jsx)(o.Text, {
           variant: "text-xs/medium",
           children: d.default.Messages.SAFETY_POLICY_NOTICE_DAYS_AGO.format({
-            daysAgo: E(p)
+            daysAgo: f(h)
           })
         })
       }), (0, s.jsx)("div", {

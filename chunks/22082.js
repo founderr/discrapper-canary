@@ -41,15 +41,15 @@ function T(e) {
   })), w[e] = Date.now())
 }
 
-function b() {
+function L() {
   y.default.keys(m).forEach(e => {
     let t = m[e];
     m[e] = new Set([...t].filter(t => !I.default.isChannelOrParentOptedIn(e, t)))
   })
 }
-class L extends(i = r.default.Store) {
+class b extends(i = r.default.Store) {
   initialize() {
-    this.waitFor(f.default, c.default, g.default, I.default, v.default, u.default), this.syncWith([I.default], b)
+    this.waitFor(f.default, c.default, g.default, I.default, v.default, u.default), this.syncWith([I.default], L)
   }
   getNewChannelIds(e) {
     var t;
@@ -62,12 +62,12 @@ class L extends(i = r.default.Store) {
     return !!(null != i && i.hasFeature(_.GuildFeatures.COMMUNITY)) && (null != e && null == m[e] && T(e), (null === (n = m[e]) || void 0 === n ? void 0 : n.has(t)) && null == v.default.getTrackedAckMessageId(t))
   }
 }
-a = "NewChannelsStore", (l = "displayName") in(s = L) ? Object.defineProperty(s, l, {
+a = "NewChannelsStore", (l = "displayName") in(s = b) ? Object.defineProperty(s, l, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[l] = a, t.default = new L(d.default, {
+}) : s[l] = a, t.default = new b(d.default, {
   BULK_CLEAR_RECENTS: function(e) {
     let {
       guildId: t,

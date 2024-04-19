@@ -25,8 +25,8 @@ function g(e, t, n, g) {
     title: S,
     body: v
   } = (0, d.makeTextChatNotification)(e, t, n), {
-    trackView: y,
-    trackClick: O
+    trackView: T,
+    trackClick: y
   } = (0, c.makeAnalyticsTrackers)(h.OverlayNotificationType.TextChat, {
     notif_type: h.OverlayNotificationType.TextChat,
     notif_user_id: null === (m = t.author) || void 0 === m ? void 0 : m.id,
@@ -49,13 +49,13 @@ function g(e, t, n, g) {
     }) : null,
     maxBodyLines: 2,
     onNotificationShow: () => {
-      g && (0, u.playSound)(s.MESSAGE_SOUND, s.MESSAGE_SOUND_VOLUME), y()
+      g && (0, u.playSound)(s.MESSAGE_SOUND, s.MESSAGE_SOUND_VOLUME), T()
     },
     onNotificationClick: () => {
-      (0, l.transitionTo)(f.Routes.CHANNEL(e.guild_id, e.id)), O("jump"), o.default.isInstanceUILocked() && a.default.setInstanceLocked(!1)
+      (0, l.transitionTo)(f.Routes.CHANNEL(e.guild_id, e.id)), y("jump"), o.default.isInstanceUILocked() && a.default.setInstanceLocked(!1)
     },
     onDismissClick: () => {
-      O("dismiss")
+      y("dismiss")
     }
   }
 }

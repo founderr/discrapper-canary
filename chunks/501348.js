@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return K
+    return W
   }
 }), s("47120");
 var a = s("735250"),
@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("627845"),
   _ = s("514361"),
   g = s("605236"),
-  h = s("786761"),
-  I = s("3148"),
+  I = s("786761"),
+  h = s("3148"),
   N = s("739566"),
   p = s("753206"),
   C = s("594174"),
@@ -53,41 +53,41 @@ let F = {
     COMPACT: "compact"
   },
   k = (0, O.uid)(),
-  H = (0, O.uid)(),
   w = (0, O.uid)(),
+  H = (0, O.uid)(),
   V = "1337",
   Y = e => {
     let t = 0;
-    return [(0, h.createMessageRecord)({
-      ...(0, I.default)({
+    return [(0, I.createMessageRecord)({
+      ...(0, h.default)({
         channelId: V,
         content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_1
       }),
       state: P.MessageStates.SENT,
       id: "".concat(t++)
-    }), (0, h.createMessageRecord)({
-      ...(0, I.default)({
+    }), (0, I.createMessageRecord)({
+      ...(0, h.default)({
         channelId: V,
         content: (0, d.isThemeDark)(e) ? U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_DARK : U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_LIGHT
       }),
       state: P.MessageStates.SENT,
       id: "".concat(t++)
-    }), (0, h.createMessageRecord)({
-      ...(0, I.default)({
+    }), (0, I.createMessageRecord)({
+      ...(0, h.default)({
         channelId: V,
         content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_3
       }),
       state: P.MessageStates.SENT,
       id: "".concat(t++)
-    }), (0, h.createMessageRecord)({
-      ...(0, I.default)({
+    }), (0, I.createMessageRecord)({
+      ...(0, h.default)({
         channelId: V,
         content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_4
       }),
       state: P.MessageStates.SENT,
       id: "".concat(t++)
-    }), (0, h.createMessageRecord)({
-      ...(0, I.default)({
+    }), (0, I.createMessageRecord)({
+      ...(0, h.default)({
         channelId: V,
         content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_5
       }),
@@ -95,7 +95,7 @@ let F = {
       id: "".concat(t)
     })]
   };
-class W extends n.Component {
+class K extends n.Component {
   renderZoomSlider() {
     return x.isPlatformEmbedded ? (0, a.jsxs)(u.FormItem, {
       className: B.marginTop20,
@@ -125,7 +125,7 @@ class W extends n.Component {
     return (0, a.jsxs)(u.FormItem, {
       className: B.marginTop20,
       children: [(0, a.jsx)(u.FormTitle, {
-        id: H,
+        id: w,
         tag: u.FormTitleTags.H5,
         className: B.marginBottom8,
         children: U.default.Messages.ACCESSIBILITY_FONT_SCALING_LABEL
@@ -141,7 +141,7 @@ class W extends n.Component {
           onValueRender: this.handleSliderRenderPX,
           onMarkerRender: this.handleSliderRenderPX,
           getAriaValueText: this.handleSliderValueText,
-          "aria-labelledby": H
+          "aria-labelledby": w
         })
       })]
     })
@@ -154,7 +154,7 @@ class W extends n.Component {
     return (0, a.jsxs)(u.FormItem, {
       className: B.marginTop20,
       children: [(0, a.jsx)(u.FormTitle, {
-        id: w,
+        id: H,
         tag: u.FormTitleTags.H5,
         className: B.marginBottom8,
         children: U.default.Messages.ACCESSIBILITY_MESSAGE_GROUP_SPACING
@@ -168,7 +168,7 @@ class W extends n.Component {
         onValueRender: this.handleSliderRenderPX,
         onMarkerRender: this.handleSliderRenderPX,
         getAriaValueText: this.handleSliderValueText,
-        "aria-labelledby": w
+        "aria-labelledby": H
       })]
     })
   }
@@ -327,7 +327,7 @@ class W extends n.Component {
   }
 }
 
-function K() {
+function W() {
   let e = v.MessageDisplayCompact.useSetting(),
     t = v.InlineEmbedMedia.useSetting(),
     s = v.RenderEmbeds.useSetting(),
@@ -359,7 +359,7 @@ function K() {
       gradientPreset: _.default.gradientPreset
     }
   });
-  return (0, a.jsx)(W, {
+  return (0, a.jsx)(K, {
     messageDisplayCompact: e,
     hideSimpleEmbedContent: t && s,
     clientTheme: l,

@@ -1,19 +1,19 @@
 "use strict";
-var a, n, l, i, r, o, c, d, u, _;
-s.r(t), s.d(t, {
+var l, a, u, r, i, s, o, _, c, d;
+n.r(t), n.d(t, {
   AgeGateSteps: function() {
-    return n
-  },
-  ClaimAccountSteps: function() {
-    return l
-  },
-  CreateGuildSteps: function() {
-    return i
-  },
-  FlowType: function() {
     return a
   },
-  RegistrationSteps: function() {
+  ClaimAccountSteps: function() {
+    return u
+  },
+  CreateGuildSteps: function() {
     return r
+  },
+  FlowType: function() {
+    return l
+  },
+  RegistrationSteps: function() {
+    return i
   }
-}), (o = a || (a = {})).UNKNOWN = "unknown", o.ANY = "any", o.INVITE = "invite", o.ORGANIC = "organic_registration", o.ORGANIC_MARKETING = "organic_marketing", o.ORGANIC_GUILD_TEMPLATES = "organic_guild_template", o.CREATE_GUILD = "create_guild", (c = n || (n = {})).AGE_GATE = "age_gate", c.AGE_GATE_UNDERAGE = "age_gate_underage", (d = l || (l = {})).CLAIM_ACCOUNT = "claim_account", d.CLAIM_ACCOUNT_SUCCESS = "claim_account_success", (u = i || (i = {})).GUILD_TEMPLATES = "guild_templates", u.GUILD_CREATE = "guild_create", u.CREATION_INTENT = "creation_intent", u.CHANNEL_PROMPT = "channel_prompt", u.JOIN_GUILD = "join_guild", u.SUCCESS = "create_success", (_ = r || (r = {})).NUF_STARTED = "nuf_started", _.AGE_GATE = "age_gate", _.NUF_COMPLETE = "nuf_complete", _.HUB_CONNECTION = "hub_connection"
+}), (s = l || (l = {})).UNKNOWN = "unknown", s.ANY = "any", s.INVITE = "invite", s.ORGANIC = "organic_registration", s.ORGANIC_MARKETING = "organic_marketing", s.ORGANIC_GUILD_TEMPLATES = "organic_guild_template", s.CREATE_GUILD = "create_guild", (o = a || (a = {})).AGE_GATE = "age_gate", o.AGE_GATE_UNDERAGE = "age_gate_underage", (_ = u || (u = {})).CLAIM_ACCOUNT = "claim_account", _.CLAIM_ACCOUNT_SUCCESS = "claim_account_success", (c = r || (r = {})).GUILD_TEMPLATES = "guild_templates", c.GUILD_CREATE = "guild_create", c.CREATION_INTENT = "creation_intent", c.CHANNEL_PROMPT = "channel_prompt", c.JOIN_GUILD = "join_guild", c.SUCCESS = "create_success", (d = i || (i = {})).NUF_STARTED = "nuf_started", d.AGE_GATE = "age_gate", d.NUF_COMPLETE = "nuf_complete", d.HUB_CONNECTION = "hub_connection"

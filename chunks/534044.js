@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return S
+    return A
   }
 });
 var l = a("735250");
@@ -16,14 +16,14 @@ var s = a("120356"),
   u = a("689938"),
   E = a("747744"),
   _ = a("134247"),
-  A = a("160557");
+  S = a("160557");
 
-function S(e) {
+function A(e) {
   let {
     className: t,
     onNext: a,
     onClose: s
-  } = e, S = (0, d.useEmitAppealIngestionEvent)();
+  } = e, A = (0, d.useEmitAppealIngestionEvent)();
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)(i.ModalHeader, {
       direction: o.default.Direction.VERTICAL,
@@ -32,7 +32,7 @@ function S(e) {
       children: [(0, l.jsx)("div", {
         className: E.iconContainer,
         children: (0, l.jsx)("img", {
-          src: A,
+          src: S,
           alt: "",
           className: E.icon
         })
@@ -60,11 +60,11 @@ function S(e) {
       }), (0, l.jsx)(r.default, {
         text: u.default.Messages.APPEAL_INGESTION_MODAL_REQUEST_SENT_GUIDELINES_LINK,
         url: c.SafetyHubLinks.COMMUNITY_GUIDELINES,
-        onClick: () => S(c.SafetyHubAnalyticsActions.ClickCommunityGuidelinesLink)
+        onClick: () => A(c.SafetyHubAnalyticsActions.ClickCommunityGuidelinesLink)
       }), (0, l.jsx)(r.default, {
         text: u.default.Messages.APPEAL_INGESTION_MODAL_REQUEST_SENT_RULES_LINK,
         url: c.SafetyHubLinks.WARNING_SYSTEM_HELPCENTER_LINK,
-        onClick: () => S(c.SafetyHubAnalyticsActions.ClickWarningSystemHelpcenterLink)
+        onClick: () => A(c.SafetyHubAnalyticsActions.ClickWarningSystemHelpcenterLink)
       })]
     }), (0, l.jsx)(i.ModalFooter, {
       children: (0, l.jsx)(i.Button, {

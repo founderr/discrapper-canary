@@ -9,18 +9,18 @@ var i, a, l, s, o, r, d, u, c = n("512722"),
   E = n("836932"),
   S = n("175553"),
   v = n("158979"),
-  y = n("181912"),
-  O = n("194295"),
-  T = n("998033"),
-  C = n("181364"),
-  N = n("24313"),
-  I = n("435064"),
-  _ = n("668761"),
+  T = n("181912"),
+  y = n("194295"),
+  I = n("998033"),
+  N = n("181364"),
+  O = n("24313"),
+  _ = n("435064"),
+  C = n("668761"),
   A = n("358446"),
   x = n("695346"),
   R = n("314897"),
-  L = n("592125"),
-  M = n("292959"),
+  M = n("592125"),
+  L = n("292959"),
   D = n("158776"),
   b = n("944486"),
   j = n("885110"),
@@ -29,12 +29,12 @@ var i, a, l, s, o, r, d, u, c = n("512722"),
   w = n("974180"),
   V = n("237997"),
   U = n("70956"),
-  B = n("150097"),
-  F = n("129724"),
+  F = n("150097"),
+  B = n("129724"),
   G = n("449224"),
   H = n("981631"),
-  W = n("987650"),
-  z = n("689938");
+  z = n("987650"),
+  W = n("689938");
 (s = i || (i = {}))[s.GENERIC = 0] = "GENERIC", s[s.TEXT = 1] = "TEXT", s[s.INCOMING_CALL = 2] = "INCOMING_CALL", (o = a || (a = {}))[o.NORMAL = 0] = "NORMAL", o[o.HIGH = 1] = "HIGH", o[o.URGENT = 2] = "URGENT";
 let Y = 5 * U.default.Millis.SECOND,
   K = 8 * U.default.Millis.SECOND,
@@ -98,10 +98,10 @@ function en(e) {
   } = e, i = ee(t);
   if (!n.includes(R.default.getId())) return Q(i);
   if (null != i) return !1;
-  let a = L.default.getChannel(t);
+  let a = M.default.getChannel(t);
   if (null == a || !a.isPrivate() || j.default.getStatus() === H.StatusTypes.DND || x.FocusMode.getSetting()) return !1;
   let l = J.find(e => 1 === e.type && e.channelId === t && e.messageType === H.MessageTypes.CALL);
-  null != l && Q(l.id), et((0, y.default)(a), {
+  null != l && Q(l.id), et((0, T.default)(a), {
     priority: 1,
     expirationExternallyManaged: !0,
     type: 2,
@@ -110,7 +110,7 @@ function en(e) {
 }
 class ei extends(l = p.default.Store) {
   initialize() {
-    this.waitFor(L.default, k.default)
+    this.waitFor(M.default, k.default)
   }
   getNotifications() {
     return J
@@ -134,16 +134,16 @@ u = "OverlayNotificationsStore", (d = "displayName") in(r = ei) ? Object.defineP
       nudge: t
     } = e, n = function(e) {
       switch (e.type) {
-        case W.OverlayNudgeTypes.BROADCAST:
-          return (0, N.default)(e);
-        case W.OverlayNudgeTypes.GO_LIVE_VOICE:
-        case W.OverlayNudgeTypes.GO_LIVE_NON_VOICE:
+        case z.OverlayNudgeTypes.BROADCAST:
+          return (0, O.default)(e);
+        case z.OverlayNudgeTypes.GO_LIVE_VOICE:
+        case z.OverlayNudgeTypes.GO_LIVE_NON_VOICE:
           return (0, v.default)(e);
-        case W.OverlayNudgeTypes.KEYBIND_INDICATORS:
+        case z.OverlayNudgeTypes.KEYBIND_INDICATORS:
           return (0, A.default)(e);
-        case W.OverlayNudgeTypes.NEWS:
+        case z.OverlayNudgeTypes.NEWS:
         default:
-          return (0, C.default)(e)
+          return (0, N.default)(e)
       }
     }(t);
     null != n && et(n, {
@@ -166,10 +166,10 @@ u = "OverlayNotificationsStore", (d = "displayName") in(r = ei) ? Object.defineP
     let {
       channelId: a,
       message: l
-    } = e, s = L.default.getChannel(a), o = k.default.getUser(null === (t = l.author) || void 0 === t ? void 0 : t.id);
+    } = e, s = M.default.getChannel(a), o = k.default.getUser(null === (t = l.author) || void 0 === t ? void 0 : t.id);
     if (null == s || null == o) return !1;
     if ((null === (n = l.activity) || void 0 === n ? void 0 : n.type) === H.ActivityActionTypes.JOIN || (null === (i = l.activity) || void 0 === i ? void 0 : i.type) === H.ActivityActionTypes.JOIN_REQUEST) {
-      if (!(0, B.shouldNotify)(l, a, !0, !0)) return !1;
+      if (!(0, F.shouldNotify)(l, a, !0, !0)) return !1;
       let e = function(e, t, n) {
         let i, a;
         if (f()(null != t.activity, "received null message activity"), n.id === R.default.getId()) return !1;
@@ -182,7 +182,7 @@ u = "OverlayNotificationsStore", (d = "displayName") in(r = ei) ? Object.defineP
             break;
           case H.ActivityActionTypes.JOIN_REQUEST:
             if (null == (i = j.default.getApplicationActivity(l.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
-            a = (0, O.default)(e, n, l, i)
+            a = (0, y.default)(e, n, l, i)
         }
         if (null == a) return !1;
         let s = et(a, {
@@ -194,9 +194,9 @@ u = "OverlayNotificationsStore", (d = "displayName") in(r = ei) ? Object.defineP
       }(s, l, o);
       if (!1 !== e) return e
     }
-    if ((!V.default.isInstanceUILocked() || V.default.isPinned(H.OverlayWidgets.TEXT)) && a === b.default.getChannelId() || V.default.getTextChatNotificationMode() === H.OverlayNotificationTextChatTypes.DISABLED || P.default.disableNotifications || !(0, B.shouldNotify)(l, a)) return !1;
-    let r = !M.default.isSoundDisabled(w.MESSAGE_SOUND);
-    et((0, T.default)(s, l, o, r), {
+    if ((!V.default.isInstanceUILocked() || V.default.isPinned(H.OverlayWidgets.TEXT)) && a === b.default.getChannelId() || V.default.getTextChatNotificationMode() === H.OverlayNotificationTextChatTypes.DISABLED || P.default.disableNotifications || !(0, F.shouldNotify)(l, a)) return !1;
+    let r = !L.default.isSoundDisabled(w.MESSAGE_SOUND);
+    et((0, I.default)(s, l, o, r), {
       type: 1,
       channelId: s.id,
       messageType: l.type
@@ -238,18 +238,18 @@ u = "OverlayNotificationsStore", (d = "displayName") in(r = ei) ? Object.defineP
     })
   },
   CLIPS_SAVE_CLIP_START: function() {
-    et((0, _.createClipsNotification)(z.default.Messages.CLIPS_SAVE_START_NOTIFICATION_TITLE))
+    et((0, C.createClipsNotification)(W.default.Messages.CLIPS_SAVE_START_NOTIFICATION_TITLE))
   },
   CLIPS_SAVE_CLIP: function() {
-    et((0, _.createClipsNotification)(z.default.Messages.CLIPS_NOTIFICATION_TITLE.format({
-      duration: (0, F.getSecondsSliderLabel)(I.default.getSettings().clipsLength / 1e3, !0)
+    et((0, C.createClipsNotification)(W.default.Messages.CLIPS_NOTIFICATION_TITLE.format({
+      duration: (0, B.getSecondsSliderLabel)(_.default.getSettings().clipsLength / 1e3, !0)
     })))
   },
   CLIPS_SAVE_CLIP_ERROR: function() {
-    et((0, _.createClipsNotification)(z.default.Messages.CLIPS_SAVE_ERROR_NOTIFICATION_TITLE))
+    et((0, C.createClipsNotification)(W.default.Messages.CLIPS_SAVE_ERROR_NOTIFICATION_TITLE))
   },
   STREAM_START: function(e) {
-    let t = (0, _.createClipsReminderNotification)();
+    let t = (0, C.createClipsReminderNotification)();
     null != t && et(t)
   }
 } : {})

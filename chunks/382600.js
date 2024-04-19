@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   useWaveformLottie: function() {
     return r
   }
 });
-var a = n("735250"),
-  s = n("470079"),
-  l = n("709014");
+var n = a("735250"),
+  s = a("470079"),
+  l = a("709014");
 let i = {
     disable: {
       name: "disable",
@@ -37,13 +37,13 @@ let i = {
       }, [e]),
       u = s.useCallback(() => {
         if (null == t.current) return;
-        let n = "enable" === e ? "hover_disabled" : "hover_enabled";
-        t.current.play(n)
+        let a = "enable" === e ? "hover_disabled" : "hover_enabled";
+        t.current.play(a)
       }, [e]),
       d = s.useCallback(() => {
         if (null == t.current) return;
-        let n = "enable" === e ? "hover_disabled" : "hover_enabled";
-        t.current.stopIfPlaying(n)
+        let a = "enable" === e ? "hover_disabled" : "hover_enabled";
+        t.current.stopIfPlaying(a)
       }, [e]);
     return {
       events: {
@@ -52,9 +52,9 @@ let i = {
         onMouseLeave: d
       },
       play: o,
-      Component: s.useCallback(e => (0, a.jsx)(l.LottieIcon, {
+      Component: s.useCallback(e => (0, n.jsx)(l.LottieIcon, {
         ...e,
-        src: () => n.e("7584").then(n.t.bind(n, "883488", 19)),
+        src: () => a.e("7584").then(a.t.bind(a, "883488", 19)),
         ref: t,
         initialAnimation: r.current,
         markers: i

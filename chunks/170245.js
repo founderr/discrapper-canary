@@ -1,37 +1,37 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var s = n("120356"),
-  l = n.n(s),
-  i = n("442837"),
-  r = n("129861"),
-  o = n("700582"),
-  u = n("699516"),
-  d = n("194898");
+a.r(t);
+var n = a("735250");
+a("470079");
+var s = a("120356"),
+  l = a.n(s),
+  i = a("442837"),
+  r = a("129861"),
+  o = a("700582"),
+  u = a("699516"),
+  d = a("194898");
 t.default = function(e) {
   let {
     user: t,
-    hovered: n,
+    hovered: a,
     subText: s,
     showAccountIdentifier: c,
     status: f,
     isMobile: E,
     className: h
   } = e, _ = (0, i.useStateFromStores)([u.default], () => u.default.getNickname(t.id));
-  return (0, a.jsxs)("div", {
+  return (0, n.jsxs)("div", {
     className: l()(d.userInfo, h, {
-      [d.hovered]: n
+      [d.hovered]: a
     }),
-    children: [(0, a.jsx)(o.default, {
+    children: [(0, n.jsx)(o.default, {
       user: t,
       className: d.avatar,
-      animate: n,
+      animate: a,
       status: f,
       isMobile: E
-    }), (0, a.jsxs)("div", {
+    }), (0, n.jsxs)("div", {
       className: d.text,
-      children: [(0, a.jsx)(r.default, {
+      children: [(0, n.jsx)(r.default, {
         user: t,
         nick: _,
         botClass: d.botTag,
@@ -41,7 +41,7 @@ t.default = function(e) {
         usernameClass: d.username,
         discriminatorClass: d.discriminator,
         showAccountIdentifier: c
-      }), (0, a.jsx)("div", {
+      }), (0, n.jsx)("div", {
         className: d.subtext,
         children: s
       })]

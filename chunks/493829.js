@@ -18,8 +18,8 @@ function d(e) {
     message: t,
     usernameHook: d,
     onClickPins: c,
-    compact: E
-  } = e, f = (0, r.default)(t), _ = f.nick, T = d(f), I = () => {
+    compact: f
+  } = e, E = (0, r.default)(t), _ = E.nick, m = d(E), T = () => {
     if (null == t.messageReference) return;
     let {
       channel_id: e,
@@ -30,7 +30,7 @@ function d(e) {
       messageId: n,
       flash: !0
     })
-  }, m = (0, l.useRedesignIconContext)().enabled ? {
+  }, I = (0, l.useRedesignIconContext)().enabled ? {
     iconNode: (0, s.jsx)(a.PinIcon, {
       width: 18,
       height: 18,
@@ -40,23 +40,23 @@ function d(e) {
     icon: n("879066")
   };
   return (0, s.jsx)(o.default, {
-    ...m,
+    ...I,
     timestamp: t.timestamp,
-    compact: E,
+    compact: f,
     children: null != t.messageReference ? null == c ? u.default.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_NO_CTA_FORMATTED_WITH_MESSAGE_HOOK.format({
-      usernameHook: T,
+      usernameHook: m,
       username: _,
-      messageOnClick: I
+      messageOnClick: T
     }) : u.default.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_WITH_MESSAGE.format({
-      usernameHook: T,
+      usernameHook: m,
       username: _,
       pinsActionOnClick: c,
-      messageOnClick: I
+      messageOnClick: T
     }) : null == c ? u.default.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_NO_CTA_FORMATTED_HOOK.format({
-      usernameHook: T,
+      usernameHook: m,
       username: _
     }) : u.default.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE.format({
-      usernameHook: T,
+      usernameHook: m,
       username: _,
       pinsActionOnClick: c
     })

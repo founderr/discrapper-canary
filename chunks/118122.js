@@ -53,8 +53,8 @@ function L(e) {
     disableTooltip: t,
     lastTargetNode: n
   } = e, o = (0, s.useStateFromStores)([p.default], () => p.default.getGuilds()), L = a.useMemo(() => Object.values(o), [o]), v = (0, s.useStateFromStores)([m.default], () => m.default.getCurrentUser()), x = a.useMemo(() => L.some(e => e.isOwner(v)), [L, v]), R = (0, r.useModalsStore)(e => (0, r.hasModalOpenSelector)(e, S.CREATE_GUILD_MODAL_KEY)), {
-    analyticsLocations: M
-  } = (0, u.default)(), y = (0, r.useRedesignIconContext)().enabled, O = (0, l.jsx)(E.default, {
+    analyticsLocations: y
+  } = (0, u.default)(), M = (0, r.useRedesignIconContext)().enabled, O = (0, l.jsx)(E.default, {
     showPill: !1,
     id: "create-join-button",
     onClick: () => {
@@ -66,7 +66,7 @@ function L(e) {
           page: _.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL,
           section: _.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
         },
-        analyticsLocations: M
+        analyticsLocations: y
       }) : d.default.openCreateGuildModal({
         location: "Guild List"
       })
@@ -74,7 +74,7 @@ function L(e) {
     selected: R,
     onContextMenu: A,
     tooltip: I.default.Messages.ADD_A_SERVER,
-    icon: y ? i.PlusMediumIcon : C.default
+    icon: M ? i.PlusMediumIcon : C.default
   });
   return t ? O : (0, l.jsx)("div", {
     className: N.tutorialContainer,

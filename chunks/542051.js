@@ -4,15 +4,15 @@ n.r(t), n.d(t, {
     return m
   }
 }), n("411104");
-var a, l, s, i, r = n("735250"),
+var s, a, l, i, r = n("735250"),
   o = n("470079"),
   u = n("120356"),
   d = n.n(u),
   c = n("481060"),
   f = n("689938"),
-  h = n("366777");
+  E = n("366777");
 
-function E(e) {
+function _(e) {
   e.stopPropagation(), e.preventDefault()
 }
 
@@ -24,59 +24,59 @@ function m(e, t, n) {
     "aria-selected": n
   }
 }
-class p extends(a = o.PureComponent) {
+class T extends(s = o.PureComponent) {
   renderQuery(e) {
     let {
       query: t,
       navId: n,
-      focusedIndex: a,
-      onSelectQuery: l,
-      onSelectSearchEverywhere: s,
+      focusedIndex: s,
+      onSelectQuery: a,
+      onSelectSearchEverywhere: l,
       onHighlightQuery: i,
       hideQuery: o,
       searchFavorites: u
     } = this.props;
     if (e || o) return null;
-    let E = -1 === a;
+    let _ = -1 === s;
     return (0, r.jsxs)(r.Fragment, {
       children: [(0, r.jsxs)(c.Clickable, {
-        className: d()(h.queryContainer, {
-          [h.focused]: E
+        className: d()(E.queryContainer, {
+          [E.focused]: _
         }),
-        ...m(n, -1, E),
+        ...m(n, -1, _),
         onMouseEnter: i,
-        onClick: l,
+        onClick: a,
         children: [(0, r.jsx)("div", {
-          className: h.queryText,
+          className: E.queryText,
           children: u ? f.default.Messages.SEARCH_FAVORITES : f.default.Messages.SEARCH_FOR_VALUE.format({
             value: t
           })
         }), (0, r.jsx)("div", {
-          className: h.queryShortcut,
+          className: E.queryShortcut,
           "aria-hidden": !0,
           children: (0, r.jsx)(c.KeyCombo, {
             shortcut: "return",
             dim: !0,
-            className: h.keyCombo
+            className: E.keyCombo
           })
         })]
       }), u && (0, r.jsxs)(c.Clickable, {
-        className: d()(h.queryContainer, {
-          [h.focused]: E
+        className: d()(E.queryContainer, {
+          [E.focused]: _
         }),
-        ...m(n, -1, E),
+        ...m(n, -1, _),
         onMouseEnter: i,
-        onClick: s,
+        onClick: l,
         children: [(0, r.jsx)("div", {
-          className: h.queryText,
+          className: E.queryText,
           children: f.default.Messages.SEARCH_EVERYWHERE
         }), (0, r.jsx)("div", {
-          className: h.queryShortcut,
+          className: E.queryShortcut,
           "aria-hidden": !0,
           children: (0, r.jsx)(c.KeyCombo, {
             shortcut: "shift+return",
             dim: !0,
-            className: h.keyCombo
+            className: E.keyCombo
           })
         })]
       })]
@@ -86,16 +86,16 @@ class p extends(a = o.PureComponent) {
     let {
       numResults: t,
       renderNoResults: n,
-      renderInitialState: a,
-      renderResult: l,
-      renderCustomResults: s
+      renderInitialState: s,
+      renderResult: a,
+      renderCustomResults: l
     } = this.props;
-    if (e) return a();
+    if (e) return s();
     if (0 === t) return n();
-    if (null != l) return Array.from({
+    if (null != a) return Array.from({
       length: t
-    }).map((e, t) => l(t));
-    if (null != s) return s();
+    }).map((e, t) => a(t));
+    if (null != l) return l();
     throw Error("SearchResultsPopout.renderResults: Flow should never allow this...")
   }
   render() {
@@ -103,19 +103,19 @@ class p extends(a = o.PureComponent) {
       query: e,
       focusedIndex: t,
       navId: n,
-      width: a
-    } = this.props, l = "" === e.trim();
+      width: s
+    } = this.props, a = "" === e.trim();
     return (0, r.jsxs)("div", {
-      className: h.container,
+      className: E.container,
       style: {
-        width: a
+        width: s
       },
-      onMouseDown: E,
+      onMouseDown: _,
       role: "listbox",
       id: n,
       tabIndex: -1,
       "aria-activedescendant": "".concat(n, "-").concat(t),
-      children: [this.renderQuery(l), this.renderResults(l)]
+      children: [this.renderQuery(a), this.renderResults(a)]
     })
   }
 }
@@ -123,9 +123,9 @@ i = {
   renderInitialState: () => null,
   hideQuery: !1,
   width: 320
-}, (s = "defaultProps") in(l = p) ? Object.defineProperty(l, s, {
+}, (l = "defaultProps") in(a = T) ? Object.defineProperty(a, l, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[s] = i, t.default = p
+}) : a[l] = i, t.default = T

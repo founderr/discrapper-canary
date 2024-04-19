@@ -20,8 +20,8 @@ var a = s("735250"),
   m = s("962746"),
   _ = s("296810"),
   g = s("621853"),
-  h = s("246946"),
-  I = s("594174"),
+  I = s("246946"),
+  h = s("594174"),
   N = s("626135"),
   p = s("63063"),
   C = s("74538"),
@@ -60,10 +60,10 @@ function j(e) {
     selectedGuild: t
   } = e, {
     analyticsLocations: s
-  } = (0, T.default)(S.default.GUILD_PROFILE), l = (0, r.useStateFromStores)([I.default], () => {
-    let e = I.default.getCurrentUser();
+  } = (0, T.default)(S.default.GUILD_PROFILE), l = (0, r.useStateFromStores)([h.default], () => {
+    let e = h.default.getCurrentUser();
     return i()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e
-  }), u = (0, r.useStateFromStores)([g.default], () => !g.default.isFetchingProfile(l.id)), N = (0, r.useStateFromStores)([h.default], () => h.default.hidePersonalInformation), {
+  }), u = (0, r.useStateFromStores)([g.default], () => !g.default.isFetchingProfile(l.id)), N = (0, r.useStateFromStores)([I.default], () => I.default.hidePersonalInformation), {
     pendingAvatar: j,
     pendingAvatarDecoration: b,
     pendingProfileEffectId: U,
@@ -72,24 +72,24 @@ function j(e) {
     pendingBio: G,
     pendingPronouns: F,
     pendingThemeColors: k,
-    source: H
+    source: w
   } = (0, r.useStateFromStoresObject)([O.default], () => ({
     ...O.default.getAllPending(),
     source: O.default.getSource()
   }));
   if (n.useEffect(() => () => d.default.wait(A.resetAllPending), []), n.useEffect(() => {
-      null != H && E.default.trackWithMetadata(v.AnalyticEvents.SETTINGS_PANE_VIEWED, {
+      null != w && E.default.trackWithMetadata(v.AnalyticEvents.SETTINGS_PANE_VIEWED, {
         settings_type: "guild",
         destination_pane: v.AnalyticsSections.SETTINGS_CUSTOMIZE_PROFILE,
-        source: H
+        source: w
       })
-    }, [H]), N) return (0, a.jsx)(c.default, {});
+    }, [w]), N) return (0, a.jsx)(c.default, {});
   if (!u) return (0, a.jsx)(o.Spinner, {});
-  let w = C.default.canUsePremiumProfileCustomization(l),
+  let H = C.default.canUsePremiumProfileCustomization(l),
     V = {
       user: l,
       guild: t,
-      canUsePremiumCustomization: w,
+      canUsePremiumCustomization: H,
       onAvatarChange: A.setPendingAvatar,
       onBannerChange: A.setPendingBanner,
       onUpsellClick: P,

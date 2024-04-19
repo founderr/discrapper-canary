@@ -15,8 +15,8 @@ var l = a("735250"),
   u = a("236289"),
   E = a("788080"),
   _ = a("613734"),
-  A = a("800530"),
-  S = a("689938"),
+  S = a("800530"),
+  A = a("689938"),
   N = a("996006"),
   I = a("134247");
 
@@ -29,10 +29,10 @@ function x(e) {
     onBack: f
   } = e, T = (0, _.useSafetyHubAppealSignal)(), g = (0, o.useStateFromStores)([u.default], () => u.default.getFreeTextAppealReason()), [p, m] = s.useState(""), [C, L] = s.useState(!1);
   s.useEffect(() => {
-    m(null != g ? g : ""), L(T === A.AppealIngestionSignal.SOMETHING_ELSE)
+    m(null != g ? g : ""), L(T === S.AppealIngestionSignal.SOMETHING_ELSE)
   }, [g, T]);
   let h = e => {
-      L(e === A.AppealIngestionSignal.SOMETHING_ELSE), e !== A.AppealIngestionSignal.SOMETHING_ELSE && (m(""), r.default.dispatch({
+      L(e === S.AppealIngestionSignal.SOMETHING_ELSE), e !== S.AppealIngestionSignal.SOMETHING_ELSE && (m(""), r.default.dispatch({
         type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
         userInput: ""
       })), r.default.dispatch({
@@ -40,7 +40,7 @@ function x(e) {
         signal: e
       })
     },
-    M = A.AppealIngestionSignalOrder.map(e => ({
+    M = S.AppealIngestionSignalOrder.map(e => ({
       value: e,
       name: (0, E.getAppealSignalDisplayText)(e)
     }));
@@ -52,12 +52,12 @@ function x(e) {
       children: [(0, l.jsx)(d.Heading, {
         className: I.title,
         variant: "heading-xl/semibold",
-        children: S.default.Messages.APPEAL_INGESTION_MODAL_HEADER
+        children: A.default.Messages.APPEAL_INGESTION_MODAL_HEADER
       }), (0, l.jsx)(d.Text, {
         className: I.subtitle,
         color: "header-secondary",
         variant: "text-md/normal",
-        children: S.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_SUBHEADER
+        children: A.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_SUBHEADER
       }), null != n && (0, l.jsx)(d.ModalCloseButton, {
         className: I.closeButton,
         onClick: n
@@ -81,19 +81,19 @@ function x(e) {
         children: [(0, l.jsx)(d.TextArea, {
           rows: 4,
           maxLength: 1024,
-          placeholder: S.default.Messages.APPEAL_INGESTION_FREE_TEXT_REASON_ACTION_SHEET_PLACEHOLDER,
+          placeholder: A.default.Messages.APPEAL_INGESTION_FREE_TEXT_REASON_ACTION_SHEET_PLACEHOLDER,
           value: p,
           onChange: m,
           autoFocus: !0
         }), (0, l.jsx)(d.Text, {
           variant: "text-sm/normal",
           color: "header-muted",
-          children: S.default.Messages.APPEAL_INGESTION_FREE_TEXT_REASON_ACTION_SHEET_FOOTER
+          children: A.default.Messages.APPEAL_INGESTION_FREE_TEXT_REASON_ACTION_SHEET_FOOTER
         })]
       }), (0, l.jsx)(d.Text, {
         variant: "text-sm/normal",
         className: N.disclaimer,
-        children: S.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DISCLAIMER.format()
+        children: A.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DISCLAIMER.format()
       })]
     }), (0, l.jsxs)(d.ModalFooter, {
       children: [(0, l.jsx)(d.Button, {
@@ -104,7 +104,7 @@ function x(e) {
           }), null == x || x()
         },
         color: d.Button.Colors.BRAND,
-        children: S.default.Messages.NEXT
+        children: A.default.Messages.NEXT
       }), t && (0, l.jsx)(d.Button, {
         onClick: () => {
           r.default.dispatch({
@@ -114,7 +114,7 @@ function x(e) {
         },
         color: d.Button.Colors.PRIMARY,
         look: d.Button.Looks.LINK,
-        children: S.default.Messages.BACK
+        children: A.default.Messages.BACK
       })]
     })]
   })

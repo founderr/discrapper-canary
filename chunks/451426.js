@@ -15,8 +15,8 @@ var l = a("735250"),
   u = a("788080"),
   E = a("613734"),
   _ = a("981631"),
-  A = a("689938"),
-  S = a("881177"),
+  S = a("689938"),
+  A = a("881177"),
   N = a("134247");
 
 function I(e) {
@@ -48,12 +48,12 @@ function I(e) {
       children: [(0, l.jsx)(i.Heading, {
         className: N.title,
         variant: "heading-xl/semibold",
-        children: A.default.Messages.APPEAL_INGESTION_MODAL_HEADER
+        children: S.default.Messages.APPEAL_INGESTION_MODAL_HEADER
       }), (0, l.jsx)(i.Text, {
         className: N.subtitle,
         color: "header-secondary",
         variant: "text-md/normal",
-        children: A.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_SUBHEADER
+        children: S.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_SUBHEADER
       }), null != a && (0, l.jsx)(i.ModalCloseButton, {
         className: N.closeButton,
         onClick: a
@@ -62,9 +62,9 @@ function I(e) {
       className: t,
       paddingFix: !1,
       children: [(0, l.jsx)("ul", {
-        className: S.listContainer,
+        className: A.listContainer,
         children: [(0, u.getAppealSignalDisplayText)(m), C].filter(e => e.length > 0).map((e, t) => (0, l.jsx)("li", {
-          className: S.listItem,
+          className: A.listItem,
           children: (0, l.jsx)(i.Text, {
             tag: "span",
             variant: "text-md/normal",
@@ -72,17 +72,17 @@ function I(e) {
           })
         }, t))
       }), (0, l.jsx)("div", {
-        className: S.anchorContainer,
+        className: A.anchorContainer,
         children: (0, l.jsx)(i.Anchor, {
           onClick: () => h(e => !e),
           children: (0, l.jsx)(i.Heading, {
             variant: "heading-md/normal",
             color: "text-link",
-            children: C.length > 0 ? A.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_EDIT_DETAILS : A.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ADD_DETAILS
+            children: C.length > 0 ? S.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_EDIT_DETAILS : S.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ADD_DETAILS
           })
         })
       }), L && (0, l.jsx)("div", {
-        className: S.inputContainer,
+        className: A.inputContainer,
         children: (0, l.jsx)(i.TextArea, {
           value: C,
           onChange: j
@@ -96,29 +96,29 @@ function I(e) {
       }), (0, l.jsx)(i.Text, {
         variant: "text-xs/medium",
         color: "header-secondary",
-        className: S.footerText,
-        children: A.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_FOOTER
+        className: A.footerText,
+        children: S.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_FOOTER
       })]
     }), (0, l.jsxs)(i.ModalFooter, {
       direction: d.default.Direction.VERTICAL,
       children: ["" !== M && (0, l.jsx)(i.Text, {
-        className: S.errorText,
+        className: A.errorText,
         variant: "text-lg/normal",
         color: "text-danger",
         children: M
       }), (0, l.jsxs)("div", {
-        className: S.buttonContainer,
+        className: A.buttonContainer,
         children: [(0, l.jsx)(i.Button, {
           look: i.Button.Looks.LINK,
           color: i.Button.Colors.PRIMARY,
           onClick: x,
           disabled: p,
-          children: A.default.Messages.BACK
+          children: S.default.Messages.BACK
         }), (0, l.jsx)(i.Button, {
           onClick: P,
           color: i.Button.Colors.RED,
           submitting: p,
-          children: A.default.Messages.SUBMIT
+          children: S.default.Messages.SUBMIT
         })]
       })]
     })]

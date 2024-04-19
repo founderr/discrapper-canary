@@ -30,8 +30,8 @@ var l = n("735250"),
   v = n("417363"),
   x = n("941128"),
   R = n("436088"),
-  M = n("880080"),
-  y = n("26290"),
+  y = n("880080"),
+  M = n("26290"),
   O = n("15434"),
   b = n("780570"),
   D = n("557177"),
@@ -72,12 +72,12 @@ function k(e) {
   }), Y = (0, g.default)(), K = Y.length > 0 && k;
   (0, C.useTrackNewBroadcastDetected)();
   let W = (0, s.useTreeItem)("home"),
-    z = () => {
+    Z = () => {
       v(null), b(0), clearTimeout(L)
     };
   if (null == n) return null;
-  let Z = B.default.Messages.DIRECT_MESSAGES;
-  T && (Z = r.Storage.get(w.DISCODO_STORAGE_KEY) ? B.default.Messages.DISCODO_ENABLED : B.default.Messages.DISCODO_DISABLED), Y.length > 0 && h.default.trackExposure({
+  let z = B.default.Messages.DIRECT_MESSAGES;
+  T && (z = r.Storage.get(w.DISCODO_STORAGE_KEY) ? B.default.Messages.DISCODO_ENABLED : B.default.Messages.DISCODO_DISABLED), Y.length > 0 && h.default.trackExposure({
     location: "home_button"
   });
   let X = null;
@@ -93,13 +93,13 @@ function k(e) {
       selected: Q,
       lowerBadge: f > 0 ? (0, U.renderMentionBadge)(f) : null,
       upperBadge: X,
-      lowerBadgeWidth: (0, y.getBadgeWidthForValue)(f),
+      lowerBadgeWidth: (0, M.getBadgeWidthForValue)(f),
       children: (0, l.jsx)(O.default, {
         onMouseEnter: () => N(!0),
         onMouseLeave: () => N(!1),
         onClick: () => {
-          if (!__OVERLAY__ && (null != L && clearTimeout(L), v(setTimeout(z, 500)), b(x + 1), 15 === x)) {
-            z();
+          if (!__OVERLAY__ && (null != L && clearTimeout(L), v(setTimeout(Z, 500)), b(x + 1), 15 === x)) {
+            Z();
             let e = !r.Storage.get(w.DISCODO_STORAGE_KEY);
             r.Storage.set(w.DISCODO_STORAGE_KEY, e), e ? (0, D.playSound)("discodo") : (0, D.playSound)("user_leave"), A(!0), setTimeout(() => {
               A(!1)
@@ -154,14 +154,14 @@ function k(e) {
       tutorialId: "friends-list",
       position: "right",
       children: (0, l.jsxs)(P.ListItem, {
-        children: [(0, l.jsx)(M.default, {
+        children: [(0, l.jsx)(y.default, {
           selected: t,
           hovered: I,
           className: H.pill
         }), null != J ? J : (0, l.jsx)(G.default, {
           color: o.Tooltip.Colors.PRIMARY,
           hideOnClick: !0,
-          text: Z,
+          text: z,
           selected: t,
           children: q
         })]

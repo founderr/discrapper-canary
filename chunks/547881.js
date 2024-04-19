@@ -20,8 +20,8 @@ let E = p.OverlayWidgetTypes.DEFAULT,
     type: E,
     opacity: S
   }),
-  y = r.createContext(void 0),
-  O = e => {
+  T = r.createContext(void 0),
+  y = e => {
     let {
       children: t,
       className: n,
@@ -32,7 +32,7 @@ let E = p.OverlayWidgetTypes.DEFAULT,
         let {
           type: a
         } = e;
-        return (0, o.jsx)(y.Consumer, {
+        return (0, o.jsx)(T.Consumer, {
           children: e => (0, o.jsx)("div", {
             className: u()(n, g.bar, g[f()(a)]),
             style: e,
@@ -43,14 +43,14 @@ let E = p.OverlayWidgetTypes.DEFAULT,
       }
     })
   };
-class T extends(i = r.PureComponent) {
+class I extends(i = r.PureComponent) {
   render() {
     let {
       disableScroll: e,
       children: t,
       className: n
     } = this.props;
-    return (0, o.jsx)(y.Consumer, {
+    return (0, o.jsx)(T.Consumer, {
       children: i => (0, o.jsx)(v.Consumer, {
         children: a => {
           let l = u()(g.body, g[f()(a.type)], n);
@@ -70,13 +70,13 @@ class T extends(i = r.PureComponent) {
 }
 s = {
   disableScroll: !1
-}, (l = "defaultProps") in(a = T) ? Object.defineProperty(a, l, {
+}, (l = "defaultProps") in(a = I) ? Object.defineProperty(a, l, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : a[l] = s;
-let C = e => {
+let N = e => {
     let {
       type: t = E,
       width: n,
@@ -102,13 +102,13 @@ let C = e => {
       })
     })
   },
-  N = e => {
+  O = e => {
     let {
       children: t,
       className: n,
       dynamicSize: i = !1
     } = e;
-    return (0, o.jsx)(y.Consumer, {
+    return (0, o.jsx)(T.Consumer, {
       children: e => (0, o.jsx)("div", {
         className: u()(g.content, n, {
           [g.staticSize]: !i
@@ -118,13 +118,13 @@ let C = e => {
       })
     })
   };
-C.Background = e => {
+N.Background = e => {
   let {
     children: t,
     opacityOverride: n
   } = e;
   if (null == t) return null;
-  let i = [O, T, N];
+  let i = [y, I, O];
   return (0, o.jsx)(v.Consumer, {
     children: e => {
       let {
@@ -136,7 +136,7 @@ C.Background = e => {
         style: l
       });
       {
-        if (i.includes(t.type)) return (0, o.jsx)(y.Provider, {
+        if (i.includes(t.type)) return (0, o.jsx)(T.Provider, {
           value: l,
           children: t
         });
@@ -145,7 +145,7 @@ C.Background = e => {
       }
     }
   })
-}, C.Body = T, C.Content = N, C.Icon = e => {
+}, N.Body = I, N.Content = O, N.Icon = e => {
   let {
     icon: t,
     label: n,
@@ -188,4 +188,4 @@ C.Background = e => {
       })
     }
   })
-}, C.Bar = O, t.default = C
+}, N.Bar = y, t.default = N

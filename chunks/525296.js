@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return u
   }
 });
-var a = n("735250"),
-  s = n("470079"),
-  l = n("493683"),
-  i = n("239091"),
-  r = n("730749"),
-  o = n("430824");
+var n = a("735250"),
+  s = a("470079"),
+  l = a("493683"),
+  i = a("239091"),
+  r = a("730749"),
+  o = a("430824");
 
 function u(e) {
   return (0, r.default)(class extends s.Component {
     render() {
-      return (0, a.jsx)(e, {
+      return (0, n.jsx)(e, {
         ...this.props,
         onMessageUser: this.handleMessageUser,
         onUserContextMenu: this.handleUserContextMenu,
@@ -29,9 +29,9 @@ function u(e) {
       (0, i.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("64409")]).then(n.bind(n, "881351"));
-        return n => (0, a.jsx)(e, {
-          ...n,
+        } = await Promise.all([a.e("99387"), a.e("79695"), a.e("1502"), a.e("64409")]).then(a.bind(a, "881351"));
+        return a => (0, n.jsx)(e, {
+          ...a,
           user: t
         })
       }, {
@@ -42,9 +42,9 @@ function u(e) {
       (0, i.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("33053"), n.e("49146"), n.e("75475"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502"), n.e("69760"), n.e("33213")]).then(n.bind(n, "545135"));
-        return n => (0, a.jsx)(e, {
-          ...n,
+        } = await Promise.all([a.e("49237"), a.e("99387"), a.e("66635"), a.e("33053"), a.e("49146"), a.e("75475"), a.e("85093"), a.e("85552"), a.e("58227"), a.e("43502"), a.e("69760"), a.e("33213")]).then(a.bind(a, "545135"));
+        return a => (0, n.jsx)(e, {
+          ...a,
           guild: t
         })
       })
@@ -55,9 +55,9 @@ function u(e) {
       (0, i.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await n.e("40283").then(n.bind(n, "428108"));
-        return n => (0, a.jsx)(e, {
-          ...n,
+        } = await a.e("40283").then(a.bind(a, "428108"));
+        return a => (0, n.jsx)(e, {
+          ...a,
           channel: t,
           guild: s
         })

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return m
+    return E
   }
 });
 var l = s("735250");
@@ -16,53 +16,53 @@ var a = s("120356"),
   c = s("51144"),
   f = s("981631"),
   S = s("689938"),
-  E = s("968030");
+  m = s("968030");
 
-function m(e) {
+function E(e) {
   let {
     user: t,
     displayProfile: s
-  } = e, a = (0, o.useStateFromStores)([d.default], () => d.default.findActivity(t.id, e => e.type === f.ActivityTypes.CUSTOM_STATUS)), m = c.default.getName(t);
+  } = e, a = (0, o.useStateFromStores)([d.default], () => d.default.findActivity(t.id, e => e.type === f.ActivityTypes.CUSTOM_STATUS)), E = c.default.getName(t);
   return (0, l.jsxs)("div", {
-    className: E.container,
-    children: [null == m && (0, l.jsx)(n.default, {
+    className: m.container,
+    children: [null == E && (0, l.jsx)(n.default, {
       user: t,
-      className: E.nameTag,
-      usernameClass: E.username,
-      discriminatorClass: E.discriminator
-    }), null != m && (0, l.jsxs)("div", {
+      className: m.nameTag,
+      usernameClass: m.username,
+      discriminatorClass: m.discriminator
+    }), null != E && (0, l.jsxs)("div", {
       children: [(0, l.jsx)(r.Text, {
         variant: "text-lg/semibold",
         style: {
           marginRight: "12px"
         },
-        children: m
+        children: E
       }), (0, l.jsx)(n.default, {
         user: t,
         forceUsername: !0,
-        usernameClass: E.discriminator,
-        discriminatorClass: E.discriminator,
-        className: i()(E.nameTag, E.nameTagSmall)
+        usernameClass: m.discriminator,
+        discriminatorClass: m.discriminator,
+        className: i()(m.nameTag, m.nameTagSmall)
       })]
     }), (null == s ? void 0 : s.pronouns) != null && (null == s ? void 0 : s.pronouns) !== "" && (0, l.jsx)(r.Tooltip, {
       text: S.default.Messages.USER_PROFILE_PRONOUNS,
       children: e => (0, l.jsx)(r.Text, {
         ...e,
         variant: "text-sm/normal",
-        className: i()(E.pronouns, E.nameTagSmall),
+        className: i()(m.pronouns, m.nameTagSmall),
         children: s.pronouns
       })
     }), null != a ? (0, l.jsx)("div", {
-      className: E.__invalid_customStatusActivity,
+      className: m.__invalid_customStatusActivity,
       children: (0, l.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
-        className: E.customStatusText,
+        className: m.customStatusText,
         children: (0, l.jsx)(u.default, {
           activity: a,
-          className: E.customStatus,
-          emojiClassName: E.customStatusEmoji,
-          soloEmojiClassName: E.customStatusSoloEmoji
+          className: m.customStatus,
+          emojiClassName: m.customStatusEmoji,
+          soloEmojiClassName: m.customStatusSoloEmoji
         })
       })
     }) : null]

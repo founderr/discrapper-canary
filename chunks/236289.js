@@ -4,22 +4,22 @@ var i, a, u, l, s = n("979079"),
   o = n.n(s),
   r = n("442837"),
   c = n("570140"),
-  f = n("531441"),
-  d = n("800530");
+  d = n("531441"),
+  f = n("800530");
 let S = {},
   _ = {},
   E = {
-    state: f.AccountStandingState.ALL_GOOD
+    state: d.AccountStandingState.ALL_GOOD
   },
   p = !1,
   T = !1,
   A = null,
   g = null,
   F = !1,
-  C = !1,
-  I = null,
-  H = d.AppealIngestionSignal.DIDNT_VIOLATE_POLICY,
-  U = "";
+  I = !1,
+  C = null,
+  U = f.AppealIngestionSignal.DIDNT_VIOLATE_POLICY,
+  H = "";
 class b extends(l = r.default.Store) {
   isFetching() {
     return p
@@ -49,16 +49,16 @@ class b extends(l = r.default.Store) {
     return F
   }
   getAppealSignal() {
-    return H
-  }
-  getFreeTextAppealReason() {
     return U
   }
+  getFreeTextAppealReason() {
+    return H
+  }
   getIsSubmitting() {
-    return C
+    return I
   }
   getSubmitError() {
-    return I
+    return C
   }
 }
 u = "SafetyHubStore", (a = "displayName") in(i = b) ? Object.defineProperty(i, a, {
@@ -85,7 +85,7 @@ u = "SafetyHubStore", (a = "displayName") in(i = b) ? Object.defineProperty(i, a
     p = !1, T = !1, A = e
   },
   SAFETY_HUB_FETCH_CLASSIFICATION_START: function(t) {
-    _[t.classificationId] = f.ClassificationRequestState.PENDING, p = !0
+    _[t.classificationId] = d.ClassificationRequestState.PENDING, p = !0
   },
   SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS: function(t) {
     let {
@@ -93,14 +93,14 @@ u = "SafetyHubStore", (a = "displayName") in(i = b) ? Object.defineProperty(i, a
       accountStanding: n,
       isDsaEligible: i
     } = t;
-    S[e.id] = e, _[e.id] = f.ClassificationRequestState.SUCCESS, E = n, p = !1, A = null, F = i, T = !0
+    S[e.id] = e, _[e.id] = d.ClassificationRequestState.SUCCESS, E = n, p = !1, A = null, F = i, T = !0
   },
   SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE: function(t) {
     let {
       error: e,
       classificationId: n
     } = t;
-    p = !1, A = e, _[n] = f.ClassificationRequestState.FAILED, T = !1
+    p = !1, A = e, _[n] = d.ClassificationRequestState.FAILED, T = !1
   },
   SAFETY_HUB_APPEAL_OPEN: function(t) {
     let {
@@ -109,41 +109,41 @@ u = "SafetyHubStore", (a = "displayName") in(i = b) ? Object.defineProperty(i, a
     g = e
   },
   SAFETY_HUB_APPEAL_CLOSE: function() {
-    g = null, H = d.AppealIngestionSignal.DIDNT_VIOLATE_POLICY, U = ""
+    g = null, U = f.AppealIngestionSignal.DIDNT_VIOLATE_POLICY, H = ""
   },
   SAFETY_HUB_APPEAL_SIGNAL_SELECT: function(t) {
     let {
       signal: e
     } = t;
-    H = e
+    U = e
   },
   SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE: function(t) {
     let {
       userInput: e
     } = t;
-    U = e
+    H = e
   },
   SAFETY_HUB_REQUEST_REVIEW_START: function(t) {
     let {} = t;
-    C = !0, I = null
+    I = !0, C = null
   },
   SAFETY_HUB_REQUEST_REVIEW_SUCCESS: function(t) {
     let {
       classificationId: e
     } = t;
-    C = !1, I = null, S[e].appeal_status = {
-      status: f.AppealStatusType.REVIEW_PENDING
+    I = !1, C = null, S[e].appeal_status = {
+      status: d.AppealStatusType.REVIEW_PENDING
     }
   },
   SAFETY_HUB_REQUEST_REVIEW_FAILURE: function(t) {
     let {
       error: e
     } = t;
-    C = !1, I = e
+    I = !1, C = e
   },
   LOGOUT: function() {
     p = !1, S = {}, E = {
-      state: f.AccountStandingState.ALL_GOOD
-    }, g = null, H = d.AppealIngestionSignal.DIDNT_VIOLATE_POLICY, U = ""
+      state: d.AccountStandingState.ALL_GOOD
+    }, g = null, U = f.AppealIngestionSignal.DIDNT_VIOLATE_POLICY, H = ""
   }
 })

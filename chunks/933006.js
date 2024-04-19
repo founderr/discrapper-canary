@@ -1,68 +1,68 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return O
+    return I
   }
-}), s("47120");
-var a = s("735250"),
-  n = s("470079"),
-  r = s("481060"),
-  _ = s("230711"),
-  l = s("2052"),
-  u = s("906732"),
-  E = s("174609"),
-  i = s("626135"),
-  S = s("790527"),
-  o = s("940165"),
-  M = s("474936"),
-  d = s("981631"),
-  I = s("689938"),
-  T = s("677804");
+}), n("47120");
+var s = n("735250"),
+  a = n("470079"),
+  r = n("481060"),
+  i = n("230711"),
+  o = n("2052"),
+  u = n("906732"),
+  l = n("174609"),
+  c = n("626135"),
+  _ = n("790527"),
+  d = n("940165"),
+  S = n("474936"),
+  E = n("981631"),
+  O = n("689938"),
+  f = n("677804");
 
-function O(e) {
+function I(e) {
   let {
     onClose: t,
-    ...O
-  } = e, N = (0, l.useAnalyticsContext)(), {
-    analyticsLocations: c
-  } = (0, u.default)(), [A, g] = n.useState(!1);
-  return n.useEffect(() => {
-    !A && (i.default.track(d.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      type: M.PremiumUpsellTypes.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
-      location: N.location,
-      location_stack: c
-    }), g(!0))
-  }, [N.location, c, A]), (0, a.jsx)(S.default, {
-    type: M.PremiumUpsellTypes.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
-    artContainerClassName: T.image,
-    artURL: s("98165"),
-    title: I.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_TITLE,
-    glowUp: I.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_TITLE,
-    body: I.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_DESCRIPTION,
+    ...I
+  } = e, C = (0, o.useAnalyticsContext)(), {
+    analyticsLocations: M
+  } = (0, u.default)(), [T, N] = a.useState(!1);
+  return a.useEffect(() => {
+    !T && (c.default.track(E.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+      type: S.PremiumUpsellTypes.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
+      location: C.location,
+      location_stack: M
+    }), N(!0))
+  }, [C.location, M, T]), (0, s.jsx)(_.default, {
+    type: S.PremiumUpsellTypes.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
+    artContainerClassName: f.image,
+    artURL: n("98165"),
+    title: O.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_TITLE,
+    glowUp: O.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_TITLE,
+    body: O.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_DESCRIPTION,
     showEnhancedUpsell: !0,
     analyticsLocation: {
-      section: d.AnalyticsSections.PREMIUM_CUSTOM_NOTIFICATION_SOUND_UPSELL_MODAL
+      section: E.AnalyticsSections.PREMIUM_CUSTOM_NOTIFICATION_SOUND_UPSELL_MODAL
     },
     enableArtBoxShadow: !1,
-    onSubscribeClick: E.default,
-    secondaryCTA: I.default.Messages.PREMIUM_ROADBLOCK_UPSELL_SECONDARY_CTA,
+    onSubscribeClick: l.default,
+    secondaryCTA: O.default.Messages.PREMIUM_ROADBLOCK_UPSELL_SECONDARY_CTA,
     onSecondaryClick: () => {
-      t(), _.default.open(d.UserSettingsSections.PREMIUM)
+      t(), i.default.open(E.UserSettingsSections.PREMIUM)
     },
     onClose: t,
-    ...O,
-    children: (0, a.jsx)(r.FormItem, {
-      title: I.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_LABEL,
-      className: T.optionsContainerWrapper,
-      children: (0, a.jsxs)("div", {
-        className: T.optionsContainer,
-        children: [(0, a.jsx)(o.default, {
+    ...I,
+    children: (0, s.jsx)(r.FormItem, {
+      title: O.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_LABEL,
+      className: f.optionsContainerWrapper,
+      children: (0, s.jsxs)("div", {
+        className: f.optionsContainer,
+        children: [(0, s.jsx)(d.default, {
           showGradient: !0
-        }), (0, a.jsx)(o.default, {
+        }), (0, s.jsx)(d.default, {
           showGradient: !1
-        }), (0, a.jsx)(o.default, {
+        }), (0, s.jsx)(d.default, {
           showGradient: !1
-        }), (0, a.jsx)(o.default, {
+        }), (0, s.jsx)(d.default, {
           showGradient: !1
         })]
       })

@@ -1,34 +1,34 @@
 "use strict";
-s.r(t);
-var a = s("735250");
-s("470079");
-var n = s("120356"),
-  l = s.n(n),
-  i = s("481060"),
-  r = s("888592"),
-  o = s("689938"),
-  c = s("730366");
-t.default = e => {
+t.r(s);
+var a = t("735250");
+t("470079");
+var l = t("120356"),
+  n = t.n(l),
+  i = t("481060"),
+  o = t("888592"),
+  r = t("689938"),
+  d = t("730366");
+s.default = e => {
   let {
-    school: t,
-    setStep: s
+    school: s,
+    setStep: t
   } = e;
   return (0, a.jsxs)("div", {
-    className: c.container,
+    className: d.container,
     children: [(0, a.jsx)("div", {
-      className: c.topImage
+      className: d.topImage
     }), (0, a.jsx)(i.Heading, {
-      className: l()(c.centerText, c.header),
+      className: n()(d.centerText, d.header),
       variant: "heading-xl/semibold",
-      children: o.default.Messages.HUB_WAITLIST_MODAL_JOINED_HEADER
+      children: r.default.Messages.HUB_WAITLIST_MODAL_JOINED_HEADER
     }), (0, a.jsx)("div", {
-      className: c.descriptionWidth,
+      className: d.descriptionWidth,
       children: (0, a.jsx)(i.Text, {
-        className: c.centerText,
+        className: d.centerText,
         variant: "text-sm/normal",
         color: "header-secondary",
-        children: o.default.Messages.HUB_WAITLIST_MODAL_JOINED_DESCRIPTION.format({
-          school: t
+        children: r.default.Messages.HUB_WAITLIST_MODAL_JOINED_DESCRIPTION.format({
+          school: s
         })
       })
     }), (0, a.jsx)(i.Button, {
@@ -36,10 +36,10 @@ t.default = e => {
       size: i.Button.Sizes.SMALL,
       color: i.Button.Colors.LINK,
       onClick: () => {
-        s(r.HubEmailConnectionSteps.VERIFY_EMAIL)
+        t(o.HubEmailConnectionSteps.VERIFY_EMAIL)
       },
-      className: c.__invalid_resendLink,
-      children: o.default.Messages.HUB_EMAIL_CONFIRMATION_DIFFERENT_EMAIL
+      className: d.__invalid_resendLink,
+      children: r.default.Messages.HUB_EMAIL_CONFIRMATION_DIFFERENT_EMAIL
     })]
   })
 }
