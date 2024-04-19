@@ -29,6 +29,7 @@ function u(e) {
     },
     children: [(0, a.jsx)(l.Text, {
       variant: "text-sm/medium",
+      color: "always-white",
       children: r.default.Messages.PROFILE_LOOKING_GOOD_TOOLTIP_TEXT
     }), (0, a.jsx)("div", {
       className: o.pointer
