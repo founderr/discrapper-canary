@@ -1,66 +1,70 @@
 "use strict";
 s.r(t), s("47120");
-var i = s("735250");
+var a = s("735250");
 s("470079");
-var a = s("727075"),
-  l = s("780384"),
-  r = s("481060"),
-  C = s("493683"),
-  n = s("410030"),
-  d = s("204197"),
-  o = s("63063"),
-  c = s("51144"),
-  f = s("792451"),
-  u = s("814667"),
-  x = s("981631"),
-  h = s("689938"),
-  p = s("970422");
-let _ = (e, t) => {
-    C.default.openPrivateChannel(e), t()
+var i = s("512722"),
+  l = s.n(i),
+  r = s("727075"),
+  C = s("442837"),
+  n = s("780384"),
+  d = s("481060"),
+  o = s("493683"),
+  c = s("410030"),
+  u = s("204197"),
+  f = s("63063"),
+  x = s("51144"),
+  h = s("276444"),
+  p = s("792451"),
+  _ = s("814667"),
+  j = s("981631"),
+  L = s("689938"),
+  R = s("970422");
+let m = (e, t) => {
+    o.default.openPrivateChannel(e), t()
   },
-  j = e => {
+  E = e => {
     let {
       user: t,
       onClose: s
     } = e, {
-      avatarSrc: a,
+      avatarSrc: i,
       eventHandlers: l
-    } = (0, d.default)({
+    } = (0, u.default)({
       user: t,
-      size: r.AvatarSizes.SIZE_56
-    }), C = c.default.getName(t), n = t.username !== C;
-    return (0, i.jsxs)("div", {
-      className: p.referredUserRowContainer,
-      children: [(0, i.jsx)(r.Avatar, {
-        src: a,
-        "aria-label": C,
-        size: r.AvatarSizes.SIZE_56,
+      size: d.AvatarSizes.SIZE_56
+    }), r = x.default.getName(t), C = t.username !== r;
+    return (0, a.jsxs)("div", {
+      className: R.referredUserRowContainer,
+      children: [(0, a.jsx)(d.Avatar, {
+        src: i,
+        "aria-label": r,
+        size: d.AvatarSizes.SIZE_56,
         ...l
-      }), (0, i.jsxs)("div", {
-        className: p.referredUserRowBody,
-        children: [(0, i.jsx)(r.Tooltip, {
-          text: h.default.Messages.REFERRAL_PROGRAM_FRIEND_SELECT_COMPLETE_TOOL_TOP,
+      }), (0, a.jsxs)("div", {
+        className: R.referredUserRowBody,
+        children: [(0, a.jsx)(d.Tooltip, {
+          text: L.default.Messages.REFERRAL_PROGRAM_FRIEND_SELECT_COMPLETE_TOOL_TOP,
           position: "right",
           children: e => {
             let {
-              onMouseEnter: a,
+              onMouseEnter: i,
               onMouseLeave: l
             } = e;
-            return (0, i.jsx)(r.Clickable, {
-              onClick: () => _(t.id, s),
-              className: p.displayNameClickableContainer,
-              onMouseEnter: a,
+            return (0, a.jsx)(d.Clickable, {
+              onClick: () => m(t.id, s),
+              className: R.displayNameClickableContainer,
+              onMouseEnter: i,
               onMouseLeave: l,
-              children: (0, i.jsx)(r.Text, {
+              children: (0, a.jsx)(d.Text, {
                 variant: "text-md/medium",
-                className: p.displayName,
-                children: C
+                className: R.displayName,
+                children: r
               })
             })
           }
-        }), n && (0, i.jsx)(r.Text, {
+        }), C && (0, a.jsx)(d.Text, {
           variant: "text-md/medium",
-          className: p.userName,
+          className: R.userName,
           children: t.username
         })]
       })]
@@ -70,35 +74,39 @@ t.default = e => {
   let {
     selectedUsers: t,
     onClose: s
-  } = e, C = [...t].map(e => (0, i.jsx)(j, {
+  } = e, i = [...t].map(e => (0, a.jsx)(E, {
     user: e,
     onClose: s
-  }, e.id)), d = (0, n.useTheme)(), c = (0, l.isThemeLight)(d) ? u.default : f.default;
-  return (0, i.jsxs)("div", {
-    className: p.confrimationContainer,
-    children: [(0, i.jsx)(r.Clickable, {
+  }, e.id)), o = (0, C.useStateFromStores)([h.default], () => h.default.getReferralsRemaining());
+  l()(null !== o, "Referrals remaining should not be null");
+  let u = (0, c.useTheme)(),
+    x = (0, n.isThemeLight)(u) ? _.default : p.default,
+    m = L.default.Messages.REFERRAL_PROGRAM_FRIEND_SELECT_RESENT_COMPLETE_HEADER;
+  return o > 0 && (m = L.default.Messages.REFERRAL_PROGRAM_FRIEND_SELECT_COMPLETE_HEADER.format({
+    numReferrals: i.length
+  })), (0, a.jsxs)("div", {
+    className: R.confrimationContainer,
+    children: [(0, a.jsx)(d.Clickable, {
       onClick: s,
-      className: p.closeButtonContainer,
-      children: (0, i.jsx)(a.CloseSmallIcon, {
+      className: R.closeButtonContainer,
+      children: (0, a.jsx)(r.CloseSmallIcon, {
         width: 20,
         height: 20
       })
-    }), (0, i.jsx)(c, {
-      className: p.headerIcon
-    }), (0, i.jsx)(r.Heading, {
+    }), (0, a.jsx)(x, {
+      className: R.headerIcon
+    }), (0, a.jsx)(d.Heading, {
       variant: "heading-lg/bold",
-      className: p.heading,
-      children: h.default.Messages.REFERRAL_PROGRAM_FRIEND_SELECT_COMPLETE_HEADER.format({
-        numReferrals: C.length
-      })
-    }), (0, i.jsx)("div", {
-      className: p.confirmedUserContainer,
-      children: C
-    }), (0, i.jsx)(r.Text, {
+      className: R.heading,
+      children: m
+    }), (0, a.jsx)("div", {
+      className: R.confirmedUserContainer,
+      children: i
+    }), (0, a.jsx)(d.Text, {
       variant: "text-md/medium",
-      children: h.default.Messages.REFERRAL_PROGRAM_FRIEND_SELECT_COMPLETE_SUBHEADER.format({
+      children: L.default.Messages.REFERRAL_PROGRAM_FRIEND_SELECT_COMPLETE_SUBHEADER.format({
         days: 10,
-        helpdeskArticle: o.default.getArticleURL(x.HelpdeskArticles.REFERRAL_PROGRAM)
+        helpdeskArticle: f.default.getArticleURL(j.HelpdeskArticles.REFERRAL_PROGRAM)
       })
     })]
   })
