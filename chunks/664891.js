@@ -6,9 +6,9 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   s = n("470079"),
-  a = n("512722"),
-  l = n.n(a),
-  r = n("742280"),
+  l = n("512722"),
+  r = n.n(l),
+  a = n("742280"),
   u = n("442837"),
   o = n("481060"),
   c = n("190947"),
@@ -16,20 +16,20 @@ var i = n("735250"),
   m = n("275850"),
   f = n("672971"),
   p = n("100527"),
-  _ = n("906732"),
+  I = n("906732"),
   S = n("987209"),
-  I = n("598"),
-  E = n("45572"),
-  P = n("614223"),
+  _ = n("598"),
+  P = n("45572"),
+  E = n("614223"),
   T = n("246946"),
   N = n("351402"),
   v = n("509545"),
   h = n("74538"),
   x = n("296848"),
   A = n("374649"),
-  C = n("653798"),
-  y = n("585602"),
-  g = n("314182"),
+  y = n("653798"),
+  g = n("585602"),
+  C = n("314182"),
   M = n("314404"),
   R = n("42818"),
   b = n("981631"),
@@ -40,11 +40,11 @@ var i = n("735250"),
 function G(e) {
   var t;
   let n, {
-      premiumSubscription: a,
+      premiumSubscription: l,
       paymentSources: p,
-      priceOptions: _,
+      priceOptions: I,
       onPaymentSourceChange: A,
-      onPaymentSourceAdd: y,
+      onPaymentSourceAdd: g,
       planId: R,
       setHasAcceptedTerms: O,
       legalTermsNodeRef: G,
@@ -61,89 +61,93 @@ function G(e) {
       selectedSkuId: J,
       defaultPlanId: X,
       isPremium: q,
-      startedPaymentFlowWithPaymentSourcesRef: Q
-    } = (0, I.usePaymentContext)(),
+      startedPaymentFlowWithPaymentSourcesRef: Q,
+      annualDiscountInvoicePreview: $
+    } = (0, _.usePaymentContext)(),
     {
-      isGift: $
+      isGift: ee
     } = (0, S.useGiftContext)(),
-    ee = _.paymentSourceId,
-    et = (0, u.useStateFromStores)([v.default], () => v.default.get(R));
-  l()(null != et, "Missing newPlan");
-  let en = (0, u.useStateFromStores)([T.default], () => T.default.hidePersonalInformation),
-    ei = r.CountryCodesSets.EEA_COUNTRIES.has(N.default.ipCountryCodeWithFallback),
-    es = Z === E.PurchaseState.PURCHASING || Z === E.PurchaseState.COMPLETED,
-    ea = (0, P.inOneStepSubscriptionCheckout)({
+    et = I.paymentSourceId,
+    en = (0, u.useStateFromStores)([v.default], () => v.default.get(R));
+  r()(null != en, "Missing newPlan");
+  let ei = (0, u.useStateFromStores)([T.default], () => T.default.hidePersonalInformation),
+    es = null != $,
+    el = a.CountryCodesSets.EEA_COUNTRIES.has(N.default.ipCountryCodeWithFallback),
+    er = Z === P.PurchaseState.PURCHASING || Z === P.PurchaseState.COMPLETED,
+    ea = (0, E.inOneStepSubscriptionCheckout)({
       isTrial: !1,
-      isGift: $,
+      isGift: ee,
       selectedSkuId: J,
       startedPaymentFlowWithPaymentSources: Q.current
     }),
-    el = (null == a ? void 0 : a.status) === b.SubscriptionStatusTypes.PAUSED,
-    er = s.useMemo(() => (0, h.getPremiumPlanOptions)({
+    eu = (null == l ? void 0 : l.status) === b.SubscriptionStatusTypes.PAUSED,
+    eo = s.useMemo(() => (0, h.getPremiumPlanOptions)({
       skuId: J,
       isPremium: q,
       multiMonthPlans: [],
-      currentSubscription: a,
-      isGift: $,
+      currentSubscription: l,
+      isGift: ee,
       isEligibleForTrial: !1,
       defaultPlanId: X,
       defaultToMonthlyPlan: !1
-    }), [J, a, X, q, $]);
-  n = V || el ? L.default.Messages.BILLING_PURCHASE_DETAILS_HEADER : (0, h.isPremiumSubscriptionPlan)(R) ? (0, h.getBillingReviewSubheader)(a, et) : L.default.Messages.BILLING_SELECT_PLAN_GUILD_SUBSCRIPTION.format({
-    planName: et.name
+    }), [J, l, X, q, ee]);
+  n = V || eu ? L.default.Messages.BILLING_PURCHASE_DETAILS_HEADER : (0, h.isPremiumSubscriptionPlan)(R) ? (0, h.getBillingReviewSubheader)(l, en) : L.default.Messages.BILLING_SELECT_PLAN_GUILD_SUBSCRIPTION.format({
+    planName: en.name
   });
-  let eu = null;
-  return null != a && (eu = V ? (0, i.jsx)(D, {
-    premiumSubscription: a,
+  let ec = null;
+  return null != l && (ec = V ? (0, i.jsx)(D, {
+    premiumSubscription: l,
     onInvoiceError: H,
-    priceOptions: _,
+    priceOptions: I,
     preventFetch: !1
-  }) : el ? (0, i.jsx)(w, {
-    premiumSubscription: a,
+  }) : eu ? (0, i.jsx)(F, {
+    premiumSubscription: l,
     onInvoiceError: H,
-    priceOptions: _,
-    preventFetch: es
-  }) : (0, x.subscriptionCanSwitchImmediately)(a, R, W) ? (0, i.jsx)(U, {
-    premiumSubscription: a,
-    newPlan: et,
+    priceOptions: I,
+    preventFetch: er
+  }) : (0, x.subscriptionCanSwitchImmediately)(l, R, W) ? (0, i.jsx)(U, {
+    premiumSubscription: l,
+    newPlan: en,
     onInvoiceError: H,
     planGroup: W,
-    priceOptions: _,
-    preventFetch: es
+    priceOptions: I,
+    preventFetch: er,
+    hasAnnualInvoicePreview: es
   }) : (0, i.jsx)(B, {
-    premiumSubscription: a,
-    newPlan: et,
+    premiumSubscription: l,
+    newPlan: en,
     planGroup: W,
-    priceOptions: _,
-    preventFetch: es
+    priceOptions: I,
+    preventFetch: er,
+    hasAnnualInvoicePreview: es
   })), (0, i.jsxs)("div", {
     className: j.stepBody,
-    children: [!el && ea && (0, i.jsxs)("div", {
-      children: [(0, i.jsx)(C.PremiumInvoiceTableDivider, {
+    children: [!eu && ea && (0, i.jsxs)("div", {
+      children: [(0, i.jsx)(y.PremiumInvoiceTableDivider, {
         negativeMarginBottom: !0,
         negativeMarginTop: !0
       }), (0, i.jsx)(M.PremiumSwitchPlanSelectBody, {
-        planOptions: er,
+        planOptions: eo,
         eligibleForMultiMonthPlans: !1,
         selectedPlanId: R,
         showTotal: !1,
         handleClose: z
-      }), (0, i.jsx)(C.PremiumInvoiceTableDivider, {})]
+      }), (0, i.jsx)(y.PremiumInvoiceTableDivider, {})]
     }), (0, i.jsx)(o.FormTitle, {
       tag: o.FormTitleTags.H5,
       children: n
-    }), eu, (0, i.jsxs)("div", {
+    }), ec, (0, i.jsxs)("div", {
       className: j.paymentSourceWrapper,
       children: [(0, i.jsx)(o.FormTitle, {
         tag: o.FormTitleTags.H5,
         children: L.default.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_INFO_TITLE
       }), (0, i.jsx)(m.default, {
         paymentSources: Object.values(p),
-        selectedPaymentSourceId: ee,
+        selectedPaymentSourceId: et,
         onChange: A,
-        onPaymentSourceAdd: y,
-        hidePersonalInformation: en,
-        disabled: es
+        onPaymentSourceAdd: g,
+        hidePersonalInformation: ei,
+        disabled: er
       })]
     }), (0, i.jsxs)(c.CurrencyWrapper, {
       currencies: Y,
@@ -152,40 +156,42 @@ function G(e) {
         tag: o.FormTitleTags.H5,
         children: L.default.Messages.PAYMENT_CURRENCY
       }), (0, i.jsx)(c.default, {
-        selectedCurrency: _.currency,
+        selectedCurrency: I.currency,
         currencies: Y,
         onChange: K,
-        disabled: es
+        disabled: er
       })]
-    }), (0, i.jsx)(g.default, {
+    }), (0, i.jsx)(C.default, {
       isActive: k,
       ref: G,
-      children: null != a && (0, x.subscriptionCanSwitchImmediately)(a, R, W) ? (0, i.jsx)(F, {
-        premiumSubscription: a,
-        newPlan: et,
+      children: null != l && (0, x.subscriptionCanSwitchImmediately)(l, R, W) ? (0, i.jsx)(w, {
+        premiumSubscription: l,
+        newPlan: en,
         onInvoiceError: H,
         planGroup: W,
-        priceOptions: _,
-        preventFetch: es,
-        disabled: es,
-        isEEA: ei,
+        priceOptions: I,
+        preventFetch: er,
+        disabled: er,
+        isEEA: el,
         paymentSources: p,
-        setHasAcceptedTerms: O
+        setHasAcceptedTerms: O,
+        isGift: ee,
+        hasAnnualDiscountPreview: null != $
       }) : (0, i.jsx)(f.default, {
         onChange: O,
         finePrint: (0, i.jsx)(d.default, {
-          subscriptionPlan: et,
-          paymentSourceType: null === (t = p[null != ee ? ee : ""]) || void 0 === t ? void 0 : t.type,
-          basePrice: (0, h.getPrice)(et.id, !1, $, _),
-          currentSubscription: a,
+          subscriptionPlan: en,
+          paymentSourceType: null === (t = p[null != et ? et : ""]) || void 0 === t ? void 0 : t.type,
+          basePrice: (0, h.getPrice)(en.id, !1, ee, I),
+          currentSubscription: l,
           planGroup: W
         }),
         forceShow: !0,
-        showPricingLink: et.currency !== b.CurrencyCodes.USD,
-        showWithdrawalWaiver: ei,
-        disabled: es,
-        subscriptionPlan: et,
-        currentSubscription: a,
+        showPricingLink: en.currency !== b.CurrencyCodes.USD,
+        showWithdrawalWaiver: el,
+        disabled: er,
+        subscriptionPlan: en,
+        currentSubscription: l,
         planGroup: W
       })
     })]
@@ -196,24 +202,24 @@ function D(e) {
   let {
     premiumSubscription: t,
     onInvoiceError: n,
-    priceOptions: a,
-    preventFetch: l
-  } = e, [r, u] = (0, A.useGetSubscriptionInvoice)({
+    priceOptions: l,
+    preventFetch: r
+  } = e, [a, u] = (0, A.useGetSubscriptionInvoice)({
     subscriptionId: t.id,
-    preventFetch: l
+    preventFetch: r
   });
   s.useEffect(() => {
     n(u)
   }, [n, u]);
-  let c = (0, h.isPrepaidPaymentSource)(a.paymentSourceId);
-  return null != r ? (0, i.jsxs)(C.PremiumInvoiceTable, {
+  let c = (0, h.isPrepaidPaymentSource)(l.paymentSourceId);
+  return null != a ? (0, i.jsxs)(y.PremiumInvoiceTable, {
     className: O.__invalid_invoice,
     children: [(0, i.jsx)(R.PremiumSubscriptionCurrentInvoiceRows, {
-      invoice: r,
+      invoice: a,
       isPrepaidPaymentSource: c
     }), (0, i.jsx)(R.SubscriptionInvoiceFooter, {
       premiumSubscription: t,
-      renewalInvoice: r,
+      renewalInvoice: a,
       isUpdate: !0,
       isPrepaidPaymentSource: c
     })]
@@ -224,161 +230,165 @@ function U(e) {
   let {
     premiumSubscription: t,
     newPlan: n,
-    onInvoiceError: a,
-    planGroup: l,
-    priceOptions: r,
-    preventFetch: u
+    onInvoiceError: l,
+    planGroup: r,
+    priceOptions: a,
+    preventFetch: u,
+    hasAnnualInvoicePreview: c
   } = e, {
-    selectedSkuId: c,
-    startedPaymentFlowWithPaymentSourcesRef: d
-  } = (0, I.usePaymentContext)(), {
-    isGift: m
+    selectedSkuId: d,
+    startedPaymentFlowWithPaymentSourcesRef: m
+  } = (0, _.usePaymentContext)(), {
+    isGift: f
   } = (0, S.useGiftContext)(), {
-    analyticsLocations: f
-  } = (0, _.default)(), E = (0, h.getItemsWithUpsertedPlanIdForGroup)(t, n.id, 1, new Set(l)), [T, N] = (0, A.useSubscriptionInvoicePreview)({
+    analyticsLocations: P
+  } = (0, I.default)(), T = (0, h.getItemsWithUpsertedPlanIdForGroup)(t, n.id, 1, new Set(r)), [N, v] = (0, A.useSubscriptionInvoicePreview)({
     subscriptionId: t.id,
-    items: E,
+    items: T,
     renewal: !1,
     applyEntitlements: !0,
-    paymentSourceId: r.paymentSourceId,
-    currency: r.currency,
+    paymentSourceId: a.paymentSourceId,
+    currency: a.currency,
     preventFetch: u,
-    analyticsLocations: f,
+    analyticsLocations: P,
     analyticsLocation: p.default.BILLING_SWITCH_PLAN_IMMEDIATE_PRORATED_INVOICE_PREVIEW
-  }), [v, x] = (0, A.useSubscriptionInvoicePreview)({
+  }), [x, g] = (0, A.useSubscriptionInvoicePreview)({
     subscriptionId: t.id,
-    items: E,
+    items: T,
     renewal: !0,
-    paymentSourceId: r.paymentSourceId,
-    currency: r.currency,
+    paymentSourceId: a.paymentSourceId,
+    currency: a.currency,
     preventFetch: u,
-    analyticsLocations: f,
+    analyticsLocations: P,
     analyticsLocation: p.default.BILLING_SWITCH_PLAN_IMMEDIATE_RENEWAL_INVOICE_PREVIEW
-  }), y = null != N ? N : x;
+  }), C = null != v ? v : g;
   if (s.useEffect(() => {
-      a(y)
-    }, [a, y]), null != y) return (0, i.jsx)(o.FormErrorBlock, {
-    children: y.message
+      l(C)
+    }, [l, C]), null != C) return (0, i.jsx)(o.FormErrorBlock, {
+    children: C.message
   });
-  let g = (0, P.inOneStepSubscriptionCheckout)({
+  let M = (0, E.inOneStepSubscriptionCheckout)({
       isTrial: !1,
-      isGift: m,
-      selectedSkuId: c,
-      startedPaymentFlowWithPaymentSources: d.current
+      isGift: f,
+      selectedSkuId: d,
+      startedPaymentFlowWithPaymentSources: m.current
     }),
-    M = (0, P.planSwitchLoadingShowSpinner)(g, T, n);
-  if (null == T || null == v || M) return (0, i.jsx)(o.Spinner, {
+    b = (0, E.planSwitchLoadingShowSpinner)(M, N, n);
+  if (null == N || null == x || b) return (0, i.jsx)(o.Spinner, {
     className: j.__invalid_spinner
   });
-  let b = (0, h.isPrepaidPaymentSource)(r.paymentSourceId);
+  let O = (0, h.isPrepaidPaymentSource)(a.paymentSourceId);
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(R.SubscriptionPeriodResetNotice, {
-      proratedInvoice: T,
-      renewalInvoice: v
-    }), (0, i.jsxs)(C.PremiumInvoiceTable, {
+      proratedInvoice: N,
+      renewalInvoice: x
+    }), (0, i.jsxs)(y.PremiumInvoiceTable, {
       className: j.invoice,
-      children: [(0, i.jsx)(C.PremiumInvoiceTableHeader, {
+      children: [(0, i.jsx)(y.PremiumInvoiceTableHeader, {
         children: L.default.Messages.BILLING_SWITCH_PLAN_PURCHASE_DETAILS
       }), (0, i.jsx)(R.PremiumSubscriptionChangePlanInvoiceRows, {
-        invoice: T,
+        invoice: N,
         newPlan: n,
-        isPrepaidPaymentSource: b
+        isPrepaidPaymentSource: O
       }), (0, i.jsx)(R.SubscriptionInvoiceFooter, {
         premiumSubscription: t,
-        proratedInvoice: T,
-        renewalInvoice: v,
+        proratedInvoice: N,
+        renewalInvoice: x,
         isUpdate: !0,
-        isPrepaidPaymentSource: b
+        isPrepaidPaymentSource: O,
+        hasAnnualInvoicePreview: c
       })]
     })]
   })
 }
 
-function F(e) {
+function w(e) {
   var t, n;
-  let a, {
-      premiumSubscription: l,
-      newPlan: r,
+  let l, {
+      premiumSubscription: r,
+      newPlan: a,
       onInvoiceError: u,
       planGroup: c,
       priceOptions: m,
       preventFetch: S,
-      disabled: I,
-      isEEA: E,
-      paymentSources: P,
-      setHasAcceptedTerms: T
+      disabled: _,
+      isEEA: P,
+      paymentSources: E,
+      setHasAcceptedTerms: T,
+      isGift: N,
+      hasAnnualDiscountPreview: v
     } = e,
     {
-      analyticsLocations: N
-    } = (0, _.default)(),
-    v = (0, h.getItemsWithUpsertedPlanIdForGroup)(l, r.id, 1, new Set(c)),
-    [x, C] = (0, A.useSubscriptionInvoicePreview)({
-      subscriptionId: l.id,
-      items: v,
+      analyticsLocations: x
+    } = (0, I.default)(),
+    y = (0, h.getItemsWithUpsertedPlanIdForGroup)(r, a.id, 1, new Set(c)),
+    [g, C] = (0, A.useSubscriptionInvoicePreview)({
+      subscriptionId: r.id,
+      items: y,
       renewal: !0,
       paymentSourceId: m.paymentSourceId,
       currency: m.currency,
       preventFetch: S,
-      analyticsLocations: N,
+      analyticsLocations: x,
       analyticsLocation: p.default.BILLING_SWITCH_PLAN_IMMEDIATE_RENEWAL_INVOICE_PREVIEW
     });
   return (s.useEffect(() => {
     u(C)
   }, [u, C]), null != C) ? (0, i.jsx)(o.FormErrorBlock, {
     children: C.message
-  }) : (null != x && (a = {
-    amount: x.total,
-    currency: x.currency,
-    tax: x.tax,
-    taxInclusive: x.taxInclusive
-  }), null == a) ? null : (0, i.jsx)(f.default, {
+  }) : (null != g && (l = {
+    amount: g.total,
+    currency: g.currency,
+    tax: g.tax,
+    taxInclusive: g.taxInclusive
+  }), null == l) ? null : (0, i.jsx)(f.default, {
     onChange: T,
     finePrint: (0, i.jsx)(d.default, {
-      subscriptionPlan: r,
-      paymentSourceType: null === (t = P[null !== (n = m.paymentSourceId) && void 0 !== n ? n : ""]) || void 0 === t ? void 0 : t.type,
-      basePrice: a,
-      currentSubscription: l,
+      subscriptionPlan: a,
+      paymentSourceType: null === (t = E[null !== (n = m.paymentSourceId) && void 0 !== n ? n : ""]) || void 0 === t ? void 0 : t.type,
+      basePrice: v ? (0, h.getPrice)(a.id, !1, N, m) : l,
+      currentSubscription: r,
       planGroup: c
     }),
     forceShow: !0,
-    showPricingLink: r.currency !== b.CurrencyCodes.USD,
-    showWithdrawalWaiver: E,
-    disabled: I,
-    subscriptionPlan: r,
-    currentSubscription: l,
+    showPricingLink: a.currency !== b.CurrencyCodes.USD,
+    showWithdrawalWaiver: P,
+    disabled: _,
+    subscriptionPlan: a,
+    currentSubscription: r,
     planGroup: c
   })
 }
 
-function w(e) {
+function F(e) {
   let {
     premiumSubscription: t,
     priceOptions: n,
-    preventFetch: a,
-    onInvoiceError: l
+    preventFetch: l,
+    onInvoiceError: r
   } = e, {
-    analyticsLocations: r
-  } = (0, _.default)(), [u, c] = (0, A.useSubscriptionInvoicePreview)({
+    analyticsLocations: a
+  } = (0, I.default)(), [u, c] = (0, A.useSubscriptionInvoicePreview)({
     subscriptionId: t.id,
     renewal: !0,
     applyEntitlements: !0,
     paymentSourceId: n.paymentSourceId,
     currency: n.currency,
-    preventFetch: a,
-    analyticsLocations: r,
+    preventFetch: l,
+    analyticsLocations: a,
     analyticsLocation: p.default.BILLING_PAUSED_SUBSCRIPTION_INVOICE_RESUME_PREVIEW
   }), [d, m] = (0, A.useSubscriptionInvoicePreview)({
     subscriptionId: t.id,
     renewal: !0,
     paymentSourceId: n.paymentSourceId,
     currency: n.currency,
-    preventFetch: a,
-    analyticsLocations: r,
+    preventFetch: l,
+    analyticsLocations: a,
     analyticsLocation: p.default.BILLING_PAUSED_SUBSCRIPTION_INVOICE_RENEWAL_PREVIEW
   }), f = null != c ? c : m;
   if (s.useEffect(() => {
-      l(f)
-    }, [l, f]), null != f) return (0, i.jsx)(o.FormErrorBlock, {
+      r(f)
+    }, [r, f]), null != f) return (0, i.jsx)(o.FormErrorBlock, {
     children: f.message
   });
   if (null == u || null == d) return (0, i.jsx)(o.Spinner, {
@@ -389,9 +399,9 @@ function w(e) {
     children: [(0, i.jsx)("div", {
       className: O.renewalInvoiceDate,
       children: L.default.Messages.BILLING_RESUME_PAUSED_SUBSCRIPTION_IMMEDIATELY
-    }), (0, i.jsxs)(C.PremiumInvoiceTable, {
+    }), (0, i.jsxs)(y.PremiumInvoiceTable, {
       className: j.invoice,
-      children: [(0, i.jsx)(C.PremiumInvoiceTableHeader, {
+      children: [(0, i.jsx)(y.PremiumInvoiceTableHeader, {
         children: L.default.Messages.BILLING_SWITCH_PLAN_PURCHASE_DETAILS
       }), (0, i.jsx)(R.PremiumSubscriptionCurrentInvoiceRows, {
         invoice: u,
@@ -410,53 +420,55 @@ function B(e) {
   let t, {
       premiumSubscription: n,
       newPlan: s,
-      planGroup: a,
-      priceOptions: l,
-      preventFetch: r
+      planGroup: l,
+      priceOptions: r,
+      preventFetch: a,
+      hasAnnualInvoicePreview: u
     } = e,
     {
-      analyticsLocations: u
-    } = (0, _.default)(),
-    [c, d] = (0, A.useSubscriptionInvoicePreview)({
+      analyticsLocations: c
+    } = (0, I.default)(),
+    [d, m] = (0, A.useSubscriptionInvoicePreview)({
       subscriptionId: n.id,
-      items: (0, h.getItemsWithUpsertedPlanIdForGroup)(n, s.id, 1, new Set(a)),
+      items: (0, h.getItemsWithUpsertedPlanIdForGroup)(n, s.id, 1, new Set(l)),
       renewal: !0,
       applyEntitlements: !1,
-      paymentSourceId: l.paymentSourceId,
-      currency: l.currency,
-      preventFetch: r,
-      analyticsLocations: u,
+      paymentSourceId: r.paymentSourceId,
+      currency: r.currency,
+      preventFetch: a,
+      analyticsLocations: c,
       analyticsLocation: "billing_switch_plan_renewal_mutation_renewal_invoice_preview"
     });
-  if (null != d) return (0, i.jsx)(o.FormErrorBlock, {
-    children: d.message
+  if (null != m) return (0, i.jsx)(o.FormErrorBlock, {
+    children: m.message
   });
-  if (null == c) return (0, i.jsx)("div", {
+  if (null == d) return (0, i.jsx)("div", {
     children: (0, i.jsx)(o.Spinner, {})
   });
   t = n.type === b.SubscriptionTypes.PREMIUM ? (0, h.getDisplayName)(s.id) : s.name;
-  let m = (0, h.isPrepaidPaymentSource)(l.paymentSourceId);
+  let f = (0, h.isPrepaidPaymentSource)(r.paymentSourceId);
   return (0, i.jsxs)("div", {
     className: j.bodyText,
     children: [(0, i.jsx)("div", {
       className: O.renewalInvoiceDate,
       children: L.default.Messages.BILLING_SWITCH_PLAN_CHANGE_DATE.format({
-        renewalDate: c.subscriptionPeriodStart
+        renewalDate: d.subscriptionPeriodStart
       })
-    }), (0, i.jsxs)(C.PremiumInvoiceTable, {
+    }), (0, i.jsxs)(y.PremiumInvoiceTable, {
       className: j.invoice,
-      children: [(0, i.jsx)(C.PremiumInvoiceTableHeader, {
+      children: [(0, i.jsx)(y.PremiumInvoiceTableHeader, {
         children: L.default.Messages.PREMIUM_SUBSCRIPTION_UPDATES
-      }), (0, i.jsx)(C.PremiumInvoiceTableRow, {
+      }), (0, i.jsx)(y.PremiumInvoiceTableRow, {
         label: t,
-        value: (0, h.getFormattedRateForPlan)(s, l, !0)
-      }), (0, i.jsx)(y.default, {
-        invoice: c
-      }), (0, i.jsx)(C.PremiumInvoiceTableDivider, {}), (0, i.jsx)(R.SubscriptionInvoiceFooter, {
+        value: (0, h.getFormattedRateForPlan)(s, r, !0)
+      }), (0, i.jsx)(g.default, {
+        invoice: d
+      }), (0, i.jsx)(y.PremiumInvoiceTableDivider, {}), (0, i.jsx)(R.SubscriptionInvoiceFooter, {
         premiumSubscription: n,
-        renewalInvoice: c,
+        renewalInvoice: d,
         isUpdate: !0,
-        isPrepaidPaymentSource: m
+        isPrepaidPaymentSource: f,
+        hasAnnualInvoicePreview: u
       })]
     })]
   })

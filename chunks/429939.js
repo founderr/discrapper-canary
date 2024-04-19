@@ -1,5 +1,8 @@
 "use strict";
 e.exports = {
+  annualDiscountValues: "annualDiscountValues__11c76",
+  annualPlanDiscountPriceSection: "annualPlanDiscountPriceSection__1c366",
+  annualPlanOptionDiscount: "annualPlanOptionDiscount__142c5",
   divider: "divider__9ba6d",
   dividerExtended: "dividerExtended__0bd82",
   entitlementDiscountRow: "entitlementDiscountRow__28d44 rowBase_f0c7a6",
