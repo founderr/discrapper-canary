@@ -1,10 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
+  fetchClanInfo: function() {
+    return _
+  },
   useClanInfo: function() {
     return d
   },
   useFetchClanInfo: function() {
-    return _
+    return c
   }
 }), n("47120");
 var i = n("470079"),
@@ -47,8 +50,16 @@ let l = {},
 function d(e) {
   return u(t => null != e ? t.clans[e] : null)
 }
+async function _(e) {
+  if (null == e) return;
+  let {
+    fetching: t,
+    fetchClanInfo: n
+  } = u.getState();
+  !t && await n(e)
+}
 
-function _(e) {
+function c(e) {
   let [t, n] = i.useState(!1), [r, a] = u(e => [e.fetchClanInfo, e.fetching], s.default);
   return [t, i.useCallback(async () => {
     if (!a && null != e) try {
