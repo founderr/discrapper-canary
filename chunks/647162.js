@@ -100,6 +100,6 @@ async function h(e, t) {
     album_id: S(r.album_id),
     artist_ids: Array.isArray(r.artist_ids) ? r.artist_ids.map(S) : [],
     type: s,
-    button_urls: Array.isArray(r.button_url) ? r.button_url.map(S) : []
+    button_urls: Array.isArray(r.button_urls) ? r.button_urls.map(S) : []
   }
 }
