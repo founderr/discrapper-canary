@@ -77,11 +77,11 @@ t.default = function() {
       } = W.NitroStandardWowMomentExperiment.getCurrentConfig({
         location: "PremumSubscriptionWowMoment.tsx"
       });
-      t && (r(!0), i = setTimeout(() => {
+      t && !e && E.default.canPlayWowMoment && (r(!0), i = setTimeout(() => {
         r(!1), P(!0), p.default.track(g.AnalyticEvents.PREMIUM_WOW_MOMENT_VIEWED, {
           wow_moment_type: "gradient_highlight"
         })
-      }, 2e3), e && (0, h.setCanPlayWowMoment)(!1))
+      }, 2e3))
     }
     return f.ComponentDispatch.subscribe(g.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED, t), () => {
       f.ComponentDispatch.unsubscribe(g.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED, t)
