@@ -14,7 +14,7 @@ var a = n("735250"),
   d = n("180828"),
   c = n("768581"),
   f = n("484459"),
-  h = n("788197"),
+  h = n("103575"),
   m = n("521170"),
   p = n("312916");
 
@@ -65,6 +65,7 @@ function E(e) {
   }) : (0, a.jsx)(o.Popout, {
     preload: () => (0, f.default)(_.id, C),
     renderPopout: e => (0, a.jsx)(h.default, {
+      location: "AppProfilePanelItem",
       ...e,
       userId: _.id,
       channelId: s.id

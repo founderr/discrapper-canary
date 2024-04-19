@@ -13,15 +13,18 @@ var a = s("447452"),
 function r(e) {
   let {
     location: t,
-    ...s
+    user: s,
+    ...r
   } = e, {
-    basicsEnabled: r
+    basicsEnabled: n
   } = (0, a.useSimplifiedProfileExperiment)({
     location: t
   });
-  return r ? (0, l.jsx)(o.default, {
-    ...s
-  }) : (0, l.jsx)(i.default, {
-    ...s
+  return !n || s.bot || s.isNonUserBot() || s.isClyde() ? (0, l.jsx)(i.default, {
+    ...r,
+    user: s
+  }) : (0, l.jsx)(o.default, {
+    ...r,
+    user: s
   })
 }

@@ -23346,24 +23346,12 @@ input[type=checkbox]:focus-visible+.label__8e100 {
     font-size: 14px;
     font-weight: 500;
     display: block;
-    font-family: var(--font-display);
-    margin-right: 2px
-}
-
-.userTagWithNickname_fb8bc3 {
+    margin-right: 2px;
     font-family: var(--font-primary);
     line-height: 18px
 }
 
-.userTagNoNickname__24253 {
-    font-size: 20px;
-    line-height: 24px;
-    word-break: break-word;
-    white-space: normal;
-    align-items: flex-end
-}
-
-.userTagUsernameBase_bb3e38 {
+.userTagUsername__88953 {
     overflow: auto;
     word-break: break-all;
     text-overflow: clip;
@@ -23373,31 +23361,9 @@ input[type=checkbox]:focus-visible+.label__8e100 {
     display: inline
 }
 
-.userTagUsernameNoNickname__6c8c2 {
-    color: var(--interactive-active);
-    font-weight: 600
-}
-
-.discrimBase__67971 {
+.userTagDiscriminator_dd0ae5 {
     color: var(--header-primary);
     vertical-align: top
-}
-
-.userTagDiscriminatorNoNickname__52990 {
-    font-weight: 600
-}
-
-.headerBotTag_e2d7c1 {
-    margin-top: 5px !important;
-    vertical-align: top;
-    display: inline-flex;
-    line-height: 15px
-}
-
-.headerBotTagWithNickname__5620a {
-    margin-bottom: 2px !important;
-    display: inline-flex;
-    line-height: 15px
 }
 
 .tags__17646 {
