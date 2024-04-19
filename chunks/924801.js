@@ -1,10 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
-  convertPrimeTimeSelectionToRRule: function() {
-    return O
-  },
   formatTimesForServer: function() {
-    return N
+    return m
   },
   generateTimeOptions: function() {
     return _
@@ -12,14 +9,11 @@ n.r(t), n.d(t, {
   getDayOptions: function() {
     return c
   },
-  getTimeRangesInNextWeek: function() {
-    return m
-  },
   guildEventToPrimeTimeSelection: function() {
-    return R
+    return p
   },
   primetimeToString: function() {
-    return p
+    return N
   }
 }), n("653041"), n("47120");
 var i = n("913527"),
@@ -210,21 +204,6 @@ function m(e) {
   let t = [];
   return e.forEach(e => {
     if (null == e.day || null == e.time) return null;
-    let [n, i] = h(e.time), r = A({
-      day: e.day,
-      time: n
-    });
-    null != r && t.push({
-      start: r,
-      end: r.clone().add(i, "hour")
-    })
-  }), t
-}
-
-function N(e) {
-  let t = [];
-  return e.forEach(e => {
-    if (null == e.day || null == e.time) return null;
     let [n, i] = h(e.time);
     if (e.day === l.DayOptions.WEEKENDS) {
       let r = A({
@@ -260,7 +239,7 @@ function N(e) {
   }), t
 }
 
-function p(e) {
+function N(e) {
   if (null == e.day || null == e.time) return null;
   let {
     day: t,
@@ -271,16 +250,7 @@ function p(e) {
   return "".concat(r, " ").concat(n)
 }
 
-function O(e) {
-  return N(e).map(e => ({
-    start: e.scheduled_start_time,
-    frequency: e.days.length > 1 ? s.RRule.DAILY : s.RRule.WEEKLY,
-    interval: 1,
-    byWeekday: e.days
-  }))
-}
-
-function R(e) {
+function p(e) {
   let t, n, {
       id: i,
       scheduled_start_time: a,

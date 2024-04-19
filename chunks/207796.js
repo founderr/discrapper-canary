@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   ClanDiscoveryGame: function() {
     return i
   },
@@ -13,9 +13,9 @@ a.r(t), a.d(t, {
     return u
   }
 });
-var n, s, l, i, r = a("652874"),
-  o = a("308083");
-(n = l || (l = {})).DISCOVERY = "discovery", n.PLAYSTYLE = "playstyle", n.PRIMETIME = "primetime", n.TRAITS = "traits", n.GAMES = "games", (s = i || (i = {})).VALORANT = "valorant", s.GENSHIN = "genshin";
+var a, s, l, i, r = n("652874"),
+  o = n("308083");
+(a = l || (l = {})).DISCOVERY = "discovery", a.PLAYSTYLE = "playstyle", a.TRAITS = "traits", a.GAMES = "games", (s = i || (i = {})).VALORANT = "valorant", s.GENSHIN = "genshin";
 let u = (0, r.default)(e => ({
   mode: "discovery",
   game: "valorant",
@@ -25,7 +25,6 @@ let u = (0, r.default)(e => ({
     name: "Very Casual"
   },
   selectedTraits: [],
-  selectedPrimetimes: [],
   setMode: t => e({
     mode: t
   }),
@@ -40,21 +39,16 @@ let u = (0, r.default)(e => ({
   }),
   setSelectedTraits: t => e({
     selectedTraits: t
-  }),
-  setSelectedPrimetime: t => e({
-    selectedPrimetimes: t
   })
 }));
 
 function d(e) {
   var t;
-  let a = e.selectedGames,
-    n = null === (t = e.selectedPlaystyle) || void 0 === t ? void 0 : t.id,
-    s = e.selectedTraits;
+  let n = e.selectedGames,
+    a = null === (t = e.selectedPlaystyle) || void 0 === t ? void 0 : t.id;
   return {
-    games: a,
-    playstyle: n,
-    traits: s,
-    primetimes: e.selectedPrimetimes
+    games: n,
+    playstyle: a,
+    traits: e.selectedTraits
   }
 }
