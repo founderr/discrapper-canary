@@ -19,8 +19,8 @@ var i = n("735250"),
   p = n("100527"),
   S = n("906732"),
   v = n("87484"),
-  g = n("171246"),
-  x = n("889989"),
+  x = n("171246"),
+  g = n("889989"),
   T = n("696906"),
   C = n("551428"),
   j = n("768581"),
@@ -72,7 +72,7 @@ function O(e) {
       canAnimate: !0
     });
     return null != t && null !== (e = I.default.toURLSafe(t)) && void 0 !== e ? e : void 0
-  }, [p]), x = (0, f.useStateFromStores)([h.default], () => h.default.useReducedMotion);
+  }, [p]), g = (0, f.useStateFromStores)([h.default], () => h.default.useReducedMotion);
   return (0, i.jsxs)("div", {
     className: A.wrapper,
     children: [(0, i.jsx)(l.Banner, {
@@ -80,7 +80,7 @@ function O(e) {
       iconSrc: u,
       backgroundSrc: S,
       animatedBackgroundSrc: v,
-      prefersReducedMotion: x
+      prefersReducedMotion: g
     }), d.length > 0 && null != a && (0, i.jsxs)("div", {
       className: A.productSection,
       children: [(0, i.jsx)(m.Heading, {
@@ -94,7 +94,7 @@ function O(e) {
           groupListingId: a.id,
           guildId: o,
           listing: e,
-          groupListingType: (0, g.isApplicationUserSubscription)(a.sku_flags) ? "user" : "guild"
+          groupListingType: (0, x.isApplicationUserSubscription)(a.sku_flags) ? "user" : "guild"
         }, e.id))
       })]
     }), c.length > 0 && (0, i.jsxs)("div", {
@@ -142,17 +142,17 @@ function M(e) {
       id: e.id,
       title: e.name,
       description: e.description,
-      icon: (0, x.getBenefitIcon)(t, e.icon)
+      icon: (0, g.getBenefitIcon)(t, e.icon)
     }))
   }, [t, a.store_listing_benefits]), p = (0, _.useHasActiveEntitlement)(a.id), S = r.useMemo(() => {
     var e;
-    return null != a.image_asset && null !== (e = I.default.toURLSafe((0, L.getAssetURL)(t, a.image_asset, 64))) && void 0 !== e ? e : void 0
+    return null != a.image_asset && null !== (e = I.default.toURLSafe((0, L.getAssetURL)(t, a.image_asset, 256))) && void 0 !== e ? e : void 0
   }, [t, a.image_asset]), v = a.subscription_plans.length > 0 ? a.subscription_plans[0] : null;
   if (null === v) return null;
-  let g = "guild" === u || "user" === u && !p,
+  let x = "guild" === u || "user" === u && !p,
     C = e => {
       var t;
-      return g ? (0, i.jsx)(m.Button, {
+      return x ? (0, i.jsx)(m.Button, {
         onClick: null !== (t = e.onClick) && void 0 !== t ? t : f,
         className: e.className,
         children: b.default.Messages.STOREFRONT_SUBSCRIBE_FOR.format({
@@ -225,7 +225,7 @@ function B(e) {
     appId: o
   } = e, {
     analyticsLocations: d
-  } = (0, S.default)(p.default.APP_STOREFRONT), h = (0, f.useStateFromStores)([C.default], () => C.default.getForSKU(l.id), [l]), g = l.name, x = null !== (n = null == h ? void 0 : null === (t = h.description) || void 0 === t ? void 0 : t.trim()) && void 0 !== n ? n : void 0, T = (null == h ? void 0 : h.headerBackground) != null && null !== (r = I.default.toURLSafe((0, L.getAssetURL)(o, h.headerBackground, 256))) && void 0 !== r ? r : void 0, j = (0, _.useHasActiveEntitlement)(l.id), y = l.type === R.SKUTypes.DURABLE && j, O = l.type === R.SKUTypes.DURABLE ? y ? b.default.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : b.default.Messages.STOREFRONT_DURABLE_AVAILABILITY : void 0, {
+  } = (0, S.default)(p.default.APP_STOREFRONT), h = (0, f.useStateFromStores)([C.default], () => C.default.getForSKU(l.id), [l]), x = l.name, g = null !== (n = null == h ? void 0 : null === (t = h.description) || void 0 === t ? void 0 : t.trim()) && void 0 !== n ? n : void 0, T = (null == h ? void 0 : h.headerBackground) != null && null !== (r = I.default.toURLSafe((0, L.getAssetURL)(o, h.headerBackground, 256))) && void 0 !== r ? r : void 0, j = (0, _.useHasActiveEntitlement)(l.id), y = l.type === R.SKUTypes.DURABLE && j, O = l.type === R.SKUTypes.DURABLE ? y ? b.default.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : b.default.Messages.STOREFRONT_DURABLE_AVAILABILITY : void 0, {
     price: M
   } = l;
   if (null == M) return null;
@@ -250,11 +250,11 @@ function B(e) {
       })
     };
   return (0, i.jsx)(a.ProductCard, {
-    title: g,
-    description: x,
+    title: x,
+    description: g,
     headerImage: T,
     availabilityLabel: O,
-    onDetails: (0, E.isNullOrEmpty)(x) ? void 0 : () => {
+    onDetails: (0, E.isNullOrEmpty)(g) ? void 0 : () => {
       (0, m.openModal)(e => {
         let {
           onClose: t,
@@ -265,8 +265,8 @@ function B(e) {
           size: m.ModalSize.DYNAMIC,
           className: A.subDetailsModal,
           children: [(0, i.jsx)(s.CardDetails, {
-            title: g,
-            description: x,
+            title: x,
+            description: g,
             imgSrc: T,
             tag: null != O ? (0, i.jsx)(c.Tag, {
               text: O

@@ -43,7 +43,7 @@ function u(e) {
   return (0, i.jsxs)("div", {
     className: o.container,
     children: [t, (0, i.jsx)(s.Text, {
-      color: "interactive-normal",
+      color: "header-secondary",
       variant: "text-sm/medium",
       children: n
     })]

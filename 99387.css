@@ -4933,6 +4933,28 @@
     margin: 16px 0
 }
 
+.annualPlanDiscountPriceSection__1c366 {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end
+}
+
+.annualPlanOptionDiscount__142c5 {
+    border-radius: 8px;
+    margin-top: 2px;
+    background-color: var(--green-360);
+    font-weight: 600;
+    padding: 0 6px;
+    margin-right: 8px;
+    max-height: 16px;
+    position: relative
+}
+
+.annualDiscountValues__11c76 {
+    display: flex;
+    flex-direction: column
+}
+
 .headerBackground__70d36 {
     position: relative;
     top: -20px;
@@ -6257,8 +6279,8 @@ html .invoiceCancelRow_aa7946 {
 
 .message__702f7 {
     font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -81208,7 +81230,7 @@ input::-webkit-inner-spin-button {
     display: grid;
     grid-gap: 16px;
     gap: 16px;
-    padding: 24px 0 16px;
+    padding-top: 16px;
     grid-template-columns: 320px;
     justify-items: center
 }
@@ -81257,7 +81279,7 @@ input::-webkit-inner-spin-button {
     height: calc(100vh - 60px);
     width: calc(100vw - 60px);
     max-width: 1028px;
-    background-color: var(--background-secondary)
+    background-color: var(--background-primary)
 }
 
 .modalHeader__4be2e {
@@ -81265,7 +81287,7 @@ input::-webkit-inner-spin-button {
     justify-content: space-between;
     align-items: center;
     color: var(--interactive-active);
-    background: var(--background-tertiary);
+    background-color: var(--background-secondary);
     padding: 12px 16px
 }
 
@@ -81273,6 +81295,22 @@ input::-webkit-inner-spin-button {
     display: flex;
     align-items: center;
     gap: 8px
+}
+
+.containerScrollGradient__1e7d9 {
+    background: linear-gradient(0deg, var(--background-primary)0%, rgba(0, 0, 0, 0)100%);
+    bottom: 0;
+    left: 0;
+    height: 52px;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity ease-in-out.12s
+}
+
+.containerScrollGradient__1e7d9[data-shown=true] {
+    opacity: 1
 }
 
 .modalCloseBtn_e2b38c {
