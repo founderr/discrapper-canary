@@ -1,53 +1,65 @@
 "use strict";
 s.r(t);
-var a = s("735250");
-s("470079");
-var n = s("481060"),
-  l = s("63063"),
-  i = s("113434"),
-  r = s("497505"),
-  o = s("37303"),
-  d = s("981631"),
-  u = s("689938"),
-  c = s("719023");
+var a = s("735250"),
+  n = s("470079"),
+  l = s("481060"),
+  i = s("63063"),
+  r = s("113434"),
+  o = s("497505"),
+  d = s("37303"),
+  u = s("981631"),
+  c = s("689938"),
+  S = s("719023");
 t.default = () => {
   let {
     quests: e,
     isFetchingCurrentQuests: t
-  } = (0, i.useQuests)({
+  } = (0, r.useQuests)({
     fetchPolicy: "cache-and-network"
   });
-  (0, i.useDismissNewQuestBadge)();
-  let s = (0, i.useExpiredQuestsMap)(),
-    S = e.filter(e => {
+  (0, r.useDismissNewQuestBadge)();
+  let s = (0, r.useExpiredQuestsMap)(),
+    E = n.useMemo(() => e.filter(e => {
       var t, a;
       let n = (null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
       return !(null !== (a = s.get(e.id)) && void 0 !== a && a) || n
-    });
-  return t ? (0, a.jsx)(n.Spinner, {
-    className: c.spinner
-  }) : 0 === S.length ? null : (0, a.jsx)(n.FormSection, {
-    className: c.questsContainer,
-    children: (0, a.jsxs)(n.HeadingLevel, {
+    }).sort((e, t) => {
+      var s, a, n, l;
+      let i = (null === (s = e.userStatus) || void 0 === s ? void 0 : s.completedAt) != null,
+        r = (null === (a = e.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null,
+        o = (null === (n = t.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+        d = (null === (l = t.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
+      if (i && !r && o && !d) return 0;
+      if (i && !r) return -1;
+      if (o && !d) return 1;
+      let u = i && r,
+        c = o && d;
+      return u && !c ? 1 : !u && c ? -1 : 0
+    }), [e, s]);
+  return t ? (0, a.jsx)(l.Spinner, {
+    className: S.spinner
+  }) : 0 === E.length ? null : (0, a.jsx)(l.FormSection, {
+    className: S.questsContainer,
+    children: (0, a.jsxs)(l.HeadingLevel, {
       component: (0, a.jsxs)("div", {
-        className: c.questsHeading,
-        children: [(0, a.jsx)(n.Heading, {
+        className: S.questsHeading,
+        children: [(0, a.jsx)(l.Heading, {
           variant: "heading-md/semibold",
-          className: c.questsHeading,
-          children: u.default.Messages.QUESTS
-        }), (0, a.jsx)(n.Text, {
+          className: S.questsHeading,
+          children: c.default.Messages.QUESTS
+        }), (0, a.jsx)(l.Text, {
           variant: "text-xs/normal",
-          className: c.questsHeadingLearnMore,
-          children: u.default.Messages.QUESTS_LEARN_MORE_LINK.format({
-            questsLearnMoreLink: l.default.getArticleURL(d.HelpdeskArticles.QUESTS_LEARN_MORE)
+          className: S.questsHeadingLearnMore,
+          children: c.default.Messages.QUESTS_LEARN_MORE_LINK.format({
+            questsLearnMoreLink: i.default.getArticleURL(u.HelpdeskArticles.QUESTS_LEARN_MORE)
           })
         })]
       }),
-      children: [(0, a.jsx)(n.FormDivider, {
-        className: c.divider
-      }), S.map(e => (0, a.jsx)(o.QuestsCard, {
+      children: [(0, a.jsx)(l.FormDivider, {
+        className: S.divider
+      }), E.map(e => (0, a.jsx)(d.QuestsCard, {
         quest: e,
-        location: r.QuestContent.QUEST_INVENTORY_CARD
+        location: o.QuestContent.QUEST_INVENTORY_CARD
       }, e.id))]
     })
   })
