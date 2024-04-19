@@ -15723,6 +15723,27 @@ span.clanTag_f4aadc {
     margin-bottom: 64px
 }
 
+.container_a88e31 {
+    background-color: var(--background-floating);
+    padding: 8px;
+    border-radius: 4px
+}
+
+.header__3a32b {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 8px
+}
+
+.rowIcon__45dc2 {
+    flex-shrink: 0;
+    margin-right: 8px
+}
+
+.rowIconV2_fe06d9 {
+    margin-top: 2px
+}
+
 .row_f694ee {
     display: flex;
     align-items: center
