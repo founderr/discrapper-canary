@@ -202,15 +202,13 @@ t.default = e => {
         className: T.clanCardWrapper,
         children: (0, a.jsx)(_.ClanDiscoveryCardView, {
           clan: {
+            ...o,
             id: u,
             name: null !== (n = null == d ? void 0 : d.name) && void 0 !== n ? n : "",
             icon: null == d ? void 0 : d.icon,
-            description: o.description,
             memberCount: c,
             games: Array.from(o.gameApplicationIds),
-            playstyle: o.playstyle,
             traits: Array.from(o.interests),
-            tag: o.tag,
             banner: f,
             badge: {
               badgeKind: o.badgeKind,
@@ -220,9 +218,7 @@ t.default = e => {
             branding: {
               primaryColor: y.primary,
               secondaryColor: y.secondary
-            },
-            location: I.PLACEHOLDER_CLAN_LOCATION,
-            language: I.PLACEHOLDER_CLAN_LANGUAGE
+            }
           }
         })
       })]
