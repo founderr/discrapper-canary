@@ -73,8 +73,8 @@ function D(e) {
   let H = (0, o.useGuildAutomodProfileQuarantineErrors)(w.id),
     V = (0, i.useStateFromStores)([g.default], () => null == w.id ? null : g.default.getMember(w.id, P.id)),
     Y = (0, i.useStateFromStores)([_.default], () => _.default.getGuildMemberProfile(P.id, w.id)),
-    W = N.default.canUsePremiumProfileCustomization(P),
-    K = (0, d.showRemoveAvatar)(j, null == V ? void 0 : V.avatar),
+    K = N.default.canUsePremiumProfileCustomization(P),
+    W = (0, d.showRemoveAvatar)(j, null == V ? void 0 : V.avatar),
     z = (0, d.showRemoveBanner)(U, null == Y ? void 0 : Y.banner),
     Q = (0, O.canResetThemeColors)(G, null == Y ? void 0 : Y.themeColors),
     q = null !== (t = null == Y ? void 0 : Y.bio) && void 0 !== t ? t : "",
@@ -100,7 +100,7 @@ function D(e) {
       currentPronouns: Z
     }, "pronouns"), (0, a.jsxs)(R.default, {
       user: P,
-      showOverlay: !W,
+      showOverlay: !K,
       children: [(0, a.jsx)(S.default, {
         sectionTitle: (0, a.jsxs)(a.Fragment, {
           children: [M.default.Messages.USER_SETTINGS_AVATAR, (0, a.jsx)(r.Tooltip, {
@@ -111,11 +111,11 @@ function D(e) {
             })
           })]
         }),
-        showRemoveAvatarButton: K,
+        showRemoveAvatarButton: W,
         onAvatarChange: e => X(e, null == V ? void 0 : V.avatar, C.setPendingAvatar),
         errors: null == F ? void 0 : F.avatar,
         guildId: w.id,
-        disabled: !W
+        disabled: !K
       }, "avatar"), (0, a.jsx)(c.default, {
         sectionTitle: (0, a.jsxs)(a.Fragment, {
           children: [M.default.Messages.USER_SETTINGS_AVATAR_DECORATION, (0, a.jsx)(r.Tooltip, {
@@ -145,7 +145,7 @@ function D(e) {
         errors: null == F ? void 0 : F.banner,
         onBannerChange: e => X(e, null == Y ? void 0 : Y.banner, C.setPendingBanner),
         guildId: null == w ? void 0 : w.id,
-        disabled: !W
+        disabled: !K
       }, "banner"), (0, a.jsx)(f.default, {
         user: P,
         pendingAvatar: j,
@@ -170,7 +170,7 @@ function D(e) {
         errors: null !== (D = null == F ? void 0 : F.bio) && void 0 !== D ? D : null == H ? void 0 : H.bio,
         pendingBio: y,
         currentBio: q,
-        disabled: !W
+        disabled: !K
       }, "about")]
     })]
   })

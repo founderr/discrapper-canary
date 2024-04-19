@@ -58,8 +58,8 @@ function L() {
         errors: t
       }
     }),
-    W = (0, d.useGuildAutomodProfileQuarantineErrors)(),
-    K = M.default.canUsePremiumProfileCustomization(U),
+    K = (0, d.useGuildAutomodProfileQuarantineErrors)(),
+    W = M.default.canUsePremiumProfileCustomization(U),
     z = (0, u.showRemoveAvatar)(B, U.avatar),
     Q = (0, u.showRemoveBanner)(F, null == y ? void 0 : y.banner),
     q = "DefaultCustomizationSections";
@@ -72,8 +72,8 @@ function L() {
   });
   let Z = (0, A.default)(U.id),
     X = null == Z ? void 0 : Z.getLegacyUsername(),
-    J = (null !== (s = null === (e = Y.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== s ? s : 0) > 0 ? Y.global_name : null !== (n = null == W ? void 0 : W.nick) && void 0 !== n ? n : [],
-    $ = (null !== (L = null === (t = Y.bio) || void 0 === t ? void 0 : t.length) && void 0 !== L ? L : 0) > 0 ? Y.bio : null !== (P = null == W ? void 0 : W.bio) && void 0 !== P ? P : [],
+    J = (null !== (s = null === (e = Y.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== s ? s : 0) > 0 ? Y.global_name : null !== (n = null == K ? void 0 : K.nick) && void 0 !== n ? n : [],
+    $ = (null !== (L = null === (t = Y.bio) || void 0 === t ? void 0 : t.length) && void 0 !== L ? L : 0) > 0 ? Y.bio : null !== (P = null == K ? void 0 : K.bio) && void 0 !== P ? P : [],
     ee = (0, O.useUserIsRecentGamesExperimentEnabled)({
       location: "28tk0bf_7",
       autoTrackExposure: !0
@@ -104,7 +104,7 @@ function L() {
     }, "decoration"), (0, a.jsx)(g.default, {
       user: U,
       sectionTitle: v.default.Messages.USER_SETTINGS_PROFILE_EFFECT
-    }, "effect"), K ? (0, a.jsxs)(a.Fragment, {
+    }, "effect"), W ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(m.default, {
         showRemoveBannerButton: Q,
         errors: Y.banner,

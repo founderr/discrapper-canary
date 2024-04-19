@@ -341,7 +341,7 @@ function Y(e) {
   })
 }
 
-function W(e) {
+function K(e) {
   let {
     onChangePage: t
   } = e;
@@ -374,7 +374,7 @@ function W(e) {
     })]
   })
 }
-let K = () => s.e("20467").then(s.t.bind(s, "205663", 19)).then(e => {
+let W = () => s.e("20467").then(s.t.bind(s, "205663", 19)).then(e => {
   let {
     default: t
   } = e;
@@ -431,7 +431,7 @@ function z(e) {
     }), (0, r.jsx)(k, {
       settings: a,
       updateSettings: E
-    }), (0, r.jsx)(W, {
+    }), (0, r.jsx)(K, {
       onChangePage: t
     }), (0, r.jsx)(H, {
       settings: a,
@@ -486,7 +486,7 @@ function Z() {
       className: d ? D.enableAnimationOverlayVisible : D.enableAnimationOverlayHidden,
       children: (0, r.jsx)(f.default, {
         className: D.enableAnimation,
-        importData: K,
+        importData: W,
         shouldAnimate: d,
         autoplay: !1,
         resetOnPlay: !0,

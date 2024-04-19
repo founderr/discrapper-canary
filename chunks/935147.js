@@ -49,8 +49,8 @@ function B(e) {
     pendingAvatar: H,
     pendingBanner: V,
     pendingThemeColors: Y,
-    pendingPronouns: W,
-    pendingBio: K,
+    pendingPronouns: K,
+    pendingBio: W,
     tryItOutThemeColors: z,
     tryItOutAvatar: Q,
     tryItOutBanner: q,
@@ -68,7 +68,7 @@ function B(e) {
   }), J = (0, c.default)(Z), $ = (0, S.default)(X), ee = n.useRef(null);
   (0, I.default)(ee, b.ProfileCustomizationScrollPositions.TRY_IT_OUT);
   let et = (0, g.default)(F.id),
-    es = null == et ? void 0 : et.getPreviewBio(K),
+    es = null == et ? void 0 : et.getPreviewBio(W),
     {
       analyticsLocations: ea,
       sourceAnalyticsLocations: en
@@ -111,8 +111,8 @@ function B(e) {
           user: F,
           onAvatarChange: _.setTryItOutAvatar,
           onBannerChange: _.setTryItOutBanner,
-          pendingPronouns: W,
-          pendingBio: K,
+          pendingPronouns: K,
+          pendingBio: W,
           pendingBanner: null !== (G = null != q ? q : V) && void 0 !== G ? G : s("466045"),
           pendingAvatar: null != Q ? Q : H,
           pendingThemeColors: null != z ? z : Y,

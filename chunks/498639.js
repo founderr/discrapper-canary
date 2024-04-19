@@ -61,7 +61,7 @@ t.default = function() {
     } = (0, S.default)(c.default.PAYMENT_FLOW_TEST_PAGE),
     [w, H] = n.useState(""),
     [V, Y] = n.useState(O.EMPTY_STRING_SNOWFLAKE_ID),
-    [W, K] = n.useState(""),
+    [K, W] = n.useState(""),
     [z, Q] = n.useState(O.EMPTY_STRING_SNOWFLAKE_ID),
     [q, Z] = n.useState(O.EMPTY_STRING_SNOWFLAKE_ID);
   return (0, a.jsx)(S.AnalyticsLocationProvider, {
@@ -284,15 +284,15 @@ t.default = function() {
         className: R.formItem,
         children: [(0, a.jsx)(r.TextInput, {
           placeholder: "Application Id",
-          value: W,
-          onChange: K
+          value: K,
+          onChange: W
         }), (0, a.jsx)(r.TextInput, {
           placeholder: "SKU ID",
           value: z,
           onChange: e => Q(e)
         }), (0, a.jsx)(r.Button, {
           onClick: () => (0, h.default)({
-            applicationId: W,
+            applicationId: K,
             skuId: z,
             analyticsLocations: k
           }),

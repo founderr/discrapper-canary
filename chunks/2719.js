@@ -279,7 +279,7 @@ function Y(e) {
   })
 }
 
-function W(e) {
+function K(e) {
   let t, {
     className: n,
     user: l
@@ -353,7 +353,7 @@ function W(e) {
   })
 }
 
-function K(e) {
+function W(e) {
   let {
     user: t
   } = e, s = (0, m.default)({
@@ -431,7 +431,7 @@ function Q() {
             user: t,
             className: F.userTag,
             discriminatorClass: F.discriminator
-          }), (0, a.jsx)(K, {
+          }), (0, a.jsx)(W, {
             user: t
           })]
         }), (0, a.jsx)(C.default, {
@@ -461,7 +461,7 @@ function Q() {
         }), (0, a.jsx)(Y, {
           className: F.fieldSpacer,
           user: t
-        }), (0, a.jsx)(W, {
+        }), (0, a.jsx)(K, {
           className: F.fieldSpacer,
           user: t
         })]

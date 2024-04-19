@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return K
+    return W
   }
 }), s("47120");
 var a = s("735250"),
@@ -95,7 +95,7 @@ let F = {
       id: "".concat(t)
     })]
   };
-class W extends n.Component {
+class K extends n.Component {
   renderZoomSlider() {
     return x.isPlatformEmbedded ? (0, a.jsxs)(u.FormItem, {
       className: B.marginTop20,
@@ -327,7 +327,7 @@ class W extends n.Component {
   }
 }
 
-function K() {
+function W() {
   let e = v.MessageDisplayCompact.useSetting(),
     t = v.InlineEmbedMedia.useSetting(),
     s = v.RenderEmbeds.useSetting(),
@@ -359,7 +359,7 @@ function K() {
       gradientPreset: _.default.gradientPreset
     }
   });
-  return (0, a.jsx)(W, {
+  return (0, a.jsx)(K, {
     messageDisplayCompact: e,
     hideSimpleEmbedContent: t && s,
     clientTheme: l,

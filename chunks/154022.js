@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return W
+    return K
   }
 }), s("47120");
 var a = s("735250"),
@@ -51,11 +51,11 @@ let k = (0, A.uid)(),
     (0, N.setSpeechRate)(e)
   }, 250);
 
-function W(e) {
+function K(e) {
   return (0, a.jsxs)(u.FormSection, {
     tag: u.FormTitleTags.H1,
     title: y.default.Messages.ACCESSIBILITY,
-    children: [(0, a.jsx)(K, {}), (0, a.jsx)(z, {}), (0, a.jsx)(u.FormDivider, {}), (0, a.jsx)(Q, {}), (0, a.jsx)(q, {}), (0, a.jsx)(Z, {}), (0, f.canEnableForcedColors)() ? (0, a.jsx)(X, {}) : null, (0, a.jsx)(J, {}), (0, a.jsx)($, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(et, {}), (0, a.jsx)(u.FormDivider, {
+    children: [(0, a.jsx)(W, {}), (0, a.jsx)(z, {}), (0, a.jsx)(u.FormDivider, {}), (0, a.jsx)(Q, {}), (0, a.jsx)(q, {}), (0, a.jsx)(Z, {}), (0, f.canEnableForcedColors)() ? (0, a.jsx)(X, {}) : null, (0, a.jsx)(J, {}), (0, a.jsx)($, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(et, {}), (0, a.jsx)(u.FormDivider, {
       className: G.marginBottom20
     }), (0, a.jsx)(u.Text, {
       variant: "text-md/normal",
@@ -68,7 +68,7 @@ function W(e) {
   })
 }
 
-function K() {
+function W() {
   let e = v.MessageDisplayCompact.useSetting(),
     [t] = n.useState(() => {
       let e = (0, m.createMessageRecord)({

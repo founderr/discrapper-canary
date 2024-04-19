@@ -57,10 +57,10 @@ let V = ["discord_web", "discord_marketing", "discord_developers", "discord_ios"
     label: "Build ID"
   }];
 
-function W(e) {
+function K(e) {
   return "discord_ios" in e || "discord_android" in e
 }
-class K extends n.Component {
+class W extends n.Component {
   render() {
     let {
       project: e,
@@ -187,7 +187,7 @@ class z extends n.Component {
       saving: t,
       errors: s
     } = this.state;
-    return null == e ? null : o().map(e, (e, n) => (0, a.jsx)(K, {
+    return null == e ? null : o().map(e, (e, n) => (0, a.jsx)(W, {
       project: n,
       overrideType: e.type,
       overrideId: e.id,
@@ -240,7 +240,7 @@ class z extends n.Component {
       children: [(0, a.jsx)(L.default.Child, {
         grow: 0,
         children: (0, a.jsx)(S.Button, {
-          disabled: W(null != t ? t : {}),
+          disabled: K(null != t ? t : {}),
           onClick: this.handleSaveChanges,
           submitting: e,
           color: S.Button.Colors.GREEN,
@@ -268,7 +268,7 @@ class z extends n.Component {
       className: k.marginTop20
     }) : null != n && 0 === Object.keys(n).length ? this.renderEmpty() : this.renderItems();
     let l = !s && !t && this.getAvailableProjects().length > 0,
-      i = W(null != n ? n : {}) && "stable" !== window.GLOBAL_ENV.RELEASE_CHANNEL ? (0, a.jsx)(S.Text, {
+      i = K(null != n ? n : {}) && "stable" !== window.GLOBAL_ENV.RELEASE_CHANNEL ? (0, a.jsx)(S.Text, {
         color: "text-danger",
         variant: "text-md/normal",
         children: "Mobile build overrides must be generated using the desktop/web stable client for now!"
@@ -426,7 +426,7 @@ class z extends n.Component {
 class Q extends n.Component {
   isMobile() {
     var e;
-    return W(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {})
+    return K(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {})
   }
   renderSettingsForm() {
     let {

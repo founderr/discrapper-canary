@@ -130,10 +130,10 @@ t.default = e => {
     shouldHideGuildPurchaseEntryPoints: V
   } = (0, _.useShouldHideGuildPurchaseEntryPoints)(null == o ? void 0 : o.id), Y = (null == t ? void 0 : t.paymentGateway) === b.PaymentGateways.APPLE_PARTNER;
   if (null == l || null == s || null == I) return null;
-  let W = () => {
+  let K = () => {
       null != o && ((0, h.transitionTo)(b.Routes.CHANNEL(o.id, U.StaticChannelRoute.ROLE_SUBSCRIPTIONS)), (0, c.popLayer)(), S.default.show(b.NoticeTypes.BACK_TO_PREVIOUS_SCREEN, void 0, B.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_BACK_TO_SUBSCRIPTION_USER_SETTING_CTA, () => E.default.open(b.UserSettingsSections.SUBSCRIPTIONS, y.ROLE_SUBSCRIPTION_SUBSECTION)))
     },
-    K = () => {
+    W = () => {
       null != o && (0, P.openModal)({
         guildId: o.id,
         groupListing: l,
@@ -265,8 +265,8 @@ t.default = e => {
         isCancelled: Q,
         isResubscribing: N,
         shouldHideRoleSubscriptionEntryPoints: V,
-        onCancelSubscriptionClick: K,
-        onChangePlanClick: W,
+        onCancelSubscriptionClick: W,
+        onChangePlanClick: K,
         onResubscribeClick: z
       })]
     }) : null]

@@ -47,8 +47,8 @@ var n = s("990547"),
   H = s("419636"),
   V = s("35426"),
   Y = s("799071"),
-  W = s("601433"),
-  K = s("154022"),
+  K = s("601433"),
+  W = s("154022"),
   z = s("393681"),
   Q = s("309739"),
   q = s("64914"),
@@ -227,7 +227,7 @@ function eO(e) {
   }, {
     section: eN.UserSettingsSections.ACCESSIBILITY,
     label: ep.default.Messages.ACCESSIBILITY,
-    element: K.default
+    element: W.default
   }, {
     section: eN.UserSettingsSections.VOICE,
     label: ep.default.Messages.VOICE_AND_VIDEO,
@@ -360,12 +360,12 @@ function eO(e) {
     section: eN.UserSettingsSections.TEXT_PLAYGROUND,
     label: "Text Playground",
     element: ef.default,
-    predicate: () => (0, W.shouldShowTextPlayground)() || R.default.isDeveloper
+    predicate: () => (0, K.shouldShowTextPlayground)() || R.default.isDeveloper
   }, {
     section: eN.UserSettingsSections.TEXT_COMPONENT,
     label: "Text Components",
     element: Y.default,
-    predicate: () => (0, W.shouldShowTextPlayground)() || R.default.isDeveloper
+    predicate: () => (0, K.shouldShowTextPlayground)() || R.default.isDeveloper
   }, {
     section: S.SectionTypes.DIVIDER
   }, {

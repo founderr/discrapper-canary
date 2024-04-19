@@ -89,7 +89,7 @@ function Y(e) {
   })
 }
 
-function W(e) {
+function K(e) {
   let {
     disabledSounds: t,
     disableAllSounds: s,
@@ -233,7 +233,7 @@ function W(e) {
   })
 }
 
-function K() {
+function W() {
   let e = (0, d.useStateFromStores)([_.default], () => _.default.getGuildAlertSettings()),
     [t, s] = n.useState(null),
     l = j.default.keys(e).map(t => {
@@ -358,8 +358,8 @@ class z extends n.PureComponent {
         })]
       }), this.renderTTS(), (0, a.jsx)(u.FormDivider, {
         className: i()(H.marginTop40, H.marginBottom40)
-      }), (0, a.jsx)(K, {}), (0, a.jsx)(u.FormItem, {
-        children: (0, a.jsx)(W, {
+      }), (0, a.jsx)(W, {}), (0, a.jsx)(u.FormItem, {
+        children: (0, a.jsx)(K, {
           disabledSounds: l,
           disableAllSounds: r,
           notifyMessagesInSelectedChannel: d
