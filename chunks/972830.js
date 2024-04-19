@@ -17,4 +17,6 @@ function o(e) {
 }
 i.default.subscribe("CONNECTION_OPEN", () => {
   s.forEach(e => a(e)), s = []
+}), i.default.subscribe("CONNECTION_RESUMED", () => {
+  s.forEach(e => a(e)), s = []
 })
