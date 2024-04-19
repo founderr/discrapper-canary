@@ -1,13 +1,13 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   uninstallBranchPrompt: function() {
     return r
   }
 });
-var n = a("481060"),
-  s = a("812206"),
-  l = a("710845"),
-  i = a("51025");
+var a = n("481060"),
+  s = n("812206"),
+  l = n("710845"),
+  i = n("51025");
 
 function r(e, t, r) {
   ! function(e, t) {
@@ -15,14 +15,14 @@ function r(e, t, r) {
     if (null == i) {
       new l.default("DispatchUninstallActionCreators").log("Application not found for game ".concat(e));
       return
-    }(0, n.openModalLazy)(async () => {
+    }(0, a.openModalLazy)(async () => {
       let {
         default: e
-      } = await a.e("70061").then(a.bind(a, "764998"));
-      return a => e({
+      } = await n.e("70061").then(n.bind(n, "764998"));
+      return n => e({
         game: i,
         onConfirmUninstall: t,
-        ...a
+        ...n
       })
     })
   }(e, () => (0, i.uninstallApplication)(e, t, r))

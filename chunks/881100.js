@@ -24,8 +24,8 @@ var a = s("399606"),
   p = s("507084"),
   m = s("680313"),
   A = s("926433"),
-  g = s("302036"),
-  N = s("994554"),
+  N = s("302036"),
+  g = s("994554"),
   O = s("1549"),
   P = s("13327"),
   M = s("59137"),
@@ -126,25 +126,25 @@ let G = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
       soundboard: {
         title: _.default.Messages.SOUND_BOARD_MARKETING_USE_CUSTOM_SOUNDS,
         description: _.default.Messages.SOUNDBOARD_MARKETING_REACT_WITH_SOUNDBOARD,
-        imageSource: G(i, A, g),
+        imageSource: G(i, A, N),
         imageClassName: t.soundboardImage
       },
       stickers: {
         title: _.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE_OLD,
         description: _.default.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-        imageSource: G(i, N, U),
+        imageSource: G(i, g, U),
         imageClassName: t.stickersImage
       },
       stickersBurst: {
         title: _.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
         description: _.default.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-        imageSource: G(i, N, U),
+        imageSource: G(i, g, U),
         imageClassName: t.stickersImage
       },
       stickersPerkDiscoverability: {
         title: _.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
         description: _.default.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
-        imageSource: G(i, N, U),
+        imageSource: G(i, g, U),
         imageClassName: t.stickersImage
       },
       streaming: {

@@ -15,8 +15,8 @@ var a = t("735250"),
   u = t("78839"),
   h = t("246992"),
   m = t("981631"),
-  g = t("779869"),
-  p = t("534477");
+  p = t("779869"),
+  g = t("534477");
 let f = [{
     label: "Nitro Monthly",
     value: "511651880837840896"
@@ -96,9 +96,9 @@ function k() {
     await c.HTTP.del("/debug/subscription"), await (0, d.fetchSubscriptions)()
   };
   return (0, a.jsx)(s.ScrollerThin, {
-    className: n()(g.panel),
+    className: n()(p.panel),
     children: (0, a.jsxs)("div", {
-      className: p.panelInner,
+      className: g.panelInner,
       children: [(0, a.jsx)(s.Text, {
         style: {
           marginBottom: "16px"
@@ -106,7 +106,7 @@ function k() {
         variant: "text-lg/bold",
         children: "Manage Subscription"
       }), (0, a.jsxs)("section", {
-        className: p.buttons,
+        className: g.buttons,
         children: [null == t && (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(s.Text, {
             variant: "text-md/normal",
@@ -159,7 +159,7 @@ function v(e) {
       variant: "text-md/normal",
       children: "Existing Subscription"
     }), (0, a.jsxs)("div", {
-      className: n()(p.card, l ? p.gradientWrapperTier0 : p.gradientWrapperTier2),
+      className: n()(g.card, l ? g.gradientWrapperTier0 : g.gradientWrapperTier2),
       children: [(0, a.jsxs)(s.Text, {
         variant: "text-md/normal",
         children: [" Subscription Type: ", (() => {

@@ -26,8 +26,8 @@ function T(e) {
     errors: s,
     onAvatarChange: n,
     sectionTitle: T,
-    changeAvatarButtonText: f,
-    guildId: m,
+    changeAvatarButtonText: m,
+    guildId: f,
     className: _,
     disabled: g = !1,
     isTryItOutFlow: I = !1,
@@ -47,15 +47,15 @@ function T(e) {
           [S.buttonHighlighted]: N
         }),
         size: i.Button.Sizes.SMALL,
-        onClick: () => (0, o.handleOpenSelectImageModal)(u.UploadTypes.AVATAR, m, I, I ? E : void 0),
-        children: null != f ? f : c.default.Messages.USER_SETTINGS_CHANGE_AVATAR
+        onClick: () => (0, o.handleOpenSelectImageModal)(u.UploadTypes.AVATAR, f, I, I ? E : void 0),
+        children: null != m ? m : c.default.Messages.USER_SETTINGS_CHANGE_AVATAR
       }), t && (0, a.jsx)(i.Button, {
         className: S.removeButton,
         color: i.Button.Colors.PRIMARY,
         look: i.Button.Looks.LINK,
         size: i.Button.Sizes.SMALL,
         onClick: () => n(null),
-        children: null != m ? c.default.Messages.USER_SETTINGS_RESET_AVATAR : c.default.Messages.USER_SETTINGS_REMOVE_AVATAR
+        children: null != f ? c.default.Messages.USER_SETTINGS_RESET_AVATAR : c.default.Messages.USER_SETTINGS_REMOVE_AVATAR
       })]
     })
   })

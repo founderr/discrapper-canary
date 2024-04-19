@@ -28,7 +28,7 @@ t.default = function(e) {
       friction: 12
     },
     immediate: m
-  }), g = {
+  }), N = {
     section: C.AnalyticsSections.MARKETING_FLOATING_CTA
   };
   return (0, a.jsx)(l.animated.div, {
@@ -43,11 +43,11 @@ t.default = function(e) {
         className: f.button,
         shinyButtonClassName: f.shinyButton,
         subscriptionTier: null !== (s = null != I ? I : null == R ? void 0 : R.sku_id) && void 0 !== s ? s : p,
-        premiumModalAnalyticsLocation: g,
+        premiumModalAnalyticsLocation: N,
         isPersistentCTA: !0
       }), (0, a.jsx)(c.default, {
         className: f.button,
-        premiumModalAnalyticsLocation: g
+        premiumModalAnalyticsLocation: N
       })]
     })
   })

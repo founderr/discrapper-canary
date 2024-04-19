@@ -1,7 +1,7 @@
 "use strict";
-a.r(t);
-var n = a("818083");
-t.default = (0, n.createExperiment)({
+n.r(t);
+var a = n("818083");
+t.default = (0, a.createExperiment)({
   kind: "user",
   id: "2022-04_account_profile_popout",
   label: "Account Profile Popout",

@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("557533"),
-  s = n.n(r),
-  l = n("789978"),
+  l = n.n(r),
+  s = n("789978"),
   a = n("790472"),
   o = n("777207"),
   c = n("431674"),
@@ -21,12 +21,12 @@ function u(e) {
     headerImage: r,
     onDetails: u,
     onPurchase: f,
-    PurchaseButton: h,
-    availabilityLabel: m
+    PurchaseButton: m,
+    availabilityLabel: h
   } = e;
-  return (0, i.jsx)(l.FocusRing, {
+  return (0, i.jsx)(s.FocusRing, {
     children: (0, i.jsxs)("div", {
-      className: s()(c.wrapper, d.hoverCard),
+      className: l()(c.wrapper, d.hoverCard),
       tabIndex: 0,
       onClick: () => {
         null != u ? u() : null != f && f()
@@ -53,13 +53,13 @@ function u(e) {
           variant: "text-sm/normal",
           children: n
         })]
-      }), null != h && (0, i.jsxs)("div", {
+      }), null != m && (0, i.jsxs)("div", {
         className: c.footer,
         children: [(0, i.jsx)(o.Text, {
           color: "interactive-normal",
           variant: "text-sm/normal",
-          children: m
-        }), (0, i.jsx)(h, {
+          children: h
+        }), (0, i.jsx)(m, {
           onClick: e => {
             e.stopPropagation(), null == f || f()
           }

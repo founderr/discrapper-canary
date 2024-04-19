@@ -1,20 +1,20 @@
 "use strict";
-s.r(t);
-var a = s("735250");
-s("470079");
-t.default = e => {
+t.r(s);
+var a = t("735250");
+t("470079");
+s.default = e => {
   let {
-    className: t,
-    width: s = 214,
-    height: l = 165
+    className: s,
+    width: t = 214,
+    height: r = 165
   } = e;
   return (0, a.jsxs)("svg", {
-    width: s,
-    height: l,
+    width: t,
+    height: r,
     viewBox: "0 0 214 165",
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg",
-    className: t,
+    className: s,
     children: [(0, a.jsx)("g", {
       filter: "url(#filter0_f_1493_12621)",
       children: (0, a.jsx)("path", {

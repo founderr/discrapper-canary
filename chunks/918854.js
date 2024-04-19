@@ -1,7 +1,7 @@
 "use strict";
-a.r(t);
-var n = a("663993");
-t.default = (0, n.makeLazy)({
-  createPromise: () => Promise.all([a.e("99387"), a.e("14784"), a.e("77485")]).then(a.bind(a, "495810")),
+n.r(t);
+var a = n("663993");
+t.default = (0, a.makeLazy)({
+  createPromise: () => Promise.all([n.e("99387"), n.e("14784"), n.e("77485")]).then(n.bind(n, "495810")),
   webpackId: "495810"
 })

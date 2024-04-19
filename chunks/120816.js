@@ -7,18 +7,18 @@ var a, i, l, n, o = t("153832"),
   u = t("314897"),
   h = t("906467");
 let m = 0,
-  g = [],
   p = [],
+  g = [],
   f = !1;
 class b extends(a = s.default.Store) {
   initialize() {
     this.waitFor(h.default)
   }
   get loggedEvents() {
-    return g
+    return p
   }
   get loggedTriggers() {
-    return p
+    return g
   }
   get trackTriggers() {
     return f
@@ -38,13 +38,13 @@ n = "AnalyticsLogStore", (l = "displayName") in(i = b) ? Object.defineProperty(i
     } = e;
     if (h.default.isDeveloper) {
       var i;
-      (g = [...g, {
+      (p = [...p, {
         key: (m++).toString(),
         event: r,
         properties: t,
         fingerprint: null != (i = a) ? (0, c.extractId)(i) : u.default.getId(),
         timestamp: new Date
-      }]).length > 500 && g.shift()
+      }]).length > 500 && p.shift()
     }
   },
   TRACK_TRIGGER: function(e) {
@@ -56,7 +56,7 @@ n = "AnalyticsLogStore", (l = "displayName") in(i = b) ? Object.defineProperty(i
       location: l,
       previouslyTracked: n
     } = e;
-    if (!!h.default.isDeveloper) f && (p = [...p, {
+    if (!!h.default.isDeveloper) f && (g = [...g, {
       key: (0, o.v4)(),
       experimentId: r,
       descriptor: t,
@@ -65,7 +65,7 @@ n = "AnalyticsLogStore", (l = "displayName") in(i = b) ? Object.defineProperty(i
       location: l,
       previouslyTracked: n,
       timestamp: new Date
-    }]).length > 500 && p.shift()
+    }]).length > 500 && g.shift()
   },
   SET_TRACK_TRIGGERS: function(e) {
     let {
@@ -74,6 +74,6 @@ n = "AnalyticsLogStore", (l = "displayName") in(i = b) ? Object.defineProperty(i
     f = r
   },
   ANALYTICS_LOG_CLEAR: function() {
-    g = [], p = []
+    p = [], g = []
   }
 })

@@ -1,4 +1,4 @@
 "use strict";
-a.r(t);
-var n = a("74538");
-t.default = e => n.default.canUsePremiumGuildMemberProfile(e)
+n.r(t);
+var a = n("74538");
+t.default = e => a.default.canUsePremiumGuildMemberProfile(e)

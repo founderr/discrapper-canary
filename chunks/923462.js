@@ -1,12 +1,12 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   useSoundboardLottie: function() {
     return r
   }
 });
-var n = a("735250"),
-  s = a("470079"),
-  l = a("709014");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("709014");
 let i = {
     all: {
       name: "all",
@@ -32,9 +32,9 @@ let i = {
         onMouseLeave: o
       },
       play: t,
-      Component: s.useCallback(t => (0, n.jsx)(l.LottieIcon, {
+      Component: s.useCallback(t => (0, a.jsx)(l.LottieIcon, {
         ...t,
-        src: () => a.e("66944").then(a.t.bind(a, "166174", 19)),
+        src: () => n.e("66944").then(n.t.bind(n, "166174", 19)),
         ref: e,
         markers: i
       }), [])

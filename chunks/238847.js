@@ -12,8 +12,8 @@ var a = s("735250"),
   S = s("355467"),
   E = s("100527"),
   T = s("906732"),
-  f = s("218946"),
-  m = s("404203"),
+  m = s("218946"),
+  f = s("404203"),
   _ = s("330181"),
   g = s("374649"),
   I = s("908951"),
@@ -197,7 +197,7 @@ t.default = e => {
   }));
   return (0, a.jsxs)("div", {
     className: U.container,
-    children: [(0, a.jsx)(m.default, {
+    children: [(0, a.jsx)(f.default, {
       onClick: g,
       className: U.headerContainer,
       children: e => {
@@ -210,7 +210,7 @@ t.default = e => {
             size: L.ApplicationIconSize.SMALL,
             className: U.applicationIcon,
             application: N,
-            asset: null != l.image_asset ? (0, f.transformStoreAssetFromServer)(l.image_asset) : null
+            asset: null != l.image_asset ? (0, m.transformStoreAssetFromServer)(l.image_asset) : null
           }), (0, a.jsxs)("div", {
             className: U.headerTextContainer,
             children: [(0, a.jsx)(c.Text, {

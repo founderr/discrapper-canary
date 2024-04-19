@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return m
+    return f
   }
 });
 var a = s("735250"),
@@ -16,20 +16,20 @@ var a = s("735250"),
   S = s("955204"),
   E = s("248998"),
   T = s("689938"),
-  f = s("342568");
+  m = s("342568");
 
-function m(e) {
+function f(e) {
   let {
     onBackClick: t
-  } = e, s = (0, l.useStateFromStores)([c.default], () => c.default.getAllUnlockedAchievements()), m = n.useMemo(() => Object.values(s).sort((e, t) => t.dateUnlocked - e.dateUnlocked), [s]), _ = n.useMemo(() => Object.values(S.ACHIEVEMENT_LIST).filter(u.isNotNullish).filter(e => null == s[e.id]).sort((e, t) => e.rarity - t.rarity), [s]);
+  } = e, s = (0, l.useStateFromStores)([c.default], () => c.default.getAllUnlockedAchievements()), f = n.useMemo(() => Object.values(s).sort((e, t) => t.dateUnlocked - e.dateUnlocked), [s]), _ = n.useMemo(() => Object.values(S.ACHIEVEMENT_LIST).filter(u.isNotNullish).filter(e => null == s[e.id]).sort((e, t) => e.rarity - t.rarity), [s]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(r.FormSection, {
       children: (0, a.jsxs)(r.Clickable, {
         onClick: t,
-        className: f.backContainer,
+        className: m.backContainer,
         children: [(0, a.jsx)(o.default, {
           direction: o.default.Directions.LEFT,
-          className: f.icon
+          className: m.icon
         }), (0, a.jsx)(r.Text, {
           variant: "text-lg/normal",
           color: "text-normal",
@@ -37,9 +37,9 @@ function m(e) {
         })]
       })
     }), (0, a.jsxs)("div", {
-      className: f.headerContainer,
+      className: m.headerContainer,
       children: [(0, a.jsxs)("div", {
-        className: f.headerTextContainer,
+        className: m.headerTextContainer,
         children: [(0, a.jsx)(r.Heading, {
           variant: "heading-lg/extrabold",
           color: "header-primary",
@@ -50,18 +50,18 @@ function m(e) {
           children: T.default.Messages.POGGERMODE_ACHIEVEMENT_DESCRIPTION
         })]
       }), (0, a.jsx)("div", {
-        className: f.headerIcon,
+        className: m.headerIcon,
         children: (0, a.jsx)(d.default, {
           color: i.default.unsafe_rawColors.ORANGE_345.css,
           width: 40,
           height: 40
         })
       })]
-    }), m.length > 0 && (0, a.jsx)(r.FormSection, {
-      className: f.divider,
+    }), f.length > 0 && (0, a.jsx)(r.FormSection, {
+      className: m.divider,
       children: (0, a.jsx)("div", {
-        className: f.achievementGrid,
-        children: m.map(e => {
+        className: m.achievementGrid,
+        children: f.map(e => {
           let {
             achievementId: t,
             dateUnlocked: s
@@ -73,24 +73,24 @@ function m(e) {
         })
       })
     }), _.length > 0 && (0, a.jsxs)(r.FormSection, {
-      className: f.divider,
+      className: m.divider,
       children: [(0, a.jsx)("div", {
-        className: f.headerTextContainer,
+        className: m.headerTextContainer,
         children: (0, a.jsx)(r.Text, {
           variant: "text-md/bold",
           color: "header-secondary",
           children: T.default.Messages.POGGERMODE_ACHIEVEMENT_LOCKED_TITLE
         })
       }), (0, a.jsx)("div", {
-        className: f.achievementGrid,
+        className: m.achievementGrid,
         children: _.map(e => (0, a.jsx)(E.default, {
           achievementId: e.id
         }, e.id))
       })]
     }), (0, a.jsx)(r.FormSection, {
-      className: f.divider,
+      className: m.divider,
       children: (0, a.jsx)("div", {
-        className: f.bottomPadding
+        className: m.bottomPadding
       })
     })]
   })

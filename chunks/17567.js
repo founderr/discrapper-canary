@@ -1,67 +1,67 @@
 "use strict";
-a.r(t), a("47120");
-var n = a("710845"),
-  s = a("314897"),
-  l = a("430824"),
-  i = a("411198"),
-  r = a("625137"),
-  o = a("287328");
-let u = new n.default("Guilds");
+n.r(t), n("47120");
+var a = n("710845"),
+  s = n("314897"),
+  l = n("430824"),
+  i = n("411198"),
+  r = n("625137"),
+  o = n("287328");
+let u = new a.default("Guilds");
 t.default = new class e {
   async getAsync(e) {
     let t = performance.now(),
-      a = await o.default.guilds(e).getMany(),
-      n = performance.now();
-    return u.verbose("loaded in ".concat(n - t, "ms (guilds: ").concat(a.length, ")")), a
+      n = await o.default.guilds(e).getMany(),
+      a = performance.now();
+    return u.verbose("loaded in ".concat(a - t, "ms (guilds: ").concat(n.length, ")")), n
   }
   async getOneAsync(e, t) {
     return await o.default.guilds(e).get(t)
   }
   handleBackgroundSync(e, t) {
-    for (let a of e.guilds) {
-      if ("unavailable" === a.data_mode) return;
-      let e = l.default.getGuild(a.id);
+    for (let n of e.guilds) {
+      if ("unavailable" === n.data_mode) return;
+      let e = l.default.getGuild(n.id);
       if (null != e) {
-        let n = l.default.getRoles(a.id);
-        this.put(i.attachRoles(i.fromBackgroundSync(a, e), "partial" === a.data_mode ? i.filterRoleDeletes(a.id, n, a.partial_updates.roles, a.partial_updates.deleted_role_ids) : (0, r.sortServerRoles)(a.id, a.roles)), t)
+        let a = l.default.getRoles(n.id);
+        this.put(i.attachRoles(i.fromBackgroundSync(n, e), "partial" === n.data_mode ? i.filterRoleDeletes(n.id, a, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : (0, r.sortServerRoles)(n.id, n.roles)), t)
       }
     }
   }
   handleConnectionOpen(e, t) {
-    for (let a of (this.clear(t), e.guilds)) this.putOne(a, t)
+    for (let n of (this.clear(t), e.guilds)) this.putOne(n, t)
   }
   handleGuildCreate(e, t) {
     this.putOne(e.guild, t)
   }
   handleGuildUpdate(e, t) {
-    let a = l.default.getGuild(e.guild.id),
-      n = i.fromServerUpdate(e.guild, a);
-    this.put(i.attachRoles(n, (0, r.sortServerRoles)(e.guild.id, e.guild.roles)), t)
+    let n = l.default.getGuild(e.guild.id),
+      a = i.fromServerUpdate(e.guild, n);
+    this.put(i.attachRoles(a, (0, r.sortServerRoles)(e.guild.id, e.guild.roles)), t)
   }
   handleGuildDelete(e, t) {
     this.delete(e.guild.id, t)
   }
   handleGuildRoleChange(e, t) {
-    let a = l.default.getGuild(e.guildId),
-      n = l.default.getRoles(e.guildId);
-    null != a && this.put(i.attachRoles(a, n), t)
+    let n = l.default.getGuild(e.guildId),
+      a = l.default.getRoles(e.guildId);
+    null != n && this.put(i.attachRoles(n, a), t)
   }
   handleGuildRoleDelete(e, t) {
-    let a = l.default.getGuild(e.guildId),
-      n = l.default.getRoles(e.guildId);
-    null != a && this.put(i.attachRoles(a, n), t)
+    let n = l.default.getGuild(e.guildId),
+      a = l.default.getRoles(e.guildId);
+    null != n && this.put(i.attachRoles(n, a), t)
   }
   handleGuildMemberAdd(e, t) {
     if (null != e.joinedAt && e.user.id === s.default.getId()) {
-      let a = l.default.getGuild(e.guildId);
-      null != a && this.put(i.attachRoles(a.updateJoinedAt(e.joinedAt), l.default.getRoles(a.id)), t)
+      let n = l.default.getGuild(e.guildId);
+      null != n && this.put(i.attachRoles(n.updateJoinedAt(e.joinedAt), l.default.getRoles(n.id)), t)
     }
   }
   resetInMemoryState() {}
   putOne(e, t) {
-    let a = l.default.getGuild(e.id),
-      n = i.attachRoles(i.fromServer(e, a), e.roles instanceof Array ? (0, r.sortServerRoles)(e.id, e.roles) : e.roles);
-    this.put(n, t)
+    let n = l.default.getGuild(e.id),
+      a = i.attachRoles(i.fromServer(e, n), e.roles instanceof Array ? (0, r.sortServerRoles)(e.id, e.roles) : e.roles);
+    this.put(a, t)
   }
   put(e, t) {
     o.default.guildsTransaction(t).put(e)
@@ -73,8 +73,8 @@ t.default = new class e {
     o.default.guildsTransaction(e).delete()
   }
   constructor() {
-    var e, t, a;
-    e = this, t = "actions", a = {
+    var e, t, n;
+    e = this, t = "actions", n = {
       BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
       CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
       GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),
@@ -85,10 +85,10 @@ t.default = new class e {
       GUILD_ROLE_UPDATE: (e, t) => this.handleGuildRoleChange(e, t),
       GUILD_UPDATE: (e, t) => this.handleGuildUpdate(e, t)
     }, t in e ? Object.defineProperty(e, t, {
-      value: a,
+      value: n,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : e[t] = a
+    }) : e[t] = n
   }
 }

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return m
   }
 }), s("47120");
 var a = s("442837"),
@@ -17,12 +17,12 @@ var a = s("442837"),
   E = s("168308"),
   T = s("202022");
 
-function f() {
+function m() {
   let e = (0, u.useUnseenOutboundPromotions)().length,
     t = (0, d.useIsPrepaidPaymentPastDue)(),
     s = (0, a.useStateFromStores)([c.default], () => c.default.getProps().impressionSource),
-    f = (0, o.usePendingRequestCount)(),
-    m = (0, E.useShouldShowOverlaySettings)(),
+    m = (0, o.usePendingRequestCount)(),
+    f = (0, E.useShouldShowOverlaySettings)(),
     _ = (0, i.useEnableClips)(),
     [g] = (0, r.useGetDismissibleContent)(_ ? [n.DismissibleContent.CLIPS_SETTINGS_BETA_TAG] : []),
     I = "useGenerateUserSettingsSections";
@@ -42,8 +42,8 @@ function f() {
     unseenGiftCount: e,
     showPrepaidPaymentPastDueWarning: t,
     impressionSource: s,
-    numOfPendingFamilyRequests: f,
-    isOverlaySupported: m,
+    numOfPendingFamilyRequests: m,
+    isOverlaySupported: f,
     isClipsBetaTagShowing: g === n.DismissibleContent.CLIPS_SETTINGS_BETA_TAG,
     shouldMergeGameSettings: h
   })

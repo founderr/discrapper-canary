@@ -1,8 +1,8 @@
 "use strict";
-a.r(t);
-var n = a("570140"),
-  s = a("317770"),
-  l = a("117984");
+n.r(t);
+var a = n("570140"),
+  s = n("317770"),
+  l = n("117984");
 
 function i(e) {
   let {
@@ -14,10 +14,10 @@ function i(e) {
 }
 class r extends s.default {
   _initialize() {
-    n.default.subscribe("CHANNEL_DELETE", i)
+    a.default.subscribe("CHANNEL_DELETE", i)
   }
   _terminate() {
-    n.default.unsubscribe("CHANNEL_DELETE", i)
+    a.default.unsubscribe("CHANNEL_DELETE", i)
   }
 }
 t.default = new r

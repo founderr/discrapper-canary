@@ -16,8 +16,8 @@ var a = s("735250"),
   S = s("175756"),
   E = s("104494"),
   T = s("639119"),
-  f = s("165583"),
-  m = s("197115"),
+  m = s("165583"),
+  f = s("197115"),
   _ = s("350327"),
   g = s("318661"),
   I = s("996073"),
@@ -172,7 +172,7 @@ function B(e) {
               variant: "text-sm/normal",
               className: y.premiumPerksListTitle,
               children: U.default.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_ALSO_INCLUDES
-            }), (0, a.jsx)(m.default, {
+            }), (0, a.jsx)(f.default, {
               onSubscribeModalClose: e => {
                 e && ((0, r.setPendingAvatar)(Q), (0, _.setPendingBanner)(q), (0, _.setPendingThemeColors)(z))
               },
@@ -188,7 +188,7 @@ function B(e) {
       }), el && (0, a.jsxs)("div", {
         children: [(0, a.jsx)("div", {
           className: y.premiumTier2Divider
-        }), (0, a.jsx)(f.default, {
+        }), (0, a.jsx)(m.default, {
           type: j.PremiumUpsellTypes.CUSTOM_PROFILE_TRY_OUT_UPSELL,
           subscriptionTier: j.PremiumSubscriptionSKUs.TIER_2
         })]

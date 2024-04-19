@@ -1,36 +1,36 @@
 "use strict";
-s.r(t), s.d(t, {
+t.r(s), t.d(s, {
   Steps: function() {
     return a
   }
-}), s("47120");
-var a, l, i = s("735250"),
-  r = s("470079"),
-  C = s("481060"),
-  n = s("281494"),
-  d = s("687555"),
-  o = s("596583");
-(l = a || (a = {}))[l.SELECT_FRIENDS = 1] = "SELECT_FRIENDS", l[l.CONFIRMATION = 2] = "CONFIRMATION";
-t.default = e => {
-  let t, {
-      transitionState: s,
+}), t("47120");
+var a, r, i = t("735250"),
+  l = t("470079"),
+  n = t("481060"),
+  C = t("281494"),
+  o = t("687555"),
+  d = t("596583");
+(r = a || (a = {}))[r.SELECT_FRIENDS = 1] = "SELECT_FRIENDS", r[r.CONFIRMATION = 2] = "CONFIRMATION";
+s.default = e => {
+  let s, {
+      transitionState: t,
       onClose: a
     } = e,
-    [l, c] = r.useState(1),
-    [u, f] = r.useState(new Set);
-  switch (l) {
+    [r, c] = l.useState(1),
+    [u, f] = l.useState(new Set);
+  switch (r) {
     case 1:
-      t = (0, i.jsx)(d.default, {
+      s = (0, i.jsx)(o.default, {
         onShare: async e => {
           try {
-            await (0, n.createReferralTrials)(e.map(e => e.id)), c(2), f(new Set(e))
+            await (0, C.createReferralTrials)(e.map(e => e.id)), c(2), f(new Set(e))
           } catch {}
         },
         onClose: a
       });
       break;
     case 2:
-      t = (0, i.jsx)(o.default, {
+      s = (0, i.jsx)(d.default, {
         selectedUsers: u,
         onClose: a
       });
@@ -38,8 +38,8 @@ t.default = e => {
     default:
       a()
   }
-  return (0, i.jsx)(C.ModalRoot, {
-    transitionState: s,
-    children: t
+  return (0, i.jsx)(n.ModalRoot, {
+    transitionState: t,
+    children: s
   })
 }

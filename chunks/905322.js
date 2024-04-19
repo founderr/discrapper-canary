@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  s = n("777207"),
-  l = n("764254");
+  l = n("777207"),
+  s = n("764254");
 
 function a(e) {
   let {
@@ -30,30 +30,30 @@ function a(e) {
     return !d && null != c && (e["--custom-background-animated"] = "url(".concat(c.toString(), ")")), e
   }, [c, o, d]);
   return (0, i.jsxs)("div", {
-    className: l.wrapper,
+    className: s.wrapper,
     children: [(0, i.jsx)("div", {
-      className: l.background,
+      className: s.background,
       style: u
     }), (0, i.jsxs)("div", {
-      className: l.content,
+      className: s.content,
       children: [null != a && (0, i.jsx)("div", {
-        className: l.icon,
+        className: s.icon,
         children: (0, i.jsx)("img", {
           src: a.toString(),
           alt: ""
         })
       }), (0, i.jsxs)("div", {
-        children: [(0, i.jsx)(s.Text, {
+        children: [(0, i.jsx)(l.Text, {
           variant: "heading-xl/bold",
           tag: "div",
           children: t
-        }), null != n && (0, i.jsxs)(s.Text, {
+        }), null != n && (0, i.jsxs)(l.Text, {
           variant: "text-sm/normal",
           children: ["“", n, "”"]
         })]
       })]
     }), null != o ? (0, i.jsx)("div", {
-      className: l.image,
+      className: s.image,
       style: f
     }) : null]
   })

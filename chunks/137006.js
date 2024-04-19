@@ -1,26 +1,26 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   RPCCommandSchemas: function() {
     return l
   }
-}), a("47120");
-var n = a("103964"),
-  s = a("231338");
+}), n("47120");
+var a = n("103964"),
+  s = n("231338");
 let l = {
-    [n.RPCCommand.INITIATE_IMAGE_UPLOAD]: {
+    [a.RPCCommand.INITIATE_IMAGE_UPLOAD]: {
       request: void 0,
       response: e => e.object({
         image_url: e.string().required()
       })
     },
-    [n.RPCCommand.OPEN_SHARE_MOMENT_DIALOG]: {
+    [a.RPCCommand.OPEN_SHARE_MOMENT_DIALOG]: {
       response: void 0,
-      request: e => (0, n.joiReqObj)(e.object({
+      request: e => (0, a.joiReqObj)(e.object({
         mediaUrl: e.string().required().max(1024)
       }))
     },
-    [n.RPCCommand.AUTHENTICATE]: {
-      request: e => (0, n.joiReqObj)(e.object({
+    [a.RPCCommand.AUTHENTICATE]: {
+      request: e => (0, a.joiReqObj)(e.object({
         access_token: e.string().allow(null).optional()
       })),
       response: e => e.object({
@@ -33,7 +33,7 @@ let l = {
           public_flags: e.number().required(),
           global_name: e.string().allow(null)
         }).required(),
-        scopes: e.array().items(e.string().valid(...(0, n.joiEnum)(s.OAuth2Scopes))).required(),
+        scopes: e.array().items(e.string().valid(...(0, a.joiEnum)(s.OAuth2Scopes))).required(),
         expires: e.string().required(),
         application: e.object({
           description: e.string().required(),
@@ -44,7 +44,7 @@ let l = {
         }).required()
       })
     },
-    [n.RPCCommand.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: {
+    [a.RPCCommand.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: {
       request: void 0,
       response: e => e.object({
         participants: e.array().items(i(e).keys({

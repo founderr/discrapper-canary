@@ -15,8 +15,8 @@ var a = t("735250"),
   u = t("213609"),
   h = t("906467"),
   m = t("259580"),
-  g = t("465670"),
-  p = t("54017"),
+  p = t("465670"),
+  g = t("54017"),
   f = t("502568"),
   b = t("31336"),
   y = t("19759"),
@@ -36,8 +36,8 @@ var k = t("392750"),
   R = t("958328"),
   D = t("514866"),
   I = t("678639"),
-  P = t("351930"),
-  O = t("771751"),
+  O = t("351930"),
+  P = t("771751"),
   A = t("596768"),
   B = t("621060"),
   M = t("689938"),
@@ -125,7 +125,7 @@ function z() {
       }), window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith("staging") && (e.push({
         id: "trials",
         name: "Trials",
-        render: () => (0, a.jsx)(O.default, {})
+        render: () => (0, a.jsx)(P.default, {})
       }), e.push({
         id: "payments",
         name: "Payments",
@@ -133,7 +133,7 @@ function z() {
       }), e.push({
         id: "subscriptions",
         name: "Subscriptions",
-        render: () => (0, a.jsx)(P.default, {})
+        render: () => (0, a.jsx)(O.default, {})
       }), e.push({
         id: "billing",
         name: "Billing",
@@ -163,12 +163,12 @@ function z() {
     children: [(0, a.jsxs)(f.default, {
       className: H.headerBar,
       toolbar: (0, a.jsx)(f.default.Icon, {
-        icon: g.default,
+        icon: p.default,
         tooltip: M.default.Messages.CLOSE,
         onClick: b.toggleDisplayDevTools
       }),
       children: [(0, a.jsx)(f.default.Icon, {
-        icon: p.default,
+        icon: g.default,
         tooltip: "DevTools"
       }), (0, a.jsx)(f.default.Title, {
         children: "DevTools"
@@ -224,7 +224,7 @@ function V() {
           direction: m.default.Directions.UP
         }),
         children: [(0, a.jsx)(f.default.Icon, {
-          icon: p.default,
+          icon: g.default,
           tooltip: "DevTools"
         }), (0, a.jsx)(f.default.Title, {
           children: "DevTools"

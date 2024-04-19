@@ -1,10 +1,10 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   useNullExperiment: function() {
     return s
   }
 });
-let n = (0, a("818083").createExperiment)({
+let a = (0, n("818083").createExperiment)({
   kind: "user",
   id: "2023-04_null_experiment",
   label: "Null Experiment",
@@ -22,7 +22,7 @@ let n = (0, a("818083").createExperiment)({
 
 function s() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-  return n.useExperiment({
+  return a.useExperiment({
     location: "a9e81b_1"
   }, {
     autoTrackExposure: e

@@ -24,8 +24,8 @@ var a = s("735250"),
   p = s("911314"),
   m = s("429899"),
   A = s("843445"),
-  g = s("981631"),
-  N = s("689938"),
+  N = s("981631"),
+  g = s("689938"),
   O = s("757473");
 
 function P(e, t, s) {
@@ -48,7 +48,7 @@ n.default.initialize();
 class x extends i.PureComponent {
   componentDidMount() {
     (0, o.updateLocation)(this.props.location), this.stopListeningToHistory = (0, R.getHistory)().listen(e => {
-      e.pathname.startsWith(g.Routes.APPLICATION_STORE) && (0, o.updateLocation)(e)
+      e.pathname.startsWith(N.Routes.APPLICATION_STORE) && (0, o.updateLocation)(e)
     }), this.props.isAuthenticated && (0, u.fetchPaymentSources)(), f.default.disable(), f.default.setLayout(E.APPLICATION_STORE_LAYOUT), f.default.enable(), (0, S.trackAppUIViewed)("application_store")
   }
   componentWillUnmount() {
@@ -57,9 +57,9 @@ class x extends i.PureComponent {
   renderCustomErrorMessage() {
     return (0, a.jsxs)("div", {
       children: [(0, a.jsx)("p", {
-        children: N.default.Messages.ERRORS_STORE_CRASH
+        children: g.default.Messages.ERRORS_STORE_CRASH
       }), (0, a.jsx)("p", {
-        children: N.default.Messages.ERRORS_ACTION_TO_TAKE
+        children: g.default.Messages.ERRORS_ACTION_TO_TAKE
       })]
     })
   }
@@ -95,7 +95,7 @@ class x extends i.PureComponent {
         width: n
       } = this.props, o = (0, r.parse)(l.search);
       return (0, a.jsx)(d.default, {
-        page: g.AnalyticsPages.STORE_LISTING,
+        page: N.AnalyticsPages.STORE_LISTING,
         root: !0,
         children: (0, a.jsx)(m.default, {
           skuId: t,
@@ -108,27 +108,27 @@ class x extends i.PureComponent {
       })
     }), P(this, "renderContent", () => (0, a.jsxs)(l.Switch, {
       children: [(0, a.jsx)(l.Route, {
-        path: g.Routes.APPLICATION_STORE,
+        path: N.Routes.APPLICATION_STORE,
         exact: !0,
         render: () => (0, a.jsx)(d.default, {
-          page: g.AnalyticsPages.STORE_DIRECTORY_HOME,
+          page: N.AnalyticsPages.STORE_DIRECTORY_HOME,
           root: !0,
           children: (0, a.jsx)(p.default, {})
         })
       }), (0, a.jsx)(l.Route, {
-        path: g.Routes.APPLICATION_STORE_LISTING_APPLICATION(":applicationId", ":slug"),
+        path: N.Routes.APPLICATION_STORE_LISTING_APPLICATION(":applicationId", ":slug"),
         render: this.renderStoreListing
       }), (0, a.jsx)(l.Route, {
-        path: g.Routes.APPLICATION_STORE_LISTING_APPLICATION(":applicationId"),
+        path: N.Routes.APPLICATION_STORE_LISTING_APPLICATION(":applicationId"),
         render: this.renderStoreListing
       }), (0, a.jsx)(l.Route, {
-        path: g.Routes.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug"),
+        path: N.Routes.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug"),
         render: this.renderStoreListing
       }), (0, a.jsx)(l.Route, {
-        path: g.Routes.APPLICATION_STORE_LISTING_SKU(":skuId"),
+        path: N.Routes.APPLICATION_STORE_LISTING_SKU(":skuId"),
         render: this.renderStoreListing
       }), (0, a.jsx)(l.Redirect, {
-        to: g.Routes.APP
+        to: N.Routes.APP
       })]
     }))
   }

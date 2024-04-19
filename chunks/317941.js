@@ -12,8 +12,8 @@ var a = s("735250"),
   S = s("981632"),
   E = s("314897"),
   T = s("82142"),
-  f = s("246946"),
-  m = s("509545"),
+  m = s("246946"),
+  f = s("509545"),
   _ = s("55563"),
   g = s("15887"),
   I = s("581874"),
@@ -248,7 +248,7 @@ class L extends n.PureComponent {
     })
   }
 }
-t.default = r.default.connectStores([_.default, f.default, T.default, c.default, m.default, E.default], e => {
+t.default = r.default.connectStores([_.default, m.default, T.default, c.default, f.default, E.default], e => {
   let {
     skuId: t,
     subscriptionPlanId: s,
@@ -258,7 +258,7 @@ t.default = r.default.connectStores([_.default, f.default, T.default, c.default,
   let l = T.default.getForGifterSKUAndPlan(E.default.getId(), t, s).filter(e => !e.isClaimed).filter(e => e.giftStyle === a);
   return {
     sku: n,
-    hideCodes: f.default.enabled,
+    hideCodes: m.default.enabled,
     isFetching: T.default.getUserGiftCodesFetchingForSKUAndPlan(t, s),
     loadedAt: T.default.getUserGiftCodesLoadedAtForSKUAndPlan(t, s),
     application: c.default.getApplication(n.applicationId),

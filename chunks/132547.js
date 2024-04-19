@@ -20,8 +20,8 @@ var a = s("735250"),
   p = s("71363"),
   m = s("781800"),
   A = s("981631"),
-  g = s("379101"),
-  N = s("865215");
+  N = s("379101"),
+  g = s("865215");
 t.default = () => {
   let e = i.useRef(null),
     [t, s] = i.useState(!1),
@@ -39,24 +39,24 @@ t.default = () => {
   });
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(o.AdvancedScrollerAuto, {
-      className: g.mainPageScroller,
+      className: N.mainPageScroller,
       ref: e,
       children: (0, a.jsx)("div", {
-        className: g.container,
+        className: N.container,
         children: (0, a.jsxs)(d.AnalyticsLocationProvider, {
           value: r,
           children: [(0, a.jsx)(R.default, {
-            className: g.heroHeading,
+            className: N.heroHeading,
             location: S.NitroLandingPages.HOME
           }), (0, a.jsx)(T.default, {
             variant: S.PerksDiscoverabilityCardSection.WHATS_NEW,
-            className: l()(g.whatsNew, {
-              [g.whatsNewWithOriginalHeroHeading]: !M
+            className: l()(N.whatsNew, {
+              [N.whatsNewWithOriginalHeroHeading]: !M
             }),
             noBackground: !0,
             leftAlignHeaders: !0
           }), (0, a.jsx)(T.default, {
-            className: g.perksDiscoverability,
+            className: N.perksDiscoverability,
             noBackground: !0,
             leftAlignHeaders: !0,
             showAllPerksButton: (0, a.jsx)(m.default, {
@@ -64,14 +64,14 @@ t.default = () => {
               previousComponent: S.NitroLandingPages.HOME
             })
           }), (0, a.jsx)(I.default, {
-            className: g.giftNitro,
+            className: N.giftNitro,
             location: u.default.PREMIUM_MARKETING_GIFT_SECTION,
             analyticsLocation: {
               page: A.AnalyticsPages.NITRO_HOME,
               section: A.AnalyticsSections.GIFT_BANNER
             }
           }), (0, a.jsx)("div", {
-            className: g.footerSpacing
+            className: N.footerSpacing
           }), (0, a.jsx)(n.VisibilitySensor, {
             onChange: e => {
               e && !O && (_.default.track(A.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
@@ -79,11 +79,11 @@ t.default = () => {
               }), P(!0))
             },
             children: (0, a.jsx)("div", {
-              className: g.bottomOfPageVisibilitySensor
+              className: N.bottomOfPageVisibilitySensor
             })
           }), (0, a.jsx)(c.default, {
-            src: N,
-            className: g.bottomIllustration,
+            src: g,
+            className: N.bottomIllustration,
             width: 112,
             height: 85,
             zoomable: !1

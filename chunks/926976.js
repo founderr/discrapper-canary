@@ -15,8 +15,8 @@ var a = t("735250"),
   u = t("129861"),
   h = t("594174"),
   m = t("825185"),
-  g = t("740727"),
-  p = t("502568"),
+  p = t("740727"),
+  g = t("502568"),
   f = t("55935"),
   b = t("120816"),
   y = t("31336"),
@@ -87,12 +87,12 @@ let E = [{
         }
       } = e, o = h.default.getUser(l), s = c()(i);
       return (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsxs)(p.default, {
+        children: [(0, a.jsxs)(g.default, {
           className: n()(S.headerBar, w.subPanelHeaderBar),
-          children: [(0, a.jsx)(p.default.Icon, {
+          children: [(0, a.jsx)(g.default.Icon, {
             icon: m.default,
             tooltip: r
-          }), (0, a.jsx)(p.default.Title, {
+          }), (0, a.jsx)(g.default.Title, {
             children: r
           })]
         }), (0, a.jsxs)(x.Properties, {
@@ -172,7 +172,7 @@ function R() {
     h = o.find(e => e.key === c),
     {
       TabBar: m,
-      renderSelectedTab: p
+      renderSelectedTab: g
     } = (0, j.default)({
       tabs: E
     }, []);
@@ -188,7 +188,7 @@ function R() {
         onClick: y.clearAnalyticsLog,
         children: (0, a.jsx)("span", {
           title: C.default.Messages.CLEAR,
-          children: (0, a.jsx)(g.default, {
+          children: (0, a.jsx)(p.default, {
             "aria-label": C.default.Messages.CLEAR
           })
         })
@@ -220,7 +220,7 @@ function R() {
       className: w.subPanel,
       minHeight: 100,
       initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
-      children: [(0, a.jsx)(m, {}), p({
+      children: [(0, a.jsx)(m, {}), g({
         loggedEvent: h
       })]
     })]

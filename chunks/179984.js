@@ -20,8 +20,8 @@ var a = s("735250"),
   p = s("104494"),
   m = s("639119"),
   A = s("230916"),
-  g = s("248042"),
-  N = s("823188"),
+  N = s("248042"),
+  g = s("823188"),
   O = s("21023"),
   P = s("318747"),
   M = s("409100"),
@@ -35,11 +35,11 @@ var a = s("735250"),
 let U = e => {
     let {
       isLightTheme: t
-    } = e, s = (0, g.getBOGOPillCopy)();
-    return (0, a.jsx)(N.PremiumPillWithSparkles, {
+    } = e, s = (0, N.getBOGOPillCopy)();
+    return (0, a.jsx)(g.PremiumPillWithSparkles, {
       text: s,
       className: L.bogoPillWithSparkles,
-      colorOptions: t ? N.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : N.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL
+      colorOptions: t ? g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL
     })
   },
   y = () => (0, a.jsx)("div", {
@@ -164,7 +164,7 @@ t.default = e => {
     ea = (0, I.getDefaultPrice)(h.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
     ei = (0, I.getDefaultPrice)(h.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
     er = (0, O.useGetPlanComparisonTableRows)(ea, ei, ee, es),
-    el = (0, g.useIsEligibleForBogoPromotion)();
+    el = (0, N.useIsEligibleForBogoPromotion)();
   if (!W || !K) return null;
   let en = {
     label: (0, a.jsx)(u.Heading, {
@@ -227,10 +227,10 @@ t.default = e => {
     withBottomBorder: !1,
     withBottomBorderRadius: !0,
     buttonsRow: null == J
-  }), s = D ? null : null != J || null != q ? (0, a.jsx)(N.PremiumPillWithSparkles, {
+  }), s = D ? null : null != J || null != q ? (0, a.jsx)(g.PremiumPillWithSparkles, {
     text: null != J ? x.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT : x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
     className: L.freeTrialPillWithSparkles,
-    colorOptions: J === h.PremiumSubscriptionSKUs.TIER_0 ? z ? N.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : N.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : z ? X ? N.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : N.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : N.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
+    colorOptions: J === h.PremiumSubscriptionSKUs.TIER_0 ? z ? g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : z ? X ? g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
   }) : el ? (0, a.jsx)(U, {
     isLightTheme: z
   }) : (0, a.jsx)(y, {});

@@ -15,8 +15,8 @@ var a = t("735250"),
   u = t("435274"),
   h = t("4912"),
   m = t("502568"),
-  g = t("55935"),
-  p = t("428530"),
+  p = t("55935"),
+  g = t("428530"),
   f = t("257785"),
   b = t("484036"),
   y = t("681619"),
@@ -76,8 +76,8 @@ let S = [{
           name: "Created at",
           children: (0, a.jsx)("time", {
             dateTime: null === (r = t.createdAt) || void 0 === r ? void 0 : r.toISOString(),
-            title: (0, g.dateFormat)(i, "LLLL"),
-            children: (0, g.calendarFormat)(i)
+            title: (0, p.dateFormat)(i, "LLLL"),
+            children: (0, p.calendarFormat)(i)
           })
         }), (0, a.jsxs)(f.Property, {
           name: "Total Time",
@@ -85,7 +85,7 @@ let S = [{
         })]
       }), (0, a.jsx)(s.ScrollerThin, {
         className: k.inspectorContainer,
-        children: (0, a.jsx)(p.default, {
+        children: (0, a.jsx)(g.default, {
           data: t.action
         })
       })]
@@ -133,7 +133,7 @@ function N(e) {
           })
         }), (0, a.jsx)(s.ScrollerThin, {
           className: k.inspectorContainer,
-          children: (0, a.jsx)(p.default, {
+          children: (0, a.jsx)(g.default, {
             data: r.error
           })
         })]

@@ -50,8 +50,8 @@ t.default = e => {
     leftAlignHeaders: p = !1,
     showAllPerksButton: m,
     headerClassname: A,
-    isFullScreen: g = !0
-  } = e, N = i.useRef(null), O = (0, _.useShouldScrollToWhatsNew)(), P = (0, u.default)("perks-discoverability"), M = (0, d.useMarketingOptimizationExperiment)({
+    isFullScreen: N = !0
+  } = e, g = i.useRef(null), O = (0, _.useShouldScrollToWhatsNew)(), P = (0, u.default)("perks-discoverability"), M = (0, d.useMarketingOptimizationExperiment)({
     autoTrackExposure: !1
   });
   (0, _.useClearNewBadge)();
@@ -60,7 +60,7 @@ t.default = e => {
   i.useEffect(() => {
     h && x()
   }, [x, h]), i.useEffect(() => {
-    let e = N.current;
+    let e = g.current;
     if (null == e || !O || !h) return;
     let t = requestAnimationFrame(() => {
       e.scrollIntoView({
@@ -68,11 +68,11 @@ t.default = e => {
       })
     });
     return () => cancelAnimationFrame(t)
-  }, [N, O, h]);
+  }, [g, O, h]);
   let L = (0, f.usePerksDiscoverabilityStrings)(h),
     v = (0, E.default)(),
     j = (0, c.useFreeBoostUserTenureReward)(),
-    D = (0, f.getFilteredPerksDiscoverabilityCards)(v, r, P, g, null == j ? void 0 : j.showCard),
+    D = (0, f.getFilteredPerksDiscoverabilityCards)(v, r, P, N, null == j ? void 0 : j.showCard),
     b = D.some(e => null != e.pillText),
     [U, y] = i.useState(null),
     B = i.useRef(new n.Environment);
@@ -82,7 +82,7 @@ t.default = e => {
       className: I.confettiCanvas,
       environment: B.current
     }), (0, a.jsxs)("div", {
-      ref: N,
+      ref: g,
       className: l()(I.section, {
         [I.centerAlignSection]: !p,
         [I.leftAlignSection]: p
@@ -109,8 +109,8 @@ t.default = e => {
         children: m
       }), (0, a.jsx)("div", {
         className: l()({
-          [I.cardContainer]: g,
-          [I.cardContainerNarrowWidth]: !g
+          [I.cardContainer]: N,
+          [I.cardContainerNarrowWidth]: !N
         }),
         children: D.map((e, t) => (0, a.jsx)(T.default, {
           confettiCanvas: e.name === E.PerksDiscoverabilityCardTypes.FREE_BOOST ? U : void 0,

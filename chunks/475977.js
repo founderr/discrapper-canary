@@ -12,8 +12,8 @@ var a = s("735250"),
   S = s("335131"),
   E = s("410154"),
   T = s("981631"),
-  f = s("474936"),
-  m = s("689938"),
+  m = s("474936"),
+  f = s("689938"),
   _ = s("760668"),
   g = s("786792"),
   I = s("329213");
@@ -33,12 +33,12 @@ let h = () => (0, a.jsxs)(a.Fragment, {
         variant: "heading-lg/extrabold",
         color: "always-white",
         className: _.title,
-        children: m.default.Messages.COLLECTIBLES_BANNER_TITLE_2024
+        children: f.default.Messages.COLLECTIBLES_BANNER_TITLE_2024
       }), (0, a.jsx)(o.Text, {
         className: _.__invalid_textBody,
         variant: "text-sm/normal",
         color: "always-white",
-        children: m.default.Messages.COLLECTIBLES_BANNER_DESCRIPTION_2024
+        children: f.default.Messages.COLLECTIBLES_BANNER_DESCRIPTION_2024
       })]
     })]
   }),
@@ -59,12 +59,12 @@ let h = () => (0, a.jsxs)(a.Fragment, {
         variant: "heading-lg/bold",
         color: "always-white",
         className: _.title,
-        children: m.default.Messages.COLLECTIBLES_SFA_TITLE
+        children: f.default.Messages.COLLECTIBLES_SFA_TITLE
       }), (0, a.jsx)(o.Text, {
         className: _.__invalid_textBody,
         variant: "text-sm/normal",
         color: "always-white",
-        children: m.default.Messages.COLLECTIBLES_SFA_BANNER_DESCRIPTION
+        children: f.default.Messages.COLLECTIBLES_SFA_BANNER_DESCRIPTION
       })]
     })]
   }),
@@ -84,12 +84,12 @@ let h = () => (0, a.jsxs)(a.Fragment, {
         variant: "heading-lg/extrabold",
         color: "always-white",
         className: _.title,
-        children: m.default.Messages.COLLECTIBLES_BANNER_TITLE_2024
+        children: f.default.Messages.COLLECTIBLES_BANNER_TITLE_2024
       }), (0, a.jsx)(o.Text, {
         className: _.__invalid_textBody,
         variant: "text-sm/normal",
         color: "always-white",
-        children: m.default.Messages.COLLECTIBLES_BANNER_DESCRIPTION_2024
+        children: f.default.Messages.COLLECTIBLES_BANNER_DESCRIPTION_2024
       })]
     })]
   }),
@@ -109,12 +109,12 @@ let h = () => (0, a.jsxs)(a.Fragment, {
         variant: "heading-lg/extrabold",
         color: "always-white",
         className: _.title,
-        children: m.default.Messages.COLLECTIBLES_SHY_PROFILE_UPSELL_BANNER_TITLE
+        children: f.default.Messages.COLLECTIBLES_SHY_PROFILE_UPSELL_BANNER_TITLE
       }), (0, a.jsx)(o.Text, {
         className: _.__invalid_textBody,
         variant: "text-sm/normal",
         color: "always-white",
-        children: m.default.Messages.COLLECTIBLES_SHY_PROFILE_UPSELL_BANNER_SUBTITLE
+        children: f.default.Messages.COLLECTIBLES_SHY_PROFILE_UPSELL_BANNER_SUBTITLE
       })]
     })]
   }),
@@ -130,7 +130,7 @@ t.default = () => {
   } = (0, u.default)(d.default.COLLECTIBLES_PROFILE_SETTINGS_UPSELL), t = n.useRef(null), s = (0, E.default)("CollectiblesUpsellBanner");
   return n.useEffect(() => {
     c.default.track(T.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      type: f.PremiumUpsellTypes.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
+      type: m.PremiumUpsellTypes.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
       location_stack: e
     })
   }, [e]), (0, a.jsxs)("div", {
@@ -150,7 +150,7 @@ t.default = () => {
       },
       className: _.ctaButton,
       look: o.Button.Looks.INVERTED,
-      children: (0, r.match)(s).with(E.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => m.default.Messages.CHECK_IT_OUT).otherwise(() => m.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP)
+      children: (0, r.match)(s).with(E.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => f.default.Messages.CHECK_IT_OUT).otherwise(() => f.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP)
     })]
   })
 }

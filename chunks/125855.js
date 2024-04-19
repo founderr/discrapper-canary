@@ -1,30 +1,30 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return c
   }
 });
-var n = a("735250");
-a("470079");
-var s = a("6025"),
-  l = a("433355"),
-  i = a("626135"),
-  r = a("585483"),
-  o = a("545724"),
-  u = a("426051"),
-  d = a("981631");
+var a = n("735250");
+n("470079");
+var s = n("6025"),
+  l = n("433355"),
+  i = n("626135"),
+  r = n("585483"),
+  o = n("545724"),
+  u = n("426051"),
+  d = n("981631");
 
 function c(e) {
   let {
     index: t,
-    className: a,
+    className: n,
     channel: c,
     user: f,
     hasSingleMessageRequest: E
   } = e;
-  return (0, n.jsx)(o.default, {
+  return (0, a.jsx)(o.default, {
     index: t,
-    className: a,
+    className: n,
     isFocused: !1,
     channel: c,
     user: f,
@@ -43,7 +43,7 @@ function c(e) {
         })
       }, 0)
     },
-    children: e => (0, n.jsx)(u.default, {
+    children: e => (0, a.jsx)(u.default, {
       active: e,
       user: f,
       channel: c

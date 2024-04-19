@@ -26,8 +26,8 @@ t.default = e => {
     descriptionCta: p = "",
     isPremiumGetCta: m,
     onCtaClick: A,
-    cardVariant: g
-  } = e, N = (0, d.usePremiumTrialOffer)(), O = null == N ? void 0 : N.subscription_trial, P = (0, u.usePremiumDiscountOffer)(), M = (0, n.formatTrialCtaIntervalDuration)({
+    cardVariant: N
+  } = e, g = (0, d.usePremiumTrialOffer)(), O = null == g ? void 0 : g.subscription_trial, P = (0, u.usePremiumDiscountOffer)(), M = (0, n.formatTrialCtaIntervalDuration)({
     intervalType: null == O ? void 0 : O.interval,
     intervalCount: null == O ? void 0 : O.interval_count
   }), h = (0, o.useResponseOnUserState)({
@@ -38,7 +38,7 @@ t.default = e => {
     onDiscountOffer: f.default.Messages.PREMIUM_DISCOUNT_CTA.format({
       percent: null == P ? void 0 : P.discount.amount
     })
-  }), x = (0, c.useCardVariantsInfo)(g);
+  }), x = (0, c.useCardVariantsInfo)(N);
   return (0, a.jsxs)("div", {
     className: r()(T.cardDescription, null == x ? void 0 : null === (t = x.description) || void 0 === t ? void 0 : t.className),
     children: [(0, a.jsx)(_.default, {

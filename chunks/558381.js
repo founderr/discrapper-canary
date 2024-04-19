@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return u
   },
   fetchStoreListingById: function() {
-    return h
+    return m
   },
   fetchStoreListingForApplication: function() {
-    return m
+    return h
   },
   fetchStoreListingForSku: function() {
     return f
@@ -30,9 +30,9 @@ n.r(t), n.d(t, {
 });
 var i = n("544891"),
   r = n("570140"),
-  s = n("115130");
+  l = n("115130");
 n("812206");
-var l = n("703656"),
+var s = n("703656"),
   a = n("55563");
 n("551428");
 var o = n("695103"),
@@ -54,7 +54,7 @@ function u(e) {
 
 function f(e) {
   let t = a.default.get(e),
-    n = null != t && (o.default.inTestModeForApplication(t.applicationId) || s.default.inDevModeForApplication(t.applicationId));
+    n = null != t && (o.default.inTestModeForApplication(t.applicationId) || l.default.inDevModeForApplication(t.applicationId));
   return (0, c.httpGetWithCountryCodeQuery)(n ? d.Endpoints.STORE_LISTINGS_SKU(e) : d.Endpoints.STORE_PUBLISHED_LISTINGS_SKU(e)).then(e => {
     n ? r.default.dispatch({
       type: "STORE_LISTINGS_FETCH_SUCCESS",
@@ -66,7 +66,7 @@ function f(e) {
   })
 }
 
-function h(e) {
+function m(e) {
   return (0, c.httpGetWithCountryCodeQuery)(d.Endpoints.STORE_LISTING(e)).then(e => {
     r.default.dispatch({
       type: "STORE_LISTING_FETCH_SUCCESS",
@@ -75,7 +75,7 @@ function h(e) {
   })
 }
 
-function m(e) {
+function h(e) {
   return (0, c.httpGetWithCountryCodeQuery)(d.Endpoints.STORE_PUBLISHED_LISTINGS_APPLICATION(e)).then(e => {
     r.default.dispatch({
       type: "STORE_LISTING_FETCH_SUCCESS",
@@ -91,7 +91,7 @@ function p() {
 }
 
 function S() {
-  (0, l.transitionTo)(d.Routes.APPLICATION_STORE)
+  (0, s.transitionTo)(d.Routes.APPLICATION_STORE)
 }
 
 function v(e) {
@@ -106,7 +106,7 @@ function g(e, t) {
     pathname: n,
     ...i
   } = (0, c.getStoreListingLocation)(e, t);
-  (0, l.transitionTo)(n, i)
+  (0, s.transitionTo)(n, i)
 }
 
 function x(e, t) {
@@ -114,5 +114,5 @@ function x(e, t) {
     pathname: n,
     ...i
   } = (0, c.getApplicationStoreListingLocation)(e, t);
-  (0, l.transitionTo)(n, i)
+  (0, s.transitionTo)(n, i)
 }

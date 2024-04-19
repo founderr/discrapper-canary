@@ -22,8 +22,8 @@ function c(e, a) {
       V = c > a.parentWidth,
       H = h && !o ? a.overflowWidth : 0,
       u = 0 === a.parentWidth,
-      p = !s && i + c + a.spacing + H < a.parentWidth;
-    u || p ? (i += c + a.spacing, l.push(d)) : n < a.maxLines - 1 ? (n++, i = c + a.spacing, l.push(d)) : V && !h && 0 === i ? (n++, l.push(d)) : V && x && i > 0 ? (l.push(d), n += 2) : (s = !0, t.push(d))
+      m = !s && i + c + a.spacing + H < a.parentWidth;
+    u || m ? (i += c + a.spacing, l.push(d)) : n < a.maxLines - 1 ? (n++, i = c + a.spacing, l.push(d)) : V && !h && 0 === i ? (n++, l.push(d)) : V && x && i > 0 ? (l.push(d), n += 2) : (s = !0, t.push(d))
   }
   return {
     ...a,
@@ -48,9 +48,9 @@ a.default = function(e) {
     maxLines: h,
     overflowWidth: x,
     spacing: V
-  })), p = {
+  })), m = {
     visibility: 0 === H.parentWidth ? "hidden" : "visible"
-  }, m = (0, r.useResizeObserver)(e => {
+  }, f = (0, r.useResizeObserver)(e => {
     u(l => c(a, {
       ...l,
       parentWidth: e.contentRect.width
@@ -60,7 +60,7 @@ a.default = function(e) {
     u(e => {
       var l;
       let t = [...e.widths];
-      return null === (l = m.current) || void 0 === l || l.childNodes.forEach((e, a) => {
+      return null === (l = f.current) || void 0 === l || l.childNodes.forEach((e, a) => {
         let l = e.offsetWidth;
         t[a] = l
       }), c(a, {
@@ -68,10 +68,10 @@ a.default = function(e) {
         widths: t
       })
     })
-  }, [m, a, u]), (0, t.jsxs)("div", {
-    style: p,
+  }, [f, a, u]), (0, t.jsxs)("div", {
+    style: m,
     className: s()(d.container, o),
-    ref: m,
+    ref: f,
     children: [H.visible.map(l), H.overflow.length > 0 ? n(H.overflow) : null]
   })
 }

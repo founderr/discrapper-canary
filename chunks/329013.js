@@ -19,8 +19,8 @@ var a = s("735250"),
   S = s("514361"),
   E = s("705262"),
   T = s("605236"),
-  f = s("104494"),
-  m = s("639119"),
+  m = s("104494"),
+  f = s("639119"),
   _ = s("165583"),
   g = s("197115"),
   I = s("504983"),
@@ -41,7 +41,7 @@ let R = () => {
     var e, t;
     let {
       analyticsLocations: s
-    } = (0, u.default)(d.default.USER_SETTINGS), i = (0, l.useStateFromStores)([S.default], () => S.default.isPreview), o = (null === (t = (0, m.usePremiumTrialOffer)()) || void 0 === t ? void 0 : null === (e = t.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === C.PremiumSubscriptionSKUs.TIER_2, c = (0, f.usePremiumDiscountOffer)(), T = (0, f.discountOfferHasTier)(c, C.PremiumSubscriptionSKUs.TIER_2);
+    } = (0, u.default)(d.default.USER_SETTINGS), i = (0, l.useStateFromStores)([S.default], () => S.default.isPreview), o = (null === (t = (0, f.usePremiumTrialOffer)()) || void 0 === t ? void 0 : null === (e = t.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === C.PremiumSubscriptionSKUs.TIER_2, c = (0, m.usePremiumDiscountOffer)(), T = (0, m.discountOfferHasTier)(c, C.PremiumSubscriptionSKUs.TIER_2);
     return n.useEffect(() => {
       i && h.default.track(N.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
         type: C.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT,

@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   markContentAsDismissed: function() {
     return h
   },
@@ -7,32 +7,32 @@ a.r(t), a.d(t, {
     return E
   }
 });
-var n = a("442837"),
-  s = a("524437"),
-  l = a("675478"),
-  i = a("581883"),
-  r = a("626135"),
-  o = a("915486"),
-  u = a("981631"),
-  d = a("921944"),
-  c = a("526761");
+var a = n("442837"),
+  s = n("524437"),
+  l = n("675478"),
+  i = n("581883"),
+  r = n("626135"),
+  o = n("915486"),
+  u = n("981631"),
+  d = n("921944"),
+  c = n("526761");
 
 function f(e, t) {
-  let a = i.default.getDismissedGuildContent(t);
-  return null != a && (0, o.hasBit)(a, e)
+  let n = i.default.getDismissedGuildContent(t);
+  return null != n && (0, o.hasBit)(n, e)
 }
 
 function E(e, t) {
-  return (0, n.useStateFromStores)([i.default], () => f(e, t))
+  return (0, a.useStateFromStores)([i.default], () => f(e, t))
 }
 
-function h(e, t, a, n) {
-  (0, l.updateUserGuildSettings)(t, a => {
+function h(e, t, n, a) {
+  (0, l.updateUserGuildSettings)(t, n => {
     if (f(e, t)) return !1;
-    a.dismissedGuildContent = (0, o.addBit)(a.dismissedGuildContent, e)
-  }, c.UserSettingsDelay.INFREQUENT_USER_ACTION), a && r.default.track(u.AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, {
+    n.dismissedGuildContent = (0, o.addBit)(n.dismissedGuildContent, e)
+  }, c.UserSettingsDelay.INFREQUENT_USER_ACTION), n && r.default.track(u.AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, {
     type: s.DismissibleGuildContent[e],
     guild_id: t,
-    action: null != n ? n : d.ContentDismissActionType.UNKNOWN
+    action: null != a ? a : d.ContentDismissActionType.UNKNOWN
   })
 }

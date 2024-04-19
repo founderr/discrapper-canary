@@ -21,8 +21,8 @@ var i = s("120356"),
   p = s("422034"),
   m = s("206127"),
   A = s("710220"),
-  g = s("318747"),
-  N = s("409100"),
+  N = s("318747"),
+  g = s("409100"),
   O = s("474936"),
   P = s("689938"),
   M = s("374861");
@@ -34,11 +34,11 @@ let h = e => {
     } = e, r = null;
     !t && (r = (0, a.jsxs)("div", {
       className: M.buttonContainer,
-      children: [(0, a.jsx)(N.default, {
+      children: [(0, a.jsx)(g.default, {
         forceInverted: !0,
         className: M.button,
         subscriptionTier: i
-      }), (0, a.jsx)(g.default, {
+      }), (0, a.jsx)(N.default, {
         className: M.button,
         forceWhite: !0
       })]
@@ -46,7 +46,7 @@ let h = e => {
     let l = null;
     return s && (l = (0, a.jsx)("div", {
       className: M.buttonContainer,
-      children: (0, a.jsx)(g.default, {
+      children: (0, a.jsx)(N.default, {
         className: M.button,
         forceWhite: !0
       })
@@ -91,7 +91,7 @@ t.default = e => {
     subscriptionTier: i,
     hideSparkles: d,
     hideSubscribeAndGiftButton: m,
-    entrypoint: N
+    entrypoint: g
   } = e, v = (0, f.useMarketingOptimizationExperiment)({
     autoTrackExposure: !1
   }), {
@@ -116,7 +116,7 @@ t.default = e => {
     }, {
       autoTrackExposure: !1
     }),
-    F = N === O.PremiumMarketingEntrypoints.ApplicationStoreHome && null != k && H,
+    F = g === O.PremiumMarketingEntrypoints.ApplicationStoreHome && null != k && H,
     w = B && G.length > 0;
   return (0, a.jsx)(u.AnalyticsLocationProvider, {
     value: j,
@@ -147,7 +147,7 @@ t.default = e => {
           })
         }) : !v && (0, a.jsx)(L, {}), U || y ? (0, a.jsx)("div", {
           className: M.buttonContainer,
-          children: (0, a.jsx)(g.default, {
+          children: (0, a.jsx)(N.default, {
             className: M.button,
             forceWhite: !0
           })

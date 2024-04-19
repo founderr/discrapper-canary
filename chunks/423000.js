@@ -1,21 +1,21 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   handleInaccessiblePage: function() {
     return u
   }
 });
-var n = a("927723"),
-  s = a("703656"),
-  l = a("896797"),
-  i = a("984933"),
-  r = a("944486"),
-  o = a("981631");
+var a = n("927723"),
+  s = n("703656"),
+  l = n("896797"),
+  i = n("984933"),
+  r = n("944486"),
+  o = n("981631");
 
 function u(e, t) {
-  if ((0, n.showInaccessibleLinkModal)({
+  if ((0, a.showInaccessibleLinkModal)({
       kind: "channel"
     }), r.default.getChannelId(e) === t) {
-    var a;
-    (0, s.replaceWith)(o.Routes.CHANNEL(e, null === (a = i.default.getDefaultChannel(e)) || void 0 === a ? void 0 : a.id))
+    var n;
+    (0, s.replaceWith)(o.Routes.CHANNEL(e, null === (n = i.default.getDefaultChannel(e)) || void 0 === n ? void 0 : n.id))
   } else(0, s.replaceWith)(l.default.defaultRoute)
 }

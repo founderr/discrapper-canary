@@ -12,8 +12,8 @@ var a = s("735250"),
   S = s("230711"),
   E = s("497321"),
   T = s("468026"),
-  f = s("566620"),
-  m = s("317381"),
+  m = s("566620"),
+  f = s("317381"),
   _ = s("713938"),
   g = s("881998"),
   I = s("246946"),
@@ -151,7 +151,7 @@ let U = e => {
 t.default = () => {
   let e = (0, d.useStateFromStores)([I.default], () => I.default.hidePersonalInformation),
     t = (0, d.useStateFromStores)([g.default], () => g.default.getApps()),
-    l = (0, d.useStateFromStores)([m.default], () => m.default.getSelfEmbeddedActivities());
+    l = (0, d.useStateFromStores)([f.default], () => f.default.getSelfEmbeddedActivities());
   n.useEffect(() => {
     c.default.fetch()
   }, []);
@@ -162,7 +162,7 @@ t.default = () => {
       } = e;
       c.default.delete(t);
       let a = l.get(s.id);
-      null != a && (0, f.stopEmbeddedActivity)({
+      null != a && (0, m.stopEmbeddedActivity)({
         channelId: a.channelId,
         applicationId: s.id
       })

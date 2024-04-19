@@ -1,7 +1,7 @@
 "use strict";
 t.r(r), t.d(r, {
   default: function() {
-    return p
+    return g
   }
 }), t("47120");
 var a = t("735250");
@@ -30,7 +30,7 @@ function u(e) {
 let h = u(d),
   m = u(d);
 
-function g(e) {
+function p(e) {
   return c.TOKEN_REGEX.test(e) ? (0, a.jsx)(o.default, {
     type: o.default.Types.TEXT,
     children: () => (0, a.jsx)(a.Fragment, {
@@ -39,7 +39,7 @@ function g(e) {
   }) : e
 }
 
-function p(e) {
+function g(e) {
   let {
     data: r
   } = e, t = (0, n.default)();
@@ -49,7 +49,7 @@ function p(e) {
       data: r,
       theme: "light" === t ? m : h,
       invertTheme: !1,
-      valueRenderer: g
+      valueRenderer: p
     })
   })
 }

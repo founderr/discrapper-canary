@@ -1,24 +1,24 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return p
   }
-}), a("47120");
-var n = a("470079"),
-  s = a("166516"),
-  l = a.n(s),
-  i = a("525654"),
-  r = a.n(i),
-  o = a("442837"),
-  u = a("888369"),
-  d = a("292959"),
-  c = a("699516"),
-  f = a("340895"),
-  E = a("358085"),
-  h = a("998502"),
-  _ = a("252618"),
-  C = a("981631"),
-  m = a("689938");
+}), n("47120");
+var a = n("470079"),
+  s = n("166516"),
+  l = n.n(s),
+  i = n("525654"),
+  r = n.n(i),
+  o = n("442837"),
+  u = n("888369"),
+  d = n("292959"),
+  c = n("699516"),
+  f = n("340895"),
+  E = n("358085"),
+  h = n("998502"),
+  _ = n("252618"),
+  C = n("981631"),
+  m = n("689938");
 let S = new Set(["Blink", "Gecko", "WebKit"]),
   I = C.NOOP;
 if (E.isPlatformEmbedded) I = e => h.default.setBadge(e);
@@ -38,22 +38,22 @@ function p() {
     t = (0, o.useStateFromStores)([u.default, c.default, d.default], () => {
       let e = u.default.getTotalMentionCount(),
         t = c.default.getPendingCount(),
-        a = u.default.hasAnyUnread(),
-        n = d.default.getDisableUnreadBadge(),
+        n = u.default.hasAnyUnread(),
+        a = d.default.getDisableUnreadBadge(),
         s = e + t;
-      return 0 === s && a && !n && (s = -1), s
+      return 0 === s && n && !a && (s = -1), s
     });
-  n.useEffect(() => {
+  a.useEffect(() => {
     if (!e) return;
     let t = h.default.bounceDock("critical"),
-      a = (0, _.flashPageTitle)({
+      n = (0, _.flashPageTitle)({
         messages: [m.default.Messages.INCOMING_CALL],
         count: 50
       });
     return () => {
-      null == t || t(), a()
+      null == t || t(), n()
     }
-  }, [e]), n.useEffect(() => {
+  }, [e]), a.useEffect(() => {
     I(t)
-  }, [t]), n.useEffect(() => () => I(0), [])
+  }, [t]), a.useEffect(() => () => I(0), [])
 }

@@ -17,8 +17,8 @@ var n = s("512722"),
   S = s("532432"),
   E = s("134795"),
   T = s("513901"),
-  f = s("451392"),
-  m = s("906364"),
+  m = s("451392"),
+  f = s("906364"),
   _ = s("621853"),
   g = s("271383"),
   I = s("594174"),
@@ -90,7 +90,7 @@ function D(e) {
       pendingNick: b,
       currentNick: null == V ? void 0 : V.nick,
       guild: w
-    }, "nick"), (0, a.jsx)(m.default, {
+    }, "nick"), (0, a.jsx)(f.default, {
       sectionTitle: M.default.Messages.USER_SETTINGS_PRONOUNS,
       errors: null == F ? void 0 : F.pronouns,
       onPronounsChange: e => {
@@ -146,7 +146,7 @@ function D(e) {
         onBannerChange: e => X(e, null == Y ? void 0 : Y.banner, C.setPendingBanner),
         guildId: null == w ? void 0 : w.id,
         disabled: !K
-      }, "banner"), (0, a.jsx)(f.default, {
+      }, "banner"), (0, a.jsx)(m.default, {
         user: P,
         pendingAvatar: j,
         pendingColors: G,

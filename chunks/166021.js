@@ -29,10 +29,10 @@ t.default = e => {
   let m = i.useCallback(e => ({
       x: (e - C) * 100
     }), [C]),
-    [A, g] = (0, n.useSprings)(t.length, m);
+    [A, N] = (0, n.useSprings)(t.length, m);
   return i.useEffect(() => {
-    g(m)
-  }, [g, m]), (0, a.jsx)("div", {
+    N(m)
+  }, [N, m]), (0, a.jsx)("div", {
     className: s,
     children: (0, a.jsxs)("div", {
       className: _.cardContainer,

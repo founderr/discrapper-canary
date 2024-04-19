@@ -1,7 +1,7 @@
 "use strict";
 t.r(r), t.d(r, {
   default: function() {
-    return p
+    return g
   }
 }), t("47120");
 var a = t("735250"),
@@ -21,7 +21,7 @@ let m = [{
     label: "Available: true",
     value: !0
   }],
-  g = [{
+  p = [{
     label: "No Override",
     value: !1
   }, {
@@ -29,10 +29,10 @@ let m = [{
     value: !0
   }];
 
-function p() {
+function g() {
   let e = (0, n.useStateFromStores)([d.default], () => d.default.getCurrentUser()),
     [r, t] = i.useState(!1),
-    [p, f] = i.useState(!1);
+    [g, f] = i.useState(!1);
   return (0, a.jsxs)("div", {
     className: h.container,
     children: [(0, a.jsx)(o.FormSection, {
@@ -52,8 +52,8 @@ function p() {
       className: h.formElement,
       tag: o.FormTitleTags.H3,
       children: (0, a.jsx)(o.SingleSelect, {
-        options: g,
-        value: p,
+        options: p,
+        value: g,
         onChange: e => {
           f(e)
         },
@@ -65,7 +65,7 @@ function p() {
         perkType: l.EntitlementFeatureNames.STREAM_HIGH_QUALITY,
         user: e,
         available: r,
-        activateSuccess: p
+        activateSuccess: g
       }), (0, s.hqStreamingSetEnabled)(!1), (0, s.hqStreamingPopoutDismissed)(!1), (0, s.hqStreamingFrameAnimationPlayed)(!1), (0, s.hqStreamingUnlockAnimationPlayed)(!1)),
       children: "Update"
     })]

@@ -1,35 +1,35 @@
 "use strict";
-s.r(t), s("47120"), s("653041");
-var a = s("735250"),
-  l = s("470079"),
-  i = s("120356"),
-  r = s.n(i),
-  C = s("512722"),
-  n = s.n(C),
-  d = s("597312"),
-  o = s("442837"),
-  c = s("481060"),
-  u = s("232567"),
-  f = s("434650"),
-  x = s("210887"),
-  h = s("332475"),
-  p = s("6048"),
-  _ = s("281494"),
-  j = s("276444"),
-  L = s("529840"),
-  R = s("689938"),
-  m = s("415687"),
-  E = s("724531"),
-  g = s("99713"),
-  S = s("334202"),
-  v = s("7234");
+t.r(s), t("47120"), t("653041");
+var a = t("735250"),
+  r = t("470079"),
+  i = t("120356"),
+  l = t.n(i),
+  n = t("512722"),
+  C = t.n(n),
+  o = t("597312"),
+  d = t("442837"),
+  c = t("481060"),
+  u = t("232567"),
+  f = t("434650"),
+  x = t("210887"),
+  h = t("332475"),
+  p = t("6048"),
+  _ = t("281494"),
+  j = t("276444"),
+  L = t("529840"),
+  R = t("689938"),
+  m = t("415687"),
+  E = t("724531"),
+  g = t("99713"),
+  S = t("334202"),
+  v = t("7234");
 
 function A() {
-  let e = (0, o.useStateFromStores)([j.default], () => j.default.getReferralsRemaining());
-  return n()(null != e, "Referrals remaining should not be null"), (0, a.jsxs)(a.Fragment, {
+  let e = (0, d.useStateFromStores)([j.default], () => j.default.getReferralsRemaining());
+  return C()(null != e, "Referrals remaining should not be null"), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: m.title,
-      children: [(0, a.jsx)(y, {
+      children: [(0, a.jsx)(O, {
         className: m.titleImage
       }), (0, a.jsx)(c.Heading, {
         variant: "heading-xl/bold",
@@ -46,7 +46,7 @@ function A() {
   })
 }
 
-function N() {
+function F() {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
       className: m.title,
@@ -63,7 +63,7 @@ function N() {
   })
 }
 
-function M() {
+function N() {
   return (0, a.jsx)("div", {
     className: m.erroredContent,
     children: (0, a.jsx)(h.default, {
@@ -74,14 +74,14 @@ function M() {
   })
 }
 
-function F(e) {
+function M(e) {
   let {
-    onClose: t
+    onClose: s
   } = e;
   return (0, a.jsxs)("div", {
     className: m.erroredContainer,
     children: [(0, a.jsxs)("div", {
-      className: r()(m.erroredHeader, m.headerSeparator),
+      className: l()(m.erroredHeader, m.headerSeparator),
       children: [(0, a.jsx)("div", {
         className: m.title,
         children: (0, a.jsx)(c.Heading, {
@@ -102,36 +102,36 @@ function F(e) {
         height: 190
       })
     }), (0, a.jsx)("div", {
-      className: r()(m.footer, m.footerSeparator),
+      className: l()(m.footer, m.footerSeparator),
       children: (0, a.jsx)(c.Button, {
         className: m.submit,
-        onClick: () => t(),
+        onClick: () => s(),
         children: R.default.Messages.REFERRAL_PROGRAM_CLOSE
       })
     })]
   })
 }
 
-function O(e) {
+function y(e) {
   let {
-    onShare: t
-  } = e, s = (0, o.useStateFromStores)([j.default], () => j.default.getRecipientStatus()), [i, C] = l.useState([]), [n, d] = l.useState(new Set);
-  return l.useEffect(() => {
+    onShare: s
+  } = e, t = (0, d.useStateFromStores)([j.default], () => j.default.getRecipientStatus()), [i, n] = r.useState([]), [C, o] = r.useState(new Set);
+  return r.useEffect(() => {
     (async () => {
       let e = [];
-      for (let [t, a] of s)
+      for (let [s, a] of t)
         if (a === _.ReferralOfferStatus.PENDING) {
-          let s = await (0, u.getUser)(t);
-          e.push(s)
-        } C(e)
+          let t = await (0, u.getUser)(s);
+          e.push(t)
+        } n(e)
     })()
-  }, [s]), (0, a.jsxs)("div", {
+  }, [t]), (0, a.jsxs)("div", {
     className: m.remindContainer,
     children: [(0, a.jsxs)("div", {
-      className: r()(m.remindHeader, m.headerSeparator),
+      className: l()(m.remindHeader, m.headerSeparator),
       children: [(0, a.jsxs)("div", {
         className: m.title,
-        children: [(0, a.jsx)(y, {
+        children: [(0, a.jsx)(O, {
           className: m.titleImage
         }), (0, a.jsx)(c.Heading, {
           variant: "heading-xl/bold",
@@ -147,128 +147,128 @@ function O(e) {
       className: m.list,
       children: i.map(e => (0, a.jsx)(L.default, {
         user: e,
-        checked: n.has(e),
-        onChange: (e, t) => {
-          d(s => {
-            let a = new Set(s);
-            return t ? a.add(e) : a.delete(e), a
+        checked: C.has(e),
+        onChange: (e, s) => {
+          o(t => {
+            let a = new Set(t);
+            return s ? a.add(e) : a.delete(e), a
           })
         }
       }, e.id))
     }), (0, a.jsx)("div", {
-      className: r()(m.footer, m.footerSeparator),
+      className: l()(m.footer, m.footerSeparator),
       children: (0, a.jsx)(c.Button, {
         className: m.submit,
-        onClick: () => t([...n.values()]),
+        onClick: () => s([...C.values()]),
         children: R.default.Messages.REFERRAL_PROGRAM_SHARE_TRIAL
       })
     })]
   })
 }
 
-function y(e) {
+function O(e) {
   let {
-    className: t
+    className: s
   } = e;
-  return "light" === (0, o.useStateFromStores)([x.default], () => x.default.theme) ? (0, a.jsx)(h.default, {
-    className: t,
+  return "light" === (0, d.useStateFromStores)([x.default], () => x.default.theme) ? (0, a.jsx)(h.default, {
+    className: s,
     src: E,
     width: 55,
     height: 38
   }) : (0, a.jsx)(h.default, {
-    className: t,
+    className: s,
     src: v,
     width: 55,
     height: 38
   })
 }
-t.default = function(e) {
+s.default = function(e) {
   let {
-    onClose: t,
-    onShare: s
-  } = e, i = (0, o.useStateFromStores)([j.default], () => j.default.getReferralsRemaining()), C = (0, o.useStateFromStores)([j.default], () => j.default.getRecipientStatus()), [x, h] = l.useState(0), [E, g] = l.useState(""), [S, v] = l.useState([]), [y, w] = l.useState(!1), [I, B] = l.useState(!1), T = function(e, t) {
-    let [s, a] = l.useState(e);
-    return l.useEffect(() => {
-      let s = setTimeout(() => {
+    onClose: s,
+    onShare: t
+  } = e, i = (0, d.useStateFromStores)([j.default], () => j.default.getReferralsRemaining()), n = (0, d.useStateFromStores)([j.default], () => j.default.getRecipientStatus()), [x, h] = r.useState(0), [E, g] = r.useState(""), [S, v] = r.useState([]), [O, w] = r.useState(!1), [U, B] = r.useState(!1), G = function(e, s) {
+    let [t, a] = r.useState(e);
+    return r.useEffect(() => {
+      let t = setTimeout(() => {
         a(e)
-      }, t);
+      }, s);
       return () => {
-        clearTimeout(s)
+        clearTimeout(t)
       }
-    }, [e, t]), s
-  }(E, 400), [U, G] = l.useState(new Map), [k, b] = l.useState(new Map);
-  l.useEffect(() => {
-    D(0)
-  }, [T]), n()(null != i, "Referrals remaining should not be null");
-  let D = async e => {
+    }, [e, s]), t
+  }(E, 400), [I, T] = r.useState(new Map), [D, k] = r.useState(new Map);
+  r.useEffect(() => {
+    b(0)
+  }, [G]), C()(null != i, "Referrals remaining should not be null");
+  let b = async e => {
     try {
       if (null == e) return;
       w(!0);
-      let t = [...k.values()];
-      for (let [e, s] of C)
-        if (s === _.ReferralOfferStatus.PENDING && !k.has(e)) {
-          let s = await (0, u.getUser)(e);
-          t.push(s)
-        } let s = await (0, _.fetchReferralEligibleUsers)(e, T);
+      let s = [...D.values()];
+      for (let [e, t] of n)
+        if (t === _.ReferralOfferStatus.PENDING && !D.has(e)) {
+          let t = await (0, u.getUser)(e);
+          s.push(t)
+        } let t = await (0, _.fetchReferralEligibleUsers)(e, G);
       v(a => {
-        let l = s.users.filter(e => !U.has(e.id));
-        return (t = t.filter(e => !U.has(e.id)), 0 === e) ? [...U.values(), ...t.values(), ...l] : [...a, ...l]
-      }), b(e => {
-        let s = new Map(e);
-        for (let e of t) s.set(e.id, e);
-        return s
-      }), h(s.nextIndex)
+        let r = t.users.filter(e => !I.has(e.id));
+        return (s = s.filter(e => !I.has(e.id)), 0 === e) ? [...I.values(), ...s.values(), ...r] : [...a, ...r]
+      }), k(e => {
+        let t = new Map(e);
+        for (let e of s) t.set(e.id, e);
+        return t
+      }), h(t.nextIndex)
     } catch (e) {
       B(!0)
     } finally {
       w(!1)
     }
   }, H = (0, f.useIsVisible)(e => {
-    e && !y && D(x)
+    e && !O && b(x)
   });
-  if (I) return (0, a.jsx)(F, {
-    onClose: t
+  if (U) return (0, a.jsx)(M, {
+    onClose: s
   });
-  if (0 === i) return (0, a.jsx)(O, {
-    onShare: s
+  if (0 === i) return (0, a.jsx)(y, {
+    onShare: t
   });
-  let Z = T.length > 0 && 0 === S.length;
+  let Z = G.length > 0 && 0 === S.length;
   return (0, a.jsxs)("div", {
     className: m.container,
     children: [(0, a.jsxs)("div", {
-      className: r()(m.header, m.headerSeparator),
-      children: [Z ? (0, a.jsx)(N, {}) : (0, a.jsx)(A, {}), (0, a.jsx)(p.default, {
+      className: l()(m.header, m.headerSeparator),
+      children: [Z ? (0, a.jsx)(F, {}) : (0, a.jsx)(A, {}), (0, a.jsx)(p.default, {
         className: m.searchbar,
         query: E,
         onChange: g,
         onClear: () => g("")
       })]
-    }), Z ? (0, a.jsx)(M, {}) : (0, a.jsxs)(d.ScrollerAuto, {
+    }), Z ? (0, a.jsx)(N, {}) : (0, a.jsxs)(o.ScrollerAuto, {
       className: m.list,
       children: [S.map(e => (0, a.jsx)(L.default, {
-        disabled: [...U.values()].filter(e => !k.has(e.id)).length >= i && !U.has(e.id) && !k.has(e.id),
-        checked: U.has(e.id),
+        disabled: [...I.values()].filter(e => !D.has(e.id)).length >= i && !I.has(e.id) && !D.has(e.id),
+        checked: I.has(e.id),
         user: e,
-        onChange: (e, t) => {
-          G(s => {
-            let a = new Map(s);
-            return t ? a.set(e.id, e) : a.delete(e.id), a
+        onChange: (e, s) => {
+          T(t => {
+            let a = new Map(t);
+            return s ? a.set(e.id, e) : a.delete(e.id), a
           })
         }
-      }, e.id)), y && (0, a.jsx)(c.Spinner, {}), (0, a.jsx)("div", {
+      }, e.id)), O && (0, a.jsx)(c.Spinner, {}), (0, a.jsx)("div", {
         ref: H
       })]
     }), (0, a.jsx)("div", {
-      className: r()(m.footer, m.footerSeparator),
+      className: l()(m.footer, m.footerSeparator),
       children: (0, a.jsx)(c.Button, {
         className: m.submit,
-        disabled: 0 === U.size && !Z,
+        disabled: 0 === I.size && !Z,
         onClick: () => {
           if (Z) {
-            t();
+            s();
             return
           }
-          s([...U.values()])
+          t([...I.values()])
         },
         children: Z ? R.default.Messages.REFERRAL_PROGRAM_CLOSE : R.default.Messages.REFERRAL_PROGRAM_SHARE_TRIAL
       })

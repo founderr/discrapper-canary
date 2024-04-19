@@ -24,10 +24,10 @@ t.default = e => {
       perkComponent: p,
       subtitle: m = "",
       descriptionCta: A = "",
-      cardVariant: g,
-      subtitleClassName: N
+      cardVariant: N,
+      subtitleClassName: g
     } = e,
-    O = (0, o.useCardVariantsInfo)(g),
+    O = (0, o.useCardVariantsInfo)(N),
     P = (0, n.useFreeBoostUserTenureReward)(),
     M = (null == P ? void 0 : P.nitroTenureStatus) === d.NitroRewardStatus.REDEEMABLE;
   switch (null == P ? void 0 : P.nitroTenureStatus) {
@@ -52,7 +52,7 @@ t.default = e => {
       cardVariantStyleInfo: O,
       titleClassName: T,
       subtitle: m,
-      subtitleClassName: N
+      subtitleClassName: g
     }), null != I && (0, a.jsx)("img", {
       src: I,
       alt: "",

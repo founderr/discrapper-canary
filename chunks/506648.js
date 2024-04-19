@@ -106,7 +106,7 @@ let m = [{
       })]
     })
   };
-class g extends i.PureComponent {
+class N extends i.PureComponent {
   render() {
     let {
       sku: e
@@ -136,4 +136,4 @@ class g extends i.PureComponent {
     })
   }
 }
-t.default = g
+t.default = N

@@ -16,8 +16,8 @@ var a = s("735250"),
   S = s("981631"),
   E = s("689938"),
   T = s("886190"),
-  f = s("854554"),
-  m = s("845904");
+  m = s("854554"),
+  f = s("845904");
 
 function _(e) {
   let {
@@ -38,9 +38,9 @@ function _(e) {
     }), (0, a.jsx)(c.default, {
       size: 24
     }), (0, a.jsxs)("div", {
-      className: i()(f.guildBoostingSubscriptionRow, T.card),
+      className: i()(m.guildBoostingSubscriptionRow, T.card),
       children: [(0, a.jsx)("img", {
-        src: m,
+        src: f,
         alt: "",
         className: T.bannerImage
       }), (0, a.jsxs)("div", {

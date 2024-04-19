@@ -44,29 +44,29 @@ t.default = e => {
     isPersistentCTA: R = !1,
     useShorterCTA: S = !1,
     ...p
-  } = e, m = (0, l.default)(), A = (0, i.isThemeDark)(m) || t, g = (0, d.usePremiumTrialOffer)(), N = null == g ? void 0 : g.subscription_trial, O = (0, n.formatTrialOfferIntervalDuration)({
-    intervalType: null == N ? void 0 : N.interval,
-    intervalCount: null == N ? void 0 : N.interval_count
-  }), P = (0, u.usePremiumDiscountOffer)(), M = null != N && s === N.sku_id, {
+  } = e, m = (0, l.default)(), A = (0, i.isThemeDark)(m) || t, N = (0, d.usePremiumTrialOffer)(), g = null == N ? void 0 : N.subscription_trial, O = (0, n.formatTrialOfferIntervalDuration)({
+    intervalType: null == g ? void 0 : g.interval,
+    intervalCount: null == g ? void 0 : g.interval_count
+  }), P = (0, u.usePremiumDiscountOffer)(), M = null != g && s === g.sku_id, {
     enabled: h
   } = o.ReferralProgramRecipient.useExperiment({
     location: "SubscribeButton"
   }, {
     autoTrackExposure: !1
-  }), x = h && (null == g ? void 0 : g.trial_id) === _.PREMIUM_TIER_2_REFERRAL_TRIAL_ID, L = I ? E.default.Messages.BOGO_CLAIM_OFFER : null != P ? T(s, S, R, P.discount.amount) : f({
+  }), x = h && (null == N ? void 0 : N.trial_id) === _.PREMIUM_TIER_2_REFERRAL_TRIAL_ID, L = I ? E.default.Messages.BOGO_CLAIM_OFFER : null != P ? T(s, S, R, P.discount.amount) : f({
     showTrialCTA: M,
     subscriptionTier: s,
     shouldShowUpsells: !1,
     trialDurationCopy: O,
     isPersistentCTA: R,
     shouldShowReferralTrialCopy: x,
-    subscriptionTrial: N
+    subscriptionTrial: g
   });
   return (0, a.jsx)(c.default, {
     color: r.ButtonColors.BRAND,
     look: A ? r.ButtonLooks.INVERTED : void 0,
     buttonShineClassName: "buttonShineClassName" in p ? p.buttonShineClassName : A ? C.brandShine : void 0,
-    trialId: null == N ? void 0 : N.id,
+    trialId: null == g ? void 0 : g.id,
     buttonText: L,
     buttonTextClassName: M ? C.freeTrialText : void 0,
     onlyShineOnHover: !0,

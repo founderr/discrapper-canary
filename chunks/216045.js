@@ -16,8 +16,8 @@ var a = s("735250"),
   S = s("634894"),
   E = s("100527"),
   T = s("906732"),
-  f = s("475977"),
-  m = s("957730"),
+  m = s("475977"),
+  f = s("957730"),
   _ = s("962746"),
   g = s("296810"),
   I = s("935147"),
@@ -57,7 +57,7 @@ function M() {
         errors: t
       }
     }),
-    U = O.UseLegacyChatInput.useSetting() && null != M ? m.default.parse(void 0, M).content : M,
+    U = O.UseLegacyChatInput.useSetting() && null != M ? f.default.parse(void 0, M).content : M,
     y = A.default.canUsePremiumProfileCustomization(e),
     {
       analyticsLocations: B
@@ -87,7 +87,7 @@ function M() {
   }), t) ? (0, a.jsx)(c.default, {}) : (0, a.jsx)(T.AnalyticsLocationProvider, {
     value: B,
     children: (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(f.default, {}), (0, a.jsx)(g.default, {
+      children: [(0, a.jsx)(m.default, {}), (0, a.jsx)(g.default, {
         profilePreview: (0, a.jsx)(_.default, {
           ...G,
           pendingThemeColors: j,

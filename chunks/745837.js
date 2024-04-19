@@ -1,27 +1,27 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return A
   }
 });
-var n = a("735250");
-a("470079");
-var s = a("120356"),
-  l = a.n(s),
-  i = a("442837"),
-  r = a("481060"),
-  o = a("230711"),
-  u = a("556296"),
-  d = a("465670"),
-  c = a("729017"),
-  f = a("63063"),
-  E = a("13140"),
-  h = a("435064"),
-  _ = a("39604"),
-  C = a("356659"),
-  m = a("981631"),
-  S = a("689938"),
-  I = a("783348");
+var a = n("735250");
+n("470079");
+var s = n("120356"),
+  l = n.n(s),
+  i = n("442837"),
+  r = n("481060"),
+  o = n("230711"),
+  u = n("556296"),
+  d = n("465670"),
+  c = n("729017"),
+  f = n("63063"),
+  E = n("13140"),
+  h = n("435064"),
+  _ = n("39604"),
+  C = n("356659"),
+  m = n("981631"),
+  S = n("689938"),
+  I = n("783348");
 
 function p(e) {
   o.default.open(m.UserSettingsSections.CLIPS), (0, _.dismissClipsUserEducation)(e)
@@ -29,16 +29,16 @@ function p(e) {
 
 function T() {
   let e = (0, i.useStateFromStores)([u.default], () => u.default.getKeybindForAction(m.GlobalKeybindActions.SAVE_CLIP));
-  if (null == e) return (0, n.jsx)(n.Fragment, {
+  if (null == e) return (0, a.jsx)(a.Fragment, {
     children: S.default.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY_NO_KEYBIND
   });
   let t = E.toString(e.shortcut, !0);
-  return (0, n.jsx)(n.Fragment, {
+  return (0, a.jsx)(a.Fragment, {
     children: S.default.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY.format({
       keybind: t,
-      keybindHook: () => (0, n.jsx)("span", {
+      keybindHook: () => (0, a.jsx)("span", {
         className: I.keyCombo,
-        children: (0, n.jsx)(r.KeyCombo, {
+        children: (0, a.jsx)(r.KeyCombo, {
           shortcut: t
         })
       })
@@ -50,8 +50,8 @@ let g = {
     textColor: "text-primary",
     buttonLook: r.Button.Looks.FILLED,
     buttonColor: r.Button.Colors.PRIMARY,
-    bodyCopy: () => (0, n.jsxs)(n.Fragment, {
-      children: [(0, n.jsx)(c.default, {
+    bodyCopy: () => (0, a.jsxs)(a.Fragment, {
+      children: [(0, a.jsx)(c.default, {
         className: I.errorWarningIcon
       }), S.default.Messages.CLIPS_USER_EDUCATION_ERROR_BODY]
     }),
@@ -74,7 +74,7 @@ let g = {
     textColor: "always-white",
     buttonLook: r.Button.Looks.INVERTED,
     buttonColor: r.Button.Colors.BRAND,
-    bodyCopy: () => (0, n.jsx)(T, {}),
+    bodyCopy: () => (0, a.jsx)(T, {}),
     buttonCopy: () => S.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
     ctaOnClick: () => p(C.ClipsUserEducationType.Enabled),
     containerClass: l()(I.container, I.containerEnabled)
@@ -85,12 +85,12 @@ function A() {
   var e;
   let {
     decoupledClipsEnabled: t,
-    clipsError: a
+    clipsError: n
   } = (0, i.useStateFromStoresObject)([h.default], () => ({
     decoupledClipsEnabled: h.default.getSettings().decoupledClipsEnabled,
     clipsError: h.default.getLastClipsError()
   }));
-  let s = (e = t, null != a ? C.ClipsUserEducationType.Error : e ? C.ClipsUserEducationType.Enabled : C.ClipsUserEducationType.Disabled),
+  let s = (e = t, null != n ? C.ClipsUserEducationType.Error : e ? C.ClipsUserEducationType.Enabled : C.ClipsUserEducationType.Disabled),
     {
       bodyCopy: l,
       buttonCopy: o,
@@ -100,23 +100,23 @@ function A() {
       buttonLook: E,
       containerClass: m
     } = g[s];
-  return (0, n.jsxs)("div", {
+  return (0, a.jsxs)("div", {
     className: m,
-    children: [(0, n.jsx)(r.Text, {
+    children: [(0, a.jsx)(r.Text, {
       color: c,
       variant: "text-sm/medium",
       children: l()
-    }), (0, n.jsx)(r.Button, {
+    }), (0, a.jsx)(r.Button, {
       onClick: () => (0, _.dismissClipsUserEducation)(s),
       size: r.Button.Sizes.NONE,
       look: r.Button.Looks.BLANK,
       className: I.buttonClose,
-      children: (0, n.jsx)(d.default, {
+      children: (0, a.jsx)(d.default, {
         className: I.dismissIcon,
         width: 16,
         height: 16
       })
-    }), (0, n.jsx)(r.Button, {
+    }), (0, a.jsx)(r.Button, {
       onClick: u,
       className: I.buttonCTA,
       color: f,

@@ -20,8 +20,8 @@ var a = s("735250"),
   p = s("75077"),
   m = s("981631"),
   A = s("689938"),
-  g = s("379101"),
-  N = s("865215");
+  N = s("379101"),
+  g = s("865215");
 t.default = e => {
   let {
     isAllPerksVisible: t,
@@ -34,17 +34,17 @@ t.default = e => {
     analyticsLocations: M
   } = (0, _.default)(c.default.PREMIUM_SUBSCRIBER_NITRO_HOME), [h, x] = i.useState(!1), L = (0, E.default)("perks-discoverability"), v = (0, n.useStateFromStores)([d.default], () => d.default.useReducedMotion);
   return (0, a.jsx)(u.AdvancedScrollerAuto, {
-    className: l()(g.allPerksScroller, {
-      [g.open]: t,
-      [g.openCloseReduceMotion]: v
+    className: l()(N.allPerksScroller, {
+      [N.open]: t,
+      [N.openCloseReduceMotion]: v
     }),
     ref: O,
     children: (0, a.jsx)("div", {
-      className: g.container,
+      className: N.container,
       children: (0, a.jsxs)(_.AnalyticsLocationProvider, {
         value: M,
         children: [(0, a.jsx)(T.default, {
-          className: g.heroHeading,
+          className: N.heroHeading,
           onBackClick: () => {
             s(!1), f.default.track(m.AnalyticEvents.NITRO_HOME_NAVIGATION, {
               current_component: S.NitroLandingPages.SEE_ALL,
@@ -53,37 +53,37 @@ t.default = e => {
             })
           }
         }), (0, a.jsxs)("div", {
-          className: g.column,
+          className: N.column,
           children: [(0, a.jsx)(u.Heading, {
             variant: "heading-xxl/extrabold",
             color: "header-primary",
-            className: g.heading,
+            className: N.heading,
             children: A.default.Messages.MARKETING_PAGE_CAROUSEL_TITLE
           }), (0, a.jsx)(I.default, {
-            className: g.cardCarousel,
+            className: N.cardCarousel,
             cards: (0, p.getFilteredPerksDiscoverabilityCards)(P, S.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW, L),
             cardType: S.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW
           }), (0, a.jsx)(u.Heading, {
             variant: "heading-xxl/extrabold",
             color: "header-primary",
-            className: g.heading,
+            className: N.heading,
             children: A.default.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD
           }), (0, a.jsx)(I.default, {
-            className: g.cardCarousel,
+            className: N.cardCarousel,
             cards: (0, p.getFilteredPerksDiscoverabilityCards)(P, S.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW, L),
             cardType: S.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW
           }), (0, a.jsx)(u.Heading, {
             variant: "heading-xxl/extrabold",
             color: "header-primary",
-            className: g.heading,
+            className: N.heading,
             children: A.default.Messages.NITRO_HOME_SHOW_UP_HOW_YOU_WANT
           }), (0, a.jsx)(I.default, {
-            className: g.cardCarousel,
+            className: N.cardCarousel,
             cards: (0, p.getFilteredPerksDiscoverabilityCards)(P, S.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW, L),
             cardType: S.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW
           })]
         }), (0, a.jsx)("div", {
-          className: g.footerSpacing
+          className: N.footerSpacing
         }), (0, a.jsx)(o.VisibilitySensor, {
           onChange: e => {
             e && !h && (f.default.track(m.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
@@ -91,11 +91,11 @@ t.default = e => {
             }), x(!0))
           },
           children: (0, a.jsx)("div", {
-            className: g.bottomOfPageVisibilitySensor
+            className: N.bottomOfPageVisibilitySensor
           })
         }), (0, a.jsx)(C.default, {
-          src: N,
-          className: g.bottomIllustration,
+          src: g,
+          className: N.bottomIllustration,
           width: 112,
           height: 85,
           zoomable: !1

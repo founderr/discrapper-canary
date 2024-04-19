@@ -1,7 +1,7 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   OVERVIEW_NOTICE_ROOT: function() {
-    return n
+    return a
   }
 });
-let n = "guild-role-subscription-overview-notice"
+let a = "guild-role-subscription-overview-notice"

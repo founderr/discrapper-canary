@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   mount: function() {
     return s
   },
@@ -7,16 +7,16 @@ a.r(t), a.d(t, {
     return l
   }
 });
-var n = a("570140");
+var a = n("570140");
 
 function s() {
-  n.default.dispatch({
+  a.default.dispatch({
     type: "NOW_PLAYING_MOUNTED"
   })
 }
 
 function l() {
-  n.default.dispatch({
+  a.default.dispatch({
     type: "NOW_PLAYING_UNMOUNTED"
   })
 }

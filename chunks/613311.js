@@ -20,8 +20,8 @@ var a = s("735250"),
   p = s("115130"),
   m = s("812206"),
   A = s("252618"),
-  g = s("100159"),
-  N = s("646288"),
+  N = s("100159"),
+  g = s("646288"),
   O = s("984370"),
   P = s("706454"),
   M = s("210887"),
@@ -149,7 +149,7 @@ class eE extends i.PureComponent {
       carousel_video_count: i.videos,
       location: a.location.page,
       source: this._analyticsSource,
-      ...(0, g.default)(e, !0)
+      ...(0, N.default)(e, !0)
     }), this._trackedViewed = !0
   }
   renderHeader(e, t) {
@@ -418,7 +418,7 @@ class eE extends i.PureComponent {
         sku: a
       } = this.props;
       null != a && W.default.track(eo.AnalyticEvents.STORE_LISTING_MEDIA_SCROLLED, {
-        ...(0, g.default)(a),
+        ...(0, N.default)(a),
         card_index: s,
         card_type: e.type === eo.CarouselMediaTypes.IMG ? "image" : "video"
       })
@@ -536,7 +536,7 @@ class eE extends i.PureComponent {
             className: l()(ec.headerPurchase, {
               [ec.active]: u
             }),
-            children: [null != t ? (0, N.default)(t) : null, null != e && null != t ? (0, a.jsx)(T.default, {
+            children: [null != t ? (0, g.default)(t) : null, null != e && null != t ? (0, a.jsx)(T.default, {
               wrapperClassName: ec.headerActionButton,
               applicationId: e.id,
               skuId: t.id,

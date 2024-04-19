@@ -20,8 +20,8 @@ var a = s("735250"),
   p = s("981631"),
   m = s("689938"),
   A = s("213153");
-let g = (e, t) => t === S.PremiumTypes.TIER_0 ? m.default.Messages.NITRO_MARKETING_BASIC_PERKS : e ? m.default.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : m.default.Messages.PREMIUM_MARKETING_PERKS_TITLE,
-  N = e => {
+let N = (e, t) => t === S.PremiumTypes.TIER_0 ? m.default.Messages.NITRO_MARKETING_BASIC_PERKS : e ? m.default.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : m.default.Messages.PREMIUM_MARKETING_PERKS_TITLE,
+  g = e => {
     let {
       isShowingAll: t,
       onClick: s
@@ -105,7 +105,7 @@ t.default = e => {
         [A.perksTitle]: null == r,
         [A.perksTitleStackedCards]: null != r
       }),
-      children: g(d, r)
+      children: N(d, r)
     }), (0, a.jsx)("div", {
       className: l()(A.perkCardContainer, {
         [A.perkCardContainerExpanded]: _
@@ -119,7 +119,7 @@ t.default = e => {
           [A.sizeGizmo]: !_,
           [A.sizeGizmoExpanded]: _
         }),
-        children: (0, a.jsx)(N, {
+        children: (0, a.jsx)(g, {
           onClick: () => {
             I.default.track(p.AnalyticEvents.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED, {
               location_stack: m,

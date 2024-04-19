@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("789978"),
-  l = n("727075"),
+  l = n("789978"),
+  s = n("727075"),
   a = n("349361"),
   o = n("777207"),
   c = n("330711"),
@@ -19,12 +19,12 @@ function u(e) {
     description: n,
     imgSrc: u,
     title: f,
-    onClose: h,
-    tag: m,
+    onClose: m,
+    tag: h,
     FallbackIcon: p
   } = e, S = r.useRef(null), [v, g] = r.useState(!0), x = null != u ? {
     "--custom-background-url": "url(".concat(u.toString(), ")")
-  } : void 0, C = () => {
+  } : void 0, T = () => {
     var e;
     (null === (e = S.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) === !0 ? g(!1) : g(!0)
   };
@@ -38,13 +38,13 @@ function u(e) {
       }), (0, i.jsxs)("div", {
         className: d.headerTop,
         children: [(0, i.jsx)("div", {
-          children: m
-        }), (0, i.jsx)(s.FocusRing, {
+          children: h
+        }), (0, i.jsx)(l.FocusRing, {
           children: (0, i.jsx)("button", {
-            onClick: h,
+            onClick: m,
             className: d.closeBtn,
             type: "button",
-            children: (0, i.jsx)(l.CloseSmallIcon, {
+            children: (0, i.jsx)(s.CloseSmallIcon, {
               height: 24,
               width: 24,
               color: "var(--header-primary)"
@@ -66,9 +66,9 @@ function u(e) {
       className: d.scroll,
       fade: !0,
       ref: e => {
-        null != e && (S.current = e, C())
+        null != e && (S.current = e, T())
       },
-      onScroll: C,
+      onScroll: T,
       children: [(0, i.jsx)("br", {}), (0, i.jsxs)("div", {
         className: d.scrollContent,
         children: [(0, i.jsx)(o.Text, {

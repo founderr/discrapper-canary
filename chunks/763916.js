@@ -1,9 +1,9 @@
 "use strict";
-a.r(t);
-var n = a("570140"),
-  s = a("812206"),
-  l = a("877481"),
-  i = a("592745");
+n.r(t);
+var a = n("570140"),
+  s = n("812206"),
+  l = n("877481"),
+  i = n("592745");
 
 function r(e) {
   let {
@@ -11,10 +11,10 @@ function r(e) {
   } = e;
   ! function(e) {
     let t;
-    let a = i.default.launchableGames[e],
+    let n = i.default.launchableGames[e],
       r = s.default.getApplication(e);
     (t = null != r ? l.default.isLaunchable(r) : l.default.isGameLaunchable(e)).then(t => {
-      t !== a && n.default.dispatch({
+      t !== n && a.default.dispatch({
         type: "GAME_LAUNCHABLE_UPDATE",
         gameId: e,
         isLaunchable: t
@@ -24,6 +24,6 @@ function r(e) {
 }
 t.default = {
   initialize() {
-    n.default.subscribe("CHECK_LAUNCHABLE_GAME", r)
+    a.default.subscribe("CHECK_LAUNCHABLE_GAME", r)
   }
 }

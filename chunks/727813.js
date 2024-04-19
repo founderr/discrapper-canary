@@ -1,15 +1,15 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return u
   }
 });
-var n = a("470079"),
-  s = a("442837"),
-  l = a("592125"),
-  i = a("594174"),
-  r = a("900255"),
-  o = a("333984");
+var a = n("470079"),
+  s = n("442837"),
+  l = n("592125"),
+  i = n("594174"),
+  r = n("900255"),
+  o = n("333984");
 
 function u() {
   let e = (0, s.useStateFromStores)([l.default], () => l.default.getPrivateChannelsVersion()),
@@ -18,15 +18,15 @@ function u() {
         t = Array.from(o.default.getSpamChannelIds()).map(t => e[t]).filter(e => null != e);
       return (0, r.sortChannelIds)(t)
     }, [e]),
-    a = (0, s.useStateFromStoresObject)([i.default], () => {
+    n = (0, s.useStateFromStoresObject)([i.default], () => {
       let e = {};
       return t.forEach(t => {
-        let a = i.default.getUser(t.recipients[0]);
-        null != a && (e[t.id] = a)
+        let n = i.default.getUser(t.recipients[0]);
+        null != n && (e[t.id] = n)
       }), e
     }, [t]);
-  return n.useMemo(() => t.map(e => ({
+  return a.useMemo(() => t.map(e => ({
     channel: e,
-    user: a[e.id]
-  })), [t, a])
+    user: n[e.id]
+  })), [t, n])
 }

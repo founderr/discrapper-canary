@@ -1,26 +1,26 @@
 "use strict";
-a.r(t);
-var n = a("735250");
-a("470079");
-var s = a("960259"),
-  l = a("381837"),
-  i = a("325767");
+n.r(t);
+var a = n("735250");
+n("470079");
+var s = n("960259"),
+  l = n("381837"),
+  i = n("325767");
 t.default = (0, s.replaceIcon)(function(e) {
   let {
     width: t = 24,
-    height: a = 24,
+    height: n = 24,
     color: s = "currentColor",
     className: l,
     foreground: r,
     ...o
   } = e;
-  return (0, n.jsx)("svg", {
+  return (0, a.jsx)("svg", {
     ...(0, i.default)(o),
     className: l,
     width: t,
-    height: a,
+    height: n,
     viewBox: "0 0 24 24",
-    children: (0, n.jsx)("path", {
+    children: (0, a.jsx)("path", {
       className: r,
       fill: s,
       fillRule: "evenodd",
