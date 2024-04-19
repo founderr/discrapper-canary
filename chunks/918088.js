@@ -272,7 +272,7 @@ function L(e, t) {
     presentation: "button",
     enabled: b,
     type: "submit"
-  })), $ = (0, s.match)({
+  })), $ = (0, T.isIOS)() ? g.default.Messages.POLL_TAP_FOR_VOTERS_A11Y_IOS : g.default.Messages.POLL_TAP_FOR_VOTERS_A11Y_ANDROID, ee = (0, s.match)({
     isExpired: w,
     isInteractive: H,
     isEditingVote: k
@@ -293,18 +293,19 @@ function L(e, t) {
   })).otherwise(() => ({
     label: q,
     secondaryLabel: B,
+    accessibilityHint: $,
     presentation: "text",
     enabled: !0,
     type: "showVoterDetails"
-  })), ee = !H || w || F || z ? void 0 : {
+  })), et = !H || w || F || z ? void 0 : {
     label: g.default.Messages.POLL_SHOW_VOTES,
     presentation: "textButton",
     enabled: !0,
     type: "showVotes"
-  }, et = I.allow_multiselect, en = (0, s.match)({
+  }, en = I.allow_multiselect, es = (0, s.match)({
     isInteractive: H,
     isExpired: w,
-    canSelectMultipleAnswers: et
+    canSelectMultipleAnswers: en
   }).with({
     isInteractive: !1
   }, () => void 0).with({
@@ -314,12 +315,12 @@ function L(e, t) {
   }, () => g.default.Messages.POLL_SELECT_MULTIPLE_ANSWERS).otherwise(() => g.default.Messages.POLL_SELECT_ONE_ANSWER);
   return {
     question: I.question,
-    promptLabel: en,
+    promptLabel: es,
     answers: X,
     answersInteraction: (0, s.match)({
       tapShouldOpenVotersModal: W,
       canTapAnswers: y,
-      canSelectMultipleAnswers: et
+      canSelectMultipleAnswers: en
     }).with({
       tapShouldOpenVotersModal: !0
     }, () => h.PollChatAnswerInteractionType.LIST).with({
@@ -329,19 +330,7 @@ function L(e, t) {
     }, () => h.PollChatAnswerInteractionType.RADIO_BUTTONS).with({
       canSelectMultipleAnswers: !0
     }, () => h.PollChatAnswerInteractionType.CHECKBOXES).exhaustive(),
-    answerTapAccessibilityLabel: (0, s.match)({
-      tapShouldOpenVotersModal: W,
-      platform: (0, T.getNativePlatform)()
-    }).with({
-      tapShouldOpenVotersModal: !0,
-      platform: "android"
-    }, () => g.default.Messages.POLL_TAP_FOR_VOTERS_A11Y_ANDROID).with({
-      tapShouldOpenVotersModal: !0,
-      platform: "ios"
-    }, () => g.default.Messages.POLL_TAP_FOR_VOTERS_A11Y_IOS).with({
-      tapShouldOpenVotersModal: !0,
-      platform: "web"
-    }, () => g.default.Messages.POLL_TAP_FOR_VOTERS_A11Y_ANDROID).otherwise(() => void 0),
+    answerTapAccessibilityLabel: W ? $ : void 0,
     layoutType: D,
     resources: (0, S.default)({
       theme: c,
@@ -351,13 +340,13 @@ function L(e, t) {
     primaryAction: J,
     isInteractive: H,
     canTapAnswers: y,
-    canSelectMultipleAnswers: et,
+    canSelectMultipleAnswers: en,
     hasSelectedAnswer: G,
     canShowVoteCounts: j,
     hasVoted: F,
     isExpired: w,
     myAvatarUrl: O,
-    secondaryAction: $,
-    tertiaryAction: ee
+    secondaryAction: ee,
+    tertiaryAction: et
   }
 }
