@@ -2,5 +2,6 @@
 e.exports = {
   discordIcon: "discordIcon__1e1be",
   divider: "divider__979dc",
-  memberSinceContainer: "memberSinceContainer__16630"
+  memberSince: "memberSince__2eba7",
+  memberSinceWrapper: "memberSinceWrapper__03059"
 }

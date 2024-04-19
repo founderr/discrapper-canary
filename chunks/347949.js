@@ -1,5 +1,8 @@
 "use strict";
 n.r(t), n.d(t, {
+  UserProfileRecentGames: function() {
+    return L
+  },
   UserProfileRecentGamesContainer: function() {
     return D
   },

@@ -17,8 +17,8 @@ var l = t("735250"),
   m = t("410030"),
   v = t("607070"),
   p = t("906732"),
-  g = t("220082"),
-  h = t("864106"),
+  h = t("220082"),
+  g = t("864106"),
   S = t("1585"),
   I = t("963202"),
   A = t("369077"),
@@ -79,8 +79,8 @@ function eo(e) {
     onBannerChange: em,
     pendingAccentColor: ev,
     pendingBanner: ep,
-    pendingBio: eg,
-    pendingPronouns: eh,
+    pendingBio: eh,
+    pendingPronouns: eg,
     pendingAvatar: eS,
     pendingAvatarDecoration: eI,
     pendingNickname: eA,
@@ -108,14 +108,14 @@ function eo(e) {
   } = (0, L.default)({
     user: eo,
     guildId: null == eu ? void 0 : eu.id,
-    avatarDecorationOverride: (0, h.hasGlobalDefaultAvatarDecoration)(eo, eu) && null == eI ? void 0 : eI,
+    avatarDecorationOverride: (0, g.hasGlobalDefaultAvatarDecoration)(eo, eu) && null == eI ? void 0 : eI,
     avatarOverride: eS,
     size: d.AvatarSizes.SIZE_80,
     showPending: !0
-  }), eV = (0, U.default)(eo.id, null == eu ? void 0 : eu.id), eZ = (0, o.useStateFromStores)([v.default], () => v.default.syncProfileThemeWithUserTheme), eY = (0, m.default)(), eq = (0, o.useStateFromStores)([D.default], () => null == eu ? null : D.default.getMember(eu.id, eo.id)), eK = null != eu, eX = null === (a = (0, U.default)(eo.id, null)) || void 0 === a ? void 0 : a.profileEffectId, eJ = null == eV ? void 0 : eV.profileEffectId, eQ = eK && null == eE ? eE !== eJ && null !== eE ? eJ : eX : eE, e$ = void 0 === eS ? eo.getAvatarURL(void 0, 80) : eS, e0 = (0, g.default)(e$, (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_530).hsl(), !1), e1 = null == eV ? void 0 : eV.getPreviewThemeColors(ex), e6 = null !== (n = null == e1 ? void 0 : e1[0]) && void 0 !== n ? n : null == eV ? void 0 : eV.primaryColor, e4 = eZ ? eY : (0, P.getProfileTheme)(e6), e8 = (0, T.default)(null !== (N = null != ev ? ev : e6) && void 0 !== N ? N : (0, s.hex2int)(e0)).hsl, e9 = (0, o.useStateFromStores)([H.default], () => H.default.isFocused()), e3 = null == eV ? void 0 : eV.getPreviewBanner(ep, eD ? e9 : ez), e7 = null != e3 || null != eQ, e5 = eB || null != eQ, e2 = null !== (X = (0, Q.getPreviewNickname)(eA, null == eq ? void 0 : eq.nick)) && void 0 !== X ? X : (0, Q.getPreviewDisplayName)(eT, K.default.getName(eo)), [ae, aa] = (0, o.useStateFromStoresArray)([G.default], () => [G.default.findActivity(eo.id, e => e.type === ee.ActivityTypes.CUSTOM_STATUS), G.default.getStatus(eo.id)]), at = (0, d.useStatusFillColor)(aa), al = (0, o.useStateFromStores)([W.default], () => W.default.hidePersonalInformation), ai = (null == eV ? void 0 : eV.canUsePremiumProfileCustomization) || ed, an = i.useCallback(() => {
+  }), eV = (0, U.default)(eo.id, null == eu ? void 0 : eu.id), eZ = (0, o.useStateFromStores)([v.default], () => v.default.syncProfileThemeWithUserTheme), eY = (0, m.default)(), eq = (0, o.useStateFromStores)([D.default], () => null == eu ? null : D.default.getMember(eu.id, eo.id)), eK = null === (a = (0, U.default)(eo.id, null)) || void 0 === a ? void 0 : a.profileEffectId, eX = null == eV ? void 0 : eV.profileEffectId, eJ = null != eu && null == eE ? eE !== eX && null !== eE ? eX : eK : eE, eQ = void 0 === eS ? eo.getAvatarURL(void 0, 80) : eS, e$ = (0, h.default)(eQ, (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_530).hsl(), !1), e0 = null == eV ? void 0 : eV.getPreviewThemeColors(ex), e1 = null !== (n = null == e0 ? void 0 : e0[0]) && void 0 !== n ? n : null == eV ? void 0 : eV.primaryColor, e6 = eZ ? eY : (0, P.getProfileTheme)(e1), e4 = (0, T.default)(null !== (N = null != ev ? ev : e1) && void 0 !== N ? N : (0, s.hex2int)(e$)).hsl, e8 = (0, o.useStateFromStores)([H.default], () => H.default.isFocused()), e9 = null == eV ? void 0 : eV.getPreviewBanner(ep, eD ? e8 : ez), e3 = null != e9 || null != eJ, e7 = eB || null != eJ, e5 = null !== (X = (0, Q.getPreviewNickname)(eA, null == eq ? void 0 : eq.nick)) && void 0 !== X ? X : (0, Q.getPreviewDisplayName)(eT, K.default.getName(eo)), [e2, ae] = (0, o.useStateFromStoresArray)([G.default], () => [G.default.findActivity(eo.id, e => e.type === ee.ActivityTypes.CUSTOM_STATUS), G.default.getStatus(eo.id)]), aa = (0, d.useStatusFillColor)(ae), at = (0, o.useStateFromStores)([W.default], () => W.default.hidePersonalInformation), al = (null == eV ? void 0 : eV.canUsePremiumProfileCustomization) || ed, ai = i.useCallback(() => {
     var e, a;
     null === (a = eL.current) || void 0 === a || null === (e = a.inputRef.current) || void 0 === e || e.activateUploadDialogue()
-  }, []), ar = i.useCallback((e, a) => {
+  }, []), an = i.useCallback((e, a) => {
     null == e || null == a ? ef(null) : "image/gif" !== a.type || q.default.canUseAnimatedAvatar(eo) ? (0, d.openModalLazy)(async () => {
       let {
         default: i
@@ -135,11 +135,11 @@ function eo(e) {
         ...t,
         imgURI: e,
         onChangeAvatar: () => {
-          t.onClose(), an()
+          t.onClose(), ai()
         }
       })
     })
-  }, [eo, an, ef]), as = (e, a) => {
+  }, [eo, ai, ef]), ar = (e, a) => {
     if (null == e || null == a) return em(null);
     (0, d.openModalLazy)(async () => {
       let {
@@ -156,38 +156,38 @@ function eo(e) {
     })
   };
 
-  function ao() {
-    let e = null != e4 ? (0, d.getStatusBackdropColor)(e4) : null;
+  function as() {
+    let e = null != e6 ? (0, d.getStatusBackdropColor)(e6) : null;
     return (0, l.jsxs)("div", {
       className: ei.status,
       children: [null != e && (null == eV ? void 0 : eV.canUsePremiumProfileCustomization) && (0, l.jsx)("div", {
         className: ei.statusDotBackground,
         style: {
           backgroundColor: e,
-          opacity: (0, d.getStatusBackdropOpacity)(aa, e)
+          opacity: (0, d.getStatusBackdropOpacity)(ae, e)
         }
       }), (0, l.jsx)("svg", {
         className: ei.statusDot,
         children: (0, l.jsx)("rect", {
           height: "100%",
           width: "100%",
-          fill: at,
-          mask: "url(#".concat((0, d.getStatusMask)(aa, !1), ")")
+          fill: aa,
+          mask: "url(#".concat((0, d.getStatusMask)(ae, !1), ")")
         })
       })]
     })
   }
-  let au = "ProfileCustomizationPreview";
+  let ao = "ProfileCustomizationPreview";
   (0, f.useTriggerDebuggingAA)({
-    location: au + " auto on",
+    location: ao + " auto on",
     autoTrackExposure: !0
   }), (0, f.useTriggerDebuggingAA)({
-    location: au + " auto off",
+    location: ao + " auto off",
     autoTrackExposure: !1
   });
   let {
-    analyticsLocations: ad
-  } = (0, p.default)(), ac = (0, I.useIsInUserClanExperiment)(), af = (0, z.useIsUserRecentGamesEnabled)({
+    analyticsLocations: au
+  } = (0, p.default)(), ad = (0, I.useIsInUserClanExperiment)(), ac = (0, z.useIsUserRecentGamesEnabled)({
     userId: eo.id,
     location: "28tk0bf_4"
   });
@@ -199,25 +199,25 @@ function eo(e) {
     });
     if (!!Y.isAnimatedImageURL(e)) new Image().src = null != e ? e : ""
   }, [eV, eD]);
-  let am = null == eu;
+  let af = null == eu;
   return (0, l.jsxs)(j.default, {
     forceShowPremium: ed,
     user: eo,
     displayProfile: eV,
     profileType: et.UserProfileTypes.POPOUT,
     pendingThemeColors: ex,
-    pendingProfileEffectId: eQ,
-    className: eR ? ai ? ei.profileEffectsModalCustomizationPreviewWithTheme : ei.profileEffectsModalCustomizationPreviewWithoutTheme : ai ? ei.profileCustomizationPreviewWithTheme : ei.profileCustomizationPreviewWithoutTheme,
+    pendingProfileEffectId: eJ,
+    className: eR ? al ? ei.profileEffectsModalCustomizationPreviewWithTheme : ei.profileEffectsModalCustomizationPreviewWithoutTheme : al ? ei.profileCustomizationPreviewWithTheme : ei.profileCustomizationPreviewWithoutTheme,
     children: [(0, l.jsx)(E.default, {
-      profileEffectId: void 0 !== eQ ? eQ : eJ
+      profileEffectId: void 0 !== eJ ? eJ : eX
     }), (0, l.jsxs)(d.HeadingLevel, {
       children: [(0, l.jsx)(y.default, {
         profileType: et.UserProfileTypes.POPOUT,
-        hasBanner: e7,
+        hasBanner: e3,
         isPremium: ed,
-        hasThemeColors: ai,
+        hasThemeColors: al,
         overrideBannerWidth: eR ? 280 : void 0,
-        hasProfileEffect: e5,
+        hasProfileEffect: e7,
         children: ed ? (0, l.jsxs)("div", {
           onMouseMove: () => eF(!0),
           onMouseLeave: () => eF(!1),
@@ -225,25 +225,25 @@ function eo(e) {
             className: ei.bannerUploader,
             showRemoveButton: !1,
             disabled: !ed || ej,
-            image: e3,
-            makeURL: () => e3,
-            onChange: as,
+            image: e9,
+            makeURL: () => e9,
+            onChange: ar,
             imageStyle: {
-              backgroundColor: e8
+              backgroundColor: e4
             },
-            imageClassName: r()(e7 ? ei.bannerUploaderInnerSquare : ei.bannerUploaderInnerSquareEmpty),
+            imageClassName: r()(e3 ? ei.bannerUploaderInnerSquare : ei.bannerUploaderInnerSquareEmpty),
             hint: el.default.Messages.CHANGE_BANNER,
             onOpenImageSelectModal: () => (0, Q.handleOpenSelectImageModal)(ea.UploadTypes.BANNER, null == eq ? void 0 : eq.guildId, eN, void 0),
             hideSize: !0,
             maxFileSizeBytes: $.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
             onFileSizeError: Q.showFileSizeErrorModal
-          }), !eD && Y.isAnimatedImageURL(e3) ? (0, l.jsx)(V.default, {
+          }), !eD && Y.isAnimatedImageURL(e9) ? (0, l.jsx)(V.default, {
             className: ei.gifTag
           }) : null]
         }) : (0, l.jsx)("div", {
-          className: e5 ? ei.bannerUploaderInnerSquare : ei.bannerNormal,
+          className: e7 ? ei.bannerUploaderInnerSquare : ei.bannerNormal,
           style: {
-            backgroundColor: e8
+            backgroundColor: e4
           },
           children: ej ? null : (0, l.jsx)(d.Clickable, {
             onClick: () => null == ec ? void 0 : ec({
@@ -257,11 +257,11 @@ function eo(e) {
             })
           })
         })
-      }), am ? function() {
+      }), af ? function() {
         let e = () => (0, Q.handleOpenSelectImageModal)(ea.UploadTypes.AVATAR, null == eq ? void 0 : eq.guildId, eN),
           a = () => (0, S.openAvatarDecorationModal)({
             guild: null == eu ? void 0 : eu,
-            analyticsLocations: ad,
+            analyticsLocations: au,
             isTryItOutFlow: eN
           });
         return (0, l.jsxs)(d.Clickable, {
@@ -280,8 +280,8 @@ function eo(e) {
           },
           className: r()(es({
             isPremium: ed,
-            hasBanner: e7,
-            hasProfileEffect: e5
+            hasBanner: e3,
+            hasProfileEffect: e7
           }), {
             [ei.defaultCursor]: ej
           }),
@@ -307,15 +307,15 @@ function eo(e) {
               className: ei.hoverIcon,
               color: "white"
             })
-          }), ao()]
+          }), as()]
         })
       }() : function() {
         let e = null != eq && !ed,
           a = (0, l.jsxs)("div", {
             className: es({
               isPremium: ed,
-              hasBanner: e7,
-              hasProfileEffect: e5
+              hasBanner: e3,
+              hasProfileEffect: e7
             }),
             children: [(0, l.jsx)(x.default, {
               disabled: ej,
@@ -325,7 +325,7 @@ function eo(e) {
               showRemoveButton: !1,
               imageClassName: r()(eP, ei.avatarUploaderInner),
               image: eW,
-              onChange: ar,
+              onChange: an,
               makeURL: () => eW,
               maxFileSizeBytes: $.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
               onFileSizeError: Q.showFileSizeErrorModal,
@@ -335,7 +335,7 @@ function eo(e) {
               src: eG,
               alt: " ",
               "aria-hidden": !0
-            }), ao()]
+            }), as()]
           });
         return e ? (0, l.jsx)(d.Clickable, {
           onClickCapture: e => {
@@ -351,39 +351,38 @@ function eo(e) {
         isTryItOutFlow: eN,
         forProfileEffectModal: eR
       }), function() {
-        let e = null == eV ? void 0 : eV.getPreviewBio(eg);
+        let e = null == eV ? void 0 : eV.getPreviewBio(eh);
         return (0, l.jsxs)(j.default.Overlay, {
           className: r()(ei.body, ew),
           children: [(0, l.jsx)(B.default, {
             isTryItOut: eN,
             user: eo,
-            nickname: null != e2 ? e2 : eo.username,
-            pronouns: null != eh ? eh : null == eV ? void 0 : eV.pronouns,
+            nickname: null != e5 ? e5 : eo.username,
+            pronouns: null != eg ? eg : null == eV ? void 0 : eV.pronouns,
             usernameIcon: (() => {
               if (!!(null != eq) && null !== eS) {
                 if (!(null == eq.avatar && null == eS)) return (0, l.jsx)(R.default, {
                   user: eo,
-                  nickname: e2
+                  nickname: e5
                 })
               }
             })()
           }), !eR && (0, l.jsx)(w.default, {
-            customStatusActivity: ae
+            customStatusActivity: e2
           }), (0, l.jsx)(M.default, {}), !eM && (0, l.jsx)(k.default, {
             isUsingGuildBio: null == e ? void 0 : e.isUsingGuildValue,
             guild: eu,
             bio: null == e ? void 0 : e.value,
-            hidePersonalInformation: al,
+            hidePersonalInformation: at,
             lastSection: eb,
             lineClamp: eR ? 3 : void 0
-          }), ac && (0, l.jsx)(A.UserProfileClanSection, {
+          }), ad && (0, l.jsx)(A.UserProfileClanSection, {
             userId: eo.id
-          }), !e_ && af && (0, l.jsx)(C.UserProfileRecentGamesSection, {
+          }), !e_ && ac && (0, l.jsx)(C.UserProfileRecentGamesSection, {
             userId: eo.id
           }), !ek && (0, l.jsx)(O.default, {
             userId: eo.id,
-            guild: eu,
-            guildMember: eq
+            guildId: null == eu ? void 0 : eu.id
           }), !eb && (0, l.jsx)(J.default, {
             activityName: eU,
             activityCharacter: ey,

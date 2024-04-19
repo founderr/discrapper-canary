@@ -136,9 +136,8 @@ let C = (0, E.default)(function(e) {
     className: R.container,
     children: [(0, i.jsxs)("div", {
       className: R.rolesHeader,
-      children: [(0, i.jsx)(d.Text, {
+      children: [(0, i.jsx)(d.Heading, {
         variant: "text-xs/semibold",
-        className: R.rolesHeaderText,
         children: O.default.Messages.ROLES
       }), w && (0, i.jsx)(d.Tooltip, {
         text: O.default.Messages.USER_PROFILE_ADD_ROLE,
