@@ -108,7 +108,7 @@ let l = {
 
 function c(e, t) {
   var n, r;
-  let c = !(0, o.isInMainTabsExperiment)(),
+  let c = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : !(0, o.isInMainTabsExperiment)(),
     E = !!c || (null == t ? void 0 : t.disable);
   return a.default.hasLoadedExperiments || E ? (0, s.getMergedExperimentConfigs)(_.existingUsers, _.newUsers, e, {
     ...t,

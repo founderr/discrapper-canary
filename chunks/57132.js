@@ -12,7 +12,7 @@ n.r(t), n.d(t, {
 }), n("411104"), n("470079");
 var i, r, s = n("652874"),
   a = n("433517");
-n("353926");
+n("353926"), n("311089");
 var o = n("777639"),
   l = n("721877"),
   u = n("488832");
@@ -24,10 +24,11 @@ let d = "tabs-v2-experiment-key",
     getExperimentEnabled() {
       if (!(0, l.isMainTabsExperimentPlatformSupported)()) return !1;
       let {
-        _experimentCacheInitialized: e
+        _experimentCacheInitialized: e,
+        _experimentEnabled: n
       } = t();
       if (!e) throw Error("MainTabsV2ExperimentStore: Experiment cache not initialized");
-      return (0, l.isMainTabsExperimentPlatformSupported)()
+      return n
     },
     setExperimentEnabled: t => {
       e({
