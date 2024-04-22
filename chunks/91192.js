@@ -4,18 +4,21 @@ n.r(t), n.d(t, {
     return d
   },
   ListNavigatorContainer: function() {
-    return f
+    return S
   },
   ListNavigatorItem: function() {
     return E
   },
   ListNavigatorProvider: function() {
-    return S
+    return h
   },
   getContainerPropsFromNavigator: function() {
-    return T
+    return f
   },
   useListContainerProps: function() {
+    return T
+  },
+  useListContainerScrollerRef: function() {
     return I
   },
   useListItem: function() {
@@ -74,6 +77,10 @@ function E(e) {
 }
 
 function I() {
+  return r.useContext(d).ref
+}
+
+function T() {
   let {
     id: e,
     onKeyDown: t,
@@ -89,7 +96,7 @@ function I() {
   }
 }
 
-function T(e) {
+function f(e) {
   let {
     id: t,
     containerProps: {
@@ -108,14 +115,14 @@ function T(e) {
   }
 }
 
-function f(e) {
+function S(e) {
   let {
     children: t
   } = e;
-  return t(I())
+  return t(T())
 }
 
-function S(e) {
+function h(e) {
   let {
     children: t,
     navigator: n
