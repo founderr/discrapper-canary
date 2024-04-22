@@ -48,10 +48,10 @@ t.default = function(e) {
   } = e, Y = (0, M.useHandleClaimQuestsReward)({
     quest: k,
     location: g.QuestContent.MEMBERS_LIST
-  }), j = (0, C.useIsQuestExpired)(k), W = (null == k ? void 0 : null === (t = k.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, K = (null == k ? void 0 : null === (w = k.userStatus) || void 0 === w ? void 0 : w.enrolledAt) != null, z = (null == k ? void 0 : null === (B = k.userStatus) || void 0 === B ? void 0 : B.completedAt) != null, X = (0, l.useStateFromStores)([A.default], () => A.default.getState().theme), q = (0, u.isThemeDark)(X) ? P.ThemeTypes.DARK : P.ThemeTypes.LIGHT, Q = (0, l.useStateFromStores)([f.default], () => f.default.useReducedMotion), {
+  }), j = (0, C.useIsQuestExpired)(k), W = (null == k ? void 0 : null === (t = k.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, K = (null == k ? void 0 : null === (w = k.userStatus) || void 0 === w ? void 0 : w.enrolledAt) != null, z = (null == k ? void 0 : null === (B = k.userStatus) || void 0 === B ? void 0 : B.completedAt) != null, X = (0, l.useStateFromStores)([A.default], () => A.default.getState().theme), Q = (0, u.isThemeDark)(X) ? P.ThemeTypes.DARK : P.ThemeTypes.LIGHT, q = (0, l.useStateFromStores)([f.default], () => f.default.useReducedMotion), {
     ref: Z,
     height: J
-  } = (0, I.default)(), [$, ee] = r.useState(Q), et = (0, T.useWindowDispatch)(), en = (0, a.useListContainerScrollerRef)();
+  } = (0, I.default)(), [$, ee] = r.useState(q), et = (0, T.useWindowDispatch)(), en = (0, a.useListContainerScrollerRef)();
   r.useEffect(() => {
     let e = en.current;
     return null == e || e.addEventListener("scroll", H), () => {
@@ -70,7 +70,7 @@ t.default = function(e) {
         precision: .01,
         velocity: 0
       },
-      immediate: Q,
+      immediate: q,
       onRest: () => ee(!0)
     }),
     er = (0, s.useTransition)($, {
@@ -130,22 +130,22 @@ t.default = function(e) {
     },
     e_ = (() => null != V ? {
       headerText: U.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
-      ctaText: U.default.Messages.QUESTS_MEMBERS_LIST_STREAM_CTA,
+      ctaText: U.default.Messages.QUESTS_MEMBERS_LIST_WATCH_CTA,
       handleClickCta: ed,
       tileAssetType: "game"
     } : z && !W ? {
       headerText: U.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD,
-      ctaText: U.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD_CTA,
+      ctaText: U.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_CTA,
       handleClickCta: Y,
       tileAssetType: "reward"
     } : K ? {
       headerText: U.default.Messages.QUESTS_MEMBERS_LIST_FINISH,
-      ctaText: U.default.Messages.QUESTS_MEMBERS_LIST_FINISH_CTA,
+      ctaText: U.default.Messages.QUESTS_MEMBERS_LIST_PROGRESS_CTA,
       handleClickCta: el,
       tileAssetType: "reward"
     } : {
       headerText: U.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
-      ctaText: U.default.Messages.QUESTS_MEMBERS_LIST_START_CTA,
+      ctaText: U.default.Messages.QUESTS_MEMBERS_LIST_BEGIN_CTA,
       handleClickCta: el,
       tileAssetType: "game"
     })();
@@ -212,12 +212,13 @@ t.default = function(e) {
                   gamePublisher: k.config.messages.gamePublisher
                 }),
                 className: b.assetTile,
-                src: (0, L.getGameTileAssetUrl)(k, q)
+                src: (0, L.getGameTileAssetUrl)(k, Q)
               }), "reward" === e_.tileAssetType && (0, i.jsx)(v.default, {
                 className: b.assetTile,
                 quest: k,
                 questContent: g.QuestContent.MEMBERS_LIST,
-                learnMoreStyle: "icon"
+                learnMoreStyle: "icon",
+                onClick: es
               })]
             })
           })]
