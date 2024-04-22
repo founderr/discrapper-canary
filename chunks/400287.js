@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return m
   }
 });
 var a = s("735250");
@@ -18,13 +18,13 @@ var n = s("120356"),
   E = s("689938"),
   T = s("794711");
 
-function f() {
+function m() {
   let e = c.ExpressionSuggestionsEnabled.useSetting(),
     t = c.IncludeStickersInAutocomplete.useSetting(),
     s = c.UseRichChatInput.useSetting(),
     n = c.RenderSpoilers.useSetting(),
-    f = c.UseThreadSidebar.useSetting(),
-    m = c.ViewImageDescriptions.useSetting(),
+    m = c.UseThreadSidebar.useSetting(),
+    f = c.ViewImageDescriptions.useSetting(),
     _ = c.ConvertEmoticons.useSetting(),
     g = c.InlineAttachmentMedia.useSetting(),
     I = c.InlineEmbedMedia.useSetting(),
@@ -54,7 +54,7 @@ function f() {
       children: E.default.Messages.INLINE_ATTACHMENT_MEDIA
     }), (0, a.jsx)(i.FormSwitch, {
       className: l()(T.marginTop8, T.marginBottom20),
-      value: m,
+      value: f,
       note: E.default.Messages.IMAGE_DESCRIPTION_HELP,
       onChange: c.ViewImageDescriptions.updateSetting,
       children: E.default.Messages.USER_SETTINGS_WITH_IMAGE_DESCRIPTIONS
@@ -139,7 +139,7 @@ function f() {
         children: E.default.Messages.THREADS
       }), (0, a.jsx)(i.FormSwitch, {
         className: T.marginTop8,
-        value: f,
+        value: m,
         onChange: c.UseThreadSidebar.updateSetting,
         children: E.default.Messages.USE_THREADS_SIDEBAR_DESCRIPTION
       })]

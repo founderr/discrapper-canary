@@ -1,49 +1,49 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return u
   }
 });
-var l = s("735250");
-s("470079");
-var a = s("120356"),
-  i = s.n(a),
-  o = s("693789"),
-  r = s("481060"),
-  n = s("46781");
+var i = n("735250");
+n("470079");
+var r = n("120356"),
+  s = n.n(r),
+  a = n("693789"),
+  o = n("481060"),
+  l = n("46781");
 
 function u(e) {
   let {
     icon: t,
-    text: s,
-    compact: a,
+    text: n,
+    compact: r,
     className: u,
     innerClassName: d,
-    ...c
-  } = e, f = (0, l.jsx)(t, {
+    ..._
+  } = e, c = (0, i.jsx)(t, {
     width: 16,
     height: 16,
     color: "currentColor"
   });
-  return a ? (0, l.jsx)(r.Tooltip, {
-    text: s,
-    children: e => (0, l.jsx)(o.Button, {
-      className: i()(n.compactButton, u),
-      innerClassName: i()(n.compactButtonInner, d),
-      color: i()(o.ButtonColors.PRIMARY, n.color),
-      look: o.Button.Looks.FILLED,
-      size: o.Button.Sizes.NONE,
+  return r ? (0, i.jsx)(o.Tooltip, {
+    text: n,
+    children: e => (0, i.jsx)(a.Button, {
+      className: s()(l.compactButton, u),
+      innerClassName: s()(l.compactButtonInner, d),
+      color: s()(a.ButtonColors.PRIMARY, l.color),
+      look: a.Button.Looks.FILLED,
+      size: a.Button.Sizes.NONE,
       grow: !1,
       ...e,
-      ...c,
-      children: f
+      ..._,
+      children: c
     })
-  }) : (0, l.jsxs)(o.Button, {
-    innerClassName: i()(n.button, u),
-    color: i()(o.ButtonColors.PRIMARY, n.color),
-    look: o.Button.Looks.FILLED,
-    size: o.Button.Sizes.MEDIUM,
-    ...c,
-    children: [f, s]
+  }) : (0, i.jsxs)(a.Button, {
+    innerClassName: s()(l.button, u),
+    color: s()(a.ButtonColors.PRIMARY, l.color),
+    look: a.Button.Looks.FILLED,
+    size: a.Button.Sizes.MEDIUM,
+    ..._,
+    children: [c, n]
   })
 }

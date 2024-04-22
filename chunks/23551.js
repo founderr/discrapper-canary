@@ -18,8 +18,8 @@ t.default = e => {
     disabled: t = !1,
     type: s,
     className: n,
-    innerClassName: f,
-    onConnect: m
+    innerClassName: m,
+    onConnect: f
   } = e, _ = (0, o.default)(), g = d.default.get((0, u.useLegacyPlatformType)(s));
   return (0, a.jsx)(r.Tooltip, {
     text: g.name,
@@ -34,13 +34,13 @@ t.default = e => {
           children: (0, a.jsx)("button", {
             onMouseEnter: o,
             onMouseLeave: u,
-            className: l()(T.inner, f),
+            className: l()(T.inner, m),
             type: "button",
             disabled: t,
             style: {
               backgroundImage: "url('".concat((0, i.isThemeDark)(_) ? g.icon.darkSVG : g.icon.lightSVG, "')")
             },
-            onClick: null != m ? m : () => (function(e) {
+            onClick: null != f ? f : () => (function(e) {
               let t = d.default.get(e);
               (0, c.default)({
                 platformType: t.type,

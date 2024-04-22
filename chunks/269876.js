@@ -16,8 +16,8 @@ var a = s("735250"),
   S = s("846027"),
   E = s("131951"),
   T = s("153124"),
-  f = s("65154"),
-  m = s("689938"),
+  m = s("65154"),
+  f = s("689938"),
   _ = s("190103"),
   g = s("605094"),
   I = s("794711");
@@ -33,12 +33,12 @@ function N() {
     isEnabled: O
   } = (0, r.useStateFromStoresObject)([E.default], () => ({
     inputMode: E.default.getMode(),
-    automaticVADSupported: E.default.supports(f.Features.AUTOMATIC_VAD),
+    automaticVADSupported: E.default.supports(m.Features.AUTOMATIC_VAD),
     isEnabled: E.default.isEnabled()
   }));
 
   function x(e, s) {
-    t(e), l((s & f.SpeakingFlags.VOICE) === f.SpeakingFlags.VOICE)
+    t(e), l((s & m.SpeakingFlags.VOICE) === m.SpeakingFlags.VOICE)
   }
 
   function R(e, t) {
@@ -93,7 +93,7 @@ function N() {
     }), (0, a.jsx)(c.FormText, {
       type: c.FormText.Types.DESCRIPTION,
       className: I.marginBottom8,
-      children: m.default.Messages.FORM_HELP_AUTOMATIC_VAD
+      children: f.default.Messages.FORM_HELP_AUTOMATIC_VAD
     })]
   })), (0, a.jsxs)(c.FormItem, {
     className: _.sensitivity,
@@ -101,7 +101,7 @@ function N() {
       id: h,
       tag: c.FormTitleTags.H5,
       className: I.marginBottom8,
-      children: m.default.Messages.FORM_LABEL_INPUT_SENSITIVTY
+      children: f.default.Messages.FORM_LABEL_INPUT_SENSITIVTY
     }), (0, a.jsxs)("div", {
       children: [A && (0, a.jsx)(T.UID, {
         children: e => (0, a.jsxs)("div", {
@@ -111,7 +111,7 @@ function N() {
             className: I.marginReset,
             children: (0, a.jsx)("label", {
               htmlFor: e,
-              children: m.default.Messages.FORM_LABEL_AUTOMATIC_VAD
+              children: f.default.Messages.FORM_LABEL_AUTOMATIC_VAD
             })
           }), (0, a.jsx)(c.Switch, {
             id: e,
@@ -123,7 +123,7 @@ function N() {
     }), !O && (0, a.jsx)(c.FormText, {
       type: c.FormText.Types.DESCRIPTION,
       className: i()(_.inputDisabledWarning, I.marginBottom8),
-      children: m.default.Messages.FORM_WARNING_INPUT_SENSITIVTY.format({
+      children: f.default.Messages.FORM_WARNING_INPUT_SENSITIVTY.format({
         onEnableClick: S.default.enable
       })
     })]

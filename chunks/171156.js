@@ -8,8 +8,8 @@ var a, n, l, i, r = s("442837"),
   S = s("131951"),
   E = s("866960"),
   T = s("936349"),
-  f = s("979651"),
-  m = s("622414"),
+  m = s("979651"),
+  f = s("622414"),
   _ = s("42955"),
   g = s("399002"),
   I = s("369541"),
@@ -176,14 +176,14 @@ async function U() {
     headers: {
       "Content-Type": "text/plain"
     }
-  })]), P(I.SpeedTestLifecycles.COMPLETED), L(), m.default.stopSpeedTest(), A.running = !1, A.notes = ""
+  })]), P(I.SpeedTestLifecycles.COMPLETED), L(), f.default.stopSpeedTest(), A.running = !1, A.notes = ""
 }
 class y extends(a = r.default.Store) {
   initialize() {
-    this.waitFor(c.default, S.default, T.default, f.default)
+    this.waitFor(c.default, S.default, T.default, m.default)
   }
   getAvailable() {
-    return !f.default.isCurrentClientInVoiceChannel()
+    return !m.default.isCurrentClientInVoiceChannel()
   }
   getActive() {
     return A.running
@@ -237,7 +237,7 @@ i = "RTCSpeedTestStore", (l = "displayName") in(n = y) ? Object.defineProperty(n
   },
   SPEED_TEST_CREATE: function(e) {
     if (!A.running) {
-      m.default.stopSpeedTest();
+      f.default.stopSpeedTest();
       return
     }
     A.rtcServerId = e.rtcServerId

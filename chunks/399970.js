@@ -14,8 +14,8 @@ var a, n, l = s("735250"),
   S = s("695103"),
   E = s("285952"),
   T = s("153124"),
-  f = s("689938"),
-  m = s("730699"),
+  m = s("689938"),
+  f = s("730699"),
   _ = s("794711");
 let g = /^\d+$|^$/;
 (n = a || (a = {})).LOCALHOST = "localhost", n.PROXY = "proxy";
@@ -61,16 +61,16 @@ function I(e) {
         id: x,
         tag: "h1",
         className: _.marginReset,
-        children: f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_HEADER
+        children: m.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_HEADER
       }), (0, l.jsx)(o.ModalCloseButton, {
         onClick: t
       })]
     }), (0, l.jsxs)(o.ModalContent, {
-      className: m.modalContent,
+      className: f.modalContent,
       children: [(0, l.jsx)(o.FormText, {
         className: _.marginBottom20,
         type: o.FormText.Types.DESCRIPTION,
-        children: f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_BODY
+        children: m.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_BODY
       }), null == n ? null : (0, l.jsx)(o.FormErrorBlock, {
         className: _.marginBottom20,
         children: n
@@ -82,31 +82,31 @@ function I(e) {
           direction: E.default.Direction.VERTICAL,
           align: E.default.Align.START,
           children: [(0, l.jsx)(o.FormItem, {
-            className: m.inputWrapper,
-            title: f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_PLACEHOLDER,
+            className: f.inputWrapper,
+            title: m.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_PLACEHOLDER,
             required: !0,
             children: (0, l.jsx)(o.TextInput, {
               value: h,
               maxLength: 19,
-              error: R ? null : f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
+              error: R ? null : m.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
               onChange: function(e) {
                 N(e)
               },
               disabled: I
             })
           }), (0, l.jsx)(o.FormItem, {
-            className: m.inputWrapper,
-            title: f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ORIGIN_LABEL,
+            className: f.inputWrapper,
+            title: m.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ORIGIN_LABEL,
             children: (0, l.jsx)(o.SingleSelect, {
               isDisabled: !R || "" === h,
               value: A,
               options: [{
                 value: "localhost",
-                label: f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_LOCALHOST_OPTION,
+                label: m.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_LOCALHOST_OPTION,
                 key: "localhost"
               }, {
                 value: "proxy",
-                label: f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_PROXY_OPTION,
+                label: m.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_PROXY_OPTION,
                 key: "proxy"
               }],
               onChange: function(e) {
@@ -115,8 +115,8 @@ function I(e) {
               placeholder: "URL Origin Type"
             })
           }), "localhost" !== A ? null : (0, l.jsx)(o.FormItem, {
-            className: m.inputWrapper,
-            title: f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_PORT_NUMBER_LABEL,
+            className: f.inputWrapper,
+            title: m.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_PORT_NUMBER_LABEL,
             required: !0,
             children: (0, l.jsx)(o.TextInput, {
               value: p,
@@ -129,7 +129,7 @@ function I(e) {
             type: "submit",
             disabled: !R || 0 === h.length || "localhost" === A && 0 === p.length,
             color: v ? o.Button.Colors.RED : o.Button.Colors.GREEN,
-            children: v ? f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
+            children: v ? m.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : m.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
           })]
         })
       })]

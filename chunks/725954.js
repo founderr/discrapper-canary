@@ -8,9 +8,9 @@ var l = s("735250");
 s("470079");
 var a = s("120356"),
   i = s.n(a),
-  o = s("442837"),
-  r = s("481060"),
-  n = s("129861"),
+  r = s("442837"),
+  n = s("481060"),
+  o = s("129861"),
   u = s("427217"),
   d = s("158776"),
   c = s("51144"),
@@ -22,31 +22,31 @@ function E(e) {
   let {
     user: t,
     displayProfile: s
-  } = e, a = (0, o.useStateFromStores)([d.default], () => d.default.findActivity(t.id, e => e.type === f.ActivityTypes.CUSTOM_STATUS)), E = c.default.getName(t);
+  } = e, a = (0, r.useStateFromStores)([d.default], () => d.default.findActivity(t.id, e => e.type === f.ActivityTypes.CUSTOM_STATUS)), E = c.default.getName(t);
   return (0, l.jsxs)("div", {
     className: m.container,
-    children: [null == E && (0, l.jsx)(n.default, {
+    children: [null == E && (0, l.jsx)(o.default, {
       user: t,
       className: m.nameTag,
       usernameClass: m.username,
       discriminatorClass: m.discriminator
     }), null != E && (0, l.jsxs)("div", {
-      children: [(0, l.jsx)(r.Text, {
+      children: [(0, l.jsx)(n.Text, {
         variant: "text-lg/semibold",
         style: {
           marginRight: "12px"
         },
         children: E
-      }), (0, l.jsx)(n.default, {
+      }), (0, l.jsx)(o.default, {
         user: t,
         forceUsername: !0,
         usernameClass: m.discriminator,
         discriminatorClass: m.discriminator,
         className: i()(m.nameTag, m.nameTagSmall)
       })]
-    }), (null == s ? void 0 : s.pronouns) != null && (null == s ? void 0 : s.pronouns) !== "" && (0, l.jsx)(r.Tooltip, {
+    }), (null == s ? void 0 : s.pronouns) != null && (null == s ? void 0 : s.pronouns) !== "" && (0, l.jsx)(n.Tooltip, {
       text: S.default.Messages.USER_PROFILE_PRONOUNS,
-      children: e => (0, l.jsx)(r.Text, {
+      children: e => (0, l.jsx)(n.Text, {
         ...e,
         variant: "text-sm/normal",
         className: i()(m.pronouns, m.nameTagSmall),
@@ -54,7 +54,7 @@ function E(e) {
       })
     }), null != a ? (0, l.jsx)("div", {
       className: m.__invalid_customStatusActivity,
-      children: (0, l.jsx)(r.Text, {
+      children: (0, l.jsx)(n.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
         className: m.customStatusText,

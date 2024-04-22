@@ -16,8 +16,8 @@ var a = s("735250"),
   S = s("419363"),
   E = s("857595"),
   T = s("607070"),
-  f = s("627845"),
-  m = s("786761"),
+  m = s("627845"),
+  f = s("786761"),
   _ = s("3148"),
   g = s("739566"),
   I = s("753206"),
@@ -55,7 +55,7 @@ function K(e) {
   return (0, a.jsxs)(u.FormSection, {
     tag: u.FormTitleTags.H1,
     title: y.default.Messages.ACCESSIBILITY,
-    children: [(0, a.jsx)(W, {}), (0, a.jsx)(z, {}), (0, a.jsx)(u.FormDivider, {}), (0, a.jsx)(Q, {}), (0, a.jsx)(q, {}), (0, a.jsx)(Z, {}), (0, f.canEnableForcedColors)() ? (0, a.jsx)(X, {}) : null, (0, a.jsx)(J, {}), (0, a.jsx)($, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(et, {}), (0, a.jsx)(u.FormDivider, {
+    children: [(0, a.jsx)(W, {}), (0, a.jsx)(z, {}), (0, a.jsx)(u.FormDivider, {}), (0, a.jsx)(Q, {}), (0, a.jsx)(q, {}), (0, a.jsx)(Z, {}), (0, m.canEnableForcedColors)() ? (0, a.jsx)(X, {}) : null, (0, a.jsx)(J, {}), (0, a.jsx)($, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(et, {}), (0, a.jsx)(u.FormDivider, {
       className: G.marginBottom20
     }), (0, a.jsx)(u.Text, {
       variant: "text-md/normal",
@@ -71,7 +71,7 @@ function K(e) {
 function W() {
   let e = v.MessageDisplayCompact.useSetting(),
     [t] = n.useState(() => {
-      let e = (0, m.createMessageRecord)({
+      let e = (0, f.createMessageRecord)({
         ...(0, _.default)({
           channelId: "1337",
           content: y.default.Messages.ACCESSIBILITY_SETTINGS_SATURATION_LINK_PREVIEW_MESSAGE.format({
@@ -268,10 +268,10 @@ function J() {
     })),
     S = n.useRef(null);
   (0, L.default)(S, P.AccessibilityScrollPositions.REDUCED_MOTION);
-  let f = n.useCallback((e, t) => {
+  let m = n.useCallback((e, t) => {
       (0, E.setPrefersReducedMotion)(t ? "auto" : r)
     }, [r]),
-    m = n.useCallback(e => {
+    f = n.useCallback(e => {
       (0, E.setPrefersReducedMotion)(e ? "reduce" : "no-preference")
     }, []);
   return (0, a.jsxs)(u.FormItem, {
@@ -289,7 +289,7 @@ function J() {
       value: "auto" === l,
       shape: u.Checkbox.Shapes.BOX,
       type: u.Checkbox.Types.INVERTED,
-      onChange: f,
+      onChange: m,
       children: (0, a.jsx)(u.Text, {
         variant: "text-sm/normal",
         children: y.default.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_AUTO
@@ -297,7 +297,7 @@ function J() {
     }), (0, a.jsx)(u.FormSwitch, {
       className: G.marginTop20,
       value: s,
-      onChange: m,
+      onChange: f,
       children: y.default.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_ENABLE
     }), (0, a.jsx)(u.FormSwitch, {
       className: G.marginBottom40,

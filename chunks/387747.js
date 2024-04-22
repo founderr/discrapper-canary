@@ -17,13 +17,13 @@ var n = s("481060"),
   S = s("97926"),
   E = s("541540"),
   T = s("206339"),
-  f = s("981631"),
-  m = s("46140"),
+  m = s("981631"),
+  f = s("46140"),
   _ = s("709510");
 
 function g() {
   let e = (0, c.useIsEligibleForQuests)({
-      location: m.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
+      location: f.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
     }),
     {
       enabled: t
@@ -42,19 +42,19 @@ function g() {
         width: "360px"
       },
       analyticsLocation: {
-        page: f.AnalyticsPages.GIFTING_SETTINGS,
-        section: f.AnalyticsSections.GIFT_BANNER
+        page: m.AnalyticsPages.GIFTING_SETTINGS,
+        section: m.AnalyticsSections.GIFT_BANNER
       }
     }), (0, a.jsx)(l.default, {
-      section: f.AnalyticsSections.LIBRARY_INVENTORY_CODE_REDEMPTION,
+      section: m.AnalyticsSections.LIBRARY_INVENTORY_CODE_REDEMPTION,
       children: (0, a.jsx)(E.default, {})
     }), e && (0, a.jsx)(l.default, {
-      section: f.AnalyticsSections.QUESTS,
+      section: m.AnalyticsSections.QUESTS,
       children: (0, a.jsx)(S.default, {})
     }), (0, a.jsx)(n.FormDivider, {
       className: _.divider
     }), (0, a.jsx)(l.default, {
-      section: f.AnalyticsSections.LIBRARY_INVENTORY_GIFTS_LIST,
+      section: m.AnalyticsSections.LIBRARY_INVENTORY_GIFTS_LIST,
       children: (0, a.jsx)(T.default, {})
     })]
   })

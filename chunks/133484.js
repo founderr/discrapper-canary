@@ -16,8 +16,8 @@ var a = s("735250"),
   S = s("981631"),
   E = s("474936"),
   T = s("689938"),
-  f = s("929327"),
-  m = s("699623"),
+  m = s("929327"),
+  f = s("699623"),
   _ = s("820350");
 
 function g(e) {
@@ -34,24 +34,24 @@ function g(e) {
       type: E.PremiumUpsellTypes.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_INLINE
     })
   }, [s, h]), s) ? (0, a.jsxs)("div", {
-    className: f.upsellOverlayContainer,
+    className: m.upsellOverlayContainer,
     children: [(0, a.jsx)("div", {
       children: g
     }), (0, a.jsxs)("div", {
-      className: f.upsellOverlay,
+      className: m.upsellOverlay,
       children: [(0, a.jsx)("img", {
-        className: f.upsellImage,
+        className: m.upsellImage,
         alt: T.default.Messages.GUILD_IDENTITY_UPSELL_OVERLAY_IMAGE_ALT,
         src: function(e) {
           switch (e) {
             case S.ThemeTypes.DARK:
-              return m;
+              return f;
             case S.ThemeTypes.LIGHT:
               return _
           }
         }(I)
       }), (0, a.jsxs)("div", {
-        className: f.upsellTextContainer,
+        className: m.upsellTextContainer,
         children: [(0, a.jsx)(l.Text, {
           variant: "text-lg/semibold",
           color: "always-white",

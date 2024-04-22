@@ -8,18 +8,18 @@ var l = s("735250");
 s("470079");
 var a = s("481060"),
   i = s("860719"),
-  o = s("689938"),
-  r = s("99441");
+  r = s("689938"),
+  n = s("99441");
 
-function n(e) {
+function o(e) {
   let {
     content: t,
     heading: s
   } = e;
   return (0, l.jsxs)("div", {
-    className: r.row,
+    className: n.row,
     children: [null != s ? (0, l.jsx)(a.Heading, {
-      className: r.heading,
+      className: n.heading,
       variant: "text-sm/normal",
       children: s
     }) : null, (0, l.jsx)(a.Text, {
@@ -43,20 +43,20 @@ function u(e) {
   });
   if (null == t) return null;
   let f = [];
-  return u && f.push((0, l.jsx)(n, {
-    heading: o.default.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_HEADER,
-    content: o.default.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_BODY
-  })), d && f.push((0, l.jsx)(n, {
-    heading: o.default.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_HEADER,
-    content: o.default.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_BODY
-  })), c && f.push((0, l.jsx)(n, {
-    heading: o.default.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_HEADER,
-    content: o.default.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_BODY
+  return u && f.push((0, l.jsx)(o, {
+    heading: r.default.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_HEADER,
+    content: r.default.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_BODY
+  })), d && f.push((0, l.jsx)(o, {
+    heading: r.default.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_HEADER,
+    content: r.default.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_BODY
+  })), c && f.push((0, l.jsx)(o, {
+    heading: r.default.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_HEADER,
+    content: r.default.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_BODY
   })), f.length > 0 && f.push((0, l.jsx)("div", {
-    className: r.divider,
+    className: n.divider,
     children: (0, l.jsx)(a.FormDivider, {})
-  })), f.push((0, l.jsx)(n, {
-    content: o.default.Messages.BOTS_DATA_ACCESS_BASELINE.format({
+  })), f.push((0, l.jsx)(o, {
+    content: r.default.Messages.BOTS_DATA_ACCESS_BASELINE.format({
       helpCenterUrl: "https://support.discord.com/hc/articles/7933951485975"
     })
   })), (0, l.jsx)(a.ScrollerThin, {

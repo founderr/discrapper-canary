@@ -7,9 +7,9 @@ s.r(t), s.d(t, {
 var l = s("735250"),
   a = s("470079"),
   i = s("120356"),
-  o = s.n(i),
-  r = s("442837"),
-  n = s("481060"),
+  r = s.n(i),
+  n = s("442837"),
+  o = s("481060"),
   u = s("666520"),
   d = s("963202"),
   c = s("369077"),
@@ -20,8 +20,8 @@ var l = s("735250"),
   I = s("648067"),
   v = s("588822"),
   x = s("81334"),
-  N = s("652853"),
-  _ = s("335191"),
+  _ = s("652853"),
+  N = s("335191"),
   A = s("347949"),
   T = s("988246"),
   U = s("689938"),
@@ -36,24 +36,24 @@ function p(e) {
     scrollToConnections: j = !1
   } = e, {
     trackUserProfileAction: g
-  } = (0, E.useUserProfileAnalyticsContext)(), R = (0, r.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), {
-    theme: P
-  } = (0, N.useUserProfileThemeContext)(), C = (0, r.useStateFromStores)([S.default], () => S.default.locale), M = (0, d.useIsInUserClanExperiment)(), y = (0, f.useIsUserRecentGamesEnabled)({
+  } = (0, E.useUserProfileAnalyticsContext)(), P = (0, n.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), {
+    theme: R
+  } = (0, _.useUserProfileThemeContext)(), C = (0, n.useStateFromStores)([S.default], () => S.default.locale), M = (0, d.useIsInUserClanExperiment)(), y = (0, f.useIsUserRecentGamesEnabled)({
     userId: s.id,
     location: "28tk0bf_3"
-  }), O = (0, I.default)(s.id), L = a.useRef(null);
+  }), O = (0, I.default)(s.id), F = a.useRef(null);
   return (a.useLayoutEffect(() => {
     if (j) {
       var e;
-      null == L || null === (e = L.current) || void 0 === e || e.scrollIntoView()
+      null == F || null === (e = F.current) || void 0 === e || e.scrollIntoView()
     }
-  }, [j]), R) ? (0, l.jsx)(T.default, {}) : (0, l.jsxs)(n.ScrollerThin, {
+  }, [j]), P) ? (0, l.jsx)(T.default, {}) : (0, l.jsxs)(o.ScrollerThin, {
     fade: !0,
     className: h.infoScroller,
     children: [(0, l.jsxs)("div", {
       className: h.userInfoSection,
       children: [(null == i ? void 0 : i.bio) != null && (null == i ? void 0 : i.bio) !== "" && (0, l.jsxs)(l.Fragment, {
-        children: [(0, l.jsx)(n.Heading, {
+        children: [(0, l.jsx)(o.Heading, {
           variant: "eyebrow",
           className: h.userInfoSectionHeader,
           children: U.default.Messages.USER_PROFILE_ABOUT_ME
@@ -76,8 +76,8 @@ function p(e) {
       }), y && (0, l.jsx)(A.UserProfileRecentGamesContainer, {
         userId: s.id,
         maxItems: 6,
-        containerClassName: o()(h.userInfoText, h.recentGames)
-      }), (0, l.jsx)(n.Heading, {
+        containerClassName: r()(h.userInfoText, h.recentGames)
+      }), (0, l.jsx)(o.Heading, {
         variant: "eyebrow",
         className: h.userInfoSectionHeader,
         children: U.default.Messages.NOTE
@@ -89,10 +89,10 @@ function p(e) {
           action: "SET_NOTE"
         })
       })]
-    }), (0, l.jsx)(_.ConnectedUserAccounts, {
-      ref: L,
+    }), (0, l.jsx)(N.ConnectedUserAccounts, {
+      ref: F,
       connectedAccounts: O,
-      theme: P,
+      theme: R,
       locale: C,
       className: h.userInfoSection,
       userId: s.id

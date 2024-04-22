@@ -1,32 +1,32 @@
 "use strict";
-r.r(t), r.d(t, {
+l.r(t), l.d(t, {
   fetchUserAffinities: function() {
-    return p
+    return a
   }
 });
-var s = r("544891"),
-  i = r("570140"),
-  d = r("800599"),
-  n = r("981631");
+var n = l("544891"),
+  u = l("570140"),
+  i = l("800599"),
+  r = l("981631");
 
-function p() {
+function a() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  return d.default.needsRefresh() ? (i.default.dispatch({
+  return i.default.needsRefresh() ? (u.default.dispatch({
     type: "LOAD_USER_AFFINITIES"
-  }), s.HTTP.get({
-    url: n.Endpoints.USER_AFFINITIES,
+  }), n.HTTP.get({
+    url: r.Endpoints.USER_AFFINITIES,
     retries: e ? 3 : 0,
     oldFormErrors: !0
   }).then(e => {
     let {
       body: t
     } = e;
-    i.default.dispatch({
+    u.default.dispatch({
       type: "LOAD_USER_AFFINITIES_SUCCESS",
       affinities: t
     })
   }, () => {
-    i.default.dispatch({
+    u.default.dispatch({
       type: "LOAD_USER_AFFINITIES_FAILURE"
     })
   })) : Promise.resolve()

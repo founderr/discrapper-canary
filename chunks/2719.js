@@ -16,8 +16,8 @@ var a = s("735250"),
   S = s("230711"),
   E = s("129861"),
   T = s("279837"),
-  f = s("952306"),
-  m = s("299206"),
+  m = s("952306"),
+  f = s("299206"),
   _ = s("295474"),
   g = s("144114"),
   I = s("918505"),
@@ -48,7 +48,7 @@ function w(e) {
   let {
     className: r,
     user: o
-  } = e, d = n.useRef(null), S = (0, I.usePomeloEligibility)(), E = (0, h.useIsEligibleForPomelo)(), T = (0, _.useGuildAutomodProfileQuarantineErrors)(), f = null !== (l = null == T ? void 0 : null === (t = T.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : null, [m, g] = n.useState(!1);
+  } = e, d = n.useRef(null), S = (0, I.usePomeloEligibility)(), E = (0, h.useIsEligibleForPomelo)(), T = (0, _.useGuildAutomodProfileQuarantineErrors)(), m = null !== (l = null == T ? void 0 : null === (t = T.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : null, [f, g] = n.useState(!1);
   n.useEffect(() => {
     g(null != d.current && d.current.scrollWidth > d.current.clientWidth)
   }, [o.username]);
@@ -89,10 +89,10 @@ function w(e) {
           color: u.default.colors.STATUS_WARNING.css
         })
       })
-    }), null != f && (0, a.jsx)("div", {
+    }), null != m && (0, a.jsx)("div", {
       className: F.pomeloWarning,
       children: (0, a.jsx)(c.Tooltip, {
-        text: f,
+        text: m,
         "aria-label": !1,
         children: e => (0, a.jsx)(M.default, {
           ...e,
@@ -126,7 +126,7 @@ function w(e) {
             })
           }
         }),
-        children: m ? G.default.Messages.DISAPPROVAL : G.default.Messages.EDIT
+        children: f ? G.default.Messages.DISAPPROVAL : G.default.Messages.EDIT
       })
     })]
   })
@@ -137,9 +137,9 @@ function H(e) {
   let {
     user: l,
     className: r
-  } = e, o = (0, _.useGuildAutomodProfileQuarantineErrors)(), d = null !== (s = null == o ? void 0 : null === (t = o.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : null, S = D.default.getGlobalName(l), E = n.useRef(null), [T, f] = n.useState(!1);
+  } = e, o = (0, _.useGuildAutomodProfileQuarantineErrors)(), d = null !== (s = null == o ? void 0 : null === (t = o.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : null, S = D.default.getGlobalName(l), E = n.useRef(null), [T, m] = n.useState(!1);
   return n.useEffect(() => {
-    f(null != E.current && E.current.scrollWidth > E.current.clientWidth)
+    m(null != E.current && E.current.scrollWidth > E.current.clientWidth)
   }, [S]), (0, a.jsxs)("div", {
     className: i()(F.field, r),
     children: [(0, a.jsx)("div", {
@@ -249,7 +249,7 @@ function Y(e) {
     buttonAriaLabel: G.default.Messages.CLAIM_ACCOUNT_SHORT,
     buttonColor: c.Button.Colors.BRAND,
     valueMessage: G.default.Messages.USER_SETTINGS_ADD_EMAIL_CLAIM,
-    handleClick: () => f.default.openClaimAccountModal()
+    handleClick: () => m.default.openClaimAccountModal()
   };
   return (0, a.jsxs)("div", {
     className: i()(F.field, n),
@@ -356,7 +356,7 @@ function K(e) {
 function W(e) {
   let {
     user: t
-  } = e, s = (0, m.default)({
+  } = e, s = (0, f.default)({
     id: t.id,
     label: G.default.Messages.COPY_ID_USER
   });

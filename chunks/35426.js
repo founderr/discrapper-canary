@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return m
+    return f
   }
 }), s("47120"), s("653041");
 var a = s("735250"),
@@ -16,7 +16,7 @@ var a = s("735250"),
   S = s("399002"),
   E = s("369541"),
   T = s("794711");
-class f extends n.Component {
+class m extends n.Component {
   renderTestCase(e, t, s, n, l) {
     let r = null == t ? void 0 : t.summary;
     return (0, a.jsxs)(o.FormText, {
@@ -112,7 +112,7 @@ class f extends n.Component {
       d = this.props.testResults,
       c = this.props.pings,
       S = t ? u.default.stopSpeedTest : u.default.startSpeedTest,
-      f = l >= E.SpeedTestLifecycles.AWAITING_ENDPOINT;
+      m = l >= E.SpeedTestLifecycles.AWAITING_ENDPOINT;
     return !1 === e ? (0, a.jsx)(o.FormSection, {
       tag: o.FormTitleTags.H1,
       title: "Speed Test",
@@ -131,7 +131,7 @@ class f extends n.Component {
             children: t ? "Stop Speed Test" : "Start Speed Test"
           })
         })
-      }), this.renderAwaitingEndpoint(f, l), this.renderConnect(f, l, n), this.renderPing(f, l, c), this.renderTestCases(f, s, i, d, r), this.renderUpload(f, l), this.renderComplete(f, l)]
+      }), this.renderAwaitingEndpoint(m, l), this.renderConnect(m, l, n), this.renderPing(m, l, c), this.renderTestCases(m, s, i, d, r), this.renderUpload(m, l), this.renderComplete(m, l)]
     })
   }
   constructor(...e) {
@@ -147,7 +147,7 @@ class f extends n.Component {
   }
 }
 
-function m() {
+function f() {
   let e = (0, r.useStateFromStoresObject)([c.default], () => ({
       available: c.default.getAvailable(),
       active: c.default.getActive(),
@@ -167,7 +167,7 @@ function m() {
     }, [t]);
   return n.useEffect(() => (d.default.subscribe("RTC_SPEED_TEST_STATE_UPDATE", l), () => {
     d.default.unsubscribe("RTC_SPEED_TEST_STATE_UPDATE", l)
-  }), [l]), (0, a.jsx)(f, {
+  }), [l]), (0, a.jsx)(m, {
     ...e
   })
 }

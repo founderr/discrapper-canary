@@ -16,8 +16,8 @@ var a = s("735250"),
   S = s("66516"),
   E = s("484459"),
   T = s("216045"),
-  f = s("25990"),
-  m = s("594174"),
+  m = s("25990"),
+  f = s("594174"),
   _ = s("585483"),
   g = s("16703"),
   I = s("785145"),
@@ -32,9 +32,9 @@ function A() {
   });
   let e = (0, l.useStateFromStores)([c.default], () => c.default.getGuild()),
     t = (0, g.default)(),
-    s = (0, l.useStateFromStores)([c.default, f.default], () => c.default.showNotice() || f.default.showNotice()),
+    s = (0, l.useStateFromStores)([c.default, m.default], () => c.default.showNotice() || m.default.showNotice()),
     A = null != e ? e : t,
-    O = (0, l.useStateFromStores)([m.default], () => m.default.getCurrentUser()),
+    O = (0, l.useStateFromStores)([f.default], () => f.default.getCurrentUser()),
     {
       subsection: x,
       setSubsection: R

@@ -7,9 +7,9 @@ s.r(t), s.d(t, {
 var l = s("735250"),
   a = s("470079"),
   i = s("278074"),
-  o = s("442837"),
-  r = s("706898"),
-  n = s("481060"),
+  r = s("442837"),
+  n = s("706898"),
+  o = s("481060"),
   u = s("246946"),
   d = s("594174"),
   c = s("785717"),
@@ -20,9 +20,9 @@ var l = s("735250"),
   I = s("834534"),
   v = s("228168"),
   x = s("689938"),
-  N = s("708432");
-let _ = e => {
-  let [t, s] = (0, o.useStateFromStoresArray)([f.default], () => {
+  _ = s("708432");
+let N = e => {
+  let [t, s] = (0, r.useStateFromStoresArray)([f.default], () => {
     var t, s, l, a;
     return [null !== (l = null === (t = f.default.getMutualFriends(e.id)) || void 0 === t ? void 0 : t.length) && void 0 !== l ? l : 0, null !== (a = null === (s = f.default.getMutualGuilds(e.id)) || void 0 === s ? void 0 : s.length) && void 0 !== a ? a : 0]
   });
@@ -52,7 +52,7 @@ function A(e) {
     onClose: U
   } = e, {
     trackUserProfileAction: h
-  } = (0, c.useUserProfileAnalyticsContext)(), p = (0, o.useStateFromStores)([d.default], () => d.default.getCurrentUser()), j = (0, o.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), g = _(f), [R, P] = a.useState(T), [C, M] = a.useState(null !== (s = null === (t = g.find(e => {
+  } = (0, c.useUserProfileAnalyticsContext)(), p = (0, r.useStateFromStores)([d.default], () => d.default.getCurrentUser()), j = (0, r.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), g = N(f), [P, R] = a.useState(T), [C, M] = a.useState(null !== (s = null === (t = g.find(e => {
     let {
       section: t
     } = e;
@@ -61,23 +61,23 @@ function A(e) {
     h({
       action: "PRESS_SECTION",
       section: e
-    }), M(e), P(!1)
+    }), M(e), R(!1)
   }, [h, M]);
   return null == p ? null : j ? (0, l.jsx)("div", {
-    className: N.container,
+    className: _.container,
     children: (0, l.jsx)(E.default, {})
   }) : f.id === p.id ? (0, l.jsx)("div", {
-    className: N.container,
+    className: _.container,
     children: (0, l.jsx)(I.default, {
       user: f,
       currentUser: p,
       displayProfile: x,
-      autoFocusNote: R
+      autoFocusNote: P
     })
   }) : (0, l.jsxs)("div", {
-    className: N.container,
-    children: [(0, l.jsx)(r.TabBar, {
-      className: N.tabBar,
+    className: _.container,
+    children: [(0, l.jsx)(n.TabBar, {
+      className: _.tabBar,
       type: "top",
       selectedItem: C,
       onItemSelect: y,
@@ -86,11 +86,11 @@ function A(e) {
           section: t,
           text: s
         } = e;
-        return (0, l.jsx)(r.TabBar.Item, {
-          className: N.tabBarItem,
+        return (0, l.jsx)(n.TabBar.Item, {
+          className: _.tabBarItem,
           id: t,
           "aria-label": s,
-          children: (0, l.jsx)(n.Text, {
+          children: (0, l.jsx)(o.Text, {
             variant: "text-sm/normal",
             children: s
           })
@@ -103,11 +103,11 @@ function A(e) {
       user: f,
       onClose: U
     })).otherwise(() => (0, l.jsx)(I.default, {
-      className: N.infoTab,
+      className: _.infoTab,
       user: f,
       currentUser: p,
       displayProfile: x,
-      autoFocusNote: R
+      autoFocusNote: P
     }))]
   })
 }

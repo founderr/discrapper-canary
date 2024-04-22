@@ -12,8 +12,8 @@ var a = s("735250"),
   S = s("481060"),
   E = s("570140"),
   T = s("355467"),
-  f = s("37234"),
-  m = s("821849"),
+  m = s("37234"),
+  f = s("821849"),
   _ = s("230711"),
   g = s("497321"),
   I = s("634894"),
@@ -62,8 +62,8 @@ function X() {
     u = e.planIdFromItems === Y.SubscriptionPlans.PREMIUM_YEAR_TIER_2,
     E = t || r,
     T = null != e.trialEndsAt ? o()(e.trialEndsAt).diff(o()(), "d") : 0,
-    m = Y.SubscriptionPlanInfo[e.planIdFromItems],
-    g = P.default.formatPriceString(P.default.getDefaultPrice(m.id), m.interval);
+    f = Y.SubscriptionPlanInfo[e.planIdFromItems],
+    g = P.default.formatPriceString(P.default.getDefaultPrice(f.id), f.interval);
   return (0, a.jsxs)("div", {
     className: i()(z.tierCard, {
       [z.withTier2Rim]: E
@@ -101,7 +101,7 @@ function X() {
         })]
       }) : (0, a.jsx)(k.default, {
         subscriptionTier: Y.PremiumSubscriptionSKUs.TIER_2,
-        interval: m.interval
+        interval: f.interval
       }), (0, a.jsx)(F.Tier2FeatureItems, {}), (0, a.jsx)(S.Button, {
         className: z.tierCardButton,
         color: S.Button.Colors.WHITE,
@@ -109,7 +109,7 @@ function X() {
           L.default.track(K.AnalyticEvents.PREMIUM_SETTINGS_INTERACTED, {
             cta_type: "to_premium_home_button",
             target: "premium home page"
-          }), (0, f.popLayer)(), (0, x.transitionTo)(K.Routes.APPLICATION_STORE)
+          }), (0, m.popLayer)(), (0, x.transitionTo)(K.Routes.APPLICATION_STORE)
         },
         children: (0, a.jsx)(S.Text, {
           className: z.tierCardButtonCTA,
@@ -210,7 +210,7 @@ t.default = function() {
     i = (0, A.useSubscriptionPlansLoaded)(),
     [r, o] = n.useState(!0),
     c = (0, y.useLocalizedPromoQuery)(),
-    f = null == c ? void 0 : c.countryCode,
+    m = null == c ? void 0 : c.countryCode,
     _ = (0, d.useStateFromStores)([R.default], () => R.default.enabled),
     h = "PremiumManagementSettings";
   (0, I.useTriggerDebuggingAA)({
@@ -223,9 +223,9 @@ t.default = function() {
   let x = (0, V.useIsEligibleSenderForReferralProgram)("PremiumManagementSettings");
   n.useEffect(() => {
     E.default.wait(async () => {
-      !_ && !e && await Promise.all([T.fetchSubscriptions(), T.fetchPaymentSources(), (0, m.fetchPremiumSubscriptionPlans)(f, null, K.RevenueSurfaces.DISCOVERY)]), o(!1)
+      !_ && !e && await Promise.all([T.fetchSubscriptions(), T.fetchPaymentSources(), (0, f.fetchPremiumSubscriptionPlans)(m, null, K.RevenueSurfaces.DISCOVERY)]), o(!1)
     })
-  }, [f, _, e]);
+  }, [m, _, e]);
   let [D, P] = n.useState(!1);
   if (_) return (0, a.jsx)(g.default, {});
   if (e) return (0, a.jsx)(O.BlockedPaymentsContentSettings, {});

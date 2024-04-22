@@ -16,8 +16,8 @@ var a = s("735250"),
   S = s("285952"),
   E = s("998502"),
   T = s("210887"),
-  f = s("996073"),
-  m = s("526761"),
+  m = s("996073"),
+  f = s("526761"),
   _ = s("65154"),
   g = s("689938"),
   I = s("794711");
@@ -51,7 +51,7 @@ function C() {
       supportsOpenH264: c.default.supports(_.Features.OPEN_H264)
     })),
     E = n.useRef(null);
-  return (0, f.default)(E, m.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION), (0, a.jsxs)(a.Fragment, {
+  return (0, m.default)(E, f.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(d.FormSection, {
       className: I.marginBottom20,
       title: g.default.Messages.USER_SETTINGS_VOICE_CODEC_TITLE,

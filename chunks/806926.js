@@ -8,9 +8,9 @@ var l = s("735250");
 s("470079");
 var a = s("442837"),
   i = s("158776"),
-  o = s("484404"),
-  r = s("193281"),
-  n = s("184325"),
+  r = s("484404"),
+  n = s("193281"),
+  o = s("184325"),
   u = s("502762"),
   d = s("530"),
   c = s("894374"),
@@ -26,8 +26,8 @@ function I(e) {
     initialSection: I,
     autoFocusNote: v,
     transitionState: x,
-    onClose: N
-  } = e, _ = (0, a.useStateFromStores)([i.default], () => i.default.findActivity(t.id, e => e.type === S.ActivityTypes.PLAYING), [t]);
+    onClose: _
+  } = e, N = (0, a.useStateFromStores)([i.default], () => i.default.findActivity(t.id, e => e.type === S.ActivityTypes.PLAYING), [t]);
   return (0, l.jsxs)("div", {
     className: E.container,
     children: [(0, l.jsxs)("div", {
@@ -40,23 +40,23 @@ function I(e) {
         tags: (0, l.jsx)(c.UserProfilePronounsTag, {
           pronouns: null == s ? void 0 : s.pronouns
         })
-      }), (0, l.jsx)(n.default, {
+      }), (0, l.jsx)(o.default, {
         className: E.badgeList,
         user: t,
         guildId: null == s ? void 0 : s.guildId,
-        size: n.BadgeSizes.SIZE_24
+        size: o.BadgeSizes.SIZE_24
       })]
-    }), null != _ && (0, l.jsx)(r.default, {
-      activity: _
+    }), null != N && (0, l.jsx)(n.default, {
+      activity: N
     }), (0, l.jsxs)(u.default.Overlay, {
-      children: [x === m.ModalTransitionState.ENTERED && (0, l.jsx)(o.default, {
-        onTooltipClose: N
+      children: [x === m.ModalTransitionState.ENTERED && (0, l.jsx)(r.default, {
+        onTooltipClose: _
       }), (0, l.jsx)(f.default, {
         user: t,
         displayProfile: s,
         initialSection: I,
         autoFocusNote: v,
-        onClose: N
+        onClose: _
       })]
     })]
   })
