@@ -83987,6 +83987,41 @@ input::-webkit-inner-spin-button {
     margin-bottom: 24px
 }
 
+.headerContainerGift_d317cf {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    background-image: linear-gradient(var(--modal-background), var(--modal-background));
+    background-size: 100%calc(100% - 20px)
+}
+
+.closeButtonGift__62cda {
+    margin-left: auto
+}
+
+.reviewContainer__6ae3a {
+    color: var(--primary-100);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 8px
+}
+
+.legalTerms_a0b526 p {
+    color: var(--channels-default);
+    font-size: 12px;
+    margin: 0
+}
+
+.buyButton__38cc8 {
+    margin-top: auto
+}
+
+.reviewButton__0cd54 {
+    margin-bottom: -8px
+}
+
 .countDownWrapper__60b05 {
     display: flex;
     align-items: center;
@@ -84027,19 +84062,6 @@ input::-webkit-inner-spin-button {
 .countdown_c6377a {
     font-family: inherit;
     color: inherit
-}
-
-.headerContainerGift_d317cf {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 16px;
-    background-image: linear-gradient(var(--modal-background), var(--modal-background));
-    background-size: 100%calc(100% - 20px)
-}
-
-.closeButtonGift__62cda {
-    margin-left: auto
 }
 
 .previewContainer__73054 {
@@ -116913,28 +116935,6 @@ html .invoiceCancelRow__6ff3e {
 
 .customConfetti_a96273.hidden__91f3e {
     opacity: 0
-}
-
-.reviewContainer__6ae3a {
-    color: var(--primary-100);
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    gap: 8px
-}
-
-.legalTerms_a0b526 p {
-    color: var(--channels-default);
-    font-size: 12px;
-    margin: 0
-}
-
-.buyButton__38cc8 {
-    margin-top: auto
-}
-
-.reviewButton__0cd54 {
-    margin-bottom: -8px
 }
 
 .container__74bbc {
