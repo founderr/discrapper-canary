@@ -20,7 +20,7 @@ function S() {
     s = (0, l.useStateFromStores)([u.default], () => u.default.getErrors()),
     [S, E] = n.useState(!1),
     T = n.useMemo(() => (null == s ? void 0 : s.message) != null ? null == s ? void 0 : s.message : Object.keys(null != s ? s : {}).length > 0 ? c.default.Messages.GUILD_SETTINGS_EDIT_PROFILE_GENERIC_ERROR : null, [s]),
-    m = n.useCallback(async () => {
+    f = n.useCallback(async () => {
       var e, s;
       E(!0);
       let a = u.default.getAllPending(),
@@ -37,13 +37,13 @@ function S() {
       }
       i && (0, d.clearErrors)(), E(!1)
     }, [null == t ? void 0 : t.id]),
-    f = n.useCallback(() => {
+    m = n.useCallback(() => {
       (0, d.resetAllPending)()
     }, []);
   return (0, a.jsx)(i.default, {
     submitting: S,
-    onSave: m,
-    onReset: f,
+    onSave: f,
+    onReset: m,
     disabled: e,
     errorMessage: null != T ? T : void 0
   })

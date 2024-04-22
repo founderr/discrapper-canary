@@ -12,8 +12,8 @@ var a = s("735250"),
   S = s("570140"),
   E = s("457330"),
   T = s("497321"),
-  m = s("23551"),
-  f = s("468026"),
+  f = s("23551"),
+  m = s("468026"),
   _ = s("410030"),
   g = s("726542"),
   I = s("122021"),
@@ -106,7 +106,7 @@ function q(e) {
   let i, r, o, {
       onDisconnect: S,
       account: T,
-      theme: m,
+      theme: f,
       locale: _
     } = e,
     [C, A] = n.useState(T.friendSync),
@@ -142,7 +142,7 @@ function q(e) {
           platformName: e.name
         })
       })]
-    })), (0, c.openModal)(s => (0, a.jsx)(f.default, {
+    })), (0, c.openModal)(s => (0, a.jsx)(m.default, {
       title: K.default.Messages.DISCONNECT_ACCOUNT_TITLE.format({
         name: e.name
       }),
@@ -212,7 +212,7 @@ function q(e) {
         children: [(0, a.jsx)("img", {
           alt: n.name,
           className: W.connectionIcon,
-          src: (0, u.isThemeDark)(m) ? n.icon.darkSVG : n.icon.lightSVG
+          src: (0, u.isThemeDark)(f) ? n.icon.darkSVG : n.icon.lightSVG
         }), (0, a.jsxs)("div", {
           children: [(0, a.jsx)(c.Text, {
             color: "header-primary",
@@ -434,7 +434,7 @@ function X() {
     n = (0, c.useRedesignIconContext)().enabled ? 24 : 18;
   return (0, a.jsxs)("div", {
     className: W.connectionsContainer,
-    children: [s.slice(0, 10).map(e => (0, a.jsx)(m.default, {
+    children: [s.slice(0, 10).map(e => (0, a.jsx)(f.default, {
       type: e.type,
       className: W.__invalid_accountButton,
       innerClassName: W.accountButtonInner

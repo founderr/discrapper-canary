@@ -17,8 +17,8 @@ var n = s("990547"),
   S = s("493544"),
   E = s("782568"),
   T = s("163379"),
-  m = s("703288"),
-  f = s("574755"),
+  f = s("703288"),
+  m = s("574755"),
   _ = s("377171"),
   g = s("621628"),
   I = s("18438"),
@@ -71,8 +71,8 @@ var n = s("990547"),
   eS = s("36192"),
   eE = s("338345"),
   eT = s("400287"),
-  em = s("554042"),
-  ef = s("200645"),
+  ef = s("554042"),
+  em = s("200645"),
   e_ = s("287490"),
   eg = s("168308"),
   eI = s("277329"),
@@ -80,7 +80,7 @@ var n = s("990547"),
   eN = s("981631"),
   ep = s("689938"),
   eC = s("480261");
-let eA = ef.default;
+let eA = em.default;
 
 function eO(e) {
   let {
@@ -168,8 +168,8 @@ function eO(e) {
     section: eN.UserSettingsSections.CLIPS,
     label: ep.default.Messages.CLIPS,
     ariaLabel: ep.default.Messages.CLIPS,
-    icon: ev ? (0, a.jsx)(m.default, {}) : void 0,
-    element: f.default,
+    icon: ev ? (0, a.jsx)(f.default, {}) : void 0,
+    element: m.default,
     predicate: () => !eD
   }, {
     section: eN.UserSettingsSections.FRIEND_REQUESTS,
@@ -263,7 +263,7 @@ function eO(e) {
   }, {
     section: eN.UserSettingsSections.WINDOWS,
     label: ep.default.Messages.USER_SETTINGS_WINDOWS_SETTINGS,
-    element: ef.default,
+    element: em.default,
     predicate: () => U.isPlatformEmbedded && (0, U.isWindows)()
   }, {
     section: eN.UserSettingsSections.LINUX,
@@ -359,7 +359,7 @@ function eO(e) {
   }, {
     section: eN.UserSettingsSections.TEXT_PLAYGROUND,
     label: "Text Playground",
-    element: em.default,
+    element: ef.default,
     predicate: () => (0, K.shouldShowTextPlayground)() || R.default.isDeveloper
   }, {
     section: eN.UserSettingsSections.TEXT_COMPONENT,

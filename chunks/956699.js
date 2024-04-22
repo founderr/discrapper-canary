@@ -12,8 +12,8 @@ var a = s("735250"),
   S = s("481060"),
   E = s("570140"),
   T = s("661111"),
-  m = s("179658"),
-  f = s("491428"),
+  f = s("179658"),
+  m = s("491428"),
   _ = s("225433"),
   g = s("484614"),
   I = s("386506"),
@@ -870,63 +870,63 @@ let X = u.default.connectStores([x.default], () => ({
     children: [(0, a.jsx)(S.FormSwitch, {
       value: t,
       note: "Force trace all client requests with APM",
-      onChange: e => (0, m.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         trace: e
       }),
       children: "Enable Tracing Requests"
     }), (0, a.jsx)(S.FormSwitch, {
       value: s,
       note: "Force all API requests to canary instances",
-      onChange: e => (0, m.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         canary: e
       }),
       children: "Enable Forced Canary"
     }), (0, a.jsx)(S.FormSwitch, {
       value: n,
       note: "Logs all incoming and outgoing gateway events to the developer console, enable verbose logging in the developer console to see! This includes all message content.",
-      onChange: e => (0, m.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         logGatewayEvents: e
       }),
       children: "Enable Logging of Gateway Events to Console"
     }), (0, a.jsx)(S.FormSwitch, {
       value: l,
       note: "Logs all overlay related RPC events. Super noisy if an overlay is connected",
-      onChange: e => (0, m.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         logOverlayEvents: e
       }),
       children: "Enable Logging of Overlay RPC Events & Commands"
     }), (0, a.jsx)(S.FormSwitch, {
       value: i,
       note: "Logs all analytics events to the developer console",
-      onChange: e => (0, m.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         logAnalyticsEvents: e
       }),
       children: "Enable Logging of Analytics Events"
     }), (0, a.jsx)(S.FormSwitch, {
       value: o,
       note: "Only enable on devices you trust.",
-      onChange: e => (0, m.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         sourceMapsEnabled: e
       }),
       children: "Enable source maps to be loaded on this client"
     }), (0, a.jsx)(S.FormSwitch, {
       value: d,
       note: "Displays a floating debugger with viewed impressions",
-      onChange: e => (0, m.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         analyticsDebuggerEnabled: e
       }),
       children: "Enable standard analytics debugger view"
     }), (null == T ? void 0 : T.isStaff()) ? (0, a.jsx)(S.FormSwitch, {
       value: c,
       note: "Displays a floating idle status indicator",
-      onChange: e => (0, m.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         idleStatusIndicatorEnabled: e
       }),
       children: "Enable idle status indicator"
     }) : null, null, (null == T ? void 0 : T.isStaff()) ? (0, a.jsx)(S.FormSwitch, {
       value: E,
       note: "In App Directory, include inactive collections on the homepage. Use this to preview changes to collections before publishing them.",
-      onChange: e => (0, m.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         appDirectoryIncludesInactiveCollections: e
       }),
       children: "Preview Unpublished Collections on App Directory Homepage"
@@ -953,7 +953,7 @@ function J() {
     }), (0, a.jsxs)("form", {
       className: G.surveyOverride,
       onSubmit: e => {
-        e.preventDefault(), t.length > 0 ? f.overrideSurvey(t) : f.overrideSurvey(null)
+        e.preventDefault(), t.length > 0 ? m.overrideSurvey(t) : m.overrideSurvey(null)
       },
       children: [(0, a.jsx)(S.TextInput, {
         className: G.surveyOverrideInput,

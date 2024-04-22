@@ -16,8 +16,8 @@ var a = s("735250"),
   S = s("425493"),
   E = s("607070"),
   T = s("304761"),
-  m = s("865427"),
-  f = s("358085"),
+  f = s("865427"),
+  m = s("358085"),
   _ = s("210887"),
   g = s("981631"),
   I = s("689938"),
@@ -70,14 +70,14 @@ function C() {
     ["extrabold", 800]
   ]);
   n.useEffect(() => {
-    !f.isPlatformEmbedded && window.addEventListener("resize", () => {
+    !m.isPlatformEmbedded && window.addEventListener("resize", () => {
       t(Math.round(window.outerWidth / window.innerWidth * 100))
     })
   }, []);
-  let x = f.isPlatformEmbedded ? s : e,
+  let x = m.isPlatformEmbedded ? s : e,
     R = (0, r.useStateFromStores)([T.default], () => {
       var e, t;
-      return (0, m.probablyHasBuildOverride)() ? null === (t = T.default.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web : null
+      return (0, f.probablyHasBuildOverride)() ? null === (t = T.default.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
     [M, v] = p("playground-overrideText", null),
     [D, L] = p("playground-defaultText", N[0].value),

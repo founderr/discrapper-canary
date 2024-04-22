@@ -16,8 +16,8 @@ var a = s("735250"),
   S = s("539873"),
   E = s("197115"),
   T = s("626135"),
-  m = s("981631"),
-  f = s("474936"),
+  f = s("981631"),
+  m = s("474936"),
   _ = s("689938"),
   g = s("430040"),
   I = s("794711");
@@ -31,8 +31,8 @@ let h = () => {
       analyticsLocations: e
     } = (0, u.default)(d.default.USER_SETTINGS), t = (0, l.useStateFromStores)([c.default], () => c.default.isUpsellPreview);
     return n.useEffect(() => {
-      t && T.default.track(m.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-        type: f.PremiumUpsellTypes.APP_ICON_UPSELL,
+      t && T.default.track(f.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+        type: m.PremiumUpsellTypes.APP_ICON_UPSELL,
         location_stack: e
       })
     }, []), (0, a.jsxs)("div", {
@@ -46,7 +46,7 @@ let h = () => {
             onClick: () => h(),
             children: _.default.Messages.APP_ICON_PREVIEW_TITLE
           }), t ? (0, a.jsx)(E.default, {
-            subscriptionTier: f.PremiumSubscriptionSKUs.TIER_2,
+            subscriptionTier: m.PremiumSubscriptionSKUs.TIER_2,
             buttonText: _.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
           }) : null]
         })

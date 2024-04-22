@@ -16,8 +16,8 @@ var a = s("735250"),
   S = s("524437"),
   E = s("481060"),
   T = s("668781"),
-  m = s("409700"),
-  f = s("809206"),
+  f = s("409700"),
+  m = s("809206"),
   _ = s("230711"),
   g = s("651530"),
   I = s("163268"),
@@ -259,7 +259,7 @@ function et(e) {
 }
 class es extends n.PureComponent {
   componentDidMount() {
-    (0, m.fetchConsents)(), (0, f.getHarvestStatus)().then(e => {
+    (0, f.fetchConsents)(), (0, m.getHarvestStatus)().then(e => {
       let t = {
         requestingHarvest: !1,
         currentHarvestRequest: e.body
@@ -654,18 +654,18 @@ class es extends n.PureComponent {
         body: W.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_BODY,
         confirmText: W.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_CONFIRM,
         cancelText: W.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_CANCEL,
-        onConfirm: () => (0, m.setConsents)([], [Y.Consents.USAGE_STATISTICS]).catch(et)
-      }) : (0, m.setConsents)([Y.Consents.USAGE_STATISTICS], []).catch(et)
+        onConfirm: () => (0, f.setConsents)([], [Y.Consents.USAGE_STATISTICS]).catch(et)
+      }) : (0, f.setConsents)([Y.Consents.USAGE_STATISTICS], []).catch(et)
     }), q(this, "handlePersonalizationChange", () => {
       this.props.personalization ? ee({
         header: W.default.Messages.PERSONALIZATION_DISABLE_MODAL_TITLE,
         confirmText: W.default.Messages.PERSONALIZATION_DISABLE_MODAL_CONFIRM,
         cancelText: W.default.Messages.PERSONALIZATION_DISABLE_MODAL_CANCEL,
         onConfirm: () => {
-          (0, m.setConsents)([], [Y.Consents.PERSONALIZATION]).catch(et)
+          (0, f.setConsents)([], [Y.Consents.PERSONALIZATION]).catch(et)
         },
         body: W.default.Messages.PERSONALIZATION_DISABLE_MODAL_BODY
-      }) : (0, m.setConsents)([Y.Consents.PERSONALIZATION], []).catch(et)
+      }) : (0, f.setConsents)([Y.Consents.PERSONALIZATION], []).catch(et)
     }), q(this, "handleDataDownloadRequest", () => {
       ee({
         header: W.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_TITLE,
@@ -676,7 +676,7 @@ class es extends n.PureComponent {
           this.setState({
             requestingHarvest: !0
           }, () => {
-            (0, f.requestHarvest)().then(e => {
+            (0, m.requestHarvest)().then(e => {
               null != e && null != e.body ? (this.setState({
                 currentHarvestRequest: e.body
               }), T.default.show({

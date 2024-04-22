@@ -23,8 +23,8 @@ function E(e) {
     onBannerChange: n,
     guildId: E,
     className: T,
-    disabled: m = !1,
-    showPremiumIcon: f = !0,
+    disabled: f = !1,
+    showPremiumIcon: m = !0,
     isTryItOutFlow: _ = !1,
     forcedDivider: g,
     withHighlight: I = !1
@@ -32,9 +32,9 @@ function E(e) {
   return (0, a.jsx)(d.default, {
     className: T,
     title: c.default.Messages.USER_SETTINGS_PROFILE_BANNER,
-    showPremiumIcon: f,
+    showPremiumIcon: m,
     errors: s,
-    disabled: m,
+    disabled: f,
     forcedDivider: g,
     children: (0, a.jsxs)("div", {
       className: S.buttonsContainer,

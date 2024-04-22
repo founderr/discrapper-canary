@@ -16,8 +16,8 @@ var a = s("735250"),
   S = s("230711"),
   E = s("714338"),
   T = s("857595"),
-  m = s("607070"),
-  f = s("627845"),
+  f = s("607070"),
+  m = s("627845"),
   _ = s("514361"),
   g = s("605236"),
   I = s("786761"),
@@ -214,7 +214,7 @@ class K extends n.Component {
       children: (0, a.jsx)(u.FormText, {
         type: u.FormText.Types.DEFAULT,
         className: y.forcedColorsWarning,
-        children: (0, f.canEnableForcedColors)() ? U.default.Messages.THEME_DISABLED_FOR_CONTRAST_SYNC.format({
+        children: (0, m.canEnableForcedColors)() ? U.default.Messages.THEME_DISABLED_FOR_CONTRAST_SYNC.format({
           onClick: () => {
             S.default.open(P.UserSettingsSections.ACCESSIBILITY)
           }
@@ -344,16 +344,16 @@ function W() {
       forceTrack: !0
     })
   }, []);
-  let i = (0, r.useStateFromStoresObject)([R.default, M.default, m.default, C.default, _.default], () => {
+  let i = (0, r.useStateFromStoresObject)([R.default, M.default, f.default, C.default, _.default], () => {
     var e, t;
     return {
       theme: R.default.theme,
-      useForcedColors: m.default.useForcedColors,
+      useForcedColors: f.default.useForcedColors,
       useSystemTheme: M.default.useSystemTheme,
       darkSidebar: R.default.darkSidebar,
-      fontSize: m.default.fontSize,
-      zoom: m.default.zoom,
-      messageGroupSpacing: m.default.messageGroupSpacing,
+      fontSize: f.default.fontSize,
+      zoom: f.default.zoom,
+      messageGroupSpacing: f.default.messageGroupSpacing,
       displayCompactAvatars: M.default.displayCompactAvatars,
       isStaff: null !== (t = null === (e = C.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== t && t,
       gradientPreset: _.default.gradientPreset
