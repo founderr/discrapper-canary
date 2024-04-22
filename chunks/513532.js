@@ -15,8 +15,8 @@ t.default = e => {
   let {
     guildId: t
   } = e, n = (0, s.useStateFromStores)([u.default], () => u.default.getGuild(t)), E = (0, s.useStateFromStores)([r.default, d.default], () => {
-    var e, n;
-    return null !== (n = null === (e = d.default.getStateForGuild(t)) || void 0 === e ? void 0 : e.progress.verificationForm) && void 0 !== n ? n : r.default.get(t)
+    var e, n, a;
+    return null !== (a = null === (n = d.default.getStateForGuild(t)) || void 0 === n ? void 0 : null === (e = n.progress) || void 0 === e ? void 0 : e.verificationForm) && void 0 !== a ? a : r.default.get(t)
   });
   return null == n ? null : (0, a.jsxs)("div", {
     className: f.slideContent,

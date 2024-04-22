@@ -158,11 +158,11 @@ t.default = e => {
     progress: c,
     errors: f
   } = (0, r.useStateFromStoresObject)([h.default], () => {
-    var e, n;
-    let a = h.default.getStateForGuild(t);
+    var e;
+    let n = h.default.getStateForGuild(t);
     return {
-      progress: null !== (e = a.progress) && void 0 !== e ? e : (0, h.newClanProgress)(),
-      errors: null !== (n = a.errors) && void 0 !== n ? n : {}
+      progress: null !== (e = n.progress) && void 0 !== e ? e : h.DEFAULT_CLAN_PROGRESS,
+      errors: n.errors
     }
   }), {
     requiredGameId: M,
@@ -216,13 +216,13 @@ t.default = e => {
                   handleUpdate: Y,
                   gameApplicationIds: y,
                   requiredGameId: M,
-                  error: f.gameApplicationIds
+                  error: null == f ? void 0 : f.gameApplicationIds
                 });
               case R.ClanSetupSteps.PLAYSTYLE:
                 return (0, a.jsx)(g.default, {
                   handleUpdate: Y,
                   playstyle: D,
-                  error: f.playstyle
+                  error: null == f ? void 0 : f.playstyle
                 });
               case R.ClanSetupSteps.UTILITY_TRAITS:
                 return (0, a.jsx)(v.default, {
@@ -234,7 +234,7 @@ t.default = e => {
                 return (0, a.jsx)(I.default, {
                   handleUpdate: Y,
                   interests: b,
-                  error: f.interests
+                  error: null == f ? void 0 : f.interests
                 });
               case R.ClanSetupSteps.DESCRIPTION:
                 return (0, a.jsx)(m.default, {
@@ -247,13 +247,13 @@ t.default = e => {
                 return (0, a.jsx)(A.default, {
                   handleUpdate: Y,
                   selectedTimes: G,
-                  error: f.primetime
+                  error: null == f ? void 0 : f.primetime
                 });
               case R.ClanSetupSteps.CUSTOMIZE_TAG_BADGE:
                 return (0, a.jsx)(N.default, {
                   handleUpdate: Y,
                   tag: j,
-                  error: f.tag,
+                  error: null == f ? void 0 : f.tag,
                   badge: c.badgeKind,
                   primaryColor: c.badgePrimaryColor,
                   secondaryColor: c.badgeSecondaryColor,

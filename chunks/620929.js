@@ -37,7 +37,7 @@ t.default = e => {
     primetime: L
   } = (0, d.useStateFromStoresObject)([C.default], () => {
     var e;
-    return null !== (e = C.default.getStateForGuild(n).progress) && void 0 !== e ? e : {}
+    return null !== (e = C.default.getStateForGuild(n).progress) && void 0 !== e ? e : C.DEFAULT_CLAN_PROGRESS
   }), P = (0, _.useGameNamesString)(Array.from(null != v ? v : new Set)), M = s.useMemo(() => (0, I.getPlaystyleTitle)(R), [R]), x = s.useMemo(() => (null == O ? void 0 : O.size) > 0 ? (0, m.formatSelectionList)(Array.from(O)) : null, [O]), y = s.useMemo(() => {
     let e = (null == L ? void 0 : L.length) > 0 ? L.map(e => (0, S.primetimeToString)(e)).filter(h.isNotNullish) : [];
     return (null == e ? void 0 : e.length) > 0 ? (0, m.formatSelectionList)(e) : null

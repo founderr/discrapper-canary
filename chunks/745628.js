@@ -30,7 +30,7 @@ t.default = e => {
       color: "header-secondary",
       className: o.subtitle,
       children: r.default.Messages.CLAN_SETUP_DESCRIPTION_SUBTITLE
-    }), null != u.description && (0, a.jsx)(i.Text, {
+    }), (null == u ? void 0 : u.description) != null && (0, a.jsx)(i.Text, {
       variant: "text-sm/normal",
       color: "status-danger",
       className: o.errorText,
@@ -56,7 +56,7 @@ t.default = e => {
       color: "header-secondary",
       className: o.title,
       children: r.default.Messages.CLAN_SETUP_WILDCARDS_SUBTITLE
-    }), null != u.wildcardDescriptors && (0, a.jsx)(i.Text, {
+    }), (null == u ? void 0 : u.wildcardDescriptors) != null && (0, a.jsx)(i.Text, {
       variant: "text-sm/normal",
       color: "status-danger",
       className: o.errorText,
