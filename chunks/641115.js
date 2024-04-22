@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return U
+    return k
   }
 }), l("47120");
 var a = l("735250"),
@@ -16,26 +16,27 @@ var a = l("735250"),
   f = l("410575"),
   m = l("2052"),
   S = l("924557"),
-  E = l("351742"),
-  _ = l("386542"),
-  g = l("193878"),
-  C = l("594174"),
-  N = l("746124"),
-  h = l("285952"),
-  A = l("466111"),
-  x = l("74538"),
-  I = l("451467"),
-  p = l("200445"),
-  T = l("122186"),
-  R = l("37113"),
-  v = l("981631"),
-  L = l("474936"),
-  M = l("689938"),
-  j = l("223318"),
-  O = l("138684"),
-  D = l("794711");
+  E = l("736871"),
+  _ = l("351742"),
+  g = l("386542"),
+  C = l("193878"),
+  N = l("594174"),
+  h = l("746124"),
+  A = l("285952"),
+  x = l("466111"),
+  I = l("74538"),
+  p = l("451467"),
+  T = l("200445"),
+  R = l("122186"),
+  v = l("37113"),
+  L = l("981631"),
+  M = l("474936"),
+  j = l("689938"),
+  O = l("223318"),
+  D = l("138684"),
+  P = l("794711");
 
-function P(e) {
+function b(e) {
   let {
     analyticsLocation: t,
     onClose: n
@@ -52,20 +53,20 @@ function P(e) {
   })
 }
 
-function b() {
+function G() {
   return (0, a.jsxs)("div", {
-    className: O.toolTipTextContainer,
-    children: [(0, a.jsx)(A.default, {
-      className: i()(O.premiumIcon)
+    className: D.toolTipTextContainer,
+    children: [(0, a.jsx)(x.default, {
+      className: i()(D.premiumIcon)
     }), (0, a.jsx)(c.Text, {
-      className: O.upsellText,
+      className: D.upsellText,
       variant: "text-sm/medium",
-      children: M.default.Messages.STREAM_QUALITY_DISCORD_NITRO_UNLOCK
+      children: j.default.Messages.STREAM_QUALITY_DISCORD_NITRO_UNLOCK
     })]
   })
 }
 
-function G(e) {
+function U(e) {
   let t, l, {
       type: n,
       selected: s,
@@ -87,177 +88,184 @@ function G(e) {
     children: (0, a.jsx)(c.Text, {
       variant: "text-xs/bold",
       className: i()({
-        [O.selectorText]: !s,
-        [O.enhancedSelectorNitroText]: !s,
-        [O.selectorTextSelected]: s
+        [D.selectorText]: !s,
+        [D.enhancedSelectorNitroText]: !s,
+        [D.selectorTextSelected]: s
       }),
       children: _
     })
   }), l = () => f(E)) : r ? (t = (0, a.jsx)(c.TooltipContainer, {
-    tooltipClassName: O.tooltip,
+    tooltipClassName: D.tooltip,
     spacing: 12,
-    "aria-label": M.default.Messages.STREAM_QUALITY_DISCORD_NITRO_UNLOCK,
-    text: (0, a.jsx)(b, {}),
-    children: (0, a.jsx)(h.default, {
-      align: h.default.Align.CENTER,
+    "aria-label": j.default.Messages.STREAM_QUALITY_DISCORD_NITRO_UNLOCK,
+    text: (0, a.jsx)(G, {}),
+    children: (0, a.jsx)(A.default, {
+      align: A.default.Align.CENTER,
       onMouseEnter: () => S(!0),
       onMouseLeave: () => S(!1),
       children: (0, a.jsx)(c.Text, {
         variant: "text-xs/bold",
-        className: i()(O.selectorNitroText, {
-          [O.enhancedSelectorNitroText]: d
+        className: i()(D.selectorNitroText, {
+          [D.enhancedSelectorNitroText]: d
         }),
         children: _
       })
     })
-  }), l = () => P({
+  }), l = () => b({
     analyticsLocation: o,
     onClose: m
   })) : (t = (0, a.jsx)(c.Text, {
     variant: "text-xs/normal",
-    className: s ? O.selectorTextSelected : O.selectorText,
+    className: s ? D.selectorTextSelected : D.selectorText,
     children: _
   }), l = () => f(E)), {
     content: t,
     className: i()({
-      [O.selectorButton]: !s,
-      [O.selectorButtonPerkDemo]: u,
-      [O.selectorButtonPremiumRequired]: r,
-      [O.selectorButtonSelected]: s && !u,
-      [O.selectorButtonSelectedPerkDemo]: s && u
+      [D.selectorButton]: !s,
+      [D.selectorButtonPerkDemo]: u,
+      [D.selectorButtonPremiumRequired]: r,
+      [D.selectorButtonSelected]: s && !u,
+      [D.selectorButtonSelectedPerkDemo]: s && u
     }),
     onClick: l
   }
 }
 
-function U(e) {
+function k(e) {
   let {
     onClose: t,
     selectedPreset: l,
     selectedResolution: s,
     selectedFPS: i,
     onResolutionChange: r,
-    onFPSChange: A,
-    onPresetChange: b,
-    targetGuildPremiumTier: U,
-    captureDeviceSelected: k
-  } = e, F = (0, d.useStateFromStores)([C.default], () => {
-    let e = C.default.getCurrentUser();
+    onFPSChange: x,
+    onPresetChange: G,
+    targetGuildPremiumTier: k,
+    captureDeviceSelected: F
+  } = e, y = (0, d.useStateFromStores)([N.default], () => {
+    let e = N.default.getCurrentUser();
     return u()(null != e, "StreamSettings: user cannot be undefined"), e
-  }), y = x.default.canStreamQuality(x.StreamQuality.MID, F), {
-    location: V
-  } = (0, m.useAnalyticsContext)(), w = (0, S.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
+  }), V = I.default.canStreamQuality(I.StreamQuality.MID, y), {
+    location: w
+  } = (0, m.useAnalyticsContext)(), B = (0, S.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
     autoTrackExposure: !1
-  });
-  E.default.useExperiment({
+  }), H = (0, I.isPremium)(y, M.PremiumTypes.TIER_1), {
+    inPerksDemosExperiment: W
+  } = E.default.useExperiment({
     location: "Go Live Modal"
   }, {
     autoTrackExposure: !0,
-    disable: (0, x.isPremium)(F, L.PremiumTypes.TIER_1)
+    disable: H
+  });
+  _.default.useExperiment({
+    location: "Go Live Modal"
+  }, {
+    autoTrackExposure: !0,
+    disable: !W || H
   });
   let {
-    available: B,
-    hqStreamingState: H
-  } = (0, _.usePerksDemo)(o.EntitlementFeatureNames.STREAM_HIGH_QUALITY), W = !y && !w && !B, {
-    enabled: K,
-    variant: z
-  } = g.default.useExperiment({
+    available: K,
+    hqStreamingState: z
+  } = (0, g.usePerksDemo)(o.EntitlementFeatureNames.STREAM_HIGH_QUALITY), Y = !V && !B && !K, {
+    enabled: Q,
+    variant: q
+  } = C.default.useExperiment({
     location: "StreamSettingsUpsellBanner"
   }, {
-    autoTrackExposure: W
-  }), Y = K && g.GradientVariants.includes(z), [Q, q] = n.useState(!1), Z = n.useCallback(() => {
-    r(R.ApplicationStreamResolutions.RESOLUTION_1080), A(R.ApplicationStreamFPS.FPS_60)
-  }, [r, A]), J = k ? R.GoLiveDeviceResolutionButtons : R.ApplicationStreamResolutionButtons, X = {
-    ...V,
-    section: v.AnalyticsSections.STREAM_SETTINGS
-  }, $ = (0, a.jsx)(N.default, {
-    buttons: J.map(e => G({
+    autoTrackExposure: Y
+  }), Z = Q && C.GradientVariants.includes(q), [J, X] = n.useState(!1), $ = n.useCallback(() => {
+    r(v.ApplicationStreamResolutions.RESOLUTION_1080), x(v.ApplicationStreamFPS.FPS_60)
+  }, [r, x]), ee = F ? v.GoLiveDeviceResolutionButtons : v.ApplicationStreamResolutionButtons, et = {
+    ...w,
+    section: L.AnalyticsSections.STREAM_SETTINGS
+  }, el = (0, a.jsx)(h.default, {
+    buttons: ee.map(e => U({
       type: e,
       selected: e.value === s,
-      needsPremium: !(0, I.default)(l, e.value, i, F, U),
-      needsDemo: B && e.value !== R.ApplicationStreamResolutions.RESOLUTION_720,
-      analyticsLocation: X,
-      useGradient: Y,
+      needsPremium: !(0, p.default)(l, e.value, i, y, k),
+      needsDemo: K && e.value !== v.ApplicationStreamResolutions.RESOLUTION_720,
+      analyticsLocation: et,
+      useGradient: Z,
       onClick: () => r(e.value),
       onClose: t,
-      setIsHovering: q
+      setIsHovering: X
     }))
-  }), ee = (0, a.jsx)(N.default, {
-    buttons: R.ApplicationStreamFPSButtons.map(e => G({
+  }), ea = (0, a.jsx)(h.default, {
+    buttons: v.ApplicationStreamFPSButtons.map(e => U({
       type: e,
       selected: e.value === i,
-      needsPremium: !(0, I.default)(l, s, e.value, F, U),
-      needsDemo: B && e.value === R.ApplicationStreamFPS.FPS_60,
-      analyticsLocation: X,
-      useGradient: Y,
-      onClick: () => A(e.value),
+      needsPremium: !(0, p.default)(l, s, e.value, y, k),
+      needsDemo: K && e.value === v.ApplicationStreamFPS.FPS_60,
+      analyticsLocation: et,
+      useGradient: Z,
+      onClick: () => x(e.value),
       onClose: t,
-      setIsHovering: q
+      setIsHovering: X
     }))
-  }), et = [{
-    value: R.ApplicationStreamPresets.PRESET_VIDEO,
-    label: M.default.Messages.STREAM_PRESET_VIDEO
-  }, ...k ? [] : [{
-    value: R.ApplicationStreamPresets.PRESET_DOCUMENTS,
-    label: M.default.Messages.STREAM_PRESET_DOCUMENTS
+  }), en = [{
+    value: v.ApplicationStreamPresets.PRESET_VIDEO,
+    label: j.default.Messages.STREAM_PRESET_VIDEO
+  }, ...F ? [] : [{
+    value: v.ApplicationStreamPresets.PRESET_DOCUMENTS,
+    label: j.default.Messages.STREAM_PRESET_DOCUMENTS
   }], {
-    value: R.ApplicationStreamPresets.PRESET_CUSTOM,
-    label: M.default.Messages.STREAM_PRESET_CUSTOM
-  }], el = l === R.ApplicationStreamPresets.PRESET_DOCUMENTS ? (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(h.default, {
+    value: v.ApplicationStreamPresets.PRESET_CUSTOM,
+    label: j.default.Messages.STREAM_PRESET_CUSTOM
+  }], es = l === v.ApplicationStreamPresets.PRESET_DOCUMENTS ? (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)(A.default, {
       children: (0, a.jsx)(c.FormItem, {
-        title: M.default.Messages.STREAM_RESOLUTION,
-        titleClassName: j.formItemTitleSlim,
-        className: O.documentModeGroup,
+        title: j.default.Messages.STREAM_RESOLUTION,
+        titleClassName: O.formItemTitleSlim,
+        className: D.documentModeGroup,
         children: (0, a.jsx)(c.Text, {
           variant: "text-xs/normal",
-          children: M.default.Messages.STREAM_PRESET_DOCUMENTS_DESCRIPTION_NITRO.format({
+          children: j.default.Messages.STREAM_PRESET_DOCUMENTS_DESCRIPTION_NITRO.format({
             fps: i
           })
         })
       })
-    }), W ? (0, a.jsx)(T.default, {
-      message: M.default.Messages.STREAM_PREMIUM_UPSELL_BANNER_PRESET_DOCUMENTS,
+    }), Y ? (0, a.jsx)(R.default, {
+      message: j.default.Messages.STREAM_PREMIUM_UPSELL_BANNER_PRESET_DOCUMENTS,
       onClose: t,
-      openStreamUpsellModal: P
+      openStreamUpsellModal: b
     }) : null]
   }) : (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsxs)(h.default, {
+    children: [(0, a.jsxs)(A.default, {
       children: [(0, a.jsx)(c.FormItem, {
-        title: M.default.Messages.STREAM_RESOLUTION,
-        className: O.settingsGroup,
-        titleClassName: j.formItemTitleSlim,
-        children: $
+        title: j.default.Messages.STREAM_RESOLUTION,
+        className: D.settingsGroup,
+        titleClassName: O.formItemTitleSlim,
+        children: el
       }), (0, a.jsx)(c.FormItem, {
-        title: M.default.Messages.SCREENSHARE_FRAME_RATE,
-        className: O.settingsGroup,
-        titleClassName: j.formItemTitleSlim,
-        children: ee
+        title: j.default.Messages.SCREENSHARE_FRAME_RATE,
+        className: D.settingsGroup,
+        titleClassName: O.formItemTitleSlim,
+        children: ea
       })]
-    }), W ? (0, a.jsx)(T.default, {
+    }), Y ? (0, a.jsx)(R.default, {
       onClose: t,
-      openStreamUpsellModal: P,
-      glow: Q && Y
-    }) : null, B ? (0, a.jsx)(p.default, {
-      glow: Q,
-      playIntroTransition: !H.hqStreamingUnlockAnimationPlayed,
-      onUnlocked: Z
+      openStreamUpsellModal: b,
+      glow: J && Z
+    }) : null, K ? (0, a.jsx)(T.default, {
+      glow: J,
+      playIntroTransition: !z.hqStreamingUnlockAnimationPlayed,
+      onUnlocked: $
     }) : null]
   });
   return (0, a.jsx)(f.default, {
-    ...X,
+    ...et,
     children: (0, a.jsx)(c.FormItem, {
-      title: M.default.Messages.STREAM_QUALITY,
-      titleClassName: j.formItemTitle,
-      className: j.modalContent,
+      title: j.default.Messages.STREAM_QUALITY,
+      titleClassName: O.formItemTitle,
+      className: O.modalContent,
       children: (0, a.jsxs)("div", {
-        className: O.qualitySettingsContainer,
+        className: D.qualitySettingsContainer,
         children: [(0, a.jsx)(c.SingleSelect, {
           value: l,
-          className: D.marginTop8,
-          options: et,
-          onChange: e => b(e)
-        }), el]
+          className: P.marginTop8,
+          options: en,
+          onChange: e => G(e)
+        }), es]
       })
     })
   })

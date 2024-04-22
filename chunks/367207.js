@@ -12,17 +12,18 @@ var a = n("848246"),
   c = n("594174"),
   f = n("295226"),
   h = n("74538"),
-  p = n("351742"),
-  m = n("114064"),
-  C = n("937579"),
-  g = n("316941"),
-  E = n("485731"),
-  _ = n("841174"),
-  S = n("11352"),
-  I = n("633361"),
-  N = n("981631");
+  p = n("736871"),
+  m = n("351742"),
+  C = n("114064"),
+  g = n("937579"),
+  E = n("316941"),
+  _ = n("485731"),
+  S = n("841174"),
+  I = n("11352"),
+  N = n("633361"),
+  T = n("981631");
 
-function T(e, t, n) {
+function A(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -30,7 +31,7 @@ function T(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class A extends r.default {
+class L extends r.default {
   _initialize() {
     __OVERLAY__ ? i.default.subscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen) : (i.default.subscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose), i.default.subscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell), i.default.subscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer), i.default.subscribe("POST_CONNECTION_OPEN", this._trackCustomNotificationSoundsExposure), i.default.subscribe("RTC_CONNECTION_STATE", this.maybeShowHDStreamingPerksDemoPostUpsellModal))
   }
@@ -84,31 +85,40 @@ class A extends r.default {
   }
   maybeShowHDStreamingPerksDemoPostUpsellModal(e) {
     var t;
-    if (!p.default.getCurrentConfig({
-        location: "PremiumManager"
-      }, {
-        autoTrackExposure: !1
-      }).enabled || e.state !== N.RTCConnectionStates.DISCONNECTED || e.willReconnect) return;
-    let n = d.default.getChannel(e.channelId);
-    if (null == n || !(null === (t = m.default.getPerksDemos()) || void 0 === t ? void 0 : t[a.EntitlementFeatureNames.STREAM_HIGH_QUALITY])) return;
-    let l = m.default.getActivated()[a.EntitlementFeatureNames.STREAM_HIGH_QUALITY];
-    l && i.default.dispatch({
+    let {
+      inPerksDemosExperiment: n
+    } = p.default.getCurrentConfig({
+      location: "PremiumManager"
+    }, {
+      autoTrackExposure: !1
+    }), {
+      enabled: l
+    } = m.default.getCurrentConfig({
+      location: "PremiumManager"
+    }, {
+      autoTrackExposure: !1
+    });
+    if (!n || !l || e.state !== T.RTCConnectionStates.DISCONNECTED || e.willReconnect) return;
+    let s = d.default.getChannel(e.channelId);
+    if (null == s || !(null === (t = C.default.getPerksDemos()) || void 0 === t ? void 0 : t[a.EntitlementFeatureNames.STREAM_HIGH_QUALITY])) return;
+    let r = C.default.getActivated()[a.EntitlementFeatureNames.STREAM_HIGH_QUALITY];
+    r && i.default.dispatch({
       type: "PREMIUM_PERKS_DEMO_COMPLETE",
       perkType: a.EntitlementFeatureNames.STREAM_HIGH_QUALITY
-    }), l && E.usePerksDemosUIStore.getState().hqStreamingDidEnable && (0, _.default)(n.guild_id)
+    }), r && _.usePerksDemosUIStore.getState().hqStreamingDidEnable && (0, S.default)(s.guild_id)
   }
   constructor(...e) {
-    super(...e), T(this, "_premiumPaymentModalCloseResolve", null), T(this, "_premiumPaymentModalCloseReject", null), T(this, "_maybeFetchPremiumOffer", () => {
+    super(...e), A(this, "_premiumPaymentModalCloseResolve", null), A(this, "_premiumPaymentModalCloseReject", null), A(this, "_maybeFetchPremiumOffer", () => {
       let e = c.default.getCurrentUser();
       if (null != e && e.verified) {
         let t = !(0, h.isPremium)(e) && f.default.shouldFetchOffer();
-        (0, I.shouldHitUserOfferEndPoints)("PremiumManager") ? (0, C.fetchUserOffer)(t) : t && g.default.fetchUserTrialOffer()
+        (0, N.shouldHitUserOfferEndPoints)("PremiumManager") ? (0, g.fetchUserOffer)(t) : t && E.default.fetchUserTrialOffer()
       }
-    }), T(this, "_trackCustomNotificationSoundsExposure", () => {
-      S.CustomNotificationSoundExperiment.trackExposure({
+    }), A(this, "_trackCustomNotificationSoundsExposure", () => {
+      I.CustomNotificationSoundExperiment.trackExposure({
         location: "PremiumManager"
       })
-    }), T(this, "_handlePremiumPaymentModalOpen", e => {
+    }), A(this, "_handlePremiumPaymentModalOpen", e => {
       (0, u.default)({
         ...e,
         analyticsLocations: [o.default.OVERLAY],
@@ -119,7 +129,7 @@ class A extends r.default {
           })
         }
       })
-    }), T(this, "_handlePremiumPaymentModalClose", e => {
+    }), A(this, "_handlePremiumPaymentModalClose", e => {
       let {
         didSucceed: t
       } = e;
@@ -127,4 +137,4 @@ class A extends r.default {
     })
   }
 }
-t.default = new A
+t.default = new L
