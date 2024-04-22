@@ -1,54 +1,68 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   ClanDiscoveryGame: function() {
     return i
   },
   ClanDiscoveryMode: function() {
     return l
   },
-  buildSearchCriteriaFromUIState: function() {
+  GENSHIN_BACKGROUND_URL: function() {
+    return u
+  },
+  VALORANT_BACKGROUND_URL: function() {
     return d
   },
+  buildSearchCriteriaFromUIState: function() {
+    return f
+  },
   useClanDiscoveryUIStore: function() {
-    return u
+    return c
   }
 });
-var a, s, l, i, r = n("652874"),
-  o = n("308083");
-(a = l || (l = {})).DISCOVERY = "discovery", a.PLAYSTYLE = "playstyle", a.TRAITS = "traits", a.GAMES = "games", (s = i || (i = {})).VALORANT = "valorant", s.GENSHIN = "genshin";
-let u = (0, r.default)(e => ({
-  mode: "discovery",
-  game: "valorant",
-  selectedGames: [],
-  selectedPlaystyle: {
-    id: o.ClanPlaystyles.SOCIAL,
-    name: "Very Casual"
-  },
-  selectedTraits: [],
-  setMode: t => e({
-    mode: t
-  }),
-  setGame: t => e({
-    game: t
-  }),
-  setSelectedGames: t => e({
-    selectedGames: t
-  }),
-  setSelectedPlaystyle: t => e({
-    selectedPlaystyle: t
-  }),
-  setSelectedTraits: t => e({
-    selectedTraits: t
-  })
-}));
+var n, s, l, i, r = a("652874"),
+  o = a("868888");
+(n = l || (l = {})).GET_STARTED = "get_started", n.DISCOVERY = "discovery", n.PLAYSTYLE = "playstyle", n.TRAITS = "traits", n.GAMES = "games", (s = i || (i = {})).VALORANT = "valorant", s.GENSHIN = "genshin";
+let u = "https://cdn.discordapp.com/assets/clans/Genshin_GetStarted_Background.png",
+  d = "https://cdn.discordapp.com/assets/clans/Valorant_GetStarted_Background.png",
+  c = (0, r.default)((0, o.persist)(e => ({
+    mode: "get_started",
+    game: "valorant",
+    selectedGames: [],
+    selectedPlaystyle: null,
+    selectedTraits: [],
+    setMode: t => e({
+      mode: t
+    }),
+    setGame: t => e({
+      game: t
+    }),
+    setSelectedGames: t => e({
+      selectedGames: t
+    }),
+    setSelectedPlaystyle: t => e({
+      selectedPlaystyle: t
+    }),
+    setSelectedTraits: t => e({
+      selectedTraits: t
+    })
+  }), {
+    name: "clan-discovery",
+    partialize: e => ({
+      mode: e.mode,
+      game: e.game,
+      selectedGames: e.selectedGames,
+      selectedPlaystyle: e.selectedPlaystyle,
+      selectedTraits: e.selectedTraits
+    })
+  }));
 
-function d(e) {
+function f(e) {
   var t;
-  let n = e.selectedGames,
-    a = null === (t = e.selectedPlaystyle) || void 0 === t ? void 0 : t.id;
+  let a = e.selectedGames,
+    n = null !== (t = e.selectedPlaystyle) && void 0 !== t ? t : void 0;
   return {
-    games: n,
-    playstyle: a,
+    games: a,
+    playstyle: n,
     traits: e.selectedTraits
   }
 }
