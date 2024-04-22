@@ -50,58 +50,55 @@ var a = s("735250"),
   Z = s("434691");
 
 function X() {
-  let e = (0, d.useStateFromStores)([M.default], () => M.default.getPremiumTypeSubscription()),
-    t = (0, j.useHasDiscountApplied)(),
-    s = (0, j.useActiveDiscountInfo)(),
+  var e, t, s;
+  let n = (0, d.useStateFromStores)([M.default], () => M.default.getPremiumTypeSubscription()),
+    l = (0, j.useHasDiscountApplied)(),
+    r = (0, j.useActiveDiscountInfo)(),
     {
-      annualDiscountPercentage: n
+      annualDiscountPercentage: u
     } = (0, U.getAnnualDiscountsExperimentConfig)("PremiumManagementSettings"),
-    l = (0, h.default)();
-  if (null == e || null == e.planIdFromItems) return null;
-  let r = null != e.trialId,
-    u = e.planIdFromItems === Y.SubscriptionPlans.PREMIUM_YEAR_TIER_2,
-    E = t || r,
-    T = null != e.trialEndsAt ? o()(e.trialEndsAt).diff(o()(), "d") : 0,
-    f = Y.SubscriptionPlanInfo[e.planIdFromItems],
-    g = P.default.formatPriceString(P.default.getDefaultPrice(f.id), f.interval);
+    E = (0, h.default)();
+  if (null == n || null == n.planIdFromItems) return null;
+  let T = null != n.trialId,
+    f = n.planIdFromItems === Y.SubscriptionPlans.PREMIUM_YEAR_TIER_2,
+    g = l || T,
+    I = null != n.trialEndsAt ? o()(n.trialEndsAt).diff(o()(), "d") : 0,
+    N = Y.SubscriptionPlanInfo[n.planIdFromItems],
+    p = P.default.formatPriceString(P.default.getDefaultPrice(N.id), N.interval);
   return (0, a.jsxs)("div", {
     className: i()(z.tierCard, {
-      [z.withTier2Rim]: E
+      [z.withTier2Rim]: g
     }),
     children: [(0, a.jsxs)("div", {
       className: z.tierInfo,
       children: [(0, a.jsx)(D.default, {
         className: i()(z.tierTitle)
-      }), E ? (0, a.jsxs)(a.Fragment, {
-        children: [(r || !u) && (0, a.jsx)(F.PremiumPillWithSparkles, {
-          text: r ? W.default.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED : W.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED,
+      }), g ? (0, a.jsxs)(a.Fragment, {
+        children: [(T || !f) && (0, a.jsx)(F.PremiumPillWithSparkles, {
+          text: T ? W.default.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED : W.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED,
           className: z.topRimPill,
-          colorOptions: (0, c.isThemeDark)(l) ? F.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : F.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL
-        }), (r || !u) && (0, a.jsx)("div", {
+          colorOptions: (0, c.isThemeDark)(E) ? F.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : F.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL
+        }), (T || !f) && (0, a.jsx)("div", {
           className: z.rimGlowTier2
         }), (0, a.jsx)(S.Heading, {
           variant: "heading-md/normal",
           color: "always-white",
           className: z.trialHeader,
-          children: (() => {
-            var e, t, a;
-            if (r) return W.default.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION.format({
-              remainingTime: T,
-              price: g
-            });
-            u ? W.default.Messages.PREMIUM_TIER_CARD_ANNUAL_DISCOUNT_HEADER.format({
-              percent: null !== (e = null == s ? void 0 : s.percentage) && void 0 !== e ? e : n,
-              regularPrice: g
-            }) : W.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format({
-              percent: null !== (t = null == s ? void 0 : s.percentage) && void 0 !== t ? t : Y.DISCOUNT_PERCENTAGE_FALLBACK,
-              regularPrice: g,
-              numMonths: null !== (a = null == s ? void 0 : s.duration) && void 0 !== a ? a : Y.DISCOUNT_DURATION_FALLBACK
-            })
-          })()
+          children: T ? W.default.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION.format({
+            remainingTime: I,
+            price: p
+          }) : f ? W.default.Messages.PREMIUM_TIER_CARD_ANNUAL_DISCOUNT_HEADER.format({
+            percent: null !== (e = null == r ? void 0 : r.percentage) && void 0 !== e ? e : u,
+            regularPrice: p
+          }) : W.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format({
+            percent: null !== (t = null == r ? void 0 : r.percentage) && void 0 !== t ? t : Y.DISCOUNT_PERCENTAGE_FALLBACK,
+            regularPrice: p,
+            numMonths: null !== (s = null == r ? void 0 : r.duration) && void 0 !== s ? s : Y.DISCOUNT_DURATION_FALLBACK
+          })
         })]
       }) : (0, a.jsx)(k.default, {
         subscriptionTier: Y.PremiumSubscriptionSKUs.TIER_2,
-        interval: f.interval
+        interval: N.interval
       }), (0, a.jsx)(F.Tier2FeatureItems, {}), (0, a.jsx)(S.Button, {
         className: z.tierCardButton,
         color: S.Button.Colors.WHITE,
