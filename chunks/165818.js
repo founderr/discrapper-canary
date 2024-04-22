@@ -17,10 +17,12 @@ function l(e) {
     guildId: n,
     onClose: l
   } = e, u = (0, r.useStateFromStores)([a.default], () => null != n ? a.default.getGuild(n) : null), d = (0, r.useStateFromStores)([s.default], () => null != u ? s.default.getMember(u.id, t.id) : null);
-  return null == u || null == d || 0 === d.roles.length ? null : (0, i.jsx)(o.default, {
-    guild: u,
-    user: t,
-    userRoles: d.roles,
-    onClose: l
+  return null == u || null == d || 0 === d.roles.length ? null : (0, i.jsx)("div", {
+    children: (0, i.jsx)(o.default, {
+      guild: u,
+      user: t,
+      userRoles: d.roles,
+      onClose: l
+    })
   })
 }
