@@ -67,11 +67,8 @@ t.default = function(e) {
       },
       height: null != q ? q : 0,
       config: {
-        mass: 1,
-        tension: 170,
-        friction: 26,
-        precision: .01,
-        velocity: 0
+        tension: 450,
+        friction: 45
       },
       immediate: z,
       onRest: () => Z(!0)
