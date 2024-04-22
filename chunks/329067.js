@@ -1,14 +1,17 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return S
+    return T
+  },
+  useLightningCheckoutEligibility: function() {
+    return x
   }
 }), a("47120");
 var l = a("735250"),
   s = a("470079"),
   r = a("512722"),
-  n = a.n(r),
-  i = a("481060"),
+  i = a.n(r),
+  n = a("481060"),
   o = a("16084"),
   u = a("244526"),
   c = a("176919"),
@@ -17,35 +20,36 @@ var l = a("735250"),
   m = a("598"),
   C = a("409813"),
   p = a("333867"),
-  h = a("981631"),
-  E = a("893024");
-let g = e => {
+  h = a("74179"),
+  E = a("981631"),
+  g = a("893024");
+let b = e => {
     let {
       children: t,
       style: a,
       className: s,
       ...r
     } = e;
-    return (0, l.jsx)(i.Button, {
-      size: i.ButtonSizes.SMALL,
+    return (0, l.jsx)(n.Button, {
+      size: n.ButtonSizes.SMALL,
       fullWidth: !0,
-      look: i.Button.Looks.FILLED,
+      look: n.Button.Looks.FILLED,
       style: a,
       className: s,
       ...r,
       children: t
     })
   },
-  b = e => {
+  S = e => {
     let {
       children: t,
       className: a,
       ...s
     } = e;
-    return (0, l.jsx)(i.Button, {
-      size: i.ButtonSizes.SMALL,
-      look: i.ButtonLooks.BLANK,
-      color: i.ButtonColors.TRANSPARENT,
+    return (0, l.jsx)(n.Button, {
+      size: n.ButtonSizes.SMALL,
+      look: n.ButtonLooks.BLANK,
+      color: n.ButtonColors.TRANSPARENT,
       className: a,
       fullWidth: !0,
       ...s,
@@ -53,12 +57,24 @@ let g = e => {
     })
   };
 
-function S(e) {
+function x() {
+  let {
+    defaultPaymentSource: e
+  } = (0, h.default)({
+    isGift: !1,
+    activeSubscription: null
+  });
+  return {
+    userIsEligible: null !== e && !E.REDIRECTED_PAYMENT_SOURCES.has(e.type)
+  }
+}
+
+function T(e) {
   let {
     onPurchaseComplete: t,
     paymentSource: a,
     loadId: r,
-    skuId: S,
+    skuId: h,
     isGift: x = !1,
     customButtonStyle: T,
     analyticsLocations: L
@@ -68,16 +84,16 @@ function S(e) {
     paymentAuthenticationState: N,
     application: _,
     skuPricePreviewsById: y
-  } = (0, m.usePaymentContext)(), [O, k] = s.useState(!1), A = s.useRef(null), j = y[S], R = null != j ? j[a.id] : null, P = null != R ? (0, f.formatPrice)(null == R ? void 0 : R.amount, null == R ? void 0 : R.currency) : "";
+  } = (0, m.usePaymentContext)(), [O, k] = s.useState(!1), A = s.useRef(null), R = y[h], j = null != R ? R[a.id] : null, P = null != j ? (0, f.formatPrice)(null == j ? void 0 : j.amount, null == j ? void 0 : j.currency) : "";
   s.useEffect(() => {
     v !== C.Step.REVIEW && I(C.Step.REVIEW)
   });
   let B = async () => {
-    n()(null != R, "skuPricePreview can't be null"), n()(null != _, "application can't be null");
+    i()(null != j, "skuPricePreview can't be null"), i()(null != _, "application can't be null");
     try {
-      await (0, o.purchaseSKU)(_.id, S, {
-        expectedAmount: R.amount,
-        expectedCurrency: R.currency,
+      await (0, o.purchaseSKU)(_.id, h, {
+        expectedAmount: j.amount,
+        expectedCurrency: j.currency,
         isGift: x,
         paymentSource: a,
         loadId: r
@@ -87,9 +103,9 @@ function S(e) {
     e === C.Step.CONFIRM && (k(!1), t()), I(e)
   }, [I, t]);
   return (0, c.usePaymentStepForAuthentication)(v, N, F), (0, l.jsxs)("div", {
-    className: E.reviewContainer,
-    children: [(0, l.jsx)(i.FormSection, {
-      children: (0, l.jsx)(i.FormItem, {
+    className: g.reviewContainer,
+    children: [(0, l.jsx)(n.FormSection, {
+      children: (0, l.jsx)(n.FormItem, {
         children: (0, l.jsx)(u.default, {
           paymentSource: a,
           isDefault: !0,
@@ -101,27 +117,27 @@ function S(e) {
       })
     }), (0, l.jsx)("div", {
       color: "always-white",
-      className: E.legalTerms,
+      className: g.legalTerms,
       children: (0, l.jsxs)("p", {
-        children: ["Non-refundable. By clicking, you are agreeing to our", " ", (0, l.jsx)(i.Anchor, {
-          href: d.default.getArticleURL(h.HelpdeskArticles.PAID_TERMS),
+        children: ["Non-refundable. By clicking, you are agreeing to our", " ", (0, l.jsx)(n.Anchor, {
+          href: d.default.getArticleURL(E.HelpdeskArticles.PAID_TERMS),
           children: "Paid Services Terms."
         })]
       })
-    }), (0, l.jsx)(g, {
+    }), (0, l.jsx)(b, {
       style: T,
-      className: E.buyButton,
+      className: g.buyButton,
       submitting: O,
       submittingStartedLabel: "Payment Processing",
       onClick: async () => {
         k(!0), await B()
       },
       children: "Pay " + P
-    }), !O && (0, l.jsx)(b, {
-      className: E.reviewButton,
+    }), !O && (0, l.jsx)(S, {
+      className: g.reviewButton,
       onClick: () => {
         (0, p.default)({
-          skuId: S,
+          skuId: h,
           analyticsLocations: L,
           returnRef: A
         })
