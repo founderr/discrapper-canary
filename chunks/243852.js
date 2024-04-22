@@ -1,42 +1,42 @@
 "use strict";
-n.r(t), n("47120");
-var a, s, l, i, r, o = n("442837"),
-  u = n("433517"),
-  d = n("846519"),
-  c = n("570140"),
-  f = n("278323"),
-  E = n("581567"),
-  h = n("594190"),
-  _ = n("454175"),
-  C = n("619914"),
-  m = n("581883"),
-  S = n("70956"),
-  I = n("780570"),
-  p = n("314897"),
-  T = n("77498"),
-  g = n("283595"),
-  A = n("19780"),
-  N = n("944486"),
-  v = n("981631");
+a.r(t), a("47120");
+var n, s, l, i, r, o = a("442837"),
+  u = a("433517"),
+  d = a("846519"),
+  c = a("570140"),
+  f = a("278323"),
+  E = a("581567"),
+  h = a("594190"),
+  _ = a("454175"),
+  C = a("619914"),
+  m = a("581883"),
+  S = a("70956"),
+  I = a("780570"),
+  p = a("314897"),
+  T = a("77498"),
+  g = a("283595"),
+  A = a("19780"),
+  N = a("944486"),
+  v = a("981631");
 let R = "ActivityTrackingStore",
   O = 30 * S.default.Millis.MINUTE,
   L = 5 * S.default.Millis.MINUTE,
-  P = null !== (a = u.Storage.get(R)) && void 0 !== a ? a : {},
+  P = null !== (n = u.Storage.get(R)) && void 0 !== n ? n : {},
   M = {},
   x = !1;
 
 function y(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
   t && D(e, !0);
-  let n = M[e.applicationId];
-  null != n && (n.stop(), delete M[e.applicationId]), delete P[e.applicationId], u.Storage.set(R, P)
+  let a = M[e.applicationId];
+  null != a && (a.stop(), delete M[e.applicationId]), delete P[e.applicationId], u.Storage.set(R, P)
 }
 
 function D(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    n = Date.now(),
-    a = null != e.updatedAt ? n - e.updatedAt : 0;
-  a > O + L && (a = 0);
+    a = Date.now(),
+    n = null != e.updatedAt ? a - e.updatedAt : 0;
+  n > O + L && (n = 0);
   let s = (0, I.shouldShareApplicationActivity)(e.applicationId, g.default),
     l = N.default.getVoiceChannelId(),
     i = p.default.getSessionId(),
@@ -46,17 +46,17 @@ function D(e) {
     distributor: e.isDiscordApplication ? v.Distributors.DISCORD : e.distributor,
     shareActivity: s,
     token: e.token,
-    duration: Math.floor(a / 1e3),
+    duration: Math.floor(n / 1e3),
     closed: t,
     exePath: e.exePath,
     voiceChannelId: l,
     sessionId: i,
     mediaSessionId: r
-  }), e.updatedAt = n;
+  }), e.updatedAt = a;
   let o = (0, C.isUserRecentGamesExperimentEnabled)({
     location: "28tk0bf_6"
   });
-  t && s && o && _.default.updateUserRecentGamesLocal(e.applicationId, Math.floor(a / 1e3));
+  t && s && o && _.default.updateUserRecentGamesLocal(e.applicationId, Math.floor(n / 1e3));
   let c = M[e.applicationId];
   null == c && (c = M[e.applicationId] = new d.Interval).start(O, () => D(e)), !t && (P[e.applicationId] = e, u.Storage.set(R, P))
 }
@@ -64,22 +64,22 @@ function D(e) {
 function b() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
     t = h.default.getVisibleRunningGames(),
-    n = new Set;
+    a = new Set;
   for (let {
       name: e,
-      distributor: a,
+      distributor: n,
       exePath: s
     }
     of t) {
     let t = T.default.getGameByName(e);
-    if (null != t) n.add(t.id), !(t.id in P) && D({
+    if (null != t) a.add(t.id), !(t.id in P) && D({
       applicationId: t.id,
       updatedAt: Date.now(),
-      distributor: a,
+      distributor: n,
       exePath: (0, E.removeExecutablePathPrefix)(null != s ? s : "")
     })
   }
-  for (let t of Object.keys(P)) !n.has(t) && y(P[t], e)
+  for (let t of Object.keys(P)) !a.has(t) && y(P[t], e)
 }
 
 function U() {
@@ -116,16 +116,16 @@ r = "ActivityTrackingStore", (i = "displayName") in(l = j) ? Object.defineProper
   ACTIVITY_UPDATE_SUCCESS: function(e) {
     let {
       applicationId: t,
-      token: n
-    } = e, a = P[t];
-    if (null == a) return !1;
-    a.token = n, u.Storage.set(R, P)
+      token: a
+    } = e, n = P[t];
+    if (null == n) return !1;
+    n.token = a, u.Storage.set(R, P)
   },
   ACTIVITY_UPDATE_FAIL: function(e) {
     let {
       applicationId: t
-    } = e, n = P[t];
-    if (null == n) return !1;
-    n.token = null, n.updatedAt = null, u.Storage.set(R, P)
+    } = e, a = P[t];
+    if (null == a) return !1;
+    a.token = null, a.updatedAt = null, u.Storage.set(R, P)
   }
 })

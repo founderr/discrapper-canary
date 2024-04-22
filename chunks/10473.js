@@ -1,18 +1,18 @@
 "use strict";
-n.r(t);
-var a, s = n("505578"),
-  l = n.n(s),
-  i = n("442837"),
-  r = n("570140"),
-  o = n("70956");
+a.r(t);
+var n, s = a("505578"),
+  l = a.n(s),
+  i = a("442837"),
+  r = a("570140"),
+  o = a("70956");
 
-function u(e, t, n) {
+function u(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: a,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = a, e
 }
 let d = {},
   c = {
@@ -20,7 +20,7 @@ let d = {},
   },
   f = [],
   E = {};
-class h extends(a = i.default.PersistedStore) {
+class h extends(n = i.default.PersistedStore) {
   initialize(e) {
     null != e && (f = e.favoriteClans)
   }

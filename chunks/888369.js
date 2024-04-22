@@ -247,7 +247,7 @@ function X() {
   return null != e && F(e.getGuildId(), [e.id])
 }
 
-function Q(e) {
+function q(e) {
   let {
     user: t,
     guildId: n
@@ -255,7 +255,7 @@ function Q(e) {
   return t.id === _.default.getId() && x(n)
 }
 
-function q(e) {
+function Q(e) {
   let {
     channelId: t
   } = e, n = c.default.getChannel(t);
@@ -494,9 +494,9 @@ class eT extends S.default {
       GUILD_CREATE: W,
       GUILD_DELETE: K,
       MESSAGE_CREATE: Z,
-      MESSAGE_ACK: q,
+      MESSAGE_ACK: Q,
       BULK_ACK: et,
-      UPDATE_CHANNEL_DIMENSIONS: q,
+      UPDATE_CHANNEL_DIMENSIONS: Q,
       CHANNEL_SELECT: J,
       CHANNEL_DELETE: z,
       WINDOW_FOCUS: X,
@@ -513,7 +513,7 @@ class eT extends S.default {
       THREAD_MEMBER_UPDATE: ea,
       THREAD_MEMBERS_UPDATE: eo,
       PASSIVE_UPDATE_V1: eu,
-      GUILD_MEMBER_UPDATE: Q,
+      GUILD_MEMBER_UPDATE: q,
       USER_GUILD_SETTINGS_FULL_UPDATE: ec,
       USER_GUILD_SETTINGS_CHANNEL_UPDATE: eI,
       USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: eI,
@@ -523,17 +523,17 @@ class eT extends S.default {
       GUILD_SCHEDULED_EVENT_CREATE: ei,
       GUILD_SCHEDULED_EVENT_UPDATE: ei,
       GUILD_SCHEDULED_EVENT_DELETE: er,
-      CHANNEL_RTC_UPDATE_CHAT_OPEN: q,
-      LOAD_MESSAGES_SUCCESS: q,
-      CHANNEL_ACK: q,
-      CHANNEL_LOCAL_ACK: q,
+      CHANNEL_RTC_UPDATE_CHAT_OPEN: Q,
+      LOAD_MESSAGES_SUCCESS: Q,
+      CHANNEL_ACK: Q,
+      CHANNEL_LOCAL_ACK: Q,
       NOTIFICATION_SETTINGS_UPDATE: j,
       RECOMPUTE_READ_STATES: j,
-      VOICE_CHANNEL_SELECT: q,
-      ENABLE_AUTOMATIC_ACK: q,
-      RESORT_THREADS: q,
+      VOICE_CHANNEL_SELECT: Q,
+      ENABLE_AUTOMATIC_ACK: Q,
+      RESORT_THREADS: Q,
       NOTIFICATION_CENTER_CLEAR_GUILD_MENTIONS: eE,
-      TRY_ACK: q
+      TRY_ACK: Q
     })
   }
 }

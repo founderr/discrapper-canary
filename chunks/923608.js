@@ -1,20 +1,20 @@
 "use strict";
-n.r(t);
-var a = n("735250"),
-  s = n("470079"),
-  l = n("524437"),
-  i = n("605236"),
-  r = n("150340"),
-  o = n("434404"),
-  u = n("626135"),
-  d = n("428695"),
-  c = n("981631"),
-  f = n("921944"),
-  E = n("689938");
+a.r(t);
+var n = a("735250"),
+  s = a("470079"),
+  l = a("524437"),
+  i = a("605236"),
+  r = a("150340"),
+  o = a("434404"),
+  u = a("626135"),
+  d = a("428695"),
+  c = a("981631"),
+  f = a("921944"),
+  E = a("689938");
 t.default = e => {
   let {
     guild: t,
-    markAsDismissed: n
+    markAsDismissed: a
   } = e;
   s.useEffect(() => {
     (0, i.requestMarkDismissibleContentAsShown)(l.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE)
@@ -31,9 +31,9 @@ t.default = e => {
       u.default.track(c.AnalyticEvents.UPSELL_CLICKED, {
         type: l.DismissibleContent[l.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE],
         action: "dismiss"
-      }), n(f.ContentDismissActionType.UNKNOWN), (0, r.dismissedGuildOnboardingUpsell)(t.id, l.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE)
-    }, [t.id, n]);
-  return (0, a.jsx)(d.default, {
+      }), a(f.ContentDismissActionType.UNKNOWN), (0, r.dismissedGuildOnboardingUpsell)(t.id, l.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE)
+    }, [t.id, a]);
+  return (0, n.jsx)(d.default, {
     guild: t,
     onDismissed: _,
     onClick: h,

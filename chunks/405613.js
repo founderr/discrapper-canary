@@ -1,20 +1,20 @@
 "use strict";
-t.r(l), t.d(l, {
+n.r(t), n.d(t, {
   default: function() {
-    return i
+    return a
   }
 });
-var n = t("134432"),
-  s = t("981631");
+var s = n("134432"),
+  l = n("981631");
 
-function i(e, l) {
-  let t;
+function a(e, t) {
+  let n;
   if (null == e.image) return null;
-  null == l && (l = window.screen.width * (0, n.getDevicePixelRatio)()), l = (0, n.getBestMediaProxySize)(l);
-  let i = window.GLOBAL_ENV.CDN_HOST;
-  if (null != i) {
-    var a;
-    t = "".concat((a = "https:", "https:"), "//").concat(i, "/guild-events/").concat(e.id, "/").concat(e.image)
-  } else t = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + s.Endpoints.GUILD_EVENT_IMAGE(e.id, e.image, "png");
-  return t += "?size=".concat(l)
+  null == t && (t = window.screen.width * (0, s.getDevicePixelRatio)()), t = (0, s.getBestMediaProxySize)(t);
+  let a = window.GLOBAL_ENV.CDN_HOST;
+  if (null != a) {
+    var r;
+    n = "".concat((r = "https:", "https:"), "//").concat(a, "/guild-events/").concat(e.id, "/").concat(e.image)
+  } else n = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + l.Endpoints.GUILD_EVENT_IMAGE(e.id, e.image, "png");
+  return n += "?size=".concat(t)
 }

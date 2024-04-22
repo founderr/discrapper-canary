@@ -1,17 +1,17 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return r
   }
-}), n("789020");
-var a = n("928518"),
-  s = n("630388"),
-  l = n("917107"),
-  i = n("981631");
+}), a("789020");
+var n = a("928518"),
+  s = a("630388"),
+  l = a("917107"),
+  i = a("981631");
 
 function r(e, t) {
-  var n;
-  let r = (0, s.hasFlag)(null !== (n = e.flags) && void 0 !== n ? n : 0, i.ApplicationFlags.EMBEDDED),
-    o = a.default.getWindowOpen(i.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
+  var a;
+  let r = (0, s.hasFlag)(null !== (a = e.flags) && void 0 !== a ? a : 0, i.ApplicationFlags.EMBEDDED),
+    o = n.default.getWindowOpen(i.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
   return r && o && (0, l.default)(t)
 }

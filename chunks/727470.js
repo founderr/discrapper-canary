@@ -1,6 +1,6 @@
 "use strict";
-n.r(t);
-let a = (0, n("818083").createExperiment)({
+a.r(t);
+let n = (0, a("818083").createExperiment)({
   kind: "user",
   id: "2024-02_collectibles_anime_v2_marketing",
   label: "Anime V2 marketing Experiment",
@@ -19,7 +19,7 @@ t.default = e => {
   let {
     location: t
   } = e;
-  return a.useExperiment({
+  return n.useExperiment({
     location: t
   })
 }

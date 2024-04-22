@@ -1,8 +1,8 @@
 "use strict";
-n.r(t);
-var a = n("818083"),
-  s = n("302800");
-let l = (0, a.createExperiment)({
+a.r(t);
+var n = a("818083"),
+  s = a("302800");
+let l = (0, n.createExperiment)({
   kind: "user",
   id: "2024-02_collectibles_shop_elements_marketing",
   label: "Collectibles Shop Marketing Experiment - Elements",

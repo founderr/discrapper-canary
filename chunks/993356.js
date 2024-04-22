@@ -116,7 +116,7 @@ function f(e) {
     action: () => (0, a.openModalLazy)(async () => {
       let {
         default: t
-      } = await Promise.all([i.e("99387"), i.e("70205"), i.e("5863"), i.e("37331")]).then(i.bind(i, "751212"));
+      } = await Promise.all([i.e("99387"), i.e("70205"), i.e("5863"), i.e("37918")]).then(i.bind(i, "751212"));
       return i => (0, n.jsx)(t, {
         ...i,
         guildId: e.id

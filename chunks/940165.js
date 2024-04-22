@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return S
   }
 });
 var s = n("735250");
@@ -12,27 +12,27 @@ var a = n("120356"),
   o = n("793030"),
   u = n("481060"),
   l = n("471113"),
-  c = n("552958"),
-  _ = n("169776");
+  _ = n("552958"),
+  c = n("169776");
 
-function d(e) {
+function S(e) {
   let {
     showGradient: t,
     className: n
   } = e, {
     playSound: a,
-    isPlaying: d
-  } = (0, c.default)(), S = t ? l.default : o.Text;
+    isPlaying: S
+  } = (0, _.default)(), d = t ? l.default : o.Text;
   return (0, s.jsxs)(u.Clickable, {
-    className: r()(_.container, {
-      [_.containerActive]: d
+    className: r()(c.container, {
+      [c.containerActive]: S
     }, n),
     onClick: () => a(),
     children: [(0, s.jsx)(i.CirclePlayIcon, {
-      className: _.playButton,
-      color: d ? u.tokens.colors.INTERACTIVE_ACTIVE : u.tokens.colors.INTERACTIVE_NORMAL
+      className: c.playButton,
+      color: S ? u.tokens.colors.INTERACTIVE_ACTIVE : u.tokens.colors.INTERACTIVE_NORMAL
     }), (0, s.jsxs)("div", {
-      children: [(0, s.jsx)(S, {
+      children: [(0, s.jsx)(d, {
         variant: "text-md/medium",
         children: "Dicord default"
       }), (0, s.jsx)(o.Text, {

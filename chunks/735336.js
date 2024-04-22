@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return Q
+    return q
   }
 }), n("47120");
 var i = n("735250"),
@@ -156,7 +156,7 @@ function X(e) {
   })
 }
 
-function Q(e) {
+function q(e) {
   var t, n, s;
   let {
     user: _,
@@ -170,7 +170,7 @@ function Q(e) {
     allowEdit: y = !0,
     showPremiumBadgeUpsell: W = !0,
     hasProfileEffect: K = !1
-  } = e, Q = (0, l.useStateFromStores)([N.default], () => N.default.getGuild(L)), q = (0, l.useStateFromStores)([A.default], () => A.default.getId()) === _.id && y, Z = U.default.isPremiumAtLeast(null == c ? void 0 : c.premiumType, H.PremiumTypes.TIER_2), {
+  } = e, q = (0, l.useStateFromStores)([N.default], () => N.default.getGuild(L)), Q = (0, l.useStateFromStores)([A.default], () => A.default.getId()) === _.id && y, Z = U.default.isPremiumAtLeast(null == c ? void 0 : c.premiumType, H.PremiumTypes.TIER_2), {
     trackUserProfileAction: J
   } = (0, b.useUserProfileAnalyticsContext)(), [$, ee] = r.useState(!1), et = (0, l.useStateFromStores)([R.default], () => R.default.isFocused()), en = h.GifAutoPlay.getSetting(), {
     bannerSrc: ei,
@@ -214,7 +214,7 @@ function Q(e) {
         backgroundImage: null != ei ? "url(".concat(ei, ")") : void 0,
         backgroundColor: er !== w.BannerLoadingStatus.COMPLETE ? u.default.unsafe_rawColors.PRIMARY_800.css : el
       },
-      children: [q ? null == Q ? (0, i.jsx)(X, {
+      children: [Q ? null == q ? (0, i.jsx)(X, {
         darkenOnHover: K && v,
         profileType: D,
         profileLabel: Y.default.Messages.EDIT_PROFILE,
@@ -234,7 +234,7 @@ function Q(e) {
           return (0, i.jsx)(F.default, {
             onClose: t,
             onSelect: O,
-            guild: Q
+            guild: q
           })
         },
         children: e => (0, i.jsx)(X, {

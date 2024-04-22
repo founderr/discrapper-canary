@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   GYOIKO_SAKURA_DECO_SKU_ID: function() {
     return l
   },
@@ -7,27 +7,27 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var a = n("180650");
+var n = a("180650");
 let s = {
-    [a.CollectiblesCategorySkuId.SPRINGTOONS]: {
+    [n.CollectiblesCategorySkuId.SPRINGTOONS]: {
       logoMaxWidth: "48%",
       addGradient: !1,
       showDarkBannerText: !0
     },
-    [a.CollectiblesCategorySkuId.ANIME_V2]: {
+    [n.CollectiblesCategorySkuId.ANIME_V2]: {
       addGradient: !1,
       showDarkBannerText: !0
     },
-    [a.CollectiblesCategorySkuId.ELEMENTS]: {
+    [n.CollectiblesCategorySkuId.ELEMENTS]: {
       addGradient: !0
     },
-    [a.CollectiblesCategorySkuId.LUNAR_NEW_YEAR]: {
+    [n.CollectiblesCategorySkuId.LUNAR_NEW_YEAR]: {
       addGradient: !0
     },
-    [a.CollectiblesCategorySkuId.CYBERPUNK]: {
+    [n.CollectiblesCategorySkuId.CYBERPUNK]: {
       addGradient: !0
     },
-    [a.CollectiblesCategorySkuId.SHY]: {
+    [n.CollectiblesCategorySkuId.SHY]: {
       addGradient: !1
     }
   },

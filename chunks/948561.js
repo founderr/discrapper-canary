@@ -327,7 +327,7 @@ async function X() {
   } = await (0, p.fetchValidContentScanVersion)();
   i = e.version
 }
-class Q extends d.default {
+class q extends d.default {
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
@@ -353,4 +353,4 @@ class Q extends d.default {
     }) : t[n] = i
   }
 }
-t.default = new Q
+t.default = new q

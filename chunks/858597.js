@@ -98,9 +98,9 @@ t.default = function(e) {
       cta: e,
       isNudgeWarning: p
     })
-  }, [T, n, t, r, p]), m = l.useCallback(() => {
+  }, [T, n, t, r, p]), g = l.useCallback(() => {
     (0, _.closeModal)(R.SAFETY_TOOLS_MODAL_KEY), v(I.CtaEventTypes.USER_SAFETY_TOOLS_BLOCK_CONFIRM)
-  }, [v]), g = l.useCallback(() => {
+  }, [v]), m = l.useCallback(() => {
     i.default.unblockUser(t, {
       location: R.MODAL_LOCATION_CONTEXT_WEB
     }), v(I.CtaEventTypes.USER_SAFETY_TOOLS_UNBLOCK)
@@ -131,7 +131,7 @@ t.default = function(e) {
       buttonText: B ? N.default.Messages.INAPPROPRIATE_CONVERSATION_UNBLOCK : N.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_TITLE,
       buttonColor: _.ButtonColors.BRAND,
       onPress: () => {
-        B ? g() : (0, _.openModalLazy)(async () => {
+        B ? m() : (0, _.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([s.e("99387"), s.e("41128")]).then(s.bind(s, "699783"));
@@ -142,7 +142,7 @@ t.default = function(e) {
             } = s;
             return (0, a.jsx)(e, {
               transitionState: l,
-              onBlock: m,
+              onBlock: g,
               onBlockAndReport: P,
               onCancel: () => {
                 null == n || n(), v(I.CtaEventTypes.USER_SAFETY_TOOLS_BLOCK_CANCEL)
@@ -171,7 +171,7 @@ t.default = function(e) {
         (0, C.default)(_.closeAllModals), v(I.CtaEventTypes.USER_SAFETY_TOOLS_VIBING_WUMPUS)
       }
     }]
-  }, [B, F, v, g, m, P, t, T, Y]), j = l.useMemo(() => [{
+  }, [B, F, v, m, g, P, t, T, Y]), j = l.useMemo(() => [{
     title: N.default.Messages.SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE,
     onPress: () => {
       S(L.SafetyToolsSlides.SAFETY_TIPS), v(I.CtaEventTypes.USER_SAFETY_TOOLS_SAFETY_TIPS)

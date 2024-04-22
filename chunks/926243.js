@@ -124,7 +124,7 @@ function C(e) {
     })
   }, X = () => {
     !m.current && !p.current && S(t)
-  }, Q = e => {
+  }, q = e => {
     (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -133,7 +133,7 @@ function C(e) {
         ...t
       })
     })
-  }, q = function() {
+  }, Q = function() {
     var e;
     let {
       onMouseEnter: t,
@@ -170,7 +170,7 @@ function C(e) {
         }
         z(e)
       },
-      onContextMenu: Q,
+      onContextMenu: q,
       tabIndex: l,
       columnIndex: K,
       rowIndex: c,
@@ -186,6 +186,6 @@ function C(e) {
     }),
     position: "top",
     delay: 200,
-    children: e => q(e)
-  }, s) : q()
+    children: e => Q(e)
+  }, s) : Q()
 }

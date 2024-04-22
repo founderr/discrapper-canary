@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   loadStaticClanDiscovery: function() {
     return d
   },
@@ -7,38 +7,38 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var a = n("505578"),
-  s = n.n(a),
-  l = n("544891"),
-  i = n("570140"),
-  r = n("10473"),
-  o = n("976757"),
-  u = n("981631");
+var n = a("505578"),
+  s = a.n(n),
+  l = a("544891"),
+  i = a("570140"),
+  r = a("10473"),
+  o = a("976757"),
+  u = a("981631");
 
 function d(e) {
   return l.HTTP.get({
     url: u.Endpoints.DISCOVERY_GAME(e)
   }).then(t => {
-    let n = t.body.clans.map(o.buildClanFromServer);
+    let a = t.body.clans.map(o.buildClanFromServer);
     i.default.dispatch({
       type: "FETCH_STATIC_CLAN_LIST_SUCCESS",
       game: e,
-      clans: n
+      clans: a
     })
   })
 }
 
 function c(e, t) {
-  let n = r.default.getStaticClans(e),
-    a = s().v3(JSON.stringify(t)),
+  let a = r.default.getStaticClans(e),
+    n = s().v3(JSON.stringify(t)),
     l = {
       status: "loaded",
       loadedAt: Date.now(),
-      items: n.sort((e, n) => (0, o.getClanDiscoveryAffinity)(n, t) - (0, o.getClanDiscoveryAffinity)(e, t))
+      items: a.sort((e, a) => (0, o.getClanDiscoveryAffinity)(a, t) - (0, o.getClanDiscoveryAffinity)(e, t))
     };
   i.default.dispatch({
     type: "FETCH_CLAN_DISCOVERY_SEARCH_RESULT_SUCCESS",
-    criteriaHash: a,
+    criteriaHash: n,
     searchResult: l
   })
 }

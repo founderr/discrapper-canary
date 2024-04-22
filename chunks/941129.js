@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   useIsSafetyConsumerEducationBlockMuteBucket: function() {
     return l
   },
@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return s
   }
 });
-let a = (0, n("818083").createExperiment)({
+let n = (0, a("818083").createExperiment)({
   kind: "user",
   id: "2023-01_consumer_education_launch",
   label: "Safety Consumer Education Launch - Block/Mute",
@@ -33,7 +33,7 @@ let a = (0, n("818083").createExperiment)({
 });
 
 function s() {
-  return a.useExperiment({
+  return n.useExperiment({
     location: "b85a21_1"
   }, {
     autoTrackExposure: !0
@@ -41,7 +41,7 @@ function s() {
 }
 
 function l() {
-  return a.useExperiment({
+  return n.useExperiment({
     location: "b85a21_2"
   }, {
     autoTrackExposure: !1

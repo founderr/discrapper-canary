@@ -1,47 +1,47 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return D
   }
-}), n("47120");
-var a = n("735250"),
-  s = n("470079"),
-  l = n("392711"),
-  i = n.n(l),
-  r = n("954955"),
-  o = n.n(r),
-  u = n("442837"),
-  d = n("481060"),
-  c = n("570140"),
-  f = n("265875"),
-  E = n("569984"),
-  h = n("918701"),
-  _ = n("800599"),
-  C = n("594174"),
-  m = n("801077"),
-  S = n("626135"),
-  I = n("70956"),
-  p = n("225559"),
-  T = n("910436"),
-  g = n("203028"),
-  A = n("358924"),
-  N = n("292140"),
-  v = n("525296"),
-  R = n("981631"),
-  O = n("674563"),
-  L = n("689938"),
-  P = n("103877");
+}), a("47120");
+var n = a("735250"),
+  s = a("470079"),
+  l = a("392711"),
+  i = a.n(l),
+  r = a("954955"),
+  o = a.n(r),
+  u = a("442837"),
+  d = a("481060"),
+  c = a("570140"),
+  f = a("265875"),
+  E = a("569984"),
+  h = a("918701"),
+  _ = a("800599"),
+  C = a("594174"),
+  m = a("801077"),
+  S = a("626135"),
+  I = a("70956"),
+  p = a("225559"),
+  T = a("910436"),
+  g = a("203028"),
+  A = a("358924"),
+  N = a("292140"),
+  v = a("525296"),
+  R = a("981631"),
+  O = a("674563"),
+  L = a("689938"),
+  P = a("103877");
 let M = 15 * I.default.Millis.MINUTE,
   x = (0, v.default)(function(e) {
     let {
       party: t,
-      onUserContextMenu: n,
+      onUserContextMenu: a,
       onChannelContextMenu: l,
       quest: i
-    } = e, r = (0, a.jsx)(g.default, {
+    } = e, r = (0, n.jsx)(g.default, {
       party: t,
-      onUserContextMenu: n
-    }), u = (0, a.jsx)(T.default, {
+      onUserContextMenu: a
+    }), u = (0, n.jsx)(T.default, {
       party: t,
       onChannelContextMenu: l,
       quest: i
@@ -52,8 +52,8 @@ let M = 15 * I.default.Millis.MINUTE,
       voiceChannels: h
     } = t, _ = c.length, C = f.length, m = E.length, I = h.length > 0, p = s.useCallback(() => {
       let e = E.filter(e => {
-        var t, n;
-        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === O.ApplicationTypes.GAME
+        var t, a;
+        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (a = e.game) || void 0 === a ? void 0 : a.type) === O.ApplicationTypes.GAME
       }).map(e => e.game.name);
       S.default.track(R.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
         num_users: _,
@@ -63,29 +63,29 @@ let M = 15 * I.default.Millis.MINUTE,
         games_detected: e
       })
     }, [_, C, m, I, E]), v = o()(p, M);
-    return null != r || null != u ? (0, a.jsx)(d.Popout, {
+    return null != r || null != u ? (0, n.jsx)(d.Popout, {
       position: "left",
       renderPopout: e => {
         let {
-          closePopout: n
+          closePopout: a
         } = e;
-        return (0, a.jsx)(N.default, {
+        return (0, n.jsx)(N.default, {
           party: t,
-          close: n
+          close: a
         })
       },
       spacing: 8,
       children: (e, t) => {
         let {
-          isShown: n
+          isShown: a
         } = t;
-        return (0, a.jsx)(A.default, {
+        return (0, n.jsx)(A.default, {
           ...e,
           onMouseEnter: v,
           "aria-haspopup": "menu",
           className: P.itemCard,
-          active: n,
-          children: (0, a.jsxs)("div", {
+          active: a,
+          children: (0, n.jsxs)("div", {
             children: [r, u]
           })
         })
@@ -98,7 +98,7 @@ function D() {
   let {
     nowPlayingCards: e,
     loaded: t,
-    needsRefresh: n,
+    needsRefresh: a,
     fetching: l,
     currentUser: i
   } = (0, u.useStateFromStoresObject)([m.default, _.default, C.default], () => ({
@@ -109,18 +109,18 @@ function D() {
     currentUser: C.default.getCurrentUser()
   })), r = (0, u.useStateFromStores)([E.default], () => E.default.quests);
   s.useEffect(() => (c.default.wait(() => p.mount()), () => c.default.wait(() => p.unmount())), [null == i ? void 0 : i.id]), s.useEffect(() => {
-    n && !l && y()
-  }, [n, l]);
+    a && !l && y()
+  }, [a, l]);
   let o = s.useMemo(() => {
       let t = new Map,
-        n = new Set;
-      for (let a of e) a.party.currentActivities.forEach(e => {
+        a = new Set;
+      for (let n of e) n.party.currentActivities.forEach(e => {
         let {
           game: s
         } = e;
         if (null != s) {
           let e = (0, h.getQuestByApplicationId)(r, s.id);
-          null != e && !n.has(e.id) && (t.set(a.party.id, e), n.add(e.id))
+          null != e && !a.has(e.id) && (t.set(n.party.id, e), a.add(e.id))
         }
       });
       return t
@@ -130,26 +130,26 @@ function D() {
     let {
       party: t
     } = e;
-    return (0, a.jsx)(x, {
+    return (0, n.jsx)(x, {
       party: t,
       quest: o.get(t.id)
     }, t.id)
-  }) : (0, a.jsxs)("div", {
+  }) : (0, n.jsxs)("div", {
     className: P.emptyCard,
-    children: [(0, a.jsx)(d.Heading, {
+    children: [(0, n.jsx)(d.Heading, {
       variant: "heading-md/semibold",
       className: P.emptyHeader,
       children: L.default.Messages.ACTIVITY_FEED_NONE_PLAYING_HEADER
-    }), (0, a.jsx)(d.Text, {
+    }), (0, n.jsx)(d.Text, {
       color: "none",
       className: P.emptyText,
       variant: "text-sm/normal",
       children: L.default.Messages.ACTIVITY_FEED_NONE_PLAYING_BODY
     })]
-  }), (0, a.jsx)(a.Fragment, {
+  }), (0, n.jsx)(n.Fragment, {
     children: f
-  })) : (0, a.jsx)("div", {
+  })) : (0, n.jsx)("div", {
     className: P.emptyCard,
-    children: (0, a.jsx)(d.Spinner, {})
+    children: (0, n.jsx)(d.Spinner, {})
   })
 }

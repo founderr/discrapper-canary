@@ -180,10 +180,10 @@ function X(e) {
       experiments: n,
       guildExperiments: i
     } = e;
-  t && Q(n, i), R = !0
+  t && q(n, i), R = !0
 }
 
-function Q(e, t) {
+function q(e, t) {
   L = e, D = null != t ? t : [], e.forEach(e => {
     let [t, n, i, r, s, a, o, l] = e;
     v[t] = {
@@ -222,7 +222,7 @@ function Q(e, t) {
   })
 }
 
-function q(e, t, n) {
+function Q(e, t, n) {
   let i = null;
   for (let {
       buckets: s,
@@ -445,7 +445,7 @@ class el extends E.default {
   }
   loadCache() {
     let e = this.readSnapshot(el.LATEST_SNAPSHOT_VERSION);
-    null != e && ("loadedUserExperiments" in e ? (v = e.loadedUserExperiments, M = Z(e.loadedGuildExperiments)) : Q(e.rawUserExperiments, e.rawGuildExperiments))
+    null != e && ("loadedUserExperiments" in e ? (v = e.loadedUserExperiments, M = Z(e.loadedGuildExperiments)) : q(e.rawUserExperiments, e.rawGuildExperiments))
   }
   takeSnapshot() {
     return {
@@ -497,7 +497,7 @@ class el extends E.default {
       let _ = w("".concat(null !== (i = a.hashKey) && void 0 !== i ? i : n, ":").concat(t)) % 1e4,
         c = null;
       for (let e of null !== (r = a.overridesFormatted) && void 0 !== r ? r : [])
-        if (null !== (c = q(t, e, _))) return {
+        if (null !== (c = Q(t, e, _))) return {
           type: f.ExperimentTypes.GUILD,
           guildId: t,
           revision: a.revision,
@@ -506,7 +506,7 @@ class el extends E.default {
           hashResult: _,
           triggerDebuggingEnabled: d
         };
-      if (null == (c = q(t, a.populations, _))) return null;
+      if (null == (c = Q(t, a.populations, _))) return null;
       if (null != a.holdoutName && null != a.holdoutBucket && a.holdoutName !== n) {
         let n = e(t, a.holdoutName);
         if ((null == n ? void 0 : n.bucket) != null && (!0 !== n.override && W({

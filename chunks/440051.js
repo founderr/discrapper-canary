@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   ExpiringStatusExperiment: function() {
-    return a
+    return n
   }
 });
-let a = (0, n("818083").createExperiment)({
+let n = (0, a("818083").createExperiment)({
   kind: "user",
   id: "2024-01_expiring_status",
   label: "Expiring status Experiment ",

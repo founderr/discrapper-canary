@@ -41,9 +41,9 @@ let R = {
     LEFT: f().throttle(() => (0, N.playSound)("ddr-left"), 100),
     RIGHT: f().throttle(() => (0, N.playSound)("ddr-right"), 100)
   },
-  y = f()((0, g.getDefaultLayoutContent)()).groupBy(e => e.group).value();
+  M = f()((0, g.getDefaultLayoutContent)()).groupBy(e => e.group).value();
 
-function M(e) {
+function y(e) {
   switch (e.keyCode) {
     case A.KeyboardKeys.ARROW_UP:
       return "UP";
@@ -65,7 +65,7 @@ function b() {
     className: v.keyboardShortcutList,
     children: e.map((t, n) => {
       let l = n === e.length - 1,
-        a = y[t],
+        a = M[t],
         i = (0, g.getNameForKeybindGroup)(t),
         r = (0, g.getDescriptionForKeybindGroup)(t);
       return (0, s.jsxs)("div", {
@@ -279,13 +279,13 @@ class D extends i.PureComponent {
       }]
     })), x(this, "handleKeyDown", e => {
       if (this.lastInputedKeys.push(e.keyCode), this.lastInputedKeys = this.lastInputedKeys.slice(-5), this.lastInputedKeys[0] === A.KeyboardKeys.H && this.lastInputedKeys[1] === A.KeyboardKeys.H && this.lastInputedKeys[2] === A.KeyboardKeys.ARROW_RIGHT && this.lastInputedKeys[3] === A.KeyboardKeys.N && this.lastInputedKeys[4] === A.KeyboardKeys.K && this.props.activateRagingDemon(), this.props.keyboardModeEnabled) return;
-      let t = M(e);
+      let t = y(e);
       null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowDown({
         direction: t
       }))
     }), x(this, "handleKeyUp", e => {
       if (this.props.keyboardModeEnabled) return;
-      let t = M(e);
+      let t = y(e);
       null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowUp({
         direction: t
       }))

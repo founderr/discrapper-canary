@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return J
   },
   MessageStandardEmojiPopout: function() {
-    return q
+    return Q
   }
 }), n("47120");
 var i = n("735250"),
@@ -62,11 +62,11 @@ var i = n("735250"),
   K = n("474936"),
   z = n("689938"),
   X = n("163237");
-let Q = () => ({
+let q = () => ({
     page: null != (0, l.useStateFromStores)([M.default], () => M.default.getGuildId()) ? j.AnalyticsPages.GUILD_CHANNEL : j.AnalyticsPages.DM_CHANNEL,
     section: j.AnalyticsSections.EMOJI_UPSELL_POPOUT
   }),
-  q = e => {
+  Q = e => {
     let {
       node: t
     } = e;
@@ -241,15 +241,15 @@ let Q = () => ({
       guildEmoji: U,
       demoMode: b = !1,
       nonce: k
-    } = e, F = (0, l.useStateFromStores)([y.default], () => y.default.getCurrentUser()), V = (0, l.useStateFromStores)([M.default], () => M.default.getGuildId()), q = x.default.isPremium(F), J = null != V && (V === (null == S ? void 0 : S.id) || V === (null == O ? void 0 : O.id)), $ = null != O, et = null !== (t = null == S ? void 0 : S.isDiscoverable()) && void 0 !== t && t;
-    b && (q = !0, et = !0, $ = !1, J = !1);
+    } = e, F = (0, l.useStateFromStores)([y.default], () => y.default.getCurrentUser()), V = (0, l.useStateFromStores)([M.default], () => M.default.getGuildId()), Q = x.default.isPremium(F), J = null != V && (V === (null == S ? void 0 : S.id) || V === (null == O ? void 0 : O.id)), $ = null != O, et = null !== (t = null == S ? void 0 : S.isDiscoverable()) && void 0 !== t && t;
+    b && (Q = !0, et = !0, $ = !1, J = !1);
     let {
       enabled: en
     } = C.NitroBadgeOnEmojiHoverExperiment.useExperiment({
       location: "CustomGuildEmojiPopout"
     }, {
       autoTrackExposure: !0
-    }), ei = Q(), {
+    }), ei = q(), {
       isRoleSubscriptionEmoji: er,
       isUnusableRoleSubscriptionEmoji: es,
       userIsRoleSubscriber: ea
@@ -277,7 +277,7 @@ let Q = () => ({
     });
     let eu = M.default.getGuildId(),
       ed = (0, H.getEmojiPopoutData)({
-        isPremium: q,
+        isPremium: Q,
         hasJoinedEmojiSourceGuild: $,
         isRoleSubscriptionEmoji: er,
         isUnusableRoleSubscriptionEmoji: es,
@@ -292,7 +292,7 @@ let Q = () => ({
           }), (0, R.navigateToPremiumMarketingPage)()
         }
       }),
-      e_ = $ && es && !eo && (q && er || !q),
+      e_ = $ && es && !eo && (Q && er || !Q),
       ec = ed.emojiDescription,
       eE = (0, A.useTrackOpenPopout)({
         emojiId: u.emojiId,

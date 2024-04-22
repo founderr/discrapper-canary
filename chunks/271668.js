@@ -62,7 +62,7 @@ t.default = r.forwardRef(function(e, t) {
     placeholderCount: 7,
     limit: L.DISCOVERY_COMMANDS_QUERY_LIMIT,
     includeFrecency: !0
-  }), Q = (0, I.useSynchronizedActiveCategoryIndexForScrollPosition)({
+  }), q = (0, I.useSynchronizedActiveCategoryIndexForScrollPosition)({
     activeCategoryIndex: V,
     isScrolling: o,
     listRef: k,
@@ -75,13 +75,13 @@ t.default = r.forwardRef(function(e, t) {
     },
     scrollOffset: 20,
     searchQuery: ""
-  }), q = e => {
+  }), Q = e => {
     let t = H.length,
       n = Y.reduce((e, t) => e + t.data.length, 0) - (j ? 7 : 0);
-    j && e + 420 > 48 * t + 56 * n - 512 && z(), Q(e), U(), l.current = e
+    j && e + 420 > 48 * t + 56 * n - 512 && z(), q(e), U(), l.current = e
   };
   r.useEffect(() => {
-    q(l.current)
+    Q(l.current)
   }, [W]);
   let Z = r.useCallback(e => e !== H.length - 1 || j ? 16 : 0, [H.length, j]),
     J = Y.map(e => e.data.length);
@@ -209,7 +209,7 @@ t.default = r.forwardRef(function(e, t) {
       role: "listbox",
       className: M.list,
       listPadding: P,
-      onScroll: q,
+      onScroll: Q,
       renderRow: ei,
       renderSection: en,
       renderSectionHeader: et,

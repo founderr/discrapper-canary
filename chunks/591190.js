@@ -1,25 +1,25 @@
 "use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var s = n("120356"),
-  l = n.n(s),
-  i = n("691312");
-let r = () => (0, a.jsx)("div", {
+a.r(t);
+var n = a("735250");
+a("470079");
+var s = a("120356"),
+  l = a.n(s),
+  i = a("691312");
+let r = () => (0, n.jsx)("div", {
     className: i.spacer
   }),
-  o = () => (0, a.jsx)("div", {
+  o = () => (0, n.jsx)("div", {
     className: i.category
   }),
   u = e => {
     let {
       width: t
     } = e;
-    return (0, a.jsxs)("div", {
+    return (0, n.jsxs)("div", {
       className: i.channel,
-      children: [(0, a.jsx)("div", {
+      children: [(0, n.jsx)("div", {
         className: i.channelIcon
-      }), (0, a.jsx)("div", {
+      }), (0, n.jsx)("div", {
         className: i.channelName,
         style: {
           width: "".concat(t, "px")
@@ -31,33 +31,33 @@ t.default = e => {
   let {
     withBannerPadding: t
   } = e;
-  return (0, a.jsxs)("div", {
+  return (0, n.jsxs)("div", {
     className: l()(i.container, {
       [i.bannerPadding]: t
     }),
-    children: [(0, a.jsx)(o, {}), (0, a.jsx)(u, {
+    children: [(0, n.jsx)(o, {}), (0, n.jsx)(u, {
       width: 100
-    }), (0, a.jsx)(u, {
+    }), (0, n.jsx)(u, {
       width: 74
-    }), (0, a.jsx)(u, {
+    }), (0, n.jsx)(u, {
       width: 100
-    }), (0, a.jsx)(u, {
+    }), (0, n.jsx)(u, {
       width: 70
-    }), (0, a.jsx)(u, {
+    }), (0, n.jsx)(u, {
       width: 112
-    }), (0, a.jsx)(u, {
+    }), (0, n.jsx)(u, {
       width: 175
-    }), (0, a.jsx)(r, {}), (0, a.jsx)(o, {}), (0, a.jsx)(u, {
+    }), (0, n.jsx)(r, {}), (0, n.jsx)(o, {}), (0, n.jsx)(u, {
       width: 100
-    }), (0, a.jsx)(u, {
+    }), (0, n.jsx)(u, {
       width: 74
-    }), (0, a.jsx)(u, {
+    }), (0, n.jsx)(u, {
       width: 100
-    }), (0, a.jsx)(u, {
+    }), (0, n.jsx)(u, {
       width: 70
-    }), (0, a.jsx)(u, {
+    }), (0, n.jsx)(u, {
       width: 112
-    }), (0, a.jsx)(u, {
+    }), (0, n.jsx)(u, {
       width: 56
     })]
   })

@@ -25,10 +25,10 @@ n.default = (0, s.default)((0, o.default)(function(e) {
     channel: n,
     selected: o,
     onSelect: s
-  } = e, r = n.isOwner(m.default.getId()), g = (0, v.default)(n), N = (0, E.default)(n), p = (0, C.default)(I.ZERO_STRING_GUILD_ID, n.id), A = (0, _.default)(n, o), T = (0, c.default)({
+  } = e, r = n.isOwner(m.default.getId()), g = (0, v.default)(n), N = (0, E.default)(n), p = (0, C.default)(I.ZERO_STRING_GUILD_ID, n.id), T = (0, _.default)(n, o), A = (0, c.default)({
     id: n.id,
     label: S.default.Messages.COPY_ID_CHANNEL
-  }), x = (0, d.default)(n), O = (0, f.useAddToFavoritesItem)(n), G = (0, f.useRemoveFromFavoritesItem)(n), F = (0, M.default)(n), R = (0, h.default)(n);
+  }), x = (0, d.default)(n), O = (0, f.useAddToFavoritesItem)(n), G = (0, f.useRemoveFromFavoritesItem)(n), R = (0, M.default)(n), F = (0, h.default)(n);
   return null == n || n.isManaged() ? null : (0, a.jsxs)(u.Menu, {
     navId: "gdm-context",
     "aria-label": S.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
@@ -37,7 +37,7 @@ n.default = (0, s.default)((0, o.default)(function(e) {
     children: [(0, a.jsx)(u.MenuGroup, {
       children: g
     }), (0, a.jsxs)(u.MenuGroup, {
-      children: [O, F, R]
+      children: [O, R, F]
     }), (0, a.jsxs)(u.MenuGroup, {
       children: [r ? (0, a.jsx)(u.MenuItem, {
         id: "instant-invites",
@@ -75,11 +75,11 @@ n.default = (0, s.default)((0, o.default)(function(e) {
     }), (0, a.jsxs)(u.MenuGroup, {
       children: [N, p]
     }), (0, a.jsx)(u.MenuGroup, {
-      children: A
+      children: T
     }), (0, a.jsx)(u.MenuGroup, {
       children: G
     }), (0, a.jsx)(u.MenuGroup, {
-      children: T
+      children: A
     })]
   })
 }, {

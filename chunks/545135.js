@@ -25,8 +25,8 @@ var s = i("512722"),
   h = i("94953"),
   A = i("976192"),
   L = i("904483"),
-  p = i("429824"),
-  m = i("919815"),
+  m = i("429824"),
+  p = i("919815"),
   T = i("858822"),
   O = i("993356"),
   G = i("58338"),
@@ -67,9 +67,9 @@ function R(e) {
   }), Y = (0, L.default)(t), w = (0, S.default)(t.id), V = (0, c.default)({
     id: t.id,
     label: v.default.Messages.COPY_ID_GUILD
-  }), z = (0, m.default)(t, {
+  }), z = (0, p.default)(t, {
     section: U.AnalyticsSections.GUILD_LIST
-  }), X = (0, E.default)(t.id), K = (0, G.default)(t.id), W = (0, g.default)(t.id), Q = (0, p.default)(t), q = (0, f.useShouldUseNewNotificationSystem)("GuildContextMenu");
+  }), X = (0, E.default)(t.id), K = (0, G.default)(t.id), W = (0, g.default)(t.id), Q = (0, m.default)(t), q = (0, f.useShouldUseNewNotificationSystem)("GuildContextMenu");
 
   function J() {
     (0, l.openModal)(e => (0, n.jsx)(I.GuildLeaveConfirmModalContents, {

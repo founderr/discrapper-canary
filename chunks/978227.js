@@ -1,17 +1,17 @@
 "use strict";
-t.r(l), t.d(l, {
+n.r(l), n.d(l, {
   default: function() {
-    return o
+    return u
   }
 });
-var n = t("470079"),
-  s = t("442837"),
-  i = t("749210"),
-  a = t("594174");
+var t = n("470079"),
+  a = n("442837"),
+  s = n("749210"),
+  i = n("594174");
 
-function o(e) {
-  let l = (0, s.useStateFromStores)([a.default], () => a.default.getUser(null == e ? void 0 : e.creator_id), [e]);
-  return n.useEffect(() => {
-    null == l && (null == e ? void 0 : e.creator_id) != null && i.default.requestMembersById(e.guild_id, e.creator_id)
+function u(e) {
+  let l = (0, a.useStateFromStores)([i.default], () => i.default.getUser(null == e ? void 0 : e.creator_id), [e]);
+  return t.useEffect(() => {
+    null == l && (null == e ? void 0 : e.creator_id) != null && s.default.requestMembersById(e.guild_id, e.creator_id)
   }, [e, l]), l
 }

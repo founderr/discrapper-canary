@@ -46,8 +46,8 @@ var i = n("735250"),
   K = n("700785"),
   z = n("358085"),
   X = n("746877"),
-  Q = n("541716"),
-  q = n("667829"),
+  q = n("541716"),
+  Q = n("667829"),
   Z = n("562267"),
   J = n("376918"),
   $ = n("760196"),
@@ -91,8 +91,8 @@ t.default = r.memo(r.forwardRef(function(e, t) {
     canMentionRoles: eK,
     canMentionChannels: ez,
     maxCharacterCount: eX,
-    showRemainingCharsAfterCount: eQ,
-    allowNewLines: eq = !0,
+    showRemainingCharsAfterCount: eq,
+    allowNewLines: eQ = !0,
     characterCountClassName: eZ,
     "aria-describedby": eJ,
     "aria-labelledby": e$,
@@ -157,7 +157,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
       isPendingMember: a,
       ...o
     }
-  }(ey, eP, tn, eD), td = eP.toolbarType === Q.SlateToolbarTypes.STATIC, t_ = !B.UseLegacyChatInput.useSetting() && !(0, z.isAndroidWeb)() && null != window.ResizeObserver, tc = !t_ || !(null === (s = eP.commands) || void 0 === s ? void 0 : s.enabled) || !eU || eN !== ea.COMMAND_SENTINEL, tE = (0, P.default)(), {
+  }(ey, eP, tn, eD), td = eP.toolbarType === q.SlateToolbarTypes.STATIC, t_ = !B.UseLegacyChatInput.useSetting() && !(0, z.isAndroidWeb)() && null != window.ResizeObserver, tc = !t_ || !(null === (s = eP.commands) || void 0 === s ? void 0 : s.enabled) || !eU || eN !== ea.COMMAND_SENTINEL, tE = (0, P.default)(), {
     isSubmitButtonEnabled: tI,
     fontSize: tT
   } = (0, E.useStateFromStoresObject)([f.default], () => ({
@@ -277,7 +277,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
   }();
   let tC = (ef = tm, eS = eP, eh = e9, r.useCallback(e => {
     var t, n;
-    eS === Q.ChatInputTypes.CREATE_FORUM_POST ? null === (n = eh.current) || void 0 === n || n.insertGIF(e) : ef(e.url, void 0, void 0, !0), (0, L.closeExpressionPicker)(), null === (t = eh.current) || void 0 === t || t.focus()
+    eS === q.ChatInputTypes.CREATE_FORUM_POST ? null === (n = eh.current) || void 0 === n || n.insertGIF(e) : ef(e.url, void 0, void 0, !0), (0, L.closeExpressionPicker)(), null === (t = eh.current) || void 0 === t || t.focus()
   }, [eh, ef, eS]));
   let tg = (eA = e9, r.useCallback(function(e, t) {
       let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -405,8 +405,8 @@ t.default = r.memo(r.forwardRef(function(e, t) {
       return a && (null === (r = t.stickers) || void 0 === r ? void 0 : r.autoSuggest) && !l && (null === (s = i.current) || void 0 === s ? void 0 : s.isVisible()) !== !0 && !__OVERLAY__ && null != n
     }(ey, eP, ep, tp),
     tX = (0, R.useShouldShowPTONotice)(ey),
-    tQ = null != tn || null != ek || tX,
-    tq = !!(null === (eu = eP.emojis) || void 0 === eu ? void 0 : eu.button) && tM <= 44;
+    tq = null != tn || null != ek || tX,
+    tQ = !!(null === (eu = eP.emojis) || void 0 === eu ? void 0 : eu.button) && tM <= 44;
   return (0, i.jsx)(g.EventEmitterProvider, {
     value: tS,
     children: (0, i.jsxs)(h.AnalyticsLocationProvider, {
@@ -441,7 +441,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
             [el.scrollableContainer]: !0,
             [el.themedBackground]: !e3,
             [el.webkit]: "Blink" === platform.layout,
-            [el.hasConnectedBar]: tQ
+            [el.hasConnectedBar]: tq
           }),
           children: [(0, i.jsx)(Z.default, {
             channelId: ey.id,
@@ -453,14 +453,14 @@ t.default = r.memo(r.forwardRef(function(e, t) {
           }), (0, i.jsxs)("div", {
             className: a()(el.inner, {
               [el.innerDisabled]: tH,
-              [el.sansAttachButton]: eP !== Q.ChatInputTypes.EDIT && (null != tY || tH && null == tY || tr),
-              [el.sansAttachButtonCreateThread]: eP === Q.ChatInputTypes.THREAD_CREATION,
-              [el.sansAttachButtonCreatePost]: eP === Q.ChatInputTypes.CREATE_FORUM_POST
+              [el.sansAttachButton]: eP !== q.ChatInputTypes.EDIT && (null != tY || tH && null == tY || tr),
+              [el.sansAttachButtonCreateThread]: eP === q.ChatInputTypes.THREAD_CREATION,
+              [el.sansAttachButtonCreatePost]: eP === q.ChatInputTypes.CREATE_FORUM_POST
             }),
             children: [tY, tj, (0, i.jsx)(I.FocusRing, {
               ringTarget: e5,
               ringClassName: el.focusRing,
-              children: (0, i.jsx)(q.default, {
+              children: (0, i.jsx)(Q.default, {
                 ref: e9,
                 id: eg,
                 focused: eU,
@@ -477,7 +477,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
                 canPasteFiles: to,
                 uploadPromptCharacterCount: es.MAX_MESSAGE_LENGTH_PREMIUM,
                 maxCharacterCount: null != eX ? eX : tE,
-                allowNewLines: eq,
+                allowNewLines: eQ,
                 "aria-describedby": eJ,
                 onChange: eB,
                 onResize: ty,
@@ -496,8 +496,8 @@ t.default = r.memo(r.forwardRef(function(e, t) {
                 spellcheckEnabled: tf,
                 canOnlyUseTextCommands: tx,
                 className: a()({
-                  [el.textAreaThreadCreation]: eP === Q.ChatInputTypes.THREAD_CREATION,
-                  [el.profileBioInput]: eP === Q.ChatInputTypes.PROFILE_BIO_INPUT
+                  [el.textAreaThreadCreation]: eP === q.ChatInputTypes.THREAD_CREATION,
+                  [el.profileBioInput]: eP === q.ChatInputTypes.PROFILE_BIO_INPUT
                 }, eC),
                 "aria-labelledby": e$
               })
@@ -539,10 +539,10 @@ t.default = r.memo(r.forwardRef(function(e, t) {
           type: eP,
           textValue: eN,
           className: a()(eZ, {
-            [el.indentCharacterCount]: tq
+            [el.indentCharacterCount]: tQ
           }),
           maxCharacterCount: eX,
-          showRemainingCharsAfterCount: eQ
+          showRemainingCharsAfterCount: eq
         }) : null, tz ? (0, i.jsx)(v.default, {
           editorRef: e9,
           channel: ey,

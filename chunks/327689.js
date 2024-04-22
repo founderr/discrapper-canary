@@ -1,9 +1,9 @@
 "use strict";
-n.r(t);
-var a, s, l, i, r = n("442837"),
-  o = n("570140"),
-  u = n("430824"),
-  d = n("981631");
+a.r(t);
+var n, s, l, i, r = a("442837"),
+  o = a("570140"),
+  u = a("430824"),
+  d = a("981631");
 class c extends(i = r.default.Store) {
   initialize() {
     this.waitFor(u.default), this.syncWith([u.default], d.NOOP)
@@ -12,9 +12,9 @@ class c extends(i = r.default.Store) {
     return !e.hasFeature(d.GuildFeatures.BANNER) && Date.now() - t >= d.CHANNEL_NOTICE_SHOW_DELAY
   }
 }
-l = "GuildBoostingNoticeStore", (s = "displayName") in(a = c) ? Object.defineProperty(a, s, {
+l = "GuildBoostingNoticeStore", (s = "displayName") in(n = c) ? Object.defineProperty(n, s, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = l, t.default = new c(o.default)
+}) : n[s] = l, t.default = new c(o.default)

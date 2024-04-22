@@ -1,37 +1,37 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return S
   }
 });
-var a = n("735250");
-n("470079");
-var s = n("685072"),
-  l = n("287734"),
-  i = n("67212"),
-  r = n("158631"),
-  o = n("15274"),
-  u = n("389303"),
-  d = n("881824"),
-  c = n("719100"),
-  f = n("976401"),
-  E = n("689938");
+var n = a("735250");
+a("470079");
+var s = a("685072"),
+  l = a("287734"),
+  i = a("67212"),
+  r = a("158631"),
+  o = a("15274"),
+  u = a("389303"),
+  d = a("881824"),
+  c = a("719100"),
+  f = a("976401"),
+  E = a("689938");
 
 function h(e) {
   let {
     tooltipText: t,
-    onClick: n
+    onClick: a
   } = e, l = (0, s.useEndCallLottie)();
-  return (0, a.jsx)(f.default, {
+  return (0, n.jsx)(f.default, {
     tooltipText: t,
-    onClick: n,
+    onClick: a,
     ...l.events,
     icon: l.Component
   })
 }
 
 function _() {
-  return (0, a.jsx)(h, {
+  return (0, n.jsx)(h, {
     tooltipText: E.default.Messages.DISCONNECT_SELF,
     onClick: () => {
       (0, i.stopBroadcast)(), l.default.disconnect()
@@ -43,7 +43,7 @@ function C(e) {
   let {
     channel: t
   } = e;
-  return (0, a.jsx)(h, {
+  return (0, n.jsx)(h, {
     tooltipText: E.default.Messages.AUDIENCE_DISCONNECT,
     onClick: () => {
       if ((0, c.default)(t)) {
@@ -59,7 +59,7 @@ function m(e) {
   let {
     channel: t
   } = e;
-  return (0, a.jsx)(h, {
+  return (0, n.jsx)(h, {
     tooltipText: E.default.Messages.DISCONNECT_SELF,
     onClick: () => {
       if ((0, u.default)(t)) {
@@ -74,10 +74,10 @@ function m(e) {
 function S(e) {
   let {
     channel: t
-  } = e, n = (0, r.default)();
-  return t.isGuildStageVoice() ? (0, a.jsx)(C, {
+  } = e, a = (0, r.default)();
+  return t.isGuildStageVoice() ? (0, n.jsx)(C, {
     channel: t
-  }) : n && t.isBroadcastChannel() ? (0, a.jsx)(_, {}) : (0, a.jsx)(m, {
+  }) : a && t.isBroadcastChannel() ? (0, n.jsx)(_, {}) : (0, n.jsx)(m, {
     channel: t
   })
 }

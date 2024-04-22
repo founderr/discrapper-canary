@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return f
   }
 }), n("47120");
 var s = n("735250"),
@@ -11,30 +11,30 @@ var s = n("735250"),
   o = n("2052"),
   u = n("906732"),
   l = n("174609"),
-  c = n("626135"),
-  _ = n("790527"),
-  d = n("940165"),
-  S = n("474936"),
+  _ = n("626135"),
+  c = n("790527"),
+  S = n("940165"),
+  d = n("474936"),
   E = n("981631"),
   O = n("689938"),
-  f = n("677804");
+  I = n("677804");
 
-function I(e) {
+function f(e) {
   let {
     onClose: t,
-    ...I
+    ...f
   } = e, C = (0, o.useAnalyticsContext)(), {
     analyticsLocations: M
-  } = (0, u.default)(), [T, N] = a.useState(!1);
+  } = (0, u.default)(), [N, T] = a.useState(!1);
   return a.useEffect(() => {
-    !T && (c.default.track(E.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      type: S.PremiumUpsellTypes.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
+    !N && (_.default.track(E.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+      type: d.PremiumUpsellTypes.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
       location: C.location,
       location_stack: M
-    }), N(!0))
-  }, [C.location, M, T]), (0, s.jsx)(_.default, {
-    type: S.PremiumUpsellTypes.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
-    artContainerClassName: f.image,
+    }), T(!0))
+  }, [C.location, M, N]), (0, s.jsx)(c.default, {
+    type: d.PremiumUpsellTypes.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
+    artContainerClassName: I.image,
     artURL: n("98165"),
     title: O.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_TITLE,
     glowUp: O.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_TITLE,
@@ -50,19 +50,19 @@ function I(e) {
       t(), i.default.open(E.UserSettingsSections.PREMIUM)
     },
     onClose: t,
-    ...I,
+    ...f,
     children: (0, s.jsx)(r.FormItem, {
       title: O.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_LABEL,
-      className: f.optionsContainerWrapper,
+      className: I.optionsContainerWrapper,
       children: (0, s.jsxs)("div", {
-        className: f.optionsContainer,
-        children: [(0, s.jsx)(d.default, {
+        className: I.optionsContainer,
+        children: [(0, s.jsx)(S.default, {
           showGradient: !0
-        }), (0, s.jsx)(d.default, {
+        }), (0, s.jsx)(S.default, {
           showGradient: !1
-        }), (0, s.jsx)(d.default, {
+        }), (0, s.jsx)(S.default, {
           showGradient: !1
-        }), (0, s.jsx)(d.default, {
+        }), (0, s.jsx)(S.default, {
           showGradient: !1
         })]
       })

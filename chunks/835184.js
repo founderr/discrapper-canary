@@ -1,11 +1,11 @@
 "use strict";
 n.r(t);
-var l, u = n("442837"),
-  a = n("570140"),
-  d = n("314897"),
-  s = n("924301"),
-  i = n("658041"),
-  r = n("765305");
+var u, l = n("442837"),
+  i = n("570140"),
+  r = n("314897"),
+  d = n("924301"),
+  a = n("658041"),
+  s = n("765305");
 
 function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function f(e) {
   };
   delete n[e], E = n
 }
-class _ extends(l = u.default.PersistedStore) {
+class v extends(u = l.default.PersistedStore) {
   initialize(e) {
     if (null != e) {
       var t, n;
@@ -54,7 +54,7 @@ class _ extends(l = u.default.PersistedStore) {
     }
   }
 }
-o(_, "displayName", "UpcomingEventNoticesStore"), o(_, "persistKey", "UpcomingEventNotices"), t.default = new _(a.default, {
+o(v, "displayName", "UpcomingEventNoticesStore"), o(v, "persistKey", "UpcomingEventNotices"), t.default = new v(i.default, {
   UPCOMING_GUILD_EVENT_NOTICE_HIDE: function(e) {
     let {
       eventId: t
@@ -67,7 +67,7 @@ o(_, "displayName", "UpcomingEventNoticesStore"), o(_, "persistKey", "UpcomingEv
     let {
       guildScheduledEvent: t
     } = e;
-    (t.status === r.GuildScheduledEventStatus.CANCELED || t.status === r.GuildScheduledEventStatus.COMPLETED) && f(t.id)
+    (t.status === s.GuildScheduledEventStatus.CANCELED || t.status === s.GuildScheduledEventStatus.COMPLETED) && f(t.id)
   },
   GUILD_SCHEDULED_EVENT_DELETE: function(e) {
     let {
@@ -80,11 +80,11 @@ o(_, "displayName", "UpcomingEventNoticesStore"), o(_, "persistKey", "UpcomingEv
       userId: t,
       guildEventId: n
     } = e;
-    if (t !== d.default.getId()) return;
-    let l = s.default.getGuildScheduledEvent(n);
-    if (null == l || l.status !== r.GuildScheduledEventStatus.SCHEDULED || null != c[n]) return;
-    let u = E[n];
-    if ((0, i.getNextShownUpcomingEventNoticeType)(l, void 0, u, !1) === r.UpcomingGuildEventNoticeTypes.NEW_EVENT) {
+    if (t !== r.default.getId()) return;
+    let u = d.default.getGuildScheduledEvent(n);
+    if (null == u || u.status !== s.GuildScheduledEventStatus.SCHEDULED || null != c[n]) return;
+    let l = E[n];
+    if ((0, a.getNextShownUpcomingEventNoticeType)(u, void 0, l, !1) === s.UpcomingGuildEventNoticeTypes.NEW_EVENT) {
       let e = {
         ...c
       };

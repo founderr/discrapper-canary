@@ -26,15 +26,15 @@ var l = n("735250"),
   v = n("593618"),
   x = n("252686"),
   R = n("682662"),
-  y = n("674552"),
-  M = n("981631"),
+  M = n("674552"),
+  y = n("981631"),
   O = n("689938"),
   b = n("814886");
 let D = {
   analyticsSource: {
-    page: M.AnalyticsPages.GUILD_CHANNEL,
-    section: M.AnalyticsSections.CHANNEL_LIST,
-    object: M.AnalyticsObjects.CHANNEL
+    page: y.AnalyticsPages.GUILD_CHANNEL,
+    section: y.AnalyticsSections.CHANNEL_LIST,
+    object: y.AnalyticsObjects.CHANNEL
   }
 };
 
@@ -72,8 +72,8 @@ t.default = a.memo(function(e) {
   } = e, {
     id: $,
     parentId: ee
-  } = G, et = null !== (t = e.upperBadge) && void 0 !== t ? t : W ? (0, y.renderUnavailableBadge)() : null != K ? (0, y.renderMediaBadge)(K) : void 0, en = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
-  null == en && Z > 0 ? en = null !== (s = (0, y.renderMentionBadge)(Z)) && void 0 !== s ? s : void 0 : null == en && null != J && (en = null !== (h = (0, y.renderGuildJoinRequestBadge)({
+  } = G, et = null !== (t = e.upperBadge) && void 0 !== t ? t : W ? (0, M.renderUnavailableBadge)() : null != K ? (0, M.renderMediaBadge)(K) : void 0, en = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
+  null == en && Z > 0 ? en = null !== (s = (0, M.renderMentionBadge)(Z)) && void 0 !== s ? s : void 0 : null == en && null != J && (en = null !== (h = (0, M.renderGuildJoinRequestBadge)({
     guildJoinRequestStatus: J
   })) && void 0 !== h ? h : void 0);
   let el = null !== (P = e.lowerBadgeWidth) && void 0 !== P ? P : (0, I.getBadgeWidthForValue)(Z),
@@ -94,7 +94,7 @@ t.default = a.memo(function(e) {
         dragging: e.isDragging()
       })
     }),
-    ei = (0, o.useTreeItem)(null != $ ? $ : M.EMPTY_STRING_SNOWFLAKE_ID),
+    ei = (0, o.useTreeItem)(null != $ ? $ : y.EMPTY_STRING_SNOWFLAKE_ID),
     [er, eo] = a.useState(!1),
     eu = !Q && er,
     [ed, ec] = a.useState(!1),

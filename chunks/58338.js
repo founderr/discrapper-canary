@@ -27,7 +27,7 @@ function _(e) {
       (0, u.openModalLazy)(async () => {
         let {
           default: t
-        } = await Promise.all([i.e("99387"), i.e("70205"), i.e("5863"), i.e("37331")]).then(i.bind(i, "751212"));
+        } = await Promise.all([i.e("99387"), i.e("70205"), i.e("5863"), i.e("37918")]).then(i.bind(i, "751212"));
         return i => (0, n.jsx)(t, {
           ...i,
           guildId: e
@@ -41,7 +41,7 @@ function _(e) {
           message_notifications: t
         };
         t === f.UserNotificationSettings.ALL_MESSAGES && I !== E.UnreadSetting.ALL_MESSAGES && (i.flags = (0, o.withGuildUnreadFlags)(c.default.getGuildFlags(e), g.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES)), l.default.updateGuildNotificationSettings(e, i, S.NotificationLabel.notifications(t))
-      }, p = t => {
+      }, m = t => {
         M(!1);
         let i = c.default.getGuildFlags(e);
         l.default.updateGuildNotificationSettings(e, {
@@ -84,13 +84,13 @@ function _(e) {
               group: "unread_setting",
               checked: I === E.UnreadSetting.ALL_MESSAGES,
               label: N.default.Messages.NOTIFICATION_SETTINGS_PRESETS_ALL_MESSAGES,
-              action: () => p(E.UnreadSetting.ALL_MESSAGES)
+              action: () => m(E.UnreadSetting.ALL_MESSAGES)
             }), (0, n.jsx)(u.MenuRadioItem, {
               id: "unread_setting_mention_only",
               group: "unread_setting",
               checked: I === E.UnreadSetting.ONLY_MENTIONS,
               label: N.default.Messages.NOTIFICATION_SETTINGS_PRESETS_MENTION_ONLY,
-              action: () => p(E.UnreadSetting.ONLY_MENTIONS),
+              action: () => m(E.UnreadSetting.ONLY_MENTIONS),
               disabled: I !== E.UnreadSetting.ONLY_MENTIONS && h === f.UserNotificationSettings.ALL_MESSAGES,
               subtext: I !== E.UnreadSetting.ONLY_MENTIONS && h === f.UserNotificationSettings.ALL_MESSAGES ? N.default.Messages.NOTIFICATION_SETTINGS_UNREAD_MENTION_ONLY_DISABLED : void 0
             })]

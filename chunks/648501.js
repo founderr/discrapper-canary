@@ -36,8 +36,8 @@ function R(e) {
   let {
     channel: n,
     isChannelSelected: R,
-    isChannelCollapsed: y,
-    voiceStates: M,
+    isChannelCollapsed: M,
+    voiceStates: y,
     enableConnectedUserLimit: O,
     enableActivities: b,
     isSubscriptionGated: D,
@@ -77,12 +77,12 @@ function R(e) {
     color: "text-muted",
     children: (0, C.getBadgeCountString)(K)
   });
-  let Z = null !== (t = null == M ? void 0 : M.length) && void 0 !== t ? t : 0;
+  let Z = null !== (t = null == y ? void 0 : y.length) && void 0 !== t ? t : 0;
   return null != O && O && k ? (0, l.jsx)(N.default, {
     userCount: Z,
     video: H || V,
     channel: n
-  }) : y && (0, g.hasStream)(M) && W ? (0, l.jsx)(C.TextBadge, {
+  }) : M && (0, g.hasStream)(y) && W ? (0, l.jsx)(C.TextBadge, {
     text: v.default.Messages.LIVE,
     color: s.default.unsafe_rawColors.RED_400.css
   }) : null != b && b && (0, E.showChannelItemEmbeddedActivities)(F) ? (0, l.jsx)(I.default, {

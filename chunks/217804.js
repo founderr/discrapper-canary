@@ -1,24 +1,24 @@
 "use strict";
-t.r(l), t.d(l, {
+n.r(t), n.d(t, {
   getLocationDataForEvent: function() {
     return a
   }
 });
-var n = t("471445"),
-  s = t("393112"),
-  i = t("230900");
+var i = n("471445"),
+  r = n("393112"),
+  s = n("230900");
 
-function a(e, l) {
-  let t, a;
+function a(e, t) {
+  let n, a;
   if (null == e) return null;
-  let o = (0, i.getLocationFromEvent)(e);
-  if (null != o) t = s.default, a = o;
+  let o = (0, s.getLocationFromEvent)(e);
+  if (null != o) n = r.default, a = o;
   else {
-    if (null == l) return null;
-    t = (0, n.getSimpleChannelIconComponent)(l.type), a = l.name
+    if (null == t) return null;
+    n = (0, i.getSimpleChannelIconComponent)(t.type), a = t.name
   }
   return {
-    IconComponent: t,
+    IconComponent: n,
     locationName: a
   }
 }

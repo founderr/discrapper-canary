@@ -1,70 +1,70 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   PreviewData: function() {
     return o
   }
-}), n("47120");
-var a = n("786761"),
-  s = n("23750"),
-  l = n("306680"),
-  i = n("709054");
+}), a("47120");
+var n = a("786761"),
+  s = a("23750"),
+  l = a("306680"),
+  i = a("709054");
 
-function r(e, t, n) {
+function r(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: a,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = a, e
 }
 class o {
   isLatest(e, t) {
     return this.messageGeneration(e, t) === t
   }
   messageGeneration(e, t) {
-    let n = this.messages.get(e);
-    return null == n ? -1 / 0 : n.generation !== t && null != n.message && n.message.id === l.default.lastMessageId(e) ? (this.messages.set(e, {
-      ...n,
+    let a = this.messages.get(e);
+    return null == a ? -1 / 0 : a.generation !== t && null != a.message && a.message.id === l.default.lastMessageId(e) ? (this.messages.set(e, {
+      ...a,
       generation: t
-    }), t) : n.generation
+    }), t) : a.generation
   }
   messageId(e) {
-    var t, n;
-    let a = this.messages.get(e);
-    return null !== (n = null == a ? void 0 : null === (t = a.message) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : null
+    var t, a;
+    let n = this.messages.get(e);
+    return null !== (a = null == n ? void 0 : null === (t = n.message) || void 0 === t ? void 0 : t.id) && void 0 !== a ? a : null
   }
   messageRecord(e) {
     var t;
-    let n = this.messages.get(e);
-    return null != n && null != n.message && !(n.message instanceof s.default) && (n.message = (0, a.createMessageRecord)(n.message)), null !== (t = null == n ? void 0 : n.message) && void 0 !== t ? t : null
+    let a = this.messages.get(e);
+    return null != a && null != a.message && !(a.message instanceof s.default) && (a.message = (0, n.createMessageRecord)(a.message)), null !== (t = null == a ? void 0 : a.message) && void 0 !== t ? t : null
   }
   has(e) {
     return this.messages.has(e)
   }
-  put(e, t, n) {
+  put(e, t, a) {
     this.messages.set(e, {
       message: t,
-      generation: n
+      generation: a
     })
   }
-  putNew(e, t, n) {
-    var a;
+  putNew(e, t, a) {
+    var n;
     let s = this.messages.get(e);
     null != t && function(e, t) {
       return null == t || i.default.compare(e, t) > 0
-    }(t.id, null == s ? void 0 : null === (a = s.message) || void 0 === a ? void 0 : a.id) && this.put(e, t, n)
+    }(t.id, null == s ? void 0 : null === (n = s.message) || void 0 === n ? void 0 : n.id) && this.put(e, t, a)
   }
   putMany(e, t) {
-    for (let n of e) this.put(n.channel_id, n, t)
+    for (let a of e) this.put(a.channel_id, a, t)
   }
   update(e) {
     var t;
     if (null == e.id || null == e.channel_id) return;
-    let n = e.channel_id,
-      l = this.messages.get(n);
+    let a = e.channel_id,
+      l = this.messages.get(a);
     if ((null == l ? void 0 : null === (t = l.message) || void 0 === t ? void 0 : t.id) !== e.id) return;
-    let i = l.message instanceof s.default ? (0, a.updateMessageRecord)(l.message, e) : (0, a.updateServerMessage)(l.message, e);
-    this.messages.set(n, {
+    let i = l.message instanceof s.default ? (0, n.updateMessageRecord)(l.message, e) : (0, n.updateServerMessage)(l.message, e);
+    this.messages.set(a, {
       ...l,
       message: i
     })

@@ -1,129 +1,129 @@
 "use strict";
-n.r(t), n("47120");
-var a = n("735250"),
-  s = n("470079"),
-  l = n("593473"),
-  i = n("266067"),
-  r = n("613828"),
-  o = n("442837"),
-  u = n("481060"),
-  d = n("893776"),
-  c = n("943094"),
-  f = n("749210"),
-  E = n("287734"),
-  h = n("401430"),
-  _ = n("230711"),
-  C = n("607070"),
-  m = n("627845"),
-  S = n("185666"),
-  I = n("503737"),
-  p = n("513202"),
-  T = n("318891"),
-  g = n("687751"),
-  A = n("912471"),
-  N = n("100527"),
-  v = n("74438"),
-  R = n("753450"),
-  O = n("675869"),
-  L = n("77987"),
-  P = n("679891"),
-  M = n("491575"),
-  x = n("561345"),
-  y = n("314533"),
-  D = n("935347"),
-  b = n("560067"),
-  U = n("823169"),
-  j = n("620360"),
-  G = n("96051"),
-  w = n("750995"),
-  k = n("696287"),
-  F = n("408026"),
-  B = n("763916"),
-  H = n("306721"),
-  V = n("531551"),
-  Y = n("38618"),
-  W = n("972830"),
-  K = n("981283"),
-  z = n("584233"),
-  q = n("15274"),
-  Q = n("434404"),
-  Z = n("543842"),
-  X = n("879064"),
-  J = n("315964"),
-  $ = n("495784"),
-  ee = n("975533"),
-  et = n("377400"),
-  en = n("285865"),
-  ea = n("659971"),
-  es = n("929809"),
-  el = n("122333"),
-  ei = n("960275"),
-  er = n("818765"),
-  eo = n("678492"),
-  eu = n("269089"),
-  ed = n("380570"),
-  ec = n("837689"),
-  ef = n("367207"),
-  eE = n("489977"),
-  eh = n("329557"),
-  e_ = n("304445"),
-  eC = n("893607"),
-  em = n("703656"),
-  eS = n("298969"),
-  eI = n("719256"),
-  ep = n("6025"),
-  eT = n("897473"),
-  eg = n("377368"),
-  eA = n("262702"),
-  eN = n("639033"),
-  ev = n("479313"),
-  eR = n("911560"),
-  eO = n("703016"),
-  eL = n("171368"),
-  eP = n("429974"),
-  eM = n("332754"),
-  ex = n("507468"),
-  ey = n("357269"),
-  eD = n("282506"),
-  eb = n("444961"),
-  eU = n("314897"),
-  ej = n("433355"),
-  eG = n("592125"),
-  ew = n("896797"),
-  ek = n("430824"),
-  eF = n("819640"),
-  eB = n("283595"),
-  eH = n("944486"),
-  eV = n("914010"),
-  eY = n("695103"),
-  eW = n("241890"),
-  eK = n("396296"),
-  ez = n("897607"),
-  eq = n("417363"),
-  eQ = n("900974"),
-  eZ = n("358085"),
-  eX = n("998502"),
-  eJ = n("346329"),
-  e$ = n("981631"),
-  e0 = n("272242"),
-  e1 = n("176505"),
-  e2 = n("701476");
+a.r(t), a("47120");
+var n = a("735250"),
+  s = a("470079"),
+  l = a("593473"),
+  i = a("266067"),
+  r = a("613828"),
+  o = a("442837"),
+  u = a("481060"),
+  d = a("893776"),
+  c = a("943094"),
+  f = a("749210"),
+  E = a("287734"),
+  h = a("401430"),
+  _ = a("230711"),
+  C = a("607070"),
+  m = a("627845"),
+  S = a("185666"),
+  I = a("503737"),
+  p = a("513202"),
+  T = a("318891"),
+  g = a("687751"),
+  A = a("912471"),
+  N = a("100527"),
+  v = a("74438"),
+  R = a("753450"),
+  O = a("675869"),
+  L = a("77987"),
+  P = a("679891"),
+  M = a("491575"),
+  x = a("561345"),
+  y = a("314533"),
+  D = a("935347"),
+  b = a("560067"),
+  U = a("823169"),
+  j = a("620360"),
+  G = a("96051"),
+  w = a("750995"),
+  k = a("696287"),
+  F = a("408026"),
+  B = a("763916"),
+  H = a("306721"),
+  V = a("531551"),
+  Y = a("38618"),
+  W = a("972830"),
+  K = a("981283"),
+  z = a("584233"),
+  q = a("15274"),
+  Q = a("434404"),
+  Z = a("543842"),
+  X = a("879064"),
+  J = a("315964"),
+  $ = a("495784"),
+  ee = a("975533"),
+  et = a("377400"),
+  ea = a("285865"),
+  en = a("659971"),
+  es = a("929809"),
+  el = a("122333"),
+  ei = a("960275"),
+  er = a("818765"),
+  eo = a("678492"),
+  eu = a("269089"),
+  ed = a("380570"),
+  ec = a("837689"),
+  ef = a("367207"),
+  eE = a("489977"),
+  eh = a("329557"),
+  e_ = a("304445"),
+  eC = a("893607"),
+  em = a("703656"),
+  eS = a("298969"),
+  eI = a("719256"),
+  ep = a("6025"),
+  eT = a("897473"),
+  eg = a("377368"),
+  eA = a("262702"),
+  eN = a("639033"),
+  ev = a("479313"),
+  eR = a("911560"),
+  eO = a("703016"),
+  eL = a("171368"),
+  eP = a("429974"),
+  eM = a("332754"),
+  ex = a("507468"),
+  ey = a("357269"),
+  eD = a("282506"),
+  eb = a("444961"),
+  eU = a("314897"),
+  ej = a("433355"),
+  eG = a("592125"),
+  ew = a("896797"),
+  ek = a("430824"),
+  eF = a("819640"),
+  eB = a("283595"),
+  eH = a("944486"),
+  eV = a("914010"),
+  eY = a("695103"),
+  eW = a("241890"),
+  eK = a("396296"),
+  ez = a("897607"),
+  eq = a("417363"),
+  eQ = a("900974"),
+  eZ = a("358085"),
+  eX = a("998502"),
+  eJ = a("346329"),
+  e$ = a("981631"),
+  e0 = a("272242"),
+  e1 = a("176505"),
+  e2 = a("701476");
 
-function e4(e, t, n) {
+function e4(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: a,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = a, e
 }
-n("117240"), n("801077"), n("967368"), n("272053"), n("974180"), n("574254"), n("551428"), n("55563"), n("455173"), n("882029"), n("959457"), n("653255"), n("663389"), n("25990"), n("778825"), n("999382"), n("388610"), n("533947"), n("277053"), n("371398"), n("141233"), n("471073"), n("628566");
+a("117240"), a("801077"), a("967368"), a("272053"), a("974180"), a("574254"), a("551428"), a("55563"), a("455173"), a("882029"), a("959457"), a("653255"), a("663389"), a("25990"), a("778825"), a("999382"), a("388610"), a("533947"), a("277053"), a("371398"), a("141233"), a("471073"), a("628566");
 let e3 = !1;
 (0, A.initSessionHeartbeatScheduler)(), o.default.initialize(), eS.default.loadServer(), eZ.isPlatformEmbedded && (eX.default.on("USER_SETTINGS_OPEN", () => {
   !eF.default.getLayers().includes(e$.Layers.USER_SETTINGS) && _.default.open(e$.UserSettingsSections.ACCOUNT)
 }), eX.default.on("LAUNCH_APPLICATION", (e, t) => {
-  let n = eB.default.getActiveLibraryApplication(t);
-  eJ.playApplication(t, n, {
+  let a = eB.default.getActiveLibraryApplication(t);
+  eJ.playApplication(t, a, {
     analyticsParams: {
       location: {
         page: e$.AnalyticsPages.DIRECT,
@@ -150,17 +150,17 @@ let e7 = o.default.connectStores([Y.default, ew.default, eU.default], () => ({
       let {
         isConnected: e,
         defaultRoute: t,
-        token: n,
+        token: a,
         defaultRouteFallback: s
       } = this.props;
-      if (null == n) return (0, a.jsx)(r.Redirect, {
+      if (null == a) return (0, n.jsx)(r.Redirect, {
         to: e$.Routes.DEFAULT_LOGGED_OUT
       });
       if (e) {
         let e = ts(t);
-        return null == e || (e.params.guildId === e$.ME || null != ek.default.getGuild(e.params.guildId)) && null != eG.default.getChannel(e.params.channelId) ? (0, a.jsx)(r.Redirect, {
+        return null == e || (e.params.guildId === e$.ME || null != ek.default.getGuild(e.params.guildId)) && null != eG.default.getChannel(e.params.channelId) ? (0, n.jsx)(r.Redirect, {
           to: t
-        }) : (0, a.jsx)(r.Redirect, {
+        }) : (0, n.jsx)(r.Redirect, {
           to: s
         })
       }
@@ -171,40 +171,40 @@ let e7 = o.default.connectStores([Y.default, ew.default, eU.default], () => ({
     passProps: !1
   }),
   e9 = (0, L.makeAuthenticated)(function() {
-    return (0, a.jsx)(v.default, {})
+    return (0, n.jsx)(v.default, {})
   }),
   e8 = (0, L.makeAuthenticated)(function(e) {
     let {
       match: t
     } = e, {
-      applicationId: n,
+      applicationId: a,
       section: s
     } = t.params, l = (0, Z.default)(e0.ApplicationDirectoryProfileSections, s);
-    return (0, a.jsx)(R.default, {
-      applicationId: n,
+    return (0, n.jsx)(R.default, {
+      applicationId: a,
       initialSection: l
     })
   }),
   e6 = (0, L.makeAuthenticated)(function() {
-    return (0, a.jsx)(O.default, {})
+    return (0, n.jsx)(O.default, {})
   }),
   te = [e$.Routes.GUILD_BOOSTING_MARKETING(":guildId"), ...Array.from(e1.StaticChannelRoutes).map(e => e$.Routes.CHANNEL(":guildId", e))];
 
 function tt(e) {
   let {
     guildId: t,
-    channelId: n = null,
-    messageId: a = null,
+    channelId: a = null,
+    messageId: n = null,
     threadId: s = null
   } = e.params;
   return {
     guildId: null != t ? t : e$.ME,
-    channelId: n,
-    messageId: a,
+    channelId: a,
+    messageId: n,
     threadId: s
   }
 }
-let tn = [{
+let ta = [{
     path: [e$.Routes.APPLICATION_DIRECTORY_SEARCH],
     render: e6,
     isSessionRequired: !0
@@ -217,30 +217,30 @@ let tn = [{
     render: e9,
     isSessionRequired: !0
   }],
-  ta = [{
+  tn = [{
     path: [e$.Routes.APP_WITH_INVITE_AND_GUILD_ONBOARDING(":inviteCode")],
     render(e) {
       let {
         match: t
       } = e;
-      return (0, a.jsx)(e7, {
+      return (0, n.jsx)(e7, {
         match: t
       })
     },
     isSessionRequired: !0
   }, {
     path: [e$.Routes.APP],
-    render: () => (0, a.jsx)(e7, {}),
+    render: () => (0, n.jsx)(e7, {}),
     isSessionRequired: !0
   }, {
     path: [e$.Routes.USERS(":id")],
     render: function(e) {
       let {
         match: t,
-        location: n
+        location: a
       } = e, {
         friend_token: s
-      } = (0, l.parse)(n.search), {
+      } = (0, l.parse)(a.search), {
         id: i
       } = t.params;
       return (0, W.addPostConnectionCallback)(() => (0, eL.openUserProfileModal)({
@@ -251,7 +251,7 @@ let tn = [{
         analyticsLocation: {
           section: e$.AnalyticsSections.DIRECT_ROUTE_ACCESS
         }
-      })), (0, a.jsx)(r.Redirect, {
+      })), (0, n.jsx)(r.Redirect, {
         to: ew.default.defaultRoute
       })
     }
@@ -261,14 +261,14 @@ let tn = [{
       let {
         match: t
       } = e, {
-        gameId: n,
+        gameId: a,
         action: s
       } = t.params;
       return eq.default.whenInitialized(() => {
         eB.default.whenInitialized(() => {
           switch (s) {
             case "launch": {
-              let e = eB.default.getActiveLibraryApplication(n);
+              let e = eB.default.getActiveLibraryApplication(a);
               if (null == e) return;
               eJ.playApplication(e.id, e, {
                 analyticsParams: {
@@ -281,16 +281,16 @@ let tn = [{
               break
             }
             case "test-mode":
-              eY.default.whenInitialized(() => h.authorizeAndSetTestModeApplication(n));
+              eY.default.whenInitialized(() => h.authorizeAndSetTestModeApplication(a));
               break;
             case "uninstall": {
-              let e = eB.default.getActiveLibraryApplication(n);
+              let e = eB.default.getActiveLibraryApplication(a);
               if (null == e) return;
               (0, c.uninstallBranchPrompt)(e.id, e.branchId, e$.AnalyticsLocations.URI_SCHEME)
             }
           }
         })
-      }), (0, a.jsx)(r.Redirect, {
+      }), (0, n.jsx)(r.Redirect, {
         to: e$.Routes.APPLICATION_LIBRARY
       })
     }
@@ -299,7 +299,7 @@ let tn = [{
     render: function() {
       return (0, W.addPostConnectionCallback)(() => b.default.openCreateGuildModal({
         location: "External link"
-      })), (0, a.jsx)(r.Redirect, {
+      })), (0, n.jsx)(r.Redirect, {
         to: ew.default.defaultRoute
       })
     }
@@ -309,14 +309,14 @@ let tn = [{
       let {
         match: t
       } = e, {
-        section: n,
+        section: a,
         subsection: s
       } = t.params, i = (0, l.parse)(location.search).feature;
       return (0, W.addPostConnectionCallback)(() => X.openGuildSettingsPickerModal({
-        section: (0, Z.default)(e$.GuildSettingsSections, n),
+        section: (0, Z.default)(e$.GuildSettingsSections, a),
         subsection: (0, Z.default)(e$.GuildSettingsSubsections, s),
         feature: i
-      })), (0, a.jsx)(r.Redirect, {
+      })), (0, n.jsx)(r.Redirect, {
         to: ew.default.defaultRoute
       })
     },
@@ -326,11 +326,11 @@ let tn = [{
     render: function(e) {
       let {
         location: t
-      } = e, n = (0, ey.default)(t.pathname);
-      return null != n && (0, W.addPostConnectionCallback)(() => _.default.open(n.section, n.subsection, {
+      } = e, a = (0, ey.default)(t.pathname);
+      return null != a && (0, W.addPostConnectionCallback)(() => _.default.open(a.section, a.subsection, {
         openWithoutBackstack: !1,
-        impressionSource: n.source
-      })), (0, a.jsx)(r.Redirect, {
+        impressionSource: a.source
+      })), (0, n.jsx)(r.Redirect, {
         to: ew.default.defaultRoute
       })
     },
@@ -347,13 +347,13 @@ let tn = [{
         (0, u.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([n.e("49237"), n.e("99387"), n.e("5863"), n.e("60411")]).then(n.bind(n, "751212"));
-          return t => (0, a.jsx)(e, {
+          } = await Promise.all([a.e("49237"), a.e("99387"), a.e("5863"), a.e("60411")]).then(a.bind(a, "751212"));
+          return t => (0, n.jsx)(e, {
             ...t,
             guildId: s
           })
         })
-      }), (0, a.jsx)(r.Redirect, {
+      }), (0, n.jsx)(r.Redirect, {
         to: e$.Routes.CHANNEL(s)
       })
     },
@@ -361,7 +361,7 @@ let tn = [{
   }, {
     path: [e$.Routes.APPLICATION_LIBRARY_INVENTORY],
     render: function() {
-      return (0, W.addPostConnectionCallback)(() => _.default.open(e$.UserSettingsSections.INVENTORY)), (0, a.jsx)(r.Redirect, {
+      return (0, W.addPostConnectionCallback)(() => _.default.open(e$.UserSettingsSections.INVENTORY)), (0, n.jsx)(r.Redirect, {
         to: ew.default.defaultRoute
       })
     },
@@ -372,12 +372,12 @@ let tn = [{
       let {
         match: t
       } = e, {
-        guildId: n,
+        guildId: a,
         channelId: s
       } = t.params;
       (0, es.setNewUser)(e2.NewUserTypes.MARKETING_UNCLAIMED);
-      let l = e$.Routes.CHANNEL(n, s);
-      return (0, a.jsx)(r.Redirect, {
+      let l = e$.Routes.CHANNEL(a, s);
+      return (0, n.jsx)(r.Redirect, {
         to: l
       })
     },
@@ -388,15 +388,15 @@ let tn = [{
       let {
         match: t
       } = e, {
-        guildId: n,
+        guildId: a,
         guildEventId: s
       } = t.params;
       return (0, W.addPostConnectionCallback)(() => {
         (0, q.openGuildEventDetails)({
           eventId: s
         })
-      }), (0, a.jsx)(r.Redirect, {
-        to: e$.Routes.CHANNEL(n)
+      }), (0, n.jsx)(r.Redirect, {
+        to: e$.Routes.CHANNEL(a)
       })
     },
     isSessionRequired: !0
@@ -406,14 +406,14 @@ let tn = [{
       let {
         match: t
       } = e, {
-        guildId: n,
+        guildId: a,
         section: s,
         subsection: l
       } = t.params;
       return (0, W.addPostConnectionCallback)(() => {
-        Q.default.open(n, (0, Z.default)(e$.GuildSettingsSections, s), void 0, (0, Z.default)(e$.GuildSettingsSubsections, l))
-      }), (0, a.jsx)(r.Redirect, {
-        to: e$.Routes.CHANNEL(n)
+        Q.default.open(a, (0, Z.default)(e$.GuildSettingsSections, s), void 0, (0, Z.default)(e$.GuildSettingsSubsections, l))
+      }), (0, n.jsx)(r.Redirect, {
+        to: e$.Routes.CHANNEL(a)
       })
     },
     isSessionRequired: !0,
@@ -423,19 +423,19 @@ let tn = [{
     render: e5,
     isSessionRequired: !0,
     isChatRoute: !0
-  }, ...tn];
+  }, ...ta];
 
 function ts(e) {
   for (let {
       path: t,
-      isChatRoute: n
+      isChatRoute: a
     }
-    of ta) {
-    if (!n) continue;
-    let a = (0, i.matchPath)(e, {
+    of tn) {
+    if (!a) continue;
+    let n = (0, i.matchPath)(e, {
       path: t
     });
-    if (null != a) return a
+    if (null != n) return n
   }
   return null
 }
@@ -443,14 +443,14 @@ function ts(e) {
 function tl(e) {
   let {
     channelId: t,
-    guildId: n,
-    pathname: a
+    guildId: a,
+    pathname: n
   } = e;
   if (!Y.default.isConnected()) return;
   let {
     location: s
   } = (0, em.getHistory)();
-  s.pathname === a && (null == eG.default.getChannel(t) ? (0, em.replaceWith)(e$.Routes.CHANNEL(n)) : (0, em.replaceWith)(a))
+  s.pathname === n && (null == eG.default.getChannel(t) ? (0, em.replaceWith)(e$.Routes.CHANNEL(a)) : (0, em.replaceWith)(n))
 }
 class ti extends s.PureComponent {
   componentDidMount() {
@@ -459,8 +459,8 @@ class ti extends s.PureComponent {
       openModal: () => (0, u.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.resolve().then(n.bind(n, "650233"));
-        return t => (0, a.jsx)(e, {
+        } = await Promise.resolve().then(a.bind(a, "650233"));
+        return t => (0, n.jsx)(e, {
           ...t
         })
       })
@@ -472,7 +472,7 @@ class ti extends s.PureComponent {
   handleHistoryChange(e) {
     let {
       pathname: t,
-      search: n
+      search: a
     } = e;
     ! function(e) {
       if (Y.default.isConnected() || Y.default.isTryingToConnect()) return;
@@ -480,32 +480,32 @@ class ti extends s.PureComponent {
       if (null != t) null != function(e) {
         for (let {
             path: t,
-            isSessionRequired: n
+            isSessionRequired: a
           }
-          of ta) {
-          if (!n) continue;
-          let a = (0, i.matchPath)(e, {
+          of tn) {
+          if (!a) continue;
+          let n = (0, i.matchPath)(e, {
             path: t
           });
-          if (null != a) return a
+          if (null != n) return n
         }
         return null
       }(e) && d.default.startSession(t)
     }(t), ! function(e, t) {
-      let n = ts(e);
-      if (null == n) return;
+      let a = ts(e);
+      if (null == a) return;
       let {
-        guildId: a,
+        guildId: n,
         channelId: s,
         messageId: r,
         threadId: o
-      } = tt(n), u = (0, eC.isValidGuildId)(a), d = (0, eC.isValidChannelId)(s), c = (0, eC.isValidChannelId)(o), h = eV.default.getGuildId(), _ = h !== a;
-      if (u && _ && f.default.selectGuild(a), u && d) {
-        let n = eH.default.getChannelId(h),
-          i = n !== s;
+      } = tt(a), u = (0, eC.isValidGuildId)(n), d = (0, eC.isValidChannelId)(s), c = (0, eC.isValidChannelId)(o), h = eV.default.getGuildId(), _ = h !== n;
+      if (u && _ && f.default.selectGuild(n), u && d) {
+        let a = eH.default.getChannelId(h),
+          i = a !== s;
         if (!e3 || _ || i || null != r) {
           e3 = !0, E.default.selectChannel({
-            guildId: a,
+            guildId: n,
             channelId: s,
             messageId: r
           });
@@ -515,16 +515,16 @@ class ti extends s.PureComponent {
           null != e && ev.default.setSelectedSummary(s, e)
         }
         if (null != o && c) {
-          let e = ej.default.getCurrentSidebarChannelId(n) !== o,
-            t = null != ej.default.getGuildSidebarState(a);
+          let e = ej.default.getCurrentSidebarChannelId(a) !== o,
+            t = null != ej.default.getGuildSidebarState(n);
           if (null != s && null != o && e) {
-            if (t)(0, em.replaceWith)(e$.Routes.CHANNEL(a, o, r));
+            if (t)(0, em.replaceWith)(e$.Routes.CHANNEL(n, o, r));
             else {
               let e = {
                 type: eT.SidebarOpenDetailsType.THREAD
               };
               null != r && (e.initialMessageId = r), ep.default.openThreadAsSidebar({
-                guildId: a,
+                guildId: n,
                 baseChannelId: s,
                 channelId: o,
                 details: e
@@ -532,13 +532,13 @@ class ti extends s.PureComponent {
             }
           }
         } else null != s && !i && ep.default.closeChannelSidebar(s);
-        let u = ea.default.getIsOpen();
-        if (s === e1.StaticChannelRoute.ROLE_SUBSCRIPTIONS) en.default.closeSidebar();
+        let u = en.default.getIsOpen();
+        if (s === e1.StaticChannelRoute.ROLE_SUBSCRIPTIONS) ea.default.closeSidebar();
         else if (_ && u) {
-          let t = null == h && a === e$.ME,
-            n = e === e$.Routes.GUILD_DISCOVERY;
-          t || n ? en.default.closeSidebar() : en.default.openSidebar()
-        } else(i && u || !_ && !i) && en.default.closeSidebar()
+          let t = null == h && n === e$.ME,
+            a = e === e$.Routes.GUILD_DISCOVERY;
+          t || a ? ea.default.closeSidebar() : ea.default.openSidebar()
+        } else(i && u || !_ && !i) && ea.default.closeSidebar()
       } else {
         var C;
         if (C = e, !te.some(e => {
@@ -546,40 +546,40 @@ class ti extends s.PureComponent {
             return (null === (t = (0, i.matchPath)(C, e)) || void 0 === t ? void 0 : t.isExact) === !0
           }))(0, em.replaceWith)(ew.default.fallbackRoute)
       }
-    }(t, n)
+    }(t, a)
   }
   ensureChannelMatchesGuild(e) {
     if (!Y.default.isConnected()) return null;
     let {
       pathname: t
-    } = e, n = ts(t);
-    if (null == n) return null;
+    } = e, a = ts(t);
+    if (null == a) return null;
     let {
-      guildId: a,
+      guildId: n,
       channelId: s,
       threadId: l
-    } = tt(n), i = (0, eC.isValidGuildId)(a) && a !== e$.ME && a !== e$.FAVORITES;
+    } = tt(a), i = (0, eC.isValidGuildId)(n) && n !== e$.ME && n !== e$.FAVORITES;
     if (null != s && (0, eC.isValidChannelId)(s) && !(0, e1.isStaticChannelRoute)(s) && i) {
-      let n = eG.default.getChannel(s);
-      if (null == n) eR.default.loadThread(s).then(() => tl({
+      let a = eG.default.getChannel(s);
+      if (null == a) eR.default.loadThread(s).then(() => tl({
         channelId: s,
-        guildId: a,
+        guildId: n,
         pathname: t
       }));
-      else if (n.guild_id !== a) return {
-        path: e$.Routes.CHANNEL(a),
+      else if (a.guild_id !== n) return {
+        path: e$.Routes.CHANNEL(n),
         state: e.state
       };
       if (null != l) {
         if (!((0, eC.isValidChannelId)(l) && !(0, e1.isStaticChannelRoute)(s))) return null;
-        let n = eG.default.getChannel(l);
-        if (null == n) eR.default.loadThread(l).then(() => tl({
+        let a = eG.default.getChannel(l);
+        if (null == a) eR.default.loadThread(l).then(() => tl({
           channelId: l,
-          guildId: a,
+          guildId: n,
           pathname: t
         }));
-        else if ((null == n ? void 0 : n.parent_id) !== s) return ep.default.closeChannelSidebar(s), {
-          path: e$.Routes.CHANNEL(a, s),
+        else if ((null == a ? void 0 : a.parent_id) !== s) return ep.default.closeChannelSidebar(s), {
+          path: e$.Routes.CHANNEL(n, s),
           state: e.state
         }
       }
@@ -587,25 +587,25 @@ class ti extends s.PureComponent {
     return null
   }
   render() {
-    return (0, a.jsxs)(s.Fragment, {
-      children: [(0, a.jsxs)(r.Switch, {
-        children: [(0, a.jsx)(r.Redirect, {
+    return (0, n.jsxs)(s.Fragment, {
+      children: [(0, n.jsxs)(r.Switch, {
+        children: [(0, n.jsx)(r.Redirect, {
           exact: !0,
           from: "/channels",
           to: "/"
-        }), ta.map(e => {
+        }), tn.map(e => {
           let {
             path: t,
-            render: n
+            render: a
           } = e;
-          return (0, a.jsx)(r.Route, {
+          return (0, n.jsx)(r.Route, {
             path: t,
-            render: n
+            render: a
           }, t[0])
-        }), (0, a.jsx)(r.Redirect, {
+        }), (0, n.jsx)(r.Redirect, {
           to: "/"
         })]
-      }), (0, a.jsx)(D.default, {})]
+      }), (0, n.jsx)(D.default, {})]
     })
   }
   constructor(...e) {

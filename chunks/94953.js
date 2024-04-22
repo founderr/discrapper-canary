@@ -27,7 +27,7 @@ function _(e) {
     analyticsLocations: M,
     context: I,
     icon: h
-  } = e, A = (0, a.useStateFromStores)([S.default], () => S.default.getGuild(t), [t]), L = (0, a.useStateFromStores)([r.default], () => r.default.getId()), p = (0, a.useStateFromStores)([E.default], () => E.default.getUser(i)), m = (0, a.useStateFromStores)([c.default], () => c.default.isGuestOrLurker(t, i), [t, i]), T = s.useMemo(() => ({
+  } = e, A = (0, a.useStateFromStores)([S.default], () => S.default.getGuild(t), [t]), L = (0, a.useStateFromStores)([r.default], () => r.default.getId()), m = (0, a.useStateFromStores)([E.default], () => E.default.getUser(i)), p = (0, a.useStateFromStores)([c.default], () => c.default.isGuestOrLurker(t, i), [t, i]), T = s.useMemo(() => ({
     [t]: [i]
   }), [t, i]), O = (0, d.isGuildAClan)(A);
   (0, l.useSubscribeGuildMembers)(T);
@@ -41,7 +41,7 @@ function _(e) {
     U = s.useCallback((e, t) => () => {
       (0, o.adoptClanIdentity)(e, t)
     }, []);
-  return null != A && !G && (b || x || C) && null != p && !m && O && p.isStaff() ? (0, n.jsxs)(n.Fragment, {
+  return null != A && !G && (b || x || C) && null != m && !p && O && m.isStaff() ? (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(u.MenuItem, {
       id: "adopt-clan-identity",
       label: N.default.Messages.CLAN_ADOPT_CLAN_IDENTITY,

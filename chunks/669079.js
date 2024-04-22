@@ -52,7 +52,7 @@ n.r(t), n.d(t, {
     return x
   },
   useGetGiftCode: function() {
-    return Q
+    return q
   }
 }), n("47120"), n("757143"), n("627341");
 var i, r, s = n("278074"),
@@ -294,7 +294,7 @@ function X(e) {
   let [n, i, r] = t;
   return null == r ? null : r.replace(/-/g, "")
 }
-let Q = (e, t) => (0, o.useStateFromStores)([d.default], () => {
+let q = (e, t) => (0, o.useStateFromStores)([d.default], () => {
   if (null == e || !t) return null;
   let n = d.default.getGiftCode(e);
   return null == n || "" === n ? null : n

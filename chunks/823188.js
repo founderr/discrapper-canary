@@ -64,8 +64,8 @@ var c = n("120356"),
   K = n("104494"),
   z = n("639119"),
   X = n("230916"),
-  Q = n("248042"),
-  q = n("94027"),
+  q = n("248042"),
+  Q = n("94027"),
   Z = n("504865"),
   J = n("63802"),
   $ = n("318990"),
@@ -562,9 +562,9 @@ function eT(e) {
     v = (0, Y.useHasDiscountApplied)(),
     M = null != p || null != O ? 0 : null != C || v ? 1 : null,
     y = 1 === d,
-    P = (0, Q.useIsEligibleForBogoPromotion)(),
+    P = (0, q.useIsEligibleForBogoPromotion)(),
     b = !l && R,
-    G = (0, Q.getBOGOPillCopy)(),
+    G = (0, q.getBOGOPillCopy)(),
     w = (0, h.isThemeLight)((0, m.default)()),
     k = w ? 5 : 2,
     {
@@ -685,7 +685,7 @@ function eT(e) {
               isGift: l
             })
           })]
-        }), y && (0, _.jsx)(q.default, {
+        }), y && (0, _.jsx)(Q.default, {
           isStacked: y,
           ctaButton: r,
           isGift: l,
@@ -693,7 +693,7 @@ function eT(e) {
           discountOffer: C
         })]
       })]
-    }), !y && (0, _.jsx)(q.default, {
+    }), !y && (0, _.jsx)(Q.default, {
       isStacked: y,
       ctaButton: r,
       isGift: l,

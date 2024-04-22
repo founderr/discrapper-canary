@@ -121,12 +121,12 @@ function X(e) {
   return K(e, 0, "getBasicChannel"), null !== (r = null !== (i = null !== (n = null !== (t = v[e]) && void 0 !== t ? t : y[e]) && void 0 !== n ? n : U[e]) && void 0 !== i ? i : k[e]) && void 0 !== r ? r : T.default.getBasicChannel(e)
 }
 
-function Q(e) {
+function q(e) {
   var t, n, i, r;
   return K(e, 1, "getChannel"), null !== (r = null !== (i = null !== (n = null !== (t = v[e]) && void 0 !== t ? t : y[e]) && void 0 !== n ? n : U[e]) && void 0 !== i ? i : k[e]) && void 0 !== r ? r : x[e]
 }
 
-function q(e) {
+function Q(e) {
   e.isPrivate() ? (delete x[e.id], Z(e)) : e.isThread() ? J(e) : m.GUILD_CHANNEL_TYPES.has(e.type) && function(e) {
     $(e)
   }(e)
@@ -170,7 +170,7 @@ function ee(e) {
 
 function et(e) {
   if (!m.ALL_CHANNEL_TYPES.has(e.channel.type)) return !1;
-  let t = Q(e.channel.id);
+  let t = q(e.channel.id);
   if (null == t) t = e.channel;
   else {
     var n;
@@ -179,7 +179,7 @@ function et(e) {
       bitrate: null !== (n = e.channel.bitrate) && void 0 !== n ? n : t.bitrate
     })
   }
-  q(t)
+  Q(t)
 }
 
 function en(e) {
@@ -187,7 +187,7 @@ function en(e) {
     threads: t
   } = e;
   t.forEach(e => {
-    m.ALL_CHANNEL_TYPES.has(e.type) && q((0, m.createChannelRecordFromServer)(e))
+    m.ALL_CHANNEL_TYPES.has(e.type) && Q((0, m.createChannelRecordFromServer)(e))
   })
 }
 
@@ -233,9 +233,9 @@ function ea(e) {
     for (let t of e) eo(t.thread);
   n.forEach(eo), null == i || i.forEach(e => {
     let t = (0, m.createChannelRecordFromServer)(e),
-      n = null != Q(e.id),
+      n = null != q(e.id),
       i = null != x[e.id];
-    t.isPrivate() && (!n || i) ? x[t.id] = t : !n && q(t)
+    t.isPrivate() && (!n || i) ? x[t.id] = t : !n && Q(t)
   })
 }
 
@@ -260,7 +260,7 @@ class eu extends(i = d.default.Store) {
     if (null != e) return X(e)
   }
   getChannel(e) {
-    if (null != e) return Q(e)
+    if (null != e) return q(e)
   }
   loadAllGuildAndPrivateChannelsFromDisk() {
     for (let e of R.default.getGuildIds()) W(e, 1, "loadAllGuildAndPrivateChannelsFromDisk");
@@ -347,7 +347,7 @@ a = "ChannelStore", (s = "displayName") in(r = eu) ? Object.defineProperty(r, s,
   },
   CACHE_LOADED_LAZY: function(e) {
     for (let [t, n] of e.guildChannels)
-      for (let e of (L.fileOnly("Lazy cache contained full guild channels for ".concat(t, " #:").concat(n.length)), B.add(t), n)) q((0, m.castChannelRecord)(e))
+      for (let e of (L.fileOnly("Lazy cache contained full guild channels for ".concat(t, " #:").concat(n.length)), B.add(t), n)) Q((0, m.castChannelRecord)(e))
   },
   CACHE_LOADED: function(e) {
     var t;
@@ -357,30 +357,30 @@ a = "ChannelStore", (s = "displayName") in(r = eu) ? Object.defineProperty(r, s,
       initialGuildChannels: i
     } = e;
     for (let e of [n, i])
-      for (let t of e) q((0, f.deserializeChannel)((0, m.castChannelRecord)(t)));
+      for (let t of e) Q((0, f.deserializeChannel)((0, m.castChannelRecord)(t)));
     let r = null === (t = i[0]) || void 0 === t ? void 0 : t.guild_id;
     null != r && (L.fileOnly("Early cache contained full guild channels for ".concat(r)), B.add(r))
   },
   CHANNEL_CREATE: function(e) {
-    q(e.channel)
+    Q(e.channel)
   },
   CHANNEL_DELETE: er,
   CHANNEL_RECIPIENT_ADD: function(e) {
-    let t = Q(e.channelId),
+    let t = q(e.channelId),
       n = O.default.getId();
-    return (null == t ? !!void 0 : !!t.isPrivate()) && (q(t.addRecipient(e.user.id, e.nick, n)), !0)
+    return (null == t ? !!void 0 : !!t.isPrivate()) && (Q(t.addRecipient(e.user.id, e.nick, n)), !0)
   },
   CHANNEL_RECIPIENT_REMOVE: function(e) {
-    let t = Q(e.channelId);
-    return (null == t ? !!void 0 : !!t.isPrivate()) && (q(t.removeRecipient(e.user.id)), !0)
+    let t = q(e.channelId);
+    return (null == t ? !!void 0 : !!t.isPrivate()) && (Q(t.removeRecipient(e.user.id)), !0)
   },
   CHANNEL_UPDATES: function(e) {
     let t = e.channels.some(e => {
-      let t = Q(e.id);
+      let t = q(e.id);
       return e.nsfw !== (null == t ? void 0 : t.nsfw) || e.type !== (null == t ? void 0 : t.type)
     });
-    for (let t of e.channels) q(t);
-    t && Object.values(U).forEach(e => q(e))
+    for (let t of e.channels) Q(t);
+    t && Object.values(U).forEach(e => Q(e))
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
     let {
@@ -423,7 +423,7 @@ a = "ChannelStore", (s = "displayName") in(r = eu) ? Object.defineProperty(r, s,
     L.fileOnly("initializeClear()"), b = {}, v = {}, M = {}, w = {}, y = {}, x = {}, U = {}, B = new Set, F = {}, V = Date.now()
   },
   OVERLAY_INITIALIZE: function(e) {
-    for (let t of (e.guilds.length, e.channels)) q((0, f.deserializeChannel)((0, m.castChannelRecord)(t)))
+    for (let t of (e.guilds.length, e.channels)) Q((0, f.deserializeChannel)((0, m.castChannelRecord)(t)))
   },
   SEARCH_FINISH: ea,
   MOD_VIEW_SEARCH_FINISH: ea,
@@ -434,12 +434,12 @@ a = "ChannelStore", (s = "displayName") in(r = eu) ? Object.defineProperty(r, s,
       threads: t
     } = e;
     t.forEach(e => {
-      m.ALL_CHANNEL_TYPES.has(e.type) && q(e)
+      m.ALL_CHANNEL_TYPES.has(e.type) && Q(e)
     })
   },
   THREAD_UPDATE: et,
   VOICE_BACKGROUND_UPDATE: function(e) {
-    let t = Q(e.channelId);
-    null != t && (t.voiceBackgroundDisplay = e.background, q(t))
+    let t = q(e.channelId);
+    null != t && (t.voiceBackgroundDisplay = e.background, Q(t))
   }
 })

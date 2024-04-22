@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   computeActivityFlags: function() {
     return Y
   },
@@ -51,39 +51,39 @@ n.r(t), n.d(t, {
   validatePostMessageTransport: function() {
     return X
   }
-}), n("47120"), n("653041"), n("411104"), n("757143"), n("392711");
-var a, s = n("729594"),
-  l = n("544891"),
-  i = n("63023"),
-  r = n("433517"),
-  o = n("904245"),
-  u = n("155268"),
-  d = n("454585"),
-  c = n("739566"),
-  f = n("695346"),
-  E = n("131704"),
-  h = n("598077"),
-  _ = n("592125"),
-  C = n("430824"),
-  m = n("131951"),
-  S = n("375954"),
-  I = n("158776"),
-  p = n("594174"),
-  T = n("979651"),
-  g = n("70956"),
-  A = n("5192"),
-  N = n("226951"),
-  v = n("996106"),
-  R = n("863141"),
-  O = n("186901"),
-  L = n("981631");
-let P = null !== (a = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== a ? a : "localhost",
+}), a("47120"), a("653041"), a("411104"), a("757143"), a("392711");
+var n, s = a("729594"),
+  l = a("544891"),
+  i = a("63023"),
+  r = a("433517"),
+  o = a("904245"),
+  u = a("155268"),
+  d = a("454585"),
+  c = a("739566"),
+  f = a("695346"),
+  E = a("131704"),
+  h = a("598077"),
+  _ = a("592125"),
+  C = a("430824"),
+  m = a("131951"),
+  S = a("375954"),
+  I = a("158776"),
+  p = a("594174"),
+  T = a("979651"),
+  g = a("70956"),
+  A = a("5192"),
+  N = a("226951"),
+  v = a("996106"),
+  R = a("863141"),
+  O = a("186901"),
+  L = a("981631");
+let P = null !== (n = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== n ? n : "localhost",
   M = function() {
     let e = P.split(":")[0];
     if (!e.includes(".")) return e;
     let t = e.split("."),
-      n = t[t.length - 1];
-    return /^\d+$/.test(n) ? e : t.slice(-2).join(".")
+      a = t[t.length - 1];
+    return /^\d+$/.test(a) ? e : t.slice(-2).join(".")
   }(),
   x = new RegExp("^".concat(N.default.escape("https://"), "(?:[a-z]+\\.)?(").concat(N.default.escape(M), "|discordapp.com|discord.com)$")),
   y = 1 * g.default.Millis.MINUTE,
@@ -103,17 +103,17 @@ function j(e) {
 }
 
 function G(e, t) {
-  let n = [],
-    a = e.getGuildId();
-  return ![L.ChannelTypes.GUILD_CATEGORY, ...(0, E.GUILD_VOCAL_CHANNEL_TYPES)].includes(e.type) && n.push(new Promise(t => {
+  let a = [],
+    n = e.getGuildId();
+  return ![L.ChannelTypes.GUILD_CATEGORY, ...(0, E.GUILD_VOCAL_CHANNEL_TYPES)].includes(e.type) && a.push(new Promise(t => {
     S.default.whenReady(e.id, () => t()), o.default.fetchMessages({
       channelId: e.id,
       limit: L.MAX_MESSAGES_PER_CHANNEL
     })
-  })), Promise.all(n).then(() => {
-    var n;
-    let s = (!e.isNSFW() || (null === (n = p.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? S.default.getMessages(e.id).toArray().map(w) : [],
-      l = Object.values(T.default.getVoiceStatesForChannel(e.id)).map(t => k(a, e.id, t));
+  })), Promise.all(a).then(() => {
+    var a;
+    let s = (!e.isNSFW() || (null === (a = p.default.getCurrentUser()) || void 0 === a ? void 0 : a.nsfwAllowed) === !0) && t ? S.default.getMessages(e.id).toArray().map(w) : [],
+      l = Object.values(T.default.getVoiceStatesForChannel(e.id)).map(t => k(n, e.id, t));
     return {
       id: e.id,
       name: e.name,
@@ -121,7 +121,7 @@ function G(e, t) {
       topic: e.topic,
       bitrate: e.bitrate,
       user_limit: e.userLimit,
-      guild_id: a,
+      guild_id: n,
       position: e.position,
       messages: s,
       voice_states: l
@@ -133,16 +133,16 @@ function w(e) {
   let t = d.default.parseToAST(e.content, !0, {
       channelId: e.channel_id
     }).map(b),
-    n = _.default.getChannel(e.channel_id),
-    a = null != e.author ? (0, c.getUserAuthor)(new h.default(e.author), n) : void 0;
+    a = _.default.getChannel(e.channel_id),
+    n = null != e.author ? (0, c.getUserAuthor)(new h.default(e.author), a) : void 0;
   return {
     id: e.id,
     blocked: e.blocked,
     bot: e.bot,
     content: e.content,
     content_parsed: t.length ? t : void 0,
-    nick: null == a ? void 0 : a.nick,
-    author_color: null == a ? void 0 : a.colorString,
+    nick: null == n ? void 0 : n.nick,
+    author_color: null == n ? void 0 : n.colorString,
     edited_timestamp: e.edited_timestamp || e.editedTimestamp,
     timestamp: e.timestamp,
     tts: e.tts,
@@ -157,15 +157,15 @@ function w(e) {
   }
 }
 
-function k(e, t, n) {
+function k(e, t, a) {
   let {
-    mute: a,
+    mute: n,
     deaf: s,
     selfMute: l,
     selfDeaf: i,
     suppress: r,
     userId: o
-  } = n, u = p.default.getUser(o);
+  } = a, u = p.default.getUser(o);
   if (null == u) throw Error("Invalid user id: ".concat(o));
   return {
     nick: A.default.getName(e, t, u),
@@ -173,7 +173,7 @@ function k(e, t, n) {
     volume: m.default.getLocalVolume(u.id),
     pan: m.default.getLocalPan(u.id),
     voice_state: {
-      mute: a,
+      mute: n,
       deaf: s,
       self_mute: l,
       self_deaf: i,
@@ -183,14 +183,14 @@ function k(e, t, n) {
   }
 }
 
-function F(e, t, n) {
-  let a = p.default.getUser(t);
+function F(e, t, a) {
+  let n = p.default.getUser(t);
   return {
     type: e,
-    user: null != a ? (0, R.default)(a) : null,
+    user: null != n ? (0, R.default)(n) : null,
     presence: {
       status: I.default.getStatus(t),
-      activity: null != n ? I.default.getApplicationActivity(t, n) : I.default.getPrimaryActivity(t)
+      activity: null != a ? I.default.getApplicationActivity(t, a) : I.default.getPrimaryActivity(t)
     }
   }
 }
@@ -198,19 +198,19 @@ function F(e, t, n) {
 function B(e) {
   let t;
   if (null == e) return !1;
-  let n = window.location.origin;
-  if (e === n) return !0;
+  let a = window.location.origin;
+  if (e === a) return !0;
   try {
     t = s.parse(e).hostname
   } catch (e) {
     return !1
   }
-  return window.location.hostname === t && "localhost" === t || null == e.match("staging") && (!!(x.test(e) && x.test(n)) || !1)
+  return window.location.hostname === t && "localhost" === t || null == e.match("staging") && (!!(x.test(e) && x.test(a)) || !1)
 }
 
-function H(e, t, n) {
-  let a = C.default.getGuild(e.getGuildId());
-  return (null != a ? a.getApplicationId() : e.getApplicationId()) === t || n.indexOf(L.OAuth2Scopes.MESSAGES_READ) > -1
+function H(e, t, a) {
+  let n = C.default.getGuild(e.getGuildId());
+  return (null != n ? n.getApplicationId() : e.getApplicationId()) === t || a.indexOf(L.OAuth2Scopes.MESSAGES_READ) > -1
 }
 
 function V(e) {
@@ -227,25 +227,25 @@ function V(e) {
 function Y(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     {
-      instance: n,
-      secrets: a,
+      instance: a,
+      secrets: n,
       party: s
     } = e,
     l = 0;
-  return (n && (l |= L.ActivityFlags.INSTANCE), (null == a ? void 0 : a.join) != null && (l |= L.ActivityFlags.JOIN), t) ? (l |= L.ActivityFlags.EMBEDDED, l |= L.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL) : (((null == s ? void 0 : s.privacy) === L.ActivityPartyPrivacy.PUBLIC || r.Storage.get("ACTIVITIES_FORCE_PUBLIC")) && (f.AllowActivityPartyPrivacyFriends.getSetting() && (l |= L.ActivityFlags.PARTY_PRIVACY_FRIENDS), f.AllowActivityPartyPrivacyVoiceChannel.getSetting() && (l |= L.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL)), l)
+  return (a && (l |= L.ActivityFlags.INSTANCE), (null == n ? void 0 : n.join) != null && (l |= L.ActivityFlags.JOIN), t) ? (l |= L.ActivityFlags.EMBEDDED, l |= L.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL) : (((null == s ? void 0 : s.privacy) === L.ActivityPartyPrivacy.PUBLIC || r.Storage.get("ACTIVITIES_FORCE_PUBLIC")) && (f.AllowActivityPartyPrivacyFriends.getSetting() && (l |= L.ActivityFlags.PARTY_PRIVACY_FRIENDS), f.AllowActivityPartyPrivacyVoiceChannel.getSetting() && (l |= L.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL)), l)
 }
 
-function W(e, t, n) {
-  if (e === L.ActivityActionTypes.JOIN) return null != t && null != t.id && null != n.join;
+function W(e, t, a) {
+  if (e === L.ActivityActionTypes.JOIN) return null != t && null != t.id && null != a.join;
   return !1
 }
 
-function K(e, t, n) {
+function K(e, t, a) {
   return l.HTTP.get({
     url: L.Endpoints.APPLICATION_RPC(t),
     oldFormErrors: !0,
     retries: 3
-  }).then(a => {
+  }).then(n => {
     let {
       body: {
         rpc_origins: s,
@@ -255,14 +255,14 @@ function K(e, t, n) {
         cover_image: o,
         flags: d
       }
-    } = a;
-    if ("string" == typeof n) {
+    } = n;
+    if ("string" == typeof a) {
       if (e.transport === O.TransportTypes.POST_MESSAGE) {
         let e = (0, u.default)(t);
-        if (null == e || !j(n, [e])) throw new v.default({
+        if (null == e || !j(a, [e])) throw new v.default({
           closeCode: L.RPCCloseCodes.INVALID_ORIGIN
         }, "Invalid Origin")
-      } else if (!j(n, s)) throw new v.default({
+      } else if (!j(a, s)) throw new v.default({
         closeCode: L.RPCCloseCodes.INVALID_ORIGIN
       }, "Invalid Origin")
     }
@@ -280,8 +280,8 @@ function K(e, t, n) {
   })
 }
 async function z(e, t) {
-  let n = D[e];
-  null == n && (n = new i.default(t ? 2 : 60, y), D[e] = n), await n.process()
+  let a = D[e];
+  null == a && (a = new i.default(t ? 2 : 60, y), D[e] = a), await a.process()
 }
 
 function q(e, t) {
@@ -290,19 +290,19 @@ function q(e, t) {
 
 function Q(e) {
   let t = m.default.getSettings(),
-    n = e => Object.values(e).sort((e, t) => e.index - t.index).map(e => ({
+    a = e => Object.values(e).sort((e, t) => e.index - t.index).map(e => ({
       id: e.id,
       name: e.name
     })),
-    a = e(t);
+    n = e(t);
   return {
     input: {
-      available_devices: n(m.default.getInputDevices()),
+      available_devices: a(m.default.getInputDevices()),
       device_id: t.inputDeviceId,
       volume: t.inputVolume
     },
     output: {
-      available_devices: n(m.default.getOutputDevices()),
+      available_devices: a(m.default.getOutputDevices()),
       device_id: t.outputDeviceId,
       volume: t.outputVolume
     },
@@ -310,7 +310,7 @@ function Q(e) {
       type: t.mode,
       auto_threshold: t.modeOptions.autoThreshold,
       threshold: t.modeOptions.threshold,
-      shortcut: a,
+      shortcut: n,
       delay: t.modeOptions.delay
     },
     automatic_gain_control: t.automaticGainControl,
@@ -324,17 +324,17 @@ function Q(e) {
 }
 
 function Z(e, t) {
-  let n = m.default.getSettings(e),
-    a = t(n);
+  let a = m.default.getSettings(e),
+    n = t(a);
   return {
     input_mode: {
-      type: n.mode,
-      shortcut: a
+      type: a.mode,
+      shortcut: n
     },
-    local_mutes: Object.keys(n.localMutes),
-    local_volumes: n.localVolumes,
-    self_mute: n.mute,
-    self_deaf: n.deaf
+    local_mutes: Object.keys(a.localMutes),
+    local_volumes: a.localVolumes,
+    self_mute: a.mute,
+    self_deaf: a.deaf
   }
 }
 

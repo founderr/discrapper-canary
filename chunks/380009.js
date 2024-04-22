@@ -1,40 +1,40 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return d
   }
 });
-var a = n("735250");
-n("470079");
-var s = n("434404"),
-  l = n("970731"),
-  i = n("981631"),
-  r = n("689938"),
-  o = n("782149"),
-  u = n("687351");
+var n = a("735250");
+a("470079");
+var s = a("434404"),
+  l = a("970731"),
+  i = a("981631"),
+  r = a("689938"),
+  o = a("782149"),
+  u = a("687351");
 
 function d(e) {
   let {
     guild: t,
-    markAsDismissed: n
+    markAsDismissed: a
   } = e;
-  return (0, a.jsx)(l.default, {
+  return (0, n.jsx)(l.default, {
     header: r.default.Messages.DISCOVERY_LANDING_PAGE_UPSELL_TITLE,
     content: r.default.Messages.DISCOVERY_LANDING_PAGE_UPSELL_DESCRIPTION,
-    asset: (0, a.jsx)("div", {
+    asset: (0, n.jsx)("div", {
       className: o.image,
-      children: (0, a.jsx)("img", {
+      children: (0, n.jsx)("img", {
         alt: "",
         src: u
       })
     }),
     buttonCTA: r.default.Messages.DISCOVERY_LANDING_PAGE_UPSELL_BUTTON_ACCEPT,
     onClick: e => {
-      var n;
-      n = t, s.default.open(n.id, i.GuildSettingsSections.DISCOVERY_LANDING_PAGE)
+      var a;
+      a = t, s.default.open(a.id, i.GuildSettingsSections.DISCOVERY_LANDING_PAGE)
     },
     secondaryButtonCTA: r.default.Messages.DISCOVERY_LANDING_PAGE_UPSELL_BUTTON_DISMISS,
     onSecondaryClick: () => {},
-    markAsDismissed: n
+    markAsDismissed: a
   })
 }

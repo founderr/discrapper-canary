@@ -133,14 +133,14 @@ function X(e) {
   })
 }
 
-function Q(e) {
+function q(e) {
   let {
     channel: t
   } = e;
-  return q(t)
+  return Q(t)
 }
 
-function q(e) {
+function Q(e) {
   var t;
   let n = e.guild_id;
   if (null == n) return !1;
@@ -342,8 +342,8 @@ l = "GuildFeedStore", (o = "displayName") in(a = Z) ? Object.defineProperty(a, o
   CHANNEL_SELECT: function() {
     for (let e of T.default.keys(w)) null == k[e] && (k[e] = new Set), k[e] = new Set([...Array.from(k[e]), ...Array.from(w[e])]), delete w[e]
   },
-  CHANNEL_DELETE: Q,
-  THREAD_DELETE: Q,
+  CHANNEL_DELETE: q,
+  THREAD_DELETE: q,
   GUILD_DELETE: function(e) {
     var t;
     let {
@@ -358,7 +358,7 @@ l = "GuildFeedStore", (o = "displayName") in(a = Z) ? Object.defineProperty(a, o
       channels: t
     } = e;
     for (let e of t)
-      if (null == e ? void 0 : e.hasFlag(N.ChannelFlags.GUILD_FEED_REMOVED)) return q(e)
+      if (null == e ? void 0 : e.hasFlag(N.ChannelFlags.GUILD_FEED_REMOVED)) return Q(e)
   },
   LOGOUT: function() {
     C = {}, v = {}, M = {}, y = {}, P = {}, w = {}, k = {}, B = {}, F = {}

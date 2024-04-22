@@ -1,12 +1,12 @@
 "use strict";
-n.r(t);
-var a = n("706454"),
-  s = n("981631");
+a.r(t);
+var n = a("706454"),
+  s = a("981631");
 t.default = {
   [s.RPCCommands.USER_SETTINGS_GET_LOCALE]: {
     scope: s.OAuth2Scopes.IDENTIFY,
     handler: () => ({
-      locale: a.default.locale
+      locale: n.default.locale
     })
   }
 }

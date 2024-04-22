@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return b
+    return U
   }
 }), s("47120");
 var i = s("735250"),
@@ -34,7 +34,7 @@ var i = s("735250"),
   j = s("689938"),
   R = s("214458");
 
-function b(e) {
+function U(e) {
   let {
     guildId: t,
     requestScrollToBottom: s
@@ -47,7 +47,7 @@ function b(e) {
   let n = (0, r.useStateFromStores)([m.default], () => m.default.getCategories(t)),
     l = a.map((e, t) => (0, i.jsxs)("div", {
       className: R.channelRow,
-      children: [(0, i.jsx)(U, {
+      children: [(0, i.jsx)(b, {
         channel: e,
         categories: n
       }, e.id), t < a.length - 1 && (0, i.jsx)("div", {
@@ -104,7 +104,7 @@ function b(e) {
   })
 }
 
-function U(e) {
+function b(e) {
   let {
     channel: t,
     categories: s

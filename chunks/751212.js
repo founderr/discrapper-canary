@@ -31,8 +31,8 @@ var i, a, n = s("735250"),
   A = s("324067"),
   j = s("650774"),
   R = s("430824"),
-  b = s("699516"),
-  U = s("9156"),
+  U = s("699516"),
+  b = s("9156"),
   G = s("594174"),
   F = s("285952"),
   D = s("353872"),
@@ -285,7 +285,7 @@ class W extends l.PureComponent {
       } = e;
       return {
         value: t.id,
-        label: (0, _.computeChannelName)(t, G.default, b.default)
+        label: (0, _.computeChannelName)(t, G.default, U.default)
       }
     }).value();
     return (0, n.jsxs)(g.FormItem, {
@@ -435,21 +435,21 @@ function z(e) {
   let {
     guildId: t,
     ...s
-  } = e, i = (0, S.useStateFromStoresObject)([A.default, R.default, j.default, U.default], () => {
+  } = e, i = (0, S.useStateFromStoresObject)([A.default, R.default, j.default, b.default], () => {
     let e = A.default.getCategories(t);
     return {
       guildId: t,
       categories: e,
       guild: R.default.getGuild(t),
       memberCount: j.default.getMemberCount(t),
-      suppressEveryone: U.default.isSuppressEveryoneEnabled(t),
-      suppressRoles: U.default.isSuppressRolesEnabled(t),
-      muteEvents: U.default.isMuteScheduledEventsEnabled(t),
-      mobilePush: U.default.isMobilePushEnabled(t),
-      muted: U.default.isMuted(t),
-      muteConfig: U.default.getMuteConfig(t),
-      messageNotifications: U.default.getMessageNotifications(t),
-      channelOverrides: U.default.getChannelOverrides(t),
+      suppressEveryone: b.default.isSuppressEveryoneEnabled(t),
+      suppressRoles: b.default.isSuppressRolesEnabled(t),
+      muteEvents: b.default.isMuteScheduledEventsEnabled(t),
+      mobilePush: b.default.isMobilePushEnabled(t),
+      muted: b.default.isMuted(t),
+      muteConfig: b.default.getMuteConfig(t),
+      messageNotifications: b.default.getMessageNotifications(t),
+      channelOverrides: b.default.getChannelOverrides(t),
       channels: (0, E.default)(e._categories, e, e => {
         let {
           channel: {
@@ -458,7 +458,7 @@ function z(e) {
         } = e;
         return (0, v.isGuildSelectableChannelType)(t) || t === w.ChannelTypes.GUILD_CATEGORY
       }),
-      notifyHighlights: U.default.getNotifyHighlights(t)
+      notifyHighlights: b.default.getNotifyHighlights(t)
     }
   }), a = C.CustomNotificationSoundExperiment.useExperiment({
     location: "connected_notification_settings"

@@ -48,8 +48,8 @@ var j = n("701190"),
   K = n("496675"),
   z = n("158776"),
   X = n("306680"),
-  Q = n("944486"),
-  q = n("914010"),
+  q = n("944486"),
+  Q = n("914010"),
   Z = n("300429"),
   J = n("594174"),
   $ = n("626135"),
@@ -744,8 +744,8 @@ let ef = {
               else if (t === I.CodedLinkType.APP_DIRECTORY_PROFILE) $.default.track(eo.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_SENT, {
                 application_id: l,
                 device_platform: r.isMobile ? "mobile_web" : "desktop_web",
-                guild_id: q.default.getGuildId(),
-                channel_id: Q.default.getChannelId()
+                guild_id: Q.default.getGuildId(),
+                channel_id: q.default.getChannelId()
               });
               else if (t === I.CodedLinkType.ACTIVITY_BOOKMARK);
               else if (t === I.CodedLinkType.EMBEDDED_ACTIVITY_INVITE);

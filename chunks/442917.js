@@ -46,8 +46,8 @@ var i = n("735250"),
   K = n("5192"),
   z = n("51144"),
   X = n("534388"),
-  Q = n("484286"),
-  q = n("822296"),
+  q = n("484286"),
+  Q = n("822296"),
   Z = n("916771"),
   J = n("792517"),
   $ = n("560688"),
@@ -138,7 +138,7 @@ class eo extends r.PureComponent {
       {
         participantOnScreen: t
       } = this.props;
-    if ((null == e ? void 0 : e.state) === en.ApplicationStreamStates.ENDED) return (0, i.jsx)(q.default, {
+    if ((null == e ? void 0 : e.state) === en.ApplicationStreamStates.ENDED) return (0, i.jsx)(Q.default, {
       stream: e,
       width: ei.PIP_WIDTH
     });
@@ -178,7 +178,7 @@ class eo extends r.PureComponent {
       participantOnScreen: n,
       isVideoEnabled: r
     } = this.props, s = (0, p.computeChannelName)(e, V.default, F.default), o = this.isEmptyBroadcast(), l = (null == n ? void 0 : n.id) === k.default.getId() && r, u = this.renderStreamState(), d = null;
-    return (null == n ? void 0 : n.type) !== ei.ParticipantTypes.ACTIVITY && (null != u ? d = u : ((null == n ? void 0 : n.type) === ei.ParticipantTypes.USER || (null == n ? void 0 : n.type) === ei.ParticipantTypes.STREAM) && (d = (0, i.jsx)(Q.default, {
+    return (null == n ? void 0 : n.type) !== ei.ParticipantTypes.ACTIVITY && (null != u ? d = u : ((null == n ? void 0 : n.type) === ei.ParticipantTypes.USER || (null == n ? void 0 : n.type) === ei.ParticipantTypes.STREAM) && (d = (0, i.jsx)(q.default, {
       paused: this.streamerPaused,
       streamId: t,
       component: B.default.getVideoComponent(),

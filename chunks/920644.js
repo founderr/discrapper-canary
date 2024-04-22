@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return h
   }
 });
-var a = n("735250");
-n("470079");
-var s = n("990547"),
-  l = n("481060"),
-  i = n("703656"),
-  r = n("153124"),
-  o = n("63063"),
-  u = n("758119"),
-  d = n("981631"),
-  c = n("689938"),
-  f = n("483711");
+var n = a("735250");
+a("470079");
+var s = a("990547"),
+  l = a("481060"),
+  i = a("703656"),
+  r = a("153124"),
+  o = a("63063"),
+  u = a("758119"),
+  d = a("981631"),
+  c = a("689938"),
+  f = a("483711");
 
 function E() {
   (0, u.closeAgeGateModal)(), (0, i.transitionTo)(d.Routes.LOGIN)
@@ -25,7 +25,7 @@ function h(e) {
     underageMessage: t,
     transitionState: i
   } = e, u = (0, r.useUID)();
-  return (0, a.jsxs)(l.ModalRoot, {
+  return (0, n.jsxs)(l.ModalRoot, {
     transitionState: i,
     size: l.ModalSize.SMALL,
     "aria-labelledby": u,
@@ -35,19 +35,19 @@ function h(e) {
         existing_user: !0
       }
     },
-    children: [(0, a.jsx)(l.ModalContent, {
-      children: (0, a.jsxs)("div", {
+    children: [(0, n.jsx)(l.ModalContent, {
+      children: (0, n.jsxs)("div", {
         className: f.container,
-        children: [(0, a.jsx)("img", {
+        children: [(0, n.jsx)("img", {
           alt: "",
-          src: n("231443"),
+          src: a("231443"),
           className: f.img
-        }), (0, a.jsx)(l.Heading, {
+        }), (0, n.jsx)(l.Heading, {
           variant: "heading-xl/semibold",
           className: f.title,
           id: u,
           children: c.default.Messages.AGE_GATE_UNDERAGE_EXISTING_HEADER
-        }), (0, a.jsx)(l.Text, {
+        }), (0, n.jsx)(l.Text, {
           color: "header-secondary",
           className: f.subtitle,
           variant: "text-sm/normal",
@@ -55,7 +55,7 @@ function h(e) {
             underageMessage: null != t ? t : c.default.Messages.AGE_GATE_UNDERAGE_BODY_DEFAULT_REG_MESSAGE,
             helpURL: o.default.getArticleURL(d.HelpdeskArticles.AGE_GATE)
           })
-        }), (0, a.jsx)(l.Text, {
+        }), (0, n.jsx)(l.Text, {
           color: "header-secondary",
           className: f.subtitle,
           variant: "text-sm/normal",
@@ -64,8 +64,8 @@ function h(e) {
           })
         })]
       })
-    }), (0, a.jsx)(l.ModalFooter, {
-      children: (0, a.jsx)(l.Button, {
+    }), (0, n.jsx)(l.ModalFooter, {
+      children: (0, n.jsx)(l.Button, {
         size: l.ButtonSizes.SMALL,
         fullWidth: !0,
         onClick: E,
