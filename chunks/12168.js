@@ -1,7 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
+  HotBarEmoji: function() {
+    return M
+  },
   default: function() {
-    return L
+    return y
   }
 }), n("47120");
 var a = n("735250"),
@@ -33,10 +36,11 @@ function M(e) {
   let {
     emoji: t,
     isDisabled: n = !1,
-    onClick: s
-  } = e, r = l.useRef(null), f = (0, c.default)(r);
+    onClick: s,
+    className: r
+  } = e, f = l.useRef(null), h = (0, c.default)(f);
   return (0, a.jsx)("span", {
-    ref: r,
+    ref: f,
     children: (0, a.jsx)(u.Button, {
       onClick: s,
       look: u.Button.Looks.BLANK,
@@ -47,7 +51,7 @@ function M(e) {
           value: 0
         },
         to: {
-          value: f ? 1 : 0
+          value: h ? 1 : 0
         },
         children: e => {
           let {
@@ -58,7 +62,7 @@ function M(e) {
               transform: l.to([0, 1], [1, 1.14]).to(e => "scale(".concat(e, ")"))
             },
             children: (0, a.jsx)(d.default, {
-              className: i()(v.emoji, {
+              className: i()(v.emoji, r, {
                 [v.emojiItemDisabled]: n
               }),
               emojiId: t.id,
@@ -94,7 +98,7 @@ function R(e) {
   })
 }
 
-function L(e) {
+function y(e) {
   let {
     channel: t,
     title: n,
@@ -106,7 +110,7 @@ function L(e) {
     emojiSearchProps: E,
     recentlyUsedEmojis: g,
     analyticsOverride: _
-  } = e, L = (0, C.useUID)(), [y, O] = l.useState(!1), j = (0, f.useFrequentlyUsedEmojis)(t.guild_id), P = (0, r.uniqBy)([...j, ...x], "name").filter(e => !S.default.isEmojiFilteredOrLocked({
+  } = e, y = (0, C.useUID)(), [L, O] = l.useState(!1), j = (0, f.useFrequentlyUsedEmojis)(t.guild_id), P = (0, r.uniqBy)([...j, ...x], "name").filter(e => !S.default.isEmojiFilteredOrLocked({
     emoji: e,
     channel: t,
     intention: N
@@ -124,12 +128,12 @@ function L(e) {
       D(!t), t && p.EmojiPickerStore.setSearchPlaceholder(null)
     };
   return (0, a.jsxs)(u.Dialog, {
-    "aria-labelledby": L,
+    "aria-labelledby": y,
     children: [(0, a.jsx)(u.HeadingLevel, {
       forceLevel: 2,
       children: (0, a.jsx)(u.HiddenVisually, {
         children: (0, a.jsx)(u.H, {
-          id: L,
+          id: y,
           children: n
         })
       })
@@ -139,26 +143,26 @@ function L(e) {
         analyticsOverride: _,
         channel: t,
         className: i()(v.animatedPicker, {
-          [v.animatedPickerTall]: y
+          [v.animatedPickerTall]: L
         }),
         headerClassName: i()(v.emojiPickerHeader, {
-          [v.emojiPickerHeaderExpanded]: y
+          [v.emojiPickerHeaderExpanded]: L
         }),
         closePopout: s,
-        onSelectEmoji: y ? b : () => {},
-        shouldHidePickerActions: !y,
+        onSelectEmoji: L ? b : () => {},
+        shouldHidePickerActions: !L,
         wrapper: "div",
         pickerIntention: N,
         searchProps: {
           ...E,
           accessory: (0, a.jsx)(R, {
             otherAccessories: null == E ? void 0 : E.accessory,
-            isEmojiPickerExpanded: y,
+            isEmojiPickerExpanded: L,
             onSetExpanded: D,
             onFocus: o
           }),
           onKeyDown: e => {
-            null != e && e.key !== A.KeyboardKeysUpdated.TAB && (e.key !== A.KeyboardKeysUpdated.ENTER || e.shiftKey ? D(!0) : D(!y))
+            null != e && e.key !== A.KeyboardKeysUpdated.TAB && (e.key !== A.KeyboardKeysUpdated.ENTER || e.shiftKey ? D(!0) : D(!L))
           }
         }
       }), (0, a.jsx)("div", {
