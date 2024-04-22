@@ -40,9 +40,9 @@ t.default = function(e) {
     }), (0, a.jsx)(T.Button, {
       className: d.settingsButton,
       onClick: A,
+      fullWidth: !0,
       children: u.default.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS
     }), (0, a.jsx)("div", {
-      className: d.__invalid_reportFalsePositive,
       children: (0, a.jsx)(T.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
