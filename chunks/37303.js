@@ -36,7 +36,7 @@ let E = e => {
     size: I
   } = f(), p = (0, i.useIsQuestExpired)(t);
   return (0, s.jsx)(o.QuestContentImpressionTracker, {
-    questId: t.id,
+    questOrQuests: t,
     questContent: n,
     trackGuildAndChannelMetadata: n === r.QuestContent.QUESTS_EMBED,
     children: e => (0, s.jsx)(s.Fragment, {

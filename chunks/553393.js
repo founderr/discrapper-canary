@@ -53,8 +53,8 @@ t.default = function(e) {
     location: g.QuestContent.MEMBERS_LIST
   }), x = (0, C.useIsQuestExpired)(N), H = (null == N ? void 0 : null === (t = N.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, Y = (null == N ? void 0 : null === (S = N.userStatus) || void 0 === S ? void 0 : S.enrolledAt) != null, j = (null == N ? void 0 : null === (h = N.userStatus) || void 0 === h ? void 0 : h.completedAt) != null, W = (0, l.useStateFromStores)([A.default], () => A.default.getState().theme), K = (0, u.isThemeDark)(W) ? P.ThemeTypes.DARK : P.ThemeTypes.LIGHT, z = (0, l.useStateFromStores)([f.default], () => f.default.useReducedMotion), {
     ref: X,
-    height: q
-  } = (0, I.default)(), [Q, Z] = r.useState(z), J = (0, T.useWindowDispatch)(), $ = (0, a.useListContainerScrollerRef)();
+    height: Q
+  } = (0, I.default)(), [q, Z] = r.useState(z), J = (0, T.useWindowDispatch)(), $ = (0, a.useListContainerScrollerRef)();
   r.useEffect(() => {
     let e = $.current;
     return null == e || e.addEventListener("scroll", B), () => {
@@ -65,7 +65,7 @@ t.default = function(e) {
       from: {
         height: 0
       },
-      height: null != q ? q : 0,
+      height: null != Q ? Q : 0,
       config: {
         tension: 450,
         friction: 45
@@ -73,7 +73,7 @@ t.default = function(e) {
       immediate: z,
       onRest: () => Z(!0)
     }),
-    et = (0, s.useTransition)(Q, {
+    et = (0, s.useTransition)(q, {
       from: {
         opacity: 0,
         scale: 0
@@ -147,19 +147,19 @@ t.default = function(e) {
       tileAssetType: "game"
     };
   return (0, i.jsx)(D.QuestContentImpressionTracker, {
-    questId: N.id,
+    questOrQuests: N,
     questContent: g.QuestContent.MEMBERS_LIST,
     trackGuildAndChannelMetadata: !0,
     children: e => (0, i.jsx)(s.animated.div, {
       ref: t => {
         e.current = t
       },
-      "aria-expanded": Q,
+      "aria-expanded": q,
       className: b.wrapper,
       style: {
         width: p,
         height: ee.height,
-        overflow: Q ? "visible" : "hidden",
+        overflow: q ? "visible" : "hidden",
         borderRadius: ei
       },
       children: (0, i.jsxs)("div", {

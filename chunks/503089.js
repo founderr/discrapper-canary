@@ -255,8 +255,8 @@ class I extends s.PureComponent {
       } = e, C = null;
       s === T.UserSettingsSections.ACCOUNT && this.props.isEligibleForPomelo ? C = (0, i.jsx)(h.default, {
         color: r.default.colors.STATUS_WARNING.css
-      }) : s === T.UserSettingsSections.INVENTORY && null != this.props.shouldShowSettingBadgeForQuests && this.props.shouldShowSettingBadgeForQuests.length > 0 ? C = (0, i.jsx)(d.QuestUserSettingsBadge, {
-        questIds: this.props.shouldShowSettingBadgeForQuests
+      }) : s === T.UserSettingsSections.INVENTORY && null != this.props.questsForBadge && this.props.questsForBadge.length > 0 ? C = (0, i.jsx)(d.QuestUserSettingsBadge, {
+        quests: this.props.questsForBadge
       }) : null != e.decoration ? C = (0, i.jsx)(o.Text, {
         variant: "text-md/normal",
         color: "text-muted",

@@ -143,7 +143,7 @@ t.default = function() {
     }
   });
   return l && null != v && (ea || !U || z) && !K ? (0, n.jsx)(m.QuestContentImpressionTracker, {
-    questId: v.id,
+    questOrQuests: v,
     questContent: _.QuestContent.QUEST_BAR,
     overrideVisibility: !R && ea,
     children: () => (0, n.jsx)(r.animated.div, {

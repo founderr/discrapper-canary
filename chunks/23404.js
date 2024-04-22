@@ -84,7 +84,7 @@ t.default = function(e) {
     location: m.QuestContent.ACTIVITY_PANEL
   }), G = (0, _.useIsQuestExpired)(o), w = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, k = (null === (a = o.userStatus) || void 0 === a ? void 0 : a.completedAt) != null, F = (null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
   return (null == o ? void 0 : o.userStatus) == null || (0, S.isDismissed)(o.userStatus, m.QuestContent.ACTIVITY_PANEL) || G || F ? null : (0, n.jsx)(I.QuestContentImpressionTracker, {
-    questId: o.id,
+    questOrQuests: o,
     questContent: m.QuestContent.ACTIVITY_PANEL,
     children: e => {
       var t;
