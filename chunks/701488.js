@@ -34,7 +34,7 @@ n.r(t), n.d(t, {
     return x
   },
   BOBBLE_LEAGUE_APPLICATION_ID: function() {
-    return k
+    return B
   },
   BYS_LETTER_APP_ID: function() {
     return Y
@@ -79,7 +79,7 @@ n.r(t), n.d(t, {
     return z
   },
   KWIM_APPLICATION_ID: function() {
-    return B
+    return k
   },
   LAND_IO_APPLICATION_ID: function() {
     return G
@@ -132,8 +132,8 @@ let C = 160,
   b = "852509694341283871",
   G = "903769130790969345",
   w = "880218394199220334",
-  B = "1078728822972764312",
-  k = "947957217959759964",
+  k = "1078728822972764312",
+  B = "947957217959759964",
   F = "832013003968348200",
   V = "832012774040141894",
   x = "832025144389533716",

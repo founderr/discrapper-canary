@@ -46,8 +46,8 @@ t.default = function(e) {
     user: b,
     currentUser: G,
     activities: w,
-    applicationStream: B,
-    status: k,
+    applicationStream: k,
+    status: B,
     shouldAnimateStatus: F = !1,
     isMobile: V,
     premiumSince: x,
@@ -99,7 +99,7 @@ t.default = function(e) {
         textClassName: v.activityText,
         emojiClassName: v.activityEmoji,
         activities: w,
-        applicationStream: B,
+        applicationStream: k,
         animate: eo,
         hideEmoji: !t,
         hideTooltip: !0,
@@ -140,7 +140,7 @@ t.default = function(e) {
     }),
     eg = (e, t) => {
       let n = F ? l.AnimatedAvatar : l.Avatar,
-        r = (0, u.default)(w) ? C.StatusTypes.STREAMING : k;
+        r = (0, u.default)(w) ? C.StatusTypes.STREAMING : B;
       return r = t ? void 0 : r, (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(n, {
           ...eE,
@@ -173,7 +173,7 @@ t.default = function(e) {
         className: v.clanTag
       })]
     }),
-    eD = k === C.StatusTypes.OFFLINE;
+    eD = B === C.StatusTypes.OFFLINE;
   return null == b ? (0, i.jsx)(h.default, {
     avatarSize: l.AvatarSizes.SIZE_32,
     className: v.placeholder
@@ -182,7 +182,7 @@ t.default = function(e) {
       var t, n;
       return (0, i.jsx)(I.default, {
         quest: ef,
-        applicationStream: B,
+        applicationStream: k,
         width: null !== (n = null === (t = ea.current) || void 0 === t ? void 0 : t.clientWidth) && void 0 !== n ? n : 222,
         ...e,
         closePopout: () => eT(!0)

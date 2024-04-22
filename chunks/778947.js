@@ -47,8 +47,8 @@ var i = n("735250"),
   b = n("74538"),
   G = n("534761"),
   w = n("307187"),
-  B = n("750858"),
-  k = n("981631"),
+  k = n("750858"),
+  B = n("981631"),
   F = n("689938"),
   V = n("50182"),
   x = n("255963");
@@ -105,7 +105,7 @@ function Y(e, t, n) {
     onPopoutRequestClose: c
   } = e;
   return (0, i.jsxs)(i.Fragment, {
-    children: [(0, i.jsx)(B.default, {
+    children: [(0, i.jsx)(k.default, {
       message: r,
       channel: s,
       author: a,
@@ -153,7 +153,7 @@ function j(e) {
   }), U = null != T.messageReference && null != T.webhookId, b = T.author, {
     id: G
   } = b, w = S ? 32 : 80, {
-    avatarSrc: B,
+    avatarSrc: k,
     avatarDecorationSrc: F,
     eventHandlers: V
   } = (0, R.default)({
@@ -169,10 +169,10 @@ function j(e) {
       icon: T.application.icon,
       size: w,
       fallbackAvatar: !1
-    })) && void 0 !== t ? t : B : B
-  }, [x, null === (t = T.application) || void 0 === t ? void 0 : t.icon, null === (n = T.application) || void 0 === n ? void 0 : n.id, b.avatar, w, B]);
+    })) && void 0 !== t ? t : k : k
+  }, [x, null === (t = T.application) || void 0 === t ? void 0 : t.icon, null === (n = T.application) || void 0 === n ? void 0 : n.id, b.avatar, w, k]);
   if (r.useEffect(() => {
-      if (null != h) return P.ComponentDispatch.subscribeKeyed(k.ComponentActionsKeyed.ANIMATE_CHAT_AVATAR, "".concat(h, ":").concat(G), D), () => void P.ComponentDispatch.unsubscribeKeyed(k.ComponentActionsKeyed.ANIMATE_CHAT_AVATAR, "".concat(h, ":").concat(G), D)
+      if (null != h) return P.ComponentDispatch.subscribeKeyed(B.ComponentActionsKeyed.ANIMATE_CHAT_AVATAR, "".concat(h, ":").concat(G), D), () => void P.ComponentDispatch.unsubscribeKeyed(B.ComponentActionsKeyed.ANIMATE_CHAT_AVATAR, "".concat(h, ":").concat(G), D)
     }, [G, h]), !S || M) return null != c && null != g ? (0, i.jsx)(_.AnalyticsLocationProvider, {
     value: v,
     children: (0, i.jsx)(u.Popout, {
@@ -311,7 +311,7 @@ function X(e) {
     hideTimestamp: p,
     className: O,
     channel: R
-  } = e, y = r.useMemo(() => null != o ? e => o(e, t) : void 0, [o, t]), [, P] = (0, E.default)(t.author.id, e.guildId), G = (0, l.useStateFromStores)([g.default], () => g.default.getGuild(e.guildId), [e.guildId]), x = null != t.author && null != G && L.default.canManageUser(k.Permissions.MODERATE_MEMBERS, t.author, G), H = P && x, K = j({
+  } = e, y = r.useMemo(() => null != o ? e => o(e, t) : void 0, [o, t]), [, P] = (0, E.default)(t.author.id, e.guildId), G = (0, l.useStateFromStores)([g.default], () => g.default.getGuild(e.guildId), [e.guildId]), x = null != t.author && null != G && L.default.canManageUser(B.Permissions.MODERATE_MEMBERS, t.author, G), H = P && x, K = j({
     props: e,
     guildId: e.guildId,
     handleRenderPopout: y,
@@ -362,11 +362,11 @@ function X(e) {
     messageId: t.id
   }, "connections"));
   let en = [];
-  (0, U.hasFlag)(t.flags, k.MessageFlags.SUPPRESS_NOTIFICATIONS) && en.push((0, i.jsx)(N.default, {}, "suppress-notifications")), t.isPoll() && en.push((0, i.jsx)(h.default, {
+  (0, U.hasFlag)(t.flags, B.MessageFlags.SUPPRESS_NOTIFICATIONS) && en.push((0, i.jsx)(N.default, {}, "suppress-notifications")), t.isPoll() && en.push((0, i.jsx)(h.default, {
     className: V.pollBadgeDefault
   }, "poll"));
   let ei = {};
-  ei[B.UsernameDecorationTypes.SYSTEM_TAG] = q, ei[B.UsernameDecorationTypes.BADGES] = Z;
+  ei[k.UsernameDecorationTypes.SYSTEM_TAG] = q, ei[k.UsernameDecorationTypes.BADGES] = Z;
   let er = Y(e, y, ei),
     es = (0, f.getMessageUsernameId)(t, A),
     ea = (0, f.getMessageTimestampId)(t),

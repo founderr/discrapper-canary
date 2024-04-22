@@ -79,10 +79,10 @@ let C = (0, E.default)(function(e) {
   let G = h.default.getCurrentUser();
   a()(null != G, "MemberRolesList: currentUser cannot be undefined");
   let w = S.default.can(p.Permissions.MANAGE_ROLES, n),
-    B = A.getHighestRole(n, G.id),
-    k = r.useMemo(() => "roles-".concat((0, o.v4)()), []),
+    k = A.getHighestRole(n, G.id),
+    B = r.useMemo(() => "roles-".concat((0, o.v4)()), []),
     F = (0, l.default)({
-      id: k,
+      id: B,
       isEnabled: !0,
       scrollToStart: p.NOOP_PROMISE,
       scrollToEnd: p.NOOP_PROMISE,
@@ -93,7 +93,7 @@ let C = (0, E.default)(function(e) {
       return (0, i.jsx)(c.MemberRole, {
         className: R.role,
         role: e,
-        canRemove: w && A.isRoleHigher(n, G.id, B, e) || (null === (r = e.tags) || void 0 === r ? void 0 : r.guild_connections) === null && t.id === G.id,
+        canRemove: w && A.isRoleHigher(n, G.id, k, e) || (null === (r = e.tags) || void 0 === r ? void 0 : r.guild_connections) === null && t.id === G.id,
         onRemove: () => D(e),
         ref: t => {
           var n, i;

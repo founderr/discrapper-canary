@@ -109,7 +109,7 @@ function w(e) {
   return null != s && (e.setData("channel", s), !0)
 }
 
-function B(e) {
+function k(e) {
   let t = {
     [p.default.Messages.SEARCH_ANSWER_HAS_LINK]: "link",
     [p.default.Messages.SEARCH_ANSWER_HAS_EMBED]: "embed",
@@ -123,16 +123,16 @@ function B(e) {
   return null != t && "" !== t && (e.setData("has", t), !0)
 }
 
-function k() {
+function B() {
   return [...Array.from(O()), ...Array.from(R()), ...Array.from(C()), ...Object.keys(v())]
 }
 
 function F() {
-  return l().sample(k())
+  return l().sample(B())
 }
 
 function V(e, t, n) {
-  return x(e, t, k()).map(e => ({
+  return x(e, t, B()).map(e => ({
     ...e,
     group: n,
     key: "".concat(n, "-").concat(e.text)
@@ -247,7 +247,7 @@ function z() {
       [N.SearchTokenTypes.ANSWER_HAS]: {
         regex: RegExp("(?:\\s*-?(".concat(e.map(e => A.default.escape(e)).join("|"), "))"), "i"),
         follows: [N.SearchTokenTypes.FILTER_HAS],
-        validator: B,
+        validator: k,
         componentType: "ANSWER",
         queryKey: "has"
       },

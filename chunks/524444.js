@@ -84,8 +84,8 @@ var i, r, s = n("735250"),
   b = n("278297"),
   G = n("259580"),
   w = n("386103"),
-  B = n("465670"),
-  k = n("839523"),
+  k = n("465670"),
+  B = n("839523"),
   F = n("626135"),
   V = n("823379"),
   x = n("589530"),
@@ -561,7 +561,7 @@ function el(e) {
             [X.newTopicsBarTextUnselected]: !Z,
             [X.newTopicsBarTextSelected]: Z
           }),
-          children: [(0, s.jsx)(k.default, {
+          children: [(0, s.jsx)(B.default, {
             className: X.newTopicsBarIcon,
             width: 16,
             height: 16
@@ -596,7 +596,7 @@ function el(e) {
         className: X.topicsDropdownHeading,
         children: [(0, s.jsxs)("div", {
           className: X.topicsDropdownHeadingText,
-          children: [(0, s.jsx)(k.default, {
+          children: [(0, s.jsx)(B.default, {
             className: X.topicsPillHeadingIcon,
             width: 18,
             height: 20
@@ -612,7 +612,7 @@ function el(e) {
           "aria-label": z.default.Messages.CLOSE,
           onClick: $,
           className: X.topicsDropdownClose,
-          children: (0, s.jsx)(B.default, {})
+          children: (0, s.jsx)(k.default, {})
         })]
       }), (0, s.jsx)(E.Scroller, {
         ref: M,
@@ -784,7 +784,7 @@ function ed(e) {
             [X.topicsPillTextUnselected]: !K,
             [X.topicsPillTextSelected]: K
           }),
-          children: [(0, s.jsx)(k.default, {
+          children: [(0, s.jsx)(B.default, {
             className: X.topicsPillSummaryIcon,
             width: 16,
             height: 16
@@ -831,7 +831,7 @@ function ed(e) {
         className: X.topicsDropdownHeading,
         children: [(0, s.jsxs)("div", {
           className: X.topicsDropdownHeadingText,
-          children: [(0, s.jsx)(k.default, {
+          children: [(0, s.jsx)(B.default, {
             className: X.topicsPillHeadingIcon,
             width: 18,
             height: 20
@@ -847,7 +847,7 @@ function ed(e) {
           "aria-label": z.default.Messages.CLOSE,
           onClick: q,
           className: X.topicsDropdownClose,
-          children: (0, s.jsx)(B.default, {})
+          children: (0, s.jsx)(k.default, {})
         })]
       }), (0, s.jsx)(E.Scroller, {
         ref: g,

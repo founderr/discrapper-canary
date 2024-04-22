@@ -33,8 +33,8 @@ var i, r = n("392711"),
   b = n("633302"),
   G = n("174065"),
   w = n("396352"),
-  B = n("185923"),
-  k = n("981631"),
+  k = n("185923"),
+  B = n("981631"),
   F = n("149203"),
   V = n("526761");
 
@@ -254,7 +254,7 @@ class en {
       };
     b.default.forEach(n);
     let r = e => {
-      let t = Q[null == e ? k.NULL_STRING_GUILD_ID : e];
+      let t = Q[null == e ? B.NULL_STRING_GUILD_ID : e];
       null != t && (s().each(t.usableEmojis, n), s().each(t.emoticons, i))
     };
     for (let e in r(this.guildId), this.newlyAddedEmoji) null != this.newlyAddedEmoji[e] ? this.newlyAddedEmoji[e] = this.newlyAddedEmoji[e].sort((e, t) => P.default.compare(t.id, e.id)).slice(0, 3) : this.newlyAddedEmoji[e] = [];
@@ -429,7 +429,7 @@ class e_ extends(i = u.default.PersistedStore) {
           intention: s,
           forceIncludeExternalGuilds: a
         });
-        return i === B.EmojiDisabledReasons.PREMIUM_LOCKED ? e.locked.push(t) : null == i && e.unlocked.push(t), e
+        return i === k.EmojiDisabledReasons.PREMIUM_LOCKED ? e.locked.push(t) : null == i && e.unlocked.push(t), e
       }, {
         unlocked: [],
         locked: []
@@ -468,7 +468,7 @@ class e_ extends(i = u.default.PersistedStore) {
         channel: e,
         count: 10,
         query: Z,
-        intention: B.EmojiIntention.CHAT
+        intention: k.EmojiIntention.CHAT
       });
       return [...n.slice(0, 5), ...t.slice(0, 5)].slice(0, 5)
     }

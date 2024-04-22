@@ -418,7 +418,7 @@ class G extends C.MessageType {
           r.dismissedGuildContent = e.bytes();
           break;
         case 6:
-          r.joinSound = ek.internalBinaryRead(e, e.uint32(), n, r.joinSound);
+          r.joinSound = eB.internalBinaryRead(e, e.uint32(), n, r.joinSound);
           break;
         case 7:
           r.mobileRedesignChannelListSettings = ef.internalBinaryRead(e, e.uint32(), n, r.mobileRedesignChannelListSettings);
@@ -462,7 +462,7 @@ class G extends C.MessageType {
   }
   internalBinaryWrite(e, t, n) {
     for (let i of Object.keys(e.channels)) t.tag(1, C.WireType.LengthDelimited).fork().tag(1, C.WireType.Bit64).fixed64(i), t.tag(2, C.WireType.LengthDelimited).fork(), V.internalBinaryWrite(e.channels[i], t, n), t.join().join();
-    0 !== e.hubProgress && t.tag(2, C.WireType.Varint).uint32(e.hubProgress), 0 !== e.guildOnboardingProgress && t.tag(3, C.WireType.Varint).uint32(e.guildOnboardingProgress), e.guildRecentsDismissedAt && L.Timestamp.internalBinaryWrite(e.guildRecentsDismissedAt, t.tag(4, C.WireType.LengthDelimited).fork(), n).join(), e.dismissedGuildContent.length && t.tag(5, C.WireType.LengthDelimited).bytes(e.dismissedGuildContent), e.joinSound && ek.internalBinaryWrite(e.joinSound, t.tag(6, C.WireType.LengthDelimited).fork(), n).join(), e.mobileRedesignChannelListSettings && ef.internalBinaryWrite(e.mobileRedesignChannelListSettings, t.tag(7, C.WireType.LengthDelimited).fork(), n).join(), !1 !== e.disableRaidAlertPush && t.tag(8, C.WireType.Varint).bool(e.disableRaidAlertPush), !1 !== e.disableRaidAlertNag && t.tag(9, C.WireType.Varint).bool(e.disableRaidAlertNag), e.customNotificationSoundConfig && H.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(10, C.WireType.LengthDelimited).fork(), n).join();
+    0 !== e.hubProgress && t.tag(2, C.WireType.Varint).uint32(e.hubProgress), 0 !== e.guildOnboardingProgress && t.tag(3, C.WireType.Varint).uint32(e.guildOnboardingProgress), e.guildRecentsDismissedAt && L.Timestamp.internalBinaryWrite(e.guildRecentsDismissedAt, t.tag(4, C.WireType.LengthDelimited).fork(), n).join(), e.dismissedGuildContent.length && t.tag(5, C.WireType.LengthDelimited).bytes(e.dismissedGuildContent), e.joinSound && eB.internalBinaryWrite(e.joinSound, t.tag(6, C.WireType.LengthDelimited).fork(), n).join(), e.mobileRedesignChannelListSettings && ef.internalBinaryWrite(e.mobileRedesignChannelListSettings, t.tag(7, C.WireType.LengthDelimited).fork(), n).join(), !1 !== e.disableRaidAlertPush && t.tag(8, C.WireType.Varint).bool(e.disableRaidAlertPush), !1 !== e.disableRaidAlertNag && t.tag(9, C.WireType.Varint).bool(e.disableRaidAlertNag), e.customNotificationSoundConfig && H.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(10, C.WireType.LengthDelimited).fork(), n).join();
     let i = n.writeUnknownFields;
     return !1 !== i && (!0 == i ? C.UnknownFieldHandler.onWrite : i)(this.typeName, e, t), t
   }
@@ -500,7 +500,7 @@ class G extends C.MessageType {
       no: 6,
       name: "join_sound",
       kind: "message",
-      T: () => ek
+      T: () => eB
     }, {
       no: 7,
       name: "mobile_redesign_channel_list_settings",
@@ -525,7 +525,7 @@ class G extends C.MessageType {
   }
 }
 let w = new G;
-class B extends C.MessageType {
+class k extends C.MessageType {
   create(e) {
     let t = {};
     return globalThis.Object.defineProperty(t, C.MESSAGE_TYPE, {
@@ -581,7 +581,7 @@ class B extends C.MessageType {
     }])
   }
 }
-let k = new B;
+let B = new k;
 class F extends C.MessageType {
   create(e) {
     let t = {
@@ -602,7 +602,7 @@ class F extends C.MessageType {
           r.collapsedInInbox = e.bool();
           break;
         case 2:
-          r.iconEmoji = k.internalBinaryRead(e, e.uint32(), n, r.iconEmoji);
+          r.iconEmoji = B.internalBinaryRead(e, e.uint32(), n, r.iconEmoji);
           break;
         case 3:
           r.customNotificationSoundConfig = H.internalBinaryRead(e, e.uint32(), n, r.customNotificationSoundConfig);
@@ -617,7 +617,7 @@ class F extends C.MessageType {
     return r
   }
   internalBinaryWrite(e, t, n) {
-    !1 !== e.collapsedInInbox && t.tag(1, C.WireType.Varint).bool(e.collapsedInInbox), e.iconEmoji && k.internalBinaryWrite(e.iconEmoji, t.tag(2, C.WireType.LengthDelimited).fork(), n).join(), e.customNotificationSoundConfig && H.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(3, C.WireType.LengthDelimited).fork(), n).join();
+    !1 !== e.collapsedInInbox && t.tag(1, C.WireType.Varint).bool(e.collapsedInInbox), e.iconEmoji && B.internalBinaryWrite(e.iconEmoji, t.tag(2, C.WireType.LengthDelimited).fork(), n).join(), e.customNotificationSoundConfig && H.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(3, C.WireType.LengthDelimited).fork(), n).join();
     let i = n.writeUnknownFields;
     return !1 !== i && (!0 == i ? C.UnknownFieldHandler.onWrite : i)(this.typeName, e, t), t
   }
@@ -631,7 +631,7 @@ class F extends C.MessageType {
       no: 2,
       name: "icon_emoji",
       kind: "message",
-      T: () => k
+      T: () => B
     }, {
       no: 3,
       name: "custom_notification_sound_config",
@@ -2613,7 +2613,7 @@ class eG extends C.MessageType {
   }
 }
 let ew = new eG;
-class eB extends C.MessageType {
+class ek extends C.MessageType {
   create(e) {
     let t = {
       soundId: "0",
@@ -2664,7 +2664,7 @@ class eB extends C.MessageType {
     }])
   }
 }
-let ek = new eB;
+let eB = new ek;
 class eF extends C.MessageType {
   create(e) {
     let t = {

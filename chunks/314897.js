@@ -29,8 +29,8 @@ let M = n("952265").hasModalOpen,
   b = "user_id_cache",
   G = null,
   w = null,
-  B = null,
   k = null,
+  B = null,
   F = null,
   V = null,
   x = null,
@@ -161,10 +161,10 @@ class eI extends(s = E.default.Store) {
     return G
   }
   getSessionId() {
-    return B
+    return k
   }
   getAuthSessionIdHash() {
-    return k
+    return B
   }
   getToken() {
     return (0, R.getToken)()
@@ -257,7 +257,7 @@ l = "AuthenticationStore", (o = "displayName") in(a = eI) ? Object.definePropert
       analyticsToken: s,
       auth: a
     } = e;
-    ea("handleConnectionOpen called"), C.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), B = i, k = r, x = s, G = n.id, w = n.email, void 0 !== a && (W = a.authenticator_types), T.Storage.set(U, n.email), T.Storage.set(b, n.id)
+    ea("handleConnectionOpen called"), C.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), k = i, B = r, x = s, G = n.id, w = n.email, void 0 !== a && (W = a.authenticator_types), T.Storage.set(U, n.email), T.Storage.set(b, n.id)
   },
   OVERLAY_INITIALIZE: function(e) {
     var t;
@@ -267,7 +267,7 @@ l = "AuthenticationStore", (o = "displayName") in(a = eI) ? Object.definePropert
       analyticsToken: r,
       token: s
     } = e;
-    C.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), B = i, x = r, ed(s), eu(), G = n.id, T.Storage.set(b, n.id)
+    C.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), k = i, x = r, ed(s), eu(), G = n.id, T.Storage.set(b, n.id)
   },
   CONNECTION_CLOSED: function(e) {
     let {
@@ -287,7 +287,7 @@ l = "AuthenticationStore", (o = "displayName") in(a = eI) ? Object.definePropert
     let {
       authSessionIdHash: t
     } = e;
-    null != t && (k = t)
+    null != t && (B = t)
   },
   LOGIN: function(e) {
     et = {}, H = D.LoginStates.LOGGING_IN, Z = "", r = null, null != e.login && (er = e.login)

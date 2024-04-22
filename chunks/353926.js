@@ -54,14 +54,14 @@ function w(e) {
     return G[e] = t, t
   }
 }
-let B = f.TriggerDebuggingAAExperiments.map(e => w(e)),
-  k = {
+let k = f.TriggerDebuggingAAExperiments.map(e => w(e)),
+  B = {
     title: "Unnamed Experiment",
     description: "No description provided"
   };
 
 function F(e, t) {
-  return e || B.includes(t)
+  return e || k.includes(t)
 }
 
 function V(e) {
@@ -352,7 +352,7 @@ function es(e) {
     } = e,
     a = "function" == typeof i.getExperimentId ? i.getExperimentId() : null;
   if (!a) throw Error("Experiment Store must have a static getExperimentId method defined");
-  let o = "function" == typeof i.getMetaData ? i.getMetaData() : k;
+  let o = "function" == typeof i.getMetaData ? i.getMetaData() : B;
   Object.keys(s).forEach(e => {
     if (e !== f.ExperimentTypes.NONE_LEGACY) r()(null != s[e], "Unexpected missing renderFunctions"), t = e, n = Object.keys(s[e]).map(e => parseInt(e))
   }), er({

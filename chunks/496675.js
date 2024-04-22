@@ -64,24 +64,24 @@ function w(e) {
   return null != n ? n : y[e] = G(e, t)
 }
 
-function B(e) {
+function k(e) {
   if (null != e) {
     var t;
     P[e] = (null !== (t = P[e]) && void 0 !== t ? t : 0) + 1
   }
 }
 
-function k() {
+function B() {
   for (let e in M = {}, y = {}, P) P[e] += 1;
   U += 1
 }
 
 function F() {
-  k()
+  B()
 }
 
 function V() {
-  k()
+  B()
 }
 
 function x(e) {
@@ -90,7 +90,7 @@ function x(e) {
     user: n
   } = e;
   if (n.id !== (null === (t = L.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
-  k()
+  B()
 }
 
 function H() {
@@ -113,7 +113,7 @@ function j(e) {
   let n = O.default.getMutableBasicGuildChannelsForGuild(t);
   l().forEach(n, e => {
     delete y[e.id]
-  }), U += 1, B(t)
+  }), U += 1, k(t)
 }
 
 function W(e) {
@@ -138,7 +138,7 @@ function K(e) {
   let n = O.default.getMutableBasicGuildChannelsForGuild(t);
   l().forEach(n, e => {
     delete y[e.id]
-  }), U += 1, B(t)
+  }), U += 1, k(t)
 }
 
 function z(e, t, n, i) {
@@ -280,7 +280,7 @@ a = "PermissionStore", (s = "displayName") in(r = X) ? Object.defineProperty(r, 
         context: n
       });
     if (y[n.id] === r) return !1;
-    y[n.id] = r, U += 1, B(n.getGuildId())
+    y[n.id] = r, U += 1, k(n.getGuildId())
   },
   THREAD_CREATE: H,
   THREAD_UPDATE: H,
@@ -302,7 +302,7 @@ a = "PermissionStore", (s = "displayName") in(r = X) ? Object.defineProperty(r, 
           user: i,
           context: t
         });
-      y[t.id] !== r && (y[t.id] = r, B(t.getGuildId()), n = !0)
+      y[t.id] !== r && (y[t.id] = r, k(t.getGuildId()), n = !0)
     }
     return !!n && (U += 1, n)
   },
@@ -322,16 +322,16 @@ a = "PermissionStore", (s = "displayName") in(r = X) ? Object.defineProperty(r, 
   },
   THREAD_MEMBER_UPDATE: function(e) {
     var t;
-    return (null === (t = L.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.userId && (B(e.guildId), !0)
+    return (null === (t = L.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.userId && (k(e.guildId), !0)
   },
   THREAD_MEMBERS_UPDATE: function(e) {
-    return !!(0, S.doesThreadMembersActionAffectMe)(e) && (B(e.guildId), !0)
+    return !!(0, S.doesThreadMembersActionAffectMe)(e) && (k(e.guildId), !0)
   },
   CHANNEL_DELETE: function(e) {
     let {
       channel: t
     } = e;
-    return delete y[t.id], U += 1, B(t.guild_id), !1
+    return delete y[t.id], U += 1, k(t.guild_id), !1
   },
   GUILD_ROLE_CREATE: j,
   GUILD_ROLE_UPDATE: j,

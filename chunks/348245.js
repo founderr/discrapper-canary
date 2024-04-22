@@ -144,7 +144,7 @@ function U() {
         guildId: n.getGuildId(),
         channelId: n.id,
         messageId: null == e ? void 0 : null === (t = e.params) || void 0 === t ? void 0 : t.message
-      }), B(n.getGuildId(), n.id)
+      }), k(n.getGuildId(), n.id)
     }
   }
 }
@@ -163,7 +163,7 @@ function b() {
       isPreload: e,
       skipLocalFetch: t,
       logFailures: n
-    }) : n && v.log("Skipping fetch because the selected channel is not a text channel"), B(r.getGuildId(), r.id)) : n && v.log("Skipping fetch because channel is null")
+    }) : n && v.log("Skipping fetch because the selected channel is not a text channel"), k(r.getGuildId(), r.id)) : n && v.log("Skipping fetch because channel is null")
   } else n && v.log("Skipping fetch because there is no selected channel")
 }
 
@@ -179,7 +179,7 @@ function G(e) {
     channelId: n,
     messageId: i,
     jumpType: r
-  }), B(t, n)
+  }), k(t, n)
 }
 
 function w(e) {
@@ -193,7 +193,7 @@ function w(e) {
   })
 }
 
-function B(e, t) {
+function k(e, t) {
   let n = f.default.getCurrentSidebarChannelId(t);
   if (null != n) M({
     guildId: e,
@@ -202,12 +202,12 @@ function B(e, t) {
   })
 }
 
-function k() {
+function B() {
   let e = m.default.getChannelId(),
     t = N.default.getGuildId();
   if (null == t || null == e) return;
   let n = f.default.getSidebarState(e);
-  (null == n ? void 0 : n.type) !== I.SidebarType.VIEW_CHANNEL && B(t, e)
+  (null == n ? void 0 : n.type) !== I.SidebarType.VIEW_CHANNEL && k(t, e)
 }
 
 function F(e) {
@@ -219,7 +219,7 @@ function F(e) {
   i === C.CURRENT_APP_CONTEXT && (M({
     guildId: t,
     channelId: n
-  }), B(t, n))
+  }), k(t, n))
 }
 
 function V(e) {
@@ -314,7 +314,7 @@ class z extends _.default {
     o.default.unsubscribe("CONNECTION_OPEN", U)
   }
   constructor(...e) {
-    super(...e), D(this, "fetchMessages", M), D(this, "loadSelectedChannelIfNecessary", b), D(this, "stores", new Map().set(f.default, k)), D(this, "actions", {
+    super(...e), D(this, "fetchMessages", M), D(this, "loadSelectedChannelIfNecessary", b), D(this, "stores", new Map().set(f.default, B)), D(this, "actions", {
       APP_STATE_UPDATE: K,
       OVERLAY_INITIALIZE: U,
       CHANNEL_SELECT: G,

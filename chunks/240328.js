@@ -90,10 +90,10 @@ t.default = e => {
     analyticsLocations: b
   } = (0, E.default)(c.default.COLLECTIBLES_USER_POPOUT_UPSELL), G = (0, l.useStateFromStores)([_.default], () => _.default.useReducedMotion), {
     ref: w,
-    height: B
-  } = (0, d.default)(), k = r.useMemo(() => ({
-    top: "-".concat((null != B ? B : v) + 6, "px")
-  }), [B]), F = (0, l.useStateFromStores)([m.default], () => m.default.getCurrentUser()), V = p.default.canUseCollectibles(F), {
+    height: k
+  } = (0, d.default)(), B = r.useMemo(() => ({
+    top: "-".concat((null != k ? k : v) + 6, "px")
+  }), [k]), F = (0, l.useStateFromStores)([m.default], () => m.default.getCurrentUser()), V = p.default.canUseCollectibles(F), {
     setUpsellSource: x,
     reset: H
   } = (0, O.useUserPopoutCollectiblesUpsellStore)();
@@ -135,7 +135,7 @@ t.default = e => {
     openShop: M
   }))).otherwise(() => null);
   return (0, i.jsx)("div", {
-    style: k,
+    style: B,
     className: a()(g.containerWrapper, {
       [g.animation]: !G,
       [g.inSidebar]: N

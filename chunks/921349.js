@@ -55,8 +55,8 @@ let U = r.forwardRef(function(e, t) {
     isDisabled: U = !1,
     maxVisibleItems: G = 7,
     look: w = D.SelectLooks.FILLED,
-    autoFocus: B = !1,
-    popoutPosition: k = "bottom",
+    autoFocus: k = !1,
+    popoutPosition: B = "bottom",
     filter: x = !0,
     debounceTime: H,
     renderOptionLabel: Y = P,
@@ -190,10 +190,10 @@ let U = r.forwardRef(function(e, t) {
       setFocus: eU,
       disableClickOnSpace: !0
     }),
-    eB = (0, p.default)(ew),
-    ek = (0, p.default)(em);
+    ek = (0, p.default)(ew),
+    eB = (0, p.default)(em);
   r.useEffect(() => {
-    let e = ek.current,
+    let e = eB.current,
       t = eg.current;
     ec && null != t && !eN && requestAnimationFrame(() => {
       let n = eh.current,
@@ -204,7 +204,7 @@ let U = r.forwardRef(function(e, t) {
       })
     })
   }, [ec, eN]), r.useEffect(() => {
-    let e = eB.current;
+    let e = ek.current;
     if (ec && !eN) {
       var t;
       let n = eu.current;
@@ -244,11 +244,11 @@ let U = r.forwardRef(function(e, t) {
     e_(null), (!I || T) && eM(!1), eS(!1)
   }, [n, em, I, T, l, s, eM]);
   r.useLayoutEffect(() => {
-    if (B) {
+    if (k) {
       var e;
       null === (e = eu.current) || void 0 === e || e.focus()
     }
-  }, [B]);
+  }, [k]);
   let eV = r.useCallback(() => {
       eT(""), eF(null), eM(!0)
     }, [eF, eM]),
@@ -304,7 +304,7 @@ let U = r.forwardRef(function(e, t) {
           renderOptionSuffix: K
         })
       },
-      position: k,
+      position: B,
       children: (e, t) => {
         let {
           "aria-expanded": n,
@@ -508,7 +508,7 @@ function b(e) {
           let {
             row: n
           } = e, r = o[n], a = I(r);
-          return (0, i.jsx)(B, {
+          return (0, i.jsx)(k, {
             multi: m,
             "aria-posinset": n,
             "aria-setsize": o.length,
@@ -584,7 +584,7 @@ function w(e) {
   })
 }
 
-function B(e) {
+function k(e) {
   let {
     value: t,
     label: n,
@@ -623,14 +623,14 @@ function B(e) {
     }), " ", null != s && (0, i.jsx)("div", {
       className: M.suffix,
       children: s
-    }), " ", (0, i.jsx)(k, {
+    }), " ", (0, i.jsx)(B, {
       isSelected: l,
       multi: c
     })]
   })
 }
 
-function k(e) {
+function B(e) {
   let {
     isSelected: t,
     multi: n

@@ -80,8 +80,8 @@ let P = d.default.RULES,
   b = /^<@!?(\d+)>/,
   G = /^<@&(\d+)>/,
   w = /^<#(\d+)>/,
-  B = /^<a?:(\w+):(\d+)>/,
-  k = /(@everyone|@here|@Clyde)\b/,
+  k = /^<a?:(\w+):(\d+)>/,
+  B = /(@everyone|@here|@Clyde)\b/,
   F = {
     link: M(a().defaultRules.link),
     autolink: M(a().defaultRules.autolink),
@@ -91,7 +91,7 @@ let P = d.default.RULES,
     rawUserMention: y(b),
     rawRoleMention: y(G),
     rawChannelMention: y(w),
-    rawEmoji: y(B),
+    rawEmoji: y(k),
     mention: {
       match(e, t, n) {
         let i = n.split(" ").pop() + e;
@@ -102,7 +102,7 @@ let P = d.default.RULES,
             ...e,
             text: e.text.split("#")[0]
           })), "mention"))) return null;
-        let s = k.exec(e);
+        let s = B.exec(e);
         if (null != s && r[0].length <= s[0].length) return null;
         if ("" === n && (0, c.canSuppressNotifications)()) {
           let t = c.SILENT_RE.exec(e);
@@ -265,7 +265,7 @@ let P = d.default.RULES,
       }
     },
     emoji: {
-      match: a().anyScopeRegex(B),
+      match: a().anyScopeRegex(k),
       parse(e, t, n) {
         let [i, r, s] = e, {
           guild: a

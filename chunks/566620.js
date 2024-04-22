@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return M
   },
   dismissNewActivityIndicator: function() {
-    return B
+    return k
   },
   fetchDeveloperApplications: function() {
     return y
@@ -37,7 +37,7 @@ n.r(t), n.d(t, {
     return P
   },
   validateTestMode: function() {
-    return k
+    return B
   }
 }), n("47120");
 var i = n("990547"),
@@ -314,12 +314,12 @@ async function w(e) {
   })
 }
 
-function B() {
+function k() {
   s.default.dispatch({
     type: "EMBEDDED_ACTIVITY_DISMISS_NEW_INDICATOR"
   })
 }
-async function k(e) {
+async function B(e) {
   let t = C.Endpoints.ACTIVITY_TEST_MODE(e);
   try {
     return await r.HTTP.get({

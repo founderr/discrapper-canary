@@ -43,11 +43,11 @@ let u = r.memo(r.forwardRef((e, t) => {
       sectionIndex: e,
       sectionRowIndex: t
     }) : S, [S]),
-    B = r.useCallback(e => {
+    k = r.useCallback(e => {
       let t = "function" == typeof A ? A(e) : A;
       return null == t ? 0 : t
     }, [A]),
-    k = r.useCallback(e => {
+    B = r.useCallback(e => {
       let t = "function" == typeof m ? m(e) : m;
       return null == t ? 0 : t
     }, [m]),
@@ -78,7 +78,7 @@ let u = r.memo(r.forwardRef((e, t) => {
             top: i,
             bottom: -1
           }
-        }, i += B(a);
+        }, i += k(a);
         for (let t = 0; t < n; t++) {
           let n = i + (o ? w(a, t, e) : 0),
             s = {
@@ -90,14 +90,14 @@ let u = r.memo(r.forwardRef((e, t) => {
             offset: s
           }, i = n, e++
         }
-        i += k(a) + F(a), s[a].offset.bottom = i
+        i += B(a) + F(a), s[a].offset.bottom = i
       }
       return {
         totalHeight: i += u[2],
         rowDescriptors: r,
         sectionDescriptors: s
       }
-    }, [w, k, B, F, u, T, f, G]);
+    }, [w, B, k, F, u, T, f, G]);
   V.current = j, x.current = Y;
   let W = r.useCallback(() => {
     var e;
@@ -160,7 +160,7 @@ let u = r.memo(r.forwardRef((e, t) => {
             top: o,
             bottom: l
           }
-        } = r, u = B(a), d = o - (p ? u : 0) - i <= U.current, _ = l + i >= U.current + M;
+        } = r, u = k(a), d = o - (p ? u : 0) - i <= U.current, _ = l + i >= U.current + M;
         if (d) {
           let r = U.current + u - o,
             s = p ? U.current - r : o;
@@ -208,7 +208,7 @@ let u = r.memo(r.forwardRef((e, t) => {
         node: e
       })
     }
-  }), [B, p, H, M]);
+  }), [k, p, H, M]);
   let {
     visibleItems: z,
     listOffset: X
@@ -232,8 +232,8 @@ let u = r.memo(r.forwardRef((e, t) => {
         }
       } = j[r], l = o - a;
       if (0 === l) continue;
-      let u = B(r),
-        I = k(r),
+      let u = k(r),
+        I = B(r),
         T = F(r);
       if (o <= D) n = o;
       else if (o > D && a < e) {
@@ -263,7 +263,7 @@ let u = r.memo(r.forwardRef((e, t) => {
       visibleItems: i,
       listOffset: n
     }
-  }, [w, k, B, F, u, d, _, E, c, D, j, p, I, G, M]), Q = r.useMemo(() => {
+  }, [w, B, k, F, u, d, _, E, c, D, j, p, I, G, M]), Q = r.useMemo(() => {
     var e, t, n;
     return {
       top: X,

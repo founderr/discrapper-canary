@@ -19,10 +19,10 @@ n.r(t), n.d(t, {
     return M
   },
   getAvailableSoundboardSoundCount: function() {
-    return k
+    return B
   },
   getAvailableStickerSlotCount: function() {
-    return B
+    return k
   },
   getGracePeriodEndingDate: function() {
     return w
@@ -390,7 +390,7 @@ function w(e, t) {
   return null
 }
 
-function B(e, t) {
+function k(e, t) {
   let n = A(t),
     i = f.indexOf(t);
   if (-1 === i) return 0;
@@ -400,7 +400,7 @@ function B(e, t) {
   return Math.max(0, n - e.slice(s, a).length)
 }
 
-function k(e, t) {
+function B(e, t) {
   return -1 === f.indexOf(t) ? 0 : Math.max(0, m(t) - e.length)
 }
 

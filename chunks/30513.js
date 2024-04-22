@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return G
   },
   premiumProgressBarUpsellPerks: function() {
-    return B
+    return k
   },
   vanityUrlUpsellPerks: function() {
     return b
@@ -165,6 +165,6 @@ function w() {
   return [N(), D()]
 }
 
-function B() {
+function k() {
   return [C(), g(), R(), L()]
 }

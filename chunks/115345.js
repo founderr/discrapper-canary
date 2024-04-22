@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return b
   },
   useSaveSettings: function() {
-    return B
+    return k
   }
 }), n("47120"), n("789020"), n("724458"), n("411104");
 var i = n("470079"),
@@ -142,12 +142,12 @@ function w() {
   })
 }
 
-function B(e) {
+function k(e) {
   let [t, n] = i.useState(!1), [r, s] = i.useState(!1), a = i.useCallback(async t => {
     if (r) throw Error("Already submitted notifications migration");
     n(!0);
     try {
-      await k(t, e), s(!0)
+      await B(t, e), s(!0)
     } finally {
       n(!1)
     }
@@ -158,7 +158,7 @@ function B(e) {
     saveSettings: a
   }
 }
-async function k(e, t) {
+async function B(e, t) {
   if (A.default.useNewNotifications) {
     u.default.show({
       title: "Info",

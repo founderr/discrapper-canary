@@ -34,8 +34,8 @@ var i = n("735250"),
   b = n("185923"),
   G = n("611480"),
   w = n("689938"),
-  B = n("371396");
-let k = y.MIN_EXPRESSION_PICKER_WIDTH + U.EmojiSize.MEDIUM,
+  k = n("371396");
+let B = y.MIN_EXPRESSION_PICKER_WIDTH + U.EmojiSize.MEDIUM,
   F = r.memo(function(e) {
     let {
       isActive: t,
@@ -57,8 +57,8 @@ let k = y.MIN_EXPRESSION_PICKER_WIDTH + U.EmojiSize.MEDIUM,
         }), (0, M.setExpressionPickerView)(r)
       },
       "aria-current": t ? "page" : void 0,
-      className: a()(n, B.navButton, B.navItem, {
-        [B.navButtonActive]: t
+      className: a()(n, k.navButton, k.navItem, {
+        [k.navButtonActive]: t
       }),
       look: E.Button.Looks.BLANK,
       size: E.Button.Sizes.NONE
@@ -176,11 +176,11 @@ t.default = r.memo(function(e) {
     eI = (null === (n = W.stickers) || void 0 === n ? void 0 : n.allowSending) && null != H,
     eT = !(null === (s = W.expressionPicker) || void 0 === s ? void 0 : s.onlyEmojis) && (eE || eI),
     ef = "left" === z ? "right" : "left",
-    eS = null != X ? X : "left" === z ? B.positionLayerDefaultAlignLeft : B.positionLayerDefaultAlignRight;
+    eS = null != X ? X : "left" === z ? k.positionLayerDefaultAlignLeft : k.positionLayerDefaultAlignRight;
   return (0, i.jsx)(T.default, {
     section: P.AnalyticsSections.EXPRESSION_PICKER,
     children: (0, i.jsx)(L.AppReferencePositionLayer, {
-      className: a()(B.positionLayer, eS),
+      className: a()(k.positionLayer, eS),
       reference: o,
       position: K,
       align: z,
@@ -191,31 +191,31 @@ t.default = r.memo(function(e) {
           isPositioned: t
         } = e;
         return (0, i.jsx)("section", {
-          className: a()(B.positionContainer, {
-            [B.positionContainerOnlyEmoji]: !eT
+          className: a()(k.positionContainer, {
+            [k.positionContainerOnlyEmoji]: !eT
           }),
           ref: Z,
           role: "dialog",
           "aria-label": w.default.Messages.EXPRESSION_PICKER,
           children: t ? (0, i.jsxs)("div", {
-            className: B.drawerSizingWrapper,
+            className: k.drawerSizingWrapper,
             style: {
               width: null == et ? void 0 : et,
               [z]: 0
             },
             ref: ee,
             children: [(0, i.jsx)("div", {
-              className: B.resizeHandle,
+              className: k.resizeHandle,
               onMouseDown: en,
               style: {
                 [ef]: -2
               }
             }), (0, i.jsxs)("div", {
-              className: B.contentWrapper,
+              className: k.contentWrapper,
               children: [eT ? (0, i.jsx)("nav", {
-                className: B.nav,
+                className: k.nav,
                 children: (0, i.jsxs)("div", {
-                  className: B.navList,
+                  className: k.navList,
                   role: "tablist",
                   "aria-label": w.default.Messages.EXPRESSION_PICKER_CATEGORIES_A11Y_LABEL,
                   children: [eE ? (0, i.jsx)(F, {
@@ -233,7 +233,7 @@ t.default = r.memo(function(e) {
                     autoFocus: !er,
                     viewType: y.ExpressionPickerViewType.STICKER,
                     children: (0, i.jsx)("div", {
-                      className: B.stickersNavItem,
+                      className: k.stickersNavItem,
                       children: w.default.Messages.EXPRESSION_PICKER_STICKER
                     })
                   }) : null, (0, i.jsx)(F, {
@@ -271,7 +271,7 @@ t.default = r.memo(function(e) {
                 channel: j,
                 containerWidth: et,
                 includeCreateEmojiButton: I,
-                emojiSize: null != et && et < k ? U.EmojiSize.MEDIUM : U.EmojiSize.LARGE,
+                emojiSize: null != et && et < B ? U.EmojiSize.MEDIUM : U.EmojiSize.LARGE,
                 pickerIntention: b.EmojiIntention.CHAT,
                 closePopout: ec,
                 onSelectEmoji: x,
@@ -279,7 +279,7 @@ t.default = r.memo(function(e) {
                   $.current = e
                 }
               }) : null, ei === y.ExpressionPickerViewType.SOUNDBOARD ? (0, i.jsx)("div", {
-                className: B.soundboardContainer,
+                className: k.soundboardContainer,
                 children: (0, i.jsx)(p.default, {
                   guildId: j.guild_id,
                   channel: j,

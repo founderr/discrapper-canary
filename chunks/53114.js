@@ -321,7 +321,7 @@ class f extends a.default {
         qualityDecoderReboots: b,
         qualityScoreErrors: G,
         qualityFrameDrops: w,
-        qualitySizeMismatches: B
+        qualitySizeMismatches: k
       } = e.aggregatedProperties;
     return {
       ...d,
@@ -352,7 +352,7 @@ class f extends a.default {
       encoder_quality_decoder_reboots: b,
       encoder_quality_score_errors: G,
       encoder_quality_frame_drops: w,
-      encoder_quality_size_mismatches: B
+      encoder_quality_size_mismatches: k
     }
   }
   receivedStats(e, t, n) {

@@ -38,9 +38,9 @@ var i = n("735250"),
   b = n("228168"),
   G = n("981631"),
   w = n("616922"),
-  B = n("617538");
+  k = n("617538");
 
-function k(e) {
+function B(e) {
   e.stopPropagation()
 }
 
@@ -161,8 +161,8 @@ function F(e) {
         children: (0, i.jsx)(a.Dialog, {
           ref: Q,
           "aria-label": t.username,
-          onClick: k,
-          onContextMenu: k,
+          onClick: B,
+          onContextMenu: B,
           style: e_.shouldShow ? {
             marginTop: M.DEFAULT_COLLECTIBLES_UPSELL_HEIGHT
           } : void 0,
@@ -170,7 +170,7 @@ function F(e) {
             user: t,
             displayProfile: q,
             profileType: b.UserProfileTypes.POPOUT,
-            className: e_.shouldShow ? B.hasCollectiblesUpsell : void 0,
+            className: e_.shouldShow ? k.hasCollectiblesUpsell : void 0,
             showOutOfBoundaryComponents: ec,
             children: [(0, i.jsx)(P.default, {
               user: t,

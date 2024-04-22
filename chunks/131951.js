@@ -28,8 +28,8 @@ var o, l, u, d = n("512722"),
   b = n("836157"),
   G = n("166884"),
   w = n("924371"),
-  B = n("894180"),
-  k = n("86614"),
+  k = n("894180"),
+  B = n("86614"),
   F = n("498600"),
   V = n("631610"),
   x = n("951958"),
@@ -148,8 +148,8 @@ let eO = (0, S.initializeMediaEngine)((0, S.determineMediaEngine)()),
   eb = !1,
   eG = !1,
   ew = !1,
-  eB = eT.DISABLED_DEVICE_ID,
-  ek = !1,
+  ek = eT.DISABLED_DEVICE_ID,
+  eB = !1,
   eF = !1,
   eV = !1,
   ex = !1,
@@ -219,7 +219,7 @@ function e8() {
   let r = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ew,
     a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s,
     o = s;
-  if ((null == o ? void 0 : o.desktopSource) != null && o.desktopSource.id !== (null == a ? void 0 : null === (e = a.desktopSource) || void 0 === e ? void 0 : e.id) && (null != o.desktopSource.soundshareId && (0, $.isWindows)() && p.cancelAttachToProcess(o.desktopSource.soundshareId), eO.setGoLiveSource(null, eD)), (null == o ? void 0 : o.cameraSource) != null && (o.cameraSource.videoDeviceGuid !== (null == a ? void 0 : null === (t = a.cameraSource) || void 0 === t ? void 0 : t.videoDeviceGuid) || o.cameraSource.audioDeviceGuid !== (null == a ? void 0 : null === (n = a.cameraSource) || void 0 === n ? void 0 : n.audioDeviceGuid)) && eO.setGoLiveSource(null, eD), (ew || r) && (eB = (ew = r) ? tl(ey, e4().videoDeviceId) : eT.DISABLED_DEVICE_ID, eO.setVideoInputDevice(eB)), s = a, null != a) {
+  if ((null == o ? void 0 : o.desktopSource) != null && o.desktopSource.id !== (null == a ? void 0 : null === (e = a.desktopSource) || void 0 === e ? void 0 : e.id) && (null != o.desktopSource.soundshareId && (0, $.isWindows)() && p.cancelAttachToProcess(o.desktopSource.soundshareId), eO.setGoLiveSource(null, eD)), (null == o ? void 0 : o.cameraSource) != null && (o.cameraSource.videoDeviceGuid !== (null == a ? void 0 : null === (t = a.cameraSource) || void 0 === t ? void 0 : t.videoDeviceGuid) || o.cameraSource.audioDeviceGuid !== (null == a ? void 0 : null === (n = a.cameraSource) || void 0 === n ? void 0 : n.audioDeviceGuid)) && eO.setGoLiveSource(null, eD), (ew || r) && (ek = (ew = r) ? tl(ey, e4().videoDeviceId) : eT.DISABLED_DEVICE_ID, eO.setVideoInputDevice(ek)), s = a, null != a) {
     let e = {
       resolution: a.quality.resolution,
       frameRate: a.quality.frameRate
@@ -520,7 +520,7 @@ class th extends(l = f.default.Store) {
         (0, $.isWindows)() && e.setExperimentFlag(eT.ExperimentFlags.SIGNAL_H265_DECODE_SUPPORT, !0);
         let {
           signalH265SupportNvenc: t
-        } = k.default.getCurrentConfig({
+        } = B.default.getCurrentConfig({
           location: "f627ab_9"
         }, {
           autoTrackExposure: !0
@@ -528,7 +528,7 @@ class th extends(l = f.default.Store) {
         t && n.hardwareH264 && e.setExperimentFlag(eT.ExperimentFlags.SIGNAL_H265_SUPPORT, !0);
         let {
           signalH265SupportAMD: i
-        } = B.default.getCurrentConfig({
+        } = k.default.getCurrentConfig({
           location: "f627ab_9"
         }, {
           autoTrackExposure: !0
@@ -858,10 +858,10 @@ class th extends(l = f.default.Store) {
     }, {
       autoTrackExposure: !0
     });
-    return !!e && ek
+    return !!e && eB
   }
   notifyMuteUnmuteSoundWasSkipped() {
-    ek = !1
+    eB = !1
   }
   isHardwareMute() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eT.MediaEngineContextTypes.DEFAULT;
@@ -1195,7 +1195,7 @@ eS(th, "displayName", "MediaEngineStore"), i = new th(m.default, {
       deaf: r
     } = e4(t);
     if (t === eT.MediaEngineContextTypes.DEFAULT && (K.default.requestPermission(eE.NativePermissionTypes.AUDIO), eb)) return !1;
-    !(i = !r && !i) && (r = !1), n && (ek = !0), tr({
+    !(i = !r && !i) && (r = !1), n && (eB = !0), tr({
       mute: i,
       deaf: r
     }, t), eO.eachConnection(e5)
@@ -1436,8 +1436,8 @@ eS(th, "displayName", "MediaEngineStore"), i = new th(m.default, {
       let t = ey;
       if (ey = to(e, ef.default.Messages.NO_VIDEO_DEVICES), ew && !E().isEqual(ey, t)) {
         var n;
-        let e = void 0 !== ey[eB],
-          i = eB === eT.DEFAULT_DEVICE_ID && (null === (n = t[eT.DEFAULT_DEVICE_ID]) || void 0 === n ? void 0 : n.disabled);
+        let e = void 0 !== ey[ek],
+          i = ek === eT.DEFAULT_DEVICE_ID && (null === (n = t[eT.DEFAULT_DEVICE_ID]) || void 0 === n ? void 0 : n.disabled);
         e8(e || i)
       }
     }(i)

@@ -37,8 +37,8 @@ function U(e, t, n) {
 let b = S.default.get(P.PlatformTypes.SPOTIFY),
   G = "hm://pusher/v1/connections/",
   w = 30 * v.default.Millis.SECOND,
-  B = 30 * v.default.Millis.SECOND,
-  k = 5 * v.default.Millis.MINUTE,
+  k = 30 * v.default.Millis.SECOND,
+  B = 5 * v.default.Millis.MINUTE,
   F = 5 * v.default.Millis.SECOND,
   V = 1.5 * v.default.Millis.SECOND,
   x = 1 * v.default.Millis.MINUTE,
@@ -283,7 +283,7 @@ function eI(e) {
         checkSoundSharing: !0,
         checkSoundboardSounds: !1
       });
-    t && n && null != i ? (K.start(B, eE, !1), z.stop()) : z.start(100, () => K.stop(), !1)
+    t && n && null != i ? (K.start(k, eE, !1), z.stop()) : z.start(100, () => K.stop(), !1)
   }
   return !1
 }
@@ -379,7 +379,7 @@ class eS extends(o = c.default.Store) {
       let {
         userId: e
       } = r, t = er(e);
-      if (null == t) return X.start(k, () => {
+      if (null == t) return X.start(B, () => {
         null != r && r.userId === e && (0, h.default)()
       }), !1;
       X.stop();
@@ -535,7 +535,7 @@ let eh = new eS(T.default, {
         null == e ? (J[t].push(l), _ = !0) : !(0, E.default)(e, l) && (Object.assign(e, l), _ = !0), eu(t, l.id)
       } else J[t] = [l], _ = !0
     }
-    n ? null == et || et.start(B, eE) : (a = null, null == et || et.stop());
+    n ? null == et || et.start(k, eE) : (a = null, null == et || et.stop());
     let c = p.default.getAccount(t, P.PlatformTypes.SPOTIFY);
     if (null == c) return _;
     let I = $[t],
@@ -647,7 +647,7 @@ let eh = new eS(T.default, {
         sourceId: e,
         sound: n
       } = null == t ? void 0 : t.desktopSettings;
-      null != e && m.default.getObservedAppNameForWindow(e) === b.name && n ? (et = new I.Interval).start(B, eE) : et = null
+      null != e && m.default.getObservedAppNameForWindow(e) === b.name && n ? (et = new I.Interval).start(k, eE) : et = null
     }
   }
 });

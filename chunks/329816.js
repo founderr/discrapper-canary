@@ -34,8 +34,8 @@ var i = n("735250"),
   b = n("904085"),
   G = n("892254"),
   w = n("210887"),
-  B = n("819640"),
-  k = n("594174"),
+  k = n("819640"),
+  B = n("594174"),
   F = n("451478"),
   V = n("672752"),
   x = n("812663"),
@@ -87,7 +87,7 @@ t.default = function(e) {
     location: "client_themes_coachmark_reintro"
   }, {
     autoTrackExposure: !0
-  }), eo = (0, _.useStateFromStores)([B.default], () => B.default.getLayers().includes($.Layers.USER_SETTINGS)), el = (0, _.useStateFromStores)([k.default], () => z.default.canUseClientThemes(k.default.getCurrentUser())), eu = J && !eo, ed = [];
+  }), eo = (0, _.useStateFromStores)([k.default], () => k.default.getLayers().includes($.Layers.USER_SETTINGS)), el = (0, _.useStateFromStores)([B.default], () => z.default.canUseClientThemes(B.default.getCurrentUser())), eu = J && !eo, ed = [];
   eu && er && ea && !el && ed.push(c.DismissibleContent.CLIENT_THEMES_COACHMARK);
   let [e_, ec] = (0, P.useSelectedDismissibleContent)(ed, ee.DismissibleContentGroupName.SIDEBAR, !0);
   ed.push(c.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);

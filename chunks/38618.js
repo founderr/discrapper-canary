@@ -31,7 +31,7 @@ let P = new c.default("ConnectionStore"),
   b = null,
   G = !0,
   w = null;
-async function B(e) {
+async function k(e) {
   U = Date.now(), b = e.sessionId, g.localPresenceState.handleConnectionOpen();
   let t = {},
     n = N.default.getVoiceChannelId();
@@ -48,7 +48,7 @@ async function B(e) {
   g.localVoiceState.update(t, !0), G = !1
 }
 
-function k() {
+function B() {
   g.localVoiceState.update()
 }
 
@@ -104,7 +104,7 @@ a = "GatewayConnectionStore", (s = "displayName") in(r = H) ? Object.definePrope
     return e.resetSocket && (g.socket.close(), g.socket.dispatcher.clear(), g.socket.connect()), !1
   },
   CONNECTION_OPEN: e => {
-    B(e)
+    k(e)
   },
   CONNECTION_CLOSED: function() {
     P.verbose("connection closed dispatched"), U = Date.now()
@@ -209,7 +209,7 @@ a = "GatewayConnectionStore", (s = "displayName") in(r = H) ? Object.definePrope
       g.socket.callConnect(e)
     }), !1
   },
-  STREAM_CREATE: k,
+  STREAM_CREATE: B,
   STREAM_START: function(e) {
     let {
       streamType: t,
@@ -239,7 +239,7 @@ a = "GatewayConnectionStore", (s = "displayName") in(r = H) ? Object.definePrope
     let {
       streamKey: t
     } = e;
-    return x(t), k(), !1
+    return x(t), B(), !1
   },
   STREAM_SET_PAUSED: function(e) {
     let {
@@ -289,10 +289,10 @@ a = "GatewayConnectionStore", (s = "displayName") in(r = H) ? Object.definePrope
   RTC_SPEED_TEST_STOP_TEST: function() {
     return g.socket.isSessionEstablished() && g.socket.speedTestDelete(), !1
   },
-  CLIPS_SETTINGS_UPDATE: k,
-  RUNNING_GAMES_CHANGE: k,
+  CLIPS_SETTINGS_UPDATE: B,
+  RUNNING_GAMES_CHANGE: B,
   USER_SETTINGS_PROTO_UPDATE: function(e) {
     var t;
-    e.settings.type === M.UserSettingsTypes.PRELOADED_USER_SETTINGS && (null === (t = e.settings.proto.clips) || void 0 === t ? void 0 : t.allowVoiceRecording) != null && k()
+    e.settings.type === M.UserSettingsTypes.PRELOADED_USER_SETTINGS && (null === (t = e.settings.proto.clips) || void 0 === t ? void 0 : t.allowVoiceRecording) != null && B()
   }
 })

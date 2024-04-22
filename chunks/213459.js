@@ -52,8 +52,8 @@ function b(e, t, n) {
 }
 let G = new u.Logger("ApplicationCommandIndexStore"),
   w = Symbol("currentUser"),
-  B = Symbol("stale"),
-  k = Symbol("current"),
+  k = Symbol("stale"),
+  B = Symbol("current"),
   F = Object.freeze({
     descriptors: [],
     commands: [],
@@ -61,18 +61,18 @@ let G = new u.Logger("ApplicationCommandIndexStore"),
     loading: !0
   }),
   V = Object.freeze({
-    serverVersion: k,
+    serverVersion: B,
     fetchState: {
       fetching: !1
     },
     result: {
       sections: {},
       sectionIdsByBotId: {},
-      version: k
+      version: B
     }
   }),
   x = Object.freeze({
-    serverVersion: B,
+    serverVersion: k,
     fetchState: {
       fetching: !1
     }
@@ -103,7 +103,7 @@ function j(e, t) {
     ...s,
     ...t
   }) : i && (n = {
-    serverVersion: B,
+    serverVersion: k,
     fetchState: {
       fetching: !1
     },
@@ -126,7 +126,7 @@ function z() {
   j({
     type: "user"
   }, {
-    serverVersion: B
+    serverVersion: k
   })
 }
 class X extends(i = d.default.Store) {
@@ -219,7 +219,7 @@ b(X, "displayName", "ApplicationCommandIndexStore");
 let Q = new X(_.default, {
   LOGOUT: K,
   CONNECTION_OPEN: function() {
-    for (let e of Object.values(Q.indices)) e.serverVersion = B
+    for (let e of Object.values(Q.indices)) e.serverVersion = k
   },
   APPLICATION_COMMAND_INDEX_FETCH_REQUEST: function(e) {
     var t;
@@ -290,7 +290,7 @@ let Q = new X(_.default, {
       }
       t.commands[e.id] = e
     }
-    let u = null !== (n = r.version) && void 0 !== n ? n : k;
+    let u = null !== (n = r.version) && void 0 !== n ? n : B;
     j(i, {
       serverVersion: u,
       result: {
@@ -326,7 +326,7 @@ let Q = new X(_.default, {
       type: "channel",
       channelId: n
     }, {
-      serverVersion: B
+      serverVersion: k
     })
   },
   CHANNEL_DELETE: function(e) {
@@ -356,7 +356,7 @@ let Q = new X(_.default, {
       type: "guild",
       guildId: n
     }, {
-      serverVersion: null != i ? i : B
+      serverVersion: null != i ? i : k
     }), s = null == r ? void 0 : null === (t = r.result) || void 0 === t ? void 0 : t.sectionIdsByBotId;
     if (null != s)
       for (let e in s) {
@@ -365,7 +365,7 @@ let Q = new X(_.default, {
           type: "channel",
           channelId: t
         }, {
-          serverVersion: B
+          serverVersion: k
         })
       }
   },

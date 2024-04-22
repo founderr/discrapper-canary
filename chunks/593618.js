@@ -41,8 +41,8 @@ var i = n("735250"),
   b = n("944581"),
   G = n("632184"),
   w = n("170039"),
-  B = n("761374"),
-  k = n("602623"),
+  k = n("761374"),
+  B = n("602623"),
   F = n("624138"),
   V = n("510601"),
   x = n("59688"),
@@ -59,7 +59,7 @@ function Q(e, t, n) {
     className: W.row,
     children: [(0, i.jsx)(e, {
       className: W.activityIcon
-    }), (0, i.jsx)(k.default, {
+    }), (0, i.jsx)(B.default, {
       guildId: n,
       users: t,
       max: 6
@@ -122,7 +122,7 @@ function Z(e) {
       className: W.row,
       children: [(0, i.jsx)(w.default, {
         className: W.activityIcon
-      }), (0, i.jsx)(k.default, {
+      }), (0, i.jsx)(B.default, {
         guildId: t,
         users: n,
         max: 3
@@ -139,7 +139,7 @@ function Z(e) {
         })]
       })]
     })),
-    $ = Q(B.default, X.filter(e => null != e && !K.includes(e.id)), d),
+    $ = Q(k.default, X.filter(e => null != e && !K.includes(e.id)), d),
     ee = Q(b.default, z, d),
     {
       isMuted: et,
