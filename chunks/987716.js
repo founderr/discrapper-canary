@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   GiftAnimationOptions: function() {
-    return _
+    return S
   }
 }), n("47120");
 var i = n("735250"),
@@ -17,18 +17,18 @@ var i = n("735250"),
   f = n("703926"),
   p = n("474936"),
   I = n("689938"),
-  S = n("782874");
-let _ = e => {
+  _ = n("782874");
+let S = e => {
   let {
     isShopGift: t
   } = e, {
     giftRecipient: n,
-    selectedGiftStyle: _,
+    selectedGiftStyle: S,
     setSelectedGiftStyle: P,
     emojiConfetti: E,
     soundEffect: T,
-    setEmojiConfetti: N,
-    setSoundEffect: v
+    setEmojiConfetti: v,
+    setSoundEffect: N
   } = (0, r.useGiftContext)(), [h, x] = s.useState(!1), A = s.useRef(null), y = (0, l.useRadioGroup)({
     orientation: "horizontal"
   }), g = (0, u.getGiftExperience)(n, t), C = g === u.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD, M = g !== u.GiftExperience.DEFAULT, R = (0, c.useIsSeasonalGiftingActive)(), {
@@ -40,44 +40,44 @@ let _ = e => {
   }), L = null;
   return M && (L = R && b ? p.SeasonalGiftStyles2023 : p.STANDARD_GIFT_OPTIONS), (0, i.jsxs)("div", {
     children: [M && (0, i.jsxs)("div", {
-      className: S.giftMainAnimation,
-      children: [null != _ ? (0, i.jsx)(d.default, {
-        giftStyle: _,
+      className: _.giftMainAnimation,
+      children: [null != S ? (0, i.jsx)(d.default, {
+        giftStyle: S,
         defaultAnimationState: o.AnimationState.ACTION,
         idleAnimationState: o.AnimationState.LOOP,
         shouldAnimate: !0,
-        className: S.animation
+        className: _.animation
       }) : (0, i.jsx)(l.Spinner, {
-        className: S.spinner
+        className: _.spinner
       }), C && (0, i.jsxs)("div", {
-        className: S.soundEmojiContainer,
+        className: _.soundEmojiContainer,
         children: [(0, i.jsx)("div", {
-          className: S.sound,
+          className: _.sound,
           children: (0, i.jsx)(a.default, {
             sound: T,
             onSelect: e => {
-              null != v && v(null == e ? void 0 : e)
+              null != N && N(null == e ? void 0 : e)
             }
           })
         }), (0, i.jsx)("div", {
-          className: S.emoji,
+          className: _.emoji,
           children: (0, i.jsx)(m.default, {
-            setEmojiConfetti: N,
+            setEmojiConfetti: v,
             emojiConfetti: null == E ? void 0 : E
           })
         })]
       })]
     }), (0, i.jsx)("div", {
-      tabIndex: null != _ || h ? void 0 : 0,
+      tabIndex: null != S || h ? void 0 : 0,
       onFocus: e => {
         var t;
         e.target === e.currentTarget && (null === (t = A.current) || void 0 === t || t.focus())
       },
-      className: S.giftBoxOptionContainer,
+      className: _.giftBoxOptionContainer,
       "aria-label": I.default.Messages.SEASONAL_GIFTING_CUSTOMIZE_YOUR_GIFT_BOX,
       ...y,
       children: null != L && L.map((e, t) => (0, i.jsx)(f.GiftStaticOption, {
-        isSelected: _ === e,
+        isSelected: S === e,
         giftStyle: e,
         setSelectedGiftStyle: P,
         ref: 0 === t ? A : null,
@@ -85,7 +85,7 @@ let _ = e => {
         onBlur: () => x(!1)
       }, e))
     }), (0, i.jsx)("div", {
-      className: S.__invalid_selectPlanDivider
+      className: _.__invalid_selectPlanDivider
     })]
   })
 }

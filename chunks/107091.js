@@ -7,8 +7,8 @@ a.r(t), a.d(t, {
 var l = a("735250"),
   s = a("470079"),
   r = a("153832"),
-  n = a("979554"),
-  i = a("399606"),
+  i = a("979554"),
+  n = a("399606"),
   o = a("481060"),
   u = a("37234"),
   c = a("607070"),
@@ -47,22 +47,22 @@ function N(e) {
     onClose: _,
     confettiCanvas: y = null
   } = e, O = (0, r.v4)(), k = s.useRef(null), [A] = t.items, {
-    analyticsLocations: j
+    analyticsLocations: R
   } = (0, f.default)(d.default.COLLECTIBLES_SHOP_CARD), {
-    confettiColors: R,
+    confettiColors: j,
     buttonColors: P
-  } = (0, C.default)(t.styles), B = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), F = (0, T.getCustomConfettiDisplayOptions)(t.skuId), [D, M] = s.useState(!1), w = null != P ? {
+  } = (0, C.default)(t.styles), B = (0, n.useStateFromStores)([c.default], () => c.default.useReducedMotion), F = (0, T.getCustomConfettiDisplayOptions)(t.skuId), [D, M] = s.useState(!1), w = null != P ? {
     background: (0, h.getBackgroundGradient)(P, 90),
     color: P.text.toHslString()
   } : void 0, H = (0, E.default)({
-    analyticsLocations: j
+    analyticsLocations: R
   }), U = {
     onPurchaseComplete: () => {
       M(!0), N()
     },
     paymentSource: a,
     skuId: t.skuId,
-    analyticsLocations: j,
+    analyticsLocations: R,
     customButtonStyle: w
   };
   return (0, l.jsxs)("div", {
@@ -86,15 +86,15 @@ function N(e) {
       }), (0, l.jsx)(I, {
         style: w,
         onClick: () => {
-          if (_(), (0, u.popLayer)(), H(), (null == A ? void 0 : A.type) === n.CollectiblesItemType.AVATAR_DECORATION) {
+          if (_(), (0, u.popLayer)(), H(), (null == A ? void 0 : A.type) === i.CollectiblesItemType.AVATAR_DECORATION) {
             (0, m.openAvatarDecorationModal)({
               initialSelectedDecoration: A,
-              analyticsLocations: j
+              analyticsLocations: R
             });
             return
-          }(null == A ? void 0 : A.type) === n.CollectiblesItemType.PROFILE_EFFECT && (0, g.openProfileEffectModal)({
+          }(null == A ? void 0 : A.type) === i.CollectiblesItemType.PROFILE_EFFECT && (0, g.openProfileEffectModal)({
             initialSelectedEffectId: A.id,
-            analyticsLocations: j
+            analyticsLocations: R
           })
         },
         children: L.default.Messages.COLLECTIBLES_USE_NOW
@@ -122,7 +122,7 @@ function N(e) {
       confettiTarget: k.current,
       confettiCanvas: y,
       sprites: (0, h.getConfettiSprites)(t.categorySkuId),
-      colors: null == R ? void 0 : R.map(e => e.toHexString())
+      colors: null == j ? void 0 : j.map(e => e.toHexString())
     })]
   })
 }

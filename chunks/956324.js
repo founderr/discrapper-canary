@@ -1,19 +1,19 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return u
+    return l
   }
 });
 var n = i("442837"),
   s = i("496675"),
   a = i("981631");
 
-function u(e) {
+function l(e) {
   let {
     canManageGuild: t,
     canManageRoles: i,
-    canBanMembers: u,
-    canManageNicknames: l,
+    canBanMembers: l,
+    canManageNicknames: u,
     canCreateEmojisAndStickers: o,
     canManageEmojisAndStickers: d,
     canManageWebhooks: r,
@@ -28,5 +28,5 @@ function u(e) {
     canManageWebhooks: s.default.can(a.Permissions.MANAGE_WEBHOOKS, e),
     canViewAuditLog: s.default.can(a.Permissions.VIEW_AUDIT_LOG, e)
   }), [e]);
-  return t || i || u || l || o || d || r || c
+  return t || i || l || u || o || d || r || c
 }

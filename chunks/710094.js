@@ -17,13 +17,13 @@ var i = n("735250"),
   f = n("664891"),
   p = n("230927"),
   I = n("911367"),
-  S = n("669079"),
-  _ = n("987209"),
+  _ = n("669079"),
+  S = n("987209"),
   P = n("598"),
   E = n("409813"),
   T = n("45572"),
-  N = n("809144"),
-  v = n("698708"),
+  v = n("809144"),
+  N = n("698708"),
   h = n("614223"),
   x = n("481595"),
   A = n("51499"),
@@ -79,22 +79,22 @@ function L(e) {
     {
       isGift: ep,
       giftMessage: eI,
-      giftRecipient: eS
-    } = (0, _.useGiftContext)();
+      giftRecipient: e_
+    } = (0, S.useGiftContext)();
   r()(null != el, "Step should be set");
-  let e_ = s.useRef(null),
+  let eS = s.useRef(null),
     [eP, eE] = (0, a.default)(!1, 500);
   (0, I.useFetchProfileEffects)();
   let eT = null !== (n = null != O ? O : B) && void 0 !== n ? n : null,
-    eN = null != eT && (!ea || (0, M.SubscriptionTrials)[eT].skus.includes(ee)) ? eT : null;
+    ev = null != eT && (!ea || (0, M.SubscriptionTrials)[eT].skus.includes(ee)) ? eT : null;
   (0, o.useAnnualDiscountExperiment)("PaymentModalReviewStep", !0);
-  let ev = (0, d.usePremiumTrialOffer)(B),
+  let eN = (0, d.usePremiumTrialOffer)(B),
     eh = (0, c.usePremiumDiscountOffer)(),
     ex = {
-      user_trial_offer_id: null == ev ? void 0 : ev.id
+      user_trial_offer_id: null == eN ? void 0 : eN.id
     };
   s.useEffect(() => {
-    null != q && null != e_.current && e_.current.scrollIntoView({
+    null != q && null != eS.current && eS.current.scrollIntoView({
       behavior: "smooth"
     })
   }, [q]);
@@ -110,7 +110,7 @@ function L(e) {
     eg = null != $ && M.MULTI_MONTH_PLANS.has($.id) && null != ey && !(0, u.isPaymentSourceEligibleForMultiMonthPlans)(ey) ? Error(b.default.Messages.BILLING_ERROR_INVALID_PLAN_FOR_PAYMENT_SOURCE) : null,
     eC = s.useRef(null),
     [eM, eR] = s.useState(null),
-    eb = !ep && null != ev && null != ee && (0, M.SubscriptionTrials)[ev.trial_id].skus.includes(ee),
+    eb = !ep && null != eN && null != ee && (0, M.SubscriptionTrials)[eN.trial_id].skus.includes(ee),
     eL = null == eh ? void 0 : null === (t = eh.discount) || void 0 === t ? void 0 : t.plan_ids,
     eO = !ep && null != eh && null != eL && null != $ && eL.includes($.id),
     ej = er === T.PurchaseState.PURCHASING || er === T.PurchaseState.COMPLETED || (null == Y ? void 0 : Y.status) === C.SubscriptionStatusTypes.PAUSED || null != U,
@@ -125,7 +125,7 @@ function L(e) {
       activeSubscription: Y
     });
   null != eG && ef(eG);
-  let eD = ep && (0, S.shouldShowCustomGiftExperience)(eS),
+  let eD = ep && (0, _.shouldShowCustomGiftExperience)(e_),
     eU = null == k && null == H && eo === R.PurchaseTypes.SUBSCRIPTION,
     ew = (0, h.inOneStepSubscriptionCheckout)({
       isTrial: eb,
@@ -159,7 +159,7 @@ function L(e) {
     setHasAcceptedTerms: eu,
     legalTermsNodeRef: eC,
     hasLegalTermsFlash: eP,
-    trialId: eN,
+    trialId: ev,
     trialFooterMessageOverride: j,
     reviewWarningMessage: G,
     purchaseState: er,
@@ -189,12 +189,12 @@ function L(e) {
     purchaseState: er,
     handleClose: W
   }))), (0, i.jsxs)(i.Fragment, {
-    children: [(0, i.jsx)(N.GiftNote, {
+    children: [(0, i.jsx)(v.GiftNote, {
       giftMessage: eI
     }), !eD && (0, i.jsx)(A.default, {
       isEligibleForTrial: eb
     }), (0, i.jsxs)(g.PaymentPortalBody, {
-      children: [(0, i.jsx)(v.default, {}), l]
+      children: [(0, i.jsx)(N.default, {}), l]
     }), (0, i.jsx)(g.PaymentPortalFooter, {
       children: (0, i.jsx)(y.default, {
         premiumSubscription: null != Y ? Y : null,
@@ -209,7 +209,7 @@ function L(e) {
         analyticsLocation: F,
         baseAnalyticsData: w,
         flowStartTime: V.startTime,
-        trialId: eN,
+        trialId: ev,
         planGroup: D,
         purchaseTokenAuthState: Q,
         openInvoiceId: U,

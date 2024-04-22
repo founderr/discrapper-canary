@@ -18,13 +18,13 @@ var s = n("512722"),
   f = n("115130"),
   p = n("653798"),
   I = n("314182"),
-  S = n("251660"),
-  _ = n("246946"),
+  _ = n("251660"),
+  S = n("246946"),
   P = n("351402"),
   E = n("855775"),
   T = n("695103"),
-  N = n("366695"),
-  v = n("4912"),
+  v = n("366695"),
+  N = n("4912"),
   h = n("669079"),
   x = n("937615"),
   A = n("987209"),
@@ -75,7 +75,7 @@ function O(e) {
   } = e;
   return !0 !== s ? null : (0, i.jsxs)("div", {
     className: b.skuHeading,
-    children: [(0, i.jsx)(N.default, {
+    children: [(0, i.jsx)(v.default, {
       game: t
     }), (0, i.jsx)(u.Heading, {
       variant: "heading-lg/bold",
@@ -92,7 +92,7 @@ function j(e) {
     onPaymentSourceChange: s,
     handlePaymentSourceAdd: p
   } = e, {
-    application: N,
+    application: v,
     purchaseState: x,
     paymentSources: j,
     paymentSourceId: G,
@@ -111,27 +111,27 @@ function j(e) {
     V = w[F],
     Z = null != G ? G : E.NO_PAYMENT_SOURCE,
     z = null != V ? V[Z] : null;
-  l()(null != K, "SKU must exist and be fetched."), l()(null != N, "Application must exist.");
-  let J = (0, a.useStateFromStores)([f.default, T.default], () => T.default.inTestModeForApplication(N.id) || f.default.inDevModeForApplication(N.id), [N.id]),
-    X = (0, a.useStateFromStores)([_.default], () => _.default.enabled),
+  l()(null != K, "SKU must exist and be fetched."), l()(null != v, "Application must exist.");
+  let J = (0, a.useStateFromStores)([f.default, T.default], () => T.default.inTestModeForApplication(v.id) || f.default.inDevModeForApplication(v.id), [v.id]),
+    X = (0, a.useStateFromStores)([S.default], () => S.default.enabled),
     q = r.CountryCodesSets.EEA_COUNTRIES.has(P.default.ipCountryCodeWithFallback),
     Q = x === g.PurchaseState.PURCHASING || x === g.PurchaseState.COMPLETED,
     $ = null != G ? j[G].type : null;
   return (0, i.jsxs)("div", {
     className: b.stepBody,
     children: [J && (0, i.jsx)(c.default, {
-      icon: v.default,
+      icon: N.default,
       iconSize: c.default.Sizes.SMALL,
       color: c.default.Colors.WARNING,
       className: b.errorBlock,
       children: R.default.Messages.APPLICATION_STORE_PURCHASE_TEST_MODE
     }, "TEST_MODE"), (0, i.jsx)(O, {
-      application: N,
+      application: v,
       sku: K,
       isEmbeddedIAP: B
     }), Y && (0, i.jsx)(C.default, {
       sku: K
-    }), null != W ? (0, i.jsx)(S.SendGiftToUser, {
+    }), null != W ? (0, i.jsx)(_.SendGiftToUser, {
       giftRecipient: W
     }) : null, (0, i.jsx)(u.FormTitle, {
       tag: u.FormTitleTags.H5,

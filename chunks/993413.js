@@ -41,30 +41,30 @@ function m(e) {
     className: f,
     errors: p,
     disabled: I = !1,
-    hideDivider: S = !1,
-    showBorder: _ = !1,
+    hideDivider: _ = !1,
+    showBorder: S = !1,
     borderType: P,
     hasBackground: E = !1,
     forcedDivider: T = !1,
-    showPremiumIcon: N = !1
+    showPremiumIcon: v = !1
   } = e;
   return (0, i.jsx)("div", {
     className: l()(c.customizationSection, f, {
       [c.disabled]: I,
-      [c.hideDivider]: S,
-      [c.showBorder]: _,
+      [c.hideDivider]: _,
+      [c.showBorder]: S,
       [c.withDivider]: T
     }),
     children: (0, i.jsxs)(o.default, {
       className: c.customizationSectionBorder,
       backgroundClassName: c.customizationSectionBackground,
-      isShown: _,
+      isShown: S,
       type: P,
       hasBackground: E,
       children: [(0, i.jsxs)(r.FormTitle, {
         className: c.title,
         id: s,
-        children: [t, N && (0, i.jsx)(u.default, {}), n]
+        children: [t, v && (0, i.jsx)(u.default, {}), n]
       }), null != a ? (0, i.jsx)(r.FormText, {
         type: r.FormText.Types.DESCRIPTION,
         className: c.sectionDescription,

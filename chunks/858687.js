@@ -1,46 +1,46 @@
 "use strict";
 t.r(n), t.d(n, {
   default: function() {
-    return r
+    return d
   }
 });
 var a = t("735250"),
-  u = t("470079"),
-  l = t("481060"),
+  l = t("470079"),
+  u = t("481060"),
   i = t("493683"),
   o = t("960670"),
   s = t("933557"),
-  d = t("689938");
+  r = t("689938");
 
-function r(e, n) {
+function d(e, n) {
   let t = (0, s.default)(e),
-    r = u.useCallback(() => {
-      let u = d.default.Messages.LEAVE_GROUP_DM_TITLE.format({
+    d = l.useCallback(() => {
+      let l = r.default.Messages.LEAVE_GROUP_DM_TITLE.format({
           name: t
         }),
-        s = d.default.Messages.LEAVE_GROUP_DM_BODY.format({
+        s = r.default.Messages.LEAVE_GROUP_DM_BODY.format({
           name: t
         });
-      e.isManaged() && (u = d.default.Messages.LEAVE_GROUP_DM_MANAGED_TITLE.format({
+      e.isManaged() && (l = r.default.Messages.LEAVE_GROUP_DM_MANAGED_TITLE.format({
         name: t
-      }), s = d.default.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({
+      }), s = r.default.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({
         name: t
       }));
-      let r = function(t) {
+      let d = function(t) {
         let a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         i.default.closePrivateChannel(e.id, n, a)
       };
-      (0, l.openModal)(e => (0, a.jsx)(o.default, {
-        header: u,
+      (0, u.openModal)(e => (0, a.jsx)(o.default, {
+        header: l,
         body: s,
-        onSubmit: r,
+        onSubmit: d,
         ...e
       }))
     }, [e, t, n]);
-  return (0, a.jsx)(l.MenuItem, {
+  return (0, a.jsx)(u.MenuItem, {
     id: "leave-channel",
-    label: d.default.Messages.LEAVE_GROUP_DM,
-    action: r,
+    label: r.default.Messages.LEAVE_GROUP_DM,
+    action: d,
     color: "danger"
   })
 }

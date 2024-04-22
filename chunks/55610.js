@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useShouldShowLegacyPricingNotice: function() {
-    return S
+    return _
   }
 });
 var i = n("735250");
@@ -19,7 +19,7 @@ var s = n("120356"),
   p = n("689938"),
   I = n("607137");
 
-function S() {
+function _() {
   let e = (0, m.default)(),
     {
       enabled: t
@@ -43,7 +43,7 @@ t.default = e => {
     fromBoostCancelModal: s,
     className: r
   } = e, c = (0, m.default)();
-  if (!S()) return null;
+  if (!_()) return null;
   return a()(null != c, "Subscription billing country should not be null"), (0, i.jsxs)("div", {
     className: l()(I.noticeRoot, r),
     children: [(0, i.jsx)("div", {

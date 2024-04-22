@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return N
   }
 }), n("627341");
 var i = n("735250");
@@ -18,8 +18,8 @@ var s = n("278074"),
   f = n("680295"),
   p = n("998502"),
   I = n("987209"),
-  S = n("689938"),
-  _ = n("506027"),
+  _ = n("689938"),
+  S = n("506027"),
   P = n("241822");
 let E = p.default.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
 
@@ -35,36 +35,36 @@ function T(e) {
     size: (0, a.getDecorationSizeForAvatarSize)(r.AvatarSizes.SIZE_152)
   });
   return (0, i.jsx)("div", {
-    className: _.giftMainAnimationWrapper,
+    className: S.giftMainAnimationWrapper,
     children: (0, i.jsx)(E, {
       ...s,
       avatarDecoration: n,
       src: l,
-      className: _.avatar,
+      className: S.avatar,
       size: r.AvatarSizes.SIZE_152,
-      "aria-label": S.default.Messages.USER_SETTINGS_AVATAR
+      "aria-label": _.default.Messages.USER_SETTINGS_AVATAR
     })
   })
 }
 
-function N(e) {
+function v(e) {
   var t;
   let {
     id: n
   } = e, s = null === (t = (0, m.useProfileEffectPreset)(n)) || void 0 === t ? void 0 : t.config;
   return (0, i.jsxs)("div", {
-    className: _.profileEffectContainer,
+    className: S.profileEffectContainer,
     children: [(0, i.jsx)("img", {
       src: P,
       alt: null == s ? void 0 : s.accessibilityLabel,
-      className: _.profileEffectBackground
+      className: S.profileEffectBackground
     }), (0, i.jsx)(f.default, {
       profileEffectId: n
     })]
   })
 }
 
-function v(e) {
+function N(e) {
   let {
     sku: t
   } = e, {
@@ -77,16 +77,16 @@ function v(e) {
     avatarDecoration: e
   })).with({
     type: l.CollectiblesItemType.PROFILE_EFFECT
-  }, e => (0, i.jsx)(N, {
+  }, e => (0, i.jsx)(v, {
     id: e.id
   })).otherwise(() => null);
   return null != n && null == u ? (0, i.jsx)("div", {
-    className: _.giftMainAnimationWrapper,
+    className: S.giftMainAnimationWrapper,
     children: (0, i.jsx)(d.default, {
       defaultAnimationState: c.AnimationState.LOOP,
       giftStyle: n,
       shouldAnimate: !0,
-      className: _.__invalid_giftMainAnimation
+      className: S.__invalid_giftMainAnimation
     })
   }) : u
 }

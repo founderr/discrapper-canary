@@ -23,14 +23,14 @@ function p(e) {
     breadcrumbSteps: i,
     handleStepChange: p,
     referralTrialOfferId: I,
-    onReturn: S
+    onReturn: _
   } = e, {
-    contextMetadata: _,
+    contextMetadata: S,
     step: P,
     paymentSources: E,
     paymentSourceId: T,
-    setPaymentSourceId: N,
-    purchaseError: v,
+    setPaymentSourceId: v,
+    purchaseError: N,
     setPurchaseError: h,
     purchaseErrorBlockRef: x,
     paymentAuthenticationState: A,
@@ -41,12 +41,12 @@ function p(e) {
     ...(0, a.useSharedPaymentModal)(),
     paymentSources: E,
     paymentSourceId: T,
-    setPaymentSourceId: N,
-    purchaseError: v,
+    setPaymentSourceId: v,
+    purchaseError: N,
     setPurchaseError: h,
     purchaseErrorBlockRef: x,
     paymentAuthenticationState: A
-  }, M = (0, r.usePremiumTrialOffer)(I), R = !g && null != M && null != y && (0, f.SubscriptionTrials)[M.trial_id].skus.includes(y), b = null != S ? S : () => {
+  }, M = (0, r.usePremiumTrialOffer)(I), R = !g && null != M && null != y && (0, f.SubscriptionTrials)[M.trial_id].skus.includes(y), b = null != _ ? _ : () => {
     p(Object.values(E).length < 1 && null == n ? d.Step.PLAN_SELECT : d.Step.REVIEW, {
       trackedFromStep: d.Step.PAYMENT_TYPE
     })
@@ -77,7 +77,7 @@ function p(e) {
         from_step: n,
         to_step: i,
         step_duration_ms: s - L,
-        flow_duration_ms: s - _.startTime
+        flow_duration_ms: s - S.startTime
       })
     },
     isEligibleForTrial: R

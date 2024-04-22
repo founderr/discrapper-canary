@@ -9,8 +9,8 @@ n("470079");
 var u = n("481060"),
   i = n("117984"),
   l = n("593214"),
-  r = n("362658"),
-  s = n("689938");
+  s = n("362658"),
+  r = n("689938");
 
 function o(e) {
   let t = (0, l.useFavoritesGuildSelected)(),
@@ -18,7 +18,7 @@ function o(e) {
     o = (0, l.useFavoritesCategories)(),
     {
       isFavoritesPerk: d
-    } = (0, r.useFavoritesServerExperiment)("useChannelMoveToCategory");
+    } = (0, s.useFavoritesServerExperiment)("useChannelMoveToCategory");
   if (__OVERLAY__ || !t || null == n || !d) return null;
   let [f, c] = function(e) {
     let t = [],
@@ -32,7 +32,7 @@ function o(e) {
   }
   return null == f && 0 === c.length ? null : (0, a.jsxs)(u.MenuItem, {
     id: "move-to-category",
-    label: s.default.Messages.MOVE_TO,
+    label: r.default.Messages.MOVE_TO,
     children: [null != f && (0, a.jsx)(u.MenuGroup, {
       children: (0, a.jsx)(u.MenuItem, {
         id: "favorite-uncategorized",

@@ -8,8 +8,8 @@ var n = i("735250");
 i("470079");
 var s = i("442837"),
   a = i("481060"),
-  u = i("92114"),
-  l = i("778123"),
+  l = i("92114"),
+  u = i("778123"),
   o = i("9156"),
   d = i("621600"),
   r = i("981631"),
@@ -43,10 +43,10 @@ function f(e) {
         mobilePush: o.default.isMobilePushEnabled(e.id),
         messageNotifications: o.default.getMessageNotifications(e.id),
         notifyHighlights: o.default.getNotifyHighlights(e.id)
-      }), [e.id]), N = g === r.HighlightSettings.DISABLED, _ = (0, l.default)(e.id);
+      }), [e.id]), N = g === r.HighlightSettings.DISABLED, _ = (0, u.default)(e.id);
 
       function M(t, i) {
-        u.default.updateGuildNotificationSettings(e.id, t, i)
+        l.default.updateGuildNotificationSettings(e.id, t, i)
       }
       return (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)(a.MenuGroup, {

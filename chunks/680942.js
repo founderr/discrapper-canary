@@ -3,8 +3,8 @@ a.r(t);
 var l = a("735250"),
   s = a("470079"),
   r = a("481060"),
-  n = a("727637"),
-  i = a("906732"),
+  i = a("727637"),
+  n = a("906732"),
   o = a("241553"),
   u = a("333867"),
   c = a("559629"),
@@ -67,7 +67,7 @@ t.default = e => {
     disableCustomColor: g = !1
   } = e, {
     analyticsLocations: b
-  } = (0, i.default)(), S = s.useRef(null), x = (0, n.default)(S), T = g ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT;
+  } = (0, n.default)(), S = s.useRef(null), x = (0, i.default)(S), T = g ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT;
   return (0, l.jsx)(r.Tooltip, {
     text: f.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
     delay: h,

@@ -8,8 +8,8 @@ var n = i("735250");
 i("470079");
 var s = i("442837"),
   a = i("481060"),
-  u = i("132871"),
-  l = i("147890"),
+  l = i("132871"),
+  u = i("147890"),
   o = i("434404"),
   d = i("956324"),
   r = i("994763"),
@@ -46,10 +46,10 @@ function E(e) {
           return (0, n.jsx)(a.MenuItem, {
             id: s,
             action: () => {
-              (0, l.goToAppDirectory)({
+              (0, u.goToAppDirectory)({
                 guildId: e.id,
                 entrypoint: {
-                  name: u.ApplicationDirectoryEntrypointNames.GUILD_CONTEXT_MENU
+                  name: l.ApplicationDirectoryEntrypointNames.GUILD_CONTEXT_MENU
                 }
               })
             },

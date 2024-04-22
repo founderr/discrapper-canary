@@ -24,7 +24,7 @@ function f(e) {
   function I(e) {
     p(!1), null == t || t(e)
   }
-  let S = e => (0, i.jsxs)("div", {
+  let _ = e => (0, i.jsxs)("div", {
     className: d.customGiftHeader,
     children: [(0, i.jsxs)("div", {
       className: d.__invalid_customGiftHeaderText,
@@ -60,7 +60,7 @@ function f(e) {
           analyticsSource: "gift soundboard",
           soundButtonOverlay: u.SoundButtonOverlay.ADD,
           listPadding: m,
-          renderHeader: S,
+          renderHeader: _,
           defaultSoundsOnly: !0
         })
       })

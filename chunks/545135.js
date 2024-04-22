@@ -8,8 +8,8 @@ var n = i("735250");
 i("470079");
 var s = i("512722"),
   a = i.n(s),
-  u = i("442837"),
-  l = i("481060"),
+  l = i("442837"),
+  u = i("481060"),
   o = i("239091"),
   d = i("100527"),
   r = i("906732"),
@@ -26,8 +26,8 @@ var s = i("512722"),
   A = i("976192"),
   L = i("904483"),
   m = i("429824"),
-  p = i("919815"),
-  T = i("858822"),
+  T = i("919815"),
+  p = i("858822"),
   O = i("993356"),
   G = i("58338"),
   C = i("422525"),
@@ -41,14 +41,14 @@ function R(e) {
     guild: t,
     onSelect: s,
     hideSettings: d
-  } = e, r = t.id, R = _.default.getDefaultChannel(r), j = (0, u.useStateFromStores)([M.default], () => {
+  } = e, r = t.id, R = _.default.getDefaultChannel(r), j = (0, l.useStateFromStores)([M.default], () => {
     let e = M.default.getCurrentUser();
     return a()(null != e, "GuildContextMenu: user cannot be undefined"), t.isOwner(e)
   }, [t]), P = (0, x.default)({
     guild: t,
     source: U.InstantInviteSources.GUILD_CONTEXT_MENU,
     channel: R
-  }), F = (0, b.default)(r), D = (0, T.default)(t), y = (0, O.default)(t), k = (0, C.default)(t), B = (0, A.default)({
+  }), F = (0, b.default)(r), y = (0, p.default)(t), D = (0, O.default)(t), k = (0, C.default)(t), B = (0, A.default)({
     guildId: t.id,
     userId: N.default.getId(),
     analyticsLocation: {
@@ -67,26 +67,26 @@ function R(e) {
   }), Y = (0, L.default)(t), w = (0, S.default)(t.id), V = (0, c.default)({
     id: t.id,
     label: v.default.Messages.COPY_ID_GUILD
-  }), z = (0, p.default)(t, {
+  }), z = (0, T.default)(t, {
     section: U.AnalyticsSections.GUILD_LIST
   }), X = (0, E.default)(t.id), K = (0, G.default)(t.id), W = (0, g.default)(t.id), Q = (0, m.default)(t), q = (0, f.useShouldUseNewNotificationSystem)("GuildContextMenu");
 
   function J() {
-    (0, l.openModal)(e => (0, n.jsx)(I.GuildLeaveConfirmModalContents, {
+    (0, u.openModal)(e => (0, n.jsx)(I.GuildLeaveConfirmModalContents, {
       ...e,
       guild: t
     }))
   }
-  return t.hasFeature(U.GuildFeatures.HUB) ? (0, n.jsxs)(l.Menu, {
+  return t.hasFeature(U.GuildFeatures.HUB) ? (0, n.jsxs)(u.Menu, {
     navId: "guild-context",
     onClose: o.closeContextMenu,
     "aria-label": v.default.Messages.GUILD_ACTIONS_MENU_LABEL,
     onSelect: s,
-    children: [(0, n.jsxs)(l.MenuGroup, {
-      children: [P, (0, n.jsx)(l.MenuItem, {
+    children: [(0, n.jsxs)(u.MenuGroup, {
+      children: [P, (0, n.jsx)(u.MenuItem, {
         id: "privacy",
         label: v.default.Messages.HUB_PRIVACY_SETTINGS,
-        action: () => (0, l.openModalLazy)(async () => {
+        action: () => (0, u.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([i.e("99387"), i.e("88408")]).then(i.bind(i, "241420"));
@@ -96,32 +96,32 @@ function R(e) {
           })
         })
       }), B]
-    }), j ? null : (0, n.jsx)(l.MenuGroup, {
-      children: (0, n.jsx)(l.MenuItem, {
+    }), j ? null : (0, n.jsx)(u.MenuGroup, {
+      children: (0, n.jsx)(u.MenuItem, {
         id: "leave-guild",
         label: v.default.Messages.LEAVE_HUB,
         action: J,
         color: "danger"
       })
-    }), (0, n.jsx)(l.MenuGroup, {
+    }), (0, n.jsx)(u.MenuGroup, {
       children: V
     })]
-  }) : (0, n.jsxs)(l.Menu, {
+  }) : (0, n.jsxs)(u.Menu, {
     navId: "guild-context",
     onClose: o.closeContextMenu,
     "aria-label": v.default.Messages.GUILD_ACTIONS_MENU_LABEL,
     onSelect: s,
-    children: [(0, n.jsx)(l.MenuGroup, {
+    children: [(0, n.jsx)(u.MenuGroup, {
       children: z
-    }), (0, n.jsx)(l.MenuGroup, {
+    }), (0, n.jsx)(u.MenuGroup, {
       children: P
-    }), (0, n.jsxs)(l.MenuGroup, {
-      children: [D, q || __OVERLAY__ ? null : y, q && !__OVERLAY__ ? K : null, W, F, X]
-    }), (0, n.jsxs)(l.MenuGroup, {
-      children: [d ? null : k, __OVERLAY__ ? null : (0, n.jsx)(l.MenuItem, {
+    }), (0, n.jsxs)(u.MenuGroup, {
+      children: [y, q || __OVERLAY__ ? null : D, q && !__OVERLAY__ ? K : null, W, F, X]
+    }), (0, n.jsxs)(u.MenuGroup, {
+      children: [d ? null : k, __OVERLAY__ ? null : (0, n.jsx)(u.MenuItem, {
         id: "privacy",
         label: v.default.Messages.PRIVACY_SETTINGS,
-        action: () => (0, l.openModalLazy)(async () => {
+        action: () => (0, u.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([i.e("99387"), i.e("88408")]).then(i.bind(i, "241420"));
@@ -131,16 +131,16 @@ function R(e) {
           })
         })
       }), B, H]
-    }), (0, n.jsxs)(l.MenuGroup, {
+    }), (0, n.jsxs)(u.MenuGroup, {
       children: [Y, w]
-    }), (0, n.jsxs)(l.MenuGroup, {
-      children: [Q, !j && (0, n.jsx)(l.MenuItem, {
+    }), (0, n.jsxs)(u.MenuGroup, {
+      children: [Q, !j && (0, n.jsx)(u.MenuItem, {
         id: "leave-guild",
         label: v.default.Messages.LEAVE_SERVER,
         action: J,
         color: "danger"
       })]
-    }), (0, n.jsx)(l.MenuGroup, {
+    }), (0, n.jsx)(u.MenuGroup, {
       children: V
     })]
   })
