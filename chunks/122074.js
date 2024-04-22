@@ -1,71 +1,74 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return v
   }
 }), n("47120");
 var a = n("735250"),
   u = n("470079"),
   i = n("442837"),
   l = n("524437"),
-  s = n("481060"),
-  r = n("706140"),
+  r = n("481060"),
+  s = n("706140"),
   o = n("594174"),
-  d = n("466111"),
-  f = n("26290"),
-  c = n("74538"),
-  S = n("11352"),
-  _ = n("213931"),
-  I = n("112440"),
-  M = n("671105"),
-  E = n("921944"),
-  p = n("871465"),
-  m = n("689938"),
-  g = n("809851");
+  d = n("672752"),
+  f = n("466111"),
+  c = n("26290"),
+  S = n("74538"),
+  _ = n("471113"),
+  I = n("11352"),
+  M = n("213931"),
+  E = n("112440"),
+  p = n("671105"),
+  m = n("921944"),
+  g = n("871465"),
+  C = n("689938"),
+  T = n("809851");
 
-function C(e, t) {
-  let n = (0, M.useGuildCustomNotificationSound)(e),
-    C = (0, M.useChannelCustomNotificationSound)(e, t),
-    T = (0, i.useStateFromStores)([o.default], () => o.default.getCurrentUser()),
-    v = c.default.canUseCustomNotificationSounds(T),
-    h = v ? null != C ? C : n : p.Soundpacks.CLASSIC,
-    A = S.CustomNotificationSoundExperiment.useExperiment({
+function v(e, t) {
+  let n = (0, p.useGuildCustomNotificationSound)(e),
+    v = (0, p.useChannelCustomNotificationSound)(e, t),
+    h = (0, i.useStateFromStores)([o.default], () => o.default.getCurrentUser()),
+    N = S.default.canUseCustomNotificationSounds(h),
+    A = N ? null != v ? v : n : g.Soundpacks.CLASSIC,
+    R = I.CustomNotificationSoundExperiment.useExperiment({
       location: "guild_context_menu"
     }, {
       autoTrackExposure: !0
     }).enabled,
-    [N, R] = u.useState(!1),
-    [x, O] = (0, r.useGetDismissibleContent)([l.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GDM_DM_BADGE]),
-    F = x === l.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GDM_DM_BADGE;
+    [x, O] = u.useState(!1),
+    [U, F] = (0, s.useGetDismissibleContent)([l.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GDM_DM_BADGE]),
+    G = U === l.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GDM_DM_BADGE;
   if (u.useEffect(() => () => {
-      N && O(E.ContentDismissActionType.TAKE_ACTION)
-    }, [N, O]), !A) return null;
-  let U = n => {
-    v ? null != t ? (0, _.updateChannelCustomNotificationSound)(e, t, n) : (0, _.updateGuildCustomNotificationSound)(e, n) : (0, I.default)()
-  };
-  return (0, a.jsx)(s.MenuItem, {
+      x && F(m.ContentDismissActionType.TAKE_ACTION)
+    }, [x, F]), !R) return null;
+  let j = n => {
+      N ? null != t ? (0, M.updateChannelCustomNotificationSound)(e, t, n) : (0, M.updateGuildCustomNotificationSound)(e, n) : (0, E.default)()
+    },
+    y = N ? r.Text : _.default;
+  return (0, a.jsx)(r.MenuItem, {
     id: "notification",
     label: e => {
       let {
         isFocused: t
       } = e;
-      return t && R(t), (0, a.jsxs)(a.Fragment, {
-        children: [F && (0, a.jsx)(f.TextBadge, {
-          className: g.newBadge,
-          text: m.default.Messages.NEW
+      return t && O(t), (0, a.jsxs)(a.Fragment, {
+        children: [G && (0, a.jsx)(c.TextBadge, {
+          className: T.newBadge,
+          text: C.default.Messages.NEW
         }), (0, a.jsxs)("div", {
-          className: g.headerContainer,
-          children: [(0, a.jsx)(s.Text, {
+          className: T.headerContainer,
+          children: [(0, a.jsx)(y, {
             color: t ? "always-white" : void 0,
             variant: "text-sm/medium",
-            children: m.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND
-          }), (0, a.jsx)(d.default, {
-            className: g.nitroWheel,
-            color: t ? "white" : void 0,
+            children: C.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND
+          }), (0, a.jsx)(f.default, {
+            className: T.nitroWheel,
+            color: t ? "white" : N ? void 0 : d.GradientCssUrls.PREMIUM_TIER_2,
             width: 16,
             height: 16
           })]
-        }), (0, a.jsx)(s.Text, {
+        }), (0, a.jsx)(y, {
           color: t ? "always-white" : void 0,
           variant: "text-xs/normal",
           children: "Discord Default"
@@ -73,20 +76,20 @@ function C(e, t) {
       })
     },
     hasSubmenu: !0,
-    children: (0, a.jsxs)(s.MenuGroup, {
-      children: [(0, a.jsx)(s.MenuRadioItem, {
+    children: (0, a.jsxs)(r.MenuGroup, {
+      children: [(0, a.jsx)(r.MenuRadioItem, {
         id: "sound_0",
         group: "notification-preset",
-        checked: null == h || h === p.Soundpacks.CLASSIC,
+        checked: null == A || A === g.Soundpacks.CLASSIC,
         label: "Classic",
-        action: () => U(p.Soundpacks.CLASSIC)
-      }), (0, a.jsx)(s.MenuSeparator, {}), (0, a.jsx)(s.MenuRadioItem, {
+        action: () => j(g.Soundpacks.CLASSIC)
+      }), (0, a.jsx)(r.MenuSeparator, {}), (0, a.jsx)(r.MenuRadioItem, {
         id: "sound_1",
         group: "notification-preset",
-        checked: h === p.Soundpacks.DETUNE,
+        checked: A === g.Soundpacks.DETUNE,
         label: "Detune",
-        action: () => U(p.Soundpacks.DETUNE)
-      }), (0, a.jsx)(s.MenuRadioItem, {
+        action: () => j(g.Soundpacks.DETUNE)
+      }), (0, a.jsx)(r.MenuRadioItem, {
         id: "sound_2",
         group: "notification-preset",
         checked: !1,

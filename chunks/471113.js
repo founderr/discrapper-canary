@@ -1,23 +1,27 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return s
   }
 });
-var s = n("735250");
+var a = n("735250");
 n("470079");
-var a = n("120356"),
-  r = n.n(a),
-  i = n("481060"),
-  o = n("335178");
+var u = n("120356"),
+  i = n.n(u),
+  l = n("481060"),
+  r = n("335178");
 
-function u(e) {
+function s(e) {
   let {
     className: t,
-    ...n
+    color: n,
+    ...u
   } = e;
-  return (0, s.jsx)(i.Text, {
-    className: r()(o.gradientText, t),
-    ...n
+  return (0, a.jsx)(l.Text, {
+    className: i()({
+      [r.gradientText]: null == n
+    }, t),
+    color: n,
+    ...u
   })
 }

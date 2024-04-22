@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return E
+    return _
   }
 }), s("47120");
 var i = s("735250"),
@@ -11,53 +11,55 @@ var i = s("735250"),
   r = s("2052"),
   d = s("434650"),
   o = s("906732"),
-  u = s("499150"),
-  c = s("297087"),
-  h = s("626135"),
-  S = s("197115"),
-  N = s("474936"),
-  g = s("981631"),
-  f = s("689938"),
-  m = s("578808");
+  u = s("672752"),
+  c = s("499150"),
+  h = s("466111"),
+  S = s("626135"),
+  N = s("197115"),
+  g = s("474936"),
+  f = s("981631"),
+  m = s("689938"),
+  E = s("578808");
 
-function E(e) {
+function _(e) {
   let {
     onClose: t
   } = e, s = (0, r.useAnalyticsContext)(), {
-    analyticsLocations: E
-  } = (0, o.default)(), [_, T] = a.useState(!1), x = a.useCallback(e => {
-    !_ && e && (h.default.track(g.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      type: N.PremiumUpsellTypes.CUSTOM_NOTIFICATION_SOUNDS_SETTINGS_UPSELL,
+    analyticsLocations: _
+  } = (0, o.default)(), [T, x] = a.useState(!1), I = a.useCallback(e => {
+    !T && e && (S.default.track(f.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+      type: g.PremiumUpsellTypes.CUSTOM_NOTIFICATION_SOUNDS_SETTINGS_UPSELL,
       location: s.location,
-      location_stack: E
-    }), T(!0))
-  }, [s.location, E, _]), I = (0, d.useIsVisible)(x, .8, !0);
+      location_stack: _
+    }), x(!0))
+  }, [s.location, _, T]), O = (0, d.useIsVisible)(I, .8, !0);
   return (0, i.jsxs)("div", {
-    ref: I,
-    className: m.container,
-    children: [(0, i.jsx)(c.default, {
-      className: m.nitroWheel
+    ref: O,
+    className: E.container,
+    children: [(0, i.jsx)(h.default, {
+      color: u.GradientCssUrls.PREMIUM_TIER_2,
+      className: E.nitroWheel
     }), (0, i.jsx)(n.Text, {
-      className: m.text,
+      className: E.text,
       variant: "text-sm/normal",
-      children: f.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_NOTIFICATION_SETTINGS_UPSELL
+      children: m.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_NOTIFICATION_SETTINGS_UPSELL
     }), (0, i.jsx)(n.Text, {
-      className: m.text,
+      className: E.text,
       variant: "text-sm/normal",
-      children: (0, i.jsx)(u.default, {
+      children: (0, i.jsx)(c.default, {
         onClick: () => {
-          t(), l.default.open(g.UserSettingsSections.PREMIUM)
+          t(), l.default.open(f.UserSettingsSections.PREMIUM)
         },
-        children: f.default.Messages.LEARN_MORE
+        children: m.default.Messages.LEARN_MORE
       })
-    }), (0, i.jsx)(S.default, {
-      className: m.nitroButton,
-      buttonText: f.default.Messages.PREMIUM_UPSELL_GET_NITRO,
+    }), (0, i.jsx)(N.default, {
+      className: E.nitroButton,
+      buttonText: m.default.Messages.PREMIUM_UPSELL_GET_NITRO,
       size: n.Button.Sizes.SMALL,
-      shinyButtonClassName: m.nitroButton,
-      subscriptionTier: N.PremiumSubscriptionSKUs.TIER_2,
+      shinyButtonClassName: E.nitroButton,
+      subscriptionTier: g.PremiumSubscriptionSKUs.TIER_2,
       premiumModalAnalyticsLocation: {
-        section: g.AnalyticsSections.PREMIUM_CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPSELL
+        section: f.AnalyticsSections.PREMIUM_CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPSELL
       }
     })]
   })
