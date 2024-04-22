@@ -26,8 +26,8 @@ var a = n("735250"),
   x = n("560688"),
   M = n("390322"),
   R = n("871499"),
-  L = n("386000"),
-  y = n("25827"),
+  y = n("386000"),
+  L = n("25827"),
   O = n("314897"),
   j = n("131951"),
   P = n("496675"),
@@ -329,7 +329,7 @@ let ep = l.memo(function(e) {
         } = e, {
           isShown: l
         } = t;
-        return (0, a.jsx)(y.default, {
+        return (0, a.jsx)(L.default, {
           centerButton: !0,
           hasPermission: S,
           enabled: g,
@@ -381,7 +381,7 @@ let ep = l.memo(function(e) {
           } = e, {
             isShown: r
           } = t;
-          return (0, a.jsx)(L.default, {
+          return (0, a.jsx)(y.default, {
             centerButton: !0,
             onPopoutClick: i,
             selfMute: l,

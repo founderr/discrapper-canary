@@ -44,10 +44,10 @@ function v(e) {
       null != t && (t.style.zIndex = "1002")
     }
   }, []);
-  let L = l.useCallback(e => {
+  let y = l.useCallback(e => {
       e.stopPropagation(), e.preventDefault(), h()
     }, [h]),
-    y = l.useCallback(e => {
+    L = l.useCallback(e => {
       e.stopPropagation(), e.preventDefault(), s()
     }, [s]),
     O = (0, r.useTransition)(n, {
@@ -94,7 +94,7 @@ function v(e) {
             "aria-label": I.default.Messages.CLAN_USER_ADOPT_TAG_UPSELL_ARIA_LABEL.format({
               guildName: t.name
             }),
-            onClick: y,
+            onClick: L,
             children: (0, a.jsxs)("div", {
               className: i()(A.toastContainerInner, m ? A.hovered : null),
               children: [(0, a.jsxs)("div", {
@@ -129,7 +129,7 @@ function v(e) {
               }), (0, a.jsx)("div", {
                 children: (0, a.jsx)(u.Clickable, {
                   className: A.toastButton,
-                  onClick: L,
+                  onClick: y,
                   children: (0, a.jsx)(o.CloseSmallBoldIcon, {
                     width: 20,
                     height: 20

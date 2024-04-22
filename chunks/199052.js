@@ -84,11 +84,11 @@ function f(e) {
       rows: a,
       columns: l
     }
-  })(S, _, T), [S, _, T]), x = N + 1, M = x * A + (x - 1) * 8 <= C, R = Math.floor(A / u) + 8, L = Math.max(0, T - R * v) / 2;
+  })(S, _, T), [S, _, T]), x = N + 1, M = x * A + (x - 1) * 8 <= C, R = Math.floor(A / u) + 8, y = Math.max(0, T - R * v) / 2;
   return (0, a.jsx)(r.default, {
     fade: !0,
     className: n,
-    listPadding: [h + L, 0, m + L - 8, 8],
+    listPadding: [h + y, 0, m + y - 8, 8],
     renderRow: function(e) {
       var t;
       let n = e * N;

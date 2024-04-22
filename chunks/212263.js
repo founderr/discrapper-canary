@@ -47,7 +47,7 @@ t.default = e => {
     location: "emoji_picker"
   }), z = (0, c.useExpressionPickerStore)(e => e.searchQuery), {
     analyticsLocations: X
-  } = (0, _.default)(d.default.EMOJI_PICKER), q = null == H ? void 0 : null === (t = H.subscription_trial) || void 0 === t ? void 0 : t.sku_id, Q = null != q ? q === L.PremiumSubscriptionSKUs.TIER_0 : K === L.PremiumTypes.TIER_0;
+  } = (0, _.default)(d.default.EMOJI_PICKER), Q = null == H ? void 0 : null === (t = H.subscription_trial) || void 0 === t ? void 0 : t.sku_id, q = null != Q ? Q === L.PremiumSubscriptionSKUs.TIER_0 : K === L.PremiumTypes.TIER_0;
   return r.useEffect(() => {
     if (!W) {
       let e;
@@ -81,7 +81,7 @@ t.default = e => {
         onClose: P,
         trialOffer: H,
         discountOffer: Y,
-        children: Q ? D.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
+        children: q ? D.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
           planName: (0, p.getTierDisplayName)(L.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
           onClick: V
         }) : D.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({
@@ -97,7 +97,7 @@ t.default = e => {
           children: D.default.Messages.PREMIUM_PROMO_TITLE_SEARCH_UPSELL
         }), (0, i.jsx)("div", {
           className: v.premiumPromoDescription,
-          children: Q ? D.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
+          children: q ? D.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
             planName: (0, p.getTierDisplayName)(L.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
             onClick: V
           }) : D.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({
@@ -105,7 +105,7 @@ t.default = e => {
           })
         })]
       }), !j && (0, i.jsx)(A.default, {
-        subscriptionTier: Q ? L.PremiumSubscriptionSKUs.TIER_0 : L.PremiumSubscriptionSKUs.TIER_2,
+        subscriptionTier: q ? L.PremiumSubscriptionSKUs.TIER_0 : L.PremiumSubscriptionSKUs.TIER_2,
         submitting: B,
         premiumModalAnalyticsLocation: {
           section: C.AnalyticsSections.EMOJI_PICKER_POPOUT,
@@ -120,8 +120,8 @@ t.default = e => {
           F(!1), e && P()
         },
         buttonText: (() => {
-          if (j) return Q ? D.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : D.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT;
-          return Q ? D.default.Messages.PREMIUM_SETTINGS_GET_TIER_0 : D.default.Messages.PREMIUM_REQUIRED_GET_NITRO
+          if (j) return q ? D.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : D.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT;
+          return q ? D.default.Messages.PREMIUM_SETTINGS_GET_TIER_0 : D.default.Messages.PREMIUM_REQUIRED_GET_NITRO
         })()
       })]
     })]

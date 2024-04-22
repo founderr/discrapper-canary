@@ -26,8 +26,8 @@ var a = n("735250"),
   x = n("596040"),
   M = n("296797"),
   R = n("349619"),
-  L = n("100527"),
-  y = n("367907"),
+  y = n("100527"),
+  L = n("367907"),
   O = n("906732"),
   j = n("211644"),
   P = n("258609"),
@@ -80,8 +80,8 @@ var a = n("735250"),
   ex = n("493010"),
   eM = n("742603"),
   eR = n("221888"),
-  eL = n("900211"),
-  ey = n("18759"),
+  ey = n("900211"),
+  eL = n("18759"),
   eO = n("878752"),
   ej = n("354459"),
   eP = n("981631"),
@@ -119,7 +119,7 @@ class ek extends l.PureComponent {
     } = this.props;
     this.currentDocument.addEventListener(eT.FULLSCREEN_CHANGE_EVENT, this.handleFullScreenChange), ep.default.track(eP.AnalyticEvents.VIDEO_LAYOUT_TOGGLED, {
       video_layout: this.inPopout ? "popout" : t,
-      ...(0, y.collectVoiceAnalyticsMetadata)(e.id)
+      ...(0, L.collectVoiceAnalyticsMetadata)(e.id)
     })
   }
   componentWillUnmount() {
@@ -298,7 +298,7 @@ class ek extends l.PureComponent {
           timeout: 2e3,
           children: e => this.renderContent(e)
         })
-      }), h && (0, a.jsx)(eL.default, {
+      }), h && (0, a.jsx)(ey.default, {
         minHeight: 200,
         maxHeight: u,
         resizableNode: this._wrapperRef,
@@ -619,7 +619,7 @@ class ek extends l.PureComponent {
         channel: e,
         callContainerDimensions: t
       } = this.props;
-      return (0, a.jsx)(ey.default, {
+      return (0, a.jsx)(eL.default, {
         children: (0, a.jsx)(en.default, {
           callHeight: t.height,
           channelId: e.id
@@ -674,7 +674,7 @@ t.default = function(e) {
     return (null !== (e = null == C ? void 0 : C.channelId) && void 0 !== e ? e : ed.default.getVoiceChannelId()) === n.id
   }), {
     participants: R,
-    filteredParticipants: y,
+    filteredParticipants: L,
     participantsVersion: b,
     mode: U,
     layout: F,
@@ -730,14 +730,14 @@ t.default = function(e) {
     eE = (0, j.useIsContentShown)(d.DismissibleContent.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
     {
       analyticsLocations: eC
-    } = (0, O.default)(L.default.CHANNEL_CALL),
+    } = (0, O.default)(y.default.CHANNEL_CALL),
     eg = N.default.getEmbeddedActivitiesForChannel(n.id);
   return (0, a.jsx)(O.AnalyticsLocationProvider, {
     value: eC,
     children: (0, a.jsx)(_.default, {
       page: eP.AnalyticsPages.CHANNEL_CALL,
       children: (0, a.jsx)(eN.ChannelCallChatLayerProvider, {
-        children: (0, a.jsxs)(ey.VoiceChannelEffectsLayerProvider, {
+        children: (0, a.jsxs)(eL.VoiceChannelEffectsLayerProvider, {
           children: [(0, a.jsx)(ek, {
             channel: n,
             guild: Y,
@@ -753,7 +753,7 @@ t.default = function(e) {
             mode: U,
             inCall: S,
             participants: R,
-            filteredParticipants: y,
+            filteredParticipants: L,
             participantsVersion: b,
             layout: F,
             chatOpen: H,
@@ -779,7 +779,7 @@ t.default = function(e) {
             forceShowControls: eE,
             awaitingRemoteSessionInfo: $,
             currentChannelActivities: eg
-          }), !n.isPrivate() && (0, a.jsx)(ey.VoiceChannelEffectsLayerContainer, {}), (0, a.jsx)(eN.ChannelCallChatLayerContainer, {})]
+          }), !n.isPrivate() && (0, a.jsx)(eL.VoiceChannelEffectsLayerContainer, {}), (0, a.jsx)(eN.ChannelCallChatLayerContainer, {})]
         })
       })
     })

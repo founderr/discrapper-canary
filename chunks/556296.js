@@ -216,7 +216,7 @@ T.default.setGetKeybindList(() => {
   });
   return t && e.push((0, p.toString)(M.shortcut)), e
 });
-class q extends(r = E.default.DeviceSettingsStore) {
+class Q extends(r = E.default.DeviceSettingsStore) {
   initialize(e) {
     !__OVERLAY__ && this.waitFor(h.default, O.default), P = null != e ? e : {}
   }
@@ -254,7 +254,7 @@ class q extends(r = E.default.DeviceSettingsStore) {
     return this.getKeybindForAction(R.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, !0)
   }
 }
-D(q, "displayName", "KeybindsStore"), D(q, "persistKey", "keybinds"), D(q, "migrations", [function() {
+D(Q, "displayName", "KeybindsStore"), D(Q, "persistKey", "keybinds"), D(Q, "migrations", [function() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
     {
       v: t,
@@ -296,7 +296,7 @@ D(q, "displayName", "KeybindsStore"), D(q, "persistKey", "keybinds"), D(q, "migr
 }, e => c().reduce(e, (e, t, n) => t.action === R.GlobalKeybindActions.TOGGLE_GO_LIVE_STREAMING && t.managed ? e : {
   ...e,
   [n]: t
-}, {})]), t.default = new q(I.default, {
+}, {})]), t.default = new Q(I.default, {
   CONNECTION_OPEN: X,
   AUDIO_SET_MODE: X,
   OVERLAY_SET_ENABLED: X,

@@ -48,7 +48,7 @@ function A(e) {
   }), M = (0, r.default)(f.default);
   if (null == t || null != v) return null;
   let R = (0, c.default)(t),
-    L = m.can({
+    y = m.can({
       permission: T.Permissions.ADD_REACTIONS,
       user: A,
       context: t
@@ -58,7 +58,7 @@ function A(e) {
     children: [R && (0, a.jsx)(S.default, {
       channel: t,
       themeable: l
-    }), L && (0, a.jsx)(g.default, {
+    }), y && (0, a.jsx)(g.default, {
       channel: t
     }), x && M && (0, a.jsx)(p.default, {
       channel: t

@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return z
   },
   dismissClipsUserEducation: function() {
-    return q
+    return Q
   },
   dismissSaveClipAnimation: function() {
     return H
@@ -411,7 +411,7 @@ async function X(e, t) {
   return (0, L.default)(i)
 }
 
-function q(e) {
+function Q(e) {
   a.default.dispatch({
     type: "CLIPS_DISMISS_EDUCATION",
     educationType: e

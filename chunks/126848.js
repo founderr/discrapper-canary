@@ -40,8 +40,8 @@ function A(e) {
     P = (0, d.usePremiumDiscountOffer)(),
     _ = (0, f.useIsEligibleForBogoPromotion)(),
     M = (0, r.useStateFromStores)([x.default], () => x.default.isLocalizedPromoEnabled) && null == I && null == n,
-    y = (0, c.useShouldShowNewOfferBadgeForAprilMarketingMoment)(R),
-    O = (0, T.useIsEligibleSenderForReferralProgramTabBadge)(R),
+    O = (0, c.useShouldShowNewOfferBadgeForAprilMarketingMoment)(R),
+    y = (0, T.useIsEligibleSenderForReferralProgramTabBadge)(R),
     {
       enabled: D
     } = u.ReferralProgramRecipient.useExperiment({
@@ -50,7 +50,7 @@ function A(e) {
       autoTrackExposure: !1
     }),
     B = D && (null == I ? void 0 : I.trial_id) === C.PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
-  return t = _ ? (0, i.jsx)(h.default, {}) : y ? (0, i.jsx)(g.default, {
+  return t = _ ? (0, i.jsx)(h.default, {}) : O ? (0, i.jsx)(g.default, {
     copy: j.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_MODAL_TOP_PILL,
     isSelected: A,
     onSelect: () => (0, a.markDismissibleContentAsDismissed)(o.DismissibleContent.PREMIUM_2024_APRIL_MARKETING_BADGE, {
@@ -62,7 +62,7 @@ function A(e) {
     includesAmountOff: !1
   }) : null == I || B ? null != n ? n : M ? (0, i.jsx)(p.LocalizedPricingBadgeIcon, {
     entryPoint: p.BadgeEntryPoint.SettingsMenu
-  }) : O ? (0, i.jsx)(S.default, {
+  }) : y ? (0, i.jsx)(S.default, {
     isSelected: A,
     onSelect: () => (0, a.markDismissibleContentAsDismissed)(o.DismissibleContent.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, {
       dismissAction: N.ContentDismissActionType.TAKE_ACTION

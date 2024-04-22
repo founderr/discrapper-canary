@@ -29,8 +29,8 @@ var a, l = n("735250"),
   x = n("762914"),
   M = n("43267"),
   R = n("933557"),
-  L = n("366980"),
-  y = n("703656"),
+  y = n("366980"),
+  L = n("703656"),
   O = n("131704"),
   j = n("592125"),
   P = n("341165"),
@@ -96,7 +96,7 @@ let eo = e => {
     });
     return (0, l.jsx)(m.Clickable, {
       onClick: () => {
-        (0, y.transitionToGuild)($.ME, n.id), a()
+        (0, L.transitionToGuild)($.ME, n.id), a()
       },
       children: (0, l.jsxs)("div", {
         className: et.confirmChannelItemContainer,
@@ -402,7 +402,7 @@ class ed extends(a = s.PureComponent) {
       copied: a
     } = this.state;
     if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return null;
-    let i = null != t ? (0, L.default)(t.code) : "";
+    let i = null != t ? (0, y.default)(t.code) : "";
     return (0, l.jsxs)(s.Fragment, {
       children: [(0, l.jsx)(m.FormTitle, {
         tag: "h5",
@@ -426,7 +426,7 @@ class ed extends(a = s.PureComponent) {
           className: et.copyInput,
           name: "invite",
           value: i,
-          placeholder: (0, L.default)(ee.default.Messages.GROUP_DM_INVITE_LINK_EXAMPLE),
+          placeholder: (0, y.default)(ee.default.Messages.GROUP_DM_INVITE_LINK_EXAMPLE),
           editable: !1,
           inputClassName: et.input,
           spellCheck: "false",
@@ -587,7 +587,7 @@ class ed extends(a = s.PureComponent) {
       } = this.props;
       t.has(e) ? _.default.removeUser(e) : (_.default.addUser(e), n.length > 0 && _.default.clear(null == a ? void 0 : a.id)), this.forceFocus()
     }), el(this, "handleAddFriendNavigation", () => {
-      (0, y.transitionTo)($.Routes.FRIENDS), g.default.setSection($.FriendsSections.ADD_FRIEND), this.props.onClose()
+      (0, L.transitionTo)($.Routes.FRIENDS), g.default.setSection($.FriendsSections.ADD_FRIEND), this.props.onClose()
     }), el(this, "handleScroll", () => {
       let e = this.scrollerRef.current;
       null != e && this.setState({

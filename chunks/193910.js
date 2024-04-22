@@ -30,8 +30,8 @@ var a = n("735250"),
   x = n("752305"),
   M = n("423490"),
   R = n("951211"),
-  L = n("981631"),
-  y = n("921944"),
+  y = n("981631"),
+  L = n("921944"),
   O = n("489887"),
   j = n("689938"),
   P = n("604613");
@@ -62,7 +62,7 @@ function U(e) {
   let [c] = (0, m.useGetDismissibleContent)(d);
   return l.useEffect(() => () => {
     c === r.DismissibleContent.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, h.markDismissibleContentAsDismissed)(r.DismissibleContent.ACTIVITIES_CHAT_MENU_NEW_BADGE, {
-      dismissAction: y.ContentDismissActionType.TAKE_ACTION
+      dismissAction: L.ContentDismissActionType.TAKE_ACTION
     })
   }, [c]), (0, a.jsx)(p.default, {
     contentTypes: d,
@@ -95,7 +95,7 @@ function F(e) {
     analyticsLocations: w
   } = (0, f.default)();
   l.useEffect(() => {
-    I.default.track(L.AnalyticEvents.OPEN_POPOUT, {
+    I.default.track(y.AnalyticEvents.OPEN_POPOUT, {
       type: "Send Attachment",
       channel_id: t.id,
       guild_id: t.guild_id
@@ -107,7 +107,7 @@ function F(e) {
   }
 
   function H() {
-    I.default.track(L.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), M("/", (0, x.toRichValue)("/"))
+    I.default.track(y.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), M("/", (0, x.toRichValue)("/"))
   }
 
   function B() {
@@ -116,7 +116,7 @@ function F(e) {
 
   function G() {
     (0, h.markDismissibleContentAsDismissed)(r.DismissibleContent.POLLS_CHAT_INPUT_COACHMARK, {
-      dismissAction: y.ContentDismissActionType.TAKE_ACTION
+      dismissAction: L.ContentDismissActionType.TAKE_ACTION
     }), (0, o.openModalLazy)(async () => {
       let {
         default: e
@@ -131,7 +131,7 @@ function F(e) {
   }
 
   function V() {
-    I.default.track(L.AnalyticEvents.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+    I.default.track(y.AnalyticEvents.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
       channel_type: t.type,
       channel_id: t.id,
       guild_id: t.guild_id
@@ -139,10 +139,10 @@ function F(e) {
       channel: t,
       guildId: t.guild_id,
       locationObject: {
-        page: t.isPrivate() ? L.AnalyticsPages.DM_CHANNEL : L.AnalyticsPages.GUILD_CHANNEL,
-        section: L.AnalyticsSections.CHANNEL_TEXT_AREA,
-        object: L.AnalyticsObjects.CONTEXT_MENU_ITEM,
-        objectType: L.AnalyticsObjectTypes.ACTIVITY
+        page: t.isPrivate() ? y.AnalyticsPages.DM_CHANNEL : y.AnalyticsPages.GUILD_CHANNEL,
+        section: y.AnalyticsSections.CHANNEL_TEXT_AREA,
+        object: y.AnalyticsObjects.CONTEXT_MENU_ITEM,
+        objectType: y.AnalyticsObjectTypes.ACTIVITY
       },
       openInPopout: !1,
       enableSelectedTextChannelInvite: !0,
@@ -159,7 +159,7 @@ function F(e) {
       l = _.match(b);
     null != l && (a = l[1], n = l[2], e = l[3], a += l[4]), (0, N.promptToUpload)([(0, v.makeFile)(new Blob([e], {
       type: "text/plain"
-    }), "message.".concat(n))], t, S), A.ComponentDispatch.dispatchToLastSubscribed(L.ComponentActions.CLEAR_TEXT), "" !== a && A.ComponentDispatch.dispatchToLastSubscribed(L.ComponentActions.INSERT_TEXT, {
+    }), "message.".concat(n))], t, S), A.ComponentDispatch.dispatchToLastSubscribed(y.ComponentActions.CLEAR_TEXT), "" !== a && A.ComponentDispatch.dispatchToLastSubscribed(y.ComponentActions.INSERT_TEXT, {
       plainText: a
     })
   }
@@ -216,11 +216,11 @@ function F(e) {
             label: l,
             action: () => {
               var n;
-              return n = e.activity, void(I.default.track(L.AnalyticEvents.OPEN_MODAL, {
+              return n = e.activity, void(I.default.track(y.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Join Invite",
                 application_id: n.application_id,
-                location: L.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), D(n, t, L.ActivityActionTypes.JOIN, w))
+                location: y.AnalyticsSections.CHANNEL_TEXT_AREA
+              }), D(n, t, y.ActivityActionTypes.JOIN, w))
             }
           }, "play");
         case R.AttachmentTypes.INVITE_TO_LISTEN:
@@ -229,10 +229,10 @@ function F(e) {
             label: l,
             action: () => {
               var n;
-              return n = e.activity, void(I.default.track(L.AnalyticEvents.OPEN_MODAL, {
+              return n = e.activity, void(I.default.track(y.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Listen Invite",
-                location: L.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), D(n, t, L.ActivityActionTypes.LISTEN, w))
+                location: y.AnalyticsSections.CHANNEL_TEXT_AREA
+              }), D(n, t, y.ActivityActionTypes.LISTEN, w))
             }
           }, "listen");
         case R.AttachmentTypes.INVITE_TO_WATCH:
@@ -241,10 +241,10 @@ function F(e) {
             label: l,
             action: () => {
               var n;
-              return n = e.activity, void(I.default.track(L.AnalyticEvents.OPEN_MODAL, {
+              return n = e.activity, void(I.default.track(y.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Watch Invite",
-                location: L.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), D(n, t, L.ActivityActionTypes.WATCH, w))
+                location: y.AnalyticsSections.CHANNEL_TEXT_AREA
+              }), D(n, t, y.ActivityActionTypes.WATCH, w))
             }
           }, "watch");
         case R.AttachmentTypes.CREATE_THREAD:

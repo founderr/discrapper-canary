@@ -30,8 +30,8 @@ var a = n("735250"),
   x = n("403404"),
   M = n("981631"),
   R = n("689938"),
-  L = n("987281"),
-  y = n("587952"),
+  y = n("987281"),
+  L = n("587952"),
   O = n("736733");
 let j = "vc-activities-".concat((0, o.v4)()),
   P = l.forwardRef(function(e, t) {
@@ -97,10 +97,10 @@ let j = "vc-activities-".concat((0, o.v4)()),
         to: M.Routes.ACTIVITIES,
         children: [(0, a.jsx)("img", {
           alt: R.default.Messages.EMBEDDED_ACTIVITIES_BIRTHDAY_ACTIVITIES_HERO_ALT,
-          src: "light" === w ? y : O,
-          className: L.poster
+          src: "light" === w ? L : O,
+          className: y.poster
         }), (0, a.jsx)("div", {
-          className: L.posterDivider
+          className: y.posterDivider
         })]
       }) : null;
     return (0, a.jsx)(p.AnalyticsLocationProvider, {
@@ -119,22 +119,22 @@ let j = "vc-activities-".concat((0, o.v4)()),
               })
             })
           }), (0, a.jsxs)("div", {
-            className: L.container,
+            className: y.container,
             onMouseEnter: q,
             onMouseLeave: D,
             children: [(0, a.jsxs)("div", {
-              className: L.titleContainer,
+              className: y.titleContainer,
               children: [(0, a.jsxs)("div", {
-                className: L.titleLeft,
+                className: y.titleLeft,
                 children: [(0, a.jsx)(S.default, {
-                  className: L.titleLeftIcon,
+                  className: y.titleLeftIcon,
                   color: "var(--interactive-active)"
                 }), (0, a.jsx)(d.Text, {
                   variant: "eyebrow",
                   children: R.default.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_ACTIVITIES_TITLE
                 })]
               }), (0, a.jsxs)(d.Clickable, {
-                className: L.titleRight,
+                className: y.titleRight,
                 onClick: Z,
                 children: [(0, a.jsx)(d.Text, {
                   variant: "eyebrow",
@@ -143,14 +143,14 @@ let j = "vc-activities-".concat((0, o.v4)()),
                   width: 12,
                   height: 12,
                   color: "var(--interactive-active)",
-                  className: L.titleRightIcon
+                  className: y.titleRightIcon
                 })]
               })]
             }), (0, a.jsx)(p.AnalyticsLocationProvider, {
               value: W,
               children: X
             }), (0, a.jsxs)("div", {
-              className: L.activityContainer,
+              className: y.activityContainer,
               children: [K.map(e => (0, a.jsx)(v.ActivitySuggestion, {
                 channel: n,
                 activityItem: e,
@@ -158,15 +158,15 @@ let j = "vc-activities-".concat((0, o.v4)()),
                   o(), b()
                 },
                 aspectRatio: v.ActivitySuggestion.AspectRatio.THIRTEEN_BY_ELEVEN,
-                animatedDivClass: L.activitySuggestion
+                animatedDivClass: y.activitySuggestion
               }, e.application.id)), (0, a.jsx)("div", {
-                className: i()(L.wumpusRocketOuterContainer, {
-                  [L.wumpusReducedMotion]: k
+                className: i()(y.wumpusRocketOuterContainer, {
+                  [y.wumpusReducedMotion]: k
                 }),
                 children: (0, a.jsx)("div", {
-                  className: L.wumpusRocketInnerContainer,
+                  className: y.wumpusRocketInnerContainer,
                   children: (0, a.jsx)(N.default, {
-                    className: L.wumpusRocket
+                    className: y.wumpusRocket
                   })
                 })
               })]

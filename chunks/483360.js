@@ -50,8 +50,8 @@ var r = n("658722"),
   K = n("176505"),
   z = n("689938");
 let X = new c.default("AutocompleteUtils"),
-  q = () => !0,
-  Q = /(\t|\s)/,
+  Q = () => !0,
+  q = /(\t|\s)/,
   Z = [],
   J = (i = n("786074").default).MENTION_EVERYONE,
   $ = i.MENTION_HERE,
@@ -284,7 +284,7 @@ t.default = {
         guildId: i,
         limit: r = j.MAX_AUTOCOMPLETE_RESULTS,
         fuzzy: s = !0,
-        filter: a = q,
+        filter: a = Q,
         type: d = g.GUILD_SELECTABLE_CHANNELS_KEY,
         allowEmptyQueries: _ = !1,
         requireVocalConnectAccess: c = !0,
@@ -368,7 +368,7 @@ t.default = {
       query: t,
       limit: n = 10,
       fuzzy: i = !0,
-      filter: r = q,
+      filter: r = Q,
       boosters: s = {}
     } = e, a = "" === t ? "" : t.toLocaleLowerCase(), u = {
       exactQuery: RegExp("^".concat(V.default.escape(a)), "i"),
@@ -394,7 +394,7 @@ t.default = {
       query: t,
       limit: n = 10,
       fuzzy: i = !0,
-      filter: r = q,
+      filter: r = Q,
       boosters: s = {}
     } = e, a = (0, H.stripDiacritics)((0, H.normalize)(t.toLocaleLowerCase())), d = {
       exactQuery: RegExp("^".concat(V.default.escape(a)), "i"),
@@ -421,7 +421,7 @@ t.default = {
       query: t,
       limit: n = 10,
       fuzzy: i = !0,
-      filter: r = q
+      filter: r = Q
     } = e, s = t.toLocaleLowerCase(), a = {
       exactQuery: RegExp("^".concat(V.default.escape(s)), "i"),
       containQuery: RegExp(V.default.escape(s), "i"),
@@ -449,7 +449,7 @@ t.default = {
       query: t,
       limit: n = 10,
       fuzzy: i = !0,
-      filter: r = q
+      filter: r = Q
     } = e, s = t.toLocaleLowerCase(), a = {
       exactQuery: RegExp("^".concat(V.default.escape(s)), "i"),
       containQuery: RegExp(V.default.escape(s), "i"),
@@ -701,7 +701,7 @@ t.default = {
   },
   queryStickers(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-      [n, i] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [null, q],
+      [n, i] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [null, Q],
       {
         stickerMetadata: r
       } = A.default,
@@ -750,7 +750,7 @@ t.default = {
     }
     return 0 === (l = o()(l).sortBy(e => -1 * e.score).value()).length && (l = Z), l
   },
-  matchSentinel: (e, t, n) => !Q.test(t) && e === n,
+  matchSentinel: (e, t, n) => !q.test(t) && e === n,
   hasSameRoleAsUsername(e, t) {
     if (!t.isPomelo()) return !1;
     let n = D.default.getGuild(e.getGuildId());

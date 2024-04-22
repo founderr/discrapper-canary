@@ -50,7 +50,7 @@ function I(e) {
     R = (e, t) => {
       T.has(e.key) && M(t)
     },
-    L = l.useCallback(e => {
+    y = l.useCallback(e => {
       let {
         application: t,
         location: n
@@ -126,7 +126,7 @@ function I(e) {
                         scopes: [C.OAuth2Scopes.APPLICATIONS_COMMANDS],
                         channelId: t,
                         disableGuildSelect: !0,
-                        callback: L
+                        callback: y
                       })
                     },
                     size: i.Button.Sizes.SMALL,

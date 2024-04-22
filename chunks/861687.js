@@ -50,8 +50,8 @@ var P = n("214890"),
   K = n("655306"),
   z = n("583794"),
   X = n("824096"),
-  q = n("53114"),
-  Q = n("174532"),
+  Q = n("53114"),
+  q = n("174532"),
   Z = n("895066"),
   J = n("981631"),
   $ = n("65154");
@@ -493,7 +493,7 @@ class ei extends _.default {
         this.logger.warn("Socket mismatch, disconnecting");
         return
       }
-      switch (this._voiceQuality = new Z.default(l), this._voiceQuality.start(), this._voiceQualityPeriodicStatsSequenceId = 0, this._voiceQualityPeriodicStatsInterval = setInterval(this._handleVoiceQualityPeriodicsStats, 3e5), this._noiseCancellationError = 0, this._voiceDuration = new Q.default(this.userId, l), this._voiceDuration.start(), this.protocol = i, i) {
+      switch (this._voiceQuality = new Z.default(l), this._voiceQuality.start(), this._voiceQualityPeriodicStatsSequenceId = 0, this._voiceQualityPeriodicStatsInterval = setInterval(this._handleVoiceQualityPeriodicsStats, 3e5), this._noiseCancellationError = 0, this._voiceDuration = new q.default(this.userId, l), this._voiceDuration.start(), this.protocol = i, i) {
         case "udp":
           this.logger.info("Sending UDP info to RTC server.", r, this._selectedExperiments), e.once(W.SocketEvent.Encryption, (e, t) => {
             l === this._connection && (l.setEncryption(e, t), this._encryptionMode = e)
@@ -586,7 +586,7 @@ class ei extends _.default {
   }
   getOrCreateVideoQuality() {
     if (null != this._connection && null == this._videoQuality) {
-      this._videoQuality = new q.VideoQuality(this._connection), this._videoQuality.start();
+      this._videoQuality = new Q.VideoQuality(this._connection), this._videoQuality.start();
       let {
         featureEnabled: e,
         windowLength: t,
@@ -596,7 +596,7 @@ class ei extends _.default {
       } = v.default.getConfig(!0);
       if (e) {
         this._videoHealthManager = new X.VideoHealthManager(t, n, i, r), null != this._localMediaSinkWantsManager && (this._localMediaSinkWantsManager.videoHealthManager = this._videoHealthManager);
-        this._videoQuality.on(q.VideoQualityEvent.FpsUpdate, (e, t, n) => {
+        this._videoQuality.on(Q.VideoQualityEvent.FpsUpdate, (e, t, n) => {
           var i, r;
           (null === (i = this._localMediaSinkWantsManager) || void 0 === i ? void 0 : i.shouldReceiveFromUser(e)) && (null === (r = this._videoHealthManager) || void 0 === r || r.updateFps(e, t, n))
         })
