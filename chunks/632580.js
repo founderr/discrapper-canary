@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   purchaseProduct: function() {
-    return S
+    return _
   }
 }), n("47120");
 var i = n("512722"),
@@ -17,18 +17,18 @@ var i = n("512722"),
   f = n("45572"),
   p = n("981631"),
   I = n("474936");
-async function S(e) {
+async function _(e) {
   let {
     setPurchaseState: t,
     setHasAcceptedTerms: n,
     setIsSubmitting: i,
-    setPurchaseError: S,
-    hasRedirectURL: _,
+    setPurchaseError: _,
+    hasRedirectURL: S,
     setHasRedirectURL: P,
     isGift: E,
     baseAnalyticsData: T,
-    analyticsLocation: N,
-    analyticsLocations: v,
+    analyticsLocation: v,
+    analyticsLocations: N,
     flowStartTime: h,
     subscriptionPlan: x,
     planGroup: A,
@@ -48,13 +48,17 @@ async function S(e) {
     giftInfoOptions: F,
     invoicePreview: B
   } = e;
-  t(f.PurchaseState.PURCHASING), n(!0), i(!0), l.default.wait(a.clearError), S(null);
+  t(f.PurchaseState.PURCHASING), n(!0), i(!0), l.default.wait(a.clearError), _(null);
   try {
     let e, n, i;
     if (d.default.track(p.AnalyticEvents.PAYMENT_FLOW_COMPLETED, {
         ...T,
+        subtotal: null == B ? void 0 : B.subtotal,
+        tax: null == B ? void 0 : B.tax,
+        expected_amount: null == B ? void 0 : B.total,
+        expected_currency: null == B ? void 0 : B.currency,
         duration_ms: Date.now() - h
-      }), _) return;
+      }), S) return;
     if (D === p.PurchaseTypes.ONE_TIME) s()(null != j, "SKU must exist and be fetched."), s()(null != G, "SKUPricePreview must exist."), e = await (0, o.purchaseSKU)(j.applicationId, j.id, {
       expectedAmount: G.amount,
       expectedCurrency: G.currency,
@@ -79,14 +83,14 @@ async function S(e) {
     } else if (M && null != R && null != C && null != b) e = p.PREPAID_PAYMENT_SOURCES.has(C.type) ? await (0, r.payInvoiceManually)(b, R, C, g.currency) : await (0, r.updateSubscription)(b, {
       paymentSource: C,
       currency: g.currency
-    }, v, N, w);
+    }, N, v, w);
     else if (null != b) {
       let t = (0, m.getItemsWithUpsertedPlanIdForGroup)(b, x.id, 1, new Set(A)),
         n = {
           paymentSource: C,
           currency: g.currency
         };
-      b.status === p.SubscriptionStatusTypes.PAUSED ? n.status = p.SubscriptionStatusTypes.ACTIVE : n.items = t, e = await (0, r.updateSubscription)(b, n, v, N, w)
+      b.status === p.SubscriptionStatusTypes.PAUSED ? n.status = p.SubscriptionStatusTypes.ACTIVE : n.items = t, e = await (0, r.updateSubscription)(b, n, N, v, w)
     } else e = await (0, u.subscribe)({
       planId: x.id,
       currency: g.currency,
@@ -102,7 +106,7 @@ async function S(e) {
     }
     t(f.PurchaseState.COMPLETED), "subscription" in e ? n = null != e.subscription ? c.default.createFromServer(e.subscription) : null : "entitlements" in e && (i = null != e.entitlements ? e.entitlements : void 0), L(n, i)
   } catch (e) {
-    t(f.PurchaseState.FAIL), S(e), d.default.track(p.AnalyticEvents.PAYMENT_FLOW_FAILED, {
+    t(f.PurchaseState.FAIL), _(e), d.default.track(p.AnalyticEvents.PAYMENT_FLOW_FAILED, {
       ...T,
       payment_error_code: null == e ? void 0 : e.code,
       payment_source_id: null == C ? void 0 : C.id,
@@ -110,6 +114,6 @@ async function S(e) {
       duration_ms: Date.now() - h
     })
   } finally {
-    !_ && i(!1)
+    !S && i(!1)
   }
 }

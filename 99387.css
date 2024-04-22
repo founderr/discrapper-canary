@@ -23617,13 +23617,17 @@ input[type=checkbox]:focus-visible+.label__8e100 {
 
 .seeMoreText_ff3bd6 {
     width: -moz-fit-content;
-    width: fit-content
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 4px
 }
 
 .seeMoreText_ff3bd6:hover {
     -webkit-text-decoration: underline;
     text-decoration: underline;
-    color: var(--interactive-active);
+    color: var(--text-normal);
     cursor: pointer
 }
 
