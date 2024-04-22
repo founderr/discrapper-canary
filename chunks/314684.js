@@ -82,17 +82,18 @@ function A() {
     if (!(null != e && (0, m.isUserTenureRewardStatusActive)(e))) return null;
     else {
       if (null == e.redeemable_at || null == e.next_tenure_reward_id) return null;
-      let t = -1;
-      if ((t = null != e.redeemable_in_ms ? Math.ceil(n().duration(e.redeemable_in_ms).asDays()) : n()(e.redeemable_at).diff(n().utc(), "days")) < 0) return null;
-      let s = !1,
-        i = !1;
-      return e.next_tenure_reward_id === N.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH ? (i = t <= N.MAX_DAYS_LEFT_TO_SHOW_NOTIFICATION_1_MONTH_VARIANT, s = t <= N.MAX_DAYS_LEFT_TO_SHOW_CARD_1_MONTH_VARIANT) : e.next_tenure_reward_id === N.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS && (i = t <= N.MAX_DAYS_LEFT_TO_SHOW_NOTIFICATION_3_MONTH_VARIANT, s = t <= N.MAX_DAYS_LEFT_TO_SHOW_CARD_3_MONTH_VARIANT), {
+      let t = n()(e.redeemable_at).diff(n().utc(), "days"),
+        s = null != e.redeemable_in_ms ? Math.ceil(n().duration(e.redeemable_in_ms).asDays()) : t;
+      if (t < 0) return null;
+      let i = !1,
+        l = !1;
+      return e.next_tenure_reward_id === N.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH ? (l = t <= N.MAX_DAYS_LEFT_TO_SHOW_NOTIFICATION_1_MONTH_VARIANT, i = t <= N.MAX_DAYS_LEFT_TO_SHOW_CARD_1_MONTH_VARIANT) : e.next_tenure_reward_id === N.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS && (l = t <= N.MAX_DAYS_LEFT_TO_SHOW_NOTIFICATION_3_MONTH_VARIANT, i = t <= N.MAX_DAYS_LEFT_TO_SHOW_CARD_3_MONTH_VARIANT), {
         ...r,
         nitroTenureStatus: N.NitroRewardStatus.PENDING,
         tenureRewardSkuId: e.next_tenure_reward_id,
-        redeemableInDays: 0 === t ? 1 : t,
-        showNotification: i,
-        showCard: s
+        redeemableInDays: 0 === s ? 1 : s,
+        showNotification: l,
+        showCard: i
       }
     }
   }, [a, t, e, o])
