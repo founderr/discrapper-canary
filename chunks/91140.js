@@ -134,8 +134,8 @@ t.default = l.memo(e => {
   return (0, a.jsxs)(T.Card, {
     selected: l,
     children: [(0, a.jsxs)(T.CardInfoSection, {
-      children: [(0, a.jsx)(T.CardUser, {
-        userId: t.author_id,
+      children: [(0, a.jsx)(T.CardParticipants, {
+        entry: t,
         channelId: n.id,
         guildId: n.guild_id
       }), (0, a.jsx)(T.CardTitle, {
