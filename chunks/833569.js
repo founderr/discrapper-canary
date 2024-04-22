@@ -41,7 +41,7 @@ var a, n, i = s("735250"),
   O = s("42818"),
   j = s("798769"),
   G = s("459965"),
-  k = s("623068"),
+  k = s("119269"),
   F = s("474936"),
   w = s("981631"),
   H = s("689938"),
@@ -413,7 +413,7 @@ function X(e) {
             showAnimations: !1,
             innerCircleClassName: Y.innerCircle,
             progressCircleStrokeSize: 5,
-            gemBackgroundCircleSize: "38%"
+            backgroundCircleSize: "38%"
           })
         }),
         footer: (0, i.jsxs)("div", {

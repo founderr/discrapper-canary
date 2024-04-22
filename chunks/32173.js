@@ -6,425 +6,432 @@ s.r(t), s.d(t, {
 });
 var a, i, r = s("735250");
 s("470079");
-var l = s("399606"),
-  n = s("524437"),
+var n = s("399606"),
+  l = s("524437"),
   o = s("230711"),
   u = s("410030"),
   d = s("100527"),
   c = s("906732"),
   _ = s("779618"),
   E = s("335131"),
-  C = s("410154"),
-  f = s("300284"),
+  f = s("410154"),
+  C = s("300284"),
   T = s("131951"),
   I = s("78839"),
   R = s("63063"),
   S = s("74538"),
   p = s("494127"),
-  m = s("687362"),
-  A = s("623068"),
-  N = s("391110"),
-  g = s("75077"),
-  O = s("474936"),
-  P = s("981631"),
-  M = s("526761"),
-  h = s("689938"),
-  L = s("660372"),
-  x = s("926433"),
-  v = s("302036"),
-  j = s("994554"),
-  D = s("704565"),
-  b = s("393305"),
-  U = s("338879"),
-  y = s("203302"),
-  B = s("766491"),
-  G = s("193943"),
-  k = s("707046"),
-  H = s("488459"),
-  F = s("334347"),
-  w = s("132015"),
-  W = s("142416"),
-  K = s("474106"),
-  V = s("567452"),
-  Y = s("755590"),
-  z = s("529018"),
-  Z = s("637810"),
-  X = s("570423"),
-  Q = s("912429"),
-  J = s("91394"),
-  q = s("209672"),
-  $ = s("698173"),
-  ee = s("926262");
-let et = new Date("2024-05-07T03:59:00Z");
+  m = s("314684"),
+  A = s("687362"),
+  N = s("119269"),
+  g = s("391110"),
+  O = s("75077"),
+  P = s("474936"),
+  M = s("981631"),
+  h = s("526761"),
+  L = s("689938"),
+  x = s("660372"),
+  v = s("926433"),
+  j = s("302036"),
+  D = s("994554"),
+  b = s("704565"),
+  U = s("393305"),
+  y = s("338879"),
+  B = s("203302"),
+  G = s("766491"),
+  k = s("193943"),
+  H = s("707046"),
+  F = s("488459"),
+  w = s("334347"),
+  W = s("132015"),
+  K = s("142416"),
+  V = s("474106"),
+  Y = s("567452"),
+  z = s("755590"),
+  Z = s("529018"),
+  X = s("637810"),
+  Q = s("570423"),
+  J = s("912429"),
+  q = s("91394"),
+  $ = s("209672"),
+  ee = s("698173"),
+  et = s("926262");
+let es = new Date("2024-05-07T03:59:00Z");
 (a = i || (i = {})).AVATAR_DECORATIONS = "avatarDecorations", a.CLIENT_THEMES = "clientThemes", a.CLIPS = "clips", a.EARLY_ACCESS = "earlyAccess", a.ENTRANCE_SOUNDS = "entranceSounds", a.PROFILE_EFFECTS = "profileEffects", a.PROFILES = "profiles", a.REMIXING = "remixing", a.SERVER_BOOSTS = "serverBoosts", a.SPECIAL_MEMBER_PRICING = "specialMemberPricing", a.SPECIAL_MEMBER_PRICING_SEE_ALL_VARIANT = "specialMemberPricingSeeAllVariant", a.SPECIAL_SHOP_PERKS = "specialShopPerks", a.UNLIMITED_SUPER_REACTIONS = "unlimitedSuperReactions", a.SUPER_REACTIONS = "superReactions", a.UPCOMING_DROP_UNTIMED = "upcomingDropUntimed", a.CUSTOM_APP_ICONS = "customAppIcons", a.MORE_EMOJI_POWER = "moreEmojiPower", a.CUSTOM_SOUNDS_EVERYWHERE = "customSoundsEverywhere", a.SPECIAL_STICKER_ACCESS = "specialStickerAccess", a.LARGE_UPLOADS = "largeUploads", a.HD_VIDEO = "hdVideo", a.BADGE = "badge", a.ENTRANCE_SOUNDS_SEE_ALL_VARIATION = "entranceSoundsSeeAllVariation", a.EARLY_ACCESS_SEE_ALL_VARIATION = "earlyAccessSeeAllVariant", a.FREE_BOOST = "freeBoost", a.SHY_PROJECT = "shyProject";
 t.default = () => {
   let {
     analyticsLocations: e
-  } = (0, c.default)(d.default.PREMIUM_MARKETING_PERK_CARD), t = (0, u.default)(), s = h.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, l.useStateFromStores)([I.default], () => I.default.getPremiumTypeSubscription()), i = null != a ? S.default.getPremiumPlanItem(a) : null, es = (null != i ? S.default.getSkuIdForPlan(i.planId) : null) === O.PremiumSubscriptionSKUs.TIER_2, {
-    flipped: ea
-  } = (0, p.useWhatsNewAvatarDecoRollout)(), {
+  } = (0, c.default)(d.default.PREMIUM_MARKETING_PERK_CARD), t = (0, u.default)(), s = L.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, n.useStateFromStores)([I.default], () => I.default.getPremiumTypeSubscription()), i = null != a ? S.default.getPremiumPlanItem(a) : null, ea = (null != i ? S.default.getSkuIdForPlan(i.planId) : null) === P.PremiumSubscriptionSKUs.TIER_2, {
     flipped: ei
-  } = (0, p.useWhatsNewProfileFXRollout)(), er = (0, _.default)(T.default), el = (0, m.default)(), en = (0, f.default)({
-    scrollPosition: M.ProfileCustomizationScrollPositions.TRY_IT_OUT,
+  } = (0, p.useWhatsNewAvatarDecoRollout)(), {
+    flipped: er
+  } = (0, p.useWhatsNewProfileFXRollout)(), en = (0, m.useFreeBoostDaysPercentage)({
+    showAnimations: !0
+  }), el = null != en ? en.initialPercentage : void 0, eo = null != en ? en.percentage : void 0, eu = (0, _.default)(T.default), ed = (0, A.default)(), ec = (0, C.default)({
+    scrollPosition: h.ProfileCustomizationScrollPositions.TRY_IT_OUT,
     analyticsLocations: e
-  }), eo = () => {
-    o.default.open(P.UserSettingsSections.VOICE, M.SOUNDBOARD_SUBSECTION, {
+  }), e_ = () => {
+    o.default.open(M.UserSettingsSections.VOICE, h.SOUNDBOARD_SUBSECTION, {
       openWithoutBackstack: !0,
       analyticsLocations: e
     })
-  }, eu = () => {
+  }, eE = () => {
     (0, E.openCollectiblesShop)({
       analyticsLocations: e,
       analyticsSource: d.default.PREMIUM_MARKETING_PERK_CARD
     })
-  }, ed = {
-    avatarDecorations: es ? {
+  }, ef = {
+    avatarDecorations: ea ? {
       name: "avatarDecorations",
-      title: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_TITLE,
-      subtitle: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_SUBTITLE_SUB,
-      description: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_SUB,
-      descriptionCta: h.default.Messages.VISIT_THE_SHOP_CTA,
-      onCtaClick: eu,
-      pillText: h.default.Messages.EARLY_ACCESS,
-      perkImage: y,
-      canReveal: ea,
-      dismissibleContentType: n.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
+      title: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_TITLE,
+      subtitle: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_SUBTITLE_SUB,
+      description: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_SUB,
+      descriptionCta: L.default.Messages.VISIT_THE_SHOP_CTA,
+      onCtaClick: eE,
+      pillText: L.default.Messages.EARLY_ACCESS,
+      perkImage: B,
+      canReveal: ei,
+      dismissibleContentType: l.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
     } : {
       name: "avatarDecorations",
-      title: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_TITLE,
-      subtitle: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_SUBTITLE_NON_SUB,
-      description: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_NON_SUB,
-      pillText: h.default.Messages.EARLY_ACCESS,
-      perkImage: y,
-      canReveal: ea,
-      dismissibleContentType: n.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
+      title: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_TITLE,
+      subtitle: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_SUBTITLE_NON_SUB,
+      description: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_NON_SUB,
+      pillText: L.default.Messages.EARLY_ACCESS,
+      perkImage: B,
+      canReveal: ei,
+      dismissibleContentType: l.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
     },
     clientThemes: {
       name: "clientThemes",
-      title: h.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_THEMES_TITLE,
-      subtitle: h.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_THEMES_SUBTITLE,
-      description: h.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_THEMES_DESCRIPTION,
-      descriptionCta: h.default.Messages.TAKE_ME_THERE,
+      title: L.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_THEMES_TITLE,
+      subtitle: L.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_THEMES_SUBTITLE,
+      description: L.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_THEMES_DESCRIPTION,
+      descriptionCta: L.default.Messages.TAKE_ME_THERE,
       onCtaClick: () => {
-        o.default.open(P.UserSettingsSections.APPEARANCE, null, {
+        o.default.open(M.UserSettingsSections.APPEARANCE, null, {
           openWithoutBackstack: !0,
           analyticsLocations: e
         })
       },
-      perkImage: D
+      perkImage: b
     },
-    clips: es ? {
+    clips: ea ? {
       name: "clips",
-      title: h.default.Messages.CLIPS,
-      subtitle: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_SUBTITLE,
-      description: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_DESCRIPTION_SUB,
-      descriptionCta: er ? h.default.Messages.TAKE_ME_THERE : h.default.Messages.LEARN_MORE,
-      pillText: h.default.Messages.EARLY_ACCESS,
-      onCtaClick: er ? () => {
-        o.default.open(P.UserSettingsSections.CLIPS, null, {
+      title: L.default.Messages.CLIPS,
+      subtitle: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_SUBTITLE,
+      description: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_DESCRIPTION_SUB,
+      descriptionCta: eu ? L.default.Messages.TAKE_ME_THERE : L.default.Messages.LEARN_MORE,
+      pillText: L.default.Messages.EARLY_ACCESS,
+      onCtaClick: eu ? () => {
+        o.default.open(M.UserSettingsSections.CLIPS, null, {
           openWithoutBackstack: !0,
           analyticsLocations: e
         })
       } : () => {
-        window.open(R.default.getArticleURL(P.HelpdeskArticles.CLIPS), "_blank")
+        window.open(R.default.getArticleURL(M.HelpdeskArticles.CLIPS), "_blank")
       },
-      perkImage: B
+      perkImage: G
     } : {
       name: "clips",
-      title: h.default.Messages.CLIPS,
-      subtitle: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_SUBTITLE,
-      description: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_DESCRIPTION_NON_SUB,
-      pillText: h.default.Messages.EARLY_ACCESS,
-      perkImage: B
+      title: L.default.Messages.CLIPS,
+      subtitle: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_SUBTITLE,
+      description: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_DESCRIPTION_NON_SUB,
+      pillText: L.default.Messages.EARLY_ACCESS,
+      perkImage: G
     },
-    earlyAccess: es ? {
+    earlyAccess: ea ? {
       name: "earlyAccess",
-      title: h.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_TITLE,
-      subtitle: h.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_SUBTITLE_V2,
-      description: h.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_SUB,
-      perkImage: k
+      title: L.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_TITLE,
+      subtitle: L.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_SUBTITLE_V2,
+      description: L.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_SUB,
+      perkImage: H
     } : {
       name: "earlyAccess",
-      title: h.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_TITLE,
-      subtitle: h.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_SUBTITLE_V2,
-      description: h.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_NON_SUB,
+      title: L.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_TITLE,
+      subtitle: L.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_SUBTITLE_V2,
+      description: L.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_NON_SUB,
       isPremiumGetCta: !0,
-      perkImage: k
+      perkImage: H
     },
-    earlyAccessSeeAllVariant: es ? {
+    earlyAccessSeeAllVariant: ea ? {
       name: "earlyAccessSeeAllVariant",
-      title: h.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_TITLE,
-      subtitle: h.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_SUBTITLE_V2,
-      description: h.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_SUB,
-      perkImage: H
+      title: L.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_TITLE,
+      subtitle: L.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_SUBTITLE_V2,
+      description: L.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_SUB,
+      perkImage: F
     } : {
       name: "earlyAccess",
-      title: h.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_TITLE,
-      subtitle: h.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_SUBTITLE_V2,
-      description: h.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_NON_SUB,
+      title: L.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_TITLE,
+      subtitle: L.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_SUBTITLE_V2,
+      description: L.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_NON_SUB,
       isPremiumGetCta: !0,
-      perkImage: H
+      perkImage: F
     },
-    entranceSounds: es ? {
+    entranceSounds: ea ? {
       name: "entranceSounds",
-      title: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_TITLE,
-      subtitle: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
-      description: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
-      descriptionCta: h.default.Messages.TAKE_ME_THERE,
-      onCtaClick: eo,
-      perkImage: w
-    } : {
-      name: "entranceSounds",
-      title: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_TITLE,
-      subtitle: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
-      description: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_NON_SUB,
-      perkImage: w
-    },
-    entranceSoundsSeeAllVariation: es ? {
-      name: "entranceSoundsSeeAllVariation",
-      title: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_TITLE,
-      subtitle: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
-      description: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
-      descriptionCta: h.default.Messages.TAKE_ME_THERE,
-      onCtaClick: eo,
+      title: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_TITLE,
+      subtitle: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
+      description: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
+      descriptionCta: L.default.Messages.TAKE_ME_THERE,
+      onCtaClick: e_,
       perkImage: W
     } : {
-      name: "entranceSoundsSeeAllVariation",
-      title: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_TITLE,
-      subtitle: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
-      description: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_NON_SUB,
+      name: "entranceSounds",
+      title: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_TITLE,
+      subtitle: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
+      description: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_NON_SUB,
       perkImage: W
     },
-    profileEffects: es ? {
+    entranceSoundsSeeAllVariation: ea ? {
+      name: "entranceSoundsSeeAllVariation",
+      title: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_TITLE,
+      subtitle: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
+      description: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
+      descriptionCta: L.default.Messages.TAKE_ME_THERE,
+      onCtaClick: e_,
+      perkImage: K
+    } : {
+      name: "entranceSoundsSeeAllVariation",
+      title: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_TITLE,
+      subtitle: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
+      description: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_NON_SUB,
+      perkImage: K
+    },
+    profileEffects: ea ? {
       name: "profileEffects",
-      title: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE,
-      subtitle: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_SUBTITLE,
-      description: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_SUB,
-      descriptionCta: h.default.Messages.VISIT_THE_SHOP_CTA,
-      onCtaClick: eu,
-      pillText: h.default.Messages.EARLY_ACCESS,
-      perkImage: V,
-      canReveal: ei,
-      dismissibleContentType: n.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
+      title: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE,
+      subtitle: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_SUBTITLE,
+      description: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_SUB,
+      descriptionCta: L.default.Messages.VISIT_THE_SHOP_CTA,
+      onCtaClick: eE,
+      pillText: L.default.Messages.EARLY_ACCESS,
+      perkImage: Y,
+      canReveal: er,
+      dismissibleContentType: l.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
     } : {
       name: "profileEffects",
-      title: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE,
-      subtitle: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_SUBTITLE,
-      description: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_NON_SUB,
-      pillText: h.default.Messages.EARLY_ACCESS,
-      perkImage: V,
-      canReveal: ei,
-      dismissibleContentType: n.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
+      title: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE,
+      subtitle: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_SUBTITLE,
+      description: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_NON_SUB,
+      pillText: L.default.Messages.EARLY_ACCESS,
+      perkImage: Y,
+      canReveal: er,
+      dismissibleContentType: l.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
     },
     profiles: {
       name: "profiles",
-      title: h.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_TITLE,
-      subtitle: h.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_SUBTITLE,
-      description: h.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_DESCRIPTION,
-      descriptionCta: h.default.Messages.TAKE_ME_THERE,
-      onCtaClick: en,
-      perkImage: b
+      title: L.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_TITLE,
+      subtitle: L.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_SUBTITLE,
+      description: L.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_DESCRIPTION,
+      descriptionCta: L.default.Messages.TAKE_ME_THERE,
+      onCtaClick: ec,
+      perkImage: U
     },
-    remixing: es ? {
+    remixing: ea ? {
       name: "remixing",
-      title: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_TITLE,
-      subtitle: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_SUBTITLE,
-      description: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_DESCRIPTION_SUB,
-      perkImage: Y,
-      pillText: h.default.Messages.EARLY_ACCESS
+      title: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_TITLE,
+      subtitle: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_SUBTITLE,
+      description: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_DESCRIPTION_SUB,
+      perkImage: z,
+      pillText: L.default.Messages.EARLY_ACCESS
     } : {
       name: "remixing",
-      title: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_TITLE,
-      subtitle: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_SUBTITLE,
-      description: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_DESCRIPTION_NON_SUB,
-      perkImage: Y,
-      pillText: h.default.Messages.EARLY_ACCESS
+      title: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_TITLE,
+      subtitle: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_SUBTITLE,
+      description: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_DESCRIPTION_NON_SUB,
+      perkImage: z,
+      pillText: L.default.Messages.EARLY_ACCESS
     },
     serverBoosts: {
       name: "serverBoosts",
-      title: h.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_BOOSTS_TITLE,
-      subtitle: h.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_BOOSTS_SUBTITLE,
-      description: h.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_BOOSTS_DESCRIPTION,
-      descriptionCta: h.default.Messages.TAKE_ME_THERE,
+      title: L.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_BOOSTS_TITLE,
+      subtitle: L.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_BOOSTS_SUBTITLE,
+      description: L.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_BOOSTS_DESCRIPTION,
+      descriptionCta: L.default.Messages.TAKE_ME_THERE,
       onCtaClick: () => {
-        o.default.open(P.UserSettingsSections.GUILD_BOOSTING, null, {
+        o.default.open(M.UserSettingsSections.GUILD_BOOSTING, null, {
           openWithoutBackstack: !0,
           analyticsLocations: e
         })
       },
-      perkImage: U,
+      perkImage: y,
       hideOnNarrowScreen: !0
     },
-    specialMemberPricing: es ? {
+    specialMemberPricing: ea ? {
       name: "specialMemberPricing",
-      title: h.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,
-      subtitle: h.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE_V2,
-      description: h.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
-      descriptionCta: h.default.Messages.VISIT_THE_SHOP_CTA,
-      onCtaClick: eu,
-      perkImage: Z
-    } : {
-      name: "specialMemberPricing",
-      title: h.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,
-      subtitle: h.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE_V2,
-      description: h.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
-      isPremiumGetCta: !0,
-      perkImage: Z
-    },
-    specialMemberPricingSeeAllVariant: es ? {
-      name: "specialMemberPricingSeeAllVariant",
-      title: h.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,
-      subtitle: h.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE_V2,
-      description: h.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
-      descriptionCta: h.default.Messages.VISIT_THE_SHOP_CTA,
-      onCtaClick: eu,
+      title: L.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,
+      subtitle: L.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE_V2,
+      description: L.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
+      descriptionCta: L.default.Messages.VISIT_THE_SHOP_CTA,
+      onCtaClick: eE,
       perkImage: X
     } : {
-      name: "specialMemberPricingSeeAllVariant",
-      title: h.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,
-      subtitle: h.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE_V2,
-      description: h.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
+      name: "specialMemberPricing",
+      title: L.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,
+      subtitle: L.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE_V2,
+      description: L.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
       isPremiumGetCta: !0,
       perkImage: X
     },
-    specialShopPerks: es ? {
+    specialMemberPricingSeeAllVariant: ea ? {
+      name: "specialMemberPricingSeeAllVariant",
+      title: L.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,
+      subtitle: L.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE_V2,
+      description: L.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
+      descriptionCta: L.default.Messages.VISIT_THE_SHOP_CTA,
+      onCtaClick: eE,
+      perkImage: Q
+    } : {
+      name: "specialMemberPricingSeeAllVariant",
+      title: L.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,
+      subtitle: L.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE_V2,
+      description: L.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
+      isPremiumGetCta: !0,
+      perkImage: Q
+    },
+    specialShopPerks: ea ? {
       name: "specialShopPerks",
-      title: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_TITLE,
-      subtitle: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_SUBTITLE,
-      description: h.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
-      descriptionCta: h.default.Messages.VISIT_THE_SHOP_CTA,
-      onCtaClick: eu,
-      perkImage: Z
+      title: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_TITLE,
+      subtitle: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_SUBTITLE,
+      description: L.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
+      descriptionCta: L.default.Messages.VISIT_THE_SHOP_CTA,
+      onCtaClick: eE,
+      perkImage: X
     } : {
       name: "specialShopPerks",
-      title: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_TITLE,
-      subtitle: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_SUBTITLE,
-      description: h.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
-      descriptionCta: h.default.Messages.VISIT_THE_SHOP_CTA,
-      onCtaClick: eu,
-      perkImage: Z
+      title: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_TITLE,
+      subtitle: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_SUBTITLE,
+      description: L.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
+      descriptionCta: L.default.Messages.VISIT_THE_SHOP_CTA,
+      onCtaClick: eE,
+      perkImage: X
     },
-    unlimitedSuperReactions: es ? {
+    unlimitedSuperReactions: ea ? {
       name: "unlimitedSuperReactions",
-      title: h.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_TITLE,
-      subtitle: h.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_SUBTITLE,
-      description: h.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_DESCRIPTION_SUB,
-      perkImage: $,
+      title: L.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_TITLE,
+      subtitle: L.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_SUBTITLE,
+      description: L.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_DESCRIPTION_SUB,
+      perkImage: ee,
       hideOnNarrowScreen: !0
     } : {
       name: "unlimitedSuperReactions",
-      title: h.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_TITLE,
-      subtitle: h.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_SUBTITLE,
-      description: h.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_DESCRIPTION_NON_SUB,
+      title: L.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_TITLE,
+      subtitle: L.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_SUBTITLE,
+      description: L.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_DESCRIPTION_NON_SUB,
       isPremiumGetCta: !0,
-      perkImage: $,
+      perkImage: ee,
       hideOnNarrowScreen: !0
     },
     superReactions: {
       name: "superReactions",
-      title: h.default.Messages.NITRO_HOME_SUPER_REACTIONS,
-      subtitle: h.default.Messages.NITRO_HOME_SUPER_REACTIONS_DESCRIPTION,
-      description: h.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO,
-      perkImage: q
+      title: L.default.Messages.NITRO_HOME_SUPER_REACTIONS,
+      subtitle: L.default.Messages.NITRO_HOME_SUPER_REACTIONS_DESCRIPTION,
+      description: L.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO,
+      perkImage: $
     },
     upcomingDropUntimed: {
       name: "upcomingDropUntimed",
-      title: h.default.Messages.NEW_DROP,
-      pillText: h.default.Messages.COMING_SOON,
-      backgroundImage: K
+      title: L.default.Messages.NEW_DROP,
+      pillText: L.default.Messages.COMING_SOON,
+      backgroundImage: V
     },
     badge: {
       name: "badge",
-      title: h.default.Messages.NITRO_HOME_SUBSCRIBER_BADGE,
-      subtitle: h.default.Messages.NITRO_HOME_GET_THIS_SUBSCRIBER_BADGE,
-      perkImage: L,
-      description: h.default.Messages.NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS
+      title: L.default.Messages.NITRO_HOME_SUBSCRIBER_BADGE,
+      subtitle: L.default.Messages.NITRO_HOME_GET_THIS_SUBSCRIBER_BADGE,
+      perkImage: x,
+      description: L.default.Messages.NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS
     },
     customAppIcons: {
       name: "customAppIcons",
-      title: h.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE,
-      subtitle: h.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION,
-      perkImage: G,
-      description: h.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO,
-      descriptionCta: h.default.Messages.TAKE_ME_THERE,
+      title: L.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE,
+      subtitle: L.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION,
+      perkImage: k,
+      description: L.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO,
+      descriptionCta: L.default.Messages.TAKE_ME_THERE,
       onCtaClick: () => {
-        o.default.open(P.UserSettingsSections.APPEARANCE, null, {
-          scrollPosition: M.AppearanceScrollPositions.CUSTOM_APP_ICONS
+        o.default.open(M.UserSettingsSections.APPEARANCE, null, {
+          scrollPosition: h.AppearanceScrollPositions.CUSTOM_APP_ICONS
         })
       }
     },
     moreEmojiPower: {
       name: "moreEmojiPower",
-      title: h.default.Messages.PREMIUM_MARKETING_FEATURE_EMOJI_TITLE,
-      subtitle: h.default.Messages.PREMIUM_MARKETING_EMOJI_PERK_TITLE,
-      perkImage: F,
-      description: h.default.Messages.NITRO_HOME_CARD_CHOOSE_CUSTOM_EMOJI
+      title: L.default.Messages.PREMIUM_MARKETING_FEATURE_EMOJI_TITLE,
+      subtitle: L.default.Messages.PREMIUM_MARKETING_EMOJI_PERK_TITLE,
+      perkImage: w,
+      description: L.default.Messages.NITRO_HOME_CARD_CHOOSE_CUSTOM_EMOJI
     },
     customSoundsEverywhere: {
       name: "customSoundsEverywhere",
-      title: h.default.Messages.NITRO_HOME_CARD_CUSTOM_SOUNDS_EVERYWHERE,
-      subtitle: h.default.Messages.NITRO_HOME_CARD_USE_CUSTOM_SOUNDS,
-      perkImage: (0, g.getThemedImage)(t, x, v),
-      description: h.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_ONLY_NITRO
+      title: L.default.Messages.NITRO_HOME_CARD_CUSTOM_SOUNDS_EVERYWHERE,
+      subtitle: L.default.Messages.NITRO_HOME_CARD_USE_CUSTOM_SOUNDS,
+      perkImage: (0, O.getThemedImage)(t, v, j),
+      description: L.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_ONLY_NITRO
     },
     specialStickerAccess: {
       name: "specialStickerAccess",
-      title: h.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
-      subtitle: h.default.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
-      perkImage: (0, g.getThemedImage)(t, j, Q),
-      description: h.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO
+      title: L.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
+      subtitle: L.default.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
+      perkImage: (0, O.getThemedImage)(t, D, J),
+      description: L.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO
     },
     largeUploads: {
       name: "largeUploads",
-      title: h.default.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_TITLE.format({
+      title: L.default.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_TITLE.format({
         premiumMaxSize: s
       }),
-      subtitle: h.default.Messages.NITRO_HOME_UPLOAD_ALL_YOU_WANT,
-      perkImage: ee,
-      description: h.default.Messages.NITRO_HOME_CARD_UPLOAD_POWER
+      subtitle: L.default.Messages.NITRO_HOME_UPLOAD_ALL_YOU_WANT,
+      perkImage: et,
+      description: L.default.Messages.NITRO_HOME_CARD_UPLOAD_POWER
     },
     hdVideo: {
       name: "hdVideo",
-      title: h.default.Messages.PREMIUM_MARKETING_FEATURE_PREMIUM_GO_LIVE_TITLE,
-      subtitle: h.default.Messages.PREMIUM_MARKETING_STREAMING_SMALL_PERK_DESCRIPTION,
-      perkImage: J,
-      description: h.default.Messages.NITRO_HOME_STREAM_UP_TO_4K
+      title: L.default.Messages.PREMIUM_MARKETING_FEATURE_PREMIUM_GO_LIVE_TITLE,
+      subtitle: L.default.Messages.PREMIUM_MARKETING_STREAMING_SMALL_PERK_DESCRIPTION,
+      perkImage: q,
+      description: L.default.Messages.NITRO_HOME_STREAM_UP_TO_4K
     }
   };
-  if (null != el) {
+  if (null != ed) {
     let {
       title: t,
       subtitle: s,
       description: a,
       pillText: i,
-      ctaDescription: l,
-      dismissibleContentType: n
-    } = el;
-    ed.freeBoost = {
+      ctaDescription: n,
+      dismissibleContentType: l
+    } = ed, u = (0, r.jsx)(N.default, {
+      showAnimations: !0,
+      percentage: eo,
+      initialPercentage: el
+    });
+    ef.freeBoost = {
       name: "freeBoost",
       title: t,
       subtitle: s,
       description: a,
-      perkComponent: (0, r.jsx)(A.default, {}),
-      descriptionCta: l,
+      perkComponent: u,
+      descriptionCta: n,
       onCtaClick: () => {
-        o.default.open(P.UserSettingsSections.GUILD_BOOSTING, null, {
+        o.default.open(M.UserSettingsSections.GUILD_BOOSTING, null, {
           analyticsLocations: e
         })
       },
-      cardVariant: N.CardVariants.REWARD,
+      cardVariant: g.CardVariants.REWARD,
       pillText: i,
-      dismissibleContentType: n
+      dismissibleContentType: l
     }
   }
-  return (0, C.default)("usePerksDiscoverabilityCard") === C.CollectiblesShopMarketingVariants.SHY && Date.now() < et.getTime() && (ed.shyProject = {
+  return (0, f.default)("usePerksDiscoverabilityCard") === f.CollectiblesShopMarketingVariants.SHY && Date.now() < es.getTime() && (ef.shyProject = {
     name: "shyProject",
-    title: h.default.Messages.NITRO_HOME_SHY_PROJECT_TITLE,
-    subtitle: h.default.Messages.NITRO_HOME_SHY_PROJECT_SUBTITLE,
-    description: es ? h.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB : h.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
-    descriptionCta: h.default.Messages.VISIT_THE_SHOP_CTA,
-    onCtaClick: es ? eu : void 0,
-    perkImage: z,
-    isPremiumGetCta: !es
-  }), ed
+    title: L.default.Messages.NITRO_HOME_SHY_PROJECT_TITLE,
+    subtitle: L.default.Messages.NITRO_HOME_SHY_PROJECT_SUBTITLE,
+    description: ea ? L.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB : L.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
+    descriptionCta: L.default.Messages.VISIT_THE_SHOP_CTA,
+    onCtaClick: ea ? eE : void 0,
+    perkImage: Z,
+    isPremiumGetCta: !ea
+  }), ef
 }
