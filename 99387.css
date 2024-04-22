@@ -23639,6 +23639,7 @@ input[type=checkbox]:focus-visible+.label__8e100 {
 .statusBubble__1a4c3 {
     position: relative;
     background-color: var(--bg-surface-raised);
+    box-shadow: var(--shadow-low);
     word-wrap: break-word;
     max-width: 220px;
     -webkit-line-clamp: 3;
@@ -23683,7 +23684,7 @@ input[type=checkbox]:focus-visible+.label__8e100 {
 .statusBubbleOutline__07846 {
     position: relative;
     background-color: var(--bg-surface-raised);
-    border: 1px solid var(--border-faint);
+    box-shadow: var(--shadow-low);
     width: -moz-fit-content;
     width: fit-content;
     max-width: 220px
@@ -23696,10 +23697,10 @@ input[type=checkbox]:focus-visible+.label__8e100 {
     left: 10px;
     display: block;
     background-color: var(--bg-surface-raised);
+    box-shadow: var(--shadow-low);
     border-radius: 50%;
     width: 20px;
-    height: 20px;
-    border: 1px solid var(--border-faint)
+    height: 20px
 }
 
 .statusBubbleOutline__07846:after {
@@ -23709,10 +23710,17 @@ input[type=checkbox]:focus-visible+.label__8e100 {
     left: 1px;
     display: block;
     background-color: var(--bg-surface-raised);
+    box-shadow: var(--shadow-low);
     border-radius: 50%;
     width: 11px;
-    height: 11px;
-    border: 1px solid var(--border-faint)
+    height: 11px
+}
+
+.custom-profile-theme .statusBubble__1a4c3,
+.custom-profile-theme .statusBubbleOutline__07846,
+.custom-profile-theme .statusBubbleOutline__07846:before,
+.custom-profile-theme .statusBubbleOutline__07846:after {
+    background-color: var(--bg-surface-overlay)
 }
 
 .statusText__32d26 {
