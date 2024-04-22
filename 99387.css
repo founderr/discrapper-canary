@@ -2363,6 +2363,18 @@
     margin-left: 50px
 }
 
+.labelContainer_b37d4d {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between
+}
+
+.playButton_a7f035 {
+    width: 20px;
+    height: 20px
+}
+
 .widthForAddPack__6a170 {
     width: 600px
 }
@@ -120567,8 +120579,7 @@ html .invoiceCancelRow__6ff3e {
 }
 
 .searchbar_f3ff3c {
-    margin: 0 16px 16px;
-    height: 32px
+    margin: 0 16px 16px
 }
 
 .list_d24b0a {
