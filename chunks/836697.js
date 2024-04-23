@@ -30,11 +30,13 @@ function g() {
     for (let e of E) t.children.push((0, c.createGuildNode)(e, t.id));
     return t
   }, [E, e]);
-  if (a.useEffect(() => {
-      e && !g && i.default.fetchRequestToJoinGuilds()
-    }, [e, g]), 0 === E.length) return null;
+  a.useEffect(() => {
+    e && !g && i.default.fetchRequestToJoinGuilds()
+  }, [e, g]);
   let S = null != n && E.includes(n);
-  return (0, l.jsx)(h.default, {
+  return (a.useEffect(() => {
+    !e && S && t(!0)
+  }, [e, S]), 0 === E.length) ? null : (0, l.jsx)(h.default, {
     folderNode: _,
     expanded: e,
     useCircleMask: !e && !S,
