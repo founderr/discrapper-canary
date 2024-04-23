@@ -7557,7 +7557,8 @@
 }
 
 .annualDiscountString__242a5 {
-    max-width: 180px
+    display: flex;
+    flex-direction: column
 }
 
 .container__19ab8 {

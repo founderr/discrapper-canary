@@ -1,55 +1,55 @@
 "use strict";
 n.r(t), n.d(t, {
   useGetAnnualDiscountInvoicePreview: function() {
-    return o
+    return u
   }
 }), n("47120");
 var i = n("442837"),
-  s = n("509545"),
-  l = n("74538"),
-  r = n("374649"),
-  a = n("104494"),
-  u = n("474936");
+  r = n("509545"),
+  s = n("74538"),
+  a = n("374649"),
+  o = n("104494"),
+  l = n("474936");
 
-function o(e) {
+function u(e) {
   var t, n;
   let {
-    priceOptions: o,
-    preventFetch: c,
-    selectedSkuId: d,
-    isGift: m,
-    planGroup: f,
-    activeSubscription: p
-  } = e, I = (0, a.usePremiumAnnualDiscountOffer)(), _ = (0, i.useStateFromStores)([s.default], () => s.default.get(u.SubscriptionPlans.PREMIUM_YEAR_TIER_2)), S = null == I ? void 0 : null === (t = I.discount) || void 0 === t ? void 0 : t.plan_ids.some(e => u.SubscriptionPlanInfo[e].skuId === d), P = null != p && null != _ ? (0, l.getItemsWithUpsertedPlanIdForGroup)(p, _.id, 1, new Set(f)) : null, E = !m && null != I && null != d && S, [T, v] = (0, r.useSubscriptionInvoicePreview)({
-    subscriptionId: null !== (n = null == p ? void 0 : p.id) && void 0 !== n ? n : "null",
-    items: P,
+    priceOptions: u,
+    preventFetch: d,
+    selectedSkuId: _,
+    isGift: c = !1,
+    planGroup: E,
+    activeSubscription: I
+  } = e, T = (0, o.usePremiumAnnualDiscountOffer)(), f = (0, i.useStateFromStores)([r.default], () => r.default.get(l.SubscriptionPlans.PREMIUM_YEAR_TIER_2)), S = null == T ? void 0 : null === (t = T.discount) || void 0 === t ? void 0 : t.plan_ids.some(e => l.SubscriptionPlanInfo[e].skuId === _), h = null != I && null != f ? (0, s.getItemsWithUpsertedPlanIdForGroup)(I, f.id, 1, new Set(E)) : null, A = !c && null != T && null != _ && S, [m, N] = (0, a.useSubscriptionInvoicePreview)({
+    subscriptionId: null !== (n = null == I ? void 0 : I.id) && void 0 !== n ? n : "null",
+    items: h,
     renewal: !1,
     applyEntitlements: !0,
-    paymentSourceId: o.paymentSourceId,
-    currency: o.currency,
-    preventFetch: !E || null == p || c
-  }), [N, h] = (0, r.useSubscriptionInvoicePreview)({
+    paymentSourceId: u.paymentSourceId,
+    currency: u.currency,
+    preventFetch: !A || null == I || d
+  }), [p, O] = (0, a.useSubscriptionInvoicePreview)({
     items: [{
-      planId: u.SubscriptionPlans.PREMIUM_YEAR_TIER_2,
+      planId: l.SubscriptionPlans.PREMIUM_YEAR_TIER_2,
       quantity: 1
     }],
     renewal: !1,
     applyEntitlements: !0,
-    paymentSourceId: o.paymentSourceId,
-    currency: o.currency,
-    preventFetch: !E || null != p || c
+    paymentSourceId: u.paymentSourceId,
+    currency: u.currency,
+    preventFetch: !A || null != I || d
   });
-  return null != T ? {
-    annualInvoicePreview: T,
-    annualInvoicePreviewError: v,
-    isEligibleForAnnualDiscount: E
-  } : null != N ? {
-    annualInvoicePreview: N,
-    annualInvoicePreviewError: h,
-    isEligibleForAnnualDiscount: E
+  return null != m ? {
+    annualInvoicePreview: m,
+    annualInvoicePreviewError: N,
+    isEligibleForAnnualDiscount: A
+  } : null != p ? {
+    annualInvoicePreview: p,
+    annualInvoicePreviewError: O,
+    isEligibleForAnnualDiscount: A
   } : {
     annualInvoicePreview: null,
     annualInvoicePreviewError: null,
-    isEligibleForAnnualDiscount: E
+    isEligibleForAnnualDiscount: A
   }
 }
