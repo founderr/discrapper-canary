@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   PremiumSubscriptionPauseModalConfirm: function() {
-    return P
+    return h
   },
   PremiumSubscriptionPauseModalSelect: function() {
     return C
@@ -55,8 +55,33 @@ function C(e) {
       value: t
     } = e;
     l(t)
-  }, [l]), p = d.status === _.SubscriptionStatusTypes.PAUSED ? I.default.Messages.PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE : I.default.Messages.PREMIUM_PAUSE_SELECT_SUBTITLE;
-  return (0, a.jsxs)(a.Fragment, {
+  }, [l]), p = d.status === _.SubscriptionStatusTypes.PAUSED ? I.default.Messages.PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE : I.default.Messages.PREMIUM_PAUSE_SELECT_SUBTITLE, N = function(e) {
+    let t = e.status === _.SubscriptionStatusTypes.PAUSED ? I.default.Messages.PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE : I.default.Messages.PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE,
+      {
+        durations: s,
+        currentDaysPaused: a
+      } = (0, E.getSubscriptionPauseDurations)(e),
+      n = [];
+    for (let e of s) {
+      let s = r.PauseDuration[e];
+      n.push({
+        name: t.format({
+          days: s - a
+        }),
+        value: s,
+        radioItemIconClassName: S.radioOption
+      })
+    }
+    return n.sort((e, t) => e.value - t.value), n.push({
+      name: I.default.Messages.PREMIUM_PAUSE_DURATION_CANCEL,
+      value: 0,
+      radioBarClassName: S.cancelText,
+      radioItemIconClassName: S.cancelText
+    }), n
+  }(d);
+  return n.useEffect(() => {
+    !(N.length < 1) && l(N[0].value)
+  }, []), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(f.default, {
       premiumType: t,
       onClose: s
@@ -77,30 +102,7 @@ function C(e) {
     }), (0, a.jsx)(o.ModalContent, {
       className: S.body,
       children: (0, a.jsx)(o.RadioGroup, {
-        options: function(e) {
-          let t = e.status === _.SubscriptionStatusTypes.PAUSED ? I.default.Messages.PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE : I.default.Messages.PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE,
-            {
-              durations: s,
-              currentDaysPaused: a
-            } = (0, E.getSubscriptionPauseDurations)(e),
-            n = [];
-          for (let e of s) {
-            let s = r.PauseDuration[e];
-            n.push({
-              name: t.format({
-                days: s - a
-              }),
-              value: s,
-              radioItemIconClassName: S.radioOption
-            })
-          }
-          return n.sort((e, t) => e.value - t.value), n.push({
-            name: I.default.Messages.PREMIUM_PAUSE_DURATION_CANCEL,
-            value: 0,
-            radioBarClassName: S.cancelText,
-            radioItemIconClassName: S.cancelText
-          }), n
-        }(d),
+        options: N,
         onChange: c,
         value: i
       })
@@ -111,7 +113,7 @@ function C(e) {
   })
 }
 
-function P(e) {
+function h(e) {
   let {
     premiumSubscription: t,
     premiumType: s,
@@ -119,8 +121,8 @@ function P(e) {
     pauseDuration: r,
     analyticsLocation: d
   } = e, [E, C] = n.useState(!1), {
-    analyticsLocations: P
-  } = (0, p.default)(), [h, T] = n.useState(!1), A = (0, c.default)(), R = null, y = null, M = [_.SubscriptionStatusTypes.PAST_DUE, _.SubscriptionStatusTypes.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd, L = l()(M).add(r, "days").toDate();
+    analyticsLocations: h
+  } = (0, p.default)(), [P, T] = n.useState(!1), A = (0, c.default)(), R = null, y = null, M = [_.SubscriptionStatusTypes.PAST_DUE, _.SubscriptionStatusTypes.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd, L = l()(M).add(r, "days").toDate();
   switch (t.status) {
     case _.SubscriptionStatusTypes.PAST_DUE:
       y = I.default.Messages.PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY.format({
@@ -169,7 +171,7 @@ function P(e) {
         className: S.whatYouLoseButtonContainer,
         children: [(0, a.jsx)(o.Button, {
           color: o.Button.Colors.RED,
-          disabled: h || null == r,
+          disabled: P || null == r,
           onClick: async () => {
             await N({
               premiumSubscription: t,
@@ -177,7 +179,7 @@ function P(e) {
               setIsCancelling: T,
               setHasError: C,
               onClose: i,
-              analyticsLocations: P,
+              analyticsLocations: h,
               analyticsLocation: d
             })
           },

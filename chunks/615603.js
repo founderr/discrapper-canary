@@ -102,10 +102,10 @@ t.default = function(e) {
   let t, l;
   let {
     guildBoostSlots: g
-  } = e, h = (0, r.useStateFromStores)([T.default], () => T.default.getPremiumTypeSubscription()), R = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), M = (0, r.useStateFromStores)([E.default], () => E.default.getCurrentUser()), v = (0, S.useFreeBoostTenureRewardEntitlement)(), {
-    appliedGuildBoostSlots: D,
-    unappliedGuildBoostSlots: L,
-    numActiveGuildBoostSlots: P
+  } = e, h = (0, r.useStateFromStores)([T.default], () => T.default.getPremiumTypeSubscription()), R = (null == h ? void 0 : h.isPausedOrPausePending) === !0, M = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), v = (0, r.useStateFromStores)([E.default], () => E.default.getCurrentUser()), D = (0, S.useFreeBoostTenureRewardEntitlement)(), {
+    appliedGuildBoostSlots: L,
+    unappliedGuildBoostSlots: P,
+    numActiveGuildBoostSlots: j
   } = n.useMemo(() => {
     let e = [],
       t = [],
@@ -117,22 +117,22 @@ t.default = function(e) {
       unappliedGuildBoostSlots: t,
       numActiveGuildBoostSlots: s
     }
-  }, [g]), j = null != h ? (0, u.getNumIncludedAndTenureRewardPremiumGuildSubscriptionSlots)(h, v) : 0, b = Math.max(0, j - D.length), U = P > j, y = j === g.length, B = y ? b : 1, F = n.useMemo(() => {
+  }, [g]), b = null != h ? (0, u.getNumIncludedAndTenureRewardPremiumGuildSubscriptionSlots)(h, D) : 0, U = Math.max(0, b - L.length), y = j > b, B = b === g.length, F = B ? U : 1, G = n.useMemo(() => {
     let e = [];
-    for (let t = 0; t < B; t++) e.push((0, a.jsx)(_.default, {
+    for (let t = 0; t < F; t++) e.push((0, a.jsx)(_.default, {
       className: C.headerBoostGem,
-      useReducedMotion: R
+      useReducedMotion: M
     }, t));
     return e
-  }, [B, R]), G = null != v, k = n.useMemo(() => L.find(e => e.isAvailable()), [L]);
-  if (0 === L.length) return null;
-  let w = L.length;
-  return t = y ? 1 === w && G ? p.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE : p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_INCLUDED_WITH_SUBSCRIPTION.format({
-    numUnappliedGuildBoostSlots: w
+  }, [F, M]), k = null != D, w = n.useMemo(() => P.find(e => e.isAvailable()), [P]);
+  if (0 === P.length) return null;
+  let H = P.length;
+  return t = B ? 1 === H && k ? p.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE : p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_INCLUDED_WITH_SUBSCRIPTION.format({
+    numUnappliedGuildBoostSlots: H
   }) : p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_V2.format({
-    numUnappliedGuildBoostSlots: w
-  }), f.default.isPremium(M) ? l = y && 1 === w && G ? v.skuId === N.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH ? p.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT : p.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT : p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION.format({
-    numUnappliedGuildBoostSlots: w,
+    numUnappliedGuildBoostSlots: H
+  }), f.default.isPremium(v) ? l = B && 1 === H && k ? D.skuId === N.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH ? p.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT : p.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT : p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION.format({
+    numUnappliedGuildBoostSlots: H,
     learnMoreHook: (e, t) => (0, a.jsx)(o.Clickable, {
       className: C.headerLearnMoreLink,
       tag: "span",
@@ -142,10 +142,10 @@ t.default = function(e) {
       children: e
     }, t)
   }) : p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING.format({
-    numUnappliedGuildBoostSlots: w
+    numUnappliedGuildBoostSlots: H
   }), (0, a.jsxs)("div", {
     className: C.wrapper,
-    children: [G && (0, a.jsxs)("div", {
+    children: [k && (0, a.jsxs)("div", {
       className: C.specialHeader,
       children: [(0, a.jsx)(o.Text, {
         variant: "text-xs/semibold",
@@ -158,8 +158,8 @@ t.default = function(e) {
       })]
     }), (0, a.jsxs)("div", {
       className: i()(C.content, {
-        [C.headerWithBoost]: G,
-        [C.headerWithoutSpecialHeader]: !G
+        [C.headerWithBoost]: k,
+        [C.headerWithoutSpecialHeader]: !k
       }),
       children: [(0, a.jsxs)("div", {
         className: C.header,
@@ -167,7 +167,7 @@ t.default = function(e) {
           className: C.headerContentPrimary,
           children: [(0, a.jsx)("div", {
             className: C.headerBoostGems,
-            children: F
+            children: G
           }), (0, a.jsxs)("div", {
             className: C.__invalid_headerCopy,
             children: [(0, a.jsx)(o.Heading, {
@@ -184,14 +184,14 @@ t.default = function(e) {
         }), (0, a.jsx)("div", {
           className: C.headerContentSecondary,
           children: (0, a.jsx)(o.Tooltip, {
-            shouldShow: null == k,
-            text: p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_NO_AVAILABLE_GUILD_BOOST_SLOTS,
+            shouldShow: null == w || R,
+            text: R ? p.default.Messages.GUILD_BOOSTING_DISABLED_FOR_PAUSED_SUBSCRIPTION : p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_NO_AVAILABLE_GUILD_BOOST_SLOTS,
             children: e => (0, a.jsx)(o.Button, {
               ...e,
-              disabled: null == k,
-              onClick: null != k ? () => {
+              disabled: null == w || R,
+              onClick: null != w ? () => {
                 var e;
-                return e = k, void(0, o.openModalLazy)(async () => {
+                return e = w, void(0, o.openModalLazy)(async () => {
                   let {
                     default: t
                   } = await Promise.all([s.e("49237"), s.e("99387"), s.e("62511"), s.e("8016"), s.e("22646"), s.e("68451")]).then(s.bind(s, "760558"));
@@ -206,15 +206,15 @@ t.default = function(e) {
             })
           })
         })]
-      }), !y && (0, a.jsx)("ul", {
+      }), !B && (0, a.jsx)("ul", {
         className: C.unappliedBoostSlots,
-        children: L.map(e => (0, a.jsx)(A, {
+        children: P.map(e => (0, a.jsx)(A, {
           guildBoostSlot: e,
-          isCancellable: U,
+          isCancellable: y,
           onCancel: O,
           onUncancel: x,
           premiumSubscription: h,
-          useReducedMotion: R
+          useReducedMotion: M
         }, e.id))
       })]
     })]
