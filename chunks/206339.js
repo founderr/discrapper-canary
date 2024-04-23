@@ -16,8 +16,8 @@ var a = s("735250"),
   f = s("730417"),
   _ = s("524347"),
   g = s("454585"),
-  I = s("178100"),
-  h = s("443852"),
+  h = s("178100"),
+  I = s("443852"),
   N = s("725727"),
   p = s("454982"),
   C = s("580130"),
@@ -40,9 +40,9 @@ function P(e) {
     [c, S] = n.useState(!1),
     E = () => d(e => !e),
     m = (0, T.default)(),
-    f = (0, h.getPromotionImageURL)(s.id, m),
+    f = (0, I.getPromotionImageURL)(s.id, m),
     _ = null != l,
-    N = (0, I.default)(s, _);
+    N = (0, h.default)(s, _);
   _ && o ? t = D.default.Messages.OUTBOUND_PROMOTION_CARD_CLAIMED_EXPANDED_BODY.format({
     endDate: N,
     onClickDetails: E
@@ -136,8 +136,8 @@ t.default = function() {
       await (0, m.fetchDropsUserStatus)()
     })
   }, [g]);
-  let I = O.DropsOptedOut.useSetting(),
-    h = null != T || !g,
+  let h = O.DropsOptedOut.useSetting(),
+    I = null != T || !g,
     {
       promotionsLoaded: p,
       activeOutboundPromotions: j,
@@ -149,9 +149,9 @@ t.default = function() {
   function B() {
     E.default.open(M.UserSettingsSections.PREMIUM)
   }
-  return i && p && h ? (0, a.jsxs)(a.Fragment, {
+  return i && p && I ? (0, a.jsxs)(a.Fragment, {
     children: [g ? (0, a.jsx)(R.default, {
-      dropsOptedOut: I,
+      dropsOptedOut: h,
       dropsStatuses: T
     }) : null, function() {
       var e;

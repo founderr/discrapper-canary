@@ -30,20 +30,20 @@ function g(e) {
     onBioChange: d,
     pendingBio: u,
     placeholder: g,
-    currentBio: I,
-    disabled: h = !1
-  } = e, [N, p] = n.useState(null != u ? u : I), [C, A] = n.useState((0, r.toRichValue)(N)), O = n.useRef(!1);
+    currentBio: h,
+    disabled: I = !1
+  } = e, [N, p] = n.useState(null != u ? u : h), [C, A] = n.useState((0, r.toRichValue)(N)), O = n.useRef(!1);
   return n.useEffect(() => {
     if (void 0 === u) {
-      let e = (0, r.toRichValue)(I);
-      p(I), A(e)
+      let e = (0, r.toRichValue)(h);
+      p(h), A(e)
     }
-  }, [u, I]), (0, a.jsxs)(c.default, {
+  }, [u, h]), (0, a.jsxs)(c.default, {
     title: t,
     titleId: m,
     description: E.default.Messages.USER_SETTINGS_ABOUT_ME_DETAILS,
     errors: s,
-    disabled: h,
+    disabled: I,
     children: [(0, a.jsx)(o.default, {
       "aria-describedby": _,
       "aria-labelledby": m,

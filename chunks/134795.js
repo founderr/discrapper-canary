@@ -27,8 +27,8 @@ function E(e) {
     showPremiumIcon: f = !0,
     isTryItOutFlow: _ = !1,
     forcedDivider: g,
-    withHighlight: I = !1
-  } = e, h = I ? r.default : i.Button;
+    withHighlight: h = !1
+  } = e, I = h ? r.default : i.Button;
   return (0, a.jsx)(d.default, {
     className: T,
     title: c.default.Messages.USER_SETTINGS_PROFILE_BANNER,
@@ -38,9 +38,9 @@ function E(e) {
     forcedDivider: g,
     children: (0, a.jsxs)("div", {
       className: S.buttonsContainer,
-      children: [(0, a.jsx)(h, {
+      children: [(0, a.jsx)(I, {
         className: l()({
-          [S.buttonHighlighted]: I
+          [S.buttonHighlighted]: h
         }),
         size: i.Button.Sizes.SMALL,
         onClick: () => (0, o.handleOpenSelectImageModal)(u.UploadTypes.BANNER, E, _, void 0),

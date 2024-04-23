@@ -45,8 +45,8 @@ t.default = n.memo(function() {
         children: _(t)
       })
     }, [_]),
-    I = n.useCallback(e => (0, u.adoptClanIdentity)(e, !0), []),
-    h = n.useCallback(e => e === s, [s]),
+    h = n.useCallback(e => (0, u.adoptClanIdentity)(e, !0), []),
+    I = n.useCallback(e => e === s, [s]),
     N = n.useCallback(e => e, []),
     p = n.useCallback(() => (0, u.adoptClanIdentity)(null, !0), []);
   return (0, a.jsxs)(r.default, {
@@ -60,9 +60,9 @@ t.default = n.memo(function() {
     }), (0, a.jsx)(i.Select, {
       className: m.select,
       optionClassName: m.selectPopout,
-      isSelected: h,
+      isSelected: I,
       options: d,
-      select: I,
+      select: h,
       renderOptionValue: g,
       renderOptionLabel: _,
       serialize: N,

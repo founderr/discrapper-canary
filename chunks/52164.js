@@ -34,15 +34,15 @@ function _(e) {
   });
   if (null == _) return null;
   let g = s ? f.finePrintWithOverheadSeparator : f.finePrint,
-    I = _.invoiceItems.find(e => {
+    h = _.invoiceItems.find(e => {
       let {
         subscriptionPlanId: t
       } = e;
       return (0, u.isPremiumBaseSubscriptionPlan)(t)
     });
-  if (null == I) return null;
-  let h = I.subscriptionPlanId,
-    N = d.default.get(h);
+  if (null == h) return null;
+  let I = h.subscriptionPlanId,
+    N = d.default.get(I);
   l()(null != N, "Missing plan");
   let p = (0, c.formatPrice)(_.total, _.currency),
     C = "";

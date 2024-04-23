@@ -20,8 +20,8 @@ var a = s("735250"),
   f = s("556296"),
   _ = s("924557"),
   g = s("435064"),
-  I = s("894694"),
-  h = s("779618"),
+  h = s("894694"),
+  I = s("779618"),
   N = s("39604"),
   p = s("442334"),
   C = s("356659"),
@@ -51,7 +51,7 @@ function L() {
     }, {
       autoTrackExposure: !1
     }),
-    y = (0, h.default)(m.default),
+    y = (0, I.default)(m.default),
     {
       showClipsHeaderEntrypoint: B
     } = _.ClipsExperiment.useExperiment({
@@ -60,8 +60,8 @@ function L() {
       autoTrackExposure: !1
     });
   i()(null != b, "Save clip keybind unset");
-  let G = (0, r.useStateFromStores)([E.default], () => E.default.locale),
-    F = n.useMemo(() => [{
+  let F = (0, r.useStateFromStores)([E.default], () => E.default.locale),
+    G = n.useMemo(() => [{
       value: C.ClipsLengthSettings.SECONDS_30,
       label: R.default.Messages.CLIPS_LENGTH_SECONDS.format({
         count: 30
@@ -76,7 +76,7 @@ function L() {
       label: R.default.Messages.CLIPS_LENGTH_MINUTES.format({
         count: 2
       })
-    }], [G]),
+    }], [F]),
     k = n.useMemo(() => [{
       value: O.ApplicationStreamResolutions.RESOLUTION_480,
       label: R.default.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
@@ -100,7 +100,7 @@ function L() {
     }, {
       value: O.ApplicationStreamResolutions.RESOLUTION_SOURCE,
       label: R.default.Messages.SCREENSHARE_SOURCE
-    }], [G]),
+    }], [F]),
     w = n.useMemo(() => [{
       value: O.ApplicationStreamFPS.FPS_15,
       label: R.default.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
@@ -116,7 +116,7 @@ function L() {
       label: R.default.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
         fps: O.ApplicationStreamFPS.FPS_60
       })
-    }], [G]),
+    }], [F]),
     H = n.useCallback(e => {
       d.default.setKeybind({
         ...b,
@@ -134,7 +134,7 @@ function L() {
             scrollPosition: x.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION
           })
         })
-      }), j === I.ClipsHardwareClassification.BELOW_MINIMUM ? (0, a.jsx)(T.default, {
+      }), j === h.ClipsHardwareClassification.BELOW_MINIMUM ? (0, a.jsx)(T.default, {
         look: T.InfoBoxLooks.WARNING,
         className: v.formItem,
         children: R.default.Messages.CLIPS_SETTINGS_UNDER_MIN_SPECS
@@ -190,7 +190,7 @@ function L() {
         title: R.default.Messages.CLIPS_SETTINGS_LENGTH,
         note: R.default.Messages.CLIPS_SETTINGS_LENGTH_HELP,
         value: L,
-        options: F
+        options: G
       }), (0, a.jsx)(p.SelectItem, {
         className: v.formItem,
         select: e => N.updateClipsQuality({

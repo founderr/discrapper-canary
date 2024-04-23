@@ -20,8 +20,8 @@ var a = s("735250"),
   f = s("957730"),
   _ = s("962746"),
   g = s("296810"),
-  I = s("935147"),
-  h = s("350327"),
+  h = s("935147"),
+  I = s("350327"),
   N = s("246946"),
   p = s("25990"),
   C = s("594174"),
@@ -62,12 +62,12 @@ function M() {
     {
       analyticsLocations: B
     } = (0, T.default)(E.default.PROFILE),
-    G = {
+    F = {
       user: e,
       canUsePremiumCustomization: y,
       onUpsellClick: x.default,
       onAvatarChange: u.setPendingAvatar,
-      onBannerChange: h.setPendingBanner,
+      onBannerChange: I.setPendingBanner,
       pendingBanner: l,
       pendingBio: U,
       pendingPronouns: v,
@@ -77,24 +77,24 @@ function M() {
       pendingProfileEffectId: b
     };
   n.useEffect(() => () => o.default.wait(u.resetAllPending), []);
-  let F = "UserSettingsProfileCustomization";
+  let G = "UserSettingsProfileCustomization";
   return ((0, S.useTriggerDebuggingAA)({
-    location: F + " auto on",
+    location: G + " auto on",
     autoTrackExposure: !0
   }), (0, S.useTriggerDebuggingAA)({
-    location: F + " auto off",
+    location: G + " auto off",
     autoTrackExposure: !1
   }), t) ? (0, a.jsx)(c.default, {}) : (0, a.jsx)(T.AnalyticsLocationProvider, {
     value: B,
     children: (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(m.default, {}), (0, a.jsx)(g.default, {
         profilePreview: (0, a.jsx)(_.default, {
-          ...G,
+          ...F,
           pendingThemeColors: j,
           pendingAccentColor: L
         }),
         children: (0, a.jsx)(R.default, {})
-      }), !A.default.canUsePremiumProfileCustomization(e) && (0, a.jsx)(I.default, {
+      }), !A.default.canUsePremiumProfileCustomization(e) && (0, a.jsx)(h.default, {
         user: e
       })]
     })

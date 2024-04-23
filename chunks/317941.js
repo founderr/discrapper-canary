@@ -16,8 +16,8 @@ var a = s("735250"),
   f = s("509545"),
   _ = s("55563"),
   g = s("15887"),
-  I = s("581874"),
-  h = s("285952"),
+  h = s("581874"),
+  I = s("285952"),
   N = s("366695"),
   p = s("259580"),
   C = s("572004"),
@@ -41,9 +41,9 @@ class D extends n.PureComponent {
   }
   get copyButtonText() {
     switch (this.state.copyMode) {
-      case I.CopyInputModes.SUCCESS:
+      case h.CopyInputModes.SUCCESS:
         return R.default.Messages.BILLING_GIFT_COPIED;
-      case I.CopyInputModes.ERROR:
+      case h.CopyInputModes.ERROR:
         return R.default.Messages.FAILED;
       default:
         return R.default.Messages.COPY
@@ -59,10 +59,10 @@ class D extends n.PureComponent {
     } = this.props, {
       copyMode: s
     } = this.state;
-    return (0, a.jsxs)(h.default, {
-      direction: h.default.Direction.VERTICAL,
+    return (0, a.jsxs)(I.default, {
+      direction: I.default.Direction.VERTICAL,
       className: M.giftCodeRow,
-      children: [(0, a.jsx)(I.default, {
+      children: [(0, a.jsx)(h.default, {
         className: M.codeText,
         value: (0, A.getGiftCodeURL)(t.code),
         text: this.copyButtonText,
@@ -70,8 +70,8 @@ class D extends n.PureComponent {
         supportsCopy: C.SUPPORTS_COPY,
         hideMessage: e ? R.default.Messages.GIFT_INVENTORY_HIDDEN : null,
         onCopy: this.handleCopy,
-        buttonColor: I.default.ButtonColors.BRAND,
-        buttonLook: I.default.ButtonLooks.FILLED
+        buttonColor: h.default.ButtonColors.BRAND,
+        buttonLook: h.default.ButtonLooks.FILLED
       }), (0, a.jsxs)("div", {
         className: M.subTextRow,
         children: [null != t.expiresAt ? (0, a.jsxs)(n.Fragment, {
@@ -88,7 +88,7 @@ class D extends n.PureComponent {
   }
   constructor(...e) {
     super(...e), v(this, "_copyModeTimeout", new o.Timeout), v(this, "state", {
-      copyMode: I.CopyInputModes.DEFAULT
+      copyMode: h.CopyInputModes.DEFAULT
     }), v(this, "handleCopy", e => {
       let {
         giftCode: t,
@@ -97,16 +97,16 @@ class D extends n.PureComponent {
       (0, A.trackGiftCodeCopy)(t, s);
       try {
         (0, C.copy)(e), this.setState({
-          copyMode: I.CopyInputModes.SUCCESS
+          copyMode: h.CopyInputModes.SUCCESS
         })
       } catch (e) {
         this.setState({
-          copyMode: I.CopyInputModes.ERROR
+          copyMode: h.CopyInputModes.ERROR
         })
       }
       this._copyModeTimeout.start(1e3, () => {
         this.setState({
-          copyMode: I.CopyInputModes.DEFAULT
+          copyMode: h.CopyInputModes.DEFAULT
         })
       })
     })
@@ -135,9 +135,9 @@ class L extends n.PureComponent {
     })
   }
   renderGenerateGiftCodeRow() {
-    return (0, a.jsxs)(h.default, {
-      justify: h.default.Justify.BETWEEN,
-      align: h.default.Align.CENTER,
+    return (0, a.jsxs)(I.default, {
+      justify: I.default.Justify.BETWEEN,
+      align: I.default.Align.CENTER,
       className: M.generateCodeRow,
       children: [(0, a.jsx)("div", {
         className: M.codeText,
@@ -180,8 +180,8 @@ class L extends n.PureComponent {
           splashArtURL: t.getSplashURL(512),
           children: (0, a.jsxs)("div", {
             className: M.cardHeader,
-            children: [(0, a.jsxs)(h.default, {
-              align: h.default.Align.CENTER,
+            children: [(0, a.jsxs)(I.default, {
+              align: I.default.Align.CENTER,
               children: [null != u ? (0, a.jsx)(S.default, {
                 giftStyle: u,
                 className: M.seasonalGiftBox,

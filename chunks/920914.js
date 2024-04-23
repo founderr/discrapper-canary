@@ -16,8 +16,8 @@ var a = s("735250"),
   f = s("468026"),
   _ = s("410030"),
   g = s("726542"),
-  I = s("122021"),
-  h = s("275759"),
+  h = s("122021"),
+  I = s("275759"),
   N = s("231757"),
   p = s("323588"),
   C = s("605236"),
@@ -35,8 +35,8 @@ var a = s("735250"),
   U = s("626135"),
   y = s("63063"),
   B = s("706454"),
-  G = s("349728"),
-  F = s("494620"),
+  F = s("349728"),
+  G = s("494620"),
   k = s("205266"),
   w = s("216153"),
   H = s("981631"),
@@ -117,7 +117,7 @@ function q(e) {
     [Y, z] = n.useState(null),
     [q, Z] = n.useState(!1),
     [X, J] = n.useState([]),
-    $ = (0, I.useLegacyPlatformType)(T.type),
+    $ = (0, h.useLegacyPlatformType)(T.type),
     ee = g.default.get($);
   n.useEffect(() => {
     A(T.friendSync), x(T.visibility), M(T.metadataVisibility), P(T.showActivity)
@@ -135,8 +135,8 @@ function q(e) {
   function es() {
     let e = g.default.get(T.type),
       t = K.default.Messages.DISCONNECT_ACCOUNT_BODY;
-    (0, G.default)(T) && (t = (0, a.jsxs)(a.Fragment, {
-      children: [t, (0, a.jsx)(F.default, {
+    (0, F.default)(T) && (t = (0, a.jsxs)(a.Fragment, {
+      children: [t, (0, a.jsx)(G.default, {
         className: W.infoBox,
         children: K.default.Messages.CONNECTED_ACCOUNT_IS_AUTHORIZED_APP_DISCONNECT_WARNING.format({
           platformName: e.name
@@ -255,7 +255,7 @@ function q(e) {
       var t;
       let s = null !== (t = e.metadata) && void 0 !== t ? t : {},
         n = null,
-        l = (0, h.getCreatedAtDate)(s[V.MetadataFields.CREATED_AT], _);
+        l = (0, I.getCreatedAtDate)(s[V.MetadataFields.CREATED_AT], _);
       switch (e.type) {
         case H.PlatformTypes.REDDIT:
           n = (0, p.generateRedditMetadataItems)(s, W.metadataItem);
@@ -430,7 +430,7 @@ function X() {
       onComplete: e
     })
   }
-  let s = (0, I.usePlatforms)(),
+  let s = (0, h.usePlatforms)(),
     n = (0, c.useRedesignIconContext)().enabled ? 24 : 18;
   return (0, a.jsxs)("div", {
     className: W.connectionsContainer,

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return h
   }
 }), s("47120");
 var a = s("735250"),
@@ -21,13 +21,13 @@ var a = s("735250"),
   _ = s("689938"),
   g = s("238938");
 
-function I(e) {
+function h(e) {
   let {
     onChange: t,
     onClose: s,
     color: l,
-    suggestedColors: I,
-    disabled: h,
+    suggestedColors: h,
+    disabled: I,
     label: N,
     colorPickerMiddle: p,
     colorPickerFooter: C,
@@ -41,7 +41,7 @@ function I(e) {
       ...e,
       value: l,
       onChange: t,
-      suggestedColors: I,
+      suggestedColors: h,
       middle: p,
       footer: C,
       showEyeDropper: A
@@ -55,12 +55,12 @@ function I(e) {
       return (0, a.jsxs)("div", {
         ref: O,
         className: i()(g.colorSwatch, {
-          [g.disabled]: h
+          [g.disabled]: I
         }),
         children: [(0, a.jsx)(u.Clickable, {
           ...s,
-          tabIndex: h ? -1 : 0,
-          onClick: h ? f.NOOP : t,
+          tabIndex: I ? -1 : 0,
+          onClick: I ? f.NOOP : t,
           style: {
             backgroundColor: v,
             borderColor: D

@@ -18,7 +18,7 @@ var n = s("120356"),
   _ = s("689938"),
   g = s("357914");
 
-function I(e) {
+function h(e) {
   let {
     user: t,
     planId: s,
@@ -28,7 +28,7 @@ function I(e) {
   if (null == r || T.default.getInterval(s).intervalType !== f.SubscriptionIntervalTypes.MONTH) return null;
   let S = null != u ? u.skuId : null,
     m = r.skuId === S,
-    I = T.default.getDisplayName(s);
+    h = T.default.getDisplayName(s);
   return (0, a.jsxs)("div", {
     className: g.accountCreditRow,
     children: [(0, a.jsx)("div", {
@@ -45,7 +45,7 @@ function I(e) {
       children: [(0, a.jsx)(d.Heading, {
         variant: "heading-md/semibold",
         children: _.default.Messages.PREMIUM_SUBSCRIPTION_CREDIT.format({
-          planName: I
+          planName: h
         })
       }), t.hasFreePremium() ? null : (0, a.jsx)(d.Heading, {
         className: g.rowApplied,
@@ -54,7 +54,7 @@ function I(e) {
         children: m && null != i ? _.default.Messages.PREMIUM_SUBSCRIPTION_CREDIT_APPLIED_ON.format({
           date: i.currentPeriodEnd
         }) : _.default.Messages.PREMIUM_SUBSCRIPTION_CREDIT_APPLIED_MISMATCHED_PLAN.format({
-          planName: I
+          planName: h
         })
       })]
     }), (0, a.jsx)(d.Text, {
@@ -81,7 +81,7 @@ t.default = function(e) {
   return null == T ? null : (0, a.jsxs)("div", {
     children: [(0, a.jsx)("div", {
       className: l()(t, g.premiumSubscriptionAccountCredit),
-      children: Object.keys(n).map(e => (0, a.jsx)(I, {
+      children: Object.keys(n).map(e => (0, a.jsx)(h, {
         planId: e,
         count: n[e].length,
         userPremiumSubscription: i,

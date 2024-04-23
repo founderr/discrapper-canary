@@ -20,8 +20,8 @@ var a = s("735250"),
   f = s("314897"),
   _ = s("325067"),
   g = s("594174"),
-  I = s("285952"),
-  h = s("572004"),
+  h = s("285952"),
+  I = s("572004"),
   N = s("287880"),
   p = s("714565"),
   C = s("202858"),
@@ -47,9 +47,9 @@ function D(e) {
       consumed: s
     }
   } = e, l = "".concat(t.substr(0, 4), "-").concat(t.substr(4)), i = n.useRef(null), r = n.useCallback(e => {
-    if ("c" === e.key && e.metaKey && h.SUPPORTS_COPY) {
+    if ("c" === e.key && e.metaKey && I.SUPPORTS_COPY) {
       var t;
-      e.preventDefault(), e.stopPropagation(), (0, h.copy)(l), null == i || null === (t = i.current) || void 0 === t || t.focus()
+      e.preventDefault(), e.stopPropagation(), (0, I.copy)(l), null == i || null === (t = i.current) || void 0 === t || t.focus()
     }
   }, [l]);
   return (0, a.jsx)("li", {
@@ -97,7 +97,7 @@ class L extends n.PureComponent {
         })]
       })
     }
-    if (r) e = (0, a.jsx)(I.default, {
+    if (r) e = (0, a.jsx)(h.default, {
       className: i ? "" : M.marginTop8,
       children: (0, a.jsx)(o.Button, {
         color: o.Button.Colors.RED,
@@ -110,7 +110,7 @@ class L extends n.PureComponent {
     });
     else {
       let t = (0, p.getSMSBackupDisabledMessage)(n);
-      e = (0, a.jsxs)(I.default, {
+      e = (0, a.jsxs)(h.default, {
         className: i ? "" : M.marginTop8,
         children: [(0, a.jsx)(o.Button, {
           onClick: this.handleEnableSMS,
@@ -164,13 +164,13 @@ class L extends n.PureComponent {
           type: o.FormText.Types.DESCRIPTION,
           className: M.marginBottom20,
           children: x.default.Messages.TWO_FA_BACKUP_CODES_BODY.format()
-        }), (0, a.jsxs)(I.default, {
-          children: [(0, a.jsx)(I.default.Child, {
+        }), (0, a.jsxs)(h.default, {
+          children: [(0, a.jsx)(h.default.Child, {
             children: (0, a.jsx)("ul", {
               className: R.checkboxGroup,
               children: n(t.slice(0, t.length / 2))
             })
-          }), (0, a.jsx)(I.default.Child, {
+          }), (0, a.jsx)(h.default.Child, {
             children: (0, a.jsx)("ul", {
               className: R.checkboxGroup,
               children: n(t.slice(t.length / 2))
@@ -195,14 +195,14 @@ class L extends n.PureComponent {
         type: o.FormText.Types.DESCRIPTION,
         className: M.marginBottom20,
         children: x.default.Messages.TWO_FA_DESCRIPTION
-      }), (0, a.jsxs)(I.default, {
-        justify: I.default.Justify.START,
+      }), (0, a.jsxs)(h.default, {
+        justify: h.default.Justify.START,
         className: M.marginBottom20,
-        children: [(0, a.jsx)(I.default.Child, {
+        children: [(0, a.jsx)(h.default.Child, {
           wrap: !0,
           grow: 0,
           children: s
-        }), (0, a.jsx)(I.default.Child, {
+        }), (0, a.jsx)(h.default.Child, {
           wrap: !0,
           children: this.props.hasTOTPEnabled ? (0, a.jsx)(o.Button, {
             onClick: this.handleDisableMFA,

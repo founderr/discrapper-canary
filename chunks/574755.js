@@ -20,8 +20,8 @@ var a = s("735250"),
   f = s("39604"),
   _ = s("703288"),
   g = s("491758"),
-  I = s("183632"),
-  h = s("689938"),
+  h = s("183632"),
+  I = s("689938"),
   N = s("415996"),
   p = s("893427"),
   C = s("794711");
@@ -51,11 +51,11 @@ function A() {
       tag: r.FormTitleTags.H1,
       title: (0, a.jsxs)("div", {
         className: N.headerContainer,
-        children: [h.default.Messages.CLIPS, (0, a.jsx)(_.default, {})]
+        children: [I.default.Messages.CLIPS, (0, a.jsx)(_.default, {})]
       }),
       children: A && (0, a.jsxs)("form", {
         onSubmit: e => e.preventDefault(),
-        children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(I.default, {})]
+        children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(h.default, {})]
       })
     }), A && (0, a.jsx)(r.FormDivider, {}), (0, a.jsxs)(r.FormSection, {
       className: C.marginTop20,
@@ -63,21 +63,21 @@ function A() {
         hideBorder: !0,
         className: p.formItem,
         value: e,
-        note: h.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
+        note: I.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
         onChange: e => f.updateAllowVoiceRecording({
           allowVoiceRecording: e
         }),
-        children: h.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
+        children: I.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
       }), t && x && (0, a.jsx)(r.FormSwitch, {
         hideBorder: !0,
         className: p.formItem,
         value: O,
-        note: h.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
+        note: I.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
         onChange: e => f.updateViewerClipsEnabled({
           enabled: e,
           trackAnalytics: !0
         }),
-        children: h.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE
+        children: I.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE
       })]
     })]
   })

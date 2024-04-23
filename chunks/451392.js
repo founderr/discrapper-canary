@@ -28,12 +28,12 @@ function g(e) {
     pendingColors: n,
     onThemeColorsChange: i,
     preventDisabled: g,
-    guildId: I,
-    className: h,
+    guildId: h,
+    className: I,
     showPremiumIcon: N = !0,
     showResetThemeButton: p = !1,
     forcedDivider: C
-  } = e, A = (0, c.default)(t.id, I), {
+  } = e, A = (0, c.default)(t.id, h), {
     primaryColor: O,
     secondaryColor: x
   } = (0, S.default)({
@@ -41,7 +41,7 @@ function g(e) {
     displayProfile: A,
     pendingThemeColors: n,
     isPreview: !0
-  }), R = E.default.canUsePremiumProfileCustomization(t), M = null != s ? s : t.getAvatarURL(I, 80), v = (0, d.useToken)(o.default.unsafe_rawColors.PRIMARY_530).hex(), D = (0, u.useAvatarColors)(M, v, !1);
+  }), R = E.default.canUsePremiumProfileCustomization(t), M = null != s ? s : t.getAvatarURL(h, 80), v = (0, d.useToken)(o.default.unsafe_rawColors.PRIMARY_530).hex(), D = (0, u.useAvatarColors)(M, v, !1);
   if (null == O || null == x) return null;
   let L = e => {
     i(r()(e, null == A ? void 0 : A.themeColors) ? void 0 : e)
@@ -49,7 +49,7 @@ function g(e) {
   return (0, a.jsx)(m.default, {
     title: f.default.Messages.USER_SETTINGS_PROFILE_THEME,
     disabled: !R && !g,
-    className: l()(_.__invalid_profileThemesSection, h),
+    className: l()(_.__invalid_profileThemesSection, I),
     showPremiumIcon: N,
     forcedDivider: C,
     children: (0, a.jsxs)("div", {
@@ -84,7 +84,7 @@ function g(e) {
             children: f.default.Messages.USER_SETTINGS_PROFILE_THEME_ACCENT
           })
         })
-      }), p && null != I && (0, a.jsx)(d.Button, {
+      }), p && null != h && (0, a.jsx)(d.Button, {
         className: _.resetButton,
         color: d.Button.Colors.PRIMARY,
         look: d.Button.Looks.LINK,

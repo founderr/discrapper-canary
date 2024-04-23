@@ -16,8 +16,8 @@ var a = s("735250"),
   f = s("689938"),
   _ = s("760668"),
   g = s("786792"),
-  I = s("329213");
-let h = () => (0, a.jsxs)(a.Fragment, {
+  h = s("329213");
+let I = () => (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
       className: _.artContainer,
       "aria-hidden": !0,
@@ -122,7 +122,7 @@ let h = () => (0, a.jsxs)(a.Fragment, {
     let {
       variation: t
     } = e;
-    return (0, r.match)(t).with(E.CollectiblesShopMarketingVariants.MONSTER_DROP, () => (0, a.jsx)(N, {})).with(E.CollectiblesShopMarketingVariants.SPRINGTOONS, () => (0, a.jsx)(p, {})).with(E.CollectiblesShopMarketingVariants.SHY, () => (0, a.jsx)(C, {})).otherwise(() => (0, a.jsx)(h, {}))
+    return (0, r.match)(t).with(E.CollectiblesShopMarketingVariants.MONSTER_DROP, () => (0, a.jsx)(N, {})).with(E.CollectiblesShopMarketingVariants.SPRINGTOONS, () => (0, a.jsx)(p, {})).with(E.CollectiblesShopMarketingVariants.SHY, () => (0, a.jsx)(C, {})).otherwise(() => (0, a.jsx)(I, {}))
   };
 t.default = () => {
   let {
@@ -137,7 +137,7 @@ t.default = () => {
     ref: t,
     className: i()(_.container),
     style: {
-      backgroundImage: "url(".concat(s === E.CollectiblesShopMarketingVariants.SHY ? I : g, ")")
+      backgroundImage: "url(".concat(s === E.CollectiblesShopMarketingVariants.SHY ? h : g, ")")
     },
     children: [(0, a.jsx)(A, {
       variation: s

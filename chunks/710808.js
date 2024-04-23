@@ -20,8 +20,8 @@ var a = s("735250"),
   f = s("998502"),
   _ = s("981631"),
   g = s("65154"),
-  I = s("689938"),
-  h = s("794711");
+  h = s("689938"),
+  I = s("794711");
 async function N() {
   let e = await d.default.fileManager.getModulePath(),
     t = d.default.fileManager.join(e, "discord_voice");
@@ -30,15 +30,15 @@ async function N() {
 
 function p(e) {
   (0, i.openModal)(t => (0, a.jsx)(i.ConfirmModal, {
-    header: I.default.Messages.SET_DEBUG_LOGGING,
-    confirmText: I.default.Messages.OKAY,
-    cancelText: I.default.Messages.CANCEL,
+    header: h.default.Messages.SET_DEBUG_LOGGING,
+    confirmText: h.default.Messages.OKAY,
+    cancelText: h.default.Messages.CANCEL,
     onCancel: t.onClose,
     onConfirm: () => r.default.setDebugLogging(e),
     ...t,
     children: (0, a.jsx)(i.Text, {
       variant: "text-md/normal",
-      children: I.default.Messages.SET_DEBUG_LOGGING_BODY
+      children: h.default.Messages.SET_DEBUG_LOGGING_BODY
     })
   }))
 }
@@ -66,12 +66,12 @@ function C() {
           message: "User Live Dump"
         }
       }), await (0, u.uploadDebugLogFiles)(_.DebugLogCategory.RTC), ! function() {
-        let e = I.default.Messages.UPLOAD_DEBUG_LOG_SUCCESS_HEADER,
-          t = I.default.Messages.UPLOAD_DEBUG_LOG_SUCCESS;
+        let e = h.default.Messages.UPLOAD_DEBUG_LOG_SUCCESS_HEADER,
+          t = h.default.Messages.UPLOAD_DEBUG_LOG_SUCCESS;
         (0, i.openModal)(s => (0, a.jsx)(i.ConfirmModal, {
           header: e,
           confirmButtonColor: i.Button.Colors.BRAND,
-          confirmText: I.default.Messages.OKAY,
+          confirmText: h.default.Messages.OKAY,
           ...s,
           children: (0, a.jsx)(i.Text, {
             variant: "text-md/normal",
@@ -81,12 +81,12 @@ function C() {
       }()
     } catch (e) {
       ! function(e) {
-        let t = I.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_HEADER,
-          s = null != e ? e : I.default.Messages.UPLOAD_DEBUG_LOG_FAILURE;
+        let t = h.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_HEADER,
+          s = null != e ? e : h.default.Messages.UPLOAD_DEBUG_LOG_FAILURE;
         (0, i.openModal)(e => (0, a.jsx)(i.ConfirmModal, {
           header: t,
           confirmButtonColor: i.Button.Colors.BRAND,
-          confirmText: I.default.Messages.OKAY,
+          confirmText: h.default.Messages.OKAY,
           ...e,
           children: (0, a.jsx)(i.Text, {
             variant: "text-md/normal",
@@ -97,30 +97,30 @@ function C() {
     }
   }
   return (0, a.jsxs)(i.FormSection, {
-    className: h.marginBottom40,
-    title: I.default.Messages.FORM_LABEL_DEBUG,
+    className: I.marginBottom40,
+    title: h.default.Messages.FORM_LABEL_DEBUG,
     children: [s && (0, a.jsx)(i.FormSwitch, {
       value: C,
       onChange: e => r.default.setAecDump(e),
-      note: I.default.Messages.FORM_HELP_AEC_DUMP,
-      children: I.default.Messages.FORM_CHECKBOX_AEC_DUMP
+      note: h.default.Messages.FORM_HELP_AEC_DUMP,
+      children: h.default.Messages.FORM_CHECKBOX_AEC_DUMP
     }), R && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(i.FormSwitch, {
         hideBorder: !0,
         value: O,
         onChange: e => o.setShouldRecordNextConnection(e),
-        note: I.default.Messages.FORM_HELP_CONNECTION_LOG,
-        children: I.default.Messages.FORM_CHECKBOX_CONNECTION_LOG
+        note: h.default.Messages.FORM_HELP_CONNECTION_LOG,
+        children: h.default.Messages.FORM_CHECKBOX_CONNECTION_LOG
       }), (0, a.jsx)(i.FormItem, {
         children: (0, a.jsx)(T.default, {
-          className: h.marginBottom20,
+          className: I.marginBottom20,
           children: (0, a.jsx)(T.default.Child, {
             grow: 0,
             shrink: 0,
             children: (0, a.jsx)(i.Button, {
               size: i.Button.Sizes.SMALL,
               onClick: () => o.openReplay(),
-              children: I.default.Messages.OPEN_CONNECTION_REPLAY
+              children: h.default.Messages.OPEN_CONNECTION_REPLAY
             })
           })
         })
@@ -129,8 +129,8 @@ function C() {
       hideBorder: !0,
       value: d,
       onChange: p,
-      note: I.default.Messages.FORM_HELP_DEBUG_LOGGING,
-      children: I.default.Messages.FORM_CHECKBOX_DEBUG_LOGGING
+      note: h.default.Messages.FORM_HELP_DEBUG_LOGGING,
+      children: h.default.Messages.FORM_CHECKBOX_DEBUG_LOGGING
     }), (0, a.jsx)(i.FormItem, {
       children: (0, a.jsxs)(T.default, {
         children: [(0, a.jsx)(T.default.Child, {
@@ -140,7 +140,7 @@ function C() {
             disabled: e,
             size: i.Button.Sizes.SMALL,
             onClick: M,
-            children: I.default.Messages.UPLOAD
+            children: h.default.Messages.UPLOAD
           })
         }), (0, a.jsx)(T.default.Child, {
           grow: 0,
@@ -148,7 +148,7 @@ function C() {
           children: (0, a.jsx)(i.Button, {
             size: i.Button.Sizes.SMALL,
             onClick: N,
-            children: I.default.Messages.SHOW_FOLDER
+            children: h.default.Messages.SHOW_FOLDER
           })
         })]
       })

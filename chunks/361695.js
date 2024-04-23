@@ -25,16 +25,16 @@ function m() {
     f = (0, E.useShouldShowOverlaySettings)(),
     _ = (0, i.useEnableClips)(),
     [g] = (0, r.useGetDismissibleContent)(_ ? [n.DismissibleContent.CLIPS_SETTINGS_BETA_TAG] : []),
-    I = "useGenerateUserSettingsSections";
+    h = "useGenerateUserSettingsSections";
   (0, l.useTriggerDebuggingAA)({
-    location: I + " auto on",
+    location: h + " auto on",
     autoTrackExposure: !0
   }), (0, l.useTriggerDebuggingAA)({
-    location: I + " auto off",
+    location: h + " auto off",
     autoTrackExposure: !1
   });
   let {
-    shouldMergeGameSettings: h
+    shouldMergeGameSettings: I
   } = S.GameSettingsMergeExperiment.useExperiment({
     location: "settings"
   });
@@ -45,6 +45,6 @@ function m() {
     numOfPendingFamilyRequests: m,
     isOverlaySupported: f,
     isClipsBetaTagShowing: g === n.DismissibleContent.CLIPS_SETTINGS_BETA_TAG,
-    shouldMergeGameSettings: h
+    shouldMergeGameSettings: I
   })
 }

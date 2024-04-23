@@ -31,8 +31,8 @@ function E(e) {
     } = n,
     _ = m && !i,
     g = i ? "header-primary" : "text-muted",
-    I = i ? "header-secondary" : "text-muted",
-    h = r()(s),
+    h = i ? "header-secondary" : "text-muted",
+    I = r()(s),
     N = null != f && i,
     p = N ? o.Clickable : "div";
   return (0, a.jsxs)(p, {
@@ -53,14 +53,14 @@ function E(e) {
         variant: "text-xxs/semibold",
         color: "text-muted",
         className: S.unlocked,
-        children: (0, d.calendarFormat)(h)
+        children: (0, d.calendarFormat)(I)
       }), (0, a.jsx)(o.Text, {
         variant: "text-md/medium",
         color: g,
         children: E()
       }), (0, a.jsx)(o.Text, {
         variant: "text-xs/normal",
-        color: I,
+        color: h,
         children: _ ? "?????" : T()
       })]
     })]

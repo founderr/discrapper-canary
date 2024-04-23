@@ -16,8 +16,8 @@ var a = s("735250"),
   f = s("186095"),
   _ = s("797717"),
   g = s("546591"),
-  I = s("794358"),
-  h = s("880008"),
+  h = s("794358"),
+  I = s("880008"),
   N = s("795295"),
   p = s("169278"),
   C = s("931003"),
@@ -38,7 +38,7 @@ let y = r.default.connectStores([M.default], () => ({
   }))(f.default),
   B = (0, R.isWindows)();
 
-function G(e) {
+function F(e) {
   let {
     onClose: t
   } = e, s = (0, r.useStateFromStores)([S.default], () => S.default.getCandidateGames()), [l, o] = n.useState(null), c = s.map(e => ({
@@ -76,7 +76,7 @@ function G(e) {
   })
 }
 
-function F(e) {
+function G(e) {
   var t;
   let {
     rawGame: s,
@@ -93,11 +93,11 @@ function F(e) {
     u.default.deleteEntry(f)
   }
 
-  function G() {
+  function F() {
     f.name !== M && u.default.editName(f, M)
   }
 
-  function F(e) {
+  function G(e) {
     13 === e.keyCode && (e.currentTarget.blur(), e.preventDefault())
   }
 
@@ -143,8 +143,8 @@ function F(e) {
         type: "text",
         maxLength: 128,
         value: M,
-        onBlur: G,
-        onKeyDown: F,
+        onBlur: F,
+        onKeyDown: G,
         onChange: e => P(e.target.value)
       }), function() {
         let e;
@@ -189,12 +189,12 @@ function F(e) {
     }), function() {
       let {
         detectable: e
-      } = f, t = e ? (0, a.jsx)(I.default, {
+      } = f, t = e ? (0, a.jsx)(h.default, {
         className: L.toggleIconOn,
         foreground: L.fill,
         width: 24,
         height: 24
-      }) : (0, a.jsx)(h.default, {
+      }) : (0, a.jsx)(I.default, {
         className: L.toggleIconOff,
         background: L.fill,
         foreground: L.fill,
@@ -315,7 +315,7 @@ t.default = function() {
   return n.useEffect(() => ((0, E.watchCandidateGames)(), E.stopWatchingCandidateGames), []), (0, a.jsxs)(d.FormSection, {
     tag: "h1",
     title: D.default.Messages.REGISTERED_GAMES,
-    children: [null != t ? (0, a.jsx)(F, {
+    children: [null != t ? (0, a.jsx)(G, {
       rawGame: t,
       isOverride: s.has(t.exePath),
       nowPlaying: !0
@@ -328,7 +328,7 @@ t.default = function() {
           let {
             closePopout: t
           } = e;
-          return (0, a.jsx)(G, {
+          return (0, a.jsx)(F, {
             onClose: t
           })
         },
@@ -356,7 +356,7 @@ t.default = function() {
         children: D.default.Messages.SETTINGS_GAMES_IGDB_ATTRIBUTION.format({
           igdbLink: "https://www.igdb.com/about"
         })
-      }), e.map(e => (0, a.jsx)(F, {
+      }), e.map(e => (0, a.jsx)(G, {
         rawGame: e,
         isOverride: s.has(e.exePath)
       }, (0, S.gameKey)(e)))]

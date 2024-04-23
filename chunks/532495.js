@@ -21,8 +21,8 @@ var n = s("512722"),
   f = s("349177"),
   _ = s("872736"),
   g = s("134795"),
-  I = s("610966"),
-  h = s("513901"),
+  h = s("610966"),
+  I = s("513901"),
   N = s("451392"),
   p = s("906364"),
   C = s("676934"),
@@ -42,9 +42,9 @@ function j() {
       let e = v.default.getCurrentUser();
       return l()(null != e, "DefaultCustomizationSections: user cannot be undefined"), e
     }),
-    G = (0, i.useStateFromStores)([O.default], () => O.default.getUserProfile(B.id)),
+    F = (0, i.useStateFromStores)([O.default], () => O.default.getUserProfile(B.id)),
     {
-      pendingAvatar: F,
+      pendingAvatar: G,
       pendingGlobalName: k,
       pendingBanner: w,
       pendingBio: H,
@@ -62,8 +62,8 @@ function j() {
     }),
     z = (0, c.useGuildAutomodProfileQuarantineErrors)(),
     Q = D.default.canUsePremiumProfileCustomization(B),
-    q = (0, S.showRemoveAvatar)(F, B.avatar),
-    Z = (0, S.showRemoveBanner)(w, null == G ? void 0 : G.banner),
+    q = (0, S.showRemoveAvatar)(G, B.avatar),
+    Z = (0, S.showRemoveBanner)(w, null == F ? void 0 : F.banner),
     X = "DefaultCustomizationSections";
   (0, o.useTriggerDebuggingAA)({
     location: X + " auto on",
@@ -94,7 +94,7 @@ function j() {
       errors: W.pronouns,
       onPronounsChange: A.setPendingPronouns,
       pendingPronouns: V,
-      currentPronouns: null !== (U = null == G ? void 0 : G.pronouns) && void 0 !== U ? U : ""
+      currentPronouns: null !== (U = null == F ? void 0 : F.pronouns) && void 0 !== U ? U : ""
     }, "pronouns"), (0, a.jsx)(m.default, {
       onAvatarChange: r.setPendingAvatar,
       showRemoveAvatarButton: q,
@@ -104,7 +104,7 @@ function j() {
     }, "avatar"), (0, a.jsx)(T.default, {
       user: B,
       sectionTitle: L.default.Messages.USER_SETTINGS_AVATAR_DECORATION
-    }, "decoration"), (0, a.jsx)(h.default, {
+    }, "decoration"), (0, a.jsx)(I.default, {
       user: B,
       sectionTitle: L.default.Messages.USER_SETTINGS_PROFILE_EFFECT
     }, "effect"), Q ? (0, a.jsxs)(a.Fragment, {
@@ -115,22 +115,22 @@ function j() {
         forcedDivider: !0
       }, "banner"), (0, a.jsx)(N.default, {
         user: B,
-        pendingAvatar: F,
+        pendingAvatar: G,
         pendingColors: K,
         onThemeColorsChange: A.setPendingThemeColors,
         forcedDivider: !0
       })]
-    }) : (0, a.jsx)(I.default, {
+    }) : (0, a.jsx)(h.default, {
       user: B,
-      savedUserColor: null == G ? void 0 : G.accentColor,
+      savedUserColor: null == F ? void 0 : F.accentColor,
       pendingColor: Y,
       setPendingAccentColor: A.setPendingAccentColor
     }, "color"), (0, a.jsx)(E.default, {
       sectionTitle: L.default.Messages.USER_SETTINGS_ABOUT_ME,
       errors: et,
-      onBioChange: e => (0, S.setNewPendingUserBio)(e, null == G ? void 0 : G.bio),
+      onBioChange: e => (0, S.setNewPendingUserBio)(e, null == F ? void 0 : F.bio),
       pendingBio: H,
-      currentBio: null !== (y = null == G ? void 0 : G.bio) && void 0 !== y ? y : ""
+      currentBio: null !== (y = null == F ? void 0 : F.bio) && void 0 !== y ? y : ""
     }, "bio"), ea && (0, a.jsx)(u.default, {}), es && (0, a.jsx)(C.default, {}), null != $ && (0, a.jsx)(_.default, {
       legacyUsername: $
     }, "legacy_username")]

@@ -20,8 +20,8 @@ var a = s("735250"),
   f = s("962746"),
   _ = s("296810"),
   g = s("621853"),
-  I = s("246946"),
-  h = s("594174"),
+  h = s("246946"),
+  I = s("594174"),
   N = s("626135"),
   p = s("63063"),
   C = s("74538"),
@@ -60,17 +60,17 @@ function j(e) {
     selectedGuild: t
   } = e, {
     analyticsLocations: s
-  } = (0, T.default)(S.default.GUILD_PROFILE), l = (0, r.useStateFromStores)([h.default], () => {
-    let e = h.default.getCurrentUser();
+  } = (0, T.default)(S.default.GUILD_PROFILE), l = (0, r.useStateFromStores)([I.default], () => {
+    let e = I.default.getCurrentUser();
     return i()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e
-  }), u = (0, r.useStateFromStores)([g.default], () => !g.default.isFetchingProfile(l.id)), N = (0, r.useStateFromStores)([I.default], () => I.default.hidePersonalInformation), {
+  }), u = (0, r.useStateFromStores)([g.default], () => !g.default.isFetchingProfile(l.id)), N = (0, r.useStateFromStores)([h.default], () => h.default.hidePersonalInformation), {
     pendingAvatar: j,
     pendingAvatarDecoration: b,
     pendingProfileEffectId: U,
     pendingNickname: y,
     pendingBanner: B,
-    pendingBio: G,
-    pendingPronouns: F,
+    pendingBio: F,
+    pendingPronouns: G,
     pendingThemeColors: k,
     source: w
   } = (0, r.useStateFromStoresObject)([O.default], () => ({
@@ -97,8 +97,8 @@ function j(e) {
       pendingAvatarDecoration: b,
       pendingProfileEffectId: U,
       pendingBanner: B,
-      pendingBio: G,
-      pendingPronouns: F,
+      pendingBio: F,
+      pendingPronouns: G,
       pendingNickname: y,
       activityName: D.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE,
       activityCharacter: m.FakeActivityCharacter.PHIBI,

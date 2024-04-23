@@ -16,8 +16,8 @@ var a, n, l, i, r = s("735250"),
   f = s("206895"),
   _ = s("692437"),
   g = s("783539"),
-  I = s("585483"),
-  h = s("557177"),
+  h = s("585483"),
+  I = s("557177"),
   N = s("57562"),
   p = s("955204"),
   C = s("64078"),
@@ -70,7 +70,7 @@ let y = () => [{
     description: v.default.Messages.POGGERMODE_SCREENSHAKE_LOCATION_MENTION_ENABLED_DESCRIPTION
   }];
 
-function G(e) {
+function F(e) {
   let {
     disabled: t,
     locations: s,
@@ -93,7 +93,7 @@ function G(e) {
   })
 }
 
-function F(e) {
+function G(e) {
   let {
     children: t
   } = e;
@@ -164,7 +164,7 @@ function w(e) {
       disabled: o,
       title: v.default.Messages.POGGERMODE_CONFETTI_COUNT,
       className: D.formItem,
-      children: [(0, r.jsx)(F, {
+      children: [(0, r.jsx)(G, {
         children: v.default.Messages.POGGERMODE_CONFETTI_COUNT_DESCRIPTION
       }), (0, r.jsx)(S.Slider, {
         disabled: o,
@@ -182,7 +182,7 @@ function w(e) {
       disabled: o,
       title: v.default.Messages.POGGERMODE_CONFETTI_SIZE,
       className: D.formItem,
-      children: [(0, r.jsx)(F, {
+      children: [(0, r.jsx)(G, {
         children: v.default.Messages.POGGERMODE_CONFETTI_SIZE_DESCRIPTION
       }), (0, r.jsx)(S.Slider, {
         disabled: o,
@@ -196,7 +196,7 @@ function w(e) {
         }, 0),
         onValueRender: e => "".concat(e)
       })]
-    }), (0, r.jsx)(G, {
+    }), (0, r.jsx)(F, {
       disabled: o,
       locations: y(),
       settingsLocations: l,
@@ -240,7 +240,7 @@ function H(e) {
       disabled: i,
       title: v.default.Messages.POGGERMODE_COMBOS_REQUIRED,
       className: D.formItem,
-      children: [(0, r.jsx)(F, {
+      children: [(0, r.jsx)(G, {
         children: v.default.Messages.POGGERMODE_COMBOS_REQUIRED_DESCRIPTION
       }), (0, r.jsx)(S.Slider, {
         disabled: i,
@@ -288,7 +288,7 @@ function V(e) {
       disabled: o,
       title: v.default.Messages.POGGERMODE_SCREENSHAKE,
       className: D.formItem,
-      children: [(0, r.jsx)(F, {
+      children: [(0, r.jsx)(G, {
         children: v.default.Messages.POGGERMODE_SCREENSHAKE_DESCRIPTION
       }), (0, r.jsx)(S.Slider, {
         disabled: o,
@@ -303,7 +303,7 @@ function V(e) {
         }, 1),
         onMarkerRender: e => e === j[j.length - 1] ? v.default.Messages.POGGERMODE_SCREENSHAKE_MAX : "".concat(100 * e, "%")
       })]
-    }), (0, r.jsx)(G, {
+    }), (0, r.jsx)(F, {
       disabled: o,
       locations: B(),
       settingsLocations: n,
@@ -396,7 +396,7 @@ function z(e) {
   let c = e => {
       if (e.enabled && !1 === a.enabled) {
         var t;
-        s(!0), (0, h.playSound)("poggermode_enabled"), I.ComponentDispatch.dispatch(M.ComponentActions.SHAKE_APP, {
+        s(!0), (0, I.playSound)("poggermode_enabled"), h.ComponentDispatch.dispatch(M.ComponentActions.SHAKE_APP, {
           duration: 2e3,
           intensity: null !== (t = e.shakeIntensity) && void 0 !== t ? t : a.shakeIntensity
         })
@@ -411,7 +411,7 @@ function z(e) {
       let l = d(a.screenshakeEnabled, e.screenshakeEnabled, a.enabled, e.enabled);
       if (1 === t && l) {
         var r;
-        I.ComponentDispatch.dispatch(M.ComponentActions.SHAKE_APP, {
+        h.ComponentDispatch.dispatch(M.ComponentActions.SHAKE_APP, {
           duration: 1e3,
           intensity: null !== (r = e.shakeIntensity) && void 0 !== r ? r : a.shakeIntensity
         })

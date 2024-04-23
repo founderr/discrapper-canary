@@ -20,8 +20,8 @@ var a = s("735250"),
   f = s("612226"),
   _ = s("714338"),
   g = s("924557"),
-  I = s("74299"),
-  h = s("131951"),
+  h = s("74299"),
+  I = s("131951"),
   N = s("556296"),
   p = s("808506"),
   C = s("186095"),
@@ -48,13 +48,13 @@ function B(e, t, s) {
   }) : e[t] = s, e
 }
 
-function G(e) {
+function F(e) {
   let {
     children: t
   } = e;
   return t([f.KeybindGroup.MESSAGE, f.KeybindGroup.NAVIGATION, f.KeybindGroup.DND, f.KeybindGroup.CHAT, f.KeybindGroup.VOICE_AND_VIDEO, f.KeybindGroup.MISCELLANEOUS])
 }
-let F = o()((0, f.getDefaultLayoutContent)()).filter(e => e.description !== j.default.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG).groupBy(e => e.group).value(),
+let G = o()((0, f.getDefaultLayoutContent)()).filter(e => e.description !== j.default.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG).groupBy(e => e.group).value(),
   k = d.default.connectStores([v.default], () => ({
     theme: v.default.theme
   }))(C.default);
@@ -340,12 +340,12 @@ class H extends n.PureComponent {
               className: b.__invalid_defaultKeybindShortcut
             })
           })]
-        }), (0, a.jsx)(c.FormDivider, {}), (0, a.jsx)(G, {
+        }), (0, a.jsx)(c.FormDivider, {}), (0, a.jsx)(F, {
           children: e => (0, a.jsx)(a.Fragment, {
             children: e.map((e, t) => {
               let s = (0, f.getNameForKeybindGroup)(e),
                 l = (0, f.getDescriptionForKeybindGroup)(e),
-                r = F[e];
+                r = G[e];
               return (0, a.jsxs)("div", {
                 className: b.defaultKeybindGroup,
                 children: [(0, a.jsx)(c.Heading, {
@@ -389,7 +389,7 @@ class H extends n.PureComponent {
 
 function V() {
   let e = (0, d.useStateFromStores)([N.default], () => N.default.getState()),
-    t = (0, d.useStateFromStores)([h.default], () => (0, I.default)(h.default)),
+    t = (0, d.useStateFromStores)([I.default], () => (0, h.default)(I.default)),
     s = (0, d.useStateFromStores)([p.default], () => p.default.isSupported()),
     n = (0, g.useEnableClips)();
   return (0, a.jsx)(H, {
