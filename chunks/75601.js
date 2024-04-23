@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var a = n("739566"),
-  l = n("170039"),
+var l = n("739566"),
+  a = n("170039"),
   i = n("702346"),
   r = n("689938"),
   o = n("611818");
@@ -17,14 +17,14 @@ function u(e) {
     message: t,
     compact: n,
     usernameHook: u
-  } = e, d = (0, a.default)(t), c = u(d), f = r.default.Messages.SYSTEM_MESSAGE_STAGE_END_HOOK.format({
+  } = e, d = (0, l.default)(t), c = u(d), f = r.default.Messages.SYSTEM_MESSAGE_STAGE_END_HOOK.format({
     username: d.nick,
     usernameHook: c,
     topic: t.content
   });
   return (0, s.jsx)(i.default, {
     className: o.stageSystemMessage,
-    iconNode: (0, s.jsx)(l.default, {
+    iconNode: (0, s.jsx)(a.default, {
       height: 24,
       width: 24
     }),

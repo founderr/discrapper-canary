@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-var s, a, l, i, r = n("442837"),
+var s, l, a, i, r = n("442837"),
   o = n("433517"),
   u = n("570140"),
   d = n("205355");
@@ -19,12 +19,12 @@ class m extends(i = r.default.Store) {
     return null != E && E.id !== _ ? E : null
   }
 }
-l = "MaintenanceStore", (a = "displayName") in(s = m) ? Object.defineProperty(s, a, {
-  value: l,
+a = "MaintenanceStore", (l = "displayName") in(s = m) ? Object.defineProperty(s, l, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = l, t.default = new m(u.default, {
+}) : s[l] = a, t.default = new m(u.default, {
   CONNECTION_OPEN: function() {
     f = null, d.default.checkScheduledMaintenances()
   },

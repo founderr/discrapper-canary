@@ -6,14 +6,14 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var a = n("197409"),
-  l = n("689938");
+var l = n("197409"),
+  a = n("689938");
 
 function i() {
-  return (0, s.jsxs)(a.default, {
-    children: [(0, s.jsx)(a.default.Header, {
-      text: l.default.Messages.INVITE_BUTTON_RESOLVING
-    }), (0, s.jsx)(a.default.Body, {
+  return (0, s.jsxs)(l.default, {
+    children: [(0, s.jsx)(l.default.Header, {
+      text: a.default.Messages.INVITE_BUTTON_RESOLVING
+    }), (0, s.jsx)(l.default.Body, {
       resolving: !0
     })]
   })

@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-var s, a, l, i, r = n("735250"),
+var s, l, a, i, r = n("735250"),
   o = n("470079"),
   u = n("120356"),
   d = n.n(u),
@@ -18,11 +18,11 @@ class m extends(i = o.PureComponent) {
       className: t,
       textClassName: n,
       type: s = _.BLOCK,
-      style: a
+      style: l
     } = this.props;
     return (0, r.jsxs)("div", {
       className: d()(t, s),
-      style: a,
+      style: l,
       children: [(0, r.jsxs)(c.Text, {
         variant: "text-sm/bold",
         tag: "div",
@@ -37,9 +37,9 @@ class m extends(i = o.PureComponent) {
     })
   }
 }
-s = m, a = "Types", l = _, a in s ? Object.defineProperty(s, a, {
-  value: l,
+s = m, l = "Types", a = _, l in s ? Object.defineProperty(s, l, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = l, t.default = m
+}) : s[l] = a, t.default = m

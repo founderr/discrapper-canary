@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   useSafetyAlertsSettingOrDefault: function() {
-    return i
+    return s
   }
 });
 var a = n("442837"),
-  l = n("581883"),
-  s = n("981312");
-let i = () => {
-  let e = (0, a.useStateFromStores)([l.default], () => {
+  r = n("581883"),
+  i = n("981312");
+let s = () => {
+  let e = (0, a.useStateFromStores)([r.default], () => {
     var e, t, n;
-    return null === (n = null === (t = l.default.settings.privacy) || void 0 === t ? void 0 : null === (e = t.inappropriateConversationWarnings) || void 0 === e ? void 0 : e.value) || void 0 === n || n
+    return null === (n = null === (t = r.default.settings.privacy) || void 0 === t ? void 0 : null === (e = t.inappropriateConversationWarnings) || void 0 === e ? void 0 : e.value) || void 0 === n || n
   });
-  return (0, s.useUserIsTeen)("safety_warnings_setting") && e
+  return (0, i.useUserIsTeen)("safety_warnings_setting") && e
 }

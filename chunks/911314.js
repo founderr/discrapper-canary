@@ -2,18 +2,18 @@
 s.r(t);
 var a = s("735250");
 s("470079");
-var i = s("613828"),
-  r = s("730749"),
-  l = s("928207"),
-  n = s("981631");
-t.default = (0, r.default)(function() {
-  return (0, a.jsxs)(i.Switch, {
-    children: [(0, a.jsx)(i.Route, {
-      path: n.Routes.APPLICATION_STORE,
+var r = s("613828"),
+  i = s("730749"),
+  n = s("928207"),
+  l = s("981631");
+t.default = (0, i.default)(function() {
+  return (0, a.jsxs)(r.Switch, {
+    children: [(0, a.jsx)(r.Route, {
+      path: l.Routes.APPLICATION_STORE,
       exact: !0,
-      render: () => (0, a.jsx)(l.default, {})
-    }), (0, a.jsx)(i.Redirect, {
-      to: n.Routes.APP
+      render: () => (0, a.jsx)(n.default, {})
+    }), (0, a.jsx)(r.Redirect, {
+      to: l.Routes.APP
     })]
   })
 })

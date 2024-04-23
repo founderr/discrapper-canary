@@ -1,19 +1,19 @@
 "use strict";
 n.r(t);
 var s = n("392711"),
-  a = n.n(s),
-  l = n("723454"),
+  l = n.n(s),
+  a = n("723454"),
   i = n("428595"),
   r = n("454585");
-let o = a().omit(i.default.RULES, ["codeBlock", "heading"]),
+let o = l().omit(i.default.RULES, ["codeBlock", "heading"]),
   u = {
-    ...l.default,
+    ...a.default,
     parse: function(e, t, n) {
       var s;
-      let a = l.default.parse(e, t, n),
-        i = Math.min(6, (null !== (s = n.initialHeaderLevel) && void 0 !== s ? s : 3) + a.level);
+      let l = a.default.parse(e, t, n),
+        i = Math.min(6, (null !== (s = n.initialHeaderLevel) && void 0 !== s ? s : 3) + l.level);
       return {
-        ...a,
+        ...l,
         level: i
       }
     }

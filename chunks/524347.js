@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-var s, a, l, i, r = n("913527"),
+var s, l, a, i, r = n("913527"),
   o = n.n(r),
   u = n("442837"),
   d = n("846519"),
@@ -29,10 +29,10 @@ let h = null,
       dropsQuestId: t,
       streamKey: n,
       game: s,
-      completed: a,
-      gameTitle: l
+      completed: l,
+      gameTitle: a
     } = M;
-    !(null == t || null == l || a || null == s || null == n || g.isStarted()) && (e ? (0, T.sendHeartbeat)(t, n, s.pid) : g.start(1 * m.default.Millis.MINUTE, () => {
+    !(null == t || null == a || l || null == s || null == n || g.isStarted()) && (e ? (0, T.sendHeartbeat)(t, n, s.pid) : g.start(1 * m.default.Millis.MINUTE, () => {
       (0, T.sendHeartbeat)(t, n, s.pid)
     }))
   },
@@ -90,12 +90,12 @@ class x extends(i = u.default.Store) {
     return null == t ? 0 : t.percent
   }
 }
-l = "DropsStore", (a = "displayName") in(s = x) ? Object.defineProperty(s, a, {
-  value: l,
+a = "DropsStore", (l = "displayName") in(s = x) ? Object.defineProperty(s, l, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = l, t.default = new x(c.default, {
+}) : s[l] = a, t.default = new x(c.default, {
   DROPS_ELIGIBILITY_FETCH_SUCCESS: e => {
     S[e.dropsQuestId] = e.isEligible
   },
@@ -153,16 +153,16 @@ l = "DropsStore", (a = "displayName") in(s = x) ? Object.defineProperty(s, a, {
     let {
       streamType: n,
       guildId: s,
-      channelId: a,
-      pid: l
+      channelId: l,
+      pid: a
     } = e, i = (0, E.encodeStreamKey)({
       streamType: n,
       guildId: s,
-      channelId: a,
+      channelId: l,
       ownerId: _.default.getId()
     });
-    if (null == l) return;
-    let r = f.default.getGameForPID(l);
+    if (null == a) return;
+    let r = f.default.getGameForPID(a);
     if (null == r) return;
     let o = Object.values(p.DROPS_GAMES).find(e => e.gameSearchTerm.find(e => {
       var t;

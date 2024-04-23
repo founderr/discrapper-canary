@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   useChannelSafetyWarning: function() {
-    return s
+    return i
   }
 });
 var a = n("442837"),
-  l = n("359119");
+  r = n("359119");
 
-function s(e, t) {
-  return (0, a.useStateFromStores)([l.default], () => l.default.getChannelSafetyWarnings(e), [e]).filter(e => e.type === t).find(e => null == e.dismiss_timestamp)
+function i(e, t) {
+  return (0, a.useStateFromStores)([r.default], () => r.default.getChannelSafetyWarnings(e), [e]).filter(e => e.type === t).find(e => null == e.dismiss_timestamp)
 }

@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var s = n("735250"),
-  a = n("470079"),
-  l = n("392711"),
-  i = n.n(l),
+  l = n("470079"),
+  a = n("392711"),
+  i = n.n(a),
   r = n("442837"),
   o = n("570140"),
   u = n("45114"),
@@ -25,7 +25,7 @@ function h(e) {
   let {
     channel: t,
     channelRecord: n,
-    deleteChannel: l
+    deleteChannel: a
   } = e, h = (0, r.useStateFromStoresArray)([f.default, _.default], () => i()(f.default.getThreadsForParent(n.guild_id, n.id)).values().filter(e => {
     let {
       id: n
@@ -36,12 +36,12 @@ function h(e) {
       id: t
     } = e;
     return _.default.getChannel(t)
-  }).filter(m.isNotNullish).sort((e, t) => T.default.compare(e.id, t.id)).value(), [t.oldestReadMessageId, n.guild_id, n.id]), N = a.useCallback((e, t) => {
+  }).filter(m.isNotNullish).sort((e, t) => T.default.compare(e.id, t.id)).value(), [t.oldestReadMessageId, n.guild_id, n.id]), N = l.useCallback((e, t) => {
     (0, E.openThreadSidebarForViewing)(e, t, I.OpenThreadAnalyticsLocations.INBOX)
   }, []);
-  return a.useEffect(() => {
+  return l.useEffect(() => {
     null != n && t.isFullyLoaded && !t.hasError && !t.collapsed && 0 === h.length && o.default.wait(() => {
-      (0, u.ack)(t.channelId, !0), l(t.channelId)
+      (0, u.ack)(t.channelId, !0), a(t.channelId)
     })
   }), (0, s.jsx)("div", {
     className: p.container,

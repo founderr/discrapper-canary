@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var s = n("735250"),
-  a = n("470079"),
-  l = n("392711"),
-  i = n.n(l),
+  l = n("470079"),
+  a = n("392711"),
+  i = n.n(a),
   r = n("442837"),
   o = n("524437"),
   u = n("149020"),
@@ -25,20 +25,20 @@ var s = n("735250"),
 function N(e) {
   let {
     setTab: t,
-    badgeState: l,
+    badgeState: a,
     closePopout: N
-  } = e, C = (0, r.useStateFromStoresArray)([f.default], () => f.default.getInvites()), A = (0, r.useStateFromStores)([f.default], () => f.default.getInviteStatuses()), [g, M] = a.useMemo(() => i().partition(C, e => {
+  } = e, C = (0, r.useStateFromStoresArray)([f.default], () => f.default.getInvites()), A = (0, r.useStateFromStores)([f.default], () => f.default.getInviteStatuses()), [g, M] = l.useMemo(() => i().partition(C, e => {
     var t;
     return (null === (t = A[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1e3 < e.ttl
   }), [C, A]);
-  return (a.useEffect(() => {
+  return (l.useEffect(() => {
     (0, E.clearUnseenInvites)()
   }), 0 === C.length) ? (0, s.jsxs)("div", {
     className: h.container,
     children: [(0, s.jsx)(T.default, {
       tab: o.InboxTab.GAME_INVITES,
       setTab: t,
-      badgeState: l,
+      badgeState: a,
       closePopout: N
     }), (0, s.jsx)("div", {
       className: h.__invalid_emptyStateContainer,
@@ -53,7 +53,7 @@ function N(e) {
     children: [(0, s.jsx)(T.default, {
       tab: o.InboxTab.GAME_INVITES,
       setTab: t,
-      badgeState: l,
+      badgeState: a,
       closePopout: N,
       children: (0, s.jsx)(_.default, {
         className: h.__invalid_deleteButton,

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var a = n("442837"),
-  l = n("481060"),
+var l = n("442837"),
+  a = n("481060"),
   i = n("758059"),
   r = n("377171"),
   o = n("497089"),
@@ -23,10 +23,10 @@ var a = n("442837"),
 function I(e) {
   let {
     closePopout: t
-  } = e, n = (0, a.useStateFromStores)([d.default], () => d.default.getPendingCount());
-  return (0, s.jsx)(l.TooltipContainer, {
+  } = e, n = (0, l.useStateFromStores)([d.default], () => d.default.getPendingCount());
+  return (0, s.jsx)(a.TooltipContainer, {
     text: m.default.Messages.VIEW_FRIEND_REQUESTS,
-    children: (0, s.jsxs)(l.Clickable, {
+    children: (0, s.jsxs)(a.Clickable, {
       className: T.friendRequestsButton,
       onClick: () => {
         E.default.track(_.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {

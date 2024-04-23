@@ -1,30 +1,30 @@
 "use strict";
 s.r(t), s.d(t, {
   MessageStyles: function() {
-    return n
+    return l
   }
 });
-var a, i, r, l, n, o, u = s("735250"),
+var a, r, i, n, l, o, u = s("735250"),
   d = s("470079"),
   c = s("442837"),
   _ = s("570140"),
   E = s("16084"),
-  C = s("855775"),
-  f = s("689938");
-(a = n || (n = {})).SHORT = "SHORT", a.LONG = "LONG";
-class T extends(o = d.PureComponent) {
+  T = s("855775"),
+  I = s("689938");
+(a = l || (l = {})).SHORT = "SHORT", a.LONG = "LONG";
+class R extends(o = d.PureComponent) {
   getText(e, t) {
     if (429 === e.status) switch (t) {
       case "SHORT":
-        return f.default.Messages.APPLICATION_STORE_LISTING_PURCHASE_RATE_LIMIT_ERROR_SHORT;
+        return I.default.Messages.APPLICATION_STORE_LISTING_PURCHASE_RATE_LIMIT_ERROR_SHORT;
       case "LONG":
-        return f.default.Messages.APPLICATION_STORE_LISTING_PURCHASE_RATE_LIMIT_ERROR
+        return I.default.Messages.APPLICATION_STORE_LISTING_PURCHASE_RATE_LIMIT_ERROR
     }
     switch (t) {
       case "SHORT":
-        return f.default.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR_SHORT;
+        return I.default.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR_SHORT;
       case "LONG":
-        return f.default.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR
+        return I.default.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR
     }
   }
   componentWillUnmount() {
@@ -42,13 +42,13 @@ class T extends(o = d.PureComponent) {
     })
   }
 }
-l = {
+n = {
   messageStyle: "LONG"
-}, (r = "defaultProps") in(i = T) ? Object.defineProperty(i, r, {
-  value: l,
+}, (i = "defaultProps") in(r = R) ? Object.defineProperty(r, i, {
+  value: n,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = l, t.default = c.default.connectStores([C.default], () => ({
-  purchaseError: C.default.error
-}))(T)
+}) : r[i] = n, t.default = c.default.connectStores([T.default], () => ({
+  purchaseError: T.default.error
+}))(R)

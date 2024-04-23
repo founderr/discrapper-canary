@@ -46,7 +46,7 @@ n.r(t), n.d(t, {
     return T
   }
 });
-var s, a, l, i, r, o, u, d, c, f, E, _, m, T, I = n("981631");
+var s, l, a, i, r, o, u, d, c, f, E, _, m, T, I = n("981631");
 
 function p(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -59,9 +59,9 @@ function p(e, t, n) {
 class h {}
 p(h, "TOS_LINK", "https://discord.com/terms"), p(h, "COMMUNITY_GUIDELINES", "https://discord.com/guidelines"), p(h, "APPEALS_LINK", "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731"), p(h, "WARNING_SYSTEM_HELPCENTER_LINK", "https://support.discord.com/hc/articles/18210965981847"), p(h, "AGE_VERIFICATION_LINK", "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731"), p(h, "SPAM_LINK", "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__");
 class N {}
-p(N, "CLASSIFICATION_ID", "classification_id"), p(N, "INCIDENT_TIMESTAMP", "incident_time"), (a = c || (c = {})).POLICY_VIOLATION_DETAIL = "policy_violation_detail", a.LEARN_MORE_LINK = "learn_more_link";
+p(N, "CLASSIFICATION_ID", "classification_id"), p(N, "INCIDENT_TIMESTAMP", "incident_time"), (l = c || (c = {})).POLICY_VIOLATION_DETAIL = "policy_violation_detail", l.LEARN_MORE_LINK = "learn_more_link";
 class S {}
-p(S, "ICON_TYPE", "icon_type"), p(S, "HEADER", "header"), p(S, "BODY", "body"), p(S, "CTAS", "ctas"), p(S, "TIMESTAMP", "timestamp"), p(S, "THEME", "theme"), p(S, "CLIENT_VERSION_MESSAGE", "client_version_message"), p(S, "LEARN_MORE_LINK", "learn_more_link"), p(S, "CLASSIFICATION_ID", "classification_id"), (l = f || (f = {}))[l.ViewViolationDetail = 0] = "ViewViolationDetail", l[l.ViewViolationsDropdown = 1] = "ViewViolationsDropdown", l[l.ClickLetUsKnow = 2] = "ClickLetUsKnow", l[l.ClickAgeVerificationLink = 3] = "ClickAgeVerificationLink", l[l.ClickSpamWebformLink = 4] = "ClickSpamWebformLink", l[l.ClickLearnMoreLink = 5] = "ClickLearnMoreLink", l[l.ClickCommunityGuidelinesLink = 6] = "ClickCommunityGuidelinesLink", l[l.ClickWarningSystemHelpcenterLink = 7] = "ClickWarningSystemHelpcenterLink", (i = E || (E = {}))[i.SystemDM = 0] = "SystemDM", i[i.StandingTab = 1] = "StandingTab", i[i.AppealIngestion = 2] = "AppealIngestion", Object.freeze({
+p(S, "ICON_TYPE", "icon_type"), p(S, "HEADER", "header"), p(S, "BODY", "body"), p(S, "CTAS", "ctas"), p(S, "TIMESTAMP", "timestamp"), p(S, "THEME", "theme"), p(S, "CLIENT_VERSION_MESSAGE", "client_version_message"), p(S, "LEARN_MORE_LINK", "learn_more_link"), p(S, "CLASSIFICATION_ID", "classification_id"), (a = f || (f = {}))[a.ViewViolationDetail = 0] = "ViewViolationDetail", a[a.ViewViolationsDropdown = 1] = "ViewViolationsDropdown", a[a.ClickLetUsKnow = 2] = "ClickLetUsKnow", a[a.ClickAgeVerificationLink = 3] = "ClickAgeVerificationLink", a[a.ClickSpamWebformLink = 4] = "ClickSpamWebformLink", a[a.ClickLearnMoreLink = 5] = "ClickLearnMoreLink", a[a.ClickCommunityGuidelinesLink = 6] = "ClickCommunityGuidelinesLink", a[a.ClickWarningSystemHelpcenterLink = 7] = "ClickWarningSystemHelpcenterLink", (i = E || (E = {}))[i.SystemDM = 0] = "SystemDM", i[i.StandingTab = 1] = "StandingTab", i[i.AppealIngestion = 2] = "AppealIngestion", Object.freeze({
   SPEED_BUMP: I.AnalyticsSections.APPEAL_INGESTION_SPEED_BUMP,
   COLLECT_SIGNAL: I.AnalyticsSections.APPEAL_INGESTION_COLLECT_SIGNAL,
   CONFIRM_SUBMISSION: I.AnalyticsSections.APPEAL_INGESTION_CONFIRM_SUBMISSION,

@@ -17,8 +17,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("990547"),
-  a = n("544891"),
-  l = n("283693"),
+  l = n("544891"),
+  a = n("283693"),
   i = n("570140"),
   r = n("695346"),
   o = n("573261"),
@@ -45,14 +45,14 @@ async function _(e, t) {
   });
   let n = Math.ceil(u.default.items.length / e.limit);
   try {
-    let a = await o.default.get({
+    let l = await o.default.get({
       url: c.Endpoints.NOTIF_CENTER_ITEMS(),
       trackedActionData: {
         event: s.NetworkActionNames.NOTIFICATION_CENTER_PAGE_FETCH,
         properties: e => {
           var t;
           let s = ((null === (t = e.body) || void 0 === t ? void 0 : t.items) || []).map(e => e.type);
-          return (0, l.exact)({
+          return (0, a.exact)({
             page: n,
             items: s,
             item_count: s.length
@@ -65,9 +65,9 @@ async function _(e, t) {
     });
     null == t || t(), await i.default.dispatch({
       type: "LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS",
-      items: a.body.items,
-      cursor: a.body.cursor,
-      hasMore: a.body.has_more
+      items: l.body.items,
+      cursor: l.body.cursor,
+      hasMore: l.body.has_more
     })
   } catch (e) {
     null == t || t(), await i.default.dispatch({
@@ -96,7 +96,7 @@ async function T(e) {
       type: "NOTIFICATION_CENTER_ITEMS_ACK",
       optimistic: !0,
       ids: [e]
-    }), await a.HTTP.post({
+    }), await l.HTTP.post({
       url: c.Endpoints.NOTIF_CENTER_ITEMS_ACK(e)
     })
   } catch (t) {

@@ -13,8 +13,8 @@ var i, r, l = n("735250"),
   u = n("728345"),
   f = n("812206"),
   m = n("886176"),
-  h = n("55563"),
-  p = n("507608"),
+  p = n("55563"),
+  h = n("507608"),
   S = n("981631"),
   v = n("689938"),
   x = n("1931");
@@ -30,9 +30,9 @@ function g(e) {
     status: 1
   } : {
     status: 0
-  }), N = s.useRef(null), [L, E] = s.useState(!0), I = () => {
+  }), N = s.useRef(null), [E, I] = s.useState(!0), _ = () => {
     var e;
-    (null === (e = N.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) === !0 ? E(!1) : E(!0)
+    (null === (e = N.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) === !0 ? I(!1) : I(!0)
   };
   s.useEffect(() => {
     0 === C.status && (j({
@@ -48,7 +48,7 @@ function g(e) {
       })
     }))
   }, [i, C.status]);
-  let _ = (0, a.useStateFromStoresArray)([h.default], () => h.default.getForApplication(i).filter(e => {
+  let L = (0, a.useStateFromStoresArray)([p.default], () => p.default.getForApplication(i).filter(e => {
     switch (e.type) {
       case S.SKUTypes.DURABLE:
       case S.SKUTypes.CONSUMABLE:
@@ -84,18 +84,18 @@ function g(e) {
       })]
     }), (0, l.jsx)(o.ModalContent, {
       scrollerRef: e => {
-        null != e && (N.current = e, I())
+        null != e && (N.current = e, _())
       },
-      onScroll: I,
-      children: (0, l.jsx)(p.default, {
+      onScroll: _,
+      children: (0, l.jsx)(h.default, {
         app: T,
         subscriptionGroupListing: g,
         guildId: r,
-        products: _
+        products: L
       })
     }), (0, l.jsx)("div", {
       className: x.containerScrollGradient,
-      "data-shown": L
+      "data-shown": E
     })]
   })
 }(r = i || (i = {}))[r.NONE = 0] = "NONE", r[r.FETCHING = 1] = "FETCHING", r[r.FETCHED = 2] = "FETCHED", r[r.ERROR = 3] = "ERROR"

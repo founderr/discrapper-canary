@@ -20,8 +20,8 @@ function d(e) {
     onClose: u,
     onComplete: f,
     analyticsLocations: m,
-    analyticsLocationObject: h,
-    contextKey: p
+    analyticsLocationObject: p,
+    contextKey: h
   } = e, S = !1, v = (0, r.v4)();
   (0, l.openModalLazy)(async () => {
     let {
@@ -38,7 +38,7 @@ function d(e) {
         applicationId: t,
         skuId: d,
         analyticsLocations: m,
-        analyticsLocationObject: h,
+        analyticsLocationObject: p,
         onClose: e => {
           r(), null == u || u(e)
         },
@@ -48,12 +48,12 @@ function d(e) {
       })
     }
   }, {
-    contextKey: p,
+    contextKey: h,
     onCloseCallback: () => {
       !S && o.default.track(c.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
         load_id: v,
         payment_type: c.PurchaseTypeToAnalyticsPaymentType[c.PurchaseTypes.ONE_TIME],
-        location: h,
+        location: p,
         is_gift: !1,
         application_id: t,
         location_stack: m

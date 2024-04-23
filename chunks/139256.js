@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return w
   }
 }), n("627341");
-var s, a, l = n("735250"),
+var s, l, a = n("735250"),
   i = n("470079"),
   r = n("120356"),
   o = n.n(r),
@@ -51,7 +51,7 @@ function D(e) {
     className: t,
     children: n
   } = e;
-  return (0, l.jsx)("ul", {
+  return (0, a.jsx)("ul", {
     "aria-label": x.default.Messages.POLL_OPTIONS_ARIA,
     className: t,
     children: n
@@ -63,7 +63,7 @@ function P(e) {
     className: t,
     children: n
   } = e;
-  return (0, l.jsx)("div", {
+  return (0, a.jsx)("div", {
     "aria-label": x.default.Messages.POLL_OPTIONS_ARIA,
     role: "group",
     className: t,
@@ -78,7 +78,7 @@ function y(e) {
   } = e, s = (0, c.useRadioGroup)({
     orientation: "vertical"
   });
-  return (0, l.jsx)("div", {
+  return (0, a.jsx)("div", {
     "aria-label": x.default.Messages.POLL_OPTIONS_ARIA,
     ...s,
     className: t,
@@ -91,17 +91,17 @@ function U(e) {
     className: t,
     onClick: n,
     isSelected: s,
-    isFirstAnswer: a,
+    isFirstAnswer: l,
     children: i
   } = e, {
     pollAnswerRef: r
   } = (0, v.usePollFocusManager)();
-  return (0, l.jsx)(c.Clickable, {
+  return (0, a.jsx)(c.Clickable, {
     role: "checkbox",
     className: o()(t, L.enabled),
     onClick: n,
     "aria-checked": s,
-    ref: a ? r : void 0,
+    ref: l ? r : void 0,
     children: i
   })
 }
@@ -110,7 +110,7 @@ function j(e) {
   let t, {
     className: n,
     children: s,
-    onClick: a,
+    onClick: l,
     isSelected: i,
     hasSelectedAnyAnswer: r,
     isFirstAnswer: u
@@ -119,10 +119,10 @@ function j(e) {
   let {
     pollAnswerRef: d
   } = (0, v.usePollFocusManager)();
-  return (0, l.jsx)(c.Clickable, {
+  return (0, a.jsx)(c.Clickable, {
     role: "radio",
     className: o()(n, L.enabled),
-    onClick: a,
+    onClick: l,
     "aria-checked": i,
     tabIndex: t,
     ref: u ? d : void 0,
@@ -135,7 +135,7 @@ function b(e) {
     answers: t,
     answersInteraction: n,
     answerTapAccessibilityLabel: s,
-    canTapAnswers: a,
+    canTapAnswers: l,
     hasSelectedAnyAnswer: i,
     className: r,
     answerClassName: d,
@@ -144,7 +144,7 @@ function b(e) {
     ContainerComponent: f,
     answerElementType: E
   } = (0, u.match)({
-    canTapAnswers: a,
+    canTapAnswers: l,
     answersInteraction: n
   }).with({
     answersInteraction: M.PollChatAnswerInteractionType.RADIO_BUTTONS
@@ -166,9 +166,9 @@ function b(e) {
     ContainerComponent: D,
     answerElementType: 0
   }));
-  return (0, l.jsx)(f, {
+  return (0, a.jsx)(f, {
     className: r,
-    children: t.map((e, t) => (0, l.jsx)(B, {
+    children: t.map((e, t) => (0, a.jsx)(B, {
       className: o()(L.__invalid_answer, d),
       answer: e,
       isFirstAnswer: 0 === t,
@@ -185,7 +185,7 @@ function B(e) {
     className: t,
     answer: n,
     children: s,
-    hasSelectedAnyAnswer: a,
+    hasSelectedAnyAnswer: l,
     isFirstAnswer: r,
     elementType: u
   } = e, {
@@ -201,21 +201,21 @@ function B(e) {
   switch (u) {
     case 0:
     case 3:
-      return (0, l.jsx)("li", {
+      return (0, a.jsx)("li", {
         className: o()(t, f),
         children: s
       });
     case 1:
-      return (0, l.jsx)(j, {
+      return (0, a.jsx)(j, {
         className: o()(t, f),
         onClick: _,
         isSelected: E,
-        hasSelectedAnyAnswer: a,
+        hasSelectedAnyAnswer: l,
         isFirstAnswer: r,
         children: s
       });
     case 2:
-      return (0, l.jsx)(U, {
+      return (0, a.jsx)(U, {
         className: o()(t, f),
         onClick: _,
         isSelected: E,
@@ -230,8 +230,8 @@ function G(e) {
   let {
     attachment: n,
     className: s
-  } = e, a = (0, C.useIsWindowFocused)(), i = T.GifAutoPlay.useSetting();
-  return (0, l.jsx)(I.default, {
+  } = e, l = (0, C.useIsWindowFocused)(), i = T.GifAutoPlay.useSetting();
+  return (0, a.jsx)(I.default, {
     className: s,
     imageClassName: L.attachmentImage,
     src: null != n.proxy_url && "" !== n.proxy_url ? n.proxy_url : n.url,
@@ -240,7 +240,7 @@ function G(e) {
     width: 212,
     height: 212,
     autoPlay: i,
-    shouldAnimate: a,
+    shouldAnimate: l,
     shouldRenderAccessory: !1
   })
 }
@@ -250,24 +250,24 @@ function F(e) {
   let {
     className: n,
     emoji: s
-  } = e, a = (0, d.useStateFromStores)([m.default], () => {
+  } = e, l = (0, d.useStateFromStores)([m.default], () => {
     var e;
     return m.default.getCustomEmojiById(null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : "")
-  }, [s.id]), i = (null == s ? void 0 : s.name) !== "" ? s.name : null == a ? void 0 : a.name;
-  return (0, l.jsx)(f.default, {
+  }, [s.id]), i = (null == s ? void 0 : s.name) !== "" ? s.name : null == l ? void 0 : l.name;
+  return (0, a.jsx)(f.default, {
     className: n,
     emojiId: null == s ? void 0 : s.id,
     emojiName: null == s ? void 0 : s.name,
     alt: i,
-    animated: null !== (t = null == a ? void 0 : a.animated) && void 0 !== t && t
+    animated: null !== (t = null == l ? void 0 : l.animated) && void 0 !== t && t
   })
 }
 
 function k(e, t) {
-  return null != e ? (0, l.jsx)("div", {
+  return null != e ? (0, a.jsx)("div", {
     className: e,
     children: t
-  }) : (0, l.jsx)(l.Fragment, {
+  }) : (0, a.jsx)(a.Fragment, {
     children: t
   })
 }
@@ -277,7 +277,7 @@ function w(e) {
     media: t,
     containerClassName: n,
     attachmentClassName: s,
-    emojiClassName: a,
+    emojiClassName: l,
     fallback: i
   } = e, {
     message: r
@@ -287,15 +287,15 @@ function w(e) {
       var n;
       return e.id === (null === (n = t.attachmentIds) || void 0 === n ? void 0 : n[0])
     });
-    if (null != e) return k(n, (0, l.jsx)(G, {
+    if (null != e) return k(n, (0, a.jsx)(G, {
       className: s,
       attachment: e
     }))
   }
-  return null != t.emoji ? k(n, (0, l.jsx)(F, {
-    className: a,
+  return null != t.emoji ? k(n, (0, a.jsx)(F, {
+    className: l,
     emoji: t.emoji
-  })) : void 0 !== i ? (0, l.jsx)(l.Fragment, {
+  })) : void 0 !== i ? (0, a.jsx)(a.Fragment, {
     children: i
   }) : null
 }
@@ -305,7 +305,7 @@ function H(e) {
     isVictor: t,
     isExpired: n,
     size: s,
-    className: a
+    className: l
   } = e, {
     color: i,
     backgroundColor: r
@@ -328,10 +328,10 @@ function H(e) {
     color: (0, E.getColor)(O.Color.BRAND_500),
     backgroundColor: (0, E.getColor)(O.Color.WHITE_500)
   }));
-  return (0, l.jsx)(h.default, {
+  return (0, a.jsx)(h.default, {
     width: s,
     height: s,
-    className: a,
+    className: l,
     color: i,
     backgroundColor: r,
     "aria-hidden": !0
@@ -343,18 +343,18 @@ function V(e) {
     isSelected: t,
     size: n,
     className: s
-  } = e, a = {
+  } = e, l = {
     width: n,
     height: n,
     background: L.radioBackground,
     "aria-hidden": !0
   };
-  return t ? (0, l.jsx)(S.default, {
-    ...a,
+  return t ? (0, a.jsx)(S.default, {
+    ...l,
     foreground: L.radioForeground,
     className: s
-  }) : (0, l.jsx)(N.default, {
-    ...a,
+  }) : (0, a.jsx)(N.default, {
+    ...l,
     className: s
   })
 }
@@ -364,8 +364,8 @@ function Y(e) {
     isSelected: t,
     size: n,
     className: s
-  } = e, a = .85 * n;
-  return (0, l.jsx)("div", {
+  } = e, l = .85 * n;
+  return (0, a.jsx)("div", {
     className: o()(L.checkbox, {
       [L.checkboxSelected]: t
     }, s),
@@ -374,10 +374,10 @@ function Y(e) {
       height: n
     },
     "aria-hidden": !0,
-    children: t && (0, l.jsx)(p.default, {
-      width: a,
-      height: a,
+    children: t && (0, a.jsx)(p.default, {
+      width: l,
+      height: l,
       color: (0, E.getColor)(O.Color.WHITE_500)
     })
   })
-}(a = s || (s = {}))[a.LIST_ITEM = 0] = "LIST_ITEM", a[a.RADIO = 1] = "RADIO", a[a.CHECKBOX = 2] = "CHECKBOX", a[a.LIST_ITEM_BUTTON = 3] = "LIST_ITEM_BUTTON"
+}(l = s || (s = {}))[l.LIST_ITEM = 0] = "LIST_ITEM", l[l.RADIO = 1] = "RADIO", l[l.CHECKBOX = 2] = "CHECKBOX", l[l.LIST_ITEM_BUTTON = 3] = "LIST_ITEM_BUTTON"

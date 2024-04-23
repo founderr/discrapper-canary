@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var s = n("735250");
 n("470079");
-var a = n("913527"),
-  l = n.n(a),
+var l = n("913527"),
+  a = n.n(l),
   i = n("442837"),
   r = n("481060"),
   o = n("777861"),
@@ -17,14 +17,14 @@ var a = n("913527"),
   f = n("689938");
 
 function E(e) {
-  let [t, n, a] = (0, i.useStateFromStoresArray)([u.default], () => [u.default.isMuted(e.id), u.default.getMuteConfig(e.id), u.default.hasJoined(e.id)]), E = (0, o.useMutedUntilText)(n);
+  let [t, n, l] = (0, i.useStateFromStoresArray)([u.default], () => [u.default.isMuted(e.id), u.default.getMuteConfig(e.id), u.default.hasJoined(e.id)]), E = (0, o.useMutedUntilText)(n);
 
   function _(t) {
     d.default.setNotificationSettings(e, {
       muted: t
     })
   }
-  return a ? t ? (0, s.jsx)(r.MenuItem, {
+  return l ? t ? (0, s.jsx)(r.MenuItem, {
     id: "unmute-channel",
     label: e.isForumPost() ? f.default.Messages.UNMUTE_FORUM_POST : f.default.Messages.UNMUTE_THREAD,
     subtext: E,
@@ -36,13 +36,13 @@ function E(e) {
     children: (0, c.getMuteTimes)().map(t => {
       let {
         value: n,
-        label: a
+        label: l
       } = t;
       return (0, s.jsx)(r.MenuItem, {
         id: "".concat(n),
-        label: a,
+        label: l,
         action: () => (function(t) {
-          let n = t > 0 ? l()().add(t, "second").toISOString() : null;
+          let n = t > 0 ? a()().add(t, "second").toISOString() : null;
           d.default.setNotificationSettings(e, {
             muted: !0,
             mute_config: {

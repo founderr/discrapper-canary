@@ -2,8 +2,8 @@
 n.r(t);
 var s = n("735250");
 n("470079");
-var a = n("120356"),
-  l = n.n(a),
+var l = n("120356"),
+  a = n.n(l),
   i = n("442837"),
   r = n("774867"),
   o = n("481060"),
@@ -33,7 +33,7 @@ function L(e) {
   let {
     containerSize: t,
     onClick: n,
-    children: a
+    children: l
   } = e;
   return "xs" === t ? (0, s.jsx)(o.Clickable, {
     className: v.learnMoreLink,
@@ -42,24 +42,24 @@ function L(e) {
     children: (0, s.jsx)(o.Text, {
       variant: "text-sm/medium",
       color: "text-link",
-      children: a
+      children: l
     })
   }) : (0, s.jsx)(o.Button, {
     wrapperClassName: v.ctaButtonWrapper,
     color: o.ButtonColors.PRIMARY,
     onClick: n,
-    children: a
+    children: l
   })
 }
 t.default = e => {
-  var t, n, a;
+  var t, n, l;
   let {
     quest: D,
     location: P,
     size: y,
     isFocused: U,
     isQuestExpired: j
-  } = e, b = (null === (t = D.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, B = (null === (n = D.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, G = (0, N.hasQuestCollectibleRewards)(D.config), F = (null === (a = D.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null, k = B && !F && P !== h.QuestContent.QUESTS_EMBED, w = (0, i.useStateFromStores)([d.default], () => d.default.useReducedMotion), H = O(b, B, F, G), V = B ? R.default.Messages.QUESTS_IN_PROGRESS_TOOLTIP : R.default.Messages.QUESTS_ACCEPT_TOOLTIP, Y = (0, A.useHandleClaimQuestsReward)({
+  } = e, b = (null === (t = D.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, B = (null === (n = D.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, G = (0, N.hasQuestCollectibleRewards)(D.config), F = (null === (l = D.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, k = B && !F && P !== h.QuestContent.QUESTS_EMBED, w = (0, i.useStateFromStores)([d.default], () => d.default.useReducedMotion), H = O(b, B, F, G), V = B ? R.default.Messages.QUESTS_IN_PROGRESS_TOOLTIP : R.default.Messages.QUESTS_ACCEPT_TOOLTIP, Y = (0, A.useHandleClaimQuestsReward)({
     quest: D,
     location: P
   }), K = B && !b, W = (0, i.useStateFromStores)([p.default], () => p.default.isEnrolling(D.id)), z = () => {
@@ -70,7 +70,7 @@ t.default = e => {
     Y()
   }, Q = (0, i.useStateFromStores)([c.default], () => c.default.locale), q = P === h.QuestContent.QUESTS_EMBED, Z = P === h.QuestContent.QUEST_INVENTORY_CARD, X = Z && G, J = j && !b, $ = (0, s.jsx)(C.default, {
     autoplay: U,
-    className: l()(v.gridImg, {
+    className: a()(v.gridImg, {
       [v.questRewardGiftInventory]: Z && "lg" === y,
       [v.questRewardEmbed]: q && "lg" === y,
       [v.questRewardEmbedSm]: "sm" === y,
@@ -81,7 +81,7 @@ t.default = e => {
     questContent: P
   });
   return (0, s.jsxs)("div", {
-    className: l()(v.outerContainer, {
+    className: a()(v.outerContainer, {
       [v.outerContainerSm]: "sm" === y,
       [v.outerContainerXs]: "xs" === y,
       [v.outerContainerNoProgress]: !k
@@ -105,7 +105,7 @@ t.default = e => {
         }) : $]
       })
     }), (0, s.jsxs)("div", {
-      className: l()(v.gridText, v.taskDetails),
+      className: a()(v.gridText, v.taskDetails),
       children: [(0, s.jsx)(o.Text, {
         variant: x(P, y, B),
         className: v.taskInstructions,
@@ -119,7 +119,7 @@ t.default = e => {
         variant: "lg" === y ? "text-sm/medium" : "text-xs/medium",
         color: "text-muted",
         children: function(e) {
-          var t, n, s, a, l, i;
+          var t, n, s, l, a, i;
           let {
             quest: r,
             locale: o,
@@ -134,9 +134,9 @@ t.default = e => {
           if (c) {
             let e = m ? (0, N.getRewardCodeQuestReward)({
                 quest: r,
-                idx: null === (a = r.userStatus) || void 0 === a ? void 0 : a.claimedTier
+                idx: null === (l = r.userStatus) || void 0 === l ? void 0 : l.claimedTier
               }) : null,
-              t = null !== (l = null == e ? void 0 : e.messages.nameWithArticle) && void 0 !== l ? l : null;
+              t = null !== (a = null == e ? void 0 : e.messages.nameWithArticle) && void 0 !== a ? a : null;
             return null != t ? R.default.Messages.QUEST_REWARD_COMPLETED_CLAIMED.format({
               reward: t,
               date: f
@@ -171,7 +171,7 @@ t.default = e => {
         })
       })]
     }), (0, s.jsxs)("div", {
-      className: l()(v.ctaButtonContainer, v.gridCtaButtons),
+      className: a()(v.ctaButtonContainer, v.gridCtaButtons),
       children: [!Z && (0, s.jsx)(L, {
         containerSize: y,
         onClick: () => {

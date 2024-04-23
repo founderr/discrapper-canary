@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   makeTextChatNotification: function() {
-    return w
+    return V
   },
   shouldNotify: function() {
     return v
@@ -40,8 +40,8 @@ var r = n("569471"),
   p = n("594174"),
   y = n("630388"),
   O = n("5192"),
-  M = n("352736"),
-  m = n("51144"),
+  m = n("352736"),
+  M = n("51144"),
   D = n("981631"),
   R = n("124368"),
   G = n("689938");
@@ -111,7 +111,7 @@ function F(e, t) {
 }
 let P = (e, t, n) => "".concat(e, " (").concat((0, l.computeChannelName)(t, p.default, g.default, !0)).concat(null != n ? ", ".concat((0, l.computeChannelName)(n, p.default, g.default)) : "", ")");
 
-function V(e, t, n, l) {
+function w(e, t, n, l) {
   switch (e.type) {
     case D.ChannelTypes.GUILD_ANNOUNCEMENT:
     case D.ChannelTypes.GUILD_TEXT:
@@ -124,7 +124,7 @@ function V(e, t, n, l) {
   }
 }
 
-function w(e, t, n) {
+function V(e, t, n) {
   var i;
   let u;
   let d = O.default.getName(e.getGuildId(), e.id, n),
@@ -143,20 +143,20 @@ function w(e, t, n) {
       !(e.isManaged() && n.bot && r === (0, l.computeChannelName)(e, p.default, g.default)) && (r = "".concat(r, " (").concat((0, l.computeChannelName)(e, p.default, g.default, !0), ")"))
   }
   let T = t.content;
-  if ((0, o.default)(t) && null == (T = M.default.stringify(t, e))) throw new a.default("NotificationTextUtils").warn("SystemMessageUtils.stringify(...) could not convert", t), Error("failed to stringify system message");
+  if ((0, o.default)(t) && null == (T = m.default.stringify(t, e))) throw new a.default("NotificationTextUtils").warn("SystemMessageUtils.stringify(...) could not convert", t), Error("failed to stringify system message");
   let _ = null !== (i = t.sticker_items) && void 0 !== i ? i : t.stickers;
-  return 0 === (u = null != t.activity && null != t.application ? t.activity.type === D.ActivityActionTypes.JOIN ? V(e, G.default.Messages.NOTIFICATION_MESSAGE_CREATE_GUILD_ACTIVITY_JOIN, G.default.Messages.NOTIFICATION_MESSAGE_CREATE_GROUP_DM_ACTIVITY_JOIN, G.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN).format({
+  return 0 === (u = null != t.activity && null != t.application ? t.activity.type === D.ActivityActionTypes.JOIN ? w(e, G.default.Messages.NOTIFICATION_MESSAGE_CREATE_GUILD_ACTIVITY_JOIN, G.default.Messages.NOTIFICATION_MESSAGE_CREATE_GROUP_DM_ACTIVITY_JOIN, G.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN).format({
     user: d,
     game: t.application.name
-  }) : t.activity.type === D.ActivityActionTypes.JOIN_REQUEST ? V(e, G.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN_REQUEST, G.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN_REQUEST, G.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN_REQUEST).format({
+  }) : t.activity.type === D.ActivityActionTypes.JOIN_REQUEST ? w(e, G.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN_REQUEST, G.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN_REQUEST, G.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN_REQUEST).format({
     user: d,
     game: t.application.name
-  }) : "" : null != t.activity && t.activity.type === D.ActivityActionTypes.LISTEN ? V(e, G.default.Messages.NOTIFICATION_MESSAGE_CREATE_GUILD_ACTIVITY_LISTEN, G.default.Messages.NOTIFICATION_MESSAGE_CREATE_GROUP_DM_ACTIVITY_LISTEN, G.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_LISTEN).format({
+  }) : "" : null != t.activity && t.activity.type === D.ActivityActionTypes.LISTEN ? w(e, G.default.Messages.NOTIFICATION_MESSAGE_CREATE_GUILD_ACTIVITY_LISTEN, G.default.Messages.NOTIFICATION_MESSAGE_CREATE_GROUP_DM_ACTIVITY_LISTEN, G.default.Messages.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_LISTEN).format({
     user: d
   }) : null != _ && _.length > 0 ? G.default.Messages.STICKER_NOTIFICATION_BODY.format({
     stickerName: _[0].name
   }) : t.type === D.MessageTypes.PREMIUM_REFERRAL ? G.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_BODY_SHORT.format({
-    username: m.default.getName(n)
+    username: M.default.getName(n)
   }) : null != t.poll ? G.default.Messages.POLL_SENT_NOTIFICATION.format({
     question: t.poll.question.text
   }) : s.default.unparse(T, e.id, !0)).length && (u = function(e) {

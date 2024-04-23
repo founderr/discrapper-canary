@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("735250"),
-  a = n("470079"),
-  l = n("204097"),
+  l = n("470079"),
+  a = n("204097"),
   i = n("80181"),
   r = n("952265"),
   o = n("481060"),
@@ -25,7 +25,7 @@ var s = n("735250"),
 
 function S(e) {
   var t;
-  let a = (0, I.isDismissible)(e.questContent);
+  let l = (0, I.isDismissible)(e.questContent);
   return (0, s.jsxs)(o.Menu, {
     variant: "fixed",
     onSelect: () => {
@@ -61,7 +61,7 @@ function S(e) {
             questContentCTA: m.QuestContentCTA.CONTEXT_MENU_COPY_LINK
           }), (0, E.copy)((0, I.getQuestUrl)(e.quest.id))
         },
-        icon: l.CopyIcon
+        icon: a.CopyIcon
       })]
     }, "major-actions"), (0, s.jsxs)(o.MenuGroup, {
       children: [!e.hideLearnMore && (0, s.jsx)(o.MenuItem, {
@@ -93,7 +93,7 @@ function S(e) {
             })
           })
         }
-      }), a && (0, s.jsx)(o.MenuItem, {
+      }), l && (0, s.jsx)(o.MenuItem, {
         id: "hide-entrypoint",
         label: N.default.Messages.QUESTS_HIDE_THIS,
         action: () => {
@@ -134,12 +134,12 @@ function C(e) {
   let {
     children: t,
     onOpen: n,
-    onClose: l,
+    onClose: a,
     preventIdle: i,
     quest: r,
     questContent: u,
     ...d
-  } = e, c = a.useCallback(() => {
+  } = e, c = l.useCallback(() => {
     (0, m.trackQuestContentClicked)({
       questId: r.id,
       questContent: u,
@@ -148,7 +148,7 @@ function C(e) {
   }, [n, r, u]);
   return (0, s.jsx)(o.Popout, {
     onRequestOpen: c,
-    onRequestClose: l,
+    onRequestClose: a,
     renderPopout: e => {
       let {
         closePopout: t

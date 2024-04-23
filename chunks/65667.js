@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var a = n("120356"),
-  l = n.n(a),
+var l = n("120356"),
+  a = n.n(l),
   i = n("481060"),
   r = n("739566"),
   o = n("467679"),
@@ -23,8 +23,8 @@ function T(e) {
   let {
     message: t,
     compact: n,
-    usernameHook: a
-  } = e, T = (0, r.default)(t), I = a(T), {
+    usernameHook: l
+  } = e, T = (0, r.default)(t), I = l(T), {
     avatarSrc: p,
     eventHandlers: {
       onMouseEnter: h,
@@ -41,7 +41,7 @@ function T(e) {
     onMouseEnter: h,
     onMouseLeave: N,
     children: (0, s.jsx)(d.default, {
-      className: l()(m.mainContainer, {
+      className: a()(m.mainContainer, {
         [m.compact]: n
       }),
       iconNode: n ? null : (0, s.jsx)(c.AutomodAvatar, {
@@ -50,13 +50,13 @@ function T(e) {
       iconContainerClassName: m.iconContainer,
       compact: n,
       children: (0, s.jsxs)("div", {
-        className: l()(m.content, {
+        className: a()(m.content, {
           [m.compact]: n
         }),
         children: [(0, s.jsx)(u.BaseMessageHeader, {
           message: t,
           messageClassname: m.spanCorrection,
-          className: l()(m.usernameContainer, m.spanCorrection, {
+          className: a()(m.usernameContainer, m.spanCorrection, {
             [m.compact]: n
           }),
           username: (0, s.jsxs)("div", {
@@ -75,7 +75,7 @@ function T(e) {
           compact: n,
           showTimestamp: !0
         }), (0, s.jsx)("div", {
-          className: l()(m.__invalid_messageContent, {
+          className: a()(m.__invalid_messageContent, {
             [m.compact]: n
           }),
           children: t.type === f.MessageTypes.GUILD_INCIDENT_ALERT_MODE_ENABLED ? _.default.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_SYSTEM_MESSAGE_SHORT.format({

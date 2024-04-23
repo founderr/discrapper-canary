@@ -2,10 +2,10 @@
 s.r(t);
 var a = s("735250");
 s("470079");
-var i = s("120356"),
-  r = s.n(i),
-  l = s("780384"),
-  n = s("481060"),
+var r = s("120356"),
+  i = s.n(r),
+  n = s("780384"),
+  l = s("481060"),
   o = s("410030"),
   u = s("197115"),
   d = s("474936"),
@@ -15,19 +15,19 @@ t.default = e => {
   let {
     className: t,
     forceWhite: s,
-    giftMessage: i,
+    giftMessage: r,
     subscriptionTier: E,
-    ...C
-  } = e, f = (0, o.default)(), T = (0, l.isThemeDark)(f) || s, I = T ? n.ButtonColors.WHITE : n.ButtonColors.BRAND, R = E === d.PremiumSubscriptionSKUs.TIER_0 ? c.default.Messages.GIFT_NITRO_TIER_0 : c.default.Messages.GIFT_NITRO;
+    ...T
+  } = e, I = (0, o.default)(), R = (0, n.isThemeDark)(I) || s, f = R ? l.ButtonColors.WHITE : l.ButtonColors.BRAND, S = E === d.PremiumSubscriptionSKUs.TIER_0 ? c.default.Messages.GIFT_NITRO_TIER_0 : c.default.Messages.GIFT_NITRO;
   return (0, a.jsx)(u.default, {
     isGift: !0,
-    color: I,
-    look: n.ButtonLooks.OUTLINED,
-    hover: n.ButtonHovers.BRAND,
-    buttonText: R,
-    giftMessage: i,
-    className: r()(t, T ? _.buttonWhite : _.buttonBrand),
+    color: f,
+    look: l.ButtonLooks.OUTLINED,
+    hover: l.ButtonHovers.BRAND,
+    buttonText: S,
+    giftMessage: r,
+    className: i()(t, R ? _.buttonWhite : _.buttonBrand),
     subscriptionTier: E,
-    ...C
+    ...T
   })
 }

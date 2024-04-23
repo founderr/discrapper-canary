@@ -8,9 +8,9 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("735250"),
-  a = n("470079"),
-  l = n("913527"),
-  i = n.n(l),
+  l = n("470079"),
+  a = n("913527"),
+  i = n.n(a),
   r = n("613828"),
   o = n("442837"),
   u = n("481060"),
@@ -62,8 +62,8 @@ var s = n("735250"),
   et = n("55563"),
   en = n("695103"),
   es = n("933429"),
-  ea = n("285952"),
-  el = n("466111"),
+  el = n("285952"),
+  ea = n("466111"),
   ei = n("644766"),
   er = n("626135"),
   eo = n("63063"),
@@ -106,8 +106,8 @@ function eN(e) {
     untilAtLeast: i()(e)
   } : void 0)
 }
-let eS = a.memo(function() {
-  var e, t, l;
+let eS = l.memo(function() {
+  var e, t, a;
   let _ = (0, o.useStateFromStores)([ee.default], () => ee.default.getCurrentUser()),
     g = (0, o.useStateFromStores)([$.default], () => $.default.getGuildId()),
     ec = (0, o.useStateFromStores)([es.default], () => es.default.getNotice()),
@@ -117,14 +117,14 @@ let eS = a.memo(function() {
     } = (0, M.default)(),
     eA = null == ec ? void 0 : ec.type,
     eg = (0, b.useShowMemberVerificationGate)(g);
-  a.useEffect(() => {
+  l.useEffect(() => {
     null != eA && ! function(e, t) {
       let n = {
         notice_type: e
       };
       null != t && (n.guild_id = t), er.default.track(ef.AnalyticEvents.APP_NOTICE_VIEWED, n)
     }(eA, g)
-  }, [eA, g]), a.useEffect(() => {
+  }, [eA, g]), l.useEffect(() => {
     if (null != ec && ec.type === ef.NoticeTypes.SURVEY && null != ec.metadata) {
       let {
         metadata: e
@@ -379,7 +379,7 @@ let eS = a.memo(function() {
         children: [(0, s.jsx)(ei.NoticeCloseButton, {
           onClick: () => f.dismiss(eb.id),
           noticeType: ef.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK
-        }), (0, s.jsx)(el.default, {
+        }), (0, s.jsx)(ea.default, {
           className: eI.premiumIcon
         }), eT.default.Messages.NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_MESSAGE.format({
           applicationName: eB.name,
@@ -409,17 +409,17 @@ let eS = a.memo(function() {
       let {
         skuId: e,
         applicationId: t
-      } = ec.metadata, n = et.default.get(e), a = R.default.getApplication(t);
-      if (null == n || null == a) return null;
+      } = ec.metadata, n = et.default.get(e), l = R.default.getApplication(t);
+      if (null == n || null == l) return null;
       return (0, s.jsxs)(ei.default, {
         color: ei.NoticeColors.PREMIUM_TIER_1,
         children: [(0, s.jsx)(ei.NoticeCloseButton, {
           onClick: () => eN(),
           noticeType: ef.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL
-        }), (0, s.jsx)(el.default, {
+        }), (0, s.jsx)(ea.default, {
           className: eI.premiumIcon
         }), eT.default.Messages.NOTICE_DETECTED_OFF_PLATFORM_NO_PREMIUM_PERK_MESSAGE.format({
-          applicationName: a.name,
+          applicationName: l.name,
           skuName: n.name
         }), (0, s.jsx)(ei.NoticeButton, {
           children: (0, s.jsx)(r.Link, {
@@ -441,8 +441,8 @@ let eS = a.memo(function() {
       let {
         key: t,
         prompt: n,
-        cta: a,
-        url: l
+        cta: l,
+        url: a
       } = e;
       return (0, s.jsxs)(ei.default, {
         color: ei.NoticeColors.CUSTOM,
@@ -454,9 +454,9 @@ let eS = a.memo(function() {
         }), n, (0, s.jsx)(ei.PrimaryCTANoticeButton, {
           noticeType: ef.NoticeTypes.SURVEY,
           onClick: () => {
-            window.open(l, "_blank"), (0, N.surveyHide)(t, !1)
+            window.open(a, "_blank"), (0, N.surveyHide)(t, !1)
           },
-          children: a
+          children: l
         })]
       })
     }
@@ -545,8 +545,8 @@ let eS = a.memo(function() {
         children: [(0, s.jsx)(ei.NoticeCloseButton, {
           onClick: () => eN(),
           noticeType: ef.NoticeTypes.DISPATCH_INSTALL_SCRIPT_PROGRESS
-        }), (0, s.jsxs)(ea.default, {
-          justify: ea.default.Justify.CENTER,
+        }), (0, s.jsxs)(el.default, {
+          justify: el.default.Justify.CENTER,
           children: [null != eH ? eT.default.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS_WITH_NAME.format({
             name: "".concat(eH),
             progress: "".concat(ek),
@@ -564,9 +564,9 @@ let eS = a.memo(function() {
       if (null == ec.metadata) return null;
       if (null != en.default.testModeEmbeddedApplicationId) return (0, s.jsx)(ei.default, {
         color: ei.NoticeColors.WARNING,
-        children: (0, s.jsxs)(ea.default, {
-          justify: ea.default.Justify.CENTER,
-          align: ea.default.Align.CENTER,
+        children: (0, s.jsxs)(el.default, {
+          justify: el.default.Justify.CENTER,
+          align: el.default.Align.CENTER,
           children: [(0, s.jsx)("div", {
             children: eT.default.Messages.NOTICE_EMBEDDED_APPLICATION_TEST_MODE.format({
               applicationName: ec.metadata.applicationName
@@ -579,9 +579,9 @@ let eS = a.memo(function() {
       });
       return (0, s.jsx)(ei.default, {
         color: ei.NoticeColors.WARNING,
-        children: (0, s.jsxs)(ea.default, {
-          justify: ea.default.Justify.CENTER,
-          align: ea.default.Align.CENTER,
+        children: (0, s.jsxs)(el.default, {
+          justify: el.default.Justify.CENTER,
+          align: el.default.Align.CENTER,
           children: [(0, s.jsx)("div", {
             children: eT.default.Messages.NOTICE_APPLICATION_TEST_MODE.format({
               applicationName: ec.metadata.applicationName
@@ -615,7 +615,7 @@ let eS = a.memo(function() {
           onClick: () => {
             Y.default.dismissOutboundPromotionNotice()
           }
-        }), (0, s.jsx)(el.default, {
+        }), (0, s.jsx)(ea.default, {
           className: eI.premiumIcon
         }), eT.default.Messages.OUTBOUND_PROMOTION_NOTICE, (0, s.jsx)(ei.PrimaryCTANoticeButton, {
           noticeType: ef.NoticeTypes.OUTBOUND_PROMOTION,
@@ -636,7 +636,7 @@ let eS = a.memo(function() {
             var e, t;
             eN(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd)
           }
-        }), (0, s.jsx)(el.default, {
+        }), (0, s.jsx)(ea.default, {
           className: eI.premiumIcon
         }), eR === eE.PremiumTypes.TIER_1 ? eT.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_TEXT.format({
           daysLeft: ec.metadata.daysLeft
@@ -747,7 +747,7 @@ let eS = a.memo(function() {
       });
     case ef.NoticeTypes.BACK_TO_PREVIOUS_SCREEN:
       return (0, s.jsx)(G.BackToPreviousScreenNotice, {
-        buttonText: null !== (l = ec.buttonText) && void 0 !== l ? l : eT.default.Messages.GO_BACK,
+        buttonText: null !== (a = ec.buttonText) && void 0 !== a ? a : eT.default.Messages.GO_BACK,
         onGoBack: ec.callback,
         onDismiss: () => eN(),
         showCloseButton: !0

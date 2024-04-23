@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return w
   }
 }), n("47120");
-var s, a, l, i, r = n("735250"),
+var s, l, a, i, r = n("735250"),
   o = n("470079"),
   u = n("120356"),
   d = n.n(u),
@@ -26,7 +26,7 @@ var s, a, l, i, r = n("735250"),
   R = n("981631"),
   v = n("689938"),
   O = n("152209");
-(l = s || (s = {})).ENTER = "enter", l.CONFETTI = "confetti", l.LEAF_PEEL = "leaf_peel", l.LEAF_FALL = "leaf_fall", l.EXIT = "exit";
+(a = s || (s = {})).ENTER = "enter", a.CONFETTI = "confetti", a.LEAF_PEEL = "leaf_peel", a.LEAF_FALL = "leaf_fall", a.EXIT = "exit";
 let x = {
   enter: {
     BEG: 0,
@@ -49,7 +49,7 @@ let x = {
     END: 200
   }
 };
-(i = a || (a = {})).TOP_LEFT = "TOP_LEFT", i.TOP_RIGHT = "TOP_RIGHT", i.BOTTOM_LEFT = "BOTTOM_LEFT", i.BOTTOM_RIGHT = "BOTTOM_RIGHT";
+(i = l || (l = {})).TOP_LEFT = "TOP_LEFT", i.TOP_RIGHT = "TOP_RIGHT", i.BOTTOM_LEFT = "BOTTOM_LEFT", i.BOTTOM_RIGHT = "BOTTOM_RIGHT";
 let L = ["TOP_LEFT", "TOP_RIGHT"],
   D = (0, E.cssValueToNumber)(_.default.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
   P = {
@@ -133,9 +133,9 @@ function k(e) {
     onAnimationComplete: t,
     onClick: n,
     position: s,
-    size: l
+    size: a
   } = e, i = o.useRef(null), [u, E] = o.useState(null), [_] = o.useState(null != s ? s : function() {
-    switch (Math.floor(Math.random() * Object.keys(a).length)) {
+    switch (Math.floor(Math.random() * Object.keys(l).length)) {
       case 0:
         return "TOP_LEFT";
       case 2:
@@ -181,12 +181,12 @@ function k(e) {
           x: 0,
           y: 0
         };
-        let a = y[t].getConfettiPosition(n);
+        let l = y[t].getConfettiPosition(n);
         return {
-          x: s.left + a.x,
-          y: s.top + a.y
+          x: s.left + l.x,
+          y: s.top + l.y
         }
-      }(i.current, _, l);
+      }(i.current, _, a);
       T(t.x, t.y, {
         velocity: {
           type: "static-random",
@@ -201,7 +201,7 @@ function k(e) {
         }
       })
     }
-  }, [T, _, u, l]), o.useEffect(() => {
+  }, [T, _, u, a]), o.useEffect(() => {
     if (g && "leaf_fall" === u) {
       let e = y[_].leafRotationDirection;
       C.createConfetti({
@@ -287,8 +287,8 @@ function w(e) {
   let t, {
       message: n,
       compact: s,
-      guild: a,
-      usernameHook: l,
+      guild: l,
+      usernameHook: a,
       onClickMessage: i
     } = e,
     u = function(e) {
@@ -314,8 +314,8 @@ function w(e) {
     } = o.useContext(m.AccessibilityPreferencesContext),
     L = (0, p.getMessageAuthor)(n),
     D = L.nick,
-    P = l(L);
-  t = null == u || null == a ? d > 1 ? v.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY_HOOK.format({
+    P = a(L);
+  t = null == u || null == l ? d > 1 ? v.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY_HOOK.format({
     username: D,
     usernameHook: P,
     numSubscriptions: d
@@ -326,12 +326,12 @@ function w(e) {
     username: D,
     usernameHook: P,
     numSubscriptions: d,
-    guildName: a.name,
+    guildName: l.name,
     newTierName: (0, M.getTierName)(u)
   }) : v.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_ACHIEVED_TIER_HOOK.format({
     username: D,
     usernameHook: P,
-    guildName: a.name,
+    guildName: l.name,
     newTierName: (0, M.getTierName)(u)
   });
   let y = o.useCallback(() => {

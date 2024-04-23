@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var a = n("934458"),
-  l = n("702346"),
+var l = n("934458"),
+  a = n("702346"),
   i = n("689938"),
   r = n("781401");
 
@@ -16,8 +16,8 @@ function o(e) {
     message: t,
     compact: n
   } = e;
-  return (0, s.jsx)(l.default, {
-    iconNode: (0, s.jsx)(a.default, {
+  return (0, s.jsx)(a.default, {
+    iconNode: (0, s.jsx)(l.default, {
       className: r.icon
     }),
     timestamp: t.timestamp,

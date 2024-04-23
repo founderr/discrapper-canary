@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("733860"), n("653041");
-var s, a, l, i, r = n("392711"),
+var s, l, a, i, r = n("392711"),
   o = n.n(r),
   u = n("442837"),
   d = n("433517"),
@@ -47,20 +47,20 @@ function B(e) {
   null == n && (n = e.channel_id);
   let s = p.default.getChannel(n);
   if (null == s || s.type === M.ChannelTypes.DM || D.guildFilter === M.RecentMentionsFilters.THIS_SERVER && s.getGuildId() !== C.default.getGuildId()) return null;
-  let a = null === (t = e.author) || void 0 === t ? void 0 : t.id,
-    l = I.default.getId();
-  if (null != a && S.default.isBlocked(a) || a === l) return null;
+  let l = null === (t = e.author) || void 0 === t ? void 0 : t.id,
+    a = I.default.getId();
+  if (null != l && S.default.isBlocked(l) || l === a) return null;
   e = b(e);
   let i = !D.everyoneFilter,
     r = !D.roleFilter;
   return (0, _.default)({
     message: e,
-    userId: l,
+    userId: a,
     suppressEveryone: i,
     suppressRoles: r
   }) ? (j && N.default.ackMessageId(s.id) !== e.id && (0, _.default)({
     message: e,
-    userId: l,
+    userId: a,
     suppressEveryone: A.default.isSuppressEveryoneEnabled(s.getGuildId()),
     suppressRoles: A.default.isSuppressRolesEnabled(s.getGuildId())
   }) && (j = !1), e) : null
@@ -91,11 +91,11 @@ function k(e) {
   let n = (e, n) => t[e] !== D[e] && D[e] === n,
     s = n("guildFilter", M.RecentMentionsFilters.THIS_SERVER) || n("everyoneFilter", !1) || n("roleFilter", !1);
   O = {};
-  let a = [];
+  let l = [];
   s && v.forEach(e => {
     let t = B(e);
-    null != t && (a.push(t), O[t.id] = !0)
-  }), 0 === (v = a).length && (P = !1)
+    null != t && (l.push(t), O[t.id] = !0)
+  }), 0 === (v = l).length && (P = !1)
 }
 
 function w() {
@@ -150,12 +150,12 @@ class Y extends(s = u.default.Store) {
     return j
   }
 }
-i = "RecentMentionsStore", (l = "displayName") in(a = Y) ? Object.defineProperty(a, l, {
+i = "RecentMentionsStore", (a = "displayName") in(l = Y) ? Object.defineProperty(l, a, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = i, t.default = new Y(f.default, {
+}) : l[a] = i, t.default = new Y(f.default, {
   LOAD_RECENT_MENTIONS: function(e) {
     let {
       guildId: t
@@ -169,8 +169,8 @@ i = "RecentMentionsStore", (l = "displayName") in(a = Y) ? Object.defineProperty
       hasMoreAfter: t,
       messages: n,
       isAfter: s
-    } = e, a = o().map(n, b);
-    s ? v = v.concat(a) : (v = a, O = {}), o().forEach(a, e => {
+    } = e, l = o().map(n, b);
+    s ? v = v.concat(l) : (v = l, O = {}), o().forEach(l, e => {
       O[e.id] = !0
     }), x = !1, L = t, y = (0, c.now)(), P = !0
   },
@@ -214,9 +214,9 @@ i = "RecentMentionsStore", (l = "displayName") in(a = Y) ? Object.defineProperty
         suppressRoles: !1,
         suppressEveryone: !1
       })) return !1;
-    let a = B(n, t);
-    if (null == a) return !1;
-    (v = v.slice()).unshift(a), O[a.id] = !0
+    let l = B(n, t);
+    if (null == l) return !1;
+    (v = v.slice()).unshift(l), O[l.id] = !0
   },
   MESSAGE_UPDATE: function(e) {
     let t = e.message.id;

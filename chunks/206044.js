@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n("47120");
 var s = n("735250"),
-  a = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  l = n("470079"),
+  a = n("120356"),
+  i = n.n(a),
   r = n("442837"),
   o = n("846519"),
   u = n("481060"),
@@ -25,8 +25,8 @@ let g = e => {
   let {
     quest: t,
     location: n
-  } = e, [l, i] = a.useState(!1), r = a.useRef(new o.Timeout);
-  a.useEffect(() => {
+  } = e, [a, i] = l.useState(!1), r = l.useRef(new o.Timeout);
+  l.useEffect(() => {
     let e = r.current;
     return function() {
       e.stop()
@@ -40,8 +40,8 @@ let g = e => {
     }), (0, _.copy)((0, p.getQuestUrl)(t.id)), i(!0), r.current.start(1e3, () => i(!1))
   };
   return (0, s.jsx)(u.Tooltip, {
-    forceOpen: l,
-    shouldShow: l,
+    forceOpen: a,
+    shouldShow: a,
     color: u.Tooltip.Colors.GREEN,
     text: C.default.Messages.COPY_SUCCESS_1,
     children: () => (0, s.jsx)(u.Button, {
@@ -57,11 +57,11 @@ t.default = e => {
   var t;
   let {
     isFocused: n,
-    isQuestExpired: l,
+    isQuestExpired: a,
     quest: o,
     location: _,
     size: m
-  } = e, M = (0, r.useStateFromStores)([c.default], () => c.default.getState().theme), R = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), v = a.useMemo(() => (0, p.isAssetAnimated)(o.config.assets.hero), [o]), O = a.useRef(null), x = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, L = (0, T.useQuestFormattedDate)(o.config.expiresAt, {
+  } = e, M = (0, r.useStateFromStores)([c.default], () => c.default.getState().theme), R = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), v = l.useMemo(() => (0, p.isAssetAnimated)(o.config.assets.hero), [o]), O = l.useRef(null), x = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, L = (0, T.useQuestFormattedDate)(o.config.expiresAt, {
     year: "numeric",
     month: "long",
     day: "numeric"
@@ -70,7 +70,7 @@ t.default = e => {
     month: "long",
     day: "numeric"
   });
-  a.useEffect(() => {
+  l.useEffect(() => {
     v && null != O.current && (n ? O.current.play() : !n && (O.current.pause(), O.current.currentTime = 0))
   }, [n, v]);
   let P = (0, p.getHeroAssetUrl)(o);
@@ -119,14 +119,14 @@ t.default = e => {
               variant: "text-xs/normal",
               children: x ? C.default.Messages.QUESTS_CLAIM_BY.format({
                 expirationDate: D
-              }) : l ? C.default.Messages.QUESTS_EXPIRED_ON.format({
+              }) : a ? C.default.Messages.QUESTS_EXPIRED_ON.format({
                 expirationDate: L
               }) : C.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
                 expirationDate: L
               })
             })]
           })]
-        }), !l && _ === I.QuestContent.QUEST_INVENTORY_CARD && (0, s.jsx)(g, {
+        }), !a && _ === I.QuestContent.QUEST_INVENTORY_CARD && (0, s.jsx)(g, {
           quest: o,
           location: _
         })]
@@ -135,7 +135,7 @@ t.default = e => {
         quest: o,
         shouldShowDisclosure: !0,
         hideLearnMore: _ === I.QuestContent.QUEST_INVENTORY_CARD,
-        showShareLink: !l && _ === I.QuestContent.QUESTS_EMBED,
+        showShareLink: !a && _ === I.QuestContent.QUESTS_EMBED,
         children: e => (0, s.jsx)(u.Clickable, {
           ...e,
           className: A.submenuWrapper,

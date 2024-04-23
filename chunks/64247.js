@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var a = n("481060"),
-  l = n("438536"),
+var l = n("481060"),
+  a = n("438536"),
   i = n("214906"),
   r = n("346479"),
   o = n("723170"),
@@ -20,24 +20,24 @@ function d(e) {
     onSelect: d,
     navId: c,
     label: f
-  } = e, E = (0, l.default)(t, "Notifications Bell"), _ = (0, i.default)(t), m = (0, o.useThreadNotificationSetting)(t);
-  return (0, s.jsxs)(a.Menu, {
+  } = e, E = (0, a.default)(t, "Notifications Bell"), _ = (0, i.default)(t), m = (0, o.useThreadNotificationSetting)(t);
+  return (0, s.jsxs)(l.Menu, {
     navId: c,
     onClose: n,
     "aria-label": f,
     onSelect: d,
-    children: [(0, s.jsxs)(a.MenuGroup, {
+    children: [(0, s.jsxs)(l.MenuGroup, {
       children: [t.isForumPost() ? E : null, _]
-    }), (0, s.jsx)(a.MenuGroup, {
+    }), (0, s.jsx)(l.MenuGroup, {
       children: (0, u.getThreadNotificationOptions)().map(e => {
         let {
           setting: n,
-          label: l
+          label: a
         } = e;
-        return (0, s.jsx)(a.MenuRadioItem, {
+        return (0, s.jsx)(l.MenuRadioItem, {
           group: "thread-notifications",
           id: "".concat(n),
-          label: l,
+          label: a,
           action: () => r.default.setNotificationSettings(t, {
             flags: n
           }),

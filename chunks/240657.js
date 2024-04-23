@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("735250"),
-  a = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  l = n("470079"),
+  a = n("120356"),
+  i = n.n(a),
   r = n("481060"),
   o = n("741914"),
   u = n("495705"),
@@ -17,10 +17,10 @@ function c(e) {
   let {
     color: t,
     className: n,
-    variant: l,
+    variant: a,
     text: c,
     lineClamp: f
-  } = e, E = (0, r.usePrivateHeadingLevel)(), _ = a.useMemo(() => null == c ? null : (0, o.default)(c, !0, {
+  } = e, E = (0, r.usePrivateHeadingLevel)(), _ = l.useMemo(() => null == c ? null : (0, o.default)(c, !0, {
     allowHeading: null == f,
     allowList: null == f,
     initialHeaderLevel: E
@@ -31,7 +31,7 @@ function c(e) {
       [u.lineClamp1]: 1 === f
     }),
     color: t,
-    variant: l,
+    variant: a,
     lineClamp: f,
     children: _
   })

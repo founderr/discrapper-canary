@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var s = n("735250"),
-  a = n("470079"),
-  l = n("399606"),
+  l = n("470079"),
+  a = n("399606"),
   i = n("846519"),
   r = n("481060"),
   o = n("317632"),
@@ -19,10 +19,10 @@ function E(e) {
   let {
     inboxIconRef: t,
     recentsPopoutShown: n
-  } = e, [E, _] = a.useState(!1), m = (0, l.useStateFromStores)([o.default], () => o.default.getLastUnseenInvite()), T = (0, l.useStateFromStores)([d.default], () => null != m ? d.default.getUser(m.inviter_id) : null);
-  return (a.useEffect(() => {
+  } = e, [E, _] = l.useState(!1), m = (0, a.useStateFromStores)([o.default], () => o.default.getLastUnseenInvite()), T = (0, a.useStateFromStores)([d.default], () => null != m ? d.default.getUser(m.inviter_id) : null);
+  return (l.useEffect(() => {
     n && _(!1)
-  }, [n]), a.useEffect(() => {
+  }, [n]), l.useEffect(() => {
     if (null == m) {
       _(!1);
       return

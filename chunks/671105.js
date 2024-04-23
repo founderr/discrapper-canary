@@ -26,7 +26,7 @@ function l(e, t) {
       var e;
       return null === (e = u.default.settings.guilds) || void 0 === e ? void 0 : e.guilds
     }),
-    s = null != t && null != l ? null === (n = l[e]) || void 0 === n ? void 0 : n.channels[t] : void 0,
-    r = null == s ? void 0 : s.customNotificationSoundConfig;
-  return null != r ? null == r ? void 0 : null === (i = r.notificationSoundPackId) || void 0 === i ? void 0 : i.value : void 0
+    r = null != t && null != l ? null === (n = l[e]) || void 0 === n ? void 0 : n.channels[t] : void 0,
+    s = null == r ? void 0 : r.customNotificationSoundConfig;
+  return null != s ? null == s ? void 0 : null === (i = s.notificationSoundPackId) || void 0 === i ? void 0 : i.value : void 0
 }

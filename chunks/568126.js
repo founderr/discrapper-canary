@@ -2,10 +2,10 @@
 s.r(t);
 var a = s("735250");
 s("470079");
-var i = s("442837"),
-  r = s("481060"),
-  l = s("706454"),
-  n = s("78839"),
+var r = s("442837"),
+  i = s("481060"),
+  n = s("706454"),
+  l = s("78839"),
   o = s("985754"),
   u = s("222727"),
   d = s("474494"),
@@ -14,14 +14,14 @@ var i = s("442837"),
 t.default = function(e) {
   let {
     localizedPricingPromo: t
-  } = e, s = t.countryCode, E = (0, i.useStateFromStores)([l.default], () => l.default.locale);
+  } = e, s = t.countryCode, E = (0, r.useStateFromStores)([n.default], () => n.default.locale);
   (0, u.useTrackLocalizedPricingPromoImpression)(c.AnalyticsSections.SETTINGS_PREMIUM_BANNER, s);
-  let C = (0, i.useStateFromStores)([n.default], () => n.default.getPremiumTypeSubscription()),
+  let T = (0, r.useStateFromStores)([l.default], () => l.default.getPremiumTypeSubscription()),
     {
-      localizedPricingBannerBody: f
+      localizedPricingBannerBody: I
     } = (0, o.getLocalizedPricingBannerStrings)({
       localizedPricingPromo: t,
-      subscription: C,
+      subscription: T,
       forceSingleLine: !0,
       userLocale: E
     });
@@ -32,11 +32,11 @@ t.default = function(e) {
       countryCode: s
     }), (0, a.jsx)("div", {
       className: _.bannerBodyContainer,
-      children: (0, a.jsx)(r.Text, {
+      children: (0, a.jsx)(i.Text, {
         color: "none",
         variant: "text-md/normal",
         className: _.bannerBody,
-        children: f
+        children: I
       })
     })]
   })

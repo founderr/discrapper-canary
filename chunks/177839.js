@@ -1,77 +1,77 @@
 "use strict";
 s.r(t), s("47120");
 var a = s("735250"),
-  i = s("470079"),
-  r = s("120356"),
-  l = s.n(r),
-  n = s("399606"),
+  r = s("470079"),
+  i = s("120356"),
+  n = s.n(i),
+  l = s("399606"),
   o = s("481060"),
   u = s("607070"),
   d = s("100527"),
   c = s("906732"),
   _ = s("66595"),
   E = s("535322"),
-  C = s("477734"),
-  f = s("86813"),
-  T = s("826026"),
-  I = s("626135"),
-  R = s("881100"),
-  S = s("474936"),
-  p = s("981631"),
-  m = s("689938"),
-  A = s("213153");
-let N = (e, t) => t === S.PremiumTypes.TIER_0 ? m.default.Messages.NITRO_MARKETING_BASIC_PERKS : e ? m.default.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : m.default.Messages.PREMIUM_MARKETING_PERKS_TITLE,
-  g = e => {
+  T = s("477734"),
+  I = s("86813"),
+  R = s("826026"),
+  f = s("626135"),
+  S = s("881100"),
+  m = s("474936"),
+  A = s("981631"),
+  N = s("689938"),
+  p = s("213153");
+let g = (e, t) => t === m.PremiumTypes.TIER_0 ? N.default.Messages.NITRO_MARKETING_BASIC_PERKS : e ? N.default.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : N.default.Messages.PREMIUM_MARKETING_PERKS_TITLE,
+  C = e => {
     let {
       isShowingAll: t,
       onClick: s
     } = e;
     return (0, a.jsxs)(o.Clickable, {
       onClick: s,
-      className: A.customButton,
-      children: [t ? m.default.Messages.PREMIUM_MARKETING_PERKS_SEE_LESS : m.default.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL, t ? (0, a.jsx)(T.default, {
-        className: A.arrow
-      }) : (0, a.jsx)(f.default, {
-        className: A.arrow
+      className: p.customButton,
+      children: [t ? N.default.Messages.PREMIUM_MARKETING_PERKS_SEE_LESS : N.default.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL, t ? (0, a.jsx)(R.default, {
+        className: p.arrow
+      }) : (0, a.jsx)(I.default, {
+        className: p.arrow
       })]
     })
   },
-  O = e => {
+  P = e => {
     let {
       title: t,
       description: s,
-      className: i,
-      imageSource: r,
-      imageClassName: n,
+      className: r,
+      imageSource: i,
+      imageClassName: l,
       titleBadge: u,
-      isNew: C = !1,
-      isEarlyAccess: f = !1
+      isNew: T = !1,
+      isEarlyAccess: I = !1
     } = e, {
-      analyticsLocations: T
+      analyticsLocations: R
     } = (0, c.default)(d.default.PREMIUM_MARKETING_PERK_CARD);
     return (0, a.jsx)(c.AnalyticsLocationProvider, {
-      value: T,
+      value: R,
       children: (0, a.jsxs)("div", {
-        className: l()(A.perkCard, i),
-        children: [C ? (0, a.jsx)(E.default, {
-          className: A.perkCardNewBadge,
+        className: n()(p.perkCard, r),
+        children: [T ? (0, a.jsx)(E.default, {
+          className: p.perkCardNewBadge,
           shouldInheritBackgroundColor: !0,
           shouldInheritTextColor: !0
-        }) : null, f ? (0, a.jsx)(_.default, {
-          className: A.perkCardEarlyAccessBadge
+        }) : null, I ? (0, a.jsx)(_.default, {
+          className: p.perkCardEarlyAccessBadge
         }) : null, (0, a.jsx)("img", {
-          src: r,
+          src: i,
           alt: "",
-          className: l()(n, A.perksCardArt)
+          className: n()(l, p.perksCardArt)
         }), (0, a.jsxs)("div", {
           children: [(0, a.jsxs)(o.Heading, {
             variant: "heading-lg/extrabold",
-            className: A.perkCardHeading,
+            className: p.perkCardHeading,
             children: [t, " ", u]
           }), (0, a.jsx)(o.Text, {
             variant: "text-sm/normal",
-            className: A.perkCardDescription,
-            children: "function" == typeof s ? s(T) : s
+            className: p.perkCardDescription,
+            children: "function" == typeof s ? s(R) : s
           })]
         })]
       })
@@ -80,57 +80,57 @@ let N = (e, t) => t === S.PremiumTypes.TIER_0 ? m.default.Messages.NITRO_MARKETI
 t.default = e => {
   let t, {
       className: s,
-      selectedPremiumType: r,
+      selectedPremiumType: i,
       isSubscriberNitroHome: d = !1
     } = e,
-    [_, E] = i.useState(!1),
-    f = (0, R.usePerkCards)({
-      styles: A,
-      selectedPremiumType: r
+    [_, E] = r.useState(!1),
+    I = (0, S.usePerkCards)({
+      styles: p,
+      selectedPremiumType: i
     }),
-    T = (0, n.useStateFromStores)([u.default], () => u.default.useReducedMotion),
+    R = (0, l.useStateFromStores)([u.default], () => u.default.useReducedMotion),
     {
-      analyticsLocations: m
+      analyticsLocations: N
     } = (0, c.default)(),
-    P = (0, C.useIsRemixANitroPerk)();
-  return t = r !== S.PremiumTypes.TIER_0 ? [f.emoji, f.streaming, f.upload, f.customAppIcons, f.soundboard, P ? f.remix : f.videoBackground, f.superReactions, f.stickersPerkDiscoverability, f.badgeAlt] : [f.emoji, f.upload, f.customAppIcons, f.superReactions, f.stickersPerkDiscoverability, f.badgeAlt], (0, a.jsxs)("div", {
-    className: l()(A.perksContainer, s, {
-      [A.partiallyHidden]: d && !_,
-      [A.subscriberNitroHome]: d,
-      [A.reducedMotion]: T
+    O = (0, T.useIsRemixANitroPerk)();
+  return t = i !== m.PremiumTypes.TIER_0 ? [I.emoji, I.streaming, I.upload, I.customAppIcons, I.soundboard, O ? I.remix : I.videoBackground, I.superReactions, I.stickersPerkDiscoverability, I.badgeAlt] : [I.emoji, I.upload, I.customAppIcons, I.superReactions, I.stickersPerkDiscoverability, I.badgeAlt], (0, a.jsxs)("div", {
+    className: n()(p.perksContainer, s, {
+      [p.partiallyHidden]: d && !_,
+      [p.subscriberNitroHome]: d,
+      [p.reducedMotion]: R
     }),
     children: [(0, a.jsx)(o.Heading, {
       variant: "heading-xxl/extrabold",
-      className: l()({
-        [A.perksTitle]: null == r,
-        [A.perksTitleStackedCards]: null != r
+      className: n()({
+        [p.perksTitle]: null == i,
+        [p.perksTitleStackedCards]: null != i
       }),
-      children: N(d, r)
+      children: g(d, i)
     }), (0, a.jsx)("div", {
-      className: l()(A.perkCardContainer, {
-        [A.perkCardContainerExpanded]: _
+      className: n()(p.perkCardContainer, {
+        [p.perkCardContainerExpanded]: _
       }),
-      children: t.map(e => null != e && (0, a.jsx)(O, {
+      children: t.map(e => null != e && (0, a.jsx)(P, {
         ...e
       }, e.title))
     }), d && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)("div", {
-        className: l()({
-          [A.sizeGizmo]: !_,
-          [A.sizeGizmoExpanded]: _
+        className: n()({
+          [p.sizeGizmo]: !_,
+          [p.sizeGizmoExpanded]: _
         }),
-        children: (0, a.jsx)(g, {
+        children: (0, a.jsx)(C, {
           onClick: () => {
-            I.default.track(p.AnalyticEvents.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED, {
-              location_stack: m,
+            f.default.track(A.AnalyticEvents.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED, {
+              location_stack: N,
               was_expanded: _
             }), E(!_)
           },
           isShowingAll: _
         })
       }), (0, a.jsx)("div", {
-        className: l()(A.cover, {
-          [A.hidden]: _
+        className: n()(p.cover, {
+          [p.hidden]: _
         })
       })]
     })]

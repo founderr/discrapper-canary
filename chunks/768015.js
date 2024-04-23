@@ -1,31 +1,31 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return s
+    return n
   }
 });
 var l = a("626135"),
-  n = a("981631");
+  s = a("981631");
 
-function s(e) {
+function n(e) {
   let {
     problem: t,
     channel: a,
-    feedback: s,
+    feedback: n,
     activityApplication: i,
     analyticsData: c,
-    location: o,
-    rating: d = null
+    location: d,
+    rating: o = null
   } = e;
-  l.default.track(n.AnalyticEvents.ACTIVITY_REPORT_PROBLEM, {
+  l.default.track(s.AnalyticEvents.ACTIVITY_REPORT_PROBLEM, {
     reason: t,
     guild_id: a.getGuildId(),
     channel_id: a.id,
     application_id: null == i ? void 0 : i.id,
     application_name: null == i ? void 0 : i.name,
-    location: o,
-    rating: d,
-    feedback: s,
+    location: d,
+    rating: o,
+    feedback: n,
     ...c
   })
 }

@@ -11,8 +11,8 @@ n.r(t), n.d(t, {
   }
 }), n("411104"), n("789020");
 var s = n("570140"),
-  a = n("566620"),
-  l = n("728345"),
+  l = n("566620"),
+  a = n("728345"),
   i = n("812206"),
   r = n("973616"),
   o = n("630388"),
@@ -25,9 +25,9 @@ async function f(e, t) {
     type: "DEVELOPER_TEST_MODE_AUTHORIZATION_START"
   });
   try {
-    if (!await (0, a.validateTestMode)(e)) throw Error("Do not have access!");
+    if (!await (0, l.validateTestMode)(e)) throw Error("Do not have access!");
     let n = i.default.getApplication(e);
-    null == n && (n = r.default.createFromServer(await l.default.fetchApplication(e)));
+    null == n && (n = r.default.createFromServer(await a.default.fetchApplication(e)));
     let f = (0, o.hasFlag)(n.flags, c.ApplicationFlags.EMBEDDED);
     if (f && (null == t || !u.default.URL_REGEX.test(t))) throw Error("Invalid Origin URL for embedded application");
     return !f && d.createTestModeLibraryApplications(n), s.default.dispatch({

@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("735250"),
-  a = n("470079"),
-  l = n("481060"),
+  l = n("470079"),
+  a = n("481060"),
   i = n("836946"),
   r = n("808268"),
   o = n("740727"),
@@ -17,12 +17,12 @@ let c = e => {
       item: t,
       closePopout: n
     } = e;
-    return (0, s.jsx)(l.Menu, {
+    return (0, s.jsx)(a.Menu, {
       navId: "notification-actions",
       onClose: n,
       onSelect: n,
       "aria-label": d.default.Messages.RECENTS_NOTIFICATIONS_MENU_LABEL,
-      children: (0, s.jsx)(l.MenuItem, {
+      children: (0, s.jsx)(a.MenuItem, {
         id: "delete",
         label: d.default.Messages.DELETE,
         icon: o.default,
@@ -32,18 +32,18 @@ let c = e => {
       })
     })
   },
-  f = a.memo(function(e) {
+  f = l.memo(function(e) {
     let {
       item: t
     } = e;
-    return (0, s.jsx)(l.Popout, {
+    return (0, s.jsx)(a.Popout, {
       renderPopout: e => (0, s.jsx)(c, {
         ...e,
         item: t
       }),
       position: "bottom",
       align: "right",
-      animation: l.Popout.Animation.NONE,
+      animation: a.Popout.Animation.NONE,
       children: e => {
         let {
           onClick: t

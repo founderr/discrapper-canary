@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n("47120");
 var s = n("735250"),
-  a = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  l = n("470079"),
+  a = n("120356"),
+  i = n.n(a),
   r = n("442837"),
   o = n("481060"),
   u = n("911969"),
@@ -38,8 +38,8 @@ function M(e) {
     })
   })
 }
-t.default = a.memo(function(e) {
-  var t, n, l, i, R, v;
+t.default = l.memo(function(e) {
+  var t, n, a, i, R, v;
   let O, {
       channel: x,
       messageId: L,
@@ -53,7 +53,7 @@ t.default = a.memo(function(e) {
       copyRef: U
     } = (0, c.default)(x, null == D ? void 0 : null === (t = D.application_command) || void 0 === t ? void 0 : t.id),
     j = (0, r.useStateFromStores)([T.default], () => T.default.getGuild(x.guild_id), [x.guild_id]);
-  if (a.useEffect(() => {
+  if (l.useEffect(() => {
       (null == D || D.type === u.ApplicationCommandType.CHAT && void 0 === D.application_command) && f.fetchMessageInteractionData(x.id, L)
     }, [x.id, L, D]), null == D) O = (0, s.jsx)(o.Spinner, {
     type: o.Spinner.Type.SPINNING_CIRCLE,
@@ -63,7 +63,7 @@ t.default = a.memo(function(e) {
     let e = [],
       t = Object.fromEntries((null !== (i = null === (n = D.application_command) || void 0 === n ? void 0 : n.options) && void 0 !== i ? i : []).map(e => [e.name, e]));
     for (let n of null !== (R = D.options) && void 0 !== R ? R : []) e = e.concat(function e(t) {
-      var n, l, i, r, d, c, f;
+      var n, a, i, r, d, c, f;
       let C, {
           option: R,
           channel: v,
@@ -75,10 +75,10 @@ t.default = a.memo(function(e) {
         } = t,
         y = null != L ? L + " " + R.name : R.name;
       if (R.type === u.ApplicationCommandOptionType.SUB_COMMAND || R.type === u.ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
-        let t = [(0, s.jsxs)(a.Fragment, {
+        let t = [(0, s.jsxs)(l.Fragment, {
             children: [" ", (0, s.jsx)(o.Text, {
               ...A,
-              children: null !== (l = null == D ? void 0 : D.name_localized) && void 0 !== l ? l : R.name
+              children: null !== (a = null == D ? void 0 : D.name_localized) && void 0 !== a ? a : R.name
             })]
           }, y)],
           u = Object.fromEntries(null === (n = null !== (i = null == D ? void 0 : D.options) && void 0 !== i ? i : []) || void 0 === n ? void 0 : n.map(e => [e.name, e]));
@@ -168,7 +168,7 @@ t.default = a.memo(function(e) {
           null != e && (U = null !== (c = e.name_localized) && void 0 !== c ? c : e.name)
         }
       }
-      return null == C && (C = M(null == U ? void 0 : U.toString())), [(0, s.jsxs)(a.Fragment, {
+      return null == C && (C = M(null == U ? void 0 : U.toString())), [(0, s.jsxs)(l.Fragment, {
         children: [(0, s.jsxs)(o.Text, {
           ...A,
           children: [" ", null !== (f = null == D ? void 0 : D.name_localized) && void 0 !== f ? f : R.name, ": "]
@@ -186,7 +186,7 @@ t.default = a.memo(function(e) {
     O = (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsxs)(o.Text, {
         ...A,
-        children: ["/", null !== (v = null === (l = D.application_command) || void 0 === l ? void 0 : l.name_localized) && void 0 !== v ? v : D.name]
+        children: ["/", null !== (v = null === (a = D.application_command) || void 0 === a ? void 0 : a.name_localized) && void 0 !== v ? v : D.name]
       }), e]
     })
   }
@@ -194,8 +194,8 @@ t.default = a.memo(function(e) {
     className: C.container,
     onCopy: e => {
       var t, n, s;
-      let a = null !== (s = null === (n = window) || void 0 === n ? void 0 : null === (t = n.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== s ? s : "";
-      a.startsWith("/") && a.endsWith("\n") && y(e, D)
+      let l = null !== (s = null === (n = window) || void 0 === n ? void 0 : null === (t = n.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== s ? s : "";
+      l.startsWith("/") && l.endsWith("\n") && y(e, D)
     },
     children: [(0, s.jsx)("div", {
       className: C.tooltip,

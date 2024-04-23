@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n("757143");
 var s = n("735250"),
-  a = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  l = n("470079"),
+  a = n("120356"),
+  i = n.n(a),
   r = n("16464"),
   o = n("299608"),
   u = n.n(o),
@@ -42,7 +42,7 @@ function y(e, t, n) {
 n("626504");
 let U = (0, A.uid)(),
   j = u()(f.search, 500);
-class b extends a.PureComponent {
+class b extends l.PureComponent {
   componentDidMount() {
     var e, t;
     g.ComponentDispatch.subscribe(L.ComponentActions.PERFORM_SEARCH, this.search), g.ComponentDispatch.subscribe(L.ComponentActions.SET_SEARCH_QUERY, this.handleSetSearchQuery), g.ComponentDispatch.subscribe(L.ComponentActions.FOCUS_SEARCH, this.handleFocusSearch), null === (t = this._editorRef) || void 0 === t || null === (e = t.editor) || void 0 === e || e.setAttribute("aria-haspopup", "listbox")
@@ -112,15 +112,15 @@ class b extends a.PureComponent {
       searchId: e,
       editorState: t,
       hasResults: n,
-      className: a
+      className: l
     } = this.props, {
-      focused: l
+      focused: a
     } = this.state, r = M.getFirstTextBlock(t).length > 0;
     return null == e ? null : (0, s.jsx)(c.Popout, {
       renderPopout: this.renderPopout,
       position: "bottom",
       animation: c.Popout.Animation.NONE,
-      shouldShow: l,
+      shouldShow: a,
       autoInvert: !1,
       children: (t, o) => {
         var u;
@@ -128,11 +128,11 @@ class b extends a.PureComponent {
           isShown: d
         } = o;
         return (0, s.jsx)("div", {
-          className: a,
+          className: l,
           children: (0, s.jsx)("div", {
             className: i()(P.search, {
-              [P.open]: r || l,
-              [P.focused]: l
+              [P.open]: r || a,
+              [P.focused]: a
             }),
             children: (0, s.jsx)(c.FocusRing, {
               focusTarget: {
@@ -158,19 +158,19 @@ class b extends a.PureComponent {
     super(e), y(this, "state", {
       focused: !1,
       selectedIndex: void 0
-    }), y(this, "_editorRef", void 0), y(this, "_searchBarRef", a.createRef()), y(this, "_searchPopoutRef", a.createRef()), y(this, "handleSetSearchQuery", e => {
+    }), y(this, "_editorRef", void 0), y(this, "_searchBarRef", l.createRef()), y(this, "_searchPopoutRef", l.createRef()), y(this, "handleSetSearchQuery", e => {
       let {
         query: t,
         anchor: n,
         focus: s,
-        performSearch: a,
-        replace: l
+        performSearch: l,
+        replace: a
       } = e, {
         editorState: i
       } = this.props, r = M.getFirstTextBlock(i);
-      " " !== t.charAt(t.length - 1) && (t += " "), null != n && 0 !== n && " " !== r.charAt(n - 1) && " " !== t.charAt(0) && (t = " " + t), l ? (i = M.replaceAllContent(t, i), n = 0) : i = M.updateContent(t, i, n, s), i = M.truncateContent(i, 512), i = this.tokenize(i);
+      " " !== t.charAt(t.length - 1) && (t += " "), null != n && 0 !== n && " " !== r.charAt(n - 1) && " " !== t.charAt(0) && (t = " " + t), a ? (i = M.replaceAllContent(t, i), n = 0) : i = M.updateContent(t, i, n, s), i = M.truncateContent(i, 512), i = this.tokenize(i);
       let o = Number(n) + t.length;
-      i = M.setCollapsedSelection(o, i), this.setEditorState(i), a && this.search({
+      i = M.setCollapsedSelection(o, i), this.setEditorState(i), l && this.search({
         queryString: M.getFirstTextBlock(i)
       })
     }), y(this, "handleSelectedIndexChanged", e => {
@@ -188,7 +188,7 @@ class b extends a.PureComponent {
         isSearching: n
       } = this.props, {
         queryString: s,
-        searchEverywhere: a
+        searchEverywhere: l
       } = null != e ? e : {};
       if (null == s || "" === s) {
         let {
@@ -201,7 +201,7 @@ class b extends a.PureComponent {
           n = R.getSearchQueryFromTokens(e);
         for (let t = 0; t < e.length; t++) !R.filterHasAnswer(e[t], e[t + 1]) && (s = s.substring(0, e[t].start) + s.substring(e[t].end));
         if (0 === e.length || 0 === Object.keys(n).length) return !1;
-        j(t, n, s, !!a), this.onBlur()
+        j(t, n, s, !!l), this.onBlur()
       }
       return !0
     }), y(this, "handleClearSearch", e => {
@@ -229,10 +229,10 @@ class b extends a.PureComponent {
         this.focusEditor();
         return
       }
-      let a = N.default.getTextChannelNameDisambiguations(s.getGuildId())[s.id],
-        l = null != a ? a.name : s.name;
+      let l = N.default.getTextChannelNameDisambiguations(s.getGuildId())[s.id],
+        a = null != l ? l.name : s.name;
       this.handleSetSearchQuery({
-        query: m.default[L.SearchTokenTypes.FILTER_IN].key + "#".concat(l, " "),
+        query: m.default[L.SearchTokenTypes.FILTER_IN].key + "#".concat(a, " "),
         replace: !0
       })
     }), y(this, "focusEditor", () => {
@@ -325,15 +325,15 @@ class b extends a.PureComponent {
         metaKey: n,
         shiftKey: s
       } = e, {
-        editorState: a,
-        searchId: l,
+        editorState: l,
+        searchId: a,
         keyboardModeEnabled: i
       } = this.props;
       if (e.stopPropagation(), "Escape" === t) {
-        if (e.preventDefault(), M.isEmpty(a)) this.blurEditor();
+        if (e.preventDefault(), M.isEmpty(l)) this.blurEditor();
         else {
-          let e = M.clearContent(a);
-          f.setSearchState(l, e), this.setState({
+          let e = M.clearContent(l);
+          f.setSearchState(a, e), this.setState({
             focused: !0
           })
         }
@@ -357,10 +357,10 @@ class b extends a.PureComponent {
         if (i) return;
         return (0, T.enableKeyboardMode)(), !0
       }
-      if ("Home" === t || "ArrowLeft" === t && n) return e.preventDefault(), a = s ? M.setToStartSelection(a) : M.setCollapsedStartSelection(a), this.setEditorState(a), !0;
-      if ("End" === t || "ArrowRight" === t && n) return e.preventDefault(), a = s ? M.setToEndSelection(a) : M.setCollapsedEndSelection(a), this.setEditorState(a), !0;
+      if ("Home" === t || "ArrowLeft" === t && n) return e.preventDefault(), l = s ? M.setToStartSelection(l) : M.setCollapsedStartSelection(l), this.setEditorState(l), !0;
+      if ("End" === t || "ArrowRight" === t && n) return e.preventDefault(), l = s ? M.setToEndSelection(l) : M.setCollapsedEndSelection(l), this.setEditorState(l), !0;
       if (("Delete" === t || "Backspace" === t) && n) {
-        let e = M.clearContent(a);
+        let e = M.clearContent(l);
         return this.setEditorState(e), !0
       }
       return M.getDefaultKeyBinding(e)
@@ -372,14 +372,14 @@ t.default = d.default.connectStores([I.default, S.default], () => {
   let t = S.default.getCurrentSearchId(),
     n = S.default.getSearchType(),
     s = null != t && S.default.isSearching(t),
-    a = null != t && null !== (e = S.default.getEditorState(t)) && void 0 !== e ? e : M.createEmptyEditorState(v.generateDecorators(m.default)),
-    l = I.default.keyboardModeEnabled;
+    l = null != t && null !== (e = S.default.getEditorState(t)) && void 0 !== e ? e : M.createEmptyEditorState(v.generateDecorators(m.default)),
+    a = I.default.keyboardModeEnabled;
   return {
     searchId: t,
     searchType: n,
     isSearching: s,
-    editorState: a,
+    editorState: l,
     hasResults: S.default.hasResults(t),
-    keyboardModeEnabled: l
+    keyboardModeEnabled: a
   }
 })(b)

@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("735250"),
-  a = n("470079"),
-  l = n("442837"),
+  l = n("470079"),
+  a = n("442837"),
   i = n("58540"),
   r = n("937889"),
   o = n("123145"),
@@ -19,11 +19,11 @@ function E(e) {
   let {
     message: t,
     channel: n
-  } = e, E = (0, l.useStateFromStores)([u.default], () => u.default.isBlocked(t.author.id)), _ = a.useMemo(() => ({
+  } = e, E = (0, a.useStateFromStores)([u.default], () => u.default.isBlocked(t.author.id)), _ = l.useMemo(() => ({
     [n.guild_id]: [t.author.id]
   }), [n.guild_id, t.author.id]);
   (0, i.useSubscribeGuildMembers)(_);
-  let m = a.useMemo(() => null != t.content && "" !== t.content ? (0, r.default)(t, {
+  let m = l.useMemo(() => null != t.content && "" !== t.content ? (0, r.default)(t, {
     formatInline: !0
   }).content : null, [t]);
   return (0, s.jsxs)("div", {
@@ -40,17 +40,17 @@ function E(e) {
       className: f.threadMessageAccessoryPreview,
       children: function(e, t, n) {
         let {
-          contentPlaceholder: a,
-          renderedContent: l,
+          contentPlaceholder: l,
+          renderedContent: a,
           icon: i
         } = (0, d.renderSingleLineMessage)(e, t, n, f.threadMessageAccessoryContent, {
           iconClass: f.threadMessageAccessoryContentIcon,
           iconSize: c.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
         });
         return (0, s.jsxs)(s.Fragment, {
-          children: [null != l ? l : (0, s.jsx)("span", {
+          children: [null != a ? a : (0, s.jsx)("span", {
             className: f.threadMessageAccessoryPlaceholder,
-            children: a
+            children: l
           }), i]
         })
       }(t, m, E)

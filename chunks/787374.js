@@ -8,8 +8,8 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var s = n("735250"),
-  a = n("470079"),
-  l = n("442837"),
+  l = n("470079"),
+  a = n("442837"),
   i = n("481060"),
   r = n("607070"),
   o = n("426563"),
@@ -20,18 +20,18 @@ let f = u.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
 
 function E() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-    [t, n] = a.useState(!1),
-    s = (0, l.useStateFromStores)([r.default], () => r.default.useReducedMotion),
-    i = a.useMemo(() => {
+    [t, n] = l.useState(!1),
+    s = (0, a.useStateFromStores)([r.default], () => r.default.useReducedMotion),
+    i = l.useMemo(() => {
       let n = t || !s && !e;
       return (0, o.getAutomodAvatarURL)(n)
     }, [t, s, e]),
-    u = a.useCallback(() => n(!0), []);
+    u = l.useCallback(() => n(!0), []);
   return {
     avatarSrc: i,
     eventHandlers: {
       onMouseEnter: u,
-      onMouseLeave: a.useCallback(() => n(!1), [])
+      onMouseLeave: l.useCallback(() => n(!1), [])
     }
   }
 }

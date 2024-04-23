@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120");
-var s, a, l, i, r = n("442837"),
+var s, l, a, i, r = n("442837"),
   o = n("570140"),
   u = n("823379"),
   d = n("981631");
@@ -51,12 +51,12 @@ class T extends(s = r.default.Store) {
     return _
   }
 }
-i = "GameInviteStore", (l = "displayName") in(a = T) ? Object.defineProperty(a, l, {
+i = "GameInviteStore", (a = "displayName") in(l = T) ? Object.defineProperty(l, a, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = i, t.default = new T(o.default, {
+}) : l[a] = i, t.default = new T(o.default, {
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
     let {
       gameInvites: t

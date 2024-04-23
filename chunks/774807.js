@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n("47120");
-var s, a = n("442837"),
-  l = n("570140");
+var s, l = n("442837"),
+  a = n("570140");
 n("57132");
 var i = n("455199"),
   r = n("70956"),
@@ -24,7 +24,7 @@ let c = 90 * r.default.Millis.DAY,
     isDataStale: !1,
     isRefreshing: !1
   };
-class E extends(s = a.default.PersistedStore) {
+class E extends(s = l.default.PersistedStore) {
   initialize(e) {
     if (this.waitFor(i.default), null != e) {
       var t;
@@ -63,7 +63,7 @@ d(E, "displayName", "NotificationCenterStore"), d(E, "persistKey", "Notification
 function _() {
   f.hasNewMentions = !1, f.isDataStale = !1, f.isRefreshing = !1
 }
-t.default = new E(l.default, {
+t.default = new E(a.default, {
   MESSAGE_CREATE: function(e) {
     let {
       message: t

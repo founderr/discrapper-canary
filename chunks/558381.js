@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return m
   },
   fetchStoreListingForApplication: function() {
-    return h
+    return p
   },
   fetchStoreListingForSku: function() {
     return f
@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return v
   },
   matureAgree: function() {
-    return p
+    return h
   },
   matureDisagree: function() {
     return S
@@ -75,7 +75,7 @@ function m(e) {
   })
 }
 
-function h(e) {
+function p(e) {
   return (0, c.httpGetWithCountryCodeQuery)(d.Endpoints.STORE_PUBLISHED_LISTINGS_APPLICATION(e)).then(e => {
     r.default.dispatch({
       type: "STORE_LISTING_FETCH_SUCCESS",
@@ -84,7 +84,7 @@ function h(e) {
   })
 }
 
-function p() {
+function h() {
   r.default.dispatch({
     type: "APPLICATION_STORE_MATURE_AGREE"
   })

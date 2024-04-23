@@ -1,25 +1,25 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return c
   }
 });
-var l = n("735250");
+var s = n("735250");
 n("470079");
 var a = n("120356"),
-  s = n.n(a),
-  i = n("481060"),
-  r = n("217717");
+  l = n.n(a),
+  o = n("481060"),
+  i = n("217717");
 
-function o(e) {
+function c(e) {
   let {
     className: t,
     color: n,
     ...a
   } = e;
-  return (0, l.jsx)(i.Text, {
-    className: s()({
-      [r.text]: null == n
+  return (0, s.jsx)(o.Text, {
+    className: l()({
+      [i.text]: null == n
     }, t),
     color: n,
     ...a

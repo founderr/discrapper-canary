@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n("47120");
 var s = n("735250"),
-  a = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  l = n("470079"),
+  a = n("120356"),
+  i = n.n(a),
   r = n("442837"),
   o = n("481060"),
   u = n("749210"),
@@ -21,7 +21,7 @@ t.default = () => {
   let e = (0, r.useStateFromStores)([f.default], () => f.default.getGuildId(), []),
     t = (0, r.useStateFromStores)([c.default], () => c.default.getGuild(e), [e]),
     n = (0, r.useStateFromStores)([m.default], () => m.default.getHistorySnapshot(), []),
-    [l, N] = a.useState(!1);
+    [a, N] = l.useState(!1);
   if (null == t) return null;
   let S = async () => {
     N(!0);
@@ -61,7 +61,7 @@ t.default = () => {
       look: o.Button.Looks.OUTLINED,
       color: o.Button.Colors.WHITE,
       size: o.Button.Sizes.NONE,
-      submitting: l,
+      submitting: a,
       onClick: S,
       children: I.default.Messages.LURKER_MODE_NAG_BAR_BUTTON.format({
         guild: t.name

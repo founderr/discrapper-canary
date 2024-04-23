@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var a = n("120356"),
-  l = n.n(a),
+var l = n("120356"),
+  a = n.n(l),
   i = n("481060"),
   r = n("240657"),
   o = n("765400"),
@@ -23,11 +23,11 @@ function T(e) {
   let {
     hidePurchaseToUnlockBadge: t,
     showDraftBadge: n,
-    className: a,
+    className: l,
     children: r
   } = e;
   return (0, s.jsxs)("div", {
-    className: l()(m.productThumbnailContainer, a),
+    className: a()(m.productThumbnailContainer, l),
     children: [r, !t && (0, s.jsxs)("div", {
       className: m.purchaseToUnlockBadge,
       children: [(0, s.jsx)(f.default, {
@@ -53,7 +53,7 @@ function I(e) {
   let {
     onShowFullDescription: t,
     variant: n
-  } = e, a = (0, s.jsxs)(s.Fragment, {
+  } = e, l = (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(i.Text, {
       variant: n,
       color: null != t ? "text-link" : "interactive-hover",
@@ -67,13 +67,13 @@ function I(e) {
   });
   return null == t ? (0, s.jsx)("div", {
     className: m.showMoreButton,
-    children: a
+    children: l
   }) : (0, s.jsx)(i.Clickable, {
-    className: l()(m.showMoreButton, m.hasAction),
+    className: a()(m.showMoreButton, m.hasAction),
     onClick: e => {
       e.stopPropagation(), null != t && t()
     },
-    children: a
+    children: l
   })
 }
 
@@ -81,7 +81,7 @@ function p(e) {
   let {
     imageUrl: t,
     name: n,
-    description: a,
+    description: l,
     formattedPrice: o,
     role: c,
     ctaComponent: f,
@@ -125,7 +125,7 @@ function p(e) {
             variant: x,
             color: "text-muted",
             lineClamp: M,
-            text: a
+            text: l
           })
         }), p && (0, s.jsx)(I, {
           onShowFullDescription: h,
@@ -160,7 +160,7 @@ function p(e) {
     })]
   });
   return null == S ? (0, s.jsx)("article", {
-    className: l()(m.productCard, A ? m.opaqueBackground : m.solidBackground),
+    className: a()(m.productCard, A ? m.opaqueBackground : m.solidBackground),
     "aria-labelledby": D,
     children: P
   }) : (0, s.jsx)("div", {
@@ -173,7 +173,7 @@ function p(e) {
       "aria-label": _.default.Messages.GUILD_SHOP_LISTING_CARD_A11Y_LABEL.format({
         productName: n
       }),
-      className: l()(m.productCard, A ? m.opaqueBackground : m.solidBackground, m.cardClickableContainer),
+      className: a()(m.productCard, A ? m.opaqueBackground : m.solidBackground, m.cardClickableContainer),
       onClick: S,
       children: P
     })

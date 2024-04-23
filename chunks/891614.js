@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var a = n("442837"),
-  l = n("607070"),
+var l = n("442837"),
+  a = n("607070"),
   i = n("844864");
 
 function r(e) {
@@ -15,7 +15,7 @@ function r(e) {
     guildId: t,
     user: n,
     className: r
-  } = e, o = (0, a.useStateFromStores)([l.default], () => !l.default.useReducedMotion), u = n.getAvatarURL(t, 56, o), d = (0, s.jsx)("foreignObject", {
+  } = e, o = (0, l.useStateFromStores)([a.default], () => !a.default.useReducedMotion), u = n.getAvatarURL(t, 56, o), d = (0, s.jsx)("foreignObject", {
     x: "30",
     y: "68",
     width: "56",

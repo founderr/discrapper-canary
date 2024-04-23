@@ -1,43 +1,43 @@
 "use strict";
 s.r(t), s.d(t, {
   AnimatedWrapper: function() {
-    return n
+    return l
   }
 }), s("47120");
 var a = s("735250"),
-  i = s("470079"),
-  r = s("748780"),
-  l = s("933137");
-let n = e => {
+  r = s("470079"),
+  i = s("748780"),
+  n = s("933137");
+let l = e => {
   let {
     isVisible: t,
     children: s
-  } = e, [n] = (0, i.useState)(new r.default.Value(t ? 1 : 0)), [o] = (0, i.useState)(new r.default.Value(t ? 1 : .99));
-  (0, i.useEffect)(() => {
+  } = e, [l] = (0, r.useState)(new i.default.Value(t ? 1 : 0)), [o] = (0, r.useState)(new i.default.Value(t ? 1 : .99));
+  (0, r.useEffect)(() => {
     t ? u() : d()
   }, [t]);
   let u = () => {
-      r.default.parallel([r.default.timing(n, {
+      i.default.parallel([i.default.timing(l, {
         toValue: 1,
         duration: 700
-      }), r.default.timing(o, {
+      }), i.default.timing(o, {
         toValue: 1,
         duration: 700
       })]).start()
     },
     d = () => {
-      r.default.parallel([r.default.timing(n, {
+      i.default.parallel([i.default.timing(l, {
         toValue: 0,
         duration: 700
-      }), r.default.timing(o, {
+      }), i.default.timing(o, {
         toValue: .99,
         duration: 700
       })]).start()
     };
-  return (0, a.jsx)(r.default.div, {
-    className: l.fullScreen,
+  return (0, a.jsx)(i.default.div, {
+    className: n.fullScreen,
     style: {
-      opacity: n,
+      opacity: l,
       transform: [{
         scale: o
       }]

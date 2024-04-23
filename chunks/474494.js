@@ -1,85 +1,85 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return U
+    return j
   }
 }), s("47120");
 var a = s("735250");
 s("470079");
-var i = s("319147"),
-  r = s("306276"),
-  l = s("510236"),
-  n = s("133398"),
+var r = s("319147"),
+  i = s("306276"),
+  n = s("510236"),
+  l = s("133398"),
   o = s("722283"),
   u = s("298274"),
   d = s("569620"),
   c = s("16503"),
   _ = s("64268"),
   E = s("697720"),
-  C = s("578325"),
-  f = s("56790"),
-  T = s("90718"),
-  I = s("897482"),
-  R = s("4515"),
-  S = s("474472"),
-  p = s("156129"),
-  m = s("799303"),
-  A = s("245630"),
-  N = s("842272"),
-  g = s("486731"),
-  O = s("346943"),
-  P = s("55826"),
+  T = s("578325"),
+  I = s("56790"),
+  R = s("90718"),
+  f = s("897482"),
+  S = s("4515"),
+  m = s("474472"),
+  A = s("156129"),
+  N = s("799303"),
+  p = s("245630"),
+  g = s("842272"),
+  C = s("486731"),
+  P = s("346943"),
+  O = s("55826"),
   M = s("218776"),
   h = s("414653"),
   L = s("297141"),
   x = s("26517"),
   v = s("93125"),
-  j = s("278583"),
-  D = s("814437");
-let b = new Map([
-  ["BG", l],
+  D = s("278583"),
+  b = s("814437");
+let U = new Map([
+  ["BG", n],
   ["CZ", u],
-  ["HU", I],
+  ["HU", f],
   ["RO", x],
   ["SE", v],
   ["CY", o],
   ["EE", c],
-  ["IS", S],
-  ["IE", R],
-  ["LV", g],
-  ["LI", m],
-  ["LT", A],
-  ["LU", N],
-  ["MT", O],
-  ["SK", D],
-  ["SI", j],
-  ["GR", f],
+  ["IS", m],
+  ["IE", S],
+  ["LV", C],
+  ["LI", N],
+  ["LT", p],
+  ["LU", g],
+  ["MT", P],
+  ["SK", b],
+  ["SI", D],
+  ["GR", I],
   ["FI", E],
   ["PT", L],
   ["NO", M],
-  ["BE", r],
-  ["AT", i],
-  ["CH", n],
-  ["FR", C],
+  ["BE", i],
+  ["AT", r],
+  ["CH", l],
+  ["FR", T],
   ["DE", d],
   ["ES", _],
-  ["IT", p],
-  ["NL", P],
+  ["IT", A],
+  ["NL", O],
   ["PL", h],
-  ["HR", T]
+  ["HR", R]
 ]);
 
-function U(e) {
+function j(e) {
   let {
     className: t,
     countryCode: s
   } = e;
-  if (null == s || !b.has(s)) return null;
-  let i = b.get(s);
+  if (null == s || !U.has(s)) return null;
+  let r = U.get(s);
   return (0, a.jsx)("img", {
     className: t,
     "aria-hidden": !0,
     alt: "Wumpus holding a country-specific flag",
-    src: i
+    src: r
   })
 }

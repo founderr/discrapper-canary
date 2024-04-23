@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n("47120");
-var s, a = n("735250"),
-  l = n("470079"),
+var s, l = n("735250"),
+  a = n("470079"),
   i = n("442837"),
   r = n("481060"),
   o = n("278323"),
@@ -46,16 +46,16 @@ function G(e, t, n) {
 let F = {
   spotify: "Spotify"
 };
-class k extends(s = l.PureComponent) {
+class k extends(s = a.PureComponent) {
   getCoverImage() {
     let {
       activity: e,
       connectedApplication: t,
       application: n,
       isPreview: s,
-      message: a
+      message: l
     } = this.props;
-    if (null != n && (s || null != a && (0, E.default)(e, a, n.id))) {
+    if (null != n && (s || null != l && (0, E.default)(e, l, n.id))) {
       let t = (0, f.default)(e, n.id);
       if (null != t) return t
     }
@@ -82,7 +82,7 @@ class k extends(s = l.PureComponent) {
     return null != t && null != t.primarySkuId && !e && y.isPlatformEmbedded
   }
   render() {
-    return (0, a.jsx)(j.default, {
+    return (0, l.jsx)(j.default, {
       section: j.default.Sections.APPLICATION_EMBED,
       children: this.renderEmbed()
     })
@@ -96,22 +96,22 @@ class k extends(s = l.PureComponent) {
         analyticsLocations: t,
         userId: n,
         message: s,
-        channelId: a
+        channelId: l
       } = this.props;
       if (null != e && null != n && null != s && null != e.session_id && null != e.application_id) {
-        var l;
+        var a;
         u.default.join({
           userId: n,
           sessionId: e.session_id,
           applicationId: e.application_id,
-          channelId: a,
+          channelId: l,
           messageId: s.id
         }), (0, _.default)({
           type: b.AnalyticsGameOpenTypes.JOIN,
           source: b.AnalyticsLocations.MESSAGE_EMBED,
           userId: n,
           applicationId: e.application_id,
-          partyId: null === (l = e.party) || void 0 === l ? void 0 : l.id,
+          partyId: null === (a = e.party) || void 0 === a ? void 0 : a.id,
           messageId: s.id,
           analyticsLocations: t
         })
@@ -142,7 +142,7 @@ class k extends(s = l.PureComponent) {
       } = this.props;
       null != e && null != t && d.sync(e, t)
     }), G(this, "handleDownloadApp", () => {
-      (0, r.openModal)(e => (0, a.jsx)(m.default, {
+      (0, r.openModal)(e => (0, l.jsx)(m.default, {
         source: "Game Invite",
         ...e
       }))
@@ -150,16 +150,16 @@ class k extends(s = l.PureComponent) {
       let {
         channelId: n,
         guildId: s,
-        message: l,
+        message: a,
         analyticsLocations: i
       } = this.props;
-      return null == n ? null : (0, a.jsx)(N.default, {
+      return null == n ? null : (0, l.jsx)(N.default, {
         ...t,
         location: "ActivityInviteEmbed",
         userId: e.id,
         guildId: null != s ? s : void 0,
         channelId: n,
-        messageId: null == l ? void 0 : l.id,
+        messageId: null == a ? void 0 : a.id,
         newAnalyticsLocations: i
       })
     }), G(this, "renderSpotifyJoinButton", e => {
@@ -167,7 +167,7 @@ class k extends(s = l.PureComponent) {
         channelId: t,
         guildId: n
       } = this.props;
-      return (0, a.jsx)(h.default, {
+      return (0, l.jsx)(h.default, {
         guildId: null != n ? n : void 0,
         channelId: t,
         source: "Invite Embed",
@@ -177,7 +177,7 @@ class k extends(s = l.PureComponent) {
       let {
         application: t
       } = this.props;
-      return (0, a.jsx)(c.default, {
+      return (0, l.jsx)(c.default, {
         ...e,
         source: b.AnalyticsLocations.MESSAGE_EMBED,
         application: t
@@ -188,7 +188,7 @@ class k extends(s = l.PureComponent) {
         activity: t,
         partyId: n,
         myPartyId: s,
-        application: l,
+        application: a,
         partyMembers: i,
         isPreview: r,
         isLaunching: o,
@@ -202,16 +202,16 @@ class k extends(s = l.PureComponent) {
         isLaunchable: T,
         guildId: I
       } = this.props;
-      if (null != l) e = l.name;
+      if (null != a) e = a.name;
       else if (null != n) {
         let [t] = n.split(":");
         e = F[t]
       }
-      return (0, a.jsx)(D.default, {
+      return (0, l.jsx)(D.default, {
         activity: t,
         partyId: n,
         myPartyId: s,
-        applicationId: null != l ? l.id : null,
+        applicationId: null != a ? a.id : null,
         name: e,
         partyMembers: i,
         className: c,
@@ -248,29 +248,29 @@ G(k, "defaultProps", {
     activity: t,
     analyticsLocations: n,
     application: s,
-    partyId: a,
-    userId: l,
+    partyId: l,
+    userId: a,
     guildId: i
   } = e, {
     id: r
-  } = null != s ? s : {}, o = null != t && null != t.party && t.party.id === a ? g.default.getParty(t.party.id) : null, u = null != r ? v.default.getApplicationActivity(r) : v.default.findActivity(e => e.type === b.ActivityTypes.LISTENING), d = !1;
+  } = null != s ? s : {}, o = null != t && null != t.party && t.party.id === l ? g.default.getParty(t.party.id) : null, u = null != r ? v.default.getApplicationActivity(r) : v.default.findActivity(e => e.type === b.ActivityTypes.LISTENING), d = !1;
   null != r && (d = x.default.getState(r, b.ActivityActionTypes.JOIN) === b.ActivityActionStates.LOADING);
   let c = Array.from(null != o ? o : []).map(e => {
       let t = null != i ? M.default.getMember(i, e) : null,
         n = null != t ? t.nick : null,
         s = O.default.getUser(e),
-        a = null == s;
+        l = null == s;
       return null == s && (s = new C.default({
         discriminator: "0005"
       })), {
         user: s,
-        unknownUser: a,
+        unknownUser: l,
         nick: n
       }
     }),
     f = null != t && p.default.canPlay(t),
     E = p.default.getSyncingWith(),
-    _ = null != E && null != l && E.userId === l;
+    _ = null != E && null != a && E.userId === a;
   return {
     analyticsLocations: n,
     partyMembers: c,

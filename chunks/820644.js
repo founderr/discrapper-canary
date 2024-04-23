@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var a = n("120356"),
-  l = n.n(a),
+var l = n("120356"),
+  a = n.n(l),
   i = n("914576"),
   r = n("481060"),
   o = n("317885"),
@@ -18,7 +18,7 @@ function d(e) {
     text: t
   } = e;
   return (0, s.jsxs)("div", {
-    className: l()(u.toast, o.toast),
+    className: a()(u.toast, o.toast),
     children: [(0, s.jsx)(i.ShieldIcon, {
       color: r.tokens.colors.TEXT_BRAND
     }), (0, s.jsx)(r.Text, {

@@ -1,21 +1,21 @@
 "use strict";
 n.r(t);
 var s = n("735250"),
-  a = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  l = n("470079"),
+  a = n("120356"),
+  i = n.n(a),
   r = n("481060"),
   o = n("285952"),
   u = n("849577"),
   d = n("794711");
-class c extends a.PureComponent {
+class c extends l.PureComponent {
   render() {
     let {
       title: e,
       description: t,
       agreement: n,
-      disagreement: a,
-      onAgree: l,
+      disagreement: l,
+      onAgree: a,
       onDisagree: c,
       imageClassName: f
     } = this.props;
@@ -36,17 +36,17 @@ class c extends a.PureComponent {
         justify: o.default.Justify.CENTER,
         align: o.default.Align.CENTER,
         grow: 0,
-        children: [null != a ? (0, s.jsx)(r.Button, {
+        children: [null != l ? (0, s.jsx)(r.Button, {
           className: u.action,
           size: r.ButtonSizes.LARGE,
           color: r.ButtonColors.PRIMARY,
           onClick: c,
-          children: a
+          children: l
         }) : null, null != n ? (0, s.jsx)(r.Button, {
           className: u.action,
           color: r.Button.Colors.RED,
           size: r.ButtonSizes.LARGE,
-          onClick: l,
+          onClick: a,
           children: n
         }) : null]
       })]

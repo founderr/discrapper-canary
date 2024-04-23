@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var s = n("735250"),
-  a = n("470079"),
-  l = n("913527"),
-  i = n.n(l),
+  l = n("470079"),
+  a = n("913527"),
+  i = n.n(a),
   r = n("442837"),
   o = n("422045"),
   u = n("481060"),
@@ -26,11 +26,11 @@ function N(e) {
   let {
     invite: t,
     expired: n
-  } = e, l = (0, r.useStateFromStores)([_.default], () => {
+  } = e, a = (0, r.useStateFromStores)([_.default], () => {
     var e, n;
     return null !== (n = null === (e = _.default.getUser(t.inviter_id)) || void 0 === e ? void 0 : e.username) && void 0 !== n ? n : ""
-  }), c = (0, I.dateFormat)(i()(t.created_at), "LT"), f = a.useRef(null), T = (0, d.default)(f);
-  return a.useEffect(() => {
+  }), c = (0, I.dateFormat)(i()(t.created_at), "LT"), f = l.useRef(null), T = (0, d.default)(f);
+  return l.useEffect(() => {
     !n && (0, E.updateInviteStatus)(t)
   }, [t, n]), (0, s.jsxs)("div", {
     className: h.container,
@@ -46,7 +46,7 @@ function N(e) {
         variant: "text-md/semibold",
         color: "interactive-active",
         children: p.default.Messages.GAME_INVITES_SENT_YOU_AN_INVITE.format({
-          username: l
+          username: a
         })
       }), (0, s.jsxs)("div", {
         className: h.buttonContainer,
@@ -93,21 +93,21 @@ function S(e) {
   let {
     expired: t,
     invite: n,
-    isHoveringInvite: l
-  } = e, i = (0, r.useStateFromStores)([f.default], () => f.default.isInviteGameInstalled(n)), o = (0, r.useStateFromStores)([f.default], () => f.default.isInviteJoinable(n)), [d, _] = a.useState(!1), m = a.useCallback(async () => {
+    isHoveringInvite: a
+  } = e, i = (0, r.useStateFromStores)([f.default], () => f.default.isInviteGameInstalled(n)), o = (0, r.useStateFromStores)([f.default], () => f.default.isInviteJoinable(n)), [d, _] = l.useState(!1), m = l.useCallback(async () => {
     _(!0);
     try {
       await (0, E.launchInviteGame)(n)
     } catch {}
     _(!1)
-  }, [n]), I = a.useCallback(async () => {
+  }, [n]), I = l.useCallback(async () => {
     _(!0);
     try {
       await (0, E.acceptInvite)(n)
     } catch {}
     _(!1)
   }, [n]);
-  if (t) return i && l ? (0, s.jsx)(u.Button, {
+  if (t) return i && a ? (0, s.jsx)(u.Button, {
     className: h.primaryButton,
     color: u.ButtonColors.TRANSPARENT,
     disabled: d,

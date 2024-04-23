@@ -2,74 +2,74 @@
 s.r(t);
 var a = s("735250");
 s("470079");
-var i = s("990547"),
-  r = s("399606"),
-  l = s("481060"),
-  n = s("100527"),
+var r = s("990547"),
+  i = s("399606"),
+  n = s("481060"),
+  l = s("100527"),
   o = s("182567"),
   u = s("906732"),
   d = s("213609"),
   c = s("78839"),
   _ = s("63063"),
   E = s("958589"),
-  C = s("276800"),
-  f = s("409100"),
-  T = s("474936"),
-  I = s("981631"),
-  R = s("689938"),
-  S = s("810623");
-let p = "April2024MarketingBanner";
+  T = s("276800"),
+  I = s("409100"),
+  R = s("474936"),
+  f = s("981631"),
+  S = s("689938"),
+  m = s("810623");
+let A = "April2024MarketingBanner";
 t.default = function() {
-  let e = (0, r.useStateFromStores)([c.default], () => c.default.getPremiumTypeSubscription()),
+  let e = (0, i.useStateFromStores)([c.default], () => c.default.getPremiumTypeSubscription()),
     t = E.default.useExperiment({
-      location: p
+      location: A
     }).enabled,
     {
       analyticsLocations: s
     } = (0, u.default)();
   if ((0, d.default)({
-      type: i.ImpressionTypes.VIEW,
-      name: i.ImpressionNames.PREMIUM_MARKETING_BANNER,
+      type: r.ImpressionTypes.VIEW,
+      name: r.ImpressionNames.PREMIUM_MARKETING_BANNER,
       properties: {
         location_stack: s,
-        banner_id: p
+        banner_id: A
       }
     }, {
       disableTrack: !t
     }), !t) return null;
-  let m = new Date("2024-05-02T06:59:59Z");
+  let N = new Date("2024-05-02T06:59:59Z");
   return (0, a.jsx)(o.AnalyticsLocationsProvider, {
-    newLocations: [n.default.PREMIUM_MARKETING_PAGE_BANNER],
+    newLocations: [l.default.PREMIUM_MARKETING_PAGE_BANNER],
     children: (0, a.jsx)("div", {
-      className: S.banner,
+      className: m.banner,
       children: (0, a.jsxs)("div", {
-        className: S.bannerContent,
+        className: m.bannerContent,
         children: [(0, a.jsxs)("div", {
-          children: [(0, a.jsx)(l.Heading, {
+          children: [(0, a.jsx)(n.Heading, {
             variant: "display-sm",
             color: "always-white",
-            children: R.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_HEADER
-          }), (0, a.jsx)(l.Text, {
-            className: S.countdown,
+            children: S.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_HEADER
+          }), (0, a.jsx)(n.Text, {
+            className: m.countdown,
             variant: "text-sm/medium",
-            children: (0, a.jsx)(C.default, {
-              endDate: m
+            children: (0, a.jsx)(T.default, {
+              endDate: N
             })
-          }), (0, a.jsx)(l.Text, {
-            className: S.bannerSubheader,
+          }), (0, a.jsx)(n.Text, {
+            className: m.bannerSubheader,
             variant: "text-sm/medium",
             color: "always-white",
-            children: null == e ? R.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_BANNER_BODY_NON_SUB.format({
-              helpCenterLink: _.default.getArticleURL(I.HelpdeskArticles.PREMIUM_APRIL_2024_MARKETING_MOMENT)
-            }) : R.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_BANNER_BODY_UPGRADE.format({
-              helpCenterLink: _.default.getArticleURL(I.HelpdeskArticles.PREMIUM_APRIL_2024_MARKETING_MOMENT)
+            children: null == e ? S.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_BANNER_BODY_NON_SUB.format({
+              helpCenterLink: _.default.getArticleURL(f.HelpdeskArticles.PREMIUM_APRIL_2024_MARKETING_MOMENT)
+            }) : S.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_BANNER_BODY_UPGRADE.format({
+              helpCenterLink: _.default.getArticleURL(f.HelpdeskArticles.PREMIUM_APRIL_2024_MARKETING_MOMENT)
             })
           })]
-        }), (0, a.jsx)(f.default, {
-          buttonText: R.default.Messages.BOGO_CLAIM_OFFER,
-          buttonTextClassName: S.subscribeButtonText,
-          subscriptionTier: T.PremiumSubscriptionSKUs.TIER_2,
-          className: S.subscribeButton,
+        }), (0, a.jsx)(I.default, {
+          buttonText: S.default.Messages.BOGO_CLAIM_OFFER,
+          buttonTextClassName: m.subscribeButtonText,
+          subscriptionTier: R.PremiumSubscriptionSKUs.TIER_2,
+          className: m.subscribeButton,
           showIcon: !1,
           forceInverted: !0
         })]

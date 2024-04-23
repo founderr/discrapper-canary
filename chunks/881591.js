@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var s = n("735250"),
-  a = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  l = n("470079"),
+  a = n("120356"),
+  i = n.n(a),
   r = n("512722"),
   o = n.n(r),
   u = n("913527"),
@@ -51,11 +51,11 @@ function k(e) {
   let {
     setTab: t,
     closePopout: n
-  } = e, l = (0, c.useStateFromStores)([h.default], () => h.default.getMessageReminders());
-  a.useEffect(() => () => {
+  } = e, a = (0, c.useStateFromStores)([h.default], () => h.default.getMessageReminders());
+  l.useEffect(() => () => {
     (0, p.cleanupMessageReminders)()
   }, []);
-  let [i, r] = a.useState(!1), o = a.useMemo(() => l.filter(e => null == e.dueAt || e.dueAt < new Date), [l]), u = i ? l : o, d = u.filter(e => !(0, N.savedMessageHasMetadata)(e));
+  let [i, r] = l.useState(!1), o = l.useMemo(() => a.filter(e => null == e.dueAt || e.dueAt < new Date), [a]), u = i ? a : o, d = u.filter(e => !(0, N.savedMessageHasMetadata)(e));
   return (0, S.useMessageRemindersLoader)(d), (0, s.jsxs)("div", {
     className: B.container,
     children: [(0, s.jsx)(U.default, {
@@ -75,7 +75,7 @@ function k(e) {
           children: i ? b.default.Messages.MESSAGE_REMINDERS_HEADER_SHOW_OVERDUE.format({
             count: o.length
           }) : b.default.Messages.MESSAGE_REMINDERS_HEADER_SHOW_ALL.format({
-            count: l.length
+            count: a.length
           })
         })
       })]
@@ -91,26 +91,26 @@ function k(e) {
 
 function w(e) {
   let t, {
-      messageId: a
+      messageId: l
     } = e,
-    l = (0, c.useStateFromStores)([h.default], () => h.default.getMessageReminders().find(e => e.messageId === a));
-  o()(null != l, "should not be rendering a to-do message without a to-do message");
-  let r = l.complete,
-    u = (0, c.useStateFromStores)([O.default], () => O.default.getMessage(l.channelId, l.messageId)),
+    a = (0, c.useStateFromStores)([h.default], () => h.default.getMessageReminders().find(e => e.messageId === l));
+  o()(null != a, "should not be rendering a to-do message without a to-do message");
+  let r = a.complete,
+    u = (0, c.useStateFromStores)([O.default], () => O.default.getMessage(a.channelId, a.messageId)),
     {
       message: f,
       channel: N
-    } = (0, C.getSavedMessageAndChannel)(l),
+    } = (0, C.getSavedMessageAndChannel)(a),
     S = R.default.getChannel(N.id),
     D = (0, I.default)(S, !0),
     y = null != D ? D : N.name,
     U = (0, c.useStateFromStores)([v.default], () => v.default.getGuild(null == N ? void 0 : N.guild_id)),
     k = null != N ? (0, T.getChannelIconURL)(N) : null,
     w = null;
-  return null != l.dueAt && (l.dueAt > new Date ? (t = "text-muted", w = b.default.Messages.MESSAGE_REMINDERS_DUE_IN.format({
-    duration: d().duration(l.dueAt.getTime() - Date.now(), "millisecond").humanize()
+  return null != a.dueAt && (a.dueAt > new Date ? (t = "text-muted", w = b.default.Messages.MESSAGE_REMINDERS_DUE_IN.format({
+    duration: d().duration(a.dueAt.getTime() - Date.now(), "millisecond").humanize()
   })) : (t = "text-danger", w = b.default.Messages.MESSAGE_REMINDERS_OVERDUE.format({
-    duration: d().duration(Date.now() - l.dueAt.getTime(), "millisecond").humanize()
+    duration: d().duration(Date.now() - a.dueAt.getTime(), "millisecond").humanize()
   }))), (0, s.jsxs)("div", {
     className: G.container,
     children: [(0, s.jsxs)("div", {
@@ -133,7 +133,7 @@ function w(e) {
             selectable: !0,
             children: y
           })]
-        }), null != l.notes && l.notes.length > 0 ? (0, s.jsxs)(E.Text, {
+        }), null != a.notes && a.notes.length > 0 ? (0, s.jsxs)(E.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
           className: B.notes,
@@ -141,7 +141,7 @@ function w(e) {
           children: [(0, s.jsx)(P.default, {
             width: 12,
             height: 12
-          }), l.notes]
+          }), a.notes]
         }) : null, null != w ? (0, s.jsx)(E.Text, {
           variant: "text-sm/medium",
           color: t,
@@ -171,7 +171,7 @@ function w(e) {
           type: E.Checkbox.Types.INVERTED,
           value: r,
           onChange: (e, t) => {
-            (0, p.toggleMessageReminders)(l.messageId, t)
+            (0, p.toggleMessageReminders)(a.messageId, t)
           }
         })]
       })]
@@ -192,10 +192,10 @@ function w(e) {
         children: [null == u ? (0, s.jsx)(E.Button, {
           onClick: () => {
             m.default.fetchMessages({
-              channelId: l.channelId,
+              channelId: a.channelId,
               limit: 1,
               jump: {
-                messageId: l.messageId,
+                messageId: a.messageId,
                 flash: !1,
                 offset: 1
               }
@@ -210,7 +210,7 @@ function w(e) {
           })
         }) : null, (0, s.jsx)(E.Button, {
           onClick: () => {
-            (0, g.transitionTo)(j.Routes.CHANNEL(null == N ? void 0 : N.getGuildId(), l.channelId, l.messageId))
+            (0, g.transitionTo)(j.Routes.CHANNEL(null == N ? void 0 : N.getGuildId(), a.channelId, a.messageId))
           },
           size: E.Button.Sizes.MIN,
           color: E.Button.Colors.TRANSPARENT,

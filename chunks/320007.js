@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("735250"),
-  a = n("470079"),
-  l = n("442837"),
+  l = n("470079"),
+  a = n("442837"),
   i = n("481060"),
   r = n("618158"),
   o = n("819640"),
@@ -37,13 +37,13 @@ function h(e) {
     lastClipsSession: g,
     remindersEnabled: M,
     hasAnyClipAnimations: R
-  } = (0, l.useStateFromStoresObject)([E.default], () => ({
+  } = (0, a.useStateFromStoresObject)([E.default], () => ({
     hasClips: E.default.hasClips(),
     hasNewClips: E.default.getNewClipIds().length > 0,
     lastClipsSession: E.default.getLastClipsSession(),
     remindersEnabled: E.default.getSettings().remindersEnabled,
     hasAnyClipAnimations: E.default.hasAnyClipAnimations()
-  })), v = null != g && g.newClipIds.length > 0, O = (0, m.useClipsButtonStore)(e => e.clipsButtonRef), x = (0, m.useClipsButtonStore)(e => e.setClipsButtonRef), L = (0, l.useStateFromStores)([o.default], () => o.default.hasLayers()), {
+  })), v = null != g && g.newClipIds.length > 0, O = (0, m.useClipsButtonStore)(e => e.clipsButtonRef), x = (0, m.useClipsButtonStore)(e => e.setClipsButtonRef), L = (0, a.useStateFromStores)([o.default], () => o.default.hasLayers()), {
     preventIdle: D,
     allowIdle: P
   } = (0, r.usePreventIdle)("animation");
@@ -60,7 +60,7 @@ function h(e) {
       modalKey: I.CLIPS_GALLERY_MODAL_KEY
     })
   }
-  return (a.useEffect(() => (R ? D() : P(), () => P()), [R, D, P]), S && N && C) ? (0, s.jsxs)(s.Fragment, {
+  return (l.useEffect(() => (R ? D() : P(), () => P()), [R, D, P]), S && N && C) ? (0, s.jsxs)(s.Fragment, {
     children: [null != O && t && M && v && !(0, i.hasAnyModalOpen)() && !L && (0, s.jsx)(T.default, {
       clipIconRef: O,
       lastClipsSession: g,

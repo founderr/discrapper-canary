@@ -2,12 +2,12 @@
 s.r(t);
 var a = s("735250");
 s("470079");
-var i = s("774078"),
-  r = s("706454"),
-  l = s("689938");
+var r = s("774078"),
+  i = s("706454"),
+  n = s("689938");
 
-function n(e) {
-  return e.toLocaleString(r.default.locale, {
+function l(e) {
+  return e.toLocaleString(i.default.locale, {
     minimumIntegerDigits: 2,
     useGrouping: !1
   })
@@ -15,14 +15,14 @@ function n(e) {
 t.default = function(e) {
   let {
     endDate: t
-  } = e, s = (0, i.default)(t, 1e3);
+  } = e, s = (0, r.default)(t, 1e3);
   return (0, a.jsx)(a.Fragment, {
-    children: s.days > 0 ? l.default.Messages.BOGO_UNTIL_OFFER_ENDS_DAYS.format({
+    children: s.days > 0 ? n.default.Messages.BOGO_UNTIL_OFFER_ENDS_DAYS.format({
       days: s.days
-    }) : l.default.Messages.BOGO_UNTIL_OFFER_ENDS.format({
-      hours: n(s.hours),
-      minutes: n(s.minutes),
-      seconds: n(s.seconds)
+    }) : n.default.Messages.BOGO_UNTIL_OFFER_ENDS.format({
+      hours: l(s.hours),
+      minutes: l(s.minutes),
+      seconds: l(s.seconds)
     })
   })
 }

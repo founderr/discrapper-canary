@@ -1,48 +1,48 @@
 "use strict";
 s.r(t), s("653041");
 var a = s("735250"),
-  i = s("470079"),
-  r = s("120356"),
-  l = s.n(r),
-  n = s("442837"),
+  r = s("470079"),
+  i = s("120356"),
+  n = s.n(i),
+  l = s("442837"),
   o = s("780384"),
   u = s("481060"),
   d = s("634894"),
   c = s("410030"),
   _ = s("100527"),
   E = s("906732"),
-  C = s("15640"),
-  f = s("594174"),
-  T = s("78839"),
-  I = s("74538"),
-  R = s("775412"),
-  S = s("846363"),
-  p = s("104494"),
-  m = s("639119"),
-  A = s("230916"),
-  N = s("248042"),
-  g = s("823188"),
-  O = s("21023"),
-  P = s("318747"),
+  T = s("15640"),
+  I = s("594174"),
+  R = s("78839"),
+  f = s("74538"),
+  S = s("775412"),
+  m = s("846363"),
+  A = s("104494"),
+  N = s("639119"),
+  p = s("230916"),
+  g = s("248042"),
+  C = s("823188"),
+  P = s("21023"),
+  O = s("318747"),
   M = s("409100"),
   h = s("474936"),
   L = s("689938"),
   x = s("116511"),
   v = s("102655"),
-  j = s("768236"),
-  D = s("314907"),
-  b = s("826701");
-let U = e => {
+  D = s("768236"),
+  b = s("314907"),
+  U = s("826701");
+let j = e => {
     let {
       isLightTheme: t
-    } = e, s = (0, N.getBOGOPillCopy)();
-    return (0, a.jsx)(g.PremiumPillWithSparkles, {
+    } = e, s = (0, g.getBOGOPillCopy)();
+    return (0, a.jsx)(C.PremiumPillWithSparkles, {
       text: s,
       className: x.bogoPillWithSparkles,
-      colorOptions: t ? g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL
+      colorOptions: t ? C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL
     })
   },
-  y = () => (0, a.jsx)("div", {
+  B = () => (0, a.jsx)("div", {
     className: x.mostPopularPill,
     children: (0, a.jsx)(u.Heading, {
       className: x.mostPopularText,
@@ -50,27 +50,27 @@ let U = e => {
       children: L.default.Messages.MOST_POPULAR
     })
   }),
-  B = e => {
+  y = e => {
     let t, {
         premiumType: s
       } = e,
-      i = (0, c.default)();
-    t = s === h.PremiumTypes.TIER_0 ? (0, o.isThemeDark)(i) ? v : j : (0, o.isThemeDark)(i) ? D : b;
-    let r = (0, I.getPremiumTypeDisplayName)(s);
+      r = (0, c.default)();
+    t = s === h.PremiumTypes.TIER_0 ? (0, o.isThemeDark)(r) ? v : D : (0, o.isThemeDark)(r) ? b : U;
+    let i = (0, f.getPremiumTypeDisplayName)(s);
     return (0, a.jsx)("img", {
       src: t,
       className: x.logo,
-      alt: r
+      alt: i
     })
   },
   G = e => {
     let {
       label: t,
       column1: s,
-      column2: i
+      column2: r
     } = e;
     return (0, a.jsxs)("tr", {
-      className: l()(x.headerRow, x.rowBottomBorder, x.topBorderRadius),
+      className: n()(x.headerRow, x.rowBottomBorder, x.topBorderRadius),
       children: [(0, a.jsx)("th", {
         scope: "col",
         className: x.headerLabelCell,
@@ -81,8 +81,8 @@ let U = e => {
         children: s
       }), (0, a.jsx)("th", {
         scope: "col",
-        className: l()(x.headerCell, x.topBorderRadius),
-        children: i
+        className: n()(x.headerCell, x.topBorderRadius),
+        children: r
       })]
     })
   },
@@ -90,19 +90,19 @@ let U = e => {
     let {
       label: t,
       column1: s,
-      column2: i,
-      withBottomBorder: r = !0,
-      withTopBorderRadius: n = !1,
+      column2: r,
+      withBottomBorder: i = !0,
+      withTopBorderRadius: l = !1,
       withBottomBorderRadius: o = !1,
       buttonsRow: u = !1,
       shortRow: d = !1
     } = e;
     return (0, a.jsxs)("tr", {
-      className: l()(x.row, {
+      className: n()(x.row, {
         [x.wideRow]: u,
-        [x.topBorderRadius]: n,
+        [x.topBorderRadius]: l,
         [x.bottomBorderRadius]: o,
-        [x.rowBottomBorder]: r,
+        [x.rowBottomBorder]: i,
         [x.shortRow]: d
       }),
       children: [(0, a.jsx)("th", {
@@ -110,38 +110,38 @@ let U = e => {
         className: x.labelCell,
         children: t
       }), (0, a.jsx)("td", {
-        className: l()(x.cell, {
+        className: n()(x.cell, {
           [x.buttonsCell]: u
         }),
         children: s
       }), (0, a.jsx)("td", {
-        className: l()(x.cell, {
-          [x.topBorderRadius]: n,
+        className: n()(x.cell, {
+          [x.topBorderRadius]: l,
           [x.bottomBorderRadius]: o,
           [x.buttonsCell]: u
         }),
-        children: i
+        children: r
       })]
     })
   };
 t.default = e => {
   var t;
   let s, {
-      className: r,
+      className: i,
       hideCTAs: v = !1,
-      headingOverride: j,
-      hidePill: D = !1,
-      selectedPlanColumnClassName: b,
+      headingOverride: D,
+      hidePill: b = !1,
+      selectedPlanColumnClassName: U,
       selectedPlanTier: H = h.PremiumTypes.TIER_2
     } = e,
     {
       analyticsLocations: F
     } = (0, E.default)(_.default.PREMIUM_MARKETING_PLAN_COMPARISON),
-    w = (0, S.useMarketingOptimizationExperiment)({
+    w = (0, m.useMarketingOptimizationExperiment)({
       autoTrackExposure: !1
     }),
-    W = (0, n.useStateFromStores)([T.default], () => T.default.hasFetchedSubscriptions()),
-    K = (0, C.useSubscriptionPlansLoaded)(),
+    K = (0, l.useStateFromStores)([R.default], () => R.default.hasFetchedSubscriptions()),
+    W = (0, T.useSubscriptionPlansLoaded)(),
     V = "PlanComparisonTable";
   (0, d.useTriggerDebuggingAA)({
     location: V + " auto on",
@@ -152,34 +152,34 @@ t.default = e => {
   });
   let Y = (0, c.default)(),
     z = (0, o.isThemeLight)(Y),
-    Z = (0, n.useStateFromStores)([f.default], () => f.default.getCurrentUser()),
-    X = (0, I.isPremiumExactly)(Z, h.PremiumTypes.TIER_2),
-    Q = (0, m.usePremiumTrialOffer)(),
-    J = null == Q ? void 0 : null === (t = Q.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
-    q = (0, R.useCurrentPremiumTrialTier)(),
-    $ = (0, p.usePremiumDiscountOffer)(),
-    ee = null != $ && (0, p.discountOfferHasTier)($, h.PremiumSubscriptionSKUs.TIER_2),
-    et = (0, A.useDiscountedPrice)(h.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
-    es = "".concat(et, "/").concat((0, I.getIntervalStringAsNoun)(h.SubscriptionIntervalTypes.MONTH)),
-    ea = (0, I.getDefaultPrice)(h.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
-    ei = (0, I.getDefaultPrice)(h.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
-    er = (0, O.useGetPlanComparisonTableRows)(ea, ei, ee, es),
-    el = (0, N.useIsEligibleForBogoPromotion)();
-  if (!W || !K) return null;
-  let en = {
+    X = (0, l.useStateFromStores)([I.default], () => I.default.getCurrentUser()),
+    Q = (0, f.isPremiumExactly)(X, h.PremiumTypes.TIER_2),
+    Z = (0, N.usePremiumTrialOffer)(),
+    J = null == Z ? void 0 : null === (t = Z.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
+    q = (0, S.useCurrentPremiumTrialTier)(),
+    $ = (0, A.usePremiumDiscountOffer)(),
+    ee = null != $ && (0, A.discountOfferHasTier)($, h.PremiumSubscriptionSKUs.TIER_2),
+    et = (0, p.useDiscountedPrice)(h.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
+    es = "".concat(et, "/").concat((0, f.getIntervalStringAsNoun)(h.SubscriptionIntervalTypes.MONTH)),
+    ea = (0, f.getDefaultPrice)(h.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
+    er = (0, f.getDefaultPrice)(h.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
+    ei = (0, P.useGetPlanComparisonTableRows)(ea, er, ee, es),
+    en = (0, g.useIsEligibleForBogoPromotion)();
+  if (!K || !W) return null;
+  let el = {
     label: (0, a.jsx)(u.Heading, {
       className: x.__invalid_textColor,
       variant: "heading-lg/extrabold",
       children: L.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_HEADER
     }),
-    column1: (0, a.jsx)(B, {
+    column1: (0, a.jsx)(y, {
       premiumType: h.PremiumTypes.TIER_0
     }),
-    column2: (0, a.jsx)(B, {
+    column2: (0, a.jsx)(y, {
       premiumType: h.PremiumTypes.TIER_2
     })
   };
-  v ? er.push({
+  v ? ei.push({
     label: null,
     column1: null,
     column2: null,
@@ -187,10 +187,10 @@ t.default = e => {
     withBottomBorderRadius: !0,
     buttonsRow: !1,
     shortRow: !0
-  }) : er.push({
+  }) : ei.push({
     label: null,
     column1: (0, a.jsxs)(a.Fragment, {
-      children: [J === h.PremiumSubscriptionSKUs.TIER_2 || el ? (0, a.jsx)(M.default, {
+      children: [J === h.PremiumSubscriptionSKUs.TIER_2 || en ? (0, a.jsx)(M.default, {
         className: x.button,
         subscriptionTier: h.PremiumSubscriptionSKUs.TIER_0,
         showIcon: !1,
@@ -201,7 +201,7 @@ t.default = e => {
         className: x.button,
         subscriptionTier: h.PremiumSubscriptionSKUs.TIER_0,
         showIcon: !1
-      }), q === h.PremiumTypes.TIER_2 || null != J ? null : (0, a.jsx)(P.default, {
+      }), q === h.PremiumTypes.TIER_2 || null != J ? null : (0, a.jsx)(O.default, {
         className: x.button,
         subscriptionTier: h.PremiumSubscriptionSKUs.TIER_0
       })]
@@ -218,8 +218,8 @@ t.default = e => {
         className: x.button,
         subscriptionTier: h.PremiumSubscriptionSKUs.TIER_2,
         showIcon: !1,
-        isEligibleForBogoPromotion: el
-      }), q === h.PremiumTypes.TIER_0 || null != J ? null : (0, a.jsx)(P.default, {
+        isEligibleForBogoPromotion: en
+      }), q === h.PremiumTypes.TIER_0 || null != J ? null : (0, a.jsx)(O.default, {
         className: x.button,
         subscriptionTier: h.PremiumSubscriptionSKUs.TIER_2
       })]
@@ -227,27 +227,27 @@ t.default = e => {
     withBottomBorder: !1,
     withBottomBorderRadius: !0,
     buttonsRow: null == J
-  }), s = D ? null : null != J || null != q ? (0, a.jsx)(g.PremiumPillWithSparkles, {
+  }), s = b ? null : null != J || null != q ? (0, a.jsx)(C.PremiumPillWithSparkles, {
     text: null != J ? L.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT : L.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
     className: x.freeTrialPillWithSparkles,
-    colorOptions: J === h.PremiumSubscriptionSKUs.TIER_0 ? z ? g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : z ? X ? g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
-  }) : el ? (0, a.jsx)(U, {
+    colorOptions: J === h.PremiumSubscriptionSKUs.TIER_0 ? z ? C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : z ? Q ? C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
+  }) : en ? (0, a.jsx)(j, {
     isLightTheme: z
-  }) : (0, a.jsx)(y, {});
+  }) : (0, a.jsx)(B, {});
   let eo = J === h.PremiumSubscriptionSKUs.TIER_0 || q === h.PremiumTypes.TIER_0 || H === h.PremiumTypes.TIER_0;
   return (0, a.jsx)(E.AnalyticsLocationProvider, {
     value: F,
     children: (0, a.jsxs)("div", {
-      className: l()(x.root, r),
+      className: n()(x.root, i),
       "data-testid": "v2-marketing-page-comparison-table",
       children: [(0, a.jsx)(u.Heading, {
-        className: l()(x.titleText, x.__invalid_textColor),
+        className: n()(x.titleText, x.__invalid_textColor),
         variant: "heading-xxl/extrabold",
-        children: null != j ? j : L.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_TITLE
+        children: null != D ? D : L.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_TITLE
       }), (0, a.jsxs)("div", {
         className: x.tableWrapper,
         children: [(0, a.jsx)("div", {
-          className: l()(b, {
+          className: n()(U, {
             [x.tier0ColumnOuter]: eo && !w,
             [x.tier2ColumnOuter]: !eo && !w,
             [x.tier0ColumnOuterBackground]: eo && w,
@@ -261,10 +261,10 @@ t.default = e => {
           className: x.table,
           children: [(0, a.jsx)("thead", {
             children: (0, a.jsx)(G, {
-              ...en
+              ...el
             })
           }), (0, a.jsx)("tbody", {
-            children: er.map((e, t) => (0, i.createElement)(k, {
+            children: ei.map((e, t) => (0, r.createElement)(k, {
               ...e,
               key: t
             }))

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return m
   },
   SubscriptionCardBenefit: function() {
-    return h
+    return p
   }
 });
 var i = n("735250");
@@ -25,8 +25,8 @@ function m(e) {
     imgSrc: n,
     PurchaseButton: r,
     onPurchase: m,
-    subscriptionType: h,
-    title: p,
+    subscriptionType: p,
+    title: h,
     onDetails: S,
     benefitItems: v,
     benefitsSummary: x
@@ -40,14 +40,14 @@ function m(e) {
       },
       children: [(0, i.jsxs)("div", {
         className: u.card,
-        children: [null != h && (0, i.jsx)(c.SubscriptionTag, {
-          type: h
+        children: [null != p && (0, i.jsx)(c.SubscriptionTag, {
+          type: p
         }), (0, i.jsxs)("div", {
           className: u.body,
           children: [(0, i.jsx)(o.Text, {
             tag: "div",
             variant: "heading-lg/semibold",
-            children: p
+            children: h
           }), (0, i.jsx)("div", {
             className: u.image,
             children: null != n ? (0, i.jsx)("img", {
@@ -105,7 +105,7 @@ function m(e) {
   })
 }
 
-function h(e) {
+function p(e) {
   let {
     icon: t,
     name: n,

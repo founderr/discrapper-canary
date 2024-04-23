@@ -23,10 +23,10 @@ t.default = e => {
     innerCircleClassName: i,
     progressCircleStrokeSize: l,
     backgroundCircleSize: f,
-    percentage: E,
-    initialPercentage: p,
-    progressCircleVariation: R = 0
-  } = e, x = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), h = t && !x;
+    percentage: p,
+    initialPercentage: E,
+    progressCircleVariation: x = 0
+  } = e, R = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), h = t && !R;
   return (0, n.jsx)("div", {
     className: a()(C.gemProgressCircle, r),
     children: (0, n.jsx)(_.default, {
@@ -34,15 +34,15 @@ t.default = e => {
         [C.activeProgressCircleAnimation]: h
       }),
       progressCircleStrokeSize: l,
-      percentage: null != s ? s : E,
-      initialPercentage: null != s ? s : p,
-      progressCircleVariation: R,
-      children: 0 === R ? (0, n.jsx)(d.default, {
+      percentage: null != s ? s : p,
+      initialPercentage: null != s ? s : E,
+      progressCircleVariation: x,
+      children: 0 === x ? (0, n.jsx)(d.default, {
         className: h ? C.nitroGemAnimation : void 0,
         backgroundColor: a()(C.gemBackgroundFill, i),
         backgroundCircleSize: f
       }) : (0, n.jsx)(c.default, {
-        percentage: E
+        percentage: p
       })
     })
   })

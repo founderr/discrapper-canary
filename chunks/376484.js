@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var s = n("735250");
 n("470079");
-var a = n("120356"),
-  l = n.n(a),
+var l = n("120356"),
+  a = n.n(l),
   i = n("481060"),
   r = n("454585"),
   o = n("529815"),
@@ -20,29 +20,29 @@ var a = n("120356"),
 function _(e) {
   let {
     message: t,
-    channel: a,
+    channel: l,
     compact: r
   } = e, o = null != t.embeds && t.embeds.length > 0;
   return (0, s.jsxs)("div", {
     children: [(0, s.jsx)(u.default, {
-      className: l()(E.mainContainer, {
+      className: a()(E.mainContainer, {
         [E.compact]: r
       }),
       icon: n("570111"),
       compact: r,
       children: (0, s.jsx)("div", {
-        className: l()(E.__invalid_content, {
+        className: a()(E.__invalid_content, {
           [E.compact]: r
         }),
         children: (0, s.jsx)("div", {
-          className: l()(E.__invalid_messageContent, {
+          className: a()(E.__invalid_messageContent, {
             [E.compact]: r
           }),
           children: t.content
         })
       })
     }), (0, s.jsx)("div", {
-      className: l()(E.__invalid_embedContent, {
+      className: a()(E.__invalid_embedContent, {
         [E.compact]: r
       }),
       children: (0, s.jsx)(m, {
@@ -53,7 +53,7 @@ function _(e) {
       children: (0, s.jsx)(i.Button, {
         color: i.Button.Colors.PRIMARY,
         onClick: () => {
-          o ? (0, d.updateGamingStats)(t) : (0, d.sendGamingStatsMessage)(a.guild_id, a.id, t.id)
+          o ? (0, d.updateGamingStats)(t) : (0, d.sendGamingStatsMessage)(l.guild_id, l.id, t.id)
         },
         children: f.default.Messages.SYSTEM_MESSAGE_GET_GAMING_STATS
       })
@@ -65,10 +65,10 @@ function m(e) {
   var t;
   let {
     message: n
-  } = e, [a] = null !== (t = n.embeds) && void 0 !== t ? t : [];
-  return null == a ? null : (0, s.jsx)(o.default, {
+  } = e, [l] = null !== (t = n.embeds) && void 0 !== t ? t : [];
+  return null == l ? null : (0, s.jsx)(o.default, {
     className: E.embed,
-    embed: a,
+    embed: l,
     renderTitle: (e, t) => r.default.parseEmbedTitle(t, !0, {
       channelId: n.channel_id
     }),

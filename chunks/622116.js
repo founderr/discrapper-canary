@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var a = n("442837"),
-  l = n("481060"),
+var l = n("442837"),
+  a = n("481060"),
   i = n("475179"),
   r = n("287734"),
   o = n("933557"),
@@ -29,20 +29,20 @@ function h(e) {
     beforeTransition: h,
     className: N,
     openChatWithoutConnecting: S
-  } = e, C = (0, a.useStateFromStores)([_.default, E.default], () => null == t ? "" : (0, o.computeChannelName)(t, _.default, E.default), [t]);
-  return (0, s.jsx)(l.Tooltip, {
+  } = e, C = (0, l.useStateFromStores)([_.default, E.default], () => null == t ? "" : (0, o.computeChannelName)(t, _.default, E.default), [t]);
+  return (0, s.jsx)(a.Tooltip, {
     text: C,
     position: "top",
     children: e => {
       let {
-        onMouseEnter: a,
+        onMouseEnter: l,
         onMouseLeave: o
       } = e;
       return (0, s.jsx)(m.default, {
         role: "link",
         className: N,
         onClick: e => {
-          e.stopPropagation(), null != n ? n() : (null != h && h(), (0, l.closeAllModals)(), ! function(e, t) {
+          e.stopPropagation(), null != n ? n() : (null != h && h(), (0, a.closeAllModals)(), ! function(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
             if (null == e || null == t) return;
             let s = f.default.getGuild(e);
@@ -52,18 +52,18 @@ function h(e) {
               });
               return
             }
-            let a = c.default.getChannel(t);
-            if (null != a && (0, d.isGuildVocalChannelType)(a.type)) {
+            let l = c.default.getChannel(t);
+            if (null != l && (0, d.isGuildVocalChannelType)(l.type)) {
               if (n) {
-                i.default.updateChatOpen(a.id, !0), (0, u.transitionTo)(p.Routes.CHANNEL(e, t));
+                i.default.updateChatOpen(l.id, !0), (0, u.transitionTo)(p.Routes.CHANNEL(e, t));
                 return
               }
-              r.default.selectVoiceChannel(a.id);
+              r.default.selectVoiceChannel(l.id);
               return
             }(0, u.transitionTo)(p.Routes.CHANNEL(e, t))
           }(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, S))
         },
-        onMouseEnter: a,
+        onMouseEnter: l,
         onMouseLeave: o,
         iconType: (0, T.getMentionIconType)(t),
         children: C

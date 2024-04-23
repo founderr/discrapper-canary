@@ -1,18 +1,18 @@
 "use strict";
 s.r(t), s.d(t, {
   AnalyticsLocationsProvider: function() {
-    return r
+    return i
   }
 }), s("47120");
 var a = s("735250");
 s("470079");
-var i = s("906732");
+var r = s("906732");
 
-function r(e) {
+function i(e) {
   let {
     analyticsLocations: t
-  } = (0, i.default)(...e.newLocations);
-  return (0, a.jsx)(i.LocationContext.Provider, {
+  } = (0, r.default)(...e.newLocations);
+  return (0, a.jsx)(r.LocationContext.Provider, {
     value: t,
     children: e.children
   })

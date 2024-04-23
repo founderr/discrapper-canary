@@ -1,18 +1,18 @@
 "use strict";
 n.r(t), n.d(t, {
   useUserIsTeen: function() {
-    return i
+    return s
   }
 });
 var a = n("442837"),
-  l = n("594174"),
-  s = n("699816");
+  r = n("594174"),
+  i = n("699816");
 
-function i(e) {
-  let t = (0, a.useStateFromStores)([l.default], () => {
+function s(e) {
+  let t = (0, a.useStateFromStores)([r.default], () => {
       var e;
-      return null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed
+      return null === (e = r.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed
     }),
-    n = (0, s.useStaffTeenSafetyAssistAgeBypass)(e);
+    n = (0, i.useStaffTeenSafetyAssistAgeBypass)(e);
   return !1 === t || n
 }

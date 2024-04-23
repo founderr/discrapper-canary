@@ -29,8 +29,8 @@ n.r(t), n.d(t, {
   }
 }), n("724458");
 var s = n("913527"),
-  a = n.n(s),
-  l = n("118139"),
+  l = n.n(s),
+  a = n("118139"),
   i = n("531441"),
   r = n("800530"),
   o = n("981631"),
@@ -38,27 +38,27 @@ var s = n("913527"),
   d = n("689938");
 
 function c(e) {
-  return a()().to(a()(e))
+  return l()().to(l()(e))
 }
 
 function f(e) {
   var t, n;
-  return (0, l.isImageFile)(e.filename) || (0, l.isVideoFile)(e.filename) ? "".concat(u.SPOILER_ATTACHMENT_PREFIX).concat(null !== (t = e.filename) && void 0 !== t ? t : ".png") : null !== (n = e.filename) && void 0 !== n ? n : ""
+  return (0, a.isImageFile)(e.filename) || (0, a.isVideoFile)(e.filename) ? "".concat(u.SPOILER_ATTACHMENT_PREFIX).concat(null !== (t = e.filename) && void 0 !== t ? t : ".png") : null !== (n = e.filename) && void 0 !== n ? n : ""
 }
 
 function E(e) {
-  var t, n, s, a;
+  var t, n, s, l;
   if (null == e.fields) return;
-  let l = e.fields.reduce((e, t) => (e[t.rawName] = t.rawValue, e), {});
+  let a = e.fields.reduce((e, t) => (e[t.rawName] = t.rawValue, e), {});
   return {
-    header: null !== (t = l[r.SafetySystemNotificationEmbedKeys.HEADER]) && void 0 !== t ? t : "",
-    icon: l[r.SafetySystemNotificationEmbedKeys.ICON_TYPE],
-    body: null !== (n = l[r.SafetySystemNotificationEmbedKeys.BODY]) && void 0 !== n ? n : "",
-    ctas: (null !== (s = l[r.SafetySystemNotificationEmbedKeys.CTAS]) && void 0 !== s ? s : "").split(",").filter(e => "" !== e),
-    timestamp: parseFloat(null !== (a = l[r.SafetySystemNotificationEmbedKeys.TIMESTAMP]) && void 0 !== a ? a : 0),
-    theme: l[r.SafetySystemNotificationEmbedKeys.THEME],
-    learn_more_link: l[r.SafetySystemNotificationEmbedKeys.LEARN_MORE_LINK],
-    classification_id: l[r.SafetySystemNotificationEmbedKeys.CLASSIFICATION_ID]
+    header: null !== (t = a[r.SafetySystemNotificationEmbedKeys.HEADER]) && void 0 !== t ? t : "",
+    icon: a[r.SafetySystemNotificationEmbedKeys.ICON_TYPE],
+    body: null !== (n = a[r.SafetySystemNotificationEmbedKeys.BODY]) && void 0 !== n ? n : "",
+    ctas: (null !== (s = a[r.SafetySystemNotificationEmbedKeys.CTAS]) && void 0 !== s ? s : "").split(",").filter(e => "" !== e),
+    timestamp: parseFloat(null !== (l = a[r.SafetySystemNotificationEmbedKeys.TIMESTAMP]) && void 0 !== l ? l : 0),
+    theme: a[r.SafetySystemNotificationEmbedKeys.THEME],
+    learn_more_link: a[r.SafetySystemNotificationEmbedKeys.LEARN_MORE_LINK],
+    classification_id: a[r.SafetySystemNotificationEmbedKeys.CLASSIFICATION_ID]
   }
 }
 

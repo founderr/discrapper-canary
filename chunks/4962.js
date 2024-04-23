@@ -1,17 +1,17 @@
 "use strict";
 s.r(t), s("411104");
-var a, i, r = s("735250");
+var a, r, i = s("735250");
 s("470079");
-var l = s("120356"),
-  n = s.n(l),
+var n = s("120356"),
+  l = s.n(n),
   o = s("442837"),
   u = s("481060"),
   d = s("700582"),
   c = s("451478"),
   _ = s("689938"),
   E = s("55013");
-(i = a || (a = {}))[i.STAFF_NOTES = 1] = "STAFF_NOTES";
-let C = o.default.connectStores([c.default], () => ({
+(r = a || (a = {}))[r.STAFF_NOTES = 1] = "STAFF_NOTES";
+let T = o.default.connectStores([c.default], () => ({
     animate: c.default.isFocused()
   }))(e => {
     let {
@@ -19,25 +19,25 @@ let C = o.default.connectStores([c.default], () => ({
       className: s,
       animate: a
     } = e;
-    return (0, r.jsxs)("div", {
-      className: n()(E.staffReviewHeader, s),
-      children: [(0, r.jsx)(d.default, {
+    return (0, i.jsxs)("div", {
+      className: l()(E.staffReviewHeader, s),
+      children: [(0, i.jsx)(d.default, {
         size: u.AvatarSizes.SIZE_32,
         user: t,
         animate: a
-      }), (0, r.jsxs)("div", {
+      }), (0, i.jsxs)("div", {
         className: E.headerText,
-        children: [(0, r.jsx)("div", {
+        children: [(0, i.jsx)("div", {
           className: E.label,
           children: _.default.Messages.APPLICATION_STORE_STAFF_PICK
-        }), (0, r.jsx)("div", {
+        }), (0, i.jsx)("div", {
           className: E.username,
           children: t.username
         })]
       })]
     })
   }),
-  f = e => {
+  I = e => {
     let {
       data: t,
       className: s
@@ -48,12 +48,12 @@ let C = o.default.connectStores([c.default], () => ({
         user: e,
         content: a
       } = t.staffNotes;
-      return null == e ? null : (0, r.jsxs)("div", {
+      return null == e ? null : (0, i.jsxs)("div", {
         className: s,
-        children: [(0, r.jsx)(C, {
+        children: [(0, i.jsx)(T, {
           user: e,
           className: E.header
-        }), (0, r.jsx)("div", {
+        }), (0, i.jsx)("div", {
           className: E.notes,
           children: a
         })]
@@ -61,4 +61,4 @@ let C = o.default.connectStores([c.default], () => ({
     }
     throw Error("Unknown type")
   };
-f.Types = a, t.default = f
+I.Types = a, t.default = I

@@ -6,10 +6,10 @@ s.r(t), s.d(t, {
 });
 var a = s("735250");
 s("470079");
-var i = s("481060"),
-  r = s("204197"),
-  l = s("182294"),
-  n = s("689938"),
+var r = s("481060"),
+  i = s("204197"),
+  n = s("182294"),
+  l = s("689938"),
   o = s("853626"),
   u = s("144343");
 
@@ -20,9 +20,9 @@ function d(e) {
   } = e, {
     avatarSrc: d,
     eventHandlers: c
-  } = (0, r.default)({
+  } = (0, i.default)({
     user: s,
-    size: l.AvatarSizes.SIZE_32,
+    size: n.AvatarSizes.SIZE_32,
     animateOnHover: !0
   });
   return (0, a.jsx)("div", {
@@ -31,17 +31,17 @@ function d(e) {
       className: o.attributionBannerContent,
       children: [(0, a.jsx)("div", {
         className: o.iconContainer,
-        children: (0, a.jsx)(i.Avatar, {
+        children: (0, a.jsx)(r.Avatar, {
           className: o.icon,
           src: d,
           "aria-label": s.username,
-          size: l.AvatarSizes.SIZE_32,
+          size: n.AvatarSizes.SIZE_32,
           ...c
         })
-      }), (0, a.jsx)(i.Heading, {
+      }), (0, a.jsx)(r.Heading, {
         variant: "heading-lg/medium",
         className: o.textContainer,
-        children: n.default.Messages.REFERRAL_PROGRAM_SUBSCRIBER_HOMER_BANNER.format({
+        children: l.default.Messages.REFERRAL_PROGRAM_SUBSCRIBER_HOMER_BANNER.format({
           username: null != (t = s).globalName ? t.globalName : t.username
         })
       }), (0, a.jsx)("img", {

@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("735250"),
-  a = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  l = n("470079"),
+  a = n("120356"),
+  i = n.n(a),
   r = n("512722"),
   o = n.n(r),
   u = n("913527"),
@@ -36,12 +36,12 @@ function L(e) {
   let {
     width: t = 6,
     height: n = 10,
-    color: a = "currentColor",
-    className: l,
+    color: l = "currentColor",
+    className: a,
     foreground: i
   } = e;
   return (0, s.jsx)("svg", {
-    className: l,
+    className: a,
     width: t,
     height: n,
     viewBox: "0 0 6 10",
@@ -50,7 +50,7 @@ function L(e) {
     children: (0, s.jsx)("path", {
       d: "M4.61241 0L6 0.845294L1.38759 10L0 9.15471L4.61241 0Z",
       className: i,
-      fill: a
+      fill: l
     })
   })
 }
@@ -59,36 +59,36 @@ function D(e) {
   var t;
   let n;
   let {
-    message: l,
+    message: a,
     channel: r
   } = e, {
     analyticsLocations: u
-  } = (0, T.default)(m.default.EXECUTED_COMMAND), D = a.useMemo(() => (e, t, n) => (o()(null != r && null != t, "ExecuteCommand: user and channel cannot be undefined"), (0, s.jsx)(N.default, {
+  } = (0, T.default)(m.default.EXECUTED_COMMAND), D = l.useMemo(() => (e, t, n) => (o()(null != r && null != t, "ExecuteCommand: user and channel cannot be undefined"), (0, s.jsx)(N.default, {
     ...e,
     location: "ExecutedCommand",
     channelId: r.id,
-    messageId: l.id,
+    messageId: a.id,
     guildId: r.guild_id,
     userId: t.id,
     newAnalyticsLocations: n
-  })), [r, l.id]), P = a.useMemo(() => e => (o()(null != r, "ExecutedCommand: channel cannot be null"), (0, s.jsx)(g.default, {
+  })), [r, a.id]), P = l.useMemo(() => e => (o()(null != r, "ExecutedCommand: channel cannot be null"), (0, s.jsx)(g.default, {
     ...e,
     channel: r,
-    messageId: l.id,
-    interactionData: l.interactionData
-  })), [r, l.id, l.interactionData]), y = (0, p.useNullableUserAuthor)(null === (t = l.interaction) || void 0 === t ? void 0 : t.user, r), U = a.useMemo(() => e.compact ? (0, h.default)((0, A.dateFormat)(d()(), "LT")) : null, [e.compact]), j = (0, f.useIsActivitiesInTextEnabled)(r.id, "ExecutedCommand"), {
+    messageId: a.id,
+    interactionData: a.interactionData
+  })), [r, a.id, a.interactionData]), y = (0, p.useNullableUserAuthor)(null === (t = a.interaction) || void 0 === t ? void 0 : t.user, r), U = l.useMemo(() => e.compact ? (0, h.default)((0, A.dateFormat)(d()(), "LT")) : null, [e.compact]), j = (0, f.useIsActivitiesInTextEnabled)(r.id, "ExecutedCommand"), {
     enabled: b
   } = I.AppLauncherOnboardingExperiment.useExperiment({
     location: "Executed Command"
   }, {
     autoTrackExposure: !1
-  }), B = l.interaction;
+  }), B = a.interaction;
   if (null == B || null == y) return null;
   let G = () => {
     let t = function(e, t) {
         let n, {
-          message: a,
-          compact: l,
+          message: l,
+          compact: a,
           channel: r,
           isInteractionUserBlocked: o,
           showAvatarPopout: u,
@@ -96,43 +96,43 @@ function D(e) {
           onUserContextMenu: f,
           onPopoutRequestClose: E
         } = e;
-        if (l && null == a.activityInstance || o) return (0, s.jsx)("div", {
+        if (a && null == l.activityInstance || o) return (0, s.jsx)("div", {
           className: x.replyBadge,
           children: (0, s.jsx)(L, {
             className: x.commandIcon
           })
         });
-        if (null != a.interaction) {
+        if (null != l.interaction) {
           var _, m, T;
-          let e = (0, p.getUserAuthor)(a.interaction.user, r);
+          let e = (0, p.getUserAuthor)(l.interaction.user, r);
           n = null !== (T = C.default.getGuildMemberAvatarURL({
             avatar: null !== (_ = e.guildMemberAvatar) && void 0 !== _ ? _ : void 0,
-            userId: a.interaction.user.id,
+            userId: l.interaction.user.id,
             guildId: null !== (m = null == r ? void 0 : r.guild_id) && void 0 !== m ? m : ""
           })) && void 0 !== T ? T : void 0
         }
-        let I = () => null != a.interaction && function(e) {
+        let I = () => null != l.interaction && function(e) {
           let {
             user: t,
             guildId: n,
-            guildAvatar: a,
-            onClick: l,
+            guildAvatar: l,
+            onClick: a,
             onContextMenu: r,
             onMouseDown: o
           } = e;
           return (0, s.jsx)("img", {
             alt: "",
-            src: null != a ? a : t.getAvatarURL(n, 16),
-            onClick: l,
+            src: null != l ? l : t.getAvatarURL(n, 16),
+            onClick: a,
             onContextMenu: r,
             onMouseDown: o,
             className: i()({
               [x.executedCommandAvatar]: !0,
-              [x.clickable]: null != l
+              [x.clickable]: null != a
             })
           })
         }({
-          user: a.interaction.user,
+          user: l.interaction.user,
           guildId: r.guild_id,
           guildAvatar: n,
           onClick: d,
@@ -147,9 +147,9 @@ function D(e) {
         }) : I()
       }(e, e => D(e, B.user, [m.default.AVATAR])),
       n = function(e, t, n) {
-        var a;
+        var l;
         let {
-          message: l,
+          message: a,
           channel: i,
           showUsernamePopout: r,
           onClickUsername: o,
@@ -159,9 +159,9 @@ function D(e) {
         return (0, s.jsx)(M.default, {
           compact: !0,
           author: t,
-          message: l,
+          message: a,
           channel: i,
-          userOverride: null === (a = l.interaction) || void 0 === a ? void 0 : a.user,
+          userOverride: null === (l = a.interaction) || void 0 === l ? void 0 : l.user,
           showPopout: r,
           renderPopout: n,
           onClick: o,
@@ -169,11 +169,11 @@ function D(e) {
           onPopoutRequestClose: d
         })
       }(e, y, e => D(e, B.user));
-    return (0, s.jsxs)(a.Fragment, {
+    return (0, s.jsxs)(l.Fragment, {
       children: [t, n]
     }, "user")
   };
-  if ((null == l ? void 0 : l.activityInstance) !== null) {
+  if ((null == a ? void 0 : a.activityInstance) !== null) {
     let e = () => {
       (0, _.default)({
         channel: r,
@@ -209,26 +209,26 @@ function D(e) {
     commandHook: () => {
       let t = function(e, t, n) {
         let {
-          showDataPopout: a,
-          message: l,
+          showDataPopout: l,
+          message: a,
           onClickCommand: r,
           onPopoutRequestClose: o
-        } = e, u = l.interaction.displayName;
+        } = e, u = a.interaction.displayName;
         return (0, s.jsx)(c.Popout, {
           renderPopout: t,
-          shouldShow: a,
+          shouldShow: l,
           position: "top",
           align: "center",
           onRequestClose: o,
           animation: c.Popout.Animation.FADE,
-          positionKey: null != l.interactionData ? "ready" : "loading",
+          positionKey: null != a.interactionData ? "ready" : "loading",
           children: e => {
             let {
               onClick: t,
-              ...a
+              ...l
             } = e;
-            return l.type === R.MessageTypes.CHAT_INPUT_COMMAND || l.type === R.MessageTypes.INTERACTION_PREMIUM_UPSELL ? (0, s.jsx)(c.Clickable, {
-              ...a,
+            return a.type === R.MessageTypes.CHAT_INPUT_COMMAND || a.type === R.MessageTypes.INTERACTION_PREMIUM_UPSELL ? (0, s.jsx)(c.Clickable, {
+              ...l,
               tag: "span",
               onClick: r,
               children: (0, s.jsxs)("div", {
@@ -250,7 +250,7 @@ function D(e) {
           }
         })
       }(e, P, b);
-      return (0, s.jsx)(a.Fragment, {
+      return (0, s.jsx)(l.Fragment, {
         children: t
       }, "command")
     }

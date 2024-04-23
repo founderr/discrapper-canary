@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var s = n("735250"),
-  a = n("470079"),
-  l = n("442837"),
+  l = n("470079"),
+  a = n("442837"),
   i = n("481060"),
   r = n("782568"),
   o = n("31336"),
@@ -19,9 +19,9 @@ var s = n("735250"),
   m = n("689938");
 
 function T() {
-  let e = (0, l.useStateFromStores)([u.default], () => u.default.isDeveloper),
-    [t, T] = a.useState(!1),
-    [I, p] = a.useState(0),
+  let e = (0, a.useStateFromStores)([u.default], () => u.default.isDeveloper),
+    [t, T] = l.useState(!1),
+    [I, p] = l.useState(0),
     h = e => {
       clearTimeout(I), p(setTimeout(() => {
         T(e)
@@ -41,7 +41,7 @@ function T() {
       renderPopout: () => (function(e) {
         let {
           onClose: t,
-          isDiscordDeveloper: a
+          isDiscordDeveloper: l
         } = e;
         return (0, s.jsx)(i.Menu, {
           onSelect: () => {},
@@ -62,7 +62,7 @@ function T() {
                   ...t
                 })
               })
-            }), a && (0, s.jsx)(i.MenuItem, {
+            }), l && (0, s.jsx)(i.MenuItem, {
               id: "staff-devtools",
               label: "Toggle DevTools",
               icon: c.default,

@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120"), n("789020");
-var s, a, l, i, r = n("442837"),
+var s, l, a, i, r = n("442837"),
   o = n("433517"),
   u = n("570140"),
   d = n("314897"),
@@ -20,23 +20,23 @@ class h extends(s = r.default.Store) {
     return p.has(e)
   }
 }
-i = "ChannelFollowingPublishBumpStore", (l = "displayName") in(a = h) ? Object.defineProperty(a, l, {
+i = "ChannelFollowingPublishBumpStore", (a = "displayName") in(l = h) ? Object.defineProperty(l, a, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = i, t.default = new h(u.default, {
+}) : l[a] = i, t.default = new h(u.default, {
   MESSAGE_CREATE: function(e) {
     var t;
     let {
       channelId: n,
       message: s,
-      optimistic: a
+      optimistic: l
     } = e;
-    if (a || I.has(n)) return !1;
-    let l = c.default.getChannel(n),
+    if (l || I.has(n)) return !1;
+    let a = c.default.getChannel(n),
       i = E.default.getCurrentUser();
-    if (!(null != l && l.type === m.ChannelTypes.GUILD_ANNOUNCEMENT && s.type === m.MessageTypes.DEFAULT && (null != i && (null === (t = s.author) || void 0 === t ? void 0 : t.id) === i.id ? f.default.can(m.Permissions.SEND_MESSAGES, l) : f.default.can(m.Permissions.MANAGE_MESSAGES, l)) && !_.hasFlag(Number(s.flags), m.MessageFlags.CROSSPOSTED))) return !1;
+    if (!(null != a && a.type === m.ChannelTypes.GUILD_ANNOUNCEMENT && s.type === m.MessageTypes.DEFAULT && (null != i && (null === (t = s.author) || void 0 === t ? void 0 : t.id) === i.id ? f.default.can(m.Permissions.SEND_MESSAGES, a) : f.default.can(m.Permissions.MANAGE_MESSAGES, a)) && !_.hasFlag(Number(s.flags), m.MessageFlags.CROSSPOSTED))) return !1;
     p.add(s.id)
   },
   MESSAGE_UPDATE: function(e) {

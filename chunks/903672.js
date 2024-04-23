@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("735250"),
-  a = n("470079"),
-  l = n("442837"),
+  l = n("470079"),
+  a = n("442837"),
   i = n("524437"),
   r = n("235820"),
   o = n("494404"),
@@ -39,10 +39,10 @@ let x = {
 
 function L(e, t, n) {
   let s = t ? N.default.guildFilter : null,
-    a = t ? N.default.roleFilter : null,
-    l = t ? N.default.everyoneFilter : null,
+    l = t ? N.default.roleFilter : null,
+    a = t ? N.default.everyoneFilter : null,
     i = null;
-  null != e && null != s && (i = s === R.RecentMentionsFilters.ALL_SERVERS ? null : e.getGuildId()), r.default.fetchRecentMentions(n, R.MAX_MENTIONS_PER_FETCH, i, a, l)
+  null != e && null != s && (i = s === R.RecentMentionsFilters.ALL_SERVERS ? null : e.getGuildId()), r.default.fetchRecentMentions(n, R.MAX_MENTIONS_PER_FETCH, i, l, a)
 }
 
 function D(e) {
@@ -51,14 +51,14 @@ function D(e) {
     onJump: n,
     badgeState: f,
     closePopout: E
-  } = e, m = (0, l.useStateFromStores)([_.default, T.default], () => _.default.getChannel(T.default.getChannelId())), {
+  } = e, m = (0, a.useStateFromStores)([_.default, T.default], () => _.default.getChannel(T.default.getChannelId())), {
     messages: I,
     hasMore: p,
     loading: h,
     guildFilter: S,
     roleFilter: A,
     everyoneFilter: g
-  } = (0, l.useStateFromStoresObject)([N.default], () => ({
+  } = (0, a.useStateFromStoresObject)([N.default], () => ({
     messages: N.default.getMentions(),
     hasMore: N.default.hasMore,
     loading: N.default.loading,
@@ -66,20 +66,20 @@ function D(e) {
     roleFilter: N.default.roleFilter,
     everyoneFilter: N.default.everyoneFilter
   })), x = (0, u.default)(S), D = (0, u.default)(A), P = (0, u.default)(g);
-  a.useEffect(() => {
+  l.useEffect(() => {
     if (!N.default.hasLoadedEver) {
       L(m, !0);
       return
     }(null != x && S !== x || null != D && A !== D || null != P && g !== P) && L(m, !0)
   }, [x, S, D, A, P, g, m, !0]);
-  a.useEffect(() => {
+  l.useEffect(() => {
     d.AttachmentLinkRefreshExperiment.getCurrentConfig({
       location: "mentions"
     }).enabled && (null == I ? void 0 : I.some(c.messageHasExpiredAttachmentUrl)) && (r.default.clearMentions(), L(m, !0))
-  }, []), a.useEffect(() => () => {
+  }, []), l.useEffect(() => () => {
     r.default.truncateMentions(R.MAX_MENTIONS_PER_FETCH)
   }, []);
-  let U = a.useCallback(() => (0, s.jsx)(M.default, {
+  let U = l.useCallback(() => (0, s.jsx)(M.default, {
     tab: i.InboxTab.MENTIONS,
     setTab: t,
     badgeState: f,
@@ -132,19 +132,19 @@ function U(e) {
   let {
     message: t,
     gotoMessage: n,
-    dismissible: a
+    dismissible: l
   } = e;
   if (null == t) return null;
-  let l = _.default.getChannel(t.channel_id);
-  if (null == l) return null;
-  let i = m.default.didAgree(l.getGuildId()),
-    o = !!l.isNSFW() && !i;
+  let a = _.default.getChannel(t.channel_id);
+  if (null == a) return null;
+  let i = m.default.didAgree(a.getGuildId()),
+    o = !!a.isNSFW() && !i;
   return (0, s.jsxs)("div", {
     className: O.container,
     children: [(0, s.jsx)(A.default, {
-      channel: l,
+      channel: a,
       gotoChannel: n,
-      children: null != a ? (0, s.jsx)(I.default, {
+      children: null != l ? (0, s.jsx)(I.default, {
         className: O.closeButton,
         tooltip: v.default.Messages.CLOSE,
         color: I.CircleIconButtonColors.TERTIARY,
@@ -161,7 +161,7 @@ function U(e) {
         onJump: n
       }), (0, s.jsx)(f.default, {
         message: t,
-        channel: l,
+        channel: a,
         className: O.message,
         hideAccessories: o,
         compact: E.MessageDisplayCompact.getSetting(),

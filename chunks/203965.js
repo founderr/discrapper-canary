@@ -5,14 +5,14 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var s = n("470079"),
-  a = n("442837"),
-  l = n("904245"),
+  l = n("442837"),
+  a = n("904245"),
   i = n("592125"),
   r = n("375954"),
   o = n("822893");
 
 function u(e) {
-  let t = (0, a.useStateFromStoresArray)([i.default, r.default], () => e.filter(e => null != i.default.getChannel(e.channelId)).map(e => r.default.getMessage(e.channelId, e.messageId)).filter(e => null != e)),
+  let t = (0, l.useStateFromStoresArray)([i.default, r.default], () => e.filter(e => null != i.default.getChannel(e.channelId)).map(e => r.default.getMessage(e.channelId, e.messageId)).filter(e => null != e)),
     n = e.filter(e => null == r.default.getMessage(e.channelId, e.messageId)),
     [u, d] = s.useState(0 === n.length);
   return s.useEffect(() => {
@@ -20,7 +20,7 @@ function u(e) {
   }, []), s.useEffect(() => {
     !u && (n.forEach(e => {
       try {
-        l.default.fetchMessages({
+        a.default.fetchMessages({
           channelId: e.channelId,
           limit: 1,
           jump: {

@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("544891"),
-  a = n("569471"),
-  l = n("346479"),
+  l = n("569471"),
+  a = n("346479"),
   i = n("592125"),
   r = n("375954"),
   o = n("306680"),
@@ -24,7 +24,7 @@ async function f(e, t) {
     d.default.compare(e.id, _) > 0 && (0, o.shouldBadgeMessage)(e, n) && m++
   });
   let T = i.default.getChannel(e);
-  null != T && T.isThread() && (T.isArchivedThread() && await l.default.unarchiveThread(T, !1), !a.default.hasJoined(e) && await l.default.joinThread(T, "Mark Unread")), s.HTTP.post({
+  null != T && T.isThread() && (T.isArchivedThread() && await a.default.unarchiveThread(T, !1), !l.default.hasJoined(e) && await a.default.joinThread(T, "Mark Unread")), s.HTTP.post({
     url: c.Endpoints.MESSAGE_ACK(e, _),
     body: {
       manual: !0,

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var a = n("442837"),
-  l = n("481060"),
+var l = n("442837"),
+  a = n("481060"),
   i = n("197409"),
   r = n("846587"),
   o = n("409059"),
@@ -20,7 +20,7 @@ function E(e) {
   var t;
   let {
     code: E
-  } = e, _ = (0, a.useStateFromStores)([o.default], () => o.default.getGuildTemplate(E));
+  } = e, _ = (0, l.useStateFromStores)([o.default], () => o.default.getGuildTemplate(E));
   if (null == _ || _.state === u.GuildTemplateStates.RESOLVING) return (0, s.jsxs)(i.default, {
     children: [(0, s.jsx)(i.default.Header, {
       text: d.default.Messages.GUILD_TEMPLATE_RESOLVING_TITLE
@@ -46,7 +46,7 @@ function E(e) {
     children: d.default.Messages.GUILD_TEMPLATE_EMBED_VIEW_IN_APP
   }) : (0, s.jsx)(i.default.Button, {
     onClick: () => {
-      (0, l.openModalLazy)(async () => {
+      (0, a.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([n.e("49237"), n.e("99387"), n.e("10778"), n.e("95962")]).then(n.bind(n, "766775"));

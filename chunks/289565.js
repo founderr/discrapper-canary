@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var a = n("120356"),
-  l = n.n(a),
+var l = n("120356"),
+  a = n.n(l),
   i = n("739566"),
   r = n("998951"),
   o = n("113039"),
@@ -18,7 +18,7 @@ function c(e) {
   let {
     message: t,
     channel: n,
-    content: a,
+    content: l,
     className: c,
     compact: f,
     popoutProps: E,
@@ -27,22 +27,22 @@ function c(e) {
     ...T
   } = e, I = (0, i.default)(t);
   return (0, s.jsx)("div", {
-    className: l()({
+    className: a()({
       [d.withFooter]: m
     }, d.embedCard, {
       [d.compact]: f
     }, c),
     children: (0, s.jsx)(r.default, {
       ...T,
-      className: l()(d.messageContainer, {
+      className: a()(d.messageContainer, {
         [d.compact]: f
       }),
       childrenMessageContent: (0, s.jsx)(o.default, {
-        className: l()(d.__invalid_messageContent, {
+        className: a()(d.__invalid_messageContent, {
           [d.compact]: f
         }),
         message: t,
-        content: a
+        content: l
       }),
       childrenHeader: (0, s.jsx)(u.default, {
         message: t,
@@ -51,7 +51,7 @@ function c(e) {
         guildId: null == n ? void 0 : n.guild_id,
         compact: f,
         hideTimestamp: _,
-        className: l()(d.header, {
+        className: a()(d.header, {
           [d.compact]: f
         }),
         ...null != E ? E : {}

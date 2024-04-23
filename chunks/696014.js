@@ -5,32 +5,32 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var s = n("735250"),
-  a = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  l = n("470079"),
+  a = n("120356"),
+  i = n.n(a),
   r = n("204727");
 
 function o() {
-  let [e, t] = a.useState(!1);
+  let [e, t] = l.useState(!1);
   return {
     isTruncated: e,
-    ExpandableTextContainer: a.memo(function(e) {
+    ExpandableTextContainer: l.memo(function(e) {
       let {
         showAll: n = !1,
-        className: a,
-        children: l,
+        className: l,
+        children: a,
         lineClamp: o = 2
       } = e;
       return (0, s.jsx)("div", {
         ref: e => {
           null != e && t(e.scrollHeight - e.clientHeight > 1)
         },
-        className: i()(r.lineClamp, a),
+        className: i()(r.lineClamp, l),
         style: n ? void 0 : {
           lineClamp: o,
           WebkitLineClamp: o
         },
-        children: l
+        children: a
       })
     })
   }

@@ -1,9 +1,9 @@
 "use strict";
 n.r(t);
 var s = n("735250"),
-  a = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  l = n("470079"),
+  a = n("120356"),
+  i = n.n(a),
   r = n("442837"),
   o = n("692547"),
   u = n("481060"),
@@ -19,10 +19,10 @@ t.default = function(e) {
   var t;
   let {
     className: n,
-    color: l = o.default.colors.WHITE,
+    color: a = o.default.colors.WHITE,
     quest: p,
     isInventory: h
-  } = e, N = (null === (t = p.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, S = (0, r.useStateFromStores)([c.default], () => c.default.locale), C = a.useMemo(() => (0, m.calculatePercentComplete)(p), [p]), A = 100 * C, g = (0, _.isWeb)() && !N, M = () => (0, s.jsxs)("div", {
+  } = e, N = (null === (t = p.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, S = (0, r.useStateFromStores)([c.default], () => c.default.locale), C = l.useMemo(() => (0, m.calculatePercentComplete)(p), [p]), A = 100 * C, g = (0, _.isWeb)() && !N, M = () => (0, s.jsxs)("div", {
     className: I.desktopTooltip,
     style: {
       marginTop: h ? 8 : 0
@@ -42,7 +42,7 @@ t.default = function(e) {
   return g && !h ? (0, s.jsx)(M, {}) : (0, s.jsxs)("div", {
     className: i()(I.wrapper, n),
     style: {
-      color: l.css
+      color: a.css
     },
     children: [(0, s.jsxs)("div", {
       className: I.percentCompleteWrapper,

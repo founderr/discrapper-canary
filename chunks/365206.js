@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var a = n("120356"),
-  l = n.n(a),
+var l = n("120356"),
+  a = n.n(l),
   i = n("544323"),
   r = n("481060"),
   o = n("839963"),
@@ -19,7 +19,7 @@ function f(e) {
   let {
     didSelfVote: t,
     label: n,
-    percentage: a
+    percentage: l
   } = e;
   return (0, s.jsxs)("div", {
     className: c.votesData,
@@ -28,7 +28,7 @@ function f(e) {
     }), (0, s.jsxs)(r.Text, {
       variant: "text-md/semibold",
       color: "none",
-      children: [a, "%"]
+      children: [l, "%"]
     }), (0, s.jsx)(r.Text, {
       variant: "text-xs/semibold",
       color: "none",
@@ -41,18 +41,18 @@ function E(e) {
   let {
     answer: t,
     isExpired: n,
-    myAvatarUrl: a,
+    myAvatarUrl: l,
     canShowVoteCounts: i
   } = e, r = !0 === t.isSelected, o = !0 === t.didSelfVote, d = !0 === t.isVictor;
   return (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(u.PollMediaView, {
-      attachmentClassName: l()(c.attachment, {
+      attachmentClassName: a()(c.attachment, {
         [c.attachmentWithResults]: i
       }),
       emojiClassName: c.emoji,
       media: t.pollMedia,
       fallback: (0, s.jsx)("div", {
-        className: l()(c.attachment, c.mediaMissing)
+        className: a()(c.attachment, c.mediaMissing)
       })
     }), r && (0, s.jsx)(u.PollAnswerVotedIcon, {
       size: 40,
@@ -64,7 +64,7 @@ function E(e) {
         didSelfVote: o,
         percentage: t.votesPercentage,
         label: t.votes,
-        myAvatarUrl: o ? a : void 0
+        myAvatarUrl: o ? l : void 0
       }), (!n && o || d) && (0, s.jsx)(u.PollAnswerVotedIcon, {
         size: 18,
         isVictor: d,
@@ -79,22 +79,22 @@ function _(e) {
   let {
     isExpired: t,
     myAvatarUrl: n,
-    answersInteraction: a,
+    answersInteraction: l,
     canShowVoteCounts: i,
     ...r
   } = e;
   return (0, s.jsx)(u.PollAnswers, {
     className: c.answersContainer,
-    answerClassName: l()(c.answer, {
-      [c.currentlyVoting]: a !== o.PollChatAnswerInteractionType.LIST
+    answerClassName: a()(c.answer, {
+      [c.currentlyVoting]: l !== o.PollChatAnswerInteractionType.LIST
     }),
     myAvatarUrl: n,
-    answersInteraction: a,
+    answersInteraction: l,
     renderAnswerContent: e => (0, s.jsx)(E, {
       answer: e,
       isExpired: t,
       myAvatarUrl: n,
-      answersInteraction: a,
+      answersInteraction: l,
       canShowVoteCounts: i
     }),
     ...r

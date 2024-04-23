@@ -26,8 +26,8 @@ var s = i("512722"),
   A = i("976192"),
   L = i("904483"),
   m = i("429824"),
-  T = i("919815"),
-  p = i("858822"),
+  p = i("919815"),
+  T = i("858822"),
   O = i("993356"),
   G = i("58338"),
   C = i("422525"),
@@ -48,7 +48,7 @@ function R(e) {
     guild: t,
     source: U.InstantInviteSources.GUILD_CONTEXT_MENU,
     channel: R
-  }), F = (0, b.default)(r), y = (0, p.default)(t), D = (0, O.default)(t), k = (0, C.default)(t), B = (0, A.default)({
+  }), y = (0, b.default)(r), F = (0, T.default)(t), D = (0, O.default)(t), k = (0, C.default)(t), B = (0, A.default)({
     guildId: t.id,
     userId: N.default.getId(),
     analyticsLocation: {
@@ -67,7 +67,7 @@ function R(e) {
   }), Y = (0, L.default)(t), w = (0, S.default)(t.id), V = (0, c.default)({
     id: t.id,
     label: v.default.Messages.COPY_ID_GUILD
-  }), z = (0, T.default)(t, {
+  }), z = (0, p.default)(t, {
     section: U.AnalyticsSections.GUILD_LIST
   }), X = (0, E.default)(t.id), K = (0, G.default)(t.id), W = (0, g.default)(t.id), Q = (0, m.default)(t), q = (0, f.useShouldUseNewNotificationSystem)("GuildContextMenu");
 
@@ -116,7 +116,7 @@ function R(e) {
     }), (0, n.jsx)(u.MenuGroup, {
       children: P
     }), (0, n.jsxs)(u.MenuGroup, {
-      children: [y, q || __OVERLAY__ ? null : D, q && !__OVERLAY__ ? K : null, W, F, X]
+      children: [F, q || __OVERLAY__ ? null : D, q && !__OVERLAY__ ? K : null, W, y, X]
     }), (0, n.jsxs)(u.MenuGroup, {
       children: [d ? null : k, __OVERLAY__ ? null : (0, n.jsx)(u.MenuItem, {
         id: "privacy",

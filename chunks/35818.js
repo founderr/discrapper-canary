@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   quitAndInstall: function() {
-    return a
+    return l
   }
 });
 let s = new(n("107965")).default;
 
-function a() {
+function l() {
   s.quitAndInstall()
 }

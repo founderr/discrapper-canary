@@ -21,8 +21,8 @@ function d(e) {
     title: u,
     onClose: f,
     tag: m,
-    FallbackIcon: h
-  } = e, p = null != d ? {
+    FallbackIcon: p
+  } = e, h = null != d ? {
     "--custom-background-url": "url(".concat(d.toString(), ")")
   } : void 0;
   return (0, i.jsxs)("div", {
@@ -31,7 +31,7 @@ function d(e) {
       className: c.header,
       children: [(0, i.jsx)("div", {
         className: c.headerBackground,
-        style: p
+        style: h
       }), (0, i.jsxs)("div", {
         className: c.headerTop,
         children: [(0, i.jsx)("div", {
@@ -53,7 +53,7 @@ function d(e) {
         children: null != d ? (0, i.jsx)("img", {
           src: d.toString(),
           alt: ""
-        }) : (0, i.jsx)(h, {
+        }) : (0, i.jsx)(p, {
           color: "var(--text-muted)",
           height: 96,
           width: 96

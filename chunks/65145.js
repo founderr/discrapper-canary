@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return u
   }
 }), n("411104"), n("47120");
-var s, a, l = n("735250"),
+var s, l, a = n("735250"),
   i = n("470079"),
   r = n("823379");
-(a = s || (s = {})).POLL_ANSWERS = "POLL_ANSWERS", a.ACTION_BUTTON = "ACTION_BUTTON";
+(l = s || (s = {})).POLL_ANSWERS = "POLL_ANSWERS", l.ACTION_BUTTON = "ACTION_BUTTON";
 let o = i.createContext(void 0);
 
 function u() {
@@ -24,13 +24,13 @@ function d(e) {
     children: t,
     actionButtonRef: n,
     pollAnswerRef: s,
-    manageFocusOnAction: a
+    manageFocusOnAction: l
   } = e, r = i.useMemo(() => ({
     actionButtonRef: n,
     pollAnswerRef: s,
-    manageFocusOnAction: a
-  }), [n, s, a]);
-  return (0, l.jsx)(o.Provider, {
+    manageFocusOnAction: l
+  }), [n, s, l]);
+  return (0, a.jsx)(o.Provider, {
     value: r,
     children: t
   })
@@ -39,13 +39,13 @@ function d(e) {
 function c(e) {
   let {
     children: t
-  } = e, [n, s] = i.useState(), a = i.useRef(null), o = i.useRef(null);
+  } = e, [n, s] = i.useState(), l = i.useRef(null), o = i.useRef(null);
   return i.useEffect(() => {
     var e, t, s;
-    "POLL_ANSWERS" === n && null != o.current && (null === (t = o.current) || void 0 === t || null === (e = t.ref) || void 0 === e || e.focus()), "ACTION_BUTTON" === n && null != a.current && (null === (s = a.current) || void 0 === s || s.focus())
-  }, [n]), (0, l.jsx)(d, {
+    "POLL_ANSWERS" === n && null != o.current && (null === (t = o.current) || void 0 === t || null === (e = t.ref) || void 0 === e || e.focus()), "ACTION_BUTTON" === n && null != l.current && (null === (s = l.current) || void 0 === s || s.focus())
+  }, [n]), (0, a.jsx)(d, {
     pollAnswerRef: o,
-    actionButtonRef: a,
+    actionButtonRef: l,
     manageFocusOnAction: e => {
       switch (e) {
         case "submit":

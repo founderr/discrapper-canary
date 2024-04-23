@@ -9,13 +9,13 @@ n.r(t), n.d(t, {
 }), n("653041");
 var s = n("395041");
 n("349033");
-var a = n("999650");
+var l = n("999650");
 n("72006");
-var l = n("405656");
+var a = n("405656");
 n("981631");
 let i = {
-  [a.ComponentTypes.FILTER]: s.Filter,
-  [a.ComponentTypes.ANSWER]: s.Answer
+  [l.ComponentTypes.FILTER]: s.Filter,
+  [l.ComponentTypes.ANSWER]: s.Answer
 };
 
 function r() {
@@ -40,5 +40,5 @@ function o(e, t) {
     focusOffset: n,
     anchorOffset: s
   } = t.getSelection();
-  return (0, l.getSelectionScope)(e, n, s)
+  return (0, a.getSelectionScope)(e, n, s)
 }

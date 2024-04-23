@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("924301");
 n("57132");
-var a = n("430824"),
-  l = n("699516"),
+var l = n("430824"),
+  a = n("699516"),
   i = n("594174"),
   r = n("624138"),
   o = n("51144"),
@@ -37,13 +37,13 @@ function f(e) {
       let L = null !== (N = null === (h = e.local_id) || void 0 === h ? void 0 : h.split("_").pop()) && void 0 !== N ? N : "unknown";
       return "Update to build ".concat(L, " available!");
     case u.NotificationCenterItems.FRIEND_SUGGESTION_CREATED:
-      let D = l.default.getRelationshipType(M) === d.RelationshipTypes.PENDING_OUTGOING;
+      let D = a.default.getRelationshipType(M) === d.RelationshipTypes.PENDING_OUTGOING;
       return null !== (S = e.body) && void 0 !== S ? S : "";
     case u.NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED:
       let P = e.guild_scheduled_event_id,
         y = null != P ? s.default.getGuildScheduledEvent(P) : null,
         U = null == y ? void 0 : y.name,
-        j = null === (C = a.default.getGuild(null == y ? void 0 : y.guild_id)) || void 0 === C ? void 0 : C.name,
+        j = null === (C = l.default.getGuild(null == y ? void 0 : y.guild_id)) || void 0 === C ? void 0 : C.name,
         b = (0, s.isGuildEventEnded)(null != y ? y : void 0);
       return (0, r.isNullOrEmpty)(j) || (0, r.isNullOrEmpty)(U) || !b ? null !== (A = e.body) && void 0 !== A ? A : "" : c.default.Messages.NOTIFICATION_CENTER_GUILD_SCHEDULED_EVENT_ENDED.format({
         event_name: U,

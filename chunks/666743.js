@@ -1,14 +1,14 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return n
+    return l
   }
 }), s("47120");
 var a = s("735250"),
-  i = s("470079"),
-  r = s("314897");
+  r = s("470079"),
+  i = s("314897");
 
-function l(e, t, s) {
+function n(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -17,13 +17,13 @@ function l(e, t, s) {
   }) : e[t] = s, e
 }
 
-function n(e) {
-  return class extends i.Component {
+function l(e) {
+  return class extends r.Component {
     componentDidMount() {
-      r.default.addChangeListener(this.onStoreChange)
+      i.default.addChangeListener(this.onStoreChange)
     }
     componentWillUnmount() {
-      r.default.removeChangeListener(this.onStoreChange)
+      i.default.removeChangeListener(this.onStoreChange)
     }
     render() {
       return (0, a.jsx)(e, {
@@ -32,11 +32,11 @@ function n(e) {
       })
     }
     constructor(...e) {
-      super(...e), l(this, "state", {
-        isAuthenticated: r.default.isAuthenticated()
-      }), l(this, "onStoreChange", () => {
+      super(...e), n(this, "state", {
+        isAuthenticated: i.default.isAuthenticated()
+      }), n(this, "onStoreChange", () => {
         this.setState({
-          isAuthenticated: r.default.isAuthenticated()
+          isAuthenticated: i.default.isAuthenticated()
         })
       })
     }

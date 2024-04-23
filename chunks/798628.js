@@ -11,19 +11,19 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("652874"),
-  a = n("902704");
-let l = {},
+  l = n("902704");
+let a = {},
   i = (0, s.default)(e => ({
     polls: {},
     updatePollState(t, n, s) {
       e(e => {
-        var a;
+        var l;
         return {
           polls: {
             ...e.polls,
             [t]: {
               ...e.polls[t],
-              [n]: s(null === (a = e.polls[t]) || void 0 === a ? void 0 : a[n])
+              [n]: s(null === (l = e.polls[t]) || void 0 === l ? void 0 : l[n])
             }
           }
         }
@@ -34,8 +34,8 @@ let l = {},
 function r(e) {
   return i(t => {
     var n;
-    return null !== (n = t.polls[e]) && void 0 !== n ? n : l
-  }, a.default)
+    return null !== (n = t.polls[e]) && void 0 !== n ? n : a
+  }, l.default)
 }
 
 function o(e, t, n) {

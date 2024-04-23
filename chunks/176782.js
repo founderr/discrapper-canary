@@ -5,45 +5,45 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("442837"),
-  i = s("607070"),
-  r = s("314684"),
-  l = s("391110"),
-  n = s("518400");
+  r = s("607070"),
+  i = s("314684"),
+  n = s("391110"),
+  l = s("518400");
 let o = {
     subtitle: {
       onlyShowOnHover: !1
     },
     description: {
       onlyShowOnHover: !0,
-      className: n.cardDescription
+      className: l.cardDescription
     },
     descriptionCta: {
       onlyShowOnHover: !0
     }
   },
   u = e => {
-    let t = (0, a.useStateFromStores)([i.default], () => i.default.useReducedMotion),
-      s = (0, r.useShouldShowConfettiAndGlow)() && !t,
+    let t = (0, a.useStateFromStores)([r.default], () => r.default.useReducedMotion),
+      s = (0, i.useShouldShowConfettiAndGlow)() && !t,
       u = {
-        [l.CardVariants.DEFAULT]: o,
-        [l.CardVariants.REWARD]: {
+        [n.CardVariants.DEFAULT]: o,
+        [n.CardVariants.REWARD]: {
           subtitle: {
             onlyShowOnHover: !0,
             textVariant: "text-sm/semibold"
           },
           description: {
             onlyShowOnHover: !0,
-            className: n.cardDescriptionTenureReward
+            className: l.cardDescriptionTenureReward
           },
           descriptionCta: {
             onlyShowOnHover: !1,
             hideOnHoverComponent: !0,
-            className: n.descriptionCTATenureReward
+            className: l.descriptionCTATenureReward
           },
           cardContainer: {
-            className: s ? n.glowingCardContainer : void 0
+            className: s ? l.glowingCardContainer : void 0
           }
         }
       };
-    return null != e ? u[e] : u[l.CardVariants.DEFAULT]
+    return null != e ? u[e] : u[n.CardVariants.DEFAULT]
   }

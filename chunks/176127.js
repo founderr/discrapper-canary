@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var a = n("120356"),
-  l = n.n(a),
+var l = n("120356"),
+  a = n.n(l),
   i = n("442837"),
   r = n("435064"),
   o = n("569220");
@@ -19,7 +19,7 @@ function u() {
     return null == t ? [] : r.default.getClips().slice(0, 4).filter(e => t.includes(e.id))
   });
   return (0, s.jsx)("div", {
-    className: l()(o.thumbnailStack, {
+    className: a()(o.thumbnailStack, {
       [o["height-1"]]: 1 === e.length,
       [o["height-2"]]: 2 === e.length,
       [o["height-3"]]: 3 === e.length,

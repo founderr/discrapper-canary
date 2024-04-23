@@ -1,34 +1,34 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return N
   }
 });
 var i = n("735250");
 n("470079");
 var E = n("442837"),
-  o = n("481060"),
-  r = n("703656"),
-  s = n("314897"),
-  l = n("644766"),
+  r = n("481060"),
+  o = n("703656"),
+  l = n("314897"),
+  s = n("644766"),
   c = n("518560"),
-  I = n("800530"),
-  a = n("981631"),
+  a = n("800530"),
+  I = n("981631"),
   S = n("689938"),
   _ = n("576662");
 
-function A() {
-  return (0, i.jsxs)(l.default, {
-    color: l.NoticeColors.DANGER,
+function u() {
+  return (0, i.jsxs)(s.default, {
+    color: s.NoticeColors.DANGER,
     className: _.nagbar,
-    children: [(0, i.jsx)(o.Text, {
+    children: [(0, i.jsx)(r.Text, {
       tag: "span",
       color: "always-white",
       variant: "text-md/normal",
       children: S.default.Messages.SAFETY_HUB_STANDALONE_PAGE_NAGBAR
-    }), (0, i.jsx)(l.NoticeButtonAnchor, {
-      href: I.SafetyHubLinks.WARNING_SYSTEM_HELPCENTER_LINK,
-      children: (0, i.jsx)(o.Text, {
+    }), (0, i.jsx)(s.NoticeButtonAnchor, {
+      href: a.SafetyHubLinks.WARNING_SYSTEM_HELPCENTER_LINK,
+      children: (0, i.jsx)(r.Text, {
         variant: "text-md/normal",
         color: "always-white",
         children: S.default.Messages.SAFETY_HUB_STANDALONE_PAGE_NAGBAR_CTA
@@ -37,16 +37,16 @@ function A() {
   })
 }
 
-function N() {
+function A() {
   return (0, i.jsx)("div", {
     className: _.pageContainer,
     children: (0, i.jsx)(c.default, {})
   })
 }
 
-function u() {
-  return null == (0, E.useStateFromStores)([s.default], () => s.default.getSuspendedUserToken()) && (0, r.transitionTo)(a.Routes.LOGIN), (0, i.jsxs)("div", {
+function N() {
+  return null == (0, E.useStateFromStores)([l.default], () => l.default.getSuspendedUserToken()) && (0, o.transitionTo)(I.Routes.LOGIN), (0, i.jsxs)("div", {
     className: _.container,
-    children: [(0, i.jsx)(A, {}), (0, i.jsx)(N, {})]
+    children: [(0, i.jsx)(u, {}), (0, i.jsx)(A, {})]
   })
 }

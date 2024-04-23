@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var s = n("735250"),
-  a = n("470079"),
-  l = n("558522"),
+  l = n("470079"),
+  a = n("558522"),
   i = n("373977");
 
 function r(e) {
@@ -15,10 +15,10 @@ function r(e) {
     applicationName: n,
     imageClassName: r,
     imageNotFoundClassName: o
-  } = e, [u, d] = a.useState(!1);
+  } = e, [u, d] = l.useState(!1);
   return "not-found" === t.state || u ? (0, s.jsx)("div", {
     className: o,
-    children: (0, s.jsx)(l.default, {
+    children: (0, s.jsx)(a.default, {
       className: i.brokenImageIcon
     })
   }) : "loading" === t.state ? null : (0, s.jsx)("img", {

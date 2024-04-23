@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var s = n("735250"),
-  a = n("470079"),
-  l = n("442837"),
+  l = n("470079"),
+  a = n("442837"),
   i = n("524437"),
   r = n("140155"),
   o = n("497089"),
@@ -45,7 +45,7 @@ function C(e) {
     items: h,
     loading: C,
     loadMore: A
-  } = (0, d.useDesktopNotificationCenterItemsLoader)(), g = (0, l.useStateFromStores)([r.default], () => r.default.localItems), M = a.useMemo(() => [...[...h, ...g].sort((e, t) => -1 * T.default.compare(e.id, t.id))], [h, g]), R = h.length > 0 ? h[0] : null, v = f.NotificationCenterAckedBeforeId.useSetting(), O = a.useMemo(() => {
+  } = (0, d.useDesktopNotificationCenterItemsLoader)(), g = (0, a.useStateFromStores)([r.default], () => r.default.localItems), M = l.useMemo(() => [...[...h, ...g].sort((e, t) => -1 * T.default.compare(e.id, t.id))], [h, g]), R = h.length > 0 ? h[0] : null, v = f.NotificationCenterAckedBeforeId.useSetting(), O = l.useMemo(() => {
     if (null != R && 0 >= T.default.compare(R.id, v)) return !1;
     for (let e of M) {
       if (0 >= T.default.compare(e.id, v)) break;

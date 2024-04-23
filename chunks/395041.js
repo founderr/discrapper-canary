@@ -9,9 +9,9 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var a = n("597412");
+var l = n("597412");
 
-function l(e, t) {
+function a(e, t) {
   let {
     children: n
   } = e;
@@ -20,5 +20,5 @@ function l(e, t) {
     children: n
   })
 }
-let i = e => l(e, a.searchFilter),
-  r = e => l(e, a.searchAnswer)
+let i = e => a(e, l.searchFilter),
+  r = e => a(e, l.searchAnswer)

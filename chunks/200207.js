@@ -22,7 +22,7 @@ function u(e) {
     onDetails: u,
     onPurchase: f,
     PurchaseButton: m,
-    availabilityLabel: h
+    availabilityLabel: p
   } = e;
   return (0, i.jsx)(s.FocusRing, {
     children: (0, i.jsxs)("div", {
@@ -58,7 +58,7 @@ function u(e) {
         children: [(0, i.jsx)(o.Text, {
           color: "interactive-normal",
           variant: "text-sm/normal",
-          children: h
+          children: p
         }), (0, i.jsx)(m, {
           onClick: e => {
             e.stopPropagation(), null == f || f()

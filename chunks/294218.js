@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n("789020");
 var s = n("735250"),
-  a = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  l = n("470079"),
+  a = n("120356"),
+  i = n.n(a),
   r = n("924826"),
   o = n("442837"),
   u = n("518738"),
@@ -27,12 +27,12 @@ var s = n("735250"),
   v = n("56744"),
   O = n("981631"),
   x = n("264558");
-t.default = a.memo(function(e) {
+t.default = l.memo(function(e) {
   var t;
   let {
     message: n,
-    compact: a = !1,
-    className: l,
+    compact: l = !1,
+    className: a,
     onContextMenu: L,
     onClick: D,
     disableInteraction: P = !1,
@@ -65,14 +65,14 @@ t.default = a.memo(function(e) {
   let $ = (0, h.getMessageAriaLabelledBy)(n),
     ee = (0, h.getMessageAriaDescribedBy)(n);
   return (0, s.jsx)(_.default, {
-    compact: a,
-    className: i()(l, {
+    compact: l,
+    className: i()(a, {
       [x.ephemeral]: (0, m.hasFlag)(n.flags, O.MessageFlags.EPHEMERAL),
       [x.disableInteraction]: P
     }),
     disableInteraction: P,
-    childrenRepliedMessage: (0, v.default)(n, U, K, W, a),
-    childrenExecutedCommand: (0, R.default)(n, U, a),
+    childrenRepliedMessage: (0, v.default)(n, U, K, W, l),
+    childrenExecutedCommand: (0, R.default)(n, U, l),
     childrenHeader: (0, g.default)({
       ...e,
       guildId: U.guild_id,

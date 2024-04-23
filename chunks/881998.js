@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-var s, a, l, i, r = n("442837"),
+var s, l, a, i, r = n("442837"),
   o = n("570140"),
   u = n("592125"),
   d = n("757266"),
@@ -14,12 +14,12 @@ class E extends(i = r.default.Store) {
     return f
   }
 }
-l = "AuthorizedAppsStore", (a = "displayName") in(s = E) ? Object.defineProperty(s, a, {
-  value: l,
+a = "AuthorizedAppsStore", (l = "displayName") in(s = E) ? Object.defineProperty(s, l, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = l, t.default = new E(o.default, {
+}) : s[l] = a, t.default = new E(o.default, {
   USER_AUTHORIZED_APPS_UPDATE: function(e) {
     f = e.apps
   }

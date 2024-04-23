@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var s = n("735250"),
-  a = n("470079"),
-  l = n("442837"),
+  l = n("470079"),
+  a = n("442837"),
   i = n("481060"),
   r = n("239091"),
   o = n("585237"),
@@ -29,14 +29,14 @@ let _ = {
   Colors: o.default.Colors,
   Looks: o.default.Looks
 };
-class m extends a.PureComponent {
+class m extends l.PureComponent {
   render() {
     let {
       skus: e,
       children: t,
       applicationId: n,
-      primarySKU: a,
-      onSKUSelect: l,
+      primarySKU: l,
+      onSKUSelect: a,
       ...i
     } = this.props;
     return (0, s.jsx)(o.default, {
@@ -78,7 +78,7 @@ class m extends a.PureComponent {
     })
   }
 }
-t.default = l.default.connectStores([d.default, u.default], e => {
+t.default = a.default.connectStores([d.default, u.default], e => {
   var t;
   let {
     applicationId: n

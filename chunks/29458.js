@@ -2,8 +2,8 @@
 n.r(t);
 var s = n("735250");
 n("470079");
-var a = n("442837"),
-  l = n("594174"),
+var l = n("442837"),
+  a = n("594174"),
   i = n("644766"),
   r = n("853197"),
   o = n("921944"),
@@ -15,7 +15,7 @@ t.default = e => {
     noticeType: n,
     markAsDismissed: c,
     partnerGame: f
-  } = e, E = (0, a.useStateFromStores)([l.default], () => l.default.getCurrentUser());
+  } = e, E = (0, l.useStateFromStores)([a.default], () => a.default.getCurrentUser());
   if (null == f) return null;
   let _ = (0, r.getDrop)(f);
   if (null == _) return null;

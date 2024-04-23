@@ -29,8 +29,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("544891"),
-  a = n("570140"),
-  l = n("199902"),
+  l = n("570140"),
+  a = n("199902"),
   i = n("981631");
 let r = async e => {
   let t = !1;
@@ -44,7 +44,7 @@ let r = async e => {
   } catch (e) {
     t = !1
   }
-  a.default.dispatch({
+  l.default.dispatch({
     type: "DROPS_ELIGIBILITY_FETCH_SUCCESS",
     isEligible: t,
     dropsQuestId: e
@@ -61,7 +61,7 @@ let r = async e => {
   } catch (e) {
     t = []
   }
-  a.default.dispatch({
+  l.default.dispatch({
     type: "DROPS_PLATFORM_AVAILABILITY_SUCCESS",
     availablePlatforms: t
   })
@@ -74,7 +74,7 @@ let r = async e => {
         platform: t
       }
     });
-    return a.default.dispatch({
+    return l.default.dispatch({
       type: "DROPS_REWARD_CODE_CLAIM_SUCCESS",
       rewardCode: n.body.code
     }), n.body.code
@@ -86,12 +86,12 @@ let r = async e => {
     let e = await s.HTTP.get({
       url: i.Endpoints.DROPS_USER_STATUS
     });
-    a.default.dispatch({
+    l.default.dispatch({
       type: "DROPS_USER_STATUS_FETCH_SUCCESS",
       codes: e.body
     })
   } catch (e) {
-    a.default.dispatch({
+    l.default.dispatch({
       type: "DROPS_USER_STATUS_FETCH_FAILURE"
     })
   }
@@ -101,7 +101,7 @@ let r = async e => {
     query: {
       drops_quest_id: e
     }
-  }), a.default.dispatch({
+  }), l.default.dispatch({
     type: "DROPS_UNENROLL_USER",
     dropsQuestId: e
   }), await d()
@@ -112,7 +112,7 @@ let r = async e => {
       drops_quest_id: e
     }
   });
-  await a.default.dispatch({
+  await l.default.dispatch({
     type: "DROPS_ENROLLED_USER_FETCH_SUCCESS",
     enrolledUser: t.body.user,
     isEnrolled: t.body.enrolled,
@@ -124,13 +124,13 @@ let r = async e => {
     query: {
       drops_quest_id: e
     }
-  }), a.default.dispatch({
+  }), l.default.dispatch({
     type: "DROPS_ENROLL_SUCCESS"
   })
 }, _ = async (e, t, n) => {
-  let r = l.default.getViewerIds(t);
+  let r = a.default.getViewerIds(t);
   try {
-    let l = await s.HTTP.post({
+    let a = await s.HTTP.post({
       url: i.Endpoints.DROPS_HEARTBEAT(e),
       query: {
         stream_key: t,
@@ -139,14 +139,14 @@ let r = async e => {
       },
       retries: 2
     });
-    a.default.dispatch({
+    l.default.dispatch({
       type: "DROPS_HEARTBEAT_SUCCESS",
       dropsQuestId: e,
-      completed: l.body.completed,
-      progress: l.body.progress
+      completed: a.body.completed,
+      progress: a.body.progress
     })
   } catch (t) {
-    a.default.dispatch({
+    l.default.dispatch({
       type: "DROPS_HEARTBEAT_FAILURE",
       dropsQuestId: e,
       statusCode: null == t ? void 0 : t.status
@@ -157,14 +157,14 @@ let r = async e => {
     let t = await s.HTTP.get({
       url: i.Endpoints.DROPS_PROGRESS(e)
     });
-    a.default.dispatch({
+    l.default.dispatch({
       type: "DROPS_FETCH_PROGRESS_SUCCESS",
       dropsQuestId: e,
       completed: t.body.completed,
       progress: t.body.progress
     })
   } catch (t) {
-    a.default.dispatch({
+    l.default.dispatch({
       type: "DROPS_FETCH_PROGRESS_FAILURE",
       dropsQuestId: e
     })

@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("806966"),
-  a = n("585483"),
-  l = n("981631"),
+  l = n("585483"),
+  a = n("981631"),
   i = n("957825");
 
 function r(e) {
@@ -14,7 +14,7 @@ function r(e) {
     stickerPack: t,
     stickerPickerCategories: n
   } = e;
-  a.ComponentDispatch.dispatchToLastSubscribed(l.ComponentActions.OPEN_EXPRESSION_PICKER, {
+  l.ComponentDispatch.dispatchToLastSubscribed(a.ComponentActions.OPEN_EXPRESSION_PICKER, {
     activeView: i.ExpressionPickerViewType.STICKER
   });
   let r = n.findIndex(e => e.id === t.id); - 1 !== r && s.StickerPickerStore.setActiveCategoryIndex(r)

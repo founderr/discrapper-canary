@@ -2,15 +2,15 @@
 n.r(t);
 var s = n("735250");
 n("470079");
-var a = n("960259"),
-  l = n("318446"),
+var l = n("960259"),
+  a = n("318446"),
   i = n("325767");
-t.default = (0, a.replaceIcon)(function(e) {
+t.default = (0, l.replaceIcon)(function(e) {
   let {
     width: t = 24,
     height: n = 24,
-    color: a = "currentColor",
-    foreground: l,
+    color: l = "currentColor",
+    foreground: a,
     ...r
   } = e;
   return (0, s.jsxs)("svg", {
@@ -30,8 +30,8 @@ t.default = (0, a.replaceIcon)(function(e) {
         fillRule: "evenodd",
         clipRule: "evenodd",
         d: "M8.8 1.63636H3.2C1.43269 1.63636 0 3.06905 0 4.83636V14.4364C0 16.2036 1.43269 17.6364 3.2 17.6364H12.8C14.5673 17.6364 16 16.2036 16 14.4364V8.03636H10.4C9.51632 8.03636 8.8 7.32002 8.8 6.43636V1.63636ZM4.8 4.83636C5.68256 4.83636 6.4 5.55252 6.4 6.43636C6.4 7.32084 5.68256 8.03636 4.8 8.03636C3.91552 8.03636 3.2 7.32084 3.2 6.43636C3.2 5.55252 3.91552 4.83636 4.8 4.83636ZM3.2 14.4364L5.6 11.2364L7.2 12.8364L10.4 8.83636L12.8 14.4364H3.2Z",
-        className: l,
-        fill: a
+        className: a,
+        fill: l
       })]
     }), (0, s.jsxs)("defs", {
       children: [(0, s.jsxs)("linearGradient", {
@@ -57,6 +57,6 @@ t.default = (0, a.replaceIcon)(function(e) {
       })]
     })]
   })
-}, l.ImageSparkleIcon, void 0, {
+}, a.ImageSparkleIcon, void 0, {
   size: 24
 })

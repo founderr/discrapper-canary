@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n("47120");
 var s = n("735250"),
-  a = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  l = n("470079"),
+  a = n("120356"),
+  i = n.n(a),
   r = n("718017"),
   o = n("442837"),
   u = n("481060"),
@@ -24,17 +24,17 @@ var s = n("735250"),
   g = n("981631"),
   M = n("689938"),
   R = n("632709");
-let v = a.memo(function(e) {
+let v = l.memo(function(e) {
   let {
     channel: t,
     deleteChannel: n
-  } = e, l = a.useRef(null), [
+  } = e, a = l.useRef(null), [
     [i, o], u
-  ] = a.useState([0, 0]), d = t.deleted && i > 0;
-  if (t.deleted && 0 === i && null != l.current) {
-    let e = l.current.offsetHeight,
-      t = l.current.offsetTop,
-      n = l.current.parentElement.scrollTop,
+  ] = l.useState([0, 0]), d = t.deleted && i > 0;
+  if (t.deleted && 0 === i && null != a.current) {
+    let e = a.current.offsetHeight,
+      t = a.current.offsetTop,
+      n = a.current.parentElement.scrollTop,
       s = n > t ? e - (n - t) : e;
     u([e, e - s])
   }
@@ -59,7 +59,7 @@ let v = a.memo(function(e) {
     }(i, o, e) : "auto")
   };
   return (0, s.jsx)(r.animated.div, {
-    ref: l,
+    ref: a,
     style: E,
     children: (0, s.jsx)(O, {
       ...e
@@ -67,16 +67,16 @@ let v = a.memo(function(e) {
   })
 });
 t.default = v;
-let O = a.memo(function(e) {
+let O = l.memo(function(e) {
   let {
     channel: t,
     onJump: n,
-    deleteChannel: l,
+    deleteChannel: a,
     toggle: i
   } = e, r = (0, o.useStateFromStores)([m.default], () => m.default.getChannel(t.channelId));
-  if (a.useEffect(() => {
+  if (l.useEffect(() => {
       null != r && t.isFullyLoaded && !t.hasError && !t.collapsed && "messages" === t.type && 0 === t.messages.length && d.default.wait(() => {
-        (0, c.ack)(t.channelId, !0), l(t.channelId)
+        (0, c.ack)(t.channelId, !0), a(t.channelId)
       })
     }), null == r || !t.hasLoadedAnything) return null;
   let E = (e, s) => {
@@ -84,8 +84,8 @@ let O = a.memo(function(e) {
       channel_id: t.channelId,
       guild_id: t.guildId
     });
-    let a = null != s ? s : t.oldestUnreadMessageId;
-    (0, _.transitionTo)(g.Routes.CHANNEL(t.guildId, t.channelId, "forum" === t.type ? null : a)), n(e)
+    let l = null != s ? s : t.oldestUnreadMessageId;
+    (0, _.transitionTo)(g.Routes.CHANNEL(t.guildId, t.channelId, "forum" === t.type ? null : l)), n(e)
   };
   return (0, s.jsx)("div", {
     className: R.channel,
@@ -111,7 +111,7 @@ let O = a.memo(function(e) {
       }) : "forum" === t.type ? (0, s.jsx)(C.default, {
         channel: t,
         channelRecord: r,
-        deleteChannel: l
+        deleteChannel: a
       }) : null
     })
   })
@@ -121,8 +121,8 @@ function x(e) {
   let {
     channel: t,
     markChannelRead: n,
-    markGuildRead: a,
-    getNumUnreadChannels: l
+    markGuildRead: l,
+    getNumUnreadChannels: a
   } = e, i = (0, E.default)() && null != t.guildId;
   return (0, s.jsx)(T.default, {
     className: R.markReadButton,
@@ -136,11 +136,11 @@ function x(e) {
       height: 16
     }),
     onClick: function() {
-      i && null != t.guildId ? a(t.guildId) : n(t), (0, f.trackWithMetadata)(g.AnalyticEvents.INBOX_CHANNEL_ACKED, {
+      i && null != t.guildId ? l(t.guildId) : n(t), (0, f.trackWithMetadata)(g.AnalyticEvents.INBOX_CHANNEL_ACKED, {
         channel_id: t.channelId,
         guild_id: t.guildId,
         marked_all_channels_as_read: !1,
-        num_unread_channels_remaining: l() - 1
+        num_unread_channels_remaining: a() - 1
       })
     }
   })
@@ -150,14 +150,14 @@ function L(e) {
   let {
     channel: t,
     toggle: n,
-    getNumUnreadChannels: a
+    getNumUnreadChannels: l
   } = e;
 
-  function l() {
+  function a() {
     n(t), (0, f.trackWithMetadata)(g.AnalyticEvents.INBOX_CHANNEL_COLLAPSED, {
       channel_id: t.channelId,
       guild_id: t.guildId,
-      num_unread_channels_remaining: a(),
+      num_unread_channels_remaining: l(),
       is_now_collapsed: !t.collapsed
     })
   }
@@ -168,7 +168,7 @@ function L(e) {
       className: i()(R.collapseButton, {
         [R.collapsed]: t.collapsed
       }),
-      onClick: l,
+      onClick: a,
       children: (0, s.jsx)(I.default, {
         width: 16,
         height: 16

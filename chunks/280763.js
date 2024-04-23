@@ -5,16 +5,16 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var s = n("735250"),
-  a = n("470079"),
-  l = n("120356"),
-  i = n.n(l),
+  l = n("470079"),
+  a = n("120356"),
+  i = n.n(a),
   r = n("748780"),
   o = n("399606"),
   u = n("607070"),
   d = n("641051"),
   c = n("329461"),
   f = n("918373");
-class E extends a.PureComponent {
+class E extends l.PureComponent {
   componentDidUpdate(e) {
     e.count < this.props.count && !this.props.reducedMotion && r.default.sequence([r.default.timing(this.animationScale, {
       toValue: 1.8,
@@ -59,10 +59,10 @@ function _(e) {
     location: "f79435_1"
   }, {
     autoTrackExposure: !1
-  }), a = (0, o.useStateFromStores)([c.default], () => n ? c.default.getOverdueMessageReminderCount() : 0, [n]), l = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion);
+  }), l = (0, o.useStateFromStores)([c.default], () => n ? c.default.getOverdueMessageReminderCount() : 0, [n]), a = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion);
   return n ? (0, s.jsx)(E, {
-    count: a,
+    count: l,
     className: t,
-    reducedMotion: l
+    reducedMotion: a
   }) : null
 }

@@ -5,10 +5,10 @@ s.r(t), s.d(t, {
   }
 }), s("47120");
 var a = s("735250"),
-  i = s("470079"),
-  r = s("442837"),
-  l = s("481060"),
-  n = s("239091"),
+  r = s("470079"),
+  i = s("442837"),
+  n = s("481060"),
+  l = s("239091"),
   o = s("585237"),
   u = s("551428"),
   d = s("689938");
@@ -27,21 +27,21 @@ let _ = {
   Colors: o.default.Colors,
   Looks: o.default.Looks
 };
-class E extends i.PureComponent {
+class E extends r.PureComponent {
   render() {
     let {
       storeListings: e,
       primaryStoreListing: t,
       skuId: s,
-      onStoreListingSelect: i,
-      currentStoreListingId: r,
-      ...l
-    } = this.props, n = null != t ? 1 : 0;
-    return (n += e.length) < 2 ? null : (0, a.jsx)(o.default, {
+      onStoreListingSelect: r,
+      currentStoreListingId: i,
+      ...n
+    } = this.props, l = null != t ? 1 : 0;
+    return (l += e.length) < 2 ? null : (0, a.jsx)(o.default, {
       onClick: this.handleContextMenu,
       onDropdownClick: this.handleContextMenu,
       onContextMenu: this.handleContextMenu,
-      ...l,
+      ...n,
       children: d.default.Messages.APPLICATION_TEST_MODE_VIEW_OTHER_LISTINGS
     })
   }
@@ -51,27 +51,27 @@ class E extends i.PureComponent {
         storeListings: e,
         onStoreListingSelect: t,
         currentStoreListingId: s,
-        onMenuSelect: i
-      } = this.props, r = e.map(e => e.id !== s ? (0, a.jsx)(l.MenuItem, {
+        onMenuSelect: r
+      } = this.props, i = e.map(e => e.id !== s ? (0, a.jsx)(n.MenuItem, {
         id: "".concat(e.id),
         label: e.id,
         action: () => {
-          n.closeContextMenu(), null == t || t(e)
+          l.closeContextMenu(), null == t || t(e)
         }
       }) : null);
-      return (0, a.jsx)(l.Menu, {
-        onSelect: i,
+      return (0, a.jsx)(n.Menu, {
+        onSelect: r,
         navId: "test-store-listing",
         "aria-label": d.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
-        onClose: n.closeContextMenu,
-        children: r
+        onClose: l.closeContextMenu,
+        children: i
       })
     }), c(this, "handleContextMenu", e => {
-      e.stopPropagation(), n.openContextMenu(e, this.renderContextMenu)
+      e.stopPropagation(), l.openContextMenu(e, this.renderContextMenu)
     })
   }
 }
-t.default = r.default.connectStores([u.default], e => {
+t.default = i.default.connectStores([u.default], e => {
   let {
     skuId: t
   } = e;
