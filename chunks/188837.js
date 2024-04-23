@@ -15,77 +15,87 @@ var n = a("735250"),
 t.default = e => {
   let {
     guildId: t,
-    setPage: a,
-    onClose: _
-  } = e, C = s.useRef(null), m = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), {
-    progress: S,
-    errors: I,
-    submitting: p
+    setPage: _,
+    onClose: C
+  } = e, m = s.useRef(null), S = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), {
+    progress: I,
+    errors: p,
+    submitting: T
   } = (0, i.useStateFromStoresObject)([d.default], () => d.default.getStateForGuild(t)), {
-    gameApplicationIds: T,
-    playstyle: g,
-    interests: A,
-    description: N,
-    tag: v,
-    primetime: R,
-    verificationForm: O,
-    badgeKind: L,
-    badgePrimaryColor: P,
-    badgeSecondaryColor: M,
-    banner: x,
-    brandPrimaryColor: y,
-    brandSecondaryColor: D,
-    wildcardDescriptors: b,
-    badgeImage: U
-  } = null != S ? S : {}, j = s.useRef(null), G = s.useRef(null), w = s.useRef(null), [k, F] = s.useState(!1), B = async () => {
+    gameApplicationIds: g,
+    playstyle: A,
+    interests: N,
+    description: v,
+    tag: R,
+    primetime: O,
+    verificationForm: L,
+    badgeKind: P,
+    badgePrimaryColor: M,
+    badgeSecondaryColor: x,
+    banner: y,
+    brandPrimaryColor: D,
+    brandSecondaryColor: b,
+    wildcardDescriptors: U,
+    badgeImage: j
+  } = null != I ? I : {}, G = s.useRef(null), w = s.useRef(null), k = s.useRef(null), [F, B] = s.useState(!1), H = async () => {
     try {
       await u.convertGuildToClan(t, {
-        gameApplicationIds: T,
-        playstyle: g,
-        interests: A,
-        description: N,
-        tag: v,
-        primetime: R,
-        verificationForm: O,
-        badgeKind: L,
-        badgePrimaryColor: P,
-        badgeSecondaryColor: M,
-        banner: x,
-        brandPrimaryColor: y,
-        brandSecondaryColor: D,
-        wildcardDescriptors: b,
-        badgeImage: U
+        gameApplicationIds: g,
+        playstyle: A,
+        interests: N,
+        description: v,
+        tag: R,
+        primetime: O,
+        verificationForm: L,
+        badgeKind: P,
+        badgePrimaryColor: M,
+        badgeSecondaryColor: x,
+        banner: y,
+        brandPrimaryColor: D,
+        brandSecondaryColor: b,
+        wildcardDescriptors: U,
+        badgeImage: j
       })
     } catch (e) {
       return
     }
-    _()
-  }, H = (0, l.useSpring)({
-    ref: j,
+    C(), (0, r.openModalLazy)(async () => {
+      let {
+        default: e
+      } = await Promise.all([a.e("99387"), a.e("63636")]).then(a.bind(a, "511385"));
+      return a => (0, n.jsx)(e, {
+        guildId: t,
+        tag: R,
+        brandPrimaryColor: D,
+        ...a
+      })
+    })
+  }, V = (0, l.useSpring)({
+    ref: G,
     config: l.config.slow,
     from: {
       flex: 1,
-      paddingLeft: m ? 120 : 0
+      paddingLeft: S ? 120 : 0
     },
     to: {
       flex: 1,
       paddingLeft: 120
     }
-  }), V = (0, l.useSpring)({
-    ref: G,
+  }), Y = (0, l.useSpring)({
+    ref: w,
     config: l.config.slow,
     from: {
-      flex: m ? 1 : 0,
-      paddingRight: m ? 120 : 0,
-      marginLeft: m ? -32 : 0
+      flex: S ? 1 : 0,
+      paddingRight: S ? 120 : 0,
+      marginLeft: S ? -32 : 0
     },
     to: {
       flex: 1,
       paddingRight: 120,
       marginLeft: -32
     }
-  }), Y = (0, l.useSpring)({
-    ref: w,
+  }), W = (0, l.useSpring)({
+    ref: k,
     config: l.config.default,
     from: {
       opacity: 0
@@ -94,15 +104,15 @@ t.default = e => {
       opacity: 1
     }
   });
-  (0, l.useChain)([j, G, w], [0, 0, 1]);
-  let W = s.useMemo(() => null != I && Object.values(I).some(e => null != e), [I]);
+  (0, l.useChain)([G, w, k], [0, 0, 1]);
+  let K = s.useMemo(() => null != p && Object.values(p).some(e => null != e), [p]);
   return (0, n.jsxs)("div", {
     className: h.animationContainer,
     children: [(0, n.jsxs)(l.animated.div, {
       className: h.signTextLeft,
       style: {
-        ...H,
-        ...Y
+        ...V,
+        ...W
       },
       children: [(0, n.jsx)(r.Heading, {
         variant: "heading-xxl/medium",
@@ -116,24 +126,24 @@ t.default = e => {
       className: h.scrollContainer,
       children: (0, n.jsx)(c.default, {
         guildId: t,
-        signed: k,
-        setSigned: F,
-        signRef: C
+        signed: F,
+        setSigned: B,
+        signRef: m
       })
     }), (0, n.jsxs)(l.animated.div, {
       className: h.signTextRight,
       style: {
-        ...V,
-        ...Y
+        ...Y,
+        ...W
       },
       children: [(0, n.jsx)(r.Button, {
         className: h.signButton,
         size: r.Button.Sizes.SMALL,
         onClick: () => {
           var e;
-          null === (e = C.current) || void 0 === e || e.scrollIntoView({
+          null === (e = m.current) || void 0 === e || e.scrollIntoView({
             behavior: "smooth"
-          }), F(!0)
+          }), B(!0)
         },
         children: E.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
       }), (0, n.jsx)(r.Text, {
@@ -146,18 +156,18 @@ t.default = e => {
       look: r.Button.Looks.OUTLINED,
       size: r.Button.Sizes.MEDIUM,
       color: r.Button.Colors.PRIMARY,
-      onClick: _,
+      onClick: C,
       children: E.default.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
     }), (0, n.jsx)(r.Button, {
       className: h.previousButton,
       look: r.Button.Looks.OUTLINED,
       size: r.Button.Sizes.MEDIUM,
       color: r.Button.Colors.PRIMARY,
-      onClick: () => a(f.ClanSetupModalPages.SETUP),
+      onClick: () => _(f.ClanSetupModalPages.SETUP),
       children: E.default.Messages.PAGINATION_PREVIOUS
     }), (0, n.jsxs)("div", {
       className: h.finishButton,
-      children: [W && (0, n.jsx)(r.Text, {
+      children: [K && (0, n.jsx)(r.Text, {
         color: "status-danger",
         variant: "text-sm/normal",
         children: E.default.Messages.CLAN_SUBMIT_ERROR
@@ -165,9 +175,9 @@ t.default = e => {
         look: r.Button.Looks.FILLED,
         size: r.Button.Sizes.MEDIUM,
         color: r.Button.Colors.BRAND,
-        disabled: !k,
-        submitting: p,
-        onClick: B,
+        disabled: !F,
+        submitting: T,
+        onClick: H,
         children: E.default.Messages.FINISH
       })]
     })]
