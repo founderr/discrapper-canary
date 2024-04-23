@@ -286,7 +286,8 @@ function q(e) {
     subscription_id: e.id,
     subscription_type: e.type,
     subscription_plan_id: null === (t = (0, R.getPremiumPlanItem)(e)) || void 0 === t ? void 0 : t.id,
-    subscription_plan_gateway_plan_id: e.paymentGatewayPlanId
+    subscription_plan_gateway_plan_id: e.paymentGatewayPlanId,
+    subscription_status: e.status
   }
 }
 let Z = {
