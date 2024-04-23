@@ -3358,6 +3358,7 @@ e.exports = Object.freeze({
   USER_SETTINGS_KEYBIND_SWITCH_SERVER_SETTINGS_SECTION: "Select the voice channel to join or switch to",
   USER_SETTINGS_KEYBIND_ENABLE_DISABLE: "Enable or disable keybind",
   USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Results",
+  USER_SETTINGS_KEYBIND_VIBE_WITH_WUMPUS_DESCRIPTION: "Listen to Lofi Beats with Wumpus",
   SHOW_CURRENT_ACTIVITY: "Share your detected activities with others",
   SHOW_CURRENT_ACTIVITY_DESC: "Discord will automatically update your status if you're attending a public Stage.",
   SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED: "When you play a detectable game or other application that supports Rich Presence, Discord can display information about those activities, including when and how you engaged.",
