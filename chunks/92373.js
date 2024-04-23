@@ -44,11 +44,15 @@ t.default = function(e) {
     children: [(0, n.jsxs)(o.Clickable, {
       onClick: I,
       className: i()(a, C ? E.gameImageLoading : void 0, E.gameImageBackground),
-      children: [h && (0, n.jsx)(f.default, {
-        backgroundColor: _.hex(),
-        className: E.selectedGameCheck
+      children: [h && (0, n.jsx)("div", {
+        className: E.checkBackground,
+        children: (0, n.jsx)(f.default, {
+          backgroundColor: _.hex(),
+          className: E.selectedGameCheck
+        })
       }), p]
     }), (0, n.jsx)(o.Text, {
+      className: E.gameName,
       variant: "text-xs/normal",
       color: "header-primary",
       children: S

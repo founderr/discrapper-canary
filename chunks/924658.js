@@ -372,6 +372,7 @@ e.exports = Object.freeze({
   CLAN_SETUP_OVERVIEW_SIGN_HELP: "By signing this charter, I agree to grow and uphold the values of the Guild.",
   CLAN_OVERVIEW_LIST_TWO_ITEMS: "!!{item1}!! and !!{item2}!!",
   CLAN_OVERVIEW_LIST_MULTIPLE_ITEMS: "!!{items}!!, and !!{last}!!",
+  CLAN_OVERVIEW_LIST_OTHERS_COUNT: "{n, plural, one {1 other} other {{n} others}}",
   CLAN_SUBMIT_ERROR: "Something went wrong! Please fix any errors and try again.",
   CLAN_SETTINGS: "Guild Settings",
   CLAN_SETTINGS_BASIC_INFO: "Basic Info",

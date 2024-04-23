@@ -81,9 +81,11 @@ t.default = e => {
           children: Array.from(a).map(e => (0, n.jsx)(c.default, {
             applicationId: e,
             onClick: e !== C ? T : void 0,
-            imageContainerClassName: e !== C ? h.removableGame : void 0,
+            imageContainerClassName: e !== C ? h.clickableGame : void 0,
             selected: !0
           }, e))
+        }), (0, n.jsx)("div", {
+          className: h.divider
         })]
       }), null != S && S.length > 0 && (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)(i.Text, {
@@ -96,7 +98,7 @@ t.default = e => {
           children: S.map(e => (0, n.jsx)(c.default, {
             applicationId: e.applicationId,
             onClick: g,
-            imageContainerClassName: h.clickable
+            imageContainerClassName: h.clickableGame
           }, e.applicationId))
         })]
       })]
