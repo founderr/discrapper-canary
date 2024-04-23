@@ -59,7 +59,8 @@ function R() {
       children: E.items.map(e => (0, n.jsx)(_.default, {
         clan: e,
         affinity: (0, g.getClanDiscoveryAffinity)(e, t),
-        traitsToHighlight: a
+        traitsToHighlight: a,
+        className: v.card
       }, e.id))
     })]
   }) : null
