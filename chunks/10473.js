@@ -22,14 +22,17 @@ let d = {},
   E = {};
 class h extends(n = i.default.PersistedStore) {
   initialize(e) {
-    null != e && (f = e.favoriteClans)
+    if (null != e) {
+      var t;
+      f = null !== (t = e.savedClans) && void 0 !== t ? t : []
+    }
   }
   getState() {
     return {
-      favoriteClans: f
+      savedClans: f
     }
   }
-  getFavoriteClans() {
+  getSavedClans() {
     return f
   }
   getSearchResult(e) {
