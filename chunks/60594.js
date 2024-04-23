@@ -21,16 +21,16 @@ var a, n, s = l("735250"),
   N = l("751571"),
   h = l("120522"),
   A = l("933843"),
-  x = l("485731"),
-  I = l("361291"),
+  I = l("485731"),
+  x = l("361291"),
   p = l("592125"),
   T = l("430824"),
   R = l("131951"),
   v = l("944486"),
   L = l("594174"),
   M = l("449224"),
-  j = l("285952"),
-  O = l("153124"),
+  O = l("285952"),
+  j = l("153124"),
   D = l("626135"),
   P = l("358085"),
   b = l("998502"),
@@ -49,54 +49,60 @@ var a, n, s = l("735250"),
 (n = a || (a = {}))[n.GUILD = 0] = "GUILD", n[n.SOURCE = 1] = "SOURCE", n[n.CONFIRM = 2] = "CONFIRM";
 
 function Y(e) {
-  var t, a, n, r, Y;
+  var t, a, n, r, Y, Q;
   let {
-    selectGuild: Q = !1,
-    selectSource: q = !0,
-    guildId: Z,
-    analyticsLocation: J,
-    onClose: X,
-    transitionState: $
+    selectGuild: q = !1,
+    selectSource: Z = !0,
+    guildId: J,
+    analyticsLocation: X,
+    onClose: $,
+    transitionState: ee
   } = e, {
-    preset: ee,
-    resolution: et,
-    fps: el,
-    soundshareEnabled: ea
-  } = (0, c.useStateFromStoresObject)([I.default], () => I.default.getState()), en = (0, c.useStateFromStores)([v.default, p.default], () => p.default.getChannel(v.default.getVoiceChannelId())), es = (0, c.useStateFromStores)([C.default, M.default], () => (0, P.isWindows)() ? (0, k.default)(C.default, M.default) : null), ei = (0, c.useStateFromStores)([L.default], () => {
+    preset: et,
+    resolution: el,
+    fps: ea,
+    soundshareEnabled: en
+  } = (0, c.useStateFromStoresObject)([x.default], () => x.default.getState()), es = (0, c.useStateFromStores)([v.default, p.default], () => p.default.getChannel(v.default.getVoiceChannelId())), ei = (0, c.useStateFromStores)([C.default, M.default], () => (0, P.isWindows)() ? (0, k.default)(C.default, M.default) : null), er = (0, c.useStateFromStores)([L.default], () => {
     let e = L.default.getCurrentUser();
     return u()(null != e, "GoLiveModal: user cannot be undefined"), e
-  }), er = null !== (t = null == en ? void 0 : en.getGuildId()) && void 0 !== t ? t : Z, eu = (0, c.useStateFromStores)([T.default], () => {
+  }), eu = null !== (t = null == es ? void 0 : es.getGuildId()) && void 0 !== t ? t : J, eo = (0, c.useStateFromStores)([T.default], () => {
     var e;
-    return null != er ? null === (e = T.default.getGuild(er)) || void 0 === e ? void 0 : e.premiumTier : null
-  }), [eo, ed] = null !== (a = (0, U.default)(ee, ei, eu)) && void 0 !== a ? a : [B.ApplicationStreamResolutions.RESOLUTION_720, B.ApplicationStreamFPS.FPS_30];
-  ee !== B.ApplicationStreamPresets.PRESET_CUSTOM && (et = eo, el = ed), !(0, G.default)(ee, et, el, ei, eu) && (et = eo, el = ed);
-  let ec = (0, O.useUID)();
-  let [ef, em] = i.useState((r = Q, Y = q, r ? 0 : Y ? 1 : 2)), [eS, eE] = i.useState(null), [e_, eg] = i.useState(!1), [eC, eN] = i.useState(null), [eh, eA] = i.useState(null), [ex, eI] = i.useState(null), [ep, eT] = i.useState(ee), [eR, ev] = i.useState(et), [eL, eM] = i.useState(el), [ej, eO] = i.useState(ea), [eD, eP] = i.useState(null != Z ? Z : null), eb = null !== (n = null == en ? void 0 : en.id) && void 0 !== n ? n : eC;
-  async function eG() {
-    var e, t;
-    u()(null != es || null != eh, "got nothing to stream");
-    let l = null !== (e = null == en ? void 0 : en.id) && void 0 !== e ? e : eC;
-    u()(null != l, "Received null target channel ID");
-    let a = p.default.getChannel(l),
-      n = null !== (t = null == a ? void 0 : a.getGuildId()) && void 0 !== t ? t : Z;
-    null == en && S.default.selectVoiceChannel(l);
-    let s = !0;
-    (0, A.shouldActivatePerkDemo)(d.EntitlementFeatureNames.STREAM_HIGH_QUALITY) && (s = await (0, h.activatePerkDemo)(d.EntitlementFeatureNames.STREAM_HIGH_QUALITY), (0, x.hqStreamingSetEnabled)(!(0, A.ineligibleQualitySetting)(eR, eL)));
-    let i = ep,
-      r = eR,
-      o = eL;
-    (!(0, G.default)(i, r, o, ei, eu) || !s) && (i = B.ApplicationStreamPresets.PRESET_VIDEO, r = B.ApplicationStreamResolutions.RESOLUTION_720, o = B.ApplicationStreamFPS.FPS_30), (0, E.updateStreamSettings)({
-      preset: i,
-      resolution: r,
-      frameRate: o,
+    return null != eu ? null === (e = T.default.getGuild(eu)) || void 0 === e ? void 0 : e.premiumTier : null
+  }), [ed, ec] = null !== (a = (0, U.default)(et, er, eo)) && void 0 !== a ? a : [B.ApplicationStreamResolutions.RESOLUTION_720, B.ApplicationStreamFPS.FPS_30];
+  et !== B.ApplicationStreamPresets.PRESET_CUSTOM && (el = ed, ea = ec), !(0, G.default)(et, el, ea, er, eo) && (el = ed, ea = ec);
+  let ef = (0, j.useUID)();
+  let [em, eS] = i.useState((Y = q, Q = Z, Y ? 0 : Q ? 1 : 2)), [eE, e_] = i.useState(null), [eg, eC] = i.useState(!1), [eN, eh] = i.useState(null), [eA, eI] = i.useState(null), [ex, ep] = i.useState(null), [eT, eR] = i.useState(et), [ev, eL] = i.useState(el), [eM, eO] = i.useState(ea), [ej, eD] = i.useState(en), [eP, eb] = i.useState(null != J ? J : null), eG = null !== (n = null == es ? void 0 : es.id) && void 0 !== n ? n : eN;
+  async function eU() {
+    var e, t, l;
+    u()(null != ei || null != eA, "got nothing to stream");
+    let a = null !== (e = null == es ? void 0 : es.id) && void 0 !== e ? e : eN;
+    u()(null != a, "Received null target channel ID");
+    let n = p.default.getChannel(a),
+      s = null !== (t = null == n ? void 0 : n.getGuildId()) && void 0 !== t ? t : J;
+    null == es && S.default.selectVoiceChannel(a);
+    let i = !0;
+    (0, A.shouldActivatePerkDemo)(d.EntitlementFeatureNames.STREAM_HIGH_QUALITY) && (i = await (0, h.activatePerkDemo)(d.EntitlementFeatureNames.STREAM_HIGH_QUALITY), (0, I.hqStreamingSetEnabled)(!(0, A.ineligibleQualitySetting)(ev, eM)), D.default.track(H.AnalyticEvents.PERK_DEMO_OFFER_ACCEPTED, {
+      guild_id: s,
+      channel_id: null !== (l = null == es ? void 0 : es.id) && void 0 !== l ? l : eN,
+      perk_type: d.EntitlementFeatureNames.STREAM_HIGH_QUALITY,
+      resolution: ev,
+      max_fps: eM
+    }));
+    let r = eT,
+      o = ev,
+      c = eM;
+    (!(0, G.default)(r, o, c, er, eo) || !i) && (r = B.ApplicationStreamPresets.PRESET_VIDEO, o = B.ApplicationStreamResolutions.RESOLUTION_720, c = B.ApplicationStreamFPS.FPS_30), (0, E.updateStreamSettings)({
+      preset: r,
+      resolution: o,
+      frameRate: c,
       soundshareEnabled: ej
     });
-    let c = (0, w.default)(es, eh, C.default.getRunningGames()),
-      f = !(0, P.isWindows)() || null == c || (null == eh ? void 0 : eh.id.startsWith("camera:")) || null == c ? null : c.pid;
-    (0, E.startStream)(n, l, {
-      pid: f,
-      sourceId: null == f && null != eh ? eh.id : null,
-      sourceName: null == f && null != eh ? eh.name : null,
+    let f = (0, w.default)(ei, eA, C.default.getRunningGames()),
+      _ = !(0, P.isWindows)() || null == f || (null == eA ? void 0 : eA.id.startsWith("camera:")) || null == f ? null : f.pid;
+    (0, E.startStream)(s, a, {
+      pid: _,
+      sourceId: null == _ && null != eA ? eA.id : null,
+      sourceName: null == _ && null != eA ? eA.name : null,
       audioSourceId: ex,
       sound: ej
     }), (async () => {
@@ -109,8 +115,8 @@ function Y(e) {
     })()
   }
 
-  function eU() {
-    eG(), X()
+  function ek() {
+    eU(), $()
   }
   i.useEffect(() => {
     let e = (0, P.isWindows)() ? (0, k.default)(C.default, M.default) : null,
@@ -120,25 +126,25 @@ function Y(e) {
       application_id: null == t ? void 0 : t.id,
       application_name: null == e ? void 0 : e.name,
       game_id: null == t ? void 0 : t.id,
-      location_section: J
+      location_section: X
     })
-  }, [J]);
-  let ek = i.useCallback((e, t, l) => {
-    let a = (0, U.default)(e, ei, eu),
+  }, [X]);
+  let eF = i.useCallback((e, t, l) => {
+    let a = (0, U.default)(e, er, eo),
       [n, s] = null != a ? a : [t, l];
-    if (e !== ep && (t = n, l = s), !(0, G.default)(e, t, l, ei, eu)) {
-      let [e, a] = (0, U.default)(B.ApplicationStreamPresets.PRESET_VIDEO, ei, eu);
+    if (e !== eT && (t = n, l = s), !(0, G.default)(e, t, l, er, eo)) {
+      let [e, a] = (0, U.default)(B.ApplicationStreamPresets.PRESET_VIDEO, er, eo);
       t = e, l = a
     }
-    l !== eL && eM(l), t !== eR && ev(t), n !== t || s !== l ? eT(B.ApplicationStreamPresets.PRESET_CUSTOM) : e !== ep && eT(e)
-  }, [ei, eu, eL, eR, ep]);
-  async function eF(e) {
-    if (e.preventDefault(), 1 === ef) return em(2);
-    let t = (0, w.default)(es, eh, C.default.getRunningGames()),
+    l !== eM && eO(l), t !== ev && eL(t), n !== t || s !== l ? eR(B.ApplicationStreamPresets.PRESET_CUSTOM) : e !== eT && eR(e)
+  }, [er, eo, eM, ev, eT]);
+  async function ey(e) {
+    if (e.preventDefault(), 1 === em) return eS(2);
+    let t = (0, w.default)(ei, eA, C.default.getRunningGames()),
       a = b.default.supportsFeature(H.NativeFeatures.ELEVATED_HOOK) && (null == t ? void 0 : t.elevated);
-    if ((0, P.isMac)() && null != eh) {
+    if ((0, P.isMac)() && null != eA) {
       let e = await R.default.getMediaEngine().getDesktopSources(),
-        t = eh.id;
+        t = eA.id;
       if (t.startsWith("screen") && e.length > 0 && !e.some(e => e.includes(t))) {
         var n, i;
         n = t, i = e, D.default.track(H.AnalyticEvents.SCREENSHARE_FAILED, {
@@ -160,26 +166,26 @@ function Y(e) {
     }
     a ? ! function() {
       var e;
-      let t = null !== (e = null == es ? void 0 : es.pid) && void 0 !== e ? e : null;
+      let t = null !== (e = null == ei ? void 0 : ei.pid) && void 0 !== e ? e : null;
       (0, f.openModalLazy)(async () => {
         let {
           default: e
         } = await l.e("74300").then(l.bind(l, "566852"));
         return l => (0, s.jsx)(e, {
           ...l,
-          handleStream: eU,
+          handleStream: ek,
           pid: t
         })
       })
-    }() : eU()
+    }() : ek()
   }
-  let ey = i.useCallback(e => {
-      eA(e), null != e && (em(2), eg(!0))
+  let eV = i.useCallback(e => {
+      eI(e), null != e && (eS(2), eC(!0))
     }, []),
-    eV = i.useCallback(e => {
-      eP(e), em(q ? 1 : 2)
-    }, [q]),
-    ew = function(e) {
+    ew = i.useCallback(e => {
+      eb(e), eS(Z ? 1 : 2)
+    }, [Z]),
+    eB = function(e) {
       switch (e) {
         case 1:
           return K.default.Messages.GO_LIVE_MODAL_DESCRIPTION_SELECT_SOURCE;
@@ -188,41 +194,41 @@ function Y(e) {
         default:
           return K.default.Messages.GO_LIVE_MODAL_DESCRIPTION_GENERIC
       }
-    }(ef),
-    eB = (0, s.jsx)(f.ModalHeader, {
+    }(em),
+    eH = (0, s.jsx)(f.ModalHeader, {
       className: z.modalHeader,
       separator: !1,
-      children: (0, s.jsxs)(j.default, {
-        direction: j.default.Direction.VERTICAL,
-        align: j.default.Align.CENTER,
+      children: (0, s.jsxs)(O.default, {
+        direction: O.default.Direction.VERTICAL,
+        align: O.default.Align.CENTER,
         className: z.header,
         children: [(0, s.jsx)(f.Heading, {
           variant: "heading-xl/semibold",
-          id: ec,
+          id: ef,
           className: z.headerText,
           children: K.default.Messages.GO_LIVE_MODAL_TITLE
-        }), null != ew ? (0, s.jsx)(f.Text, {
+        }), null != eB ? (0, s.jsx)(f.Text, {
           className: z.headerDescription,
           variant: "text-md/normal",
           color: "text-normal",
-          children: ew
+          children: eB
         }) : null]
       })
     }),
-    eH = (0, s.jsxs)(f.Slides, {
+    eW = (0, s.jsxs)(f.Slides, {
       springConfig: {
         ...o.config.stiff,
         clamp: !0
       },
-      activeSlide: ef,
+      activeSlide: em,
       width: 480,
-      onSlideReady: eE,
+      onSlideReady: e_,
       children: [(0, s.jsx)(f.Slide, {
         id: 0,
         children: (0, s.jsx)("div", {
           className: z.modalSize,
           children: (0, s.jsx)(y.default, {
-            onSelectGuild: eV
+            onSelectGuild: ew
           })
         })
       }), (0, s.jsx)(f.Slide, {
@@ -230,8 +236,8 @@ function Y(e) {
         children: (0, s.jsx)("div", {
           className: z.modalSize,
           children: (0, s.jsx)(V.default, {
-            selectedSource: eh,
-            onChangeSelectedSource: ey
+            selectedSource: eA,
+            onChangeSelectedSource: eV
           })
         })
       }), (0, s.jsx)(f.Slide, {
@@ -239,33 +245,33 @@ function Y(e) {
         children: (0, s.jsx)("div", {
           className: z.modalSize,
           children: (0, s.jsx)(F.default, {
-            selectedChannelId: eC,
-            selectedPreset: ep,
-            selectedResolution: eR,
-            selectedSource: eh,
-            selectedFPS: eL,
+            selectedChannelId: null !== (r = null == es ? void 0 : es.id) && void 0 !== r ? r : eN,
+            selectedPreset: eT,
+            selectedResolution: ev,
+            selectedSource: eA,
+            selectedFPS: eM,
             sound: ej,
-            sourceChanged: e_,
-            selectSource: q,
-            onChangeSelectedFPS: e => ek(ep, eR, e),
-            onChangeSelectedResolution: e => ek(ep, e, eL),
-            onChangeSelectedPreset: e => ek(e, eR, eL),
-            onChangeSelectedChannelId: eN,
-            onChangeSelectedSource: ey,
-            onChangeSource: () => em(1),
-            onChangeAudioDevice: e => eI(e),
-            onChangeGuild: () => em(0),
-            onChangeSound: e => eO(e),
-            onClose: X,
-            selectedGuildId: eD,
-            targetGuildPremiumTier: eu,
-            selectGuild: Q,
-            isAnimationDone: 2 === eS && $ === f.ModalTransitionState.ENTERED
+            sourceChanged: eg,
+            selectSource: Z,
+            onChangeSelectedFPS: e => eF(eT, ev, e),
+            onChangeSelectedResolution: e => eF(eT, e, eM),
+            onChangeSelectedPreset: e => eF(e, ev, eM),
+            onChangeSelectedChannelId: eh,
+            onChangeSelectedSource: eV,
+            onChangeSource: () => eS(1),
+            onChangeAudioDevice: e => ep(e),
+            onChangeGuild: () => eS(0),
+            onChangeSound: e => eD(e),
+            onClose: $,
+            selectedGuildId: eP,
+            targetGuildPremiumTier: eo,
+            selectGuild: q,
+            isAnimationDone: 2 === eE && ee === f.ModalTransitionState.ENTERED
           })
         })
       })]
     }),
-    eW = function(e, t, l, a) {
+    eK = function(e, t, l, a) {
       switch (e) {
         case 1:
           return t ? 0 : null;
@@ -276,45 +282,45 @@ function Y(e) {
         default:
           return null
       }
-    }(ef, Q, q, e_),
-    eK = 2 !== ef || null == eh && null == es || null == eb,
-    ez = (0, s.jsxs)(f.ModalFooter, {
-      justify: null == eW ? j.default.Justify.START : j.default.Justify.BETWEEN,
+    }(em, q, Z, eg),
+    ez = 2 !== em || null == eA && null == ei || null == eG,
+    eY = (0, s.jsxs)(f.ModalFooter, {
+      justify: null == eK ? O.default.Justify.START : O.default.Justify.BETWEEN,
       children: [(0, s.jsx)(f.Button, {
         type: "submit",
         size: f.Button.Sizes.SMALL,
-        disabled: eK,
+        disabled: ez,
         autoFocus: !0,
         children: K.default.Messages.GO_LIVE_MODAL_CTA
-      }), null == eW ? (0, s.jsx)(f.Button, {
+      }), null == eK ? (0, s.jsx)(f.Button, {
         className: z.cancelButton,
         look: f.Button.Looks.LINK,
         size: f.Button.Sizes.SMALL,
         color: f.ButtonColors.PRIMARY,
-        onClick: X,
+        onClick: $,
         children: K.default.Messages.CANCEL
       }) : (0, s.jsx)(f.Button, {
         size: f.Button.Sizes.SMALL,
         color: f.ButtonColors.PRIMARY,
-        onClick: () => em(eW),
+        onClick: () => eS(eK),
         children: K.default.Messages.BACK
       })]
     });
   return (0, s.jsx)(_.default, {
     page: H.AnalyticsPages.GO_LIVE_MODAL,
     children: (0, s.jsxs)(f.ModalRoot, {
-      "aria-labelledby": ec,
-      transitionState: $,
+      "aria-labelledby": ef,
+      transitionState: ee,
       size: f.ModalSize.DYNAMIC,
       className: z.modalSize,
       children: [(0, s.jsx)(f.ModalCloseButton, {
-        onClick: X,
+        onClick: $,
         className: z.modalCloseButton
       }), (0, s.jsx)("div", {
         className: z.art
       }), (0, s.jsxs)("form", {
-        onSubmit: eF,
-        children: [eB, eH, ez]
+        onSubmit: ey,
+        children: [eH, eW, eY]
       })]
     })
   })

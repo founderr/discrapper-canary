@@ -23,16 +23,16 @@ var a = l("735250"),
   N = l("650774"),
   h = l("430824"),
   A = l("131951"),
-  x = l("944486"),
-  I = l("594174"),
+  I = l("944486"),
+  x = l("594174"),
   p = l("449224"),
   T = l("285952"),
   R = l("366695"),
   v = l("346656"),
   L = l("169278"),
   M = l("759231"),
-  j = l("360001"),
-  O = l("626135"),
+  O = l("360001"),
+  j = l("626135"),
   D = l("823379"),
   P = l("63063"),
   b = l("358085"),
@@ -67,7 +67,7 @@ function Z(e) {
       } = e;
       return t === (null == S ? void 0 : S.id)
     }) : o,
-    g = null != t && t.id.startsWith("screen") ? L.default : j.default;
+    g = null != t && t.id.startsWith("screen") ? L.default : O.default;
   return (0, a.jsx)(u.FormItem, {
     title: Y.default.Messages.GO_LIVE_MODAL_APPLICATION_FORM_TITLE,
     className: q.modalContent,
@@ -145,7 +145,7 @@ function $(e) {
     var e;
     return null !== (e = N.default.getMemberCount(t)) && void 0 !== e ? e : 0
   }), s = _.NotifyFriendsOnGoLive.useSetting(), o = n.useCallback((e, t) => {
-    _.NotifyFriendsOnGoLive.updateSetting(t), O.default.track(K.AnalyticEvents.NOTIFY_STREAM_SETTING_UPDATE, {
+    _.NotifyFriendsOnGoLive.updateSetting(t), j.default.track(K.AnalyticEvents.NOTIFY_STREAM_SETTING_UPDATE, {
       value: t
     })
   }, []);
@@ -202,12 +202,12 @@ function et(e) {
     onChangeSelectedResolution: v,
     onChangeSelectedPreset: L,
     onChangeSelectedChannelId: M,
-    onChangeSource: j,
-    onChangeAudioDevice: O,
+    onChangeSource: O,
+    onChangeAudioDevice: j,
     onChangeGuild: D,
     onChangeSound: U,
     isAnimationDone: w
-  } = e, H = (0, r.useStateFromStores)([x.default, C.default], () => C.default.getChannel(x.default.getVoiceChannelId())), W = (0, r.useStateFromStores)([G.default], () => G.default.GPUDriversOutdated), q = (0, r.useStateFromStores)([G.default], () => G.default.problematicGPUDriver), et = (0, r.useStateFromStores)([I.default], () => I.default.getCurrentUser()), el = (0, f.useEnableClips)(), ea = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
+  } = e, H = (0, r.useStateFromStores)([I.default, C.default], () => C.default.getChannel(I.default.getVoiceChannelId())), W = (0, r.useStateFromStores)([G.default], () => G.default.GPUDriversOutdated), q = (0, r.useStateFromStores)([G.default], () => G.default.problematicGPUDriver), et = (0, r.useStateFromStores)([x.default], () => x.default.getCurrentUser()), el = (0, f.useEnableClips)(), ea = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
     autoTrackExposure: !el
   }), en = (0, k.default)();
   null != t && t.id.startsWith("screen") && !A.default.supportsScreenSoundshare() && (en = Y.default.Messages.GO_LIVE_SCREENSHARE_NO_SOUND);
@@ -222,13 +222,13 @@ function et(e) {
   return (0, a.jsxs)(n.Fragment, {
     children: [ei ? (0, a.jsx)(F.default, {
       selectedSource: t,
-      onChangeVideoDeviceSource: j,
-      onChangeAudioDevice: O
+      onChangeVideoDeviceSource: O,
+      onChangeAudioDevice: j
     }) : (0, a.jsxs)("div", {
       children: [(0, a.jsx)(Z, {
         selectSource: N,
         sourceChanged: d,
-        onChangeSource: j,
+        onChangeSource: O,
         selectedSource: t
       }), null != en ? (0, a.jsx)(X, {
         text: en
@@ -264,6 +264,8 @@ function et(e) {
         }
       })
     }), (0, a.jsx)(B.default, {
+      selectedGuildId: E,
+      selectedChannelId: s,
       selectedPreset: i,
       selectedFPS: l,
       selectedResolution: u,
