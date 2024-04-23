@@ -115,13 +115,18 @@
         webpackId: "630107",
         name: "QuestsLandingPage"
       }),
-      Y = () => (0, d.jsx)(j, {}),
-      q = new Set([N.Routes.LOGIN, N.Routes.LOGIN_HANDOFF, N.Routes.INVITE_LOGIN(":inviteCode"), N.Routes.GIFT_CODE_LOGIN(":giftCode"), N.Routes.GUILD_TEMPLATE_LOGIN(":guildTemplateCode")]);
+      Y = (0, _.makeLazy)({
+        createPromise: () => Promise.all([a.e("99387"), a.e("47228")]).then(a.bind(a, "531338")),
+        webpackId: "531338",
+        name: "ConnectionsAuthorizeContinue"
+      }),
+      q = () => (0, d.jsx)(j, {}),
+      X = new Set([N.Routes.LOGIN, N.Routes.LOGIN_HANDOFF, N.Routes.INVITE_LOGIN(":inviteCode"), N.Routes.GIFT_CODE_LOGIN(":giftCode"), N.Routes.GUILD_TEMPLATE_LOGIN(":guildTemplateCode")]);
 
-    function X(e, t) {
-      return t ? e.filter(e => !q.has(e)) : e
+    function Z(e, t) {
+      return t ? e.filter(e => !X.has(e)) : e
     }
-    class Z extends n.Component {
+    class Q extends n.Component {
       componentDidMount() {
         A.default.cleanupDisplaySleep(), O.default.initialize()
       }
@@ -145,7 +150,7 @@
             path: N.Routes.APPS,
             component: L
           }), (0, d.jsx)(o.Route, {
-            path: X([N.Routes.LOGIN, N.Routes.REGISTER, N.Routes.INVITE(":inviteCode"), N.Routes.INVITE_LOGIN(":inviteCode"), N.Routes.GIFT_CODE(":giftCode"), N.Routes.GIFT_CODE_LOGIN(":giftCode"), N.Routes.RESET], C.CONFERENCE_MODE_ENABLED),
+            path: Z([N.Routes.LOGIN, N.Routes.REGISTER, N.Routes.INVITE(":inviteCode"), N.Routes.INVITE_LOGIN(":inviteCode"), N.Routes.GIFT_CODE(":giftCode"), N.Routes.GIFT_CODE_LOGIN(":giftCode"), N.Routes.RESET], C.CONFERENCE_MODE_ENABLED),
             component: V
           }), (0, d.jsx)(m.default, {
             path: N.Routes.INVITE_PROXY(":channelId"),
@@ -157,7 +162,7 @@
             from: N.Routes.GIFT_CODE(""),
             to: N.Routes.LOGIN
           }), (0, d.jsx)(o.Route, {
-            render: Y
+            render: q
           })]
         }) : (0, d.jsxs)(o.Switch, {
           children: [(0, d.jsx)(m.default, {
@@ -165,7 +170,7 @@
             path: N.Routes.INDEX,
             render: () => (0, d.jsx)(h.default, {})
           }), (0, d.jsx)(o.Route, {
-            path: X([N.Routes.LOGIN, N.Routes.LOGIN_HANDOFF, N.Routes.REGISTER, N.Routes.BILLING_PREFIX, N.Routes.BILLING_PROMOTION_REDEMPTION(":code"), N.Routes.INVITE(":inviteCode"), N.Routes.INVITE_LOGIN(":inviteCode"), N.Routes.GIFT_CODE(":giftCode"), N.Routes.GIFT_CODE_LOGIN(":giftCode"), N.Routes.GUILD_TEMPLATE(":guildTemplateCode"), N.Routes.GUILD_TEMPLATE_LOGIN(":guildTemplateCode"), N.Routes.DISABLE_EMAIL_NOTIFICATIONS, N.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, N.Routes.RESET, N.Routes.REPORT, N.Routes.REPORT_SECOND_LOOK], C.CONFERENCE_MODE_ENABLED),
+            path: Z([N.Routes.LOGIN, N.Routes.LOGIN_HANDOFF, N.Routes.REGISTER, N.Routes.BILLING_PREFIX, N.Routes.BILLING_PROMOTION_REDEMPTION(":code"), N.Routes.INVITE(":inviteCode"), N.Routes.INVITE_LOGIN(":inviteCode"), N.Routes.GIFT_CODE(":giftCode"), N.Routes.GIFT_CODE_LOGIN(":giftCode"), N.Routes.GUILD_TEMPLATE(":guildTemplateCode"), N.Routes.GUILD_TEMPLATE_LOGIN(":guildTemplateCode"), N.Routes.DISABLE_EMAIL_NOTIFICATIONS, N.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, N.Routes.RESET, N.Routes.REPORT, N.Routes.REPORT_SECOND_LOOK], C.CONFERENCE_MODE_ENABLED),
             component: V
           }), t ? null : (0, d.jsx)(o.Route, {
             path: N.Routes.PICK_GUILD_SETTINGS(":section?", ":subsection?"),
@@ -209,6 +214,9 @@
           }), (0, d.jsx)(m.default, {
             path: N.Routes.ACTIVATE,
             component: x
+          }), (0, d.jsx)(m.default, {
+            path: N.Routes.CONNECTIONS_AUTHORIZE_CONTINUE(":type"),
+            component: Y
           }), (0, d.jsx)(m.default, {
             path: N.Routes.CONNECTIONS(":type"),
             component: M
@@ -267,7 +275,7 @@
             path: [N.Routes.APPLICATION_DIRECTORY_SEARCH, N.Routes.APPLICATION_DIRECTORY_PROFILE(":applicationId", ":section?"), N.Routes.APPLICATION_DIRECTORY],
             component: H
           }), (0, d.jsx)(o.Route, {
-            render: Y
+            render: q
           })]
         }) : (0, d.jsx)(o.Switch, {
           children: (0, d.jsx)(m.default, {
@@ -293,7 +301,7 @@
           path: N.Routes.APPLICATION_DIRECTORY
         })
       }();
-      return (0, d.jsx)(Z, {
+      return (0, d.jsx)(Q, {
         ...e,
         skipsSettingDefaultPageTitle: t
       })
