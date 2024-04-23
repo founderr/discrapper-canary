@@ -35,6 +35,7 @@ t.default = e => {
     return I
   }), [x, y] = s.useState(!1), D = I === P ? O : f.CLAN_BADGE_PALETTE_PRESETS[P];
   return s.useEffect(() => {
+    if (v === a && D.primary === l && D.secondary === p) return;
     let e = document.querySelector("#".concat(m));
     if (null != e) {
       let a = new XMLSerializer().serializeToString(e),
@@ -52,7 +53,7 @@ t.default = e => {
         })
       }, l.src = s
     }
-    let a = A === E.ClanSetupSteps.CUSTOMIZE_TAG_BADGE ? {
+    let n = A === E.ClanSetupSteps.CUSTOMIZE_TAG_BADGE ? {
       brandPrimaryColor: D.primary,
       brandSecondaryColor: D.secondary
     } : {};
@@ -60,9 +61,9 @@ t.default = e => {
       badgeKind: v,
       badgePrimaryColor: D.primary,
       badgeSecondaryColor: D.secondary,
-      ...a
+      ...n
     })
-  }, [t, v, D.primary, D.secondary, A]), (0, n.jsxs)("div", {
+  }, [t, v, D.primary, D.secondary, A, a, l, p]), (0, n.jsxs)("div", {
     className: C.slideContent,
     children: [(0, n.jsx)(u.Heading, {
       variant: "heading-xxl/medium",
