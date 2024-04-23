@@ -6,16 +6,16 @@ s.r(t), s.d(t, {
 });
 var a, i, r = s("735250");
 s("470079");
-var n = s("399606"),
-  l = s("524437"),
+var l = s("399606"),
+  n = s("524437"),
   o = s("230711"),
   u = s("410030"),
   d = s("100527"),
   c = s("906732"),
   _ = s("779618"),
   E = s("335131"),
-  f = s("410154"),
-  C = s("300284"),
+  C = s("410154"),
+  f = s("300284"),
   T = s("131951"),
   I = s("78839"),
   R = s("63063"),
@@ -61,13 +61,13 @@ let es = new Date("2024-05-07T03:59:00Z");
 t.default = () => {
   let {
     analyticsLocations: e
-  } = (0, c.default)(d.default.PREMIUM_MARKETING_PERK_CARD), t = (0, u.default)(), s = L.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, n.useStateFromStores)([I.default], () => I.default.getPremiumTypeSubscription()), i = null != a ? S.default.getPremiumPlanItem(a) : null, ea = (null != i ? S.default.getSkuIdForPlan(i.planId) : null) === P.PremiumSubscriptionSKUs.TIER_2, {
+  } = (0, c.default)(d.default.PREMIUM_MARKETING_PERK_CARD), t = (0, u.default)(), s = L.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, l.useStateFromStores)([I.default], () => I.default.getPremiumTypeSubscription()), i = null != a ? S.default.getPremiumPlanItem(a) : null, ea = (null != i ? S.default.getSkuIdForPlan(i.planId) : null) === P.PremiumSubscriptionSKUs.TIER_2, {
     flipped: ei
   } = (0, p.useWhatsNewAvatarDecoRollout)(), {
     flipped: er
-  } = (0, p.useWhatsNewProfileFXRollout)(), en = (0, m.useFreeBoostDaysPercentage)({
+  } = (0, p.useWhatsNewProfileFXRollout)(), el = (0, m.useFreeBoostDaysPercentage)({
     showAnimations: !0
-  }), el = null != en ? en.initialPercentage : void 0, eo = null != en ? en.percentage : void 0, eu = (0, _.default)(T.default), ed = (0, A.default)(), ec = (0, C.default)({
+  }), en = null != el ? el.initialPercentage : void 0, eo = null != el ? el.percentage : void 0, eu = (0, _.default)(T.default), ed = (0, A.default)(), ec = (0, f.default)({
     scrollPosition: h.ProfileCustomizationScrollPositions.TRY_IT_OUT,
     analyticsLocations: e
   }), e_ = () => {
@@ -80,7 +80,7 @@ t.default = () => {
       analyticsLocations: e,
       analyticsSource: d.default.PREMIUM_MARKETING_PERK_CARD
     })
-  }, ef = {
+  }, eC = {
     avatarDecorations: ea ? {
       name: "avatarDecorations",
       title: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_TITLE,
@@ -91,7 +91,7 @@ t.default = () => {
       pillText: L.default.Messages.EARLY_ACCESS,
       perkImage: B,
       canReveal: ei,
-      dismissibleContentType: l.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
+      dismissibleContentType: n.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
     } : {
       name: "avatarDecorations",
       title: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_TITLE,
@@ -100,7 +100,7 @@ t.default = () => {
       pillText: L.default.Messages.EARLY_ACCESS,
       perkImage: B,
       canReveal: ei,
-      dismissibleContentType: l.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
+      dismissibleContentType: n.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
     },
     clientThemes: {
       name: "clientThemes",
@@ -208,7 +208,7 @@ t.default = () => {
       pillText: L.default.Messages.EARLY_ACCESS,
       perkImage: Y,
       canReveal: er,
-      dismissibleContentType: l.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
+      dismissibleContentType: n.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
     } : {
       name: "profileEffects",
       title: L.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE,
@@ -217,7 +217,7 @@ t.default = () => {
       pillText: L.default.Messages.EARLY_ACCESS,
       perkImage: Y,
       canReveal: er,
-      dismissibleContentType: l.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
+      dismissibleContentType: n.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
     },
     profiles: {
       name: "profiles",
@@ -400,20 +400,20 @@ t.default = () => {
       subtitle: s,
       description: a,
       pillText: i,
-      ctaDescription: n,
-      dismissibleContentType: l
+      ctaDescription: l,
+      dismissibleContentType: n
     } = ed, u = (0, r.jsx)(N.default, {
       showAnimations: !0,
       percentage: eo,
-      initialPercentage: el
+      initialPercentage: en
     });
-    ef.freeBoost = {
+    eC.freeBoost = {
       name: "freeBoost",
       title: t,
       subtitle: s,
       description: a,
       perkComponent: u,
-      descriptionCta: n,
+      descriptionCta: l,
       onCtaClick: () => {
         o.default.open(M.UserSettingsSections.GUILD_BOOSTING, null, {
           analyticsLocations: e
@@ -421,10 +421,10 @@ t.default = () => {
       },
       cardVariant: g.CardVariants.REWARD,
       pillText: i,
-      dismissibleContentType: l
+      dismissibleContentType: n
     }
   }
-  return (0, f.default)("usePerksDiscoverabilityCard") === f.CollectiblesShopMarketingVariants.SHY && Date.now() < es.getTime() && (ef.shyProject = {
+  return (0, C.default)("usePerksDiscoverabilityCard") === C.CollectiblesShopMarketingVariants.SHY && Date.now() < es.getTime() && (eC.shyProject = {
     name: "shyProject",
     title: L.default.Messages.NITRO_HOME_SHY_PROJECT_TITLE,
     subtitle: L.default.Messages.NITRO_HOME_SHY_PROJECT_SUBTITLE,
@@ -433,5 +433,5 @@ t.default = () => {
     onCtaClick: ea ? eE : void 0,
     perkImage: Z,
     isPremiumGetCta: !ea
-  }), ef
+  }), eC
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return I
   }
 }), n("47120");
 var s = n("735250"),
@@ -11,30 +11,30 @@ var s = n("735250"),
   o = n("2052"),
   u = n("906732"),
   l = n("174609"),
-  _ = n("626135"),
-  c = n("790527"),
+  c = n("626135"),
+  _ = n("790527"),
   S = n("940165"),
   d = n("474936"),
   E = n("981631"),
   O = n("689938"),
-  I = n("677804");
+  f = n("677804");
 
-function f(e) {
+function I(e) {
   let {
     onClose: t,
-    ...f
+    ...I
   } = e, C = (0, o.useAnalyticsContext)(), {
     analyticsLocations: M
   } = (0, u.default)(), [N, T] = a.useState(!1);
   return a.useEffect(() => {
-    !N && (_.default.track(E.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    !N && (c.default.track(E.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: d.PremiumUpsellTypes.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
       location: C.location,
       location_stack: M
     }), T(!0))
-  }, [C.location, M, N]), (0, s.jsx)(c.default, {
+  }, [C.location, M, N]), (0, s.jsx)(_.default, {
     type: d.PremiumUpsellTypes.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
-    artContainerClassName: I.image,
+    artContainerClassName: f.image,
     artURL: n("98165"),
     title: O.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_TITLE,
     glowUp: O.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_TITLE,
@@ -50,12 +50,12 @@ function f(e) {
       t(), i.default.open(E.UserSettingsSections.PREMIUM)
     },
     onClose: t,
-    ...f,
+    ...I,
     children: (0, s.jsx)(r.FormItem, {
       title: O.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_LABEL,
-      className: I.optionsContainerWrapper,
+      className: f.optionsContainerWrapper,
       children: (0, s.jsxs)("div", {
-        className: I.optionsContainer,
+        className: f.optionsContainer,
         children: [(0, s.jsx)(S.default, {
           showGradient: !0
         }), (0, s.jsx)(S.default, {

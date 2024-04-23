@@ -11,9 +11,9 @@ var a = n("120356"),
   i = n("960524"),
   o = n("793030"),
   u = n("481060"),
-  l = n("471113"),
-  _ = n("552958"),
-  c = n("169776");
+  l = n("759198"),
+  c = n("552958"),
+  _ = n("169776");
 
 function S(e) {
   let {
@@ -22,14 +22,14 @@ function S(e) {
   } = e, {
     playSound: a,
     isPlaying: S
-  } = (0, _.default)(), d = t ? l.default : o.Text;
+  } = (0, c.default)(), d = t ? l.default : o.Text;
   return (0, s.jsxs)(u.Clickable, {
-    className: r()(c.container, {
-      [c.containerActive]: S
+    className: r()(_.container, {
+      [_.containerActive]: S
     }, n),
     onClick: () => a(),
     children: [(0, s.jsx)(i.CirclePlayIcon, {
-      className: c.playButton,
+      className: _.playButton,
       color: S ? u.tokens.colors.INTERACTIVE_ACTIVE : u.tokens.colors.INTERACTIVE_NORMAL
     }), (0, s.jsxs)("div", {
       children: [(0, s.jsx)(d, {

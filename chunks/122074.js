@@ -16,14 +16,14 @@ var a = n("735250"),
   c = n("466111"),
   S = n("26290"),
   I = n("74538"),
-  _ = n("471113"),
+  _ = n("759198"),
   E = n("11352"),
   M = n("213931"),
   m = n("112440"),
   p = n("671105"),
   C = n("921944"),
-  T = n("871465"),
-  g = n("689938"),
+  g = n("871465"),
+  T = n("689938"),
   v = n("809851");
 
 function N(e, t) {
@@ -31,7 +31,7 @@ function N(e, t) {
     N = (0, p.useChannelCustomNotificationSound)(e, t),
     h = (0, l.useStateFromStores)([d.default], () => d.default.getCurrentUser()),
     A = I.default.canUseCustomNotificationSounds(h),
-    R = A ? null != N ? N : n : T.Soundpacks.CLASSIC,
+    R = A ? null != N ? N : n : g.Soundpacks.CLASSIC,
     x = E.CustomNotificationSoundExperiment.useExperiment({
       location: "guild_context_menu"
     }, {
@@ -56,13 +56,13 @@ function N(e, t) {
       return t && U(t), (0, a.jsxs)(a.Fragment, {
         children: [j && (0, a.jsx)(S.TextBadge, {
           className: v.newBadge,
-          text: g.default.Messages.NEW
+          text: T.default.Messages.NEW
         }), (0, a.jsxs)("div", {
           className: v.headerContainer,
           children: [(0, a.jsx)(P, {
             color: t ? "always-white" : void 0,
             variant: "text-sm/medium",
-            children: g.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND
+            children: T.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND
           }), (0, a.jsx)(c.default, {
             className: v.nitroWheel,
             color: t ? "white" : A ? void 0 : f.GradientCssUrls.PREMIUM_TIER_2,
@@ -81,15 +81,15 @@ function N(e, t) {
       children: [(0, a.jsx)(r.MenuRadioItem, {
         id: "sound_0",
         group: "notification-preset",
-        checked: null == R || R === T.Soundpacks.CLASSIC,
+        checked: null == R || R === g.Soundpacks.CLASSIC,
         label: "Classic",
-        action: () => y(T.Soundpacks.CLASSIC)
+        action: () => y(g.Soundpacks.CLASSIC)
       }), (0, a.jsx)(r.MenuSeparator, {}), A ? (0, a.jsx)(r.MenuRadioItem, {
         id: "sound_1",
         group: "notification-preset",
-        checked: R === T.Soundpacks.DETUNE,
+        checked: R === g.Soundpacks.DETUNE,
         label: "Detune",
-        action: () => y(T.Soundpacks.DETUNE)
+        action: () => y(g.Soundpacks.DETUNE)
       }) : (0, a.jsx)(r.MenuItem, {
         id: "sound_1",
         label: e => {
@@ -108,7 +108,7 @@ function N(e, t) {
             })]
           })
         },
-        action: () => y(T.Soundpacks.DETUNE)
+        action: () => y(g.Soundpacks.DETUNE)
       })]
     })
   })

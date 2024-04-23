@@ -19,8 +19,8 @@ var u = n("481060"),
   m = n("212205"),
   p = n("62420"),
   C = n("455395"),
-  T = n("581052"),
-  g = n("875252"),
+  g = n("581052"),
+  T = n("875252"),
   v = n("122074"),
   N = n("819403"),
   h = n("777658"),
@@ -73,7 +73,7 @@ t.default = (0, s.default)((0, l.default)(function(e) {
     channel: n,
     guildId: void 0,
     onHeightUpdate: q
-  }), eM = (0, M.useAddToFavoritesItem)(n), em = (0, M.useRemoveFromFavoritesItem)(n), ep = (0, m.default)(n), eC = (0, p.default)(n), eT = (0, T.useMessageRequestItem)(n), eg = (0, C.useInappropriateConversationItem)(n), ev = (0, g.useSafetyWarningsItem)(n), eN = n.isManaged(), eh = t.isNonUserBot();
+  }), eM = (0, M.useAddToFavoritesItem)(n), em = (0, M.useRemoveFromFavoritesItem)(n), ep = (0, m.default)(n), eC = (0, p.default)(n), eg = (0, g.useMessageRequestItem)(n), eT = (0, C.useInappropriateConversationItem)(n), ev = (0, T.useSafetyWarningsItem)(n), eN = n.isManaged(), eh = t.isNonUserBot();
   return (0, a.jsxs)(u.Menu, {
     navId: "user-context",
     onClose: i.closeContextMenu,
@@ -82,11 +82,11 @@ t.default = (0, s.default)((0, l.default)(function(e) {
     children: [(0, a.jsx)(u.MenuGroup, {
       children: !eh && ef
     }), (0, a.jsx)(u.MenuGroup, {
-      children: eT
+      children: eg
     }), (0, a.jsx)(u.MenuGroup, {
       children: ev
     }), (0, a.jsx)(u.MenuGroup, {
-      children: eg
+      children: eT
     }), (0, a.jsxs)(u.MenuGroup, {
       children: [eM, ep, eC]
     }), (0, a.jsx)(u.MenuGroup, {

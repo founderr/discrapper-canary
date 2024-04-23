@@ -7,8 +7,8 @@ var l = t("481060"),
   i = t("239091"),
   o = t("883385"),
   s = t("108843"),
-  r = t("947440"),
-  d = t("100527"),
+  d = t("947440"),
+  r = t("100527"),
   c = t("299206"),
   f = t("895563"),
   M = t("212205"),
@@ -16,8 +16,8 @@ var l = t("481060"),
   h = t("122074"),
   m = t("314897"),
   _ = t("858687"),
-  v = t("461535"),
-  E = t("776568"),
+  E = t("461535"),
+  v = t("776568"),
   I = t("981631"),
   N = t("689938");
 n.default = (0, s.default)((0, o.default)(function(e) {
@@ -25,10 +25,10 @@ n.default = (0, s.default)((0, o.default)(function(e) {
     channel: n,
     selected: o,
     onSelect: s
-  } = e, d = n.isOwner(m.default.getId()), S = (0, v.default)(n), g = (0, E.default)(n), T = (0, h.default)(I.ZERO_STRING_GUILD_ID, n.id), p = (0, _.default)(n, o), A = (0, c.default)({
+  } = e, r = n.isOwner(m.default.getId()), S = (0, E.default)(n), g = (0, v.default)(n), p = (0, h.default)(I.ZERO_STRING_GUILD_ID, n.id), T = (0, _.default)(n, o), A = (0, c.default)({
     id: n.id,
     label: N.default.Messages.COPY_ID_CHANNEL
-  }), x = (0, r.default)(n), O = (0, f.useAddToFavoritesItem)(n), G = (0, f.useRemoveFromFavoritesItem)(n), R = (0, M.default)(n), j = (0, C.default)(n);
+  }), x = (0, d.default)(n), O = (0, f.useAddToFavoritesItem)(n), G = (0, f.useRemoveFromFavoritesItem)(n), R = (0, M.default)(n), j = (0, C.default)(n);
   return null == n || n.isManaged() ? null : (0, a.jsxs)(l.Menu, {
     navId: "gdm-context",
     "aria-label": N.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
@@ -39,7 +39,7 @@ n.default = (0, s.default)((0, o.default)(function(e) {
     }), (0, a.jsxs)(l.MenuGroup, {
       children: [O, R, j]
     }), (0, a.jsxs)(l.MenuGroup, {
-      children: [d ? (0, a.jsx)(l.MenuItem, {
+      children: [r ? (0, a.jsx)(l.MenuItem, {
         id: "instant-invites",
         label: N.default.Messages.INSTANT_INVITES,
         action: () => (0, l.openModalLazy)(async () => {
@@ -73,9 +73,9 @@ n.default = (0, s.default)((0, o.default)(function(e) {
     }), (0, a.jsx)(l.MenuGroup, {
       children: x
     }), (0, a.jsxs)(l.MenuGroup, {
-      children: [g, T]
+      children: [g, p]
     }), (0, a.jsx)(l.MenuGroup, {
-      children: p
+      children: T
     }), (0, a.jsx)(l.MenuGroup, {
       children: G
     }), (0, a.jsx)(l.MenuGroup, {
@@ -84,4 +84,4 @@ n.default = (0, s.default)((0, o.default)(function(e) {
   })
 }, {
   object: I.AnalyticsObjects.CONTEXT_MENU
-}), [d.default.CONTEXT_MENU, d.default.GROUP_DM_MENU])
+}), [r.default.CONTEXT_MENU, r.default.GROUP_DM_MENU])
