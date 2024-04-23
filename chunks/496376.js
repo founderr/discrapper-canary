@@ -304,6 +304,8 @@ t.default = e => {
         onLastStep: W
       })]
     }), (0, n.jsx)("div", {
+      className: L.divider
+    }), (0, n.jsx)("div", {
       className: i()(L.overviewSidebar, {
         [L.fadeOut]: F && !B
       }),

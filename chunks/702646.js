@@ -12,7 +12,7 @@ var n = a("735250"),
   f = a("376644"),
   E = a("481060"),
   h = a("442837"),
-  _ = a("45680"),
+  _ = a("105671"),
   C = a("92373"),
   m = a("10473"),
   S = a("207796"),
@@ -70,7 +70,7 @@ function A() {
     l = s.useCallback(() => {
       a(S.ClanDiscoveryMode.GAMES)
     }, [a]),
-    i = null !== (e = (0, _.useGameNamesString)(t)) && void 0 !== e ? e : "",
+    i = null !== (e = (0, _.useFormattedGameNames)(t)) && void 0 !== e ? e : "",
     o = (0, n.jsx)("div", {
       className: T.gamesTooltip,
       children: t.map(e => (0, n.jsx)(C.default, {
