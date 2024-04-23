@@ -1,30 +1,34 @@
 "use strict";
 n.r(t), n.d(t, {
   useShouldShowUserClanTagUpsell: function() {
-    return o
+    return c
   }
 }), n("47120");
-var a = n("442837"),
-  l = n("430824"),
-  s = n("594174"),
-  i = n("963202"),
-  r = n("353093");
+var a = n("524437"),
+  l = n("442837"),
+  s = n("645041"),
+  i = n("430824"),
+  r = n("594174"),
+  o = n("963202"),
+  u = n("353093"),
+  d = n("981631");
 
-function o(e) {
-  let t = (0, i.useIsInUserClanExperiment)(),
-    n = (0, a.useStateFromStores)([s.default, l.default], () => (function(e) {
-      let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [s.default, l.default];
+function c(e) {
+  let t = (0, o.useIsInUserClanExperiment)(),
+    n = (0, l.useStateFromStores)([r.default, i.default], () => (function(e) {
+      let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.default, i.default];
       if (null == e) return !1;
       let a = n.getGuild(e);
-      if (null == a || !(0, r.isGuildAClan)(a) || null == a.clan) return !1;
-      let i = t.getCurrentUser();
-      if (null == i) return !1;
-      if (null == i.clan) return !0;
+      if (null == a || !(0, u.isGuildAClan)(a) || null == a.clan) return !1;
+      let l = t.getCurrentUser();
+      if (null == l) return !1;
+      if (null == l.clan) return !0;
       let {
-        identityGuildId: o,
-        identityEnabled: u
-      } = i.clan;
-      return null != o && null == u ? e === o : null == o && null == u || !1
-    })(e, [s.default, l.default]), [e]);
-  return t && n
+        identityGuildId: s,
+        identityEnabled: o
+      } = l.clan;
+      return null != s && null == o ? e === s : null == s && null == o || (s !== e || !1 !== o) && (null != s && !1 === o || !1)
+    })(e, [r.default, i.default]), [e]),
+    c = (0, s.useIsContentDismissed)(a.DismissibleGuildContent.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : d.EMPTY_STRING_SNOWFLAKE_ID);
+  return t && n && !c
 }
