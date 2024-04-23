@@ -1,5 +1,5 @@
 "use strict";
 e.exports = {
-  badges: "badges__89cab tags__17646",
-  tags: "tags__17646"
+  badge: "badge__26d6e",
+  badgeList: "badgeList_b6652b"
 }
