@@ -86,6 +86,9 @@ function O(e, t, n) {
   return n
 }
 class R extends(i = s.Component) {
+  formatDimension(e) {
+    return this.props.useRawTargetDimensions ? e : Math.ceil(e)
+  }
   nudgeLeftAlignment(e, t, n) {
     let {
       nudgeAlignIntoViewport: i
@@ -101,8 +104,8 @@ class R extends(i = s.Component) {
     } = this.props;
     switch (r) {
       case "left": {
-        let r = Math.ceil(this.nudgeLeftAlignment(e.left, t, n)),
-          s = Math.ceil(e.left) - r;
+        let r = this.formatDimension(this.nudgeLeftAlignment(e.left, t, n)),
+          s = this.formatDimension(e.left) - r;
         return {
           style: {
             ...i,
@@ -112,7 +115,7 @@ class R extends(i = s.Component) {
         }
       }
       case "right": {
-        let t = Math.ceil(n.offsetWidth - e.right);
+        let t = this.formatDimension(n.offsetWidth - e.right);
         return {
           style: {
             ...i,
@@ -123,8 +126,8 @@ class R extends(i = s.Component) {
       }
       case "center": {
         let r = e.left + (e.width - t.offsetWidth) / 2,
-          s = Math.ceil(this.nudgeLeftAlignment(r, t, n)),
-          a = Math.ceil(r) - s;
+          s = this.formatDimension(this.nudgeLeftAlignment(r, t, n)),
+          a = this.formatDimension(r) - s;
         return {
           style: {
             ...i,
@@ -162,8 +165,8 @@ class R extends(i = s.Component) {
     } = this.props;
     switch (r) {
       case "top": {
-        let r = Math.ceil(this.nudgeTopAlignment(e.top, t, n)),
-          s = Math.ceil(e.top) - r;
+        let r = this.formatDimension(this.nudgeTopAlignment(e.top, t, n)),
+          s = this.formatDimension(e.top) - r;
         return {
           style: {
             ...i,
@@ -173,8 +176,8 @@ class R extends(i = s.Component) {
         }
       }
       case "bottom": {
-        let r = Math.ceil(this.nudgeBottomAlignment(e.bottom, t, n)),
-          s = Math.ceil(e.bottom) - r;
+        let r = this.formatDimension(this.nudgeBottomAlignment(e.bottom, t, n)),
+          s = this.formatDimension(e.bottom) - r;
         return {
           style: {
             ...i,
@@ -185,8 +188,8 @@ class R extends(i = s.Component) {
       }
       case "center": {
         let r = e.top + (e.height - t.offsetHeight) / 2,
-          s = Math.ceil(this.nudgeTopAlignment(r, t, n)),
-          a = Math.ceil(r) - s;
+          s = this.formatDimension(this.nudgeTopAlignment(r, t, n)),
+          a = this.formatDimension(r) - s;
         return {
           style: {
             ...i,
