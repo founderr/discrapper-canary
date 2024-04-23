@@ -4,10 +4,10 @@ t.r(a), t.d(a, {
     return d
   }
 });
-var l = t("735250");
+var n = t("735250");
 t("470079");
-var n = t("481060"),
-  s = t("285952"),
+var s = t("481060"),
+  l = t("285952"),
   r = t("441957"),
   o = t("689938"),
   i = t("837537"),
@@ -20,41 +20,41 @@ function d(e) {
     title: d,
     body: u
   } = e;
-  return (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsxs)(n.ModalHeader, {
-      direction: s.default.Direction.VERTICAL,
+  return (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsxs)(s.ModalHeader, {
+      direction: l.default.Direction.VERTICAL,
       className: i.header,
       separator: !1,
-      children: [(0, l.jsx)("img", {
+      children: [(0, n.jsx)("img", {
         src: c,
         className: i.illustration,
         width: "254",
         height: "127",
         alt: ""
-      }), (0, l.jsx)(n.Heading, {
+      }), (0, n.jsx)(s.Heading, {
         className: i.title,
         variant: "heading-xl/extrabold",
         children: d
-      }), null != t && (0, l.jsx)(n.ModalCloseButton, {
+      }), null != t && (0, n.jsx)(s.ModalCloseButton, {
         className: i.closeButton,
         onClick: t
       })]
-    }), (0, l.jsx)(n.ModalContent, {
+    }), (0, n.jsx)(s.ModalContent, {
       className: i.body,
       paddingFix: !1,
-      children: (0, l.jsx)(n.Text, {
+      children: (0, n.jsx)(s.Text, {
         tag: "p",
         variant: "text-md/normal",
         color: "header-secondary",
         children: u
       })
-    }), (0, l.jsx)(n.ModalFooter, {
+    }), (0, n.jsx)(s.ModalFooter, {
       className: i.footer,
-      children: (0, l.jsxs)(n.Button, {
+      children: (0, n.jsxs)(s.Button, {
         className: i.footerButton,
-        color: n.Button.Colors.BRAND,
+        color: s.Button.Colors.BRAND,
         onClick: a,
-        children: [o.default.Messages.TRY_AGAIN, (0, l.jsx)(r.default, {
+        children: [o.default.Messages.TRY_AGAIN, (0, n.jsx)(r.default, {
           className: i.launchIcon,
           width: "16",
           height: "16"

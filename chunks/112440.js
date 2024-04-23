@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return l
   }
 });
 var a = n("735250");
 n("470079");
 var u = n("481060");
 
-function i() {
+function l() {
   (0, u.openModalLazy)(async () => {
     let {
       default: e

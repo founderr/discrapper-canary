@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return L
   }
 }), n("47120");
 var a = n("735250"),
@@ -106,7 +106,7 @@ class R {
   }
 }
 
-function y(e) {
+function L(e) {
   let {
     channel: t
   } = e, n = t.getRecipientId(), s = (0, c.useAvatarsWithGuilds)(n), i = Array(s.length).fill(null), {

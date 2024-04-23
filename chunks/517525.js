@@ -26,11 +26,11 @@ var a = n("735250"),
   x = n("689938"),
   M = n("526144");
 let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
-  y = {
+  L = {
     opacity: 0,
     transform: "translate3d(100%, 0, 0)"
   },
-  L = {
+  y = {
     opacity: 1,
     transform: "translate3d(0%, 0, 0)"
   },
@@ -59,8 +59,8 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
         shape: c,
         size: p,
         didTrackUpsellViewed: R,
-        setDidTrackUpsellViewed: y,
-        className: L,
+        setDidTrackUpsellViewed: L,
+        className: y,
         premiumIndicator: O
       } = e,
       j = (0, I.getMaxQuality)(r),
@@ -101,8 +101,8 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
           has_premium_stream_fps: t,
           has_premium_stream_resolution: s,
           location_stack: P
-        }), y(!0))
-      }, [t, s, b, R, y, P]), null == j) return null;
+        }), L(!0))
+      }, [t, s, b, R, L, P]), null == j) return null;
     let H = (0, a.jsx)(f.Tooltip, {
       text: D ? x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : b ? x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
       position: "bottom",
@@ -125,7 +125,7 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
     });
     return (0, a.jsx)(g.TextBadge, {
       text: H,
-      className: i()(L, M.qualityIndicatorBadge, {
+      className: i()(y, M.qualityIndicatorBadge, {
         [M.qualityIndicatorBadgePremium]: O
       }),
       color: d.default.unsafe_rawColors.PRIMARY_500.css,
@@ -150,10 +150,10 @@ t.default = e => {
   }, [t]);
   let _ = (0, r.useTransition)(C, {
       enter: {
-        from: E.enabled ? O : y,
-        to: E.enabled ? j : L
+        from: E.enabled ? O : L,
+        to: E.enabled ? j : y
       },
-      leave: E.enabled ? O : y,
+      leave: E.enabled ? O : L,
       config: b
     }),
     T = (0, r.useSpring)({

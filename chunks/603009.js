@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return L
   }
 }), n("47120");
 var a = n("735250"),
@@ -48,10 +48,10 @@ function R(e) {
       null != t && (t.style.zIndex = "1002")
     }
   }, []);
-  let y = l.useCallback(e => {
+  let L = l.useCallback(e => {
       e.stopPropagation(), e.preventDefault(), o()
     }, [o]),
-    L = l.useCallback(e => {
+    y = l.useCallback(e => {
       e.stopPropagation(), e.preventDefault(), s()
     }, [s]),
     O = (0, r.useTransition)(n, {
@@ -98,7 +98,7 @@ function R(e) {
             "aria-label": x.default.Messages.CLAN_USER_ADOPT_TAG_UPSELL_ARIA_LABEL.format({
               guildName: t.name
             }),
-            onClick: L,
+            onClick: y,
             children: (0, a.jsxs)("div", {
               className: i()(M.toastContainerInner, m ? M.hovered : null),
               children: [(0, a.jsxs)("div", {
@@ -133,7 +133,7 @@ function R(e) {
               }), (0, a.jsx)("div", {
                 children: (0, a.jsx)(d.Clickable, {
                   className: M.toastButton,
-                  onClick: y,
+                  onClick: L,
                   children: (0, a.jsx)(u.CloseSmallBoldIcon, {
                     width: 20,
                     height: 20
@@ -148,7 +148,7 @@ function R(e) {
   }) : null
 }
 
-function y(e) {
+function L(e) {
   let {} = e, t = (0, c.useStateFromStores)([E.default], () => E.default.getGuildId()), n = (0, T.useShouldShowUserClanTagUpsell)(t), s = (0, c.useStateFromStores)([p.default], () => p.default.getGuild(t), [t]), [i, r] = l.useState(!1), u = l.useRef(null), d = (0, S.useIsInUserClanExperiment)();
   l.useEffect(() => (n && (u.current = window.setTimeout(() => {
     r(!0), g.default.track(v.AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN, {

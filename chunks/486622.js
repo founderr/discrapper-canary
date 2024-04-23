@@ -25,8 +25,8 @@ function C(e) {
     onAcceptSuccess: n,
     onRejectSuccess: l,
     onError: C
-  } = e, g = (0, m.default)(), [S, _] = a.useState(!1), [T, I] = a.useState(!1), [A, v] = a.useState(!1), [N, x] = a.useState(!1), [M, R] = a.useState(!1), y = S || T || A, L = a.useCallback(async e => {
-    if (!y) {
+  } = e, g = (0, m.default)(), [S, _] = a.useState(!1), [T, I] = a.useState(!1), [A, v] = a.useState(!1), [N, x] = a.useState(!1), [M, R] = a.useState(!1), L = S || T || A, y = a.useCallback(async e => {
+    if (!L) {
       _(!0);
       try {
         await (0, f.acceptMessageRequest)(e), x(!0), null == n || n()
@@ -37,8 +37,8 @@ function C(e) {
         _(!1)
       }
     }
-  }, [y, n, C]), O = a.useCallback(async e => {
-    if (!y) {
+  }, [L, n, C]), O = a.useCallback(async e => {
+    if (!L) {
       I(!0);
       try {
         await (0, f.rejectMessageRequest)(e), R(!0), null == l || l()
@@ -49,8 +49,8 @@ function C(e) {
         I(!1)
       }
     }
-  }, [y, l, C]), j = a.useCallback(async e => {
-    if (y) return;
+  }, [L, l, C]), j = a.useCallback(async e => {
+    if (L) return;
     I(!0);
     let t = s()(e, p.BATCH_REJECT_LIMIT);
     try {
@@ -62,8 +62,8 @@ function C(e) {
     } finally {
       I(!1)
     }
-  }, [y, l, C]), P = a.useCallback(async e => {
-    if (y) return;
+  }, [L, l, C]), P = a.useCallback(async e => {
+    if (L) return;
     if (null != t && null == o.default.getMutualGuilds(t.id)) {
       v(!0);
       try {
@@ -83,7 +83,7 @@ function C(e) {
         channel_id: e,
         mutual_guild_ids: null != a ? a : [],
         other_user_id: null == t ? void 0 : t.id
-      }), await L(e)
+      }), await y(e)
     };
     (0, h.openAcceptMessageRequestConfirmModal)({
       channelId: e,
@@ -99,9 +99,9 @@ function C(e) {
         })
       }
     })
-  }, [L, y, t]), D = a.useCallback((e, t, n) => {
+  }, [y, L, t]), D = a.useCallback((e, t, n) => {
     let a = (a, l) => {
-        l && d.NonSpamRetrainingOptIn.updateSetting(a), a && null != t && (0, r.submitHamReportForFirstDM)(t), L(e.id), c.default.track(E.AnalyticEvents.MESSAGE_REQUEST_ACTION, {
+        l && d.NonSpamRetrainingOptIn.updateSetting(a), a && null != t && (0, r.submitHamReportForFirstDM)(t), y(e.id), c.default.track(E.AnalyticEvents.MESSAGE_REQUEST_ACTION, {
           action: p.MessageRequestAnalyticsAction.ACCEPT_HAM_CONFIRMATION_PROMPT,
           channel_id: e.id,
           is_dont_show_again_checked: l,
@@ -119,9 +119,9 @@ function C(e) {
         })
       }
     }) : a(l)
-  }, [L]);
+  }, [y]);
   return {
-    acceptMessageRequest: g ? P : L,
+    acceptMessageRequest: g ? P : y,
     rejectMessageRequest: O,
     rejectAll: j,
     markAsNotSpam: D,

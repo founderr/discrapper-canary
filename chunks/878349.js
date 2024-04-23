@@ -34,7 +34,7 @@ function g(e) {
     collapseWhenChecked: v = !0,
     onClick: N,
     disabled: x
-  } = e, M = (0, r.useStateFromStores)([f.default], () => f.default.useReducedMotion), [R, y] = l.useState(!1), L = (0, c.default)(), O = (0, o.isThemeDark)(L) || t ? C : E, {
+  } = e, M = (0, r.useStateFromStores)([f.default], () => f.default.useReducedMotion), [R, L] = l.useState(!1), y = (0, c.default)(), O = (0, o.isThemeDark)(y) || t ? C : E, {
     width: j = 0,
     ref: P
   } = (0, d.default)(), {
@@ -57,7 +57,7 @@ function g(e) {
       onChange: function() {
         if (g) {
           let e = !t;
-          y(!0), null == _ || _(e)
+          L(!0), null == _ || _(e)
         }
         "function" == typeof N && N()
       },

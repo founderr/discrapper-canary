@@ -4,10 +4,10 @@ t.r(a), t.d(a, {
     return i
   }
 });
-var l = t("735250");
+var n = t("735250");
 t("470079");
-var n = t("481060"),
-  s = t("285952"),
+var s = t("481060"),
+  l = t("285952"),
   r = t("689938"),
   o = t("837537");
 
@@ -19,36 +19,36 @@ function i(e) {
     body: c,
     content: d
   } = e;
-  return (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsxs)(n.ModalHeader, {
-      direction: s.default.Direction.VERTICAL,
+  return (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsxs)(s.ModalHeader, {
+      direction: l.default.Direction.VERTICAL,
       className: o.header,
       separator: !1,
-      children: [(0, l.jsx)("div", {
+      children: [(0, n.jsx)("div", {
         className: o.illustration,
         children: t
-      }), (0, l.jsx)(n.Heading, {
+      }), (0, n.jsx)(s.Heading, {
         className: o.title,
         variant: "heading-xl/extrabold",
         children: i
-      }), (0, l.jsx)(n.ModalCloseButton, {
+      }), (0, n.jsx)(s.ModalCloseButton, {
         className: o.closeButton,
         onClick: a
       })]
-    }), (0, l.jsxs)(n.ModalContent, {
+    }), (0, n.jsxs)(s.ModalContent, {
       className: o.body,
       paddingFix: !1,
-      children: [(0, l.jsx)(n.Text, {
+      children: [(0, n.jsx)(s.Text, {
         tag: "p",
         variant: "text-md/normal",
         color: "header-secondary",
         children: c
       }), d]
-    }), (0, l.jsx)(n.ModalFooter, {
+    }), (0, n.jsx)(s.ModalFooter, {
       className: o.footer,
-      children: (0, l.jsx)(n.Button, {
+      children: (0, n.jsx)(s.Button, {
         className: o.footerButton,
-        color: n.Button.Colors.BRAND,
+        color: s.Button.Colors.BRAND,
         onClick: a,
         children: r.default.Messages.DONE
       })

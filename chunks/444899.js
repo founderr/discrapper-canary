@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   ChannelNotificationSettings: function() {
-    return T
+    return _
   }
 }), s("47120");
 var i = s("735250"),
@@ -21,7 +21,7 @@ var i = s("735250"),
   m = s("689938"),
   E = s("154460");
 
-function _(e, t, s) {
+function T(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -29,7 +29,7 @@ function _(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class T extends a.PureComponent {
+class _ extends a.PureComponent {
   highlight() {
     this.setState({
       highlight: !0
@@ -163,18 +163,18 @@ class T extends a.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), _(this, "_timeout", void 0), _(this, "state", {
+    super(...e), T(this, "_timeout", void 0), T(this, "state", {
       highlight: !1
-    }), _(this, "unhighlight", () => {
+    }), T(this, "unhighlight", () => {
       this.setState({
         highlight: !1
       })
-    }), _(this, "handleMute", (e, t) => {
+    }), T(this, "handleMute", (e, t) => {
       let {
         messageNotifications: s
       } = this.props;
       this.setMessageNotification(null != s ? s : f.UserNotificationSettings.NULL, t, g.NotificationLabel.muted(t))
-    }), _(this, "handleDelete", () => {
+    }), T(this, "handleDelete", () => {
       let {
         onDelete: e,
         channel: t

@@ -28,20 +28,20 @@ async function d(e, t, a) {
   } catch (e) {
     throw await A(a, null !== (r = null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.code) && void 0 !== r ? r : 0, "authorize"), Error("error during two way authorize")
   }
-  let h = null;
+  let E = null;
   try {
     s()(null != f, "No URL in authorize response");
     let {
       state: e
     } = (0, u.getCallbackParamsFromURL)(f);
-    s()(null != e, "Authorize URL state query parameter must be present"), h = e
+    s()(null != e, "Authorize URL state query parameter must be present"), E = e
   } catch (e) {
     throw await A(a, 2, "authorize"), Error("error parsing callback params")
   }
   try {
     await i.default.callback(C, {
       code: t,
-      state: h
+      state: E
     })
   } catch (e) {
     throw await A(a, null !== (d = null == e ? void 0 : null === (l = e.body) || void 0 === l ? void 0 : l.code) && void 0 !== d ? d : 0, "callback"), Error("error during two way callback")

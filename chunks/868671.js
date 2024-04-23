@@ -69,21 +69,21 @@ function E(e) {
       o = [i, ...t],
       u = [...n, i, ...e];
     return [o, u, Math.random(), e]
-  }, [E, T, g, t, C, _, n, p, I]), R = a.useRef(0), y = a.useRef(T), L = a.useRef(), O = a.useCallback(e => {
+  }, [E, T, g, t, C, _, n, p, I]), R = a.useRef(0), L = a.useRef(T), y = a.useRef(), O = a.useCallback(e => {
     var t;
     let n = Math.floor(e / d.DEFAULT_CONTENT_ROW_HEIGHT),
       a = Math.min(null !== (t = null == M ? void 0 : M.length) && void 0 !== t ? t : 0, n);
     R.current = Math.max(R.current, a)
   }, [M]);
   return a.useEffect(() => {
-    y.current = T
-  }, [T]), a.useEffect(() => (R.current = 0, L.current = Date.now(), () => {
+    L.current = T
+  }, [T]), a.useEffect(() => (R.current = 0, y.current = Date.now(), () => {
     var e, t;
-    if (null == _ || null == L.current || Date.now() - L.current < 3e3) return;
-    let n = null !== (t = null === (e = y.current) || void 0 === e ? void 0 : e.slice(0, R.current).map(e => e.id)) && void 0 !== t ? t : [];
+    if (null == _ || null == y.current || Date.now() - y.current < 3e3) return;
+    let n = null !== (t = null === (e = L.current) || void 0 === e ? void 0 : e.slice(0, R.current).map(e => e.id)) && void 0 !== t ? t : [];
     !I && A && r.default.track(h.AnalyticEvents.RANKING_ITEMS_SEEN, {
       request_id: _,
-      first_shown_at: L.current,
+      first_shown_at: y.current,
       item_ids: n,
       surface_type: c.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
       channel_id: E,

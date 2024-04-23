@@ -21,8 +21,8 @@ var a = s("392711"),
   f = s("353872"),
   m = s("981631"),
   E = s("689938"),
-  _ = s("19560");
-let T = e => {
+  T = s("19560");
+let _ = e => {
   let {
     channel: {
       type: t
@@ -43,7 +43,7 @@ function x(e) {
   } = (t = s, (0, l.useStateFromStoresObject)([S.default], () => {
     let e = S.default.getCategories(t);
     return {
-      channels: (0, d.default)(e._categories, e, T),
+      channels: (0, d.default)(e._categories, e, _),
       categories: e
     }
   })), I = n()(c).filter(e => {
@@ -65,7 +65,7 @@ function x(e) {
       type: r.FormText.Types.DESCRIPTION,
       children: E.default.Messages.ADD_CHANNEL_TO_OVERRIDE
     }), (0, i.jsx)("div", {
-      className: _.input,
+      className: T.input,
       children: (0, i.jsx)(r.SearchableSelect, {
         value: m.EMPTY_STRING_SNOWFLAKE_ID,
         onChange: a,

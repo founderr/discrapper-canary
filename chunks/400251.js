@@ -48,7 +48,7 @@ let R = e => {
   })
 };
 
-function y(e) {
+function L(e) {
   let {
     entry: t
   } = e, [s, r] = l.useState(!1), {
@@ -235,7 +235,7 @@ t.default = e => {
         onClick: _,
         children: M
       })]
-    }), (0, a.jsx)(y, {
+    }), (0, a.jsx)(L, {
       entry: s
     })]
   })

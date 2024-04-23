@@ -23,8 +23,8 @@ var a, n, i = s("735250"),
   S = s("3409"),
   N = s("351402"),
   C = s("975060"),
-  P = s("505649"),
-  h = s("66579"),
+  h = s("505649"),
+  P = s("66579"),
   T = s("285952"),
   A = s("358085"),
   R = s("622999"),
@@ -212,7 +212,7 @@ class V extends l.PureComponent {
               }), (0, i.jsx)(c.ModalCloseButton, {
                 onClick: this.handleClose
               })]
-            }), this.renderGenericError(), (0, i.jsx)(h.default, {
+            }), this.renderGenericError(), (0, i.jsx)(P.default, {
               breadcrumbs: a,
               activeId: e
             })]
@@ -590,7 +590,7 @@ class V extends l.PureComponent {
     })
   }
 }
-let K = d.default.connectStores([C.default, N.default, P.default], () => ({
+let K = d.default.connectStores([C.default, N.default, h.default], () => ({
   braintreeEmail: C.default.braintreeEmail,
   braintreeNonce: C.default.braintreeNonce,
   stripePaymentMethod: C.default.stripePaymentMethod,
@@ -601,7 +601,7 @@ let K = d.default.connectStores([C.default, N.default, P.default], () => ({
   error: C.default.error,
   popupCallbackCalled: C.default.popupCallbackCalled,
   submitting: N.default.isBusy,
-  isAuthenticating: P.default.isAwaitingAuthentication
+  isAuthenticating: h.default.isAwaitingAuthentication
 }))(V);
 
 function z(e) {

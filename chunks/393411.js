@@ -23,8 +23,8 @@ var n = s("120356"),
   S = s("122289"),
   N = s("74538"),
   C = s("212895"),
-  P = s("296848"),
-  h = s("140465"),
+  h = s("296848"),
+  P = s("140465"),
   T = s("879463"),
   A = s("104494"),
   R = s("987997"),
@@ -175,8 +175,8 @@ t.default = function(e) {
   (!L.PAUSE_ELIGIBLE_PLANS.has(l.planId) || !g.SubscriptionStatusTypesSets.ALL_PAUSEABLE.has(l.status)) && (w = !1);
   let H = (0, A.usePremiumDiscountOffer)(),
     Y = null == H ? void 0 : null === (t = H.discount) || void 0 === t ? void 0 : t.amount,
-    W = (0, h.useHasDiscountApplied)(),
-    V = (0, h.useActiveDiscountInfo)(),
+    W = (0, P.useHasDiscountApplied)(),
+    V = (0, P.useActiveDiscountInfo)(),
     K = () => {
       (l.status === g.SubscriptionStatusTypes.ACTIVE || l.status === g.SubscriptionStatusTypes.PAST_DUE || l.status === g.SubscriptionStatusTypes.PAUSED) && q(y.Steps.PAUSE_SELECT)
     },
@@ -341,7 +341,7 @@ t.default = function(e) {
       if (e === g.SubscriptionStatusTypes.PAUSED) {
         let {
           durations: e
-        } = (0, P.getSubscriptionPauseDurations)(l);
+        } = (0, h.getSubscriptionPauseDurations)(l);
         return (0, a.jsxs)("div", {
           className: D.toolsButtons,
           children: [e.length > 0 ? (0, a.jsx)(u.Button, {

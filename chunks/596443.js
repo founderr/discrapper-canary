@@ -30,9 +30,9 @@ var a = n("735250"),
   x = n("981631"),
   M = n("689938"),
   R = n("196958"),
-  y = n("482039");
+  L = n("482039");
 
-function L(e) {
+function y(e) {
   var t, n, s, r;
   let {
     permission: o,
@@ -40,23 +40,23 @@ function L(e) {
     guild: _,
     specMap: T,
     categoryTitle: I
-  } = e, A = (0, u.useStateFromStores)([g.default], () => g.default.getRoles(_.id)), v = x.Permissions[o], R = null !== (s = null === (t = T[v.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== s ? s : (0, E.getPermissionName)(v), L = null !== (r = null === (n = T[v.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== r ? r : "", O = N.ELEVATED_PERMISSIONS.has(v), j = N.MOD_PERMISSIONS.includes(o), P = C.length, D = (0, u.useStateFromStores)([S.default], () => S.default.can(x.Permissions.MANAGE_ROLES, _), [_]), b = l.useCallback(async e => {
+  } = e, A = (0, u.useStateFromStores)([g.default], () => g.default.getRoles(_.id)), v = x.Permissions[o], R = null !== (s = null === (t = T[v.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== s ? s : (0, E.getPermissionName)(v), y = null !== (r = null === (n = T[v.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== r ? r : "", O = N.ELEVATED_PERMISSIONS.has(v), j = N.MOD_PERMISSIONS.includes(o), P = C.length, D = (0, u.useStateFromStores)([S.default], () => S.default.can(x.Permissions.MANAGE_ROLES, _), [_]), b = l.useCallback(async e => {
     D && (await p.default.open(_.id, x.GuildSettingsSections.ROLES), await p.default.selectRole(e))
   }, [D, _.id]);
   return (0, a.jsxs)("div", {
-    className: i()(y.permissionItemContainer, {
-      [y.elevatedPermission]: O
+    className: i()(L.permissionItemContainer, {
+      [L.elevatedPermission]: O
     }),
     children: [(0, a.jsxs)("div", {
-      className: i()(y.permissionItemHeader),
+      className: i()(L.permissionItemHeader),
       children: [(0, a.jsxs)("div", {
-        className: y.permissionTitle,
+        className: L.permissionTitle,
         children: [(0, a.jsx)(c.Text, {
           variant: "text-md/medium",
           color: "header-primary",
           children: R
         }), null != I && (0, a.jsxs)("div", {
-          className: y.permissionItemSubheader,
+          className: L.permissionItemSubheader,
           children: [(0, a.jsx)(c.Text, {
             variant: "text-xs/normal",
             color: "header-muted",
@@ -70,7 +70,7 @@ function L(e) {
             }), (0, a.jsx)(c.Tooltip, {
               text: M.default.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_TOOLTIP,
               children: e => (0, a.jsxs)(c.Clickable, {
-                className: y.elevatedPermissionContainer,
+                className: L.elevatedPermissionContainer,
                 ...e,
                 children: [(0, a.jsx)(d.ShieldLockIcon, {
                   width: 12,
@@ -90,7 +90,7 @@ function L(e) {
               "aria-hidden": "true",
               color: c.tokens.colors.INTERACTIVE_MUTED.css
             }), (0, a.jsx)("div", {
-              className: y.elevatedPermissionContainer,
+              className: L.elevatedPermissionContainer,
               children: (0, a.jsx)(c.Text, {
                 variant: "text-xs/normal",
                 color: "header-muted",
@@ -106,22 +106,22 @@ function L(e) {
           roleCount: P
         })
       })]
-    }), null != L && (0, a.jsx)("div", {
-      className: y.permissionItemDescription,
+    }), null != y && (0, a.jsx)("div", {
+      className: L.permissionItemDescription,
       children: (0, a.jsx)(c.Text, {
         variant: "text-sm/normal",
         color: "text-secondary",
-        children: L
+        children: y
       })
     }), (0, a.jsx)("div", {
-      className: y.permissionItemRoleContainer,
+      className: L.permissionItemRoleContainer,
       children: C.map(e => (0, a.jsx)(c.Clickable, {
-        className: i()(y.roleTooltipItem, {
-          [y.editable]: D && !(0, f.isEveryoneRoleId)(_.id, e) && !(0, N.isOwnerRole)(e, _.id)
+        className: i()(L.roleTooltipItem, {
+          [L.editable]: D && !(0, f.isEveryoneRoleId)(_.id, e) && !(0, N.isOwnerRole)(e, _.id)
         }),
         onClick: () => b(e),
         children: (0, N.isOwnerRole)(e, _.id) ? (0, a.jsx)("div", {
-          className: y.roleChiplet,
+          className: L.roleChiplet,
           children: (0, a.jsx)(c.Text, {
             variant: "text-xs/medium",
             color: "text-normal",
@@ -130,7 +130,7 @@ function L(e) {
         }) : (0, a.jsx)(m.default, {
           role: A[e],
           guildId: _.id,
-          className: y.roleChiplet
+          className: L.roleChiplet
         })
       }, e))
     })]
@@ -155,7 +155,7 @@ function j(e) {
   }, []), G = l.useMemo(() => {
     if (null == h || null == P || null == m) return null;
     if (0 === j) return (0, a.jsx)("div", {
-      className: i()(y.__invalid_permissionChiplet, y.__invalid_noModPerms),
+      className: i()(L.__invalid_permissionChiplet, L.__invalid_noModPerms),
       children: (0, a.jsx)(c.Text, {
         variant: "text-sm/normal",
         color: "text-positive",
@@ -184,7 +184,7 @@ function j(e) {
               g = null != h && O(F, h);
             if (!m && !p && !C && !g) return
           }
-          e.push((0, a.jsx)(L, {
+          e.push((0, a.jsx)(y, {
             permission: s,
             roleIds: i,
             guild: h,
@@ -205,14 +205,14 @@ function j(e) {
       userId: t,
       onNavigate: d
     }), (0, a.jsx)(c.Scroller, {
-      className: y.permissionsGroupContainer,
+      className: L.permissionsGroupContainer,
       children: (0, a.jsx)(c.FormItem, {
         title: M.default.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_PANEL_TITLE,
-        titleClassName: y.__invalid_infoTitle,
+        titleClassName: L.__invalid_infoTitle,
         children: (0, a.jsxs)("div", {
-          className: y.permissionsItemContainer,
+          className: L.permissionsItemContainer,
           children: [(0, a.jsx)(T.default, {
-            className: y.searchBar,
+            className: L.searchBar,
             query: b,
             placeholder: M.default.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER,
             onChange: H,

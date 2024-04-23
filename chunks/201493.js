@@ -30,8 +30,8 @@ t.default = e => {
     currentCategoryId: x,
     directoryEntries: M,
     categoryCounts: R,
-    allEntriesCount: y,
-    isLoading: L
+    allEntriesCount: L,
+    isLoading: y
   } = (0, s.useStateFromStoresObject)([p.default], () => {
     let e = p.default.getCurrentCategoryId(v.id),
       t = p.default.getDirectoryEntries(v.id, e === T.DirectoryEntryCategories.ALL ? null : e),
@@ -142,7 +142,7 @@ t.default = e => {
     },
     directoryEntries: O,
     categoryCounts: R,
-    allEntriesCount: y,
-    isLoading: L
+    allEntriesCount: L,
+    isLoading: y
   })
 }

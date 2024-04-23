@@ -4,14 +4,14 @@ t.r(a), t.d(a, {
     return i
   }
 }), t("47120");
-var l = t("470079"),
-  n = t("110924"),
-  s = t("626135"),
+var n = t("470079"),
+  s = t("110924"),
+  l = t("626135"),
   r = t("798930"),
   o = t("981631");
 
 function i(e, a) {
-  let [t, i] = l.useState(r.TwoWayLinkModalSlideTypes.LANDING), c = (0, n.default)(t), [d, u] = l.useState(null), [N, h] = l.useState(null), x = l.useCallback(() => {
+  let [t, i] = n.useState(r.TwoWayLinkModalSlideTypes.LANDING), c = (0, s.default)(t), [d, u] = n.useState(null), [N, h] = n.useState(null), x = n.useCallback(() => {
     switch (t) {
       case r.TwoWayLinkModalSlideTypes.LANDING:
         i(r.TwoWayLinkModalSlideTypes.PRE_CONNECT);
@@ -22,15 +22,15 @@ function i(e, a) {
       case r.TwoWayLinkModalSlideTypes.ERROR:
         i(r.TwoWayLinkModalSlideTypes.PRE_CONNECT)
     }
-  }, [t]), m = l.useCallback(() => {
+  }, [t]), m = n.useCallback(() => {
     u(null), i(r.TwoWayLinkModalSlideTypes.ERROR)
-  }, []), C = l.useCallback(e => {
+  }, []), C = n.useCallback(e => {
     u(e), i(r.TwoWayLinkModalSlideTypes.PRE_CONNECT_WAITING)
-  }, []), T = l.useCallback(e => {
+  }, []), T = n.useCallback(e => {
     u(null), h(e), i(r.TwoWayLinkModalSlideTypes.DISCORD_CONSENT)
   }, []);
-  return l.useEffect(() => {
-    t !== c && s.default.track(o.AnalyticEvents.ACCOUNT_LINK_STEP, {
+  return n.useEffect(() => {
+    t !== c && l.default.track(o.AnalyticEvents.ACCOUNT_LINK_STEP, {
       location_stack: e,
       previous_step: c,
       current_step: t,

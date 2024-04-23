@@ -23,8 +23,8 @@ var a, n, i = s("735250"),
   S = s("906732"),
   N = s("211242"),
   C = s("509545"),
-  P = s("285952"),
-  h = s("626135"),
+  h = s("285952"),
+  P = s("626135"),
   T = s("122289"),
   A = s("63063"),
   R = s("74538"),
@@ -81,7 +81,7 @@ function V(e) {
     whatYouLoseExperienceEnabled: u,
     analyticsLocation: o
   } = e, d = (0, N.useBlockedPaymentsConfig)(), [c, p] = l.useState(!1), [f, I] = l.useState(!1), C = (0, _.default)(), {
-    analyticsLocations: h
+    analyticsLocations: P
   } = (0, S.default)(), T = null;
   switch (s.status) {
     case w.SubscriptionStatusTypes.PAST_DUE:
@@ -138,7 +138,7 @@ function V(e) {
           onClose: r,
           premiumSubscription: s,
           setIsCancelling: p,
-          analyticsLocations: h,
+          analyticsLocations: P,
           analyticsLocation: o
         })
       },
@@ -178,7 +178,7 @@ function V(e) {
         children: T
       })]
     }), (0, i.jsxs)(E.ModalFooter, {
-      justify: P.default.Justify.START,
+      justify: h.default.Justify.START,
       children: [M, L]
     })]
   })
@@ -255,8 +255,8 @@ function z(e) {
         premiumSubscription: t
       })]
     }), (0, i.jsxs)(E.ModalFooter, {
-      align: P.default.Align.CENTER,
-      justify: P.default.Justify.BETWEEN,
+      align: h.default.Align.CENTER,
+      justify: h.default.Justify.BETWEEN,
       children: [(0, i.jsx)(E.Button, {
         color: E.Button.Colors.RED,
         disabled: o,
@@ -312,14 +312,14 @@ function X(e) {
     } = e,
     f = l.useRef(new o.Environment),
     [N, C] = l.useState(null),
-    P = (0, g.useFreeBoostUserTenureReward)(),
-    A = (null == P ? void 0 : P.showCard) === !0,
+    h = (0, g.useFreeBoostUserTenureReward)(),
+    A = (null == h ? void 0 : h.showCard) === !0,
     y = null === (t = (0, R.getPremiumPlanItem)(a)) || void 0 === t ? void 0 : t.planId,
     M = null != y ? R.default.getPremiumType(y) : null;
   c()(null != M, "Should not be cancelling Nitro without premiumType");
   let x = (0, _.default)();
   l.useEffect(() => {
-    h.default.track(w.AnalyticEvents.CANCELLATION_FLOW_STARTED, q(a))
+    P.default.track(w.AnalyticEvents.CANCELLATION_FLOW_STARTED, q(a))
   }, [a]);
   let B = M === F.PremiumTypes.TIER_0 || M === F.PremiumTypes.TIER_1 || M === F.PremiumTypes.TIER_2;
   null == p && (p = B ? 1 : 2);
@@ -327,7 +327,7 @@ function X(e) {
     analyticsLocations: O
   } = (0, S.default)(u, I.default.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL), [j, W, K, X] = function(e, t, s) {
     let [a, n] = l.useState(e), [i, r] = l.useState(Date.now()), [u] = l.useState(Date.now()), o = l.useCallback(e => {
-      h.default.track(w.AnalyticEvents.CANCELLATION_FLOW_STEP, {
+      P.default.track(w.AnalyticEvents.CANCELLATION_FLOW_STEP, {
         from_step: Z[a],
         to_step: Z[e],
         step_duration_ms: Date.now() - i,
@@ -340,7 +340,7 @@ function X(e) {
   }(p, a, u), [J, Q] = l.useState(null);
   (0, G.useUnsupportedExternalSubscriptionModalHandler)(a, r, !1);
   let $ = e => {
-      r(), h.default.track(w.AnalyticEvents.CANCELLATION_FLOW_STEP, {
+      r(), P.default.track(w.AnalyticEvents.CANCELLATION_FLOW_STEP, {
         from_step: Z[e],
         to_step: null,
         step_duration_ms: Date.now() - K,

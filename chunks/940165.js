@@ -27,9 +27,9 @@ function O(e) {
     isPlaying: _
   } = (0, u.default)();
   return (0, s.jsxs)(c.Clickable, {
-    className: l()(d.container, {
+    className: l()(d.container, n, {
       [d.containerActive]: _
-    }, n),
+    }),
     onClick: () => I(O),
     children: [(0, s.jsx)(o.CirclePlayIcon, {
       className: d.playButton,

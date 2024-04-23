@@ -12,8 +12,8 @@ var n = a("735250"),
   A = a("659154"),
   C = a("902928"),
   f = a("240479"),
-  h = a("981631"),
-  E = a("535248");
+  E = a("981631"),
+  h = a("535248");
 t.default = (0, i.makeAuthenticated)(function() {
   let e;
   let [t, a] = r.useState({
@@ -61,7 +61,7 @@ t.default = (0, i.makeAuthenticated)(function() {
       break;
     case "success":
       e = (0, n.jsx)(C.ActivateDeviceSuccess, {
-        onComplete: () => (0, u.transitionTo)(h.Routes.ME),
+        onComplete: () => (0, u.transitionTo)(E.Routes.ME),
         data: t.userCodeData
       });
       break;
@@ -74,15 +74,15 @@ t.default = (0, i.makeAuthenticated)(function() {
       e = null
   }
   return (0, n.jsxs)("div", {
-    className: E.activatePage,
+    className: h.activatePage,
     children: [(0, n.jsx)(s.default, {
-      className: E.artwork,
+      className: h.artwork,
       preserveAspectRatio: "xMinYMin slice"
     }), (0, n.jsx)(l.default, {
       show: !0,
-      className: E.logo
+      className: h.logo
     }), (0, n.jsx)("div", {
-      className: E.content,
+      className: h.content,
       children: e
     })]
   })

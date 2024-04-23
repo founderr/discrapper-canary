@@ -26,8 +26,8 @@ var a = n("735250"),
   x = n("611855"),
   M = n("644646"),
   R = n("670638"),
-  y = n("667105"),
-  L = n("860151"),
+  L = n("667105"),
+  y = n("860151"),
   O = n("981631"),
   j = n("354459"),
   P = n("689938"),
@@ -77,7 +77,7 @@ t.default = function(e) {
       questContent: I.QuestContent.QUEST_LIVE_STREAM,
       questContentCTA: g.QuestContentCTA.LEARN_MORE
     }), d.default.open(O.UserSettingsSections.INVENTORY))
-  }, [W]), J = (0, y.useHandleClaimQuestsReward)({
+  }, [W]), J = (0, L.useHandleClaimQuestsReward)({
     quest: W,
     location: I.QuestContent.QUEST_LIVE_STREAM
   }), $ = (0, _.useIsQuestExpired)(W);
@@ -157,7 +157,7 @@ t.default = function(e) {
                 })
               })]
             })]
-          }), ee && !et && !V && (0, a.jsx)(L.default, {
+          }), ee && !et && !V && (0, a.jsx)(y.default, {
             autoplay: b,
             quest: W,
             questContent: I.QuestContent.QUEST_LIVE_STREAM

@@ -27,8 +27,8 @@ function C(e) {
     premiumSubscription: t,
     premiumType: s,
     onClose: C,
-    confettiCanvas: P,
-    userWasChurned: h = !1,
+    confettiCanvas: h,
+    userWasChurned: P = !1,
     userDiscountOffer: T
   } = e, A = (0, u.default)(), R = (0, l.isThemeDark)(A) ? S : N, y = n.useRef(null), [M, L] = n.useState(!1), g = (0, m.useChurnDiscountedPrice)(t, f.SubscriptionPlans.PREMIUM_MONTH_TIER_2, T), x = (0, c.getPrice)(f.SubscriptionPlans.PREMIUM_MONTH_TIER_2), D = (0, p.formatPrice)(x.amount, x.currency), b = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion);
   if (n.useEffect(() => {
@@ -65,7 +65,7 @@ function C(e) {
               className: I.nitroIcon
             }), (0, a.jsx)(r.Heading, {
               variant: "heading-xl/bold",
-              children: h ? _.default.Messages.PREMIUM_TRIAL_TUTORIAL_WELCOME_BACK : _.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED_PUNCTUATED
+              children: P ? _.default.Messages.PREMIUM_TRIAL_TUTORIAL_WELCOME_BACK : _.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED_PUNCTUATED
             })]
           }), (0, a.jsx)("div", {
             className: I.bodyString,
@@ -75,7 +75,7 @@ function C(e) {
       })
     }), !b && M && (0, a.jsx)(d.default, {
       confettiTarget: y.current,
-      confettiCanvas: P,
+      confettiCanvas: h,
       confettiVelocityMultiplier: .75
     })]
   })

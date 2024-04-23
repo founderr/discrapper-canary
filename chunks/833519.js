@@ -33,8 +33,8 @@ var a = n("735250"),
   x = n("368666"),
   M = n("685203"),
   R = n("112560"),
-  y = n("442168"),
-  L = n("822296"),
+  L = n("442168"),
+  y = n("822296"),
   O = n("916771"),
   j = n("792517"),
   P = n("979425"),
@@ -95,7 +95,7 @@ function V(e) {
     selected: n,
     isSelfStream: z.id === V
   });
-  if ((null == q ? void 0 : q.state) === U.ApplicationStreamStates.ENDED) return (0, a.jsx)(L.default, {
+  if ((null == q ? void 0 : q.state) === U.ApplicationStreamStates.ENDED) return (0, a.jsx)(y.default, {
     selected: n,
     stream: q,
     width: D
@@ -131,7 +131,7 @@ function V(e) {
     }, K), null != ee ? (0, a.jsx)(g.default, {
       size: (0, R.getSizeForWidth)(D),
       ...ee
-    }) : null, (0, a.jsx)(y.default, {
+    }) : null, (0, a.jsx)(L.default, {
       stream: Y,
       inPopout: x
     })]

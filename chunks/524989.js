@@ -17,13 +17,13 @@ function c(e, a) {
     let d = e[r],
       c = a.widths[r],
       o = r === e.length - 1,
-      h = n === a.maxLines - 1,
-      x = n + 2 < a.maxLines,
+      x = n === a.maxLines - 1,
+      h = n + 2 < a.maxLines,
       V = c > a.parentWidth,
-      H = h && !o ? a.overflowWidth : 0,
+      H = x && !o ? a.overflowWidth : 0,
       u = 0 === a.parentWidth,
-      m = !s && i + c + a.spacing + H < a.parentWidth;
-    u || m ? (i += c + a.spacing, l.push(d)) : n < a.maxLines - 1 ? (n++, i = c + a.spacing, l.push(d)) : V && !h && 0 === i ? (n++, l.push(d)) : V && x && i > 0 ? (l.push(d), n += 2) : (s = !0, t.push(d))
+      f = !s && i + c + a.spacing + H < a.parentWidth;
+    u || f ? (i += c + a.spacing, l.push(d)) : n < a.maxLines - 1 ? (n++, i = c + a.spacing, l.push(d)) : V && !x && 0 === i ? (n++, l.push(d)) : V && h && i > 0 ? (l.push(d), n += 2) : (s = !0, t.push(d))
   }
   return {
     ...a,
@@ -37,20 +37,20 @@ a.default = function(e) {
     renderItem: l,
     renderOverflow: n,
     className: o,
-    maxLines: h,
-    overflowWidth: x = 65,
+    maxLines: x,
+    overflowWidth: h = 65,
     spacing: V = 8
   } = e, [H, u] = i.useState(() => ({
     parentWidth: 0,
     visible: a,
     overflow: [],
     widths: Array(a.length).fill(0),
-    maxLines: h,
-    overflowWidth: x,
+    maxLines: x,
+    overflowWidth: h,
     spacing: V
-  })), m = {
+  })), f = {
     visibility: 0 === H.parentWidth ? "hidden" : "visible"
-  }, f = (0, r.useResizeObserver)(e => {
+  }, m = (0, r.useResizeObserver)(e => {
     u(l => c(a, {
       ...l,
       parentWidth: e.contentRect.width
@@ -60,7 +60,7 @@ a.default = function(e) {
     u(e => {
       var l;
       let t = [...e.widths];
-      return null === (l = f.current) || void 0 === l || l.childNodes.forEach((e, a) => {
+      return null === (l = m.current) || void 0 === l || l.childNodes.forEach((e, a) => {
         let l = e.offsetWidth;
         t[a] = l
       }), c(a, {
@@ -68,10 +68,10 @@ a.default = function(e) {
         widths: t
       })
     })
-  }, [f, a, u]), (0, t.jsxs)("div", {
-    style: m,
+  }, [m, a, u]), (0, t.jsxs)("div", {
+    style: f,
     className: s()(d.container, o),
-    ref: f,
+    ref: m,
     children: [H.visible.map(l), H.overflow.length > 0 ? n(H.overflow) : null]
   })
 }

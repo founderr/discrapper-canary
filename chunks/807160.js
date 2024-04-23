@@ -19,8 +19,8 @@ var a, n, i, l = s("735250"),
   S = s("37234"),
   N = s("782568"),
   C = s("812206"),
-  P = s("593061"),
-  h = s("267101"),
+  h = s("593061"),
+  P = s("267101"),
   T = s("240864"),
   A = s("942833"),
   R = s("400916"),
@@ -146,7 +146,7 @@ function eE(e) {
   let {
     guildId: t,
     guildProductListingId: s
-  } = e, a = (0, h.useFetchGuildProductListing)(t, s, {
+  } = e, a = (0, P.useFetchGuildProductListing)(t, s, {
     requireCurrentGuild: !1
   }), n = (0, A.useProductType)(a), i = (0, _.useStateFromStores)([U.default], () => U.default.getGuild(t)), u = (null == a ? void 0 : a.role_id) != null && (null == a ? void 0 : a.attachments_count) === 0 ? en.default.Messages.GUILD_PRODUCT_BILLING_TYPE_PREMIUM_ROLE : n, o = r.useCallback(async () => {
     (null == i ? void 0 : i.hasFeature(et.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, L.default)(et.Routes.GUILD_PRODUCT(t, s)) : await (0, L.default)(et.Routes.CHANNEL(t)), (0, S.popLayer)()
@@ -170,7 +170,7 @@ function ef(e) {
   let {
     guildId: a,
     guildProductListingId: n
-  } = e, i = (0, h.useFetchGuildProductListing)(a, n, {
+  } = e, i = (0, P.useFetchGuildProductListing)(a, n, {
     requireCurrentGuild: !1
   }), r = (0, _.useStateFromStores)([T.default], () => T.default.getGuildProductFetchState(n) === T.FetchState.FETCHING), u = null == i ? void 0 : i.role_id, o = (0, _.useStateFromStores)([U.default], () => null != u ? U.default.getRole(a, u) : void 0, [a, u]), d = (null !== (s = null == i ? void 0 : null === (t = i.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== s ? s : 0) > 0, c = null != o;
   return r ? (0, l.jsx)("div", {
@@ -358,7 +358,7 @@ class e_ extends(n = r.PureComponent) {
     let {
       payment: e
     } = this.props;
-    return (0, l.jsx)(P.default, {
+    return (0, l.jsx)(h.default, {
       payment: e
     })
   }

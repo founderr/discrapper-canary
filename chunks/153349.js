@@ -28,8 +28,8 @@ var a, l, s = n("735250"),
   x = n("431328"),
   M = n("145834"),
   R = n("590415"),
-  y = n("614173"),
-  L = n("618896"),
+  L = n("614173"),
+  y = n("618896"),
   O = n("231338"),
   j = n("689938"),
   P = n("852218");
@@ -75,11 +75,11 @@ let D = i.memo(function(e) {
     } = (0, c.useStateFromStoresObject)([_.default], () => ({
       isMobile: _.default.isMobileOnline(a.user.id),
       status: _.default.getStatus(a.user.id, S)
-    })), x = (0, c.useStateFromStores)([g.default], () => g.default.getMember(S, a.user.id)), y = i.useMemo(() => ({
+    })), x = (0, c.useStateFromStores)([g.default], () => g.default.getMember(S, a.user.id)), L = i.useMemo(() => ({
       [S]: [a.user.id]
     }), [S, a.user.id]);
-    (0, p.useSubscribeGuildMembers)(y);
-    let L = a.rtsState === R.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+    (0, p.useSubscribeGuildMembers)(L);
+    let y = a.rtsState === R.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 
     function O() {
       (0, N.setUserSuppress)(t, a.user.id, !1)
@@ -145,14 +145,14 @@ let D = i.memo(function(e) {
           })
         }
       }), (0, s.jsx)(f.Tooltip, {
-        text: L ? j.default.Messages.REQUEST_TO_SPEAK_INVITATION_SEND : j.default.Messages.REQUEST_TO_SPEAK_ACCEPT,
+        text: y ? j.default.Messages.REQUEST_TO_SPEAK_INVITATION_SEND : j.default.Messages.REQUEST_TO_SPEAK_ACCEPT,
         children: e => (0, s.jsx)(f.Button, {
           ...e,
           innerClassName: P.buttonContainer,
           look: f.Button.Looks.BLANK,
           size: f.Button.Sizes.NONE,
           onClick: O,
-          disabled: L || r,
+          disabled: y || r,
           children: (0, s.jsx)(I.default, {
             width: 16,
             height: 16
@@ -177,7 +177,7 @@ let D = i.memo(function(e) {
   U = i.memo(function(e) {
     let {
       channel: t
-    } = e, [n, a] = (0, y.useRequestToSpeakPermission)(t.id);
+    } = e, [n, a] = (0, L.useRequestToSpeakPermission)(t.id);
     return (0, s.jsx)(f.FormSwitch, {
       className: P.toggle,
       onChange: a,
@@ -188,7 +188,7 @@ let D = i.memo(function(e) {
   F = i.memo(function() {
     return (0, s.jsxs)("div", {
       className: P.emptyStateContainer,
-      children: [(0, s.jsx)(L.default, {}), (0, s.jsx)(f.Text, {
+      children: [(0, s.jsx)(y.default, {}), (0, s.jsx)(f.Text, {
         className: P.emptyStateTitle,
         variant: "text-lg/semibold",
         color: "header-primary",

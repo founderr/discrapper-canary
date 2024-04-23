@@ -17,11 +17,11 @@ let s = ["#666666"],
       width: a = 24,
       height: l = 24,
       primaryTintColor: o,
-      secondaryTintColor: h,
-      ...x
-    } = e, V = null != o ? (0, n.transformClanBadgeColors)(s, o) : d, H = null != h ? (0, n.transformClanBadgeColors)(r, h) : c;
+      secondaryTintColor: x,
+      ...h
+    } = e, V = null != o ? (0, n.transformClanBadgeColors)(s, o) : d, H = null != x ? (0, n.transformClanBadgeColors)(r, x) : c;
     return (0, t.jsxs)("svg", {
-      ...(0, i.default)(x),
+      ...(0, i.default)(h),
       width: a,
       height: l,
       viewBox: "0 0 16 16",

@@ -20,8 +20,8 @@ var i = s("735250"),
   f = s("592125"),
   m = s("324067"),
   E = s("699516"),
-  _ = s("9156"),
-  T = s("594174"),
+  T = s("9156"),
+  _ = s("594174"),
   x = s("823379"),
   I = s("621600"),
   O = s("423589"),
@@ -38,7 +38,7 @@ function b(e) {
   let {
     guildId: t,
     requestScrollToBottom: s
-  } = e, a = (0, r.useStateFromStoresArray)([f.default, _.default], () => (0, O.filterOverrides)(_.default.getChannelOverrides(t), {
+  } = e, a = (0, r.useStateFromStoresArray)([f.default, T.default], () => (0, O.filterOverrides)(T.default.getChannelOverrides(t), {
     ignoreMute: !0,
     ignoreUnreadSetting: !1,
     ignoreNotificationSetting: !1
@@ -62,8 +62,8 @@ function b(e) {
         let s = f.default.getChannel(e);
         null != s && c.default.updateChannelOverrideSettings(t, e, {
           muted: !1,
-          message_notifications: _.default.resolvedMessageNotifications(s),
-          flags: (0, p.withChannelUnreadFlags)(_.default.getChannelIdFlags(s.guild_id, s.id), _.default.resolveUnreadSetting(s))
+          message_notifications: T.default.resolvedMessageNotifications(s),
+          flags: (0, p.withChannelUnreadFlags)(T.default.getChannelIdFlags(s.guild_id, s.id), T.default.resolveUnreadSetting(s))
         }, I.NotificationLabels.OverrideCreated)
       }
     }), l.length > 0 && (0, i.jsxs)("div", {
@@ -108,16 +108,16 @@ function U(e) {
   let {
     channel: t,
     categories: s
-  } = e, n = (0, o.useToken)(d.default.unsafe_rawColors.GREEN_360).hex(), c = (0, r.useStateFromStores)([f.default], () => f.default.getChannel(null == t ? void 0 : t.parent_id)), m = (0, C.useChannelPresetSettings)(t), [_, x] = a.useState(!1);
+  } = e, n = (0, o.useToken)(d.default.unsafe_rawColors.GREEN_360).hex(), c = (0, r.useStateFromStores)([f.default], () => f.default.getChannel(null == t ? void 0 : t.parent_id)), m = (0, C.useChannelPresetSettings)(t), [T, x] = a.useState(!1);
   if (null == t) return null;
   let I = j.default.Messages.NO_CATEGORY,
     O = (0, g.getChannelIconComponent)(t);
   t.type === A.ChannelTypes.GUILD_CATEGORY && null != t.guild_id && "" !== t.guild_id ? I = j.default.Messages.NUM_CHANNELS.format({
     num: null != s[t.id] ? s[t.id].length : 0
   }) : null != c && (I = j.default.Messages.IN_CATEGORY.format({
-    categoryName: (0, S.computeChannelName)(c, T.default, E.default)
+    categoryName: (0, S.computeChannelName)(c, _.default, E.default)
   }));
-  let p = _ ? M.Presets.CUSTOM : m.preset;
+  let p = T ? M.Presets.CUSTOM : m.preset;
   return (0, i.jsx)("div", {
     children: (0, i.jsxs)("div", {
       className: l()(R.row, R.channel),
@@ -131,7 +131,7 @@ function U(e) {
           children: [(0, i.jsx)(o.Text, {
             variant: "text-md/semibold",
             className: R.modColor,
-            children: (0, S.computeChannelName)(t, T.default, E.default)
+            children: (0, S.computeChannelName)(t, _.default, E.default)
           }), (0, i.jsx)(o.Text, {
             variant: "text-xs/medium",
             className: R.modColor,

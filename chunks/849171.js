@@ -32,9 +32,9 @@ var i = n("120356"),
   x = n("823379"),
   M = n("5192"),
   R = n("689938"),
-  y = n("259975");
+  L = n("259975");
 (l = a || (a = {}))[l.SMALL = 0] = "SMALL", l[l.MEDIUM = 1] = "MEDIUM", l[l.LARGE = 2] = "LARGE";
-let L = ["embedded_background"];
+let y = ["embedded_background"];
 
 function O(e) {
   let {
@@ -57,7 +57,7 @@ function O(e) {
         children: (0, s.jsx)("img", {
           src: e.getAvatarURL(n, r),
           alt: t,
-          className: y.avatar
+          className: L.avatar
         }, e.id)
       }, e.id)
     }
@@ -75,23 +75,23 @@ function j(e) {
   } = e;
   let S = (a = C) > 400 ? 2 : a > 300 ? 1 : 0;
   let [_] = (l = C) > 400 ? [u.AvatarSizes.SIZE_56, 56] : l > 300 ? [u.AvatarSizes.SIZE_32, 32] : [u.AvatarSizes.SIZE_24, 24], I = (0, o.useStateFromStoresArray)([v.default, A.default], () => Array.from(i).map(e => A.default.getId() === e ? null : v.default.getUser(e)).filter(x.isNotNullish)), N = (0, o.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === m.id)), {
-    analyticsLocations: L
+    analyticsLocations: y
   } = (0, T.default)(), j = (0, d.useAnalyticsContext)(), P = M.default.getName(E.getGuildId(), E.id, null == I ? void 0 : I[0]), D = (0, h.useEmbeddedActivityJoinability)({
     userId: null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
     channelId: E.id,
     application: m
   }) === h.EmbeddedActivityJoinability.CAN_JOIN, b = null !== (n = E.getGuildId()) && void 0 !== n ? n : void 0;
   return (0, s.jsxs)("div", {
-    className: y.splash,
+    className: L.splash,
     children: [(0, s.jsx)(O, {
       avatarSize: _,
       guildId: b,
       channelId: E.id,
       users: I
     }), (0, s.jsx)(u.Text, {
-      className: r()(y.subheader, {
-        [y.small]: 0 === S,
-        [y.medium]: 1 === S
+      className: r()(L.subheader, {
+        [L.small]: 0 === S,
+        [L.medium]: 1 === S
       }),
       variant: "text-sm/normal",
       children: I.length > 1 ? R.default.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
@@ -101,14 +101,14 @@ function j(e) {
         username: P
       })
     }), (0, s.jsx)(u.Text, {
-      className: r()(y.header, {
-        [y.small]: 0 === S,
-        [y.medium]: 1 === S
+      className: r()(L.header, {
+        [L.small]: 0 === S,
+        [L.medium]: 1 === S
       }),
       variant: "text-sm/normal",
       children: m.name
     }), (0, s.jsx)("div", {
-      className: y.buttons,
+      className: L.buttons,
       children: D ? (0, s.jsx)(u.Button, {
         onClick: function(e) {
           e.stopPropagation(), null != N && (0, f.default)({
@@ -117,7 +117,7 @@ function j(e) {
             activityChannelId: E.id,
             locationObject: j.location,
             embeddedActivitiesManager: g.default,
-            analyticsLocations: L
+            analyticsLocations: y
           })
         },
         size: function(e) {
@@ -130,7 +130,7 @@ function j(e) {
               return u.Button.Sizes.SMALL
           }
         }(S),
-        className: y.button,
+        className: L.button,
         color: u.Button.Colors.PRIMARY,
         children: R.default.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY
       }) : null
@@ -153,19 +153,19 @@ function P(e) {
     url: h
   } = (0, E.default)({
     applicationId: o,
-    names: L,
+    names: y,
     size: 1024
   }), g = !d;
   return (0, s.jsx)(T.AnalyticsLocationProvider, {
     value: r,
     children: (0, s.jsx)("div", {
-      className: y.container,
+      className: L.container,
       children: (0, s.jsxs)(s.Fragment, {
         children: [!a && d && (0, s.jsx)(C.default, {
-          className: y.iframe,
+          className: L.iframe,
           embedId: (0, S.default)(i.id, o)
         }), g && null != f && null != h && "" !== h ? (0, s.jsx)("img", {
-          className: y.splashImage,
+          className: L.splashImage,
           alt: f.name,
           src: h
         }) : null, !d && !a && null != f && (0, s.jsx)(j, {
@@ -175,7 +175,7 @@ function P(e) {
           application: f,
           currentEmbeddedApplication: c
         }), l || g ? null : (0, s.jsx)("div", {
-          className: y.clickShield
+          className: L.clickShield
         })]
       })
     })

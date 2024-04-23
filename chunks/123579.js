@@ -26,8 +26,8 @@ var a = n("735250"),
   x = n("158776"),
   M = n("246946"),
   R = n("594174"),
-  y = n("979651"),
-  L = n("5192"),
+  L = n("979651"),
+  y = n("5192"),
   O = n("51144"),
   j = n("342656"),
   P = n("785717"),
@@ -83,9 +83,9 @@ t.default = e => {
       channelId: n.id
     }),
     eI = !eh && !s,
-    eA = (0, u.useStateFromStores)([y.default, v.default], () => {
+    eA = (0, u.useStateFromStores)([L.default, v.default], () => {
       var e;
-      return null != ep ? v.default.getChannel(null === (e = y.default.getVoiceStateForUser(ep.id)) || void 0 === e ? void 0 : e.channelId) : null
+      return null != ep ? v.default.getChannel(null === (e = L.default.getVoiceStateForUser(ep.id)) || void 0 === e ? void 0 : e.channelId) : null
     }),
     {
       enableHangStatus: ev
@@ -100,8 +100,8 @@ t.default = e => {
       customStatusActivity: ex,
       isApplicationStreaming: eM,
       isMobile: eR,
-      status: ey,
-      hangStatusActivity: eL,
+      status: eL,
+      hangStatusActivity: ey,
       isHangStatusPrimaryActivity: eO
     } = (0, u.useStateFromStoresObject)([I.default, x.default, N.default], () => {
       var e;
@@ -136,8 +136,8 @@ t.default = e => {
         }) : null
       }
     }),
-    ej = null != eN || null != eL || eM,
-    eP = null !== (t = L.default.getNickname(null, n.id, ep)) && void 0 !== t ? t : O.default.getName(ep),
+    ej = null != eN || null != ey || eM,
+    eP = null !== (t = y.default.getNickname(null, n.id, ep)) && void 0 !== t ? t : O.default.getName(ep),
     eD = (0, u.useStateFromStores)([M.default], () => M.default.hidePersonalInformation),
     [eb, eU, eF, ew, ek] = (0, u.useStateFromStoresArray)([b.default], () => [b.default.getMutualFriendsCount(ep.id), b.default.getMutualFriends(ep.id), b.default.getMutualGuilds(ep.id), b.default.isFetchingProfile(ep.id), b.default.isFetchingFriends(ep.id)]),
     eH = (0, $.useGetVoiceChannelInfoForVoiceActivitySection)(ep.id),
@@ -170,9 +170,9 @@ t.default = e => {
       loadDurationMs: Date.now() - ef.current,
       activity: eN,
       customStatusActivity: ex,
-      status: ey
+      status: eL
     })
-  }, [eC, eR, eN, ex, ey, eI]);
+  }, [eC, eR, eN, ex, eL, eI]);
   let eK = null == eF ? void 0 : eF.map(e => (0, a.jsx)(el.default, {
       connection: e,
       user: ep,
@@ -268,7 +268,7 @@ t.default = e => {
               })
             }) : null, ej ? (0, a.jsx)(B.default.Overlay, {
               children: (0, a.jsx)(K.default, {
-                activity: null != eN ? eN : eL,
+                activity: null != eN ? eN : ey,
                 user: ep,
                 channelId: n.id,
                 analyticsParams: {

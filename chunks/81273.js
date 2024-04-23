@@ -26,8 +26,8 @@ var a = n("735250"),
   x = n("896083"),
   M = n("939872"),
   R = n("265985"),
-  y = n("293810"),
-  L = n("981631"),
+  L = n("293810"),
+  y = n("981631"),
   O = n("689938");
 t.default = (e, t, n, s) => {
   let r;
@@ -59,11 +59,11 @@ t.default = (e, t, n, s) => {
     {
       analyticsLocations: Q
     } = (0, h.default)(),
-    J = (null == B ? void 0 : B.paymentGateway) === L.PaymentGateways.APPLE_PARTNER;
+    J = (null == B ? void 0 : B.paymentGateway) === y.PaymentGateways.APPLE_PARTNER;
   b ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER : j && !P ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER : Y === F ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION_TO_CURRENT_LISTING.format({
     changeDate: null != B ? o()(B.currentPeriodEnd).format("MMM DD, YYYY") : ""
   }) : z ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION : K ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IN_TRIAL : J && (r = O.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IF_IAP);
-  let $ = (0, f.default)(y.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY);
+  let $ = (0, f.default)(L.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY);
   l.useEffect(() => {
     w && null != k && d.default.wait(() => {
       (0, c.fetchSubscriptionPlansForSKU)(k)
@@ -79,16 +79,16 @@ t.default = (e, t, n, s) => {
         } else l = O.default.Messages.GUILD_ROLE_SUBSCRIPTION_INELIGIBLE_TRIAL_DISCLAIMER
       }(0, S.default)({
         activeSubscription: B,
-        analyticsSubscriptionType: L.SubscriptionTypes.GUILD,
+        analyticsSubscriptionType: y.SubscriptionTypes.GUILD,
         trialId: n,
         trialFooterMessageOverride: (null == X ? void 0 : X.active_trial) != null ? O.default.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_RENEWAL_FOOTER_V2.format({
           buttonText: O.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SUBSCRIBE,
           interval: (0, I.formatPlanIntervalDuration)(U),
           days: 1,
-          contactLink: L.MarketingURLs.CONTACT,
-          cancelSubscriptionArticle: T.default.getArticleURL(L.HelpdeskArticles.ROLE_SUBSCRIPTION_CANCEL),
-          helpdeskArticle: T.default.getArticleURL(L.HelpdeskArticles.ROLE_SUBSCRIPTION_TRIAL),
-          paidServiceTermsArticle: T.default.getArticleURL(L.HelpdeskArticles.PAID_TERMS),
+          contactLink: y.MarketingURLs.CONTACT,
+          cancelSubscriptionArticle: T.default.getArticleURL(y.HelpdeskArticles.ROLE_SUBSCRIPTION_CANCEL),
+          helpdeskArticle: T.default.getArticleURL(y.HelpdeskArticles.ROLE_SUBSCRIPTION_TRIAL),
+          paidServiceTermsArticle: T.default.getArticleURL(y.HelpdeskArticles.PAID_TERMS),
           tierName: U.name
         }) : void 0,
         analyticsLocations: Q,

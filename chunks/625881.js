@@ -18,13 +18,13 @@ var a = s("735250"),
   S = s("689938"),
   N = s("248928"),
   C = s("982404"),
-  P = s("299156");
+  h = s("299156");
 t.default = function(e) {
   let {
     premiumSubscription: t,
     premiumType: s,
     onClose: i,
-    onConfirm: h,
+    onConfirm: P,
     userDiscountOffer: T
   } = e, [A, R] = n.useState(!1), [y, M] = n.useState(!1), L = async e => {
     try {
@@ -33,12 +33,12 @@ t.default = function(e) {
         body: {
           user_discount_offer_id: e
         }
-      }), h()
+      }), P()
     } catch (e) {
       R(!0)
     }
     M(!1)
-  }, g = (0, d.default)(), x = (0, u.isThemeDark)(g) ? C : P, D = (0, E.useChurnDiscountedPrice)(t, _.SubscriptionPlans.PREMIUM_MONTH_TIER_2, T), b = (0, p.getPrice)(_.SubscriptionPlans.PREMIUM_MONTH_TIER_2), U = (0, m.formatPrice)(b.amount, b.currency);
+  }, g = (0, d.default)(), x = (0, u.isThemeDark)(g) ? C : h, D = (0, E.useChurnDiscountedPrice)(t, _.SubscriptionPlans.PREMIUM_MONTH_TIER_2, T), b = (0, p.getPrice)(_.SubscriptionPlans.PREMIUM_MONTH_TIER_2), U = (0, m.formatPrice)(b.amount, b.currency);
   return null == T ? null : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(f.default, {
       premiumType: s,

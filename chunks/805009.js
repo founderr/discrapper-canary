@@ -29,8 +29,8 @@ var a, l = n("735250"),
   x = n("255439"),
   M = n("374129"),
   R = n("639351"),
-  y = n("944581"),
-  L = n("368666"),
+  L = n("944581"),
+  y = n("368666"),
   O = n("630388"),
   j = n("51144"),
   P = n("981631"),
@@ -200,7 +200,7 @@ class B extends(a = s.Component) {
     }, "video"))), null != E && Y.push((0, l.jsx)(h.TooltipContainer, {
       text: (0, p.default)(E.name),
       className: F.iconSpacing,
-      children: (0, l.jsx)(y.default, {
+      children: (0, l.jsx)(L.default, {
         className: r()(F.icon, m)
       })
     }, "activity")), S === b.GameConsoleTypes.XBOX || _ === D.VoicePlatforms.XBOX ? Y.push((0, l.jsx)("div", {
@@ -215,8 +215,8 @@ class B extends(a = s.Component) {
       })
     }, "playstation")), d ? Y.push((0, l.jsx)("div", {
       className: r()(F.iconSpacing, F.liveIconSpacing),
-      children: (0, l.jsx)(L.default, {
-        size: L.default.Sizes.SMALL
+      children: (0, l.jsx)(y.default, {
+        size: y.default.Sizes.SMALL
       })
     }, "stream")) : f && Y.push((0, l.jsx)(h.TooltipContainer, {
       className: F.iconSpacing,

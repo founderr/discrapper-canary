@@ -60,8 +60,8 @@ function _(e) {
         rootNode: t
       }
     }, [d, T, _]),
-    y = i && !T,
-    L = v === C.ChannelModes.VIDEO && N && !y,
+    L = i && !T,
+    y = v === C.ChannelModes.VIDEO && N && !L,
     O = l.useCallback((e, a) => {
       a !== e && (r.default.updateLayout(t.id, a, n), a === C.ChannelLayouts.FULL_SCREEN && t.isPrivate() && m.ComponentDispatch.dispatch(C.ComponentActions.TEXTAREA_BLUR))
     }, [n, t]),
@@ -89,7 +89,7 @@ function _(e) {
     null != R && I.current === C.ChannelModes.VIDEO && v === C.ChannelModes.VOICE && (0, E.exitFullScreen)(R, M)
   }, [M, v, I, R]), l.useEffect(() => {
     !N && T && S()
-  }, [N, T]), L) ? (0, a.jsx)(c.default, {
+  }, [N, T]), y) ? (0, a.jsx)(c.default, {
     themeable: !1,
     node: R,
     guestWindow: d,

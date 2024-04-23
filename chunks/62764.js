@@ -30,8 +30,8 @@ var a = n("735250"),
   x = n("934415"),
   M = n("456269"),
   R = n("109590"),
-  y = n("228392"),
-  L = n("281301"),
+  L = n("228392"),
+  y = n("281301"),
   O = n("981631"),
   j = n("689938"),
   P = n("61226"),
@@ -54,7 +54,7 @@ function b(e) {
     isLurking: q,
     isGuest: X,
     isPendingMember: Q
-  } = (0, p.default)(W), J = (0, L.useForumActivityExperiment)(null == W ? void 0 : W.guild_id), $ = (0, o.useStateFromStores)([I.default], () => I.default.getChannel(b)), ee = (0, M.useDefaultReactionEmoji)($), et = (0, o.useStateFromStores)([f.default], () => f.default.shouldDisplayPrompt(t) && !0 === n, [t, n]), en = l.useCallback(e => {
+  } = (0, p.default)(W), J = (0, y.useForumActivityExperiment)(null == W ? void 0 : W.guild_id), $ = (0, o.useStateFromStores)([I.default], () => I.default.getChannel(b)), ee = (0, M.useDefaultReactionEmoji)($), et = (0, o.useStateFromStores)([f.default], () => f.default.shouldDisplayPrompt(t) && !0 === n, [t, n]), en = l.useCallback(e => {
     let t = e[0];
     if (null != t && n) {
       let e = t.intersectionRect,
@@ -81,7 +81,7 @@ function b(e) {
       z ? T.default.leaveThread(W, "Forum Toolbar") : T.default.joinThread(W, "Forum Toolbar")
     },
     er = () => {
-      (0, y.trackForumPostLinkCopied)({
+      (0, L.trackForumPostLinkCopied)({
         postId: W.id,
         location: {
           section: O.AnalyticsSections.CHANNEL_HEADER

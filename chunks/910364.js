@@ -122,8 +122,8 @@ function D(e) {
   (0, u.useSubscribeGuildMembers)({
     [N]: [Y.id]
   });
-  let Z = (0, i.useStateFromStores)([m.default], () => null != m.default.getAnyStreamForUser(Y.id)),
-    K = (0, i.useStateFromStores)([I.default], () => I.default.findActivity(Y.id, e => e.type !== y.ActivityTypes.CUSTOM_STATUS)),
+  let K = (0, i.useStateFromStores)([m.default], () => null != m.default.getAnyStreamForUser(Y.id)),
+    Z = (0, i.useStateFromStores)([I.default], () => I.default.findActivity(Y.id, e => e.type !== y.ActivityTypes.CUSTOM_STATUS)),
     J = (0, g.useGetVoiceChannelInfoForVoiceActivitySection)(Y.id, N),
     [Q, q] = a.useState(!1),
     [X, $] = a.useState(Y.isNonUserBot() && !Y.isClyde() ? C.UserProfileSections.MUTUAL_GUILDS : k),
@@ -135,7 +135,7 @@ function D(e) {
     }, {
       autoTrackExposure: !1
     }),
-    es = null != K || Z || null != J && et,
+    es = null != Z || K || null != J && et,
     el = !ee || es,
     ea = a.createRef(),
     ei = (0, o.default)(ea);
@@ -181,7 +181,7 @@ function D(e) {
                 user: Y,
                 friendToken: B,
                 onClose: H,
-                isStreaming: (0, d.default)(K),
+                isStreaming: (0, d.default)(Z),
                 guildId: N,
                 channelId: h,
                 hasProfileEffect: null != en

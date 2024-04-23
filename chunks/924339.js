@@ -4,8 +4,8 @@ var n = r("735250");
 r("470079");
 var o = r("512722"),
   a = r.n(o),
-  l = r("593473"),
-  i = r("983771"),
+  i = r("593473"),
+  l = r("983771"),
   u = r("159277"),
   c = r("478677"),
   s = r("457330"),
@@ -16,11 +16,11 @@ var o = r("512722"),
   T = r("807675"),
   f = r("69580"),
   I = r("787025"),
-  P = r("591759"),
-  _ = r("981631");
-let w = new p.default("LinkAuthorize");
-async function L(t, e, r, n) {
-  var o, l, i, u, d;
+  _ = r("591759"),
+  w = r("981631");
+let L = new p.default("LinkAuthorize");
+async function P(t, e, r, n) {
+  var o, i, l, u, d;
   let A = null;
   try {
     let {
@@ -30,7 +30,7 @@ async function L(t, e, r, n) {
     });
     A = t.url
   } catch (t) {
-    throw Error("error at authorize with code ".concat(null !== (l = null == t ? void 0 : null === (o = t.body) || void 0 === o ? void 0 : o.code) && void 0 !== l ? l : 0))
+    throw Error("error at authorize with code ".concat(null !== (i = null == t ? void 0 : null === (o = t.body) || void 0 === o ? void 0 : o.code) && void 0 !== i ? i : 0))
   }
   let p = null;
   try {
@@ -44,7 +44,7 @@ async function L(t, e, r, n) {
   }
   try {
     let o = await s.default.completeTwoWayLink(n, t, e, p, r);
-    return null == o ? void 0 : null === (i = o.body) || void 0 === i ? void 0 : i.redirect
+    return null == o ? void 0 : null === (l = o.body) || void 0 === l ? void 0 : l.redirect
   } catch (t) {
     throw Error("error at callback with code ".concat(null !== (d = null == t ? void 0 : null === (u = t.body) || void 0 === u ? void 0 : u.code) && void 0 !== d ? d : 0))
   }
@@ -59,7 +59,7 @@ function v(t) {
     {
       code: o,
       token_redirect_uri: a
-    } = l.parse(window.location.search),
+    } = i.parse(window.location.search),
     u = async t => {
       let {
         location: r
@@ -67,17 +67,17 @@ function v(t) {
       if (null == r) return;
       let {
         error: n
-      } = l.parse(r), u = null;
+      } = i.parse(r), u = null;
       if (null == n && null != o) try {
-        u = await L(r, o, a, e)
+        u = await P(r, o, a, e)
       } catch (e) {
         var c;
-        w.error("Error Creating Discord link", null == e ? void 0 : e.message);
-        let t = P.default.toURLSafe(r);
+        L.error("Error Creating Discord link", null == e ? void 0 : e.message);
+        let t = _.default.toURLSafe(r);
         if (null == t) return;
         t.searchParams.delete("code"), t.searchParams.set("error", "two_way_link_error"), t.searchParams.set("error_description", null !== (c = null == e ? void 0 : e.message) && void 0 !== c ? c : "unknown_error"), r = t.toString()
       }
-      window.location = null == u || u === i.ConnectionCallbackRedirectType.OAUTH_REDIRECT ? r : u
+      window.location = null == u || u === l.ConnectionCallbackRedirectType.OAUTH_REDIRECT ? r : u
     };
   return (0, n.jsx)(I.OAuth2Page, {
     children: (0, n.jsx)(f.OAuth2Authorize, {
@@ -92,8 +92,8 @@ e.default = (0, A.makeAuthenticated)(function(t) {
     match: e
   } = t, r = e.params.type, {
     client_id: o = ""
-  } = l.parse(window.location.search), a = r === _.PlatformTypes.PLAYSTATION && o === u.ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID, i = r === _.PlatformTypes.PLAYSTATION_STAGING && o === u.ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID;
-  return a || i ? (0, n.jsx)(v, {
+  } = i.parse(window.location.search), a = r === w.PlatformTypes.PLAYSTATION && o === u.ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID, l = r === w.PlatformTypes.PLAYSTATION_STAGING && o === u.ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID;
+  return a || l ? (0, n.jsx)(v, {
     platformType: r
   }) : null
 })

@@ -22,8 +22,8 @@ var a = s("735250"),
   S = s("246946"),
   N = s("853872"),
   C = s("509545"),
-  P = s("74538"),
-  h = s("212895"),
+  h = s("74538"),
+  P = s("212895"),
   T = s("296848"),
   A = s("374649"),
   R = s("981631"),
@@ -63,12 +63,12 @@ function g(e) {
   }, V = e => {
     let s = C.default.get(t.planIdForCurrencies);
     u()(null != e, "paymentSource not specified for change"), u()(null != s, "Unable to fetch plan");
-    let a = (0, h.getCurrencies)(s.id, e.id, !1);
+    let a = (0, P.getCurrencies)(s.id, e.id, !1);
     return a.length > 0 ? a[0] : R.CurrencyCodes.USD
   }, K = e => {
     null != e && W(e, V(e), Y)
   }, z = e => {
-    (0, h.fetchSubscriptionPlansOnNewPaymentSource)(e.id, (0, T.getSubscriptionSKUs)(t)).then(() => {
+    (0, P.fetchSubscriptionPlansOnNewPaymentSource)(e.id, (0, T.getSubscriptionSKUs)(t)).then(() => {
       W(e, V(e), Y)
     }), "function" == typeof s && s(e.id)
   }, q = () => {
@@ -85,7 +85,7 @@ function g(e) {
   };
   if (t.isPurchasedExternally) return (e => {
     u()(null != e.paymentGateway, "Expected payment gateway when managed externally");
-    let t = (0, P.getExternalSubscriptionMethodUrl)(e.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT");
+    let t = (0, h.getExternalSubscriptionMethodUrl)(e.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT");
     return (0, a.jsx)(d.Anchor, {
       href: t,
       useDefaultUnderlineStyles: !1,
@@ -109,7 +109,7 @@ function g(e) {
   else {
     let e = C.default.get(t.planIdForCurrencies);
     u()(null != e, "Unable to fetch plan");
-    let s = (0, h.getCurrencies)(e, t.paymentSourceId, !1);
+    let s = (0, P.getCurrencies)(e, t.paymentSourceId, !1);
     return (0, a.jsxs)(a.Fragment, {
       children: [(() => {
         let e = t.paymentSourceId;

@@ -32,14 +32,14 @@ function N(e) {
     channel: t
   } = e, n = (0, s.useStateFromStores)([d.default], () => d.default.isLaunchingActivity()), N = (0, h.useEmbeddedActivityLaunchability)(t.id), x = (0, h.getEmbeddedActivityLaunchabilityLabel)(N), M = N !== h.EmbeddedActivityLaunchability.CAN_LAUNCH || n, {
     isHovered: R,
-    setIsHovered: y,
-    onMouseEnter: L,
+    setIsHovered: L,
+    onMouseEnter: y,
     onMouseLeave: O
   } = (0, _.default)(200, 300), j = (0, f.useShowActivityIndicator)(), P = (0, c.default)({
     channelId: t.id
   }), D = !M, b = l.useCallback(e => {
-    "focus" !== e.type && L()
-  }, [L]), U = (0, o.useAnalyticsContext)(), F = (0, u.useAppContext)() === I.AppContext.POPOUT, {
+    "focus" !== e.type && y()
+  }, [y]), U = (0, o.useAnalyticsContext)(), F = (0, u.useAppContext)() === I.AppContext.POPOUT, {
     analyticsLocations: w
   } = (0, g.default)(), k = l.useCallback(() => {
     (0, C.default)({
@@ -65,7 +65,7 @@ function N(e) {
         align: "center",
         spacing: 16,
         onRequestClose: () => {
-          y(!1)
+          L(!1)
         },
         renderPopout: e => {
           let {
@@ -76,7 +76,7 @@ function N(e) {
             ref: s,
             channel: t,
             closePopout: n,
-            onMouseEnter: L,
+            onMouseEnter: y,
             onMouseLeave: O,
             isHovered: R,
             onClick: () => l(A.ContentDismissActionType.UNKNOWN)

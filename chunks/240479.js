@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   UserCodeInput: function() {
-    return h
+    return E
   }
 }), a("47120");
 var n = a("735250"),
@@ -17,18 +17,18 @@ var n = a("735250"),
   C = a("689938"),
   f = a("670430");
 
-function h(e) {
+function E(e) {
   let {
     onUserCodeAccepted: t,
     usePrefilledCode: a
-  } = e, [s, h] = r.useState(() => {
+  } = e, [s, E] = r.useState(() => {
     let {
       user_code: e
     } = i.parse(window.location.search);
     return a && null != e ? e : ""
-  }), E = (0, u.useLocation)(), T = r.useCallback(() => {
-    (0, c.logoutWithRedirect)(E)
-  }, [E]), {
+  }), h = (0, u.useLocation)(), T = r.useCallback(() => {
+    (0, c.logoutWithRedirect)(h)
+  }, [h]), {
     manualSubmit: I,
     error: p,
     submitting: _
@@ -57,7 +57,7 @@ function h(e) {
       autoComplete: "off",
       autoFocus: !0,
       value: s,
-      onChange: h,
+      onChange: E,
       error: p
     }), (0, n.jsx)(l.Button, {
       fullWidth: !0,

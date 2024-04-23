@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return _
+    return T
   }
 }), s("47120");
 var i = s("735250"),
@@ -21,18 +21,18 @@ var i = s("735250"),
   m = s("689938"),
   E = s("578808");
 
-function _(e) {
+function T(e) {
   let {
     onClose: t
   } = e, s = (0, r.useAnalyticsContext)(), {
-    analyticsLocations: _
-  } = (0, o.default)(), [T, x] = a.useState(!1), I = a.useCallback(e => {
-    !T && e && (S.default.track(f.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    analyticsLocations: T
+  } = (0, o.default)(), [_, x] = a.useState(!1), I = a.useCallback(e => {
+    !_ && e && (S.default.track(f.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: g.PremiumUpsellTypes.CUSTOM_NOTIFICATION_SOUNDS_SETTINGS_UPSELL,
       location: s.location,
-      location_stack: _
+      location_stack: T
     }), x(!0))
-  }, [s.location, _, T]), O = (0, d.useIsVisible)(I, .8, !0);
+  }, [s.location, T, _]), O = (0, d.useIsVisible)(I, .8, !0);
   return (0, i.jsxs)("div", {
     ref: O,
     className: E.container,

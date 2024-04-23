@@ -21,8 +21,8 @@ var a, n = s("735250"),
   S = s("818035"),
   N = s("509545"),
   C = s("78839"),
-  P = s("285952"),
-  h = s("884246"),
+  h = s("285952"),
+  P = s("884246"),
   T = s("74538"),
   A = s("807160"),
   R = s("474936"),
@@ -67,7 +67,7 @@ function D(e) {
           ref: t,
           ...i
         } = e;
-        return (0, n.jsx)(h.default, {
+        return (0, n.jsx)(P.default, {
           className: r()(L.verticalFit, L.paginator),
           currentPageIndex: o,
           onChangePage: S,
@@ -128,7 +128,7 @@ class b extends(a = i.PureComponent) {
         className: r()(L.paymentPane, L.verticalFit),
         children: [e ? null : (0, n.jsx)("div", {
           className: r()(L.paymentRow, L.bottomDivider),
-          children: (0, n.jsxs)(P.default, {
+          children: (0, n.jsxs)(h.default, {
             className: L.paymentRowHeader,
             children: [(0, n.jsx)("div", {
               className: g.date,

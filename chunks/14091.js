@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return L
+    return y
   }
 }), n("47120");
 var a = n("735250"),
@@ -88,7 +88,7 @@ let R = e => {
     })
   })
 };
-class y extends l.PureComponent {
+class L extends l.PureComponent {
   componentDidMount() {
     S.ComponentDispatch.subscribe(A.ComponentActions.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose)
   }
@@ -272,11 +272,11 @@ class y extends l.PureComponent {
   }
 }
 
-function L(e) {
+function y(e) {
   let {
     searchId: t
   } = e;
-  return (0, a.jsx)(y, {
+  return (0, a.jsx)(L, {
     searchId: t,
     ...(0, u.useStateFromStoresObject)([E.default], () => ({
       search: E.default.getResultsState(t),

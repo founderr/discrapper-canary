@@ -1,7 +1,7 @@
 "use strict";
-var l, n;
+var n, s;
 t.r(a), t.d(a, {
   TwoWayLinkModalSlideTypes: function() {
-    return l
+    return n
   }
-}), (n = l || (l = {})).LANDING = "landing", n.PRE_CONNECT = "pre-connect", n.PRE_CONNECT_WAITING = "pre-connect-waiting", n.DISCORD_CONSENT = "discord-consent", n.SUCCESS = "success", n.ERROR = "error"
+}), (s = n || (n = {})).LANDING = "landing", s.PRE_CONNECT = "pre-connect", s.PRE_CONNECT_WAITING = "pre-connect-waiting", s.DISCORD_CONSENT = "discord-consent", s.SUCCESS = "success", s.ERROR = "error"

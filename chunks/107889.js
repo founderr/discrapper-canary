@@ -68,7 +68,7 @@ function R(e) {
       } = e;
       return t === p.ActivityTypes.CUSTOM_STATUS
     })
-  })), Z = a.createRef(), K = (0, o.default)(Z);
+  })), K = a.createRef(), Z = (0, o.default)(K);
   return (0, l.jsx)(d.AnalyticsLocationProvider, {
     value: B,
     children: (0, l.jsx)(m.UserProfileAnalyticsProvider, {
@@ -84,13 +84,13 @@ function R(e) {
         hideShadow: !0,
         "aria-label": j.default.Messages.USER_PROFILE_MODAL,
         children: [(0, l.jsx)("div", {
-          ref: Z,
+          ref: K,
           children: (0, l.jsxs)(I.default, {
             user: t,
             displayProfile: Y,
             profileType: h.UserProfileTypes.FULL_SIZE,
             children: [(0, l.jsxs)(N.default, {
-              isFaded: (null == Y ? void 0 : Y.profileEffectId) != null && !K,
+              isFaded: (null == Y ? void 0 : Y.profileEffectId) != null && !Z,
               children: [(0, l.jsx)(_.default, {
                 user: t,
                 guildId: b,
@@ -155,7 +155,7 @@ function R(e) {
         }), (null == Y ? void 0 : Y.profileEffectId) != null && (0, l.jsx)(c.default, {
           profileEffectId: null == Y ? void 0 : Y.profileEffectId,
           bannerAdjustment: 0,
-          isHovering: K
+          isHovering: Z
         })]
       })
     })

@@ -4,10 +4,10 @@ t.r(a), t.d(a, {
     return m
   }
 }), t("47120");
-var l = t("735250"),
-  n = t("470079"),
-  s = t("512722"),
-  r = t.n(s),
+var n = t("735250"),
+  s = t("470079"),
+  l = t("512722"),
+  r = t.n(l),
   o = t("481060"),
   i = t("457330"),
   c = t("710845"),
@@ -21,53 +21,53 @@ function m(e) {
   let {
     platformType: a,
     clientId: t,
-    scopes: s,
+    scopes: l,
     authToken: c,
     onContinue: m,
     onError: C,
     onClose: T,
     redirectUri: f
-  } = e, [p, j] = n.useState(!1), y = n.useCallback(async e => {
+  } = e, [p, E] = s.useState(!1), j = s.useCallback(async e => {
     let t, {
-        location: l
+        location: n
       } = e,
       {
-        callbackCode: n,
-        callbackState: s
+        callbackCode: s,
+        callbackState: l
       } = c;
     try {
-      t = await i.default.completeTwoWayLink(a, l, n, s)
+      t = await i.default.completeTwoWayLink(a, n, s, l)
     } catch (e) {
       x.error("".concat(a, " link error:"), e)
     }
     null != t ? m() : C()
   }, [a, c, m, C]), {
-    header: E,
+    header: y,
     body: k,
     appDetails: v,
     sendAuthorize: L
   } = (0, d.useOAuth2AuthorizeForm)({
     clientId: t,
-    scopes: s,
+    scopes: l,
     responseType: "code",
-    callback: y,
+    callback: j,
     isTrustedName: !0,
     isEmbeddedFlow: !0,
     redirectUri: f
-  }), g = n.useCallback(() => {
-    r()(null != L, "sendAuthorize not available"), j(!0), L(!0)
+  }), g = s.useCallback(() => {
+    r()(null != L, "sendAuthorize not available"), E(!0), L(!0)
   }, [L]);
-  return (0, l.jsxs)("div", {
+  return (0, n.jsxs)("div", {
     className: h.container,
-    children: [null != T && (0, l.jsx)(o.ModalCloseButton, {
+    children: [null != T && (0, n.jsx)(o.ModalCloseButton, {
       className: h.closeButton,
       onClick: T
-    }), (0, l.jsxs)(o.Scroller, {
-      children: [(0, l.jsx)(o.ModalHeader, {
+    }), (0, n.jsxs)(o.Scroller, {
+      children: [(0, n.jsx)(o.ModalHeader, {
         direction: u.default.Direction.VERTICAL,
         className: h.header,
         separator: !1,
-        children: (0, l.jsx)(o.Text, {
+        children: (0, n.jsx)(o.Text, {
           className: h.stepHeader,
           variant: "text-xs/bold",
           color: "header-secondary",
@@ -76,12 +76,12 @@ function m(e) {
             total: 2
           })
         })
-      }), (0, l.jsxs)("div", {
+      }), (0, n.jsxs)("div", {
         className: h.discordConsentBody,
-        children: [E, k, v]
-      }), (0, l.jsx)(o.ModalFooter, {
+        children: [y, k, v]
+      }), (0, n.jsx)(o.ModalFooter, {
         className: h.footer,
-        children: (0, l.jsx)(o.Button, {
+        children: (0, n.jsx)(o.Button, {
           className: h.footerButton,
           color: o.Button.Colors.BRAND,
           submitting: p,

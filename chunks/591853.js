@@ -49,8 +49,8 @@ var r = n("442837"),
   x = n("22211"),
   M = n("571243"),
   R = n("69259"),
-  y = n("206295"),
-  L = n("469153"),
+  L = n("206295"),
+  y = n("469153"),
   O = n("206583"),
   j = n("981631"),
   P = n("689938"),
@@ -74,7 +74,7 @@ function U(e) {
   } = e, {
     primaryColor: l,
     secondaryColor: s
-  } = (0, y.default)(n);
+  } = (0, L.default)(n);
   return (0, a.jsx)("div", {
     className: D.hero,
     style: {
@@ -125,7 +125,7 @@ function H(e) {
     closePopout: p,
     entry: E,
     requestId: C
-  } = e, _ = (0, r.useStateFromStores)([N.default], () => N.default.isChannelReplyMode()), I = l.useRef(null), [v, x] = l.useState(null), y = (0, r.useStateFromStores)([S.default], () => S.default.can(j.Permissions.SEND_MESSAGES, t)), b = (0, M.useIsEligibleForMemberlistOneClickReply)({
+  } = e, _ = (0, r.useStateFromStores)([N.default], () => N.default.isChannelReplyMode()), I = l.useRef(null), [v, x] = l.useState(null), L = (0, r.useStateFromStores)([S.default], () => S.default.can(j.Permissions.SEND_MESSAGES, t)), b = (0, M.useIsEligibleForMemberlistOneClickReply)({
     location: "PopoutReactor"
   }), [U, F] = l.useState(!1), [w, k] = l.useState(!1), H = "#".concat(t.name), G = "@".concat(n.username), V = _ ? P.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : P.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, W = async e => {
     if (null != e) {
@@ -190,7 +190,7 @@ function H(e) {
     style: {
       pointerEvents: U ? "none" : "all"
     },
-    children: [(0, a.jsx)(L.default, {
+    children: [(0, a.jsx)(y.default, {
       sent: w,
       shown: U,
       className: D.toastContainer
@@ -202,7 +202,7 @@ function H(e) {
       })
     }), (0, a.jsxs)("div", {
       className: D.inputContainerShareToChannel,
-      children: [y && (0, a.jsx)(d.Tooltip, {
+      children: [L && (0, a.jsx)(d.Tooltip, {
         text: V,
         children: e => (0, a.jsx)(d.Clickable, {
           ...e,

@@ -31,8 +31,8 @@ var a = s("735250"),
   S = s("963249"),
   N = s("301766"),
   C = s("594174"),
-  P = s("285952"),
-  h = s("366695"),
+  h = s("285952"),
+  P = s("366695"),
   T = s("759231"),
   A = s("626135"),
   R = s("63063"),
@@ -216,11 +216,11 @@ function H(e) {
     }), (0, a.jsx)(m.Card, {
       className: O.noItemsCard,
       type: m.Card.Types.CUSTOM,
-      children: (0, a.jsxs)(P.default, {
-        align: P.default.Align.CENTER,
-        children: [(0, a.jsx)(h.default, {
+      children: (0, a.jsxs)(h.default, {
+        align: h.default.Align.CENTER,
+        children: [(0, a.jsx)(P.default, {
           game: null,
-          size: h.default.Sizes.SMALL,
+          size: P.default.Sizes.SMALL,
           className: O.noItemsIcon
         }), (0, a.jsx)("span", {
           className: O.cardText,
@@ -350,20 +350,20 @@ function K(e) {
     renewal: !0,
     analyticsLocations: E,
     analyticsLocation: p
-  }), [P] = (0, L.useSubscriptionInvoicePreview)({
+  }), [h] = (0, L.useSubscriptionInvoicePreview)({
     subscriptionId: n.id,
     renewal: !0,
     applyEntitlements: !0,
     analyticsLocations: E,
     analyticsLocation: p
-  }), h = (0, c.useStateFromStores)([C.default], () => {
+  }), P = (0, c.useStateFromStores)([C.default], () => {
     var e;
     return null === (e = C.default.getCurrentUser()) || void 0 === e ? void 0 : e.hasFreePremium()
-  }), T = d()(n.currentPeriodEnd), A = null != n.paymentSourceId, R = null !== (t = null == P ? void 0 : P.total) && void 0 !== t ? t : 0, y = null == l ? void 0 : l.invalid, M = !A && R > 0 && (7 >= T.diff(d()(), "days") || n.status === v.SubscriptionStatusTypes.PAST_DUE) && !h && !n.isPurchasedExternally, x = y && n.status === v.SubscriptionStatusTypes.PAST_DUE && !h && !n.isPurchasedExternally, D = (0, g.useIsPrepaidPaymentPastDue)(), b = !h && D, j = (null == n ? void 0 : n.status) === v.SubscriptionStatusTypes.PAST_DUE ? d()().diff(d()(n.currentPeriodStart), "days") : 0, [w] = (0, L.useGetSubscriptionInvoice)({
+  }), T = d()(n.currentPeriodEnd), A = null != n.paymentSourceId, R = null !== (t = null == h ? void 0 : h.total) && void 0 !== t ? t : 0, y = null == l ? void 0 : l.invalid, M = !A && R > 0 && (7 >= T.diff(d()(), "days") || n.status === v.SubscriptionStatusTypes.PAST_DUE) && !P && !n.isPurchasedExternally, x = y && n.status === v.SubscriptionStatusTypes.PAST_DUE && !P && !n.isPurchasedExternally, D = (0, g.useIsPrepaidPaymentPastDue)(), b = !P && D, j = (null == n ? void 0 : n.status) === v.SubscriptionStatusTypes.PAST_DUE ? d()().diff(d()(n.currentPeriodStart), "days") : 0, [w] = (0, L.useGetSubscriptionInvoice)({
     subscriptionId: n.id,
     preventFetch: !b
   });
-  return null == S || null == P ? (0, a.jsx)(m.Spinner, {}) : (null != n.renewalMutations && (n.renewalMutations.planId !== n.planId && !(0, N.isNoneSubscription)(n.renewalMutations.planId) || n.hasExternalPlanChange) && (s = (0, a.jsx)(U.default, {
+  return null == S || null == h ? (0, a.jsx)(m.Spinner, {}) : (null != n.renewalMutations && (n.renewalMutations.planId !== n.planId && !(0, N.isNoneSubscription)(n.renewalMutations.planId) || n.hasExternalPlanChange) && (s = (0, a.jsx)(U.default, {
     subscription: n,
     renewalMutations: n.renewalMutations,
     className: O.renewalMutationNotice,
@@ -397,7 +397,7 @@ function K(e) {
             showNoPaymentMethod: M,
             showInvalidPaymentMethod: x,
             fetchedCurrentInvoicePreview: S,
-            fetchedRenewalInvoicePreview: P
+            fetchedRenewalInvoicePreview: h
           })
         }), I.map((e, t) => (0, a.jsxs)("div", {
           className: O.dupSubscriptionRow,

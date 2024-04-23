@@ -1,7 +1,7 @@
 "use strict";
-var a, l;
+var i, r;
 n.r(t), n.d(t, {
   ContentInventoryEntryType: function() {
-    return a
+    return i
   }
-}), (l = a || (a = {}))[l.CONTENT_TYPE_UNSPECIFIED = 0] = "CONTENT_TYPE_UNSPECIFIED", l[l.PLAYED_GAME = 1] = "PLAYED_GAME", l[l.WATCHED_MEDIA = 2] = "WATCHED_MEDIA", l[l.TOP_GAME = 3] = "TOP_GAME", l[l.LISTENED_MEDIA = 4] = "LISTENED_MEDIA"
+}), (r = i || (i = {}))[r.CONTENT_TYPE_UNSPECIFIED = 0] = "CONTENT_TYPE_UNSPECIFIED", r[r.PLAYED_GAME = 1] = "PLAYED_GAME", r[r.WATCHED_MEDIA = 2] = "WATCHED_MEDIA", r[r.TOP_GAME = 3] = "TOP_GAME", r[r.LISTENED_MEDIA = 4] = "LISTENED_MEDIA"

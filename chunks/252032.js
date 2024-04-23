@@ -53,14 +53,14 @@ function I(e) {
     editingMessage: c.default.getEditingMessage(o),
     editingTextValue: c.default.getEditingTextValue(o),
     editingRichValue: c.default.getEditingRichValue(o)
-  }), [o]), R = (0, s.useStateFromStores)([d.default], () => d.default.getId()), y = l.useCallback((e, n, a) => {
+  }), [o]), R = (0, s.useStateFromStores)([d.default], () => d.default.getId()), L = l.useCallback((e, n, a) => {
     let {
       content: l
     } = a, s = h.default.can(S.Permissions.MANAGE_MESSAGES, t), o = null != N && null != N.author ? N.author.id : null;
     return v && (o === R || s) && null != N && (0, C.hasFlag)(N.flags, S.MessageFlags.CROSSPOSTED) ? r.default.confirmEdit(e, n, l) : i.default.editMessage(e, n, {
       content: l
     }), Promise.resolve()
-  }, [N, v, R, t]), L = l.useCallback(e => (0, l.createElement)(A, {
+  }, [N, v, R, t]), y = l.useCallback(e => (0, l.createElement)(A, {
     ...e,
     className: _.channelTextArea,
     key: u
@@ -74,9 +74,9 @@ function I(e) {
     onCancel: i.default.endEditMessage,
     onChange: i.default.updateEditMessage,
     onConfirmDelete: r.default.confirmDelete,
-    saveMessage: y,
+    saveMessage: L,
     validateEdit: T,
-    children: L
+    children: y
   }) : null
 }
 

@@ -31,8 +31,8 @@ var l = n("120356"),
   x = n("586791"),
   M = n("502568"),
   R = n("792125"),
-  y = n("358221"),
-  L = n("887012"),
+  L = n("358221"),
+  y = n("887012"),
   O = n("613548"),
   j = n("221888"),
   P = n("339340"),
@@ -47,7 +47,7 @@ function H(e) {
   let {
     focusedParticipant: t,
     channel: n
-  } = e, l = (0, u.useAppContext)(), s = (0, i.useStateFromStores)([y.default], () => y.default.getLayout(n.id, l));
+  } = e, l = (0, u.useAppContext)(), s = (0, i.useStateFromStores)([L.default], () => L.default.getLayout(n.id, l));
   return (0, a.jsx)(A.default, {
     children: (0, a.jsx)(j.default, {
       className: w.participants,
@@ -88,7 +88,7 @@ function G(e) {
       focusedParticipant: l,
       channel: s
     } = e,
-    i = (0, L.default)(s, !0),
+    i = (0, y.default)(s, !0),
     o = (0, p.useActiveEvent)(s.id),
     u = null != o ? (0, E.getNextRecurrenceIdInEvent)(o) : null,
     c = null != o;
@@ -144,13 +144,13 @@ function V(e) {
     exitFullScreen: p
   } = e, {
     focusedParticipant: E
-  } = (0, i.useStateFromStoresObject)([y.default], () => ({
-    focusedParticipant: y.default.getSelectedParticipant(t.id),
-    participantsOpen: y.default.getParticipantsOpen(t.id)
+  } = (0, i.useStateFromStoresObject)([L.default], () => ({
+    focusedParticipant: L.default.getSelectedParticipant(t.id),
+    participantsOpen: L.default.getParticipantsOpen(t.id)
   }), [t.id]), C = (0, h.default)(t), I = (0, m.default)(t), [A] = (0, c.default)((null == E ? void 0 : E.type) === D.ParticipantTypes.ACTIVITY ? [E.id] : []), N = F.default.Messages.VOICE_CHANNEL;
   t.isDM() ? N = F.default.Messages.DM : t.isGroupDM() && (N = F.default.Messages.GROUP_DM);
-  let L = (0, i.useStateFromStores)([f.default], () => f.default.getChannelStatus(t)),
-    j = t.isGuildVoice() && u && null != L && L.length > 0,
+  let y = (0, i.useStateFromStores)([f.default], () => f.default.getChannelStatus(t)),
+    j = t.isGuildVoice() && u && null != y && y.length > 0,
     H = (0, i.useStateFromStores)([v.default], () => v.default.can(b.Permissions.SET_VOICE_CHANNEL_STATUS, t)),
     B = j ? (0, a.jsx)(r.Tooltip, {
       text: F.default.Messages.VOICE_CHANNEL_SET_STATUS,
@@ -168,7 +168,7 @@ function V(e) {
           className: s()(w.channelStatus, k.markup, {
             [w.hoverable]: H
           }),
-          children: _.default.parseVoiceChannelStatus(L, !0, {
+          children: _.default.parseVoiceChannelStatus(y, !0, {
             channelId: t.id
           })
         }), H && (0, a.jsx)(x.default, {

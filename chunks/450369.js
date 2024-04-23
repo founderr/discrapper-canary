@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   SPEAKER_TILE_ASPECT_RATIO: function() {
-    return L
+    return y
   }
 });
 var a = n("735250"),
@@ -30,8 +30,8 @@ var a = n("735250"),
   x = n("248400"),
   M = n("981631"),
   R = n("354459"),
-  y = n("954539");
-let L = 16 / 9,
+  L = n("954539");
+let y = 16 / 9,
   O = e => {
     let {
       stageParticipant: t,
@@ -68,10 +68,10 @@ let L = 16 / 9,
         ...e,
         children: (0, a.jsx)(N.default, {
           participant: n,
-          aspectRatio: L,
+          aspectRatio: y,
           blocked: m,
           channel: s,
-          className: y.tile,
+          className: L.tile,
           inCall: !0,
           inPopout: f,
           paused: !1,
@@ -112,11 +112,11 @@ let L = 16 / 9,
     }, [j, s, P, D]);
     return (0, a.jsx)(N.default, {
       participant: n,
-      aspectRatio: L,
+      aspectRatio: y,
       fit: n.type === R.ParticipantTypes.USER ? A.VideoStreamFit.COVER : void 0,
       blocked: O,
       channel: s,
-      className: y.tile,
+      className: L.tile,
       inCall: !0,
       inPopout: C,
       onClick: b,

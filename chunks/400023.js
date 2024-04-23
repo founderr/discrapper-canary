@@ -26,8 +26,8 @@ var a = n("735250"),
   x = n("68588"),
   M = n("459273"),
   R = n("255269"),
-  y = n("47481"),
-  L = n("977391"),
+  L = n("47481"),
+  y = n("977391"),
   O = n("73274"),
   j = n("419388"),
   P = n("406534"),
@@ -52,16 +52,16 @@ let F = l.memo(function(e) {
     fontSize: N,
     keyboardModeEnabled: x,
     filterAfterTimestamp: R,
-    showingQuarantineBanner: y,
+    showingQuarantineBanner: L,
     hideSummaries: F = !1
-  } = e, [w, k] = l.useState(!1), H = l.useMemo(() => S ? (0, L.generateMessageSpecs)({
+  } = e, [w, k] = l.useState(!1), H = l.useMemo(() => S ? (0, y.generateMessageSpecs)({
     compact: !0,
     messageGroups: 30,
     groupRange: 4,
     attachments: 8,
     fontSize: N,
     groupSpacing: c
-  }) : (0, L.generateMessageSpecs)({
+  }) : (0, y.generateMessageSpecs)({
     compact: !1,
     messageGroups: 26,
     groupRange: 4,
@@ -103,7 +103,7 @@ let F = l.memo(function(e) {
       scrollManager: B,
       specs: H,
       filterAfterTimestamp: null != R ? R : V,
-      showingQuarantineBanner: y,
+      showingQuarantineBanner: L,
       hideSummaries: F,
       isAtBottom: w,
       jumpToPresent: () => {
@@ -181,7 +181,7 @@ let F = l.memo(function(e) {
             children: b.default.Messages.CHANNEL_MESSAGES_A11Y_DESCRIPTION
           }), W, (0, a.jsx)("div", {
             className: i()({
-              [U.scrollerSpacer]: !y,
+              [U.scrollerSpacer]: !L,
               [U.empty]: 0 === E.length && !E.loadingMore,
               [U.emptyForum]: 1 === E.length && !E.loadingMore && m.isForumPost() && (null === (t = E.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(m))
             })
@@ -219,7 +219,7 @@ t.default = l.memo(function(e) {
       canManageMessages: a
     }
   }(t), {
-    messageGroupSpacing: L,
+    messageGroupSpacing: y,
     fontSize: O,
     messageDisplayCompact: j,
     renderSpoilers: P,
@@ -277,7 +277,7 @@ t.default = l.memo(function(e) {
         return u && d && null !== (t = E.default.summaries(e.id)) && void 0 !== t ? t : []
       }, [u, e.id, d]),
       p = (0, o.useStateFromStores)([E.default], () => u ? E.default.selectedSummary(e.id) : null, [u, e.id]),
-      C = l.useMemo(() => (0, y.default)({
+      C = l.useMemo(() => (0, L.default)({
         channel: e,
         messages: a,
         oldestUnreadMessageId: s,
@@ -299,7 +299,7 @@ t.default = l.memo(function(e) {
     value: (0, R.default)(P, d),
     children: (0, a.jsx)(F, {
       ...u,
-      messageGroupSpacing: L,
+      messageGroupSpacing: y,
       showNewMessagesBar: !0,
       channel: t,
       messageDisplayCompact: !r && (i || j),
