@@ -27,7 +27,7 @@ function _(e) {
       (0, l.openModalLazy)(async () => {
         let {
           default: t
-        } = await Promise.all([i.e("99387"), i.e("5863"), i.e("6851")]).then(i.bind(i, "751212"));
+        } = await Promise.all([i.e("99387"), i.e("5863"), i.e("45003")]).then(i.bind(i, "751212"));
         return i => (0, n.jsx)(t, {
           ...i,
           guildId: e
@@ -35,13 +35,13 @@ function _(e) {
       })
     },
     children: [function(e) {
-      let [t, i] = s.useState(!1), [_, M] = s.useState(!1), I = (0, a.useStateFromStores)([c.default], () => c.default.getGuildUnreadSetting(e)), h = (0, a.useStateFromStores)([c.default], () => c.default.getMessageNotifications(e)), A = _ ? r.Presets.CUSTOM : (0, r.presetFromSettings)(I, h), L = t => {
+      let [t, i] = s.useState(!1), [_, M] = s.useState(!1), I = (0, a.useStateFromStores)([c.default], () => c.default.getGuildUnreadSetting(e)), h = (0, a.useStateFromStores)([c.default], () => c.default.getMessageNotifications(e)), A = _ ? r.Presets.CUSTOM : (0, r.presetFromSettings)(I, h), m = t => {
         M(!1);
         let i = {
           message_notifications: t
         };
         t === f.UserNotificationSettings.ALL_MESSAGES && I !== E.UnreadSetting.ALL_MESSAGES && (i.flags = (0, o.withGuildUnreadFlags)(c.default.getGuildFlags(e), g.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES)), u.default.updateGuildNotificationSettings(e, i, S.NotificationLabel.notifications(t))
-      }, m = t => {
+      }, L = t => {
         M(!1);
         let i = c.default.getGuildFlags(e);
         u.default.updateGuildNotificationSettings(e, {
@@ -84,13 +84,13 @@ function _(e) {
               group: "unread_setting",
               checked: I === E.UnreadSetting.ALL_MESSAGES,
               label: N.default.Messages.NOTIFICATION_SETTINGS_PRESETS_ALL_MESSAGES,
-              action: () => m(E.UnreadSetting.ALL_MESSAGES)
+              action: () => L(E.UnreadSetting.ALL_MESSAGES)
             }), (0, n.jsx)(l.MenuRadioItem, {
               id: "unread_setting_mention_only",
               group: "unread_setting",
               checked: I === E.UnreadSetting.ONLY_MENTIONS,
               label: N.default.Messages.NOTIFICATION_SETTINGS_PRESETS_MENTION_ONLY,
-              action: () => m(E.UnreadSetting.ONLY_MENTIONS),
+              action: () => L(E.UnreadSetting.ONLY_MENTIONS),
               disabled: I !== E.UnreadSetting.ONLY_MENTIONS && h === f.UserNotificationSettings.ALL_MESSAGES,
               subtext: I !== E.UnreadSetting.ONLY_MENTIONS && h === f.UserNotificationSettings.ALL_MESSAGES ? N.default.Messages.NOTIFICATION_SETTINGS_UNREAD_MENTION_ONLY_DISABLED : void 0
             })]
@@ -102,20 +102,20 @@ function _(e) {
               id: "push_settings_everything",
               label: N.default.Messages.NOTIFICATION_SETTINGS_PRESETS_ALL_MESSAGES,
               checked: h === f.UserNotificationSettings.ALL_MESSAGES,
-              action: () => L(f.UserNotificationSettings.ALL_MESSAGES),
+              action: () => m(f.UserNotificationSettings.ALL_MESSAGES),
               subtext: I !== E.UnreadSetting.ALL_MESSAGES && h !== f.UserNotificationSettings.ALL_MESSAGES ? N.default.Messages.NOTIFICATION_SETTINGS_UNREAD_UPDATE_WARNING : void 0
             }), (0, n.jsx)(l.MenuRadioItem, {
               group: "notification-preset",
               id: "push_settings_everything_mention",
               checked: h === f.UserNotificationSettings.ONLY_MENTIONS,
               label: N.default.Messages.NOTIFICATION_SETTINGS_PRESETS_MENTION_ONLY,
-              action: () => L(f.UserNotificationSettings.ONLY_MENTIONS)
+              action: () => m(f.UserNotificationSettings.ONLY_MENTIONS)
             }), (0, n.jsx)(l.MenuRadioItem, {
               group: "notification-preset",
               id: "push_settings_everything_nothing",
               label: N.default.Messages.NOTIFICATION_SETTINGS_PRESETS_NONE,
               checked: h === f.UserNotificationSettings.NO_MESSAGES,
-              action: () => L(f.UserNotificationSettings.NO_MESSAGES)
+              action: () => m(f.UserNotificationSettings.NO_MESSAGES)
             })]
           }, "push_settings")]
         })]

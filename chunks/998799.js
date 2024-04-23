@@ -9,5 +9,8 @@ e.exports = {
   optionPlaying: "optionPlaying__05ded",
   options: "options_bde988",
   optionsContainer: "optionsContainer__44347",
-  subheader: "subheader__7fae4"
+  playableOption: "playableOption_f7887a",
+  subheader: "subheader__7fae4",
+  warningContainer: "warningContainer__0912f",
+  warningLabel: "warningLabel__9c697"
 }
