@@ -52,7 +52,7 @@ function N(e) {
     onClose: U
   } = e, {
     trackUserProfileAction: h
-  } = (0, c.useUserProfileAnalyticsContext)(), p = (0, r.useStateFromStores)([d.default], () => d.default.getCurrentUser()), g = (0, r.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), j = A(f), [R, P] = a.useState(T), [M, C] = a.useState(null !== (s = null === (t = j.find(e => {
+  } = (0, c.useUserProfileAnalyticsContext)(), p = (0, r.useStateFromStores)([d.default], () => d.default.getCurrentUser()), j = (0, r.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), g = A(f), [R, P] = a.useState(T), [M, C] = a.useState(null !== (s = null === (t = g.find(e => {
     let {
       section: t
     } = e;
@@ -63,7 +63,7 @@ function N(e) {
       section: e
     }), C(e), P(!1)
   }, [h, C]);
-  return null == p ? null : g ? (0, l.jsx)("div", {
+  return null == p ? null : j ? (0, l.jsx)("div", {
     className: _.container,
     children: (0, l.jsx)(E.default, {})
   }) : f.id === p.id ? (0, l.jsx)("div", {
@@ -81,7 +81,7 @@ function N(e) {
       type: "top",
       selectedItem: M,
       onItemSelect: y,
-      children: j.map(e => {
+      children: g.map(e => {
         let {
           section: t,
           text: s

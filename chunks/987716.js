@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   GiftAnimationOptions: function() {
-    return S
+    return I
   }
 }), n("47120");
 var i = n("735250"),
   s = n("470079"),
-  l = n("481060"),
-  r = n("987209"),
-  a = n("321051"),
+  a = n("481060"),
+  l = n("987209"),
+  r = n("321051"),
   u = n("669079"),
   o = n("479446"),
   c = n("646476"),
@@ -16,22 +16,22 @@ var i = n("735250"),
   m = n("96848"),
   f = n("703926"),
   p = n("474936"),
-  I = n("689938"),
-  _ = n("782874");
-let S = e => {
+  _ = n("689938"),
+  S = n("782874");
+let I = e => {
   let {
     isShopGift: t
   } = e, {
     giftRecipient: n,
-    selectedGiftStyle: S,
+    selectedGiftStyle: I,
     setSelectedGiftStyle: P,
     emojiConfetti: E,
     soundEffect: T,
-    setEmojiConfetti: v,
-    setSoundEffect: N
-  } = (0, r.useGiftContext)(), [h, x] = s.useState(!1), A = s.useRef(null), y = (0, l.useRadioGroup)({
+    setEmojiConfetti: N,
+    setSoundEffect: v
+  } = (0, l.useGiftContext)(), [h, x] = s.useState(!1), A = s.useRef(null), C = (0, a.useRadioGroup)({
     orientation: "horizontal"
-  }), g = (0, u.getGiftExperience)(n, t), C = g === u.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD, M = g !== u.GiftExperience.DEFAULT, R = (0, c.useIsSeasonalGiftingActive)(), {
+  }), y = (0, u.getGiftExperience)(n, t), g = y === u.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD, M = y !== u.GiftExperience.DEFAULT, R = (0, c.useIsSeasonalGiftingActive)(), {
     enabled: b
   } = c.default.useExperiment({
     location: "premiumGiftSelect_GiftAnimationOptions"
@@ -40,44 +40,44 @@ let S = e => {
   }), L = null;
   return M && (L = R && b ? p.SeasonalGiftStyles2023 : p.STANDARD_GIFT_OPTIONS), (0, i.jsxs)("div", {
     children: [M && (0, i.jsxs)("div", {
-      className: _.giftMainAnimation,
-      children: [null != S ? (0, i.jsx)(d.default, {
-        giftStyle: S,
+      className: S.giftMainAnimation,
+      children: [null != I ? (0, i.jsx)(d.default, {
+        giftStyle: I,
         defaultAnimationState: o.AnimationState.ACTION,
         idleAnimationState: o.AnimationState.LOOP,
         shouldAnimate: !0,
-        className: _.animation
-      }) : (0, i.jsx)(l.Spinner, {
-        className: _.spinner
-      }), C && (0, i.jsxs)("div", {
-        className: _.soundEmojiContainer,
+        className: S.animation
+      }) : (0, i.jsx)(a.Spinner, {
+        className: S.spinner
+      }), g && (0, i.jsxs)("div", {
+        className: S.soundEmojiContainer,
         children: [(0, i.jsx)("div", {
-          className: _.sound,
-          children: (0, i.jsx)(a.default, {
+          className: S.sound,
+          children: (0, i.jsx)(r.default, {
             sound: T,
             onSelect: e => {
-              null != N && N(null == e ? void 0 : e)
+              null != v && v(null == e ? void 0 : e)
             }
           })
         }), (0, i.jsx)("div", {
-          className: _.emoji,
+          className: S.emoji,
           children: (0, i.jsx)(m.default, {
-            setEmojiConfetti: v,
+            setEmojiConfetti: N,
             emojiConfetti: null == E ? void 0 : E
           })
         })]
       })]
     }), (0, i.jsx)("div", {
-      tabIndex: null != S || h ? void 0 : 0,
+      tabIndex: null != I || h ? void 0 : 0,
       onFocus: e => {
         var t;
         e.target === e.currentTarget && (null === (t = A.current) || void 0 === t || t.focus())
       },
-      className: _.giftBoxOptionContainer,
-      "aria-label": I.default.Messages.SEASONAL_GIFTING_CUSTOMIZE_YOUR_GIFT_BOX,
-      ...y,
+      className: S.giftBoxOptionContainer,
+      "aria-label": _.default.Messages.SEASONAL_GIFTING_CUSTOMIZE_YOUR_GIFT_BOX,
+      ...C,
       children: null != L && L.map((e, t) => (0, i.jsx)(f.GiftStaticOption, {
-        isSelected: S === e,
+        isSelected: I === e,
         giftStyle: e,
         setSelectedGiftStyle: P,
         ref: 0 === t ? A : null,
@@ -85,7 +85,7 @@ let S = e => {
         onBlur: () => x(!1)
       }, e))
     }), (0, i.jsx)("div", {
-      className: _.__invalid_selectPlanDivider
+      className: S.__invalid_selectPlanDivider
     })]
   })
 }

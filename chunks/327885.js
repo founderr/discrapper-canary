@@ -17,8 +17,8 @@ var n = s("512722"),
   S = s("825209"),
   E = s("887278"),
   T = s("630699"),
-  f = s("658785"),
-  m = s("556296"),
+  m = s("658785"),
+  f = s("556296"),
   _ = s("808506"),
   g = s("237997"),
   I = s("739563"),
@@ -34,8 +34,8 @@ function x(e) {
   var t;
   let s = g.default.getNotificationPositionMode(),
     a = s !== p.OverlayNotificationPositions.DISABLED,
-    n = m.default.getOverlayKeybind(),
-    l = m.default.getOverlayChatKeybind();
+    n = f.default.getOverlayKeybind(),
+    l = f.default.getOverlayChatKeybind();
   return {
     enabled: _.default.enabled,
     notifications_enabled: a,
@@ -81,9 +81,9 @@ function M() {
     notificationPositionMode: g.default.getNotificationPositionMode(),
     textChatNotificationMode: g.default.getTextChatNotificationMode(),
     shouldShowKeybindIndicators: g.default.showKeybindIndicators
-  })), D = (0, o.useStateFromStores)([m.default], () => m.default.getOverlayKeybind()), {
+  })), D = (0, o.useStateFromStores)([f.default], () => f.default.getOverlayKeybind()), {
     showKeybindIndicators: L
-  } = f.default.useExperiment({
+  } = m.default.useExperiment({
     location: "overlay_user_settings"
   }), P = (0, E.isHookModuleTooOld)();
 

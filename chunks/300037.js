@@ -13,8 +13,8 @@ var n = s("120356"),
   S = s("709586"),
   E = s("267642"),
   T = s("981631"),
-  f = s("689938"),
-  m = s("748367");
+  m = s("689938"),
+  f = s("748367");
 t.default = function(e) {
   let {
     className: t,
@@ -22,39 +22,39 @@ t.default = function(e) {
     boostingVariant: n
   } = e, _ = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(s), [s]);
   return null == _ ? (0, a.jsx)("div", {
-    className: l()(t, m.guildContainer),
+    className: l()(t, f.guildContainer),
     children: (0, a.jsx)("div", {
-      className: m.guildInfoContainer,
+      className: f.guildInfoContainer,
       children: (0, a.jsx)(r.Text, {
         variant: "text-lg/bold",
-        children: f.default.Messages.GUILD_BOOSTING_USER_SETTINGS_APPLIED_GUILD_BOOST_UNKNOWN_GUILD
+        children: m.default.Messages.GUILD_BOOSTING_USER_SETTINGS_APPLIED_GUILD_BOOST_UNKNOWN_GUILD
       })
     })
   }) : (0, a.jsxs)("div", {
-    className: l()(t, m.guildContainer),
+    className: l()(t, f.guildContainer),
     children: [(0, a.jsx)(c.default, {
-      className: m.__invalid_guildIcon,
+      className: f.__invalid_guildIcon,
       guild: _,
       size: c.default.Sizes.LARGER
     }), (0, a.jsxs)("div", {
-      className: m.guildInfoContainer,
+      className: f.guildInfoContainer,
       children: [(0, a.jsx)(r.Text, {
         variant: "text-lg/bold",
         children: _.name
       }), (0, a.jsxs)("div", {
-        className: m.guildBoostStatsContainer,
+        className: f.guildBoostStatsContainer,
         children: [(0, a.jsx)(S.default, {
-          className: m.guildBoostBadge,
+          className: f.guildBoostBadge,
           width: 16,
           height: 16
         }), (0, a.jsx)(r.Text, {
           variant: "text-sm/bold",
           color: "text-muted",
-          children: f.default.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_SUBSCRIPTION_COUNT.format({
+          children: m.default.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_SUBSCRIPTION_COUNT.format({
             subscriptions: _.premiumSubscriberCount
           })
         }), (0, a.jsx)("div", {
-          className: m.separator
+          className: f.separator
         }), (0, a.jsx)(r.Text, {
           variant: "text-sm/bold",
           color: "text-muted",
@@ -74,7 +74,7 @@ t.default = function(e) {
       pauseAnimation: !0,
       size: r.Button.Sizes.MEDIUM,
       color: r.Button.Colors.PRIMARY,
-      buttonText: f.default.Messages.GUILD_BOOSTING_USER_SETTINGS_BOOST_THIS_SERVER
+      buttonText: m.default.Messages.GUILD_BOOSTING_USER_SETTINGS_BOOST_THIS_SERVER
     }) : (0, a.jsx)(r.Button, {
       color: r.Button.Colors.PRIMARY,
       onClick: () => {
@@ -86,7 +86,7 @@ t.default = function(e) {
         })
       },
       size: r.Button.Sizes.MEDIUM,
-      children: f.default.Messages.NAVIGATE_TO_GUILD
+      children: m.default.Messages.NAVIGATE_TO_GUILD
     })]
   })
 }

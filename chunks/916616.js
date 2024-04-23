@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return v
   }
 }), n("627341");
 var i = n("735250");
 n("470079");
 var s = n("278074"),
-  l = n("979554"),
-  r = n("481060"),
-  a = n("1585"),
+  a = n("979554"),
+  l = n("481060"),
+  r = n("1585"),
   u = n("125988"),
   o = n("583434"),
   c = n("479446"),
@@ -17,11 +17,11 @@ var s = n("278074"),
   m = n("731896"),
   f = n("680295"),
   p = n("998502"),
-  I = n("987209"),
-  _ = n("689938"),
-  S = n("506027"),
+  _ = n("987209"),
+  S = n("689938"),
+  I = n("506027"),
   P = n("241822");
-let E = p.default.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
+let E = p.default.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 
 function T(e) {
   let {
@@ -29,64 +29,64 @@ function T(e) {
   } = e, {
     avatarDecorationSrc: n,
     eventHandlers: s,
-    avatarPlaceholderSrc: l
+    avatarPlaceholderSrc: a
   } = (0, u.default)({
     avatarDecorationOverride: t,
-    size: (0, a.getDecorationSizeForAvatarSize)(r.AvatarSizes.SIZE_152)
+    size: (0, r.getDecorationSizeForAvatarSize)(l.AvatarSizes.SIZE_152)
   });
   return (0, i.jsx)("div", {
-    className: S.giftMainAnimationWrapper,
+    className: I.giftMainAnimationWrapper,
     children: (0, i.jsx)(E, {
       ...s,
       avatarDecoration: n,
-      src: l,
-      className: S.avatar,
-      size: r.AvatarSizes.SIZE_152,
-      "aria-label": _.default.Messages.USER_SETTINGS_AVATAR
+      src: a,
+      className: I.avatar,
+      size: l.AvatarSizes.SIZE_152,
+      "aria-label": S.default.Messages.USER_SETTINGS_AVATAR
     })
   })
 }
 
-function v(e) {
+function N(e) {
   var t;
   let {
     id: n
   } = e, s = null === (t = (0, m.useProfileEffectPreset)(n)) || void 0 === t ? void 0 : t.config;
   return (0, i.jsxs)("div", {
-    className: S.profileEffectContainer,
+    className: I.profileEffectContainer,
     children: [(0, i.jsx)("img", {
       src: P,
       alt: null == s ? void 0 : s.accessibilityLabel,
-      className: S.profileEffectBackground
+      className: I.profileEffectBackground
     }), (0, i.jsx)(f.default, {
       profileEffectId: n
     })]
   })
 }
 
-function N(e) {
+function v(e) {
   let {
     sku: t
   } = e, {
     selectedGiftStyle: n
-  } = (0, I.useGiftContext)(), {
-    product: r
-  } = (0, o.useFetchCollectiblesProduct)(null == t ? void 0 : t.id), a = null == r ? void 0 : r.items[0], u = (0, s.match)(a).with({
-    type: l.CollectiblesItemType.AVATAR_DECORATION
+  } = (0, _.useGiftContext)(), {
+    product: l
+  } = (0, o.useFetchCollectiblesProduct)(null == t ? void 0 : t.id), r = null == l ? void 0 : l.items[0], u = (0, s.match)(r).with({
+    type: a.CollectiblesItemType.AVATAR_DECORATION
   }, e => (0, i.jsx)(T, {
     avatarDecoration: e
   })).with({
-    type: l.CollectiblesItemType.PROFILE_EFFECT
-  }, e => (0, i.jsx)(v, {
+    type: a.CollectiblesItemType.PROFILE_EFFECT
+  }, e => (0, i.jsx)(N, {
     id: e.id
   })).otherwise(() => null);
   return null != n && null == u ? (0, i.jsx)("div", {
-    className: S.giftMainAnimationWrapper,
+    className: I.giftMainAnimationWrapper,
     children: (0, i.jsx)(d.default, {
       defaultAnimationState: c.AnimationState.LOOP,
       giftStyle: n,
       shouldAnimate: !0,
-      className: S.__invalid_giftMainAnimation
+      className: I.__invalid_giftMainAnimation
     })
   }) : u
 }

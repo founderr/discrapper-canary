@@ -30,9 +30,9 @@ function x(e) {
   }, {
     autoTrackExposure: h
   }), {
-    analyticsLocations: g
+    analyticsLocations: j
   } = (0, o.default)(), {
-    trackUserProfileAction: j,
+    trackUserProfileAction: g,
     ...R
   } = (0, c.useUserProfileAnalyticsContext)(), P = {
     location: {
@@ -58,11 +58,11 @@ function x(e) {
       actionColor: I.actionColor,
       analyticsParams: P,
       onAction: () => {
-        j({
+        g({
           action: "JOIN_ACTIVITY"
         }), (0, f.trackUserProfileActivityJoined)({
           activity: N,
-          analyticsLocations: g,
+          analyticsLocations: j,
           ...R
         })
       }
@@ -76,11 +76,11 @@ function x(e) {
       actionColor: I.actionColor,
       analyticsParams: P,
       onAction: () => {
-        j({
+        g({
           action: "JOIN_ACTIVITY"
         }), (0, f.trackUserProfileActivityJoined)({
           activity: e,
-          analyticsLocations: g,
+          analyticsLocations: j,
           ...R
         })
       }

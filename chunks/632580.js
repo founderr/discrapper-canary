@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   purchaseProduct: function() {
-    return _
+    return S
   }
 }), n("47120");
 var i = n("512722"),
   s = n.n(i),
-  l = n("570140"),
-  r = n("355467"),
-  a = n("976255"),
+  a = n("570140"),
+  l = n("355467"),
+  r = n("976255"),
   u = n("366939"),
   o = n("16084"),
   c = n("255078"),
@@ -16,25 +16,25 @@ var i = n("512722"),
   m = n("74538"),
   f = n("45572"),
   p = n("981631"),
-  I = n("474936");
-async function _(e) {
+  _ = n("474936");
+async function S(e) {
   let {
     setPurchaseState: t,
     setHasAcceptedTerms: n,
     setIsSubmitting: i,
-    setPurchaseError: _,
-    hasRedirectURL: S,
+    setPurchaseError: S,
+    hasRedirectURL: I,
     setHasRedirectURL: P,
     isGift: E,
     baseAnalyticsData: T,
-    analyticsLocation: v,
-    analyticsLocations: N,
+    analyticsLocation: N,
+    analyticsLocations: v,
     flowStartTime: h,
     subscriptionPlan: x,
     planGroup: A,
-    trialId: y,
-    priceOptions: g,
-    paymentSource: C,
+    trialId: C,
+    priceOptions: y,
+    paymentSource: g,
     isPrepaidPaymentPastDue: M,
     openInvoiceId: R,
     premiumSubscription: b,
@@ -44,11 +44,11 @@ async function _(e) {
     skuPricePreview: G,
     purchaseType: D,
     referralCode: U,
-    loadId: w,
-    giftInfoOptions: F,
+    loadId: F,
+    giftInfoOptions: w,
     invoicePreview: B
   } = e;
-  t(f.PurchaseState.PURCHASING), n(!0), i(!0), l.default.wait(a.clearError), _(null);
+  t(f.PurchaseState.PURCHASING), n(!0), i(!0), a.default.wait(r.clearError), S(null);
   try {
     let e, n, i;
     if (d.default.track(p.AnalyticEvents.PAYMENT_FLOW_COMPLETED, {
@@ -58,47 +58,47 @@ async function _(e) {
         expected_amount: null == B ? void 0 : B.total,
         expected_currency: null == B ? void 0 : B.currency,
         duration_ms: Date.now() - h
-      }), S) return;
+      }), I) return;
     if (D === p.PurchaseTypes.ONE_TIME) s()(null != j, "SKU must exist and be fetched."), s()(null != G, "SKUPricePreview must exist."), e = await (0, o.purchaseSKU)(j.applicationId, j.id, {
       expectedAmount: G.amount,
       expectedCurrency: G.currency,
       isGift: E,
-      paymentSource: C,
-      loadId: w,
-      giftInfoOptions: F
+      paymentSource: g,
+      loadId: F,
+      giftInfoOptions: w
     });
     else if (s()(null != x, "Missing subscriptionPlan"), E) {
       s()(null != B, "Missing invoicePreview");
       let t = B.total,
         n = B.currency;
-      e = await (0, o.purchaseSKU)(I.PREMIUM_SUBSCRIPTION_APPLICATION, x.skuId, {
+      e = await (0, o.purchaseSKU)(_.PREMIUM_SUBSCRIPTION_APPLICATION, x.skuId, {
         expectedAmount: t,
         expectedCurrency: n,
-        paymentSource: C,
+        paymentSource: g,
         subscriptionPlanId: x.id,
         isGift: !0,
-        loadId: w,
-        giftInfoOptions: F
+        loadId: F,
+        giftInfoOptions: w
       })
-    } else if (M && null != R && null != C && null != b) e = p.PREPAID_PAYMENT_SOURCES.has(C.type) ? await (0, r.payInvoiceManually)(b, R, C, g.currency) : await (0, r.updateSubscription)(b, {
-      paymentSource: C,
-      currency: g.currency
-    }, N, v, w);
+    } else if (M && null != R && null != g && null != b) e = p.PREPAID_PAYMENT_SOURCES.has(g.type) ? await (0, l.payInvoiceManually)(b, R, g, y.currency) : await (0, l.updateSubscription)(b, {
+      paymentSource: g,
+      currency: y.currency
+    }, v, N, F);
     else if (null != b) {
       let t = (0, m.getItemsWithUpsertedPlanIdForGroup)(b, x.id, 1, new Set(A)),
         n = {
-          paymentSource: C,
-          currency: g.currency
+          paymentSource: g,
+          currency: y.currency
         };
-      b.status === p.SubscriptionStatusTypes.PAUSED ? n.status = p.SubscriptionStatusTypes.ACTIVE : n.items = t, e = await (0, r.updateSubscription)(b, n, N, v, w)
+      b.status === p.SubscriptionStatusTypes.PAUSED ? n.status = p.SubscriptionStatusTypes.ACTIVE : n.items = t, e = await (0, l.updateSubscription)(b, n, v, N, F)
     } else e = await (0, u.subscribe)({
       planId: x.id,
-      currency: g.currency,
-      paymentSource: C,
-      trialId: y,
+      currency: y.currency,
+      paymentSource: g,
+      trialId: C,
       metadata: O,
       referralCode: U,
-      loadId: w
+      loadId: F
     });
     if (e.redirectConfirmation) {
       P(null != e.redirectURL);
@@ -106,14 +106,14 @@ async function _(e) {
     }
     t(f.PurchaseState.COMPLETED), "subscription" in e ? n = null != e.subscription ? c.default.createFromServer(e.subscription) : null : "entitlements" in e && (i = null != e.entitlements ? e.entitlements : void 0), L(n, i)
   } catch (e) {
-    t(f.PurchaseState.FAIL), _(e), d.default.track(p.AnalyticEvents.PAYMENT_FLOW_FAILED, {
+    t(f.PurchaseState.FAIL), S(e), d.default.track(p.AnalyticEvents.PAYMENT_FLOW_FAILED, {
       ...T,
       payment_error_code: null == e ? void 0 : e.code,
-      payment_source_id: null == C ? void 0 : C.id,
-      payment_source_type: null == C ? void 0 : C.type,
+      payment_source_id: null == g ? void 0 : g.id,
+      payment_source_type: null == g ? void 0 : g.type,
       duration_ms: Date.now() - h
     })
   } finally {
-    !S && i(!1)
+    !I && i(!1)
   }
 }

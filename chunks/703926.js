@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   GiftStaticOption: function() {
-    return S
+    return I
   }
 });
 var i = n("735250"),
   s = n("470079"),
-  l = n("481060"),
-  r = n("474936"),
-  a = n("164389"),
+  a = n("481060"),
+  l = n("474936"),
+  r = n("164389"),
   u = n("426831"),
   o = n("257510"),
   c = n("74838"),
@@ -16,31 +16,31 @@ var i = n("735250"),
   m = n("385925"),
   f = n("588921"),
   p = n("718720"),
-  I = n("721513");
-let _ = {
-    [r.PremiumGiftStyles.STANDARD_BOX]: m,
-    [r.PremiumGiftStyles.CAKE]: f,
-    [r.PremiumGiftStyles.CHEST]: p,
-    [r.PremiumGiftStyles.COFFEE]: I,
-    [r.PremiumGiftStyles.SNOWGLOBE]: "",
-    [r.PremiumGiftStyles.BOX]: "",
-    [r.PremiumGiftStyles.CUP]: "",
-    [r.PremiumGiftStyles.SEASONAL_CAKE]: o,
-    [r.PremiumGiftStyles.SEASONAL_CHEST]: c,
-    [r.PremiumGiftStyles.SEASONAL_COFFEE]: d,
-    [r.PremiumGiftStyles.SEASONAL_STANDARD_BOX]: u
+  _ = n("721513");
+let S = {
+    [l.PremiumGiftStyles.STANDARD_BOX]: m,
+    [l.PremiumGiftStyles.CAKE]: f,
+    [l.PremiumGiftStyles.CHEST]: p,
+    [l.PremiumGiftStyles.COFFEE]: _,
+    [l.PremiumGiftStyles.SNOWGLOBE]: "",
+    [l.PremiumGiftStyles.BOX]: "",
+    [l.PremiumGiftStyles.CUP]: "",
+    [l.PremiumGiftStyles.SEASONAL_CAKE]: o,
+    [l.PremiumGiftStyles.SEASONAL_CHEST]: c,
+    [l.PremiumGiftStyles.SEASONAL_COFFEE]: d,
+    [l.PremiumGiftStyles.SEASONAL_STANDARD_BOX]: u
   },
-  S = s.forwardRef(function(e, t) {
+  I = s.forwardRef(function(e, t) {
     let {
       isSelected: n,
       giftStyle: s,
-      setSelectedGiftStyle: r,
+      setSelectedGiftStyle: l,
       onFocus: u,
       onBlur: o
     } = e;
-    return (0, i.jsx)(l.Clickable, {
+    return (0, i.jsx)(a.Clickable, {
       innerRef: t,
-      onClick: () => r(s),
+      onClick: () => l(s),
       onFocus: u,
       onBlur: o,
       children: (0, i.jsx)("img", {
@@ -49,8 +49,8 @@ let _ = {
           height: "100%"
         },
         alt: "",
-        src: _[s],
-        className: n ? a.customGiftBoxHighlighted : a.customGiftBox
+        src: S[s],
+        className: n ? r.customGiftBoxHighlighted : r.customGiftBox
       })
     })
   })

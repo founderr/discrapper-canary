@@ -17,8 +17,8 @@ var n = s("512722"),
   S = s("150039"),
   E = s("126631"),
   T = s("433411"),
-  f = s("532432"),
-  m = s("349177"),
+  m = s("532432"),
+  f = s("349177"),
   _ = s("872736"),
   g = s("134795"),
   I = s("610966"),
@@ -83,7 +83,7 @@ function j() {
     ea = (0, d.useIsInUserClanExperiment)();
   return (0, a.jsxs)("div", {
     className: P.sectionsContainer,
-    children: [(0, a.jsx)(m.default, {
+    children: [(0, a.jsx)(f.default, {
       placeholder: B.username,
       errors: ee,
       currentGlobalName: B.globalName,
@@ -95,7 +95,7 @@ function j() {
       onPronounsChange: A.setPendingPronouns,
       pendingPronouns: V,
       currentPronouns: null !== (U = null == G ? void 0 : G.pronouns) && void 0 !== U ? U : ""
-    }, "pronouns"), (0, a.jsx)(f.default, {
+    }, "pronouns"), (0, a.jsx)(m.default, {
       onAvatarChange: r.setPendingAvatar,
       showRemoveAvatarButton: q,
       errors: W.avatar,

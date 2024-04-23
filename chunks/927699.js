@@ -6,9 +6,9 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   s = n("470079"),
-  l = n("120356"),
-  r = n.n(l),
-  a = n("481060"),
+  a = n("120356"),
+  l = n.n(a),
+  r = n("481060"),
   u = n("541716"),
   o = n("752305"),
   c = n("893718"),
@@ -16,9 +16,9 @@ var i = n("735250"),
   m = n("131704"),
   f = n("474936"),
   p = n("981631"),
-  I = n("689938"),
-  _ = n("746161");
-let S = (0, m.createChannelRecord)({
+  _ = n("689938"),
+  S = n("746161");
+let I = (0, m.createChannelRecord)({
   id: "1",
   type: p.ChannelTypes.DM
 });
@@ -27,47 +27,47 @@ function P(e) {
   let {
     sectionTitle: t,
     errors: n,
-    onTextChange: l,
+    onTextChange: a,
     pendingText: m,
     placeholder: p,
     currentText: P,
     className: E,
     innerClassName: T,
-    disabled: v = !1,
-    disableThemedBackground: N = !1
-  } = e, [h, x] = s.useState(null != m ? m : P), [A, y] = s.useState((0, o.toRichValue)(h)), g = s.useRef(!1);
+    disabled: N = !1,
+    disableThemedBackground: v = !1
+  } = e, [h, x] = s.useState(null != m ? m : P), [A, C] = s.useState((0, o.toRichValue)(h)), y = s.useRef(!1);
   return s.useEffect(() => {
-    g.current = !0
+    y.current = !0
   }, []), s.useEffect(() => {
     if (void 0 === m) {
       let e = (0, o.toRichValue)(P);
-      x(P), y(e)
+      x(P), C(e)
     }
   }, [m, P]), (0, i.jsx)("div", {
-    className: r()(_.body, E),
+    className: l()(S.body, E),
     children: (0, i.jsxs)(d.default, {
       title: t,
       errors: n,
-      disabled: v,
+      disabled: N,
       children: [(0, i.jsx)(c.default, {
-        innerClassName: r()(_.textArea, T),
-        editorClassName: _.editorTextArea,
+        innerClassName: l()(S.textArea, T),
+        editorClassName: S.editorTextArea,
         maxCharacterCount: f.CUSTOM_GIFT_MESSAGE_MAX_LENGTH,
         onChange: function(e, t, n) {
-          t !== h && (x(t), y(n), l(t))
+          t !== h && (x(t), C(n), a(t))
         },
         placeholder: p,
-        channel: S,
+        channel: I,
         textValue: h,
         richValue: A,
         type: u.ChatInputTypes.CUSTOM_GIFT,
         onBlur: () => {
-          g.current = !1
+          y.current = !1
         },
         onFocus: () => {
-          g.current = !0
+          y.current = !0
         },
-        focused: g.current,
+        focused: y.current,
         onSubmit: function() {
           return new Promise(e => {
             e({
@@ -76,9 +76,9 @@ function P(e) {
             })
           })
         },
-        disableThemedBackground: N
-      }), (0, i.jsx)(a.HiddenVisually, {
-        children: I.default.Messages.MAXIMUM_LENGTH.format({
+        disableThemedBackground: v
+      }), (0, i.jsx)(r.HiddenVisually, {
+        children: _.default.Messages.MAXIMUM_LENGTH.format({
           maxLength: f.CUSTOM_GIFT_MESSAGE_MAX_LENGTH
         })
       })]

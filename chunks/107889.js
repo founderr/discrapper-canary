@@ -27,8 +27,8 @@ var l = s("735250"),
   U = s("740021"),
   h = s("228168"),
   p = s("981631"),
-  g = s("689938"),
-  j = s("420867");
+  j = s("689938"),
+  g = s("420867");
 
 function R(e) {
   let {
@@ -80,9 +80,9 @@ function R(e) {
       roleId: M,
       children: (0, l.jsxs)(r.ModalRoot, {
         transitionState: F,
-        className: j.root,
+        className: g.root,
         hideShadow: !0,
-        "aria-label": g.default.Messages.USER_PROFILE_MODAL,
+        "aria-label": j.default.Messages.USER_PROFILE_MODAL,
         children: [(0, l.jsx)("div", {
           ref: Z,
           children: (0, l.jsxs)(I.default, {
@@ -111,8 +111,8 @@ function R(e) {
                 guildId: b,
                 viewProfileItem: (null == H ? void 0 : H.guildId) == null ? null : (null == Y ? void 0 : Y.guildId) != null ? (0, l.jsx)(r.MenuItem, {
                   id: "view-main-profile",
-                  label: g.default.Messages.VIEW_MAIN_PROFILE,
-                  subtext: g.default.Messages.AKA_DISPLAY_NAME.format({
+                  label: j.default.Messages.VIEW_MAIN_PROFILE,
+                  subtext: j.default.Messages.AKA_DISPLAY_NAME.format({
                     displayName: S.default.getName(void 0, void 0, t)
                   }),
                   action: () => {
@@ -123,8 +123,8 @@ function R(e) {
                   }
                 }) : (0, l.jsx)(r.MenuItem, {
                   id: "view-server-profile",
-                  label: g.default.Messages.VIEW_SERVER_PROFILE,
-                  subtext: g.default.Messages.AKA_DISPLAY_NAME.format({
+                  label: j.default.Messages.VIEW_SERVER_PROFILE,
+                  subtext: j.default.Messages.AKA_DISPLAY_NAME.format({
                     displayName: S.default.getName(b, R, t)
                   }),
                   action: () => {

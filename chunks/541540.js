@@ -16,9 +16,9 @@ var a = s("735250"),
   S = s("669079"),
   E = s("981631"),
   T = s("689938"),
-  f = s("282846");
+  m = s("282846");
 
-function m(e, t, s) {
+function f(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -61,7 +61,7 @@ class _ extends n.Component {
             onChange: this.handleChange,
             placeholder: "WUMP-AAAAA-BBBBB-CCCCC",
             error: !l && n ? T.default.Messages.APPLICATION_ENTITLEMENT_CODE_REDEMPTION_INVALID : null,
-            className: f.codeRedemptionInput
+            className: m.codeRedemptionInput
           }), (0, a.jsx)(i.Button, {
             type: "submit",
             submitting: s,
@@ -69,7 +69,7 @@ class _ extends n.Component {
           })]
         })
       }), l ? (0, a.jsx)(i.Text, {
-        className: f.errorMessage,
+        className: m.errorMessage,
         variant: "text-sm/normal",
         children: T.default.Messages.APPLICATION_ENTITLEMENT_CODE_REDEMPTION_PROMOTION.format({
           promoLink: () => {
@@ -80,17 +80,17 @@ class _ extends n.Component {
     })
   }
   constructor(...e) {
-    super(...e), m(this, "state", {
+    super(...e), f(this, "state", {
       codeInput: "",
       submitting: !1,
       hasError: !1,
       isPromoCode: !1
-    }), m(this, "handleChange", e => {
+    }), f(this, "handleChange", e => {
       this.setState({
         codeInput: e,
         hasError: !1
       })
-    }), m(this, "handleSubmit", async e => {
+    }), f(this, "handleSubmit", async e => {
       e.preventDefault();
       let {
         codeInput: t

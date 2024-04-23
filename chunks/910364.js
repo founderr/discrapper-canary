@@ -27,8 +27,8 @@ var l = s("735250"),
   U = s("318661"),
   h = s("706327"),
   p = s("484404"),
-  g = s("502762"),
-  j = s("58307"),
+  j = s("502762"),
+  g = s("58307"),
   R = s("62154"),
   P = s("293259"),
   M = s("725954"),
@@ -124,7 +124,7 @@ function D(e) {
   });
   let Z = (0, i.useStateFromStores)([m.default], () => null != m.default.getAnyStreamForUser(Y.id)),
     K = (0, i.useStateFromStores)([I.default], () => I.default.findActivity(Y.id, e => e.type !== y.ActivityTypes.CUSTOM_STATUS)),
-    J = (0, j.useGetVoiceChannelInfoForVoiceActivitySection)(Y.id, N),
+    J = (0, g.useGetVoiceChannelInfoForVoiceActivitySection)(Y.id, N),
     [Q, q] = a.useState(!1),
     [X, $] = a.useState(Y.isNonUserBot() && !Y.isClyde() ? C.UserProfileSections.MUTUAL_GUILDS : k),
     ee = (0, i.useStateFromStores)([E.default], () => E.default.getId() === Y.id),
@@ -171,7 +171,7 @@ function D(e) {
           "aria-label": O.default.Messages.USER_PROFILE_MODAL,
           children: [(0, l.jsx)("div", {
             ref: ea,
-            children: (0, l.jsxs)(g.default, {
+            children: (0, l.jsxs)(j.default, {
               user: Y,
               displayProfile: z,
               profileType: C.UserProfileTypes.MODAL,
@@ -185,7 +185,7 @@ function D(e) {
                 guildId: N,
                 channelId: h,
                 hasProfileEffect: null != en
-              }), (0, l.jsxs)(g.default.Overlay, {
+              }), (0, l.jsxs)(j.default.Overlay, {
                 children: [V === r.ModalTransitionState.ENTERED && (0, l.jsx)(p.default, {
                   onTooltipClose: H
                 }), (0, l.jsxs)("div", {

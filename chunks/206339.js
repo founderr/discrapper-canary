@@ -12,8 +12,8 @@ var a = s("735250"),
   S = s("496929"),
   E = s("230711"),
   T = s("410030"),
-  f = s("960359"),
-  m = s("730417"),
+  m = s("960359"),
+  f = s("730417"),
   _ = s("524347"),
   g = s("454585"),
   I = s("178100"),
@@ -39,8 +39,8 @@ function P(e) {
     [o, d] = n.useState(!1),
     [c, S] = n.useState(!1),
     E = () => d(e => !e),
-    f = (0, T.default)(),
-    m = (0, h.getPromotionImageURL)(s.id, f),
+    m = (0, T.default)(),
+    f = (0, h.getPromotionImageURL)(s.id, m),
     _ = null != l,
     N = (0, I.default)(s, _);
   _ && o ? t = D.default.Messages.OUTBOUND_PROMOTION_CARD_CLAIMED_EXPANDED_BODY.format({
@@ -73,7 +73,7 @@ function P(e) {
             className: L.promotionIcon,
             children: (0, a.jsx)("img", {
               alt: "",
-              src: m,
+              src: f,
               className: L.promotionIconImage
             })
           }), (0, a.jsxs)("div", {
@@ -130,10 +130,10 @@ t.default = function() {
       (0, S.fetchGiftableEntitlements)().then(() => r(!0))
     })
   }, []);
-  let g = (0, m.useAnyDropsEnabled)();
+  let g = (0, f.useAnyDropsEnabled)();
   n.useEffect(() => {
     g && c.default.wait(async () => {
-      await (0, f.fetchDropsUserStatus)()
+      await (0, m.fetchDropsUserStatus)()
     })
   }, [g]);
   let I = O.DropsOptedOut.useSetting(),

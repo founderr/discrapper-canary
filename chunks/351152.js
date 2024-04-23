@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return x
+    return I
   }
 }), l("390547");
 var a = l("735250");
@@ -52,7 +52,7 @@ function A(e) {
   }) : null
 }
 
-function x(e) {
+function I(e) {
   let {
     onSelectGuild: t
   } = e, l = (0, u.useStateFromStores)([m.default], () => m.default.getGuildFolders());

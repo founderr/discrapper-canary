@@ -17,8 +17,8 @@ var n = s("120356"),
   S = s("358085"),
   E = s("981631"),
   T = s("689938"),
-  f = s("665084"),
-  m = s("794711");
+  m = s("665084"),
+  f = s("794711");
 
 function _() {
   var e, t, n;
@@ -38,12 +38,12 @@ function _() {
     })
   }, O = null !== (n = null === u.default || void 0 === u.default ? void 0 : null === (t = u.default.window) || void 0 === t ? void 0 : null === (e = t.supportsContentProtection) || void 0 === e ? void 0 : e.call(t)) && void 0 !== n && n;
   return (0, a.jsxs)(r.FormSection, {
-    className: f.container,
+    className: m.container,
     tag: r.FormTitleTags.H1,
     title: T.default.Messages.STREAMER_MODE,
     children: [(0, a.jsx)(r.FormNotice, {
-      className: m.marginBottom40,
-      iconClassName: f.noticeIcon,
+      className: f.marginBottom40,
+      iconClassName: m.noticeIcon,
       type: r.FormNoticeTypes.PRIMARY,
       imageData: {
         src: s("560264"),
@@ -72,7 +72,7 @@ function _() {
         children: T.default.Messages.AUTO_TOGGLE_STREAMER_MODE_LABEL
       })
     })(), (0, a.jsx)(r.FormTitle, {
-      className: l()(m.marginTop40, m.marginBottom8),
+      className: l()(f.marginTop40, f.marginBottom8),
       children: T.default.Messages.OPTIONS
     }), (0, a.jsx)(r.FormSwitch, {
       value: h,

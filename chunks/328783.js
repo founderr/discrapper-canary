@@ -12,8 +12,8 @@ var a = s("735250"),
   S = s("891728"),
   E = s("369077"),
   T = s("689938"),
-  f = s("778491");
-let m = (0, d.uid)();
+  m = s("778491");
+let f = (0, d.uid)();
 t.default = n.memo(function() {
   let e = (0, S.useCurrentUserAvailableClans)(),
     t = n.useMemo(() => new Map(e.map(e => [e.id, e])), [e]),
@@ -51,15 +51,15 @@ t.default = n.memo(function() {
     p = n.useCallback(() => (0, u.adoptClanIdentity)(null, !0), []);
   return (0, a.jsxs)(r.default, {
     title: T.default.Messages.CLANS,
-    titleId: m,
+    titleId: f,
     children: [(0, a.jsx)(i.Text, {
-      className: f.subtitle,
+      className: m.subtitle,
       variant: "text-md/semibold",
       color: "interactive-active",
       children: T.default.Messages.CLAN_USER_PROFILE_PRIMARY_CLAN
     }), (0, a.jsx)(i.Select, {
-      className: f.select,
-      optionClassName: f.selectPopout,
+      className: m.select,
+      optionClassName: m.selectPopout,
       isSelected: h,
       options: d,
       select: I,

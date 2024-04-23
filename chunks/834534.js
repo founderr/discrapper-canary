@@ -45,9 +45,9 @@ function p(e) {
     currentUser: s,
     displayProfile: i,
     autoFocusNote: p,
-    className: g
+    className: j
   } = e, {
-    theme: j
+    theme: g
   } = (0, x.useUserProfileThemeContext)(), {
     trackUserProfileAction: R
   } = (0, m.useUserProfileAnalyticsContext)(), P = null == i ? void 0 : i.guildId, M = (0, n.useStateFromStores)([S.default], () => null != P ? S.default.getGuild(P) : null), {
@@ -63,7 +63,7 @@ function p(e) {
   }), D = (0, n.useStateFromStores)([f.default], () => f.default.locale), b = (0, E.default)(t.id);
   return (0, l.jsxs)(o.ScrollerThin, {
     fade: !0,
-    className: r()(U.scroller, g),
+    className: r()(U.scroller, j),
     children: [(null == i ? void 0 : i.bio) != null && (null == i ? void 0 : i.bio) !== "" && (0, l.jsx)(I.default, {
       userBio: i.bio,
       setLineClamp: !1
@@ -92,7 +92,7 @@ function p(e) {
         connectedAccounts: b,
         className: U.connections,
         userId: t.id,
-        theme: j,
+        theme: g,
         locale: D
       })
     }), (0, l.jsx)(h, {

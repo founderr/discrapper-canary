@@ -15,8 +15,8 @@ var i = s("120356"),
   S = s("463395"),
   E = s("131951"),
   T = s("285952"),
-  f = s("153124"),
-  m = s("626135"),
+  m = s("153124"),
+  f = s("626135"),
   _ = s("63063"),
   g = s("210887"),
   I = s("981631"),
@@ -24,7 +24,7 @@ var i = s("120356"),
   N = s("794711");
 let p = s("775322"),
   C = s("853453"),
-  A = (0, f.uid)();
+  A = (0, m.uid)();
 (n = a || (a = {}))[n.NONE = 0] = "NONE", n[n.STANDARD = 1] = "STANDARD", n[n.KRISP = 2] = "KRISP";
 let O = {
   page: I.AnalyticsPages.USER_SETTINGS,
@@ -33,7 +33,7 @@ let O = {
 
 function x(e) {
   let t = e.currentTarget;
-  m.default.track(I.AnalyticEvents.NOISE_CANCELLATION_LINK_CLICKED, {
+  f.default.track(I.AnalyticEvents.NOISE_CANCELLATION_LINK_CLICKED, {
     text: t.text,
     href: t.href,
     location: {
@@ -122,14 +122,14 @@ function M() {
     advancedVoiceActivitySupported: E.default.isAdvancedVoiceActivitySupported(),
     automaticGainControlSupported: E.default.isAutomaticGainControlSupported()
   })), {
-    hasEchoCancellation: f,
-    hasNoiseSuppression: m,
+    hasEchoCancellation: m,
+    hasNoiseSuppression: f,
     hasAutomaticGainControl: _
   } = (0, o.useStateFromStoresObject)([S.default], () => ({
     hasEchoCancellation: S.default.hasEchoCancellation(t),
     hasNoiseSuppression: S.default.hasNoiseSuppression(t),
     hasAutomaticGainControl: S.default.hasAutomaticGainControl(t)
-  }), [t]), g = f || m || _, p = e === I.InputModes.VOICE_ACTIVITY && n;
+  }), [t]), g = m || f || _, p = e === I.InputModes.VOICE_ACTIVITY && n;
   return (0, l.jsxs)(u.FormSection, {
     className: N.marginBottom20,
     title: h.default.Messages.FORM_LABEL_VOICE_PROCESSING,
@@ -144,7 +144,7 @@ function M() {
         page: I.AnalyticsPages.USER_SETTINGS,
         section: I.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
       }),
-      disabled: f,
+      disabled: m,
       children: h.default.Messages.ECHO_CANCELLATION
     }), (0, l.jsx)(R, {}), d && (0, l.jsx)(u.FormSwitch, {
       value: i,

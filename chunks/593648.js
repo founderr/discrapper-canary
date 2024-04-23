@@ -16,8 +16,8 @@ var a = s("735250"),
   S = s("292556"),
   E = s("92114"),
   T = s("419363"),
-  f = s("818083"),
-  m = s("688465"),
+  m = s("818083"),
+  f = s("688465"),
   _ = s("487419"),
   g = s("378364"),
   I = s("197344"),
@@ -122,7 +122,7 @@ function K(e) {
     var e;
     null === (e = d.current) || void 0 === e || e.stop()
   });
-  let f = [{
+  let m = [{
     label: k.default.Messages.SOUND_MESSAGE,
     sound: "message1",
     focusModeDisabled: c
@@ -214,7 +214,7 @@ function K(e) {
       value: s,
       onChange: S.default.toggleDisableAllSounds,
       children: k.default.Messages.SOUND_DISABLE_ALL
-    }), f.map(e => {
+    }), m.map(e => {
       let {
         label: n,
         sound: l,
@@ -247,7 +247,7 @@ function W() {
     children: [(0, a.jsxs)(u.Heading, {
       variant: "heading-lg/semibold",
       className: i()(w.titleWithBeta, H.marginBottom20),
-      children: [k.default.Messages.GUILD_COMMUNITY_ALERTS_HEADER, (0, a.jsx)(m.default, {})]
+      children: [k.default.Messages.GUILD_COMMUNITY_ALERTS_HEADER, (0, a.jsx)(f.default, {})]
     }), (0, a.jsx)(u.FormText, {
       type: u.FormTextTypes.DESCRIPTION,
       className: H.marginBottom20,
@@ -399,7 +399,7 @@ class z extends n.PureComponent {
     })
   }
 }
-let Q = (0, f.createExperiment)({
+let Q = (0, m.createExperiment)({
   kind: "user",
   id: "2024-01_mention_on_all_messages",
   label: "Mention on all messages",

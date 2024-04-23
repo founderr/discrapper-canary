@@ -36,8 +36,8 @@ function T(e) {
     onClose: h
   } = e, {
     theme: p
-  } = (0, E.useUserProfileThemeContext)(), g = (0, c.default)(t.id, T), {
-    avatarSrc: j,
+  } = (0, E.useUserProfileThemeContext)(), j = (0, c.default)(t.id, T), {
+    avatarSrc: g,
     eventHandlers: R,
     avatarDecorationSrc: P
   } = (0, f.default)({
@@ -59,7 +59,7 @@ function T(e) {
       children: [(0, l.jsxs)("div", {
         ...R,
         children: [(0, l.jsx)(N, {
-          src: j,
+          src: g,
           avatarDecoration: P,
           size: x.AvatarSizes.SIZE_120,
           className: A.avatar,
@@ -74,7 +74,7 @@ function T(e) {
         })]
       }), (0, l.jsx)("div", {
         className: A.buttons,
-        children: g && (0, l.jsx)(I.default, {
+        children: j && (0, l.jsx)(I.default, {
           user: t,
           onClose: h
         })
