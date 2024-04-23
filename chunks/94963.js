@@ -15,7 +15,7 @@ var n = a("735250"),
   _ = a("231467"),
   C = a("650774"),
   m = a("430824"),
-  S = a("703685"),
+  S = a("688298"),
   I = a("308083"),
   p = a("689938"),
   T = a("509741"),
@@ -80,17 +80,17 @@ t.default = e => {
     for (let e = 0; e < I.CLAN_BRAND_PALETTE_PRESETS.length; e++)
       if (I.CLAN_BRAND_PALETTE_PRESETS[e].primary === o.brandPrimaryColor && I.CLAN_BRAND_PALETTE_PRESETS[e].secondary === o.brandSecondaryColor) return e + 1;
     return A
-  }), x = A === P, y = x ? O : 0 === P ? {
+  }), [x, y] = s.useState(!1), D = A === P, b = D ? O : 0 === P ? {
     primary: o.badgePrimaryColor,
     secondary: o.badgeSecondaryColor
   } : I.CLAN_BRAND_PALETTE_PRESETS[P - 1];
   return s.useEffect(() => {
     l({
       banner: f,
-      brandPrimaryColor: y.primary,
-      brandSecondaryColor: y.secondary
+      brandPrimaryColor: b.primary,
+      brandSecondaryColor: b.secondary
     })
-  }, [l, f, y.primary, y.secondary]), (0, n.jsxs)("div", {
+  }, [l, f, b.primary, b.secondary]), (0, n.jsxs)("div", {
     className: i()(g.slideContent, T.content),
     children: [(0, n.jsx)(h.Heading, {
       variant: "heading-xxl/medium",
@@ -114,7 +114,12 @@ t.default = e => {
           }), (0, n.jsxs)("div", {
             className: T.colorPickerGrid,
             children: [(0, n.jsx)(h.Clickable, {
-              onClick: () => M(0),
+              onClick: () => {
+                M(0), L({
+                  primary: o.badgePrimaryColor,
+                  secondary: o.badgeSecondaryColor
+                })
+              },
               className: i()(T.brandItemContainer, {
                 [T.brandItemContainerSelected]: 0 === P
               }),
@@ -125,7 +130,9 @@ t.default = e => {
               })
             }), I.CLAN_BRAND_PALETTE_PRESETS.map((e, t) => (0, n.jsx)(h.Clickable, {
               "aria-label": e.name,
-              onClick: () => M(t + 1),
+              onClick: () => {
+                M(t + 1), L(I.CLAN_BRAND_PALETTE_PRESETS[t])
+              },
               className: i()(T.brandItemContainer, {
                 [T.brandItemContainerSelected]: P === t + 1
               }),
@@ -134,40 +141,35 @@ t.default = e => {
                 primaryColor: e.primary,
                 secondaryColor: e.secondary
               })
-            }, t)), (0, n.jsx)(h.Clickable, {
-              onClick: () => M(A),
-              className: i()(T.brandItemContainer, {
-                [T.brandItemContainerSelected]: P === A
-              }),
-              children: (0, n.jsx)(v, {
-                name: p.default.Messages.CLAN_LOOK_PRESET_CUSTOM,
-                isCustom: !0
-              })
-            })]
-          }), x && (0, n.jsxs)("div", {
-            className: T.customColorPickerContainer,
-            children: [(0, n.jsx)(S.CustomColorPicker, {
-              className: T.colorPicker,
-              value: O.primary,
-              eagerUpdate: !0,
-              wrapperComponentType: "div",
-              onChange: e => {
+            }, t)), (0, n.jsx)(S.default, {
+              palette: O,
+              onPrimaryColorChange: e => {
                 L(t => ({
                   ...t,
                   primary: (0, r.int2hex)(e)
                 }))
-              }
-            }), (0, n.jsx)(S.CustomColorPicker, {
-              className: T.colorPicker,
-              value: O.secondary,
-              eagerUpdate: !0,
-              wrapperComponentType: "div",
-              onChange: e => {
+              },
+              onSecondaryColorChange: e => {
                 L(t => ({
                   ...t,
                   secondary: (0, r.int2hex)(e)
                 }))
-              }
+              },
+              shouldShow: x,
+              onRequestClose: () => y(!1),
+              children: e => (0, n.jsx)(h.Clickable, {
+                ...e,
+                onClick: () => {
+                  M(A), y(e => !e)
+                },
+                className: i()(T.brandItemContainer, {
+                  [T.brandItemContainerSelected]: P === A
+                }),
+                children: (0, n.jsx)(v, {
+                  name: p.default.Messages.CLAN_LOOK_PRESET_CUSTOM,
+                  isCustom: !0
+                })
+              })
             })]
           })]
         }), (0, n.jsxs)("div", {
@@ -216,8 +218,8 @@ t.default = e => {
               secondaryColor: o.badgeSecondaryColor
             },
             branding: {
-              primaryColor: y.primary,
-              secondaryColor: y.secondary
+              primaryColor: b.primary,
+              secondaryColor: b.secondary
             }
           }
         })

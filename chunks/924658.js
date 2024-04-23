@@ -401,6 +401,7 @@ e.exports = Object.freeze({
   CLAN_LOOK_BANNER: "Banner",
   CLAN_LOOK_PRESET_BADGE: "Badge",
   CLAN_LOOK_PRESET_CUSTOM: "Custom",
+  CLAN_PALETTE_PICKER_CUSTOM_COLORS: "Custom Colors",
   CLAN_OVERVIEW_LABEL_CLAN_TAG: "Guild Tag",
   CLAN_ADOPT_CLAN_IDENTITY: "Adopt Guild Identity",
   CLAN_CLEAR_CLAN_IDENTITY: "Clear Guild Identity",
