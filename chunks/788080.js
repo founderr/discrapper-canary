@@ -9,6 +9,9 @@ n.r(t), n.d(t, {
   getAttachmentFilename: function() {
     return f
   },
+  getClassificationExpiration: function() {
+    return h
+  },
   getClassificationRelativeIncidentTime: function() {
     return c
   },
@@ -77,4 +80,14 @@ function I(e) {
 let p = e => {
   if (e === o.AbortCodes.DSA_APPEAL_REQUEST_DEFLECTION) return d.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_DEFLECTION_ERROR;
   return d.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ERROR
+};
+
+function h(e) {
+  let t = e.max_expiration_time;
+  if (null == t) return null;
+  try {
+    return new Date(t)
+  } catch {
+    return null
+  }
 }

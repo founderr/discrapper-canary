@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   ConnectedSafetyHubViolationsContainer: function() {
-    return b
+    return R
   }
 }), a("47120");
 var n = a("735250"),
@@ -99,7 +99,7 @@ let h = e => {
       children: U.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_EXPIRED
     })
   }),
-  D = e => {
+  F = e => {
     let {
       timestamp: t
     } = e;
@@ -109,19 +109,18 @@ let h = e => {
       children: (0, I.getClassificationRelativeIncidentTime)(t)
     })
   },
-  F = () => (0, n.jsx)(o.Text, {
+  v = () => (0, n.jsx)(o.Text, {
     variant: "text-xs/bold",
     className: H.newBadge,
     children: U.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_NEW
   }),
-  v = e => {
+  D = e => {
     let {
       classification: t
     } = e, {
       id: s,
-      description: u,
-      max_expiration_time: r
-    } = t, c = E.default.extractTimestamp(s), d = (0, g.useIsNewClassification)(t), _ = (0, T.useIsSafetyHubDisplayGuildViolationsEnabled)("violations_container"), S = i.useMemo(() => {
+      description: u
+    } = t, r = E.default.extractTimestamp(s), c = (0, g.useIsNewClassification)(t), d = (0, T.useIsSafetyHubDisplayGuildViolationsEnabled)("violations_container"), _ = i.useMemo(() => {
       var e, a, i;
       let s = {
         description: u,
@@ -131,7 +130,7 @@ let h = e => {
           children: e
         })
       };
-      if (!(_ && (0, I.isGuildClassification)(t))) return U.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION.format(s);
+      if (!(d && (0, I.isGuildClassification)(t))) return U.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION.format(s);
       return (null == t ? void 0 : null === (e = t.guild_metadata) || void 0 === e ? void 0 : e.member_type) === f.MemberType.OWNER ? U.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION_GUILD.format({
         ...s,
         guildName: null == t ? void 0 : null === (a = t.guild_metadata) || void 0 === a ? void 0 : a.name
@@ -140,7 +139,7 @@ let h = e => {
         classification_type: s.description,
         classificationHook: s.descriptionHook
       })
-    }, [t, u, _]), A = new Date(r), N = A.toDateString();
+    }, [t, u, d]);
     return (0, n.jsx)(o.Clickable, {
       onClick: () => {
         (0, o.openModalLazy)(async () => {
@@ -155,28 +154,20 @@ let h = e => {
         })
       },
       className: l()(H.itemDetail, {
-        [H.itemDetailNew]: d
+        [H.itemDetailNew]: c
       }),
       children: (0, n.jsxs)("div", {
         className: H.descriptionContainer,
-        children: [d ? (0, n.jsx)(F, {}) : (0, n.jsx)(D, {
-          timestamp: c
+        children: [c ? (0, n.jsx)(v, {}) : (0, n.jsx)(F, {
+          timestamp: r
         }), (0, n.jsx)(o.Heading, {
           variant: "heading-lg/normal",
-          children: S
-        }), (0, n.jsx)(o.Text, {
-          variant: "text-sm/normal",
-          className: H.expirationDate,
-          children: A > new Date ? U.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_ACTIVE.format({
-            expirationDate: N
-          }) : U.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_EXPIRED.format({
-            expirationDate: N
-          })
+          children: _
         })]
       })
     }, s)
   },
-  R = e => {
+  b = e => {
     let {
       status: t,
       classifications: a
@@ -206,7 +197,7 @@ let h = e => {
             height: "1px",
             width: "100%"
           }
-        }), E.length > 0 && E.map(e => (0, n.jsx)(v, {
+        }), E.length > 0 && E.map(e => (0, n.jsx)(D, {
           classification: e
         }, e.id)), E.length < a.length && (0, n.jsxs)(n.Fragment, {
           children: [(0, n.jsx)(o.TabBar.Separator, {
@@ -225,14 +216,14 @@ let h = e => {
       })]
     })
   },
-  b = () => {
+  R = () => {
     let e = (0, C.useActiveSafetyHubClassifications)(),
       t = (0, C.useExpiredSafetyHubClassifications)();
     return 0 === e.length && 0 === t.length ? null : (0, n.jsxs)("div", {
-      children: [(0, n.jsx)(R, {
+      children: [(0, n.jsx)(b, {
         status: "active",
         classifications: e
-      }), (0, n.jsx)(R, {
+      }), (0, n.jsx)(b, {
         status: "expired",
         classifications: t
       })]
