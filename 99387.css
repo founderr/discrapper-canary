@@ -19974,6 +19974,13 @@ input[type=checkbox]:focus-visible+.label__8e100 {
     vertical-align: top
 }
 
+.dotSpacer__0412c {
+    background-color: var(--text-normal);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%
+}
+
 .tags__17646 {
     background: var(--bg-mod-faint);
     border-radius: var(--radius-xs)
@@ -19985,13 +19992,6 @@ input[type=checkbox]:focus-visible+.label__8e100 {
 
 .theme-light.custom-profile-theme .tags__17646 {
     background: rgb(var(--bg-overlay-color)/.4)
-}
-
-.pronouns__39452 {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    padding: 3px 4px
 }
 
 .badges__89cab {

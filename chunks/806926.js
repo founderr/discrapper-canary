@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return E
   }
 });
 var l = s("735250");
@@ -13,50 +13,47 @@ var a = s("442837"),
   o = s("184325"),
   u = s("502762"),
   d = s("530"),
-  c = s("894374"),
-  f = s("616140"),
-  S = s("981631"),
-  m = s("602091"),
-  E = s("727705");
+  c = s("616140"),
+  f = s("981631"),
+  S = s("602091"),
+  m = s("727705");
 
-function I(e) {
+function E(e) {
   let {
     user: t,
     displayProfile: s,
-    initialSection: I,
-    autoFocusNote: v,
-    transitionState: x,
-    onClose: _
-  } = e, A = (0, a.useStateFromStores)([i.default], () => i.default.findActivity(t.id, e => e.type === S.ActivityTypes.PLAYING), [t]);
+    initialSection: E,
+    autoFocusNote: I,
+    transitionState: v,
+    onClose: x
+  } = e, _ = (0, a.useStateFromStores)([i.default], () => i.default.findActivity(t.id, e => e.type === f.ActivityTypes.PLAYING), [t]);
   return (0, l.jsxs)("div", {
-    className: E.container,
+    className: m.container,
     children: [(0, l.jsxs)("div", {
-      className: E.usernameBadgeList,
+      className: m.usernameBadgeList,
       children: [(0, l.jsx)(d.default, {
-        className: E.username,
+        className: m.username,
         user: t,
         guildId: null == s ? void 0 : s.guildId,
-        nicknameVariant: "heading-xl/bold",
-        tags: (0, l.jsx)(c.UserProfilePronounsTag, {
-          pronouns: null == s ? void 0 : s.pronouns
-        })
+        pronouns: null == s ? void 0 : s.pronouns,
+        nicknameVariant: "heading-xl/bold"
       }), (0, l.jsx)(o.default, {
-        className: E.badgeList,
+        className: m.badgeList,
         user: t,
         guildId: null == s ? void 0 : s.guildId,
         size: o.BadgeSizes.SIZE_24
       })]
-    }), null != A && (0, l.jsx)(n.default, {
-      activity: A
+    }), null != _ && (0, l.jsx)(n.default, {
+      activity: _
     }), (0, l.jsxs)(u.default.Overlay, {
-      children: [x === m.ModalTransitionState.ENTERED && (0, l.jsx)(r.default, {
-        onTooltipClose: _
-      }), (0, l.jsx)(f.default, {
+      children: [v === S.ModalTransitionState.ENTERED && (0, l.jsx)(r.default, {
+        onTooltipClose: x
+      }), (0, l.jsx)(c.default, {
         user: t,
         displayProfile: s,
-        initialSection: I,
-        autoFocusNote: v,
-        onClose: _
+        initialSection: E,
+        autoFocusNote: I,
+        onClose: x
       })]
     })]
   })
