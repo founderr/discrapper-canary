@@ -57,10 +57,13 @@ t.default = () => {
       }),
       children: [(0, a.jsx)(l.FormDivider, {
         className: S.divider
-      }), E.map(e => (0, a.jsx)(d.QuestsCard, {
-        quest: e,
-        location: o.QuestContent.QUEST_INVENTORY_CARD
-      }, e.id))]
+      }), (0, a.jsx)("div", {
+        className: S.questCards,
+        children: E.map(e => (0, a.jsx)(d.QuestsCard, {
+          quest: e,
+          location: o.QuestContent.QUEST_INVENTORY_CARD
+        }, e.id))
+      })]
     })
   })
 }
