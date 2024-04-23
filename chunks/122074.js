@@ -8,8 +8,8 @@ var a = n("735250"),
   u = n("470079"),
   i = n("960524"),
   l = n("442837"),
-  s = n("524437"),
-  r = n("481060"),
+  r = n("524437"),
+  s = n("481060"),
   o = n("706140"),
   d = n("594174"),
   f = n("672752"),
@@ -17,59 +17,68 @@ var a = n("735250"),
   S = n("26290"),
   I = n("74538"),
   _ = n("759198"),
-  E = n("11352"),
-  M = n("213931"),
+  M = n("11352"),
+  E = n("213931"),
   m = n("112440"),
   p = n("671105"),
-  C = n("921944"),
-  g = n("871465"),
+  C = n("552958"),
+  g = n("921944"),
+  v = n("871465"),
   T = n("689938"),
-  v = n("809851");
+  A = n("809851");
 
 function N(e, t) {
   let n = (0, p.useGuildCustomNotificationSound)(e),
     N = (0, p.useChannelCustomNotificationSound)(e, t),
     h = (0, l.useStateFromStores)([d.default], () => d.default.getCurrentUser()),
-    A = I.default.canUseCustomNotificationSounds(h),
-    R = A ? null != N ? N : n : g.Soundpacks.CLASSIC,
-    x = E.CustomNotificationSoundExperiment.useExperiment({
+    R = I.default.canUseCustomNotificationSounds(h),
+    O = R ? null != N ? N : n : v.Soundpacks.CLASSIC,
+    x = M.CustomNotificationSoundExperiment.useExperiment({
       location: "guild_context_menu"
     }, {
       autoTrackExposure: !0
     }).enabled,
-    [O, U] = u.useState(!1),
-    [F, G] = (0, o.useGetDismissibleContent)([s.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GDM_DM_BADGE]),
-    j = F === s.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GDM_DM_BADGE;
+    [U, F] = u.useState(!1),
+    {
+      playSound: G
+    } = (0, C.default)(),
+    [j, y] = (0, o.useGetDismissibleContent)([r.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GDM_DM_BADGE]),
+    P = j === r.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GDM_DM_BADGE;
   if (u.useEffect(() => () => {
-      O && G(C.ContentDismissActionType.TAKE_ACTION)
-    }, [O, G]), !x) return null;
-  let y = n => {
-      A ? null != t ? (0, M.updateChannelCustomNotificationSound)(e, t, n) : (0, M.updateGuildCustomNotificationSound)(e, n) : (0, m.default)()
+      U && y(g.ContentDismissActionType.TAKE_ACTION)
+    }, [U, y]), !x) return null;
+  let b = n => {
+      if (G(n), !R) {
+        (0, m.default)();
+        return
+      }
+      null != t ? (0, E.updateChannelCustomNotificationSound)(e, t, n) : (0, E.updateGuildCustomNotificationSound)(e, n)
     },
-    P = A ? r.Text : _.default;
-  return (0, a.jsx)(r.MenuItem, {
+    D = R ? s.Text : _.default,
+    L = (0, v.getCustomNotificationSoundpackOptions)();
+  return (0, a.jsx)(s.MenuItem, {
     id: "notification",
     label: e => {
       let {
         isFocused: t
       } = e;
-      return t && U(t), (0, a.jsxs)(a.Fragment, {
-        children: [j && (0, a.jsx)(S.TextBadge, {
-          className: v.newBadge,
+      return t && F(t), (0, a.jsxs)(a.Fragment, {
+        children: [P && (0, a.jsx)(S.TextBadge, {
+          className: A.newBadge,
           text: T.default.Messages.NEW
         }), (0, a.jsxs)("div", {
-          className: v.headerContainer,
-          children: [(0, a.jsx)(P, {
+          className: A.headerContainer,
+          children: [(0, a.jsx)(D, {
             color: t ? "always-white" : void 0,
             variant: "text-sm/medium",
             children: T.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND
           }), (0, a.jsx)(c.default, {
-            className: v.nitroWheel,
-            color: t ? "white" : A ? void 0 : f.GradientCssUrls.PREMIUM_TIER_2,
+            className: A.nitroWheel,
+            color: t ? "white" : R ? void 0 : f.GradientCssUrls.PREMIUM_TIER_2,
             width: 16,
             height: 16
           })]
-        }), (0, a.jsx)(P, {
+        }), (0, a.jsx)(D, {
           color: t ? "always-white" : void 0,
           variant: "text-xs/normal",
           children: "Discord Default"
@@ -77,39 +86,35 @@ function N(e, t) {
       })
     },
     hasSubmenu: !0,
-    children: (0, a.jsxs)(r.MenuGroup, {
-      children: [(0, a.jsx)(r.MenuRadioItem, {
-        id: "sound_0",
-        group: "notification-preset",
-        checked: null == R || R === g.Soundpacks.CLASSIC,
-        label: "Classic",
-        action: () => y(g.Soundpacks.CLASSIC)
-      }), (0, a.jsx)(r.MenuSeparator, {}), A ? (0, a.jsx)(r.MenuRadioItem, {
-        id: "sound_1",
-        group: "notification-preset",
-        checked: R === g.Soundpacks.DETUNE,
-        label: "Detune",
-        action: () => y(g.Soundpacks.DETUNE)
-      }) : (0, a.jsx)(r.MenuItem, {
-        id: "sound_1",
-        label: e => {
-          let {
-            isFocused: t
-          } = e;
-          return (0, a.jsxs)("div", {
-            className: v.labelContainer,
-            children: [(0, a.jsx)(_.default, {
-              color: t ? "always-white" : void 0,
-              variant: "text-sm/medium",
-              children: "Detune"
-            }), (0, a.jsx)(i.CirclePlayIcon, {
-              className: v.playButton,
-              color: t ? r.tokens.colors.INTERACTIVE_ACTIVE : r.tokens.colors.INTERACTIVE_NORMAL
-            })]
-          })
-        },
-        action: () => y(g.Soundpacks.DETUNE)
-      })]
+    children: (0, a.jsx)(s.MenuGroup, {
+      children: L.map((e, t) => (0, a.jsxs)(u.Fragment, {
+        children: [R || e.value === v.Soundpacks.CLASSIC ? (0, a.jsx)(s.MenuRadioItem, {
+          id: e.label,
+          group: "notification-preset",
+          checked: (null != O ? O : v.Soundpacks.CLASSIC) === e.value,
+          label: e.label,
+          action: () => b(e.value)
+        }) : (0, a.jsx)(s.MenuItem, {
+          id: e.label,
+          label: t => {
+            let {
+              isFocused: n
+            } = t;
+            return (0, a.jsxs)("div", {
+              className: A.labelContainer,
+              children: [(0, a.jsx)(_.default, {
+                color: n ? "always-white" : void 0,
+                variant: "text-sm/medium",
+                children: e.label
+              }), (0, a.jsx)(i.CirclePlayIcon, {
+                className: A.playButton,
+                color: n ? s.tokens.colors.INTERACTIVE_ACTIVE : s.tokens.colors.INTERACTIVE_NORMAL
+              })]
+            })
+          },
+          action: () => b(e.value)
+        }), e.value === v.Soundpacks.CLASSIC ? (0, a.jsx)(s.MenuSeparator, {}) : null]
+      }, t))
     })
   })
 }

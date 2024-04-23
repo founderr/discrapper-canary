@@ -1,70 +1,72 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return N
   }
 }), n("47120");
 var s = n("735250"),
   a = n("470079"),
-  r = n("481060"),
-  i = n("230711"),
-  o = n("2052"),
-  u = n("906732"),
-  l = n("174609"),
-  c = n("626135"),
-  _ = n("790527"),
-  S = n("940165"),
-  d = n("474936"),
-  E = n("981631"),
-  O = n("689938"),
-  f = n("677804");
+  l = n("481060"),
+  o = n("230711"),
+  i = n("2052"),
+  c = n("906732"),
+  r = n("174609"),
+  u = n("626135"),
+  d = n("790527"),
+  O = n("940165"),
+  C = n("474936"),
+  I = n("981631"),
+  _ = n("871465"),
+  T = n("689938"),
+  S = n("677804");
 
-function I(e) {
+function N(e) {
   let {
     onClose: t,
-    ...I
-  } = e, C = (0, o.useAnalyticsContext)(), {
-    analyticsLocations: M
-  } = (0, u.default)(), [N, T] = a.useState(!1);
-  return a.useEffect(() => {
-    !N && (c.default.track(E.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      type: d.PremiumUpsellTypes.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
-      location: C.location,
-      location_stack: M
-    }), T(!0))
-  }, [C.location, M, N]), (0, s.jsx)(_.default, {
-    type: d.PremiumUpsellTypes.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
-    artContainerClassName: f.image,
+    ...N
+  } = e, U = (0, i.useAnalyticsContext)(), {
+    analyticsLocations: p
+  } = (0, c.default)(), [M, f] = a.useState(!1);
+  a.useEffect(() => {
+    !M && (u.default.track(I.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+      type: C.PremiumUpsellTypes.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
+      location: U.location,
+      location_stack: p
+    }), f(!0))
+  }, [U.location, p, M]);
+  let E = (0, _.getCustomNotificationSoundpackOptions)();
+  return (0, s.jsx)(d.default, {
+    type: C.PremiumUpsellTypes.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
+    artContainerClassName: S.image,
     artURL: n("98165"),
-    title: O.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_TITLE,
-    glowUp: O.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_TITLE,
-    body: O.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_DESCRIPTION,
+    title: T.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_TITLE,
+    glowUp: T.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_TITLE,
+    body: T.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_DESCRIPTION,
     showEnhancedUpsell: !0,
     analyticsLocation: {
-      section: E.AnalyticsSections.PREMIUM_CUSTOM_NOTIFICATION_SOUND_UPSELL_MODAL
+      section: I.AnalyticsSections.PREMIUM_CUSTOM_NOTIFICATION_SOUND_UPSELL_MODAL
     },
     enableArtBoxShadow: !1,
-    onSubscribeClick: l.default,
-    secondaryCTA: O.default.Messages.PREMIUM_ROADBLOCK_UPSELL_SECONDARY_CTA,
+    onSubscribeClick: r.default,
+    secondaryCTA: T.default.Messages.PREMIUM_ROADBLOCK_UPSELL_SECONDARY_CTA,
     onSecondaryClick: () => {
-      t(), i.default.open(E.UserSettingsSections.PREMIUM)
+      t(), o.default.open(I.UserSettingsSections.PREMIUM)
     },
     onClose: t,
-    ...I,
-    children: (0, s.jsx)(r.FormItem, {
-      title: O.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_LABEL,
-      className: f.optionsContainerWrapper,
-      children: (0, s.jsxs)("div", {
-        className: f.optionsContainer,
-        children: [(0, s.jsx)(S.default, {
-          showGradient: !0
-        }), (0, s.jsx)(S.default, {
-          showGradient: !1
-        }), (0, s.jsx)(S.default, {
-          showGradient: !1
-        }), (0, s.jsx)(S.default, {
-          showGradient: !1
-        })]
+    ...N,
+    children: (0, s.jsx)(l.FormItem, {
+      title: T.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_LABEL,
+      className: S.optionsContainerWrapper,
+      children: (0, s.jsx)("div", {
+        className: S.optionsContainer,
+        children: E.map((e, t) => {
+          let n = e.value;
+          return n === _.Soundpacks.CLASSIC ? null : (0, s.jsx)(O.default, {
+            label: e.label,
+            soundpack: n,
+            description: e.description
+          }, t)
+        })
       })
     })
   })

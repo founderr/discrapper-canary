@@ -1,23 +1,24 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return l
   }
 }), n("47120");
-var s = n("470079"),
-  a = n("974180"),
-  r = n("557177");
+var a = n("470079"),
+  u = n("974180"),
+  i = n("557177");
 
-function i() {
-  let [e, t] = s.useState(!1), n = s.useRef(-1);
+function l() {
+  let [e, t] = a.useState(), n = a.useRef(-1);
   return {
-    playSound: s.useCallback(() => {
-      t(!0), r.playSound(a.MESSAGE_SOUND, a.MESSAGE_SOUND_VOLUME, () => {
+    playSound: a.useCallback(e => {
+      t(e), i.playSound(u.MESSAGE_SOUND, u.MESSAGE_SOUND_VOLUME, () => {
         clearTimeout(n.current), n.current = setTimeout(() => {
-          t(!1)
+          t(void 0)
         }, 500)
-      })
+      }, e)
     }, []),
-    isPlaying: e
+    isPlaying: null != e,
+    soundpackPlaying: e
   }
 }
