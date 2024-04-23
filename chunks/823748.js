@@ -408,36 +408,37 @@ class e5 extends l.PureComponent {
       layout: r,
       section: o,
       hasModalOpen: u,
-      guildSidebarState: d
+      guildSidebarState: d,
+      hasTextActivityInPanelMode: c
     } = this.props, {
-      threadSidebarWidth: c,
-      isThreadSidebarFloating: f
+      threadSidebarWidth: f,
+      isThreadSidebarFloating: h
     } = this.state;
     if (s) return (0, a.jsx)(eK.default, {});
     if (null == e) return (0, a.jsx)(eZ.default, {
       channelId: this.props.channelId
     });
-    let h = o === eX.ChannelSections.SIDEBAR_CHAT,
-      m = null != d && !h,
-      p = !e.isForumLikeChannel() && !u,
-      E = null == t ? void 0 : t.name;
+    let m = o === eX.ChannelSections.SIDEBAR_CHAT,
+      p = null != d && !m,
+      E = !e.isForumLikeChannel() && !u,
+      C = null == t ? void 0 : t.name;
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(P.AppPageTitle, {
-        location: E,
+        location: C,
         subsection: null != n ? n : void 0
       }), (0, a.jsxs)("div", {
         className: i()(e4.chat, {
-          [e4.threadSidebarOpen]: h || m,
-          [e4.threadSidebarFloating]: h && f
+          [e4.threadSidebarOpen]: m || p,
+          [e4.threadSidebarFloating]: m && h
         }),
-        children: [p ? (0, a.jsx)(_.default, {
+        children: [E ? (0, a.jsx)(_.default, {
           style: {
-            right: h ? c : void 0
+            right: m ? f : void 0
           },
           className: e4.uploadArea,
           channel: e,
           draftType: eO.DraftType.ChannelMessage
-        }) : null, l ? null : this.renderHeaderBar(), this.renderCall(), this.renderEmbeddedActivityPanel(), (0, a.jsxs)("div", {
+        }) : null, l || e.isPrivate() && c ? null : this.renderHeaderBar(), this.renderCall(), this.renderEmbeddedActivityPanel(), (0, a.jsxs)("div", {
           className: i()(e4.content, {
             [e4.noChat]: r === eX.ChannelLayouts.NO_CHAT
           }),
@@ -679,27 +680,28 @@ class e5 extends l.PureComponent {
         guild: l,
         guildId: s,
         showCall: r,
-        hasVideo: u,
-        headerGuildBreadcrumbPosition: d,
-        isFavorites: c
+        hasTextActivityInPanelMode: u,
+        hasVideo: d,
+        headerGuildBreadcrumbPosition: c,
+        isFavorites: f
       } = this.props;
       o()(null != e, "Missing channel in Channel.renderHeaderBar"), o()(null != t, "Should not be null if channel is not null.");
-      let f = e.isDM() && !e.isSystemDM() ? this.openUserProfile : void 0,
-        h = (null == n ? void 0 : n.guild_id) != null && (null == n ? void 0 : n.id) != null ? this.handleTitleParentClick : void 0;
+      let h = e.isDM() && !e.isSystemDM() ? this.openUserProfile : void 0,
+        m = (null == n ? void 0 : n.guild_id) != null && (null == n ? void 0 : n.id) != null ? this.handleTitleParentClick : void 0;
       return (0, a.jsxs)("div", {
         className: e4.subtitleContainer,
         children: [(0, a.jsxs)(J.default, {
           guildId: s,
           channelId: e.id,
           channelType: e.type,
-          hideSearch: e.isDirectory() || c && !(0, ef.isFavoriteSearchEnabled)(),
-          showDivider: c && !(0, ef.isFavoriteSearchEnabled)(),
+          hideSearch: e.isDirectory() || f && !(0, ef.isFavoriteSearchEnabled)(),
+          showDivider: f && !(0, ef.isFavoriteSearchEnabled)(),
           toolbar: this.renderHeaderToolbar(),
           mobileToolbar: this.renderMobileToolbar(),
-          className: i()(e4.title, u && r ? (0, eG.getThemeClass)(eX.ThemeTypes.DARK) : null),
-          transparent: r,
+          className: i()(e4.title, d && r ? (0, eG.getThemeClass)(eX.ThemeTypes.DARK) : null),
+          transparent: r || u && e.isPrivate(),
           "aria-label": e2.default.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
-          children: ["left" === d && (0, a.jsx)($.HeaderGuildBreadcrumb, {
+          children: ["left" === c && (0, a.jsx)($.HeaderGuildBreadcrumb, {
             channel: e,
             guild: l,
             caretPosition: "right"
@@ -708,13 +710,13 @@ class e5 extends l.PureComponent {
             channelName: t,
             parentChannel: n,
             guild: l,
-            hasVideo: u,
+            hasVideo: d,
             handleContextMenu: this.handleContextMenu,
             handleParentContextMenu: this.handleParentContextMenu,
-            handleClick: f,
-            handleParentClick: h,
+            handleClick: h,
+            handleParentClick: m,
             renderFollowButton: this.renderFollowButton
-          }), "right" === d && (0, a.jsx)($.HeaderGuildBreadcrumb, {
+          }), "right" === c && (0, a.jsx)($.HeaderGuildBreadcrumb, {
             channel: e,
             guild: l,
             caretPosition: "left"
@@ -740,7 +742,7 @@ t.default = l.memo(function(e) {
   }, [r]), I = (0, h.useStateFromStores)([N.default], () => {
     var e;
     return N.default.getSelfEmbeddedActivityForChannel(null !== (e = null == u ? void 0 : u.id) && void 0 !== e ? e : eX.EMPTY_STRING_SNOWFLAKE_ID)
-  }), x = (0, h.useStateFromStores)([N.default], () => N.default.getActivityPanelMode()), y = null != I && !(0, M.default)(null == u ? void 0 : u.id) && x === eQ.ActivityPanelModes.PANEL, L = (0, h.useStateFromStores)([eH.default], () => null != u && u.isVocalThread() && !d().isEmpty(eH.default.getVoiceStatesForChannel(u.id)), [u]), O = (null == u ? void 0 : u.isGuildVocal()) || y || T || L, {
+  }), x = (0, h.useStateFromStores)([N.default], () => N.default.getActivityPanelMode()), y = null != I && !(0, M.default)(null == u ? void 0 : u.id) && x === eQ.ActivityPanelModes.PANEL, L = (0, h.useStateFromStores)([eH.default], () => null != u && u.isVocalThread() && !d().isEmpty(eH.default.getVoiceStatesForChannel(u.id)), [u]), O = (null == u ? void 0 : u.isGuildVocal()) || y && !(null == u ? void 0 : u.isPrivate()) || T || L, {
     welcomeModalChannelId: j
   } = (0, c.useLocation)(), P = (0, h.useStateFromStores)([er.default], () => null != u && er.default.isLurking(u.guild_id), [u]), D = (0, h.useStateFromStores)([eM.default], () => eM.default.hasSeen(null == u ? void 0 : u.guild_id, P), [u, P]), U = (0, h.useStateFromStores)([R.default, N.default], () => null != N.default.getConnectedActivityChannelId() && N.default.getActivityPanelMode() === eQ.ActivityPanelModes.PANEL ? N.default.getFocusedLayout() === eQ.FocusedActivityLayouts.NO_CHAT ? eX.ChannelLayouts.NO_CHAT : eX.ChannelLayouts.NORMAL : null != r ? R.default.getLayout(r) : eX.ChannelLayouts.NORMAL, [r]), F = (0, h.useStateFromStores)([R.default], () => null != u ? R.default.getSelectedParticipant(u.id) : null), w = (0, h.useStateFromStores)([ek.default], () => ek.default.getCurrentUser()), k = (0, es.default)(S), H = (0, eR.default)(j, null == S ? void 0 : S.id), {
     section: B,
@@ -810,6 +812,7 @@ t.default = l.memo(function(e) {
     showChannelSummaries: et,
     isFavorites: z,
     headerGuildBreadcrumbPosition: z ? "left" : "right",
-    perkDemoEnabled: X
+    perkDemoEnabled: X,
+    hasTextActivityInPanelMode: y
   })
 })
