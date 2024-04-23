@@ -21,8 +21,8 @@ var l = s("735250"),
   v = s("588822"),
   x = s("81334"),
   _ = s("652853"),
-  N = s("335191"),
-  A = s("347949"),
+  A = s("335191"),
+  N = s("347949"),
   T = s("988246"),
   U = s("689938"),
   h = s("478741");
@@ -33,21 +33,21 @@ function p(e) {
     user: s,
     displayProfile: i,
     autoFocusNote: p = !1,
-    scrollToConnections: j = !1
+    scrollToConnections: g = !1
   } = e, {
-    trackUserProfileAction: g
-  } = (0, E.useUserProfileAnalyticsContext)(), P = (0, n.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), {
-    theme: R
-  } = (0, _.useUserProfileThemeContext)(), C = (0, n.useStateFromStores)([S.default], () => S.default.locale), M = (0, d.useIsInUserClanExperiment)(), y = (0, f.useIsUserRecentGamesEnabled)({
+    trackUserProfileAction: j
+  } = (0, E.useUserProfileAnalyticsContext)(), R = (0, n.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), {
+    theme: P
+  } = (0, _.useUserProfileThemeContext)(), M = (0, n.useStateFromStores)([S.default], () => S.default.locale), C = (0, d.useIsInUserClanExperiment)(), y = (0, f.useIsUserRecentGamesEnabled)({
     userId: s.id,
     location: "28tk0bf_3"
   }), O = (0, I.default)(s.id), F = a.useRef(null);
   return (a.useLayoutEffect(() => {
-    if (j) {
+    if (g) {
       var e;
       null == F || null === (e = F.current) || void 0 === e || e.scrollIntoView()
     }
-  }, [j]), P) ? (0, l.jsx)(T.default, {}) : (0, l.jsxs)(o.ScrollerThin, {
+  }, [g]), R) ? (0, l.jsx)(T.default, {}) : (0, l.jsxs)(o.ScrollerThin, {
     fade: !0,
     className: h.infoScroller,
     children: [(0, l.jsxs)("div", {
@@ -65,7 +65,7 @@ function p(e) {
         userId: s.id,
         headingClassName: h.userInfoSectionHeader,
         textClassName: h.userInfoText
-      }), M && (0, l.jsx)("div", {
+      }), C && (0, l.jsx)("div", {
         className: h.clans,
         children: (0, l.jsx)("div", {
           className: h.userInfoText,
@@ -73,7 +73,7 @@ function p(e) {
             userId: s.id
           })
         })
-      }), y && (0, l.jsx)(A.UserProfileRecentGamesContainer, {
+      }), y && (0, l.jsx)(N.UserProfileRecentGamesContainer, {
         userId: s.id,
         maxItems: 6,
         containerClassName: r()(h.userInfoText, h.recentGames)
@@ -85,15 +85,15 @@ function p(e) {
         userId: s.id,
         autoFocus: p,
         className: h.note,
-        onUpdate: () => g({
+        onUpdate: () => j({
           action: "SET_NOTE"
         })
       })]
-    }), (0, l.jsx)(N.ConnectedUserAccounts, {
+    }), (0, l.jsx)(A.ConnectedUserAccounts, {
       ref: F,
       connectedAccounts: O,
-      theme: R,
-      locale: C,
+      theme: P,
+      locale: M,
       className: h.userInfoSection,
       userId: s.id
     })]

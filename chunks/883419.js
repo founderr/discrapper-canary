@@ -41,8 +41,8 @@ function T(e) {
     handleClose: M
   } = e, {
     activeSubscription: k,
-    application: v,
-    setUpdatedSubscription: U,
+    application: U,
+    setUpdatedSubscription: v,
     contextMetadata: B,
     currencies: x,
     paymentSources: D,
@@ -60,7 +60,7 @@ function T(e) {
     setSubscriptionMetadataRequest: X,
     setHasAcceptedTerms: J
   } = (0, c.usePaymentContext)();
-  l()(null != H, "Expected plan to be selected"), l()(null != v, "Expected application");
+  l()(null != H, "Expected plan to be selected"), l()(null != U, "Expected application");
   let Q = r.useRef(null),
     [q, $] = (0, u.default)(!1, 500),
     [ee, et] = r.useState(null == z ? void 0 : z.guild_id),
@@ -71,8 +71,8 @@ function T(e) {
     })
   }, [Y]);
   let ea = r.useCallback(e => {
-      U(e), N(f.Step.CONFIRM)
-    }, [N, U]),
+      v(e), N(f.Step.CONFIRM)
+    }, [N, v]),
     er = r.useCallback(e => {
       et(e), X({
         ...z,
@@ -94,7 +94,7 @@ function T(e) {
           variant: "text-xs/medium",
           color: "interactive-normal",
           children: I.default.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_SUBTITLE.format({
-            applicationName: v.name
+            applicationName: U.name
           })
         })]
       }), T && !en && (0, a.jsxs)("div", {

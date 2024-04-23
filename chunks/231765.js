@@ -12,8 +12,8 @@ var a, n, l, i, r = s("735250"),
   S = s("481060"),
   E = s("37234"),
   T = s("607070"),
-  m = s("301822"),
-  f = s("206895"),
+  f = s("301822"),
+  m = s("206895"),
   _ = s("692437"),
   g = s("783539"),
   I = s("585483"),
@@ -465,7 +465,7 @@ let Q = (e, t, s) => {
         return null
     }
   },
-  q = e => 0 === e ? f.SlideDirection.LEFT : f.SlideDirection.RIGHT;
+  q = e => 0 === e ? m.SlideDirection.LEFT : m.SlideDirection.RIGHT;
 
 function Z() {
   let [e, t] = o.useState(0), [s, a] = o.useState(q(e)), [n, l] = o.useState(!1), i = (0, u.useStateFromStores)([T.default], () => T.default.useReducedMotion), d = n && !i;
@@ -477,14 +477,14 @@ function Z() {
   }, [e]), o.useEffect(() => {
     Math.random() > .99 && (0, N.unlockAchievement)(p.PoggermodeAchievementId.VISITOR_100)
   }, []), (0, r.jsxs)(r.Fragment, {
-    children: [(0, r.jsx)(f.default, {
+    children: [(0, r.jsx)(m.default, {
       className: D.slideAnimator,
       step: e,
       direction: s,
       children: Q(e, t, l)
     }), (0, r.jsx)("div", {
       className: d ? D.enableAnimationOverlayVisible : D.enableAnimationOverlayHidden,
-      children: (0, r.jsx)(m.default, {
+      children: (0, r.jsx)(f.default, {
         className: D.enableAnimation,
         importData: W,
         shouldAnimate: d,

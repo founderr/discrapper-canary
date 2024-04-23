@@ -9,8 +9,8 @@ a("470079");
 var n = a("442837"),
   r = a("524437"),
   l = a("663002"),
-  o = a("481060"),
-  d = a("2052"),
+  d = a("481060"),
+  o = a("2052"),
   i = a("410030"),
   u = a("100527"),
   c = a("906732"),
@@ -40,7 +40,7 @@ function D(e) {
     onClose: a
   } = t, {
     location: D
-  } = (0, d.useAnalyticsContext)(), {
+  } = (0, o.useAnalyticsContext)(), {
     analyticsLocations: b
   } = (0, c.default)(u.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), y = (0, n.useStateFromStores)([E.default], () => E.default.getCurrentUser()), S = (0, A.isPremiumExactly)(y, g.PremiumTypes.TIER_2), v = (0, A.isPremium)(y) && !S, j = (0, i.default)(), H = (0, l.isThemeLight)(j) ? I.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : I.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL;
   return (0, s.jsx)(R.default, {
@@ -57,10 +57,10 @@ function D(e) {
       colorOptions: H
     }),
     subHeader: O.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_SUBHEADER,
-    subHeaderExtra: () => (0, s.jsx)(o.Anchor, {
+    subHeaderExtra: () => (0, s.jsx)(d.Anchor, {
       className: T.termsApplyAnchor,
       href: M.default.getArticleURL(p.HelpdeskArticles.PREMIUM_APRIL_2024_MARKETING_MOMENT),
-      children: (0, s.jsx)(o.Heading, {
+      children: (0, s.jsx)(d.Heading, {
         variant: "heading-md/normal",
         className: T.termsApplyBodyText,
         children: O.default.Messages.BOGO_TERMS_APPLY
@@ -86,8 +86,8 @@ function D(e) {
       return (0, s.jsxs)(m.default, {
         className: T.buttonWide,
         innerClassName: T.innerButton,
-        color: o.Button.Colors.GREEN,
-        size: o.Button.Sizes.SMALL,
+        color: d.Button.Colors.GREEN,
+        size: d.Button.Sizes.SMALL,
         onClick: () => {
           f.default.track(p.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
             change_log_id: x,

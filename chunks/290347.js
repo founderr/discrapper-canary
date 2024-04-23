@@ -8,8 +8,8 @@ var s = a("735250"),
   n = a("470079"),
   r = a("120356"),
   l = a.n(r),
-  o = a("442837"),
-  d = a("481060"),
+  d = a("442837"),
+  o = a("481060"),
   i = a("607070"),
   u = a("605236"),
   c = a("524444"),
@@ -39,11 +39,11 @@ let O = e => {
       subHeader: a,
       imageSrc: n,
       tagText: r,
-      wideStyle: o
+      wideStyle: d
     } = e;
     return (0, s.jsxs)("div", {
       className: l()(p.featureCard, {
-        [p.wideStyle]: o
+        [p.wideStyle]: d
       }),
       children: [null != r ? (0, s.jsx)(O, {
         tagText: r,
@@ -51,16 +51,16 @@ let O = e => {
       }) : null, (0, s.jsx)("img", {
         alt: "",
         className: l()(p.featureCardImg, {
-          [p.wideStyle]: o
+          [p.wideStyle]: d
         }),
         src: n
       }), (0, s.jsxs)("div", {
         className: p.featureCardTextGroup,
-        children: [(0, s.jsx)(d.Heading, {
+        children: [(0, s.jsx)(o.Heading, {
           variant: "heading-lg/extrabold",
           className: p.featureCardTextHeader,
           children: t
-        }), (0, s.jsx)(d.Text, {
+        }), (0, s.jsx)(o.Text, {
           variant: "text-sm/normal",
           children: a
         })]
@@ -86,7 +86,7 @@ function h(e) {
   } = e, {
     onClose: y,
     transitionState: S
-  } = a, v = (0, m.useUID)(), j = x.length % 2 == 0, H = (0, o.useStateFromStores)([i.default], () => i.default.useReducedMotion), [U, F] = n.useState(Date.now()), [k, G] = n.useState(0), [w, B] = n.useState(0), [V, K] = n.useState(!1), [Y, W] = n.useState(!0), z = n.useRef(U), q = n.useRef(k), Z = n.useRef(w), J = n.useRef(V), Q = n.useRef(Y);
+  } = a, v = (0, m.useUID)(), j = x.length % 2 == 0, H = (0, d.useStateFromStores)([i.default], () => i.default.useReducedMotion), [U, F] = n.useState(Date.now()), [k, G] = n.useState(0), [w, B] = n.useState(0), [V, K] = n.useState(!1), [Y, W] = n.useState(!0), z = n.useRef(U), q = n.useRef(k), Z = n.useRef(w), J = n.useRef(V), Q = n.useRef(Y);
 
   function X() {
     let e = Date.now(),
@@ -121,18 +121,18 @@ function h(e) {
         dismissAction: g.ContentDismissActionType.DISMISS
       })
     }
-  }, [O, D]), (0, s.jsxs)(d.ModalRoot, {
+  }, [O, D]), (0, s.jsxs)(o.ModalRoot, {
     className: l()(p.root, t),
     transitionState: S,
     "aria-labelledby": v,
-    children: [(0, s.jsx)(d.ModalCloseButton, {
+    children: [(0, s.jsx)(o.ModalCloseButton, {
       className: p.closeButton,
       onClick: y
     }), (0, s.jsx)(I.default, {
       className: p.splash
-    }), null == h ? void 0 : h(), (0, s.jsxs)(d.ModalContent, {
+    }), null == h ? void 0 : h(), (0, s.jsxs)(o.ModalContent, {
       className: p.content,
-      children: [(0, s.jsx)(d.Heading, {
+      children: [(0, s.jsx)(o.Heading, {
         variant: "display-md",
         className: l()(p.headerText, C),
         children: L
@@ -181,7 +181,7 @@ function h(e) {
         alt: "",
         className: l()(p.video, f),
         src: r.src
-      }) : null, (0, s.jsx)(d.Heading, {
+      }) : null, (0, s.jsx)(o.Heading, {
         variant: "heading-lg/extrabold",
         className: p.bodyText,
         children: N

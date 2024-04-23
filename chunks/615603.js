@@ -12,8 +12,8 @@ var a = s("735250"),
   S = s("314684"),
   E = s("594174"),
   T = s("78839"),
-  m = s("267642"),
-  f = s("74538"),
+  f = s("267642"),
+  m = s("74538"),
   _ = s("283029"),
   g = s("357956"),
   I = s("275909"),
@@ -30,7 +30,7 @@ function A(e) {
     onUncancel: i,
     premiumSubscription: r,
     useReducedMotion: d
-  } = e, u = n.useMemo(() => null != t.cooldownEndsAt ? new Date(t.cooldownEndsAt) : null, [t]), c = (0, m.isGuildBoostSlotCanceled)(t);
+  } = e, u = n.useMemo(() => null != t.cooldownEndsAt ? new Date(t.cooldownEndsAt) : null, [t]), c = (0, f.isGuildBoostSlotCanceled)(t);
   return (0, a.jsxs)("li", {
     className: C.unappliedGuildBoostSlot,
     children: [(0, a.jsxs)("div", {
@@ -111,7 +111,7 @@ t.default = function(e) {
       t = [],
       s = 0;
     return g.forEach(a => {
-      !(0, m.isGuildBoostSlotCanceled)(a) && s++, null != a.premiumGuildSubscription ? e.push(a) : t.push(a)
+      !(0, f.isGuildBoostSlotCanceled)(a) && s++, null != a.premiumGuildSubscription ? e.push(a) : t.push(a)
     }), {
       appliedGuildBoostSlots: e,
       unappliedGuildBoostSlots: t,
@@ -131,7 +131,7 @@ t.default = function(e) {
     numUnappliedGuildBoostSlots: w
   }) : p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_V2.format({
     numUnappliedGuildBoostSlots: w
-  }), f.default.isPremium(M) ? l = y && 1 === w && F ? v.skuId === N.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH ? p.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT : p.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT : p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION.format({
+  }), m.default.isPremium(M) ? l = y && 1 === w && F ? v.skuId === N.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH ? p.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT : p.default.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT : p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION.format({
     numUnappliedGuildBoostSlots: w,
     learnMoreHook: (e, t) => (0, a.jsx)(o.Clickable, {
       className: C.headerLearnMoreLink,

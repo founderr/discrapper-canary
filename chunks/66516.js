@@ -16,8 +16,8 @@ var a = s("735250"),
   S = s("100527"),
   E = s("367907"),
   T = s("906732"),
-  m = s("414666"),
-  f = s("962746"),
+  f = s("414666"),
+  m = s("962746"),
   _ = s("296810"),
   g = s("621853"),
   I = s("246946"),
@@ -101,7 +101,7 @@ function j(e) {
       pendingPronouns: F,
       pendingNickname: y,
       activityName: D.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE,
-      activityCharacter: m.FakeActivityCharacter.PHIBI,
+      activityCharacter: f.FakeActivityCharacter.PHIBI,
       openPremiumSettings: L
     };
   return (0, a.jsxs)(T.AnalyticsLocationProvider, {
@@ -121,7 +121,7 @@ function j(e) {
         previewTitle: D.default.Messages.CHANGE_IDENTITY_PREVIEW_WITH_GUILD_NAME.format({
           guildName: null == t ? void 0 : t.name
         }),
-        profilePreview: (0, a.jsx)(f.default, {
+        profilePreview: (0, a.jsx)(m.default, {
           ...V,
           pendingThemeColors: k
         }),

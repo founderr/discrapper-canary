@@ -7,12 +7,12 @@ r.r(e), r.d(e, {
     return l
   }
 });
-var n = r("470079"),
-  u = r("937615"),
+var u = r("470079"),
+  n = r("937615"),
   i = r("689938");
 
 function l(t) {
-  return n.useMemo(() => {
+  return u.useMemo(() => {
     if (null == t) return;
     let e = null != t.role_id,
       r = t.attachments_count > 0;
@@ -23,12 +23,12 @@ function l(t) {
 }
 
 function o(t) {
-  return n.useMemo(() => {
+  return u.useMemo(() => {
     if ((null == t ? void 0 : t.price) == null) return;
     let {
       amount: e,
       currency: r
     } = t.price;
-    return (0, u.formatPrice)(e, r)
+    return (0, n.formatPrice)(e, r)
   }, [t])
 }

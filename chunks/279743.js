@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return m
+    return f
   }
 }), s("47120");
 var a = s("735250"),
@@ -22,7 +22,7 @@ function T(e) {
     className: s,
     onFlashEnd: l,
     animationDelay: S = 500
-  } = e, T = d.tokens.colors.TEXT_LINK, m = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), f = (0, d.useToken)(T).spring({
+  } = e, T = d.tokens.colors.TEXT_LINK, f = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion), m = (0, d.useToken)(T).spring({
     opacity: 0
   }), _ = (0, d.useToken)(T).spring({
     opacity: .1
@@ -35,17 +35,17 @@ function T(e) {
   }, [N, p] = (0, r.useSpring)(() => ({
     immediate: !0,
     from: {
-      backgroundColor: f,
-      borderColor: f
+      backgroundColor: m,
+      borderColor: m
     }
-  })), C = S + 200 + 200, A = m ? 0 : 200;
+  })), C = S + 200 + 200, A = f ? 0 : 200;
   return n.useEffect(() => {
     p({
       reset: !0,
       immediate: !1,
       to: {
-        backgroundColor: f,
-        borderColor: f
+        backgroundColor: m,
+        borderColor: m
       },
       config: {
         duration: A,
@@ -53,7 +53,7 @@ function T(e) {
       }
     }), p({
       delay: S,
-      immediate: m,
+      immediate: f,
       to: [{
         backgroundColor: _,
         borderColor: I
@@ -64,7 +64,7 @@ function T(e) {
       }
     }), p({
       delay: C,
-      immediate: m,
+      immediate: f,
       to: [{
         backgroundColor: g,
         borderColor: g
@@ -82,7 +82,7 @@ function T(e) {
   })
 }
 
-function m(e) {
+function f(e) {
   let {
     children: t,
     scrollPosition: s,

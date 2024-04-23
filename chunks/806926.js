@@ -27,7 +27,7 @@ function I(e) {
     autoFocusNote: v,
     transitionState: x,
     onClose: _
-  } = e, N = (0, a.useStateFromStores)([i.default], () => i.default.findActivity(t.id, e => e.type === S.ActivityTypes.PLAYING), [t]);
+  } = e, A = (0, a.useStateFromStores)([i.default], () => i.default.findActivity(t.id, e => e.type === S.ActivityTypes.PLAYING), [t]);
   return (0, l.jsxs)("div", {
     className: E.container,
     children: [(0, l.jsxs)("div", {
@@ -46,8 +46,8 @@ function I(e) {
         guildId: null == s ? void 0 : s.guildId,
         size: o.BadgeSizes.SIZE_24
       })]
-    }), null != N && (0, l.jsx)(n.default, {
-      activity: N
+    }), null != A && (0, l.jsx)(n.default, {
+      activity: A
     }), (0, l.jsxs)(u.default.Overlay, {
       children: [x === m.ModalTransitionState.ENTERED && (0, l.jsx)(r.default, {
         onTooltipClose: _

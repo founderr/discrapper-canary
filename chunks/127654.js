@@ -22,8 +22,8 @@ var a = l("475179"),
   p = l("979956"),
   g = l("981631"),
   x = l("959517"),
-  A = l("474936"),
-  M = l("689938");
+  M = l("474936"),
+  A = l("689938");
 
 function h(e, t) {
   let l = c.default.getCurrentUser(),
@@ -46,15 +46,15 @@ function h(e, t) {
       error_type: x.FileUploadErrorTypes.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR,
       attachment_mimetypes: m
     }), (0, s.openUploadError)({
-      title: M.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+      title: A.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
       help: (0, p.getErrorHelp)(l, a),
-      showPremiumUpsell: !(0, _.isPremiumExactly)(l, A.PremiumTypes.TIER_2),
+      showPremiumUpsell: !(0, _.isPremiumExactly)(l, M.PremiumTypes.TIER_2),
       fileSize: u
     });
     return
   }(0, s.openUploadError)({
-    title: M.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-    help: M.default.Messages.UPLOAD_AREA_REQUEST_LIMIT_HELP.format({
+    title: A.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+    help: A.default.Messages.UPLOAD_AREA_REQUEST_LIMIT_HELP.format({
       maxSize: f.sizeString(f.getMaxRequestSize())
     })
   })
@@ -76,8 +76,8 @@ function E(e, t, l) {
   }
   if (d.default.getUploadCount(t.id, l) + e.length > g.MAX_UPLOAD_COUNT) {
     (0, s.openUploadError)({
-      title: M.default.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
-      help: M.default.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({
+      title: A.default.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
+      help: A.default.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({
         limit: g.MAX_UPLOAD_COUNT
       })
     }), m.default.track(g.AnalyticEvents.UPLOAD_FILE_LIMIT_ERROR, {

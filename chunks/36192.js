@@ -16,8 +16,8 @@ var a = s("735250"),
   S = s("497321"),
   E = s("43015"),
   T = s("136097"),
-  m = s("605236"),
-  f = s("246946"),
+  f = s("605236"),
+  m = s("246946"),
   _ = s("594174"),
   g = s("460562"),
   I = s("465670"),
@@ -34,9 +34,9 @@ function R() {
   let {
     currentSession: t,
     otherSessions: s
-  } = (0, T.useAuthSessions)(), l = (0, r.useStateFromStores)([f.default], () => f.default.hidePersonalInformation), i = (0, r.useStateFromStores)([_.default], () => _.default.getCurrentUser()), [c, g] = n.useState(!1);
+  } = (0, T.useAuthSessions)(), l = (0, r.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), i = (0, r.useStateFromStores)([_.default], () => _.default.getCurrentUser()), [c, g] = n.useState(!1);
   n.useEffect(() => {
-    (0, m.markDismissibleContentAsDismissed)(d.DismissibleContent.AUTH_SESSIONS_NEW, {
+    (0, f.markDismissibleContentAsDismissed)(d.DismissibleContent.AUTH_SESSIONS_NEW, {
       dismissAction: A.ContentDismissActionType.AUTO
     }), (0, E.fetchAuthSessions)();
     let e = setTimeout(() => g(!0), 500);
@@ -144,8 +144,8 @@ function M(e) {
     current: d,
     setChecked: c,
     checked: S,
-    useChecks: m
-  } = e, f = null !== (r = null === (t = o.client_info) || void 0 === t ? void 0 : t.location) && void 0 !== r ? r : null === (s = o.client_info) || void 0 === s ? void 0 : s.ip, _ = null === (n = o.client_info) || void 0 === n ? void 0 : n.platform, {
+    useChecks: f
+  } = e, m = null !== (r = null === (t = o.client_info) || void 0 === t ? void 0 : t.location) && void 0 !== r ? r : null === (s = o.client_info) || void 0 === s ? void 0 : s.ip, _ = null === (n = o.client_info) || void 0 === n ? void 0 : n.platform, {
     text: g,
     icon: C
   } = function(e) {
@@ -166,7 +166,7 @@ function M(e) {
           text: e, icon: N.default
         }
     }
-  }(null === (l = o.client_info) || void 0 === l ? void 0 : l.os), A = d ? null : (0, T.formatDate)(o.approx_last_used_time), R = [g, _].filter(p.isNotNullish), M = [f, A].filter(p.isNotNullish), v = (0, u.useRedesignIconContext)().enabled ? 24 : 32;
+  }(null === (l = o.client_info) || void 0 === l ? void 0 : l.os), A = d ? null : (0, T.formatDate)(o.approx_last_used_time), R = [g, _].filter(p.isNotNullish), M = [m, A].filter(p.isNotNullish), v = (0, u.useRedesignIconContext)().enabled ? 24 : 32;
   return (0, a.jsxs)("div", {
     className: i()(x.session, d ? x.currentSession : null),
     children: [(0, a.jsx)("div", {
@@ -202,7 +202,7 @@ function M(e) {
           })]
         })]
       })]
-    }), d ? null : m ? (0, a.jsx)("div", {
+    }), d ? null : f ? (0, a.jsx)("div", {
       className: x.sessionCheckbox,
       children: (0, a.jsx)(u.Checkbox, {
         onChange: (e, t) => {

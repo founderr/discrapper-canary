@@ -4,10 +4,10 @@ l.r(t), l.d(t, {
     return E
   },
   IncreasedActivityForumTagOverflow: function() {
-    return M
+    return A
   },
   IncreasedActivityForumTagPill: function() {
-    return A
+    return M
   },
   default: function() {
     return h
@@ -27,31 +27,31 @@ var a, i, n = l("735250"),
   g = l("689938"),
   x = l("382473");
 
-function A(e) {
+function M(e) {
   let {
     tag: t,
     size: l = 1,
     disabled: a,
     className: i,
     onClick: r,
-    onRemove: A,
-    selected: M,
+    onRemove: M,
+    selected: A,
     ariaLabel: h
   } = e, {
     name: E,
     emojiId: T,
-    emojiName: v
-  } = t, I = null != A, [C, S] = s.useState(!1), L = (0, d.useStateFromStores)([_.default], () => null != T ? _.default.getUsableCustomEmojiById(T) : null), b = I || null != r, O = (!I || !C) && (null != T || null != v), R = 0 === l, y = s.useRef(null), P = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), U = (0, n.jsxs)(n.Fragment, {
-    children: [O ? (0, n.jsx)(m.default, {
+    emojiName: I
+  } = t, v = null != M, [C, L] = s.useState(!1), O = (0, d.useStateFromStores)([_.default], () => null != T ? _.default.getUsableCustomEmojiById(T) : null), S = v || null != r, b = (!v || !C) && (null != T || null != I), R = 0 === l, y = s.useRef(null), P = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), U = (0, n.jsxs)(n.Fragment, {
+    children: [b ? (0, n.jsx)(m.default, {
       className: o()(x.emoji, {
         [x.small]: R
       }),
       emojiId: T,
-      emojiName: v,
-      animated: !!(null == L ? void 0 : L.animated),
+      emojiName: I,
+      animated: !!(null == O ? void 0 : O.animated),
       size: "reaction",
       alt: ""
-    }) : null, C && I && (0, n.jsx)("div", {
+    }) : null, C && v && (0, n.jsx)("div", {
       className: x.closeCircle,
       children: (0, n.jsx)(p.default, {
         className: x.close
@@ -66,18 +66,18 @@ function A(e) {
     key: t.id,
     className: o()(x.pill, x.increasedActivityPill, {
       [x.disabled]: a,
-      [x.clickable]: b,
+      [x.clickable]: S,
       [x.increasedActivitySmall]: R,
-      [x.selected]: M
+      [x.selected]: A
     }, i),
     onClick: e => {
-      null == r || r(e), null == A || A(t), !P && null != y.current && y.current.blur()
+      null == r || r(e), null == M || M(t), !P && null != y.current && y.current.blur()
     },
-    onMouseEnter: () => I && S(!0),
-    onMouseLeave: () => I && S(!1)
-  }, z = (0, u.useListItem)("forum-tag-".concat(t.id));
-  return b ? (0, n.jsx)(c.Clickable, {
-    ...z,
+    onMouseEnter: () => v && L(!0),
+    onMouseLeave: () => v && L(!1)
+  }, D = (0, u.useListItem)("forum-tag-".concat(t.id));
+  return S ? (0, n.jsx)(c.Clickable, {
+    ...D,
     innerRef: y,
     focusProps: {
       ringTarget: y
@@ -86,7 +86,7 @@ function A(e) {
       tagName: E
     }),
     role: "button",
-    "aria-pressed": M,
+    "aria-pressed": A,
     ...j,
     children: U
   }) : (0, n.jsx)("div", {
@@ -98,7 +98,7 @@ function A(e) {
   })
 }
 
-function M(e) {
+function A(e) {
   let {
     tags: t,
     count: l,
@@ -134,23 +134,23 @@ function h(e) {
     disabled: a,
     className: i,
     onClick: r,
-    onRemove: A,
-    selected: M,
+    onRemove: M,
+    selected: A,
     ariaLabel: h
   } = e, {
     name: E,
     emojiId: T,
-    emojiName: v
-  } = t, I = null != A, [C, S] = s.useState(!1), L = (0, d.useStateFromStores)([_.default], () => null != T ? _.default.getUsableCustomEmojiById(T) : null), b = I || null != r, O = (!I || !C) && (null != T || null != v), R = 0 === l, y = s.useRef(null), P = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), U = (0, n.jsxs)(n.Fragment, {
-    children: [O ? (0, n.jsx)(m.default, {
+    emojiName: I
+  } = t, v = null != M, [C, L] = s.useState(!1), O = (0, d.useStateFromStores)([_.default], () => null != T ? _.default.getUsableCustomEmojiById(T) : null), S = v || null != r, b = (!v || !C) && (null != T || null != I), R = 0 === l, y = s.useRef(null), P = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), U = (0, n.jsxs)(n.Fragment, {
+    children: [b ? (0, n.jsx)(m.default, {
       className: o()(x.emoji, {
         [x.small]: R
       }),
       emojiId: T,
-      emojiName: v,
-      animated: !!(null == L ? void 0 : L.animated),
+      emojiName: I,
+      animated: !!(null == O ? void 0 : O.animated),
       size: "reaction"
-    }) : null, C && I && (0, n.jsx)("div", {
+    }) : null, C && v && (0, n.jsx)("div", {
       className: x.closeCircle,
       children: (0, n.jsx)(p.default, {
         className: x.close
@@ -164,18 +164,18 @@ function h(e) {
     key: t.id,
     className: o()(x.pill, {
       [x.disabled]: a,
-      [x.clickable]: b,
+      [x.clickable]: S,
       [x.small]: R,
-      [x.selected]: M
+      [x.selected]: A
     }, i),
     onClick: e => {
-      null == r || r(e), null == A || A(t), !P && null != y.current && y.current.blur()
+      null == r || r(e), null == M || M(t), !P && null != y.current && y.current.blur()
     },
-    onMouseEnter: () => I && S(!0),
-    onMouseLeave: () => I && S(!1)
-  }, z = (0, u.useListItem)("forum-tag-".concat(t.id));
-  return b ? (0, n.jsx)(c.Clickable, {
-    ...z,
+    onMouseEnter: () => v && L(!0),
+    onMouseLeave: () => v && L(!1)
+  }, D = (0, u.useListItem)("forum-tag-".concat(t.id));
+  return S ? (0, n.jsx)(c.Clickable, {
+    ...D,
     innerRef: y,
     focusProps: {
       ringTarget: y
@@ -184,7 +184,7 @@ function h(e) {
       tagName: E
     }),
     role: "button",
-    "aria-pressed": M,
+    "aria-pressed": A,
     ...j,
     children: U
   }) : (0, n.jsx)("div", {

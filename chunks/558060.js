@@ -8,8 +8,8 @@ var l = a("735250");
 a("470079");
 var s = a("120356"),
   r = a.n(s),
-  i = a("399606"),
-  n = a("663002"),
+  n = a("399606"),
+  i = a("663002"),
   o = a("481060"),
   u = a("210887"),
   c = a("594174"),
@@ -29,26 +29,26 @@ function g(e) {
     disableTooltipPointerEvents: g,
     alwaysWhiteText: b = !0,
     nitroWheelColor: S
-  } = e, x = (0, i.useStateFromStores)([c.default], () => c.default.getCurrentUser()), T = (0, i.useStateFromStores)([u.default], () => (0, n.isThemeDark)(u.default.theme)), L = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.DEFAULT);
-  if (null == L) return null;
-  if (L.amount <= 0) return (0, l.jsx)("div", {
+  } = e, x = (0, n.useStateFromStores)([c.default], () => c.default.getCurrentUser()), T = (0, n.useStateFromStores)([u.default], () => (0, i.isThemeDark)(u.default.theme)), v = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.DEFAULT);
+  if (null == v) return null;
+  if (v.amount <= 0) return (0, l.jsx)("div", {
     className: r()(E.priceTagsContainer, a),
     children: (0, l.jsx)(C.default, {
       alwaysWhiteText: b,
-      price: L,
+      price: v,
       className: s
     })
   });
-  let v = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
+  let L = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
     I = !f.default.canUseCollectibles(x);
   return (0, l.jsxs)("div", {
     className: r()(E.priceTagsContainer, a),
     children: [(0, l.jsx)(C.default, {
       alwaysWhiteText: b,
-      price: L,
-      className: r()([s, I ? void 0 : E.strikedPrice])
-    }), null != v && (0, l.jsx)(C.default, {
       price: v,
+      className: r()([s, I ? void 0 : E.strikedPrice])
+    }), null != L && (0, l.jsx)(C.default, {
+      price: L,
       alwaysWhiteText: b,
       renderPrice: I ? e => h.default.Messages.COLLECTIBLES_NON_PREMIUM_PRICE.format({
         price: e

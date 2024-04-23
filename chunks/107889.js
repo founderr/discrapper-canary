@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return P
+    return R
   }
 }), s("47120");
 var l = s("735250"),
@@ -21,23 +21,23 @@ var l = s("735250"),
   v = s("705556"),
   x = s("301984"),
   _ = s("94918"),
-  N = s("664794"),
-  A = s("980768"),
+  A = s("664794"),
+  N = s("980768"),
   T = s("806926"),
   U = s("740021"),
   h = s("228168"),
   p = s("981631"),
-  j = s("689938"),
-  g = s("420867");
+  g = s("689938"),
+  j = s("420867");
 
-function P(e) {
+function R(e) {
   let {
     user: t,
     guildId: s,
-    channelId: P,
-    messageId: R,
-    roleId: C,
-    friendToken: M,
+    channelId: R,
+    messageId: P,
+    roleId: M,
+    friendToken: C,
     initialSection: y,
     autoFocusNote: O,
     transitionState: F,
@@ -49,9 +49,9 @@ function P(e) {
     layout: "SIMPLIFIED_MODAL",
     userId: t.id,
     guildId: b,
-    channelId: P,
-    messageId: R,
-    roleId: C
+    channelId: R,
+    messageId: P,
+    roleId: M
   }), [k, V] = a.useState(b), w = (0, E.default)(t.id), H = (0, E.default)(t.id, b), Y = null == k ? w : H, {
     activity: z,
     customStatusActivity: W
@@ -75,30 +75,30 @@ function P(e) {
       layout: "SIMPLIFIED_MODAL",
       userId: t.id,
       guildId: b,
-      channelId: P,
-      messageId: R,
-      roleId: C,
+      channelId: R,
+      messageId: P,
+      roleId: M,
       children: (0, l.jsxs)(r.ModalRoot, {
         transitionState: F,
-        className: g.root,
+        className: j.root,
         hideShadow: !0,
-        "aria-label": j.default.Messages.USER_PROFILE_MODAL,
+        "aria-label": g.default.Messages.USER_PROFILE_MODAL,
         children: [(0, l.jsx)("div", {
           ref: Z,
           children: (0, l.jsxs)(I.default, {
             user: t,
             displayProfile: Y,
             profileType: h.UserProfileTypes.FULL_SIZE,
-            children: [(0, l.jsxs)(A.default, {
+            children: [(0, l.jsxs)(N.default, {
               isFaded: (null == Y ? void 0 : Y.profileEffectId) != null && !K,
               children: [(0, l.jsx)(_.default, {
                 user: t,
                 guildId: b,
-                channelId: P,
+                channelId: R,
                 onClose: D
               }), (0, l.jsx)(x.default, {
                 user: t,
-                friendToken: M
+                friendToken: C
               }), (0, l.jsx)(v.default, {
                 type: "overlay",
                 user: t,
@@ -106,13 +106,13 @@ function P(e) {
                 onClose: () => {
                   D(), (0, n.popLayer)()
                 }
-              }), (0, l.jsx)(N.default, {
+              }), (0, l.jsx)(A.default, {
                 user: t,
                 guildId: b,
                 viewProfileItem: (null == H ? void 0 : H.guildId) == null ? null : (null == Y ? void 0 : Y.guildId) != null ? (0, l.jsx)(r.MenuItem, {
                   id: "view-main-profile",
-                  label: j.default.Messages.VIEW_MAIN_PROFILE,
-                  subtext: j.default.Messages.AKA_DISPLAY_NAME.format({
+                  label: g.default.Messages.VIEW_MAIN_PROFILE,
+                  subtext: g.default.Messages.AKA_DISPLAY_NAME.format({
                     displayName: S.default.getName(void 0, void 0, t)
                   }),
                   action: () => {
@@ -123,9 +123,9 @@ function P(e) {
                   }
                 }) : (0, l.jsx)(r.MenuItem, {
                   id: "view-server-profile",
-                  label: j.default.Messages.VIEW_SERVER_PROFILE,
-                  subtext: j.default.Messages.AKA_DISPLAY_NAME.format({
-                    displayName: S.default.getName(b, P, t)
+                  label: g.default.Messages.VIEW_SERVER_PROFILE,
+                  subtext: g.default.Messages.AKA_DISPLAY_NAME.format({
+                    displayName: S.default.getName(b, R, t)
                   }),
                   action: () => {
                     G({
@@ -139,7 +139,7 @@ function P(e) {
               user: t,
               displayProfile: Y,
               guildId: b,
-              channelId: P,
+              channelId: R,
               activity: z,
               customStatusActivity: W,
               onClose: D

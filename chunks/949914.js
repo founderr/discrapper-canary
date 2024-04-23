@@ -12,8 +12,8 @@ var a = s("735250"),
   S = s("254854"),
   E = s("230711"),
   T = s("100527"),
-  m = s("906732"),
-  f = s("377171"),
+  f = s("906732"),
+  m = s("377171"),
   _ = s("674180"),
   g = s("374649"),
   I = s("908951"),
@@ -71,7 +71,7 @@ let F = e => {
       subscription: t
     } = e, {
       analyticsLocations: s
-    } = (0, m.default)(), [n] = (0, g.useSubscriptionInvoicePreview)({
+    } = (0, f.default)(), [n] = (0, g.useSubscriptionInvoicePreview)({
       subscriptionId: t.id,
       renewal: !0,
       analyticsLocations: s,
@@ -126,7 +126,7 @@ t.default = e => {
     subscriptionInfo: I
   } = (0, v.default)(t), [N, C] = n.useState(!1), R = (0, O.useUID)(), {
     analyticsLocations: H
-  } = (0, m.default)(), {
+  } = (0, f.default)(), {
     shouldHideGuildPurchaseEntryPoints: V
   } = (0, _.useShouldHideGuildPurchaseEntryPoints)(null == o ? void 0 : o.id), Y = (null == t ? void 0 : t.paymentGateway) === b.PaymentGateways.APPLE_PARTNER;
   if (null == l || null == s || null == I) return null;
@@ -181,7 +181,7 @@ t.default = e => {
         ...e,
         children: (0, a.jsx)(M.TextBadge, {
           text: B.default.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_IOS_PLATFORM,
-          color: f.default.INTERACTIVE_MUTED
+          color: m.default.INTERACTIVE_MUTED
         })
       })
     }) : null;

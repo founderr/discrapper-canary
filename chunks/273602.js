@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return b
+    return S
   }
 }), l("47120");
 var a = l("735250"),
@@ -19,42 +19,42 @@ var a = l("735250"),
   p = l("375954"),
   g = l("153124"),
   x = l("403182"),
-  A = l("709054"),
-  M = l("127654"),
+  M = l("709054"),
+  A = l("127654"),
   h = l("979956"),
   E = l("228392"),
   T = l("404616"),
-  v = l("470623"),
-  I = l("981631"),
+  I = l("470623"),
+  v = l("981631"),
   C = l("231338"),
-  S = l("689938"),
-  L = l("459190");
+  L = l("689938"),
+  O = l("459190");
 
-function b(e) {
+function S(e) {
   var t;
   let {
     threadId: l,
-    attachments: b,
-    sendMessage: O,
+    attachments: S,
+    sendMessage: b,
     transitionState: R,
     onClose: y
-  } = e, P = (0, g.useUID)(), U = (0, n.useStateFromStores)([m.default], () => m.default.getChannel(l), [l]), j = (0, n.useStateFromStores)([_.default], () => _.default.getGuild(null == U ? void 0 : U.getGuildId()), [U]), z = (0, n.useStateFromStores)([m.default], () => m.default.getChannel(null == U ? void 0 : U.parent_id), [U]), D = null === (t = b[0]) || void 0 === t ? void 0 : t.item, [N, F] = i.useState(null);
+  } = e, P = (0, g.useUID)(), U = (0, n.useStateFromStores)([m.default], () => m.default.getChannel(l), [l]), j = (0, n.useStateFromStores)([_.default], () => _.default.getGuild(null == U ? void 0 : U.getGuildId()), [U]), D = (0, n.useStateFromStores)([m.default], () => m.default.getChannel(null == U ? void 0 : U.parent_id), [U]), N = null === (t = S[0]) || void 0 === t ? void 0 : t.item, [z, F] = i.useState(null);
   i.useEffect(() => {
-    null != D && (0, c.processImage)(D.file, (e, t) => F(e), C.NOOP)
-  }, [D]);
-  let k = null != D && null != N ? {
-      src: N,
+    null != N && (0, c.processImage)(N.file, (e, t) => F(e), C.NOOP)
+  }, [N]);
+  let k = null != N && null != z ? {
+      src: z,
       width: T.MAX_THUMBNAIL_WIDTH,
       height: T.MAX_THUMBNAIL_HEIGHT,
-      spoiler: b[0].spoiler,
-      alt: b[0].description
+      spoiler: S[0].spoiler,
+      alt: S[0].description
     } : null,
     [G, w] = i.useState(!1),
     B = i.useCallback(() => {
       (0, E.trackForumAddMediaToOriginalPostClicked)({
         added: !1
-      }), O(), y()
-    }, [O, y]),
+      }), b(), y()
+    }, [b, y]),
     H = i.useCallback(() => {
       null != U && null != j && ((0, E.trackForumAddMediaToOriginalPostClicked)({
         added: !0
@@ -65,18 +65,18 @@ function b(e) {
           setIsUploading: a,
           guild: i,
           onClose: n
-        } = e, s = new u.default(I.Endpoints.MESSAGE(t.id, A.default.castChannelIdAsMessageId(t.id)), "PATCH");
+        } = e, s = new u.default(v.Endpoints.MESSAGE(t.id, M.default.castChannelIdAsMessageId(t.id)), "PATCH");
         s.on("start", () => {
           a(!0)
         }), s.on("progress", e => {
           let r = (0, x.maxFileSize)(i.id);
-          e.currentSize > r && (s.cancel(), a(!1), n(), (0, M.showUploadFileSizeExceededError)(t, (0, h.getWebUploadFiles)(l)))
+          e.currentSize > r && (s.cancel(), a(!1), n(), (0, A.showUploadFileSizeExceededError)(t, (0, h.getWebUploadFiles)(l)))
         }), s.on("error", (e, l, i) => {
-          a(!1), l === I.AbortCodes.EXPLICIT_CONTENT && (n(), r.default.sendExplicitMediaClydeError(t.id, null == i ? void 0 : i.attachments, d.TrackMediaRedactionContext.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED), o.default.clearAll(t.id, f.DraftType.ChannelMessage))
+          a(!1), l === v.AbortCodes.EXPLICIT_CONTENT && (n(), r.default.sendExplicitMediaClydeError(t.id, null == i ? void 0 : i.attachments, d.TrackMediaRedactionContext.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED), o.default.clearAll(t.id, f.DraftType.ChannelMessage))
         }), s.on("complete", () => {
           a(!1), n(), o.default.clearAll(t.id, f.DraftType.ChannelMessage)
         });
-        let c = p.default.getMessages(t.id).get(A.default.castChannelIdAsMessageId(t.id)),
+        let c = p.default.getMessages(t.id).get(M.default.castChannelIdAsMessageId(t.id)),
           m = null != c ? c.attachments : [];
         s.uploadFiles(l, {
           attachments: [...m]
@@ -85,32 +85,32 @@ function b(e) {
         })
       }({
         thread: U,
-        attachments: b,
+        attachments: S,
         setIsUploading: w,
         guild: j,
         onClose: y
       }))
-    }, [U, b, w, j, y]);
-  return null == z ? null : (0, a.jsxs)(s.ModalRoot, {
+    }, [U, S, w, j, y]);
+  return null == D ? null : (0, a.jsxs)(s.ModalRoot, {
     transitionState: R,
     size: s.ModalSize.SMALL,
-    className: L.modalRoot,
+    className: O.modalRoot,
     "aria-labelledby": P,
     children: [(0, a.jsxs)(s.ModalContent, {
-      className: L.modal,
+      className: O.modal,
       children: [(0, a.jsx)(s.Heading, {
         variant: "heading-md/semibold",
-        className: L.header,
+        className: O.header,
         id: P,
-        children: S.default.Messages.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_TITLE
+        children: L.default.Messages.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_TITLE
       }), (0, a.jsx)(s.Text, {
         variant: "text-md/normal",
-        className: L.__invalid_body,
-        children: S.default.Messages.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_DESCRIPTION
+        className: O.__invalid_body,
+        children: L.default.Messages.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_DESCRIPTION
       }), (0, a.jsx)("div", {
-        className: L.forumPost,
-        children: (0, a.jsx)(v.ForumPostComposerStoreProvider, {
-          createStore: () => (0, v.createForumPostComposerStore)(z),
+        className: O.forumPost,
+        children: (0, a.jsx)(I.ForumPostComposerStoreProvider, {
+          createStore: () => (0, I.createForumPostComposerStore)(D),
           children: (0, a.jsx)(T.default, {
             threadId: l,
             goToThread: C.NOOP,
@@ -119,26 +119,26 @@ function b(e) {
         })
       })]
     }), (0, a.jsxs)(s.ModalFooter, {
-      className: L.modalFooter,
+      className: O.modalFooter,
       children: [(0, a.jsx)(s.Button, {
         look: s.Button.Looks.BLANK,
-        className: L.cancelButton,
+        className: O.cancelButton,
         disabled: G,
         onClick: y,
-        children: S.default.Messages.CANCEL
+        children: L.default.Messages.CANCEL
       }), (0, a.jsx)(s.Button, {
         color: s.Button.Colors.PRIMARY,
-        className: L.dontAddButton,
+        className: O.dontAddButton,
         disabled: G,
         onClick: B,
-        children: S.default.Messages.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_DONT_ADD
+        children: L.default.Messages.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_DONT_ADD
       }), (0, a.jsx)(s.Button, {
         color: s.Button.Colors.BRAND,
-        className: L.__invalid_button,
+        className: O.__invalid_button,
         submitting: G,
         onClick: H,
         autoFocus: !0,
-        children: S.default.Messages.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_ADD
+        children: L.default.Messages.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_ADD
       })]
     })]
   })

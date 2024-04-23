@@ -21,18 +21,18 @@ var l = s("735250"),
   v = s("621113"),
   x = s("759231"),
   _ = s("998502"),
-  N = s("785717"),
-  A = s("621853"),
+  A = s("785717"),
+  N = s("621853"),
   T = s("204197"),
   U = s("735336"),
   h = s("520978"),
   p = s("184325"),
-  j = s("652853"),
-  g = s("496206"),
-  P = s("228168"),
-  R = s("981631"),
-  C = s("231338"),
-  M = s("689938"),
+  g = s("652853"),
+  j = s("496206"),
+  R = s("228168"),
+  P = s("981631"),
+  M = s("231338"),
+  C = s("689938"),
   y = s("950114");
 let O = n.AvatarSizes.SIZE_120,
   F = _.default.getEnableHardwareAcceleration() ? n.AnimatedAvatar : n.Avatar;
@@ -48,11 +48,11 @@ function L(e) {
     isStreaming: G,
     hasProfileEffect: k,
     onClose: V
-  } = e, w = (0, i.useStateFromStores)([I.default], () => I.default.getRelationshipType(_.id)), H = (0, i.useStateFromStores)([E.default], () => E.default.isMobileOnline(_.id)), Y = (0, i.useStateFromStores)([E.default], () => E.default.getStatus(_.id)), z = (0, i.useStateFromStores)([A.default], () => A.default.getUserProfile(_.id)), W = (0, i.useStateFromStores)([m.default], () => m.default.getId() === _.id), {
+  } = e, w = (0, i.useStateFromStores)([I.default], () => I.default.getRelationshipType(_.id)), H = (0, i.useStateFromStores)([E.default], () => E.default.isMobileOnline(_.id)), Y = (0, i.useStateFromStores)([E.default], () => E.default.getStatus(_.id)), z = (0, i.useStateFromStores)([N.default], () => N.default.getUserProfile(_.id)), W = (0, i.useStateFromStores)([m.default], () => m.default.getId() === _.id), {
     theme: Z
-  } = (0, j.useUserProfileThemeContext)(), {
+  } = (0, g.useUserProfileThemeContext)(), {
     trackUserProfileAction: K
-  } = (0, N.useUserProfileAnalyticsContext)(), {
+  } = (0, A.useUserProfileAnalyticsContext)(), {
     avatarSrc: J,
     eventHandlers: Q,
     avatarDecorationSrc: q
@@ -88,7 +88,7 @@ function L(e) {
         context: {
           location: "User Profile"
         },
-        type: R.RelationshipTypes.BLOCKED
+        type: P.RelationshipTypes.BLOCKED
       })
     } catch (e) {
       $()
@@ -107,7 +107,7 @@ function L(e) {
       displayProfile: t,
       onClose: $,
       user: _,
-      profileType: P.UserProfileTypes.MODAL,
+      profileType: R.UserProfileTypes.MODAL,
       hasProfileEffect: k
     }), (0, l.jsxs)("div", {
       className: y.header,
@@ -118,7 +118,7 @@ function L(e) {
           avatarDecoration: q,
           size: O,
           className: y.avatar,
-          status: X ? C.StatusTypes.UNKNOWN : G ? C.StatusTypes.STREAMING : Y,
+          status: X ? M.StatusTypes.UNKNOWN : G ? M.StatusTypes.STREAMING : Y,
           statusBackdropColor: (0, n.getStatusBackdropColor)(Z),
           isMobile: H,
           statusTooltip: !0,
@@ -127,7 +127,7 @@ function L(e) {
       }), (0, l.jsxs)("div", {
         className: y.headerTop,
         children: [(null == z ? void 0 : z.profileFetchFailed) && !_.isClyde() ? (0, l.jsx)(n.Tooltip, {
-          text: M.default.Messages.USER_PROFILE_LOAD_ERROR,
+          text: C.default.Messages.USER_PROFILE_LOAD_ERROR,
           spacing: 20,
           children: e => (0, l.jsx)(x.default, {
             ...e,
@@ -146,7 +146,7 @@ function L(e) {
           children: [(0, l.jsx)(h.default, {
             className: y.applicationInstallButton,
             application: null == z ? void 0 : z.application
-          }), (0, l.jsx)(g.default, {
+          }), (0, l.jsx)(j.default, {
             user: _,
             isCurrentUser: W,
             relationshipType: w,

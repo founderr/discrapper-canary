@@ -22,8 +22,8 @@ var a = s("442837"),
   v = s("228168"),
   x = s("182294"),
   _ = s("231338"),
-  N = s("262572");
-let A = d.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
+  A = s("262572");
+let N = d.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
 
 function T(e) {
   let {
@@ -36,15 +36,15 @@ function T(e) {
     onClose: h
   } = e, {
     theme: p
-  } = (0, E.useUserProfileThemeContext)(), j = (0, c.default)(t.id, T), {
-    avatarSrc: g,
-    eventHandlers: P,
-    avatarDecorationSrc: R
+  } = (0, E.useUserProfileThemeContext)(), g = (0, c.default)(t.id, T), {
+    avatarSrc: j,
+    eventHandlers: R,
+    avatarDecorationSrc: P
   } = (0, f.default)({
     user: t,
     guildId: null == s ? void 0 : s.guildId,
     size: x.AvatarSizes.SIZE_120
-  }), [C, M] = (0, a.useStateFromStoresArray)([u.default], () => {
+  }), [M, C] = (0, a.useStateFromStoresArray)([u.default], () => {
     let e = u.default.isMobileOnline(t.id);
     return (0, o.shouldDisableUserPresenceInChannel)(t, U) ? [_.StatusTypes.UNKNOWN, e] : (0, n.default)(i) ? [_.StatusTypes.STREAMING, e] : [u.default.getStatus(t.id), e]
   });
@@ -55,26 +55,26 @@ function T(e) {
       profileType: v.UserProfileTypes.FULL_SIZE,
       hasProfileEffect: (null == s ? void 0 : s.profileEffectId) != null
     }), (0, l.jsxs)("div", {
-      className: N.inner,
+      className: A.inner,
       children: [(0, l.jsxs)("div", {
-        ...P,
-        children: [(0, l.jsx)(A, {
-          src: g,
-          avatarDecoration: R,
+        ...R,
+        children: [(0, l.jsx)(N, {
+          src: j,
+          avatarDecoration: P,
           size: x.AvatarSizes.SIZE_120,
-          className: N.avatar,
-          status: C,
+          className: A.avatar,
+          status: M,
           statusBackdropColor: (0, r.getStatusBackdropColor)(p),
           "aria-label": t.username,
-          isMobile: M,
+          isMobile: C,
           statusTooltip: !0
         }), null != d && (0, l.jsx)(m.UserProfileCustomStatusBubble, {
-          positionStyle: N.statusBubblePosition,
+          positionStyle: A.statusBubblePosition,
           statusActivity: d
         })]
       }), (0, l.jsx)("div", {
-        className: N.buttons,
-        children: j && (0, l.jsx)(I.default, {
+        className: A.buttons,
+        children: g && (0, l.jsx)(I.default, {
           user: t,
           onClose: h
         })

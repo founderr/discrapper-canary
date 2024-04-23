@@ -5,11 +5,11 @@ a("470079");
 var n = a("692547"),
   r = a("780384"),
   l = a("481060"),
-  o = a("410030");
+  d = a("410030");
 t.default = e => {
   let {
     className: t
-  } = e, a = (0, o.default)(), d = (0, l.useToken)(n.default.colors.BACKGROUND_ACCENT).hex();
+  } = e, a = (0, d.default)(), o = (0, l.useToken)(n.default.colors.BACKGROUND_ACCENT).hex();
   return (0, s.jsx)("svg", {
     width: "700",
     height: "120",
@@ -17,7 +17,7 @@ t.default = e => {
     className: t,
     xmlns: "http://www.w3.org/2000/svg",
     children: (0, s.jsx)("path", {
-      fill: (0, r.isThemeDark)(a) ? d : "white",
+      fill: (0, r.isThemeDark)(a) ? o : "white",
       opacity: "1",
       d: "M351 39.047C185.4 -31.2102 48 9.77319 0 39.047V583.068C0 587.486 3.58174 591.068 8.00002 591.068H692C696.418 591.068 700 587.486 700 583.068V39.047C653.333 68.3208 516.6 109.304 351 39.047Z"
     })

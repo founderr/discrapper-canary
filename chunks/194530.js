@@ -17,9 +17,9 @@ var a = s("735250"),
   E = s("370362");
 
 function T(e) {
-  var t, s, T, m;
+  var t, s, T, f;
   let {
-    transitionState: f,
+    transitionState: m,
     onSuccess: _,
     onClose: g,
     requirementsUpdated: I,
@@ -40,12 +40,12 @@ function T(e) {
     }
   }
   return n.useEffect(() => {
-    if (f === i.ModalTransitionState.ENTERED) {
+    if (m === i.ModalTransitionState.ENTERED) {
       var e;
       null === (e = j.current) || void 0 === e || e.focus()
     }
-  }, [f]), (0, a.jsxs)(i.ModalRoot, {
-    transitionState: f,
+  }, [m]), (0, a.jsxs)(i.ModalRoot, {
+    transitionState: m,
     children: [(0, a.jsxs)(i.ModalHeader, {
       separator: !1,
       className: E.header,
@@ -79,7 +79,7 @@ function T(e) {
         }), (0, a.jsx)(i.FormItem, {
           className: E.newPassword,
           title: S.default.Messages.FORM_LABEL_NEW_PASSWORD,
-          error: null !== (m = null !== (T = null == L ? void 0 : null === (s = L.new_password) || void 0 === s ? void 0 : s[0]) && void 0 !== T ? T : R) && void 0 !== m ? m : void 0,
+          error: null !== (f = null !== (T = null == L ? void 0 : null === (s = L.new_password) || void 0 === s ? void 0 : s[0]) && void 0 !== T ? T : R) && void 0 !== f ? f : void 0,
           children: (0, a.jsx)(i.TextInput, {
             type: "password",
             value: C,

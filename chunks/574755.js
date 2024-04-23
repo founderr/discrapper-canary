@@ -16,8 +16,8 @@ var a = s("735250"),
   S = s("131951"),
   E = s("924557"),
   T = s("435064"),
-  m = s("779618"),
-  f = s("39604"),
+  f = s("779618"),
+  m = s("39604"),
   _ = s("703288"),
   g = s("491758"),
   I = s("183632"),
@@ -42,7 +42,7 @@ function A() {
     {
       viewerClipsEnabled: O
     } = (0, l.useStateFromStoresObject)([T.default], () => T.default.getSettings()),
-    x = (0, m.default)(S.default);
+    x = (0, f.default)(S.default);
   return n.useEffect(() => {
     (0, d.markDismissibleContentAsDismissed)(i.DismissibleContent.CLIPS_SETTINGS_BETA_TAG)
   }), (0, a.jsxs)(o.AnalyticsLocationProvider, {
@@ -64,7 +64,7 @@ function A() {
         className: p.formItem,
         value: e,
         note: h.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
-        onChange: e => f.updateAllowVoiceRecording({
+        onChange: e => m.updateAllowVoiceRecording({
           allowVoiceRecording: e
         }),
         children: h.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
@@ -73,7 +73,7 @@ function A() {
         className: p.formItem,
         value: O,
         note: h.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
-        onChange: e => f.updateViewerClipsEnabled({
+        onChange: e => m.updateViewerClipsEnabled({
           enabled: e,
           trackAnalytics: !0
         }),

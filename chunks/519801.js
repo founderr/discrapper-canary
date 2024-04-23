@@ -43,8 +43,8 @@ function C(e) {
     k = () => {
       T(), null == N || N()
     },
-    v = y === f.Step.CONFIRM,
-    U = (0, u.isApplicationUserSubscription)(null !== (n = null == R ? void 0 : R.flags) && void 0 !== n ? n : 0),
+    U = y === f.Step.CONFIRM,
+    v = (0, u.isApplicationUserSubscription)(null !== (n = null == R ? void 0 : R.flags) && void 0 !== n ? n : 0),
     B = null != b && b.benefits.length > 0 ? p.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_BENEFITS_SUBTITLE.format({
       benefitCount: b.benefits.length
     }) : null;
@@ -65,7 +65,7 @@ function C(e) {
       tier: M
     }),
     subtitle: p.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_BENEFITS_PREVIEW,
-    description: U ? p.default.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_SUBTITLE.format({
+    description: v ? p.default.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_SUBTITLE.format({
       applicationName: null == g ? void 0 : g.name
     }) : p.default.Messages.APPLICATION_GUILD_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_SUBTITLE.format({
       tier: M
@@ -83,8 +83,8 @@ function C(e) {
     onConfirm: k,
     subscription: O
   }), r.useEffect(() => {
-    l.default.useReducedMotion && v && L(window.innerWidth / 2, window.innerHeight / 2)
-  }, [L, v]), (0, a.jsxs)(a.Fragment, {
+    l.default.useReducedMotion && U && L(window.innerWidth / 2, window.innerHeight / 2)
+  }, [L, U]), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(S.PaymentPortalBody, {
       children: [(0, a.jsx)(A.default, {}), C]
     }), null != I && (0, a.jsx)(S.PaymentPortalFooter, {

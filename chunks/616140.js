@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return A
+    return N
   }
 }), s("47120"), s("627341");
 var l = s("735250"),
@@ -21,7 +21,7 @@ var l = s("735250"),
   v = s("228168"),
   x = s("689938"),
   _ = s("708432");
-let N = e => {
+let A = e => {
   let [t, s] = (0, r.useStateFromStoresArray)([f.default], () => {
     var t, s, l, a;
     return [null !== (l = null === (t = f.default.getMutualFriends(e.id)) || void 0 === t ? void 0 : t.length) && void 0 !== l ? l : 0, null !== (a = null === (s = f.default.getMutualGuilds(e.id)) || void 0 === s ? void 0 : s.length) && void 0 !== a ? a : 0]
@@ -42,28 +42,28 @@ let N = e => {
   }]
 };
 
-function A(e) {
+function N(e) {
   var t, s;
   let {
     user: f,
     displayProfile: x,
-    initialSection: A = v.UserProfileSections.USER_INFO,
+    initialSection: N = v.UserProfileSections.USER_INFO,
     autoFocusNote: T,
     onClose: U
   } = e, {
     trackUserProfileAction: h
-  } = (0, c.useUserProfileAnalyticsContext)(), p = (0, r.useStateFromStores)([d.default], () => d.default.getCurrentUser()), j = (0, r.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), g = N(f), [P, R] = a.useState(T), [C, M] = a.useState(null !== (s = null === (t = g.find(e => {
+  } = (0, c.useUserProfileAnalyticsContext)(), p = (0, r.useStateFromStores)([d.default], () => d.default.getCurrentUser()), g = (0, r.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), j = A(f), [R, P] = a.useState(T), [M, C] = a.useState(null !== (s = null === (t = j.find(e => {
     let {
       section: t
     } = e;
-    return t === A
+    return t === N
   })) || void 0 === t ? void 0 : t.section) && void 0 !== s ? s : v.UserProfileSections.USER_INFO), y = a.useCallback(e => {
     h({
       action: "PRESS_SECTION",
       section: e
-    }), M(e), R(!1)
-  }, [h, M]);
-  return null == p ? null : j ? (0, l.jsx)("div", {
+    }), C(e), P(!1)
+  }, [h, C]);
+  return null == p ? null : g ? (0, l.jsx)("div", {
     className: _.container,
     children: (0, l.jsx)(E.default, {})
   }) : f.id === p.id ? (0, l.jsx)("div", {
@@ -72,16 +72,16 @@ function A(e) {
       user: f,
       currentUser: p,
       displayProfile: x,
-      autoFocusNote: P
+      autoFocusNote: R
     })
   }) : (0, l.jsxs)("div", {
     className: _.container,
     children: [(0, l.jsx)(n.TabBar, {
       className: _.tabBar,
       type: "top",
-      selectedItem: C,
+      selectedItem: M,
       onItemSelect: y,
-      children: g.map(e => {
+      children: j.map(e => {
         let {
           section: t,
           text: s
@@ -96,7 +96,7 @@ function A(e) {
           })
         }, t)
       })
-    }), (0, i.match)(C).with(v.UserProfileSections.MUTUAL_FRIENDS, () => (0, l.jsx)(S.default, {
+    }), (0, i.match)(M).with(v.UserProfileSections.MUTUAL_FRIENDS, () => (0, l.jsx)(S.default, {
       user: f,
       onClose: U
     })).with(v.UserProfileSections.MUTUAL_GUILDS, () => (0, l.jsx)(m.default, {
@@ -107,7 +107,7 @@ function A(e) {
       user: f,
       currentUser: p,
       displayProfile: x,
-      autoFocusNote: P
+      autoFocusNote: R
     }))]
   })
 }
