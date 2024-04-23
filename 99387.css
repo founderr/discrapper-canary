@@ -25850,12 +25850,12 @@ html .invoiceCancelRow_aa7946 {
 .streamerModeEnabledBtn_b696dd {
     margin-top: 20px;
     font-weight: 700;
-    font-size: 1.125rem;
+    font-size: 18px;
     color: var(--white-500);
     background-color: var(--twitch);
     padding: 10px 20px;
     border-radius: 3px;
-    line-height: 1.8125rem;
+    line-height: 29px;
     text-transform: uppercase;
     cursor: pointer
 }
@@ -83161,7 +83161,7 @@ input::-webkit-inner-spin-button {
 }
 
 .banner__1680d {
-    background: url(/assets/d024c6725b4db6387f33.svg)no-repeat, url(/assets/0e1a3352cfd04470f16e.svg)no-repeat, linear-gradient(270deg, #dc95ee 0%, #fd78b7 100%);
+    background: url(/assets/ca77b2ffeca1b021f7da.svg)no-repeat, url(/assets/f2997c4a18a1125071e6.svg)no-repeat, linear-gradient(270deg, #dc95ee 0%, #fd78b7 100%);
     background-position: left center, right bottom, center center;
     background-size: auto auto, auto auto, 100%100%;
     box-sizing: border-box;
