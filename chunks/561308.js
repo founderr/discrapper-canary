@@ -18,6 +18,9 @@ n.r(t), n.d(t, {
   getEntryDuration: function() {
     return C
   },
+  getFullMarathonDescription: function() {
+    return A
+  },
   getStreakCount: function() {
     return I
   },
@@ -148,4 +151,14 @@ function T(e) {
 function I(e) {
   let t = e.traits.find(e => e.type === s.ContentInventoryTraitType.STREAK_DAYS);
   return null == t ? void 0 : t.streak_count_days
+}
+
+function A(e) {
+  let t = C(e);
+  if (null == t) return u.default.Messages.MEMBER_LIST_CONTENT_FEED_MARATHON;
+  let n = Math.round(t / r.default.Seconds.HOUR),
+    a = u.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYED_FOR_HOURS.format({
+      hours: n
+    });
+  return "".concat(u.default.Messages.MEMBER_LIST_CONTENT_FEED_MARATHON, " — ").concat(a)
 }

@@ -66,6 +66,7 @@ t.default = e => {
       }), (0, a.jsx)(h.ContentRowBadges, {
         className: E.badgeContainer,
         entry: n,
+        condensed: !1,
         textColor: "always-white",
         iconColor: i.tokens.colors.WHITE
       })]

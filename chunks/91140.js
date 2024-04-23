@@ -41,42 +41,43 @@ let x = e => {
   M = e => {
     let {
       entry: t,
-      textColor: n = "text-secondary",
-      iconColor: l,
-      className: s,
-      maxBadgesCount: r
+      condensed: n,
+      textColor: l = "text-secondary",
+      iconColor: s,
+      className: r,
+      maxBadgesCount: m
     } = e, {
-      channel: m
+      channel: p
     } = (0, g.default)(t), {
-      showBadge: p
+      showBadge: T
     } = C.VoiceEnrichmentsExperiment.useExperiment({
       location: "content_badge"
-    }), T = [(() => {
+    }), I = [(() => {
       let e = (0, S.isEntryActive)(t);
       return (0, a.jsxs)("div", {
         className: N.badgeContainer,
         children: [(0, a.jsx)(u.GameControllerIcon, {
           width: 12,
           height: 12,
-          color: null != l ? l : e ? h.tokens.colors.REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_PRESSED_TEXT : void 0
+          color: null != s ? s : e ? h.tokens.colors.REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_PRESSED_TEXT : void 0
         }), (0, a.jsx)(A.default, {
           entry: t,
-          textColor: n
+          textColor: l
         })]
       })
-    })(), p && null != m ? (0, a.jsx)(_.default, {
-      channel: m,
-      iconColor: l,
-      textColor: n
+    })(), T && null != p ? (0, a.jsx)(_.default, {
+      channel: p,
+      iconColor: s,
+      textColor: l
     }) : null, (0, S.isEntryNew)(t) ? (0, a.jsxs)("div", {
       className: N.badgeContainer,
       children: [(0, a.jsx)(d.NewUserLargeIcon, {
         width: 12,
         height: 12,
-        color: null != l ? l : h.tokens.colors.STATUS_POSITIVE
+        color: null != s ? s : h.tokens.colors.STATUS_POSITIVE
       }), (0, a.jsx)(h.Text, {
         variant: "text-xs/normal",
-        color: n,
+        color: l,
         children: v.default.Messages.MEMBER_LIST_CONTENT_FEED_FIRST_TIME
       })]
     }) : null, (() => {
@@ -86,10 +87,10 @@ let x = e => {
         children: [(0, a.jsx)(o.FlashIcon, {
           width: 12,
           height: 12,
-          color: l
+          color: s
         }), (0, a.jsx)(h.Text, {
           variant: "text-xs/normal",
-          color: n,
+          color: l,
           children: v.default.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
             days: e
           })
@@ -100,27 +101,42 @@ let x = e => {
       children: [(0, a.jsx)(c.RetryIcon, {
         width: 12,
         height: 12,
-        color: l
+        color: s
       }), (0, a.jsx)(h.Text, {
         variant: "text-xs/normal",
-        color: n,
+        color: l,
         children: v.default.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED
       })]
-    }) : null, (0, S.isEntryMarathon)(t) ? (0, a.jsxs)("div", {
+    }) : null, (0, S.isEntryMarathon)(t) ? n ? (0, a.jsx)(h.Tooltip, {
+      text: (0, S.getFullMarathonDescription)(t),
+      children: e => (0, a.jsxs)("div", {
+        className: N.badgeContainer,
+        ...e,
+        children: [(0, a.jsx)(f.TimerIcon, {
+          width: 12,
+          height: 12,
+          color: s
+        }), (0, a.jsx)(h.Text, {
+          variant: "text-xs/normal",
+          color: l,
+          children: v.default.Messages.MEMBER_LIST_CONTENT_FEED_MARATHON
+        })]
+      })
+    }) : (0, a.jsxs)("div", {
       className: N.badgeContainer,
       children: [(0, a.jsx)(f.TimerIcon, {
         width: 12,
         height: 12,
-        color: l
+        color: s
       }), (0, a.jsx)(h.Text, {
         variant: "text-xs/normal",
-        color: n,
-        children: v.default.Messages.MEMBER_LIST_CONTENT_FEED_MARATHON
+        color: l,
+        children: (0, S.isEntryActive)(t) ? v.default.Messages.MEMBER_LIST_CONTENT_FEED_MARATHON : (0, S.getFullMarathonDescription)(t)
       })]
     }) : null];
-    return null != r && (T = T.filter(E.isNotNullish).slice(0, r)), (0, a.jsx)("div", {
-      className: i()(N.badgeRow, s),
-      children: T
+    return null != m && (I = I.filter(E.isNotNullish).slice(0, m)), (0, a.jsx)("div", {
+      className: i()(N.badgeRow, r),
+      children: I
     })
   };
 t.default = l.memo(e => {
@@ -148,6 +164,7 @@ t.default = l.memo(e => {
         }(t)
       }), (0, a.jsx)(M, {
         entry: t,
+        condensed: !0,
         maxBadgesCount: 2
       })]
     }), (0, a.jsx)(I.ContentImage, {
