@@ -133,7 +133,7 @@ function F(e) {
     }
   } = i, F = (0, V.default)(i.games), Z = v.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
     count: i.memberCount
-  }), w = null !== (a = j.default.getGuildIconURL({
+  }), _ = null !== (a = j.default.getGuildIconURL({
     id: i.id,
     icon: i.icon,
     size: 64,
@@ -162,24 +162,29 @@ function F(e) {
           className: M.cardNameAndTagWrapper,
           children: [(0, t.jsx)(H.ClanGuildIconSimple, {
             guildName: i.name,
-            guildIconURL: w,
+            guildIconURL: _,
             iconSize: 64,
             className: M.clanIcon
           }), (0, t.jsx)("div", {
             className: M.clanTagChipletWrapper,
-            children: (0, t.jsxs)("div", {
-              className: M.clanTagChiplet,
-              children: [(0, t.jsx)(u.ClanBadge, {
-                width: 16,
-                height: 16,
-                badge: f.badgeKind,
-                primaryTintColor: f.primaryColor,
-                secondaryTintColor: f.secondaryColor
-              }), (0, t.jsx)(c.Text, {
-                variant: "text-xs/medium",
-                color: "text-primary",
-                children: m
-              })]
+            children: (0, t.jsx)(c.Tooltip, {
+              text: v.default.Messages.CLAN_DISCOVERY_CARD_TAG_TOOLTIP,
+              position: "top",
+              children: e => (0, t.jsxs)("div", {
+                ...e,
+                className: M.clanTagChiplet,
+                children: [(0, t.jsx)(u.ClanBadge, {
+                  width: 16,
+                  height: 16,
+                  badge: f.badgeKind,
+                  primaryTintColor: f.primaryColor,
+                  secondaryTintColor: f.secondaryColor
+                }), (0, t.jsx)(c.Text, {
+                  variant: "text-xs/medium",
+                  color: "text-primary",
+                  children: m
+                })]
+              })
             })
           })]
         }), (0, t.jsx)(c.Heading, {

@@ -54089,7 +54089,8 @@ html .progress__00e29 {
     align-items: center;
     border: solid 1px var(--border-subtle);
     border-radius: 4px;
-    padding: 2px 6px
+    padding: 2px 6px;
+    transition: border-color.2s ease-in-out
 }
 
 .clanTagChiplet__7f357:hover {
