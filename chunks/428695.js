@@ -63,7 +63,7 @@ t.default = function(e) {
     }),
     children: a
   }));
-  let M = null != S ? "".concat(S, "px") : "16px";
+  let P = null != S ? "".concat(S, "px") : "16px";
   return (0, n.jsxs)("div", {
     className: h.container,
     children: [!0 === T ? null : (0, n.jsx)(o.Clickable, {
@@ -81,8 +81,8 @@ t.default = function(e) {
       className: h.imageContainer,
       style: {
         marginTop: "".concat(I, "px"),
-        marginLeft: M,
-        marginRight: M
+        marginLeft: P,
+        marginRight: P
       },
       children: (0, n.jsx)("img", {
         className: h.image,

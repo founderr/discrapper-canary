@@ -46,12 +46,12 @@ function v(e) {
     })),
     O = (0, i.useStateFromStores)([_.default], () => _.default.isVisible(e)),
     L = (0, i.useStateFromStores)([T.default], () => T.default.isVisible(e)),
-    M = (0, i.useStateFromStores)([S.default], () => S.default.can(N.Permissions.ADMINISTRATOR, e)),
-    P = null != v && Date.now() - v <= N.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
+    P = (0, i.useStateFromStores)([S.default], () => S.default.can(N.Permissions.ADMINISTRATOR, e)),
+    M = null != v && Date.now() - v <= N.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
     x = null != e ? e.premiumSubscriberCount : 0,
     y = (0, A.getGuildTierFromAppliedBoostCount)(x, n) !== N.BoostedGuildTiers.NONE,
     D = null != s && Date.now() - s <= 432e5,
-    b = !D && !P && M && y,
+    b = !D && !M && P && y,
     U = (0, d.useGuildHasLiveChannelNotice)(n),
     j = (0, i.useStateFromStores)([p.default], () => p.default.isVisible(e)),
     G = E.default.useShouldShowChannelNotice(n),
@@ -67,7 +67,7 @@ function v(e) {
       guildId: null !== (a = null == e ? void 0 : e.id) && void 0 !== a ? a : "0",
       location: "useVisibleConnectedNotice"
     }),
-    V = M && H && !(null == e ? void 0 : e.hasFeature(N.GuildFeatures.CLAN)),
+    V = P && H && !(null == e ? void 0 : e.hasFeature(N.GuildFeatures.CLAN)),
     Y = (0, c.useGuildUpcomingEventsNotice)(n),
     W = (0, i.useStateFromStores)([C.default], () => null != C.default.getActiveGuildSignUp(n));
   if (l.useEffect(() => {

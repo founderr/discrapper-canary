@@ -62,7 +62,7 @@ function o(e) {
         _(!1)
       }
     }
-  }, [N, t, a]), M = n.useCallback(async () => {
+  }, [N, t, a]), P = n.useCallback(async () => {
     if (!C) {
       m(!0);
       try {
@@ -74,7 +74,7 @@ function o(e) {
         m(!1)
       }
     }
-  }, [C, t, a]), P = n.useCallback(async e => {
+  }, [C, t, a]), M = n.useCallback(async e => {
     if (!p) {
       T(!0);
       try {
@@ -104,8 +104,8 @@ function o(e) {
     declineLinkRequest: R,
     disconnectLinkRequest: O,
     cancelLinkRequest: L,
-    selectTeenUser: P,
-    getLinkCode: M,
+    selectTeenUser: M,
+    getLinkCode: P,
     requestLink: x,
     loadMore: n.useCallback(async e => {
       let a = i.default.getActionsForDisplayType(e),

@@ -41,7 +41,7 @@ function R() {
   } = (0, i.useStateFromStoresObject)([m.default, C.default], () => ({
     action: m.default.getAction(),
     theme: C.default.theme
-  })), R = p.default.getVerificationTypes(e), [O, L] = s.useState(0), M = (0, f.default)(R);
+  })), R = p.default.getVerificationTypes(e), [O, L] = s.useState(0), P = (0, f.default)(R);
   (0, h.default)({
     type: l.ImpressionTypes.MODAL,
     name: l.ImpressionNames.USER_ACTION_REQUIRED,
@@ -50,7 +50,7 @@ function R() {
       verification_types: R
     }
   }, {}, [R.toString()]);
-  let P = () => {
+  let M = () => {
       (0, c.accountDetailsInit)(), (0, o.openModalLazy)(async () => {
         let {
           default: e
@@ -80,7 +80,7 @@ function R() {
   return s.useEffect(() => (E.default.disable(), () => {
     E.default.enable()
   }), []), s.useEffect(() => {
-    (null == M ? void 0 : M[0]) === T.VerificationTypes.PHONE && (null == R ? void 0 : R[0]) === T.VerificationTypes.EMAIL && (0, o.openModalLazy)(async () => {
+    (null == P ? void 0 : P[0]) === T.VerificationTypes.PHONE && (null == R ? void 0 : R[0]) === T.VerificationTypes.EMAIL && (0, o.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.resolve().then(a.bind(a, "468026"));
@@ -93,9 +93,9 @@ function R() {
     }, {
       modalKey: v,
       Layer: I.default,
-      onCloseCallback: P
+      onCloseCallback: M
     })
-  }, [R, M]), (0, n.jsx)(S.default, {
+  }, [R, P]), (0, n.jsx)(S.default, {
     types: R,
     captchaKey: O,
     onCaptchaVerify: e => {
@@ -111,7 +111,7 @@ function R() {
     },
     theme: t,
     onClick: e => {
-      e === T.VerificationTypes.EMAIL_OR_PHONE || e === T.VerificationTypes.EMAIL || e === T.VerificationTypes.REVERIFY_EMAIL ? P() : x()
+      e === T.VerificationTypes.EMAIL_OR_PHONE || e === T.VerificationTypes.EMAIL || e === T.VerificationTypes.REVERIFY_EMAIL ? M() : x()
     },
     onLogout: () => {
       (0, o.openModalLazy)(async () => {

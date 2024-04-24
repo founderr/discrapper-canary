@@ -26,8 +26,8 @@ var n = a("735250"),
   R = a("689938"),
   O = a("54449"),
   L = a("1006"),
-  M = a("741160"),
-  P = a("829972"),
+  P = a("741160"),
+  M = a("829972"),
   x = a("31932"),
   y = a("642301");
 
@@ -92,7 +92,7 @@ t.default = s.memo(function(e) {
       },
       location_stack: f
     })
-  }, w = (0, i.isThemeDark)(a) ? P : x, [k, F] = (0, c.useSelectedDismissibleContent)(t, A.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
+  }, w = (0, i.isThemeDark)(a) ? M : x, [k, F] = (0, c.useSelectedDismissibleContent)(t, A.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
   return (0, n.jsx)(n.Fragment, {
     children: (() => {
       switch (k) {
@@ -178,7 +178,7 @@ t.default = s.memo(function(e) {
               header: R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_TITLE,
               asset: (0, n.jsx)("img", {
                 alt: "",
-                src: M,
+                src: P,
                 className: L.fullWidthImage
               }),
               content: e,

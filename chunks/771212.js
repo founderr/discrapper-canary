@@ -8,10 +8,10 @@ a.r(t), a.d(t, {
   }
 });
 var n = a("470079"),
-  i = a("818083"),
-  l = a("594174"),
+  l = a("818083"),
+  i = a("594174"),
   s = a("981631");
-let r = (0, i.createExperiment)({
+let r = (0, l.createExperiment)({
   kind: "guild",
   id: "2022-03_guild_access_rate_insight_experiment",
   label: "Guild Access Rate Insight Experiment",
@@ -29,7 +29,7 @@ let r = (0, i.createExperiment)({
 
 function o(e) {
   var t;
-  return (null === (t = l.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()) && r.getCurrentConfig({
+  return (null === (t = i.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()) && r.getCurrentConfig({
     guildId: e,
     location: "77b4b2_1"
   }).showAccessRate

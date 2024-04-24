@@ -28,8 +28,8 @@ var n, s, l = a("735250"),
   R = a("565799"),
   O = a("501655"),
   L = a("427679"),
-  M = a("448206"),
-  P = a("484459"),
+  P = a("448206"),
+  M = a("484459"),
   x = a("103575"),
   y = a("496675"),
   D = a("594174"),
@@ -59,7 +59,7 @@ function Y(e) {
     isEventNoticeHidden: S.default.isLiveChannelNoticeHidden({
       eventId: null == s ? void 0 : s.id
     })
-  }), [r, s]), K = null == n ? void 0 : n.id, z = (0, u.useStateFromStoresArray)([R.default], () => [...new Set(R.default.getMutableParticipants(K, O.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [K]), q = (0, u.useStateFromStores)([R.default], () => null != K ? R.default.getParticipantCount(K, O.StageChannelParticipantNamedIndex.AUDIENCE) : 0, [K]), Q = (0, u.useStateFromStores)([y.default], () => y.default.can(F.Permissions.CONNECT, n)), Z = (0, M.default)(null == n ? void 0 : n.id), X = null == s ? void 0 : s.creator_id, J = (0, u.useStateFromStores)([D.default], () => D.default.getUser(X), [X]);
+  }), [r, s]), K = null == n ? void 0 : n.id, z = (0, u.useStateFromStoresArray)([R.default], () => [...new Set(R.default.getMutableParticipants(K, O.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [K]), q = (0, u.useStateFromStores)([R.default], () => null != K ? R.default.getParticipantCount(K, O.StageChannelParticipantNamedIndex.AUDIENCE) : 0, [K]), Q = (0, u.useStateFromStores)([y.default], () => y.default.can(F.Permissions.CONNECT, n)), Z = (0, P.default)(null == n ? void 0 : n.id), X = null == s ? void 0 : s.creator_id, J = (0, u.useStateFromStores)([D.default], () => D.default.getUser(X), [X]);
   i.useEffect(() => {
     null != X && (0, f.getUser)(X)
   }, [X]);
@@ -278,7 +278,7 @@ function Y(e) {
     }), (el.length > 0 || null != ei) && (0, l.jsxs)("div", {
       className: V.participants,
       children: [el.map(e => (0, l.jsx)(c.Popout, {
-        preload: () => (0, P.maybeFetchUserProfileForPopout)(e, {
+        preload: () => (0, M.maybeFetchUserProfileForPopout)(e, {
           guildId: t.id
         }),
         renderPopout: t => (0, l.jsx)(x.default, {

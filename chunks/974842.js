@@ -29,11 +29,11 @@ t.default = e => {
   } = e, N = s.useRef(null), [v, R] = s.useState(a), [O, L] = s.useState({
     primary: l,
     secondary: p
-  }), [M, P] = s.useState(() => {
+  }), [P, M] = s.useState(() => {
     for (let e = 0; e < f.CLAN_BADGE_PALETTE_PRESETS.length; e++)
       if (f.CLAN_BADGE_PALETTE_PRESETS[e].primary === l && f.CLAN_BADGE_PALETTE_PRESETS[e].secondary === p) return e;
     return I
-  }), [x, y] = s.useState(!1), D = I === M ? O : f.CLAN_BADGE_PALETTE_PRESETS[M];
+  }), [x, y] = s.useState(!1), D = I === P ? O : f.CLAN_BADGE_PALETTE_PRESETS[P];
   return s.useEffect(() => {
     if (v === a && D.primary === l && D.secondary === p) return;
     let e = document.querySelector("#".concat(m));
@@ -108,10 +108,10 @@ t.default = e => {
             className: _.pickerGrid,
             children: [f.CLAN_BADGE_PALETTE_PRESETS.map((e, t) => (0, n.jsx)(u.Clickable, {
               onClick: () => {
-                P(t), L(f.CLAN_BADGE_PALETTE_PRESETS[t])
+                M(t), L(f.CLAN_BADGE_PALETTE_PRESETS[t])
               },
               className: i()(_.badgeAssetContainer, {
-                [_.badgeAssetContainerSelected]: t === M
+                [_.badgeAssetContainerSelected]: t === P
               }),
               children: (0, n.jsx)(d.ClanBadge, {
                 badge: v,
@@ -140,10 +140,10 @@ t.default = e => {
               children: e => (0, n.jsx)(u.Clickable, {
                 ...e,
                 onClick: () => {
-                  P(I), y(e => !e)
+                  M(I), y(e => !e)
                 },
                 className: i()(_.badgeAssetContainer, {
-                  [_.badgeAssetContainerSelected]: I === M
+                  [_.badgeAssetContainerSelected]: I === P
                 }),
                 children: (0, n.jsx)(o.EyeDropperIcon, {
                   width: 20,

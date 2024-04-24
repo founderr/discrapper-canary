@@ -26,8 +26,8 @@ var n = a("735250"),
   R = a("329242"),
   O = a("895328"),
   L = a("292352"),
-  M = a("981631"),
-  P = a("689938"),
+  P = a("981631"),
+  M = a("689938"),
   x = a("128073");
 
 function y() {
@@ -56,7 +56,7 @@ function D(e) {
   let {
     displayType: t
   } = e, a = s.useCallback(() => {
-    (0, o.showToast)((0, o.createToast)(P.default.Messages.FAMILY_CENTER_ERROR_GENERIC_TOAST, o.ToastType.FAILURE))
+    (0, o.showToast)((0, o.createToast)(M.default.Messages.FAMILY_CENTER_ERROR_GENERIC_TOAST, o.ToastType.FAILURE))
   }, []), l = (0, p.default)(), r = (0, S.useActionsForDisplayType)(t), u = (0, S.useActionTotalsForDisplayType)(t), {
     loadMore: d,
     isMoreLoading: c
@@ -95,18 +95,18 @@ function D(e) {
       }) : null]
     }), [v, E, l, T]);
   if (0 === r.length) return null;
-  let M = r.slice(0, C);
+  let P = r.slice(0, C);
   return (0, n.jsxs)("div", {
     className: x.actionSection,
     children: [O(), (0, n.jsx)("div", {
       className: x.actions,
       style: {
-        maxHeight: 65 * M.length
+        maxHeight: 65 * P.length
       },
-      children: M.map((e, t) => R({
+      children: P.map((e, t) => R({
         row: t
       }))
-    }), M.length !== u ? (0, n.jsx)(o.Clickable, {
+    }), P.length !== u ? (0, n.jsx)(o.Clickable, {
       className: x.loadMoreBar,
       onClick: g,
       role: "button",
@@ -116,8 +116,8 @@ function D(e) {
       }) : (0, n.jsx)(o.Text, {
         className: x.loadMore,
         variant: "text-sm/bold",
-        children: P.default.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({
-          pageSize: Math.min(u - M.length, L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS)
+        children: M.default.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({
+          pageSize: Math.min(u - P.length, L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS)
         })
       })
     }) : null]
@@ -126,9 +126,9 @@ function D(e) {
 let b = () => {
     let e = (0, p.default)(),
       t = (0, T.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE),
-      a = (0, C.useAgeSpecificText)(P.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({
+      a = (0, C.useAgeSpecificText)(M.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({
         activeLinks: t.length
-      }), P.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT),
+      }), M.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT),
       s = (0, h.getActivityWindowTimestampFormatter)(!!e),
       l = (0, T.useActivityWindowTimeStamp)(s);
     return e && t.length > 1 ? (0, n.jsx)(o.Text, {
@@ -189,7 +189,7 @@ let b = () => {
       },
       serialize: e => e,
       select: e => {
-        a(e), c.default.track(M.AnalyticEvents.FAMILY_CENTER_ACTION, {
+        a(e), c.default.track(P.AnalyticEvents.FAMILY_CENTER_ACTION, {
           action: L.FamilyCenterAction.SelectTeen
         })
       },

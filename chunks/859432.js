@@ -1,26 +1,26 @@
 "use strict";
 a.r(t), a("47120");
 var n = a("735250"),
-  i = a("470079"),
-  l = a("512722"),
-  s = a.n(l),
+  l = a("470079"),
+  i = a("512722"),
+  s = a.n(i),
   r = a("442837"),
   o = a("524437"),
   d = a("481060"),
   u = a("5036"),
   c = a("553385"),
-  S = a("52011"),
-  f = a("890477"),
+  f = a("52011"),
+  S = a("890477"),
   E = a("134726"),
   p = a("593128"),
   T = a("458034"),
-  m = a("706140"),
-  I = a("362658"),
+  I = a("706140"),
+  m = a("362658"),
   g = a("241851"),
   _ = a("294978"),
   C = a("513102"),
-  M = a("976192"),
-  A = a("429824"),
+  A = a("976192"),
+  M = a("429824"),
   N = a("466330"),
   h = a("191471"),
   b = a("162157"),
@@ -56,19 +56,19 @@ var n = a("735250"),
   ea = a("689938"),
   en = a("515706");
 
-function ei(e) {
+function el(e) {
   (0, d.openModal)(t => (0, n.jsx)(g.GuildLeaveConfirmModalContents, {
     ...t,
     guild: e
   }))
 }
-let el = i.memo(function(e) {
+let ei = l.memo(function(e) {
   let {
     guild: t,
-    onClose: l,
+    onClose: i,
     onSelect: g
-  } = e, el = (0, r.useStateFromStores)([F.default], () => F.default.getCurrentUser());
-  s()(null != el, "GuildHeaderPopout: user cannot be undefined"), i.useEffect(() => {
+  } = e, ei = (0, r.useStateFromStores)([F.default], () => F.default.getCurrentUser());
+  s()(null != ei, "GuildHeaderPopout: user cannot be undefined"), l.useEffect(() => {
     Q.default.track($.AnalyticEvents.GUILD_DROPDOWN_MENU_VIEWED, {
       guild_id: t.id
     })
@@ -89,18 +89,18 @@ let el = i.memo(function(e) {
       }
     }, [t]),
     ec = (0, b.useCanReportRaid)(t),
-    eS = t.isOwner(el),
-    ef = (0, r.useStateFromStores)([v.default], () => v.default.isLurking(t.id), [t.id]),
+    ef = t.isOwner(ei),
+    eS = (0, r.useStateFromStores)([v.default], () => v.default.isLurking(t.id), [t.id]),
     eE = (0, r.useStateFromStores)([P.default], () => P.default.isCurrentUserGuest(t.id)),
     ep = (0, L.default)(t.id, !0),
     eT = (0, T.default)(t),
-    em = (0, N.default)({
+    eI = (0, N.default)({
       source: $.InstantInviteSources.GUILD_HEADER,
       guild: t
     }),
-    eI = (0, M.default)({
+    em = (0, A.default)({
       guildId: t.id,
-      userId: el.id,
+      userId: ei.id,
       analyticsLocation: {
         page: $.AnalyticsPages.GUILD_CHANNEL,
         section: $.AnalyticsSections.GUILD_DROPDOWN_MENU
@@ -110,15 +110,15 @@ let el = i.memo(function(e) {
     eg = t.hasFeature($.GuildFeatures.HUB),
     e_ = t.id === et.FAVORITES_RAW_GUILD_ID,
     eC = (0, D.default)(t.id),
-    eM = (0, _.default)(t),
-    eA = (0, C.default)(t),
-    eN = (0, A.default)(t, !0),
+    eA = (0, _.default)(t),
+    eM = (0, C.default)(t),
+    eN = (0, M.default)(t, !0),
     {
       isFavoritesPerk: eh
-    } = (0, I.useFavoritesServerExperiment)("GuildHeaderPopout"),
+    } = (0, m.useFavoritesServerExperiment)("GuildHeaderPopout"),
     {
       triggerDeadchat: eb
-    } = f.SimpleDeadchatPromptExperiment.useExperiment({
+    } = S.SimpleDeadchatPromptExperiment.useExperiment({
       guildId: t.id,
       location: "guild header"
     }, {
@@ -126,7 +126,7 @@ let el = i.memo(function(e) {
     }),
     {
       triggerGamingStats: ex
-    } = S.GamingStatsPromptExperiment.useExperiment({
+    } = f.GamingStatsPromptExperiment.useExperiment({
       guildId: t.id,
       location: "guild header"
     }, {
@@ -145,13 +145,13 @@ let el = i.memo(function(e) {
     }, {
       autoTrackExposure: !1
     }),
-    [eG] = (0, m.useGetDismissibleContent)([o.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]),
+    [eG] = (0, I.useGetDismissibleContent)([o.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]),
     ev = eL && eG === o.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE;
-  return ef || eE ? (0, n.jsx)(d.Menu, {
+  return eS || eE ? (0, n.jsx)(d.Menu, {
     onSelect: g,
     navId: "guild-header-popout",
     variant: "fixed",
-    onClose: l,
+    onClose: i,
     "aria-label": ea.default.Messages.GUILD_ACTIONS_MENU_LABEL,
     children: (0, n.jsx)(d.MenuItem, {
       id: "leave-guild",
@@ -165,7 +165,7 @@ let el = i.memo(function(e) {
     onSelect: g,
     navId: "favorites-header-popout",
     variant: "fixed",
-    onClose: l,
+    onClose: i,
     "aria-label": ea.default.Messages.GUILD_ACTIONS_MENU_LABEL,
     children: [(0, n.jsxs)(d.MenuGroup, {
       children: [eh && (0, n.jsx)(d.MenuItem, {
@@ -206,7 +206,7 @@ let el = i.memo(function(e) {
     onSelect: g,
     navId: "guild-header-popout",
     variant: "fixed",
-    onClose: l,
+    onClose: i,
     "aria-label": ea.default.Messages.GUILD_ACTIONS_MENU_LABEL,
     children: [(0, n.jsxs)(d.MenuGroup, {
       children: [er ? (0, n.jsx)(d.MenuItem, {
@@ -216,7 +216,7 @@ let el = i.memo(function(e) {
         action: () => {
           G.default.open(t.id, $.GuildSettingsSections.OVERVIEW)
         }
-      }) : null, em, (0, n.jsx)(d.MenuItem, {
+      }) : null, eI, (0, n.jsx)(d.MenuItem, {
         id: "privacy",
         label: ea.default.Messages.PRIVACY_SETTINGS,
         icon: J.default,
@@ -229,21 +229,21 @@ let el = i.memo(function(e) {
             guild: t
           })
         })
-      }), eI]
-    }), eS ? null : (0, n.jsx)(d.MenuGroup, {
+      }), em]
+    }), ef ? null : (0, n.jsx)(d.MenuGroup, {
       children: (0, n.jsx)(d.MenuItem, {
         id: "leave",
         label: ea.default.Messages.LEAVE_HUB,
         icon: V.default,
         color: "danger",
-        action: () => ei(t)
+        action: () => el(t)
       })
     })]
   }) : (0, n.jsxs)(d.Menu, {
     onSelect: g,
     navId: "guild-header-popout",
     variant: "fixed",
-    onClose: l,
+    onClose: i,
     "aria-label": ea.default.Messages.GUILD_ACTIONS_MENU_LABEL,
     children: [(0, n.jsx)(d.MenuGroup, {
       children: (0, n.jsx)(d.MenuItem, {
@@ -260,21 +260,21 @@ let el = i.memo(function(e) {
         }
       })
     }), (0, n.jsxs)(d.MenuGroup, {
-      children: [eS && el.isStaff() && eb ? (0, n.jsx)(d.MenuItem, {
+      children: [ef && ei.isStaff() && eb ? (0, n.jsx)(d.MenuItem, {
         id: "create-deadchat",
         label: "Deadchat Ping",
         icon: H.default,
         action: () => {
           (0, c.forcePrompt)(t.id, $.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT)
         }
-      }) : null, eS && el.isStaff() && ex ? (0, n.jsx)(d.MenuItem, {
+      }) : null, ef && ei.isStaff() && ex ? (0, n.jsx)(d.MenuItem, {
         id: "create-gaming-ping",
         label: "Gaming Stats Ping",
         icon: H.default,
         action: () => {
           (0, c.forcePrompt)(t.id, $.MessageTypes.GUILD_GAMING_STATS_PROMPT)
         }
-      }) : null, em, er ? (0, n.jsx)(d.MenuItem, {
+      }) : null, eI, er ? (0, n.jsx)(d.MenuItem, {
         id: "settings",
         label: ea.default.Messages.SERVER_SETTINGS,
         icon: W.default,
@@ -331,7 +331,7 @@ let el = i.memo(function(e) {
             })
           })
         })]
-      }) : null, ep, eM, eA, eT]
+      }) : null, ep, eA, eM, eT]
     }), (0, n.jsxs)(d.MenuGroup, {
       children: [eC, (0, n.jsx)(d.MenuItem, {
         id: "notifications",
@@ -367,7 +367,7 @@ let el = i.memo(function(e) {
         })
       })]
     }), (0, n.jsxs)(d.MenuGroup, {
-      children: [eI, (0, n.jsx)(d.MenuCheckboxItem, {
+      children: [em, (0, n.jsx)(d.MenuCheckboxItem, {
         id: "hide-muted-channels",
         label: ea.default.Messages.HIDE_MUTED_CHANNELS,
         checked: es,
@@ -380,14 +380,14 @@ let el = i.memo(function(e) {
         icon: K.default,
         color: "danger",
         action: () => (0, h.openReportRaidModal)(t.id)
-      }) : null, eS ? null : (0, n.jsx)(d.MenuItem, {
+      }) : null, ef ? null : (0, n.jsx)(d.MenuItem, {
         id: "leave",
         label: ea.default.Messages.LEAVE_SERVER,
         icon: V.default,
         color: "danger",
-        action: () => ei(t)
+        action: () => el(t)
       })]
     })]
   })
 });
-t.default = el
+t.default = ei

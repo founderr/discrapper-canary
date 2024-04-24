@@ -26,8 +26,8 @@ var n = a("735250"),
   R = a("6025"),
   O = a("897473"),
   L = a("108427"),
-  M = a("970731"),
-  P = a("210887"),
+  P = a("970731"),
+  M = a("210887"),
   x = a("433355"),
   y = a("592125"),
   D = a("819640"),
@@ -172,14 +172,14 @@ let el = function(e) {
     let {
       markAsDismissed: t
     } = e;
-    return (0, n.jsx)(M.default, {
+    return (0, n.jsx)(P.default, {
       header: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_TITLE,
       content: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONTENT_TEENS,
       buttonCTA: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_DISMISS,
       className: et.messageRequestCoachmark,
       onClick: () => t(J.ContentDismissActionType.UNKNOWN),
       markAsDismissed: t,
-      caretPosition: M.CaretPosition.TOP_CENTER,
+      caretPosition: P.CaretPosition.TOP_CENTER,
       headerClassName: et.__invalid_header
     })
   },
@@ -199,7 +199,7 @@ let el = function(e) {
         if (i === d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK) return (0, n.jsx)(c.Popout, {
           renderPopout: () => t ? (0, n.jsx)(el, {
             markAsDismissed: r
-          }) : (0, n.jsx)(M.default, {
+          }) : (0, n.jsx)(P.default, {
             header: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_TITLE,
             content: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONTENT,
             buttonCTA: ee.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONFIRM,
@@ -211,7 +211,7 @@ let el = function(e) {
               })
             },
             markAsDismissed: r,
-            caretPosition: M.CaretPosition.TOP_CENTER,
+            caretPosition: P.CaretPosition.TOP_CENTER,
             headerClassName: et.__invalid_header
           }),
           position: "bottom",
@@ -243,7 +243,7 @@ let eo = (0, h.default)(function(e) {
       name: o.MetricEvents.MESSAGE_REQUEST_VIEW
     })
   }, []);
-  let l = (0, u.useStateFromStores)([P.default], () => P.default.theme),
+  let l = (0, u.useStateFromStores)([M.default], () => M.default.theme),
     r = (0, K.useSpamMessageRequestCount)(),
     [d, E] = s.useState(!1),
     h = (0, u.useStateFromStores)([x.default], () => {

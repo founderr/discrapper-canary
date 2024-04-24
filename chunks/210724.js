@@ -24,18 +24,18 @@ t.default = function(e) {
     overrideQuest: g
   } = e, A = (0, d.useIsEligibleForQuests)({
     location: I.QuestsExperimentLocations.QUESTS_BAR
-  }), N = (0, i.useStateFromStores)([r.default], () => r.default.useReducedMotion), v = (0, i.useStateFromStores)([f.default], () => null != g ? g : (0, h.getQuestForTargetedContent)(f.default.quests, E.QuestContent.QUEST_BAR)), R = (0, i.useStateFromStores)([o.default], () => o.default.hasLayers()), O = s.useRef(-1), L = s.useRef(!1), [M, P] = s.useState(!1), [x, y] = s.useState(!1), [D, b] = s.useState(!1), [U, j] = s.useState(!0), [G, w] = s.useState(240), k = s.useRef(null), F = (null == v ? void 0 : null === (t = v.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, B = s.useRef(F), H = (null == v ? void 0 : null === (a = v.userStatus) || void 0 === a ? void 0 : a.completedAt) != null, V = (null == v ? void 0 : null === (T = v.userStatus) || void 0 === T ? void 0 : T.claimedAt) != null, Y = (null == v ? void 0 : v.userStatus) != null && (0, h.isDismissed)(null == v ? void 0 : v.userStatus, E.QuestContent.QUEST_BAR), W = (0, c.useIsQuestExpired)(v), {
+  }), N = (0, i.useStateFromStores)([r.default], () => r.default.useReducedMotion), v = (0, i.useStateFromStores)([f.default], () => null != g ? g : (0, h.getQuestForTargetedContent)(f.default.quests, E.QuestContent.QUEST_BAR)), R = (0, i.useStateFromStores)([o.default], () => o.default.hasLayers()), O = s.useRef(-1), L = s.useRef(!1), [P, M] = s.useState(!1), [x, y] = s.useState(!1), [D, b] = s.useState(!1), [U, j] = s.useState(!0), [G, w] = s.useState(240), k = s.useRef(null), F = (null == v ? void 0 : null === (t = v.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, B = s.useRef(F), H = (null == v ? void 0 : null === (a = v.userStatus) || void 0 === a ? void 0 : a.completedAt) != null, V = (null == v ? void 0 : null === (T = v.userStatus) || void 0 === T ? void 0 : T.claimedAt) != null, Y = (null == v ? void 0 : v.userStatus) != null && (0, h.isDismissed)(null == v ? void 0 : v.userStatus, E.QuestContent.QUEST_BAR), W = (0, c.useIsQuestExpired)(v), {
     hasError: K,
     isLoading: z
   } = (0, C.useQuestsAssetsLoadState)(), q = s.useCallback(() => {
     var e, t;
     w((null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 16), y(!0)
   }, []), Q = s.useCallback(() => {
-    P(!0)
+    M(!0)
   }, []), Z = s.useCallback(() => {
-    P(!1), !L.current && !H && y(!1)
+    M(!1), !L.current && !H && y(!1)
   }, [H]), X = s.useCallback(() => {
-    P(!1), !H && y(!1), L.current = !1
+    M(!1), !H && y(!1), L.current = !1
   }, [H]), J = s.useCallback(function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
       {
@@ -43,8 +43,8 @@ t.default = function(e) {
       } = e;
     t ? O.current = window.setTimeout(q, 75) : q()
   }, [q]), $ = s.useCallback(() => {
-    if (window.clearTimeout(O.current), !H && !M) !L.current && y(!1)
-  }, [M, H]), ee = s.useCallback(() => {
+    if (window.clearTimeout(O.current), !H && !P) !L.current && y(!1)
+  }, [P, H]), ee = s.useCallback(() => {
     null != v && (0, u.trackQuestEvent)({
       questId: v.id,
       event: p.AnalyticEvents.QUEST_HOVER

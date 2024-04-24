@@ -29,8 +29,8 @@ let O = s.forwardRef(function(e, t) {
   let {
     className: O,
     isExpanded: L,
-    isExpansionAnimationComplete: M,
-    onCtxMenuOpen: P,
+    isExpansionAnimationComplete: P,
+    onCtxMenuOpen: M,
     onCtxMenuClose: x,
     onCtxMenuSelect: y,
     quest: D,
@@ -43,7 +43,7 @@ let O = s.forwardRef(function(e, t) {
   }, [D]), F = (0, N.useHandleClaimQuestsReward)({
     quest: D,
     location: m.QuestContent.QUEST_BAR
-  }), B = (null === (a = D.userStatus) || void 0 === a ? void 0 : a.enrolledAt) != null, H = (null === (l = D.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, V = s.useMemo(() => (0, S.hasQuestCollectibleRewards)(D.config), [D.config]), Y = L && M, W = (0, S.getQuestBarHeroAssetUrl)(D), K = (0, S.getQuestsInstructionsToWinReward)({
+  }), B = (null === (a = D.userStatus) || void 0 === a ? void 0 : a.enrolledAt) != null, H = (null === (l = D.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, V = s.useMemo(() => (0, S.hasQuestCollectibleRewards)(D.config), [D.config]), Y = L && P, W = (0, S.getQuestBarHeroAssetUrl)(D), K = (0, S.getQuestsInstructionsToWinReward)({
     quest: D
   }), z = s.useMemo(() => {
     let e = (0, u.getContrastingColor)(D.config.colors.primary, {
@@ -90,7 +90,7 @@ let O = s.forwardRef(function(e, t) {
             })]
           })]
         }), (0, n.jsx)(A.QuestsEntryContextMenuPopout, {
-          onOpen: P,
+          onOpen: M,
           onClose: x,
           onSelect: y,
           questContent: m.QuestContent.QUEST_BAR,
@@ -132,7 +132,7 @@ let O = s.forwardRef(function(e, t) {
           children: [(0, n.jsx)(p.default, {
             color: "always-white"
           }), (0, n.jsx)(A.QuestsEntryContextMenuPopout, {
-            onOpen: P,
+            onOpen: M,
             onClose: x,
             onSelect: y,
             questContent: m.QuestContent.QUEST_BAR,

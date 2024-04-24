@@ -30,8 +30,8 @@ var n = a("735250"),
   R = a("194729"),
   O = a("668940"),
   L = a("372900"),
-  M = a("6039"),
-  P = a("637853"),
+  P = a("6039"),
+  M = a("637853"),
   x = a("326145"),
   y = a("269675"),
   D = a("362416"),
@@ -179,7 +179,7 @@ let eI = () => (0, n.jsx)("div", {
       default:
         (0, en.assertNever)(l)
     }
-    if ((0, P.isBlockedByOnboarding)(r, o)) return (0, n.jsx)(x.default, {
+    if ((0, M.isBlockedByOnboarding)(r, o)) return (0, n.jsx)(x.default, {
       guildId: s,
       channelId: l
     });
@@ -217,10 +217,10 @@ function eL(e) {
     guildId: t
   })
 }
-let eM = e => (0, n.jsx)(eR, {
+let eP = e => (0, n.jsx)(eR, {
     ...e
   }),
-  eP = e => {
+  eM = e => {
     let t = null != e && e.length > 0 && e.startsWith("?") ? e.split("?")[1] : null;
     return (0, n.jsx)(R.default, {
       searchRoute: t
@@ -230,7 +230,7 @@ let eM = e => (0, n.jsx)(eR, {
     let {
       match: t
     } = e;
-    return null != t.params.guildId ? (0, n.jsx)(M.default, {
+    return null != t.params.guildId ? (0, n.jsx)(P.default, {
       guildId: t.params.guildId,
       inviteCode: t.params.inviteCode
     }) : null
@@ -458,7 +458,7 @@ function eV() {
                   disableTrack: !0
                 }), (0, n.jsx)(I.default, {
                   path: [eE.Routes.CHANNEL_THREAD_VIEW(":guildId", ":channelId", ":threadId", ":messageId?"), eE.Routes.CHANNEL(eE.ME, ":channelId"), eE.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")],
-                  render: eM,
+                  render: eP,
                   impressionName: u.ImpressionNames.GUILD_CHANNEL,
                   disableTrack: !0
                 }), (0, n.jsx)(I.default, {
@@ -467,7 +467,7 @@ function eV() {
                     let {
                       location: t
                     } = e;
-                    return eP(t.search)
+                    return eM(t.search)
                   },
                   impressionName: u.ImpressionNames.GUILD_DISCOVERY,
                   disableTrack: !0

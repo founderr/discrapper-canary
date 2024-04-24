@@ -186,7 +186,7 @@ function L(e) {
     })
   })
 }
-let M = () => {
+let P = () => {
     let e = (0, E.default)(),
       t = (0, h.useUserForLinkStatus)(p.UserLinkStatus.ACTIVE),
       a = e ? p.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : p.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
@@ -216,7 +216,7 @@ let M = () => {
       })
     })
   },
-  P = () => {
+  M = () => {
     let e = (0, h.useHasMaxConnections)(),
       t = (0, E.default)() ? p.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : p.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
       a = (0, c.useAgeSpecificText)(T.default.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_TEEN.format({
@@ -266,6 +266,6 @@ t.default = () => {
   let e = (0, E.default)();
   return (0, n.jsxs)("div", {
     className: g.container,
-    children: [e ? (0, n.jsx)(R, {}) : (0, n.jsx)(O, {}), (0, n.jsx)(M, {}), (0, n.jsx)(y, {}), (0, n.jsx)(P, {}), (0, n.jsx)(x, {})]
+    children: [e ? (0, n.jsx)(R, {}) : (0, n.jsx)(O, {}), (0, n.jsx)(P, {}), (0, n.jsx)(y, {}), (0, n.jsx)(M, {}), (0, n.jsx)(x, {})]
   })
 }

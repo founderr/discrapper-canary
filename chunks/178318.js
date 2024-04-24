@@ -76,7 +76,7 @@ function L(e, t, a, n) {
     message: n
   }, a)
 }
-class M extends _.default {
+class P extends _.default {
   send(e) {
     (c.default.isLoggingOverlayEvents || e.cmd !== S.RPCCommands.OVERLAY && e.evt !== S.RPCEvents.OVERLAY) && A.info("Socket Emit: ".concat(this.id), (0, h.default)(e)), null != n && "etf" === this.encoding ? this._socket.send(n.pack(e), {
       binary: !0
@@ -95,7 +95,7 @@ class M extends _.default {
     this._socket = e
   }
 }
-class P extends _.default {
+class M extends _.default {
   send(e) {
     (c.default.isLoggingOverlayEvents || e.cmd !== S.RPCCommands.OVERLAY) && A.info("Socket Emit: ".concat(this.id), e), this._sendCallback(e)
   }
@@ -130,7 +130,7 @@ class x extends l.EventEmitter {
           } = o.parse(null !== (e = a.get("callback")) && void 0 !== e ? e : "");
           n === location.protocol && s === location.host ? t.setHeader("Location", a.get("callback")) : t.setHeader("Location", g), t.writeHead(301), t.end()
         },
-        u = new P(l ? O.bind(null, e, t) : r, l ? L.bind(null, e, t, 400) : r, Number(a.get("v")), s);
+        u = new M(l ? O.bind(null, e, t) : r, l ? L.bind(null, e, t, 400) : r, Number(a.get("v")), s);
       if (l)(0, C.validateSocketClient)(u, v(e.headers).origin, a.get("client_id")).then(() => {
         let a = "";
         e.on("data", e => a += e), e.on("error", () => L(e, t, 500, "Internal Server Error")), e.on("end", () => this.handleMessage(u, a))
@@ -155,7 +155,7 @@ class x extends l.EventEmitter {
     let s = new URLSearchParams(v(e.upgradeReq).url.split("?")[1]),
       l = null !== (t = v(e.upgradeReq).headers.origin) && void 0 !== t ? t : "";
     try {
-      n = new M(e, Number(s.get("v")), null !== (a = s.get("encoding")) && void 0 !== a ? a : "json")
+      n = new P(e, Number(s.get("v")), null !== (a = s.get("encoding")) && void 0 !== a ? a : "json")
     } catch (t) {
       e.close(t.code, t.message);
       return

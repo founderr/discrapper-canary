@@ -31,8 +31,8 @@ var s = a("924826"),
   R = a("886654"),
   O = a("487980"),
   L = a("474936"),
-  M = a("921944"),
-  P = a("689938"),
+  P = a("921944"),
+  M = a("689938"),
   x = a("392934");
 let y = "NitroTabButton",
   D = e => {
@@ -65,10 +65,10 @@ let y = "NitroTabButton",
     return q ? (V ? a = (0, n.jsx)(S.default, {
       isNitroTab: !0
     }) : K ? a = (0, n.jsx)(R.default, {
-      copy: P.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_MODAL_TOP_PILL,
+      copy: M.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_MODAL_TOP_PILL,
       isSelected: D,
       onSelect: () => (0, o.markDismissibleContentAsDismissed)(i.DismissibleContent.PREMIUM_2024_APRIL_MARKETING_BADGE, {
-        dismissAction: M.ContentDismissActionType.TAKE_ACTION
+        dismissAction: P.ContentDismissActionType.TAKE_ACTION
       })
     }) : null != W ? a = (0, n.jsx)(v.default, {
       copy: W
@@ -79,7 +79,7 @@ let y = "NitroTabButton",
     }) : null == F || Z ? z ? a = (0, n.jsx)(A.default, {
       isSelected: D,
       onSelect: () => (0, o.markDismissibleContentAsDismissed)(i.DismissibleContent.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, {
-        dismissAction: M.ContentDismissActionType.TAKE_ACTION
+        dismissAction: P.ContentDismissActionType.TAKE_ACTION
       })
     }) : H && (a = (0, n.jsx)(p.LocalizedPricingBadgeIcon, {
       entryPoint: p.BadgeEntryPoint.PrivateMessages
@@ -90,7 +90,7 @@ let y = "NitroTabButton",
       selected: D,
       route: b,
       icon: f.default,
-      text: P.default.Messages.PREMIUM,
+      text: M.default.Messages.PREMIUM,
       locationState: U,
       ...j,
       ...k,

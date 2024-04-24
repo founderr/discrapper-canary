@@ -6,14 +6,14 @@ a.r(t), a.d(t, {
 });
 var n = a("735250");
 a("470079");
-var i = a("481060"),
-  l = a("132871"),
+var l = a("481060"),
+  i = a("132871"),
   s = a("147890"),
   r = a("912527"),
   o = a("689938");
 
 function d(e) {
-  return (0, n.jsx)(i.MenuItem, {
+  return (0, n.jsx)(l.MenuItem, {
     id: "application-directory",
     label: (0, n.jsx)(n.Fragment, {
       children: o.default.Messages.APP_DIRECTORY
@@ -23,7 +23,7 @@ function d(e) {
       (0, s.goToAppDirectory)({
         guildId: e.id,
         entrypoint: {
-          name: l.ApplicationDirectoryEntrypointNames.GUILD_HEADER_POPOUT
+          name: i.ApplicationDirectoryEntrypointNames.GUILD_HEADER_POPOUT
         }
       })
     }

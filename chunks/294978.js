@@ -1,13 +1,13 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return S
+    return f
   }
 });
 var n = a("735250");
 a("470079");
-var i = a("392711"),
-  l = a.n(i),
+var l = a("392711"),
+  i = a.n(l),
   s = a("442837"),
   r = a("481060"),
   o = a("344185"),
@@ -15,10 +15,10 @@ var i = a("392711"),
   u = a("974029"),
   c = a("689938");
 
-function S(e) {
+function f(e) {
   let t = (0, d.useIsThreadModerator)(e),
-    i = (0, s.useStateFromStores)([o.default], () => !l().isEmpty(o.default.getThreadsForGuild(e.id)));
-  return t && i ? (0, n.jsx)(r.MenuItem, {
+    l = (0, s.useStateFromStores)([o.default], () => !i().isEmpty(o.default.getThreadsForGuild(e.id)));
+  return t && l ? (0, n.jsx)(r.MenuItem, {
     id: "active-threads",
     label: c.default.Messages.ACTIVE_THREADS,
     icon: u.default,
