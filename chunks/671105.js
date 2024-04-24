@@ -1,32 +1,54 @@
 "use strict";
-n.r(t), n.d(t, {
+u.r(t), u.d(t, {
+  getChannelCustomNotificationSound: function() {
+    return s
+  },
+  getGuildCustomNotificationSound: function() {
+    return d
+  },
   useChannelCustomNotificationSound: function() {
-    return i
+    return r
   },
   useGuildCustomNotificationSound: function() {
     return l
   }
 });
-var a = n("442837"),
-  u = n("581883");
+var i = u("442837"),
+  o = u("581883"),
+  e = u("871465");
 
-function l(e) {
-  var t, n;
-  let l = (0, a.useStateFromStores)([u.default], () => {
-      var e;
-      return null === (e = u.default.settings.guilds) || void 0 === e ? void 0 : e.guilds
-    }),
-    i = null != l ? null === (t = l[e]) || void 0 === t ? void 0 : t.customNotificationSoundConfig : void 0;
-  return null != i ? null == i ? void 0 : null === (n = i.notificationSoundPackId) || void 0 === n ? void 0 : n.value : void 0
+function l(n) {
+  return a(n, void 0, (0, i.useStateFromStores)([o.default], () => {
+    var n;
+    return null === (n = o.default.settings.guilds) || void 0 === n ? void 0 : n.guilds
+  }))
 }
 
-function i(e, t) {
-  var n, l;
-  let i = (0, a.useStateFromStores)([u.default], () => {
-      var e;
-      return null === (e = u.default.settings.guilds) || void 0 === e ? void 0 : e.guilds
-    }),
-    s = null != t && null != i ? null === (n = i[e]) || void 0 === n ? void 0 : n.channels[t] : void 0,
-    r = null == s ? void 0 : s.customNotificationSoundConfig;
-  return null != r ? null == r ? void 0 : null === (l = r.notificationSoundPackId) || void 0 === l ? void 0 : l.value : void 0
+function d(n) {
+  var t, u;
+  return a(n, void 0, null !== (u = null === (t = o.default.settings.guilds) || void 0 === t ? void 0 : t.guilds) && void 0 !== u ? u : {})
+}
+
+function r(n, t) {
+  let u = (0, i.useStateFromStores)([o.default], () => {
+    var n;
+    return null === (n = o.default.settings.guilds) || void 0 === n ? void 0 : n.guilds
+  });
+  return null != t ? a(n, t, u) : void 0
+}
+
+function s(n, t) {
+  var u, i;
+  let e = null !== (i = null === (u = o.default.settings.guilds) || void 0 === u ? void 0 : u.guilds) && void 0 !== i ? i : {};
+  return null != t ? a(n, t, e) : void 0
+}
+
+function a(n, t, u) {
+  var i, o;
+  if (null == u) return;
+  let l = null != t ? null === (i = u[n]) || void 0 === i ? void 0 : i.channels[t] : u[n],
+    d = null == l ? void 0 : l.customNotificationSoundConfig;
+  return null != d ? function(n) {
+    return null != n ? e.Soundpacks[n] : void 0
+  }(null == d ? void 0 : null === (o = d.notificationSoundPackId) || void 0 === o ? void 0 : o.value) : void 0
 }
