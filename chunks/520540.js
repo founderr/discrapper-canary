@@ -1,14 +1,14 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   ReferralProgramSender: function() {
     return a
   },
   SubscriberHomeVariant: function() {
-    return r
+    return i
   }
 });
-var n, r, s = i("818083");
-(n = r || (r = {}))[n.VARIANT_1 = 0] = "VARIANT_1", n[n.VARIANT_2 = 1] = "VARIANT_2";
+var r, i, s = n("818083");
+(r = i || (i = {}))[r.VARIANT_1 = 0] = "VARIANT_1", r[r.VARIANT_2 = 1] = "VARIANT_2";
 let a = (0, s.createExperiment)({
   kind: "user",
   id: "2024-03_referral_program_sender",

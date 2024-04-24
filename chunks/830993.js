@@ -20,8 +20,8 @@ var l = n("735250"),
   C = n("823379"),
   g = n("355363"),
   E = n("737592"),
-  _ = n("561788"),
-  S = n("135724"),
+  S = n("561788"),
+  _ = n("135724"),
   I = n("543432"),
   N = n("981631"),
   T = n("689938"),
@@ -34,8 +34,8 @@ function L(e) {
     guild: h,
     onAction: m,
     voiceStates: g,
-    isChannelSelected: _,
-    shouldShowSettingNudge: S
+    isChannelSelected: S,
+    shouldShowSettingNudge: _
   } = e;
   ! function(e, t) {
     let n = a.useMemo(() => {
@@ -95,7 +95,7 @@ function L(e) {
     className: A.container,
     children: [(0, l.jsx)(v, {
       channel: f,
-      isChannelSelected: _,
+      isChannelSelected: S,
       voiceStatesCount: null !== (c = null == g ? void 0 : g.length) && void 0 !== c ? c : 0
     }), (0, l.jsx)("div", {
       className: A.headerDivider
@@ -111,7 +111,7 @@ function L(e) {
         members: n,
         onAction: m
       }, t)
-    }), S && (0, l.jsxs)(l.Fragment, {
+    }), _ && (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)("div", {
         className: A.headerDivider
       }), (0, l.jsx)("div", {
@@ -151,9 +151,9 @@ function v(e) {
   }), u = (0, s.useStateFromStores)([f.default], () => f.default.getGuild(t.guild_id));
   return null == (0, c.getChannelIconComponent)(t, u) ? null : (0, l.jsxs)("div", {
     className: A.popoutHeaderContainer,
-    children: [(0, l.jsx)(_.default, {
+    children: [(0, l.jsx)(S.default, {
       channel: t
-    }), o ? (0, l.jsx)(S.default, {
+    }), o ? (0, l.jsx)(_.default, {
       userCount: a,
       video: r,
       channel: t

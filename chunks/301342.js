@@ -29,8 +29,8 @@ var l = n("735250"),
   C = n("9156"),
   g = n("514342"),
   E = n("696202"),
-  _ = n("605403"),
-  S = n("908773"),
+  S = n("605403"),
+  _ = n("908773"),
   I = n("632184"),
   N = n("151827"),
   T = n("203818"),
@@ -128,7 +128,7 @@ let M = a.memo(function(e) {
             focusProps: {
               enabled: !1
             },
-            children: [M ? null : (0, l.jsx)(_.default, {
+            children: [M ? null : (0, l.jsx)(S.default, {
               className: x.icon
             }), (0, l.jsx)(N.default, {
               className: x.name,
@@ -163,7 +163,7 @@ let M = a.memo(function(e) {
                       left: -4
                     }
                   },
-                  children: (0, l.jsx)(S.default, {
+                  children: (0, l.jsx)(_.default, {
                     width: 18,
                     height: 18,
                     className: x.addButtonIcon

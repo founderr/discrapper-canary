@@ -20,8 +20,8 @@ var l = n("735250"),
   C = n("594174"),
   g = n("285952"),
   E = n("672752"),
-  _ = n("153124"),
-  S = n("819570"),
+  S = n("153124"),
+  _ = n("819570"),
   I = n("757698"),
   N = n("466111"),
   T = n("855981"),
@@ -100,7 +100,7 @@ function U(e) {
 function w(e) {
   let {
     transitionState: t
-  } = e, n = (0, _.useUID)(), {
+  } = e, n = (0, S.useUID)(), {
     analyticsLocations: a
   } = (0, c.default)(d.default.INVITE_MODAL);
   return (0, l.jsx)(c.AnalyticsLocationProvider, {
@@ -121,10 +121,10 @@ function w(e) {
         }), (0, l.jsx)("div", {
           className: j.errorBody,
           children: D.default.Messages.INVITE_MODAL_ERROR_INVALID_BODY
-        }), (0, l.jsx)(S.Button, {
-          size: S.Button.Sizes.LARGE,
+        }), (0, l.jsx)(_.Button, {
+          size: _.Button.Sizes.LARGE,
           onClick: () => M.default.close(),
-          color: S.Button.Colors.BRAND,
+          color: _.Button.Colors.BRAND,
           children: D.default.Messages.INVITE_MODAL_ERROR_BUTTON_TEXT
         })]
       })
@@ -148,7 +148,7 @@ function F(e) {
   a.useEffect(() => {
     !__OVERLAY__ && x.isPlatformEmbedded && ((0, x.isWindows)() ? R.default.minimize() : R.default.restore(), R.default.focus())
   }, []);
-  let N = (0, _.useUID)(),
+  let N = (0, S.useUID)(),
     {
       analyticsLocations: T
     } = (0, c.default)(d.default.INVITE_MODAL);
@@ -216,12 +216,12 @@ function F(e) {
                     onMouseEnter: t,
                     onMouseLeave: n
                   } = e;
-                  return (0, l.jsx)(S.Button, {
-                    size: S.Button.Sizes.LARGE,
+                  return (0, l.jsx)(_.Button, {
+                    size: _.Button.Sizes.LARGE,
                     onClick: A,
                     submitting: I,
                     disabled: V,
-                    color: B ? S.Button.Colors.GREEN : S.Button.Colors.BRAND,
+                    color: B ? _.Button.Colors.GREEN : _.Button.Colors.BRAND,
                     onMouseEnter: t,
                     onMouseLeave: n,
                     children: V ? D.default.Messages.GUILD_CAP_INVITE_MODAL_BUTTON : k
@@ -229,14 +229,14 @@ function F(e) {
                 }
               }) : (0, l.jsxs)("div", {
                 className: j.buttonGroup,
-                children: [(0, l.jsx)(S.Button, {
-                  size: S.Button.Sizes.LARGE,
+                children: [(0, l.jsx)(_.Button, {
+                  size: _.Button.Sizes.LARGE,
                   onClick: A,
                   submitting: I,
                   children: D.default.Messages.PLAY
-                }), (0, l.jsx)(S.Button, {
-                  color: S.Button.Colors.PRIMARY,
-                  size: S.Button.Sizes.LARGE,
+                }), (0, l.jsx)(_.Button, {
+                  color: _.Button.Colors.PRIMARY,
+                  size: _.Button.Sizes.LARGE,
                   onClick: A,
                   submitting: I,
                   children: D.default.Messages.SPECTATE
@@ -244,13 +244,13 @@ function F(e) {
               }), (0, l.jsx)(g.default, {
                 justify: g.default.Justify.CENTER,
                 className: P.marginTop8,
-                children: (0, l.jsx)(S.Button, {
-                  look: S.Button.Looks.LINK,
+                children: (0, l.jsx)(_.Button, {
+                  look: _.Button.Looks.LINK,
                   className: j.noThanksButton,
                   onClick: function() {
                     M.default.close()
                   },
-                  color: S.Button.Colors.TRANSPARENT,
+                  color: _.Button.Colors.TRANSPARENT,
                   children: D.default.Messages.INIVTE_MODAL_NO_THANKS
                 })
               })]

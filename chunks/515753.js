@@ -23,8 +23,8 @@ var l = n("735250"),
   C = n("420660"),
   g = n("201895"),
   E = n("43267"),
-  _ = n("933557"),
-  S = n("853856"),
+  S = n("933557"),
+  _ = n("853856"),
   I = n("93687"),
   N = n("276423"),
   T = n("878857"),
@@ -153,7 +153,7 @@ function X(e) {
     user: c,
     size: h.AvatarSizes.SIZE_32,
     animateOnHover: !(r || U)
-  }), $ = (0, f.useStateFromStores)([M.default], () => M.default.isChannelMuted(t.getGuildId(), t.id)), ee = (0, f.useStateFromStores)([x.default], () => x.default.getMentionCount(t.id) > 0), et = (0, _.default)(t), en = (0, f.useStateFromStores)([S.default], () => S.default.isFavorite(t.id)), el = () => {
+  }), $ = (0, f.useStateFromStores)([M.default], () => M.default.isChannelMuted(t.getGuildId(), t.id)), ee = (0, f.useStateFromStores)([x.default], () => x.default.getMentionCount(t.id) > 0), et = (0, S.default)(t), en = (0, f.useStateFromStores)([_.default], () => _.default.isFavorite(t.id)), el = () => {
     w(!0)
   }, ea = () => {
     w(!1)

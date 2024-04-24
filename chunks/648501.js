@@ -21,8 +21,8 @@ var a = n("442837"),
   C = n("26290"),
   g = n("968358"),
   E = n("790901"),
-  _ = n("714794"),
-  S = n("355363"),
+  S = n("714794"),
+  _ = n("355363"),
   I = n("687352"),
   N = n("135724"),
   T = n("25601"),
@@ -45,7 +45,7 @@ function R(e) {
     isNewChannel: P,
     muted: G,
     resolvedUnreadSetting: U
-  } = e, w = (0, a.useStateFromStores)([p.default], () => p.default.getMentionCount(n.id)), F = (0, r.default)(n), B = (0, a.useStateFromStores)([h.default], () => !h.default.can(A.Permissions.CONNECT, n)), H = (0, a.useStateFromStores)([m.default], () => m.default.hasVideo(n.id)), V = (0, d.useStageHasMedia)(n.id) && n.isGuildStageVoice(), k = (0, S.default)({
+  } = e, w = (0, a.useStateFromStores)([p.default], () => p.default.getMentionCount(n.id)), F = (0, r.default)(n), B = (0, a.useStateFromStores)([h.default], () => !h.default.can(A.Permissions.CONNECT, n)), H = (0, a.useStateFromStores)([m.default], () => m.default.hasVideo(n.id)), V = (0, d.useStageHasMedia)(n.id) && n.isGuildStageVoice(), k = (0, _.default)({
     channel: n,
     locked: B,
     video: H || V,
@@ -54,7 +54,7 @@ function R(e) {
     var e, t;
     return null !== (t = null === (e = f.default.getGuild(n.guild_id)) || void 0 === e ? void 0 : e.hasFeature(A.GuildFeatures.COMMUNITY)) && void 0 !== t && t
   });
-  if ((0, _.default)(w)) return (0, l.jsx)(T.default, {
+  if ((0, S.default)(w)) return (0, l.jsx)(T.default, {
     mentionsCount: w
   });
   if ((0, u.showPremiumChannelIconButton)(D)) return (0, l.jsx)(u.default, {

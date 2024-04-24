@@ -1,24 +1,24 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   useIsEligibleSenderForReferralProgram: function() {
-    return c
+    return d
   },
   useIsEligibleSenderForReferralProgramTabBadge: function() {
-    return u
+    return o
   }
 });
-var n = i("442837"),
-  r = i("524437"),
-  s = i("605236"),
-  a = i("276444"),
-  l = i("520540"),
-  o = i("898997");
-let u = e => {
-    let t = c(e),
-      i = (0, s.useIsDismissibleContentDismissed)(r.DismissibleContent.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
-    return t && !i
+var r = n("442837"),
+  i = n("524437"),
+  s = n("605236"),
+  a = n("276444"),
+  l = n("520540"),
+  u = n("898997");
+let o = e => {
+    let t = d(e),
+      n = (0, s.useIsDismissibleContentDismissed)(i.DismissibleContent.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
+    return t && !n
   },
-  c = e => {
+  d = e => {
     let {
       enabled: t
     } = l.ReferralProgramSender.useExperiment({
@@ -26,7 +26,7 @@ let u = e => {
     }, {
       autoTrackExposure: !1
     });
-    (0, o.useMaybeFetchReferralsRemaining)(e, !t);
-    let i = (0, n.useStateFromStores)([a.default], () => a.default.getIsEligibleToSendReferrals());
-    return t && i
+    (0, u.useMaybeFetchReferralsRemaining)(e, !t);
+    let n = (0, r.useStateFromStores)([a.default], () => a.default.getIsEligibleToSendReferrals());
+    return t && n
   }

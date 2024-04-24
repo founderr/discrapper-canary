@@ -14,8 +14,8 @@ var r = n("557533"),
   s = n("789978"),
   a = n("368072"),
   o = n("777207"),
-  c = n("752843"),
-  d = n("330711"),
+  d = n("752843"),
+  c = n("330711"),
   u = n("329901"),
   f = n("956169");
 
@@ -29,7 +29,7 @@ function m(e) {
     title: h,
     onDetails: S,
     benefitItems: v,
-    benefitsSummary: x
+    benefitsSummary: g
   } = e;
   return (0, i.jsx)(s.FocusRing, {
     children: (0, i.jsxs)("div", {
@@ -40,7 +40,7 @@ function m(e) {
       },
       children: [(0, i.jsxs)("div", {
         className: u.card,
-        children: [null != p && (0, i.jsx)(c.SubscriptionTag, {
+        children: [null != p && (0, i.jsx)(d.SubscriptionTag, {
           type: p
         }), (0, i.jsxs)("div", {
           className: u.body,
@@ -70,13 +70,13 @@ function m(e) {
             children: t
           })]
         })]
-      }), null != x && (0, i.jsx)("div", {
+      }), null != g && (0, i.jsx)("div", {
         className: u.benefitsSummary,
         children: (0, i.jsx)(o.Text, {
           color: "interactive-normal",
           variant: "text-sm/medium",
-          children: d.default.Messages.Storefront.BENEFITS_SUMMARY.format({
-            count: x
+          children: c.default.Messages.Storefront.BENEFITS_SUMMARY.format({
+            count: g
           })
         })
       }), null != v && (0, i.jsx)("div", {
@@ -88,12 +88,12 @@ function m(e) {
             children: [(0, i.jsx)(o.Text, {
               color: "header-secondary",
               variant: "eyebrow",
-              children: d.default.Messages.Storefront.BENEFITS_TITLE
+              children: c.default.Messages.Storefront.BENEFITS_TITLE
             }), v.length > 3 ? (0, i.jsxs)(i.Fragment, {
               children: [v.slice(0, 3), (0, i.jsx)(o.Text, {
                 variant: "text-md/semibold",
                 color: "text-secondary",
-                children: d.default.Messages.Storefront.MORE_BENEFITS.format({
+                children: c.default.Messages.Storefront.MORE_BENEFITS.format({
                   count: v.length - 3
                 })
               })]

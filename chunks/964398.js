@@ -105,8 +105,8 @@ t.default = a.memo(function(e) {
     itemWidth: C,
     itemHeight: g,
     showDeadZoneIndicator: E,
-    activeItem: _,
-    onItemSelect: S,
+    activeItem: S,
+    onItemSelect: _,
     onItemAction: I,
     interactive: N = !0,
     children: T
@@ -116,10 +116,10 @@ t.default = a.memo(function(e) {
   }), b = Math.abs(y.x) + Math.abs(y.y) > 0, D = a.useMemo(() => i().chunk(T, h), [T]), j = a.useCallback((e, t) => {
     null == L.current[R] ? L.current[R] = [] : L.current[R][t] = e
   }, [R]), P = a.useCallback((e, t) => {
-    x.current = t, S(h * e + t)
-  }, [S]), G = a.useCallback(() => {
-    x.current = null, S(null)
-  }, [S]), U = a.useCallback(e => {
+    x.current = t, _(h * e + t)
+  }, [_]), G = a.useCallback(() => {
+    x.current = null, _(null)
+  }, [_]), U = a.useCallback(e => {
     G(), v.current = e
   }, [G]), w = a.useCallback((e, t, n) => {
     if (v.current) {
@@ -156,7 +156,7 @@ t.default = a.memo(function(e) {
         y: e.clientY
       };
     if (w(i, s, Math.max(t, n)), v.current) {
-      null != _ && G();
+      null != S && G();
       return
     }
     let r = (0, o.extendLineSegment)(s, i, Math.max(t, n));
@@ -170,7 +170,7 @@ t.default = a.memo(function(e) {
       }
     }
     G()
-  }, 16), [_, w, G, P, R, n, t]), H = a.useCallback(e => {
+  }, 16), [S, w, G, P, R, n, t]), H = a.useCallback(e => {
     if (!N) return;
     let t = R + (e.deltaY > 0 ? 1 : -1);
     t >= 0 && t < D.length && (null != x.current && (D[t].length > x.current ? P(t, x.current) : G()), M(t))

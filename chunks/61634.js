@@ -20,8 +20,8 @@ var l = n("470079"),
   C = n("199902"),
   g = n("314897"),
   E = n("592125"),
-  _ = n("650774"),
-  S = n("430824"),
+  S = n("650774"),
+  _ = n("430824"),
   I = n("496675"),
   N = n("944486"),
   T = n("9156"),
@@ -51,8 +51,8 @@ function O(e) {
       }, {
         autoTrackExposure: !1
       }),
-      d = (0, r.useStateFromStores)([_.default], () => {
-        let t = _.default.getMemberCount(e);
+      d = (0, r.useStateFromStores)([S.default], () => {
+        let t = S.default.getMemberCount(e);
         return null == t || t > 1e3
       }),
       c = (0, r.useStateFromStoresObject)([A.default], () => {
@@ -83,10 +83,10 @@ function O(e) {
       guildHasVoice: b,
       guildHasVideo: D,
       selectedVoiceChannelHasVideo: j
-    } = (0, r.useStateFromStoresObject)([A.default, E.default, I.default, S.default, N.default], () => {
+    } = (0, r.useStateFromStoresObject)([A.default, E.default, I.default, _.default, N.default], () => {
       var t;
       let l = N.default.getVoiceChannelId(),
-        a = null === (t = S.default.getGuild(e)) || void 0 === t ? void 0 : t.afkChannelId,
+        a = null === (t = _.default.getGuild(e)) || void 0 === t ? void 0 : t.afkChannelId,
         s = A.default.getUsersWithVideo(e),
         i = A.default.getVoiceStates(e),
         r = (() => {
@@ -115,15 +115,15 @@ function O(e) {
       d = !1,
       f = !1,
       g = !1,
-      _ = !1,
-      S = !1;
+      S = !1,
+      _ = !1;
     if (!o && n) return {
       audio: u,
       video: g,
-      screenshare: _,
+      screenshare: S,
       liveStage: f,
       activeEvent: d,
-      activity: S,
+      activity: _,
       gaming: i,
       isCurrentUserConnected: !1
     };
@@ -144,13 +144,13 @@ function O(e) {
         return !1
       })(),
       G = c.default.getEmbeddedActivitiesForGuild(e).length > 0;
-    return o ? (u = !0, d = (null == a ? void 0 : a.channel_id) === r, f = A, g = M, _ = v, S = G) : (u = b, d = null != a, f = T, g = D, _ = x, S = y), {
+    return o ? (u = !0, d = (null == a ? void 0 : a.channel_id) === r, f = A, g = M, S = v, _ = G) : (u = b, d = null != a, f = T, g = D, S = x, _ = y), {
       audio: u,
       video: g,
-      screenshare: _,
+      screenshare: S,
       liveStage: f,
       activeEvent: d,
-      activity: S,
+      activity: _,
       gaming: i,
       isCurrentUserConnected: o || A
     }

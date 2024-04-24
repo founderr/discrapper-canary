@@ -20,14 +20,14 @@ function E() {
   return !1
 }
 
-function _(e) {
+function S(e) {
   var t;
   let n = r.default.getMutableGuildStates();
   return e === p.ViewHistoryKeys.SERVER_DISCOVERY_BADGE && !d.default.hasViewed(p.ViewHistoryKeys.SERVER_DISCOVERY_BADGE) || e !== C && e !== g && (null === (t = n[null != e ? e : "null"]) || void 0 === t ? void 0 : t.mentionCount) > 0
 }
-let S = (0, h.cachedFunction)((e, t, n) => ["null", ...t, ...e, g, p.ViewHistoryKeys.E3_SERVER_DISCOVERY_BADGE, C]);
+let _ = (0, h.cachedFunction)((e, t, n) => ["null", ...t, ...e, g, p.ViewHistoryKeys.E3_SERVER_DISCOVERY_BADGE, C]);
 t.default = a.forwardRef(function(e, t) {
-  let n = (0, s.useStateFromStoresArray)([u.default, o.default, r.default], () => S(u.default.getGuildFolders(), o.default.getUnreadPrivateChannelIds(), r.default.getStoreChangeSentinel())),
+  let n = (0, s.useStateFromStoresArray)([u.default, o.default, r.default], () => _(u.default.getGuildFolders(), o.default.getUnreadPrivateChannelIds(), r.default.getStoreChangeSentinel())),
     a = (0, s.useStateFromStores)([c.default], () => c.default.isFocused()),
     d = (0, s.useStateFromStores)([i.default], () => i.default.getExpandedFolders());
   return (0, l.jsx)(f.default, {
@@ -37,7 +37,7 @@ t.default = a.forwardRef(function(e, t) {
     isUnread: E,
     textUnread: m.default.Messages.NEW,
     textMention: m.default.Messages.NEW,
-    isMentioned: _,
+    isMentioned: S,
     animate: a,
     expandedFolders: d
   })

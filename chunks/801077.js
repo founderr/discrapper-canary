@@ -12,8 +12,8 @@ var l, a, s, i, r = n("392711"),
   C = n("420660"),
   g = n("728345"),
   E = n("812206"),
-  _ = n("710845"),
-  S = n("38618"),
+  S = n("710845"),
+  _ = n("38618"),
   I = n("656063"),
   N = n("761282"),
   T = n("789407"),
@@ -97,7 +97,7 @@ function en(e, t, n) {
     m = null !== (l = null == p ? void 0 : p.nsfwAllowed) && void 0 !== l && l,
     C = t.map(e => e.id),
     g = t.filter(t => e.has(t.id)),
-    S = !1,
+    _ = !1,
     R = [],
     j = new Set,
     P = !1,
@@ -117,7 +117,7 @@ function en(e, t, n) {
     P = u === T.SPOTIFY_APPLICATION_ID;
     let d = function(e) {
         let t = E.default.getApplication(e);
-        return null != t ? t : "string" != typeof e ? (new _.default("NowPlayingViewStore").error("Unknown type for applicationId: ".concat(typeof e, ", value: ").concat(e), {
+        return null != t ? t : "string" != typeof e ? (new S.default("NowPlayingViewStore").error("Unknown type for applicationId: ".concat(typeof e, ", value: ").concat(e), {
           tags: {
             source: "ACTIVITIES"
           }
@@ -150,7 +150,7 @@ function en(e, t, n) {
       let t = X(e.id),
         n = null != t ? $(t) : null;
       return null != n && n.id === d.id
-    }), (D = o().orderBy(D, [et], ["desc"])).length !== t.length && (S = !0), j.add(d.id), R.push({
+    }), (D = o().orderBy(D, [et], ["desc"])).length !== t.length && (_ = !0), j.add(d.id), R.push({
       game: d,
       activity: r,
       activityUser: e,
@@ -191,7 +191,7 @@ function en(e, t, n) {
       status: D.default.getStatus(e.id)
     })),
     partiedMembers: t,
-    showPlayingMembers: S,
+    showPlayingMembers: _,
     guildContext: d,
     currentActivities: (r = R, u = e => {
       var t;
@@ -202,7 +202,7 @@ function en(e, t, n) {
 }
 
 function el() {
-  return B && S.default.isConnected()
+  return B && _.default.isConnected()
 }
 let ea = o().throttle(() => {
   ! function() {
@@ -237,7 +237,7 @@ function es() {
 }
 class ei extends(l = u.default.Store) {
   initialize() {
-    this.syncWith([G.default, E.default, D.default, M.default, U.default, v.default, j.default, R.default, P.default], es), this.waitFor(S.default, O.default, E.default, G.default, P.default)
+    this.syncWith([G.default, E.default, D.default, M.default, U.default, v.default, j.default, R.default, P.default], es), this.waitFor(_.default, O.default, E.default, G.default, P.default)
   }
   get currentActivityParties() {
     return V

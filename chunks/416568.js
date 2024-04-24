@@ -16,8 +16,8 @@ var l = n("735250"),
   C = n("481060"),
   g = n("925549"),
   E = n("209613"),
-  _ = n("100527"),
-  S = n("906732"),
+  S = n("100527"),
+  _ = n("906732"),
   I = n("358221"),
   N = n("2485"),
   T = n("706590"),
@@ -153,13 +153,13 @@ function eo(e) {
     null === (e = ed.current) || void 0 === e || e.calculateState(), null === (t = ec.current) || void 0 === t || t.calculateState()
   })), {
     analyticsLocations: eE
-  } = (0, S.default)(_.default.GUILDS_LIST), {
-    pathname: e_
-  } = (0, d.useLocation)(), eS = e_.startsWith($.Routes.GUILD_DISCOVERY), eI = e_.startsWith($.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(""));
+  } = (0, _.default)(S.default.GUILDS_LIST), {
+    pathname: eS
+  } = (0, d.useLocation)(), e_ = eS.startsWith($.Routes.GUILD_DISCOVERY), eI = eS.startsWith($.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(""));
   a.useLayoutEffect(() => {
     if (!eo.current) {
       if (0 !== o.size) {
-        if (eS) eg.scrollToGuild(null, !1);
+        if (e_) eg.scrollToGuild(null, !1);
         else {
           let {
             scrollTop: e
@@ -195,7 +195,7 @@ function eo(e) {
       name: e.name,
       icon: e.icon
     }, e.id));
-  return (0, l.jsx)(S.AnalyticsLocationProvider, {
+  return (0, l.jsx)(_.AnalyticsLocationProvider, {
     value: eE,
     children: (0, l.jsx)("nav", {
       className: i()(et.wrapper, s, (0, P.getThemeClass)(r), {
@@ -227,7 +227,7 @@ function eo(e) {
             guildId: e
           }, e)), !n && eA ? (0, l.jsx)(Y.default, {
             ref: eg.guildDiscoveryRef,
-            selected: eS,
+            selected: e_,
             tooltip: ee.default.Messages.GUILD_DISCOVERY_TOOLTIP
           }) : null, (0, l.jsx)(q.default, {}), (0, l.jsx)(Z.default, {}), (0, l.jsx)("div", {
             "aria-label": ee.default.Messages.SERVERS,
@@ -261,7 +261,7 @@ function eo(e) {
             lastTargetNode: eL[eL.length - 1]
           }), n || eA ? null : (0, l.jsx)(Y.default, {
             ref: eg.guildDiscoveryRef,
-            selected: eS
+            selected: e_
           }), (0, l.jsx)(z.default, {}), t ? null : (0, l.jsxs)(l.Fragment, {
             children: [(0, l.jsx)(Z.default, {}), (0, l.jsx)(B.default, {})]
           })]

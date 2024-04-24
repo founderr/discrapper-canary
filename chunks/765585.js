@@ -20,8 +20,8 @@ t.default = a.forwardRef(function(e, t) {
     headerClassName: C,
     contentClassName: g,
     tryItText: E,
-    dismissText: _,
-    onTryFeature: S,
+    dismissText: S,
+    onTryFeature: _,
     onClose: I,
     className: N,
     inlineArt: T = !1,
@@ -90,12 +90,12 @@ t.default = a.forwardRef(function(e, t) {
       }), (0, l.jsx)("div", {
         ref: G,
         className: j || !L ? p.buttonContainerVertical : p.buttonContainerHorizontal,
-        children: null != S ? (0, l.jsxs)(l.Fragment, {
+        children: null != _ ? (0, l.jsxs)(l.Fragment, {
           children: [(0, l.jsx)(r.Button, {
             className: p.button,
             size: D,
             onClick: e => {
-              null == I || I(e), S(e), w(f.ContentDismissActionType.PRIMARY)
+              null == I || I(e), _(e), w(f.ContentDismissActionType.PRIMARY)
             },
             color: A || O ? r.Button.Colors.BRAND : r.Button.Colors.WHITE,
             look: A || O ? r.Button.Looks.INVERTED : r.Button.Looks.FILLED,
@@ -108,7 +108,7 @@ t.default = a.forwardRef(function(e, t) {
             },
             color: A || O ? r.Button.Colors.WHITE : r.Button.Colors.BRAND,
             look: A || O ? r.Button.Looks.LINK : r.Button.Looks.FILLED,
-            children: null != _ ? _ : h.default.Messages.EDUCATION_NEW_FEATURE_DISMISS
+            children: null != S ? S : h.default.Messages.EDUCATION_NEW_FEATURE_DISMISS
           })]
         }) : (0, l.jsx)(r.Button, {
           className: p.button,

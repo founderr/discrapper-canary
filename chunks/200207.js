@@ -11,8 +11,8 @@ var r = n("557533"),
   s = n("789978"),
   a = n("790472"),
   o = n("777207"),
-  c = n("431674"),
-  d = n("956169");
+  d = n("431674"),
+  c = n("956169");
 
 function u(e) {
   let {
@@ -26,13 +26,13 @@ function u(e) {
   } = e;
   return (0, i.jsx)(s.FocusRing, {
     children: (0, i.jsxs)("div", {
-      className: l()(c.wrapper, d.hoverCard),
+      className: l()(d.wrapper, c.hoverCard),
       tabIndex: 0,
       onClick: () => {
         null != u ? u() : null != f && f()
       },
       children: [(0, i.jsx)("div", {
-        className: c.cardHeaderImg,
+        className: d.cardHeaderImg,
         style: null != r ? {
           backgroundImage: null != r ? "url(".concat(r.toString(), ")") : void 0
         } : void 0,
@@ -42,19 +42,19 @@ function u(e) {
           width: 80
         })
       }), (0, i.jsxs)("div", {
-        className: c.details,
+        className: d.details,
         children: [(0, i.jsx)(o.Text, {
           color: "header-primary",
           variant: "text-md/semibold",
           children: t
         }), null != n && (0, i.jsx)(o.Text, {
-          className: c.description,
+          className: d.description,
           color: "text-muted",
           variant: "text-sm/normal",
           children: n
         })]
       }), null != m && (0, i.jsxs)("div", {
-        className: c.footer,
+        className: d.footer,
         children: [(0, i.jsx)(o.Text, {
           color: "interactive-normal",
           variant: "text-sm/normal",

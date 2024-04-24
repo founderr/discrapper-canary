@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   SubscriptionTag: function() {
-    return d
+    return c
   },
   Tag: function() {
     return u
@@ -14,21 +14,21 @@ var r = n("628028"),
   s = n("777207"),
   a = n("330711"),
   o = n("381585");
-let c = {
+let d = {
   width: 12,
   height: 12
 };
 
-function d(e) {
+function c(e) {
   let {
     type: t
   } = e;
   return (0, i.jsx)(u, {
     icon: "user" === t ? (0, i.jsx)(l.UserIcon, {
-      ...c,
+      ...d,
       color: "var(--text-positive)"
     }) : (0, i.jsx)(r.ServerIcon, {
-      ...c,
+      ...d,
       color: "var(--text-brand)"
     }),
     text: "user" === t ? a.default.Messages.Storefront.USER_SUBSCRIPTION : a.default.Messages.Storefront.SERVER_SUBSCRIPTION

@@ -13,8 +13,8 @@ var l, a, s, i = n("735250"),
   C = n("367907"),
   g = n("453542"),
   E = n("762914"),
-  _ = n("518311"),
-  S = n("355298"),
+  S = n("518311"),
+  _ = n("355298"),
   I = n("869404"),
   N = n("333984"),
   T = n("210887"),
@@ -338,7 +338,7 @@ class G extends(a = r.Component) {
         children: [(0, i.jsx)("span", {
           className: D.headerText,
           children: b.default.Messages.DIRECT_MESSAGES
-        }), (0, i.jsx)(_.default, {
+        }), (0, i.jsx)(S.default, {
           tooltip: b.default.Messages.CREATE_DM,
           tooltipPosition: "top",
           popoutAlign: "left",
@@ -364,9 +364,9 @@ t.default = e => {
     theme: n,
     children: l,
     showDMHeader: a
-  } = e, s = r.Children.count(l), o = A.default.getMutablePrivateChannels(), u = (0, I.filterOutMessageRequestsAndSpam)(o), f = (0, c.useStateFromStoresArray)([v.default, S.default, N.default], () => {
+  } = e, s = r.Children.count(l), o = A.default.getMutablePrivateChannels(), u = (0, I.filterOutMessageRequestsAndSpam)(o), f = (0, c.useStateFromStoresArray)([v.default, _.default, N.default], () => {
     let e = v.default.getPrivateChannelIds(),
-      t = (0, I.filterOutMessageRequestsAndSpamById)(e, [S.default, N.default]);
+      t = (0, I.filterOutMessageRequestsAndSpamById)(e, [_.default, N.default]);
     return (0, E.filterBroadcastingGDMs)(t)
   }, []), h = (0, c.useStateFromStoresObject)([m.default, T.default, A.default], () => ({
     theme: T.default.darkSidebar ? O.ThemeTypes.DARK : n,
@@ -392,7 +392,7 @@ t.default = e => {
     t.scrollToTop({
       callback: () => requestAnimationFrame(() => e())
     })
-  }), []), _ = r.useCallback(() => new Promise(e => {
+  }), []), S = r.useCallback(() => new Promise(e => {
     let t = p.current;
     if (null == t) return e();
     t.scrollToBottom({
@@ -404,7 +404,7 @@ t.default = e => {
     id: "private-channels-".concat(L),
     isEnabled: h.keyboardModeEnabled,
     scrollToStart: g,
-    scrollToEnd: _,
+    scrollToEnd: S,
     defaultFocused: (s + (a ? 1 : 0)).toString(),
     setFocus: C
   });

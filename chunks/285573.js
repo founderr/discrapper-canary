@@ -21,8 +21,8 @@ let E = (0, u.makeChannelSortable)(function(e) {
     selectedChannelId: s,
     position: u,
     disableManageChannels: E,
-    sorting: _,
-    sortingType: S,
+    sorting: S,
+    sortingType: _,
     sortingPosition: I,
     connectChannelDragSource: N,
     connectChannelDropTarget: T,
@@ -43,7 +43,7 @@ let E = (0, u.makeChannelSortable)(function(e) {
   }, [L]);
   if (null == L) return null;
   let y = (0, h.getChannelItemClassName)(u, I),
-    O = (0, h.isChannelItemDisabled)(L, _, S),
+    O = (0, h.isChannelItemDisabled)(L, S, _),
     b = (0, l.jsx)("div", {
       className: i()(y, {
         [g.disabled]: O,

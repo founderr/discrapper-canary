@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return d
   }
 }), n("653041"), n("47120");
 var a = n("735250");
@@ -12,20 +12,20 @@ var u = n("481060"),
   s = n("362658"),
   r = n("689938");
 
-function o(e) {
+function d(e) {
   let t = (0, i.useFavoritesGuildSelected)(),
     n = (0, i.useFavorite)(e.id),
-    o = (0, i.useFavoritesCategories)(),
+    d = (0, i.useFavoritesCategories)(),
     {
-      isFavoritesPerk: d
+      isFavoritesPerk: o
     } = (0, s.useFavoritesServerExperiment)("useChannelMoveToCategory");
-  if (__OVERLAY__ || !t || null == n || !d) return null;
+  if (__OVERLAY__ || !t || null == n || !o) return null;
   let [f, c] = function(e) {
     let t = [],
       n = null;
     for (let a of e) null == a.id ? n = a : t.push(a);
     return [n, t]
-  }(o.filter(e => e.id !== (null == n ? void 0 : n.parentId)));
+  }(d.filter(e => e.id !== (null == n ? void 0 : n.parentId)));
 
   function S(e) {
     null != n && (0, l.updateFavoriteChannelParent)(n.id, e)

@@ -1,77 +1,77 @@
 "use strict";
-l.r(a), l("653041"), l("47120");
-var t = l("735250"),
-  i = l("470079"),
-  n = l("120356"),
-  s = l.n(n),
-  r = l("393903"),
-  d = l("206771");
+a.r(v), a("653041"), a("47120");
+var t = a("735250"),
+  l = a("470079"),
+  e = a("120356"),
+  i = a.n(e),
+  s = a("393903"),
+  n = a("206771");
 
-function c(e, a) {
-  let l = [],
+function r(h, v) {
+  let a = [],
     t = [],
-    i = 0,
-    n = 0,
-    s = !1;
-  for (var r = 0; r < e.length; r++) {
-    let d = e[r],
-      c = a.widths[r],
-      o = r === e.length - 1,
-      x = n === a.maxLines - 1,
-      h = n + 2 < a.maxLines,
-      V = c > a.parentWidth,
-      H = x && !o ? a.overflowWidth : 0,
-      u = 0 === a.parentWidth,
-      f = !s && i + c + a.spacing + H < a.parentWidth;
-    u || f ? (i += c + a.spacing, l.push(d)) : n < a.maxLines - 1 ? (n++, i = c + a.spacing, l.push(d)) : V && !x && 0 === i ? (n++, l.push(d)) : V && h && i > 0 ? (l.push(d), n += 2) : (s = !0, t.push(d))
+    l = 0,
+    e = 0,
+    i = !1;
+  for (var s = 0; s < h.length; s++) {
+    let n = h[s],
+      r = v.widths[s],
+      d = s === h.length - 1,
+      M = e === v.maxLines - 1,
+      Z = e + 2 < v.maxLines,
+      H = r > v.parentWidth,
+      V = M && !d ? v.overflowWidth : 0,
+      f = 0 === v.parentWidth,
+      o = !i && l + r + v.spacing + V < v.parentWidth;
+    f || o ? (l += r + v.spacing, a.push(n)) : e < v.maxLines - 1 ? (e++, l = r + v.spacing, a.push(n)) : H && !M && 0 === l ? (e++, a.push(n)) : H && Z && l > 0 ? (a.push(n), e += 2) : (i = !0, t.push(n))
   }
   return {
-    ...a,
-    visible: l,
+    ...v,
+    visible: a,
     overflow: t
   }
 }
-a.default = function(e) {
+v.default = function(h) {
   let {
-    items: a,
-    renderItem: l,
-    renderOverflow: n,
-    className: o,
-    maxLines: x,
-    overflowWidth: h = 65,
-    spacing: V = 8
-  } = e, [H, u] = i.useState(() => ({
+    items: v,
+    renderItem: a,
+    renderOverflow: e,
+    className: d,
+    maxLines: M,
+    overflowWidth: Z = 65,
+    spacing: H = 8
+  } = h, [V, f] = l.useState(() => ({
     parentWidth: 0,
-    visible: a,
+    visible: v,
     overflow: [],
-    widths: Array(a.length).fill(0),
-    maxLines: x,
-    overflowWidth: h,
-    spacing: V
-  })), f = {
-    visibility: 0 === H.parentWidth ? "hidden" : "visible"
-  }, m = (0, r.useResizeObserver)(e => {
-    u(l => c(a, {
-      ...l,
-      parentWidth: e.contentRect.width
+    widths: Array(v.length).fill(0),
+    maxLines: M,
+    overflowWidth: Z,
+    spacing: H
+  })), o = {
+    visibility: 0 === V.parentWidth ? "hidden" : "visible"
+  }, c = (0, s.useResizeObserver)(h => {
+    f(a => r(v, {
+      ...a,
+      parentWidth: h.contentRect.width
     }))
   });
-  return i.useLayoutEffect(() => {
-    u(e => {
-      var l;
-      let t = [...e.widths];
-      return null === (l = m.current) || void 0 === l || l.childNodes.forEach((e, a) => {
-        let l = e.offsetWidth;
-        t[a] = l
-      }), c(a, {
-        ...e,
+  return l.useLayoutEffect(() => {
+    f(h => {
+      var a;
+      let t = [...h.widths];
+      return null === (a = c.current) || void 0 === a || a.childNodes.forEach((h, v) => {
+        let a = h.offsetWidth;
+        t[v] = a
+      }), r(v, {
+        ...h,
         widths: t
       })
     })
-  }, [m, a, u]), (0, t.jsxs)("div", {
-    style: f,
-    className: s()(d.container, o),
-    ref: m,
-    children: [H.visible.map(l), H.overflow.length > 0 ? n(H.overflow) : null]
+  }, [c, v, f]), (0, t.jsxs)("div", {
+    style: o,
+    className: i()(n.container, d),
+    ref: c,
+    children: [V.visible.map(a), V.overflow.length > 0 ? e(V.overflow) : null]
   })
 }

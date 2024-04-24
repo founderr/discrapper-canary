@@ -37,8 +37,8 @@ var l, a = n("735250"),
   C = n("2093"),
   g = n("366695"),
   E = n("346656"),
-  _ = n("409216"),
-  S = n("136033"),
+  S = n("409216"),
+  _ = n("136033"),
   I = n("757698"),
   N = n("630641"),
   T = n("689938"),
@@ -237,7 +237,7 @@ class R extends(l = s.Component) {
       voiceStates: e,
       channel: t
     } = this.props;
-    return null == e ? null : (0, a.jsx)(_.default, {
+    return null == e ? null : (0, a.jsx)(S.default, {
       className: A.voiceSummaryContainer,
       guildId: t.guild_id,
       users: e.map(e => {
@@ -538,7 +538,7 @@ class D extends s.Component {
     return null == s || void 0 === s.messageId ? (e = T.default.Messages.QUICKSWITCHER_LINK_UNKNOWN, t = (0, a.jsx)(I.default, {
       width: 16,
       height: 16
-    })) : (0, c.isAccessibleChannelPath)(s) ? (e = T.default.Messages.QUICKSWITCHER_LINK_MESSAGE, t = (0, a.jsx)(S.default, {
+    })) : (0, c.isAccessibleChannelPath)(s) ? (e = T.default.Messages.QUICKSWITCHER_LINK_MESSAGE, t = (0, a.jsx)(_.default, {
       width: 16,
       height: 16
     })) : (e = T.default.Messages.QUICKSWITCHER_LINK_NO_ACCESS, t = (0, a.jsx)(N.default, {

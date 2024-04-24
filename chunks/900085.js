@@ -19,8 +19,8 @@ var l, a = n("735250"),
   C = n("592125"),
   g = n("888369"),
   E = n("430824"),
-  _ = n("306680"),
-  S = n("944486"),
+  S = n("306680"),
+  _ = n("944486"),
   I = n("938475"),
   N = n("387204"),
   T = n("107828"),
@@ -73,13 +73,13 @@ class G extends(l = s.Component) {
 D(G, "defaultProps", {
   unread: !1
 });
-let U = u.default.connectStores([_.default, C.default], e => {
+let U = u.default.connectStores([S.default, C.default], e => {
     let {
       channel: t
     } = e;
     return {
-      unread: _.default.hasUnread(t.id),
-      mentions: _.default.getMentionCount(t.id),
+      unread: S.default.hasUnread(t.id),
+      mentions: S.default.getMentionCount(t.id),
       category: C.default.getChannel(t.parent_id)
     }
   })(G),
@@ -100,20 +100,20 @@ let U = u.default.connectStores([_.default, C.default], e => {
       unread: g.default.hasUnread(t.id)
     }
   })(T.Guild),
-  B = u.default.connectStores([_.default], e => {
+  B = u.default.connectStores([S.default], e => {
     let {
       channel: t
     } = e;
     return {
-      mentions: _.default.getMentionCount(t.id)
+      mentions: S.default.getMentionCount(t.id)
     }
   })(T.GroupDM),
-  H = u.default.connectStores([C.default, _.default], e => {
+  H = u.default.connectStores([C.default, S.default], e => {
     let {
       user: t
     } = e, n = C.default.getDMFromUserId(t.id);
     return {
-      mentions: null != n ? _.default.getMentionCount(n) : 0
+      mentions: null != n ? S.default.getMentionCount(n) : 0
     }
   })(T.User);
 
@@ -371,7 +371,7 @@ class k extends s.PureComponent {
             return n => (0, a.jsx)(e, {
               ...n,
               channel: t.record,
-              selected: S.default.getChannelId() === t.record.id,
+              selected: _.default.getChannelId() === t.record.id,
               onSelect: x.hide
             })
           });

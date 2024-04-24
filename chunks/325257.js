@@ -16,8 +16,8 @@ var l = n("735250"),
   C = n("703656"),
   g = n("769654"),
   E = n("271383"),
-  _ = n("771845"),
-  S = n("880080"),
+  S = n("771845"),
+  _ = n("880080"),
   I = n("26290"),
   N = n("15434"),
   T = n("727258"),
@@ -88,7 +88,7 @@ t.default = a.memo(function(e) {
         nodeId: G.id
       }),
       end() {
-        null == F || F(), (0, p.saveGuildFolders)(_.default.getCompatibleGuildFolders())
+        null == F || F(), (0, p.saveGuildFolders)(S.default.getCompatibleGuildFolders())
       },
       collect: e => ({
         dragging: e.isDragging()
@@ -120,13 +120,13 @@ t.default = a.memo(function(e) {
     eE = a.useCallback(e => {
       null != H && !eg && z(e, H)
     }, [H, z, eg]),
-    e_ = a.useCallback(e => {
+    eS = a.useCallback(e => {
       if ("ArrowLeft" === e.key && null != ee) {
         var t;
         null === (t = document.querySelector("[aria-owns=folder-items-".concat(ee, "]"))) || void 0 === t || t.focus()
       }
     }, [ee]),
-    eS = a.useCallback(e => {
+    e_ = a.useCallback(e => {
       if (e) {
         ep.delay();
         return
@@ -162,7 +162,7 @@ t.default = a.memo(function(e) {
       },
       onMouseDown: eC,
       onContextMenu: eE,
-      onKeyDown: e_,
+      onKeyDown: eS,
       icon: H.getIconURL(96, eu && V),
       selected: k || eu,
       ...ei,
@@ -188,7 +188,7 @@ t.default = a.memo(function(e) {
     });
   return (0, l.jsxs)(R.ListItem, {
     ref: eI,
-    children: [(0, l.jsx)(S.default, {
+    children: [(0, l.jsx)(_.default, {
       hovered: !ea && eu,
       selected: !ea && k,
       unread: !ea && Y,
@@ -201,7 +201,7 @@ t.default = a.memo(function(e) {
     }), X ? (0, l.jsx)(L.default, {
       name: H.name,
       targetNode: G,
-      onDragOverChanged: eS
+      onDragOverChanged: e_
     }) : null]
   })
 })

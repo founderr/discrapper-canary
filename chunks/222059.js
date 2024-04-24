@@ -20,8 +20,8 @@ var l = n("735250"),
   C = n("456541"),
   g = n("143614"),
   E = n("544803"),
-  _ = n("899740"),
-  S = n("155409"),
+  S = n("899740"),
+  _ = n("155409"),
   I = n("699516"),
   N = n("944486"),
   T = n("594174"),
@@ -63,7 +63,7 @@ function k(e) {
     badge: f,
     link: p,
     showProgressBadge: m
-  } = e, _ = (0, i.useStateFromStores)([d.default], () => d.default.isEditorOpen), [I, N] = a.useState(!1), [T, A] = a.useState(!1), [L, v] = a.useState(null), [x, b] = a.useState(0), [j, F] = a.useState(!1), {
+  } = e, S = (0, i.useStateFromStores)([d.default], () => d.default.isEditorOpen), [I, N] = a.useState(!1), [T, A] = a.useState(!1), [L, v] = a.useState(null), [x, b] = a.useState(0), [j, F] = a.useState(!1), {
     canViewBroadcasts: k
   } = h.default.useExperiment({
     location: "home_button_no_track"
@@ -87,7 +87,7 @@ function k(e) {
   }) : K && (X = (0, l.jsx)(R.default, {
     className: H.broadcastBadge
   }));
-  let Q = t || I || _,
+  let Q = t || I || S,
     q = (0, l.jsx)(o.BlobMask, {
       highlight: K,
       selected: Q,
@@ -149,7 +149,7 @@ function k(e) {
         F(!1)
       }, 250)
     },
-    children: (0, l.jsx)(S.default, {
+    children: (0, l.jsx)(_.default, {
       inlineSpecs: V,
       tutorialId: "friends-list",
       position: "right",
@@ -193,19 +193,19 @@ function Y() {
     })),
     c = o + d,
     h = (0, i.useStateFromStores)([T.default], () => T.default.getCurrentUser()),
-    C = (0, _.useMessageRequestsCount)(),
+    C = (0, S.useMessageRequestsCount)(),
     g = s + c + C,
     E = g === c && c > 0 && s + C === 0;
   a.useEffect(() => {
     n.length > 0 && (0, f.fetchBroadcasterBuckets)()
   }, [n]), (0, m.default)();
-  let S = L.default.getHomeLink();
-  return E && (S = w.Routes.APPLICATION_STORE), (0, l.jsx)(k, {
+  let _ = L.default.getHomeLink();
+  return E && (_ = w.Routes.APPLICATION_STORE), (0, l.jsx)(k, {
     selected: e,
     user: h,
     selectedChannelId: N.default.getChannelId(w.ME),
     badge: g,
-    link: S,
+    link: _,
     showProgressBadge: t
   })
 }

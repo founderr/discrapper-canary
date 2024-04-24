@@ -26,8 +26,8 @@ t.default = e => {
       ariaLabel: C,
       className: g,
       style: E,
-      to: _,
-      onClick: S,
+      to: S,
+      onClick: _,
       selected: I = !1,
       ...N
     } = e,
@@ -37,17 +37,17 @@ t.default = e => {
     n = null !== (A = c[(t = (0, u.getAcronym)(m)).length - 1]) && void 0 !== A ? A : c[c.length - 1]
   }
   let L = a.useCallback(e => {
-    if (null == _);
-    else if ("string" == typeof _) T.push(_);
+    if (null == S);
+    else if ("string" == typeof S) T.push(S);
     else {
       let {
         pathname: e = "",
         state: t
-      } = _;
+      } = S;
       T.push(e, t)
     }
-    null != S && S(e)
-  }, [T, _, S]);
+    null != _ && _(e)
+  }, [T, S, _]);
   return (0, l.jsxs)(o.Clickable, {
     ...N,
     onClick: L,

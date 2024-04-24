@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return c
   }
 });
 var i = n("735250");
@@ -11,12 +11,12 @@ var r = n("153832"),
   s = n("976255"),
   a = n("667"),
   o = n("626135"),
-  c = n("981631");
+  d = n("981631");
 
-function d(e) {
+function c(e) {
   let {
     applicationId: t,
-    skuId: d,
+    skuId: c,
     onClose: u,
     onComplete: f,
     analyticsLocations: m,
@@ -36,7 +36,7 @@ function d(e) {
         ...l,
         loadId: v,
         applicationId: t,
-        skuId: d,
+        skuId: c,
         analyticsLocations: m,
         analyticsLocationObject: p,
         onClose: e => {
@@ -50,15 +50,15 @@ function d(e) {
   }, {
     contextKey: h,
     onCloseCallback: () => {
-      !S && o.default.track(c.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
+      !S && o.default.track(d.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
         load_id: v,
-        payment_type: c.PurchaseTypeToAnalyticsPaymentType[c.PurchaseTypes.ONE_TIME],
+        payment_type: d.PurchaseTypeToAnalyticsPaymentType[d.PurchaseTypes.ONE_TIME],
         location: p,
         is_gift: !1,
         application_id: t,
         location_stack: m
       }), (0, s.clearError)(), (0, a.clearPurchaseTokenAuthState)(), null == u || u(S)
     },
-    onCloseRequest: c.NOOP
+    onCloseRequest: d.NOOP
   })
 }

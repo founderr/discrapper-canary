@@ -21,8 +21,8 @@ var a = n("120356"),
   C = n("886176"),
   g = n("605236"),
   E = n("703656"),
-  _ = n("984933"),
-  S = n("430824"),
+  S = n("984933"),
+  _ = n("430824"),
   I = n("696202"),
   N = n("26290"),
   T = n("626135"),
@@ -38,7 +38,7 @@ function y(e) {
     guildId: t,
     selected: n,
     handleClick: a
-  } = e, d = (0, p.useIsEligibleForSubscriptionsInGuildShop)(t, "guild_shop_channel_row"), m = (0, i.useStateFromStores)([S.default], () => S.default.getGuild(t)), A = (null == m ? void 0 : m.hasFeature(L.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0, v = "false" === o.Storage.get(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "false"), y = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion);
+  } = e, d = (0, p.useIsEligibleForSubscriptionsInGuildShop)(t, "guild_shop_channel_row"), m = (0, i.useStateFromStores)([_.default], () => _.default.getGuild(t)), A = (null == m ? void 0 : m.hasFeature(L.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0, v = "false" === o.Storage.get(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "false"), y = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion);
   return (0, l.jsx)(u.ClickableContainer, {
     tag: "div",
     onClick: a,
@@ -72,7 +72,7 @@ function y(e) {
                 action_taken: x.GuildShopPreviewClickActions.DISMISS_CHANNEL_ROW
               }), !d || !A) {
               var n;
-              (0, E.replaceWith)(L.Routes.CHANNEL(t, null === (n = _.default.getDefaultChannel(t)) || void 0 === n ? void 0 : n.id))
+              (0, E.replaceWith)(L.Routes.CHANNEL(t, null === (n = S.default.getDefaultChannel(t)) || void 0 === n ? void 0 : n.id))
             }
           },
           "aria-label": R.default.Messages.DISMISS,

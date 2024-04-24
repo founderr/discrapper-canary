@@ -18,8 +18,8 @@ var l, a, s = n("735250"),
   C = n("481060"),
   g = n("612226"),
   E = n("951483"),
-  _ = n("714338"),
-  S = n("607070"),
+  S = n("714338"),
+  _ = n("607070"),
   I = n("585483"),
   N = n("557177"),
   T = n("264549"),
@@ -324,7 +324,7 @@ function P(e) {
   let {
     transitionState: t,
     onClose: n
-  } = e, [l, a] = i.useState(!1), r = i.useMemo(() => __OVERLAY__ ? (0, E.getOverlayLayoutContent)() : (0, g.getDefaultLayoutContent)(), []), u = (0, p.useStateFromStores)([S.default], () => S.default.keyboardModeEnabled);
+  } = e, [l, a] = i.useState(!1), r = i.useMemo(() => __OVERLAY__ ? (0, E.getOverlayLayoutContent)() : (0, g.getDefaultLayoutContent)(), []), u = (0, p.useStateFromStores)([_.default], () => _.default.keyboardModeEnabled);
   return (0, s.jsx)(C.ModalRoot, {
     className: o()(v.noBackground, {
       [v.noShadow]: l
@@ -340,7 +340,7 @@ function P(e) {
         content: r,
         keyboardModeEnabled: u,
         activateRagingDemon: function() {
-          _.default.disable(), a(!0)
+          S.default.disable(), a(!0)
         }
       }, "modal")
     })

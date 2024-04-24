@@ -21,8 +21,8 @@ var a = n("120356"),
   C = n("938475"),
   g = n("242315"),
   E = n("944581"),
-  _ = n("632184"),
-  S = n("170039"),
+  S = n("632184"),
+  _ = n("170039"),
   I = n("761374"),
   N = n("602623"),
   T = n("823379"),
@@ -81,10 +81,10 @@ function O() {
     }, [a]),
     j = (0, o.useStateFromStoresArray)([m.default], () => D.map(e => m.default.getUser(e)), [D]),
     P = (0, o.useStateFromStoresArray)([m.default], () => b.map(e => m.default.getUser(e)), [b]),
-    G = y(_.default, x.filter(e => !b.includes(e.id) && !D.includes(e.id)));
+    G = y(S.default, x.filter(e => !b.includes(e.id) && !D.includes(e.id)));
   let U = (e = M, t = O, 0 === e.length ? null : (0, l.jsxs)("div", {
       className: R.row,
-      children: [(0, l.jsx)(S.default, {
+      children: [(0, l.jsx)(_.default, {
         className: R.activityIcon
       }), (0, l.jsx)(N.default, {
         guildId: void 0,

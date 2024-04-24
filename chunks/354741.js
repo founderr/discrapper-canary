@@ -6,38 +6,38 @@ var l = n("481060"),
   u = n("493683"),
   i = n("239091"),
   s = n("883385"),
-  o = n("108843"),
-  r = n("947440"),
+  r = n("108843"),
+  o = n("947440"),
   d = n("100527"),
   c = n("299206"),
   f = n("895563"),
   M = n("212205"),
   m = n("62420"),
   C = n("122074"),
-  h = n("314897"),
-  _ = n("858687"),
+  _ = n("314897"),
+  h = n("858687"),
   I = n("461535"),
-  v = n("776568"),
-  E = n("981631"),
+  E = n("776568"),
+  N = n("981631"),
   S = n("689938");
-t.default = (0, o.default)((0, s.default)(function(e) {
+t.default = (0, r.default)((0, s.default)(function(e) {
   let {
     channel: t,
     selected: s,
-    onSelect: o
-  } = e, d = t.isOwner(h.default.getId()), N = (0, I.default)(t), g = (0, v.default)(t), T = (0, C.default)(E.ZERO_STRING_GUILD_ID, t.id), A = (0, _.default)(t, s), p = (0, c.default)({
+    onSelect: r
+  } = e, d = t.isOwner(_.default.getId()), T = (0, I.default)(t), v = (0, E.default)(t), A = (0, C.default)(N.ZERO_STRING_GUILD_ID, t.id), p = (0, h.default)(t, s), g = (0, c.default)({
     id: t.id,
     label: S.default.Messages.COPY_ID_CHANNEL
-  }), x = (0, r.default)(t), O = (0, f.useAddToFavoritesItem)(t), G = (0, f.useRemoveFromFavoritesItem)(t), j = (0, M.default)(t), F = (0, m.default)(t);
+  }), x = (0, o.default)(t), O = (0, f.useAddToFavoritesItem)(t), G = (0, f.useRemoveFromFavoritesItem)(t), j = (0, M.default)(t), R = (0, m.default)(t);
   return null == t || t.isManaged() ? null : (0, a.jsxs)(l.Menu, {
     navId: "gdm-context",
     "aria-label": S.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
     onClose: i.closeContextMenu,
-    onSelect: o,
+    onSelect: r,
     children: [(0, a.jsx)(l.MenuGroup, {
-      children: N
+      children: T
     }), (0, a.jsxs)(l.MenuGroup, {
-      children: [O, j, F]
+      children: [O, j, R]
     }), (0, a.jsxs)(l.MenuGroup, {
       children: [d ? (0, a.jsx)(l.MenuItem, {
         id: "instant-invites",
@@ -73,15 +73,15 @@ t.default = (0, o.default)((0, s.default)(function(e) {
     }), (0, a.jsx)(l.MenuGroup, {
       children: x
     }), (0, a.jsxs)(l.MenuGroup, {
-      children: [g, T]
+      children: [v, A]
     }), (0, a.jsx)(l.MenuGroup, {
-      children: A
+      children: p
     }), (0, a.jsx)(l.MenuGroup, {
       children: G
     }), (0, a.jsx)(l.MenuGroup, {
-      children: p
+      children: g
     })]
   })
 }, {
-  object: E.AnalyticsObjects.CONTEXT_MENU
+  object: N.AnalyticsObjects.CONTEXT_MENU
 }), [d.default.CONTEXT_MENU, d.default.GROUP_DM_MENU])
