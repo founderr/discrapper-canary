@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   PremiumPaymentSKUSelectStep: function() {
-    return E
+    return h
   }
 });
 var n = s("735250");
@@ -21,10 +21,10 @@ var i = s("120356"),
   _ = s("614223"),
   m = s("48175"),
   L = s("474936"),
-  S = s("689938"),
-  h = s("300561");
+  E = s("689938"),
+  S = s("300561");
 
-function E(e) {
+function h(e) {
   let {
     handleStepChange: t,
     handleClose: s,
@@ -34,11 +34,11 @@ function E(e) {
     activeSubscription: l,
     startedPaymentFlowWithPaymentSourcesRef: u,
     setSelectedPlanId: d,
-    priceOptions: S
+    priceOptions: E
   } = (0, f.usePaymentContext)(), {
-    isGift: h
-  } = (0, p.useGiftContext)(), E = (0, C.usePremiumTrialOffer)(i);
-  (0, o.useAnnualDiscountExperiment)("PremiumPaymentSKUSelectStep", null == E);
+    isGift: S
+  } = (0, p.useGiftContext)(), h = (0, C.usePremiumTrialOffer)(i);
+  (0, o.useAnnualDiscountExperiment)("PremiumPaymentSKUSelectStep", null == h);
   let P = (0, a.useIsInPremiumOfferExperience)();
   return (0, n.jsx)(j, {
     selectSku: e => (function(e) {
@@ -77,15 +77,15 @@ function E(e) {
       newSkuId: e,
       setSelectedSkuId: r,
       handleStepChange: t,
-      isGift: h,
-      userTrialOffer: E,
+      isGift: S,
+      userTrialOffer: h,
       startedPaymentFlowWithPaymentSources: u.current,
       setSelectedPlanId: d
     }),
     onClose: s,
-    isGift: h,
+    isGift: S,
     inOfferExperience: P,
-    priceOptions: S
+    priceOptions: E
   })
 }
 
@@ -99,21 +99,21 @@ function j(e) {
   } = e;
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)(l.ModalHeader, {
-      className: h.skuSelectModalHeader,
+      className: S.skuSelectModalHeader,
       separator: !1,
       children: [(0, n.jsx)(l.FormTitle, {
         tag: l.FormTitleTags.H4,
-        children: S.default.Messages.BILLING_STEP_SELECT_PLAN
+        children: E.default.Messages.BILLING_STEP_SELECT_PLAN
       }), (0, n.jsx)(l.ModalCloseButton, {
         onClick: s
       })]
     }), (0, n.jsxs)(l.ModalContent, {
-      className: r()(h.skuSelectModalContent, {
-        [h.modalPadding]: a
+      className: r()(S.skuSelectModalContent, {
+        [S.modalPadding]: a
       }),
       children: [(0, n.jsx)(u.default, {
         fromBoostCancelModal: !1,
-        className: h.legacyPricingNotice
+        className: S.legacyPricingNotice
       }), (0, n.jsx)(d.default, {
         onSelectSku: e => t((0, c.castPremiumSubscriptionAsSkuId)(e)),
         isGift: i,

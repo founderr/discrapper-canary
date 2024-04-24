@@ -18,8 +18,8 @@ var a = l("735250"),
   S = l("98131"),
   E = l("594190"),
   _ = l("695346"),
-  g = l("494620"),
-  C = l("592125"),
+  C = l("494620"),
+  g = l("592125"),
   N = l("650774"),
   h = l("430824"),
   A = l("131951"),
@@ -39,8 +39,8 @@ var a = l("735250"),
   G = l("653255"),
   U = l("989941"),
   k = l("618407"),
-  F = l("586290"),
-  y = l("233037"),
+  y = l("586290"),
+  F = l("233037"),
   V = l("810013"),
   w = l("537135"),
   B = l("641115"),
@@ -67,7 +67,7 @@ function Z(e) {
       } = e;
       return t === (null == S ? void 0 : S.id)
     }) : o,
-    g = null != t && t.id.startsWith("screen") ? L.default : O.default;
+    C = null != t && t.id.startsWith("screen") ? L.default : O.default;
   return (0, a.jsx)(u.FormItem, {
     title: Y.default.Messages.GO_LIVE_MODAL_APPLICATION_FORM_TITLE,
     className: q.modalContent,
@@ -77,7 +77,7 @@ function Z(e) {
         game: _,
         size: R.default.Sizes.XSMALL,
         className: Q.selectedIcon
-      }) : (0, a.jsx)(g, {
+      }) : (0, a.jsx)(C, {
         className: Q.selectedIcon
       }), (0, a.jsx)("span", {
         className: Q.ellipsisText,
@@ -207,7 +207,7 @@ function et(e) {
     onChangeGuild: D,
     onChangeSound: U,
     isAnimationDone: w
-  } = e, H = (0, r.useStateFromStores)([I.default, C.default], () => C.default.getChannel(I.default.getVoiceChannelId())), W = (0, r.useStateFromStores)([G.default], () => G.default.GPUDriversOutdated), q = (0, r.useStateFromStores)([G.default], () => G.default.problematicGPUDriver), et = (0, r.useStateFromStores)([x.default], () => x.default.getCurrentUser()), el = (0, f.useEnableClips)(), ea = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
+  } = e, H = (0, r.useStateFromStores)([I.default, g.default], () => g.default.getChannel(I.default.getVoiceChannelId())), W = (0, r.useStateFromStores)([G.default], () => G.default.GPUDriversOutdated), q = (0, r.useStateFromStores)([G.default], () => G.default.problematicGPUDriver), et = (0, r.useStateFromStores)([x.default], () => x.default.getCurrentUser()), el = (0, f.useEnableClips)(), ea = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
     autoTrackExposure: !el
   }), en = (0, k.default)();
   null != t && t.id.startsWith("screen") && !A.default.supportsScreenSoundshare() && (en = Y.default.Messages.GO_LIVE_SCREENSHARE_NO_SOUND);
@@ -220,7 +220,7 @@ function et(e) {
     eu = null != H && !(0, c.isPrivateGuildChannel)(H),
     eo = !(0, r.useStateFromStores)([A.default], () => A.default.getHardwareH264());
   return (0, a.jsxs)(n.Fragment, {
-    children: [ei ? (0, a.jsx)(F.default, {
+    children: [ei ? (0, a.jsx)(y.default, {
       selectedSource: t,
       onChangeVideoDeviceSource: O,
       onChangeAudioDevice: j
@@ -241,7 +241,7 @@ function et(e) {
       onChange: D
     }) : null, null != H ? (0, a.jsx)(V.default, {
       channel: H
-    }) : (0, a.jsx)(y.default, {
+    }) : (0, a.jsx)(F.default, {
       guildId: E,
       selectedChannelId: s,
       onChangeSelectedChannelId: M
@@ -253,8 +253,8 @@ function et(e) {
       text: Y.default.Messages.PROBLEMATIC_GPU_DRIVER_DETECTED.format({
         helpCenterLink: P.default.getArticleURL(K.HelpdeskArticles.NVIDIA_DRIVER_ISSUES)
       })
-    }) : null, eo && (0, a.jsx)(g.default, {
-      look: g.InfoBoxLooks.WARNING,
+    }) : null, eo && (0, a.jsx)(C.default, {
+      look: C.InfoBoxLooks.WARNING,
       className: Q.hardwareWarning,
       children: Y.default.Messages.GO_LIVE_MODAL_HARDWARE_WARNING_INFOBOX.format({
         onClick: () => {

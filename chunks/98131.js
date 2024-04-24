@@ -14,8 +14,8 @@ var a = l("735250"),
   S = l("63063"),
   E = l("13140"),
   _ = l("435064"),
-  g = l("894694"),
-  C = l("39604"),
+  C = l("894694"),
+  g = l("39604"),
   N = l("981631"),
   h = l("921944"),
   A = l("689938"),
@@ -27,7 +27,7 @@ let p = e => {
     isAnimationDone: l,
     guildId: s,
     children: i
-  } = e, m = (0, r.useStateFromStores)([_.default], () => _.default.getHardwareClassification()), E = m === g.ClipsHardwareClassification.MEETS_MINIMUM || m === g.ClipsHardwareClassification.UNKNOWN, x = m === g.ClipsHardwareClassification.BELOW_MINIMUM, p = l && (E || x) && !t, [T, R] = (0, c.useGetDismissibleContent)(p ? [u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK] : []), v = T === u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK;
+  } = e, m = (0, r.useStateFromStores)([_.default], () => _.default.getHardwareClassification()), E = m === C.ClipsHardwareClassification.MEETS_MINIMUM || m === C.ClipsHardwareClassification.UNKNOWN, x = m === C.ClipsHardwareClassification.BELOW_MINIMUM, p = l && (E || x) && !t, [T, R] = (0, c.useGetDismissibleContent)(p ? [u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK] : []), v = T === u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK;
   n.useEffect(() => {
     t && (0, d.markDismissibleContentAsDismissed)(u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK, {
       forceTrack: !0
@@ -68,7 +68,7 @@ let p = e => {
         }),
         tryItText: A.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS,
         onTryFeature: e => {
-          (0, C.updateClipsEnabled)({
+          (0, g.updateClipsEnabled)({
             clipsEnabled: !0,
             guildId: s,
             trackAnalytics: !0
@@ -102,7 +102,7 @@ t.default = function(e) {
         children: (0, a.jsx)(o.FormSwitch, {
           className: I.formSwitch,
           value: n,
-          onChange: e => (0, C.updateClipsEnabled)({
+          onChange: e => (0, g.updateClipsEnabled)({
             clipsEnabled: e,
             guildId: l,
             trackAnalytics: !0

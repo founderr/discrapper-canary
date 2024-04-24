@@ -26,14 +26,14 @@ function L(e) {
   } = e, {
     selectedPlan: s,
     browserCheckoutState: L,
-    browserCheckoutStateLoadId: S,
-    contextMetadata: h
+    browserCheckoutStateLoadId: E,
+    contextMetadata: S
   } = (0, u.usePaymentContext)(), {
-    isGift: E
+    isGift: h
   } = (0, C.useGiftContext)(), [j, P] = i.useState(!1);
   return i.useEffect(() => {
     var e;
-    !j && (P(!0), (0, a.startBrowserCheckout)(h.loadId), ! function(e, t, s, n) {
+    !j && (P(!0), (0, a.startBrowserCheckout)(S.loadId), ! function(e, t, s, n) {
       let i = _.Endpoints.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, s),
         a = new URL(o.default.makeUrl(_.Routes.BILLING_LOGIN_HANDOFF)),
         C = (0, r.v4)();
@@ -48,10 +48,10 @@ function L(e) {
       }, () => {
         n()
       })
-    }(null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : m.SubscriptionPlans.PREMIUM_MONTH_TIER_2, E, h.loadId, () => t(d.Step.ADD_PAYMENT_STEPS)))
-  }, [s, E, j, P, h, t]), i.useEffect(() => {
-    S === h.loadId && L === p.BrowserCheckoutState.DONE && t(d.Step.CONFIRM)
-  }, [L, S, h, t]), (0, n.jsxs)(n.Fragment, {
+    }(null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : m.SubscriptionPlans.PREMIUM_MONTH_TIER_2, h, S.loadId, () => t(d.Step.ADD_PAYMENT_STEPS)))
+  }, [s, h, j, P, S, t]), i.useEffect(() => {
+    E === S.loadId && L === p.BrowserCheckoutState.DONE && t(d.Step.CONFIRM)
+  }, [L, E, S, t]), (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(f.default, {}), (0, n.jsx)(x.PaymentPortalBody, {
       children: (0, n.jsx)(c.AwaitingBrowserCheckoutStepBody, {})
     }), (0, n.jsx)(x.PaymentPortalFooter, {

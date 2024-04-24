@@ -18,8 +18,8 @@ var a = l("735250"),
   S = l("594190"),
   E = l("57655"),
   _ = l("569984"),
-  g = l("918701"),
-  C = l("433811"),
+  C = l("918701"),
+  g = l("433811"),
   N = l("131951"),
   h = l("449224"),
   A = l("285952"),
@@ -104,7 +104,7 @@ function U(e) {
     enableGoLiveCaptureCard: s
   } = p.default.useExperiment({
     location: "GoLive_Source_Select"
-  }), r = N.default.supports(O.Features.GO_LIVE_HARDWARE), [d, m] = n.useState(null), [h, x] = n.useState(null), [R, b] = n.useState(null), U = null != R && R.length > 0, [k, F] = n.useState(u.DesktopSources.WINDOW), [y, V] = n.useState(!1), w = n.useRef(null), B = n.useRef(new c.Interval), H = (0, o.useStateFromStores)([S.default], () => S.default.getRunningGames()), W = function(e, t, l) {
+  }), r = N.default.supports(O.Features.GO_LIVE_HARDWARE), [d, m] = n.useState(null), [h, x] = n.useState(null), [R, b] = n.useState(null), U = null != R && R.length > 0, [k, y] = n.useState(u.DesktopSources.WINDOW), [F, V] = n.useState(!1), w = n.useRef(null), B = n.useRef(new c.Interval), H = (0, o.useStateFromStores)([S.default], () => S.default.getRunningGames()), W = function(e, t, l) {
     let a = (0, E.useIsEligibleForQuests)({
       location: M.QuestsExperimentLocations.STREAM_SOURCE_SELECT
     });
@@ -114,7 +114,7 @@ function U(e) {
         var n, s;
         let l = t.find(e => (0, T.default)(a.id, e.windowHandle));
         if ((null == l ? void 0 : l.id) == null) continue;
-        let i = (0, g.getQuestByApplicationId)(e, l.id);
+        let i = (0, C.getQuestByApplicationId)(e, l.id);
         if (null != i && (null === (n = i.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null && (null === (s = i.userStatus) || void 0 === s ? void 0 : s.completedAt) == null) return {
           source: a,
           quest: i
@@ -189,7 +189,7 @@ function U(e) {
     children: [(0, a.jsxs)("div", {
       className: D.segmentContainer,
       children: [(0, a.jsx)(v.default, {
-        separator: y
+        separator: F
       }), (0, a.jsx)(f.SegmentedControl, {
         options: function() {
           let e = [{
@@ -209,7 +209,7 @@ function U(e) {
           let {
             value: t
           } = e;
-          return F(t)
+          return y(t)
         },
         className: D.segmentControl,
         optionClassName: D.segmentControlOption
@@ -231,7 +231,7 @@ function U(e) {
       ref: z,
       className: D.sourceScroller,
       onScroll: q,
-      children: [k === u.DesktopSources.WINDOW && null != W && (0, a.jsx)(C.default, {
+      children: [k === u.DesktopSources.WINDOW && null != W && (0, a.jsx)(g.default, {
         quest: W.quest
       }), (0, a.jsx)(I.default, {
         layout: I.default.Layout.WRAP,

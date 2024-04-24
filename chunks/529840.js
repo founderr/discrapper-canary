@@ -7,8 +7,8 @@ t.r(s), t.d(s, {
 var a = t("735250");
 t("470079");
 var r = t("120356"),
-  i = t.n(r),
-  l = t("481060"),
+  l = t.n(r),
+  i = t("481060"),
   n = t("204197"),
   C = t("859709");
 
@@ -24,28 +24,28 @@ function o(e) {
     eventHandlers: u
   } = (0, n.default)({
     user: t,
-    size: l.AvatarSizes.SIZE_32
+    size: i.AvatarSizes.SIZE_32
   }), f = null !== (s = t.globalName) && void 0 !== s ? s : t.username;
   return (0, a.jsxs)("div", {
     className: C.container,
     children: [(0, a.jsxs)("div", {
       className: C.user,
-      children: [(0, a.jsx)(l.Avatar, {
-        className: i()({
+      children: [(0, a.jsx)(i.Avatar, {
+        className: l()({
           [C.muted]: d
         }),
         src: c,
         "aria-label": f,
-        size: l.AvatarSizes.SIZE_32,
+        size: i.AvatarSizes.SIZE_32,
         ...u
-      }), (0, a.jsx)(l.Text, {
+      }), (0, a.jsx)(i.Text, {
         color: d ? "text-muted" : "text-normal",
         variant: "text-md/semibold",
         children: f
       })]
     }), (0, a.jsx)("div", {
       className: C.checkbox,
-      children: (0, a.jsx)(l.Checkbox, {
+      children: (0, a.jsx)(i.Checkbox, {
         disabled: d,
         value: r,
         onChange: (e, s) => o(t, s)

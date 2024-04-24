@@ -18,8 +18,8 @@ var a = l("735250"),
   S = l("626135"),
   E = l("981631"),
   _ = l("689938"),
-  g = l("60687");
-let C = async () => {
+  C = l("60687");
+let g = async () => {
   let {
     default: e
   } = await l.e("21812").then(l.t.bind(l, "741855", 19));
@@ -65,21 +65,21 @@ function N(e) {
       perk_type: r.EntitlementFeatureNames.STREAM_HIGH_QUALITY
     })
   }, []), (0, a.jsx)("div", {
-    className: i()(g.container, {
-      [g.gradientGlow]: s
+    className: i()(C.container, {
+      [C.gradientGlow]: s
     }),
     children: (0, a.jsxs)("div", {
-      className: g.content,
+      className: C.content,
       children: [(0, a.jsx)(m.default, {
-        importData: C,
+        importData: g,
         shouldAnimate: !x,
         pauseAtFrame: 90,
-        className: i()(g.animation, {
-          [g.animationEndState]: A || !N || x
+        className: i()(C.animation, {
+          [C.animationEndState]: A || !N || x
         }),
         loop: !1
       }), (0, a.jsx)("div", {
-        className: g.message,
+        className: C.message,
         children: (0, a.jsx)(o.Text, {
           variant: "text-sm/medium",
           children: _.default.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_INITIAL_UPSELL

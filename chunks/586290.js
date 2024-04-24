@@ -18,8 +18,8 @@ var a = l("735250"),
   S = l("176940"),
   E = l("689938"),
   _ = l("981213"),
-  g = l("223318"),
-  C = l("794711");
+  C = l("223318"),
+  g = l("794711");
 
 function N(e) {
   let {
@@ -41,9 +41,9 @@ function N(e) {
   return null != h && s(h), (0, a.jsx)(n.Fragment, {
     children: (0, a.jsxs)(c.FormItem, {
       title: "Capture Device",
-      className: g.modalContent,
+      className: C.modalContent,
       children: [(0, a.jsx)(c.FormItem, {
-        className: C.marginTop8,
+        className: g.marginTop8,
         children: (0, a.jsxs)(m.default, {
           children: [(0, a.jsx)("span", {
             className: _.ellipsisText,
@@ -57,11 +57,11 @@ function N(e) {
           })]
         })
       }), (0, a.jsx)(c.FormItem, {
-        className: C.marginTop8,
+        className: g.marginTop8,
         title: E.default.Messages.GO_LIVE_FORM_LABEL_AUDIO_DEVICE,
         children: (0, a.jsx)(c.SingleSelect, {
           value: h,
-          className: C.__invalid_marginaTop8,
+          className: g.__invalid_marginaTop8,
           onChange: e => {
             A(e), s(e)
           },
