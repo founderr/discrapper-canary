@@ -5,83 +5,63 @@ var a = n("735250"),
   s = n("442837"),
   i = n("481060"),
   r = n("706454"),
-  o = n("5192"),
-  u = n("561308"),
-  d = n("919394"),
-  c = n("438226"),
-  f = n("206295"),
-  h = n("91140"),
-  m = n("43205"),
-  p = n("591853"),
-  E = n("522791");
-let C = (e, t, n) => {
-  let a = (0, c.getDescription)(e),
-    l = o.default.getName(t.guild_id, t.id, n),
-    s = e.extra.game_name;
-  return a.format({
-    userName: l,
-    gameName: s
-  })
-};
+  o = n("561308"),
+  u = n("919394"),
+  d = n("438226"),
+  c = n("206295"),
+  f = n("91140"),
+  h = n("591853"),
+  m = n("689938"),
+  p = n("522791");
 t.default = e => {
   let {
     channel: t,
     entry: n,
-    requestId: o,
-    closePopout: g
+    requestId: E,
+    closePopout: C
   } = e, {
-    applicationImageSrc: S,
-    user: _
-  } = (0, h.useGamingContentData)(n), {
-    primaryColor: T,
-    secondaryColor: I
-  } = (0, f.default)(S), A = (0, s.useStateFromStores)([r.default], () => r.default.locale), v = l.useCallback(e => {
-    if (null != S && null != t && null != _) return (0, d.generateGamingContentImage)({
+    applicationImageSrc: g,
+    user: S
+  } = (0, f.useGamingContentData)(n), {
+    primaryColor: _,
+    secondaryColor: T
+  } = (0, c.default)(g), I = (0, s.useStateFromStores)([r.default], () => r.default.locale), A = l.useCallback(e => {
+    if (null != g && null != t && null != S) return (0, u.generateGamingContentImage)({
       entry: n,
-      applicationImageSrc: S,
-      avatarSrc: _.getAvatarURL(t.guild_id, 128),
-      description: (0, c.formatCanvasDescription)(n, t, _),
-      timestamp: (0, u.formatEntryTimestamp)(n, A),
-      colors: [T, I],
+      applicationImageSrc: g,
+      avatarSrc: S.getAvatarURL(t.guild_id, 128),
+      description: (0, d.formatCanvasDescription)(n, t, S),
+      timestamp: (0, o.formatEntryTimestamp)(n, I),
+      colors: [_, T],
       channelId: e
     })
-  }, [S, t, n, A, T, I, _]);
-  return null == _ ? null : (0, a.jsxs)(p.Popout, {
-    children: [(0, a.jsxs)(p.PopoutHero, {
-      backgroundImgSrc: S,
-      children: [(0, a.jsxs)("div", {
-        className: E.heroDetails,
-        children: [(0, a.jsxs)("div", {
-          children: [(0, a.jsx)(p.PopoutAvatar, {
-            user: _,
-            guildId: t.guild_id
-          }), (0, a.jsx)(p.PopoutTitle, {
-            children: C(n, t, _)
-          })]
-        }), (0, a.jsx)(m.ContentImage, {
-          size: 80,
-          src: S,
-          className: E.contentImage
-        })]
-      }), (0, a.jsx)(h.ContentRowBadges, {
-        className: E.badgeContainer,
+  }, [g, t, n, I, _, T, S]);
+  return null == S ? null : (0, a.jsxs)(h.Popout, {
+    children: [(0, a.jsx)(h.PopoutContent, {
+      thumbnailSrc: g,
+      user: S,
+      channel: t,
+      userDescription: (0, o.isEntryActive)(n) ? m.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : m.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
+      title: n.extra.game_name,
+      badges: (0, a.jsx)(f.ContentRowBadges, {
+        className: p.badgeContainer,
         entry: n,
         condensed: !1,
-        textColor: "always-white",
-        iconColor: i.tokens.colors.WHITE
-      })]
-    }), (0, a.jsxs)(p.PopoutInteractionsContainer, {
-      children: [(0, a.jsx)(p.PopoutReactor, {
-        closePopout: g,
-        user: _,
+        textColor: "text-primary",
+        iconColor: i.tokens.colors.TEXT_PRIMARY
+      })
+    }), (0, a.jsxs)(h.PopoutInteractionsContainer, {
+      children: [(0, a.jsx)(h.PopoutReactor, {
+        closePopout: C,
+        user: S,
         channel: t,
-        generateReactionImage: v,
-        reactionImageAltText: (0, c.getContentAltText)(n, _),
+        generateReactionImage: A,
+        reactionImageAltText: (0, d.getContentAltText)(n, S),
         entry: n,
-        requestId: o
-      }), (0, a.jsx)(p.PopoutJoinPrompt, {
+        requestId: E
+      }), (0, a.jsx)(h.PopoutJoinPrompt, {
         entry: n,
-        user: _
+        user: S
       })]
     })]
   })

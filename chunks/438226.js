@@ -5,9 +5,6 @@ n.r(t), n.d(t, {
   },
   getContentAltText: function() {
     return i
-  },
-  getDescription: function() {
-    return r
   }
 }), n("627494"), n("757143"), n("201133");
 var a = n("5192"),

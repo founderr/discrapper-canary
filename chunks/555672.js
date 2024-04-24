@@ -96,7 +96,8 @@ t.default = l.memo(e => {
       })]
     }), (0, a.jsx)(E.ContentImage, {
       src: s,
-      size: 48
+      size: 48,
+      className: g.thumbnail
     })]
   }) : null
 })

@@ -10,12 +10,11 @@ var a = n("735250"),
   d = n("644810"),
   c = n("206295"),
   f = n("335326"),
-  h = n("43205"),
-  m = n("591853"),
-  p = n("689938"),
-  E = n("522791");
-let C = (e, t, n) => {
-    let a = p.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
+  h = n("591853"),
+  m = n("689938"),
+  p = n("522791");
+let E = (e, t, n) => {
+    let a = m.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
       l = o.default.getName(t.guild_id, t.id, n),
       s = e.extra.media_title;
     return a.plainFormat({
@@ -24,17 +23,7 @@ let C = (e, t, n) => {
       episodeDescription: e.extra.media_subtitle
     }).replaceAll("*", "")
   },
-  g = (e, t, n) => {
-    let a = p.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
-      l = o.default.getName(t.guild_id, t.id, n),
-      s = e.extra.media_title;
-    return a.format({
-      userName: l,
-      mediaTitle: s,
-      episodeDescription: e.extra.media_subtitle
-    })
-  },
-  S = (e, t) => p.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
+  C = (e, t) => m.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
     username: t.username,
     activity: e.extra.media_title
   });
@@ -43,57 +32,48 @@ t.default = e => {
     channel: t,
     entry: n,
     requestId: o,
-    closePopout: p
+    closePopout: g
   } = e, {
-    user: _,
-    mediaImageSrc: T,
-    episodeDescription: I
+    user: S,
+    mediaImageSrc: _,
+    episodeDescription: T
   } = (0, f.useWatchContentData)(n), {
-    primaryColor: A,
-    secondaryColor: v
-  } = (0, c.default)(T), N = (0, s.useStateFromStores)([r.default], () => r.default.locale), x = l.useCallback(e => {
-    if (null != _ && null != T) return (0, d.generateWatchContentImage)({
+    primaryColor: I,
+    secondaryColor: A
+  } = (0, c.default)(_), v = (0, s.useStateFromStores)([r.default], () => r.default.locale), N = l.useCallback(e => {
+    if (null != S && null != _) return (0, d.generateWatchContentImage)({
       entry: n,
-      mediaImageSrc: T,
-      avatarSrc: _.getAvatarURL(t.guild_id, 128),
-      description: C(n, t, _),
-      timestamp: (0, u.formatEntryTimestamp)(n, N),
-      episodeDescription: I,
-      colors: [A, v],
+      mediaImageSrc: _,
+      avatarSrc: S.getAvatarURL(t.guild_id, 128),
+      description: E(n, t, S),
+      timestamp: (0, u.formatEntryTimestamp)(n, v),
+      episodeDescription: T,
+      colors: [I, A],
       channelId: e
     })
-  }, [t, n, I, N, T, A, v, _]);
-  return null == _ ? null : (0, a.jsxs)(m.Popout, {
-    children: [(0, a.jsxs)(m.PopoutHero, {
-      backgroundImgSrc: T,
-      children: [(0, a.jsxs)("div", {
-        className: E.heroDetails,
-        children: [(0, a.jsxs)("div", {
-          children: [(0, a.jsx)(m.PopoutAvatar, {
-            user: _,
-            guildId: t.guild_id
-          }), (0, a.jsx)(m.PopoutTitle, {
-            children: g(n, t, _)
-          })]
-        }), (0, a.jsx)(h.ContentImage, {
-          size: 80,
-          src: T,
-          className: E.contentImage
-        })]
-      }), (0, a.jsx)(f.ContentRowBadges, {
-        className: E.badgeContainer,
+  }, [t, n, T, v, _, I, A, S]);
+  return null == S ? null : (0, a.jsxs)(h.Popout, {
+    children: [(0, a.jsx)(h.PopoutContent, {
+      thumbnailSrc: _,
+      user: S,
+      channel: t,
+      userDescription: (0, u.isEntryActive)(n) ? m.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING : m.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED,
+      title: n.extra.media_title,
+      subtitle: n.extra.media_subtitle,
+      badges: (0, a.jsx)(f.ContentRowBadges, {
+        className: p.badgeContainer,
         entry: n,
-        textColor: "always-white",
-        iconColor: i.tokens.colors.WHITE,
-        episodeDescription: I
-      })]
-    }), (0, a.jsx)(m.PopoutInteractionsContainer, {
-      children: (0, a.jsx)(m.PopoutReactor, {
-        closePopout: p,
-        user: _,
+        textColor: "text-primary",
+        iconColor: i.tokens.colors.TEXT_PRIMARY,
+        episodeDescription: T
+      })
+    }), (0, a.jsx)(h.PopoutInteractionsContainer, {
+      children: (0, a.jsx)(h.PopoutReactor, {
+        closePopout: g,
+        user: S,
         channel: t,
-        generateReactionImage: x,
-        reactionImageAltText: S(n, _),
+        generateReactionImage: N,
+        reactionImageAltText: C(n, S),
         entry: n,
         requestId: o
       })

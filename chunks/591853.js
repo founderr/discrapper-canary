@@ -1,25 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   Popout: function() {
-    return w
+    return B
   },
-  PopoutAvatar: function() {
-    return Y
-  },
-  PopoutHero: function() {
-    return k
+  PopoutContent: function() {
+    return Z
   },
   PopoutInteractionsContainer: function() {
-    return G
+    return W
   },
   PopoutJoinPrompt: function() {
-    return z
+    return K
   },
   PopoutReactor: function() {
-    return V
-  },
-  PopoutTitle: function() {
-    return H
+    return Y
   }
 }), n("47120");
 var a = n("735250"),
@@ -43,75 +37,65 @@ var r = n("442837"),
   _ = n("592125"),
   T = n("496675"),
   I = n("594174"),
-  A = n("626135"),
-  v = n("768581"),
-  N = n("485267"),
-  x = n("162461"),
-  M = n("71585"),
-  R = n("22211"),
-  L = n("571243"),
-  y = n("69259"),
-  O = n("206295"),
-  j = n("111386"),
-  P = n("469153"),
-  D = n("206583"),
-  b = n("981631"),
-  U = n("689938"),
-  F = n("522791");
+  A = n("682864"),
+  v = n("626135"),
+  N = n("768581"),
+  x = n("5192"),
+  M = n("485267"),
+  R = n("162461"),
+  L = n("71585"),
+  y = n("22211"),
+  O = n("571243"),
+  j = n("69259"),
+  P = n("206295"),
+  b = n("111386"),
+  D = n("43205"),
+  U = n("469153"),
+  F = n("206583"),
+  w = n("981631"),
+  k = n("689938"),
+  H = n("522791");
 
-function w(e) {
+function B(e) {
   let {
     children: t
   } = e, n = l.useRef(null);
   return (0, c.useFocusLock)(n), (0, a.jsx)("div", {
-    className: F.popout,
+    className: H.popout,
     ref: n,
     children: t
   })
 }
 
-function k(e) {
+function G(e) {
   let {
     children: t,
     backgroundImgSrc: n
   } = e, {
     primaryColor: l,
     secondaryColor: s
-  } = (0, O.default)(n);
+  } = (0, P.default)(n);
   return (0, a.jsx)("div", {
-    className: F.hero,
+    className: H.hero,
     style: {
       background: "linear-gradient(45deg, ".concat(l, ", ").concat(s, ")")
     },
     children: t
   })
 }
+let V = l.createContext(null);
 
-function H(e) {
-  let {
-    children: t
-  } = e;
-  return (0, a.jsx)(c.Heading, {
-    className: F.popoutTitle,
-    variant: "heading-md/normal",
-    color: "always-white",
-    lineClamp: 3,
-    children: t
-  })
-}
-let B = l.createContext(null);
-
-function G(e) {
+function W(e) {
   let {
     children: t
   } = e, n = l.useRef(null);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
-      className: F.interactionsContainerHeader,
+      className: H.interactionsContainerHeader,
       ref: e => n.current = e
     }), (0, a.jsx)("div", {
-      className: F.interactionsContainer,
-      children: (0, a.jsx)(B.Provider, {
+      className: H.interactionsContainer,
+      children: (0, a.jsx)(V.Provider, {
         value: n.current,
         children: t
       })
@@ -119,7 +103,7 @@ function G(e) {
   })
 }
 
-function V(e) {
+function Y(e) {
   let {
     channel: t,
     user: n,
@@ -128,17 +112,17 @@ function V(e) {
     closePopout: C,
     entry: g,
     requestId: S
-  } = e, I = (0, r.useStateFromStores)([M.default], () => M.default.isChannelReplyMode()), v = l.useRef(null), [x, R] = l.useState(null), O = (0, r.useStateFromStores)([T.default], () => T.default.can(b.Permissions.SEND_MESSAGES, t)), w = (0, L.useIsEligibleForMemberlistOneClickReply)({
+  } = e, I = (0, r.useStateFromStores)([L.default], () => L.default.isChannelReplyMode()), A = l.useRef(null), [N, x] = l.useState(null), R = (0, r.useStateFromStores)([T.default], () => T.default.can(w.Permissions.SEND_MESSAGES, t)), y = (0, O.useIsEligibleForMemberlistOneClickReply)({
     location: "PopoutReactor"
-  }), [k, H] = l.useState(!1), [B, G] = l.useState(!1), V = "#".concat(t.name), Y = "@".concat(n.username), z = I ? U.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : U.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, K = async e => {
+  }), [P, D] = l.useState(!1), [B, G] = l.useState(!1), V = "#".concat(t.name), W = "@".concat(n.username), Y = I ? k.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : k.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, K = async e => {
     if (null != e) {
-      if (A.default.track(b.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
-          surface_type: D.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
+      if (v.default.track(w.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
+          surface_type: F.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
           channel_id: t.id,
           guild_id: t.guild_id
-        }), w) {
+        }), y) {
         let l;
-        if ((0, E.markDismissibleContentAsDismissed)(o.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), H(!0), G(!1), I) l = t;
+        if ((0, E.markDismissibleContentAsDismissed)(o.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), D(!0), G(!1), I) l = t;
         else {
           var a;
           let e = await f.default.getOrEnsurePrivateChannel(n.id);
@@ -149,16 +133,16 @@ function V(e) {
           sendToChannel: l,
           onComplete: () => {
             G(!0), setTimeout(() => {
-              H(!1), C()
+              D(!1), C()
             }, 600)
           }
         })
       }
-      null != x && (x.insertEmoji(e, !1, !1), x.focus())
+      null != N && (N.insertEmoji(e, !1, !1), N.focus())
     }
   }, Z = async e => {
     let a;
-    if (w && (0, E.markDismissibleContentAsDismissed)(o.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), I) a = t;
+    if (y && (0, E.markDismissibleContentAsDismissed)(o.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), I) a = t;
     else {
       let e = await f.default.openPrivateChannel(n.id, !1, !1),
         t = _.default.getChannel(e);
@@ -181,8 +165,8 @@ function V(e) {
       altText: h,
       reply: n
     });
-    let o = a.type === b.ChannelTypes.DM ? D.ContentInventoryInteractionTypes.DM_REACTION_MESSAGE_SENT : D.ContentInventoryInteractionTypes.CHANNEL_REACTION_MESSAGE_SENT;
-    (0, y.trackInteraction)(o, {
+    let o = a.type === w.ChannelTypes.DM ? F.ContentInventoryInteractionTypes.DM_REACTION_MESSAGE_SENT : F.ContentInventoryInteractionTypes.CHANNEL_REACTION_MESSAGE_SENT;
+    (0, j.trackInteraction)(o, {
       entry: g,
       channelId: t.id,
       guildId: t.guild_id,
@@ -191,34 +175,34 @@ function V(e) {
   };
   return (0, a.jsxs)("div", {
     style: {
-      pointerEvents: k ? "none" : "all"
+      pointerEvents: P ? "none" : "all"
     },
-    children: [(0, a.jsx)(P.default, {
+    children: [(0, a.jsx)(U.default, {
       sent: B,
-      shown: k,
-      className: F.toastContainer
-    }), w ? (0, a.jsx)(j.default, {
+      shown: P,
+      className: H.toastContainer
+    }), y ? (0, a.jsx)(b.default, {
       children: (0, a.jsx)("div", {
-        className: F.emojiHotrailShareToChannel,
-        children: (0, a.jsx)(W, {
+        className: H.emojiHotrailShareToChannel,
+        children: (0, a.jsx)(z, {
           channel: t,
           onClickSuggestion: K
         })
       })
     }) : (0, a.jsx)("div", {
-      className: F.emojiHotrailShareToChannel,
-      children: (0, a.jsx)(W, {
+      className: H.emojiHotrailShareToChannel,
+      children: (0, a.jsx)(z, {
         channel: t,
         onClickSuggestion: K
       })
     }), (0, a.jsxs)("div", {
-      className: F.inputContainerShareToChannel,
-      children: [O && (0, a.jsx)(c.Tooltip, {
-        text: z,
+      className: H.inputContainerShareToChannel,
+      children: [R && (0, a.jsx)(c.Tooltip, {
+        text: Y,
         children: e => (0, a.jsx)(c.Clickable, {
           ...e,
-          className: F.shareToChannelButton,
-          onClick: N.toggleContentInventoryReplyMode,
+          className: H.shareToChannelButton,
+          onClick: M.toggleContentInventoryReplyMode,
           children: I ? (0, a.jsx)(d.TextIcon, {
             width: 20,
             height: 20
@@ -228,15 +212,15 @@ function V(e) {
           })
         })
       }), (0, a.jsx)(m.ReplyInput, {
-        ref: v,
-        placeholder: U.default.Messages.TEXTAREA_PLACEHOLDER.format({
-          channel: I ? V : Y
+        ref: A,
+        placeholder: k.default.Messages.TEXTAREA_PLACEHOLDER.format({
+          channel: I ? V : W
         }),
         onEnter: Z,
-        setEditorRef: e => R(e),
+        setEditorRef: e => x(e),
         autoCompletePosition: (() => {
-          if (null == v || null == v.current) return "top";
-          let e = v.current.getBoundingClientRect(),
+          if (null == A || null == A.current) return "top";
+          let e = A.current.getBoundingClientRect(),
             t = window.innerHeight;
           return e.top < t / 2 ? "bottom" : "top"
         })(),
@@ -246,7 +230,7 @@ function V(e) {
     })]
   })
 }
-let W = e => {
+let z = e => {
   let {
     channel: t,
     onClickSuggestion: n
@@ -255,7 +239,7 @@ let W = e => {
     url: e.url
   } : {
     emoji: e,
-    url: (0, v.getEmojiURL)({
+    url: (0, N.getEmojiURL)({
       id: e.id,
       animated: e.animated,
       size: 58
@@ -269,11 +253,11 @@ let W = e => {
       } = e;
       return null != l ? (0, a.jsx)("div", {
         children: (0, a.jsx)(c.TooltipContainer, {
-          text: U.default.Messages.CONTENT_INVENTORY_REPLY_WITH_EMOJI.format({
+          text: k.default.Messages.CONTENT_INVENTORY_REPLY_WITH_EMOJI.format({
             emojiName: t.name
           }),
           position: "top",
-          "aria-label": U.default.Messages.CONTENT_INVENTORY_REPLY_WITH_EMOJI.format({
+          "aria-label": k.default.Messages.CONTENT_INVENTORY_REPLY_WITH_EMOJI.format({
             emojiName: t.name
           }),
           color: c.Tooltip.Colors.BLACK,
@@ -281,7 +265,7 @@ let W = e => {
             emoji: t,
             isDisabled: !1,
             onClick: () => n(t),
-            className: F.emoji
+            className: H.emoji
           })
         })
       }, t.name) : null
@@ -289,38 +273,99 @@ let W = e => {
   })
 };
 
-function Y(e) {
-  let {
-    user: t,
-    guildId: n
-  } = e, l = t.getAvatarURL(n, 128);
-  return (0, a.jsx)(c.Avatar, {
-    src: l,
-    size: c.AvatarSizes.SIZE_40,
-    "aria-label": "avatar"
-  })
-}
-
-function z(e) {
+function K(e) {
   let {
     entry: t
   } = e, {
     showJoinButton: n
-  } = x.VoiceEnrichmentsExperiment.useExperiment({
+  } = R.VoiceEnrichmentsExperiment.useExperiment({
     location: "popout_join_prompt"
   }), {
     channel: l
-  } = (0, R.default)(t), s = (0, r.useStateFromStores)([I.default], () => I.default.getUser(t.author_id));
+  } = (0, y.default)(t), s = (0, r.useStateFromStores)([I.default], () => I.default.getUser(t.author_id));
   return n && null != l && null != s ? (0, a.jsx)("div", {
-    className: F.joinPromptContainer,
+    className: H.joinPromptContainer,
     children: (0, a.jsx)(c.Button, {
       fullWidth: !0,
       onClick: () => {
         (0, g.transitionToGuild)(l.guild_id), h.default.selectVoiceChannel(l.id)
       },
-      children: U.default.Messages.CONTENT_INVENTORY_JOIN_LIVE_CHANNEL.format({
+      children: k.default.Messages.CONTENT_INVENTORY_JOIN_LIVE_CHANNEL.format({
         channelName: l.name
       })
     })
   }) : null
+}
+
+function Z(e) {
+  let {
+    thumbnailSrc: t,
+    user: n,
+    channel: l,
+    userDescription: s,
+    ContentTypeIcon: i,
+    title: r,
+    subtitle: o,
+    badges: u
+  } = e, d = l.guild_id, f = x.default.getName(d, l.id, n);
+  return (0, a.jsx)("div", {
+    className: "theme-".concat(w.ThemeTypes.DARK),
+    children: (0, a.jsxs)(G, {
+      backgroundImgSrc: t,
+      children: [(0, a.jsxs)("div", {
+        className: H.popoutContentHeader,
+        children: [(0, a.jsxs)("div", {
+          className: H.popoutUserContainer,
+          children: [(0, a.jsx)(c.Avatar, {
+            src: n.getAvatarURL(d, 24),
+            size: c.AvatarSizes.SIZE_24,
+            "aria-label": "avatar"
+          }), (0, a.jsx)(A.default, {
+            size: 8,
+            horizontal: !0
+          }), (0, a.jsx)(c.Heading, {
+            variant: "heading-sm/normal",
+            color: "text-secondary",
+            children: s.format({
+              username: f,
+              nameHook: e => (0, a.jsx)(c.Text, {
+                variant: "text-sm/medium",
+                color: "header-primary",
+                className: H.popoutUsername,
+                children: e
+              })
+            })
+          })]
+        }), null != i ? (0, a.jsx)(i, {}) : null]
+      }), (0, a.jsx)(A.default, {
+        size: 16
+      }), (0, a.jsxs)("div", {
+        className: H.popoutContentBody,
+        children: [(0, a.jsx)("div", {
+          className: H.popoutThumbnailContainer,
+          children: (0, a.jsx)(D.ContentImage, {
+            size: 72,
+            src: t,
+            className: H.contentImage
+          })
+        }), (0, a.jsx)(A.default, {
+          size: 16,
+          horizontal: !0
+        }), (0, a.jsxs)("div", {
+          children: [(0, a.jsx)(c.Heading, {
+            variant: "heading-md/semibold",
+            color: "header-primary",
+            lineClamp: 3,
+            children: r
+          }), null != o ? (0, a.jsx)(c.Text, {
+            variant: "text-md/normal",
+            color: "text-secondary",
+            children: o
+          }) : null, (0, a.jsx)(A.default, {
+            size: 8
+          }), u]
+        })]
+      })]
+    })
+  })
 }

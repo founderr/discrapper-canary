@@ -101,6 +101,7 @@ t.default = l.memo(e => {
     }), (0, a.jsx)(p.ContentImage, {
       src: s,
       size: 48,
+      className: S.thumbnail,
       alt: t.extra.media_title
     })]
   })

@@ -26,7 +26,7 @@ function u(e) {
     className: s()(l.contentImage, r)
   }) : (0, i.jsx)("img", {
     style: {
-      width: "".concat(n, "px"),
+      maxWidth: "".concat(n, "px"),
       height: "".concat(n, "px")
     },
     className: s()(l.contentImage, r),
