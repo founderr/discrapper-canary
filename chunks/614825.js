@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return x
   }
 }), n("47120");
 var s = n("735250"),
@@ -20,25 +20,27 @@ var s = n("735250"),
   T = n("594174"),
   I = n("78839"),
   p = n("55935"),
-  h = n("74538"),
-  N = n("276444"),
-  S = n("790368"),
-  C = n("786397"),
-  A = n("474936"),
-  g = n("689938"),
-  M = n("851282");
-class R extends l.Component {
+  h = n("63063"),
+  N = n("74538"),
+  S = n("276444"),
+  C = n("790368"),
+  A = n("786397"),
+  g = n("474936"),
+  M = n("981631"),
+  R = n("689938"),
+  v = n("851282");
+class O extends l.Component {
   renderTitle(e, t, n) {
     let {
       trialOffer: s
     } = this.props, l = T.default.getUser(s.user_id), a = null != l ? l.username : "???", i = T.default.getUser(s.referrer_id), r = null != i ? i.username : "???";
-    if (e && void 0 === s.redeemed_at) return g.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_DISABLED_HEADER.format({
+    if (e && void 0 === s.redeemed_at) return R.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_DISABLED_HEADER.format({
       username: a
     });
-    if (t) return n ? g.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_EXPIRED_HEADER : g.default.Messages.REFERRAL_PROGRAM_EMBED_TIRAL_EXPIRED.format({
+    if (t) return n ? R.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_EXPIRED_HEADER : R.default.Messages.REFERRAL_PROGRAM_EMBED_TIRAL_EXPIRED.format({
       userName: r
     });
-    return g.default.Messages.REFERRAL_PROGRAM_EMBED_HEADER.format({
+    return R.default.Messages.REFERRAL_PROGRAM_EMBED_HEADER.format({
       senderUserName: r,
       recipientUserName: a
     })
@@ -46,10 +48,10 @@ class R extends l.Component {
   renderBody(e, t, n) {
     let {
       trialOffer: s
-    } = this.props, l = T.default.getUser(s.referrer_id), a = null != l ? l.username : "???";
-    return e && !n && void 0 === s.redeemed_at ? g.default.Messages.REFERRAL_PROGRAM_EMBED_RECIPIENT_INELIGIBLE_SUBHEADER.format({
-      userName: a
-    }) : t ? null : g.default.Messages.REFERRAL_PROGRAM_EMBED_BODY
+    } = this.props;
+    return e && !n && void 0 === s.redeemed_at ? R.default.Messages.REFERRAL_PROGRAM_LEARN_MORE_ABOUT_SHARING.format({
+      helpdeskArticle: h.default.getArticleURL(M.HelpdeskArticles.REFERRAL_PROGRAM)
+    }) : t ? null : R.default.Messages.REFERRAL_PROGRAM_EMBED_BODY
   }
   renderActions(e, t, n) {
     let {
@@ -61,9 +63,9 @@ class R extends l.Component {
         this.handleStartTrial(l, i)
       },
       color: c.Button.Colors.BRAND
-    }, o = a.id !== l.user_id || (0, h.isPremium)(a) || !a.verified || (0, C.hasUserTrialOfferExpired)(l), u = this.renderExpirationDate(e, t, n);
+    }, o = a.id !== l.user_id || (0, N.isPremium)(a) || !a.verified || (0, A.hasUserTrialOfferExpired)(l), u = this.renderExpirationDate(e, t, n);
     return r.disabled = o, (0, s.jsxs)("div", {
-      className: M.buttonContainer,
+      className: v.buttonContainer,
       children: [(0, s.jsx)("div", {
         children: (0, s.jsx)(c.Button, {
           ...r,
@@ -71,16 +73,16 @@ class R extends l.Component {
           onClick: () => {
             (0, m.default)({
               initialPlanId: null,
-              subscriptionTier: A.PremiumSubscriptionSKUs.TIER_2,
+              subscriptionTier: g.PremiumSubscriptionSKUs.TIER_2,
               analyticsLocations: i,
               trialId: l.trial_id,
               referralTrialOfferId: l.id
             })
           },
-          children: g.default.Messages.START_TRIAL
+          children: R.default.Messages.START_TRIAL
         })
       }), (0, s.jsx)("div", {
-        className: M.metadata,
+        className: v.metadata,
         children: u
       })]
     })
@@ -90,34 +92,34 @@ class R extends l.Component {
       trialOffer: s,
       trialEndsAt: l
     } = this.props;
-    if (void 0 !== s.redeemed_at && !n && null !== l) return g.default.Messages.TRIAL_EXPIRES.format({
+    if (void 0 !== s.redeemed_at && !n && null !== l) return R.default.Messages.TRIAL_EXPIRES.format({
       date: (0, p.dateFormat)(o()(l), "LL")
     });
     if (e || void 0 === s.expires_at) return null;
     let a = o()(s.expires_at);
-    if (t) return g.default.Messages.EXPIRED_DATE.format({
+    if (t) return R.default.Messages.EXPIRED_DATE.format({
       date: (0, p.dateFormat)(o()(a), "LL")
     });
     let i = a.diff(o()(), "h");
     if (i > 48) {
       let e = a.diff(o()(), "d");
-      return g.default.Messages.EXPIRES_DAYS.format({
+      return R.default.Messages.EXPIRES_DAYS.format({
         numDays: e
       })
     }
-    if (i > 1) return g.default.Messages.EXPIRES_HOURS.format({
+    if (i > 1) return R.default.Messages.EXPIRES_HOURS.format({
       numHours: i
     });
     let r = a.diff(o()(), "minutes");
-    return g.default.Messages.EXPIRES_MINUTES.format({
+    return R.default.Messages.EXPIRES_MINUTES.format({
       numMinutes: r
     })
   }
   renderMedia(e) {
     return (0, s.jsx)("div", {
       className: i()({
-        [M.referral]: !e,
-        [M.birthdayReferral]: e
+        [v.referral]: !e,
+        [v.birthdayReferral]: e
       })
     })
   }
@@ -127,22 +129,22 @@ class R extends l.Component {
       currentUser: t,
       recipientHasNitro: n,
       shouldShowBirthdayUX: l
-    } = this.props, a = (0, C.hasUserTrialOfferExpired)(e), r = t.id === e.referrer_id;
+    } = this.props, a = (0, A.hasUserTrialOfferExpired)(e), r = t.id === e.referrer_id;
     return (0, s.jsxs)("div", {
-      className: i()(M.tile, M.container),
+      className: i()(v.tile, v.container),
       children: [(0, s.jsx)("div", {
-        className: M.media,
+        className: v.media,
         children: this.renderMedia(l)
       }), (0, s.jsxs)("div", {
-        className: M.description,
+        className: v.description,
         children: [(0, s.jsx)(c.H, {
-          className: M.title,
+          className: v.title,
           children: this.renderTitle(n, a, r)
         }), (0, s.jsx)("div", {
-          className: M.tagline,
+          className: v.tagline,
           children: this.renderBody(n, a, r)
         }), (0, s.jsx)("div", {
-          className: M.actions,
+          className: v.actions,
           children: this.renderActions(n, a, r)
         })]
       })]
@@ -153,7 +155,7 @@ class R extends l.Component {
     super(...e), t = this, n = "handleStartTrial", s = (e, t) => {
       (0, m.default)({
         initialPlanId: null,
-        subscriptionTier: A.PremiumSubscriptionSKUs.TIER_2,
+        subscriptionTier: g.PremiumSubscriptionSKUs.TIER_2,
         analyticsLocations: t,
         trialId: e.trial_id
       })
@@ -166,31 +168,31 @@ class R extends l.Component {
   }
 }
 
-function v(e) {
+function x(e) {
   let {
     userTrialOfferId: t,
     canRenderReferralEmbed: n
   } = e, {
     trialOffer: l,
     isResolving: a
-  } = (0, d.useStateFromStoresObject)([N.default], () => ({
-    trialOffer: n ? N.default.getRelevantUserTrialOffer(t) : null,
-    isResolving: !!n && N.default.isResolving(t)
-  }), [n, t]), i = T.default.getCurrentUser(), r = (0, d.useStateFromStores)([T.default], () => null != l && (0, h.isPremium)(void 0 !== i && l.user_id === i.id ? i : T.default.getUser(l.user_id))), o = (0, d.useStateFromStores)([I.default], () => {
+  } = (0, d.useStateFromStoresObject)([S.default], () => ({
+    trialOffer: n ? S.default.getRelevantUserTrialOffer(t) : null,
+    isResolving: !!n && S.default.isResolving(t)
+  }), [n, t]), i = T.default.getCurrentUser(), r = (0, d.useStateFromStores)([T.default], () => null != l && (0, N.isPremium)(void 0 !== i && l.user_id === i.id ? i : T.default.getUser(l.user_id))), o = (0, d.useStateFromStores)([I.default], () => {
     var e;
     return r ? null === (e = I.default.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt : null
   }), {
     analyticsLocations: c
   } = (0, _.default)(E.default.SHARE_NITRO_EMBED), {
     enabled: m
-  } = S.default.useExperiment({
+  } = C.default.useExperiment({
     location: "f4ff1d_1"
   }, {
     autoTrackExposure: !0
   });
   return a ? (0, s.jsx)(f.ResponsiveLoadingEmbedTile, {
     isHorizontal: !u.isMobile
-  }) : n && null != l && void 0 !== i ? (0, s.jsx)(R, {
+  }) : n && null != l && void 0 !== i ? (0, s.jsx)(O, {
     trialOffer: l,
     currentUser: i,
     recipientHasNitro: r,
@@ -199,9 +201,9 @@ function v(e) {
     shouldShowBirthdayUX: m,
     ...e
   }) : (0, s.jsx)("div", {
-    className: M.invalidWrapper,
+    className: v.invalidWrapper,
     children: (0, s.jsx)("div", {
-      className: M.invalid
+      className: v.invalid
     })
   })
 }
