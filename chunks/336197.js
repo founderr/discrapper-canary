@@ -21,7 +21,7 @@ async function _(e, t, n) {
     return
   }
   if (null == _) {
-    (0, r.transitionTo)(e);
+    (0, r.transitionTo)(e, t, n);
     return
   }
   let c = function(e) {
