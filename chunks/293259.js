@@ -21,9 +21,9 @@ var l = s("735250"),
   v = s("621113"),
   x = s("759231"),
   _ = s("998502"),
-  A = s("785717"),
-  N = s("621853"),
-  T = s("204197"),
+  T = s("785717"),
+  A = s("621853"),
+  N = s("204197"),
   U = s("735336"),
   h = s("520978"),
   p = s("184325"),
@@ -48,15 +48,15 @@ function L(e) {
     isStreaming: G,
     hasProfileEffect: k,
     onClose: V
-  } = e, w = (0, i.useStateFromStores)([I.default], () => I.default.getRelationshipType(_.id)), H = (0, i.useStateFromStores)([E.default], () => E.default.isMobileOnline(_.id)), Y = (0, i.useStateFromStores)([E.default], () => E.default.getStatus(_.id)), z = (0, i.useStateFromStores)([N.default], () => N.default.getUserProfile(_.id)), W = (0, i.useStateFromStores)([m.default], () => m.default.getId() === _.id), {
-    theme: K
+  } = e, w = (0, i.useStateFromStores)([I.default], () => I.default.getRelationshipType(_.id)), H = (0, i.useStateFromStores)([E.default], () => E.default.isMobileOnline(_.id)), Y = (0, i.useStateFromStores)([E.default], () => E.default.getStatus(_.id)), z = (0, i.useStateFromStores)([A.default], () => A.default.getUserProfile(_.id)), W = (0, i.useStateFromStores)([m.default], () => m.default.getId() === _.id), {
+    theme: Z
   } = (0, j.useUserProfileThemeContext)(), {
-    trackUserProfileAction: Z
-  } = (0, A.useUserProfileAnalyticsContext)(), {
+    trackUserProfileAction: K
+  } = (0, T.useUserProfileAnalyticsContext)(), {
     avatarSrc: J,
     eventHandlers: Q,
     avatarDecorationSrc: q
-  } = (0, T.default)({
+  } = (0, N.default)({
     user: _,
     size: O
   }), X = a.useMemo(() => (0, S.shouldDisableUserPresenceInChannel)(_, D), [_, D]);
@@ -66,7 +66,7 @@ function L(e) {
   }
 
   function ee() {
-    Z({
+    K({
       action: "REMOVE_FRIEND"
     }), c.default.removeFriend(_.id, {
       location: "User Profile"
@@ -74,14 +74,14 @@ function L(e) {
   }
 
   function et(e) {
-    Z({
+    K({
       action: "SEND_MESSAGE"
     }), o.default.openPrivateChannel(_.id, !1, !1, e), $()
   }
 
   function es() {
     try {
-      Z({
+      K({
         action: "BLOCK"
       }), c.default.addRelationship({
         userId: _.id,
@@ -97,7 +97,7 @@ function L(e) {
 
   function el() {
     let e = "@me" === L ? void 0 : L;
-    Z({
+    K({
       action: "REPORT"
     }), (0, f.showReportModalForUser)(_, e)
   }
@@ -119,7 +119,7 @@ function L(e) {
           size: O,
           className: y.avatar,
           status: X ? C.StatusTypes.UNKNOWN : G ? C.StatusTypes.STREAMING : Y,
-          statusBackdropColor: (0, n.getStatusBackdropColor)(K),
+          statusBackdropColor: (0, n.getStatusBackdropColor)(Z),
           isMobile: H,
           statusTooltip: !0,
           "aria-label": _.username
@@ -152,7 +152,7 @@ function L(e) {
             relationshipType: w,
             onAddFriend: function() {
               try {
-                Z({
+                K({
                   action: "SEND_FRIEND_REQUEST"
                 }), c.default.addRelationship({
                   userId: _.id,
@@ -167,7 +167,7 @@ function L(e) {
               }
             },
             onIgnoreFriend: function() {
-              Z({
+              K({
                 action: "CANCEL_FRIEND_REQUEST"
               }), c.default.cancelFriendRequest(_.id, {
                 location: "User Profile"
@@ -181,7 +181,7 @@ function L(e) {
               }
             },
             onClick: function(e) {
-              Z({
+              K({
                 action: "PRESS_OPTIONS"
               }), (0, u.openContextMenuLazy)(e, async () => {
                 let {
@@ -193,7 +193,7 @@ function L(e) {
                   onRemoveFriend: ee,
                   onBlock: es,
                   onReport: el,
-                  onCopyId: () => Z({
+                  onCopyId: () => K({
                     action: "COPY_USER_ID"
                   }),
                   onMessage: () => et("User Profile Modal - Context Menu"),

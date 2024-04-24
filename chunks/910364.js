@@ -21,9 +21,9 @@ var l = s("735250"),
   v = s("594174"),
   x = s("342656"),
   _ = s("785717"),
-  A = s("221292"),
-  N = s("621853"),
-  T = s("895618"),
+  T = s("221292"),
+  A = s("621853"),
+  N = s("895618"),
   U = s("318661"),
   h = s("706327"),
   p = s("484404"),
@@ -44,10 +44,10 @@ function L(e) {
     section: n,
     setSection: o,
     hasActivity: u
-  } = e, d = (0, i.useStateFromStores)([N.default], () => {
+  } = e, d = (0, i.useStateFromStores)([A.default], () => {
     var e, s;
-    return (null === (s = N.default.getUserProfile(t.id)) || void 0 === s ? void 0 : null === (e = s.application) || void 0 === e ? void 0 : e.id) != null
-  }), f = (0, h.useMutualFriends)(t), S = (0, i.useStateFromStores)([N.default], () => N.default.getMutualGuilds(t.id)), m = t.bot || s, {
+    return (null === (s = A.default.getUserProfile(t.id)) || void 0 === s ? void 0 : null === (e = s.application) || void 0 === e ? void 0 : e.id) != null
+  }), f = (0, h.useMutualFriends)(t), S = (0, i.useStateFromStores)([A.default], () => A.default.getMutualGuilds(t.id)), m = t.bot || s, {
     enabled: E
   } = (0, x.useProfileMutualsExperiment)({
     autoTrackExposure: !0,
@@ -106,7 +106,7 @@ function D(e) {
   var t, s;
   let {
     user: x,
-    guildId: N,
+    guildId: A,
     channelId: h,
     messageId: D,
     roleId: b,
@@ -120,45 +120,45 @@ function D(e) {
     analyticsLocations: W
   } = (0, f.default)([...w, c.default.PROFILE_MODAL]);
   (0, u.useSubscribeGuildMembers)({
-    [N]: [Y.id]
+    [A]: [Y.id]
   });
-  let K = (0, i.useStateFromStores)([m.default], () => null != m.default.getAnyStreamForUser(Y.id)),
-    Z = (0, i.useStateFromStores)([I.default], () => I.default.findActivity(Y.id, e => e.type !== y.ActivityTypes.CUSTOM_STATUS)),
-    J = (0, g.useGetVoiceChannelInfoForVoiceActivitySection)(Y.id, N),
+  let Z = (0, i.useStateFromStores)([m.default], () => null != m.default.getAnyStreamForUser(Y.id)),
+    K = (0, i.useStateFromStores)([I.default], () => I.default.findActivity(Y.id, e => e.type !== y.ActivityTypes.CUSTOM_STATUS)),
+    J = (0, g.useGetVoiceChannelInfoForVoiceActivitySection)(Y.id, A),
     [Q, q] = a.useState(!1),
     [X, $] = a.useState(Y.isNonUserBot() && !Y.isClyde() ? M.UserProfileSections.MUTUAL_GUILDS : k),
     ee = (0, i.useStateFromStores)([E.default], () => E.default.getId() === Y.id),
     {
       showVoiceActivityInProfile: et
-    } = T.VoiceActivityProfileExperiment.useExperiment({
+    } = N.VoiceActivityProfileExperiment.useExperiment({
       location: "user profile modal container"
     }, {
       autoTrackExposure: !1
     }),
-    es = null != Z || K || null != J && et,
+    es = null != K || Z || null != J && et,
     el = !ee || es,
     ea = a.createRef(),
     ei = (0, o.default)(ea);
   !es && X === M.UserProfileSections.ACTIVITY && $(M.UserProfileSections.USER_INFO);
   let er = a.useCallback(e => {
-      (0, A.trackUserProfileAction)({
+      (0, T.trackUserProfileAction)({
         action: "PRESS_SECTION",
         layout: "MODAL",
         userId: Y.id,
-        guildId: N,
+        guildId: A,
         channelId: h,
         messageId: D,
         roleId: b,
         analyticsLocations: W
       }), q(!0), $(e)
-    }, [Y.id, N, h, D, b, W]),
+    }, [Y.id, A, h, D, b, W]),
     en = null == z ? void 0 : z.profileEffectId;
   return (0, l.jsx)(f.AnalyticsLocationProvider, {
     value: W,
     children: (0, l.jsx)(_.UserProfileAnalyticsProvider, {
       layout: "MODAL",
       userId: Y.id,
-      guildId: N,
+      guildId: A,
       channelId: h,
       messageId: D,
       roleId: b,
@@ -181,8 +181,8 @@ function D(e) {
                 user: Y,
                 friendToken: B,
                 onClose: H,
-                isStreaming: (0, d.default)(Z),
-                guildId: N,
+                isStreaming: (0, d.default)(K),
+                guildId: A,
                 channelId: h,
                 hasProfileEffect: null != en
               }), (0, l.jsxs)(j.default.Overlay, {

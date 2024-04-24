@@ -26,7 +26,7 @@ function E(e) {
     autoFocusNote: I,
     transitionState: v,
     onClose: x
-  } = e, _ = (0, r.default)(s), A = (0, a.useStateFromStores)([i.default], () => i.default.findActivity(t.id, e => null != e.type && u.SUPPORTED_ACTIVITY_TYPES.has(e.type)), [t]);
+  } = e, _ = (0, r.default)(s), T = (0, a.useStateFromStores)([i.default], () => i.default.findActivity(t.id, e => null != e.type && u.SUPPORTED_ACTIVITY_TYPES.has(e.type)), [t]);
   return (0, l.jsxs)("div", {
     className: m.container,
     children: [(0, l.jsxs)("div", {
@@ -41,8 +41,8 @@ function E(e) {
         badges: _,
         className: m.badgeList
       })]
-    }), null != A && (0, l.jsx)(u.default, {
-      activity: A
+    }), null != T && (0, l.jsx)(u.default, {
+      activity: T
     }), (0, l.jsxs)(d.default.Overlay, {
       children: [v === S.ModalTransitionState.ENTERED && (0, l.jsx)(o.default, {
         onTooltipClose: x

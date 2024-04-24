@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return A
   }
 }), s("47120");
 var l = s("735250"),
@@ -22,7 +22,7 @@ var l = s("735250"),
   x = s("689938"),
   _ = s("198515");
 
-function A(e) {
+function T(e) {
   let {
     user: t,
     currentUser: s,
@@ -31,24 +31,24 @@ function A(e) {
     canManageRoles: f,
     onAddRole: m,
     onRemoveRole: I
-  } = e, A = (0, n.useStateFromStores)([S.default], () => S.default.getRoles(u.id)), N = E.getHighestRole(u, s.id), T = a.useMemo(() => Object.values(A).filter(e => c.includes(e.id)).sort((e, t) => {
+  } = e, T = (0, n.useStateFromStores)([S.default], () => S.default.getRoles(u.id)), A = E.getHighestRole(u, s.id), N = a.useMemo(() => Object.values(T).filter(e => c.includes(e.id)).sort((e, t) => {
     var s, l;
     let a = (null === (s = e.tags) || void 0 === s ? void 0 : s.guild_connections) !== null,
       i = (null === (l = t.tags) || void 0 === l ? void 0 : l.guild_connections) !== null;
     return a && !i ? 1 : !a && i ? -1 : 0
-  }), [A, c]), U = a.useMemo(() => "roles-".concat((0, i.v4)()), []), h = (0, r.default)({
+  }), [T, c]), U = a.useMemo(() => "roles-".concat((0, i.v4)()), []), h = (0, r.default)({
     id: U,
     isEnabled: !0,
     scrollToStart: v.NOOP_PROMISE,
     scrollToEnd: v.NOOP_PROMISE,
     wrap: !0
-  }), p = T.map(e => {
+  }), p = N.map(e => {
     var a;
     return (0, l.jsx)(d.MemberRole, {
       className: _.role,
       role: e,
       guildId: u.id,
-      canRemove: f ? E.isRoleHigher(u, s.id, N, e) : (null === (a = e.tags) || void 0 === a ? void 0 : a.guild_connections) === null && t.id === s.id,
+      canRemove: f ? E.isRoleHigher(u, s.id, A, e) : (null === (a = e.tags) || void 0 === a ? void 0 : a.guild_connections) === null && t.id === s.id,
       onRemove: () => I(e),
       disableBorderColor: !0
     }, e.id)
@@ -88,7 +88,7 @@ function A(e) {
   })
 }
 
-function N(e) {
+function A(e) {
   let {
     user: t,
     currentUser: s,
@@ -111,7 +111,7 @@ function N(e) {
     });
     let s = null != o ? o : []; - 1 === s.indexOf(e) && (s = s.concat([e])), c.default.updateMemberRoles(i.id, t.id, s, [e], [])
   }, [o, i.id, t.id, r]);
-  return (0, l.jsx)(A, {
+  return (0, l.jsx)(T, {
     user: t,
     currentUser: s,
     guild: i,

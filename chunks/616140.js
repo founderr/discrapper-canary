@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return A
   }
 }), s("47120"), s("627341");
 var l = s("735250"),
@@ -21,7 +21,7 @@ var l = s("735250"),
   v = s("228168"),
   x = s("689938"),
   _ = s("708432");
-let A = e => {
+let T = e => {
   let [t, s] = (0, r.useStateFromStoresArray)([f.default], () => {
     var t, s, l, a;
     return [null !== (l = null === (t = f.default.getMutualFriends(e.id)) || void 0 === t ? void 0 : t.length) && void 0 !== l ? l : 0, null !== (a = null === (s = f.default.getMutualGuilds(e.id)) || void 0 === s ? void 0 : s.length) && void 0 !== a ? a : 0]
@@ -42,21 +42,21 @@ let A = e => {
   }]
 };
 
-function N(e) {
+function A(e) {
   var t, s;
   let {
     user: f,
     displayProfile: x,
-    initialSection: N = v.UserProfileSections.USER_INFO,
-    autoFocusNote: T,
+    initialSection: A = v.UserProfileSections.USER_INFO,
+    autoFocusNote: N,
     onClose: U
   } = e, {
     trackUserProfileAction: h
-  } = (0, c.useUserProfileAnalyticsContext)(), p = (0, r.useStateFromStores)([d.default], () => d.default.getCurrentUser()), j = (0, r.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), g = A(f), [R, P] = a.useState(T), [C, M] = a.useState(null !== (s = null === (t = g.find(e => {
+  } = (0, c.useUserProfileAnalyticsContext)(), p = (0, r.useStateFromStores)([d.default], () => d.default.getCurrentUser()), j = (0, r.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), g = T(f), [R, P] = a.useState(N), [C, M] = a.useState(null !== (s = null === (t = g.find(e => {
     let {
       section: t
     } = e;
-    return t === N
+    return t === A
   })) || void 0 === t ? void 0 : t.section) && void 0 !== s ? s : v.UserProfileSections.USER_INFO), y = a.useCallback(e => {
     h({
       action: "PRESS_SECTION",

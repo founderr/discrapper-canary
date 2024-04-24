@@ -23,7 +23,7 @@ var l = s("735250"),
 function x(e) {
   let {
     user: t
-  } = e, s = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), x = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), _ = a.useMemo(() => x.filter(e => e.type !== E.ActivityTypes.CUSTOM_STATUS), [x]), A = x.some(e => e.type === E.ActivityTypes.HANG_STATUS), N = a.useMemo(() => s ? _.find(e => e.type === E.ActivityTypes.PLAYING) : null, [_, s]), T = a.useMemo(() => _.filter(e => e !== N), [N, _]), U = (0, m.useGetVoiceChannelInfoForVoiceActivitySection)(t.id), h = null != U && !s && !A, {
+  } = e, s = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), x = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), _ = a.useMemo(() => x.filter(e => e.type !== E.ActivityTypes.CUSTOM_STATUS), [x]), T = x.some(e => e.type === E.ActivityTypes.HANG_STATUS), A = a.useMemo(() => s ? _.find(e => e.type === E.ActivityTypes.PLAYING) : null, [_, s]), N = a.useMemo(() => _.filter(e => e !== A), [A, _]), U = (0, m.useGetVoiceChannelInfoForVoiceActivitySection)(t.id), h = null != U && !s && !T, {
     showVoiceActivityInProfile: p
   } = S.VoiceActivityProfileExperiment.useExperiment({
     location: "user profile modal"
@@ -54,19 +54,19 @@ function x(e) {
       user: t,
       source: "Profile Modal",
       className: I.userProfileActivity,
-      activity: N,
+      activity: A,
       actionColor: I.actionColor,
       analyticsParams: P,
       onAction: () => {
         g({
           action: "JOIN_ACTIVITY"
         }), (0, f.trackUserProfileActivityJoined)({
-          activity: N,
+          activity: A,
           analyticsLocations: j,
           ...R
         })
       }
-    }) : null, T.map(e => (0, l.jsx)(n.default, {
+    }) : null, N.map(e => (0, l.jsx)(n.default, {
       type: n.UserActivityTypes.PROFILE_V2,
       activity: e,
       user: t,

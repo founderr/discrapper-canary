@@ -21,9 +21,9 @@ var l = s("735250"),
   v = s("588822"),
   x = s("81334"),
   _ = s("652853"),
-  A = s("335191"),
-  N = s("347949"),
-  T = s("988246"),
+  T = s("335191"),
+  A = s("347949"),
+  N = s("988246"),
   U = s("689938"),
   h = s("478741");
 
@@ -47,7 +47,7 @@ function p(e) {
       var e;
       null == F || null === (e = F.current) || void 0 === e || e.scrollIntoView()
     }
-  }, [j]), R) ? (0, l.jsx)(T.default, {}) : (0, l.jsxs)(o.ScrollerThin, {
+  }, [j]), R) ? (0, l.jsx)(N.default, {}) : (0, l.jsxs)(o.ScrollerThin, {
     fade: !0,
     className: h.infoScroller,
     children: [(0, l.jsxs)("div", {
@@ -73,7 +73,7 @@ function p(e) {
             userId: s.id
           })
         })
-      }), y && (0, l.jsx)(N.UserProfileRecentGamesContainer, {
+      }), y && (0, l.jsx)(A.UserProfileRecentGamesContainer, {
         userId: s.id,
         maxItems: 6,
         containerClassName: r()(h.userInfoText, h.recentGames)
@@ -89,7 +89,7 @@ function p(e) {
           action: "SET_NOTE"
         })
       })]
-    }), (0, l.jsx)(A.ConnectedUserAccounts, {
+    }), (0, l.jsx)(T.ConnectedUserAccounts, {
       ref: F,
       connectedAccounts: O,
       theme: P,

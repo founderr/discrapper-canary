@@ -21,9 +21,9 @@ var l = s("735250"),
   v = s("81334"),
   x = s("652853"),
   _ = s("335191"),
-  A = s("347949"),
-  N = s("144869"),
-  T = s("689938"),
+  T = s("347949"),
+  A = s("144869"),
+  N = s("689938"),
   U = s("516264");
 let h = e => {
   let {
@@ -68,8 +68,8 @@ function p(e) {
       userBio: i.bio,
       setLineClamp: !1
     }), null != C && (0, l.jsx)(h, {
-      title: T.default.Messages.ROLES,
-      children: (0, l.jsx)(N.default, {
+      title: N.default.Messages.ROLES,
+      children: (0, l.jsx)(A.default, {
         user: t,
         currentUser: s,
         guild: C
@@ -80,14 +80,14 @@ function p(e) {
       guildId: null == i ? void 0 : i.guildId,
       headingVariant: "text-xs/semibold"
     }), L && !y && F.length > 0 && (0, l.jsx)(h, {
-      title: T.default.Messages.LAST_PLAYED_GAMES,
-      children: (0, l.jsx)(A.UserProfileRecentGames, {
+      title: N.default.Messages.LAST_PLAYED_GAMES,
+      children: (0, l.jsx)(T.UserProfileRecentGames, {
         userId: t.id,
         recentGames: F,
         currentUserApplicationIds: O
       })
     }), b.length > 0 && (0, l.jsx)(h, {
-      title: T.default.Messages.CONNECTIONS,
+      title: N.default.Messages.CONNECTIONS,
       children: (0, l.jsx)(_.ConnectedUserAccounts, {
         connectedAccounts: b,
         className: U.connections,
@@ -96,7 +96,7 @@ function p(e) {
         locale: D
       })
     }), (0, l.jsx)(h, {
-      title: T.default.Messages.NOTE,
+      title: N.default.Messages.NOTE,
       children: (0, l.jsx)(u.default, {
         userId: t.id,
         className: U.note,

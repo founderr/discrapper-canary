@@ -21,9 +21,9 @@ var l = s("735250"),
   v = s("705556"),
   x = s("301984"),
   _ = s("94918"),
-  A = s("664794"),
-  N = s("980768"),
-  T = s("806926"),
+  T = s("664794"),
+  A = s("980768"),
+  N = s("806926"),
   U = s("740021"),
   h = s("228168"),
   p = s("981631"),
@@ -68,7 +68,7 @@ function R(e) {
       } = e;
       return t === p.ActivityTypes.CUSTOM_STATUS
     })
-  })), K = a.createRef(), Z = (0, o.default)(K);
+  })), Z = a.createRef(), K = (0, o.default)(Z);
   return (0, l.jsx)(d.AnalyticsLocationProvider, {
     value: B,
     children: (0, l.jsx)(m.UserProfileAnalyticsProvider, {
@@ -84,13 +84,13 @@ function R(e) {
         hideShadow: !0,
         "aria-label": j.default.Messages.USER_PROFILE_MODAL,
         children: [(0, l.jsx)("div", {
-          ref: K,
+          ref: Z,
           children: (0, l.jsxs)(I.default, {
             user: t,
             displayProfile: Y,
             profileType: h.UserProfileTypes.FULL_SIZE,
-            children: [(0, l.jsxs)(N.default, {
-              isFaded: (null == Y ? void 0 : Y.profileEffectId) != null && !Z,
+            children: [(0, l.jsxs)(A.default, {
+              isFaded: (null == Y ? void 0 : Y.profileEffectId) != null && !K,
               children: [(0, l.jsx)(_.default, {
                 user: t,
                 guildId: b,
@@ -106,7 +106,7 @@ function R(e) {
                 onClose: () => {
                   D(), (0, n.popLayer)()
                 }
-              }), (0, l.jsx)(A.default, {
+              }), (0, l.jsx)(T.default, {
                 user: t,
                 guildId: b,
                 viewProfileItem: (null == H ? void 0 : H.guildId) == null ? null : (null == Y ? void 0 : Y.guildId) != null ? (0, l.jsx)(r.MenuItem, {
@@ -143,7 +143,7 @@ function R(e) {
               activity: z,
               customStatusActivity: W,
               onClose: D
-            }), (0, l.jsx)(T.default, {
+            }), (0, l.jsx)(N.default, {
               user: t,
               displayProfile: Y,
               initialSection: y,
@@ -155,7 +155,7 @@ function R(e) {
         }), (null == Y ? void 0 : Y.profileEffectId) != null && (0, l.jsx)(c.default, {
           profileEffectId: null == Y ? void 0 : Y.profileEffectId,
           bannerAdjustment: 0,
-          isHovering: Z
+          isHovering: K
         })]
       })
     })
