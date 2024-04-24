@@ -24,8 +24,11 @@ function g(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
+let h = ["svg", "png", "gif", "webp"],
+  I = [...h, "jpg", "jpeg"],
+  N = Array.from(new Set([...I, "gif", "mp4", "webm"]));
 
-function h() {
+function p() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
     {
       streamProgressSeconds: t = 0,
@@ -46,7 +49,7 @@ function h() {
     progress: {}
   }
 }
-let I = {
+let C = {
   id: "1193992107035983872",
   preview: !0,
   config: {
@@ -94,11 +97,11 @@ let I = {
   targetedContent: []
 };
 
-function N() {
+function A() {
   var e;
-  let [t, s] = n.useState(I), [l, g] = n.useState(f.UserState.UNENROLLED);
+  let [t, s] = n.useState(C), [l, g] = n.useState(f.UserState.UNENROLLED);
 
-  function N(e, a) {
+  function A(e, a) {
     s({
       ...t,
       config: {
@@ -111,7 +114,7 @@ function N() {
     })
   }
 
-  function p(e, a) {
+  function O(e, a) {
     s({
       ...t,
       config: {
@@ -124,7 +127,7 @@ function N() {
     })
   }
 
-  function C(e, a) {
+  function x(e, a) {
     s({
       ...t,
       config: {
@@ -150,22 +153,22 @@ function N() {
       children: [(0, a.jsx)(m.default, {
         title: "Quest Name",
         assetKey: "questName",
-        onMessageChange: p,
+        onMessageChange: O,
         initialValue: t.config.messages.questName
       }), (0, a.jsx)(m.default, {
         title: "Game Title",
         assetKey: "gameTitle",
-        onMessageChange: p,
+        onMessageChange: O,
         initialValue: t.config.messages.gameTitle
       }), (0, a.jsx)(m.default, {
         title: "Reward Name",
         assetKey: "rewardName",
-        onMessageChange: p,
+        onMessageChange: O,
         initialValue: t.config.messages.rewardName
       }), (0, a.jsx)(m.default, {
         title: "Reward Name With Article",
         assetKey: "rewardNameWithArticle",
-        onMessageChange: p,
+        onMessageChange: O,
         initialValue: t.config.messages.rewardNameWithArticle
       })]
     }), (0, a.jsx)(i.Heading, {
@@ -177,32 +180,32 @@ function N() {
       children: [(0, a.jsx)(T.default, {
         title: "Game Tile Asset",
         assetKey: "gameTile",
-        onFileChange: N,
-        filters: ["svg", "png", "gif", "jpg"],
+        onFileChange: A,
+        filters: I,
         initialValue: t.config.assets.gameTile
       }), (0, a.jsx)(T.default, {
         title: "Logotype",
         assetKey: "logotype",
-        onFileChange: N,
-        filters: ["svg", "png", "gif"],
+        onFileChange: A,
+        filters: h,
         initialValue: t.config.assets.logotype
       }), (0, a.jsx)(T.default, {
         title: "Quest Bar Hero Asset",
         assetKey: "questBarHero",
-        onFileChange: N,
-        filters: ["svg", "png", "jpg", "gif", "mp4", "webm"],
+        onFileChange: A,
+        filters: N,
         initialValue: t.config.assets.questBarHero
       }), (0, a.jsx)(T.default, {
         title: "Reward Tile Asset",
         assetKey: "rewardTile",
-        onFileChange: N,
-        filters: ["svg", "png", "jpg", "gif", "webm", "mp4"],
+        onFileChange: A,
+        filters: N,
         initialValue: t.config.assets.rewardTile
       }), (0, a.jsx)(T.default, {
         title: "Gift Inventory Hero",
         assetKey: "hero",
-        onFileChange: N,
-        filters: ["svg", "png", "jpg", "gif", "webm", "mp4"],
+        onFileChange: A,
+        filters: N,
         initialValue: t.config.assets.hero
       })]
     }), (0, a.jsx)(i.Heading, {
@@ -216,12 +219,12 @@ function N() {
         children: [(0, a.jsx)(S.default, {
           title: "Primary",
           colorKey: "primary",
-          onChange: C,
+          onChange: x,
           value: t.config.colors.primary
         }), (0, a.jsx)(S.default, {
           title: "Secondary",
           colorKey: "secondary",
-          onChange: C,
+          onChange: x,
           value: t.config.colors.secondary
         })]
       }), (0, a.jsx)(f.default, {
@@ -236,7 +239,7 @@ function N() {
             case f.UserState.ENROLLED:
               s({
                 ...t,
-                userStatus: h({
+                userStatus: p({
                   enrolledAt: new Date().toISOString()
                 })
               });
@@ -244,7 +247,7 @@ function N() {
             case f.UserState.COMPLETED_25:
               s({
                 ...t,
-                userStatus: h({
+                userStatus: p({
                   enrolledAt: new Date().toISOString(),
                   streamProgressSeconds: 10 * r.default.Seconds.MINUTE * .25
                 })
@@ -253,7 +256,7 @@ function N() {
             case f.UserState.COMPLETED_50:
               s({
                 ...t,
-                userStatus: h({
+                userStatus: p({
                   enrolledAt: new Date().toISOString(),
                   streamProgressSeconds: 10 * r.default.Seconds.MINUTE * .5
                 })
@@ -262,7 +265,7 @@ function N() {
             case f.UserState.COMPLETED_75:
               s({
                 ...t,
-                userStatus: h({
+                userStatus: p({
                   enrolledAt: new Date().toISOString(),
                   streamProgressSeconds: 10 * r.default.Seconds.MINUTE * .75
                 })
@@ -271,7 +274,7 @@ function N() {
             case f.UserState.COMPLETED_100:
               s({
                 ...t,
-                userStatus: h({
+                userStatus: p({
                   completedAt: new Date().toISOString(),
                   enrolledAt: new Date().toISOString(),
                   streamProgressSeconds: 10 * r.default.Seconds.MINUTE
@@ -281,7 +284,7 @@ function N() {
             case f.UserState.CLAIMED:
               s({
                 ...t,
-                userStatus: h({
+                userStatus: p({
                   claimedAt: new Date().toISOString(),
                   completedAt: new Date().toISOString(),
                   enrolledAt: new Date().toISOString(),
@@ -332,7 +335,7 @@ function N() {
     })]
   })
 }
-class p extends n.Component {
+class O extends n.Component {
   componentDidCatch(e) {
     this.setState({
       error: e
@@ -361,7 +364,7 @@ class p extends n.Component {
           children: e.message
         })
       })]
-    }) : (0, a.jsx)(N, {}, t)
+    }) : (0, a.jsx)(A, {}, t)
   }
   constructor(...e) {
     super(...e), g(this, "state", {
@@ -375,4 +378,4 @@ class p extends n.Component {
     })
   }
 }
-t.default = p
+t.default = O
