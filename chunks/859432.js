@@ -4,173 +4,176 @@ var n = a("735250"),
   i = a("470079"),
   l = a("512722"),
   s = a.n(l),
-  u = a("442837"),
-  d = a("524437"),
-  r = a("481060"),
-  o = a("5036"),
+  r = a("442837"),
+  o = a("524437"),
+  d = a("481060"),
+  u = a("5036"),
   c = a("553385"),
-  f = a("52011"),
-  g = a("890477"),
-  I = a("134726"),
-  E = a("458034"),
-  p = a("706140"),
-  M = a("362658"),
-  m = a("241851"),
-  h = a("294978"),
-  _ = a("513102"),
-  x = a("976192"),
-  S = a("429824"),
-  A = a("466330"),
-  G = a("191471"),
-  T = a("162157"),
-  C = a("623624"),
-  v = a("894059"),
+  S = a("52011"),
+  f = a("890477"),
+  E = a("134726"),
+  p = a("593128"),
+  T = a("458034"),
+  m = a("706140"),
+  I = a("362658"),
+  g = a("241851"),
+  _ = a("294978"),
+  C = a("513102"),
+  M = a("976192"),
+  A = a("429824"),
+  N = a("466330"),
+  h = a("191471"),
+  b = a("162157"),
+  x = a("623624"),
+  L = a("894059"),
   R = a("771212"),
-  N = a("434404"),
-  L = a("41776"),
-  b = a("837949"),
+  G = a("434404"),
+  v = a("41776"),
+  D = a("837949"),
   j = a("11352"),
-  D = a("703656"),
-  y = a("271383"),
-  P = a("496675"),
+  y = a("703656"),
+  P = a("271383"),
+  O = a("496675"),
   U = a("9156"),
-  O = a("594174"),
-  H = a("825185"),
-  V = a("808602"),
-  w = a("386103"),
-  F = a("632310"),
-  B = a("615814"),
-  k = a("937482"),
-  z = a("709586"),
-  Y = a("185403"),
-  W = a("151785"),
-  Z = a("288176"),
-  K = a("833571"),
-  X = a("26290"),
-  q = a("626135"),
-  J = a("981631"),
-  Q = a("647086"),
-  $ = a("689938"),
-  ee = a("515706");
+  F = a("594174"),
+  w = a("825185"),
+  B = a("808602"),
+  H = a("386103"),
+  V = a("632310"),
+  Y = a("615814"),
+  W = a("937482"),
+  k = a("709586"),
+  z = a("185403"),
+  Z = a("151785"),
+  K = a("288176"),
+  J = a("833571"),
+  X = a("725568"),
+  q = a("26290"),
+  Q = a("626135"),
+  $ = a("981631"),
+  ee = a("308083"),
+  et = a("647086"),
+  ea = a("689938"),
+  en = a("515706");
 
-function et(e) {
-  (0, r.openModal)(t => (0, n.jsx)(m.GuildLeaveConfirmModalContents, {
+function ei(e) {
+  (0, d.openModal)(t => (0, n.jsx)(g.GuildLeaveConfirmModalContents, {
     ...t,
     guild: e
   }))
 }
-let ea = i.memo(function(e) {
+let el = i.memo(function(e) {
   let {
     guild: t,
     onClose: l,
-    onSelect: m
-  } = e, ea = (0, u.useStateFromStores)([O.default], () => O.default.getCurrentUser());
-  s()(null != ea, "GuildHeaderPopout: user cannot be undefined"), i.useEffect(() => {
-    q.default.track(J.AnalyticEvents.GUILD_DROPDOWN_MENU_VIEWED, {
+    onSelect: g
+  } = e, el = (0, r.useStateFromStores)([F.default], () => F.default.getCurrentUser());
+  s()(null != el, "GuildHeaderPopout: user cannot be undefined"), i.useEffect(() => {
+    Q.default.track($.AnalyticEvents.GUILD_DROPDOWN_MENU_VIEWED, {
       guild_id: t.id
     })
   });
-  let en = (0, u.useStateFromStores)([U.default], () => U.default.isGuildCollapsed(t.id), [t.id]),
+  let es = (0, r.useStateFromStores)([U.default], () => U.default.isGuildCollapsed(t.id), [t.id]),
     {
-      canAccessSettings: ei,
-      canManageChannels: el,
-      showGuildAnalytics: es,
+      canAccessSettings: er,
+      canManageChannels: eo,
+      showGuildAnalytics: ed,
       isGuildAdmin: eu
-    } = (0, u.useStateFromStoresObject)([P.default], () => {
-      let e = P.default.can(J.Permissions.VIEW_GUILD_ANALYTICS, t) && t.hasFeature(J.GuildFeatures.COMMUNITY);
+    } = (0, r.useStateFromStoresObject)([O.default], () => {
+      let e = O.default.can($.Permissions.VIEW_GUILD_ANALYTICS, t) && t.hasFeature($.GuildFeatures.COMMUNITY);
       return {
-        canAccessSettings: P.default.canAccessGuildSettings(t),
-        canManageChannels: P.default.can(J.Permissions.MANAGE_CHANNELS, t),
+        canAccessSettings: O.default.canAccessGuildSettings(t),
+        canManageChannels: O.default.can($.Permissions.MANAGE_CHANNELS, t),
         showGuildAnalytics: (0, R.staffOnlyGuildSettingsAccess)(t.id) || e,
-        isGuildAdmin: P.default.can(J.Permissions.ADMINISTRATOR, t)
+        isGuildAdmin: O.default.can($.Permissions.ADMINISTRATOR, t)
       }
     }, [t]),
-    ed = (0, T.useCanReportRaid)(t),
-    er = t.isOwner(ea),
-    eo = (0, u.useStateFromStores)([L.default], () => L.default.isLurking(t.id), [t.id]),
-    ec = (0, u.useStateFromStores)([y.default], () => y.default.isCurrentUserGuest(t.id)),
-    ef = (0, v.default)(t.id, !0),
-    eg = (0, E.default)(t),
-    eI = (0, A.default)({
-      source: J.InstantInviteSources.GUILD_HEADER,
+    ec = (0, b.useCanReportRaid)(t),
+    eS = t.isOwner(el),
+    ef = (0, r.useStateFromStores)([v.default], () => v.default.isLurking(t.id), [t.id]),
+    eE = (0, r.useStateFromStores)([P.default], () => P.default.isCurrentUserGuest(t.id)),
+    ep = (0, L.default)(t.id, !0),
+    eT = (0, T.default)(t),
+    em = (0, N.default)({
+      source: $.InstantInviteSources.GUILD_HEADER,
       guild: t
     }),
-    eE = (0, x.default)({
+    eI = (0, M.default)({
       guildId: t.id,
-      userId: ea.id,
+      userId: el.id,
       analyticsLocation: {
-        page: J.AnalyticsPages.GUILD_CHANNEL,
-        section: J.AnalyticsSections.GUILD_DROPDOWN_MENU
+        page: $.AnalyticsPages.GUILD_CHANNEL,
+        section: $.AnalyticsSections.GUILD_DROPDOWN_MENU
       },
-      icon: Y.default
+      icon: z.default
     }),
-    ep = t.hasFeature(J.GuildFeatures.HUB),
-    eM = t.id === Q.FAVORITES_RAW_GUILD_ID,
-    em = (0, b.default)(t.id),
-    eh = (0, h.default)(t),
-    e_ = (0, _.default)(t),
-    ex = (0, S.default)(t, !0),
+    eg = t.hasFeature($.GuildFeatures.HUB),
+    e_ = t.id === et.FAVORITES_RAW_GUILD_ID,
+    eC = (0, D.default)(t.id),
+    eM = (0, _.default)(t),
+    eA = (0, C.default)(t),
+    eN = (0, A.default)(t, !0),
     {
-      isFavoritesPerk: eS
-    } = (0, M.useFavoritesServerExperiment)("GuildHeaderPopout"),
+      isFavoritesPerk: eh
+    } = (0, I.useFavoritesServerExperiment)("GuildHeaderPopout"),
     {
-      triggerDeadchat: eA
-    } = g.SimpleDeadchatPromptExperiment.useExperiment({
+      triggerDeadchat: eb
+    } = f.SimpleDeadchatPromptExperiment.useExperiment({
       guildId: t.id,
       location: "guild header"
     }, {
       autoTrackExposure: !1
     }),
     {
-      triggerGamingStats: eG
-    } = f.GamingStatsPromptExperiment.useExperiment({
+      triggerGamingStats: ex
+    } = S.GamingStatsPromptExperiment.useExperiment({
       guildId: t.id,
       location: "guild header"
     }, {
       autoTrackExposure: !1
     }),
-    eT = j.CustomNotificationSoundExperiment.useExperiment({
+    eL = j.CustomNotificationSoundExperiment.useExperiment({
       location: "GuildHeaderPopout"
     }, {
       autoTrackExposure: !0
     }).enabled,
     {
-      enableClanCreation: eC
-    } = I.ClanGuildExperiment.useExperiment({
+      enableClanCreation: eR
+    } = E.ClanGuildExperiment.useExperiment({
       guildId: t.id,
       location: "guild header"
     }, {
       autoTrackExposure: !1
     }),
-    [ev] = (0, p.useGetDismissibleContent)([d.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]),
-    eR = eT && ev === d.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE;
-  return eo || ec ? (0, n.jsx)(r.Menu, {
-    onSelect: m,
+    [eG] = (0, m.useGetDismissibleContent)([o.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]),
+    ev = eL && eG === o.DismissibleContent.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE;
+  return ef || eE ? (0, n.jsx)(d.Menu, {
+    onSelect: g,
     navId: "guild-header-popout",
     variant: "fixed",
     onClose: l,
-    "aria-label": $.default.Messages.GUILD_ACTIONS_MENU_LABEL,
-    children: (0, n.jsx)(r.MenuItem, {
+    "aria-label": ea.default.Messages.GUILD_ACTIONS_MENU_LABEL,
+    children: (0, n.jsx)(d.MenuItem, {
       id: "leave-guild",
-      label: $.default.Messages.LEAVE_SERVER,
-      icon: F.default,
+      label: ea.default.Messages.LEAVE_SERVER,
+      icon: V.default,
       action: () => {
-        N.default.leaveGuild(t.id), !ec && (0, D.transitionTo)(J.Routes.GUILD_DISCOVERY)
+        G.default.leaveGuild(t.id), !eE && (0, y.transitionTo)($.Routes.GUILD_DISCOVERY)
       }
     })
-  }) : eM ? (0, n.jsxs)(r.Menu, {
-    onSelect: m,
+  }) : e_ ? (0, n.jsxs)(d.Menu, {
+    onSelect: g,
     navId: "favorites-header-popout",
     variant: "fixed",
     onClose: l,
-    "aria-label": $.default.Messages.GUILD_ACTIONS_MENU_LABEL,
-    children: [(0, n.jsxs)(r.MenuGroup, {
-      children: [eS && (0, n.jsx)(r.MenuItem, {
+    "aria-label": ea.default.Messages.GUILD_ACTIONS_MENU_LABEL,
+    children: [(0, n.jsxs)(d.MenuGroup, {
+      children: [eh && (0, n.jsx)(d.MenuItem, {
         id: "add-channel",
-        label: $.default.Messages.FAVORITES_ADD_A_CHANNEL,
+        label: ea.default.Messages.FAVORITES_ADD_A_CHANNEL,
         color: "brand",
-        icon: W.default,
-        action: () => (0, r.openModalLazy)(async () => {
+        icon: Z.default,
+        action: () => (0, d.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([a.e("99387"), a.e("29608")]).then(a.bind(a, "178125"));
@@ -178,11 +181,11 @@ let ea = i.memo(function(e) {
             ...t
           })
         })
-      }), (0, n.jsx)(r.MenuItem, {
+      }), (0, n.jsx)(d.MenuItem, {
         id: "create-category",
-        label: $.default.Messages.CREATE_CATEGORY,
-        icon: B.default,
-        action: () => (0, r.openModalLazy)(async () => {
+        label: ea.default.Messages.CREATE_CATEGORY,
+        icon: Y.default,
+        action: () => (0, d.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([a.e("99387"), a.e("1812")]).then(a.bind(a, "477782"));
@@ -191,33 +194,33 @@ let ea = i.memo(function(e) {
           })
         })
       })]
-    }), (0, n.jsx)(r.MenuGroup, {
-      children: (0, n.jsx)(r.MenuCheckboxItem, {
+    }), (0, n.jsx)(d.MenuGroup, {
+      children: (0, n.jsx)(d.MenuCheckboxItem, {
         id: "hide-muted-channels",
-        label: $.default.Messages.HIDE_MUTED_CHANNELS,
-        checked: en,
-        action: () => o.default.toggleCollapseGuild(t.id)
+        label: ea.default.Messages.HIDE_MUTED_CHANNELS,
+        checked: es,
+        action: () => u.default.toggleCollapseGuild(t.id)
       })
     })]
-  }) : ep ? (0, n.jsxs)(r.Menu, {
-    onSelect: m,
+  }) : eg ? (0, n.jsxs)(d.Menu, {
+    onSelect: g,
     navId: "guild-header-popout",
     variant: "fixed",
     onClose: l,
-    "aria-label": $.default.Messages.GUILD_ACTIONS_MENU_LABEL,
-    children: [(0, n.jsxs)(r.MenuGroup, {
-      children: [ei ? (0, n.jsx)(r.MenuItem, {
+    "aria-label": ea.default.Messages.GUILD_ACTIONS_MENU_LABEL,
+    children: [(0, n.jsxs)(d.MenuGroup, {
+      children: [er ? (0, n.jsx)(d.MenuItem, {
         id: "settings",
-        label: $.default.Messages.SERVER_SETTINGS,
-        icon: k.default,
+        label: ea.default.Messages.SERVER_SETTINGS,
+        icon: W.default,
         action: () => {
-          N.default.open(t.id, J.GuildSettingsSections.OVERVIEW)
+          G.default.open(t.id, $.GuildSettingsSections.OVERVIEW)
         }
-      }) : null, eI, (0, n.jsx)(r.MenuItem, {
+      }) : null, em, (0, n.jsx)(d.MenuItem, {
         id: "privacy",
-        label: $.default.Messages.PRIVACY_SETTINGS,
-        icon: K.default,
-        action: () => (0, r.openModalLazy)(async () => {
+        label: ea.default.Messages.PRIVACY_SETTINGS,
+        icon: J.default,
+        action: () => (0, d.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([a.e("99387"), a.e("88408")]).then(a.bind(a, "241420"));
@@ -226,119 +229,121 @@ let ea = i.memo(function(e) {
             guild: t
           })
         })
-      }), eE]
-    }), er ? null : (0, n.jsx)(r.MenuGroup, {
-      children: (0, n.jsx)(r.MenuItem, {
+      }), eI]
+    }), eS ? null : (0, n.jsx)(d.MenuGroup, {
+      children: (0, n.jsx)(d.MenuItem, {
         id: "leave",
-        label: $.default.Messages.LEAVE_HUB,
-        icon: F.default,
+        label: ea.default.Messages.LEAVE_HUB,
+        icon: V.default,
         color: "danger",
-        action: () => et(t)
+        action: () => ei(t)
       })
     })]
-  }) : (0, n.jsxs)(r.Menu, {
-    onSelect: m,
+  }) : (0, n.jsxs)(d.Menu, {
+    onSelect: g,
     navId: "guild-header-popout",
     variant: "fixed",
     onClose: l,
-    "aria-label": $.default.Messages.GUILD_ACTIONS_MENU_LABEL,
-    children: [(0, n.jsx)(r.MenuGroup, {
-      children: (0, n.jsx)(r.MenuItem, {
+    "aria-label": ea.default.Messages.GUILD_ACTIONS_MENU_LABEL,
+    children: [(0, n.jsx)(d.MenuGroup, {
+      children: (0, n.jsx)(d.MenuItem, {
         id: "premium-subscribe",
-        label: $.default.Messages.PREMIUM_GUILD_HEADER_DROPDOWN_NITRO_SERVER_SUBSCRIBE,
-        icon: z.default,
+        label: ea.default.Messages.PREMIUM_GUILD_HEADER_DROPDOWN_NITRO_SERVER_SUBSCRIBE,
+        icon: k.default,
         action: () => {
-          (0, C.openGuildBoostingMarketingModal)({
+          (0, x.openGuildBoostingMarketingModal)({
             guildId: t.id,
             location: {
-              section: J.AnalyticsSections.GUILD_HEADER_POPOUT
+              section: $.AnalyticsSections.GUILD_HEADER_POPOUT
             }
           })
         }
       })
-    }), (0, n.jsxs)(r.MenuGroup, {
-      children: [er && ea.isStaff() && eA ? (0, n.jsx)(r.MenuItem, {
+    }), (0, n.jsxs)(d.MenuGroup, {
+      children: [eS && el.isStaff() && eb ? (0, n.jsx)(d.MenuItem, {
         id: "create-deadchat",
         label: "Deadchat Ping",
-        icon: w.default,
+        icon: H.default,
         action: () => {
-          (0, c.forcePrompt)(t.id, J.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT)
+          (0, c.forcePrompt)(t.id, $.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT)
         }
-      }) : null, er && ea.isStaff() && eG ? (0, n.jsx)(r.MenuItem, {
+      }) : null, eS && el.isStaff() && ex ? (0, n.jsx)(d.MenuItem, {
         id: "create-gaming-ping",
         label: "Gaming Stats Ping",
-        icon: w.default,
+        icon: H.default,
         action: () => {
-          (0, c.forcePrompt)(t.id, J.MessageTypes.GUILD_GAMING_STATS_PROMPT)
+          (0, c.forcePrompt)(t.id, $.MessageTypes.GUILD_GAMING_STATS_PROMPT)
         }
-      }) : null, eI, ei ? (0, n.jsx)(r.MenuItem, {
+      }) : null, em, er ? (0, n.jsx)(d.MenuItem, {
         id: "settings",
-        label: $.default.Messages.SERVER_SETTINGS,
-        icon: k.default,
+        label: ea.default.Messages.SERVER_SETTINGS,
+        icon: W.default,
         action: () => {
-          N.default.open(t.id, J.GuildSettingsSections.OVERVIEW)
+          G.default.open(t.id, $.GuildSettingsSections.OVERVIEW)
         }
-      }) : null, eu && eC && t.hasFeature(J.GuildFeatures.CLAN) ? (0, n.jsx)(r.MenuItem, {
+      }) : null, eu && eR && t.hasFeature($.GuildFeatures.CLAN) ? (0, n.jsx)(d.MenuItem, {
         id: "guild-settings",
-        label: $.default.Messages.CLAN_SETTINGS,
-        icon: k.default,
-        action: () => (0, r.openModalLazy)(async () => {
+        label: ea.default.Messages.CLAN_SETTINGS,
+        icon: W.default,
+        action: () => (0, X.openFullScreenLayer)(e => {
           let {
-            default: e
-          } = await Promise.all([a.e("49237"), a.e("99387"), a.e("95589")]).then(a.bind(a, "593128"));
-          return a => (0, n.jsx)(e, {
-            ...a,
+            closeLayer: a
+          } = e;
+          return (0, n.jsx)(p.default, {
+            onClose: a,
             guildId: t.id
           })
+        }, {
+          layerKey: ee.CLAN_SETTINGS_MODAL_LAYER_KEY
         })
-      }) : null, es ? (0, n.jsx)(r.MenuItem, {
+      }) : null, ed ? (0, n.jsx)(d.MenuItem, {
         id: "insights",
-        label: $.default.Messages.SERVER_INSIGHTS,
-        icon: H.default,
-        action: () => N.default.open(t.id, J.GuildSettingsSections.ANALYTICS)
-      }) : null, el ? (0, n.jsxs)(n.Fragment, {
-        children: [(0, n.jsx)(r.MenuItem, {
+        label: ea.default.Messages.SERVER_INSIGHTS,
+        icon: w.default,
+        action: () => G.default.open(t.id, $.GuildSettingsSections.ANALYTICS)
+      }) : null, eo ? (0, n.jsxs)(n.Fragment, {
+        children: [(0, n.jsx)(d.MenuItem, {
           id: "create-channel",
-          label: $.default.Messages.CREATE_CHANNEL,
-          icon: W.default,
-          action: () => (0, r.openModalLazy)(async () => {
+          label: ea.default.Messages.CREATE_CHANNEL,
+          icon: Z.default,
+          action: () => (0, d.openModalLazy)(async () => {
             let {
               default: e
             } = await Promise.all([a.e("99387"), a.e("45094"), a.e("36494")]).then(a.bind(a, "218613"));
             return a => (0, n.jsx)(e, {
               ...a,
-              channelType: J.ChannelTypes.GUILD_TEXT,
+              channelType: $.ChannelTypes.GUILD_TEXT,
               guildId: t.id
             })
           })
-        }), (0, n.jsx)(r.MenuItem, {
+        }), (0, n.jsx)(d.MenuItem, {
           id: "create-category",
-          label: $.default.Messages.CREATE_CATEGORY,
-          icon: B.default,
-          action: () => (0, r.openModalLazy)(async () => {
+          label: ea.default.Messages.CREATE_CATEGORY,
+          icon: Y.default,
+          action: () => (0, d.openModalLazy)(async () => {
             let {
               default: e
             } = await Promise.all([a.e("99387"), a.e("45094"), a.e("36494")]).then(a.bind(a, "218613"));
             return a => (0, n.jsx)(e, {
               ...a,
-              channelType: J.ChannelTypes.GUILD_CATEGORY,
+              channelType: $.ChannelTypes.GUILD_CATEGORY,
               guildId: t.id
             })
           })
         })]
-      }) : null, ef, eh, e_, eg]
-    }), (0, n.jsxs)(r.MenuGroup, {
-      children: [em, (0, n.jsx)(r.MenuItem, {
+      }) : null, ep, eM, eA, eT]
+    }), (0, n.jsxs)(d.MenuGroup, {
+      children: [eC, (0, n.jsx)(d.MenuItem, {
         id: "notifications",
         label: (0, n.jsxs)("div", {
-          className: ee.newBadgeRow,
-          children: [$.default.Messages.NOTIFICATION_SETTINGS, eR && (0, n.jsx)(X.TextBadge, {
-            className: ee.newBadge,
-            text: $.default.Messages.NEW
+          className: en.newBadgeRow,
+          children: [ea.default.Messages.NOTIFICATION_SETTINGS, ev && (0, n.jsx)(q.TextBadge, {
+            className: en.newBadge,
+            text: ea.default.Messages.NEW
           })]
         }),
-        icon: eR ? void 0 : V.default,
-        action: () => (0, r.openModalLazy)(async () => {
+        icon: ev ? void 0 : B.default,
+        action: () => (0, d.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([a.e("49237"), a.e("99387"), a.e("5863"), a.e("34521")]).then(a.bind(a, "751212"));
@@ -347,11 +352,11 @@ let ea = i.memo(function(e) {
             guildId: t.id
           })
         })
-      }), (0, n.jsx)(r.MenuItem, {
+      }), (0, n.jsx)(d.MenuItem, {
         id: "privacy",
-        label: $.default.Messages.PRIVACY_SETTINGS,
-        icon: K.default,
-        action: () => (0, r.openModalLazy)(async () => {
+        label: ea.default.Messages.PRIVACY_SETTINGS,
+        icon: J.default,
+        action: () => (0, d.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([a.e("99387"), a.e("88408")]).then(a.bind(a, "241420"));
@@ -361,28 +366,28 @@ let ea = i.memo(function(e) {
           })
         })
       })]
-    }), (0, n.jsxs)(r.MenuGroup, {
-      children: [eE, (0, n.jsx)(r.MenuCheckboxItem, {
+    }), (0, n.jsxs)(d.MenuGroup, {
+      children: [eI, (0, n.jsx)(d.MenuCheckboxItem, {
         id: "hide-muted-channels",
-        label: $.default.Messages.HIDE_MUTED_CHANNELS,
-        checked: en,
-        action: () => o.default.toggleCollapseGuild(t.id)
+        label: ea.default.Messages.HIDE_MUTED_CHANNELS,
+        checked: es,
+        action: () => u.default.toggleCollapseGuild(t.id)
       })]
-    }), (0, n.jsxs)(r.MenuGroup, {
-      children: [ex, ed && t.isCommunity() ? (0, n.jsx)(r.MenuItem, {
+    }), (0, n.jsxs)(d.MenuGroup, {
+      children: [eN, ec && t.isCommunity() ? (0, n.jsx)(d.MenuItem, {
         id: "report-raid",
-        label: $.default.Messages.GUILD_REPORT_RAID_BUTTON_TITLE,
-        icon: Z.default,
+        label: ea.default.Messages.GUILD_REPORT_RAID_BUTTON_TITLE,
+        icon: K.default,
         color: "danger",
-        action: () => (0, G.openReportRaidModal)(t.id)
-      }) : null, er ? null : (0, n.jsx)(r.MenuItem, {
+        action: () => (0, h.openReportRaidModal)(t.id)
+      }) : null, eS ? null : (0, n.jsx)(d.MenuItem, {
         id: "leave",
-        label: $.default.Messages.LEAVE_SERVER,
-        icon: F.default,
+        label: ea.default.Messages.LEAVE_SERVER,
+        icon: V.default,
         color: "danger",
-        action: () => et(t)
+        action: () => ei(t)
       })]
     })]
   })
 });
-t.default = ea
+t.default = el

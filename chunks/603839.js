@@ -3,11 +3,11 @@ a.r(t), a("47120");
 var n = a("735250"),
   s = a("470079"),
   l = a("718017"),
-  i = a("748780"),
-  r = a("442837"),
-  o = a("607070"),
-  u = a("931240"),
-  d = a("650461"),
+  i = a("442837"),
+  r = a("607070"),
+  o = a("931240"),
+  u = a("650461"),
+  d = a("35313"),
   c = a("602014"),
   f = a("188837"),
   E = a("496376"),
@@ -18,27 +18,13 @@ t.default = e => {
     guildId: t,
     onClose: a,
     gameId: C
-  } = e, m = (0, r.useStateFromStores)([d.default], () => null == d.default.getStateForGuild(t).progress), S = (0, r.useStateFromStores)([o.default], () => o.default.useReducedMotion), [I, p] = s.useState(m && !S ? h.ClanSetupModalPages.INTRO_ANIMATION : h.ClanSetupModalPages.SETUP);
+  } = e, m = (0, i.useStateFromStores)([u.default], () => null == u.default.getStateForGuild(t).progress), S = (0, i.useStateFromStores)([r.default], () => r.default.useReducedMotion), [I, p] = s.useState(m && !S ? h.ClanSetupModalPages.INTRO_ANIMATION : h.ClanSetupModalPages.SETUP);
   s.useEffect(() => {
-    null != C && (0, u.updateClanSetup)(t, {
+    null != C && (0, o.updateClanSetup)(t, {
       requiredGameId: C
     })
   }, [C, t]);
-  let T = (0, l.useSpring)({
-    from: {
-      opacity: S ? 1 : 0,
-      transform: S ? "scale(1)" : "scale(1.2)"
-    },
-    to: {
-      opacity: 1,
-      transform: "scale(1)"
-    },
-    config: {
-      easing: i.default.Easing.quad,
-      duration: S ? 0 : 200,
-      clamp: !0
-    }
-  });
+  let T = (0, d.useFullScreenModalAnimationStyle)();
   return (0, n.jsx)(l.animated.div, {
     style: T,
     className: _.modal,
