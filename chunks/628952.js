@@ -89,6 +89,7 @@ t.default = e => {
           canUsePremiumCustomization: !0,
           onAvatarChange: T.NOOP,
           onBannerChange: T.NOOP,
+          hideRecentGames: !0,
           disabledInputs: !0
         }),
         align: "center",

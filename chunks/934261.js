@@ -110,7 +110,8 @@ t.default = e => {
     children: [(0, s.jsx)(f.default, {
       ...w,
       disabledInputs: !0,
-      forProfileEffectModal: !0
+      forProfileEffectModal: !0,
+      hideRecentGames: !0
     }), !1, (0, s.jsx)(_, {
       effectIsOwned: i,
       pendingProfileEffectRecord: n,
