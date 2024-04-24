@@ -38,7 +38,7 @@ let c = (e, t) => ({
         text: d.default.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED
       }), (0, r.isEntryMarathon)(e) && n.push({
         iconPath: u.TIMER_ICON_PATH,
-        text: (0, r.getFullMarathonDescription)(e)
+        text: d.default.Messages.MEMBER_LIST_CONTENT_FEED_MARATHON
       }), (0, r.isEntryTopGame)(e)) {
       let t = (0, r.getEntryDuration)(e);
       if (null != t) {
