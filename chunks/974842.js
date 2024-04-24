@@ -15,7 +15,7 @@ var n = a("735250"),
   _ = a("996399"),
   C = a("597338");
 let m = "clan-badge-render",
-  S = [f.ClanBadgeKind.SWORD, f.ClanBadgeKind.SWORD_1, f.ClanBadgeKind.SWORD_2, f.ClanBadgeKind.SWORD_3, f.ClanBadgeKind.SWORD_4, f.ClanBadgeKind.SWORD_5, f.ClanBadgeKind.SWORD_6, f.ClanBadgeKind.SWORD_7, f.ClanBadgeKind.SWORD_8, f.ClanBadgeKind.SWORD_9, f.ClanBadgeKind.SWORD_10, f.ClanBadgeKind.SWORD_11, f.ClanBadgeKind.SWORD_12, f.ClanBadgeKind.SWORD_13, f.ClanBadgeKind.SWORD_14, f.ClanBadgeKind.SWORD_15, f.ClanBadgeKind.SWORD_16, f.ClanBadgeKind.SWORD_17, f.ClanBadgeKind.SWORD_18, f.ClanBadgeKind.SWORD_19, f.ClanBadgeKind.SWORD_20],
+  S = [f.ClanBadgeKind.SWORD, f.ClanBadgeKind.WATER_DROP, f.ClanBadgeKind.SKULL, f.ClanBadgeKind.TOADSTOOL, f.ClanBadgeKind.MOON, f.ClanBadgeKind.LIGHTNING, f.ClanBadgeKind.LEAF, f.ClanBadgeKind.HEART, f.ClanBadgeKind.FIRE, f.ClanBadgeKind.COMPASS, f.ClanBadgeKind.SWORD_10, f.ClanBadgeKind.SWORD_11, f.ClanBadgeKind.SWORD_12, f.ClanBadgeKind.SWORD_13, f.ClanBadgeKind.SWORD_14, f.ClanBadgeKind.SWORD_15, f.ClanBadgeKind.SWORD_16, f.ClanBadgeKind.SWORD_17, f.ClanBadgeKind.SWORD_18, f.ClanBadgeKind.SWORD_19, f.ClanBadgeKind.SWORD_20],
   I = f.CLAN_BADGE_PALETTE_PRESETS.length;
 t.default = e => {
   let {
@@ -121,6 +121,7 @@ t.default = e => {
                 secondaryTintColor: e.secondary
               })
             }, "".concat(e.primary, ":").concat(e.secondary))), (0, n.jsx)(c.default, {
+              showSecondaryColor: f.CLAN_BADGE_NUM_CUSTOMIZABLE_COLORS[v] >= 2,
               palette: O,
               onPrimaryColorChange: e => {
                 L(t => ({
@@ -186,8 +187,8 @@ t.default = e => {
           children: [(0, n.jsx)(d.ClanBadge, {
             id: m,
             badge: v,
-            width: 16,
-            height: 16,
+            width: 64,
+            height: 64,
             primaryTintColor: D.primary,
             secondaryTintColor: D.secondary
           }), (0, n.jsx)("canvas", {

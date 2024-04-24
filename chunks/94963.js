@@ -142,6 +142,7 @@ t.default = e => {
                 secondaryColor: e.secondary
               })
             }, t)), (0, n.jsx)(S.default, {
+              showSecondaryColor: !0,
               palette: O,
               onPrimaryColorChange: e => {
                 L(t => ({

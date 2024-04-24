@@ -13,11 +13,12 @@ var n = a("735250"),
 
 function u(e) {
   let {
-    palette: t,
-    onPrimaryColorChange: a,
-    onSecondaryColorChange: u
-  } = e, d = s.useRef(null);
-  return (0, l.useFocusLock)(d), (0, n.jsxs)("div", {
+    showSecondaryColor: t,
+    palette: a,
+    onPrimaryColorChange: u,
+    onSecondaryColorChange: d
+  } = e, c = s.useRef(null);
+  return (0, l.useFocusLock)(c), (0, n.jsxs)("div", {
     className: o.popoutContainer,
     children: [(0, n.jsx)(l.Text, {
       variant: "text-xs/semibold",
@@ -25,14 +26,14 @@ function u(e) {
       className: o.customColorsHeader,
       children: r.default.Messages.CLAN_PALETTE_PICKER_CUSTOM_COLORS
     }), (0, n.jsxs)("div", {
-      ref: d,
+      ref: c,
       className: o.colorPickersContainer,
       children: [(0, n.jsxs)("div", {
         className: o.colorColumn,
         children: [(0, n.jsx)("div", {
           className: o.colorSwatch,
           style: {
-            backgroundColor: t.primary
+            backgroundColor: a.primary
           }
         }), (0, n.jsx)(l.Text, {
           variant: "text-xs/medium",
@@ -40,18 +41,18 @@ function u(e) {
           children: r.default.Messages.USER_SETTINGS_PROFILE_THEME_PRIMARY
         }), (0, n.jsx)(i.CustomColorPicker, {
           className: o.colorPicker,
-          value: t.primary,
+          value: a.primary,
           eagerUpdate: !0,
           wrapperComponentType: "div",
           showEyeDropper: !0,
-          onChange: a
+          onChange: u
         })]
-      }), (0, n.jsxs)("div", {
+      }), t && (0, n.jsxs)("div", {
         className: o.colorColumn,
         children: [(0, n.jsx)("div", {
           className: o.colorSwatch,
           style: {
-            backgroundColor: t.secondary
+            backgroundColor: a.secondary
           }
         }), (0, n.jsx)(l.Text, {
           variant: "text-xs/medium",
@@ -59,11 +60,11 @@ function u(e) {
           children: r.default.Messages.USER_SETTINGS_PROFILE_THEME_ACCENT
         }), (0, n.jsx)(i.CustomColorPicker, {
           className: o.colorPicker,
-          value: t.secondary,
+          value: a.secondary,
           eagerUpdate: !0,
           wrapperComponentType: "div",
           showEyeDropper: !0,
-          onChange: u
+          onChange: d
         })]
       })]
     })]
@@ -73,23 +74,25 @@ function u(e) {
 function d(e) {
   let {
     shouldShow: t,
-    onRequestClose: a,
-    children: s,
-    palette: i,
-    onPrimaryColorChange: r,
-    onSecondaryColorChange: o
+    showSecondaryColor: a,
+    onRequestClose: s,
+    children: i,
+    palette: r,
+    onPrimaryColorChange: o,
+    onSecondaryColorChange: d
   } = e;
   return (0, n.jsx)(l.Popout, {
     renderPopout: () => (0, n.jsx)(u, {
-      palette: i,
-      onPrimaryColorChange: r,
-      onSecondaryColorChange: o
+      showSecondaryColor: a,
+      palette: r,
+      onPrimaryColorChange: o,
+      onSecondaryColorChange: d
     }),
     position: "left",
     shouldShow: t,
-    onRequestClose: a,
+    onRequestClose: s,
     animation: l.Popout.Animation.TRANSLATE,
     animationPosition: "right",
-    children: s
+    children: i
   })
 }

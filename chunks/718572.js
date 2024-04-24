@@ -1,176 +1,112 @@
 "use strict";
-l.r(a), l.d(a, {
+a.r(v), a.d(v, {
   ClanBadgeSword: function() {
-    return o
+    return Z
   }
 });
-var t = l("735250");
-l("470079");
-var i = l("331595"),
-  n = l("249849");
-let s = ["#666666"],
-  r = ["#b8b8b8", "#e8e8e8"],
-  d = ["#ffb84b"],
-  c = ["#c8c8c8", "#e4e4e4"],
-  o = e => {
+var t = a("735250");
+a("470079");
+var l = a("331595"),
+  e = a("249849");
+let i = ["#ffb84b", "#ffe361", "#f0f0f0"],
+  s = ["#847d8b", "#d1cdd5", "#f0f0f0"],
+  n = [.1, .4, .7],
+  r = [{
+    base: 5,
+    tint: 1
+  }, {
+    base: 4,
+    tint: 1
+  }, {
+    base: 3,
+    tint: 1
+  }],
+  d = [.3, .9, 1],
+  M = [{
+    base: 4,
+    tint: 1
+  }, {
+    base: 3,
+    tint: 1
+  }, {
+    base: 8,
+    tint: 1
+  }],
+  Z = h => {
     let {
-      width: a = 24,
-      height: l = 24,
-      primaryTintColor: o,
-      secondaryTintColor: x,
-      ...h
-    } = e, V = null != o ? (0, n.transformClanBadgeColors)(s, o) : d, H = null != x ? (0, n.transformClanBadgeColors)(r, x) : c;
+      width: v = 24,
+      height: a = 24,
+      primaryTintColor: Z,
+      secondaryTintColor: H,
+      ...V
+    } = h, {
+      primaryColorsTransformed: f,
+      secondaryColorsTransformed: o
+    } = (0, e.getTransformedBadgeColors)({
+      primaryBaseColors: i,
+      primaryTintColor: Z,
+      primaryTintLuminances: n,
+      primaryLuminanceWeights: r,
+      secondaryBaseColors: s,
+      secondaryTintColor: H,
+      secondaryTintLuminances: d,
+      secondaryLuminanceWeights: M
+    });
     return (0, t.jsxs)("svg", {
-      ...(0, i.default)(h),
-      width: a,
-      height: l,
+      ...(0, l.default)(V),
+      width: v,
+      height: a,
       viewBox: "0 0 16 16",
       fill: "none",
       xmlns: "http://www.w3.org/2000/svg",
-      children: [(0, t.jsxs)("g", {
-        "clip-path": "url(#clip0_42_3511)",
-        children: [(0, t.jsx)("path", {
-          d: "M11 1V2H10V3H9V4H8V5H7V7H6V8H8V10H9V9H11V8H12V7H13V6H14V5H15V1H11Z",
-          fill: H[0]
-        }), (0, t.jsx)("path", {
-          d: "M3 9H4V10H6V12H7V13H9V14H11V12H9V11H8V10H7V9H6V8H5V7H4V5H2V7H3V9Z",
-          fill: V[0]
-        }), (0, t.jsx)("path", {
-          d: "M5 11H3V13H5V11Z",
-          fill: V[0]
-        }), (0, t.jsx)("path", {
-          d: "M3 13H1V15H3V13Z",
-          fill: V[0]
-        }), (0, t.jsx)("path", {
-          d: "M11 1H10V2H11V1Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M10 2H9V3H10V2Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M9 3H8V4H9V3Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M8 4H7V5H8V4Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M7 5H6V7H7V5Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M5 5H4V7H5V5Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M2 5H1V7H2V5Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M3 7H2V9H3V7Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M11 9H9V10H11V9Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M11 11H9V12H11V11Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M12 12H11V14H12V12Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M1 13H0V15H1V13Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M11 14H9V15H11V14Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M9 13H7V14H9V13Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M3 14V15H4V14H5V13H3V14Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M6 12V10H5H4V9H3V11H4H5V12V13H7V12H6Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M3 12V11H2V12H1V13H3V12Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M3 15H1V16H3V15Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M4 4H2V5H4V4Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M7 9V10H8V9V8H7H6V9H7Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M13 3H12V4H13V3Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M12 4H11V5H12V4Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M11 5H10V6H11V5Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M10 6H9V7H10V6Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M9 7H8V8H9V7Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M9 10H8V11H9V10Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M6 7H5V8H6V7Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M15 5H14V6H15V5Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M14 6H13V7H14V6Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M13 7H12V8H13V7Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M12 8H11V9H12V8Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M11 0V1H15V5H16V0H11Z",
-          fill: "#1E1F22"
-        }), (0, t.jsx)("path", {
-          d: "M11 12H10V13H11V12Z",
-          fill: "white"
-        }), (0, t.jsx)("path", {
-          d: "M12 1H11V2H10V3H9V4H8V5H7V6V7H6V8H8V7H9V6H10V5H11V4H12V3H13V2H14V1H12Z",
-          fill: H[1]
-        }), (0, t.jsx)("path", {
-          d: "M8 5H7V6H10V5H9V4H8V5Z",
-          fill: "white"
-        }), (0, t.jsx)("path", {
-          d: "M10 2V3H9V4H12V3H11V2H10Z",
-          fill: "white"
-        }), (0, t.jsx)("path", {
-          d: "M12 1H11V2H12V1Z",
-          fill: "white"
-        }), (0, t.jsx)("path", {
-          d: "M4 5H3V6H4V5Z",
-          fill: "white"
-        }), (0, t.jsx)("path", {
-          d: "M4 11H3V12H4V11Z",
-          fill: "white"
-        }), (0, t.jsx)("path", {
-          d: "M2 13H1V14H2V13Z",
-          fill: "white"
-        })]
-      }), (0, t.jsx)("defs", {
-        children: (0, t.jsx)("clipPath", {
-          id: "clip0_42_3511",
-          children: (0, t.jsx)("rect", {
-            width: "16",
-            height: "16",
-            fill: "white"
-          })
-        })
+      children: [(0, t.jsx)("path", {
+        d: "M11 1v1h-1v1H9v1H8v1H7v2H6v1h2v2h1V9h2V8h1V7h1V6h1V5h1V1h-4Z",
+        fill: o[1]
+      }), (0, t.jsx)("path", {
+        d: "M3 9h1v1h2v2h1v1h2v1h2v-2H9v-1H8v-1H7V9H6V8H5V7H4V5H2v2h1v2Z",
+        fill: f[1]
+      }), (0, t.jsx)("path", {
+        d: "M5 11H3v2h2v-2ZM3 13H1v2h2v-2Z",
+        fill: f[1]
+      }), (0, t.jsx)("path", {
+        d: "M11 1h-1v1h1V1ZM10 2H9v1h1V2ZM9 3H8v1h1V3ZM8 4H7v1h1V4ZM7 5H6v2h1V5ZM5 5H4v2h1V5ZM2 5H1v2h1V5ZM3 7H2v2h1V7ZM11 9H9v1h2V9ZM11 11H9v1h2v-1ZM12 12h-1v2h1v-2Z",
+        fill: "#000"
+      }), (0, t.jsx)("path", {
+        d: "M15 1h-1v4h1V1Z",
+        fill: o[0]
+      }), (0, t.jsx)("path", {
+        d: "M1 13H0v2h1v-2ZM11 14H9v1h2v-1ZM9 13H7v1h2v-1Z",
+        fill: "#000"
+      }), (0, t.jsx)("path", {
+        d: "M5 12H3v1h2v-1ZM3 14H1v1h2v-1Z",
+        fill: f[0]
+      }), (0, t.jsx)("path", {
+        d: "M3 14v1h1v-1h1v-1H3v1ZM6 12v-2H4V9H3v2h2v2h2v-1H6ZM3 12v-1H2v1H1v1h2v-1ZM3 15H1v1h2v-1ZM4 4H2v1h2V4ZM7 9v1h1V8H6v1h1Z",
+        fill: "#000"
+      }), (0, t.jsx)("path", {
+        d: "M13 3h-1v1h1V3ZM12 4h-1v1h1V4ZM11 5h-1v1h1V5ZM10 6H9v1h1V6ZM9 7H8v1h1V7Z",
+        fill: o[0]
+      }), (0, t.jsx)("path", {
+        d: "M7 7H6v1h1V7Z",
+        fill: o[2]
+      }), (0, t.jsx)("path", {
+        d: "M4 8H3v1h1V8ZM3 6H2v1h1V6ZM5 9H4v1h1V9ZM7 11H6v1h1v-1ZM8 12H7v1h1v-1ZM10 13H9v1h1v-1Z",
+        fill: f[0]
+      }), (0, t.jsx)("path", {
+        d: "M9 10H8v1h1v-1ZM6 7H5v1h1V7ZM15 5h-1v1h1V5ZM14 6h-1v1h1V6ZM13 7h-1v1h1V7ZM12 8h-1v1h1V8ZM11 0v1h4v4h1V0h-5Z",
+        fill: "#000"
+      }), (0, t.jsx)("path", {
+        d: "M11 12h-1v1h1v-1ZM9 11H8v1h1v-1ZM8 10H7v1h1v-1ZM7 9H6v1h1V9ZM6 8H5v1h1V8ZM5 7H4v1h1V7Z",
+        fill: f[2]
+      }), (0, t.jsx)("path", {
+        d: "M8 5H7v1h3V5H9V4H8v1ZM10 2v1H9v1h3V3h-1V2h-1ZM14 1h-3v1h3V1Z",
+        fill: o[2]
+      }), (0, t.jsx)("path", {
+        d: "M14 5h-1v1h1V5ZM13 6h-1v1h1V6ZM12 7h-1v1h1V7ZM11 8h-1v1h1V8ZM9 9H8v1h1V9Z",
+        fill: o[0]
+      }), (0, t.jsx)("path", {
+        d: "M4 5H3v1h1V5ZM4 11H3v1h1v-1ZM2 13H1v1h1v-1Z",
+        fill: f[2]
       })]
     })
   }
