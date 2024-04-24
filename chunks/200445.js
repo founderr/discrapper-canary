@@ -54,7 +54,7 @@ function N(e) {
     }
     let e = setTimeout(() => {
       T()
-    }, 900);
+    }, 250);
     return () => {
       clearTimeout(e)
     }

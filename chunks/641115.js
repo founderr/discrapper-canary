@@ -180,7 +180,7 @@ function k(e) {
     let e = 0;
     return Y && Q.hqStreamingUnlockAnimationPlayed && (e = setTimeout(() => {
       el(!0)
-    }, 1e3)), () => {
+    }, 750)), () => {
       clearTimeout(e)
     }
   }, [Y, Q.hqStreamingUnlockAnimationPlayed]);
@@ -249,7 +249,7 @@ function k(e) {
     }) : (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)(A.default, {
         style: {
-          "--custom-transition-duration": Y && !et ? "".concat(1e3, "ms") : 0
+          "--custom-transition-duration": Y && !et ? "".concat(750, "ms") : 0
         },
         children: [(0, a.jsx)(c.FormItem, {
           title: O.default.Messages.STREAM_RESOLUTION,

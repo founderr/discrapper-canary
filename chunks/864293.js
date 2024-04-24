@@ -1,26 +1,26 @@
 "use strict";
-s.r(t), s("47120");
-var n, a = s("735250"),
-  l = s("470079"),
-  i = s("120356"),
-  r = s.n(i),
-  o = s("748780"),
-  d = s("481060"),
-  c = s("932660");
+n.r(t), n("47120");
+var s, a = n("735250"),
+  i = n("470079"),
+  l = n("120356"),
+  r = n.n(l),
+  o = n("748780"),
+  c = n("481060"),
+  d = n("932660");
 
-function u(e, t, s) {
+function u(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: s,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = s, e
+  }) : e[t] = n, e
 }
 let S = {
   friction: 7,
   tension: 60
 };
-class T extends(n = l.Component) {
+class T extends(s = i.Component) {
   componentWillAppear(e) {
     this.animateTo(1).start(e)
   }
@@ -59,7 +59,7 @@ class T extends(n = l.Component) {
       children: t
     } = this.props;
     return (0, a.jsx)(o.default.div, {
-      className: r()(e, c.slider),
+      className: r()(e, d.slider),
       style: this.getAnimatedStyle(),
       children: t
     })
@@ -68,4 +68,4 @@ class T extends(n = l.Component) {
     super(...e), u(this, "animation", new o.default.Value(0))
   }
 }
-u(T, "contextType", d.AccessibilityPreferencesContext), t.default = T
+u(T, "contextType", c.AccessibilityPreferencesContext), t.default = T
