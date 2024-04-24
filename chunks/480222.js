@@ -29,10 +29,13 @@ t.default = function(e) {
         color: i.ButtonColors.PRIMARY,
         children: u.default.Messages.SAVE
       })
-    }), (0, n.jsx)(i.Scroller, {
-      fade: !0,
-      className: d.content,
-      children: t
+    }), (0, n.jsx)("div", {
+      className: d.contentWrapper,
+      children: (0, n.jsx)(i.Scroller, {
+        fade: !0,
+        className: d.content,
+        children: t
+      })
     })]
   })
 }
