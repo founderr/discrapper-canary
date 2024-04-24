@@ -1,34 +1,35 @@
 "use strict";
-s.r(t), s("47120");
-var n = s("735250"),
-  a = s("470079"),
-  l = s("442837"),
-  i = s("481060"),
-  r = s("224706"),
-  o = s("493544"),
-  d = s("153124"),
-  c = s("931240"),
-  u = s("134726"),
-  S = s("389134"),
-  T = s("745628"),
-  E = s("950279"),
-  p = s("796918"),
-  C = s("741595"),
-  m = s("884486"),
-  _ = s("974842"),
-  N = s("359380"),
-  I = s("308083"),
-  A = s("689938"),
-  f = s("225540");
+n.r(t), n("47120");
+var s = n("735250"),
+  a = n("470079"),
+  i = n("442837"),
+  l = n("481060"),
+  r = n("224706"),
+  o = n("493544"),
+  c = n("153124"),
+  d = n("931240"),
+  u = n("134726"),
+  S = n("389134"),
+  T = n("745628"),
+  E = n("950279"),
+  p = n("796918"),
+  C = n("513532"),
+  m = n("741595"),
+  _ = n("884486"),
+  I = n("974842"),
+  N = n("359380"),
+  f = n("308083"),
+  A = n("689938"),
+  g = n("225540");
 let b = () => [{
   section: o.SectionTypes.HEADER,
   label: A.default.Messages.CLAN_SETTINGS_BASIC_INFO
 }, {
-  section: I.ClanSetupSteps.GAMES,
+  section: f.ClanSetupSteps.GAMES,
   label: A.default.Messages.CLAN_SETTTINGS_SELECT_GAMES,
   ariaLabel: A.default.Messages.CLAN_SETTTINGS_SELECT_GAMES
 }, {
-  section: I.ClanSetupSteps.PLAYSTYLE,
+  section: f.ClanSetupSteps.PLAYSTYLE,
   label: A.default.Messages.CLAN_SETTTINGS_SELECT_PLAYSTYLE,
   ariaLabel: A.default.Messages.CLAN_SETTTINGS_SELECT_PLAYSTYLE
 }, {
@@ -37,15 +38,15 @@ let b = () => [{
   section: o.SectionTypes.HEADER,
   label: A.default.Messages.CLAN_SETTINGS_PERSONALITY_INFO
 }, {
-  section: I.ClanSetupSteps.UTILITY_TRAITS,
+  section: f.ClanSetupSteps.UTILITY_TRAITS,
   label: A.default.Messages.CLAN_SETTINGS_SELECT_TRAITS,
   ariaLabel: A.default.Messages.CLAN_SETTINGS_SELECT_TRAITS
 }, {
-  section: I.ClanSetupSteps.DESCRIPTION,
+  section: f.ClanSetupSteps.DESCRIPTION,
   label: A.default.Messages.CLAN_SETTINGS_WRITE_DESCRIPTION,
   ariaLabel: A.default.Messages.CLAN_SETTINGS_WRITE_DESCRIPTION
 }, {
-  section: I.ClanSetupSteps.PRIMETIME,
+  section: f.ClanSetupSteps.PRIMETIME,
   label: A.default.Messages.CLAN_SETTINGS_SET_PRIME_TIME,
   ariaLabel: A.default.Messages.CLAN_SETTINGS_SET_PRIME_TIME
 }, {
@@ -54,29 +55,29 @@ let b = () => [{
   section: o.SectionTypes.HEADER,
   label: A.default.Messages.CLAN_SETTINGS_CUSTOMIZE_IDENTITY
 }, {
-  section: I.ClanSetupSteps.CUSTOMIZE_TAG_BADGE,
+  section: f.ClanSetupSteps.CUSTOMIZE_TAG_BADGE,
   label: A.default.Messages.CLAN_SETTINGS_CLAN_BADGE,
   ariaLabel: A.default.Messages.CLAN_SETTINGS_CLAN_BADGE
 }, {
-  section: I.ClanSetupSteps.CUSTOMIZE_BANNER,
+  section: f.ClanSetupSteps.CUSTOMIZE_BANNER,
   label: A.default.Messages.CLAN_SETTINGS_CLAN_PROFILE,
   ariaLabel: A.default.Messages.CLAN_SETTINGS_CLAN_PROFILE
 }, {
   section: o.SectionTypes.DIVIDER
 }, {
-  section: I.ClanSetupSteps.MEMBER_APPLICATION,
+  section: f.ClanSetupSteps.MEMBER_APPLICATION,
   label: A.default.Messages.CLAN_SETTINGS_JOIN_APPLICATION,
   ariaLabel: A.default.Messages.CLAN_SETTINGS_JOIN_APPLICATION
 }];
 t.default = e => {
   let {
     guildId: t,
-    transitionState: s,
-    onClose: g
-  } = e, M = (0, d.useUID)(), [L, h] = a.useState(I.ClanSetupSteps.GAMES), {
-    settings: R,
-    errors: x
-  } = (0, l.useStateFromStoresObject)([S.default], () => {
+    transitionState: n,
+    onClose: M
+  } = e, L = (0, c.useUID)(), [R, h] = a.useState(f.ClanSetupSteps.GAMES), {
+    settings: x,
+    errors: y
+  } = (0, i.useStateFromStoresObject)([S.default], () => {
     var e;
     let t = S.default.getState();
     return {
@@ -84,7 +85,7 @@ t.default = e => {
       errors: null !== (e = t.errors) && void 0 !== e ? e : {}
     }
   }), {
-    defaultGameId: y
+    defaultGameId: D
   } = u.ClanGuildExperiment.useExperiment({
     guildId: t,
     location: "ClanSettingsModal"
@@ -92,106 +93,109 @@ t.default = e => {
   a.useEffect(() => {
     r.default.getDetectableGames()
   }, []), a.useEffect(() => {
-    (0, c.fetchClanSettings)(t)
+    (0, d.fetchClanSettings)(t)
   }, [t]);
-  let D = e => (0, c.updateClanSettings)(t, e),
-    P = async () => {
-      await (0, c.saveClanSettings)(t, R), g()
+  let P = e => (0, d.updateClanSettings)(t, e),
+    j = async () => {
+      await (0, d.saveClanSettings)(t, x), M()
     };
-  if (null == R) return null;
-  let j = b();
-  return (0, n.jsxs)(i.ModalRoot, {
-    transitionState: s,
-    "aria-labelledby": M,
-    size: i.ModalSize.DYNAMIC,
-    className: f.modal,
+  if (null == x) return null;
+  let v = b();
+  return (0, s.jsxs)(l.ModalRoot, {
+    transitionState: n,
+    "aria-labelledby": L,
+    size: l.ModalSize.DYNAMIC,
+    className: g.modal,
     hideShadow: !0,
-    children: [(0, n.jsx)(i.Button, {
-      className: f.closeButton,
-      look: i.Button.Looks.OUTLINED,
-      size: i.Button.Sizes.SMALL,
-      color: i.Button.Colors.PRIMARY,
-      onClick: P,
+    children: [(0, s.jsx)(l.Button, {
+      className: g.closeButton,
+      look: l.Button.Looks.OUTLINED,
+      size: l.Button.Sizes.SMALL,
+      color: l.Button.Colors.PRIMARY,
+      onClick: j,
       children: A.default.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
-    }), (0, n.jsxs)("div", {
-      className: f.modalContents,
-      children: [(0, n.jsx)("div", {
-        className: f.sidebarWrapper,
-        children: (0, n.jsx)(i.TabBar, {
-          className: f.sidebar,
-          selectedItem: L,
+    }), (0, s.jsxs)("div", {
+      className: g.modalContents,
+      children: [(0, s.jsx)("div", {
+        className: g.sidebarWrapper,
+        children: (0, s.jsx)(l.TabBar, {
+          className: g.sidebar,
+          selectedItem: R,
           onItemSelect: h,
           orientation: "vertical",
-          children: j.map((e, t) => {
+          children: v.map((e, t) => {
             switch (e.section) {
               case o.SectionTypes.HEADER:
-                return (0, n.jsx)(i.TabBar.Header, {
+                return (0, s.jsx)(l.TabBar.Header, {
                   children: e.label
                 }, "header-".concat(t));
               case o.SectionTypes.DIVIDER:
-                return (0, n.jsx)(i.TabBar.Separator, {}, "divider-".concat(t));
+                return (0, s.jsx)(l.TabBar.Separator, {}, "divider-".concat(t));
               default:
-                return (0, n.jsx)(i.TabBar.Item, {
+                return (0, s.jsx)(l.TabBar.Item, {
                   id: e.section,
                   children: e.label
                 }, e.section)
             }
           })
         })
-      }), (0, n.jsx)("div", {
-        className: f.mainContent,
+      }), (0, s.jsx)("div", {
+        className: g.mainContent,
         children: (() => {
-          switch (L) {
-            case I.ClanSetupSteps.GAMES:
+          switch (R) {
+            case f.ClanSetupSteps.GAMES:
               var e;
-              return (0, n.jsx)(E.default, {
-                handleUpdate: D,
-                gameApplicationIds: null !== (e = R.gameApplicationIds) && void 0 !== e ? e : new Set,
-                requiredGameId: null != y ? y : void 0,
-                error: x.gameApplicationIds
+              return (0, s.jsx)(E.default, {
+                handleUpdate: P,
+                gameApplicationIds: null !== (e = x.gameApplicationIds) && void 0 !== e ? e : new Set,
+                requiredGameId: null != D ? D : void 0,
+                error: y.gameApplicationIds
               });
-            case I.ClanSetupSteps.PLAYSTYLE:
-              return (0, n.jsx)(C.default, {
-                handleUpdate: D,
-                playstyle: R.playstyle,
-                error: x.playstyle
+            case f.ClanSetupSteps.PLAYSTYLE:
+              return (0, s.jsx)(m.default, {
+                handleUpdate: P,
+                playstyle: x.playstyle,
+                error: y.playstyle
               });
-            case I.ClanSetupSteps.UTILITY_TRAITS:
-              return (0, n.jsx)(N.default, {
-                handleUpdate: D,
-                interests: R.interests
+            case f.ClanSetupSteps.UTILITY_TRAITS:
+              return (0, s.jsx)(N.default, {
+                handleUpdate: P,
+                interests: x.interests
               });
-            case I.ClanSetupSteps.INTERESTS:
-              return (0, n.jsx)(p.default, {
-                handleUpdate: D,
-                interests: R.interests,
-                error: x.interests
+            case f.ClanSetupSteps.INTERESTS:
+              return (0, s.jsx)(p.default, {
+                handleUpdate: P,
+                interests: x.interests,
+                error: y.interests
               });
-            case I.ClanSetupSteps.DESCRIPTION:
-              return (0, n.jsx)(T.default, {
-                handleUpdate: D,
-                description: R.description,
-                wildcardDescriptors: R.wildcardDescriptors,
-                errors: x
+            case f.ClanSetupSteps.DESCRIPTION:
+              return (0, s.jsx)(T.default, {
+                handleUpdate: P,
+                description: x.description,
+                wildcardDescriptors: x.wildcardDescriptors,
+                errors: y
               });
-            case I.ClanSetupSteps.PRIMETIME:
-              return (0, n.jsx)(m.default, {
-                handleUpdate: D,
-                selectedTimes: R.primetime,
-                error: x.primetime
+            case f.ClanSetupSteps.PRIMETIME:
+              return (0, s.jsx)(_.default, {
+                handleUpdate: P,
+                selectedTimes: x.primetime,
+                error: y.primetime
               });
-            case I.ClanSetupSteps.CUSTOMIZE_TAG_BADGE:
-              return (0, n.jsx)(_.default, {
-                handleUpdate: D,
-                tag: R.tag,
-                error: x.tag,
-                badge: R.badgeKind,
-                primaryColor: R.badgePrimaryColor,
-                secondaryColor: R.badgeSecondaryColor,
-                furthestStep: I.ClanSetupSteps.CUSTOMIZE_TAG_BADGE
+            case f.ClanSetupSteps.CUSTOMIZE_TAG_BADGE:
+              return (0, s.jsx)(I.default, {
+                handleUpdate: P,
+                tag: x.tag,
+                error: y.tag,
+                badge: x.badgeKind,
+                primaryColor: x.badgePrimaryColor,
+                secondaryColor: x.badgeSecondaryColor,
+                furthestStep: f.ClanSetupSteps.CUSTOMIZE_TAG_BADGE
               });
-            case I.ClanSetupSteps.CUSTOMIZE_BANNER:
-            case I.ClanSetupSteps.MEMBER_APPLICATION:
+            case f.ClanSetupSteps.MEMBER_APPLICATION:
+              return (0, s.jsx)(C.default, {
+                guildId: t
+              });
+            case f.ClanSetupSteps.CUSTOMIZE_BANNER:
             default:
               return null
           }

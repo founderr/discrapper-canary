@@ -1,12 +1,12 @@
 "use strict";
-s.r(t), s("47120");
-var n, a, l, i, r = s("153832"),
-  o = s("442837"),
-  d = s("570140"),
-  c = s("944163"),
-  u = s("227120"),
-  S = s("116175"),
-  T = s("308083");
+n.r(t), n("47120");
+var s, a, i, l, r = n("153832"),
+  o = n("442837"),
+  c = n("570140"),
+  d = n("944163"),
+  u = n("227120"),
+  S = n("116175"),
+  T = n("308083");
 let E = () => ({
     gameApplicationIds: new Set,
     playstyle: T.ClanPlaystyles.NONE,
@@ -20,7 +20,7 @@ let E = () => ({
       time: u.ExtendedTimeOptions.MORNING
     }],
     verificationForm: {
-      ...c.NO_MEMBER_VERIFICATION_FORM
+      ...d.NO_MEMBER_VERIFICATION_FORM
     },
     badgeKind: S.ClanBadgeKind.SWORD,
     badgePrimaryColor: S.CLAN_BADGE_PALETTE_PRESETS["0"].primary,
@@ -32,7 +32,7 @@ let E = () => ({
   p = E(),
   C = !1,
   m = {};
-class _ extends(n = o.default.Store) {
+class _ extends(s = o.default.Store) {
   getState() {
     return {
       settings: p,
@@ -41,12 +41,12 @@ class _ extends(n = o.default.Store) {
     }
   }
 }
-i = "ClanSettingsStore", (l = "displayName") in(a = _) ? Object.defineProperty(a, l, {
-  value: i,
+l = "ClanSettingsStore", (i = "displayName") in(a = _) ? Object.defineProperty(a, i, {
+  value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = i, t.default = new _(d.default, {
+}) : a[i] = l, t.default = new _(c.default, {
   CLAN_SETTINGS_FETCH_START: function() {
     C = !1, p = E(), m = {}
   },
@@ -77,16 +77,29 @@ i = "ClanSettingsStore", (l = "displayName") in(a = _) ? Object.defineProperty(a
   CLAN_SETTINGS_SUBMIT_ERROR: function(e) {
     var t;
     let {
-      error: s
+      error: n
     } = e;
     C = !1, m = {
-      gameApplicationIds: s.getFirstFieldErrorMessage("game_application_ids"),
-      playstyle: s.getFirstFieldErrorMessage("play_style"),
-      description: s.getFirstFieldErrorMessage("description"),
-      wildcardDescriptors: s.getFirstFieldErrorMessage("wildcard_descriptors"),
-      interests: s.getFirstFieldErrorMessage("search_terms"),
-      tag: s.getFirstFieldErrorMessage("tag"),
-      primetime: null !== (t = s.getFirstFieldErrorMessage("prime_time_updates")) && void 0 !== t ? t : s.getFirstFieldErrorMessage("new_prime_times")
+      gameApplicationIds: n.getFirstFieldErrorMessage("game_application_ids"),
+      playstyle: n.getFirstFieldErrorMessage("play_style"),
+      description: n.getFirstFieldErrorMessage("description"),
+      wildcardDescriptors: n.getFirstFieldErrorMessage("wildcard_descriptors"),
+      interests: n.getFirstFieldErrorMessage("search_terms"),
+      tag: n.getFirstFieldErrorMessage("tag"),
+      primetime: null !== (t = n.getFirstFieldErrorMessage("prime_time_updates")) && void 0 !== t ? t : n.getFirstFieldErrorMessage("new_prime_times")
+    }
+  },
+  MEMBER_VERIFICATION_FORM_UPDATE: function(e) {
+    let {
+      form: t
+    } = e;
+    if (null == p.verificationForm) return !1;
+    p = {
+      ...p,
+      verificationForm: {
+        ...p.verificationForm,
+        ...t
+      }
     }
   }
 })
