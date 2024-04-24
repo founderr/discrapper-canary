@@ -49,6 +49,6 @@ function a(n, t, u) {
   let l = null != t ? null === (i = u[n]) || void 0 === i ? void 0 : i.channels[t] : u[n],
     d = null == l ? void 0 : l.customNotificationSoundConfig;
   return null != d ? function(n) {
-    return null != n ? e.Soundpacks[n] : void 0
+    return null != n ? Object.values(e.Soundpacks).find(t => t === n) : void 0
   }(null == d ? void 0 : null === (o = d.notificationSoundPackId) || void 0 === o ? void 0 : o.value) : void 0
 }
