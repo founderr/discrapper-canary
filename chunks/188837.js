@@ -27,17 +27,16 @@ t.default = e => {
     interests: N,
     description: v,
     tag: R,
-    primetime: O,
-    verificationForm: L,
-    badgeKind: M,
+    verificationForm: O,
+    badgeKind: L,
     badgePrimaryColor: P,
-    badgeSecondaryColor: x,
-    banner: y,
-    brandPrimaryColor: D,
-    brandSecondaryColor: b,
-    wildcardDescriptors: U,
-    badgeImage: j
-  } = null != I ? I : {}, G = s.useRef(null), w = s.useRef(null), k = s.useRef(null), [F, B] = s.useState(!1), H = async () => {
+    badgeSecondaryColor: M,
+    banner: x,
+    brandPrimaryColor: y,
+    brandSecondaryColor: D,
+    wildcardDescriptors: b,
+    badgeImage: U
+  } = null != I ? I : {}, j = s.useRef(null), G = s.useRef(null), w = s.useRef(null), [k, F] = s.useState(!1), B = async () => {
     try {
       await u.convertGuildToClan(t, {
         gameApplicationIds: g,
@@ -45,16 +44,15 @@ t.default = e => {
         interests: N,
         description: v,
         tag: R,
-        primetime: O,
-        verificationForm: L,
-        badgeKind: M,
+        verificationForm: O,
+        badgeKind: L,
         badgePrimaryColor: P,
-        badgeSecondaryColor: x,
-        banner: y,
-        brandPrimaryColor: D,
-        brandSecondaryColor: b,
-        wildcardDescriptors: U,
-        badgeImage: j
+        badgeSecondaryColor: M,
+        banner: x,
+        brandPrimaryColor: y,
+        brandSecondaryColor: D,
+        wildcardDescriptors: b,
+        badgeImage: U
       })
     } catch (e) {
       return
@@ -66,12 +64,12 @@ t.default = e => {
       return a => (0, n.jsx)(e, {
         guildId: t,
         tag: R,
-        brandPrimaryColor: D,
+        brandPrimaryColor: y,
         ...a
       })
     })
-  }, V = (0, l.useSpring)({
-    ref: G,
+  }, H = (0, l.useSpring)({
+    ref: j,
     config: l.config.slow,
     from: {
       flex: 1,
@@ -81,8 +79,8 @@ t.default = e => {
       flex: 1,
       paddingLeft: 120
     }
-  }), Y = (0, l.useSpring)({
-    ref: w,
+  }), V = (0, l.useSpring)({
+    ref: G,
     config: l.config.slow,
     from: {
       flex: S ? 1 : 0,
@@ -94,8 +92,8 @@ t.default = e => {
       paddingRight: 120,
       marginLeft: -32
     }
-  }), W = (0, l.useSpring)({
-    ref: k,
+  }), Y = (0, l.useSpring)({
+    ref: w,
     config: l.config.default,
     from: {
       opacity: 0
@@ -104,15 +102,15 @@ t.default = e => {
       opacity: 1
     }
   });
-  (0, l.useChain)([G, w, k], [0, 0, 1]);
-  let K = s.useMemo(() => null != p && Object.values(p).some(e => null != e), [p]);
+  (0, l.useChain)([j, G, w], [0, 0, 1]);
+  let W = s.useMemo(() => null != p && Object.values(p).some(e => null != e), [p]);
   return (0, n.jsxs)("div", {
     className: h.animationContainer,
     children: [(0, n.jsxs)(l.animated.div, {
       className: h.signTextLeft,
       style: {
-        ...V,
-        ...W
+        ...H,
+        ...Y
       },
       children: [(0, n.jsx)(r.Heading, {
         variant: "heading-xxl/medium",
@@ -126,15 +124,15 @@ t.default = e => {
       className: h.scrollContainer,
       children: (0, n.jsx)(c.default, {
         guildId: t,
-        signed: F,
-        setSigned: B,
+        signed: k,
+        setSigned: F,
         signRef: m
       })
     }), (0, n.jsxs)(l.animated.div, {
       className: h.signTextRight,
       style: {
-        ...Y,
-        ...W
+        ...V,
+        ...Y
       },
       children: [(0, n.jsx)(r.Button, {
         className: h.signButton,
@@ -143,7 +141,7 @@ t.default = e => {
           var e;
           null === (e = m.current) || void 0 === e || e.scrollIntoView({
             behavior: "smooth"
-          }), B(!0)
+          }), F(!0)
         },
         children: E.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
       }), (0, n.jsx)(r.Text, {
@@ -167,7 +165,7 @@ t.default = e => {
       children: E.default.Messages.PAGINATION_PREVIOUS
     }), (0, n.jsxs)("div", {
       className: h.finishButton,
-      children: [K && (0, n.jsx)(r.Text, {
+      children: [W && (0, n.jsx)(r.Text, {
         color: "status-danger",
         variant: "text-sm/normal",
         children: E.default.Messages.CLAN_SUBMIT_ERROR
@@ -175,9 +173,9 @@ t.default = e => {
         look: r.Button.Looks.FILLED,
         size: r.Button.Sizes.MEDIUM,
         color: r.Button.Colors.BRAND,
-        disabled: !F,
+        disabled: !k,
         submitting: T,
-        onClick: H,
+        onClick: B,
         children: E.default.Messages.FINISH
       })]
     })]

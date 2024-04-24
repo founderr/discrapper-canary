@@ -15,9 +15,6 @@ n.r(t), n.d(t, {
   areSchedulesIdentical: function() {
     return G
   },
-  convertJSDayToRRuleDay: function() {
-    return v
-  },
   generateNextRecurrences: function() {
     return B
   },
@@ -47,12 +44,6 @@ n.r(t), n.d(t, {
   },
   getScheduleFromEventData: function() {
     return U
-  },
-  getValidWeekdays: function() {
-    return x
-  },
-  getValidWeekends: function() {
-    return F
   },
   hasScheduleChanges: function() {
     return j
