@@ -128,7 +128,8 @@ class B extends(a = s.Component) {
       mute: i,
       serverMute: o,
       isGuest: u,
-      isStreaming: d
+      isStreaming: d,
+      forceFullsizeClanTag: c
     } = this.props;
     return n ? null : (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsxs)("div", {
@@ -140,7 +141,7 @@ class B extends(a = s.Component) {
           className: F.guestSuffix,
           children: ["\xa0", U.default.Messages.GUEST_NAME_SUFFIX]
         }) : ""]
-      }), !d && (0, l.jsx)(g.default, {
+      }), (!d || c) && (0, l.jsx)(g.default, {
         clan: t.clan,
         userId: t.id,
         disableTooltip: !0,
@@ -172,11 +173,12 @@ class B extends(a = s.Component) {
       guildId: w,
       channelId: k,
       user: B,
-      handleHoverHangStatus: W
+      handleHoverHangStatus: W,
+      forceFullsizeClanTag: Y
     } = this.props;
     if (o || c) return null;
-    let Y = [],
-      z = (0, l.jsx)(V, {
+    let z = [],
+      K = (0, l.jsx)(V, {
         iconClassName: m,
         mute: e,
         localMute: t,
@@ -184,66 +186,68 @@ class B extends(a = s.Component) {
         deaf: s,
         serverDeaf: i
       });
-    u && (n ? Y.push((0, l.jsx)(h.TooltipContainer, {
+    u && (n ? z.push((0, l.jsx)(h.TooltipContainer, {
       className: F.iconSpacing,
       text: U.default.Messages.LOCAL_VIDEO_DISABLED,
       children: (0, l.jsx)(A.default, {
         className: r()(F.icon, m),
         foreground: F.strikethrough
       })
-    }, "video")) : Y.push((0, l.jsx)(h.TooltipContainer, {
+    }, "video")) : z.push((0, l.jsx)(h.TooltipContainer, {
       className: F.iconSpacing,
       text: U.default.Messages.VIDEO,
       children: (0, l.jsx)(I.default, {
         className: r()(F.icon, m)
       })
-    }, "video"))), null != E && Y.push((0, l.jsx)(h.TooltipContainer, {
+    }, "video"))), null != E && z.push((0, l.jsx)(h.TooltipContainer, {
       text: (0, p.default)(E.name),
       className: F.iconSpacing,
       children: (0, l.jsx)(L.default, {
         className: r()(F.icon, m)
       })
-    }, "activity")), S === D.GameConsoleTypes.XBOX || _ === b.VoicePlatforms.XBOX ? Y.push((0, l.jsx)("div", {
+    }, "activity")), S === D.GameConsoleTypes.XBOX || _ === b.VoicePlatforms.XBOX ? z.push((0, l.jsx)("div", {
       className: r()(F.iconSpacing),
       children: (0, l.jsx)(R.default, {
         className: r()(F.icon, m)
       })
-    }, "xbox")) : (S === D.GameConsoleTypes.PLAYSTATION || _ === b.VoicePlatforms.PLAYSTATION) && Y.push((0, l.jsx)("div", {
+    }, "xbox")) : (S === D.GameConsoleTypes.PLAYSTATION || _ === b.VoicePlatforms.PLAYSTATION) && z.push((0, l.jsx)("div", {
       className: r()(F.iconSpacing),
       children: (0, l.jsx)(M.default, {
         className: r()(F.icon, m)
       })
-    }, "playstation")), d ? Y.push((0, l.jsx)("div", {
+    }, "playstation")), d ? z.push((0, l.jsx)("div", {
       className: r()(F.iconSpacing, F.liveIconSpacing),
       children: (0, l.jsx)(y.default, {
         size: y.default.Sizes.SMALL
       })
-    }, "stream")) : f && Y.push((0, l.jsx)(h.TooltipContainer, {
+    }, "stream")) : f && z.push((0, l.jsx)(h.TooltipContainer, {
       className: F.iconSpacing,
       text: U.default.Messages.WATCH_STREAM_WATCHING,
       children: (0, l.jsx)(v.default, {
         className: r()(F.icon, m)
       })
     }, "watch"));
-    let K = null != j && !(0, O.hasFlag)(j.flags, P.ApplicationFlags.EMBEDDED),
-      Z = null == T && K;
-    return 0 !== Y.length || null != z || N || Z ? (0, l.jsxs)("div", {
+    let Z = null != j && !(0, O.hasFlag)(j.flags, P.ApplicationFlags.EMBEDDED),
+      q = null == T && Z;
+    if (0 === z.length && null == K && !N && !q) return null;
+    let X = d && !Y && (0, C.userHasAdoptedAnyClanIdentity)(B.clan);
+    return (0, l.jsxs)("div", {
       className: F.icons,
       children: [(0, l.jsxs)("div", {
         className: F.iconGroup,
         onMouseEnter: () => null == W ? void 0 : W(!1),
-        children: [d && (0, C.userHasAdoptedAnyClanIdentity)(B.clan) && (0, l.jsx)("div", {
+        children: [X && (0, l.jsx)("div", {
           className: r()(F.iconSpacing, F.clanTagBadgeContainer),
           children: (0, l.jsx)(g.ClanBadgeWithTooltip, {
             clan: B.clan,
             userId: B.id,
             className: F.clanTagBadge
           })
-        }, "clan-badge"), z, Y]
-      }), N || Z ? (0, l.jsx)("div", {
+        }, "clan-badge"), K, z]
+      }), N || q ? (0, l.jsx)("div", {
         className: F.iconGroup,
         onMouseEnter: () => null == W ? void 0 : W(!0),
-        children: Z ? (0, l.jsx)(G, {
+        children: q ? (0, l.jsx)(G, {
           application: j,
           iconClassName: m,
           guildId: w,
@@ -255,7 +259,7 @@ class B extends(a = s.Component) {
           isSelf: x
         })
       }) : null]
-    }) : null
+    })
   }
   render() {
     let {
@@ -440,5 +444,6 @@ w(B, "defaultProps", {
   userNameClassName: F.usernameFont,
   size: P.OverlayAvatarSizes.SMALL,
   selected: !1,
-  disabled: !1
+  disabled: !1,
+  forceFullsizeClanTag: !1
 }), t.default = B
