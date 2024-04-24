@@ -31,8 +31,8 @@ var a = n("735250"),
   O = n("754424"),
   j = n("885442"),
   P = n("757698"),
-  D = n("827104"),
-  b = n("316949"),
+  b = n("827104"),
+  D = n("316949"),
   U = n("282597"),
   F = n("808268"),
   w = n("185403"),
@@ -179,7 +179,7 @@ function er(e) {
     } = (0, u.useStateFromStoresObject)([R.default], () => ({
       canAddNewReactions: v && R.default.can(et.Permissions.ADD_REACTIONS, t),
       canManageMessages: R.default.can(et.Permissions.MANAGE_MESSAGES, t)
-    }), [t, v]), O = (0, _.useCanReplyToMessage)(t, n), j = (0, T.useCanStartPublicThread)(t, n), P = (0, T.useCanViewThreadForMessage)(n), D = (0, u.useStateFromStores)([m.default], () => null != t.guild_id && m.default.isLurking(t.guild_id), [t]), b = (0, u.useStateFromStores)([N.default], () => null != t.guild_id && N.default.isCurrentUserGuest(t.guild_id), [t]), U = o.id === f, F = (L || n.canDeleteOwnMessage(f)) && h && !et.MessageTypesSets.UNDELETABLE.has(n.type);
+    }), [t, v]), O = (0, _.useCanReplyToMessage)(t, n), j = (0, T.useCanStartPublicThread)(t, n), P = (0, T.useCanViewThreadForMessage)(n), b = (0, u.useStateFromStores)([m.default], () => null != t.guild_id && m.default.isLurking(t.guild_id), [t]), D = (0, u.useStateFromStores)([N.default], () => null != t.guild_id && N.default.isCurrentUserGuest(t.guild_id), [t]), U = o.id === f, F = (L || n.canDeleteOwnMessage(f)) && h && !et.MessageTypesSets.UNDELETABLE.has(n.type);
     n.type === et.MessageTypes.AUTO_MODERATION_ACTION && (F = F && L);
     let w = (0, K.canReportMessage)(n),
       k = (0, q.default)(n, t, L),
@@ -191,8 +191,8 @@ function er(e) {
         canChat: v,
         renderReactions: g,
         canAddNewReactions: y,
-        isLurking: D,
-        isGuest: b,
+        isLurking: b,
+        isGuest: D,
         isActiveChannelOrUnarchivableThread: h
       }),
       G = t.type === et.ChannelTypes.GUILD_ANNOUNCEMENT && null != d && d.hasFeature(et.GuildFeatures.NEWS) && (U || L) && n.type === et.MessageTypes.DEFAULT && !n.isPoll(),
@@ -282,7 +282,7 @@ function er(e) {
         channel: t,
         message: n,
         label: en.default.Messages.MARK_UNREAD,
-        icon: D.default,
+        icon: b.default,
         onClick: Q.markMessageUnread
       }) : null, i ? ei({
         key: "pin",
@@ -339,7 +339,7 @@ function er(e) {
       channel: t,
       message: n,
       label: ep ? en.default.Messages.NEWS_CHANNEL_PUBLISHED : en.default.Messages.NEWS_CHANNEL_PUBLISH,
-      icon: b.default,
+      icon: D.default,
       onClick: Q.publishMessage,
       disabled: ep
     }) : null, r && (ed || B) ? ei({

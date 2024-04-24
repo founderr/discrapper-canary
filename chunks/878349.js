@@ -38,8 +38,8 @@ function g(e) {
     width: j = 0,
     ref: P
   } = (0, d.default)(), {
-    width: D = 0,
-    ref: b
+    width: b = 0,
+    ref: D
   } = (0, d.default)();
   return (0, a.jsxs)(u.TooltipContainer, {
     text: (0, a.jsx)(h.NitroTooltipLabel, {
@@ -72,7 +72,7 @@ function g(e) {
         [p.labelUnchecked]: !t && !g
       }),
       style: v ? {
-        width: t ? j : j + D
+        width: t ? j : j + b
       } : void 0,
       children: [t ? (0, a.jsx)(m.Shine, {
         className: p.shine,
@@ -82,7 +82,7 @@ function g(e) {
         src: O,
         alt: S
       }), (0, a.jsx)("span", {
-        ref: b,
+        ref: D,
         children: (0, a.jsx)(u.Text, {
           className: i()(p.burstText, {
             [p.visuallyHidden]: t && v,

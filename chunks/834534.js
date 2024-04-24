@@ -50,14 +50,14 @@ function p(e) {
     theme: g
   } = (0, x.useUserProfileThemeContext)(), {
     trackUserProfileAction: R
-  } = (0, m.useUserProfileAnalyticsContext)(), P = null == i ? void 0 : i.guildId, M = (0, n.useStateFromStores)([S.default], () => null != P ? S.default.getGuild(P) : null), {
-    recentGames: C,
+  } = (0, m.useUserProfileAnalyticsContext)(), P = null == i ? void 0 : i.guildId, C = (0, n.useStateFromStores)([S.default], () => null != P ? S.default.getGuild(P) : null), {
+    recentGames: M,
     isFetching: y,
     currentUserApplicationIds: O
   } = (0, c.useUserRecentGames)(t.id), F = a.useMemo(() => {
     var e;
-    return null !== (e = null == C ? void 0 : C.slice(0, 6)) && void 0 !== e ? e : []
-  }, [C]), L = (0, d.useIsUserRecentGamesEnabled)({
+    return null !== (e = null == M ? void 0 : M.slice(0, 6)) && void 0 !== e ? e : []
+  }, [M]), L = (0, d.useIsUserRecentGamesEnabled)({
     location: "SimplifiedUserProfileModalInfo",
     userId: t.id
   }), D = (0, n.useStateFromStores)([f.default], () => f.default.locale), b = (0, E.default)(t.id);
@@ -67,12 +67,12 @@ function p(e) {
     children: [(null == i ? void 0 : i.bio) != null && (null == i ? void 0 : i.bio) !== "" && (0, l.jsx)(I.default, {
       userBio: i.bio,
       setLineClamp: !1
-    }), null != M && (0, l.jsx)(h, {
+    }), null != C && (0, l.jsx)(h, {
       title: T.default.Messages.ROLES,
       children: (0, l.jsx)(N.default, {
         user: t,
         currentUser: s,
-        guild: M
+        guild: C
       })
     }), (0, l.jsx)(v.default, {
       className: U.section,

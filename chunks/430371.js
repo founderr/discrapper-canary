@@ -40,8 +40,8 @@ function A(e) {
       className: O,
       paused: j,
       width: P,
-      height: D,
-      layout: b,
+      height: b,
+      layout: D,
       idle: U,
       forceShowToggleParticipants: F
     } = e,
@@ -54,16 +54,16 @@ function A(e) {
     K = L.type === g.ParticipantTypes.ACTIVITY,
     Z = !K && null != L.streamId,
     q = Z && null != B && B.width > 0 && B.height > 0 ? B.width / B.height : T,
-    X = D <= 2 * I + 144,
+    X = b <= 2 * I + 144,
     Q = y && !X,
     J = (0, o.default)(Q),
     $ = 0;
   (K || Q) && ($ += 72), K && !Q && ($ += 48), Q && ($ += .5 * I + 8);
-  let ee = D - 2 * $,
+  let ee = b - 2 * $,
     et = ee * q,
     en = Math.floor(Math.min(P, et) / q),
-    ea = D > P / q + 72 + I + 8;
-  t = Q || K ? Q ? -16 : -8 : 40 + Math.max(0, 72 - (D - en) / 2), l.useEffect(() => {
+    ea = b > P / q + 72 + I + 8;
+  t = Q || K ? Q ? -16 : -8 : 40 + Math.max(0, 72 - (b - en) / 2), l.useEffect(() => {
     let e = setTimeout(() => {
       W(!1)
     }, 250);
@@ -162,7 +162,7 @@ function A(e) {
                 style: e,
                 children: (0, a.jsx)(h.default, {
                   focused: !0,
-                  noBorder: et >= P || ee >= D,
+                  noBorder: et >= P || ee >= b,
                   channel: R,
                   className: S.focusedVideo,
                   videoComponent: k,
@@ -179,7 +179,7 @@ function A(e) {
               }, i) : null
             })
           })
-        }), F || !X && b !== C.ChannelLayouts.MINIMUM && b !== C.ChannelLayouts.NORMAL ? (0, a.jsx)(r.animated.div, {
+        }), F || !X && D !== C.ChannelLayouts.MINIMUM && D !== C.ChannelLayouts.NORMAL ? (0, a.jsx)(r.animated.div, {
           className: i()(_.actionRow, {
             [_.idle]: U
           }),
@@ -215,7 +215,7 @@ function A(e) {
     }), ed.length > 0 ? (0, a.jsx)(m.default, {
       onContextMenuParticipant: s,
       width: P,
-      height: D,
+      height: b,
       channel: R,
       participants: ed
     }) : null]

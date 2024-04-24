@@ -40,8 +40,8 @@ let j = "vc-activities-".concat((0, o.v4)()),
       isHovered: s,
       closePopout: o,
       onMouseEnter: P,
-      onMouseLeave: D,
-      onClick: b,
+      onMouseLeave: b,
+      onClick: D,
       className: U
     } = e, {
       enabled: F
@@ -85,8 +85,8 @@ let j = "vc-activities-".concat((0, o.v4)()),
           locationObject: z.location,
           openInPopout: Y,
           analyticsLocations: V
-        }), D(), b()
-      }, [z, V, n, b, D, Y]),
+        }), b(), D()
+      }, [z, V, n, D, b, Y]),
       q = l.useCallback(e => {
         P(), _.default.track(M.AnalyticEvents.ACTIVITIES_MINI_SHELF_HOVERED, {
           channel_id: n.id,
@@ -121,7 +121,7 @@ let j = "vc-activities-".concat((0, o.v4)()),
           }), (0, a.jsxs)("div", {
             className: L.container,
             onMouseEnter: q,
-            onMouseLeave: D,
+            onMouseLeave: b,
             children: [(0, a.jsxs)("div", {
               className: L.titleContainer,
               children: [(0, a.jsxs)("div", {
@@ -155,7 +155,7 @@ let j = "vc-activities-".concat((0, o.v4)()),
                 channel: n,
                 activityItem: e,
                 onClick: () => {
-                  o(), b()
+                  o(), D()
                 },
                 aspectRatio: v.ActivitySuggestion.AspectRatio.THIRTEEN_BY_ELEVEN,
                 animatedDivClass: L.activitySuggestion

@@ -44,7 +44,7 @@ function T(e) {
     user: t,
     guildId: null == s ? void 0 : s.guildId,
     size: x.AvatarSizes.SIZE_120
-  }), [M, C] = (0, a.useStateFromStoresArray)([u.default], () => {
+  }), [C, M] = (0, a.useStateFromStoresArray)([u.default], () => {
     let e = u.default.isMobileOnline(t.id);
     return (0, o.shouldDisableUserPresenceInChannel)(t, U) ? [_.StatusTypes.UNKNOWN, e] : (0, n.default)(i) ? [_.StatusTypes.STREAMING, e] : [u.default.getStatus(t.id), e]
   });
@@ -63,10 +63,10 @@ function T(e) {
           avatarDecoration: P,
           size: x.AvatarSizes.SIZE_120,
           className: A.avatar,
-          status: M,
+          status: C,
           statusBackdropColor: (0, r.getStatusBackdropColor)(p),
           "aria-label": t.username,
-          isMobile: C,
+          isMobile: M,
           statusTooltip: !0
         }), null != d && (0, l.jsx)(m.UserProfileCustomStatusBubble, {
           positionStyle: A.statusBubblePosition,

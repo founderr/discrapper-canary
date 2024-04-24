@@ -116,16 +116,16 @@ function L(e) {
     intention: N
   })).slice(0, T.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT);
   null != g && g.length > 0 && P.splice(P.length - 1, 1, g[0]);
-  let D = e => {
+  let b = e => {
       O(e), null == m || m(e)
     },
-    b = (e, t) => {
+    D = (e, t) => {
       if (null == e && t) {
         s();
         return
       }
       null != e && d(e);
-      D(!t), t && p.EmojiPickerStore.setSearchPlaceholder(null)
+      b(!t), t && p.EmojiPickerStore.setSearchPlaceholder(null)
     };
   return (0, a.jsxs)(u.Dialog, {
     "aria-labelledby": L,
@@ -149,7 +149,7 @@ function L(e) {
           [v.emojiPickerHeaderExpanded]: y
         }),
         closePopout: s,
-        onSelectEmoji: y ? b : () => {},
+        onSelectEmoji: y ? D : () => {},
         shouldHidePickerActions: !y,
         wrapper: "div",
         pickerIntention: N,
@@ -158,11 +158,11 @@ function L(e) {
           accessory: (0, a.jsx)(R, {
             otherAccessories: null == E ? void 0 : E.accessory,
             isEmojiPickerExpanded: y,
-            onSetExpanded: D,
+            onSetExpanded: b,
             onFocus: o
           }),
           onKeyDown: e => {
-            null != e && e.key !== A.KeyboardKeysUpdated.TAB && (e.key !== A.KeyboardKeysUpdated.ENTER || e.shiftKey ? D(!0) : D(!y))
+            null != e && e.key !== A.KeyboardKeysUpdated.TAB && (e.key !== A.KeyboardKeysUpdated.ENTER || e.shiftKey ? b(!0) : b(!y))
           }
         }
       }), (0, a.jsx)("div", {
@@ -187,7 +187,7 @@ function L(e) {
                   emoji: e,
                   isDisabled: n,
                   onClick: () => {
-                    n ? null == c || c(e) : b(e, !0)
+                    n ? null == c || c(e) : D(e, !0)
                   }
                 })
               })

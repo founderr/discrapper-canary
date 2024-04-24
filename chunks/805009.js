@@ -34,8 +34,8 @@ var a, l = n("735250"),
   O = n("630388"),
   j = n("51144"),
   P = n("981631"),
-  D = n("354459"),
-  b = n("927923"),
+  b = n("354459"),
+  D = n("927923"),
   U = n("689938"),
   F = n("474229");
 
@@ -203,12 +203,12 @@ class B extends(a = s.Component) {
       children: (0, l.jsx)(L.default, {
         className: r()(F.icon, m)
       })
-    }, "activity")), S === b.GameConsoleTypes.XBOX || _ === D.VoicePlatforms.XBOX ? Y.push((0, l.jsx)("div", {
+    }, "activity")), S === D.GameConsoleTypes.XBOX || _ === b.VoicePlatforms.XBOX ? Y.push((0, l.jsx)("div", {
       className: r()(F.iconSpacing),
       children: (0, l.jsx)(R.default, {
         className: r()(F.icon, m)
       })
-    }, "xbox")) : (S === b.GameConsoleTypes.PLAYSTATION || _ === D.VoicePlatforms.PLAYSTATION) && Y.push((0, l.jsx)("div", {
+    }, "xbox")) : (S === D.GameConsoleTypes.PLAYSTATION || _ === b.VoicePlatforms.PLAYSTATION) && Y.push((0, l.jsx)("div", {
       className: r()(F.iconSpacing),
       children: (0, l.jsx)(M.default, {
         className: r()(F.icon, m)

@@ -49,7 +49,7 @@ function O(e) {
     inPopout: s,
     handleClose: i,
     userParticipantCount: r
-  }) : r > 1 ? (0, a.jsx)(b, {
+  }) : r > 1 ? (0, a.jsx)(D, {
     channel: t,
     guild: n,
     width: l,
@@ -205,7 +205,7 @@ function P(e) {
     })
   })
 }
-let D = e => {
+let b = e => {
   let {
     userParticipantCount: t,
     guildId: n
@@ -223,7 +223,7 @@ let D = e => {
   return a.slice(0, 3)
 };
 
-function b(e) {
+function D(e) {
   let {
     channel: t,
     guild: n,
@@ -237,7 +237,7 @@ function b(e) {
       n_participants: d
     })
   }, []);
-  let c = D({
+  let c = b({
       userParticipantCount: d,
       guildId: n.id
     }),

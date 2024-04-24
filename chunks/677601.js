@@ -31,8 +31,8 @@ var a = n("735250"),
   O = n("906732"),
   j = n("211644"),
   P = n("258609"),
-  D = n("446226"),
-  b = n("276598"),
+  b = n("446226"),
+  D = n("276598"),
   U = n("569545"),
   F = n("102172"),
   w = n("788983"),
@@ -85,8 +85,8 @@ var a = n("735250"),
   eO = n("878752"),
   ej = n("354459"),
   eP = n("981631"),
-  eD = n("689938"),
-  eb = n("329446");
+  eb = n("689938"),
+  eD = n("329446");
 
 function eU(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -97,13 +97,13 @@ function eU(e, t, n) {
   }) : e[t] = n, e
 }
 let eF = {
-    [eP.ChannelLayouts.NORMAL]: eb.normal,
-    [eP.ChannelLayouts.MINIMUM]: eb.minimum,
-    [eP.ChannelLayouts.NO_CHAT]: eb.noChat,
-    [eP.ChannelLayouts.FULL_SCREEN]: eb.fullScreen
+    [eP.ChannelLayouts.NORMAL]: eD.normal,
+    [eP.ChannelLayouts.MINIMUM]: eD.minimum,
+    [eP.ChannelLayouts.NO_CHAT]: eD.noChat,
+    [eP.ChannelLayouts.FULL_SCREEN]: eD.fullScreen
   },
   ew = {
-    [eP.AppContext.POPOUT]: eb.popout,
+    [eP.AppContext.POPOUT]: eD.popout,
     [eP.AppContext.APP]: null,
     [eP.AppContext.OVERLAY]: null
   };
@@ -158,7 +158,7 @@ class ek extends l.PureComponent {
   }
   get screenMessage() {
     return this.popoutOpen && !this.inPopout && this.props.inCall ? {
-      mainText: eD.default.Messages.POPOUT_PLAYER_OPENED
+      mainText: eb.default.Messages.POPOUT_PLAYER_OPENED
     } : null
   }
   get paused() {
@@ -274,10 +274,10 @@ class ek extends l.PureComponent {
       resizedHeight: c
     } = this.state, f = l === eP.ChannelModes.VIDEO, h = e !== eP.ChannelLayouts.NO_CHAT && e !== eP.ChannelLayouts.FULL_SCREEN && null != u;
     return (0, a.jsxs)("div", {
-      className: i()(eb.wrapper, eF[e], ew[r], {
-        [eb.poppedOut]: this.popoutOpen && !this.inPopout && e !== eP.ChannelLayouts.NO_CHAT && t.isPrivate(),
-        [eb.video]: f,
-        [eb.chatSidebarOpen]: s
+      className: i()(eD.wrapper, eF[e], ew[r], {
+        [eD.poppedOut]: this.popoutOpen && !this.inPopout && e !== eP.ChannelLayouts.NO_CHAT && t.isPrivate(),
+        [eD.video]: f,
+        [eD.chatSidebarOpen]: s
       }),
       ref: e => {
         this._wrapperRef.current = e, this.props.wrapperRef.current = e
@@ -288,7 +288,7 @@ class ek extends l.PureComponent {
         height: c
       } : void 0,
       children: [(0, a.jsx)("div", {
-        className: i()(eb.callContainer, {
+        className: i()(eD.callContainer, {
           [(0, eS.getThemeClass)(eP.ThemeTypes.DARK)]: f
         }),
         ref: e => {
@@ -305,7 +305,7 @@ class ek extends l.PureComponent {
         onResize: this.handleCallResize,
         onResizeEnd: this.props.updateStoredCallHeaderHeight
       }), (0, a.jsx)("div", {
-        className: eb.channelChatWrapper,
+        className: eD.channelChatWrapper,
         ref: e => {
           this._channelChatRef.current = e, this.props.channelChatRef.current = e
         },
@@ -506,33 +506,33 @@ class ek extends l.PureComponent {
           stream: (null == r ? void 0 : r.type) === ej.ParticipantTypes.STREAM ? (0, U.decodeStreamKey)(r.id) : void 0,
           applicationId: (null == r ? void 0 : r.type) === ej.ParticipantTypes.ACTIVITY ? r.id : void 0,
           appContext: l,
-          className: eb.leftTrayIcon,
+          className: eD.leftTrayIcon,
           exitFullScreen: this.maybeLeaveFullScreen,
           analyticsLocation: n.type === eP.ChannelTypes.GUILD_VOICE ? eP.AnalyticsPages.GUILD_CHANNEL : eP.AnalyticsPages.DM_CHANNEL
         }) : (0, a.jsx)(J.default, {
           channel: n,
           stream: (null == r ? void 0 : r.type) === ej.ParticipantTypes.STREAM ? (0, U.decodeStreamKey)(r.id) : void 0,
-          className: eb.leftTrayIcon,
+          className: eD.leftTrayIcon,
           exitFullScreen: this.maybeLeaveFullScreen,
           analyticsLocation: n.type === eP.ChannelTypes.GUILD_VOICE ? eP.AnalyticsPages.GUILD_CHANNEL : eP.AnalyticsPages.DM_CHANNEL
         });
       return (0, a.jsxs)(a.Fragment, {
         children: [E && !o ? C : null, p ? (0, a.jsxs)(eh.default, {
-          className: eb.iconWrapper,
+          className: eD.iconWrapper,
           align: eh.default.Align.CENTER,
           grow: 0,
           children: [(0, a.jsx)(q.default, {
-            label: f ? eD.default.Messages.SHOW_CHAT : eD.default.Messages.HIDE_CHAT,
+            label: f ? eb.default.Messages.SHOW_CHAT : eb.default.Messages.HIDE_CHAT,
             direction: c,
-            className: eb.leftTrayIcon,
+            className: eD.leftTrayIcon,
             onClick: m
           }), f && t > 0 ? (0, a.jsx)(em.NumberBadge, {
-            className: eb.badge,
+            className: eD.badge,
             count: t
           }) : null]
         }) : null, (null == r ? void 0 : r.type) !== ej.ParticipantTypes.STREAM && (null == r ? void 0 : r.type) !== ej.ParticipantTypes.ACTIVITY || o ? null : (0, a.jsx)(z.default, {
           children: (0, a.jsx)(eR.default, {
-            className: i()(eb.leftTrayIcon, eb.viewersButton),
+            className: i()(eD.leftTrayIcon, eD.viewersButton),
             participant: r,
             maxVisibleUsers: 4,
             guildId: n.getGuildId(),
@@ -543,10 +543,10 @@ class ek extends l.PureComponent {
           channel: n,
           hasActiveStream: h,
           themeable: this.viewProperties.useTheme
-        }), (0, a.jsx)(b.default, {
+        }), (0, a.jsx)(D.default, {
           showLeftDivider: o,
           themeable: this.viewProperties.useTheme,
-          className: eb.leftTrayIcon,
+          className: eD.leftTrayIcon,
           channel: n
         })]
       })
@@ -567,23 +567,23 @@ class ek extends l.PureComponent {
           context: (0, eA.default)(l.type),
           userId: l.user.id,
           currentWindow: this.inPopout ? null != e ? e : void 0 : window,
-          sliderClassName: eb.volumeSlider,
-          className: eb.rightTrayIcon
+          sliderClassName: eD.volumeSlider,
+          className: eD.rightTrayIcon
         }) : null, i ? (0, a.jsx)(ee.default, {
-          className: eb.rightTrayIcon,
+          className: eD.rightTrayIcon,
           popoutWindowAlwaysOnTop: t,
           onToggleStayOnTop: this.handleStayOnTop
         }) : null, r ? (0, a.jsx)($.default, {
           themeable: o,
           popoutOpen: this.popoutOpen,
-          className: eb.rightTrayIcon,
+          className: eD.rightTrayIcon,
           onOpenPopout: this.handleOpenPopout,
           onClosePopout: this.handleClosePopout
         }) : null, s ? (0, a.jsx)(Q.default, {
           themeable: o,
           node: this.getRootNode(),
           guestWindow: e,
-          className: eb.rightTrayIcon,
+          className: eD.rightTrayIcon,
           onClick: this.handleFullScreen
         }) : null]
       })
@@ -610,7 +610,7 @@ class ek extends l.PureComponent {
       } = this.props;
       return !e || t || this.popoutOpen && !this.inPopout && l ? null : (0, a.jsx)(eN.default, {
         children: (0, a.jsx)(K.default, {
-          className: eb.chatToasts,
+          className: eD.chatToasts,
           channelId: n.id
         })
       })
@@ -640,7 +640,7 @@ class ek extends l.PureComponent {
       } = this.viewProperties;
       return u ? (0, a.jsxs)(z.default, {
         children: [(0, a.jsx)("div", {
-          className: eb.headerWrapper,
+          className: eD.headerWrapper,
           children: r ? null == e ? void 0 : e() : (0, a.jsx)(eM.default, {
             channel: t,
             guild: n,
@@ -669,13 +669,13 @@ t.default = function(e) {
     ref: m
   } = (0, T.default)(), {
     ref: p
-  } = (0, T.default)(), E = (0, A.useAppContext)(), C = (0, D.default)(), S = (0, u.useStateFromStores)([ed.default], () => {
+  } = (0, T.default)(), E = (0, A.useAppContext)(), C = (0, b.default)(), S = (0, u.useStateFromStores)([ed.default], () => {
     var e;
     return (null !== (e = null == C ? void 0 : C.channelId) && void 0 !== e ? e : ed.default.getVoiceChannelId()) === n.id
   }), {
     participants: R,
     filteredParticipants: y,
-    participantsVersion: b,
+    participantsVersion: D,
     mode: U,
     layout: F,
     participantsOpen: w,
@@ -712,7 +712,7 @@ t.default = function(e) {
     })
   }, []), en = null !== (t = null == Y ? void 0 : Y.id) && void 0 !== t ? t : null, ec = (0, x.default)(en, n.id), ef = (0, u.useStateFromStores)([v.default], () => v.default.getFetchState(), []), eh = (0, I.default)(ef);
   l.useEffect(() => {
-    "errored" === ef && "errored" !== eh && (0, f.showToast)((0, f.createToast)(eD.default.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FETCH_ERROR, f.ToastType.FAILURE))
+    "errored" === ef && "errored" !== eh && (0, f.showToast)((0, f.createToast)(eb.default.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FETCH_ERROR, f.ToastType.FAILURE))
   }, [ef, eh]);
   let em = (0, u.useStateFromStores)([N.default], () => null != N.default.getSelfEmbeddedActivityForChannel(n.id), [n]);
   l.useEffect(() => {
@@ -754,7 +754,7 @@ t.default = function(e) {
             inCall: S,
             participants: R,
             filteredParticipants: y,
-            participantsVersion: b,
+            participantsVersion: D,
             layout: F,
             chatOpen: H,
             maxSidebarWidth: r - 550,

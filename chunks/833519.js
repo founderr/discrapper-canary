@@ -38,8 +38,8 @@ var a = n("735250"),
   O = n("916771"),
   j = n("792517"),
   P = n("979425"),
-  D = n("651183"),
-  b = n("623825"),
+  b = n("651183"),
+  D = n("623825"),
   U = n("981631"),
   F = n("354459"),
   w = n("65154"),
@@ -55,9 +55,9 @@ function G(e) {
     idle: s,
     width: i,
     premiumIndicator: o
-  } = e, u = (0, r.useStateFromStores)([S.default], () => S.default.getActiveStreamForUser(t.user.id, t.stream.guildId)), d = (0, b.isVideoCompact)(i);
+  } = e, u = (0, r.useStateFromStores)([S.default], () => S.default.getActiveStreamForUser(t.user.id, t.stream.guildId)), d = (0, D.isVideoCompact)(i);
   return (0, a.jsxs)(a.Fragment, {
-    children: [n ? null : (0, a.jsx)(D.default, {
+    children: [n ? null : (0, a.jsx)(b.default, {
       participant: t
     }), l || null == u || u.state === U.ApplicationStreamStates.ENDED || u.state === U.ApplicationStreamStates.FAILED ? null : (0, a.jsx)(E.default, {
       size: x.default.Sizes.SMALL,
@@ -78,13 +78,13 @@ function V(e) {
     paused: f,
     fit: E,
     inPopout: x,
-    width: D,
-    focused: b
+    width: b,
+    focused: D
   } = e, G = I.default.getVideoComponent(), V = (0, r.useStateFromStores)([_.default], () => _.default.getId()), W = (0, h.default)(), {
     stream: Y,
     user: z,
     streamId: K
-  } = t, Z = (0, r.useStateFromStores)([T.default], () => T.default.getChannel(Y.channelId)), q = (0, r.useStateFromStores)([S.default], () => S.default.getActiveStreamForUser(z.id, Y.guildId), [z.id, Y.guildId]), X = (0, r.useStateFromStores)([S.default], () => S.default.getAllActiveStreams().length > 0), Q = (0, r.useStateFromStores)([A.default], () => A.default.isFocused()), J = (null == q ? void 0 : q.ownerId) === V, $ = J && !Q && !x, ee = null != q ? (0, m.default)(q, z, z.id === V, $) : null, et = D < 195;
+  } = t, Z = (0, r.useStateFromStores)([T.default], () => T.default.getChannel(Y.channelId)), q = (0, r.useStateFromStores)([S.default], () => S.default.getActiveStreamForUser(z.id, Y.guildId), [z.id, Y.guildId]), X = (0, r.useStateFromStores)([S.default], () => S.default.getAllActiveStreams().length > 0), Q = (0, r.useStateFromStores)([A.default], () => A.default.isFocused()), J = (null == q ? void 0 : q.ownerId) === V, $ = J && !Q && !x, ee = null != q ? (0, m.default)(q, z, z.id === V, $) : null, et = b < 195;
   if (l.useEffect(() => {
       !X && (null == Z ? void 0 : Z.isGuildStageVoice()) && !J && ((0, d.watchStream)(Y), u.default.updateStageStreamSize(Y.channelId, !1))
     }, []), l.useEffect(() => {
@@ -98,21 +98,21 @@ function V(e) {
   if ((null == q ? void 0 : q.state) === U.ApplicationStreamStates.ENDED) return (0, a.jsx)(y.default, {
     selected: n,
     stream: q,
-    width: D
+    width: b
   });
   if ((null == q ? void 0 : q.state) === U.ApplicationStreamStates.FAILED) return (0, a.jsx)(O.default, {
     selected: n,
     stream: q,
-    width: D
+    width: b
   });
   else if (t.type === F.ParticipantTypes.HIDDEN_STREAM) return (0, a.jsx)(j.default, {
     selected: n,
     participant: t,
-    width: D
+    width: b
   });
   else if (null != q && !n && null != G && I.default.supports(w.Features.VIDEO)) return (0, a.jsxs)(a.Fragment, {
     children: [null != Z ? (0, a.jsx)(C.default, {
-      focused: b,
+      focused: D,
       channelId: Z.id,
       guildId: Z.guild_id,
       streamerId: z.id,
@@ -129,7 +129,7 @@ function V(e) {
       videoSpinnerContext: J ? c.VideoSpinnerContext.SELF_STREAM : c.VideoSpinnerContext.REMOTE_STREAM,
       userId: z.id
     }, K), null != ee ? (0, a.jsx)(g.default, {
-      size: (0, R.getSizeForWidth)(D),
+      size: (0, R.getSizeForWidth)(b),
       ...ee
     }) : null, (0, a.jsx)(L.default, {
       stream: Y,
@@ -152,7 +152,7 @@ function V(e) {
         children: (0, a.jsx)(o.Text, {
           variant: et ? "text-sm/semibold" : "text-md/semibold",
           color: "none",
-          children: D < 175 ? k.default.Messages.WATCH : k.default.Messages.WATCH_STREAM
+          children: b < 175 ? k.default.Messages.WATCH : k.default.Messages.WATCH_STREAM
         })
       }), X ? (0, a.jsx)(M.CallTileCTA, {
         className: H.addCTA,

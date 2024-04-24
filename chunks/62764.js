@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return b
+    return D
   }
 }), n("47120");
 var a = n("735250"),
@@ -35,14 +35,14 @@ var a = n("735250"),
   O = n("981631"),
   j = n("689938"),
   P = n("61226"),
-  D = n("903380");
+  b = n("903380");
 
-function b(e) {
+function D(e) {
   let {
     postId: t,
     isFirstMessage: n,
     isLastItem: s = !1,
-    parentChannelId: b
+    parentChannelId: D
   } = e, {
     ref: U,
     width: F
@@ -54,7 +54,7 @@ function b(e) {
     isLurking: q,
     isGuest: X,
     isPendingMember: Q
-  } = (0, p.default)(W), J = (0, y.useForumActivityExperiment)(null == W ? void 0 : W.guild_id), $ = (0, o.useStateFromStores)([I.default], () => I.default.getChannel(b)), ee = (0, M.useDefaultReactionEmoji)($), et = (0, o.useStateFromStores)([f.default], () => f.default.shouldDisplayPrompt(t) && !0 === n, [t, n]), en = l.useCallback(e => {
+  } = (0, p.default)(W), J = (0, y.useForumActivityExperiment)(null == W ? void 0 : W.guild_id), $ = (0, o.useStateFromStores)([I.default], () => I.default.getChannel(D)), ee = (0, M.useDefaultReactionEmoji)($), et = (0, o.useStateFromStores)([f.default], () => f.default.shouldDisplayPrompt(t) && !0 === n, [t, n]), en = l.useCallback(e => {
     let t = e[0];
     if (null != t && n) {
       let e = t.intersectionRect,
@@ -100,7 +100,7 @@ function b(e) {
           [P.loading]: ea
         }),
         children: [!es && !Z && null != ee && (0, a.jsx)("div", {
-          className: D.reactions,
+          className: b.reactions,
           children: (0, a.jsx)(S.Reaction, {
             message: Y,
             readOnly: !1,

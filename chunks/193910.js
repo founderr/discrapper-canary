@@ -36,7 +36,7 @@ var a = n("735250"),
   j = n("689938"),
   P = n("604613");
 
-function D(e, t, l, s) {
+function b(e, t, l, s) {
   (0, o.openModalLazy)(async () => {
     let {
       default: i
@@ -52,7 +52,7 @@ function D(e, t, l, s) {
     modalKey: u.activityInviteKey
   })
 }
-let b = /(.*)```(\w+)\n(.*)```(.*)/s;
+let D = /(.*)```(\w+)\n(.*)```(.*)/s;
 
 function U(e) {
   let {
@@ -156,7 +156,7 @@ function F(e) {
     let e = _,
       n = "txt",
       a = "",
-      l = _.match(b);
+      l = _.match(D);
     null != l && (a = l[1], n = l[2], e = l[3], a += l[4]), (0, N.promptToUpload)([(0, v.makeFile)(new Blob([e], {
       type: "text/plain"
     }), "message.".concat(n))], t, S), A.ComponentDispatch.dispatchToLastSubscribed(L.ComponentActions.CLEAR_TEXT), "" !== a && A.ComponentDispatch.dispatchToLastSubscribed(L.ComponentActions.INSERT_TEXT, {
@@ -220,7 +220,7 @@ function F(e) {
                 type: "Send Join Invite",
                 application_id: n.application_id,
                 location: L.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), D(n, t, L.ActivityActionTypes.JOIN, w))
+              }), b(n, t, L.ActivityActionTypes.JOIN, w))
             }
           }, "play");
         case R.AttachmentTypes.INVITE_TO_LISTEN:
@@ -232,7 +232,7 @@ function F(e) {
               return n = e.activity, void(I.default.track(L.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Listen Invite",
                 location: L.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), D(n, t, L.ActivityActionTypes.LISTEN, w))
+              }), b(n, t, L.ActivityActionTypes.LISTEN, w))
             }
           }, "listen");
         case R.AttachmentTypes.INVITE_TO_WATCH:
@@ -244,7 +244,7 @@ function F(e) {
               return n = e.activity, void(I.default.track(L.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Watch Invite",
                 location: L.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), D(n, t, L.ActivityActionTypes.WATCH, w))
+              }), b(n, t, L.ActivityActionTypes.WATCH, w))
             }
           }, "watch");
         case R.AttachmentTypes.CREATE_THREAD:

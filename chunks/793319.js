@@ -36,8 +36,8 @@ var a, l, s = n("735250"),
   O = n("659580"),
   j = n("793865"),
   P = n("575175"),
-  D = n("258609"),
-  b = n("446226"),
+  b = n("258609"),
+  D = n("446226"),
   U = n("594190"),
   F = n("569545"),
   w = n("74299"),
@@ -378,7 +378,7 @@ t.default = function(e) {
     canGoLive: C
   } = (0, h.useStateFromStoresObject)([el.default], () => ({
     canGoLive: (0, w.default)(el.default)
-  })), S = (0, b.default)(), T = (0, h.useStateFromStores)([D.default], () => null != D.default.getAwaitingRemoteSessionInfo()), v = null != S, N = (0, h.useStateFromStores)([es.default], () => {
+  })), S = (0, D.default)(), T = (0, h.useStateFromStores)([b.default], () => null != b.default.getAwaitingRemoteSessionInfo()), v = null != S, N = (0, h.useStateFromStores)([es.default], () => {
     var e;
     return (null !== (e = null == S ? void 0 : S.channelId) && void 0 !== e ? e : es.default.getVoiceChannelId()) === t.id
   }), x = (0, y.default)(t, !0), M = (0, h.useStateFromStores)([_.default], () => {

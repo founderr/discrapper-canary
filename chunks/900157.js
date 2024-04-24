@@ -59,7 +59,7 @@ function L(e) {
         channelId: y.id
       })
     }, [y, L]), null == y || null == O) return null;
-  let D = (0, a.jsx)(v.default, {
+  let b = (0, a.jsx)(v.default, {
     channel: y,
     baseChannelId: s
   });
@@ -68,7 +68,7 @@ function L(e) {
       channel: y,
       draftType: _.DraftType.ChannelMessage
     }), (0, a.jsx)(A.default, {
-      toolbar: D,
+      toolbar: b,
       "aria-label": M.default.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
       children: (0, C.renderTitle)({
         channel: y,

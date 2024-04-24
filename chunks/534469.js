@@ -38,8 +38,8 @@ var a = n("735250"),
   O = n("348238"),
   j = n("62072"),
   P = n("38267"),
-  D = n("25015"),
-  b = n("689674"),
+  b = n("25015"),
+  D = n("689674"),
   U = n("438075"),
   F = n("764893"),
   w = n("481363"),
@@ -123,7 +123,7 @@ function X(e) {
     onFocus: x,
     ...L
   } = (0, u.useListItem)(null !== (t = e.id) && void 0 !== t ? t : ""), {
-    isFocused: b,
+    isFocused: D,
     handleFocus: F,
     handleBlur: w
   } = (0, O.useFocusInside)(x), {
@@ -134,10 +134,10 @@ function X(e) {
     handleMouseEnter: ee,
     handleMouseLeave: et,
     isHovered: en
-  } = (0, O.useHoveredMessage)(I, r.author.id, Z), ea = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), el = Z || ea && b, es = el || en, {
+  } = (0, O.useHoveredMessage)(I, r.author.id, Z), ea = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), el = Z || ea && D, es = el || en, {
     content: ei,
     hasSpoilerEmbeds: er
-  } = (0, D.default)(r, {
+  } = (0, b.default)(r, {
     hideSimpleEmbedContent: X && Q,
     isInteracting: es,
     formatInline: !1,
@@ -259,7 +259,7 @@ t.default = l.memo(function(e) {
     {
       content: eR,
       hasSpoilerEmbeds: eL
-    } = (0, D.default)(g, {
+    } = (0, b.default)(g, {
       hideSimpleEmbedContent: el && es,
       isInteracting: eA,
       formatInline: !1,
@@ -276,14 +276,14 @@ t.default = l.memo(function(e) {
       let t = l.useRef(e);
       return l.useEffect(() => void(t.current = null != e ? e : t.current)), null != e ? e : t.current
     }(J),
-    eD = (0, m.useRoleIcon)({
+    eb = (0, m.useRoleIcon)({
       guildId: Z.guild_id,
       roleId: eO.iconRoleId
     }),
-    eb = (0, y.getMessageAriaLabelledBy)(g, $),
+    eD = (0, y.getMessageAriaLabelledBy)(g, $),
     eU = (0, y.getMessageAriaDescribedBy)(g),
     eF = (0, d.useStateFromStores)([h.default], () => h.default.getMessage(x), [x]),
-    ew = (0, b.default)({
+    ew = (0, D.default)({
       message: g,
       channel: Z
     }),
@@ -303,7 +303,7 @@ t.default = l.memo(function(e) {
           ...ea,
           "aria-setsize": -1,
           "aria-roledescription": z.default.Messages.MESSAGE_A11Y_ROLE_DESCRIPTION,
-          "aria-labelledby": eb,
+          "aria-labelledby": eD,
           "aria-describedby": eU,
           onFocus: eg,
           onBlur: eS,
@@ -334,7 +334,7 @@ t.default = l.memo(function(e) {
             replyReference: et,
             author: eO,
             repliedMessage: ei,
-            roleIcon: eD
+            roleIcon: eb
           }),
           childrenAccessories: (0, U.default)({
             channelMessageProps: e,

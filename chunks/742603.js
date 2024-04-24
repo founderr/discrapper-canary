@@ -36,8 +36,8 @@ var l = n("120356"),
   O = n("613548"),
   j = n("221888"),
   P = n("339340"),
-  D = n("354459"),
-  b = n("981631"),
+  b = n("354459"),
+  D = n("981631"),
   U = n("231338"),
   F = n("689938"),
   w = n("635962"),
@@ -55,7 +55,7 @@ function H(e) {
       maxVisibleUsers: 5,
       guildId: n.getGuildId(),
       channelId: n.id,
-      disableInteraction: l === b.AppContext.POPOUT || s === b.ChannelLayouts.FULL_SCREEN
+      disableInteraction: l === D.AppContext.POPOUT || s === D.ChannelLayouts.FULL_SCREEN
     })
   })
 }
@@ -92,7 +92,7 @@ function G(e) {
     o = (0, p.useActiveEvent)(s.id),
     u = null != o ? (0, E.getNextRecurrenceIdInEvent)(o) : null,
     c = null != o;
-  if ((null == l ? void 0 : l.type) === D.ParticipantTypes.ACTIVITY) null != n && (t = (0, a.jsxs)(a.Fragment, {
+  if ((null == l ? void 0 : l.type) === b.ParticipantTypes.ACTIVITY) null != n && (t = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(M.default.Divider, {
       className: w.divider
     }), (0, a.jsx)(N.default, {
@@ -108,7 +108,7 @@ function G(e) {
       focusedParticipant: l
     })]
   }));
-  else if ((null == l ? void 0 : l.type) === D.ParticipantTypes.STREAM) {
+  else if ((null == l ? void 0 : l.type) === b.ParticipantTypes.STREAM) {
     let e = l.user,
       n = l.stream;
     t = (0, a.jsxs)(a.Fragment, {
@@ -147,11 +147,11 @@ function V(e) {
   } = (0, i.useStateFromStoresObject)([L.default], () => ({
     focusedParticipant: L.default.getSelectedParticipant(t.id),
     participantsOpen: L.default.getParticipantsOpen(t.id)
-  }), [t.id]), C = (0, h.default)(t), I = (0, m.default)(t), [A] = (0, c.default)((null == E ? void 0 : E.type) === D.ParticipantTypes.ACTIVITY ? [E.id] : []), N = F.default.Messages.VOICE_CHANNEL;
+  }), [t.id]), C = (0, h.default)(t), I = (0, m.default)(t), [A] = (0, c.default)((null == E ? void 0 : E.type) === b.ParticipantTypes.ACTIVITY ? [E.id] : []), N = F.default.Messages.VOICE_CHANNEL;
   t.isDM() ? N = F.default.Messages.DM : t.isGroupDM() && (N = F.default.Messages.GROUP_DM);
   let y = (0, i.useStateFromStores)([f.default], () => f.default.getChannelStatus(t)),
     j = t.isGuildVoice() && u && null != y && y.length > 0,
-    H = (0, i.useStateFromStores)([v.default], () => v.default.can(b.Permissions.SET_VOICE_CHANNEL_STATUS, t)),
+    H = (0, i.useStateFromStores)([v.default], () => v.default.can(D.Permissions.SET_VOICE_CHANNEL_STATUS, t)),
     B = j ? (0, a.jsx)(r.Tooltip, {
       text: F.default.Messages.VOICE_CHANNEL_SET_STATUS,
       delay: 500,
@@ -200,7 +200,7 @@ function V(e) {
       className: (0, R.getThemeClass)(U.ThemeTypes.DARK),
       childrenBottom: B,
       toolbar: (0, a.jsx)(O.default, {
-        inPopout: o === b.AppContext.POPOUT,
+        inPopout: o === D.AppContext.POPOUT,
         channel: t,
         appContext: o,
         inCall: u,

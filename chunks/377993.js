@@ -35,9 +35,9 @@ var a = n("735250"),
   O = n("689938"),
   j = n("581477"),
   P = n("652985");
-let D = R.default.getEnableHardwareAcceleration();
+let b = R.default.getEnableHardwareAcceleration();
 
-function b(e) {
+function D(e) {
   let {
     user: t,
     channel: l
@@ -84,7 +84,7 @@ function b(e) {
       currentUser: S,
       isOwner: t.id === l.ownerId,
       ownerTooltipText: O.default.Messages.GROUP_OWNER,
-      shouldAnimateStatus: D,
+      shouldAnimateStatus: b,
       isTyping: f,
       status: d,
       activities: c,
@@ -200,7 +200,7 @@ function F(e) {
             className: P.__invalid_decorator,
             type: S.default.Types.STAFF_ONLY_DM
           }) : null]
-        }), m.map(e => (0, a.jsx)(b, {
+        }), m.map(e => (0, a.jsx)(D, {
           user: e,
           channel: t
         }, e.id)), v && (p.length > 0 || C && E.length > 0) && (0, a.jsxs)(a.Fragment, {

@@ -33,7 +33,7 @@ var a, l, s = n("735250"),
   O = n("231338"),
   j = n("689938"),
   P = n("852218");
-let D = i.memo(function(e) {
+let b = i.memo(function(e) {
     let {
       toggleRequestToSpeakSidebar: t,
       chatOpen: n
@@ -56,7 +56,7 @@ let D = i.memo(function(e) {
       })]
     })
   }),
-  b = i.memo(function(e) {
+  D = i.memo(function(e) {
     let {
       channel: t,
       participant: a,
@@ -85,10 +85,10 @@ let D = i.memo(function(e) {
       (0, N.setUserSuppress)(t, a.user.id, !1)
     }
 
-    function D() {
+    function b() {
       (0, N.setUserSuppress)(t, a.user.id, !0)
     }
-    let b = e => {
+    let D = e => {
       (0, h.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -122,7 +122,7 @@ let D = i.memo(function(e) {
           var t;
           return (0, s.jsxs)(f.Clickable, {
             className: P.participantMemberContainer,
-            onContextMenu: b,
+            onContextMenu: D,
             ...e,
             children: [(0, s.jsx)(m.default, {
               size: f.AvatarSizes.SIZE_40,
@@ -165,7 +165,7 @@ let D = i.memo(function(e) {
           innerClassName: o()(P.buttonContainer, P.buttonMargin),
           look: f.Button.Looks.BLANK,
           size: f.Button.Sizes.NONE,
-          onClick: D,
+          onClick: b,
           children: (0, s.jsx)(T.default, {
             width: 16,
             height: 16
@@ -212,7 +212,7 @@ function w(e) {
     className: o()(P.container, {
       [P.chatOpen]: a
     }),
-    children: [(0, s.jsx)(D, {
+    children: [(0, s.jsx)(b, {
       toggleRequestToSpeakSidebar: n,
       chatOpen: a
     }), (0, s.jsx)(f.List, {
@@ -245,7 +245,7 @@ function w(e) {
           case 1: {
             if (0 === l.length) return (0, s.jsx)(F, {}, "participants-empty");
             let e = l[a];
-            return (0, s.jsx)(b, {
+            return (0, s.jsx)(D, {
               channel: t,
               participant: e,
               tempDisableOnInit: !0

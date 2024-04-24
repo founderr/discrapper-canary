@@ -31,8 +31,8 @@ var a = n("735250"),
   O = n("51144"),
   j = n("342656"),
   P = n("785717"),
-  D = n("221292"),
-  b = n("621853"),
+  b = n("221292"),
+  D = n("621853"),
   U = n("895618"),
   F = n("484459"),
   w = n("318661"),
@@ -138,8 +138,8 @@ t.default = e => {
     }),
     ej = null != eN || null != ey || eM,
     eP = null !== (t = y.default.getNickname(null, n.id, ep)) && void 0 !== t ? t : O.default.getName(ep),
-    eD = (0, u.useStateFromStores)([M.default], () => M.default.hidePersonalInformation),
-    [eb, eU, eF, ew, ek] = (0, u.useStateFromStoresArray)([b.default], () => [b.default.getMutualFriendsCount(ep.id), b.default.getMutualFriends(ep.id), b.default.getMutualGuilds(ep.id), b.default.isFetchingProfile(ep.id), b.default.isFetchingFriends(ep.id)]),
+    eb = (0, u.useStateFromStores)([M.default], () => M.default.hidePersonalInformation),
+    [eD, eU, eF, ew, ek] = (0, u.useStateFromStoresArray)([D.default], () => [D.default.getMutualFriendsCount(ep.id), D.default.getMutualFriends(ep.id), D.default.getMutualGuilds(ep.id), D.default.isFetchingProfile(ep.id), D.default.isFetchingFriends(ep.id)]),
     eH = (0, $.useGetVoiceChannelInfoForVoiceActivitySection)(ep.id),
     eB = null != eH && !eM && !eO,
     {
@@ -150,7 +150,7 @@ t.default = e => {
       autoTrackExposure: eB && eI
     }),
     eV = !ep.bot && null != eF && eF.length > 0,
-    eW = !ep.bot && null != eb && eb > 0,
+    eW = !ep.bot && null != eD && eD > 0,
     eY = (0, ee.useShouldShowUserPopoutCollectiblesUpsell)({
       popoutUser: ep,
       source: Y.UserPopoutUpsellSource.PROFILE_PANEL
@@ -244,7 +244,7 @@ t.default = e => {
                 animate: ed
               }), (0, a.jsx)(z.default, {}), (0, a.jsx)(Z.default, {
                 bio: null == eC ? void 0 : eC.bio,
-                hidePersonalInformation: eD,
+                hidePersonalInformation: eb,
                 animateOnHover: !0,
                 isHovering: ed
               }), e3 && (0, a.jsx)(E.UserProfileClanSection, {
@@ -289,7 +289,7 @@ t.default = e => {
                 }),
                 isLoadingHeader: ew,
                 onExpand: () => {
-                  (0, D.trackUserProfileAction)({
+                  (0, b.trackUserProfileAction)({
                     action: "PRESS_SECTION",
                     section: "MUTUAL_GUILDS",
                     layout: "DM_PANEL",
@@ -304,16 +304,16 @@ t.default = e => {
                   [eu.mutualFriendsDivider]: eV
                 }),
                 header: eo.default.Messages.MUTUAL_FRIENDS_COUNT.format({
-                  count: eb
+                  count: eD
                 }),
                 isLoadingHeader: ew,
                 isLoadingContents: ek,
-                loadingContentsCount: eb,
+                loadingContentsCount: eD,
                 onFocus: eX,
                 onHover: eX,
                 itemType: en.ListType.MutualFriendsList,
                 onExpand: () => {
-                  (0, D.trackUserProfileAction)({
+                  (0, b.trackUserProfileAction)({
                     action: "PRESS_SECTION",
                     section: "MUTUAL_FRIENDS",
                     layout: "DM_PANEL",

@@ -35,8 +35,8 @@ var a = n("735250"),
   O = n("614011"),
   j = n("937995"),
   P = n("456631"),
-  D = n("274459"),
-  b = n("314897"),
+  b = n("274459"),
+  D = n("314897"),
   U = n("77498"),
   F = n("131951"),
   w = n("158776"),
@@ -92,7 +92,7 @@ let eh = l.memo(e => {
     fit: eh = B.VideoStreamFit.CONTAIN,
     paused: em = !1,
     pulseSpeakingIndicator: eE = !1
-  } = e, eC = l.useContext(j.IdleStateContext), [eg, eS] = l.useState(!1), e_ = (0, o.useStateFromStores)([b.default], () => b.default.getId()), eT = c.type === eo.ParticipantTypes.ACTIVITY ? null : null === (t = c.user) || void 0 === t ? void 0 : t.id, [eI] = (0, g.default)(c.type === eo.ParticipantTypes.ACTIVITY ? [c.id] : []), eA = (0, o.useStateFromStores)([N.default], () => N.default.getEnabled()), ev = (0, o.useStateFromStores)([F.default], () => null != eT && F.default.isLocalVideoDisabled(eT, (0, S.default)(c.type)), [eT, c.type]), eN = (0, o.useStateFromStores)([F.default], () => null != eT ? F.default.getVideoToggleState(eT, (0, S.default)(c.type)) : er.VideoToggleState.NONE, [eT, c.type]), ex = eN === er.VideoToggleState.AUTO_PROBING, {
+  } = e, eC = l.useContext(j.IdleStateContext), [eg, eS] = l.useState(!1), e_ = (0, o.useStateFromStores)([D.default], () => D.default.getId()), eT = c.type === eo.ParticipantTypes.ACTIVITY ? null : null === (t = c.user) || void 0 === t ? void 0 : t.id, [eI] = (0, g.default)(c.type === eo.ParticipantTypes.ACTIVITY ? [c.id] : []), eA = (0, o.useStateFromStores)([N.default], () => N.default.getEnabled()), ev = (0, o.useStateFromStores)([F.default], () => null != eT && F.default.isLocalVideoDisabled(eT, (0, S.default)(c.type)), [eT, c.type]), eN = (0, o.useStateFromStores)([F.default], () => null != eT ? F.default.getVideoToggleState(eT, (0, S.default)(c.type)) : er.VideoToggleState.NONE, [eT, c.type]), ex = eN === er.VideoToggleState.AUTO_PROBING, {
     speaking: eM,
     ringing: eR,
     hasVideo: eL
@@ -131,8 +131,8 @@ let eh = l.memo(e => {
   }(e_, c, Y.getGuildId()), eO = c.type === eo.ParticipantTypes.STREAM && eT === e_, {
     available: ej,
     activated: eP,
-    hqStreamingState: eD
-  } = (0, L.usePerksDemo)(r.EntitlementFeatureNames.STREAM_HIGH_QUALITY), eb = ej && eP && eD.hqStreamingIsEnabled && eO, eU = (0, o.useStateFromStores)([P.default], () => null != eT ? P.default.getEffectForUserId(eT) : null), eF = (0, o.useStateFromStores)([k.default], () => k.default.getVoicePlatformForChannel(Y.id, null != eT ? eT : er.EMPTY_STRING_SNOWFLAKE_ID)), {
+    hqStreamingState: eb
+  } = (0, L.usePerksDemo)(r.EntitlementFeatureNames.STREAM_HIGH_QUALITY), eD = ej && eP && eb.hqStreamingIsEnabled && eO, eU = (0, o.useStateFromStores)([P.default], () => null != eT ? P.default.getEffectForUserId(eT) : null), eF = (0, o.useStateFromStores)([k.default], () => k.default.getVoicePlatformForChannel(Y.id, null != eT ? eT : er.EMPTY_STRING_SNOWFLAKE_ID)), {
     enableHangStatus: ew
   } = I.HangStatusExperiment.useExperiment({
     guildId: Y.guild_id,
@@ -187,8 +187,8 @@ let eh = l.memo(e => {
         selected: X,
         width: z,
         focused: $,
-        idle: eb ? !eb : eC,
-        premiumIndicator: eb
+        idle: eD ? !eD : eC,
+        premiumIndicator: eD
       }), eJ = ec.default.Messages.CALL_TILE_A11Y_LABEL_STREAM.format({
         streamerName: c.user.username
       });
@@ -265,7 +265,7 @@ let eh = l.memo(e => {
             focusProps: {
               offset: 1
             },
-            children: [c.type === eo.ParticipantTypes.USER && null != eT && null != eU ? (0, a.jsx)(D.default, {
+            children: [c.type === eo.ParticipantTypes.USER && null != eT && null != eU ? (0, a.jsx)(b.default, {
               voiceChannelEffect: eU,
               onComplete: () => (0, P.clearVoiceChannelEffectForUser)(eT),
               userId: eT
@@ -280,9 +280,9 @@ let eh = l.memo(e => {
                   height: null !== (d = null == e$ ? void 0 : null === (s = e$.current) || void 0 === s ? void 0 : s.clientHeight) && void 0 !== d ? d : 0
                 }
               })
-            }) : null, eX, eb ? (0, a.jsx)(O.PremiumStreamingEffectOverlay, {
+            }) : null, eX, eD ? (0, a.jsx)(O.PremiumStreamingEffectOverlay, {
               onPlayed: ez,
-              played: eD.hqStreamingFrameAnimationPlayed
+              played: eb.hqStreamingFrameAnimationPlayed
             }) : null, Q ? null : (0, a.jsx)("div", {
               className: ef.indicators,
               children: eQ
@@ -382,8 +382,8 @@ let ep = l.memo(e => {
     onToggleMute: O,
     platform: j,
     hangStatusActivity: P,
-    application: D,
-    speaking: b
+    application: b,
+    speaking: D
   } = e, U = null, w = null, k = null, B = null, K = (0, es.isVideoCompact)(C), Z = (0, es.isNamesCompact)(C), X = (0, o.useStateFromStores)([F.default], () => null != L && F.default.isLocalVideoAutoDisabled(L, (0, S.default)(R)), [L, R]), Q = (0, m.useRedesignIconContext)().enabled;
   if (!M) {
     if (l && R === eo.ParticipantTypes.STREAM && g && !N) U = (0, a.jsx)(m.Tooltip, {
@@ -463,12 +463,12 @@ let ep = l.memo(e => {
       children: (0, a.jsx)(v.default, {
         hangStatusActivity: P,
         className: ef.hangStatusIcon,
-        animate: b
+        animate: D
       })
     })
-  }) : R === eo.ParticipantTypes.USER && null != D && (B = (0, a.jsx)(m.Tooltip, {
+  }) : R === eo.ParticipantTypes.USER && null != b && (B = (0, a.jsx)(m.Tooltip, {
     text: ec.default.Messages.UNFORMATTED_PLAYING_GAME.format({
-      game: D.name
+      game: b.name
     }),
     children: e => (0, a.jsx)("div", {
       ...e,
@@ -477,7 +477,7 @@ let ep = l.memo(e => {
       }),
       children: (0, a.jsx)(H.default, {
         className: ef.hangStatusIcon,
-        game: D,
+        game: b,
         size: H.default.Sizes.SMALL
       })
     })

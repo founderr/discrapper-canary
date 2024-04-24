@@ -55,7 +55,7 @@ t.default = e => {
     {
       mostRecentQuery: j,
       searchFetching: P,
-      searchResults: D
+      searchResults: b
     } = (0, s.useStateFromStoresObject)([m.default], () => {
       let {
         mostRecentQuery: e,
@@ -67,7 +67,7 @@ t.default = e => {
         searchResults: m.default.getSearchResults(v.id, e)
       }
     }),
-    [b, U] = l.useState(j),
+    [D, U] = l.useState(j),
     F = "" !== j,
     {
       showHubEventsList: w
@@ -101,7 +101,7 @@ t.default = e => {
       })
     } : void 0,
     H = e => {
-      0 !== b.trim().length && e.charCode === I.KeyboardKeys.ENTER && (h.searchDirectoryEntries(v.id, b), c.default.track(I.AnalyticEvents.GUILD_DIRECTORY_SEARCH, {
+      0 !== D.trim().length && e.charCode === I.KeyboardKeys.ENTER && (h.searchDirectoryEntries(v.id, D), c.default.track(I.AnalyticEvents.GUILD_DIRECTORY_SEARCH, {
         directory_channel_id: v.id,
         directory_guild_id: N.id
       }))
@@ -110,13 +110,13 @@ t.default = e => {
       U(""), h.clearDirectorySearch(v.id)
     };
   return F ? (0, a.jsx)(_.default, {
-    searchQuery: b,
+    searchQuery: D,
     setSearchQuery: U,
     mostRecentQuery: j,
     handleSearchKeyPress: H,
     handleClearSearch: B,
     handleCreateOrAddGuild: k,
-    searchResults: D,
+    searchResults: b,
     searchFetching: P
   }) : null == O && null == x ? (0, a.jsx)("div", {
     className: A.pageContainer,
@@ -131,7 +131,7 @@ t.default = e => {
     })
   }) : (0, a.jsx)(g.default, {
     channel: v,
-    searchQuery: b,
+    searchQuery: D,
     setSearchQuery: U,
     handleSearchKeyPress: H,
     handleClearSearch: B,

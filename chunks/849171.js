@@ -76,16 +76,16 @@ function j(e) {
   let S = (a = C) > 400 ? 2 : a > 300 ? 1 : 0;
   let [_] = (l = C) > 400 ? [u.AvatarSizes.SIZE_56, 56] : l > 300 ? [u.AvatarSizes.SIZE_32, 32] : [u.AvatarSizes.SIZE_24, 24], I = (0, o.useStateFromStoresArray)([v.default, A.default], () => Array.from(i).map(e => A.default.getId() === e ? null : v.default.getUser(e)).filter(x.isNotNullish)), N = (0, o.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === m.id)), {
     analyticsLocations: y
-  } = (0, T.default)(), j = (0, d.useAnalyticsContext)(), P = M.default.getName(E.getGuildId(), E.id, null == I ? void 0 : I[0]), D = (0, h.useEmbeddedActivityJoinability)({
+  } = (0, T.default)(), j = (0, d.useAnalyticsContext)(), P = M.default.getName(E.getGuildId(), E.id, null == I ? void 0 : I[0]), b = (0, h.useEmbeddedActivityJoinability)({
     userId: null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
     channelId: E.id,
     application: m
-  }) === h.EmbeddedActivityJoinability.CAN_JOIN, b = null !== (n = E.getGuildId()) && void 0 !== n ? n : void 0;
+  }) === h.EmbeddedActivityJoinability.CAN_JOIN, D = null !== (n = E.getGuildId()) && void 0 !== n ? n : void 0;
   return (0, s.jsxs)("div", {
     className: L.splash,
     children: [(0, s.jsx)(O, {
       avatarSize: _,
-      guildId: b,
+      guildId: D,
       channelId: E.id,
       users: I
     }), (0, s.jsx)(u.Text, {
@@ -109,7 +109,7 @@ function j(e) {
       children: m.name
     }), (0, s.jsx)("div", {
       className: L.buttons,
-      children: D ? (0, s.jsx)(u.Button, {
+      children: b ? (0, s.jsx)(u.Button, {
         onClick: function(e) {
           e.stopPropagation(), null != N && (0, f.default)({
             applicationId: N.applicationId,

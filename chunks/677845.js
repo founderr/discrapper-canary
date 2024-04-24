@@ -39,7 +39,7 @@ function v(e) {
     paused: y = !1
   } = e, O = (0, o.useAppContext)() === I.AppContext.POPOUT, j = (0, i.useStateFromStores)([p.default], () => p.default.getGuild(x.guild_id), [x.guild_id]), {
     dismissedActivityEntryPointTileChannel: P
-  } = (0, _.useChannelCallVideoGridStore)(), D = (0, i.useStateFromStores)([f.default], () => f.default.getUserParticipantCount(x.id), [x]), b = l.useCallback(() => {
+  } = (0, _.useChannelCallVideoGridStore)(), b = (0, i.useStateFromStores)([f.default], () => f.default.getUserParticipantCount(x.id), [x]), D = l.useCallback(() => {
     _.useChannelCallVideoGridStore.setState({
       dismissedActivityEntryPointTileChannel: x.id
     })
@@ -79,13 +79,13 @@ function v(e) {
     }
   }, {
     trackOnInitialLoad: !0
-  }, []), null != j && !F && (!(D >= 2) || !k || B || H || G ? w && 1 === D && U && (k && !B ? V.push(e => (0, a.jsx)(g.ActivityEntryPointTile, {
+  }, []), null != j && !F && (!(b >= 2) || !k || B || H || G ? w && 1 === b && U && (k && !B ? V.push(e => (0, a.jsx)(g.ActivityEntryPointTile, {
     channel: x,
     guild: j,
     width: e,
     inPopout: O,
-    handleClose: b,
-    userParticipantCount: D
+    handleClose: D,
+    userParticipantCount: b
   })) : V.push(e => (0, a.jsx)(T.default, {
     width: e,
     channel: x,
@@ -96,8 +96,8 @@ function v(e) {
     guild: j,
     width: e,
     inPopout: O,
-    handleClose: b,
-    userParticipantCount: D
+    handleClose: D,
+    userParticipantCount: b
   })));
   let W = l.useCallback(e => {
     var n, a;

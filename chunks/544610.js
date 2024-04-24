@@ -88,13 +88,13 @@ function P(e) {
   }).filter(e => null != e.user), k.emitChange())
 }
 
-function D() {
+function b() {
   return null != a && (a.destroy(), a = null), f.default.getSearchContext(P, 1e3)
 }
 
-function b(e) {
+function D(e) {
   if (e.key !== _.NEW_GROUP_DM_POPOUT_ID) return !1;
-  T = !0, O(), a = D(), M = null, L("")
+  T = !0, O(), a = b(), M = null, L("")
 }
 
 function U(e) {
@@ -150,10 +150,10 @@ let k = new w(c.default, {
     let a = T;
     return R(), T = a, M = n, y()
   },
-  MODAL_PUSH: b,
-  SHOW_ACTION_SHEET: b,
+  MODAL_PUSH: D,
+  SHOW_ACTION_SHEET: D,
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function(e) {
-    T = !0, O(), a = D(), M = e.channelId, L("")
+    T = !0, O(), a = b(), M = e.channelId, L("")
   },
   MODAL_POP: U,
   HIDE_ACTION_SHEET: U,

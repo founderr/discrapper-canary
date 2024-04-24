@@ -31,7 +31,7 @@ var a = n("735250"),
   O = n("981631"),
   j = n("524484"),
   P = n("619682");
-let D = l.memo(e => {
+let b = l.memo(e => {
   var t;
   let {
     mute: n,
@@ -40,7 +40,7 @@ let D = l.memo(e => {
     channel: i,
     sessionId: o,
     nick: _
-  } = e, x = s.id, P = (0, r.useStateFromStores)([C.default], () => C.default.getId() === x, [x]), [D, b, U] = (0, r.useStateFromStoresArray)([S.default], () => P ? [!S.default.isSupported() || S.default.isSelfMute() || S.default.isSelfMutedTemporarily(), S.default.isSelfDeaf(), !1] : [!S.default.isSupported() || S.default.isLocalMute(x), !1, S.default.isLocalVideoDisabled(x)], [P, x]), F = (0, r.useStateFromStores)([v.default], () => v.default.isPrioritySpeaker(x)), w = (0, u.default)({
+  } = e, x = s.id, P = (0, r.useStateFromStores)([C.default], () => C.default.getId() === x, [x]), [b, D, U] = (0, r.useStateFromStoresArray)([S.default], () => P ? [!S.default.isSupported() || S.default.isSelfMute() || S.default.isSelfMutedTemporarily(), S.default.isSelfDeaf(), !1] : [!S.default.isSupported() || S.default.isLocalMute(x), !1, S.default.isLocalVideoDisabled(x)], [P, x]), F = (0, r.useStateFromStores)([v.default], () => v.default.isPrioritySpeaker(x)), w = (0, u.default)({
     userId: x,
     checkSoundSharing: !0
   }), k = (0, r.useStateFromStores)([g.default], () => g.default.isGuestOrLurker(i.guild_id, x)), H = (0, r.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(i.id).find(e => {
@@ -71,10 +71,10 @@ let D = l.memo(e => {
       canDrag: e.canDrag && !k,
       otherClientSessionType: null == K ? void 0 : null === (t = K.clientInfo) || void 0 === t ? void 0 : t.os,
       voicePlatform: q,
-      localMute: D && !P,
+      localMute: b && !P,
       localVideoDisabled: U,
-      mute: n || D,
-      deaf: l || b,
+      mute: n || b,
+      deaf: l || D,
       speaking: w,
       priority: F,
       embeddedApplication: B[0],
@@ -88,7 +88,7 @@ let D = l.memo(e => {
     })
   })
 });
-D.displayName = "ConnectedVoiceUser";
+b.displayName = "ConnectedVoiceUser";
 t.default = function(e) {
   let {
     allowPreviews: t = !0,
@@ -109,7 +109,7 @@ t.default = function(e) {
     A(null)
   })), j = l.useCallback(e => {
     t && (N(!0), L.current.cancel(), M.current = e, R.current.delay())
-  }, [t]), b = l.useCallback(e => {
+  }, [t]), D = l.useCallback(e => {
     t && (R.current.cancel(), I === e && (N(!1), L.current.delay()))
   }, [t, I]), U = (0, r.useStateFromStoresArray)([T.default], () => {
     if (d) return [];
@@ -133,7 +133,7 @@ t.default = function(e) {
         nick: i,
         voiceState: r
       } = e;
-      return (0, a.jsx)(D, {
+      return (0, a.jsx)(b, {
         user: l,
         nick: i,
         isSelfOnOtherClient: C.default.getId() === l.id && r.sessionId !== C.default.getSessionId(),
@@ -147,7 +147,7 @@ t.default = function(e) {
         collapsed: d,
         canDrag: n && _.default.can(O.Permissions.MOVE_MEMBERS, s),
         showPreview: j,
-        hidePreview: b,
+        hidePreview: D,
         previewIsOpen: v,
         shouldShowPreview: I === l.id,
         tabIndex: h,

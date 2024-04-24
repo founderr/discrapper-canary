@@ -31,8 +31,8 @@ var l = s("735250"),
   g = s("496206"),
   R = s("228168"),
   P = s("981631"),
-  M = s("231338"),
-  C = s("689938"),
+  C = s("231338"),
+  M = s("689938"),
   y = s("950114");
 let O = n.AvatarSizes.SIZE_120,
   F = _.default.getEnableHardwareAcceleration() ? n.AnimatedAvatar : n.Avatar;
@@ -118,7 +118,7 @@ function L(e) {
           avatarDecoration: q,
           size: O,
           className: y.avatar,
-          status: X ? M.StatusTypes.UNKNOWN : G ? M.StatusTypes.STREAMING : Y,
+          status: X ? C.StatusTypes.UNKNOWN : G ? C.StatusTypes.STREAMING : Y,
           statusBackdropColor: (0, n.getStatusBackdropColor)(K),
           isMobile: H,
           statusTooltip: !0,
@@ -127,7 +127,7 @@ function L(e) {
       }), (0, l.jsxs)("div", {
         className: y.headerTop,
         children: [(null == z ? void 0 : z.profileFetchFailed) && !_.isClyde() ? (0, l.jsx)(n.Tooltip, {
-          text: C.default.Messages.USER_PROFILE_LOAD_ERROR,
+          text: M.default.Messages.USER_PROFILE_LOAD_ERROR,
           spacing: 20,
           children: e => (0, l.jsx)(x.default, {
             ...e,

@@ -52,7 +52,7 @@ function N(e) {
     onClose: U
   } = e, {
     trackUserProfileAction: h
-  } = (0, c.useUserProfileAnalyticsContext)(), p = (0, r.useStateFromStores)([d.default], () => d.default.getCurrentUser()), j = (0, r.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), g = A(f), [R, P] = a.useState(T), [M, C] = a.useState(null !== (s = null === (t = g.find(e => {
+  } = (0, c.useUserProfileAnalyticsContext)(), p = (0, r.useStateFromStores)([d.default], () => d.default.getCurrentUser()), j = (0, r.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), g = A(f), [R, P] = a.useState(T), [C, M] = a.useState(null !== (s = null === (t = g.find(e => {
     let {
       section: t
     } = e;
@@ -61,8 +61,8 @@ function N(e) {
     h({
       action: "PRESS_SECTION",
       section: e
-    }), C(e), P(!1)
-  }, [h, C]);
+    }), M(e), P(!1)
+  }, [h, M]);
   return null == p ? null : j ? (0, l.jsx)("div", {
     className: _.container,
     children: (0, l.jsx)(E.default, {})
@@ -79,7 +79,7 @@ function N(e) {
     children: [(0, l.jsx)(n.TabBar, {
       className: _.tabBar,
       type: "top",
-      selectedItem: M,
+      selectedItem: C,
       onItemSelect: y,
       children: g.map(e => {
         let {
@@ -96,7 +96,7 @@ function N(e) {
           })
         }, t)
       })
-    }), (0, i.match)(M).with(v.UserProfileSections.MUTUAL_FRIENDS, () => (0, l.jsx)(S.default, {
+    }), (0, i.match)(C).with(v.UserProfileSections.MUTUAL_FRIENDS, () => (0, l.jsx)(S.default, {
       user: f,
       onClose: U
     })).with(v.UserProfileSections.MUTUAL_GUILDS, () => (0, l.jsx)(m.default, {

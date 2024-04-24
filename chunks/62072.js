@@ -34,8 +34,8 @@ t.default = function(e, t, n) {
     if (!M.current || n.target !== n.currentTarget) return;
     let j = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
       P = n.altKey && !(n.ctrlKey || n.metaKey || n.shiftKey),
-      D = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
-      b = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
+      b = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
+      D = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
       U = n.shiftKey && !(n.altKey || n.ctrlKey || n.metaKey),
       F = p.default.getMessage(t, e),
       w = c.default.getChannel(t);
@@ -46,7 +46,7 @@ t.default = function(e, t, n) {
         j && (x(w) || F.canDeleteOwnMessage(k)) && (n.preventDefault(), (0, v.deleteMessage)(w, F, n));
         break;
       case "c":
-        ((0, S.isMac)() ? b : D) && C.SUPPORTS_COPY && (n.preventDefault(), (0, C.copy)(F.content));
+        ((0, S.isMac)() ? D : b) && C.SUPPORTS_COPY && (n.preventDefault(), (0, C.copy)(F.content));
         break;
       case "e":
         if (j) {

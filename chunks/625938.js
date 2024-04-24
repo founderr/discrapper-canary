@@ -52,9 +52,9 @@ let M = e => {
       !r && (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)
     }, P = (e, t) => {
       e.stopPropagation(), (0, S.updateHangStatus)(t, !0), j()
-    }, D = (e, t) => {
+    }, b = (e, t) => {
       e.stopPropagation(), (0, S.updateCustomHangStatus)(t.status, t.emoji, !0), j()
-    }, b = l.useCallback(e => {
+    }, D = l.useCallback(e => {
       e.stopPropagation(), (0, S.clearHangStatus)(!0)
     }, []), U = e => {
       e.stopPropagation(), (0, c.openModalLazy)(async () => {
@@ -148,7 +148,7 @@ let M = e => {
             }, n)
           }), (0, a.jsx)(c.Clickable, {
             "aria-label": N.default.Messages.STATUS_POPOUT_CLEAR_STATUS,
-            onClick: b,
+            onClick: D,
             onMouseEnter: () => y(null),
             children: (0, a.jsx)(M, {
               className: x.optionButton,
@@ -168,7 +168,7 @@ let M = e => {
             return (0, a.jsx)(c.Clickable, {
               "aria-label": e.status,
               onMouseEnter: () => w(e),
-              onClick: t => D(t, e),
+              onClick: t => b(t, e),
               children: (0, a.jsx)(M, {
                 className: i()(x.iconWidget, {
                   [x.selectedWidget]: l

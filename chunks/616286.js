@@ -119,12 +119,12 @@ function I(e) {
     event: g.ComponentActions.FOCUS_CHAT_BUTTON,
     handler: A ? null : O
   });
-  let [j, P] = l.useState(!1), D = l.useCallback(() => {
+  let [j, P] = l.useState(!1), b = l.useCallback(() => {
     f && P(!0)
   }, [f]);
   (0, m.useComponentAction)({
     event: g.ComponentActions.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
-    handler: D
+    handler: b
   }), l.useEffect(() => {
     let e;
     return j && (e = setTimeout(() => {
@@ -133,14 +133,14 @@ function I(e) {
       clearTimeout(e)
     }
   }, [j]);
-  let b = [t = f && A ? S.default.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : N ? S.default.Messages.VIDEO_CALL_HIDE_CHAT : S.default.Messages.VIDEO_CALL_SHOW_CHAT];
-  return R > 0 && b.push(S.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
+  let D = [t = f && A ? S.default.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : N ? S.default.Messages.VIDEO_CALL_HIDE_CHAT : S.default.Messages.VIDEO_CALL_SHOW_CHAT];
+  return R > 0 && D.push(S.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
     mentionCount: R
-  })), M > 0 && b.push(S.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), (0, a.jsx)(C.default, {
+  })), M > 0 && D.push(S.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), (0, a.jsx)(C.default, {
     buttonRef: v,
     onClick: L,
     label: t,
-    "aria-label": b.join(", "),
+    "aria-label": D.join(", "),
     iconComponent: y,
     tooltipPosition: "bottom",
     wrapperClassName: i()(s, null != r && {

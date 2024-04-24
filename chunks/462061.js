@@ -42,8 +42,8 @@ function L(e) {
     fit: O,
     onVideoResize: j,
     blocked: P,
-    noVideoRender: D = !1,
-    pulseSpeakingIndicator: b = !1
+    noVideoRender: b = !1,
+    pulseSpeakingIndicator: D = !1
   } = e, U = C.default.getVideoComponent(), F = (0, r.useStateFromStores)([p.default], () => p.default.getId()), {
     user: w,
     streamId: k,
@@ -59,7 +59,7 @@ function L(e) {
   }), J = (0, r.useStateFromStores)([c.default], () => c.default.getSelectedParticipant(n.id));
   return (l.useEffect(() => {
     n.isGuildStageVoice() && !G && (null == J ? void 0 : J.id) === w.id && u.default.selectParticipant(n.id, null)
-  }, [G]), s && !Y && !D && G && !y && null != U && C.default.supports(v.Features.VIDEO)) ? (0, a.jsx)(_.default, {
+  }, [G]), s && !Y && !b && G && !y && null != U && C.default.supports(v.Features.VIDEO)) ? (0, a.jsx)(_.default, {
     onResize: j,
     wrapperClassName: x.videoWrapper,
     className: x.content,
@@ -80,7 +80,7 @@ function L(e) {
       avatarDecoration: Q,
       backgroundSrc: w.getAvatarURL(n.guild_id, 80),
       size: q,
-      pulseSpeakingIndicator: b,
+      pulseSpeakingIndicator: D,
       speaking: H,
       userId: w.id
     })

@@ -38,7 +38,7 @@ function p(e) {
     trackUserProfileAction: g
   } = (0, E.useUserProfileAnalyticsContext)(), R = (0, n.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), {
     theme: P
-  } = (0, _.useUserProfileThemeContext)(), M = (0, n.useStateFromStores)([S.default], () => S.default.locale), C = (0, d.useIsInUserClanExperiment)(), y = (0, f.useIsUserRecentGamesEnabled)({
+  } = (0, _.useUserProfileThemeContext)(), C = (0, n.useStateFromStores)([S.default], () => S.default.locale), M = (0, d.useIsInUserClanExperiment)(), y = (0, f.useIsUserRecentGamesEnabled)({
     userId: s.id,
     location: "28tk0bf_3"
   }), O = (0, I.default)(s.id), F = a.useRef(null);
@@ -65,7 +65,7 @@ function p(e) {
         userId: s.id,
         headingClassName: h.userInfoSectionHeader,
         textClassName: h.userInfoText
-      }), C && (0, l.jsx)("div", {
+      }), M && (0, l.jsx)("div", {
         className: h.clans,
         children: (0, l.jsx)("div", {
           className: h.userInfoText,
@@ -93,7 +93,7 @@ function p(e) {
       ref: F,
       connectedAccounts: O,
       theme: P,
-      locale: M,
+      locale: C,
       className: h.userInfoSection,
       userId: s.id
     })]

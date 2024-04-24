@@ -31,8 +31,8 @@ var l = s("735250"),
   g = s("58307"),
   R = s("62154"),
   P = s("293259"),
-  M = s("725954"),
-  C = s("228168"),
+  C = s("725954"),
+  M = s("228168"),
   y = s("981631"),
   O = s("689938"),
   F = s("775149");
@@ -79,23 +79,23 @@ function L(e) {
       className: F.tabBar,
       children: [!t.isNonUserBot() || t.isClyde() ? (0, l.jsx)(r.TabBar.Item, {
         className: F.tabBarItem,
-        id: C.UserProfileSections.USER_INFO,
+        id: M.UserProfileSections.USER_INFO,
         children: O.default.Messages.USER_INFO
       }) : null, !t.bot && u ? (0, l.jsx)(r.TabBar.Item, {
         className: F.tabBarItem,
-        id: C.UserProfileSections.ACTIVITY,
+        id: M.UserProfileSections.ACTIVITY,
         children: O.default.Messages.USER_PROFILE_ACTIVITY
       }) : null, t.bot || s ? null : (0, l.jsx)(r.TabBar.Item, {
         className: F.tabBarItem,
-        id: C.UserProfileSections.MUTUAL_FRIENDS,
+        id: M.UserProfileSections.MUTUAL_FRIENDS,
         children: I
       }), s || t.isClyde() ? null : (0, l.jsx)(r.TabBar.Item, {
         className: F.tabBarItem,
-        id: C.UserProfileSections.MUTUAL_GUILDS,
+        id: M.UserProfileSections.MUTUAL_GUILDS,
         children: v
       }), t.bot && d ? (0, l.jsx)(r.TabBar.Item, {
         className: F.tabBarItem,
-        id: C.UserProfileSections.BOT_DATA_ACCESS,
+        id: M.UserProfileSections.BOT_DATA_ACCESS,
         children: O.default.Messages.BOTS_DATA_ACCESS_TAB
       }) : null]
     })
@@ -112,7 +112,7 @@ function D(e) {
     roleId: b,
     friendToken: B,
     autoFocusNote: G,
-    initialSection: k = C.UserProfileSections.USER_INFO,
+    initialSection: k = M.UserProfileSections.USER_INFO,
     transitionState: V,
     sourceAnalyticsLocations: w = [],
     onClose: H
@@ -126,7 +126,7 @@ function D(e) {
     Z = (0, i.useStateFromStores)([I.default], () => I.default.findActivity(Y.id, e => e.type !== y.ActivityTypes.CUSTOM_STATUS)),
     J = (0, g.useGetVoiceChannelInfoForVoiceActivitySection)(Y.id, N),
     [Q, q] = a.useState(!1),
-    [X, $] = a.useState(Y.isNonUserBot() && !Y.isClyde() ? C.UserProfileSections.MUTUAL_GUILDS : k),
+    [X, $] = a.useState(Y.isNonUserBot() && !Y.isClyde() ? M.UserProfileSections.MUTUAL_GUILDS : k),
     ee = (0, i.useStateFromStores)([E.default], () => E.default.getId() === Y.id),
     {
       showVoiceActivityInProfile: et
@@ -139,7 +139,7 @@ function D(e) {
     el = !ee || es,
     ea = a.createRef(),
     ei = (0, o.default)(ea);
-  !es && X === C.UserProfileSections.ACTIVITY && $(C.UserProfileSections.USER_INFO);
+  !es && X === M.UserProfileSections.ACTIVITY && $(M.UserProfileSections.USER_INFO);
   let er = a.useCallback(e => {
       (0, A.trackUserProfileAction)({
         action: "PRESS_SECTION",
@@ -174,7 +174,7 @@ function D(e) {
             children: (0, l.jsxs)(j.default, {
               user: Y,
               displayProfile: z,
-              profileType: C.UserProfileTypes.MODAL,
+              profileType: M.UserProfileTypes.MODAL,
               children: [(0, l.jsx)(P.default, {
                 className: F.topSection,
                 displayProfile: z,
@@ -190,12 +190,12 @@ function D(e) {
                   onTooltipClose: H
                 }), (0, l.jsxs)("div", {
                   className: F.body,
-                  children: [(0, l.jsx)(M.default, {
+                  children: [(0, l.jsx)(C.default, {
                     user: Y,
                     displayProfile: z
                   }), el ? (0, l.jsx)(L, {
                     user: Y,
-                    section: X === C.UserProfileSections.USER_INFO_CONNECTIONS ? C.UserProfileSections.USER_INFO : X,
+                    section: X === M.UserProfileSections.USER_INFO_CONNECTIONS ? M.UserProfileSections.USER_INFO : X,
                     setSection: er,
                     hasActivity: es,
                     isCurrentUser: ee
