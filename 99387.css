@@ -47678,12 +47678,12 @@ span.clanTag_f4aadc {
 .streamerModeEnabledBtn_b696dd {
     margin-top: 20px;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 1.125rem;
     color: var(--white-500);
     background-color: var(--twitch);
     padding: 10px 20px;
     border-radius: 3px;
-    line-height: 29px;
+    line-height: 1.8125rem;
     text-transform: uppercase;
     cursor: pointer
 }
@@ -54070,6 +54070,10 @@ input[type=checkbox]:focus-visible+.label__8e100 {
     background-color: hsl(var(--primary-500-hsl)/.9)
 }
 
+.webkit__8d35a {
+    scrollbar-width: auto
+}
+
 .webkit__8d35a::-webkit-scrollbar {
     width: 12px;
     height: 12px
@@ -58066,18 +58070,16 @@ input[type=checkbox]:focus-visible+.label__8e100 {
     overflow: hidden
 }
 
-.messageInputContainer__67b4c {
-    border-radius: var(--radius-sm);
+.inner_e8ffd7 {
     background: var(--input-background)
 }
 
-.custom-profile-theme .messageInputContainer__67b4c {
+.custom-profile-theme .inner_e8ffd7 {
     background: rgb(var(--bg-overlay-color-inverse)/.1)
 }
 
-.messageInput_c1c1c4 {
-    background-color: transparent;
-    height: 44px
+.editor_f63872 {
+    --channel-text-area-placeholder: var(--text-muted)
 }
 
 .container_badb01 {

@@ -49,20 +49,6 @@ a("553795"), a("594174"), a("981631"), (0, n.createExperiment)({
   }]
 }), (0, n.createExperiment)({
   kind: "user",
-  id: "2023-06_guild_contact_invite_imessage_overlay",
-  label: "Friend Finder guild contact invite imessage overlay",
-  defaultConfig: {
-    enabled: !1
-  },
-  treatments: [{
-    id: 1,
-    label: "Enable iMessage Overlay",
-    config: {
-      enabled: !0
-    }
-  }]
-}), (0, n.createExperiment)({
-  kind: "user",
   id: "2023-10_username_lookup_killswitch",
   label: "Friend Finder Username Lookup Killswitch",
   defaultConfig: {
