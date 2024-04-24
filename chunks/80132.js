@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return m
   }
 });
 var i = n("735250");
@@ -10,34 +10,34 @@ var r = n("120356"),
   s = n.n(r),
   a = n("481060"),
   o = n("315263"),
-  l = n("40851"),
-  u = n("100527"),
-  d = n("906732"),
-  _ = n("617136"),
-  c = n("497505"),
-  E = n("626135"),
-  I = n("785717"),
-  T = n("221292"),
-  f = n("290421"),
-  S = n("228168"),
-  h = n("981631"),
-  A = n("689938"),
-  m = n("104018");
+  l = n("100527"),
+  u = n("906732"),
+  d = n("617136"),
+  _ = n("497505"),
+  c = n("626135"),
+  E = n("785717"),
+  I = n("221292"),
+  T = n("290421"),
+  f = n("228168"),
+  S = n("981631"),
+  h = n("689938"),
+  A = n("104018");
 
-function N(e) {
+function m(e) {
   let {
     badges: t,
     className: n,
-    badgeClassName: r
+    badgeClassName: r,
+    onClose: m
   } = e, {
     analyticsLocations: N
-  } = (0, d.default)(u.default.BADGE), {
+  } = (0, u.default)(l.default.BADGE), {
     trackUserProfileAction: p,
     ...O
-  } = (0, I.useUserProfileAnalyticsContext)(), R = (0, l.useWindowDispatch)();
+  } = (0, E.useUserProfileAnalyticsContext)();
   return (0, i.jsx)("div", {
-    className: s()(m.container, n),
-    "aria-label": A.default.Messages.PROFILE_USER_BADGES,
+    className: s()(A.container, n),
+    "aria-label": h.default.Messages.PROFILE_USER_BADGES,
     role: "group",
     children: t.map(e => (0, i.jsx)(a.TooltipContainer, {
       text: e.description,
@@ -45,7 +45,7 @@ function N(e) {
         onClick: t => {
           p({
             action: "PRESS_BADGE"
-          }), (0, T.trackUserProfileBadgePressed)({
+          }), (0, I.trackUserProfileBadgePressed)({
             badge: e.id,
             analyticsLocations: N,
             ...O
@@ -53,14 +53,14 @@ function N(e) {
           let n = null != e.link ? (0, o.default)(e.link, {
             analyticsLocations: N
           }) : null;
-          if (null != n) return R.dispatch(h.ComponentActions.POPOUT_CLOSE), n(t)
+          if (null != n) return null == m || m(), n(t)
         },
         onMouseEnter: () => {
-          e.id === f.QUEST_COMPLETED_BADGE && E.default.track(h.AnalyticEvents.QUEST_CONTENT_VIEWED, {
-            ...(0, _.getContentProperties)(c.QuestContent.QUEST_BADGE)
+          e.id === T.QUEST_COMPLETED_BADGE && c.default.track(S.AnalyticEvents.QUEST_CONTENT_VIEWED, {
+            ...(0, d.getContentProperties)(_.QuestContent.QUEST_BADGE)
           }), p({
             action: "HOVER_BADGE"
-          }), (0, T.trackUserProfileBadgeHovered)({
+          }), (0, I.trackUserProfileBadgeHovered)({
             badge: e.id,
             analyticsLocations: N,
             ...O
@@ -70,8 +70,8 @@ function N(e) {
         children: (0, i.jsx)("img", {
           alt: " ",
           "aria-hidden": !0,
-          src: (0, S.getBadgeAsset)(e.icon),
-          className: s()(m.badge, r)
+          src: (0, f.getBadgeAsset)(e.icon),
+          className: s()(A.badge, r)
         })
       })
     }, e.id))

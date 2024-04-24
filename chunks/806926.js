@@ -39,7 +39,8 @@ function E(e) {
         nicknameVariant: "heading-xl/bold"
       }), _.length > 0 && (0, l.jsx)(n.default, {
         badges: _,
-        className: m.badgeList
+        className: m.badgeList,
+        onClose: x
       })]
     }), null != T && (0, l.jsx)(u.default, {
       activity: T
