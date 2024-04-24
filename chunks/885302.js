@@ -145,10 +145,10 @@ t.default = e => {
         y2: "43.8345",
         gradientUnits: "userSpaceOnUse",
         children: [(0, s.jsx)("stop", {
-          "stop-color": "#B473F5"
+          stopColor: "#B473F5"
         }), (0, s.jsx)("stop", {
           offset: "1",
-          "stop-color": "#E292AA"
+          stopColor: "#E292AA"
         })]
       }), (0, s.jsxs)("linearGradient", {
         id: "paint1_linear_1282_11577",
@@ -171,10 +171,10 @@ t.default = e => {
         y2: "43.8345",
         gradientUnits: "userSpaceOnUse",
         children: [(0, s.jsx)("stop", {
-          "stop-color": "#B473F5"
+          stopColor: "#B473F5"
         }), (0, s.jsx)("stop", {
           offset: "1",
-          "stop-color": "#E292AA"
+          stopColor: "#E292AA"
         })]
       }), (0, s.jsxs)("linearGradient", {
         id: "paint2_linear_1282_11577",
@@ -197,10 +197,10 @@ t.default = e => {
         y2: "43.8345",
         gradientUnits: "userSpaceOnUse",
         children: [(0, s.jsx)("stop", {
-          "stop-color": "#B473F5"
+          stopColor: "#B473F5"
         }), (0, s.jsx)("stop", {
           offset: "1",
-          "stop-color": "#E292AA"
+          stopColor: "#E292AA"
         })]
       }), (0, s.jsxs)("linearGradient", {
         id: "paint0_linear_1282_11557",

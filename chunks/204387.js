@@ -4,41 +4,51 @@ t.r(s), t.d(s, {
     return a
   }
 }), t("47120");
-var a, r, i = t("735250"),
-  l = t("470079"),
+var a, r, l = t("735250"),
+  i = t("470079"),
   n = t("481060"),
-  C = t("281494"),
-  o = t("687555"),
-  d = t("596583");
+  C = t("100527"),
+  o = t("906732"),
+  d = t("626135"),
+  c = t("281494"),
+  u = t("687555"),
+  f = t("596583"),
+  x = t("981631");
 (r = a || (a = {}))[r.SELECT_FRIENDS = 1] = "SELECT_FRIENDS", r[r.CONFIRMATION = 2] = "CONFIRMATION";
 s.default = e => {
   let s, {
       transitionState: t,
-      onClose: a
+      onClose: a,
+      sourceAnalyticsLocations: r
     } = e,
-    [r, c] = l.useState(1),
-    [u, f] = l.useState(new Set);
-  switch (r) {
+    [h, p] = i.useState(1),
+    [_, R] = i.useState(new Set),
+    {
+      analyticsLocations: j
+    } = (0, o.default)([...r, C.default.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
+  switch (h) {
     case 1:
-      s = (0, i.jsx)(o.default, {
+      s = (0, l.jsx)(u.default, {
         onShare: async e => {
           try {
-            await (0, C.createReferralTrials)(e.map(e => e.id)), c(2), f(new Set(e))
+            d.default.track(x.AnalyticEvents.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, {
+              location_stack: j
+            }), await (0, c.createReferralTrials)(e.map(e => e.id)), p(2), R(new Set(e))
           } catch {}
         },
         onClose: a
       });
       break;
     case 2:
-      s = (0, i.jsx)(d.default, {
-        selectedUsers: u,
+      s = (0, l.jsx)(f.default, {
+        selectedUsers: _,
         onClose: a
       });
       break;
     default:
       a()
   }
-  return (0, i.jsx)(n.ModalRoot, {
+  return (0, l.jsx)(n.ModalRoot, {
     transitionState: t,
     children: s
   })
