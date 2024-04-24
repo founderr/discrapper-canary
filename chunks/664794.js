@@ -77,6 +77,7 @@ function f(e) {
         })
       },
       children: e => (0, i.jsx)(I.default, {
+        text: T.default.Messages.MORE,
         icon: c.default,
         ...e
       })
