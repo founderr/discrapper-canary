@@ -3,12 +3,12 @@ n.r(t), n.d(t, {
   getTransformedBadgeColors: function() {
     return a
   }
-}), n("411104");
+});
 var i = n("688619"),
   r = n.n(i);
 
 function s(e, t, n) {
-  if (!r().valid(t)) throw Error("Invalid badge tint color ".concat(t));
+  if (!r().valid(t)) return e.map(() => "#000000");
   let i = r()(t),
     s = i.luminance();
   return e.map((e, t) => i.luminance((e * n[t].base + s * n[t].tint) / (n[t].base + n[t].tint)).hex())
