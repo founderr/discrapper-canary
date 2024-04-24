@@ -23,14 +23,14 @@ var n = a("735250"),
   A = a("670638"),
   N = a("667105"),
   v = a("689938"),
-  R = a("881521");
+  R = a("396030");
 let O = s.forwardRef(function(e, t) {
   var a, l;
   let {
     className: O,
     isExpanded: L,
-    isExpansionAnimationComplete: P,
-    onCtxMenuOpen: M,
+    isExpansionAnimationComplete: M,
+    onCtxMenuOpen: P,
     onCtxMenuClose: x,
     onCtxMenuSelect: y,
     quest: D,
@@ -43,7 +43,7 @@ let O = s.forwardRef(function(e, t) {
   }, [D]), F = (0, N.useHandleClaimQuestsReward)({
     quest: D,
     location: m.QuestContent.QUEST_BAR
-  }), B = (null === (a = D.userStatus) || void 0 === a ? void 0 : a.enrolledAt) != null, H = (null === (l = D.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, V = s.useMemo(() => (0, S.hasQuestCollectibleRewards)(D.config), [D.config]), Y = L && P, W = (0, S.getQuestBarHeroAssetUrl)(D), K = (0, S.getQuestsInstructionsToWinReward)({
+  }), B = (null === (a = D.userStatus) || void 0 === a ? void 0 : a.enrolledAt) != null, H = (null === (l = D.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, V = s.useMemo(() => (0, S.hasQuestCollectibleRewards)(D.config), [D.config]), Y = L && M, W = (0, S.getQuestBarHeroAssetUrl)(D), K = (0, S.getQuestsInstructionsToWinReward)({
     quest: D
   }), z = s.useMemo(() => {
     let e = (0, u.getContrastingColor)(D.config.colors.primary, {
@@ -90,7 +90,7 @@ let O = s.forwardRef(function(e, t) {
             })]
           })]
         }), (0, n.jsx)(A.QuestsEntryContextMenuPopout, {
-          onOpen: M,
+          onOpen: P,
           onClose: x,
           onSelect: y,
           questContent: m.QuestContent.QUEST_BAR,
@@ -132,7 +132,7 @@ let O = s.forwardRef(function(e, t) {
           children: [(0, n.jsx)(p.default, {
             color: "always-white"
           }), (0, n.jsx)(A.QuestsEntryContextMenuPopout, {
-            onOpen: M,
+            onOpen: P,
             onClose: x,
             onSelect: y,
             questContent: m.QuestContent.QUEST_BAR,
@@ -184,7 +184,7 @@ let O = s.forwardRef(function(e, t) {
           color: D.config.colors.secondary
         },
         children: w ? (0, n.jsx)(g.QuestsAsset, {
-          id: "QuestsBarContentExpanded_heroAnimated",
+          id: "QuestBarContentExpanded_heroAnimated",
           children: e => (0, n.jsx)(f.default, {
             ref: e,
             autoPlay: !b,
@@ -199,7 +199,7 @@ let O = s.forwardRef(function(e, t) {
             })
           })
         }) : (0, n.jsx)(g.QuestsAsset, {
-          id: "QuestsBarContentExpanded_heroStatic",
+          id: "QuestBarContentExpanded_heroStatic",
           children: e => (0, n.jsx)("img", {
             ref: e,
             alt: "",

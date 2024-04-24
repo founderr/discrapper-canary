@@ -10,9 +10,9 @@ var s = a("120356"),
   u = a("685613"),
   d = a("340100"),
   c = a("644646"),
-  f = a("580168"),
+  f = a("898170"),
   E = a("689938"),
-  h = a("603961");
+  h = a("36813");
 t.default = function(e) {
   var t, a, s;
   let {
@@ -35,7 +35,7 @@ t.default = function(e) {
         output: [1, 0]
       })
     },
-    children: [(0, n.jsx)(f.QuestsBarBackgroundAnimation, {
+    children: [(0, n.jsx)(f.QuestBarBackgroundAnimation, {
       quest: I,
       useReducedMotion: p
     }), (0, n.jsx)("div", {

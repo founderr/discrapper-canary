@@ -1,6 +1,6 @@
 "use strict";
 a.r(t), a.d(t, {
-  QuestsBarBackgroundAnimation: function() {
+  QuestBarBackgroundAnimation: function() {
     return m
   }
 }), a("47120"), a("724458");
@@ -14,7 +14,7 @@ var n = a("735250"),
   d = a("451478"),
   c = a("301822"),
   f = a("302221"),
-  E = a("311676");
+  E = a("328877");
 let h = [0, .5, 1],
   _ = {
     "layers[1].shapes[1].g.k.k": [0, .522, .278, .776, .5, .522, .278, .776, 1, .522, .278, .776],
