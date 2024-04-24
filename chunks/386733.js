@@ -154,7 +154,7 @@ t.default = e => {
         [C.expandedProgressBarContentVariant2]: x
       }),
       children: [(0, a.jsx)(o.Heading, {
-        variant: "heading-xxl/extrabold",
+        variant: t ? "heading-xl/extrabold" : "heading-xxl/extrabold",
         className: C.expandedProgressBarHeader,
         children: U
       }), (0, a.jsx)(h, {
