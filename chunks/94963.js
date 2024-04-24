@@ -75,15 +75,15 @@ t.default = e => {
   } = e, d = (0, E.useStateFromStores)([m.default], () => m.default.getGuild(u)), c = null !== (t = (0, E.useStateFromStores)([C.default], () => C.default.getMemberCount(u))) && void 0 !== t ? t : 0, [f, R] = s.useState(o.banner), [O, L] = s.useState({
     primary: o.brandPrimaryColor,
     secondary: o.brandSecondaryColor
-  }), [P, M] = s.useState(() => {
+  }), [M, P] = s.useState(() => {
     if (o.brandPrimaryColor === o.badgePrimaryColor && o.brandSecondaryColor === o.badgeSecondaryColor) return 0;
     for (let e = 0; e < I.CLAN_BRAND_PALETTE_PRESETS.length; e++)
       if (I.CLAN_BRAND_PALETTE_PRESETS[e].primary === o.brandPrimaryColor && I.CLAN_BRAND_PALETTE_PRESETS[e].secondary === o.brandSecondaryColor) return e + 1;
     return A
-  }), [x, y] = s.useState(!1), D = A === P, b = D ? O : 0 === P ? {
+  }), [x, y] = s.useState(!1), D = A === M, b = D ? O : 0 === M ? {
     primary: o.badgePrimaryColor,
     secondary: o.badgeSecondaryColor
-  } : I.CLAN_BRAND_PALETTE_PRESETS[P - 1];
+  } : I.CLAN_BRAND_PALETTE_PRESETS[M - 1];
   return s.useEffect(() => {
     l({
       banner: f,
@@ -115,13 +115,13 @@ t.default = e => {
             className: T.colorPickerGrid,
             children: [(0, n.jsx)(h.Clickable, {
               onClick: () => {
-                M(0), L({
+                P(0), L({
                   primary: o.badgePrimaryColor,
                   secondary: o.badgeSecondaryColor
                 })
               },
               className: i()(T.brandItemContainer, {
-                [T.brandItemContainerSelected]: 0 === P
+                [T.brandItemContainerSelected]: 0 === M
               }),
               children: (0, n.jsx)(v, {
                 name: p.default.Messages.CLAN_LOOK_PRESET_BADGE,
@@ -131,10 +131,10 @@ t.default = e => {
             }), I.CLAN_BRAND_PALETTE_PRESETS.map((e, t) => (0, n.jsx)(h.Clickable, {
               "aria-label": e.name,
               onClick: () => {
-                M(t + 1), L(I.CLAN_BRAND_PALETTE_PRESETS[t])
+                P(t + 1), L(I.CLAN_BRAND_PALETTE_PRESETS[t])
               },
               className: i()(T.brandItemContainer, {
-                [T.brandItemContainerSelected]: P === t + 1
+                [T.brandItemContainerSelected]: M === t + 1
               }),
               children: (0, n.jsx)(v, {
                 name: e.name,
@@ -161,10 +161,10 @@ t.default = e => {
               children: e => (0, n.jsx)(h.Clickable, {
                 ...e,
                 onClick: () => {
-                  M(A), y(e => !e)
+                  P(A), y(e => !e)
                 },
                 className: i()(T.brandItemContainer, {
-                  [T.brandItemContainerSelected]: P === A
+                  [T.brandItemContainerSelected]: M === A
                 }),
                 children: (0, n.jsx)(v, {
                   name: p.default.Messages.CLAN_LOOK_PRESET_CUSTOM,

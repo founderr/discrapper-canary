@@ -1,41 +1,41 @@
 "use strict";
 n.r(t), n.d(t, {
   getResizeObserver: function() {
-    return i
+    return a
   },
   unwatch: function() {
-    return o
+    return l
   },
   watch: function() {
-    return r
+    return o
   }
 }), n("47120");
-let a = new WeakMap,
-  l = new WeakMap;
+let i = new WeakMap,
+  r = new WeakMap;
 
 function s(e, t) {
   e.forEach(e => {
     var n;
-    let a = null === (n = l.get(t)) || void 0 === n ? void 0 : n.get(e.target);
-    null != a && a.call(null, e)
+    let i = null === (n = r.get(t)) || void 0 === n ? void 0 : n.get(e.target);
+    null != i && i.call(null, e)
   })
 }
 
-function i(e) {
-  let t = a.get(e);
-  return null == t && (t = new ResizeObserver(s), a.set(e, t), l.set(t, new WeakMap)), t
+function a(e) {
+  let t = i.get(e);
+  return null == t && (t = new ResizeObserver(s), i.set(e, t), r.set(t, new WeakMap)), t
 }
 
-function r(e, t, n) {
-  var a;
-  let s = i(e),
-    r = null !== (a = l.get(s)) && void 0 !== a ? a : new WeakMap;
-  !r.has(t) && s.observe(t), r.set(t, n), l.set(s, r)
+function o(e, t, n) {
+  var i;
+  let s = a(e),
+    o = null !== (i = r.get(s)) && void 0 !== i ? i : new WeakMap;
+  !o.has(t) && s.observe(t), o.set(t, n), r.set(s, o)
 }
 
-function o(e, t) {
+function l(e, t) {
   var n;
-  let a = i(e),
-    s = null !== (n = l.get(a)) && void 0 !== n ? n : new WeakMap;
-  s.has(t) && (s.delete(t), a.unobserve(t), l.set(a, s))
+  let i = a(e),
+    s = null !== (n = r.get(i)) && void 0 !== n ? n : new WeakMap;
+  s.has(t) && (s.delete(t), i.unobserve(t), r.set(i, s))
 }

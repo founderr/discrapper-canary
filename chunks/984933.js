@@ -43,11 +43,11 @@ let L = "SELECTABLE",
       name: g.default.Messages.UNCATEGORIZED
     })
   },
-  w = F(C.NULL_STRING_GUILD_ID),
-  k = [],
-  B = {};
+  w = V(C.NULL_STRING_GUILD_ID),
+  B = [],
+  k = {};
 
-function F(e) {
+function V(e) {
   return {
     id: e,
     [L]: [],
@@ -57,7 +57,7 @@ function F(e) {
   }
 }
 
-function V(e, t) {
+function x(e, t) {
   let {
     comparator: n
   } = e, {
@@ -66,13 +66,13 @@ function V(e, t) {
   return n - i
 }
 
-function x() {
+function F() {
   M = {}, b = {}, y = {}, P = {}, null != v && H(v)
 }
 
 function H(e) {
   var t;
-  let n = F(e);
+  let n = V(e);
   return M[e] = n, b[e] = [], ! function(e) {
       let {
         id: t
@@ -107,7 +107,7 @@ function H(e) {
         let s = (i = r.type, (0, f.isGuildSelectableChannelType)(i) ? L : (0, f.isGuildVocalChannelType)(i) ? D : i);
         r.type === C.ChannelTypes.GUILD_DIRECTORY && (null == b[t] && (b[t] = []), b[t].push(n)), null != e[s] && e[s].push(n)
       })
-    }(n), (t = n)[L].sort(V), t[D].sort(V), t[C.ChannelTypes.GUILD_CATEGORY].sort(V),
+    }(n), (t = n)[L].sort(x), t[D].sort(x), t[C.ChannelTypes.GUILD_CATEGORY].sort(x),
     function(e) {
       let t = y[e.id] = {},
         n = {};
@@ -248,7 +248,7 @@ class Q extends(i = d.default.Store) {
         channel: t
       } = e;
       return t.id
-    })) && void 0 !== n ? n : k
+    })) && void 0 !== n ? n : B
   }
   hasSelectableChannel(e, t) {
     return this.getSelectableChannelIds(e).includes(t)
@@ -264,7 +264,7 @@ class Q extends(i = d.default.Store) {
   }
   getTextChannelNameDisambiguations(e) {
     var t;
-    return null != e && null !== (t = y[e]) && void 0 !== t ? t : B
+    return null != e && null !== (t = y[e]) && void 0 !== t ? t : k
   }
 }
 a = "GuildChannelStore", (s = "displayName") in(r = Q) ? Object.defineProperty(r, s, {
@@ -273,7 +273,7 @@ a = "GuildChannelStore", (s = "displayName") in(r = Q) ? Object.defineProperty(r
   configurable: !0,
   writable: !0
 }) : r[s] = a, t.default = new Q(_.default, {
-  BACKGROUND_SYNC: x,
+  BACKGROUND_SYNC: F,
   CHANNEL_SELECT: function(e) {
     let {
       guildId: t
@@ -281,9 +281,9 @@ a = "GuildChannelStore", (s = "displayName") in(r = Q) ? Object.defineProperty(r
     if (v = null != t ? t : null, null == t || null != M[t]) return !1;
     H(t)
   },
-  CONNECTION_OPEN: x,
-  OVERLAY_INITIALIZE: x,
-  CACHE_LOADED_LAZY: x,
+  CONNECTION_OPEN: F,
+  OVERLAY_INITIALIZE: F,
+  CACHE_LOADED_LAZY: F,
   GUILD_CREATE: Y,
   GUILD_UPDATE: Y,
   GUILD_DELETE: function(e) {

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   },
   findGiftCodes: function() {
-    return B
+    return k
   },
   firstLibraryApplicationForGiftCode: function() {
     return z
@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return K
   },
   getGiftCodeURL: function() {
-    return F
+    return V
   },
   getGiftExperience: function() {
     return P
@@ -31,7 +31,7 @@ n.r(t), n.d(t, {
     return H
   },
   isGiftCodeEmbed: function() {
-    return k
+    return B
   },
   makeComboId: function() {
     return b
@@ -43,13 +43,13 @@ n.r(t), n.d(t, {
     return X
   },
   resolveGiftCode: function() {
-    return V
+    return x
   },
   shouldShowCustomGiftExperience: function() {
     return U
   },
   trackGiftCodeCopy: function() {
-    return x
+    return F
   },
   useGetGiftCode: function() {
     return Q
@@ -104,8 +104,8 @@ function G(e) {
 function w(e) {
   return e.replace(/[^A-Za-z0-9]/g, "")
 }
-let k = e => (null == e ? void 0 : e.type) === h.MessageTypes.CUSTOM_GIFT && (null == e ? void 0 : e.embeds.length) === 1 && (null == e ? void 0 : e.embeds[0].type) === h.MessageEmbedTypes.GIFT,
-  B = e => {
+let B = e => (null == e ? void 0 : e.type) === h.MessageTypes.CUSTOM_GIFT && (null == e ? void 0 : e.embeds.length) === 1 && (null == e ? void 0 : e.embeds[0].type) === h.MessageEmbedTypes.GIFT,
+  k = e => {
     let t;
     if (null == e) return [];
     let n = new Set;
@@ -114,12 +114,12 @@ let k = e => (null == e ? void 0 : e.type) === h.MessageTypes.CUSTOM_GIFT && (nu
     return Array.from(n)
   };
 
-function F() {
+function V() {
   let e, t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
     n = window.GLOBAL_ENV.GIFT_CODE_HOST;
   return null == n || (0, I.isAndroid)() ? (n = location.host, e = "/gifts/".concat(t)) : e = "/".concat(t), "".concat(location.protocol, "//").concat(n).concat(e)
 }
-async function V(e) {
+async function x(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   try {
@@ -150,7 +150,7 @@ async function V(e) {
   }
 }
 
-function x(e, t) {
+function F(e, t) {
   c.default.track(h.AnalyticEvents.GIFT_CODE_COPIED, {
     ...(0, u.default)(t, !1, !1),
     ...e.analyticsData

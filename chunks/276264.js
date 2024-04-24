@@ -46,11 +46,11 @@ t.default = function(e) {
     user: b,
     currentUser: G,
     activities: w,
-    applicationStream: k,
-    status: B,
-    shouldAnimateStatus: F = !1,
-    isMobile: V,
-    premiumSince: x,
+    applicationStream: B,
+    status: k,
+    shouldAnimateStatus: V = !1,
+    isMobile: x,
+    premiumSince: F,
     channel: H,
     guildId: Y,
     className: j,
@@ -99,7 +99,7 @@ t.default = function(e) {
         textClassName: v.activityText,
         emojiClassName: v.activityEmoji,
         activities: w,
-        applicationStream: k,
+        applicationStream: B,
         animate: eo,
         hideEmoji: !t,
         hideTooltip: !0,
@@ -114,9 +114,9 @@ t.default = function(e) {
         className: v.ownerIcon
       })
     }) : null,
-    eO = () => null == x ? null : (0, i.jsx)(l.Tooltip, {
+    eO = () => null == F ? null : (0, i.jsx)(l.Tooltip, {
       text: D.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TOOLTIP.format({
-        date: x
+        date: F
       }),
       children: e => (0, i.jsx)(l.Clickable, {
         onClick: Q,
@@ -139,14 +139,14 @@ t.default = function(e) {
       children: [eR(), ep(), eO()]
     }),
     eg = (e, t) => {
-      let n = F ? l.AnimatedAvatar : l.Avatar,
-        r = (0, u.default)(w) ? C.StatusTypes.STREAMING : B;
+      let n = V ? l.AnimatedAvatar : l.Avatar,
+        r = (0, u.default)(w) ? C.StatusTypes.STREAMING : k;
       return r = t ? void 0 : r, (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(n, {
           ...eE,
           size: l.AvatarSizes.SIZE_32,
           src: ec,
-          isMobile: V,
+          isMobile: x,
           isTyping: P,
           status: r,
           "aria-label": e.username,
@@ -173,7 +173,7 @@ t.default = function(e) {
         className: v.clanTag
       })]
     }),
-    eD = B === C.StatusTypes.OFFLINE;
+    eD = k === C.StatusTypes.OFFLINE;
   return null == b ? (0, i.jsx)(h.default, {
     avatarSize: l.AvatarSizes.SIZE_32,
     className: v.placeholder
@@ -182,7 +182,7 @@ t.default = function(e) {
       var t, n;
       return (0, i.jsx)(I.default, {
         quest: ef,
-        applicationStream: k,
+        applicationStream: B,
         width: null !== (n = null === (t = ea.current) || void 0 === t ? void 0 : t.clientWidth) && void 0 !== n ? n : 222,
         ...e,
         closePopout: () => eT(!0)

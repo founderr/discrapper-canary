@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return F
+    return V
   }
 }), n("536091"), n("47120");
 var i = n("735250"),
@@ -79,7 +79,7 @@ function w(e) {
   })
 }
 
-function k(e) {
+function B(e) {
   let {
     eligibilityStates: t
   } = e, n = (0, T.default)(), r = (0, c.useToken)(d.default.unsafe_rawColors.GREEN_330).hex(), s = l().groupBy(t, e => "".concat(e.connection_type).concat(null != e.application_id ? ":".concat(e.application_id) : ""));
@@ -138,7 +138,7 @@ function k(e) {
   })
 }
 
-function B(e) {
+function k(e) {
   let t, {
     onGetRolesClicked: n,
     onOpenProfile: s,
@@ -172,7 +172,7 @@ function B(e) {
       })
     }), (0, i.jsx)("div", {
       className: G.popoutChecks,
-      children: (0, i.jsx)(k, {
+      children: (0, i.jsx)(B, {
         eligibilityStates: a.flat()
       })
     }), (0, i.jsxs)("div", {
@@ -191,7 +191,7 @@ function B(e) {
   })
 }
 
-function F(e) {
+function V(e) {
   let {
     userId: t,
     messageId: n,
@@ -211,7 +211,7 @@ function F(e) {
         let {
           closePopout: r
         } = e;
-        return null == _ ? (0, i.jsx)(i.Fragment, {}) : (a()(null != d, "visibleConnectionsRole is null"), (0, i.jsx)(B, {
+        return null == _ ? (0, i.jsx)(i.Fragment, {}) : (a()(null != d, "visibleConnectionsRole is null"), (0, i.jsx)(k, {
           eligibilityStates: _,
           userId: t,
           roleId: d.id,

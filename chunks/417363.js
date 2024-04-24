@@ -37,16 +37,16 @@ function w(e) {
   return e.type === O.LocalDispatchApplicationStates.INSTALLING || e.type === O.LocalDispatchApplicationStates.UPDATING || e.type === O.LocalDispatchApplicationStates.REPAIRING ? e.diskProgress : null
 }
 
-function k(e) {
+function B(e) {
   return e.type === O.LocalDispatchApplicationStates.INSTALLING || e.type === O.LocalDispatchApplicationStates.UPDATING || e.type === O.LocalDispatchApplicationStates.REPAIRING ? e.readerProgress : null
 }
-let B = u().throttle(function(e) {
+let k = u().throttle(function(e) {
     P = (P = [{
       bytes: e,
       timestamp: Date.now()
     }, ...P]).slice(0, 200)
   }, 200),
-  F = u().throttle(function(e) {
+  V = u().throttle(function(e) {
     let t = Date.now(),
       n = t - R;
     y = (y = [{
@@ -59,14 +59,14 @@ let B = u().throttle(function(e) {
       return t >= n
     })
   }, 200),
-  V = u().throttle(function(e) {
+  x = u().throttle(function(e) {
     U = (U = [{
       bytes: e,
       timestamp: Date.now()
     }, ...U]).slice(0, 200)
   }, 200);
 
-function x(e, t, n) {
+function F(e, t, n) {
   let i = n(C[t]),
     r = n(e[t]);
   return null != i && null != r && 0 !== i ? Math.max(r - i, 0) : 0
@@ -263,12 +263,12 @@ o = "DispatchApplicationStore", (a = "displayName") in(s = H) ? Object.definePro
             }
             throw Error("Invalid Dispatch State. state=".concat(e.state.type))
           }(i[e][t]), null != C[a]) {
-          let e = x(n, a, G);
-          e > 0 && B(D += e);
-          let i = x(n, a, w);
-          i > 0 && V(v += i);
-          let o = x(n, a, k);
-          if (o > 0 && F(M += o), r === t) {
+          let e = F(n, a, G);
+          e > 0 && k(D += e);
+          let i = F(n, a, w);
+          i > 0 && x(v += i);
+          let o = F(n, a, B);
+          if (o > 0 && V(M += o), r === t) {
             let e = n[a];
             if (!0 !== e.paused && (e.type === O.LocalDispatchApplicationStates.UNINSTALLING || e.type === O.LocalDispatchApplicationStates.INSTALLING || e.type === O.LocalDispatchApplicationStates.UPDATING)) switch (e.stage) {
               case O.DispatchApplicationStages.PATCHING:

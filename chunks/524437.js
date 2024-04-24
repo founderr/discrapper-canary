@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return c
   },
   ChannelSettings: function() {
-    return V
+    return x
   },
   DebugSettings: function() {
     return ea
@@ -147,7 +147,7 @@ class v extends C.MessageType {
           r.communities = eb.internalBinaryRead(e, e.uint32(), n, r.communities);
           break;
         case 18:
-          r.broadcast = eV.internalBinaryRead(e, e.uint32(), n, r.broadcast);
+          r.broadcast = ex.internalBinaryRead(e, e.uint32(), n, r.broadcast);
           break;
         case 19:
           r.clips = eH.internalBinaryRead(e, e.uint32(), n, r.clips);
@@ -162,7 +162,7 @@ class v extends C.MessageType {
     return r
   }
   internalBinaryWrite(e, t, n) {
-    e.versions && D.Versions.internalBinaryWrite(e.versions, t.tag(1, C.WireType.LengthDelimited).fork(), n).join(), e.inbox && P.internalBinaryWrite(e.inbox, t.tag(2, C.WireType.LengthDelimited).fork(), n).join(), e.guilds && b.internalBinaryWrite(e.guilds, t.tag(3, C.WireType.LengthDelimited).fork(), n).join(), e.userContent && j.internalBinaryWrite(e.userContent, t.tag(4, C.WireType.LengthDelimited).fork(), n).join(), e.voiceAndVideo && q.internalBinaryWrite(e.voiceAndVideo, t.tag(5, C.WireType.LengthDelimited).fork(), n).join(), e.textAndImages && ee.internalBinaryWrite(e.textAndImages, t.tag(6, C.WireType.LengthDelimited).fork(), n).join(), e.notifications && en.internalBinaryWrite(e.notifications, t.tag(7, C.WireType.LengthDelimited).fork(), n).join(), e.privacy && er.internalBinaryWrite(e.privacy, t.tag(8, C.WireType.LengthDelimited).fork(), n).join(), e.debug && ea.internalBinaryWrite(e.debug, t.tag(9, C.WireType.LengthDelimited).fork(), n).join(), e.gameLibrary && el.internalBinaryWrite(e.gameLibrary, t.tag(10, C.WireType.LengthDelimited).fork(), n).join(), e.status && ed.internalBinaryWrite(e.status, t.tag(11, C.WireType.LengthDelimited).fork(), n).join(), e.localization && eI.internalBinaryWrite(e.localization, t.tag(12, C.WireType.LengthDelimited).fork(), n).join(), e.appearance && eh.internalBinaryWrite(e.appearance, t.tag(13, C.WireType.LengthDelimited).fork(), n).join(), e.guildFolders && ep.internalBinaryWrite(e.guildFolders, t.tag(14, C.WireType.LengthDelimited).fork(), n).join(), e.favorites && eg.internalBinaryWrite(e.favorites, t.tag(15, C.WireType.LengthDelimited).fork(), n).join(), e.audioContextSettings && eP.internalBinaryWrite(e.audioContextSettings, t.tag(16, C.WireType.LengthDelimited).fork(), n).join(), e.communities && eb.internalBinaryWrite(e.communities, t.tag(17, C.WireType.LengthDelimited).fork(), n).join(), e.broadcast && eV.internalBinaryWrite(e.broadcast, t.tag(18, C.WireType.LengthDelimited).fork(), n).join(), e.clips && eH.internalBinaryWrite(e.clips, t.tag(19, C.WireType.LengthDelimited).fork(), n).join();
+    e.versions && D.Versions.internalBinaryWrite(e.versions, t.tag(1, C.WireType.LengthDelimited).fork(), n).join(), e.inbox && P.internalBinaryWrite(e.inbox, t.tag(2, C.WireType.LengthDelimited).fork(), n).join(), e.guilds && b.internalBinaryWrite(e.guilds, t.tag(3, C.WireType.LengthDelimited).fork(), n).join(), e.userContent && j.internalBinaryWrite(e.userContent, t.tag(4, C.WireType.LengthDelimited).fork(), n).join(), e.voiceAndVideo && q.internalBinaryWrite(e.voiceAndVideo, t.tag(5, C.WireType.LengthDelimited).fork(), n).join(), e.textAndImages && ee.internalBinaryWrite(e.textAndImages, t.tag(6, C.WireType.LengthDelimited).fork(), n).join(), e.notifications && en.internalBinaryWrite(e.notifications, t.tag(7, C.WireType.LengthDelimited).fork(), n).join(), e.privacy && er.internalBinaryWrite(e.privacy, t.tag(8, C.WireType.LengthDelimited).fork(), n).join(), e.debug && ea.internalBinaryWrite(e.debug, t.tag(9, C.WireType.LengthDelimited).fork(), n).join(), e.gameLibrary && el.internalBinaryWrite(e.gameLibrary, t.tag(10, C.WireType.LengthDelimited).fork(), n).join(), e.status && ed.internalBinaryWrite(e.status, t.tag(11, C.WireType.LengthDelimited).fork(), n).join(), e.localization && eI.internalBinaryWrite(e.localization, t.tag(12, C.WireType.LengthDelimited).fork(), n).join(), e.appearance && eh.internalBinaryWrite(e.appearance, t.tag(13, C.WireType.LengthDelimited).fork(), n).join(), e.guildFolders && ep.internalBinaryWrite(e.guildFolders, t.tag(14, C.WireType.LengthDelimited).fork(), n).join(), e.favorites && eg.internalBinaryWrite(e.favorites, t.tag(15, C.WireType.LengthDelimited).fork(), n).join(), e.audioContextSettings && eP.internalBinaryWrite(e.audioContextSettings, t.tag(16, C.WireType.LengthDelimited).fork(), n).join(), e.communities && eb.internalBinaryWrite(e.communities, t.tag(17, C.WireType.LengthDelimited).fork(), n).join(), e.broadcast && ex.internalBinaryWrite(e.broadcast, t.tag(18, C.WireType.LengthDelimited).fork(), n).join(), e.clips && eH.internalBinaryWrite(e.clips, t.tag(19, C.WireType.LengthDelimited).fork(), n).join();
     let i = n.writeUnknownFields;
     return !1 !== i && (!0 == i ? C.UnknownFieldHandler.onWrite : i)(this.typeName, e, t), t
   }
@@ -256,7 +256,7 @@ class v extends C.MessageType {
       no: 18,
       name: "broadcast",
       kind: "message",
-      T: () => eV
+      T: () => ex
     }, {
       no: 19,
       name: "clips",
@@ -418,7 +418,7 @@ class G extends C.MessageType {
           r.dismissedGuildContent = e.bytes();
           break;
         case 6:
-          r.joinSound = eB.internalBinaryRead(e, e.uint32(), n, r.joinSound);
+          r.joinSound = ek.internalBinaryRead(e, e.uint32(), n, r.joinSound);
           break;
         case 7:
           r.mobileRedesignChannelListSettings = ef.internalBinaryRead(e, e.uint32(), n, r.mobileRedesignChannelListSettings);
@@ -452,17 +452,17 @@ class G extends C.MessageType {
           s = t.fixed64().toString();
           break;
         case 2:
-          a = V.internalBinaryRead(t, t.uint32(), n);
+          a = x.internalBinaryRead(t, t.uint32(), n);
           break;
         default:
           throw new globalThis.Error("unknown map entry field for field discord_protos.discord_users.v1.GuildSettings.channels")
       }
     }
-    e[null != s ? s : "0"] = null != a ? a : V.create()
+    e[null != s ? s : "0"] = null != a ? a : x.create()
   }
   internalBinaryWrite(e, t, n) {
-    for (let i of Object.keys(e.channels)) t.tag(1, C.WireType.LengthDelimited).fork().tag(1, C.WireType.Bit64).fixed64(i), t.tag(2, C.WireType.LengthDelimited).fork(), V.internalBinaryWrite(e.channels[i], t, n), t.join().join();
-    0 !== e.hubProgress && t.tag(2, C.WireType.Varint).uint32(e.hubProgress), 0 !== e.guildOnboardingProgress && t.tag(3, C.WireType.Varint).uint32(e.guildOnboardingProgress), e.guildRecentsDismissedAt && L.Timestamp.internalBinaryWrite(e.guildRecentsDismissedAt, t.tag(4, C.WireType.LengthDelimited).fork(), n).join(), e.dismissedGuildContent.length && t.tag(5, C.WireType.LengthDelimited).bytes(e.dismissedGuildContent), e.joinSound && eB.internalBinaryWrite(e.joinSound, t.tag(6, C.WireType.LengthDelimited).fork(), n).join(), e.mobileRedesignChannelListSettings && ef.internalBinaryWrite(e.mobileRedesignChannelListSettings, t.tag(7, C.WireType.LengthDelimited).fork(), n).join(), !1 !== e.disableRaidAlertPush && t.tag(8, C.WireType.Varint).bool(e.disableRaidAlertPush), !1 !== e.disableRaidAlertNag && t.tag(9, C.WireType.Varint).bool(e.disableRaidAlertNag), e.customNotificationSoundConfig && H.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(10, C.WireType.LengthDelimited).fork(), n).join();
+    for (let i of Object.keys(e.channels)) t.tag(1, C.WireType.LengthDelimited).fork().tag(1, C.WireType.Bit64).fixed64(i), t.tag(2, C.WireType.LengthDelimited).fork(), x.internalBinaryWrite(e.channels[i], t, n), t.join().join();
+    0 !== e.hubProgress && t.tag(2, C.WireType.Varint).uint32(e.hubProgress), 0 !== e.guildOnboardingProgress && t.tag(3, C.WireType.Varint).uint32(e.guildOnboardingProgress), e.guildRecentsDismissedAt && L.Timestamp.internalBinaryWrite(e.guildRecentsDismissedAt, t.tag(4, C.WireType.LengthDelimited).fork(), n).join(), e.dismissedGuildContent.length && t.tag(5, C.WireType.LengthDelimited).bytes(e.dismissedGuildContent), e.joinSound && ek.internalBinaryWrite(e.joinSound, t.tag(6, C.WireType.LengthDelimited).fork(), n).join(), e.mobileRedesignChannelListSettings && ef.internalBinaryWrite(e.mobileRedesignChannelListSettings, t.tag(7, C.WireType.LengthDelimited).fork(), n).join(), !1 !== e.disableRaidAlertPush && t.tag(8, C.WireType.Varint).bool(e.disableRaidAlertPush), !1 !== e.disableRaidAlertNag && t.tag(9, C.WireType.Varint).bool(e.disableRaidAlertNag), e.customNotificationSoundConfig && H.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(10, C.WireType.LengthDelimited).fork(), n).join();
     let i = n.writeUnknownFields;
     return !1 !== i && (!0 == i ? C.UnknownFieldHandler.onWrite : i)(this.typeName, e, t), t
   }
@@ -474,7 +474,7 @@ class G extends C.MessageType {
       K: 6,
       V: {
         kind: "message",
-        T: () => V
+        T: () => x
       }
     }, {
       no: 2,
@@ -500,7 +500,7 @@ class G extends C.MessageType {
       no: 6,
       name: "join_sound",
       kind: "message",
-      T: () => eB
+      T: () => ek
     }, {
       no: 7,
       name: "mobile_redesign_channel_list_settings",
@@ -525,7 +525,7 @@ class G extends C.MessageType {
   }
 }
 let w = new G;
-class k extends C.MessageType {
+class B extends C.MessageType {
   create(e) {
     let t = {};
     return globalThis.Object.defineProperty(t, C.MESSAGE_TYPE, {
@@ -581,8 +581,8 @@ class k extends C.MessageType {
     }])
   }
 }
-let B = new k;
-class F extends C.MessageType {
+let k = new B;
+class V extends C.MessageType {
   create(e) {
     let t = {
       collapsedInInbox: !1
@@ -602,7 +602,7 @@ class F extends C.MessageType {
           r.collapsedInInbox = e.bool();
           break;
         case 2:
-          r.iconEmoji = B.internalBinaryRead(e, e.uint32(), n, r.iconEmoji);
+          r.iconEmoji = k.internalBinaryRead(e, e.uint32(), n, r.iconEmoji);
           break;
         case 3:
           r.customNotificationSoundConfig = H.internalBinaryRead(e, e.uint32(), n, r.customNotificationSoundConfig);
@@ -617,7 +617,7 @@ class F extends C.MessageType {
     return r
   }
   internalBinaryWrite(e, t, n) {
-    !1 !== e.collapsedInInbox && t.tag(1, C.WireType.Varint).bool(e.collapsedInInbox), e.iconEmoji && B.internalBinaryWrite(e.iconEmoji, t.tag(2, C.WireType.LengthDelimited).fork(), n).join(), e.customNotificationSoundConfig && H.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(3, C.WireType.LengthDelimited).fork(), n).join();
+    !1 !== e.collapsedInInbox && t.tag(1, C.WireType.Varint).bool(e.collapsedInInbox), e.iconEmoji && k.internalBinaryWrite(e.iconEmoji, t.tag(2, C.WireType.LengthDelimited).fork(), n).join(), e.customNotificationSoundConfig && H.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(3, C.WireType.LengthDelimited).fork(), n).join();
     let i = n.writeUnknownFields;
     return !1 !== i && (!0 == i ? C.UnknownFieldHandler.onWrite : i)(this.typeName, e, t), t
   }
@@ -631,7 +631,7 @@ class F extends C.MessageType {
       no: 2,
       name: "icon_emoji",
       kind: "message",
-      T: () => B
+      T: () => k
     }, {
       no: 3,
       name: "custom_notification_sound_config",
@@ -640,8 +640,8 @@ class F extends C.MessageType {
     }])
   }
 }
-let V = new F;
-class x extends C.MessageType {
+let x = new V;
+class F extends C.MessageType {
   create(e) {
     let t = {};
     return globalThis.Object.defineProperty(t, C.MESSAGE_TYPE, {
@@ -678,7 +678,7 @@ class x extends C.MessageType {
     }])
   }
 }
-let H = new x;
+let H = new F;
 class Y extends C.MessageType {
   create(e) {
     let t = {
@@ -2613,7 +2613,7 @@ class eG extends C.MessageType {
   }
 }
 let ew = new eG;
-class ek extends C.MessageType {
+class eB extends C.MessageType {
   create(e) {
     let t = {
       soundId: "0",
@@ -2664,8 +2664,8 @@ class ek extends C.MessageType {
     }])
   }
 }
-let eB = new ek;
-class eF extends C.MessageType {
+let ek = new eB;
+class eV extends C.MessageType {
   create(e) {
     let t = {
       allowedGuildIds: [],
@@ -2748,8 +2748,8 @@ class eF extends C.MessageType {
     }])
   }
 }
-let eV = new eF;
-class ex extends C.MessageType {
+let ex = new eV;
+class eF extends C.MessageType {
   create(e) {
     let t = {};
     return globalThis.Object.defineProperty(t, C.MESSAGE_TYPE, {
@@ -2786,4 +2786,4 @@ class ex extends C.MessageType {
     }])
   }
 }
-let eH = new ex
+let eH = new eF

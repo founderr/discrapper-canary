@@ -1,20 +1,20 @@
 "use strict";
-a.r(v), a.d(v, {
+n.r(t), n.d(t, {
   useColorIsLowContrastAgainstClientBackground: function() {
-    return i
+    return a
   }
 });
-var t = a("780384"),
-  l = a("866442"),
-  e = a("410030");
+var i = n("780384"),
+  r = n("866442"),
+  s = n("410030");
 
-function i(h) {
-  let v = (0, e.default)();
-  if (null == h || !(0, l.isValidHex)(h)) return !0;
+function a(e) {
+  let t = (0, s.default)();
+  if (null == e || !(0, r.isValidHex)(e)) return !0;
   let {
-    l: a
-  } = (0, l.isValidHex)(h) ? (0, l.int2hslRaw)((0, l.hex2int)(h)) : {
+    l: n
+  } = (0, r.isValidHex)(e) ? (0, r.int2hslRaw)((0, r.hex2int)(e)) : {
     l: 0
   };
-  return (0, t.isThemeDark)(v) && a < 30 || !(0, t.isThemeDark)(v) && a > 65
+  return (0, i.isThemeDark)(t) && n < 30 || !(0, i.isThemeDark)(t) && n > 65
 }

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return M
   },
   dismissNewActivityIndicator: function() {
-    return k
+    return B
   },
   fetchDeveloperApplications: function() {
     return y
@@ -28,16 +28,16 @@ n.r(t), n.d(t, {
     return v
   },
   updateActivityPanelMode: function() {
-    return F
+    return V
   },
   updateFocusedActivityLayout: function() {
-    return V
+    return x
   },
   uploadImageAttachment: function() {
     return P
   },
   validateTestMode: function() {
-    return B
+    return k
   }
 }), n("47120");
 var i = n("990547"),
@@ -314,12 +314,12 @@ async function w(e) {
   })
 }
 
-function k() {
+function B() {
   s.default.dispatch({
     type: "EMBEDDED_ACTIVITY_DISMISS_NEW_INDICATOR"
   })
 }
-async function B(e) {
+async function k(e) {
   let t = C.Endpoints.ACTIVITY_TEST_MODE(e);
   try {
     return await r.HTTP.get({
@@ -331,14 +331,14 @@ async function B(e) {
   }
 }
 
-function F(e) {
+function V(e) {
   s.default.dispatch({
     type: "EMBEDDED_ACTIVITY_SET_PANEL_MODE",
     activityPanelMode: e
   })
 }
 
-function V(e) {
+function x(e) {
   s.default.dispatch({
     type: "EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT",
     focusedActivityLayout: e

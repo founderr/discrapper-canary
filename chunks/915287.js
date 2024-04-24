@@ -50,11 +50,11 @@ function c(e, t, n, s) {
       paddingBottom: b,
       fade: G = !1,
       customTheme: w = !1,
-      chunkSize: k,
-      style: B,
-      innerId: F,
-      innerRole: V,
-      innerAriaLabel: x,
+      chunkSize: B,
+      style: k,
+      innerId: V,
+      innerRole: x,
+      innerAriaLabel: F,
       innerAriaMultiselectable: H,
       innerAriaOrientation: Y,
       innerClassName: j,
@@ -89,7 +89,7 @@ function c(e, t, n, s) {
       listHeaderHeight: C,
       paddingTop: U,
       paddingBottom: b,
-      chunkSize: k,
+      chunkSize: B,
       getScrollerState: $,
       getAnchorId: P
     }), eo = (0, d.useScrollSpring)(Z), el = r.useRef(S), eu = r.useRef(h);
@@ -169,12 +169,12 @@ function c(e, t, n, s) {
         [n]: w,
         [_.scrolling]: Q
       }),
-      style: (0, d.getMergedOrientationStyles)(B),
+      style: (0, d.getMergedOrientationStyles)(k),
       ...K,
       children: [r.useMemo(() => (0, i.jsx)(W, {
-        id: F,
-        role: V,
-        "aria-label": x,
+        id: V,
+        role: x,
+        "aria-label": F,
         "aria-multiselectable": H,
         "aria-orientation": Y,
         style: {
@@ -229,7 +229,7 @@ function c(e, t, n, s) {
             spacerTop: ee
           })
         })
-      }), [F, V, x, H, Y, j, W, et, en, g, L, D, M, y, ee]), r.useMemo(() => (function(e) {
+      }), [V, x, F, H, Y, j, W, et, en, g, L, D, M, y, ee]), r.useMemo(() => (function(e) {
         let {
           renderSidebar: t,
           sidebarHeight: n,

@@ -30,8 +30,8 @@ var n = a("735250"),
   R = a("131951"),
   O = a("594174"),
   L = a("451478"),
-  P = a("465670"),
-  M = a("421600"),
+  M = a("465670"),
+  P = a("421600"),
   x = a("792125"),
   y = a("358221"),
   D = a("793865"),
@@ -94,7 +94,7 @@ function V(e) {
   return (0, n.jsxs)("div", {
     className: G.actions,
     children: [(0, n.jsx)(A.CenterControlButton, {
-      iconComponent: P.default,
+      iconComponent: M.default,
       color: "red",
       className: G.actionButton,
       label: j.default.Messages.DISMISS,
@@ -165,12 +165,12 @@ function Y(e) {
     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
   }, [f]);
   let O = A === b.ChannelModes.VIDEO && p && T > 0,
-    P = (0, n.jsxs)(n.Fragment, {
-      children: [(0, n.jsx)(M.default, {
+    M = (0, n.jsxs)(n.Fragment, {
+      children: [(0, n.jsx)(P.default, {
         className: G.icon,
         ringing: g,
         src: null != S ? S : "",
-        ringingType: M.default.RingingType.INCOMING,
+        ringingType: P.default.RingingType.INCOMING,
         size: C ? u.AvatarSizes.SIZE_40 : u.AvatarSizes.SIZE_80
       }), (0, n.jsxs)("div", {
         className: G.titleGroup,
@@ -211,10 +211,10 @@ function Y(e) {
           translateX: v.value.interpolate([0, 1], [0, -1 * Math.abs(B.width - D.width) / 2])
         },
         children: [C ? (0, n.jsx)(H, {
-          header: P
+          header: M
         }) : (0, n.jsx)("div", {
           className: G.mainChannelInfo,
-          children: P
+          children: M
         }), (0, n.jsx)(V, {
           canVideo: O,
           channel: f,

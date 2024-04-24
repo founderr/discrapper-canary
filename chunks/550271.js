@@ -1,93 +1,93 @@
 "use strict";
-a.r(v), a.d(v, {
+n.r(t), n.d(t, {
   ClanBadge: function() {
-    return f
+    return T
   }
 });
-var t = a("735250");
-a("470079");
-var l = a("496532"),
-  e = a("72977"),
-  i = a("775259"),
-  s = a("907120"),
-  n = a("533122"),
-  r = a("874706"),
-  d = a("775101"),
-  M = a("718572"),
-  Z = a("496223"),
-  H = a("846262"),
-  V = a("116175");
-let f = h => {
+var i = n("735250");
+n("470079");
+var r = n("496532"),
+  s = n("72977"),
+  a = n("775259"),
+  o = n("907120"),
+  l = n("533122"),
+  u = n("874706"),
+  d = n("775101"),
+  _ = n("718572"),
+  c = n("496223"),
+  E = n("846262"),
+  I = n("116175");
+let T = e => {
   let {
-    badge: v,
-    primaryTintColor: a,
-    secondaryTintColor: f,
-    ...o
-  } = h;
-  switch (v) {
-    case V.ClanBadgeKind.SWORD:
-    case V.ClanBadgeKind.SWORD_10:
-    case V.ClanBadgeKind.SWORD_11:
-    case V.ClanBadgeKind.SWORD_12:
-    case V.ClanBadgeKind.SWORD_13:
-    case V.ClanBadgeKind.SWORD_14:
-    case V.ClanBadgeKind.SWORD_15:
-    case V.ClanBadgeKind.SWORD_16:
-    case V.ClanBadgeKind.SWORD_17:
-    case V.ClanBadgeKind.SWORD_18:
-    case V.ClanBadgeKind.SWORD_19:
-    case V.ClanBadgeKind.SWORD_20:
-      return (0, t.jsx)(M.ClanBadgeSword, {
-        primaryTintColor: a,
-        secondaryTintColor: f,
-        ...o
+    badge: t,
+    primaryTintColor: n,
+    secondaryTintColor: T,
+    ...f
+  } = e;
+  switch (t) {
+    case I.ClanBadgeKind.SWORD:
+    case I.ClanBadgeKind.SWORD_10:
+    case I.ClanBadgeKind.SWORD_11:
+    case I.ClanBadgeKind.SWORD_12:
+    case I.ClanBadgeKind.SWORD_13:
+    case I.ClanBadgeKind.SWORD_14:
+    case I.ClanBadgeKind.SWORD_15:
+    case I.ClanBadgeKind.SWORD_16:
+    case I.ClanBadgeKind.SWORD_17:
+    case I.ClanBadgeKind.SWORD_18:
+    case I.ClanBadgeKind.SWORD_19:
+    case I.ClanBadgeKind.SWORD_20:
+      return (0, i.jsx)(_.ClanBadgeSword, {
+        primaryTintColor: n,
+        secondaryTintColor: T,
+        ...f
       });
-    case V.ClanBadgeKind.WATER_DROP:
-      return (0, t.jsx)(H.ClanBadgeWaterDrop, {
-        primaryTintColor: a,
-        ...o
+    case I.ClanBadgeKind.WATER_DROP:
+      return (0, i.jsx)(E.ClanBadgeWaterDrop, {
+        primaryTintColor: n,
+        ...f
       });
-    case V.ClanBadgeKind.SKULL:
-      return (0, t.jsx)(d.ClanBadgeSkull, {
-        primaryTintColor: a,
-        ...o
+    case I.ClanBadgeKind.SKULL:
+      return (0, i.jsx)(d.ClanBadgeSkull, {
+        primaryTintColor: n,
+        ...f
       });
-    case V.ClanBadgeKind.TOADSTOOL:
-      return (0, t.jsx)(Z.ClanBadgeToadstool, {
-        primaryTintColor: a,
-        secondaryTintColor: f,
-        ...o
+    case I.ClanBadgeKind.TOADSTOOL:
+      return (0, i.jsx)(c.ClanBadgeToadstool, {
+        primaryTintColor: n,
+        secondaryTintColor: T,
+        ...f
       });
-    case V.ClanBadgeKind.MOON:
-      return (0, t.jsx)(r.ClanBadgeMoon, {
-        primaryTintColor: a,
-        ...o
+    case I.ClanBadgeKind.MOON:
+      return (0, i.jsx)(u.ClanBadgeMoon, {
+        primaryTintColor: n,
+        ...f
       });
-    case V.ClanBadgeKind.LIGHTNING:
-      return (0, t.jsx)(n.ClanBadgeLightning, {
-        primaryTintColor: a,
-        ...o
+    case I.ClanBadgeKind.LIGHTNING:
+      return (0, i.jsx)(l.ClanBadgeLightning, {
+        primaryTintColor: n,
+        ...f
       });
-    case V.ClanBadgeKind.LEAF:
-      return (0, t.jsx)(s.ClanBadgeLeaf, {
-        primaryTintColor: a,
-        ...o
+    case I.ClanBadgeKind.LEAF:
+      return (0, i.jsx)(o.ClanBadgeLeaf, {
+        primaryTintColor: n,
+        ...f
       });
-    case V.ClanBadgeKind.HEART:
-      return (0, t.jsx)(i.ClanBadgeHeart, {
-        primaryTintColor: a,
-        ...o
+    case I.ClanBadgeKind.HEART:
+      return (0, i.jsx)(a.ClanBadgeHeart, {
+        primaryTintColor: n,
+        ...f
       });
-    case V.ClanBadgeKind.FIRE:
-      return (0, t.jsx)(e.ClanBadgeFire, {
-        primaryTintColor: a,
-        ...o
+    case I.ClanBadgeKind.FIRE:
+      return (0, i.jsx)(s.ClanBadgeFire, {
+        primaryTintColor: n,
+        ...f
       });
-    case V.ClanBadgeKind.COMPASS:
-      return (0, t.jsx)(l.ClanBadgeCompass, {
-        primaryTintColor: a,
-        secondaryTintColor: f,
-        ...o
+    case I.ClanBadgeKind.COMPASS:
+      return (0, i.jsx)(r.ClanBadgeCompass, {
+        primaryTintColor: n,
+        secondaryTintColor: T,
+        ...f
       })
   }
   return null

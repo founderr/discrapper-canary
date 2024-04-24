@@ -52,7 +52,7 @@ n.r(t), n.d(t, {
     return eD
   },
   DefaultGuildsRestricted: function() {
-    return B
+    return k
   },
   DeveloperMode: function() {
     return eA
@@ -94,7 +94,7 @@ n.r(t), n.d(t, {
     return A
   },
   FriendSourceFlagsSetting: function() {
-    return V
+    return x
   },
   GifAutoPlay: function() {
     return eN
@@ -133,7 +133,7 @@ n.r(t), n.d(t, {
     return K
   },
   NonSpamRetrainingOptIn: function() {
-    return k
+    return B
   },
   NotificationCenterAckedBeforeId: function() {
     return v
@@ -154,10 +154,10 @@ n.r(t), n.d(t, {
     return f
   },
   RestrictedGuildIds: function() {
-    return F
+    return V
   },
   RtcPanelShowVoiceStates: function() {
-    return x
+    return F
   },
   ShowCommandSuggestions: function() {
     return C
@@ -325,7 +325,7 @@ let M = (0, o.defineProtoSetting)("gameLibrary", "installShortcutDesktop", e => 
   }, e => s.BoolValue.create({
     value: e
   })),
-  k = (0, o.defineProtoSetting)("privacy", "nonSpamRetrainingOptIn", e => null == e ? void 0 : e.value, e => null == e ? void 0 : s.BoolValue.create({
+  B = (0, o.defineProtoSetting)("privacy", "nonSpamRetrainingOptIn", e => null == e ? void 0 : e.value, e => null == e ? void 0 : s.BoolValue.create({
     value: e
   }));
 (0, o.defineProtoSetting)("privacy", "contactSyncEnabled", e => {
@@ -334,21 +334,21 @@ let M = (0, o.defineProtoSetting)("gameLibrary", "installShortcutDesktop", e => 
 }, e => s.BoolValue.create({
   value: e
 }));
-let B = (0, o.defineProtoSetting)("privacy", "defaultGuildsRestricted", e => null != e && e, e => e),
-  F = (0, o.defineProtoSetting)("privacy", "restrictedGuildIds", e => null != e ? e : [], e => e);
+let k = (0, o.defineProtoSetting)("privacy", "defaultGuildsRestricted", e => null != e && e, e => e),
+  V = (0, o.defineProtoSetting)("privacy", "restrictedGuildIds", e => null != e ? e : [], e => e);
 (0, o.defineProtoSetting)("privacy", "friendDiscoveryFlags", e => {
   var t;
   return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : 0
 }, e => s.UInt32Value.create({
   value: e
 }));
-let V = (0, o.defineProtoSetting)("privacy", "friendSourceFlags", e => {
+let x = (0, o.defineProtoSetting)("privacy", "friendSourceFlags", e => {
     var t;
     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : d.AllFriendSourceFlags
   }, e => s.UInt32Value.create({
     value: e
   })),
-  x = (0, o.defineProtoSetting)("debug", "rtcPanelShowVoiceStates", e => {
+  F = (0, o.defineProtoSetting)("debug", "rtcPanelShowVoiceStates", e => {
     var t;
     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
   }, e => s.BoolValue.create({

@@ -117,11 +117,11 @@ let b = new S.default("RunningGameStore"),
     }],
     name: f.default.get(P.PlatformTypes.SPOTIFY).name
   }],
-  k = !0,
-  B = new Set,
-  F = [],
+  B = !0,
+  k = new Set,
   V = [],
   x = [],
+  F = [],
   H = null,
   Y = [],
   j = {},
@@ -153,22 +153,22 @@ function et(e) {
 }
 
 function en() {
-  if (x.length > 0) {
+  if (F.length > 0) {
     let e = H;
-    H = x[0], null != e && H.pid === e.pid ? H.start = e.start : H.start = Date.now()
+    H = F[0], null != e && H.pid === e.pid ? H.start = e.start : H.start = Date.now()
   } else H = null;
   let e = [];
-  for (let t of x) !(t.pid in J) && (J[t.pid] = t, e.push(t));
+  for (let t of F) !(t.pid in J) && (J[t.pid] = t, e.push(t));
   let t = [];
-  for (let e of Object.values(J)) !x.some(t => t.pid === e.pid) && (t.push(e), delete J[e.pid]);
+  for (let e of Object.values(J)) !F.some(t => t.pid === e.pid) && (t.push(e), delete J[e.pid]);
   b.info("games", {
-    runningGames: x,
+    runningGames: F,
     added: e,
     removed: t,
     previousGames: J
   }), I.default.dispatch({
     type: "RUNNING_GAMES_CHANGE",
-    games: x,
+    games: F,
     added: e,
     removed: t
   })
@@ -245,12 +245,12 @@ function el(e) {
 
 function eu() {
   let e = !1;
-  return F = u().values(p.default.libraryApplications).reduce((t, n) => {
+  return V = u().values(p.default.libraryApplications).reduce((t, n) => {
     let i = N.default.getDetectableGame(n.id);
     if (null == i) return t;
     for (let r of O.default.getLaunchOptions(n.id, n.branchId)) {
       let s = "".concat(n.id, ":").concat(n.branchId);
-      !B.has(s) && (e = !0, B.add(s));
+      !k.has(s) && (e = !0, k.add(s));
       let {
         fullExecutablePath: a
       } = r, o = a.replace(/\\/g, "/").toLowerCase();
@@ -269,7 +269,7 @@ function eu() {
 
 function ed() {
   if (!__OVERLAY__ && D.isPlatformEmbedded) {
-    let e = [...F, ...u().values(K.gameOverrides)];
+    let e = [...V, ...u().values(K.gameOverrides)];
     v.default.setGameCandidateOverrides(e)
   }
 }
@@ -364,7 +364,7 @@ function ec() {
     s !== Q && (Q = s, I.default.dispatch({
       type: "RUNNING_STREAMER_TOOLS_CHANGE",
       count: Q
-    })), x = e, Y = n, i = r, en()
+    })), F = e, Y = n, i = r, en()
   }), ed()
 });
 class eE extends(r = c.default.Store) {
@@ -392,14 +392,14 @@ class eE extends(r = c.default.Store) {
     return H
   }
   getVisibleRunningGames() {
-    return x.filter(ea)
+    return F.filter(ea)
   }
   getRunningGames() {
-    return x
+    return F
   }
   getRunningDiscordApplicationIds() {
     let e = [];
-    for (let t of x) null != j[t.exePath] && e.push(j[t.exePath]);
+    for (let t of F) null != j[t.exePath] && e.push(j[t.exePath]);
     return e
   }
   getRunningVerifiedApplicationIds() {
@@ -407,7 +407,7 @@ class eE extends(r = c.default.Store) {
   }
   getGameForPID(e) {
     var t;
-    return null !== (t = x.find(t => t.pid === e)) && void 0 !== t ? t : null
+    return null !== (t = F.find(t => t.pid === e)) && void 0 !== t ? t : null
   }
   getLauncherForPID(e) {
     let t = this.getGameForPID(e);
@@ -426,7 +426,7 @@ class eE extends(r = c.default.Store) {
     return null != Z && Z === e
   }
   getCandidateGames() {
-    return V.filter(e => e.hidden || null == e.id).filter(e => void 0 === K.gameOverrides[ei(e)])
+    return x.filter(e => e.hidden || null == e.id).filter(e => void 0 === K.gameOverrides[ei(e)])
   }
   getGamesSeen(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -462,7 +462,7 @@ class eE extends(r = c.default.Store) {
     return null !== (n = null === (t = Y.find(t => (0, A.default)(e, t.windowHandle))) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : null
   }
   get canShowAdminWarning() {
-    return k
+    return B
   }
 }
 o = "RunningGameStore", (a = "displayName") in(s = eE) ? Object.defineProperty(s, a, {
@@ -472,13 +472,13 @@ o = "RunningGameStore", (a = "displayName") in(s = eE) ? Object.defineProperty(s
   writable: !0
 }) : s[a] = o, t.default = new eE(I.default, {
   RUNNING_GAMES_CHANGE: function(e) {
-    e_(x)
+    e_(F)
   },
   CANDIDATE_GAMES_CHANGE: function(e) {
-    V = e.games
+    x = e.games
   },
   PERMISSION_CLEAR_PTT_ADMIN_WARNING: function() {
-    k = !1
+    B = !1
   },
   PERMISSION_REQUEST_ELEVATED_PROCESS: function(e) {
     let {
@@ -498,18 +498,18 @@ o = "RunningGameStore", (a = "displayName") in(s = eE) ? Object.defineProperty(s
   RUNNING_GAME_ADD_OVERRIDE: function(e) {
     let t;
     let n = e.pid,
-      i = x.find(e => e.pid === n);
+      i = F.find(e => e.pid === n);
     if (null == i) {
-      let e = V.find(e => e.pid === n);
+      let e = x.find(e => e.pid === n);
       if (null == e) return;
       (i = {
         ...e
-      }).hidden = !1, x.push(i), t = ei(i)
+      }).hidden = !1, F.push(i), t = ei(i)
     } else t = ei(i), i.hidden && (W[t] = !0), i.hidden = !1;
     (null == i.lastFocused || 0 === i.lastFocused) && (i.lastFocused = Math.floor(Date.now() / 1e3)), K.gameOverrides[t] = {
       ...i,
       add: !0
-    }, e_(x), ed(), eo(), en()
+    }, e_(F), ed(), eo(), en()
   },
   RUNNING_GAME_TOGGLE_OVERLAY: function(e) {
     if (K.enableOverlay[ei(e.game)] = e.newEnabledValue, eo(), !__OVERLAY__) {
@@ -548,13 +548,13 @@ o = "RunningGameStore", (a = "displayName") in(s = eE) ? Object.defineProperty(s
       ei(n) === t && (n.name = e.newName)
     });
     let s = !1;
-    x.forEach(n => {
+    F.forEach(n => {
       ei(n) === t && (n.name = e.newName, s = !0)
     }), ed(), eo(), s && en()
   },
   RUNNING_GAME_DELETE_ENTRY: function(e) {
     let t = ei(e.game);
-    delete K.gameOverrides[t], delete K.enableOverlay[t], delete K.enableDetection[t], K.gamesSeen = K.gamesSeen.filter(e => ei(e) !== t), W[t] && (x.forEach(e => {
+    delete K.gameOverrides[t], delete K.enableOverlay[t], delete K.enableDetection[t], K.gamesSeen = K.gamesSeen.filter(e => ei(e) !== t), W[t] && (F.forEach(e => {
       t === ei(e) && (e.hidden = !0)
     }), delete W[t], en()), ed(), eo()
   },

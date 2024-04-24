@@ -31,10 +31,10 @@ n.r(t), n.d(t, {
     return u
   },
   BLAZIN_8S_APPLICATION_ID: function() {
-    return x
+    return F
   },
   BOBBLE_LEAGUE_APPLICATION_ID: function() {
-    return B
+    return k
   },
   BYS_LETTER_APP_ID: function() {
     return Y
@@ -43,13 +43,13 @@ n.r(t), n.d(t, {
     return j
   },
   CHECKERS_IN_THE_PARK_APP_ID: function() {
-    return F
+    return V
   },
   CHEF_SHOWDOWN_APPLICATION_ID: function() {
     return W
   },
   CHESS_IN_THE_PARK_APP_ID: function() {
-    return V
+    return x
   },
   COLOR_TOGETHER_APPLICATION_ID: function() {
     return U
@@ -79,7 +79,7 @@ n.r(t), n.d(t, {
     return z
   },
   KWIM_APPLICATION_ID: function() {
-    return k
+    return B
   },
   LAND_IO_APPLICATION_ID: function() {
     return G
@@ -132,11 +132,11 @@ let C = 160,
   b = "852509694341283871",
   G = "903769130790969345",
   w = "880218394199220334",
-  k = "1078728822972764312",
-  B = "947957217959759964",
-  F = "832013003968348200",
-  V = "832012774040141894",
-  x = "832025144389533716",
+  B = "1078728822972764312",
+  k = "947957217959759964",
+  V = "832013003968348200",
+  x = "832012774040141894",
+  F = "832025144389533716",
   H = "755827207812677713",
   Y = "879863686565621790",
   j = "902271654783242291",

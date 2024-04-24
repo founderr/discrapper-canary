@@ -34,11 +34,11 @@ var i = n("735250"),
   b = n("913663"),
   G = n("268350"),
   w = n("378233"),
-  k = n("665906"),
-  B = n("695346"),
-  F = n("271383"),
-  V = n("496675"),
-  x = n("944486"),
+  B = n("665906"),
+  k = n("695346"),
+  V = n("271383"),
+  x = n("496675"),
+  F = n("944486"),
   H = n("398327"),
   Y = n("117530"),
   j = n("594174"),
@@ -79,11 +79,11 @@ t.default = r.memo(r.forwardRef(function(e, t) {
     renderAttachButton: eb,
     renderAppLauncherButton: eG,
     renderApplicationCommandIcon: ew,
-    pendingReply: ek,
-    onChange: eB,
-    onResize: eF,
-    onBlur: eV,
-    onFocus: ex,
+    pendingReply: eB,
+    onChange: ek,
+    onResize: eV,
+    onBlur: ex,
+    onFocus: eF,
     onKeyDown: eH,
     onSubmit: eY,
     promptToUpload: ej,
@@ -131,20 +131,20 @@ t.default = r.memo(r.forwardRef(function(e, t) {
   } = function(e, t, n, i) {
     let r = e.getGuildId(),
       s = (0, E.useStateFromStores)([y.default], () => null != r && y.default.isLurking(r), [r]),
-      a = (0, E.useStateFromStores)([F.default, j.default], () => {
+      a = (0, E.useStateFromStores)([V.default, j.default], () => {
         var e, t;
         let n = j.default.getCurrentUser();
-        return null !== (t = null != r && null != n ? null === (e = F.default.getMember(r, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
+        return null !== (t = null != r && null != n ? null === (e = V.default.getMember(r, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
       }),
-      o = (0, E.useStateFromStoresObject)([V.default], () => {
+      o = (0, E.useStateFromStoresObject)([x.default], () => {
         var r, s;
         let o = e.isPrivate(),
-          l = V.default.computePermissions(e),
+          l = x.default.computePermissions(e),
           u = c.has(l, es.Permissions.CREATE_PUBLIC_THREADS) || c.has(l, es.Permissions.CREATE_PRIVATE_THREADS),
           d = (!(null === (r = t.permissions) || void 0 === r ? void 0 : r.requireCreateTherads) || u) && (!(null === (s = t.permissions) || void 0 === s ? void 0 : s.requireSendMessages) || c.has(l, es.Permissions.SEND_MESSAGES)),
           _ = d && c.has(l, es.Permissions.ATTACH_FILES),
           E = null != n,
-          I = (0, k.computeIsReadOnlyThread)(e);
+          I = (0, B.computeIsReadOnlyThread)(e);
         return {
           disabled: i || a || !o && !d || I,
           canAttachFiles: !0 === t.attachments && (o || a || _ || E),
@@ -157,7 +157,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
       isPendingMember: a,
       ...o
     }
-  }(ey, eP, tn, eD), td = eP.toolbarType === Q.SlateToolbarTypes.STATIC, t_ = !B.UseLegacyChatInput.useSetting() && !(0, z.isAndroidWeb)() && null != window.ResizeObserver, tc = !t_ || !(null === (s = eP.commands) || void 0 === s ? void 0 : s.enabled) || !eU || eN !== ea.COMMAND_SENTINEL, tE = (0, P.default)(), {
+  }(ey, eP, tn, eD), td = eP.toolbarType === Q.SlateToolbarTypes.STATIC, t_ = !k.UseLegacyChatInput.useSetting() && !(0, z.isAndroidWeb)() && null != window.ResizeObserver, tc = !t_ || !(null === (s = eP.commands) || void 0 === s ? void 0 : s.enabled) || !eU || eN !== ea.COMMAND_SENTINEL, tE = (0, P.default)(), {
     isSubmitButtonEnabled: tI,
     fontSize: tT
   } = (0, E.useStateFromStoresObject)([f.default], () => ({
@@ -241,7 +241,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
         let _ = (n = u, i = t, null !== (o = n && (null === (r = i.submit) || void 0 === r ? void 0 : r.clearOnSubmit)) && void 0 !== o && o),
           c = null != s.current;
         if (_) {
-          if (a !== x.default.getChannelId()) T.default.saveDraft(a, "", t.drafts.type);
+          if (a !== F.default.getChannelId()) T.default.saveDraft(a, "", t.drafts.type);
           else c && s.current.clearValue()
         }
         c && (l(!1), (0, L.closeExpressionPicker)(), d && s.current.focus())
@@ -335,7 +335,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
           n(null != t ? t : 0), null == e || e(t)
         }, [e])
       }
-    }(eF),
+    }(eV),
     {
       handleTab: tP,
       handleEnter: tU,
@@ -361,8 +361,8 @@ t.default = r.memo(r.forwardRef(function(e, t) {
     {
       expressionPickerView: tG,
       shouldHideExpressionPicker: tw,
-      handleAutocompleteVisibilityChange: tk,
-      handleOuterClick: tB
+      handleAutocompleteVisibilityChange: tB,
+      handleOuterClick: tk
     } = function(e, t, n) {
       let [i, s] = (0, L.useExpressionPickerStore)(e => [e.activeView, e.activeViewType], d.default);
       r.useEffect(() => () => {
@@ -383,29 +383,29 @@ t.default = r.memo(r.forwardRef(function(e, t) {
         handleOuterClick: o
       }
     }(eP, tS, e9),
-    tF = A.AppLauncherDesktopExperiment.useExperiment({
+    tV = A.AppLauncherDesktopExperiment.useExperiment({
       location: "chat_input"
     }, {
       autoTrackExposure: !1
     }).enabled,
-    tV = (0, E.useStateFromStores)([m.default], () => m.default.shouldShowPopup(), []);
+    tx = (0, E.useStateFromStores)([m.default], () => m.default.shouldShowPopup(), []);
   (0, X.useHereMentionCallback)(tS, ey.guild_id, ey.id);
-  let tx = null != ek,
+  let tF = null != eB,
     tH = ta && !((tr || ts) && tu) || tA && (null === (l = eP.submit) || void 0 === l ? void 0 : l.useDisabledStylesOnSubmit),
     tY = null,
     tj = null;
-  null != tn ? tY = null == ew ? void 0 : ew(tn, ti, el.attachButton) : (!ta || tl) && (tY = null == eb ? void 0 : eb(tx, el.attachButton), tF && (tj = null == eG ? void 0 : eG()));
+  null != tn ? tY = null == ew ? void 0 : ew(tn, ti, el.attachButton) : (!ta || tl) && (tY = null == eb ? void 0 : eb(tF, el.attachButton), tV && (tj = null == eG ? void 0 : eG()));
   let tW = t_ && null != ep && !ta && eP.showCharacterCount && null == tn,
     tK = t_ && !__OVERLAY__ && null != ep && null == tn,
     tz = function(e, t, n, i) {
       var r, s;
-      let a = B.ExpressionSuggestionsEnabled.useSetting(),
+      let a = k.ExpressionSuggestionsEnabled.useSetting(),
         o = (0, E.useStateFromStores)([b.default], () => b.default.getStickerPreview(e.id, t.drafts.type)),
         l = null != o && o.length > 0;
       return a && (null === (r = t.stickers) || void 0 === r ? void 0 : r.autoSuggest) && !l && (null === (s = i.current) || void 0 === s ? void 0 : s.isVisible()) !== !0 && !__OVERLAY__ && null != n
     }(ey, eP, ep, tp),
     tX = (0, R.useShouldShowPTONotice)(ey),
-    tQ = null != tn || null != ek || tX,
+    tQ = null != tn || null != eB || tX,
     tq = !!(null === (eu = eP.emojis) || void 0 === eu ? void 0 : eu.button) && tM <= 44;
   return (0, i.jsx)(g.EventEmitterProvider, {
     value: tS,
@@ -428,12 +428,12 @@ t.default = r.memo(r.forwardRef(function(e, t) {
           [el.highlighted]: eW,
           [el.textAreaMobileThemed]: _.isMobile
         }),
-        onMouseDown: tB,
+        onMouseDown: tk,
         children: [(0, i.jsx)($.default, {
           type: eP,
           channel: ey,
           activeCommand: tn,
-          pendingReply: ek
+          pendingReply: eB
         }), (0, i.jsxs)("div", {
           ref: te,
           onScroll: tv,
@@ -479,10 +479,10 @@ t.default = r.memo(r.forwardRef(function(e, t) {
                 maxCharacterCount: null != eX ? eX : tE,
                 allowNewLines: eq,
                 "aria-describedby": eJ,
-                onChange: eB,
+                onChange: ek,
                 onResize: ty,
-                onBlur: eV,
-                onFocus: ex,
+                onBlur: ex,
+                onFocus: eF,
                 onKeyDown: eH,
                 onSubmit: tm,
                 onTab: tP,
@@ -494,7 +494,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
                 promptToUpload: ej,
                 fontSize: tT,
                 spellcheckEnabled: tf,
-                canOnlyUseTextCommands: tx,
+                canOnlyUseTextCommands: tF,
                 className: a()({
                   [el.textAreaThreadCreation]: eP === Q.ChatInputTypes.THREAD_CREATION,
                   [el.profileBioInput]: eP === Q.ChatInputTypes.PROFILE_BIO_INPUT
@@ -512,14 +512,14 @@ t.default = r.memo(r.forwardRef(function(e, t) {
         }), tc ? null : (0, i.jsx)(O.default, {
           ref: e8,
           channel: ey,
-          canOnlyUseTextCommands: tx
+          canOnlyUseTextCommands: tF
         }), (0, i.jsx)(C.default, {
           ref: tp,
           channel: ey,
           canMentionRoles: eK,
           canMentionChannels: ez,
           useNewSlashCommands: t_,
-          canOnlyUseTextCommands: tx,
+          canOnlyUseTextCommands: tF,
           canSendStickers: null === (ed = eP.stickers) || void 0 === ed ? void 0 : ed.allowSending,
           textValue: eN,
           focused: eU,
@@ -528,9 +528,9 @@ t.default = r.memo(r.forwardRef(function(e, t) {
           editorRef: e9,
           onSendMessage: tm,
           onSendSticker: tL,
-          onVisibilityChange: tk,
+          onVisibilityChange: tB,
           editorHeight: tM,
-          setValue: (e, t) => null == eB ? void 0 : eB(null, e, t),
+          setValue: (e, t) => null == ek ? void 0 : ek(null, e, t),
           position: e1
         }), (0, i.jsx)(U.default, {
           textValue: eN,
@@ -564,7 +564,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
         position: "top",
         align: "right",
         positionLayerClassName: el.expressionPickerPositionLayer
-      }), tV ? (0, i.jsx)(N.default, {
+      }), tx ? (0, i.jsx)(N.default, {
         positionTargetRef: e5,
         channel: ey,
         closeOnModalOuterClick: e4,

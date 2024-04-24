@@ -21,15 +21,15 @@ var n, s, l, i, r, o = a("442837"),
 let R = "ActivityTrackingStore",
   O = 30 * S.default.Millis.MINUTE,
   L = 5 * S.default.Millis.MINUTE,
-  P = null !== (n = u.Storage.get(R)) && void 0 !== n ? n : {},
-  M = {},
+  M = null !== (n = u.Storage.get(R)) && void 0 !== n ? n : {},
+  P = {},
   x = !1;
 
 function y(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
   t && D(e, !0);
-  let a = M[e.applicationId];
-  null != a && (a.stop(), delete M[e.applicationId]), delete P[e.applicationId], u.Storage.set(R, P)
+  let a = P[e.applicationId];
+  null != a && (a.stop(), delete P[e.applicationId]), delete M[e.applicationId], u.Storage.set(R, M)
 }
 
 function D(e) {
@@ -57,8 +57,8 @@ function D(e) {
     location: "28tk0bf_6"
   });
   t && s && o && _.default.updateUserRecentGamesLocal(e.applicationId, Math.floor(n / 1e3));
-  let c = M[e.applicationId];
-  null == c && (c = M[e.applicationId] = new d.Interval).start(O, () => D(e)), !t && (P[e.applicationId] = e, u.Storage.set(R, P))
+  let c = P[e.applicationId];
+  null == c && (c = P[e.applicationId] = new d.Interval).start(O, () => D(e)), !t && (M[e.applicationId] = e, u.Storage.set(R, M))
 }
 
 function b() {
@@ -72,18 +72,18 @@ function b() {
     }
     of t) {
     let t = T.default.getGameByName(e);
-    if (null != t) a.add(t.id), !(t.id in P) && D({
+    if (null != t) a.add(t.id), !(t.id in M) && D({
       applicationId: t.id,
       updatedAt: Date.now(),
       distributor: n,
       exePath: (0, E.removeExecutablePathPrefix)(null != s ? s : "")
     })
   }
-  for (let t of Object.keys(P)) !a.has(t) && y(P[t], e)
+  for (let t of Object.keys(M)) !a.has(t) && y(M[t], e)
 }
 
 function U() {
-  for (let e of Object.keys(P)) y(P[e]);
+  for (let e of Object.keys(M)) y(M[e]);
   x = !1
 }
 class j extends(s = o.default.Store) {
@@ -91,7 +91,7 @@ class j extends(s = o.default.Store) {
     this.waitFor(h.default, m.default, g.default), this.syncWith([m.default], b)
   }
   getActivities() {
-    return P
+    return M
   }
 }
 r = "ActivityTrackingStore", (i = "displayName") in(l = j) ? Object.defineProperty(l, i, {
@@ -103,7 +103,7 @@ r = "ActivityTrackingStore", (i = "displayName") in(l = j) ? Object.defineProper
   RUNNING_GAMES_CHANGE: () => b(),
   CONNECTION_OPEN: function() {
     if (x) return !1;
-    for (let e of Object.keys(P)) D(P[e]);
+    for (let e of Object.keys(M)) D(M[e]);
     b(!1), x = !0
   },
   CONNECTION_CLOSED: function(e) {
@@ -117,15 +117,15 @@ r = "ActivityTrackingStore", (i = "displayName") in(l = j) ? Object.defineProper
     let {
       applicationId: t,
       token: a
-    } = e, n = P[t];
+    } = e, n = M[t];
     if (null == n) return !1;
-    n.token = a, u.Storage.set(R, P)
+    n.token = a, u.Storage.set(R, M)
   },
   ACTIVITY_UPDATE_FAIL: function(e) {
     let {
       applicationId: t
-    } = e, a = P[t];
+    } = e, a = M[t];
     if (null == a) return !1;
-    a.token = null, a.updatedAt = null, u.Storage.set(R, P)
+    a.token = null, a.updatedAt = null, u.Storage.set(R, M)
   }
 })

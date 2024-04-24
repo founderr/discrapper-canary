@@ -81,12 +81,12 @@ let R = a.memo(function(e) {
   a.useEffect(() => {
     G()
   }, [G, D]);
-  let k = g.length > 0,
-    B = L.length > 0;
+  let B = g.length > 0,
+    k = L.length > 0;
   return (0, s.jsxs)("div", {
     className: l()(O.compactItemContainer, !y && O.hideElement),
     ref: M,
-    children: [k && (0, s.jsx)(d.Tooltip, {
+    children: [B && (0, s.jsx)(d.Tooltip, {
       text: p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP,
       children: e => (0, s.jsxs)(d.Clickable, {
         ...e,
@@ -108,13 +108,13 @@ let R = a.memo(function(e) {
           children: D
         })]
       })
-    }), I && !k && (0, s.jsx)(d.Text, {
+    }), I && !B && (0, s.jsx)(d.Text, {
       variant: "text-xs/normal",
       children: p.default.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS
-    }), (k && B || I) && (0, s.jsx)("div", {
+    }), (B && k || I) && (0, s.jsx)("div", {
       "aria-hidden": "true",
       className: O.dotSpacer
-    }), B && (0, s.jsx)(d.Tooltip, {
+    }), k && (0, s.jsx)(d.Tooltip, {
       text: p.default.Messages.USER_PROFILE_MUTUAL_GUILDS_TOOLTIP,
       children: e => (0, s.jsxs)(d.Clickable, {
         ...e,
@@ -136,7 +136,7 @@ let R = a.memo(function(e) {
           children: v
         })]
       })
-    }), I && !B && (0, s.jsx)(d.Text, {
+    }), I && !k && (0, s.jsx)(d.Text, {
       variant: "text-xs/normal",
       children: p.default.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS
     })]

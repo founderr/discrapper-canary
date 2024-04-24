@@ -16,13 +16,13 @@ n.r(t), n.d(t, {
     return U
   },
   can: function() {
-    return F
+    return V
   },
   canEveryone: function() {
-    return x
+    return F
   },
   canEveryoneRole: function() {
-    return V
+    return x
   },
   computePermissions: function() {
     return y
@@ -90,7 +90,7 @@ n.r(t), n.d(t, {
     return b
   },
   getHighestHoistedRole: function() {
-    return k
+    return B
   },
   getHighestRole: function() {
     return w
@@ -99,7 +99,7 @@ n.r(t), n.d(t, {
     return G
   },
   makeEveryoneOverwrite: function() {
-    return B
+    return k
   }
 }), n("47120");
 var i = n("392711"),
@@ -247,7 +247,7 @@ function U(e, t) {
     r = {
       ...t.permissionOverwrites
     };
-  return null == i[n] && (i[n] = B(n)), null == r[n] && (r[n] = B(n)), Object.keys(i).length === Object.keys(r).length && !Object.keys(i).some(e => {
+  return null == i[n] && (i[n] = k(n)), null == r[n] && (r[n] = k(n)), Object.keys(i).length === Object.keys(r).length && !Object.keys(i).some(e => {
     let t = i[e],
       n = r[e];
     return !(null != n && s.equals(n.deny, t.deny) && s.equals(n.allow, t.allow)) && !0
@@ -271,11 +271,11 @@ function w(e, t) {
   if (null != n) return r()(f.default.getRoles(e.id)).filter(e => -1 !== n.roles.indexOf(e.id)).sortBy(e => -e.position).first()
 }
 
-function k(e, t) {
+function B(e, t) {
   return null == t.hoistRoleId ? null : f.default.getRole(e.id, t.hoistRoleId)
 }
 
-function B(e) {
+function k(e) {
   return {
     id: e,
     type: a.PermissionOverwriteType.ROLE,
@@ -284,7 +284,7 @@ function B(e) {
   }
 }
 
-function F(e) {
+function V(e) {
   let {
     permission: t,
     user: n,
@@ -303,7 +303,7 @@ function F(e) {
   }), t)
 }
 
-function V(e, t) {
+function x(e, t) {
   let n;
   let i = {};
   if (t instanceof c.ChannelRecordBase) {
@@ -320,7 +320,7 @@ function V(e, t) {
   return null != o && (a = s.remove(a, o.deny), a = s.add(a, o.allow)), s.has(a, e)
 }
 
-function x(e, t) {
+function F(e, t) {
   let n;
   let i = {};
   if (t instanceof c.ChannelRecordBase) {

@@ -436,11 +436,11 @@ function L(e) {
       isTyping: c
     })
   }), [P, S, g, l, c]), {
-    avatarCutoutX: k,
-    avatarCutoutY: B,
-    avatarCutoutWidth: F,
-    avatarCutoutHeight: V,
-    avatarCutoutRadius: x,
+    avatarCutoutX: B,
+    avatarCutoutY: k,
+    avatarCutoutWidth: V,
+    avatarCutoutHeight: x,
+    avatarCutoutRadius: F,
     fill: H,
     ...Y
   } = (0, o.useSpring)({
@@ -472,12 +472,12 @@ function L(e) {
           fill: "white"
         }), (0, i.jsx)(o.animated.rect, {
           color: "black",
-          x: k,
-          y: B,
-          width: F,
-          height: V,
-          rx: x,
-          ry: x
+          x: B,
+          y: k,
+          width: V,
+          height: x,
+          rx: F,
+          ry: F
         })]
       }), (0, i.jsx)("foreignObject", {
         className: h.__invalid_foreignObject,

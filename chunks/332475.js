@@ -60,7 +60,7 @@ class p extends(i = s.PureComponent) {
       ...w
     } = this.props;
     if (1 === E && 1 === A) return null;
-    let k = (0, c.fit)({
+    let B = (0, c.fit)({
         width: E,
         height: A,
         maxWidth: m,
@@ -68,27 +68,27 @@ class p extends(i = s.PureComponent) {
         minWidth: p,
         minHeight: C
       }),
-      B = 0 !== k.width ? k.width / k.height : 1;
+      k = 0 !== B.width ? B.width / B.height : 1;
     "" !== s && i !== f.ImageReadyStates.ERROR ? e = y({
       src: s,
-      size: k,
+      size: B,
       alt: d,
       className: n,
       mediaLayoutType: g
     }) : i !== f.ImageReadyStates.LOADING && (e = (0, r.jsx)(O, {
-      size: k,
+      size: B,
       mediaLayoutType: g,
       alt: d
     })), e = (0, r.jsx)(I.ImageLoadingOverlay, {
       readyState: i,
-      aspectRatio: B,
+      aspectRatio: k,
       placeholder: a,
       placeholderVersion: l,
-      placeholderStyle: R(k, g),
+      placeholderStyle: R(B, g),
       children: e
     });
-    let F = null != P ? P() : null;
-    return F = null != F ? F : D, (0, r.jsx)(u.FocusRing, {
+    let V = null != P ? P() : null;
+    return V = null != V ? V : D, (0, r.jsx)(u.FocusRing, {
       ringTarget: this._containerRef,
       focusTarget: this._clickableRef,
       children: (0, r.jsxs)("div", {
@@ -109,7 +109,7 @@ class p extends(i = s.PureComponent) {
             width: "100%",
             aspectRatio: "".concat(e.width, " / ").concat(e.height)
           } : e
-        }(k, L, G, g),
+        }(B, L, G, g),
         ...w,
         children: [null != M && (0, r.jsx)("a", {
           tabIndex: -1,
@@ -131,9 +131,9 @@ class p extends(i = s.PureComponent) {
             enabled: !1
           },
           children: e
-        }) : e, null != F ? (0, r.jsx)("div", {
+        }) : e, null != V ? (0, r.jsx)("div", {
           className: h.imageAccessory,
-          children: F
+          children: V
         }) : null]
       })
     })

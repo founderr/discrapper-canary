@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return G
   },
   getObscuredMediaForMessage: function() {
-    return V
+    return x
   },
   getShouldObscureForSetting: function() {
     return w
@@ -28,19 +28,19 @@ n.r(t), n.d(t, {
     return Q
   },
   isMediaObscured: function() {
-    return F
+    return V
   },
   isPendingScan: function() {
     return H
   },
   isPendingScanVersion: function() {
-    return x
+    return F
   },
   resolveSettingWithDefaults: function() {
     return P
   },
   shouldRedactExplicitContent: function() {
-    return k
+    return B
   },
   trackExplicitMediaRedactableMessagedLoaded: function() {
     return K
@@ -58,7 +58,7 @@ n.r(t), n.d(t, {
     return W
   },
   updateExplicitContentSetting: function() {
-    return B
+    return k
   }
 }), n("789020");
 var i, r, s, a, o, l, u, d, _ = n("286379"),
@@ -155,7 +155,7 @@ function w(e) {
   return e === c.ExplicitContentRedaction.BLUR || e === c.ExplicitContentRedaction.BLOCK
 }
 
-function k(e) {
+function B(e) {
   var t;
   if (!(0, R.isEligibleForExplicitMediaRedaction)()) return !1;
   let n = m.default.getCurrentUser();
@@ -169,7 +169,7 @@ function k(e) {
   if (a.isDM() || a.isGroupDM()) return null != e.author && A.default.getFriendIDs().includes(e.author.id) ? w(r) : w(s);
   return w(i)
 }
-let B = e => {
+let k = e => {
   let t = G();
   S.ExplicitContentSettings.updateSetting({
     ...t,
@@ -177,7 +177,7 @@ let B = e => {
   })
 };
 
-function F(e, t) {
+function V(e, t) {
   var n, i, r, s;
   if (!t) return !1;
   if (E.default.get("obscure_blur_effect_enabled")) return !0;
@@ -193,13 +193,13 @@ function F(e, t) {
   }
 }
 
-function V(e) {
-  return k(e) ? {
-    obscuredAttachments: e.attachments.filter(e => F({
+function x(e) {
+  return B(e) ? {
+    obscuredAttachments: e.attachments.filter(e => V({
       type: 0,
       media: e
     }, !0)),
-    obscuredEmbeds: e.embeds.filter(e => F({
+    obscuredEmbeds: e.embeds.filter(e => V({
       type: 1,
       media: e
     }, !0))
@@ -209,7 +209,7 @@ function V(e) {
   }
 }
 
-function x(e) {
+function F(e) {
   return !E.default.get("explicit_media_redaction_ignore_pending_scan") && null == e
 }
 

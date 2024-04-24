@@ -50,11 +50,11 @@ var i = n("735250"),
   b = n("346656"),
   G = n("514342"),
   w = n("605403"),
-  k = n("806519"),
-  B = n("626135"),
-  F = n("768581"),
-  V = n("900849"),
-  x = n("74538"),
+  B = n("806519"),
+  k = n("626135"),
+  V = n("768581"),
+  x = n("900849"),
+  F = n("74538"),
   H = n("886132"),
   Y = n("524444"),
   j = n("981631"),
@@ -113,13 +113,13 @@ let Q = () => ({
       id: s,
       icon: o,
       name: l
-    } = t, u = F.default.getGuildIconURL({
+    } = t, u = V.default.getGuildIconURL({
       id: s,
       icon: o,
       size: 32,
       canAnimate: !0
     }), _ = (n = null == n || n) || t.isDiscoverable(), c = () => {
-      t.isDiscoverable() ? (0, V.startLurking)(s, {}) : n && (0, L.transitionTo)(j.Routes.CHANNEL(s, v.default.getChannelId(s)))
+      t.isDiscoverable() ? (0, x.startLurking)(s, {}) : n && (0, L.transitionTo)(j.Routes.CHANNEL(s, v.default.getChannelId(s)))
     }, E = t.isDiscoverable() && null != t.presenceCount, I = () => {
       let e = !r && !n;
       return (0, i.jsxs)(i.Fragment, {
@@ -148,8 +148,8 @@ let Q = () => ({
     };
     return (0, i.jsxs)(P.default, {
       align: P.default.Align.CENTER,
-      children: [(0, i.jsx)(k.default, {
-        mask: k.default.Masks.SQUIRCLE,
+      children: [(0, i.jsx)(B.default, {
+        mask: B.default.Masks.SQUIRCLE,
         width: 32,
         height: 32,
         className: X.__invalid_guildIconContainer,
@@ -240,8 +240,8 @@ let Q = () => ({
       onToggleShowMoreEmojis: v,
       guildEmoji: U,
       demoMode: b = !1,
-      nonce: k
-    } = e, F = (0, l.useStateFromStores)([y.default], () => y.default.getCurrentUser()), V = (0, l.useStateFromStores)([M.default], () => M.default.getGuildId()), q = x.default.isPremium(F), J = null != V && (V === (null == S ? void 0 : S.id) || V === (null == O ? void 0 : O.id)), $ = null != O, et = null !== (t = null == S ? void 0 : S.isDiscoverable()) && void 0 !== t && t;
+      nonce: B
+    } = e, V = (0, l.useStateFromStores)([y.default], () => y.default.getCurrentUser()), x = (0, l.useStateFromStores)([M.default], () => M.default.getGuildId()), q = F.default.isPremium(V), J = null != x && (x === (null == S ? void 0 : S.id) || x === (null == O ? void 0 : O.id)), $ = null != O, et = null !== (t = null == S ? void 0 : S.isDiscoverable()) && void 0 !== t && t;
     b && (q = !0, et = !0, $ = !1, J = !1);
     let {
       enabled: en
@@ -259,9 +259,9 @@ let Q = () => ({
       userIsRoleSubscriber: !1
     } : {
       isRoleSubscriptionEmoji: m.isPurchasableRoleSubscriptionEmoji(U),
-      isUnusableRoleSubscriptionEmoji: m.isUnusableRoleSubscriptionEmoji(U, null != V ? V : void 0),
+      isUnusableRoleSubscriptionEmoji: m.isUnusableRoleSubscriptionEmoji(U, null != x ? x : void 0),
       userIsRoleSubscriber: N.default.getUserSubscriptionRoles(U.guildId).size > 0
-    }, [U, V]), eo = !!es && (0, f.shouldHideGuildPurchaseEntryPoints)(null == U ? void 0 : U.guildId), {
+    }, [U, x]), eo = !!es && (0, f.shouldHideGuildPurchaseEntryPoints)(null == U ? void 0 : U.guildId), {
       analyticsLocations: el
     } = (0, I.default)(E.default.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL);
     (0, T.default)({
@@ -286,7 +286,7 @@ let Q = () => ({
         isDiscoverable: et,
         shouldHideRoleSubscriptionCTA: eo,
         onOpenPremiumSettings: () => {
-          L(), B.default.track(j.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+          L(), k.default.track(j.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
             location_page: ei.page,
             location_section: ei.section
           }), (0, R.navigateToPremiumMarketingPage)()
@@ -299,7 +299,7 @@ let Q = () => ({
         currentGuildId: eu,
         popoutData: ed,
         emojiSourceGuildId: null == S ? void 0 : S.id,
-        nonce: k,
+        nonce: B,
         demoMode: b
       }),
       eI = ed.type === H.EmojiPopoutType.JOIN_GUILD,
@@ -378,7 +378,7 @@ let Q = () => ({
       })(), eh && (() => {
         let e = null != S && !$ && et,
           t = () => {
-            e && (null == v || v(), !ef && !b && B.default.track(j.AnalyticEvents.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, eE), eS(!ef))
+            e && (null == v || v(), !ef && !b && k.default.track(j.AnalyticEvents.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, eE), eS(!ef))
           };
         return (0, i.jsxs)("div", {
           className: X.guildSection,
@@ -470,7 +470,7 @@ let Q = () => ({
         color: d.ButtonColors.BRAND,
         fullWidth: !0,
         onClick: () => {
-          (0, V.startLurking)(r.id, {})
+          (0, x.startLurking)(r.id, {})
         },
         children: a.text
       }) : null)]

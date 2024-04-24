@@ -55,9 +55,9 @@ let U = r.forwardRef(function(e, t) {
     isDisabled: U = !1,
     maxVisibleItems: G = 7,
     look: w = D.SelectLooks.FILLED,
-    autoFocus: k = !1,
-    popoutPosition: B = "bottom",
-    filter: x = !0,
+    autoFocus: B = !1,
+    popoutPosition: k = "bottom",
+    filter: F = !0,
     debounceTime: H,
     renderOptionLabel: Y = P,
     onSearchChange: j,
@@ -190,10 +190,10 @@ let U = r.forwardRef(function(e, t) {
       setFocus: eU,
       disableClickOnSpace: !0
     }),
-    ek = (0, p.default)(ew),
-    eB = (0, p.default)(em);
+    eB = (0, p.default)(ew),
+    ek = (0, p.default)(em);
   r.useEffect(() => {
-    let e = eB.current,
+    let e = ek.current,
       t = eg.current;
     ec && null != t && !eN && requestAnimationFrame(() => {
       let n = eh.current,
@@ -204,7 +204,7 @@ let U = r.forwardRef(function(e, t) {
       })
     })
   }, [ec, eN]), r.useEffect(() => {
-    let e = ek.current;
+    let e = eB.current;
     if (ec && !eN) {
       var t;
       let n = eu.current;
@@ -226,7 +226,7 @@ let U = r.forwardRef(function(e, t) {
   }, [I, eC, ec]), r.useLayoutEffect(() => {
     I && eT("")
   }, [I, eO.length]);
-  let eF = r.useCallback(function(e) {
+  let eV = r.useCallback(function(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     if (null == e) {
       l(I ? [] : void 0);
@@ -244,15 +244,15 @@ let U = r.forwardRef(function(e, t) {
     e_(null), (!I || T) && eM(!1), eS(!1)
   }, [n, em, I, T, l, s, eM]);
   r.useLayoutEffect(() => {
-    if (k) {
+    if (B) {
       var e;
       null === (e = eu.current) || void 0 === e || e.focus()
     }
-  }, [k]);
-  let eV = r.useCallback(() => {
-      eT(""), eF(null), eM(!0)
-    }, [eF, eM]),
-    ex = r.useCallback(e => {
+  }, [B]);
+  let ex = r.useCallback(() => {
+      eT(""), eV(null), eM(!0)
+    }, [eV, eM]),
+    eF = r.useCallback(e => {
       switch (e.key) {
         case "Escape":
           ec && (e.stopPropagation(), eM(!1));
@@ -263,13 +263,13 @@ let U = r.forwardRef(function(e, t) {
       }
     }, [eM, ec]),
     eH = em;
-  ef && null != eI && !1 !== x && (eH = "function" == typeof x ? x(em, eI) : (0, o.matchSorter)(em, eI, null != ee ? ee : y)), r.useEffect(() => {
+  ef && null != eI && !1 !== F && (eH = "function" == typeof F ? F(em, eI) : (0, o.matchSorter)(em, eI, null != ee ? ee : y)), r.useEffect(() => {
     let e = eh.current;
     null == e || e.scrollToTop()
   }, [eI]), r.useEffect(() => {
     !eN && ef && null !== eI && requestAnimationFrame(() => ew.focusFirstVisibleItem())
   }, [eN, ef, eI]);
-  let eY = I ? V : F;
+  let eY = I ? x : V;
   return (0, i.jsx)(u.ListNavigatorProvider, {
     navigator: ew,
     children: (0, i.jsx)(f.Popout, {
@@ -293,7 +293,7 @@ let U = r.forwardRef(function(e, t) {
           width: el,
           selectedValues: eR,
           closePopout: t,
-          onSelect: eF,
+          onSelect: eV,
           closeOnSelect: T,
           options: eH,
           activeDescendant: ed,
@@ -304,7 +304,7 @@ let U = r.forwardRef(function(e, t) {
           renderOptionSuffix: K
         })
       },
-      position: B,
+      position: k,
       children: (e, t) => {
         let {
           "aria-expanded": n,
@@ -377,7 +377,7 @@ let U = r.forwardRef(function(e, t) {
                   },
                   onKeyDown: e => {
                     var t;
-                    null === (t = et.onKeyDown) || void 0 === t || t.call(et, e), E(e), ex(e)
+                    null === (t = et.onKeyDown) || void 0 === t || t.call(et, e), E(e), eF(e)
                   },
                   activeDescendant: ed,
                   placeholder: N,
@@ -386,7 +386,7 @@ let U = r.forwardRef(function(e, t) {
                   navigatorId: eD,
                   selectValue: function(e) {
                     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-                    eF(e, t)
+                    eV(e, t)
                   },
                   inputClassNames: Z
                 })
@@ -401,7 +401,7 @@ let U = r.forwardRef(function(e, t) {
             children: [d && (null != eI && "" !== eI || eO.length > 0) ? (0, i.jsx)(_.Clickable, {
               "aria-label": v.default.Messages.CLEAR,
               "aria-controls": ev,
-              onClick: eV,
+              onClick: ex,
               children: (0, i.jsx)(L.default, {
                 width: 16,
                 height: 16,
@@ -508,7 +508,7 @@ function b(e) {
           let {
             row: n
           } = e, r = o[n], a = I(r);
-          return (0, i.jsx)(k, {
+          return (0, i.jsx)(B, {
             multi: m,
             "aria-posinset": n,
             "aria-setsize": o.length,
@@ -584,7 +584,7 @@ function w(e) {
   })
 }
 
-function k(e) {
+function B(e) {
   let {
     value: t,
     label: n,
@@ -623,14 +623,14 @@ function k(e) {
     }), " ", null != s && (0, i.jsx)("div", {
       className: M.suffix,
       children: s
-    }), " ", (0, i.jsx)(B, {
+    }), " ", (0, i.jsx)(k, {
       isSelected: l,
       multi: c
     })]
   })
 }
 
-function B(e) {
+function k(e) {
   let {
     isSelected: t,
     multi: n
@@ -652,7 +652,7 @@ function B(e) {
   }) : null
 }
 
-function F(e) {
+function V(e) {
   let {
     selectedOptions: t,
     renderOptionPrefix: n,
@@ -669,7 +669,7 @@ function F(e) {
     children: [null != o ? (0, i.jsx)("div", {
       "aria-hidden": !0,
       children: o
-    }) : null, (0, i.jsx)(x, {
+    }) : null, (0, i.jsx)(F, {
       selectedOptions: t,
       ...s
     }), null != l ? (0, i.jsx)("div", {
@@ -679,7 +679,7 @@ function F(e) {
   })
 }
 
-function V(e) {
+function x(e) {
   let {
     query: t,
     placeholder: n,
@@ -752,7 +752,7 @@ function V(e) {
       selectValue: o,
       focusNextItem: m,
       focusPreviousItem: A
-    }), (0, i.jsx)(x, {
+    }), (0, i.jsx)(F, {
       style: {
         minWidth: "".concat(S, "ch")
       },
@@ -772,7 +772,7 @@ function V(e) {
   })
 }
 
-function x(e) {
+function F(e) {
   let {
     query: t,
     inputId: n,

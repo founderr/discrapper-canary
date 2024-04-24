@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return R
   },
   CLAN_BRAND_PALETTE_PRESETS: function() {
-    return B
+    return k
   },
   CLAN_SETTINGS_MODAL_LAYER_KEY: function() {
     return f
@@ -76,7 +76,7 @@ n.r(t), n.d(t, {
     return L
   },
   SUGGESTED_TRAITS_SET: function() {
-    return k
+    return B
   },
   VALORANT_ID: function() {
     return M
@@ -85,7 +85,7 @@ n.r(t), n.d(t, {
     return P
   },
   ensureUserClanData: function() {
-    return V
+    return x
   },
   getPlaystyleOptions: function() {
     return v
@@ -94,7 +94,7 @@ n.r(t), n.d(t, {
     return D
   },
   getRandomClanBrandPreset: function() {
-    return F
+    return V
   },
   getSortedTraits: function() {
     return function e(t, n) {
@@ -107,7 +107,7 @@ n.r(t), n.d(t, {
     }
   },
   toServerClanData: function() {
-    return x
+    return F
   }
 }), n("47120"), n("653041");
 var i, r, s, a, o, l, u, d, _ = n("913527"),
@@ -186,9 +186,9 @@ let M = "700136079562375258",
   b = ["LGBTQIA-Friendly", "All genders"],
   G = new Set([...P, ...U, ...b]),
   w = new Set(E.default.getAvailableLocales().map(e => e.value)),
-  k = new Set(["Anime", "Art and Craft", "Architecture", "Baseball", "Basketball", "Beauty", "Beer", "Board Games", "Books", "Cars", "Celebrities", "Coffee", "Coding", "Craft", "Design", "F1", "Fashion", "Fitness", "Food", "Football", "Healthcare", "Home Decor", "Houseplants", "K-Pop", "Knitting", "LEGO", "MARVEL", "Motorcycles", "Movies", "Music", "Nail Art", "Pets", "Photography", "Pok\xe9mon", "Programming", "Roman History", "Science", "Skiing", "Soccer", "Star Wars", "TCG", "TEA", "Tech", "Travel", "TV Shows", "Wine"]);
+  B = new Set(["Anime", "Art and Craft", "Architecture", "Baseball", "Basketball", "Beauty", "Beer", "Board Games", "Books", "Cars", "Celebrities", "Coffee", "Coding", "Craft", "Design", "F1", "Fashion", "Fitness", "Food", "Football", "Healthcare", "Home Decor", "Houseplants", "K-Pop", "Knitting", "LEGO", "MARVEL", "Motorcycles", "Movies", "Music", "Nail Art", "Pets", "Photography", "Pok\xe9mon", "Programming", "Roman History", "Science", "Skiing", "Soccer", "Star Wars", "TCG", "TEA", "Tech", "Travel", "TV Shows", "Wine"]);
 (d = a || (a = {}))[d.PIXEL_RUSH = 0] = "PIXEL_RUSH", d[d.SCANLINES = 1] = "SCANLINES", d[d.TEXTURED = 2] = "TEXTURED", d[d.MAGIC = 3] = "MAGIC", d[d.CUSTOM = 4] = "CUSTOM";
-let B = [{
+let k = [{
   name: "Boulder",
   primary: "#8c8d8d",
   secondary: "#d0d0d1"
@@ -222,11 +222,11 @@ let B = [{
   secondary: "#78b6f0"
 }];
 
-function F() {
-  return B[Math.floor(Math.random() * B.length)]
+function V() {
+  return k[Math.floor(Math.random() * k.length)]
 }
 
-function V(e) {
+function x(e) {
   return null == e ? null : "identityGuildId" in e ? e : {
     identityGuildId: e.identity_guild_id,
     identityEnabled: e.identity_enabled,
@@ -234,7 +234,7 @@ function V(e) {
   }
 }
 
-function x(e) {
+function F(e) {
   return {
     tag: e.tag
   }

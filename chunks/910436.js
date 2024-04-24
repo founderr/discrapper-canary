@@ -107,23 +107,23 @@ function I(e) {
     var a, s, l, f, h, C, p, N, R;
     let {
       activity: L,
-      game: P,
-      playingMembers: M,
+      game: M,
+      playingMembers: P,
       activityUser: x
     } = e;
     if (null == L || null == L.type) return null;
-    if (g.length > 1 && L.type === S.ActivityTypes.PLAYING && !(0, i.default)(L) && null != P) O((0, n.jsx)(_.default.GameSection, {
-      icon: P.getIconURL(m.ICON_SIZE),
-      name: P.name,
+    if (g.length > 1 && L.type === S.ActivityTypes.PLAYING && !(0, i.default)(L) && null != M) O((0, n.jsx)(_.default.GameSection, {
+      icon: M.getIconURL(m.ICON_SIZE),
+      name: M.name,
       partySize: {
-        knownSize: M.length,
+        knownSize: P.length,
         unknownSize: 0,
-        totalSize: M.length
+        totalSize: P.length
       },
-      members: M
+      members: P
     }, "game-".concat(null !== (a = L.session_id) && void 0 !== a ? a : t, "-").concat(null !== (s = L.application_id) && void 0 !== s ? s : t)));
     else if ((0, r.default)(L)) {
-      let e = new Set(M.map(e => e.id)),
+      let e = new Set(P.map(e => e.id)),
         t = null === (l = T.find(e => null != e)) || void 0 === l ? void 0 : l.channel;
       null != t && O((0, n.jsx)(_.default.EmbeddedActivitySection, {
         activity: L,
@@ -137,7 +137,7 @@ function I(e) {
     }, "rich-presence-".concat(null !== (f = L.session_id) && void 0 !== f ? f : t, "-").concat(x.id)));
     else if ((0, d.default)(L)) {
       let e = T.length > 0 && T[0].members.length > 1,
-        a = M.length > 1;
+        a = P.length > 1;
       O((0, n.jsx)(_.default.TwitchSection, {
         guildId: null == v ? void 0 : v.id,
         activity: L,
@@ -148,19 +148,19 @@ function I(e) {
       activity: L,
       isSolo: 1 === A.length,
       partySize: {
-        knownSize: M.length,
+        knownSize: P.length,
         unknownSize: 0,
-        totalSize: M.length
+        totalSize: P.length
       },
       getAssetImage: E.getAssetImage,
-      members: M
+      members: P
     }, "spotify-".concat(null !== (C = L.session_id) && void 0 !== C ? C : t, "-").concat(x.id))) : (null != L.assets || (0, i.default)(L)) && L.type === S.ActivityTypes.LISTENING ? O((0, n.jsx)(_.default.RichPresenceSection, {
       activity: L,
       getAssetImage: E.getAssetImage
     }, "rich-presence-".concat(null !== (p = L.session_id) && void 0 !== p ? p : t, "-").concat(x.id))) : (0, u.default)(L) && O((0, n.jsx)(_.default.XboxSection, {
-      title: P.name
+      title: M.name
     }, "xbox-".concat(null !== (N = L.session_id) && void 0 !== N ? N : t)));
-    null != I && null != P && P.id === I.config.applicationId && O((0, n.jsx)(c.default, {
+    null != I && null != M && M.id === I.config.applicationId && O((0, n.jsx)(c.default, {
       quest: I
     }, "quest-".concat(I.id, "-").concat(null !== (R = L.session_id) && void 0 !== R ? R : t)))
   }), R.length > 0 ? (0, n.jsx)(_.default.Body, {

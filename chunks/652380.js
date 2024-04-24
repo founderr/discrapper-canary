@@ -6,8 +6,8 @@ var a = s("735250"),
   i = s("481060"),
   r = s("70956"),
   o = s("497505"),
-  d = s("78826"),
-  u = s("990146"),
+  d = s("210724"),
+  u = s("78826"),
   c = s("37303"),
   S = s("478977"),
   E = s("456799"),
@@ -313,9 +313,9 @@ function A() {
             children: "The Quest Bar is hidden when the user has claimed the reward."
           }), (0, a.jsx)("div", {
             className: _.questBarPreview,
-            children: (0, a.jsx)(d.QuestsAssetContextProvider, {
+            children: (0, a.jsx)(u.QuestsAssetContextProvider, {
               isPreview: !0,
-              children: (0, a.jsx)(u.default, {
+              children: (0, a.jsx)(d.default, {
                 overrideQuest: t
               })
             })
@@ -324,7 +324,7 @@ function A() {
       }), (0, a.jsxs)(E.default, {
         children: [(0, a.jsx)(i.FormTitle, {
           children: "Gift Inventory"
-        }), (0, a.jsx)(d.QuestsAssetContextProvider, {
+        }), (0, a.jsx)(u.QuestsAssetContextProvider, {
           isPreview: !0,
           children: (0, a.jsx)(c.QuestsCard, {
             quest: t,

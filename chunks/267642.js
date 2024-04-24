@@ -19,10 +19,10 @@ n.r(t), n.d(t, {
     return M
   },
   getAvailableSoundboardSoundCount: function() {
-    return B
+    return k
   },
   getAvailableStickerSlotCount: function() {
-    return k
+    return B
   },
   getGracePeriodEndingDate: function() {
     return w
@@ -40,7 +40,7 @@ n.r(t), n.d(t, {
     return S
   },
   getNumberOfAppliedBoostsNeededForTier: function() {
-    return F
+    return V
   },
   getShortenedTierName: function() {
     return R
@@ -58,7 +58,7 @@ n.r(t), n.d(t, {
     return h
   },
   isGuildBoostSlotCanceled: function() {
-    return V
+    return x
   },
   isGuildBoostedAtLeast: function() {
     return D
@@ -336,7 +336,7 @@ function y() {
   let {
     numAvailableGuildBoostSlots: t,
     numCanceledGuildBoostSlots: n
-  } = Object.values(o.default.boostSlots).reduce((e, t) => (V(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
+  } = Object.values(o.default.boostSlots).reduce((e, t) => (x(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
     numAvailableGuildBoostSlots: 0,
     numCanceledGuildBoostSlots: 0
   });
@@ -390,7 +390,7 @@ function w(e, t) {
   return null
 }
 
-function k(e, t) {
+function B(e, t) {
   let n = A(t),
     i = f.indexOf(t);
   if (-1 === i) return 0;
@@ -400,16 +400,16 @@ function k(e, t) {
   return Math.max(0, n - e.slice(s, a).length)
 }
 
-function B(e, t) {
+function k(e, t) {
   return -1 === f.indexOf(t) ? 0 : Math.max(0, m(t) - e.length)
 }
 
-function F(e, t) {
+function V(e, t) {
   let n = e.premiumSubscriberCount;
   return Math.max(0, b(e.id)[t] - n)
 }
 
-function V(e) {
+function x(e) {
   var t;
   return (null === (t = e.subscription) || void 0 === t ? void 0 : t.status) === E.SubscriptionStatusTypes.CANCELED || e.canceled
 }

@@ -82,7 +82,7 @@ function D(e) {
     userId: I,
     className: t
   });
-  let k = e => (0, i.jsx)(p.default, {
+  let B = e => (0, i.jsx)(p.default, {
     className: t,
     onContextMenu: P,
     color: w,
@@ -91,7 +91,7 @@ function D(e) {
   });
   return g ? (0, i.jsx)(c.AnalyticsLocationProvider, {
     value: D,
-    children: k()
+    children: B()
   }) : (0, i.jsx)(c.AnalyticsLocationProvider, {
     value: D,
     children: (0, i.jsx)(u.Popout, {
@@ -107,7 +107,7 @@ function D(e) {
         ...e
       })),
       position: o.isMobile ? "top" : "right",
-      children: e => k(e)
+      children: e => B(e)
     })
   })
 }

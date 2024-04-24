@@ -39,15 +39,15 @@ t.default = e => {
     selectedItemClassName: b,
     messageId: G,
     isBurstReaction: w,
-    inNitroLockedSection: k
+    inNitroLockedSection: B
   } = e, {
-    enabled: B
+    enabled: k
   } = f.default.useExperiment({
     location: "EmojiPicker"
   }, {
     autoTrackExposure: !1
-  }), F = _.EmojiPickerStore.getState(), [V, x] = r.useState(F.inspectedExpressionPosition), [H, Y] = (0, l.default)(null, 300), j = r.useRef(null);
-  r.useEffect(() => _.EmojiPickerStore.useStore.subscribe(e => x(e), e => e.inspectedExpressionPosition), []), r.useEffect(() => {
+  }), V = _.EmojiPickerStore.getState(), [x, F] = r.useState(V.inspectedExpressionPosition), [H, Y] = (0, l.default)(null, 300), j = r.useRef(null);
+  r.useEffect(() => _.EmojiPickerStore.useStore.subscribe(e => F(e), e => e.inspectedExpressionPosition), []), r.useEffect(() => {
     E.FrecencyUserSettingsActionCreators.loadIfNecessary()
   }, []);
   let W = n === A.EmojiSize.LARGE,
@@ -59,7 +59,7 @@ t.default = e => {
           let {
             visibleRowIndex: n,
             columnIndex: l
-          } = e, u = V.rowIndex === n && V.columnIndex === l, d = t => {
+          } = e, u = x.rowIndex === n && x.columnIndex === l, d = t => {
             t.stopPropagation(), !L.current && !D.current && (s(e, {
               isFinalSelection: !0,
               toggleFavorite: !1
@@ -113,7 +113,7 @@ t.default = e => {
           let {
             columnIndex: r,
             visibleRowIndex: a
-          } = e, o = V.rowIndex === a && V.columnIndex === r;
+          } = e, o = x.rowIndex === a && x.columnIndex === r;
           return (0, i.jsx)(h.default, {
             rowIndex: v,
             descriptor: e,
@@ -136,7 +136,7 @@ t.default = e => {
             messageId: G,
             isBurstReaction: w,
             rowPosition: null == j ? void 0 : null === (n = j.current) || void 0 === n ? void 0 : n.getBoundingClientRect(),
-            inNitroLockedSection: k
+            inNitroLockedSection: B
           }, t)
         }
       }
@@ -151,7 +151,7 @@ t.default = e => {
       children: e.map(z)
     });
   if (U !== A.EmojiCategoryTypes.TOP_GUILD_EMOJI) return X(t);
-  let Q = t.filter(e => !!B && e.type === S.EmojiGridItemTypes.CREATE_EMOJI || e.subCategory === A.EmojiSubCategory.TOP_GUILD_EMOJI || e.subCategory === A.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && !d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
+  let Q = t.filter(e => !!k && e.type === S.EmojiGridItemTypes.CREATE_EMOJI || e.subCategory === A.EmojiSubCategory.TOP_GUILD_EMOJI || e.subCategory === A.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && !d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
     q = t.filter(e => e.subCategory === A.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
   return 0 === q.length ? X(t) : (0, i.jsxs)("div", {
     className: p.topEmojiSectionContainer,

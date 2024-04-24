@@ -21,16 +21,16 @@ let p = [],
 
 function O() {
   if (n = null != (s = _.default.getChannel()) ? C.default.getGuild(s.guild_id) : null, p = null != s && null != n && m.default.can(I.Permissions.MANAGE_WEBHOOKS, s) ? S.default.getWebhooksForChannel(n.id, s.id) : [], null != T) {
-    let e = P(T.id);
+    let e = M(T.id);
     null != e && (T = e)
   }
   A = I.FormStates.OPEN, N = {}, v = !1
 }
 let L = c().debounce(() => {
-  v && ((null == T || c().isEqual(T, P(T.id))) && (v = !1), !v && x.emitChange())
+  v && ((null == T || c().isEqual(T, M(T.id))) && (v = !1), !v && x.emitChange())
 }, 500);
 
-function P(e) {
+function M(e) {
   return p.find(t => {
     let {
       id: a
@@ -38,7 +38,7 @@ function P(e) {
     return a === e
   })
 }
-class M extends(i = f.default.Store) {
+class P extends(i = f.default.Store) {
   initialize() {
     this.waitFor(_.default, C.default, S.default, m.default)
   }
@@ -55,7 +55,7 @@ class M extends(i = f.default.Store) {
     return A
   }
   getWebhook(e) {
-    return P(e)
+    return M(e)
   }
   showNotice() {
     return this.hasChanges()
@@ -73,13 +73,13 @@ class M extends(i = f.default.Store) {
     }
   }
 }
-u = "ChannelSettingsIntegrationsStore", (o = "displayName") in(r = M) ? Object.defineProperty(r, o, {
+u = "ChannelSettingsIntegrationsStore", (o = "displayName") in(r = P) ? Object.defineProperty(r, o, {
   value: u,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : r[o] = u;
-let x = new M(E.default, __OVERLAY__ ? {} : {
+let x = new P(E.default, __OVERLAY__ ? {} : {
   INTEGRATION_SETTINGS_INIT: O,
   INTEGRATION_SETTINGS_SAVE_SUCCESS: O,
   CHANNEL_SETTINGS_SET_SECTION: function(e) {
@@ -103,7 +103,7 @@ let x = new M(E.default, __OVERLAY__ ? {} : {
   INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function(e) {
     let {
       webhookId: t
-    } = e, a = P(t);
+    } = e, a = M(t);
     if (null == a) return !1;
     T = a, N = {}, v = !1
   },

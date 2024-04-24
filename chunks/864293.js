@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n("47120");
-var s, a = n("735250"),
-  i = n("470079"),
-  l = n("120356"),
-  r = n.n(l),
-  o = n("748780"),
-  c = n("481060"),
+var r, s = n("735250"),
+  o = n("470079"),
+  i = n("120356"),
+  a = n.n(i),
+  l = n("748780"),
+  u = n("481060"),
   d = n("932660");
 
-function u(e, t, n) {
+function c(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -16,11 +16,11 @@ function u(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let S = {
+let h = {
   friction: 7,
   tension: 60
 };
-class T extends(s = i.Component) {
+class f extends(r = o.Component) {
   componentWillAppear(e) {
     this.animateTo(1).start(e)
   }
@@ -31,11 +31,11 @@ class T extends(s = i.Component) {
     let {
       reducedMotion: t
     } = this.context;
-    t.enabled ? this.animateTo(0).start(e) : o.default.stagger(250, [this.animateTo(1.3), this.animateTo(0)]).start(e)
+    t.enabled ? this.animateTo(0).start(e) : l.default.stagger(250, [this.animateTo(1.3), this.animateTo(0)]).start(e)
   }
   animateTo(e) {
-    return o.default.spring(this.animation, {
-      ...S,
+    return l.default.spring(this.animation, {
+      ...h,
       toValue: e
     })
   }
@@ -43,7 +43,7 @@ class T extends(s = i.Component) {
     let {
       reducedMotion: e
     } = this.context;
-    return o.default.accelerate({
+    return l.default.accelerate({
       opacity: this.animation,
       transform: e.enabled ? void 0 : [{
         translateY: this.animation.interpolate({
@@ -58,14 +58,14 @@ class T extends(s = i.Component) {
       className: e,
       children: t
     } = this.props;
-    return (0, a.jsx)(o.default.div, {
-      className: r()(e, d.slider),
+    return (0, s.jsx)(l.default.div, {
+      className: a()(e, d.slider),
       style: this.getAnimatedStyle(),
       children: t
     })
   }
   constructor(...e) {
-    super(...e), u(this, "animation", new o.default.Value(0))
+    super(...e), c(this, "animation", new l.default.Value(0))
   }
 }
-u(T, "contextType", c.AccessibilityPreferencesContext), t.default = T
+c(f, "contextType", u.AccessibilityPreferencesContext), t.default = f

@@ -31,9 +31,9 @@ var A = n("995774"),
   b = n("981631");
 let G = new Set,
   w = new E.default("MessageStore"),
-  k = !1;
+  B = !1;
 
-function B() {
+function k() {
   _.default.forEach(e => {
     _.default.commit(e.mutate({
       ready: !1,
@@ -42,7 +42,7 @@ function B() {
   }), G.clear()
 }
 
-function F() {
+function V() {
   _.default.forEach(e => {
     let {
       channelId: t
@@ -51,13 +51,13 @@ function F() {
   })
 }
 
-function V() {
+function x() {
   _.default.forEach(e => {
     _.default.commit(e.reset(e.map(e => e.set("blocked", M.default.isBlocked(e.author.id)))))
   })
 }
 
-function x(e) {}
+function F(e) {}
 
 function H(e) {
   let {
@@ -144,7 +144,7 @@ class j extends(i = u.default.Store) {
     return null != this.getMessages(e).findNewest(e => e.author.id === (null == t ? void 0 : t.id))
   }
   hasCurrentUserSentMessageSinceAppStart() {
-    return k
+    return B
   }
 }
 a = "MessageStore", (s = "displayName") in(r = j) ? Object.defineProperty(r, s, {
@@ -165,8 +165,8 @@ a = "MessageStore", (s = "displayName") in(r = j) ? Object.defineProperty(r, s, 
       }
     }
   },
-  CONNECTION_OPEN: B,
-  OVERLAY_INITIALIZE: B,
+  CONNECTION_OPEN: k,
+  OVERLAY_INITIALIZE: k,
   CACHE_LOADED: function(e) {
     for (let [t, n] of p.default.entries(e.messages)) {
       let e = _.default.getOrCreate(t).addCachedMessages(n, !0);
@@ -342,13 +342,13 @@ a = "MessageStore", (s = "displayName") in(r = j) ? Object.defineProperty(r, s, 
       hasMoreBefore: !1
     }), _.default.commit(n)
   },
-  CHANNEL_DELETE: F,
-  THREAD_DELETE: F,
-  GUILD_DELETE: F,
-  RELATIONSHIP_ADD: V,
-  RELATIONSHIP_REMOVE: V,
-  GUILD_MEMBERS_CHUNK: x,
-  THREAD_MEMBER_LIST_UPDATE: x,
+  CHANNEL_DELETE: V,
+  THREAD_DELETE: V,
+  GUILD_DELETE: V,
+  RELATIONSHIP_ADD: x,
+  RELATIONSHIP_REMOVE: x,
+  GUILD_MEMBERS_CHUNK: F,
+  THREAD_MEMBER_LIST_UPDATE: F,
   MESSAGE_REACTION_ADD: H,
   MESSAGE_REACTION_ADD_MANY: function(e) {
     let {
@@ -407,6 +407,6 @@ a = "MessageStore", (s = "displayName") in(r = j) ? Object.defineProperty(r, s, 
     let {
       message: t
     } = e, n = U.default.getCurrentUser();
-    null != t && null != t.author && null != n && t.author.id === n.id && (k = !0)
+    null != t && null != t.author && null != n && t.author.id === n.id && (B = !0)
   }
 })

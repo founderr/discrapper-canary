@@ -60,7 +60,7 @@ t.default = function(e) {
   var t, a, l;
   let {
     quest: o
-  } = e, c = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(o.id), [o]), [L, P] = s.useState(!1), M = s.useCallback(() => P(!0), []), x = s.useCallback(() => P(!1), []), y = s.useCallback(e => {
+  } = e, c = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(o.id), [o]), [L, M] = s.useState(!1), P = s.useCallback(() => M(!0), []), x = s.useCallback(() => M(!1), []), y = s.useCallback(e => {
     e.stopPropagation()
   }, []), D = s.useCallback(() => {
     (0, h.enrollInQuest)(o.id, {
@@ -97,8 +97,8 @@ t.default = function(e) {
         }),
         onClick: y,
         onKeyPress: y,
-        onFocus: M,
-        onMouseEnter: M,
+        onFocus: P,
+        onMouseEnter: P,
         onBlur: x,
         onMouseLeave: x,
         children: [(0, n.jsxs)("div", {

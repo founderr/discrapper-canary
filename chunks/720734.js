@@ -30,8 +30,8 @@ var n = a("735250"),
   R = a("586902"),
   O = a("1585"),
   L = a("304761"),
-  P = a("865427"),
-  M = a("571250"),
+  M = a("865427"),
+  P = a("571250"),
   x = a("628581"),
   y = a("55311"),
   D = a("575175"),
@@ -84,8 +84,8 @@ var n = a("735250"),
   eR = a("87888"),
   eO = a("976401"),
   eL = a("333454"),
-  eP = a("864441"),
-  eM = a("26290"),
+  eM = a("864441"),
+  eP = a("26290"),
   ex = a("626135"),
   ey = a("768581"),
   eD = a("572004"),
@@ -163,7 +163,7 @@ class eK extends s.PureComponent {
     })), (0, n.jsxs)(n.Fragment, {
       children: [(0, n.jsx)("div", {
         className: eH.panelTitleContainer,
-        children: (0, n.jsx)(eP.default, {
+        children: (0, n.jsx)(eM.default, {
           children: r
         })
       }), (0, n.jsx)("div", {
@@ -643,9 +643,9 @@ function ez() {
     } = (0, ed.default)(_),
     O = (0, r.useStateFromStores)([L.default], () => {
       var e;
-      return (0, P.probablyHasBuildOverride)() ? null === (e = L.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
+      return (0, M.probablyHasBuildOverride)() ? null === (e = L.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
-    M = (0, r.useStateFromStores)([ep.default], () => ep.default.getPremiumTypeSubscription()),
+    P = (0, r.useStateFromStores)([ep.default], () => ep.default.getPremiumTypeSubscription()),
     x = (0, r.useStateFromStores)([e_.default], () => e_.default.getEverSpeakingWhileMuted()),
     y = (0, r.useStateFromStores)([eh.default], () => eh.default.hasLayers()),
     D = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || y || eU.ProcessArgs.isDisallowPopupsSet(),
@@ -720,7 +720,7 @@ function ez() {
     userTag: E,
     hidePrivateData: h,
     occluded: D,
-    premiumSubscription: M,
+    premiumSubscription: P,
     selfDeaf: T,
     selfMute: I,
     serverDeaf: g,
@@ -751,7 +751,7 @@ function eq(e) {
     height: 9,
     className: eH.hasBuildOverride,
     "aria-hidden": !0
-  }) : a && (r = (0, n.jsx)(eM.CircleBadge, {
+  }) : a && (r = (0, n.jsx)(eP.CircleBadge, {
     color: U.default.STATUS_DANGER,
     className: eH.hasBuildOverride,
     "aria-hidden": !0
@@ -828,7 +828,7 @@ function eZ(e) {
     }
   } = (0, h.useHeadphonesLottie)(u ? "undeafen" : "deafen"), C = a ? d.HeadphonesDenyIcon : c;
   return s.useEffect(() => () => f(), [u, f]), (0, n.jsx)(eO.default, {
-    tooltipText: (0, M.default)(t, a, l),
+    tooltipText: (0, P.default)(t, a, l),
     onMouseEnter: E,
     onMouseLeave: _,
     icon: (0, n.jsx)(C, {

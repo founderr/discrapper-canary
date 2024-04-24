@@ -1,32 +1,32 @@
 "use strict";
-a.r(v), a.d(v, {
+n.r(t), n.d(t, {
   getTransformedBadgeColors: function() {
-    return i
+    return a
   }
-}), a("411104");
-var t = a("688619"),
-  l = a.n(t);
+}), n("411104");
+var i = n("688619"),
+  r = n.n(i);
 
-function e(h, v, a) {
-  if (!l().valid(v)) throw Error("Invalid badge tint color ".concat(v));
-  let t = l()(v),
-    e = t.luminance();
-  return h.map((h, v) => t.luminance((h * a[v].base + e * a[v].tint) / (a[v].base + a[v].tint)).hex())
+function s(e, t, n) {
+  if (!r().valid(t)) throw Error("Invalid badge tint color ".concat(t));
+  let i = r()(t),
+    s = i.luminance();
+  return e.map((e, t) => i.luminance((e * n[t].base + s * n[t].tint) / (n[t].base + n[t].tint)).hex())
 }
 
-function i(h) {
+function a(e) {
   let {
-    primaryBaseColors: v,
-    primaryTintColor: a,
-    primaryTintLuminances: t,
-    primaryLuminanceWeights: l,
-    secondaryBaseColors: i,
-    secondaryTintColor: s,
-    secondaryTintLuminances: n,
-    secondaryLuminanceWeights: r
-  } = h, d = null != a ? e(t, a, l) : v, M = [];
-  return null != i && null != n && null != r && (M = null != s ? e(n, s, r) : i), {
+    primaryBaseColors: t,
+    primaryTintColor: n,
+    primaryTintLuminances: i,
+    primaryLuminanceWeights: r,
+    secondaryBaseColors: a,
+    secondaryTintColor: o,
+    secondaryTintLuminances: l,
+    secondaryLuminanceWeights: u
+  } = e, d = null != n ? s(i, n, r) : t, _ = [];
+  return null != a && null != l && null != u && (_ = null != o ? s(l, o, u) : a), {
     primaryColorsTransformed: d,
-    secondaryColorsTransformed: M
+    secondaryColorsTransformed: _
   }
 }

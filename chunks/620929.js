@@ -75,15 +75,15 @@ t.default = e => {
     gameApplicationIds: R,
     playstyle: O,
     interests: L,
-    primetime: P,
-    tag: M
+    primetime: M,
+    tag: P
   } = (0, d.useStateFromStoresObject)([_.default], () => {
     var e;
     return null !== (e = _.default.getStateForGuild(a).progress) && void 0 !== e ? e : _.DEFAULT_CLAN_PROGRESS
   }), x = s.useMemo(() => (null == L ? void 0 : L.size) > 0 ? (0, C.formatSelectionList)(Array.from(L), T.MAX_TRAITS_TO_DISPLAY) : null, [L]), y = s.useMemo(() => {
-    let e = (null == P ? void 0 : P.length) > 0 ? P.map(e => (0, m.primetimeToString)(e)).filter(h.isNotNullish) : [];
+    let e = (null == M ? void 0 : M.length) > 0 ? M.map(e => (0, m.primetimeToString)(e)).filter(h.isNotNullish) : [];
     return (null == e ? void 0 : e.length) > 0 ? (0, C.formatSelectionList)(e, T.MAX_TIMES_TO_DISPLAY) : null
-  }, [P]);
+  }, [M]);
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)("div", {
       className: A.scrollBg,
@@ -99,7 +99,7 @@ t.default = e => {
         fade: !0,
         className: A.overviewSidebarContent,
         children: [(0, n.jsx)(N, {
-          tag: M
+          tag: P
         }), (0, n.jsx)(c.Heading, {
           variant: "heading-xl/normal",
           color: "text-muted",

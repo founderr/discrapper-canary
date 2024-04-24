@@ -26,8 +26,8 @@ var n = a("735250"),
   R = a("308083"),
   O = a("689938"),
   L = a("653196");
-let P = [R.ClanSetupSteps.FOUNDATIONAL_INTRO, R.ClanSetupSteps.GAMES, R.ClanSetupSteps.PLAYSTYLE, R.ClanSetupSteps.PERSONALITY_INTRO, R.ClanSetupSteps.UTILITY_TRAITS, R.ClanSetupSteps.INTERESTS, R.ClanSetupSteps.DESCRIPTION, R.ClanSetupSteps.PRIMETIME, R.ClanSetupSteps.IDENTITY_INTRO, R.ClanSetupSteps.CUSTOMIZE_TAG_BADGE, R.ClanSetupSteps.CUSTOMIZE_BANNER, R.ClanSetupSteps.APPLICATION_INTRO, R.ClanSetupSteps.MEMBER_APPLICATION],
-  M = {
+let M = [R.ClanSetupSteps.FOUNDATIONAL_INTRO, R.ClanSetupSteps.GAMES, R.ClanSetupSteps.PLAYSTYLE, R.ClanSetupSteps.PERSONALITY_INTRO, R.ClanSetupSteps.UTILITY_TRAITS, R.ClanSetupSteps.INTERESTS, R.ClanSetupSteps.DESCRIPTION, R.ClanSetupSteps.PRIMETIME, R.ClanSetupSteps.IDENTITY_INTRO, R.ClanSetupSteps.CUSTOMIZE_TAG_BADGE, R.ClanSetupSteps.CUSTOMIZE_BANNER, R.ClanSetupSteps.APPLICATION_INTRO, R.ClanSetupSteps.MEMBER_APPLICATION],
+  P = {
     [R.ClanSetupSteps.FOUNDATIONAL_INTRO]: [R.ClanSetupSteps.GAMES, R.ClanSetupSteps.PLAYSTYLE],
     [R.ClanSetupSteps.PERSONALITY_INTRO]: [R.ClanSetupSteps.UTILITY_TRAITS, R.ClanSetupSteps.INTERESTS, R.ClanSetupSteps.DESCRIPTION, R.ClanSetupSteps.PRIMETIME],
     [R.ClanSetupSteps.IDENTITY_INTRO]: [R.ClanSetupSteps.CUSTOMIZE_TAG_BADGE, R.ClanSetupSteps.CUSTOMIZE_BANNER],
@@ -49,7 +49,7 @@ let P = [R.ClanSetupSteps.FOUNDATIONAL_INTRO, R.ClanSetupSteps.GAMES, R.ClanSetu
       primetime: S,
       verificationForm: I,
       furthestStep: p
-    } = r, T = d === P.length - 1, g = null != I && I.formFields.some(e => !(0, f.isTermsFormField)(e)), A = s.useMemo(() => ({
+    } = r, T = d === M.length - 1, g = null != I && I.formFields.some(e => !(0, f.isTermsFormField)(e)), A = s.useMemo(() => ({
       [R.ClanSetupSteps.FOUNDATIONAL_INTRO]: {
         disableNextStep: !1
       },
@@ -94,7 +94,7 @@ let P = [R.ClanSetupSteps.FOUNDATIONAL_INTRO, R.ClanSetupSteps.GAMES, R.ClanSetu
       className: L.footer,
       children: [(0, n.jsx)("div", {
         className: L.progressContainer,
-        children: Object.entries(M).map(e => {
+        children: Object.entries(P).map(e => {
           let [t, a] = e;
           return (0, n.jsx)("div", {
             className: L.progressStep,
@@ -165,7 +165,7 @@ t.default = e => {
       errors: a.errors
     }
   }), {
-    requiredGameId: M,
+    requiredGameId: P,
     gameApplicationIds: y,
     playstyle: D,
     interests: b,
@@ -200,7 +200,7 @@ t.default = e => {
       }),
       children: [(0, n.jsx)(o.Sequencer, {
         step: w,
-        steps: P,
+        steps: M,
         sideMargin: 24,
         verticalMargin: 24,
         className: L.sequencer,
@@ -215,7 +215,7 @@ t.default = e => {
                 return (0, n.jsx)(S.default, {
                   handleUpdate: Y,
                   gameApplicationIds: y,
-                  requiredGameId: M,
+                  requiredGameId: P,
                   error: null == f ? void 0 : f.gameApplicationIds
                 });
               case R.ClanSetupSteps.PLAYSTYLE:
@@ -226,7 +226,7 @@ t.default = e => {
                 });
               case R.ClanSetupSteps.UTILITY_TRAITS:
                 return (0, n.jsx)(v.default, {
-                  requiredGameId: M,
+                  requiredGameId: P,
                   handleUpdate: Y,
                   interests: b
                 });

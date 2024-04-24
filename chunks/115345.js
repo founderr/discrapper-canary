@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return b
   },
   useSaveSettings: function() {
-    return k
+    return B
   }
 }), n("47120"), n("789020"), n("724458"), n("411104");
 var i = n("470079"),
@@ -136,18 +136,18 @@ function w() {
       flags: e
     }
   }
-  F(t), m.default.track(M.AnalyticEvents.NOTIFICATION_MIGRATION_COMPLETED, {
+  V(t), m.default.track(M.AnalyticEvents.NOTIFICATION_MIGRATION_COMPLETED, {
     auto_migrated: !0,
     num_unread_guids_after: e.filter(e => f.default.hasUnread(e.id)).length
   })
 }
 
-function k(e) {
+function B(e) {
   let [t, n] = i.useState(!1), [r, s] = i.useState(!1), a = i.useCallback(async t => {
     if (r) throw Error("Already submitted notifications migration");
     n(!0);
     try {
-      await B(t, e), s(!0)
+      await k(t, e), s(!0)
     } finally {
       n(!1)
     }
@@ -158,7 +158,7 @@ function k(e) {
     saveSettings: a
   }
 }
-async function B(e, t) {
+async function k(e, t) {
   if (A.default.useNewNotifications) {
     u.default.show({
       title: "Info",
@@ -208,7 +208,7 @@ async function B(e, t) {
       for (let t of n.actions) null === (r = t.apply) || void 0 === r || r.call(t, s, e);
       t[n.guildId] = s
     }
-    await F(t);
+    await V(t);
     let s = Object.values(e).filter(e => e.actions.some(e => e.needsMarkedAsRead)).map(e => e.guildId);
     if (s.length > 0) {
       let e = setTimeout(n, 5e3);
@@ -226,9 +226,9 @@ async function B(e, t) {
     })
   }
 }
-async function F(e) {
-  await V(() => x()), await V(() => d.default.setAccountFlag(D.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !0));
-  let t = await V(() => c.default.saveUserGuildSettingsBulk(e));
+async function V(e) {
+  await x(() => F()), await x(() => d.default.setAccountFlag(D.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !0));
+  let t = await x(() => c.default.saveUserGuildSettingsBulk(e));
   l.default.dispatch({
     type: "USER_GUILD_SETTINGS_FULL_UPDATE",
     userGuildSettings: t
@@ -236,7 +236,7 @@ async function F(e) {
     type: "RECOMPUTE_READ_STATES"
   })
 }
-async function V(e) {
+async function x(e) {
   for (let t = 0; t < 3; t++) try {
     return await e()
   } catch (e) {
@@ -244,7 +244,7 @@ async function V(e) {
   }
   return await e()
 }
-async function x() {
+async function F() {
   let e = await (0, C.listSnapshots)();
   e.length > 0 ? await
 

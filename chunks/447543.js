@@ -38,11 +38,11 @@ var i = n("525654"),
   b = n("271383"),
   G = n("430824"),
   w = n("607744"),
-  k = n("341165"),
-  B = n("496675"),
-  F = n("594174"),
-  V = n("626135"),
-  x = n("70956"),
+  B = n("341165"),
+  k = n("496675"),
+  V = n("594174"),
+  x = n("626135"),
+  F = n("70956"),
   H = n("573261"),
   Y = n("954824"),
   j = n("749210"),
@@ -84,7 +84,7 @@ function ee(e) {
     if ((null == n ? void 0 : n.targetType) === Q.InviteTargetTypes.ROLE_SUBSCRIPTIONS_PURCHASE) return z.StaticChannelRoute.ROLE_SUBSCRIPTIONS;
     if ((null == n ? void 0 : n.targetType) == null && !M.GUILD_VOCAL_CHANNEL_TYPES.has(t.type) && ((0, S.canSeeGuildHome)(e) || (0, m.canSeeOnboardingHome)(e))) return z.StaticChannelRoute.GUILD_HOME;
     let s = P.default.getChannel(t.id);
-    return B.default.can(K.Permissions.VIEW_CHANNEL, s) ? t.id : null !== (r = null === (i = U.default.getDefaultChannel(e, !0, K.Permissions.CREATE_INSTANT_INVITE)) || void 0 === i ? void 0 : i.id) && void 0 !== r ? r : t.id
+    return k.default.can(K.Permissions.VIEW_CHANNEL, s) ? t.id : null !== (r = null === (i = U.default.getDefaultChannel(e, !0, K.Permissions.CREATE_INSTANT_INVITE)) || void 0 === i ? void 0 : i.id) && void 0 !== r ? r : t.id
   }(t, i, r), {
     targetUserId: u,
     targetType: d,
@@ -106,7 +106,7 @@ function ee(e) {
           channelId: l
         }), d === Q.InviteTargetTypes.EMBEDDED_APPLICATION && null != _ && ((0, D.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, l)), (0, I.default)(l, _, s, null == r ? void 0 : r.intent))
       };
-      (0, A.shouldShowMembershipVerificationGate)(t, [G.default, w.default, F.default, b.default]) ? (0, h.openMemberVerificationModal)(t, a) : a()
+      (0, A.shouldShowMembershipVerificationGate)(t, [G.default, w.default, V.default, b.default]) ? (0, h.openMemberVerificationModal)(t, a) : a()
     })
   }) : (0, E.isActivityInTextSupportedForChannel)(o) && d === Q.InviteTargetTypes.EMBEDDED_APPLICATION && null != _ && ((0, D.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, l)), (0, I.default)(l, _, s, null == r ? void 0 : r.intent)), (function(e, t) {
     let {
@@ -126,7 +126,7 @@ let et = function(e, t) {
     P.default.addConditionalChangeListener(() => {
       var i;
       let r = P.default.getChannel(e),
-        s = F.default.getCurrentUser();
+        s = V.default.getCurrentUser();
       return null == r || null == s || (!r.nsfw || !!s.nsfwAllowed) && ((null == t ? void 0 : t.guildScheduledEvent) != null ? (! function(e) {
         let {
           guildScheduledEvent: t,
@@ -210,10 +210,10 @@ t.default = {
     }
   },
   async mobileCreateInvite(e, t) {
-    let n = k.default.getInvite(e.id);
+    let n = B.default.getInvite(e.id);
     if (null != n && !n.isExpired()) return n.code;
     let i = {
-        max_age: x.default.Seconds.DAY
+        max_age: F.default.Seconds.DAY
       },
       r = await this.createInvite(e.id, i, t).catch(() => d.default.dispatch({
         type: "NATIVE_APP_INSTANT_INVITE_GDM_SHARE_FAILED"
@@ -221,7 +221,7 @@ t.default = {
     return null == r ? void 0 : r.code
   },
   async getAllFriendInvites(e) {
-    if (await new Promise(e => d.default.wait(() => e(null))), k.default.getFriendInvitesFetching()) return null != J ? J.then(e => e.body) : Promise.reject(Error("Invalid friend invite fetch request"));
+    if (await new Promise(e => d.default.wait(() => e(null))), B.default.getFriendInvitesFetching()) return null != J ? J.then(e => e.body) : Promise.reject(Error("Invalid friend invite fetch request"));
     J = u.HTTP.get({
       url: K.Endpoints.FRIEND_INVITES,
       context: {
@@ -324,7 +324,7 @@ t.default = {
         ...i,
         invite_guild_scheduled_event_id: r.guildScheduledEventId
       }),
-      f = F.default.getCurrentUser();
+      f = V.default.getCurrentUser();
     return null !== (t = null == f ? void 0 : f.hasFlag(K.UserFlags.QUARANTINED)) && void 0 !== t && t ? ((0, g.default)(), new Promise((e, t) => t(Error()))) : (d.default.dispatch({
       type: "INVITE_ACCEPT",
       code: E
@@ -450,7 +450,7 @@ t.default = {
         attemptId: t,
         event: null == E ? void 0 : E.guildScheduledEventId,
         iosFallbackLink: "https://discord.com/api/download/mobile?invite_code=".concat(I)
-      }), V.default.track(K.AnalyticEvents.DEEP_LINK_CLICKED, {
+      }), x.default.track(K.AnalyticEvents.DEEP_LINK_CLICKED, {
         fingerprint: (0, l.maybeExtractId)(n),
         attempt_id: t,
         source: Z,

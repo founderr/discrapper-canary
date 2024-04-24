@@ -30,10 +30,10 @@ var n = a("735250"),
   R = a("524484"),
   O = a("689938"),
   L = a("825292");
-let P = {
+let M = {
     offset: 2
   },
-  M = {
+  P = {
     serverDeaf: {
       icon: T.default,
       colorize: !0,
@@ -108,11 +108,11 @@ function y(e) {
       mute: s,
       localMute: l
     } = e, i = (0, f.useRedesignIconContext)().enabled;
-    if (t) return i ? x.serverDeaf : M.serverDeaf;
-    if (a) return i ? x.deaf : M.deaf;
-    if (n) return i ? x.serverMute : M.serverMute;
-    else if (l) return i ? x.localMute : M.mute;
-    else if (s) return i ? x.mute : M.mute
+    if (t) return i ? x.serverDeaf : P.serverDeaf;
+    if (a) return i ? x.deaf : P.deaf;
+    if (n) return i ? x.serverMute : P.serverMute;
+    else if (l) return i ? x.localMute : P.mute;
+    else if (s) return i ? x.mute : P.mute
   }({
     serverDeaf: p,
     deaf: c,
@@ -167,7 +167,7 @@ function y(e) {
         ...e,
         className: L.avatarContainer,
         onContextMenu: G,
-        focusProps: P,
+        focusProps: M,
         children: (0, n.jsx)(_.default, {
           shakeLocation: R.ShakeLocation.VOICE_USER,
           isShaking: g,
@@ -209,7 +209,7 @@ function D(e) {
       width: 16,
       height: 16
     }),
-    focusProps: P
+    focusProps: M
   }), E = (0, r.useStateFromStores)([S.default], () => S.default.getId(), []), [h, _] = function(e, t) {
     let a = [];
     for (let n of e) {

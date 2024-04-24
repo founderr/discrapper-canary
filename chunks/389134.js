@@ -1,54 +1,54 @@
 "use strict";
-n.r(t), n("47120");
-var s, a, i, l, r = n("153832"),
-  o = n("442837"),
-  c = n("570140"),
-  d = n("944163"),
-  u = n("227120"),
-  S = n("116175"),
-  T = n("308083");
+a.r(t), a("47120");
+var n, i, l, s, r = a("153832"),
+  o = a("442837"),
+  d = a("570140"),
+  u = a("944163"),
+  c = a("227120"),
+  S = a("116175"),
+  f = a("308083");
 let E = () => ({
     gameApplicationIds: new Set,
-    playstyle: T.ClanPlaystyles.NONE,
+    playstyle: f.ClanPlaystyles.NONE,
     interests: new Set,
     description: "",
-    wildcardDescriptors: [T.EMPTY_WILDCARD, T.EMPTY_WILDCARD, T.EMPTY_WILDCARD],
+    wildcardDescriptors: [f.EMPTY_WILDCARD, f.EMPTY_WILDCARD, f.EMPTY_WILDCARD],
     tag: "",
     primetime: [{
       id: (0, r.v4)(),
       day: void 0,
-      time: u.ExtendedTimeOptions.MORNING
+      time: c.ExtendedTimeOptions.MORNING
     }],
     verificationForm: {
-      ...d.NO_MEMBER_VERIFICATION_FORM
+      ...u.NO_MEMBER_VERIFICATION_FORM
     },
     badgeKind: S.ClanBadgeKind.SWORD,
     badgePrimaryColor: S.CLAN_BADGE_PALETTE_PRESETS["0"].primary,
     badgeSecondaryColor: S.CLAN_BADGE_PALETTE_PRESETS["0"].secondary,
-    banner: T.ClanBannerKind.PIXEL_RUSH,
-    brandPrimaryColor: T.CLAN_BRAND_PALETTE_PRESETS["0"].primary,
-    brandSecondaryColor: T.CLAN_BRAND_PALETTE_PRESETS["0"].secondary
+    banner: f.ClanBannerKind.PIXEL_RUSH,
+    brandPrimaryColor: f.CLAN_BRAND_PALETTE_PRESETS["0"].primary,
+    brandSecondaryColor: f.CLAN_BRAND_PALETTE_PRESETS["0"].secondary
   }),
   p = E(),
-  C = !1,
+  T = !1,
   m = {};
-class _ extends(s = o.default.Store) {
+class I extends(n = o.default.Store) {
   getState() {
     return {
       settings: p,
       errors: m,
-      submitting: C
+      submitting: T
     }
   }
 }
-l = "ClanSettingsStore", (i = "displayName") in(a = _) ? Object.defineProperty(a, i, {
-  value: l,
+s = "ClanSettingsStore", (l = "displayName") in(i = I) ? Object.defineProperty(i, l, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[i] = l, t.default = new _(c.default, {
+}) : i[l] = s, t.default = new I(d.default, {
   CLAN_SETTINGS_FETCH_START: function() {
-    C = !1, p = E(), m = {}
+    T = !1, p = E(), m = {}
   },
   CLAN_SETTINGS_FETCH_SUCCESS: function(e) {
     let {
@@ -69,24 +69,24 @@ l = "ClanSettingsStore", (i = "displayName") in(a = _) ? Object.defineProperty(a
       }, t) delete m[e]
   },
   CLAN_SETTINGS_SUBMIT: function() {
-    C = !0, m = {}
+    T = !0, m = {}
   },
   CLAN_SETTINGS_SUBMIT_SUCCESS: function() {
-    C = !1, m = {}
+    T = !1, m = {}
   },
   CLAN_SETTINGS_SUBMIT_ERROR: function(e) {
     var t;
     let {
-      error: n
+      error: a
     } = e;
-    C = !1, m = {
-      gameApplicationIds: n.getFirstFieldErrorMessage("game_application_ids"),
-      playstyle: n.getFirstFieldErrorMessage("play_style"),
-      description: n.getFirstFieldErrorMessage("description"),
-      wildcardDescriptors: n.getFirstFieldErrorMessage("wildcard_descriptors"),
-      interests: n.getFirstFieldErrorMessage("search_terms"),
-      tag: n.getFirstFieldErrorMessage("tag"),
-      primetime: null !== (t = n.getFirstFieldErrorMessage("prime_time_updates")) && void 0 !== t ? t : n.getFirstFieldErrorMessage("new_prime_times")
+    T = !1, m = {
+      gameApplicationIds: a.getFirstFieldErrorMessage("game_application_ids"),
+      playstyle: a.getFirstFieldErrorMessage("play_style"),
+      description: a.getFirstFieldErrorMessage("description"),
+      wildcardDescriptors: a.getFirstFieldErrorMessage("wildcard_descriptors"),
+      interests: a.getFirstFieldErrorMessage("search_terms"),
+      tag: a.getFirstFieldErrorMessage("tag"),
+      primetime: null !== (t = a.getFirstFieldErrorMessage("prime_time_updates")) && void 0 !== t ? t : a.getFirstFieldErrorMessage("new_prime_times")
     }
   },
   MEMBER_VERIFICATION_FORM_UPDATE: function(e) {

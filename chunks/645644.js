@@ -450,19 +450,19 @@ function w(e) {
   }
 }
 
-function k(e) {
+function B(e) {
   R.verbose("MESSAGE_ACKED", e), v.desktopMessageEvent("ack")
 }
 
-function B(e) {
+function k(e) {
   e.message.state === N.MessageStates.SENDING && v.desktopMessageEvent("created")
 }
 
-function F(e) {
+function V(e) {
   null != (0, A.default)() && (R.verbose("AUDIO_TOGGLE_SELF_MUTE", e), v.handleMuteToggled())
 }
 
-function V(e) {
+function x(e) {
   R.verbose("WINDOW_FOCUS", e);
   let t = (0, h.getMainWindowId)();
   if (e.windowId !== t) {
@@ -475,7 +475,7 @@ function V(e) {
   v.desktopSetFocused(e.focused)
 }
 
-function x(e) {
+function F(e) {
   let t = v.getByPid(e.pid);
   if (null == t) {
     R.error("OVERLAY_SUCCESSFULLY_SHOWN: Game not found", e, v.debug);
@@ -547,12 +547,12 @@ class j extends u.default {
       OVERLAY_MESSAGE_EVENT_ACTION: w,
       RUNNING_GAMES_CHANGE: M,
       SOUNDBOARD_SET_OVERLAY_ENABLED: G,
-      MESSAGE_ACKED: k,
-      MESSAGE_CREATE: B,
-      WINDOW_FOCUS: V,
+      MESSAGE_ACKED: B,
+      MESSAGE_CREATE: k,
+      WINDOW_FOCUS: x,
       RTC_CONNECTION_STATE: H.handleRTCConnectionState,
-      AUDIO_TOGGLE_SELF_MUTE: F,
-      OVERLAY_SUCCESSFULLY_SHOWN: x
+      AUDIO_TOGGLE_SELF_MUTE: V,
+      OVERLAY_SUCCESSFULLY_SHOWN: F
     })
   }
 }
