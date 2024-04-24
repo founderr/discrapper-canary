@@ -1,47 +1,49 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return O
+    return C
   }
 });
-var s = n("735250");
-n("470079");
-var a = n("120356"),
-  l = n.n(a),
-  o = n("960524"),
-  i = n("793030"),
-  c = n("481060"),
-  r = n("759198"),
-  u = n("552958"),
-  d = n("169776");
+var n = s("735250");
+s("470079");
+var a = s("120356"),
+  l = s.n(a),
+  o = s("960524"),
+  i = s("793030"),
+  c = s("481060"),
+  r = s("759198"),
+  u = s("552958"),
+  d = s("689938"),
+  O = s("169776");
 
-function O(e) {
+function C(e) {
   let {
     label: t,
-    className: n,
+    className: s,
     description: a,
-    soundpack: O,
-    key: C
+    soundpack: C,
+    key: I
   } = e, {
-    playSound: I,
-    isPlaying: _
+    playSound: _,
+    isPlaying: T
   } = (0, u.default)();
-  return (0, s.jsxs)(c.Clickable, {
-    className: l()(d.container, n, {
-      [d.containerActive]: _
+  return (0, n.jsxs)(c.Clickable, {
+    "aria-label": d.default.Messages.PLAY,
+    className: l()(O.container, s, {
+      [O.containerActive]: T
     }),
-    onClick: () => I(O),
-    children: [(0, s.jsx)(o.CirclePlayIcon, {
-      className: d.playButton,
-      color: _ ? c.tokens.colors.INTERACTIVE_ACTIVE : c.tokens.colors.INTERACTIVE_NORMAL
-    }), (0, s.jsxs)("div", {
-      children: [(0, s.jsx)(r.default, {
+    onClick: () => _(C),
+    children: [(0, n.jsx)(o.CirclePlayIcon, {
+      className: O.playButton,
+      color: T ? c.tokens.colors.INTERACTIVE_ACTIVE : c.tokens.colors.INTERACTIVE_NORMAL
+    }), (0, n.jsxs)("div", {
+      children: [(0, n.jsx)(r.default, {
         variant: "text-md/medium",
         children: t
-      }), (0, s.jsx)(i.Text, {
+      }), (0, n.jsx)(i.Text, {
         variant: "text-xs/normal",
         children: a
       })]
     })]
-  }, C)
+  }, I)
 }
