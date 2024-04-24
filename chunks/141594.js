@@ -6,65 +6,29 @@ var n = a("470079"),
   i = a("243778"),
   r = a("594174"),
   o = a("51144"),
-  u = a("190642"),
-  d = a("680251"),
-  c = a("410154"),
-  f = a("727470"),
-  E = a("925666"),
-  h = a("888507"),
-  _ = a("302800"),
-  C = a("921944");
-let m = "useCollectiblesShopTabNewBadge";
+  u = a("410154"),
+  d = a("683167"),
+  c = a("302800"),
+  f = a("921944");
+let E = "useCollectiblesShopTabNewBadge";
 t.default = () => {
   let e = (0, s.useStateFromStores)([r.default], () => r.default.getCurrentUser()),
-    t = (0, c.default)(m) === c.CollectiblesShopMarketingVariants.SHY,
-    {
-      coachtipEnabled: a
-    } = (0, E.default)({
-      location: m
-    }),
-    {
-      coachtipEnabled: S
-    } = (0, h.default)({
-      location: m
-    }),
-    {
-      coachtipEnabled: I
-    } = (0, f.default)({
-      location: m
-    }),
-    {
-      marketingEnabled: p,
-      variant: T
-    } = (0, u.default)({
-      location: m
-    }),
-    {
-      newBadgeEnabled: g
-    } = (0, d.default)({
-      location: m
-    }),
-    A = n.useMemo(() => {
+    t = (0, u.default)(E) === u.CollectiblesShopMarketingVariants.SHY,
+    a = (0, d.useShopNewBadgeCoachtipEdition)(E),
+    h = n.useMemo(() => {
       if ((0, o.ageEligibleForPremiumUpsell)(e)) {
-        if (a) return [l.DismissibleContent.COLLECTIBLES_SHOP_LOFI_VIBES_COACHTIP];
-        if (t) return [l.DismissibleContent.COLLECTIBLES_SHOP_SHY_COACHTIP];
-        else if (S) return [l.DismissibleContent.COLLECTIBLES_SHOP_SPRINGTOONS_COACHTIP];
-        else if (I) return [l.DismissibleContent.COLLECTIBLES_SHOP_ANIME_V2_COACHTIP];
-        else if (p) switch (T) {
-          case _.CollectiblesMarketingVariant.TOOLTIP:
-            return [l.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_TOOLTIP];
-          case _.CollectiblesMarketingVariant.COACHTIP:
-            return [l.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_COACHTIP]
-        } else if (g) return [l.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE]
+        if (a === c.ShopCoachtipEditions.GALAXY) return [l.DismissibleContent.COLLECTIBLES_SHOP_GALAXY_COACHTIP];
+        if (a === c.ShopCoachtipEditions.LOFI_VIBES) return [l.DismissibleContent.COLLECTIBLES_SHOP_LOFI_VIBES_COACHTIP];
+        else if (t) return [l.DismissibleContent.COLLECTIBLES_SHOP_SHY_COACHTIP]
       }
       return []
-    }, [g, p, T, e, I, S, t, a]),
-    [N, v] = (0, i.useSelectedDismissibleContent)(A, void 0, !0),
-    R = null != N ? _.CollectiblesDCToDisplayOptions[N] : null;
+    }, [e, a, t]),
+    [_, C] = (0, i.useSelectedDismissibleContent)(h, void 0, !0),
+    m = null != _ ? c.CollectiblesDCToDisplayOptions[_] : null;
   return {
-    collectiblesShopTabNewBadgeDisplayOptions: R,
+    collectiblesShopTabNewBadgeDisplayOptions: m,
     dismissCollectiblesShopTabNewBadge: () => {
-      null != R && v(C.ContentDismissActionType.AUTO)
+      null != m && C(f.ContentDismissActionType.AUTO)
     }
   }
 }
