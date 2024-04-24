@@ -19,12 +19,13 @@ function c(e) {
     label: n,
     onSuccess: u,
     shiftId: c,
-    showIconFirst: d
-  } = e, f = o.DeveloperMode.useSetting();
-  if (__OVERLAY__ || !f || !s.SUPPORTS_COPY || null == t) return null;
-  let _ = "devmode-copy-id-".concat(t);
+    showIconFirst: d,
+    showWithoutDeveloperMode: f
+  } = e, _ = o.DeveloperMode.useSetting();
+  if (__OVERLAY__ || !(f || _) || !s.SUPPORTS_COPY || null == t) return null;
+  let E = "devmode-copy-id-".concat(t);
   return (0, l.jsx)(i.MenuItem, {
-    id: _,
+    id: E,
     label: n,
     action: function(e) {
       let n = null != c && e.shiftKey ? c : t;
@@ -32,5 +33,5 @@ function c(e) {
     },
     icon: r.default,
     showIconFirst: d
-  }, _)
+  }, E)
 }

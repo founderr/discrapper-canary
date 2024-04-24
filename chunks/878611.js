@@ -25,10 +25,11 @@ t.default = {
     let {
       userId: r,
       channelId: o,
-      roleId: l,
-      roleName: u
+      parsedUserId: l,
+      roleId: u,
+      roleName: d
     } = e;
-    return null == r && (null != l || "@everyone" === u || "@here" === u) ? (0, i.jsx)(s.default, {
+    return null == r && (null != u || "@everyone" === d || "@here" === d) ? (0, i.jsx)(s.default, {
       inlinePreview: n.formatInline,
       ...e,
       children: t(e.content, n)
@@ -36,6 +37,7 @@ t.default = {
       className: "mention",
       userId: r,
       channelId: o,
+      parsedUserId: l,
       inlinePreview: n.noStyleAndInteraction
     }, n.key)
   }
