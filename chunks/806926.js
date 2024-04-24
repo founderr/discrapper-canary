@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return E
   }
 });
 var l = s("735250");
@@ -15,44 +15,43 @@ var a = s("442837"),
   d = s("502762"),
   c = s("530"),
   f = s("616140"),
-  S = s("981631"),
-  m = s("602091"),
-  E = s("727705");
+  S = s("602091"),
+  m = s("727705");
 
-function I(e) {
+function E(e) {
   let {
     user: t,
     displayProfile: s,
-    initialSection: I,
-    autoFocusNote: v,
-    transitionState: x,
-    onClose: _
-  } = e, A = (0, r.default)(s), N = (0, a.useStateFromStores)([i.default], () => i.default.findActivity(t.id, e => e.type === S.ActivityTypes.PLAYING), [t]);
+    initialSection: E,
+    autoFocusNote: I,
+    transitionState: v,
+    onClose: x
+  } = e, _ = (0, r.default)(s), A = (0, a.useStateFromStores)([i.default], () => i.default.findActivity(t.id, e => null != e.type && u.SUPPORTED_ACTIVITY_TYPES.has(e.type)), [t]);
   return (0, l.jsxs)("div", {
-    className: E.container,
+    className: m.container,
     children: [(0, l.jsxs)("div", {
-      className: E.usernameBadgeList,
+      className: m.usernameBadgeList,
       children: [(0, l.jsx)(c.default, {
-        className: E.username,
+        className: m.username,
         user: t,
         guildId: null == s ? void 0 : s.guildId,
         pronouns: null == s ? void 0 : s.pronouns,
         nicknameVariant: "heading-xl/bold"
-      }), A.length > 0 && (0, l.jsx)(n.default, {
-        badges: A,
-        className: E.badgeList
+      }), _.length > 0 && (0, l.jsx)(n.default, {
+        badges: _,
+        className: m.badgeList
       })]
-    }), null != N && (0, l.jsx)(u.default, {
-      activity: N
+    }), null != A && (0, l.jsx)(u.default, {
+      activity: A
     }), (0, l.jsxs)(d.default.Overlay, {
-      children: [x === m.ModalTransitionState.ENTERED && (0, l.jsx)(o.default, {
-        onTooltipClose: _
+      children: [v === S.ModalTransitionState.ENTERED && (0, l.jsx)(o.default, {
+        onTooltipClose: x
       }), (0, l.jsx)(f.default, {
         user: t,
         displayProfile: s,
-        initialSection: I,
-        autoFocusNote: v,
-        onClose: _
+        initialSection: E,
+        autoFocusNote: I,
+        onClose: x
       })]
     })]
   })

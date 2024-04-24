@@ -12,7 +12,7 @@ async function o() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "unknown";
   if (null == i.default.getCurrentUser()) return;
   let {
-    isEmojiCaptionsEnabled: t
+    isEmojiTextMatchSuggestionsEnabled: t
   } = a.default.getCurrentConfig({
     location: e
   });
