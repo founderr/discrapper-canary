@@ -47678,12 +47678,12 @@ span.clanTag_f4aadc {
 .streamerModeEnabledBtn_b696dd {
     margin-top: 20px;
     font-weight: 700;
-    font-size: 1.125rem;
+    font-size: 18px;
     color: var(--white-500);
     background-color: var(--twitch);
     padding: 10px 20px;
     border-radius: 3px;
-    line-height: 1.8125rem;
+    line-height: 29px;
     text-transform: uppercase;
     cursor: pointer
 }
@@ -54215,10 +54215,10 @@ input[type=checkbox]:focus-visible+.label__8e100 {
     height: var(--custom-channel-textarea-text-area-height);
     position: sticky;
     top: 0;
-    margin-right: 4px
+    margin-right: 6px
 }
 
-.webkit__8d35a .buttons__7ecff {
+.buttons__7ecff:not(.platform-web .buttons__7ecff) {
     margin-right: -6px
 }
 

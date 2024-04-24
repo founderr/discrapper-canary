@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return T
+    return N
   }
 }), s("47120");
 var l = s("735250");
@@ -22,21 +22,21 @@ var a = s("442837"),
   v = s("228168"),
   x = s("182294"),
   _ = s("231338"),
-  A = s("262572");
-let N = d.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
+  T = s("262572");
+let A = d.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
 
-function T(e) {
+function N(e) {
   let {
     user: t,
     displayProfile: s,
     activity: i,
     customStatusActivity: d,
-    guildId: T,
+    guildId: N,
     channelId: U,
     onClose: h
   } = e, {
     theme: p
-  } = (0, E.useUserProfileThemeContext)(), j = (0, c.default)(t.id, T), {
+  } = (0, E.useUserProfileThemeContext)(), j = (0, c.default)(t.id, N), {
     avatarSrc: g,
     eventHandlers: R,
     avatarDecorationSrc: P
@@ -54,31 +54,31 @@ function T(e) {
       displayProfile: s,
       profileType: v.UserProfileTypes.FULL_SIZE,
       hasProfileEffect: (null == s ? void 0 : s.profileEffectId) != null
-    }), (0, l.jsxs)("div", {
-      className: A.inner,
-      children: [(0, l.jsxs)("div", {
+    }), (0, l.jsx)("div", {
+      className: T.inner,
+      children: (0, l.jsxs)("div", {
         ...R,
-        children: [(0, l.jsx)(N, {
+        children: [(0, l.jsx)(A, {
           src: g,
           avatarDecoration: P,
           size: x.AvatarSizes.SIZE_120,
-          className: A.avatar,
+          className: T.avatar,
           status: C,
           statusBackdropColor: (0, r.getStatusBackdropColor)(p),
           "aria-label": t.username,
           isMobile: M,
           statusTooltip: !0
+        }), (0, l.jsx)("div", {
+          className: T.buttons,
+          children: j && (0, l.jsx)(I.default, {
+            user: t,
+            onClose: h
+          })
         }), null != d && (0, l.jsx)(m.UserProfileCustomStatusBubble, {
-          positionStyle: A.statusBubblePosition,
-          statusActivity: d
+          statusActivity: d,
+          profileType: v.UserProfileTypes.FULL_SIZE
         })]
-      }), (0, l.jsx)("div", {
-        className: A.buttons,
-        children: j && (0, l.jsx)(I.default, {
-          user: t,
-          onClose: h
-        })
-      })]
+      })
     })]
   })
 }
