@@ -464,6 +464,9 @@ class eE extends(r = c.default.Store) {
   get canShowAdminWarning() {
     return B
   }
+  isDetectionEnabled(e) {
+    return es(e)
+  }
 }
 o = "RunningGameStore", (a = "displayName") in(s = eE) ? Object.defineProperty(s, a, {
   value: o,
