@@ -112,48 +112,48 @@ function Y(e) {
     closePopout: C,
     entry: g,
     requestId: S
-  } = e, I = (0, r.useStateFromStores)([L.default], () => L.default.isChannelReplyMode()), A = l.useRef(null), [N, x] = l.useState(null), R = (0, r.useStateFromStores)([T.default], () => T.default.can(w.Permissions.SEND_MESSAGES, t)), y = (0, O.useIsEligibleForMemberlistOneClickReply)({
+  } = e, I = (0, r.useStateFromStores)([L.default], () => L.default.isChannelReplyMode()), A = l.useRef(null), [N, R] = l.useState(null), y = (0, r.useStateFromStores)([T.default], () => T.default.can(w.Permissions.SEND_MESSAGES, t)), P = (0, O.useIsEligibleForMemberlistOneClickReply)({
     location: "PopoutReactor"
-  }), [P, D] = l.useState(!1), [B, G] = l.useState(!1), V = "#".concat(t.name), W = "@".concat(n.username), Y = I ? k.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : k.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, K = async e => {
+  }), [D, B] = l.useState(!1), [G, V] = l.useState(!1), W = "#".concat(t.name), Y = x.default.getName(t.guild_id, t.id, n), K = I ? k.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : k.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, Z = async e => {
     if (null != e) {
       if (v.default.track(w.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
           surface_type: F.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
           channel_id: t.id,
           guild_id: t.guild_id
-        }), y) {
+        }), P) {
         let l;
-        if ((0, E.markDismissibleContentAsDismissed)(o.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), D(!0), G(!1), I) l = t;
+        if ((0, E.markDismissibleContentAsDismissed)(o.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), B(!0), V(!1), I) l = t;
         else {
           var a;
           let e = await f.default.getOrEnsurePrivateChannel(n.id);
           l = null !== (a = _.default.getChannel(e)) && void 0 !== a ? a : null
         }
-        return i()(null != l, "Send channel must be defined"), q({
+        return i()(null != l, "Send channel must be defined"), X({
           reply: ":".concat(e.name, ":"),
           sendToChannel: l,
           onComplete: () => {
-            G(!0), setTimeout(() => {
-              D(!1), C()
+            V(!0), setTimeout(() => {
+              B(!1), C()
             }, 600)
           }
         })
       }
       null != N && (N.insertEmoji(e, !1, !1), N.focus())
     }
-  }, Z = async e => {
+  }, q = async e => {
     let a;
-    if (y && (0, E.markDismissibleContentAsDismissed)(o.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), I) a = t;
+    if (P && (0, E.markDismissibleContentAsDismissed)(o.DismissibleContent.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), I) a = t;
     else {
       let e = await f.default.openPrivateChannel(n.id, !1, !1),
         t = _.default.getChannel(e);
       i()(null != t, "DM channel must be defined"), a = t
     }
-    return q({
+    return X({
       reply: e,
       sendToChannel: a,
       onComplete: C
     })
-  }, q = async e => {
+  }, X = async e => {
     let {
       reply: n,
       sendToChannel: a,
@@ -175,30 +175,30 @@ function Y(e) {
   };
   return (0, a.jsxs)("div", {
     style: {
-      pointerEvents: P ? "none" : "all"
+      pointerEvents: D ? "none" : "all"
     },
     children: [(0, a.jsx)(U.default, {
-      sent: B,
-      shown: P,
+      sent: G,
+      shown: D,
       className: H.toastContainer
-    }), y ? (0, a.jsx)(b.default, {
+    }), P ? (0, a.jsx)(b.default, {
       children: (0, a.jsx)("div", {
         className: H.emojiHotrailShareToChannel,
         children: (0, a.jsx)(z, {
           channel: t,
-          onClickSuggestion: K
+          onClickSuggestion: Z
         })
       })
     }) : (0, a.jsx)("div", {
       className: H.emojiHotrailShareToChannel,
       children: (0, a.jsx)(z, {
         channel: t,
-        onClickSuggestion: K
+        onClickSuggestion: Z
       })
     }), (0, a.jsxs)("div", {
       className: H.inputContainerShareToChannel,
-      children: [R && (0, a.jsx)(c.Tooltip, {
-        text: Y,
+      children: [y && (0, a.jsx)(c.Tooltip, {
+        text: K,
         children: e => (0, a.jsx)(c.Clickable, {
           ...e,
           className: H.shareToChannelButton,
@@ -214,10 +214,10 @@ function Y(e) {
       }), (0, a.jsx)(m.ReplyInput, {
         ref: A,
         placeholder: k.default.Messages.TEXTAREA_PLACEHOLDER.format({
-          channel: I ? V : W
+          channel: I ? W : "@".concat(Y)
         }),
-        onEnter: Z,
-        setEditorRef: e => x(e),
+        onEnter: q,
+        setEditorRef: e => R(e),
         autoCompletePosition: (() => {
           if (null == A || null == A.current) return "top";
           let e = A.current.getBoundingClientRect(),
