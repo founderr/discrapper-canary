@@ -12,8 +12,11 @@ var n = a("470079"),
 
 function o(e) {
   let {
-    guild: t
-  } = e, a = (0, l.useDiscoveryGameApplicationId)(), o = n.useMemo(() => null == a ? [] : [a], [a]);
+    guild: t,
+    selectedGame: a
+  } = e, o = (0, l.useDiscoveryGameApplicationId)({
+    selectedGame: a
+  }), u = n.useMemo(() => null == o ? [] : [o], [o]);
   return n.useMemo(() => {
     var e;
     return {
@@ -22,7 +25,7 @@ function o(e) {
       icon: t.icon,
       description: null !== (e = t.description) && void 0 !== e ? e : "",
       memberCount: 0,
-      games: o,
+      games: u,
       playstyle: r.ClanPlaystyles.CASUAL,
       traits: [],
       tag: (0, s.getAcronym)(t.name),
@@ -38,5 +41,5 @@ function o(e) {
       },
       wildcardDescriptors: []
     }
-  }, [o, t.description, t.icon, t.id, t.name])
+  }, [u, t.description, t.icon, t.id, t.name])
 }

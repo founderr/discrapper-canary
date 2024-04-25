@@ -51,4 +51,8 @@ let i = [l({
   id: "4",
   preset: s.ClanBrandPresets.BOULDER,
   banner: s.ClanBannerKind.PIXEL_RUSH
+}), l({
+  id: "5",
+  preset: s.ClanBrandPresets.SOUL,
+  banner: s.ClanBannerKind.MAGIC
 })]
