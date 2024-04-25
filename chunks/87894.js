@@ -3,9 +3,6 @@ n.r(t), n.d(t, {
   QUESTS_CARD_COLLAPSED_HEIGHT_PX: function() {
     return s
   },
-  QUESTS_CARD_DISABLE_ANIMATION: function() {
-    return u
-  },
   QUESTS_CARD_EXTRA_SMALL_BREAKPOINT_PX: function() {
     return o
   },
@@ -27,5 +24,4 @@ let s = 100,
   l = 32,
   i = 1e3,
   r = 460,
-  o = 280,
-  u = !0
+  o = 280
