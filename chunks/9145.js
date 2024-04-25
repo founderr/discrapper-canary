@@ -122,20 +122,25 @@ function P(e) {
         }), (0, a.jsxs)("div", {
           className: O.footerButtons,
           children: [(0, a.jsx)(M.default, {
-            channelId: ee
+            channelId: ee,
+            className: O.circularButton
           }), (0, a.jsx)("div", {
             className: O.leaveButtonContainer,
             children: (0, a.jsx)(m.default, {
               applicationId: U.id,
               channelId: b,
               centerButton: !0,
-              color: "red"
+              color: "red",
+              className: O.leaveActivityButton,
+              iconClassName: O.leaveActivityIcon
             })
           }), (0, a.jsx)(h.CenterControlButton, {
             label: y.default.Messages.EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL,
             onClick: H,
             iconComponent: C.default,
-            themeable: !0
+            themeable: !0,
+            className: O.circularButton,
+            iconClassName: O.minimizeIcon
           })]
         }), (0, a.jsx)("div", {
           className: O.flex
