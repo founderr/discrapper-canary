@@ -72,7 +72,7 @@ t.default = e => {
     handleUpdate: l,
     progress: o,
     guildId: u
-  } = e, d = (0, E.useStateFromStores)([m.default], () => m.default.getGuild(u)), c = null !== (t = (0, E.useStateFromStores)([C.default], () => C.default.getMemberCount(u))) && void 0 !== t ? t : 0, [f, R] = s.useState(o.banner), [O, L] = s.useState({
+  } = e, d = (0, E.useStateFromStores)([m.default], () => m.default.getGuild(u)), c = null !== (t = (0, E.useStateFromStores)([C.default], () => C.default.getMemberCount(u))) && void 0 !== t ? t : 0, [f, R] = s.useState(o.banner), [L, O] = s.useState({
     primary: o.brandPrimaryColor,
     secondary: o.brandSecondaryColor
   }), [P, M] = s.useState(() => {
@@ -80,7 +80,7 @@ t.default = e => {
     for (let e = 0; e < I.CLAN_BRAND_PALETTE_PRESETS.length; e++)
       if (I.CLAN_BRAND_PALETTE_PRESETS[e].primary === o.brandPrimaryColor && I.CLAN_BRAND_PALETTE_PRESETS[e].secondary === o.brandSecondaryColor) return e + 1;
     return A
-  }), [x, y] = s.useState(!1), D = A === P, b = D ? O : 0 === P ? {
+  }), [x, y] = s.useState(!1), D = A === P, b = D ? L : 0 === P ? {
     primary: o.badgePrimaryColor,
     secondary: o.badgeSecondaryColor
   } : I.CLAN_BRAND_PALETTE_PRESETS[P - 1];
@@ -115,7 +115,7 @@ t.default = e => {
             className: T.colorPickerGrid,
             children: [(0, n.jsx)(h.Clickable, {
               onClick: () => {
-                M(0), L({
+                M(0), O({
                   primary: o.badgePrimaryColor,
                   secondary: o.badgeSecondaryColor
                 })
@@ -131,7 +131,7 @@ t.default = e => {
             }), I.CLAN_BRAND_PALETTE_PRESETS.map((e, t) => (0, n.jsx)(h.Clickable, {
               "aria-label": e.name,
               onClick: () => {
-                M(t + 1), L(I.CLAN_BRAND_PALETTE_PRESETS[t])
+                M(t + 1), O(I.CLAN_BRAND_PALETTE_PRESETS[t])
               },
               className: i()(T.brandItemContainer, {
                 [T.brandItemContainerSelected]: P === t + 1
@@ -143,15 +143,15 @@ t.default = e => {
               })
             }, t)), (0, n.jsx)(S.default, {
               showSecondaryColor: !0,
-              palette: O,
+              palette: L,
               onPrimaryColorChange: e => {
-                L(t => ({
+                O(t => ({
                   ...t,
                   primary: (0, r.int2hex)(e)
                 }))
               },
               onSecondaryColorChange: e => {
-                L(t => ({
+                O(t => ({
                   ...t,
                   secondary: (0, r.int2hex)(e)
                 }))

@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120");
-var s, l, a, i, r = n("392711"),
+var s, a, l, i, r = n("392711"),
   o = n.n(r),
   u = n("442837"),
   d = n("570140"),
@@ -21,25 +21,25 @@ function p(e, t) {
   if (null == n) return;
   let s = m[e];
   delete s[t], o().isEmpty(s) && delete m[e];
-  let l = T[n];
-  null != l && (l.delete(e), 0 === l.size && delete T[n])
+  let a = T[n];
+  null != a && (a.delete(e), 0 === a.size && delete T[n])
 }
 
 function h(e, t, n, s) {
-  let l = n.find(e => null != e.party && e.party.id),
-    a = null != l && null != l.party ? l.party.id : null,
+  let a = n.find(e => null != e.party && e.party.id),
+    l = null != a && null != a.party ? a.party.id : null,
     i = I(t, e);
-  if (null == a || s === _.StatusTypes.OFFLINE) return null != i && (p(t, e), void 0);
+  if (null == l || s === _.StatusTypes.OFFLINE) return null != i && (p(t, e), void 0);
   if (null != i) {
-    if (i === a) return !1;
+    if (i === l) return !1;
     p(t, e)
   }! function(e, t, n) {
     var s;
-    let l = m[e];
-    if (null == l && (l = m[e] = {}), l[t] = n, f.default.isBlocked(e)) return;
-    let a = null !== (s = T[n]) && void 0 !== s ? s : new Set;
-    T[n] = a, a.add(e)
-  }(t, e, a)
+    let a = m[e];
+    if (null == a && (a = m[e] = {}), a[t] = n, f.default.isBlocked(e)) return;
+    let l = null !== (s = T[n]) && void 0 !== s ? s : new Set;
+    T[n] = l, l.add(e)
+  }(t, e, l)
 }
 
 function N(e) {
@@ -49,9 +49,9 @@ function N(e) {
   for (let {
       user: e,
       status: s,
-      activities: l
+      activities: a
     }
-    of t.presences) !1 !== h(t.id, e.id, l, s) && (n = !0);
+    of t.presences) !1 !== h(t.id, e.id, a, s) && (n = !0);
   return n
 }
 
@@ -81,12 +81,12 @@ class A extends(s = u.default.Store) {
     return T
   }
 }
-i = "GamePartyStore", (a = "displayName") in(l = A) ? Object.defineProperty(l, a, {
+i = "GamePartyStore", (l = "displayName") in(a = A) ? Object.defineProperty(a, l, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[a] = i, t.default = new A(d.default, {
+}) : a[l] = i, t.default = new A(d.default, {
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
     let {
       guilds: t,
@@ -95,9 +95,9 @@ i = "GamePartyStore", (a = "displayName") in(l = A) ? Object.defineProperty(l, a
     for (let {
         user: e,
         status: t,
-        activities: l
+        activities: a
       }
-      of n) null != e && !1 !== h(_.ME, e.id, l, t) && (s = !0);
+      of n) null != e && !1 !== h(_.ME, e.id, a, t) && (s = !0);
     for (let e of t) !1 !== N({
       guild: e
     }) && (s = !0);
@@ -133,9 +133,9 @@ i = "GamePartyStore", (a = "displayName") in(l = A) ? Object.defineProperty(l, a
         guildId: t,
         user: n,
         status: s,
-        activities: l
+        activities: a
       } = e;
-      return h(null != t ? t : _.ME, n.id, l, s)
+      return h(null != t ? t : _.ME, n.id, a, s)
     }).some(e => e)
   },
   THREAD_MEMBER_LIST_UPDATE: function(e) {

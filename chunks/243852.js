@@ -19,8 +19,8 @@ var n, s, l, i, r, o = a("442837"),
   N = a("944486"),
   v = a("981631");
 let R = "ActivityTrackingStore",
-  O = 30 * S.default.Millis.MINUTE,
-  L = 5 * S.default.Millis.MINUTE,
+  L = 30 * S.default.Millis.MINUTE,
+  O = 5 * S.default.Millis.MINUTE,
   P = null !== (n = u.Storage.get(R)) && void 0 !== n ? n : {},
   M = {},
   x = !1;
@@ -36,7 +36,7 @@ function D(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     a = Date.now(),
     n = null != e.updatedAt ? a - e.updatedAt : 0;
-  n > O + L && (n = 0);
+  n > L + O && (n = 0);
   let s = (0, I.shouldShareApplicationActivity)(e.applicationId, g.default),
     l = N.default.getVoiceChannelId(),
     i = p.default.getSessionId(),
@@ -58,7 +58,7 @@ function D(e) {
   });
   t && s && o && _.default.updateUserRecentGamesLocal(e.applicationId, Math.floor(n / 1e3));
   let c = M[e.applicationId];
-  null == c && (c = M[e.applicationId] = new d.Interval).start(O, () => D(e)), !t && (P[e.applicationId] = e, u.Storage.set(R, P))
+  null == c && (c = M[e.applicationId] = new d.Interval).start(L, () => D(e)), !t && (P[e.applicationId] = e, u.Storage.set(R, P))
 }
 
 function b() {

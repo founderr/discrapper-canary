@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("627341");
 var s = n("735250"),
-  l = n("470079"),
-  a = n("120356"),
-  i = n.n(a),
+  a = n("470079"),
+  l = n("120356"),
+  i = n.n(l),
   r = n("278074"),
   o = n("263568"),
   u = n("481060"),
@@ -34,8 +34,8 @@ function I(e) {
   let {
     children: t,
     onClick: n,
-    variant: l = "text-sm/medium",
-    color: a = "interactive-active",
+    variant: a = "text-sm/medium",
+    color: l = "interactive-active",
     className: r,
     buttonRef: o
   } = e;
@@ -46,8 +46,8 @@ function I(e) {
     size: u.Button.Sizes.NONE,
     buttonRef: o,
     children: (0, s.jsx)(u.Text, {
-      variant: l,
-      color: a,
+      variant: a,
+      color: l,
       scaleFontToUserSetting: !0,
       children: t
     })
@@ -58,14 +58,14 @@ function p(e) {
   let {
     buttonLabel: t,
     secondaryLabel: n,
-    handleClick: l,
-    isInteractive: a,
+    handleClick: a,
+    isInteractive: l,
     className: r
   } = e;
   return (0, s.jsxs)("div", {
     className: i()(m.detailsText, r),
-    children: [a ? (0, s.jsx)(I, {
-      onClick: l,
+    children: [l ? (0, s.jsx)(I, {
+      onClick: a,
       variant: "text-sm/normal",
       color: "none",
       className: i()(m.detailsTextButton, m.interactive),
@@ -88,19 +88,19 @@ function h(e) {
   let {
     action: t,
     channelId: n,
-    messageId: a,
+    messageId: l,
     isInteractive: r,
     className: o
   } = e, {
     actionButtonRef: c,
     manageFocusOnAction: f
-  } = (0, E.usePollFocusManager)(), _ = l.useCallback(async () => {
+  } = (0, E.usePollFocusManager)(), _ = a.useCallback(async () => {
     (null == t ? void 0 : t.type) != null && (await d.default.handlePollActionTapped({
       channelId: n,
-      messageId: a,
+      messageId: l,
       type: t.type
     }), f(t.type))
-  }, [null == t ? void 0 : t.type, n, a, f]);
+  }, [null == t ? void 0 : t.type, n, l, f]);
   return null == t ? null : "button" === t.presentation || "secondaryButton" === t.presentation ? (0, s.jsx)(u.Button, {
     buttonRef: c,
     onClick: _,
@@ -132,8 +132,8 @@ function N(e) {
   let {
     message: t,
     poll: n,
-    className: l
-  } = e, a = (0, f.useStyleClass)(n.containerStyle), d = function(e, t) {
+    className: a
+  } = e, l = (0, f.useStyleClass)(n.containerStyle), d = function(e, t) {
     let n = {
       answers: t.answers,
       answersInteraction: t.answersInteraction,
@@ -151,7 +151,7 @@ function N(e) {
     })).otherwise(() => null)
   }(0, n);
   return null == d ? null : (0, s.jsx)("div", {
-    className: i()(m.container, a, l),
+    className: i()(m.container, l, a),
     children: (0, s.jsxs)(u.HeadingLevel, {
       children: [(0, s.jsxs)("div", {
         className: m.header,
@@ -191,7 +191,7 @@ function S(e) {
   let {
     message: t,
     poll: n,
-    className: l
+    className: a
   } = e;
   return (0, s.jsx)(f.PollContextProvider, {
     message: t,
@@ -200,7 +200,7 @@ function S(e) {
       children: (0, s.jsx)(N, {
         message: t,
         poll: n,
-        className: l
+        className: a
       })
     })
   })

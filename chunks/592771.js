@@ -2,8 +2,8 @@
 n.r(t);
 var s = n("735250");
 n("470079");
-var l = n("120356"),
-  a = n.n(l),
+var a = n("120356"),
+  l = n.n(a),
   i = n("689938"),
   r = n("479608");
 t.default = e => {
@@ -11,7 +11,7 @@ t.default = e => {
     className: t
   } = e;
   return (0, s.jsx)("div", {
-    className: a()(r.tag, t),
+    className: l()(r.tag, t),
     children: (0, s.jsx)("span", {
       className: r.text,
       children: i.default.Messages.APPLICATION_STORE_THE_GAME_AWARDS_WINNER

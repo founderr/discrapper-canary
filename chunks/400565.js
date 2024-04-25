@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("735250"),
-  l = n("470079"),
-  a = n("598077"),
+  a = n("470079"),
+  l = n("598077"),
   i = n("806519"),
   r = n("609412"),
   o = n("166615");
@@ -26,21 +26,21 @@ let u = e => {
       })
     })
   },
-  d = l.memo(function(e) {
+  d = a.memo(function(e) {
     let {
       item: t
-    } = e, n = null, l = !1;
+    } = e, n = null, a = !1;
     if (null != t.icon_name) n = (0, s.jsx)("img", {
       alt: "",
       src: r.FOR_YOU_ICONS[(0, r.getIconByName)(t.icon_name)]
     });
     else if (null != t.other_user) {
-      let e = t.other_user instanceof a.default ? t.other_user : new a.default(t.other_user);
+      let e = t.other_user instanceof l.default ? t.other_user : new l.default(t.other_user);
       n = (0, s.jsx)("img", {
         alt: "",
         className: o.image,
         src: e.getAvatarURL(void 0, 40)
-      }), l = !0
+      }), a = !0
     } else n = null != t.icon_url ? (0, s.jsx)("img", {
       alt: "",
       className: o.image,
@@ -59,7 +59,7 @@ let u = e => {
       className: o.mask,
       children: [(0, s.jsx)("div", {
         className: o.container,
-        style: l ? void 0 : {
+        style: a ? void 0 : {
           backgroundColor: (0, r.getBackground)(t)
         },
         children: n

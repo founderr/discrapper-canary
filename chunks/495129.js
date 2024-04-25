@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var l = n("120356"),
-  a = n.n(l),
+var a = n("120356"),
+  l = n.n(a),
   i = n("442837"),
   r = n("481060"),
   o = n("904245"),
@@ -28,11 +28,11 @@ var l = n("120356"),
   A = n("478151");
 
 function g(e) {
-  var t, n, l, g, M, R, v, O, x, L;
+  var t, n, a, g, M, R, v, O, x, L;
   let {
     message: D,
     channel: P
-  } = e, y = null === (l = D.embeds[0]) || void 0 === l ? void 0 : null === (n = l.fields) || void 0 === n ? void 0 : null === (t = n.find(e => {
+  } = e, y = null === (a = D.embeds[0]) || void 0 === a ? void 0 : null === (n = a.fields) || void 0 === n ? void 0 : null === (t = n.find(e => {
     let {
       rawName: t
     } = e;
@@ -51,8 +51,8 @@ function g(e) {
     username: H
   }) : C.default.Messages.WAVED_AT_YOU.format({
     username: w.nick
-  }), q = null != j && null != b, Z = null;
-  Z = q ? G || Y ? C.default.Messages.YOU_ARE_IN_CHANNEL.format({
+  }), q = null != j && null != b, X = null;
+  X = q ? G || Y ? C.default.Messages.YOU_ARE_IN_CHANNEL.format({
     channelHook: (e, t) => (0, s.jsx)(h.default, {
       channel: null != b ? b : void 0
     }, t)
@@ -60,8 +60,8 @@ function g(e) {
     channelHook: (e, t) => (0, s.jsx)(h.default, {
       channel: null != b ? b : void 0
     }, t)
-  }) : C.default.Messages.CANNOT_ACCESS_HANGOUT, 0 === V.length && (Z = G ? C.default.Messages.HANGOUT_OVER_SENDER : C.default.Messages.HANGOUT_OVER_RECEIVER);
-  let X = G ? C.default.Messages.WAVE_AGAIN : C.default.Messages.WAVE_BACK;
+  }) : C.default.Messages.CANNOT_ACCESS_HANGOUT, 0 === V.length && (X = G ? C.default.Messages.HANGOUT_OVER_SENDER : C.default.Messages.HANGOUT_OVER_RECEIVER);
+  let Z = G ? C.default.Messages.WAVE_AGAIN : C.default.Messages.WAVE_BACK;
   return (0, s.jsxs)("div", {
     children: [(0, s.jsxs)("div", {
       className: A.card,
@@ -72,7 +72,7 @@ function g(e) {
       }), (0, s.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
-        children: Z
+        children: X
       }), V.length > 0 ? (0, s.jsx)("div", {
         className: A.participants,
         children: (0, s.jsx)(f.default, {
@@ -86,7 +86,7 @@ function g(e) {
           maxAvatarsShown: 5
         })
       }) : (0, s.jsx)("div", {
-        className: a()(A.participants, A.disabled),
+        className: l()(A.participants, A.disabled),
         children: (0, s.jsx)(f.default, {
           guildId: y,
           partySize: {
@@ -115,7 +115,7 @@ function g(e) {
           o.default.sendMessage(P.id, d.default.parse(P, "\uD83D\uDC4B"))
         },
         className: A.button,
-        children: X
+        children: Z
       })]
     })]
   })

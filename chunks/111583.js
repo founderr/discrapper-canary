@@ -4,28 +4,28 @@ l.r(t);
 var u, i, r, a, s = l("442837"),
   d = l("544891"),
   o = l("570140"),
-  f = l("70956"),
-  E = l("314897"),
+  E = l("70956"),
+  f = l("314897"),
   c = l("300429"),
   T = l("981631"),
   I = l("176505");
-let _ = 10 * f.default.Millis.SECOND,
-  p = 1.5 * f.default.Millis.SECOND,
-  A = {},
-  h = Object.freeze({});
-
-function S(e) {
-  var t;
-  return null !== (t = A[e]) && void 0 !== t ? t : h
-}
+let _ = 10 * E.default.Millis.SECOND,
+  A = 1.5 * E.default.Millis.SECOND,
+  S = {},
+  p = Object.freeze({});
 
 function O(e) {
+  var t;
+  return null !== (t = S[e]) && void 0 !== t ? t : p
+}
+
+function N(e) {
   var t, l;
   let {
     channelId: n,
     userId: u
   } = e, i = {
-    ...S(n)
+    ...O(n)
   };
   clearTimeout(i[u]), i[u] = (t = n, l = u, setTimeout(() => {
     o.default.dispatch({
@@ -33,53 +33,53 @@ function O(e) {
       channelId: t,
       userId: l
     })
-  }, _)), A[n] = i
+  }, _)), S[n] = i
 }
 
-function N(e) {
+function h(e) {
   let {
     channelId: t,
     userId: l
-  } = e, n = A[t];
+  } = e, n = S[t];
   if (null == n || null == n[l]) return !1;
   let u = {
     ...n
   };
-  clearTimeout(u[l]), delete u[l], A[t] = u
+  clearTimeout(u[l]), delete u[l], S[t] = u
 }
 
 function C() {
-  A = {}
+  S = {}
 }
-class v extends(a = s.default.Store) {
+class m extends(a = s.default.Store) {
   getTypingUsers(e) {
-    return S(e)
+    return O(e)
   }
   isTyping(e, t) {
-    return null != S(e)[t]
+    return null != O(e)[t]
   }
 }
-r = "TypingStore", (i = "displayName") in(u = v) ? Object.defineProperty(u, i, {
+r = "TypingStore", (i = "displayName") in(u = m) ? Object.defineProperty(u, i, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : u[i] = r, t.default = new v(o.default, {
-  TYPING_START: O,
-  TYPING_STOP: N,
+}) : u[i] = r, t.default = new m(o.default, {
+  TYPING_START: N,
+  TYPING_STOP: h,
   TYPING_START_LOCAL: function(e) {
     let {
       channelId: t
-    } = e, l = E.default.getId();
+    } = e, l = f.default.getId();
     if (null == l || t === I.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) return !1;
     null != n && n.channelId !== t && (null != n.timeout && clearTimeout(n.timeout), n = null);
     let u = Date.now(),
       i = .8 * _;
     if (null != n && (null != n.timeout || n.prevSend + i > u)) return !1;
     let r = setTimeout(() => {
-      if (null != n && n.channelId === t && l === E.default.getId() && null != n.timeout) n.timeout = null, !(function(e) {
-        let t = S(e);
-        return t === h ? 0 : Object.keys(t).length
+      if (null != n && n.channelId === t && l === f.default.getId() && null != n.timeout) n.timeout = null, !(function(e) {
+        let t = O(e);
+        return t === p ? 0 : Object.keys(t).length
       }(t) > 5) && d.HTTP.post({
         url: T.Endpoints.TYPING(t),
         oldFormErrors: !0
@@ -101,12 +101,12 @@ r = "TypingStore", (i = "displayName") in(u = v) ? Object.defineProperty(u, i, {
           })
         }
       })
-    }, null == n || n.prevSend > u - 2 * i ? p : 0);
+    }, null == n || n.prevSend > u - 2 * i ? A : 0);
     return n = {
       channelId: t,
       timeout: r,
       prevSend: u
-    }, O({
+    }, N({
       channelId: t,
       userId: l
     })
@@ -114,8 +114,8 @@ r = "TypingStore", (i = "displayName") in(u = v) ? Object.defineProperty(u, i, {
   TYPING_STOP_LOCAL: function(e) {
     let {
       channelId: t
-    } = e, l = E.default.getId();
-    return null != l && null != n && n.channelId === t && null != n.timeout && (clearTimeout(n.timeout), n = null, N({
+    } = e, l = f.default.getId();
+    return null != l && null != n && n.channelId === t && null != n.timeout && (clearTimeout(n.timeout), n = null, h({
       channelId: t,
       userId: l
     }))
@@ -133,7 +133,7 @@ r = "TypingStore", (i = "displayName") in(u = v) ? Object.defineProperty(u, i, {
     return u && ! function(e) {
       if (null == n || n.channelId !== e) return;
       null != n.timeout && clearTimeout(n.timeout), n = null
-    }(t), null != l && N({
+    }(t), null != l && h({
       channelId: t,
       userId: l.id
     })

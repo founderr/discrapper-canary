@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var s = n("735250"),
-  l = n("470079"),
-  a = n("873546"),
+  a = n("470079"),
+  l = n("873546"),
   i = n("399606"),
   r = n("481060"),
   o = n("434650"),
@@ -34,22 +34,22 @@ function g(e) {
   } = e, [R, v, O] = (0, i.useStateFromStoresArray)([p.default], () => [p.default.getApplication(g), p.default.isInvalidApplication(g), p.default.getApplicationFetchState(g)], [g]), x = (0, i.useStateFromStores)([u.default], () => u.default.locale), L = (0, i.useStateFromStores)([c.default], () => {
     var e;
     return null !== (e = c.default.getGuildId()) && void 0 !== e ? e : void 0
-  }), D = (0, i.useStateFromStores)([f.default], () => f.default.getCurrentUser()), [P, y] = l.useState(!1), U = l.useCallback(e => {
+  }), D = (0, i.useStateFromStores)([f.default], () => f.default.getCurrentUser()), [P, y] = a.useState(!1), U = a.useCallback(e => {
     e && y(!0)
   }, []), j = (0, o.useIsVisible)(U);
-  l.useEffect(() => {
+  a.useEffect(() => {
     (0, I.getEmbedApplication)(g)
-  }, [g]), l.useEffect(() => {
+  }, [g]), a.useEffect(() => {
     P && O === p.FetchState.FETCHED && m.default.track(S.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
       application_id: g,
-      device_platform: a.isMobile ? "mobile_web" : "desktop_web",
+      device_platform: l.isMobile ? "mobile_web" : "desktop_web",
       sender_user_id: M.author.id,
       guild_id: L,
       channel_id: M.channel_id
     })
-  }, [P, g, null == D ? void 0 : D.id, M.channel_id, L, M.author.id, O]), l.useEffect(() => {
+  }, [P, g, null == D ? void 0 : D.id, M.channel_id, L, M.author.id, O]), a.useEffect(() => {
     P && v && m.default.track(S.AnalyticEvents.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
-      device_platform: a.isMobile ? "mobile_web" : "desktop_web",
+      device_platform: l.isMobile ? "mobile_web" : "desktop_web",
       sender_user_id: M.author.id,
       guild_id: L,
       channel_id: M.channel_id
@@ -58,7 +58,7 @@ function g(e) {
   let b = e => {
     m.default.track(S.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
       application_id: g,
-      device_platform: a.isMobile ? "mobile_web" : "desktop_web",
+      device_platform: l.isMobile ? "mobile_web" : "desktop_web",
       clicked_section: e,
       guild_id: L,
       channel_id: M.channel_id

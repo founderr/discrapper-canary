@@ -2,22 +2,22 @@
 n.r(t);
 var s = n("735250");
 n("470079");
-var l = n("120356"),
-  a = n.n(l),
+var a = n("120356"),
+  l = n.n(a),
   i = n("403681");
 t.default = e => {
   let {
     value: t = 0,
     text: n,
-    className: l,
+    className: a,
     ...r
   } = e;
   return null != n ? (0, s.jsx)("div", {
-    className: a()(i.wrapper, l),
+    className: l()(i.wrapper, a),
     ...r,
     children: n
   }) : t > 0 ? (0, s.jsx)("div", {
-    className: a()(i.wrapper, l),
+    className: l()(i.wrapper, a),
     ...r,
     children: t
   }) : null

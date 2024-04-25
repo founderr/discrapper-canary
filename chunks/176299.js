@@ -28,8 +28,8 @@ var n = a("735250"),
   N = a("652515"),
   v = a("544978"),
   R = a("194729"),
-  O = a("668940"),
-  L = a("372900"),
+  L = a("668940"),
+  O = a("372900"),
   P = a("6039"),
   M = a("637853"),
   x = a("326145"),
@@ -192,20 +192,20 @@ let eI = () => (0, n.jsx)("div", {
     }
     return (0, n.jsx)(T.default, {})
   },
-  eO = s.memo(function() {
+  eL = s.memo(function() {
     let {
       guildId: e,
       channelId: t
     } = (0, Q.default)(), a = (0, f.useStateFromStores)([et.default], () => null != t ? t : et.default.getChannelId(e));
     return function() {
       return window.location.pathname.startsWith(eE.Routes.GUILD_DISCOVERY)
-    }() ? (0, n.jsx)(O.default, {}) : null != e ? (0, n.jsx)(D.default, {
+    }() ? (0, n.jsx)(L.default, {}) : null != e ? (0, n.jsx)(D.default, {
       selectedChannelId: a,
       guildId: e
     }, e) : (0, n.jsx)(eu.default, {})
   });
 
-function eL(e) {
+function eO(e) {
   let t = (0, Q.default)(e => {
     let {
       guildId: t
@@ -323,7 +323,7 @@ function eH(e) {
       [eS.fullWidth]: c.isMobile,
       [eS.hidden]: r
     }),
-    children: [(0, n.jsx)(eO, {}), (0, n.jsxs)("section", {
+    children: [(0, n.jsx)(eL, {}), (0, n.jsxs)("section", {
       className: eS.panels,
       "aria-label": em.default.Messages.ACCOUNT_A11Y_LABEL,
       children: [(0, n.jsx)(q.QuestsAssetContextProvider, {
@@ -331,7 +331,7 @@ function eH(e) {
         children: (0, n.jsx)(z.default, {})
       }), (0, n.jsx)(V.default, {}), (0, n.jsx)(ed.default, {
         section: eE.AnalyticsSections.ACTIVITY_PANEL,
-        children: (0, n.jsx)(eL, {
+        children: (0, n.jsx)(eO, {
           className: eS.activityPanel
         })
       }), (0, n.jsx)(ed.default, {
@@ -381,7 +381,7 @@ function eV() {
       children: [h && !E && (0, n.jsx)(b.default, {
         className: eS.guilds,
         themeOverride: a
-      }), (0, n.jsx)(L.default.Provider, {
+      }), (0, n.jsx)(O.default.Provider, {
         value: (null == _ ? void 0 : _.params.guildId) === eE.ME ? void 0 : null == _ ? void 0 : _.params.guildId,
         children: (0, n.jsxs)("div", {
           className: eS.base,

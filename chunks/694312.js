@@ -20,9 +20,9 @@ function f(e) {
     f = (0, n.useStateFromStores)([u.default], () => u.default.testModeEmbeddedApplicationId),
     p = i.map(e => e.application_id),
     v = null != f ? [f, ...p] : p,
-    m = (0, a.default)(v),
-    A = l.useMemo(() => m.filter(o.isNotNullish), [m]),
-    E = l.useMemo(() => null != f && A.length > 0 && A[0].id === f && null != A[0].embeddedActivityConfig ? [{
+    E = (0, a.default)(v),
+    A = l.useMemo(() => E.filter(o.isNotNullish), [E]),
+    m = l.useMemo(() => null != f && A.length > 0 && A[0].id === f && null != A[0].embeddedActivityConfig ? [{
       activity: A[0].embeddedActivityConfig,
       application: A[0]
     }] : [], [A, f]),
@@ -33,7 +33,7 @@ function f(e) {
         application: t
       }
     }).filter(o.isNotNullish), [i, A]);
-  return l.useMemo(() => [...E, ...y].filter(e => {
+  return l.useMemo(() => [...m, ...y].filter(e => {
     var t;
     let {
       activity: i
@@ -44,5 +44,5 @@ function f(e) {
       activity: i
     } = e;
     return !i.requires_age_gate || (null == t ? void 0 : t.nsfwAllowed) === !0 || (null == t ? void 0 : t.nsfwAllowed) == null
-  }), [null == t ? void 0 : t.nsfwAllowed, y, E])
+  }), [null == t ? void 0 : t.nsfwAllowed, y, m])
 }

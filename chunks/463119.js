@@ -28,16 +28,16 @@ var n = a("735250"),
   N = a("141594"),
   v = a("302800"),
   R = a("981631"),
-  O = a("689938"),
-  L = a("592761");
+  L = a("689938"),
+  O = a("592761");
 let P = e => {
     let {
       color: t
     } = e;
     return (0, n.jsx)(T.TextBadge, {
-      className: L.newBadge,
+      className: O.newBadge,
       color: null != t ? t : S.default.STATUS_DANGER_BACKGROUND,
-      text: O.default.Messages.NEW
+      text: L.default.Messages.NEW
     })
   },
   M = e => {
@@ -59,7 +59,7 @@ let P = e => {
       selected: t,
       route: R.Routes.COLLECTIBLES_SHOP,
       icon: p.default,
-      text: O.default.Messages.COLLECTIBLES_SHOP,
+      text: L.default.Messages.COLLECTIBLES_SHOP,
       locationState: a,
       ...d,
       ...u,
@@ -75,24 +75,24 @@ let P = e => {
       assetId: a
     } = e, s = (0, o.useStateFromStores)([h.default], () => h.default.useReducedMotion), l = null != a ? (0, m.default)(a, d.AvatarSizes.SIZE_80, !s) : void 0;
     return (0, n.jsxs)("div", {
-      className: L.shopMarketingTooltipContent,
+      className: O.shopMarketingTooltipContent,
       children: [(0, n.jsx)("div", {
-        className: L.avatarContainer,
+        className: O.avatarContainer,
         children: (0, n.jsx)(d.Avatar, {
-          className: L.avatar,
+          className: O.avatar,
           src: t.imageSrc,
           avatarDecoration: l,
           size: d.AvatarSizes.SIZE_80,
           "aria-hidden": !0
         })
       }), (0, n.jsxs)("div", {
-        className: L.shopMarketingTooltipText,
+        className: O.shopMarketingTooltipText,
         children: [(0, n.jsx)(d.Heading, {
           variant: "heading-sm/bold",
           children: t.title()
         }), null != t.body && (0, n.jsx)(d.Text, {
           variant: "text-xs/normal",
-          className: L.marketingBadgeTooltipContent,
+          className: O.marketingBadgeTooltipContent,
           children: t.body()
         })]
       })]
@@ -113,14 +113,14 @@ let P = e => {
         displayOptions: l,
         assetId: l.assetIds[r]
       }),
-      tooltipClassName: L.marketingBadgeTooltip,
+      tooltipClassName: O.marketingBadgeTooltip,
       position: "right",
       delay: 100,
       allowOverflow: !0,
       hideOnClick: !1,
       "aria-label": l.title(),
       children: e => (0, n.jsxs)(M, {
-        className: null != l.entryPointClassName ? (0, g.getClass)(L, l.entryPointClassName) : void 0,
+        className: null != l.entryPointClassName ? (0, g.getClass)(O, l.entryPointClassName) : void 0,
         selected: t,
         locationState: a,
         ...e,
@@ -128,8 +128,8 @@ let P = e => {
         onMouseLeave: () => m(e.onMouseLeave),
         children: [null != _ && (0, n.jsx)("img", {
           src: (0, u.isThemeDark)(h) ? _.srcDark : _.srcLight,
-          className: i()(L.marketingButtonImage, {
-            [L.marketingButtonImageHovered]: c
+          className: i()(O.marketingButtonImage, {
+            [O.marketingButtonImageHovered]: c
           }),
           alt: "",
           "aria-hidden": !0
@@ -149,7 +149,7 @@ let P = e => {
       let t = null != l.emojiName ? null === (e = I.default.getByName(l.emojiName)) || void 0 === e ? void 0 : e.surrogates : null;
       return (0, n.jsxs)(d.Text, {
         variant: "text-sm/medium",
-        className: L.marketingBadgeTooltipContent,
+        className: O.marketingBadgeTooltipContent,
         children: [null != t && (0, n.jsx)(c.default, {
           emojiName: t
         }), l.title()]
@@ -157,7 +157,7 @@ let P = e => {
     }, [l]);
     return (0, n.jsx)(d.Tooltip, {
       text: i,
-      tooltipClassName: L.marketingBadgeTooltip,
+      tooltipClassName: O.marketingBadgeTooltip,
       position: "right",
       delay: 100,
       hideOnClick: !1,

@@ -24,8 +24,8 @@ var n = a("735250"),
   N = a("797614"),
   v = a("359110"),
   R = a("6025"),
-  O = a("897473"),
-  L = a("108427"),
+  L = a("897473"),
+  O = a("108427"),
   P = a("970731"),
   M = a("210887"),
   x = a("433355"),
@@ -156,7 +156,7 @@ function es(e) {
     pageWidth: t,
     onSidebarResize: a
   } = e, s = (0, u.useStateFromStores)([x.default], () => x.default.getSidebarState(x.MESSAGE_REQUESTS_BASE_CHANNEL_ID)), l = (0, u.useStateFromStores)([y.default], () => y.default.getChannel(null == s ? void 0 : s.channelId));
-  if (null == s || s.type !== O.SidebarType.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
+  if (null == s || s.type !== L.SidebarType.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
   let i = t - X.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
   return (0, n.jsx)(S.default, {
     sidebarType: S.ChatSidebarType.MessageRequestSidebar,
@@ -237,7 +237,7 @@ let eo = (0, h.default)(function(e) {
     width: t
   } = e, a = (0, Y.useMessageRequestsCount)();
   s.useEffect(() => {
-    f.setHomeLink(X.Routes.MESSAGE_REQUESTS), (0, L.trackAppUIViewed)("message-requests"), j.default.track(X.AnalyticEvents.MESSAGE_REQUESTS_VIEWED, {
+    f.setHomeLink(X.Routes.MESSAGE_REQUESTS), (0, O.trackAppUIViewed)("message-requests"), j.default.track(X.AnalyticEvents.MESSAGE_REQUESTS_VIEWED, {
       num_message_requests: a
     }), N.default.increment({
       name: o.MetricEvents.MESSAGE_REQUEST_VIEW
@@ -248,7 +248,7 @@ let eo = (0, h.default)(function(e) {
     [d, E] = s.useState(!1),
     h = (0, u.useStateFromStores)([x.default], () => {
       let e = x.default.getSidebarState(x.MESSAGE_REQUESTS_BASE_CHANNEL_ID);
-      return null != e && e.type === O.SidebarType.VIEW_MESSAGE_REQUEST ? e : null
+      return null != e && e.type === L.SidebarType.VIEW_MESSAGE_REQUEST ? e : null
     }),
     _ = null == h ? void 0 : h.channelId,
     C = null != h,

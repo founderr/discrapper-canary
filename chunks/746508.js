@@ -24,8 +24,8 @@ var n = a("735250"),
   N = a("317381"),
   v = a("596040"),
   R = a("588580"),
-  O = a("374065"),
-  L = a("451576"),
+  L = a("374065"),
+  O = a("451576"),
   P = a("938655"),
   M = a("403404"),
   x = a("100527"),
@@ -78,8 +78,8 @@ var n = a("735250"),
   eN = a("250183"),
   ev = a("87128"),
   eR = a("976401"),
-  eO = a("333454"),
-  eL = a("626135"),
+  eL = a("333454"),
+  eO = a("626135"),
   eP = a("63063"),
   eM = a("51144"),
   ex = a("594117"),
@@ -101,7 +101,7 @@ function ew(e, t, a) {
 
 function ek(e) {
   let t = e.currentTarget;
-  eL.default.track(eD.AnalyticEvents.NOISE_CANCELLATION_LINK_CLICKED, {
+  eO.default.track(eD.AnalyticEvents.NOISE_CANCELLATION_LINK_CLICKED, {
     text: t.text,
     href: t.href,
     location: {
@@ -113,7 +113,7 @@ function ek(e) {
 function eF() {
   let e = s.useRef(null);
   (0, _.useFocusLock)(e), s.useEffect(() => {
-    eL.default.track(eD.AnalyticEvents.OPEN_POPOUT, {
+    eO.default.track(eD.AnalyticEvents.OPEN_POPOUT, {
       type: eD.AnalyticsSections.NOISE_CANCELLATION_POPOUT
     })
   }, []);
@@ -288,11 +288,11 @@ function eV(e) {
     enableActivities: a
   } = e, s = (0, A.useAppContext)(), {
     analyticsLocations: l
-  } = (0, y.default)(), r = s === eD.AppContext.POPOUT, o = (0, O.useEmbeddedActivityLaunchability)(t.id), u = (0, O.getEmbeddedActivityLaunchabilityLabel)(o), [f] = (0, d.useStateFromStores)([N.default], () => null != t.id && "" !== t.id ? N.default.getEmbeddedActivitiesForChannel(t.id) : N.NO_ACTIVITIES), {
+  } = (0, y.default)(), r = s === eD.AppContext.POPOUT, o = (0, L.useEmbeddedActivityLaunchability)(t.id), u = (0, L.getEmbeddedActivityLaunchabilityLabel)(o), [f] = (0, d.useStateFromStores)([N.default], () => null != t.id && "" !== t.id ? N.default.getEmbeddedActivitiesForChannel(t.id) : N.NO_ACTIVITIES), {
     userInActivity: E
   } = (0, d.useStateFromStoresObject)([N.default], () => ({
     userInActivity: null != N.default.getSelfEmbeddedActivityForChannel(t.id)
-  })), h = (0, g.useAnalyticsContext)(), C = (0, R.useShowActivityIndicator)(), m = o !== O.EmbeddedActivityLaunchability.CAN_LAUNCH, {
+  })), h = (0, g.useAnalyticsContext)(), C = (0, R.useShowActivityIndicator)(), m = o !== L.EmbeddedActivityLaunchability.CAN_LAUNCH, {
     Component: S,
     events: I
   } = (0, c.useActivityLottie)();
@@ -365,10 +365,10 @@ function eY(e) {
     v = null != I,
     {
       Component: R,
-      events: O,
-      play: L
+      events: L,
+      play: O
     } = (0, f.useScreenshareLottie)(v ? "disable" : "enable");
-  s.useEffect(() => () => L(), [L, v]);
+  s.useEffect(() => () => O(), [O, v]);
   let P = (0, n.jsx)(R, {
     color: "currentColor",
     className: i()(ej.buttonIcon, {
@@ -414,11 +414,11 @@ function eY(e) {
           ...T ? l : null,
           onMouseEnter: () => {
             var t;
-            null == s || s(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e), O.onMouseEnter()
+            null == s || s(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e), L.onMouseEnter()
           },
           onMouseLeave: () => {
             var t;
-            null === (t = e.onMouseLeave) || void 0 === t || t.call(e), O.onMouseLeave()
+            null === (t = e.onMouseLeave) || void 0 === t || t.call(e), L.onMouseLeave()
           },
           innerClassName: ej.buttonContents,
           wrapperClassName: ej.button,
@@ -456,7 +456,7 @@ class eW extends s.PureComponent {
           to: e,
           onClick: this.handleChannelLinkClick,
           onContextMenu: this.handleChannelLinkContextMenu,
-          children: (0, n.jsx)(eO.default, {
+          children: (0, n.jsx)(eL.default, {
             className: ej.channel,
             children: d
           })
@@ -729,13 +729,13 @@ t.default = (0, T.default)(function(e) {
         }
       })) && void 0 !== e ? e : A) && void 0 !== t ? t : []
     }, [T, g, A]),
-    [R, O] = s.useState(!1);
+    [R, L] = s.useState(!1);
   s.useEffect(() => {
-    (S || I) && O(!1)
-  }, [S, I, O]);
+    (S || I) && L(!1)
+  }, [S, I, L]);
   let {
     analyticsLocations: P
-  } = (0, y.default)(x.default.RTC_PANEL), M = (0, v.default)(null != u ? u : eD.EMPTY_STRING_SNOWFLAKE_ID, null == o ? void 0 : o.id), b = (0, L.default)(null == o ? void 0 : o.id), U = (0, D.default)();
+  } = (0, y.default)(x.default.RTC_PANEL), M = (0, v.default)(null != u ? u : eD.EMPTY_STRING_SNOWFLAKE_ID, null == o ? void 0 : o.id), b = (0, O.default)(null == o ? void 0 : o.id), U = (0, D.default)();
   return (0, n.jsx)(y.AnalyticsLocationProvider, {
     value: P,
     children: (0, n.jsxs)("div", {
@@ -769,7 +769,7 @@ t.default = (0, T.default)(function(e) {
           className: ej.viewAsRolesWarningButton,
           size: _.Button.Sizes.MIN,
           onClick: () => {
-            O(!0)
+            L(!0)
           },
           children: eU.default.Messages.DISMISS
         })]

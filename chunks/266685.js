@@ -24,11 +24,11 @@ var n = a("735250"),
   N = a("667105"),
   v = a("689938"),
   R = a("396030");
-let O = s.forwardRef(function(e, t) {
+let L = s.forwardRef(function(e, t) {
   var a, l;
   let {
-    className: O,
-    isExpanded: L,
+    className: L,
+    isExpanded: O,
     isExpansionAnimationComplete: P,
     onCtxMenuOpen: M,
     onCtxMenuClose: x,
@@ -43,7 +43,7 @@ let O = s.forwardRef(function(e, t) {
   }, [D]), F = (0, N.useHandleClaimQuestsReward)({
     quest: D,
     location: m.QuestContent.QUEST_BAR
-  }), B = (null === (a = D.userStatus) || void 0 === a ? void 0 : a.enrolledAt) != null, H = (null === (l = D.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, V = s.useMemo(() => (0, S.hasQuestCollectibleRewards)(D.config), [D.config]), Y = L && P, W = (0, S.getQuestBarHeroAssetUrl)(D), K = (0, S.getQuestsInstructionsToWinReward)({
+  }), B = (null === (a = D.userStatus) || void 0 === a ? void 0 : a.enrolledAt) != null, H = (null === (l = D.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, V = s.useMemo(() => (0, S.hasQuestCollectibleRewards)(D.config), [D.config]), Y = O && P, W = (0, S.getQuestBarHeroAssetUrl)(D), K = (0, S.getQuestsInstructionsToWinReward)({
     quest: D
   }), z = s.useMemo(() => {
     let e = (0, u.getContrastingColor)(D.config.colors.primary, {
@@ -58,7 +58,7 @@ let O = s.forwardRef(function(e, t) {
   }, [D.config.colors.primary]);
   return (0, n.jsx)("div", {
     "aria-hidden": !Y,
-    className: i()(O, R.contentExpanded, {
+    className: i()(L, R.contentExpanded, {
       [R.contentInteractable]: Y
     }),
     children: B ? (0, n.jsxs)("div", {
@@ -211,4 +211,4 @@ let O = s.forwardRef(function(e, t) {
     })
   })
 });
-t.default = O
+t.default = L

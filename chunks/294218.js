@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n("789020");
 var s = n("735250"),
-  l = n("470079"),
-  a = n("120356"),
-  i = n.n(a),
+  a = n("470079"),
+  l = n("120356"),
+  i = n.n(l),
   r = n("924826"),
   o = n("442837"),
   u = n("518738"),
@@ -27,12 +27,12 @@ var s = n("735250"),
   v = n("56744"),
   O = n("981631"),
   x = n("264558");
-t.default = l.memo(function(e) {
+t.default = a.memo(function(e) {
   var t;
   let {
     message: n,
-    compact: l = !1,
-    className: a,
+    compact: a = !1,
+    className: l,
     onContextMenu: L,
     onClick: D,
     disableInteraction: P = !1,
@@ -53,31 +53,31 @@ t.default = l.memo(function(e) {
     allowHeading: w || H,
     allowLinks: !0,
     previewLinkTarget: !0
-  }), K = n.type === O.MessageTypes.REPLY ? n.messageReference : void 0, W = (0, o.useStateFromStores)([c.default], () => c.default.getMessageByReference(K)), z = (0, r.useListItem)(n.id), Q = (0, p.default)(n), q = (0, o.useStateFromStores)([f.default], () => n.hasFlag(O.MessageFlags.HAS_THREAD) && f.default.getChannel(T.default.castMessageIdAsChannelId(n.id))), Z = (0, u.useRoleIcon)({
+  }), K = n.type === O.MessageTypes.REPLY ? n.messageReference : void 0, W = (0, o.useStateFromStores)([c.default], () => c.default.getMessageByReference(K)), z = (0, r.useListItem)(n.id), Q = (0, p.default)(n), q = (0, o.useStateFromStores)([f.default], () => n.hasFlag(O.MessageFlags.HAS_THREAD) && f.default.getChannel(T.default.castMessageIdAsChannelId(n.id))), X = (0, u.useRoleIcon)({
     guildId: U.guild_id,
     roleId: Q.iconRoleId
-  }), X = (0, o.useStateFromStores)([E.default], () => E.default.can(O.Permissions.CREATE_INSTANT_INVITE, U)), J = (0, S.default)({
+  }), Z = (0, o.useStateFromStores)([E.default], () => E.default.can(O.Permissions.CREATE_INSTANT_INVITE, U)), J = (0, S.default)({
     message: n,
     channel: U,
     enabled: F
   });
-  if ((0, I.default)(n, X)) return null;
+  if ((0, I.default)(n, Z)) return null;
   let $ = (0, h.getMessageAriaLabelledBy)(n),
     ee = (0, h.getMessageAriaDescribedBy)(n);
   return (0, s.jsx)(_.default, {
-    compact: l,
-    className: i()(a, {
+    compact: a,
+    className: i()(l, {
       [x.ephemeral]: (0, m.hasFlag)(n.flags, O.MessageFlags.EPHEMERAL),
       [x.disableInteraction]: P
     }),
     disableInteraction: P,
-    childrenRepliedMessage: (0, v.default)(n, U, K, W, l),
-    childrenExecutedCommand: (0, R.default)(n, U, l),
+    childrenRepliedMessage: (0, v.default)(n, U, K, W, a),
+    childrenExecutedCommand: (0, R.default)(n, U, a),
     childrenHeader: (0, g.default)({
       ...e,
       guildId: U.guild_id,
       author: Q,
-      roleIcon: Z
+      roleIcon: X
     }),
     childrenAccessories: e.hideAccessories ? void 0 : (0, C.renderSimpleAccessories)(e, Y),
     childrenMessageContent: (0, A.default)(e, V),

@@ -22,8 +22,8 @@ var n, s, l = a("735250"),
   N = a("906732"),
   v = a("812206"),
   R = a("933557"),
-  O = a("102172"),
-  L = a("871118"),
+  L = a("102172"),
+  O = a("871118"),
   P = a("849171"),
   M = a("314897"),
   x = a("592125"),
@@ -449,17 +449,17 @@ es.Header = en, es.Body = e => {
     applicationStream: i,
     onPreviewClick: r,
     guildId: o
-  } = e, d = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(i.channelId)), [f, E] = (0, O.useCanWatchStream)(d), h = (0, l.jsxs)(c.Clickable, {
+  } = e, d = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(i.channelId)), [f, E] = (0, L.useCanWatchStream)(d), h = (0, l.jsxs)(c.Clickable, {
     onClick: f ? r : void 0,
     className: q.applicationStreamingPreviewWrapper,
-    children: [(0, l.jsx)(L.default, {
+    children: [(0, l.jsx)(O.default, {
       stream: i,
       className: q.applicationStreamingPreviewSize
     }), (0, l.jsx)("div", {
       className: q.applicationStreamingHoverWrapper,
       children: (0, l.jsx)("div", {
         className: q.applicationStreamingHoverText,
-        children: (0, O.getStreamCTAString)(E)
+        children: (0, L.getStreamCTAString)(E)
       })
     })]
   }), _ = null !== (a = null === (t = (0, T.default)(n, i)) || void 0 === t ? void 0 : t.activityText) && void 0 !== a ? a : z.default.Messages.SHARING_SCREEN;

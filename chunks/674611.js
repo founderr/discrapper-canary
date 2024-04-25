@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("735250"),
-  l = n("470079"),
-  a = n("442837"),
+  a = n("470079"),
+  l = n("442837"),
   i = n("481060"),
   r = n("468706"),
   o = n("774863"),
@@ -16,7 +16,7 @@ function d(e) {
   let {
     messageId: t,
     channelId: n
-  } = e, d = (0, a.useStateFromStores)([o.default], () => o.default.canSubmitFpReport(t)), c = l.useCallback(() => {
+  } = e, d = (0, l.useStateFromStores)([o.default], () => o.default.canSubmitFpReport(t)), c = a.useCallback(() => {
     (0, r.handleSenderFalsePositiveFlow)(n, t)
   }, [n, t]);
   return (0, s.jsx)(i.Button, {

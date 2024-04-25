@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return S
   }
 }), n("47120"), n("913527");
-var s, l, a, i = n("149765"),
+var s, a, l, i = n("149765"),
   r = n("442837");
 n("433517");
 var o = n("570140"),
@@ -34,7 +34,7 @@ let I = {
   h = {},
   N = null,
   S = 864e5;
-(a = s || (s = {})).IS_OWNER = "is_owner", a.IS_ADMIN = "is_admin", a.IS_COMMUNITY = "is_community", a.GUILD_SIZE = "guild_size", a.IS_HUB = "is_hub", a.IS_VIEWING = "is_viewing", a.GUILD_PERMISSIONS = "guild_permissions", a.GUILD_SIZE_ALL = "guild_size_all";
+(l = s || (s = {})).IS_OWNER = "is_owner", l.IS_ADMIN = "is_admin", l.IS_COMMUNITY = "is_community", l.GUILD_SIZE = "guild_size", l.IS_HUB = "is_hub", l.IS_VIEWING = "is_viewing", l.GUILD_PERMISSIONS = "guild_permissions", l.GUILD_SIZE_ALL = "guild_size_all";
 let C = new Set(Object.values(s));
 
 function A(e) {
@@ -49,13 +49,13 @@ function A(e) {
     if (0 === t.length) return !0;
     for (let e of t)
       if (!C.has(e)) return !1;
-    let l = t.includes("guild_size_all"),
-      a = !0;
+    let a = t.includes("guild_size_all"),
+      l = !0;
     for (let r of Object.values(c.default.getGuilds())) {
-      if (l || t.includes("guild_size")) {
+      if (a || t.includes("guild_size")) {
         let e = d.default.getMemberCount(r.id);
         if (null == e || null != n[0] && e < n[0] || null != n[1] && e > n[1]) {
-          a = !1;
+          l = !1;
           continue
         }
       }
@@ -79,9 +79,9 @@ function A(e) {
       null == (h = null != h ? h : {})[e.key] && (h[e.key] = e);
       let T = E.default.getGuildId(),
         I = null != T && T === r.id;
-      if ((!t.includes("is_viewing") || I) && !l) return !0
+      if ((!t.includes("is_viewing") || I) && !a) return !0
     }
-    return !!l && !!a || !1
+    return !!a && !!l || !1
   }(e)
 }
 
@@ -110,7 +110,7 @@ function M() {
     N = null
   }()
 }
-class R extends(l = r.default.PersistedStore) {
+class R extends(a = r.default.PersistedStore) {
   initialize(e) {
     p = null != e ? e : I, this.syncWith([E.default], M)
   }

@@ -24,7 +24,7 @@ var n, s = a("735250"),
   v = a("330065"),
   R = a("755386");
 
-function O(e, t, a) {
+function L(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
     value: a,
     enumerable: !0,
@@ -32,7 +32,7 @@ function O(e, t, a) {
     writable: !0
   }) : e[t] = a, e
 }
-class L extends(n = l.PureComponent) {
+class O extends(n = l.PureComponent) {
   getDefaultSplashURL(e, t) {
     if (t) return R;
     switch (e) {
@@ -56,8 +56,8 @@ class L extends(n = l.PureComponent) {
       submitting: v
     } = this.state, {
       name: R,
-      description: O,
-      presenceCount: L,
+      description: L,
+      presenceCount: O,
       memberCount: P,
       keywords: M
     } = t, x = null === (e = t.features) || void 0 === e ? void 0 : e.has(T.GuildFeatures.HUB), y = m.default.getGuildDiscoverySplashURL({
@@ -169,7 +169,7 @@ class L extends(n = l.PureComponent) {
                 className: A.description,
                 variant: "text-sm/normal",
                 color: "header-secondary",
-                children: O
+                children: L
               }), U && null != M && null != l && (0, s.jsx)(E.DiscoveryTags, {
                 tags: M,
                 onTagClick: e => l(e, t.id),
@@ -177,7 +177,7 @@ class L extends(n = l.PureComponent) {
                 section: S.AnalyticsContexts.POPULAR
               }), (0, s.jsxs)("div", {
                 className: A.memberInfo,
-                children: [null != L && (0, s.jsxs)("div", {
+                children: [null != O && (0, s.jsxs)("div", {
                   className: A.memberCount,
                   children: [(0, s.jsx)("div", {
                     className: A.dotOnline
@@ -185,7 +185,7 @@ class L extends(n = l.PureComponent) {
                     variant: "text-xs/normal",
                     color: "header-secondary",
                     children: g.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
-                      membersOnline: L
+                      membersOnline: O
                     })
                   })]
                 }), null != P && (0, s.jsxs)("div", {
@@ -212,12 +212,12 @@ class L extends(n = l.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), O(this, "state", {
+    super(...e), L(this, "state", {
       loaded: !1,
       hasBeenSeen: !1,
       isVisible: !1,
       submitting: !1
-    }), O(this, "handleClickView", async e => {
+    }), L(this, "handleClickView", async e => {
       let {
         className: t
       } = e.target;
@@ -236,7 +236,7 @@ class L extends(n = l.PureComponent) {
           submitting: !1
         })
       }
-    }), O(this, "handleVisibilityChange", e => {
+    }), L(this, "handleVisibilityChange", e => {
       let {
         onGuildCardSeen: t,
         guild: a
@@ -244,7 +244,7 @@ class L extends(n = l.PureComponent) {
       null != a && !this.state.hasBeenSeen && e && (this.setState({
         hasBeenSeen: e
       }), null != t && t(a.id))
-    }), O(this, "handleContextMenu", e => {
+    }), L(this, "handleContextMenu", e => {
       (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -254,13 +254,13 @@ class L extends(n = l.PureComponent) {
           guild: this.props.guild
         })
       })
-    }), O(this, "setIsVisible", e => {
+    }), L(this, "setIsVisible", e => {
       this.setState({
         isVisible: e
       })
     })
   }
 }
-O(L, "Placeholder", e => (0, s.jsx)("div", {
+L(O, "Placeholder", e => (0, s.jsx)("div", {
   className: r()(e.className, A.cardPlaceholder)
-})), t.default = L
+})), t.default = O

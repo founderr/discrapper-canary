@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var l = n("120356"),
-  a = n.n(l),
+var a = n("120356"),
+  l = n.n(a),
   i = n("873546"),
   r = n("442837"),
   o = n("100527"),
@@ -37,8 +37,8 @@ function g(e) {
   let {
     children: t,
     className: n,
-    channelId: l,
-    guildId: a,
+    channelId: a,
+    guildId: l,
     innerClassname: o,
     transparent: u = !1,
     toolbar: m,
@@ -55,11 +55,11 @@ function g(e) {
     innerClassName: o,
     toolbar: function() {
       if (null == m) return null;
-      let e = null != l && !R;
+      let e = null != a && !R;
       return i.isMobile ? T : (0, s.jsxs)(s.Fragment, {
         children: [m, e ? (0, s.jsx)(f.default, {
           className: C.search
-        }, null != a ? a : l) : null, v && (0, s.jsx)(_.default.Divider, {}), (0, s.jsx)(h.default, {}), (0, s.jsx)(d.default, {
+        }, null != l ? l : a) : null, v && (0, s.jsx)(_.default.Divider, {}), (0, s.jsx)(h.default, {}), (0, s.jsx)(d.default, {
           canShowReminder: !0
         }), (0, s.jsx)(c.default, {}), x ? (0, s.jsx)(p.default, {}) : (0, s.jsx)(I.default, {})]
       })
@@ -78,15 +78,15 @@ function M(e) {
   let {
     children: t,
     className: n,
-    "aria-label": l,
-    "aria-labelledby": a,
+    "aria-label": a,
+    "aria-labelledby": l,
     role: i
   } = e;
   return (0, s.jsx)(_.default, {
     className: n,
     onDoubleClick: A,
-    "aria-label": l,
-    "aria-labelledby": a,
+    "aria-label": a,
+    "aria-labelledby": l,
     role: i,
     children: t
   })
@@ -97,12 +97,12 @@ function R(e) {
     isAuthenticated: t = !0,
     ...n
   } = e, {
-    analyticsLocations: l
-  } = (0, u.default)(o.default.HEADER_BAR), i = a()(n.className, {
+    analyticsLocations: a
+  } = (0, u.default)(o.default.HEADER_BAR), i = l()(n.className, {
     [C.forumOrHome]: null != n.channelType && N.ChannelTypesSets.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === S.StaticChannelRoute.GUILD_HOME
   });
   return (0, s.jsx)(u.AnalyticsLocationProvider, {
-    value: l,
+    value: a,
     children: t ? (0, s.jsx)(g, {
       ...n,
       className: i

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return ey
   }
 }), n("47120");
-var s, l, a, i, r = n("913527"),
+var s, a, l, i, r = n("913527"),
   o = n.n(r),
   u = n("442837"),
   d = n("743426"),
@@ -47,16 +47,16 @@ var s, l, a, i, r = n("913527"),
   z = n("199902"),
   Q = n("314897"),
   q = n("881998"),
-  Z = n("463395"),
-  X = n("592125"),
+  X = n("463395"),
+  Z = n("592125"),
   J = n("553795"),
   $ = n("427123"),
   ee = n("271383"),
   et = n("430824"),
   en = n("131951"),
   es = n("292959"),
-  el = n("496675"),
-  ea = n("571474"),
+  ea = n("496675"),
+  el = n("571474"),
   ei = n("19780"),
   er = n("944486"),
   eo = n("914010"),
@@ -132,15 +132,15 @@ function eF(e) {
 }
 
 function ek(e, t, n) {
-  var s, l, a;
+  var s, a, l;
   if (null == e) return;
   let i = eU[e];
   if (null != i && !t && f.Storage.set(i, !0), ej.has(e) && (eb[e] = !0), null != n && null != i) {
     ;
-    s = e, l = n, f.Storage.set(eF(s), l.format("YYYY-MM-DDTHH:mm:ss.SSSZ"))
+    s = e, a = n, f.Storage.set(eF(s), a.format("YYYY-MM-DDTHH:mm:ss.SSSZ"))
   } else {
     ;
-    a = e, f.Storage.remove(eF(a))
+    l = e, f.Storage.remove(eF(l))
   }
 }
 
@@ -232,15 +232,15 @@ let eH = [eR.NoticeTypes.QUARANTINED, eR.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         let {
           voiceChannelId: t,
           voiceState: n
-        } = e, s = X.default.getChannel(t), l = (null == s ? void 0 : s.isGuildStageVoice()) && (null == n ? void 0 : n.suppress);
-        return !1 === en.default.getInputDetected() && !l
+        } = e, s = Z.default.getChannel(t), a = (null == s ? void 0 : s.isGuildStageVoice()) && (null == n ? void 0 : n.suppress);
+        return !1 === en.default.getInputDetected() && !a
       }
     },
     [eR.NoticeTypes.H264_DISABLED]: {
       predicate: e => {
         let {
           voiceChannelId: t
-        } = e, n = X.default.getChannel(t);
+        } = e, n = Z.default.getChannel(t);
         return !en.default.getOpenH264() && null != t && e_.default.hasVideo(t) && null != n && n.isGuildStageVoice()
       }
     },
@@ -248,8 +248,8 @@ let eH = [eR.NoticeTypes.QUARANTINED, eR.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       predicate: () => ei.default.isConnected() && en.default.isHardwareMute(),
       metadata: () => {
         let e = en.default.getInputDeviceId(),
-          t = Z.default.getVendor(e),
-          n = Z.default.getModel(e);
+          t = X.default.getVendor(e),
+          n = X.default.getModel(e);
         if (null != t && null != n) return {
           vendor: t,
           model: n
@@ -286,10 +286,10 @@ let eH = [eR.NoticeTypes.QUARANTINED, eR.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       predicate: e => {
         var t, n, s;
         let {
-          selectedGuildId: l,
-          currentUser: a
+          selectedGuildId: a,
+          currentUser: l
         } = e;
-        return null !== (s = null != l && null != a && !(null === (t = et.default.getGuild(l)) || void 0 === t ? void 0 : t.hasFeature(eR.GuildFeatures.GUILD_ONBOARDING)) && (null === (n = ee.default.getMember(l, a.id)) || void 0 === n ? void 0 : n.isPending)) && void 0 !== s && s
+        return null !== (s = null != a && null != l && !(null === (t = et.default.getGuild(a)) || void 0 === t ? void 0 : t.hasFeature(eR.GuildFeatures.GUILD_ONBOARDING)) && (null === (n = ee.default.getMember(a, l.id)) || void 0 === n ? void 0 : n.isPending)) && void 0 !== s && s
       }
     },
     [eR.NoticeTypes.OUTBOUND_PROMOTION]: {
@@ -421,17 +421,17 @@ let eH = [eR.NoticeTypes.QUARANTINED, eR.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         let {
           premiumSubscription: t,
           currentUser: n
-        } = e, s = null != t ? o()(t.currentPeriodEnd).diff(o()().startOf("day"), "days") : 0, l = (null == t ? void 0 : t.canceledAt) != null && (null == t ? void 0 : t.status) === eR.SubscriptionStatusTypes.CANCELED && 1 >= o()().diff(o()(t.canceledAt), "days"), a = null != t && o()(t.currentPeriodEnd).isBefore(o()()), i = null != t && t.status === eR.SubscriptionStatusTypes.CANCELED && !a && s <= 7 && s >= 0 && (0, eC.isPremiumExactly)(n, ex.PremiumTypes.TIER_2) && !l && !n.hasFreePremium() && !t.isPurchasedExternally;
+        } = e, s = null != t ? o()(t.currentPeriodEnd).diff(o()().startOf("day"), "days") : 0, a = (null == t ? void 0 : t.canceledAt) != null && (null == t ? void 0 : t.status) === eR.SubscriptionStatusTypes.CANCELED && 1 >= o()().diff(o()(t.canceledAt), "days"), l = null != t && o()(t.currentPeriodEnd).isBefore(o()()), i = null != t && t.status === eR.SubscriptionStatusTypes.CANCELED && !l && s <= 7 && s >= 0 && (0, eC.isPremiumExactly)(n, ex.PremiumTypes.TIER_2) && !a && !n.hasFreePremium() && !t.isPurchasedExternally;
         return !ew(eR.NoticeTypes.PREMIUM_UNCANCEL) && i
       },
       metadata: e => {
         var t;
         let {
           premiumSubscription: n
-        } = e, s = null != n ? o()(n.currentPeriodEnd).diff(o()().startOf("day"), "days") : 0, l = null != n ? null === (t = (0, eC.getPremiumPlanItem)(n)) || void 0 === t ? void 0 : t.planId : null;
+        } = e, s = null != n ? o()(n.currentPeriodEnd).diff(o()().startOf("day"), "days") : 0, a = null != n ? null === (t = (0, eC.getPremiumPlanItem)(n)) || void 0 === t ? void 0 : t.planId : null;
         return {
           daysLeft: s,
-          premiumType: null != l ? eC.default.getPremiumType(l) : null,
+          premiumType: null != a ? eC.default.getPremiumType(a) : null,
           premiumSubscription: n
         }
       }
@@ -441,23 +441,23 @@ let eH = [eR.NoticeTypes.QUARANTINED, eR.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         let {
           premiumSubscription: t,
           currentUser: n
-        } = e, s = null != t ? o()(t.currentPeriodEnd).diff(o()().startOf("day"), "days") : 0, l = null != t ? o()(t.currentPeriodEnd).diff(o()(t.currentPeriodStart).startOf("day"), "days") : 0, a = null != t && o()(t.currentPeriodEnd).isBefore(o()()), i = eh.default.applicationIdsFetched.has(ex.PREMIUM_SUBSCRIPTION_APPLICATION), r = eh.default.getForApplication(ex.PREMIUM_SUBSCRIPTION_APPLICATION), u = null != t ? (0, eC.getPremiumPlanItem)(t) : null, d = null != u ? eC.default.getSkuIdForPlan(u.planId) : null, c = null != r && null != u && Array.from(r).filter(e => {
+        } = e, s = null != t ? o()(t.currentPeriodEnd).diff(o()().startOf("day"), "days") : 0, a = null != t ? o()(t.currentPeriodEnd).diff(o()(t.currentPeriodStart).startOf("day"), "days") : 0, l = null != t && o()(t.currentPeriodEnd).isBefore(o()()), i = eh.default.applicationIdsFetched.has(ex.PREMIUM_SUBSCRIPTION_APPLICATION), r = eh.default.getForApplication(ex.PREMIUM_SUBSCRIPTION_APPLICATION), u = null != t ? (0, eC.getPremiumPlanItem)(t) : null, d = null != u ? eC.default.getSkuIdForPlan(u.planId) : null, c = null != r && null != u && Array.from(r).filter(e => {
           let {
             skuId: t,
             consumed: n
           } = e;
           return !n && t === d
-        }).length > 0, f = null != t && s <= (l > 14 ? 7 : 2) && s >= 0 && t.status !== eR.SubscriptionStatusTypes.PAST_DUE && !a && i && !c && null === t.paymentSourceId && !n.hasFreePremium() && !t.isPurchasedExternally;
+        }).length > 0, f = null != t && s <= (a > 14 ? 7 : 2) && s >= 0 && t.status !== eR.SubscriptionStatusTypes.PAST_DUE && !l && i && !c && null === t.paymentSourceId && !n.hasFreePremium() && !t.isPurchasedExternally;
         return !ew(eR.NoticeTypes.PREMIUM_MISSING_PAYMENT) && f
       },
       metadata: e => {
         var t;
         let {
           premiumSubscription: n
-        } = e, s = null != n ? o()(n.currentPeriodEnd).diff(o()().startOf("day"), "days") : 0, l = null != n ? null === (t = (0, eC.getPremiumPlanItem)(n)) || void 0 === t ? void 0 : t.planId : null;
+        } = e, s = null != n ? o()(n.currentPeriodEnd).diff(o()().startOf("day"), "days") : 0, a = null != n ? null === (t = (0, eC.getPremiumPlanItem)(n)) || void 0 === t ? void 0 : t.planId : null;
         return {
           daysLeft: s,
-          premiumType: null != l ? eC.default.getPremiumType(l) : null,
+          premiumType: null != a ? eC.default.getPremiumType(a) : null,
           premiumSubscription: n
         }
       }
@@ -467,8 +467,8 @@ let eH = [eR.NoticeTypes.QUARANTINED, eR.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         let {
           premiumSubscription: t,
           currentUser: n
-        } = e, s = null != t && null != t.paymentSourceId ? eT.default.getPaymentSource(t.paymentSourceId) : null, l = null != t && o()(t.currentPeriodEnd).isBefore(o()()), a = null != t && t.status === eR.SubscriptionStatusTypes.PAST_DUE && !l && null != s && s.invalid && !n.hasFreePremium() && !t.isPurchasedExternally;
-        return !ew(eR.NoticeTypes.PREMIUM_PAST_DUE_INVALID_PAYMENT) && a
+        } = e, s = null != t && null != t.paymentSourceId ? eT.default.getPaymentSource(t.paymentSourceId) : null, a = null != t && o()(t.currentPeriodEnd).isBefore(o()()), l = null != t && t.status === eR.SubscriptionStatusTypes.PAST_DUE && !a && null != s && s.invalid && !n.hasFreePremium() && !t.isPurchasedExternally;
+        return !ew(eR.NoticeTypes.PREMIUM_PAST_DUE_INVALID_PAYMENT) && l
       },
       metadata: e => {
         let {
@@ -484,8 +484,8 @@ let eH = [eR.NoticeTypes.QUARANTINED, eR.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         let {
           premiumSubscription: t,
           currentUser: n
-        } = e, s = null != t && o()(t.currentPeriodEnd).isBefore(o()()), l = null != t && t.status === eR.SubscriptionStatusTypes.PAST_DUE && !s && null === t.paymentSourceId && !n.hasFreePremium() && !t.isPurchasedExternally;
-        return !ew(eR.NoticeTypes.PREMIUM_PAST_DUE_MISSING_PAYMENT) && l
+        } = e, s = null != t && o()(t.currentPeriodEnd).isBefore(o()()), a = null != t && t.status === eR.SubscriptionStatusTypes.PAST_DUE && !s && null === t.paymentSourceId && !n.hasFreePremium() && !t.isPurchasedExternally;
+        return !ew(eR.NoticeTypes.PREMIUM_PAST_DUE_MISSING_PAYMENT) && a
       },
       metadata: e => {
         let {
@@ -540,7 +540,7 @@ let eH = [eR.NoticeTypes.QUARANTINED, eR.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         let {
           premiumSubscription: t,
           currentUser: n
-        } = e, s = null != t && o()(t.currentPeriodEnd).isBefore(o()()), l = null != t && null != t.paymentSourceId ? eT.default.getPaymentSource(t.paymentSourceId) : null, a = null != l && eD.PREPAID_PAYMENT_SOURCES.has(l.type), i = null != t && t.status === eR.SubscriptionStatusTypes.PAST_DUE && !s && a && !n.hasFreePremium() && !t.isPurchasedExternally;
+        } = e, s = null != t && o()(t.currentPeriodEnd).isBefore(o()()), a = null != t && null != t.paymentSourceId ? eT.default.getPaymentSource(t.paymentSourceId) : null, l = null != a && eD.PREPAID_PAYMENT_SOURCES.has(a.type), i = null != t && t.status === eR.SubscriptionStatusTypes.PAST_DUE && !s && l && !n.hasFreePremium() && !t.isPurchasedExternally;
         return !ew(eR.NoticeTypes.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT) && i
       },
       metadata: e => {
@@ -649,13 +649,13 @@ function eK() {
   let t = eI.default.getPremiumSubscription(),
     n = em.default.isLocalizedPromoEnabled,
     s = eo.default.getGuildId(),
-    l = er.default.getVoiceChannelId(),
-    a = null != l ? e_.default.getVoiceStateForChannel(l) : null;
+    a = er.default.getVoiceChannelId(),
+    l = null != a ? e_.default.getVoiceStateForChannel(a) : null;
   for (let o of ev.CONFERENCE_MODE_ENABLED ? eV : eH)
     if (null != eY[o] && eY[o].predicate({
         selectedGuildId: s,
-        voiceChannelId: l,
-        voiceState: a,
+        voiceChannelId: a,
+        voiceState: l,
         currentUser: e,
         premiumSubscription: t,
         isLocalizedPromoEnabled: n
@@ -680,7 +680,7 @@ function eW() {
 }
 class ez extends(s = u.default.Store) {
   initialize() {
-    this.syncWith([ec.default, ea.default, $.default, eo.default, F.default, ep.default, q.default, J.default, W.default, O.default, H.default, z.default], eK), this.waitFor(eE.default, eu.default, et.default, ee.default, ei.default, en.default, ed.default, C.default, eo.default, ef.default, Y.default, A.default, ea.default, eA.default, eg.default, eN.default, es.default, eI.default, eM.default, $.default, eT.default, el.default, F.default, eh.default, ep.default, J.default, y.default, N.default, p.default, w.default, H.default, z.default)
+    this.syncWith([ec.default, el.default, $.default, eo.default, F.default, ep.default, q.default, J.default, W.default, O.default, H.default, z.default], eK), this.waitFor(eE.default, eu.default, et.default, ee.default, ei.default, en.default, ed.default, C.default, eo.default, ef.default, Y.default, A.default, el.default, eA.default, eg.default, eN.default, es.default, eI.default, eM.default, $.default, eT.default, ea.default, F.default, eh.default, ep.default, J.default, y.default, N.default, p.default, w.default, H.default, z.default)
   }
   hasNotice() {
     return null != eG && null != eG.type
@@ -692,12 +692,12 @@ class ez extends(s = u.default.Store) {
     return ew(e)
   }
 }
-i = "NoticeStore", (a = "displayName") in(l = ez) ? Object.defineProperty(l, a, {
+i = "NoticeStore", (l = "displayName") in(a = ez) ? Object.defineProperty(a, l, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[a] = i, t.default = new ez(E.default, {
+}) : a[l] = i, t.default = new ez(E.default, {
   CURRENT_USER_UPDATE: eK,
   MEDIA_ENGINE_SET_AUDIO_ENABLED: eK,
   CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: eK,

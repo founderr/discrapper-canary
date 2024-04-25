@@ -8,9 +8,9 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var s = n("735250"),
-  l = n("470079"),
-  a = n("120356"),
-  i = n.n(a),
+  a = n("470079"),
+  l = n("120356"),
+  i = n.n(l),
   r = n("525654"),
   o = n.n(r),
   u = n("924826"),
@@ -36,11 +36,11 @@ function v(e) {
   let {
     setTab: t,
     onJump: n,
-    showTutorial: a,
+    showTutorial: l,
     setSeenTutorial: r,
     closePopout: v,
     badgeState: x
-  } = e, L = l.useRef(null), [D, P] = (0, A.default)(L), {
+  } = e, L = a.useRef(null), [D, P] = (0, A.default)(L), {
     loadState: y,
     channels: U
   } = D, {
@@ -48,31 +48,31 @@ function v(e) {
     markAllRead: b
   } = P;
   (function(e, t, n) {
-    l.useLayoutEffect(() => {
+    a.useLayoutEffect(() => {
       var s;
       let {
-        scrollToChannelIndex: l
+        scrollToChannelIndex: a
       } = t;
       n.clearScrollToChannelIndex();
       let {
-        current: a
+        current: l
       } = e;
-      if (null == a || null == l) return;
-      let i = null === (s = a.getScrollerNode()) || void 0 === s ? void 0 : s.children;
+      if (null == l || null == a) return;
+      let i = null === (s = l.getScrollerNode()) || void 0 === s ? void 0 : s.children;
       if (null == i) return;
-      let r = i[l];
+      let r = i[a];
       if (null == r) return;
       let {
         scrollTop: o,
         scrollHeight: u
-      } = a.getScrollerState();
-      (r.offsetTop < o || r.offsetTop > o + u) && a.scrollTo({
+      } = l.getScrollerState();
+      (r.offsetTop < o || r.offsetTop > o + u) && l.scrollTo({
         to: r.offsetTop
       })
     })
   })(L, D, P),
   function(e, t) {
-    l.useEffect(() => {
+    a.useEffect(() => {
       let n = () => {
         let n = e.channels.find(e => !e.collapsed);
         null != n && t.markChannelRead(n)
@@ -81,11 +81,11 @@ function v(e) {
         p.ComponentDispatch.unsubscribe(g.ComponentActions.MARK_TOP_INBOX_CHANNEL_READ, n)
       }
     }, [t, e.channels])
-  }(D, P), l.useEffect(() => {
+  }(D, P), a.useEffect(() => {
     I.default.track(g.AnalyticEvents.OPEN_POPOUT, {
       type: "Inbox"
     })
-  }, []), l.useEffect(() => (E.default.subscribe("CONNECTION_OPEN", v), () => {
+  }, []), a.useEffect(() => (E.default.subscribe("CONNECTION_OPEN", v), () => {
     E.default.unsubscribe("CONNECTION_OPEN", v)
   }), [v]);
   let B = (0, d.useStateFromStores)([_.default], () => _.default.messageGroupSpacing),
@@ -124,17 +124,17 @@ function v(e) {
         children: e => {
           let {
             ref: t,
-            ...l
+            ...a
           } = e;
           return (0, s.jsxs)(f.AdvancedScrollerThin, {
             ref: e => {
               var n;
               L.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
             },
-            ...l,
+            ...a,
             onScroll: y === A.LoadState.Done ? void 0 : j,
             className: R.scroller,
-            children: [a ? (0, s.jsx)(O, {
+            children: [l ? (0, s.jsx)(O, {
               setSeenTutorial: r
             }) : null, (0, C.default)(U, P, n), y === A.LoadState.Done ? null : (0, s.jsx)(f.Spinner, {
               className: R.spinner
@@ -181,7 +181,7 @@ function x(e) {
   let {
     setTab: t,
     badgeState: n,
-    closePopout: l
+    closePopout: a
   } = e;
   return (0, s.jsxs)("div", {
     className: R.container,
@@ -189,7 +189,7 @@ function x(e) {
       tab: c.InboxTab.UNREADS,
       setTab: t,
       badgeState: n,
-      closePopout: l
+      closePopout: a
     }), (0, s.jsx)(N.default, {
       Icon: T.default,
       disableStars: !0,

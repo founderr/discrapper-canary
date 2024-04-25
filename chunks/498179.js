@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var l = n("442837"),
-  a = n("481060"),
+var a = n("442837"),
+  l = n("481060"),
   i = n("283595"),
   r = n("55563"),
   o = n("780570"),
@@ -19,7 +19,7 @@ function f(e) {
   let {
     application: t,
     fullWidth: n = !1,
-    size: f = a.Button.Sizes.LARGE,
+    size: f = l.Button.Sizes.LARGE,
     color: E,
     customDisabledColor: _,
     hideNotLaunchable: m,
@@ -41,7 +41,7 @@ function f(e) {
     className: p,
     hover: C,
     innerClassName: A
-  }, M = (0, l.useStateFromStores)([i.default], () => i.default.getActiveLibraryApplication(t.id)), R = null != M ? M.sku.id : null, v = null != R ? R : t.primarySkuId, O = (0, l.useStateFromStores)([r.default], () => null != v && !r.default.didFetchingSkuFail(v));
+  }, M = (0, a.useStateFromStores)([i.default], () => i.default.getActiveLibraryApplication(t.id)), R = null != M ? M.sku.id : null, v = null != R ? R : t.primarySkuId, O = (0, a.useStateFromStores)([r.default], () => null != v && !r.default.didFetchingSkuFail(v));
   return null != M && (0, o.isUserEntitledToLibraryApplication)(M) ? (0, s.jsx)(c.default, {
     ...g,
     libraryApplication: M,

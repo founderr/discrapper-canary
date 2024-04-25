@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n("47120");
-var s, l = n("735250"),
-  a = n("470079"),
+var s, a = n("735250"),
+  l = n("470079"),
   i = n("846519");
 
 function r(e, t, n) {
@@ -12,7 +12,7 @@ function r(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class o extends(s = a.Component) {
+class o extends(s = l.Component) {
   static getDerivedStateFromProps(e) {
     return e.disable ? {
       hovered: !1
@@ -29,11 +29,11 @@ class o extends(s = a.Component) {
     this.stopTimer()
   }
   componentDidUpdate(e, t) {
-    let n, s, l, a, {
+    let n, s, a, l, {
       props: i
     } = this;
     let r = (n = i, s = this.state, !n.disable && !(s.hovered && n.pauseOnHover));
-    let o = (l = e, a = t, !l.disable && !(a.hovered && l.pauseOnHover));
+    let o = (a = e, l = t, !a.disable && !(l.hovered && a.pauseOnHover));
     r && !o || e.interval !== i.interval ? this.startTimer() : !r && o && this.stopTimer()
   }
   startTimer() {
@@ -60,7 +60,7 @@ class o extends(s = a.Component) {
       onMouseLeave: this.handleResume,
       onBlur: this.handleResume
     };
-    return (0, l.jsx)("div", {
+    return (0, a.jsx)("div", {
       ...s,
       className: t,
       children: e

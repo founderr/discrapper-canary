@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var l = n("824203"),
-  a = n("794358"),
+var a = n("824203"),
+  l = n("794358"),
   i = n("63063"),
   r = n("981631"),
   o = n("689938"),
@@ -20,7 +20,7 @@ function d(e) {
       onDeleteMessage: c,
       children: f
     } = e,
-    E = (0, l.useIsMessageInteractionForcedEphemeral)(n, d, {
+    E = (0, a.useIsMessageInteractionForcedEphemeral)(n, d, {
       location: "EphemeralAccessories"
     }),
     _ = () => c(n, !0);
@@ -39,7 +39,7 @@ function d(e) {
   }), (0, s.jsxs)("div", {
     className: u.ephemeralMessage,
     onClick: e => e.stopPropagation(),
-    children: [(0, s.jsx)(a.default, {
+    children: [(0, s.jsx)(l.default, {
       className: u.icon,
       width: 16,
       height: 16

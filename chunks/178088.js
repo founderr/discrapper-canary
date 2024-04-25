@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var s = n("735250"),
-  l = n("470079"),
-  a = n("349445"),
+  a = n("470079"),
+  l = n("349445"),
   i = n("442837"),
   r = n("524437"),
   o = n("481060"),
@@ -36,12 +36,12 @@ function g(e) {
     popoutAlign: v
   } = e, {
     analyticsLocations: O
-  } = (0, d.default)(u.default.NOTIFICATION_CENTER), [x, L] = l.useState(!1), [D, P] = function() {
+  } = (0, d.default)(u.default.NOTIFICATION_CENTER), [x, L] = a.useState(!1), [D, P] = function() {
     let e = (0, i.useStateFromStores)([m.default], () => {
       var e, t;
       return null !== (t = null === (e = m.default.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : r.InboxTab.UNREADS
     });
-    return [e, l.useCallback(e => {
+    return [e, a.useCallback(e => {
       _.PreloadedUserSettingsActionCreators.updateAsync("inbox", t => {
         if (t.currentTab === e) return !1;
         t.currentTab = e
@@ -55,7 +55,7 @@ function g(e) {
         var e, t;
         return null !== (t = null === (e = m.default.settings.inbox) || void 0 === e ? void 0 : e.viewedTutorial) && void 0 !== t && t
       }),
-      n = l.useCallback(() => {
+      n = a.useCallback(() => {
         _.PreloadedUserSettingsActionCreators.updateAsync("inbox", e => {
           e.viewedTutorial = !0
         }, _.UserSettingsDelay.INFREQUENT_USER_ACTION)
@@ -64,14 +64,14 @@ function g(e) {
       showTutorial: !t && e === r.InboxTab.UNREADS,
       setSeenTutorial: n
     }
-  }(D), j = l.useCallback(() => {
+  }(D), j = a.useCallback(() => {
     L(!1), x && (null == n || n())
-  }, [n, x]), b = l.useCallback(() => {
+  }, [n, x]), b = a.useCallback(() => {
     L(!x), x ? null == n || n() : null == t || t()
-  }, [n, t, x]), B = l.useCallback(() => {
+  }, [n, t, x]), B = a.useCallback(() => {
     b(), P(r.InboxTab.UNREADS)
   }, [P, b]);
-  l.useEffect(() => (T.ComponentDispatch.subscribe(C.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, B), () => void T.ComponentDispatch.unsubscribe(C.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, B)), [B]);
+  a.useEffect(() => (T.ComponentDispatch.subscribe(C.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, B), () => void T.ComponentDispatch.unsubscribe(C.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, B)), [B]);
   let {
     showReminders: G
   } = f.default.useExperiment({
@@ -83,10 +83,10 @@ function g(e) {
   } = c.default.useExperiment({
     location: "RecentsPopout"
   });
-  l.useEffect(() => {
+  a.useEffect(() => {
     !G && D === r.InboxTab.TODOS && P(r.InboxTab.MENTIONS)
   });
-  let w = l.useCallback(e => {
+  let w = a.useCallback(e => {
     !e.shiftKey && j()
   }, [j]);
   return (0, s.jsx)(d.AnalyticsLocationProvider, {
@@ -118,7 +118,7 @@ function g(e) {
             setTab: P,
             onJump: w,
             closePopout: j
-          }) : (0, s.jsx)(a.ErrorBoundary, {
+          }) : (0, s.jsx)(l.ErrorBoundary, {
             fallback: (0, s.jsx)(N.UnreadsCrashed, {
               setTab: P,
               closePopout: j,

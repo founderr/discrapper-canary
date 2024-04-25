@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var s = n("735250"),
-  l = n("470079"),
-  a = n("120356"),
-  i = n.n(a),
+  a = n("470079"),
+  l = n("120356"),
+  i = n.n(l),
   r = n("866442"),
   o = n("596454"),
   u = n("434650"),
@@ -17,10 +17,10 @@ var s = n("735250"),
   E = n("287151"),
   _ = n("903380"),
   m = n("317363");
-let T = l.memo(function(e) {
+let T = a.memo(function(e) {
     let t, n, {
-        useChatFontScaling: l,
-        hideEmoji: a,
+        useChatFontScaling: a,
+        hideEmoji: l,
         emoji: u,
         className: T,
         count: I,
@@ -37,7 +37,7 @@ let T = l.memo(function(e) {
       v = R === f.ReactionTypes.BURST,
       O = (0, E.isMeReaction)(p, h, R),
       x = (0, d.useEmojiColorPalette)(v && null != S ? S : []),
-      L = l ? m : _,
+      L = a ? m : _,
       D = v ? N : I,
       P = (0, c.getMinCounterWidth)(D, E.REACTION_MIN_WIDTH_DIGITS),
       y = {};
@@ -46,9 +46,9 @@ let T = l.memo(function(e) {
       let {
         accentColor: e,
         backgroundColor: s,
-        opacity: l
-      } = x, a = null !== (U = (0, r.hex2rgb)(null != s ? s : "", l)) && void 0 !== U ? U : "";
-      O && (y.borderColor = s), y.background = a, t = e, n = e
+        opacity: a
+      } = x, l = null !== (U = (0, r.hex2rgb)(null != s ? s : "", a)) && void 0 !== U ? U : "";
+      O && (y.borderColor = s), y.background = l, t = e, n = e
     }
     let j = {
       minWidth: P,
@@ -63,7 +63,7 @@ let T = l.memo(function(e) {
       style: y,
       children: [(0, s.jsx)(o.default, {
         className: i()({
-          [L.hideEmoji]: a
+          [L.hideEmoji]: l
         }),
         emojiId: u.id,
         emojiName: u.name,
@@ -76,12 +76,12 @@ let T = l.memo(function(e) {
       })]
     })
   }),
-  I = l.memo(function(e) {
+  I = a.memo(function(e) {
     let {
       showImmediate: t,
       reactions: n,
-      ...a
-    } = e, [i, r] = l.useState(!1), [o, d] = l.useTransition(), c = l.useCallback(e => {
+      ...l
+    } = e, [i, r] = a.useState(!1), [o, d] = a.useTransition(), c = a.useCallback(e => {
       e && !i && !o && d(() => {
         r(!0)
       })
@@ -92,7 +92,7 @@ let T = l.memo(function(e) {
       }), n.map(e => {
         var t, n;
         return (0, s.jsx)(m, {
-          ...a,
+          ...l,
           ...e
         }, (t = e, "".concat(t.type === f.ReactionTypes.BURST ? "burst:" : "").concat(null !== (n = t.emoji.id) && void 0 !== n ? n : 0, ":").concat(t.emoji.name)))
       })]

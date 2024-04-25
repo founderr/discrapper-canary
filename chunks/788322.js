@@ -35,8 +35,8 @@ t.default = e => {
   let {
     guild: l,
     theme: R,
-    onView: O,
-    onTagClick: L
+    onView: L,
+    onTagClick: O
   } = e, {
     id: P,
     discoverySplash: M,
@@ -83,7 +83,7 @@ t.default = e => {
       }
       F(!0);
       try {
-        null != O && await O(l.id)
+        null != L && await L(l.id)
       } finally {
         F(!1)
       }
@@ -167,10 +167,10 @@ t.default = e => {
             className: A.description,
             variant: "text-sm/normal",
             children: D
-          }), K && null != j && null != L && (0, n.jsx)(I.DiscoveryTags, {
+          }), K && null != j && null != O && (0, n.jsx)(I.DiscoveryTags, {
             guildId: l.id,
             discoveryTagStyle: I.DiscoveryTagStyle.ALT,
-            onTagClick: e => L(e, l.id),
+            onTagClick: e => O(e, l.id),
             tags: j,
             section: C.AnalyticsContexts.SEARCH
           }), (0, n.jsxs)("div", {

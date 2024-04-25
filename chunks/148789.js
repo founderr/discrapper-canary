@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("735250"),
-  l = n("470079"),
-  a = n("481060"),
+  a = n("470079"),
+  l = n("481060"),
   i = n("194359"),
   r = n("689938"),
   o = n("533342");
@@ -14,33 +14,33 @@ var s = n("735250"),
 function u(e) {
   let {
     userId: t
-  } = e, n = l.useCallback(e => {
+  } = e, n = a.useCallback(e => {
     e.stopPropagation(), i.default.cancelFriendRequest(t)
-  }, [t]), u = l.useCallback(e => {
+  }, [t]), u = a.useCallback(e => {
     e.stopPropagation(), i.default.addRelationship({
       userId: t
     })
   }, [t]);
   return (0, s.jsxs)("div", {
     className: o.friendRequestContainer,
-    children: [(0, s.jsx)(a.Button, {
+    children: [(0, s.jsx)(l.Button, {
       className: o.acceptButton,
-      look: a.Button.Looks.FILLED,
-      color: a.Button.Colors.GREEN,
-      size: a.Button.Sizes.NONE,
+      look: l.Button.Looks.FILLED,
+      color: l.Button.Colors.GREEN,
+      size: l.Button.Sizes.NONE,
       onClick: u,
-      children: (0, s.jsx)(a.Text, {
+      children: (0, s.jsx)(l.Text, {
         variant: "text-sm/medium",
         color: "always-white",
         children: r.default.Messages.FRIEND_REQUEST_ACCEPT
       })
-    }), (0, s.jsx)(a.Button, {
+    }), (0, s.jsx)(l.Button, {
       className: o.ignoreButton,
-      look: a.Button.Looks.FILLED,
-      color: a.Button.Colors.PRIMARY,
-      size: a.Button.Sizes.NONE,
+      look: l.Button.Looks.FILLED,
+      color: l.Button.Colors.PRIMARY,
+      size: l.Button.Sizes.NONE,
       onClick: n,
-      children: (0, s.jsx)(a.Text, {
+      children: (0, s.jsx)(l.Text, {
         variant: "text-sm/medium",
         color: "always-white",
         children: r.default.Messages.FRIEND_REQUEST_IGNORE

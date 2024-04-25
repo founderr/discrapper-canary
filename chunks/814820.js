@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var s = n("735250"),
-  l = n("470079"),
-  a = n("442837"),
+  a = n("470079"),
+  l = n("442837"),
   i = n("481060"),
   r = n("541716"),
   o = n("419922"),
@@ -24,7 +24,7 @@ let h = e => {
     let {
       channel: t,
       message: n
-    } = e, [a, u] = l.useState(!1), d = (0, m.pickWelcomeSticker)(n.id), c = l.useCallback(() => {
+    } = e, [l, u] = a.useState(!1), d = (0, m.pickWelcomeSticker)(n.id), c = a.useCallback(() => {
       (0, _.applyChatRestrictions)({
         type: r.ChatInputTypes.FORM,
         content: "",
@@ -47,7 +47,7 @@ let h = e => {
         onClick: c,
         children: [(0, s.jsx)(o.default, {
           className: p.welcomeCTASticker,
-          isInteracting: a,
+          isInteracting: l,
           sticker: d,
           size: 28
         }), I.default.Messages.WELCOME_CTA_LABEL]
@@ -58,18 +58,18 @@ let h = e => {
     let {
       message: t,
       channel: n
-    } = e, l = n.getGuildId(), i = (0, a.useStateFromStores)([E.default, f.default, c.default, d.default], () => {
+    } = e, a = n.getGuildId(), i = (0, l.useStateFromStores)([E.default, f.default, c.default, d.default], () => {
       var e;
       let s = E.default.getCurrentUser(),
-        a = (0, u.computeIsReadOnlyThread)(n),
+        l = (0, u.computeIsReadOnlyThread)(n),
         i = f.default.can(T.Permissions.SEND_MESSAGES, n),
-        r = null != l && null != s && (null === (e = d.default.getMember(l, s.id)) || void 0 === e ? void 0 : e.isPending),
+        r = null != a && null != s && (null === (e = d.default.getMember(a, s.id)) || void 0 === e ? void 0 : e.isPending),
         o = t.author.bot,
-        _ = c.default.getGuild(l),
+        _ = c.default.getGuild(a),
         m = null != _ && (_.systemChannelFlags & T.SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
-      return i && !a && !r && !o && m
+      return i && !l && !r && !o && m
     });
-    return null != l && i ? (0, s.jsx)(h, {
+    return null != a && i ? (0, s.jsx)(h, {
       message: t,
       channel: n
     }) : null

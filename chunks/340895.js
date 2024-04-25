@@ -54,12 +54,12 @@ function R(e) {
   }
 }();
 
-function O() {
+function L() {
   N = h.default.getStatus() === _.StatusTypes.DND || d.FocusMode.getSetting()
 }
-class L extends(n = r.default.Store) {
+class O extends(n = r.default.Store) {
   initialize() {
-    this.waitFor(E.default, h.default), this.syncWith([h.default], O), this.syncWith([c.default], O)
+    this.waitFor(E.default, h.default), this.syncWith([h.default], L), this.syncWith([c.default], L)
   }
   getIncomingCalls() {
     return N ? I : Array.from(p.values())
@@ -74,12 +74,12 @@ class L extends(n = r.default.Store) {
     return !N && T.size > 0
   }
 }
-i = "IncomingCallStore", (l = "displayName") in(s = L) ? Object.defineProperty(s, l, {
+i = "IncomingCallStore", (l = "displayName") in(s = O) ? Object.defineProperty(s, l, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[l] = i, t.default = new L(u.default, {
+}) : s[l] = i, t.default = new O(u.default, {
   CALL_CREATE: R,
   CALL_UPDATE: R,
   CALL_DELETE: function(e) {

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var l = n("120356"),
-  a = n.n(l),
+var a = n("120356"),
+  l = n.n(a),
   i = n("924826"),
   r = n("442837"),
   o = n("481060"),
@@ -36,8 +36,8 @@ function g(e) {
   let {
     channel: t,
     children: n,
-    gotoChannel: l,
-    mentionCount: a,
+    gotoChannel: a,
+    mentionCount: l,
     channelState: r,
     toggleCollapsed: u
   } = e, d = (0, i.useListItem)("recents-header-".concat(t.id, "-").concat((0, N.useUID)()));
@@ -53,11 +53,11 @@ function g(e) {
       },
       children: [(0, s.jsx)(M, {
         channel: t,
-        gotoChannel: l
+        gotoChannel: a
       }), (0, s.jsx)(O, {
         channel: t,
-        gotoChannel: l,
-        mentionCount: a
+        gotoChannel: a,
+        mentionCount: l
       }), n]
     })
   })
@@ -81,13 +81,13 @@ function R(e) {
   let {
     channel: t,
     gotoChannel: n
-  } = e, l = (0, r.useStateFromStores)([I.default], () => t.isDM() ? I.default.getUser(t.getRecipientId()) : null), a = null == l ? (0, d.getChannelIconURL)(t) : l.getAvatarURL(void 0, 40);
+  } = e, a = (0, r.useStateFromStores)([I.default], () => t.isDM() ? I.default.getUser(t.getRecipientId()) : null), l = null == a ? (0, d.getChannelIconURL)(t) : a.getAvatarURL(void 0, 40);
   return (0, s.jsx)(o.Clickable, {
     onClick: n,
     tabIndex: -1,
     children: (0, s.jsx)("img", {
       className: C.dmIcon,
-      src: a,
+      src: l,
       alt: "",
       "aria-hidden": !0
     })
@@ -98,11 +98,11 @@ function v(e) {
   let {
     channel: t,
     gotoChannel: n
-  } = e, l = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(t.guild_id));
-  return null == l ? null : (0, s.jsx)(h.default, {
+  } = e, a = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(t.guild_id));
+  return null == a ? null : (0, s.jsx)(h.default, {
     "aria-hidden": !0,
     className: C.guildIcon,
-    guild: l,
+    guild: a,
     size: h.default.Sizes.MEDIUM,
     active: !0,
     onClick: n,
@@ -114,13 +114,13 @@ function O(e) {
   let {
     channel: t,
     gotoChannel: n,
-    mentionCount: l
+    mentionCount: a
   } = e, i = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(t.guild_id)), u = (0, r.useStateFromStores)([_.default], () => _.default.getChannel(t.parent_id)), d = (0, f.getChannelIconComponent)(t, i), E = (0, c.default)(t, !1), T = null == u ? null == i ? void 0 : i.name : "".concat(null == i ? void 0 : i.name, " › ").concat(u.name), I = t.isMultiUserDM() ? S.default.Messages.MEMBERS_HEADER.format({
     members: t.recipients.length + 1
   }) : t.isPrivate() ? (0, s.jsx)(x, {
     channel: t
   }) : (0, s.jsx)(o.Clickable, {
-    className: a()(C.subtext, C.guildName),
+    className: l()(C.subtext, C.guildName),
     onClick: n,
     children: T
   });
@@ -139,8 +139,8 @@ function O(e) {
         }), (0, s.jsx)("span", {
           className: C.channelNameSpan,
           children: E
-        }), null != l && l > 0 ? (0, s.jsx)(p.default, {
-          value: l,
+        }), null != a && a > 0 ? (0, s.jsx)(p.default, {
+          value: a,
           className: C.badge
         }) : null]
       })
@@ -158,8 +158,8 @@ function x(e) {
     channel: t
   } = e, {
     user: n,
-    activities: l,
-    applicationStream: a
+    activities: a,
+    applicationStream: l
   } = (0, r.useStateFromStoresObject)([I.default, T.default, E.default], () => {
     let e = I.default.getUser(t.getRecipientId());
     return {
@@ -168,11 +168,11 @@ function x(e) {
       applicationStream: null != e ? E.default.getAnyStreamForUser(e.id) : null
     }
   });
-  return null == l ? null : (0, s.jsx)(u.default, {
+  return null == a ? null : (0, s.jsx)(u.default, {
     className: C.activityStatus,
     emojiClassName: C.activityEmoji,
-    activities: l,
-    applicationStream: a,
+    activities: a,
+    applicationStream: l,
     hideTooltip: !0,
     user: n
   })

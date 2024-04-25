@@ -2,15 +2,15 @@
 n.r(t);
 var s = n("735250");
 n("470079");
-var l = n("960259"),
-  a = n("952216"),
+var a = n("960259"),
+  l = n("952216"),
   i = n("325767");
-t.default = (0, l.replaceIcon)(function(e) {
+t.default = (0, a.replaceIcon)(function(e) {
   let {
     width: t = 16,
     height: n = 16,
-    color: l = "currentColor",
-    foreground: a,
+    color: a = "currentColor",
+    foreground: l,
     ...r
   } = e;
   return (0, s.jsx)("svg", {
@@ -21,10 +21,10 @@ t.default = (0, l.replaceIcon)(function(e) {
     fill: "none",
     children: (0, s.jsx)("path", {
       d: "M12 4.66668L11.06 3.72668L6.83332 7.95335L7.77332 8.89335L12 4.66668ZM14.8266 3.72668L7.77332 10.78L4.98665 8.00002L4.04665 8.94002L7.77332 12.6667L15.7733 4.66668L14.8266 3.72668ZM0.273315 8.94002L3.99998 12.6667L4.93998 11.7267L1.21998 8.00002L0.273315 8.94002Z",
-      fill: l,
-      className: a
+      fill: a,
+      className: l
     })
   })
-}, a.DoubleCheckmarkLargeIcon, void 0, {
+}, l.DoubleCheckmarkLargeIcon, void 0, {
   size: 16
 })

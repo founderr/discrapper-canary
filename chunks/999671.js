@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var l = n("442837"),
-  a = n("481060"),
+var a = n("442837"),
+  l = n("481060"),
   i = n("235820"),
   r = n("592125"),
   o = n("944486"),
@@ -22,11 +22,11 @@ function _(e) {
   let {
     closePopout: t,
     onSelect: n
-  } = e, u = (0, l.useStateFromStores)([r.default, o.default], () => r.default.getChannel(o.default.getChannelId())), {
+  } = e, u = (0, a.useStateFromStores)([r.default, o.default], () => r.default.getChannel(o.default.getChannelId())), {
     everyoneFilter: d,
     roleFilter: _,
     guildFilter: m
-  } = (0, l.useStateFromStoresObject)([c.default], () => {
+  } = (0, a.useStateFromStoresObject)([c.default], () => {
     let {
       everyoneFilter: e,
       roleFilter: t,
@@ -38,12 +38,12 @@ function _(e) {
       guildFilter: n
     }
   });
-  return (0, s.jsxs)(a.Menu, {
+  return (0, s.jsxs)(l.Menu, {
     navId: "mentions-filter",
     "aria-label": E.default.Messages.FILTER,
     onClose: t,
     onSelect: n,
-    children: [(0, s.jsx)(a.MenuCheckboxItem, {
+    children: [(0, s.jsx)(l.MenuCheckboxItem, {
       id: "Everyone",
       label: E.default.Messages.RECENT_MENTIONS_FILTER_EVERYONE,
       action: function() {
@@ -52,7 +52,7 @@ function _(e) {
         })
       },
       checked: d
-    }), (0, s.jsx)(a.MenuCheckboxItem, {
+    }), (0, s.jsx)(l.MenuCheckboxItem, {
       id: "Roles",
       label: E.default.Messages.RECENT_MENTIONS_FILTER_ROLES,
       action: function() {
@@ -61,7 +61,7 @@ function _(e) {
         })
       },
       checked: _
-    }), null == u || u.isPrivate() ? null : (0, s.jsx)(a.MenuCheckboxItem, {
+    }), null == u || u.isPrivate() ? null : (0, s.jsx)(l.MenuCheckboxItem, {
       id: "All Servers",
       label: E.default.Messages.RECENT_MENTIONS_FILTER_ALL_SERVERS,
       action: function() {
@@ -75,9 +75,9 @@ function _(e) {
 }
 
 function m() {
-  return (0, s.jsx)(a.Popout, {
+  return (0, s.jsx)(l.Popout, {
     align: "right",
-    animation: a.Popout.Animation.NONE,
+    animation: l.Popout.Animation.NONE,
     position: "bottom",
     renderPopout: e => {
       let {

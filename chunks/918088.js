@@ -14,8 +14,8 @@ n.r(t), n.d(t, {
   }
 }), n("47120"), n("627341");
 var s = n("278074"),
-  l = n("263568"),
-  a = n("607070"),
+  a = n("263568"),
+  l = n("607070"),
   i = n("339085"),
   r = n("633302"),
   o = n("715903"),
@@ -78,7 +78,7 @@ function O(e) {
 }
 
 function x(e, t) {
-  var n, s, l, a;
+  var n, s, a, l;
   let {
     formattedExpirationLabel: i
   } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, {
@@ -93,12 +93,12 @@ function x(e, t) {
       submitting: p,
       editing: h,
       showResults: N
-    } = null !== (l = null != t ? t : (0, I.getPollState)(e.getChannelId(), e.id)) && void 0 !== l ? l : M,
+    } = null !== (a = null != t ? t : (0, I.getPollState)(e.getChannelId(), e.id)) && void 0 !== a ? a : M,
     S = e.reactions,
     g = !0;
   if (!O(e)) {
     let t = f.default.getMessage(e.channel_id, e.id);
-    g = !e.isSearchHit && null != t, S = null !== (a = null == t ? void 0 : t.reactions) && void 0 !== a ? a : S
+    g = !e.isSearchHit && null != t, S = null !== (l = null == t ? void 0 : t.reactions) && void 0 !== l ? l : S
   }
   let R = T.size > 0,
     v = S.some(e => !0 === e.me_vote),
@@ -143,7 +143,7 @@ function L(e, t) {
   if (null == I) return;
   let C = E.default.getCurrentUser();
   if (null == C) return;
-  let A = a.default.useReducedMotion,
+  let A = l.default.useReducedMotion,
     M = null === (o = d.default.getChannel(e.getChannelId())) || void 0 === o ? void 0 : null === (n = o.getGuildId) || void 0 === n ? void 0 : n.call(o),
     O = (0, N.getAvatarUrl)(C, M),
     L = I.answers,
@@ -170,18 +170,18 @@ function L(e, t) {
     showResults: z
   } = P, Q = (0, p.getTotalVotes)(V), q = g.default.Messages.POLL_VOTES_COUNT.format({
     count: Q.toLocaleString()
-  }), Z = Math.max(...L.map(e => {
+  }), X = Math.max(...L.map(e => {
     var t, n;
     let s = R(V, "".concat(e.answer_id));
     return null !== (n = null == s ? void 0 : null === (t = s.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0
-  })), X = L.map(e => {
-    var t, n, a;
+  })), Z = L.map(e => {
+    var t, n, l;
     let o = "".concat(e.answer_id),
       d = R(V, o),
       c = null !== (n = null == d ? void 0 : null === (t = d.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0,
       f = Y.has(o),
-      E = c >= Z && 0 !== c,
-      T = F && null !== (a = null == d ? void 0 : d.me_vote) && void 0 !== a && a,
+      E = c >= X && 0 !== c,
+      T = F && null !== (l = null == d ? void 0 : d.me_vote) && void 0 !== l && l,
       I = v({
         didSelfVote: T,
         hasVoted: F,
@@ -202,8 +202,8 @@ function L(e, t) {
           if (null == e) return;
           let s = e.animated;
           if (null == s && null != e.id) {
-            var l, a;
-            s = null !== (a = null === (l = i.default.getCustomEmojiById(e.id)) || void 0 === l ? void 0 : l.animated) && void 0 !== a && a
+            var a, l;
+            s = null !== (l = null === (a = i.default.getCustomEmojiById(e.id)) || void 0 === a ? void 0 : a.animated) && void 0 !== l && l
           }
           let o = t && null != s && s;
           return {
@@ -229,7 +229,7 @@ function L(e, t) {
       style: I,
       shouldAnimateTransition: K && !A,
       votesPercentage: Math.round(100 * (0 === Q ? 0 : c / Q)),
-      votes: (0, s.match)(D).with(l.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(".concat(c.toLocaleString(), ")")).otherwise(() => g.default.Messages.POLL_VOTES_COUNT.format({
+      votes: (0, s.match)(D).with(a.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(".concat(c.toLocaleString(), ")")).otherwise(() => g.default.Messages.POLL_VOTES_COUNT.format({
         count: c.toLocaleString()
       }))
     }
@@ -316,7 +316,7 @@ function L(e, t) {
   return {
     question: I.question,
     promptLabel: es,
-    answers: X,
+    answers: Z,
     answersInteraction: (0, s.match)({
       tapShouldOpenVotersModal: W,
       canTapAnswers: y,

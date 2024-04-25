@@ -1,8 +1,8 @@
 "use strict";
 n.r(t), n("47120");
 var s = n("735250"),
-  l = n("470079"),
-  a = n("442837"),
+  a = n("470079"),
+  l = n("442837"),
   i = n("481060"),
   r = n("668781"),
   o = n("431583"),
@@ -23,7 +23,7 @@ function I(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class p extends l.PureComponent {
+class p extends a.PureComponent {
   static getDerivedStateFromProps(e, t) {
     return e.mode !== t.memoizedMode ? {
       memoizedMode: e.mode,
@@ -77,6 +77,6 @@ class p extends l.PureComponent {
     })
   }
 }
-t.default = a.default.connectStores([u.default], () => ({
+t.default = l.default.connectStores([u.default], () => ({
   mode: u.default.getState()
 }))(p)

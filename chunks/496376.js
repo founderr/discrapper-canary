@@ -24,8 +24,8 @@ var n = a("735250"),
   N = a("359380"),
   v = a("308083"),
   R = a("689938"),
-  O = a("653196");
-let L = [v.ClanSetupSteps.FOUNDATIONAL_INTRO, v.ClanSetupSteps.GAMES, v.ClanSetupSteps.PLAYSTYLE, v.ClanSetupSteps.PERSONALITY_INTRO, v.ClanSetupSteps.UTILITY_TRAITS, v.ClanSetupSteps.INTERESTS, v.ClanSetupSteps.DESCRIPTION, v.ClanSetupSteps.IDENTITY_INTRO, v.ClanSetupSteps.CUSTOMIZE_TAG_BADGE, v.ClanSetupSteps.CUSTOMIZE_BANNER, v.ClanSetupSteps.APPLICATION_INTRO, v.ClanSetupSteps.MEMBER_APPLICATION],
+  L = a("653196");
+let O = [v.ClanSetupSteps.FOUNDATIONAL_INTRO, v.ClanSetupSteps.GAMES, v.ClanSetupSteps.PLAYSTYLE, v.ClanSetupSteps.PERSONALITY_INTRO, v.ClanSetupSteps.UTILITY_TRAITS, v.ClanSetupSteps.INTERESTS, v.ClanSetupSteps.DESCRIPTION, v.ClanSetupSteps.IDENTITY_INTRO, v.ClanSetupSteps.CUSTOMIZE_TAG_BADGE, v.ClanSetupSteps.CUSTOMIZE_BANNER, v.ClanSetupSteps.APPLICATION_INTRO, v.ClanSetupSteps.MEMBER_APPLICATION],
   P = {
     [v.ClanSetupSteps.FOUNDATIONAL_INTRO]: [v.ClanSetupSteps.GAMES, v.ClanSetupSteps.PLAYSTYLE],
     [v.ClanSetupSteps.PERSONALITY_INTRO]: [v.ClanSetupSteps.UTILITY_TRAITS, v.ClanSetupSteps.INTERESTS, v.ClanSetupSteps.DESCRIPTION],
@@ -47,7 +47,7 @@ let L = [v.ClanSetupSteps.FOUNDATIONAL_INTRO, v.ClanSetupSteps.GAMES, v.ClanSetu
       tag: m,
       verificationForm: S,
       furthestStep: I
-    } = r, p = d === L.length - 1, T = null != S && S.formFields.some(e => !(0, f.isTermsFormField)(e)), g = s.useMemo(() => ({
+    } = r, p = d === O.length - 1, T = null != S && S.formFields.some(e => !(0, f.isTermsFormField)(e)), g = s.useMemo(() => ({
       [v.ClanSetupSteps.FOUNDATIONAL_INTRO]: {
         disableNextStep: !1
       },
@@ -86,13 +86,13 @@ let L = [v.ClanSetupSteps.FOUNDATIONAL_INTRO, v.ClanSetupSteps.GAMES, v.ClanSetu
       }
     }), [C.length, _.size, h, E.size, m.length, T]);
     return (0, n.jsxs)("div", {
-      className: O.footer,
+      className: L.footer,
       children: [(0, n.jsx)("div", {
-        className: O.progressContainer,
+        className: L.progressContainer,
         children: Object.entries(P).map(e => {
           let [t, a] = e;
           return (0, n.jsx)("div", {
-            className: O.progressStep,
+            className: L.progressStep,
             children: a.map(e => {
               let t = !g[e].disableNextStep && I >= e,
                 a = e <= I;
@@ -101,16 +101,16 @@ let L = [v.ClanSetupSteps.FOUNDATIONAL_INTRO, v.ClanSetupSteps.GAMES, v.ClanSetu
                   number: e
                 }),
                 onClick: () => a ? l(e) : null,
-                className: i()(O.progressSubStep, {
-                  [O.clickable]: a,
-                  [O.progressStepFill]: t
+                className: i()(L.progressSubStep, {
+                  [L.clickable]: a,
+                  [L.progressStepFill]: t
                 })
               }, "step-".concat(e))
             })
           }, "step-".concat(t))
         })
       }), (0, n.jsxs)("div", {
-        className: O.buttonsContainer,
+        className: L.buttonsContainer,
         children: [(0, n.jsx)(o.Button, {
           look: o.Button.Looks.OUTLINED,
           size: o.Button.Sizes.MEDIUM,
@@ -121,9 +121,9 @@ let L = [v.ClanSetupSteps.FOUNDATIONAL_INTRO, v.ClanSetupSteps.GAMES, v.ClanSetu
           disabled: 0 === d,
           children: R.default.Messages.PAGINATION_PREVIOUS
         }), (0, n.jsxs)("div", {
-          className: O.footerAlphaMsg,
+          className: L.footerAlphaMsg,
           children: [(0, n.jsx)(c.default, {
-            className: O.footerAlphaTag
+            className: L.footerAlphaTag
           }), (0, n.jsx)(o.Text, {
             variant: "text-sm/medium",
             children: "This is currently in Alpha, use test servers only!"
@@ -182,26 +182,26 @@ t.default = e => {
     }, [a]);
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(o.Button, {
-      className: O.closeButton,
+      className: L.closeButton,
       look: o.Button.Looks.OUTLINED,
       size: o.Button.Sizes.MEDIUM,
       color: o.Button.Colors.PRIMARY,
       onClick: l,
       children: R.default.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
     }), (0, n.jsxs)("div", {
-      className: i()(O.mainContent, O.fadeIn, {
-        [O.fadeOut]: !k
+      className: i()(L.mainContent, L.fadeIn, {
+        [L.fadeOut]: !k
       }),
       children: [(0, n.jsx)(o.Sequencer, {
         step: j,
-        steps: L,
+        steps: O,
         sideMargin: 24,
         verticalMargin: 24,
-        className: O.sequencer,
-        innerClassName: O.sequencer,
-        animatedNodeClassName: O.sequencer,
+        className: L.sequencer,
+        innerClassName: L.sequencer,
+        animatedNodeClassName: L.sequencer,
         children: (0, n.jsx)(o.ScrollerThin, {
-          className: O.scroller,
+          className: L.scroller,
           fade: !0,
           children: (() => {
             switch (j) {
@@ -292,10 +292,10 @@ t.default = e => {
         onLastStep: V
       })]
     }), (0, n.jsx)("div", {
-      className: O.divider
+      className: L.divider
     }), (0, n.jsx)("div", {
-      className: i()(O.overviewSidebar, {
-        [O.fadeOut]: w && !k
+      className: i()(L.overviewSidebar, {
+        [L.fadeOut]: w && !k
       }),
       children: (0, n.jsx)(_.default, {
         guildId: t

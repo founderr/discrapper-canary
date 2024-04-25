@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n("47120");
 var s = n("735250"),
-  l = n("470079"),
-  a = n("120356"),
-  i = n.n(a),
+  a = n("470079"),
+  l = n("120356"),
+  i = n.n(l),
   r = n("913527"),
   o = n.n(r),
   u = n("442837"),
@@ -63,7 +63,7 @@ function H(e) {
     })]
   })
 }
-class V extends l.PureComponent {
+class V extends a.PureComponent {
   get isHorizontal() {
     let {
       width: e
@@ -98,7 +98,7 @@ class V extends l.PureComponent {
     })), w(this, "renderTagline", () => this.props.isSelfGift ? F.default.Messages.GIFT_EMBED_INVALID_TAGLINE_SELF : F.default.Messages.GIFT_EMBED_INVALID_TAGLINE_OTHER)
   }
 }
-class Y extends l.Component {
+class Y extends a.Component {
   get analyticsLocation() {
     let {
       analyticsContext: {
@@ -146,13 +146,13 @@ class Y extends l.Component {
     let {
       libraryApplication: t,
       currentUser: n,
-      isSelfGift: l
-    } = this.props, a = {
+      isSelfGift: a
+    } = this.props, l = {
       onClick: this.handleAccept,
       color: d.Button.Colors.BRAND
-    }, i = !e.isSubscription && null != t || !e.isSelfRedeemable && l || e.isExistingPremiumSubscriptionDisallowed && (0, y.isPremium)(n);
-    return (e.redeemed || i || e.isClaimed || !n.verified) && (a.color = d.Button.Colors.BRAND, a.disabled = !0), (0, s.jsx)(d.Button, {
-      ...a,
+    }, i = !e.isSubscription && null != t || !e.isSelfRedeemable && a || e.isExistingPremiumSubscriptionDisallowed && (0, y.isPremium)(n);
+    return (e.redeemed || i || e.isClaimed || !n.verified) && (l.color = d.Button.Colors.BRAND, l.disabled = !0), (0, s.jsx)(d.Button, {
+      ...l,
       className: (0, T.isCollectiblesGiftCode)(e) ? k.collectiblesAcceptButton : null,
       size: d.Button.Sizes.SMALL,
       children: e.redeemed ? F.default.Messages.GIFT_EMBED_BUTTON_CLAIMED : null != e.giftStyle ? F.default.Messages.SEASONAL_GIFTING_OPEN_GIFT : F.default.Messages.GIFT_EMBED_BUTTON_ACCEPT
@@ -179,8 +179,8 @@ class Y extends l.Component {
       libraryApplication: t,
       isSelfGift: n,
       sku: s,
-      gifter: l,
-      subscriptionPlan: a,
+      gifter: a,
+      subscriptionPlan: l,
       currentUser: i
     } = this.props;
     if (null == s) return F.default.Messages.LOADING;
@@ -204,12 +204,12 @@ class Y extends l.Component {
       skuName: r
     });
     if (e.isExistingPremiumSubscriptionDisallowed) return F.default.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_ALREADY_ACTIVE;
-    if (e.hasMultipleCopies) return null != l ? e.isSubscription ? F.default.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_GIVEAWAY.format({
-      username: j.default.getUserTag(l),
+    if (e.hasMultipleCopies) return null != a ? e.isSubscription ? F.default.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_GIVEAWAY.format({
+      username: j.default.getUserTag(a),
       maxUses: e.maxUses,
       skuName: r
     }) : F.default.Messages.GIFT_EMBED_BODY_GIVEAWAY.format({
-      username: j.default.getUserTag(l),
+      username: j.default.getUserTag(a),
       totalCopies: e.maxUses,
       skuName: r
     }) : e.isSubscription ? F.default.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_NO_USER_GIVEAWAY.format({
@@ -219,16 +219,16 @@ class Y extends l.Component {
       totalCopies: e.maxUses,
       skuName: r
     });
-    if (e.isSubscription) return null == a ? F.default.Messages.LOADING : null != l ? (a.interval === G.SubscriptionIntervalTypes.MONTH ? F.default.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_DEFAULT_MONTHS : F.default.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_DEFAULT_YEARS).format({
-      username: j.default.getUserTag(l),
+    if (e.isSubscription) return null == l ? F.default.Messages.LOADING : null != a ? (l.interval === G.SubscriptionIntervalTypes.MONTH ? F.default.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_DEFAULT_MONTHS : F.default.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_DEFAULT_YEARS).format({
+      username: j.default.getUserTag(a),
       skuName: r,
-      intervalCount: a.intervalCount
-    }) : (a.interval === G.SubscriptionIntervalTypes.MONTH ? F.default.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_NO_USER_DEFAULT_MONTHS : F.default.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_NO_USER_DEFAULT_YEARS).format({
+      intervalCount: l.intervalCount
+    }) : (l.interval === G.SubscriptionIntervalTypes.MONTH ? F.default.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_NO_USER_DEFAULT_MONTHS : F.default.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_NO_USER_DEFAULT_YEARS).format({
       skuName: r,
-      intervalCount: a.intervalCount
+      intervalCount: l.intervalCount
     });
-    return null != l ? F.default.Messages.GIFT_EMBED_BODY_DEFAULT.format({
-      username: j.default.getUserTag(l)
+    return null != a ? F.default.Messages.GIFT_EMBED_BODY_DEFAULT.format({
+      username: j.default.getUserTag(a)
     }) : F.default.Messages.GIFT_EMBED_BODY_NO_USER_DEFAULT
   }
   renderPromotionActions() {
@@ -259,7 +259,7 @@ class Y extends l.Component {
       giftCode: e,
       resolved: t,
       width: n,
-      isSelfGift: l
+      isSelfGift: a
     } = this.props;
     if (null != e && null != e.promotion) return (0, s.jsx)(b.StoreEmbedWithoutDimensions, {
       skuId: e.skuId,
@@ -271,7 +271,7 @@ class Y extends l.Component {
       width: n
     });
     if (null == e || e.revoked) return t ? (0, s.jsx)(V, {
-      isSelfGift: l,
+      isSelfGift: a,
       width: n
     }) : (0, s.jsx)(f.ResponsiveLoadingEmbedTile, {
       isHorizontal: n >= f.HORIZONTAL_EMBED_BREAKPOINT
@@ -298,8 +298,8 @@ class Y extends l.Component {
         channelId: t,
         code: n,
         content: s,
-        type: l,
-        giftInfo: a
+        type: a,
+        giftInfo: l
       } = this.props;
       e.preventDefault(), e.stopPropagation(), D.default.track(B.AnalyticEvents.OPEN_MODAL, {
         type: "gift_accept",
@@ -308,12 +308,12 @@ class Y extends l.Component {
           object: B.AnalyticsObjects.BUTTON_CTA
         }
       });
-      let i = l !== B.MessageTypes.CUSTOM_GIFT ? void 0 : s;
+      let i = a !== B.MessageTypes.CUSTOM_GIFT ? void 0 : s;
       (0, p.openGiftCodeAcceptModal)({
         processedCode: n,
         channelContext: t,
         customGiftMessage: i,
-        giftInfo: a
+        giftInfo: l
       })
     }), w(this, "handleEmbedClick", e => {
       let {
@@ -331,23 +331,23 @@ class Y extends l.Component {
         width: n
       } = this.props;
       if (null == e || null == e.giftStyle) return null;
-      let l = G.LegacySeasonalGiftStyles.includes(e.giftStyle),
-        a = i()(k.customGiftEmbedWrapper, {
-          [k.legacySeasonalGiftEmbedWrapper]: l,
+      let a = G.LegacySeasonalGiftStyles.includes(e.giftStyle),
+        l = i()(k.customGiftEmbedWrapper, {
+          [k.legacySeasonalGiftEmbedWrapper]: a,
           [k.giftEmbedWrapperHorizontal]: n >= f.HORIZONTAL_EMBED_BREAKPOINT
         }),
         r = i()({
-          [k.legacySeasonalGiftEmbedBox]: l,
-          [k.legacySeasonalGiftEmbedBoxHorizontal]: l && n >= f.HORIZONTAL_EMBED_BREAKPOINT,
-          [k.customGiftEmbedBox]: !l,
-          [k.customGiftEmbedBoxHorizontal]: !l && n >= f.HORIZONTAL_EMBED_BREAKPOINT
+          [k.legacySeasonalGiftEmbedBox]: a,
+          [k.legacySeasonalGiftEmbedBoxHorizontal]: a && n >= f.HORIZONTAL_EMBED_BREAKPOINT,
+          [k.customGiftEmbedBox]: !a,
+          [k.customGiftEmbedBoxHorizontal]: !a && n >= f.HORIZONTAL_EMBED_BREAKPOINT
         });
       return (0, s.jsxs)("div", {
-        className: a,
+        className: l,
         children: [!t && G.AllSeasonalGiftStyles.includes(e.giftStyle) && (0, s.jsx)(L.default, {
           className: k.snow,
           wind: 5
-        }), l && (0, s.jsx)(x.default, {
+        }), a && (0, s.jsx)(x.default, {
           className: k.headerIcon
         }), null != e.giftStyle && (0, s.jsx)(h.default, {
           defaultAnimationState: e.redeemed ? I.AnimationState.LOOP : I.AnimationState.IDLE,
@@ -364,16 +364,16 @@ t.default = u.default.connectStores([C.default, R.default, g.default, A.default,
     code: t,
     author: n,
     currentUser: s
-  } = e, l = C.default.get(t), a = null != l ? R.default.get(l.skuId) : null, i = null != l && null != l.userId ? g.default.getUser(l.userId) : null, r = m.default.useReducedMotion;
+  } = e, a = C.default.get(t), l = null != a ? R.default.get(a.skuId) : null, i = null != a && null != a.userId ? g.default.getUser(a.userId) : null, r = m.default.useReducedMotion;
   return {
-    sku: a,
-    giftCode: l,
+    sku: l,
+    giftCode: a,
     gifter: i,
     currentUser: s,
-    subscriptionPlan: null != l && null != l.subscriptionPlanId ? (0, U.getOrFetchSubscriptionPlan)(l.subscriptionPlanId) : null,
-    isSelfGift: null != l ? S.default.getId() === l.userId : S.default.getId() === n.id,
+    subscriptionPlan: null != a && null != a.subscriptionPlanId ? (0, U.getOrFetchSubscriptionPlan)(a.subscriptionPlanId) : null,
+    isSelfGift: null != a ? S.default.getId() === a.userId : S.default.getId() === n.id,
     resolved: C.default.getIsResolved(t),
-    libraryApplication: null != a && (null == l ? void 0 : l.entitlementBranches) != null ? P.firstLibraryApplicationForGiftCode(l.entitlementBranches, a, A.default) : null,
+    libraryApplication: null != l && (null == a ? void 0 : a.entitlementBranches) != null ? P.firstLibraryApplicationForGiftCode(a.entitlementBranches, l, A.default) : null,
     useReducedMotion: r
   }
 })(K)

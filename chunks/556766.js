@@ -40,7 +40,7 @@ t.default = () => {
     N = (0, u.useStateFromStores)([C.default], () => C.default.disableSounds),
     v = (0, u.useStateFromStores)([E.default], () => E.default.getSoundpack()),
     R = s.useRef(!1),
-    O = (0, r.useStableMemo)(() => {
+    L = (0, r.useStableMemo)(() => {
       let e = "call_ringing";
       if (g && !A) return (0, S.createSound)(c.default.ringtone, e);
       if (v === I.Soundpacks.CLASSIC) {
@@ -50,14 +50,14 @@ t.default = () => {
       return (0, S.createSoundForPack)("call_ringing", v)
     }, [v, A, g]);
   return s.useEffect(() => () => {
-    O.stop()
-  }, [O]), s.useEffect(() => {
+    L.stop()
+  }, [L]), s.useEffect(() => {
     if (N || l) {
-      R.current && (O.stop(), R.current = !1);
+      R.current && (L.stop(), R.current = !1);
       return
     }
-    a && !R.current ? (O.loop(), R.current = !0) : !a && R.current && (O.stop(), R.current = !1)
-  }, [l, N, a, O]), (0, o.useTransition)(t, {
+    a && !R.current ? (L.loop(), R.current = !0) : !a && R.current && (L.stop(), R.current = !1)
+  }, [l, N, a, L]), (0, o.useTransition)(t, {
     keys: e => {
       var t;
       return null === (t = e.channel) || void 0 === t ? void 0 : t.id

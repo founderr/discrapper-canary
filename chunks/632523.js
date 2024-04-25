@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("735250"),
-  l = n("470079"),
-  a = n("990547"),
+  a = n("470079"),
+  l = n("990547"),
   i = n("924826"),
   r = n("481060"),
   o = n("724757"),
@@ -21,10 +21,10 @@ function E(e) {
     items: n,
     loading: E,
     loadMore: _
-  } = e, m = l.useRef(null), T = (0, o.default)("for-you", m);
+  } = e, m = a.useRef(null), T = (0, o.default)("for-you", m);
   (0, u.default)({
-    type: a.ImpressionTypes.VIEW,
-    name: a.ImpressionNames.NOTIFICATION_CENTER_LANDING,
+    type: l.ImpressionTypes.VIEW,
+    name: l.ImpressionNames.NOTIFICATION_CENTER_LANDING,
     properties: {
       empty: 0 === n.length
     }
@@ -43,7 +43,7 @@ function E(e) {
         children: e => {
           let {
             ref: t,
-            ...l
+            ...a
           } = e;
           return (0, s.jsxs)(r.AdvancedScroller, {
             className: f.container,
@@ -51,7 +51,7 @@ function E(e) {
               var n;
               m.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
             },
-            ...l,
+            ...a,
             onScroll: I,
             children: [(0, s.jsx)(c.ForYouItems, {
               items: n

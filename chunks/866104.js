@@ -8,9 +8,9 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var s = n("735250"),
-  l = n("470079"),
-  a = n("512722"),
-  i = n.n(a),
+  a = n("470079"),
+  l = n("512722"),
+  i = n.n(l),
   r = n("442837"),
   o = n("481060"),
   u = n("131388"),
@@ -57,7 +57,7 @@ function O(e) {
   let {
     coverImageAsset: t,
     isPreview: n = !1
-  } = e, l = f.GifAutoPlay.useSetting(), a = (0, N.useIsWindowFocused)() && l, [i, r] = (0, c.default)(t, a), o = a ? (0, s.jsx)(p.default, {
+  } = e, a = f.GifAutoPlay.useSetting(), l = (0, N.useIsWindowFocused)() && a, [i, r] = (0, c.default)(t, l), o = l ? (0, s.jsx)(p.default, {
     autoPlay: !0,
     loop: !0,
     className: R.coverImage,
@@ -81,7 +81,7 @@ function O(e) {
 }
 
 function x(e) {
-  var t, n, a;
+  var t, n, l;
   let {
     guild: c,
     subscriptionsSettings: f
@@ -89,19 +89,19 @@ function x(e) {
   let {
     nickname: p,
     nickcolor: N
-  } = (a = I, (0, r.useStateFromStoresObject)([E.default, _.default], () => {
+  } = (l = I, (0, r.useStateFromStoresObject)([E.default, _.default], () => {
     var e, t;
     let n = _.default.getCurrentUser();
     i()(null != n, "user cannot be null");
-    let s = E.default.getMember(a, n.id);
+    let s = E.default.getMember(l, n.id);
     return {
       nickname: null !== (e = null == s ? void 0 : s.nick) && void 0 !== e ? e : h.default.getName(n),
       nickcolor: null !== (t = null == s ? void 0 : s.colorString) && void 0 !== t ? t : void 0
     }
-  }, [a])), {
+  }, [l])), {
     isTruncated: x,
     ExpandableTextContainer: L
-  } = (0, S.useExpandableTextContainer)(), D = (null !== (n = null == f ? void 0 : null === (t = f.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [P, y] = l.useState(1), U = (0, u.default)("(max-width: ".concat(R.twoColumnWidth, ")")), {
+  } = (0, S.useExpandableTextContainer)(), D = (null !== (n = null == f ? void 0 : null === (t = f.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [P, y] = a.useState(1), U = (0, u.default)("(max-width: ".concat(R.twoColumnWidth, ")")), {
     selectedTab: j,
     isPhantomPreview: b
   } = (0, C.useGuildShopDisplayContext)(), B = j === A.GuildShopTab.GUILD_PRODUCTS_PREVIEW ? M.default.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : M.default.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, G = D ? (0, s.jsxs)(s.Fragment, {

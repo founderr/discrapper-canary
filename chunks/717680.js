@@ -5,21 +5,21 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var s = n("470079");
-let l = !1,
-  a = new Set;
+let a = !1,
+  l = new Set;
 
 function i(e) {
-  e !== l && (l = e, a.forEach(e => e(l)))
+  e !== a && (a = e, l.forEach(e => e(a)))
 }
 
 function r() {
-  let [e, t] = s.useState(l);
+  let [e, t] = s.useState(a);
   return s.useEffect(() => {
     let e = e => {
       t(e)
     };
-    return a.add(e), () => {
-      a.delete(e)
+    return l.add(e), () => {
+      l.delete(e)
     }
   }, []), e
 }

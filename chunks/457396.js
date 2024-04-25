@@ -29,8 +29,8 @@ var s = a("924826"),
   N = a("565626"),
   v = a("701910"),
   R = a("886654"),
-  O = a("487980"),
-  L = a("474936"),
+  L = a("487980"),
+  O = a("474936"),
   P = a("921944"),
   M = a("689938"),
   x = a("392934");
@@ -52,7 +52,7 @@ let y = "NitroTabButton",
       Y = (0, N.default)(),
       W = (0, I.useTenureRewardBadgeDescription)(),
       K = (0, h.useShouldShowNewOfferBadgeForAprilMarketingMoment)(y),
-      z = (0, O.useIsEligibleSenderForReferralProgramTabBadge)(y),
+      z = (0, L.useIsEligibleSenderForReferralProgramTabBadge)(y),
       q = D || null != F || null != B || V || K || Y || null != W || null != G && Date.now() - G.createdAt.getTime() > 2592e6 || (0, E.hasPremiumSubscriptionToDisplay)(G, w),
       {
         enabled: Q
@@ -61,7 +61,7 @@ let y = "NitroTabButton",
       }, {
         autoTrackExposure: !1
       }),
-      Z = Q && (null == F ? void 0 : F.trial_id) === L.PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
+      Z = Q && (null == F ? void 0 : F.trial_id) === O.PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
     return q ? (V ? a = (0, n.jsx)(S.default, {
       isNitroTab: !0
     }) : K ? a = (0, n.jsx)(R.default, {

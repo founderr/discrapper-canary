@@ -28,15 +28,15 @@ var n = a("735250"),
   N = a("143614"),
   v = a("981631"),
   R = a("70722"),
-  O = a("689938"),
-  L = a("420869");
+  L = a("689938"),
+  O = a("420869");
 
 function P(e) {
   let {
     users: t
   } = e;
   return (0, n.jsxs)("div", {
-    className: L.viewers,
+    className: O.viewers,
     children: [(0, n.jsx)(I.default, {
       width: 16,
       height: 16,
@@ -74,29 +74,29 @@ function M(e) {
       s = t.length >= v.MAX_GROUP_DM_BROADCAST_PARTICIPANTS;
     return {
       buttonColor: s ? r.ButtonColors.RED : r.ButtonColors.GREEN,
-      buttonCTA: s ? O.default.Messages.BROADCAST_FULL : n ? O.default.Messages.VIEW_BROADCAST : O.default.Messages.JOIN_BROADCAST,
+      buttonCTA: s ? L.default.Messages.BROADCAST_FULL : n ? L.default.Messages.VIEW_BROADCAST : L.default.Messages.JOIN_BROADCAST,
       disabled: s
     }
   }(i, F);
   return (0, n.jsxs)("div", {
-    className: L.container,
+    className: O.container,
     children: [(0, n.jsx)(r.Avatar, {
       size: r.AvatarSizes.SIZE_32,
       src: D.getAvatarURL(null, 32),
       "aria-label": U
     }), (0, n.jsxs)("div", {
-      className: L.details,
+      className: O.details,
       children: [(0, n.jsx)(r.Text, {
         variant: "text-md/semibold",
         children: U
       }), (0, n.jsx)(r.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        children: null != b ? O.default.Messages.STREAMING.format({
+        children: null != b ? L.default.Messages.STREAMING.format({
           name: b.name
-        }) : O.default.Messages.STREAMING_A_GAME
+        }) : L.default.Messages.STREAMING_A_GAME
       }), (0, n.jsxs)("div", {
-        className: L.activity,
+        className: O.activity,
         children: [F.length > 0 && (0, n.jsx)(P, {
           users: F
         }), (0, n.jsxs)(r.Button, {
@@ -114,9 +114,9 @@ function M(e) {
           },
           color: B,
           size: r.ButtonSizes.SMALL,
-          className: L.button,
+          className: O.button,
           disabled: V,
-          innerClassName: L.innerButton,
+          innerClassName: O.innerButton,
           children: [(0, n.jsx)(S.default, {
             width: 16,
             height: 16
@@ -124,7 +124,7 @@ function M(e) {
         })]
       })]
     }), null != G ? (0, n.jsx)(f.default, {
-      className: L.stream,
+      className: O.stream,
       stream: {
         streamType: R.StreamTypes.CALL,
         ownerId: i,
@@ -133,7 +133,7 @@ function M(e) {
     }) : (0, n.jsx)(m.default, {
       game: b,
       size: m.default.Sizes.LARGE,
-      className: L.gameIcon
+      className: O.gameIcon
     })]
   })
 }

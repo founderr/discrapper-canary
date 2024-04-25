@@ -37,8 +37,8 @@ t.default = function(e) {
       guild_id: t.id
     })
   }, [t.id, C]);
-  let O = null;
-  "function" == typeof N ? O = N() : null != N && (O = (0, n.jsx)(o.Button, {
+  let L = null;
+  "function" == typeof N ? L = N() : null != N && (L = (0, n.jsx)(o.Button, {
     className: h.button,
     size: o.Button.Sizes.SMALL,
     onClick: () => {
@@ -52,8 +52,8 @@ t.default = function(e) {
     color: v,
     children: N
   }));
-  let L = null;
-  "function" == typeof a ? L = a() : null != a && (L = (0, n.jsx)(o.Text, {
+  let O = null;
+  "function" == typeof a ? O = a() : null != a && (O = (0, n.jsx)(o.Text, {
     variant: "text-md/medium",
     color: "header-primary",
     className: i()(h.title, {
@@ -92,14 +92,14 @@ t.default = function(e) {
       })
     }), (0, n.jsxs)("div", {
       className: h.message,
-      children: [L, (0, n.jsx)(o.Text, {
+      children: [O, (0, n.jsx)(o.Text, {
         className: i()({
           [h.center]: R
         }),
         variant: "text-sm/normal",
         color: "text-muted",
         children: l
-      }), O]
+      }), L]
     })]
   })
 }

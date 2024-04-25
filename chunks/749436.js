@@ -38,7 +38,7 @@ let R = u().throttle(m.trackSearchResultsViewed, 1e3, {
     leading: !1,
     trailing: !0
   }),
-  O = e => {
+  L = e => {
     let {
       isSelected: t,
       onCategoryChange: a,
@@ -58,7 +58,7 @@ let R = u().throttle(m.trackSearchResultsViewed, 1e3, {
       })
     })
   };
-class L extends(n = l.PureComponent) {
+class O extends(n = l.PureComponent) {
   componentDidMount() {
     let {
       loadId: e,
@@ -148,7 +148,7 @@ class L extends(n = l.PureComponent) {
       className: N.categories,
       children: null == t ? void 0 : t.map(t => {
         let [a, n] = t;
-        return (0, s.jsx)(O, {
+        return (0, s.jsx)(L, {
           categoryId: a,
           name: a === T.DISCOVERY_ALL_CATEGORIES_ID ? A.default.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : p.default.getCategoryName(a),
           onCategoryChange: this.handleCategoryChange,
@@ -286,10 +286,10 @@ class L extends(n = l.PureComponent) {
 function P(e) {
   let t = (0, d.useStateFromStores)([p.default], () => p.default.getDiscoveryCategories(), [], p.areDiscoveryCategoriesEqual),
     a = (0, d.useStateFromStores)([E.default], () => E.default.getTopCategoryCounts(e.mostRecentQuery));
-  return (0, s.jsx)(L, {
+  return (0, s.jsx)(O, {
     ...e,
     categories: t,
     countsByCategory: a
   })
 }
-v(L, "contextType", void 0), L.contextType = _.AnalyticsContext
+v(O, "contextType", void 0), O.contextType = _.AnalyticsContext

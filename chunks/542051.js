@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return m
   }
 }), n("411104");
-var s, l, a, i, r = n("735250"),
+var s, a, l, i, r = n("735250"),
   o = n("470079"),
   u = n("120356"),
   d = n.n(u),
@@ -30,8 +30,8 @@ class T extends(s = o.PureComponent) {
       query: t,
       navId: n,
       focusedIndex: s,
-      onSelectQuery: l,
-      onSelectSearchEverywhere: a,
+      onSelectQuery: a,
+      onSelectSearchEverywhere: l,
       onHighlightQuery: i,
       hideQuery: o,
       searchFavorites: u
@@ -45,7 +45,7 @@ class T extends(s = o.PureComponent) {
         }),
         ...m(n, -1, _),
         onMouseEnter: i,
-        onClick: l,
+        onClick: a,
         children: [(0, r.jsx)("div", {
           className: E.queryText,
           children: u ? f.default.Messages.SEARCH_FAVORITES : f.default.Messages.SEARCH_FOR_VALUE.format({
@@ -66,7 +66,7 @@ class T extends(s = o.PureComponent) {
         }),
         ...m(n, -1, _),
         onMouseEnter: i,
-        onClick: a,
+        onClick: l,
         children: [(0, r.jsx)("div", {
           className: E.queryText,
           children: f.default.Messages.SEARCH_EVERYWHERE
@@ -87,15 +87,15 @@ class T extends(s = o.PureComponent) {
       numResults: t,
       renderNoResults: n,
       renderInitialState: s,
-      renderResult: l,
-      renderCustomResults: a
+      renderResult: a,
+      renderCustomResults: l
     } = this.props;
     if (e) return s();
     if (0 === t) return n();
-    if (null != l) return Array.from({
+    if (null != a) return Array.from({
       length: t
-    }).map((e, t) => l(t));
-    if (null != a) return a();
+    }).map((e, t) => a(t));
+    if (null != l) return l();
     throw Error("SearchResultsPopout.renderResults: Flow should never allow this...")
   }
   render() {
@@ -104,7 +104,7 @@ class T extends(s = o.PureComponent) {
       focusedIndex: t,
       navId: n,
       width: s
-    } = this.props, l = "" === e.trim();
+    } = this.props, a = "" === e.trim();
     return (0, r.jsxs)("div", {
       className: E.container,
       style: {
@@ -115,7 +115,7 @@ class T extends(s = o.PureComponent) {
       id: n,
       tabIndex: -1,
       "aria-activedescendant": "".concat(n, "-").concat(t),
-      children: [this.renderQuery(l), this.renderResults(l)]
+      children: [this.renderQuery(a), this.renderResults(a)]
     })
   }
 }
@@ -123,9 +123,9 @@ i = {
   renderInitialState: () => null,
   hideQuery: !1,
   width: 320
-}, (a = "defaultProps") in(l = T) ? Object.defineProperty(l, a, {
+}, (l = "defaultProps") in(a = T) ? Object.defineProperty(a, l, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[a] = i, t.default = T
+}) : a[l] = i, t.default = T

@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("735250"),
-  l = n("470079"),
-  a = n("481060"),
+  a = n("470079"),
+  l = n("481060"),
   i = n("99690"),
   r = n("906732"),
   o = n("336197"),
@@ -33,19 +33,19 @@ var s = n("735250"),
   x = n("886765");
 
 function L(e) {
-  var t, n, l;
+  var t, n, a;
   let {
     item: r
   } = e, o = null === (t = r.message) || void 0 === t ? void 0 : t.content;
   if (null == o) return (0, s.jsx)("div", {});
-  let d = null !== (l = E.default.getUser(null === (n = r.other_user) || void 0 === n ? void 0 : n.id)) && void 0 !== l ? l : new f.default(r.other_user),
+  let d = null !== (a = E.default.getUser(null === (n = r.other_user) || void 0 === n ? void 0 : n.id)) && void 0 !== a ? a : new f.default(r.other_user),
     c = u.default.parse(o);
   return (0, s.jsxs)("div", {
     className: v.messagePreviewContainer,
     children: [(0, s.jsx)(i.default, {
       user: d,
-      size: a.AvatarSizes.SIZE_24
-    }), (0, s.jsx)(a.Text, {
+      size: l.AvatarSizes.SIZE_24
+    }), (0, s.jsx)(l.Text, {
       className: v.messagePreviewText,
       variant: "text-sm/normal",
       lineClamp: 2,
@@ -64,7 +64,7 @@ function D(e) {
   let n = u.default.parse(t);
   return (0, s.jsx)("div", {
     className: v.calloutContainer,
-    children: (0, s.jsx)(a.Text, {
+    children: (0, s.jsx)(l.Text, {
       variant: "text-sm/normal",
       lineClamp: 2,
       children: n
@@ -75,31 +75,31 @@ function D(e) {
 function P(e) {
   let {
     item: t
-  } = e, n = x, l = R.default.Messages.NOTIFICATION_CENTER_TODO;
-  return t.completed && (n = O, l = R.default.Messages.NOTIFICATION_CENTER_DONE), (0, s.jsxs)("div", {
+  } = e, n = x, a = R.default.Messages.NOTIFICATION_CENTER_TODO;
+  return t.completed && (n = O, a = R.default.Messages.NOTIFICATION_CENTER_DONE), (0, s.jsxs)("div", {
     className: v.lifecycleContainer,
     children: [(0, s.jsx)("img", {
       className: v.checkbox,
       alt: "",
       src: n
-    }), (0, s.jsx)(a.Text, {
+    }), (0, s.jsx)(l.Text, {
       className: v.lifecycleText,
       variant: "text-xs/bold",
       color: "header-secondary",
-      children: l
+      children: a
     })]
   })
 }
-let y = l.memo(function(e) {
+let y = a.memo(function(e) {
     var t;
     let {
       item: i,
       ackedBeforeId: c
     } = e, {
       analyticsLocations: f
-    } = (0, r.default)(), E = (0, S.useNotificationCenterItemAcked)(i, c), R = l.useCallback(async () => {
+    } = (0, r.default)(), E = (0, S.useNotificationCenterItemAcked)(i, c), R = a.useCallback(async () => {
       if (!E && (0, I.markNotificationCenterItemAcked)(i), null != i.item_enum && i.item_enum === p.ItemEnum.FIND_FRIENDS) {
-        (0, a.openModalLazy)(async () => {
+        (0, l.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([n.e("99387"), n.e("6074")]).then(n.bind(n, "443189"));
@@ -145,7 +145,7 @@ let y = l.memo(function(e) {
       y = (0, N.default)(i);
     return (0, s.jsxs)("div", {
       className: v.row,
-      children: [(0, s.jsxs)(a.ClickableContainer, {
+      children: [(0, s.jsxs)(l.ClickableContainer, {
         className: v.rowContent,
         focusProps: {
           offset: 4
@@ -160,7 +160,7 @@ let y = l.memo(function(e) {
           className: v.body,
           children: ["lifecycle_item" === i.type && null != i.item_enum && (0, s.jsx)(P, {
             item: i
-          }), (0, s.jsx)(a.Text, {
+          }), (0, s.jsx)(l.Text, {
             variant: "text-md/normal",
             color: E ? "text-muted" : "text-normal",
             children: "string" != typeof y ? y : u.default.parse(y)
@@ -168,7 +168,7 @@ let y = l.memo(function(e) {
             item: i
           }) : null, null != i.callout ? (0, s.jsx)(D, {
             item: i
-          }) : null, (0, s.jsx)(a.Text, {
+          }) : null, (0, s.jsx)(l.Text, {
             variant: "text-xs/medium",
             color: E ? "text-muted" : "header-secondary",
             children: (0, h.getRelativeTimestamp)(m.default.extractTimestamp(i.id))
@@ -179,7 +179,7 @@ let y = l.memo(function(e) {
       })]
     })
   }),
-  U = l.memo(function(e) {
+  U = a.memo(function(e) {
     let {
       items: t
     } = e, n = c.NotificationCenterAckedBeforeId.useSetting();

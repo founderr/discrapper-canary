@@ -31,8 +31,8 @@ var n = a("735250"),
   N = a("153124"),
   v = a("158010"),
   R = a("26290"),
-  O = a("626135"),
-  L = a("792125"),
+  L = a("626135"),
+  O = a("792125"),
   P = a("280570"),
   M = a("914788"),
   x = a("841409"),
@@ -97,7 +97,7 @@ function z(e) {
     handleItemSelect: s
   } = e, l = (0, N.useUID)(), o = (0, b.usePendingRequestCount)();
   return (0, n.jsxs)(S.default, {
-    className: i()((0, L.getThemeClass)(t), V.sidebarTabBar),
+    className: i()((0, O.getThemeClass)(t), V.sidebarTabBar),
     scrollable: r.isMobile,
     role: "navigation",
     "aria-labelledby": l,
@@ -151,7 +151,7 @@ function q() {
       forceTrack: !0
     })
   }, []), s.useEffect(() => {
-    l && T && (O.default.track(k.AnalyticEvents.FAMILY_CENTER_VIEWED, {
+    l && T && (L.default.track(k.AnalyticEvents.FAMILY_CENTER_VIEWED, {
       is_considered_adult: e,
       num_of_accepted_links: t,
       selected_teen_id: r,
@@ -186,7 +186,7 @@ function Q() {
     analyticsLocations: e
   } = (0, _.default)(h.default.FAMILY_CENTER), t = (0, D.default)(), a = (0, b.useAcceptedRequestsCount)(), l = (0, m.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE), r = (0, u.useStateFromStores)([M.default], () => M.default.getIsInitialized()), S = (0, y.useSelectedTeenId)(), v = (0, u.useStateFromStores)([T.default], () => T.default.theme), {
     selectedTab: R,
-    handleTabChange: L
+    handleTabChange: O
   } = (0, x.default)(), U = (0, N.useUID)(), j = A.default.getCurrentUser(), G = null != t, Y = r && null != j && !G;
   if (s.useEffect(() => {
       f.setHomeLink(k.Routes.FAMILY_CENTER), (0, p.trackAppUIViewed)("family-center"), !M.default.isLoading() && M.default.canRefetch() && P.default.initialPageLoad(), !l && (0, m.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
@@ -194,7 +194,7 @@ function Q() {
         forceTrack: !0
       })
     }, []), s.useEffect(() => {
-      r && G && (O.default.track(k.AnalyticEvents.FAMILY_CENTER_VIEWED, {
+      r && G && (L.default.track(k.AnalyticEvents.FAMILY_CENTER_VIEWED, {
         is_considered_adult: t,
         num_of_accepted_links: a,
         selected_teen_id: S,
@@ -220,7 +220,7 @@ function Q() {
         theme: v,
         section: K,
         handleItemSelect: e => {
-          L(e)
+          O(e)
         }
       }), (0, n.jsx)(c.TabBar.Panel, {
         id: K,

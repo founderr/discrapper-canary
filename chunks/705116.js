@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var l = n("481060"),
-  a = n("646504"),
+var a = n("481060"),
+  l = n("646504"),
   i = n("430824"),
   r = n("702346"),
   o = n("981631"),
@@ -22,7 +22,7 @@ function c(e) {
     } = e,
     _ = () => {
       let e = i.default.getGuild(E.getGuildId());
-      null != e && ((0, l.openModalLazy)(async () => {
+      null != e && ((0, a.openModalLazy)(async () => {
         let {
           default: t
         } = await Promise.all([n.e("49237"), n.e("99387"), n.e("43643"), n.e("7654"), n.e("61939")]).then(n.bind(n, "560114"));
@@ -32,9 +32,9 @@ function c(e) {
           channel: E,
           source: o.InstantInviteSources.INVITE_SYSTEM_MESSAGE
         })
-      }), (0, a.trackGuildInviteNotificationAction)())
+      }), (0, l.trackGuildInviteNotificationAction)())
     },
-    m = (e, t) => (0, s.jsx)(l.Anchor, {
+    m = (e, t) => (0, s.jsx)(a.Anchor, {
       className: d.inviteLink,
       onClick: _,
       children: e
@@ -54,9 +54,9 @@ function c(e) {
     }), (0, s.jsx)("div", {
       className: d.inviteContent,
       children: f ? u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION_OWNER : u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION
-    }), (0, s.jsx)(l.Button, {
+    }), (0, s.jsx)(a.Button, {
       onClick: _,
-      size: l.Button.Sizes.SMALL,
+      size: a.Button.Sizes.SMALL,
       className: d.inviteButton,
       children: u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_BUTTON
     })]

@@ -14,9 +14,9 @@ n.r(t), n.d(t, {
   }
 }), n("47120"), n("653041");
 var s = n("735250"),
-  l = n("470079"),
-  a = n("120356"),
-  i = n.n(a),
+  a = n("470079"),
+  l = n("120356"),
+  i = n.n(l),
   r = n("392711"),
   o = n.n(r),
   u = n("924826"),
@@ -57,10 +57,10 @@ let P = e => {
     let {
       title: t,
       children: n,
-      className: l
+      className: a
     } = e;
     return (0, s.jsxs)("div", {
-      className: i()(l, x.header),
+      className: i()(a, x.header),
       children: [null == t ? null : (0, s.jsx)(c.Heading, {
         variant: "heading-md/medium",
         children: t
@@ -85,7 +85,7 @@ let P = e => {
       })]
     })
   };
-class U extends l.PureComponent {
+class U extends a.PureComponent {
   renderJumpButton() {
     let {
       jumping: e
@@ -111,9 +111,9 @@ class U extends l.PureComponent {
       onCloseMessage: e,
       canCloseAllMessages: t,
       canManageMessages: n,
-      channel: l
+      channel: a
     } = this.props;
-    return null != e && (t || n || null != l && l.isPrivate()) ? (0, s.jsx)(c.Button, {
+    return null != e && (t || n || null != a && a.isPrivate()) ? (0, s.jsx)(c.Button, {
       look: c.Button.Looks.BLANK,
       size: c.Button.Sizes.NONE,
       onClick: this.handleClickClose,
@@ -157,7 +157,7 @@ function b(e) {
   let {
     analyticsName: t,
     items: n,
-    hasMore: a,
+    hasMore: l,
     loading: r,
     loadMore: f,
     renderHeader: E,
@@ -167,12 +167,12 @@ function b(e) {
     scrollerClassName: h,
     className: N,
     listName: g
-  } = e, L = l.useRef(null), P = (0, _.default)(g, L), y = (0, d.useStateFromStores)([S.default], () => S.default.hasNotice()), U = (0, d.useStateFromStores)([C.default], () => C.default.windowSize());
-  l.useEffect(() => {
+  } = e, L = a.useRef(null), P = (0, _.default)(g, L), y = (0, d.useStateFromStores)([S.default], () => S.default.hasNotice()), U = (0, d.useStateFromStores)([C.default], () => C.default.windowSize());
+  a.useEffect(() => {
     M.default.track(v.AnalyticEvents.OPEN_POPOUT, {
       type: t
     })
-  }, [t]), l.useEffect(() => {
+  }, [t]), a.useEffect(() => {
     function e() {
       var e;
       null === (e = L.current) || void 0 === e || e.scrollPageUp({
@@ -190,17 +190,17 @@ function b(e) {
       R.ComponentDispatch.unsubscribe(v.ComponentActions.SCROLL_PAGE_DOWN, t), R.ComponentDispatch.unsubscribe(v.ComponentActions.SCROLL_PAGE_UP, e)
     }
   }, []);
-  let j = l.useCallback(() => {
+  let j = a.useCallback(() => {
       var e;
       let t = null === (e = L.current) || void 0 === e ? void 0 : e.getScrollerState();
-      null != t && t.scrollHeight === t.scrollTop + t.offsetHeight && a && !r && (null == f || f())
-    }, [a, f, r]),
+      null != t && t.scrollHeight === t.scrollTop + t.offsetHeight && l && !r && (null == f || f())
+    }, [l, f, r]),
     b = [],
     B = !0;
   null == n ? b = [(0, s.jsx)("div", {
     className: i()(x.emptyPlaceholder, x.loadingPlaceholder),
     children: (0, s.jsx)(c.Spinner, {})
-  }, "spinner")] : 0 === n.length ? b.push((0, s.jsx)(l.Fragment, {
+  }, "spinner")] : 0 === n.length ? b.push((0, s.jsx)(a.Fragment, {
     children: m(I.default.theme)
   }, "empty-state")) : (B = !1, b = [], o().each(n, e => {
     b.push(...T(e))
@@ -209,7 +209,7 @@ function b(e) {
   null != n && n.length > 0 && null != f && (G = r ? (0, s.jsx)("div", {
     className: x.loadingMore,
     children: (0, s.jsx)(c.Spinner, {})
-  }, "loading-more-after") : a ? (0, s.jsx)("div", {
+  }, "loading-more-after") : l ? (0, s.jsx)("div", {
     className: x.hasMore,
     children: (0, s.jsx)(c.Button, {
       look: c.Button.Looks.FILLED,
@@ -238,7 +238,7 @@ function b(e) {
       maxHeight: U.height - 43 - 25
     };
   y && (w.maxHeight -= 40);
-  let H = null != f && a;
+  let H = null != f && l;
   return (0, s.jsx)("div", {
     className: i()(N, x.messagesPopoutWrap),
     style: w,
@@ -276,7 +276,7 @@ function B(e) {
   let {
     analyticsName: t,
     onFetch: n,
-    channel: a,
+    channel: l,
     messages: i,
     hasMore: r,
     loading: o,
@@ -292,21 +292,21 @@ function B(e) {
     onCloseMessage: M,
     listName: R
   } = e, L = (0, d.useStateFromStores)([h.default], () => {
-    let e = null != a ? h.default.getMessages(a.id) : null;
+    let e = null != l ? h.default.getMessages(l.id) : null;
     return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId)
   });
 
   function D(e, n) {
     let {
       id: s,
-      blocked: l,
-      author: a,
+      blocked: a,
+      author: l,
       channel_id: i
     } = e;
-    if (l) f.default.show({
+    if (a) f.default.show({
       title: O.default.Messages.UNBLOCK_TO_JUMP_TITLE,
       body: O.default.Messages.UNBLOCK_TO_JUMP_BODY.format({
-        name: a.username
+        name: l.username
       }),
       confirmText: O.default.Messages.OKAY
     });
@@ -315,13 +315,13 @@ function B(e) {
       null != e && (E.default.trackJump(i, s, t), (0, T.transitionTo)(v.Routes.CHANNEL(e.getGuildId(), i, s))), null == c || c(n)
     }
   }
-  l.useEffect(() => {
-    n(a)
-  }, [a, n]);
-  let P = l.useMemo(() => null == i ? void 0 : i.map(e => ({
+  a.useEffect(() => {
+    n(l)
+  }, [l, n]);
+  let P = a.useMemo(() => null == i ? void 0 : i.map(e => ({
     message: e,
-    channel: a
-  })), [i, a]);
+    channel: l
+  })), [i, l]);
   return (0, s.jsx)(b, {
     className: g,
     scrollerClassName: A,
@@ -340,22 +340,22 @@ function B(e) {
       } = e;
       if (null == t) return [];
       if (null != S) return S(t, e => D(t, e));
-      let l = [];
-      return null == n ? [] : (l.push((0, s.jsxs)("div", {
+      let a = [];
+      return null == n ? [] : (a.push((0, s.jsxs)("div", {
         className: x.messageGroupWrapper,
         children: [(0, s.jsx)(m.default, {
           className: x.messageGroupCozy,
           message: t,
           channel: n
         }), (0, s.jsx)(j, {
-          channel: a,
+          channel: l,
           message: t,
           jumping: L,
           canCloseAllMessages: _,
           jumpTo: D,
           onCloseMessage: M
         })]
-      }, t.id)), l)
+      }, t.id)), a)
     },
     listName: R,
     "aria-label": e["aria-label"]

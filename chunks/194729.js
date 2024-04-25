@@ -24,8 +24,8 @@ var n = a("735250"),
   N = a("210887"),
   v = a("480294"),
   R = a("683301"),
-  O = a("430824"),
-  L = a("230307"),
+  L = a("430824"),
+  O = a("230307"),
   P = a("502568"),
   M = a("900849"),
   x = a("2485"),
@@ -439,14 +439,14 @@ class q extends s.PureComponent {
     })
   }
 }
-let Q = f.default.connectStores([N.default, A.default, L.default, v.default, R.default, U.default, O.default], () => {
+let Q = f.default.connectStores([N.default, A.default, O.default, v.default, R.default, U.default, L.default], () => {
   var e;
   let t = B.LANGUAGE_OPTIONS,
     a = A.default.locale,
     n = null !== (e = o().find(t, {
       code: a
     })) && void 0 !== e ? e : t[0],
-    s = Object.keys(L.default.applicationStatistics),
+    s = Object.keys(O.default.applicationStatistics),
     l = v.default.hasConsented(H.Consents.PERSONALIZATION) && s.length > 0,
     i = R.default.getCurrentCategoryId(),
     r = R.default.getCurrentHomepageCategoryId();
@@ -459,7 +459,7 @@ let Q = f.default.connectStores([N.default, A.default, L.default, v.default, R.d
     currentHomepageCategoryId: r,
     currentCategoryName: U.default.getCategoryName(i),
     categories: U.default.getDiscoveryCategories(),
-    userGuilds: O.default.getGuilds(),
+    userGuilds: L.default.getGuilds(),
     theme: N.default.theme,
     mightHaveGamesYouPlay: l,
     availableLanguages: t,

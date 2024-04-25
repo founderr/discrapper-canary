@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return D
   }
 }), n("47120"), n("411104");
-var s, l = n("735250"),
-  a = n("470079"),
+var s, a = n("735250"),
+  l = n("470079"),
   i = n("613828"),
   r = n("442837"),
   o = n("481060"),
@@ -35,7 +35,7 @@ function R(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class v extends(s = a.Component) {
+class v extends(s = l.Component) {
   get analyticsLocation() {
     let {
       analyticsContext: {
@@ -58,7 +58,7 @@ class v extends(s = a.Component) {
     (null == e || null == n) && (0, u.fetchStoreListingForSku)(t)
   }
   renderViewInStoreButton() {
-    return (0, l.jsx)(o.Button.Link, {
+    return (0, a.jsx)(o.Button.Link, {
       to: this.getStoreListingLocation(),
       className: M.actionButton,
       color: o.Button.Colors.GREEN,
@@ -72,17 +72,17 @@ class v extends(s = a.Component) {
       storeListing: t,
       width: n,
       fetchFailed: s,
-      renderFallback: a
+      renderFallback: l
     } = this.props, r = n > _.HORIZONTAL_EMBED_BREAKPOINT;
-    if (null == e || null == t) return s ? a() : (0, l.jsx)(_.ResponsiveLoadingEmbedTile, {
+    if (null == e || null == t) return s ? l() : (0, a.jsx)(_.ResponsiveLoadingEmbedTile, {
       isHorizontal: r
     });
-    return e.productLine === A.SKUProductLines.COLLECTIBLES ? (0, l.jsx)(d.default, {
+    return e.productLine === A.SKUProductLines.COLLECTIBLES ? (0, a.jsx)(d.default, {
       section: A.AnalyticsSections.APPLICATION_EMBED,
       children: this.renderApplicationTile(e, t)
-    }) : (0, l.jsx)(d.default, {
+    }) : (0, a.jsx)(d.default, {
       section: A.AnalyticsSections.APPLICATION_EMBED,
-      children: (0, l.jsx)(i.Link, {
+      children: (0, a.jsx)(i.Link, {
         onClick: this.handleLinkClick,
         to: this.getStoreListingLocation(),
         onMouseEnter: this.handleMouseEnter,
@@ -125,14 +125,14 @@ class v extends(s = a.Component) {
       let {
         inLibrary: n,
         width: s,
-        renderCustomTitle: a,
+        renderCustomTitle: l,
         renderCustomTagline: i,
         renderCustomMedia: r
       } = this.props, {
         playing: o,
         muted: u
       } = this.state, d = s > _.HORIZONTAL_EMBED_BREAKPOINT;
-      return (0, l.jsx)(E.default, {
+      return (0, a.jsx)(E.default, {
         sku: e,
         storeListing: t,
         playing: o,
@@ -140,7 +140,7 @@ class v extends(s = a.Component) {
         inLibrary: n,
         onToggleMute: this.handleToggleMute,
         renderCustomActions: () => this.renderActions(e),
-        renderCustomTitle: a,
+        renderCustomTitle: l,
         renderCustomTagline: i,
         renderCustomMedia: r,
         isHorizontal: d,
@@ -151,26 +151,26 @@ class v extends(s = a.Component) {
         inLibrary: t,
         application: n,
         skuId: s,
-        libraryApplication: a,
+        libraryApplication: l,
         renderCustomActions: i
       } = this.props;
-      if (null != i) return (0, l.jsx)("div", {
+      if (null != i) return (0, a.jsx)("div", {
         className: M.tileActions,
         children: i()
       });
       if (null == n) return null;
       let r = null != n && n.primarySkuId === s,
-        u = null != a && a.hasFlag(A.LibraryApplicationFlags.HIDDEN);
-      return (0, l.jsxs)("div", {
+        u = null != l && l.hasFlag(A.LibraryApplicationFlags.HIDDEN);
+      return (0, a.jsxs)("div", {
         className: M.tileActions,
-        children: [!r || u ? this.renderViewInStoreButton() : (0, l.jsx)(c.default, {
+        children: [!r || u ? this.renderViewInStoreButton() : (0, a.jsx)(c.default, {
           application: n,
           customDisabledColor: o.Button.Colors.PRIMARY,
           size: o.Button.Sizes.SMALL,
           className: M.actionButton,
           source: A.AnalyticsLocations.MESSAGE_EMBED,
           onClick: this.handleActionButtonClick
-        }), t && !u || e.premium ? null : (0, l.jsx)(f.default, {
+        }), t && !u || e.premium ? null : (0, a.jsx)(f.default, {
           type: f.default.Types.EMBED,
           sku: e,
           inLibrary: !1

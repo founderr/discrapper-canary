@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("653041");
 var s = n("544891"),
-  l = n("433517"),
-  a = n("570140"),
+  a = n("433517"),
+  l = n("570140"),
   i = n("865427"),
   r = n("710845"),
   o = n("70956"),
@@ -25,7 +25,7 @@ function f(e, t, n) {
 let E = 1 * o.default.Millis.HOUR,
   _ = 7 * o.default.Millis.DAY,
   m = 1 * o.default.Millis.DAY,
-  T = l.Storage.get("lastNonRequiredUpdateShown", Date.now()),
+  T = a.Storage.get("lastNonRequiredUpdateShown", Date.now()),
   I = new r.default("AutoUpdateManager");
 class p {
   destroy() {
@@ -60,7 +60,7 @@ class p {
         t.updateAvailable ? e(!0) : t._callbacks.push(e)
       })
     }), f(this, "_handleCheckingForUpdates", () => {
-      a.default.dispatch({
+      l.default.dispatch({
         type: "CHECKING_FOR_UPDATES"
       })
     }), f(this, "_handleNativeUpdateNotAvailable", () => {
@@ -71,37 +71,37 @@ class p {
         },
         oldFormErrors: !0
       }).then(e => {
-        if (null == e.body || "0f218f11532a2a9dc7d15a75be76e189cb6a2fe2" === e.body.hash) return this._handleUpdateNotAvailable();
+        if (null == e.body || "7c450d4f8266be0c689ab3c9f795daa6bd4ce873" === e.body.hash) return this._handleUpdateNotAvailable();
         if (e.body.required || (0, i.probablyHasBuildOverride)()) return this._handleUpdateDownloaded(!1);
         let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? _ : m;
-        if (Date.now() - T > t) return l.Storage.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1)
+        if (Date.now() - T > t) return a.Storage.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1)
       }, () => this._handleUpdateError())
     }), f(this, "_handleUpdateNotAvailable", () => {
-      a.default.dispatch({
+      l.default.dispatch({
         type: "UPDATE_NOT_AVAILABLE"
       }), this._emitCallbacks()
     }), f(this, "_handleUpdateAvailable", e => {
-      this.updateAvailable = !0, this.hasNativeUpdate = e, a.default.dispatch({
+      this.updateAvailable = !0, this.hasNativeUpdate = e, l.default.dispatch({
         type: "UPDATE_AVAILABLE"
       })
     }), f(this, "_handleUpdateManually", () => {
-      this.updateAvailable = !0, this.hasNativeUpdate = !0, a.default.dispatch({
+      this.updateAvailable = !0, this.hasNativeUpdate = !0, l.default.dispatch({
         type: "UPDATE_MANUALLY"
       })
     }), f(this, "_handleUpdateError", e => {
-      this.updateAvailable = !1, a.default.dispatch({
+      this.updateAvailable = !1, l.default.dispatch({
         type: "UPDATE_ERROR",
         message: e
       })
-    }), f(this, "_handleUpdateDownloaded", (e, t, n, s, l) => {
-      this._handleUpdateAvailable(e), a.default.dispatch({
+    }), f(this, "_handleUpdateDownloaded", (e, t, n, s, a) => {
+      this._handleUpdateAvailable(e), l.default.dispatch({
         type: "UPDATE_DOWNLOADED",
         releaseNotes: t,
         releaseName: n,
         releaseDate: s,
-        updateURL: l
+        updateURL: a
       }), this._emitCallbacks()
-    }), u.isPlatformEmbedded && (c.default.on("CHECKING_FOR_UPDATES", this._handleCheckingForUpdates), c.default.on("UPDATE_NOT_AVAILABLE", this._handleNativeUpdateNotAvailable), c.default.on("UPDATE_AVAILABLE", () => this._handleUpdateAvailable(!0)), c.default.on("UPDATE_ERROR", this._handleUpdateError), c.default.on("UPDATE_DOWNLOADED", () => this._handleUpdateDownloaded(!0)), c.default.on("UPDATE_MANUALLY", this._handleUpdateManually)), a.default.wait(() => {
+    }), u.isPlatformEmbedded && (c.default.on("CHECKING_FOR_UPDATES", this._handleCheckingForUpdates), c.default.on("UPDATE_NOT_AVAILABLE", this._handleNativeUpdateNotAvailable), c.default.on("UPDATE_AVAILABLE", () => this._handleUpdateAvailable(!0)), c.default.on("UPDATE_ERROR", this._handleUpdateError), c.default.on("UPDATE_DOWNLOADED", () => this._handleUpdateDownloaded(!0)), c.default.on("UPDATE_MANUALLY", this._handleUpdateManually)), l.default.wait(() => {
       this.checkForUpdates()
     }), this._checkInterval = setInterval(this.checkForUpdates, e)
   }

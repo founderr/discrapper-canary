@@ -5,17 +5,17 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var s = n("470079"),
-  l = n("81063");
-let a = ["embedded_cover", "embedded_background"];
+  a = n("81063");
+let l = ["embedded_cover", "embedded_background"];
 
 function i(e) {
   let {
     applicationId: t,
     size: n,
-    names: i = a
-  } = e, [r, o] = s.useState(null), [u, d] = s.useState(!0), c = (0, l.getAssetImage)(t, r, n);
+    names: i = l
+  } = e, [r, o] = s.useState(null), [u, d] = s.useState(!0), c = (0, a.getAssetImage)(t, r, n);
   return s.useEffect(() => {
-    (0, l.getAssets)(t).then(e => {
+    (0, a.getAssets)(t).then(e => {
       for (let [t, n] of(d(!1), Object.entries(e)))
         if (null != n && "" !== n.id && i.includes(n.name)) {
           o(n.id);

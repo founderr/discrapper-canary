@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var l = n("825829"),
-  a = n("223"),
+var a = n("825829"),
+  l = n("223"),
   i = n("102250");
 
 function r(e) {
@@ -15,10 +15,10 @@ function r(e) {
     message: t,
     ...n
   } = e;
-  return (0, l.isAutomodNotification)(t) ? (0, s.jsx)(i.default, {
+  return (0, a.isAutomodNotification)(t) ? (0, s.jsx)(i.default, {
     message: t,
     ...n
-  }) : (0, s.jsx)(a.default, {
+  }) : (0, s.jsx)(l.default, {
     message: t,
     ...n
   })

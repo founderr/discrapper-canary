@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var l = n("442837"),
-  a = n("481060"),
+var a = n("442837"),
+  l = n("481060"),
   i = n("776568"),
   r = n("218035"),
   o = n("775666"),
@@ -25,17 +25,17 @@ function E(e) {
     label: m,
     location: T,
     includeGuildMute: I
-  } = e, p = (0, r.useChannelNotificationRadioItems)(t), h = (0, o.useChannelNotificationSettingsItemInner)(t), N = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(t.guild_id)), S = (0, u.default)(N), C = (0, d.useShouldUseNewNotificationSystem)("ChannelNotificationSettingsPopoutMenu") && c.CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING.has(t.type);
-  return (0, s.jsxs)(a.Menu, {
+  } = e, p = (0, r.useChannelNotificationRadioItems)(t), h = (0, o.useChannelNotificationSettingsItemInner)(t), N = (0, a.useStateFromStores)([f.default], () => f.default.getGuild(t.guild_id)), S = (0, u.default)(N), C = (0, d.useShouldUseNewNotificationSystem)("ChannelNotificationSettingsPopoutMenu") && c.CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING.has(t.type);
+  return (0, s.jsxs)(l.Menu, {
     navId: _,
     onClose: n,
     "aria-label": m,
     onSelect: E,
-    children: [(0, s.jsx)(a.MenuGroup, {
+    children: [(0, s.jsx)(l.MenuGroup, {
       children: (0, i.default)(t, T)
-    }), I ? (0, s.jsx)(a.MenuGroup, {
+    }), I ? (0, s.jsx)(l.MenuGroup, {
       children: S
-    }) : null, C ? h : (0, s.jsx)(a.MenuGroup, {
+    }) : null, C ? h : (0, s.jsx)(l.MenuGroup, {
       children: p
     })]
   })

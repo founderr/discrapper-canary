@@ -28,12 +28,12 @@ var n = a("735250"),
   N = a("807152"),
   v = a("176505"),
   R = a("689938"),
-  O = a("966815");
+  L = a("966815");
 
-function L(e) {
+function O(e) {
   let {
     guildId: t
-  } = e, a = (0, i.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), L = (0, i.useStateFromStores)([h.default], () => h.default.isConnected()), P = (0, f.default)(t), M = (0, I.default)(t), x = (0, i.useStateFromStores)([m.default], () => m.default.isSubscriptionFetching), y = (0, S.useGroupListingsFetchContext)(), {
+  } = e, a = (0, i.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), O = (0, i.useStateFromStores)([h.default], () => h.default.isConnected()), P = (0, f.default)(t), M = (0, I.default)(t), x = (0, i.useStateFromStores)([m.default], () => m.default.isSubscriptionFetching), y = (0, S.useGroupListingsFetchContext)(), {
     shouldHideGuildPurchaseEntryPoints: D,
     restrictionsLoading: b
   } = (0, E.useShouldHideGuildPurchaseEntryPoints)(t), U = null == a || !y || x || b;
@@ -41,7 +41,7 @@ function L(e) {
     subsection: R.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
     location: null == a ? void 0 : a.name
   }), (0, u.default)(l.isMobile ? "role-subscriptions-overview" : void 0);
-  let j = L && (null == a || !(P || M) || D && !b);
+  let j = O && (null == a || !(P || M) || D && !b);
   if (s.useEffect(() => {
       o.fetchSubscriptions()
     }, []), s.useEffect(() => {
@@ -53,10 +53,10 @@ function L(e) {
     })
   }
   return (0, n.jsxs)("div", {
-    className: O.container,
+    className: L.container,
     children: [(0, n.jsxs)(_.default, {
       toolbar: (0, n.jsx)(s.Fragment, {}),
-      className: O.headerBar,
+      className: L.headerBar,
       children: [(0, n.jsx)(_.default.Icon, {
         icon: p.default,
         "aria-hidden": !0
@@ -66,11 +66,11 @@ function L(e) {
     }), (0, n.jsx)("div", {
       id: N.OVERVIEW_NOTICE_ROOT
     }), (0, n.jsx)("div", {
-      className: O.content,
+      className: L.content,
       children: P ? (0, n.jsx)(r.ScrollerNone, {
-        className: O.scroller,
+        className: L.scroller,
         children: (0, n.jsx)("div", {
-          className: O.scrollerContent,
+          className: L.scrollerContent,
           children: U ? (0, n.jsx)(r.Spinner, {}) : (0, n.jsx)(T.default, {
             guild: a
           })
@@ -87,7 +87,7 @@ function P(e) {
   return (0, n.jsx)(S.GroupListingsFetchContextProvider, {
     guildId: t,
     refetchOnMount: !0,
-    children: (0, n.jsx)(L, {
+    children: (0, n.jsx)(O, {
       guildId: t
     })
   })

@@ -34,8 +34,8 @@ async function I(e, t, a) {
     guild_id: N,
     channel_id: v,
     prompt: R,
-    disable_guild_select: O,
-    integration_type: L
+    disable_guild_select: L,
+    integration_type: O
   } = e;
   if (null == o) throw new _.default({
     errorCode: m.RPCErrors.OAUTH2_ERROR
@@ -89,7 +89,7 @@ async function I(e, t, a) {
       codeChallengeMethod: I,
       state: p,
       nonce: T,
-      integrationType: null == L ? s.ApplicationIntegrationType.GUILD_INSTALL : Number(L)
+      integrationType: null == O ? s.ApplicationIntegrationType.GUILD_INSTALL : Number(O)
     })).location
   } catch (t) {
     let {
@@ -104,7 +104,7 @@ async function I(e, t, a) {
   try {
     M = l.deserialize(null != A ? A : 0)
   } catch (e) {}
-  return t(o, n, P, M, u, C, S, I, p, N, v, R, O, i)
+  return t(o, n, P, M, u, C, S, I, p, N, v, R, L, i)
 }
 
 function p(e, t) {

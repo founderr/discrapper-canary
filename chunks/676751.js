@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var l = n("481060"),
-  a = n("857395"),
+var a = n("481060"),
+  l = n("857395"),
   i = n("739566"),
   r = n("702346"),
   o = n("689938");
@@ -17,7 +17,7 @@ function u(e) {
     children: t,
     messageReference: n
   } = e;
-  if (null == n) return (0, s.jsx)(l.Anchor, {
+  if (null == n) return (0, s.jsx)(a.Anchor, {
     children: t
   });
   let {
@@ -25,19 +25,19 @@ function u(e) {
     channel_id: r,
     message_id: o
   } = n;
-  return null == i ? (0, s.jsx)(l.Anchor, {
+  return null == i ? (0, s.jsx)(a.Anchor, {
     children: t
-  }) : (0, s.jsx)(a.default, {
+  }) : (0, s.jsx)(l.default, {
     guildId: i,
     channelId: r,
     messageId: o,
     children: e => {
       let {
         "aria-controls": n,
-        "aria-expanded": a,
+        "aria-expanded": l,
         ...i
       } = e;
-      return (0, s.jsx)(l.Anchor, {
+      return (0, s.jsx)(a.Anchor, {
         ...i,
         children: t
       })
@@ -48,13 +48,13 @@ function u(e) {
 function d(e) {
   let {
     usernameHook: t,
-    message: l,
-    compact: a
+    message: a,
+    compact: l
   } = e, {
     content: d,
     timestamp: c,
     messageReference: f
-  } = l, E = (0, i.default)(l), _ = t(E), m = o.default.Messages.SYSTEM_MESSAGE_CHANNEL_FOLLOW_ADD_HOOK.format({
+  } = a, E = (0, i.default)(a), _ = t(E), m = o.default.Messages.SYSTEM_MESSAGE_CHANNEL_FOLLOW_ADD_HOOK.format({
     username: E.nick,
     usernameHook: _,
     webhookName: d,
@@ -66,7 +66,7 @@ function d(e) {
   return (0, s.jsx)(r.default, {
     icon: n("570111"),
     timestamp: c,
-    compact: a,
+    compact: l,
     children: m
   })
 }

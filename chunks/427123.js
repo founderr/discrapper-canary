@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120"), n("653041");
-var s, l, a, i, r = n("392711"),
+var s, a, l, i, r = n("392711"),
   o = n.n(r),
   u = n("442837"),
   d = n("433517"),
@@ -32,12 +32,12 @@ function M() {
       !m.default.isFetchingApplication(n) && !m.default.didFetchingApplicationFail(n) && _.default.fetchApplication(n);
       continue
     }
-    let l = h.default.get(t);
-    if (null == l) {
+    let a = h.default.get(t);
+    if (null == a) {
       !h.default.isFetching(t) && !h.default.didFetchingSkuFail(t) && E.fetchSKU(s.id, t);
       continue
     }
-    p.default.applicationIdsFetching.has(s.id) || p.default.isEntitledToSku(I.default.getCurrentUser(), t, s.id, s.id) || !l.available ? null != C[t] && (delete C[t], e = !0) : (C[t] = {
+    p.default.applicationIdsFetching.has(s.id) || p.default.isEntitledToSku(I.default.getCurrentUser(), t, s.id, s.id) || !a.available ? null != C[t] && (delete C[t], e = !0) : (C[t] = {
       skuId: t,
       applicationId: n
     }, e = !0)
@@ -53,12 +53,12 @@ class R extends(s = u.default.Store) {
     return o().values(C)
   }
 }
-i = "DetectedOffPlatformPremiumPerksStore", (a = "displayName") in(l = R) ? Object.defineProperty(l, a, {
+i = "DetectedOffPlatformPremiumPerksStore", (l = "displayName") in(a = R) ? Object.defineProperty(a, l, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[a] = i, t.default = new R(c.default, {
+}) : a[l] = i, t.default = new R(c.default, {
   LOGOUT: function() {
     C = {}, A = {}
   },

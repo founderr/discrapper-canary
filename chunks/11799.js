@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var s = n("470079"),
-  l = n("442837"),
-  a = n("45114"),
+  a = n("442837"),
+  l = n("45114"),
   i = n("733427"),
   r = n("455199"),
   o = n("833592"),
@@ -20,14 +20,14 @@ let f = e => {
       isDesktop: f,
       withMentions: E = !1,
       initialPageSize: _
-    } = e, m = (0, l.useStateFromStores)([d.default], () => d.default.shouldReload()), T = s.useRef(!1), [I, p] = s.useState(!1), {
+    } = e, m = (0, a.useStateFromStores)([d.default], () => d.default.shouldReload()), T = s.useRef(!1), [I, p] = s.useState(!1), {
       initialized: h,
       loading: N,
       items: S,
       hasMore: C,
       cursor: A,
       errored: g
-    } = (0, l.useStateFromStoresObject)([u.default], () => ({
+    } = (0, a.useStateFromStoresObject)([u.default], () => ({
       initialized: u.default.initialized,
       loading: u.default.loading,
       items: u.default.items,
@@ -37,12 +37,12 @@ let f = e => {
     })), {
       roleFilter: M,
       everyoneFilter: R
-    } = (0, l.useStateFromStoresObject)([r.default], () => ({
+    } = (0, a.useStateFromStoresObject)([r.default], () => ({
       everyoneFilter: r.default.everyoneFilter,
       roleFilter: r.default.roleFilter
     }));
     s.useEffect(() => ((0, o.setNotificationCenterActive)(!0), () => (0, o.setNotificationCenterActive)(!1)), []), s.useEffect(() => {
-      h && t && (0, a.ackUserFeature)(c.ReadStateTypes.NOTIFICATION_CENTER)
+      h && t && (0, l.ackUserFeature)(c.ReadStateTypes.NOTIFICATION_CENTER)
     }, [t, h]);
     let v = (0, i.default)();
     s.useEffect(() => () => {
@@ -86,7 +86,7 @@ let f = e => {
       loading: t,
       items: n,
       hasMore: s,
-      loadMore: l
+      loadMore: a
     } = f({
       isFocused: !0,
       isDesktop: !0
@@ -96,6 +96,6 @@ let f = e => {
       loading: t,
       items: n.filter(e => "notification-center-item" === e.kind),
       hasMore: s,
-      loadMore: l
+      loadMore: a
     }
   }

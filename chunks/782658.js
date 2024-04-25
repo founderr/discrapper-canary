@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("735250"),
-  l = n("470079"),
-  a = n("442837"),
+  a = n("470079"),
+  l = n("442837"),
   i = n("447543"),
   r = n("410575"),
   o = n("906732"),
@@ -37,11 +37,11 @@ function v(e) {
   } = e, {
     invite: O,
     inviteError: x
-  } = (0, a.useStateFromStoresObject)([T.default], () => ({
+  } = (0, l.useStateFromStoresObject)([T.default], () => ({
     invite: T.default.getInvite(t),
     inviteError: T.default.getInviteError(t)
   }), [t]);
-  l.useEffect(() => {
+  a.useEffect(() => {
     null == O && i.default.resolveInvite(t)
   }, [t]);
   let L = null != O ? O : {
@@ -51,9 +51,9 @@ function v(e) {
     {
       analyticsLocations: D
     } = (0, o.default)(),
-    P = (0, a.useStateFromStores)([m.default], () => (null == O ? void 0 : O.guild) != null ? m.default.getGuild(O.guild.id) : null, [O]),
-    y = (0, a.useStateFromStores)([_.default], () => _.default.getId()),
-    U = (0, a.useStateFromStores)([u.default], () => {
+    P = (0, l.useStateFromStores)([m.default], () => (null == O ? void 0 : O.guild) != null ? m.default.getGuild(O.guild.id) : null, [O]),
+    y = (0, l.useStateFromStores)([_.default], () => _.default.getId()),
+    U = (0, l.useStateFromStores)([u.default], () => {
       var e;
       return u.default.getGuildScheduledEvent(null === (e = L.guild_scheduled_event) || void 0 === e ? void 0 : e.id)
     }, [L]),

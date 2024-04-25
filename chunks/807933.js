@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   GameSelector: function() {
-    return O
+    return L
   },
   PlayStyleSelector: function() {
     return v
@@ -168,7 +168,7 @@ function R(e, t) {
   return (e !== p.ClanDiscoveryGame.VALORANT || t !== T.VALORANT_ID) && (e !== p.ClanDiscoveryGame.GENSHIN || t !== T.GENSHIN_ID) && !0
 }
 
-function O() {
+function L() {
   let e = (0, p.useClanDiscoveryUIStore)(e => e.game, r.default),
     t = (0, p.useClanDiscoveryUIStore)(e => e.selectedGames, r.default),
     a = (0, p.useClanDiscoveryUIStore)(e => e.setSelectedGames, r.default),

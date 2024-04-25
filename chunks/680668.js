@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("789020");
 var s = n("735250");
 n("470079");
-var l = n("533800"),
-  a = n("481060"),
+var a = n("533800"),
+  l = n("481060"),
   i = n("358555"),
   r = n("131704"),
   o = n("197409"),
@@ -43,7 +43,7 @@ function p(e) {
     j = null != y,
     b = null != y && y.isGuildVocal(),
     B = null != y && y.isGuildStageVoice(),
-    G = (0, d.hasFlag)(null !== (t = M.flags) && void 0 !== t ? t : 0, l.GuildInviteFlags.IS_GUEST_INVITE),
+    G = (0, d.hasFlag)(null !== (t = M.flags) && void 0 !== t ? t : 0, a.GuildInviteFlags.IS_GUEST_INVITE),
     F = null !== (p = null == g ? void 0 : g.hasFeature(m.GuildFeatures.HUB)) && void 0 !== p && p;
   if (null == g) {
     if (null == M.guild) return (0, s.jsx)(_.default, {});
@@ -72,7 +72,7 @@ function p(e) {
         disableBoostClick: !0
       })
     })]
-  }), G && (S = (0, s.jsx)(a.TooltipContainer, {
+  }), G && (S = (0, s.jsx)(l.TooltipContainer, {
     className: I.tooltipContainer,
     text: T.default.Messages.GUEST_MEMBERSHIP_EXPLANATION,
     children: (0, s.jsx)(u.default, {
@@ -122,11 +122,11 @@ function p(e) {
     }), g.hasFeature(m.GuildFeatures.HUB) && (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)("div", {
         className: I.separator
-      }), (0, s.jsx)(a.Text, {
+      }), (0, s.jsx)(l.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
         children: T.default.Messages.HUB_INVITE_ANOTHER_SCHOOL_LINK.format({
-          onClick: () => (0, a.openModalLazy)(async () => {
+          onClick: () => (0, l.openModalLazy)(async () => {
             let {
               default: e
             } = await Promise.all([n.e("49237"), n.e("99387"), n.e("95468"), n.e("75441")]).then(n.bind(n, "650233"));

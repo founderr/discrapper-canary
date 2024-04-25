@@ -24,8 +24,8 @@ var n = a("735250"),
   N = a("30513"),
   v = a("474936"),
   R = a("689938"),
-  O = a("54449"),
-  L = a("1006"),
+  L = a("54449"),
+  O = a("1006"),
   P = a("741160"),
   M = a("829972"),
   x = a("31932"),
@@ -112,7 +112,7 @@ t.default = s.memo(function(e) {
               asset: (0, n.jsx)("img", {
                 alt: "",
                 src: w,
-                className: L.fullWidthImage
+                className: O.fullWidthImage
               }),
               content: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CONTENT.format(),
               buttonCTA: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
@@ -131,7 +131,7 @@ t.default = s.memo(function(e) {
               asset: (0, n.jsx)("img", {
                 alt: "",
                 src: w,
-                className: L.fullWidthImage
+                className: O.fullWidthImage
               }),
               content: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_CONTENT.format(),
               buttonCTA: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS,
@@ -179,7 +179,7 @@ t.default = s.memo(function(e) {
               asset: (0, n.jsx)("img", {
                 alt: "",
                 src: P,
-                className: L.fullWidthImage
+                className: O.fullWidthImage
               }),
               content: e,
               buttonCTA: t,
@@ -200,7 +200,7 @@ t.default = s.memo(function(e) {
         case l.DismissibleContent.GUILD_HEADER_ACTIVE_THREADS_NOTICE:
           return (0, n.jsx)(j, {
             renderPopout: (0, n.jsx)(I.default, {
-              className: O.tooltipOverrideColor,
+              className: L.tooltipOverrideColor,
               header: R.default.Messages.ACTIVE_THREADS_UPSELL_HEADER,
               content: R.default.Messages.ACTIVE_THREADS_UPSELL_CONTENT,
               buttonCTA: R.default.Messages.GOT_IT,
@@ -219,7 +219,7 @@ t.default = s.memo(function(e) {
               asset: (0, n.jsx)("img", {
                 alt: "",
                 src: y,
-                className: L.fullWidthImage
+                className: O.fullWidthImage
               }),
               onClick: () => {
                 _.default.open(s.id, g.GuildSettingsSections.ROLES), _.default.selectRole(s.getEveryoneRoleId(), R.default.Messages.USE_SOUNDBOARD)

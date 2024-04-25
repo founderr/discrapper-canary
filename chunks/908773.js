@@ -2,15 +2,15 @@
 n.r(t);
 var s = n("735250");
 n("470079");
-var l = n("960259"),
-  a = n("8386"),
+var a = n("960259"),
+  l = n("8386"),
   i = n("325767");
-t.default = (0, l.replaceIcon)(function(e) {
+t.default = (0, a.replaceIcon)(function(e) {
   let {
     width: t = 18,
     height: n = 18,
-    color: l = "currentColor",
-    foreground: a,
+    color: a = "currentColor",
+    foreground: l,
     ...r
   } = e;
   return (0, s.jsx)("svg", {
@@ -20,11 +20,11 @@ t.default = (0, l.replaceIcon)(function(e) {
     viewBox: "0 0 18 18",
     children: (0, s.jsx)("polygon", {
       fillRule: "nonzero",
-      className: a,
-      fill: l,
+      className: l,
+      fill: a,
       points: "15 10 10 10 10 15 8 15 8 10 3 10 3 8 8 8 8 3 10 3 10 8 15 8"
     })
   })
-}, a.PlusSmallIcon, void 0, {
+}, l.PlusSmallIcon, void 0, {
   size: 18
 })

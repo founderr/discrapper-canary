@@ -2,8 +2,8 @@
 n.r(t), n("653041"), n("47120");
 var s = n("735250");
 n("470079");
-var l = n("120356"),
-  a = n.n(l),
+var a = n("120356"),
+  l = n.n(a),
   i = n("266067"),
   r = n("613828"),
   o = n("442837"),
@@ -21,9 +21,9 @@ var l = n("120356"),
   N = n("15499");
 t.default = () => {
   var e, t;
-  let l = (0, o.useStateFromStores)([c.default], () => c.default.getGuildId(), []),
-    S = (0, o.useStateFromStores)([d.default], () => d.default.getGuild(l), [l]),
-    C = (0, o.useStateFromStores)([m.default], () => null != l ? m.default.getRequest(l) : null, [l]),
+  let a = (0, o.useStateFromStores)([c.default], () => c.default.getGuildId(), []),
+    S = (0, o.useStateFromStores)([d.default], () => d.default.getGuild(a), [a]),
+    C = (0, o.useStateFromStores)([m.default], () => null != a ? m.default.getRequest(a) : null, [a]),
     A = (0, r.useLocation)(),
     g = (null === (e = (0, i.matchPath)(A.pathname, T.Routes.CHANNEL(null == S ? void 0 : S.id, I.StaticChannelRoute.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
   if (null == S || !S.hasVerificationGate() || g) return null;
@@ -68,7 +68,7 @@ t.default = () => {
       }
   }
   return (0, s.jsxs)("div", {
-    className: a()(...x),
+    className: l()(...x),
     children: [(0, s.jsx)(u.Text, {
       className: h.header,
       variant: "text-sm/normal",

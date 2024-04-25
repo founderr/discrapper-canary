@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("106351"),
-  l = n("131704"),
-  a = n("23750"),
+  a = n("131704"),
+  l = n("23750"),
   i = n("598077"),
   r = n("592125"),
   o = n("375954"),
@@ -22,19 +22,19 @@ function c(e) {
       id: e.authorId,
       username: e.authorSummary
     }),
-    T = new a.default({
+    T = new l.default({
       id: e.messageId,
       channel_id: e.channelId,
       author: m,
       content: e.messageSummary
     }),
-    I = null == e.guildId ? new l.DMChannelRecord({
+    I = null == e.guildId ? new a.DMChannelRecord({
       id: e.channelId,
       type: s.ChannelTypes.DM,
       name: null !== (t = e.channelSummary) && void 0 !== t ? t : "",
       guild_id: d.EMPTY_STRING_SNOWFLAKE_ID,
       recipients: [null !== (n = e.authorId) && void 0 !== n ? n : d.EMPTY_STRING_SNOWFLAKE_ID]
-    }) : new l.GuildTextualChannelRecord({
+    }) : new a.GuildTextualChannelRecord({
       id: e.channelId,
       type: null == e.guildId ? s.ChannelTypes.DM : s.ChannelTypes.GUILD_TEXT,
       name: null !== (c = e.channelSummary) && void 0 !== c ? c : "",

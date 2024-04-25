@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var l = n("120356"),
-  a = n.n(l),
+var a = n("120356"),
+  l = n.n(a),
   i = n("481060"),
   r = n("592125"),
   o = n("944486"),
@@ -48,7 +48,7 @@ function I() {
         })
       })]
     }) : null, (0, s.jsx)(i.Button, {
-      className: a()(m.__invalid_button, m.acceptButton),
+      className: l()(m.__invalid_button, m.acceptButton),
       size: i.Button.Sizes.MIN,
       color: i.Button.Colors.WHITE,
       onClick: () => T(!1),
@@ -59,7 +59,7 @@ function I() {
         children: _.default.Messages.STAGE_SPEAK_INVITE_ACCEPT
       })
     }), (0, s.jsx)(i.Button, {
-      className: a()(m.__invalid_button, m.declineButton),
+      className: l()(m.__invalid_button, m.declineButton),
       look: i.Button.Looks.OUTLINED,
       size: i.Button.Sizes.MIN,
       color: i.Button.Colors.WHITE,

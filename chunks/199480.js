@@ -1,21 +1,21 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return l
   }
 });
 var s = n("735250");
 n("470079");
-var l = n("325767");
+var a = n("325767");
 
-function a(e) {
+function l(e) {
   let {
     color: t = "currentColor",
     foreground: n,
-    ...a
+    ...l
   } = e;
   return (0, s.jsx)("svg", {
-    ...(0, l.default)(a),
+    ...(0, a.default)(l),
     viewBox: "0 0 136 56",
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg",

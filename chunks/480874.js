@@ -34,9 +34,9 @@ function R() {
     a = (0, I.useSpamMessageRequestCount)(),
     l = (0, _.useListHasSingleSpamMessageRequest)(),
     R = (0, d.useIsRejectAllMessageRequestsEnabled)(),
-    O = (0, c.default)("message-requests-spam-list"),
+    L = (0, c.default)("message-requests-spam-list"),
     {
-      channelId: L
+      channelId: O
     } = (0, m.useMessageRequestSidebarState)(),
     P = s.useCallback(() => {
       (0, u.showToast)((0, u.createToast)(N.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, u.ToastType.FAILURE))
@@ -64,14 +64,14 @@ function R() {
       return (0, n.jsx)(T.default, {
         index: r,
         className: i()({
-          [v.selected]: null != L && L === d,
-          [v.siblingSelected]: null != L && L === u
+          [v.selected]: null != O && O === d,
+          [v.siblingSelected]: null != O && O === u
         }),
         channel: o.channel,
         user: o.user,
         hasSingleMessageRequest: l
       }, d)
-    }, [t, l, L]),
+    }, [t, l, O]),
     D = s.useCallback(() => (0, n.jsxs)(E.default, {
       className: v.sectionTitle,
       children: [N.default.Messages.MESSAGE_REQUESTS_SPAM_HEADER.format({
@@ -97,7 +97,7 @@ function R() {
   return 0 === t.length ? (0, n.jsx)(p.default, {
     section: g.MessageRequestSections.SPAM
   }) : (0, n.jsx)(r.ListNavigatorProvider, {
-    navigator: O,
+    navigator: L,
     children: (0, n.jsx)(r.ListNavigatorContainer, {
       children: a => {
         let {

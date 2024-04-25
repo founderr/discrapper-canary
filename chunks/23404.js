@@ -25,7 +25,7 @@ var n = a("735250"),
   v = a("689938"),
   R = a("374145");
 
-function O(e) {
+function L(e) {
   var t;
   let {
     quest: a
@@ -60,7 +60,7 @@ t.default = function(e) {
   var t, a, l;
   let {
     quest: o
-  } = e, c = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(o.id), [o]), [L, P] = s.useState(!1), M = s.useCallback(() => P(!0), []), x = s.useCallback(() => P(!1), []), y = s.useCallback(e => {
+  } = e, c = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(o.id), [o]), [O, P] = s.useState(!1), M = s.useCallback(() => P(!0), []), x = s.useCallback(() => P(!1), []), y = s.useCallback(e => {
     e.stopPropagation()
   }, []), D = s.useCallback(() => {
     (0, h.enrollInQuest)(o.id, {
@@ -103,7 +103,7 @@ t.default = function(e) {
         onMouseLeave: x,
         children: [(0, n.jsxs)("div", {
           className: R.utils,
-          children: [w ? (0, n.jsx)(O, {
+          children: [w ? (0, n.jsx)(L, {
             quest: o
           }) : (0, n.jsx)(p.default, {
             textOpacity: .5
@@ -122,7 +122,7 @@ t.default = function(e) {
             })
           })]
         }), !w && (0, n.jsxs)(n.Fragment, {
-          children: [(0, n.jsx)(O, {
+          children: [(0, n.jsx)(L, {
             quest: o
           }), (0, n.jsx)(u.Text, {
             className: R.instructions,
@@ -133,7 +133,7 @@ t.default = function(e) {
             })
           })]
         }), w && !k && (0, n.jsx)(A.default, {
-          autoplay: L,
+          autoplay: O,
           className: R.rewardTileWithInstructions,
           quest: o,
           questContent: m.QuestContent.ACTIVITY_PANEL

@@ -75,8 +75,8 @@ var n, s = a("729594"),
   N = a("226951"),
   v = a("996106"),
   R = a("863141"),
-  O = a("186901"),
-  L = a("981631");
+  L = a("186901"),
+  O = a("981631");
 let P = null !== (n = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== n ? n : "localhost",
   M = function() {
     let e = P.split(":")[0];
@@ -105,10 +105,10 @@ function j(e) {
 function G(e, t) {
   let a = [],
     n = e.getGuildId();
-  return ![L.ChannelTypes.GUILD_CATEGORY, ...(0, E.GUILD_VOCAL_CHANNEL_TYPES)].includes(e.type) && a.push(new Promise(t => {
+  return ![O.ChannelTypes.GUILD_CATEGORY, ...(0, E.GUILD_VOCAL_CHANNEL_TYPES)].includes(e.type) && a.push(new Promise(t => {
     S.default.whenReady(e.id, () => t()), o.default.fetchMessages({
       channelId: e.id,
-      limit: L.MAX_MESSAGES_PER_CHANNEL
+      limit: O.MAX_MESSAGES_PER_CHANNEL
     })
   })), Promise.all(a).then(() => {
     var a;
@@ -210,14 +210,14 @@ function B(e) {
 
 function H(e, t, a) {
   let n = C.default.getGuild(e.getGuildId());
-  return (null != n ? n.getApplicationId() : e.getApplicationId()) === t || a.indexOf(L.OAuth2Scopes.MESSAGES_READ) > -1
+  return (null != n ? n.getApplicationId() : e.getApplicationId()) === t || a.indexOf(O.OAuth2Scopes.MESSAGES_READ) > -1
 }
 
 function V(e) {
   switch (e) {
-    case L.RTCConnectionStates.RTC_CONNECTED:
-    case L.RTCConnectionStates.RTC_CONNECTING:
-    case L.RTCConnectionStates.RTC_DISCONNECTED:
+    case O.RTCConnectionStates.RTC_CONNECTED:
+    case O.RTCConnectionStates.RTC_CONNECTING:
+    case O.RTCConnectionStates.RTC_DISCONNECTED:
       return e.replace(/^RTC_/, "VOICE_");
     default:
       return e
@@ -232,17 +232,17 @@ function Y(e) {
       party: s
     } = e,
     l = 0;
-  return (a && (l |= L.ActivityFlags.INSTANCE), (null == n ? void 0 : n.join) != null && (l |= L.ActivityFlags.JOIN), t) ? (l |= L.ActivityFlags.EMBEDDED, l |= L.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL) : (((null == s ? void 0 : s.privacy) === L.ActivityPartyPrivacy.PUBLIC || r.Storage.get("ACTIVITIES_FORCE_PUBLIC")) && (f.AllowActivityPartyPrivacyFriends.getSetting() && (l |= L.ActivityFlags.PARTY_PRIVACY_FRIENDS), f.AllowActivityPartyPrivacyVoiceChannel.getSetting() && (l |= L.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL)), l)
+  return (a && (l |= O.ActivityFlags.INSTANCE), (null == n ? void 0 : n.join) != null && (l |= O.ActivityFlags.JOIN), t) ? (l |= O.ActivityFlags.EMBEDDED, l |= O.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL) : (((null == s ? void 0 : s.privacy) === O.ActivityPartyPrivacy.PUBLIC || r.Storage.get("ACTIVITIES_FORCE_PUBLIC")) && (f.AllowActivityPartyPrivacyFriends.getSetting() && (l |= O.ActivityFlags.PARTY_PRIVACY_FRIENDS), f.AllowActivityPartyPrivacyVoiceChannel.getSetting() && (l |= O.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL)), l)
 }
 
 function W(e, t, a) {
-  if (e === L.ActivityActionTypes.JOIN) return null != t && null != t.id && null != a.join;
+  if (e === O.ActivityActionTypes.JOIN) return null != t && null != t.id && null != a.join;
   return !1
 }
 
 function K(e, t, a) {
   return l.HTTP.get({
-    url: L.Endpoints.APPLICATION_RPC(t),
+    url: O.Endpoints.APPLICATION_RPC(t),
     oldFormErrors: !0,
     retries: 3
   }).then(n => {
@@ -257,13 +257,13 @@ function K(e, t, a) {
       }
     } = n;
     if ("string" == typeof a) {
-      if (e.transport === O.TransportTypes.POST_MESSAGE) {
+      if (e.transport === L.TransportTypes.POST_MESSAGE) {
         let e = (0, u.default)(t);
         if (null == e || !j(a, [e])) throw new v.default({
-          closeCode: L.RPCCloseCodes.INVALID_ORIGIN
+          closeCode: O.RPCCloseCodes.INVALID_ORIGIN
         }, "Invalid Origin")
       } else if (!j(a, s)) throw new v.default({
-        closeCode: L.RPCCloseCodes.INVALID_ORIGIN
+        closeCode: O.RPCCloseCodes.INVALID_ORIGIN
       }, "Invalid Origin")
     }
     e.application = {
@@ -275,7 +275,7 @@ function K(e, t, a) {
     }
   }, () => {
     throw new v.default({
-      closeCode: L.RPCCloseCodes.INVALID_CLIENTID
+      closeCode: O.RPCCloseCodes.INVALID_CLIENTID
     }, "Invalid Client ID")
   })
 }
@@ -285,7 +285,7 @@ async function z(e, t) {
 }
 
 function q(e, t) {
-  null == t && (e.authorization.scopes = [O.RPC_LOCAL_SCOPE])
+  null == t && (e.authorization.scopes = [L.RPC_LOCAL_SCOPE])
 }
 
 function Q(e) {
@@ -339,14 +339,14 @@ function Z(e, t) {
 }
 
 function X(e) {
-  if (e !== O.TransportTypes.POST_MESSAGE) throw new v.default({
-    errorCode: L.RPCErrors.INVALID_COMMAND
+  if (e !== L.TransportTypes.POST_MESSAGE) throw new v.default({
+    errorCode: O.RPCErrors.INVALID_COMMAND
   }, 'command not available from "'.concat(e, " transport"))
 }
 
 function J(e) {
   if (null == e.id) throw new v.default({
-    errorCode: L.RPCErrors.INVALID_COMMAND
+    errorCode: O.RPCErrors.INVALID_COMMAND
   }, "Invalid application");
   return e.id
 }

@@ -28,8 +28,8 @@ var n = a("735250"),
   N = a("83200"),
   v = a("634894"),
   R = a("586902"),
-  O = a("1585"),
-  L = a("304761"),
+  L = a("1585"),
+  O = a("304761"),
   P = a("865427"),
   M = a("571250"),
   x = a("628581"),
@@ -82,8 +82,8 @@ var n = a("735250"),
   eN = a("826026"),
   ev = a("937482"),
   eR = a("87888"),
-  eO = a("976401"),
-  eL = a("333454"),
+  eL = a("976401"),
+  eO = a("333454"),
   eP = a("864441"),
   eM = a("26290"),
   ex = a("626135"),
@@ -168,7 +168,7 @@ class eK extends s.PureComponent {
         })
       }), (0, n.jsx)("div", {
         className: eH.panelSubtextContainer,
-        children: (0, n.jsx)(eL.default, {
+        children: (0, n.jsx)(eO.default, {
           children: null != e ? e : s
         })
       })]
@@ -231,7 +231,7 @@ class eK extends s.PureComponent {
     if (null == a) return null;
     let o = (0, ey.getAvatarDecorationURL)({
       avatarDecoration: a.avatarDecoration,
-      size: (0, O.getDecorationSizeForAvatarSize)(m.AvatarSizes.SIZE_32)
+      size: (0, L.getDecorationSizeForAvatarSize)(m.AvatarSizes.SIZE_32)
     });
     return (0, n.jsx)(g.default, {
       object: ew.AnalyticsObjects.AVATAR,
@@ -262,7 +262,7 @@ class eK extends s.PureComponent {
             className: i()(eH.nameTag, {
               [eH.canCopy]: eD.SUPPORTS_COPY
             }),
-            children: r ? (0, n.jsx)(eO.default, {
+            children: r ? (0, n.jsx)(eL.default, {
               tooltipText: null,
               icon: d.isShown ? eA.default : eN.default,
               role: "switch",
@@ -641,9 +641,9 @@ function ez() {
       selfDeaf: T,
       deaf: g
     } = (0, ed.default)(_),
-    O = (0, r.useStateFromStores)([L.default], () => {
+    L = (0, r.useStateFromStores)([O.default], () => {
       var e;
-      return (0, P.probablyHasBuildOverride)() ? null === (e = L.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
+      return (0, P.probablyHasBuildOverride)() ? null === (e = O.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
     M = (0, r.useStateFromStores)([ep.default], () => ep.default.getPremiumTypeSubscription()),
     x = (0, r.useStateFromStores)([e_.default], () => e_.default.getEverSpeakingWhileMuted()),
@@ -733,7 +733,7 @@ function ez() {
     status: c,
     streaming: d,
     suppress: p,
-    webBuildOverride: O,
+    webBuildOverride: L,
     awaitingRemote: U,
     isEligibleForPomelo: b
   })
@@ -755,7 +755,7 @@ function eq(e) {
     color: U.default.STATUS_DANGER,
     className: eH.hasBuildOverride,
     "aria-hidden": !0
-  })), (0, n.jsx)(eO.default, {
+  })), (0, n.jsx)(eL.default, {
     tooltipText: null != t ? eB.default.Messages.USER_SETTINGS_WITH_BUILD_OVERRIDE.format({
       webBuildOverride: t.id
     }) : eB.default.Messages.USER_SETTINGS,
@@ -786,7 +786,7 @@ function eQ(e) {
     play: I,
     events: p
   } = (0, _.useMicrophoneLottie)(C ? "unmute" : "mute"), T = a || l ? c.MicrophoneDenyIcon : S;
-  return s.useEffect(() => () => I(), [C, I]), (0, n.jsx)(eO.default, {
+  return s.useEffect(() => () => I(), [C, I]), (0, n.jsx)(eL.default, {
     tooltipText: r,
     tooltipColor: o,
     tooltipForceOpen: u,
@@ -827,7 +827,7 @@ function eZ(e) {
       onMouseLeave: _
     }
   } = (0, h.useHeadphonesLottie)(u ? "undeafen" : "deafen"), C = a ? d.HeadphonesDenyIcon : c;
-  return s.useEffect(() => () => f(), [u, f]), (0, n.jsx)(eO.default, {
+  return s.useEffect(() => () => f(), [u, f]), (0, n.jsx)(eL.default, {
     tooltipText: (0, M.default)(t, a, l),
     onMouseEnter: E,
     onMouseLeave: _,

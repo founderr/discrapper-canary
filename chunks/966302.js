@@ -28,8 +28,8 @@ var n = a("735250"),
   N = a("136995"),
   v = a("25827"),
   R = a("131951"),
-  O = a("594174"),
-  L = a("451478"),
+  L = a("594174"),
+  O = a("451478"),
   P = a("465670"),
   M = a("421600"),
   x = a("792125"),
@@ -58,7 +58,7 @@ function H(e) {
     header: t
   } = e, a = R.default.getCameraComponent(), l = (0, o.useStateFromStores)([R.default], () => R.default.getVideoDeviceId()), i = (0, I.default)();
   return s.useEffect(() => {
-    let e = O.default.getCurrentUser();
+    let e = L.default.getCurrentUser();
     if (i && null != e) {
       let t = (0, m.getLastUsedVideoBackgroundOption)(e);
       (0, S.applyBackgroundOptionPreview)(t, l, {
@@ -149,7 +149,7 @@ function Y(e) {
     y: a,
     x: l,
     channel: f
-  } = e, [C, m] = s.useState(!1), S = (0, h.getChannelIconURL)(f), I = (0, _.default)(f), [p, T] = (0, o.useStateFromStoresArray)([R.default], () => [R.default.supports(U.Features.VIDEO), Object.keys(R.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([L.default], () => L.default.isFocused()), A = (0, o.useStateFromStores)([y.default], () => y.default.getMode(f.id)), N = s.useCallback(e => {
+  } = e, [C, m] = s.useState(!1), S = (0, h.getChannelIconURL)(f), I = (0, _.default)(f), [p, T] = (0, o.useStateFromStoresArray)([R.default], () => [R.default.supports(U.Features.VIDEO), Object.keys(R.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([O.default], () => O.default.isFocused()), A = (0, o.useStateFromStores)([y.default], () => y.default.getMode(f.id)), N = s.useCallback(e => {
     null != e.top && null != e.left && c.default.move(e.left, e.top)
   }, []), v = (0, r.useSpring)({
     value: C ? 1 : 0,
@@ -164,7 +164,7 @@ function Y(e) {
     };
     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
   }, [f]);
-  let O = A === b.ChannelModes.VIDEO && p && T > 0,
+  let L = A === b.ChannelModes.VIDEO && p && T > 0,
     P = (0, n.jsxs)(n.Fragment, {
       children: [(0, n.jsx)(M.default, {
         className: G.icon,
@@ -187,7 +187,7 @@ function Y(e) {
         })]
       })]
     }),
-    D = O ? k : F;
+    D = L ? k : F;
   return (0, n.jsx)(E.default, {
     className: G.wrapper,
     selector: ".".concat(G.root),
@@ -216,10 +216,10 @@ function Y(e) {
           className: G.mainChannelInfo,
           children: P
         }), (0, n.jsx)(V, {
-          canVideo: O,
+          canVideo: L,
           channel: f,
           numVideoDevices: T
-        }), O && !C ? (0, n.jsx)(u.Button, {
+        }), L && !C ? (0, n.jsx)(u.Button, {
           size: u.Button.Sizes.SMALL,
           fullWidth: !0,
           look: u.Button.Looks.LINK,
