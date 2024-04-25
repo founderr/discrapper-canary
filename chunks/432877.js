@@ -14,7 +14,7 @@ function l(e, t, n) {
     configurable: !0,
     writable: !0
   }) : e[t] = n, e
-}(s = i || (i = {}))[s.MESSAGING = 0] = "MESSAGING", s[s.OVERLAYS = 1] = "OVERLAYS";
+}(s = i || (i = {}))[s.MESSAGING = 0] = "MESSAGING", s[s.OVERLAYS = 1] = "OVERLAYS", s[s.PREMIUM = 2] = "PREMIUM";
 let u = {
     visual_effect_view_overrides: {
       label: "Blur view overrides for designers to test with",
@@ -35,6 +35,10 @@ let u = {
     send_fail_100: {
       label: "Send: Fail with 500 status",
       category: 0
+    },
+    premium_roadblocks: {
+      label: "Enable all new premium roadblocks",
+      category: 2
     }
   },
   d = {};
