@@ -1,37 +1,37 @@
 "use strict";
-a.r(t), a.d(t, {
+r.r(t), r.d(t, {
   renderStreams: function() {
-    return C
+    return y
   },
   renderTwoColumns: function() {
     return h
   }
-}), a("653041"), a("47120");
-var r = a("735250");
-a("470079");
-var n = a("120356"),
-  i = a.n(n),
-  l = a("481060"),
-  s = a("763520"),
-  o = a("131951"),
-  d = a("226961"),
-  u = a("285952"),
-  c = a("40300"),
-  m = a("513547"),
-  f = a("299552"),
-  p = a("794711");
+}), r("653041"), r("47120");
+var a = r("735250");
+r("470079");
+var n = r("120356"),
+  i = r.n(n),
+  s = r("481060"),
+  l = r("763520"),
+  o = r("131951"),
+  d = r("226961"),
+  u = r("285952"),
+  c = r("40300"),
+  m = r("513547"),
+  f = r("299552"),
+  p = r("794711");
 
 function h(e) {
   let t = [],
-    a = 0;
-  for (e.length % 2 != 0 && e.push((0, r.jsx)(u.default, {
+    r = 0;
+  for (e.length % 2 != 0 && e.push((0, a.jsx)(u.default, {
       basis: "50%",
       grow: 0
-    }, a++)); e.length > 0;) t.push((0, r.jsx)(u.default, {
+    }, r++)); e.length > 0;) t.push((0, a.jsx)(u.default, {
     basis: "50%",
     grow: 0,
     children: e.splice(0, 2)
-  }, a++));
+  }, r++));
   return t
 }
 let g = {
@@ -39,39 +39,39 @@ let g = {
   codec: 2
 };
 
-function C(e, t, a, n) {
+function y(e, t, r, n) {
   return e.map(e => {
     let u = [];
     for (let t of Object.keys(e).sort((e, t) => {
-        let a = g[e],
-          r = g[t];
-        if (a !== r) return void 0 === a ? 1 : void 0 === r ? -1 : a - r;
+        let r = g[e],
+          a = g[t];
+        if (r !== a) return void 0 === r ? 1 : void 0 === a ? -1 : r - a;
         return d.graphs[e] !== d.graphs[t] ? d.graphs[e] ? 1 : -1 : e > t ? 1 : -1
       })) {
       let n = e[t];
-      !m.hidden[t] && void 0 !== n && u.push((0, r.jsx)(m.Item, {
-        section: a,
+      !m.hidden[t] && void 0 !== n && u.push((0, a.jsx)(m.Item, {
+        section: r,
         label: t,
         value: n
       }, t))
     }
-    return (0, r.jsxs)(l.FormSection, {
+    return (0, a.jsxs)(s.FormSection, {
       className: p.marginBottom40,
       title: e.type,
       titleClassName: f.sectionHeader,
-      children: ["video" === e.type && null != t && null != a && null != n && function(e, t, a, n) {
-        let l = n.get(t, a, e.ssrc);
-        return null != l ? (0, r.jsx)("div", {
+      children: ["video" === e.type && null != t && null != r && null != n && function(e, t, r, n) {
+        let s = n.get(t, r, e.ssrc);
+        return null != s ? (0, a.jsx)("div", {
           className: i()(f.videoWrapper, p.marginBottom40),
-          children: (0, r.jsx)(c.default, {
-            streamId: l,
+          children: (0, a.jsx)(c.default, {
+            streamId: s,
             videoComponent: o.default.getMediaEngine().Video,
             paused: !1,
-            videoSpinnerContext: s.VideoSpinnerContext.REPLAY_VIDEO_STREAM,
-            userId: a
+            videoSpinnerContext: l.VideoSpinnerContext.REPLAY_VIDEO_STREAM,
+            userId: r
           })
         }) : null
-      }(e, t, a, n), h(u)]
+      }(e, t, r, n), h(u)]
     }, "".concat(e.type, " + ").concat(e.ssrc))
   })
 }

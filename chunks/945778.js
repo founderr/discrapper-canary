@@ -1,23 +1,23 @@
 "use strict";
-a.r(t), a.d(t, {
+r.r(t), r.d(t, {
   default: function() {
-    return s
+    return l
   }
 });
-var r = a("735250");
-a("470079");
-var n = a("238246"),
-  i = a("153731"),
-  l = a("689938");
+var a = r("735250");
+r("470079");
+var n = r("238246"),
+  i = r("153731"),
+  s = r("689938");
 
-function s(e) {
+function l(e) {
   let {
     windowKey: t
   } = e;
-  return (0, r.jsx)(n.default, {
+  return (0, a.jsx)(n.default, {
     withTitleBar: !0,
     windowKey: t,
-    title: l.default.Messages.RTC_DEBUG_POPOUT_WINDOW_TITLE,
-    children: (0, r.jsx)(i.default, {})
+    title: s.default.Messages.RTC_DEBUG_POPOUT_WINDOW_TITLE,
+    children: (0, a.jsx)(i.default, {})
   })
 }

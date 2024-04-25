@@ -1,25 +1,25 @@
 "use strict";
-s.r(t), s.d(t, {
+t.r(n), t.d(n, {
   default: function() {
     return a
   }
-}), s("47120");
-var n = s("470079"),
-  r = s("881052");
+}), t("47120");
+var l = t("470079"),
+  i = t("881052");
 
-function a(e, t) {
-  let [s, a] = n.useState(!1), [l, u] = n.useState(null);
+function a(e, n) {
+  let [t, a] = l.useState(!1), [s, r] = l.useState(null);
   return [async () => {
-    a(!0), u(null);
+    a(!0), r(null);
     try {
-      let t = await e();
-      return a(!1), u(null), t
-    } catch (s) {
-      let e = new r.APIError(s);
-      return null == t || t(e), u(e), a(!1), null
+      let n = await e();
+      return a(!1), r(null), n
+    } catch (t) {
+      let e = new i.APIError(t);
+      return null == n || n(e), r(e), a(!1), null
     }
   }, {
-    loading: s,
-    error: l
+    loading: t,
+    error: s
   }]
 }

@@ -1,139 +1,139 @@
 "use strict";
-let n;
-s.r(t), s.d(t, {
+let l;
+n.r(t), n.d(t, {
   RowTypes: function() {
-    return r
+    return u
   },
   generateRowsForQuery: function() {
-    return A
+    return U
   },
   getMostRecentDMedUser: function() {
-    return V
+    return R
   },
   getUsersAlreadyJoined: function() {
     return P
   },
   maxAgeString: function() {
-    return D
+    return y
   }
-}), s("653041"), s("47120");
-var r, a, l = s("317381"),
-  u = s("592125"),
-  i = s("271383"),
-  I = s("306680"),
-  d = s("699516"),
-  _ = s("594174"),
-  o = s("55589"),
-  f = s("483360"),
-  c = s("981631"),
-  E = s("245335"),
-  N = s("689938");
-n = s("603617"), (a = r || (r = {})).GROUP_DM = "GROUP_DM", a.DM = "DM", a.FRIEND = "FRIEND", a.CHANNEL = "CHANNEL";
-let S = (e, t) => null != e && i.default.isMember(e, t),
-  T = e => {
+}), n("653041"), n("47120");
+var u, s, a = n("317381"),
+  r = n("592125"),
+  i = n("271383"),
+  I = n("306680"),
+  o = n("699516"),
+  d = n("594174"),
+  _ = n("55589"),
+  T = n("483360"),
+  E = n("981631"),
+  f = n("245335"),
+  c = n("689938");
+l = n("603617"), (s = u || (u = {})).GROUP_DM = "GROUP_DM", s.DM = "DM", s.FRIEND = "FRIEND", s.CHANNEL = "CHANNEL";
+let N = (e, t) => null != e && i.default.isMember(e, t),
+  S = e => {
     let {
       omitUserIds: t,
-      suggestedUserIds: s,
-      maxRowsWithoutQuery: n,
-      omitGuildId: r,
-      shownUserIds: a,
-      rows: l,
-      counts: u
+      suggestedUserIds: n,
+      maxRowsWithoutQuery: l,
+      omitGuildId: u,
+      shownUserIds: s,
+      rows: a,
+      counts: r
     } = e;
-    if (null != s)
-      for (let e of s) {
-        if (null != n && n > 0 && l.length >= n) break;
-        if (t.has(e) || a.has(e)) continue;
-        let s = _.default.getUser(e);
-        !(null == s || S(r, s.id)) && (a.add(s.id), l.push({
+    if (null != n)
+      for (let e of n) {
+        if (null != l && l > 0 && a.length >= l) break;
+        if (t.has(e) || s.has(e)) continue;
+        let n = d.default.getUser(e);
+        !(null == n || N(u, n.id)) && (s.add(n.id), a.push({
           type: "FRIEND",
-          item: s,
+          item: n,
           isSuggested: !0
-        }), u.numFriends++)
+        }), r.numFriends++)
       }
   },
   O = e => {
     let {
       suggestedChannelIds: t,
-      maxRowsWithoutQuery: s,
-      rows: n,
-      counts: r
+      maxRowsWithoutQuery: n,
+      rows: l,
+      counts: u
     } = e;
     if (null != t)
       for (let e of t) {
-        if (null != s && s > 0 && n.length >= s) break;
-        let t = u.default.getChannel(e);
-        null != t && (n.push({
+        if (null != n && n > 0 && l.length >= n) break;
+        let t = r.default.getChannel(e);
+        null != t && (l.push({
           type: "CHANNEL",
           item: t,
           isSuggested: !0
-        }), r.numChannels++)
+        }), u.numChannels++)
       }
   },
-  h = e => {
+  m = e => {
     let {
       omitUserIds: t,
-      maxRowsWithoutQuery: s,
-      omitGuildId: n,
-      shownUserIds: r,
-      rows: a,
-      counts: l,
+      maxRowsWithoutQuery: n,
+      omitGuildId: l,
+      shownUserIds: u,
+      rows: s,
+      counts: a,
       includeGroupDms: i,
-      limit: d
-    } = e, f = 0;
-    for (let e of o.default.getPrivateChannelIds()) {
-      if (null != s && s > 0 && a.length >= s || null != d && f >= d) break;
-      let o = u.default.getChannel(e);
-      if (null == o || !o.isPrivate()) continue;
-      if (i && o.type === c.ChannelTypes.GROUP_DM) {
-        a.push({
+      limit: o
+    } = e, T = 0;
+    for (let e of _.default.getPrivateChannelIds()) {
+      if (null != n && n > 0 && s.length >= n || null != o && T >= o) break;
+      let _ = r.default.getChannel(e);
+      if (null == _ || !_.isPrivate()) continue;
+      if (i && _.type === E.ChannelTypes.GROUP_DM) {
+        s.push({
           type: "GROUP_DM",
-          item: o,
+          item: _,
           isSuggested: !1
-        }), l.numGroupDms++, f++;
+        }), a.numGroupDms++, T++;
         continue
       }
-      if (null == I.default.lastMessageId(o.id)) continue;
-      let E = o.getRecipientId();
-      if (null != E && !t.has(E) && !r.has(E)) {
-        let e = _.default.getUser(E);
-        if (null == e || e.bot || S(n, e.id)) continue;
-        r.add(e.id), a.push({
+      if (null == I.default.lastMessageId(_.id)) continue;
+      let f = _.getRecipientId();
+      if (null != f && !t.has(f) && !u.has(f)) {
+        let e = d.default.getUser(f);
+        if (null == e || e.bot || N(l, e.id)) continue;
+        u.add(e.id), s.push({
           type: "DM",
           item: e,
           isSuggested: !1
-        }), l.numDms++, f++
+        }), a.numDms++, T++
       }
     }
   },
   g = e => {
     let {
       omitUserIds: t,
-      maxRowsWithoutQuery: s,
-      omitGuildId: n,
-      shownUserIds: r,
-      rows: a,
-      counts: l
+      maxRowsWithoutQuery: n,
+      omitGuildId: l,
+      shownUserIds: u,
+      rows: s,
+      counts: a
     } = e;
-    for (let e of d.default.getFriendIDs()) {
-      if (null != s && s > 0 && a.length >= s) break;
-      if (t.has(e) || r.has(e)) continue;
-      let u = _.default.getUser(e);
-      !(null == u || S(n, u.id)) && (a.push({
+    for (let e of o.default.getFriendIDs()) {
+      if (null != n && n > 0 && s.length >= n) break;
+      if (t.has(e) || u.has(e)) continue;
+      let r = d.default.getUser(e);
+      !(null == r || N(l, r.id)) && (s.push({
         type: "FRIEND",
-        item: u,
+        item: r,
         isSuggested: !1
-      }), l.numFriends++)
+      }), a.numFriends++)
     }
   },
-  M = e => {
+  h = e => {
     let {
       query: t,
-      rows: s,
-      counts: n,
-      inviteTargetType: r
+      rows: n,
+      counts: l,
+      inviteTargetType: u
     } = e;
-    r === E.InviteTargetTypes.EMBEDDED_APPLICATION && f.default.queryChannels({
+    u === f.InviteTargetTypes.EMBEDDED_APPLICATION && T.default.queryChannels({
       query: t,
       limit: 3,
       guildId: void 0
@@ -141,44 +141,44 @@ let S = (e, t) => null != e && i.default.isMember(e, t),
       let {
         record: t
       } = e;
-      s.push({
+      n.push({
         type: "CHANNEL",
         item: t,
         isSuggested: !1
-      }), n.numChannels++
+      }), l.numChannels++
     })
   },
-  p = e => {
+  M = e => {
     let {
       query: t,
-      omitUserIds: s,
-      shownUserIds: n,
-      rows: r,
-      counts: a
+      omitUserIds: n,
+      shownUserIds: l,
+      rows: u,
+      counts: s
     } = e;
-    f.default.queryDMUsers({
+    T.default.queryDMUsers({
       query: t,
       limit: 50
     }).forEach(e => {
       let {
         record: t
       } = e;
-      if (s.has(t.id)) return;
-      let l = u.default.getDMFromUserId(t.id);
-      if (null != l) null != I.default.lastMessageId(l) && (n.add(t.id), r.push({
+      if (n.has(t.id)) return;
+      let a = r.default.getDMFromUserId(t.id);
+      if (null != a) null != I.default.lastMessageId(a) && (l.add(t.id), u.push({
         type: "DM",
         item: t,
         isSuggested: !1
-      }), a.numDms++)
+      }), s.numDms++)
     })
   },
-  m = e => {
+  p = e => {
     let {
       query: t,
-      rows: s,
-      counts: n
+      rows: n,
+      counts: l
     } = e;
-    f.default.queryGroupDMs({
+    T.default.queryGroupDMs({
       query: t,
       limit: 50,
       fuzzy: !1
@@ -186,22 +186,22 @@ let S = (e, t) => null != e && i.default.isMember(e, t),
       let {
         record: t
       } = e;
-      s.push({
+      n.push({
         type: "GROUP_DM",
         item: t,
         isSuggested: !1
-      }), n.numGroupDms++
+      }), l.numGroupDms++
     })
   },
-  v = e => {
+  D = e => {
     let {
       query: t,
-      rows: s,
-      counts: n,
-      omitUserIds: r,
-      shownUserIds: a
+      rows: n,
+      counts: l,
+      omitUserIds: u,
+      shownUserIds: s
     } = e;
-    f.default.queryFriends({
+    T.default.queryFriends({
       query: t,
       limit: 500,
       _fuzzy: !1
@@ -209,24 +209,24 @@ let S = (e, t) => null != e && i.default.isMember(e, t),
       let {
         record: t
       } = e;
-      !(r.has(t.id) || a.has(t.id)) && (a.add(t.id), s.push({
+      !(u.has(t.id) || s.has(t.id)) && (s.add(t.id), n.push({
         type: "FRIEND",
         item: t,
         isSuggested: !1
-      }), n.numFriends++)
+      }), l.numFriends++)
     })
   };
 
-function A(e) {
+function U(e) {
   let {
     query: t,
-    inviteTargetType: s,
-    omitUserIds: n,
-    suggestedUserIds: r,
-    suggestedChannelIds: a,
-    maxRowsWithoutQuery: l,
-    omitGuildId: u
-  } = e, i = new Set, I = [], d = {
+    inviteTargetType: n,
+    omitUserIds: l,
+    suggestedUserIds: u,
+    suggestedChannelIds: s,
+    maxRowsWithoutQuery: a,
+    omitGuildId: r
+  } = e, i = new Set, I = [], o = {
     numFriends: 0,
     numDms: 0,
     numGroupDms: 0,
@@ -235,24 +235,24 @@ function A(e) {
   };
   if ("" === t) {
     let e = {
-      omitUserIds: n,
-      maxRowsWithoutQuery: l,
-      omitGuildId: u,
+      omitUserIds: l,
+      maxRowsWithoutQuery: a,
+      omitGuildId: r,
       shownUserIds: i,
       rows: I,
-      counts: d
+      counts: o
     };
-    s === E.InviteTargetTypes.EMBEDDED_APPLICATION && (h({
+    n === f.InviteTargetTypes.EMBEDDED_APPLICATION && (m({
       ...e,
       includeGroupDms: !1,
       limit: 1
     }), O({
       ...e,
-      suggestedChannelIds: a
-    })), T({
+      suggestedChannelIds: s
+    })), S({
       ...e,
-      suggestedUserIds: r
-    }), h({
+      suggestedUserIds: u
+    }), m({
       ...e,
       includeGroupDms: !0
     }), g(e)
@@ -260,35 +260,35 @@ function A(e) {
     let e = {
       query: t,
       rows: I,
-      counts: d
+      counts: o
     };
-    s === E.InviteTargetTypes.EMBEDDED_APPLICATION && M({
+    n === f.InviteTargetTypes.EMBEDDED_APPLICATION && h({
       ...e,
-      inviteTargetType: s
-    }), p({
+      inviteTargetType: n
+    }), M({
       ...e,
-      omitUserIds: n,
+      omitUserIds: l,
       shownUserIds: i
-    }), m(e), v({
+    }), p(e), D({
       ...e,
-      omitUserIds: n,
+      omitUserIds: l,
       shownUserIds: i
     })
   }
   return {
     rows: I,
-    counts: d
+    counts: o
   }
 }
 
-function V(e, t) {
-  for (let s of o.default.getPrivateChannelIds()) {
-    let n = u.default.getChannel(s);
-    if (null == n || !n.isDM() || null == I.default.lastMessageId(n.id)) continue;
-    let r = n.getRecipientId();
-    if (null != r && !e.has(r)) {
-      let e = _.default.getUser(r);
-      if (null == e || e.bot || S(t, e.id)) continue;
+function R(e, t) {
+  for (let n of _.default.getPrivateChannelIds()) {
+    let l = r.default.getChannel(n);
+    if (null == l || !l.isDM() || null == I.default.lastMessageId(l.id)) continue;
+    let u = l.getRecipientId();
+    if (null != u && !e.has(u)) {
+      let e = d.default.getUser(u);
+      if (null == e || e.bot || N(t, e.id)) continue;
       return e
     }
   }
@@ -298,104 +298,104 @@ function V(e, t) {
 function P(e) {
   let {
     channel: t,
-    inviteTargetType: s,
-    applicationId: n
+    inviteTargetType: n,
+    applicationId: l
   } = e;
-  if (s === E.InviteTargetTypes.EMBEDDED_APPLICATION) {
+  if (n === f.InviteTargetTypes.EMBEDDED_APPLICATION) {
     if (null != t) {
-      for (let e of l.default.getEmbeddedActivitiesForChannel(t.id))
-        if (e.applicationId === n) return new Set(e.userIds)
+      for (let e of a.default.getEmbeddedActivitiesForChannel(t.id))
+        if (e.applicationId === l) return new Set(e.userIds)
     }
   }
   return new Set
 }
-let R = {
+let A = {
     MINUTES: "minutes",
     HOURS: "hours",
     DAYS: "days",
     NEVER: "never"
   },
-  U = {
-    [n.INVITE_OPTIONS_30_MINUTES.value]: {
+  C = {
+    [l.INVITE_OPTIONS_30_MINUTES.value]: {
       value: 30,
-      type: R.MINUTES
+      type: A.MINUTES
     },
-    [n.INVITE_OPTIONS_1_HOUR.value]: {
+    [l.INVITE_OPTIONS_1_HOUR.value]: {
       value: 1,
-      type: R.HOURS
+      type: A.HOURS
     },
-    [n.INVITE_OPTIONS_6_HOURS.value]: {
+    [l.INVITE_OPTIONS_6_HOURS.value]: {
       value: 6,
-      type: R.HOURS
+      type: A.HOURS
     },
-    [n.INVITE_OPTIONS_12_HOURS.value]: {
+    [l.INVITE_OPTIONS_12_HOURS.value]: {
       value: 12,
-      type: R.HOURS
+      type: A.HOURS
     },
-    [n.INVITE_OPTIONS_1_DAY.value]: {
+    [l.INVITE_OPTIONS_1_DAY.value]: {
       value: 1,
-      type: R.DAYS
+      type: A.DAYS
     },
-    [n.INVITE_OPTIONS_7_DAYS.value]: {
+    [l.INVITE_OPTIONS_7_DAYS.value]: {
       value: 7,
-      type: R.DAYS
+      type: A.DAYS
     },
-    [n.INVITE_OPTIONS_FOREVER.value]: {
+    [l.INVITE_OPTIONS_FOREVER.value]: {
       value: 0,
-      type: R.NEVER
+      type: A.NEVER
     }
   };
 
-function D(e, t) {
-  let s = parseInt(t, 10),
-    n = 0 === s,
-    r = U[e].value;
-  switch (U[e].type) {
-    case R.MINUTES:
-      if (n) return N.default.Messages.INVITE_EXPIRES_MINUTES;
-      return N.default.Messages.INVITE_EXPIRES_MINUTES_OR_USES.format({
-        numUses: s
+function y(e, t) {
+  let n = parseInt(t, 10),
+    l = 0 === n,
+    u = C[e].value;
+  switch (C[e].type) {
+    case A.MINUTES:
+      if (l) return c.default.Messages.INVITE_EXPIRES_MINUTES;
+      return c.default.Messages.INVITE_EXPIRES_MINUTES_OR_USES.format({
+        numUses: n
       });
-    case R.HOURS:
-      if (n) return N.default.Messages.INVITE_EXPIRES_HOURS.format({
-        numHours: r
+    case A.HOURS:
+      if (l) return c.default.Messages.INVITE_EXPIRES_HOURS.format({
+        numHours: u
       });
-      return N.default.Messages.INVITE_EXPIRES_HOURS_OR_USES.format({
-        numHours: r,
-        numUses: s
+      return c.default.Messages.INVITE_EXPIRES_HOURS_OR_USES.format({
+        numHours: u,
+        numUses: n
       });
-    case R.DAYS:
-      if (n) return N.default.Messages.INVITE_EXPIRES_DAYS_PLURAL.format({
-        numDays: r
+    case A.DAYS:
+      if (l) return c.default.Messages.INVITE_EXPIRES_DAYS_PLURAL.format({
+        numDays: u
       });
-      return N.default.Messages.INVITE_EXPIRES_DAYS_OR_USES_PLURAL.format({
-        numDays: r,
-        numUses: s
+      return c.default.Messages.INVITE_EXPIRES_DAYS_OR_USES_PLURAL.format({
+        numDays: u,
+        numUses: n
       });
-    case R.NEVER:
-      if (n) return N.default.Messages.INVITE_EXPIRES_NEVER;
-      return N.default.Messages.INVITE_EXPIRES_USES.format({
-        numUses: s
+    case A.NEVER:
+      if (l) return c.default.Messages.INVITE_EXPIRES_NEVER;
+      return c.default.Messages.INVITE_EXPIRES_USES.format({
+        numUses: n
       });
     default:
       return ""
   }
 }
 t.default = {
-  getMaxAgeOptions: n.MAX_AGE_OPTIONS,
-  getMaxUsesOptions: n.MAX_USES_OPTIONS,
-  INVITE_OPTIONS_FOREVER: n.INVITE_OPTIONS_FOREVER,
-  INVITE_OPTIONS_1_DAY: n.INVITE_OPTIONS_1_DAY,
-  INVITE_OPTIONS_7_DAYS: n.INVITE_OPTIONS_7_DAYS,
-  INVITE_OPTIONS_12_HOURS: n.INVITE_OPTIONS_12_HOURS,
-  INVITE_OPTIONS_6_HOURS: n.INVITE_OPTIONS_6_HOURS,
-  INVITE_OPTIONS_1_HOUR: n.INVITE_OPTIONS_1_HOUR,
-  INVITE_OPTIONS_30_MINUTES: n.INVITE_OPTIONS_30_MINUTES,
-  INVITE_OPTIONS_UNLIMITED: n.INVITE_OPTIONS_UNLIMITED,
-  INVITE_OPTIONS_ONCE: n.INVITE_OPTIONS_ONCE,
-  INVITE_OPTIONS_5_TIMES: n.INVITE_OPTIONS_5_TIMES,
-  INVITE_OPTIONS_10_TIMES: n.INVITE_OPTIONS_10_TIMES,
-  INVITE_OPTIONS_25_TIMES: n.INVITE_OPTIONS_25_TIMES,
-  INVITE_OPTIONS_50_TIMES: n.INVITE_OPTIONS_50_TIMES,
-  INVITE_OPTIONS_100_TIMES: n.INVITE_OPTIONS_100_TIMES
+  getMaxAgeOptions: l.MAX_AGE_OPTIONS,
+  getMaxUsesOptions: l.MAX_USES_OPTIONS,
+  INVITE_OPTIONS_FOREVER: l.INVITE_OPTIONS_FOREVER,
+  INVITE_OPTIONS_1_DAY: l.INVITE_OPTIONS_1_DAY,
+  INVITE_OPTIONS_7_DAYS: l.INVITE_OPTIONS_7_DAYS,
+  INVITE_OPTIONS_12_HOURS: l.INVITE_OPTIONS_12_HOURS,
+  INVITE_OPTIONS_6_HOURS: l.INVITE_OPTIONS_6_HOURS,
+  INVITE_OPTIONS_1_HOUR: l.INVITE_OPTIONS_1_HOUR,
+  INVITE_OPTIONS_30_MINUTES: l.INVITE_OPTIONS_30_MINUTES,
+  INVITE_OPTIONS_UNLIMITED: l.INVITE_OPTIONS_UNLIMITED,
+  INVITE_OPTIONS_ONCE: l.INVITE_OPTIONS_ONCE,
+  INVITE_OPTIONS_5_TIMES: l.INVITE_OPTIONS_5_TIMES,
+  INVITE_OPTIONS_10_TIMES: l.INVITE_OPTIONS_10_TIMES,
+  INVITE_OPTIONS_25_TIMES: l.INVITE_OPTIONS_25_TIMES,
+  INVITE_OPTIONS_50_TIMES: l.INVITE_OPTIONS_50_TIMES,
+  INVITE_OPTIONS_100_TIMES: l.INVITE_OPTIONS_100_TIMES
 }

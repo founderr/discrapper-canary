@@ -25,8 +25,8 @@ var a = n("442837"),
   _ = n("854698"),
   x = n("405613"),
   I = n("460838"),
-  p = n("462179"),
-  S = n("981631");
+  S = n("462179"),
+  p = n("981631");
 
 function T(e) {
   var t;
@@ -38,8 +38,8 @@ function T(e) {
     className: j,
     isNew: G
   } = e, {
-    id: k,
-    guild_id: y,
+    id: y,
+    guild_id: k,
     channel_id: A,
     creator_id: D,
     name: R,
@@ -47,32 +47,32 @@ function T(e) {
     entity_type: U,
     image: V,
     recurrence_rule: b
-  } = n, F = (0, _.getNextRecurrenceIdInEvent)(n), O = (0, a.useStateFromStores)([g.default], () => g.default.isInterestedInEventRecurrence(k, F), [k, F]), H = (0, a.useStateFromStores)([u.default], () => u.default.isLurking(y), [y]), w = (0, a.useStateFromStores)([s.default], () => s.default.getStageInstanceByChannel(A), [A]), B = (0, a.useStateFromStores)([r.default], () => r.default.getChannel(A), [A]), z = (0, a.useStateFromStores)([f.default], () => f.default.getUser(D), [D]), {
+  } = n, F = (0, _.getNextRecurrenceIdInEvent)(n), O = (0, a.useStateFromStores)([g.default], () => g.default.isInterestedInEventRecurrence(y, F), [y, F]), w = (0, a.useStateFromStores)([u.default], () => u.default.isLurking(k), [k]), H = (0, a.useStateFromStores)([s.default], () => s.default.getStageInstanceByChannel(A), [A]), B = (0, a.useStateFromStores)([r.default], () => r.default.getChannel(A), [A]), z = (0, a.useStateFromStores)([f.default], () => f.default.getUser(D), [D]), {
     speakers: J
   } = (0, h.default)({
     id: A,
     data: {
       guild: null,
-      instance: w,
+      instance: H,
       speakers: [],
       participantCount: 0
     },
     context: {
-      guildId: y,
-      instance: w
+      guildId: k,
+      instance: H
     }
-  }), Y = (0, a.useStateFromStores)([c.default], () => c.default.getChannelId()), K = (0, g.isGuildScheduledEventActive)(n), X = Y === A && null != Y && K, q = J.filter(e => e.type === d.StageChannelParticipantTypes.VOICE), W = q.length, Z = (0, a.useStateFromStores)([o.default], () => o.default.can(S.Permissions.CONNECT, B), [B]), Q = (0, v.default)(n), {
+  }), Y = (0, a.useStateFromStores)([c.default], () => c.default.getChannelId()), K = (0, g.isGuildScheduledEventActive)(n), X = Y === A && null != Y && K, q = J.filter(e => e.type === d.StageChannelParticipantTypes.VOICE), W = q.length, Z = (0, a.useStateFromStores)([o.default], () => o.default.can(p.Permissions.CONNECT, B), [B]), Q = (0, v.default)(n), {
     isMember: $,
     guild: ee
-  } = (0, m.default)(y, k), et = (0, p.default)({
+  } = (0, m.default)(k, y), et = (0, S.default)({
     guild: ee,
     channel: B,
     guildScheduledEvent: n,
     isActive: K,
     recurrenceId: F,
     onActionTaken: M
-  }), en = (0, i.default)(T), el = H ? void 0 : e => (0, E.openGuildEventDetails)({
-    eventId: k,
+  }), en = (0, i.default)(T), el = w ? void 0 : e => (0, E.openGuildEventDetails)({
+    eventId: y,
     parentGuildId: T,
     recurrenceId: e
   });
@@ -87,7 +87,7 @@ function T(e) {
     imageSource: null != V ? (0, x.default)(n) : void 0,
     imageLocation: I.GuildEventBodyImageLocation.THUMBNAIL,
     isActive: K,
-    isUserLurking: H,
+    isUserLurking: w,
     isJoined: X,
     isMember: $,
     isHub: en,
@@ -101,7 +101,7 @@ function T(e) {
     onClick: el,
     truncate: L,
     isNew: G,
-    guildEventId: k,
+    guildEventId: y,
     recurrenceRule: (0, N.recurrenceRuleFromServer)(b),
     recurrenceId: F
   })
