@@ -72036,6 +72036,10 @@ html .invoiceCancelRow_aa7946 {
     margin-bottom: 24px
 }
 
+.fullWidthField_d2f4b3 {
+    grid-column: 1/-1
+}
+
 .fieldsVertical_c3133b {
     display: grid;
     grid-gap: 16px;
