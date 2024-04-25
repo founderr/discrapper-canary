@@ -315,6 +315,7 @@ function V(e) {
       }), (0, a.jsx)(o.TabBar.Panel, {
         id: c,
         "aria-label": T,
+        className: M.panel,
         children: null != f && p > 0 ? (0, a.jsx)(w, {
           message: l,
           reaction: f,
