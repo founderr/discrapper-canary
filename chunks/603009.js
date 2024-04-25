@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return L
+    return y
   }
 }), n("47120");
 var a = n("735250"),
@@ -22,41 +22,43 @@ var a = n("735250"),
   g = n("626135"),
   S = n("963202"),
   _ = n("905362"),
-  T = n("940725"),
-  I = n("114487"),
-  A = n("979264"),
-  v = n("981631"),
-  N = n("921944"),
-  x = n("689938"),
-  M = n("801303");
+  T = n("353093"),
+  I = n("940725"),
+  A = n("114487"),
+  v = n("979264"),
+  N = n("981631"),
+  x = n("921944"),
+  M = n("689938"),
+  R = n("801303");
 
-function R(e) {
+function L(e) {
+  var t;
   let {
-    guild: t,
-    showToast: n,
-    onConfirm: s,
-    onDismiss: o
-  } = e, [m, p] = l.useState(!1), E = l.useRef(null), [g, _] = l.useState(0), T = (0, S.useIsInUserClanExperiment)(), v = l.useCallback(e => {
+    guild: n,
+    showToast: s,
+    onConfirm: o,
+    onDismiss: m
+  } = e, [p, E] = l.useState(!1), g = l.useRef(null), [_, I] = l.useState(0), N = (0, S.useIsInUserClanExperiment)(), x = l.useCallback(e => {
     let t = e.target.getBoundingClientRect();
-    _(window.innerWidth - t.right)
-  }, []), N = (0, f.useResizeObserver)(v), R = (0, c.useStateFromStores)([h.default], () => h.default.useReducedMotion);
+    I(window.innerWidth - t.right)
+  }, []), L = (0, f.useResizeObserver)(x), y = (0, c.useStateFromStores)([h.default], () => h.default.useReducedMotion);
   l.useLayoutEffect(() => {
     var e;
-    if (null == E.current) return;
-    let t = null === (e = E.current) || void 0 === e ? void 0 : e.parentNode;
+    if (null == g.current) return;
+    let t = null === (e = g.current) || void 0 === e ? void 0 : e.parentNode;
     return null != t && (t.style.zIndex = "1003"), () => {
       null != t && (t.style.zIndex = "1002")
     }
   }, []);
-  let L = l.useCallback(e => {
+  let O = l.useCallback(e => {
+      e.stopPropagation(), e.preventDefault(), m()
+    }, [m]),
+    j = l.useCallback(e => {
       e.stopPropagation(), e.preventDefault(), o()
     }, [o]),
-    y = l.useCallback(e => {
-      e.stopPropagation(), e.preventDefault(), s()
-    }, [s]),
-    O = (0, r.useTransition)(n, {
+    P = (0, r.useTransition)(s, {
       from: {
-        transform: R ? "translateY(0)" : "translateY(16px)",
+        transform: y ? "translateY(0)" : "translateY(16px)",
         opacity: 0,
         pointerEvents: "none"
       },
@@ -66,7 +68,7 @@ function R(e) {
         pointerEvents: "all"
       },
       leave: {
-        transform: R ? "translateY(0)" : "translateY(16px)",
+        transform: y ? "translateY(0)" : "translateY(16px)",
         opacity: 0,
         pointerEvents: "none"
       },
@@ -78,40 +80,43 @@ function R(e) {
       },
       delay: 200
     });
-  return T ? (0, a.jsxs)(a.Fragment, {
+  if (!N) return null;
+  let b = (0, T.getClanBadgeUrl)(n.id, null === (t = n.clan) || void 0 === t ? void 0 : t.badge);
+  return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
-      ref: N,
-      className: i()(M.positionTracker)
+      ref: L,
+      className: i()(R.positionTracker)
     }), (0, a.jsx)(C.default, {
-      children: O((e, n) => {
+      children: P((e, t) => {
         var l;
-        return n && (0, a.jsx)(r.animated.div, {
-          onMouseEnter: () => p(!0),
-          onMouseLeave: () => p(!1),
-          className: i()(M.wrapper),
+        return t && (0, a.jsx)(r.animated.div, {
+          onMouseEnter: () => E(!0),
+          onMouseLeave: () => E(!1),
+          className: i()(R.wrapper),
           style: {
             ...e,
-            right: g + 12
+            right: _ + 12
           },
-          ref: E,
+          ref: g,
           children: (0, a.jsx)(d.ClickableContainer, {
-            "aria-label": x.default.Messages.CLAN_USER_ADOPT_TAG_UPSELL_ARIA_LABEL.format({
-              guildName: t.name
+            "aria-label": M.default.Messages.CLAN_USER_ADOPT_TAG_UPSELL_ARIA_LABEL.format({
+              guildName: n.name
             }),
-            onClick: y,
+            onClick: j,
             children: (0, a.jsxs)("div", {
-              className: i()(M.toastContainerInner, m ? M.hovered : null),
+              className: i()(R.toastContainerInner, p ? R.hovered : null),
               children: [(0, a.jsxs)("div", {
-                className: M.guildIconContainer,
-                children: [(0, a.jsx)(I.default, {
-                  guild: t,
+                className: R.guildIconContainer,
+                children: [(0, a.jsx)(A.default, {
+                  guild: n,
                   iconSize: 64,
-                  className: M.icon
+                  className: R.icon
                 }), (0, a.jsx)("div", {
-                  className: M.guildTagContainer,
-                  children: (0, a.jsx)(A.BaseClanTagChiplet, {
-                    clanTag: null === (l = t.clan) || void 0 === l ? void 0 : l.tag,
-                    className: M.guildClanTag
+                  className: R.guildTagContainer,
+                  children: (0, a.jsx)(v.BaseClanTagChiplet, {
+                    clanTag: null === (l = n.clan) || void 0 === l ? void 0 : l.tag,
+                    clanBadge: b,
+                    className: R.guildClanTag
                   })
                 })]
               }), (0, a.jsxs)("div", {
@@ -119,21 +124,21 @@ function R(e) {
                   children: (0, a.jsx)(d.Heading, {
                     variant: "heading-md/bold",
                     color: "header-primary",
-                    children: x.default.Messages.CLAN_USER_ADOPT_TAG_UPSELL_TITLE.format({
-                      guildName: t.name
+                    children: M.default.Messages.CLAN_USER_ADOPT_TAG_UPSELL_TITLE.format({
+                      guildName: n.name
                     })
                   })
                 }), (0, a.jsx)("div", {
                   children: (0, a.jsx)(d.Text, {
                     variant: "text-sm/medium",
                     color: "header-secondary",
-                    children: x.default.Messages.CLAN_USER_ADOPT_TAG_UPSELL_DESCRIPTION
+                    children: M.default.Messages.CLAN_USER_ADOPT_TAG_UPSELL_DESCRIPTION
                   })
                 })]
               }), (0, a.jsx)("div", {
                 children: (0, a.jsx)(d.Clickable, {
-                  className: M.toastButton,
-                  onClick: L,
+                  className: R.toastButton,
+                  onClick: O,
                   children: (0, a.jsx)(u.CloseSmallBoldIcon, {
                     width: 20,
                     height: 20
@@ -145,15 +150,15 @@ function R(e) {
         })
       })
     })]
-  }) : null
+  })
 }
 
-function L(e) {
-  let {} = e, t = (0, c.useStateFromStores)([E.default], () => E.default.getGuildId()), n = (0, T.useShouldShowUserClanTagUpsell)(t), s = (0, c.useStateFromStores)([p.default], () => p.default.getGuild(t), [t]), [i, r] = l.useState(!1), u = l.useRef(null), d = (0, S.useIsInUserClanExperiment)();
+function y(e) {
+  let {} = e, t = (0, c.useStateFromStores)([E.default], () => E.default.getGuildId()), n = (0, I.useShouldShowUserClanTagUpsell)(t), s = (0, c.useStateFromStores)([p.default], () => p.default.getGuild(t), [t]), [i, r] = l.useState(!1), u = l.useRef(null), d = (0, S.useIsInUserClanExperiment)();
   l.useEffect(() => (n && (u.current = window.setTimeout(() => {
-    r(!0), g.default.track(v.AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN, {
+    r(!0), g.default.track(N.AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN, {
       type: o.DismissibleGuildContent[o.DismissibleGuildContent.ADOPT_CLAN_IDENTITY_NOTICE],
-      guild_id: null != t ? t : v.EMPTY_STRING_SNOWFLAKE_ID
+      guild_id: null != t ? t : N.EMPTY_STRING_SNOWFLAKE_ID
     })
   }, 2500)), () => {
     null != u.current && window.clearTimeout(u.current)
@@ -162,9 +167,9 @@ function L(e) {
       r(!1), null != t && (0, _.openAdoptClanIdentityModal)(t)
     }, [, t]),
     h = l.useCallback(() => {
-      r(!1), null != t && (0, m.markContentAsDismissed)(o.DismissibleGuildContent.ADOPT_CLAN_IDENTITY_NOTICE, null != t ? t : v.EMPTY_STRING_SNOWFLAKE_ID, !0, N.ContentDismissActionType.DISMISS)
+      r(!1), null != t && (0, m.markContentAsDismissed)(o.DismissibleGuildContent.ADOPT_CLAN_IDENTITY_NOTICE, null != t ? t : N.EMPTY_STRING_SNOWFLAKE_ID, !0, x.ContentDismissActionType.DISMISS)
     }, [t]);
-  return d && n && null != t && null != s ? (0, a.jsx)(R, {
+  return d && n && null != t && null != s ? (0, a.jsx)(L, {
     guild: s,
     onConfirm: f,
     onDismiss: h,

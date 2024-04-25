@@ -19,7 +19,7 @@ t.default = n.memo(function() {
     t = n.useMemo(() => new Map(e.map(e => [e.id, e])), [e]),
     s = (0, l.useStateFromStores)([o.default], () => {
       var e;
-      return (0, c.getGuildIdFromUserClan)(null === (e = o.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan)
+      return (0, c.getUserClanData)(null === (e = o.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan).guildId
     }),
     d = n.useMemo(() => e.map(e => ({
       label: e.name,
