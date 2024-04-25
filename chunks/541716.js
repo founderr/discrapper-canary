@@ -313,6 +313,10 @@ let o = {
     users: {
       allowMentioning: !0
     },
+    autocomplete: {
+      alwaysUseLayer: !0,
+      small: !0
+    },
     submit: {
       useDisabledStylesOnSubmit: !0,
       clearOnSubmit: !0

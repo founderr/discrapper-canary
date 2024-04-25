@@ -102,7 +102,8 @@ t.default = r.forwardRef(function(e, t) {
   });
   return null != B ? (0, i.jsx)(b, {
     children: (0, i.jsx)(u.ReferencePositionLayer, {
-      reference: () => B,
+      targetRef: e.targetRef,
+      overrideTargetRect: B,
       positionKey: k,
       position: null !== (O = e.position) && void 0 !== O ? O : "top",
       align: "left",

@@ -525,6 +525,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
           focused: eU,
           expressionPickerView: tG,
           type: eP,
+          targetRef: e5,
           editorRef: e9,
           onSendMessage: tm,
           onSendSticker: tL,
