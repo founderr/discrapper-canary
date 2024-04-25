@@ -135,7 +135,8 @@ function Y(e) {
             V(!0), setTimeout(() => {
               B(!1), C()
             }, 600)
-          }
+          },
+          interactionType: F.ContentInventoryInteractionTypes.REACTION_EMOJI_REACT_SENT
         })
       }
       null != N && (N.insertEmoji(e, !1, !1), N.focus())
@@ -148,29 +149,32 @@ function Y(e) {
         t = _.default.getChannel(e);
       i()(null != t, "DM channel must be defined"), a = t
     }
+    let l = a.type === w.ChannelTypes.DM ? F.ContentInventoryInteractionTypes.DM_REACTION_MESSAGE_SENT : F.ContentInventoryInteractionTypes.CHANNEL_REACTION_MESSAGE_SENT;
     return X({
       reply: e,
       sendToChannel: a,
-      onComplete: C
+      onComplete: C,
+      interactionType: l
     })
   }, X = async e => {
     let {
       reply: n,
       sendToChannel: a,
-      onComplete: l
-    } = e, r = await s(a.id);
-    i()(null != r, "Reaction image must be defined"), await (0, p.sendReply)({
-      file: r,
+      onComplete: l,
+      interactionType: r
+    } = e, o = await s(a.id);
+    i()(null != o, "Reaction image must be defined"), await (0, p.sendReply)({
+      file: o,
       channel: a,
       altText: h,
       reply: n
-    });
-    let o = a.type === w.ChannelTypes.DM ? F.ContentInventoryInteractionTypes.DM_REACTION_MESSAGE_SENT : F.ContentInventoryInteractionTypes.CHANNEL_REACTION_MESSAGE_SENT;
-    (0, j.trackInteraction)(o, {
+    }), (0, j.trackInteraction)(r, {
       entry: g,
       channelId: t.id,
       guildId: t.guild_id,
-      requestId: S
+      requestId: S,
+      destinationChannelId: a.id,
+      destinationGuildId: a.guild_id
     }), null == l || l()
   };
   return (0, a.jsxs)("div", {
@@ -182,12 +186,14 @@ function Y(e) {
       shown: D,
       className: H.toastContainer
     }), P ? (0, a.jsx)(b.default, {
-      children: (0, a.jsx)("div", {
+      children: (0, a.jsxs)("div", {
         className: H.emojiHotrailShareToChannel,
-        children: (0, a.jsx)(z, {
+        children: [(0, a.jsx)(z, {
           channel: t,
           onClickSuggestion: Z
-        })
+        }), (0, a.jsx)(m.ReactionPickerButton, {
+          onSelectEmoji: Z
+        })]
       })
     }) : (0, a.jsx)("div", {
       className: H.emojiHotrailShareToChannel,
@@ -224,8 +230,7 @@ function Y(e) {
             t = window.innerHeight;
           return e.top < t / 2 ? "bottom" : "top"
         })(),
-        channel: I ? t : void 0,
-        showEmojiButton: !0
+        channel: I ? t : void 0
       })]
     })]
   })
@@ -234,7 +239,7 @@ let z = e => {
   let {
     channel: t,
     onClickSuggestion: n
-  } = e, l = (0, C.useFrequentlyUsedEmojis)(t.guild_id).slice(0, 6).map(e => null == e.id ? {
+  } = e, l = (0, C.useFrequentlyUsedEmojis)(t.guild_id).slice(0, 5).map(e => null == e.id ? {
     emoji: e,
     url: e.url
   } : {
@@ -275,23 +280,32 @@ let z = e => {
 
 function K(e) {
   let {
-    entry: t
+    entry: t,
+    requestId: n,
+    channel: l
   } = e, {
-    showJoinButton: n
+    showJoinButton: s
   } = R.VoiceEnrichmentsExperiment.useExperiment({
     location: "popout_join_prompt"
   }), {
-    channel: l
-  } = (0, y.default)(t), s = (0, r.useStateFromStores)([I.default], () => I.default.getUser(t.author_id));
-  return n && null != l && null != s ? (0, a.jsx)("div", {
+    channel: i
+  } = (0, y.default)(t), o = (0, r.useStateFromStores)([I.default], () => I.default.getUser(t.author_id));
+  return s && null != i && null != o ? (0, a.jsx)("div", {
     className: H.joinPromptContainer,
     children: (0, a.jsx)(c.Button, {
       fullWidth: !0,
       onClick: () => {
-        (0, g.transitionToGuild)(l.guild_id), h.default.selectVoiceChannel(l.id)
+        (0, j.trackInteraction)(F.ContentInventoryInteractionTypes.VOICE_CHANNEL_JOINED, {
+          requestId: n,
+          entry: t,
+          channelId: l.id,
+          guildId: l.guild_id,
+          destinationChannelId: i.id,
+          destinationGuildId: i.guild_id
+        }), (0, g.transitionToGuild)(i.guild_id), h.default.selectVoiceChannel(i.id)
       },
       children: k.default.Messages.CONTENT_INVENTORY_JOIN_LIVE_CHANNEL.format({
-        channelName: l.name
+        channelName: i.name
       })
     })
   }) : null

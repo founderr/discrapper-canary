@@ -60,7 +60,9 @@ t.default = e => {
         requestId: E
       }), (0, a.jsx)(h.PopoutJoinPrompt, {
         entry: n,
-        user: S
+        user: S,
+        requestId: E,
+        channel: t
       })]
     })]
   })
