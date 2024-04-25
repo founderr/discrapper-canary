@@ -30,41 +30,41 @@ function y(e) {
     locationObject: n,
     onActivityItemSelected: y,
     embeddedActivitiesManager: S,
-    assetNames: _ = ["embedded_cover"],
-    backgroundResolution: b = 250
+    assetNames: I = ["embedded_cover"],
+    backgroundResolution: _ = 250
   } = e, {
-    analyticsLocations: h
+    analyticsLocations: b
   } = (0, d.default)(), {
-    application: I,
-    activity: g
-  } = t, T = g.client_platform_config[(0, f.default)((0, u.getOS)())], N = null != T.label_until && Date.now() < Date.parse(T.label_until), C = (0, A.default)({
-    applicationId: I.id,
-    size: b,
-    names: _
-  }), D = null != g.activity_preview_video_asset_id ? (0, p.default)(I.id, g.activity_preview_video_asset_id) : null, L = (0, v.default)(), w = (0, E.default)(), O = (0, s.default)(i).find(e => {
+    application: g,
+    activity: h
+  } = t, T = h.client_platform_config[(0, f.default)((0, u.getOS)())], N = null != T.label_until && Date.now() < Date.parse(T.label_until), C = (0, A.default)({
+    applicationId: g.id,
+    size: _,
+    names: I
+  }), D = null != h.activity_preview_video_asset_id ? (0, p.default)(g.id, h.activity_preview_video_asset_id) : null, L = (0, v.default)(), w = (0, E.default)(), O = (0, s.default)(i).find(e => {
     let {
       embeddedActivity: t
     } = e;
-    return I.id === t.applicationId
+    return g.id === t.applicationId
   }), F = "START", M = () => {
     (0, c.default)({
-      activityItem: t,
+      targetApplicationId: t.application.id,
       currentEmbeddedApplication: w,
       locationObject: n,
       guildId: l,
       channelId: null == i ? void 0 : i.id,
       embeddedActivitiesManager: S,
-      analyticsLocations: h
+      analyticsLocations: b
     }).then(e => e && (null == y ? void 0 : y({
-      applicationId: I.id
+      applicationId: g.id
     })))
   };
-  null != i && (null == L ? void 0 : L.channelId) === i.id && (null == w ? void 0 : w.id) === I.id ? (F = "LEAVE", M = () => {
+  null != i && (null == L ? void 0 : L.channelId) === i.id && (null == w ? void 0 : w.id) === g.id ? (F = "LEAVE", M = () => {
     !o.default.isLaunchingActivity() && (S.leaveActivity({
       channelId: i.id,
-      applicationId: I.id
+      applicationId: g.id
     }), null == y || y({
-      applicationId: I.id
+      applicationId: g.id
     }))
   }) : null != O && (F = "JOIN", M = () => {
     !o.default.isLaunchingActivity() && (0, r.default)({
@@ -73,9 +73,9 @@ function y(e) {
       activityChannelId: null == i ? void 0 : i.id,
       locationObject: n,
       embeddedActivitiesManager: S,
-      analyticsLocations: h
+      analyticsLocations: b
     }).then(e => e && (null == y ? void 0 : y({
-      applicationId: I.id
+      applicationId: g.id
     })))
   });
   let U = t.activity.client_platform_config[(0, f.default)((0, u.getOS)())].release_phase,

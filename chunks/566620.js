@@ -1,43 +1,43 @@
 "use strict";
 n.r(t), n.d(t, {
   disconnectEmbeddedActivity: function() {
-    return M
-  },
-  dismissNewActivityIndicator: function() {
-    return B
-  },
-  fetchDeveloperApplications: function() {
-    return y
-  },
-  fetchShelf: function() {
-    return b
-  },
-  launchEmbeddedActivity: function() {
-    return D
-  },
-  sendEmbeddedActivityInvite: function() {
-    return G
-  },
-  sendEmbeddedActivityInviteUser: function() {
-    return w
-  },
-  startEmbeddedActivity: function() {
-    return L
-  },
-  stopEmbeddedActivity: function() {
-    return v
-  },
-  updateActivityPanelMode: function() {
-    return V
-  },
-  updateFocusedActivityLayout: function() {
-    return x
-  },
-  uploadImageAttachment: function() {
     return P
   },
-  validateTestMode: function() {
+  dismissNewActivityIndicator: function() {
+    return V
+  },
+  fetchDeveloperApplications: function() {
+    return U
+  },
+  fetchShelf: function() {
+    return w
+  },
+  launchEmbeddedActivity: function() {
+    return M
+  },
+  sendEmbeddedActivityInvite: function() {
+    return B
+  },
+  sendEmbeddedActivityInviteUser: function() {
     return k
+  },
+  startEmbeddedActivity: function() {
+    return v
+  },
+  stopEmbeddedActivity: function() {
+    return y
+  },
+  updateActivityPanelMode: function() {
+    return F
+  },
+  updateFocusedActivityLayout: function() {
+    return H
+  },
+  uploadImageAttachment: function() {
+    return b
+  },
+  validateTestMode: function() {
+    return x
   }
 }), n("47120");
 var i = n("990547"),
@@ -48,56 +48,69 @@ var i = n("990547"),
   l = n("447543"),
   u = n("904245"),
   d = n("479531"),
-  _ = n("812206"),
-  c = n("358221"),
-  E = n("188597"),
-  I = n("973616"),
-  T = n("314897"),
-  f = n("592125"),
-  S = n("944486"),
-  h = n("594174"),
-  A = n("823379"),
-  m = n("573261"),
-  N = n("317381"),
-  p = n("844797"),
-  O = n("672181"),
-  R = n("917107"),
-  C = n("981631"),
-  g = n("245335");
+  _ = n("812236"),
+  c = n("812206"),
+  E = n("358221"),
+  I = n("188597"),
+  T = n("973616"),
+  f = n("314897"),
+  S = n("592125"),
+  h = n("944486"),
+  A = n("594174"),
+  m = n("823379"),
+  N = n("573261"),
+  p = n("317381"),
+  O = n("844797"),
+  R = n("672181"),
+  C = n("917107"),
+  g = n("981631"),
+  L = n("674563"),
+  D = n("245335");
 
-function L(e, t, n) {
-  let i = T.default.getId(),
-    r = N.default.getSelfEmbeddedActivityForChannel(e),
-    a = N.default.getEmbeddedActivitiesForChannel(e).find(e => e.applicationId === t && e.userIds.has(i));
-  null != r ? v({
+function v(e, t, n) {
+  let i = f.default.getId(),
+    r = p.default.getSelfEmbeddedActivityForChannel(e),
+    a = p.default.getEmbeddedActivitiesForChannel(e).find(e => e.applicationId === t && e.userIds.has(i));
+  null != r ? y({
     channelId: e,
     applicationId: r.applicationId,
     showFeedback: !1
-  }) : null != a && M(e, t, !0), s.default.dispatch({
+  }) : null != a && P(e, t, !0), s.default.dispatch({
     type: "EMBEDDED_ACTIVITY_OPEN",
     channelId: e,
     applicationId: t,
     analyticsLocations: n
-  }), (0, R.default)(e) ? (o.default.selectParticipant(e, t), o.default.updateLayout(e, C.ChannelLayouts.NO_CHAT)) : (0, O.default)(e)
+  }), (0, C.default)(e) ? (o.default.selectParticipant(e, t), o.default.updateLayout(e, g.ChannelLayouts.NO_CHAT)) : (0, R.default)(e)
 }
-async function D(e) {
+async function M(e) {
   var t, n;
-  let r = f.default.getChannel(e),
+  let r = S.default.getChannel(e),
     a = null !== (t = null == r ? void 0 : r.getGuildId()) && void 0 !== t ? t : void 0;
   if (null == a && !(null !== (n = null == r ? void 0 : r.isPrivate()) && void 0 !== n && n)) return;
-  let o = N.default.getSelfEmbeddedActivityForChannel(e);
+  let o = p.default.getSelfEmbeddedActivityForChannel(e);
   if (null === o) return;
-  let l = T.default.getSessionId();
+  let l = f.default.getSessionId();
   try {
     s.default.dispatch({
       type: "EMBEDDED_ACTIVITY_LAUNCH_START",
       embeddedActivity: o
-    }), (0, p.isActivityInTextStart)(e, o.applicationId, S.default, f.default) ? await (0, E.executePrimaryEntryPointInteraction)({
-      applicationId: o.applicationId,
-      channelId: e,
-      guildId: a
-    }) : await m.default.post({
-      url: C.Endpoints.ACTIVITY_CHANNEL_LAUNCH(e, o.applicationId),
+    });
+    let t = L.INSTALL_LESS_APP_IDS.includes(o.applicationId);
+    if ((0, O.isActivityInTextStart)(e, o.applicationId, h.default, S.default) || t) {
+      let t;
+      try {
+        t = await (0, _.default)(e, o.applicationId)
+      } catch (e) {
+        if (e.message !== _.NO_PRIMARY_APP_COMMAND_ERROR) throw e
+      }
+      await (0, I.executePrimaryEntryPointInteraction)({
+        applicationId: o.applicationId,
+        channelId: e,
+        guildId: a,
+        command: t
+      })
+    } else await N.default.post({
+      url: g.Endpoints.ACTIVITY_CHANNEL_LAUNCH(e, o.applicationId),
       body: {
         session_id: l,
         guild_id: null != a ? a : void 0
@@ -113,7 +126,8 @@ async function D(e) {
       },
       retries: 3,
       oldFormErrors: !0
-    }), s.default.dispatch({
+    });
+    s.default.dispatch({
       type: "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS",
       applicationId: o.applicationId
     })
@@ -123,7 +137,7 @@ async function D(e) {
       guildId: a,
       applicationId: o.applicationId,
       error: new d.default(t)
-    }), v({
+    }), y({
       channelId: e,
       applicationId: o.applicationId,
       showFeedback: !1
@@ -131,13 +145,13 @@ async function D(e) {
   }
 }
 
-function v(e) {
+function y(e) {
   var t, n;
   let {
     channelId: i,
     applicationId: r,
     showFeedback: a = !0
-  } = e, l = N.default.getSelfEmbeddedActivityForChannel(i);
+  } = e, l = p.default.getSelfEmbeddedActivityForChannel(i);
   s.default.dispatch({
     type: "EMBEDDED_ACTIVITY_CLOSE",
     channelId: i,
@@ -146,12 +160,12 @@ function v(e) {
     instanceId: null == l ? void 0 : l.instanceId,
     showFeedback: a
   });
-  let u = c.default.getSelectedParticipantId(i),
-    d = null === (n = h.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
-  null != N.default.getEmbeddedActivitiesForChannel(i).find(e => e.applicationId === r) && null != d && "" !== d && u === r && o.default.selectParticipant(i, null)
+  let u = E.default.getSelectedParticipantId(i),
+    d = null === (n = A.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
+  null != p.default.getEmbeddedActivitiesForChannel(i).find(e => e.applicationId === r) && null != d && "" !== d && u === r && o.default.selectParticipant(i, null)
 }
 
-function M(e, t) {
+function P(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   s.default.dispatch({
     type: "EMBEDDED_ACTIVITY_DISCONNECT",
@@ -160,18 +174,18 @@ function M(e, t) {
     isRejoiningFromCurrentSession: n
   })
 }
-async function y() {
+async function U() {
   try {
     s.default.dispatch({
       type: "DEVELOPER_ACTIVITY_SHELF_FETCH_START"
     });
     let e = (await r.HTTP.get({
-      url: C.Endpoints.APPLICATIONS,
+      url: g.Endpoints.APPLICATIONS,
       query: {
         with_team_applications: !0
       },
       oldFormErrors: !0
-    })).body.map(e => I.default.createFromServer(e));
+    })).body.map(e => T.default.createFromServer(e));
     s.default.dispatch({
       type: "DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS",
       items: e
@@ -182,13 +196,13 @@ async function y() {
     })
   }
 }
-async function P(e, t, n) {
+async function b(e, t, n) {
   try {
     s.default.dispatch({
       type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_START"
     });
     let i = await r.HTTP.post({
-      url: C.Endpoints.APPLICATION_UPLOAD_ATTACHMENT(e),
+      url: g.Endpoints.APPLICATION_UPLOAD_ATTACHMENT(e),
       query: {
         channel_id: t
       },
@@ -207,26 +221,26 @@ async function P(e, t, n) {
     }), new d.default(e)
   }
 }
-let U = (e, t, n) => {
+let G = (e, t, n) => {
   let {
     guildId: i
   } = n;
   (i === e || null == i && null == e) && t()
 };
-async function b(e) {
+async function w(e) {
   var t, n, r, a;
   let {
     guildId: o,
     force: l = !1
-  } = e, u = N.default.getShelfActivities(o), d = u.map(e => _.default.getApplication(e.application_id)).filter(A.isNotNullish);
-  if (!l && !N.default.shouldFetchShelf(o)) {
-    if (null === (t = N.default.getShelfFetchStatus(o)) || void 0 === t ? void 0 : t.isFetching) {
+  } = e, u = p.default.getShelfActivities(o), d = u.map(e => c.default.getApplication(e.application_id)).filter(m.isNotNullish);
+  if (!l && !p.default.shouldFetchShelf(o)) {
+    if (null === (t = p.default.getShelfFetchStatus(o)) || void 0 === t ? void 0 : t.isFetching) {
       let e, t;
       let n = new Promise(t => {
-          e = U.bind(null, o, t), s.default.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS", e)
+          e = G.bind(null, o, t), s.default.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS", e)
         }),
         i = new Promise(e => {
-          t = U.bind(null, o, e), s.default.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL", t)
+          t = G.bind(null, o, e), s.default.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL", t)
         });
       await Promise.race([n, i]), null != e && (s.default.unsubscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS", e), e = null), null != t && (s.default.unsubscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL", t), t = null)
     }
@@ -243,8 +257,8 @@ async function b(e) {
     let e = void 0 !== o && "" !== o ? {
         guild_id: o
       } : void 0,
-      t = await m.default.get({
-        url: C.Endpoints.ACTIVITY_SHELF,
+      t = await N.default.get({
+        url: g.Endpoints.ACTIVITY_SHELF,
         query: e,
         trackedActionData: {
           event: i.NetworkActionNames.EMBEDDED_ACTIVITIES_FETCH_SHELF,
@@ -269,7 +283,7 @@ async function b(e) {
       applications: u
     }), {
       activityConfigs: l,
-      applications: u.map(e => I.default.createFromServer(e))
+      applications: u.map(e => T.default.createFromServer(e))
     }
   } catch (e) {
     return s.default.dispatch({
@@ -281,40 +295,40 @@ async function b(e) {
     }
   }
 }
-async function G(e) {
+async function B(e) {
   let {
     activityChannelId: t,
     invitedChannelId: n,
     applicationId: i,
     location: r
   } = e, s = await l.default.createInvite(t, {
-    target_type: g.InviteTargetTypes.EMBEDDED_APPLICATION,
+    target_type: D.InviteTargetTypes.EMBEDDED_APPLICATION,
     target_application_id: i
   }, r);
-  null != f.default.getChannel(n) && u.default.sendInvite(n, s.code, r, null)
+  null != S.default.getChannel(n) && u.default.sendInvite(n, s.code, r, null)
 }
-async function w(e) {
+async function k(e) {
   let {
     channelId: t,
     applicationId: n,
     userId: i,
     location: r
   } = e, s = await l.default.createInvite(t, {
-    target_type: g.InviteTargetTypes.EMBEDDED_APPLICATION,
+    target_type: D.InviteTargetTypes.EMBEDDED_APPLICATION,
     target_application_id: n
   }, r);
   a.default.ensurePrivateChannel(i).then(e => {
-    null != f.default.getChannel(e) && u.default.sendInvite(e, s.code, r, null)
+    null != S.default.getChannel(e) && u.default.sendInvite(e, s.code, r, null)
   })
 }
 
-function B() {
+function V() {
   s.default.dispatch({
     type: "EMBEDDED_ACTIVITY_DISMISS_NEW_INDICATOR"
   })
 }
-async function k(e) {
-  let t = C.Endpoints.ACTIVITY_TEST_MODE(e);
+async function x(e) {
+  let t = g.Endpoints.ACTIVITY_TEST_MODE(e);
   try {
     return await r.HTTP.get({
       url: t,
@@ -325,14 +339,14 @@ async function k(e) {
   }
 }
 
-function V(e) {
+function F(e) {
   s.default.dispatch({
     type: "EMBEDDED_ACTIVITY_SET_PANEL_MODE",
     activityPanelMode: e
   })
 }
 
-function x(e) {
+function H(e) {
   s.default.dispatch({
     type: "EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT",
     focusedActivityLayout: e
