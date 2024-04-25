@@ -15,57 +15,60 @@ var u = n("735250"),
   M = n("606669"),
   m = n("53432"),
   p = n("603094"),
-  T = n("308512"),
-  I = n("594791"),
-  h = n("393431"),
-  _ = n("981631"),
-  g = n("689938");
+  T = n("828064"),
+  I = n("308512"),
+  h = n("594791"),
+  _ = n("393431"),
+  g = n("981631"),
+  C = n("689938");
 t.default = (0, o.default)(function(e) {
   let {
     webBuildOverride: t,
     onSelect: n
-  } = e, [o, d] = r.useState(!1), C = (0, T.default)(), x = (0, m.default)(), v = (0, M.default)(), R = (0, h.default)(), L = (0, I.default)(), j = (0, p.default)(), {
-    analyticsLocations: A
-  } = (0, c.default)(), b = r.useMemo(() => (0, S.getRecentBuildOverrides)(), []);
-  async function O() {
+  } = e, [o, d] = r.useState(!1), x = (0, T.default)(), v = (0, I.default)(), R = (0, m.default)(), j = (0, M.default)(), L = (0, _.default)(), b = (0, h.default)(), A = (0, p.default)(), {
+    analyticsLocations: O
+  } = (0, c.default)(), N = r.useMemo(() => (0, S.getRecentBuildOverrides)(), []);
+  async function y() {
     try {
       d(!0), await (0, f.clearBuildOverride)(), window.location.reload(!0)
     } catch (e) {
       d(!1)
     }
   }
-  let N = e => {
+  let k = e => {
       switch (e) {
-        case _.UserSettingsSections.STREAMER_MODE:
-          return C;
-        case _.UserSettingsSections.APPEARANCE:
+        case g.UserSettingsSections.GAMES:
           return x;
-        case _.UserSettingsSections.ACCESSIBILITY:
+        case g.UserSettingsSections.STREAMER_MODE:
           return v;
-        case _.UserSettingsSections.VOICE:
+        case g.UserSettingsSections.APPEARANCE:
           return R;
-        case _.UserSettingsSections.TEXT:
-          return L;
-        case _.UserSettingsSections.EXPERIMENTS:
+        case g.UserSettingsSections.ACCESSIBILITY:
           return j;
+        case g.UserSettingsSections.VOICE:
+          return L;
+        case g.UserSettingsSections.TEXT:
+          return b;
+        case g.UserSettingsSections.EXPERIMENTS:
+          return A;
         default:
           return null
       }
     },
-    y = (0, E.default)().filter(e => {
+    G = (0, E.default)().filter(e => {
       let {
         section: t
       } = e;
       return t !== i.SectionTypes.HEADER && t !== i.SectionTypes.CUSTOM && t !== i.SectionTypes.DIVIDER && "logout" !== t
     }).filter(e => null == e.predicate || e.predicate());
   return (0, u.jsx)(c.AnalyticsLocationProvider, {
-    value: A,
+    value: O,
     children: (0, u.jsxs)(a.Menu, {
       navId: "user-settings-cog",
       onClose: s.closeContextMenu,
-      "aria-label": g.default.Messages.USER_SETTINGS_ACTIONS_MENU_LABEL,
+      "aria-label": C.default.Messages.USER_SETTINGS_ACTIONS_MENU_LABEL,
       onSelect: n,
-      children: [y.map(e => {
+      children: [G.map(e => {
         let {
           section: t,
           label: n,
@@ -75,18 +78,18 @@ t.default = (0, o.default)(function(e) {
           id: s,
           label: n,
           action: () => null != r ? r() : function(e, t) {
-            let n = Object.values(_.UserSettingsSections).filter(t => t === e)[0];
+            let n = Object.values(g.UserSettingsSections).filter(t => t === e)[0];
             null != n && l.default.open(n, void 0, {
               analyticsLocations: t
             })
-          }(t, A),
-          children: N(t)
+          }(t, O),
+          children: k(t)
         }, s)
-      }), e.user.isStaff() && b.length > 0 ? (0, u.jsx)(a.MenuItem, {
+      }), e.user.isStaff() && N.length > 0 ? (0, u.jsx)(a.MenuItem, {
         label: "Build overrides",
         id: "build_overrides",
         children: (0, u.jsx)(a.MenuGroup, {
-          children: b.map(e => (0, u.jsx)(a.MenuRadioItem, {
+          children: N.map(e => (0, u.jsx)(a.MenuRadioItem, {
             id: "input-".concat(e.payload),
             group: "build_overrides",
             label: e.id,
@@ -100,8 +103,8 @@ t.default = (0, o.default)(function(e) {
         children: (0, u.jsx)(a.MenuItem, {
           id: "clear-build-override",
           disabled: o,
-          label: g.default.Messages.CLEAR_BUILD_OVERRIDE,
-          action: O,
+          label: C.default.Messages.CLEAR_BUILD_OVERRIDE,
+          action: y,
           color: "danger"
         })
       }) : null]

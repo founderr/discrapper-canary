@@ -124,17 +124,21 @@ function I() {
   })
 }
 
-function N() {
+function N(e) {
   let {
-    canBroadcast: e
+    className: t,
+    showHeader: s = !0
+  } = e, {
+    canBroadcast: i
   } = l.default.useExperiment({
     location: "user_settings_activity_privacy"
   }, {
     autoTrackExposure: !0
   });
   return (0, a.jsxs)(n.FormSection, {
+    className: t,
     tag: n.FormTitleTags.H1,
-    title: T.default.Messages.ACTIVITY_PRIVACY,
-    children: [(0, a.jsx)(_, {}), (0, a.jsx)(g, {}), e && (0, a.jsx)(h, {}), (0, a.jsx)(I, {})]
+    title: s ? T.default.Messages.ACTIVITY_PRIVACY : null,
+    children: [(0, a.jsx)(_, {}), (0, a.jsx)(g, {}), i && (0, a.jsx)(h, {}), (0, a.jsx)(I, {})]
   })
 }

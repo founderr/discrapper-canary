@@ -44399,10 +44399,6 @@ span.clanTag_f4aadc {
     padding: 0 4px
 }
 
-.streamingIconGlow__5b7b2 {
-    filter: drop-shadow(0 0 10px#b845c1)
-}
-
 .clickableGameWrapper_dc17b2 {
     cursor: pointer
 }
@@ -131343,6 +131339,10 @@ div.nagbar_c731ff {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
+}
+
+.body_a614ef {
+    margin-top: 16px
 }
 
 @media(max-width:960px) {

@@ -4,4 +4,4 @@ s.r(t), s.d(t, {
   GameSettingsTab: function() {
     return a
   }
-}), (n = a || (a = {}))[n.MyGames = 0] = "MyGames", n[n.Clips = 1] = "Clips", n[n.Overlay = 2] = "Overlay", n[n.ActivityPrivacy = 3] = "ActivityPrivacy"
+}), (n = a || (a = {})).MY_GAMES = "MY_GAMES", n.CLIPS = "CLIPS", n.OVERLAY = "OVERLAY", n.ACTIVITY_PRIVACY = "ACTIVITY_PRIVACY"

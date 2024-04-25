@@ -26,52 +26,51 @@ var a = s("735250"),
   p = s("893427"),
   C = s("794711");
 
-function A() {
-  let e = c.ClipsAllowVoiceRecording.useSetting(),
-    {
-      enableViewerClipping: t
-    } = u.default.useExperiment({
-      location: "Clips Settings"
-    }, {
-      autoTrackExposure: !1
-    }),
-    {
-      analyticsLocations: s
-    } = (0, o.default)(),
-    A = (0, E.useEnableClips)(),
-    {
-      viewerClipsEnabled: O
-    } = (0, l.useStateFromStoresObject)([T.default], () => T.default.getSettings()),
-    x = (0, m.default)(S.default);
+function A(e) {
+  let {
+    className: t,
+    showHeader: s = !0
+  } = e, A = c.ClipsAllowVoiceRecording.useSetting(), {
+    enableViewerClipping: O
+  } = u.default.useExperiment({
+    location: "Clips Settings"
+  }, {
+    autoTrackExposure: !1
+  }), {
+    analyticsLocations: x
+  } = (0, o.default)(), R = (0, E.useEnableClips)(), {
+    viewerClipsEnabled: M
+  } = (0, l.useStateFromStoresObject)([T.default], () => T.default.getSettings()), v = (0, m.default)(S.default);
   return n.useEffect(() => {
     (0, d.markDismissibleContentAsDismissed)(i.DismissibleContent.CLIPS_SETTINGS_BETA_TAG)
   }), (0, a.jsxs)(o.AnalyticsLocationProvider, {
-    value: s,
-    children: [(0, a.jsx)(r.FormSection, {
+    value: x,
+    children: [(R || s) && (0, a.jsx)(r.FormSection, {
+      className: t,
       tag: r.FormTitleTags.H1,
-      title: (0, a.jsxs)("div", {
+      title: s ? (0, a.jsxs)("div", {
         className: N.headerContainer,
         children: [I.default.Messages.CLIPS, (0, a.jsx)(_.default, {})]
-      }),
-      children: A && (0, a.jsxs)("form", {
+      }) : null,
+      children: R && (0, a.jsxs)("form", {
         onSubmit: e => e.preventDefault(),
         children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(h.default, {})]
       })
-    }), A && (0, a.jsx)(r.FormDivider, {}), (0, a.jsxs)(r.FormSection, {
-      className: C.marginTop20,
+    }), R && (0, a.jsx)(r.FormDivider, {}), (0, a.jsxs)(r.FormSection, {
+      className: s || R ? C.marginTop20 : t,
       children: [(0, a.jsx)(r.FormSwitch, {
         hideBorder: !0,
         className: p.formItem,
-        value: e,
+        value: A,
         note: I.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
         onChange: e => f.updateAllowVoiceRecording({
           allowVoiceRecording: e
         }),
         children: I.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
-      }), t && x && (0, a.jsx)(r.FormSwitch, {
+      }), O && v && (0, a.jsx)(r.FormSwitch, {
         hideBorder: !0,
         className: p.formItem,
-        value: O,
+        value: M,
         note: I.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
         onChange: e => f.updateViewerClipsEnabled({
           enabled: e,

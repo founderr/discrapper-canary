@@ -303,23 +303,26 @@ let H = (0, x.cachedFunction)(function() {
   for (var e = arguments.length, t = Array(e), s = 0; s < e; s++) t[s] = arguments[s];
   return new Set(t.map(e => e.exePath))
 });
-t.default = function() {
-  let e = (0, r.useStateFromStoresArray)([S.default], () => S.default.getGamesSeen(!0)),
-    {
-      runningGame: t,
-      overrideExePaths: s
-    } = (0, r.useStateFromStoresObject)([S.default], () => ({
-      runningGame: S.default.getVisibleGame(),
-      overrideExePaths: H(...S.default.getOverrides())
-    }));
+t.default = function(e) {
+  let {
+    className: t,
+    showHeader: s = !0
+  } = e, l = (0, r.useStateFromStoresArray)([S.default], () => S.default.getGamesSeen(!0)), {
+    runningGame: o,
+    overrideExePaths: u
+  } = (0, r.useStateFromStoresObject)([S.default], () => ({
+    runningGame: S.default.getVisibleGame(),
+    overrideExePaths: H(...S.default.getOverrides())
+  }));
   return n.useEffect(() => ((0, E.watchCandidateGames)(), E.stopWatchingCandidateGames), []), (0, a.jsxs)(d.FormSection, {
     tag: "h1",
-    title: D.default.Messages.REGISTERED_GAMES,
-    children: [null != t ? (0, a.jsx)(G, {
-      rawGame: t,
-      isOverride: s.has(t.exePath),
+    title: s ? D.default.Messages.REGISTERED_GAMES : null,
+    className: t,
+    children: [null != o ? (0, a.jsx)(G, {
+      rawGame: o,
+      isOverride: u.has(o.exePath),
       nowPlaying: !0
-    }, (0, S.gameKey)(t)) : (0, a.jsx)(k, {}), (0, a.jsxs)("div", {
+    }, (0, S.gameKey)(o)) : (0, a.jsx)(k, {}), (0, a.jsxs)("div", {
       className: i()(L.nowPlayingAdd, U.marginReset, U.marginTop8, U.marginBottom20),
       children: [(0, a.jsx)("span", {
         children: D.default.Messages.SETTINGS_GAMES_NOT_SEEING_GAME
@@ -342,7 +345,7 @@ t.default = function() {
           children: D.default.Messages.SETTINGS_GAMES_ADD_GAME
         })
       })]
-    }), 0 === e.length ? (0, a.jsx)(w, {
+    }), 0 === l.length ? (0, a.jsx)(w, {
       children: (0, a.jsx)(f.EmptyStateText, {
         children: D.default.Messages.SETTINGS_GAMES_NO_GAMES_HEADER
       })
@@ -356,9 +359,9 @@ t.default = function() {
         children: D.default.Messages.SETTINGS_GAMES_IGDB_ATTRIBUTION.format({
           igdbLink: "https://www.igdb.com/about"
         })
-      }), e.map(e => (0, a.jsx)(G, {
+      }), l.map(e => (0, a.jsx)(G, {
         rawGame: e,
-        isOverride: s.has(e.exePath)
+        isOverride: u.has(e.exePath)
       }, (0, S.gameKey)(e)))]
     })]
   })

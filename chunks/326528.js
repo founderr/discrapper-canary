@@ -16,21 +16,21 @@ var a = s("895070"),
 function c() {
   var e;
   return (e = (0, o.useShouldShowOverlaySettings)(), [{
-    id: d.GameSettingsTab.MyGames,
+    id: d.GameSettingsTab.MY_GAMES,
     title: u.default.Messages.MY_GAMES,
     icon: n.DpadIcon,
     predicate: () => !r.isPlatformEmbedded
   }, {
-    id: d.GameSettingsTab.Clips,
+    id: d.GameSettingsTab.CLIPS,
     title: u.default.Messages.CLIPS,
     icon: a.ClipsIcon
   }, {
-    id: d.GameSettingsTab.Overlay,
+    id: d.GameSettingsTab.OVERLAY,
     title: u.default.Messages.SETTINGS_GAMES_OVERLAY,
     icon: i.ScreenSystemRequirementsIcon,
     predicate: () => !e
   }, {
-    id: d.GameSettingsTab.ActivityPrivacy,
+    id: d.GameSettingsTab.ACTIVITY_PRIVACY,
     title: u.default.Messages.ACTIVITY_PRIVACY,
     icon: l.FlashIcon
   }]).filter(e => null == e.predicate || !e.predicate())
