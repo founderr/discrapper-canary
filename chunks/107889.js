@@ -25,8 +25,8 @@ var l = s("735250"),
   A = s("980768"),
   N = s("806926"),
   U = s("740021"),
-  h = s("228168"),
-  p = s("981631"),
+  p = s("228168"),
+  h = s("981631"),
   j = s("689938"),
   g = s("420867");
 
@@ -40,12 +40,12 @@ function R(e) {
     friendToken: M,
     initialSection: y,
     autoFocusNote: O,
-    transitionState: F,
-    sourceAnalyticsLocations: L = [],
+    transitionState: L,
+    sourceAnalyticsLocations: F = [],
     onClose: D
-  } = e, b = s === p.ME ? void 0 : s, {
+  } = e, b = s === h.ME ? void 0 : s, {
     analyticsLocations: B
-  } = (0, d.default)([...L, u.default.SIMPLIFIED_PROFILE_MODAL]), G = (0, m.useTrackUserProfileAction)({
+  } = (0, d.default)([...F, u.default.SIMPLIFIED_PROFILE_MODAL]), G = (0, m.useTrackUserProfileAction)({
     layout: "SIMPLIFIED_MODAL",
     userId: t.id,
     guildId: b,
@@ -60,13 +60,13 @@ function R(e) {
       let {
         type: t
       } = e;
-      return t !== p.ActivityTypes.CUSTOM_STATUS
+      return t !== h.ActivityTypes.CUSTOM_STATUS
     }),
     customStatusActivity: f.default.findActivity(t.id, e => {
       let {
         type: t
       } = e;
-      return t === p.ActivityTypes.CUSTOM_STATUS
+      return t === h.ActivityTypes.CUSTOM_STATUS
     })
   })), Z = a.createRef(), K = (0, o.default)(Z);
   return (0, l.jsx)(d.AnalyticsLocationProvider, {
@@ -79,7 +79,7 @@ function R(e) {
       messageId: P,
       roleId: C,
       children: (0, l.jsxs)(r.ModalRoot, {
-        transitionState: F,
+        transitionState: L,
         className: g.root,
         hideShadow: !0,
         "aria-label": j.default.Messages.USER_PROFILE_MODAL,
@@ -88,8 +88,9 @@ function R(e) {
           children: (0, l.jsxs)(I.default, {
             user: t,
             displayProfile: Y,
-            profileType: h.UserProfileTypes.FULL_SIZE,
+            profileType: p.UserProfileTypes.FULL_SIZE,
             children: [(0, l.jsxs)(A.default, {
+              profileType: p.UserProfileTypes.FULL_SIZE,
               isFaded: (null == Y ? void 0 : Y.profileEffectId) != null && !K,
               children: [(0, l.jsx)(_.default, {
                 user: t,
@@ -148,7 +149,7 @@ function R(e) {
               displayProfile: Y,
               initialSection: y,
               autoFocusNote: O,
-              transitionState: F,
+              transitionState: L,
               onClose: D
             })]
           })
