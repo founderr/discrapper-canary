@@ -15,28 +15,28 @@ var i, r, s = n("689938");
 function a() {
   return [{
     value: "classic",
-    label: "Discord Default",
-    description: "Wumpus' Favorite",
+    label: s.default.Messages.SOUNDPACK_DEFAULT_LABEL,
+    description: s.default.Messages.SOUNDPACK_DEFAULT_DESCRIPTION,
     requirePremium: !1
   }, {
     value: "retro",
-    label: "Power up!",
-    description: "Retro",
-    requirePremium: !0
-  }, {
-    value: "bop",
-    label: "*hey you*",
-    description: "BOP",
-    requirePremium: !0
-  }, {
-    value: "ducky",
-    label: "Quack quack",
-    description: "Ducky",
+    label: s.default.Messages.SOUNDPACK_RETRO_LABEL,
+    description: s.default.Messages.SOUNDPACK_RETRO_DESCRIPTION,
     requirePremium: !0
   }, {
     value: "lofi",
-    label: "Twinkle",
-    description: "Lofi",
+    label: s.default.Messages.SOUNDPACK_LOFI_LABEL,
+    description: s.default.Messages.SOUNDPACK_LOFI_DESCRIPTION,
+    requirePremium: !0
+  }, {
+    value: "ducky",
+    label: s.default.Messages.SOUNDPACK_DUCKY_LABEL,
+    description: s.default.Messages.SOUNDPACK_DUCKY_DESCRIPTION,
+    requirePremium: !0
+  }, {
+    value: "bop",
+    label: s.default.Messages.SOUNDPACK_BUBBLE_LABEL,
+    description: s.default.Messages.SOUNDPACK_BUBBLE_DESCRIPTION,
     requirePremium: !0
   }]
 }
@@ -49,4 +49,4 @@ function o() {
     value: "detune",
     label: s.default.Messages.SOUNDPACK_DETUNE_LABEL
   }]
-}(i = r || (r = {})).CLASSIC = "classic", i.DETUNE = "detune", i.RETRO = "retro", i.BOP = "bop", i.DUCKY = "ducky", i.LOFI = "lofi"
+}(i = r || (r = {})).CLASSIC = "classic", i.DETUNE = "detune", i.RETRO = "retro", i.BUBBLE = "bop", i.DUCKY = "ducky", i.LOFI = "lofi"
