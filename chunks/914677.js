@@ -19,6 +19,7 @@ let u = "url(#gradient)",
   c = e => {
     switch (e) {
       case a.ProgressCircleVariation.NITRO_GEM:
+        return "var(--background-primary)";
       case a.ProgressCircleVariation.NITRO_LOGO:
         return "var(--premium-tier-2-purple)";
       default:
