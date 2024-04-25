@@ -29,8 +29,8 @@ var a = s("735250"),
   L = s("689938"),
   x = s("116511"),
   v = s("102655"),
-  D = s("768236"),
-  b = s("314907"),
+  b = s("768236"),
+  D = s("314907"),
   U = s("826701");
 let j = e => {
     let {
@@ -55,7 +55,7 @@ let j = e => {
         premiumType: s
       } = e,
       r = (0, c.default)();
-    t = s === h.PremiumTypes.TIER_0 ? (0, o.isThemeDark)(r) ? v : D : (0, o.isThemeDark)(r) ? b : U;
+    t = s === h.PremiumTypes.TIER_0 ? (0, o.isThemeDark)(r) ? v : b : (0, o.isThemeDark)(r) ? D : U;
     let i = (0, f.getPremiumTypeDisplayName)(s);
     return (0, a.jsx)("img", {
       src: t,
@@ -129,8 +129,8 @@ t.default = e => {
   let s, {
       className: i,
       hideCTAs: v = !1,
-      headingOverride: D,
-      hidePill: b = !1,
+      headingOverride: b,
+      hidePill: D = !1,
       selectedPlanColumnClassName: U,
       selectedPlanTier: H = h.PremiumTypes.TIER_2
     } = e,
@@ -227,7 +227,7 @@ t.default = e => {
     withBottomBorder: !1,
     withBottomBorderRadius: !0,
     buttonsRow: null == J
-  }), s = b ? null : null != J || null != q ? (0, a.jsx)(C.PremiumPillWithSparkles, {
+  }), s = D ? null : null != J || null != q ? (0, a.jsx)(C.PremiumPillWithSparkles, {
     text: null != J ? L.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT : L.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
     className: x.freeTrialPillWithSparkles,
     colorOptions: J === h.PremiumSubscriptionSKUs.TIER_0 ? z ? C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : z ? Q ? C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
@@ -243,7 +243,7 @@ t.default = e => {
       children: [(0, a.jsx)(u.Heading, {
         className: n()(x.titleText, x.__invalid_textColor),
         variant: "heading-xxl/extrabold",
-        children: null != D ? D : L.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_TITLE
+        children: null != b ? b : L.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_TITLE
       }), (0, a.jsxs)("div", {
         className: x.tableWrapper,
         children: [(0, a.jsx)("div", {

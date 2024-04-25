@@ -71,9 +71,9 @@ t.default = e => {
   }, [C, P, h]);
   let x = (0, I.usePerksDiscoverabilityStrings)(h),
     v = (0, E.default)(),
-    D = (0, c.useFreeBoostUserTenureReward)(),
-    b = (0, I.getFilteredPerksDiscoverabilityCards)(v, i, O, g, null == D ? void 0 : D.showCard),
-    U = b.some(e => null != e.pillText),
+    b = (0, c.useFreeBoostUserTenureReward)(),
+    D = (0, I.getFilteredPerksDiscoverabilityCards)(v, i, O, g, null == b ? void 0 : b.showCard),
+    U = D.some(e => null != e.pillText),
     [j, B] = r.useState(null),
     y = r.useRef(new l.Environment);
   return (0, a.jsxs)(a.Fragment, {
@@ -112,7 +112,7 @@ t.default = e => {
           [f.cardContainer]: g,
           [f.cardContainerNarrowWidth]: !g
         }),
-        children: b.map((e, t) => (0, a.jsx)(R.default, {
+        children: D.map((e, t) => (0, a.jsx)(R.default, {
           confettiCanvas: e.name === E.PerksDiscoverabilityCardTypes.FREE_BOOST ? j : void 0,
           ...e,
           forceShadow: m

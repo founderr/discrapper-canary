@@ -121,9 +121,9 @@ t.default = e => {
     })
   }, [i]);
   let v = i.length,
-    D = 3 === v,
-    b = f.default.getArticleURL(p.HelpdeskArticles.REFERRAL_PROGRAM),
-    U = D ? g.default.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : g.default.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
+    b = 3 === v,
+    D = f.default.getArticleURL(p.HelpdeskArticles.REFERRAL_PROGRAM),
+    U = b ? g.default.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : g.default.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
     {
       analyticsLocations: j
     } = (0, c.default)(d.default.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
@@ -158,7 +158,7 @@ t.default = e => {
         userRecords: O
       }), (0, a.jsx)(o.Text, {
         variant: t ? "text-sm/normal" : "text-lg/medium",
-        children: L(D, v > 0, i.length, b)
+        children: L(b, v > 0, i.length, D)
       }), (0, a.jsxs)("div", {
         className: n()(C.expandedProgressBarButtonContainer, {
           [C.expandedProgressBarButtonContainerMinLayout]: y && !t,
@@ -196,7 +196,7 @@ t.default = e => {
               src: P,
               alt: "",
               className: C.expandedProgressBarSelectFriendsIcon
-            }), D ? g.default.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS : g.default.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS]
+            }), b ? g.default.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS : g.default.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS]
           })
         })]
       })]

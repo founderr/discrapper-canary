@@ -3,8 +3,8 @@ a.r(t), a("47120"), a("627341");
 var l = a("735250"),
   s = a("470079"),
   r = a("120356"),
-  n = a.n(r),
-  i = a("236471"),
+  i = a.n(r),
+  n = a("236471"),
   o = a("512722"),
   u = a.n(o),
   c = a("278074"),
@@ -20,8 +20,8 @@ var l = a("735250"),
   S = a("906732"),
   x = a("1585"),
   T = a("125988"),
-  v = a("74179"),
-  L = a("107091"),
+  L = a("74179"),
+  v = a("107091"),
   I = a("197115"),
   N = a("300284"),
   _ = a("876917"),
@@ -78,7 +78,7 @@ let $ = D.default.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
       color: p.ButtonColors.BRAND,
       look: p.Button.Looks.FILLED,
       size: p.ButtonSizes.ICON,
-      className: n()(Q.previewButton, t),
+      className: i()(Q.previewButton, t),
       innerClassName: Q.previewButtonInner,
       "aria-label": Z.default.Messages.PREVIEW,
       ...a,
@@ -98,11 +98,11 @@ t.default = function(e) {
   } = e, {
     analyticsLocations: D
   } = (0, S.default)(b.default.COLLECTIBLES_SHOP_CARD), es = s.useRef(null), er = (0, g.default)(es), {
-    defaultPaymentSource: en
-  } = (0, v.default)({
+    defaultPaymentSource: ei
+  } = (0, L.default)({
     isGift: !1,
     activeSubscription: null
-  }), [ei, eo] = s.useState(!1), eu = er || ei, ec = (0, f.useStateFromStores)([k.default], () => k.default.getCurrentUser()), [ed] = t.items, {
+  }), [en, eo] = s.useState(!1), eu = er || en, ec = (0, f.useStateFromStores)([k.default], () => k.default.getCurrentUser()), [ed] = t.items, {
     avatarDecorationSrc: ef,
     eventHandlers: em,
     avatarPlaceholderSrc: eC
@@ -113,9 +113,9 @@ t.default = function(e) {
     animateOnHover: !eu
   }), {
     backgroundColors: ep
-  } = (0, W.default)(t.styles), eh = (0, H.getFormattedPriceForCollectiblesProduct)(t, o, !1), eE = (0, H.isPremiumCollectiblesProduct)(t), eg = (0, H.isFreeCollectiblesProduct)(t), [eb, eS, ex] = (0, f.useStateFromStoresArray)([w.default], () => [w.default.getPurchase(t.skuId), w.default.isClaiming === t.skuId, null != w.default.isClaiming && w.default.isClaiming !== t.skuId]), eT = (0, f.useStateFromStores)([O.default], () => (0, C.isThemeDark)(O.default.theme)), ev = (0, f.useStateFromStores)([M.default], () => M.default.getIsProductNew(ed.skuId)), {
-    hoverVariant: eL
-  } = (0, U.useShopCardHoverAnimationExperiment)("CollectiblesShopTallCard"), [eI, eN] = s.useState(!1), e_ = s.useRef(null), ey = s.useRef(new i.Environment), [eO, ek] = s.useState(!1), [eA, eR] = s.useState(null), ej = null != eb || eO;
+  } = (0, W.default)(t.styles), eh = (0, H.getFormattedPriceForCollectiblesProduct)(t, o, !1), eE = (0, H.isPremiumCollectiblesProduct)(t), eg = (0, H.isFreeCollectiblesProduct)(t), [eb, eS, ex] = (0, f.useStateFromStoresArray)([w.default], () => [w.default.getPurchase(t.skuId), w.default.isClaiming === t.skuId, null != w.default.isClaiming && w.default.isClaiming !== t.skuId]), eT = (0, f.useStateFromStores)([O.default], () => (0, C.isThemeDark)(O.default.theme)), eL = (0, f.useStateFromStores)([M.default], () => M.default.getIsProductNew(ed.skuId)), {
+    hoverVariant: ev
+  } = (0, U.useShopCardHoverAnimationExperiment)("CollectiblesShopTallCard"), [eI, eN] = s.useState(!1), e_ = s.useRef(null), ey = s.useRef(new n.Environment), [eO, ek] = s.useState(!1), [eA, eR] = s.useState(null), ej = null != eb || eO;
   s.useEffect(() => {
     let {
       current: e
@@ -256,7 +256,7 @@ t.default = function(e) {
           ...em,
           avatarDecoration: ef,
           src: eC,
-          className: n()(Q.avatar, {
+          className: i()(Q.avatar, {
             [Q.avatarPurchased]: ej && !eI
           }),
           size: eI ? ee : J,
@@ -272,10 +272,10 @@ t.default = function(e) {
     eK = eT ? "0 0 15px 1px ".concat(m.default.unsafe_rawColors.PRIMARY_700.css) : "var(--elevation-high)";
   return (0, l.jsx)(p.FocusRing, {
     children: (0, l.jsxs)("div", {
-      className: n()(Q.overflowContainer, {
+      className: i()(Q.overflowContainer, {
         [Q.lightningCheckout]: eI
       }),
-      children: [(0, l.jsx)(i.ConfettiCanvas, {
+      children: [(0, l.jsx)(n.ConfettiCanvas, {
         ref: e_,
         className: Q.confettiCanvas,
         environment: ey.current
@@ -284,7 +284,7 @@ t.default = function(e) {
         onClick: () => eN(!1)
       }), (0, l.jsxs)(p.Clickable, {
         innerRef: es,
-        className: n()(Q.shopCard, (0, c.match)(eL).with(U.ShopCardHoverAnimationVariant.CONTROL, () => Q.shopCardDefaultAnimation).with(U.ShopCardHoverAnimationVariant.TRANSFORMATION, () => Q.shopCardTransformationAnimation).otherwise(() => void 0)),
+        className: i()(Q.shopCard, (0, c.match)(ev).with(U.ShopCardHoverAnimationVariant.CONTROL, () => Q.shopCardDefaultAnimation).with(U.ShopCardHoverAnimationVariant.TRANSFORMATION, () => Q.shopCardTransformationAnimation).otherwise(() => void 0)),
         onBlur: () => eo(!1),
         onClick: eM,
         style: null != ep ? {
@@ -311,15 +311,15 @@ t.default = function(e) {
             height: 38,
             className: Q.checkmark
           })
-        }), eV(), (u()(null != en, "default payment source must be set"), (0, l.jsxs)("div", {
-          className: n()(Q.cardText, {
+        }), eV(), (u()(null != ei, "default payment source must be set"), (0, l.jsxs)("div", {
+          className: i()(Q.cardText, {
             [Q.cardTextBlur]: (null == ed ? void 0 : ed.type) === d.CollectiblesItemType.PROFILE_EFFECT
           }),
           children: [(0, l.jsx)("div", {
-            className: n()(Q.cardBackground, eT ? Q.darkCardBackground : Q.lightCardBackground, (null == ed ? void 0 : ed.type) === d.CollectiblesItemType.PROFILE_EFFECT ? Q.cardLowOpacity : null)
-          }), eI ? (0, l.jsx)(L.default, {
+            className: i()(Q.cardBackground, eT ? Q.darkCardBackground : Q.lightCardBackground, (null == ed ? void 0 : ed.type) === d.CollectiblesItemType.PROFILE_EFFECT ? Q.cardLowOpacity : null)
+          }), eI ? (0, l.jsx)(v.default, {
             product: t,
-            paymentSource: en,
+            paymentSource: ei,
             itemPreview: eV(),
             onPurchaseComplete: () => {
               ek(!0)
@@ -349,7 +349,7 @@ t.default = function(e) {
           category: a,
           className: Q.limitedTimeBadge,
           display: "card"
-        }), ev && (0, l.jsx)(B.TextBadge, {
+        }), eL && (0, l.jsx)(B.TextBadge, {
           text: Z.default.Messages.NEW,
           disableColor: !0,
           className: Q.newBadge

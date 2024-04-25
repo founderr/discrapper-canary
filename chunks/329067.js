@@ -1,17 +1,17 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return L
+    return v
   },
   useLightningCheckoutEligibility: function() {
-    return v
+    return L
   }
 }), a("47120");
 var l = a("735250"),
   s = a("470079"),
   r = a("512722"),
-  n = a.n(r),
-  i = a("481060"),
+  i = a.n(r),
+  n = a("481060"),
   o = a("16084"),
   u = a("244526"),
   c = a("881052"),
@@ -32,10 +32,10 @@ let x = e => {
       className: s,
       ...r
     } = e;
-    return (0, l.jsx)(i.Button, {
-      size: i.ButtonSizes.SMALL,
+    return (0, l.jsx)(n.Button, {
+      size: n.ButtonSizes.SMALL,
       fullWidth: !0,
-      look: i.Button.Looks.FILLED,
+      look: n.Button.Looks.FILLED,
       style: a,
       className: s,
       ...r,
@@ -48,10 +48,10 @@ let x = e => {
       className: a,
       ...s
     } = e;
-    return (0, l.jsx)(i.Button, {
-      size: i.ButtonSizes.SMALL,
-      look: i.ButtonLooks.BLANK,
-      color: i.ButtonColors.TRANSPARENT,
+    return (0, l.jsx)(n.Button, {
+      size: n.ButtonSizes.SMALL,
+      look: n.ButtonLooks.BLANK,
+      color: n.ButtonColors.TRANSPARENT,
       className: a,
       fullWidth: !0,
       ...s,
@@ -59,7 +59,7 @@ let x = e => {
     })
   };
 
-function v() {
+function L() {
   let {
     defaultPaymentSource: e
   } = (0, g.default)({
@@ -71,14 +71,14 @@ function v() {
   }
 }
 
-function L(e) {
+function v(e) {
   let {
     onPurchaseComplete: t,
     onError: a,
     paymentSource: r,
     loadId: g,
-    skuId: v,
-    isGift: L = !1,
+    skuId: L,
+    isGift: v = !1,
     customButtonStyle: I,
     analyticsLocations: N
   } = e, {
@@ -88,19 +88,19 @@ function L(e) {
     paymentAuthenticationState: k,
     application: A,
     skuPricePreviewsById: R
-  } = (0, p.usePaymentContext)(), [j, P] = s.useState(!1), B = s.useRef(null), D = R[v], F = null != D ? D[r.id] : null, M = null != F ? (0, C.formatPrice)(null == F ? void 0 : F.amount, null == F ? void 0 : F.currency) : "";
+  } = (0, p.usePaymentContext)(), [j, P] = s.useState(!1), B = s.useRef(null), D = R[L], F = null != D ? D[r.id] : null, M = null != F ? (0, C.formatPrice)(null == F ? void 0 : F.amount, null == F ? void 0 : F.currency) : "";
   s.useEffect(() => {
     _ !== h.Step.REVIEW && y(h.Step.REVIEW)
   }), s.useEffect(() => {
     k === f.PaymentAuthenticationState.ERROR && a(O)
   }, [a, O, k]);
   let w = async () => {
-    n()(null != F, "skuPricePreview can't be null"), n()(null != A, "application can't be null");
+    i()(null != F, "skuPricePreview can't be null"), i()(null != A, "application can't be null");
     try {
-      await (0, o.purchaseSKU)(A.id, v, {
+      await (0, o.purchaseSKU)(A.id, L, {
         expectedAmount: F.amount,
         expectedCurrency: F.currency,
-        isGift: L,
+        isGift: v,
         paymentSource: r,
         loadId: g
       }), P(!1), t()
@@ -113,8 +113,8 @@ function L(e) {
   }, [y, t]);
   return (0, f.usePaymentStepForAuthentication)(_, k, H), (0, l.jsxs)("div", {
     className: S.reviewContainer,
-    children: [(0, l.jsx)(i.FormSection, {
-      children: (0, l.jsx)(i.FormItem, {
+    children: [(0, l.jsx)(n.FormSection, {
+      children: (0, l.jsx)(n.FormItem, {
         children: (0, l.jsx)(u.default, {
           paymentSource: r,
           isDefault: !0,
@@ -128,7 +128,7 @@ function L(e) {
       color: "always-white",
       className: S.legalTerms,
       children: (0, l.jsxs)("p", {
-        children: ["Non-refundable. By clicking, you are agreeing to our", " ", (0, l.jsx)(i.Anchor, {
+        children: ["Non-refundable. By clicking, you are agreeing to our", " ", (0, l.jsx)(n.Anchor, {
           href: m.default.getArticleURL(b.HelpdeskArticles.PAID_TERMS),
           children: "Paid Services Terms."
         })]
@@ -146,7 +146,7 @@ function L(e) {
       className: S.reviewButton,
       onClick: () => {
         (0, E.default)({
-          skuId: v,
+          skuId: L,
           analyticsLocations: N,
           returnRef: B
         })

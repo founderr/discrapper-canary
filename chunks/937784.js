@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   shareClip: function() {
-    return m
+    return p
   }
 });
 var a = l("735250");
@@ -11,38 +11,38 @@ var n = l("481060"),
   i = l("703558"),
   o = l("626135"),
   r = l("709054"),
-  d = l("127654"),
+  u = l("127654"),
   c = l("61994"),
-  u = l("39604"),
-  p = l("356659"),
-  f = l("981631");
-async function m(e, t) {
+  d = l("39604"),
+  f = l("356659"),
+  m = l("981631");
+async function p(e, t) {
   let {
-    channelId: m,
-    editMetadata: v,
-    analyticsLocations: h
-  } = t, C = s.default.getChannel(m);
-  if (null != C) try {
+    channelId: p,
+    editMetadata: C,
+    analyticsLocations: v
+  } = t, h = s.default.getChannel(p);
+  if (null != h) try {
     var g;
-    let t = await (0, u.exportClip)(e, v),
-      l = null !== (g = e.name) && void 0 !== g ? g : (0, p.CLIP_NAME_TEMPLATE)(r.default.extractTimestamp(e.id)),
+    let t = await (0, d.exportClip)(e, C),
+      l = null !== (g = e.name) && void 0 !== g ? g : (0, f.CLIP_NAME_TEMPLATE)(r.default.extractTimestamp(e.id)),
       a = (0, c.default)(l);
-    (0, d.promptToUpload)([new File([t], "".concat("" !== a ? a : "clip", ".mp4"), {
+    (0, u.promptToUpload)([new File([t], "".concat("" !== a ? a : "clip", ".mp4"), {
       type: "video/mp4"
-    })], C, i.DraftType.ChannelMessage, {
+    })], h, i.DraftType.ChannelMessage, {
       filesMetadata: [{
         clip: e
       }]
-    }), o.default.track(f.AnalyticEvents.CLIP_SHARED, {
-      location_stack: h,
-      guild_id: C.guild_id,
-      channel_id: C.id,
-      channel_type: C.type,
+    }), o.default.track(m.AnalyticEvents.CLIP_SHARED, {
+      location_stack: v,
+      guild_id: h.guild_id,
+      channel_id: h.id,
+      channel_type: h.type,
       application_id: e.applicationId,
       clip_id: e.id
     })
   } catch (e) {
-    throw p.ClipsLogger.error(e), e
+    throw f.ClipsLogger.error(e), e
   } else(0, n.openModalLazy)(async () => {
     let {
       default: t
@@ -50,7 +50,7 @@ async function m(e, t) {
     return l => (0, a.jsx)(t, {
       ...l,
       clip: e,
-      editMetadata: v
+      editMetadata: C
     })
   })
 }

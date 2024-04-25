@@ -95,8 +95,8 @@ t.default = e => {
   } = e, v = (0, I.useMarketingOptimizationExperiment)({
     autoTrackExposure: !1
   }), {
-    analyticsLocations: D
-  } = (0, u.default)(o.default.PREMIUM_MARKETING_HERO_CTA), b = (0, T.useHasActiveTrial)(), U = (0, E.useIsInPremiumOfferExperience)(), j = (0, m.useIsEligibleForBogoPromotion)(), B = R.default.useExperiment({
+    analyticsLocations: b
+  } = (0, u.default)(o.default.PREMIUM_MARKETING_HERO_CTA), D = (0, T.useHasActiveTrial)(), U = (0, E.useIsInPremiumOfferExperience)(), j = (0, m.useIsEligibleForBogoPromotion)(), B = R.default.useExperiment({
     location: "HeroHeading"
   }).enabled, {
     marketingEnabled: y
@@ -119,7 +119,7 @@ t.default = e => {
     F = C === P.PremiumMarketingEntrypoints.ApplicationStoreHome && null != k && H,
     w = y && G.length > 0;
   return (0, a.jsx)(u.AnalyticsLocationProvider, {
-    value: D,
+    value: b,
     children: (0, a.jsxs)("div", {
       className: i()(M.container, s, {
         [M.settingsContainer]: !t && !v,
@@ -154,7 +154,7 @@ t.default = e => {
         }) : N ? null : (0, a.jsx)(h, {
           subscriptionTier: r,
           inOfferExperience: U,
-          inTrial: b
+          inTrial: D
         }), w && !v && !F && (0, a.jsx)(x, {
           variant: "text-md/normal"
         })]

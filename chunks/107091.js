@@ -7,8 +7,8 @@ a.r(t), a.d(t, {
 var l = a("735250"),
   s = a("470079"),
   r = a("153832"),
-  n = a("979554"),
-  i = a("399606"),
+  i = a("979554"),
+  n = a("399606"),
   o = a("481060"),
   u = a("37234"),
   c = a("607070"),
@@ -24,8 +24,8 @@ var l = a("735250"),
   S = a("333867"),
   x = a("329067"),
   T = a("981631"),
-  v = a("302800"),
-  L = a("689938"),
+  L = a("302800"),
+  v = a("689938"),
   I = a("980673");
 let N = e => {
   let {
@@ -53,7 +53,7 @@ function _(e) {
   } = (0, f.default)(d.default.COLLECTIBLES_SHOP_CARD), {
     confettiColors: B,
     buttonColors: D
-  } = (0, C.default)(t.styles), F = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), M = (0, v.getCustomConfettiDisplayOptions)(t.skuId), [w, H] = s.useState(!1), [U, W] = s.useState(!1), G = null != D ? {
+  } = (0, C.default)(t.styles), F = (0, n.useStateFromStores)([c.default], () => c.default.useReducedMotion), M = (0, L.getCustomConfettiDisplayOptions)(t.skuId), [w, H] = s.useState(!1), [U, W] = s.useState(!1), G = null != D ? {
     background: (0, h.getBackgroundGradient)(D, 90),
     color: D.text.toHslString()
   } : void 0, V = (0, E.default)({
@@ -116,18 +116,18 @@ function _(e) {
       }), (0, l.jsx)(N, {
         style: G,
         onClick: () => {
-          if (y(), (0, u.popLayer)(), V(), (null == j ? void 0 : j.type) === n.CollectiblesItemType.AVATAR_DECORATION) {
+          if (y(), (0, u.popLayer)(), V(), (null == j ? void 0 : j.type) === i.CollectiblesItemType.AVATAR_DECORATION) {
             (0, m.openAvatarDecorationModal)({
               initialSelectedDecoration: j,
               analyticsLocations: P
             });
             return
-          }(null == j ? void 0 : j.type) === n.CollectiblesItemType.PROFILE_EFFECT && (0, g.openProfileEffectModal)({
+          }(null == j ? void 0 : j.type) === i.CollectiblesItemType.PROFILE_EFFECT && (0, g.openProfileEffectModal)({
             initialSelectedEffectId: j.id,
             analyticsLocations: P
           })
         },
-        children: L.default.Messages.COLLECTIBLES_USE_NOW
+        children: v.default.Messages.COLLECTIBLES_USE_NOW
       })]
     }) : (0, l.jsxs)("div", {
       className: I.cardDetails,

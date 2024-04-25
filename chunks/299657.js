@@ -29,8 +29,8 @@ var a = s("735250"),
   L = s("2359"),
   x = s("132547"),
   v = s("474936"),
-  D = s("981631"),
-  b = s("684993");
+  b = s("981631"),
+  D = s("684993");
 t.default = function(e) {
   let {
     entrypoint: t = v.PremiumMarketingEntrypoints.UserSettings
@@ -43,12 +43,12 @@ t.default = function(e) {
   }, [Y]), r.useEffect(() => {
     u.default.wait(async () => {
       let e = Date.now();
-      await Promise.all([d.fetchSubscriptions(), (0, c.fetchGuildBoostSlots)(), d.fetchPaymentSources(), (0, _.fetchPremiumSubscriptionPlans)(V, null, D.RevenueSurfaces.DISCOVERY)]), w.current = Date.now() - e, F(!1)
+      await Promise.all([d.fetchSubscriptions(), (0, c.fetchGuildBoostSlots)(), d.fetchPaymentSources(), (0, _.fetchPremiumSubscriptionPlans)(V, null, b.RevenueSurfaces.DISCOVERY)]), w.current = Date.now() - e, F(!1)
     })
   }, [V]), r.useEffect(() => {
     s && (null != y || null != G) && (0, P.acknowledgeUserOffer)(y, G)
   }, [s, y, G]), r.useEffect(() => {
-    !H && p.default.track(D.AnalyticEvents.PREMIUM_MARKETING_PAGE_VIEWED, {
+    !H && p.default.track(b.AnalyticEvents.PREMIUM_MARKETING_PAGE_VIEWED, {
       location_stack: i,
       load_duration_ms: w.current
     })
@@ -61,7 +61,7 @@ t.default = function(e) {
       entrypoint: t
     })
   }) : (0, a.jsx)("div", {
-    className: n()(b.container, b.loading),
+    className: n()(D.container, D.loading),
     children: (0, a.jsx)(o.Spinner, {})
   })
 }
