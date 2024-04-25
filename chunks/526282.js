@@ -13,7 +13,7 @@ var n, s, l = a("735250"),
   _ = a("116175"),
   C = a("308083"),
   m = a("689938"),
-  S = a("324243");
+  S = a("907204");
 (s = n || (n = {})).COVER = "cover", s.WIZARD = "wizard";
 let I = [{
     id: "games",
@@ -286,11 +286,11 @@ function g() {
     })]
   })
 }
-t.default = function() {
+t.default = i.memo(function() {
   let [e, t] = i.useState("cover"), a = i.useCallback(() => {
     t("wizard")
   }, [t]);
   return "wizard" === e ? (0, l.jsx)(g, {}) : (0, l.jsx)(T, {
     onGetStarted: a
   })
-}
+})
