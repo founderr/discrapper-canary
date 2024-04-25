@@ -6,5 +6,7 @@ e.exports = {
   questsHeading: "questsHeading__8d16b",
   questsHeadingLearnMore: "questsHeadingLearnMore_f97459",
   questsIcon: "questsIcon_b904f6",
+  questsListContainer: "questsListContainer_fa12cd",
+  sectionHeader: "sectionHeader__2fa0c",
   spinner: "spinner__47f8c"
 }

@@ -1,61 +1,58 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return g
+    return _
   }
 });
 var a = s("735250");
 s("470079");
-var n = s("481060"),
-  l = s("410575"),
-  i = s("100527"),
-  r = s("211242"),
-  o = s("89057"),
-  d = s("223639"),
-  u = s("347475"),
-  c = s("977156"),
-  S = s("97926"),
-  E = s("541540"),
-  T = s("206339"),
-  m = s("981631"),
-  f = s("46140"),
-  _ = s("709510");
+var n = s("410575"),
+  l = s("100527"),
+  i = s("211242"),
+  r = s("89057"),
+  o = s("223639"),
+  d = s("347475"),
+  u = s("977156"),
+  c = s("97926"),
+  S = s("541540"),
+  E = s("206339"),
+  T = s("981631"),
+  m = s("46140"),
+  f = s("709510");
 
-function g() {
-  let e = (0, c.useIsEligibleForQuests)({
-      location: f.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
+function _() {
+  let e = (0, u.useIsEligibleForQuests)({
+      location: m.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
     }),
     {
       enabled: t
-    } = d.default.useExperiment({
+    } = o.default.useExperiment({
       location: "UserSettingsInventory"
     }, {
       autoTrackExposure: !0
     });
-  return (0, r.useBlockedPaymentsConfig)() ? (0, a.jsx)(o.BlockedPaymentsContentSettings, {}) : (0, a.jsxs)(a.Fragment, {
-    children: [t && (0, a.jsx)(u.default, {
-      location: i.default.USER_SETTINGS_GIFT_INVENTORY,
-      className: _.giftNitro,
-      imageClassName: _.giftNitroImage,
+  return (0, i.useBlockedPaymentsConfig)() ? (0, a.jsx)(r.BlockedPaymentsContentSettings, {}) : (0, a.jsxs)(a.Fragment, {
+    children: [t && (0, a.jsx)(d.default, {
+      location: l.default.USER_SETTINGS_GIFT_INVENTORY,
+      className: f.giftNitro,
+      imageClassName: f.giftNitroImage,
       textContainerOverrideStyles: {
         padding: "32px",
         width: "360px"
       },
       analyticsLocation: {
-        page: m.AnalyticsPages.GIFTING_SETTINGS,
-        section: m.AnalyticsSections.GIFT_BANNER
+        page: T.AnalyticsPages.GIFTING_SETTINGS,
+        section: T.AnalyticsSections.GIFT_BANNER
       }
-    }), (0, a.jsx)(l.default, {
-      section: m.AnalyticsSections.LIBRARY_INVENTORY_CODE_REDEMPTION,
-      children: (0, a.jsx)(E.default, {})
-    }), e && (0, a.jsx)(l.default, {
-      section: m.AnalyticsSections.QUESTS,
+    }), (0, a.jsx)(n.default, {
+      section: T.AnalyticsSections.LIBRARY_INVENTORY_CODE_REDEMPTION,
       children: (0, a.jsx)(S.default, {})
-    }), (0, a.jsx)(n.FormDivider, {
-      className: _.divider
-    }), (0, a.jsx)(l.default, {
-      section: m.AnalyticsSections.LIBRARY_INVENTORY_GIFTS_LIST,
-      children: (0, a.jsx)(T.default, {})
+    }), e && (0, a.jsx)(n.default, {
+      section: T.AnalyticsSections.QUESTS,
+      children: (0, a.jsx)(c.default, {})
+    }), (0, a.jsx)(n.default, {
+      section: T.AnalyticsSections.LIBRARY_INVENTORY_GIFTS_LIST,
+      children: (0, a.jsx)(E.default, {})
     })]
   })
 }

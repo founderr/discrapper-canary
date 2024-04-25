@@ -20,21 +20,25 @@ var s = n("735250"),
 let T = e => {
   let {
     quest: t,
-    location: n
-  } = e, [T, I] = a.useState(!1), p = a.useCallback(() => I(!0), []), h = a.useCallback(() => I(!1), []), N = (0, r.useIsQuestExpired)(t), {
-    containerRef: S,
-    size: C,
-    height: A
-  } = (0, E.useQuestCardSize)(), g = (0, i.useIsEligibleForConcurrentQuests)({
+    location: n,
+    giftInventorySection: T
+  } = e, [I, p] = a.useState(!1), h = a.useCallback(() => p(!0), []), N = a.useCallback(() => p(!1), []), S = (0, r.useIsQuestExpired)(t), {
+    containerRef: C,
+    size: A,
+    height: g
+  } = (0, E.useQuestCardSize)(), M = (0, i.useIsEligibleForConcurrentQuests)({
     location: _.QuestsExperimentLocations.QUESTS_CARD
-  }), M = !g || n !== o.QuestContent.QUEST_INVENTORY_CARD, {
+  }), {
     expansionSpring: R,
     isAnimating: v,
     isExpanded: O,
     toggleExpanded: x
   } = (0, E.useQuestCardAnimation)({
-    initiallyExpanded: M
-  }), L = null != A ? A : d.QUESTS_CARD_MAX_HEIGHT_FALLBACK_PX;
+    initiallyExpanded: !M || (0, d.shouldQuestCardBeExpandedPermanently)({
+      location: n,
+      giftInventorySection: T
+    })
+  }), L = null != g ? g : d.QUESTS_CARD_MAX_HEIGHT_FALLBACK_PX;
   return (0, s.jsx)(u.QuestContentImpressionTracker, {
     questOrQuests: t,
     questContent: n,
@@ -48,30 +52,31 @@ let T = e => {
           })
         },
         ref: t => {
-          e.current = t, S.current = t
+          e.current = t, C.current = t
         },
         className: m.questsCard,
-        onFocus: p,
-        onMouseEnter: p,
-        onBlur: h,
-        onMouseLeave: h,
+        onFocus: h,
+        onMouseEnter: h,
+        onBlur: N,
+        onMouseLeave: N,
         children: [(0, s.jsx)(f.default, {
-          isFocused: T,
-          isQuestExpired: N,
+          isFocused: I,
+          isQuestExpired: S,
           location: n,
           quest: t,
-          size: C,
+          size: A,
           expansionSpring: R,
           isAnimating: v,
           isExpanded: O,
-          isInConcurrentQuestExperiment: g,
+          isInConcurrentQuestExperiment: M,
+          giftInventorySection: T,
           toggleExpanded: x
         }), (0, s.jsx)(c.default, {
           quest: t,
-          isQuestExpired: N,
+          isQuestExpired: S,
           location: n,
-          size: C,
-          isFocused: T,
+          size: A,
+          isFocused: I,
           isExpanded: O,
           isAnimating: v
         })]
