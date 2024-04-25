@@ -16,9 +16,9 @@ var a = l("735250"),
   f = l("481060"),
   m = l("224706"),
   S = l("594190"),
-  E = l("57655"),
-  _ = l("569984"),
-  C = l("918701"),
+  E = l("569984"),
+  _ = l("918701"),
+  C = l("977156"),
   g = l("433811"),
   N = l("131951"),
   h = l("449224"),
@@ -105,7 +105,7 @@ function U(e) {
   } = p.default.useExperiment({
     location: "GoLive_Source_Select"
   }), r = N.default.supports(O.Features.GO_LIVE_HARDWARE), [d, m] = n.useState(null), [h, x] = n.useState(null), [R, b] = n.useState(null), U = null != R && R.length > 0, [k, y] = n.useState(u.DesktopSources.WINDOW), [F, V] = n.useState(!1), w = n.useRef(null), B = n.useRef(new c.Interval), H = (0, o.useStateFromStores)([S.default], () => S.default.getRunningGames()), W = function(e, t, l) {
-    let a = (0, E.useIsEligibleForQuests)({
+    let a = (0, C.useIsEligibleForQuests)({
       location: M.QuestsExperimentLocations.STREAM_SOURCE_SELECT
     });
     return n.useMemo(() => {
@@ -114,7 +114,7 @@ function U(e) {
         var n, s;
         let l = t.find(e => (0, T.default)(a.id, e.windowHandle));
         if ((null == l ? void 0 : l.id) == null) continue;
-        let i = (0, C.getQuestByApplicationId)(e, l.id);
+        let i = (0, _.getQuestByApplicationId)(e, l.id);
         if (null != i && (null === (n = i.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null && (null === (s = i.userStatus) || void 0 === s ? void 0 : s.completedAt) == null) return {
           source: a,
           quest: i
@@ -122,7 +122,7 @@ function U(e) {
       }
       return null
     }, [a, e, t, l])
-  }((0, o.useStateFromStores)([_.default], () => _.default.quests), H, h), K = n.useMemo(() => null == h ? null : [...h].sort((e, t) => (null == W ? void 0 : W.source.id) === e.id ? -1 : (null == W ? void 0 : W.source.id) === t.id ? 1 : G(t) - G(e)), [W, h]);
+  }((0, o.useStateFromStores)([E.default], () => E.default.quests), H, h), K = n.useMemo(() => null == h ? null : [...h].sort((e, t) => (null == W ? void 0 : W.source.id) === e.id ? -1 : (null == W ? void 0 : W.source.id) === t.id ? 1 : G(t) - G(e)), [W, h]);
   n.useEffect(() => {
     let e = B.current;
     return P().then(e => {
