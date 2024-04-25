@@ -30,8 +30,8 @@ var n = i("512722"),
   p = i("858822"),
   O = i("993356"),
   G = i("58338"),
-  b = i("422525"),
-  C = i("522762"),
+  C = i("422525"),
+  b = i("522762"),
   x = i("466330"),
   U = i("981631"),
   R = i("689938");
@@ -48,7 +48,7 @@ function j(e) {
     guild: t,
     source: U.InstantInviteSources.GUILD_CONTEXT_MENU,
     channel: j
-  }), F = (0, C.default)(r), y = (0, p.default)(t), D = (0, O.default)(t), k = (0, b.default)(t), B = (0, A.default)({
+  }), F = (0, b.default)(r), y = (0, p.default)(t), D = (0, O.default)(t), k = (0, C.default)(t), B = (0, A.default)({
     guildId: t.id,
     userId: g.default.getId(),
     analyticsLocation: {
@@ -69,7 +69,7 @@ function j(e) {
     label: R.default.Messages.COPY_ID_GUILD
   }), z = (0, T.default)(t, {
     section: U.AnalyticsSections.GUILD_LIST
-  }), W = (0, E.default)(t.id), X = (0, G.default)(t.id), K = (0, N.default)(t.id), Q = (0, m.default)(t), q = (0, f.useShouldUseNewNotificationSystem)("GuildContextMenu");
+  }), K = (0, E.default)(t.id), W = (0, G.default)(t.id), X = (0, N.default)(t.id), Q = (0, m.default)(t), q = (0, f.useShouldUseNewNotificationSystem)("GuildContextMenu");
 
   function J() {
     (0, u.openModal)(e => (0, s.jsx)(I.GuildLeaveConfirmModalContents, {
@@ -116,7 +116,7 @@ function j(e) {
     }), (0, s.jsx)(u.MenuGroup, {
       children: P
     }), (0, s.jsxs)(u.MenuGroup, {
-      children: [y, q || __OVERLAY__ ? null : D, q && !__OVERLAY__ ? X : null, K, F, W]
+      children: [y, q || __OVERLAY__ ? null : D, q && !__OVERLAY__ ? W : null, X, F, K]
     }), (0, s.jsxs)(u.MenuGroup, {
       children: [d ? null : k, __OVERLAY__ ? null : (0, s.jsx)(u.MenuItem, {
         id: "privacy",

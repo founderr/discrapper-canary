@@ -25,7 +25,7 @@ t.default = (0, r.default)((0, s.default)(function(e) {
     channel: t,
     selected: s,
     onSelect: r
-  } = e, d = t.isOwner(_.default.getId()), v = (0, I.default)(t), T = (0, E.default)(t), A = (0, C.default)(N.ZERO_STRING_GUILD_ID, t.id), p = (0, h.default)(t, s), g = (0, c.default)({
+  } = e, d = t.isOwner(_.default.getId()), v = (0, I.default)(t), T = (0, E.default)(t), A = (0, C.default)(N.ZERO_STRING_GUILD_ID, t.id), g = (0, h.default)(t, s), p = (0, c.default)({
     id: t.id,
     label: S.default.Messages.COPY_ID_CHANNEL
   }), x = (0, o.default)(t), O = (0, f.useAddToFavoritesItem)(t), G = (0, f.useRemoveFromFavoritesItem)(t), j = (0, M.default)(t), R = (0, m.default)(t);
@@ -75,11 +75,11 @@ t.default = (0, r.default)((0, s.default)(function(e) {
     }), (0, a.jsxs)(l.MenuGroup, {
       children: [T, A]
     }), (0, a.jsx)(l.MenuGroup, {
-      children: p
+      children: g
     }), (0, a.jsx)(l.MenuGroup, {
       children: G
     }), (0, a.jsx)(l.MenuGroup, {
-      children: g
+      children: p
     })]
   })
 }, {
