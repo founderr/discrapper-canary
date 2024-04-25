@@ -84,7 +84,7 @@ function P(e) {
     analyticsLocations: _
   } = (0, S.default)(h.default.APP_STOREFRONT);
   return r.useEffect(() => {
-    j.default.track(A.AnalyticEvents.VIEW_PREMIUM_APP_STOREFRONT, {
+    0 !== E.length && j.default.track(A.AnalyticEvents.VIEW_PREMIUM_APP_STOREFRONT, {
       application_id: t.id,
       sku_ids: E,
       location_stack: _
