@@ -117,7 +117,7 @@ function A(e) {
 }
 
 function m(e, t, n) {
-  if (null == e) return o.default.Messages.UNKNOWN_USER;
+  if (null == e) return o.default.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER;
   if (!_(e.username)) return "???";
   let i = n;
   if ("always" === t.identifiable ? i = !1 : "never" === t.identifiable && (i = !0), "0" !== e.discriminator && e.discriminator !== a.NON_USER_BOT_DISCRIMINATOR && !t.forcePomelo) return "username" === t.mode ? e.username : i ? e.username : "".concat(e.username, "#").concat(e.discriminator);
