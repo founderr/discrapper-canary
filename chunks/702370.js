@@ -28,8 +28,8 @@ var s = l("735250"),
   R = l("731896"),
   S = l("642619"),
   b = l("318661"),
-  y = l("25990"),
-  P = l("594174"),
+  P = l("25990"),
+  y = l("594174"),
   j = l("642113"),
   M = l("466111"),
   D = l("151785"),
@@ -89,7 +89,7 @@ let en = u.AvatarSizes.SIZE_152,
       analyticsLocations: A
     } = (0, p.default)(), x = B.default.canUseCollectibles(l), [L, _] = (0, c.useStateFromStoresArray)([U.default], () => [U.default.getPurchase(t.skuId), U.default.isClaiming === t.skuId]), N = (0, O.default)({
       analyticsLocations: A
-    }), b = (0, I.default)(), y = (0, d.isThemeDark)(b), P = (0, w.isPremiumCollectiblesProduct)(t), j = (0, w.extractPriceByPurchaseTypes)(t, $.PriceSetAssignmentPurchaseTypes.DEFAULT), D = (null == j ? void 0 : j.amount) === 0, [F] = t.items;
+    }), b = (0, I.default)(), P = (0, d.isThemeDark)(b), y = (0, w.isPremiumCollectiblesProduct)(t), j = (0, w.extractPriceByPurchaseTypes)(t, $.PriceSetAssignmentPurchaseTypes.DEFAULT), D = (null == j ? void 0 : j.amount) === 0, [F] = t.items;
     a.useEffect(() => {
       if ((null == F ? void 0 : F.type) === o.CollectiblesItemType.AVATAR_DECORATION) return (0, C.setPendingAvatarDecoration)(F), () => (0, C.setPendingAvatarDecoration)(void 0)
     }, [F]);
@@ -149,7 +149,7 @@ let en = u.AvatarSizes.SIZE_152,
           className: es.description,
           children: [(0, s.jsx)(H.default, {
             item: F,
-            isDarkText: !y
+            isDarkText: !P
           }), (0, s.jsx)(u.Heading, {
             variant: "heading-xl/extrabold",
             className: es.headingWithItemTypePill,
@@ -163,7 +163,7 @@ let en = u.AvatarSizes.SIZE_152,
               className: es.priceTag,
               children: el.default.Messages.COLLECTIBLES_ALREADY_OWNED
             });
-            if (P) return (0, s.jsx)(u.Text, {
+            if (y) return (0, s.jsx)(u.Text, {
               variant: "text-md/semibold",
               className: es.priceTag,
               children: el.default.Messages.COLLECTIBLES_INCLUDED_WITH_PREMIUM
@@ -171,7 +171,7 @@ let en = u.AvatarSizes.SIZE_152,
             if (x) return (0, s.jsx)(Z.default, {
               product: t,
               className: es.priceTag,
-              alwaysWhiteText: y
+              alwaysWhiteText: P
             });
             if (null == j) return null;
             let e = (0, w.extractPriceByPurchaseTypes)(t, $.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2);
@@ -179,11 +179,11 @@ let en = u.AvatarSizes.SIZE_152,
               className: es.priceTagContainer,
               children: [(0, s.jsx)(K.default, {
                 price: j,
-                alwaysWhiteText: y
+                alwaysWhiteText: P
               }), null != e && !D && (0, s.jsx)(K.default, {
                 price: e,
                 variant: "text-xs/medium",
-                alwaysWhiteText: y,
+                alwaysWhiteText: P,
                 className: es.premiumPriceTag,
                 renderPrice: e => el.default.Messages.COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW.format({
                   price: e,
@@ -201,7 +201,7 @@ let en = u.AvatarSizes.SIZE_152,
                     return (0, s.jsx)(M.default, {
                       ...t,
                       className: es.premiumPriceTagIcon,
-                      color: y ? "white" : "black"
+                      color: P ? "white" : "black"
                     })
                   }
                 })
@@ -212,7 +212,7 @@ let en = u.AvatarSizes.SIZE_152,
           className: es.buttonsContainer,
           children: (0, s.jsxs)("div", {
             className: es.primaryButtons,
-            children: [!P || x || D ? null != L ? (0, s.jsx)(u.Button, {
+            children: [!y || x || D ? null != L ? (0, s.jsx)(u.Button, {
               className: es.button,
               look: u.Button.Looks.FILLED,
               onClick: () => {
@@ -228,7 +228,7 @@ let en = u.AvatarSizes.SIZE_152,
                 })
               },
               children: el.default.Messages.COLLECTIBLES_USE_NOW
-            }) : P ? (0, s.jsx)(u.Button, {
+            }) : y ? (0, s.jsx)(u.Button, {
               className: es.button,
               look: u.Button.Looks.FILLED,
               submitting: _,
@@ -250,16 +250,16 @@ let en = u.AvatarSizes.SIZE_152,
                 onClose: e => e ? E() : (0, et.NOOP)()
               }),
               children: (null == F ? void 0 : F.type) === o.CollectiblesItemType.PROFILE_EFFECT ? el.default.Messages.COLLECTIBLES_BUY_PROFILE_EFFECT : el.default.Messages.COLLECTIBLES_BUY_DECORATION
-            }) : V(el.default.Messages.UNLOCK_WITH_NITRO), !P && !D && (0, s.jsx)(Y.default, {
+            }) : V(el.default.Messages.UNLOCK_WITH_NITRO), !y && !D && (0, s.jsx)(Y.default, {
               product: t,
               onSuccess: E,
               disableCustomColor: !0
             })]
           })
         }), (0, s.jsx)(u.Text, {
-          className: n()(es.disclaimer, !y && es.disclaimerLight),
+          className: n()(es.disclaimer, !P && es.disclaimerLight),
           variant: "text-xxs/normal",
-          children: null != L ? null : P ? el.default.Messages.COLLECTIBLES_DETAILS_MODAL_INCLUDED_WITH_PREMIUM_DISCLAIMER : (null == F ? void 0 : F.type) === o.CollectiblesItemType.PROFILE_EFFECT ? el.default.Messages.COLLECTIBLES_DETAILS_MODAL_PROFILE_EFFECT_PREMIUM_PURCHASE_DISCLAIMER : el.default.Messages.COLLECTIBLES_DETAILS_MODAL_PREMIUM_PURCHASE_DISCLAIMER
+          children: null != L ? null : y ? el.default.Messages.COLLECTIBLES_DETAILS_MODAL_INCLUDED_WITH_PREMIUM_DISCLAIMER : (null == F ? void 0 : F.type) === o.CollectiblesItemType.PROFILE_EFFECT ? el.default.Messages.COLLECTIBLES_DETAILS_MODAL_PROFILE_EFFECT_PREMIUM_PURCHASE_DISCLAIMER : el.default.Messages.COLLECTIBLES_DETAILS_MODAL_PREMIUM_PURCHASE_DISCLAIMER
         })]
       })]
     })
@@ -268,7 +268,7 @@ let en = u.AvatarSizes.SIZE_152,
     let {
       product: t,
       user: l
-    } = e, a = B.default.canUsePremiumProfileCustomization(l), i = (0, c.useStateFromStoresObject)([y.default], () => y.default.getAllPending()), n = (0, b.useDisplayProfileWithFetchEffect)(l.id), r = !!(null == n ? void 0 : n.getPreviewBio(i.pendingBio).value), [d] = t.items;
+    } = e, a = B.default.canUsePremiumProfileCustomization(l), i = (0, c.useStateFromStoresObject)([P.default], () => P.default.getAllPending()), n = (0, b.useDisplayProfileWithFetchEffect)(l.id), r = !!(null == n ? void 0 : n.getPreviewBio(i.pendingBio).value), [d] = t.items;
     return (0, s.jsxs)("div", {
       className: (null == d ? void 0 : d.type) === o.CollectiblesItemType.AVATAR_DECORATION ? es.previewsContainerInner : es.profileEffectPreviewsContainerInner,
       children: [(0, s.jsx)(N.default, {
@@ -286,7 +286,7 @@ let en = u.AvatarSizes.SIZE_152,
         hideFakeActivity: (null == d ? void 0 : d.type) === o.CollectiblesItemType.AVATAR_DECORATION || r,
         hideBioSection: (null == d ? void 0 : d.type) === o.CollectiblesItemType.AVATAR_DECORATION,
         hideMemberStatusSection: (null == d ? void 0 : d.type) === o.CollectiblesItemType.AVATAR_DECORATION,
-        hideRecentGames: (null == d ? void 0 : d.type) === o.CollectiblesItemType.AVATAR_DECORATION,
+        hideRecentGames: !0,
         useLargeBanner: !0
       }), (null == d ? void 0 : d.type) === o.CollectiblesItemType.AVATAR_DECORATION && (0, s.jsx)(em, {
         user: l
@@ -347,7 +347,7 @@ t.default = e => {
     returnRef: m,
     analyticsSource: C,
     analyticsLocations: I
-  } = e, T = (0, c.useStateFromStores)([P.default], () => P.default.getCurrentUser()), {
+  } = e, T = (0, c.useStateFromStores)([y.default], () => y.default.getCurrentUser()), {
     analyticsLocations: f
   } = (0, p.default)([...I, E.default.COLLECTIBLES_SHOP_DETAILS_MODAL]);
   (0, z.useProductDetailsLinkableRoute)(r);
