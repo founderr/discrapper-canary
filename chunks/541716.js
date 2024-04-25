@@ -316,8 +316,7 @@ let o = {
     submit: {
       useDisabledStylesOnSubmit: !0,
       clearOnSubmit: !0
-    },
-    disableAutoFocus: !0
+    }
   },
   S = {
     analyticsName: "profile_bio_input",
