@@ -1,19 +1,19 @@
 "use strict";
-a.r(t), a.d(t, {
+r.r(t), r.d(t, {
   Item: function() {
     return R
   },
   hidden: function() {
-    return y
+    return S
   }
-}), a("47120"), a("653041"), a("571269"), a("298267");
-var r = a("735250"),
-  n = a("470079"),
-  i = a("119516"),
-  l = a.n(i),
-  s = a("226961"),
-  o = a("706619"),
-  d = a("206314");
+}), r("47120"), r("653041"), r("571269"), r("298267");
+var a = r("735250"),
+  n = r("470079"),
+  i = r("119516"),
+  s = r.n(i),
+  l = r("226961"),
+  o = r("706619"),
+  d = r("206314");
 let u = {
   accelerateRate: "Accelerate Rate",
   audioDetected: "Audio Detected",
@@ -40,11 +40,15 @@ let u = {
   decodingPLC: "Decoding PLC",
   decodingPLCCNG: "Decoding PLC CNG",
   decryptionFailures: "Decryption Failures",
+  decryptFailureCount: "Decrypt Failures",
+  decryptSuccessCount: "Decrypt Successes",
   delayEstimate: "Delay Estimate",
   encoderImplementationName: "Encoder",
   encoderQualityPsnr: "Encoder PSNR (dB)",
   encoderQualityVmaf: "Encoder VMAF",
   encodeUsage: "Encode Usage",
+  encryptFailureCount: "Encrypt Failures",
+  encryptSuccessCount: "Encrypt Successes",
   expandRate: "Expand Rate",
   filter: "Filter",
   firCount: "FIR",
@@ -93,6 +97,7 @@ let u = {
   packetsLost: "Packets Lost",
   packetsReceived: "Packets Received",
   packetsSent: "Packets Sent",
+  passthroughCount: "Passthrough",
   pauseCount: "Pause Count",
   ping: "Ping",
   pliCount: "PLI",
@@ -131,7 +136,7 @@ function c(e) {
 }
 
 function m(e) {
-  return l().filesize(e)
+  return s().filesize(e)
 }
 
 function f(e) {
@@ -150,17 +155,17 @@ function g(e) {
   return e ? "Yes" : "No"
 }
 
-function C(e) {
+function y(e) {
   return "".concat(Math.max(e, 0).toFixed(2), " dB")
 }
 
-function S(e) {
+function C(e) {
   let {
     last: t
   } = e;
   return "".concat(t, " ms")
 }
-let y = {
+let S = {
     audioJitterBuffer: !0,
     audioJitterDelay: !0,
     audioJitterTarget: !0,
@@ -176,12 +181,17 @@ let y = {
     videoJitterBuffer: !0,
     videoJitterDelay: !0,
     videoJitterTarget: !0,
-    voiceActivityDetectorProcessTime: !0
+    voiceActivityDetectorProcessTime: !0,
+    decryptAttempts: !0,
+    decryptDuration: !0,
+    encryptAttempts: !0,
+    encryptDuration: !0,
+    encryptMaxAttempts: !0
   },
-  v = {
+  D = {
     accelerateRate: h,
     audioDetected: g,
-    audioLevel: C,
+    audioLevel: y,
     availableOutgoingBitrate: c,
     averageDecodeTime: p,
     averageEncodeTime: p,
@@ -193,16 +203,16 @@ let y = {
     codec: function(e) {
       let {
         id: t,
-        name: a
+        name: r
       } = e;
-      return a = null != (a = "" === a ? "unknown" : a) ? a : "unknown", "".concat(a[0].toUpperCase()).concat(a.slice(1), " (").concat(t, ")")
+      return r = null != (r = "" === r ? "unknown" : r) ? r : "unknown", "".concat(r[0].toUpperCase()).concat(r.slice(1), " (").concat(t, ")")
     },
     cpuLimitedResolution: g,
     currentDelay: p,
     decoderImplementationName: f,
     delayEstimate: p,
     encoderImplementationName: f,
-    encoderQualityPsnr: C,
+    encoderQualityPsnr: y,
     encoderQualityVmaf: e => "".concat(e.toFixed(2)),
     encodeUsage: h,
     expandRate: h,
@@ -219,15 +229,15 @@ let y = {
     ping: p,
     preemptiveExpandRate: h,
     receiverBitrateEstimate: c,
-    relativePlayoutDelay: S,
-    relativeReceptionDelay: S,
+    relativePlayoutDelay: C,
+    relativeReceptionDelay: C,
     renderDelay: p,
     resolution: e => {
       let {
         width: t,
-        height: a
+        height: r
       } = e;
-      return "".concat(t, "x").concat(a)
+      return "".concat(t, "x").concat(r)
     },
     secondaryDecodedRate: h,
     secureFramesProtocolVersion: function(e) {
@@ -241,12 +251,12 @@ let y = {
     }
   },
   E = e => e,
-  D = e => {
+  v = e => {
     let [t] = n.useState([]);
     return t.push({
       value: e.value,
       time: Date.now()
-    }), t.length > 600 && t.shift(), (0, r.jsx)(o.default, {
+    }), t.length > 600 && t.shift(), (0, a.jsx)(o.default, {
       dataPoints: t,
       width: e.width,
       height: e.height
@@ -254,27 +264,27 @@ let y = {
   };
 
 function R(e) {
-  var t, a, n, i;
+  var t, r, n, i;
   let {
-    label: l,
+    label: s,
     value: c,
     section: m
-  } = e, f = null !== (a = v[l]) && void 0 !== a ? a : E;
-  let p = s.graphs[l] && (Array.isArray(i = c) && i.length > 0 && "number" == typeof i[0].value ? (0, r.jsx)(o.default, {
+  } = e, f = null !== (r = D[s]) && void 0 !== r ? r : E;
+  let p = l.graphs[s] && (Array.isArray(i = c) && i.length > 0 && "number" == typeof i[0].value ? (0, a.jsx)(o.default, {
       dataPoints: i,
       width: 300,
       height: 100
-    }) : "number" == typeof i ? (0, r.jsx)(D, {
+    }) : "number" == typeof i ? (0, a.jsx)(v, {
       value: i,
       width: 300,
       height: 100
     }) : void 0),
     h = Array.isArray(c) ? null === (t = c.at(-1)) || void 0 === t ? void 0 : t.value : c;
-  return (0, r.jsx)(d.default, {
-    label: l,
+  return (0, a.jsx)(d.default, {
+    label: s,
     valueRendered: f(h),
     section: m,
     renderGraph: p,
-    children: null !== (n = u[l]) && void 0 !== n ? n : l
+    children: null !== (n = u[s]) && void 0 !== n ? n : s
   })
 }
