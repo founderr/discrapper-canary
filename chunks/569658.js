@@ -4,10 +4,10 @@ s.r(t), s.d(t, {
     return x
   }
 });
-var i = s("735250");
+var a = s("735250");
 s("470079");
-var a = s("392711"),
-  n = s.n(a),
+var i = s("392711"),
+  n = s.n(i),
   l = s("442837"),
   r = s("481060"),
   d = s("740504"),
@@ -35,7 +35,7 @@ function x(e) {
   var t;
   let {
     guildId: s,
-    onSelected: a
+    onSelected: i
   } = e;
   let {
     channels: c,
@@ -60,25 +60,25 @@ function x(e) {
       label: (0, o.computeChannelName)(t, g.default, N.default)
     }
   }).value();
-  return (0, i.jsxs)(r.FormItem, {
-    children: [(0, i.jsx)(r.FormText, {
+  return (0, a.jsxs)(r.FormItem, {
+    children: [(0, a.jsx)(r.FormText, {
       type: r.FormText.Types.DESCRIPTION,
       children: E.default.Messages.ADD_CHANNEL_TO_OVERRIDE
-    }), (0, i.jsx)("div", {
+    }), (0, a.jsx)("div", {
       className: T.input,
-      children: (0, i.jsx)(r.SearchableSelect, {
+      children: (0, a.jsx)(r.SearchableSelect, {
         value: m.EMPTY_STRING_SNOWFLAKE_ID,
-        onChange: a,
+        onChange: i,
         options: I,
         renderOptionLabel: e => {
           let t = h.default.getChannel(e.value);
           if (null == t) return e.label;
           let s = h.default.getChannel(t.parent_id),
-            a = null != s ? s.name : null;
-          return (0, i.jsx)(f.default, {
+            i = null != s ? s.name : null;
+          return (0, a.jsx)(f.default, {
             icon: (0, u.getChannelIconComponent)(t),
             title: e.label,
-            subtitle: a
+            subtitle: i
           })
         },
         placeholder: E.default.Messages.SELECT_CHANNEL_OR_CATEGORY

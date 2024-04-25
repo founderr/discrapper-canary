@@ -4,8 +4,8 @@ s.r(t), s.d(t, {
     return v
   }
 }), s("47120"), s("789020");
-var i = s("735250"),
-  a = s("470079"),
+var a = s("735250"),
+  i = s("470079"),
   n = s("120356"),
   l = s.n(n),
   r = s("399606"),
@@ -48,17 +48,17 @@ function v(e) {
     let e = h.default.getGuildUnreadSetting(t),
       s = h.default.getMessageNotifications(t);
     return e === x.UnreadSetting.UNSET ? s === _.UserNotificationSettings.ALL_MESSAGES ? x.UnreadSetting.ALL_MESSAGES : x.UnreadSetting.ONLY_MENTIONS : e
-  }), l = (0, r.useStateFromStores)([h.default], () => h.default.getMessageNotifications(t)), [S, N] = (0, a.useState)(!1), p = S ? T.Presets.CUSTOM : (0, T.presetFromSettings)(n, l), v = e => {
+  }), l = (0, r.useStateFromStores)([h.default], () => h.default.getMessageNotifications(t)), [S, N] = (0, i.useState)(!1), p = S ? T.Presets.CUSTOM : (0, T.presetFromSettings)(n, l), v = e => {
     if (e === T.Presets.CUSTOM) {
       N(!0);
       return
     }
     N(!1), (0, m.updateGuildPreset)(t, e)
   };
-  return (0, i.jsxs)("div", {
-    children: [(0, i.jsx)("div", {
+  return (0, a.jsxs)("div", {
+    children: [(0, a.jsx)("div", {
       className: C.segmentedControlsContainer,
-      children: (0, i.jsx)(u.SegmentedControl, {
+      children: (0, a.jsx)(u.SegmentedControl, {
         value: p,
         options: M(),
         onChange: e => {
@@ -70,43 +70,43 @@ function v(e) {
         className: C.segmentedControl,
         look: "pill"
       })
-    }), (0, i.jsx)("div", {
+    }), (0, a.jsx)("div", {
       className: C.presetSeparator
-    }), (0, i.jsxs)("div", {
+    }), (0, a.jsxs)("div", {
       className: C.customPresetsContainer,
-      children: [(0, i.jsxs)("div", {
+      children: [(0, a.jsxs)("div", {
         className: C.grid,
-        children: [(0, i.jsx)(L, {
+        children: [(0, a.jsx)(L, {
           unreadSetting: n
-        }), (0, i.jsx)(A, {
+        }), (0, a.jsx)(A, {
           notificationSetting: l
         })]
-      }), (0, i.jsxs)("div", {
+      }), (0, a.jsxs)("div", {
         className: C.grid,
-        children: [(0, i.jsxs)("div", {
-          children: [(0, i.jsx)(u.Text, {
+        children: [(0, a.jsxs)("div", {
+          children: [(0, a.jsx)(u.Text, {
             variant: "text-sm/semibold",
             color: "header-primary",
             children: O.default.Messages.NOTIFICATION_SETTINGS_PRESETS_UNREAD_TITLE
-          }), (0, i.jsx)(u.Text, {
+          }), (0, a.jsx)(u.Text, {
             variant: "text-xs/medium",
             color: "text-muted",
             children: O.default.Messages.NOTIFICATION_SETTINGS_PRESETS_UNREAD_SUBTITLE
           })]
-        }), (0, i.jsxs)("div", {
-          children: [(0, i.jsx)(u.Text, {
+        }), (0, a.jsxs)("div", {
+          children: [(0, a.jsx)(u.Text, {
             variant: "text-sm/semibold",
             color: "header-primary",
             children: O.default.Messages.NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_TITLE
-          }), (0, i.jsx)(u.Text, {
+          }), (0, a.jsx)(u.Text, {
             variant: "text-xs/medium",
             color: "text-muted",
             children: O.default.Messages.NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_SUBTITLE
           })]
         })]
-      }), (0, i.jsxs)("div", {
+      }), (0, a.jsxs)("div", {
         className: C.grid,
-        children: [(0, i.jsx)(u.SingleSelect, {
+        children: [(0, a.jsx)(u.SingleSelect, {
           value: n,
           className: C.input,
           onChange: e => {
@@ -119,16 +119,16 @@ function v(e) {
           }),
           renderOptionLabel: e => {
             let t = e.disabled && e.value === x.UnreadSetting.ONLY_MENTIONS && n !== x.UnreadSetting.ONLY_MENTIONS;
-            return (0, i.jsxs)(i.Fragment, {
-              children: [(0, i.jsx)("div", {
-                children: (0, i.jsx)(u.Text, {
+            return (0, a.jsxs)(a.Fragment, {
+              children: [(0, a.jsx)("div", {
+                children: (0, a.jsx)(u.Text, {
                   variant: "text-md/normal",
                   color: e.disabled ? "text-muted" : void 0,
                   children: e.label
                 })
-              }), t && (0, i.jsx)(u.Tooltip, {
+              }), t && (0, a.jsx)(u.Tooltip, {
                 text: O.default.Messages.NOTIFICATION_SETTINGS_UNREAD_MENTION_ONLY_DISABLED,
-                children: e => (0, i.jsx)(o.DenyIcon, {
+                children: e => (0, a.jsx)(o.DenyIcon, {
                   ...e,
                   width: 20,
                   height: 20,
@@ -137,7 +137,7 @@ function v(e) {
               })]
             })
           }
-        }), (0, i.jsx)(u.SingleSelect, {
+        }), (0, a.jsx)(u.SingleSelect, {
           className: C.input,
           value: l,
           onChange: e => {
@@ -152,13 +152,13 @@ function v(e) {
           }),
           renderOptionLabel: e => {
             let t = e.value === _.UserNotificationSettings.ALL_MESSAGES && n !== x.UnreadSetting.ALL_MESSAGES && l !== _.UserNotificationSettings.ALL_MESSAGES;
-            return (0, i.jsxs)(i.Fragment, {
-              children: [(0, i.jsx)(u.Text, {
+            return (0, a.jsxs)(a.Fragment, {
+              children: [(0, a.jsx)(u.Text, {
                 variant: "text-md/normal",
                 children: e.label
-              }), t && (0, i.jsx)(u.Tooltip, {
+              }), t && (0, a.jsx)(u.Tooltip, {
                 text: O.default.Messages.NOTIFICATION_SETTINGS_UNREAD_UPDATE_WARNING,
-                children: e => (0, i.jsx)(d.CircleInformationIcon, {
+                children: e => (0, a.jsx)(d.CircleInformationIcon, {
                   ...e,
                   width: 20,
                   height: 20,
@@ -192,33 +192,33 @@ function L(e) {
     muted: !0,
     name: O.default.Messages.NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_3
   }];
-  return t === x.UnreadSetting.ALL_MESSAGES && (s[1].muted = !1), (0, i.jsx)("div", {
+  return t === x.UnreadSetting.ALL_MESSAGES && (s[1].muted = !1), (0, a.jsx)("div", {
     className: C.channeList,
-    children: s.map(e => (0, i.jsxs)("div", {
+    children: s.map(e => (0, a.jsxs)("div", {
       className: C.channelListChannel,
-      children: [(0, i.jsxs)("div", {
+      children: [(0, a.jsxs)("div", {
         className: C.channelListChannelName,
-        children: [(0, i.jsx)("div", {
+        children: [(0, a.jsx)("div", {
           className: l()(C.unread, {
             [C.hidden]: !e.unread,
             [C.unreadMuted]: e.muted
           })
-        }), (0, i.jsx)(S.default, {
+        }), (0, a.jsx)(S.default, {
           height: 12,
           width: 12,
           className: l()(C.channelListChannelIcon, {
             [C.muted]: e.muted
           })
-        }), (0, i.jsx)(u.Text, {
+        }), (0, a.jsx)(u.Text, {
           variant: "text-xs/normal",
           color: e.muted ? "text-muted" : void 0,
           children: e.name
         })]
-      }), (0, i.jsx)("div", {
+      }), (0, a.jsx)("div", {
         className: l()(C.badge, {
           [C.hidden]: !e.badged
         }),
-        children: (0, i.jsx)(N.NumberBadge, {
+        children: (0, a.jsx)(N.NumberBadge, {
           count: 1
         })
       })]
@@ -227,31 +227,31 @@ function L(e) {
 }
 
 function A(e) {
-  return (0, i.jsxs)("div", {
+  return (0, a.jsxs)("div", {
     className: C.mockMessage,
-    children: [e.notificationSetting === _.UserNotificationSettings.NO_MESSAGES && (0, i.jsx)("div", {
+    children: [e.notificationSetting === _.UserNotificationSettings.NO_MESSAGES && (0, a.jsx)("div", {
       className: C.mockMessageDisabled
-    }), (0, i.jsx)("div", {
-      children: (0, i.jsx)("img", {
+    }), (0, a.jsx)("div", {
+      children: (0, a.jsx)("img", {
         className: C.mockMessageAvatar,
         src: p,
         alt: ""
       })
-    }), (0, i.jsxs)("div", {
-      children: [(0, i.jsx)(u.Text, {
+    }), (0, a.jsxs)("div", {
+      children: [(0, a.jsx)(u.Text, {
         variant: "text-xs/medium",
         children: O.default.Messages.NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_AUTHOR
-      }), e.notificationSetting === _.UserNotificationSettings.ALL_MESSAGES && (0, i.jsx)(u.Text, {
+      }), e.notificationSetting === _.UserNotificationSettings.ALL_MESSAGES && (0, a.jsx)(u.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
         children: O.default.Messages.NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_MESSAGE
-      }), e.notificationSetting !== _.UserNotificationSettings.ALL_MESSAGES && (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsxs)(u.Text, {
+      }), e.notificationSetting !== _.UserNotificationSettings.ALL_MESSAGES && (0, a.jsxs)(a.Fragment, {
+        children: [(0, a.jsxs)(u.Text, {
           variant: "text-xs/normal",
           color: "text-link",
           tag: "span",
           children: ["@Roka", " "]
-        }), (0, i.jsx)(u.Text, {
+        }), (0, a.jsx)(u.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
           tag: "span",

@@ -4,8 +4,8 @@ s.r(t), s.d(t, {
     return _
   }
 }), s("47120");
-var i = s("735250"),
-  a = s("470079"),
+var a = s("735250"),
+  i = s("470079"),
   n = s("481060"),
   l = s("92114"),
   r = s("225433"),
@@ -29,7 +29,7 @@ function T(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class _ extends a.PureComponent {
+class _ extends i.PureComponent {
   highlight() {
     this.setState({
       highlight: !0
@@ -42,9 +42,9 @@ class _ extends a.PureComponent {
   }
   setMessageNotification(e, t, s) {
     let {
-      channel: i
-    } = this.props, a = i.getGuildId();
-    null != a && l.default.updateChannelOverrideSettings(a, i.id, {
+      channel: a
+    } = this.props, i = a.getGuildId();
+    null != i && l.default.updateChannelOverrideSettings(i, a.id, {
       message_notifications: e,
       muted: null != t && t
     }, s)
@@ -56,13 +56,13 @@ class _ extends a.PureComponent {
     let {
       messageNotifications: t,
       guildMuted: s,
-      muted: a,
+      muted: i,
       guildMessageNotifications: l,
       checkboxColor: r
     } = this.props, d = t === e;
     (null == t || t === f.UserNotificationSettings.NULL) && e === l && (d = !0);
     let o = n.Checkbox.Types.INVERTED;
-    return (a || t === f.UserNotificationSettings.NULL || null == t) && (o = n.Checkbox.Types.GHOST), (0, i.jsx)(n.Checkbox, {
+    return (i || t === f.UserNotificationSettings.NULL || null == t) && (o = n.Checkbox.Types.GHOST), (0, a.jsx)(n.Checkbox, {
       value: !s && d,
       disabled: s,
       shape: n.Checkbox.Shapes.ROUND,
@@ -77,7 +77,7 @@ class _ extends a.PureComponent {
       channel: s
     } = this.props;
     null != s.parent_id && (e = u.default.getChannel(s.parent_id));
-    let a = (0, o.getChannelIconComponent)(s);
+    let i = (0, o.getChannelIconComponent)(s);
     if (s.type === f.ChannelTypes.GUILD_CATEGORY && null != s.guild_id && "" !== s.guild_id) {
       let e = c.default.getCategories(s.guild_id);
       t = m.default.Messages.NUM_CHANNELS.format({
@@ -86,18 +86,18 @@ class _ extends a.PureComponent {
     } else t = null != e ? m.default.Messages.IN_CATEGORY.format({
       categoryName: (0, d.computeChannelName)(e, S.default, h.default)
     }) : m.default.Messages.NO_CATEGORY;
-    return (0, i.jsxs)(N.default, {
+    return (0, a.jsxs)(N.default, {
       grow: 1,
       className: E.nameContainer,
-      children: [null != a ? (0, i.jsx)(a, {
+      children: [null != i ? (0, a.jsx)(i, {
         className: E.icon
-      }) : null, (0, i.jsxs)("div", {
+      }) : null, (0, a.jsxs)("div", {
         className: E.channelNameContainer,
-        children: [(0, i.jsx)(n.Text, {
+        children: [(0, a.jsx)(n.Text, {
           variant: "text-md/semibold",
           className: E.channelName,
           children: (0, d.computeChannelName)(s, S.default, h.default)
-        }), (0, i.jsx)(n.Text, {
+        }), (0, a.jsx)(n.Text, {
           variant: "text-xs/normal",
           className: E.channelNameByline,
           children: t
@@ -110,36 +110,36 @@ class _ extends a.PureComponent {
       muted: e,
       guildMuted: t
     } = this.props;
-    return (0, i.jsxs)(N.default, {
+    return (0, a.jsxs)(N.default, {
       grow: 0,
       shrink: 0,
       className: E.checkboxGroup,
       justify: N.default.Justify.AROUND,
       align: N.default.Align.CENTER,
-      children: [(0, i.jsx)(N.default.Child, {
+      children: [(0, a.jsx)(N.default.Child, {
         wrap: !0,
         grow: 0,
         shrink: 0,
         className: t ? E.checkboxContainerMuted : E.checkboxContainer,
         children: this.renderMessageNotificationsRadioOption(f.UserNotificationSettings.ALL_MESSAGES)
-      }), (0, i.jsx)(N.default.Child, {
+      }), (0, a.jsx)(N.default.Child, {
         wrap: !0,
         grow: 0,
         shrink: 0,
         className: t ? E.checkboxContainerMuted : E.checkboxContainer,
         children: this.renderMessageNotificationsRadioOption(f.UserNotificationSettings.ONLY_MENTIONS)
-      }), (0, i.jsx)(N.default.Child, {
+      }), (0, a.jsx)(N.default.Child, {
         wrap: !0,
         grow: 0,
         shrink: 0,
         className: t ? E.checkboxContainerMuted : E.checkboxContainer,
         children: this.renderMessageNotificationsRadioOption(f.UserNotificationSettings.NO_MESSAGES)
-      }), (0, i.jsx)(N.default.Child, {
+      }), (0, a.jsx)(N.default.Child, {
         wrap: !0,
         grow: 0,
         shrink: 0,
         className: E.checkboxMute,
-        children: (0, i.jsx)(n.Checkbox, {
+        children: (0, a.jsx)(n.Checkbox, {
           value: e,
           shape: n.Checkbox.Shapes.BOX,
           type: n.Checkbox.Types.INVERTED,
@@ -152,11 +152,11 @@ class _ extends a.PureComponent {
     let {
       highlight: e
     } = this.state;
-    return (0, i.jsxs)(n.Card, {
+    return (0, a.jsxs)(n.Card, {
       outline: !0,
       editable: !0,
       className: e ? E.overrideHighlight : E.override,
-      children: [this.renderName(), this.renderOptions(), (0, i.jsx)(r.default, {
+      children: [this.renderName(), this.renderOptions(), (0, a.jsx)(r.default, {
         className: E.removeOverride,
         onClick: this.handleDelete
       })]

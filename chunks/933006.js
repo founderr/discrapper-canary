@@ -1,44 +1,44 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
     return N
   }
-}), n("47120");
-var s = n("735250"),
-  a = n("470079"),
-  l = n("481060"),
-  o = n("230711"),
-  i = n("2052"),
-  c = n("906732"),
-  r = n("174609"),
-  u = n("626135"),
-  d = n("790527"),
-  O = n("940165"),
-  C = n("474936"),
-  I = n("981631"),
-  _ = n("871465"),
-  T = n("689938"),
-  S = n("677804");
+}), s("47120");
+var n = s("735250"),
+  a = s("470079"),
+  l = s("481060"),
+  o = s("230711"),
+  i = s("2052"),
+  c = s("906732"),
+  r = s("174609"),
+  u = s("626135"),
+  d = s("790527"),
+  O = s("940165"),
+  C = s("474936"),
+  I = s("981631"),
+  _ = s("871465"),
+  T = s("689938"),
+  S = s("677804");
 
 function N(e) {
   let {
     onClose: t,
     ...N
   } = e, U = (0, i.useAnalyticsContext)(), {
-    analyticsLocations: p
-  } = (0, c.default)(), [M, f] = a.useState(!1);
+    analyticsLocations: M
+  } = (0, c.default)(), [f, p] = a.useState(!1);
   a.useEffect(() => {
-    !M && (u.default.track(I.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    !f && (u.default.track(I.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: C.PremiumUpsellTypes.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
       location: U.location,
-      location_stack: p
-    }), f(!0))
-  }, [U.location, p, M]);
-  let E = (0, _.getCustomNotificationSoundpackOptions)();
-  return (0, s.jsx)(d.default, {
+      location_stack: M
+    }), p(!0))
+  }, [U.location, M, f]);
+  let A = (0, _.getCustomNotificationSoundpackOptions)();
+  return (0, n.jsx)(d.default, {
     type: C.PremiumUpsellTypes.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
     artContainerClassName: S.image,
-    artURL: n("98165"),
+    artURL: s("98165"),
     title: T.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_TITLE,
     glowUp: T.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_TITLE,
     body: T.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_DESCRIPTION,
@@ -54,16 +54,16 @@ function N(e) {
     },
     onClose: t,
     ...N,
-    children: (0, s.jsx)(l.FormItem, {
+    children: (0, n.jsx)(l.FormItem, {
       title: T.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_LABEL,
       className: S.optionsContainerWrapper,
-      children: (0, s.jsx)("div", {
+      children: (0, n.jsx)("div", {
         className: S.optionsContainer,
-        children: E.map((e, t) => {
-          let n = e.value;
-          return n === _.Soundpacks.CLASSIC ? null : (0, s.jsx)(O.default, {
+        children: A.map((e, t) => {
+          let s = e.value;
+          return s === _.Soundpacks.CLASSIC ? null : (0, n.jsx)(O.default, {
             label: e.label,
-            soundpack: n,
+            soundpack: s,
             description: e.description
           }, t)
         })

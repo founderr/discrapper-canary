@@ -4,8 +4,8 @@ s.r(t), s.d(t, {
     return b
   }
 }), s("47120");
-var i = s("735250"),
-  a = s("470079"),
+var a = s("735250"),
+  i = s("470079"),
   n = s("120356"),
   l = s.n(n),
   r = s("442837"),
@@ -38,27 +38,27 @@ function b(e) {
   let {
     guildId: t,
     requestScrollToBottom: s
-  } = e, a = (0, r.useStateFromStoresArray)([f.default, T.default], () => (0, O.filterOverrides)(T.default.getChannelOverrides(t), {
+  } = e, i = (0, r.useStateFromStoresArray)([f.default, T.default], () => (0, O.filterOverrides)(T.default.getChannelOverrides(t), {
     ignoreMute: !0,
     ignoreUnreadSetting: !1,
     ignoreNotificationSetting: !1
   }).map(e => f.default.getChannel(e)).filter(x.isNotNullish));
-  (0, v.default)(a, () => s());
+  (0, v.default)(i, () => s());
   let n = (0, r.useStateFromStores)([m.default], () => m.default.getCategories(t)),
-    l = a.map((e, t) => (0, i.jsxs)("div", {
+    l = i.map((e, t) => (0, a.jsxs)("div", {
       className: R.channelRow,
-      children: [(0, i.jsx)(U, {
+      children: [(0, a.jsx)(U, {
         channel: e,
         categories: n
-      }, e.id), t < a.length - 1 && (0, i.jsx)("div", {
+      }, e.id), t < i.length - 1 && (0, a.jsx)("div", {
         className: R.separator
       })]
     }, e.id));
-  return (0, i.jsxs)("div", {
-    children: [(0, i.jsx)(L.default, {
+  return (0, a.jsxs)("div", {
+    children: [(0, a.jsx)(L.default, {
       guildId: t,
       onSelected: e => {
-        if (null != a.find(t => t.id === e)) return;
+        if (null != i.find(t => t.id === e)) return;
         let s = f.default.getChannel(e);
         null != s && c.default.updateChannelOverrideSettings(t, e, {
           muted: !1,
@@ -66,37 +66,37 @@ function b(e) {
           flags: (0, p.withChannelUnreadFlags)(T.default.getChannelIdFlags(s.guild_id, s.id), T.default.resolveUnreadSetting(s))
         }, I.NotificationLabels.OverrideCreated)
       }
-    }), l.length > 0 && (0, i.jsxs)("div", {
+    }), l.length > 0 && (0, a.jsxs)("div", {
       className: R.table,
-      children: [(0, i.jsxs)("div", {
+      children: [(0, a.jsxs)("div", {
         className: R.row,
-        children: [(0, i.jsx)(o.Text, {
+        children: [(0, a.jsx)(o.Text, {
           variant: "text-xs/bold",
           color: "text-muted",
           className: R.rowName,
           children: j.default.Messages.CHANNEL_OR_CATEGORY
-        }), (0, i.jsx)(o.Text, {
+        }), (0, a.jsx)(o.Text, {
           variant: "text-xs/bold",
           color: "text-muted",
           className: R.rowOption,
           children: j.default.Messages.NOTIFICATION_PRESET_1
-        }), (0, i.jsx)(o.Text, {
+        }), (0, a.jsx)(o.Text, {
           variant: "text-xs/bold",
           color: "text-muted",
           className: R.rowOption,
           children: j.default.Messages.NOTIFICATION_PRESET_2
-        }), (0, i.jsx)(o.Text, {
+        }), (0, a.jsx)(o.Text, {
           variant: "text-xs/bold",
           color: "text-muted",
           className: R.rowOption,
           children: j.default.Messages.NOTIFICATION_PRESET_3
-        }), (0, i.jsx)(o.Text, {
+        }), (0, a.jsx)(o.Text, {
           variant: "text-xs/bold",
           color: "text-muted",
           className: R.rowOption,
           children: j.default.Messages.NOTIFICATION_PRESET_CUSTOM
         })]
-      }), l.length > 0 && (0, i.jsx)("div", {
+      }), l.length > 0 && (0, a.jsx)("div", {
         className: R.channels,
         children: l
       })]
@@ -108,7 +108,7 @@ function U(e) {
   let {
     channel: t,
     categories: s
-  } = e, n = (0, o.useToken)(d.default.unsafe_rawColors.GREEN_360).hex(), c = (0, r.useStateFromStores)([f.default], () => f.default.getChannel(null == t ? void 0 : t.parent_id)), m = (0, C.useChannelPresetSettings)(t), [T, x] = a.useState(!1);
+  } = e, n = (0, o.useToken)(d.default.unsafe_rawColors.GREEN_360).hex(), c = (0, r.useStateFromStores)([f.default], () => f.default.getChannel(null == t ? void 0 : t.parent_id)), m = (0, C.useChannelPresetSettings)(t), [T, x] = i.useState(!1);
   if (null == t) return null;
   let I = j.default.Messages.NO_CATEGORY,
     O = (0, g.getChannelIconComponent)(t);
@@ -118,30 +118,30 @@ function U(e) {
     categoryName: (0, S.computeChannelName)(c, _.default, E.default)
   }));
   let p = T ? M.Presets.CUSTOM : m.preset;
-  return (0, i.jsx)("div", {
-    children: (0, i.jsxs)("div", {
+  return (0, a.jsx)("div", {
+    children: (0, a.jsxs)("div", {
       className: l()(R.row, R.channel),
-      children: [(0, i.jsxs)("div", {
+      children: [(0, a.jsxs)("div", {
         className: l()(R.rowName, R.modColor),
-        children: [null != O ? (0, i.jsx)(O, {
+        children: [null != O ? (0, a.jsx)(O, {
           height: 20,
           width: 20,
           className: R.icon
-        }) : null, (0, i.jsxs)("div", {
-          children: [(0, i.jsx)(o.Text, {
+        }) : null, (0, a.jsxs)("div", {
+          children: [(0, a.jsx)(o.Text, {
             variant: "text-md/semibold",
             className: R.modColor,
             children: (0, S.computeChannelName)(t, _.default, E.default)
-          }), (0, i.jsx)(o.Text, {
+          }), (0, a.jsx)(o.Text, {
             variant: "text-xs/medium",
             className: R.modColor,
             children: I
           })]
         })]
-      }), (0, i.jsx)("div", {
+      }), (0, a.jsx)("div", {
         className: R.rowOption,
-        children: (0, i.jsx)("div", {
-          children: (0, i.jsx)(o.Checkbox, {
+        children: (0, a.jsx)("div", {
+          children: (0, a.jsx)(o.Checkbox, {
             color: n,
             shape: o.Checkbox.Shapes.ROUND,
             type: o.Checkbox.Types.INVERTED,
@@ -149,10 +149,10 @@ function U(e) {
             onChange: () => ((0, C.updateChannelPreset)(t.guild_id, t.id, M.Presets.ALL_MESSAGES), x(!1))
           })
         })
-      }), (0, i.jsx)("div", {
+      }), (0, a.jsx)("div", {
         className: R.rowOption,
-        children: (0, i.jsx)("div", {
-          children: (0, i.jsx)(o.Checkbox, {
+        children: (0, a.jsx)("div", {
+          children: (0, a.jsx)(o.Checkbox, {
             color: n,
             shape: o.Checkbox.Shapes.ROUND,
             type: o.Checkbox.Types.INVERTED,
@@ -160,10 +160,10 @@ function U(e) {
             onChange: () => ((0, C.updateChannelPreset)(t.guild_id, t.id, M.Presets.MENTIONS), x(!1))
           })
         })
-      }), (0, i.jsx)("div", {
+      }), (0, a.jsx)("div", {
         className: R.rowOption,
-        children: (0, i.jsx)("div", {
-          children: (0, i.jsx)(o.Checkbox, {
+        children: (0, a.jsx)("div", {
+          children: (0, a.jsx)(o.Checkbox, {
             color: n,
             shape: o.Checkbox.Shapes.ROUND,
             type: o.Checkbox.Types.INVERTED,
@@ -171,12 +171,12 @@ function U(e) {
             onChange: () => ((0, C.updateChannelPreset)(t.guild_id, t.id, M.Presets.NOTHING), x(!1))
           })
         })
-      }), (0, i.jsx)("div", {
+      }), (0, a.jsx)("div", {
         className: R.rowOption,
-        children: (0, i.jsx)("div", {
-          children: (0, i.jsx)(o.Checkbox, {
+        children: (0, a.jsx)("div", {
+          children: (0, a.jsx)(o.Checkbox, {
             onClick: e => {
-              (0, u.openContextMenu)(e, () => (0, i.jsx)(o.Menu, {
+              (0, u.openContextMenu)(e, () => (0, a.jsx)(o.Menu, {
                 navId: "ChannelNotificationCustomSettingsItems",
                 "aria-label": j.default.Messages.NOTIFICATION_SETTINGS_CHANNELS_CUSTOM_MENU_ARIA_LABEL,
                 onClose: () => {},
@@ -191,7 +191,7 @@ function U(e) {
             onChange: () => x(!0)
           })
         })
-      }), (0, i.jsx)(h.default, {
+      }), (0, a.jsx)(h.default, {
         onClick: () => (0, C.updateChannelToGuildDefault)(t.guild_id, t.id),
         className: R.removeButton
       })]

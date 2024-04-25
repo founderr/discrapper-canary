@@ -32,8 +32,8 @@ function _(e) {
   }), [t, i]), O = (0, d.isGuildAClan)(A);
   (0, u.useSubscribeGuildMembers)(p);
   let G = I === N.AppContext.POPOUT,
-    C = L === i,
-    [b, x] = (0, a.useStateFromStoresArray)([f.default], () => {
+    b = L === i,
+    [C, x] = (0, a.useStateFromStoresArray)([f.default], () => {
       if (null == A) return [!1, !1];
       let e = L === i && (f.default.can(N.Permissions.CHANGE_NICKNAME, A) || f.default.can(N.Permissions.MANAGE_NICKNAMES, A));
       return [e, f.default.canManageUser(N.Permissions.MANAGE_NICKNAMES, i, A)]
@@ -41,7 +41,7 @@ function _(e) {
     U = n.useCallback((e, t) => () => {
       (0, o.adoptClanIdentity)(e, t)
     }, []);
-  return null != A && !G && (b || x || C) && null != m && !T && O && m.isStaff() ? (0, s.jsxs)(s.Fragment, {
+  return null != A && !G && (C || x || b) && null != m && !T && O && m.isStaff() ? (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(l.MenuItem, {
       id: "adopt-clan-identity",
       label: g.default.Messages.CLAN_ADOPT_CLAN_IDENTITY,

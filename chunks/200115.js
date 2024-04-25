@@ -4,10 +4,10 @@ s.r(t), s.d(t, {
     return f
   }
 });
-var i = s("735250");
+var a = s("735250");
 s("470079");
-var a = s("913527"),
-  n = s.n(a),
+var i = s("913527"),
+  n = s.n(i),
   l = s("399606"),
   r = s("481060"),
   d = s("92114"),
@@ -23,9 +23,9 @@ function f(e) {
   var t;
   let {
     guildId: s
-  } = e, a = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(s)), f = (0, l.useStateFromStores)([u.default], () => u.default.isMuted(s)), m = (0, l.useStateFromStores)([u.default], () => u.default.getMuteConfig(s));
-  return null == a ? null : (0, i.jsxs)(r.FormItem, {
-    children: [(0, i.jsx)(r.FormSwitch, {
+  } = e, i = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(s)), f = (0, l.useStateFromStores)([u.default], () => u.default.isMuted(s)), m = (0, l.useStateFromStores)([u.default], () => u.default.getMuteConfig(s));
+  return null == i ? null : (0, a.jsxs)(r.FormItem, {
+    children: [(0, a.jsx)(r.FormSwitch, {
       hideBorder: !0,
       value: f,
       onChange: e => {
@@ -38,15 +38,15 @@ function f(e) {
       },
       note: N.default.Messages.FOR_LABEL_MUTE_SEVER_DESCRIPTION_V2,
       children: N.default.Messages.FORM_LABEL_MUTE_SERVER.format({
-        name: a.name
+        name: i.name
       })
-    }), f && (0, i.jsxs)("div", {
+    }), f && (0, a.jsxs)("div", {
       className: g.mutedConfig,
-      children: [(0, i.jsxs)("div", {
-        children: [(0, i.jsx)(r.FormTitle, {
+      children: [(0, a.jsxs)("div", {
+        children: [(0, a.jsx)(r.FormTitle, {
           tag: "h3",
           children: N.default.Messages.MUTE_UNTIL
-        }), (0, i.jsx)(r.Text, {
+        }), (0, a.jsx)(r.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
           children: function(e) {
@@ -60,7 +60,7 @@ function f(e) {
             })
           }(m)
         })]
-      }), (0, i.jsx)(r.SingleSelect, {
+      }), (0, a.jsx)(r.SingleSelect, {
         onChange: e => {
           let t = e > 0 ? n()().add(e, "second").toISOString() : null;
           d.default.updateGuildNotificationSettings(s, {

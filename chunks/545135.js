@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return P
+    return v
   }
 });
 var s = i("735250");
@@ -30,8 +30,8 @@ var n = i("512722"),
   p = i("858822"),
   O = i("993356"),
   G = i("58338"),
-  C = i("422525"),
-  b = i("522762"),
+  b = i("422525"),
+  C = i("522762"),
   x = i("466330"),
   U = i("981631"),
   R = i("689938");
@@ -41,14 +41,14 @@ function j(e) {
     guild: t,
     onSelect: n,
     hideSettings: d
-  } = e, r = t.id, j = _.default.getDefaultChannel(r), P = (0, l.useStateFromStores)([M.default], () => {
+  } = e, r = t.id, j = _.default.getDefaultChannel(r), v = (0, l.useStateFromStores)([M.default], () => {
     let e = M.default.getCurrentUser();
     return a()(null != e, "GuildContextMenu: user cannot be undefined"), t.isOwner(e)
-  }, [t]), v = (0, x.default)({
+  }, [t]), P = (0, x.default)({
     guild: t,
     source: U.InstantInviteSources.GUILD_CONTEXT_MENU,
     channel: j
-  }), F = (0, b.default)(r), y = (0, p.default)(t), D = (0, O.default)(t), k = (0, C.default)(t), B = (0, A.default)({
+  }), F = (0, C.default)(r), y = (0, p.default)(t), D = (0, O.default)(t), k = (0, b.default)(t), B = (0, A.default)({
     guildId: t.id,
     userId: g.default.getId(),
     analyticsLocation: {
@@ -83,7 +83,7 @@ function j(e) {
     "aria-label": R.default.Messages.GUILD_ACTIONS_MENU_LABEL,
     onSelect: n,
     children: [(0, s.jsxs)(u.MenuGroup, {
-      children: [v, (0, s.jsx)(u.MenuItem, {
+      children: [P, (0, s.jsx)(u.MenuItem, {
         id: "privacy",
         label: R.default.Messages.HUB_PRIVACY_SETTINGS,
         action: () => (0, u.openModalLazy)(async () => {
@@ -96,7 +96,7 @@ function j(e) {
           })
         })
       }), B]
-    }), P ? null : (0, s.jsx)(u.MenuGroup, {
+    }), v ? null : (0, s.jsx)(u.MenuGroup, {
       children: (0, s.jsx)(u.MenuItem, {
         id: "leave-guild",
         label: R.default.Messages.LEAVE_HUB,
@@ -114,7 +114,7 @@ function j(e) {
     children: [(0, s.jsx)(u.MenuGroup, {
       children: z
     }), (0, s.jsx)(u.MenuGroup, {
-      children: v
+      children: P
     }), (0, s.jsxs)(u.MenuGroup, {
       children: [y, q || __OVERLAY__ ? null : D, q && !__OVERLAY__ ? X : null, K, F, W]
     }), (0, s.jsxs)(u.MenuGroup, {
@@ -134,7 +134,7 @@ function j(e) {
     }), (0, s.jsxs)(u.MenuGroup, {
       children: [Y, w]
     }), (0, s.jsxs)(u.MenuGroup, {
-      children: [Q, !P && (0, s.jsx)(u.MenuItem, {
+      children: [Q, !v && (0, s.jsx)(u.MenuItem, {
         id: "leave-guild",
         label: R.default.Messages.LEAVE_SERVER,
         action: J,
@@ -146,7 +146,7 @@ function j(e) {
   })
 }
 
-function P(e) {
+function v(e) {
   let {
     analyticsLocations: t
   } = (0, r.default)(d.default.CONTEXT_MENU);
