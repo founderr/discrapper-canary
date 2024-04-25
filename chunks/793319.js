@@ -140,7 +140,7 @@ function ev(e) {
       } : null,
       popoutOpen: t,
       shouldShowTooltip: !t,
-      premiumGlow: g && E.hqStreamingIsEnabled && !E.hqStreamingPopoutDismissed,
+      premiumGlow: g && E.hqStreamingIsEnabled,
       buttonRef: _,
       onClick: null != d ? j : O
     })

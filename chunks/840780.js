@@ -290,9 +290,6 @@ class ey extends a.PureComponent {
     return (0, l.jsxs)("div", {
       className: ex.gameWrapper,
       children: [e ? (0, l.jsx)(F.default, {
-        className: i()({
-          [ex.streamingIconGlow]: null != a
-        }),
         title: r
       }) : (0, l.jsx)(eE.default, {
         look: eE.default.Looks.GRAY,
