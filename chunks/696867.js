@@ -1,30 +1,30 @@
 "use strict";
 t.r(l), t.d(l, {
   CheckmarkBoldIcon: function() {
-    return n
+    return o
   }
 });
-var s = t("735250");
+var a = t("735250");
 t("470079");
-var a = t("692547"),
-  o = t("331595");
-let n = e => {
+var s = t("692547"),
+  n = t("331595");
+let o = e => {
   let {
     width: l = 24,
     height: t = 24,
-    color: n = a.default.colors.INTERACTIVE_NORMAL,
+    color: o = s.default.colors.INTERACTIVE_NORMAL,
     colorClass: i = "",
     ...d
   } = e;
-  return (0, s.jsx)("svg", {
-    ...(0, o.default)(d),
+  return (0, a.jsx)("svg", {
+    ...(0, n.default)(d),
     xmlns: "http://www.w3.org/2000/svg",
     width: l,
     height: t,
     fill: "none",
     viewBox: "0 0 24 24",
-    children: (0, s.jsx)("path", {
-      fill: "string" == typeof n ? n : n.css,
+    children: (0, a.jsx)("path", {
+      fill: "string" == typeof o ? o : o.css,
       fillRule: "evenodd",
       d: "M22.06 4.94a1.5 1.5 0 0 1 0 2.12l-12 12a1.5 1.5 0 0 1-2.12 0l-6-6a1.5 1.5 0 0 1 2.12-2.12L9 15.88 19.94 4.94a1.5 1.5 0 0 1 2.12 0Z",
       clipRule: "evenodd",
