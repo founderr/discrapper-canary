@@ -149,10 +149,7 @@ t.default = e => {
         [C.referralProgressBarIconSettings]: t
       })
     }), (0, a.jsxs)("div", {
-      className: n()(C.expandedProgressBarContent, {
-        [C.expandedProgressBarContentVariant1]: !x,
-        [C.expandedProgressBarContentVariant2]: x
-      }),
+      className: C.expandedProgressBarContent,
       children: [(0, a.jsx)(o.Heading, {
         variant: t ? "heading-xl/extrabold" : "heading-xxl/extrabold",
         className: C.expandedProgressBarHeader,

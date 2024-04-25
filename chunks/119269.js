@@ -28,7 +28,9 @@ t.default = e => {
     progressCircleVariation: x = 0
   } = e, R = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), h = t && !R;
   return (0, n.jsx)("div", {
-    className: a()(C.gemProgressCircle, r),
+    className: a()(C.progressCircle, r, {
+      [C.progressCricleBottomMargin]: 0 === x
+    }),
     children: (0, n.jsx)(_.default, {
       animationClassName: a()(C.activeProgressCircle, {
         [C.activeProgressCircleAnimation]: h
