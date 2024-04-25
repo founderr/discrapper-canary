@@ -7,12 +7,13 @@ n.r(t), n.d(t, {
 var s = n("470079"),
   i = n("127255");
 
-function a(e, t) {
-  let n = (0, i.default)({
-    guildId: e
+function a(e, t, n) {
+  let a = (0, i.default)({
+    guildId: e,
+    channel: n
   });
   return s.useMemo(() => {
     var e;
-    return null !== (e = n.find(e => e.application.id === t)) && void 0 !== e ? e : null
-  }, [n, t])
+    return null !== (e = a.find(e => e.application.id === t)) && void 0 !== e ? e : null
+  }, [a, t])
 }

@@ -208,19 +208,21 @@ function P(e) {
 let b = e => {
   let {
     userParticipantCount: t,
-    guildId: n
-  } = e, a = (0, c.default)({
-    guildId: n
+    guildId: n,
+    channel: a
+  } = e, l = (0, c.default)({
+    guildId: n,
+    channel: a
   });
   if (2 === t) {
     let e = [],
       t = [(0, M.WATCH_YOUTUBE_PROD_APP_ID), (0, M.PUTT_PARTY_APPLICATION_ID), (0, M.CHESS_IN_THE_PARK_APP_ID)].filter(Boolean).slice(0, 3);
-    return a.forEach(n => {
+    return l.forEach(n => {
       let a = t.indexOf(n.application.id);
       !(a < 0) && (e[a] = n)
     }), e
   }
-  return a.slice(0, 3)
+  return l.slice(0, 3)
 };
 
 function D(e) {
@@ -239,7 +241,8 @@ function D(e) {
   }, []);
   let c = b({
       userParticipantCount: d,
-      guildId: n.id
+      guildId: n.id,
+      channel: t
     }),
     {
       analyticsLocations: h

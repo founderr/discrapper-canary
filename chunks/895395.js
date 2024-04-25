@@ -42,7 +42,8 @@ function j(e) {
     scrollerRef: S
   } = e, [j, y] = a.useState(0), D = (0, E.default)({
     guildId: l,
-    enableFilter: !0
+    enableFilter: !0,
+    channel: t
   }), M = (0, d.useStateFromStores)([h.default], () => h.default.getCurrentUser()), L = (0, d.useStateFromStores)([f.default], () => f.default.getGuild(l), [l]), {
     analyticsLocations: V
   } = (0, v.default)(u.default.ACTIVITY_DIRECTORY), R = (0, T.default)(null == t ? void 0 : t.id), {

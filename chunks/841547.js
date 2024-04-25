@@ -27,7 +27,8 @@ function T() {
   let e = (0, i.useStateFromStores)([H.default], () => H.default.useReducedMotion),
     [a] = t.useState(Math.random()),
     s = (0, c.default)({
-      guildId: null
+      guildId: null,
+      channel: void 0
     }),
     {
       analyticsLocations: T

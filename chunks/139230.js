@@ -55,7 +55,7 @@ function B(e) {
       applicationId: null != T ? T : "",
       size: 2048
     }),
-    y = (0, _.useActivityShelfItemData)(null, null != T && "" !== T ? T : null);
+    y = (0, _.useActivityShelfItemData)(null, null != T && "" !== T ? T : null, void 0);
   if (null == T || null == y) return null;
   if (!(0, I.hasFlag)(y.application.flags, O.ApplicationFlags.EMBEDDED)) return (0, i.jsx)(s.Redirect, {
     to: O.Routes.ACTIVITIES

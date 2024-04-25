@@ -68,11 +68,12 @@ let j = "vc-activities-".concat((0, o.v4)()),
       } = (0, p.default)([...V, m.default.ACTIVITIES_MINI_SHELF_BANNER]),
       Y = G === M.AppContext.POPOUT,
       z = (0, c.useAnalyticsContext)(),
-      K = function(e) {
+      K = function(e, t) {
         return (0, A.default)({
-          guildId: e
+          guildId: e,
+          channel: t
         }).slice(0, 5)
-      }(n.getGuildId());
+      }(n.getGuildId(), n);
     l.useEffect(() => {
       let e = setTimeout(() => I.dismissNewActivityIndicator(), 1e3);
       return () => clearTimeout(e)

@@ -712,7 +712,8 @@ function LQ(L) {
 
 function Lq() {
   let L = (0, LL.default)({
-    guildId: null
+    guildId: null,
+    channel: void 0
   });
   return n.useEffect(() => {
     (0, Y.fetchShelf)({
