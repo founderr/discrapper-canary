@@ -2,9 +2,6 @@
 n.r(t), n.d(t, {
   BaseClanTagChiplet: function() {
     return h
-  },
-  ClanBadgeWithTooltip: function() {
-    return A
   }
 }), n("47120");
 var i = n("735250"),
@@ -66,46 +63,6 @@ let S = r.memo(function(e) {
   });
 
 function A(e) {
-  var t, n, s;
-  let {
-    clan: a,
-    size: d = I.ClanTagBadgeSize.SIZE_16,
-    userId: E,
-    className: T
-  } = e, f = (0, o.useStateFromStores)([u.default], () => u.default.getUser(E), [E]), h = null !== (t = null == f ? void 0 : f.clan) && void 0 !== t ? t : a, {
-    tag: A,
-    badge: m,
-    guildId: N
-  } = (0, c.getUserClanData)(h), [p, O] = (0, _.useFetchClanInfo)(null !== (n = null == h ? void 0 : h.identityGuildId) && void 0 !== n ? n : null), R = (0, _.useClanInfo)(null !== (s = null == h ? void 0 : h.identityGuildId) && void 0 !== s ? s : null), [C, g] = r.useState(!1);
-  if (null == N || null == A || null == m) return null;
-  let L = (0, c.getClanBadgeUrl)(N, m, d);
-  return (0, i.jsx)(l.Tooltip, {
-    text: p ? (0, i.jsx)(l.Spinner, {}) : null == R ? void 0 : R.name,
-    onTooltipShow: () => O(),
-    hideOnClick: !0,
-    shouldShow: C,
-    forceOpen: C,
-    children: e => (0, i.jsx)(l.Clickable, {
-      tag: "span",
-      className: T,
-      ...e,
-      onMouseEnter: () => {
-        var t;
-        g(!0), null === (t = e.onMouseEnter) || void 0 === t || t.call(e)
-      },
-      onMouseLeave: () => {
-        var t;
-        g(!1), null === (t = e.onMouseLeave) || void 0 === t || t.call(e)
-      },
-      children: (0, i.jsx)(S, {
-        src: L,
-        size: d
-      })
-    })
-  })
-}
-
-function m(e) {
   var t, n;
   let {
     clan: s,
@@ -154,24 +111,24 @@ t.default = r.memo(function(e) {
     badgeSize: E,
     disableTooltip: I = !1
   } = e, T = (0, o.useStateFromStores)([u.default], () => u.default.getUser(r), [r]), S = null !== (t = null == T ? void 0 : T.clan) && void 0 !== t ? t : n, {
-    tag: A,
+    tag: m,
     badge: N,
     guildId: p
   } = (0, c.getUserClanData)(S);
-  if (!(0, d.useIsInUserClanExperiment)() || null == p || null == A) return null;
+  if (!(0, d.useIsInUserClanExperiment)() || null == p || null == m) return null;
   let O = (0, c.getClanBadgeUrl)(p, N, E);
   return I ? (0, i.jsx)(h, {
-    clanTag: A,
+    clanTag: m,
     clanBadge: O,
     className: a()(f.noTooltip, s),
     textVariant: l,
     textColor: _,
     badgeSize: E
-  }) : (0, i.jsx)(m, {
+  }) : (0, i.jsx)(A, {
     clan: S,
     userId: r,
     children: (0, i.jsx)(h, {
-      clanTag: A,
+      clanTag: m,
       clanBadge: O,
       className: s,
       textVariant: l,
