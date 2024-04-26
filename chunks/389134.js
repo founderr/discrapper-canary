@@ -1,10 +1,10 @@
 "use strict";
-a.r(t), a("47120");
-var n, l, i, s, r = a("442837"),
-  o = a("570140"),
-  d = a("944163"),
-  u = a("116175"),
-  c = a("308083");
+n.r(t), n("47120");
+var a, l, s, i, r = n("442837"),
+  o = n("570140"),
+  d = n("944163"),
+  u = n("116175"),
+  c = n("308083");
 let f = () => ({
     gameApplicationIds: new Set,
     playstyle: c.ClanPlaystyles.NONE,
@@ -25,7 +25,7 @@ let f = () => ({
   S = f(),
   E = !1,
   p = {};
-class T extends(n = r.default.Store) {
+class m extends(a = r.default.Store) {
   getState() {
     return {
       settings: S,
@@ -34,12 +34,12 @@ class T extends(n = r.default.Store) {
     }
   }
 }
-s = "ClanSettingsStore", (i = "displayName") in(l = T) ? Object.defineProperty(l, i, {
-  value: s,
+i = "ClanSettingsStore", (s = "displayName") in(l = m) ? Object.defineProperty(l, s, {
+  value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[i] = s, t.default = new T(o.default, {
+}) : l[s] = i, t.default = new m(o.default, {
   CLAN_SETTINGS_FETCH_START: function() {
     E = !1, S = f(), p = {}
   },
