@@ -22,7 +22,7 @@ t.default = e => {
   return (0, n.jsxs)("div", {
     className: o.slideContent,
     children: [(0, n.jsx)(i.Heading, {
-      variant: "heading-xl/semibold",
+      variant: "heading-xxl/medium",
       className: o.title,
       children: r.default.Messages.CLAN_SETUP_DESCRIPTION_TITLE
     }), (0, n.jsx)(i.Text, {
