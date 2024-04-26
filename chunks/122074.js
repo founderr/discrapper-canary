@@ -61,7 +61,7 @@ function v(e, t) {
     w = (0, N.getCustomNotificationSoundpackOptions)(),
     Y = null !== (v = null === (n = w.find(e => e.value === G)) || void 0 === n ? void 0 : n.label) && void 0 !== v ? v : A.default.Messages.SOUNDPACK_DEFAULT_LABEL;
   return (0, a.jsx)(r.MenuItem, {
-    id: "notification",
+    id: "notification-sounds",
     label: e => {
       let {
         isFocused: t
