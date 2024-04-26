@@ -21964,7 +21964,8 @@ strong {
 span.clanTag_c8f97c {
     flex: 0;
     white-space: nowrap;
-    text-overflow: ellipsis
+    text-overflow: ellipsis;
+    margin-top: 0
 }
 
 div.clanTagBadgeContainer_fb8c5b {
