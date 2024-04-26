@@ -16,7 +16,7 @@ var a = n("735250"),
   f = n("607070"),
   h = n("466794"),
   m = n("976644"),
-  p = n("455784"),
+  p = n("61100"),
   E = n("546240"),
   C = n("952009");
 
@@ -38,8 +38,8 @@ function g(e) {
     width: j = 0,
     ref: P
   } = (0, d.default)(), {
-    width: b = 0,
-    ref: D
+    width: D = 0,
+    ref: b
   } = (0, d.default)();
   return (0, a.jsxs)(u.TooltipContainer, {
     text: (0, a.jsx)(h.NitroTooltipLabel, {
@@ -72,7 +72,7 @@ function g(e) {
         [p.labelUnchecked]: !t && !g
       }),
       style: v ? {
-        width: t ? j : j + b
+        width: t ? j : j + D
       } : void 0,
       children: [t ? (0, a.jsx)(m.Shine, {
         className: p.shine,
@@ -82,7 +82,7 @@ function g(e) {
         src: O,
         alt: S
       }), (0, a.jsx)("span", {
-        ref: D,
+        ref: b,
         children: (0, a.jsx)(u.Text, {
           className: i()(p.burstText, {
             [p.visuallyHidden]: t && v,

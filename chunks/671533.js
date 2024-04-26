@@ -5,7 +5,7 @@ n("470079");
 var a = n("120356"),
   o = n.n(a),
   l = n("325767"),
-  u = n("33940");
+  u = n("731253");
 (r = i || (i = {})).LEFT = "LEFT", r.RIGHT = "RIGHT", r.UP = "UP", r.DOWN = "DOWN", r.UP_LEFT = "UP_LEFT", r.DOWN_RIGHT = "DOWN_RIGHT";
 let d = e => {
   let {

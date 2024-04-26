@@ -16,9 +16,9 @@ var n = a("735250"),
   C = a("92373"),
   m = a("10473"),
   S = a("207796"),
-  I = a("308083"),
-  p = a("689938"),
-  T = a("60427");
+  p = a("308083"),
+  I = a("689938"),
+  T = a("506254");
 
 function g(e) {
   let {
@@ -83,7 +83,7 @@ function A() {
     });
   return (0, n.jsx)(g, {
     icon: d,
-    text: p.default.Messages.CLAN_DISCOVERY_GAME_FILTER.format({
+    text: I.default.Messages.CLAN_DISCOVERY_GAME_FILTER.format({
       count: t.length
     }),
     tooltip: o,
@@ -95,7 +95,7 @@ function A() {
 }
 
 function N() {
-  let e = s.useMemo(I.getPlaystyleOptions, []),
+  let e = s.useMemo(p.getPlaystyleOptions, []),
     t = (0, S.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, r.default),
     a = (0, S.useClanDiscoveryUIStore)(e => e.setMode, r.default),
     l = null != t ? e[t] : null,
@@ -156,7 +156,7 @@ function v() {
     });
   return (0, n.jsx)(g, {
     icon: i,
-    text: p.default.Messages.CLAN_DISCOVERY_PREFERENCES_FILTER,
+    text: I.default.Messages.CLAN_DISCOVERY_PREFERENCES_FILTER,
     tooltip: l,
     onClick: a,
     isActive: e.length > 0,
@@ -178,7 +178,7 @@ function R() {
     }), (0, n.jsx)(E.Text, {
       variant: "text-xs/medium",
       color: "none",
-      children: p.default.Messages.CLAN_DISCOVERY_SAVED_FILTER.format({
+      children: I.default.Messages.CLAN_DISCOVERY_SAVED_FILTER.format({
         count: e.length
       })
     })]

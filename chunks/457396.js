@@ -21,8 +21,8 @@ var s = a("924826"),
   C = a("104494"),
   m = a("639119"),
   S = a("655525"),
-  I = a("314684"),
-  p = a("52188"),
+  p = a("314684"),
+  I = a("52188"),
   T = a("248042"),
   g = a("924540"),
   A = a("649765"),
@@ -31,9 +31,9 @@ var s = a("924826"),
   R = a("886654"),
   L = a("487980"),
   O = a("474936"),
-  P = a("921944"),
-  M = a("689938"),
-  x = a("392934");
+  M = a("921944"),
+  P = a("689938"),
+  x = a("47848");
 let y = "NitroTabButton",
   D = e => {
     let t, a, {
@@ -50,7 +50,7 @@ let y = "NitroTabButton",
       H = (0, l.useStateFromStores)([d.default], () => d.default.isLocalizedPromoEnabled) && null == F,
       V = (0, T.useIsEligibleForBogoPromotion)(),
       Y = (0, N.default)(),
-      W = (0, I.useTenureRewardBadgeDescription)(),
+      W = (0, p.useTenureRewardBadgeDescription)(),
       K = (0, h.useShouldShowNewOfferBadgeForAprilMarketingMoment)(y),
       z = (0, L.useIsEligibleSenderForReferralProgramTabBadge)(y),
       q = D || null != F || null != B || V || K || Y || null != W || null != G && Date.now() - G.createdAt.getTime() > 2592e6 || (0, E.hasPremiumSubscriptionToDisplay)(G, w),
@@ -62,13 +62,14 @@ let y = "NitroTabButton",
         autoTrackExposure: !1
       }),
       Z = Q && (null == F ? void 0 : F.trial_id) === O.PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
-    return q ? (V ? a = (0, n.jsx)(S.default, {
+    if (!q) return null;
+    V ? a = (0, n.jsx)(S.default, {
       isNitroTab: !0
     }) : K ? a = (0, n.jsx)(R.default, {
-      copy: M.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_MODAL_TOP_PILL,
+      copy: P.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_MODAL_TOP_PILL,
       isSelected: D,
       onSelect: () => (0, o.markDismissibleContentAsDismissed)(i.DismissibleContent.PREMIUM_2024_APRIL_MARKETING_BADGE, {
-        dismissAction: P.ContentDismissActionType.TAKE_ACTION
+        dismissAction: M.ContentDismissActionType.TAKE_ACTION
       })
     }) : null != W ? a = (0, n.jsx)(v.default, {
       copy: W
@@ -79,22 +80,26 @@ let y = "NitroTabButton",
     }) : null == F || Z ? z ? a = (0, n.jsx)(A.default, {
       isSelected: D,
       onSelect: () => (0, o.markDismissibleContentAsDismissed)(i.DismissibleContent.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, {
-        dismissAction: P.ContentDismissActionType.TAKE_ACTION
+        dismissAction: M.ContentDismissActionType.TAKE_ACTION
       })
-    }) : H && (a = (0, n.jsx)(p.LocalizedPricingBadgeIcon, {
-      entryPoint: p.BadgeEntryPoint.PrivateMessages
+    }) : H && (a = (0, n.jsx)(I.LocalizedPricingBadgeIcon, {
+      entryPoint: I.BadgeEntryPoint.PrivateMessages
     }), !D && (t = x.localizeBadge)) : a = (0, n.jsx)(g.PremiumTrialOfferTabBadge, {
       trialOffer: F,
       isTabSelected: D
-    }), (0, n.jsx)(r.LinkButton, {
+    });
+    let X = (0, n.jsx)(r.LinkButton, {
       selected: D,
       route: b,
       icon: f.default,
-      text: M.default.Messages.PREMIUM,
+      text: P.default.Messages.PREMIUM,
       locationState: U,
       ...j,
       ...k,
       className: t,
       children: a
-    })) : null
+    });
+    return z ? (0, n.jsx)(A.ReferralProgramCoachtipLinkButton, {
+      children: X
+    }) : X
   }

@@ -14,22 +14,22 @@ var a, n = s("735250"),
   c = s("442837"),
   p = s("481060"),
   m = s("570140"),
-  E = s("355467"),
-  f = s("827837"),
+  f = s("355467"),
+  E = s("827837"),
   _ = s("821849"),
   I = s("724757"),
   S = s("818035"),
   N = s("509545"),
-  C = s("78839"),
-  h = s("285952"),
-  P = s("884246"),
+  P = s("78839"),
+  C = s("285952"),
+  h = s("884246"),
   T = s("74538"),
   A = s("807160"),
   R = s("474936"),
   y = s("231338"),
   M = s("689938"),
-  L = s("472009"),
-  g = s("486158");
+  L = s("469861"),
+  g = s("59045");
 
 function x(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -46,7 +46,7 @@ function D(e) {
     locale: s,
     compactMode: a,
     numPages: l
-  } = e, u = i.useRef(null), [o, c] = i.useState(0), [m, f] = i.useState(null), _ = t.slice(10 * o, (o + 1) * 10);
+  } = e, u = i.useRef(null), [o, c] = i.useState(0), [m, E] = i.useState(null), _ = t.slice(10 * o, (o + 1) * 10);
   i.useEffect(() => {
     var e;
     null === (e = u.current) || void 0 === e || e.scrollTo({
@@ -56,7 +56,7 @@ function D(e) {
   let S = i.useCallback(e => {
       c(e);
       let s = t[t.length - 1].id;
-      e === l - 1 && m !== s && ((0, E.fetchPayments)(10, s), f(s))
+      e === l - 1 && m !== s && ((0, f.fetchPayments)(10, s), E(s))
     }, [t, l, m]),
     N = (0, I.default)("billing-history", u);
   return (0, n.jsx)(d.ListNavigatorProvider, {
@@ -67,7 +67,7 @@ function D(e) {
           ref: t,
           ...i
         } = e;
-        return (0, n.jsx)(P.default, {
+        return (0, n.jsx)(h.default, {
           className: r()(L.verticalFit, L.paginator),
           currentPageIndex: o,
           onChangePage: S,
@@ -95,7 +95,7 @@ class b extends(a = i.PureComponent) {
   }
   componentDidMount() {
     m.default.wait(() => {
-      (0, f.fetchActivityStatistics)(), (0, E.fetchPayments)(20)
+      (0, E.fetchActivityStatistics)(), (0, f.fetchPayments)(20)
     })
   }
   renderPremiumExternalSubscription(e) {
@@ -128,7 +128,7 @@ class b extends(a = i.PureComponent) {
         className: r()(L.paymentPane, L.verticalFit),
         children: [e ? null : (0, n.jsx)("div", {
           className: r()(L.paymentRow, L.bottomDivider),
-          children: (0, n.jsxs)(h.default, {
+          children: (0, n.jsxs)(C.default, {
             className: L.paymentRowHeader,
             children: [(0, n.jsx)("div", {
               className: g.date,
@@ -164,7 +164,7 @@ function U(e) {
 
 function v(e) {
   let t = (0, c.useStateFromStores)([S.default], () => S.default.getPayments()),
-    s = (0, c.useStateFromStores)([C.default], () => C.default.getPremiumTypeSubscription()),
+    s = (0, c.useStateFromStores)([P.default], () => P.default.getPremiumTypeSubscription()),
     a = i.useMemo(() => new Set(t.filter(U).map(e => {
       let {
         subscription: t

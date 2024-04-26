@@ -20,8 +20,8 @@ var n = a("735250"),
   C = a("393238"),
   m = a("727637"),
   S = a("420660"),
-  I = a("100527"),
-  p = a("906732"),
+  p = a("100527"),
+  I = a("906732"),
   T = a("521868"),
   g = a("299206"),
   A = a("440051"),
@@ -30,8 +30,8 @@ var n = a("735250"),
   R = a("785717"),
   L = a("221292"),
   O = a("318661"),
-  P = a("502762"),
-  M = a("192133"),
+  M = a("502762"),
+  P = a("192133"),
   x = a("138394"),
   y = a("131640"),
   D = a("695346"),
@@ -50,7 +50,7 @@ var n = a("735250"),
   K = a("981631"),
   z = a("228168"),
   q = a("689938"),
-  Q = a("66449");
+  Q = a("580701");
 let Z = [{
   duration: 30 * B.default.Millis.MINUTE,
   label: () => q.default.Messages.MUTE_DURATION_30_MINUTES
@@ -157,7 +157,7 @@ function $(e) {
     closePopout: b
   } = e, U = (0, _.useAnalyticsContext)(), {
     analyticsLocations: G
-  } = (0, p.default)(I.default.ACCOUNT_PROFILE_POPOUT), B = (0, O.default)(t.id, l), [V, $, ee, et] = (0, c.useStateFromStoresArray)([j.default], () => {
+  } = (0, I.default)(p.default.ACCOUNT_PROFILE_POPOUT), B = (0, O.default)(t.id, l), [V, $, ee, et] = (0, c.useStateFromStoresArray)([j.default], () => {
     var e;
     let a = t.id;
     return "string" != typeof a ? [void 0, void 0, K.StatusTypes.UNKNOWN, !1] : [null !== (e = j.default.findActivity(a, e => e.type !== K.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, j.default.findActivity(t.id, e => e.type === K.ActivityTypes.CUSTOM_STATUS), j.default.getStatus(a), j.default.isMobileOnline(a)]
@@ -271,7 +271,7 @@ function $(e) {
       label: q.default.Messages.COPY_ID_USER,
       showIconFirst: !0
     });
-  return (0, n.jsx)(p.AnalyticsLocationProvider, {
+  return (0, n.jsx)(I.AnalyticsLocationProvider, {
     value: G,
     children: (0, n.jsx)(R.UserProfileAnalyticsProvider, {
       layout: "ACCOUNT_POPOUT",
@@ -281,7 +281,8 @@ function $(e) {
         className: Q.popoutContainer,
         children: (0, n.jsx)("div", {
           ref: en,
-          children: (0, n.jsxs)(P.default, {
+          children: (0, n.jsxs)(M.default, {
+            className: Q.themeContainer,
             user: t,
             displayProfile: B,
             profileType: z.UserProfileTypes.POPOUT,
@@ -295,8 +296,8 @@ function $(e) {
               disableUserProfileLink: __OVERLAY__,
               isHovering: es,
               showPremiumBadgeUpsell: !1
-            }), (0, n.jsxs)(P.default.Overlay, {
-              children: [(0, n.jsx)(M.default, {
+            }), (0, n.jsxs)(M.default.Overlay, {
+              children: [(0, n.jsx)(P.default, {
                 activity: V,
                 customStatusActivity: $,
                 displayProfile: B,

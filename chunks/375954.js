@@ -57,9 +57,7 @@ function x() {
   })
 }
 
-function F(e) {}
-
-function H(e) {
+function F(e) {
   let {
     type: t,
     channelId: n,
@@ -73,7 +71,7 @@ function H(e) {
   o = o.update(i, n => "MESSAGE_REACTION_ADD" === t ? n.addReaction(s, l, e.colors, a) : n.removeReaction(s, l, a)), _.default.commit(o)
 }
 
-function Y(e) {
+function H(e) {
   let {
     type: t,
     messageData: n
@@ -86,7 +84,7 @@ function Y(e) {
     return (null === (n = e.embeds) || void 0 === n ? void 0 : n.filter(T.isNotAutomodEmbed).length) > 0 && (e = e.set("embeds", [])), "MESSAGE_SEND_FAILED_AUTOMOD" === t && (e = e.set("flags", (0, N.addFlag)(e.flags, b.MessageFlags.EPHEMERAL))), e
   }), _.default.commit(a)
 }
-class j extends(i = u.default.Store) {
+class Y extends(i = u.default.Store) {
   initialize() {
     this.waitFor(U.default, R.default, C.default, L.default, m.default, y.default, P.default, D.default, M.default, g.default), this.syncWith([f.default], () => {})
   }
@@ -147,12 +145,12 @@ class j extends(i = u.default.Store) {
     return B
   }
 }
-a = "MessageStore", (s = "displayName") in(r = j) ? Object.defineProperty(r, s, {
+a = "MessageStore", (s = "displayName") in(r = Y) ? Object.defineProperty(r, s, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new j(d.default, {
+}) : r[s] = a, t.default = new Y(d.default, {
   BACKGROUND_SYNC_CHANNEL_MESSAGES: function(e) {
     let {
       changesByChannelId: t
@@ -270,8 +268,8 @@ a = "MessageStore", (s = "displayName") in(r = j) ? Object.defineProperty(r, s, 
     let s = r.get(n, !0);
     r = (null == s ? void 0 : s.isPoll()) === !0 ? r.remove(n) : r.update(n, e => ((e = e.set("state", b.MessageStates.SEND_FAILED)).isCommandType() ? e = (e = e.set("interactionError", null != i ? i : "")).set("flags", (0, N.addFlag)(e.flags, b.MessageFlags.EPHEMERAL)) : null != i && (e = e.set("interactionError", null != i ? i : "")), e)), _.default.commit(r)
   },
-  MESSAGE_SEND_FAILED_AUTOMOD: Y,
-  MESSAGE_EDIT_FAILED_AUTOMOD: Y,
+  MESSAGE_SEND_FAILED_AUTOMOD: H,
+  MESSAGE_EDIT_FAILED_AUTOMOD: H,
   MESSAGE_UPDATE: function(e) {
     let t = e.message.id,
       n = e.message.channel_id,
@@ -347,9 +345,9 @@ a = "MessageStore", (s = "displayName") in(r = j) ? Object.defineProperty(r, s, 
   GUILD_DELETE: V,
   RELATIONSHIP_ADD: x,
   RELATIONSHIP_REMOVE: x,
-  GUILD_MEMBERS_CHUNK: F,
-  THREAD_MEMBER_LIST_UPDATE: F,
-  MESSAGE_REACTION_ADD: H,
+  GUILD_MEMBERS_CHUNK_BATCH: function(e) {},
+  THREAD_MEMBER_LIST_UPDATE: function(e) {},
+  MESSAGE_REACTION_ADD: F,
   MESSAGE_REACTION_ADD_MANY: function(e) {
     let {
       channelId: t,
@@ -362,7 +360,7 @@ a = "MessageStore", (s = "displayName") in(r = j) ? Object.defineProperty(r, s, 
       return e.addReactionBatch(i, null === (t = U.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
     }), _.default.commit(r)
   },
-  MESSAGE_REACTION_REMOVE: H,
+  MESSAGE_REACTION_REMOVE: F,
   MESSAGE_REACTION_REMOVE_ALL: function(e) {
     let {
       channelId: t,

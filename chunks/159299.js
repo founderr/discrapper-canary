@@ -245,13 +245,19 @@ S(N, "displayName", "ThreadMemberListStore"), t.default = new N(r.default, {
     for (let e in _) _[e].updateMultipleUserIds(n) && (a = !0);
     return a
   },
-  GUILD_MEMBERS_CHUNK: function(e) {
+  GUILD_MEMBERS_CHUNK_BATCH: function(e) {
     let {
-      guildId: t,
-      members: n
-    } = e, a = n.map(e => e.user.id), l = !1;
-    for (let e in _) _[e].updateMultipleUserIds(a, t) && (l = !0);
-    return l
+      chunks: t
+    } = e, n = !1;
+    for (let {
+        guildId: e,
+        members: a
+      }
+      of t) {
+      let t = a.map(e => e.user.id);
+      for (let a in _) _[a].updateMultipleUserIds(t, e) && (n = !0)
+    }
+    return n
   },
   GUILD_ROLE_UPDATE: v,
   GUILD_ROLE_DELETE: v,

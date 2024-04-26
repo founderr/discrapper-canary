@@ -16,18 +16,18 @@ var n = a("735250"),
   C = a("567458"),
   m = a("782959"),
   S = a("276645"),
-  I = a("970731"),
-  p = a("626135"),
+  p = a("970731"),
+  I = a("626135"),
   T = a("267642"),
   g = a("981631"),
   A = a("921944"),
   N = a("30513"),
   v = a("474936"),
   R = a("689938"),
-  L = a("54449"),
-  O = a("1006"),
-  P = a("741160"),
-  M = a("829972"),
+  L = a("957950"),
+  O = a("79469"),
+  M = a("741160"),
+  P = a("829972"),
   x = a("31932"),
   y = a("642301");
 
@@ -78,21 +78,21 @@ t.default = s.memo(function(e) {
   } = e, {
     analyticsLocations: f
   } = (0, o.default)(), N = () => {
-    p.default.track(g.AnalyticEvents.TOOLTIP_VIEWED, {
+    I.default.track(g.AnalyticEvents.TOOLTIP_VIEWED, {
       type: v.PremiumUpsellTypes.PREMIUM_PROGRESS_BAR,
       location: {
         page: g.AnalyticsPages.GUILD_CHANNEL
       }
     })
   }, G = () => {
-    p.default.track(g.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    I.default.track(g.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: v.PremiumUpsellTypes.INVITE_SPLASH_UPSELL,
       location: {
         page: g.AnalyticsPages.GUILD_CHANNEL
       },
       location_stack: f
     })
-  }, w = (0, i.isThemeDark)(a) ? M : x, [k, F] = (0, c.useSelectedDismissibleContent)(t, A.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
+  }, w = (0, i.isThemeDark)(a) ? P : x, [k, F] = (0, c.useSelectedDismissibleContent)(t, A.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
   return (0, n.jsx)(n.Fragment, {
     children: (() => {
       switch (k) {
@@ -106,7 +106,7 @@ t.default = s.memo(function(e) {
           });
         case l.DismissibleContent.GUILD_HEADER_PREMIUM_GUILD_PROGRESS:
           return (0, n.jsx)(j, {
-            renderPopout: (0, n.jsx)(I.default, {
+            renderPopout: (0, n.jsx)(p.default, {
               onComponentMount: N,
               header: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_TITLE,
               asset: (0, n.jsx)("img", {
@@ -125,7 +125,7 @@ t.default = s.memo(function(e) {
           });
         case l.DismissibleContent.GUILD_HEADER_PROGRESS_BAR_SIZE_COACH_MARK:
           return (0, n.jsx)(j, {
-            renderPopout: (0, n.jsx)(I.default, {
+            renderPopout: (0, n.jsx)(p.default, {
               onComponentMount: N,
               header: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_TITLE,
               asset: (0, n.jsx)("img", {
@@ -173,12 +173,12 @@ t.default = s.memo(function(e) {
             }),
             t = (0, T.isTierUnlocked)(s, g.BoostedGuildTiers.TIER_1) ? R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : R.default.Messages.LEARN_MORE;
           return (0, n.jsx)(j, {
-            renderPopout: (0, n.jsx)(I.default, {
+            renderPopout: (0, n.jsx)(p.default, {
               onComponentMount: G,
               header: R.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_TITLE,
               asset: (0, n.jsx)("img", {
                 alt: "",
-                src: P,
+                src: M,
                 className: O.fullWidthImage
               }),
               content: e,
@@ -199,7 +199,7 @@ t.default = s.memo(function(e) {
           });
         case l.DismissibleContent.GUILD_HEADER_ACTIVE_THREADS_NOTICE:
           return (0, n.jsx)(j, {
-            renderPopout: (0, n.jsx)(I.default, {
+            renderPopout: (0, n.jsx)(p.default, {
               className: L.tooltipOverrideColor,
               header: R.default.Messages.ACTIVE_THREADS_UPSELL_HEADER,
               content: R.default.Messages.ACTIVE_THREADS_UPSELL_CONTENT,
@@ -211,7 +211,7 @@ t.default = s.memo(function(e) {
           });
         case l.DismissibleContent.GUILD_HEADER_SOUNDBOARD_PERMISSION:
           return (0, n.jsx)(j, {
-            renderPopout: (0, n.jsx)(I.default, {
+            renderPopout: (0, n.jsx)(p.default, {
               header: R.default.Messages.SOUNDBOARD_TOOLTIP_TITLE_NEW,
               content: R.default.Messages.SOUNDBOARD_TOOLTIP_BODY,
               buttonCTA: R.default.Messages.CHECK_IT_OUT,

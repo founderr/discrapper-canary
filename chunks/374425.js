@@ -16,7 +16,7 @@ var s = n("735250"),
   T = n("217588"),
   I = n("981631"),
   p = n("474936"),
-  h = n("14949");
+  h = n("221940");
 let N = (0, f.cssValueToNumber)(l.default.STICKERS_CONSTANTS_STICKER_DIMENSION),
   S = e => {
     null != e && o.default.trackWithMetadata(I.AnalyticEvents.EXPRESSION_TOOLTIP_VIEWED, {

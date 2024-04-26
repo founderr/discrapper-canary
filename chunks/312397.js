@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s.d(t, {
   GuildSettingsOverviewNotice: function() {
-    return eC
+    return eh
   },
   default: function() {
-    return ex
+    return eR
   }
 }), s("47120"), s("733860");
 var a = s("735250"),
@@ -29,48 +29,47 @@ var a = s("735250"),
   C = s("933557"),
   R = s("471445"),
   x = s("890477"),
-  L = s("963202"),
-  O = s("688465"),
-  A = s("807582"),
-  p = s("48217"),
-  M = s("26323"),
-  D = s("859802"),
-  v = s("744178"),
-  j = s("35125"),
-  G = s("536442"),
-  U = s("142497"),
-  P = s("884858"),
-  b = s("516129"),
-  B = s("813197"),
-  y = s("208567"),
-  F = s("592125"),
-  H = s("324067"),
-  k = s("650774"),
-  w = s("496675"),
-  V = s("699516"),
-  Y = s("594174"),
-  W = s("285952"),
-  z = s("976644"),
-  K = s("353872"),
-  Z = s("709586"),
-  X = s("26290"),
-  Q = s("768581"),
-  J = s("630388"),
-  q = s("823379"),
-  $ = s("63063"),
-  ee = s("434404"),
-  et = s("999382"),
-  es = s("203377"),
-  ea = s("981631"),
-  el = s("30513"),
-  en = s("486324"),
-  ei = s("200299"),
-  er = s("689938"),
-  eo = s("342056"),
-  ed = s("935653"),
-  eu = s("449874");
+  L = s("688465"),
+  O = s("807582"),
+  A = s("48217"),
+  p = s("26323"),
+  M = s("859802"),
+  D = s("744178"),
+  v = s("35125"),
+  j = s("536442"),
+  G = s("142497"),
+  U = s("884858"),
+  P = s("516129"),
+  b = s("813197"),
+  B = s("208567"),
+  y = s("592125"),
+  F = s("324067"),
+  H = s("650774"),
+  k = s("496675"),
+  w = s("699516"),
+  V = s("594174"),
+  Y = s("285952"),
+  W = s("976644"),
+  z = s("353872"),
+  K = s("709586"),
+  Z = s("26290"),
+  X = s("768581"),
+  Q = s("630388"),
+  J = s("823379"),
+  q = s("63063"),
+  $ = s("434404"),
+  ee = s("999382"),
+  et = s("203377"),
+  es = s("981631"),
+  ea = s("30513"),
+  el = s("486324"),
+  en = s("200299"),
+  ei = s("689938"),
+  er = s("724239"),
+  eo = s("935653"),
+  ed = s("449874");
 
-function ec(e, t, s) {
+function eu(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -78,47 +77,47 @@ function ec(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-let eE = "NO_AFK_CHANNEL",
-  e_ = "NO_SYSTEM_CHANNEL",
-  eI = "".concat(60),
-  eT = "".concat(300),
-  eS = "".concat(900),
-  ef = "".concat(1800),
-  em = "".concat(3600);
+let ec = "NO_AFK_CHANNEL",
+  eE = "NO_SYSTEM_CHANNEL",
+  e_ = "".concat(60),
+  eI = "".concat(300),
+  eT = "".concat(900),
+  eS = "".concat(1800),
+  ef = "".concat(3600);
 
-function eN(e) {
-  return eg(e[0])
+function em(e) {
+  return eN(e[0])
 }
 
-function eg(e) {
+function eN(e) {
   if (null == e) return;
   let {
     label: t,
     channel: s,
     category: l
-  } = e, n = (0, R.getChannelIconComponent)(s), i = null != l ? (0, C.computeChannelName)(l, Y.default, V.default) : null;
-  return (0, a.jsx)(K.default, {
+  } = e, n = (0, R.getChannelIconComponent)(s), i = null != l ? (0, C.computeChannelName)(l, V.default, w.default) : null;
+  return (0, a.jsx)(z.default, {
     title: t,
     icon: n,
     subtitle: i
   })
 }
 
-function eh(e) {
+function eg(e) {
   return {
     value: e.id,
-    label: (0, C.computeChannelName)(e, Y.default, V.default),
+    label: (0, C.computeChannelName)(e, V.default, w.default),
     channel: e,
-    category: F.default.getChannel(e.parent_id)
+    category: y.default.getChannel(e.parent_id)
   }
 }
-let eC = () => {
+let eh = () => {
   let {
     guild: e,
     originalGuild: t,
     submitting: s,
     errors: n
-  } = (0, c.useStateFromStoresObject)([et.default], () => et.default.getProps()), i = l.useMemo(() => (0, es.getSettingsErrorMessage)(n), [n]), r = l.useCallback(() => {
+  } = (0, c.useStateFromStoresObject)([ee.default], () => ee.default.getProps()), i = l.useMemo(() => (0, et.getSettingsErrorMessage)(n), [n]), r = l.useCallback(() => {
     if (null == e) return;
     let s = {
       name: e.name,
@@ -139,9 +138,9 @@ let eC = () => {
       homeHeader: e.homeHeader,
       clan: e.clan
     };
-    !(0, q.areSetsEqual)(new Set(e.features), new Set(t.features)) && (s.features = e.features), ee.default.saveGuild(e.id, s)
+    !(0, J.areSetsEqual)(new Set(e.features), new Set(t.features)) && (s.features = e.features), $.default.saveGuild(e.id, s)
   }, [e, t]), o = l.useCallback(() => {
-    null != e && ee.default.init(e.id)
+    null != e && $.default.init(e.id)
   }, [e]);
   return (0, a.jsx)(T.default, {
     submitting: s,
@@ -150,43 +149,36 @@ let eC = () => {
     onReset: o
   })
 };
-class eR extends l.PureComponent {
+class eC extends l.PureComponent {
   componentDidMount() {
-    if (this.props.subsection === ea.GuildSettingsSubsections.DISPLAY && null != this._displaySectionRef.current) {
+    if (this.props.subsection === es.GuildSettingsSubsections.DISPLAY && null != this._displaySectionRef.current) {
       let e = this._displaySectionRef.current;
       setTimeout(() => e.scrollIntoView(), 0)
-    } else if (this.props.subsection === ea.GuildSettingsSubsections.INVITE && null != this._inviteSectionRef.current) {
+    } else if (this.props.subsection === es.GuildSettingsSubsections.INVITE && null != this._inviteSectionRef.current) {
       let e = this._inviteSectionRef.current;
       setTimeout(() => e.scrollIntoView(), 0)
-    } else if (this.props.subsection === ea.GuildSettingsSubsections.DEFAULT_NOTIFICATIONS && null != this._notificationSectionRef.current) {
+    } else if (this.props.subsection === es.GuildSettingsSubsections.DEFAULT_NOTIFICATIONS && null != this._notificationSectionRef.current) {
       let e = this._notificationSectionRef.current;
       setTimeout(() => e.scrollIntoView(), 0)
     }
   }
   handleNameChange(e) {
-    ee.default.updateGuild({
+    $.default.updateGuild({
       name: e
     })
   }
-  handleClanTagChange(e) {
-    ee.default.updateGuild({
-      clan: {
-        tag: e
-      }
-    })
-  }
   handleAFKChannelChange(e) {
-    e === eE && (e = null), ee.default.updateGuild({
+    e === ec && (e = null), $.default.updateGuild({
       afkChannelId: e
     })
   }
   handleAFKTimeoutChange(e) {
-    ee.default.updateGuild({
+    $.default.updateGuild({
       afkTimeout: parseInt(e, 10)
     })
   }
   handleSystemChannelChange(e) {
-    e === e_ && (e = null), ee.default.updateGuild({
+    e === eE && (e = null), $.default.updateGuild({
       systemChannelId: e
     })
   }
@@ -194,120 +186,107 @@ class eR extends l.PureComponent {
     let {
       value: t
     } = e;
-    ee.default.updateGuild({
+    $.default.updateGuild({
       defaultMessageNotifications: t
     })
   }
   handleSplashChange(e) {
-    ee.default.updateGuild({
+    $.default.updateGuild({
       splash: e
     })
   }
   handleSystemChannelFlagsChange(e, t) {
     let {
       guild: s
-    } = this.props, a = (0, J.setFlag)(s.systemChannelFlags, e, t);
-    ee.default.updateGuild({
+    } = this.props, a = (0, Q.setFlag)(s.systemChannelFlags, e, t);
+    $.default.updateGuild({
       systemChannelFlags: a
     })
   }
   handlePremiumProgressBarEnabledChange(e) {
-    ee.default.updateGuild({
+    $.default.updateGuild({
       premiumProgressBarEnabled: e
     })
   }
   handleChangeDescription(e) {
-    ee.default.updateGuild({
+    $.default.updateGuild({
       description: e
     })
   }
   renderBaseSettings() {
-    var e, t;
     let {
-      guild: s,
-      errors: l,
-      canManageGuild: n
+      guild: e,
+      errors: t,
+      canManageGuild: s
     } = this.props;
-    return (0, a.jsxs)(W.default, {
-      className: i()(eo.__invalid_baseSection),
-      children: [(0, a.jsxs)(W.default, {
+    return (0, a.jsxs)(Y.default, {
+      className: i()(er.__invalid_baseSection),
+      children: [(0, a.jsxs)(Y.default, {
         basis: "50%",
-        justify: W.default.Justify.BETWEEN,
-        children: [(0, a.jsxs)(W.default.Child, {
+        justify: Y.default.Justify.BETWEEN,
+        children: [(0, a.jsxs)(Y.default.Child, {
           wrap: !0,
-          children: [(0, a.jsx)(y.default, {
+          children: [(0, a.jsx)(B.default, {
             showIcon: !0,
-            name: s.name,
-            image: s.icon,
+            name: e.name,
+            image: e.icon,
             onChange: this.handleIconChange,
-            disabled: !n,
-            hint: er.default.Messages.CHANGE_ICON,
-            makeURL: e => Q.default.getGuildIconURL({
-              id: s.id,
-              icon: e,
+            disabled: !s,
+            hint: ei.default.Messages.CHANGE_ICON,
+            makeURL: t => X.default.getGuildIconURL({
+              id: e.id,
+              icon: t,
               canAnimate: !0,
               size: 100
             }),
             className: i()({
-              [eo.avatarUploader]: n,
-              [eo.avatarUploaderDisabled]: !n
+              [er.avatarUploader]: s,
+              [er.avatarUploaderDisabled]: !s
             }),
-            imageClassName: i()(eo.avatarUploaderInner, {
-              [eo.avatarUploaderInnerEmpty]: null == s.icon
+            imageClassName: i()(er.avatarUploaderInner, {
+              [er.avatarUploaderInnerEmpty]: null == e.icon
             })
-          }), null != l.icon ? (0, a.jsx)("div", {
-            className: eo.iconError,
-            children: l.icon
+          }), null != t.icon ? (0, a.jsx)("div", {
+            className: er.iconError,
+            children: t.icon
           }) : null]
-        }), (0, a.jsxs)(W.default, {
-          direction: W.default.Direction.VERTICAL,
-          align: W.default.Align.START,
+        }), (0, a.jsxs)(Y.default, {
+          direction: Y.default.Direction.VERTICAL,
+          align: Y.default.Align.START,
           style: {
             maxWidth: 180
           },
           children: [(0, a.jsx)(I.FormText, {
             type: I.FormTextTypes.DESCRIPTION,
-            className: eo.marginBottom8,
-            children: er.default.Messages.GUILD_SETTINGS_ICON_RECOMMEND
+            className: er.marginBottom8,
+            children: ei.default.Messages.GUILD_SETTINGS_ICON_RECOMMEND
           }), (0, a.jsxs)(I.Button, {
             look: I.ButtonLooks.OUTLINED,
             color: I.ButtonColors.PRIMARY,
-            disabled: !n,
-            className: eo.marginTop8,
+            disabled: !s,
+            className: er.marginTop8,
             onClick: this.handleUploadImage,
-            children: [er.default.Messages.UPLOAD_IMAGE, (0, a.jsx)(B.default, {
+            children: [ei.default.Messages.UPLOAD_IMAGE, (0, a.jsx)(b.default, {
               ref: this._imageInputRef,
               onChange: this.handleOpenImageCroppingModal,
-              disabled: !n
+              disabled: !s
             })]
           })]
         })]
-      }), (0, a.jsxs)(W.default.Child, {
+      }), (0, a.jsx)(Y.default.Child, {
         basis: "50%",
-        children: [(0, a.jsx)(I.FormItem, {
-          title: er.default.Messages.FORM_LABEL_SERVER_NAME,
-          className: eo.marginBottom20,
+        children: (0, a.jsx)(I.FormItem, {
+          title: ei.default.Messages.FORM_LABEL_SERVER_NAME,
+          className: er.marginBottom20,
           children: (0, a.jsx)(I.TextInput, {
             type: "text",
-            disabled: !n,
-            value: s.name,
+            disabled: !s,
+            value: e.name,
             maxLength: 100,
             onChange: this.handleNameChange,
-            error: l.name
+            error: t.name
           })
-        }), L.ClanExperiment.getCurrentConfig({
-          location: "settings"
-        }).enableClanCreation && (0, a.jsx)(I.FormItem, {
-          title: er.default.Messages.CLAN_OVERVIEW_LABEL_CLAN_TAG,
-          children: (0, a.jsx)(I.TextInput, {
-            type: "text",
-            disabled: !n,
-            value: null !== (t = null === (e = s.clan) || void 0 === e ? void 0 : e.tag) && void 0 !== t ? t : "",
-            maxLength: 100,
-            onChange: this.handleClanTagChange,
-            error: l.tag
-          })
-        })]
+        })
       })]
     })
   }
@@ -317,77 +296,77 @@ class eR extends l.PureComponent {
       guild: t,
       canManageGuild: s,
       channels: l
-    } = this.props, n = null != t.afkTimeout ? "".concat(t.afkTimeout) : null, i = null !== (e = t.afkChannelId) && void 0 !== e ? e : eE, r = [{
-      value: eI,
-      label: er.default.Messages.DURATION_MINUTES.format({
+    } = this.props, n = null != t.afkTimeout ? "".concat(t.afkTimeout) : null, i = null !== (e = t.afkChannelId) && void 0 !== e ? e : ec, r = [{
+      value: e_,
+      label: ei.default.Messages.DURATION_MINUTES.format({
         minutes: 1
       })
     }, {
-      value: eT,
-      label: er.default.Messages.DURATION_MINUTES.format({
+      value: eI,
+      label: ei.default.Messages.DURATION_MINUTES.format({
         minutes: 5
       })
     }, {
-      value: eS,
-      label: er.default.Messages.DURATION_MINUTES.format({
+      value: eT,
+      label: ei.default.Messages.DURATION_MINUTES.format({
         minutes: 15
       })
     }, {
-      value: ef,
-      label: er.default.Messages.DURATION_MINUTES.format({
+      value: eS,
+      label: ei.default.Messages.DURATION_MINUTES.format({
         minutes: 30
       })
     }, {
-      value: em,
-      label: er.default.Messages.DURATION_HOURS.format({
+      value: ef,
+      label: ei.default.Messages.DURATION_HOURS.format({
         hours: 1
       })
     }], o = u()(l).filter(e => {
       let {
         channel: t
       } = e;
-      return t.type === ea.ChannelTypes.GUILD_VOICE
+      return t.type === es.ChannelTypes.GUILD_VOICE
     }).map(e => {
       let {
         channel: t
       } = e;
-      return eh(t)
+      return eg(t)
     }).value();
     return o.unshift({
-      value: eE,
-      label: er.default.Messages.NO_AFK_CHANNEL
+      value: ec,
+      label: ei.default.Messages.NO_AFK_CHANNEL
     }), (0, a.jsxs)(I.FormSection, {
-      className: eo.divider,
-      children: [(0, a.jsxs)(W.default, {
-        children: [(0, a.jsx)(W.default.Child, {
+      className: er.divider,
+      children: [(0, a.jsxs)(Y.default, {
+        children: [(0, a.jsx)(Y.default.Child, {
           basis: "50%",
           children: (0, a.jsx)(I.FormItem, {
-            title: er.default.Messages.FORM_LABEL_AFK_CHANNEL,
+            title: ei.default.Messages.FORM_LABEL_AFK_CHANNEL,
             children: (0, a.jsx)(I.SingleSelect, {
               value: i,
               options: o,
               onChange: this.handleAFKChannelChange,
               isDisabled: !s,
-              renderOptionLabel: eg,
-              renderOptionValue: eN
+              renderOptionLabel: eN,
+              renderOptionValue: em
             })
           })
-        }), (0, a.jsx)(W.default.Child, {
+        }), (0, a.jsx)(Y.default.Child, {
           basis: "50%",
           children: (0, a.jsx)(I.FormItem, {
-            title: er.default.Messages.FORM_LABEL_AFK_TIMEOUT,
+            title: ei.default.Messages.FORM_LABEL_AFK_TIMEOUT,
             children: (0, a.jsx)(I.SingleSelect, {
               value: n,
               options: r,
-              isDisabled: i === eE || !s,
+              isDisabled: i === ec || !s,
               onChange: this.handleAFKTimeoutChange
             })
           })
         })]
       }), (0, a.jsx)(I.FormText, {
-        className: eo.marginTop8,
+        className: er.marginTop8,
         type: I.FormTextTypes.DESCRIPTION,
-        children: er.default.Messages.FORM_HELP_AFK_CHANNEL
+        children: ei.default.Messages.FORM_HELP_AFK_CHANNEL
       })]
     })
   }
@@ -398,90 +377,90 @@ class eR extends l.PureComponent {
       channels: s,
       canManageGuild: l,
       eligibleForDeadchatPrompt: n
-    } = this.props, r = null !== (e = t.systemChannelId) && void 0 !== e ? e : e_, o = u()(s).filter(e => {
+    } = this.props, r = null !== (e = t.systemChannelId) && void 0 !== e ? e : eE, o = u()(s).filter(e => {
       let {
         channel: t
       } = e;
-      return t.type === ea.ChannelTypes.GUILD_TEXT
+      return t.type === es.ChannelTypes.GUILD_TEXT
     }).map(e => {
       let {
         channel: t
       } = e;
-      return eh(t)
+      return eg(t)
     }).value();
     o.unshift({
-      value: e_,
-      label: er.default.Messages.NO_SYSTEM_CHANNEL
+      value: eE,
+      label: ei.default.Messages.NO_SYSTEM_CHANNEL
     });
-    let d = (0, j.isEligibleForRoleSubscriptionPurchaseSystemMessageSettings)(t),
-      c = d || (0, J.hasFlag)(t.systemChannelFlags, ea.SystemChannelFlags.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS),
-      E = d || (0, J.hasFlag)(t.systemChannelFlags, ea.SystemChannelFlags.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES);
+    let d = (0, v.isEligibleForRoleSubscriptionPurchaseSystemMessageSettings)(t),
+      c = d || (0, Q.hasFlag)(t.systemChannelFlags, es.SystemChannelFlags.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS),
+      E = d || (0, Q.hasFlag)(t.systemChannelFlags, es.SystemChannelFlags.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES);
     return (0, a.jsxs)(I.FormSection, {
-      className: eo.divider,
+      className: er.divider,
       children: [(0, a.jsx)(I.FormTitle, {
-        children: er.default.Messages.FORM_LABEL_SYSTEM_CHANNEL
+        children: ei.default.Messages.FORM_LABEL_SYSTEM_CHANNEL
       }), (0, a.jsx)(I.SingleSelect, {
         value: r,
         options: o,
         isDisabled: !l,
         onChange: this.handleSystemChannelChange,
-        renderOptionLabel: eg,
-        renderOptionValue: eN
+        renderOptionLabel: eN,
+        renderOptionValue: em
       }), (0, a.jsx)(I.FormText, {
-        className: eo.marginTop8,
+        className: er.marginTop8,
         type: I.FormTextTypes.DESCRIPTION,
-        children: er.default.Messages.FORM_HELP_SYSTEM_CHANNEL
+        children: ei.default.Messages.FORM_HELP_SYSTEM_CHANNEL
       }), (0, a.jsx)(I.FormSwitch, {
-        className: eo.marginTop20,
+        className: er.marginTop20,
         onChange: this.handleShowJoinsChange,
-        value: !(0, J.hasFlag)(t.systemChannelFlags, ea.SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATIONS),
+        value: !(0, Q.hasFlag)(t.systemChannelFlags, es.SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATIONS),
         hideBorder: !0,
-        disabled: !l || r === e_,
-        children: er.default.Messages.FORM_HELP_SYSTEM_CHANNEL_JOIN_MESSAGES
+        disabled: !l || r === eE,
+        children: ei.default.Messages.FORM_HELP_SYSTEM_CHANNEL_JOIN_MESSAGES
       }), (0, a.jsx)(I.FormSwitch, {
-        className: i()(eo.__invalid_marginReset, eo.marginTop20),
+        className: i()(er.__invalid_marginReset, er.marginTop20),
         onChange: this.handleShowJoinRepliesChange,
-        value: !(0, J.hasFlag)(t.systemChannelFlags, ea.SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATION_REPLIES),
+        value: !(0, Q.hasFlag)(t.systemChannelFlags, es.SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATION_REPLIES),
         hideBorder: !0,
-        disabled: !l || r === e_,
-        children: er.default.Messages.FORM_HELP_SYSTEM_CHANNEL_JOIN_MESSAGE_REPLIES
+        disabled: !l || r === eE,
+        children: ei.default.Messages.FORM_HELP_SYSTEM_CHANNEL_JOIN_MESSAGE_REPLIES
       }), (0, a.jsx)(I.FormSwitch, {
-        className: i()(eo.__invalid_marginReset, eo.marginTop20),
+        className: i()(er.__invalid_marginReset, er.marginTop20),
         onChange: this.handleShowSubscriptionsChange,
-        value: !(0, J.hasFlag)(t.systemChannelFlags, ea.SystemChannelFlags.SUPPRESS_PREMIUM_SUBSCRIPTIONS),
+        value: !(0, Q.hasFlag)(t.systemChannelFlags, es.SystemChannelFlags.SUPPRESS_PREMIUM_SUBSCRIPTIONS),
         hideBorder: !0,
-        disabled: !l || r === e_,
-        children: er.default.Messages.FORM_HELP_SYSTEM_CHANNEL_PREMIUM_SUBSCRIPTION_MESSAGES
+        disabled: !l || r === eE,
+        children: ei.default.Messages.FORM_HELP_SYSTEM_CHANNEL_PREMIUM_SUBSCRIPTION_MESSAGES
       }), (0, a.jsx)(I.FormSwitch, {
-        className: i()(eo.__invalid_marginReset, eo.marginTop20),
+        className: i()(er.__invalid_marginReset, er.marginTop20),
         onChange: this.handleShowGuildRemindersChange,
-        value: !(0, J.hasFlag)(t.systemChannelFlags, ea.SystemChannelFlags.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS),
+        value: !(0, Q.hasFlag)(t.systemChannelFlags, es.SystemChannelFlags.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS),
         hideBorder: !0,
-        disabled: !l || r === e_,
-        children: er.default.Messages.FORM_HELP_SYSTEM_CHANNEL_GUILD_REMINDERS
+        disabled: !l || r === eE,
+        children: ei.default.Messages.FORM_HELP_SYSTEM_CHANNEL_GUILD_REMINDERS
       }), c && (0, a.jsx)(I.FormSwitch, {
-        className: i()(eo.__invalid_marginReset, eo.marginTop20),
+        className: i()(er.__invalid_marginReset, er.marginTop20),
         onChange: this.handleShowGuildRoleSubscriptionPurchaseMessages,
-        value: !(0, J.hasFlag)(t.systemChannelFlags, ea.SystemChannelFlags.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS),
+        value: !(0, Q.hasFlag)(t.systemChannelFlags, es.SystemChannelFlags.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS),
         hideBorder: !0,
-        disabled: !l || r === e_,
-        children: er.default.Messages.FORM_HELP_SYSTEM_CHANNEL_ROLE_SUBSCRIPTION_PURCHASE_MESSAGES
+        disabled: !l || r === eE,
+        children: ei.default.Messages.FORM_HELP_SYSTEM_CHANNEL_ROLE_SUBSCRIPTION_PURCHASE_MESSAGES
       }), E && (0, a.jsx)(I.FormSwitch, {
-        className: i()(eo.__invalid_marginReset, eo.marginTop20),
+        className: i()(er.__invalid_marginReset, er.marginTop20),
         onChange: this.handleShowGuildRoleSubscriptionPurchaseMessageRepliesChange,
-        value: !(0, J.hasFlag)(t.systemChannelFlags, ea.SystemChannelFlags.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
+        value: !(0, Q.hasFlag)(t.systemChannelFlags, es.SystemChannelFlags.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
         hideBorder: !0,
-        disabled: !l || r === e_,
-        children: er.default.Messages.FORM_HELP_SYSTEM_CHANNEL_ROLE_SUBSCRIPTION_PURCHASE_MESSAGE_REPLIES
+        disabled: !l || r === eE,
+        children: ei.default.Messages.FORM_HELP_SYSTEM_CHANNEL_ROLE_SUBSCRIPTION_PURCHASE_MESSAGE_REPLIES
       }), n && (0, a.jsx)(I.FormSwitch, {
-        className: i()(eo.__invalid_marginReset, eo.marginTop20),
+        className: i()(er.__invalid_marginReset, er.marginTop20),
         onChange: this.handleShowDeadchatPromptMessageChange,
-        value: !(0, J.hasFlag)(t.systemChannelFlags, ea.SystemChannelFlags.SUPPRESS_CHANNEL_PROMPT_DEADCHAT),
+        value: !(0, Q.hasFlag)(t.systemChannelFlags, es.SystemChannelFlags.SUPPRESS_CHANNEL_PROMPT_DEADCHAT),
         hideBorder: !0,
-        disabled: !l || r === e_,
+        disabled: !l || r === eE,
         children: (0, a.jsxs)("div", {
-          className: eo.flexRow,
-          children: [er.default.Messages.FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE, (0, a.jsx)(O.default, {})]
+          className: er.flexRow,
+          children: [ei.default.Messages.FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE, (0, a.jsx)(L.default, {})]
         })
       })]
     })
@@ -492,27 +471,27 @@ class eR extends l.PureComponent {
       canManageGuild: t,
       guildMemberCount: s
     } = this.props, l = [{
-      name: er.default.Messages.FORM_LABEL_ALL_MESSAGES,
-      value: ea.UserNotificationSettings.ALL_MESSAGES,
-      desc: null != s && s >= ea.MAX_MEMBERS_NOTIFY_ALL_MESSAGES ? er.default.Messages.GUILD_SETTINGS_DEFAULT_NOTIFICATIONS_LARGE_GUILD_NOTIFY_ALL : null
+      name: ei.default.Messages.FORM_LABEL_ALL_MESSAGES,
+      value: es.UserNotificationSettings.ALL_MESSAGES,
+      desc: null != s && s >= es.MAX_MEMBERS_NOTIFY_ALL_MESSAGES ? ei.default.Messages.GUILD_SETTINGS_DEFAULT_NOTIFICATIONS_LARGE_GUILD_NOTIFY_ALL : null
     }, {
-      name: er.default.Messages.FORM_LABEL_ONLY_MENTIONS.format(),
-      value: ea.UserNotificationSettings.ONLY_MENTIONS
+      name: ei.default.Messages.FORM_LABEL_ONLY_MENTIONS.format(),
+      value: es.UserNotificationSettings.ONLY_MENTIONS
     }];
     return (0, a.jsx)("div", {
       ref: this._notificationSectionRef,
       children: (0, a.jsxs)(I.FormSection, {
-        className: eo.divider,
+        className: er.divider,
         children: [(0, a.jsx)(I.FormTitle, {
-          children: er.default.Messages.FORM_LABEL_DEFAULT_NOTIFICATION_SETTINGS
+          children: ei.default.Messages.FORM_LABEL_DEFAULT_NOTIFICATION_SETTINGS
         }), (0, a.jsx)(I.FormText, {
           type: I.FormTextTypes.DESCRIPTION,
-          className: eo.marginBottom20,
-          children: er.default.Messages.GUILD_SETTINGS_DEFAULT_NOTIFICATION_SETTINGS_INTRO
+          className: er.marginBottom20,
+          children: ei.default.Messages.GUILD_SETTINGS_DEFAULT_NOTIFICATION_SETTINGS_INTRO
         }), (0, a.jsx)(I.FormText, {
           type: I.FormTextTypes.DESCRIPTION,
-          className: eo.marginBottom20,
-          children: er.default.Messages.GUILD_SETTINGS_DEFAULT_NOTIFICATION_SETTINGS_TIP
+          className: er.marginBottom20,
+          children: ei.default.Messages.GUILD_SETTINGS_DEFAULT_NOTIFICATION_SETTINGS_TIP
         }), (0, a.jsx)(I.RadioGroup, {
           options: l,
           value: e.defaultMessageNotifications,
@@ -529,22 +508,22 @@ class eR extends l.PureComponent {
     } = this.props;
     return (0, S.canGuildUseConversationSummaries)(e, !1) ? (0, a.jsx)("div", {
       children: (0, a.jsx)(I.FormSection, {
-        className: eo.divider,
+        className: er.divider,
         children: (0, a.jsx)(I.FormSwitch, {
-          className: i()(eo.marginTop8, eo.marginBottom8),
+          className: i()(er.marginTop8, er.marginBottom8),
           onChange: this.handleConversationSummariesToggle,
-          value: e.hasFeature(ea.GuildFeatures.SUMMARIES_ENABLED_BY_USER),
+          value: e.hasFeature(es.GuildFeatures.SUMMARIES_ENABLED_BY_USER),
           hideBorder: !0,
-          note: er.default.Messages.GUILD_SETTINGS_SUMMARIES_TOGGLE_DESCRIPTION.format({
-            helpdeskArticle: $.default.getArticleURL(ea.HelpdeskArticles.CONVERSATION_SUMMARIES)
+          note: ei.default.Messages.GUILD_SETTINGS_SUMMARIES_TOGGLE_DESCRIPTION.format({
+            helpdeskArticle: q.default.getArticleURL(es.HelpdeskArticles.CONVERSATION_SUMMARIES)
           }),
           disabled: !t,
           children: (0, a.jsxs)("div", {
-            className: eo.badgedItem,
-            children: [er.default.Messages.GUILD_SETTINGS_SUMMARIES_TOGGLE, (0, a.jsx)(X.TextBadge, {
-              text: er.default.Messages.BETA,
+            className: er.badgedItem,
+            children: [ei.default.Messages.GUILD_SETTINGS_SUMMARIES_TOGGLE, (0, a.jsx)(Z.TextBadge, {
+              text: ei.default.Messages.BETA,
               color: E.default.unsafe_rawColors.BRAND_500.css,
-              className: eo.__invalid_betaTag
+              className: er.__invalid_betaTag
             })]
           })
         })
@@ -555,67 +534,67 @@ class eR extends l.PureComponent {
     let {
       guild: e,
       canManageGuild: t
-    } = this.props, s = e.hasFeature(ea.GuildFeatures.INVITE_SPLASH), l = t && s, n = (0, a.jsx)(b.default, {
+    } = this.props, s = e.hasFeature(es.GuildFeatures.INVITE_SPLASH), l = t && s, n = (0, a.jsx)(P.default, {
       image: e.splash,
-      makeURL: t => null != t ? Q.default.getGuildSplashURL({
+      makeURL: t => null != t ? X.default.getGuildSplashURL({
         id: e.id,
         splash: t
       }) : null,
       disabled: !l,
       onChange: this.handleSplashChange,
-      hint: er.default.Messages.CHANGE_SPLASH,
+      hint: ei.default.Messages.CHANGE_SPLASH,
       enabled: l,
-      maxFileSizeBytes: ei.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
-      onFileSizeError: () => (0, P.default)(ei.MAX_IMAGE_UPLOAD_FILESIZE_BYTES)
+      maxFileSizeBytes: en.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
+      onFileSizeError: () => (0, U.default)(en.MAX_IMAGE_UPLOAD_FILESIZE_BYTES)
     });
     return (0, a.jsx)("div", {
       ref: this._inviteSectionRef,
       children: (0, a.jsx)(I.FormSection, {
-        className: eo.divider,
-        children: (0, a.jsxs)(W.default, {
+        className: er.divider,
+        children: (0, a.jsxs)(Y.default, {
           basis: "50%",
-          direction: W.default.Direction.HORIZONTAL,
-          align: W.default.Justify.START,
-          children: [(0, a.jsxs)(W.default.Child, {
+          direction: Y.default.Direction.HORIZONTAL,
+          align: Y.default.Justify.START,
+          children: [(0, a.jsxs)(Y.default.Child, {
             wrap: !0,
             basis: "50%",
             children: [(0, a.jsxs)(I.FormTitle, {
-              className: eo.flexFormTitle,
+              className: er.flexFormTitle,
               children: [(0, a.jsx)("div", {
-                children: er.default.Messages.GUILD_SETTINGS_SERVER_INVITE_BACKGROUND
-              }), (0, a.jsx)(A.default, {
+                children: ei.default.Messages.GUILD_SETTINGS_SERVER_INVITE_BACKGROUND
+              }), (0, a.jsx)(O.default, {
                 guild: e,
-                guildFeature: ea.GuildFeatures.INVITE_SPLASH,
-                className: eo.guildFeatureAvailabilityIndicator,
+                guildFeature: es.GuildFeatures.INVITE_SPLASH,
+                className: er.guildFeatureAvailabilityIndicator,
                 onClick: this.handleInviteSplashUpsellIndicator
               })]
             }), (0, a.jsx)(I.FormText, {
               type: I.FormTextTypes.DESCRIPTION,
-              className: eo.marginBottom8,
-              children: er.default.Messages.GUILD_SETTINGS_SPLASH_DESCRIPTION
+              className: er.marginBottom8,
+              children: ei.default.Messages.GUILD_SETTINGS_SPLASH_DESCRIPTION
             }), (0, a.jsx)(I.FormText, {
               type: I.FormTextTypes.DESCRIPTION,
-              children: er.default.Messages.GUILD_SETTINGS_SPLASH_RECOMMEND.format({
-                articleURL: $.default.getArticleURL(ea.HelpdeskArticles.GUILD_INVITE_SPLASH)
+              children: ei.default.Messages.GUILD_SETTINGS_SPLASH_RECOMMEND.format({
+                articleURL: q.default.getArticleURL(es.HelpdeskArticles.GUILD_INVITE_SPLASH)
               })
             }), s ? (0, a.jsxs)(I.Button, {
               disabled: !l,
               color: I.ButtonColors.BRAND_NEW,
-              className: eo.marginTop16,
-              children: [er.default.Messages.UPLOAD_BACKGROUND, (0, a.jsx)(B.default, {
+              className: er.marginTop16,
+              children: [ei.default.Messages.UPLOAD_BACKGROUND, (0, a.jsx)(b.default, {
                 disabled: !l,
                 onChange: this.handleSplashChange,
-                maxFileSizeBytes: ei.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
-                onFileSizeError: () => (0, P.default)(ei.MAX_IMAGE_UPLOAD_FILESIZE_BYTES)
+                maxFileSizeBytes: en.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
+                onFileSizeError: () => (0, U.default)(en.MAX_IMAGE_UPLOAD_FILESIZE_BYTES)
               })]
             }) : this.uploadBGUpsellButton(this.handleInviteSplashUpsellButton)]
-          }), (0, a.jsx)(W.default.Child, {
+          }), (0, a.jsx)(Y.default.Child, {
             wrap: !0,
             basis: "50%",
             children: s ? n : (0, a.jsx)(I.Clickable, {
               "aria-hidden": !0,
               tabIndex: -1,
-              className: eo.upsell,
+              className: er.upsell,
               onClick: this.handleInviteSplashUpsellUpload,
               children: n
             })
@@ -628,70 +607,70 @@ class eR extends l.PureComponent {
     let {
       guild: e,
       canManageGuild: t
-    } = this.props, s = e.hasFeature(ea.GuildFeatures.BANNER), l = (0, D.canSeeGuildHome)(e.id), n = t && l && s, {
+    } = this.props, s = e.hasFeature(es.GuildFeatures.BANNER), l = (0, M.canSeeGuildHome)(e.id), n = t && l && s, {
       hasNewHeader: i
-    } = v.GuildHomeHeaderRedesignExperiment.getCurrentConfig({
+    } = D.GuildHomeHeaderRedesignExperiment.getCurrentConfig({
       guildId: e.id,
       location: "4b6c0f_1"
     });
     if (!l || !i) return null;
-    let r = (0, a.jsx)(b.default, {
+    let r = (0, a.jsx)(P.default, {
       image: e.homeHeader,
-      makeURL: t => null != t ? Q.default.getGuildHomeHeaderURL({
+      makeURL: t => null != t ? X.default.getGuildHomeHeaderURL({
         id: e.id,
         homeHeader: t
       }) : null,
       disabled: !n,
       onChange: this.handleHomeHeaderChange,
-      hint: er.default.Messages.CHANGE_HOME_HEADER,
+      hint: ei.default.Messages.CHANGE_HOME_HEADER,
       enabled: n,
-      maxFileSizeBytes: ei.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
-      onFileSizeError: () => (0, P.default)(ei.MAX_IMAGE_UPLOAD_FILESIZE_BYTES)
+      maxFileSizeBytes: en.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
+      onFileSizeError: () => (0, U.default)(en.MAX_IMAGE_UPLOAD_FILESIZE_BYTES)
     });
     return (0, a.jsx)(I.FormSection, {
-      className: eo.divider,
-      children: (0, a.jsxs)(W.default, {
+      className: er.divider,
+      children: (0, a.jsxs)(Y.default, {
         basis: "50%",
-        direction: W.default.Direction.HORIZONTAL,
-        align: W.default.Justify.START,
-        children: [(0, a.jsxs)(W.default.Child, {
+        direction: Y.default.Direction.HORIZONTAL,
+        align: Y.default.Justify.START,
+        children: [(0, a.jsxs)(Y.default.Child, {
           wrap: !0,
           basis: "50%",
           children: [(0, a.jsxs)(I.FormTitle, {
-            className: eo.flexFormTitle,
+            className: er.flexFormTitle,
             children: [(0, a.jsx)("div", {
-              children: er.default.Messages.GUILD_SETTINGS_HOME_HEADER
-            }), (0, a.jsx)(A.default, {
+              children: ei.default.Messages.GUILD_SETTINGS_HOME_HEADER
+            }), (0, a.jsx)(O.default, {
               guild: e,
-              guildFeature: ea.GuildFeatures.BANNER,
-              className: eo.guildFeatureAvailabilityIndicator,
+              guildFeature: es.GuildFeatures.BANNER,
+              className: er.guildFeatureAvailabilityIndicator,
               onClick: this.handleBannerUpsellIndicator
             })]
           }), (0, a.jsx)(I.FormText, {
             type: I.FormTextTypes.DESCRIPTION,
-            className: eo.marginBottom8,
-            children: er.default.Messages.GUILD_SETTINGS_HOME_HEADER_DESCRIPTION
+            className: er.marginBottom8,
+            children: ei.default.Messages.GUILD_SETTINGS_HOME_HEADER_DESCRIPTION
           }), (0, a.jsx)(I.FormText, {
             type: I.FormTextTypes.DESCRIPTION,
-            children: er.default.Messages.GUILD_SETTINGS_HOME_HEADER_RECOMMEND
+            children: ei.default.Messages.GUILD_SETTINGS_HOME_HEADER_RECOMMEND
           }), s ? (0, a.jsxs)(I.Button, {
             disabled: !n,
             color: I.ButtonColors.BRAND_NEW,
-            className: eo.marginTop16,
-            children: [er.default.Messages.UPLOAD_BACKGROUND, (0, a.jsx)(B.default, {
+            className: er.marginTop16,
+            children: [ei.default.Messages.UPLOAD_BACKGROUND, (0, a.jsx)(b.default, {
               disabled: !n,
               onChange: this.handleHomeHeaderChange,
-              maxFileSizeBytes: ei.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
-              onFileSizeError: () => (0, P.default)(ei.MAX_IMAGE_UPLOAD_FILESIZE_BYTES)
+              maxFileSizeBytes: en.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
+              onFileSizeError: () => (0, U.default)(en.MAX_IMAGE_UPLOAD_FILESIZE_BYTES)
             })]
           }) : this.uploadBGUpsellButton(this.handleBannerUpsellButton)]
-        }), (0, a.jsx)(W.default.Child, {
+        }), (0, a.jsx)(Y.default.Child, {
           wrap: !0,
           basis: "50%",
           children: s ? r : (0, a.jsx)(I.Clickable, {
             "aria-hidden": !0,
             tabIndex: -1,
-            className: eo.upsell,
+            className: er.upsell,
             onClick: this.handleBannerUpsellUpload,
             children: r
           })
@@ -704,66 +683,66 @@ class eR extends l.PureComponent {
       guild: e,
       canManageGuild: t,
       analyticsLocations: s
-    } = this.props, l = e.hasFeature(ea.GuildFeatures.BANNER), n = e.hasFeature(ea.GuildFeatures.ANIMATED_BANNER), i = l && t, r = (0, a.jsx)(b.default, {
+    } = this.props, l = e.hasFeature(es.GuildFeatures.BANNER), n = e.hasFeature(es.GuildFeatures.ANIMATED_BANNER), i = l && t, r = (0, a.jsx)(P.default, {
       image: e.banner,
-      makeURL: t => null != t ? Q.default.getGuildBannerURL({
+      makeURL: t => null != t ? X.default.getGuildBannerURL({
         id: e.id,
         banner: t
       }, n) : null,
       disabled: !i,
       onChange: this.handleBannerChange,
-      hint: er.default.Messages.CHANGE_SPLASH,
-      onOpenImageSelectModal: () => eL(en.UploadTypes.GUILD_BANNER, ei.MAX_IMAGE_UPLOAD_FILESIZE_BYTES, this.handleBannerChange, !0, {
-        page: ea.AnalyticsPages.GUILD_SETTINGS,
-        section: ea.AnalyticsSections.GUILD_BANNER
+      hint: ei.default.Messages.CHANGE_SPLASH,
+      onOpenImageSelectModal: () => ex(el.UploadTypes.GUILD_BANNER, en.MAX_IMAGE_UPLOAD_FILESIZE_BYTES, this.handleBannerChange, !0, {
+        page: es.AnalyticsPages.GUILD_SETTINGS,
+        section: es.AnalyticsSections.GUILD_BANNER
       }, s),
       enabled: i
     }), o = (0, a.jsx)(I.Button, {
       disabled: !i,
       color: I.Button.Colors.BRAND_NEW,
-      className: eo.marginTop16,
-      onClick: () => eL(en.UploadTypes.GUILD_BANNER, ei.MAX_IMAGE_UPLOAD_FILESIZE_BYTES, this.handleBannerChange, !0, {
-        page: ea.AnalyticsPages.GUILD_SETTINGS,
-        section: ea.AnalyticsSections.GUILD_BANNER
+      className: er.marginTop16,
+      onClick: () => ex(el.UploadTypes.GUILD_BANNER, en.MAX_IMAGE_UPLOAD_FILESIZE_BYTES, this.handleBannerChange, !0, {
+        page: es.AnalyticsPages.GUILD_SETTINGS,
+        section: es.AnalyticsSections.GUILD_BANNER
       }, s),
-      children: er.default.Messages.UPLOAD_BACKGROUND
+      children: ei.default.Messages.UPLOAD_BACKGROUND
     });
     return (0, a.jsx)(I.FormSection, {
-      className: eo.divider,
-      children: (0, a.jsxs)(W.default, {
+      className: er.divider,
+      children: (0, a.jsxs)(Y.default, {
         basis: "50%",
-        direction: W.default.Direction.HORIZONTAL,
-        align: W.default.Justify.START,
-        children: [(0, a.jsxs)(W.default.Child, {
+        direction: Y.default.Direction.HORIZONTAL,
+        align: Y.default.Justify.START,
+        children: [(0, a.jsxs)(Y.default.Child, {
           wrap: !0,
           basis: "50%",
           children: [(0, a.jsxs)(I.FormTitle, {
-            className: eo.flexFormTitle,
+            className: er.flexFormTitle,
             children: [(0, a.jsx)("div", {
-              children: er.default.Messages.FORM_LABEL_SERVER_BANNER
-            }), (0, a.jsx)(A.default, {
+              children: ei.default.Messages.FORM_LABEL_SERVER_BANNER
+            }), (0, a.jsx)(O.default, {
               guild: e,
-              guildFeature: ea.GuildFeatures.BANNER,
-              className: eo.guildFeatureAvailabilityIndicator,
+              guildFeature: es.GuildFeatures.BANNER,
+              className: er.guildFeatureAvailabilityIndicator,
               onClick: this.handleBannerUpsellIndicator
             })]
           }), (0, a.jsx)(I.FormText, {
             type: I.FormTextTypes.DESCRIPTION,
-            className: eo.marginBottom8,
-            children: er.default.Messages.FORM_HELP_SERVER_BANNER
+            className: er.marginBottom8,
+            children: ei.default.Messages.FORM_HELP_SERVER_BANNER
           }), (0, a.jsx)(I.FormText, {
             type: I.FormTextTypes.DESCRIPTION,
-            children: er.default.Messages.GUILD_SETTINGS_BANNER_RECOMMEND.format({
-              articleURL: $.default.getArticleURL(ea.HelpdeskArticles.GUILD_BANNER_SPLASH)
+            children: ei.default.Messages.GUILD_SETTINGS_BANNER_RECOMMEND.format({
+              articleURL: q.default.getArticleURL(es.HelpdeskArticles.GUILD_BANNER_SPLASH)
             })
           }), l ? o : this.uploadBGUpsellButton(this.handleBannerUpsellButton)]
-        }), (0, a.jsx)(W.default.Child, {
+        }), (0, a.jsx)(Y.default.Child, {
           wrap: !0,
           basis: "50%",
           children: l ? r : (0, a.jsx)(I.Clickable, {
             "aria-hidden": !0,
             tabIndex: -1,
-            className: eo.upsell,
+            className: er.upsell,
             onClick: this.handleBannerUpsellUpload,
             children: r
           })
@@ -778,31 +757,31 @@ class eR extends l.PureComponent {
       theme: s
     } = this.props;
     return (0, a.jsx)(I.FormSection, {
-      children: (0, a.jsxs)(W.default, {
-        align: W.default.Align.START,
-        children: [(0, a.jsxs)(W.default, {
+      children: (0, a.jsxs)(Y.default, {
+        align: Y.default.Align.START,
+        children: [(0, a.jsxs)(Y.default, {
           basis: "50%",
-          direction: W.default.Direction.VERTICAL,
-          align: W.default.Align.STRETCH,
+          direction: Y.default.Direction.VERTICAL,
+          align: Y.default.Align.STRETCH,
           children: [(0, a.jsx)(I.FormSwitch, {
-            className: i()(eo.marginTop8, eo.marginBottom8),
+            className: i()(er.marginTop8, er.marginBottom8),
             onChange: this.handlePremiumProgressBarEnabledChange,
             value: e.premiumProgressBarEnabled,
             hideBorder: !0,
             disabled: !t,
-            children: er.default.Messages.GUILD_SETTINGS_PREMIUM_PROGRESS_BAR_TITLE
+            children: ei.default.Messages.GUILD_SETTINGS_PREMIUM_PROGRESS_BAR_TITLE
           }), (0, a.jsx)(I.FormText, {
             type: I.FormTextTypes.DESCRIPTION,
-            className: eo.marginBottom8,
-            children: er.default.Messages.GUILD_SETTINGS_PREMIUM_PROGRESS_BAR_DESCRIPTION
+            className: er.marginBottom8,
+            children: ei.default.Messages.GUILD_SETTINGS_PREMIUM_PROGRESS_BAR_DESCRIPTION
           })]
-        }), (0, a.jsx)(W.default.Child, {
+        }), (0, a.jsx)(Y.default.Child, {
           wrap: !0,
           basis: "50%",
           children: (0, a.jsx)("img", {
-            alt: er.default.Messages.GUILD_SETTINGS_PREMIUM_PROGRESS_BAR_IMG_ALT,
-            src: (0, _.isThemeLight)(s) ? eu : ed,
-            className: eo.progressBarImage
+            alt: ei.default.Messages.GUILD_SETTINGS_PREMIUM_PROGRESS_BAR_IMG_ALT,
+            src: (0, _.isThemeLight)(s) ? ed : eo,
+            className: er.progressBarImage
           })
         })]
       })
@@ -812,26 +791,26 @@ class eR extends l.PureComponent {
     return (0, a.jsx)("div", {
       ref: this._displaySectionRef,
       children: (0, a.jsxs)(I.FormSection, {
-        title: er.default.Messages.DISPLAY,
+        title: ei.default.Messages.DISPLAY,
         tag: I.FormTitleTags.H1,
-        className: eo.divider,
+        className: er.divider,
         children: [this.renderProgressBar(), this.renderBanner(), this.renderServerInviteBGSection(), this.renderHomeHeaderSection()]
       })
     })
   }
   render() {
     return (0, a.jsxs)(I.FormSection, {
-      title: er.default.Messages.SERVER_OVERVIEW,
+      title: ei.default.Messages.SERVER_OVERVIEW,
       tag: I.FormTitleTags.H1,
       children: [this.renderBaseSettings(), this.renderSummariesSection(), this.renderAFKSection(), this.renderJoinNotificationSection(), this.renderNotificationSection(), this.renderDisplaySection()]
     })
   }
   constructor(...e) {
-    super(...e), ec(this, "_imageInputRef", l.createRef()), ec(this, "_displaySectionRef", l.createRef()), ec(this, "_inviteSectionRef", l.createRef()), ec(this, "_notificationSectionRef", l.createRef()), ec(this, "handleIconChange", e => {
-      ee.default.updateGuild({
+    super(...e), eu(this, "_imageInputRef", l.createRef()), eu(this, "_displaySectionRef", l.createRef()), eu(this, "_inviteSectionRef", l.createRef()), eu(this, "_notificationSectionRef", l.createRef()), eu(this, "handleIconChange", e => {
+      $.default.updateGuild({
         icon: e
       })
-    }), ec(this, "handleOpenImageCroppingModal", (e, t) => {
+    }), eu(this, "handleOpenImageCroppingModal", (e, t) => {
       (0, I.openModalLazy)(async () => {
         let {
           default: l
@@ -843,20 +822,20 @@ class eR extends l.PureComponent {
           ...s
         })
       })
-    }), ec(this, "handleUploadImage", e => {
+    }), eu(this, "handleUploadImage", e => {
       var t;
       e.target === e.currentTarget && (null === (t = this._imageInputRef.current) || void 0 === t || t.activateUploadDialogue())
-    }), ec(this, "handleShowJoinsChange", e => this.handleSystemChannelFlagsChange(ea.SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATIONS, !e)), ec(this, "handleShowSubscriptionsChange", e => this.handleSystemChannelFlagsChange(ea.SystemChannelFlags.SUPPRESS_PREMIUM_SUBSCRIPTIONS, !e)), ec(this, "handleShowGuildRemindersChange", e => {
-      this.handleSystemChannelFlagsChange(ea.SystemChannelFlags.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS, !e)
-    }), ec(this, "handleShowJoinRepliesChange", e => this.handleSystemChannelFlagsChange(ea.SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATION_REPLIES, !e)), ec(this, "handleShowGuildRoleSubscriptionPurchaseMessages", e => {
-      this.handleSystemChannelFlagsChange(ea.SystemChannelFlags.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS, !e)
-    }), ec(this, "handleShowDeadchatPromptMessageChange", e => {
-      this.handleSystemChannelFlagsChange(ea.SystemChannelFlags.SUPPRESS_CHANNEL_PROMPT_DEADCHAT, !e)
-    }), ec(this, "handleShowGuildRoleSubscriptionPurchaseMessageRepliesChange", e => {
-      this.handleSystemChannelFlagsChange(ea.SystemChannelFlags.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES, !e)
-    }), ec(this, "handleHomeHeaderChange", (e, t) => {
+    }), eu(this, "handleShowJoinsChange", e => this.handleSystemChannelFlagsChange(es.SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATIONS, !e)), eu(this, "handleShowSubscriptionsChange", e => this.handleSystemChannelFlagsChange(es.SystemChannelFlags.SUPPRESS_PREMIUM_SUBSCRIPTIONS, !e)), eu(this, "handleShowGuildRemindersChange", e => {
+      this.handleSystemChannelFlagsChange(es.SystemChannelFlags.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS, !e)
+    }), eu(this, "handleShowJoinRepliesChange", e => this.handleSystemChannelFlagsChange(es.SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATION_REPLIES, !e)), eu(this, "handleShowGuildRoleSubscriptionPurchaseMessages", e => {
+      this.handleSystemChannelFlagsChange(es.SystemChannelFlags.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS, !e)
+    }), eu(this, "handleShowDeadchatPromptMessageChange", e => {
+      this.handleSystemChannelFlagsChange(es.SystemChannelFlags.SUPPRESS_CHANNEL_PROMPT_DEADCHAT, !e)
+    }), eu(this, "handleShowGuildRoleSubscriptionPurchaseMessageRepliesChange", e => {
+      this.handleSystemChannelFlagsChange(es.SystemChannelFlags.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES, !e)
+    }), eu(this, "handleHomeHeaderChange", (e, t) => {
       if (null == e || void 0 === t) {
-        ee.default.updateGuild({
+        $.default.updateGuild({
           homeHeader: null
         });
         return
@@ -867,26 +846,26 @@ class eR extends l.PureComponent {
         return s => (0, a.jsx)(l, {
           imgURI: e,
           file: t,
-          onCrop: e => ee.default.updateGuild({
+          onCrop: e => $.default.updateGuild({
             homeHeader: e
           }),
-          uploadType: en.UploadTypes.HOME_HEADER,
+          uploadType: el.UploadTypes.HOME_HEADER,
           ...s
         })
       })
-    }), ec(this, "handleBannerChange", (e, t) => {
+    }), eu(this, "handleBannerChange", (e, t) => {
       let {
         guild: s,
         analyticsLocations: a
       } = this.props, l = null == t ? void 0 : t.type, n = {
-        page: ea.AnalyticsPages.GUILD_SETTINGS,
-        section: ea.AnalyticsSections.ANIMATED_GUILD_BANNER_UPSELL,
+        page: es.AnalyticsPages.GUILD_SETTINGS,
+        section: es.AnalyticsSections.ANIMATED_GUILD_BANNER_UPSELL,
         object: "temp"
       };
       if (null != l && null != e) {
-        if ("image/gif" !== l || s.hasFeature(ea.GuildFeatures.ANIMATED_BANNER)) {
-          if (!s.hasFeature(ea.GuildFeatures.BANNER)) {
-            n.object = ea.AnalyticsObjects.IMAGE_CROPPING_MODAL, (0, p.openGuildBannerUpsellModal)({
+        if ("image/gif" !== l || s.hasFeature(es.GuildFeatures.ANIMATED_BANNER)) {
+          if (!s.hasFeature(es.GuildFeatures.BANNER)) {
+            n.object = es.AnalyticsObjects.IMAGE_CROPPING_MODAL, (0, A.openGuildBannerUpsellModal)({
               guild: s,
               analyticsLocations: a,
               analyticsLocation: n,
@@ -896,7 +875,7 @@ class eR extends l.PureComponent {
             return
           }
         } else {
-          n.object = ea.AnalyticsObjects.GIF_CROPPING_MODAL, (0, p.openGuildBannerUpsellModal)({
+          n.object = es.AnalyticsObjects.GIF_CROPPING_MODAL, (0, A.openGuildBannerUpsellModal)({
             guild: s,
             analyticsLocations: a,
             analyticsLocation: n,
@@ -906,94 +885,94 @@ class eR extends l.PureComponent {
           return
         }
       }
-      ee.default.updateGuild({
+      $.default.updateGuild({
         banner: e
       })
-    }), ec(this, "handleShowModalUpsell", (e, t, s, a) => {
+    }), eu(this, "handleShowModalUpsell", (e, t, s, a) => {
       e.preventDefault(), e.stopPropagation();
       let {
         guild: l,
         analyticsLocations: n
       } = this.props;
-      (0, N.trackWithMetadata)(ea.AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, {
+      (0, N.trackWithMetadata)(es.AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, {
         location: {
           section: t,
-          object: ea.AnalyticsObjects.LEARN_MORE
+          object: es.AnalyticsObjects.LEARN_MORE
         },
         guild_id: null == l ? void 0 : l.id,
         location_stack: n
-      }), (0, M.default)({
+      }), (0, p.default)({
         analyticsLocations: n,
         analyticsSourceLocation: {
           section: t,
           object: s,
-          page: ea.AnalyticsPages.GUILD_SETTINGS
+          page: es.AnalyticsPages.GUILD_SETTINGS
         },
         guild: l,
         perks: a
       })
-    }), ec(this, "handleInviteSplashUpsellIndicator", e => {
-      this.handleShowModalUpsell(e, ea.AnalyticsSections.GUILD_INVITE_BACKGROUND, ea.AnalyticsObjects.BADGE, (0, el.guildInviteUpsellPerks)())
-    }), ec(this, "handleInviteSplashUpsellButton", e => {
-      this.handleShowModalUpsell(e, ea.AnalyticsSections.GUILD_INVITE_BACKGROUND, ea.AnalyticsObjects.BUTTON_CTA, (0, el.guildInviteUpsellPerks)())
-    }), ec(this, "handleInviteSplashUpsellUpload", e => {
-      this.handleShowModalUpsell(e, ea.AnalyticsSections.GUILD_INVITE_BACKGROUND, ea.AnalyticsObjects.UPLOAD_IMAGE, (0, el.guildInviteUpsellPerks)())
-    }), ec(this, "handleBannerUpsellIndicator", e => {
-      this.handleShowModalUpsell(e, ea.AnalyticsSections.GUILD_BANNER, ea.AnalyticsObjects.BADGE, (0, el.guildBannerUpsellPerks)())
-    }), ec(this, "handleBannerUpsellButton", e => {
-      this.handleShowModalUpsell(e, ea.AnalyticsSections.GUILD_BANNER, ea.AnalyticsObjects.BUTTON_CTA, (0, el.guildBannerUpsellPerks)())
-    }), ec(this, "handleBannerUpsellUpload", e => {
-      this.handleShowModalUpsell(e, ea.AnalyticsSections.GUILD_BANNER, ea.AnalyticsObjects.UPLOAD_IMAGE, (0, el.guildBannerUpsellPerks)())
-    }), ec(this, "handleConversationSummariesToggle", e => {
+    }), eu(this, "handleInviteSplashUpsellIndicator", e => {
+      this.handleShowModalUpsell(e, es.AnalyticsSections.GUILD_INVITE_BACKGROUND, es.AnalyticsObjects.BADGE, (0, ea.guildInviteUpsellPerks)())
+    }), eu(this, "handleInviteSplashUpsellButton", e => {
+      this.handleShowModalUpsell(e, es.AnalyticsSections.GUILD_INVITE_BACKGROUND, es.AnalyticsObjects.BUTTON_CTA, (0, ea.guildInviteUpsellPerks)())
+    }), eu(this, "handleInviteSplashUpsellUpload", e => {
+      this.handleShowModalUpsell(e, es.AnalyticsSections.GUILD_INVITE_BACKGROUND, es.AnalyticsObjects.UPLOAD_IMAGE, (0, ea.guildInviteUpsellPerks)())
+    }), eu(this, "handleBannerUpsellIndicator", e => {
+      this.handleShowModalUpsell(e, es.AnalyticsSections.GUILD_BANNER, es.AnalyticsObjects.BADGE, (0, ea.guildBannerUpsellPerks)())
+    }), eu(this, "handleBannerUpsellButton", e => {
+      this.handleShowModalUpsell(e, es.AnalyticsSections.GUILD_BANNER, es.AnalyticsObjects.BUTTON_CTA, (0, ea.guildBannerUpsellPerks)())
+    }), eu(this, "handleBannerUpsellUpload", e => {
+      this.handleShowModalUpsell(e, es.AnalyticsSections.GUILD_BANNER, es.AnalyticsObjects.UPLOAD_IMAGE, (0, ea.guildBannerUpsellPerks)())
+    }), eu(this, "handleConversationSummariesToggle", e => {
       let {
         guild: t
       } = this.props, s = new Set(t.features);
-      e ? s.add(ea.GuildFeatures.SUMMARIES_ENABLED_BY_USER) : s.delete(ea.GuildFeatures.SUMMARIES_ENABLED_BY_USER), ee.default.updateGuild({
+      e ? s.add(es.GuildFeatures.SUMMARIES_ENABLED_BY_USER) : s.delete(es.GuildFeatures.SUMMARIES_ENABLED_BY_USER), $.default.updateGuild({
         features: s
       })
-    }), ec(this, "uploadBGUpsellButton", e => (0, a.jsxs)(z.default, {
+    }), eu(this, "uploadBGUpsellButton", e => (0, a.jsxs)(W.default, {
       color: I.Button.Colors.GREEN,
-      className: i()(eo.marginTop16),
-      innerClassName: eo.upsellButton,
+      className: i()(er.marginTop16),
+      innerClassName: er.upsellButton,
       onClick: e,
-      children: [(0, a.jsx)(Z.default, {
+      children: [(0, a.jsx)(K.default, {
         height: 16,
         width: 16,
-        className: eo.premiumUpsellBadge
-      }), " ", er.default.Messages.PREMIUM_GUILD_UNLOCK_WTH_BOOSTING_CTA]
+        className: er.premiumUpsellBadge
+      }), " ", ei.default.Messages.PREMIUM_GUILD_UNLOCK_WTH_BOOSTING_CTA]
     }))
   }
 }
 
-function ex() {
+function eR() {
   var e;
   let {
     guild: t,
     errors: s,
     submitting: n,
     subsection: i
-  } = (0, c.useStateFromStoresObject)([et.default], () => et.default.getProps()), r = (0, f.default)(), {
+  } = (0, c.useStateFromStoresObject)([ee.default], () => ee.default.getProps()), r = (0, f.default)(), {
     analyticsLocations: d
   } = (0, g.default)(m.default.OVERVIEW);
   l.useEffect(() => {
-    (0, U.hideHotspot)(G.HotspotLocations.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL)
+    (0, G.hideHotspot)(j.HotspotLocations.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL)
   }, []);
-  let u = (0, c.useStateFromStores)([H.default], () => H.default.getCategories(null == t ? void 0 : t.id)),
+  let u = (0, c.useStateFromStores)([F.default], () => F.default.getCategories(null == t ? void 0 : t.id)),
     E = l.useMemo(() => (0, h.default)(u._categories, u), [u]),
     {
       canManageGuild: _,
       isGuildAdmin: I
-    } = (0, c.useStateFromStoresObject)([w.default], () => ({
-      canManageGuild: w.default.can(ea.Permissions.MANAGE_GUILD, t),
-      isGuildAdmin: w.default.can(ea.Permissions.ADMINISTRATOR, t)
+    } = (0, c.useStateFromStoresObject)([k.default], () => ({
+      canManageGuild: k.default.can(es.Permissions.MANAGE_GUILD, t),
+      isGuildAdmin: k.default.can(es.Permissions.ADMINISTRATOR, t)
     })),
-    T = (0, c.useStateFromStores)([k.default], () => k.default.getMemberCount(null == t ? void 0 : t.id)),
-    S = (0, c.useStateFromStores)([Y.default], () => Y.default.getCurrentUser());
+    T = (0, c.useStateFromStores)([H.default], () => H.default.getMemberCount(null == t ? void 0 : t.id)),
+    S = (0, c.useStateFromStores)([V.default], () => V.default.getCurrentUser());
   o()(null != S, "GuildSettingsOverview: currentUser cannot be undefined");
   let {
     enableDeadchat: N
   } = x.SimpleDeadchatPromptExperiment.useExperiment({
-    guildId: null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : ea.EMPTY_STRING_SNOWFLAKE_ID,
+    guildId: null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : es.EMPTY_STRING_SNOWFLAKE_ID,
     location: "guild_settings"
   }, {
     disable: null == t,
@@ -1001,7 +980,7 @@ function ex() {
   });
   return null == t ? null : (0, a.jsx)(g.AnalyticsLocationProvider, {
     value: d,
-    children: (0, a.jsx)(eR, {
+    children: (0, a.jsx)(eC, {
       channels: E,
       canManageGuild: _,
       isGuildAdmin: I,
@@ -1018,7 +997,7 @@ function ex() {
   })
 }
 
-function eL(e, t, l) {
+function ex(e, t, l) {
   let n = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
     i = arguments.length > 4 ? arguments[4] : void 0,
     r = arguments.length > 5 ? arguments[5] : void 0;

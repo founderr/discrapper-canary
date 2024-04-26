@@ -10,7 +10,7 @@ var s, a, i = n("735250"),
   o = n.n(l),
   d = n("748780"),
   u = n("215569"),
-  h = n("69490");
+  h = n("424509");
 (s = a || (a = {}))[s.RIGHT = -1] = "RIGHT", s[s.LEFT = 1] = "LEFT";
 let c = {
   friction: 7,

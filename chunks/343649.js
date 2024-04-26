@@ -24,7 +24,7 @@ var l, a = n("735250"),
   f = n("906732"),
   I = n("15640"),
   T = n("89057"),
-  M = n("598"),
+  M = n("563132"),
   A = n("409813"),
   N = n("45572"),
   y = n("98278"),
@@ -52,7 +52,7 @@ var l, a = n("735250"),
   K = n("474936"),
   z = n("231338"),
   q = n("689938"),
-  J = n("885888");
+  J = n("908689");
 (l || (l = {})).PREMIUM = "discord://app/settings/nitro";
 let X = K.SubscriptionPlans.NONE_MONTH,
   Q = [A.Step.PLAN_SELECT, A.Step.REVIEW, A.Step.CONFIRM],
@@ -183,13 +183,13 @@ function ee(e) {
     eN !== L.PaymentAuthenticationState.PENDING && eY !== A.Step.CONFIRM && null != ed && (ew !== Q && eW(Q), !Q.includes(eY) && eY !== A.Step.PREMIUM_UPSELL && eX(A.Step.REVIEW)), eY === A.Step.ADD_PAYMENT_STEPS && ew !== Z && eW(Z), eZ && eY !== A.Step.PLAN_SELECT && eH(A.Step.PLAN_SELECT)
   }, [eY, eX, eZ, eN, er, ed, ew]), (0, L.usePaymentStepForAuthentication)(eY, eN, eX), (0, A.usePurchaseStateForStep)(eY, eV, eK);
   let e$ = s.useRef(null),
-    [e0, e1] = (0, P.default)(!1, 500),
-    [e3, e4] = s.useState(null),
-    [e5, e8] = s.useState([]),
-    [e2, e7] = s.useState(!1);
+    [e0, e3] = (0, P.default)(!1, 500),
+    [e1, e4] = s.useState(null),
+    [e5, e2] = s.useState([]),
+    [e8, e7] = s.useState(!1);
   s.useEffect(() => {
     let e;
-    if (!!eB) null != x.default.get(K.SubscriptionPlans.PREMIUM_MONTH_GUILD) && e8(e = (0, F.getCurrencies)(K.SubscriptionPlans.PREMIUM_MONTH_GUILD, eM, !1)), null == eM && null != er && null != er.paymentSourceId ? e4(er.currency) : null != e && e4(e[0])
+    if (!!eB) null != x.default.get(K.SubscriptionPlans.PREMIUM_MONTH_GUILD) && e2(e = (0, F.getCurrencies)(K.SubscriptionPlans.PREMIUM_MONTH_GUILD, eM, !1)), null == eM && null != er && null != er.paymentSourceId ? e4(er.currency) : null != e && e4(e[0])
   }, [eM, er, eB, JSON.stringify(e5)]);
   let e9 = (0, C.AddPaymentFlow)({
     paymentModalArgs: ef,
@@ -222,7 +222,7 @@ function ee(e) {
   if (eo) t = (0, a.jsx)(T.BlockedPaymentsContentModal, {
     onClose: eQ
   });
-  else if (ec && ep && eB && null != e3 && "" !== e3) {
+  else if (ec && ep && eB && null != e1 && "" !== e1) {
     if (null == er ? void 0 : er.isPausedOrPausePending) t = (0, a.jsx)(S.ModalContent, {
       children: (0, a.jsx)("p", {
         className: J.copy,
@@ -236,12 +236,12 @@ function ee(e) {
       })
     });
     else if (eY === A.Step.PREMIUM_UPSELL) {
-      u()(null != eE, "Missing nextPremiumSubscriptionPlan"), u()(e3, "Currency not defined");
+      u()(null != eE, "Missing nextPremiumSubscriptionPlan"), u()(e1, "Currency not defined");
       let e = null != eM ? {
         paymentSourceId: eM,
-        currency: e3
+        currency: e1
       } : {
-        currency: e3
+        currency: e1
       };
       t = (0, a.jsx)(H.default, {
         premiumSubscriptionPlan: eE,
@@ -255,12 +255,12 @@ function ee(e) {
       })
     } else {
       let e, n, l, s;
-      u()(e3, "Currency not defined");
+      u()(e1, "Currency not defined");
       let r = null != eM ? {
         paymentSourceId: eM,
-        currency: e3
+        currency: e1
       } : {
-        currency: e3
+        currency: e1
       };
       switch (eY) {
         case A.Step.PLAN_SELECT:
@@ -341,7 +341,7 @@ function ee(e) {
                     duration_ms: Date.now() - ev,
                     guild_id: en,
                     application_id: eu
-                  }), e2) return;
+                  }), e8) return;
                 if (null == er || null == eS) {
                   u()(null != e, "Missing paymentSource");
                   let t = await (0, p.createSubscription)({
@@ -374,7 +374,7 @@ function ee(e) {
                   duration_ms: Date.now() - ev
                 })
               } finally {
-                !e2 && eA(!1)
+                !e8 && eA(!1)
               }
             },
             children: q.default.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_SUBMIT
@@ -386,7 +386,7 @@ function ee(e) {
               onClick: () => {
                 null != e$.current && (e$.current.scrollIntoView({
                   behavior: "smooth"
-                }), e1(!0))
+                }), e3(!0))
               },
               type: "submit",
               children: q.default.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_SUBMIT

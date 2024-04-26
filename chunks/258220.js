@@ -17,7 +17,7 @@ var n = a("735250"),
   d = a("998502"),
   c = a("981631"),
   f = a("689938"),
-  E = a("381968");
+  E = a("67558");
 let h = "Activity Encourages Hardware Acceleration";
 
 function _(e) {
@@ -25,13 +25,13 @@ function _(e) {
   let {
     applicationId: a,
     ..._
-  } = e, [C, m] = s.useState(!1), [S] = (0, r.default)([a]), I = null !== (t = null == S ? void 0 : S.name) && void 0 !== t ? t : "This Activity";
+  } = e, [C, m] = s.useState(!1), [S] = (0, r.default)([a]), p = null !== (t = null == S ? void 0 : S.name) && void 0 !== t ? t : "This Activity";
   s.useEffect(() => {
     u.default.track(c.AnalyticEvents.OPEN_MODAL, {
       type: h
     })
   }, []);
-  let p = () => {
+  let I = () => {
     let e = "temporary";
     C && (e = "permanent", i.default.updatedUnsyncedSettings({
       disableActivityHardwareAccelerationPrompt: !0
@@ -51,7 +51,7 @@ function _(e) {
         variant: "text-lg/normal",
         children: f.default.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_TITLE
       }), (0, n.jsx)(l.ModalCloseButton, {
-        onClick: p,
+        onClick: I,
         className: E.closeButton
       })]
     }), (0, n.jsx)(l.ModalContent, {
@@ -60,7 +60,7 @@ function _(e) {
         variant: "text-md/normal",
         className: E.__invalid_ratingBody,
         children: f.default.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_BODY.format({
-          applicationName: I
+          applicationName: p
         })
       })
     }), (0, n.jsxs)(l.ModalFooter, {
@@ -77,7 +77,7 @@ function _(e) {
         })
       }), (0, n.jsx)(l.Button, {
         color: l.Button.Colors.PRIMARY,
-        onClick: p,
+        onClick: I,
         children: f.default.Messages.ACTIVITY_HARDWARE_ACCELERATION_NO_THANKS
       }), (0, n.jsx)(l.Button, {
         color: l.Button.Colors.BRAND,

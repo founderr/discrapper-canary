@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return P
+    return M
   }
 });
 var n = a("735250"),
@@ -20,20 +20,20 @@ var n = a("735250"),
   C = a("430824"),
   m = a("351402"),
   S = a("730647"),
-  I = a("772021"),
-  p = a("396828"),
+  p = a("772021"),
+  I = a("396828"),
   T = a("475413"),
   g = a("20967"),
   A = a("504762"),
   N = a("807152"),
   v = a("176505"),
   R = a("689938"),
-  L = a("966815");
+  L = a("55514");
 
 function O(e) {
   let {
     guildId: t
-  } = e, a = (0, i.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), O = (0, i.useStateFromStores)([h.default], () => h.default.isConnected()), P = (0, f.default)(t), M = (0, I.default)(t), x = (0, i.useStateFromStores)([m.default], () => m.default.isSubscriptionFetching), y = (0, S.useGroupListingsFetchContext)(), {
+  } = e, a = (0, i.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), O = (0, i.useStateFromStores)([h.default], () => h.default.isConnected()), M = (0, f.default)(t), P = (0, p.default)(t), x = (0, i.useStateFromStores)([m.default], () => m.default.isSubscriptionFetching), y = (0, S.useGroupListingsFetchContext)(), {
     shouldHideGuildPurchaseEntryPoints: D,
     restrictionsLoading: b
   } = (0, E.useShouldHideGuildPurchaseEntryPoints)(t), U = null == a || !y || x || b;
@@ -41,7 +41,7 @@ function O(e) {
     subsection: R.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
     location: null == a ? void 0 : a.name
   }), (0, u.default)(l.isMobile ? "role-subscriptions-overview" : void 0);
-  let j = O && (null == a || !(P || M) || D && !b);
+  let j = O && (null == a || !(M || P) || D && !b);
   if (s.useEffect(() => {
       o.fetchSubscriptions()
     }, []), s.useEffect(() => {
@@ -58,7 +58,7 @@ function O(e) {
       toolbar: (0, n.jsx)(s.Fragment, {}),
       className: L.headerBar,
       children: [(0, n.jsx)(_.default.Icon, {
-        icon: p.default,
+        icon: I.default,
         "aria-hidden": !0
       }), (0, n.jsx)(_.default.Title, {
         children: R.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
@@ -67,7 +67,7 @@ function O(e) {
       id: N.OVERVIEW_NOTICE_ROOT
     }), (0, n.jsx)("div", {
       className: L.content,
-      children: P ? (0, n.jsx)(r.ScrollerNone, {
+      children: M ? (0, n.jsx)(r.ScrollerNone, {
         className: L.scroller,
         children: (0, n.jsx)("div", {
           className: L.scrollerContent,
@@ -80,7 +80,7 @@ function O(e) {
   })
 }
 
-function P(e) {
+function M(e) {
   let {
     guildId: t
   } = e;

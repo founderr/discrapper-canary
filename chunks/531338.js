@@ -9,7 +9,7 @@ var n = s("481060"),
   l = s("77987"),
   c = s("787025"),
   d = s("689938"),
-  u = s("90240");
+  u = s("672524");
 t.default = (0, l.makeAuthenticated)(function(e) {
   let {
     match: t

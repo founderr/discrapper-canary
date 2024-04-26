@@ -72,7 +72,7 @@ var i = l("735250"),
   em = l("272242"),
   ef = l("981631"),
   eh = l("689938"),
-  eC = l("74869"),
+  eC = l("922989"),
   eg = l("902294");
 let eI = d().parserFor(eu.default),
   eA = d().reactFor(d().ruleOutput(eu.default, "react")),
@@ -293,7 +293,7 @@ function eN(e) {
         return i.append("tf_12275088515223", "field_value_dc_category_report_an_app_bot"), i.append("tf_12276208289431", "field_value_dc_reported_action_app_directory"), i.append("tf_12094971213335", t.id), i.append("ticket_form_id", "12275528604823"), i.append("tf_subject", "App Directory Report ".concat(t.name, " ").concat(t.id)), "".concat(l, "?").concat(i.toString())
       }(eY, eG))
     }, [eY, eG]),
-    e4 = a.useCallback(e => (0, i.jsxs)(C.Menu, {
+    e7 = a.useCallback(e => (0, i.jsxs)(C.Menu, {
       navId: "application-directory-profile",
       "aria-label": eh.default.Messages.APP_DIRECTORY_PROFILE_UTILITIES_A11Y_LABEL,
       onClose: e,
@@ -309,7 +309,7 @@ function eN(e) {
         children: eW
       }) : null]
     }), [eW, e1]),
-    [e7, e3] = (0, v.default)(!1, 1e3),
+    [e4, e3] = (0, v.default)(!1, 1e3),
     e8 = a.useCallback(() => {
       null != eG && (B.default.track(ef.AnalyticEvents.APP_SHARE_BUTTON_CLICKED, {
         source: "product_page",
@@ -579,7 +579,7 @@ function eN(e) {
               }), (0, i.jsx)(C.Button, {
                 onClick: e8,
                 color: C.Button.Colors.PRIMARY,
-                children: e7 ? eh.default.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL : eh.default.Messages.APP_DIRECTORY_PROFILE_SHARE_BUTTON
+                children: e4 ? eh.default.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL : eh.default.Messages.APP_DIRECTORY_PROFILE_SHARE_BUTTON
               }), (0, i.jsx)(C.Button, {
                 color: C.Button.Colors.BRAND,
                 onClick: e6,
@@ -590,7 +590,7 @@ function eN(e) {
                   let {
                     closePopout: t
                   } = e;
-                  return e4(t)
+                  return e7(t)
                 },
                 position: "left",
                 align: "top",

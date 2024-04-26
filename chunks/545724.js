@@ -9,7 +9,7 @@ var n = a("735250"),
   u = a("481060"),
   d = a("239091"),
   c = a("687683"),
-  f = a("527105");
+  f = a("47609");
 t.default = function(e) {
   let {
     index: t,
@@ -20,8 +20,8 @@ t.default = function(e) {
     isFocused: C,
     isActive: m,
     onOtherHover: S,
-    className: I
-  } = e, [p, T] = s.useState(!1), [g, A] = s.useState(!1), N = () => {
+    className: p
+  } = e, [I, T] = s.useState(!1), [g, A] = s.useState(!1), N = () => {
     T(!0), C && !m && !g && (null == S || S())
   }, v = () => {
     T(!1)
@@ -48,7 +48,7 @@ t.default = function(e) {
         right: -8
       },
       children: (0, n.jsx)(r.default.div, {
-        className: i()(f.messageRequestItem, I, {
+        className: i()(f.messageRequestItem, p, {
           [f.active]: m || g,
           [f.firstItem]: 0 === t
         }),
@@ -61,7 +61,7 @@ t.default = function(e) {
           opacity: 1
         },
         ...e,
-        children: l(p || m || g)
+        children: l(I || m || g)
       })
     })
   })

@@ -17,18 +17,18 @@ var n = a("735250"),
   E = a("376191"),
   h = a("86203"),
   _ = a("689938"),
-  C = a("65207");
+  C = a("564297");
 
 function m(e) {
   let {
     active: t,
     user: a,
     channel: m
-  } = e, S = (0, c.useListHasSingleSpamMessageRequest)(), I = s.useCallback(() => {
+  } = e, S = (0, c.useListHasSingleSpamMessageRequest)(), p = s.useCallback(() => {
     (0, i.showToast)((0, i.createToast)(_.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, i.ToastType.FAILURE)), r.default.increment({
       name: l.MetricEvents.SPAM_MESSAGE_REQUEST_ERROR_VIEW
     })
-  }, []), p = s.useCallback(() => {
+  }, []), I = s.useCallback(() => {
     u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
   }, []), T = s.useCallback(() => {
     u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID), S && (0, o.transitionToChannel)(m.id)
@@ -40,8 +40,8 @@ function m(e) {
   } = (0, f.useMessageRequestActions)({
     user: a,
     onAcceptSuccess: T,
-    onRejectSuccess: p,
-    onError: I
+    onRejectSuccess: I,
+    onError: p
   }), R = A || N, L = R || v;
   return (0, n.jsxs)("div", {
     className: C.container,

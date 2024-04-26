@@ -16,9 +16,9 @@ var a = s("735250"),
   S = s("976644"),
   E = s("540086"),
   T = s("150039"),
-  m = s("993413"),
-  f = s("689938"),
-  _ = s("819376");
+  f = s("993413"),
+  m = s("689938"),
+  _ = s("77771");
 
 function g(e) {
   let {
@@ -41,7 +41,7 @@ function g(e) {
     isTryItOutFlow: N,
     guild: s
   }), [p, N, s]), D = N || void 0 !== x ? null != x : (C ? O : A) != null, L = I ? S.default : r.Button;
-  return (0, a.jsxs)(m.default, {
+  return (0, a.jsxs)(f.default, {
     className: l,
     forcedDivider: g,
     hasBackground: !0,
@@ -55,7 +55,7 @@ function g(e) {
         className: i()({
           [_.buttonHighlighted]: I
         }),
-        children: f.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
+        children: m.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
       }), D && (0, a.jsx)(r.Button, {
         className: _.removeButton,
         color: r.Button.Colors.PRIMARY,
@@ -64,7 +64,7 @@ function g(e) {
         onClick: function() {
           (0, T.setNewPendingAvatarDecoration)(null == s ? void 0 : s.id, null)
         },
-        children: (0, d.hasGlobalDefaultAvatarDecoration)(t, s) ? f.default.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : f.default.Messages.USER_SETTINGS_REMOVE_AVATAR_DECORATION
+        children: (0, d.hasGlobalDefaultAvatarDecoration)(t, s) ? m.default.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : m.default.Messages.USER_SETTINGS_REMOVE_AVATAR_DECORATION
       })]
     }), t.isStaff() && M && (0, a.jsx)(h, {
       user: t

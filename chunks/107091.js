@@ -20,13 +20,13 @@ var l = a("735250"),
   h = a("372654"),
   E = a("300284"),
   g = a("642619"),
-  b = a("598"),
-  S = a("333867"),
-  x = a("329067"),
+  b = a("563132"),
+  x = a("333867"),
+  S = a("329067"),
   T = a("981631"),
   L = a("302800"),
   v = a("689938"),
-  I = a("980673");
+  I = a("777374");
 let N = e => {
   let {
     children: t,
@@ -90,7 +90,7 @@ function _(e) {
         })
       }), (0, l.jsx)(o.Button, {
         onClick: () => {
-          (0, S.default)({
+          (0, x.default)({
             skuId: t.skuId,
             analyticsLocations: P,
             returnRef: R
@@ -144,7 +144,7 @@ function _(e) {
         isGift: !1,
         activeSubscription: null,
         purchaseType: T.PurchaseTypes.ONE_TIME,
-        children: (0, l.jsx)(x.default, {
+        children: (0, l.jsx)(S.default, {
           ...z
         })
       })]

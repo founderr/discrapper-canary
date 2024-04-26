@@ -5,8 +5,8 @@
       c = a("120356"),
       i = a.n(c),
       o = a("715702"),
-      r = a("750950"),
-      f = a("605094");
+      r = a("273535"),
+      f = a("26673");
     class l extends n.Component {
       render() {
         return (0, d.jsx)("div", {

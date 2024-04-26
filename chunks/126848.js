@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return E
   }
 });
 var i = n("735250");
@@ -19,70 +19,62 @@ var s = n("120356"),
   p = n("52188"),
   f = n("248042"),
   b = n("924540"),
-  S = n("649765"),
-  g = n("886654"),
-  T = n("487980"),
-  x = n("351402"),
-  v = n("170671"),
-  N = n("921944"),
-  C = n("474936"),
-  j = n("689938"),
-  E = n("556973");
-let R = "UserSettingsPremiumLabel";
+  S = n("886654"),
+  g = n("351402"),
+  T = n("170671"),
+  x = n("921944"),
+  v = n("474936"),
+  N = n("689938"),
+  j = n("759644");
+let C = "UserSettingsPremiumLabel";
 
-function A(e) {
+function E(e) {
   let t, {
       decoration: n,
       label: s,
-      isSelected: A
+      isSelected: E
     } = e,
     I = (0, m.usePremiumTrialOffer)(),
     P = (0, d.usePremiumDiscountOffer)(),
-    _ = (0, f.useIsEligibleForBogoPromotion)(),
-    M = (0, r.useStateFromStores)([x.default], () => x.default.isLocalizedPromoEnabled) && null == I && null == n,
-    O = (0, c.useShouldShowNewOfferBadgeForAprilMarketingMoment)(R),
-    y = (0, T.useIsEligibleSenderForReferralProgramTabBadge)(R),
+    R = (0, f.useIsEligibleForBogoPromotion)(),
+    A = (0, r.useStateFromStores)([g.default], () => g.default.isLocalizedPromoEnabled) && null == I && null == n,
+    _ = (0, c.useShouldShowNewOfferBadgeForAprilMarketingMoment)(C),
     {
-      enabled: D
+      enabled: M
     } = u.ReferralProgramRecipient.useExperiment({
-      location: R
+      location: C
     }, {
       autoTrackExposure: !1
     }),
-    B = D && (null == I ? void 0 : I.trial_id) === C.PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
-  return t = _ ? (0, i.jsx)(h.default, {}) : O ? (0, i.jsx)(g.default, {
-    copy: j.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_MODAL_TOP_PILL,
-    isSelected: A,
+    y = M && (null == I ? void 0 : I.trial_id) === v.PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
+  return t = R ? (0, i.jsx)(h.default, {}) : _ ? (0, i.jsx)(S.default, {
+    copy: N.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_MODAL_TOP_PILL,
+    isSelected: E,
     onSelect: () => (0, a.markDismissibleContentAsDismissed)(o.DismissibleContent.PREMIUM_2024_APRIL_MARKETING_BADGE, {
-      dismissAction: N.ContentDismissActionType.TAKE_ACTION
+      dismissAction: x.ContentDismissActionType.TAKE_ACTION
     })
   }) : null != P ? (0, i.jsx)(b.PremiumDiscountOfferTabBadge, {
-    isTabSelected: A,
+    isTabSelected: E,
     userDiscount: P,
     includesAmountOff: !1
-  }) : null == I || B ? null != n ? n : M ? (0, i.jsx)(p.LocalizedPricingBadgeIcon, {
+  }) : null == I || y ? null != n ? n : A ? (0, i.jsx)(p.LocalizedPricingBadgeIcon, {
     entryPoint: p.BadgeEntryPoint.SettingsMenu
-  }) : y ? (0, i.jsx)(S.default, {
-    isSelected: A,
-    onSelect: () => (0, a.markDismissibleContentAsDismissed)(o.DismissibleContent.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, {
-      dismissAction: N.ContentDismissActionType.TAKE_ACTION
-    })
-  }) : (0, i.jsx)(v.default, {
-    isSelected: A
+  }) : (0, i.jsx)(T.default, {
+    isSelected: E
   }) : (0, i.jsx)(b.PremiumTrialOfferTabBadge, {
-    isTabSelected: A,
+    isTabSelected: E,
     trialOffer: I
   }), (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsxs)("div", {
-      className: l()(E.premiumLabel, {
-        [E.selected]: (A || M) && !_
+      className: l()(j.premiumLabel, {
+        [j.selected]: (E || A) && !R
       }),
       children: [s, t]
     }), (0, i.jsx)("div", {
-      className: l()(E.background, {
-        [E.auPromo]: M && !A,
-        [E.auPromoSelected]: M && A,
-        [E.selectedBackground]: !M && !_ && A
+      className: l()(j.background, {
+        [j.auPromo]: A && !E,
+        [j.auPromoSelected]: A && E,
+        [j.selectedBackground]: !A && !R && E
       })
     })]
   })

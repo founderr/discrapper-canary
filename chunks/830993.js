@@ -15,27 +15,27 @@ var l = n("735250"),
   c = n("471445"),
   f = n("430824"),
   h = n("496675"),
-  p = n("158776"),
-  m = n("979651"),
+  m = n("158776"),
+  p = n("979651"),
   C = n("823379"),
   g = n("355363"),
   E = n("737592"),
-  S = n("561788"),
-  _ = n("135724"),
+  _ = n("561788"),
+  S = n("135724"),
   I = n("543432"),
   N = n("981631"),
   T = n("689938"),
-  A = n("890108");
+  A = n("78165");
 
 function L(e) {
   var t, c;
   let {
     channel: f,
     guild: h,
-    onAction: m,
+    onAction: p,
     voiceStates: g,
-    isChannelSelected: S,
-    shouldShowSettingNudge: _
+    isChannelSelected: _,
+    shouldShowSettingNudge: S
   } = e;
   ! function(e, t) {
     let n = a.useMemo(() => {
@@ -58,10 +58,10 @@ function L(e) {
   });
   let x = null !== (t = null == g ? void 0 : g.filter(C.isNotNullish)) && void 0 !== t ? t : [],
     R = e => t => [N.ActivityTypes.PLAYING, N.ActivityTypes.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId) || t.type === N.ActivityTypes.LISTENING,
-    M = (0, s.useStateFromStores)([p.default], () => {
+    M = (0, s.useStateFromStores)([m.default], () => {
       let e = new Map;
       return x.forEach(t => {
-        let n = p.default.findActivity(t.user.id, R(t));
+        let n = m.default.findActivity(t.user.id, R(t));
         if (null != n && (0, d.default)(n)) {
           let t = null != n.application_id ? L.get(n.application_id) : null;
           null != t && null != n.application_id && e.set(n.application_id, {
@@ -71,10 +71,10 @@ function L(e) {
         }
       }), e
     }, [x, L], s.statesWillNeverBeEqual),
-    y = (0, s.useStateFromStores)([p.default], () => {
+    y = (0, s.useStateFromStores)([m.default], () => {
       let e = {};
       return x.forEach(t => {
-        let n = p.default.findActivity(t.user.id, R(t));
+        let n = m.default.findActivity(t.user.id, R(t));
         if (null != n && !(0, d.default)(n)) {
           var l, a, s, i;
           let r = "".concat(null !== (a = n.application_id) && void 0 !== a ? a : "", ":").concat(null !== (s = null === (l = n.party) || void 0 === l ? void 0 : l.id) && void 0 !== s ? s : t.user.id),
@@ -90,16 +90,16 @@ function L(e) {
       members: x,
       activity: e.presenceActivity
     })),
-    b = [...O, ...y];
-  return 0 === b.length ? null : (0, l.jsxs)(i.Scroller, {
+    D = [...O, ...y];
+  return 0 === D.length ? null : (0, l.jsxs)(i.Scroller, {
     className: A.container,
     children: [(0, l.jsx)(v, {
       channel: f,
-      isChannelSelected: S,
+      isChannelSelected: _,
       voiceStatesCount: null !== (c = null == g ? void 0 : g.length) && void 0 !== c ? c : 0
     }), (0, l.jsx)("div", {
       className: A.headerDivider
-    }), b.map((e, t) => {
+    }), D.map((e, t) => {
       let {
         members: n,
         activity: a
@@ -109,9 +109,9 @@ function L(e) {
         embeddedApp: i,
         channel: f,
         members: n,
-        onAction: m
+        onAction: p
       }, t)
-    }), _ && (0, l.jsxs)(l.Fragment, {
+    }), S && (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)("div", {
         className: A.headerDivider
       }), (0, l.jsx)("div", {
@@ -143,7 +143,7 @@ function v(e) {
     channel: t,
     isChannelSelected: n,
     voiceStatesCount: a
-  } = e, i = (0, s.useStateFromStores)([h.default], () => !h.default.can(N.Permissions.CONNECT, t)), r = (0, s.useStateFromStores)([m.default], () => m.default.hasVideo(t.id)), o = (0, g.default)({
+  } = e, i = (0, s.useStateFromStores)([h.default], () => !h.default.can(N.Permissions.CONNECT, t)), r = (0, s.useStateFromStores)([p.default], () => p.default.hasVideo(t.id)), o = (0, g.default)({
     channel: t,
     locked: i,
     video: r,
@@ -151,9 +151,9 @@ function v(e) {
   }), u = (0, s.useStateFromStores)([f.default], () => f.default.getGuild(t.guild_id));
   return null == (0, c.getChannelIconComponent)(t, u) ? null : (0, l.jsxs)("div", {
     className: A.popoutHeaderContainer,
-    children: [(0, l.jsx)(S.default, {
+    children: [(0, l.jsx)(_.default, {
       channel: t
-    }), o ? (0, l.jsx)(_.default, {
+    }), o ? (0, l.jsx)(S.default, {
       userCount: a,
       video: r,
       channel: t

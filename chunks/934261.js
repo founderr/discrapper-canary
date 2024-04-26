@@ -19,9 +19,9 @@ var a = l("442837"),
   C = l("25990"),
   I = l("594174");
 l("612418");
-var v = l("74538"),
-  P = l("689938"),
-  S = l("21281");
+var P = l("74538"),
+  v = l("689938"),
+  S = l("824896");
 let _ = e => {
     var t;
     let {
@@ -29,7 +29,7 @@ let _ = e => {
       pendingProfileEffectRecord: r,
       product: o,
       purchase: c
-    } = e, d = (0, a.useStateFromStores)([I.default], () => I.default.getCurrentUser()), f = (0, a.useStateFromStores)([i.default], () => i.default.getProduct(null == r ? void 0 : r.skuId)), m = (0, a.useStateFromStores)([E.default], () => E.default.locale), h = v.default.canUseCollectibles(d), p = (0, u.isPremiumCollectiblesPurchase)(c), g = (0, u.isPremiumCollectiblesProduct)(o), C = x(!h && p, g, h);
+    } = e, d = (0, a.useStateFromStores)([I.default], () => I.default.getCurrentUser()), f = (0, a.useStateFromStores)([i.default], () => i.default.getProduct(null == r ? void 0 : r.skuId)), m = (0, a.useStateFromStores)([E.default], () => E.default.locale), h = P.default.canUseCollectibles(d), p = (0, u.isPremiumCollectiblesPurchase)(c), g = (0, u.isPremiumCollectiblesProduct)(o), C = x(!h && p, g, h);
     return null != r ? (0, s.jsx)("div", {
       className: l ? S.effectDescriptionNoGradient : S.effectDescriptionBorderWithGradient,
       children: (0, s.jsxs)("div", {
@@ -48,19 +48,19 @@ let _ = e => {
           variant: "text-xxs/normal",
           color: "text-muted",
           className: S.effectPurchasedAt,
-          children: [P.default.Messages.COLLECTIBLES_ACQUIRED_DATE.format({
+          children: [v.default.Messages.COLLECTIBLES_ACQUIRED_DATE.format({
             date: c.purchasedAt.toLocaleDateString(m, {
               month: "long",
               year: "numeric"
             })
           }), p && (0, s.jsxs)(s.Fragment, {
-            children: [(0, s.jsx)("br", {}), P.default.Messages.CHANGE_DECORATION_MODAL_STARTER_DESC]
+            children: [(0, s.jsx)("br", {}), v.default.Messages.CHANGE_DECORATION_MODAL_STARTER_DESC]
           })]
         })]
       })
     }) : null
   },
-  x = (e, t, l) => e ? P.default.Messages.CHANGE_PFX_MODAL_PREVIEW_STARTER_CHURNED : t && l ? P.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM : t && !l ? P.default.Messages.CHANGE_PFX_MODAL_PREVIEW_STARTER : P.default.Messages.CHANGE_PROFILE_EFFECT_MODAL_PREVIEW_PURCHASE_PREMIUM;
+  x = (e, t, l) => e ? v.default.Messages.CHANGE_PFX_MODAL_PREVIEW_STARTER_CHURNED : t && l ? v.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM : t && !l ? v.default.Messages.CHANGE_PFX_MODAL_PREVIEW_STARTER : v.default.Messages.CHANGE_PROFILE_EFFECT_MODAL_PREVIEW_PURCHASE_PREMIUM;
 t.default = e => {
   var t;
   let {
@@ -71,7 +71,7 @@ t.default = e => {
     purchase: E,
     guild: I
   } = e, {
-    pendingGlobalName: P,
+    pendingGlobalName: v,
     pendingNickname: x,
     pendingPronouns: A,
     pendingBio: N,
@@ -85,10 +85,10 @@ t.default = e => {
     pendingGlobalName: void 0,
     pendingAccentColor: void 0,
     ...null != I ? c.default.getAllPending() : C.default.getAllPending()
-  })), U = v.default.isPremium(l), L = (0, h.default)(l.id), F = !!(null == L ? void 0 : L.getPreviewBio(N).value), b = p.UseLegacyChatInput.useSetting() && null != N ? d.default.parse(void 0, N).content : N, y = v.default.canUsePremiumProfileCustomization(l), D = (null == L ? void 0 : L.canUsePremiumProfileCustomization) || y, w = {
+  })), U = P.default.isPremium(l), L = (0, h.default)(l.id), F = !!(null == L ? void 0 : L.getPreviewBio(N).value), b = p.UseLegacyChatInput.useSetting() && null != N ? d.default.parse(void 0, N).content : N, y = P.default.canUsePremiumProfileCustomization(l), w = (null == L ? void 0 : L.canUsePremiumProfileCustomization) || y, D = {
     user: l,
     guild: I,
-    pendingGlobalName: P,
+    pendingGlobalName: v,
     pendingNickname: x,
     pendingPronouns: A,
     pendingBio: b,
@@ -106,9 +106,9 @@ t.default = e => {
     onBannerChange: m.setPendingBanner
   };
   return (0, s.jsxs)("div", {
-    className: D ? S.previewContainerWithTheme : S.previewContainerWithoutTheme,
+    className: w ? S.previewContainerWithTheme : S.previewContainerWithoutTheme,
     children: [(0, s.jsx)(f.default, {
-      ...w,
+      ...D,
       disabledInputs: !0,
       forProfileEffectModal: !0,
       hideRecentGames: !0

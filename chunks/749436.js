@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return P
+    return M
   }
 }), a("47120");
 var n, s = a("735250"),
@@ -19,12 +19,12 @@ var n, s = a("735250"),
   C = a("585483"),
   m = a("900849"),
   S = a("878727"),
-  I = a("117496"),
-  p = a("150192"),
+  p = a("117496"),
+  I = a("150192"),
   T = a("731455"),
   g = a("981631"),
   A = a("689938"),
-  N = a("80420");
+  N = a("925642");
 
 function v(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
@@ -107,7 +107,7 @@ class O extends(n = l.PureComponent) {
       isHandlingTagSearch: !1
     })), !t.isSearching && r && m.trackSearchStarted(a, E, c), e.mostRecentQuery !== i && this.setState({
       query: i,
-      searchId: (0, I.makeAnalyticsID)(),
+      searchId: (0, p.makeAnalyticsID)(),
       isHandlingTagSearch: !0
     })
   }
@@ -150,7 +150,7 @@ class O extends(n = l.PureComponent) {
         let [a, n] = t;
         return (0, s.jsx)(L, {
           categoryId: a,
-          name: a === T.DISCOVERY_ALL_CATEGORIES_ID ? A.default.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : p.default.getCategoryName(a),
+          name: a === T.DISCOVERY_ALL_CATEGORIES_ID ? A.default.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : I.default.getCategoryName(a),
           onCategoryChange: this.handleCategoryChange,
           isSelected: e === a,
           count: n
@@ -207,7 +207,7 @@ class O extends(n = l.PureComponent) {
         approximate_member_count: m.MINIMUM_MEMBER_COUNT
       };
       n && f.getSearchResultsCount(r, u), this.setState({
-        searchId: (0, I.makeAnalyticsID)(),
+        searchId: (0, p.makeAnalyticsID)(),
         queryHasChanged: !1,
         isSearching: !0
       }), f.doAlgoliaSearch(r, {
@@ -272,7 +272,7 @@ class O extends(n = l.PureComponent) {
       var e;
       null === (e = this._searchRef.current) || void 0 === e || e.focus()
     }), this.state = {
-      searchId: (0, I.makeAnalyticsID)(),
+      searchId: (0, p.makeAnalyticsID)(),
       query: e.isSearchPage ? e.mostRecentQuery : "",
       queryHasChanged: !1,
       isSearching: !1,
@@ -283,8 +283,8 @@ class O extends(n = l.PureComponent) {
   }
 }
 
-function P(e) {
-  let t = (0, d.useStateFromStores)([p.default], () => p.default.getDiscoveryCategories(), [], p.areDiscoveryCategoriesEqual),
+function M(e) {
+  let t = (0, d.useStateFromStores)([I.default], () => I.default.getDiscoveryCategories(), [], I.areDiscoveryCategoriesEqual),
     a = (0, d.useStateFromStores)([E.default], () => E.default.getTopCategoryCounts(e.mostRecentQuery));
   return (0, s.jsx)(O, {
     ...e,

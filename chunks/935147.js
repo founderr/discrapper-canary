@@ -16,8 +16,8 @@ var a = s("735250"),
   S = s("175756"),
   E = s("104494"),
   T = s("639119"),
-  m = s("165583"),
-  f = s("197115"),
+  f = s("165583"),
+  m = s("197115"),
   _ = s("350327"),
   g = s("318661"),
   h = s("996073"),
@@ -37,7 +37,7 @@ var a = s("735250"),
   j = s("474936"),
   b = s("526761"),
   U = s("689938"),
-  y = s("56845");
+  y = s("142051");
 
 function B(e) {
   var t, B, F;
@@ -49,8 +49,8 @@ function B(e) {
     pendingAvatar: H,
     pendingBanner: V,
     pendingThemeColors: Y,
-    pendingPronouns: K,
-    pendingBio: W,
+    pendingPronouns: W,
+    pendingBio: K,
     tryItOutThemeColors: z,
     tryItOutAvatar: Q,
     tryItOutBanner: q,
@@ -68,7 +68,7 @@ function B(e) {
   }), J = (0, c.default)(Z), $ = (0, S.default)(X), ee = n.useRef(null);
   (0, h.default)(ee, b.ProfileCustomizationScrollPositions.TRY_IT_OUT);
   let et = (0, g.default)(G.id),
-    es = null == et ? void 0 : et.getPreviewBio(W),
+    es = null == et ? void 0 : et.getPreviewBio(K),
     {
       analyticsLocations: ea,
       sourceAnalyticsLocations: en
@@ -111,8 +111,8 @@ function B(e) {
           user: G,
           onAvatarChange: _.setTryItOutAvatar,
           onBannerChange: _.setTryItOutBanner,
-          pendingPronouns: K,
-          pendingBio: W,
+          pendingPronouns: W,
+          pendingBio: K,
           pendingBanner: null !== (F = null != q ? q : V) && void 0 !== F ? F : s("466045"),
           pendingAvatar: null != Q ? Q : H,
           pendingThemeColors: null != z ? z : Y,
@@ -172,7 +172,7 @@ function B(e) {
               variant: "text-sm/normal",
               className: y.premiumPerksListTitle,
               children: U.default.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_ALSO_INCLUDES
-            }), (0, a.jsx)(f.default, {
+            }), (0, a.jsx)(m.default, {
               onSubscribeModalClose: e => {
                 e && ((0, r.setPendingAvatar)(Q), (0, _.setPendingBanner)(q), (0, _.setPendingThemeColors)(z))
               },
@@ -188,7 +188,7 @@ function B(e) {
       }), el && (0, a.jsxs)("div", {
         children: [(0, a.jsx)("div", {
           className: y.premiumTier2Divider
-        }), (0, a.jsx)(m.default, {
+        }), (0, a.jsx)(f.default, {
           type: j.PremiumUpsellTypes.CUSTOM_PROFILE_TRY_OUT_UPSELL,
           subscriptionTier: j.PremiumSubscriptionSKUs.TIER_2
         })]

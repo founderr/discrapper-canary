@@ -4,14 +4,14 @@ s.r(t), s.d(t, {
     return x
   }
 });
-var a = s("735250");
+var i = s("735250");
 s("470079");
-var i = s("392711"),
-  n = s.n(i),
+var a = s("392711"),
+  n = s.n(a),
   l = s("442837"),
   r = s("481060"),
-  d = s("740504"),
-  o = s("933557"),
+  o = s("740504"),
+  d = s("933557"),
   u = s("471445"),
   c = s("131704"),
   h = s("592125"),
@@ -21,7 +21,7 @@ var i = s("392711"),
   f = s("353872"),
   m = s("981631"),
   E = s("689938"),
-  T = s("19560");
+  T = s("636907");
 let _ = e => {
   let {
     channel: {
@@ -35,7 +35,7 @@ function x(e) {
   var t;
   let {
     guildId: s,
-    onSelected: i
+    onSelected: a
   } = e;
   let {
     channels: c,
@@ -43,7 +43,7 @@ function x(e) {
   } = (t = s, (0, l.useStateFromStoresObject)([S.default], () => {
     let e = S.default.getCategories(t);
     return {
-      channels: (0, d.default)(e._categories, e, _),
+      channels: (0, o.default)(e._categories, e, _),
       categories: e
     }
   })), I = n()(c).filter(e => {
@@ -57,28 +57,28 @@ function x(e) {
     } = e;
     return {
       value: t.id,
-      label: (0, o.computeChannelName)(t, g.default, N.default)
+      label: (0, d.computeChannelName)(t, g.default, N.default)
     }
   }).value();
-  return (0, a.jsxs)(r.FormItem, {
-    children: [(0, a.jsx)(r.FormText, {
+  return (0, i.jsxs)(r.FormItem, {
+    children: [(0, i.jsx)(r.FormText, {
       type: r.FormText.Types.DESCRIPTION,
       children: E.default.Messages.ADD_CHANNEL_TO_OVERRIDE
-    }), (0, a.jsx)("div", {
+    }), (0, i.jsx)("div", {
       className: T.input,
-      children: (0, a.jsx)(r.SearchableSelect, {
+      children: (0, i.jsx)(r.SearchableSelect, {
         value: m.EMPTY_STRING_SNOWFLAKE_ID,
-        onChange: i,
+        onChange: a,
         options: I,
         renderOptionLabel: e => {
           let t = h.default.getChannel(e.value);
           if (null == t) return e.label;
           let s = h.default.getChannel(t.parent_id),
-            i = null != s ? s.name : null;
-          return (0, a.jsx)(f.default, {
+            a = null != s ? s.name : null;
+          return (0, i.jsx)(f.default, {
             icon: (0, u.getChannelIconComponent)(t),
             title: e.label,
-            subtitle: i
+            subtitle: a
           })
         },
         placeholder: E.default.Messages.SELECT_CHANNEL_OR_CATEGORY

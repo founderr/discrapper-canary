@@ -16,15 +16,15 @@ var a, n, i = s("735250"),
   c = s("481060"),
   p = s("570140"),
   m = s("355467"),
-  E = s("873115"),
-  f = s("976255"),
-  _ = s("598"),
+  f = s("873115"),
+  E = s("976255"),
+  _ = s("563132"),
   I = s("409813"),
   S = s("3409"),
   N = s("351402"),
-  C = s("975060"),
-  h = s("505649"),
-  P = s("66579"),
+  P = s("975060"),
+  C = s("505649"),
+  h = s("66579"),
   T = s("285952"),
   A = s("358085"),
   R = s("622999"),
@@ -36,8 +36,8 @@ var a, n, i = s("735250"),
   D = s("296214"),
   b = s("981631"),
   U = s("689938"),
-  v = s("255235"),
-  B = s("605094");
+  v = s("248181"),
+  B = s("26673");
 
 function O(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -50,10 +50,10 @@ function O(e, t, s) {
 let j = ["payment_type", "card_info", "billing_address"],
   G = ["payment_type", "sofort_info", "billing_address"],
   k = ["payment_type", "paypal", "billing_address"],
-  F = ["payment_type", "payment_request_info"],
-  w = ["payment_type", "billing_address"],
-  H = ["payment_type", "przelewy24_info", "billing_address"],
-  Y = ["payment_type", "billing_address"];
+  w = ["payment_type", "payment_request_info"],
+  F = ["payment_type", "billing_address"],
+  Y = ["payment_type", "przelewy24_info", "billing_address"],
+  H = ["payment_type", "billing_address"];
 
 function W(e) {
   return e.hasCardError() ? "card_info" : e.hasAddressError() ? "billing_address" : null
@@ -75,14 +75,14 @@ class V extends l.PureComponent {
     } : null
   }
   async componentDidMount() {
-    E.createClient();
+    f.createClient();
     let e = await (0, R.getStripe)();
     this.setState({
       stripe: e
     })
   }
   componentWillUnmount() {
-    p.default.wait(() => E.teardownClients()), (0, f.clearCardInfo)()
+    p.default.wait(() => f.teardownClients()), (0, E.clearCardInfo)()
   }
   get stepData() {
     let {
@@ -94,22 +94,22 @@ class V extends l.PureComponent {
   getSteps(e) {
     switch (null != e ? e : this.state.type) {
       case b.PaymentSourceTypes.PAYMENT_REQUEST:
-        return F;
+        return w;
       case b.PaymentSourceTypes.PAYPAL:
         return k;
       case b.PaymentSourceTypes.SOFORT:
         return G;
       case b.PaymentSourceTypes.GIROPAY:
-        return w;
+        return F;
       case b.PaymentSourceTypes.PRZELEWY24:
-        return H;
+        return Y;
       case b.PaymentSourceTypes.PAYSAFE_CARD:
       case b.PaymentSourceTypes.GCASH:
       case b.PaymentSourceTypes.GRABPAY_MY:
       case b.PaymentSourceTypes.MOMO_WALLET:
       case b.PaymentSourceTypes.KAKAOPAY:
       case b.PaymentSourceTypes.GOPAY_WALLET:
-        return Y;
+        return H;
       default:
         return j
     }
@@ -134,7 +134,7 @@ class V extends l.PureComponent {
     e.preventDefault()
   }
   handleReopenPaypal() {
-    E.reopenPayPalWindow()
+    f.reopenPayPalWindow()
   }
   renderGenericError() {
     let {
@@ -212,7 +212,7 @@ class V extends l.PureComponent {
               }), (0, i.jsx)(c.ModalCloseButton, {
                 onClick: this.handleClose
               })]
-            }), this.renderGenericError(), (0, i.jsx)(P.default, {
+            }), this.renderGenericError(), (0, i.jsx)(h.default, {
               breadcrumbs: a,
               activeId: e
             })]
@@ -419,12 +419,12 @@ class V extends l.PureComponent {
         step: s
       })
     }), O(this, "handleCardInfoChange", (e, t) => {
-      p.default.wait(() => (0, f.updateCardInfo)(e, t))
+      p.default.wait(() => (0, E.updateCardInfo)(e, t))
     }), O(this, "handlePaymentDetailsChange", e => {
       let {
         billingAddressInfo: t
       } = this.props;
-      t.name = e.name, p.default.wait(() => (0, f.updateAddressInfo)({
+      t.name = e.name, p.default.wait(() => (0, E.updateAddressInfo)({
         ...t,
         ...e
       }, !1))
@@ -438,14 +438,14 @@ class V extends l.PureComponent {
       let {
         billingAddressInfo: s
       } = this.props;
-      p.default.wait(() => (0, f.updateAddressInfo)({
+      p.default.wait(() => (0, E.updateAddressInfo)({
         ...s,
         ...e
       }, t))
     }), O(this, "handleBackClick", () => {
       let e = this.getPreviousStep();
       if (null != e) {
-        "payment_type" === e && (0, f.clearError)();
+        "payment_type" === e && (0, E.clearError)();
         this.setState({
           step: e
         })
@@ -456,9 +456,9 @@ class V extends l.PureComponent {
         step: e
       })
     }), O(this, "handleClose", () => {
-      (0, f.clearError)(), this.props.onClose()
+      (0, E.clearError)(), this.props.onClose()
     }), O(this, "handleStripePaymentMethod", e => {
-      if ((0, f.updateStripePaymentRequest)(e), null == e) {
+      if ((0, E.updateStripePaymentRequest)(e), null == e) {
         this.handleBackClick();
         return
       }
@@ -590,18 +590,18 @@ class V extends l.PureComponent {
     })
   }
 }
-let K = d.default.connectStores([C.default, N.default, h.default], () => ({
-  braintreeEmail: C.default.braintreeEmail,
-  braintreeNonce: C.default.braintreeNonce,
-  stripePaymentMethod: C.default.stripePaymentMethod,
-  creditCardInfo: C.default.getCreditCardInfo(),
-  isCreditCardInfoValid: C.default.isCardInfoValid,
-  billingAddressInfo: C.default.getBillingAddressInfo(),
-  isBillingAddressInfoValid: C.default.isBillingAddressInfoValid,
-  error: C.default.error,
-  popupCallbackCalled: C.default.popupCallbackCalled,
+let K = d.default.connectStores([P.default, N.default, C.default], () => ({
+  braintreeEmail: P.default.braintreeEmail,
+  braintreeNonce: P.default.braintreeNonce,
+  stripePaymentMethod: P.default.stripePaymentMethod,
+  creditCardInfo: P.default.getCreditCardInfo(),
+  isCreditCardInfoValid: P.default.isCardInfoValid,
+  billingAddressInfo: P.default.getBillingAddressInfo(),
+  isBillingAddressInfoValid: P.default.isBillingAddressInfoValid,
+  error: P.default.error,
+  popupCallbackCalled: P.default.popupCallbackCalled,
   submitting: N.default.isBusy,
-  isAuthenticating: h.default.isAwaitingAuthentication
+  isAuthenticating: C.default.isAwaitingAuthentication
 }))(V);
 
 function z(e) {

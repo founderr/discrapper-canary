@@ -20,24 +20,24 @@ var n = a("735250"),
   C = a("433355"),
   m = a("465670"),
   S = a("502568"),
-  I = a("933557"),
-  p = a("287746"),
+  p = a("933557"),
+  I = a("287746"),
   T = a("689938"),
-  g = a("571770"),
-  A = a("783913");
+  g = a("63733"),
+  A = a("38156");
 
 function N(e) {
   let {
     channel: t,
     baseChannelId: a
-  } = e, N = (0, I.default)(t), v = (0, c.useListHasSingleMessageRequest)(), R = (0, c.useListHasSingleSpamMessageRequest)(), L = (0, l.useStateFromStores)([u.default], () => u.default.isMessageRequest(t.id)), O = (0, l.useStateFromStores)([d.default], () => d.default.isSpam(t.id)), P = (0, E.useLongestChannelMessageBeforeReply)(t.id, t.getRecipientId()), M = s.useCallback(() => {
+  } = e, N = (0, p.default)(t), v = (0, c.useListHasSingleMessageRequest)(), R = (0, c.useListHasSingleSpamMessageRequest)(), L = (0, l.useStateFromStores)([u.default], () => u.default.isMessageRequest(t.id)), O = (0, l.useStateFromStores)([d.default], () => d.default.isSpam(t.id)), M = (0, E.useLongestChannelMessageBeforeReply)(t.id, t.getRecipientId()), P = s.useCallback(() => {
     _.default.closeChannelSidebar(C.MESSAGE_REQUESTS_BASE_CHANNEL_ID), L && v && (0, h.transitionToChannel)(t.id), O && R && (0, h.transitionToChannel)(t.id)
   }, [t.id, O, R, L, v]), x = s.useCallback(() => {
     (0, i.showToast)((0, i.createToast)(T.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, i.ToastType.FAILURE))
   }, []), {
     markAsNotSpam: y
   } = (0, f.useMessageRequestActions)({
-    onAcceptSuccess: M,
+    onAcceptSuccess: P,
     onError: x
   });
   if (null == t || !t.isDM()) return null;
@@ -64,12 +64,12 @@ function N(e) {
       }), (0, n.jsx)(i.Button, {
         className: A.hamBannerButton,
         size: i.ButtonSizes.SMALL,
-        onClick: () => y(t, P),
+        onClick: () => y(t, M),
         children: T.default.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_BUTTON
       })]
     }), (0, n.jsx)("div", {
       className: g.chat,
-      children: (0, n.jsx)(p.default, {
+      children: (0, n.jsx)(I.default, {
         channel: t,
         guild: null,
         chatInputType: r.ChatInputTypes.SIDEBAR

@@ -48,13 +48,13 @@ var r = n("442837"),
   O = n("571243"),
   j = n("69259"),
   P = n("206295"),
-  b = n("111386"),
-  D = n("43205"),
+  D = n("111386"),
+  b = n("43205"),
   U = n("469153"),
   F = n("206583"),
   w = n("981631"),
   k = n("689938"),
-  H = n("522791");
+  H = n("50928");
 
 function B(e) {
   let {
@@ -114,7 +114,7 @@ function Y(e) {
     requestId: S
   } = e, I = (0, r.useStateFromStores)([L.default], () => L.default.isChannelReplyMode()), A = l.useRef(null), [N, R] = l.useState(null), y = (0, r.useStateFromStores)([T.default], () => T.default.can(w.Permissions.SEND_MESSAGES, t)), P = (0, O.useIsEligibleForMemberlistOneClickReply)({
     location: "PopoutReactor"
-  }), [D, B] = l.useState(!1), [G, V] = l.useState(!1), W = "#".concat(t.name), Y = x.default.getName(t.guild_id, t.id, n), K = I ? k.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : k.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, Z = async e => {
+  }), [b, B] = l.useState(!1), [G, V] = l.useState(!1), W = "#".concat(t.name), Y = x.default.getName(t.guild_id, t.id, n), K = I ? k.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : k.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, Z = async e => {
     if (null != e) {
       if (v.default.track(w.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
           surface_type: F.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
@@ -179,13 +179,13 @@ function Y(e) {
   };
   return (0, a.jsxs)("div", {
     style: {
-      pointerEvents: D ? "none" : "all"
+      pointerEvents: b ? "none" : "all"
     },
     children: [(0, a.jsx)(U.default, {
       sent: G,
-      shown: D,
+      shown: b,
       className: H.toastContainer
-    }), P ? (0, a.jsx)(b.default, {
+    }), P ? (0, a.jsx)(D.default, {
       children: (0, a.jsxs)("div", {
         className: H.emojiHotrailShareToChannel,
         children: [(0, a.jsx)(z, {
@@ -357,7 +357,7 @@ function Z(e) {
         className: H.popoutContentBody,
         children: [(0, a.jsx)("div", {
           className: H.popoutThumbnailContainer,
-          children: (0, a.jsx)(D.ContentImage, {
+          children: (0, a.jsx)(b.ContentImage, {
             size: 72,
             src: t,
             className: H.contentImage

@@ -1,8 +1,5 @@
 "use strict";
 n.r(t), n.d(t, {
-  ClanExperiment: function() {
-    return s
-  },
   useIsInUserClanExperiment: function() {
     return a
   }

@@ -27,7 +27,7 @@ var a = n("735250"),
   A = n("981631"),
   v = n("231338"),
   N = n("689938"),
-  x = n("690959");
+  x = n("40487");
 let M = e => {
     let {
       style: t,
@@ -52,9 +52,9 @@ let M = e => {
       !r && (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)
     }, P = (e, t) => {
       e.stopPropagation(), (0, S.updateHangStatus)(t, !0), j()
-    }, b = (e, t) => {
+    }, D = (e, t) => {
       e.stopPropagation(), (0, S.updateCustomHangStatus)(t.status, t.emoji, !0), j()
-    }, D = l.useCallback(e => {
+    }, b = l.useCallback(e => {
       e.stopPropagation(), (0, S.clearHangStatus)(!0)
     }, []), U = e => {
       e.stopPropagation(), (0, c.openModalLazy)(async () => {
@@ -148,7 +148,7 @@ let M = e => {
             }, n)
           }), (0, a.jsx)(c.Clickable, {
             "aria-label": N.default.Messages.STATUS_POPOUT_CLEAR_STATUS,
-            onClick: D,
+            onClick: b,
             onMouseEnter: () => y(null),
             children: (0, a.jsx)(M, {
               className: x.optionButton,
@@ -168,7 +168,7 @@ let M = e => {
             return (0, a.jsx)(c.Clickable, {
               "aria-label": e.status,
               onMouseEnter: () => w(e),
-              onClick: t => b(t, e),
+              onClick: t => D(t, e),
               children: (0, a.jsx)(M, {
                 className: i()(x.iconWidget, {
                   [x.selectedWidget]: l

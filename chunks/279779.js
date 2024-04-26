@@ -136,7 +136,7 @@ class O extends l.default {
       OVERLAY_INITIALIZE: e => this._handleOverlayInitialize(e),
       CURRENT_USER_UPDATE: e => this._handleCurrentUserUpdate(e),
       GUILD_CREATE: e => this._handleGuildCreate(e),
-      GUILD_MEMBERS_CHUNK: e => this._handleGuildMembersChunk(e),
+      GUILD_MEMBERS_CHUNK_BATCH: e => this._handleGuildMembersChunkBatch(e),
       GUILD_MEMBER_ADD: e => this._handleGuildMemberUpdate(e),
       GUILD_MEMBER_UPDATE: e => this._handleGuildMemberUpdate(e),
       RELATIONSHIP_ADD: e => this._handleRelationshipAdd(e),
@@ -205,12 +205,12 @@ class O extends l.default {
         members: n
       } = t;
       this.updateUsers(N(n, t.id))
-    }), S(this, "_handleGuildMembersChunk", e => {
+    }), S(this, "_handleGuildMembersChunkBatch", e => {
       let {
-        members: t,
-        guildId: n
-      } = e;
-      this.updateUsers(N(t, n))
+        chunks: t
+      } = e, n = [];
+      for (let e of t) n.push(...N(e.members, e.guildId));
+      this.updateUsers(n)
     }), S(this, "_handleGuildMemberUpdate", e => {
       let {
         guildId: t,

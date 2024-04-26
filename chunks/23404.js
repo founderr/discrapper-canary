@@ -16,14 +16,14 @@ var n = a("735250"),
   C = a("569984"),
   m = a("497505"),
   S = a("918701"),
-  I = a("874137"),
-  p = a("611855"),
+  p = a("874137"),
+  I = a("611855"),
   T = a("670638"),
   g = a("667105"),
   A = a("860151"),
   N = a("981631"),
   v = a("689938"),
-  R = a("374145");
+  R = a("96751");
 
 function L(e) {
   var t;
@@ -60,7 +60,7 @@ t.default = function(e) {
   var t, a, l;
   let {
     quest: o
-  } = e, c = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(o.id), [o]), [O, P] = s.useState(!1), M = s.useCallback(() => P(!0), []), x = s.useCallback(() => P(!1), []), y = s.useCallback(e => {
+  } = e, c = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(o.id), [o]), [O, M] = s.useState(!1), P = s.useCallback(() => M(!0), []), x = s.useCallback(() => M(!1), []), y = s.useCallback(e => {
     e.stopPropagation()
   }, []), D = s.useCallback(() => {
     (0, h.enrollInQuest)(o.id, {
@@ -83,7 +83,7 @@ t.default = function(e) {
     quest: o,
     location: m.QuestContent.ACTIVITY_PANEL
   }), G = (0, _.useIsQuestExpired)(o), w = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, k = (null === (a = o.userStatus) || void 0 === a ? void 0 : a.completedAt) != null, F = (null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
-  return (null == o ? void 0 : o.userStatus) == null || (0, S.isDismissed)(o.userStatus, m.QuestContent.ACTIVITY_PANEL) || G || F ? null : (0, n.jsx)(I.QuestContentImpressionTracker, {
+  return (null == o ? void 0 : o.userStatus) == null || (0, S.isDismissed)(o.userStatus, m.QuestContent.ACTIVITY_PANEL) || G || F ? null : (0, n.jsx)(p.QuestContentImpressionTracker, {
     questOrQuests: o,
     questContent: m.QuestContent.ACTIVITY_PANEL,
     children: e => {
@@ -97,15 +97,15 @@ t.default = function(e) {
         }),
         onClick: y,
         onKeyPress: y,
-        onFocus: M,
-        onMouseEnter: M,
+        onFocus: P,
+        onMouseEnter: P,
         onBlur: x,
         onMouseLeave: x,
         children: [(0, n.jsxs)("div", {
           className: R.utils,
           children: [w ? (0, n.jsx)(L, {
             quest: o
-          }) : (0, n.jsx)(p.default, {
+          }) : (0, n.jsx)(I.default, {
             textOpacity: .5
           }), (0, n.jsx)(T.QuestsEntryContextMenuPopout, {
             quest: o,

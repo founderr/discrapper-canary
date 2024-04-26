@@ -17,8 +17,8 @@ var l = a("735250"),
   E = a("197115"),
   g = a("300284"),
   b = a("876917"),
-  S = a("642619"),
-  x = a("594174"),
+  x = a("642619"),
+  S = a("594174"),
   T = a("725808"),
   L = a("794358"),
   v = a("466111"),
@@ -36,7 +36,7 @@ var l = a("735250"),
   D = a("832149"),
   F = a("474936"),
   M = a("689938"),
-  w = a("321664");
+  w = a("61371");
 let H = N.default.getEnableHardwareAcceleration() ? u.AnimatedAvatar : u.Avatar,
   U = u.AvatarSizes.SIZE_120,
   W = (0, C.getDecorationSizeForAvatarSize)(U),
@@ -84,7 +84,7 @@ t.default = function(e) {
     isGiftEasterEggEnabled: N
   } = e, {
     analyticsLocations: z
-  } = (0, m.default)(f.default.COLLECTIBLES_SHOP_CARD), K = s.useRef(null), Y = (0, d.default)(K), [X, Z] = s.useState(!1), Q = Y || X, q = (0, o.useStateFromStores)([x.default], () => x.default.getCurrentUser()), [$] = t.items, {
+  } = (0, m.default)(f.default.COLLECTIBLES_SHOP_CARD), K = s.useRef(null), Y = (0, d.default)(K), [X, Z] = s.useState(!1), Q = Y || X, q = (0, o.useStateFromStores)([S.default], () => S.default.getCurrentUser()), [$] = t.items, {
     avatarDecorationSrc: J,
     eventHandlers: ee,
     avatarPlaceholderSrc: et
@@ -117,7 +117,7 @@ t.default = function(e) {
           analyticsLocations: z
         });
         return
-      }(null == $ ? void 0 : $.type) === n.CollectiblesItemType.PROFILE_EFFECT && (0, S.openProfileEffectModal)({
+      }(null == $ ? void 0 : $.type) === n.CollectiblesItemType.PROFILE_EFFECT && (0, x.openProfileEffectModal)({
         initialSelectedEffectId: $.id,
         analyticsLocations: z
       })
@@ -216,7 +216,7 @@ t.default = function(e) {
         }), eg()]
       })
     },
-    eS = null != el ? {
+    ex = null != el ? {
       background: "".concat((0, B.getBackgroundGradient)(el), " border-box border-box"),
       borderColor: el.border.toHslString(),
       boxShadow: Q ? "0 0 25px 1px ".concat(el.primary.toHslString()) : "none"
@@ -227,7 +227,7 @@ t.default = function(e) {
       className: w.shopCard,
       onBlur: () => Z(!1),
       onClick: eC,
-      style: eS,
+      style: ex,
       id: "shop-item-".concat(t.skuId),
       children: [er && (0, l.jsx)(u.Tooltip, {
         tooltipContentClassName: w.premiumWheelTooltipContent,

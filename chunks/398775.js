@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s.d(t, {
   PremiumSubscriptionPauseModalConfirm: function() {
-    return h
+    return C
   },
   PremiumSubscriptionPauseModalSelect: function() {
-    return C
+    return P
   }
 }), s("653041"), s("47120");
 var a = s("735250"),
@@ -18,11 +18,11 @@ var a = s("735250"),
   c = s("410030"),
   p = s("906732"),
   m = s("285952"),
-  E = s("296848"),
-  f = s("798769"),
+  f = s("296848"),
+  E = s("798769"),
   _ = s("981631"),
   I = s("689938"),
-  S = s("470510");
+  S = s("34181");
 async function N(e) {
   let {
     premiumSubscription: t,
@@ -42,7 +42,7 @@ async function N(e) {
   }
 }
 
-function C(e) {
+function P(e) {
   let {
     premiumType: t,
     onClose: s,
@@ -60,7 +60,7 @@ function C(e) {
       {
         durations: s,
         currentDaysPaused: a
-      } = (0, E.getSubscriptionPauseDurations)(e),
+      } = (0, f.getSubscriptionPauseDurations)(e),
       n = [];
     for (let e of s) {
       let s = r.PauseDuration[e];
@@ -82,7 +82,7 @@ function C(e) {
   return n.useEffect(() => {
     !(N.length < 1) && l(N[0].value)
   }, []), (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(f.default, {
+    children: [(0, a.jsx)(E.default, {
       premiumType: t,
       onClose: s
     }), (0, a.jsx)(o.ModalHeader, {
@@ -113,16 +113,16 @@ function C(e) {
   })
 }
 
-function h(e) {
+function C(e) {
   let {
     premiumSubscription: t,
     premiumType: s,
     onClose: i,
     pauseDuration: r,
     analyticsLocation: d
-  } = e, [E, C] = n.useState(!1), {
-    analyticsLocations: h
-  } = (0, p.default)(), [P, T] = n.useState(!1), A = (0, c.default)(), R = null, y = null, M = [_.SubscriptionStatusTypes.PAST_DUE, _.SubscriptionStatusTypes.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd, L = l()(M).add(r, "days").toDate();
+  } = e, [f, P] = n.useState(!1), {
+    analyticsLocations: C
+  } = (0, p.default)(), [h, T] = n.useState(!1), A = (0, c.default)(), R = null, y = null, M = [_.SubscriptionStatusTypes.PAST_DUE, _.SubscriptionStatusTypes.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd, L = l()(M).add(r, "days").toDate();
   switch (t.status) {
     case _.SubscriptionStatusTypes.PAST_DUE:
       y = I.default.Messages.PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY.format({
@@ -146,7 +146,7 @@ function h(e) {
     className: S.body,
     children: y
   }), (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(f.default, {
+    children: [(0, a.jsx)(E.default, {
       premiumType: s,
       onClose: i
     }), (0, a.jsx)(o.ModalHeader, {
@@ -161,7 +161,7 @@ function h(e) {
       })
     }), (0, a.jsxs)(o.ModalContent, {
       className: S.body,
-      children: [E ? (0, a.jsx)(o.FormErrorBlock, {
+      children: [f ? (0, a.jsx)(o.FormErrorBlock, {
         className: S.errorBlock,
         children: I.default.Messages.BILLING_ERROR_GENERIC
       }) : null, R]
@@ -171,15 +171,15 @@ function h(e) {
         className: S.whatYouLoseButtonContainer,
         children: [(0, a.jsx)(o.Button, {
           color: o.Button.Colors.RED,
-          disabled: P || null == r,
+          disabled: h || null == r,
           onClick: async () => {
             await N({
               premiumSubscription: t,
               pauseDuration: r,
               setIsCancelling: T,
-              setHasError: C,
+              setHasError: P,
               onClose: i,
-              analyticsLocations: h,
+              analyticsLocations: C,
               analyticsLocation: d
             })
           },

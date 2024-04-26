@@ -25,7 +25,6 @@ let u = (0, s.createExperiment)({
   label: "Activities in Text User",
   defaultConfig: {
     entryPointEnabled: !1,
-    desktopThrobberEnabled: !1,
     activitiesInTextEnabled: !1,
     showInOmniButtonMenu: !1,
     showNewMobileLeaveUI: !1
@@ -36,7 +35,6 @@ let u = (0, s.createExperiment)({
     config: {
       entryPointEnabled: !0,
       activitiesInTextEnabled: !0,
-      desktopThrobberEnabled: !1,
       showInOmniButtonMenu: !0,
       showNewMobileLeaveUI: !1
     }
@@ -46,7 +44,6 @@ let u = (0, s.createExperiment)({
     config: {
       entryPointEnabled: !0,
       activitiesInTextEnabled: !0,
-      desktopThrobberEnabled: !1,
       showInOmniButtonMenu: !0,
       showNewMobileLeaveUI: !0
     }

@@ -34,10 +34,10 @@ var a, l = n("735250"),
   O = n("630388"),
   j = n("51144"),
   P = n("981631"),
-  b = n("354459"),
-  D = n("927923"),
+  D = n("354459"),
+  b = n("927923"),
   U = n("689938"),
-  F = n("474229");
+  F = n("35571");
 
 function w(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -205,12 +205,12 @@ class B extends(a = s.Component) {
       children: (0, l.jsx)(L.default, {
         className: r()(F.icon, m)
       })
-    }, "activity")), S === D.GameConsoleTypes.XBOX || _ === b.VoicePlatforms.XBOX ? z.push((0, l.jsx)("div", {
+    }, "activity")), S === b.GameConsoleTypes.XBOX || _ === D.VoicePlatforms.XBOX ? z.push((0, l.jsx)("div", {
       className: r()(F.iconSpacing),
       children: (0, l.jsx)(R.default, {
         className: r()(F.icon, m)
       })
-    }, "xbox")) : (S === D.GameConsoleTypes.PLAYSTATION || _ === b.VoicePlatforms.PLAYSTATION) && z.push((0, l.jsx)("div", {
+    }, "xbox")) : (S === b.GameConsoleTypes.PLAYSTATION || _ === D.VoicePlatforms.PLAYSTATION) && z.push((0, l.jsx)("div", {
       className: r()(F.iconSpacing),
       children: (0, l.jsx)(M.default, {
         className: r()(F.icon, m)

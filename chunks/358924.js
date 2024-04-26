@@ -14,8 +14,8 @@ var n, s, l = a("735250"),
   C = a("655922"),
   m = a("122810"),
   S = a("833664"),
-  I = a("503438"),
-  p = a("420660"),
+  p = a("503438"),
+  I = a("420660"),
   T = a("74433"),
   g = a("952561"),
   A = a("513202"),
@@ -24,8 +24,8 @@ var n, s, l = a("735250"),
   R = a("933557"),
   L = a("102172"),
   O = a("871118"),
-  P = a("849171"),
-  M = a("314897"),
+  M = a("849171"),
+  P = a("314897"),
   x = a("592125"),
   y = a("594174"),
   D = a("368874"),
@@ -43,7 +43,7 @@ var n, s, l = a("735250"),
   W = a("599706"),
   K = a("981631"),
   z = a("689938"),
-  q = a("83701");
+  q = a("834854");
 let Q = {
     SMALL: 64,
     LARGE: 160
@@ -91,7 +91,7 @@ class et extends i.Component {
     } = this.props, {
       timestamps: a
     } = t;
-    return null == a || !(0, S.default)(t) || (0, I.default)(t) ? null : J(e = (0, m.default)(t) ? (0, l.jsx)($, {
+    return null == a || !(0, S.default)(t) || (0, p.default)(t) ? null : J(e = (0, m.default)(t) ? (0, l.jsx)($, {
       timestamps: a
     }) : (0, l.jsx)(U.default, {
       start: a.start,
@@ -400,7 +400,7 @@ es.Header = en, es.Body = e => {
       assets: f,
       application_id: E
     } = n;
-  if (null != f && (0, p.default)(n)) {
+  if (null != f && (0, I.default)(n)) {
     var _;
     t = (0, l.jsx)(D.default, {
       className: q.twitchSectionPreviewWrapper,
@@ -491,7 +491,7 @@ es.Header = en, es.Body = e => {
       return d(t)
     })
   }, [f]);
-  let h = (0, u.useStateFromStoresArray)([y.default, M.default], () => Array.from(s).map(e => M.default.getId() === e ? null : y.default.getUser(e)).filter(V.isNotNullish)),
+  let h = (0, u.useStateFromStoresArray)([y.default, P.default], () => Array.from(s).map(e => P.default.getId() === e ? null : y.default.getUser(e)).filter(V.isNotNullish)),
     C = (0, E.useAnalyticsContext)(),
     {
       analyticsLocations: m
@@ -499,10 +499,10 @@ es.Header = en, es.Body = e => {
   if (null == f) return null;
   let S = v.default.getApplication(f);
   if (null == S) return null;
-  let I = null != t.created_at && t.created_at > 0 ? {
+  let p = null != t.created_at && t.created_at > 0 ? {
       start: t.created_at
     } : void 0,
-    p = (0, H.getAssetImage)(S.id, o, 300);
+    I = (0, H.getAssetImage)(S.id, o, 300);
   return (0, l.jsxs)(ee, {
     children: [(0, l.jsxs)("div", {
       className: q.embeddedActivityTopRow,
@@ -516,25 +516,25 @@ es.Header = en, es.Body = e => {
           variant: "text-sm/semibold",
           children: S.name
         })
-      }), null != I ? (0, l.jsx)("div", {
+      }), null != p ? (0, l.jsx)("div", {
         className: q.embeddedActivityTimeElapsed,
         children: (0, l.jsx)(c.Text, {
           color: "text-muted",
           variant: "text-sm/normal",
           children: (0, l.jsx)($, {
-            timestamps: I
+            timestamps: p
           })
         })
       }) : null]
     }), (0, l.jsxs)("div", {
       className: q.embeddedActivityPlayerContainer,
-      children: [null != p ? (0, l.jsx)("img", {
-        src: p,
+      children: [null != I ? (0, l.jsx)("img", {
+        src: I,
         alt: S.name,
         className: q.embeddedActivityImage
       }) : null, (0, l.jsxs)("div", {
         className: q.embeddedActivityImageOverlay,
-        children: [(0, l.jsx)(P.Avatars, {
+        children: [(0, l.jsx)(M.Avatars, {
           users: h,
           guildId: n,
           channelId: a.id

@@ -12,16 +12,16 @@ var i, a, l, s, o = n("735250"),
   f = n.n(c),
   h = n("481060"),
   p = n("981631"),
-  g = n("298119"),
-  m = n("605094");
+  g = n("816560"),
+  m = n("26673");
 let E = p.OverlayWidgetTypes.DEFAULT,
   S = 1,
   v = r.createContext({
     type: E,
     opacity: S
   }),
-  T = r.createContext(void 0),
-  y = e => {
+  y = r.createContext(void 0),
+  O = e => {
     let {
       children: t,
       className: n,
@@ -32,7 +32,7 @@ let E = p.OverlayWidgetTypes.DEFAULT,
         let {
           type: a
         } = e;
-        return (0, o.jsx)(T.Consumer, {
+        return (0, o.jsx)(y.Consumer, {
           children: e => (0, o.jsx)("div", {
             className: u()(n, g.bar, g[f()(a)]),
             style: e,
@@ -43,14 +43,14 @@ let E = p.OverlayWidgetTypes.DEFAULT,
       }
     })
   };
-class I extends(i = r.PureComponent) {
+class T extends(i = r.PureComponent) {
   render() {
     let {
       disableScroll: e,
       children: t,
       className: n
     } = this.props;
-    return (0, o.jsx)(T.Consumer, {
+    return (0, o.jsx)(y.Consumer, {
       children: i => (0, o.jsx)(v.Consumer, {
         children: a => {
           let l = u()(g.body, g[f()(a.type)], n);
@@ -70,13 +70,13 @@ class I extends(i = r.PureComponent) {
 }
 s = {
   disableScroll: !1
-}, (l = "defaultProps") in(a = I) ? Object.defineProperty(a, l, {
+}, (l = "defaultProps") in(a = T) ? Object.defineProperty(a, l, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : a[l] = s;
-let N = e => {
+let C = e => {
     let {
       type: t = E,
       width: n,
@@ -102,13 +102,13 @@ let N = e => {
       })
     })
   },
-  O = e => {
+  N = e => {
     let {
       children: t,
       className: n,
       dynamicSize: i = !1
     } = e;
-    return (0, o.jsx)(T.Consumer, {
+    return (0, o.jsx)(y.Consumer, {
       children: e => (0, o.jsx)("div", {
         className: u()(g.content, n, {
           [g.staticSize]: !i
@@ -118,13 +118,13 @@ let N = e => {
       })
     })
   };
-N.Background = e => {
+C.Background = e => {
   let {
     children: t,
     opacityOverride: n
   } = e;
   if (null == t) return null;
-  let i = [y, I, O];
+  let i = [O, T, N];
   return (0, o.jsx)(v.Consumer, {
     children: e => {
       let {
@@ -136,7 +136,7 @@ N.Background = e => {
         style: l
       });
       {
-        if (i.includes(t.type)) return (0, o.jsx)(T.Provider, {
+        if (i.includes(t.type)) return (0, o.jsx)(y.Provider, {
           value: l,
           children: t
         });
@@ -145,7 +145,7 @@ N.Background = e => {
       }
     }
   })
-}, N.Body = I, N.Content = O, N.Icon = e => {
+}, C.Body = T, C.Content = N, C.Icon = e => {
   let {
     icon: t,
     label: n,
@@ -188,4 +188,4 @@ N.Background = e => {
       })
     }
   })
-}, N.Bar = y, t.default = N
+}, C.Bar = O, t.default = C

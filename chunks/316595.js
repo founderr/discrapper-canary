@@ -20,12 +20,12 @@ function f(e) {
     isOmniMenuOpen: n,
     openOmniMenu: f,
     children: h
-  } = e, m = (0, s.useStateFromStores)([d.default], () => d.default.hasCurrentUserSentMessageSinceAppStart()), p = (0, c.useActivitiesInTextOnboardingVisibility)(t, "ChannelOmniButtonNux"), E = (0, o.useCanPostPollsInChannel)(t), C = (0, o.useCanShowPollsChatInputCoachmarkInGuild)(null == t ? void 0 : t.guild_id), g = (null == t ? void 0 : t.isPrivate()) || C, S = l.useMemo(() => {
+  } = e, m = (0, s.useStateFromStores)([d.default], () => d.default.hasCurrentUserSentMessageSinceAppStart()), p = (0, o.useCanPostPollsInChannel)(t), E = (0, o.useCanShowPollsChatInputCoachmarkInGuild)(null == t ? void 0 : t.guild_id), C = (null == t ? void 0 : t.isPrivate()) || E, g = l.useMemo(() => {
     let e = [];
-    return m && (null == p ? void 0 : p.desktopThrobberEnabled) && e.push(i.DismissibleContent.ACTIVITIES_CHAT_BUTTON_NUX_V2), E && g && e.push(i.DismissibleContent.POLLS_CHAT_INPUT_COACHMARK), e
-  }, [m, null == p ? void 0 : p.desktopThrobberEnabled, E, g]);
+    return m && e.push(i.DismissibleContent.ACTIVITIES_CHAT_BUTTON_NUX_V2), p && C && e.push(i.DismissibleContent.POLLS_CHAT_INPUT_COACHMARK), e
+  }, [m, p, C]);
   return (0, a.jsx)(r.default, {
-    contentTypes: S,
+    contentTypes: g,
     children: e => {
       let {
         visibleContent: t,
