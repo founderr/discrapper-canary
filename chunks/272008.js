@@ -77,6 +77,9 @@ async function _(e) {
   try {
     let e = await i.HTTP.post({
       url: u.Endpoints.QUESTS_HEARTBEAT(t),
+      headers: {
+        "X-Discord-Resource-Optimization-Level": "1"
+      },
       body: {
         stream_key: n,
         terminal: a
