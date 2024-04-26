@@ -11,6 +11,7 @@ e.exports = {
   activityCardImageOneAvatar: "activityCardImageOneAvatar_c5282e",
   channelIcon: "channelIcon__3faf0",
   container: "container_a88e31",
+  eventImage: "eventImage_f9c259",
   header: "header__3a32b",
   location: "location__73d84",
   mask: "mask_beff87",
