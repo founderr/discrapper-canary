@@ -39,7 +39,8 @@ function L(e) {
     onConfirm: o,
     onDismiss: m
   } = e, [p, E] = l.useState(!1), g = l.useRef(null), [_, I] = l.useState(0), N = (0, S.useIsInUserClanExperiment)(), x = l.useCallback(e => {
-    let t = e.target.getBoundingClientRect();
+    if (null == e) return;
+    let t = e.getBoundingClientRect();
     I(window.innerWidth - t.right)
   }, []), L = (0, f.useResizeObserver)(x), y = (0, c.useStateFromStores)([h.default], () => h.default.useReducedMotion);
   l.useLayoutEffect(() => {

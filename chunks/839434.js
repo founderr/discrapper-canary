@@ -116,7 +116,6 @@ function ed(e) {
       }),
       user: i,
       nick: s,
-      forceFullsizeClanTag: !0,
       speaking: !1,
       flipped: t,
       isStreaming: _,
