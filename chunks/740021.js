@@ -33,9 +33,9 @@ function N(e) {
     customStatusActivity: d,
     guildId: N,
     channelId: U,
-    onClose: h
+    onClose: p
   } = e, {
-    theme: p
+    theme: h
   } = (0, E.useUserProfileThemeContext)(), j = (0, c.default)(t.id, N), {
     avatarSrc: g,
     eventHandlers: R,
@@ -64,7 +64,7 @@ function N(e) {
           size: x.AvatarSizes.SIZE_120,
           className: T.avatar,
           status: C,
-          statusBackdropColor: (0, r.getStatusBackdropColor)(p),
+          statusBackdropColor: (0, r.getStatusBackdropColor)(h),
           "aria-label": t.username,
           isMobile: M,
           statusTooltip: !0
@@ -72,7 +72,7 @@ function N(e) {
           className: T.buttons,
           children: j && (0, l.jsx)(I.default, {
             user: t,
-            onClose: h
+            onClose: p
           })
         }), null != d && (0, l.jsx)(m.UserProfileCustomStatusBubble, {
           statusActivity: d,

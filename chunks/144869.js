@@ -36,13 +36,13 @@ function T(e) {
     let a = (null === (s = e.tags) || void 0 === s ? void 0 : s.guild_connections) !== null,
       i = (null === (l = t.tags) || void 0 === l ? void 0 : l.guild_connections) !== null;
     return a && !i ? 1 : !a && i ? -1 : 0
-  }), [T, c]), U = a.useMemo(() => "roles-".concat((0, i.v4)()), []), h = (0, r.default)({
+  }), [T, c]), U = a.useMemo(() => "roles-".concat((0, i.v4)()), []), p = (0, r.default)({
     id: U,
     isEnabled: !0,
     scrollToStart: v.NOOP_PROMISE,
     scrollToEnd: v.NOOP_PROMISE,
     wrap: !0
-  }), p = N.map(e => {
+  }), h = N.map(e => {
     var a;
     return (0, l.jsx)(d.MemberRole, {
       className: _.role,
@@ -54,7 +54,7 @@ function T(e) {
     }, e.id)
   });
   return (0, l.jsx)(r.ListNavigatorProvider, {
-    navigator: h,
+    navigator: p,
     children: (0, l.jsx)(r.ListNavigatorContainer, {
       children: e => {
         let {
@@ -68,7 +68,7 @@ function T(e) {
           }),
           ref: s,
           ...a,
-          children: [p, f && (0, l.jsx)(o.Tooltip, {
+          children: [h, f && (0, l.jsx)(o.Tooltip, {
             text: x.default.Messages.USER_PROFILE_ADD_ROLE,
             children: e => (0, l.jsx)("div", {
               ...e,

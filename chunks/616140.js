@@ -51,26 +51,26 @@ function A(e) {
     autoFocusNote: N,
     onClose: U
   } = e, {
-    trackUserProfileAction: h
-  } = (0, c.useUserProfileAnalyticsContext)(), p = (0, r.useStateFromStores)([d.default], () => d.default.getCurrentUser()), j = (0, r.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), g = T(f), [R, P] = a.useState(N), [C, M] = a.useState(null !== (s = null === (t = g.find(e => {
+    trackUserProfileAction: p
+  } = (0, c.useUserProfileAnalyticsContext)(), h = (0, r.useStateFromStores)([d.default], () => d.default.getCurrentUser()), j = (0, r.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), g = T(f), [R, P] = a.useState(N), [C, M] = a.useState(null !== (s = null === (t = g.find(e => {
     let {
       section: t
     } = e;
     return t === A
   })) || void 0 === t ? void 0 : t.section) && void 0 !== s ? s : v.UserProfileSections.USER_INFO), y = a.useCallback(e => {
-    h({
+    p({
       action: "PRESS_SECTION",
       section: e
     }), M(e), P(!1)
-  }, [h, M]);
-  return null == p ? null : j ? (0, l.jsx)("div", {
+  }, [p, M]);
+  return null == h ? null : j ? (0, l.jsx)("div", {
     className: _.container,
     children: (0, l.jsx)(E.default, {})
-  }) : f.id === p.id ? (0, l.jsx)("div", {
+  }) : f.id === h.id ? (0, l.jsx)("div", {
     className: _.container,
     children: (0, l.jsx)(I.default, {
       user: f,
-      currentUser: p,
+      currentUser: h,
       displayProfile: x,
       autoFocusNote: R
     })
@@ -105,7 +105,7 @@ function A(e) {
     })).otherwise(() => (0, l.jsx)(I.default, {
       className: _.infoTab,
       user: f,
-      currentUser: p,
+      currentUser: h,
       displayProfile: x,
       autoFocusNote: R
     }))]

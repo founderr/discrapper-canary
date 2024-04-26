@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return L
+    return F
   }
 });
 var l = s("735250"),
@@ -25,8 +25,8 @@ var l = s("735250"),
   A = s("621853"),
   N = s("204197"),
   U = s("735336"),
-  h = s("520978"),
-  p = s("184325"),
+  p = s("520978"),
+  h = s("184325"),
   j = s("652853"),
   g = s("496206"),
   R = s("228168"),
@@ -35,13 +35,13 @@ var l = s("735250"),
   M = s("689938"),
   y = s("950114");
 let O = n.AvatarSizes.SIZE_120,
-  F = _.default.getEnableHardwareAcceleration() ? n.AnimatedAvatar : n.Avatar;
+  L = _.default.getEnableHardwareAcceleration() ? n.AnimatedAvatar : n.Avatar;
 
-function L(e) {
+function F(e) {
   let {
     displayProfile: t,
     user: _,
-    guildId: L,
+    guildId: F,
     channelId: D,
     friendToken: b,
     className: B,
@@ -96,7 +96,7 @@ function L(e) {
   }
 
   function el() {
-    let e = "@me" === L ? void 0 : L;
+    let e = "@me" === F ? void 0 : F;
     K({
       action: "REPORT"
     }), (0, f.showReportModalForUser)(_, e)
@@ -113,7 +113,7 @@ function L(e) {
       className: y.header,
       children: [(0, l.jsx)("div", {
         ...Q,
-        children: (0, l.jsx)(F, {
+        children: (0, l.jsx)(L, {
           src: J,
           avatarDecoration: q,
           size: O,
@@ -134,16 +134,16 @@ function L(e) {
             className: y.warningCircleIcon,
             color: r.default.unsafe_rawColors.YELLOW_300.css
           })
-        }) : (0, l.jsx)(p.default, {
+        }) : (0, l.jsx)(h.default, {
           user: _,
           className: y.badgeList,
-          guildId: L,
-          size: p.BadgeSizes.SIZE_24,
+          guildId: F,
+          size: h.BadgeSizes.SIZE_24,
           shrinkAtCount: 8,
-          shrinkToSize: p.BadgeSizes.SIZE_18
+          shrinkToSize: h.BadgeSizes.SIZE_18
         }), (0, l.jsxs)("div", {
           className: y.relationshipButtons,
-          children: [(0, l.jsx)(h.default, {
+          children: [(0, l.jsx)(p.default, {
             className: y.applicationInstallButton,
             application: null == z ? void 0 : z.application
           }), (0, l.jsx)(g.default, {

@@ -11,8 +11,8 @@ var a = l("399606"),
   s = l("6048"),
   r = l("337682"),
   d = l("115130"),
-  c = l("689938"),
-  o = l("757879");
+  o = l("689938"),
+  c = l("757879");
 
 function u() {
   let {
@@ -25,19 +25,19 @@ function u() {
     filter: d.default.getFilter()
   }), []);
   return (0, i.jsxs)("div", {
-    className: o.container,
+    className: c.container,
     children: [(0, i.jsx)(n.Checkbox, {
       type: n.Checkbox.Types.INVERTED,
-      className: o.__invalid_checkbox,
+      className: c.__invalid_checkbox,
       value: t,
       onClick: r.toggleUseActivityUrlOverride,
       children: (0, i.jsx)(n.Text, {
         variant: "text-md/semibold",
-        children: c.default.Messages.EMBEDDED_ACTIVITIES_USE_ACTIVITY_URL_OVERRIDE
+        children: o.default.Messages.EMBEDDED_ACTIVITIES_USE_ACTIVITY_URL_OVERRIDE
       })
     }), (0, i.jsx)(n.FormItem, {
-      className: o.__invalid_urlOverride,
-      title: c.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_URL_OVERRIDE,
+      className: c.__invalid_urlOverride,
+      title: o.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_URL_OVERRIDE,
       children: (0, i.jsx)(n.TextInput, {
         disabled: !t,
         value: null != e ? e : void 0,
@@ -46,7 +46,7 @@ function u() {
       })
     }), (0, i.jsx)("div", {
       children: (0, i.jsx)(s.default, {
-        className: o.searchBar,
+        className: c.searchBar,
         query: l,
         onChange: r.updateFilter,
         onClear: function() {

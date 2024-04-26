@@ -72,7 +72,7 @@ let p = Object.freeze({}),
     } = e, f = "".concat("string" == typeof s ? s : "", ":").concat(i);
     return (0, a.jsx)(A.AppReferencePositionLayer, {
       disablePointerEvents: I,
-      reference: t,
+      targetRef: t,
       position: i,
       autoInvert: !0,
       align: n,

@@ -8,8 +8,8 @@ var l = n("735250"),
   s = n("470079"),
   u = n("374470"),
   a = n("442837"),
-  c = n("481060"),
-  r = n("295866"),
+  r = n("481060"),
+  c = n("295866"),
   i = n("398327"),
   o = n("63063"),
   d = n("601993"),
@@ -42,7 +42,7 @@ function p(e) {
         m.current && (h(t), L(l), n())
       })
     }, []),
-    x = s.useCallback(() => {
+    b = s.useCallback(() => {
       if ((0, u.isElement)(n, HTMLInputElement) || (0, u.isElement)(n, HTMLTextAreaElement)) {
         let {
           selectionStart: e,
@@ -60,34 +60,34 @@ function p(e) {
     }, [T]), s.useEffect(() => {
       T()
     }, [t, p, T]), !(0, d.isSupported)()) return [null, null];
-  let b = g.map((e, t) => (0, l.jsx)(c.MenuItem, {
+  let x = g.map((e, t) => (0, l.jsx)(r.MenuItem, {
     id: "correction-".concat(t),
     label: e,
     action: () => {
       (0, d.replaceWithCorrection)(e), n.focus()
     }
   }, "correction-".concat(t)));
-  return [b, (0, l.jsxs)(l.Fragment, {
-    children: [S ? (0, l.jsx)(c.MenuItem, {
+  return [x, (0, l.jsxs)(l.Fragment, {
+    children: [S ? (0, l.jsx)(r.MenuItem, {
       id: "add-to-dictionary",
       label: E.default.Messages.ADD_TO_DICTIONARY,
       action: () => {
-        (0, r.learnWord)(t), x()
+        (0, c.learnWord)(t), b()
       }
-    }) : null, M && (0, l.jsx)(c.MenuItem, {
+    }) : null, M && (0, l.jsx)(r.MenuItem, {
       id: "remove-from-dictionary",
       label: E.default.Messages.REMOVE_FROM_DICTIONARY,
       action: () => {
-        (0, r.unlearnWord)(t), x()
+        (0, c.unlearnWord)(t), b()
       }
-    }), (0, l.jsx)(c.MenuCheckboxItem, {
+    }), (0, l.jsx)(r.MenuCheckboxItem, {
       id: "spellcheck",
       label: E.default.Messages.SPELLCHECK,
       checked: p,
       action: () => {
-        (0, r.toggleSpellcheck)(), x()
+        (0, c.toggleSpellcheck)(), b()
       }
-    }), p ? (0, l.jsx)(c.MenuItem, {
+    }), p ? (0, l.jsx)(r.MenuItem, {
       id: "languages",
       label: E.default.Messages.LANGUAGES,
       action: () => window.open(o.default.getArticleURL(f.HelpdeskArticles.SPELLCHECK))

@@ -10,8 +10,8 @@ var i = l("735250"),
   s = l.n(n),
   r = l("442837"),
   d = l("481060"),
-  c = l("239091"),
-  o = l("434650"),
+  o = l("239091"),
+  c = l("434650"),
   u = l("213459"),
   v = l("695346"),
   f = l("594174"),
@@ -29,8 +29,8 @@ var i = l("735250"),
   g = l("182906"),
   N = l("556505"),
   j = l("513202"),
-  y = l("823531"),
-  D = l("689938"),
+  D = l("823531"),
+  y = l("689938"),
   M = l("665179"),
   L = l("969728");
 
@@ -57,14 +57,14 @@ function R(e) {
     channel: a,
     guildId: n,
     large: s = !1
-  } = e, c = (0, r.useStateFromStoresArray)([f.default], () => {
+  } = e, o = (0, r.useStateFromStoresArray)([f.default], () => {
     var e;
     return Array.from(null !== (e = null == t ? void 0 : t.userIds) && void 0 !== e ? e : []).map(e => {
       let [t] = e;
       return f.default.getUser(t)
     }).filter(C.isNotNullish)
-  }), o = T.default.getName(n, null == a ? void 0 : a.id, null == c ? void 0 : c[0]);
-  if (o = (0, x.truncateText)(o, 15), null == t || 0 === c.length) {
+  }), c = T.default.getName(n, null == a ? void 0 : a.id, null == o ? void 0 : o[0]);
+  if (c = (0, x.truncateText)(c, 15), null == t || 0 === o.length) {
     var u, v;
     let e = "".concat((0, p.default)(null !== (u = l.maxParticipants) && void 0 !== u ? u : 0));
     return s && (e = null !== (v = l.description) && void 0 !== v ? v : ""), (0, i.jsx)(d.Text, {
@@ -79,16 +79,16 @@ function R(e) {
     children: [(0, i.jsx)(d.Text, {
       className: M.usersArePlayingText,
       variant: "text-xs/normal",
-      children: c.length > 1 ? D.default.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
-        username: o,
-        count: c.length - 1
-      }) : D.default.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({
-        username: o
+      children: o.length > 1 ? y.default.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
+        username: c,
+        count: o.length - 1
+      }) : y.default.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({
+        username: c
       })
     }), (0, i.jsx)(m.default, {
       size: s ? m.Sizes.SIZE_24 : m.Sizes.SIZE_16,
       guildId: n,
-      users: c,
+      users: o,
       max: 6
     })]
   })
@@ -124,7 +124,7 @@ function b(e) {
     application: P
   } = l, G = a.useCallback(e => e && (null == C ? void 0 : C({
     applicationId: l.application.id
-  })), [l.application.id, C]), U = (0, o.useIsVisible)(G, .8, !0), [W, Z] = a.useState(!1), [z, q] = a.useState(W);
+  })), [l.application.id, C]), U = (0, c.useIsVisible)(G, .8, !0), [W, Z] = a.useState(!1), [z, q] = a.useState(W);
   a.useEffect(() => {
     W && q(!0)
   }, [W]);
@@ -137,7 +137,7 @@ function b(e) {
   return (0, i.jsxs)(d.Clickable, {
     onClick: H === A.ActivityAction.START ? Q : void 0,
     onContextMenu: X ? e => {
-      (0, c.openContextMenu)(e, e => (0, i.jsx)(y.default, {
+      (0, o.openContextMenu)(e, e => (0, i.jsx)(D.default, {
         application: P,
         ...e
       }))
@@ -187,7 +187,7 @@ function b(e) {
           })
         })
       }), k ? (0, i.jsx)(d.Tooltip, {
-        text: D.default.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY,
+        text: y.default.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY,
         children: e => (0, i.jsx)("div", {
           className: M.devShelfBadge,
           ...e,

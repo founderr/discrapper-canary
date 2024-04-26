@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return p
+    return h
   }
 });
 var l = s("735250"),
@@ -25,14 +25,14 @@ var l = s("735250"),
   A = s("347949"),
   N = s("988246"),
   U = s("689938"),
-  h = s("478741");
+  p = s("478741");
 
-function p(e) {
+function h(e) {
   var t;
   let {
     user: s,
     displayProfile: i,
-    autoFocusNote: p = !1,
+    autoFocusNote: h = !1,
     scrollToConnections: j = !1
   } = e, {
     trackUserProfileAction: g
@@ -41,34 +41,34 @@ function p(e) {
   } = (0, _.useUserProfileThemeContext)(), C = (0, n.useStateFromStores)([S.default], () => S.default.locale), M = (0, d.useIsInUserClanExperiment)(), y = (0, f.useIsUserRecentGamesEnabled)({
     userId: s.id,
     location: "28tk0bf_3"
-  }), O = (0, I.default)(s.id), F = a.useRef(null);
+  }), O = (0, I.default)(s.id), L = a.useRef(null);
   return (a.useLayoutEffect(() => {
     if (j) {
       var e;
-      null == F || null === (e = F.current) || void 0 === e || e.scrollIntoView()
+      null == L || null === (e = L.current) || void 0 === e || e.scrollIntoView()
     }
   }, [j]), R) ? (0, l.jsx)(N.default, {}) : (0, l.jsxs)(o.ScrollerThin, {
     fade: !0,
-    className: h.infoScroller,
+    className: p.infoScroller,
     children: [(0, l.jsxs)("div", {
-      className: h.userInfoSection,
+      className: p.userInfoSection,
       children: [(null == i ? void 0 : i.bio) != null && (null == i ? void 0 : i.bio) !== "" && (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsx)(o.Heading, {
           variant: "eyebrow",
-          className: h.userInfoSectionHeader,
+          className: p.userInfoSectionHeader,
           children: U.default.Messages.USER_PROFILE_ABOUT_ME
         }), (0, l.jsx)(v.default, {
-          className: h.userInfoText,
+          className: p.userInfoText,
           userBio: null !== (t = null == i ? void 0 : i.bio) && void 0 !== t ? t : ""
         })]
       }), (0, l.jsx)(x.default, {
         userId: s.id,
-        headingClassName: h.userInfoSectionHeader,
-        textClassName: h.userInfoText
+        headingClassName: p.userInfoSectionHeader,
+        textClassName: p.userInfoText
       }), M && (0, l.jsx)("div", {
-        className: h.clans,
+        className: p.clans,
         children: (0, l.jsx)("div", {
-          className: h.userInfoText,
+          className: p.userInfoText,
           children: (0, l.jsx)(c.UserProfileClanContainer, {
             userId: s.id
           })
@@ -76,25 +76,25 @@ function p(e) {
       }), y && (0, l.jsx)(A.UserProfileRecentGamesContainer, {
         userId: s.id,
         maxItems: 6,
-        containerClassName: r()(h.userInfoText, h.recentGames)
+        containerClassName: r()(p.userInfoText, p.recentGames)
       }), (0, l.jsx)(o.Heading, {
         variant: "eyebrow",
-        className: h.userInfoSectionHeader,
+        className: p.userInfoSectionHeader,
         children: U.default.Messages.NOTE
       }), (0, l.jsx)(u.default, {
         userId: s.id,
-        autoFocus: p,
-        className: h.note,
+        autoFocus: h,
+        className: p.note,
         onUpdate: () => g({
           action: "SET_NOTE"
         })
       })]
     }), (0, l.jsx)(T.ConnectedUserAccounts, {
-      ref: F,
+      ref: L,
       connectedAccounts: O,
       theme: P,
       locale: C,
-      className: h.userInfoSection,
+      className: p.userInfoSection,
       userId: s.id
     })]
   })

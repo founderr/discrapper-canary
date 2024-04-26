@@ -23,12 +23,12 @@ var l = s("735250"),
 function x(e) {
   let {
     user: t
-  } = e, s = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), x = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), _ = a.useMemo(() => x.filter(e => e.type !== E.ActivityTypes.CUSTOM_STATUS), [x]), T = x.some(e => e.type === E.ActivityTypes.HANG_STATUS), A = a.useMemo(() => s ? _.find(e => e.type === E.ActivityTypes.PLAYING) : null, [_, s]), N = a.useMemo(() => _.filter(e => e !== A), [A, _]), U = (0, m.useGetVoiceChannelInfoForVoiceActivitySection)(t.id), h = null != U && !s && !T, {
-    showVoiceActivityInProfile: p
+  } = e, s = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), x = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), _ = a.useMemo(() => x.filter(e => e.type !== E.ActivityTypes.CUSTOM_STATUS), [x]), T = x.some(e => e.type === E.ActivityTypes.HANG_STATUS), A = a.useMemo(() => s ? _.find(e => e.type === E.ActivityTypes.PLAYING) : null, [_, s]), N = a.useMemo(() => _.filter(e => e !== A), [A, _]), U = (0, m.useGetVoiceChannelInfoForVoiceActivitySection)(t.id), p = null != U && !s && !T, {
+    showVoiceActivityInProfile: h
   } = S.VoiceActivityProfileExperiment.useExperiment({
     location: "user profile modal"
   }, {
-    autoTrackExposure: h
+    autoTrackExposure: p
   }), {
     analyticsLocations: j
   } = (0, o.default)(), {
@@ -43,7 +43,7 @@ function x(e) {
   return (0, l.jsxs)(r.ScrollerThin, {
     className: v.listScroller,
     fade: !0,
-    children: [p && h ? (0, l.jsx)("div", {
+    children: [h && p ? (0, l.jsx)("div", {
       className: I.voiceActivity,
       children: (0, l.jsx)(m.default, {
         ...U,

@@ -230,7 +230,7 @@ let D = e => {
       fixed: !0,
       align: "center",
       position: "center",
-      reference: o,
+      targetRef: o,
       children: () => (0, i.jsxs)("div", {
         className: p.overlayWrapper,
         children: [(0, i.jsx)(u.animated.div, {

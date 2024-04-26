@@ -89,7 +89,7 @@ function g(e) {
   }), []), (null == t ? void 0 : t.current) == null) ? null : (0, a.jsx)(r.Layer, {
     layerContext: h.appLayerContext,
     children: (0, a.jsx)(r.ReferencePositionLayer, {
-      reference: t,
+      targetRef: t,
       position: "top",
       align: "center",
       spacing: 0,
