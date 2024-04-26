@@ -66,14 +66,12 @@ function _(e) {
     }), (0, n.jsxs)("div", {
       className: E.upsellDetails,
       children: [(0, n.jsx)(i.Heading, {
-        className: E.upsellCtaTitle,
+        className: E.upsellTitle,
         variant: "heading-xxl/semibold",
-        color: "header-primary",
         children: l
       }), (0, n.jsx)(i.Text, {
-        className: E.upsellCtaSubtitle,
+        className: E.upsellSubtitle,
         variant: "text-md/medium",
-        color: "header-secondary",
         children: o
       }), (0, n.jsx)(d.default, {
         onClick: a,

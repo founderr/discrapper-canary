@@ -48,14 +48,14 @@ function A(e) {
     icon: a
   } = e;
   return (0, n.jsxs)("div", {
-    className: I.upsellCtaDetail,
+    className: I.upsellDetail,
     children: [(0, n.jsx)(a, {
       height: 24,
       width: 24,
       className: I.upsellIcon
     }), (0, n.jsx)(o.Text, {
+      className: I.upsellDetailText,
       variant: "text-md/medium",
-      color: "header-secondary",
       children: t
     })]
   })
@@ -90,12 +90,11 @@ function N(e) {
   }, [t, c]);
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)(o.Heading, {
-      className: I.upsellCtaTitle,
+      className: I.upsellTitle,
       variant: "heading-xxl/semibold",
-      color: "header-primary",
       children: [S.default.Messages.CLAN_DISCOVERY_UPSELL_CTA_GUILD_INVITE, (0, n.jsx)("br", {}), _]
     }), (0, n.jsxs)("div", {
-      className: I.upsellCtaDetails,
+      className: I.upsellDetails,
       children: [(0, n.jsx)(A, {
         icon: i.CompassIcon,
         text: S.default.Messages.CLAN_DISCOVERY_UPSELL_VIBES_OR_SKILL
