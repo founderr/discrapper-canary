@@ -131,16 +131,14 @@ function P(e) {
               channelId: D,
               centerButton: !0,
               color: "red",
-              className: O.leaveActivityButton,
-              iconClassName: O.leaveActivityIcon
+              className: O.leaveActivityButton
             })
           }), (0, a.jsx)(h.CenterControlButton, {
             label: y.default.Messages.EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL,
             onClick: H,
             iconComponent: C.default,
             themeable: !0,
-            className: O.circularButton,
-            iconClassName: O.minimizeIcon
+            className: O.circularButton
           })]
         }), (0, a.jsx)("div", {
           className: O.flex
