@@ -58336,12 +58336,19 @@ input[type=checkbox]:focus-visible+.label__8e100 {
 .badgeList_b6652b {
     background: var(--bg-mod-faint);
     border-radius: var(--radius-xs);
+    border: 1px solid var(--border-faint);
     gap: 1px;
     padding: 1px 2px
 }
 
-.custom-profile-theme .badgeList_b6652b {
+.theme-light.custom-profile-theme .badgeList_b6652b {
+    border: 1px solid var(--border-subtle);
     background: rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-6))
+}
+
+.theme-dark.custom-profile-theme .badgeList_b6652b {
+    border: 1px solid var(--border-subtle);
+    background: rgb(var(--bg-overlay-color-inverse)/var(--bg-overlay-opacity-6))
 }
 
 .badge__26d6e {
@@ -130845,7 +130852,18 @@ div.nagbar_c731ff {
 .badgeList__70639 {
     background: var(--bg-mod-faint);
     border-radius: var(--radius-sm);
+    border: 1px solid var(--border-faint);
     max-width: 228px
+}
+
+.theme-light.custom-profile-theme .badgeList__70639 {
+    border: 1px solid var(--border-subtle);
+    background: rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-6))
+}
+
+.theme-dark.custom-profile-theme .badgeList__70639 {
+    border: 1px solid var(--border-subtle);
+    background: rgb(var(--bg-overlay-color-inverse)/var(--bg-overlay-opacity-6))
 }
 
 .inner__14185 {
