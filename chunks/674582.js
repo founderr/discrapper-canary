@@ -1,5 +1,6 @@
 "use strict";
 e.exports = {
+  clanTag: "clanTag__900e0",
   container: "container__1c2eb",
   copiableField: "copiableField__5eae7",
   copiableNameTag: "copiableNameTag_e76019",
