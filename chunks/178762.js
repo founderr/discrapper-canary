@@ -119,8 +119,7 @@ t.default = l.memo(e => {
   }, [r, g]), P = l.useCallback(() => {
     d(String(Date.now()))
   }, []);
-  return (0, a.jsx)(c.Clickable, {
-    onClick: () => O(!M),
+  return (0, a.jsx)("div", {
     onMouseEnter: () => {
       I.current = !0, setTimeout(() => {
         I.current && x(!0)
@@ -143,7 +142,7 @@ t.default = l.memo(e => {
         })
       },
       position: "left",
-      shouldShow: M || T && A,
+      shouldShow: T ? A : M,
       positionKey: o,
       onRequestOpen: () => (0, C.trackInteraction)(v.ContentInventoryInteractionTypes.CARD_CLICK, S),
       onRequestClose: () => {
@@ -154,7 +153,8 @@ t.default = l.memo(e => {
         let {
           isShown: n
         } = t;
-        return (0, a.jsx)("div", {
+        return (0, a.jsx)(c.Clickable, {
+          onClick: () => O(e => !e),
           children: (0, a.jsx)(c.FocusRing, {
             offset: {
               top: 4,
