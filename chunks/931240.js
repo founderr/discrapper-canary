@@ -6,6 +6,9 @@ n.r(t), n.d(t, {
   convertGuildToClan: function() {
     return l
   },
+  disableClan: function() {
+    return f
+  },
   fetchClanSettings: function() {
     return I
   },
@@ -163,4 +166,13 @@ async function T(e, t) {
       badge_image: t.badgeImage
     }
   })
+}
+async function f(e) {
+  try {
+    await i.HTTP.post({
+      url: a.Endpoints.DISABLE_CLAN(e)
+    })
+  } catch (e) {
+    throw e
+  }
 }
