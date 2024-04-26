@@ -7,7 +7,7 @@ var l = n("735250"),
   r = n("613828"),
   o = n("481060"),
   u = n("624138"),
-  d = n("704053");
+  d = n("628663");
 let c = [18, 18, 16, 16, 14, 12, 10];
 
 function f(e, t) {
@@ -21,40 +21,40 @@ t.default = e => {
   let t, n, {
       backgroundStyle: s = "always",
       children: h,
-      icon: p,
-      name: m,
+      icon: m,
+      name: p,
       ariaLabel: C,
       className: g,
       style: E,
-      to: S,
-      onClick: _,
+      to: _,
+      onClick: S,
       selected: I = !1,
       ...N
     } = e,
     T = (0, r.useHistory)();
-  if (null == p && null != m) {
+  if (null == m && null != p) {
     var A;
-    n = null !== (A = c[(t = (0, u.getAcronym)(m)).length - 1]) && void 0 !== A ? A : c[c.length - 1]
+    n = null !== (A = c[(t = (0, u.getAcronym)(p)).length - 1]) && void 0 !== A ? A : c[c.length - 1]
   }
   let L = a.useCallback(e => {
-    if (null == S);
-    else if ("string" == typeof S) T.push(S);
+    if (null == _);
+    else if ("string" == typeof _) T.push(_);
     else {
       let {
         pathname: e = "",
         state: t
-      } = S;
+      } = _;
       T.push(e, t)
     }
-    null != _ && _(e)
-  }, [T, S, _]);
+    null != S && S(e)
+  }, [T, _, S]);
   return (0, l.jsxs)(o.Clickable, {
     ...N,
     onClick: L,
     className: i()(g, d.wrapper, {
       [d.selected]: I
     }),
-    "aria-label": null != C && "" !== C ? C : null != m ? m : "",
+    "aria-label": null != C && "" !== C ? C : null != p ? p : "",
     style: {
       ...E,
       fontSize: n
@@ -66,9 +66,9 @@ t.default = e => {
       className: i()(f(s, !1), d.acronym),
       "aria-hidden": !0,
       children: t
-    }) : null, null != p ? (0, l.jsx)("img", {
+    }) : null, null != m ? (0, l.jsx)("img", {
       className: d.icon,
-      src: p,
+      src: m,
       alt: " ",
       width: 48,
       height: 48,

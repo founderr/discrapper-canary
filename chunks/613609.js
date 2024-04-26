@@ -12,16 +12,16 @@ var n = a("735250"),
   f = a("650233"),
   E = a("981631"),
   h = a("756286"),
-  _ = a("854837");
+  _ = a("792196");
 t.default = e => {
   let {
     guildId: t,
     inviteCode: a
-  } = e, [C, m] = s.useState(h.WaveStates.INITIAL), [S, I] = s.useState(null != a);
+  } = e, [C, m] = s.useState(h.WaveStates.INITIAL), [S, p] = s.useState(null != a);
   s.useEffect(() => {
-    null != a && i.default.resolveInvite(a, "Hub").finally(() => I(!1))
+    null != a && i.default.resolveInvite(a, "Hub").finally(() => p(!1))
   }, [a]);
-  let p = (0, l.useStateFromStores)([u.default], () => null != a ? u.default.getInvite(a) : null),
+  let I = (0, l.useStateFromStores)([u.default], () => null != a ? u.default.getInvite(a) : null),
     T = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(t));
   s.useEffect(() => {
     null != T && (0, r.transitionTo)(E.Routes.CHANNEL(t))
@@ -43,7 +43,7 @@ t.default = e => {
       }), (0, n.jsx)("div", {
         className: _.contentWrapper,
         children: !S && (0, n.jsx)(f.HubEmailConnectionModalView, {
-          invite: p
+          invite: I
         })
       })]
     })

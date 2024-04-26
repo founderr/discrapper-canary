@@ -32,8 +32,8 @@ var n = s("399606"),
   L = s("526761"),
   x = s("332325"),
   v = s("689938"),
-  D = s("660372"),
-  b = s("926433"),
+  b = s("660372"),
+  D = s("926433"),
   U = s("302036"),
   j = s("994554"),
   y = s("704565"),
@@ -342,7 +342,7 @@ t.default = () => {
       name: "badge",
       title: v.default.Messages.NITRO_HOME_SUBSCRIBER_BADGE,
       subtitle: v.default.Messages.NITRO_HOME_GET_THIS_SUBSCRIBER_BADGE,
-      perkImage: D,
+      perkImage: b,
       description: v.default.Messages.NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS
     },
     customAppIcons: {
@@ -369,7 +369,7 @@ t.default = () => {
       name: "customSoundsEverywhere",
       title: v.default.Messages.NITRO_HOME_CARD_CUSTOM_SOUNDS_EVERYWHERE,
       subtitle: v.default.Messages.NITRO_HOME_CARD_USE_CUSTOM_SOUNDS,
-      perkImage: (0, O.getThemedImage)(t, b, U),
+      perkImage: (0, O.getThemedImage)(t, D, U),
       description: v.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_ONLY_NITRO
     },
     specialStickerAccess: {

@@ -16,7 +16,7 @@ var n = a("735250"),
   f = a("170245"),
   E = a("981631"),
   h = a("689938"),
-  _ = a("704393");
+  _ = a("499475");
 
 function C(e) {
   let {
@@ -25,7 +25,7 @@ function C(e) {
     isFocused: C
   } = e, m = s.useContext(u.AnalyticsContext), {
     analyticsLocations: S
-  } = (0, i.default)(), I = e => {
+  } = (0, i.default)(), p = e => {
     e.stopPropagation(), l.default.unblockUser(t.id, {
       location: "Friends"
     })
@@ -49,7 +49,7 @@ function C(e) {
         icon: o.default,
         actionType: d.default.ActionTypes.DENY,
         tooltip: h.default.Messages.UNBLOCK,
-        onClick: I,
+        onClick: p,
         shouldHighlight: e
       })]
     })

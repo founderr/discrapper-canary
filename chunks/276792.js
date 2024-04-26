@@ -18,24 +18,24 @@ var s = a("524437"),
   E = a("474936"),
   h = a("981631"),
   _ = a("689938"),
-  C = a("464765"),
+  C = a("731396"),
   m = a("74316");
 
 function S(e) {
   var t, a;
   let {
     content: S,
-    renderModalProps: I,
-    analyticsLocations: p,
+    renderModalProps: p,
+    analyticsLocations: I,
     analyticsLocation: T,
     isLightTheme: g
   } = e, A = "AnnouncementModalVariant1_".concat(s.DismissibleContent[Number(S.dismissKey)]), {
     onClose: N
-  } = I, v = null != S.button && "" !== S.button.copy ? S.button.copy : _.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, R = (null === (t = S.button) || void 0 === t ? void 0 : t.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", L = (null === (a = S.button) || void 0 === a ? void 0 : a.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? () => {
+  } = p, v = null != S.button && "" !== S.button.copy ? S.button.copy : _.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, R = (null === (t = S.button) || void 0 === t ? void 0 : t.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", L = (null === (a = S.button) || void 0 === a ? void 0 : a.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? () => {
     (0, o.transitionTo)(h.Routes.APPLICATION_STORE), N()
   } : () => (0, r.default)({
     subscriptionTier: E.PremiumSubscriptionSKUs.TIER_2,
-    analyticsLocations: p,
+    analyticsLocations: I,
     analyticsObject: {
       ...T,
       object: h.AnalyticsObjects.BUTTON_CTA,
@@ -52,27 +52,27 @@ function S(e) {
       className: C.termsApplyBodyText,
       children: _.default.Messages.BOGO_TERMS_APPLY
     })
-  }) : void 0, P = {
+  }) : void 0, M = {
     type: "video",
     src: g ? S.heroArtVideoLinkLightTheme : S.videoLink
   };
-  ("" !== S.heroArtImageLinkDarkTheme || "" !== S.heroArtImageLinkLightTheme) && (P = {
+  ("" !== S.heroArtImageLinkDarkTheme || "" !== S.heroArtImageLinkLightTheme) && (M = {
     type: "image",
     src: g ? S.heroArtImageLinkLightTheme : S.heroArtImageLinkDarkTheme
   });
-  let M = g ? f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL,
+  let P = g ? f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL,
     x = "" !== S.modalTopPill ? () => (0, n.jsx)(f.PremiumPillWithSparkles, {
       text: S.modalTopPill,
       className: C.modalTopPill,
-      colorOptions: M
+      colorOptions: P
     }) : void 0;
   return {
-    renderModalProps: I,
+    renderModalProps: p,
     header: S.header,
     modalTopExtra: x,
     subHeader: S.subheader,
     subHeaderExtra: O,
-    heroArt: P,
+    heroArt: M,
     featureCards: S.featureCards.map(e => ({
       header: e.header,
       subHeader: e.body,

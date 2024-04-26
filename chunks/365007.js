@@ -1,66 +1,66 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   deleteWebAuthnCredential: function() {
-    return o
+    return u
   },
   editWebAuthnCredential: function() {
     return d
   },
   fetchWebAuthnConditionalChallenge: function() {
-    return l
-  },
-  fetchWebAuthnCredentials: function() {
-    return u
-  },
-  fetchWebAuthnPasswordlessChallenge: function() {
     return r
   },
+  fetchWebAuthnCredentials: function() {
+    return o
+  },
+  fetchWebAuthnPasswordlessChallenge: function() {
+    return l
+  },
   finishRegisterWebAuthnCredential: function() {
-    return p
+    return f
   },
   startRegisterWebAuthnCredential: function() {
     return c
   }
 });
-var a = s("544891"),
-  n = s("570140"),
-  i = s("981631");
-async function l() {
-  return (await a.HTTP.post(i.Endpoints.WEBAUTHN_CONDITIONAL_UI_CHALLENGE)).body
-}
+var s = n("544891"),
+  a = n("570140"),
+  i = n("981631");
 async function r() {
-  return (await a.HTTP.post(i.Endpoints.WEBAUTHN_PASSWORDLESS_CHALLENGE)).body
+  return (await s.HTTP.post(i.Endpoints.WEBAUTHN_CONDITIONAL_UI_CHALLENGE)).body
+}
+async function l() {
+  return (await s.HTTP.post(i.Endpoints.WEBAUTHN_PASSWORDLESS_CHALLENGE)).body
 }
 
-function u() {
-  n.default.dispatch({
+function o() {
+  a.default.dispatch({
     type: "MFA_WEBAUTHN_CREDENTIALS_LOADING"
-  }), a.HTTP.get(i.Endpoints.MFA_WEBAUTHN_CREDENTIALS).then(e => {
-    n.default.dispatch({
+  }), s.HTTP.get(i.Endpoints.MFA_WEBAUTHN_CREDENTIALS).then(e => {
+    a.default.dispatch({
       type: "MFA_WEBAUTHN_CREDENTIALS_LOADED",
       credentials: e.body
     })
   })
 }
 
-function o(e) {
-  a.HTTP.del(i.Endpoints.MFA_WEBAUTHN_CREDENTIAL(e.id)).then(() => {
-    n.default.dispatch({
+function u(e) {
+  s.HTTP.del(i.Endpoints.MFA_WEBAUTHN_CREDENTIAL(e.id)).then(() => {
+    a.default.dispatch({
       type: "AUTHENTICATOR_DELETE",
       credential: e
     })
   })
 }
 async function d(e, t) {
-  let s = await a.HTTP.patch({
+  let n = await s.HTTP.patch({
     url: i.Endpoints.MFA_WEBAUTHN_CREDENTIAL(e),
     body: {
       name: t
     }
   });
-  n.default.dispatch({
+  a.default.dispatch({
     type: "AUTHENTICATOR_UPDATE",
-    credential: s.body
+    credential: n.body
   })
 }
 async function c() {
@@ -69,7 +69,7 @@ async function c() {
       ticket: e,
       challenge: t
     }
-  } = await a.HTTP.post({
+  } = await s.HTTP.post({
     url: i.Endpoints.MFA_WEBAUTHN_CREDENTIALS,
     body: {}
   });
@@ -78,20 +78,20 @@ async function c() {
     challenge: t
   }
 }
-async function p(e, t, s) {
-  let l = await a.HTTP.post({
+async function f(e, t, n) {
+  let r = await s.HTTP.post({
     url: i.Endpoints.MFA_WEBAUTHN_CREDENTIALS,
     body: {
       name: e,
       ticket: t,
-      credential: s
+      credential: n
     }
   });
-  n.default.dispatch({
+  a.default.dispatch({
     type: "AUTHENTICATOR_CREATE",
-    credential: l.body
-  }), n.default.dispatch({
+    credential: r.body
+  }), a.default.dispatch({
     type: "MFA_ENABLE_SUCCESS",
-    codes: l.body.backup_codes
+    codes: r.body.backup_codes
   })
 }

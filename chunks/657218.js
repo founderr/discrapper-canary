@@ -35,8 +35,8 @@ var a = n("735250"),
   O = n("465670"),
   j = n("663949"),
   P = n("934458"),
-  b = n("502568"),
-  D = n("459273"),
+  D = n("502568"),
+  b = n("459273"),
   U = n("838440"),
   F = n("127654"),
   w = n("241309"),
@@ -46,8 +46,8 @@ var a = n("735250"),
   G = n("602034"),
   V = n("981631"),
   W = n("689938"),
-  Y = n("562798"),
-  z = n("773065");
+  Y = n("683287"),
+  z = n("232024");
 let K = E.ChatInputTypes.THREAD_CREATION;
 
 function Z(e) {
@@ -60,24 +60,24 @@ function Z(e) {
   } = (0, p.default)(m.default.CREATE_THREAD);
   return null == s ? null : (0, a.jsx)(p.AnalyticsLocationProvider, {
     value: i,
-    children: (0, a.jsx)(D.ComponentDispatchGroupProvider, {
+    children: (0, a.jsx)(b.ComponentDispatchGroupProvider, {
       children: (0, a.jsxs)("section", {
         "aria-label": W.default.Messages.CREATE_THREAD,
         className: Y.container,
         children: [(0, a.jsx)(f.default, {
           channel: s,
           draftType: x.DraftType.FirstThreadMessage
-        }), (0, a.jsxs)(b.default, {
-          toolbar: (0, a.jsx)(b.default.Icon, {
+        }), (0, a.jsxs)(D.default, {
+          toolbar: (0, a.jsx)(D.default.Icon, {
             icon: O.default,
             tooltip: W.default.Messages.CLOSE,
             onClick: () => (0, B.closeAndClearThreadSidebar)(t)
           }),
-          children: [(0, a.jsx)(b.default.Icon, {
+          children: [(0, a.jsx)(D.default.Icon, {
             icon: P.default,
             disabled: !0,
             "aria-label": W.default.Messages.THREAD
-          }), (0, a.jsx)(b.default.Title, {
+          }), (0, a.jsx)(D.default.Title, {
             children: W.default.Messages.NEW_THREAD
           })]
         }), (0, a.jsx)(q, {
@@ -96,7 +96,7 @@ function q(e) {
     parentMessageId: n,
     location: s
   } = e, d = (0, r.useStateFromStores)([h.default], () => h.default.messageGroupSpacing), f = function() {
-    let e = l.useContext(D.ComponentDispatchGroupContext);
+    let e = l.useContext(b.ComponentDispatchGroupContext);
     return l.useCallback(() => {
       e.bumpDispatchPriority()
     }, [e])
@@ -361,10 +361,10 @@ function J(e) {
     } = e;
     return c(t, a, n)
   }, [c]);
-  (0, D.useComponentAction)({
+  (0, b.useComponentAction)({
     event: V.ComponentActions.TEXTAREA_FOCUS,
     handler: p
-  }), (0, D.useComponentAction)({
+  }), (0, b.useComponentAction)({
     event: V.ComponentActions.TEXTAREA_BLUR,
     handler: E
   });

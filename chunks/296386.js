@@ -1,10 +1,10 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   addGuildCategory: function() {
-    return I
+    return T
   },
   deleteGuildCategory: function() {
-    return T
+    return g
   },
   fetchMetadataForGuild: function() {
     return u
@@ -16,16 +16,16 @@ i.r(t), i.d(t, {
     return o
   },
   saveGuildMetadata: function() {
-    return E
+    return h
   },
   updateGuildDiscoveryMetadataAbout: function() {
-    return m
+    return E
   },
   updateGuildDiscoveryMetadataIsPublished: function() {
-    return C
+    return m
   },
   updateGuildDiscoveryMetadataReasonsToJoin: function() {
-    return h
+    return I
   },
   updateGuildDiscoveryMetadataSocialLinks: function() {
     return _
@@ -40,20 +40,20 @@ i.r(t), i.d(t, {
     return d
   }
 });
-var n = i("544891"),
-  r = i("570140"),
-  s = i("706454"),
-  a = i("150192"),
-  l = i("981631");
+var i = n("544891"),
+  r = n("570140"),
+  s = n("706454"),
+  a = n("150192"),
+  l = n("981631");
 async function o() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
     t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    i = s.default.locale;
-  if (i === a.default.getFetchedLocale()) return;
-  let o = await n.HTTP.get({
+    n = s.default.locale;
+  if (n === a.default.getFetchedLocale()) return;
+  let o = await i.HTTP.get({
     url: l.Endpoints.GUILD_DISCOVERY_CATEGORIES,
     query: {
-      locale: i,
+      locale: n,
       primary_only: e
     },
     oldFormErrors: !0
@@ -61,7 +61,7 @@ async function o() {
   r.default.dispatch({
     type: "GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS",
     categories: o.body,
-    locale: i,
+    locale: n,
     forClanDiscovery: t
   })
 }
@@ -69,7 +69,7 @@ async function u(e) {
   try {
     let {
       primary_category_id: t,
-      category_ids: i,
+      category_ids: n,
       keywords: s,
       emoji_discoverability_enabled: a,
       partner_actioned_timestamp: o,
@@ -78,12 +78,12 @@ async function u(e) {
       reasons_to_join: d,
       social_links: f,
       about: p
-    } = (await n.HTTP.get({
+    } = (await i.HTTP.get({
       url: l.Endpoints.GUILD_DISCOVERY_METADATA(e),
       oldFormErrors: !0
-    })).body, C = {
+    })).body, m = {
       primaryCategoryId: t,
-      secondaryCategoryIds: i,
+      secondaryCategoryIds: n,
       keywords: s,
       emojiDiscoverabilityEnabled: a,
       partnerActionedTimestamp: o,
@@ -96,8 +96,8 @@ async function u(e) {
     return r.default.dispatch({
       type: "GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER",
       guildId: e,
-      metadata: C
-    }), C
+      metadata: m
+    }), m
   } catch (e) {
     r.default.dispatch({
       type: "GUILD_DISCOVERY_METADATA_FETCH_FAIL"
@@ -106,7 +106,7 @@ async function u(e) {
 }
 async function c(e) {
   try {
-    let t = (await n.HTTP.get({
+    let t = (await i.HTTP.get({
       url: l.Endpoints.GUILD_DISCOVERY_SLUG(e)
     })).body.slug;
     r.default.dispatch({
@@ -145,7 +145,7 @@ function p(e, t) {
   })
 }
 
-function C(e, t) {
+function m(e, t) {
   r.default.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
@@ -153,7 +153,7 @@ function C(e, t) {
   })
 }
 
-function m(e, t) {
+function E(e, t) {
   r.default.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
@@ -161,7 +161,7 @@ function m(e, t) {
   })
 }
 
-function h(e, t) {
+function I(e, t) {
   r.default.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
@@ -176,10 +176,10 @@ function _(e, t) {
     socialLinks: t
   })
 }
-async function E(e) {
+async function h(e) {
   let {
     guildId: t,
-    primaryCategoryId: i,
+    primaryCategoryId: n,
     keywords: s,
     emojiDiscoverabilityEnabled: a,
     partnerActionedTimestamp: o,
@@ -192,19 +192,19 @@ async function E(e) {
   try {
     let {
       primary_category_id: e,
-      category_ids: C,
-      keywords: m,
-      emoji_discoverability_enabled: h,
+      category_ids: m,
+      keywords: E,
+      emoji_discoverability_enabled: I,
       partner_actioned_timestamp: _,
-      partner_application_timestamp: E,
-      is_published: I,
-      reasons_to_join: T,
-      social_links: x,
-      about: g
-    } = (await n.HTTP.patch({
+      partner_application_timestamp: h,
+      is_published: T,
+      reasons_to_join: g,
+      social_links: C,
+      about: x
+    } = (await i.HTTP.patch({
       url: l.Endpoints.GUILD_DISCOVERY_METADATA(t),
       body: {
-        primary_category_id: i,
+        primary_category_id: n,
         emoji_discoverability_enabled: a,
         partner_actioned_timestamp: o,
         partner_application_timestamp: u,
@@ -221,15 +221,15 @@ async function E(e) {
       guildId: t,
       metadata: {
         primaryCategoryId: e,
-        secondaryCategoryIds: C,
-        keywords: m,
-        emojiDiscoverabilityEnabled: h,
+        secondaryCategoryIds: m,
+        keywords: E,
+        emojiDiscoverabilityEnabled: I,
         partnerActionedTimestamp: _,
-        partnerApplicationTimestamp: E,
-        isPublished: I,
-        reasonsToJoin: T,
-        socialLinks: x,
-        about: g
+        partnerApplicationTimestamp: h,
+        isPublished: T,
+        reasonsToJoin: g,
+        socialLinks: C,
+        about: x
       }
     })
   } catch (e) {
@@ -241,8 +241,8 @@ async function E(e) {
   }
 }
 
-function I(e, t) {
-  n.HTTP.put({
+function T(e, t) {
+  i.HTTP.put({
     url: l.Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(e, t),
     oldFormErrors: !0
   }).then(() => {
@@ -260,8 +260,8 @@ function I(e, t) {
   })
 }
 
-function T(e, t) {
-  n.HTTP.del({
+function g(e, t) {
+  i.HTTP.del({
     url: l.Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(e, t),
     oldFormErrors: !0
   }).then(() => {

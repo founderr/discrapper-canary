@@ -5,7 +5,7 @@ var a = s("735250"),
   l = s("882485"),
   i = s("481060"),
   r = s("763610"),
-  o = s("797565");
+  o = s("836058");
 t.default = function(e) {
   var t, s;
   let {
@@ -14,7 +14,7 @@ t.default = function(e) {
     initialValue: c,
     onFileChange: S,
     title: E
-  } = e, [T, m] = n.useState(null), [f, _] = n.useState(!1);
+  } = e, [T, f] = n.useState(null), [m, _] = n.useState(!1);
   return (0, a.jsxs)(i.FormItem, {
     children: [(0, a.jsx)(i.FormTitle, {
       tag: i.FormTitleTags.H5,
@@ -38,7 +38,7 @@ t.default = function(e) {
       buttonText: "Browse",
       placeholder: "Select an asset",
       onFileSelect: function(e) {
-        if (m(null != e ? e : null), null == e) return;
+        if (f(null != e ? e : null), null == e) return;
         _(!0);
         let t = new FileReader;
         t.onload = function() {

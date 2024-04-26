@@ -11,7 +11,7 @@ var s = a("120356"),
   d = a("914788"),
   c = a("981631"),
   f = a("689938"),
-  E = a("250728");
+  E = a("234093");
 let h = [18, 18, 16, 16, 14, 12, 10];
 t.default = e => {
   let {
@@ -24,8 +24,8 @@ t.default = e => {
     m = null,
     S = h[h.length - 1];
   if (null == a.icon && null != _) {
-    var I;
-    S = null !== (I = h[(m = (0, i.getAcronym)(_)).length - 1]) && void 0 !== I ? I : h[h.length - 1]
+    var p;
+    S = null !== (p = h[(m = (0, i.getAcronym)(_)).length - 1]) && void 0 !== p ? p : h[h.length - 1]
   }
   return (0, n.jsxs)("div", {
     className: E.container,

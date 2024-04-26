@@ -12,8 +12,8 @@ var a = s("735250"),
   S = s("355467"),
   E = s("100527"),
   T = s("906732"),
-  m = s("218946"),
-  f = s("404203"),
+  f = s("218946"),
+  m = s("404203"),
   _ = s("330181"),
   g = s("374649"),
   h = s("908951"),
@@ -32,7 +32,7 @@ var a = s("735250"),
   P = s("650919"),
   j = s("981631"),
   b = s("689938"),
-  U = s("980727");
+  U = s("805339");
 let y = e => {
     let {
       label: t,
@@ -159,14 +159,14 @@ t.default = e => {
     }, {
       isCancelled: V,
       isDeleted: Y,
-      isPastDue: K,
-      subscriptionPlanPrice: W,
+      isPastDue: W,
+      subscriptionPlanPrice: K,
       subscribedSinceDate: z,
       currentPeriodEndDate: Q,
       currentPeriodEndLabel: q
     } = h, Z = (0, D.isApplicationUserSubscription)(l.sku_flags), X = (0, D.isApplicationGuildSubscription)(l.sku_flags), J = l.soft_deleted || null == N || (!X || null == u) && !Z, $ = () => V || Y ? (0, a.jsx)(v.TextBadge, {
       text: b.default.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CANCELED
-    }) : K ? (0, a.jsx)(c.Tooltip, {
+    }) : W ? (0, a.jsx)(c.Tooltip, {
       text: b.default.Messages.APPLICATION_SUBSCRIPTION_USER_SUBSCRIPTION_PAST_DUE_WARNING,
       children: e => (0, a.jsx)("div", {
         ...e,
@@ -197,7 +197,7 @@ t.default = e => {
   }));
   return (0, a.jsxs)("div", {
     className: U.container,
-    children: [(0, a.jsx)(f.default, {
+    children: [(0, a.jsx)(m.default, {
       onClick: g,
       className: U.headerContainer,
       children: e => {
@@ -210,7 +210,7 @@ t.default = e => {
             size: L.ApplicationIconSize.SMALL,
             className: U.applicationIcon,
             application: N,
-            asset: null != l.image_asset ? (0, m.transformStoreAssetFromServer)(l.image_asset) : null
+            asset: null != l.image_asset ? (0, f.transformStoreAssetFromServer)(l.image_asset) : null
           }), (0, a.jsxs)("div", {
             className: U.headerTextContainer,
             children: [(0, a.jsx)(c.Text, {
@@ -258,7 +258,7 @@ t.default = e => {
           })
         }), (0, a.jsx)(y, {
           label: b.default.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_PRICE,
-          value: W
+          value: K
         }), (0, a.jsx)(y, {
           label: b.default.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_SUBSCRIBED_SINCE,
           value: b.default.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_SUBSCRIBED_SINCE_DATE.format({

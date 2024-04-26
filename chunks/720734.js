@@ -20,8 +20,8 @@ var n = a("735250"),
   C = a("789639"),
   m = a("481060"),
   S = a("355467"),
-  I = a("239091"),
-  p = a("230711"),
+  p = a("239091"),
+  I = a("230711"),
   T = a("255952"),
   g = a("410575"),
   A = a("941129"),
@@ -30,8 +30,8 @@ var n = a("735250"),
   R = a("586902"),
   L = a("1585"),
   O = a("304761"),
-  P = a("865427"),
-  M = a("571250"),
+  M = a("865427"),
+  P = a("571250"),
   x = a("628581"),
   y = a("55311"),
   D = a("575175"),
@@ -74,8 +74,8 @@ var n = a("735250"),
   eC = a("19780"),
   em = a("885110"),
   eS = a("246946"),
-  eI = a("594174"),
-  ep = a("78839"),
+  ep = a("594174"),
+  eI = a("78839"),
   eT = a("285952"),
   eg = a("546591"),
   eA = a("86813"),
@@ -84,8 +84,8 @@ var n = a("735250"),
   eR = a("87888"),
   eL = a("976401"),
   eO = a("333454"),
-  eP = a("864441"),
-  eM = a("26290"),
+  eM = a("864441"),
+  eP = a("26290"),
   ex = a("626135"),
   ey = a("768581"),
   eD = a("572004"),
@@ -94,10 +94,10 @@ var n = a("735250"),
   ej = a("51144"),
   eG = a("998502"),
   ew = a("981631"),
-  ek = a("414592"),
+  ek = a("215023"),
   eF = a("702512"),
   eB = a("689938"),
-  eH = a("610276");
+  eH = a("823020");
 
 function eV(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
@@ -163,7 +163,7 @@ class eK extends s.PureComponent {
     })), (0, n.jsxs)(n.Fragment, {
       children: [(0, n.jsx)("div", {
         className: eH.panelTitleContainer,
-        children: (0, n.jsx)(eP.default, {
+        children: (0, n.jsx)(eM.default, {
           children: r
         })
       }), (0, n.jsx)("div", {
@@ -464,15 +464,15 @@ class eK extends s.PureComponent {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ew.UserSettingsSections.ACCOUNT,
         t = arguments.length > 1 ? arguments[1] : void 0,
         a = arguments.length > 2 ? arguments[2] : void 0;
-      p.default.open(e, t, a)
+      I.default.open(e, t, a)
     }), eV(this, "handleOpenSettingsContextMenu", e => {
       let {
         currentUser: t
       } = this.props;
-      null != t && (0, I.openContextMenuLazy)(e, async () => {
+      null != t && (0, p.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([a.e("49237"), a.e("99387"), a.e("66635"), a.e("40326"), a.e("23357"), a.e("28020"), a.e("15972"), a.e("6416"), a.e("440"), a.e("63438"), a.e("58600"), a.e("33053"), a.e("49146"), a.e("17938"), a.e("65866"), a.e("76540"), a.e("93521"), a.e("5528"), a.e("85907"), a.e("18824"), a.e("74753"), a.e("2535")]).then(a.bind(a, "923422"));
+        } = await Promise.all([a.e("49237"), a.e("99387"), a.e("66635"), a.e("40326"), a.e("23357"), a.e("28020"), a.e("15972"), a.e("440"), a.e("6416"), a.e("63438"), a.e("58600"), a.e("33053"), a.e("49146"), a.e("17938"), a.e("65866"), a.e("76540"), a.e("93521"), a.e("5528"), a.e("80603"), a.e("18824"), a.e("74753"), a.e("2535")]).then(a.bind(a, "923422"));
         return a => (0, n.jsx)(e, {
           ...a,
           user: t,
@@ -481,24 +481,24 @@ class eK extends s.PureComponent {
         })
       })
     }), eV(this, "handleInputAudioContextMenu", e => {
-      (0, I.openContextMenuLazy)(e, async () => {
+      (0, p.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await Promise.resolve().then(a.bind(a, "659580"));
         return () => (0, n.jsx)(e, {
-          onClose: I.closeContextMenu,
+          onClose: p.closeContextMenu,
           renderInputDevices: !0,
           renderInputModes: !0,
           renderInputVolume: !0
         })
       })
     }), eV(this, "handleOutputAudioContextMenu", e => {
-      (0, I.openContextMenuLazy)(e, async () => {
+      (0, p.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await Promise.resolve().then(a.bind(a, "659580"));
         return () => (0, n.jsx)(e, {
-          onClose: I.closeContextMenu,
+          onClose: p.closeContextMenu,
           renderOutputDevices: !0,
           renderOutputVolume: !0
         })
@@ -610,7 +610,7 @@ class eK extends s.PureComponent {
 
 function ez() {
   var e, t;
-  let a = (0, r.useStateFromStores)([eI.default], () => eI.default.getCurrentUser()),
+  let a = (0, r.useStateFromStores)([ep.default], () => ep.default.getCurrentUser()),
     l = (0, F.useShowEligibilityEnrollmentTooltip)(eF.PartnerGame.FORTNITE),
     i = (0, r.useStateFromStores)([ef.default], () => ef.default.getId()),
     u = (0, j.useCustomStatusActivity)(),
@@ -634,8 +634,8 @@ function ez() {
     }),
     {
       mute: C,
-      selfMute: I,
-      suppress: p
+      selfMute: p,
+      suppress: I
     } = (0, ec.default)(_),
     {
       selfDeaf: T,
@@ -643,9 +643,9 @@ function ez() {
     } = (0, ed.default)(_),
     L = (0, r.useStateFromStores)([O.default], () => {
       var e;
-      return (0, P.probablyHasBuildOverride)() ? null === (e = O.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
+      return (0, M.probablyHasBuildOverride)() ? null === (e = O.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
-    M = (0, r.useStateFromStores)([ep.default], () => ep.default.getPremiumTypeSubscription()),
+    P = (0, r.useStateFromStores)([eI.default], () => eI.default.getPremiumTypeSubscription()),
     x = (0, r.useStateFromStores)([e_.default], () => e_.default.getEverSpeakingWhileMuted()),
     y = (0, r.useStateFromStores)([eh.default], () => eh.default.hasLayers()),
     D = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || y || eU.ProcessArgs.isDisallowPopupsSet(),
@@ -686,7 +686,7 @@ function ez() {
     eg = function() {
       let e = (0, w.useIsDismissibleContentDismissed)(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2),
         [t, a] = (0, r.useStateFromStoresArray)([Z.default], () => [Z.default.hasFetchedRelevance, Z.default.profileThemesRelevanceExceeded]),
-        [n, l] = (0, r.useStateFromStoresArray)([ep.default], () => [ep.default.hasFetchedMostRecentPremiumTypeSubscription(), ep.default.getMostRecentPremiumTypeSubscription()]),
+        [n, l] = (0, r.useStateFromStoresArray)([eI.default], () => [eI.default.hasFetchedMostRecentPremiumTypeSubscription(), eI.default.getMostRecentPremiumTypeSubscription()]),
         {
           enabled: i
         } = X.default.useExperiment({
@@ -720,9 +720,9 @@ function ez() {
     userTag: E,
     hidePrivateData: h,
     occluded: D,
-    premiumSubscription: M,
+    premiumSubscription: P,
     selfDeaf: T,
-    selfMute: I,
+    selfMute: p,
     serverDeaf: g,
     serverMute: C,
     showRichProfilePopup: G,
@@ -732,7 +732,7 @@ function ez() {
     speakingWhileMuted: x,
     status: c,
     streaming: d,
-    suppress: p,
+    suppress: I,
     webBuildOverride: L,
     awaitingRemote: U,
     isEligibleForPomelo: b
@@ -751,7 +751,7 @@ function eq(e) {
     height: 9,
     className: eH.hasBuildOverride,
     "aria-hidden": !0
-  }) : a && (r = (0, n.jsx)(eM.CircleBadge, {
+  }) : a && (r = (0, n.jsx)(eP.CircleBadge, {
     color: U.default.STATUS_DANGER,
     className: eH.hasBuildOverride,
     "aria-hidden": !0
@@ -783,18 +783,18 @@ function eQ(e) {
     onContextMenu: h
   } = e, C = t || l || a, {
     Component: S,
-    play: I,
-    events: p
+    play: p,
+    events: I
   } = (0, _.useMicrophoneLottie)(C ? "unmute" : "mute"), T = a || l ? c.MicrophoneDenyIcon : S;
-  return s.useEffect(() => () => I(), [C, I]), (0, n.jsx)(eL.default, {
+  return s.useEffect(() => () => p(), [C, p]), (0, n.jsx)(eL.default, {
     tooltipText: r,
     tooltipColor: o,
     tooltipForceOpen: u,
     onMouseEnter: () => {
-      d(), p.onMouseEnter()
+      d(), I.onMouseEnter()
     },
     onMouseLeave: () => {
-      f(), p.onMouseLeave()
+      f(), I.onMouseLeave()
     },
     icon: (0, n.jsx)(T, {
       size: "custom",
@@ -828,7 +828,7 @@ function eZ(e) {
     }
   } = (0, h.useHeadphonesLottie)(u ? "undeafen" : "deafen"), C = a ? d.HeadphonesDenyIcon : c;
   return s.useEffect(() => () => f(), [u, f]), (0, n.jsx)(eL.default, {
-    tooltipText: (0, M.default)(t, a, l),
+    tooltipText: (0, P.default)(t, a, l),
     onMouseEnter: E,
     onMouseLeave: _,
     icon: (0, n.jsx)(C, {

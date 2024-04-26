@@ -10,7 +10,7 @@ var n = s("481060"),
   d = s("981631"),
   u = s("474936"),
   c = s("689938"),
-  S = s("122714");
+  S = s("219220");
 t.default = function(e) {
   let {
     hasAppliedGuildBoosts: t,
@@ -18,8 +18,8 @@ t.default = function(e) {
     hasGuildAffinitiesOrInGuild: E,
     subscriptionIsPausedOrPausePending: T
   } = e, {
-    subtitle: m,
-    flavor: f
+    subtitle: f,
+    flavor: m
   } = function(e) {
     let {
       hasAppliedGuildBoosts: t,
@@ -61,10 +61,10 @@ t.default = function(e) {
     children: [(0, a.jsx)(n.Heading, {
       variant: "heading-lg/bold",
       className: S.subtitle,
-      children: m
-    }), null != f && (0, a.jsx)(n.Text, {
-      variant: "text-sm/normal",
       children: f
+    }), null != m && (0, a.jsx)(n.Text, {
+      variant: "text-sm/normal",
+      children: m
     })]
   })
 }

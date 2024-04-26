@@ -16,18 +16,18 @@ var n = a("735250"),
   C = a("977156"),
   m = a("874137"),
   S = a("78826"),
-  I = a("909389"),
-  p = a("941348"),
+  p = a("909389"),
+  I = a("941348"),
   T = a("46140"),
   g = a("981631"),
-  A = a("177630");
+  A = a("905277");
 t.default = function(e) {
   var t, a, l;
   let {
     overrideQuest: N
   } = e, v = (0, C.useIsEligibleForQuests)({
     location: T.QuestsExperimentLocations.QUESTS_BAR
-  }), R = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), L = (0, o.useStateFromStores)([E.default], () => null != N ? N : (0, _.getQuestForTargetedContent)(E.default.quests, h.QuestContent.QUEST_BAR)), O = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()), P = s.useRef(-1), M = s.useRef(!1), [x, y] = s.useState(!1), [D, b] = s.useState(!1), [U, j] = s.useState(!1), [G, w] = s.useState(!0), [k, F] = s.useState(240), B = s.useRef(null), H = (null == L ? void 0 : null === (t = L.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, V = s.useRef(H), Y = (null == L ? void 0 : null === (a = L.userStatus) || void 0 === a ? void 0 : a.completedAt) != null, W = (null == L ? void 0 : null === (l = L.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, K = (null == L ? void 0 : L.userStatus) != null && (0, _.isDismissed)(null == L ? void 0 : L.userStatus, h.QuestContent.QUEST_BAR), z = (0, f.useIsQuestExpired)(L), {
+  }), R = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), L = (0, o.useStateFromStores)([E.default], () => null != N ? N : (0, _.getQuestForTargetedContent)(E.default.quests, h.QuestContent.QUEST_BAR)), O = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()), M = s.useRef(-1), P = s.useRef(!1), [x, y] = s.useState(!1), [D, b] = s.useState(!1), [U, j] = s.useState(!1), [G, w] = s.useState(!0), [k, F] = s.useState(240), B = s.useRef(null), H = (null == L ? void 0 : null === (t = L.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, V = s.useRef(H), Y = (null == L ? void 0 : null === (a = L.userStatus) || void 0 === a ? void 0 : a.completedAt) != null, W = (null == L ? void 0 : null === (l = L.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, K = (null == L ? void 0 : L.userStatus) != null && (0, _.isDismissed)(null == L ? void 0 : L.userStatus, h.QuestContent.QUEST_BAR), z = (0, f.useIsQuestExpired)(L), {
     hasError: q,
     isLoading: Q
   } = (0, S.useQuestsAssetsLoadState)(), Z = s.useCallback(() => {
@@ -36,33 +36,33 @@ t.default = function(e) {
   }, []), X = s.useCallback(() => {
     y(!0)
   }, []), J = s.useCallback(() => {
-    y(!1), !M.current && !Y && b(!1)
+    y(!1), !P.current && !Y && b(!1)
   }, [Y]), $ = s.useCallback(() => {
-    y(!1), !Y && b(!1), M.current = !1
+    y(!1), !Y && b(!1), P.current = !1
   }, [Y]), ee = s.useCallback(function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
       {
         withDelay: t = !1
       } = e;
-    t ? P.current = window.setTimeout(Z, 75) : Z()
+    t ? M.current = window.setTimeout(Z, 75) : Z()
   }, [Z]), et = s.useCallback(() => {
-    if (window.clearTimeout(P.current), !Y && !x) !M.current && b(!1)
+    if (window.clearTimeout(M.current), !Y && !x) !P.current && b(!1)
   }, [x, Y]), ea = s.useCallback(() => {
     null != L && (0, c.trackQuestEvent)({
       questId: L.id,
       event: g.AnalyticEvents.QUEST_HOVER
-    }), M.current = !0, ee({
+    }), P.current = !0, ee({
       withDelay: !0
     })
   }, [ee, L]), en = s.useCallback(() => {
-    M.current = !1, et()
+    P.current = !1, et()
   }, [et]);
   s.useLayoutEffect(() => {
     Y && Z()
   }, [Y, Z]), s.useLayoutEffect(() => {
-    H && !V.current && M.current && Z()
+    H && !V.current && P.current && Z()
   }, [H, Z]), s.useLayoutEffect(() => {
-    !Y && H && !V.current && !M.current && b(!1)
+    !Y && H && !V.current && !P.current && b(!1)
   }, [H, Y]);
   let es = v && !K && !W && null != L && !z && !Q,
     el = s.useRef(es);
@@ -129,7 +129,7 @@ t.default = function(e) {
     questContent: h.QuestContent.QUEST_BAR,
     overrideVisibility: !O && es,
     children: () => {
-      let e = eo === C.QuestBarExperimentVariants.V2 ? p.default : I.default;
+      let e = eo === C.QuestBarExperimentVariants.V2 ? I.default : p.default;
       return (0, n.jsx)(r.animated.div, {
         "aria-hidden": !es,
         className: i()(A.wrapper, {

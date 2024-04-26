@@ -20,8 +20,8 @@ var n = a("735250"),
   C = a("484459"),
   m = a("103575"),
   S = a("314897"),
-  I = a("131951"),
-  p = a("836946"),
+  p = a("131951"),
+  I = a("836946"),
   T = a("381238"),
   g = a("255439"),
   A = a("729285"),
@@ -29,11 +29,11 @@ var n = a("735250"),
   v = a("51144"),
   R = a("524484"),
   L = a("689938"),
-  O = a("825292");
-let P = {
+  O = a("689835");
+let M = {
     offset: 2
   },
-  M = {
+  P = {
     serverDeaf: {
       icon: T.default,
       colorize: !0,
@@ -92,8 +92,8 @@ function y(e) {
     mute: d,
     deaf: c,
     serverMute: S,
-    serverDeaf: p
-  } = e, T = (0, r.useStateFromStores)([I.default], () => I.default.isLocalMute(o.id)), g = (0, h.default)({
+    serverDeaf: I
+  } = e, T = (0, r.useStateFromStores)([p.default], () => p.default.isLocalMute(o.id)), g = (0, h.default)({
     userId: o.id,
     checkSoundSharing: !0
   }), A = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, N = o.getAvatarURL(l.guild_id, 24), y = null != u ? u : v.default.getName(o), {
@@ -108,13 +108,13 @@ function y(e) {
       mute: s,
       localMute: l
     } = e, i = (0, f.useRedesignIconContext)().enabled;
-    if (t) return i ? x.serverDeaf : M.serverDeaf;
-    if (a) return i ? x.deaf : M.deaf;
-    if (n) return i ? x.serverMute : M.serverMute;
-    else if (l) return i ? x.localMute : M.mute;
-    else if (s) return i ? x.mute : M.mute
+    if (t) return i ? x.serverDeaf : P.serverDeaf;
+    if (a) return i ? x.deaf : P.deaf;
+    if (n) return i ? x.serverMute : P.serverMute;
+    else if (l) return i ? x.localMute : P.mute;
+    else if (s) return i ? x.mute : P.mute
   }({
-    serverDeaf: p,
+    serverDeaf: I,
     deaf: c,
     serverMute: S,
     mute: d,
@@ -167,7 +167,7 @@ function y(e) {
         ...e,
         className: O.avatarContainer,
         onContextMenu: G,
-        focusProps: P,
+        focusProps: M,
         children: (0, n.jsx)(_.default, {
           shakeLocation: R.ShakeLocation.VOICE_USER,
           isShaking: g,
@@ -199,17 +199,17 @@ function D(e) {
     voiceStates: t,
     channel: a,
     className: l
-  } = e, [o, u] = s.useState(!1), d = o ? N.default : A.default, c = (0, n.jsx)(p.default, {
+  } = e, [o, u] = s.useState(!1), d = o ? N.default : A.default, c = (0, n.jsx)(I.default, {
     className: O.expandButton,
     onClick: () => u(!o),
-    color: p.CircleIconButtonColors.PRIMARY,
-    size: p.CircleIconButtonSizes.SIZE_24,
+    color: I.CircleIconButtonColors.PRIMARY,
+    size: I.CircleIconButtonSizes.SIZE_24,
     tooltip: o ? L.default.Messages.VOICE_PANEL_HIDE_EXTRAS : L.default.Messages.VOICE_PANEL_SHOW_EXTRAS,
     icon: (0, n.jsx)(d, {
       width: 16,
       height: 16
     }),
-    focusProps: P
+    focusProps: M
   }), E = (0, r.useStateFromStores)([S.default], () => S.default.getId(), []), [h, _] = function(e, t) {
     let a = [];
     for (let n of e) {

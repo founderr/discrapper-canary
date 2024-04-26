@@ -6,7 +6,7 @@ var l = n("692547"),
   s = n("481060"),
   i = n("311888"),
   r = n("689938"),
-  o = n("419393");
+  o = n("726225");
 t.default = () => (0, a.jsx)(s.Tooltip, {
   text: r.default.Messages.STAGE_MODERATOR_TOOLTIP,
   children: e => (0, a.jsx)("div", {

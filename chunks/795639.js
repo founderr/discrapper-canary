@@ -29,7 +29,7 @@ var s = a("735250"),
   v = a("127654"),
   A = a("124252"),
   I = a("689938"),
-  j = a("496252");
+  j = a("493803");
 let R = [{
     name: "Media Post Thumbnail",
     extensions: ["jpg", "jpeg", "png", "gif", "webp"]

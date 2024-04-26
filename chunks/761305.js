@@ -1,34 +1,34 @@
 "use strict";
-s.r(t), s("47120");
-var n, a = s("735250"),
-  l = s("470079"),
-  i = s("593473"),
-  r = s("442837"),
-  u = s("544891"),
-  o = s("108427"),
-  d = s("601964"),
-  c = s("896797"),
-  f = s("819570"),
-  E = s("129293"),
-  I = s("981631"),
-  _ = s("689938"),
-  h = s("794711");
+n.r(t), n("47120");
+var s, a = n("735250"),
+  l = n("470079"),
+  i = n("593473"),
+  r = n("442837"),
+  u = n("544891"),
+  o = n("108427"),
+  d = n("601964"),
+  c = n("896797"),
+  f = n("819570"),
+  E = n("129293"),
+  _ = n("981631"),
+  I = n("689938"),
+  p = n("949086");
 
-function p(e, t, s) {
+function h(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: s,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = s, e
+  }) : e[t] = n, e
 }
 r.default.initialize();
-class T extends(n = l.PureComponent) {
+class T extends(s = l.PureComponent) {
   componentDidMount() {
     let e = (0, E.default)(this.props.location),
       t = (0, i.parse)(this.props.location.search);
     u.HTTP.post({
-      url: I.Endpoints.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
+      url: _.Endpoints.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
       body: {
         token: e,
         pixel_uuid: t.hash,
@@ -40,11 +40,11 @@ class T extends(n = l.PureComponent) {
         body: {
           guild: t
         }
-      } = e, s = new d.default(t);
+      } = e, n = new d.default(t);
       this.setState({
         success: !0,
         busy: !1,
-        guild: s
+        guild: n
       })
     }, () => this.setState({
       success: !1,
@@ -61,28 +61,28 @@ class T extends(n = l.PureComponent) {
       defaultRoute: e,
       transitionTo: t
     } = this.props, {
-      guild: s
+      guild: n
     } = this.state;
     return (0, a.jsxs)(f.default, {
       children: [(0, a.jsx)(f.Title, {
-        className: h.marginBottom8,
-        children: _.default.Messages.SERVER_HIGHLIGHT_UNSUBSCRIBE_HEADER
+        className: p.marginBottom8,
+        children: I.default.Messages.SERVER_HIGHLIGHT_UNSUBSCRIBE_HEADER
       }), (0, a.jsx)(f.SubTitle, {
-        children: _.default.Messages.SERVER_HIGHLIGHT_UNSUBSCRIBE_BODY.format({
-          guildName: s.name
+        children: I.default.Messages.SERVER_HIGHLIGHT_UNSUBSCRIBE_BODY.format({
+          guildName: n.name
         })
       }), (0, a.jsx)(f.Button, {
-        className: h.marginTop40,
+        className: p.marginTop40,
         onClick: () => t(e),
-        children: _.default.Messages.CONTINUE_TO_WEBAPP
+        children: I.default.Messages.CONTINUE_TO_WEBAPP
       }), (0, a.jsx)(f.Button, {
-        className: h.marginTop8,
+        className: p.marginTop8,
         color: f.Button.Colors.LINK,
         look: f.Button.Looks.LINK,
         onClick: () => {
-          t(I.Routes.USER_GUILD_NOTIFICATION_SETTINGS(s.id))
+          t(_.Routes.USER_GUILD_NOTIFICATION_SETTINGS(n.id))
         },
-        children: _.default.Messages.SERVER_HIGHLIGHT_MANAGE_SETTINGS
+        children: I.default.Messages.SERVER_HIGHLIGHT_MANAGE_SETTINGS
       })]
     })
   }
@@ -93,17 +93,17 @@ class T extends(n = l.PureComponent) {
     } = this.props;
     return (0, a.jsxs)(f.default, {
       children: [(0, a.jsx)(f.Image, {
-        src: s("105020"),
-        className: h.marginBottom20
+        src: n("105020"),
+        className: p.marginBottom20
       }), (0, a.jsx)(f.Title, {
-        className: h.marginBottom8,
-        children: _.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_HEADER
+        className: p.marginBottom8,
+        children: I.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_HEADER
       }), (0, a.jsx)(f.SubTitle, {
-        children: _.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_BODY
+        children: I.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_BODY
       }), (0, a.jsx)(f.Button, {
-        className: h.marginTop40,
+        className: p.marginTop40,
         onClick: () => t(e),
-        children: _.default.Messages.CONTINUE_TO_WEBAPP
+        children: I.default.Messages.CONTINUE_TO_WEBAPP
       })]
     })
   }
@@ -115,15 +115,15 @@ class T extends(n = l.PureComponent) {
     return e ? this.renderBusy() : t ? this.renderSuccess() : this.renderError()
   }
   constructor(...e) {
-    super(...e), p(this, "state", {
+    super(...e), h(this, "state", {
       busy: !0,
       success: !1,
       guild: null
     })
   }
 }
-p(T, "defaultProps", {
-  transitionTo: e => s.g.location.assign(e)
+h(T, "defaultProps", {
+  transitionTo: e => n.g.location.assign(e)
 }), t.default = r.default.connectStores([c.default], () => ({
   defaultRoute: c.default.defaultRoute
 }))(T)

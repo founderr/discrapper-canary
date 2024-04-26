@@ -47,7 +47,7 @@ var s = a("735250"),
   V = a("981631"),
   z = a("245335"),
   Y = a("689938"),
-  K = a("385823");
+  K = a("936672");
 async function W(e) {
   return e.type === O.RowTypes.DM || e.type === O.RowTypes.FRIEND ? await f.default.ensurePrivateChannel(e.item.id) : e.item.id
 }

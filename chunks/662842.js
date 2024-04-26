@@ -18,8 +18,8 @@ var n, s, l = a("735250"),
   C = a("924301"),
   m = a("504160"),
   S = a("151864"),
-  I = a("725436"),
-  p = a("497656"),
+  p = a("725436"),
+  I = a("497656"),
   T = a("554747"),
   g = a("230900"),
   A = a("854698"),
@@ -28,8 +28,8 @@ var n, s, l = a("735250"),
   R = a("565799"),
   L = a("501655"),
   O = a("427679"),
-  P = a("448206"),
-  M = a("484459"),
+  M = a("448206"),
+  P = a("484459"),
   x = a("103575"),
   y = a("496675"),
   D = a("594174"),
@@ -42,14 +42,14 @@ var n, s, l = a("735250"),
   F = a("981631"),
   B = a("765305"),
   H = a("689938"),
-  V = a("615273");
+  V = a("613682");
 (s = n || (n = {}))[s.STAGE = 0] = "STAGE", s[s.EVENT_EXTERNAL = 1] = "EVENT_EXTERNAL", s[s.EVENT_VOICE = 2] = "EVENT_VOICE", s[s.STUDY_ROOM = 3] = "STUDY_ROOM";
 
 function Y(e) {
   let {
     guild: t,
     isStudyRoomNotice: a = !1
-  } = e, n = (0, p.useActiveEventOrStageInstanceChannel)(t.id), s = (0, T.useGuildActiveEvent)(t.id), r = (0, u.useStateFromStores)([O.default], () => O.default.getStageInstanceByChannel(null == n ? void 0 : n.id), [n]), {
+  } = e, n = (0, I.useActiveEventOrStageInstanceChannel)(t.id), s = (0, T.useGuildActiveEvent)(t.id), r = (0, u.useStateFromStores)([O.default], () => O.default.getStageInstanceByChannel(null == n ? void 0 : n.id), [n]), {
     isStageNoticeHidden: Y,
     isEventNoticeHidden: W
   } = (0, u.useStateFromStoresObject)([S.default], () => ({
@@ -59,7 +59,7 @@ function Y(e) {
     isEventNoticeHidden: S.default.isLiveChannelNoticeHidden({
       eventId: null == s ? void 0 : s.id
     })
-  }), [r, s]), K = null == n ? void 0 : n.id, z = (0, u.useStateFromStoresArray)([R.default], () => [...new Set(R.default.getMutableParticipants(K, L.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [K]), q = (0, u.useStateFromStores)([R.default], () => null != K ? R.default.getParticipantCount(K, L.StageChannelParticipantNamedIndex.AUDIENCE) : 0, [K]), Q = (0, u.useStateFromStores)([y.default], () => y.default.can(F.Permissions.CONNECT, n)), Z = (0, P.default)(null == n ? void 0 : n.id), X = null == s ? void 0 : s.creator_id, J = (0, u.useStateFromStores)([D.default], () => D.default.getUser(X), [X]);
+  }), [r, s]), K = null == n ? void 0 : n.id, z = (0, u.useStateFromStoresArray)([R.default], () => [...new Set(R.default.getMutableParticipants(K, L.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [K]), q = (0, u.useStateFromStores)([R.default], () => null != K ? R.default.getParticipantCount(K, L.StageChannelParticipantNamedIndex.AUDIENCE) : 0, [K]), Q = (0, u.useStateFromStores)([y.default], () => y.default.can(F.Permissions.CONNECT, n)), Z = (0, M.default)(null == n ? void 0 : n.id), X = null == s ? void 0 : s.creator_id, J = (0, u.useStateFromStores)([D.default], () => D.default.getUser(X), [X]);
   i.useEffect(() => {
     null != X && (0, f.getUser)(X)
   }, [X]);
@@ -179,7 +179,7 @@ function Y(e) {
         return {
           noticeType: 1,
           title: t.name,
-          location: (0, I.guildEventDetailsParser)(e, !0),
+          location: (0, p.guildEventDetailsParser)(e, !0),
           locationIcon: (0, l.jsx)(G.default, {
             width: 16,
             height: 16,
@@ -278,7 +278,7 @@ function Y(e) {
     }), (el.length > 0 || null != ei) && (0, l.jsxs)("div", {
       className: V.participants,
       children: [el.map(e => (0, l.jsx)(c.Popout, {
-        preload: () => (0, M.maybeFetchUserProfileForPopout)(e, {
+        preload: () => (0, P.maybeFetchUserProfileForPopout)(e, {
           guildId: t.id
         }),
         renderPopout: t => (0, l.jsx)(x.default, {

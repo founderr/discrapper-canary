@@ -16,8 +16,8 @@ var a = s("735250"),
   S = s("279837"),
   E = s("144114"),
   T = s("607018"),
-  m = s("778764"),
-  f = s("314897"),
+  f = s("778764"),
+  m = s("314897"),
   _ = s("325067"),
   g = s("594174"),
   h = s("285952"),
@@ -28,8 +28,8 @@ var a = s("735250"),
   A = s("981631"),
   O = s("815660"),
   x = s("689938"),
-  R = s("438170"),
-  M = s("794711");
+  R = s("215229"),
+  M = s("949086");
 
 function v(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -216,7 +216,7 @@ class L extends n.PureComponent {
             children: x.default.Messages.TWO_FA_ENABLE
           })
         })]
-      }), e, this.renderMFASMS(), (0, a.jsx)(m.default, {})]
+      }), e, this.renderMFASMS(), (0, a.jsx)(f.default, {})]
     })
   }
   renderDisabled() {
@@ -232,7 +232,7 @@ class L extends n.PureComponent {
           size: o.ButtonSizes.SMALL,
           children: x.default.Messages.TWO_FA_ENABLE
         })
-      }), (0, a.jsx)(m.default, {})]
+      }), (0, a.jsx)(f.default, {})]
     })
   }
   render() {
@@ -340,9 +340,9 @@ class L extends n.PureComponent {
 function P(e) {
   let t = (0, r.useStateFromStores)([g.default], () => g.default.getCurrentUser());
   i()(null != t, "TwoFactorAuth: currentUser cannot be undefined");
-  let s = (0, r.useStateFromStoresObject)([_.default, f.default], () => ({
+  let s = (0, r.useStateFromStoresObject)([_.default, m.default], () => ({
     togglingSMS: _.default.togglingSMS,
-    hasTOTPEnabled: f.default.hasTOTPEnabled()
+    hasTOTPEnabled: m.default.hasTOTPEnabled()
   }));
   return (0, a.jsx)(L, {
     currentUser: t,

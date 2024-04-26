@@ -15,24 +15,24 @@ var l = n("735250"),
   c = n("601070"),
   f = n("91159"),
   h = n("488131"),
-  p = n("496675"),
-  m = n("306680"),
+  m = n("496675"),
+  p = n("306680"),
   C = n("594174"),
   g = n("768581"),
   E = n("709054"),
-  S = n("981631"),
-  _ = n("124368"),
+  _ = n("981631"),
+  S = n("124368"),
   I = n("689938"),
-  N = n("439688");
+  N = n("859995");
 
 function T(e) {
   let {
     channel: t
-  } = e, s = (0, r.useStateFromStoresArray)([c.default, m.default, p.default], () => {
+  } = e, s = (0, r.useStateFromStoresArray)([c.default, p.default, m.default], () => {
     let e = c.default.getActiveJoinedRelevantThreadsForParent(t.guild_id, t.id);
-    return i()(c.default.getActiveJoinedThreadsForParent(t.guild_id, t.id)).values().map(e => e.channel).concat(i().values(c.default.getActiveUnjoinedThreadsForParent(t.guild_id, t.id))).filter(t => !(t.id in e) && p.default.can(S.Permissions.VIEW_CHANNEL, t)).sort((e, t) => {
-      let n = m.default.lastMessageId(e.id),
-        l = m.default.lastMessageId(t.id);
+    return i()(c.default.getActiveJoinedThreadsForParent(t.guild_id, t.id)).values().map(e => e.channel).concat(i().values(c.default.getActiveUnjoinedThreadsForParent(t.guild_id, t.id))).filter(t => !(t.id in e) && m.default.can(_.Permissions.VIEW_CHANNEL, t)).sort((e, t) => {
+      let n = p.default.lastMessageId(e.id),
+        l = p.default.lastMessageId(t.id);
       return E.default.compare(n, l)
     }).reverse().value()
   }), u = t.isForumLikeChannel() ? 5 : 3;
@@ -76,7 +76,7 @@ function A(e) {
   return (0, l.jsxs)(o.Clickable, {
     className: N.row,
     onClick: e => {
-      (0, h.openThreadSidebarForViewing)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, _.OpenThreadAnalyticsLocations.POPOUT)
+      (0, h.openThreadSidebarForViewing)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, S.OpenThreadAnalyticsLocations.POPOUT)
     },
     children: [null == n ? (0, l.jsx)("img", {
       className: N.avatar,

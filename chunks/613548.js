@@ -35,12 +35,12 @@ var a = n("735250"),
   O = n("368666"),
   j = n("358221"),
   P = n("887012"),
-  b = n("444253"),
-  D = n("355827"),
+  D = n("444253"),
+  b = n("355827"),
   U = n("354459"),
   F = n("981631"),
   w = n("689938"),
-  k = n("371969");
+  k = n("298110");
 
 function H(e) {
   let {
@@ -122,7 +122,7 @@ function B(e) {
   }, "live-indicator"))), R && Z.push((0, a.jsx)(c.Popout, {
     position: "bottom",
     renderPopout: () => (0, a.jsx)(T.default, {
-      children: (0, a.jsx)(D.default, {
+      children: (0, a.jsx)(b.default, {
         channel: n
       })
     }),
@@ -158,7 +158,7 @@ function B(e) {
         closePopout: t
       } = e;
       return (0, a.jsx)(T.default, {
-        children: (0, a.jsx)(b.default, {
+        children: (0, a.jsx)(D.default, {
           channelId: g,
           onClose: t,
           appContext: s,

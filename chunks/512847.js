@@ -20,8 +20,8 @@ var n = a("735250"),
   C = a("592125"),
   m = a("430824"),
   S = a("131951"),
-  I = a("292959"),
-  p = a("19780"),
+  p = a("292959"),
+  I = a("19780"),
   T = a("944486"),
   g = a("606304"),
   A = a("979651"),
@@ -36,13 +36,13 @@ function O(e, t, a, n) {
       l = new r.BatchedStoreListener(e, () => {
         let e = t(),
           l = a(s, e);
-        null != l && !I.default.isSoundDisabled(l) && (0, R.playSound)(l, null != n ? n : .4), s = e
+        null != l && !p.default.isSoundDisabled(l) && (0, R.playSound)(l, null != n ? n : .4), s = e
       });
     return l.attach("useSound"), () => l.detach()
   })
 }
 
-function P() {
+function M() {
   return O([S.default, T.default], () => ({
     inVoiceChannel: null != T.default.getVoiceChannelId(),
     selfMute: S.default.isSelfMute(),
@@ -70,13 +70,13 @@ function P() {
   }), null
 }
 
-function M() {
-  return O([C.default, p.default, T.default, u.default], () => {
+function P() {
+  return O([C.default, I.default, T.default, u.default], () => {
     let e = C.default.getChannel(T.default.getVoiceChannelId()),
       t = null == e ? void 0 : e.type,
       a = null == e ? void 0 : e.getGuildId(),
-      n = p.default.getWasEverRtcConnected(),
-      s = p.default.getState();
+      n = I.default.getWasEverRtcConnected(),
+      s = I.default.getState();
     return {
       channelType: t,
       guildId: a,
@@ -252,6 +252,6 @@ function G() {
 
 function w() {
   return (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsx)(P, {}), (0, n.jsx)(M, {}), (0, n.jsx)(x, {}), (0, n.jsx)(y, {}), (0, n.jsx)(D, {}), (0, n.jsx)(U, {}), (0, n.jsx)(b, {}), (0, n.jsx)(j, {}), (0, n.jsx)(G, {})]
+    children: [(0, n.jsx)(M, {}), (0, n.jsx)(P, {}), (0, n.jsx)(x, {}), (0, n.jsx)(y, {}), (0, n.jsx)(D, {}), (0, n.jsx)(U, {}), (0, n.jsx)(b, {}), (0, n.jsx)(j, {}), (0, n.jsx)(G, {})]
   })
 }

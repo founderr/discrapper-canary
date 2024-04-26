@@ -16,20 +16,20 @@ var a = s("735250"),
   S = s("581883"),
   E = s("285952"),
   T = s("6048"),
-  m = s("154921"),
-  f = s("915486"),
+  f = s("154921"),
+  m = s("915486"),
   _ = s("883904"),
   g = s("68985"),
   h = s("211644"),
-  I = s("330676"),
-  N = s("794711");
+  I = s("903570"),
+  N = s("949086");
 
 function p(e) {
   let {
     contents: t,
     content: s,
     onChange: n
-  } = e, l = (0, f.hasBit)(t, o.DismissibleContent[s]);
+  } = e, l = (0, m.hasBit)(t, o.DismissibleContent[s]);
   return (0, a.jsx)(a.Fragment, {
     children: (0, a.jsx)(u.FormSwitch, {
       value: l,
@@ -37,7 +37,7 @@ function p(e) {
         n(s), l ? (0, c.removeDismissedContent)(o.DismissibleContent[s]) : (0, c.addDismissedContent)(o.DismissibleContent[s])
       },
       children: (0, a.jsx)(u.FormText, {
-        size: m.default.Sizes.SIZE_16,
+        size: f.default.Sizes.SIZE_16,
         className: N.marginTop4,
         children: "".concat(s.toLowerCase(), " (").concat(o.DismissibleContent[s], ")")
       })
@@ -70,7 +70,7 @@ function A() {
       dailyCapReached: g.default.hasUserHitDCCap(),
       dailyCapOverridden: g.default.dailyCapOverridden
     })),
-    [m, f] = n.useState(""),
+    [f, m] = n.useState(""),
     p = null !== (e = (0, r.useStateFromStores)([S.default], () => {
       var e;
       return null === (e = S.default.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents
@@ -93,8 +93,8 @@ function A() {
       })
     },
     R = t.map(e => o.DismissibleContent[e]),
-    M = A.filter(e => e.toLowerCase().includes(m.toLowerCase())).filter(e => !R.includes(e)),
-    v = Object.keys(o.DismissibleContent).filter(e => !R.includes(e)).filter(e => !A.includes(e)).filter(e => e.toLowerCase().includes(m.toLowerCase())).sort((e, t) => e.localeCompare(t));
+    M = A.filter(e => e.toLowerCase().includes(f.toLowerCase())).filter(e => !R.includes(e)),
+    v = Object.keys(o.DismissibleContent).filter(e => !R.includes(e)).filter(e => !A.includes(e)).filter(e => e.toLowerCase().includes(f.toLowerCase())).sort((e, t) => e.localeCompare(t));
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(u.FormSection, {
       title: "Dismissible Content Fatigue",
@@ -124,9 +124,9 @@ function A() {
       children: [(0, a.jsx)(T.default, {
         className: N.marginBottom20,
         size: T.default.Sizes.LARGE,
-        query: m,
-        onChange: f,
-        onClear: () => f("")
+        query: f,
+        onChange: m,
+        onClear: () => m("")
       }), (0, a.jsxs)(u.FormItem, {
         className: I.buttonsContainer,
         children: [(0, a.jsx)(u.Button, {

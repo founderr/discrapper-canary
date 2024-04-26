@@ -1,86 +1,86 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   getFormFieldBuilderComponent: function() {
     return p
   },
   openEmptyFormFieldModal: function() {
-    return C
+    return m
   }
 });
-var n = i("735250");
-i("470079");
-var r = i("392711"),
-  s = i("481060"),
-  a = i("246364"),
-  l = i("405545"),
-  o = i("382574"),
-  u = i("279988"),
-  c = i("786127"),
-  d = i("981631"),
-  f = i("689938");
+var i = n("735250");
+n("470079");
+var r = n("392711"),
+  s = n("481060"),
+  a = n("246364"),
+  l = n("405545"),
+  o = n("382574"),
+  u = n("279988"),
+  c = n("786127"),
+  d = n("981631"),
+  f = n("689938");
 
 function p(e) {
   let {
     dropHoveredIndex: t,
     formField: d,
     guild: p,
-    index: C,
-    isDragEnabled: h,
+    index: m,
+    isDragEnabled: I,
     submittedGuildJoinRequestsCount: _,
-    removeFormField: E,
-    updateFormField: I,
-    updateFormFieldOrder: T,
-    canRemove: x,
-    actionsLocation: g
+    removeFormField: h,
+    updateFormField: T,
+    updateFormFieldOrder: g,
+    canRemove: C,
+    actionsLocation: x
   } = e, v = async () => {
-    await E(C)
-  }, R = async e => {
-    await I(C, e)
-  }, A = async (e, t, i) => {
-    await T(e, t, i)
-  }, N = (0, r.uniqueId)(), S = t === C, M = {
-    key: N,
-    index: C,
-    isDragEnabled: h,
+    await h(m)
+  }, N = async e => {
+    await T(m, e)
+  }, R = async (e, t, n) => {
+    await g(e, t, n)
+  }, A = (0, r.uniqueId)(), S = t === m, M = {
+    key: A,
+    index: m,
+    isDragEnabled: I,
     isDropHovered: S,
     onEdit: () => {
-      0 === _ ? m(d, R, p) : (0, s.openModalLazy)(async () => {
+      0 === _ ? E(d, N, p) : (0, s.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([i.e("99387"), i.e("74673")]).then(i.bind(i, "394045"));
-        return t => (0, n.jsx)(e, {
+        } = await Promise.all([n.e("99387"), n.e("74673")]).then(n.bind(n, "394045"));
+        return t => (0, i.jsx)(e, {
           ...t,
           guildId: p.id,
           submittedGuildJoinRequestsCount: _,
-          onConfirm: () => m(d, R, p)
+          onConfirm: () => E(d, N, p)
         })
       })
     },
     onRemove: v,
-    onDrop: A,
-    canRemove: x,
-    actionsLocation: g
+    onDrop: R,
+    canRemove: C,
+    actionsLocation: x
   };
   switch (d.field_type) {
     case a.VerificationFormFieldTypes.TERMS:
-      return (0, n.jsx)(u.default, {
+      return (0, i.jsx)(u.default, {
         channelId: p.rulesChannelId,
         title: f.default.Messages.GUILD_RULES_HEADER,
         formField: d,
         ...M
       });
     case a.VerificationFormFieldTypes.PARAGRAPH:
-      return (0, n.jsx)(o.default, {
+      return (0, i.jsx)(o.default, {
         formField: d,
         ...M
       });
     case a.VerificationFormFieldTypes.TEXT_INPUT:
-      return (0, n.jsx)(c.default, {
+      return (0, i.jsx)(c.default, {
         formField: d,
         ...M
       });
     case a.VerificationFormFieldTypes.MULTIPLE_CHOICE:
-      return (0, n.jsx)(l.default, {
+      return (0, i.jsx)(l.default, {
         formField: d,
         ...M
       });
@@ -89,7 +89,7 @@ function p(e) {
   }
 }
 
-function C(e, t, r) {
+function m(e, t, r) {
   let l = {
     onCloseRequest: d.NOOP
   };
@@ -98,9 +98,9 @@ function C(e, t, r) {
       return (0, s.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([i.e("99387"), i.e("5945")]).then(i.bind(i, "92451"));
-        return i => (0, n.jsx)(e, {
-          ...i,
+        } = await Promise.all([n.e("99387"), n.e("5945")]).then(n.bind(n, "92451"));
+        return n => (0, i.jsx)(e, {
+          ...n,
           field: void 0,
           onSave: t,
           guild: r
@@ -110,9 +110,9 @@ function C(e, t, r) {
       return (0, s.openModalLazy)(async () => {
         let {
           ParagraphFormFieldModal: e
-        } = await Promise.all([i.e("99387"), i.e("6595")]).then(i.bind(i, "457042"));
-        return i => (0, n.jsx)(e, {
-          ...i,
+        } = await Promise.all([n.e("99387"), n.e("6595")]).then(n.bind(n, "457042"));
+        return n => (0, i.jsx)(e, {
+          ...n,
           field: void 0,
           onSave: t
         })
@@ -121,9 +121,9 @@ function C(e, t, r) {
       return (0, s.openModalLazy)(async () => {
         let {
           TextInputFormFieldModal: e
-        } = await Promise.all([i.e("99387"), i.e("6595")]).then(i.bind(i, "457042"));
-        return i => (0, n.jsx)(e, {
-          ...i,
+        } = await Promise.all([n.e("99387"), n.e("6595")]).then(n.bind(n, "457042"));
+        return n => (0, i.jsx)(e, {
+          ...n,
           field: void 0,
           onSave: t
         })
@@ -132,9 +132,9 @@ function C(e, t, r) {
       return (0, s.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([i.e("99387"), i.e("94064")]).then(i.bind(i, "607569"));
-        return i => (0, n.jsx)(e, {
-          ...i,
+        } = await Promise.all([n.e("99387"), n.e("94064")]).then(n.bind(n, "607569"));
+        return n => (0, i.jsx)(e, {
+          ...n,
           field: void 0,
           onSave: t
         })
@@ -142,7 +142,7 @@ function C(e, t, r) {
   }
 }
 
-function m(e, t, r) {
+function E(e, t, r) {
   let l = {
     onCloseRequest: d.NOOP
   };
@@ -151,9 +151,9 @@ function m(e, t, r) {
       return (0, s.openModalLazy)(async () => {
         let {
           default: s
-        } = await Promise.all([i.e("99387"), i.e("5945")]).then(i.bind(i, "92451"));
-        return i => (0, n.jsx)(s, {
-          ...i,
+        } = await Promise.all([n.e("99387"), n.e("5945")]).then(n.bind(n, "92451"));
+        return n => (0, i.jsx)(s, {
+          ...n,
           field: e,
           onSave: t,
           guild: r
@@ -163,9 +163,9 @@ function m(e, t, r) {
       return (0, s.openModalLazy)(async () => {
         let {
           ParagraphFormFieldModal: r
-        } = await Promise.all([i.e("99387"), i.e("6595")]).then(i.bind(i, "457042"));
-        return i => (0, n.jsx)(r, {
-          ...i,
+        } = await Promise.all([n.e("99387"), n.e("6595")]).then(n.bind(n, "457042"));
+        return n => (0, i.jsx)(r, {
+          ...n,
           field: e,
           onSave: t
         })
@@ -174,9 +174,9 @@ function m(e, t, r) {
       return (0, s.openModalLazy)(async () => {
         let {
           TextInputFormFieldModal: r
-        } = await Promise.all([i.e("99387"), i.e("6595")]).then(i.bind(i, "457042"));
-        return i => (0, n.jsx)(r, {
-          ...i,
+        } = await Promise.all([n.e("99387"), n.e("6595")]).then(n.bind(n, "457042"));
+        return n => (0, i.jsx)(r, {
+          ...n,
           field: e,
           onSave: t
         })
@@ -185,9 +185,9 @@ function m(e, t, r) {
       return (0, s.openModalLazy)(async () => {
         let {
           default: r
-        } = await Promise.all([i.e("99387"), i.e("94064")]).then(i.bind(i, "607569"));
-        return i => (0, n.jsx)(r, {
-          ...i,
+        } = await Promise.all([n.e("99387"), n.e("94064")]).then(n.bind(n, "607569"));
+        return n => (0, i.jsx)(r, {
+          ...n,
           field: e,
           onSave: t
         })

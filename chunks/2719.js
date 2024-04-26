@@ -16,8 +16,8 @@ var a = s("735250"),
   S = s("230711"),
   E = s("129861"),
   T = s("279837"),
-  m = s("952306"),
-  f = s("299206"),
+  f = s("952306"),
+  m = s("299206"),
   _ = s("295474"),
   g = s("144114"),
   h = s("918505"),
@@ -40,7 +40,7 @@ var a = s("735250"),
   y = s("801461"),
   B = s("228168"),
   F = s("689938"),
-  G = s("557013");
+  G = s("350808");
 let k = L.default.getEnableHardwareAcceleration() ? c.AnimatedAvatar : c.Avatar;
 
 function w(e) {
@@ -48,7 +48,7 @@ function w(e) {
   let {
     className: r,
     user: o
-  } = e, d = n.useRef(null), S = (0, h.usePomeloEligibility)(), E = (0, I.useIsEligibleForPomelo)(), T = (0, _.useGuildAutomodProfileQuarantineErrors)(), m = null !== (l = null == T ? void 0 : null === (t = T.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : null, [f, g] = n.useState(!1);
+  } = e, d = n.useRef(null), S = (0, h.usePomeloEligibility)(), E = (0, I.useIsEligibleForPomelo)(), T = (0, _.useGuildAutomodProfileQuarantineErrors)(), f = null !== (l = null == T ? void 0 : null === (t = T.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : null, [m, g] = n.useState(!1);
   n.useEffect(() => {
     g(null != d.current && d.current.scrollWidth > d.current.clientWidth)
   }, [o.username]);
@@ -89,10 +89,10 @@ function w(e) {
           color: u.default.colors.STATUS_WARNING.css
         })
       })
-    }), null != m && (0, a.jsx)("div", {
+    }), null != f && (0, a.jsx)("div", {
       className: G.pomeloWarning,
       children: (0, a.jsx)(c.Tooltip, {
-        text: m,
+        text: f,
         "aria-label": !1,
         children: e => (0, a.jsx)(M.default, {
           ...e,
@@ -126,7 +126,7 @@ function w(e) {
             })
           }
         }),
-        children: f ? F.default.Messages.DISAPPROVAL : F.default.Messages.EDIT
+        children: m ? F.default.Messages.DISAPPROVAL : F.default.Messages.EDIT
       })
     })]
   })
@@ -137,9 +137,9 @@ function H(e) {
   let {
     user: l,
     className: r
-  } = e, o = (0, _.useGuildAutomodProfileQuarantineErrors)(), d = null !== (s = null == o ? void 0 : null === (t = o.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : null, S = D.default.getGlobalName(l), E = n.useRef(null), [T, m] = n.useState(!1);
+  } = e, o = (0, _.useGuildAutomodProfileQuarantineErrors)(), d = null !== (s = null == o ? void 0 : null === (t = o.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : null, S = D.default.getGlobalName(l), E = n.useRef(null), [T, f] = n.useState(!1);
   return n.useEffect(() => {
-    m(null != E.current && E.current.scrollWidth > E.current.clientWidth)
+    f(null != E.current && E.current.scrollWidth > E.current.clientWidth)
   }, [S]), (0, a.jsxs)("div", {
     className: i()(G.field, r),
     children: [(0, a.jsx)("div", {
@@ -249,7 +249,7 @@ function Y(e) {
     buttonAriaLabel: F.default.Messages.CLAIM_ACCOUNT_SHORT,
     buttonColor: c.Button.Colors.BRAND,
     valueMessage: F.default.Messages.USER_SETTINGS_ADD_EMAIL_CLAIM,
-    handleClick: () => m.default.openClaimAccountModal()
+    handleClick: () => f.default.openClaimAccountModal()
   };
   return (0, a.jsxs)("div", {
     className: i()(G.field, n),
@@ -279,7 +279,7 @@ function Y(e) {
   })
 }
 
-function K(e) {
+function W(e) {
   let t, {
     className: n,
     user: l
@@ -353,10 +353,10 @@ function K(e) {
   })
 }
 
-function W(e) {
+function K(e) {
   let {
     user: t
-  } = e, s = (0, f.default)({
+  } = e, s = (0, m.default)({
     id: t.id,
     label: F.default.Messages.COPY_ID_USER
   });
@@ -431,7 +431,7 @@ function Q() {
             user: t,
             className: G.userTag,
             discriminatorClass: G.discriminator
-          }), (0, a.jsx)(W, {
+          }), (0, a.jsx)(K, {
             user: t
           })]
         }), (0, a.jsx)(C.default, {
@@ -461,7 +461,7 @@ function Q() {
         }), (0, a.jsx)(Y, {
           className: G.fieldSpacer,
           user: t
-        }), (0, a.jsx)(K, {
+        }), (0, a.jsx)(W, {
           className: G.fieldSpacer,
           user: t
         })]

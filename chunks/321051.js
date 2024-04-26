@@ -6,13 +6,13 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   s = n("470079"),
-  a = n("692547"),
-  l = n("467949"),
+  l = n("692547"),
+  a = n("467949"),
   r = n("481060"),
   u = n("697426"),
   o = n("603074"),
   c = n("689938"),
-  d = n("285897");
+  d = n("530557");
 let m = [54, 8, 8, 8];
 
 function f(e) {
@@ -69,8 +69,8 @@ function f(e) {
       className: d.sound,
       onClick: () => p(!0),
       children: null == n ? (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(l.SoundboardIcon, {
-          color: a.default.colors.WHITE,
+        children: [(0, i.jsx)(a.SoundboardIcon, {
+          color: l.default.colors.WHITE,
           className: d.soundIcon,
           width: 14,
           height: 14

@@ -14,7 +14,7 @@ var i = l("120356"),
   u = l("481060"),
   o = l("507893"),
   d = l("759231"),
-  c = l("550565");
+  c = l("831927");
 (a = n || (n = {})).INFO = "info", a.WARNING = "warning";
 let f = {
     info: c.info,

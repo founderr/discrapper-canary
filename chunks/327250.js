@@ -35,9 +35,9 @@ var l = n("120356"),
   y = n("991570"),
   O = n("981631"),
   j = n("689938"),
-  P = n("109336");
+  P = n("361984");
 
-function b(e) {
+function D(e) {
   let {
     user: t,
     backgroundColor: n,
@@ -91,7 +91,7 @@ function b(e) {
   })
 }
 
-function D(e) {
+function b(e) {
   let {
     tag: t = "div",
     disabled: n,
@@ -130,14 +130,14 @@ function U(e) {
   }), [l, p]), R = (0, d.isMemberCommunicationDisabled)(s), {
     analyticsLocations: L,
     newestAnalyticsLocation: y
-  } = (0, u.default)(), b = (0, h.useTrackModerationAction)(m, {
+  } = (0, u.default)(), D = (0, h.useTrackModerationAction)(m, {
     targetUserId: l.id,
     location: y,
     locations: L
   });
   return (0, a.jsxs)("div", {
     className: P.bottomRow,
-    children: [(0, a.jsxs)(D, {
+    children: [(0, a.jsxs)(b, {
       "aria-label": j.default.Messages.SEND_DM,
       style: {
         backgroundColor: t
@@ -153,7 +153,7 @@ function U(e) {
         color: "none",
         children: j.default.Messages.SEND_DM
       })]
-    }), (0, a.jsxs)(D, {
+    }), (0, a.jsxs)(b, {
       disabled: !g,
       "aria-label": j.default.Messages.KICK,
       style: {
@@ -181,7 +181,7 @@ function U(e) {
         color: "none",
         children: j.default.Messages.KICK
       })]
-    }), (0, a.jsxs)(D, {
+    }), (0, a.jsxs)(b, {
       disabled: !S,
       "aria-label": j.default.Messages.BAN,
       style: {
@@ -209,7 +209,7 @@ function U(e) {
         color: "none",
         children: j.default.Messages.BAN
       })]
-    }), (0, a.jsxs)(D, {
+    }), (0, a.jsxs)(b, {
       disabled: !v,
       "aria-label": j.default.Messages.TIMEOUT_USER,
       style: {
@@ -227,13 +227,13 @@ function U(e) {
         color: "none",
         children: R ? j.default.Messages.REMOVE : j.default.Messages.TIMEOUT_USER
       })]
-    }), (0, a.jsxs)(D, {
+    }), (0, a.jsxs)(b, {
       "aria-label": j.default.Messages.COPY_ID,
       style: {
         backgroundColor: t
       },
       onClick: () => {
-        b(h.ModerationActionType.COPY_ID), (0, M.copy)(l.id)
+        D(h.ModerationActionType.COPY_ID), (0, M.copy)(l.id)
       },
       disabled: !M.SUPPORTS_COPY,
       children: [(0, a.jsx)(N.default, {
@@ -257,7 +257,7 @@ function F(e) {
   } = e, s = (0, i.useStateFromStores)([_.default], () => _.default.getUser(t), [t]), o = (0, i.useStateFromStores)([p.default], () => p.default.getMember(n, t), [n, t]), u = (0, y.useProfileThemedPanelBackground)(t, n, .8, r.tokens.colors.BACKGROUND_SECONDARY);
   return null == s || null == o ? null : (0, a.jsxs)("div", {
     className: P.container,
-    children: [(0, a.jsx)(b, {
+    children: [(0, a.jsx)(D, {
       user: s,
       guildId: n,
       onClose: l,

@@ -14,7 +14,7 @@ var n = a("735250"),
   d = a("451478"),
   c = a("301822"),
   f = a("302221"),
-  E = a("328877");
+  E = a("651596");
 let h = [0, .5, 1],
   _ = {
     "layers[1].shapes[1].g.k.k": [0, .522, .278, .776, .5, .522, .278, .776, 1, .522, .278, .776],
@@ -50,15 +50,15 @@ function m(e) {
       },
       n = h.reduce((e, a) => [...e, a, t.r, t.g, t.b], []);
     return C(a.id, n)
-  }, [a]), I = (null === (t = a.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, p = !l && r;
+  }, [a]), p = (null === (t = a.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, I = !l && r;
   s.useEffect(() => {
     var e, t, a, n;
-    r ? p && (null === (n = o.current) || void 0 === n || null === (a = n.animation) || void 0 === a || a.play()) : null === (t = o.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0)
-  }, [p, r]);
+    r ? I && (null === (n = o.current) || void 0 === n || null === (a = n.animation) || void 0 === a || a.play()) : null === (t = o.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0)
+  }, [I, r]);
   let T = s.useCallback(() => {
     m(!0)
   }, []);
-  return null == S || I ? (0, n.jsx)("div", {
+  return null == S || p ? (0, n.jsx)("div", {
     className: E.backgroundFallback,
     style: {
       backgroundImage: "linear-gradient(90deg, ".concat(a.config.colors.primary, ", ").concat(a.config.colors.secondary, ")")
@@ -69,7 +69,7 @@ function m(e) {
       ref: o,
       onComplete: T,
       importData: () => S,
-      shouldAnimate: !_ && p,
+      shouldAnimate: !_ && I,
       className: i()(E.lottieAnimation, E.lottieAnimationBackground),
       loop: 0,
       rendererSettings: {

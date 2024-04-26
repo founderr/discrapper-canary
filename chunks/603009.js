@@ -29,7 +29,7 @@ var a = n("735250"),
   N = n("981631"),
   x = n("921944"),
   M = n("689938"),
-  R = n("801303");
+  R = n("570987");
 
 function L(e) {
   var t;
@@ -81,7 +81,7 @@ function L(e) {
       delay: 200
     });
   if (!N) return null;
-  let b = (0, T.getClanBadgeUrl)(n.id, null === (t = n.clan) || void 0 === t ? void 0 : t.badge);
+  let D = (0, T.getClanBadgeUrl)(n.id, null === (t = n.clan) || void 0 === t ? void 0 : t.badge);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
       ref: L,
@@ -115,7 +115,7 @@ function L(e) {
                   className: R.guildTagContainer,
                   children: (0, a.jsx)(v.BaseClanTagChiplet, {
                     clanTag: null === (l = n.clan) || void 0 === l ? void 0 : l.tag,
-                    clanBadge: b,
+                    clanBadge: D,
                     className: R.guildClanTag
                   })
                 })]

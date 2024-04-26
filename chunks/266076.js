@@ -5,7 +5,7 @@ var a = n("735250"),
   s = n("481060"),
   i = n("43267"),
   r = n("93687"),
-  o = n("276423");
+  o = n("785232");
 t.default = l.memo(function(e) {
   let {
     channel: t,

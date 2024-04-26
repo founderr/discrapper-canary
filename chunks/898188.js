@@ -25,7 +25,7 @@ var a = n("735250"),
   T = n("931261"),
   I = n("305762"),
   A = n("689938"),
-  v = n("953116");
+  v = n("496250");
 
 function N(e) {
   let {
@@ -95,7 +95,7 @@ function M(e) {
       delay: 400
     }).start()
   }, [T, P, y, M]);
-  let b = l.useCallback(() => {
+  let D = l.useCallback(() => {
     null != I && (0, g.selectNewMemberActionChannel)(f, I.channelId)
   }, [f, I]);
   return null == E || R && !y ? null : (0, a.jsx)("div", {
@@ -109,7 +109,7 @@ function M(e) {
       },
       children: (0, a.jsxs)(u.Clickable, {
         className: i()(v.banner, v.clickable),
-        onClick: b,
+        onClick: D,
         children: [(0, a.jsx)(x, {
           channelId: I.channelId,
           emojiId: null === (t = I.emoji) || void 0 === t ? void 0 : t.id,

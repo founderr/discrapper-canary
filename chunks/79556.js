@@ -16,13 +16,13 @@ var a = n("120356"),
   c = n("867176"),
   f = n("619915"),
   h = n("201895"),
-  p = n("873696"),
-  m = n("66999"),
+  m = n("873696"),
+  p = n("66999"),
   C = n("22082"),
   g = n("665906"),
   E = n("592125"),
-  S = n("430824"),
-  _ = n("496675"),
+  _ = n("430824"),
+  S = n("496675"),
   I = n("306680"),
   N = n("9156"),
   T = n("594174"),
@@ -33,9 +33,9 @@ var a = n("120356"),
   R = n("304471"),
   M = n("981631"),
   y = n("647086"),
-  O = n("294639");
+  O = n("809164");
 
-function b(e, t, n) {
+function D(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -43,7 +43,7 @@ function b(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class D extends L.default {
+class b extends L.default {
   componentWillUnmount() {
     this.resetTextChannelPopoutTimers()
   }
@@ -71,17 +71,17 @@ class D extends L.default {
       mentionCount: d,
       connectChannelDropTarget: c,
       connectChannelDragSource: f,
-      connectDragPreview: m,
+      connectDragPreview: p,
       canReorderChannel: C,
       isSubscriptionGated: g,
       isFavoriteSuggestion: E,
-      subtitle: S,
-      forceTopLevelThread: _,
+      subtitle: _,
+      forceTopLevelThread: S,
       embeddedApps: I,
       resolvedUnreadSetting: N,
       withGuildIcon: T,
       enableActivities: A
-    } = this.props, L = A && null != I && I.length > 0, v = (0, p.getChannelSubtitle)(S), R = (0, l.jsx)("li", {
+    } = this.props, L = A && null != I && I.length > 0, v = (0, m.getChannelSubtitle)(_), R = (0, l.jsx)("li", {
       className: s()(this.getClassName(), {
         [O.disabled]: this.isDisabled(),
         [O.selected]: n
@@ -108,9 +108,9 @@ class D extends L.default {
           subtitleColor: null == v ? void 0 : v.color,
           onMouseDown: this.handleMouseDown,
           onContextMenu: this.handleContextMenu,
-          connectDragPreview: C ? m : null,
+          connectDragPreview: C ? p : null,
           isFavoriteSuggestion: E,
-          channelTypeOverride: _ ? M.ChannelTypes.GUILD_TEXT : void 0,
+          channelTypeOverride: S ? M.ChannelTypes.GUILD_TEXT : void 0,
           resolvedUnreadSetting: N,
           withGuildIcon: T,
           "aria-label": (0, h.default)({
@@ -126,10 +126,10 @@ class D extends L.default {
     return C ? c(f(R)) : R
   }
   constructor(...e) {
-    super(...e), b(this, "state", {
+    super(...e), D(this, "state", {
       shouldShowThreadsPopout: !1,
       shouldShowActivities: !1
-    }), b(this, "enterTimer", 0), b(this, "exitTimer", 0), b(this, "handleMouseEnter", () => {
+    }), D(this, "enterTimer", 0), D(this, "exitTimer", 0), D(this, "handleMouseEnter", () => {
       (this.props.canShowThreadPreviewForUser || null != this.props.embeddedApps) && (this.resetTextChannelPopoutTimers(), this.enterTimer = setTimeout(() => {
         null != this.props.embeddedApps && this.props.embeddedApps.length > 0 ? this.setState({
           shouldShowActivities: !0
@@ -137,7 +137,7 @@ class D extends L.default {
           shouldShowThreadsPopout: !0
         })
       }, 200))
-    }), b(this, "handleMouseLeave", () => {
+    }), D(this, "handleMouseLeave", () => {
       this.resetTextChannelPopoutTimers(), this.exitTimer = setTimeout(() => {
         this.state.shouldShowActivities && this.setState({
           shouldShowActivities: !1
@@ -145,23 +145,23 @@ class D extends L.default {
           shouldShowThreadsPopout: !1
         })
       }, 250)
-    }), b(this, "handleThreadsPopoutClose", () => {
+    }), D(this, "handleThreadsPopoutClose", () => {
       this.resetTextChannelPopoutTimers(), this.setState({
         shouldShowThreadsPopout: !1
       })
-    }), b(this, "handleActivitiesPopoutClose", () => {
+    }), D(this, "handleActivitiesPopoutClose", () => {
       this.resetTextChannelPopoutTimers(), this.setState({
         shouldShowActivities: !1
       })
-    }), b(this, "handleClosePopout", () => {
+    }), D(this, "handleClosePopout", () => {
       this.state.shouldShowActivities && this.handleActivitiesPopoutClose(), this.state.shouldShowThreadsPopout && this.handleThreadsPopoutClose()
-    }), b(this, "handleMouseDown", () => {
+    }), D(this, "handleMouseDown", () => {
       this.handleActivitiesPopoutClose(), this.handleThreadsPopoutClose();
       let {
         channel: e
       } = this.props, t = e.getGuildId();
       o.default.preload(null != t ? t : M.ME, e.id)
-    }), b(this, "renderPopout", e => {
+    }), D(this, "renderPopout", e => {
       let {
         channel: t,
         sorting: n,
@@ -176,7 +176,7 @@ class D extends L.default {
         ...e,
         channel: this.props.channel
       })
-    }), b(this, "handleContextMenu", e => {
+    }), D(this, "handleContextMenu", e => {
       let {
         channel: t
       } = this.props;
@@ -208,7 +208,7 @@ class D extends L.default {
         });
         return
       }
-      let a = S.default.getGuild(t.getGuildId());
+      let a = _.default.getGuild(t.getGuildId());
       null != a && (0, u.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -222,7 +222,7 @@ class D extends L.default {
     })
   }
 }
-let j = (0, d.makeChannelSortable)(D);
+let j = (0, d.makeChannelSortable)(b);
 
 function P(e) {
   let {
@@ -239,19 +239,19 @@ function P(e) {
     unread: I.default.hasUnread(t.id),
     ackMessageId: I.default.ackMessageId(t.id),
     mentionCount: I.default.getMentionCount(t.id)
-  })), p = (0, i.useStateFromStores)([N.default], () => N.default.resolveUnreadSetting(t)), S = (0, i.useStateFromStoresObject)([E.default, _.default], () => {
+  })), m = (0, i.useStateFromStores)([N.default], () => N.default.resolveUnreadSetting(t)), _ = (0, i.useStateFromStoresObject)([E.default, S.default], () => {
     let e = E.default.getChannel(t.parent_id);
     return {
-      canManageChannel: _.default.can(M.Permissions.MANAGE_CHANNELS, t),
-      canReorderChannel: !0 !== a && (n.id === y.FAVORITES_RAW_GUILD_ID || (null != e ? _.default.can(M.Permissions.MANAGE_CHANNELS, e) : _.default.can(M.Permissions.MANAGE_CHANNELS, n)))
+      canManageChannel: S.default.can(M.Permissions.MANAGE_CHANNELS, t),
+      canReorderChannel: !0 !== a && (n.id === y.FAVORITES_RAW_GUILD_ID || (null != e ? S.default.can(M.Permissions.MANAGE_CHANNELS, e) : S.default.can(M.Permissions.MANAGE_CHANNELS, n)))
     }
   }), A = (0, i.useStateFromStores)([C.default], () => C.default.shouldIndicateNewChannel(n.id, t.id)), {
     needSubscriptionToAccess: L,
     isSubscriptionGated: x
-  } = (0, m.default)(t.id), R = (0, i.useStateFromStores)([N.default], () => N.default.isFavorite(n.id, t.id)), O = (0, i.useStateFromStores)([T.default], () => {
+  } = (0, p.default)(t.id), R = (0, i.useStateFromStores)([N.default], () => N.default.isFavorite(n.id, t.id)), O = (0, i.useStateFromStores)([T.default], () => {
     let e = T.default.getCurrentUser();
     return null != e && (!t.isNSFW() || e.nsfwAllowed)
-  }, [t]), b = (0, c.useIsActivitiesInTextEnabled)(t.id, "webGuildTextChannel"), D = (0, v.default)({
+  }, [t]), D = (0, c.useIsActivitiesInTextEnabled)(t.id, "webGuildTextChannel"), b = (0, v.default)({
     channel: t,
     isChannelCollapsed: !1,
     isChannelSelected: o,
@@ -259,12 +259,12 @@ function P(e) {
     needSubscriptionToAccess: L,
     isNewChannel: A,
     muted: r,
-    enableActivities: b,
-    resolvedUnreadSetting: p
+    enableActivities: D,
+    resolvedUnreadSetting: m
   }), P = (0, f.default)(t);
   return (0, l.jsx)(j, {
     ...h,
-    ...S,
+    ..._,
     ...e,
     hasActiveThreads: u,
     hasMoreActiveThreads: d,
@@ -273,10 +273,10 @@ function P(e) {
     isNewChannel: A && e.canBeNewChannel,
     isFavoriteSuggestion: s && !R,
     canShowThreadPreviewForUser: O,
-    channelInfo: D,
+    channelInfo: b,
     embeddedApps: P,
-    resolvedUnreadSetting: p,
-    hasChannelInfo: null != D,
-    enableActivities: b
+    resolvedUnreadSetting: m,
+    hasChannelInfo: null != b,
+    enableActivities: D
   })
 }

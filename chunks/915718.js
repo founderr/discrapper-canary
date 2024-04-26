@@ -35,9 +35,9 @@ var a = n("735250"),
   O = n("63063"),
   j = n("981631"),
   P = n("921944"),
-  b = n("65154"),
-  D = n("689938"),
-  U = n("185392");
+  D = n("65154"),
+  b = n("689938"),
+  U = n("692770");
 
 function F(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -68,7 +68,7 @@ class w extends l.PureComponent {
     let d = o.isManaged(),
       c = null,
       f = !1;
-    return I.default.supports(b.Features.VIDEO) ? i ? (c = D.default.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, f = !0) : l && u === j.ChannelModes.VIDEO ? (t = this.handleJoinVideoCall, c = d ? D.default.Messages.CONNECT : D.default.Messages.JOIN_VIDEO_CALL) : (t = this.handleStartVideoCall, c = d ? D.default.Messages.CONNECT : D.default.Messages.START_VIDEO_CALL) : (f = !0, t = this.handleBrowserNotSupported, c = D.default.Messages.BROWSER_NOT_SUPPORTED), (0, a.jsx)(R.default.Icon, {
+    return I.default.supports(D.Features.VIDEO) ? i ? (c = b.default.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, f = !0) : l && u === j.ChannelModes.VIDEO ? (t = this.handleJoinVideoCall, c = d ? b.default.Messages.CONNECT : b.default.Messages.JOIN_VIDEO_CALL) : (t = this.handleStartVideoCall, c = d ? b.default.Messages.CONNECT : b.default.Messages.START_VIDEO_CALL) : (f = !0, t = this.handleBrowserNotSupported, c = b.default.Messages.BROWSER_NOT_SUPPORTED), (0, a.jsx)(R.default.Icon, {
       icon: M.default,
       onClick: t,
       disabled: f || s,
@@ -93,7 +93,7 @@ class w extends l.PureComponent {
     let h = u.isManaged(),
       m = "",
       E = !1;
-    s ? (m = h ? D.default.Messages.VOICE_UNAVAILABLE : D.default.Messages.CALL_UNAVAILABLE, e = r.Tooltip.Colors.RED, E = !0) : o ? (m = D.default.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, E = !0) : m = l ? h ? D.default.Messages.CONNECT : D.default.Messages.JOIN_VOICE_CALL : h ? D.default.Messages.CONNECT : D.default.Messages.START_VOICE_CALL;
+    s ? (m = h ? b.default.Messages.VOICE_UNAVAILABLE : b.default.Messages.CALL_UNAVAILABLE, e = r.Tooltip.Colors.RED, E = !0) : o ? (m = b.default.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, E = !0) : m = l ? h ? b.default.Messages.CONNECT : b.default.Messages.JOIN_VOICE_CALL : h ? b.default.Messages.CONNECT : b.default.Messages.START_VOICE_CALL;
     let g = (0, a.jsx)(R.default.Icon, {
       icon: x.default,
       onClick: this.handleVoiceClick,
@@ -130,20 +130,20 @@ class w extends l.PureComponent {
                 }), (0, a.jsx)(r.Heading, {
                   variant: "heading-md/bold",
                   color: "always-white",
-                  children: D.default.Messages.EMBEDDED_ACTIVITIES_DM_TOOLTIP_HEADER
+                  children: b.default.Messages.EMBEDDED_ACTIVITIES_DM_TOOLTIP_HEADER
                 })]
               }),
               content: (0, a.jsxs)("div", {
                 children: [(0, a.jsx)(r.Text, {
                   variant: "text-sm/normal",
                   color: "always-white",
-                  children: D.default.Messages.EMBEDDED_ACTIVITIES_DM_TOOLTIP_BODY
+                  children: b.default.Messages.EMBEDDED_ACTIVITIES_DM_TOOLTIP_BODY
                 }), (0, a.jsx)(r.Anchor, {
                   href: O.default.getArticleURL(j.HelpdeskArticles.ACTIVITIES),
-                  children: D.default.Messages.LEARN_MORE
+                  children: b.default.Messages.LEARN_MORE
                 })]
               }),
-              buttonCTA: D.default.Messages.GOT_IT,
+              buttonCTA: b.default.Messages.GOT_IT,
               onClick: () => {
                 t(), s(P.ContentDismissActionType.UNKNOWN)
               },

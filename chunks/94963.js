@@ -16,30 +16,30 @@ var n = a("735250"),
   C = a("650774"),
   m = a("430824"),
   S = a("688298"),
-  I = a("308083"),
-  p = a("689938"),
-  T = a("509741"),
-  g = a("597338");
-let A = I.CLAN_BRAND_PALETTE_PRESETS.length + 1,
+  p = a("308083"),
+  I = a("689938"),
+  T = a("868878"),
+  g = a("418571");
+let A = p.CLAN_BRAND_PALETTE_PRESETS.length + 1,
   N = [{
     name: "Pixel Rush",
-    bannerKind: I.ClanBannerKind.PIXEL_RUSH,
+    bannerKind: p.ClanBannerKind.PIXEL_RUSH,
     icon: f.ScreenSystemRequirementsIcon
   }, {
     name: "Scanlines",
-    bannerKind: I.ClanBannerKind.SCANLINES,
+    bannerKind: p.ClanBannerKind.SCANLINES,
     icon: c.MenuIcon
   }, {
     name: "Textured",
-    bannerKind: I.ClanBannerKind.TEXTURED,
+    bannerKind: p.ClanBannerKind.TEXTURED,
     icon: o.EyeDropperIcon
   }, {
     name: "Magic",
-    bannerKind: I.ClanBannerKind.MAGIC,
+    bannerKind: p.ClanBannerKind.MAGIC,
     icon: d.MagicWandIcon
   }, {
     name: "Custom",
-    bannerKind: I.ClanBannerKind.CUSTOM,
+    bannerKind: p.ClanBannerKind.CUSTOM,
     icon: u.ImageFileUpIcon
   }],
   v = e => {
@@ -75,15 +75,15 @@ t.default = e => {
   } = e, d = (0, E.useStateFromStores)([m.default], () => m.default.getGuild(u)), c = null !== (t = (0, E.useStateFromStores)([C.default], () => C.default.getMemberCount(u))) && void 0 !== t ? t : 0, [f, R] = s.useState(o.banner), [L, O] = s.useState({
     primary: o.brandPrimaryColor,
     secondary: o.brandSecondaryColor
-  }), [P, M] = s.useState(() => {
+  }), [M, P] = s.useState(() => {
     if (o.brandPrimaryColor === o.badgePrimaryColor && o.brandSecondaryColor === o.badgeSecondaryColor) return 0;
-    for (let e = 0; e < I.CLAN_BRAND_PALETTE_PRESETS.length; e++)
-      if (I.CLAN_BRAND_PALETTE_PRESETS[e].primary === o.brandPrimaryColor && I.CLAN_BRAND_PALETTE_PRESETS[e].secondary === o.brandSecondaryColor) return e + 1;
+    for (let e = 0; e < p.CLAN_BRAND_PALETTE_PRESETS.length; e++)
+      if (p.CLAN_BRAND_PALETTE_PRESETS[e].primary === o.brandPrimaryColor && p.CLAN_BRAND_PALETTE_PRESETS[e].secondary === o.brandSecondaryColor) return e + 1;
     return A
-  }), [x, y] = s.useState(!1), D = A === P, b = D ? L : 0 === P ? {
+  }), [x, y] = s.useState(!1), D = A === M, b = D ? L : 0 === M ? {
     primary: o.badgePrimaryColor,
     secondary: o.badgeSecondaryColor
-  } : I.CLAN_BRAND_PALETTE_PRESETS[P - 1];
+  } : p.CLAN_BRAND_PALETTE_PRESETS[M - 1];
   return s.useEffect(() => {
     l({
       banner: f,
@@ -95,12 +95,12 @@ t.default = e => {
     children: [(0, n.jsx)(h.Heading, {
       variant: "heading-xxl/medium",
       className: g.title,
-      children: p.default.Messages.CLAN_SETUP_CUSTOMIZE_LOOK_TITLE
+      children: I.default.Messages.CLAN_SETUP_CUSTOMIZE_LOOK_TITLE
     }), (0, n.jsx)(h.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       className: g.subtitle,
-      children: p.default.Messages.CLAN_SETUP_CUSTOMIZE_LOOK_SUBTITLE
+      children: I.default.Messages.CLAN_SETUP_CUSTOMIZE_LOOK_SUBTITLE
     }), (0, n.jsxs)("div", {
       className: T.container,
       children: [(0, n.jsxs)("div", {
@@ -110,31 +110,31 @@ t.default = e => {
           children: [(0, n.jsx)(h.Text, {
             variant: "text-xs/semibold",
             color: "text-muted",
-            children: p.default.Messages.CLAN_LOOK_BRAND_COLOR
+            children: I.default.Messages.CLAN_LOOK_BRAND_COLOR
           }), (0, n.jsxs)("div", {
             className: T.colorPickerGrid,
             children: [(0, n.jsx)(h.Clickable, {
               onClick: () => {
-                M(0), O({
+                P(0), O({
                   primary: o.badgePrimaryColor,
                   secondary: o.badgeSecondaryColor
                 })
               },
               className: i()(T.brandItemContainer, {
-                [T.brandItemContainerSelected]: 0 === P
+                [T.brandItemContainerSelected]: 0 === M
               }),
               children: (0, n.jsx)(v, {
-                name: p.default.Messages.CLAN_LOOK_PRESET_BADGE,
+                name: I.default.Messages.CLAN_LOOK_PRESET_BADGE,
                 primaryColor: o.badgePrimaryColor,
                 secondaryColor: o.badgeSecondaryColor
               })
-            }), I.CLAN_BRAND_PALETTE_PRESETS.map((e, t) => (0, n.jsx)(h.Clickable, {
+            }), p.CLAN_BRAND_PALETTE_PRESETS.map((e, t) => (0, n.jsx)(h.Clickable, {
               "aria-label": e.name,
               onClick: () => {
-                M(t + 1), O(I.CLAN_BRAND_PALETTE_PRESETS[t])
+                P(t + 1), O(p.CLAN_BRAND_PALETTE_PRESETS[t])
               },
               className: i()(T.brandItemContainer, {
-                [T.brandItemContainerSelected]: P === t + 1
+                [T.brandItemContainerSelected]: M === t + 1
               }),
               children: (0, n.jsx)(v, {
                 name: e.name,
@@ -161,13 +161,13 @@ t.default = e => {
               children: e => (0, n.jsx)(h.Clickable, {
                 ...e,
                 onClick: () => {
-                  M(A), y(e => !e)
+                  P(A), y(e => !e)
                 },
                 className: i()(T.brandItemContainer, {
-                  [T.brandItemContainerSelected]: P === A
+                  [T.brandItemContainerSelected]: M === A
                 }),
                 children: (0, n.jsx)(v, {
-                  name: p.default.Messages.CLAN_LOOK_PRESET_CUSTOM,
+                  name: I.default.Messages.CLAN_LOOK_PRESET_CUSTOM,
                   isCustom: !0
                 })
               })
@@ -178,7 +178,7 @@ t.default = e => {
           children: [(0, n.jsx)(h.Text, {
             variant: "text-xs/semibold",
             color: "text-muted",
-            children: p.default.Messages.CLAN_LOOK_BANNER
+            children: I.default.Messages.CLAN_LOOK_BANNER
           }), (0, n.jsx)("div", {
             className: T.bannerPickerGrid,
             children: N.map((e, t) => (0, n.jsxs)(h.Clickable, {

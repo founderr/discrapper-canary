@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return w
   },
   getChannelItemClassName: function() {
-    return D
+    return b
   },
   isChannelItemDisabled: function() {
-    return b
+    return D
   }
 });
 var l, a, s, i, r = n("735250"),
@@ -23,13 +23,13 @@ var l, a, s, i, r = n("735250"),
   c = n("442837"),
   f = n("481060"),
   h = n("787014"),
-  p = n("924301"),
-  m = n("159300"),
+  m = n("924301"),
+  p = n("159300"),
   C = n("152376"),
   g = n("427679"),
   E = n("155409"),
-  S = n("131704"),
-  _ = n("199902"),
+  _ = n("131704"),
+  S = n("199902"),
   I = n("430824"),
   N = n("496675"),
   T = n("914010"),
@@ -40,13 +40,13 @@ var l, a, s, i, r = n("735250"),
   R = n("281029"),
   M = n("981631"),
   y = n("689938"),
-  O = n("294639");
+  O = n("809164");
 
-function b(e, t, n) {
+function D(e, t, n) {
   return null != t && !!t && !(0, R.areTypesInSameSection)(n, e.type)
 }
 
-function D(e, t) {
+function b(e, t) {
   return null == t ? O.containerDefault : e > t ? O.containerDragAfter : O.containerDragBefore
 }
 
@@ -58,7 +58,7 @@ function j(e) {
     forceShowButtons: a,
     hasChannelInfo: s = !1
   } = e;
-  if ((0, c.useStateFromStores)([N.default, T.default], () => n || T.default.getGuildId() === M.FAVORITES || !N.default.can(M.Permissions.MANAGE_CHANNELS, t) && !N.default.can(M.Permissions.MANAGE_ROLES, t) && !N.default.can(M.Permissions.MANAGE_WEBHOOKS, t) || (0, S.isGuildSelectableChannelType)(t.type) && !N.default.can(M.Permissions.VIEW_CHANNEL, t) || t.isGuildVocal() && !N.default.can(M.Permissions.CONNECT, t) || !S.EDITABLE_CHANNEL_TYPES.has(t.type))) return null;
+  if ((0, c.useStateFromStores)([N.default, T.default], () => n || T.default.getGuildId() === M.FAVORITES || !N.default.can(M.Permissions.MANAGE_CHANNELS, t) && !N.default.can(M.Permissions.MANAGE_ROLES, t) && !N.default.can(M.Permissions.MANAGE_WEBHOOKS, t) || (0, _.isGuildSelectableChannelType)(t.type) && !N.default.can(M.Permissions.VIEW_CHANNEL, t) || t.isGuildVocal() && !N.default.can(M.Permissions.CONNECT, t) || !_.EDITABLE_CHANNEL_TYPES.has(t.type))) return null;
 
   function i() {
     h.default.open(t.id)
@@ -99,12 +99,12 @@ function P(e) {
     tabIndex: s,
     forceShowButtons: i,
     hasChannelInfo: o = !1
-  } = e, u = (0, c.useStateFromStores)([I.default], () => I.default.getGuild(t.getGuildId())), h = (0, c.useStateFromStores)([g.default], () => g.default.getStageInstanceByChannel(t.id), [t.id]), C = (0, c.useStateFromStores)([p.default], () => p.default.getActiveEventByChannel(t.id), [t.id]), S = (0, c.useStateFromStores)([N.default], () => (0, m.canViewInviteModal)(N.default, u, t, h)), T = (0, c.useStateFromStores)([N.default], () => N.default.can(M.Permissions.CREATE_INSTANT_INVITE, t) ? y.default.Messages.CREATE_INSTANT_INVITE : y.default.Messages.INVITE_TO_SERVER);
-  if (a || !S) return null;
+  } = e, u = (0, c.useStateFromStores)([I.default], () => I.default.getGuild(t.getGuildId())), h = (0, c.useStateFromStores)([g.default], () => g.default.getStageInstanceByChannel(t.id), [t.id]), C = (0, c.useStateFromStores)([m.default], () => m.default.getActiveEventByChannel(t.id), [t.id]), _ = (0, c.useStateFromStores)([N.default], () => (0, p.canViewInviteModal)(N.default, u, t, h)), T = (0, c.useStateFromStores)([N.default], () => N.default.can(M.Permissions.CREATE_INSTANT_INVITE, t) ? y.default.Messages.CREATE_INSTANT_INVITE : y.default.Messages.INVITE_TO_SERVER);
+  if (a || !_) return null;
 
   function A() {
     if (null != u) {
-      let e = _.default.getAllActiveStreams().filter(e => e.state !== M.ApplicationStreamStates.ENDED && e.channelId === t.id);
+      let e = S.default.getAllActiveStreams().filter(e => e.state !== M.ApplicationStreamStates.ENDED && e.channelId === t.id);
       (0, f.openModalLazy)(async () => {
         let {
           default: l
@@ -216,7 +216,7 @@ class w extends(i = o.PureComponent) {
       position: e,
       sortingPosition: t
     } = this.props;
-    return D(e, t)
+    return b(e, t)
   }
   isDisabled() {
     let {
@@ -224,7 +224,7 @@ class w extends(i = o.PureComponent) {
       sorting: t,
       sortingType: n
     } = this.props;
-    return b(e, t, n)
+    return D(e, t, n)
   }
 }
 s = {

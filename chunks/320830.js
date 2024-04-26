@@ -9,7 +9,7 @@ var s = n("735250"),
   u = n("477690"),
   d = n("481060"),
   c = n("624138"),
-  f = n("991171");
+  f = n("422758");
 
 function h(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -19,12 +19,12 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let g = (0, c.cssValueToNumber)(u.default.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
-  E = {
+let E = (0, c.cssValueToNumber)(u.default.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
+  g = {
     START: 0,
     END: 1
   },
-  m = {
+  _ = {
     friction: 10,
     tension: 130
   };
@@ -37,18 +37,18 @@ t.default = function(e) {
       clearTimeout(this.timeout), window.removeEventListener("resize", this.handleResizeDebounced)
     }
     componentWillAppear(e) {
-      this.state.shouldAnimate ? this.animateTo(E.END, e) : e()
+      this.state.shouldAnimate ? this.animateTo(g.END, e) : e()
     }
     componentWillEnter(e) {
-      this.state.shouldAnimate ? (clearTimeout(this.timeout), this.timeout = setTimeout(() => this.animateTo(E.END, e), 40)) : e()
+      this.state.shouldAnimate ? (clearTimeout(this.timeout), this.timeout = setTimeout(() => this.animateTo(g.END, e), 40)) : e()
     }
     componentWillLeave(e) {
-      this.state.shouldAnimate ? this.animateTo(E.START, e) : e()
+      this.state.shouldAnimate ? this.animateTo(g.START, e) : e()
     }
     animateTo(e, t) {
       l.default.spring(this.anim, {
         toValue: e,
-        ...m
+        ..._
       }).start(t)
     }
     getAnimatedStyle(e) {
@@ -88,11 +88,11 @@ t.default = function(e) {
       })
     }
     constructor(...e) {
-      super(...e), h(this, "timeout", void 0), h(this, "anim", new l.default.Value(E.START)), h(this, "state", {
+      super(...e), h(this, "timeout", void 0), h(this, "anim", new l.default.Value(g.START)), h(this, "state", {
         shouldAnimate: !o.isMobile
       }), h(this, "handleResize", () => {
-        let e = window.innerWidth > g;
-        !this.state.shouldAnimate && e && this.anim.setValue(E.END), this.setState({
+        let e = window.innerWidth > E;
+        !this.state.shouldAnimate && e && this.anim.setValue(g.END), this.setState({
           shouldAnimate: e
         })
       }), h(this, "handleResizeDebounced", r()(this.handleResize, 60))

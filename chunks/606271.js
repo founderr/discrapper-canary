@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return P
+    return M
   }
 }), a("47120");
 var n = a("392711"),
@@ -20,8 +20,8 @@ var n = a("392711"),
   C = a("800599"),
   m = a("594174"),
   S = a("979651"),
-  I = a("626135"),
-  p = a("823379"),
+  p = a("626135"),
+  I = a("823379"),
   T = a("358085"),
   g = a("914946"),
   A = a("238679"),
@@ -38,7 +38,7 @@ function O(e, t, a) {
     writable: !0
   }) : e[t] = a, e
 }
-class P {
+class M {
   loadServer() {
     for (let e of (T.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports)) this.rpcServer.registerTransport(e);
     for (let [e, t] of Object.entries(this.rpcCommandHandlers)) this.rpcServer.setCommandHandler(e, t);
@@ -50,7 +50,7 @@ class P {
         type: "RPC_APP_CONNECTED",
         socketId: e.id,
         application: e.application
-      }), I.default.track(v.AnalyticEvents.AUTHORIZED_APP_CONNECTED, {
+      }), p.default.track(v.AnalyticEvents.AUTHORIZED_APP_CONNECTED, {
         app_id: e.application.id,
         transport: e.transport
       })
@@ -84,7 +84,7 @@ class P {
         }, s = "".concat(t).concat(e.id);
         break;
       default:
-        return (0, p.assertNever)(e)
+        return (0, I.assertNever)(e)
     }
     null != a && this.rpcServer.dispatchToSubscriptions(t, {
       channel_id: a

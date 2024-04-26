@@ -21,8 +21,8 @@ var n, s, l = a("470079"),
   C = a("678513"),
   m = a("899667"),
   S = a("496675"),
-  I = a("541566"),
-  p = a("192513"),
+  p = a("541566"),
+  I = a("192513"),
   T = a("255791"),
   g = a("70956"),
   A = a("267642"),
@@ -40,20 +40,20 @@ function v(e) {
     {
       lastDismissedGracePeriod: v,
       isGracePeriodVisible: R
-    } = (0, i.useStateFromStoresObject)([I.default], () => ({
-      lastDismissedGracePeriod: I.default.getLastDismissedGracePeriodForGuild(n),
-      isGracePeriodVisible: I.default.isVisible(n)
+    } = (0, i.useStateFromStoresObject)([p.default], () => ({
+      lastDismissedGracePeriod: p.default.getLastDismissedGracePeriodForGuild(n),
+      isGracePeriodVisible: p.default.isVisible(n)
     })),
     L = (0, i.useStateFromStores)([_.default], () => _.default.isVisible(e)),
     O = (0, i.useStateFromStores)([T.default], () => T.default.isVisible(e)),
-    P = (0, i.useStateFromStores)([S.default], () => S.default.can(N.Permissions.ADMINISTRATOR, e)),
-    M = null != v && Date.now() - v <= N.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
+    M = (0, i.useStateFromStores)([S.default], () => S.default.can(N.Permissions.ADMINISTRATOR, e)),
+    P = null != v && Date.now() - v <= N.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
     x = null != e ? e.premiumSubscriberCount : 0,
     y = (0, A.getGuildTierFromAppliedBoostCount)(x, n) !== N.BoostedGuildTiers.NONE,
     D = null != s && Date.now() - s <= 432e5,
-    b = !D && !M && P && y,
+    b = !D && !P && M && y,
     U = (0, d.useGuildHasLiveChannelNotice)(n),
-    j = (0, i.useStateFromStores)([p.default], () => p.default.isVisible(e)),
+    j = (0, i.useStateFromStores)([I.default], () => I.default.isVisible(e)),
     G = E.default.useShouldShowChannelNotice(n),
     w = (0, h.useUnseenEndedApplicationSubscriptionEntitlements)(e),
     {
@@ -67,7 +67,7 @@ function v(e) {
       guildId: null !== (a = null == e ? void 0 : e.id) && void 0 !== a ? a : "0",
       location: "useVisibleConnectedNotice"
     }),
-    V = P && H && !(null == e ? void 0 : e.hasFeature(N.GuildFeatures.CLAN)),
+    V = M && H && !(null == e ? void 0 : e.hasFeature(N.GuildFeatures.CLAN)),
     Y = (0, c.useGuildUpcomingEventsNotice)(n),
     W = (0, i.useStateFromStores)([C.default], () => null != C.default.getActiveGuildSignUp(n));
   if (l.useEffect(() => {

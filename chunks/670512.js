@@ -9,7 +9,7 @@ var l = n("735250"),
   u = n("585483"),
   d = n("981631"),
   c = n("689938"),
-  f = n("740072");
+  f = n("184966");
 
 function h(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -19,11 +19,11 @@ function h(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let p = {
+let m = {
   friction: 15,
   tension: 100
 };
-class m extends a.PureComponent {
+class p extends a.PureComponent {
   componentDidMount() {
     this.setState({
       shown: !0
@@ -41,7 +41,7 @@ class m extends a.PureComponent {
   springTo(e) {
     r.default.spring(this.state.translateY, {
       toValue: Math.min(e, 250),
-      ...p
+      ...m
     }).start()
   }
   renderArrowGroup(e) {
@@ -132,4 +132,4 @@ class m extends a.PureComponent {
     })
   }
 }
-t.default = m
+t.default = p

@@ -24,8 +24,8 @@ var a = n("735250"),
   _ = n("370595"),
   T = n("991570"),
   I = n("50493"),
-  A = n("196958"),
-  v = n("355405");
+  A = n("867833"),
+  v = n("821754");
 
 function N(e) {
   var t, n;
@@ -35,10 +35,10 @@ function N(e) {
     location: x,
     className: M,
     onNavigate: R
-  } = e, L = l.useRef(null), y = (0, o.useStateFromStores)([p.default], () => p.default.getGuildSidebarState(N), [N]), O = l.useRef(0), [j, P] = l.useState(null !== (t = null == y ? void 0 : y.details.additionalSearchQuery) && void 0 !== t ? t : {}), b = (0, S.useServerMessageHistoryForUser)(s, N, {
+  } = e, L = l.useRef(null), y = (0, o.useStateFromStores)([p.default], () => p.default.getGuildSidebarState(N), [N]), O = l.useRef(0), [j, P] = l.useState(null !== (t = null == y ? void 0 : y.details.additionalSearchQuery) && void 0 !== t ? t : {}), D = (0, S.useServerMessageHistoryForUser)(s, N, {
     addtionalQuery: j,
     shouldDispatch: !0
-  }), D = (0, o.useStateFromStores)([C.default], () => C.default.getUser(s), [s]), U = (0, o.useStateFromStores)([E.default], () => E.default.getMember(N, s), [N, s]), F = (0, T.useProfileThemedPanelBackground)(s, N);
+  }), b = (0, o.useStateFromStores)([C.default], () => C.default.getUser(s), [s]), U = (0, o.useStateFromStores)([E.default], () => E.default.getMember(N, s), [N, s]), F = (0, T.useProfileThemedPanelBackground)(s, N);
   l.useLayoutEffect(() => {
     let e = null == y ? void 0 : y.details.scrollOffset;
     if (null != e) {
@@ -73,8 +73,8 @@ function N(e) {
     }, [N, s, y, j]),
     B = null !== (n = null == j ? void 0 : j.offset) && void 0 !== n ? n : 0,
     G = (0, o.useStateFromStores)([c.default], () => {
-      if (null == b.result) return [];
-      let e = b.result.messages,
+      if (null == D.result) return [];
+      let e = D.result.messages,
         t = (0, d.createASTHighlighter)("");
       return e.map(e => e.map(e => {
         let n = c.default.getMessage(e.id, e.channel_id),
@@ -88,10 +88,10 @@ function N(e) {
           allowList: !0
         })) : a
       }))
-    }, [b.result]),
+    }, [D.result]),
     V = l.useMemo(() => {
       var e, t, n, a;
-      return null == b.result ? {
+      return null == D.result ? {
         documentsIndexed: 0,
         isSearching: !0,
         isIndexing: !1,
@@ -102,18 +102,18 @@ function N(e) {
         showBlockedResults: !1,
         showNoResultsAlt: !1
       } : {
-        documentsIndexed: null !== (e = b.result.documents_indexed) && void 0 !== e ? e : 0,
+        documentsIndexed: null !== (e = D.result.documents_indexed) && void 0 !== e ? e : 0,
         isSearching: !1,
-        isIndexing: null !== (t = b.result.doing_deep_historical_index) && void 0 !== t && t,
-        isHistoricalIndexing: null !== (n = b.result.doing_deep_historical_index) && void 0 !== n && n,
+        isIndexing: null !== (t = D.result.doing_deep_historical_index) && void 0 !== t && t,
+        isHistoricalIndexing: null !== (n = D.result.doing_deep_historical_index) && void 0 !== n && n,
         offset: B,
-        totalResults: null !== (a = b.result.total_results) && void 0 !== a ? a : 0,
+        totalResults: null !== (a = D.result.total_results) && void 0 !== a ? a : 0,
         hasError: !1,
         showBlockedResults: !1,
         showNoResultsAlt: !1
       }
-    }, [b.result, B]);
-  return null == D || null == U || null == V ? null : (0, a.jsxs)("div", {
+    }, [D.result, B]);
+  return null == b || null == U || null == V ? null : (0, a.jsxs)("div", {
     className: i()(A.container, M),
     style: {
       backgroundColor: F

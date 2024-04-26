@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   CurrencyWrapper: function() {
-    return l
+    return a
   }
 });
 var i = n("735250");
 n("470079");
 var s = n("481060"),
-  a = n("991862");
+  l = n("991862");
 
-function l(e) {
+function a(e) {
   let {
     currencies: t,
     className: n,
@@ -24,7 +24,7 @@ t.default = function(e) {
   let {
     currencies: t,
     onChange: n,
-    selectedCurrency: l,
+    selectedCurrency: a,
     className: r,
     disabled: u = !1
   } = e;
@@ -32,10 +32,10 @@ t.default = function(e) {
   let o = t.map((e, t) => ({
     key: t,
     value: e,
-    label: "".concat(e.toUpperCase(), " - ").concat((0, a.getCurrencyFullName)(e))
+    label: "".concat(e.toUpperCase(), " - ").concat((0, l.getCurrencyFullName)(e))
   }));
   return (0, i.jsx)(s.SingleSelect, {
-    value: l,
+    value: a,
     options: o,
     onChange: e => {
       null != e && n(e)

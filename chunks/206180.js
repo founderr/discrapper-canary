@@ -1,12 +1,12 @@
 "use strict";
-i.r(t), i.d(t, {
+a.r(t), a.d(t, {
   default: function() {
-    return r
+    return s
   }
 });
-var n = i("735250");
+var n = a("735250");
 
-function r(e) {
+function s(e) {
   return (0, n.jsxs)("svg", {
     width: "9",
     height: "8",
@@ -41,4 +41,4 @@ function r(e) {
     })]
   })
 }
-i("470079")
+a("470079")

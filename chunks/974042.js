@@ -24,7 +24,7 @@ function S(e, t, a) {
   }) : e[t] = a, e
 }
 
-function I(e) {
+function p(e) {
   let t = C.default.getUser(e);
   return {
     user: t,
@@ -32,7 +32,7 @@ function I(e) {
   }
 }
 
-function p(e) {
+function I(e) {
   return {
     status: h.default.getStatus(e),
     isMobile: h.default.isMobileOnline(e),
@@ -65,16 +65,16 @@ class A {
         key: t,
         type: e,
         nickname: _.default.getNickname(t),
-        ...I(t),
         ...p(t),
+        ...I(t),
         ...T(t)
       })),
       t = l().map(d.default.getSuggestions(), e => new g({
         key: e.key,
         type: 99,
         nickname: e.name,
-        ...I(e.key),
         ...p(e.key),
+        ...I(e.key),
         ...T(e.key)
       }));
     return new A(l().concat(e, t))
@@ -136,15 +136,15 @@ let N = !0,
   R = m.FriendsSections.ONLINE,
   L = new A,
   O = !0,
-  P = !1;
+  M = !1;
 
-function M() {
+function P() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
   N && (e || R !== m.FriendsSections.ONLINE && R !== m.FriendsSections.ADD_FRIEND) && !v && (N = !1, v = !0, o.default.fetchRelationships())
 }
 
 function x() {
-  if (N = !0, O ? v = !1 : M(), L = L.reset(), P) return;
+  if (N = !0, O ? v = !1 : P(), L = L.reset(), M) return;
   let e = L.getRelationshipCounts();
   R = 0 === e[m.RelationshipTypes.FRIEND] ? 0 !== e[m.RelationshipTypes.PENDING_INCOMING] ? m.FriendsSections.PENDING : m.FriendsSections.ADD_FRIEND : m.FriendsSections.ONLINE
 }
@@ -160,7 +160,7 @@ function D(e) {
 }
 class b extends(n = i.default.Store) {
   initialize() {
-    this.waitFor(_.default, h.default, C.default, E.default, f.default, c.default, d.default), this.syncWith([_.default], y), this.syncWith([d.default], y), this.syncWith([C.default], D(I)), this.syncWith([h.default, c.default], D(p)), x()
+    this.waitFor(_.default, h.default, C.default, E.default, f.default, c.default, d.default), this.syncWith([_.default], y), this.syncWith([d.default], y), this.syncWith([C.default], D(p)), this.syncWith([h.default, c.default], D(I)), x()
   }
   getState() {
     return {
@@ -176,7 +176,7 @@ S(b, "displayName", "FriendsStore"), t.default = new b(r.default, {
     x()
   },
   FRIENDS_SET_SECTION: function(e) {
-    R = e.section, M()
+    R = e.section, P()
   },
   CHANNEL_SELECT: function(e) {
     let {
@@ -197,6 +197,6 @@ S(b, "displayName", "FriendsStore"), t.default = new b(r.default, {
     return O = t !== m.DrawerTabTypes.FRIENDS, y(), !O
   },
   FRIENDS_SET_INITIAL_SECTION: function(e) {
-    R = e.section, P = !0
+    R = e.section, M = !0
   }
 })

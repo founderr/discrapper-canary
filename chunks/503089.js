@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   SHAKE_INTENSITY_DEFAULT: function() {
-    return j
+    return C
   },
   SHAKE_INTENSITY_INCREMENT: function() {
-    return R
+    return I
   },
   SHAKE_INTENSITY_MAX: function() {
     return E
@@ -28,7 +28,7 @@ var i = n("735250"),
   g = n("493544"),
   T = n("981631"),
   x = n("689938"),
-  v = n("810637");
+  v = n("651426");
 
 function N(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -38,16 +38,16 @@ function N(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let C = Object.freeze({
+let j = Object.freeze({
     shouldPreventNavigation: !1,
     onPreventNavigation: null,
     sidebarOpen: !0
   }),
-  j = 1.4,
+  C = 1.4,
   E = 15,
-  R = 2;
+  I = 2;
 
-function A(e) {
+function P(e) {
   var t, n;
   let {
     section: s,
@@ -70,7 +70,7 @@ function A(e) {
     })
   })
 }
-class I extends s.PureComponent {
+class R extends s.PureComponent {
   componentDidMount() {
     this.getPredicateSections().forEach(e => {
       let {
@@ -89,7 +89,7 @@ class I extends s.PureComponent {
     let {
       section: t
     } = e;
-    t !== this.props.section && (this._intensity = j)
+    t !== this.props.section && (this._intensity = C)
   }
   componentWillUnmount() {
     this._unmounted = !0, this._subscribedStores.forEach(e => e.removeChangeListener(this.handleNoticeStoreUpdate)), this.props.sections.forEach(e => {
@@ -110,7 +110,7 @@ class I extends s.PureComponent {
     return null != n && n.stores.some(e => e.showNotice() && !(null != e.canCloseEarly && e.canCloseEarly())) ? (f.ComponentDispatch.dispatch(T.ComponentActions.SHAKE_APP, {
       duration: 300,
       intensity: this._intensity
-    }), this._intensity = Math.min(this._intensity + R, E), f.ComponentDispatch.dispatch(T.ComponentActions.EMPHASIZE_NOTICE), !1) : (this._intensity = j, !0)
+    }), this._intensity = Math.min(this._intensity + I, E), f.ComponentDispatch.dispatch(T.ComponentActions.EMPHASIZE_NOTICE), !1) : (this._intensity = C, !0)
   }
   renderSidebar(e) {
     let {
@@ -182,7 +182,7 @@ class I extends s.PureComponent {
         scrollerRef: this.scrollerRef,
         section: n,
         sidebar: this.renderSidebar(o),
-        content: (0, i.jsx)(A, {
+        content: (0, i.jsx)(P, {
           section: a,
           setPreventNavigation: this.setPreventNavigation,
           scrollerRef: this.scrollerRef
@@ -199,8 +199,8 @@ class I extends s.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), N(this, "_unmounted", !1), N(this, "_intensity", j), N(this, "_subscribedStores", []), N(this, "scrollerRef", s.createRef()), N(this, "state", {
-      ...C,
+    super(...e), N(this, "_unmounted", !1), N(this, "_intensity", C), N(this, "_subscribedStores", []), N(this, "scrollerRef", s.createRef()), N(this, "state", {
+      ...j,
       sidebarOpen: this.props.section !== T.UserSettingsSections.SUBSCRIPTIONS && this.props.section !== T.UserSettingsSections.PROFILE_CUSTOMIZATION
     }), N(this, "setPreventNavigation", (e, t) => {
       this.setState({
@@ -223,7 +223,7 @@ class I extends s.PureComponent {
         null != l && l.forEach(e => {
           !this._subscribedStores.includes(e) && (e.addChangeListener(this.handleNoticeStoreUpdate), this._subscribedStores.push(e))
         }), this.setState({
-          ...C,
+          ...j,
           sidebarOpen: !1
         })
       };
@@ -239,7 +239,7 @@ class I extends s.PureComponent {
         null == e || e()
       }
     }), N(this, "handleNoticeStoreUpdate", () => {
-      !this._unmounted && (this._intensity = j, this.forceUpdate())
+      !this._unmounted && (this._intensity = C, this.forceUpdate())
     }), N(this, "renderSettingsSectionTabBarItem", (e, t, n) => {
       let {
         section: s,
@@ -252,27 +252,27 @@ class I extends s.PureComponent {
         newIndicator: S,
         newIndicatorDismissibleContentTypes: g,
         badgeCount: N
-      } = e, C = null;
-      s === T.UserSettingsSections.ACCOUNT && this.props.isEligibleForPomelo ? C = (0, i.jsx)(h.default, {
+      } = e, j = null;
+      s === T.UserSettingsSections.ACCOUNT && this.props.isEligibleForPomelo ? j = (0, i.jsx)(h.default, {
         color: r.default.colors.STATUS_WARNING.css
-      }) : s === T.UserSettingsSections.INVENTORY && null != this.props.questsForBadge && this.props.questsForBadge.length > 0 ? C = (0, i.jsx)(d.QuestUserSettingsBadge, {
+      }) : s === T.UserSettingsSections.INVENTORY && null != this.props.questsForBadge && this.props.questsForBadge.length > 0 ? j = (0, i.jsx)(d.QuestUserSettingsBadge, {
         quests: this.props.questsForBadge
-      }) : null != e.decoration ? C = (0, i.jsx)(o.Text, {
+      }) : null != e.decoration ? j = (0, i.jsx)(o.Text, {
         variant: "text-md/normal",
         color: "text-muted",
         children: e.decoration
-      }) : null != n && (null == g ? void 0 : g.includes(n)) && !t ? C = null != S ? S : (0, i.jsx)(p.TextBadge, {
+      }) : null != n && (null == g ? void 0 : g.includes(n)) && !t ? j = null != S ? S : (0, i.jsx)(p.TextBadge, {
         text: x.default.Messages.NEW
-      }) : null != f ? C = f : null != N && N > 0 && (C = (0, i.jsx)(p.NumberBadge, {
+      }) : null != f ? j = f : null != N && N > 0 && (j = (0, i.jsx)(p.NumberBadge, {
         count: N
       }));
-      let j = s === T.UserSettingsSections.PREMIUM ? (0, i.jsx)(m.default, {
+      let C = s === T.UserSettingsSections.PREMIUM ? (0, i.jsx)(m.default, {
         label: l,
         isSelected: t,
-        decoration: C
-      }) : null == C ? l : (0, i.jsxs)("div", {
+        decoration: j
+      }) : null == j ? l : (0, i.jsxs)("div", {
         className: v.tabBarItemContainer,
-        children: [l, C]
+        children: [l, j]
       });
       return (0, i.jsx)(o.TabBar.Item, {
         color: u,
@@ -280,9 +280,9 @@ class I extends s.PureComponent {
         onClick: c,
         className: b,
         "aria-label": a,
-        children: j
+        children: C
       }, s)
     })
   }
 }
-t.default = I
+t.default = R

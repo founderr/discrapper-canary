@@ -25,7 +25,7 @@ var a = n("120356"),
   g = n("2660"),
   M = n("981631"),
   R = n("689938"),
-  v = n("506710");
+  v = n("780320");
 let O = (e, t, n, s) => n ? s ? R.default.Messages.COLLECTIBLES_USE_NOW : R.default.Messages.QUESTS_SEE_CODE : e || t ? R.default.Messages.QUESTS_CLAIM_REWARD : R.default.Messages.QUESTS_ACCEPT,
   x = (e, t, n) => e !== h.QuestContent.QUEST_INVENTORY_CARD || n || "lg" !== t ? "lg" === t ? "text-md/medium" : "sm" === t ? "text-sm/medium" : "text-xs/medium" : "text-lg/medium";
 

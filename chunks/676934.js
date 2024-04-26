@@ -12,9 +12,9 @@ var a = s("735250"),
   S = s("63063"),
   E = s("981631"),
   T = s("689938"),
-  m = s("630883");
+  f = s("825972");
 
-function f(e) {
+function m(e) {
   u.RecentGamesEnabled.updateSetting(e), e && r.default.fetchUserRecentGames(c.default.getId()), !e && (0, o.trackDisableRecentGamesSetting)()
 }
 t.default = n.memo(function() {
@@ -24,17 +24,17 @@ t.default = n.memo(function() {
     });
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(l.FormSwitch, {
-      className: m.recentGamesSwitch,
+      className: f.recentGamesSwitch,
       disabled: !e,
       value: t,
       note: T.default.Messages.RECENT_GAMES_SETTING_NOTE.format({
         helpdeskArticle: S.default.getArticleURL(E.HelpdeskArticles.USER_PROFILE_RECENT_GAMES)
       }),
-      onChange: f,
+      onChange: m,
       hideBorder: !0,
       children: T.default.Messages.USER_RECENT_GAMES_ON_PROFILE
     }), (0, a.jsx)(l.FormText, {
-      className: m.requirement,
+      className: f.requirement,
       type: l.FormTextTypes.DESCRIPTION,
       children: T.default.Messages.RECENT_GAMES_SETTING_REQUIREMENT.format({
         onSettingClick: () => {
@@ -42,7 +42,7 @@ t.default = n.memo(function() {
         }
       })
     }), (0, a.jsx)(l.FormDivider, {
-      className: m.dividerDefault
+      className: f.dividerDefault
     })]
   })
 })

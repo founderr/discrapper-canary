@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var s = n("278074"),
-  a = n("979554"),
-  l = n("481060"),
+  l = n("979554"),
+  a = n("481060"),
   r = n("1585"),
   u = n("125988"),
   o = n("583434"),
@@ -19,9 +19,9 @@ var s = n("278074"),
   p = n("998502"),
   _ = n("987209"),
   S = n("689938"),
-  I = n("506027"),
+  I = n("125374"),
   P = n("241822");
-let E = p.default.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
+let E = p.default.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 
 function T(e) {
   let {
@@ -29,19 +29,19 @@ function T(e) {
   } = e, {
     avatarDecorationSrc: n,
     eventHandlers: s,
-    avatarPlaceholderSrc: a
+    avatarPlaceholderSrc: l
   } = (0, u.default)({
     avatarDecorationOverride: t,
-    size: (0, r.getDecorationSizeForAvatarSize)(l.AvatarSizes.SIZE_152)
+    size: (0, r.getDecorationSizeForAvatarSize)(a.AvatarSizes.SIZE_152)
   });
   return (0, i.jsx)("div", {
     className: I.giftMainAnimationWrapper,
     children: (0, i.jsx)(E, {
       ...s,
       avatarDecoration: n,
-      src: a,
+      src: l,
       className: I.avatar,
-      size: l.AvatarSizes.SIZE_152,
+      size: a.AvatarSizes.SIZE_152,
       "aria-label": S.default.Messages.USER_SETTINGS_AVATAR
     })
   })
@@ -70,13 +70,13 @@ function v(e) {
   } = e, {
     selectedGiftStyle: n
   } = (0, _.useGiftContext)(), {
-    product: l
-  } = (0, o.useFetchCollectiblesProduct)(null == t ? void 0 : t.id), r = null == l ? void 0 : l.items[0], u = (0, s.match)(r).with({
-    type: a.CollectiblesItemType.AVATAR_DECORATION
+    product: a
+  } = (0, o.useFetchCollectiblesProduct)(null == t ? void 0 : t.id), r = null == a ? void 0 : a.items[0], u = (0, s.match)(r).with({
+    type: l.CollectiblesItemType.AVATAR_DECORATION
   }, e => (0, i.jsx)(T, {
     avatarDecoration: e
   })).with({
-    type: a.CollectiblesItemType.PROFILE_EFFECT
+    type: l.CollectiblesItemType.PROFILE_EFFECT
   }, e => (0, i.jsx)(N, {
     id: e.id
   })).otherwise(() => null);

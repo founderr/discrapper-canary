@@ -10,7 +10,7 @@ var n = a("735250"),
   d = a("514611"),
   c = a("127541"),
   f = a("981631"),
-  E = a("912625");
+  E = a("701367");
 let h = [
     [1696, 20],
     [1432, 16],
@@ -29,8 +29,8 @@ t.default = e => {
     subtitle: C,
     guildsData: m,
     analyticsContext: S,
-    theme: I,
-    onViewGuild: p,
+    theme: p,
+    onViewGuild: I,
     fetchGuilds: T,
     onGuildCardSeen: g,
     currentCategoryId: A,
@@ -47,10 +47,10 @@ t.default = e => {
     } = (0, r.default)();
   if (null == m) return null;
   let {
-    guilds: P,
-    loading: M
-  } = m, x = null == P || 0 === P.length;
-  if (!M && x) return null;
+    guilds: M,
+    loading: P
+  } = m, x = null == M || 0 === M.length;
+  if (!P && x) return null;
   let y = async e => {
     if ((0, o.isAtGuildCapAndNonPremium)())(0, u.default)({
       analyticsSource: {
@@ -63,19 +63,19 @@ t.default = e => {
       analyticsLocations: O
     });
     else {
-      let t = P.findIndex(t => t.id === e);
-      await p(e, t, S, N)
+      let t = M.findIndex(t => t.id === e);
+      await I(e, t, S, N)
     }
   };
-  if (M || null == P) {
+  if (P || null == M) {
     let e = [];
     for (let t = 0; t < L; t++) e.push((0, n.jsx)(d.default.Placeholder, {}, t));
     t = e
-  } else t = P.slice(0, L).map(e => (0, n.jsx)(d.default, {
+  } else t = M.slice(0, L).map(e => (0, n.jsx)(d.default, {
     className: E.__invalid_guildCard,
     guild: e,
     onView: y,
-    theme: I,
+    theme: p,
     onGuildCardSeen: g,
     onTagClick: v
   }, e.id));

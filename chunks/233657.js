@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return S
   }
 });
 var l = n("735250");
@@ -16,13 +16,13 @@ var a = n("924826"),
   c = n("306680"),
   f = n("9156"),
   h = n("305878"),
-  p = n("26290"),
-  m = n("434479"),
+  m = n("26290"),
+  p = n("434479"),
   C = n("490897"),
   g = n("689938"),
-  E = n("697908");
+  E = n("784545");
 
-function S(e) {
+function _(e) {
   let {
     selected: t,
     showUnread: n,
@@ -33,7 +33,7 @@ function S(e) {
     mentionCount: u,
     guildId: d
   } = e, c = (0, a.useListItem)("upcoming-events-".concat(d));
-  return (0, l.jsx)(m.default, {
+  return (0, l.jsx)(p.default, {
     ...c,
     renderIcon: e => (0, l.jsx)(h.default, {
       className: e
@@ -43,7 +43,7 @@ function S(e) {
     onClick: s,
     onContextMenu: i,
     showUnread: n,
-    badge: !r && u > 0 ? (0, l.jsx)(p.NumberBadge, {
+    badge: !r && u > 0 ? (0, l.jsx)(m.NumberBadge, {
       className: E.numberBadge,
       disableColor: !0,
       count: u
@@ -51,17 +51,17 @@ function S(e) {
   })
 }
 
-function _(e) {
+function S(e) {
   let {
     guild: t,
     selected: a
   } = e, {
     hasUnread: h,
-    mentionCount: p
+    mentionCount: m
   } = (0, s.useStateFromStoresObject)([c.default], () => ({
     hasUnread: c.default.hasUnread(t.id, C.ReadStateTypes.GUILD_EVENT),
     mentionCount: c.default.getMentionCount(t.id, C.ReadStateTypes.GUILD_EVENT)
-  }), [t.id]), m = (0, s.useStateFromStores)([f.default], () => f.default.isMuteScheduledEventsEnabled(t.id));
+  }), [t.id]), p = (0, s.useStateFromStores)([f.default], () => f.default.isMuteScheduledEventsEnabled(t.id));
   async function E() {
     await (0, r.openModalLazy)(async () => {
       let {
@@ -73,13 +73,13 @@ function _(e) {
       })
     }), (0, u.markDismissibleContentAsDismissed)(i.DismissibleContent.GUILD_HEADER_EVENT_UPSELL)
   }
-  let _ = (0, d.default)(t.id),
-    I = _.length > 0 ? g.default.Messages.GUILD_EVENTS_PLURAL.format({
-      number: _.length
+  let S = (0, d.default)(t.id),
+    I = S.length > 0 ? g.default.Messages.GUILD_EVENTS_PLURAL.format({
+      number: S.length
     }) : g.default.Messages.GUILD_EVENTS;
-  return (0, l.jsx)(S, {
+  return (0, l.jsx)(_, {
     selected: a,
-    showUnread: h && !m,
+    showUnread: h && !p,
     onClick: E,
     onContextMenu: e => {
       (0, o.openContextMenuLazy)(e, async () => {
@@ -92,9 +92,9 @@ function _(e) {
         })
       })
     },
-    eventsMuted: m,
+    eventsMuted: p,
     rowLabel: I,
-    mentionCount: p,
+    mentionCount: m,
     guildId: t.id
   })
 }

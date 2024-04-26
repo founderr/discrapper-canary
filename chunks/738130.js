@@ -31,7 +31,7 @@ var i = l("735250"),
   P = l("981631"),
   y = l("420212"),
   j = l("689938"),
-  S = l("896759");
+  S = l("275614");
 let O = E.default.getArticleURL(P.HelpdeskArticles.APP_DIRECTORY_HEADER_LEARN_MORE);
 
 function L(e) {

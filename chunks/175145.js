@@ -464,7 +464,7 @@ var r, a, o = n("976913"),
       return n.e("48174").then(n.bind(n, "94898"))
     },
     "hr-HR": function() {
-      return n.e("33238").then(n.bind(n, "887981"))
+      return n.e("33238").then(n.bind(n, "201775"))
     },
     "hu-HU": function() {
       return n.e("68130").then(n.bind(n, "809783"))

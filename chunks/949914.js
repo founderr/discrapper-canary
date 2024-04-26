@@ -12,8 +12,8 @@ var a = s("735250"),
   S = s("254854"),
   E = s("230711"),
   T = s("100527"),
-  m = s("906732"),
-  f = s("377171"),
+  f = s("906732"),
+  m = s("377171"),
   _ = s("674180"),
   g = s("374649"),
   h = s("908951"),
@@ -35,7 +35,7 @@ var a = s("735250"),
   U = s("176505"),
   y = s("526761"),
   B = s("689938"),
-  F = s("379181");
+  F = s("643892");
 let G = e => {
     let {
       label: t,
@@ -71,7 +71,7 @@ let G = e => {
       subscription: t
     } = e, {
       analyticsLocations: s
-    } = (0, m.default)(), [n] = (0, g.useSubscriptionInvoicePreview)({
+    } = (0, f.default)(), [n] = (0, g.useSubscriptionInvoicePreview)({
       subscriptionId: t.id,
       renewal: !0,
       analyticsLocations: s,
@@ -126,14 +126,14 @@ t.default = e => {
     subscriptionInfo: h
   } = (0, v.default)(t), [N, C] = n.useState(!1), R = (0, O.useUID)(), {
     analyticsLocations: H
-  } = (0, m.default)(), {
+  } = (0, f.default)(), {
     shouldHideGuildPurchaseEntryPoints: V
   } = (0, _.useShouldHideGuildPurchaseEntryPoints)(null == o ? void 0 : o.id), Y = (null == t ? void 0 : t.paymentGateway) === b.PaymentGateways.APPLE_PARTNER;
   if (null == l || null == s || null == h) return null;
-  let K = () => {
+  let W = () => {
       null != o && ((0, I.transitionTo)(b.Routes.CHANNEL(o.id, U.StaticChannelRoute.ROLE_SUBSCRIPTIONS)), (0, c.popLayer)(), S.default.show(b.NoticeTypes.BACK_TO_PREVIOUS_SCREEN, void 0, B.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_BACK_TO_SUBSCRIPTION_USER_SETTING_CTA, () => E.default.open(b.UserSettingsSections.SUBSCRIPTIONS, y.ROLE_SUBSCRIPTION_SUBSECTION)))
     },
-    W = () => {
+    K = () => {
       null != o && (0, P.openModal)({
         guildId: o.id,
         groupListing: l,
@@ -181,7 +181,7 @@ t.default = e => {
         ...e,
         children: (0, a.jsx)(M.TextBadge, {
           text: B.default.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_IOS_PLATFORM,
-          color: f.default.INTERACTIVE_MUTED
+          color: m.default.INTERACTIVE_MUTED
         })
       })
     }) : null;
@@ -265,8 +265,8 @@ t.default = e => {
         isCancelled: Q,
         isResubscribing: N,
         shouldHideRoleSubscriptionEntryPoints: V,
-        onCancelSubscriptionClick: W,
-        onChangePlanClick: K,
+        onCancelSubscriptionClick: K,
+        onChangePlanClick: W,
         onResubscribeClick: z
       })]
     }) : null]

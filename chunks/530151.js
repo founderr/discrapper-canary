@@ -16,8 +16,8 @@ var n = a("735250"),
   C = a("785547"),
   m = a("730749"),
   S = a("112724"),
-  I = a("812206"),
-  p = a("44315"),
+  p = a("812206"),
+  I = a("44315"),
   T = a("210887"),
   g = a("283595"),
   A = a("417363"),
@@ -26,8 +26,8 @@ var n = a("735250"),
   R = a("285952"),
   L = a("366695"),
   O = a("366966"),
-  P = a("151011"),
-  M = a("774832"),
+  M = a("151011"),
+  P = a("774832"),
   x = a("465670"),
   y = a("786048"),
   D = a("897353"),
@@ -37,7 +37,7 @@ var n = a("735250"),
   G = a("86826"),
   w = a("981631"),
   k = a("689938"),
-  F = a("600262");
+  F = a("221419");
 
 function B(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
@@ -279,8 +279,8 @@ class Z extends s.PureComponent {
       children: [(0, n.jsx)(f.Progress, {
         percent: t,
         size: f.Progress.Sizes.SMALL,
-        foregroundColor: (0, p.getColor)(a),
-        foregroundGradientColor: null != s ? [(0, p.getColor)(s[0]), (0, p.getColor)(s[1])] : void 0,
+        foregroundColor: (0, I.getColor)(a),
+        foregroundGradientColor: null != s ? [(0, I.getColor)(s[0]), (0, I.getColor)(s[1])] : void 0,
         animate: this.isFocused
       }), (0, n.jsx)("div", {
         className: F.progressCellText,
@@ -483,7 +483,7 @@ let X = () => (0, n.jsx)(Y, {
       item: t
     } = e;
     return (0, n.jsx)(Y, {
-      icon: M.default,
+      icon: P.default,
       tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_MOVE_UP,
       onClick: () => _.moveUp(t.applicationId, t.branchId)
     })
@@ -587,7 +587,7 @@ class ea extends s.PureComponent {
           color: w.Color.BLUE_345,
           animate: s
         })]
-      }), (0, n.jsx)(P.default, {
+      }), (0, n.jsx)(M.default, {
         hasHeader: !1,
         columns: et,
         data: e,
@@ -649,10 +649,10 @@ function en(e, t, a, n) {
     }), e
   }, [])
 }
-t.default = (0, S.default)(u.default.connectStores([I.default, A.default, N.default, T.default, v.default], () => {
-  let e = en(N.default.activeItems, !1, I.default, A.default);
+t.default = (0, S.default)(u.default.connectStores([p.default, A.default, N.default, T.default, v.default], () => {
+  let e = en(N.default.activeItems, !1, p.default, A.default);
   return {
-    applications: [...e, ...en(N.default.finishedItems, !0, I.default, A.default)],
+    applications: [...e, ...en(N.default.finishedItems, !0, p.default, A.default)],
     paused: N.default.paused,
     isFocused: v.default.isFocused(),
     theme: T.default.theme

@@ -18,21 +18,21 @@ var l = n("735250"),
   c = n("239091"),
   f = n("607070"),
   h = n("100527"),
-  p = n("367907"),
-  m = n("906732"),
+  m = n("367907"),
+  p = n("906732"),
   C = n("434404"),
   g = n("496675"),
   E = n("259580"),
-  S = n("267642"),
-  _ = n("624138"),
+  _ = n("267642"),
+  S = n("624138"),
   I = n("667815"),
   N = n("531572"),
   T = n("26323"),
   A = n("30513"),
   L = n("981631"),
   v = n("689938"),
-  x = n("365939");
-let R = (0, _.cssValueToNumber)(u.default.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
+  x = n("480901");
+let R = (0, S.cssValueToNumber)(u.default.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
   M = e => {
     let {
       guild: t,
@@ -58,7 +58,7 @@ let R = (0, _.cssValueToNumber)(u.default.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITI
   },
   y = 57,
   O = 57 + R,
-  b = {
+  D = {
     tension: 180,
     friction: 80
   };
@@ -68,33 +68,33 @@ t.default = e => {
     withMargin: n
   } = e, {
     analyticsLocations: s
-  } = (0, m.default)(h.default.GUILD_BOOSTING_SIDEBAR_DISPLAY), {
+  } = (0, p.default)(h.default.GUILD_BOOSTING_SIDEBAR_DISPLAY), {
     premiumSubscriberCount: u,
     id: C
-  } = t, _ = (0, S.getGuildTierFromAppliedBoostCount)(u, C), R = (0, S.getNextTier)(_, t.id), y = null == R, O = null != R ? R : _, D = (0, o.useStateFromStores)([N.default], () => {
+  } = t, S = (0, _.getGuildTierFromAppliedBoostCount)(u, C), R = (0, _.getNextTier)(S, t.id), y = null == R, O = null != R ? R : S, b = (0, o.useStateFromStores)([N.default], () => {
     var e;
     return null !== (e = N.default.getCountForGuild(C)) && void 0 !== e ? e : 0
   }), j = (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion), P = (0, o.useStateFromStores)([g.default], () => g.default.can(L.Permissions.MANAGE_GUILD, t));
   a.useEffect(() => {
-    D !== u && (0, I.updateGuildPremiumSubscriptionCount)(C, u)
-  }, [C, D, u]);
-  let G = "".concat(Math.min(100, u / (0, S.getAppliedGuildBoostsRequired)(t.id)[O] * 100), "%"),
+    b !== u && (0, I.updateGuildPremiumSubscriptionCount)(C, u)
+  }, [C, b, u]);
+  let G = "".concat(Math.min(100, u / (0, _.getAppliedGuildBoostsRequired)(t.id)[O] * 100), "%"),
     {
       current: U
     } = a.useRef(G),
     w = {
       from: {
-        width: D === u ? U : "0%"
+        width: b === u ? U : "0%"
       },
       to: {
         width: G
       },
-      config: b,
+      config: D,
       immediate: j
     },
     [F, B] = (0, r.useSpring)(() => w),
-    H = () => {
-      (0, p.trackWithMetadata)(L.AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, {
+    V = () => {
+      (0, m.trackWithMetadata)(L.AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, {
         location: {
           section: L.AnalyticsSections.PREMIUM_GUILD_PROGRESS_BAR
         },
@@ -112,18 +112,18 @@ t.default = e => {
         perkIntro: v.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_MODAL_PROGRESS_BAR_HEADER
       })
     },
-    V = v.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_GOAL.format({
-      levelName: (0, S.getShortenedTierName)(O)
+    H = v.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_GOAL.format({
+      levelName: (0, _.getShortenedTierName)(O)
     }),
     k = v.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_BLURB.format({
       numBoosts: u,
-      numTotal: (0, S.getAppliedGuildBoostsRequired)(t.id)[O]
+      numTotal: (0, _.getAppliedGuildBoostsRequired)(t.id)[O]
     });
-  return y && (V = (0, S.getShortenedTierName)(O), k = v.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_COMPLETED_BLURB.format({
+  return y && (H = (0, _.getShortenedTierName)(O), k = v.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_COMPLETED_BLURB.format({
     numBoosts: u
   })), (0, l.jsx)(d.Tooltip, {
     text: y ? v.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP_COMPLETE : v.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP.format({
-      levelName: (0, S.getTierName)(O)
+      levelName: (0, _.getTierName)(O)
     }),
     color: d.Tooltip.Colors.BLACK,
     position: "top",
@@ -131,7 +131,7 @@ t.default = e => {
     hideOnClick: !0,
     children: e => (0, l.jsxs)(d.Clickable, {
       ...e,
-      onClick: H,
+      onClick: V,
       onMouseEnter: () => {
         var t;
         null === (t = e.onMouseEnter) || void 0 === t || t.call(e), B(w)
@@ -153,7 +153,7 @@ t.default = e => {
             className: x.goalText,
             color: "interactive-active",
             variant: "text-xs/bold",
-            children: V
+            children: H
           })
         }), (0, l.jsxs)("div", {
           className: x.progressFraction,

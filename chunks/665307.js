@@ -19,8 +19,8 @@ var n, s = a("735250"),
   C = a("404133"),
   m = a("785547"),
   S = a("490983"),
-  I = a("799777"),
-  p = a("285952"),
+  p = a("799777"),
+  I = a("285952"),
   T = a("366695"),
   g = a("366966"),
   A = a("151011"),
@@ -29,11 +29,11 @@ var n, s = a("735250"),
   R = a("931003"),
   L = a("626135"),
   O = a("780570"),
-  P = a("624138"),
-  M = a("645818"),
+  M = a("624138"),
+  P = a("645818"),
   x = a("981631"),
   y = a("689938"),
-  D = a("373438");
+  D = a("470163");
 
 function b(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
@@ -43,8 +43,8 @@ function b(e, t, a) {
     writable: !0
   }) : e[t] = a, e
 }
-let U = (0, P.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
-  j = (0, P.cssValueToNumber)(c.default.GAME_LIST_LINKED_TO_GLOW_DURATION),
+let U = (0, M.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
+  j = (0, M.cssValueToNumber)(c.default.GAME_LIST_LINKED_TO_GLOW_DURATION),
   G = Object.freeze({
     [x.GameTableListKeys.PLATFORM]: "Platform",
     [x.GameTableListKeys.LAST_PLAYED]: "Last Played",
@@ -73,8 +73,8 @@ let U = (0, P.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
     sort: !0,
     cellClassName: D.nameCell,
     bodyCellClassName: D.nameBodyCell,
-    render: e => (0, s.jsxs)(p.default, {
-      align: p.default.Align.CENTER,
+    render: e => (0, s.jsxs)(I.default, {
+      align: I.default.Align.CENTER,
       children: [(0, s.jsx)(T.default, {
         game: e.application,
         size: T.default.Sizes.SMALL,
@@ -101,8 +101,8 @@ let U = (0, P.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
     bodyCellClassName: D.textCell,
     render(e) {
       let t = e.libraryApplication.getDistributor();
-      return (0, s.jsx)(p.default, {
-        align: p.default.Align.CENTER,
+      return (0, s.jsx)(I.default, {
+        align: I.default.Align.CENTER,
         children: null != t ? x.DistributorNames[t] : y.default.Messages.GAME_LIBRARY_NOT_APPLICABLE
       })
     }
@@ -117,8 +117,8 @@ let U = (0, P.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
       return t = e.isRunning ? y.default.Messages.GAME_LIBRARY_LAST_PLAYED_PLAYING_NOW : e.isNew ? y.default.Messages.GAME_LIBRARY_NEW : 0 !== e.lastPlayed ? (0, s.jsx)(g.default, {
         end: e.lastPlayed,
         location: g.default.Locations.GAME_LIBRARY_LAST_PLAYED
-      }) : y.default.Messages.GAME_LIBRARY_LAST_PLAYED_NONE, (0, s.jsx)(p.default, {
-        align: p.default.Align.CENTER,
+      }) : y.default.Messages.GAME_LIBRARY_LAST_PLAYED_NONE, (0, s.jsx)(I.default, {
+        align: I.default.Align.CENTER,
         className: r()({
           [D.lastPlayedCellNew]: e.isNew
         }),
@@ -146,7 +146,7 @@ let U = (0, P.cssValueToNumber)(c.default.GAME_LIST_ROW_MIN_HEIGHT),
             item: e,
             icon: R.default,
             tooltip: y.default.Messages.GAME_LIBRARY_OVERLAY_DISABLED_TOOLTIP
-          }), (0, s.jsx)(M.default, {
+          }), (0, s.jsx)(P.default, {
             className: r()(D.settingIcon, {
               [D.hidden]: !e.supportsCloudSync
             }),
@@ -292,10 +292,10 @@ class B extends(n = l.PureComponent) {
       className: n ? D.emptyStateSmall : D.emptyStateLarge,
       children: [(0, s.jsx)("div", {
         className: D.emptyWumpus
-      }), (0, s.jsx)(p.default, {
+      }), (0, s.jsx)(I.default, {
         grow: 0,
         shrink: n ? 1 : 0,
-        direction: p.default.Direction.VERTICAL,
+        direction: I.default.Direction.VERTICAL,
         children: (0, s.jsxs)("div", {
           className: D.emptyStateText,
           children: [(0, s.jsx)("div", {
@@ -412,11 +412,11 @@ function H(e) {
       sortDirection: c,
       activeRowKey: f,
       isNavigatingByKeyboard: E
-    } = (0, u.useStateFromStoresObject)([I.default], () => ({
-      sortKey: I.default.sortKey,
-      sortDirection: I.default.sortDirection,
-      activeRowKey: I.default.activeRowKey,
-      isNavigatingByKeyboard: I.default.isNavigatingByKeyboard
+    } = (0, u.useStateFromStoresObject)([p.default], () => ({
+      sortKey: p.default.sortKey,
+      sortDirection: p.default.sortDirection,
+      activeRowKey: p.default.activeRowKey,
+      isNavigatingByKeyboard: p.default.isNavigatingByKeyboard
     }));
   return (0, s.jsx)(B, {
     ...e,

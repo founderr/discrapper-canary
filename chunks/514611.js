@@ -15,11 +15,11 @@ var n, s = a("735250"),
   C = a("695346"),
   m = a("768581"),
   S = a("900849"),
-  I = a("940627"),
-  p = a("806519"),
+  p = a("940627"),
+  I = a("806519"),
   T = a("981631"),
   g = a("689938"),
-  A = a("313618"),
+  A = a("218290"),
   N = a("129512"),
   v = a("330065"),
   R = a("755386");
@@ -58,8 +58,8 @@ class O extends(n = l.PureComponent) {
       name: R,
       description: L,
       presenceCount: O,
-      memberCount: P,
-      keywords: M
+      memberCount: M,
+      keywords: P
     } = t, x = null === (e = t.features) || void 0 === e ? void 0 : e.has(T.GuildFeatures.HUB), y = m.default.getGuildDiscoverySplashURL({
       id: t.id,
       splash: t.discoverySplash,
@@ -133,14 +133,14 @@ class O extends(n = l.PureComponent) {
                 })
               }) : null, (0, s.jsx)("div", {
                 className: A.guildIcon,
-                children: (0, s.jsx)(p.default, {
-                  mask: p.default.Masks.SQUIRCLE,
+                children: (0, s.jsx)(I.default, {
+                  mask: I.default.Masks.SQUIRCLE,
                   width: 48,
                   height: 48,
                   children: (0, s.jsx)("div", {
                     className: A.iconMask,
-                    children: (0, s.jsx)(p.default, {
-                      mask: p.default.Masks.SQUIRCLE,
+                    children: (0, s.jsx)(I.default, {
+                      mask: I.default.Masks.SQUIRCLE,
                       width: 40,
                       height: 40,
                       children: (0, s.jsx)("img", {
@@ -156,7 +156,7 @@ class O extends(n = l.PureComponent) {
               className: A.guildInfo,
               children: [(0, s.jsxs)("div", {
                 className: A.title,
-                children: [(0, s.jsx)(I.default, {
+                children: [(0, s.jsx)(p.default, {
                   className: A.guildBadge,
                   guild: t,
                   tooltipColor: u.Tooltip.Colors.PRIMARY
@@ -170,8 +170,8 @@ class O extends(n = l.PureComponent) {
                 variant: "text-sm/normal",
                 color: "header-secondary",
                 children: L
-              }), U && null != M && null != l && (0, s.jsx)(E.DiscoveryTags, {
-                tags: M,
+              }), U && null != P && null != l && (0, s.jsx)(E.DiscoveryTags, {
+                tags: P,
                 onTagClick: e => l(e, t.id),
                 guildId: t.id,
                 section: S.AnalyticsContexts.POPULAR
@@ -188,7 +188,7 @@ class O extends(n = l.PureComponent) {
                       membersOnline: O
                     })
                   })]
-                }), null != P && (0, s.jsxs)("div", {
+                }), null != M && (0, s.jsxs)("div", {
                   className: A.memberCount,
                   children: [(0, s.jsx)("div", {
                     className: A.dotOffline
@@ -196,7 +196,7 @@ class O extends(n = l.PureComponent) {
                     variant: "text-xs/normal",
                     color: "header-secondary",
                     children: g.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
-                      count: P
+                      count: M
                     })
                   })]
                 })]

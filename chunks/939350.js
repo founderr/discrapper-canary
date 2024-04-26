@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var i = n("989608");
+var i = n("942610");
 let r = {
   default: i.colorDefault,
   brand: i.colorBrand,

@@ -12,8 +12,8 @@ var a, n, l, i, r = s("735250"),
   S = s("481060"),
   E = s("37234"),
   T = s("607070"),
-  m = s("301822"),
-  f = s("206895"),
+  f = s("301822"),
+  m = s("206895"),
   _ = s("692437"),
   g = s("783539"),
   h = s("585483"),
@@ -27,7 +27,7 @@ var a, n, l, i, r = s("735250"),
   R = s("524484"),
   M = s("981631"),
   v = s("689938"),
-  D = s("604637");
+  D = s("500335");
 let L = {
     enabled: !0,
     combosEnabled: !0,
@@ -341,7 +341,7 @@ function Y(e) {
   })
 }
 
-function K(e) {
+function W(e) {
   let {
     onChangePage: t
   } = e;
@@ -374,7 +374,7 @@ function K(e) {
     })]
   })
 }
-let W = () => s.e("20467").then(s.t.bind(s, "205663", 19)).then(e => {
+let K = () => s.e("20467").then(s.t.bind(s, "205663", 19)).then(e => {
   let {
     default: t
   } = e;
@@ -431,7 +431,7 @@ function z(e) {
     }), (0, r.jsx)(k, {
       settings: a,
       updateSettings: E
-    }), (0, r.jsx)(K, {
+    }), (0, r.jsx)(W, {
       onChangePage: t
     }), (0, r.jsx)(H, {
       settings: a,
@@ -465,7 +465,7 @@ let Q = (e, t, s) => {
         return null
     }
   },
-  q = e => 0 === e ? f.SlideDirection.LEFT : f.SlideDirection.RIGHT;
+  q = e => 0 === e ? m.SlideDirection.LEFT : m.SlideDirection.RIGHT;
 
 function Z() {
   let [e, t] = o.useState(0), [s, a] = o.useState(q(e)), [n, l] = o.useState(!1), i = (0, u.useStateFromStores)([T.default], () => T.default.useReducedMotion), d = n && !i;
@@ -477,16 +477,16 @@ function Z() {
   }, [e]), o.useEffect(() => {
     Math.random() > .99 && (0, N.unlockAchievement)(p.PoggermodeAchievementId.VISITOR_100)
   }, []), (0, r.jsxs)(r.Fragment, {
-    children: [(0, r.jsx)(f.default, {
+    children: [(0, r.jsx)(m.default, {
       className: D.slideAnimator,
       step: e,
       direction: s,
       children: Q(e, t, l)
     }), (0, r.jsx)("div", {
       className: d ? D.enableAnimationOverlayVisible : D.enableAnimationOverlayHidden,
-      children: (0, r.jsx)(m.default, {
+      children: (0, r.jsx)(f.default, {
         className: D.enableAnimation,
-        importData: W,
+        importData: K,
         shouldAnimate: d,
         autoplay: !1,
         resetOnPlay: !0,

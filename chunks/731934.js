@@ -16,11 +16,11 @@ var n = a("735250"),
   C = a("568671"),
   m = a("419821"),
   S = a("367515"),
-  I = a("250285"),
-  p = a("292352"),
+  p = a("250285"),
+  I = a("292352"),
   T = a("689938"),
-  g = a("954830"),
-  A = a("794711"),
+  g = a("914749"),
+  A = a("949086"),
   N = a("926895");
 
 function v(e) {
@@ -135,10 +135,10 @@ function O(e) {
       row: a,
       listIndex: s
     } = e, i = l[a], r = s === l.length;
-    return null == i ? null : (0, n.jsx)(I.default, {
+    return null == i ? null : (0, n.jsx)(p.default, {
       userId: i.id,
       isLast: r,
-      children: () => t === p.UserLinkStatus.ACTIVE ? (0, n.jsx)(m.UserLinkAcceptedRequestRow, {
+      children: () => t === I.UserLinkStatus.ACTIVE ? (0, n.jsx)(m.UserLinkAcceptedRequestRow, {
         user: i
       }) : (0, n.jsx)(S.UserLinkPendingRequestRow, {
         user: i
@@ -172,8 +172,8 @@ function O(e) {
               var a;
               i.current = e, t.current = null !== (a = null == e ? void 0 : e.getScrollerNode()) && void 0 !== a ? a : null
             },
-            sectionHeight: p.FAMILY_CENTER_REQUEST_SECTION_HEIGHT,
-            rowHeight: p.FAMILY_CENTER_REQUEST_ROW_HEIGHT,
+            sectionHeight: I.FAMILY_CENTER_REQUEST_SECTION_HEIGHT,
+            rowHeight: I.FAMILY_CENTER_REQUEST_ROW_HEIGHT,
             renderSection: h,
             renderRow: E,
             sections: [l.length],
@@ -186,10 +186,10 @@ function O(e) {
     })
   })
 }
-let P = () => {
+let M = () => {
     let e = (0, E.default)(),
-      t = (0, h.useUserForLinkStatus)(p.UserLinkStatus.ACTIVE),
-      a = e ? p.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : p.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
+      t = (0, h.useUserForLinkStatus)(I.UserLinkStatus.ACTIVE),
+      a = e ? I.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : I.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
       s = {
         count: t.length,
         max: a
@@ -197,7 +197,7 @@ let P = () => {
       l = (0, c.useAgeSpecificText)(T.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_TEEN.format(s), T.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_PARENT.format(s));
     return (0, n.jsx)(n.Fragment, {
       children: t.length > 0 ? (0, n.jsx)(O, {
-        sectionType: p.UserLinkStatus.ACTIVE,
+        sectionType: I.UserLinkStatus.ACTIVE,
         sectionTitle: l,
         requests: t
       }) : (0, n.jsxs)("div", {
@@ -216,9 +216,9 @@ let P = () => {
       })
     })
   },
-  M = () => {
+  P = () => {
     let e = (0, h.useHasMaxConnections)(),
-      t = (0, E.default)() ? p.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : p.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
+      t = (0, E.default)() ? I.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : I.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
       a = (0, c.useAgeSpecificText)(T.default.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_TEEN.format({
         maxConnections: t
       }), T.default.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_PARENT.format({
@@ -250,14 +250,14 @@ let P = () => {
     })]
   }) : null,
   y = () => {
-    let e = (0, h.useUserForLinkStatus)(p.UserLinkStatus.PENDING),
+    let e = (0, h.useUserForLinkStatus)(I.UserLinkStatus.PENDING),
       t = (0, c.useAgeSpecificText)(T.default.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_TEEN.format({
         count: e.length
       }), T.default.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_PARENT.format({
         count: e.length
       }));
     return 0 === e.length ? null : (0, n.jsx)(O, {
-      sectionType: p.UserLinkStatus.PENDING,
+      sectionType: I.UserLinkStatus.PENDING,
       sectionTitle: t,
       requests: e
     })
@@ -266,6 +266,6 @@ t.default = () => {
   let e = (0, E.default)();
   return (0, n.jsxs)("div", {
     className: g.container,
-    children: [e ? (0, n.jsx)(R, {}) : (0, n.jsx)(L, {}), (0, n.jsx)(P, {}), (0, n.jsx)(y, {}), (0, n.jsx)(M, {}), (0, n.jsx)(x, {})]
+    children: [e ? (0, n.jsx)(R, {}) : (0, n.jsx)(L, {}), (0, n.jsx)(M, {}), (0, n.jsx)(y, {}), (0, n.jsx)(P, {}), (0, n.jsx)(x, {})]
   })
 }

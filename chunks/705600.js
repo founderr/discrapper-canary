@@ -29,7 +29,7 @@ var r = n("120356"),
   R = n("507957"),
   C = n("981631"),
   g = n("689938"),
-  L = n("509252");
+  L = n("187885");
 let D = {
   [d.BadgeCategory.STAFF]: {
     IconComponent: O.default,

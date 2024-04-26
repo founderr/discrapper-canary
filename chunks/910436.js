@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return I
+    return p
   }
 }), a("653041"), a("47120");
 var n = a("735250");
@@ -22,12 +22,12 @@ var s = a("287734"),
   m = a("817915"),
   S = a("981631");
 
-function I(e) {
+function p(e) {
   let {
     party: t,
     onChannelContextMenu: a,
-    quest: I
-  } = e, p = (0, C.useNowPlayingVisible)(), {
+    quest: p
+  } = e, I = (0, C.useNowPlayingVisible)(), {
     voiceChannels: T,
     currentActivities: g,
     partiedMembers: A,
@@ -88,7 +88,7 @@ function I(e) {
         L(t);
         break
       }
-    } return N.length > 0 && p && N.forEach(e => {
+    } return N.length > 0 && I && N.forEach(e => {
     let {
       stream: t,
       streamUser: a,
@@ -104,26 +104,26 @@ function I(e) {
       }
     }, "application-stream-".concat(t.ownerId)))
   }), g.forEach((e, t) => {
-    var a, s, l, f, h, C, p, N, R;
+    var a, s, l, f, h, C, I, N, R;
     let {
       activity: O,
-      game: P,
-      playingMembers: M,
+      game: M,
+      playingMembers: P,
       activityUser: x
     } = e;
     if (null == O || null == O.type) return null;
-    if (g.length > 1 && O.type === S.ActivityTypes.PLAYING && !(0, i.default)(O) && null != P) L((0, n.jsx)(_.default.GameSection, {
-      icon: P.getIconURL(m.ICON_SIZE),
-      name: P.name,
+    if (g.length > 1 && O.type === S.ActivityTypes.PLAYING && !(0, i.default)(O) && null != M) L((0, n.jsx)(_.default.GameSection, {
+      icon: M.getIconURL(m.ICON_SIZE),
+      name: M.name,
       partySize: {
-        knownSize: M.length,
+        knownSize: P.length,
         unknownSize: 0,
-        totalSize: M.length
+        totalSize: P.length
       },
-      members: M
+      members: P
     }, "game-".concat(null !== (a = O.session_id) && void 0 !== a ? a : t, "-").concat(null !== (s = O.application_id) && void 0 !== s ? s : t)));
     else if ((0, r.default)(O)) {
-      let e = new Set(M.map(e => e.id)),
+      let e = new Set(P.map(e => e.id)),
         t = null === (l = T.find(e => null != e)) || void 0 === l ? void 0 : l.channel;
       null != t && L((0, n.jsx)(_.default.EmbeddedActivitySection, {
         activity: O,
@@ -137,7 +137,7 @@ function I(e) {
     }, "rich-presence-".concat(null !== (f = O.session_id) && void 0 !== f ? f : t, "-").concat(x.id)));
     else if ((0, d.default)(O)) {
       let e = T.length > 0 && T[0].members.length > 1,
-        a = M.length > 1;
+        a = P.length > 1;
       L((0, n.jsx)(_.default.TwitchSection, {
         guildId: null == v ? void 0 : v.id,
         activity: O,
@@ -148,21 +148,21 @@ function I(e) {
       activity: O,
       isSolo: 1 === A.length,
       partySize: {
-        knownSize: M.length,
+        knownSize: P.length,
         unknownSize: 0,
-        totalSize: M.length
+        totalSize: P.length
       },
       getAssetImage: E.getAssetImage,
-      members: M
+      members: P
     }, "spotify-".concat(null !== (C = O.session_id) && void 0 !== C ? C : t, "-").concat(x.id))) : (null != O.assets || (0, i.default)(O)) && O.type === S.ActivityTypes.LISTENING ? L((0, n.jsx)(_.default.RichPresenceSection, {
       activity: O,
       getAssetImage: E.getAssetImage
-    }, "rich-presence-".concat(null !== (p = O.session_id) && void 0 !== p ? p : t, "-").concat(x.id))) : (0, u.default)(O) && L((0, n.jsx)(_.default.XboxSection, {
-      title: P.name
+    }, "rich-presence-".concat(null !== (I = O.session_id) && void 0 !== I ? I : t, "-").concat(x.id))) : (0, u.default)(O) && L((0, n.jsx)(_.default.XboxSection, {
+      title: M.name
     }, "xbox-".concat(null !== (N = O.session_id) && void 0 !== N ? N : t)));
-    null != I && null != P && P.id === I.config.applicationId && L((0, n.jsx)(c.default, {
-      quest: I
-    }, "quest-".concat(I.id, "-").concat(null !== (R = O.session_id) && void 0 !== R ? R : t)))
+    null != p && null != M && M.id === p.config.applicationId && L((0, n.jsx)(c.default, {
+      quest: p
+    }, "quest-".concat(p.id, "-").concat(null !== (R = O.session_id) && void 0 !== R ? R : t)))
   }), R.length > 0 ? (0, n.jsx)(_.default.Body, {
     children: R
   }) : null

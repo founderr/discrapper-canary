@@ -1,27 +1,27 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return o
   }
 });
-var n = i("735250");
-i("470079");
-var r = i("120356"),
-  s = i.n(r),
-  a = i("481060"),
-  l = i("482249");
+var i = n("735250");
+n("470079");
+var r = n("120356"),
+  s = n.n(r),
+  a = n("481060"),
+  l = n("915580");
 
 function o(e) {
   let {
     title: t,
-    children: i
+    children: n
   } = e;
-  return (0, n.jsxs)(a.FormSection, {
+  return (0, i.jsxs)(a.FormSection, {
     className: s()(l.backgroundContainer, l.spacingContainer, l.containerPadding),
-    children: [(0, n.jsx)(a.FormTitle, {
+    children: [(0, i.jsx)(a.FormTitle, {
       tag: "h3",
       className: l.containerTitle,
       children: t
-    }), i]
+    }), n]
   })
 }

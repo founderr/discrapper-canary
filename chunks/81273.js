@@ -33,8 +33,8 @@ t.default = (e, t, n, s) => {
   let r;
   let j = (0, u.useStateFromStores)([g.default], () => g.default.isLurking(t)),
     P = (0, C.useShowMemberVerificationGate)(t),
-    b = (0, u.useStateFromStores)([E.default], () => null != t ? E.default.getRequest(t) : null),
-    D = (null == b ? void 0 : b.applicationStatus) === p.GuildJoinRequestApplicationStatuses.SUBMITTED,
+    D = (0, u.useStateFromStores)([E.default], () => null != t ? E.default.getRequest(t) : null),
+    b = (null == D ? void 0 : D.applicationStatus) === p.GuildJoinRequestApplicationStatuses.SUBMITTED,
     U = null == e ? void 0 : e.subscription_plans[0],
     F = null == U ? void 0 : U.id,
     w = (null == e ? void 0 : e.published) === !0,
@@ -60,7 +60,7 @@ t.default = (e, t, n, s) => {
       analyticsLocations: Q
     } = (0, h.default)(),
     J = (null == B ? void 0 : B.paymentGateway) === y.PaymentGateways.APPLE_PARTNER;
-  D ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER : j && !P ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER : Y === F ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION_TO_CURRENT_LISTING.format({
+  b ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER : j && !P ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER : Y === F ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION_TO_CURRENT_LISTING.format({
     changeDate: null != B ? o()(B.currentPeriodEnd).format("MMM DD, YYYY") : ""
   }) : z ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION : K ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IN_TRIAL : J && (r = O.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IF_IAP);
   let $ = (0, f.default)(L.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY);
@@ -119,7 +119,7 @@ t.default = (e, t, n, s) => {
     }, [t]);
   return {
     openModal: P ? et : ee,
-    canOpenModal: !j && null != H && V && !D && !z && !K && !J,
+    canOpenModal: !j && null != H && V && !b && !z && !K && !J,
     cannotOpenReason: r,
     isCheckingTrialEligibility: Z
   }

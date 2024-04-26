@@ -25,7 +25,7 @@ var a = n("735250"),
   T = n("718617"),
   I = n("327250"),
   A = n("228168"),
-  v = n("701744");
+  v = n("725409");
 
 function N(e) {
   let {
@@ -35,8 +35,8 @@ function N(e) {
     className: N,
     infoPanelClassName: x,
     style: M
-  } = e, R = (0, _.useCanAccessGuildMemberModView)(n), L = (0, r.useStateFromStores)([S.default], () => S.default.getUser(t), [t]), y = (0, r.useStateFromStores)([g.default], () => g.default.getMember(n, t), [n, t]), [O, j] = l.useState(null == L || null == y), P = (0, d.default)(y), b = l.useRef(null), {
-    analyticsLocations: D
+  } = e, R = (0, _.useCanAccessGuildMemberModView)(n), L = (0, r.useStateFromStores)([S.default], () => S.default.getUser(t), [t]), y = (0, r.useStateFromStores)([g.default], () => g.default.getMember(n, t), [n, t]), [O, j] = l.useState(null == L || null == y), P = (0, d.default)(y), D = l.useRef(null), {
+    analyticsLocations: b
   } = (0, h.default)(f.default.GUILD_MEMBER_MOD_VIEW), U = (0, E.default)(t, n);
   return (l.useEffect(() => {
     !R && s()
@@ -46,8 +46,8 @@ function N(e) {
     null != L && null != y && j(!1)
   }, [L, y]), l.useEffect(() => {
     let e = null == y;
-    return !O && e && (b.current = window.setTimeout(s, 500)), () => {
-      null != b.current && window.clearTimeout(b.current)
+    return !O && e && (D.current = window.setTimeout(s, 500)), () => {
+      null != D.current && window.clearTimeout(D.current)
     }
   }, [O, y, s]), (0, c.useSubscribeGuildMembers)({
     [n]: [t]
@@ -67,7 +67,7 @@ function N(e) {
       type: O ? o.Spinner.Type.SPINNING_CIRCLE : o.Spinner.Type.CHASING_DOTS
     })
   }) : (0, a.jsx)(h.AnalyticsLocationProvider, {
-    value: D,
+    value: b,
     children: (0, a.jsx)("div", {
       className: i()(v.sidebarContianer, N),
       style: M,

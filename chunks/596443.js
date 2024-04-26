@@ -29,8 +29,8 @@ var a = n("735250"),
   N = n("351127"),
   x = n("981631"),
   M = n("689938"),
-  R = n("196958"),
-  L = n("482039");
+  R = n("867833"),
+  L = n("679383");
 
 function y(e) {
   var t, n, s, r;
@@ -40,9 +40,9 @@ function y(e) {
     guild: _,
     specMap: T,
     categoryTitle: I
-  } = e, A = (0, u.useStateFromStores)([g.default], () => g.default.getRoles(_.id)), v = x.Permissions[o], R = null !== (s = null === (t = T[v.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== s ? s : (0, E.getPermissionName)(v), y = null !== (r = null === (n = T[v.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== r ? r : "", O = N.ELEVATED_PERMISSIONS.has(v), j = N.MOD_PERMISSIONS.includes(o), P = C.length, b = (0, u.useStateFromStores)([S.default], () => S.default.can(x.Permissions.MANAGE_ROLES, _), [_]), D = l.useCallback(async e => {
-    b && (await p.default.open(_.id, x.GuildSettingsSections.ROLES), await p.default.selectRole(e))
-  }, [b, _.id]);
+  } = e, A = (0, u.useStateFromStores)([g.default], () => g.default.getRoles(_.id)), v = x.Permissions[o], R = null !== (s = null === (t = T[v.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== s ? s : (0, E.getPermissionName)(v), y = null !== (r = null === (n = T[v.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== r ? r : "", O = N.ELEVATED_PERMISSIONS.has(v), j = N.MOD_PERMISSIONS.includes(o), P = C.length, D = (0, u.useStateFromStores)([S.default], () => S.default.can(x.Permissions.MANAGE_ROLES, _), [_]), b = l.useCallback(async e => {
+    D && (await p.default.open(_.id, x.GuildSettingsSections.ROLES), await p.default.selectRole(e))
+  }, [D, _.id]);
   return (0, a.jsxs)("div", {
     className: i()(L.permissionItemContainer, {
       [L.elevatedPermission]: O
@@ -117,9 +117,9 @@ function y(e) {
       className: L.permissionItemRoleContainer,
       children: C.map(e => (0, a.jsx)(c.Clickable, {
         className: i()(L.roleTooltipItem, {
-          [L.editable]: b && !(0, f.isEveryoneRoleId)(_.id, e) && !(0, N.isOwnerRole)(e, _.id)
+          [L.editable]: D && !(0, f.isEveryoneRoleId)(_.id, e) && !(0, N.isOwnerRole)(e, _.id)
         }),
-        onClick: () => D(e),
+        onClick: () => b(e),
         children: (0, N.isOwnerRole)(e, _.id) ? (0, a.jsx)("div", {
           className: L.roleChiplet,
           children: (0, a.jsx)(c.Text, {
@@ -148,7 +148,7 @@ function j(e) {
     location: s,
     className: r,
     onNavigate: d
-  } = e, f = (0, u.useStateFromStores)([_.default], () => _.default.getUser(t), [t]), h = (0, u.useStateFromStores)([g.default], () => g.default.getGuild(n), [n]), m = (0, u.useStateFromStores)([C.default], () => C.default.getMember(n, t), [n, t]), p = (0, v.useProfileThemedPanelBackground)(t, n), S = (0, N.useUserPermissionsAndRoles)(t, n, N.ALL_PERMISSIONS), j = Object.keys(S).length, P = l.useMemo(() => null != h ? I.default.getGuildPermissionSpecMap(h) : null, [h]), b = l.useMemo(() => null != h ? I.default.generateGuildPermissionSpec(h) : null, [h]), [D, U] = l.useState(""), [F, w] = l.useState(""), k = l.useCallback(o()(w, 300), []), H = l.useCallback(e => {
+  } = e, f = (0, u.useStateFromStores)([_.default], () => _.default.getUser(t), [t]), h = (0, u.useStateFromStores)([g.default], () => g.default.getGuild(n), [n]), m = (0, u.useStateFromStores)([C.default], () => C.default.getMember(n, t), [n, t]), p = (0, v.useProfileThemedPanelBackground)(t, n), S = (0, N.useUserPermissionsAndRoles)(t, n, N.ALL_PERMISSIONS), j = Object.keys(S).length, P = l.useMemo(() => null != h ? I.default.getGuildPermissionSpecMap(h) : null, [h]), D = l.useMemo(() => null != h ? I.default.generateGuildPermissionSpec(h) : null, [h]), [b, U] = l.useState(""), [F, w] = l.useState(""), k = l.useCallback(o()(w, 300), []), H = l.useCallback(e => {
     U(e), k(e)
   }, [k]), B = l.useCallback(() => {
     U(""), w("")
@@ -163,7 +163,7 @@ function j(e) {
       })
     });
     let e = [];
-    return null == b || b.forEach(t => {
+    return null == D || D.forEach(t => {
       t.permissions.forEach(n => {
         let l = n.flag,
           s = N.ALL_PERMISSIONS.find(e => x.Permissions[e] === l);
@@ -194,7 +194,7 @@ function j(e) {
         }
       })
     }), e
-  }, [h, P, m, j, b, S, F]);
+  }, [h, P, m, j, D, S, F]);
   return null == f || null == m ? null : (0, a.jsxs)("div", {
     className: i()(R.container, r),
     style: {
@@ -213,7 +213,7 @@ function j(e) {
           className: L.permissionsItemContainer,
           children: [(0, a.jsx)(T.default, {
             className: L.searchBar,
-            query: D,
+            query: b,
             placeholder: M.default.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER,
             onChange: H,
             onClear: B,

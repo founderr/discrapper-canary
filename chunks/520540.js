@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   ReferralProgramSender: function() {
-    return a
+    return n
   },
   SubscriberHomeVariant: function() {
-    return i
+    return r
   }
 });
-var r, i, s = n("818083");
-(r = i || (i = {}))[r.VARIANT_1 = 0] = "VARIANT_1", r[r.VARIANT_2 = 1] = "VARIANT_2";
-let a = (0, s.createExperiment)({
+var a, r, i = s("818083");
+(a = r || (r = {}))[a.VARIANT_1 = 0] = "VARIANT_1", a[a.VARIANT_2 = 1] = "VARIANT_2";
+let n = (0, i.createExperiment)({
   kind: "user",
   id: "2024-03_referral_program_sender",
   label: "Referral Program Sender Experience",

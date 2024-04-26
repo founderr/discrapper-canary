@@ -6,7 +6,7 @@ var s = a("206017"),
   l = a("360048"),
   i = a("731455"),
   r = a("689938"),
-  o = a("228726");
+  o = a("318020");
 t.default = e => {
   let {
     handleCategorySelect: t,

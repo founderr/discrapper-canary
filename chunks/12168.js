@@ -28,7 +28,7 @@ var a = n("735250"),
   T = n("354459"),
   I = n("185923"),
   A = n("420212"),
-  v = n("132614");
+  v = n("695357");
 let N = I.EmojiIntention.CHAT,
   x = [m.default.getByName("thumbsup"), m.default.getByName("eyes"), m.default.getByName("laughing"), m.default.getByName("watermelon"), m.default.getByName("fork_and_knife"), m.default.getByName("yum")].filter(_.isNotNullish);
 
@@ -116,16 +116,16 @@ function L(e) {
     intention: N
   })).slice(0, T.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT);
   null != g && g.length > 0 && P.splice(P.length - 1, 1, g[0]);
-  let b = e => {
+  let D = e => {
       O(e), null == m || m(e)
     },
-    D = (e, t) => {
+    b = (e, t) => {
       if (null == e && t) {
         s();
         return
       }
       null != e && d(e);
-      b(!t), t && p.EmojiPickerStore.setSearchPlaceholder(null)
+      D(!t), t && p.EmojiPickerStore.setSearchPlaceholder(null)
     };
   return (0, a.jsxs)(u.Dialog, {
     "aria-labelledby": L,
@@ -149,7 +149,7 @@ function L(e) {
           [v.emojiPickerHeaderExpanded]: y
         }),
         closePopout: s,
-        onSelectEmoji: y ? D : () => {},
+        onSelectEmoji: y ? b : () => {},
         shouldHidePickerActions: !y,
         wrapper: "div",
         pickerIntention: N,
@@ -158,11 +158,11 @@ function L(e) {
           accessory: (0, a.jsx)(R, {
             otherAccessories: null == E ? void 0 : E.accessory,
             isEmojiPickerExpanded: y,
-            onSetExpanded: b,
+            onSetExpanded: D,
             onFocus: o
           }),
           onKeyDown: e => {
-            null != e && e.key !== A.KeyboardKeysUpdated.TAB && (e.key !== A.KeyboardKeysUpdated.ENTER || e.shiftKey ? b(!0) : b(!y))
+            null != e && e.key !== A.KeyboardKeysUpdated.TAB && (e.key !== A.KeyboardKeysUpdated.ENTER || e.shiftKey ? D(!0) : D(!y))
           }
         }
       }), (0, a.jsx)("div", {
@@ -187,7 +187,7 @@ function L(e) {
                   emoji: e,
                   isDisabled: n,
                   onClick: () => {
-                    n ? null == c || c(e) : D(e, !0)
+                    n ? null == c || c(e) : b(e, !0)
                   }
                 })
               })

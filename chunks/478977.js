@@ -6,7 +6,7 @@ var n = s("866442"),
   l = s("481060"),
   i = s("703685"),
   r = s("214623"),
-  o = s("797565");
+  o = s("836058");
 t.default = function(e) {
   let {
     colorKey: t,

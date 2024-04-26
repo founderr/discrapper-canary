@@ -27,7 +27,7 @@ var a = n("735250"),
   A = n("981631"),
   v = n("65154"),
   N = n("689938"),
-  x = n("373448");
+  x = n("636289");
 let M = o.AvatarSizes.SIZE_80,
   R = o.AvatarSizes.SIZE_40;
 
@@ -42,8 +42,8 @@ function L(e) {
     fit: O,
     onVideoResize: j,
     blocked: P,
-    noVideoRender: b = !1,
-    pulseSpeakingIndicator: D = !1
+    noVideoRender: D = !1,
+    pulseSpeakingIndicator: b = !1
   } = e, U = C.default.getVideoComponent(), F = (0, r.useStateFromStores)([p.default], () => p.default.getId()), {
     user: w,
     streamId: k,
@@ -59,7 +59,7 @@ function L(e) {
   }), J = (0, r.useStateFromStores)([c.default], () => c.default.getSelectedParticipant(n.id));
   return (l.useEffect(() => {
     n.isGuildStageVoice() && !G && (null == J ? void 0 : J.id) === w.id && u.default.selectParticipant(n.id, null)
-  }, [G]), s && !Y && !b && G && !y && null != U && C.default.supports(v.Features.VIDEO)) ? (0, a.jsx)(_.default, {
+  }, [G]), s && !Y && !D && G && !y && null != U && C.default.supports(v.Features.VIDEO)) ? (0, a.jsx)(_.default, {
     onResize: j,
     wrapperClassName: x.videoWrapper,
     className: x.content,
@@ -80,7 +80,7 @@ function L(e) {
       avatarDecoration: Q,
       backgroundSrc: w.getAvatarURL(n.guild_id, 80),
       size: q,
-      pulseSpeakingIndicator: D,
+      pulseSpeakingIndicator: b,
       speaking: H,
       userId: w.id
     })

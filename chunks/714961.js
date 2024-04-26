@@ -1,22 +1,22 @@
 "use strict";
-i.r(t);
-var n = i("735250");
-i("470079");
-var r = i("325767");
+a.r(t);
+var n = a("735250");
+a("470079");
+var s = a("325767");
 t.default = e => {
   let {
     width: t = 86,
-    height: i = 86,
-    ...s
+    height: a = 86,
+    ...l
   } = e;
   return (0, n.jsxs)("svg", {
     width: t,
-    height: i,
+    height: a,
     viewBox: "0 0 130 90",
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg",
-    ...(0, r.default)({
-      ...s
+    ...(0, s.default)({
+      ...l
     }),
     children: [(0, n.jsx)("ellipse", {
       cx: "43.0747",

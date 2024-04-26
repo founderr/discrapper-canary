@@ -8,7 +8,7 @@ var n = a("735250");
 a("470079");
 var s = a("481060"),
   t = a("689938"),
-  d = a("952107");
+  d = a("151927");
 
 function i() {
   return (0, n.jsxs)(n.Fragment, {

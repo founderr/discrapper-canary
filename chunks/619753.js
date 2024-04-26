@@ -33,7 +33,7 @@ var a = n("735250"),
   L = n("683101"),
   y = n("981631"),
   O = n("689938"),
-  j = n("197250");
+  j = n("414221");
 
 function P(e) {
   var t;
@@ -83,7 +83,7 @@ function P(e) {
         startIndex: t
       }), t += 1, n[n.length - 1].results.push(a), e = null == s ? void 0 : s.id, n)
     }, [])
-  }, [p, N]), P = l.useRef([]), D = L.reduce((e, t) => e + 1 + t.results.length, 0), U = l.useCallback((e, t) => {
+  }, [p, N]), P = l.useRef([]), b = L.reduce((e, t) => e + 1 + t.results.length, 0), U = l.useCallback((e, t) => {
     if (!c.default.keyboardModeEnabled) return;
     let n = P.current,
       a = null != t ? n[t] : void 0;
@@ -98,7 +98,7 @@ function P(e) {
     null == t || t.jumpTo()
   }, []), w = (0, s.useListNavigator)({
     navId: "search-results",
-    itemCount: D,
+    itemCount: b,
     focusedIndex: 0,
     setFocus: U,
     onSelect: F
@@ -108,7 +108,7 @@ function P(e) {
       results: n,
       startIndex: l
     } = e;
-    return (0, a.jsx)(b, {
+    return (0, a.jsx)(D, {
       channel: t,
       results: n,
       highlighter: B,
@@ -161,7 +161,7 @@ function P(e) {
   })
 }
 
-function b(e) {
+function D(e) {
   var t, n;
   let {
     channel: s,
@@ -175,13 +175,13 @@ function b(e) {
     renderEmbeds: R,
     offset: O,
     jumpToMessage: P,
-    listNavigator: b,
-    favoriteSearch: D
+    listNavigator: D,
+    favoriteSearch: b
   } = e, U = g.RenderSpoilers.useSetting(), F = l.useCallback(e => {
     if (e === v.default.getChannelId()) return;
     let t = S.default.getChannel(e);
     if (null != t) T.default.can(y.Permissions.VIEW_CHANNEL, t) && (0, C.transitionToChannel)(t.id)
-  }, []), w = null != s ? (0, f.computeChannelName)(s, N.default, I.default, !1) : "???", k = D && null != s.guild_id ? null === (t = _.default.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, H = (null == s ? void 0 : s.parent_id) != null ? S.default.getChannel(s.parent_id) : null, B = null != H ? H.name : null, G = null !== (n = (0, h.default)(s)) && void 0 !== n ? n : M.default, V = null != H ? (0, h.default)(H) : null, W = T.default.can(y.Permissions.MANAGE_MESSAGES, s), {
+  }, []), w = null != s ? (0, f.computeChannelName)(s, N.default, I.default, !1) : "???", k = b && null != s.guild_id ? null === (t = _.default.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, H = (null == s ? void 0 : s.parent_id) != null ? S.default.getChannel(s.parent_id) : null, B = null != H ? H.name : null, G = null !== (n = (0, h.default)(s)) && void 0 !== n ? n : M.default, V = null != H ? (0, h.default)(H) : null, W = T.default.can(y.Permissions.MANAGE_MESSAGES, s), {
     content: Y
   } = (0, p.default)({
     content: w,
@@ -215,7 +215,7 @@ function b(e) {
               ...e,
               ref: z,
               className: j.channelNameText,
-              children: [D && null !== k && "".concat(k, " : "), Y]
+              children: [b && null !== k && "".concat(k, " : "), Y]
             })
           }), null != H && null != B && null != V ? (0, a.jsxs)(i.Clickable, {
             className: j.parentChannelNameClickable,
@@ -247,7 +247,7 @@ function b(e) {
           result: e,
           index: n,
           onJump: P,
-          listItemProps: b.getItemProps({
+          listItemProps: D.getItemProps({
             index: n
           })
         }, "search-result-".concat(n))

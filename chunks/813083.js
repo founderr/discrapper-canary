@@ -10,7 +10,7 @@ var i = a("120356"),
   d = a("26290"),
   f = a("884697"),
   m = a("689938"),
-  C = a("628587");
+  C = a("684793");
 (s = l || (l = {})).BANNER = "banner", s.MODAL = "modal", s.CARD = "card";
 t.default = e => {
   let {

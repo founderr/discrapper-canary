@@ -16,8 +16,8 @@ var a = s("735250"),
   S = s("292556"),
   E = s("92114"),
   T = s("419363"),
-  m = s("818083"),
-  f = s("688465"),
+  f = s("818083"),
+  m = s("688465"),
   _ = s("487419"),
   g = s("378364"),
   h = s("197344"),
@@ -42,8 +42,8 @@ var a = s("735250"),
   F = s("981631"),
   G = s("468788"),
   k = s("689938"),
-  w = s("993510"),
-  H = s("794711");
+  w = s("803706"),
+  H = s("949086");
 
 function V(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -89,7 +89,7 @@ function Y(e) {
   })
 }
 
-function K(e) {
+function W(e) {
   let {
     disabledSounds: t,
     disableAllSounds: s,
@@ -122,7 +122,7 @@ function K(e) {
     var e;
     null === (e = d.current) || void 0 === e || e.stop()
   });
-  let m = [{
+  let f = [{
     label: k.default.Messages.SOUND_MESSAGE,
     sound: "message1",
     focusModeDisabled: c
@@ -214,7 +214,7 @@ function K(e) {
       value: s,
       onChange: S.default.toggleDisableAllSounds,
       children: k.default.Messages.SOUND_DISABLE_ALL
-    }), m.map(e => {
+    }), f.map(e => {
       let {
         label: n,
         sound: l,
@@ -233,7 +233,7 @@ function K(e) {
   })
 }
 
-function W() {
+function K() {
   let e = (0, d.useStateFromStores)([_.default], () => _.default.getGuildAlertSettings()),
     [t, s] = n.useState(null),
     l = j.default.keys(e).map(t => {
@@ -247,7 +247,7 @@ function W() {
     children: [(0, a.jsxs)(u.Heading, {
       variant: "heading-lg/semibold",
       className: i()(w.titleWithBeta, H.marginBottom20),
-      children: [k.default.Messages.GUILD_COMMUNITY_ALERTS_HEADER, (0, a.jsx)(f.default, {})]
+      children: [k.default.Messages.GUILD_COMMUNITY_ALERTS_HEADER, (0, a.jsx)(m.default, {})]
     }), (0, a.jsx)(u.FormText, {
       type: u.FormTextTypes.DESCRIPTION,
       className: H.marginBottom20,
@@ -358,8 +358,8 @@ class z extends n.PureComponent {
         })]
       }), this.renderTTS(), (0, a.jsx)(u.FormDivider, {
         className: i()(H.marginTop40, H.marginBottom40)
-      }), (0, a.jsx)(W, {}), (0, a.jsx)(u.FormItem, {
-        children: (0, a.jsx)(K, {
+      }), (0, a.jsx)(K, {}), (0, a.jsx)(u.FormItem, {
+        children: (0, a.jsx)(W, {
           disabledSounds: l,
           disableAllSounds: r,
           notifyMessagesInSelectedChannel: d
@@ -399,7 +399,7 @@ class z extends n.PureComponent {
     })
   }
 }
-let Q = (0, m.createExperiment)({
+let Q = (0, f.createExperiment)({
   kind: "user",
   id: "2024-01_mention_on_all_messages",
   label: "Mention on all messages",

@@ -17,8 +17,8 @@ var l = a("481060"),
   C = a("430824"),
   m = a("914010"),
   S = a("594174"),
-  I = a("823379"),
-  p = a("358085"),
+  p = a("823379"),
+  I = a("358085"),
   T = a("929809"),
   g = a("179645"),
   A = a("701476"),
@@ -30,7 +30,7 @@ var l = a("481060"),
 function O() {
   null != n && (0, l.closeModal)(n)
 }
-class P extends r.default {
+class M extends r.default {
   _initialize() {
     i.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), i.default.subscribe("LOGOUT", O)
   }
@@ -57,8 +57,8 @@ class P extends r.default {
       let e = C.default.getGuild(O);
       (null == e ? void 0 : e.hasVerificationGate()) && (r = !0, (0, E.fetchWelcomeScreen)(e.id))
     }
-    let P = () => 0 === _.default.totalGuilds && !p.isPlatformEmbedded,
-      M = o.userNeedsAgeGate();
+    let M = () => 0 === _.default.totalGuilds && !I.isPlatformEmbedded,
+      P = o.userNeedsAgeGate();
     e = [{
       key: "Unified NUF Modal",
       open: async function e(e) {
@@ -88,7 +88,7 @@ class P extends r.default {
             case null:
               break;
             default:
-              I.assertNever(e)
+              p.assertNever(e)
           }
         };
         n = await (0, l.openModalLazy)(async () => {
@@ -105,14 +105,14 @@ class P extends r.default {
           modalKey: n
         })
       },
-      predicate: () => P() && !R.CONFERENCE_MODE_ENABLED
+      predicate: () => M() && !R.CONFERENCE_MODE_ENABLED
     }, {
       key: "New User Age Gate",
       open: u.openNewUserAgeGateModal,
-      predicate: () => M && !P() && !R.CONFERENCE_MODE_ENABLED
+      predicate: () => P && !M() && !R.CONFERENCE_MODE_ENABLED
     }, {
       key: "Claim Account Modal",
-      open: e => u.openClaimAccountModal(p.isPlatformEmbedded, e),
+      open: e => u.openClaimAccountModal(I.isPlatformEmbedded, e),
       predicate: () => {
         var e;
         return !r && null != S.default.getCurrentUser() && !(null === (e = S.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !R.CONFERENCE_MODE_ENABLED && !(0, c.isMidjourneyOnboardingFlow)("new_user_manager")
@@ -148,4 +148,4 @@ class P extends r.default {
     }), t()
   }
 }
-t.default = new P
+t.default = new M

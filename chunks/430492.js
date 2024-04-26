@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s.d(t, {
   DropsCopyCodeModalContent: function() {
-    return m
+    return f
   },
   DropsModalClaimErrorBody: function() {
-    return f
+    return m
   }
 }), s("47120");
 var a = s("735250"),
@@ -18,9 +18,9 @@ var a = s("735250"),
   c = s("524347"),
   S = s("853197"),
   E = s("689938"),
-  T = s("806111");
+  T = s("822639");
 
-function m(e) {
+function f(e) {
   let {
     onClose: t,
     code: s,
@@ -68,7 +68,7 @@ function m(e) {
   })
 }
 
-function f(e) {
+function m(e) {
   let {
     onClose: t,
     errorCode: s
@@ -108,23 +108,23 @@ t.default = function(e) {
   let {
     onClose: t,
     code: o,
-    drop: f,
+    drop: m,
     platform: _,
     transitionState: g
   } = e, h = (0, d.useUID)(), [I, N] = n.useState();
   n.useEffect(() => {
     null == o && r.default.wait(async () => {
-      await (0, u.fetchCodePlatformAvailability)(f.dropsQuestId)
+      await (0, u.fetchCodePlatformAvailability)(m.dropsQuestId)
     })
-  }, [f.dropsQuestId, o]);
+  }, [m.dropsQuestId, o]);
   let p = (0, l.useStateFromStores)([c.default], () => c.default.platformAvailability);
   return (0, a.jsx)(i.ModalRoot, {
     transitionState: g,
     "aria-labelledby": h,
     children: (0, a.jsx)(a.Fragment, {
       children: (() => {
-        if (null != o) return (0, a.jsx)(m, {
-          bodyText: f.messages.claimTip(),
+        if (null != o) return (0, a.jsx)(f, {
+          bodyText: m.messages.claimTip(),
           onClose: t,
           copyInputTitle: E.default.Messages.DROPS_REDEMPTION_CODE_PLATFORM_TITLE.format({
             platform: _
@@ -155,7 +155,7 @@ t.default = function(e) {
                 children: n ? E.default.Messages.DROPS_MODAL_CHOOSE_SINGLE_PLATFORM.format({
                   platform: (0, S.getPlatformLabel)(p[0])
                 }) : E.default.Messages.DROPS_MODAL_CHOOSE_PLATFORM.format({
-                  title: f.title
+                  title: m.title
                 })
               }), (0, a.jsx)(i.FormDivider, {
                 className: T.formDivider
@@ -190,7 +190,7 @@ t.default = function(e) {
                       ...s,
                       platform: void 0 === I ? p[0] : I,
                       code: o,
-                      dropsQuestId: f.dropsQuestId,
+                      dropsQuestId: m.dropsQuestId,
                       closeParentModal: t,
                       singlePlatformClaim: n
                     })

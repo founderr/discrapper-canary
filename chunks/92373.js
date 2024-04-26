@@ -10,7 +10,7 @@ var n = a("735250"),
   d = a("210753"),
   c = a("77498"),
   f = a("441674"),
-  E = a("343644");
+  E = a("111008");
 t.default = function(e) {
   let {
     applicationId: t,
@@ -26,9 +26,9 @@ t.default = function(e) {
   }), S = (0, u.useStateFromStores)([c.default], () => {
     var e, a;
     return null !== (a = null === (e = c.default.getGameById(t)) || void 0 === e ? void 0 : e.name) && void 0 !== a ? a : ""
-  }), I = s.useCallback(() => {
+  }), p = s.useCallback(() => {
     null == l || l(t)
-  }, [t, l]), p = s.useMemo(() => C ? null : null == m ? (0, n.jsx)("div", {
+  }, [t, l]), I = s.useMemo(() => C ? null : null == m ? (0, n.jsx)("div", {
     className: E.gameUnknownImage,
     children: (0, n.jsx)(r.UnknownGameIcon, {
       height: 32,
@@ -42,7 +42,7 @@ t.default = function(e) {
   return (0, n.jsxs)("div", {
     className: E.selectedGame,
     children: [(0, n.jsxs)(o.Clickable, {
-      onClick: I,
+      onClick: p,
       className: i()(a, C ? E.gameImageLoading : void 0, E.gameImageBackground),
       children: [h && (0, n.jsx)("div", {
         className: E.checkBackground,
@@ -50,7 +50,7 @@ t.default = function(e) {
           backgroundColor: _.hex(),
           className: E.selectedGameCheck
         })
-      }), p]
+      }), I]
     }), (0, n.jsx)(o.Text, {
       className: E.gameName,
       variant: "text-xs/normal",

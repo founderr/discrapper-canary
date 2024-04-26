@@ -12,8 +12,8 @@ var a = s("735250"),
   S = s("906732"),
   E = s("883904"),
   T = s("678558"),
-  m = s("730647"),
-  f = s("584825"),
+  f = s("730647"),
+  m = s("584825"),
   _ = s("305342"),
   g = s("333867"),
   h = s("963249"),
@@ -24,12 +24,12 @@ var a = s("735250"),
   A = s("78839"),
   O = s("981631"),
   x = s("474936"),
-  R = s("738127");
+  R = s("435812");
 
 function M(e) {
   let {
     selectedGuildForGuildSub: t
-  } = e, s = (0, f.useGroupListingsForGuild)(null == t ? void 0 : t.id)[0];
+  } = e, s = (0, m.useGroupListingsForGuild)(null == t ? void 0 : t.id)[0];
   return (0, a.jsx)(a.Fragment, {
     children: null != t && null != s ? (0, a.jsx)("div", {
       className: R.formItem,
@@ -42,7 +42,7 @@ function M(e) {
   })
 }
 t.default = function() {
-  let [e, t] = n.useState(x.PremiumSubscriptionSKUs.TIER_2), [s, f] = n.useState(null), [_] = (0, i.useStateFromStoresArray)([C.default], () => [C.default.getGuilds()]), [v] = (0, i.useStateFromStoresArray)([A.default], () => [A.default.getPremiumSubscription()]);
+  let [e, t] = n.useState(x.PremiumSubscriptionSKUs.TIER_2), [s, m] = n.useState(null), [_] = (0, i.useStateFromStoresArray)([C.default], () => [C.default.getGuilds()]), [v] = (0, i.useStateFromStoresArray)([A.default], () => [A.default.getPremiumSubscription()]);
   (0, p.useFetchProfileEffects)();
   let D = Object.values(_).map(e => ({
       value: e,
@@ -61,7 +61,7 @@ t.default = function() {
     } = (0, S.default)(c.default.PAYMENT_FLOW_TEST_PAGE),
     [w, H] = n.useState(""),
     [V, Y] = n.useState(O.EMPTY_STRING_SNOWFLAKE_ID),
-    [K, W] = n.useState(""),
+    [W, K] = n.useState(""),
     [z, Q] = n.useState(O.EMPTY_STRING_SNOWFLAKE_ID),
     [q, Z] = n.useState(O.EMPTY_STRING_SNOWFLAKE_ID);
   return (0, a.jsx)(S.AnalyticsLocationProvider, {
@@ -115,7 +115,7 @@ t.default = function() {
             value: null,
             label: "None"
           }],
-          onChange: e => f(e)
+          onChange: e => m(e)
         }), (0, a.jsx)(r.Button, {
           onClick: () => (0, h.default)({
             subscriptionTier: s,
@@ -244,7 +244,7 @@ t.default = function() {
           options: D,
           onChange: e => G(e)
         })]
-      }), (0, a.jsx)(m.GroupListingsFetchContextProvider, {
+      }), (0, a.jsx)(f.GroupListingsFetchContextProvider, {
         guildId: null == F ? void 0 : F.id,
         children: (0, a.jsx)(M, {
           selectedGuildForGuildSub: F
@@ -284,15 +284,15 @@ t.default = function() {
         className: R.formItem,
         children: [(0, a.jsx)(r.TextInput, {
           placeholder: "Application Id",
-          value: K,
-          onChange: W
+          value: W,
+          onChange: K
         }), (0, a.jsx)(r.TextInput, {
           placeholder: "SKU ID",
           value: z,
           onChange: e => Q(e)
         }), (0, a.jsx)(r.Button, {
           onClick: () => (0, I.default)({
-            applicationId: K,
+            applicationId: W,
             skuId: z,
             analyticsLocations: k
           }),

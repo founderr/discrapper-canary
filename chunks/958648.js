@@ -1,14 +1,14 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return i
+    return a
   }
 });
-var a = s("470079");
+var i = s("470079");
 
-function i(e, t) {
-  let s = a.useRef(e);
-  a.useEffect(() => {
+function a(e, t) {
+  let s = i.useRef(e);
+  i.useEffect(() => {
     e.length > s.current.length && t(), s.current = e
   }, [e, t])
 }

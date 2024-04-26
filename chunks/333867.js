@@ -21,8 +21,8 @@ function E(e) {
   let {
     skuId: E,
     isGift: T = !1,
-    giftMessage: m,
-    onClose: f,
+    giftMessage: f,
+    onClose: m,
     onComplete: _,
     analyticsLocations: g,
     analyticsObject: h
@@ -32,7 +32,7 @@ function E(e) {
   (0, l.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([s.e("49237"), s.e("99387"), s.e("66635"), s.e("40326"), s.e("23357"), s.e("15972"), s.e("6416"), s.e("440"), s.e("63438"), s.e("62511"), s.e("58600"), s.e("32776"), s.e("95900"), s.e("65866"), s.e("87624"), s.e("69935")]).then(s.bind(s, "608579"));
+    } = await Promise.all([s.e("49237"), s.e("99387"), s.e("66635"), s.e("40326"), s.e("23357"), s.e("15972"), s.e("440"), s.e("6416"), s.e("63438"), s.e("62511"), s.e("58600"), s.e("32776"), s.e("95900"), s.e("65866"), s.e("87624"), s.e("69935")]).then(s.bind(s, "608579"));
     return t => {
       let {
         onClose: s,
@@ -44,10 +44,10 @@ function E(e) {
         loadId: N,
         skuId: E,
         isGift: T,
-        giftMessage: m,
+        giftMessage: f,
         analyticsLocations: g,
         onClose: e => {
-          s(), null == f || f(e)
+          s(), null == m || m(e)
         },
         onComplete: () => {
           I = !0, null == _ || _()
@@ -65,7 +65,7 @@ function E(e) {
         location: h,
         is_gift: T,
         location_stack: g
-      }), (0, i.clearError)(), (0, r.clearPurchaseTokenAuthState)(), null == f || f(I), I && (0, o.fetchCollectiblesPurchases)()
+      }), (0, i.clearError)(), (0, r.clearPurchaseTokenAuthState)(), null == m || m(I), I && (0, o.fetchCollectiblesPurchases)()
     },
     onCloseRequest: () => {
       t === u.Step.REVIEW && (0, l.closeModal)(S)

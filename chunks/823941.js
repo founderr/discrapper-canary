@@ -24,12 +24,12 @@ var l = a("735250"),
   E = a("624377"),
   g = a("141011"),
   b = a("813083"),
-  S = a("67938"),
-  x = a("372654"),
-  T = a("414592"),
+  x = a("67938"),
+  S = a("372654"),
+  T = a("215023"),
   L = a("474936"),
   v = a("689938"),
-  I = a("380762");
+  I = a("402739");
 let N = (0, h.getLogoSize)(96),
   _ = e => {
     let {
@@ -72,13 +72,13 @@ function y(e) {
   } = e, {
     backgroundColors: c
   } = (0, E.default)(s.styles), d = !!(null === (t = T.categoryBannerOverrides[s.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText);
-  return s.skuId === n.CollectiblesCategorySkuId.SHY ? (0, l.jsx)(S.ShyBanner, {
+  return s.skuId === n.CollectiblesCategorySkuId.SHY ? (0, l.jsx)(x.ShyBanner, {
     category: s
   }) : (0, l.jsxs)(g.default, {
     asset: s.banner,
     className: i()(I.shopBanner, r),
     style: null != c ? {
-      background: "".concat((0, x.getBackgroundGradient)(c), " border-box border-box"),
+      background: "".concat((0, S.getBackgroundGradient)(c), " border-box border-box"),
       outlineColor: c.border.toHslString()
     } : void 0,
     children: [(0, l.jsxs)("div", {

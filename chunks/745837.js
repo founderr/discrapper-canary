@@ -21,8 +21,8 @@ var s = a("120356"),
   C = a("356659"),
   m = a("981631"),
   S = a("332325"),
-  I = a("689938"),
-  p = a("783348");
+  p = a("689938"),
+  I = a("352653");
 
 function T(e) {
   (0, o.default)(S.GameSettingsTab.CLIPS), (0, _.dismissClipsUserEducation)(e)
@@ -31,14 +31,14 @@ function T(e) {
 function g() {
   let e = (0, i.useStateFromStores)([u.default], () => u.default.getKeybindForAction(m.GlobalKeybindActions.SAVE_CLIP));
   if (null == e) return (0, n.jsx)(n.Fragment, {
-    children: I.default.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY_NO_KEYBIND
+    children: p.default.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY_NO_KEYBIND
   });
   let t = E.toString(e.shortcut, !0);
   return (0, n.jsx)(n.Fragment, {
-    children: I.default.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY.format({
+    children: p.default.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY.format({
       keybind: t,
       keybindHook: () => (0, n.jsx)("span", {
-        className: p.keyCombo,
+        className: I.keyCombo,
         children: (0, n.jsx)(r.KeyCombo, {
           shortcut: t
         })
@@ -53,32 +53,32 @@ let A = {
     buttonColor: r.Button.Colors.PRIMARY,
     bodyCopy: () => (0, n.jsxs)(n.Fragment, {
       children: [(0, n.jsx)(c.default, {
-        className: p.errorWarningIcon
-      }), I.default.Messages.CLIPS_USER_EDUCATION_ERROR_BODY]
+        className: I.errorWarningIcon
+      }), p.default.Messages.CLIPS_USER_EDUCATION_ERROR_BODY]
     }),
-    buttonCopy: () => I.default.Messages.CLIPS_USER_EDUCATION_LEARN_MORE,
+    buttonCopy: () => p.default.Messages.CLIPS_USER_EDUCATION_LEARN_MORE,
     ctaOnClick: () => {
       window.open(f.default.getArticleURL(m.HelpdeskArticles.CLIPS), "_blank")
     },
-    containerClass: p.container
+    containerClass: I.container
   },
   [C.ClipsUserEducationType.Disabled]: {
     textColor: "text-primary",
     buttonLook: r.Button.Looks.FILLED,
     buttonColor: r.Button.Colors.BRAND,
-    bodyCopy: () => I.default.Messages.CLIPS_USER_EDUCATION_DISABLED_BODY,
-    buttonCopy: () => I.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
+    bodyCopy: () => p.default.Messages.CLIPS_USER_EDUCATION_DISABLED_BODY,
+    buttonCopy: () => p.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
     ctaOnClick: () => T(C.ClipsUserEducationType.Disabled),
-    containerClass: p.container
+    containerClass: I.container
   },
   [C.ClipsUserEducationType.Enabled]: {
     textColor: "always-white",
     buttonLook: r.Button.Looks.INVERTED,
     buttonColor: r.Button.Colors.BRAND,
     bodyCopy: () => (0, n.jsx)(g, {}),
-    buttonCopy: () => I.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
+    buttonCopy: () => p.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
     ctaOnClick: () => T(C.ClipsUserEducationType.Enabled),
-    containerClass: l()(p.container, p.containerEnabled)
+    containerClass: l()(I.container, I.containerEnabled)
   }
 };
 
@@ -111,15 +111,15 @@ function N() {
       onClick: () => (0, _.dismissClipsUserEducation)(s),
       size: r.Button.Sizes.NONE,
       look: r.Button.Looks.BLANK,
-      className: p.buttonClose,
+      className: I.buttonClose,
       children: (0, n.jsx)(d.default, {
-        className: p.dismissIcon,
+        className: I.dismissIcon,
         width: 16,
         height: 16
       })
     }), (0, n.jsx)(r.Button, {
       onClick: u,
-      className: p.buttonCTA,
+      className: I.buttonCTA,
       color: f,
       look: E,
       fullWidth: !0,

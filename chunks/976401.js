@@ -10,7 +10,7 @@ var l = n("735250"),
   i = n.n(s),
   r = n("481060"),
   o = n("806519"),
-  u = n("933556");
+  u = n("976751");
 
 function d(e) {
   let {
@@ -21,13 +21,13 @@ function d(e) {
     disabled: c,
     icon: f,
     iconForeground: h,
-    innerClassName: p,
-    tooltipClassName: m,
+    innerClassName: m,
+    tooltipClassName: p,
     onMouseEnter: C,
     onMouseLeave: g,
     "aria-label": E,
-    "aria-checked": S,
-    role: _,
+    "aria-checked": _,
+    role: S,
     tooltipColor: I,
     tooltipForceOpen: N
   } = e, T = a.isValidElement(f) ? f : (0, l.jsx)(f, {
@@ -37,7 +37,7 @@ function d(e) {
     foreground: h
   });
   return (0, l.jsx)(r.Tooltip, {
-    tooltipClassName: m,
+    tooltipClassName: p,
     text: t,
     "aria-label": E,
     color: I,
@@ -54,7 +54,7 @@ function d(e) {
         look: r.Button.Looks.BLANK,
         size: r.Button.Sizes.NONE,
         disabled: c,
-        innerClassName: p,
+        innerClassName: m,
         wrapperClassName: u.button,
         className: i()(u.button, {
           [u.disabled]: c,
@@ -70,8 +70,8 @@ function d(e) {
           null == f || f(), null == g || g()
         },
         onContextMenu: s,
-        role: _,
-        "aria-checked": S,
+        role: S,
+        "aria-checked": _,
         children: [null != n ? (0, l.jsx)(o.default, {
           width: 20,
           height: 20,

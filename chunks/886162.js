@@ -15,13 +15,13 @@ var n = a("735250"),
   c = a("153124"),
   f = a("981631"),
   E = a("689938"),
-  h = a("861929");
+  h = a("239628");
 
 function _(e) {
   let {
     transitionState: t
   } = e, _ = (0, i.useStateFromStores)([d.default], () => d.default.getAction()), [C, m] = s.useState(!1), S = (0, c.useUID)();
-  async function I() {
+  async function p() {
     return m(!0), _ === f.UserRequiredActions.AGREEMENTS && m(await (0, o.acceptAgreements)()), null
   }
   return (0, u.default)({
@@ -79,7 +79,7 @@ function _(e) {
     }), (0, n.jsx)(r.ModalFooter, {
       children: (0, n.jsx)(r.Button, {
         submitting: C,
-        onClick: I,
+        onClick: p,
         color: r.Button.Colors.GREEN,
         children: E.default.Messages.AGREE
       })

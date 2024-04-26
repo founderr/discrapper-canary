@@ -7,20 +7,20 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var r = n("536285"),
-  i = n("703656"),
-  s = n("314897"),
-  a = n("358085"),
-  l = n("981631");
-let u = a.isPlatformEmbedded ? l.NOOP : (e, t) => {
-    if (!(0, i.hasNavigated)()) return r.default.request(l.RPCCommands.DEEP_LINK, {
+var s = n("536285"),
+  a = n("703656"),
+  l = n("314897"),
+  i = n("358085"),
+  r = n("981631");
+let u = i.isPlatformEmbedded ? r.NOOP : (e, t) => {
+    if (!(0, a.hasNavigated)()) return s.default.request(r.RPCCommands.DEEP_LINK, {
       type: e,
       params: t
     })
   },
-  o = a.isPlatformEmbedded ? l.NOOP : (e, t) => {
-    if (!s.default.isAuthenticated()) return u(e, {
+  o = i.isPlatformEmbedded ? r.NOOP : (e, t) => {
+    if (!l.default.isAuthenticated()) return u(e, {
       ...t || {},
-      fingerprint: s.default.getFingerprint()
+      fingerprint: l.default.getFingerprint()
     })
   }

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return K
+    return W
   }
 }), s("47120");
 var a = s("735250"),
@@ -16,8 +16,8 @@ var a = s("735250"),
   S = s("419363"),
   E = s("857595"),
   T = s("607070"),
-  m = s("627845"),
-  f = s("786761"),
+  f = s("627845"),
+  m = s("786761"),
   _ = s("3148"),
   g = s("739566"),
   h = s("753206"),
@@ -38,8 +38,8 @@ var a = s("735250"),
   b = s("611480"),
   U = s("653477"),
   y = s("689938"),
-  B = s("817484"),
-  F = s("794711"),
+  B = s("784572"),
+  F = s("949086"),
   G = s("328756");
 let k = (0, A.uid)(),
   w = (0, A.uid)(),
@@ -51,11 +51,11 @@ let k = (0, A.uid)(),
     (0, N.setSpeechRate)(e)
   }, 250);
 
-function K(e) {
+function W(e) {
   return (0, a.jsxs)(u.FormSection, {
     tag: u.FormTitleTags.H1,
     title: y.default.Messages.ACCESSIBILITY,
-    children: [(0, a.jsx)(W, {}), (0, a.jsx)(z, {}), (0, a.jsx)(u.FormDivider, {}), (0, a.jsx)(Q, {}), (0, a.jsx)(q, {}), (0, a.jsx)(Z, {}), (0, m.canEnableForcedColors)() ? (0, a.jsx)(X, {}) : null, (0, a.jsx)(J, {}), (0, a.jsx)($, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(et, {}), (0, a.jsx)(u.FormDivider, {
+    children: [(0, a.jsx)(K, {}), (0, a.jsx)(z, {}), (0, a.jsx)(u.FormDivider, {}), (0, a.jsx)(Q, {}), (0, a.jsx)(q, {}), (0, a.jsx)(Z, {}), (0, f.canEnableForcedColors)() ? (0, a.jsx)(X, {}) : null, (0, a.jsx)(J, {}), (0, a.jsx)($, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(et, {}), (0, a.jsx)(u.FormDivider, {
       className: F.marginBottom20
     }), (0, a.jsx)(u.Text, {
       variant: "text-md/normal",
@@ -68,10 +68,10 @@ function K(e) {
   })
 }
 
-function W() {
+function K() {
   let e = v.MessageDisplayCompact.useSetting(),
     [t] = n.useState(() => {
-      let e = (0, f.createMessageRecord)({
+      let e = (0, m.createMessageRecord)({
         ...(0, _.default)({
           channelId: "1337",
           content: y.default.Messages.ACCESSIBILITY_SETTINGS_SATURATION_LINK_PREVIEW_MESSAGE.format({
@@ -268,10 +268,10 @@ function J() {
     })),
     S = n.useRef(null);
   (0, L.default)(S, P.AccessibilityScrollPositions.REDUCED_MOTION);
-  let m = n.useCallback((e, t) => {
+  let f = n.useCallback((e, t) => {
       (0, E.setPrefersReducedMotion)(t ? "auto" : r)
     }, [r]),
-    f = n.useCallback(e => {
+    m = n.useCallback(e => {
       (0, E.setPrefersReducedMotion)(e ? "reduce" : "no-preference")
     }, []);
   return (0, a.jsxs)(u.FormItem, {
@@ -289,7 +289,7 @@ function J() {
       value: "auto" === l,
       shape: u.Checkbox.Shapes.BOX,
       type: u.Checkbox.Types.INVERTED,
-      onChange: m,
+      onChange: f,
       children: (0, a.jsx)(u.Text, {
         variant: "text-sm/normal",
         children: y.default.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_AUTO
@@ -297,7 +297,7 @@ function J() {
     }), (0, a.jsx)(u.FormSwitch, {
       className: F.marginTop20,
       value: s,
-      onChange: f,
+      onChange: m,
       children: y.default.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_ENABLE
     }), (0, a.jsx)(u.FormSwitch, {
       className: F.marginBottom40,

@@ -37,8 +37,8 @@ var a, l = n("735250"),
   O = n("981631"),
   j = n("927923"),
   P = n("70722"),
-  b = n("689938"),
-  D = n("957233");
+  D = n("689938"),
+  b = n("855947");
 
 function U(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -54,7 +54,7 @@ function F(e) {
     numUsers: t
   } = e;
   return (0, l.jsx)("div", {
-    className: D.moreContainer,
+    className: b.moreContainer,
     children: (0, l.jsxs)(u.Text, {
       color: "text-muted",
       variant: "text-sm/medium",
@@ -67,17 +67,17 @@ function w(e) {
   let {
     numAudience: t,
     collapsed: n
-  } = e, a = n ? t : b.default.Messages.LISTENING_COUNT.format({
+  } = e, a = n ? t : D.default.Messages.LISTENING_COUNT.format({
     count: t
   });
   return (0, l.jsxs)("div", {
-    className: r()(D.audienceContainer, {
-      [D.audienceContainerCollapsed]: n
+    className: r()(b.audienceContainer, {
+      [b.audienceContainerCollapsed]: n
     }),
     children: [(0, l.jsx)("div", {
-      className: D.audienceIconContainer,
+      className: b.audienceIconContainer,
       children: (0, l.jsx)(L.default, {
-        className: D.audienceIcon
+        className: b.audienceIcon
       })
     }), (0, l.jsx)(u.Text, {
       color: "text-muted",
@@ -104,7 +104,7 @@ class k extends(a = s.PureComponent) {
       user: s,
       channel: i
     } = this.props, r = (0, l.jsx)("div", {
-      className: D.draggable,
+      className: b.draggable,
       "data-dnd-name": i.name,
       onMouseEnter: a ? void 0 : this.handleMouseEnter,
       onMouseLeave: a ? void 0 : this.handleHidePreview,
@@ -287,7 +287,7 @@ class k extends(a = s.PureComponent) {
         voicePlatform: a,
         embeddedApplication: v,
         avatarContainerClass: r()({
-          [D.userAvatar]: !0
+          [b.userAvatar]: !0
         }),
         disabled: t && !U,
         selected: O,
@@ -304,7 +304,7 @@ class k extends(a = s.PureComponent) {
       if (t) {
         var w;
         return (0, l.jsx)(u.Tooltip, {
-          text: null !== (w = (0, C.default)(n)) && void 0 !== w ? w : b.default.Messages.CONNECTED_ON_ANOTHER_CLIENT,
+          text: null !== (w = (0, C.default)(n)) && void 0 !== w ? w : D.default.Messages.CONNECTED_ON_ANOTHER_CLIENT,
           children: e => {
             let {
               onClick: t,

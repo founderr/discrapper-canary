@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return D
+    return b
   }
 }), n("47120");
 var a = n("735250"),
@@ -35,16 +35,16 @@ var a = n("735250"),
   O = n("318374"),
   j = n("981631"),
   P = n("689938"),
-  b = n("996650");
+  D = n("238303");
 
-function D(e) {
+function b(e) {
   let {
     channel: t
-  } = e, [n, s] = l.useState(!1), r = (0, p.default)(t, !0), D = t.guild_id, U = (0, c.useStateFromStores)([_.default], () => null != D ? _.default.getRoles(D) : void 0), F = (0, c.useStateFromStores)([I.default, _.default], () => {
+  } = e, [n, s] = l.useState(!1), r = (0, p.default)(t, !0), b = t.guild_id, U = (0, c.useStateFromStores)([_.default], () => null != b ? _.default.getRoles(b) : void 0), F = (0, c.useStateFromStores)([I.default, _.default], () => {
     var e;
-    return I.default.getUser(null === (e = _.default.getGuild(D)) || void 0 === e ? void 0 : e.ownerId)
-  }), w = l.useMemo(() => null != D ? o()(U).sortBy(e => -e.position).filter(e => !(0, E.isEveryoneRoleId)(D, e.id)).value() : [], [D, U]), k = l.useMemo(() => o()(w).filter(e => {
-    if (null == D) return !1;
+    return I.default.getUser(null === (e = _.default.getGuild(b)) || void 0 === e ? void 0 : e.ownerId)
+  }), w = l.useMemo(() => null != b ? o()(U).sortBy(e => -e.position).filter(e => !(0, E.isEveryoneRoleId)(b, e.id)).value() : [], [b, U]), k = l.useMemo(() => o()(w).filter(e => {
+    if (null == b) return !1;
     let n = M.computePermissionsForRoles({
       forceRoles: {
         [e.id]: e
@@ -52,7 +52,7 @@ function D(e) {
       context: t
     });
     return u.has(n, j.Permissions.ADMINISTRATOR) || u.has(n, j.Permissions.VIEW_CHANNEL)
-  }).value(), [t, D, w]), H = (0, c.useStateFromStoresArray)([I.default], () => {
+  }).value(), [t, b, w]), H = (0, c.useStateFromStoresArray)([I.default], () => {
     let e = {};
     for (let n of (null != F && (e[F.id] = F), Object.values(t.permissionOverwrites))) {
       if (n.type !== m.PermissionOverwriteType.MEMBER || null != e[n.id]) continue;
@@ -93,7 +93,7 @@ function D(e) {
         })
       })
     }), B ? (0, a.jsxs)("div", {
-      className: b.channelSettingButtons,
+      className: D.channelSettingButtons,
       children: [(0, a.jsx)(L.default, {
         label: P.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE,
         onClick: () => s(!0),
@@ -110,25 +110,25 @@ function D(e) {
         })
       })]
     }) : null, (0, a.jsxs)("div", {
-      className: b.members,
+      className: D.members,
       children: [function() {
         if (1 !== H.length || k.length > 0) return (0, a.jsx)(O.default, {
           guildId: t.guild_id,
-          className: b.avatars,
+          className: D.avatars,
           maxUsers: 5,
           users: H
         });
         let e = H[0],
           n = R.default.getName(e);
         return (0, a.jsxs)("div", {
-          className: b.avatars,
+          className: D.avatars,
           children: [(0, a.jsx)(f.Avatar, {
             src: e.getAvatarURL(t.guild_id, 24),
             "aria-label": n,
             size: f.AvatarSizes.SIZE_24
           }), (0, a.jsx)(f.Text, {
             tag: "span",
-            className: b.singleUserName,
+            className: D.singleUserName,
             variant: "text-md/normal",
             children: n
           }), "\xa0", (0, a.jsx)(f.Text, {
@@ -143,8 +143,8 @@ function D(e) {
         let r = null !== (s = e.colorString) && void 0 !== s ? s : (0, d.int2hex)(j.DEFAULT_ROLE_COLOR),
           o = (null === (l = e.tags) || void 0 === l ? void 0 : l.guild_connections) !== void 0;
         return B ? (0, a.jsx)(N.default, {
-          className: i()(b.role, {
-            [b.last]: n === k.length - 1
+          className: i()(D.role, {
+            [D.last]: n === k.length - 1
           }),
           roleName: e.name,
           roleColor: r,
@@ -154,8 +154,8 @@ function D(e) {
             g.default.open(t.guild_id, j.GuildSettingsSections.MEMBERS), g.default.selectRole(e.id)
           }
         }, e.id) : (0, a.jsx)(x.default, {
-          className: i()(b.role, {
-            [b.last]: n === k.length - 1
+          className: i()(D.role, {
+            [D.last]: n === k.length - 1
           }),
           roleName: e.name,
           roleColor: r,

@@ -19,10 +19,10 @@ var i, a, l = n("735250"),
   E = n("658785"),
   S = n("981631"),
   v = n("689938"),
-  T = n("873663"),
-  y = n("794711");
+  y = n("257445"),
+  O = n("949086");
 
-function I(e, t, n) {
+function T(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -30,14 +30,14 @@ function I(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }(a = i || (i = {})).GENERAL = "GENERAL", a.VOICE = "VOICE", a.DEVELOPER = "DEVELOPER";
-let N = () => [{
+let C = () => [{
     value: S.OverlayAvatarSizes.LARGE,
     name: v.default.Messages.AVATAR_SIZE_OPTION_LARGE
   }, {
     value: S.OverlayAvatarSizes.SMALL,
     name: v.default.Messages.AVATAR_SIZE_OPTION_SMALL
   }],
-  O = () => [{
+  N = () => [{
     value: S.OverlayDisplayNames.ALWAYS,
     name: v.default.Messages.DISPLAY_OPTION_ALWAYS
   }, {
@@ -47,7 +47,7 @@ let N = () => [{
     value: S.OverlayDisplayNames.NEVER,
     name: v.default.Messages.DISPLAY_OPTION_NEVER
   }],
-  _ = () => [{
+  I = () => [{
     value: S.OverlayDisplayUsers.ALWAYS,
     name: v.default.Messages.DISPLAY_OPTION_ALWAYS
   }, {
@@ -55,7 +55,7 @@ let N = () => [{
     name: v.default.Messages.DISPLAY_OPTION_ONLY_WHILE_SPEAKING
   }];
 
-function C() {
+function _() {
   let e = f.default.getNotificationPositionMode(),
     t = e !== S.OverlayNotificationPositions.DISABLED,
     n = c.default.getOverlayKeybind(),
@@ -79,7 +79,7 @@ class A extends s.PureComponent {
     })
   }
   handleChangeNotificationPositionMode(e, t) {
-    d.default.setNotificationPositionMode(t), C()
+    d.default.setNotificationPositionMode(t), _()
   }
   handleChangeAvatarSizeMode(e) {
     let {
@@ -104,14 +104,14 @@ class A extends s.PureComponent {
       direction: h.default.Direction.VERTICAL,
       grow: 0,
       shrink: 0,
-      className: T.header,
+      className: y.header,
       children: [(0, l.jsxs)(h.default, {
         children: [(0, l.jsx)(r.FormTitle, {
-          className: T.headerTitle,
+          className: y.headerTitle,
           tag: "h1",
           children: v.default.Messages.OVERLAY_SETTINGS_TITLE
         }), (0, l.jsx)(r.ModalCloseButton, {
-          className: T.headerClose,
+          className: y.headerClose,
           onClick: this.props.onClose
         })]
       }), this.renderTabBar()]
@@ -122,21 +122,21 @@ class A extends s.PureComponent {
       selectedSection: e
     } = this.state, t = u.default.isDeveloper ? (0, l.jsx)(r.TabBar.Item, {
       id: "DEVELOPER",
-      className: T.tabBarItem,
+      className: y.tabBarItem,
       children: "Developer"
     }) : null;
     return (0, l.jsxs)(r.TabBar, {
       selectedItem: e,
       type: "top",
-      className: T.__invalid_tabBar,
+      className: y.__invalid_tabBar,
       onItemSelect: this.handleSelectSection,
       children: [(0, l.jsx)(r.TabBar.Item, {
         id: "GENERAL",
-        className: T.tabBarItem,
+        className: y.tabBarItem,
         children: v.default.Messages.OVERLAY_SETTINGS_GENERAL_TAB
       }), (0, l.jsx)(r.TabBar.Item, {
         id: "VOICE",
-        className: T.tabBarItem,
+        className: y.tabBarItem,
         children: v.default.Messages.OVERLAY_SETTINGS_VOICE_TAB
       }), t]
     })
@@ -157,7 +157,7 @@ class A extends s.PureComponent {
         e = this.renderGeneralSettings()
     }
     return (0, l.jsx)(r.ModalContent, {
-      className: T.content,
+      className: y.content,
       children: e
     }, t)
   }
@@ -171,7 +171,7 @@ class A extends s.PureComponent {
     return (0, l.jsxs)(s.Fragment, {
       children: [(0, l.jsx)(r.FormItem, {
         title: v.default.Messages.FORM_LABEL_NOTIFICATION_POSITION,
-        className: y.marginBottom20,
+        className: O.marginBottom20,
         children: (0, l.jsx)(p.default, {
           position: t,
           onChange: this.handleChangeNotificationPositionMode
@@ -199,28 +199,28 @@ class A extends s.PureComponent {
     return (0, l.jsxs)(s.Fragment, {
       children: [(0, l.jsx)(r.FormItem, {
         title: v.default.Messages.FORM_LABEL_AVATAR_SIZE,
-        className: y.marginBottom20,
+        className: O.marginBottom20,
         children: (0, l.jsx)(r.RadioGroup, {
           onChange: this.handleChangeAvatarSizeMode,
-          options: N(),
+          options: C(),
           value: e,
           size: r.RadioGroup.Sizes.SMALL
         })
       }), (0, l.jsx)(r.FormItem, {
         title: v.default.Messages.FORM_LABEL_DISPLAY_NAMES,
-        className: y.marginBottom20,
+        className: O.marginBottom20,
         children: (0, l.jsx)(r.RadioGroup, {
           onChange: this.handleChangeDisplayNameMode,
-          options: O(),
+          options: N(),
           value: t,
           size: r.RadioGroup.Sizes.SMALL
         })
       }), (0, l.jsx)(r.FormItem, {
         title: v.default.Messages.FORM_LABEL_DISPLAY_USERS,
-        className: y.marginBottom20,
+        className: O.marginBottom20,
         children: (0, l.jsx)(r.RadioGroup, {
           onChange: this.handleChangeDisplayUserMode,
-          options: _(),
+          options: I(),
           value: n,
           size: r.RadioGroup.Sizes.SMALL
         })
@@ -231,7 +231,7 @@ class A extends s.PureComponent {
     return (0, l.jsx)(s.Fragment, {
       children: (0, l.jsx)(r.FormItem, {
         title: "Crashes",
-        className: y.marginBottom20,
+        className: O.marginBottom20,
         children: (0, l.jsx)(r.SingleSelect, {
           value: void 0,
           options: [{
@@ -266,18 +266,18 @@ class A extends s.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), I(this, "state", {
+    super(...e), T(this, "state", {
       selectedSection: "GENERAL"
-    }), I(this, "handleSelectSection", e => {
+    }), T(this, "handleSelectSection", e => {
       this.setState({
         selectedSection: e
       })
-    }), I(this, "handleToggleTextChatNotifications", () => {
+    }), T(this, "handleToggleTextChatNotifications", () => {
       let {
         ENABLED: e,
         DISABLED: t
       } = S.OverlayNotificationTextChatTypes, n = this.props.textChatNotificationMode === e ? t : e;
-      d.default.setTextChatNotificationMode(n), C()
+      d.default.setTextChatNotificationMode(n), _()
     })
   }
 }

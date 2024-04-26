@@ -11,7 +11,7 @@ var a, n = s("735250"),
   p = s("594174"),
   m = s("689938");
 
-function E(e, t, s) {
+function f(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -19,7 +19,7 @@ function E(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class f extends(a = i.Component) {
+class E extends(a = i.Component) {
   render() {
     let {
       color: e,
@@ -36,9 +36,9 @@ class f extends(a = i.Component) {
     })
   }
   constructor(...e) {
-    super(...e), E(this, "state", {
+    super(...e), f(this, "state", {
       isSendingVerificationEmail: !1
-    }), E(this, "handleResendVerification", () => {
+    }), f(this, "handleResendVerification", () => {
       let {
         currentUser: e,
         onClick: t
@@ -73,7 +73,7 @@ class f extends(a = i.Component) {
     })
   }
 }
-E(f, "defaultProps", {
+f(E, "defaultProps", {
   size: o.Button.Sizes.MEDIUM,
   color: o.Button.Colors.BRAND
 }), t.default = u.default.connectStores([p.default], () => {
@@ -81,4 +81,4 @@ E(f, "defaultProps", {
   return r()(null != e, "ResendEmailVerificationButton: currentUser cannot be undefined"), {
     currentUser: e
   }
-})(f)
+})(E)

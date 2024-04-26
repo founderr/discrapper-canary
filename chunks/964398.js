@@ -7,7 +7,7 @@ var l = n("735250"),
   r = n("481060"),
   o = n("65205"),
   u = n("689938"),
-  d = n("169457");
+  d = n("308593");
 
 function c(e) {
   let {
@@ -85,11 +85,11 @@ let f = [{
   }],
   h = f.length;
 
-function p(e, t, n) {
+function m(e, t, n) {
   let l = e * t;
   return e > .5 ? l - n : e < .5 ? l : l - n / 2
 }
-let m = (e, t) => {
+let p = (e, t) => {
   let n = Math.abs(t.x),
     l = 180 / Math.PI * Math.atan2(Math.abs(t.y), n),
     a = e / 2 - 28.8;
@@ -105,21 +105,21 @@ t.default = a.memo(function(e) {
     itemWidth: C,
     itemHeight: g,
     showDeadZoneIndicator: E,
-    activeItem: S,
-    onItemSelect: _,
+    activeItem: _,
+    onItemSelect: S,
     onItemAction: I,
     interactive: N = !0,
     children: T
   } = e, A = a.useRef(null), L = a.useRef([]), v = a.useRef(!1), x = a.useRef(null), [R, M] = a.useState(0), [y, O] = a.useState({
     x: 0,
     y: 0
-  }), b = Math.abs(y.x) + Math.abs(y.y) > 0, D = a.useMemo(() => i().chunk(T, h), [T]), j = a.useCallback((e, t) => {
+  }), D = Math.abs(y.x) + Math.abs(y.y) > 0, b = a.useMemo(() => i().chunk(T, h), [T]), j = a.useCallback((e, t) => {
     null == L.current[R] ? L.current[R] = [] : L.current[R][t] = e
   }, [R]), P = a.useCallback((e, t) => {
-    x.current = t, _(h * e + t)
-  }, [_]), G = a.useCallback(() => {
-    x.current = null, _(null)
-  }, [_]), U = a.useCallback(e => {
+    x.current = t, S(h * e + t)
+  }, [S]), G = a.useCallback(() => {
+    x.current = null, S(null)
+  }, [S]), U = a.useCallback(e => {
     G(), v.current = e
   }, [G]), w = a.useCallback((e, t, n) => {
     if (v.current) {
@@ -135,7 +135,7 @@ t.default = a.memo(function(e) {
       },
       a = l.x < 0,
       s = l.y < 0,
-      i = m(n, l),
+      i = p(n, l),
       r = a ? Math.max(l.x, -i.x) : Math.min(l.x, i.x);
     O({
       x: r / 2,
@@ -156,7 +156,7 @@ t.default = a.memo(function(e) {
         y: e.clientY
       };
     if (w(i, s, Math.max(t, n)), v.current) {
-      null != S && G();
+      null != _ && G();
       return
     }
     let r = (0, o.extendLineSegment)(s, i, Math.max(t, n));
@@ -170,15 +170,15 @@ t.default = a.memo(function(e) {
       }
     }
     G()
-  }, 16), [S, w, G, P, R, n, t]), H = a.useCallback(e => {
+  }, 16), [_, w, G, P, R, n, t]), V = a.useCallback(e => {
     if (!N) return;
     let t = R + (e.deltaY > 0 ? 1 : -1);
-    t >= 0 && t < D.length && (null != x.current && (D[t].length > x.current ? P(t, x.current) : G()), M(t))
-  }, [N, R, D, P, G]), V = a.useMemo(() => D[R].map((e, a) => {
+    t >= 0 && t < b.length && (null != x.current && (b[t].length > x.current ? P(t, x.current) : G()), M(t))
+  }, [N, R, b, P, G]), H = a.useMemo(() => b[R].map((e, a) => {
     let s = f[a];
     if (null == s) throw Error("Too many items supplied ".concat(T.length, " expected max of ").concat(f.length));
-    let i = p(s.x, t, C),
-      r = p(s.y, n, g);
+    let i = m(s.x, t, C),
+      r = m(s.y, n, g);
     return (0, l.jsx)("div", {
       ref: e => j(e, a),
       className: d.chatWheelItem,
@@ -190,11 +190,11 @@ t.default = a.memo(function(e) {
       },
       children: e
     }, a)
-  }), [D, R, t, C, n, g, T.length, j]);
+  }), [b, R, t, C, n, g, T.length, j]);
   return (0, l.jsx)(r.Clickable, {
     className: d.chatWheelMouseInput,
     onMouseMove: B,
-    onWheel: H,
+    onWheel: V,
     onClick: F,
     children: (0, l.jsxs)("div", {
       ref: A,
@@ -251,7 +251,7 @@ t.default = a.memo(function(e) {
             cx: 144,
             cy: 144,
             r: 28.8
-          }), b && (0, l.jsx)("circle", {
+          }), D && (0, l.jsx)("circle", {
             className: d.chatWheelCenter,
             cx: 144 + y.x,
             cy: 144 + y.y,
@@ -270,11 +270,11 @@ t.default = a.memo(function(e) {
         className: d.innerContent,
         children: [E && (0, l.jsx)(c, {
           className: d.chatWheelDeadZoneIcon
-        }), N && D.length > 1 ? (0, l.jsx)("div", {
+        }), N && b.length > 1 ? (0, l.jsx)("div", {
           className: d.paginationHint,
           children: u.default.Messages.CHAT_WHEEL_PAGINATION_HINT
         }) : null]
-      }), V]
+      }), H]
     })
   })
 })

@@ -12,15 +12,15 @@ var n = s("525654"),
   r = s("579806"),
   o = s("969832"),
   d = s("689938"),
-  u = s("537090");
+  u = s("178895");
 
 function c() {
   var e, t, s, n, c;
   let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-    E = "288266",
-    T = (e = "13c49402b33915abcd8e3f30768b63a2bfc7f609", e.substring(0, 7)),
-    m = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
-    f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
+    E = "288393",
+    T = (e = "a691a9087b67d7168baa3f2dd16c9d39e33a6580", e.substring(0, 7)),
+    f = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
+    m = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
     _ = null === r.default || void 0 === r.default ? void 0 : null === (n = (c = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(c),
     g = function() {
       var e;
@@ -31,7 +31,7 @@ function c() {
       return t.includes("Windows 10") && void 0 !== i && i >= 22e3 && (t = t.replace("Windows 10", "Windows 11")), t.includes("OS X 10.15.7") && void 0 !== a && a >= 20 && (t = "macOS ".concat(a - 9)), "".concat(t, " (").concat(s, ")")
     }(),
     h = [S, E, "(".concat(T, ")")];
-  return null != m && (h.push("Host ".concat(m)), null != _ && h.push(_.toLowerCase()), null != f && h.push("(".concat(f, ")"))), null != g && h.push(g), (0, a.jsx)(o.CopiableField, {
+  return null != f && (h.push("Host ".concat(f)), null != _ && h.push(_.toLowerCase()), null != m && h.push("(".concat(m, ")"))), null != g && h.push(g), (0, a.jsx)(o.CopiableField, {
     copyValue: h.join(" "),
     disableCopy: !1,
     copyTooltip: d.default.Messages.COPY_VERSION,
@@ -47,17 +47,17 @@ function c() {
           className: u.versionHash,
           children: ["(", T, ")"]
         })]
-      }), " ", null != m ? (0, a.jsxs)(a.Fragment, {
+      }), " ", null != f ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsxs)(i.Text, {
           tag: "span",
           className: u.line,
           variant: "text-xs/normal",
           color: "text-muted",
-          children: ["Host ", m, " ", null != _ ? (0, a.jsxs)("span", {
+          children: ["Host ", f, " ", null != _ ? (0, a.jsxs)("span", {
             className: u.appArch,
             children: [_.toLowerCase(), " "]
-          }) : null, null != f ? (0, a.jsxs)("span", {
-            children: ["(", f, ")"]
+          }) : null, null != m ? (0, a.jsxs)("span", {
+            children: ["(", m, ")"]
           }) : null]
         }), " "]
       }) : null, null != g ? (0, a.jsx)(i.Text, {

@@ -15,7 +15,7 @@ var s = a("990547"),
   d = a("981631"),
   c = a("921944"),
   f = a("689938"),
-  E = a("698237");
+  E = a("647805");
 let h = (e, t) => ({
   header: f.default.Messages.DROP_ENROLLMENT_CTA_TOOLTIP_HEADER.format({
     gameName: e.title
@@ -37,8 +37,8 @@ function _(e) {
     header: C,
     body: m,
     imgSrc: S,
-    imgStyle: I
-  } = h(_.drop, _.config.streamLengthRequirement), p = () => {
+    imgStyle: p
+  } = h(_.drop, _.config.streamLengthRequirement), I = () => {
     t(c.ContentDismissActionType.DISMISS)
   };
   return (0, n.jsxs)("div", {
@@ -46,11 +46,11 @@ function _(e) {
     children: [(0, n.jsx)("img", {
       src: S,
       alt: "",
-      className: I
+      className: p
     }), (0, n.jsx)(l.Clickable, {
       className: E.__invalid_buttonClose,
       "aria-label": f.default.Messages.CLOSE,
-      onClick: p,
+      onClick: I,
       children: (0, n.jsx)(r.default, {
         width: 16,
         height: 16,
@@ -82,7 +82,7 @@ function _(e) {
     }), (0, n.jsx)(l.Button, {
       className: E.linkButtonContainer,
       innerClassName: E.linkButton,
-      onClick: p,
+      onClick: I,
       look: l.Button.Looks.LINK,
       fullWidth: !0,
       color: l.Button.Colors.WHITE,

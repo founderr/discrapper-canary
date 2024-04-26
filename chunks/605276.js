@@ -18,7 +18,7 @@ var l = a("735250"),
   I = a("825334"),
   x = a("981631"),
   S = a("689938"),
-  v = a("964682");
+  v = a("407348");
 let C = n.memo(function(e) {
     let {
       guild: t

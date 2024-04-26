@@ -20,8 +20,8 @@ var n = a("735250"),
   C = a("906732"),
   m = a("821982"),
   S = a("377171"),
-  I = a("633302"),
-  p = a("126900"),
+  p = a("633302"),
+  I = a("126900"),
   T = a("26290"),
   g = a("153066"),
   A = a("335131"),
@@ -29,8 +29,8 @@ var n = a("735250"),
   v = a("302800"),
   R = a("981631"),
   L = a("689938"),
-  O = a("592761");
-let P = e => {
+  O = a("108003");
+let M = e => {
     let {
       color: t
     } = e;
@@ -40,7 +40,7 @@ let P = e => {
       text: L.default.Messages.NEW
     })
   },
-  M = e => {
+  P = e => {
     let {
       selected: t,
       locationState: a,
@@ -58,7 +58,7 @@ let P = e => {
     return (0, n.jsx)(f.LinkButton, {
       selected: t,
       route: R.Routes.COLLECTIBLES_SHOP,
-      icon: p.default,
+      icon: I.default,
       text: L.default.Messages.COLLECTIBLES_SHOP,
       locationState: a,
       ...d,
@@ -119,7 +119,7 @@ let P = e => {
       allowOverflow: !0,
       hideOnClick: !1,
       "aria-label": l.title(),
-      children: e => (0, n.jsxs)(M, {
+      children: e => (0, n.jsxs)(P, {
         className: null != l.entryPointClassName ? (0, g.getClass)(O, l.entryPointClassName) : void 0,
         selected: t,
         locationState: a,
@@ -133,7 +133,7 @@ let P = e => {
           }),
           alt: "",
           "aria-hidden": !0
-        }), (0, n.jsx)(P, {
+        }), (0, n.jsx)(M, {
           color: l.badgeColor
         })]
       })
@@ -146,7 +146,7 @@ let P = e => {
       displayOptions: l
     } = e, i = s.useMemo(() => {
       var e;
-      let t = null != l.emojiName ? null === (e = I.default.getByName(l.emojiName)) || void 0 === e ? void 0 : e.surrogates : null;
+      let t = null != l.emojiName ? null === (e = p.default.getByName(l.emojiName)) || void 0 === e ? void 0 : e.surrogates : null;
       return (0, n.jsxs)(d.Text, {
         variant: "text-sm/medium",
         className: O.marketingBadgeTooltipContent,
@@ -162,11 +162,11 @@ let P = e => {
       delay: 100,
       hideOnClick: !1,
       "aria-label": l.title(),
-      children: e => (0, n.jsx)(M, {
+      children: e => (0, n.jsx)(P, {
         selected: t,
         locationState: a,
         ...e,
-        children: (0, n.jsx)(P, {
+        children: (0, n.jsx)(M, {
           color: l.badgeColor
         })
       })
@@ -193,7 +193,7 @@ let P = e => {
           displayOptions: s
         })
     }
-    return (0, n.jsx)(M, {
+    return (0, n.jsx)(P, {
       selected: t,
       locationState: a
     })

@@ -11,21 +11,21 @@ var l = n("735250"),
   c = n("239091"),
   f = n("569471"),
   h = n("488131"),
-  p = n("592125"),
-  m = n("306680"),
+  m = n("592125"),
+  p = n("306680"),
   C = n("979651"),
   g = n("938475"),
   E = n("514342"),
-  S = n("714794"),
-  _ = n("135724"),
+  _ = n("714794"),
+  S = n("135724"),
   I = n("25601"),
   N = n("207055"),
   T = n("981631"),
   A = n("124368"),
   L = n("689938"),
-  v = n("294639"),
-  x = n("697908"),
-  R = n("651483");
+  v = n("809164"),
+  x = n("784545"),
+  R = n("349078");
 
 function M(e) {
   let {
@@ -55,18 +55,18 @@ t.default = a.memo(function(e) {
     isSelectedVoice: R,
     isLast: y,
     withGuildIcon: O
-  } = e, b = (0, o.useStateFromStores)([g.default], () => g.default.getVoiceStatesForChannel(t), [t]), D = (0, o.useStateFromStores)([C.default], () => C.default.hasVideo(t.id)), {
+  } = e, D = (0, o.useStateFromStores)([g.default], () => g.default.getVoiceStatesForChannel(t), [t]), b = (0, o.useStateFromStores)([C.default], () => C.default.hasVideo(t.id)), {
     unread: j,
     mentionCount: P
-  } = (0, o.useStateFromStoresObject)([m.default], () => ({
-    unread: m.default.hasUnread(t.id),
-    mentionCount: m.default.getMentionCount(t.id)
+  } = (0, o.useStateFromStoresObject)([p.default], () => ({
+    unread: p.default.hasUnread(t.id),
+    mentionCount: p.default.getMentionCount(t.id)
   })), G = (0, o.useStateFromStores)([f.default], () => f.default.isMuted(t.id)), U = a.useCallback(e => {
     (0, h.openThreadSidebarForViewing)(t, !e.shiftKey, A.OpenThreadAnalyticsLocations.CHANNEL_LIST)
   }, [t]), w = a.useCallback(() => {
     d.default.preload(t.guild_id, t.id)
   }, [t.guild_id, t.id]), F = a.useCallback(e => {
-    let a = p.default.getChannel(t.id);
+    let a = m.default.getChannel(t.id);
     null != a && (0, c.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -76,9 +76,9 @@ t.default = a.memo(function(e) {
         channel: a
       })
     })
-  }, [t.id]), B = null == b ? 0 : b.length, {
-    role: H,
-    ...V
+  }, [t.id]), B = null == D ? 0 : D.length, {
+    role: V,
+    ...H
   } = (0, r.useListItem)(t.id), k = a.useRef(null), Y = P > 0 ? L.default.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
     channelName: t.name,
     mentionCount: P
@@ -88,7 +88,7 @@ t.default = a.memo(function(e) {
     channelName: t.name
   });
   return (0, l.jsxs)("li", {
-    role: H,
+    role: V,
     className: i()(v.containerDefault, {
       [v.selected]: s
     }),
@@ -119,7 +119,7 @@ t.default = a.memo(function(e) {
         children: [!j || G || s ? null : (0, l.jsx)("div", {
           className: i()(x.unread, x.unreadImportant)
         }), (0, l.jsx)(u.Clickable, {
-          ...V,
+          ...H,
           innerRef: k,
           className: x.link,
           onClick: U,
@@ -135,11 +135,11 @@ t.default = a.memo(function(e) {
               children: t.name
             }), (0, l.jsxs)("div", {
               className: x.children,
-              children: [B > 0 && t.userLimit > 0 ? (0, l.jsx)(_.default, {
+              children: [B > 0 && t.userLimit > 0 ? (0, l.jsx)(S.default, {
                 userCount: B,
-                video: D,
+                video: b,
                 channel: t
-              }) : null, (0, S.default)(P) ? (0, l.jsx)(I.default, {
+              }) : null, (0, _.default)(P) ? (0, l.jsx)(I.default, {
                 mentionsCount: P
               }) : null]
             })]
@@ -150,7 +150,7 @@ t.default = a.memo(function(e) {
       channel: t,
       collapsed: !R,
       collapsedMax: 6,
-      voiceStates: b,
+      voiceStates: D,
       location: T.AnalyticsLocations.GUILD_CHANNEL_LIST
     })]
   })

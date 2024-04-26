@@ -17,12 +17,12 @@ var n = s("410575"),
   S = s("541540"),
   E = s("206339"),
   T = s("981631"),
-  m = s("46140"),
-  f = s("709510");
+  f = s("46140"),
+  m = s("455805");
 
 function _() {
   let e = (0, u.useIsEligibleForQuests)({
-      location: m.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
+      location: f.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
     }),
     {
       enabled: t
@@ -34,8 +34,8 @@ function _() {
   return (0, i.useBlockedPaymentsConfig)() ? (0, a.jsx)(r.BlockedPaymentsContentSettings, {}) : (0, a.jsxs)(a.Fragment, {
     children: [t && (0, a.jsx)(d.default, {
       location: l.default.USER_SETTINGS_GIFT_INVENTORY,
-      className: f.giftNitro,
-      imageClassName: f.giftNitroImage,
+      className: m.giftNitro,
+      imageClassName: m.giftNitroImage,
       textContainerOverrideStyles: {
         padding: "32px",
         width: "360px"

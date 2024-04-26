@@ -17,8 +17,8 @@ var n = s("512722"),
   S = s("532432"),
   E = s("134795"),
   T = s("513901"),
-  m = s("451392"),
-  f = s("906364"),
+  f = s("451392"),
+  m = s("906364"),
   _ = s("621853"),
   g = s("271383"),
   h = s("594174"),
@@ -31,7 +31,7 @@ var n = s("512722"),
   x = s("430131"),
   R = s("133484"),
   M = s("689938"),
-  v = s("621694");
+  v = s("547304");
 
 function D(e) {
   var t, s, n, D;
@@ -73,8 +73,8 @@ function D(e) {
   let H = (0, o.useGuildAutomodProfileQuarantineErrors)(w.id),
     V = (0, i.useStateFromStores)([g.default], () => null == w.id ? null : g.default.getMember(w.id, P.id)),
     Y = (0, i.useStateFromStores)([_.default], () => _.default.getGuildMemberProfile(P.id, w.id)),
-    K = N.default.canUsePremiumProfileCustomization(P),
-    W = (0, d.showRemoveAvatar)(j, null == V ? void 0 : V.avatar),
+    W = N.default.canUsePremiumProfileCustomization(P),
+    K = (0, d.showRemoveAvatar)(j, null == V ? void 0 : V.avatar),
     z = (0, d.showRemoveBanner)(U, null == Y ? void 0 : Y.banner),
     Q = (0, O.canResetThemeColors)(F, null == Y ? void 0 : Y.themeColors),
     q = null !== (t = null == Y ? void 0 : Y.bio) && void 0 !== t ? t : "",
@@ -90,7 +90,7 @@ function D(e) {
       pendingNick: b,
       currentNick: null == V ? void 0 : V.nick,
       guild: w
-    }, "nick"), (0, a.jsx)(f.default, {
+    }, "nick"), (0, a.jsx)(m.default, {
       sectionTitle: M.default.Messages.USER_SETTINGS_PRONOUNS,
       errors: null == G ? void 0 : G.pronouns,
       onPronounsChange: e => {
@@ -100,7 +100,7 @@ function D(e) {
       currentPronouns: Z
     }, "pronouns"), (0, a.jsxs)(R.default, {
       user: P,
-      showOverlay: !K,
+      showOverlay: !W,
       children: [(0, a.jsx)(S.default, {
         sectionTitle: (0, a.jsxs)(a.Fragment, {
           children: [M.default.Messages.USER_SETTINGS_AVATAR, (0, a.jsx)(r.Tooltip, {
@@ -111,11 +111,11 @@ function D(e) {
             })
           })]
         }),
-        showRemoveAvatarButton: W,
+        showRemoveAvatarButton: K,
         onAvatarChange: e => X(e, null == V ? void 0 : V.avatar, C.setPendingAvatar),
         errors: null == G ? void 0 : G.avatar,
         guildId: w.id,
-        disabled: !K
+        disabled: !W
       }, "avatar"), (0, a.jsx)(c.default, {
         sectionTitle: (0, a.jsxs)(a.Fragment, {
           children: [M.default.Messages.USER_SETTINGS_AVATAR_DECORATION, (0, a.jsx)(r.Tooltip, {
@@ -145,8 +145,8 @@ function D(e) {
         errors: null == G ? void 0 : G.banner,
         onBannerChange: e => X(e, null == Y ? void 0 : Y.banner, C.setPendingBanner),
         guildId: null == w ? void 0 : w.id,
-        disabled: !K
-      }, "banner"), (0, a.jsx)(m.default, {
+        disabled: !W
+      }, "banner"), (0, a.jsx)(f.default, {
         user: P,
         pendingAvatar: j,
         pendingColors: F,
@@ -170,7 +170,7 @@ function D(e) {
         errors: null !== (D = null == G ? void 0 : G.bio) && void 0 !== D ? D : null == H ? void 0 : H.bio,
         pendingBio: y,
         currentBio: q,
-        disabled: !K
+        disabled: !W
       }, "about")]
     })]
   })

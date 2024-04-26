@@ -16,9 +16,9 @@ var s = a("570140"),
   C = a("914010"),
   m = a("979651"),
   S = a("981631"),
-  I = a("65154");
+  p = a("65154");
 
-function p() {
+function I() {
   var e;
   let t = n;
   if (null == t || !E.default.isOpen(t)) return !1;
@@ -31,7 +31,7 @@ function T() {
   return function() {
     let e = h.default.getChannelId(),
       t = _.default.getChannelId();
-    if (!f.default.supports(I.Features.VIDEO) || o.default.getWindowOpen(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT)) return !0;
+    if (!f.default.supports(p.Features.VIDEO) || o.default.getWindowOpen(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT)) return !0;
     let a = u.default.getAllActiveStreams().length > 0,
       n = null != e && Object.values(m.default.getVideoVoiceStatesForChannel(e)).some(e => {
         let {
@@ -42,7 +42,7 @@ function T() {
     if (!(n || a)) return !0;
     let s = c.default.hasLayers();
     return !(s && c.default.getLayers().includes(S.Layers.RTC_DEBUG)) && (!!s || e === t || !1)
-  }() ? p() : (!t && p(), null != e && function(e) {
+  }() ? I() : (!t && I(), null != e && function(e) {
     var t;
     let a = d.default.getChannel(e);
     if (null == a || E.default.isOpen(e)) return !1;

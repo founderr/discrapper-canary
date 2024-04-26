@@ -22,7 +22,7 @@ var a = n("735250"),
   A = n("359380"),
   M = n("308083"),
   h = n("689938"),
-  N = n("225540");
+  N = n("413932");
 let x = () => [{
     section: d.SectionTypes.HEADER,
     label: h.default.Messages.CLAN_SETTINGS_BASIC_INFO

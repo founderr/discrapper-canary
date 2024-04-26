@@ -17,7 +17,7 @@ var s = a("570140"),
   m = a("719296"),
   S = a("981631");
 
-function I() {
+function p() {
   let e = c.default.getChannelId(),
     t = _.default.getConnectedActivityChannelId(),
     a = _.default.getSelfEmbeddedActivityForChannel(null != t ? t : S.EMPTY_STRING_SNOWFLAKE_ID),
@@ -34,7 +34,7 @@ function I() {
   }(r, (0, m.default)(t, a.applicationId))
 }
 
-function p() {
+function I() {
   let e = u.default.hasLayers(),
     t = r.default.getWindowOpen(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
   return e && !t ? function() {
@@ -47,10 +47,10 @@ function p() {
 }
 class T extends i.default {
   _initialize() {
-    f.default.addChangeListener(I), E.default.addChangeListener(I), c.default.addChangeListener(I), h.default.addChangeListener(I), r.default.addChangeListener(I), _.default.addChangeListener(I), u.default.addChangeListener(p)
+    f.default.addChangeListener(p), E.default.addChangeListener(p), c.default.addChangeListener(p), h.default.addChangeListener(p), r.default.addChangeListener(p), _.default.addChangeListener(p), u.default.addChangeListener(I)
   }
   _terminate() {
-    f.default.removeChangeListener(I), E.default.removeChangeListener(I), c.default.removeChangeListener(I), h.default.removeChangeListener(I), r.default.removeChangeListener(I), _.default.removeChangeListener(I), u.default.removeChangeListener(p)
+    f.default.removeChangeListener(p), E.default.removeChangeListener(p), c.default.removeChangeListener(p), h.default.removeChangeListener(p), r.default.removeChangeListener(p), _.default.removeChangeListener(p), u.default.removeChangeListener(I)
   }
 }
 t.default = new T

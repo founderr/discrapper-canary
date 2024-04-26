@@ -30,7 +30,7 @@ var a = n("735250"),
   x = n("981631"),
   M = n("701488"),
   R = n("689938"),
-  L = n("619727"),
+  L = n("970363"),
   y = n("334732");
 
 function O(e) {
@@ -49,7 +49,7 @@ function O(e) {
     inPopout: s,
     handleClose: i,
     userParticipantCount: r
-  }) : r > 1 ? (0, a.jsx)(D, {
+  }) : r > 1 ? (0, a.jsx)(b, {
     channel: t,
     guild: n,
     width: l,
@@ -205,7 +205,7 @@ function P(e) {
     })
   })
 }
-let b = e => {
+let D = e => {
   let {
     userParticipantCount: t,
     guildId: n,
@@ -225,7 +225,7 @@ let b = e => {
   return l.slice(0, 3)
 };
 
-function D(e) {
+function b(e) {
   let {
     channel: t,
     guild: n,
@@ -239,7 +239,7 @@ function D(e) {
       n_participants: d
     })
   }, []);
-  let c = b({
+  let c = D({
       userParticipantCount: d,
       guildId: n.id,
       channel: t

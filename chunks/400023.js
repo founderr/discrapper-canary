@@ -31,9 +31,9 @@ var a = n("735250"),
   O = n("73274"),
   j = n("419388"),
   P = n("406534"),
-  b = n("981631"),
-  D = n("689938"),
-  U = n("644575");
+  D = n("981631"),
+  b = n("689938"),
+  U = n("258839");
 let F = l.memo(function(e) {
   var t, n;
   let {
@@ -84,7 +84,7 @@ let F = l.memo(function(e) {
     keyboardModeEnabled: x,
     hasMoreAfter: E.hasMoreAfter
   });
-  let V = (n = m, (0, o.useStateFromStores)([p.default], () => I.default.can(b.Permissions.READ_MESSAGE_HISTORY, n) ? null : p.default.getViewingRolesTimestamp(n.getGuildId()))),
+  let V = (n = m, (0, o.useStateFromStores)([p.default], () => I.default.can(D.Permissions.READ_MESSAGE_HISTORY, n) ? null : p.default.getViewingRolesTimestamp(n.getGuildId()))),
     {
       channelStreamMarkup: W,
       newMessagesBar: Y,
@@ -112,7 +112,7 @@ let F = l.memo(function(e) {
           null === (e = B.ref.current) || void 0 === e || e.scrollToBottom({
             animate: !f.default.useReducedMotion
           })
-        } else d.default.jumpToPresent(m.id, b.MAX_MESSAGES_PER_CHANNEL)
+        } else d.default.jumpToPresent(m.id, D.MAX_MESSAGES_PER_CHANNEL)
       }
     });
   ! function(e) {
@@ -133,13 +133,13 @@ let F = l.memo(function(e) {
         })
       }, [e]);
     (0, M.useComponentAction)({
-      event: b.ComponentActions.SCROLLTO_PRESENT,
+      event: D.ComponentActions.SCROLLTO_PRESENT,
       handler: t
     }), (0, M.useComponentAction)({
-      event: b.ComponentActions.SCROLL_PAGE_UP,
+      event: D.ComponentActions.SCROLL_PAGE_UP,
       handler: n
     }), (0, M.useComponentAction)({
-      event: b.ComponentActions.SCROLL_PAGE_DOWN,
+      event: D.ComponentActions.SCROLL_PAGE_DOWN,
       handler: a
     })
   }(B.ref);
@@ -170,7 +170,7 @@ let F = l.memo(function(e) {
         role: "group",
         children: [K, (0, a.jsxs)("ol", {
           className: U.scrollerInner,
-          "aria-label": D.default.Messages.CHANNEL_MESSAGES_A11Y_LABEL.format({
+          "aria-label": b.default.Messages.CHANNEL_MESSAGES_A11Y_LABEL.format({
             channelName: m.name
           }),
           ...Q,
@@ -178,7 +178,7 @@ let F = l.memo(function(e) {
             className: U.navigationDescription,
             id: "messagesNavigationDescription",
             "aria-hidden": !0,
-            children: D.default.Messages.CHANNEL_MESSAGES_A11Y_DESCRIPTION
+            children: b.default.Messages.CHANNEL_MESSAGES_A11Y_DESCRIPTION
           }), W, (0, a.jsx)("div", {
             className: i()({
               [U.scrollerSpacer]: !L,
@@ -210,7 +210,7 @@ t.default = l.memo(function(e) {
         canManageMessages: a,
         permissionVersion: l
       } = (0, o.useStateFromStoresObject)([I.default], () => ({
-        canManageMessages: I.default.can(b.Permissions.MANAGE_MESSAGES, e),
+        canManageMessages: I.default.can(D.Permissions.MANAGE_MESSAGES, e),
         permissionVersion: null != t ? I.default.getGuildVersion(t) : null
       }), [e, t]);
     return {
@@ -223,7 +223,7 @@ t.default = l.memo(function(e) {
     fontSize: O,
     messageDisplayCompact: j,
     renderSpoilers: P,
-    keyboardModeEnabled: D
+    keyboardModeEnabled: b
   } = function() {
     let e = C.MessageDisplayCompact.useSetting(),
       t = C.RenderSpoilers.useSetting(),
@@ -269,7 +269,7 @@ t.default = l.memo(function(e) {
       }, {
         autoTrackExposure: !1
       }),
-      r = null !== (n = null === (t = N.default.getUser(g.default.getId())) || void 0 === t ? void 0 : t.hasFlag(b.UserFlags.SPAMMER)) && void 0 !== n && n,
+      r = null !== (n = null === (t = N.default.getUser(g.default.getId())) || void 0 === t ? void 0 : t.hasFlag(D.UserFlags.SPAMMER)) && void 0 !== n && n,
       u = (0, c.useChannelSummariesExperiment)(e),
       d = (0, h.default)("use_topic_dividers_in_chat"),
       f = (0, o.useStateFromStoresArray)([E.default], () => {
@@ -312,7 +312,7 @@ t.default = l.memo(function(e) {
       canChat: M,
       editingMessageId: H,
       fontSize: O,
-      keyboardModeEnabled: D,
+      keyboardModeEnabled: b,
       showingQuarantineBanner: n,
       hideSummaries: s
     })

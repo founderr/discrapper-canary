@@ -15,9 +15,9 @@ var l = a("836560"),
   C = a("852926"),
   m = a("186901"),
   S = a("981631"),
-  I = a("413135").Buffer;
+  p = a("413135").Buffer;
 
-function p(e, t, a) {
+function I(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
     value: a,
     enumerable: !0,
@@ -63,7 +63,7 @@ function L(e, t, a) {
       "Access-Control-Allow-Methods": "POST, GET, PUT, PATCH, DELETE",
       "Access-Control-Allow-Headers": "Content-Type, Authorization"
     } : {};
-  a = a ? JSON.stringify(a) : "", n = 200 === n && 0 === a.length ? 204 : n, t.setHeader("Content-Length", I.byteLength(a).toString()), t.setHeader("Content-Type", "application/json"), t.writeHead(n, {
+  a = a ? JSON.stringify(a) : "", n = 200 === n && 0 === a.length ? 204 : n, t.setHeader("Content-Length", p.byteLength(a).toString()), t.setHeader("Content-Type", "application/json"), t.writeHead(n, {
     ...s,
     ...l
   }), t.end(a)
@@ -76,7 +76,7 @@ function O(e, t, a, n) {
     message: n
   }, a)
 }
-class P extends _.default {
+class M extends _.default {
   send(e) {
     (c.default.isLoggingOverlayEvents || e.cmd !== S.RPCCommands.OVERLAY && e.evt !== S.RPCEvents.OVERLAY) && A.info("Socket Emit: ".concat(this.id), (0, h.default)(e)), null != n && "etf" === this.encoding ? this._socket.send(n.pack(e), {
       binary: !0
@@ -86,7 +86,7 @@ class P extends _.default {
     this._socket.close(e, t)
   }
   constructor(e, t, a) {
-    if (super("ws", t, a), p(this, "_socket", void 0), -1 === ["etf", "json"].indexOf(a)) throw new E.default({
+    if (super("ws", t, a), I(this, "_socket", void 0), -1 === ["etf", "json"].indexOf(a)) throw new E.default({
       closeCode: S.RPCCloseCodes.INVALID_ENCODING
     }, "Invalid Encoding: ".concat(a));
     if ("etf" === a && null == n) throw new E.default({
@@ -95,7 +95,7 @@ class P extends _.default {
     this._socket = e
   }
 }
-class M extends _.default {
+class P extends _.default {
   send(e) {
     (c.default.isLoggingOverlayEvents || e.cmd !== S.RPCCommands.OVERLAY) && A.info("Socket Emit: ".concat(this.id), e), this._sendCallback(e)
   }
@@ -103,7 +103,7 @@ class M extends _.default {
     this._closeCallback(t, e)
   }
   constructor(e, t, a, n) {
-    if (super("http", a, n), p(this, "_sendCallback", void 0), p(this, "_closeCallback", void 0), "json" !== n) throw new E.default({
+    if (super("http", a, n), I(this, "_sendCallback", void 0), I(this, "_closeCallback", void 0), "json" !== n) throw new E.default({
       closeCode: S.RPCCloseCodes.INVALID_ENCODING
     }, "Invalid Encoding: ".concat(n));
     this._sendCallback = e, this._closeCallback = t
@@ -130,7 +130,7 @@ class x extends l.EventEmitter {
           } = o.parse(null !== (e = a.get("callback")) && void 0 !== e ? e : "");
           n === location.protocol && s === location.host ? t.setHeader("Location", a.get("callback")) : t.setHeader("Location", g), t.writeHead(301), t.end()
         },
-        u = new M(l ? L.bind(null, e, t) : r, l ? O.bind(null, e, t, 400) : r, Number(a.get("v")), s);
+        u = new P(l ? L.bind(null, e, t) : r, l ? O.bind(null, e, t, 400) : r, Number(a.get("v")), s);
       if (l)(0, C.validateSocketClient)(u, v(e.headers).origin, a.get("client_id")).then(() => {
         let a = "";
         e.on("data", e => a += e), e.on("error", () => O(e, t, 500, "Internal Server Error")), e.on("end", () => this.handleMessage(u, a))
@@ -155,7 +155,7 @@ class x extends l.EventEmitter {
     let s = new URLSearchParams(v(e.upgradeReq).url.split("?")[1]),
       l = null !== (t = v(e.upgradeReq).headers.origin) && void 0 !== t ? t : "";
     try {
-      n = new P(e, Number(s.get("v")), null !== (a = s.get("encoding")) && void 0 !== a ? a : "json")
+      n = new M(e, Number(s.get("v")), null !== (a = s.get("encoding")) && void 0 !== a ? a : "json")
     } catch (t) {
       e.close(t.code, t.message);
       return

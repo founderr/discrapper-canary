@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("512722"),
   s = n.n(i),
-  a = n("570140"),
-  l = n("355467"),
+  l = n("570140"),
+  a = n("355467"),
   r = n("976255"),
   u = n("366939"),
   o = n("16084"),
@@ -48,7 +48,7 @@ async function S(e) {
     giftInfoOptions: w,
     invoicePreview: B
   } = e;
-  t(f.PurchaseState.PURCHASING), n(!0), i(!0), a.default.wait(r.clearError), S(null);
+  t(f.PurchaseState.PURCHASING), n(!0), i(!0), l.default.wait(r.clearError), S(null);
   try {
     let e, n, i;
     if (d.default.track(p.AnalyticEvents.PAYMENT_FLOW_COMPLETED, {
@@ -80,7 +80,7 @@ async function S(e) {
         loadId: F,
         giftInfoOptions: w
       })
-    } else if (M && null != R && null != g && null != b) e = p.PREPAID_PAYMENT_SOURCES.has(g.type) ? await (0, l.payInvoiceManually)(b, R, g, y.currency) : await (0, l.updateSubscription)(b, {
+    } else if (M && null != R && null != g && null != b) e = p.PREPAID_PAYMENT_SOURCES.has(g.type) ? await (0, a.payInvoiceManually)(b, R, g, y.currency) : await (0, a.updateSubscription)(b, {
       paymentSource: g,
       currency: y.currency
     }, v, N, F);
@@ -90,7 +90,7 @@ async function S(e) {
           paymentSource: g,
           currency: y.currency
         };
-      b.status === p.SubscriptionStatusTypes.PAUSED ? n.status = p.SubscriptionStatusTypes.ACTIVE : n.items = t, e = await (0, l.updateSubscription)(b, n, v, N, F)
+      b.status === p.SubscriptionStatusTypes.PAUSED ? n.status = p.SubscriptionStatusTypes.ACTIVE : n.items = t, e = await (0, a.updateSubscription)(b, n, v, N, F)
     } else e = await (0, u.subscribe)({
       planId: x.id,
       currency: y.currency,

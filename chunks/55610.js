@@ -7,9 +7,9 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var s = n("120356"),
-  a = n.n(s),
-  l = n("512722"),
-  r = n.n(l),
+  l = n.n(s),
+  a = n("512722"),
+  r = n.n(a),
   u = n("759231"),
   o = n("63063"),
   c = n("631818"),
@@ -41,11 +41,11 @@ t.default = e => {
   var t, n;
   let {
     fromBoostCancelModal: s,
-    className: l
+    className: a
   } = e, c = (0, m.default)();
   if (!S()) return null;
   return r()(null != c, "Subscription billing country should not be null"), (0, i.jsxs)("div", {
-    className: a()(_.noticeRoot, l),
+    className: l()(_.noticeRoot, a),
     children: [(0, i.jsx)("div", {
       className: _.iconContainer,
       children: (0, i.jsx)(u.default, {

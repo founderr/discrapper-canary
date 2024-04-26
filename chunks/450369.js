@@ -30,7 +30,7 @@ var a = n("735250"),
   x = n("248400"),
   M = n("981631"),
   R = n("354459"),
-  L = n("954539");
+  L = n("769238");
 let y = 16 / 9,
   O = e => {
     let {
@@ -98,18 +98,18 @@ let y = 16 / 9,
       blocked: O
     } = t, j = (0, r.useStateFromStoresArray)([S.default], () => S.default.getAllActiveStreams(), []), {
       selectedParticipant: P,
-      largeStream: b
+      largeStream: D
     } = (0, r.useStateFromStoresObject)([h.default], () => ({
       selectedParticipant: null != s ? h.default.getSelectedParticipant(s.id) : null,
       largeStream: null != s && h.default.getStageStreamSize(s.id)
-    })), D = l.useCallback((e, t) => {
+    })), b = l.useCallback((e, t) => {
       if (e.type === R.ParticipantTypes.STREAM && 0 === j.filter(t => (0, p.encodeStreamKey)(t) === e.id && t.state !== M.ApplicationStreamStates.ENDED).length) {
         if (!(0, E.canWatchStream)(s, I.default, _.default, T.default, m.default)[0]) return;
         (0, c.watchStream)((0, p.decodeStreamKey)(e.id), {
           forceMultiple: t.shiftKey
         })
-      }(null == P ? void 0 : P.id) === e.id ? b ? (u.default.selectParticipant(s.id, null), u.default.updateStageStreamSize(s.id, !1)) : u.default.updateStageStreamSize(s.id, !0) : (u.default.updateStageStreamSize(s.id, !1), u.default.selectParticipant(s.id, e.id))
-    }, [j, s, P, b]);
+      }(null == P ? void 0 : P.id) === e.id ? D ? (u.default.selectParticipant(s.id, null), u.default.updateStageStreamSize(s.id, !1)) : u.default.updateStageStreamSize(s.id, !0) : (u.default.updateStageStreamSize(s.id, !1), u.default.selectParticipant(s.id, e.id))
+    }, [j, s, P, D]);
     return (0, a.jsx)(N.default, {
       participant: n,
       aspectRatio: y,
@@ -119,7 +119,7 @@ let y = 16 / 9,
       className: L.tile,
       inCall: !0,
       inPopout: C,
-      onClick: D,
+      onClick: b,
       onContextMenu: f,
       paused: !1,
       pulseSpeakingIndicator: !g.enabled,
@@ -146,7 +146,7 @@ t.default = l.memo(function(e) {
           (0, d.openContextMenuLazy)(t, async () => {
             let {
               default: t
-            } = await n.e("22183").then(n.bind(n, "720336"));
+            } = await n.e("22183").then(n.bind(n, "987281"));
             return n => (0, a.jsx)(t, {
               ...n,
               stream: e.stream,

@@ -7,19 +7,19 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var s = n("120356"),
-  a = n.n(s),
-  l = n("481060"),
+  l = n.n(s),
+  a = n("481060"),
   r = n("403182"),
   u = n("587446"),
   o = n("504983"),
-  c = n("669967");
+  c = n("448546");
 
 function d(e) {
   let {
     errors: t
   } = e;
   return (0, i.jsx)(i.Fragment, {
-    children: t.map((e, t) => (0, i.jsx)(l.Text, {
+    children: t.map((e, t) => (0, i.jsx)(a.Text, {
       variant: "text-xs/normal",
       color: "text-danger",
       className: c.errorMessage,
@@ -49,7 +49,7 @@ function m(e) {
     showPremiumIcon: N = !1
   } = e;
   return (0, i.jsx)("div", {
-    className: a()(c.customizationSection, f, {
+    className: l()(c.customizationSection, f, {
       [c.disabled]: _,
       [c.hideDivider]: S,
       [c.showBorder]: I,
@@ -61,12 +61,12 @@ function m(e) {
       isShown: I,
       type: P,
       hasBackground: E,
-      children: [(0, i.jsxs)(l.FormTitle, {
+      children: [(0, i.jsxs)(a.FormTitle, {
         className: c.title,
         id: s,
         children: [t, N && (0, i.jsx)(u.default, {}), n]
-      }), null != r ? (0, i.jsx)(l.FormText, {
-        type: l.FormText.Types.DESCRIPTION,
+      }), null != r ? (0, i.jsx)(a.FormText, {
+        type: a.FormText.Types.DESCRIPTION,
         className: c.sectionDescription,
         children: r
       }) : null, m, null != p && (0, i.jsx)(d, {

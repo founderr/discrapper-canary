@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   s = n("470079"),
-  a = n("512722"),
-  l = n.n(a),
+  l = n("512722"),
+  a = n.n(l),
   r = n("442837"),
   u = n("481060"),
   o = n("581308"),
@@ -48,7 +48,7 @@ var i = n("735250"),
   k = n("649450");
 
 function H(e) {
-  var t, n, a, _, S, P, N, O;
+  var t, n, l, _, S, P, N, O;
   let {
     premiumSubscription: j,
     skuId: H,
@@ -70,29 +70,29 @@ function H(e) {
     priceOptions: ei,
     annualDiscountInvoicePreview: es
   } = (0, p.usePaymentContext)(), {
-    isGift: ea,
-    giftRecipient: el,
+    isGift: el,
+    giftRecipient: ea,
     selectedGiftStyle: er,
     customGiftMessage: eu,
     setCustomGiftMessage: eo
-  } = (0, f.useGiftContext)(), ec = (0, E.getGiftExperience)(el), ed = ea && (0, E.shouldShowCustomGiftExperience)(el), {
+  } = (0, f.useGiftContext)(), ec = (0, E.getGiftExperience)(ea), ed = el && (0, E.shouldShowCustomGiftExperience)(ea), {
     confirmUpsellEnabled: em
   } = (0, d.default)({
     location: "PremiumSwitchPlanSelectBody"
   });
-  H = null != H ? H : et, j = null != j ? j : $, l()(void 0 !== j, "should not be undefined");
+  H = null != H ? H : et, j = null != j ? j : $, a()(void 0 !== j, "should not be undefined");
   let [ef, ep] = (0, r.useStateFromStoresArray)([I.default], () => [null != j ? I.default.get(j.planId) : null, null != W ? I.default.get(W) : null]), e_ = (0, y.usePremiumTrialOffer)(z), eS = null == e_ ? void 0 : e_.subscription_trial, eI = (0, C.usePremiumDiscountOffer)(), eP = (0, C.usePremiumAnnualDiscountOffer)(), eE = null == eI ? void 0 : null === (t = eI.discount) || void 0 === t ? void 0 : t.plan_ids, eT = null != ep ? ep : en, eN = s.useCallback(e => {
     null != Y ? Y(e) : ee(e)
   }, [Y, ee]), ev = null != K ? K : ei;
-  l()(null != ev, "Price option has to be set");
+  a()(null != ev, "Price option has to be set");
   let eh = null != e_ && (0, U.SubscriptionTrials)[e_.trial_id].skus.includes(H),
     ex = null != eI && V.some(e => null == eE ? void 0 : eE.includes(e)) && null != eI.discount,
     eA = null == e_ && (null == eP ? void 0 : eP.discount) != null && (null == es ? void 0 : es.invoiceItems) != null && V.some(e => {
       var t, n;
       return null == eP ? void 0 : null === (n = eP.discount) || void 0 === n ? void 0 : null === (t = n.plan_ids) || void 0 === t ? void 0 : t.includes(e)
     }),
-    eC = (0, v.getPrice)(U.SubscriptionPlans.PREMIUM_MONTH_TIER_2, !1, ea, ev),
-    ey = (0, v.getPrice)(U.SubscriptionPlans.PREMIUM_YEAR_TIER_2, !1, ea, ev);
+    eC = (0, v.getPrice)(U.SubscriptionPlans.PREMIUM_MONTH_TIER_2, !1, el, ev),
+    ey = (0, v.getPrice)(U.SubscriptionPlans.PREMIUM_YEAR_TIER_2, !1, el, ev);
   s.useEffect(() => {
     Z && x.default.trackExposure({
       location: "5f89bb_1"
@@ -101,24 +101,24 @@ function H(e) {
   let eg = (null == eT ? void 0 : eT.id) != null && V.includes(eT.id);
   s.useEffect(() => {
     if (!eg) {
-      if (null == ef || ea) eN(V[0]);
+      if (null == ef || el) eN(V[0]);
       else if (null != ef) {
         let e = V.find(e => e !== ef.id);
         null != e && eN(e)
       }
     }
-  }, [eg, ea, V, ef, eN]);
-  let eM = !ed && (ea || !eh && !ex && !eA) && eg && J,
+  }, [eg, el, V, ef, eN]);
+  let eM = !ed && (el || !eh && !ex && !eA) && eg && J,
     eR = (0, u.useRadioGroup)(),
-    eb = (null == eT ? void 0 : eT.id) != null ? (0, v.getPrice)(eT.id, !1, ea, ev) : void 0,
+    eb = (null == eT ? void 0 : eT.id) != null ? (0, v.getPrice)(eT.id, !1, el, ev) : void 0,
     {
       ipCountryCode: eL
     } = (0, A.default)(),
     eO = "HR" === eL && null != eb && eb.currency === w.CurrencyCodes.EUR,
     ej = (0, v.isPrepaidPaymentSource)(ev.paymentSourceId),
     eG = (null == eS ? void 0 : eS.interval) === U.SubscriptionIntervalTypes.DAY ? B.default.Messages.BILLING_TRIAL_2_WEEK_PERIOD : B.default.Messages.BILLING_TRIAL_30_DAY_PERIOD,
-    eD = !ea && (ex || eA || null != eS && eh && null != X),
-    eU = null == q ? void 0 : null === (_ = q.find(e => e.subscriptionPlanId === U.SubscriptionPlans.PREMIUM_MONTH_TIER_2)) || void 0 === _ ? void 0 : null === (a = _.discounts) || void 0 === a ? void 0 : null === (n = a.find(e => e.type === c.InvoiceDiscountTypes.SUBSCRIPTION_PLAN)) || void 0 === n ? void 0 : n.amount,
+    eD = !el && (ex || eA || null != eS && eh && null != X),
+    eU = null == q ? void 0 : null === (_ = q.find(e => e.subscriptionPlanId === U.SubscriptionPlans.PREMIUM_MONTH_TIER_2)) || void 0 === _ ? void 0 : null === (l = _.discounts) || void 0 === l ? void 0 : null === (n = l.find(e => e.type === c.InvoiceDiscountTypes.SUBSCRIPTION_PLAN)) || void 0 === n ? void 0 : n.amount,
     eF = null == es ? void 0 : null === (O = es.invoiceItems) || void 0 === O ? void 0 : null === (N = O.find(e => e.subscriptionPlanId === U.SubscriptionPlans.PREMIUM_YEAR_TIER_2)) || void 0 === N ? void 0 : null === (P = N.discounts) || void 0 === P ? void 0 : null === (S = P.find(e => e.type === c.InvoiceDiscountTypes.SUBSCRIPTION_PLAN)) || void 0 === S ? void 0 : S.amount;
   return (0, i.jsx)(i.Fragment, {
     children: (0, i.jsxs)("div", {
@@ -132,7 +132,7 @@ function H(e) {
       }), (0, i.jsxs)("div", {
         className: ed ? k.bodyColumnRight : void 0,
         children: [(0, i.jsx)(D.SendGiftToUser, {
-          giftRecipient: el
+          giftRecipient: ea
         }), (() => {
           if (ec === E.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null != eo) return (0, i.jsx)(b.default, {
             sectionTitle: B.default.Messages.GIFT_OPTIONAL_MESSAGE,
@@ -140,7 +140,7 @@ function H(e) {
             pendingText: eu,
             currentText: eu
           })
-        })(), null != ef && !ea && null == eF && (0, i.jsx)("div", {
+        })(), null != ef && !el && null == eF && (0, i.jsx)("div", {
           className: k.bodyText,
           children: function(e, t) {
             let n = B.default.Messages.BILLING_SWITCH_PLAN_DOWNGRADE_BODY_MONTH,
@@ -154,10 +154,10 @@ function H(e) {
                     return i
                 }
               })(),
-              a = e.skuId;
+              l = e.skuId;
             switch (t) {
               case U.PremiumSubscriptionSKUs.TIER_0:
-                switch (a) {
+                switch (l) {
                   case U.PremiumSubscriptionSKUs.TIER_1:
                     return B.default.Messages.BILLING_SWITCH_PLAN_DOWNGRADE_BODY_TIER_1_TO_TIER_0;
                   case U.PremiumSubscriptionSKUs.TIER_2:
@@ -166,7 +166,7 @@ function H(e) {
                     return s
                 }
               case U.PremiumSubscriptionSKUs.TIER_1:
-                switch (a) {
+                switch (l) {
                   case U.PremiumSubscriptionSKUs.TIER_0:
                     return B.default.Messages.BILLING_SWITCH_PLAN_UPGRADE_BODY_TIER_1;
                   case U.PremiumSubscriptionSKUs.TIER_2:
@@ -175,7 +175,7 @@ function H(e) {
                     return s
                 }
               case U.PremiumSubscriptionSKUs.TIER_2:
-                switch (a) {
+                switch (l) {
                   case U.PremiumSubscriptionSKUs.TIER_0:
                   case U.PremiumSubscriptionSKUs.TIER_1:
                     return B.default.Messages.BILLING_SWITCH_PLAN_UPGRADE_BODY_TIER_2;
@@ -243,7 +243,7 @@ function H(e) {
           ...eR,
           children: V.map(e => (0, i.jsx)(G.default, {
             planId: e,
-            premiumSubscription: ea ? null : null != j ? j : null,
+            premiumSubscription: el ? null : null != j ? j : null,
             selectPlan: eN,
             selected: (null == eT ? void 0 : eT.id) === e,
             priceOptions: ev,
@@ -263,7 +263,7 @@ function H(e) {
               value: (0, i.jsx)(R.default, {
                 price: eb.amount,
                 currency: eb.currency,
-                intervalType: ea ? null : eT.interval,
+                intervalType: el ? null : eT.interval,
                 intervalCount: eT.intervalCount,
                 isPrepaidPaymentSource: ej
               }),
@@ -274,11 +274,11 @@ function H(e) {
           message: B.default.Messages.LOCALIZED_PRICING_HRK_EURO_WARNING.format({
             kunaPriceWithCurrency: (0, h.formatPrice)(7.5345 * eb.amount, w.CurrencyCodes.HRK)
           })
-        }), !ea && !eD && J && (0, i.jsx)(o.default, {
+        }), !el && !eD && J && (0, i.jsx)(o.default, {
           message: B.default.Messages.BILLING_FINAL_PRICE_MAY_CHANGE.format({
             documentationLink: T.default.getArticleURL(F.HelpdeskArticles.LOCALIZED_PRICING)
           })
-        }), em && ea && (0, i.jsx)(m.default, {
+        }), em && el && (0, i.jsx)(m.default, {
           onClose: Q
         })]
       })]
@@ -291,8 +291,8 @@ function W(e) {
     onStepChange: t,
     selectedPlanId: n,
     paymentSources: s,
-    onBackClick: a,
-    showBackButton: l,
+    onBackClick: l,
+    showBackButton: a,
     planOptions: r,
     shouldRenderUpdatedPaymentModal: o = !1,
     isTrial: c
@@ -313,8 +313,8 @@ function W(e) {
     }) : (0, i.jsx)(u.Button, {
       disabled: !0,
       children: B.default.Messages.SELECT
-    }), l ? (0, i.jsx)(O.default, {
-      onClick: a
+    }), a ? (0, i.jsx)(O.default, {
+      onClick: l
     }) : null]
   })
 }
@@ -324,13 +324,13 @@ function Y(e) {
     onStepChange: t,
     selectedPlanId: n,
     isGift: s,
-    paymentSources: a,
-    shouldRenderUpdatedPaymentModal: l,
+    paymentSources: l,
+    shouldRenderUpdatedPaymentModal: a,
     isTrial: o
   } = e, c = (0, r.useStateFromStores)([P.default], () => P.default.getPremiumTypeSubscription()), {
     hasEntitlements: d
-  } = (0, j.useSubscriptionEntitlements)(n, s), m = null != c && null != c.paymentSourceId || Object.keys(a).length > 0 || d && !o;
-  var f = l ? B.default.Messages.NEXT : B.default.Messages.SELECT,
+  } = (0, j.useSubscriptionEntitlements)(n, s), m = null != c && null != c.paymentSourceId || Object.keys(l).length > 0 || d && !o;
+  var f = a ? B.default.Messages.NEXT : B.default.Messages.SELECT,
     p = _.Step.ADD_PAYMENT_STEPS;
   return m ? p = _.Step.REVIEW : (0, N.isDesktop)() && function() {
     let {

@@ -16,22 +16,22 @@ var a = s("735250"),
   S = s("572004"),
   E = s("63063"),
   T = s("358085"),
-  m = s("998502"),
-  f = s("695346"),
+  f = s("998502"),
+  m = s("695346"),
   _ = s("399970"),
   g = s("981631"),
   h = s("689938"),
-  I = s("358552");
+  I = s("389991");
 
 function N() {
-  let [e] = n.useState(() => m.default.getEnableHardwareAcceleration()), t = f.DisableGamesTab.useSetting(), s = f.DeveloperMode.useSetting(), N = f.DisableHomeAutoNav.useSetting(), {
+  let [e] = n.useState(() => f.default.getEnableHardwareAcceleration()), t = m.DisableGamesTab.useSetting(), s = m.DeveloperMode.useSetting(), N = m.DisableHomeAutoNav.useSetting(), {
     hasLibraryApplication: p,
     testModeApplicationId: C
   } = (0, l.useStateFromStoresObject)([u.default, d.default], () => ({
     hasLibraryApplication: d.default.hasLibraryApplication(),
     testModeApplicationId: u.default.testModeApplicationId
   })), A = n.useCallback(e => {
-    f.DisableGamesTab.updateSetting(!e)
+    m.DisableGamesTab.updateSetting(!e)
   }, []), O = n.useCallback(e => {
     e ? (0, r.openModal)(e => (0, a.jsx)(_.default, {
       ...e
@@ -41,7 +41,7 @@ function N() {
       header: h.default.Messages.SWITCH_HARDWARE_ACCELERATION,
       confirmText: h.default.Messages.OKAY,
       cancelText: h.default.Messages.CANCEL,
-      onConfirm: () => m.default.setEnableHardwareAcceleration(e),
+      onConfirm: () => f.default.setEnableHardwareAcceleration(e),
       ...t,
       children: (0, a.jsx)(r.Text, {
         variant: "text-sm/normal",
@@ -49,14 +49,14 @@ function N() {
       })
     }))
   }, []), R = n.useCallback(e => {
-    f.DisableHomeAutoNav.updateSetting(!e)
+    m.DisableHomeAutoNav.updateSetting(!e)
   }, []);
   return (0, a.jsxs)(r.FormSection, {
     tag: r.FormTitleTags.H1,
     title: h.default.Messages.SETTINGS_ADVANCED,
     children: [S.SUPPORTS_COPY && (0, a.jsx)(r.FormSwitch, {
       value: s,
-      onChange: f.DeveloperMode.updateSetting,
+      onChange: m.DeveloperMode.updateSetting,
       note: h.default.Messages.DEVELOPER_MODE_HELP_TEXT.format({
         apiDocsUrl: g.MarketingURLs.API_DOCS
       }),

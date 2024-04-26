@@ -24,7 +24,7 @@ var a = n("735250"),
   _ = n("981631"),
   T = n("921944"),
   I = n("689938"),
-  A = n("639199");
+  A = n("528247");
 
 function v(e) {
   let {
@@ -48,9 +48,9 @@ function N(e) {
   } = e, N = (0, m.default)(), x = (0, s.useStateFromStores)([h.default], () => {
     var e, t;
     return null === (e = h.default.getSessionById(null !== (t = null == N ? void 0 : N.sessionId) && void 0 !== t ? t : "")) || void 0 === e ? void 0 : e.clientInfo.os
-  }), M = (0, s.useStateFromStores)([f.default], () => f.default.hasLayers()), [R, L] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.getMode(t.id), o.default.getLayout(t.id)]), y = (0, r.useModalsStore)(r.hasAnyModalOpenSelector), O = (0, p.default)(), j = O.filter(e => e.twoWayLink), [P, b] = l.useState(!1);
+  }), M = (0, s.useStateFromStores)([f.default], () => f.default.hasLayers()), [R, L] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.getMode(t.id), o.default.getLayout(t.id)]), y = (0, r.useModalsStore)(r.hasAnyModalOpenSelector), O = (0, p.default)(), j = O.filter(e => e.twoWayLink), [P, D] = l.useState(!1);
   if (null == N && 0 === O.length || t.isBroadcastChannel()) return null;
-  let D = _.ChannelModes.VOICE !== R && [_.ChannelLayouts.NO_CHAT, _.ChannelLayouts.FULL_SCREEN].includes(L) ? "top" : "bottom",
+  let b = _.ChannelModes.VOICE !== R && [_.ChannelLayouts.NO_CHAT, _.ChannelLayouts.FULL_SCREEN].includes(L) ? "top" : "bottom",
     U = [];
   return j.length > 0 && U.push(i.DismissibleContent.DONUT_DESKTOP_NUX), (0, a.jsx)(u.default, {
     contentTypes: U,
@@ -63,10 +63,10 @@ function N(e) {
         children: [n ? (0, a.jsx)("div", {
           className: A.leftDivider
         }) : null, (0, a.jsx)(r.Popout, {
-          position: D,
+          position: b,
           spacing: o ? 16 : void 0,
           positionKey: "".concat(R, ":").concat(L),
-          onRequestClose: () => b(!1),
+          onRequestClose: () => D(!1),
           shouldShow: (o || P) && !M && !y,
           renderPopout: e => {
             let {
@@ -74,10 +74,10 @@ function N(e) {
             } = e;
             return (0, a.jsx)(d.default, {
               children: o ? (0, a.jsx)(E.default, {
-                popoutPosition: D,
+                popoutPosition: b,
                 onDismiss: () => s(T.ContentDismissActionType.UNKNOWN),
                 onAccept: () => {
-                  s(T.ContentDismissActionType.UNKNOWN), b(!0)
+                  s(T.ContentDismissActionType.UNKNOWN), D(!0)
                 },
                 gameConsoleAccounts: j
               }) : (0, a.jsx)(v, {
@@ -93,7 +93,7 @@ function N(e) {
             return (0, a.jsx)(c.default, {
               ...e,
               ...g,
-              onClick: () => b(!0),
+              onClick: () => D(!0),
               label: null != (t = x) ? t === S.GameConsoleTypes.XBOX ? I.default.Messages.XBOX_REMOTE_CONNECTED_RAW : I.default.Messages.PLAYSTATION_REMOTE_CONNECTED_RAW : I.default.Messages.CONSOLE_TRANSFER,
               iconComponent: (0, C.default)(x)
             })

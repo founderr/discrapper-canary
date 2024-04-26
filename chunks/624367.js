@@ -34,7 +34,7 @@ var a = n("613828"),
   x = n("701488"),
   L = n("981631"),
   D = n("689938"),
-  P = n("97661");
+  P = n("50875");
 let y = (0, S.cssValueToNumber)(i.default.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
 
 function U(e) {

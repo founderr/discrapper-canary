@@ -26,15 +26,15 @@ var n = a("735250"),
   C = a("77498"),
   m = a("441674"),
   S = a("90062"),
-  I = a("964309"),
-  p = a("207796"),
+  p = a("964309"),
+  I = a("207796"),
   T = a("308083"),
   g = a("689938"),
-  A = a("896328");
+  A = a("866474");
 
 function N() {
-  let e = (0, p.useClanDiscoveryUIStore)(e => e.selectedTraits, r.default),
-    t = (0, p.useClanDiscoveryUIStore)(e => e.setSelectedTraits, r.default),
+  let e = (0, I.useClanDiscoveryUIStore)(e => e.selectedTraits, r.default),
+    t = (0, I.useClanDiscoveryUIStore)(e => e.setSelectedTraits, r.default),
     a = s.useMemo(() => g.default.getAvailableLocales().map(e => ({
       value: e.value,
       label: e.name
@@ -88,7 +88,7 @@ function N() {
         className: A.traitCategory,
         children: (0, n.jsx)(f.TraitSelectionCategory, {
           title: g.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_IDENTITY,
-          icon: I.default,
+          icon: p.default,
           traits: T.IDENTITY_TRAITS,
           interests: l,
           handleUpdate: c
@@ -121,8 +121,8 @@ function N() {
 
 function v() {
   let e = (0, u.useToken)(u.tokens.colors.WHITE),
-    t = (0, p.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, r.default),
-    a = (0, p.useClanDiscoveryUIStore)(e => e.setSelectedPlaystyle, r.default),
+    t = (0, I.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, r.default),
+    a = (0, I.useClanDiscoveryUIStore)(e => e.setSelectedPlaystyle, r.default),
     l = s.useMemo(() => Object.values((0, T.getPlaystyleOptions)()), []);
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)("div", {
@@ -165,13 +165,13 @@ function v() {
 }
 
 function R(e, t) {
-  return (e !== p.ClanDiscoveryGame.VALORANT || t !== T.VALORANT_ID) && (e !== p.ClanDiscoveryGame.GENSHIN || t !== T.GENSHIN_ID) && !0
+  return (e !== I.ClanDiscoveryGame.VALORANT || t !== T.VALORANT_ID) && (e !== I.ClanDiscoveryGame.GENSHIN || t !== T.GENSHIN_ID) && !0
 }
 
 function L() {
-  let e = (0, p.useClanDiscoveryUIStore)(e => e.game, r.default),
-    t = (0, p.useClanDiscoveryUIStore)(e => e.selectedGames, r.default),
-    a = (0, p.useClanDiscoveryUIStore)(e => e.setSelectedGames, r.default),
+  let e = (0, I.useClanDiscoveryUIStore)(e => e.game, r.default),
+    t = (0, I.useClanDiscoveryUIStore)(e => e.selectedGames, r.default),
+    a = (0, I.useClanDiscoveryUIStore)(e => e.setSelectedGames, r.default),
     l = (0, d.useStateFromStoresArray)([C.default], () => C.default.games, []),
     i = s.useMemo(() => l.map(e => ({
       value: e.id,

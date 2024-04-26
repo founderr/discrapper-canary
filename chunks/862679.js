@@ -8,7 +8,7 @@ var a = n("735250"),
   o = n("433355"),
   u = n("373791"),
   d = n("301822"),
-  c = n("865112");
+  c = n("806124");
 t.default = l.memo(function(e) {
   let {
     message: t,

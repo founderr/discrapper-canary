@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("512722"),
   s = n.n(i),
-  a = n("207561"),
-  l = n("639119"),
+  l = n("207561"),
+  a = n("639119"),
   r = n("3409"),
   u = n("626135"),
   o = n("987209"),
@@ -46,13 +46,13 @@ function p(e) {
     setPurchaseError: h,
     purchaseErrorBlockRef: x,
     paymentAuthenticationState: A
-  }, M = (0, l.usePremiumTrialOffer)(_), R = !y && null != M && null != C && (0, f.SubscriptionTrials)[M.trial_id].skus.includes(C), b = null != S ? S : () => {
+  }, M = (0, a.usePremiumTrialOffer)(_), R = !y && null != M && null != C && (0, f.SubscriptionTrials)[M.trial_id].skus.includes(C), b = null != S ? S : () => {
     p(Object.values(E).length < 1 && null == n ? d.Step.PLAN_SELECT : d.Step.REVIEW, {
       trackedFromStep: d.Step.PAYMENT_TYPE
     })
   };
   s()(P, "Step should be set here");
-  let L = (0, a.useStableMemo)(() => Date.now(), [P]);
+  let L = (0, l.useStableMemo)(() => Date.now(), [P]);
   return (0, r.AddPaymentFlow)({
     paymentModalArgs: g,
     initialStep: d.Step.PAYMENT_TYPE,

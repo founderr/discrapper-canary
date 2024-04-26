@@ -11,7 +11,7 @@ var n = a("735250"),
   c = a("436137"),
   f = a("559469"),
   E = a("689938"),
-  h = a("907204");
+  h = a("720395");
 
 function _(e) {
   let {
@@ -89,7 +89,7 @@ let C = [0, 1, 2],
 t.default = s.memo(function(e) {
   let {
     selectedGame: t
-  } = e, [a, o] = s.useState("upsell"), [c, f] = s.useState(0), [E, S] = s.useState(0), I = (0, d.useClanDiscoveryUIStore)(e => e.setMode, l.default), p = (0, d.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, l.default), T = s.useCallback(e => {
+  } = e, [a, o] = s.useState("upsell"), [c, f] = s.useState(0), [E, S] = s.useState(0), p = (0, d.useClanDiscoveryUIStore)(e => e.setMode, l.default), I = (0, d.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, l.default), T = s.useCallback(e => {
     f(e), E < e && S(e)
   }, [E]), g = s.useCallback(() => {
     o("onboarding")
@@ -105,8 +105,8 @@ t.default = s.memo(function(e) {
   }, [c]), N = s.useCallback(() => {
     0 === c ? o("upsell") : T(c - 1)
   }, [c, T]), v = s.useCallback(() => {
-    2 === c ? I(d.ClanDiscoveryMode.DISCOVERY) : T(c + 1)
-  }, [I, c, T]), R = s.useMemo(() => 1 === c && null == p, [p, c]);
+    2 === c ? p(d.ClanDiscoveryMode.DISCOVERY) : T(c + 1)
+  }, [p, c, T]), R = s.useMemo(() => 1 === c && null == I, [I, c]);
   switch (a) {
     case "upsell":
       return (0, n.jsx)(_, {

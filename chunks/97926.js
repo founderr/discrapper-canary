@@ -12,9 +12,9 @@ var a = s("735250"),
   S = s("87894"),
   E = s("37303"),
   T = s("46140"),
-  m = s("981631"),
-  f = s("689938"),
-  _ = s("719023");
+  f = s("981631"),
+  m = s("689938"),
+  _ = s("941725");
 
 function g(e) {
   let {
@@ -45,28 +45,28 @@ t.default = () => {
     if (o && !d) return -1;
     if (S && !E) return 1;
     let T = (null === (i = e.userStatus) || void 0 === i ? void 0 : i.enrolledAt) != null,
-      m = (null === (r = t.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null;
-    if (T && !o && m && !S) {
+      f = (null === (r = t.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null;
+    if (T && !o && f && !S) {
       let s = (0, c.calculatePercentComplete)(e);
       return (0, c.calculatePercentComplete)(t) - s
     }
     if (T && !o) return -1;
-    if (m && !S) return 1;
-    let f = e.targetedContent.includes(u.QuestContent.GIFT_INVENTORY_FOR_YOU),
+    if (f && !S) return 1;
+    let m = e.targetedContent.includes(u.QuestContent.GIFT_INVENTORY_FOR_YOU),
       _ = t.targetedContent.includes(u.QuestContent.GIFT_INVENTORY_FOR_YOU);
-    if (f && !T && !o && _ && !m && !S) return 0;
-    if (f && !T && !o) return -1;
-    if (_ && !m && !S) return 1;
+    if (m && !T && !o && _ && !f && !S) return 0;
+    if (m && !T && !o) return -1;
+    if (_ && !f && !S) return 1;
     let g = o && d,
       h = S && E;
     return g && !h ? 1 : !g && h ? -1 : 0
   }), [e, s]), N = n.useMemo(() => h ? [{
     section: S.QuestsInventorySection.FOR_YOU,
-    title: f.default.Messages.QUESTS_FOR_YOU,
+    title: m.default.Messages.QUESTS_FOR_YOU,
     quests: I.filter(g)
   }, {
     section: S.QuestsInventorySection.OTHER,
-    title: f.default.Messages.QUESTS_OTHER,
+    title: m.default.Messages.QUESTS_OTHER,
     quests: I.filter(e => !g(e))
   }] : [], [h, I]), p = n.useCallback(e => {
     let {
@@ -93,12 +93,12 @@ t.default = () => {
         }), (0, a.jsx)(i.Heading, {
           variant: "heading-md/semibold",
           className: _.questsHeading,
-          children: f.default.Messages.QUESTS
+          children: m.default.Messages.QUESTS
         }), (0, a.jsx)(i.Text, {
           variant: "text-xs/normal",
           className: _.questsHeadingLearnMore,
-          children: f.default.Messages.QUESTS_LEARN_MORE_LINK.format({
-            questsLearnMoreLink: r.default.getArticleURL(m.HelpdeskArticles.QUESTS_LEARN_MORE)
+          children: m.default.Messages.QUESTS_LEARN_MORE_LINK.format({
+            questsLearnMoreLink: r.default.getArticleURL(f.HelpdeskArticles.QUESTS_LEARN_MORE)
           })
         })]
       }),

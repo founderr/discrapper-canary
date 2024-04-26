@@ -16,11 +16,11 @@ var n = a("735250"),
   C = a("87888"),
   m = a("63063"),
   S = a("976401"),
-  I = a("333454"),
-  p = a("864441"),
+  p = a("333454"),
+  I = a("864441"),
   T = a("981631"),
   g = a("689938"),
-  A = a("285146");
+  A = a("846267");
 
 function N(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
@@ -44,11 +44,11 @@ class R extends s.PureComponent {
   }
   renderTitle() {
     return (0, n.jsxs)("div", {
-      children: [(0, n.jsx)(p.default, {
+      children: [(0, n.jsx)(I.default, {
         children: this.isHost() ? g.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_HOST.format({
           count: this.props.party.length
         }) : g.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_LISTENER
-      }), (0, n.jsx)(I.default, {
+      }), (0, n.jsx)(p.default, {
         children: g.default.Messages.SPOTIFY_LISTEN_ALONG_SUBTITLE_LISTENER
       })]
     })

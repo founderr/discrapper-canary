@@ -22,7 +22,7 @@ var r = n("120356"),
   N = n("981631"),
   p = n("474936"),
   O = n("689938"),
-  R = n("855260");
+  R = n("277801");
 let C = [{
   tier: N.BoostedGuildTiers.TIER_1,
   perks: [{

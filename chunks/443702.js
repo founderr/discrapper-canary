@@ -16,8 +16,8 @@ var a = s("735250"),
   S = s("497321"),
   E = s("231428"),
   T = s("390954"),
-  m = s("89057"),
-  f = s("246946"),
+  f = s("89057"),
+  m = s("246946"),
   _ = s("594174"),
   g = s("351402"),
   h = s("853872"),
@@ -25,7 +25,7 @@ var a = s("735250"),
   N = s("706454"),
   p = s("981631"),
   C = s("689938"),
-  A = s("757947");
+  A = s("475440");
 class O extends n.PureComponent {
   componentDidMount() {
     d.default.wait(() => {
@@ -65,7 +65,7 @@ class O extends n.PureComponent {
             tag: "h1",
             children: C.default.Messages.BILLING_PAYMENT_HISTORY
           }),
-          children: [(0, a.jsx)(m.BlockedPaymentsWarning, {}), (0, a.jsx)(E.default, {
+          children: [(0, a.jsx)(f.BlockedPaymentsWarning, {}), (0, a.jsx)(E.default, {
             locale: l
           })]
         })
@@ -81,12 +81,12 @@ class O extends n.PureComponent {
 }
 
 function x() {
-  let e = (0, r.useStateFromStoresObject)([N.default, g.default, h.default, _.default, f.default, I.default], () => {
+  let e = (0, r.useStateFromStoresObject)([N.default, g.default, h.default, _.default, m.default, I.default], () => {
     let e = I.default.getPremiumTypeSubscription(),
       t = _.default.getCurrentUser();
     return i()(null != t, "UserSettingsBilling: currentUser cannot be undefined"), {
       locale: N.default.locale,
-      hide: f.default.enabled,
+      hide: m.default.enabled,
       isClaimed: t.isClaimed(),
       isVerified: t.verified,
       premiumSubscription: e,

@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return p
+    return I
   }
 }), a("47120");
 var n = a("470079"),
@@ -20,20 +20,20 @@ var n = a("470079"),
   C = a("981631"),
   m = a("689938");
 let S = new Set(["Blink", "Gecko", "WebKit"]),
-  I = C.NOOP;
-if (E.isPlatformEmbedded) I = e => h.default.setBadge(e);
+  p = C.NOOP;
+if (E.isPlatformEmbedded) p = e => h.default.setBadge(e);
 else if (S.has(r().layout)) {
   let e = new(l())({
     animation: "none"
   });
-  I = t => {
+  p = t => {
     try {
       (0, _.setPageTitleNotificationCount)(t), e.badge(-1 === t ? "•" : t)
     } catch (e) {}
   }
 }
 
-function p() {
+function I() {
   let e = (0, o.useStateFromStores)([f.default], () => f.default.hasIncomingCalls()),
     t = (0, o.useStateFromStores)([u.default, c.default, d.default], () => {
       let e = u.default.getTotalMentionCount(),
@@ -54,6 +54,6 @@ function p() {
       null == t || t(), a()
     }
   }, [e]), n.useEffect(() => {
-    I(t)
-  }, [t]), n.useEffect(() => () => I(0), [])
+    p(t)
+  }, [t]), n.useEffect(() => () => p(0), [])
 }

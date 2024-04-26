@@ -16,8 +16,8 @@ var n = a("735250"),
   C = a("607070"),
   m = a("627845"),
   S = a("185666"),
-  I = a("503737"),
-  p = a("513202"),
+  p = a("503737"),
+  I = a("513202"),
   T = a("318891"),
   g = a("687751"),
   A = a("912471"),
@@ -26,8 +26,8 @@ var n = a("735250"),
   R = a("753450"),
   L = a("675869"),
   O = a("77987"),
-  P = a("679891"),
-  M = a("491575"),
+  M = a("679891"),
+  P = a("491575"),
   x = a("561345"),
   y = a("314533"),
   D = a("935347"),
@@ -70,8 +70,8 @@ var n = a("735250"),
   eC = a("893607"),
   em = a("703656"),
   eS = a("298969"),
-  eI = a("719256"),
-  ep = a("6025"),
+  ep = a("719256"),
+  eI = a("6025"),
   eT = a("897473"),
   eg = a("377368"),
   eA = a("262702"),
@@ -80,8 +80,8 @@ var n = a("735250"),
   eR = a("911560"),
   eL = a("703016"),
   eO = a("171368"),
-  eP = a("429974"),
-  eM = a("332754"),
+  eM = a("429974"),
+  eP = a("332754"),
   ex = a("507468"),
   ey = a("357269"),
   eD = a("282506"),
@@ -167,13 +167,13 @@ let e7 = o.default.connectStores([Y.default, ew.default, eU.default], () => ({
       return null
     }
   }),
-  e5 = (0, O.makeAuthenticated)(M.default, null, {
+  e5 = (0, O.makeAuthenticated)(P.default, null, {
     passProps: !1
   }),
   e9 = (0, O.makeAuthenticated)(function() {
     return (0, n.jsx)(v.default, {})
   }),
-  e8 = (0, O.makeAuthenticated)(function(e) {
+  e6 = (0, O.makeAuthenticated)(function(e) {
     let {
       match: t
     } = e, {
@@ -185,7 +185,7 @@ let e7 = o.default.connectStores([Y.default, ew.default, eU.default], () => ({
       initialSection: l
     })
   }),
-  e6 = (0, O.makeAuthenticated)(function() {
+  e8 = (0, O.makeAuthenticated)(function() {
     return (0, n.jsx)(L.default, {})
   }),
   te = [e$.Routes.GUILD_BOOSTING_MARKETING(":guildId"), ...Array.from(e1.StaticChannelRoutes).map(e => e$.Routes.CHANNEL(":guildId", e))];
@@ -206,11 +206,11 @@ function tt(e) {
 }
 let ta = [{
     path: [e$.Routes.APPLICATION_DIRECTORY_SEARCH],
-    render: e6,
+    render: e8,
     isSessionRequired: !0
   }, {
     path: [e$.Routes.APPLICATION_DIRECTORY_PROFILE(":applicationId", ":section?")],
-    render: e8,
+    render: e6,
     isSessionRequired: !0
   }, {
     path: [e$.Routes.APPLICATION_DIRECTORY],
@@ -454,7 +454,7 @@ function tl(e) {
 }
 class ti extends s.PureComponent {
   componentDidMount() {
-    x.default.initialize(), eX.default.setZoomFactor(C.default.zoom), eS.default.init(), P.default.initialize(), ed.default.initialize(), F.default.initialize(), eb.default.initialize(), B.default.initialize(), ef.default.initialize(), ee.default.initialize(), m.default.init(), V.default.init(), H.default.init(), el.default.initialize(), g.default.initialize(), w.default.initialize(), eE.default.initialize(), T.default.initialize(), eD.default.initialize(), eu.default.initialize(), p.default.initialize(), K.default.init(), J.default.init(), ez.default.init(), eQ.default.init(), I.default.initialize(), eL.default.init(), eK.default.init(), eW.default.init(), eM.default.init(), eA.default.initialize(), eN.default.initialize(), eP.default.initialize(), ex.default.init(), G.default.initialize(), S.default.initialize(), eI.default.initialize(), eg.default.initialize(), er.default.initialize(), ei.default.initialize(), eo.default.initialize(), y.default.initialize(), $.default.init({
+    x.default.initialize(), eX.default.setZoomFactor(C.default.zoom), eS.default.init(), M.default.initialize(), ed.default.initialize(), F.default.initialize(), eb.default.initialize(), B.default.initialize(), ef.default.initialize(), ee.default.initialize(), m.default.init(), V.default.init(), H.default.init(), el.default.initialize(), g.default.initialize(), w.default.initialize(), eE.default.initialize(), T.default.initialize(), eD.default.initialize(), eu.default.initialize(), I.default.initialize(), K.default.init(), J.default.init(), ez.default.init(), eQ.default.init(), p.default.initialize(), eL.default.init(), eK.default.init(), eW.default.init(), eP.default.init(), eA.default.initialize(), eN.default.initialize(), eM.default.initialize(), ex.default.init(), G.default.initialize(), S.default.initialize(), ep.default.initialize(), eg.default.initialize(), er.default.initialize(), ei.default.initialize(), eo.default.initialize(), y.default.initialize(), $.default.init({
       hasModalOpen: u.hasAnyModalOpen,
       openModal: () => (0, u.openModalLazy)(async () => {
         let {
@@ -467,7 +467,7 @@ class ti extends s.PureComponent {
     }), j.default.init(), et.default.initialize(), eh.default.initialize(), ec.default.initialize(), U.default.initialize(), this.rewriterUnlisten = e_.default.addRouteRewriter(this.ensureChannelMatchesGuild), this.historyUnlisten = e_.default.addRouteChangeListener(this.handleHistoryChange)
   }
   componentWillUnmount() {
-    x.default.terminate(), eb.default.terminate(), ef.default.terminate(), ed.default.terminate(), P.default.terminate(), T.default.terminate(), eD.default.terminate(), p.default.terminate(), eE.default.terminate(), eu.default.terminate(), eP.default.terminate(), I.default.terminate(), G.default.terminate(), et.default.terminate(), S.default.terminate(), eh.default.terminate(), eI.default.terminate(), eg.default.terminate(), er.default.terminate(), ei.default.terminate(), eo.default.terminate(), y.default.terminate(), ec.default.terminate(), U.default.terminate(), k.default.terminate(), this.historyUnlisten(), this.rewriterUnlisten()
+    x.default.terminate(), eb.default.terminate(), ef.default.terminate(), ed.default.terminate(), M.default.terminate(), T.default.terminate(), eD.default.terminate(), I.default.terminate(), eE.default.terminate(), eu.default.terminate(), eM.default.terminate(), p.default.terminate(), G.default.terminate(), et.default.terminate(), S.default.terminate(), eh.default.terminate(), ep.default.terminate(), eg.default.terminate(), er.default.terminate(), ei.default.terminate(), eo.default.terminate(), y.default.terminate(), ec.default.terminate(), U.default.terminate(), k.default.terminate(), this.historyUnlisten(), this.rewriterUnlisten()
   }
   handleHistoryChange(e) {
     let {
@@ -523,7 +523,7 @@ class ti extends s.PureComponent {
               let e = {
                 type: eT.SidebarOpenDetailsType.THREAD
               };
-              null != r && (e.initialMessageId = r), ep.default.openThreadAsSidebar({
+              null != r && (e.initialMessageId = r), eI.default.openThreadAsSidebar({
                 guildId: n,
                 baseChannelId: s,
                 channelId: o,
@@ -531,7 +531,7 @@ class ti extends s.PureComponent {
               })
             }
           }
-        } else null != s && !i && ep.default.closeChannelSidebar(s);
+        } else null != s && !i && eI.default.closeChannelSidebar(s);
         let u = en.default.getIsOpen();
         if (s === e1.StaticChannelRoute.ROLE_SUBSCRIPTIONS) ea.default.closeSidebar();
         else if (_ && u) {
@@ -578,7 +578,7 @@ class ti extends s.PureComponent {
           guildId: n,
           pathname: t
         }));
-        else if ((null == a ? void 0 : a.parent_id) !== s) return ep.default.closeChannelSidebar(s), {
+        else if ((null == a ? void 0 : a.parent_id) !== s) return eI.default.closeChannelSidebar(s), {
           path: e$.Routes.CHANNEL(n, s),
           state: e.state
         }

@@ -16,8 +16,8 @@ var n = a("735250"),
   C = a("819792"),
   m = a("919285"),
   S = a("118470"),
-  I = a("413307"),
-  p = a("849688"),
+  p = a("413307"),
+  I = a("849688"),
   T = a("374023"),
   g = a("661599"),
   A = a("923608"),
@@ -26,9 +26,9 @@ var n = a("735250"),
   R = a("760326"),
   L = a("536687"),
   O = a("652785"),
-  P = a("921944");
+  M = a("921944");
 
-function M(e) {
+function P(e) {
   e.stopPropagation()
 }
 
@@ -46,13 +46,13 @@ function x(e) {
   }).map(e => e.dismissibleContentType));
   return (0, n.jsx)(d.default, {
     contentTypes: C,
-    groupName: P.DismissibleContentGroupName.CHANNEL_NOTICES,
+    groupName: M.DismissibleContentGroupName.CHANNEL_NOTICES,
     children: e => {
       let {
         visibleContent: t,
         markAsDismissed: s
       } = e, l = () => {
-        h(Date.now()), s(P.ContentDismissActionType.UNKNOWN)
+        h(Date.now()), s(M.ContentDismissActionType.UNKNOWN)
       }, r = (() => {
         switch (t) {
           case i.DismissibleContent.CHANNEL_NOTICE_HUBLINK:
@@ -88,14 +88,14 @@ function x(e) {
           case i.DismissibleContent.LINKED_ROLE_ADMIN_GUILD:
             return (0, n.jsx)(u.default, {
               guild: a,
-              markAsDismissed: () => s(P.ContentDismissActionType.UNKNOWN)
+              markAsDismissed: () => s(M.ContentDismissActionType.UNKNOWN)
             });
           default:
             return null
         }
       })();
       return null == r ? null : (0, n.jsx)("div", {
-        onContextMenu: M,
+        onContextMenu: P,
         children: r
       })
     }
@@ -107,7 +107,7 @@ t.default = e => {
   } = e;
   switch ((0, L.default)(t)) {
     case L.ConnectedChannelNotices.ENABLE_PUBLIC_GUILD:
-      return (0, n.jsx)(I.default, {
+      return (0, n.jsx)(p.default, {
         guild: t
       });
     case L.ConnectedChannelNotices.APPLIED_GUILD_BOOST_GRACE_PERIOD:
@@ -139,7 +139,7 @@ t.default = e => {
         guild: t
       });
     case L.ConnectedChannelNotices.SIGNUP:
-      return (0, n.jsx)(p.default, {
+      return (0, n.jsx)(I.default, {
         guild: t
       });
     case L.ConnectedChannelNotices.CLAN_UPSELL:

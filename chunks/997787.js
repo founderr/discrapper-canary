@@ -1,16 +1,16 @@
 "use strict";
-let n;
-i.r(t), i("47120"), i("653041");
-var r, s = i("442837"),
-  a = i("570140");
+let i;
+n.r(t), n("47120"), n("653041");
+var r, s = n("442837"),
+  a = n("570140");
 
-function l(e, t, i) {
+function l(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: i,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = i, e
+  }) : e[t] = n, e
 }
 let o = {
     guildNoticeDismissed: []
@@ -20,18 +20,18 @@ let o = {
 class d extends(r = s.default.PersistedStore) {
   initialize() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : o;
-    n = e
+    i = e
   }
   getState() {
-    return n
+    return i
   }
   shouldShowChannelNotice(e) {
-    var t, i;
-    return !n.guildNoticeDismissed.includes(e) && (null !== (i = null === (t = u.get(e)) || void 0 === t ? void 0 : t.size) && void 0 !== i ? i : 0) > 0
+    var t, n;
+    return !i.guildNoticeDismissed.includes(e) && (null !== (n = null === (t = u.get(e)) || void 0 === t ? void 0 : t.size) && void 0 !== n ? n : 0) > 0
   }
   canShowOverviewTooltip(e, t) {
-    var i;
-    return (null === (i = u.get(e)) || void 0 === i ? void 0 : i.has(t)) === !0
+    var n;
+    return (null === (n = u.get(e)) || void 0 === n ? void 0 : n.has(t)) === !0
   }
   canShowToggleTooltip(e) {
     return c.has(e)
@@ -41,23 +41,23 @@ l(d, "displayName", "CommandsMigrationStore"), l(d, "persistKey", "CommandsMigra
   COMMANDS_MIGRATION_UPDATE_SUCCESS: function(e) {
     let {
       guildId: t,
-      integrationIdsWithAppCommands: i
+      integrationIdsWithAppCommands: n
     } = e;
-    return u.set(t, new Set(i)), !0
+    return u.set(t, new Set(n)), !0
   },
   COMMANDS_MIGRATION_NOTICE_DISMISSED: function(e) {
     let {
       guildId: t
     } = e;
-    n.guildNoticeDismissed.push(t)
+    i.guildNoticeDismissed.push(t)
   },
   COMMANDS_MIGRATION_OVERVIEW_TOOLTIP_DISMISSED: function(e) {
     var t;
     let {
-      guildId: i,
-      integrationId: n
+      guildId: n,
+      integrationId: i
     } = e;
-    null === (t = u.get(i)) || void 0 === t || t.clear(), c.add(n)
+    null === (t = u.get(n)) || void 0 === t || t.clear(), c.add(i)
   },
   COMMANDS_MIGRATION_TOGGLE_TOOLTIP_DISMISSED: function(e) {
     let {

@@ -12,7 +12,7 @@ var n = a("735250"),
   o = a("955204"),
   u = a("818765"),
   d = a("674680"),
-  c = a("681101");
+  c = a("328913");
 let f = e => {
   let {
     color: t
@@ -87,8 +87,8 @@ function E(e) {
     }
   }, []);
   let S = null != C && a,
-    I = S ? r.Clickable : "div";
-  return (0, n.jsxs)(I, {
+    p = S ? r.Clickable : "div";
+  return (0, n.jsxs)(p, {
     className: i()(c.container, S && c.actionable),
     onClick: () => {
       S && C()

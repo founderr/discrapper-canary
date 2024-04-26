@@ -20,35 +20,35 @@ var n = a("735250"),
   C = a("486622"),
   m = a("922409"),
   S = a("727813"),
-  I = a("355350"),
-  p = a("307947"),
+  p = a("355350"),
+  I = a("307947"),
   T = a("125855"),
   g = a("687683"),
   A = a("981631"),
   N = a("689938"),
-  v = a("569265");
+  v = a("449846");
 
 function R() {
   let e = s.useRef(null),
     t = (0, S.default)(),
-    a = (0, I.useSpamMessageRequestCount)(),
+    a = (0, p.useSpamMessageRequestCount)(),
     l = (0, _.useListHasSingleSpamMessageRequest)(),
     R = (0, d.useIsRejectAllMessageRequestsEnabled)(),
     L = (0, c.default)("message-requests-spam-list"),
     {
       channelId: O
     } = (0, m.useMessageRequestSidebarState)(),
-    P = s.useCallback(() => {
+    M = s.useCallback(() => {
       (0, u.showToast)((0, u.createToast)(N.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, u.ToastType.FAILURE))
     }, []),
     {
-      rejectAll: M
+      rejectAll: P
     } = (0, C.useMessageRequestActions)({
-      onError: P
+      onError: M
     }),
     x = s.useCallback(() => {
-      M(t.map(e => e.channel.id))
-    }, [t, M]);
+      P(t.map(e => e.channel.id))
+    }, [t, P]);
   s.useEffect(() => {
     h.default.track(A.AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, {
       num_spam_message_requests: a
@@ -94,7 +94,7 @@ function R() {
         })]
       }) : null]
     }, "message-requests-spam-title"), [a, x, R]);
-  return 0 === t.length ? (0, n.jsx)(p.default, {
+  return 0 === t.length ? (0, n.jsx)(I.default, {
     section: g.MessageRequestSections.SPAM
   }) : (0, n.jsx)(r.ListNavigatorProvider, {
     navigator: L,

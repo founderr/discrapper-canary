@@ -11,7 +11,7 @@ var n = a("735250"),
   c = a("626135"),
   f = a("981631"),
   E = a("689938"),
-  h = a("615273");
+  h = a("613682");
 let _ = (0, r.debounce)(u.default.trackWithMetadata, 500);
 t.default = function(e) {
   let {
@@ -22,8 +22,8 @@ t.default = function(e) {
     type: C,
     imageStyles: m,
     imageMarginX: S,
-    imageMarginTop: I,
-    trackingSource: p,
+    imageMarginTop: p,
+    trackingSource: I,
     undismissable: T,
     onDismissed: g,
     onClick: A,
@@ -43,7 +43,7 @@ t.default = function(e) {
     size: o.Button.Sizes.SMALL,
     onClick: () => {
       null != C && c.default.track(f.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
-        source: p,
+        source: I,
         guild_id: t.id,
         notice_type: C
       }), null == A || A()
@@ -63,7 +63,7 @@ t.default = function(e) {
     }),
     children: a
   }));
-  let P = null != S ? "".concat(S, "px") : "16px";
+  let M = null != S ? "".concat(S, "px") : "16px";
   return (0, n.jsxs)("div", {
     className: h.container,
     children: [!0 === T ? null : (0, n.jsx)(o.Clickable, {
@@ -80,9 +80,9 @@ t.default = function(e) {
     }), null != r && (0, n.jsx)("div", {
       className: h.imageContainer,
       style: {
-        marginTop: "".concat(I, "px"),
-        marginLeft: P,
-        marginRight: P
+        marginTop: "".concat(p, "px"),
+        marginLeft: M,
+        marginRight: M
       },
       children: (0, n.jsx)("img", {
         className: h.image,

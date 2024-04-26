@@ -14,7 +14,7 @@ var n = a("735250"),
   d = a("486622"),
   c = a("376191"),
   f = a("689938"),
-  E = a("103898");
+  E = a("557651");
 
 function h(e) {
   let {
@@ -28,8 +28,8 @@ function h(e) {
   }, []), S = s.useCallback(() => {
     r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID), _ && (0, i.transitionToChannel)(h.id)
   }, [h.id, _]), {
-    acceptMessageRequest: I,
-    rejectMessageRequest: p,
+    acceptMessageRequest: p,
+    rejectMessageRequest: I,
     isAcceptLoading: T,
     isRejectLoading: g,
     isUserProfileLoading: A,
@@ -54,7 +54,7 @@ function h(e) {
         color: l.ButtonColors.PRIMARY,
         size: l.Button.Sizes.SMALL,
         onClick: e => {
-          e.stopPropagation(), p(h.id)
+          e.stopPropagation(), I(h.id)
         },
         disabled: R,
         submitting: g || v,
@@ -64,7 +64,7 @@ function h(e) {
         color: l.ButtonColors.BRAND,
         size: l.Button.Sizes.SMALL,
         onClick: e => {
-          e.stopPropagation(), I(h.id)
+          e.stopPropagation(), p(h.id)
         },
         disabled: R,
         submitting: T || A || N,

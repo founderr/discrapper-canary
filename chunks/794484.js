@@ -14,7 +14,7 @@ var a = s("735250"),
   T = s("391110"),
   I = s("75077"),
   R = s("320319"),
-  f = s("755655");
+  f = s("293908");
 let S = e => {
   let {
     showAllPerksButton: t,
@@ -72,13 +72,13 @@ t.default = e => {
     }
   }, [C, O, L, x]);
   let v = (0, I.usePerksDiscoverabilityStrings)(L),
-    D = (0, E.default)(),
-    b = (0, I.getFilteredPerksDiscoverabilityCards)(D, i, M, g, null == P ? void 0 : P.showCard),
-    U = b.some(e => null != e.pillText),
+    b = (0, E.default)(),
+    D = (0, I.getFilteredPerksDiscoverabilityCards)(b, i, M, g, null == P ? void 0 : P.showCard),
+    U = D.some(e => null != e.pillText),
     [j, y] = r.useState(null),
     B = r.useRef(new l.Environment);
   return (0, a.jsxs)(a.Fragment, {
-    children: [(null == D ? void 0 : null === (t = D.freeBoost) || void 0 === t ? void 0 : t.name) === E.PerksDiscoverabilityCardTypes.FREE_BOOST && (0, a.jsx)(l.ConfettiCanvas, {
+    children: [(null == b ? void 0 : null === (t = b.freeBoost) || void 0 === t ? void 0 : t.name) === E.PerksDiscoverabilityCardTypes.FREE_BOOST && (0, a.jsx)(l.ConfettiCanvas, {
       ref: y,
       className: f.confettiCanvas,
       environment: B.current
@@ -113,7 +113,7 @@ t.default = e => {
           [f.cardContainer]: g,
           [f.cardContainerNarrowWidth]: !g
         }),
-        children: b.map((e, t) => (0, a.jsx)(R.default, {
+        children: D.map((e, t) => (0, a.jsx)(R.default, {
           confettiCanvas: e.name === E.PerksDiscoverabilityCardTypes.FREE_BOOST ? j : void 0,
           ...e,
           forceShadow: m

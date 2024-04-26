@@ -20,8 +20,8 @@ var n = a("735250"),
   C = a("594174"),
   m = a("801077"),
   S = a("626135"),
-  I = a("70956"),
-  p = a("225559"),
+  p = a("70956"),
+  I = a("225559"),
   T = a("910436"),
   g = a("203028"),
   A = a("358924"),
@@ -30,8 +30,8 @@ var n = a("735250"),
   R = a("981631"),
   L = a("674563"),
   O = a("689938"),
-  P = a("103877");
-let M = 15 * I.default.Millis.MINUTE,
+  M = a("884724");
+let P = 15 * p.default.Millis.MINUTE,
   x = (0, v.default)(function(e) {
     let {
       party: t,
@@ -50,7 +50,7 @@ let M = 15 * I.default.Millis.MINUTE,
       applicationStreams: f,
       currentActivities: E,
       voiceChannels: h
-    } = t, _ = c.length, C = f.length, m = E.length, I = h.length > 0, p = s.useCallback(() => {
+    } = t, _ = c.length, C = f.length, m = E.length, p = h.length > 0, I = s.useCallback(() => {
       let e = E.filter(e => {
         var t, a;
         return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (a = e.game) || void 0 === a ? void 0 : a.type) === L.ApplicationTypes.GAME
@@ -59,10 +59,10 @@ let M = 15 * I.default.Millis.MINUTE,
         num_users: _,
         num_streams: C,
         num_activities: m,
-        in_voice_channel: I,
+        in_voice_channel: p,
         games_detected: e
       })
-    }, [_, C, m, I, E]), v = o()(p, M);
+    }, [_, C, m, p, E]), v = o()(I, P);
     return null != r || null != u ? (0, n.jsx)(d.Popout, {
       position: "left",
       renderPopout: e => {
@@ -83,7 +83,7 @@ let M = 15 * I.default.Millis.MINUTE,
           ...e,
           onMouseEnter: v,
           "aria-haspopup": "menu",
-          className: P.itemCard,
+          className: M.itemCard,
           active: a,
           children: (0, n.jsxs)("div", {
             children: [r, u]
@@ -108,7 +108,7 @@ function D() {
     fetching: _.default.getFetching(),
     currentUser: C.default.getCurrentUser()
   })), r = (0, u.useStateFromStores)([E.default], () => E.default.quests);
-  s.useEffect(() => (c.default.wait(() => p.mount()), () => c.default.wait(() => p.unmount())), [null == i ? void 0 : i.id]), s.useEffect(() => {
+  s.useEffect(() => (c.default.wait(() => I.mount()), () => c.default.wait(() => I.unmount())), [null == i ? void 0 : i.id]), s.useEffect(() => {
     a && !l && y()
   }, [a, l]);
   let o = s.useMemo(() => {
@@ -135,21 +135,21 @@ function D() {
       quest: o.get(t.id)
     }, t.id)
   }) : (0, n.jsxs)("div", {
-    className: P.emptyCard,
+    className: M.emptyCard,
     children: [(0, n.jsx)(d.Heading, {
       variant: "heading-md/semibold",
-      className: P.emptyHeader,
+      className: M.emptyHeader,
       children: O.default.Messages.ACTIVITY_FEED_NONE_PLAYING_HEADER
     }), (0, n.jsx)(d.Text, {
       color: "none",
-      className: P.emptyText,
+      className: M.emptyText,
       variant: "text-sm/normal",
       children: O.default.Messages.ACTIVITY_FEED_NONE_PLAYING_BODY
     })]
   }), (0, n.jsx)(n.Fragment, {
     children: f
   })) : (0, n.jsx)("div", {
-    className: P.emptyCard,
+    className: M.emptyCard,
     children: (0, n.jsx)(d.Spinner, {})
   })
 }

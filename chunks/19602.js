@@ -1,29 +1,29 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   EyeDropperIcon: function() {
     return a
   }
 });
-var n = i("735250");
-i("470079");
-var r = i("692547"),
-  s = i("331595");
+var i = n("735250");
+n("470079");
+var r = n("692547"),
+  s = n("331595");
 let a = e => {
   let {
     width: t = 24,
-    height: i = 24,
+    height: n = 24,
     color: a = r.default.colors.INTERACTIVE_NORMAL,
     colorClass: l = "",
     ...o
   } = e;
-  return (0, n.jsx)("svg", {
+  return (0, i.jsx)("svg", {
     ...(0, s.default)(o),
     xmlns: "http://www.w3.org/2000/svg",
     width: t,
-    height: i,
+    height: n,
     fill: "none",
     viewBox: "0 0 24 24",
-    children: (0, n.jsx)("path", {
+    children: (0, i.jsx)("path", {
       fill: "string" == typeof a ? a : a.css,
       d: "m16.25 2.25-2 2-.63-.63a3 3 0 0 0-4.24 0l-.85.85c-.3.3-.3.77 0 1.06l9.94 9.94c.3.3.77.3 1.06 0l.85-.85a3 3 0 0 0 0-4.24l-.63-.63 2-2a3.89 3.89 0 1 0-5.5-5.5ZM9.3 9.7a1 1 0 0 1 1.4 0l3.6 3.6a1 1 0 0 1 0 1.4l-4.84 4.84a5 5 0 0 1-2.7 1.39c-.47.08-.86.42-1.1.83a2.5 2.5 0 1 1-3.42-3.42c.41-.24.75-.63.83-1.1a5 5 0 0 1 1.4-2.7L9.28 9.7Z",
       className: l

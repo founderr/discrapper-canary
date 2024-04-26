@@ -35,8 +35,8 @@ var a = n("735250"),
   O = n("499033"),
   j = n("630641"),
   P = n("158010"),
-  b = n("151827"),
-  D = n("176278"),
+  D = n("151827"),
+  b = n("176278"),
   U = n("626135"),
   F = n("585483"),
   w = n("700785"),
@@ -45,8 +45,8 @@ var a = n("735250"),
   B = n("276264"),
   G = n("981631"),
   V = n("689938"),
-  W = n("434417"),
-  Y = n("652985");
+  W = n("909864"),
+  Y = n("354811");
 let z = H.default.getEnableHardwareAcceleration(),
   K = 44 + B.AVATAR_DECORATION_PADDING,
   Z = l.memo(function(e) {
@@ -58,7 +58,7 @@ let z = H.default.getEnableHardwareAcceleration(),
     } = e, o = (0, c.useStateFromStores)([L.default], () => L.default.isTyping(t.id, i)), p = (0, c.useStateFromStores)([N.default], () => N.default.getMember(t.guild_id, i)), E = (0, c.useStateFromStores)([x.default], () => {
       var e;
       return (null == p ? void 0 : p.colorRoleId) != null ? null === (e = x.default.getRole(t.guild_id, p.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0
-    }, [t.guild_id, p]), C = (0, c.useStateFromStores)([y.default], () => y.default.getUser(i)), S = (0, c.useStateFromStores)([y.default], () => y.default.getCurrentUser()), _ = (null == C ? void 0 : C.id) === (null == S ? void 0 : S.id), O = (0, c.useStateFromStores)([M.default, R.default], () => _ ? R.default.getStatus() : M.default.getStatus(i, t.guild_id)), j = (0, c.useStateFromStores)([M.default], () => M.default.isMobileOnline(i)), P = (0, c.useStateFromStores)([M.default, R.default], () => _ ? R.default.getActivities() : M.default.getActivities(i, t.guild_id)), b = (0, c.useStateFromStores)([v.default], () => v.default.getAnyStreamForUser(i)), D = (0, u.useListItem)(i), U = (0, c.useStateFromStores)([T.default], () => T.default.canUserViewChannel(t.id, s, i)), w = (null == C ? void 0 : C.id) != null && C.id === r, H = l.useCallback(e => {
+    }, [t.guild_id, p]), C = (0, c.useStateFromStores)([y.default], () => y.default.getUser(i)), S = (0, c.useStateFromStores)([y.default], () => y.default.getCurrentUser()), _ = (null == C ? void 0 : C.id) === (null == S ? void 0 : S.id), O = (0, c.useStateFromStores)([M.default, R.default], () => _ ? R.default.getStatus() : M.default.getStatus(i, t.guild_id)), j = (0, c.useStateFromStores)([M.default], () => M.default.isMobileOnline(i)), P = (0, c.useStateFromStores)([M.default, R.default], () => _ ? R.default.getActivities() : M.default.getActivities(i, t.guild_id)), D = (0, c.useStateFromStores)([v.default], () => v.default.getAnyStreamForUser(i)), b = (0, u.useListItem)(i), U = (0, c.useStateFromStores)([T.default], () => T.default.canUserViewChannel(t.id, s, i)), w = (null == C ? void 0 : C.id) != null && C.id === r, H = l.useCallback(e => {
       null != C && (0, h.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -131,10 +131,10 @@ let z = H.default.getEnableHardwareAcceleration(),
           guildId: t.guild_id,
           isMobile: j,
           selected: l,
-          applicationStream: b,
+          applicationStream: D,
           premiumSince: null == K ? null : new Date(K),
           onClickPremiumGuildIcon: Y,
-          itemProps: D,
+          itemProps: b,
           lostPermissionTooltipText: U ? void 0 : V.default.Messages.THREAD_MEMBER_WITHOUT_ACCESS,
           isOwner: w,
           ...e
@@ -158,13 +158,13 @@ let z = H.default.getEnableHardwareAcceleration(),
       children: (0, a.jsx)("div", {
         className: Y.memberGroupsPlaceholder
       })
-    }) : (0, a.jsxs)(b.default, {
+    }) : (0, a.jsxs)(D.default, {
       className: Y.membersGroup,
       "aria-label": V.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
         title: n,
         count: l
       }),
-      children: [null != i ? (0, a.jsx)(D.default, {
+      children: [null != i ? (0, a.jsx)(b.default, {
         className: Y.roleIcon,
         ...i
       }) : null, (0, a.jsxs)("span", {

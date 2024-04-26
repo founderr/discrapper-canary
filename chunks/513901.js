@@ -16,11 +16,11 @@ var a = s("735250"),
   S = s("74538"),
   E = s("150039"),
   T = s("993413"),
-  m = s("504983"),
-  f = s("981631"),
+  f = s("504983"),
+  m = s("981631"),
   _ = s("474936"),
   g = s("689938"),
-  h = s("600469");
+  h = s("743171");
 
 function I(e) {
   let {
@@ -44,7 +44,7 @@ function I(e) {
     guild: s
   }), [M, O, s]);
   n.useEffect(() => {
-    R && c.default.track(f.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    R && c.default.track(m.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: _.PremiumUpsellTypes.PROFILE_EFFECTS_INLINE_SETTINGS,
       location_stack: M
     })
@@ -54,7 +54,7 @@ function I(e) {
     b = p ? u.default : r.Button;
   return (0, a.jsx)(T.default, {
     forcedDivider: N,
-    borderType: m.FeatureBorderTypes.PREMIUM,
+    borderType: f.FeatureBorderTypes.PREMIUM,
     hasBackground: !0,
     title: I,
     showBorder: C,

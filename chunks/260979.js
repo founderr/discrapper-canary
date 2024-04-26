@@ -3,7 +3,7 @@ n.r(t), n("653041");
 var a = n("735250"),
   l = n("470079"),
   s = n("965288"),
-  i = n("911790");
+  i = n("916398");
 t.default = l.memo(function(e) {
   let {
     channel: t,

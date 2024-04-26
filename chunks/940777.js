@@ -15,13 +15,13 @@ var l = n("735250"),
   c = n("239091"),
   f = n("317381"),
   h = n("682662"),
-  p = n("674552"),
-  m = n("593364"),
+  m = n("674552"),
+  p = n("593364"),
   C = n("905423"),
   g = n("199902"),
   E = n("592125"),
-  S = n("944486"),
-  _ = n("979651"),
+  _ = n("944486"),
+  S = n("979651"),
   I = n("898140"),
   N = n("880080"),
   T = n("15434"),
@@ -33,8 +33,8 @@ var l = n("735250"),
   M = n("603274"),
   y = n("981631"),
   O = n("689938"),
-  b = n("706759");
-let D = {
+  D = n("240993");
+let b = {
   analyticsSource: {
     page: y.AnalyticsPages.GUILD_CHANNEL,
     section: y.AnalyticsSections.CHANNEL_LIST,
@@ -56,15 +56,15 @@ function j() {
       favoriteChannels: L.default.getFavoriteChannels(),
       favoriteServerMuted: L.default.favoriteServerMuted
     })),
-    w = (0, o.useStateFromStores)([S.default], () => S.default.getChannelId(y.FAVORITES)),
+    w = (0, o.useStateFromStores)([_.default], () => _.default.getChannelId(y.FAVORITES)),
     F = (0, o.useStateFromStores)([E.default], () => E.default.getChannel(w)),
     B = (0, C.default)(e => e.guildId) === y.FAVORITES,
     {
-      badge: H,
-      unread: V
+      badge: V,
+      unread: H
     } = (0, x.default)(U),
     k = function(e) {
-      let t = (0, o.useStateFromStores)([S.default], () => S.default.getVoiceChannelId()),
+      let t = (0, o.useStateFromStores)([_.default], () => _.default.getVoiceChannelId()),
         n = null != t && null != e[t],
         l = (0, o.useStateFromStores)([g.default], () => {
           if (!n) return !1;
@@ -72,7 +72,7 @@ function j() {
           return null != t && null != e[t.channelId]
         }),
         a = (0, o.useStateFromStores)([g.default], () => g.default.getAllApplicationStreams().some(t => null != e[t.channelId])),
-        s = (0, o.useStateFromStores)([_.default], () => n && null != t && _.default.hasVideo(t), [n, t]),
+        s = (0, o.useStateFromStores)([S.default], () => n && null != t && S.default.hasVideo(t), [n, t]),
         i = (0, o.useStateFromStoresArray)([f.default], () => A.default.keys(e).reduce((e, t) => (e.push(...f.default.getEmbeddedActivitiesForChannel(t)), e), [])),
         r = (0, o.useStateFromStores)([f.default], () => Array.from(f.default.getSelfEmbeddedActivities().values()).some(t => {
           let {
@@ -84,17 +84,17 @@ function j() {
         d = !1,
         c = !1,
         h = !1,
-        m = !1;
-      return n ? (d = !s, c = s, h = l, m = r) : (h = a, m = u), (0, p.renderMediaBadge)({
+        p = !1;
+      return n ? (d = !s, c = s, h = l, p = r) : (h = a, p = u), (0, m.renderMediaBadge)({
         audio: d,
         video: c,
         screenshare: h,
         liveStage: !1,
         isCurrentUserConnected: n,
-        activity: m
+        activity: p
       })
     }(U),
-    Y = H > 0 ? (0, m.renderMentionBadge)(H) : null,
+    Y = V > 0 ? (0, p.renderMentionBadge)(V) : null,
     K = a.useCallback(() => {
       s()
     }, [s]);
@@ -102,8 +102,8 @@ function j() {
     children: [(0, l.jsx)(N.default, {
       selected: B,
       hovered: j,
-      unread: V && !G,
-      className: b.pill
+      unread: H && !G,
+      className: D.pill
     }), (0, l.jsx)(M.default, {
       onShow: K,
       children: (0, l.jsx)(R.FavoriteAddedTooltip, {
@@ -115,11 +115,11 @@ function j() {
             ...e,
             ariaLabel: O.default.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
               guildName: O.default.Messages.FAVORITES_GUILD_NAME,
-              mentions: H
+              mentions: V
             }),
             to: {
               pathname: y.Routes.CHANNEL(y.FAVORITES, w),
-              state: D
+              state: b
             },
             selected: B || j,
             onMouseEnter: () => P(!0),
@@ -138,11 +138,11 @@ function j() {
               })
             },
             children: (0, l.jsx)("div", {
-              className: i()(b.ring, {
-                [b.ringActive]: t
+              className: i()(D.ring, {
+                [D.ringActive]: t
               }),
               children: (0, l.jsx)(I.default, {
-                className: b.favoriteIcon,
+                className: D.favoriteIcon,
                 width: 20,
                 height: 20
               })

@@ -10,7 +10,7 @@ var r = s("120356"),
   u = s("474936"),
   d = s("981631"),
   c = s("689938"),
-  _ = s("393845");
+  _ = s("445871");
 let E = (e, t, s) => {
   l.default.track(d.AnalyticEvents.NITRO_HOME_NAVIGATION, {
     current_component: "".concat(o.NitroLandingPages.MARKETING, "-").concat(t),

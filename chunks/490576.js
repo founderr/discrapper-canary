@@ -20,7 +20,7 @@ var n = a("512722"),
   x = a("598952"),
   g = a("596211"),
   v = a("689938"),
-  j = a("450696");
+  j = a("935778");
 let N = (0, l.cssValueToNumber)(u.default.GUILD_PRODUCT_DOWNLOAD_MODAL_HEADER_IMAGE_WIDTH);
 
 function _(e) {

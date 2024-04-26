@@ -14,7 +14,7 @@ var n = s("120356"),
   d = s("55935"),
   u = s("955204"),
   c = s("674680"),
-  S = s("795597");
+  S = s("680241");
 
 function E(e) {
   let {
@@ -26,19 +26,19 @@ function E(e) {
     {
       name: E,
       description: T,
-      hideDescriptionUntilUnlock: m,
-      onAction: f
+      hideDescriptionUntilUnlock: f,
+      onAction: m
     } = n,
-    _ = m && !i,
+    _ = f && !i,
     g = i ? "header-primary" : "text-muted",
     h = i ? "header-secondary" : "text-muted",
     I = r()(s),
-    N = null != f && i,
+    N = null != m && i,
     p = N ? o.Clickable : "div";
   return (0, a.jsxs)(p, {
     className: l()(S.container, N && S.actionable),
     onClick: () => {
-      N && f()
+      N && m()
     },
     children: [(0, a.jsx)("div", {
       className: S.iconContainer,

@@ -31,8 +31,8 @@ var a = n("735250"),
   O = n("516887"),
   j = n("974251"),
   P = n("893718"),
-  b = n("436660"),
-  D = n("603009"),
+  D = n("436660"),
+  b = n("603009"),
   U = n("28546"),
   F = n("295474"),
   w = n("521476"),
@@ -79,7 +79,7 @@ var a = n("735250"),
   eN = n("1397"),
   ex = n("981631"),
   eM = n("689938"),
-  eR = n("121950");
+  eR = n("749185");
 
 function eL(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -415,7 +415,7 @@ class eP extends l.PureComponent {
     }), eL(this, "handleSetValue", e => {
       var t, n;
       let a = null === (t = this.editorRef) || void 0 === t ? void 0 : t.getSlateEditor();
-      null != a && (b.SlateTransforms.select(a, []), a.insertText(e), null === (n = this.editorRef) || void 0 === n || n.focus())
+      null != a && (D.SlateTransforms.select(a, []), a.insertText(e), null === (n = this.editorRef) || void 0 === n || n.focus())
     }), eL(this, "renderAttachButton", (e, t) => (0, a.jsx)(j.default, {
       className: t,
       channel: this.props.channel,
@@ -431,7 +431,7 @@ class eP extends l.PureComponent {
     }))
   }
 }
-class eb extends l.PureComponent {
+class eD extends l.PureComponent {
   static getDerivedStateFromProps(e, t) {
     let {
       channel: n
@@ -562,7 +562,7 @@ class eb extends l.PureComponent {
                 }), (0, a.jsx)(E.default, {
                   channel: n,
                   poggermodeEnabled: S
-                }), !v && (0, a.jsx)(D.default, {})]
+                }), !v && (0, a.jsx)(b.default, {})]
               }), (0, a.jsx)(eh.ChatLayerContainer, {})]
             })]
           })]
@@ -671,7 +671,7 @@ t.default = l.memo(function(e) {
     var e, t, a;
     return null != h && null !== (a = null === (e = er.default.getMember(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : ex.EMPTY_STRING_SNOWFLAKE_ID, null == h ? void 0 : h.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== a && a
   }), p = (0, u.useStateFromStores)([Z.default], () => Z.default.isEnabled()), E = (0, Q.default)(t.id), C = (0, G.default)(t.id);
-  return (0, a.jsx)(eb, {
+  return (0, a.jsx)(eD, {
     channel: t,
     isEditing: null != (0, u.useStateFromStores)([ei.default], () => ei.default.getEditingMessageId(t.id)),
     hasModalOpen: (0, d.useModalsStore)(d.hasAnyModalOpenSelector),

@@ -30,14 +30,14 @@ var a, l = n("735250"),
   O = n("451478"),
   j = n("153850"),
   P = n("806519"),
-  b = n("358085"),
-  D = n("792125"),
+  D = n("358085"),
+  b = n("792125"),
   U = n("998502"),
   F = n("473159"),
   w = n("928518"),
   k = n("981631"),
   H = n("689938"),
-  B = n("506675");
+  B = n("892876");
 
 function G(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -139,7 +139,7 @@ class V extends(a = s.Component) {
       guestWindow: S,
       clientThemesClassName: _,
       contentClassName: T
-    } = this.props, N = (0, b.getPlatform)(), x = r()(p, {
+    } = this.props, N = (0, D.getPlatform)(), x = r()(p, {
       "mouse-mode": o,
       "reduce-motion": c,
       "full-motion": !c,
@@ -155,7 +155,7 @@ class V extends(a = s.Component) {
             children: (0, l.jsx)("div", {
               "data-popout-root": !0,
               ref: this.rootRef,
-              className: r()((0, D.getThemeClass)(e), (0, I.default)(), x, _),
+              className: r()((0, b.getThemeClass)(e), (0, I.default)(), x, _),
               children: (0, l.jsx)(f.FocusRingScope, {
                 containerRef: this.rootRef,
                 children: (0, l.jsx)(E.default, {
@@ -189,8 +189,8 @@ class V extends(a = s.Component) {
   }
   constructor(...e) {
     super(...e), G(this, "rootRef", s.createRef()), G(this, "_cleanupWindowActionCreators", void 0), G(this, "warnPopoutClose", e => {
-      this.props.connectedToEmbeddedActivity && !y.default.disableEmbeddedActivityPopOutAlert && (e.returnValue = H.default.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, b.isPlatformEmbedded && (0, g.default)(() => {
-        w.default.unmountWindow(this.props.windowKey), b.isPlatformEmbedded && U.default.close(this.props.windowKey)
+      this.props.connectedToEmbeddedActivity && !y.default.disableEmbeddedActivityPopOutAlert && (e.returnValue = H.default.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, D.isPlatformEmbedded && (0, g.default)(() => {
+        w.default.unmountWindow(this.props.windowKey), D.isPlatformEmbedded && U.default.close(this.props.windowKey)
       }))
     }), G(this, "handleBlur", () => {
       var e, t;

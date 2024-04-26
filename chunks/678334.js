@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   s = n("470079"),
-  a = n("512722"),
-  l = n.n(a),
+  l = n("512722"),
+  a = n.n(l),
   r = n("442837"),
   u = n("481060"),
   o = n("355467"),
@@ -36,7 +36,7 @@ function R(e) {
   let {
     premiumSubscription: t,
     setPurchaseState: n,
-    onBack: a,
+    onBack: l,
     onNext: R,
     legalTermsNodeRef: b,
     flashLegalTerms: L,
@@ -67,16 +67,16 @@ function R(e) {
     skuPricePreviewsById: en,
     referralCode: ei,
     contextMetadata: es,
-    invoicePreview: ea
+    invoicePreview: el
   } = (0, h.usePaymentContext)(), {
-    isGift: el,
+    isGift: ea,
     selectedGiftStyle: er,
     customGiftMessage: eu,
     emojiConfetti: eo,
     soundEffect: ec,
     giftRecipient: ed
   } = (0, v.useGiftContext)(), em = (0, T.getGiftExperience)(ed), ef = {};
-  ef.gift_style = er, em === T.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && (l()(null != ed, "Gift recipient must be set at purchase review step for these gift options."), ef.recipient_id = ed.id, ef.custom_message = eu, ef.emoji_id = null == eo ? void 0 : eo.id, ef.emoji_name = null == eo ? void 0 : eo.surrogates, ef.sound_id = null == ec ? void 0 : ec.soundId);
+  ef.gift_style = er, em === T.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && (a()(null != ed, "Gift recipient must be set at purchase review step for these gift options."), ef.recipient_id = ed.id, ef.custom_message = eu, ef.emoji_id = null == eo ? void 0 : eo.id, ef.emoji_name = null == eo ? void 0 : eo.surrogates, ef.sound_id = null == ec ? void 0 : ec.soundId);
   let ep = null == Z ? void 0 : Z.id,
     e_ = (0, C.checkNoPaymentTrialEnabled)(F, z.paymentSourceId, ep),
     eS = (0, r.useStateFromStores)([_.default], () => _.default.popupCallbackCalled),
@@ -88,7 +88,7 @@ function R(e) {
     [eN, ev] = s.useState(!1),
     {
       hasEntitlements: eh
-    } = (0, f.useSubscriptionEntitlements)(ep, el),
+    } = (0, f.useSubscriptionEntitlements)(ep, ea),
     ex = (0, N.isPrepaidPaymentSource)(z.paymentSourceId),
     eA = eh || e_,
     eC = (0, d.useIsPrepaidPaymentPastDue)(),
@@ -96,7 +96,7 @@ function R(e) {
     eg = null;
   if (q === g.PurchaseTypes.ONE_TIME) {
     var eM;
-    l()(null != ee, "SKU must be selected for one-time purchases"), ey = null !== (eM = et[ee]) && void 0 !== eM ? eM : null, l()(null != ey, "SKU must exist and be fetched.");
+    a()(null != ee, "SKU must be selected for one-time purchases"), ey = null !== (eM = et[ee]) && void 0 !== eM ? eM : null, a()(null != ey, "SKU must exist and be fetched.");
     let e = en[ee],
       t = null != Q ? Q : I.NO_PAYMENT_SOURCE;
     eg = null != e ? e[t] : null
@@ -109,7 +109,7 @@ function R(e) {
       setPurchaseError: J,
       hasRedirectURL: eN,
       setHasRedirectURL: ev,
-      isGift: el,
+      isGift: ea,
       baseAnalyticsData: D,
       analyticsLocation: B,
       analyticsLocations: eI,
@@ -130,7 +130,7 @@ function R(e) {
       referralCode: ei,
       loadId: es.loadId,
       giftInfoOptions: ef,
-      invoicePreview: ea
+      invoicePreview: el
     })
   };
   s.useEffect(() => {
@@ -151,9 +151,9 @@ function R(e) {
       } else k === S.PurchaseTokenAuthState.SUCCESS && await eR()
     })()
   }, [eS]), s.useEffect(() => {
-    e_ && !el && null == t && eR()
-  }, [e_, el, t]);
-  let eb = null != H || q === g.PurchaseTypes.ONE_TIME && !el;
+    e_ && !ea && null == t && eR()
+  }, [e_, ea, t]);
+  let eb = null != H || q === g.PurchaseTypes.ONE_TIME && !ea;
   return e_ ? null : (0, i.jsxs)(u.ModalFooter, {
     align: P.default.Align.CENTER,
     children: [(0, i.jsx)(p.default, {
@@ -164,7 +164,7 @@ function R(e) {
       flashLegalTerms: L,
       isSubmitting: eE,
       premiumSubscription: t,
-      isGift: el,
+      isGift: ea,
       planGroup: w,
       isPrepaid: ex,
       isTrial: V,
@@ -173,7 +173,7 @@ function R(e) {
     }), (0, i.jsx)(y.default, {}), Y && !eb ? (0, i.jsx)("div", {
       className: M.back,
       children: (0, i.jsx)(m.default, {
-        onClick: a
+        onClick: l
       })
     }) : null]
   })

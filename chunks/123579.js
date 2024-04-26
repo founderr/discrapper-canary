@@ -31,8 +31,8 @@ var a = n("735250"),
   O = n("785717"),
   j = n("221292"),
   P = n("621853"),
-  b = n("895618"),
-  D = n("484459"),
+  D = n("895618"),
+  b = n("484459"),
   U = n("318661"),
   F = n("57048"),
   w = n("87728"),
@@ -58,7 +58,7 @@ var a = n("735250"),
   el = n("228168"),
   es = n("981631"),
   ei = n("689938"),
-  er = n("859138");
+  er = n("112723");
 t.default = e => {
   var t;
   let {
@@ -137,17 +137,17 @@ t.default = e => {
     ey = null != eA || null != eR || eN,
     eO = null !== (t = R.default.getNickname(null, n.id, eh)) && void 0 !== t ? t : L.default.getName(eh),
     ej = (0, u.useStateFromStores)([N.default], () => N.default.hidePersonalInformation),
-    [eP, eb, eD, eU, eF] = (0, u.useStateFromStoresArray)([P.default], () => [P.default.getMutualFriendsCount(eh.id), P.default.getMutualFriends(eh.id), P.default.getMutualGuilds(eh.id), P.default.isFetchingProfile(eh.id), P.default.isFetchingFriends(eh.id)]),
+    [eP, eD, eb, eU, eF] = (0, u.useStateFromStoresArray)([P.default], () => [P.default.getMutualFriendsCount(eh.id), P.default.getMutualFriends(eh.id), P.default.getMutualGuilds(eh.id), P.default.isFetchingProfile(eh.id), P.default.isFetchingFriends(eh.id)]),
     ew = (0, Q.useGetVoiceChannelInfoForVoiceActivitySection)(eh.id),
     ek = null != ew && !eN && !eL,
     {
       showVoiceActivityInProfile: eH
-    } = b.VoiceActivityProfileExperiment.useExperiment({
+    } = D.VoiceActivityProfileExperiment.useExperiment({
       location: "user DM panel"
     }, {
       autoTrackExposure: ek && e_
     }),
-    eB = !eh.bot && null != eD && eD.length > 0,
+    eB = !eh.bot && null != eb && eb.length > 0,
     eG = !eh.bot && null != eP && eP > 0,
     eV = (0, J.useShouldShowUserPopoutCollectiblesUpsell)({
       popoutUser: eh,
@@ -157,7 +157,7 @@ t.default = e => {
   l.useEffect(() => {
     ed.current = Date.now()
   }, []), l.useEffect(() => {
-    (0, D.maybeFetchUserProfileForPopout)(eh, {
+    (0, b.maybeFetchUserProfileForPopout)(eh, {
       withMutualGuilds: !eh.bot,
       withMutualFriendsCount: !eh.bot
     })
@@ -171,12 +171,12 @@ t.default = e => {
       status: eM
     })
   }, [ep, ex, eA, ev, eM, e_]);
-  let eY = null == eD ? void 0 : eD.map(e => (0, a.jsx)(en.default, {
+  let eY = null == eb ? void 0 : eb.map(e => (0, a.jsx)(en.default, {
       connection: e,
       user: eh,
       theme: eW
     }, e.guild.id)),
-    ez = null == eb ? void 0 : eb.map(e => (0, a.jsx)(et.default, {
+    ez = null == eD ? void 0 : eD.map(e => (0, a.jsx)(et.default, {
       connection: e,
       channelId: n.id
     }, e.key)),
@@ -280,7 +280,7 @@ t.default = e => {
               children: [eB ? (0, a.jsx)(ee.default, {
                 className: er.mutualGuildsList,
                 header: ei.default.Messages.MUTUAL_GUILDS_COUNT.format({
-                  count: null == eD ? void 0 : eD.length
+                  count: null == eb ? void 0 : eb.length
                 }),
                 isLoadingHeader: eU,
                 onExpand: () => {

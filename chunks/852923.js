@@ -17,7 +17,7 @@ var a = n("120356"),
   f = n("623633"),
   E = n("930180"),
   _ = n("689938"),
-  m = n("238719");
+  m = n("287642");
 
 function T(e) {
   let t = o.default.getVoiceChannelId();

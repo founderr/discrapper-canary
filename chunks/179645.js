@@ -1,39 +1,39 @@
 "use strict";
-n.r(t);
-var l, a = n("442837"),
-  u = n("570140");
+a.r(t);
+var n, s = a("442837"),
+  l = a("570140");
 
-function r(e, t, n) {
+function i(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: a,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = a, e
 }
-let i = null;
-class s extends(l = a.default.PersistedStore) {
+let r = null;
+class o extends(n = s.default.PersistedStore) {
   initialize(e) {
     var t;
-    i = null !== (t = null == e ? void 0 : e.type) && void 0 !== t ? t : null
+    r = null !== (t = null == e ? void 0 : e.type) && void 0 !== t ? t : null
   }
   getType() {
-    return i
+    return r
   }
   getState() {
     return {
-      type: i
+      type: r
     }
   }
 }
-r(s, "displayName", "NewUserStore"), r(s, "persistKey", "nuf"), t.default = new s(u.default, {
+i(o, "displayName", "NewUserStore"), i(o, "persistKey", "nuf"), t.default = new o(l.default, {
   NUF_NEW_USER: function(e) {
     let {
       newUserType: t
     } = e;
-    i = t
+    r = t
   },
   NUF_COMPLETE: function() {
-    i = null
+    r = null
   }
 })

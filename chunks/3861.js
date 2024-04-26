@@ -16,7 +16,7 @@ var a = n("735250"),
   E = n("236564"),
   C = n("981631"),
   g = n("354459"),
-  S = n("328363");
+  S = n("142181");
 t.default = (0, r.default)(e => {
   let {
     participants: t,
@@ -37,15 +37,15 @@ t.default = (0, r.default)(e => {
     height: O,
     idle: j,
     mode: P,
-    popoutWindow: b,
-    awaitingRemoteSessionInfo: D,
+    popoutWindow: D,
+    awaitingRemoteSessionInfo: b,
     forceShowToggleParticipants: U
   } = e;
   l.useEffect(() => {
     c.ComponentDispatch.dispatch(C.ComponentActions.REMEASURE_TARGET)
   }, [y, O]);
   let F = l.useMemo(() => n.filter(e => e.type !== g.ParticipantTypes.ACTIVITY || !e.participants.has(u.default.getId())), [n, r]);
-  if ((null == D ? void 0 : D.channelId) === v.id) return (0, a.jsx)(h.default, {
+  if ((null == b ? void 0 : b.channelId) === v.id) return (0, a.jsx)(h.default, {
     height: O
   });
   if ((null == v ? void 0 : v.isGuildVocal()) && !M) return (0, a.jsx)(f.default, {
@@ -87,7 +87,7 @@ t.default = (0, r.default)(e => {
     selectedParticipant: s,
     filteredParticipants: F,
     participants: t,
-    popoutWindow: b,
+    popoutWindow: D,
     className: x,
     idle: j,
     height: O,

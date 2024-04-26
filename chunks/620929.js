@@ -16,10 +16,10 @@ var n = a("735250"),
   C = a("105671"),
   m = a("287679"),
   S = a("979264"),
-  I = a("550271"),
-  p = a("308083"),
+  p = a("550271"),
+  I = a("308083"),
   T = a("689938"),
-  g = a("653196");
+  g = a("156610");
 
 function A(e) {
   let {
@@ -37,12 +37,12 @@ function A(e) {
     clanTag: t,
     textVariant: "heading-lg/semibold",
     textColor: "text-normal",
-    badgeSize: p.ClanTagBadgeSize.SIZE_24,
-    clanBadge: (0, n.jsx)(I.ClanBadge, {
+    badgeSize: I.ClanTagBadgeSize.SIZE_24,
+    clanBadge: (0, n.jsx)(p.ClanBadge, {
       className: g.charterClanBadge,
       badge: a,
-      width: p.ClanTagBadgeSize.SIZE_24,
-      height: p.ClanTagBadgeSize.SIZE_24,
+      width: I.ClanTagBadgeSize.SIZE_24,
+      height: I.ClanTagBadgeSize.SIZE_24,
       primaryTintColor: s,
       secondaryTintColor: l
     })
@@ -55,7 +55,7 @@ function N(e) {
     playstyle: a
   } = e, l = s.useMemo(() => Array.from(t), [t]), i = (0, C.useFormattedGameNames)(l), r = s.useMemo(() => {
     if (null == i) return null;
-    let e = (0, p.getPlaystyleTitle)(a);
+    let e = (0, I.getPlaystyleTitle)(a);
     return null == e ? T.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMES.format({
       games: i
     }) : T.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMES_AND_PLAYSTYLE.format({
@@ -82,17 +82,17 @@ t.default = e => {
     var e, t;
     return null !== (t = null === (e = f.default.getGuild(a)) || void 0 === e ? void 0 : e.name) && void 0 !== t ? t : ""
   }), {
-    gameApplicationIds: I,
+    gameApplicationIds: p,
     playstyle: v,
     interests: R,
     tag: L,
     badgeKind: O,
-    badgePrimaryColor: P,
-    badgeSecondaryColor: M
+    badgePrimaryColor: M,
+    badgeSecondaryColor: P
   } = (0, d.useStateFromStoresObject)([h.default], () => {
     var e;
     return null !== (e = h.default.getStateForGuild(a).progress) && void 0 !== e ? e : h.DEFAULT_CLAN_PROGRESS
-  }), x = s.useMemo(() => (null == R ? void 0 : R.size) > 0 ? (0, _.formatSelectionList)(Array.from(R), p.MAX_TRAITS_TO_DISPLAY) : null, [R]);
+  }), x = s.useMemo(() => (null == R ? void 0 : R.size) > 0 ? (0, _.formatSelectionList)(Array.from(R), I.MAX_TRAITS_TO_DISPLAY) : null, [R]);
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)("div", {
       className: g.scrollBg,
@@ -110,8 +110,8 @@ t.default = e => {
         children: [(0, n.jsx)(A, {
           tag: L,
           badge: O,
-          primaryColor: P,
-          secondaryColor: M
+          primaryColor: M,
+          secondaryColor: P
         }), (0, n.jsx)(c.Heading, {
           variant: "heading-xl/normal",
           color: "text-muted",
@@ -130,7 +130,7 @@ t.default = e => {
             date: o()().format("MMMM YYYY")
           })
         }), (0, n.jsx)(N, {
-          applicationIds: I,
+          applicationIds: p,
           playstyle: v
         }), null != x ? (0, n.jsx)(c.Text, {
           variant: "text-sm/normal",

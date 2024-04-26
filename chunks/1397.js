@@ -35,11 +35,11 @@ var a = n("735250"),
   O = n("496675"),
   j = n("594174"),
   P = n("700785"),
-  b = n("862679"),
-  D = n("981631"),
+  D = n("862679"),
+  b = n("981631"),
   U = n("815660"),
   F = n("689938"),
-  w = n("218022");
+  w = n("610083");
 
 function k(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -115,9 +115,9 @@ class H extends l.PureComponent {
           return t
         })
     } else i && !T ? (N.message = F.default.Messages.GUILD_VERIFICATION_TEXT_NOT_PHONE_VERIFIED, N.buttonText = F.default.Messages.VERIFY_PHONE, N.onButtonClick = this.handleVerifyPhone, N.imageSrc = n("98063")) : r ? (N.message = F.default.Messages.GUILD_VERIFICATION_TEXT_NOT_VERIFIED, N.buttonText = F.default.Messages.RESEND_VERIFICATION_EMAIL, N.onButtonClick = this.handleResendVerification, N.imageSrc = n("102811")) : u ? (N.message = F.default.Messages.GUILD_VERIFICATION_TEXT_MEMBER_AGE.format({
-      min: D.VerificationCriteria.MEMBER_AGE
+      min: b.VerificationCriteria.MEMBER_AGE
     }), N.countdown = d) : c && (N.message = F.default.Messages.GUILD_VERIFICATION_TEXT_ACCOUNT_AGE.format({
-      min: D.VerificationCriteria.ACCOUNT_AGE
+      min: b.VerificationCriteria.ACCOUNT_AGE
     }), N.countdown = f);
     return (0, a.jsx)(o.Popout, {
       position: "top",
@@ -127,7 +127,7 @@ class H extends l.PureComponent {
         shouldShowLurkerModeSuccessPopout: !1
       }),
       renderPopout: this.renderSuccessPopout,
-      children: e => (0, a.jsx)(b.default, {
+      children: e => (0, a.jsx)(D.default, {
         ...N,
         children: (0, a.jsxs)(l.Fragment, {
           children: [this.renderMemberVerificationSuccessModal(), g ? (0, a.jsx)(o.Popout, {
@@ -238,7 +238,7 @@ class H extends l.PureComponent {
       let e = this.props.channel.getGuildId();
       try {
         await c.default.joinGuild(e, {
-          source: D.JoinGuildSources.CHAT_INPUT_BLOCKER
+          source: b.JoinGuildSources.CHAT_INPUT_BLOCKER
         })
       } catch {
         this.setState({
@@ -299,16 +299,16 @@ function B(e) {
   let {
     channel: l,
     children: s
-  } = e, i = l.getGuildId(), o = (0, r.useStateFromStores)([L.default], () => L.default.getGuild(i)), u = (0, r.useStateFromStores)([y.default], () => y.default.getCheck(i)), d = l.type === D.ChannelTypes.GUILD_ANNOUNCEMENT && null != o && o.hasFeature(D.GuildFeatures.NEWS), c = (0, r.useStateFromStores)([M.default], () => d ? M.default.getFollowerStatsForChannel(l.id) : null), h = (0, r.useStateFromStores)([T.default], () => T.default.isLurking(i)), m = (0, r.useStateFromStores)([j.default], () => j.default.getCurrentUser()), p = null !== (t = null == m ? void 0 : m.isStaff()) && void 0 !== t && t, E = (0, r.useStateFromStores)([R.default], () => {
+  } = e, i = l.getGuildId(), o = (0, r.useStateFromStores)([L.default], () => L.default.getGuild(i)), u = (0, r.useStateFromStores)([y.default], () => y.default.getCheck(i)), d = l.type === b.ChannelTypes.GUILD_ANNOUNCEMENT && null != o && o.hasFeature(b.GuildFeatures.NEWS), c = (0, r.useStateFromStores)([M.default], () => d ? M.default.getFollowerStatsForChannel(l.id) : null), h = (0, r.useStateFromStores)([T.default], () => T.default.isLurking(i)), m = (0, r.useStateFromStores)([j.default], () => j.default.getCurrentUser()), p = null !== (t = null == m ? void 0 : m.isStaff()) && void 0 !== t && t, E = (0, r.useStateFromStores)([R.default], () => {
     var e, t;
     return null != m && null !== (t = null === (e = R.default.getMember(i, m.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== t && t
-  }), S = !!(null == o ? void 0 : o.hasVerificationGate()), I = (E || u.notClaimed) && S, A = (0, r.useStateFromStores)([_.default], () => _.default.shouldShowPopout(i)), v = (0, r.useStateFromStores)([O.default], () => O.default.can(D.Permissions.SEND_MESSAGES, l)), N = (0, r.useStateFromStores)([g.default], () => g.default.getRequest(i)), b = {
+  }), S = !!(null == o ? void 0 : o.hasVerificationGate()), I = (E || u.notClaimed) && S, A = (0, r.useStateFromStores)([_.default], () => _.default.shouldShowPopout(i)), v = (0, r.useStateFromStores)([O.default], () => O.default.can(b.Permissions.SEND_MESSAGES, l)), N = (0, r.useStateFromStores)([g.default], () => g.default.getRequest(i)), D = {
     ...u,
     guild: o,
     isLurking: h,
     isFollowable: d,
     shouldShowLurkerModeSuccessPopout: A,
-    showLurkerModeUpsellPopout: h && null != o && P.canEveryoneRole(D.Permissions.SEND_MESSAGES, l),
+    showLurkerModeUpsellPopout: h && null != o && P.canEveryoneRole(b.Permissions.SEND_MESSAGES, l),
     theme: x.default.theme,
     canSendMessages: v,
     channelFollowingUsersSeen: null != c ? c.usersSeenEver : null,
@@ -320,7 +320,7 @@ function B(e) {
     isStaff: p
   };
   return (0, a.jsx)(H, {
-    ...b,
+    ...D,
     channel: l,
     children: s
   })

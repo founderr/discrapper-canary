@@ -16,13 +16,13 @@ var a = n("442837"),
   c = n("757454"),
   f = n("286328"),
   h = n("493355"),
-  p = n("134598"),
-  m = n("243778"),
+  m = n("134598"),
+  p = n("243778"),
   C = n("594190"),
   g = n("569545"),
   E = n("989941"),
-  S = n("199902"),
-  _ = n("314897"),
+  _ = n("199902"),
+  S = n("314897"),
   I = n("944486"),
   N = n("885110"),
   T = n("449224"),
@@ -34,7 +34,7 @@ var a = n("442837"),
 
 function M() {
   let e = (0, a.useStateFromStores)([I.default], () => I.default.getVoiceChannelId()),
-    t = (0, a.useStateFromStores)([_.default], () => _.default.getId()),
+    t = (0, a.useStateFromStores)([S.default], () => S.default.getId()),
     n = (0, a.useStateFromStores)([C.default, T.default], () => (0, E.default)(C.default, T.default)),
     {
       canBroadcast: M
@@ -45,13 +45,13 @@ function M() {
     }),
     y = (0, c.default)() && null != n,
     O = (0, a.useStateFromStores)([N.default], () => null != N.default.getBroadcast()),
-    b = (0, a.useStateFromStoresArray)([S.default], () => S.default.getAllActiveStreams());
+    D = (0, a.useStateFromStoresArray)([_.default], () => _.default.getAllActiveStreams());
   if (!y && !O) return null;
   if (d.default.trackExposure({
       location: "broadcast_button_rtc_panel"
     }), !M) return null;
-  let D = [];
-  y && D.push(s.DismissibleContent.BROADCASTING_BROADCASTER_TOOLTIP);
+  let b = [];
+  y && b.push(s.DismissibleContent.BROADCASTING_BROADCASTER_TOOLTIP);
   let j = () => {
       o.default.trackWithMetadata(v.AnalyticEvents.BROADCAST_START_BUTTON_HOVERED, {
         game_id: null == n ? void 0 : n.id
@@ -59,8 +59,8 @@ function M() {
     },
     P = () => {
       if (y) {
-        let l = b.find(e => e.ownerId === t);
-        null == l ? (0, p.openBroadcastingPrivacySettingsModal)(R.default.Messages.START_BROADCASTING, R.default.Messages.START_BROADCASTING_CTA, () => {
+        let l = D.find(e => e.ownerId === t);
+        null == l ? (0, m.openBroadcastingPrivacySettingsModal)(R.default.Messages.START_BROADCASTING, R.default.Messages.START_BROADCASTING_CTA, () => {
           (0, r.createBroadcastChannelOrStartStream)({
             pid: null == n ? void 0 : n.pid,
             channelId: e
@@ -82,8 +82,8 @@ function M() {
     U = e => (0, l.jsx)(f.default, {
       markAsDismissed: e
     });
-  return (0, l.jsx)(m.default, {
-    contentTypes: D,
+  return (0, l.jsx)(p.default, {
+    contentTypes: b,
     bypassAutoDismiss: !0,
     children: e => {
       let {

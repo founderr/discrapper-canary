@@ -12,7 +12,7 @@ var i = n("735250"),
   c = n("242411"),
   E = n("768581"),
   I = n("185923"),
-  T = n("731153");
+  T = n("147981");
 let f = l().memoize(e => "".concat(e * I.EmojiSprites.NonDiversityPerRow, "px ").concat(e * Math.ceil(d.default.numNonDiversitySprites / I.EmojiSprites.NonDiversityPerRow), "px")),
   S = l().memoize(e => "".concat(e * I.EmojiSprites.DiversityPerRow, "px ").concat(e * Math.ceil(d.default.numDiversitySprites / I.EmojiSprites.DiversityPerRow), "px")),
   h = (e, t, i) => {

@@ -9,7 +9,7 @@ var n = a("735250"),
   i = a("975060"),
   d = a("912454"),
   c = a("689938"),
-  E = a("979616");
+  E = a("364762");
 class p extends l.PureComponent {
   componentDidMount() {
     null != this.props.venmoClient && o.tokenizeVenmo()

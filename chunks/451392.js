@@ -17,9 +17,9 @@ var n = s("120356"),
   S = s("721987"),
   E = s("74538"),
   T = s("193528"),
-  m = s("993413"),
-  f = s("689938"),
-  _ = s("857834");
+  f = s("993413"),
+  m = s("689938"),
+  _ = s("389634");
 
 function g(e) {
   let {
@@ -46,8 +46,8 @@ function g(e) {
   let L = e => {
     i(r()(e, null == A ? void 0 : A.themeColors) ? void 0 : e)
   };
-  return (0, a.jsx)(m.default, {
-    title: f.default.Messages.USER_SETTINGS_PROFILE_THEME,
+  return (0, a.jsx)(f.default, {
+    title: m.default.Messages.USER_SETTINGS_PROFILE_THEME,
     disabled: !R && !g,
     className: l()(_.__invalid_profileThemesSection, I),
     showPremiumIcon: N,
@@ -66,7 +66,7 @@ function g(e) {
             color: "header-secondary",
             variant: "text-xs/normal",
             "aria-hidden": !0,
-            children: f.default.Messages.USER_SETTINGS_PROFILE_THEME_PRIMARY
+            children: m.default.Messages.USER_SETTINGS_PROFILE_THEME_PRIMARY
           })
         })
       }), (0, a.jsx)("div", {
@@ -81,7 +81,7 @@ function g(e) {
             color: "header-secondary",
             variant: "text-xs/normal",
             "aria-hidden": !0,
-            children: f.default.Messages.USER_SETTINGS_PROFILE_THEME_ACCENT
+            children: m.default.Messages.USER_SETTINGS_PROFILE_THEME_ACCENT
           })
         })
       }), p && null != h && (0, a.jsx)(d.Button, {
@@ -90,7 +90,7 @@ function g(e) {
         look: d.Button.Looks.LINK,
         size: d.Button.Sizes.SMALL,
         onClick: () => L([null, null]),
-        children: f.default.Messages.USER_SETTINGS_RESET_PROFILE_THEME
+        children: m.default.Messages.USER_SETTINGS_RESET_PROFILE_THEME
       })]
     })
   })

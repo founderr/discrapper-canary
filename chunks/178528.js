@@ -21,19 +21,19 @@ var i = n("735250"),
   E = n("324067"),
   S = n("984933"),
   v = n("888369"),
-  T = n("430824"),
-  y = n("496675"),
-  I = n("944486"),
-  N = n("9156"),
-  O = n("938475"),
-  _ = n("937482"),
-  C = n("547881"),
+  y = n("430824"),
+  O = n("496675"),
+  T = n("944486"),
+  C = n("9156"),
+  N = n("938475"),
+  I = n("937482"),
+  _ = n("547881"),
   A = n("669083"),
   x = n("711553"),
   R = n("981631"),
-  M = n("647086"),
-  L = n("689938"),
-  D = n("555344");
+  L = n("647086"),
+  M = n("689938"),
+  D = n("744966");
 
 function b(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -127,7 +127,7 @@ class P extends a.PureComponent {
       renderBanner: l,
       bannerVisible: s,
       communityInfoVisible: r
-    } = this.state, d = n.id === M.FAVORITES_RAW_GUILD_ID ? u.FavoritesChannelList : u.GuildChannelList;
+    } = this.state, d = n.id === L.FAVORITES_RAW_GUILD_ID ? u.FavoritesChannelList : u.GuildChannelList;
     return (0, i.jsxs)(x.default, {
       header: (0, i.jsx)(c.default, {
         guild: n,
@@ -142,9 +142,9 @@ class P extends a.PureComponent {
         children: (0, i.jsx)(o.Popout, {
           position: "right",
           renderPopout: this.renderSettings,
-          children: e => (0, i.jsx)(C.default.Icon, {
-            icon: _.default,
-            label: L.default.Messages.SETTINGS,
+          children: e => (0, i.jsx)(_.default.Icon, {
+            icon: I.default,
+            label: M.default.Messages.SETTINGS,
             ...e
           })
         })
@@ -159,7 +159,7 @@ class P extends a.PureComponent {
         })
       }), (0, i.jsx)("section", {
         className: D.panels,
-        "aria-label": L.default.Messages.ACCOUNT_A11Y_LABEL,
+        "aria-label": M.default.Messages.ACCOUNT_A11Y_LABEL,
         children: (0, i.jsx)(f.default, {
           guildId: n.id
         })
@@ -188,35 +188,35 @@ function k(e) {
   var t;
   let {
     guildId: n
-  } = e, a = (0, s.useStateFromStores)([T.default], () => T.default.getGuild(n)), l = (0, s.useStateFromStores)([S.default], () => S.default.getChannels(n)), o = (0, s.useStateFromStores)([E.default], () => E.default.getCategories(n)), {
+  } = e, a = (0, s.useStateFromStores)([y.default], () => y.default.getGuild(n)), l = (0, s.useStateFromStores)([S.default], () => S.default.getChannels(n)), o = (0, s.useStateFromStores)([E.default], () => E.default.getCategories(n)), {
     mutedChannels: u,
     collapseMuted: c
-  } = (0, s.useStateFromStoresObject)([N.default], () => ({
-    mutedChannels: N.default.getMutedChannels(n),
-    collapseMuted: N.default.isGuildCollapsed(n)
-  })), f = (0, s.useStateFromStores)([O.default], () => O.default.getVoiceStates(n)), _ = (0, s.useStateFromStores)([g.default], () => g.default.getCollapsed()), {
-    scrollTo: C
+  } = (0, s.useStateFromStoresObject)([C.default], () => ({
+    mutedChannels: C.default.getMutedChannels(n),
+    collapseMuted: C.default.isGuildCollapsed(n)
+  })), f = (0, s.useStateFromStores)([N.default], () => N.default.getVoiceStates(n)), I = (0, s.useStateFromStores)([g.default], () => g.default.getCollapsed()), {
+    scrollTo: _
   } = (0, s.useStateFromStores)([m.default], () => m.default.getGuildDimensions(n)), A = (0, h.default)(e => {
     let {
       channelId: t
     } = e;
     return t
-  }), x = (0, s.useStateFromStores)([I.default], () => I.default.getVoiceChannelId()), M = (0, s.useStateFromStores)([y.default], () => y.default.getGuildVersion(n)), L = (0, s.useStateFromStores)([p.default], () => p.default.version), D = (0, s.useStateFromStores)([v.default], () => v.default.getGuildChangeSentinel(n)), b = (0, r.useEmbeddedAppsByChannel)(null == a ? void 0 : a.id), j = (0, d.useActiveEventsByChannel)(null == a ? void 0 : a.id), k = null !== (t = null == a ? void 0 : a.hasFeature(R.GuildFeatures.COMMUNITY)) && void 0 !== t && t;
+  }), x = (0, s.useStateFromStores)([T.default], () => T.default.getVoiceChannelId()), L = (0, s.useStateFromStores)([O.default], () => O.default.getGuildVersion(n)), M = (0, s.useStateFromStores)([p.default], () => p.default.version), D = (0, s.useStateFromStores)([v.default], () => v.default.getGuildChangeSentinel(n)), b = (0, r.useEmbeddedAppsByChannel)(null == a ? void 0 : a.id), j = (0, d.useActiveEventsByChannel)(null == a ? void 0 : a.id), k = null !== (t = null == a ? void 0 : a.hasFeature(R.GuildFeatures.COMMUNITY)) && void 0 !== t && t;
   return (0, i.jsx)(P, {
     guildId: n,
     guild: a,
     channels: l,
     categories: o,
     mutedChannels: u,
-    scrollToChannel: C,
+    scrollToChannel: _,
     selectedChannelId: A,
     selectedVoiceChannelId: x,
     voiceStates: f,
-    collapsedChannels: _,
+    collapsedChannels: I,
     collapseMuted: c,
     guildReadStateSentinel: D,
-    permissionVersion: M,
-    categoryCollapseVersion: L,
+    permissionVersion: L,
+    categoryCollapseVersion: M,
     embeddedAppsByChannel: b,
     activeEventsByChannel: j,
     showNewUnreadsBar: k,

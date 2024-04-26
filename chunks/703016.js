@@ -16,8 +16,8 @@ var n = a("913527"),
   C = a("430824"),
   m = a("131951"),
   S = a("292959"),
-  I = a("699516"),
-  p = a("944486"),
+  p = a("699516"),
+  I = a("944486"),
   T = a("9156"),
   g = a("594174"),
   A = a("51144"),
@@ -26,8 +26,8 @@ var n = a("913527"),
   R = a("653477"),
   L = a("981631"),
   O = a("689938");
-let P = [],
-  M = null,
+let M = [],
+  P = null,
   x = null,
   y = null,
   D = /\|\|([\s\S]+?)\|\|/g;
@@ -44,7 +44,7 @@ function b(e, t, a, n) {
       return null != a && null != a.name ? a.name : O.default.Messages.MESSAGE_TTS_DELETED_ROLE
     }).replace(/<#(\d+)>/g, (e, t) => {
       let a = h.default.getChannel(t);
-      return null == a ? e : (0, r.computeChannelName)(a, g.default, I.default)
+      return null == a ? e : (0, r.computeChannelName)(a, g.default, p.default)
     }).replace(/<a?:(\w+):(\d+)>/g, (e, t) => "".concat(O.default.Messages.EMOJI, " ").concat(t)).replace(/<\/([^\s]+?):(\d+)>/g, (e, t) => "/".concat(t)).replace(/<t:(\d+):([A-Z]|[a-z])>/g, (e, t, a) => {
       let n = o.TIMESTAMP_FORMATS[a],
         l = 1e3 * parseInt(t, 10),
@@ -73,7 +73,7 @@ function U() {
 }
 async function j(e, t, a, n, s) {
   let l = i.createUtterance(e, a);
-  null !== l && (null == x && U(), t ? await (0, N.stopSpeaking)() : null == M || M.removeEventListener("end", N.stopSpeaking), l.addEventListener("end", N.stopSpeaking), null != n && l.addEventListener("start", n), null != s && l.addEventListener("end", s), M = l, i.speakUtterance(l, x))
+  null !== l && (null == x && U(), t ? await (0, N.stopSpeaking)() : null == P || P.removeEventListener("end", N.stopSpeaking), l.addEventListener("end", N.stopSpeaking), null != n && l.addEventListener("start", n), null != s && l.addEventListener("end", s), P = l, i.speakUtterance(l, x))
 }
 
 function G(e, t, a, n, s) {
@@ -94,7 +94,7 @@ function w(e) {
 }
 
 function k() {
-  return null !== M && M.removeEventListener("end", N.stopSpeaking), i.cancelAll(), M = null, !0
+  return null !== P && P.removeEventListener("end", N.stopSpeaking), i.cancelAll(), P = null, !0
 }
 
 function F(e) {
@@ -116,15 +116,15 @@ function B(e) {
   if (d || m.default.isSelfDeaf()) return !1;
   let C = h.default.getChannel(o);
   if (null == C) return !1;
-  let g = p.default.getChannelId(),
+  let g = I.default.getChannelId(),
     N = E.default.getCurrentSidebarChannelId(g),
     v = o === g || o === N,
     O = c.EnableTTSCommand.getSetting() && u.tts && v,
-    M = S.default.getTTSType(),
-    x = (null === (t = u.author) || void 0 === t ? void 0 : t.id) !== f.default.getId() && (M === L.TTSNotificationTypes.ALL_CHANNELS || M === L.TTSNotificationTypes.SELECTED_CHANNEL && v);
-  if ((O || x) && ((null === (a = u.author) || void 0 === a ? void 0 : a.id) == null || !I.default.isBlocked(u.author.id))) {
-    if (P.indexOf(u.id) >= 0) return !1;
-    P.unshift(u.id) > 10 && P.pop();
+    P = S.default.getTTSType(),
+    x = (null === (t = u.author) || void 0 === t ? void 0 : t.id) !== f.default.getId() && (P === L.TTSNotificationTypes.ALL_CHANNELS || P === L.TTSNotificationTypes.SELECTED_CHANNEL && v);
+  if ((O || x) && ((null === (a = u.author) || void 0 === a ? void 0 : a.id) == null || !p.default.isBlocked(u.author.id))) {
+    if (M.indexOf(u.id) >= 0) return !1;
+    M.unshift(u.id) > 10 && M.pop();
     let e = C.getGuildId();
     if (null != e && T.default.getMutedChannels(e).has(o)) return !1;
     let t = null !== (i = null !== (l = _.default.getNick(e, null === (n = u.author) || void 0 === n ? void 0 : n.id)) && void 0 !== l ? l : A.default.getName(u.author)) && void 0 !== i ? i : "",

@@ -12,8 +12,8 @@ let _ = {},
   C = 0,
   m = !1,
   S = !1,
-  I = new Set,
-  p = new Set;
+  p = new Set,
+  I = new Set;
 
 function T(e, t) {
   var a;
@@ -76,7 +76,7 @@ i = "FriendSuggestionStore", (l = "displayName") in(s = g) ? Object.defineProper
   },
   VIEWED_FRIEND_SUGGESTIONS_SUCCESS: function(e) {
     e.userIds.forEach(e => {
-      I.add(e), p.delete(e)
+      p.add(e), I.delete(e)
     })
   }
 })

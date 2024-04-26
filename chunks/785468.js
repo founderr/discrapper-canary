@@ -31,7 +31,7 @@ var a = l("735250"),
   p = l("765305"),
   M = l("981631"),
   D = l("689938"),
-  R = l("295429");
+  R = l("270484");
 let j = e => e === p.GuildScheduledEventEntityTypes.EXTERNAL,
   y = (e, t) => {
     let l = o.default.getChannel(e);

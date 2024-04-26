@@ -15,8 +15,8 @@ var i = a("756647"),
   C = a("314897"),
   m = a("594174"),
   S = a("626135"),
-  I = a("585483"),
-  p = a("591759"),
+  p = a("585483"),
+  I = a("591759"),
   T = a("998502"),
   g = a("996106"),
   A = a("186901"),
@@ -133,7 +133,7 @@ function v(e, t) {
           null != a && ((0, _.replaceWith)(N.Routes.SETTINGS(a.section, a.subsection)), v(a.fingerprint, "settings"));
           break;
         case A.RPCDeepLinks.CHANGELOG:
-          null != a && ((0, _.replaceWith)(p.default.formatPathWithQuery(N.Routes.CHANGELOGS(a.date), a.query)), v(a.fingerprint, "changelog"));
+          null != a && ((0, _.replaceWith)(I.default.formatPathWithQuery(N.Routes.CHANGELOGS(a.date), a.query)), v(a.fingerprint, "changelog"));
           break;
         case A.RPCDeepLinks.LIBRARY:
           (0, _.replaceWith)(N.Routes.APPLICATION_LIBRARY), null != a && v(a.fingerprint, "library");
@@ -188,7 +188,7 @@ function v(e, t) {
           state: s
         })
       } catch (e) {
-        throw I.ComponentDispatch.dispatch(N.ComponentActions.CONNECTIONS_CALLBACK_ERROR), e
+        throw p.ComponentDispatch.dispatch(N.ComponentActions.CONNECTIONS_CALLBACK_ERROR), e
       }
     }
   },

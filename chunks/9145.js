@@ -32,7 +32,7 @@ var a = n("735250"),
   R = n("918559"),
   L = n("981631"),
   y = n("689938"),
-  O = n("136387");
+  O = n("986636");
 let j = {
   [R.FocusedActivityLayouts.NO_CHAT]: O.noChat,
   [R.FocusedActivityLayouts.RESIZABLE]: O.resizable
@@ -42,9 +42,9 @@ function P(e) {
   var t, n, s;
   let {
     maxHeight: P,
-    connectedChannelId: b,
-    renderExternalHeader: D
-  } = e, U = (0, v.default)(), F = (0, r.useStateFromStoresArray)([I.default], () => null != b ? I.default.getEmbeddedActivitiesForChannel(b) : [], [b]), w = (0, A.useEmbeddedApps)(F), k = (0, A.useEmbeddedAppsWithPresence)(w), H = l.useCallback(() => {
+    connectedChannelId: D,
+    renderExternalHeader: b
+  } = e, U = (0, v.default)(), F = (0, r.useStateFromStoresArray)([I.default], () => null != D ? I.default.getEmbeddedActivitiesForChannel(D) : [], [D]), w = (0, A.useEmbeddedApps)(F), k = (0, A.useEmbeddedAppsWithPresence)(w), H = l.useCallback(() => {
     (0, T.updateActivityPanelMode)(R.ActivityPanelModes.PIP)
   }, []), B = l.useRef(null), G = (0, r.useStateFromStores)([I.default], () => I.default.getFocusedLayout()), V = G !== R.FocusedActivityLayouts.NO_CHAT, [W, Y] = l.useState(null !== (s = f.default.activityPanelHeight) && void 0 !== s ? s : P), z = l.useCallback(e => {
     u.default.updatedUnsyncedSettings({
@@ -86,7 +86,7 @@ function P(e) {
       maxHeight: P,
       height: W
     } : void 0,
-    children: [null == D ? void 0 : D(), (0, a.jsxs)("div", {
+    children: [null == b ? void 0 : b(), (0, a.jsxs)("div", {
       className: O.activityPanelContainer,
       children: [V ? null : (0, a.jsx)("div", {
         className: O.header,
@@ -109,7 +109,7 @@ function P(e) {
         ref: K,
         children: (0, a.jsx)(N.default, {
           className: O.iframe,
-          embedId: (0, x.default)(b, U.id)
+          embedId: (0, x.default)(D, U.id)
         })
       }), null != ee ? (0, a.jsxs)("div", {
         className: O.footer,
@@ -128,7 +128,7 @@ function P(e) {
             className: O.leaveButtonContainer,
             children: (0, a.jsx)(m.default, {
               applicationId: U.id,
-              channelId: b,
+              channelId: D,
               centerButton: !0,
               color: "red",
               className: O.leaveActivityButton,

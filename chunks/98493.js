@@ -20,13 +20,13 @@ function c(e) {
   let {
     guildId: t,
     guildJoinRequests: n
-  } = e, a = l.useRef(!1), [c, f] = l.useState(null), h = l.useRef(null), p = l.useRef(!1);
+  } = e, a = l.useRef(!1), [c, f] = l.useState(null), h = l.useRef(null), m = l.useRef(!1);
   return {
     fetchNextPage: l.useCallback(async (e, l) => {
       if (a.current) return;
-      let m = "".concat(e, "-").concat(l),
+      let p = "".concat(e, "-").concat(l),
         C = !1;
-      if (m !== h.current && (h.current = m, p.current = !1, C = !0), p.current) return;
+      if (p !== h.current && (h.current = p, m.current = !1, C = !0), m.current) return;
       null != c && f(null);
       let g = function(e, t, n, l) {
         let a = n === u.GuildJoinRequestApplicationStatuses.SUBMITTED;
@@ -63,7 +63,7 @@ function c(e) {
           let {
             guild_join_requests: t
           } = e.body;
-          t.length < d && (p.current = !0)
+          t.length < d && (m.current = !0)
         }
       } catch (e) {
         f(new i.APIError(e).getAnyErrorMessage())

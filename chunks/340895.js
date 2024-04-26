@@ -15,16 +15,16 @@ let C = "IncomingCallStore",
     height: 315
   },
   S = new Set,
-  I = [],
-  p = new Map,
+  p = [],
+  I = new Map,
   T = new Set,
   g = 0,
   A = 0,
   N = !1;
 
 function v(e) {
-  if (null == e || null == p.get(e)) return !1;
-  p.delete(e), (T = new Set(T)).delete(e)
+  if (null == e || null == I.get(e)) return !1;
+  I.delete(e), (T = new Set(T)).delete(e)
 }
 
 function R(e) {
@@ -36,7 +36,7 @@ function R(e) {
     let e = E.default.getChannel(t);
     if (null == e) return !1;
     let a = 10 * T.size;
-    p.set(t, {
+    I.set(t, {
       channel: e,
       x: g + a,
       y: A + a
@@ -62,7 +62,7 @@ class O extends(n = r.default.Store) {
     this.waitFor(E.default, h.default), this.syncWith([h.default], L), this.syncWith([c.default], L)
   }
   getIncomingCalls() {
-    return N ? I : Array.from(p.values())
+    return N ? p : Array.from(I.values())
   }
   getIncomingCallChannelIds() {
     return N ? S : T

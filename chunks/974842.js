@@ -12,30 +12,30 @@ var n = a("735250"),
   f = a("116175"),
   E = a("308083"),
   h = a("689938"),
-  _ = a("996399"),
-  C = a("597338");
+  _ = a("765731"),
+  C = a("418571");
 let m = "clan-badge-render",
   S = [f.ClanBadgeKind.SWORD, f.ClanBadgeKind.WATER_DROP, f.ClanBadgeKind.SKULL, f.ClanBadgeKind.TOADSTOOL, f.ClanBadgeKind.MOON, f.ClanBadgeKind.LIGHTNING, f.ClanBadgeKind.LEAF, f.ClanBadgeKind.HEART, f.ClanBadgeKind.FIRE, f.ClanBadgeKind.COMPASS, f.ClanBadgeKind.SWORD_10, f.ClanBadgeKind.SWORD_11, f.ClanBadgeKind.SWORD_12, f.ClanBadgeKind.SWORD_13, f.ClanBadgeKind.SWORD_14, f.ClanBadgeKind.SWORD_15, f.ClanBadgeKind.SWORD_16, f.ClanBadgeKind.SWORD_17, f.ClanBadgeKind.SWORD_18, f.ClanBadgeKind.SWORD_19, f.ClanBadgeKind.SWORD_20],
-  I = f.CLAN_BADGE_PALETTE_PRESETS.length;
+  p = f.CLAN_BADGE_PALETTE_PRESETS.length;
 t.default = e => {
   let {
     handleUpdate: t,
     badge: a,
     primaryColor: l,
-    secondaryColor: p,
+    secondaryColor: I,
     tag: T,
     error: g,
     furthestStep: A
   } = e, N = s.useRef(null), [v, R] = s.useState(a), [L, O] = s.useState({
     primary: l,
-    secondary: p
-  }), [P, M] = s.useState(() => {
+    secondary: I
+  }), [M, P] = s.useState(() => {
     for (let e = 0; e < f.CLAN_BADGE_PALETTE_PRESETS.length; e++)
-      if (f.CLAN_BADGE_PALETTE_PRESETS[e].primary === l && f.CLAN_BADGE_PALETTE_PRESETS[e].secondary === p) return e;
-    return I
-  }), [x, y] = s.useState(!1), D = I === P ? L : f.CLAN_BADGE_PALETTE_PRESETS[P];
+      if (f.CLAN_BADGE_PALETTE_PRESETS[e].primary === l && f.CLAN_BADGE_PALETTE_PRESETS[e].secondary === I) return e;
+    return p
+  }), [x, y] = s.useState(!1), D = p === M ? L : f.CLAN_BADGE_PALETTE_PRESETS[M];
   return s.useEffect(() => {
-    if (v === a && D.primary === l && D.secondary === p) return;
+    if (v === a && D.primary === l && D.secondary === I) return;
     let e = document.querySelector("#".concat(m));
     if (null != e) {
       let a = new XMLSerializer().serializeToString(e),
@@ -63,7 +63,7 @@ t.default = e => {
       badgeSecondaryColor: D.secondary,
       ...n
     })
-  }, [t, v, D.primary, D.secondary, A, a, l, p]), (0, n.jsxs)("div", {
+  }, [t, v, D.primary, D.secondary, A, a, l, I]), (0, n.jsxs)("div", {
     className: C.slideContent,
     children: [(0, n.jsx)(u.Heading, {
       variant: "heading-xxl/medium",
@@ -108,10 +108,10 @@ t.default = e => {
             className: _.pickerGrid,
             children: [f.CLAN_BADGE_PALETTE_PRESETS.map((e, t) => (0, n.jsx)(u.Clickable, {
               onClick: () => {
-                M(t), O(f.CLAN_BADGE_PALETTE_PRESETS[t])
+                P(t), O(f.CLAN_BADGE_PALETTE_PRESETS[t])
               },
               className: i()(_.badgeAssetContainer, {
-                [_.badgeAssetContainerSelected]: t === P
+                [_.badgeAssetContainerSelected]: t === M
               }),
               children: (0, n.jsx)(d.ClanBadge, {
                 badge: v,
@@ -140,10 +140,10 @@ t.default = e => {
               children: e => (0, n.jsx)(u.Clickable, {
                 ...e,
                 onClick: () => {
-                  M(I), y(e => !e)
+                  P(p), y(e => !e)
                 },
                 className: i()(_.badgeAssetContainer, {
-                  [_.badgeAssetContainerSelected]: I === P
+                  [_.badgeAssetContainerSelected]: p === M
                 }),
                 children: (0, n.jsx)(o.EyeDropperIcon, {
                   width: 20,

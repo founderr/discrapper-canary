@@ -34,8 +34,8 @@ var a, l = n("735250"),
   O = n("131704"),
   j = n("592125"),
   P = n("341165"),
-  b = n("544610"),
-  D = n("19780"),
+  D = n("544610"),
+  b = n("19780"),
   U = n("306680"),
   F = n("699516"),
   w = n("246946"),
@@ -55,9 +55,9 @@ var a, l = n("735250"),
   J = n("575464"),
   $ = n("981631"),
   ee = n("689938"),
-  et = n("109500"),
-  en = n("717897"),
-  ea = n("794711");
+  et = n("737152"),
+  en = n("825979"),
+  ea = n("949086");
 
 function el(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -596,7 +596,7 @@ class ed extends(a = s.PureComponent) {
     }), el(this, "createNewDM", e => {
       C.default.openPrivateChannel(e, !1, !1, "New Group DM")
     }), el(this, "pushToExistingDM", (e, t) => {
-      let n = D.default.getChannelId() === e.id;
+      let n = b.default.getChannelId() === e.id;
       C.default.addRecipients(e.id, t, $.AnalyticsLocations.ADD_FRIENDS_TO_DM).then(a => {
         if (n) {
           if (e.isDM() && a !== e.id) {
@@ -650,12 +650,12 @@ class ed extends(a = s.PureComponent) {
   }
 }
 el(ed, "contextType", v.default);
-let ec = h.default.connectStores([b.default, P.default, w.default], e => {
+let ec = h.default.connectStores([D.default, P.default, w.default], e => {
   let t, {
     channel: n
   } = e;
   return null != n && null != (t = P.default.getInvite(n.id)) && t.isExpired() && (t = null), {
-    ...b.default.getState(),
+    ...D.default.getState(),
     invite: t,
     hideDiscriminator: w.default.hidePersonalInformation,
     hideInstantInvites: w.default.hideInstantInvites

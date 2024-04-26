@@ -17,11 +17,11 @@ var n = s("120356"),
   S = s("285952"),
   E = s("153124"),
   T = s("358085"),
-  m = s("962100"),
-  f = s("981631"),
+  f = s("962100"),
+  m = s("981631"),
   _ = s("689938"),
-  g = s("901145"),
-  h = s("794711");
+  g = s("267338"),
+  h = s("949086");
 let I = !T.isPlatformEmbedded,
   N = (0, E.uid)();
 
@@ -29,7 +29,7 @@ function p(e) {
   let {
     value: t
   } = e;
-  t === f.InputModes.PUSH_TO_TALK && I && (0, r.openModalLazy)(async () => {
+  t === m.InputModes.PUSH_TO_TALK && I && (0, r.openModalLazy)(async () => {
     let {
       default: e
     } = await Promise.resolve().then(s.bind(s, "468026"));
@@ -37,7 +37,7 @@ function p(e) {
       title: _.default.Messages.PTT_LIMITED_TITLE,
       confirmText: _.default.Messages.DOWNLOAD,
       cancelText: _.default.Messages.OKAY,
-      onConfirm: () => (0, m.openDownloadAppsModal)("PTT Limited Modal"),
+      onConfirm: () => (0, f.openDownloadAppsModal)("PTT Limited Modal"),
       body: _.default.Messages.PTT_LIMITED_BODY,
       ...t
     })
@@ -56,17 +56,17 @@ function A(e) {
       shortcut: n,
       delay: E
     } = (0, i.useStateFromStoresObject)([c.default], () => c.default.getModeOptions());
-  return t = T.isPlatformEmbedded || s !== f.InputModes.PUSH_TO_TALK ? (0, a.jsx)(r.FormText, {
+  return t = T.isPlatformEmbedded || s !== m.InputModes.PUSH_TO_TALK ? (0, a.jsx)(r.FormText, {
     type: r.FormText.Types.DESCRIPTION,
     className: l()(g.pttToolsMessage, h.marginBottom8),
     children: _.default.Messages.USER_SETTINGS_VOICE_ADD_MULTIPLE.format({
-      onClick: () => d.default.setSection(f.UserSettingsSections.KEYBINDS)
+      onClick: () => d.default.setSection(m.UserSettingsSections.KEYBINDS)
     })
   }) : (0, a.jsx)(r.FormText, {
     type: r.FormText.Types.DESCRIPTION,
     className: l()(g.pttToolsMessage, g.pttToolsWarning, h.marginBottom8),
     children: _.default.Messages.PTT_LIMITED_WARNING.format({
-      onDownloadClick: () => (0, m.openDownloadAppsModal)("Help Text PTT")
+      onDownloadClick: () => (0, f.openDownloadAppsModal)("Help Text PTT")
     })
   }), (0, a.jsxs)("div", {
     className: g.pttTools,
@@ -96,7 +96,7 @@ function A(e) {
               delay: e
             }),
             onValueRender: C,
-            maxValue: f.MAX_PTT_RELEASE_DELAY,
+            maxValue: m.MAX_PTT_RELEASE_DELAY,
             "aria-labelledby": N
           })]
         })
@@ -108,10 +108,10 @@ function A(e) {
 function O() {
   let e = (0, i.useStateFromStores)([c.default], () => c.default.getMode()),
     t = [{
-      value: f.InputModes.VOICE_ACTIVITY,
+      value: m.InputModes.VOICE_ACTIVITY,
       name: _.default.Messages.INPUT_MODE_VAD
     }, {
-      value: f.InputModes.PUSH_TO_TALK,
+      value: m.InputModes.PUSH_TO_TALK,
       name: I ? _.default.Messages.INPUT_MODE_PTT_LIMITED : _.default.Messages.INPUT_MODE_PTT
     }];
   return (0, a.jsxs)(a.Fragment, {
@@ -123,7 +123,7 @@ function O() {
         options: t,
         value: e
       })
-    }), e === f.InputModes.PUSH_TO_TALK && (0, a.jsx)(A, {
+    }), e === m.InputModes.PUSH_TO_TALK && (0, a.jsx)(A, {
       inputMode: e
     })]
   })

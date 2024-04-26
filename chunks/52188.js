@@ -1,122 +1,122 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   BadgeEntryPoint: function() {
-    return n
+    return i
   },
   LocalizedPricingBadgeIcon: function() {
-    return en
+    return ei
   }
-}), i("47120");
-var n, r, s = i("735250");
-i("470079");
-var a = i("120356"),
-  l = i.n(a),
-  o = i("442837"),
-  u = i("246946"),
-  c = i("91802"),
-  d = i("222727"),
-  f = i("981631"),
-  p = i("503330"),
-  C = i("500052"),
-  m = i("375832"),
-  h = i("992171"),
-  _ = i("937064"),
-  E = i("434336"),
-  I = i("128955"),
-  T = i("803353"),
-  x = i("479388"),
-  g = i("179581"),
-  v = i("13174"),
-  R = i("580248"),
-  A = i("966294"),
-  N = i("302143"),
-  S = i("146121"),
-  M = i("705500"),
-  L = i("402127"),
-  j = i("153652"),
-  b = i("485487"),
-  O = i("200985"),
-  y = i("270930"),
-  F = i("46514"),
-  D = i("750876"),
-  P = i("993855"),
-  w = i("701497"),
-  B = i("937717"),
-  G = i("165194"),
-  U = i("208802"),
-  V = i("145905"),
-  H = i("335302"),
-  k = i("956172"),
-  Y = i("695579"),
-  Z = i("541764"),
-  W = i("191706"),
-  z = i("67528"),
-  q = i("332150"),
-  K = i("581902"),
-  X = i("167219"),
-  Q = i("704381"),
-  J = i("591417"),
-  $ = i("929883"),
-  ee = i("261137"),
-  et = i("958700");
-(r = n || (n = {}))[r.PrivateMessages = 0] = "PrivateMessages", r[r.SettingsMenu = 1] = "SettingsMenu";
-let ei = new Map([
+}), n("47120");
+var i, r, s = n("735250");
+n("470079");
+var a = n("120356"),
+  l = n.n(a),
+  o = n("442837"),
+  u = n("246946"),
+  c = n("91802"),
+  d = n("222727"),
+  f = n("981631"),
+  p = n("486831"),
+  m = n("500052"),
+  E = n("375832"),
+  I = n("992171"),
+  _ = n("937064"),
+  h = n("434336"),
+  T = n("128955"),
+  g = n("803353"),
+  C = n("479388"),
+  x = n("179581"),
+  v = n("13174"),
+  N = n("580248"),
+  R = n("966294"),
+  A = n("302143"),
+  S = n("146121"),
+  M = n("705500"),
+  b = n("402127"),
+  O = n("153652"),
+  L = n("485487"),
+  F = n("200985"),
+  y = n("270930"),
+  D = n("46514"),
+  j = n("750876"),
+  P = n("993855"),
+  w = n("701497"),
+  G = n("937717"),
+  B = n("165194"),
+  U = n("208802"),
+  V = n("145905"),
+  k = n("335302"),
+  H = n("956172"),
+  Y = n("695579"),
+  z = n("541764"),
+  W = n("191706"),
+  q = n("67528"),
+  Z = n("332150"),
+  K = n("581902"),
+  X = n("167219"),
+  Q = n("704381"),
+  J = n("591417"),
+  $ = n("929883"),
+  ee = n("261137"),
+  et = n("958700");
+(r = i || (i = {}))[r.PrivateMessages = 0] = "PrivateMessages", r[r.SettingsMenu = 1] = "SettingsMenu";
+let en = new Map([
   ["PE", W],
-  ["PH", z],
-  ["CL", I],
-  ["CO", T],
-  ["AR", C],
-  ["JP", D],
+  ["PH", q],
+  ["CL", T],
+  ["CO", g],
+  ["AR", m],
+  ["JP", j],
   ["VN", et],
   ["TH", ee],
-  ["ID", b],
-  ["MY", k],
-  ["MX", H],
+  ["ID", L],
+  ["MY", H],
+  ["MX", k],
   ["KR", P],
   ["BG", _],
-  ["CZ", g],
-  ["HU", j],
+  ["CZ", x],
+  ["HU", O],
   ["RO", X],
   ["SE", Q],
-  ["CY", x],
-  ["EE", R],
+  ["CY", C],
+  ["EE", N],
   ["IS", y],
-  ["IE", O],
+  ["IE", F],
   ["LV", U],
   ["LI", w],
-  ["LT", B],
-  ["LU", G],
+  ["LT", G],
+  ["LU", B],
   ["MT", V],
   ["SK", $],
   ["SI", J],
   ["GR", M],
-  ["FI", N],
+  ["FI", A],
   ["PT", K],
-  ["NO", Z],
-  ["BE", h],
-  ["AT", m],
-  ["CH", E],
+  ["NO", z],
+  ["BE", I],
+  ["AT", E],
+  ["CH", h],
   ["FR", S],
   ["DE", v],
-  ["ES", A],
-  ["IT", F],
+  ["ES", R],
+  ["IT", D],
   ["NL", Y],
-  ["PL", q],
-  ["HR", L]
+  ["PL", Z],
+  ["HR", b]
 ]);
 
-function en(e) {
+function ei(e) {
   let {
     entryPoint: t,
-    className: i
-  } = e, r = (0, o.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), a = (0, c.useLocalizedPromoQuery)(), C = null == a ? void 0 : a.countryCode;
-  if ((0, d.useTrackLocalizedPricingPromoImpression)(f.AnalyticsSections.SETTINGS_PREMIUM, C), null == C || !ei.has(C) || r) return null;
-  let m = ei.get(C),
-    h = "badgeIcon" + n[t];
+    className: n
+  } = e, r = (0, o.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), a = (0, c.useLocalizedPromoQuery)(), m = null == a ? void 0 : a.countryCode;
+  if ((0, d.useTrackLocalizedPricingPromoImpression)(f.AnalyticsSections.SETTINGS_PREMIUM, m), null == m || !en.has(m) || r) return null;
+  let E = en.get(m),
+    I = "badgeIcon" + i[t];
   return (0, s.jsx)("img", {
-    className: l()(i, p[h]),
+    className: l()(n, p[I]),
     "aria-hidden": !0,
     alt: "Wumpus holding a country-specific flag",
-    src: m
+    src: E
   })
 }

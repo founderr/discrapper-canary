@@ -12,10 +12,10 @@ var a = s("735250"),
   S = s("478977"),
   E = s("456799"),
   T = s("210851"),
-  m = s("602683"),
-  f = s("15033"),
+  f = s("602683"),
+  m = s("15033"),
   _ = s("899457"),
-  g = s("797565");
+  g = s("836058");
 
 function h(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -152,22 +152,22 @@ function O() {
       children: "Messages"
     }), (0, a.jsxs)("div", {
       className: g.fields,
-      children: [(0, a.jsx)(m.default, {
+      children: [(0, a.jsx)(f.default, {
         title: "Quest Name",
         assetKey: "questName",
         onMessageChange: M,
         initialValue: t.config.messages.questName
-      }), (0, a.jsx)(m.default, {
+      }), (0, a.jsx)(f.default, {
         title: "Game Title",
         assetKey: "gameTitle",
         onMessageChange: M,
         initialValue: t.config.messages.gameTitle
-      }), (0, a.jsx)(m.default, {
+      }), (0, a.jsx)(f.default, {
         title: "Reward Name",
         assetKey: "rewardName",
         onMessageChange: M,
         initialValue: t.config.messages.rewardName
-      }), (0, a.jsx)(m.default, {
+      }), (0, a.jsx)(f.default, {
         title: "Reward Name With Article",
         assetKey: "rewardNameWithArticle",
         onMessageChange: M,
@@ -214,7 +214,7 @@ function O() {
       className: g.fields,
       children: (0, a.jsx)("div", {
         className: g.fullWidthField,
-        children: (0, a.jsx)(f.default, {
+        children: (0, a.jsx)(m.default, {
           onChange: function(e) {
             s({
               ...t,

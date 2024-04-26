@@ -17,8 +17,8 @@ var n = s("990547"),
   S = s("493544"),
   E = s("782568"),
   T = s("163379"),
-  m = s("703288"),
-  f = s("574755"),
+  f = s("703288"),
+  m = s("574755"),
   _ = s("425799"),
   g = s("377171"),
   h = s("621628"),
@@ -47,8 +47,8 @@ var n = s("990547"),
   H = s("38915"),
   V = s("498639"),
   Y = s("748717"),
-  K = s("419636"),
-  W = s("35426"),
+  W = s("419636"),
+  K = s("35426"),
   z = s("799071"),
   Q = s("601433"),
   q = s("154022"),
@@ -71,8 +71,8 @@ var n = s("990547"),
   eS = s("327885"),
   eE = s("595242"),
   eT = s("301121"),
-  em = s("36192"),
-  ef = s("338345"),
+  ef = s("36192"),
+  em = s("338345"),
   e_ = s("400287"),
   eg = s("554042"),
   eh = s("200645"),
@@ -83,7 +83,7 @@ var n = s("990547"),
   eA = s("981631"),
   eO = s("46140"),
   ex = s("689938"),
-  eR = s("480261");
+  eR = s("631719");
 let eM = eh.default;
 
 function ev(e) {
@@ -151,7 +151,7 @@ function ev(e) {
     section: eA.UserSettingsSections.SESSIONS,
     label: ex.default.Messages.AUTH_SESSIONS,
     ariaLabel: ex.default.Messages.AUTH_SESSIONS,
-    element: em.default,
+    element: ef.default,
     newIndicatorDismissibleContentTypes: [l.DismissibleContent.AUTH_SESSIONS_NEW],
     predicate: () => G.default.getCurrentConfig({
       location: "9f7d84_1"
@@ -172,8 +172,8 @@ function ev(e) {
     section: eA.UserSettingsSections.CLIPS,
     label: ex.default.Messages.CLIPS,
     ariaLabel: ex.default.Messages.CLIPS,
-    icon: ej ? (0, a.jsx)(m.default, {}) : void 0,
-    element: f.default,
+    icon: ej ? (0, a.jsx)(f.default, {}) : void 0,
+    element: m.default,
     predicate: () => !eb
   }, {
     section: eA.UserSettingsSections.FRIEND_REQUESTS,
@@ -277,11 +277,11 @@ function ev(e) {
   }, {
     section: eA.UserSettingsSections.STREAMER_MODE,
     label: ex.default.Messages.STREAMER_MODE,
-    element: ef.default
+    element: em.default
   }, {
     section: eA.UserSettingsSections.SPEED_TEST,
     label: "Speed Test",
-    element: W.default,
+    element: K.default,
     predicate: () => v.default.isSupported() && k.default.getCurrentConfig({
       location: "9f7d84_2"
     }).showSettings
@@ -410,7 +410,7 @@ function ev(e) {
     section: S.SectionTypes.DIVIDER
   }, {
     section: S.SectionTypes.CUSTOM,
-    element: K.default
+    element: W.default
   }, {
     section: S.SectionTypes.CUSTOM,
     element: w.default

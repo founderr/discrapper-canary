@@ -10,7 +10,7 @@ var l = a("735250"),
   c = a("559629"),
   d = a("231338"),
   f = a("689938"),
-  m = a("125006");
+  m = a("306516");
 let C = {
   dark: [{
     box: "#FFF19E",
@@ -67,13 +67,13 @@ t.default = e => {
     disableCustomColor: g = !1
   } = e, {
     analyticsLocations: b
-  } = (0, n.default)(), S = s.useRef(null), x = (0, i.default)(S), T = g ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT;
+  } = (0, n.default)(), x = s.useRef(null), S = (0, i.default)(x), T = g ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT;
   return (0, l.jsx)(r.Tooltip, {
     text: f.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
     delay: h,
     children: e => (0, l.jsx)(r.Button, {
       ...e,
-      buttonRef: S,
+      buttonRef: x,
       className: m.giftButton,
       color: g ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
       look: r.Button.Looks.FILLED,
@@ -92,7 +92,7 @@ t.default = e => {
         })
       },
       children: E ? (0, l.jsx)(o.SeasonalGiftIcon, {
-        hovered: x,
+        hovered: S,
         isContentDismissed: !0,
         themeOverride: T,
         boxColors: C

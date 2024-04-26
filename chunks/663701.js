@@ -20,8 +20,8 @@ var n = a("735250"),
   C = a("257968"),
   m = a("367907"),
   S = a("770471"),
-  I = a("158631"),
-  p = a("143614"),
+  p = a("158631"),
+  I = a("143614"),
   T = a("463119"),
   g = a("377171"),
   A = a("243778"),
@@ -30,8 +30,8 @@ var n = a("735250"),
   R = a("28476"),
   L = a("880257"),
   O = a("631885"),
-  P = a("457396"),
-  M = a("51596"),
+  M = a("457396"),
+  P = a("51596"),
   x = a("905423"),
   y = a("155409"),
   D = a("210887"),
@@ -54,16 +54,16 @@ var n = a("735250"),
   Z = a("339149"),
   X = a("981631"),
   J = a("689938"),
-  $ = a("344934");
+  $ = a("297939");
 let ee = e => {
     let {
       selected: t,
       ...a
-    } = e, s = (0, o.useListItem)("friends"), l = (0, d.useStateFromStores)([j.default], () => j.default.getPendingCount()), i = (0, p.default)(), {
+    } = e, s = (0, o.useListItem)("friends"), l = (0, d.useStateFromStores)([j.default], () => j.default.getPendingCount()), i = (0, I.default)(), {
       canViewBroadcasts: r
     } = S.default.useExperiment({
       location: "friends_tab_no_track"
-    }), u = (0, I.default)();
+    }), u = (0, p.default)();
     return (0, n.jsxs)(q.LinkButton, {
       selected: t,
       route: X.Routes.FRIENDS,
@@ -214,7 +214,7 @@ let ee = e => {
       }
     })
   },
-  ei = () => (0, M.show)("DM_SEARCH");
+  ei = () => (0, P.show)("DM_SEARCH");
 
 function er(e) {
   switch (e) {
@@ -278,7 +278,7 @@ let eo = e => {
       }, "friends"), a && t ? (0, n.jsx)(et, {
         selected: null == c ? null != s && s.startsWith(X.Routes.APPLICATION_LIBRARY) : c.startsWith(X.Routes.APPLICATION_LIBRARY),
         hideGameUpdateProgressIndicator: s === X.Routes.APPLICATION_LIBRARY
-      }, "library") : null, (0, n.jsx)(P.NitroTabButton, {
+      }, "library") : null, (0, n.jsx)(M.NitroTabButton, {
         selected: null == c ? o : c.startsWith(X.Routes.APPLICATION_STORE),
         route: null == l || location.pathname.startsWith(X.Routes.ACTIVITIES) || location.pathname.startsWith(X.Routes.APPLICATION_STORE) ? X.Routes.APPLICATION_STORE : l,
         locationState: {

@@ -11,18 +11,18 @@ var l = n("735250"),
   c = n("984933"),
   f = n("496675"),
   h = n("98597"),
-  p = n("473403"),
-  m = n("981631"),
+  m = n("473403"),
+  p = n("981631"),
   C = n("490897"),
-  g = n("294639");
+  g = n("809164");
 let E = (0, u.makeChannelSortable)(function(e) {
   let {
     guild: t,
     selectedChannelId: s,
     position: u,
     disableManageChannels: E,
-    sorting: S,
-    sortingType: _,
+    sorting: _,
+    sortingType: S,
     sortingPosition: I,
     connectChannelDragSource: N,
     connectChannelDropTarget: T,
@@ -30,7 +30,7 @@ let E = (0, u.makeChannelSortable)(function(e) {
   } = e, L = (0, r.useStateFromStores)([d.default, c.default], () => {
     let e = c.default.getDirectoryChannelIds(t.id);
     return 0 === e.length ? null : d.default.getChannel(e[0])
-  }), v = (0, r.useStateFromStores)([d.default], () => d.default.getChannel(null == L ? void 0 : L.parent_id)), x = s === (null == L ? void 0 : L.id), R = (0, r.useStateFromStores)([f.default], () => null != v ? f.default.can(m.Permissions.MANAGE_CHANNELS, v) : null != t && f.default.can(m.Permissions.MANAGE_CHANNELS, t)), M = a.useCallback(e => {
+  }), v = (0, r.useStateFromStores)([d.default], () => d.default.getChannel(null == L ? void 0 : L.parent_id)), x = s === (null == L ? void 0 : L.id), R = (0, r.useStateFromStores)([f.default], () => null != v ? f.default.can(p.Permissions.MANAGE_CHANNELS, v) : null != t && f.default.can(p.Permissions.MANAGE_CHANNELS, t)), M = a.useCallback(e => {
     null != L && (0, o.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -43,14 +43,14 @@ let E = (0, u.makeChannelSortable)(function(e) {
   }, [L]);
   if (null == L) return null;
   let y = (0, h.getChannelItemClassName)(u, I),
-    O = (0, h.isChannelItemDisabled)(L, S, _),
-    b = (0, l.jsx)("div", {
+    O = (0, h.isChannelItemDisabled)(L, _, S),
+    D = (0, l.jsx)("div", {
       className: i()(y, {
         [g.disabled]: O,
         [g.selected]: x
       }),
       "data-dnd-name": L.name,
-      children: (0, l.jsxs)(p.default, {
+      children: (0, l.jsxs)(m.default, {
         className: g.iconVisibility,
         channel: L,
         guild: t,
@@ -68,6 +68,6 @@ let E = (0, u.makeChannelSortable)(function(e) {
         })]
       })
     });
-  return R && (b = T(N(b))), b
+  return R && (D = T(N(D))), D
 });
 t.default = E

@@ -13,7 +13,7 @@ var a = s("735250"),
   E = s("843445"),
   T = s("981631"),
   I = s("689938"),
-  R = s("989466");
+  R = s("594286");
 let f = {
   [T.OperatingSystems.WINDOWS]: _.PlatformTypes.WINDOWS,
   [T.OperatingSystems.MACOS]: _.PlatformTypes.OSX,

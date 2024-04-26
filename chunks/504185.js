@@ -35,8 +35,8 @@ var a = n("735250"),
   O = n("430824"),
   j = n("496675"),
   P = n("944486"),
-  b = n("358085"),
-  D = n("792125"),
+  D = n("358085"),
+  b = n("792125"),
   U = n("998502"),
   F = n("922482"),
   w = n("431328"),
@@ -54,7 +54,7 @@ var a = n("735250"),
   X = n("981631"),
   Q = n("354459"),
   J = n("689938"),
-  $ = n("700202");
+  $ = n("566097");
 let ee = "HasBeenInStageChannel",
   et = (e, t) => () => {
     let n = e.getGuildId();
@@ -75,7 +75,7 @@ function el(e) {
     popoutWindow: i,
     popoutWindowAlwaysOnTop: r,
     selectedParticipant: u
-  } = e, d = t.getGuildId(), c = (0, o.useStateFromStores)([P.default], () => P.default.getMostRecentSelectedTextChannelId(d), [d]), f = L.default.getId(), h = !(0, o.useStateFromStores)([E.default], () => E.default.isFullscreenInContext(n)) && (!b.isPlatformEmbedded || b.isPlatformEmbedded && U.default.supportsFeature(X.NativeFeatures.POPOUT_WINDOWS)), m = null != u && u.type !== Q.ParticipantTypes.ACTIVITY && u.user.id !== f, p = l.useMemo(() => {
+  } = e, d = t.getGuildId(), c = (0, o.useStateFromStores)([P.default], () => P.default.getMostRecentSelectedTextChannelId(d), [d]), f = L.default.getId(), h = !(0, o.useStateFromStores)([E.default], () => E.default.isFullscreenInContext(n)) && (!D.isPlatformEmbedded || D.isPlatformEmbedded && U.default.supportsFeature(X.NativeFeatures.POPOUT_WINDOWS)), m = null != u && u.type !== Q.ParticipantTypes.ACTIVITY && u.user.id !== f, p = l.useMemo(() => {
     var e;
     return null !== (e = null == i ? void 0 : i.window) && void 0 !== e ? e : window
   }, [i]), g = (0, Z.default)({
@@ -84,7 +84,7 @@ function el(e) {
     popoutOpen: s,
     popoutWindow: i,
     currentWindow: p
-  }), S = n === X.AppContext.POPOUT && b.isPlatformEmbedded && U.default.supportsFeature(X.NativeFeatures.POPOUT_WINDOWS);
+  }), S = n === X.AppContext.POPOUT && D.isPlatformEmbedded && U.default.supportsFeature(X.NativeFeatures.POPOUT_WINDOWS);
   return (0, a.jsxs)(a.Fragment, {
     children: [m ? (0, a.jsx)(R.default, {
       context: (0, C.default)(u.type),
@@ -240,7 +240,7 @@ function er(e) {
         className: $.container,
         ref: R,
         children: [(0, a.jsx)("div", {
-          className: i()($.callContainer, (0, D.getThemeClass)(X.ThemeTypes.DARK), {
+          className: i()($.callContainer, (0, b.getThemeClass)(X.ThemeTypes.DARK), {
             [$.sidebarVisible]: s,
             [$.sidebarOrChatVisible]: s || N
           }),

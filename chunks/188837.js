@@ -11,15 +11,15 @@ var n = a("735250"),
   c = a("620929"),
   f = a("308083"),
   E = a("689938"),
-  h = a("653196");
+  h = a("156610");
 t.default = e => {
   let {
     guildId: t,
     setPage: _,
     onClose: C
   } = e, m = s.useRef(null), S = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), {
-    progress: I,
-    errors: p,
+    progress: p,
+    errors: I,
     submitting: T
   } = (0, i.useStateFromStoresObject)([d.default], () => d.default.getStateForGuild(t)), {
     gameApplicationIds: g,
@@ -29,14 +29,14 @@ t.default = e => {
     tag: R,
     verificationForm: L,
     badgeKind: O,
-    badgePrimaryColor: P,
-    badgeSecondaryColor: M,
+    badgePrimaryColor: M,
+    badgeSecondaryColor: P,
     banner: x,
     brandPrimaryColor: y,
     brandSecondaryColor: D,
     wildcardDescriptors: b,
     badgeImage: U
-  } = null != I ? I : {}, j = s.useRef(null), G = s.useRef(null), w = s.useRef(null), [k, F] = s.useState(!1), B = async () => {
+  } = null != p ? p : {}, j = s.useRef(null), G = s.useRef(null), w = s.useRef(null), [k, F] = s.useState(!1), B = async () => {
     try {
       await u.convertGuildToClan(t, {
         gameApplicationIds: g,
@@ -46,8 +46,8 @@ t.default = e => {
         tag: R,
         verificationForm: L,
         badgeKind: O,
-        badgePrimaryColor: P,
-        badgeSecondaryColor: M,
+        badgePrimaryColor: M,
+        badgeSecondaryColor: P,
         banner: x,
         brandPrimaryColor: y,
         brandSecondaryColor: D,
@@ -103,7 +103,7 @@ t.default = e => {
     }
   });
   (0, l.useChain)([j, G, w], [0, 0, 1]);
-  let W = s.useMemo(() => null != p && Object.values(p).some(e => null != e), [p]);
+  let W = s.useMemo(() => null != I && Object.values(I).some(e => null != e), [I]);
   return (0, n.jsxs)("div", {
     className: h.animationContainer,
     children: [(0, n.jsxs)(l.animated.div, {

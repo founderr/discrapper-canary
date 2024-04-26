@@ -26,8 +26,8 @@ var n = a("735250"),
   C = a("210887"),
   m = a("23434"),
   S = a("610001"),
-  I = a("78415"),
-  p = a("1964"),
+  p = a("78415"),
+  I = a("1964"),
   T = a("981631"),
   g = a("815660"),
   A = a("689938");
@@ -41,7 +41,7 @@ function R() {
   } = (0, i.useStateFromStoresObject)([m.default, C.default], () => ({
     action: m.default.getAction(),
     theme: C.default.theme
-  })), R = p.default.getVerificationTypes(e), [L, O] = s.useState(0), P = (0, f.default)(R);
+  })), R = I.default.getVerificationTypes(e), [L, O] = s.useState(0), M = (0, f.default)(R);
   (0, h.default)({
     type: l.ImpressionTypes.MODAL,
     name: l.ImpressionNames.USER_ACTION_REQUIRED,
@@ -50,7 +50,7 @@ function R() {
       verification_types: R
     }
   }, {}, [R.toString()]);
-  let M = () => {
+  let P = () => {
       (0, c.accountDetailsInit)(), (0, o.openModalLazy)(async () => {
         let {
           default: e
@@ -60,7 +60,7 @@ function R() {
         })
       }, {
         modalKey: N,
-        Layer: I.default
+        Layer: p.default
       })
     },
     x = () => {
@@ -74,13 +74,13 @@ function R() {
         })
       }, {
         modalKey: g.PHONE_VERIFICATION_MODAL_KEY,
-        Layer: I.default
+        Layer: p.default
       })
     };
   return s.useEffect(() => (E.default.disable(), () => {
     E.default.enable()
   }), []), s.useEffect(() => {
-    (null == P ? void 0 : P[0]) === T.VerificationTypes.PHONE && (null == R ? void 0 : R[0]) === T.VerificationTypes.EMAIL && (0, o.openModalLazy)(async () => {
+    (null == M ? void 0 : M[0]) === T.VerificationTypes.PHONE && (null == R ? void 0 : R[0]) === T.VerificationTypes.EMAIL && (0, o.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.resolve().then(a.bind(a, "468026"));
@@ -92,10 +92,10 @@ function R() {
       })
     }, {
       modalKey: v,
-      Layer: I.default,
-      onCloseCallback: M
+      Layer: p.default,
+      onCloseCallback: P
     })
-  }, [R, P]), (0, n.jsx)(S.default, {
+  }, [R, M]), (0, n.jsx)(S.default, {
     types: R,
     captchaKey: L,
     onCaptchaVerify: e => {
@@ -111,7 +111,7 @@ function R() {
     },
     theme: t,
     onClick: e => {
-      e === T.VerificationTypes.EMAIL_OR_PHONE || e === T.VerificationTypes.EMAIL || e === T.VerificationTypes.REVERIFY_EMAIL ? M() : x()
+      e === T.VerificationTypes.EMAIL_OR_PHONE || e === T.VerificationTypes.EMAIL || e === T.VerificationTypes.REVERIFY_EMAIL ? P() : x()
     },
     onLogout: () => {
       (0, o.openModalLazy)(async () => {
@@ -131,7 +131,7 @@ function R() {
           })
         })
       }, {
-        Layer: I.default
+        Layer: p.default
       })
     }
   })

@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return y
   },
   ReadonlyCategoryChannel: function() {
-    return D
+    return b
   },
   VoiceChannelCategory: function() {
-    return b
+    return D
   },
   VoiceChannelCategoryButton: function() {
     return O
@@ -24,20 +24,20 @@ var l = n("735250"),
   c = n("239091"),
   f = n("146773"),
   h = n("680089"),
-  p = n("430824"),
-  m = n("496675"),
+  m = n("430824"),
+  p = n("496675"),
   C = n("9156"),
   g = n("514342"),
   E = n("696202"),
-  S = n("605403"),
-  _ = n("908773"),
+  _ = n("605403"),
+  S = n("908773"),
   I = n("632184"),
   N = n("151827"),
   T = n("203818"),
   A = n("438144"),
   L = n("981631"),
   v = n("689938"),
-  x = n("850992");
+  x = n("644477");
 
 function R(e) {
   e.stopPropagation()
@@ -54,15 +54,15 @@ let M = a.memo(function(e) {
       children: y
     } = e,
     O = (0, o.useStateFromStores)([C.default], () => C.default.isChannelMuted(s.getGuildId(), s.id)),
-    b = (0, o.useStateFromStores)([h.default], () => h.default.isCollapsed(s.id)),
-    D = (0, o.useStateFromStores)([m.default], () => m.default.can(L.Permissions.MANAGE_CHANNELS, s));
+    D = (0, o.useStateFromStores)([h.default], () => h.default.isCollapsed(s.id)),
+    b = (0, o.useStateFromStores)([p.default], () => p.default.can(L.Permissions.MANAGE_CHANNELS, s));
   t = null != A ? T > A ? x.containerDragAfter : x.containerDragBefore : x.containerDefault;
   let j = a.useCallback(() => {
-      b ? (0, d.categoryExpand)(s.id) : (0, d.categoryCollapse)(s.id)
-    }, [s.id, b]),
+      D ? (0, d.categoryExpand)(s.id) : (0, d.categoryCollapse)(s.id)
+    }, [s.id, D]),
     P = a.useCallback(e => {
       if ("null" !== s.id) {
-        let t = p.default.getGuild(s.getGuildId());
+        let t = m.default.getGuild(s.getGuildId());
         null != t && (0, c.openContextMenuLazy)(e, async () => {
           let {
             default: e
@@ -96,21 +96,21 @@ let M = a.memo(function(e) {
       ...F
     } = (0, r.useListItem)(s.id),
     B = a.useRef(null),
-    H = a.useRef(null),
-    V = (0, l.jsxs)("li", {
+    V = a.useRef(null),
+    H = (0, l.jsxs)("li", {
       className: t,
       "data-dnd-name": s.name,
       children: [(0, l.jsx)(u.FocusRing, {
         focusTarget: B,
-        ringTarget: H,
+        ringTarget: V,
         offset: {
           left: 4,
           right: 4
         },
         children: (0, l.jsxs)("div", {
-          ref: H,
+          ref: V,
           className: i()(x.iconVisibility, x.wrapper, {
-            [x.collapsed]: b,
+            [x.collapsed]: D,
             [x.muted]: O,
             [x.clickable]: !0
           }),
@@ -124,11 +124,11 @@ let M = a.memo(function(e) {
             "aria-label": v.default.Messages.CATEGORY_A11Y_LABEL.format({
               categoryName: s.name
             }),
-            "aria-expanded": !b,
+            "aria-expanded": !D,
             focusProps: {
               enabled: !1
             },
-            children: [M ? null : (0, l.jsx)(S.default, {
+            children: [M ? null : (0, l.jsx)(_.default, {
               className: x.icon
             }), (0, l.jsx)(N.default, {
               className: x.name,
@@ -139,7 +139,7 @@ let M = a.memo(function(e) {
           }), (0, l.jsx)("div", {
             onClick: R,
             className: x.children,
-            children: D && !I ? (0, l.jsx)(u.Tooltip, {
+            children: b && !I ? (0, l.jsx)(u.Tooltip, {
               text: v.default.Messages.CREATE_CHANNEL,
               children: e => {
                 let {
@@ -163,7 +163,7 @@ let M = a.memo(function(e) {
                       left: -4
                     }
                   },
-                  children: (0, l.jsx)(_.default, {
+                  children: (0, l.jsx)(S.default, {
                     width: 18,
                     height: 18,
                     className: x.addButtonIcon
@@ -175,7 +175,7 @@ let M = a.memo(function(e) {
         })
       }), y]
     });
-  return null != E && null != f ? E(f(V)) : V
+  return null != E && null != f ? E(f(H)) : H
 });
 t.default = (0, f.makeChannelSortable)(M);
 let y = a.memo(function(e) {
@@ -240,7 +240,7 @@ let y = a.memo(function(e) {
       })]
     })
   }),
-  b = a.memo(function(e) {
+  D = a.memo(function(e) {
     let {
       category: t,
       channel: n
@@ -262,7 +262,7 @@ let y = a.memo(function(e) {
       }
     })
   }),
-  D = a.memo(function(e) {
+  b = a.memo(function(e) {
     let {
       channel: t
     } = e;

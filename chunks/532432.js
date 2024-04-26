@@ -14,7 +14,7 @@ var n = s("120356"),
   d = s("993413"),
   u = s("486324"),
   c = s("689938"),
-  S = s("557304");
+  S = s("244355");
 let E = [{
   name: "gif",
   extensions: ["gif"]
@@ -26,8 +26,8 @@ function T(e) {
     errors: s,
     onAvatarChange: n,
     sectionTitle: T,
-    changeAvatarButtonText: m,
-    guildId: f,
+    changeAvatarButtonText: f,
+    guildId: m,
     className: _,
     disabled: g = !1,
     isTryItOutFlow: h = !1,
@@ -47,15 +47,15 @@ function T(e) {
           [S.buttonHighlighted]: N
         }),
         size: i.Button.Sizes.SMALL,
-        onClick: () => (0, o.handleOpenSelectImageModal)(u.UploadTypes.AVATAR, f, h, h ? E : void 0),
-        children: null != m ? m : c.default.Messages.USER_SETTINGS_CHANGE_AVATAR
+        onClick: () => (0, o.handleOpenSelectImageModal)(u.UploadTypes.AVATAR, m, h, h ? E : void 0),
+        children: null != f ? f : c.default.Messages.USER_SETTINGS_CHANGE_AVATAR
       }), t && (0, a.jsx)(i.Button, {
         className: S.removeButton,
         color: i.Button.Colors.PRIMARY,
         look: i.Button.Looks.LINK,
         size: i.Button.Sizes.SMALL,
         onClick: () => n(null),
-        children: null != f ? c.default.Messages.USER_SETTINGS_RESET_AVATAR : c.default.Messages.USER_SETTINGS_REMOVE_AVATAR
+        children: null != m ? c.default.Messages.USER_SETTINGS_RESET_AVATAR : c.default.Messages.USER_SETTINGS_REMOVE_AVATAR
       })]
     })
   })

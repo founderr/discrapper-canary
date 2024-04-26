@@ -24,7 +24,7 @@ var a = n("735250"),
   v = n("981631"),
   N = n("474936"),
   x = n("689938"),
-  M = n("526144");
+  M = n("706119");
 let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
   L = {
     opacity: 0,
@@ -43,10 +43,10 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
   P = {
     borderRadius: "".concat(R, "px ").concat(R, "px ").concat(R, "px ").concat(R, "px")
   },
-  b = {
+  D = {
     borderRadius: "0px ".concat(R, "px ").concat(R, "px 0px")
   },
-  D = {
+  b = {
     mass: 1,
     tension: 500,
     friction: 18,
@@ -67,7 +67,7 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
       {
         analyticsLocations: P
       } = (0, m.default)(),
-      b = null != (0, A.default)(r);
+      D = null != (0, A.default)(r);
     try {
       t = (0, I.isPremiumFPS)(j)
     } catch (e) {
@@ -78,14 +78,14 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
     } catch (e) {
       s = !1
     }
-    let D = t || s,
+    let b = t || s,
       {
         location: U
       } = (0, h.useAnalyticsContext)(),
       F = (0, u.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
       w = o && !T.default.isPremium(F, N.PremiumTypes.TIER_1) && !T.default.canStreamQuality(T.default.StreamQuality.MID, F),
       k = l.useCallback(() => {
-        w && D && (0, f.openModalLazy)(async () => {
+        w && b && (0, f.openModalLazy)(async () => {
           let {
             default: e
           } = await n.e("41549").then(n.bind(n, "78865"));
@@ -94,26 +94,26 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
             analyticsSource: U
           })
         })
-      }, [w, D, U]);
+      }, [w, b, U]);
     if (l.useEffect(() => {
-        !R && D && (_.default.track(v.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+        !R && b && (_.default.track(v.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
           type: N.PremiumUpsellTypes.STREAM_QUALITY_INDICATOR,
           has_premium_stream_fps: t,
           has_premium_stream_resolution: s,
           location_stack: P
         }), L(!0))
-      }, [t, s, D, R, L, P]), null == j) return null;
+      }, [t, s, b, R, L, P]), null == j) return null;
     let H = (0, a.jsx)(f.Tooltip, {
-      text: b ? x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : D ? x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
+      text: D ? x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : b ? x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : x.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
       position: "bottom",
       color: f.Tooltip.Colors.GREY,
       children: e => (0, a.jsxs)(f.Clickable, {
         ...e,
         onClick: k,
-        className: i()(M.qualityIndicator, p, S.LiveIndicatorShapes[c], b ? M.qualityIndicatorLowQuality : M.qualityIndicatorFullQuality, {
-          [M.clickable]: w && D
+        className: i()(M.qualityIndicator, p, S.LiveIndicatorShapes[c], D ? M.qualityIndicatorLowQuality : M.qualityIndicatorFullQuality, {
+          [M.clickable]: w && b
         }),
-        children: [D ? (0, a.jsx)(C.default, {
+        children: [b ? (0, a.jsx)(C.default, {
           className: M.premiumStreamIcon
         }) : null, (0, a.jsx)("span", {
           className: M.qualityResolution,
@@ -154,11 +154,11 @@ t.default = e => {
         to: E.enabled ? j : y
       },
       leave: E.enabled ? O : L,
-      config: D
+      config: b
     }),
     T = (0, r.useSpring)({
-      to: C ? b : P,
-      config: D
+      to: C ? D : P,
+      config: b
     });
   return (e => {
     let {

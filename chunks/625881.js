@@ -11,20 +11,20 @@ var a = s("735250"),
   c = s("63063"),
   p = s("74538"),
   m = s("937615"),
-  E = s("230916"),
-  f = s("798769"),
+  f = s("230916"),
+  E = s("798769"),
   _ = s("474936"),
   I = s("981631"),
   S = s("689938"),
-  N = s("248928"),
-  C = s("982404"),
-  h = s("299156");
+  N = s("569875"),
+  P = s("982404"),
+  C = s("299156");
 t.default = function(e) {
   let {
     premiumSubscription: t,
     premiumType: s,
     onClose: i,
-    onConfirm: P,
+    onConfirm: h,
     userDiscountOffer: T
   } = e, [A, R] = n.useState(!1), [y, M] = n.useState(!1), L = async e => {
     try {
@@ -33,14 +33,14 @@ t.default = function(e) {
         body: {
           user_discount_offer_id: e
         }
-      }), P()
+      }), h()
     } catch (e) {
       R(!0)
     }
     M(!1)
-  }, g = (0, d.default)(), x = (0, u.isThemeDark)(g) ? C : h, D = (0, E.useChurnDiscountedPrice)(t, _.SubscriptionPlans.PREMIUM_MONTH_TIER_2, T), b = (0, p.getPrice)(_.SubscriptionPlans.PREMIUM_MONTH_TIER_2), U = (0, m.formatPrice)(b.amount, b.currency);
+  }, g = (0, d.default)(), x = (0, u.isThemeDark)(g) ? P : C, D = (0, f.useChurnDiscountedPrice)(t, _.SubscriptionPlans.PREMIUM_MONTH_TIER_2, T), b = (0, p.getPrice)(_.SubscriptionPlans.PREMIUM_MONTH_TIER_2), U = (0, m.formatPrice)(b.amount, b.currency);
   return null == T ? null : (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(f.default, {
+    children: [(0, a.jsx)(E.default, {
       premiumType: s,
       onClose: i
     }), (0, a.jsx)(o.ModalContent, {

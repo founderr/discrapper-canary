@@ -35,7 +35,7 @@ var a = n("735250"),
   R = n("981631"),
   L = n("231873"),
   y = n("689938"),
-  O = n("811591");
+  O = n("124381");
 
 function j(e) {
   let {
@@ -80,8 +80,8 @@ function P(e) {
   } = e, s = (0, u.useStateFromStores)([S.default], () => null != t ? S.default.getGuild(t.getGuildId()) : null, [t]), f = null != s && x.default.extractTimestamp(s.id) < Date.now() - R.WELCOME_OLD_GUILD_AGE_THRESHOLD, T = (0, u.useStateFromStores)([g.default], () => (null == s ? void 0 : s.ownerId) === g.default.getId(), [s]), {
     canInvite: I,
     canManageGuild: P,
-    canMessage: b
-  } = (0, p.usePermissions)(t, s), D = (0, u.useStateFromStores)([_.default], () => {
+    canMessage: D
+  } = (0, p.usePermissions)(t, s), b = (0, u.useStateFromStores)([_.default], () => {
     var e, t;
     return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0
   }), {
@@ -168,7 +168,7 @@ function P(e) {
         }))
       }, [e])
     }
-  }(s), W = !(D || U || F || w), {
+  }(s), W = !(b || U || F || w), {
     titleAnimatedStyle: Y,
     opacities: z
   } = function(e) {
@@ -235,7 +235,7 @@ function P(e) {
       completed: w,
       onClick: B
     })
-  }, "customize")), b && Z.push((0, a.jsx)(o.default.div, {
+  }, "customize")), D && Z.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
       opacity: z[Z.length]
@@ -254,7 +254,7 @@ function P(e) {
     children: (0, a.jsx)(j, {
       iconUrl: n("435921"),
       header: y.default.Messages.WELCOME_CTA_DOWNLOAD_TITLE,
-      completed: D,
+      completed: b,
       onClick: G
     })
   }, "download")), Z.push((0, a.jsx)(o.default.div, {

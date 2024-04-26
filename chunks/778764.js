@@ -16,14 +16,14 @@ var a = s("735250"),
   S = s("360048"),
   E = s("287880"),
   T = s("358085"),
-  m = s("960048"),
-  f = s("998502"),
+  f = s("960048"),
+  m = s("998502"),
   _ = s("365007"),
   g = s("15980"),
   h = s("755733"),
   I = s("981631"),
   N = s("689938"),
-  p = s("854026");
+  p = s("467110");
 
 function C(e) {
   let {
@@ -34,11 +34,11 @@ function C(e) {
   } = e, S = (0, u.useUID)(), [E, g] = n.useState(""), [C, A] = n.useState(!0), [O, x] = n.useState(h.WebAuthnScreens.INIT), [R, M] = n.useState(""), [v, D] = n.useState(null), L = async () => {
     let e;
     x(h.WebAuthnScreens.REGISTER);
-    let t = T.isPlatformEmbedded && f.default.supportsFeature(I.NativeFeatures.WEBAUTHN) ? f.default.webAuthnRegister(c) : l.create(JSON.parse(c)).then(e => JSON.stringify(e));
+    let t = T.isPlatformEmbedded && m.default.supportsFeature(I.NativeFeatures.WEBAUTHN) ? m.default.webAuthnRegister(c) : l.create(JSON.parse(c)).then(e => JSON.stringify(e));
     try {
       e = await t
     } catch (e) {
-      m.default.captureException(e), D(N.default.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR), x(h.WebAuthnScreens.INIT);
+      f.default.captureException(e), D(N.default.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR), x(h.WebAuthnScreens.INIT);
       return
     }
     M(e), x(h.WebAuthnScreens.NAME)
@@ -261,7 +261,7 @@ function O() {
               challenge: s
             }))
           }).catch(e => {
-            e.message !== N.default.Messages.MFA_V2_CANCELED && m.default.captureException(e)
+            e.message !== N.default.Messages.MFA_V2_CANCELED && f.default.captureException(e)
           }).finally(() => {
             l(!1)
           })

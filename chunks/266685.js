@@ -16,21 +16,21 @@ var n = a("735250"),
   C = a("569984"),
   m = a("497505"),
   S = a("918701"),
-  I = a("340100"),
-  p = a("611855"),
+  p = a("340100"),
+  I = a("611855"),
   T = a("644646"),
   g = a("78826"),
   A = a("670638"),
   N = a("667105"),
   v = a("689938"),
-  R = a("396030");
+  R = a("861731");
 let L = s.forwardRef(function(e, t) {
   var a, l;
   let {
     className: L,
     isExpanded: O,
-    isExpansionAnimationComplete: P,
-    onCtxMenuOpen: M,
+    isExpansionAnimationComplete: M,
+    onCtxMenuOpen: P,
     onCtxMenuClose: x,
     onCtxMenuSelect: y,
     quest: D,
@@ -43,7 +43,7 @@ let L = s.forwardRef(function(e, t) {
   }, [D]), F = (0, N.useHandleClaimQuestsReward)({
     quest: D,
     location: m.QuestContent.QUEST_BAR
-  }), B = (null === (a = D.userStatus) || void 0 === a ? void 0 : a.enrolledAt) != null, H = (null === (l = D.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, V = s.useMemo(() => (0, S.hasQuestCollectibleRewards)(D.config), [D.config]), Y = O && P, W = (0, S.getQuestBarHeroAssetUrl)(D), K = (0, S.getQuestsInstructionsToWinReward)({
+  }), B = (null === (a = D.userStatus) || void 0 === a ? void 0 : a.enrolledAt) != null, H = (null === (l = D.userStatus) || void 0 === l ? void 0 : l.completedAt) != null, V = s.useMemo(() => (0, S.hasQuestCollectibleRewards)(D.config), [D.config]), Y = O && M, W = (0, S.getQuestBarHeroAssetUrl)(D), K = (0, S.getQuestsInstructionsToWinReward)({
     quest: D
   }), z = s.useMemo(() => {
     let e = (0, u.getContrastingColor)(D.config.colors.primary, {
@@ -90,7 +90,7 @@ let L = s.forwardRef(function(e, t) {
             })]
           })]
         }), (0, n.jsx)(A.QuestsEntryContextMenuPopout, {
-          onOpen: M,
+          onOpen: P,
           onClose: x,
           onSelect: y,
           questContent: m.QuestContent.QUEST_BAR,
@@ -119,7 +119,7 @@ let L = s.forwardRef(function(e, t) {
         color: "always-white",
         variant: "text-xs/normal",
         children: K
-      }), (0, n.jsx)(I.default, {
+      }), (0, n.jsx)(p.default, {
         quest: D
       })]
     }) : (0, n.jsxs)("div", {
@@ -129,10 +129,10 @@ let L = s.forwardRef(function(e, t) {
         ref: t,
         children: [(0, n.jsxs)("div", {
           className: R.utils,
-          children: [(0, n.jsx)(p.default, {
+          children: [(0, n.jsx)(I.default, {
             color: "always-white"
           }), (0, n.jsx)(A.QuestsEntryContextMenuPopout, {
-            onOpen: M,
+            onOpen: P,
             onClose: x,
             onSelect: y,
             questContent: m.QuestContent.QUEST_BAR,

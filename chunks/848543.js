@@ -20,12 +20,12 @@ var n = a("735250"),
   C = a("131951"),
   m = a("459273"),
   S = a("242291"),
-  I = a("792165"),
-  p = a("603074"),
+  p = a("792165"),
+  I = a("603074"),
   T = a("981631"),
   g = a("921944"),
   A = a("689938"),
-  N = a("815668");
+  N = a("594078");
 
 function v(e) {
   let {
@@ -36,8 +36,8 @@ function v(e) {
     ...L
   } = e, {
     mute: O,
-    suppress: P
-  } = (0, _.default)(t), M = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), x = O || P || M, [y, D] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
+    suppress: M
+  } = (0, _.default)(t), P = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), x = O || M || P, [y, D] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
     isSoundboardButtonDisabled: x
   }), [j, G] = (0, h.useGetDismissibleContent)(U), {
     analyticsLocations: w
@@ -69,11 +69,11 @@ function v(e) {
       let {
         closePopout: a
       } = e;
-      return (0, n.jsx)(p.default, {
+      return (0, n.jsx)(I.default, {
         guildId: b,
         channel: t,
         onClose: a,
-        gridNotice: j === o.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, n.jsx)(I.CustomCallSoundUpsell, {
+        gridNotice: j === o.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, n.jsx)(p.CustomCallSoundUpsell, {
           onClose: a,
           markAsDismissed: G
         }),
@@ -125,8 +125,8 @@ function v(e) {
     children: (0, n.jsx)(d.Tooltip, {
       text: function() {
         if (O) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
-        if (P) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
-        if (M) return A.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
+        if (M) return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
+        if (P) return A.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
         return A.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD
       }(),
       children: e => Y(e)

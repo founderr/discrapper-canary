@@ -31,12 +31,12 @@ var a = n("735250"),
   O = n("981631"),
   j = n("354459"),
   P = n("689938"),
-  b = n("682164");
+  D = n("934065");
 t.default = function(e) {
   var t, n;
   let {
     channelId: s
-  } = e, [D, U] = l.useState(!1), F = l.useCallback(() => U(!0), []), w = l.useCallback(() => U(!1), []), k = l.useContext(m.IdleStateContext), H = (0, r.useStateFromStores)([E.default], () => E.default.getCurrentUser()), B = (0, r.useStateFromStores)([h.default], () => h.default.getState().theme), G = (0, o.isThemeDark)(B) ? O.ThemeTypes.DARK : O.ThemeTypes.LIGHT, {
+  } = e, [b, U] = l.useState(!1), F = l.useCallback(() => U(!0), []), w = l.useCallback(() => U(!1), []), k = l.useContext(m.IdleStateContext), H = (0, r.useStateFromStores)([E.default], () => E.default.getCurrentUser()), B = (0, r.useStateFromStores)([h.default], () => h.default.getState().theme), G = (0, o.isThemeDark)(B) ? O.ThemeTypes.DARK : O.ThemeTypes.LIGHT, {
     isCurrentUserStreamingQuestApplication: V,
     quest: W
   } = (0, r.useStateFromStoresObject)([p.default, c.default, T.default], () => {
@@ -89,8 +89,8 @@ t.default = function(e) {
     el = (0, A.isTargetedForContent)(W, I.QuestContent.QUEST_BAR) && !ea;
   if (en || $ || el || !z) return null;
   let es = (0, a.jsx)(M.default, {
-    className: b.rewardTile,
-    autoplay: D,
+    className: D.rewardTile,
+    autoplay: b,
     quest: W,
     questContent: I.QuestContent.QUEST_LIVE_STREAM
   });
@@ -101,33 +101,33 @@ t.default = function(e) {
     children: () => {
       var e;
       return (0, a.jsxs)("div", {
-        className: i()(b.wrapper, {
-          [b.wrapperAccepted]: ee
+        className: i()(D.wrapper, {
+          [D.wrapperAccepted]: ee
         }),
         onFocus: F,
         onMouseEnter: F,
         onBlur: w,
         onMouseLeave: w,
         children: [!ee && (0, a.jsxs)("div", {
-          className: b.rewardTileWrapper,
+          className: D.rewardTileWrapper,
           children: [es, (0, a.jsx)(x.default, {
             bgOpacity: .32,
-            className: b.promotedTag
+            className: D.promotedTag
           })]
         }), (0, a.jsxs)("div", {
-          className: b.content,
+          className: D.content,
           children: [(0, a.jsxs)("div", {
-            className: b.heading,
+            className: D.heading,
             children: [ee && V ? es : (0, a.jsx)("img", {
-              className: b.gameTile,
+              className: D.gameTile,
               alt: W.config.messages.gameTitle,
               src: (0, A.getGameTileAssetUrl)(W, G)
             }), (0, a.jsxs)("div", {
-              className: b.__invalid_details,
+              className: D.__invalid_details,
               children: [(0, a.jsxs)("div", {
-                className: b.headingWithSubmenu,
+                className: D.headingWithSubmenu,
                 children: [(0, a.jsx)(u.Heading, {
-                  className: b.questTitle,
+                  className: D.questTitle,
                   variant: "heading-md/semibold",
                   color: "header-primary",
                   children: V ? (0, A.getContextualEntrypointHeading)(W) : P.default.Messages.QUESTS_TITLE.format({
@@ -140,10 +140,10 @@ t.default = function(e) {
                   shouldShowDisclosure: (null === (e = W.userStatus) || void 0 === e ? void 0 : e.enrolledAt) == null,
                   children: e => (0, a.jsx)(u.Clickable, {
                     ...e,
-                    className: b.submenuWrapper,
+                    className: D.submenuWrapper,
                     "aria-label": P.default.Messages.ACTIONS,
                     children: (0, a.jsx)(C.default, {
-                      className: b.submenuIcon
+                      className: D.submenuIcon
                     })
                   })
                 })]
@@ -158,21 +158,21 @@ t.default = function(e) {
               })]
             })]
           }), ee && !et && !V && (0, a.jsx)(y.default, {
-            autoplay: D,
+            autoplay: b,
             quest: W,
             questContent: I.QuestContent.QUEST_LIVE_STREAM
           }), (0, a.jsxs)("div", {
-            className: b.ctas,
+            className: D.ctas,
             children: [!ee && (0, a.jsxs)(a.Fragment, {
               children: [(0, a.jsx)(u.Button, {
-                className: b.cta,
+                className: D.cta,
                 color: u.Button.Colors.PRIMARY,
                 fullWidth: !0,
                 size: u.Button.Sizes.SMALL,
                 onClick: Q,
                 children: P.default.Messages.QUESTS_LEARN_MORE_V2
               }), (0, a.jsx)(u.Button, {
-                className: b.cta,
+                className: D.cta,
                 color: u.Button.Colors.BRAND,
                 fullWidth: !0,
                 onClick: q,
@@ -184,14 +184,14 @@ t.default = function(e) {
               color: u.tokens.colors.BG_BRAND,
               quest: W
             }), ee && !et && !V && (0, a.jsx)(u.Button, {
-              className: b.cta,
+              className: D.cta,
               color: u.Button.Colors.BRAND,
               fullWidth: !0,
               onClick: X,
               size: u.Button.Sizes.SMALL,
               children: P.default.Messages.QUESTS_TRACK_YOUR_PROGRESS
             }), et && (0, a.jsx)(u.Button, {
-              className: b.cta,
+              className: D.cta,
               color: u.Button.Colors.BRAND,
               fullWidth: !0,
               onClick: J,

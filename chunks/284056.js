@@ -19,9 +19,9 @@ var n = a("735250"),
   _ = a("626135"),
   C = a("981631"),
   m = a("689938"),
-  S = a("519161");
+  S = a("128600");
 
-function I(e, t, a) {
+function p(e, t, a) {
   return t in e ? Object.defineProperty(e, t, {
     value: a,
     enumerable: !0,
@@ -29,7 +29,7 @@ function I(e, t, a) {
     writable: !0
   }) : e[t] = a, e
 }
-class p extends s.PureComponent {
+class I extends s.PureComponent {
   componentDidMount() {
     this._initTimeout.start(1e3, this.setupVoiceActivity)
   }
@@ -146,14 +146,14 @@ class p extends s.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), I(this, "_initTimeout", new u.Timeout), I(this, "_silenceTimeout", new u.Timeout), I(this, "_messageTimeout", new u.Timeout), I(this, "_micTestStartTime", void 0), I(this, "state", {
+    super(...e), p(this, "_initTimeout", new u.Timeout), p(this, "_silenceTimeout", new u.Timeout), p(this, "_messageTimeout", new u.Timeout), p(this, "_micTestStartTime", void 0), p(this, "state", {
       volume: -100,
       isMicTesting: !1,
       isDetectingInput: !0,
       didDeafenUser: !1
-    }), I(this, "setupVoiceActivity", () => {
+    }), p(this, "setupVoiceActivity", () => {
       f.default.getMediaEngine().on(o.MediaEngineEvent.VoiceActivity, this.handleVoiceActivity)
-    }), I(this, "handleVoiceActivity", e => {
+    }), p(this, "handleVoiceActivity", e => {
       let {
         isMicTesting: t
       } = this.state;
@@ -171,7 +171,7 @@ class p extends s.PureComponent {
         volume: e,
         isDetectingInput: !0
       })
-    }), I(this, "handleToggleMicTest", () => {
+    }), p(this, "handleToggleMicTest", () => {
       this.state.isMicTesting ? this._micTestStop() : this._micTestStart()
     })
   }
@@ -205,4 +205,4 @@ t.default = r.default.connectStores([E.default, f.default], () => {
     inputDeviceName: null != a ? a.name : "",
     outputDeviceName: null != l ? l.name : ""
   }
-})(p)
+})(I)

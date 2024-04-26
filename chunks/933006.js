@@ -1,11 +1,11 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return S
   }
 }), s("47120");
-var n = s("735250"),
-  a = s("470079"),
+var a = s("735250"),
+  n = s("470079"),
   l = s("481060"),
   o = s("230711"),
   i = s("2052"),
@@ -13,31 +13,31 @@ var n = s("735250"),
   r = s("174609"),
   u = s("626135"),
   d = s("790527"),
-  O = s("940165"),
-  C = s("474936"),
+  C = s("940165"),
+  O = s("474936"),
   I = s("981631"),
   _ = s("871465"),
   T = s("689938"),
-  S = s("677804");
+  N = s("632246");
 
-function N(e) {
+function S(e) {
   let {
     onClose: t,
-    ...N
+    ...S
   } = e, U = (0, i.useAnalyticsContext)(), {
     analyticsLocations: M
-  } = (0, c.default)(), [f, p] = a.useState(!1);
-  a.useEffect(() => {
+  } = (0, c.default)(), [f, p] = n.useState(!1);
+  n.useEffect(() => {
     !f && (u.default.track(I.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      type: C.PremiumUpsellTypes.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
+      type: O.PremiumUpsellTypes.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
       location: U.location,
       location_stack: M
     }), p(!0))
   }, [U.location, M, f]);
   let A = (0, _.getCustomNotificationSoundpackOptions)();
-  return (0, n.jsx)(d.default, {
-    type: C.PremiumUpsellTypes.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
-    artContainerClassName: S.image,
+  return (0, a.jsx)(d.default, {
+    type: O.PremiumUpsellTypes.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
+    artContainerClassName: N.image,
     artURL: s("98165"),
     title: T.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_TITLE,
     glowUp: T.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_TITLE,
@@ -53,15 +53,15 @@ function N(e) {
       t(), o.default.open(I.UserSettingsSections.PREMIUM)
     },
     onClose: t,
-    ...N,
-    children: (0, n.jsx)(l.FormItem, {
+    ...S,
+    children: (0, a.jsx)(l.FormItem, {
       title: T.default.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_LABEL,
-      className: S.optionsContainerWrapper,
-      children: (0, n.jsx)("div", {
-        className: S.optionsContainer,
+      className: N.optionsContainerWrapper,
+      children: (0, a.jsx)("div", {
+        className: N.optionsContainer,
         children: A.map((e, t) => {
           let s = e.value;
-          return s === _.Soundpacks.CLASSIC ? null : (0, n.jsx)(O.default, {
+          return s === _.Soundpacks.CLASSIC ? null : (0, a.jsx)(C.default, {
             label: e.label,
             soundpack: s,
             description: e.description

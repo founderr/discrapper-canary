@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return p
+    return I
   }
 });
 var n = a("735250"),
@@ -20,13 +20,13 @@ var n = a("735250"),
   C = a("170245"),
   m = a("981631"),
   S = a("689938"),
-  I = a("220503");
+  p = a("870729");
 
-function p(e) {
+function I(e) {
   let {
     user: t,
     type: a,
-    status: p,
+    status: I,
     isFocused: T
   } = e, g = s.useContext(E.AnalyticsContext), {
     analyticsLocations: A
@@ -41,7 +41,7 @@ function p(e) {
         location: "Friends"
       }
     })
-  }, R = p === m.StatusTypes.OFFLINE ? m.StatusTypes.UNKNOWN : p, L = a === m.RelationshipTypes.PENDING_INCOMING ? S.default.Messages.INCOMING_FRIEND_REQUEST : S.default.Messages.OUTGOING_FRIEND_REQUEST;
+  }, R = I === m.StatusTypes.OFFLINE ? m.StatusTypes.UNKNOWN : I, L = a === m.RelationshipTypes.PENDING_INCOMING ? S.default.Messages.INCOMING_FRIEND_REQUEST : S.default.Messages.OUTGOING_FRIEND_REQUEST;
   return (0, n.jsx)(_.default, {
     isFocused: T,
     user: t,
@@ -54,7 +54,7 @@ function p(e) {
       var s;
       let i = a === m.RelationshipTypes.PENDING_INCOMING ? (0, n.jsxs)(n.Fragment, {
         children: [(null === (s = u.default.getCurrentUser()) || void 0 === s ? void 0 : s.isStaff()) && (null == t ? void 0 : t.isStaff()) && (0, n.jsx)("div", {
-          className: I.staffIndicator,
+          className: p.staffIndicator,
           children: (0, n.jsx)(f.TextBadge, {
             color: l.default.unsafe_rawColors.BRAND_500.css,
             text: S.default.Messages.STAFF_BADGE_TOOLTIP
@@ -80,16 +80,16 @@ function p(e) {
         shouldHighlight: e
       });
       return (0, n.jsxs)("div", {
-        className: I.listItemContents,
+        className: p.listItemContents,
         children: [(0, n.jsx)(C.default, {
           user: t,
           hovered: e,
           showAccountIdentifier: !0,
           status: R,
           subText: L,
-          className: I.userInfo
+          className: p.userInfo
         }), (0, n.jsx)("div", {
-          className: I.actions,
+          className: p.actions,
           children: i
         })]
       })

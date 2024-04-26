@@ -18,7 +18,7 @@ var r = s("613828"),
   f = s("981631"),
   S = s("474936"),
   m = s("689938"),
-  A = s("507954");
+  A = s("837750");
 let N = i.default.connectStores([T.default], () => ({
   user: T.default.getCurrentUser()
 }))((0, u.default)((0, o.default)(e => {

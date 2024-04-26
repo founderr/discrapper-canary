@@ -67,8 +67,8 @@ var n, s = a("729594"),
   C = a("430824"),
   m = a("131951"),
   S = a("375954"),
-  I = a("158776"),
-  p = a("594174"),
+  p = a("158776"),
+  I = a("594174"),
   T = a("979651"),
   g = a("70956"),
   A = a("5192"),
@@ -77,15 +77,15 @@ var n, s = a("729594"),
   R = a("863141"),
   L = a("186901"),
   O = a("981631");
-let P = null !== (n = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== n ? n : "localhost",
-  M = function() {
-    let e = P.split(":")[0];
+let M = null !== (n = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== n ? n : "localhost",
+  P = function() {
+    let e = M.split(":")[0];
     if (!e.includes(".")) return e;
     let t = e.split("."),
       a = t[t.length - 1];
     return /^\d+$/.test(a) ? e : t.slice(-2).join(".")
   }(),
-  x = new RegExp("^".concat(N.default.escape("https://"), "(?:[a-z]+\\.)?(").concat(N.default.escape(M), "|discordapp.com|discord.com)$")),
+  x = new RegExp("^".concat(N.default.escape("https://"), "(?:[a-z]+\\.)?(").concat(N.default.escape(P), "|discordapp.com|discord.com)$")),
   y = 1 * g.default.Millis.MINUTE,
   D = {};
 
@@ -112,7 +112,7 @@ function G(e, t) {
     })
   })), Promise.all(a).then(() => {
     var a;
-    let s = (!e.isNSFW() || (null === (a = p.default.getCurrentUser()) || void 0 === a ? void 0 : a.nsfwAllowed) === !0) && t ? S.default.getMessages(e.id).toArray().map(w) : [],
+    let s = (!e.isNSFW() || (null === (a = I.default.getCurrentUser()) || void 0 === a ? void 0 : a.nsfwAllowed) === !0) && t ? S.default.getMessages(e.id).toArray().map(w) : [],
       l = Object.values(T.default.getVoiceStatesForChannel(e.id)).map(t => k(n, e.id, t));
     return {
       id: e.id,
@@ -165,7 +165,7 @@ function k(e, t, a) {
     selfDeaf: i,
     suppress: r,
     userId: o
-  } = a, u = p.default.getUser(o);
+  } = a, u = I.default.getUser(o);
   if (null == u) throw Error("Invalid user id: ".concat(o));
   return {
     nick: A.default.getName(e, t, u),
@@ -184,13 +184,13 @@ function k(e, t, a) {
 }
 
 function F(e, t, a) {
-  let n = p.default.getUser(t);
+  let n = I.default.getUser(t);
   return {
     type: e,
     user: null != n ? (0, R.default)(n) : null,
     presence: {
-      status: I.default.getStatus(t),
-      activity: null != a ? I.default.getApplicationActivity(t, a) : I.default.getPrimaryActivity(t)
+      status: p.default.getStatus(t),
+      activity: null != a ? p.default.getApplicationActivity(t, a) : p.default.getPrimaryActivity(t)
     }
   }
 }

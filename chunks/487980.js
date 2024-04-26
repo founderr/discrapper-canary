@@ -1,22 +1,22 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   useIsEligibleSenderForReferralProgram: function() {
     return d
   },
   useIsEligibleSenderForReferralProgramTabBadge: function() {
-    return o
+    return u
   }
 });
-var r = n("442837"),
-  i = n("524437"),
-  s = n("605236"),
-  a = n("276444"),
-  l = n("520540"),
-  u = n("898997");
-let o = e => {
+var a = s("442837"),
+  r = s("524437"),
+  i = s("605236"),
+  n = s("276444"),
+  l = s("520540"),
+  o = s("898997");
+let u = e => {
     let t = d(e),
-      n = (0, s.useIsDismissibleContentDismissed)(i.DismissibleContent.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
-    return t && !n
+      s = (0, i.useIsDismissibleContentDismissed)(r.DismissibleContent.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
+    return t && !s
   },
   d = e => {
     let {
@@ -26,7 +26,7 @@ let o = e => {
     }, {
       autoTrackExposure: !1
     });
-    (0, u.useMaybeFetchReferralsRemaining)(e, !t);
-    let n = (0, r.useStateFromStores)([a.default], () => a.default.getIsEligibleToSendReferrals());
-    return t && n
+    (0, o.useMaybeFetchReferralsRemaining)(e, !t);
+    let s = (0, a.useStateFromStores)([n.default], () => n.default.getIsEligibleToSendReferrals());
+    return t && s
   }

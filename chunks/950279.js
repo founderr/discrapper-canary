@@ -11,7 +11,7 @@ var n = a("735250"),
   c = a("92373"),
   f = a("308083"),
   E = a("689938"),
-  h = a("597338");
+  h = a("418571");
 t.default = e => {
   let {
     handleUpdate: t,
@@ -21,12 +21,12 @@ t.default = e => {
   } = e, m = (0, l.useStateFromStores)([o.default], () => o.default.getId()), {
     recentGames: S
   } = (0, r.useUserRecentGames)(m), {
-    options: I,
-    matchSorterOptions: p
+    options: p,
+    matchSorterOptions: I
   } = (0, d.useClanSetupGameSelectableSearch)();
   s.useEffect(() => {
-    null != C && !a.has(C) && I.length > 0 && g(C)
-  }, [I.length, C]);
+    null != C && !a.has(C) && p.length > 0 && g(C)
+  }, [p.length, C]);
   let T = e => {
       if (!a.has(e) || e === C) return;
       let n = new Set(a);
@@ -56,12 +56,12 @@ t.default = e => {
       className: h.inputContainer,
       children: (0, n.jsx)(i.SearchableSelect, {
         wrapperClassName: h.input,
-        options: I,
+        options: p,
         value: "",
         placeholder: E.default.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
         onChange: g,
         isDisabled: a.size === f.MAX_NUM_SELECTED_GAMES,
-        matchSorterOptions: p
+        matchSorterOptions: I
       })
     }), (0, n.jsxs)("div", {
       className: h.contentWithMinHeight,

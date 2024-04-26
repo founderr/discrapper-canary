@@ -1,23 +1,23 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   useMultiAccountUsers: function() {
-    return s
+    return o
   }
 });
-var l = n("470079"),
-  a = n("442837"),
-  u = n("570140"),
-  r = n("480387"),
-  i = n("726745");
+var n = a("470079"),
+  s = a("442837"),
+  l = a("570140"),
+  i = a("480387"),
+  r = a("726745");
 
-function s() {
-  let e = (0, a.useStateFromStoresObject)([i.default], () => ({
-    isLoading: i.default.getIsValidatingUsers(),
-    multiAccountUsers: i.default.getUsers()
+function o() {
+  let e = (0, s.useStateFromStoresObject)([r.default], () => ({
+    isLoading: r.default.getIsValidatingUsers(),
+    multiAccountUsers: r.default.getUsers()
   }));
-  return l.useEffect(() => {
-    u.default.wait(() => {
-      r.validateMultiAccountTokens()
+  return n.useEffect(() => {
+    l.default.wait(() => {
+      i.validateMultiAccountTokens()
     })
   }, []), e
 }

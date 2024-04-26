@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return D
+    return b
   }
 }), n("47120"), n("390547"), n("653041");
 var l = n("735250");
@@ -16,13 +16,13 @@ var a = n("120356"),
   c = n("565799"),
   f = n("501655"),
   h = n("199902"),
-  p = n("592125"),
-  m = n("594174"),
+  m = n("592125"),
+  p = n("594174"),
   C = n("938475"),
   g = n("242315"),
   E = n("944581"),
-  S = n("632184"),
-  _ = n("170039"),
+  _ = n("632184"),
+  S = n("170039"),
   I = n("761374"),
   N = n("602623"),
   T = n("823379"),
@@ -30,8 +30,8 @@ var a = n("120356"),
   L = n("853856"),
   v = n("981631"),
   x = n("689938"),
-  R = n("499890"),
-  M = n("337341");
+  R = n("807801"),
+  M = n("630839");
 
 function y(e, t) {
   return 0 === t.length ? null : (0, l.jsxs)("div", {
@@ -48,7 +48,7 @@ function y(e, t) {
 
 function O() {
   var e, t;
-  let n = (0, o.useStateFromStoresArray)([L.default, p.default], () => A.default.keys(L.default.getFavoriteChannels()).map(e => p.default.getChannel(e)).filter(T.isNotNullish)),
+  let n = (0, o.useStateFromStoresArray)([L.default, m.default], () => A.default.keys(L.default.getFavoriteChannels()).map(e => m.default.getChannel(e)).filter(T.isNotNullish)),
     a = n.map(e => e.id),
     s = n.filter(e => e.type === v.ChannelTypes.GUILD_VOICE),
     i = n.filter(e => e.type === v.ChannelTypes.GUILD_STAGE_VOICE).map(e => e.id),
@@ -69,8 +69,8 @@ function O() {
       for (let t of i) e += c.default.getParticipantCount(t, f.StageChannelParticipantNamedIndex.AUDIENCE);
       return e
     }),
-    b = (0, o.useStateFromStoresArray)([h.default], () => h.default.getAllApplicationStreams().filter(e => a.includes(e.channelId)).map(e => e.ownerId), [a]),
-    D = (0, o.useStateFromStoresArray)([d.default], () => {
+    D = (0, o.useStateFromStoresArray)([h.default], () => h.default.getAllApplicationStreams().filter(e => a.includes(e.channelId)).map(e => e.ownerId), [a]),
+    b = (0, o.useStateFromStoresArray)([d.default], () => {
       let e = d.default.getEmbeddedActivitiesByChannel(),
         t = [];
       for (let s of a) {
@@ -79,12 +79,12 @@ function O() {
       }
       return t
     }, [a]),
-    j = (0, o.useStateFromStoresArray)([m.default], () => D.map(e => m.default.getUser(e)), [D]),
-    P = (0, o.useStateFromStoresArray)([m.default], () => b.map(e => m.default.getUser(e)), [b]),
-    G = y(S.default, x.filter(e => !b.includes(e.id) && !D.includes(e.id)));
+    j = (0, o.useStateFromStoresArray)([p.default], () => b.map(e => p.default.getUser(e)), [b]),
+    P = (0, o.useStateFromStoresArray)([p.default], () => D.map(e => p.default.getUser(e)), [D]),
+    G = y(_.default, x.filter(e => !D.includes(e.id) && !b.includes(e.id)));
   let U = (e = M, t = O, 0 === e.length ? null : (0, l.jsxs)("div", {
       className: R.row,
-      children: [(0, l.jsx)(_.default, {
+      children: [(0, l.jsx)(S.default, {
         className: R.activityIcon
       }), (0, l.jsx)(N.default, {
         guildId: void 0,
@@ -103,14 +103,14 @@ function O() {
         })]
       })]
     })),
-    w = y(I.default, P.filter(e => null != e && !D.includes(e.id))),
+    w = y(I.default, P.filter(e => null != e && !b.includes(e.id))),
     F = y(E.default, j);
   return (0, l.jsxs)(l.Fragment, {
     children: [U, G, w, F]
   })
 }
 
-function b() {
+function D() {
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)("div", {
       className: s()(R.row, R.rowGuildName),
@@ -122,7 +122,7 @@ function b() {
   })
 }
 
-function D(e) {
+function b(e) {
   let {
     "aria-label": t = !1,
     onShow: n,
@@ -132,7 +132,7 @@ function D(e) {
     hideOnClick: !0,
     spacing: 20,
     position: "right",
-    text: (0, l.jsx)(b, {}),
+    text: (0, l.jsx)(D, {}),
     "aria-label": t,
     tooltipClassName: M.listItemTooltip,
     onTooltipShow: n,

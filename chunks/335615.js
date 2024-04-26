@@ -35,8 +35,8 @@ var a = n("735250"),
   O = n("103575"),
   j = n("439170"),
   P = n("430824"),
-  b = n("111583"),
-  D = n("594174"),
+  D = n("111583"),
+  b = n("594174"),
   U = n("153124"),
   F = n("151827"),
   w = n("176278"),
@@ -46,7 +46,7 @@ var a = n("735250"),
   G = n("998502"),
   V = n("981631"),
   W = n("689938"),
-  Y = n("652985");
+  Y = n("354811");
 
 function z(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -188,7 +188,7 @@ let Q = l.memo(e => {
       channel: l,
       user: s,
       index: i
-    } = e, r = (0, u.useListItem)("".concat(i)), o = (0, c.useStateFromStores)([b.default], () => b.default.isTyping(l.id, s.id)), d = (0, c.useStateFromStores)([D.default], () => D.default.getCurrentUser()), f = (0, c.useStateFromStores)([P.default], () => {
+    } = e, r = (0, u.useListItem)("".concat(i)), o = (0, c.useStateFromStores)([D.default], () => D.default.isTyping(l.id, s.id)), d = (0, c.useStateFromStores)([b.default], () => b.default.getCurrentUser()), f = (0, c.useStateFromStores)([P.default], () => {
       var e;
       return null != t ? null === (e = P.default.getRole(l.guild_id, t)) || void 0 === e ? void 0 : e.name : void 0
     }, [l, t]);

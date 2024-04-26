@@ -31,8 +31,8 @@ var s = n("735250"),
   D = n("981631"),
   P = n("474936"),
   y = n("689938"),
-  U = n("715777"),
-  j = n("163237");
+  U = n("277103"),
+  j = n("180848");
 let b = (e, t) => t ? y.default.Messages.STICKER_POPOUT_PACK_INFO_PREMIUM.format({
     stickerPackName: e.name
   }) : y.default.Messages.STICKER_POPOUT_PACK_INFO_UNAVAILABLE.format({

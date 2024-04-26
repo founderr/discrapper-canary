@@ -78,8 +78,8 @@ t.default = {
         S = (0, d.computeActivityFlags)(_, m);
       S > 0 && (_.flags = S), delete _.instance, null === (t = _.party) || void 0 === t || delete t.privacy;
       let {
-        assets: I,
-        party: p,
+        assets: p,
+        party: I,
         secrets: T,
         timestamps: g,
         buttons: A,
@@ -87,7 +87,7 @@ t.default = {
       } = _;
       if ((null == N || N !== E.ActivityTypes.PLAYING && !m) && (_.type = E.ActivityTypes.PLAYING), null != T) {
         let e = s().values(T).filter(e => !!e);
-        if (null != p && s().intersection(e, [p.id]).length > 0 && !h.includes(n.application.id)) throw new u.default({
+        if (null != I && s().intersection(e, [I.id]).length > 0 && !h.includes(n.application.id)) throw new u.default({
           errorCode: E.RPCErrors.INVALID_ACTIVITY_SECRET
         }, "secrets cannot match the party id");
         if (s().uniq(e).length < e.length) throw new u.default({
@@ -101,15 +101,15 @@ t.default = {
           button_urls: A.map(e => e.url)
         }, _.buttons = A.map(e => e.label)), null != g)
         for (let e of Object.keys(g)) Date.now().toString().length - g[e].toString().length > 2 && (g[e] = Math.floor(g[e] * o.default.Millis.SECOND));
-      if (null == I) a = Promise.resolve([]);
+      if (null == p) a = Promise.resolve([]);
       else {
         if (null == n.application || null == n.application.id) throw Error();
-        a = (0, r.fetchAssetIds)(n.application.id, [I.large_image, I.small_image])
+        a = (0, r.fetchAssetIds)(n.application.id, [p.large_image, p.small_image])
       }
       return a.then(e => {
         var t, a;
         let [s, r] = e;
-        if (null != I && (null != s ? I.large_image = s : delete I.large_image, null != r ? I.small_image = r : delete I.small_image), !C()) return;
+        if (null != p && (null != s ? p.large_image = s : delete p.large_image, null != r ? p.small_image = r : delete p.small_image), !C()) return;
         l.default.dispatch({
           type: "LOCAL_ACTIVITY_UPDATE",
           socketId: n.id,
@@ -126,7 +126,7 @@ t.default = {
           details: null !== (t = _.details) && void 0 !== t ? t : "",
           state: null !== (a = _.state) && void 0 !== a ? a : ""
         };
-        return null != o && (d.has_match_secret = !!o.match, d.has_join_secret = !!o.join), null != I && (d.has_images = !!(I.large_image || I.small_image)), null != u && (d.party_max = null != u.size ? u.size[1] : void 0, d.party_id = u.id), i.default.track(E.AnalyticEvents.ACTIVITY_UPDATED, d), _
+        return null != o && (d.has_match_secret = !!o.match, d.has_join_secret = !!o.join), null != p && (d.has_images = !!(p.large_image || p.small_image)), null != u && (d.party_max = null != u.size ? u.size[1] : void 0, d.party_id = u.id), i.default.track(E.AnalyticEvents.ACTIVITY_UPDATED, d), _
       })
     }
   }
