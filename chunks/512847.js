@@ -197,24 +197,41 @@ function U() {
 function j() {
   return O([T.default, o.default, _.default], () => {
     let e = T.default.getVoiceChannelId(),
-      t = _.default.getId(),
-      a = (0, v.isNotNullish)(e) ? o.default.getEmbeddedActivitiesForChannel(e) : o.NO_ACTIVITIES;
+      t = T.default.getChannelId(),
+      a = o.default.getConnectedActivityChannelId(),
+      n = _.default.getId(),
+      s = (0, v.isNotNullish)(t) ? o.default.getEmbeddedActivitiesForChannel(t) : o.NO_ACTIVITIES,
+      l = (0, v.isNotNullish)(e) ? o.default.getEmbeddedActivitiesForChannel(e) : o.NO_ACTIVITIES,
+      i = (0, v.isNotNullish)(a) ? o.default.getEmbeddedActivitiesForChannel(a) : o.NO_ACTIVITIES;
     return {
       voiceChannelId: e,
-      currentUserId: t,
-      channelActivities: a
+      currentUserId: n,
+      channelActivities: s,
+      connectedChannelActivities: i,
+      userConnectedActivity: (0, v.isNotNullish)(a) ? o.default.getSelfEmbeddedActivityForChannel(a) : null,
+      voiceChannelActivities: l
     }
   }, (e, t) => {
     let a, {
       voiceChannelId: n,
       currentUserId: s,
-      channelActivities: l
+      channelActivities: l,
+      connectedChannelActivities: i,
+      userConnectedActivity: r,
+      voiceChannelActivities: o
     } = t;
-    if (null == n) return;
-    e.channelActivities.length < l.length && (a = "activity_launch");
-    let i = e.channelActivities.find(e => e.userIds.has(s)),
-      r = l.find(e => e.userIds.has(s));
-    return void 0 === r && (0, v.isNotNullish)(i) && (a = "activity_end"), void 0 === i && (0, v.isNotNullish)(r) && r.userIds.size > 1 && (a = "activity_user_join"), (0, v.isNotNullish)(r) && (0, v.isNotNullish)(i) && (r.userIds.size > i.userIds.size && (a = "activity_user_join"), r.userIds.size < i.userIds.size && (a = "activity_user_left")), a
+    let u = o.some(e => e.applicationId === (null == r ? void 0 : r.applicationId) && e.instanceId === r.instanceId);
+    if ((0, v.isNotNullish)(n)) {
+      let t = e.voiceChannelActivities.find(e => e.userIds.has(s)),
+        n = o.find(e => e.userIds.has(s));
+      e.voiceChannelActivities.length < o.length && (0, v.isNotNullish)(e.voiceChannelId) && (a = "activity_launch"), void 0 === n && (0, v.isNotNullish)(t) && (a = "activity_end"), void 0 === t && (0, v.isNotNullish)(n) && n.userIds.size > 1 && (a = "activity_user_join"), (0, v.isNotNullish)(n) && (0, v.isNotNullish)(t) && (n.userIds.size > t.userIds.size && (a = "activity_user_join"), n.userIds.size < t.userIds.size && (a = "activity_user_left"))
+    }
+    if (!u) {
+      e.connectedChannelActivities.length < i.length && e.channelActivities.length < l.length && (a = "activity_launch");
+      let t = e.userConnectedActivity;
+      null == r && (0, v.isNotNullish)(t) && (a = "activity_end"), (0, v.isNotNullish)(r) && (0, v.isNotNullish)(t) && (r.userIds.size > t.userIds.size && (a = "activity_user_join"), r.userIds.size < t.userIds.size && (a = "activity_user_left"))
+    }
+    return a
   }), null
 }
 
