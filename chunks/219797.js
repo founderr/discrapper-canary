@@ -111,6 +111,8 @@ function I(e) {
     fileSize: r.size,
     fileName: r.filename,
     src: r.url,
+    durationSecs: r.duration_secs,
+    waveform: r.waveform,
     onPlay: a,
     onPause: l,
     onError: o
