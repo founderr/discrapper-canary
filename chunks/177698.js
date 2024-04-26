@@ -4,64 +4,66 @@ var n = a("735250");
 a("470079");
 var s = a("481060"),
   l = a("813615"),
-  i = a("69580"),
-  r = a("358085"),
-  o = a("998502"),
-  u = a("703912"),
-  d = a("981631");
-t.default = (0, u.default)(e => {
+  i = a("812206"),
+  r = a("69580"),
+  o = a("358085"),
+  u = a("998502"),
+  d = a("703912"),
+  c = a("981631");
+t.default = (0, d.default)(e => {
+  var t;
   let {
-    clientId: t,
-    authorization: a,
-    scopes: r,
-    parsedPermissions: o,
-    responseType: u,
-    redirectUri: d,
-    codeChallenge: c,
-    codeChallengeMethod: f,
-    state: E,
-    guildId: h,
-    channelId: _,
-    prompt: C,
-    disableGuildSelect: m,
-    disclosures: S,
-    integrationType: p
-  } = e, I = "OAuth2Authorize_".concat(t, "_").concat(h, "_").concat(_);
+    clientId: a,
+    authorizations: o,
+    scopes: u,
+    parsedPermissions: d,
+    responseType: c,
+    redirectUri: f,
+    codeChallenge: E,
+    codeChallengeMethod: h,
+    state: _,
+    guildId: C,
+    channelId: m,
+    prompt: S,
+    disableGuildSelect: p,
+    disclosures: I,
+    integrationType: T
+  } = e, g = "OAuth2Authorize_".concat(a, "_").concat(C, "_").concat(m), A = null != T ? null == o ? void 0 : o.get(T) : void 0, N = null !== (t = null == A ? void 0 : A.application) && void 0 !== t ? t : i.default.getApplication(a);
   return new Promise(e => {
-    let T = t => {
+    let t = t => {
       let {
         location: a
       } = t;
       e(a)
     };
-    (0, s.openModal)(e => (0, n.jsx)(i.OAuth2AuthorizeModal, {
+    (0, s.openModal)(e => (0, n.jsx)(r.OAuth2AuthorizeModal, {
       ...e,
-      authorization: a,
-      clientId: t,
-      scopes: null != r ? r : [],
-      disclosures: null != S ? S : [],
-      callback: T,
-      responseType: u,
-      redirectUri: d,
-      codeChallenge: c,
-      codeChallengeMethod: f,
-      state: E,
-      permissions: o,
-      guildId: h,
-      channelId: _,
-      prompt: C,
-      disableGuildSelect: "boolean" == typeof m ? m : "true" === m,
-      integrationType: p
+      authorizations: o,
+      clientId: a,
+      scopes: null != u ? u : [],
+      disclosures: null != I ? I : [],
+      callback: t,
+      responseType: c,
+      redirectUri: f,
+      codeChallenge: E,
+      codeChallengeMethod: h,
+      state: _,
+      permissions: d,
+      guildId: C,
+      channelId: m,
+      prompt: S,
+      disableGuildSelect: "boolean" == typeof p ? p : "true" === p,
+      integrationType: T
     }), {
-      modalKey: I,
+      modalKey: g,
       onCloseRequest: () => {
-        (0, s.closeModal)(I), e(void 0)
+        (0, s.closeModal)(g), e(void 0)
       }
-    }, (0, l.default)(a.application, _) ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT)
+    }, null != N && (0, l.default)(N, m) ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT)
   })
 }, function(e, t) {
-  if (r.isPlatformEmbedded) {
-    let a = (0, l.default)(e, t) ? d.PopoutWindowKeys.CHANNEL_CALL_POPOUT : null;
-    (0, r.isWindows)() ? o.default.minimize(a): o.default.restore(a), o.default.focus(a)
+  if (o.isPlatformEmbedded) {
+    let a = (0, l.default)(e, t) ? c.PopoutWindowKeys.CHANNEL_CALL_POPOUT : null;
+    (0, o.isWindows)() ? u.default.minimize(a): u.default.restore(a), u.default.focus(a)
   }
 })

@@ -26,41 +26,46 @@ var n = a("664751"),
 let g = "CachedTokens";
 async function A(e, t, a) {
   var n, i;
-  let r, o, u, I, {
-    client_id: g,
-    response_type: A = "code",
-    redirect_uri: N,
-    code_challenge: v,
-    code_challenge_method: R,
-    state: L,
-    nonce: O,
-    scope: M,
-    permissions: P,
-    guild_id: x,
-    channel_id: y,
-    prompt: D,
-    disable_guild_select: b,
-    integration_type: U
+  let r;
+  let o, u, I, g, {
+    client_id: A,
+    response_type: N = "code",
+    redirect_uri: v,
+    code_challenge: R,
+    code_challenge_method: L,
+    state: O,
+    nonce: M,
+    scope: P,
+    permissions: x,
+    guild_id: y,
+    channel_id: D,
+    prompt: b,
+    disable_guild_select: U,
+    integration_type: j
   } = e;
-  if (null == g) throw new p.default({
+  if (null == A) throw new p.default({
     errorCode: T.RPCErrors.OAUTH2_ERROR
   }, "No Client ID provided");
-  if (null != N) throw new p.default({
+  if (null != v) throw new p.default({
     errorCode: T.RPCErrors.OAUTH2_ERROR
   }, "Redirect URI cannot be used in the RPC OAuth2 Authorization flow");
-  let j = [];
-  if ("string" == typeof M ? j = M.split(" ").filter(e => e.length > 0) : Array.isArray(M) && (j = M), null == C.default.getCurrentUser()) throw new p.default({
+  let G = [];
+  if ("string" == typeof P ? G = P.split(" ").filter(e => e.length > 0) : Array.isArray(P) && (G = P), null == C.default.getCurrentUser()) throw new p.default({
     errorCode: T.RPCErrors.OAUTH2_ERROR
   }, "Client is not logged in");
+  let w = null !== (i = d.default.getApplication(A)) && void 0 !== i ? i : _.default.createFromServer(await (0, h.fetchApplication)(A)),
+    k = null != w && (0, m.hasFlag)(w.flags, T.ApplicationFlags.EMBEDDED) && (null === (n = w.integrationTypesConfig) || void 0 === n ? void 0 : n[s.ApplicationIntegrationType.USER_INSTALL]) != null;
+  o = null == j ? k ? s.ApplicationIntegrationType.USER_INSTALL : s.ApplicationIntegrationType.GUILD_INSTALL : Number(j);
   try {
-    r = await (0, f.fetchAuthorization)({
-      clientId: g,
-      scopes: j,
-      responseType: A,
-      redirectUri: N,
-      codeChallenge: v,
-      codeChallengeMethod: R,
-      state: L
+    u = await (0, f.fetchAuthorization)({
+      clientId: A,
+      scopes: G,
+      responseType: N,
+      redirectUri: v,
+      codeChallenge: R,
+      codeChallengeMethod: L,
+      state: O,
+      integrationType: o
     })
   } catch (t) {
     let {
@@ -72,9 +77,9 @@ async function A(e, t, a) {
   }
   try {
     ({
-      disclosures: o,
-      allAcked: u
-    } = await (0, c.getDisclosures)(r.application.id))
+      disclosures: I,
+      allAcked: g
+    } = await (0, c.getDisclosures)(u.application.id))
   } catch (t) {
     let {
       body: e
@@ -83,20 +88,18 @@ async function A(e, t, a) {
       errorCode: T.RPCErrors.OAUTH2_ERROR
     }, "OAuth2 Authorization Error: ".concat(e.message || "Unknown Error"))
   }
-  let G = null !== (i = d.default.getApplication(g)) && void 0 !== i ? i : _.default.createFromServer(await (0, h.fetchApplication)(g)),
-    w = null != G && (0, m.hasFlag)(G.flags, T.ApplicationFlags.EMBEDDED) && (null === (n = G.integrationTypesConfig) || void 0 === n ? void 0 : n[s.ApplicationIntegrationType.USER_INSTALL]) != null;
-  if (I = null == U ? w ? s.ApplicationIntegrationType.USER_INSTALL : s.ApplicationIntegrationType.GUILD_INSTALL : Number(U), D === E.OAuth2Prompts.NONE && null != r && r.authorized && u) try {
+  if (b === E.OAuth2Prompts.NONE && null != u && u.authorized && g) try {
     return (await (0, f.authorize)({
       authorize: !0,
-      clientId: g,
-      scopes: j,
-      responseType: A,
-      redirectUri: N,
-      codeChallenge: v,
-      codeChallengeMethod: R,
-      state: L,
-      nonce: O,
-      integrationType: I
+      clientId: A,
+      scopes: G,
+      responseType: N,
+      redirectUri: v,
+      codeChallenge: R,
+      codeChallengeMethod: L,
+      state: O,
+      nonce: M,
+      integrationType: o
     })).location
   } catch (t) {
     let {
@@ -106,27 +109,27 @@ async function A(e, t, a) {
       errorCode: T.RPCErrors.OAUTH2_ERROR
     }, "OAuth2 Authorize Error: ".concat(e.message || "Unknown Error"))
   }
-  null == a || a(r.application, y);
-  let k = S.NONE;
+  null == a || a(u.application, D);
+  let F = S.NONE;
   try {
-    k = l.deserialize(null != P ? P : 0)
+    F = l.deserialize(null != x ? x : 0)
   } catch (e) {}
-  return t({
-    clientId: g,
-    authorization: r,
-    scopes: j,
-    parsedPermissions: k,
-    responseType: A,
-    redirectUri: N,
-    codeChallenge: v,
-    codeChallengeMethod: R,
-    state: L,
-    guildId: x,
-    channelId: y,
-    prompt: D,
-    disableGuildSelect: b,
-    disclosures: o,
-    integrationType: I
+  return null != u.integration_type && Object.values(s.ApplicationIntegrationType).includes(u.integration_type) && (r = new Map).set(u.integration_type, u), t({
+    clientId: A,
+    authorizations: r,
+    scopes: G,
+    parsedPermissions: F,
+    responseType: N,
+    redirectUri: v,
+    codeChallenge: R,
+    codeChallengeMethod: L,
+    state: O,
+    guildId: y,
+    channelId: D,
+    prompt: b,
+    disableGuildSelect: U,
+    disclosures: I,
+    integrationType: o
   })
 }
 
