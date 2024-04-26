@@ -24,8 +24,8 @@ var l = a("735250"),
   x = a("333867"),
   S = a("329067"),
   T = a("981631"),
-  L = a("302800"),
-  v = a("689938"),
+  v = a("302800"),
+  L = a("689938"),
   I = a("777374");
 let N = e => {
   let {
@@ -53,7 +53,7 @@ function _(e) {
   } = (0, f.default)(d.default.COLLECTIBLES_SHOP_CARD), {
     confettiColors: B,
     buttonColors: D
-  } = (0, C.default)(t.styles), F = (0, n.useStateFromStores)([c.default], () => c.default.useReducedMotion), M = (0, L.getCustomConfettiDisplayOptions)(t.skuId), [w, H] = s.useState(!1), [U, W] = s.useState(!1), G = null != D ? {
+  } = (0, C.default)(t.styles), F = (0, n.useStateFromStores)([c.default], () => c.default.useReducedMotion), M = (0, v.getCustomConfettiDisplayOptions)(t.skuId), [w, H] = s.useState(!1), [U, W] = s.useState(!1), G = null != D ? {
     background: (0, h.getBackgroundGradient)(D, 90),
     color: D.text.toHslString()
   } : void 0, V = (0, E.default)({
@@ -127,7 +127,7 @@ function _(e) {
             analyticsLocations: P
           })
         },
-        children: v.default.Messages.COLLECTIBLES_USE_NOW
+        children: L.default.Messages.COLLECTIBLES_USE_NOW
       })]
     }) : (0, l.jsxs)("div", {
       className: I.cardDetails,

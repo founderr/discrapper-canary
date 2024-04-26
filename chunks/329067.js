@@ -1,10 +1,10 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return v
+    return L
   },
   useLightningCheckoutEligibility: function() {
-    return L
+    return v
   }
 }), a("47120");
 var l = a("735250"),
@@ -59,7 +59,7 @@ let S = e => {
     })
   };
 
-function L() {
+function v() {
   let {
     defaultPaymentSource: e
   } = (0, g.default)({
@@ -71,14 +71,14 @@ function L() {
   }
 }
 
-function v(e) {
+function L(e) {
   let {
     onPurchaseComplete: t,
     onError: a,
     paymentSource: r,
     loadId: g,
-    skuId: L,
-    isGift: v = !1,
+    skuId: v,
+    isGift: L = !1,
     customButtonStyle: I,
     analyticsLocations: N
   } = e, {
@@ -88,7 +88,7 @@ function v(e) {
     paymentAuthenticationState: k,
     application: A,
     skuPricePreviewsById: R
-  } = (0, p.usePaymentContext)(), [j, P] = s.useState(!1), B = s.useRef(null), D = R[L], F = null != D ? D[r.id] : null, M = null != F ? (0, C.formatPrice)(null == F ? void 0 : F.amount, null == F ? void 0 : F.currency) : "";
+  } = (0, p.usePaymentContext)(), [j, P] = s.useState(!1), B = s.useRef(null), D = R[v], F = null != D ? D[r.id] : null, M = null != F ? (0, C.formatPrice)(null == F ? void 0 : F.amount, null == F ? void 0 : F.currency) : "";
   s.useEffect(() => {
     _ !== h.Step.REVIEW && y(h.Step.REVIEW)
   }), s.useEffect(() => {
@@ -97,10 +97,10 @@ function v(e) {
   let w = async () => {
     i()(null != F, "skuPricePreview can't be null"), i()(null != A, "application can't be null");
     try {
-      await (0, o.purchaseSKU)(A.id, L, {
+      await (0, o.purchaseSKU)(A.id, v, {
         expectedAmount: F.amount,
         expectedCurrency: F.currency,
-        isGift: v,
+        isGift: L,
         paymentSource: r,
         loadId: g
       }), P(!1), t()
@@ -146,7 +146,7 @@ function v(e) {
       className: x.reviewButton,
       onClick: () => {
         (0, E.default)({
-          skuId: L,
+          skuId: v,
           analyticsLocations: N,
           returnRef: B
         })

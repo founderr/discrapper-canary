@@ -164,8 +164,8 @@ function U(e) {
   i.useEffect(() => {
     _.default.getGuildEventUserCounts(n.id, t.id, null != h ? [h] : []), _.default.getGuildEventsForCurrentUser(n.id)
   }, [n.id, t.id, h]);
-  let O = (0, T.recurrenceRuleFromServer)(t.recurrence_rule),
-    F = (null == t ? void 0 : t.scheduled_start_time) != null ? (0, p.getRecurrenceStatus)(P, y, new Date(null == t ? void 0 : t.scheduled_start_time)) : null;
+  let F = (0, T.recurrenceRuleFromServer)(t.recurrence_rule),
+    O = (null == t ? void 0 : t.scheduled_start_time) != null ? (0, p.getRecurrenceStatus)(P, y, new Date(null == t ? void 0 : t.scheduled_start_time)) : null;
   return (0, l.jsxs)("div", {
     ref: E,
     children: [(0, l.jsxs)("div", {
@@ -173,7 +173,7 @@ function U(e) {
       children: [(0, l.jsx)(L.GuildEventTimeStatus, {
         startTime: y.toISOString(),
         endTime: null == M ? void 0 : M.toISOString(),
-        status: null != F ? F : t.status,
+        status: null != O ? O : t.status,
         eventType: t.entity_type,
         guildEventId: t.id,
         recurrenceId: h
@@ -209,11 +209,11 @@ function U(e) {
           guildId: n.id
         })
       })]
-    }), null != O && (0, l.jsx)("hr", {
+    }), null != F && (0, l.jsx)("hr", {
       className: A.divider
-    }), null != O && (0, l.jsx)(j.default, {
+    }), null != F && (0, l.jsx)(j.default, {
       guildId: n.id,
-      recurrenceRule: O,
+      recurrenceRule: F,
       guildEventId: t.id,
       onRecurrenceClick: m,
       hideScroller: !0,

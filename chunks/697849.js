@@ -82,8 +82,8 @@ t.default = e => {
     analyticsLocations: p
   } = (0, u.default)(s.default.GUILD_EVENT_MODAL), [j, M] = i.useState(g), U = (0, a.useStateFromStores)([m.default], () => m.default.getGuildScheduledEvent(t), [t]), k = null == U ? void 0 : U.id, P = null == U ? void 0 : U.guild_id, {
     guild: V,
-    isMember: O
-  } = (0, _.default)(P, k), F = (0, d.default)(n), w = null == U ? void 0 : U.channel_id, B = (0, a.useStateFromStores)([c.default], () => c.default.getChannel(w), [w]), H = (0, f.useUID)(), [z, X] = i.useState(A.EventDetailSections.EVENT_INFO), Y = (0, S.default)(k, j), K = (0, I.default)(P, k, j), [J, {
+    isMember: F
+  } = (0, _.default)(P, k), O = (0, d.default)(n), w = null == U ? void 0 : U.channel_id, B = (0, a.useStateFromStores)([c.default], () => c.default.getChannel(w), [w]), H = (0, f.useUID)(), [z, X] = i.useState(A.EventDetailSections.EVENT_INFO), Y = (0, S.default)(k, j), K = (0, I.default)(P, k, j), [J, {
     loading: W,
     error: Z
   }] = (0, E.default)(() => h.default.getGuildEventUsers(null == U ? void 0 : U.id, j, P));
@@ -99,7 +99,7 @@ t.default = e => {
       var e, t;
       let n = (null == U ? void 0 : U.recurrence_rule) != null ? 16 : 0;
       $((null !== (t = null == q ? void 0 : null === (e = q.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 0) + n)
-    }, [q, null == U ? void 0 : U.recurrence_rule]), null == U || null == V || !O && !F) return null;
+    }, [q, null == U ? void 0 : U.recurrence_rule]), null == U || null == V || !F && !O) return null;
   let ee = e => {
       e !== z && (e === A.EventDetailSections.RSVP_LIST && J(), X(e))
     },
@@ -120,7 +120,7 @@ t.default = e => {
         onTabSelected: ee,
         userCount: K,
         hasBanner: (null == U ? void 0 : U.image) != null,
-        isHub: F
+        isHub: O
       }), (0, l.jsx)("div", {
         className: b.container,
         children: (0, l.jsx)(r.ModalContent, {
@@ -141,7 +141,7 @@ t.default = e => {
                 headerId: H,
                 onClose: N,
                 onClickInterestedCount: () => ee(A.EventDetailSections.RSVP_LIST),
-                isHub: F,
+                isHub: O,
                 containerRef: q,
                 recurrenceId: et,
                 setRecurrenceId: M
@@ -163,8 +163,8 @@ t.default = e => {
         className: b.footer,
         children: (0, l.jsx)(G, {
           guildEvent: U,
-          isHub: F,
-          isMember: O,
+          isHub: O,
+          isMember: F,
           guild: V,
           channel: B,
           onActionTaken: N,

@@ -46,7 +46,7 @@ function R(e) {
     guild_id: k
   } = y, {
     canManageGuildEvent: P
-  } = (0, o.useManageResourcePermissions)(null != R ? R : t), V = P(y), O = (0, I.default)(y), F = (0, N.useIsChannelPublic)(null == R ? void 0 : R.id, y.id), {
+  } = (0, o.useManageResourcePermissions)(null != R ? R : t), V = P(y), F = (0, I.default)(y), O = (0, N.useIsChannelPublic)(null == R ? void 0 : R.id, y.id), {
     withinStartWindow: w
   } = (0, x.getEventTimeData)(b), B = (0, i.useStateFromStores)([h.default], () => (null == R ? !void 0 : !R.isGuildVocal()) || h.default.can(j.Permissions.CONNECT, R), [R]), H = (0, d.useShowMemberVerificationGate)(k), z = (0, S.default)(A, G);
 
@@ -111,7 +111,7 @@ function R(e) {
     } : void 0,
     onInviteClick: function(e) {
       if (e.stopPropagation(), null != t) {
-        if (!O || !F) {
+        if (!F || !O) {
           let e = (0, T.SHARE_EVENT_DETAILS_LINK)({
             guildId: k,
             guildEventId: G

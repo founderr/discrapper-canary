@@ -20,8 +20,8 @@ var l = a("735250"),
   x = a("197115"),
   S = a("300284"),
   T = a("876917"),
-  L = a("642619"),
-  v = a("210887"),
+  v = a("642619"),
+  L = a("210887"),
   I = a("594174"),
   N = a("725808"),
   _ = a("794358"),
@@ -99,7 +99,7 @@ t.default = function(e) {
     animateOnHover: !ee
   }), {
     backgroundColors: ei
-  } = (0, B.default)(t.styles), en = (0, j.getFormattedPriceForCollectiblesProduct)(t, _, !1), eo = (0, j.isPremiumCollectiblesProduct)(t), eu = (0, j.isFreeCollectiblesProduct)(t), [ec, ed, ef] = (0, u.useStateFromStoresArray)([R.default], () => [R.default.getPurchase(t.skuId), R.default.isClaiming === t.skuId, null != R.default.isClaiming && R.default.isClaiming !== t.skuId]), em = (0, u.useStateFromStores)([v.default], () => (0, d.isThemeDark)(v.default.theme)), eC = (0, j.isProductNew)(t.skuId), {
+  } = (0, B.default)(t.styles), en = (0, j.getFormattedPriceForCollectiblesProduct)(t, _, !1), eo = (0, j.isPremiumCollectiblesProduct)(t), eu = (0, j.isFreeCollectiblesProduct)(t), [ec, ed, ef] = (0, u.useStateFromStoresArray)([R.default], () => [R.default.getPurchase(t.skuId), R.default.isClaiming === t.skuId, null != R.default.isClaiming && R.default.isClaiming !== t.skuId]), em = (0, u.useStateFromStores)([L.default], () => (0, d.isThemeDark)(L.default.theme)), eC = (0, j.isProductNew)(t.skuId), {
     hoverVariant: ep
   } = (0, P.useShopCardHoverAnimationExperiment)("CollectiblesShopTallCard");
   s.useEffect(() => {
@@ -123,7 +123,7 @@ t.default = function(e) {
           analyticsLocations: Z
         });
         return
-      }(null == ea ? void 0 : ea.type) === o.CollectiblesItemType.PROFILE_EFFECT && (0, L.openProfileEffectModal)({
+      }(null == ea ? void 0 : ea.type) === o.CollectiblesItemType.PROFILE_EFFECT && (0, v.openProfileEffectModal)({
         initialSelectedEffectId: ea.id,
         analyticsLocations: Z
       })
@@ -153,7 +153,7 @@ t.default = function(e) {
   s.useEffect(() => {
     null == r || r(Q)
   }, [r]);
-  let eL = () => null != ec ? (0, l.jsx)(f.Text, {
+  let ev = () => null != ec ? (0, l.jsx)(f.Text, {
       variant: "text-md/semibold",
       className: G.priceTag,
       children: W.default.Messages.COLLECTIBLES_ALREADY_OWNED
@@ -167,7 +167,7 @@ t.default = function(e) {
       className: G.priceTag,
       disableTooltipPointerEvents: !0
     }),
-    ev = () => eo ? null : eu ? (0, l.jsx)(X, {
+    eL = () => eo ? null : eu ? (0, l.jsx)(X, {
       onClick: eS
     }) : (0, l.jsx)(F.default, {
       product: t,
@@ -208,7 +208,7 @@ t.default = function(e) {
           disabled: ef,
           onClick: eg,
           children: W.default.Messages.COLLECTIBLES_USE_NOW
-        }), ev()]
+        }), eL()]
       })
     },
     eN = em ? "0 0 15px 1px ".concat(c.default.unsafe_rawColors.PRIMARY_700.css) : "var(--elevation-high)";
@@ -276,7 +276,7 @@ t.default = function(e) {
           className: G.detailsWrapper,
           children: [(0, l.jsx)("div", {
             className: G.innerBlur,
-            children: eL()
+            children: ev()
           }), (0, l.jsx)("div", {
             className: G.innerHover,
             children: eI()

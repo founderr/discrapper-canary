@@ -20,8 +20,8 @@ var l = a("735250"),
   x = a("642619"),
   S = a("594174"),
   T = a("725808"),
-  L = a("794358"),
-  v = a("466111"),
+  v = a("794358"),
+  L = a("466111"),
   I = a("26290"),
   N = a("998502"),
   _ = a("335131"),
@@ -69,7 +69,7 @@ let H = N.default.getEnableHardwareAcceleration() ? u.AnimatedAvatar : u.Avatar,
       innerClassName: w.previewButtonInner,
       "aria-label": M.default.Messages.PREVIEW,
       ...a,
-      children: (0, l.jsx)(L.default, {
+      children: (0, l.jsx)(v.default, {
         width: 24,
         height: 24
       })
@@ -80,7 +80,7 @@ t.default = function(e) {
     product: t,
     category: a,
     onMount: r,
-    isPremiumUser: L = !1,
+    isPremiumUser: v = !1,
     isGiftEasterEggEnabled: N
   } = e, {
     analyticsLocations: z
@@ -96,7 +96,7 @@ t.default = function(e) {
   }), {
     buttonColors: ea,
     backgroundColors: el
-  } = (0, k.default)(t.styles), es = (0, O.getFormattedPriceForCollectiblesProduct)(t, L, !1), er = (0, O.isPremiumCollectiblesProduct)(t), ei = (0, O.isFreeCollectiblesProduct)(t), [en, eo, eu] = (0, o.useStateFromStoresArray)([y.default], () => [y.default.getPurchase(t.skuId), y.default.isClaiming === t.skuId, null != y.default.isClaiming && y.default.isClaiming !== t.skuId]), ec = s.useRef(null);
+  } = (0, k.default)(t.styles), es = (0, O.getFormattedPriceForCollectiblesProduct)(t, v, !1), er = (0, O.isPremiumCollectiblesProduct)(t), ei = (0, O.isFreeCollectiblesProduct)(t), [en, eo, eu] = (0, o.useStateFromStoresArray)([y.default], () => [y.default.getPurchase(t.skuId), y.default.isClaiming === t.skuId, null != y.default.isClaiming && y.default.isClaiming !== t.skuId]), ec = s.useRef(null);
   s.useEffect(() => {
     let {
       current: e
@@ -176,7 +176,7 @@ t.default = function(e) {
       tooltipDelay: 250
     }),
     eb = () => {
-      if (er && !L && !ei) return eh();
+      if (er && !v && !ei) return eh();
       let e = null != ea ? {
           background: (0, B.getBackgroundGradient)(ea, 90),
           color: ea.text.toHslString()
@@ -236,7 +236,7 @@ t.default = function(e) {
         children: e => (0, l.jsx)(I.TextBadge, {
           ...e,
           className: w.premiumWheelBadge,
-          text: (0, l.jsx)(v.default, {
+          text: (0, l.jsx)(L.default, {
             className: w.premiumWheel
           })
         })
