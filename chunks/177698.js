@@ -9,38 +9,55 @@ var s = a("481060"),
   o = a("998502"),
   u = a("703912"),
   d = a("981631");
-t.default = (0, u.default)((e, t, a, r, o, u, d, c, f, E, h, _, C, m) => {
-  let S = "OAuth2Authorize_".concat(e, "_").concat(E, "_").concat(h);
-  return new Promise(I => {
-    let p = e => {
+t.default = (0, u.default)(e => {
+  let {
+    clientId: t,
+    authorization: a,
+    scopes: r,
+    parsedPermissions: o,
+    responseType: u,
+    redirectUri: d,
+    codeChallenge: c,
+    codeChallengeMethod: f,
+    state: E,
+    guildId: h,
+    channelId: _,
+    prompt: C,
+    disableGuildSelect: m,
+    disclosures: S,
+    integrationType: I
+  } = e, p = "OAuth2Authorize_".concat(t, "_").concat(h, "_").concat(_);
+  return new Promise(e => {
+    let T = t => {
       let {
-        location: t
-      } = e;
-      I(t)
+        location: a
+      } = t;
+      e(a)
     };
-    (0, s.openModal)(s => (0, n.jsx)(i.OAuth2AuthorizeModal, {
-      ...s,
-      authorization: t,
-      clientId: e,
-      scopes: null != a ? a : [],
-      disclosures: null != m ? m : [],
-      callback: p,
-      responseType: o,
-      redirectUri: u,
-      codeChallenge: d,
-      codeChallengeMethod: c,
-      state: f,
-      permissions: r,
-      guildId: E,
-      channelId: h,
-      prompt: _,
-      disableGuildSelect: "boolean" == typeof C ? C : "true" === C
+    (0, s.openModal)(e => (0, n.jsx)(i.OAuth2AuthorizeModal, {
+      ...e,
+      authorization: a,
+      clientId: t,
+      scopes: null != r ? r : [],
+      disclosures: null != S ? S : [],
+      callback: T,
+      responseType: u,
+      redirectUri: d,
+      codeChallenge: c,
+      codeChallengeMethod: f,
+      state: E,
+      permissions: o,
+      guildId: h,
+      channelId: _,
+      prompt: C,
+      disableGuildSelect: "boolean" == typeof m ? m : "true" === m,
+      integrationType: I
     }), {
-      modalKey: S,
+      modalKey: p,
       onCloseRequest: () => {
-        (0, s.closeModal)(S), I(void 0)
+        (0, s.closeModal)(p), e(void 0)
       }
-    }, (0, l.default)(t.application, h) ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT)
+    }, (0, l.default)(a.application, _) ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT)
   })
 }, function(e, t) {
   if (r.isPlatformEmbedded) {
