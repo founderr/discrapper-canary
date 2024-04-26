@@ -26,7 +26,7 @@ var a = n("735250"),
   g = n("921944"),
   N = n("871465"),
   A = n("689938"),
-  h = n("809851");
+  h = n("901464");
 
 function v(e, t) {
   var n, v;
@@ -61,7 +61,7 @@ function v(e, t) {
     w = (0, N.getCustomNotificationSoundpackOptions)(),
     Y = null !== (v = null === (n = w.find(e => e.value === G)) || void 0 === n ? void 0 : n.label) && void 0 !== v ? v : A.default.Messages.SOUNDPACK_DEFAULT_LABEL;
   return (0, a.jsx)(r.MenuItem, {
-    id: "notification",
+    id: "notification-sounds",
     label: e => {
       let {
         isFocused: t
