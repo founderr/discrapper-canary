@@ -30,10 +30,15 @@ function p(e) {
       r = [];
     return e > 0 && r.push(s(e, m.default.Messages.COUNTDOWN_UNITS_DAYS)), (t > 0 || r.length > 0) && r.push(s(t, m.default.Messages.COUNTDOWN_UNITS_HOURS)), (a > 0 || r.length > 0) && r.push(s(a, m.default.Messages.COUNTDOWN_UNITS_MINUTES)), r.push(s(l, m.default.Messages.COUNTDOWN_UNITS_SECONDS)), r.join(":")
   }(a, s, r, i);
-  return (0, l.jsx)(c.Heading, {
+  return (0, l.jsx)(c.Text, {
     variant: "heading-md/medium",
     className: C.countdown,
-    children: n
+    tag: "div",
+    children: (0, l.jsx)("div", {
+      role: "timer",
+      "aria-relevant": "all",
+      children: n
+    })
   })
 }
 let h = s.memo(function(e) {
@@ -53,7 +58,7 @@ let h = s.memo(function(e) {
   });
   return (0, l.jsxs)(n.animated.div, {
     className: i()([C.countDownWrapper, r && C.fullScreenWrapper, o.isMobile && C.mobileWrapper]),
-    "aria-live": "polite",
+    role: "status",
     style: {
       backgroundColor: s.backgroundColor,
       boxShadow: s.boxShadow,
