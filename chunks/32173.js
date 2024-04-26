@@ -32,12 +32,12 @@ var n = s("399606"),
   L = s("526761"),
   x = s("332325"),
   v = s("689938"),
-  b = s("660372"),
-  D = s("926433"),
+  D = s("660372"),
+  b = s("926433"),
   U = s("302036"),
   j = s("994554"),
-  B = s("704565"),
-  y = s("393305"),
+  y = s("704565"),
+  B = s("393305"),
   G = s("338879"),
   k = s("203302"),
   H = s("766491"),
@@ -116,7 +116,7 @@ t.default = () => {
           analyticsLocations: e
         })
       },
-      perkImage: B
+      perkImage: y
     },
     clips: ei ? {
       name: "clips",
@@ -228,7 +228,7 @@ t.default = () => {
       description: v.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_DESCRIPTION,
       descriptionCta: v.default.Messages.TAKE_ME_THERE,
       onCtaClick: eE,
-      perkImage: y
+      perkImage: B
     },
     remixing: ei ? {
       name: "remixing",
@@ -342,7 +342,7 @@ t.default = () => {
       name: "badge",
       title: v.default.Messages.NITRO_HOME_SUBSCRIBER_BADGE,
       subtitle: v.default.Messages.NITRO_HOME_GET_THIS_SUBSCRIBER_BADGE,
-      perkImage: b,
+      perkImage: D,
       description: v.default.Messages.NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS
     },
     customAppIcons: {
@@ -369,7 +369,7 @@ t.default = () => {
       name: "customSoundsEverywhere",
       title: v.default.Messages.NITRO_HOME_CARD_CUSTOM_SOUNDS_EVERYWHERE,
       subtitle: v.default.Messages.NITRO_HOME_CARD_USE_CUSTOM_SOUNDS,
-      perkImage: (0, O.getThemedImage)(t, D, U),
+      perkImage: (0, O.getThemedImage)(t, b, U),
       description: v.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_ONLY_NITRO
     },
     specialStickerAccess: {

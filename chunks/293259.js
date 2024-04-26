@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var l = s("735250"),
   a = s("470079"),
   i = s("442837"),
-  r = s("692547"),
-  n = s("481060"),
+  n = s("692547"),
+  r = s("481060"),
   o = s("493683"),
   u = s("239091"),
   d = s("37234"),
@@ -16,26 +16,26 @@ var l = s("735250"),
   f = s("726521"),
   S = s("233440"),
   m = s("314897"),
-  E = s("158776"),
-  I = s("699516"),
-  v = s("621113"),
+  v = s("158776"),
+  E = s("699516"),
+  I = s("621113"),
   x = s("759231"),
   _ = s("998502"),
-  T = s("785717"),
-  A = s("621853"),
-  N = s("204197"),
+  A = s("785717"),
+  N = s("621853"),
+  T = s("204197"),
   U = s("735336"),
-  p = s("520978"),
-  h = s("184325"),
-  j = s("652853"),
-  g = s("496206"),
-  R = s("228168"),
-  P = s("981631"),
-  C = s("231338"),
-  M = s("689938"),
+  C = s("520978"),
+  g = s("184325"),
+  h = s("652853"),
+  p = s("496206"),
+  j = s("228168"),
+  R = s("981631"),
+  M = s("231338"),
+  P = s("689938"),
   y = s("950114");
-let O = n.AvatarSizes.SIZE_120,
-  L = _.default.getEnableHardwareAcceleration() ? n.AnimatedAvatar : n.Avatar;
+let O = r.AvatarSizes.SIZE_120,
+  L = _.default.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
 
 function F(e) {
   let {
@@ -47,22 +47,22 @@ function F(e) {
     className: B,
     isStreaming: G,
     hasProfileEffect: k,
-    onClose: V
-  } = e, w = (0, i.useStateFromStores)([I.default], () => I.default.getRelationshipType(_.id)), H = (0, i.useStateFromStores)([E.default], () => E.default.isMobileOnline(_.id)), Y = (0, i.useStateFromStores)([E.default], () => E.default.getStatus(_.id)), z = (0, i.useStateFromStores)([A.default], () => A.default.getUserProfile(_.id)), W = (0, i.useStateFromStores)([m.default], () => m.default.getId() === _.id), {
+    onClose: w
+  } = e, V = (0, i.useStateFromStores)([E.default], () => E.default.getRelationshipType(_.id)), Y = (0, i.useStateFromStores)([v.default], () => v.default.isMobileOnline(_.id)), z = (0, i.useStateFromStores)([v.default], () => v.default.getStatus(_.id)), H = (0, i.useStateFromStores)([N.default], () => N.default.getUserProfile(_.id)), W = (0, i.useStateFromStores)([m.default], () => m.default.getId() === _.id), {
     theme: Z
-  } = (0, j.useUserProfileThemeContext)(), {
+  } = (0, h.useUserProfileThemeContext)(), {
     trackUserProfileAction: K
-  } = (0, T.useUserProfileAnalyticsContext)(), {
+  } = (0, A.useUserProfileAnalyticsContext)(), {
     avatarSrc: J,
     eventHandlers: Q,
     avatarDecorationSrc: q
-  } = (0, N.default)({
+  } = (0, T.default)({
     user: _,
     size: O
   }), X = a.useMemo(() => (0, S.shouldDisableUserPresenceInChannel)(_, D), [_, D]);
 
   function $() {
-    V(), (0, d.popLayer)()
+    w(), (0, d.popLayer)()
   }
 
   function ee() {
@@ -88,7 +88,7 @@ function F(e) {
         context: {
           location: "User Profile"
         },
-        type: P.RelationshipTypes.BLOCKED
+        type: R.RelationshipTypes.BLOCKED
       })
     } catch (e) {
       $()
@@ -107,7 +107,7 @@ function F(e) {
       displayProfile: t,
       onClose: $,
       user: _,
-      profileType: R.UserProfileTypes.MODAL,
+      profileType: j.UserProfileTypes.MODAL,
       hasProfileEffect: k
     }), (0, l.jsxs)("div", {
       className: y.header,
@@ -118,38 +118,38 @@ function F(e) {
           avatarDecoration: q,
           size: O,
           className: y.avatar,
-          status: X ? C.StatusTypes.UNKNOWN : G ? C.StatusTypes.STREAMING : Y,
-          statusBackdropColor: (0, n.getStatusBackdropColor)(Z),
-          isMobile: H,
+          status: X ? M.StatusTypes.UNKNOWN : G ? M.StatusTypes.STREAMING : z,
+          statusBackdropColor: (0, r.getStatusBackdropColor)(Z),
+          isMobile: Y,
           statusTooltip: !0,
           "aria-label": _.username
         })
       }), (0, l.jsxs)("div", {
         className: y.headerTop,
-        children: [(null == z ? void 0 : z.profileFetchFailed) && !_.isClyde() ? (0, l.jsx)(n.Tooltip, {
-          text: M.default.Messages.USER_PROFILE_LOAD_ERROR,
+        children: [(null == H ? void 0 : H.profileFetchFailed) && !_.isClyde() ? (0, l.jsx)(r.Tooltip, {
+          text: P.default.Messages.USER_PROFILE_LOAD_ERROR,
           spacing: 20,
           children: e => (0, l.jsx)(x.default, {
             ...e,
             className: y.warningCircleIcon,
-            color: r.default.unsafe_rawColors.YELLOW_300.css
+            color: n.default.unsafe_rawColors.YELLOW_300.css
           })
-        }) : (0, l.jsx)(h.default, {
+        }) : (0, l.jsx)(g.default, {
           user: _,
           className: y.badgeList,
           guildId: F,
-          size: h.BadgeSizes.SIZE_24,
+          size: g.BadgeSizes.SIZE_24,
           shrinkAtCount: 8,
-          shrinkToSize: h.BadgeSizes.SIZE_18
+          shrinkToSize: g.BadgeSizes.SIZE_18
         }), (0, l.jsxs)("div", {
           className: y.relationshipButtons,
-          children: [(0, l.jsx)(p.default, {
+          children: [(0, l.jsx)(C.default, {
             className: y.applicationInstallButton,
-            application: null == z ? void 0 : z.application
-          }), (0, l.jsx)(g.default, {
+            application: null == H ? void 0 : H.application
+          }), (0, l.jsx)(p.default, {
             user: _,
             isCurrentUser: W,
-            relationshipType: w,
+            relationshipType: V,
             onAddFriend: function() {
               try {
                 K({
@@ -174,7 +174,7 @@ function F(e) {
               })
             },
             onSendMessage: () => et("User Profile Modal - Send Message Button")
-          }), W || _.isNonUserBot() ? null : (0, l.jsx)(n.Clickable, {
+          }), W || _.isNonUserBot() ? null : (0, l.jsx)(r.Clickable, {
             focusProps: {
               offset: {
                 left: 8
@@ -189,7 +189,7 @@ function F(e) {
                 } = await s.e("29136").then(s.bind(s, "193646"));
                 return t => (0, l.jsx)(e, {
                   ...t,
-                  relationshipType: w,
+                  relationshipType: V,
                   onRemoveFriend: ee,
                   onBlock: es,
                   onReport: el,
@@ -201,7 +201,7 @@ function F(e) {
                 })
               })
             },
-            children: (0, l.jsx)(v.default, {
+            children: (0, l.jsx)(I.default, {
               className: y.additionalActionsIcon
             })
           })]

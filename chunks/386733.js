@@ -121,19 +121,19 @@ t.default = e => {
     })
   }, [i]);
   let v = i.length,
-    b = 3 === v,
-    D = f.default.getArticleURL(p.HelpdeskArticles.REFERRAL_PROGRAM),
-    U = b ? g.default.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : g.default.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
+    D = 3 === v,
+    b = f.default.getArticleURL(p.HelpdeskArticles.REFERRAL_PROGRAM),
+    U = D ? g.default.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : g.default.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
     {
       analyticsLocations: j
     } = (0, c.default)(d.default.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
-    B = r.useRef(null),
-    [y, G] = r.useState(!1),
+    y = r.useRef(null),
+    [B, G] = r.useState(!1),
     k = () => {
-      if (null != B.current) {
+      if (null != y.current) {
         let {
           clientWidth: e
-        } = B.current;
+        } = y.current;
         G(e <= 568)
       }
     };
@@ -158,18 +158,18 @@ t.default = e => {
         userRecords: O
       }), (0, a.jsx)(o.Text, {
         variant: t ? "text-sm/normal" : "text-lg/medium",
-        children: L(b, v > 0, i.length, D)
+        children: L(D, v > 0, i.length, b)
       }), (0, a.jsxs)("div", {
         className: n()(C.expandedProgressBarButtonContainer, {
-          [C.expandedProgressBarButtonContainerMinLayout]: y && !t,
-          [C.expandedProgressBarButtonContainerLayout]: !y && !t
+          [C.expandedProgressBarButtonContainerMinLayout]: B && !t,
+          [C.expandedProgressBarButtonContainerLayout]: !B && !t
         }),
         children: [!t && !x && (0, a.jsx)(A.default, {
           color: o.ButtonColors.CUSTOM,
           buttonText: g.default.Messages.GIFT_NITRO,
           className: n()(C.expandedProgressBarGiftingCTA, {
-            [C.expandedProgressBarGiftingCTAMinLayout]: y && !t,
-            [C.expandedProgressBarGiftingCTALayout]: !y && !t
+            [C.expandedProgressBarGiftingCTAMinLayout]: B && !t,
+            [C.expandedProgressBarGiftingCTALayout]: !B && !t
           }),
           look: o.ButtonLooks.OUTLINED,
           isGift: !0
@@ -196,7 +196,7 @@ t.default = e => {
               src: P,
               alt: "",
               className: C.expandedProgressBarSelectFriendsIcon
-            }), b ? g.default.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS : g.default.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS]
+            }), D ? g.default.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS : g.default.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS]
           })
         })]
       })]
@@ -205,7 +205,7 @@ t.default = e => {
   return (0, a.jsx)(c.AnalyticsLocationProvider, {
     value: j,
     children: (0, a.jsx)("div", {
-      ref: B,
+      ref: y,
       className: n()({
         [C.expandedProgressBarContainer]: !t,
         [C.expandedProgressBarContainerSettingsPage]: t,

@@ -52,10 +52,10 @@ t.default = e => {
     return () => clearTimeout(e)
   }, [t]);
   let T = (0, l.default)(),
-    S = (0, n.isThemeLight)(T),
-    m = c(p),
-    O = d(p, S),
-    w = _(S, p);
+    m = (0, n.isThemeLight)(T),
+    S = c(p),
+    O = d(p, m),
+    w = _(m, p);
   return (0, s.jsxs)("div", {
     className: o.circleContainer,
     children: [(0, s.jsxs)("svg", {
@@ -68,7 +68,7 @@ t.default = e => {
         r: "".concat(E),
         cx: "50%",
         cy: "50%",
-        stroke: m,
+        stroke: S,
         strokeOpacity: O
       }), (0, s.jsx)("circle", {
         stroke: w,

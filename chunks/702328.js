@@ -29,12 +29,12 @@ var a = s("735250"),
   L = s("248042"),
   x = s("823188"),
   v = s("65536"),
-  b = s("135785"),
-  D = s("498765"),
+  D = s("135785"),
+  b = s("498765"),
   U = s("635921"),
   j = s("803687"),
-  B = s("177839"),
-  y = s("794484"),
+  y = s("177839"),
+  B = s("794484"),
   G = s("392521"),
   k = s("349803"),
   H = s("179984"),
@@ -67,7 +67,7 @@ let q = e => {
       isFullscreen: t,
       selectedPremiumType: s
     } = e;
-    return t && null == s || s === V.PremiumTypes.TIER_2 && t ? null : (0, a.jsx)(B.default, {
+    return t && null == s || s === V.PremiumTypes.TIER_2 && t ? null : (0, a.jsx)(y.default, {
       selectedPremiumType: s,
       className: t ? z.perkCardsContainerSpacingFullscreen : z.perkCardsContainerSpacingSettings
     })
@@ -82,7 +82,7 @@ let q = e => {
       alt: "starry sky background header splash",
       className: z.dynamicImage,
       src: Q
-    }) : (0, a.jsx)(D.default, {
+    }) : (0, a.jsx)(b.default, {
       lifted: !t && s
     }) : null
   },
@@ -99,11 +99,11 @@ let q = e => {
         [z.whatsNewSectionBackground]: !r,
         [z.whatsNewSection]: r
       }),
-      children: [(0, a.jsx)(y.default, {
+      children: [(0, a.jsx)(B.default, {
         headerClassname: r ? z.stackedHeader : void 0,
         variant: w.PerksDiscoverabilityCardSection.WHATS_NEW,
         isFullScreen: t
-      }), (0, a.jsx)(y.default, {
+      }), (0, a.jsx)(B.default, {
         headerClassname: r ? z.stackedHeader : void 0,
         isFullScreen: t,
         showAllPerksButton: t ? (0, a.jsx)(W.default, {
@@ -126,7 +126,7 @@ t.default = e => {
     entrypoint: i
   } = e, E = (0, N.useMarketingOptimizationExperiment)({
     autoTrackExposure: !0
-  }), v = r.useRef(null), [D, B] = r.useState(!1), [y, G] = r.useState(!1), [W, Q] = r.useState(!1), es = !D && !y || E, [ea, er] = r.useState(!1), ei = (0, l.useStateFromStores)([R.default], () => R.default.getPremiumTypeSubscription()), [en, el] = r.useState(E ? V.PremiumTypes.TIER_2 : void 0), eo = null != ei ? (0, m.getPremiumPlanItem)(ei) : null, eu = null != eo ? m.default.getSkuIdForPlan(eo.planId) : null, ed = null !== eu && eu !== V.PremiumSubscriptionSKUs.TIER_2 ? V.PremiumSubscriptionSKUs.TIER_2 : null, ec = (0, p.useLocalizedPromoQuery)(), e_ = (0, u.isThemeLight)((0, _.default)()), eE = null != ec, [eT, eI] = r.useState(!1), eR = (0, g.usePremiumDiscountOffer)(), ef = (0, C.usePremiumTrialOffer)(), eS = null == ef ? void 0 : null === (t = ef.subscription_trial) || void 0 === t ? void 0 : t.sku_id, em = (0, A.useIsInPremiumOfferExperience)(), eA = (0, L.useIsEligibleForBogoPromotion)(), {
+  }), v = r.useRef(null), [b, y] = r.useState(!1), [B, G] = r.useState(!1), [W, Q] = r.useState(!1), es = !b && !B || E, [ea, er] = r.useState(!1), ei = (0, l.useStateFromStores)([R.default], () => R.default.getPremiumTypeSubscription()), [en, el] = r.useState(E ? V.PremiumTypes.TIER_2 : void 0), eo = null != ei ? (0, m.getPremiumPlanItem)(ei) : null, eu = null != eo ? m.default.getSkuIdForPlan(eo.planId) : null, ed = null !== eu && eu !== V.PremiumSubscriptionSKUs.TIER_2 ? V.PremiumSubscriptionSKUs.TIER_2 : null, ec = (0, p.useLocalizedPromoQuery)(), e_ = (0, u.isThemeLight)((0, _.default)()), eE = null != ec, [eT, eI] = r.useState(!1), eR = (0, g.usePremiumDiscountOffer)(), ef = (0, C.usePremiumTrialOffer)(), eS = null == ef ? void 0 : null === (t = ef.subscription_trial) || void 0 === t ? void 0 : t.sku_id, em = (0, A.useIsInPremiumOfferExperience)(), eA = (0, L.useIsEligibleForBogoPromotion)(), {
     analyticsLocations: eN
   } = (0, I.default)(T.default.PREMIUM_MARKETING), ep = "PremiumMarketingHome";
   (0, c.useTriggerDebuggingAA)({
@@ -148,7 +148,7 @@ t.default = e => {
         [z.settingsContainer]: !s && !E
       }),
       "data-cy": "tier-0-marketing-page",
-      children: [(0, a.jsx)(b.default, {
+      children: [(0, a.jsx)(D.default, {
         premiumSubscription: ei,
         className: n()(s ? z.fullscreenExistingSubscriberSpacing : z.existingSubscriberSpacing, {
           [z.zIndex1]: em
@@ -163,7 +163,7 @@ t.default = e => {
         localizedPricingPromo: ec,
         smallGap: !0
       }) : (0, a.jsx)(o.VisibilitySensor, {
-        onChange: e => B(e),
+        onChange: e => y(e),
         threshold: 0,
         active: !0,
         children: (0, a.jsx)(U.default, {

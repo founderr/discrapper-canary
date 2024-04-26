@@ -1,14 +1,14 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return A
+    return N
   }
 }), s("47120"), s("627341");
 var l = s("735250"),
   a = s("470079"),
   i = s("278074"),
-  r = s("442837"),
-  n = s("706898"),
+  n = s("442837"),
+  r = s("706898"),
   o = s("481060"),
   u = s("246946"),
   d = s("594174"),
@@ -16,77 +16,77 @@ var l = s("735250"),
   f = s("621853"),
   S = s("944546"),
   m = s("470900"),
-  E = s("988246"),
-  I = s("834534"),
-  v = s("228168"),
+  v = s("988246"),
+  E = s("834534"),
+  I = s("228168"),
   x = s("689938"),
   _ = s("708432");
-let T = e => {
-  let [t, s] = (0, r.useStateFromStoresArray)([f.default], () => {
+let A = e => {
+  let [t, s] = (0, n.useStateFromStoresArray)([f.default], () => {
     var t, s, l, a;
     return [null !== (l = null === (t = f.default.getMutualFriends(e.id)) || void 0 === t ? void 0 : t.length) && void 0 !== l ? l : 0, null !== (a = null === (s = f.default.getMutualGuilds(e.id)) || void 0 === s ? void 0 : s.length) && void 0 !== a ? a : 0]
   });
   return [{
-    section: v.UserProfileSections.USER_INFO,
+    section: I.UserProfileSections.USER_INFO,
     text: x.default.Messages.USER_PROFILE_ABOUT_ME
   }, {
-    section: v.UserProfileSections.MUTUAL_FRIENDS,
+    section: I.UserProfileSections.MUTUAL_FRIENDS,
     text: 0 === t ? x.default.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS : x.default.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
       count: t
     })
   }, {
-    section: v.UserProfileSections.MUTUAL_GUILDS,
+    section: I.UserProfileSections.MUTUAL_GUILDS,
     text: 0 === s ? x.default.Messages.USER_PROFILE_NO_MUTUAL_SERVERS : x.default.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
       count: s
     })
   }]
 };
 
-function A(e) {
+function N(e) {
   var t, s;
   let {
     user: f,
     displayProfile: x,
-    initialSection: A = v.UserProfileSections.USER_INFO,
-    autoFocusNote: N,
+    initialSection: N = I.UserProfileSections.USER_INFO,
+    autoFocusNote: T,
     onClose: U
   } = e, {
-    trackUserProfileAction: p
-  } = (0, c.useUserProfileAnalyticsContext)(), h = (0, r.useStateFromStores)([d.default], () => d.default.getCurrentUser()), j = (0, r.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), g = T(f), [R, P] = a.useState(N), [C, M] = a.useState(null !== (s = null === (t = g.find(e => {
+    trackUserProfileAction: C
+  } = (0, c.useUserProfileAnalyticsContext)(), g = (0, n.useStateFromStores)([d.default], () => d.default.getCurrentUser()), h = (0, n.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), p = A(f), [j, R] = a.useState(T), [M, P] = a.useState(null !== (s = null === (t = p.find(e => {
     let {
       section: t
     } = e;
-    return t === A
-  })) || void 0 === t ? void 0 : t.section) && void 0 !== s ? s : v.UserProfileSections.USER_INFO), y = a.useCallback(e => {
-    p({
+    return t === N
+  })) || void 0 === t ? void 0 : t.section) && void 0 !== s ? s : I.UserProfileSections.USER_INFO), y = a.useCallback(e => {
+    C({
       action: "PRESS_SECTION",
       section: e
-    }), M(e), P(!1)
-  }, [p, M]);
-  return null == h ? null : j ? (0, l.jsx)("div", {
+    }), P(e), R(!1)
+  }, [C, P]);
+  return null == g ? null : h ? (0, l.jsx)("div", {
     className: _.container,
-    children: (0, l.jsx)(E.default, {})
-  }) : f.id === h.id ? (0, l.jsx)("div", {
+    children: (0, l.jsx)(v.default, {})
+  }) : f.id === g.id ? (0, l.jsx)("div", {
     className: _.container,
-    children: (0, l.jsx)(I.default, {
+    children: (0, l.jsx)(E.default, {
       user: f,
-      currentUser: h,
+      currentUser: g,
       displayProfile: x,
-      autoFocusNote: R
+      autoFocusNote: j
     })
   }) : (0, l.jsxs)("div", {
     className: _.container,
-    children: [(0, l.jsx)(n.TabBar, {
+    children: [(0, l.jsx)(r.TabBar, {
       className: _.tabBar,
       type: "top",
-      selectedItem: C,
+      selectedItem: M,
       onItemSelect: y,
-      children: g.map(e => {
+      children: p.map(e => {
         let {
           section: t,
           text: s
         } = e;
-        return (0, l.jsx)(n.TabBar.Item, {
+        return (0, l.jsx)(r.TabBar.Item, {
           className: _.tabBarItem,
           id: t,
           "aria-label": s,
@@ -96,18 +96,18 @@ function A(e) {
           })
         }, t)
       })
-    }), (0, i.match)(C).with(v.UserProfileSections.MUTUAL_FRIENDS, () => (0, l.jsx)(S.default, {
+    }), (0, i.match)(M).with(I.UserProfileSections.MUTUAL_FRIENDS, () => (0, l.jsx)(S.default, {
       user: f,
       onClose: U
-    })).with(v.UserProfileSections.MUTUAL_GUILDS, () => (0, l.jsx)(m.default, {
+    })).with(I.UserProfileSections.MUTUAL_GUILDS, () => (0, l.jsx)(m.default, {
       user: f,
       onClose: U
-    })).otherwise(() => (0, l.jsx)(I.default, {
+    })).otherwise(() => (0, l.jsx)(E.default, {
       className: _.infoTab,
       user: f,
-      currentUser: h,
+      currentUser: g,
       displayProfile: x,
-      autoFocusNote: R
+      autoFocusNote: j
     }))]
   })
 }

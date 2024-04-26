@@ -33,12 +33,12 @@ var a = s("399606"),
   L = s("24615"),
   x = s("193943"),
   v = s("334347"),
-  b = s("943734"),
-  D = s("603076"),
+  D = s("943734"),
+  b = s("603076"),
   U = s("472656"),
   j = s("912429"),
-  B = s("772969"),
-  y = s("926262");
+  y = s("772969"),
+  B = s("926262");
 let G = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
   k = e => {
     let {
@@ -101,7 +101,7 @@ let G = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
       longerMessages: {
         title: _.default.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_TITLE,
         description: _.default.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_DESCRIPTION,
-        imageSource: G(r, b, D),
+        imageSource: G(r, D, b),
         imageClassName: t.longerMessagesImage
       },
       moreGuilds: {
@@ -150,7 +150,7 @@ let G = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
       streaming: {
         title: _.default.Messages.PREMIUM_MARKETING_FEATURE_PREMIUM_GO_LIVE_TITLE,
         description: _.default.Messages.PREMIUM_MARKETING_STREAMING_SMALL_PERK_DESCRIPTION,
-        imageSource: B,
+        imageSource: y,
         imageClassName: t.streamingImage
       },
       superReactions: {
@@ -166,7 +166,7 @@ let G = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
         description: _.default.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_DESCRIPTION.format({
           premiumMaxSize: H
         }),
-        imageSource: y,
+        imageSource: B,
         imageClassName: t.uploadImage
       },
       videoBackground: {

@@ -8,8 +8,8 @@ var l = s("735250");
 s("470079");
 var a = s("481060"),
   i = s("860719"),
-  r = s("689938"),
-  n = s("99441");
+  n = s("689938"),
+  r = s("99441");
 
 function o(e) {
   let {
@@ -17,9 +17,9 @@ function o(e) {
     heading: s
   } = e;
   return (0, l.jsxs)("div", {
-    className: n.row,
+    className: r.row,
     children: [null != s ? (0, l.jsx)(a.Heading, {
-      className: n.heading,
+      className: r.heading,
       variant: "text-sm/normal",
       children: s
     }) : null, (0, l.jsx)(a.Text, {
@@ -44,19 +44,19 @@ function u(e) {
   if (null == t) return null;
   let f = [];
   return u && f.push((0, l.jsx)(o, {
-    heading: r.default.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_HEADER,
-    content: r.default.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_BODY
+    heading: n.default.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_HEADER,
+    content: n.default.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_BODY
   })), d && f.push((0, l.jsx)(o, {
-    heading: r.default.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_HEADER,
-    content: r.default.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_BODY
+    heading: n.default.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_HEADER,
+    content: n.default.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_BODY
   })), c && f.push((0, l.jsx)(o, {
-    heading: r.default.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_HEADER,
-    content: r.default.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_BODY
+    heading: n.default.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_HEADER,
+    content: n.default.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_BODY
   })), f.length > 0 && f.push((0, l.jsx)("div", {
-    className: n.divider,
+    className: r.divider,
     children: (0, l.jsx)(a.FormDivider, {})
   })), f.push((0, l.jsx)(o, {
-    content: r.default.Messages.BOTS_DATA_ACCESS_BASELINE.format({
+    content: n.default.Messages.BOTS_DATA_ACCESS_BASELINE.format({
       helpCenterUrl: "https://support.discord.com/hc/articles/7933951485975"
     })
   })), (0, l.jsx)(a.ScrollerThin, {

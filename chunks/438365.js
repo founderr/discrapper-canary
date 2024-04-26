@@ -1,39 +1,39 @@
 "use strict";
-n.r(t), n.d(t, {
+t.r(a), t.d(a, {
   useUserSelectedClan: function() {
     return u
   }
 });
-var i = n("470079"),
-  r = n("442837"),
-  s = n("430824"),
-  a = n("594174"),
-  o = n("645896"),
-  l = n("353093");
+var l = t("470079"),
+  n = t("442837"),
+  i = t("430824"),
+  r = t("594174"),
+  s = t("645896"),
+  o = t("353093");
 
 function u(e) {
-  var t, n;
+  var a, t;
   let {
     userId: u
-  } = e, d = (0, r.useStateFromStores)([a.default], () => {
+  } = e, d = (0, n.useStateFromStores)([r.default], () => {
     var e;
-    return null === (e = a.default.getUser(u)) || void 0 === e ? void 0 : e.clan
+    return null === (e = r.default.getUser(u)) || void 0 === e ? void 0 : e.clan
   }), {
-    tag: _,
-    badge: c,
-    guildId: E
-  } = (0, l.getUserClanData)(d);
-  i.useEffect(() => {
-    (0, o.fetchClanInfo)(E)
-  }, [E]);
-  let I = (0, o.useClanInfo)(null == d ? void 0 : d.identityGuildId),
-    T = (0, r.useStateFromStores)([s.default], () => s.default.getGuild(null == d ? void 0 : d.identityGuildId));
+    tag: c,
+    badge: f,
+    guildId: m
+  } = (0, o.getUserClanData)(d);
+  l.useEffect(() => {
+    (0, s.fetchClanInfo)(m)
+  }, [m]);
+  let v = (0, s.useClanInfo)(null == d ? void 0 : d.identityGuildId),
+    g = (0, n.useStateFromStores)([i.default], () => i.default.getGuild(null == d ? void 0 : d.identityGuildId));
   return {
-    userClanTag: _,
-    userClanBadge: c,
-    guildId: E,
-    guildName: null !== (t = null == T ? void 0 : T.name) && void 0 !== t ? t : null == I ? void 0 : I.name,
-    guildIcon: null !== (n = null == T ? void 0 : T.icon) && void 0 !== n ? n : null == I ? void 0 : I.icon,
-    clan: I
+    userClanTag: c,
+    userClanBadge: f,
+    guildId: m,
+    guildName: null !== (a = null == g ? void 0 : g.name) && void 0 !== a ? a : null == v ? void 0 : v.name,
+    guildIcon: null !== (t = null == g ? void 0 : g.icon) && void 0 !== t ? t : null == v ? void 0 : v.icon,
+    clan: v
   }
 }

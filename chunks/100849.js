@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var l = s("735250"),
   a = s("470079"),
   i = s("442837"),
-  r = s("481060"),
-  n = s("717881"),
+  n = s("481060"),
+  r = s("717881"),
   o = s("906732"),
   u = s("199902"),
   d = s("158776"),
@@ -16,72 +16,72 @@ var l = s("735250"),
   f = s("221292"),
   S = s("895618"),
   m = s("58307"),
-  E = s("981631"),
-  I = s("970903"),
-  v = s("521170");
+  v = s("981631"),
+  E = s("970903"),
+  I = s("521170");
 
 function x(e) {
   let {
     user: t
-  } = e, s = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), x = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), _ = a.useMemo(() => x.filter(e => e.type !== E.ActivityTypes.CUSTOM_STATUS), [x]), T = x.some(e => e.type === E.ActivityTypes.HANG_STATUS), A = a.useMemo(() => s ? _.find(e => e.type === E.ActivityTypes.PLAYING) : null, [_, s]), N = a.useMemo(() => _.filter(e => e !== A), [A, _]), U = (0, m.useGetVoiceChannelInfoForVoiceActivitySection)(t.id), p = null != U && !s && !T, {
-    showVoiceActivityInProfile: h
+  } = e, s = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), x = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), _ = a.useMemo(() => x.filter(e => e.type !== v.ActivityTypes.CUSTOM_STATUS), [x]), A = x.some(e => e.type === v.ActivityTypes.HANG_STATUS), N = a.useMemo(() => s ? _.find(e => e.type === v.ActivityTypes.PLAYING) : null, [_, s]), T = a.useMemo(() => _.filter(e => e !== N), [N, _]), U = (0, m.useGetVoiceChannelInfoForVoiceActivitySection)(t.id), C = null != U && !s && !A, {
+    showVoiceActivityInProfile: g
   } = S.VoiceActivityProfileExperiment.useExperiment({
     location: "user profile modal"
   }, {
-    autoTrackExposure: p
+    autoTrackExposure: C
   }), {
-    analyticsLocations: j
+    analyticsLocations: h
   } = (0, o.default)(), {
-    trackUserProfileAction: g,
-    ...R
-  } = (0, c.useUserProfileAnalyticsContext)(), P = {
+    trackUserProfileAction: p,
+    ...j
+  } = (0, c.useUserProfileAnalyticsContext)(), R = {
     location: {
-      page: E.AnalyticsPages.USER_PROFILE,
-      section: E.AnalyticsSections.PROFILE_MODAL
+      page: v.AnalyticsPages.USER_PROFILE,
+      section: v.AnalyticsSections.PROFILE_MODAL
     }
   };
-  return (0, l.jsxs)(r.ScrollerThin, {
-    className: v.listScroller,
+  return (0, l.jsxs)(n.ScrollerThin, {
+    className: I.listScroller,
     fade: !0,
-    children: [h && p ? (0, l.jsx)("div", {
-      className: I.voiceActivity,
+    children: [g && C ? (0, l.jsx)("div", {
+      className: E.voiceActivity,
       children: (0, l.jsx)(m.default, {
         ...U,
-        color: I.actionColor
+        color: E.actionColor
       })
-    }) : null, s ? (0, l.jsx)(n.default, {
-      type: n.UserActivityTypes.PROFILE_V2,
+    }) : null, s ? (0, l.jsx)(r.default, {
+      type: r.UserActivityTypes.PROFILE_V2,
       user: t,
       source: "Profile Modal",
-      className: I.userProfileActivity,
-      activity: A,
-      actionColor: I.actionColor,
-      analyticsParams: P,
+      className: E.userProfileActivity,
+      activity: N,
+      actionColor: E.actionColor,
+      analyticsParams: R,
       onAction: () => {
-        g({
+        p({
           action: "JOIN_ACTIVITY"
         }), (0, f.trackUserProfileActivityJoined)({
-          activity: A,
-          analyticsLocations: j,
-          ...R
+          activity: N,
+          analyticsLocations: h,
+          ...j
         })
       }
-    }) : null, N.map(e => (0, l.jsx)(n.default, {
-      type: n.UserActivityTypes.PROFILE_V2,
+    }) : null, T.map(e => (0, l.jsx)(r.default, {
+      type: r.UserActivityTypes.PROFILE_V2,
       activity: e,
       user: t,
       useStoreStream: !1,
       source: "Profile Modal",
-      className: I.userProfileActivity,
-      actionColor: I.actionColor,
-      analyticsParams: P,
+      className: E.userProfileActivity,
+      actionColor: E.actionColor,
+      analyticsParams: R,
       onAction: () => {
-        g({
+        p({
           action: "JOIN_ACTIVITY"
         }), (0, f.trackUserProfileActivityJoined)({
           activity: e,
-          analyticsLocations: j,
-          ...R
+          analyticsLocations: h,
+          ...j
         })
       }
     }, "".concat(e.application_id, "-").concat(e.session_id, "-").concat(e.name)))]

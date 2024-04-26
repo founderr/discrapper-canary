@@ -1,36 +1,36 @@
 "use strict";
-n.r(t), n.d(t, {
+t.r(a), t.d(a, {
   useCurrentUserAvailableClanIds: function() {
-    return _
+    return c
   },
   useCurrentUserAvailableClans: function() {
     return d
   }
-}), n("47120");
-var i = n("470079"),
-  r = n("392711"),
-  s = n.n(r),
-  a = n("442837"),
-  o = n("271383"),
-  l = n("430824"),
-  u = n("353093");
+}), t("47120");
+var l = t("470079"),
+  n = t("392711"),
+  i = t.n(n),
+  r = t("442837"),
+  s = t("271383"),
+  o = t("430824"),
+  u = t("353093");
 
 function d() {
-  return (0, a.useStateFromStoresArray)([l.default, o.default], () => {
-    let e = l.default.getGuilds();
-    return s()(e).values().filter(e => {
-      var t;
-      return (0, u.isGuildAClan)(e) && (null === (t = o.default.getSelfMember(e.id)) || void 0 === t ? void 0 : t.joinedAt) != null
+  return (0, r.useStateFromStoresArray)([o.default, s.default], () => {
+    let e = o.default.getGuilds();
+    return i()(e).values().filter(e => {
+      var a;
+      return (0, u.isGuildAClan)(e) && (null === (a = s.default.getSelfMember(e.id)) || void 0 === a ? void 0 : a.joinedAt) != null
     }).value()
   })
 }
 
-function _() {
+function c() {
   let e = d();
-  return i.useMemo(() => new Set(e.map(e => {
+  return l.useMemo(() => new Set(e.map(e => {
     let {
-      id: t
+      id: a
     } = e;
-    return t
+    return a
   })), [e])
 }

@@ -29,12 +29,12 @@ var a = s("735250"),
   L = s("496675"),
   x = s("525395"),
   v = s("558314"),
-  b = s("580130"),
-  D = s("55563"),
+  D = s("580130"),
+  b = s("55563"),
   U = s("551428"),
   j = s("695103"),
-  B = s("451478"),
-  y = s("378720"),
+  y = s("451478"),
+  B = s("378720"),
   G = s("285952"),
   k = s("760397"),
   H = s("757698"),
@@ -276,7 +276,7 @@ class eE extends r.PureComponent {
     } = t;
     if (null == i) throw Error("Rendering ApplicationStoreListing without description");
     return (0, a.jsxs)(r.Fragment, {
-      children: [(0, a.jsx)(y.default, {
+      children: [(0, a.jsx)(B.default, {
         tag: "h1",
         children: ed.default.Messages.APPLICATION_STORE_ABOUT_HEADER.format({
           name: s.name
@@ -584,7 +584,7 @@ class eE extends r.PureComponent {
     })
   }
 }
-t.default = (0, S.default)((0, m.default)(l.default.connectStores([v.default, M.default, O.default, B.default, U.default, D.default, j.default, A.default, N.default, x.default, h.default, b.default], e => {
+t.default = (0, S.default)((0, m.default)(l.default.connectStores([v.default, M.default, O.default, y.default, U.default, b.default, j.default, A.default, N.default, x.default, h.default, D.default], e => {
   let t, s, a, {
     inputSkuId: r,
     applicationId: i,
@@ -594,20 +594,20 @@ t.default = (0, S.default)((0, m.default)(l.default.connectStores([v.default, M.
   } = e;
   if (null == i) {
     if (null == r) throw Error("Needs applicationId or skuId");
-    t = r, null != (i = null != (s = D.default.get(r)) ? s.applicationId : null) && (a = N.default.getApplication(i))
+    t = r, null != (i = null != (s = b.default.get(r)) ? s.applicationId : null) && (a = N.default.getApplication(i))
   } else if (null == r) {
     if (null == i) throw Error("Needs applicationId or skuId");
-    null != (a = N.default.getApplication(i)) && (t = a.destinationSkuId), s = null != t ? D.default.get(t) : null
+    null != (a = N.default.getApplication(i)) && (t = a.destinationSkuId), s = null != t ? b.default.get(t) : null
   }(null == s ? void 0 : s.flags) != null && (0, V.hasFlag)(s.flags, eo.SKUFlags.STICKER_PACK) && (s = null);
   let u = null != i && (j.default.inTestModeForApplication(i) || A.default.inDevModeForApplication(i));
   return {
     skuId: t,
     application: null != i ? N.default.getApplication(i) : null,
-    isFetchingEntitlements: null != i && b.default.applicationIdsFetching.has(i),
-    didFetchEntitlements: null != i && b.default.applicationIdsFetched.has(i),
+    isFetchingEntitlements: null != i && D.default.applicationIdsFetching.has(i),
+    didFetchEntitlements: null != i && D.default.applicationIdsFetched.has(i),
     shouldFetchStatistics: l && null != i && x.default.shouldFetchStatisticsForApplication(i),
     sku: s,
-    isFocused: B.default.isFocused(),
+    isFocused: y.default.isFocused(),
     storeListing: U.default.getStoreListing({
       storeListingId: n,
       skuId: t,
