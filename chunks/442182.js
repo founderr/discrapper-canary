@@ -121,7 +121,7 @@ function P(e) {
         ...e
       }),
       position: "left",
-      preload: () => (0, I.default)(t.id, t.avatarURL, {
+      preload: () => (0, I.maybeFetchUserProfileForPopout)(t.id, t.avatarURL, {
         guildId: n
       }),
       children: e => (0, a.jsxs)(o.Clickable, {

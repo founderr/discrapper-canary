@@ -37,7 +37,7 @@ class S extends(i = s.Component) {
       }
     };
     return (0, r.jsx)(l.Popout, {
-      preload: () => (0, _.default)(t.id, t.getAvatarURL(s, 80), {
+      preload: () => (0, _.maybeFetchUserProfileForPopout)(t.id, t.getAvatarURL(s, 80), {
         guildId: s
       }),
       renderPopout: e => (0, r.jsx)(c.default, {

@@ -51,7 +51,7 @@ function p(e, t) {
       } = a;
     return null == N ? r : (0, s.jsx)(l.Popout, {
       position: "right",
-      preload: () => (0, u.default)(N.id, T, {
+      preload: () => (0, u.maybeFetchUserProfileForPopout)(N.id, T, {
         guildId: e.guild_id,
         channelId: e.id
       }),

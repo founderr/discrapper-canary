@@ -38,7 +38,7 @@ let m = (0, r.default)(e => {
   return (0, s.jsx)("div", {
     className: _.partyMemberKnown,
     children: (0, s.jsx)(i.Popout, {
-      preload: () => (0, u.default)(t.id, t.getAvatarURL(l, 80), {
+      preload: () => (0, u.maybeFetchUserProfileForPopout)(t.id, t.getAvatarURL(l, 80), {
         guildId: l
       }),
       renderPopout: e => (0, s.jsx)(d.default, {

@@ -98,7 +98,7 @@ function j(e) {
     onContextMenu: i
   } = e, u = (0, r.useStateFromStores)([m.default], () => m.default.getUser(n.user_id)), o = null === (t = n.member) || void 0 === t ? void 0 : t.guildId, g = (0, r.useStateFromStores)([h.default, E.default, v.default], () => n.user_id === v.default.getId() ? h.default.getStatus() : E.default.getStatus(n.user_id, o), [n.user_id, o]);
   return null == u ? null : (0, l.jsx)(s.Popout, {
-    preload: () => (0, c.default)(u.id, u.getAvatarURL(o, 80), {
+    preload: () => (0, c.maybeFetchUserProfileForPopout)(u.id, u.getAvatarURL(o, 80), {
       guildId: o
     }),
     renderPopout: e => (0, l.jsx)(f.default, {

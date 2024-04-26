@@ -148,7 +148,7 @@ function y(e) {
     })
   }
   return (0, n.jsx)(f.Popout, {
-    preload: () => (0, C.default)(o.id, o.getAvatarURL(A, 80), {
+    preload: () => (0, C.maybeFetchUserProfileForPopout)(o.id, o.getAvatarURL(A, 80), {
       guildId: A,
       channelId: l.id
     }),

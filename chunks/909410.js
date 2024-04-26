@@ -351,7 +351,7 @@ class A extends l.PureComponent {
           onClick: N,
           ...n,
           children: [(0, a.jsx)(u.Popout, {
-            preload: () => (0, _.default)(t.userId, o.getAvatarURL(r, 80), {
+            preload: () => (0, _.maybeFetchUserProfileForPopout)(t.userId, o.getAvatarURL(r, 80), {
               guildId: r
             }),
             renderPopout: e => (0, a.jsx)(I.default, {

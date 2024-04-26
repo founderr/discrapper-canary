@@ -83,7 +83,7 @@ function R(e) {
   t = null != v && null != R ? (0, s.jsx)(_.Popout, {
     preload: B ? void 0 : function() {
       let e = null != r ? r : i.author;
-      return (0, A.default)(e.id, null != n.guildMemberAvatar && null != P ? (0, N.getGuildMemberAvatarURLSimple)({
+      return (0, A.maybeFetchUserProfileForPopout)(e.id, null != n.guildMemberAvatar && null != P ? (0, N.getGuildMemberAvatarURLSimple)({
         guildId: P,
         userId: e.id,
         avatar: n.guildMemberAvatar,

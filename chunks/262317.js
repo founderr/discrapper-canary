@@ -109,7 +109,7 @@ class k extends(a = s.PureComponent) {
       onMouseEnter: a ? void 0 : this.handleMouseEnter,
       onMouseLeave: a ? void 0 : this.handleHidePreview,
       children: (0, l.jsx)(u.Popout, {
-        preload: () => (0, A.default)(s.id, s.getAvatarURL(i.guild_id, 80), {
+        preload: () => (0, A.maybeFetchUserProfileForPopout)(s.id, s.getAvatarURL(i.guild_id, 80), {
           guildId: i.guild_id,
           channelId: i.id
         }),

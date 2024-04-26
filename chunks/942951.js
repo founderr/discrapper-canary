@@ -47,7 +47,7 @@ function h(e) {
       value: S,
       children: null != h ? (0, n.jsx)(s.Popout, {
         position: "right",
-        preload: () => (0, r.default)(h.id, h.getAvatarURL(m, 80), {
+        preload: () => (0, r.maybeFetchUserProfileForPopout)(h.id, h.getAvatarURL(m, 80), {
           guildId: m,
           channelId: f
         }),

@@ -41,7 +41,7 @@ class R extends a.PureComponent {
     return (0, s.jsx)(o.Popout, {
       renderPopout: this.renderUserPopout,
       position: "left",
-      preload: () => (0, f.default)(e.user.id, e.user.getAvatarURL(n, 80), {
+      preload: () => (0, f.maybeFetchUserProfileForPopout)(e.user.id, e.user.getAvatarURL(n, 80), {
         guildId: n
       }),
       children: a => {

@@ -99,7 +99,7 @@ class R extends s.PureComponent {
         onUserContextMenu: r
       } = this.props;
       return a = (null == l ? void 0 : l.id) === e.id ? g.default.Messages.SPOTIFY_LISTEN_ALONG_HOST : g.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENER, (0, n.jsx)(u.Popout, {
-        preload: () => (0, c.default)(e.id, e.getAvatarURL(void 0, 80)),
+        preload: () => (0, c.maybeFetchUserProfileForPopout)(e.id, e.getAvatarURL(void 0, 80)),
         renderPopout: t => (o()(null != e, ""), (0, n.jsx)(f.default, {
           ...t,
           location: "ListeningAlong",
