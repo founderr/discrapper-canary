@@ -18381,32 +18381,6 @@ input[type=checkbox]:focus-visible+.label__8e100 {
     margin-right: 3px
 }
 
-.badge_b37eda {
-    padding: 0 .5rem;
-    background-color: var(--background-accent);
-    color: var(--interactive-active)
-}
-
-.theme-light .badge_b37eda {
-    background-color: var(--background-secondary)
-}
-
-.theme-light.custom-theme-background .badge_b37eda {
-    background-color: var(--background-tertiary)
-}
-
-.innerBadge_e4c245 {
-    display: flex;
-    gap: 4px;
-    align-items: center;
-    justify-content: center
-}
-
-.icon_c4aa3c {
-    width: 12px;
-    height: 12px
-}
-
 .badge__0a797 {
     display: inline-block;
     overflow: hidden;
