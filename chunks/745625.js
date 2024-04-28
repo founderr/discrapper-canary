@@ -1,7 +1,7 @@
 "use strict";
 n.r(t);
-var a = n("597536"),
-  r = n("782726"),
+var a = n("15393"),
+  r = n("919499"),
   i = n("470079"),
   c = n("520250"),
   o = "hcaptcha-api-script-id",
