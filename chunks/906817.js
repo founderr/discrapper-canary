@@ -18,7 +18,7 @@ var l = n("735250"),
   c = n("327530"),
   f = n("981631"),
   h = n("689938"),
-  m = n("75912");
+  m = n("333960");
 
 function p(e, t, n) {
   if (e === u.SECTION_INDEX_COMMUNITY) return c.HEIGHT_BUFFER;

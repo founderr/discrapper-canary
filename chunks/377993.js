@@ -33,8 +33,8 @@ var a = n("735250"),
   L = n("276264"),
   y = n("981631"),
   O = n("689938"),
-  j = n("495929"),
-  P = n("354811");
+  j = n("895294"),
+  P = n("67431");
 let D = R.default.getEnableHardwareAcceleration();
 
 function b(e) {

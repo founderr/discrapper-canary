@@ -13,7 +13,7 @@ var s = a("40146"),
   f = a("360048"),
   E = a("823379"),
   h = a("731455"),
-  _ = a("318020");
+  _ = a("84051");
 let C = e => {
     switch (e) {
       case h.CategoryIcons.Activity:

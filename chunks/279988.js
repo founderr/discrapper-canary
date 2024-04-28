@@ -10,7 +10,7 @@ var r = n("120356"),
   u = n("196345"),
   c = n("137158"),
   d = n("689938"),
-  f = n("915580");
+  f = n("17359");
 t.default = function(e) {
   let {
     channelId: t,

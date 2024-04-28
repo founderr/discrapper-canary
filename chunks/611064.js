@@ -19,8 +19,8 @@ var a = n("735250"),
   p = n("809017"),
   E = n("981631"),
   C = n("689938"),
-  g = n("985496"),
-  S = n("354811");
+  g = n("664059"),
+  S = n("67431");
 
 function _(e) {
   return (null == e ? void 0 : e.id) === p.MEMBER_LIST_CONTENT_GROUP_ID

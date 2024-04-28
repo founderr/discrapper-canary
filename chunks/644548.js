@@ -12,7 +12,7 @@ var a = n("735250"),
   f = n("555672"),
   h = n("591853"),
   m = n("689938"),
-  p = n("50928");
+  p = n("936183");
 let E = (e, t, n, a) => {
     let l = function(e) {
         if (e === s.AggregateRange.WEEK) return m.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME_WEEK_POPOUT

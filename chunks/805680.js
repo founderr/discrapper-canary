@@ -34,7 +34,7 @@ var i = n("735250"),
   b = n("185923"),
   G = n("611480"),
   w = n("689938"),
-  B = n("74382");
+  B = n("712337");
 let k = y.MIN_EXPRESSION_PICKER_WIDTH + U.EmojiSize.MEDIUM,
   V = r.memo(function(e) {
     let {

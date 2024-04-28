@@ -46,8 +46,8 @@ var a = n("735250"),
   G = n("602034"),
   V = n("981631"),
   W = n("689938"),
-  Y = n("683287"),
-  z = n("232024");
+  Y = n("911391"),
+  z = n("26909");
 let K = E.ChatInputTypes.THREAD_CREATION;
 
 function Z(e) {
