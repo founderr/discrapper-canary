@@ -32,8 +32,8 @@ var l = a("735250"),
   M = a("176505"),
   D = a("369701"),
   F = a("689938"),
-  L = a("253533"),
-  R = a("19340");
+  L = a("407348"),
+  R = a("749185");
 let b = C.MIN_GUILD_HOME_PAGE_WIDTH + 300 + 64,
   G = n.memo(function(e) {
     let {

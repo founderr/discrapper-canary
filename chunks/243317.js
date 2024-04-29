@@ -9,7 +9,7 @@ n("470079");
 var r = n("481060"),
   s = n("55178"),
   a = n("689938"),
-  o = n("12050");
+  o = n("3025");
 
 function l() {
   return (0, i.jsx)(r.Tooltip, {

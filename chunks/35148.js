@@ -1,20 +1,20 @@
 "use strict";
-a.r(t);
-var n = a("735250");
-a("470079");
-var s = a("120356"),
-  l = a.n(s),
-  i = a("513715"),
-  r = a("481060"),
-  o = a("497505"),
-  u = a("685613"),
-  d = a("340100"),
-  c = a("644646"),
-  f = a("898170"),
-  E = a("689938"),
-  h = a("743451");
+n.r(t);
+var a = n("735250");
+n("470079");
+var s = n("120356"),
+  l = n.n(s),
+  i = n("718017"),
+  r = n("481060"),
+  o = n("497505"),
+  u = n("685613"),
+  d = n("340100"),
+  c = n("644646"),
+  f = n("898170"),
+  E = n("689938"),
+  h = n("10569");
 t.default = function(e) {
-  var t, a, s;
+  var t, n, s;
   let {
     className: _,
     expansionSpring: C,
@@ -22,8 +22,8 @@ t.default = function(e) {
     isExpansionAnimationComplete: S,
     quest: p,
     useReducedMotion: I
-  } = e, T = (null === (t = p.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, g = (null !== (s = null === (a = p.userStatus) || void 0 === a ? void 0 : a.streamProgressSeconds) && void 0 !== s ? s : 0) > 0;
-  return (0, n.jsxs)(i.animated.div, {
+  } = e, T = (null === (t = p.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, g = (null !== (s = null === (n = p.userStatus) || void 0 === n ? void 0 : n.streamProgressSeconds) && void 0 !== s ? s : 0) > 0;
+  return (0, a.jsxs)(i.animated.div, {
     "aria-hidden": m && S,
     className: l()(_, h.contentCollapsed, {
       [h.contentCollapsedExpanded]: m,
@@ -35,33 +35,33 @@ t.default = function(e) {
         output: [1, 0]
       })
     },
-    children: [(0, n.jsx)(f.QuestBarBackgroundAnimation, {
+    children: [(0, a.jsx)(f.QuestBarBackgroundAnimation, {
       quest: p,
       useReducedMotion: I
-    }), (0, n.jsx)("div", {
+    }), (0, a.jsx)("div", {
       className: h.contentCollapsedWrapper,
-      children: T ? (0, n.jsxs)("div", {
+      children: T ? (0, a.jsxs)("div", {
         className: h.questProgressWrapper,
-        children: [(0, n.jsx)(c.default, {
+        children: [(0, a.jsx)(c.default, {
           className: h.questProgressRewardTile,
           quest: p,
           questContent: o.QuestContent.QUEST_BAR,
           autoplay: !1
-        }), g ? (0, n.jsx)(d.default, {
+        }), g ? (0, a.jsx)(d.default, {
           className: h.questProgressBar,
           quest: p
-        }) : (0, n.jsx)(r.Text, {
+        }) : (0, a.jsx)(r.Text, {
           className: h.questProgressHint,
           color: "always-white",
           variant: "text-sm/semibold",
           children: E.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED
         })]
-      }) : (0, n.jsxs)("div", {
+      }) : (0, a.jsxs)("div", {
         className: h.brandingWrapper,
-        children: [(0, n.jsx)(u.default, {
+        children: [(0, a.jsx)(u.default, {
           className: h.partnerBranding,
           quest: p
-        }), (0, n.jsx)(r.Heading, {
+        }), (0, a.jsx)(r.Heading, {
           color: "always-white",
           variant: "heading-sm/medium",
           className: h.questName,

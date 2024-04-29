@@ -30,7 +30,7 @@ var s = n("735250"),
   A = n("544978"),
   g = n("893182"),
   M = n("689938"),
-  R = n("22657");
+  R = n("611134");
 
 function v(e) {
   let {
@@ -104,7 +104,7 @@ function x(e) {
   } = (0, S.useExpandableTextContainer)(), D = (null !== (n = null == f ? void 0 : null === (t = f.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [P, y] = a.useState(1), U = (0, u.default)("(max-width: ".concat(R.twoColumnWidth, ")")), {
     selectedTab: j,
     isPhantomPreview: b
-  } = (0, C.useGuildShopDisplayContext)(), B = j === A.GuildShopTab.GUILD_PRODUCTS_PREVIEW ? M.default.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : M.default.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, F = D ? (0, s.jsxs)(s.Fragment, {
+  } = (0, C.useGuildShopDisplayContext)(), B = j === A.GuildShopTab.GUILD_PRODUCTS_PREVIEW ? M.default.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : M.default.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, G = D ? (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(L, {
       lineClamp: U || 2 === P ? 2 : 3,
       children: (0, s.jsx)(o.Text, {
@@ -171,7 +171,7 @@ function x(e) {
             })
           }), (0, s.jsx)(T.default, {
             size: 9
-          }), F]
+          }), G]
         })]
       })]
     }), (0, s.jsx)(O, {

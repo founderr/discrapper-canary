@@ -27,7 +27,7 @@ var r = n("120356"),
   o = n("410030"),
   l = n("325767"),
   u = n("474936"),
-  d = n("646541");
+  d = n("70912");
 let _ = "premium_new_tier_2_gradient",
   c = "premium_old_tier_2_gradient",
   E = e => {

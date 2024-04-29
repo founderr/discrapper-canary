@@ -1,22 +1,22 @@
 "use strict";
-a.r(t);
-var n = a("735250"),
-  s = a("470079"),
-  l = a("120356"),
-  i = a.n(l),
-  r = a("392711"),
-  o = a("481060"),
-  u = a("367907"),
-  d = a("465670"),
-  c = a("626135"),
-  f = a("981631"),
-  E = a("689938"),
-  h = a("53116");
+n.r(t);
+var a = n("735250"),
+  s = n("470079"),
+  l = n("120356"),
+  i = n.n(l),
+  r = n("392711"),
+  o = n("481060"),
+  u = n("367907"),
+  d = n("465670"),
+  c = n("626135"),
+  f = n("981631"),
+  E = n("689938"),
+  h = n("613682");
 let _ = (0, r.debounce)(u.default.trackWithMetadata, 500);
 t.default = function(e) {
   let {
     guild: t,
-    title: a,
+    title: n,
     message: l,
     image: r,
     type: C,
@@ -38,7 +38,7 @@ t.default = function(e) {
     })
   }, [t.id, C]);
   let L = null;
-  "function" == typeof N ? L = N() : null != N && (L = (0, n.jsx)(o.Button, {
+  "function" == typeof N ? L = N() : null != N && (L = (0, a.jsx)(o.Button, {
     className: h.button,
     size: o.Button.Sizes.SMALL,
     onClick: () => {
@@ -53,7 +53,7 @@ t.default = function(e) {
     children: N
   }));
   let O = null;
-  "function" == typeof a ? O = a() : null != a && (O = (0, n.jsx)(o.Text, {
+  "function" == typeof n ? O = n() : null != n && (O = (0, a.jsx)(o.Text, {
     variant: "text-md/medium",
     color: "header-primary",
     className: i()(h.title, {
@@ -61,12 +61,12 @@ t.default = function(e) {
     }, {
       [h.center]: R
     }),
-    children: a
+    children: n
   }));
   let M = null != S ? "".concat(S, "px") : "16px";
-  return (0, n.jsxs)("div", {
+  return (0, a.jsxs)("div", {
     className: h.container,
-    children: [!0 === T ? null : (0, n.jsx)(o.Clickable, {
+    children: [!0 === T ? null : (0, a.jsx)(o.Clickable, {
       onClick: () => {
         u.default.trackWithMetadata(f.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
           notice_type: C
@@ -74,25 +74,25 @@ t.default = function(e) {
       },
       className: h.close,
       "aria-label": E.default.Messages.DISMISS,
-      children: (0, n.jsx)(d.default, {
+      children: (0, a.jsx)(d.default, {
         className: h.closeIcon
       })
-    }), null != r && (0, n.jsx)("div", {
+    }), null != r && (0, a.jsx)("div", {
       className: h.imageContainer,
       style: {
         marginTop: "".concat(p, "px"),
         marginLeft: M,
         marginRight: M
       },
-      children: (0, n.jsx)("img", {
+      children: (0, a.jsx)("img", {
         className: h.image,
         style: m,
         src: r,
         alt: ""
       })
-    }), (0, n.jsxs)("div", {
+    }), (0, a.jsxs)("div", {
       className: h.message,
-      children: [O, (0, n.jsx)(o.Text, {
+      children: [O, (0, a.jsx)(o.Text, {
         className: i()({
           [h.center]: R
         }),

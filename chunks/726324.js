@@ -1,47 +1,47 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return d
   }
-}), a("47120");
-var n = a("735250");
-a("470079");
-var s = a("481060"),
-  l = a("695346"),
-  i = a("346656"),
-  r = a("506071"),
-  o = a("353254"),
-  u = a("66693");
+}), n("47120");
+var a = n("735250");
+n("470079");
+var s = n("481060"),
+  l = n("695346"),
+  i = n("346656"),
+  r = n("506071"),
+  o = n("353254"),
+  u = n("468337");
 
 function d(e) {
   let {
     coverImageAsset: t,
-    title: a,
+    title: n,
     guild: d,
     description: c,
     children: f
   } = e, E = l.GifAutoPlay.useSetting(), h = (0, r.useIsWindowFocused)(), [_, C] = (0, o.default)(t, h && E);
-  return (0, n.jsxs)("div", {
+  return (0, a.jsxs)("div", {
     className: u.container,
-    children: [(0, n.jsx)("div", {
+    children: [(0, a.jsx)("div", {
       ref: _,
       className: u.coverImageContainer,
-      children: null != C && (0, n.jsx)("img", {
+      children: null != C && (0, a.jsx)("img", {
         src: C,
         alt: "",
         className: u.coverImage
       })
-    }), (0, n.jsx)("div", {
+    }), (0, a.jsx)("div", {
       className: u.guildIconContainer,
-      children: (0, n.jsx)(i.default, {
+      children: (0, a.jsx)(i.default, {
         guild: d,
         size: i.default.Sizes.XLARGE
       })
-    }), (0, n.jsx)(s.Heading, {
+    }), (0, a.jsx)(s.Heading, {
       variant: "heading-xl/semibold",
       className: u.ctaTitle,
-      children: a
-    }), (0, n.jsx)(s.Text, {
+      children: n
+    }), (0, a.jsx)(s.Text, {
       className: u.ctaSubtitle,
       variant: "text-md/normal",
       color: "header-secondary",

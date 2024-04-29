@@ -33,7 +33,7 @@ var a = l("735250"),
   M = l("46140"),
   O = l("65154"),
   j = l("689938"),
-  D = l("578168");
+  D = l("54773");
 async function P() {
   let e = N.default.getVideoDevices(),
     t = (0, d.default)(N.default.getMediaEngine(), [u.DesktopSources.WINDOW, u.DesktopSources.SCREEN], {

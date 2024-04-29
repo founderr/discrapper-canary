@@ -21,7 +21,7 @@ var a = s("735250"),
   _ = s("210887"),
   g = s("981631"),
   h = s("689938"),
-  I = s("307723");
+  I = s("75429");
 let N = [{
   label: "Latin alphabet",
   value: "aBcDeFgHiJkLmNoPqRsTuVwXyZ"

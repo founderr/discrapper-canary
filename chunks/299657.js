@@ -30,7 +30,7 @@ var a = s("735250"),
   x = s("132547"),
   v = s("474936"),
   b = s("981631"),
-  D = s("310774");
+  D = s("34511");
 t.default = function(e) {
   let {
     entrypoint: t = v.PremiumMarketingEntrypoints.UserSettings

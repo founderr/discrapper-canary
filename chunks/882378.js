@@ -15,7 +15,7 @@ var a = n("735250"),
   p = n("502568"),
   E = n("134612"),
   C = n("689938"),
-  g = n("53972");
+  g = n("459847");
 t.default = l.memo(function(e) {
   let {
     channel: t
