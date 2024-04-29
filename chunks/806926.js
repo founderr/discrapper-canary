@@ -12,49 +12,53 @@ var a = s("442837"),
   r = s("80132"),
   o = s("484404"),
   u = s("193281"),
-  d = s("502762"),
-  c = s("530"),
-  f = s("616140"),
-  S = s("602091"),
-  m = s("727004");
+  d = s("681837"),
+  c = s("502762"),
+  f = s("530"),
+  S = s("616140"),
+  m = s("602091"),
+  I = s("727004");
 
 function v(e) {
   let {
     user: t,
     displayProfile: s,
     initialSection: v,
-    autoFocusNote: I,
-    transitionState: E,
-    onClose: x
-  } = e, _ = (0, n.default)(s), T = (0, a.useStateFromStores)([i.default], () => i.default.findActivity(t.id, e => null != e.type && u.SUPPORTED_ACTIVITY_TYPES.has(e.type)), [t]);
+    autoFocusNote: E,
+    transitionState: x,
+    onClose: _
+  } = e, T = (0, n.default)(s), A = (0, a.useStateFromStores)([i.default], () => i.default.findActivity(t.id, e => null != e.type && u.SUPPORTED_ACTIVITY_TYPES.has(e.type)), [t]);
   return (0, l.jsxs)("div", {
-    className: m.container,
+    className: I.container,
     children: [(0, l.jsxs)("div", {
-      className: m.usernameBadgeList,
-      children: [(0, l.jsx)(c.default, {
-        className: m.username,
+      className: I.usernameBadgeList,
+      children: [(0, l.jsx)(f.default, {
+        className: I.username,
         user: t,
         guildId: null == s ? void 0 : s.guildId,
         pronouns: null == s ? void 0 : s.pronouns,
-        nicknameVariant: "heading-xl/bold"
-      }), _.length > 0 && (0, l.jsx)(d.default.Overlay, {
+        nicknameVariant: "heading-xl/bold",
+        nicknameIcons: (0, l.jsx)(d.default, {
+          userId: t.id
+        })
+      }), T.length > 0 && (0, l.jsx)(c.default.Overlay, {
         children: (0, l.jsx)(r.default, {
-          badges: _,
-          className: m.badgeList,
-          onClose: x
+          badges: T,
+          className: I.badgeList,
+          onClose: _
         })
       })]
-    }), null != T && (0, l.jsx)(u.default, {
-      activity: T
-    }), (0, l.jsxs)(d.default.Overlay, {
-      children: [E === S.ModalTransitionState.ENTERED && (0, l.jsx)(o.default, {
-        onTooltipClose: x
-      }), (0, l.jsx)(f.default, {
+    }), null != A && (0, l.jsx)(u.default, {
+      activity: A
+    }), (0, l.jsxs)(c.default.Overlay, {
+      children: [x === m.ModalTransitionState.ENTERED && (0, l.jsx)(o.default, {
+        onTooltipClose: _
+      }), (0, l.jsx)(S.default, {
         user: t,
         displayProfile: s,
         initialSection: v,
-        autoFocusNote: I,
-        onClose: x
+        autoFocusNote: E,
+        onClose: _
       })]
     })]
   })
