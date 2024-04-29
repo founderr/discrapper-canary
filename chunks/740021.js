@@ -35,8 +35,8 @@ function N(e) {
     channelId: C,
     onClose: g
   } = e, {
-    theme: U
-  } = (0, I.useUserProfileThemeContext)(), h = (0, c.default)(t.id, N), {
+    theme: h
+  } = (0, I.useUserProfileThemeContext)(), U = (0, c.default)(t.id, N), {
     avatarSrc: p,
     eventHandlers: j,
     avatarDecorationSrc: R
@@ -64,13 +64,13 @@ function N(e) {
           size: x.AvatarSizes.SIZE_120,
           className: T.avatar,
           status: M,
-          statusBackdropColor: (0, n.getStatusBackdropColor)(U),
+          statusBackdropColor: (0, n.getStatusBackdropColor)(h),
           "aria-label": t.username,
           isMobile: P,
           statusTooltip: !0
         }), (0, l.jsx)("div", {
           className: T.buttons,
-          children: h && (0, l.jsx)(v.default, {
+          children: U && (0, l.jsx)(v.default, {
             user: t,
             onClose: g
           })

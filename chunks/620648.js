@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return U
+    return h
   }
 });
 var l = s("735250"),
@@ -27,13 +27,13 @@ var l = s("735250"),
   C = s("689938"),
   g = s("175839");
 
-function U(e) {
+function h(e) {
   var t;
   let {
     user: s,
     displayProfile: i,
-    autoFocusNote: U = !1,
-    scrollToConnections: h = !1
+    autoFocusNote: h = !1,
+    scrollToConnections: U = !1
   } = e, {
     trackUserProfileAction: p
   } = (0, I.useUserProfileAnalyticsContext)(), j = (0, r.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), {
@@ -43,11 +43,11 @@ function U(e) {
     location: "28tk0bf_3"
   }), O = (0, v.default)(s.id), L = a.useRef(null);
   return (a.useLayoutEffect(() => {
-    if (h) {
+    if (U) {
       var e;
       null == L || null === (e = L.current) || void 0 === e || e.scrollIntoView()
     }
-  }, [h]), j) ? (0, l.jsx)(N.default, {}) : (0, l.jsxs)(o.ScrollerThin, {
+  }, [U]), j) ? (0, l.jsx)(N.default, {}) : (0, l.jsxs)(o.ScrollerThin, {
     fade: !0,
     className: g.infoScroller,
     children: [(0, l.jsxs)("div", {
@@ -83,7 +83,7 @@ function U(e) {
         children: C.default.Messages.NOTE
       }), (0, l.jsx)(u.default, {
         userId: s.id,
-        autoFocus: U,
+        autoFocus: h,
         className: g.note,
         onUpdate: () => p({
           action: "SET_NOTE"

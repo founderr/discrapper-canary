@@ -24,13 +24,13 @@ function x(e) {
   let {
     user: t
   } = e, s = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), x = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), _ = a.useMemo(() => x.filter(e => e.type !== I.ActivityTypes.CUSTOM_STATUS), [x]), T = x.some(e => e.type === I.ActivityTypes.HANG_STATUS), A = a.useMemo(() => s ? _.find(e => e.type === I.ActivityTypes.PLAYING) : null, [_, s]), N = a.useMemo(() => _.filter(e => e !== A), [A, _]), C = (0, m.useGetVoiceChannelInfoForVoiceActivitySection)(t.id), g = null != C && !s && !T, {
-    showVoiceActivityInProfile: U
+    showVoiceActivityInProfile: h
   } = S.VoiceActivityProfileExperiment.useExperiment({
     location: "user profile modal"
   }, {
     autoTrackExposure: g
   }), {
-    analyticsLocations: h
+    analyticsLocations: U
   } = (0, o.default)(), {
     trackUserProfileAction: p,
     ...j
@@ -43,7 +43,7 @@ function x(e) {
   return (0, l.jsxs)(n.ScrollerThin, {
     className: E.listScroller,
     fade: !0,
-    children: [U && g ? (0, l.jsx)("div", {
+    children: [h && g ? (0, l.jsx)("div", {
       className: v.voiceActivity,
       children: (0, l.jsx)(m.default, {
         ...C,
@@ -62,7 +62,7 @@ function x(e) {
           action: "JOIN_ACTIVITY"
         }), (0, f.trackUserProfileActivityJoined)({
           activity: A,
-          analyticsLocations: h,
+          analyticsLocations: U,
           ...j
         })
       }
@@ -80,7 +80,7 @@ function x(e) {
           action: "JOIN_ACTIVITY"
         }), (0, f.trackUserProfileActivityJoined)({
           activity: e,
-          analyticsLocations: h,
+          analyticsLocations: U,
           ...j
         })
       }

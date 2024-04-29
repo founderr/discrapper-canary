@@ -26,11 +26,11 @@ t.default = a.memo(function(e) {
   } = e, {
     assets: T,
     application_id: A
-  } = _, N = null === (t = (0, o.useGetOrFetchApplication)(A)) || void 0 === t ? void 0 : t.getIconURL(128), C = (0, f.getAssetImage)(A, null == T ? void 0 : T.large_image, 128), g = null !== (x = null !== (E = null === (s = _.timestamps) || void 0 === s ? void 0 : s.start) && void 0 !== E ? E : _.created_at) && void 0 !== x ? x : 0, [U, h] = a.useState(Date.now()), {
+  } = _, N = null === (t = (0, o.useGetOrFetchApplication)(A)) || void 0 === t ? void 0 : t.getIconURL(128), C = (0, f.getAssetImage)(A, null == T ? void 0 : T.large_image, 128), g = null !== (x = null !== (E = null === (s = _.timestamps) || void 0 === s ? void 0 : s.start) && void 0 !== E ? E : _.created_at) && void 0 !== x ? x : 0, [h, U] = a.useState(Date.now()), {
     seconds: p,
     minutes: j,
     hours: R
-  } = (0, S.diffAsUnits)(g, U), {
+  } = (0, S.diffAsUnits)(g, h), {
     Icon: M,
     title: P,
     iconColor: y,
@@ -77,8 +77,8 @@ t.default = a.memo(function(e) {
           seconds: p,
           minutes: j,
           hours: R,
-          now: U,
-          setNow: h,
+          now: h,
+          setNow: U,
           textColor: O
         })]
       })]

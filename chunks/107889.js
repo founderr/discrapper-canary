@@ -26,8 +26,8 @@ var l = s("735250"),
   N = s("806926"),
   C = s("740021"),
   g = s("228168"),
-  U = s("981631"),
-  h = s("689938"),
+  h = s("981631"),
+  U = s("689938"),
   p = s("750721");
 
 function j(e) {
@@ -43,7 +43,7 @@ function j(e) {
     transitionState: L,
     sourceAnalyticsLocations: F = [],
     onClose: D
-  } = e, b = s === U.ME ? void 0 : s, {
+  } = e, b = s === h.ME ? void 0 : s, {
     analyticsLocations: B
   } = (0, d.default)([...F, u.default.SIMPLIFIED_PROFILE_MODAL]), G = (0, m.useTrackUserProfileAction)({
     layout: "SIMPLIFIED_MODAL",
@@ -60,13 +60,13 @@ function j(e) {
       let {
         type: t
       } = e;
-      return t !== U.ActivityTypes.CUSTOM_STATUS
+      return t !== h.ActivityTypes.CUSTOM_STATUS
     }),
     customStatusActivity: f.default.findActivity(t.id, e => {
       let {
         type: t
       } = e;
-      return t === U.ActivityTypes.CUSTOM_STATUS
+      return t === h.ActivityTypes.CUSTOM_STATUS
     })
   })), W = a.createRef(), K = (0, o.default)(W);
   return (0, l.jsx)(d.AnalyticsLocationProvider, {
@@ -82,7 +82,7 @@ function j(e) {
         transitionState: L,
         className: p.root,
         hideShadow: !0,
-        "aria-label": h.default.Messages.USER_PROFILE_MODAL,
+        "aria-label": U.default.Messages.USER_PROFILE_MODAL,
         children: [(0, l.jsx)("div", {
           ref: W,
           children: (0, l.jsxs)(v.default, {
@@ -112,8 +112,8 @@ function j(e) {
                 guildId: b,
                 viewProfileItem: (null == Y ? void 0 : Y.guildId) == null ? null : (null == z ? void 0 : z.guildId) != null ? (0, l.jsx)(n.MenuItem, {
                   id: "view-main-profile",
-                  label: h.default.Messages.VIEW_MAIN_PROFILE,
-                  subtext: h.default.Messages.AKA_DISPLAY_NAME.format({
+                  label: U.default.Messages.VIEW_MAIN_PROFILE,
+                  subtext: U.default.Messages.AKA_DISPLAY_NAME.format({
                     displayName: S.default.getName(void 0, void 0, t)
                   }),
                   action: () => {
@@ -124,8 +124,8 @@ function j(e) {
                   }
                 }) : (0, l.jsx)(n.MenuItem, {
                   id: "view-server-profile",
-                  label: h.default.Messages.VIEW_SERVER_PROFILE,
-                  subtext: h.default.Messages.AKA_DISPLAY_NAME.format({
+                  label: U.default.Messages.VIEW_SERVER_PROFILE,
+                  subtext: U.default.Messages.AKA_DISPLAY_NAME.format({
                     displayName: S.default.getName(b, j, t)
                   }),
                   action: () => {

@@ -26,8 +26,8 @@ var l = s("735250"),
   N = s("895618"),
   C = s("318661"),
   g = s("706327"),
-  U = s("484404"),
-  h = s("502762"),
+  h = s("484404"),
+  U = s("502762"),
   p = s("58307"),
   j = s("62154"),
   R = s("293259"),
@@ -171,7 +171,7 @@ function D(e) {
           "aria-label": O.default.Messages.USER_PROFILE_MODAL,
           children: [(0, l.jsx)("div", {
             ref: ea,
-            children: (0, l.jsxs)(h.default, {
+            children: (0, l.jsxs)(U.default, {
               user: z,
               displayProfile: H,
               profileType: P.UserProfileTypes.MODAL,
@@ -185,8 +185,8 @@ function D(e) {
                 guildId: A,
                 channelId: g,
                 hasProfileEffect: null != er
-              }), (0, l.jsxs)(h.default.Overlay, {
-                children: [k === n.ModalTransitionState.ENTERED && (0, l.jsx)(U.default, {
+              }), (0, l.jsxs)(U.default.Overlay, {
+                children: [k === n.ModalTransitionState.ENTERED && (0, l.jsx)(h.default, {
                   onTooltipClose: Y
                 }), (0, l.jsxs)("div", {
                   className: L.body,

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return X
+    return K
   }
 }), s("47120"), s("653041");
 var i, a, n = s("735250"),
@@ -477,7 +477,7 @@ function z(e) {
   })
 }
 
-function X(e) {
+function K(e) {
   let t = (0, x.useShouldUseNewNotificationSystem)("NotificationSettingsModal") ? I.default : z;
   return (0, n.jsx)(t, {
     ...e

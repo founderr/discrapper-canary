@@ -42,7 +42,7 @@ function T(e) {
     scrollToStart: E.NOOP_PROMISE,
     scrollToEnd: E.NOOP_PROMISE,
     wrap: !0
-  }), U = N.map(e => {
+  }), h = N.map(e => {
     var a;
     return (0, l.jsx)(d.MemberRole, {
       className: _.role,
@@ -68,7 +68,7 @@ function T(e) {
           }),
           ref: s,
           ...a,
-          children: [U, f && (0, l.jsx)(o.Tooltip, {
+          children: [h, f && (0, l.jsx)(o.Tooltip, {
             text: x.default.Messages.USER_PROFILE_ADD_ROLE,
             children: e => (0, l.jsx)("div", {
               ...e,

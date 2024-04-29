@@ -26,8 +26,8 @@ var l = s("735250"),
   N = s("204197"),
   C = s("735336"),
   g = s("520978"),
-  U = s("184325"),
-  h = s("652853"),
+  h = s("184325"),
+  U = s("652853"),
   p = s("496206"),
   j = s("228168"),
   R = s("981631"),
@@ -50,7 +50,7 @@ function F(e) {
     onClose: k
   } = e, V = (0, i.useStateFromStores)([v.default], () => v.default.getRelationshipType(_.id)), Y = (0, i.useStateFromStores)([I.default], () => I.default.isMobileOnline(_.id)), z = (0, i.useStateFromStores)([I.default], () => I.default.getStatus(_.id)), H = (0, i.useStateFromStores)([A.default], () => A.default.getUserProfile(_.id)), Z = (0, i.useStateFromStores)([m.default], () => m.default.getId() === _.id), {
     theme: W
-  } = (0, h.useUserProfileThemeContext)(), {
+  } = (0, U.useUserProfileThemeContext)(), {
     trackUserProfileAction: K
   } = (0, T.useUserProfileAnalyticsContext)(), {
     avatarSrc: J,
@@ -134,13 +134,13 @@ function F(e) {
             className: y.warningCircleIcon,
             color: n.default.unsafe_rawColors.YELLOW_300.css
           })
-        }) : (0, l.jsx)(U.default, {
+        }) : (0, l.jsx)(h.default, {
           user: _,
           className: y.badgeList,
           guildId: F,
-          size: U.BadgeSizes.SIZE_24,
+          size: h.BadgeSizes.SIZE_24,
           shrinkAtCount: 8,
-          shrinkToSize: U.BadgeSizes.SIZE_18
+          shrinkToSize: h.BadgeSizes.SIZE_18
         }), (0, l.jsxs)("div", {
           className: y.relationshipButtons,
           children: [(0, l.jsx)(g.default, {

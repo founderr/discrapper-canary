@@ -52,7 +52,7 @@ function A(e) {
     onClose: C
   } = e, {
     trackUserProfileAction: g
-  } = (0, c.useUserProfileAnalyticsContext)(), U = (0, n.useStateFromStores)([d.default], () => d.default.getCurrentUser()), h = (0, n.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), p = T(f), [j, R] = a.useState(N), [M, P] = a.useState(null !== (s = null === (t = p.find(e => {
+  } = (0, c.useUserProfileAnalyticsContext)(), h = (0, n.useStateFromStores)([d.default], () => d.default.getCurrentUser()), U = (0, n.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), p = T(f), [j, R] = a.useState(N), [M, P] = a.useState(null !== (s = null === (t = p.find(e => {
     let {
       section: t
     } = e;
@@ -63,14 +63,14 @@ function A(e) {
       section: e
     }), P(e), R(!1)
   }, [g, P]);
-  return null == U ? null : h ? (0, l.jsx)("div", {
+  return null == h ? null : U ? (0, l.jsx)("div", {
     className: _.container,
     children: (0, l.jsx)(I.default, {})
-  }) : f.id === U.id ? (0, l.jsx)("div", {
+  }) : f.id === h.id ? (0, l.jsx)("div", {
     className: _.container,
     children: (0, l.jsx)(v.default, {
       user: f,
-      currentUser: U,
+      currentUser: h,
       displayProfile: x,
       autoFocusNote: j
     })
@@ -105,7 +105,7 @@ function A(e) {
     })).otherwise(() => (0, l.jsx)(v.default, {
       className: _.infoTab,
       user: f,
-      currentUser: U,
+      currentUser: h,
       displayProfile: x,
       autoFocusNote: j
     }))]
