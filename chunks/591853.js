@@ -265,7 +265,7 @@ let z = e => {
           "aria-label": k.default.Messages.CONTENT_INVENTORY_REPLY_WITH_EMOJI.format({
             emojiName: t.name
           }),
-          color: c.Tooltip.Colors.BLACK,
+          color: c.Tooltip.Colors.PRIMARY,
           children: (0, a.jsx)(S.HotBarEmoji, {
             emoji: t,
             isDisabled: !1,
