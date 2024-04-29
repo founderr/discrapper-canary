@@ -1,75 +1,41 @@
 "use strict";
 n.r(t), n.d(t, {
-  ContentRowBadges: function() {
-    return I
+  TOP_GAME_BADGES: function() {
+    return p
   },
   isAllowedRange: function() {
-    return _
+    return C
   },
   useGamingContentData: function() {
-    return T
+    return g
   }
 });
 var a = n("735250"),
   l = n("470079"),
-  s = n("120356"),
-  i = n.n(s),
-  r = n("317261"),
-  o = n("964094"),
-  u = n("442837"),
-  d = n("481060"),
-  c = n("835473"),
-  f = n("594174"),
-  h = n("70956"),
-  m = n("561308"),
-  p = n("443487"),
-  E = n("43205"),
-  C = n("689938"),
-  g = n("571425");
-let S = [r.AggregateRange.WEEK];
+  s = n("317261"),
+  i = n("442837"),
+  r = n("835473"),
+  o = n("594174"),
+  u = n("561308"),
+  d = n("297781"),
+  c = n("443487"),
+  f = n("43205"),
+  h = n("689938"),
+  m = n("571425");
+let p = [d.TopGameBadge],
+  E = [s.AggregateRange.WEEK];
 
-function _(e) {
-  return null != e && S.includes(e)
+function C(e) {
+  return null != e && E.includes(e)
 }
-let T = e => {
-    let t = (0, c.useGetOrFetchApplication)(e.extra.application_id),
-      n = null == t ? void 0 : t.getIconURL(128);
-    return {
-      applicationImageSrc: n,
-      user: (0, u.useStateFromStores)([f.default], () => f.default.getUser(e.author_id))
-    }
-  },
-  I = e => {
-    let {
-      entry: t,
-      textColor: n = "text-secondary",
-      iconColor: l,
-      className: s,
-      forPopout: r
-    } = e;
-    return (0, a.jsx)("div", {
-      className: i()(g.badgeRow, s),
-      children: (() => {
-        let e = (0, m.getEntryDuration)(t);
-        if (null == e) return;
-        let s = r ? C.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK : C.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS;
-        return (0, a.jsxs)("div", {
-          className: g.badgeContainer,
-          children: [(0, a.jsx)(o.TrophyIcon, {
-            width: 12,
-            height: 12,
-            color: l
-          }), (0, a.jsxs)(d.Text, {
-            variant: "text-xs/normal",
-            color: n,
-            children: [C.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, r ? " — " : ": ", s.format({
-              hours: Math.round(e / h.default.Seconds.HOUR)
-            })]
-          })]
-        })
-      })()
-    })
-  };
+let g = e => {
+  let t = (0, r.useGetOrFetchApplication)(e.extra.application_id),
+    n = null == t ? void 0 : t.getIconURL(128);
+  return {
+    applicationImageSrc: n,
+    user: (0, i.useStateFromStores)([o.default], () => o.default.getUser(e.author_id))
+  }
+};
 t.default = l.memo(e => {
   let {
     entry: t,
@@ -77,27 +43,30 @@ t.default = l.memo(e => {
     selected: l
   } = e, {
     applicationImageSrc: s
-  } = T(t), i = (0, m.getAggregateRange)(t);
-  return null != i && _(i) ? (0, a.jsxs)(p.Card, {
+  } = g(t), i = (0, u.getAggregateRange)(t);
+  return null != i && C(i) ? (0, a.jsxs)(c.Card, {
     selected: l,
-    children: [(0, a.jsxs)(p.CardInfoSection, {
-      children: [(0, a.jsx)(p.CardParticipants, {
+    children: [(0, a.jsxs)(c.CardInfoSection, {
+      children: [(0, a.jsx)(c.CardParticipants, {
         entry: t,
         channelId: n.id,
         guildId: n.guild_id
-      }), (0, a.jsx)(p.CardTitle, {
+      }), (0, a.jsx)(c.CardTitle, {
         children: function(e) {
-          return C.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYED_GAME.format({
+          return h.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYED_GAME.format({
             gameName: e.extra.game_name
           })
         }(t)
-      }), (0, a.jsx)(I, {
-        entry: t
+      }), (0, a.jsx)(d.BadgesContainer, {
+        location: d.BadgeLocation.CARD,
+        children: p.map((e, n) => (0, a.jsx)(e, {
+          entry: t
+        }, n))
       })]
-    }), (0, a.jsx)(E.ContentImage, {
+    }), (0, a.jsx)(f.ContentImage, {
       src: s,
       size: 48,
-      className: g.thumbnail
+      className: m.thumbnail
     })]
   }) : null
 })
