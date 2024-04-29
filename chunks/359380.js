@@ -14,7 +14,7 @@ var n = a("735250"),
   d = a("898543"),
   c = a("308083"),
   f = a("689938"),
-  E = a("418571");
+  E = a("661926");
 let h = e => {
   let {
     title: t,
@@ -24,15 +24,11 @@ let h = e => {
     handleUpdate: u
   } = e, d = s.useCallback(e => {
     let t = new Set(o);
-    t.delete(e), u({
-      interests: t
-    })
+    t.delete(e), u(t)
   }, [u, o]), f = s.useCallback(e => {
     if (o.size === c.MAX_NUM_INTERESTS) return;
     let t = new Set(o);
-    t.add(e), u({
-      interests: t
-    })
+    t.add(e), u(t)
   }, [u, o]);
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(r.Text, {
@@ -63,47 +59,47 @@ let h = e => {
 };
 t.default = e => {
   let {
-    handleUpdate: t,
-    interests: a,
-    requiredGameId: l
-  } = e, i = s.useMemo(() => f.default.getAvailableLocales().map(e => ({
+    title: t,
+    description: a,
+    handleUpdate: l,
+    interests: i,
+    requiredGameId: _
+  } = e, C = s.useMemo(() => f.default.getAvailableLocales().map(e => ({
     value: e.value,
     label: e.localizedName
-  })), []), _ = s.useMemo(() => [...a].filter(e => c.LANGUAGES_SET.has(e)), [a]), C = s.useCallback(e => {
-    let n = [...a].filter(e => !c.LANGUAGES_SET.has(e));
-    t({
-      interests: new Set([...n, ...e])
-    })
-  }, [t, a]);
+  })), []), m = s.useMemo(() => [...i].filter(e => c.LANGUAGES_SET.has(e)), [i]), S = s.useCallback(e => {
+    let t = [...i].filter(e => !c.LANGUAGES_SET.has(e));
+    l(new Set([...t, ...e]))
+  }, [l, i]);
   return (0, n.jsxs)("div", {
     className: E.slideContent,
     children: [(0, n.jsx)(r.Heading, {
       variant: "heading-xxl/medium",
       className: E.title,
-      children: f.default.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE
+      children: t
     }), (0, n.jsx)(r.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       className: E.subtitle,
-      children: f.default.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE
-    }), l === c.VALORANT_ID && (0, n.jsx)(h, {
+      children: a
+    }), _ === c.VALORANT_ID && (0, n.jsx)(h, {
       title: f.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_VALORANT,
       icon: d.default,
       traits: c.VALORANT_TRAITS,
-      interests: a,
-      handleUpdate: t
+      interests: i,
+      handleUpdate: l
     }), (0, n.jsx)(h, {
       title: f.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_AGE,
       icon: o.default,
       traits: c.AGE_TRAITS,
-      interests: a,
-      handleUpdate: t
+      interests: i,
+      handleUpdate: l
     }), (0, n.jsx)(h, {
       title: f.default.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_IDENTITY,
       icon: u.default,
       traits: c.IDENTITY_TRAITS,
-      interests: a,
-      handleUpdate: t
+      interests: i,
+      handleUpdate: l
     }), (0, n.jsx)(r.Text, {
       className: E.interestsCategoryTitle,
       variant: "text-xs/semibold",
@@ -113,9 +109,9 @@ t.default = e => {
       className: E.languageSelect,
       children: (0, n.jsx)(r.SearchableSelect, {
         wrapperClassName: E.input,
-        options: i,
-        value: _,
-        onChange: C,
+        options: C,
+        value: m,
+        onChange: S,
         placeholder: f.default.Messages.CLAN_SETUP_LANGUAGE_PLACEHOLDER,
         multi: !0
       })

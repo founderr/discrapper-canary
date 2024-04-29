@@ -1,58 +1,61 @@
 "use strict";
 a.r(t), a.d(t, {
+  ClanDiscoveryUpsellScreens: function() {
+    return s
+  },
   FAKE_DISCOVERY_UPSELL_CLANS: function() {
-    return i
+    return o
   }
 });
-var n = a("116175"),
-  s = a("308083");
+var n, s, l = a("116175"),
+  i = a("308083");
 
-function l(e) {
+function r(e) {
   let {
     id: t,
     preset: a,
-    banner: l
+    banner: n
   } = e;
   return {
     id: t,
     name: "",
     description: "",
     memberCount: 0,
-    games: [s.VALORANT_ID],
-    playstyle: s.ClanPlaystyles.CASUAL,
+    games: [i.VALORANT_ID],
+    playstyle: i.ClanPlaystyles.CASUAL,
     tag: "",
     traits: [],
-    banner: l,
+    banner: n,
     badge: {
-      badgeKind: n.ClanBadgeKind.SWORD,
-      primaryColor: s.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].primary,
-      secondaryColor: s.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].secondary
+      badgeKind: l.ClanBadgeKind.SWORD,
+      primaryColor: i.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].primary,
+      secondaryColor: i.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].secondary
     },
     branding: {
-      primaryColor: s.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].primary,
-      secondaryColor: s.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].secondary
+      primaryColor: i.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].primary,
+      secondaryColor: i.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[a].secondary
     },
     wildcardDescriptors: []
   }
-}
-let i = [l({
+}(n = s || (s = {})).ADMIN_UPSELL = "admin_upsell", n.USER_UPSELL = "user_upsell", n.USER_ONBOARDING = "user_onboarding";
+let o = [r({
   id: "1",
-  preset: s.ClanBrandPresets.ZEPHYR,
-  banner: s.ClanBannerKind.TEXTURED
-}), l({
+  preset: i.ClanBrandPresets.ZEPHYR,
+  banner: i.ClanBannerKind.TEXTURED
+}), r({
   id: "2",
-  preset: s.ClanBrandPresets.THUNDER,
-  banner: s.ClanBannerKind.SCANLINES
-}), l({
+  preset: i.ClanBrandPresets.THUNDER,
+  banner: i.ClanBannerKind.SCANLINES
+}), r({
   id: "3",
-  preset: s.ClanBrandPresets.MARSH,
-  banner: s.ClanBannerKind.MAGIC
-}), l({
+  preset: i.ClanBrandPresets.MARSH,
+  banner: i.ClanBannerKind.MAGIC
+}), r({
   id: "4",
-  preset: s.ClanBrandPresets.BOULDER,
-  banner: s.ClanBannerKind.PIXEL_RUSH
-}), l({
+  preset: i.ClanBrandPresets.BOULDER,
+  banner: i.ClanBannerKind.PIXEL_RUSH
+}), r({
   id: "5",
-  preset: s.ClanBrandPresets.SOUL,
-  banner: s.ClanBannerKind.MAGIC
+  preset: i.ClanBrandPresets.SOUL,
+  banner: i.ClanBannerKind.MAGIC
 })]

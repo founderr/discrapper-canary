@@ -1,5 +1,5 @@
 "use strict";
-a.r(t);
+a.r(t), a("47120");
 var n = a("735250"),
   s = a("470079"),
   l = a("120356"),
@@ -8,11 +8,13 @@ var n = a("735250"),
   o = a("597312"),
   u = a("207796"),
   d = a("497189"),
-  c = a("526282"),
-  f = a("183993"),
-  E = a("495257");
+  c = a("304231"),
+  f = a("526282"),
+  E = a("183993"),
+  h = a("559469"),
+  _ = a("424023");
 
-function h(e) {
+function C(e) {
   let {
     children: t,
     selectedGame: a,
@@ -20,9 +22,9 @@ function h(e) {
   } = e, r = s.useMemo(() => {
     switch (a) {
       case u.ClanDiscoveryGame.GENSHIN:
-        return E.genshinBackgroundImage;
+        return _.genshinBackgroundImage;
       case u.ClanDiscoveryGame.VALORANT:
-        return E.valorantBackgroundImage
+        return _.valorantBackgroundImage
     }
   }, [a]);
   return (0, n.jsx)("div", {
@@ -31,24 +33,53 @@ function h(e) {
   })
 }
 t.default = s.memo(function() {
-  let e = (0, f.useEligibleGuildsForClans)(),
-    t = 0 === e.length,
-    a = (0, u.useClanDiscoveryUIStore)(e => e.game, r.default);
+  let e = (0, E.useEligibleGuildsForClans)(),
+    t = (0, u.useClanDiscoveryUIStore)(e => e.game, r.default),
+    [a, l] = s.useState(0 === e.length ? h.ClanDiscoveryUpsellScreens.USER_UPSELL : h.ClanDiscoveryUpsellScreens.ADMIN_UPSELL),
+    i = s.useCallback(() => {
+      l(h.ClanDiscoveryUpsellScreens.USER_ONBOARDING)
+    }, [l]),
+    m = s.useMemo(() => {
+      switch (a) {
+        case h.ClanDiscoveryUpsellScreens.ADMIN_UPSELL:
+          return (0, n.jsx)(o.ScrollerThin, {
+            className: _.upsellScroller,
+            fade: !0,
+            children: (0, n.jsx)(C, {
+              selectedGame: t,
+              className: _.adminUpsell,
+              children: (0, n.jsx)(d.default, {
+                selectedGame: t,
+                guild: e[0]
+              })
+            })
+          });
+        case h.ClanDiscoveryUpsellScreens.USER_UPSELL:
+          return (0, n.jsx)(o.ScrollerThin, {
+            className: _.upsellScroller,
+            fade: !0,
+            children: (0, n.jsx)(C, {
+              selectedGame: t,
+              className: _.userUpsell,
+              children: (0, n.jsx)(f.default, {
+                selectedGame: t,
+                onClick: i
+              })
+            })
+          });
+        case h.ClanDiscoveryUpsellScreens.USER_ONBOARDING:
+          return (0, n.jsx)(C, {
+            selectedGame: t,
+            className: _.userOnboarding,
+            children: (0, n.jsx)(c.default, {
+              selectedGame: t,
+              setScreen: l
+            })
+          })
+      }
+    }, [e, i, a, t]);
   return (0, n.jsx)("div", {
-    className: E.scrollerContainer,
-    children: (0, n.jsx)(o.ScrollerThin, {
-      className: E.scroller,
-      fade: !0,
-      children: (0, n.jsx)(h, {
-        selectedGame: a,
-        className: t ? E.userUpsell : E.adminUpsell,
-        children: t ? (0, n.jsx)(c.default, {
-          selectedGame: a
-        }) : (0, n.jsx)(d.default, {
-          selectedGame: a,
-          guild: e[0]
-        })
-      })
-    })
+    className: _.container,
+    children: m
   })
 })

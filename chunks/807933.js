@@ -30,7 +30,7 @@ var n = a("735250"),
   I = a("207796"),
   T = a("308083"),
   g = a("689938"),
-  A = a("866474");
+  A = a("625360");
 
 function N() {
   let e = (0, I.useClanDiscoveryUIStore)(e => e.selectedTraits, r.default),
@@ -42,15 +42,10 @@ function N() {
     l = new Set(e),
     [i, d] = s.useMemo(() => [e.filter(e => T.LANGUAGES_SET.has(e)), e.filter(e => !T.LANGUAGES_SET.has(e))], [e]),
     c = s.useCallback(e => {
-      let {
-        interests: a
-      } = e;
-      null != a && t(Array.from(a))
+      null != e && t(Array.from(e))
     }, [t]),
     h = s.useCallback(e => {
-      c({
-        interests: new Set([...d, ...e])
-      })
+      c(new Set([...d, ...e]))
     }, [c, d]);
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)("div", {

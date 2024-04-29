@@ -25,7 +25,7 @@ var n = a("735250"),
   v = a("359380"),
   R = a("308083"),
   L = a("689938"),
-  O = a("156610");
+  O = a("590190");
 let M = [R.ClanSetupSteps.FOUNDATIONAL_INTRO, R.ClanSetupSteps.GAMES, R.ClanSetupSteps.PLAYSTYLE, R.ClanSetupSteps.PERSONALITY_INTRO, R.ClanSetupSteps.UTILITY_TRAITS, R.ClanSetupSteps.INTERESTS, R.ClanSetupSteps.DESCRIPTION, R.ClanSetupSteps.IDENTITY_INTRO, R.ClanSetupSteps.CUSTOMIZE_TAG_BADGE, R.ClanSetupSteps.CUSTOMIZE_BANNER, R.ClanSetupSteps.APPLICATION_INTRO, R.ClanSetupSteps.MEMBER_APPLICATION],
   P = [
     [R.ClanSetupSteps.GAMES, R.ClanSetupSteps.PLAYSTYLE],
@@ -128,7 +128,16 @@ t.default = e => {
       furthestStep: null == G || e > G ? e : G
     }), [t, G]),
     H = s.useCallback(e => E.updateClanSetup(t, e), [t]),
-    V = s.useCallback(() => {
+    V = s.useCallback(e => H({
+      gameApplicationIds: e
+    }), [H]),
+    Y = s.useCallback(e => H({
+      playstyle: e
+    }), [H]),
+    W = s.useCallback(e => H({
+      interests: e
+    }), [H]),
+    K = s.useCallback(() => {
       F(!1), setTimeout(() => a(R.ClanSetupModalPages.SIGN), 199)
     }, [a]);
   return (0, n.jsxs)(n.Fragment, {
@@ -158,21 +167,27 @@ t.default = e => {
             switch (j) {
               case R.ClanSetupSteps.GAMES:
                 return (0, n.jsx)(S.default, {
-                  handleUpdate: H,
+                  title: L.default.Messages.CLAN_SETUP_GAMES_TITLE,
+                  description: L.default.Messages.CLAN_SETUP_GAMES_SUBTITLE,
+                  handleUpdate: V,
                   gameApplicationIds: P,
                   requiredGameId: A,
                   error: null == f ? void 0 : f.gameApplicationIds
                 });
               case R.ClanSetupSteps.PLAYSTYLE:
                 return (0, n.jsx)(g.default, {
-                  handleUpdate: H,
+                  title: L.default.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
+                  description: L.default.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
+                  handleUpdate: Y,
                   playstyle: y,
                   error: null == f ? void 0 : f.playstyle
                 });
               case R.ClanSetupSteps.UTILITY_TRAITS:
                 return (0, n.jsx)(v.default, {
+                  title: L.default.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
+                  description: L.default.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
                   requiredGameId: A,
-                  handleUpdate: H,
+                  handleUpdate: W,
                   interests: D
                 });
               case R.ClanSetupSteps.INTERESTS:
@@ -240,7 +255,7 @@ t.default = e => {
       }), (0, n.jsx)(x, {
         setCurrentStep: B,
         progress: c,
-        onLastStep: V
+        onLastStep: K
       })]
     }), (0, n.jsx)("div", {
       className: O.divider

@@ -11,66 +11,64 @@ var n = a("735250"),
   c = a("92373"),
   f = a("308083"),
   E = a("689938"),
-  h = a("418571");
+  h = a("661926");
 t.default = e => {
   let {
-    handleUpdate: t,
-    gameApplicationIds: a,
-    error: _,
-    requiredGameId: C
-  } = e, m = (0, l.useStateFromStores)([o.default], () => o.default.getId()), {
-    recentGames: S
-  } = (0, r.useUserRecentGames)(m), {
-    options: p,
-    matchSorterOptions: I
+    title: t,
+    description: a,
+    handleUpdate: _,
+    gameApplicationIds: C,
+    error: m,
+    requiredGameId: S
+  } = e, p = (0, l.useStateFromStores)([o.default], () => o.default.getId()), {
+    recentGames: I
+  } = (0, r.useUserRecentGames)(p), {
+    options: T,
+    matchSorterOptions: g
   } = (0, d.useClanSetupGameSelectableSearch)();
   s.useEffect(() => {
-    null != C && !a.has(C) && p.length > 0 && g(C)
-  }, [p.length, C]);
-  let T = e => {
-      if (!a.has(e) || e === C) return;
-      let n = new Set(a);
-      n.delete(e), t({
-        gameApplicationIds: n
-      })
+    null != S && !C.has(S) && T.length > 0 && N(S)
+  }, [T.length, S]);
+  let A = e => {
+      if (!C.has(e) || e === S) return;
+      let t = new Set(C);
+      t.delete(e), _(t)
     },
-    g = e => {
-      if (a.size === f.MAX_NUM_SELECTED_GAMES || a.has(e) || null == u.default.getGameById(e)) return;
-      let n = new Set(a);
-      n.add(e), t({
-        gameApplicationIds: n
-      })
+    N = e => {
+      if (C.size === f.MAX_NUM_SELECTED_GAMES || C.has(e) || null == u.default.getGameById(e)) return;
+      let t = new Set(C);
+      t.add(e), _(t)
     };
   return (0, n.jsxs)("div", {
     className: h.slideContent,
     children: [(0, n.jsx)(i.Heading, {
       variant: "heading-xxl/medium",
       className: h.title,
-      children: E.default.Messages.CLAN_SETUP_GAMES_TITLE
+      children: t
     }), (0, n.jsx)(i.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       className: h.subtitle,
-      children: E.default.Messages.CLAN_SETUP_GAMES_SUBTITLE
+      children: a
     }), (0, n.jsx)("div", {
       className: h.inputContainer,
       children: (0, n.jsx)(i.SearchableSelect, {
         wrapperClassName: h.input,
-        options: p,
+        options: T,
         value: "",
         placeholder: E.default.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
-        onChange: g,
-        isDisabled: a.size === f.MAX_NUM_SELECTED_GAMES,
-        matchSorterOptions: I
+        onChange: N,
+        isDisabled: C.size === f.MAX_NUM_SELECTED_GAMES,
+        matchSorterOptions: g
       })
     }), (0, n.jsxs)("div", {
       className: h.contentWithMinHeight,
-      children: [null != _ && (0, n.jsx)(i.Text, {
+      children: [null != m && (0, n.jsx)(i.Text, {
         variant: "text-sm/normal",
         color: "status-danger",
         className: h.errorText,
-        children: _
-      }), a.size > 0 && (0, n.jsxs)(n.Fragment, {
+        children: m
+      }), C.size > 0 && (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)(i.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
@@ -78,16 +76,16 @@ t.default = e => {
           children: E.default.Messages.CLAN_SETUP_SELECTED_GAMES
         }), (0, n.jsx)("div", {
           className: h.selectedSection,
-          children: Array.from(a).map(e => (0, n.jsx)(c.default, {
+          children: Array.from(C).map(e => (0, n.jsx)(c.default, {
             applicationId: e,
-            onClick: e !== C ? T : void 0,
-            imageContainerClassName: e !== C ? h.clickableGame : void 0,
+            onClick: e !== S ? A : void 0,
+            imageContainerClassName: e !== S ? h.clickableGame : void 0,
             selected: !0
           }, e))
         }), (0, n.jsx)("div", {
           className: h.divider
         })]
-      }), null != S && S.length > 0 && (0, n.jsxs)(n.Fragment, {
+      }), null != I && I.length > 0 && (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)(i.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
@@ -95,9 +93,9 @@ t.default = e => {
           children: E.default.Messages.RECENT_GAMES
         }), (0, n.jsx)("div", {
           className: h.selectedSection,
-          children: S.map(e => (0, n.jsx)(c.default, {
+          children: I.map(e => (0, n.jsx)(c.default, {
             applicationId: e.applicationId,
-            onClick: g,
+            onClick: N,
             imageContainerClassName: h.clickableGame
           }, e.applicationId))
         })]
