@@ -18,25 +18,10 @@ let d = {},
   c = {
     status: "unloaded"
   },
-  f = [],
-  E = {};
-class h extends(n = i.default.PersistedStore) {
-  initialize(e) {
-    if (null != e) {
-      var t;
-      f = null !== (t = e.savedClans) && void 0 !== t ? t : []
-    }
-  }
-  getState() {
-    return {
-      savedClans: f
-    }
-  }
-  getSavedClans() {
-    return f
-  }
+  f = {};
+class E extends(n = i.default.Store) {
   getSearchResult(e) {
-    let t = E[l().v3(JSON.stringify(e))];
+    let t = f[l().v3(JSON.stringify(e))];
     return null == t || t.loadedAt < Date.now() - o.default.Millis.HOUR ? c : t
   }
   hasLoadedStaticClanDiscovery(e) {
@@ -47,11 +32,11 @@ class h extends(n = i.default.PersistedStore) {
     return null !== (t = d[e]) && void 0 !== t ? t : []
   }
 }
-u(h, "displayName", "ClanDiscoveryStore"), u(h, "persistKey", "ClanDiscoveryStore"), t.default = new h(r.default, {
+u(E, "displayName", "ClanDiscoveryStore"), u(E, "persistKey", "ClanDiscoveryStore"), t.default = new E(r.default, {
   FETCH_STATIC_CLAN_LIST_SUCCESS: function(e) {
     d[e.game] = e.clans
   },
   FETCH_CLAN_DISCOVERY_SEARCH_RESULT_SUCCESS: function(e) {
-    E[e.criteriaHash] = e.searchResult
+    f[e.criteriaHash] = e.searchResult
   }
 })
