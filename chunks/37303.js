@@ -34,9 +34,10 @@ let T = e => {
     isExpanded: O,
     toggleExpanded: x
   } = (0, E.useQuestCardAnimation)({
-    initiallyExpanded: !M || (0, d.shouldQuestCardBeExpandedPermanently)({
+    initiallyExpanded: !M || (0, d.shouldQuestBeInitiallyExpanded)({
+      giftInventorySection: T,
       location: n,
-      giftInventorySection: T
+      quest: t
     })
   }), L = null != g ? g : d.QUESTS_CARD_MAX_HEIGHT_FALLBACK_PX;
   return (0, s.jsx)(u.QuestContentImpressionTracker, {

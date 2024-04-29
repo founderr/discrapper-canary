@@ -1,5 +1,5 @@
 "use strict";
-s.r(t);
+s.r(t), s("47120");
 var a = s("735250"),
   n = s("470079"),
   l = s("844099"),
@@ -17,6 +17,7 @@ var a = s("735250"),
   _ = s("941725");
 
 function g(e) {
+  if (null == e) return !1;
   let {
     userStatus: t
   } = e, s = (null == t ? void 0 : t.completedAt) != null && (null == t ? void 0 : t.claimedAt) == null, a = (null == t ? void 0 : t.enrolledAt) != null && (null == t ? void 0 : t.completedAt) == null;
@@ -35,55 +36,67 @@ t.default = () => {
     var t, a;
     let n = (null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
     return !(null !== (a = s.get(e.id)) && void 0 !== a && a) || n
-  }).sort((e, t) => {
-    var s, a, n, l, i, r;
-    let o = (null === (s = e.userStatus) || void 0 === s ? void 0 : s.completedAt) != null,
-      d = (null === (a = e.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null,
-      S = (null === (n = t.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-      E = (null === (l = t.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
-    if (o && !d && S && !E) return 0;
-    if (o && !d) return -1;
-    if (S && !E) return 1;
-    let T = (null === (i = e.userStatus) || void 0 === i ? void 0 : i.enrolledAt) != null,
-      f = (null === (r = t.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null;
-    if (T && !o && f && !S) {
-      let s = (0, c.calculatePercentComplete)(e);
-      return (0, c.calculatePercentComplete)(t) - s
-    }
-    if (T && !o) return -1;
-    if (f && !S) return 1;
-    let m = e.targetedContent.includes(u.QuestContent.GIFT_INVENTORY_FOR_YOU),
-      _ = t.targetedContent.includes(u.QuestContent.GIFT_INVENTORY_FOR_YOU);
-    if (m && !T && !o && _ && !f && !S) return 0;
-    if (m && !T && !o) return -1;
-    if (_ && !f && !S) return 1;
-    let g = o && d,
-      h = S && E;
-    return g && !h ? 1 : !g && h ? -1 : 0
-  }), [e, s]), N = n.useMemo(() => h ? [{
-    section: S.QuestsInventorySection.FOR_YOU,
-    title: m.default.Messages.QUESTS_FOR_YOU,
-    quests: I.filter(g)
-  }, {
-    section: S.QuestsInventorySection.OTHER,
-    title: m.default.Messages.QUESTS_OTHER,
-    quests: I.filter(e => !g(e))
-  }] : [], [h, I]), p = n.useCallback(e => {
+  }), [e, s]), N = n.useMemo(() => new Map(I.map(e => [e.id, e])), [I]), p = n.useRef(!1), C = n.useRef([]), A = n.useMemo(() => {
+    if (0 === I.length) return [];
+    if (p.current) return C.current;
+    let e = I.sort((e, t) => {
+      var s, a, n, l, i, r;
+      let o = (null === (s = e.userStatus) || void 0 === s ? void 0 : s.completedAt) != null,
+        d = (null === (a = e.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null,
+        S = (null === (n = t.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+        E = (null === (l = t.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
+      if (o && !d && S && !E) return 0;
+      if (o && !d) return -1;
+      if (S && !E) return 1;
+      let T = (null === (i = e.userStatus) || void 0 === i ? void 0 : i.enrolledAt) != null,
+        f = (null === (r = t.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null;
+      if (T && !o && f && !S) {
+        let s = (0, c.calculatePercentComplete)(e);
+        return (0, c.calculatePercentComplete)(t) - s
+      }
+      if (T && !o) return -1;
+      if (f && !S) return 1;
+      let m = e.targetedContent.includes(u.QuestContent.GIFT_INVENTORY_FOR_YOU),
+        _ = t.targetedContent.includes(u.QuestContent.GIFT_INVENTORY_FOR_YOU);
+      if (m && !T && !o && _ && !f && !S) return 0;
+      if (m && !T && !o) return -1;
+      if (_ && !f && !S) return 1;
+      let g = o && d,
+        h = S && E;
+      return g && !h ? 1 : !g && h ? -1 : 0
+    }).map(e => e.id);
+    return p.current = !0, C.current = e, e
+  }, [I]), O = n.useRef(null), x = n.useMemo(() => {
+    if (null != O.current) return O.current;
+    let e = h ? [{
+      section: S.QuestsInventorySection.FOR_YOU,
+      title: m.default.Messages.QUESTS_FOR_YOU,
+      questIds: A.filter(e => g(N.get(e)))
+    }, {
+      section: S.QuestsInventorySection.OTHER,
+      title: m.default.Messages.QUESTS_OTHER,
+      questIds: A.filter(e => !g(N.get(e)))
+    }] : [];
+    return O.current = e, e
+  }, [h, A, N]), R = n.useCallback(e => {
     let {
-      quests: t,
+      questIds: t,
       section: s
     } = e;
     return (0, a.jsx)(a.Fragment, {
-      children: t.map(e => (0, a.jsx)(E.QuestsCard, {
-        quest: e,
-        giftInventorySection: s,
-        location: u.QuestContent.QUEST_INVENTORY_CARD
-      }, e.id))
+      children: t.map(e => {
+        let t = N.get(e);
+        return null == t ? null : (0, a.jsx)(E.QuestsCard, {
+          quest: t,
+          giftInventorySection: s,
+          location: u.QuestContent.QUEST_INVENTORY_CARD
+        }, t.id)
+      })
     })
-  }, []);
+  }, [N]);
   return t ? (0, a.jsx)(i.Spinner, {
     className: _.spinner
-  }) : 0 === I.length ? null : (0, a.jsx)(i.FormSection, {
+  }) : 0 === A.length ? null : (0, a.jsx)(i.FormSection, {
     className: _.questsContainer,
     children: (0, a.jsxs)(i.HeadingLevel, {
       component: (0, a.jsxs)("div", {
@@ -104,10 +117,10 @@ t.default = () => {
       }),
       children: [(0, a.jsx)(i.FormDivider, {
         className: _.divider
-      }), h ? N.map(e => {
+      }), h ? x.map(e => {
         let {
           section: t,
-          quests: s,
+          questIds: s,
           title: n
         } = e;
         return 0 === s.length ? null : (0, a.jsxs)("section", {
@@ -117,13 +130,13 @@ t.default = () => {
             color: "header-secondary",
             className: _.sectionHeader,
             children: n
-          }), (0, a.jsx)(p, {
-            quests: s,
+          }), (0, a.jsx)(R, {
+            questIds: s,
             section: t
           })]
         }, t)
-      }) : (0, a.jsx)(p, {
-        quests: I
+      }) : (0, a.jsx)(R, {
+        questIds: A
       })]
     })
   })
