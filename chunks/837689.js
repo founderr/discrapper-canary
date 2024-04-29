@@ -75,12 +75,10 @@ class N extends r.default {
         if (!(0, l.hasAnyModalOpen)() && h.default.getCurrentConfig({
             location: "OfferAnnouncementManager"
           }).enabled) {
-          if (!(0, c.isPremium)(u.default.getCurrentUser()) && (!d.default.hasFetchedOffer() || d.default.shouldFetchOffer())) {
-            E.default.captureMessage("Should not need to fetch premium User Offers again when opening announcement modal");
-            return
-          }
-          let e = await (0, m.fetchPremiumMarketingContentWithUserOffer)(this.getOfferFromStore());
-          if (null == e) {
+          let e = u.default.getCurrentUser();
+          null != e && e.verified && !(0, c.isPremium)(e) && d.default.shouldFetchOffer() && E.default.captureMessage("Should not need to fetch premium User Offers again when opening announcement modal");
+          let t = await (0, m.fetchPremiumMarketingContentWithUserOffer)(this.getOfferFromStore());
+          if (null == t) {
             _.default.getCurrentConfig({
               location: "OfferAnnouncementManager"
             }).enabled && !(0, o.isDismissibleContentDismissed)(s.DismissibleContent.PREMIUM_2024_APRIL_MARKETING_MODAL) && (0, l.openModalLazy)(async () => {
@@ -93,8 +91,8 @@ class N extends r.default {
             });
             return
           }
-          for (let t of e)
-            if (this.maybeOpenServerDriveAnnouncementModal(t, !1)) break
+          for (let e of t)
+            if (this.maybeOpenServerDriveAnnouncementModal(e, !1)) break
         }
         if (!(0, l.hasAnyModalOpen)() && !h.default.getCurrentConfig({
             location: "OfferAnnouncementManager"
