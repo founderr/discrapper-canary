@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return v
   }
 });
 var l = s("735250");
@@ -18,12 +18,12 @@ var a = s("442837"),
   S = s("602091"),
   m = s("727004");
 
-function I(e) {
+function v(e) {
   let {
     user: t,
     displayProfile: s,
-    initialSection: I,
-    autoFocusNote: v,
+    initialSection: v,
+    autoFocusNote: I,
     transitionState: E,
     onClose: x
   } = e, _ = (0, n.default)(s), T = (0, a.useStateFromStores)([i.default], () => i.default.findActivity(t.id, e => null != e.type && u.SUPPORTED_ACTIVITY_TYPES.has(e.type)), [t]);
@@ -37,10 +37,12 @@ function I(e) {
         guildId: null == s ? void 0 : s.guildId,
         pronouns: null == s ? void 0 : s.pronouns,
         nicknameVariant: "heading-xl/bold"
-      }), _.length > 0 && (0, l.jsx)(r.default, {
-        badges: _,
-        className: m.badgeList,
-        onClose: x
+      }), _.length > 0 && (0, l.jsx)(d.default.Overlay, {
+        children: (0, l.jsx)(r.default, {
+          badges: _,
+          className: m.badgeList,
+          onClose: x
+        })
       })]
     }), null != T && (0, l.jsx)(u.default, {
       activity: T
@@ -50,8 +52,8 @@ function I(e) {
       }), (0, l.jsx)(f.default, {
         user: t,
         displayProfile: s,
-        initialSection: I,
-        autoFocusNote: v,
+        initialSection: v,
+        autoFocusNote: I,
         onClose: x
       })]
     })]
