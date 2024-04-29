@@ -1,64 +1,62 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return v
+    return m
   }
 });
 var l = s("735250");
 s("470079");
-var a = s("442837"),
-  i = s("158776"),
-  n = s("290421"),
-  r = s("80132"),
-  o = s("484404"),
-  u = s("193281"),
-  d = s("681837"),
-  c = s("502762"),
-  f = s("530"),
-  S = s("616140"),
-  m = s("602091"),
-  I = s("727004");
+var a = s("290421"),
+  i = s("80132"),
+  n = s("484404"),
+  r = s("681837"),
+  o = s("502762"),
+  u = s("530"),
+  d = s("558888"),
+  c = s("616140"),
+  f = s("602091"),
+  S = s("727004");
 
-function v(e) {
+function m(e) {
   let {
     user: t,
     displayProfile: s,
-    initialSection: v,
-    autoFocusNote: E,
-    transitionState: x,
-    onClose: _
-  } = e, T = (0, n.default)(s), A = (0, a.useStateFromStores)([i.default], () => i.default.findActivity(t.id, e => null != e.type && u.SUPPORTED_ACTIVITY_TYPES.has(e.type)), [t]);
+    initialSection: m,
+    autoFocusNote: v,
+    transitionState: I,
+    onClose: E
+  } = e, x = (0, a.default)(s);
   return (0, l.jsxs)("div", {
-    className: I.container,
+    className: S.container,
     children: [(0, l.jsxs)("div", {
-      className: I.usernameBadgeList,
-      children: [(0, l.jsx)(f.default, {
-        className: I.username,
+      className: S.usernameBadgeList,
+      children: [(0, l.jsx)(u.default, {
+        className: S.username,
         user: t,
         guildId: null == s ? void 0 : s.guildId,
         pronouns: null == s ? void 0 : s.pronouns,
         nicknameVariant: "heading-xl/bold",
-        nicknameIcons: (0, l.jsx)(d.default, {
+        nicknameIcons: (0, l.jsx)(r.default, {
           userId: t.id
         })
-      }), T.length > 0 && (0, l.jsx)(c.default.Overlay, {
-        children: (0, l.jsx)(r.default, {
-          badges: T,
-          className: I.badgeList,
-          onClose: _
+      }), x.length > 0 && (0, l.jsx)(o.default.Overlay, {
+        children: (0, l.jsx)(i.default, {
+          badges: x,
+          className: S.badgeList,
+          onClose: E
         })
       })]
-    }), null != A && (0, l.jsx)(u.default, {
-      activity: A
-    }), (0, l.jsxs)(c.default.Overlay, {
-      children: [x === m.ModalTransitionState.ENTERED && (0, l.jsx)(o.default, {
-        onTooltipClose: _
-      }), (0, l.jsx)(S.default, {
+    }), (0, l.jsx)(d.default, {
+      user: t
+    }), (0, l.jsxs)(o.default.Overlay, {
+      children: [I === f.ModalTransitionState.ENTERED && (0, l.jsx)(n.default, {
+        onTooltipClose: E
+      }), (0, l.jsx)(c.default, {
         user: t,
         displayProfile: s,
-        initialSection: v,
-        autoFocusNote: E,
-        onClose: _
+        initialSection: m,
+        autoFocusNote: v,
+        onClose: E
       })]
     })]
   })
