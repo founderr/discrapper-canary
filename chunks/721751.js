@@ -13,7 +13,7 @@ var s = n("735250"),
   h = n("624138"),
   E = n("830064"),
   g = n("981631"),
-  _ = n("672093");
+  _ = n("734541");
 let m = (0, h.cssValueToNumber)(_.responsiveWidthMobile),
   p = [g.Routes.LOGIN, g.Routes.LOGIN_HANDOFF, g.Routes.REGISTER, g.Routes.INVITE(""), g.Routes.GIFT_CODE(""), g.Routes.GUILD_TEMPLATE_LOGIN(""), g.Routes.GUILD_TEMPLATE(""), g.Routes.DISABLE_EMAIL_NOTIFICATIONS, g.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, g.Routes.BILLING_PREMIUM_SUBSCRIBE, g.Routes.BILLING_PAYMENT_SOURCES_CREATE, g.Routes.BILLING_PAYMENTS, g.Routes.BILLING_PREMIUM_SWITCH_PLAN, g.Routes.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, g.Routes.VERIFY, g.Routes.VERIFY_HUB_EMAIL, g.Routes.REJECT_IP, g.Routes.REJECT_MFA, g.Routes.AUTHORIZE_IP, g.Routes.AUTHORIZE_PAYMENT, g.Routes.RESET, g.Routes.HANDOFF, g.Routes.REPORT, g.Routes.REPORT_SECOND_LOOK];
 

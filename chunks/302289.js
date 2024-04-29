@@ -6,7 +6,7 @@ var s = a("481060"),
   l = a("785681"),
   i = a("130310"),
   r = a("689938"),
-  o = a("160526"),
+  o = a("126045"),
   u = a("128216");
 t.default = () => {
   let e = (0, l.useAgeSpecificText)(r.default.Messages.FAMILY_CENTER_ACTIVITY_DATA_CONFIRMATION_BANNER_DESCRIPTION_TEEN, r.default.Messages.FAMILY_CENTER_ACTIVITY_DATA_CONFIRMATION_BANNER_DESCRIPTION_PARENT);

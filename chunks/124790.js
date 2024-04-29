@@ -11,7 +11,7 @@ var i = n("120356"),
   s = n("797717"),
   o = n("471885"),
   u = n("981631"),
-  a = n("453865");
+  a = n("656682");
 let c = {
     [u.BoostedGuildTiers.NONE]: a.iconBackgroundTierNone,
     [u.BoostedGuildTiers.TIER_1]: a.iconBackgroundTierOne,

@@ -4,8 +4,8 @@ var i = n("735250");
 n("470079");
 var r = n("120356"),
   s = n.n(r),
-  a = n("888469"),
-  o = n("436898");
+  a = n("674298"),
+  o = n("928217");
 let l = Object.freeze({
     STANDARD: a.colorStandard,
     MUTED: a.colorMuted,

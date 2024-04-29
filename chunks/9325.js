@@ -19,7 +19,7 @@ var s = n("735250"),
   I = n("981631"),
   p = n("58346"),
   h = n("689938"),
-  T = n("949086");
+  T = n("611273");
 
 function N(e, t, n) {
   e.preventDefault(), E.default.track(I.AnalyticEvents.GUILD_TEMPLATE_APP_OPENED, {

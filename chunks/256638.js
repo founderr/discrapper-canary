@@ -42,8 +42,8 @@ var s = n("735250"),
   j = n("305325"),
   b = n("281956"),
   B = n("574650"),
-  G = n("665302"),
-  F = n("434404"),
+  F = n("665302"),
+  G = n("434404"),
   k = n("918658"),
   w = n("859428"),
   H = n("963249"),
@@ -75,7 +75,7 @@ var s = n("735250"),
   e_ = n("610674"),
   em = n("65154"),
   eT = n("689938"),
-  eI = n("344406");
+  eI = n("229647");
 let ep = () => (0, s.jsxs)(ei.default, {
     color: ei.NoticeColors.DANGER,
     children: [(0, s.jsx)(ei.NoticeCloseButton, {
@@ -371,7 +371,7 @@ let eS = a.memo(function() {
         skuId: eU, applicationId: ej
       } = ec.metadata, eb = et.default.get(eU), eB = R.default.getApplication(ej);
       if (null == eb || null == eB) return null;
-      let eG = {
+      let eF = {
         page: ef.AnalyticsPages.IN_APP
       };
       return (0, s.jsxs)(ei.default, {
@@ -394,11 +394,11 @@ let eS = a.memo(function() {
                 initialPlanId: null,
                 subscriptionTier: eE.PremiumSubscriptionSKUs.TIER_2,
                 analyticsLocations: eC,
-                analyticsObject: eG
+                analyticsObject: eF
               })
             },
             analyticsLocations: eC,
-            analyticsLocationObject: eG,
+            analyticsLocationObject: eF,
             context: __OVERLAY__ ? ef.AppContext.OVERLAY : ef.AppContext.APP
           }).then(() => f.dismiss(eb.id)),
           children: eT.default.Messages.NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_BUTTON
@@ -515,14 +515,14 @@ let eS = a.memo(function() {
     case ef.NoticeTypes.DISPATCH_ERROR:
       if (null == ec.metadata) return null;
       let {
-        error: eF
+        error: eG
       } = ec.metadata;
       return (0, s.jsxs)(ei.default, {
         color: ei.NoticeColors.DANGER,
         children: [(0, s.jsx)(ei.NoticeCloseButton, {
           onClick: () => eN(),
           noticeType: ef.NoticeTypes.DISPATCH_ERROR
-        }), null == eF ? void 0 : eF.displayMessage, (0, s.jsx)(ei.PrimaryCTANoticeButton, {
+        }), null == eG ? void 0 : eG.displayMessage, (0, s.jsx)(ei.PrimaryCTANoticeButton, {
           noticeType: ef.NoticeTypes.DISPATCH_ERROR,
           onClick: () => (0, u.openModalLazy)(async () => {
             let {
@@ -746,7 +746,7 @@ let eS = a.memo(function() {
         })]
       });
     case ef.NoticeTypes.BACK_TO_PREVIOUS_SCREEN:
-      return (0, s.jsx)(G.BackToPreviousScreenNotice, {
+      return (0, s.jsx)(F.BackToPreviousScreenNotice, {
         buttonText: null !== (l = ec.buttonText) && void 0 !== l ? l : eT.default.Messages.GO_BACK,
         onGoBack: ec.callback,
         onDismiss: () => eN(),
@@ -817,7 +817,7 @@ let eS = a.memo(function() {
           },
           children: eT.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_REMOVE_RESTRICTION
         }), null != g ? (0, s.jsx)(ei.NoticeButton, {
-          onClick: () => F.default.open(g, ef.GuildSettingsSections.GUILD_AUTOMOD, void 0, ef.GuildSettingsSubsections.AUTOMOD_MENTION_SPAM),
+          onClick: () => G.default.open(g, ef.GuildSettingsSections.GUILD_AUTOMOD, void 0, ef.GuildSettingsSubsections.AUTOMOD_MENTION_SPAM),
           children: eT.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_CONFIGURE_SETTINGS
         }) : null]
       });

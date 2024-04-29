@@ -10,7 +10,7 @@ var s = a("481060"),
   l = a("204197"),
   i = a("998502"),
   r = a("689938"),
-  o = a("666991");
+  o = a("135473");
 let u = i.default.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar,
   d = e => {
     let {

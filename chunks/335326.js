@@ -23,7 +23,7 @@ var a = n("735250"),
   E = n("371991"),
   C = n("701488"),
   g = n("689938"),
-  S = n("288564");
+  S = n("571425");
 let _ = e => {
     var t;
     let n = (0, c.useGetOrFetchApplication)(e.extra.application_id),

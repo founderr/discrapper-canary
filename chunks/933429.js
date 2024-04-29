@@ -35,8 +35,8 @@ var s, a, l, i, r = n("913527"),
   j = n("332473"),
   b = n("616106"),
   B = n("774276"),
-  G = n("443852"),
-  F = n("1844"),
+  F = n("518638"),
+  G = n("1844"),
   k = n("621615"),
   w = n("417626"),
   H = n("569984"),
@@ -125,9 +125,9 @@ let ey = {
     callback: void 0,
     metadata: null
   }),
-  eG = null;
+  eF = null;
 
-function eF(e) {
+function eG(e) {
   return eU[e] + "-untilAtLeast"
 }
 
@@ -137,10 +137,10 @@ function ek(e, t, n) {
   let i = eU[e];
   if (null != i && !t && f.Storage.set(i, !0), ej.has(e) && (eb[e] = !0), null != n && null != i) {
     ;
-    s = e, a = n, f.Storage.set(eF(s), a.format("YYYY-MM-DDTHH:mm:ss.SSSZ"))
+    s = e, a = n, f.Storage.set(eG(s), a.format("YYYY-MM-DDTHH:mm:ss.SSSZ"))
   } else {
     ;
-    l = e, f.Storage.remove(eF(l))
+    l = e, f.Storage.remove(eG(l))
   }
 }
 
@@ -161,7 +161,7 @@ function ew(e) {
   let n = eU[e];
   if (null != n) {
     let t = function(e) {
-      let t = f.Storage.get(eF(e));
+      let t = f.Storage.get(eG(e));
       return null != t ? o()(t) : null
     }(e);
     if (null != t) return null == t ? void 0 : t.isAfter(o()())
@@ -293,7 +293,7 @@ let eH = [eR.NoticeTypes.QUARANTINED, eR.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       }
     },
     [eR.NoticeTypes.OUTBOUND_PROMOTION]: {
-      predicate: () => (0, G.shouldShowOutboundPromotionNotice)()
+      predicate: () => (0, F.shouldShowOutboundPromotionNotice)()
     },
     [eR.NoticeTypes.CORRUPT_INSTALLATION]: {
       predicate: () => eS.isPlatformEmbedded && (!d.default.supported() || eM.default.isCorruptInstallation())
@@ -643,7 +643,7 @@ let eH = [eR.NoticeTypes.QUARANTINED, eR.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
 
 function eK() {
   if (!g.default.isConnected()) return !1;
-  eG = null;
+  eF = null;
   let e = eE.default.getCurrentUser();
   if (null == e) return !1;
   let t = eI.default.getPremiumSubscription(),
@@ -666,13 +666,13 @@ function eK() {
         premiumSubscription: t,
         selectedGuildId: s
       });
-      eG = {
+      eF = {
         ...eB,
         type: o,
         metadata: n
       };
       break
-    } null != eG && ew(eG.type) && (eG = null)
+    } null != eF && ew(eF.type) && (eF = null)
 }
 
 function eW() {
@@ -680,13 +680,13 @@ function eW() {
 }
 class ez extends(s = u.default.Store) {
   initialize() {
-    this.syncWith([ec.default, el.default, $.default, eo.default, F.default, ep.default, q.default, J.default, W.default, O.default, H.default, z.default], eK), this.waitFor(eE.default, eu.default, et.default, ee.default, ei.default, en.default, ed.default, C.default, eo.default, ef.default, Y.default, A.default, el.default, eA.default, eg.default, eN.default, es.default, eI.default, eM.default, $.default, eT.default, ea.default, F.default, eh.default, ep.default, J.default, y.default, N.default, p.default, w.default, H.default, z.default)
+    this.syncWith([ec.default, el.default, $.default, eo.default, G.default, ep.default, q.default, J.default, W.default, O.default, H.default, z.default], eK), this.waitFor(eE.default, eu.default, et.default, ee.default, ei.default, en.default, ed.default, C.default, eo.default, ef.default, Y.default, A.default, el.default, eA.default, eg.default, eN.default, es.default, eI.default, eM.default, $.default, eT.default, ea.default, G.default, eh.default, ep.default, J.default, y.default, N.default, p.default, w.default, H.default, z.default)
   }
   hasNotice() {
-    return null != eG && null != eG.type
+    return null != eF && null != eF.type
   }
   getNotice() {
-    return null == ef.default.getAction() ? eG : null
+    return null == ef.default.getAction() ? eF : null
   }
   isNoticeDismissed(e) {
     return ew(e)
@@ -765,10 +765,10 @@ i = "NoticeStore", (l = "displayName") in(a = ez) ? Object.defineProperty(a, l, 
     return eK()
   },
   NOTICE_SHOW: function(e) {
-    eG = e.notice
+    eF = e.notice
   },
   NOTICE_DISMISS: function(e) {
-    return null != eG && (null == e.id || e.id === eG.id) && (ek(eG.type, e.isTemporary, e.untilAtLeast), eK())
+    return null != eF && (null == e.id || e.id === eF.id) && (ek(eF.type, e.isTemporary, e.untilAtLeast), eK())
   },
   NOTICE_DISABLE: function(e) {
     let {
@@ -777,7 +777,7 @@ i = "NoticeStore", (l = "displayName") in(a = ez) ? Object.defineProperty(a, l, 
     return ek(t), eK()
   },
   LOGOUT: function() {
-    eb = {}, eG = null
+    eb = {}, eF = null
   },
   SUBSCRIPTION_PLANS_FETCH_SUCCESS: eK,
   AUTO_MODERATION_MENTION_RAID_DETECTION: eK,

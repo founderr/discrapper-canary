@@ -8,7 +8,7 @@ var l = n("735250"),
   a = n("470079"),
   s = n("120356"),
   i = n.n(s),
-  r = n("718017"),
+  r = n("513715"),
   o = n("866442"),
   u = n("442837"),
   d = n("477690"),
@@ -21,7 +21,7 @@ var l = n("735250"),
   g = n("674552"),
   E = n("981631"),
   _ = n("689938"),
-  S = n("799958");
+  S = n("538962");
 let I = (0, C.cssValueToNumber)(d.default.FOLDER_ITEM_ANIMATION_DURATION),
   N = (0, C.cssValueToNumber)(d.default.FOLDER_ITEM_GUILD_ICON_SIZE);
 

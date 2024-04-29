@@ -42,7 +42,7 @@ function u(e) {
       (0, i.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([a.e("49237"), a.e("99387"), a.e("66635"), a.e("33053"), a.e("49146"), a.e("75475"), a.e("58227"), a.e("85093"), a.e("85552"), a.e("43502"), a.e("69760"), a.e("33213")]).then(a.bind(a, "545135"));
+        } = await Promise.all([a.e("49237"), a.e("99387"), a.e("96427"), a.e("33053"), a.e("49146"), a.e("75475"), a.e("85093"), a.e("85552"), a.e("58227"), a.e("43502"), a.e("69760"), a.e("33213")]).then(a.bind(a, "545135"));
         return a => (0, n.jsx)(e, {
           ...a,
           guild: t

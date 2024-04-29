@@ -6,7 +6,7 @@ var a = n("735250"),
   i = n("481060"),
   r = n("243778"),
   o = n("689938"),
-  u = n("965945"),
+  u = n("274669"),
   d = n("442937");
 let c = () => (0, a.jsxs)("div", {
   className: u.coachtipInner,

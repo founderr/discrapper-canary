@@ -35,7 +35,7 @@ var l = a("735250"),
   O = a("176505"),
   y = a("124368"),
   H = a("689938"),
-  k = a("378093");
+  k = a("535129");
 let U = new Set(["Electron", "Chrome"]),
   w = async () => {
     let {

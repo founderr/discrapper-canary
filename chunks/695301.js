@@ -13,7 +13,7 @@ var l = n("735250"),
   h = n("291082"),
   m = n("61634"),
   p = n("325257"),
-  C = n("983379");
+  C = n("640651");
 t.default = a.memo(function(e) {
   let {
     guildNode: t,

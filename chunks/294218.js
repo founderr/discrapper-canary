@@ -26,7 +26,7 @@ var s = n("735250"),
   R = n("145807"),
   v = n("56744"),
   O = n("981631"),
-  x = n("913144");
+  x = n("373947");
 t.default = a.memo(function(e) {
   var t;
   let {
@@ -41,8 +41,8 @@ t.default = a.memo(function(e) {
     isGroupStart: j,
     animateAvatar: b,
     subscribeToComponentDispatch: B,
-    renderThreadAccessory: G,
-    trackAnnouncementViews: F = !1,
+    renderThreadAccessory: F,
+    trackAnnouncementViews: G = !1,
     ...k
   } = e, w = n.isFirstMessageInForumPost(U), H = (0, d.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), {
     content: V,
@@ -59,7 +59,7 @@ t.default = a.memo(function(e) {
   }), Z = (0, o.useStateFromStores)([E.default], () => E.default.can(O.Permissions.CREATE_INSTANT_INVITE, U)), J = (0, S.default)({
     message: n,
     channel: U,
-    enabled: F
+    enabled: G
   });
   if ((0, I.default)(n, Z)) return null;
   let $ = (0, h.getMessageAriaLabelledBy)(n),
@@ -84,7 +84,7 @@ t.default = a.memo(function(e) {
     childrenSystemMessage: (0, M.default)(e),
     onContextMenu: L,
     onClick: D,
-    hasThread: G && null != q && n.hasFlag(O.MessageFlags.HAS_THREAD),
+    hasThread: F && null != q && n.hasFlag(O.MessageFlags.HAS_THREAD),
     hasReply: n.type === O.MessageTypes.REPLY,
     "aria-labelledby": $,
     "aria-describedby": ee,

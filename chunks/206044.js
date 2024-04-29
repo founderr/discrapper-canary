@@ -4,7 +4,7 @@ var s = n("735250"),
   a = n("470079"),
   l = n("120356"),
   i = n.n(l),
-  r = n("718017"),
+  r = n("513715"),
   o = n("722770"),
   u = n("581051"),
   d = n("442837"),
@@ -26,7 +26,7 @@ var s = n("735250"),
   R = n("670638"),
   v = n("87894"),
   O = n("689938"),
-  x = n("945648");
+  x = n("257100");
 let L = (0, r.animated)(u.ChevronSmallDownIcon),
   D = (0, r.animated)(I.default),
   P = e => {
@@ -79,8 +79,8 @@ t.default = e => {
     toggleExpanded: b
   } = e, {
     ref: B,
-    height: G
-  } = (0, E.default)(), F = (0, d.useStateFromStores)([m.default], () => m.default.getState().theme), k = (0, d.useStateFromStores)([_.default], () => _.default.useReducedMotion), w = a.useMemo(() => (0, C.isAssetAnimated)(u.config.assets.hero), [u]), H = a.useRef(null), V = c === S.QuestContent.QUEST_INVENTORY_CARD, Y = c === S.QuestContent.QUESTS_EMBED, K = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, W = (0, N.useQuestFormattedDate)(u.config.expiresAt, {
+    height: F
+  } = (0, E.default)(), G = (0, d.useStateFromStores)([m.default], () => m.default.getState().theme), k = (0, d.useStateFromStores)([_.default], () => _.default.useReducedMotion), w = a.useMemo(() => (0, C.isAssetAnimated)(u.config.assets.hero), [u]), H = a.useRef(null), V = c === S.QuestContent.QUEST_INVENTORY_CARD, Y = c === S.QuestContent.QUESTS_EMBED, K = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, W = (0, N.useQuestFormattedDate)(u.config.expiresAt, {
     year: "numeric",
     month: "long",
     day: "numeric"
@@ -103,7 +103,7 @@ t.default = e => {
     }),
     "aria-label": O.default.Messages.EXPAND,
     style: {
-      height: V ? G : void 0
+      height: V ? F : void 0
     },
     children: [(0, s.jsx)(D, {
       style: {
@@ -166,7 +166,7 @@ t.default = e => {
                   className: x.partnerBranding,
                   gameTileSize: A.GameTileSizes.MEDIUM,
                   quest: u,
-                  theme: F
+                  theme: G
                 }), (0, s.jsx)(g.default, {
                   color: "always-white"
                 })]
@@ -202,7 +202,7 @@ t.default = e => {
                 className: x.partnerBranding,
                 gameTileSize: A.GameTileSizes.MEDIUM,
                 quest: u,
-                theme: F
+                theme: G
               }), (0, s.jsx)(g.default, {
                 color: "always-white"
               })]

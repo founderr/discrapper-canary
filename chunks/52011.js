@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   GamingStatsPromptExperiment: function() {
-    return a
+    return n
   }
 });
-let a = (0, n("818083").createExperiment)({
+let n = (0, a("818083").createExperiment)({
   kind: "guild",
   id: "2023-09_gaming_stats_prompt_guild",
   label: "Gaming stats prompt",

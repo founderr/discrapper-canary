@@ -32,7 +32,7 @@ var a = n("735250"),
   R = n("918559"),
   L = n("981631"),
   y = n("689938"),
-  O = n("986636");
+  O = n("258004");
 let j = {
   [R.FocusedActivityLayouts.NO_CHAT]: O.noChat,
   [R.FocusedActivityLayouts.RESIZABLE]: O.resizable

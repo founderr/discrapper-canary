@@ -21,7 +21,7 @@ var l = n("735250"),
   S = n("626135"),
   C = n("981631"),
   N = n("689938"),
-  h = n("407247");
+  h = n("287950");
 let _ = "VoiceChannelStatusModal";
 
 function m(e) {

@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   JUMP_TO_CURRENT_CALL: function() {
-    return u
+    return a
   }
 });
 var i = n("475468"),
   o = n("19780"),
   l = n("981631");
-let u = {
+let a = {
   binds: ["mod+shift+alt+v"],
   comboKeysBindGlobal: !0,
   action(e) {

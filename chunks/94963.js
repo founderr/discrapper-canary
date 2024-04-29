@@ -18,8 +18,8 @@ var n = a("735250"),
   S = a("688298"),
   p = a("308083"),
   I = a("689938"),
-  T = a("868878"),
-  g = a("418571");
+  T = a("106832"),
+  g = a("661926");
 let A = p.CLAN_BRAND_PALETTE_PRESETS.length + 1,
   N = [{
     name: "Pixel Rush",

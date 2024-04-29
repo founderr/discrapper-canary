@@ -29,7 +29,7 @@ var a = n("735250"),
   I = n("43205"),
   A = n("371991"),
   v = n("689938"),
-  N = n("288564");
+  N = n("571425");
 let x = e => {
     let t = (0, m.useGetOrFetchApplication)(e.extra.application_id),
       n = null == t ? void 0 : t.getIconURL(128);

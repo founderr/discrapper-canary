@@ -19,7 +19,7 @@ var a = n("735250"),
   p = n("358085"),
   E = n("228488"),
   C = n("981631"),
-  g = n("566097");
+  g = n("807136");
 let S = () => {
   i.default.wait(() => d.close(C.PopoutWindowKeys.CHANNEL_CALL_POPOUT))
 };

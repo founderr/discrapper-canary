@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n("47120");
-var a, l, s, i, r = n("442837"),
-  o = n("570140"),
-  d = n("944163"),
-  u = n("116175"),
-  c = n("308083");
-let f = () => ({
+a.r(t), a("47120");
+var n, s, l, i, r = a("442837"),
+  o = a("570140"),
+  d = a("944163"),
+  u = a("116175"),
+  c = a("308083");
+let S = () => ({
     gameApplicationIds: new Set,
     playstyle: c.ClanPlaystyles.NONE,
     interests: new Set,
@@ -22,33 +22,33 @@ let f = () => ({
     brandPrimaryColor: c.CLAN_BRAND_PALETTE_PRESETS["0"].primary,
     brandSecondaryColor: c.CLAN_BRAND_PALETTE_PRESETS["0"].secondary
   }),
-  S = f(),
+  f = S(),
   E = !1,
-  p = {};
-class m extends(a = r.default.Store) {
+  T = {};
+class p extends(n = r.default.Store) {
   getState() {
     return {
-      settings: S,
-      errors: p,
+      settings: f,
+      errors: T,
       submitting: E
     }
   }
 }
-i = "ClanSettingsStore", (s = "displayName") in(l = m) ? Object.defineProperty(l, s, {
+i = "ClanSettingsStore", (l = "displayName") in(s = p) ? Object.defineProperty(s, l, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[s] = i, t.default = new m(o.default, {
+}) : s[l] = i, t.default = new p(o.default, {
   CLAN_SETTINGS_FETCH_START: function() {
-    E = !1, S = f(), p = {}
+    E = !1, f = S(), T = {}
   },
   CLAN_SETTINGS_FETCH_SUCCESS: function(e) {
     let {
       settings: t
     } = e;
-    S = {
-      ...f(),
+    f = {
+      ...S(),
       ...t
     }
   },
@@ -56,22 +56,22 @@ i = "ClanSettingsStore", (s = "displayName") in(l = m) ? Object.defineProperty(l
     let {
       updates: t
     } = e;
-    for (let e in S = {
-        ...S,
+    for (let e in f = {
+        ...f,
         ...t
-      }, t) delete p[e]
+      }, t) delete T[e]
   },
   CLAN_SETTINGS_SUBMIT: function() {
-    E = !0, p = {}
+    E = !0, T = {}
   },
   CLAN_SETTINGS_SUBMIT_SUCCESS: function() {
-    E = !1, p = {}
+    E = !1, T = {}
   },
   CLAN_SETTINGS_SUBMIT_ERROR: function(e) {
     let {
       error: t
     } = e;
-    E = !1, p = {
+    E = !1, T = {
       gameApplicationIds: t.getFirstFieldErrorMessage("game_application_ids"),
       playstyle: t.getFirstFieldErrorMessage("play_style"),
       description: t.getFirstFieldErrorMessage("description"),
@@ -84,11 +84,11 @@ i = "ClanSettingsStore", (s = "displayName") in(l = m) ? Object.defineProperty(l
     let {
       form: t
     } = e;
-    if (null == S.verificationForm) return !1;
-    S = {
-      ...S,
+    if (null == f.verificationForm) return !1;
+    f = {
+      ...f,
       verificationForm: {
-        ...S.verificationForm,
+        ...f.verificationForm,
         ...t
       }
     }

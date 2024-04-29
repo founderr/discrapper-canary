@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return F
+    return G
   }
 }), n("653041"), n("47120"), n("390547");
 var s = n("735250"),
@@ -34,7 +34,7 @@ var s = n("735250"),
   L = n("981631"),
   D = n("245335"),
   P = n("689938"),
-  y = n("434092");
+  y = n("137435");
 let U = (0, O.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
   j = (0, O.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
   b = (0, O.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
@@ -77,7 +77,7 @@ function B(e) {
   })
 }
 
-function G(e) {
+function F(e) {
   let {
     channel: t,
     guild: n,
@@ -122,7 +122,7 @@ function G(e) {
   }) : null
 }
 
-function F(e) {
+function G(e) {
   var t, n;
   let l, r, {
       invite: d,
@@ -131,10 +131,10 @@ function F(e) {
     {
       approximate_member_count: R,
       approximate_presence_count: O,
-      target_type: F,
+      target_type: G,
       target_application: k
     } = d;
-  o()(F === D.InviteTargetTypes.EMBEDDED_APPLICATION && null != k, "invalid application invite");
+  o()(G === D.InviteTargetTypes.EMBEDDED_APPLICATION && null != k, "invalid application invite");
   let w = a.useRef(null),
     [H, V] = a.useState(!1),
     [Y, K] = a.useState(!1);
@@ -222,7 +222,7 @@ function F(e) {
           className: y.heading,
           variant: "heading-xl/semibold",
           children: null == z ? void 0 : z.name
-        }), (0, s.jsx)(G, {
+        }), (0, s.jsx)(F, {
           channel: X,
           guild: W,
           isStacked: Y,

@@ -17,7 +17,7 @@ var i = n("735250"),
   E = n("474936"),
   I = n("182294"),
   T = n("689938"),
-  f = n("886400");
+  f = n("600541");
 let S = [E.PremiumUpsellTypes.STREAM_QUALITY_UPSELL];
 
 function h(e) {

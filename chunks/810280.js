@@ -15,7 +15,7 @@ var s = a("990547"),
   d = a("981631"),
   c = a("921944"),
   f = a("689938"),
-  E = a("647805");
+  E = a("667609");
 let h = (e, t) => ({
   header: f.default.Messages.DROP_ENROLLMENT_CTA_TOOLTIP_HEADER.format({
     gameName: e.title

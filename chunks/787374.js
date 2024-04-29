@@ -15,7 +15,7 @@ var s = n("735250"),
   o = n("426563"),
   u = n("998502"),
   d = n("689938"),
-  c = n("741035");
+  c = n("344576");
 let f = u.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
 
 function E() {

@@ -22,7 +22,7 @@ var E = s("735250"),
   G = s("527379"),
   O = s("327999"),
   U = s("689938"),
-  C = s("230559");
+  C = s("673330");
 let M = _.memo(function() {
     return (0, E.jsx)(u.Tooltip, {
       text: U.default.Messages.MEMBER_SAFETY_JOIN_TYPE_UNKNOWN_TOOLTIP,

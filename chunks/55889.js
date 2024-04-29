@@ -6,7 +6,7 @@ var a = s("735250"),
   i = s("941524"),
   r = s("563115"),
   o = s("689938"),
-  d = s("931774");
+  d = s("502114");
 t.default = l.memo(function(e) {
   let {
     rule: t,

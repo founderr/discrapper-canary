@@ -25,7 +25,7 @@ var a = n("735250"),
   p = n("443487"),
   E = n("43205"),
   C = n("689938"),
-  g = n("288564");
+  g = n("571425");
 let S = [r.AggregateRange.WEEK];
 
 function _(e) {

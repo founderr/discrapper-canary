@@ -36,7 +36,7 @@ var a = n("735250"),
   j = n("474936"),
   P = n("526761"),
   D = n("689938"),
-  b = n("872571");
+  b = n("873137");
 let U = O.EmojiIntention.CHAT,
   F = {
     section: L.AnalyticsSections.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,

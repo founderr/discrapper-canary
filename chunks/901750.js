@@ -4,7 +4,7 @@ var a = s("735250");
 s("470079");
 var n = s("481060"),
   l = s("689938"),
-  i = s("976573");
+  i = s("460103");
 t.default = function(e) {
   let {
     hasGuildBoostSlots: t,

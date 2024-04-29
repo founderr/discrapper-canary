@@ -12,7 +12,7 @@ var a = n("735250"),
   s = n("120356"),
   i = n.n(s),
   r = n("392711"),
-  o = n("718017"),
+  o = n("513715"),
   u = n("481060"),
   d = n("596454"),
   c = n("727637"),
@@ -28,7 +28,7 @@ var a = n("735250"),
   T = n("354459"),
   I = n("185923"),
   A = n("420212"),
-  v = n("695357");
+  v = n("888863");
 let N = I.EmojiIntention.CHAT,
   x = [m.default.getByName("thumbsup"), m.default.getByName("eyes"), m.default.getByName("laughing"), m.default.getByName("watermelon"), m.default.getByName("fork_and_knife"), m.default.getByName("yum")].filter(_.isNotNullish);
 

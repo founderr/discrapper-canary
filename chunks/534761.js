@@ -8,7 +8,7 @@ var r = n("120356"),
   o = n("223021"),
   l = n("55935"),
   u = n("689938"),
-  d = n("904335");
+  d = n("822545");
 t.default = function(e) {
   let {
     children: t,

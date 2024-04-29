@@ -1,217 +1,217 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   hide: function() {
-    return N
+    return G
   },
   search: function() {
-    return U
+    return m
   },
   selectResult: function() {
-    return b
+    return M
   },
   show: function() {
-    return H
+    return b
   },
   switchToResult: function() {
-    return K
+    return P
   }
-}), l("757143"), l("47120");
-var n = l("570140"),
-  s = l("493683"),
-  u = l("475179"),
-  a = l("925549"),
-  o = l("287734"),
-  i = l("212819"),
-  c = l("336197"),
-  r = l("359110"),
-  d = l("769654"),
-  _ = l("131704"),
-  p = l("592125"),
-  T = l("283595"),
-  E = l("944486"),
-  R = l("914010"),
-  A = l("626135"),
-  C = l("777754"),
-  f = l("823385"),
-  m = l("981631"),
-  h = l("176505");
-let y = () => Promise.resolve();
-y = l("346329").playApplication;
-let S = Object.freeze({
-    [i.AutocompleterQuerySymbols.USER]: i.AutocompleterResultTypes.USER,
-    [i.AutocompleterQuerySymbols.TEXT_CHANNEL]: i.AutocompleterResultTypes.TEXT_CHANNEL,
-    [i.AutocompleterQuerySymbols.VOICE_CHANNEL]: i.AutocompleterResultTypes.VOICE_CHANNEL,
-    [i.AutocompleterQuerySymbols.GUILD]: i.AutocompleterResultTypes.GUILD,
-    [i.AutocompleterQuerySymbols.APPLICATION]: i.AutocompleterResultTypes.APPLICATION
+}), n("757143"), n("47120");
+var i = n("570140"),
+  o = n("493683"),
+  l = n("475179"),
+  a = n("925549"),
+  u = n("287734"),
+  s = n("212819"),
+  d = n("336197"),
+  r = n("359110"),
+  E = n("769654"),
+  c = n("131704"),
+  _ = n("592125"),
+  A = n("283595"),
+  C = n("944486"),
+  T = n("914010"),
+  S = n("626135"),
+  I = n("777754"),
+  f = n("823385"),
+  O = n("981631"),
+  p = n("176505");
+let N = () => Promise.resolve();
+N = n("346329").playApplication;
+let R = Object.freeze({
+    [s.AutocompleterQuerySymbols.USER]: s.AutocompleterResultTypes.USER,
+    [s.AutocompleterQuerySymbols.TEXT_CHANNEL]: s.AutocompleterResultTypes.TEXT_CHANNEL,
+    [s.AutocompleterQuerySymbols.VOICE_CHANNEL]: s.AutocompleterResultTypes.VOICE_CHANNEL,
+    [s.AutocompleterQuerySymbols.GUILD]: s.AutocompleterResultTypes.GUILD,
+    [s.AutocompleterQuerySymbols.APPLICATION]: s.AutocompleterResultTypes.APPLICATION
   }),
-  I = new RegExp("^".concat(i.AutocompleterQuerySymbols.USER, "|").concat(i.AutocompleterQuerySymbols.TEXT_CHANNEL, "|").concat(i.AutocompleterQuerySymbols.VOICE_CHANNEL, "|\\").concat(i.AutocompleterQuerySymbols.GUILD, "|\\").concat(i.AutocompleterQuerySymbols.APPLICATION));
+  L = new RegExp("^".concat(s.AutocompleterQuerySymbols.USER, "|").concat(s.AutocompleterQuerySymbols.TEXT_CHANNEL, "|").concat(s.AutocompleterQuerySymbols.VOICE_CHANNEL, "|\\").concat(s.AutocompleterQuerySymbols.GUILD, "|\\").concat(s.AutocompleterQuerySymbols.APPLICATION));
 
-function O(e) {
-  var t, l;
-  let n;
-  let [s, u] = (n = null !== (l = S[(t = e).charAt(0)]) && void 0 !== l ? l : null, [t.replace(I, ""), n]);
+function D(e) {
+  var t, n;
+  let i;
+  let [o, l] = (i = null !== (n = R[(t = e).charAt(0)]) && void 0 !== n ? n : null, [t.replace(L, ""), i]);
   return {
-    query: s,
-    queryMode: u
+    query: o,
+    queryMode: l
   }
 }
 
-function L(e, t) {
+function h(e, t) {
   let {
-    results: l,
-    queryMode: n,
-    query: s,
-    maxQueryLength: u
-  } = f.default.getProps(), a = R.default.getGuildId(), o = E.default.getChannelId(a), c = l[(0, i.findNextSelectedResult)(i.FindResultDirections.DOWN, -1, l)], r = C.default.isEmail(s), d = C.default.isPhoneNumber(s), T = C.default.isUserTagLike(s), m = null != o && (0, h.isStaticChannelRoute)(o), y = {
-    current_channel_id: m ? void 0 : o,
-    current_channel_static_route: m ? o : void 0,
+    results: n,
+    queryMode: i,
+    query: o,
+    maxQueryLength: l
+  } = f.default.getProps(), a = T.default.getGuildId(), u = C.default.getChannelId(a), d = n[(0, s.findNextSelectedResult)(s.FindResultDirections.DOWN, -1, n)], r = I.default.isEmail(o), E = I.default.isPhoneNumber(o), A = I.default.isUserTagLike(o), O = null != u && (0, p.isStaticChannelRoute)(u), N = {
+    current_channel_id: O ? void 0 : u,
+    current_channel_static_route: O ? u : void 0,
     current_guild_id: a,
-    query_mode: null != n ? n : "GENERAL",
-    query_length: s.length,
-    max_query_length: u,
+    query_mode: null != i ? i : "GENERAL",
+    query_length: o.length,
+    max_query_length: l,
     is_email_like: r,
-    is_phone_like: d,
-    is_username_like: T,
-    query: r || d || T ? null : s,
-    top_result_type: null != c ? c.type : null,
-    top_result_score: null != c ? c.score : null,
+    is_phone_like: E,
+    is_username_like: A,
+    query: r || E || A ? null : o,
+    top_result_type: null != d ? d.type : null,
+    top_result_score: null != d ? d.score : null,
     num_results_total: f.default.getResultTotals(),
-    num_results_users: f.default.getResultTotals(i.AutocompleterResultTypes.USER),
-    num_results_text_channels: f.default.getResultTotals(i.AutocompleterResultTypes.TEXT_CHANNEL),
-    num_results_voice_channels: f.default.getResultTotals(i.AutocompleterResultTypes.VOICE_CHANNEL),
-    num_results_guilds: f.default.getResultTotals(i.AutocompleterResultTypes.GUILD),
-    num_results_group_dms: f.default.getResultTotals(i.AutocompleterResultTypes.GROUP_DM)
+    num_results_users: f.default.getResultTotals(s.AutocompleterResultTypes.USER),
+    num_results_text_channels: f.default.getResultTotals(s.AutocompleterResultTypes.TEXT_CHANNEL),
+    num_results_voice_channels: f.default.getResultTotals(s.AutocompleterResultTypes.VOICE_CHANNEL),
+    num_results_guilds: f.default.getResultTotals(s.AutocompleterResultTypes.GUILD),
+    num_results_group_dms: f.default.getResultTotals(s.AutocompleterResultTypes.GROUP_DM)
   };
-  if (null != o) {
-    let e = p.default.getChannel(o);
-    y.current_channel_type = null != e ? e.type : null
+  if (null != u) {
+    let e = _.default.getChannel(u);
+    N.current_channel_type = null != e ? e.type : null
   }
   if (null != t) {
     let {
       type: e,
-      score: n,
-      record: s
+      score: i,
+      record: o
     } = t;
-    switch (y.selected_type = e, y.selected_score = n, y.selected_index = l.indexOf(t), e) {
-      case i.AutocompleterResultTypes.GUILD:
-        y.selected_guild_id = s.id;
+    switch (N.selected_type = e, N.selected_score = i, N.selected_index = n.indexOf(t), e) {
+      case s.AutocompleterResultTypes.GUILD:
+        N.selected_guild_id = o.id;
         break;
-      case i.AutocompleterResultTypes.TEXT_CHANNEL:
-      case i.AutocompleterResultTypes.VOICE_CHANNEL:
-        s instanceof _.ChannelRecordBase && (y.selected_guild_id = null != s.guild_id ? s.guild_id : null), y.selected_channel_id = s.id;
+      case s.AutocompleterResultTypes.TEXT_CHANNEL:
+      case s.AutocompleterResultTypes.VOICE_CHANNEL:
+        o instanceof c.ChannelRecordBase && (N.selected_guild_id = null != o.guild_id ? o.guild_id : null), N.selected_channel_id = o.id;
         break;
-      case i.AutocompleterResultTypes.GROUP_DM:
-        y.selected_channel_id = s.id;
+      case s.AutocompleterResultTypes.GROUP_DM:
+        N.selected_channel_id = o.id;
         break;
-      case i.AutocompleterResultTypes.USER:
-        y.selected_user_id = s.id
+      case s.AutocompleterResultTypes.USER:
+        N.selected_user_id = o.id
     }
   }
-  A.default.track(e, y)
+  S.default.track(e, N)
 }
 
 function g() {
-  n.default.dispatch({
+  i.default.dispatch({
     type: "QUICKSWITCHER_HIDE"
   })
 }
 
-function H() {
+function b() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "KEYBIND",
     t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
   ! function(e) {
     let t;
     if (f.default.isOpen()) return;
-    let l = R.default.getGuildId(),
-      n = E.default.getChannelId(l);
-    if (null != n) {
-      let e = p.default.getChannel(n);
+    let n = T.default.getGuildId(),
+      i = C.default.getChannelId(n);
+    if (null != i) {
+      let e = _.default.getChannel(i);
       t = null != e ? e.type : null
     }
-    A.default.track(m.AnalyticEvents.QUICKSWITCHER_OPENED, {
+    S.default.track(O.AnalyticEvents.QUICKSWITCHER_OPENED, {
       source: e,
-      current_guild_id: l,
-      current_channel_id: n,
+      current_guild_id: n,
+      current_channel_id: i,
       current_channel_type: t
     })
-  }(e), n.default.dispatch({
+  }(e), i.default.dispatch({
     type: "QUICKSWITCHER_SHOW",
-    ...O(t)
+    ...D(t)
   })
 }
 
-function N() {
-  L(m.AnalyticEvents.QUICKSWITCHER_CLOSED), g()
+function G() {
+  h(O.AnalyticEvents.QUICKSWITCHER_CLOSED), g()
 }
 
-function U(e) {
-  n.default.dispatch({
+function m(e) {
+  i.default.dispatch({
     type: "QUICKSWITCHER_SEARCH",
-    ...O(e)
+    ...D(e)
   })
 }
 
-function b(e) {
-  n.default.dispatch({
+function M(e) {
+  i.default.dispatch({
     type: "QUICKSWITCHER_SELECT",
     selectedIndex: e
   })
 }
 
-function K(e) {
-  let t, l = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  g(), L(m.AnalyticEvents.QUICKSWITCHER_RESULT_SELECTED, e);
+function P(e) {
+  let t, n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+  g(), h(O.AnalyticEvents.QUICKSWITCHER_RESULT_SELECTED, e);
   let {
-    type: _,
-    record: E
-  } = e, R = {
-    page: m.AnalyticsPages.QUICK_SWITCHER
+    type: c,
+    record: C
+  } = e, T = {
+    page: O.AnalyticsPages.QUICK_SWITCHER
   };
-  switch (_) {
-    case i.AutocompleterResultTypes.GUILD:
-      (0, d.transitionToGuild)(E.id, {
+  switch (c) {
+    case s.AutocompleterResultTypes.GUILD:
+      (0, E.transitionToGuild)(C.id, {
         navigationReplace: !0
       });
       break;
-    case i.AutocompleterResultTypes.TEXT_CHANNEL:
-      null != (t = p.default.getChannel(E.id)) && (0, r.transitionToChannel)(t.id, {
+    case s.AutocompleterResultTypes.TEXT_CHANNEL:
+      null != (t = _.default.getChannel(C.id)) && (0, r.transitionToChannel)(t.id, {
         state: {
-          analyticsSource: R
+          analyticsSource: T
         },
         navigationReplace: !0
       });
       break;
-    case i.AutocompleterResultTypes.VOICE_CHANNEL:
-      null != (t = p.default.getChannel(E.id)) && (l ? u.default.updateChatOpen(E.id, !0) : o.default.selectVoiceChannel(E.id), (0, r.transitionToChannel)(t.id, {
+    case s.AutocompleterResultTypes.VOICE_CHANNEL:
+      null != (t = _.default.getChannel(C.id)) && (n ? l.default.updateChatOpen(C.id, !0) : u.default.selectVoiceChannel(C.id), (0, r.transitionToChannel)(t.id, {
         state: {
-          analyticsSource: R
+          analyticsSource: T
         },
         navigationReplace: !0
       }));
       break;
-    case i.AutocompleterResultTypes.USER:
-      s.default.openPrivateChannel([E.id], !1, !1, "Quickswitcher"), a.default.channelListScrollTo(m.ME, p.default.getDMFromUserId(E.id));
+    case s.AutocompleterResultTypes.USER:
+      o.default.openPrivateChannel([C.id], !1, !1, "Quickswitcher"), a.default.channelListScrollTo(O.ME, _.default.getDMFromUserId(C.id));
       break;
-    case i.AutocompleterResultTypes.GROUP_DM:
-      (0, r.transitionToChannel)(E.id, {
+    case s.AutocompleterResultTypes.GROUP_DM:
+      (0, r.transitionToChannel)(C.id, {
         navigationReplace: !0
-      }), a.default.channelListScrollTo(m.ME, E.id);
+      }), a.default.channelListScrollTo(O.ME, C.id);
       break;
-    case i.AutocompleterResultTypes.APPLICATION:
-      let A = T.default.getActiveLibraryApplication(E.id);
-      y(E.id, A, {
+    case s.AutocompleterResultTypes.APPLICATION:
+      let S = A.default.getActiveLibraryApplication(C.id);
+      N(C.id, S, {
         analyticsParams: {
-          source: m.AnalyticsLocations.QUICK_SWITCHER,
-          location: m.AnalyticsLocations.QUICK_SWITCHER
+          source: O.AnalyticsLocations.QUICK_SWITCHER,
+          location: O.AnalyticsLocations.QUICK_SWITCHER
         }
       });
       break;
-    case i.AutocompleterResultTypes.LINK:
-      (0, c.default)(E.path, {
+    case s.AutocompleterResultTypes.LINK:
+      (0, d.default)(C.path, {
         navigationReplace: !0
       })
   }
-  n.default.dispatch({
+  i.default.dispatch({
     type: "QUICKSWITCHER_SWITCH_TO",
     result: e
   })

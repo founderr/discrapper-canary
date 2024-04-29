@@ -39,10 +39,10 @@ var s = n("735250"),
   j = n("778947"),
   b = n("702346"),
   B = n("787374"),
-  G = n("981631"),
-  F = n("674563"),
+  F = n("981631"),
+  G = n("674563"),
   k = n("689938"),
-  w = n("816670");
+  w = n("807850");
 
 function H() {
   return (0, s.jsx)("div", {
@@ -378,7 +378,7 @@ function z(e) {
         })
       }), (0, s.jsx)(H, {}), (0, s.jsx)(T.Button, {
         onClick: function() {
-          null != i && g.default.open(i, G.GuildSettingsSections.GUILD_AUTOMOD, void 0, G.GuildSettingsSubsections.AUTOMOD_MENTION_SPAM)
+          null != i && g.default.open(i, F.GuildSettingsSections.GUILD_AUTOMOD, void 0, F.GuildSettingsSubsections.AUTOMOD_MENTION_SPAM)
         },
         color: T.Button.Colors.LINK,
         look: T.Button.Looks.LINK,
@@ -478,7 +478,7 @@ function q(e) {
               className: w.username,
               children: k.default.Messages.GUILD_AUTOMOD_USERNAME
             }), (0, s.jsx)(D.default, {
-              type: F.BotTagTypes.SYSTEM_DM,
+              type: G.BotTagTypes.SYSTEM_DM,
               className: w.systemTag
             }), f && (0, s.jsx)(T.Text, {
               variant: "text-md/normal",

@@ -32,7 +32,7 @@ var a = s("735250"),
   p = s("981631"),
   M = s("731455"),
   D = s("689938"),
-  v = s("952273");
+  v = s("845978");
 let j = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
   G = () => {
     let {

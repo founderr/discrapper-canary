@@ -29,8 +29,8 @@ var a = s("735250"),
   p = s("921944"),
   C = s("474936"),
   A = s("689938"),
-  O = s("764362"),
-  x = s("949086");
+  O = s("922844"),
+  x = s("611273");
 let R = () => {
     (0, T.markDismissibleContentAsDismissed)(i.DismissibleContent.CLIENT_THEMES_SPARKLE_PREVIEW, {
       dismissAction: p.ContentDismissActionType.PRIMARY,
