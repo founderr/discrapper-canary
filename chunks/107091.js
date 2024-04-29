@@ -20,8 +20,8 @@ var l = a("735250"),
   h = a("372654"),
   E = a("300284"),
   g = a("642619"),
-  b = a("563132"),
-  x = a("333867"),
+  x = a("563132"),
+  b = a("333867"),
   S = a("329067"),
   T = a("981631"),
   v = a("302800"),
@@ -47,32 +47,34 @@ function _(e) {
     onPurchaseComplete: _,
     onUse: y,
     onError: O,
-    confettiCanvas: k = null
-  } = e, A = (0, r.v4)(), R = s.useRef(null), [j] = t.items, {
-    analyticsLocations: P
+    onReviewPurchase: k,
+    confettiCanvas: R = null
+  } = e, A = (0, r.v4)(), j = s.useRef(null), [P] = t.items, {
+    analyticsLocations: B
   } = (0, f.default)(d.default.COLLECTIBLES_SHOP_CARD), {
-    confettiColors: B,
-    buttonColors: D
-  } = (0, C.default)(t.styles), F = (0, n.useStateFromStores)([c.default], () => c.default.useReducedMotion), M = (0, v.getCustomConfettiDisplayOptions)(t.skuId), [w, H] = s.useState(!1), [U, W] = s.useState(!1), G = null != D ? {
-    background: (0, h.getBackgroundGradient)(D, 90),
-    color: D.text.toHslString()
-  } : void 0, V = (0, E.default)({
-    analyticsLocations: P
-  }), z = {
+    confettiColors: D,
+    buttonColors: F
+  } = (0, C.default)(t.styles), M = (0, n.useStateFromStores)([c.default], () => c.default.useReducedMotion), w = (0, v.getCustomConfettiDisplayOptions)(t.skuId), [H, U] = s.useState(!1), [W, G] = s.useState(!1), V = null != F ? {
+    background: (0, h.getBackgroundGradient)(F, 90),
+    color: F.text.toHslString()
+  } : void 0, z = (0, E.default)({
+    analyticsLocations: B
+  }), K = {
     onPurchaseComplete: () => {
-      H(!0), _()
+      U(!0), _()
     },
     onError: e => {
-      O(e), W(!0)
+      O(e), G(!0)
     },
+    onReviewPurchase: k,
     paymentSource: a,
     skuId: t.skuId,
-    analyticsLocations: P
+    analyticsLocations: B
   };
   return (0, l.jsxs)("div", {
-    ref: R,
+    ref: j,
     className: I.container,
-    children: [U && (0, l.jsxs)("div", {
+    children: [W && (0, l.jsxs)("div", {
       className: I.cardDetails,
       children: [(0, l.jsx)(o.Text, {
         color: "always-white",
@@ -89,15 +91,15 @@ function _(e) {
         })
       }), (0, l.jsx)(o.Button, {
         onClick: () => {
-          (0, x.default)({
+          k(), (0, b.default)({
             skuId: t.skuId,
-            analyticsLocations: P,
-            returnRef: R
+            analyticsLocations: B,
+            returnRef: j
           })
         },
         children: "Review Purchase"
       })]
-    }), !U && (w ? (0, l.jsxs)("div", {
+    }), !W && (H ? (0, l.jsxs)("div", {
       className: I.cardDetails,
       children: [(0, l.jsxs)(o.Text, {
         color: "always-white",
@@ -113,17 +115,17 @@ function _(e) {
           children: "This decoration is now part of your collection and can be used anytime!"
         })
       }), (0, l.jsx)(N, {
-        style: G,
+        style: V,
         onClick: () => {
-          if (y(), (0, u.popLayer)(), V(), (null == j ? void 0 : j.type) === i.CollectiblesItemType.AVATAR_DECORATION) {
+          if (y(), (0, u.popLayer)(), z(), (null == P ? void 0 : P.type) === i.CollectiblesItemType.AVATAR_DECORATION) {
             (0, m.openAvatarDecorationModal)({
-              initialSelectedDecoration: j,
-              analyticsLocations: P
+              initialSelectedDecoration: P,
+              analyticsLocations: B
             });
             return
-          }(null == j ? void 0 : j.type) === i.CollectiblesItemType.PROFILE_EFFECT && (0, g.openProfileEffectModal)({
-            initialSelectedEffectId: j.id,
-            analyticsLocations: P
+          }(null == P ? void 0 : P.type) === i.CollectiblesItemType.PROFILE_EFFECT && (0, g.openProfileEffectModal)({
+            initialSelectedEffectId: P.id,
+            analyticsLocations: B
           })
         },
         children: L.default.Messages.COLLECTIBLES_USE_NOW
@@ -135,7 +137,7 @@ function _(e) {
         variant: "text-lg/bold",
         className: I.productName,
         children: t.name
-      }), (0, l.jsx)(b.PaymentContextProvider, {
+      }), (0, l.jsx)(x.PaymentContextProvider, {
         loadId: A,
         stepConfigs: [],
         applicationId: T.COLLECTIBLES_APPLICATION_ID,
@@ -144,14 +146,14 @@ function _(e) {
         activeSubscription: null,
         purchaseType: T.PurchaseTypes.ONE_TIME,
         children: (0, l.jsx)(S.default, {
-          ...z
+          ...K
         })
       })]
-    })), !U && w && !(null != M) && !F && (0, l.jsx)(p.default, {
-      confettiTarget: R.current,
-      confettiCanvas: k,
+    })), !W && H && !(null != w) && !M && (0, l.jsx)(p.default, {
+      confettiTarget: j.current,
+      confettiCanvas: R,
       sprites: (0, h.getConfettiSprites)(t.categorySkuId),
-      colors: null == B ? void 0 : B.map(e => e.toHexString())
+      colors: null == D ? void 0 : D.map(e => e.toHexString())
     })]
   })
 }

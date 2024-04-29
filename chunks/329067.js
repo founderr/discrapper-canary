@@ -23,8 +23,8 @@ var l = a("735250"),
   h = a("409813"),
   E = a("333867"),
   g = a("74179"),
-  b = a("981631"),
-  x = a("255094");
+  x = a("981631"),
+  b = a("255094");
 let S = e => {
     let {
       children: t,
@@ -68,7 +68,7 @@ function v() {
     activeSubscription: null
   });
   return {
-    userIsEligible: null !== e && !b.REDIRECTED_PAYMENT_SOURCES.has(e.type)
+    userIsEligible: null !== e && !x.REDIRECTED_PAYMENT_SOURCES.has(e.type)
   }
 }
 
@@ -76,47 +76,48 @@ function L(e) {
   let {
     onPurchaseComplete: t,
     onError: a,
-    paymentSource: r,
-    loadId: g,
-    skuId: v,
-    isGift: L = !1,
-    analyticsLocations: I
+    onReviewPurchase: r,
+    paymentSource: g,
+    loadId: v,
+    skuId: L,
+    isGift: I = !1,
+    analyticsLocations: N
   } = e, {
-    step: N,
-    setStep: _,
-    paymentError: y,
-    paymentAuthenticationState: O,
-    application: k,
+    step: _,
+    setStep: y,
+    paymentError: O,
+    paymentAuthenticationState: k,
+    application: R,
     skuPricePreviewsById: A
-  } = (0, p.usePaymentContext)(), [R, j] = s.useState(!1), P = s.useRef(null), B = A[v], D = null != B ? B[r.id] : null, F = null != D ? (0, C.formatPrice)(null == D ? void 0 : D.amount, null == D ? void 0 : D.currency) : "";
+  } = (0, p.usePaymentContext)(), [j, P] = s.useState(!1), B = s.useRef(null), D = A[L], F = null != D ? D[g.id] : null, M = null != F ? (0, C.formatPrice)(null == F ? void 0 : F.amount, null == F ? void 0 : F.currency) : "";
   s.useEffect(() => {
-    N !== h.Step.REVIEW && _(h.Step.REVIEW)
+    _ !== h.Step.REVIEW && y(h.Step.REVIEW)
   }), s.useEffect(() => {
-    O === f.PaymentAuthenticationState.ERROR && a(y)
-  }, [a, y, O]);
-  let M = async () => {
-    i()(null != D, "skuPricePreview can't be null"), i()(null != k, "application can't be null");
+    k === f.PaymentAuthenticationState.ERROR && a(O)
+  }, [a, O, k]);
+  let w = async () => {
+    i()(null != F, "skuPricePreview can't be null"), i()(null != R, "application can't be null");
     try {
-      await (0, o.purchaseSKU)(k.id, v, {
-        expectedAmount: D.amount,
-        expectedCurrency: D.currency,
-        isGift: L,
-        paymentSource: r,
-        loadId: g
-      }), j(!1), t()
+      await (0, o.purchaseSKU)(R.id, L, {
+        expectedAmount: F.amount,
+        expectedCurrency: F.currency,
+        isGift: I,
+        paymentSource: g,
+        loadId: v
+      }), P(!1), t()
     } catch (t) {
       let e = t instanceof c.BillingError ? t : new c.BillingError(t);
       e.code !== d.ErrorCodes.CONFIRMATION_REQUIRED && e.code !== d.ErrorCodes.AUTHENTICATION_REQUIRED && a(t)
     }
-  }, w = s.useCallback(e => {
-    e === h.Step.CONFIRM && (j(!1), t()), _(e)
-  }, [_, t]);
-  return (0, f.usePaymentStepForAuthentication)(N, O, w), (0, l.jsxs)("div", {
-    className: x.reviewContainer,
+  }, H = s.useCallback(e => {
+    e === h.Step.CONFIRM && (P(!1), t()), y(e)
+  }, [y, t]);
+  return (0, f.usePaymentStepForAuthentication)(_, k, H), (0, l.jsxs)("div", {
+    className: b.reviewContainer,
     children: [(0, l.jsx)(n.FormSection, {
       children: (0, l.jsx)(n.FormItem, {
         children: (0, l.jsx)(u.default, {
-          paymentSource: r,
+          paymentSource: g,
           isDefault: !0,
           showSubtext: !1,
           showPaymentSourceIcon: !1,
@@ -126,28 +127,28 @@ function L(e) {
       })
     }), (0, l.jsx)("div", {
       color: "always-white",
-      className: x.legalTerms,
+      className: b.legalTerms,
       children: (0, l.jsxs)("p", {
         children: ["Non-refundable. By clicking, you are agreeing to our", " ", (0, l.jsx)(n.Anchor, {
-          href: m.default.getArticleURL(b.HelpdeskArticles.PAID_TERMS),
+          href: m.default.getArticleURL(x.HelpdeskArticles.PAID_TERMS),
           children: "Paid Services Terms."
         })]
       })
     }), (0, l.jsx)(S, {
-      className: x.buyButton,
-      submitting: R,
+      className: b.buyButton,
+      submitting: j,
       submittingStartedLabel: "Payment Processing",
       onClick: async () => {
-        j(!0), await M()
+        P(!0), await w()
       },
-      children: "Pay " + F
-    }), !R && (0, l.jsx)(T, {
-      className: x.reviewButton,
+      children: "Pay " + M
+    }), !j && (0, l.jsx)(T, {
+      className: b.reviewButton,
       onClick: () => {
-        (0, E.default)({
-          skuId: v,
-          analyticsLocations: I,
-          returnRef: P
+        r(), (0, E.default)({
+          skuId: L,
+          analyticsLocations: N,
+          returnRef: B
         })
       },
       children: "Review Purchase"
