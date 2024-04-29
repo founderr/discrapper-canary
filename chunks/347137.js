@@ -48,7 +48,7 @@ t.default = function() {
   };
   return s.useEffect(() => {
     (0, E.maybeFetchGuildDiscoveryCategories)(!1, !0)
-  }, []), (0, n.jsxs)(l.Scroller, {
+  }, [e]), (0, n.jsxs)(l.Scroller, {
     children: [(0, n.jsx)(C.DiscoverySidebarHeader, {
       text: S.default.Messages.DISCOVER
     }), (0, n.jsx)(f.default, {
