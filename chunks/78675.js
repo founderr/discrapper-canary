@@ -51,7 +51,7 @@ function O(e) {
     hasBanner: null != b,
     hasProfileEffect: D,
     children: (0, i.jsx)("div", {
-      className: a()(p.banner, (0, m.getUserBannerStyles)({
+      className: a()(p.banner, p.divider, (0, m.getUserBannerStyles)({
         profileType: g,
         user: {
           hasBanner: null != b,
