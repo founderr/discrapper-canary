@@ -106,12 +106,15 @@ class T extends r.default {
     }), r && E.usePerksDemosUIStore.getState().hqStreamingDidEnable && (0, _.default)(s.guild_id)
   }
   constructor(...e) {
-    super(...e), N(this, "_premiumPaymentModalCloseResolve", null), N(this, "_premiumPaymentModalCloseReject", null), N(this, "_maybeFetchPremiumOffer", () => {
+    super(...e), N(this, "_premiumPaymentModalCloseResolve", null), N(this, "_premiumPaymentModalCloseReject", null), N(this, "_maybeFetchPremiumOffer", async () => {
       let e = c.default.getCurrentUser();
       if (null != e && e.verified) {
         let t = !(0, h.isPremium)(e) && f.default.shouldFetchOffer();
-        (0, g.fetchUserOffer)(t)
+        await (0, g.fetchUserOffer)(t)
       }
+      i.default.dispatch({
+        type: "PREMIUM_MARKETING_DATA_READY"
+      })
     }), N(this, "_trackCustomNotificationSoundsExposure", () => {
       S.CustomNotificationSoundExperiment.trackExposure({
         location: "PremiumManager"

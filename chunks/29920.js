@@ -1,27 +1,13 @@
 "use strict";
 a.r(t), a.d(t, {
-  fetchPremiumMarketingContent: function() {
-    return i
-  },
   fetchPremiumMarketingContentWithUserOffer: function() {
-    return r
+    return i
   }
 });
 var n = a("544891"),
   s = a("960048"),
   l = a("981631");
-async function i() {
-  try {
-    let e = await n.HTTP.get({
-      url: l.Endpoints.PREMIUM_MARKETING
-    });
-    if (e.ok) return e.body;
-    return s.default.captureMessage("fetchPremiumMarketingContent failed"), null
-  } catch (e) {
-    return s.default.captureException(e), null
-  }
-}
-async function r(e) {
+async function i(e) {
   let {
     userTrialOffer: t,
     userDiscount: a,
