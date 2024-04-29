@@ -18,7 +18,7 @@ let S = () => ({
     badgeKind: u.ClanBadgeKind.SWORD,
     badgePrimaryColor: u.CLAN_BADGE_PALETTE_PRESETS["0"].primary,
     badgeSecondaryColor: u.CLAN_BADGE_PALETTE_PRESETS["0"].secondary,
-    banner: c.ClanBannerKind.PIXEL_RUSH,
+    banner: c.ClanBannerKind.NIGHT_SKY,
     brandPrimaryColor: c.CLAN_BRAND_PALETTE_PRESETS["0"].primary,
     brandSecondaryColor: c.CLAN_BRAND_PALETTE_PRESETS["0"].secondary
   }),

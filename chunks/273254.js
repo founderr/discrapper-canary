@@ -29,7 +29,7 @@ function o(e) {
       playstyle: r.ClanPlaystyles.CASUAL,
       traits: [],
       tag: (0, s.getAcronym)(t.name),
-      banner: r.ClanBannerKind.CUSTOM,
+      banner: r.ClanBannerKind.WARP_TUNNEL,
       badge: {
         badgeKind: i.ClanBadgeKind.SWORD,
         primaryColor: r.CLAN_BRAND_PALETTE_PRESETS_BY_NAME[r.ClanBrandPresets.SOUL].primary,

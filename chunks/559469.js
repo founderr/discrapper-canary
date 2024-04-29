@@ -41,21 +41,21 @@ function r(e) {
 let o = [r({
   id: "1",
   preset: i.ClanBrandPresets.ZEPHYR,
-  banner: i.ClanBannerKind.TEXTURED
+  banner: i.ClanBannerKind.WORLD_MAP
 }), r({
   id: "2",
   preset: i.ClanBrandPresets.THUNDER,
-  banner: i.ClanBannerKind.SCANLINES
+  banner: i.ClanBannerKind.CASTLE
 }), r({
   id: "3",
   preset: i.ClanBrandPresets.MARSH,
-  banner: i.ClanBannerKind.MAGIC
+  banner: i.ClanBannerKind.SEA_FOAM
 }), r({
   id: "4",
   preset: i.ClanBrandPresets.BOULDER,
-  banner: i.ClanBannerKind.PIXEL_RUSH
+  banner: i.ClanBannerKind.NIGHT_SKY
 }), r({
   id: "5",
   preset: i.ClanBrandPresets.SOUL,
-  banner: i.ClanBannerKind.MAGIC
+  banner: i.ClanBannerKind.SEA_FOAM
 })]
