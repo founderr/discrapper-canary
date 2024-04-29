@@ -34,7 +34,7 @@ function S(e) {
       location_stack: M
     }), p(!0))
   }, [U.location, M, f]);
-  let A = (0, _.getCustomNotificationSoundpackOptions)();
+  let A = (0, _.getCustomNotificationSoundpackOptions)(!1);
   return (0, a.jsx)(d.default, {
     type: O.PremiumUpsellTypes.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
     artContainerClassName: N.image,
