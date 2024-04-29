@@ -1,85 +1,87 @@
 "use strict";
-a.r(t), a("47120");
-var n = a("735250"),
-  s = a("470079"),
-  l = a("120356"),
-  i = a.n(l),
-  r = a("143927"),
-  o = a("597312"),
-  u = a("207796"),
-  d = a("497189"),
-  c = a("304231"),
-  f = a("526282"),
-  E = a("183993"),
-  h = a("559469"),
-  _ = a("424023");
+n.r(t), n("47120");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("120356"),
+  i = n.n(l),
+  r = n("143927"),
+  o = n("597312"),
+  u = n("769727"),
+  d = n("207796"),
+  c = n("497189"),
+  f = n("304231"),
+  E = n("526282"),
+  h = n("183993"),
+  _ = n("559469"),
+  C = n("424023");
 
-function C(e) {
+function m(e) {
   let {
     children: t,
-    selectedGame: a,
+    selectedGame: n,
     className: l
   } = e, r = s.useMemo(() => {
-    switch (a) {
-      case u.ClanDiscoveryGame.GENSHIN:
-        return _.genshinBackgroundImage;
-      case u.ClanDiscoveryGame.VALORANT:
-        return _.valorantBackgroundImage
+    switch (n) {
+      case d.ClanDiscoveryGame.GENSHIN:
+        return C.genshinBackgroundImage;
+      case d.ClanDiscoveryGame.VALORANT:
+        return C.valorantBackgroundImage
     }
-  }, [a]);
-  return (0, n.jsx)("div", {
+  }, [n]);
+  return (0, a.jsx)("div", {
     className: i()(r, l),
     children: t
   })
 }
 t.default = s.memo(function() {
-  let e = (0, E.useEligibleGuildsForClans)(),
-    t = (0, u.useClanDiscoveryUIStore)(e => e.game, r.default),
-    [a, l] = s.useState(0 === e.length ? h.ClanDiscoveryUpsellScreens.USER_UPSELL : h.ClanDiscoveryUpsellScreens.ADMIN_UPSELL),
+  let e = (0, h.useEligibleGuildsForClans)(),
+    t = (0, d.useClanDiscoveryUIStore)(e => e.game, r.default),
+    [n, l] = s.useState(_.ClanDiscoveryUpsellScreens.USER_UPSELL),
     i = s.useCallback(() => {
-      l(h.ClanDiscoveryUpsellScreens.USER_ONBOARDING)
+      l(_.ClanDiscoveryUpsellScreens.USER_ONBOARDING)
     }, [l]),
-    m = s.useMemo(() => {
-      switch (a) {
-        case h.ClanDiscoveryUpsellScreens.ADMIN_UPSELL:
-          return (0, n.jsx)(o.ScrollerThin, {
-            className: _.upsellScroller,
+    S = s.useMemo(() => {
+      if (0 !== e.length) return (0, a.jsxs)(o.ScrollerThin, {
+        className: C.upsellScroller,
+        fade: !0,
+        children: [(0, a.jsx)(m, {
+          selectedGame: t,
+          className: C.adminUpsell,
+          children: (0, a.jsx)(c.default, {
+            selectedGame: t,
+            guilds: e
+          })
+        }), (0, a.jsx)(u.ClanDiscoveryTopPicks, {
+          limit: 10
+        })]
+      });
+      switch (n) {
+        case _.ClanDiscoveryUpsellScreens.USER_UPSELL:
+          return (0, a.jsx)(o.ScrollerThin, {
+            className: C.upsellScroller,
             fade: !0,
-            children: (0, n.jsx)(C, {
+            children: (0, a.jsx)(m, {
               selectedGame: t,
-              className: _.adminUpsell,
-              children: (0, n.jsx)(d.default, {
-                selectedGame: t,
-                guild: e[0]
-              })
-            })
-          });
-        case h.ClanDiscoveryUpsellScreens.USER_UPSELL:
-          return (0, n.jsx)(o.ScrollerThin, {
-            className: _.upsellScroller,
-            fade: !0,
-            children: (0, n.jsx)(C, {
-              selectedGame: t,
-              className: _.userUpsell,
-              children: (0, n.jsx)(f.default, {
+              className: C.userUpsell,
+              children: (0, a.jsx)(E.default, {
                 selectedGame: t,
                 onClick: i
               })
             })
           });
-        case h.ClanDiscoveryUpsellScreens.USER_ONBOARDING:
-          return (0, n.jsx)(C, {
+        case _.ClanDiscoveryUpsellScreens.USER_ONBOARDING:
+          return (0, a.jsx)(m, {
             selectedGame: t,
-            className: _.userOnboarding,
-            children: (0, n.jsx)(c.default, {
+            className: C.userOnboarding,
+            children: (0, a.jsx)(f.default, {
               selectedGame: t,
               setScreen: l
             })
           })
       }
-    }, [e, i, a, t]);
-  return (0, n.jsx)("div", {
-    className: _.container,
-    children: m
+    }, [e, i, n, t]);
+  return (0, a.jsx)("div", {
+    className: C.container,
+    children: S
   })
 })
