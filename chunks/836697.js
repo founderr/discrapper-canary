@@ -17,7 +17,7 @@ var l = n("735250"),
   h = n("179809"),
   m = n("588275"),
   p = n("689938"),
-  C = n("693353");
+  C = n("467691");
 
 function g() {
   let [e, t] = a.useState(!1), n = (0, s.useStateFromStores)([o.default], () => o.default.getGuildId()), g = (0, s.useStateFromStores)([r.default], () => r.default.hasFetchedRequestToJoinGuilds), E = (0, f.default)(), _ = a.useMemo(() => {

@@ -21,14 +21,14 @@ var a = n("735250"),
   C = n("502568"),
   g = n("228392"),
   S = n("689938"),
-  _ = n("917193");
+  _ = n("405582");
 
 function T(e) {
   let {
     channelId: t
-  } = e, T = (0, s.useStateFromStores)([m.default], () => m.default.getChannel(t)), I = (0, s.useStateFromStores)([m.default], () => m.default.getChannel(null == T ? void 0 : T.parent_id)), A = (0, s.useStateFromStores)([E.default], () => E.default.getGuild(null == T ? void 0 : T.getGuildId())), v = (0, o.default)(T), N = l.useRef(!1);
+  } = e, T = (0, s.useStateFromStores)([m.default], () => m.default.getChannel(t)), I = (0, s.useStateFromStores)([m.default], () => m.default.getChannel(null == T ? void 0 : T.parent_id)), A = (0, s.useStateFromStores)([E.default], () => E.default.getGuild(null == T ? void 0 : T.getGuildId())), N = (0, o.default)(T), v = l.useRef(!1);
   if (l.useEffect(() => {
-      null != T && !N.current && (N.current = !0, (0, g.trackForumPostSidebarViewed)(T))
+      null != T && !v.current && (v.current = !0, (0, g.trackForumPostSidebarViewed)(T))
     }, [T]), null == T || null == A) return null;
   let x = (0, a.jsx)(h.default, {
     channel: T
@@ -43,7 +43,7 @@ function T(e) {
       children: (0, c.renderTitle)({
         channel: T,
         parentChannel: I,
-        channelName: v,
+        channelName: N,
         guild: A,
         inSidebar: !0,
         handleContextMenu: function(e) {

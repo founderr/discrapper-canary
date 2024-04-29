@@ -19,8 +19,8 @@ n.r(t), n.d(t, {
 var i = n("140492"),
   o = n("475468"),
   l = n("703656"),
-  a = n("769654"),
-  u = n("944486"),
+  u = n("769654"),
+  a = n("944486"),
   s = n("914010"),
   d = n("358085"),
   r = n("981631");
@@ -42,9 +42,9 @@ let E = {
       if (null != s.default.getGuildId()) e = r.ME;
       else {
         let t = s.default.getLastSelectedGuildId();
-        null != t && (e = t, (0, o.transitionToChannel)(t, u.default.getChannelId(t)))
+        null != t && (e = t, (0, o.transitionToChannel)(t, a.default.getChannelId(t)))
       }
-      return null != e && (0, a.transitionToGuild)(e), !1
+      return null != e && (0, u.transitionToGuild)(e), !1
     }
   },
   A = {

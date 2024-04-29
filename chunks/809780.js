@@ -44,8 +44,8 @@ var s, a, l, i, r = n("470079"),
   j = n("9156"),
   b = n("70956"),
   B = n("823379"),
-  F = n("709054"),
-  G = n("981631"),
+  G = n("709054"),
+  F = n("981631"),
   k = n("124368");
 
 function w(e, t, n) {
@@ -103,7 +103,7 @@ class V extends o.EventEmitter {
     _.default.clearChannel(e.channelId);
     let t = _.default.fetchMessages({
       channelId: e.channelId,
-      limit: G.MAX_MESSAGES_PER_CHANNEL,
+      limit: F.MAX_MESSAGES_PER_CHANNEL,
       jump: {
         messageId: e.oldestReadMessageId,
         flash: !0
@@ -169,7 +169,7 @@ class V extends o.EventEmitter {
         newestUnreadMessageId: n
       } = e;
       if (E.default.wait(() => m.ack(t, !0, void 0, n, {
-          section: G.AnalyticsSections.INBOX
+          section: F.AnalyticsSections.INBOX
         })), 1 === this.state.channels.length) {
         this.deleteChannel(t);
         return
@@ -181,7 +181,7 @@ class V extends o.EventEmitter {
         }))
       }), T.default.useReducedMotion && this.deleteChannel(t), this.maybeLoadMore()
     }, this.markGuildRead = e => {
-      E.default.wait(() => (0, p.default)([e], G.AnalyticsSections.INBOX)), this.setState({
+      E.default.wait(() => (0, p.default)([e], F.AnalyticsSections.INBOX)), this.setState({
         channels: this.state.channels.filter(t => t.guildId !== e)
       }), this.maybeLoadMore()
     }, this.deleteChannel = e => {
@@ -249,11 +249,11 @@ function Y(e, t) {
   var n;
   let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     a = D.default.getMessages(e.channelId),
-    l = a.toArray().filter(t => F.default.compare(t.id, e.oldestReadMessageId) > 0 && 0 >= F.default.compare(t.id, e.newestUnreadMessageId));
+    l = a.toArray().filter(t => G.default.compare(t.id, e.oldestReadMessageId) > 0 && 0 >= G.default.compare(t.id, e.newestUnreadMessageId));
   if (l.length === e.messages.length && l.every((t, n) => e.messages[n] === t) && s) return e;
   let i = null != a.getAfter(e.oldestReadMessageId) || (null === (n = l[0]) || void 0 === n ? void 0 : n.id) === e.oldestUnreadMessageId,
     r = l[l.length - 1],
-    o = F.default.compare(null == r ? void 0 : r.id, e.newestUnreadMessageId) >= 0 || l.length >= H;
+    o = G.default.compare(null == r ? void 0 : r.id, e.newestUnreadMessageId) >= 0 || l.length >= H;
   return {
     ...e,
     messages: l,
@@ -308,18 +308,18 @@ function W(e, t, n, s) {
   if (a.isPrivate()) {
     if (0 === y.default.getMentionCount(s)) return
   } else if (!(0, h.getHasImportantUnread)(a) && 0 === y.default.getMentionCount(s)) return;
-  if (!a.isPrivate() && !P.default.can(G.Permissions.READ_MESSAGE_HISTORY, a)) return;
+  if (!a.isPrivate() && !P.default.can(F.Permissions.READ_MESSAGE_HISTORY, a)) return;
   let l = y.default.ackMessageId(s);
   if (null == l) {
     let e = L.default.getGuild(a.guild_id);
     if (null == e || null == e.joinedAt) return;
-    l = F.default.fromTimestamp(e.joinedAt.getTime())
+    l = G.default.fromTimestamp(e.joinedAt.getTime())
   }
   let i = y.default.getOldestUnreadMessageId(s),
     r = y.default.lastMessageId(s),
     o = y.default.getMentionCount(s),
     u = o > 0 || a.isPrivate();
-  if (null == r || F.default.compare(l, r) >= 0) return;
+  if (null == r || G.default.compare(l, r) >= 0) return;
   let d = {
     guildId: n,
     channelId: s,
@@ -339,7 +339,7 @@ function W(e, t, n, s) {
       if (s.isPrivate()) return 1;
       if (y.default.getMentionCount(t) > 0) return 2;
       if (null != n) {
-        let e = F.default.extractTimestamp(n);
+        let e = G.default.extractTimestamp(n);
         if (Date.now() - e > Q) return 7;
         if (Date.now() - e > z) return 5
       }
@@ -348,8 +348,8 @@ function W(e, t, n, s) {
         return e === k.ThreadMemberFlags.ALL_MESSAGES ? 3 : e === k.ThreadMemberFlags.NO_MESSAGES ? 6 : 4
       } {
         let n = j.default.getChannelMessageNotifications(e, t),
-          s = n === G.UserNotificationSettings.NULL ? j.default.getMessageNotifications(e) : n;
-        return s === G.UserNotificationSettings.ALL_MESSAGES ? 3 : s === G.UserNotificationSettings.NO_MESSAGES ? 6 : 4
+          s = n === F.UserNotificationSettings.NULL ? j.default.getMessageNotifications(e) : n;
+        return s === F.UserNotificationSettings.ALL_MESSAGES ? 3 : s === F.UserNotificationSettings.NO_MESSAGES ? 6 : 4
       }
     }(n, s, r)
   };

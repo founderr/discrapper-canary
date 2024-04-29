@@ -158,8 +158,8 @@ function L(e, t) {
     canShowVoteCounts: j,
     canSubmitVote: b,
     expirationLabel: B = g.default.Messages.POLL_EXPIRED,
-    hasSelectedAnswer: F,
-    hasVoted: G,
+    hasSelectedAnswer: G,
+    hasVoted: F,
     isEditingVote: k,
     isExpired: w,
     isInteractive: H,
@@ -181,10 +181,10 @@ function L(e, t) {
       c = null !== (n = null == d ? void 0 : null === (t = d.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0,
       f = Y.has(o),
       E = c >= X && 0 !== c,
-      T = G && null !== (l = null == d ? void 0 : d.me_vote) && void 0 !== l && l,
+      T = F && null !== (l = null == d ? void 0 : d.me_vote) && void 0 !== l && l,
       I = v({
         didSelfVote: T,
-        hasVoted: G,
+        hasVoted: F,
         isExpired: w,
         isSelected: f,
         isLeader: E,
@@ -236,7 +236,7 @@ function L(e, t) {
   }), J = (0, s.match)({
     isExpired: w,
     canSubmitVote: b,
-    hasVoted: G,
+    hasVoted: F,
     isEditingVote: k,
     canRemoveVote: U,
     isInteractive: H,
@@ -250,7 +250,7 @@ function L(e, t) {
   }, () => ({
     label: g.default.Messages.POLL_SUBMIT_VOTE,
     presentation: "button",
-    enabled: F,
+    enabled: G,
     type: "submit"
   })).with({
     canRemoveVote: !0
@@ -297,7 +297,7 @@ function L(e, t) {
     presentation: "text",
     enabled: !0,
     type: "showVoterDetails"
-  })), et = !H || w || G || z ? void 0 : {
+  })), et = !H || w || F || z ? void 0 : {
     label: g.default.Messages.POLL_SHOW_VOTES,
     presentation: "textButton",
     enabled: !0,
@@ -341,9 +341,9 @@ function L(e, t) {
     isInteractive: H,
     canTapAnswers: y,
     canSelectMultipleAnswers: en,
-    hasSelectedAnswer: F,
+    hasSelectedAnswer: G,
     canShowVoteCounts: j,
-    hasVoted: G,
+    hasVoted: F,
     isExpired: w,
     myAvatarUrl: O,
     secondaryAction: ee,

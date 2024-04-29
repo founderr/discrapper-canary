@@ -18,7 +18,7 @@ var a = n("735250"),
   g = n("981631"),
   S = n("921944"),
   _ = n("689938"),
-  T = n("899091");
+  T = n("168310");
 t.default = function(e) {
   let {
     channel: t,
@@ -33,7 +33,7 @@ t.default = function(e) {
   let A = l.useCallback(() => {
       i.default.updateChatOpen(t.id, !1), E.ComponentDispatch.safeDispatch(g.ComponentActions.FOCUS_CHAT_BUTTON)
     }, [t.id]),
-    v = (0, a.jsx)(p.default.Icon, {
+    N = (0, a.jsx)(p.default.Icon, {
       icon: m.default,
       tooltip: _.default.Messages.CLOSE,
       onClick: A
@@ -46,7 +46,7 @@ t.default = function(e) {
       channel: t,
       draftType: f.DraftType.ChannelMessage
     }), (0, a.jsxs)(p.default, {
-      toolbar: v,
+      toolbar: N,
       "aria-label": _.default.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
       children: [(0, a.jsx)(p.default.Icon, {
         icon: h.default,

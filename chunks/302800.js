@@ -1,10 +1,10 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   CollectiblesDCToDisplayOptions: function() {
     return S
   },
   CollectiblesMarketingVariant: function() {
-    return n
+    return a
   },
   ShopCoachtipEditions: function() {
     return s
@@ -15,19 +15,19 @@ a.r(t), a.d(t, {
   getCustomConfettiDisplayOptions: function() {
     return T
   }
-}), a("627341");
-var n, s, l, i, r = a("278074"),
-  o = a("180650"),
-  u = a("524437"),
-  d = a("689938"),
-  c = a("160506"),
-  f = a("263660"),
-  E = a("22344"),
-  h = a("848359"),
-  _ = a("782984"),
-  C = a("186077"),
-  m = a("376477");
-(l = n || (n = {}))[l.NONE = 0] = "NONE", l[l.TOOLTIP = 1] = "TOOLTIP", l[l.COACHTIP = 2] = "COACHTIP", (i = s || (s = {})).NONE = "NONE", i.SHY = "SHY", i.LOFI_VIBES = "LOFI_VIBES", i.GALAXY = "GALAXY";
+}), n("627341");
+var a, s, l, i, r = n("278074"),
+  o = n("180650"),
+  u = n("524437"),
+  d = n("689938"),
+  c = n("160506"),
+  f = n("263660"),
+  E = n("22344"),
+  h = n("848359"),
+  _ = n("782984"),
+  C = n("186077"),
+  m = n("376477");
+(l = a || (a = {}))[l.NONE = 0] = "NONE", l[l.TOOLTIP = 1] = "TOOLTIP", l[l.COACHTIP = 2] = "COACHTIP", (i = s || (s = {})).NONE = "NONE", i.SHY = "SHY", i.LOFI_VIBES = "LOFI_VIBES", i.GALAXY = "GALAXY";
 let S = {
     [u.DismissibleContent.COLLECTIBLES_SHOP_SHY_COACHTIP]: {
       type: 2,

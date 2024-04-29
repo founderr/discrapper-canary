@@ -1,7 +1,7 @@
 "use strict";
 e.exports = function(e) {
-  var i, r;
-  return (e = String(e).toLowerCase()).length < 3 ? e : (121 === e.charCodeAt(0) && (i = !0, e = "Y" + e.substr(1)), E.test(e) ? e = e.substr(0, e.length - 2) : x.test(e) && (e = e.substr(0, e.length - 1)), (r = g.exec(e)) ? l.test(r[1]) && (e = e.substr(0, e.length - 1)) : (r = m.exec(e)) && u.test(r[1]) && (e = r[1], v.test(e) ? e += "e" : _.test(e) ? e = e.substr(0, e.length - 1) : d.test(e) && (e += "e")), (r = f.exec(e)) && u.test(r[1]) && (e = r[1] + "i"), (r = C.exec(e)) && l.test(r[1]) && (e = r[1] + t[r[2]]), (r = S.exec(e)) && l.test(r[1]) && (e = r[1] + n[r[2]]), (r = y.exec(e)) ? o.test(r[1]) && (e = r[1]) : (r = p.exec(e)) && o.test(r[1]) && (e = r[1]), (r = h.exec(e)) && (o.test(r[1]) || s.test(r[1]) && !d.test(r[1])) && (e = r[1]), c.test(e) && o.test(e) && (e = e.substr(0, e.length - 1)), i && (e = "y" + e.substr(1)), e)
+  var a, i;
+  return (e = String(e).toLowerCase()).length < 3 ? e : (121 === e.charCodeAt(0) && (a = !0, e = "Y" + e.substr(1)), A.test(e) ? e = e.substr(0, e.length - 2) : M.test(e) && (e = e.substr(0, e.length - 1)), (i = x.exec(e)) ? s.test(i[1]) && (e = e.substr(0, e.length - 1)) : (i = p.exec(e)) && u.test(i[1]) && (e = i[1], g.test(e) ? e += "e" : h.test(e) ? e = e.substr(0, e.length - 1) : d.test(e) && (e += "e")), (i = f.exec(e)) && u.test(i[1]) && (e = i[1] + "i"), (i = E.exec(e)) && s.test(i[1]) && (e = i[1] + t[i[2]]), (i = T.exec(e)) && s.test(i[1]) && (e = i[1] + l[i[2]]), (i = I.exec(e)) ? o.test(i[1]) && (e = i[1]) : (i = _.exec(e)) && o.test(i[1]) && (e = i[1]), (i = m.exec(e)) && (o.test(i[1]) || r.test(i[1]) && !d.test(i[1])) && (e = i[1]), c.test(e) && o.test(e) && (e = e.substr(0, e.length - 1)), a && (e = "y" + e.substr(1)), e)
 };
 var t = {
     ational: "ate",
@@ -26,7 +26,7 @@ var t = {
     biliti: "ble",
     logi: "log"
   },
-  n = {
+  l = {
     icate: "ic",
     ative: "",
     alize: "al",
@@ -35,24 +35,24 @@ var t = {
     ful: "",
     ness: ""
   },
-  i = "[aeiouy]",
-  r = "([^aeiou][^aeiouy]*)",
-  a = "(" + i + "[aeiou]*)",
-  l = RegExp("^" + r + "?" + a + r),
-  s = RegExp("^" + r + "?" + a + r + a + "?$"),
-  o = RegExp("^" + r + "?(" + a + r + "){2,}"),
-  u = RegExp("^" + r + "?" + i),
-  d = RegExp("^" + r + i + "[^aeiouwxy]$"),
+  a = "[aeiouy]",
+  i = "([^aeiou][^aeiouy]*)",
+  n = "(" + a + "[aeiou]*)",
+  s = RegExp("^" + i + "?" + n + i),
+  r = RegExp("^" + i + "?" + n + i + n + "?$"),
+  o = RegExp("^" + i + "?(" + n + i + "){2,}"),
+  u = RegExp("^" + i + "?" + a),
+  d = RegExp("^" + i + a + "[^aeiouwxy]$"),
   c = /ll$/,
-  h = /^(.+?)e$/,
+  m = /^(.+?)e$/,
   f = /^(.+?)y$/,
-  p = /^(.+?(s|t))(ion)$/,
-  m = /^(.+?)(ed|ing)$/,
-  v = /(at|bl|iz)$/,
-  g = /^(.+?)eed$/,
-  x = /^.+?[^s]s$/,
-  E = /^.+?(ss|i)es$/,
-  _ = /([^aeiouylsz])\1$/,
-  C = RegExp("^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$"),
-  S = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
-  y = RegExp("^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$")
+  _ = /^(.+?(s|t))(ion)$/,
+  p = /^(.+?)(ed|ing)$/,
+  g = /(at|bl|iz)$/,
+  x = /^(.+?)eed$/,
+  M = /^.+?[^s]s$/,
+  A = /^.+?(ss|i)es$/,
+  h = /([^aeiouylsz])\1$/,
+  E = RegExp("^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$"),
+  T = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
+  I = RegExp("^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$")

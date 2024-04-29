@@ -1,85 +1,85 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   SUPPORTED_ACTIVITY_TYPES: function() {
-    return S
+    return E
   }
-}), n("47120");
-var i = n("735250"),
-  r = n("470079"),
-  s = n("499237"),
-  a = n("1385"),
-  o = n("692547"),
-  l = n("835473"),
-  u = n("443487"),
-  d = n("43205"),
-  _ = n("371991"),
-  c = n("81063"),
-  E = n("55935"),
-  I = n("981631"),
-  T = n("689938"),
-  f = n("992781");
-let S = new Set([I.ActivityTypes.PLAYING, I.ActivityTypes.LISTENING]);
-t.default = r.memo(function(e) {
-  var t, n, S, h;
+}), s("47120");
+var l = s("735250"),
+  a = s("470079"),
+  i = s("499237"),
+  n = s("1385"),
+  r = s("692547"),
+  o = s("835473"),
+  u = s("443487"),
+  d = s("43205"),
+  c = s("371991"),
+  f = s("81063"),
+  S = s("55935"),
+  m = s("981631"),
+  I = s("689938"),
+  v = s("948000");
+let E = new Set([m.ActivityTypes.PLAYING, m.ActivityTypes.LISTENING]);
+t.default = a.memo(function(e) {
+  var t, s, E, x;
   let {
-    activity: A
+    activity: _
   } = e, {
-    assets: m,
-    application_id: N
-  } = A, p = null === (t = (0, l.useGetOrFetchApplication)(N)) || void 0 === t ? void 0 : t.getIconURL(128), O = (0, c.getAssetImage)(N, null == m ? void 0 : m.large_image, 128), R = null !== (h = null !== (S = null === (n = A.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== S ? S : A.created_at) && void 0 !== h ? h : 0, [C, g] = r.useState(Date.now()), {
-    seconds: L,
-    minutes: D,
-    hours: v
-  } = (0, E.diffAsUnits)(R, C), {
+    assets: T,
+    application_id: A
+  } = _, N = null === (t = (0, o.useGetOrFetchApplication)(A)) || void 0 === t ? void 0 : t.getIconURL(128), C = (0, f.getAssetImage)(A, null == T ? void 0 : T.large_image, 128), g = null !== (x = null !== (E = null === (s = _.timestamps) || void 0 === s ? void 0 : s.start) && void 0 !== E ? E : _.created_at) && void 0 !== x ? x : 0, [U, h] = a.useState(Date.now()), {
+    seconds: p,
+    minutes: j,
+    hours: R
+  } = (0, S.diffAsUnits)(g, U), {
     Icon: M,
-    title: y,
-    iconColor: P,
-    textColor: U
+    title: P,
+    iconColor: y,
+    textColor: O
   } = function(e) {
     switch (e.type) {
-      case I.ActivityTypes.PLAYING:
+      case m.ActivityTypes.PLAYING:
         return {
-          Icon: s.GameControllerIcon, title: T.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYING_GAME.format({
+          Icon: i.GameControllerIcon, title: I.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYING_GAME.format({
             gameName: e.name
-          }), iconColor: o.default.colors.STATUS_POSITIVE, textColor: "status-positive"
+          }), iconColor: r.default.colors.STATUS_POSITIVE, textColor: "status-positive"
         };
-      case I.ActivityTypes.LISTENING:
+      case m.ActivityTypes.LISTENING:
         var t;
         return {
-          Icon: a.RecordPlayerIcon, title: T.default.Messages.USER_PROFILE_ACTIVITY_LISTENING_TO.format({
+          Icon: n.RecordPlayerIcon, title: I.default.Messages.USER_PROFILE_ACTIVITY_LISTENING_TO.format({
             name: null !== (t = e.state) && void 0 !== t ? t : e.name
-          }), iconColor: o.default.colors.TEXT_SECONDARY, textColor: "text-secondary"
+          }), iconColor: r.default.colors.TEXT_SECONDARY, textColor: "text-secondary"
         };
       default:
         return {
-          Icon: s.GameControllerIcon, title: T.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYING_GAME.format({
+          Icon: i.GameControllerIcon, title: I.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYING_GAME.format({
             gameName: e.name
-          }), iconColor: o.default.colors.STATUS_POSITIVE, textColor: "status-positive"
+          }), iconColor: r.default.colors.STATUS_POSITIVE, textColor: "status-positive"
         }
     }
-  }(A);
-  return (0, i.jsxs)("div", {
-    className: f.cardContainer,
-    children: [(0, i.jsx)(d.ContentImage, {
-      src: null != p ? p : O,
+  }(_);
+  return (0, l.jsxs)("div", {
+    className: v.cardContainer,
+    children: [(0, l.jsx)(d.ContentImage, {
+      src: null != N ? N : C,
       size: 48
-    }), (0, i.jsxs)(u.CardInfoSection, {
-      children: [(0, i.jsx)(u.CardTitle, {
-        children: y
-      }), null != R && (0, i.jsxs)("div", {
-        className: f.playtimeContainer,
-        children: [(0, i.jsx)(M, {
+    }), (0, l.jsxs)(u.CardInfoSection, {
+      children: [(0, l.jsx)(u.CardTitle, {
+        children: P
+      }), null != g && (0, l.jsxs)("div", {
+        className: v.playtimeContainer,
+        children: [(0, l.jsx)(M, {
           width: 12,
           height: 12,
-          color: P
-        }), (0, i.jsx)(_.ActiveTimestampFromDuration, {
-          startTime: R,
-          seconds: L,
-          minutes: D,
-          hours: v,
-          now: C,
-          setNow: g,
-          textColor: U
+          color: y
+        }), (0, l.jsx)(c.ActiveTimestampFromDuration, {
+          startTime: g,
+          seconds: p,
+          minutes: j,
+          hours: R,
+          now: U,
+          setNow: h,
+          textColor: O
         })]
       })]
     })]

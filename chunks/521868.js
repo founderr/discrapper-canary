@@ -1,21 +1,21 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   useCustomStatusMenuItem: function() {
     return h
   }
 });
-var n = a("735250");
-a("470079");
-var s = a("120356"),
-  l = a.n(s),
-  i = a("481060"),
-  r = a("788307"),
-  o = a("2052"),
-  u = a("785717"),
-  d = a("695346"),
-  c = a("696202"),
-  f = a("689938"),
-  E = a("119645");
+var a = n("735250");
+n("470079");
+var s = n("120356"),
+  l = n.n(s),
+  i = n("481060"),
+  r = n("788307"),
+  o = n("2052"),
+  u = n("785717"),
+  d = n("695346"),
+  c = n("696202"),
+  f = n("689938"),
+  E = n("803383");
 
 function h(e, t) {
   let s = (0, o.useAnalyticsContext)(),
@@ -33,36 +33,36 @@ function h(e, t) {
     }), (0, i.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([a.e("99387"), a.e("47484")]).then(a.bind(a, "211065"));
-      return t => (0, n.jsx)(e, {
+      } = await Promise.all([n.e("99387"), n.e("47484")]).then(n.bind(n, "211065"));
+      return t => (0, a.jsx)(e, {
         sourceAnalyticsContext: s,
         ...t
       })
     })
   }
   if (null != e) {
-    let a = null != e.emoji ? t => {
+    let n = null != e.emoji ? t => {
       let {
-        className: a
+        className: n
       } = t;
-      return (0, n.jsx)(r.ActivityEmoji, {
-        className: a,
+      return (0, a.jsx)(r.ActivityEmoji, {
+        className: n,
         emoji: e.emoji,
         animate: !0,
         hideTooltip: !0
       })
     } : void 0;
-    return (0, n.jsx)(i.MenuItem, {
+    return (0, a.jsx)(i.MenuItem, {
       id: "edit-custom-status",
       label: f.default.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
-      icon: a,
+      icon: n,
       focusedClassName: t,
       showIconFirst: !0,
-      hint: e => (0, n.jsx)(i.Clickable, {
+      hint: e => (0, a.jsx)(i.Clickable, {
         ...e,
         onClick: _,
         tabIndex: -1,
-        children: (0, n.jsx)(c.default, {
+        children: (0, a.jsx)(c.default, {
           width: 18,
           height: 18
         })
@@ -70,11 +70,11 @@ function h(e, t) {
       action: C
     })
   }
-  return (0, n.jsx)(i.MenuItem, {
+  return (0, a.jsx)(i.MenuItem, {
     id: "set-custom-status",
     focusedClassName: t,
     label: f.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS_CTA,
-    icon: e => (0, n.jsx)("div", {
+    icon: e => (0, a.jsx)("div", {
       className: l()(E.customEmojiPlaceholder, e)
     }),
     action: C,

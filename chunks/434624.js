@@ -15,8 +15,8 @@ var s = n("735250"),
   c = n("18732"),
   f = n("566006"),
   E = n("287151"),
-  _ = n("858313"),
-  m = n("601064");
+  _ = n("254192"),
+  m = n("316616");
 let T = a.memo(function(e) {
     let t, n, {
         useChatFontScaling: a,

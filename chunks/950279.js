@@ -1,21 +1,21 @@
 "use strict";
-a.r(t), a("47120");
-var n = a("735250"),
-  s = a("470079"),
-  l = a("442837"),
-  i = a("481060"),
-  r = a("32966"),
-  o = a("314897"),
-  u = a("77498"),
-  d = a("364083"),
-  c = a("92373"),
-  f = a("308083"),
-  E = a("689938"),
-  h = a("661926");
+n.r(t), n("47120");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("442837"),
+  i = n("481060"),
+  r = n("32966"),
+  o = n("314897"),
+  u = n("77498"),
+  d = n("364083"),
+  c = n("92373"),
+  f = n("308083"),
+  E = n("689938"),
+  h = n("418571");
 t.default = e => {
   let {
     title: t,
-    description: a,
+    description: n,
     handleUpdate: _,
     gameApplicationIds: C,
     error: m,
@@ -39,20 +39,20 @@ t.default = e => {
       let t = new Set(C);
       t.add(e), _(t)
     };
-  return (0, n.jsxs)("div", {
+  return (0, a.jsxs)("div", {
     className: h.slideContent,
-    children: [(0, n.jsx)(i.Heading, {
+    children: [(0, a.jsx)(i.Heading, {
       variant: "heading-xxl/medium",
       className: h.title,
       children: t
-    }), (0, n.jsx)(i.Text, {
+    }), (0, a.jsx)(i.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       className: h.subtitle,
-      children: a
-    }), (0, n.jsx)("div", {
+      children: n
+    }), (0, a.jsx)("div", {
       className: h.inputContainer,
-      children: (0, n.jsx)(i.SearchableSelect, {
+      children: (0, a.jsx)(i.SearchableSelect, {
         wrapperClassName: h.input,
         options: T,
         value: "",
@@ -61,39 +61,39 @@ t.default = e => {
         isDisabled: C.size === f.MAX_NUM_SELECTED_GAMES,
         matchSorterOptions: g
       })
-    }), (0, n.jsxs)("div", {
+    }), (0, a.jsxs)("div", {
       className: h.contentWithMinHeight,
-      children: [null != m && (0, n.jsx)(i.Text, {
+      children: [null != m && (0, a.jsx)(i.Text, {
         variant: "text-sm/normal",
         color: "status-danger",
         className: h.errorText,
         children: m
-      }), C.size > 0 && (0, n.jsxs)(n.Fragment, {
-        children: [(0, n.jsx)(i.Text, {
+      }), C.size > 0 && (0, a.jsxs)(a.Fragment, {
+        children: [(0, a.jsx)(i.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
           className: h.contentLabel,
           children: E.default.Messages.CLAN_SETUP_SELECTED_GAMES
-        }), (0, n.jsx)("div", {
+        }), (0, a.jsx)("div", {
           className: h.selectedSection,
-          children: Array.from(C).map(e => (0, n.jsx)(c.default, {
+          children: Array.from(C).map(e => (0, a.jsx)(c.default, {
             applicationId: e,
             onClick: e !== S ? A : void 0,
             imageContainerClassName: e !== S ? h.clickableGame : void 0,
             selected: !0
           }, e))
-        }), (0, n.jsx)("div", {
+        }), (0, a.jsx)("div", {
           className: h.divider
         })]
-      }), null != I && I.length > 0 && (0, n.jsxs)(n.Fragment, {
-        children: [(0, n.jsx)(i.Text, {
+      }), null != I && I.length > 0 && (0, a.jsxs)(a.Fragment, {
+        children: [(0, a.jsx)(i.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
           className: h.contentLabel,
           children: E.default.Messages.RECENT_GAMES
-        }), (0, n.jsx)("div", {
+        }), (0, a.jsx)("div", {
           className: h.selectedSection,
-          children: I.map(e => (0, n.jsx)(c.default, {
+          children: I.map(e => (0, a.jsx)(c.default, {
             applicationId: e.applicationId,
             onClick: N,
             imageContainerClassName: h.clickableGame

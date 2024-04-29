@@ -16,19 +16,19 @@ var l = s("735250"),
   f = s("221292"),
   S = s("895618"),
   m = s("58307"),
-  v = s("981631"),
-  E = s("886140"),
-  I = s("305944");
+  I = s("981631"),
+  v = s("583483"),
+  E = s("613398");
 
 function x(e) {
   let {
     user: t
-  } = e, s = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), x = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), _ = a.useMemo(() => x.filter(e => e.type !== v.ActivityTypes.CUSTOM_STATUS), [x]), A = x.some(e => e.type === v.ActivityTypes.HANG_STATUS), N = a.useMemo(() => s ? _.find(e => e.type === v.ActivityTypes.PLAYING) : null, [_, s]), T = a.useMemo(() => _.filter(e => e !== N), [N, _]), U = (0, m.useGetVoiceChannelInfoForVoiceActivitySection)(t.id), C = null != U && !s && !A, {
-    showVoiceActivityInProfile: g
+  } = e, s = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), x = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), _ = a.useMemo(() => x.filter(e => e.type !== I.ActivityTypes.CUSTOM_STATUS), [x]), T = x.some(e => e.type === I.ActivityTypes.HANG_STATUS), A = a.useMemo(() => s ? _.find(e => e.type === I.ActivityTypes.PLAYING) : null, [_, s]), N = a.useMemo(() => _.filter(e => e !== A), [A, _]), C = (0, m.useGetVoiceChannelInfoForVoiceActivitySection)(t.id), g = null != C && !s && !T, {
+    showVoiceActivityInProfile: U
   } = S.VoiceActivityProfileExperiment.useExperiment({
     location: "user profile modal"
   }, {
-    autoTrackExposure: C
+    autoTrackExposure: g
   }), {
     analyticsLocations: h
   } = (0, o.default)(), {
@@ -36,44 +36,44 @@ function x(e) {
     ...j
   } = (0, c.useUserProfileAnalyticsContext)(), R = {
     location: {
-      page: v.AnalyticsPages.USER_PROFILE,
-      section: v.AnalyticsSections.PROFILE_MODAL
+      page: I.AnalyticsPages.USER_PROFILE,
+      section: I.AnalyticsSections.PROFILE_MODAL
     }
   };
   return (0, l.jsxs)(n.ScrollerThin, {
-    className: I.listScroller,
+    className: E.listScroller,
     fade: !0,
-    children: [g && C ? (0, l.jsx)("div", {
-      className: E.voiceActivity,
+    children: [U && g ? (0, l.jsx)("div", {
+      className: v.voiceActivity,
       children: (0, l.jsx)(m.default, {
-        ...U,
-        color: E.actionColor
+        ...C,
+        color: v.actionColor
       })
     }) : null, s ? (0, l.jsx)(r.default, {
       type: r.UserActivityTypes.PROFILE_V2,
       user: t,
       source: "Profile Modal",
-      className: E.userProfileActivity,
-      activity: N,
-      actionColor: E.actionColor,
+      className: v.userProfileActivity,
+      activity: A,
+      actionColor: v.actionColor,
       analyticsParams: R,
       onAction: () => {
         p({
           action: "JOIN_ACTIVITY"
         }), (0, f.trackUserProfileActivityJoined)({
-          activity: N,
+          activity: A,
           analyticsLocations: h,
           ...j
         })
       }
-    }) : null, T.map(e => (0, l.jsx)(r.default, {
+    }) : null, N.map(e => (0, l.jsx)(r.default, {
       type: r.UserActivityTypes.PROFILE_V2,
       activity: e,
       user: t,
       useStoreStream: !1,
       source: "Profile Modal",
-      className: E.userProfileActivity,
-      actionColor: E.actionColor,
+      className: v.userProfileActivity,
+      actionColor: v.actionColor,
       analyticsParams: R,
       onAction: () => {
         p({

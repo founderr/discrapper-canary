@@ -66,7 +66,7 @@ function B(e) {
   }) && (j = !1), e) : null
 }
 
-function F(e) {
+function G(e) {
   if (null == O[e]) return !1;
   delete O[e], v = o().filter(v, t => {
     let {
@@ -76,11 +76,11 @@ function F(e) {
   })
 }
 
-function G(e) {
+function F(e) {
   let {
     id: t
   } = e;
-  return F(t)
+  return G(t)
 }
 
 function k(e) {
@@ -230,13 +230,13 @@ i = "RecentMentionsStore", (l = "displayName") in(a = Y) ? Object.defineProperty
       s = (v = v.slice())[n];
     null != s && (v[n] = (0, E.updateMessageRecord)(s, e.message))
   },
-  MESSAGE_DELETE: G,
-  RECENT_MENTION_DELETE: G,
+  MESSAGE_DELETE: F,
+  RECENT_MENTION_DELETE: F,
   MESSAGE_DELETE_BULK: function(e) {
     let {
       ids: t
     } = e;
-    o().forEach(t, F)
+    o().forEach(t, G)
   },
   CHANNEL_DELETE: V,
   THREAD_DELETE: V,

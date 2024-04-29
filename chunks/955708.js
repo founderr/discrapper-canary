@@ -13,7 +13,7 @@ var n, a, r = s("735250"),
   T = s("745982"),
   c = s("463439"),
   d = s("689938"),
-  N = s("831409");
+  N = s("801235");
 (a = n || (n = {}))[a.INTRO = 0] = "INTRO", a[a.SAFETY_TIPS = 1] = "SAFETY_TIPS", a[a.TAKE_ACTION = 2] = "TAKE_ACTION";
 t.default = e => {
   let {

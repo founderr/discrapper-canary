@@ -1,19 +1,19 @@
 "use strict";
-a.r(t);
-var n = a("735250");
-a("470079");
-var s = a("524437"),
-  l = a("765585"),
-  i = a("16703"),
-  r = a("300284"),
-  o = a("689938"),
-  u = a("145146");
+n.r(t);
+var a = n("735250");
+n("470079");
+var s = n("524437"),
+  l = n("765585"),
+  i = n("16703"),
+  r = n("300284"),
+  o = n("689938"),
+  u = n("394114");
 t.default = () => {
   let e = (0, i.default)(),
     t = (0, r.default)({
       guild: e
     });
-  return (0, n.jsx)(l.default, {
+  return (0, a.jsx)(l.default, {
     isPremiumFeature: !0,
     shouldUseHorizontalButtons: !0,
     artClassName: u.coachmarkArt,

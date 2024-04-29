@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return A
   }
 }), s("47120"), s("627341");
 var l = s("735250"),
@@ -16,61 +16,61 @@ var l = s("735250"),
   f = s("621853"),
   S = s("944546"),
   m = s("470900"),
-  v = s("988246"),
-  E = s("834534"),
-  I = s("228168"),
+  I = s("988246"),
+  v = s("834534"),
+  E = s("228168"),
   x = s("689938"),
-  _ = s("773386");
-let A = e => {
+  _ = s("788741");
+let T = e => {
   let [t, s] = (0, n.useStateFromStoresArray)([f.default], () => {
     var t, s, l, a;
     return [null !== (l = null === (t = f.default.getMutualFriends(e.id)) || void 0 === t ? void 0 : t.length) && void 0 !== l ? l : 0, null !== (a = null === (s = f.default.getMutualGuilds(e.id)) || void 0 === s ? void 0 : s.length) && void 0 !== a ? a : 0]
   });
   return [{
-    section: I.UserProfileSections.USER_INFO,
+    section: E.UserProfileSections.USER_INFO,
     text: x.default.Messages.USER_PROFILE_ABOUT_ME
   }, {
-    section: I.UserProfileSections.MUTUAL_FRIENDS,
+    section: E.UserProfileSections.MUTUAL_FRIENDS,
     text: 0 === t ? x.default.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS : x.default.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
       count: t
     })
   }, {
-    section: I.UserProfileSections.MUTUAL_GUILDS,
+    section: E.UserProfileSections.MUTUAL_GUILDS,
     text: 0 === s ? x.default.Messages.USER_PROFILE_NO_MUTUAL_SERVERS : x.default.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
       count: s
     })
   }]
 };
 
-function N(e) {
+function A(e) {
   var t, s;
   let {
     user: f,
     displayProfile: x,
-    initialSection: N = I.UserProfileSections.USER_INFO,
-    autoFocusNote: T,
-    onClose: U
+    initialSection: A = E.UserProfileSections.USER_INFO,
+    autoFocusNote: N,
+    onClose: C
   } = e, {
-    trackUserProfileAction: C
-  } = (0, c.useUserProfileAnalyticsContext)(), g = (0, n.useStateFromStores)([d.default], () => d.default.getCurrentUser()), h = (0, n.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), p = A(f), [j, R] = a.useState(T), [M, P] = a.useState(null !== (s = null === (t = p.find(e => {
+    trackUserProfileAction: g
+  } = (0, c.useUserProfileAnalyticsContext)(), U = (0, n.useStateFromStores)([d.default], () => d.default.getCurrentUser()), h = (0, n.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), p = T(f), [j, R] = a.useState(N), [M, P] = a.useState(null !== (s = null === (t = p.find(e => {
     let {
       section: t
     } = e;
-    return t === N
-  })) || void 0 === t ? void 0 : t.section) && void 0 !== s ? s : I.UserProfileSections.USER_INFO), y = a.useCallback(e => {
-    C({
+    return t === A
+  })) || void 0 === t ? void 0 : t.section) && void 0 !== s ? s : E.UserProfileSections.USER_INFO), y = a.useCallback(e => {
+    g({
       action: "PRESS_SECTION",
       section: e
     }), P(e), R(!1)
-  }, [C, P]);
-  return null == g ? null : h ? (0, l.jsx)("div", {
+  }, [g, P]);
+  return null == U ? null : h ? (0, l.jsx)("div", {
     className: _.container,
-    children: (0, l.jsx)(v.default, {})
-  }) : f.id === g.id ? (0, l.jsx)("div", {
+    children: (0, l.jsx)(I.default, {})
+  }) : f.id === U.id ? (0, l.jsx)("div", {
     className: _.container,
-    children: (0, l.jsx)(E.default, {
+    children: (0, l.jsx)(v.default, {
       user: f,
-      currentUser: g,
+      currentUser: U,
       displayProfile: x,
       autoFocusNote: j
     })
@@ -96,16 +96,16 @@ function N(e) {
           })
         }, t)
       })
-    }), (0, i.match)(M).with(I.UserProfileSections.MUTUAL_FRIENDS, () => (0, l.jsx)(S.default, {
+    }), (0, i.match)(M).with(E.UserProfileSections.MUTUAL_FRIENDS, () => (0, l.jsx)(S.default, {
       user: f,
-      onClose: U
-    })).with(I.UserProfileSections.MUTUAL_GUILDS, () => (0, l.jsx)(m.default, {
+      onClose: C
+    })).with(E.UserProfileSections.MUTUAL_GUILDS, () => (0, l.jsx)(m.default, {
       user: f,
-      onClose: U
-    })).otherwise(() => (0, l.jsx)(E.default, {
+      onClose: C
+    })).otherwise(() => (0, l.jsx)(v.default, {
       className: _.infoTab,
       user: f,
-      currentUser: g,
+      currentUser: U,
       displayProfile: x,
       autoFocusNote: j
     }))]

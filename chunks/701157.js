@@ -9,7 +9,7 @@ var a = s("735250"),
   d = s("11844"),
   u = s("300037"),
   c = s("689938"),
-  S = s("197846");
+  S = s("566391");
 t.default = function(e) {
   let {
     hasAppliedGuildBoosts: t,

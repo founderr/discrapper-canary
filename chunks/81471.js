@@ -1,29 +1,29 @@
 "use strict";
-a.r(t);
-var n = a("735250"),
-  s = a("470079"),
-  l = a("120356"),
-  i = a.n(l),
-  r = a("442837"),
-  o = a("481060"),
-  u = a("255269"),
-  d = a("937889"),
-  c = a("695346"),
-  f = a("496675"),
-  E = a("699516"),
-  h = a("68588"),
-  _ = a("512665"),
-  C = a("868807"),
-  m = a("981631"),
-  S = a("768760"),
-  p = a("689938"),
-  I = a("164602"),
-  T = a("946278");
+n.r(t);
+var a = n("735250"),
+  s = n("470079"),
+  l = n("120356"),
+  i = n.n(l),
+  r = n("442837"),
+  o = n("481060"),
+  u = n("255269"),
+  d = n("937889"),
+  c = n("695346"),
+  f = n("496675"),
+  E = n("699516"),
+  h = n("68588"),
+  _ = n("512665"),
+  C = n("868807"),
+  m = n("981631"),
+  S = n("768760"),
+  p = n("689938"),
+  I = n("268559"),
+  T = n("990291");
 let g = s.memo(function(e) {
   let {
     channel: t
   } = e, {
-    loaded: a,
+    loaded: n,
     error: l,
     message: g
   } = (0, C.useMessageRequestPreview)(t), A = (0, r.useStateFromStores)([E.default], () => null != g && E.default.isBlocked(g.author.id), [g]), N = (0, r.useStateFromStores)([f.default], () => f.default.can(m.Permissions.MANAGE_MESSAGES, t)), v = c.RenderSpoilers.useSetting(), {
@@ -34,14 +34,14 @@ let g = s.memo(function(e) {
   }) : {
     content: null
   }, [g]), L = null;
-  if (l) L = (0, n.jsx)(o.Text, {
+  if (l) L = (0, a.jsx)(o.Text, {
     className: I.messageReplacement,
     variant: "text-sm/normal",
     color: "text-muted",
     children: p.default.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
   });
-  else if (a) {
-    if (null != g && A) L = (0, n.jsx)(o.Text, {
+  else if (n) {
+    if (null != g && A) L = (0, a.jsx)(o.Text, {
       className: I.messageReplacement,
       variant: "text-sm/normal",
       color: "text-muted",
@@ -55,28 +55,28 @@ let g = s.memo(function(e) {
         iconClass: I.messageContentIcon,
         iconSize: S.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
       });
-      L = null != t ? (0, n.jsx)(o.Text, {
+      L = null != t ? (0, a.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
         className: I.messageContent,
         children: t
-      }) : (0, n.jsx)(o.Text, {
+      }) : (0, a.jsx)(o.Text, {
         tag: "span",
         variant: "text-sm/normal",
         color: "text-muted",
         className: I.messageReplacement,
         children: e
       })
-    } else L = (0, n.jsx)(o.Text, {
+    } else L = (0, a.jsx)(o.Text, {
       className: I.messageReplacement,
       variant: "text-sm/normal",
       color: "text-muted",
       children: p.default.Messages.MESSAGE_REQUESTS_DELETED_MESSAGE
     })
   } else L = null;
-  return (0, n.jsx)(h.ObscuredDisplayContext.Provider, {
+  return (0, a.jsx)(h.ObscuredDisplayContext.Provider, {
     value: (0, u.default)(v, N),
-    children: (0, n.jsx)(o.FocusBlock, {
+    children: (0, a.jsx)(o.FocusBlock, {
       className: I.messageFocusBlock,
       children: L
     })

@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   ClanDiscoveryGame: function() {
     return i
   },
@@ -13,10 +13,10 @@ a.r(t), a.d(t, {
     return d
   }
 });
-var n, s, l, i, r = a("652874"),
-  o = a("868888"),
-  u = a("433517");
-(n = l || (l = {})).GET_STARTED = "get_started", n.DISCOVERY = "discovery", n.PLAYSTYLE = "playstyle", n.TRAITS = "traits", n.GAMES = "games", (s = i || (i = {})).VALORANT = "valorant", s.GENSHIN = "genshin";
+var a, s, l, i, r = n("652874"),
+  o = n("868888"),
+  u = n("433517");
+(a = l || (l = {})).GET_STARTED = "get_started", a.DISCOVERY = "discovery", a.PLAYSTYLE = "playstyle", a.TRAITS = "traits", a.GAMES = "games", (s = i || (i = {})).VALORANT = "valorant", s.GENSHIN = "genshin";
 let d = (0, r.default)((0, o.persist)(e => ({
   mode: "get_started",
   game: "valorant",
@@ -59,11 +59,11 @@ let d = (0, r.default)((0, o.persist)(e => ({
 
 function c(e) {
   var t;
-  let a = e.selectedGames,
-    n = null !== (t = e.selectedPlaystyle) && void 0 !== t ? t : void 0;
+  let n = e.selectedGames,
+    a = null !== (t = e.selectedPlaystyle) && void 0 !== t ? t : void 0;
   return {
-    games: a,
-    playstyle: n,
+    games: n,
+    playstyle: a,
     traits: e.selectedTraits
   }
 }

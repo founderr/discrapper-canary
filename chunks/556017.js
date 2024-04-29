@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   DiscoveryInAppReportingExperiment: function() {
     return i
   },
@@ -7,9 +7,9 @@ a.r(t), a.d(t, {
     return r
   }
 });
-var n = a("470079"),
-  s = a("818083"),
-  l = a("695346");
+var a = n("470079"),
+  s = n("818083"),
+  l = n("695346");
 let i = (0, s.createExperiment)({
   kind: "user",
   id: "2022-01_discovery_iar",
@@ -34,7 +34,7 @@ function r() {
   }, {
     autoTrackExposure: !1
   }), t = l.DeveloperMode.useSetting();
-  return n.useEffect(() => {
+  return a.useEffect(() => {
     i.trackExposure({
       location: "7a11e2_2"
     })

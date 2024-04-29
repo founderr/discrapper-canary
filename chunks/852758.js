@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   EMAIL_VERIFICATION_MODAL_KEY: function() {
     return N
   },
@@ -9,28 +9,28 @@ a.r(t), a.d(t, {
   default: function() {
     return R
   }
-}), a("47120");
-var n = a("735250"),
-  s = a("470079"),
-  l = a("990547"),
-  i = a("442837"),
-  r = a("544891"),
-  o = a("481060"),
-  u = a("893776"),
-  d = a("37234"),
-  c = a("809206"),
-  f = a("110924"),
-  E = a("714338"),
-  h = a("213609"),
-  _ = a("144114"),
-  C = a("210887"),
-  m = a("23434"),
-  S = a("610001"),
-  p = a("78415"),
-  I = a("1964"),
-  T = a("981631"),
-  g = a("815660"),
-  A = a("689938");
+}), n("47120");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("990547"),
+  i = n("442837"),
+  r = n("544891"),
+  o = n("481060"),
+  u = n("893776"),
+  d = n("37234"),
+  c = n("809206"),
+  f = n("110924"),
+  E = n("714338"),
+  h = n("213609"),
+  _ = n("144114"),
+  C = n("210887"),
+  m = n("23434"),
+  S = n("610001"),
+  p = n("78415"),
+  I = n("1964"),
+  T = n("981631"),
+  g = n("815660"),
+  A = n("689938");
 let N = "Email Verification",
   v = "PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY";
 
@@ -54,8 +54,8 @@ function R() {
       (0, c.accountDetailsInit)(), (0, o.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([a.e("49237"), a.e("35401")]).then(a.bind(a, "284549"));
-        return t => (0, n.jsx)(e, {
+        } = await Promise.all([n.e("49237"), n.e("35401")]).then(n.bind(n, "284549"));
+        return t => (0, a.jsx)(e, {
           ...t
         })
       }, {
@@ -67,8 +67,8 @@ function R() {
       (0, o.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([a.e("49237"), a.e("99387"), a.e("76540")]).then(a.bind(a, "607018"));
-        return t => (0, n.jsx)(e, {
+        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("76540")]).then(n.bind(n, "607018"));
+        return t => (0, a.jsx)(e, {
           reason: _.ChangePhoneReason.USER_ACTION_REQUIRED,
           ...t
         })
@@ -83,8 +83,8 @@ function R() {
     (null == M ? void 0 : M[0]) === T.VerificationTypes.PHONE && (null == R ? void 0 : R[0]) === T.VerificationTypes.EMAIL && (0, o.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.resolve().then(a.bind(a, "468026"));
-      return t => (0, n.jsx)(e, {
+      } = await Promise.resolve().then(n.bind(n, "468026"));
+      return t => (0, a.jsx)(e, {
         ...t,
         title: A.default.Messages.PHONE_THEN_EMAIL_INTERSTITIAL_TITLE,
         body: A.default.Messages.PHONE_THEN_EMAIL_INTERSTITIAL_BODY,
@@ -95,7 +95,7 @@ function R() {
       Layer: p.default,
       onCloseCallback: P
     })
-  }, [R, M]), (0, n.jsx)(S.default, {
+  }, [R, M]), (0, a.jsx)(S.default, {
     types: R,
     captchaKey: L,
     onCaptchaVerify: e => {
@@ -118,14 +118,14 @@ function R() {
         let {
           ConfirmModal: e,
           Text: t
-        } = await Promise.resolve().then(a.bind(a, "481060"));
-        return a => (0, n.jsx)(e, {
+        } = await Promise.resolve().then(n.bind(n, "481060"));
+        return n => (0, a.jsx)(e, {
           header: A.default.Messages.LOGOUT,
           confirmText: A.default.Messages.LOGOUT,
           cancelText: A.default.Messages.CANCEL,
           onConfirm: () => u.default.logout(),
-          ...a,
-          children: (0, n.jsx)(t, {
+          ...n,
+          children: (0, a.jsx)(t, {
             variant: "text-md/normal",
             children: A.default.Messages.USER_SETTINGS_CONFIRM_LOGOUT
           })

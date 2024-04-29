@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return v
+    return I
   }
 });
 var l = s("735250");
@@ -16,17 +16,17 @@ var a = s("442837"),
   c = s("530"),
   f = s("616140"),
   S = s("602091"),
-  m = s("854898");
+  m = s("727004");
 
-function v(e) {
+function I(e) {
   let {
     user: t,
     displayProfile: s,
-    initialSection: v,
-    autoFocusNote: E,
-    transitionState: I,
+    initialSection: I,
+    autoFocusNote: v,
+    transitionState: E,
     onClose: x
-  } = e, _ = (0, n.default)(s), A = (0, a.useStateFromStores)([i.default], () => i.default.findActivity(t.id, e => null != e.type && u.SUPPORTED_ACTIVITY_TYPES.has(e.type)), [t]);
+  } = e, _ = (0, n.default)(s), T = (0, a.useStateFromStores)([i.default], () => i.default.findActivity(t.id, e => null != e.type && u.SUPPORTED_ACTIVITY_TYPES.has(e.type)), [t]);
   return (0, l.jsxs)("div", {
     className: m.container,
     children: [(0, l.jsxs)("div", {
@@ -42,16 +42,16 @@ function v(e) {
         className: m.badgeList,
         onClose: x
       })]
-    }), null != A && (0, l.jsx)(u.default, {
-      activity: A
+    }), null != T && (0, l.jsx)(u.default, {
+      activity: T
     }), (0, l.jsxs)(d.default.Overlay, {
-      children: [I === S.ModalTransitionState.ENTERED && (0, l.jsx)(o.default, {
+      children: [E === S.ModalTransitionState.ENTERED && (0, l.jsx)(o.default, {
         onTooltipClose: x
       }), (0, l.jsx)(f.default, {
         user: t,
         displayProfile: s,
-        initialSection: v,
-        autoFocusNote: E,
+        initialSection: I,
+        autoFocusNote: v,
         onClose: x
       })]
     })]

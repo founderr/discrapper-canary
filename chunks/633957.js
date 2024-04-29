@@ -11,7 +11,7 @@ var s = n("735250"),
   r = n("2052"),
   o = n("317381"),
   u = n("638880"),
-  d = n("146936"),
+  d = n("266820"),
   c = n("527805"),
   f = n("952561"),
   E = n("513202"),
@@ -27,7 +27,7 @@ var s = n("735250"),
   A = n("226378"),
   g = n("701488"),
   M = n("689938"),
-  R = n("975720");
+  R = n("497386");
 
 function v(e) {
   var t;
@@ -39,17 +39,17 @@ function v(e) {
   } = e, [L, D] = a.useState(!1), {
     analyticsLocations: P
   } = (0, m.default)(_.default.ACTIVITY_INSTANCE_EMBED), y = (0, r.useAnalyticsContext)(), U = (0, f.default)(), j = (0, l.useStateFromStores)([p.default], () => p.default.getChannel(O)), b = (null == j ? void 0 : null === (t = j.isThread) || void 0 === t ? void 0 : t.call(j)) ? null == j ? void 0 : j.parent_id : O, B = (0, l.useStateFromStores)([I.default], () => I.default.getId()), {
-    embeddedActivity: F,
-    currentEmbeddedActivity: G
+    embeddedActivity: G,
+    currentEmbeddedActivity: F
   } = (0, l.useStateFromStoresObject)([o.default], () => ({
     embeddedActivity: o.default.getEmbeddedActivitiesForChannel(null != b ? b : "").find(e => e.launchId === v.id),
     currentEmbeddedActivity: o.default.getCurrentEmbeddedActivity()
   })), k = (0, l.useStateFromStoresArray)([N.default], () => {
     var e;
-    return Array.from(null !== (e = null == F ? void 0 : F.userIds) && void 0 !== e ? e : []).map(e => N.default.getUser(e)).filter(C.isNotNullish)
+    return Array.from(null !== (e = null == G ? void 0 : G.userIds) && void 0 !== e ? e : []).map(e => N.default.getUser(e)).filter(C.isNotNullish)
   }), w = (0, l.useStateFromStores)([h.default], () => {
     var e;
-    let t = null == F ? void 0 : F.userIds.values().next().value;
+    let t = null == G ? void 0 : G.userIds.values().next().value;
     return null == t ? null : null === (e = h.default.findActivity(t, e => e.application_id === n.id)) || void 0 === e ? void 0 : e.details
   }), H = a.useMemo(() => {
     let e = new T.default(n);
@@ -58,10 +58,10 @@ function v(e) {
     userId: B,
     channelId: O,
     application: H
-  }), Y = null == F, K = (0, A.useJoinOrStartButtonState)({
-    embeddedActivity: F,
+  }), Y = null == G, K = (0, A.useJoinOrStartButtonState)({
+    embeddedActivity: G,
     joinability: V,
-    currentEmbeddedActivity: G
+    currentEmbeddedActivity: F
   }), W = async () => {
     D(!0);
     try {
@@ -74,7 +74,7 @@ function v(e) {
         embeddedActivitiesManager: E.default,
         analyticsLocations: P
       }) : await (0, u.default)({
-        applicationId: F.applicationId,
+        applicationId: G.applicationId,
         currentEmbeddedApplication: U,
         activityChannelId: O,
         locationObject: y.location,

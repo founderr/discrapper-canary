@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return N
   }
 });
 var a = n("735250");
@@ -27,18 +27,18 @@ var l = n("512722"),
   I = n("354459"),
   A = n("689938");
 
-function v(e) {
+function N(e) {
   let {
     channelId: t,
     closePopout: n,
     appContext: l,
-    onSelect: v
-  } = e, N = (0, i.useStateFromStores)([u.default], () => u.default.getSelectedParticipant(t)), x = (null == N ? void 0 : N.type) === I.ParticipantTypes.STREAM ? N.stream : null, M = (0, h.default)(t);
+    onSelect: N
+  } = e, v = (0, i.useStateFromStores)([u.default], () => u.default.getSelectedParticipant(t)), x = (null == v ? void 0 : v.type) === I.ParticipantTypes.STREAM ? v.stream : null, M = (0, h.default)(t);
   return (0, a.jsxs)(r.Menu, {
     navId: "stage-channel-call-overflow-popout",
     onClose: n,
     "aria-label": A.default.Messages.CHANNEL_CALL_OVERFLOW_MENU_LABEL,
-    onSelect: v,
+    onSelect: N,
     children: [function(e) {
       let t = (0, i.useStateFromStores)([C.default], () => C.default.getChannel(e), [e]),
         n = (0, i.useStateFromStores)([g.default], () => g.default.can(_.MODERATE_STAGE_CHANNEL_PERMISSIONS, t)),

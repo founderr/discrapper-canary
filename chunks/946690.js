@@ -1,36 +1,36 @@
 "use strict";
-a.r(t);
-var n = a("735250");
-a("470079");
-var s = a("120356"),
-  l = a.n(s),
-  i = a("481060"),
-  r = a("332419");
+n.r(t);
+var a = n("735250");
+n("470079");
+var s = n("120356"),
+  l = n.n(s),
+  i = n("481060"),
+  r = n("658938");
 t.default = e => {
   let {
     icon: t,
-    iconClassName: a,
+    iconClassName: n,
     header: s,
     description: o
   } = e;
-  return (0, n.jsxs)("div", {
+  return (0, a.jsxs)("div", {
     className: r.container,
-    children: [(0, n.jsx)("div", {
+    children: [(0, a.jsx)("div", {
       className: r.circle,
-      children: (0, n.jsx)(t, {
-        className: l()(r.icon, a),
+      children: (0, a.jsx)(t, {
+        className: l()(r.icon, n),
         width: 20,
         height: 20,
         color: "currentColor"
       })
-    }), (0, n.jsxs)("div", {
-      children: [(0, n.jsx)(i.Heading, {
+    }), (0, a.jsxs)("div", {
+      children: [(0, a.jsx)(i.Heading, {
         variant: "heading-md/bold",
         className: r.header,
-        children: (0, n.jsx)(i.HeadingLevel, {
+        children: (0, a.jsx)(i.HeadingLevel, {
           children: s
         })
-      }), (0, n.jsx)(i.Text, {
+      }), (0, a.jsx)(i.Text, {
         variant: "text-sm/medium",
         color: "text-muted",
         children: o

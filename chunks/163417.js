@@ -1,30 +1,30 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return r
   }
 });
-var n = a("735250");
-a("470079");
-var s = a("145641"),
-  l = a("322701"),
-  i = a("617015");
+var a = n("735250");
+n("470079");
+var s = n("145641"),
+  l = n("322701"),
+  i = n("617015");
 
 function r(e) {
   let {
     relationshipCount: t,
-    statusSections: a,
+    statusSections: n,
     renderRow: r,
     searchQuery: o,
     sectionFilter: u,
     useReducedMotion: d
   } = e;
-  return t >= i.RELATIONSHIP_COUNT_ANIMATION_THRESHOLD ? (0, n.jsx)(s.default, {
-    statusSections: a,
+  return t >= i.RELATIONSHIP_COUNT_ANIMATION_THRESHOLD ? (0, a.jsx)(s.default, {
+    statusSections: n,
     renderRow: r,
     searchQuery: o
-  }) : (0, n.jsx)(l.default, {
-    statusSections: a,
+  }) : (0, a.jsx)(l.default, {
+    statusSections: n,
     renderRow: r,
     sectionFilter: u,
     searchQuery: o,

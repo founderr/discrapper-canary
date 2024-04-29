@@ -1,12 +1,12 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   ClanGuildExperiment: function() {
     return l
   }
 });
-var n = a("818083"),
-  s = a("308083");
-let l = (0, n.createExperiment)({
+var a = n("818083"),
+  s = n("308083");
+let l = (0, a.createExperiment)({
   kind: "guild",
   id: "2024-04_clan_guilds",
   label: "Clans guild experiment",

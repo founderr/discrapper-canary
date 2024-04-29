@@ -10,7 +10,7 @@ var r = n("120356"),
   u = n("865824"),
   d = n("481060"),
   _ = n("325767"),
-  c = n("199813");
+  c = n("266930");
 let E = {
     UP: c.directionUp,
     RIGHT: c.directionRight,

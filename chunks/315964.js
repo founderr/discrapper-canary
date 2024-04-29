@@ -1,11 +1,11 @@
 "use strict";
-a.r(t);
-var n = a("570140"),
-  s = a("142497"),
-  l = a("190378");
+n.r(t);
+var a = n("570140"),
+  s = n("142497"),
+  l = n("190378");
 t.default = {
   init() {
-    n.default.subscribe("VOICE_CHANNEL_SELECT", e => {
+    a.default.subscribe("VOICE_CHANNEL_SELECT", e => {
       let {
         channelId: t
       } = e;

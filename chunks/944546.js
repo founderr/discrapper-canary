@@ -21,7 +21,7 @@ var a = n("735250"),
   m = n("171368"),
   p = n("981631"),
   E = n("689938"),
-  C = n("305944");
+  C = n("613398");
 
 function g(e) {
   let {
@@ -62,16 +62,16 @@ function S(e) {
       guildId: T,
       channelId: I,
       messageId: A,
-      roleId: v
+      roleId: N
     } = (0, f.useUserProfileAnalyticsContext)();
 
-  function N(e) {
+  function v(e) {
     c(), (0, m.openUserProfileModal)({
       userId: e,
       guildId: T,
       channelId: I,
       messageId: A,
-      roleId: v,
+      roleId: N,
       sourceAnalyticsLocations: _,
       analyticsLocation: {
         section: p.AnalyticsSections.USER_PROFILE_MUTUAL_FRIENDS
@@ -106,7 +106,7 @@ function S(e) {
   }) : S.map(e => (0, a.jsx)(g, {
     user: e.user,
     status: e.status,
-    onSelect: N,
+    onSelect: v,
     onContextMenu: x
   }, e.key)), (0, a.jsx)(i.ScrollerThin, {
     className: C.listScroller,

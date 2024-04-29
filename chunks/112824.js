@@ -22,7 +22,7 @@ var l = s("120356"),
   I = s("647086"),
   T = s("135899"),
   S = s("689938"),
-  f = s("212723");
+  f = s("875058");
 
 function m(e) {
   return T.MODERATOR_PERMISSIONS.filter(t => (null == e ? void 0 : e.id) !== I.FAVORITES_RAW_GUILD_ID && _.canEveryone(t, e))

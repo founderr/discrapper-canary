@@ -80,7 +80,7 @@ function R(e) {
       e.stopPropagation(), null != t && (0, r.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("97437"), n.e("78187")]).then(n.bind(n, "215269"));
+        } = await Promise.all([n.e("54668"), n.e("62364")]).then(n.bind(n, "215269"));
         return n => (0, l.jsx)(e, {
           guildEventId: G,
           recurrenceId: A,

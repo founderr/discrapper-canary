@@ -19,7 +19,7 @@ var a = n("735250"),
   u = n("823379"),
   d = n("27457"),
   c = n("354459"),
-  f = n("883335");
+  f = n("668342");
 let h = 112,
   m = 16 / 9 * h + 8,
   p = 10 * o.default.Millis.SECOND;
@@ -87,11 +87,11 @@ function C(e, t) {
         }
       }
       let A = I.filter(u.isNotNullish),
-        v = (0, s.keyBy)((0, s.range)(A.length), e => A[e].id);
-      r.current = v;
-      let N = [..._, ...A];
-      return null != f && N.push(f), {
-        visibleParticipants: N,
+        N = (0, s.keyBy)((0, s.range)(A.length), e => A[e].id);
+      r.current = N;
+      let v = [..._, ...A];
+      return null != f && v.push(f), {
+        visibleParticipants: v,
         participantTileWidth: g
       }
     }, [e, t, n]);

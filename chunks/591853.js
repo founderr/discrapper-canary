@@ -38,8 +38,8 @@ var r = n("442837"),
   T = n("496675"),
   I = n("594174"),
   A = n("682864"),
-  v = n("626135"),
-  N = n("768581"),
+  N = n("626135"),
+  v = n("768581"),
   x = n("5192"),
   M = n("485267"),
   R = n("162461"),
@@ -112,11 +112,11 @@ function Y(e) {
     closePopout: C,
     entry: g,
     requestId: S
-  } = e, I = (0, r.useStateFromStores)([L.default], () => L.default.isChannelReplyMode()), A = l.useRef(null), [N, R] = l.useState(null), y = (0, r.useStateFromStores)([T.default], () => T.default.can(w.Permissions.SEND_MESSAGES, t)), P = (0, O.useIsEligibleForMemberlistOneClickReply)({
+  } = e, I = (0, r.useStateFromStores)([L.default], () => L.default.isChannelReplyMode()), A = l.useRef(null), [v, R] = l.useState(null), y = (0, r.useStateFromStores)([T.default], () => T.default.can(w.Permissions.SEND_MESSAGES, t)), P = (0, O.useIsEligibleForMemberlistOneClickReply)({
     location: "PopoutReactor"
   }), [b, B] = l.useState(!1), [G, V] = l.useState(!1), W = "#".concat(t.name), Y = x.default.getName(t.guild_id, t.id, n), K = I ? k.default.Messages.CONTENT_INVENTORY_SWITCH_SEND_MESSAGE_TO_USER : k.default.Messages.CONTENT_INVENTORY_SWITCH_SHARE_TO_CHANNEL, Z = async e => {
     if (null != e) {
-      if (v.default.track(w.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
+      if (N.default.track(w.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
           surface_type: F.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
           channel_id: t.id,
           guild_id: t.guild_id
@@ -139,7 +139,7 @@ function Y(e) {
           interactionType: F.ContentInventoryInteractionTypes.REACTION_EMOJI_REACT_SENT
         })
       }
-      null != N && (N.insertEmoji(e, !1, !1), N.focus())
+      null != v && (v.insertEmoji(e, !1, !1), v.focus())
     }
   }, q = async e => {
     let a;
@@ -244,7 +244,7 @@ let z = e => {
     url: e.url
   } : {
     emoji: e,
-    url: (0, N.getEmojiURL)({
+    url: (0, v.getEmojiURL)({
       id: e.id,
       animated: e.animated,
       size: 58

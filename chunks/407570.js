@@ -1,11 +1,11 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   isInFriendSuggestionSeenStateExperiment: function() {
     return l
   }
-}), a("399606");
-var n = a("818083");
-a("553795"), a("594174"), a("981631"), (0, n.createExperiment)({
+}), n("399606");
+var a = n("818083");
+n("553795"), n("594174"), n("981631"), (0, a.createExperiment)({
   kind: "user",
   id: "2024-03_friend_finder_selected_states",
   label: "Friend Finder State Experiment",
@@ -19,7 +19,7 @@ a("553795"), a("594174"), a("981631"), (0, n.createExperiment)({
       enabled: !0
     }
   }]
-}), (0, n.createExperiment)({
+}), (0, a.createExperiment)({
   kind: "user",
   id: "2023-10_friend_finder_launch",
   label: "Friend Finder Launch Experiment",
@@ -33,7 +33,7 @@ a("553795"), a("594174"), a("981631"), (0, n.createExperiment)({
       enabled: !0
     }
   }]
-}), (0, n.createExperiment)({
+}), (0, a.createExperiment)({
   kind: "user",
   id: "2023-03_friend_finder_employees",
   label: "Friend Finder Employees User Experiment",
@@ -47,7 +47,7 @@ a("553795"), a("594174"), a("981631"), (0, n.createExperiment)({
       enabled: !0
     }
   }]
-}), (0, n.createExperiment)({
+}), (0, a.createExperiment)({
   kind: "user",
   id: "2023-11_friend_finder_sync",
   label: "Friend Finder Sync",
@@ -62,7 +62,7 @@ a("553795"), a("594174"), a("981631"), (0, n.createExperiment)({
     }
   }]
 });
-let s = (0, n.createExperiment)({
+let s = (0, a.createExperiment)({
   kind: "user",
   id: "2023-12_friend_suggestion_seen_state",
   label: "Friend Suggestions Seen State",

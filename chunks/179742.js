@@ -1,18 +1,18 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return o
   }
 });
-var n = a("735250");
-a("470079");
-var s = a("613828"),
-  l = a("880257"),
-  i = a("106939"),
-  r = a("981631");
+var a = n("735250");
+n("470079");
+var s = n("613828"),
+  l = n("880257"),
+  i = n("106939"),
+  r = n("981631");
 
 function o() {
-  return !1 === (0, l.default)() ? (0, n.jsx)(s.Redirect, {
+  return !1 === (0, l.default)() ? (0, a.jsx)(s.Redirect, {
     to: r.Routes.SETTINGS("family-center")
-  }) : (0, n.jsx)(i.default, {})
+  }) : (0, a.jsx)(i.default, {})
 }

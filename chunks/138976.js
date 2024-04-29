@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   JUMP_TO_FIRST_UNREAD: function() {
-    return a
+    return u
   }
 });
 var i = n("904245"),
   o = n("306680"),
   l = n("944486");
-let a = {
+let u = {
   binds: ["shift+pageup"],
   comboKeysBindGlobal: !0,
   action() {

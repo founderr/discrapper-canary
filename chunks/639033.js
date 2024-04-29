@@ -1,15 +1,15 @@
 "use strict";
-a.r(t), a("47120");
-var n = a("735250");
-a("470079");
-var s = a("481060"),
-  l = a("570140"),
-  i = a("317770"),
-  r = a("314897"),
-  o = a("592125"),
-  u = a("797258"),
-  d = a("590415"),
-  c = a("981631");
+n.r(t), n("47120");
+var a = n("735250");
+n("470079");
+var s = n("481060"),
+  l = n("570140"),
+  i = n("317770"),
+  r = n("314897"),
+  o = n("592125"),
+  u = n("797258"),
+  d = n("590415"),
+  c = n("981631");
 let f = "STAGE_INVITED_TO_SPEAK_MODAL";
 class E extends i.default {
   _initialize() {
@@ -39,8 +39,8 @@ class E extends i.default {
         (0, s.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([a.e("99387"), a.e("13878")]).then(a.bind(a, "113140"));
-          return t => (0, n.jsx)(e, {
+          } = await Promise.all([n.e("99387"), n.e("13878")]).then(n.bind(n, "113140"));
+          return t => (0, a.jsx)(e, {
             ...t,
             channel: C
           })

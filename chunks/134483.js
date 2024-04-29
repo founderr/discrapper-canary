@@ -21,8 +21,8 @@ var a = n("735250"),
   T = n("569984"),
   I = n("497505"),
   A = n("918701"),
-  v = n("874137"),
-  N = n("340100"),
+  N = n("874137"),
+  v = n("340100"),
   x = n("611855"),
   M = n("644646"),
   R = n("670638"),
@@ -31,7 +31,7 @@ var a = n("735250"),
   O = n("981631"),
   j = n("354459"),
   P = n("689938"),
-  D = n("599660");
+  D = n("934065");
 t.default = function(e) {
   var t, n;
   let {
@@ -94,7 +94,7 @@ t.default = function(e) {
     quest: W,
     questContent: I.QuestContent.QUEST_LIVE_STREAM
   });
-  return (0, a.jsx)(v.QuestContentImpressionTracker, {
+  return (0, a.jsx)(N.QuestContentImpressionTracker, {
     questOrQuests: W,
     overrideVisibility: !k,
     questContent: I.QuestContent.QUEST_LIVE_STREAM,
@@ -180,7 +180,7 @@ t.default = function(e) {
                 submitting: Y,
                 children: P.default.Messages.QUESTS_ACCEPT_QUEST
               })]
-            }), ee && !et && V && (0, a.jsx)(N.default, {
+            }), ee && !et && V && (0, a.jsx)(v.default, {
               color: u.tokens.colors.BG_BRAND,
               quest: W
             }), ee && !et && !V && (0, a.jsx)(u.Button, {

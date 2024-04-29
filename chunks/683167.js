@@ -1,12 +1,12 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   useShopNewBadgeCoachtipEdition: function() {
     return i
   }
 });
-var n = a("818083"),
-  s = a("302800");
-let l = (0, n.createExperiment)({
+var a = n("818083"),
+  s = n("302800");
+let l = (0, a.createExperiment)({
     kind: "user",
     id: "2024-04_shop_marketing_badge",
     label: "Shop Marketing New Badge Design Experiment",

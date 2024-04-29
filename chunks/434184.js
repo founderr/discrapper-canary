@@ -1,27 +1,27 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return C
   }
 });
-var n = a("735250"),
-  s = a("470079"),
-  l = a("194359"),
-  i = a("906732"),
-  r = a("171368"),
-  o = a("877410"),
-  u = a("626135"),
-  d = a("321488"),
-  c = a("417183"),
-  f = a("170245"),
-  E = a("981631"),
-  h = a("689938"),
-  _ = a("621982");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("194359"),
+  i = n("906732"),
+  r = n("171368"),
+  o = n("877410"),
+  u = n("626135"),
+  d = n("321488"),
+  c = n("417183"),
+  f = n("170245"),
+  E = n("981631"),
+  h = n("689938"),
+  _ = n("499475");
 
 function C(e) {
   let {
     user: t,
-    key: a,
+    key: n,
     isFocused: C
   } = e, m = s.useContext(u.AnalyticsContext), {
     analyticsLocations: S
@@ -30,7 +30,7 @@ function C(e) {
       location: "Friends"
     })
   };
-  return (0, n.jsx)(c.default, {
+  return (0, a.jsx)(c.default, {
     isFocused: C,
     onClick: () => (0, r.openUserProfileModal)({
       userId: t.id,
@@ -38,14 +38,14 @@ function C(e) {
       analyticsLocation: m.location
     }),
     user: t,
-    children: e => (0, n.jsxs)("div", {
+    children: e => (0, a.jsxs)("div", {
       className: _.listItemContents,
-      children: [(0, n.jsx)(f.default, {
+      children: [(0, a.jsx)(f.default, {
         user: t,
         hovered: e,
         status: E.StatusTypes.UNKNOWN,
         subText: h.default.Messages.BLOCKED
-      }), (0, n.jsx)(d.default, {
+      }), (0, a.jsx)(d.default, {
         icon: o.default,
         actionType: d.default.ActionTypes.DENY,
         tooltip: h.default.Messages.UNBLOCK,
@@ -53,5 +53,5 @@ function C(e) {
         shouldHighlight: e
       })]
     })
-  }, a)
+  }, n)
 }

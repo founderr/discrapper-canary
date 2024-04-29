@@ -1,23 +1,23 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return d
   }
 });
-var n = a("735250");
-a("470079");
-var s = a("990547"),
-  l = a("481060"),
-  i = a("153124"),
-  r = a("758119"),
-  o = a("689938"),
-  u = a("760816");
+var a = n("735250");
+n("470079");
+var s = n("990547"),
+  l = n("481060"),
+  i = n("153124"),
+  r = n("758119"),
+  o = n("689938"),
+  u = n("911284");
 
 function d(e) {
   let {
     transitionState: t
   } = e, d = (0, i.useUID)();
-  return (0, n.jsxs)(l.ModalRoot, {
+  return (0, a.jsxs)(l.ModalRoot, {
     transitionState: t,
     size: l.ModalSize.SMALL,
     "aria-labelledby": d,
@@ -27,27 +27,27 @@ function d(e) {
         existing_user: !0
       }
     },
-    children: [(0, n.jsx)(l.ModalContent, {
-      children: (0, n.jsxs)("div", {
+    children: [(0, a.jsx)(l.ModalContent, {
+      children: (0, a.jsxs)("div", {
         className: u.container,
-        children: [(0, n.jsx)("img", {
+        children: [(0, a.jsx)("img", {
           alt: "",
-          src: a("863181"),
+          src: n("863181"),
           className: u.img
-        }), (0, n.jsx)(l.Heading, {
+        }), (0, a.jsx)(l.Heading, {
           variant: "heading-xl/semibold",
           className: u.title,
           id: d,
           children: o.default.Messages.AGE_GATE_AGE_VERIFIED
-        }), (0, n.jsx)(l.Text, {
+        }), (0, a.jsx)(l.Text, {
           color: "header-secondary",
           className: u.subtitle,
           variant: "text-sm/normal",
           children: o.default.Messages.AGE_GATE_AGE_VERIFIED_BODY
         })]
       })
-    }), (0, n.jsx)(l.ModalFooter, {
-      children: (0, n.jsx)(l.Button, {
+    }), (0, a.jsx)(l.ModalFooter, {
+      children: (0, a.jsx)(l.Button, {
         size: l.ButtonSizes.SMALL,
         fullWidth: !0,
         onClick: function() {

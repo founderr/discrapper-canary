@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   completeSignUp: function() {
     return u
   },
@@ -7,31 +7,31 @@ a.r(t), a.d(t, {
     return d
   }
 });
-var n = a("570140"),
-  s = a("605236"),
-  l = a("626135"),
-  i = a("445507"),
-  r = a("981631"),
-  o = a("921944");
+var a = n("570140"),
+  s = n("605236"),
+  l = n("626135"),
+  i = n("445507"),
+  r = n("981631"),
+  o = n("921944");
 
 function u(e) {
   let {
     targetKey: t,
-    dismissibleContent: a,
+    dismissibleContent: n,
     data: u,
     completed: d
   } = e;
-  null != u.selectedOptionKey && (!(0, s.isDismissibleContentDismissed)(a) && l.default.track(r.AnalyticEvents.SIGNUP_COMPLETED, {
+  null != u.selectedOptionKey && (!(0, s.isDismissibleContentDismissed)(n) && l.default.track(r.AnalyticEvents.SIGNUP_COMPLETED, {
     target_key: t,
     selected_option_key: u.selectedOptionKey,
     email: u.email,
     guild_id: u.guildId,
     metadata: (0, i.extractMetadata)(u),
     completed: d
-  }), (0, s.markDismissibleContentAsDismissed)(a, {
+  }), (0, s.markDismissibleContentAsDismissed)(n, {
     dismissAction: o.ContentDismissActionType.PRIMARY,
     forceTrack: !0
-  }), n.default.dispatch({
+  }), a.default.dispatch({
     type: "COMPLETE_SIGN_UP",
     email: u.email,
     targetKey: t,
@@ -43,7 +43,7 @@ function d(e, t) {
   (0, s.markDismissibleContentAsDismissed)(t, {
     dismissAction: o.ContentDismissActionType.DISMISS,
     forceTrack: !0
-  }), n.default.dispatch({
+  }), a.default.dispatch({
     type: "DISMISS_SIGN_UP",
     targetKey: e
   })

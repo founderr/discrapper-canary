@@ -35,8 +35,8 @@ var s = n("735250"),
   j = n("496675"),
   b = n("158776"),
   B = n("944486"),
-  F = n("594174"),
-  G = n("979651"),
+  G = n("594174"),
+  F = n("979651"),
   k = n("372662"),
   w = n("113039"),
   H = n("755090"),
@@ -73,7 +73,7 @@ var s = n("735250"),
   eh = n("981631"),
   eN = n("70722"),
   eS = n("689938"),
-  eC = n("951619");
+  eC = n("846423");
 
 function eA(e) {
   let {
@@ -137,7 +137,7 @@ let eM = Object.freeze({
       compact: a
     } = e, {
       author: i
-    } = t, r = t.getChannelId(), o = (0, l.useStateFromStores)([F.default], () => F.default.getUser(t.mentions[0]), [t]), u = e_.default.getName(null, r, o), d = (0, ep.useUsernameHook)({
+    } = t, r = t.getChannelId(), o = (0, l.useStateFromStores)([G.default], () => G.default.getUser(t.mentions[0]), [t]), u = e_.default.getName(null, r, o), d = (0, ep.useUsernameHook)({
       user: i,
       channelId: r,
       guildId: n.guild_id,
@@ -170,7 +170,7 @@ let eM = Object.freeze({
       compact: a
     } = e, {
       author: i
-    } = t, r = t.getChannelId(), o = (0, l.useStateFromStores)([F.default], () => F.default.getUser(t.mentions[0]), [t]), u = (0, ep.useUsernameHook)({
+    } = t, r = t.getChannelId(), o = (0, l.useStateFromStores)([G.default], () => G.default.getUser(t.mentions[0]), [t]), u = (0, ep.useUsernameHook)({
       user: i,
       channelId: r,
       guildId: n.guild_id,
@@ -209,7 +209,7 @@ let eM = Object.freeze({
     } = e, {
       id: r,
       author: o
-    } = t, d = D.default.getId(), c = t.getChannelId(), f = (0, l.useStateFromStores)([P.default], () => P.default.isCallActive(c, r), [c, r]), E = (0, l.useStateFromStores)([G.default], () => G.default.getVoiceState(eh.ME, d)), _ = !f && null != t.call && !t.call.participants.includes(d), m = f && (null == E || E.channelId !== c), T = a.useCallback(() => u.default.selectVoiceChannel(c), [c]), I = (0, ep.useUsernameHook)({
+    } = t, d = D.default.getId(), c = t.getChannelId(), f = (0, l.useStateFromStores)([P.default], () => P.default.isCallActive(c, r), [c, r]), E = (0, l.useStateFromStores)([F.default], () => F.default.getVoiceState(eh.ME, d)), _ = !f && null != t.call && !t.call.participants.includes(d), m = f && (null == E || E.channelId !== c), T = a.useCallback(() => u.default.selectVoiceChannel(c), [c]), I = (0, ep.useUsernameHook)({
       user: o,
       channelId: c,
       guildId: i.guild_id,
@@ -441,7 +441,7 @@ let eM = Object.freeze({
       message: t,
       channel: n,
       compact: a
-    } = e, i = (0, l.useStateFromStores)([F.default], () => F.default.getCurrentUser()), r = (0, l.useStateFromStores)([U.default], () => {
+    } = e, i = (0, l.useStateFromStores)([G.default], () => G.default.getCurrentUser()), r = (0, l.useStateFromStores)([U.default], () => {
       var e, t;
       return null !== (t = null === (e = U.default.getGuild(n.getGuildId())) || void 0 === e ? void 0 : e.isOwner(i)) && void 0 !== t && t
     });

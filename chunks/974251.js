@@ -21,8 +21,8 @@ var a = n("735250"),
   T = n("536442"),
   I = n("79390"),
   A = n("628566"),
-  v = n("665906"),
-  N = n("695346"),
+  N = n("665906"),
+  v = n("695346"),
   x = n("433355"),
   M = n("819640"),
   R = n("375954"),
@@ -41,7 +41,7 @@ var a = n("735250"),
   B = n("356659"),
   G = n("921944"),
   V = n("689938"),
-  W = n("446370");
+  W = n("164841");
 t.default = l.memo(function(e) {
   var t, s;
   let Y, {
@@ -106,13 +106,13 @@ t.default = l.memo(function(e) {
       D.ComponentDispatch.unsubscribe(H.ComponentActions.UPLOAD_FILE, e)
     }
   });
-  let eS = (0, v.useCanStartPublicThread)(K),
-    e_ = (0, v.useCanStartPrivateThread)(K),
-    eT = !N.UseLegacyChatInput.useSetting() && !(0, b.isAndroidWeb)() && null != window.ResizeObserver,
+  let eS = (0, N.useCanStartPublicThread)(K),
+    e_ = (0, N.useCanStartPrivateThread)(K),
+    eT = !v.UseLegacyChatInput.useSetting() && !(0, b.isAndroidWeb)() && null != window.ResizeObserver,
     eI = (0, r.useStateFromStores)([L.default, A.default], () => (0, E.canUseApplicationCommands)(L.default, A.default, Q, K)),
     eA = (0, I.useCanPostPollsInChannel)(null != K ? K : void 0),
-    ev = (0, d.useRedesignIconContext)().enabled,
-    eN = (0, m.useShowActivitiesInOmniButtonMenu)(K.id, "ChannelAttachButton"),
+    eN = (0, d.useRedesignIconContext)().enabled,
+    ev = (0, m.useShowActivitiesInOmniButtonMenu)(K.id, "ChannelAttachButton"),
     ex = null !== (s = null == ea ? void 0 : ea.length) && void 0 !== s ? s : 0,
     eM = (0, k.default)({
       canAttachFiles: em,
@@ -124,13 +124,13 @@ t.default = l.memo(function(e) {
       activities: ee,
       newClipsCount: ex,
       canPostPolls: eA,
-      canLaunchActivities: eN,
+      canLaunchActivities: ev,
       appContext: J
     });
   if (0 === eM.length) return null;
   let eR = ee.some(e => (0, p.default)(e, H.ActivityFlags.SYNC)),
     eL = ee.some(e => (0, p.default)(e, H.ActivityFlags.JOIN) && !(0, p.default)(e, H.ActivityFlags.EMBEDDED)) || eR;
-  Y = ev ? (0, a.jsx)(u.CirclePlusIcon, {
+  Y = eN ? (0, a.jsx)(u.CirclePlusIcon, {
     className: W.__invalid_attachButtonIcon,
     colorClass: W.attachButtonPlus
   }) : eL ? (0, a.jsx)(P.default, {

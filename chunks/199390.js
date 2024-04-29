@@ -6,7 +6,7 @@ var l = a("735250"),
   i = a("978139"),
   d = a("422871"),
   r = a("689938"),
-  u = a("815671");
+  u = a("481615");
 t.default = n.memo(function(e) {
   let {
     guildId: t,

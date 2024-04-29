@@ -1,22 +1,22 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return i
   }
 });
-var n = a("735250");
-a("470079");
-var s = a("151827"),
-  l = a("836519");
+var a = n("735250");
+n("470079");
+var s = n("151827"),
+  l = n("827495");
 
 function i(e) {
   let {
     title: t,
-    id: a
+    id: n
   } = e;
-  return (0, n.jsx)(s.default, {
+  return (0, a.jsx)(s.default, {
     className: l.title,
-    id: a,
+    id: n,
     children: t
   })
 }

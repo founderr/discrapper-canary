@@ -59,7 +59,7 @@ var l = t("735250"),
   ea = t("486324"),
   et = t("228168"),
   el = t("689938"),
-  en = t("852552"),
+  en = t("234049"),
   ei = t("471031");
 let er = X.default.getEnableHardwareAcceleration() ? d.AnimatedAvatar : d.Avatar,
   es = (0, j.buildGetPremiumUserBannerStyles)({
@@ -112,7 +112,7 @@ function eo(e) {
     avatarOverride: eC,
     size: d.AvatarSizes.SIZE_80,
     showPending: !0
-  }), eV = (0, N.default)(eo.id, null == eu ? void 0 : eu.id), eZ = (0, o.useStateFromStores)([v.default], () => v.default.syncProfileThemeWithUserTheme), eY = (0, m.default)(), eq = (0, o.useStateFromStores)([D.default], () => null == eu ? null : D.default.getMember(eu.id, eo.id)), eK = null === (a = (0, N.default)(eo.id, null)) || void 0 === a ? void 0 : a.profileEffectId, eX = null == eV ? void 0 : eV.profileEffectId, eJ = null != eu && null == eT ? eT !== eX && null !== eT ? eX : eK : eT, eQ = void 0 === eC ? eo.getAvatarURL(void 0, 80) : eC, e$ = (0, h.default)(eQ, (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_530).hsl(), !1), e0 = null == eV ? void 0 : eV.getPreviewThemeColors(ex), e1 = null !== (i = null == e0 ? void 0 : e0[0]) && void 0 !== i ? i : null == eV ? void 0 : eV.primaryColor, e3 = eZ ? eY : (0, U.getProfileTheme)(e1), e4 = (0, A.default)(null !== (j = null != ev ? ev : e1) && void 0 !== j ? j : (0, s.hex2int)(e$)).hsl, e8 = (0, o.useStateFromStores)([H.default], () => H.default.isFocused()), e9 = null == eV ? void 0 : eV.getPreviewBanner(eg, eD ? e8 : ez), e7 = null != e9 || null != eJ, e6 = eO || null != eJ, e2 = null !== (X = (0, Q.getPreviewNickname)(eI, null == eq ? void 0 : eq.nick)) && void 0 !== X ? X : (0, Q.getPreviewDisplayName)(eA, K.default.getName(eo)), [e5, ae] = (0, o.useStateFromStoresArray)([G.default], () => [G.default.findActivity(eo.id, e => e.type === ee.ActivityTypes.CUSTOM_STATUS), G.default.getStatus(eo.id)]), aa = (0, d.useStatusFillColor)(ae), at = (0, o.useStateFromStores)([W.default], () => W.default.hidePersonalInformation), al = (null == eV ? void 0 : eV.canUsePremiumProfileCustomization) || ed, an = n.useCallback(() => {
+  }), eV = (0, N.default)(eo.id, null == eu ? void 0 : eu.id), eZ = (0, o.useStateFromStores)([v.default], () => v.default.syncProfileThemeWithUserTheme), eY = (0, m.default)(), eq = (0, o.useStateFromStores)([D.default], () => null == eu ? null : D.default.getMember(eu.id, eo.id)), eK = null === (a = (0, N.default)(eo.id, null)) || void 0 === a ? void 0 : a.profileEffectId, eX = null == eV ? void 0 : eV.profileEffectId, eJ = null != eu && null == eT ? eT !== eX && null !== eT ? eX : eK : eT, eQ = void 0 === eC ? eo.getAvatarURL(void 0, 80) : eC, e$ = (0, h.default)(eQ, (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_530).hsl(), !1), e0 = null == eV ? void 0 : eV.getPreviewThemeColors(ex), e1 = null !== (i = null == e0 ? void 0 : e0[0]) && void 0 !== i ? i : null == eV ? void 0 : eV.primaryColor, e3 = eZ ? eY : (0, U.getProfileTheme)(e1), e4 = (0, A.default)(null !== (j = null != ev ? ev : e1) && void 0 !== j ? j : (0, s.hex2int)(e$)).hsl, e9 = (0, o.useStateFromStores)([H.default], () => H.default.isFocused()), e8 = null == eV ? void 0 : eV.getPreviewBanner(eg, eD ? e9 : ez), e7 = null != e8 || null != eJ, e6 = eO || null != eJ, e2 = null !== (X = (0, Q.getPreviewNickname)(eI, null == eq ? void 0 : eq.nick)) && void 0 !== X ? X : (0, Q.getPreviewDisplayName)(eA, K.default.getName(eo)), [e5, ae] = (0, o.useStateFromStoresArray)([G.default], () => [G.default.findActivity(eo.id, e => e.type === ee.ActivityTypes.CUSTOM_STATUS), G.default.getStatus(eo.id)]), aa = (0, d.useStatusFillColor)(ae), at = (0, o.useStateFromStores)([W.default], () => W.default.hidePersonalInformation), al = (null == eV ? void 0 : eV.canUsePremiumProfileCustomization) || ed, an = n.useCallback(() => {
     var e, a;
     null === (a = ek.current) || void 0 === a || null === (e = a.inputRef.current) || void 0 === e || e.activateUploadDialogue()
   }, []), ai = n.useCallback((e, a) => {
@@ -225,8 +225,8 @@ function eo(e) {
             className: en.bannerUploader,
             showRemoveButton: !1,
             disabled: !ed || eP,
-            image: e9,
-            makeURL: () => e9,
+            image: e8,
+            makeURL: () => e8,
             onChange: ar,
             imageStyle: {
               backgroundColor: e4
@@ -237,7 +237,7 @@ function eo(e) {
             hideSize: !0,
             maxFileSizeBytes: $.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
             onFileSizeError: Q.showFileSizeErrorModal
-          }), !eD && Y.isAnimatedImageURL(e9) ? (0, l.jsx)(V.default, {
+          }), !eD && Y.isAnimatedImageURL(e8) ? (0, l.jsx)(V.default, {
             className: en.gifTag
           }) : null]
         }) : (0, l.jsx)("div", {

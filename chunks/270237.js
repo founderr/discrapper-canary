@@ -1,14 +1,14 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return l
   }
 });
-var n = a("470079"),
-  s = a("661111");
+var a = n("470079"),
+  s = n("661111");
 
 function l(e) {
-  n.useEffect(() => {
+  a.useEffect(() => {
     if (null != e) return s.default.lockChangeLog(e), () => {
       s.default.unlockChangeLog(e)
     }

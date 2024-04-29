@@ -8,7 +8,7 @@ var a, l, s = n("735250"),
   i = n("470079"),
   r = n("120356"),
   o = n.n(r),
-  u = n("513715"),
+  u = n("718017"),
   d = n("481060"),
   c = n("792125"),
   f = n("542094"),
@@ -17,7 +17,7 @@ var a, l, s = n("735250"),
   p = n("513202"),
   E = n("981631"),
   C = n("689938"),
-  g = n("100486");
+  g = n("294016");
 let S = ["embedded_cover"],
   _ = {
     tension: 800,
@@ -35,8 +35,8 @@ function T(e) {
   } = e, {
     onActivityItemSelected: I,
     imageBackground: A,
-    activityAction: v,
-    labelType: N
+    activityAction: N,
+    labelType: v
   } = (0, f.default)({
     channel: n,
     activityItem: a,
@@ -55,11 +55,11 @@ function T(e) {
       className: g.badgeContainer,
       children: (0, s.jsx)(m.default, {
         name: a.application.name,
-        labelType: N
+        labelType: v
       })
     })
-  }), [a.application.name, N]), O = i.useMemo(() => {
-    switch (v) {
+  }), [a.application.name, v]), O = i.useMemo(() => {
+    switch (N) {
       case f.ActivityAction.JOIN:
         return (0, s.jsx)("div", {
           className: g.activityAction,
@@ -88,7 +88,7 @@ function T(e) {
       default:
         return (0, s.jsx)(s.Fragment, {})
     }
-  }, [v]);
+  }, [N]);
   return (0, s.jsx)(d.Button, {
     onClick: I,
     color: "transparent",

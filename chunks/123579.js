@@ -21,8 +21,8 @@ var a = n("735250"),
   T = n("314897"),
   I = n("592125"),
   A = n("496675"),
-  v = n("158776"),
-  N = n("246946"),
+  N = n("158776"),
+  v = n("246946"),
   x = n("594174"),
   M = n("979651"),
   R = n("5192"),
@@ -58,7 +58,7 @@ var a = n("735250"),
   el = n("228168"),
   es = n("981631"),
   ei = n("689938"),
-  er = n("235892");
+  er = n("112723");
 t.default = e => {
   var t;
   let {
@@ -95,38 +95,38 @@ t.default = e => {
     }),
     {
       activity: eA,
-      customStatusActivity: ev,
-      isApplicationStreaming: eN,
+      customStatusActivity: eN,
+      isApplicationStreaming: ev,
       isMobile: ex,
       status: eM,
       hangStatusActivity: eR,
       isHangStatusPrimaryActivity: eL
-    } = (0, u.useStateFromStoresObject)([_.default, v.default, A.default], () => {
+    } = (0, u.useStateFromStoresObject)([_.default, N.default, A.default], () => {
       var e;
       let t = null != _.default.getAnyStreamForUser(eh.id);
       return {
-        activity: v.default.findActivity(eh.id, e => {
+        activity: N.default.findActivity(eh.id, e => {
           let {
             type: n
           } = e;
           return t ? n === es.ActivityTypes.PLAYING : n !== es.ActivityTypes.CUSTOM_STATUS && n !== es.ActivityTypes.HANG_STATUS
         }),
-        customStatusActivity: v.default.findActivity(eh.id, e => {
+        customStatusActivity: N.default.findActivity(eh.id, e => {
           let {
             type: t
           } = e;
           return t === es.ActivityTypes.CUSTOM_STATUS
         }),
         isApplicationStreaming: t,
-        isMobile: v.default.isMobileOnline(eh.id),
-        status: em ? null : v.default.getStatus(eh.id),
-        isHangStatusPrimaryActivity: (null === (e = v.default.findActivity(eh.id, e => {
+        isMobile: N.default.isMobileOnline(eh.id),
+        status: em ? null : N.default.getStatus(eh.id),
+        isHangStatusPrimaryActivity: (null === (e = N.default.findActivity(eh.id, e => {
           let {
             type: n
           } = e;
           return t ? n === es.ActivityTypes.PLAYING : n !== es.ActivityTypes.CUSTOM_STATUS
         })) || void 0 === e ? void 0 : e.type) === es.ActivityTypes.HANG_STATUS,
-        hangStatusActivity: eI && null != eT && A.default.can(es.Permissions.CONNECT, eT) ? v.default.findActivity(eh.id, e => {
+        hangStatusActivity: eI && null != eT && A.default.can(es.Permissions.CONNECT, eT) ? N.default.findActivity(eh.id, e => {
           let {
             type: t
           } = e;
@@ -134,12 +134,12 @@ t.default = e => {
         }) : null
       }
     }),
-    ey = null != eA || null != eR || eN,
+    ey = null != eA || null != eR || ev,
     eO = null !== (t = R.default.getNickname(null, n.id, eh)) && void 0 !== t ? t : L.default.getName(eh),
-    ej = (0, u.useStateFromStores)([N.default], () => N.default.hidePersonalInformation),
+    ej = (0, u.useStateFromStores)([v.default], () => v.default.hidePersonalInformation),
     [eP, eD, eb, eU, eF] = (0, u.useStateFromStoresArray)([P.default], () => [P.default.getMutualFriendsCount(eh.id), P.default.getMutualFriends(eh.id), P.default.getMutualGuilds(eh.id), P.default.isFetchingProfile(eh.id), P.default.isFetchingFriends(eh.id)]),
     ew = (0, Q.useGetVoiceChannelInfoForVoiceActivitySection)(eh.id),
-    ek = null != ew && !eN && !eL,
+    ek = null != ew && !ev && !eL,
     {
       showVoiceActivityInProfile: eH
     } = D.VoiceActivityProfileExperiment.useExperiment({
@@ -167,10 +167,10 @@ t.default = e => {
       isMobile: ex,
       loadDurationMs: Date.now() - ed.current,
       activity: eA,
-      customStatusActivity: ev,
+      customStatusActivity: eN,
       status: eM
     })
-  }, [ep, ex, eA, ev, eM, e_]);
+  }, [ep, ex, eA, eN, eM, e_]);
   let eY = null == eb ? void 0 : eb.map(e => (0, a.jsx)(en.default, {
       connection: e,
       user: eh,
@@ -237,7 +237,7 @@ t.default = e => {
                 nickname: eO,
                 pronouns: null == ep ? void 0 : ep.pronouns
               }), (0, a.jsx)(K.default, {
-                customStatusActivity: ev,
+                customStatusActivity: eN,
                 animate: eo
               }), (0, a.jsx)(W.default, {}), (0, a.jsx)(z.default, {
                 bio: null == ep ? void 0 : ep.bio,

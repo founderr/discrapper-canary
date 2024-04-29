@@ -25,8 +25,8 @@ var a = n("735250"),
   T = n("649739"),
   I = n("574176"),
   A = n("833858"),
-  v = n("223135"),
-  N = n("37091"),
+  N = n("223135"),
+  v = n("37091"),
   x = n("6572"),
   M = n("535400"),
   R = n("512384"),
@@ -75,7 +75,7 @@ let eh = l.memo(e => {
     onDoubleClick: f,
     onContextMenu: h,
     onClick: A,
-    onMouseDown: v,
+    onMouseDown: N,
     onKeyDown: H,
     className: G,
     style: W,
@@ -92,7 +92,7 @@ let eh = l.memo(e => {
     fit: eh = B.VideoStreamFit.CONTAIN,
     paused: em = !1,
     pulseSpeakingIndicator: eE = !1
-  } = e, eC = l.useContext(j.IdleStateContext), [eg, eS] = l.useState(!1), e_ = (0, o.useStateFromStores)([b.default], () => b.default.getId()), eT = c.type === eo.ParticipantTypes.ACTIVITY ? null : null === (t = c.user) || void 0 === t ? void 0 : t.id, [eI] = (0, g.default)(c.type === eo.ParticipantTypes.ACTIVITY ? [c.id] : []), eA = (0, o.useStateFromStores)([N.default], () => N.default.getEnabled()), ev = (0, o.useStateFromStores)([F.default], () => null != eT && F.default.isLocalVideoDisabled(eT, (0, S.default)(c.type)), [eT, c.type]), eN = (0, o.useStateFromStores)([F.default], () => null != eT ? F.default.getVideoToggleState(eT, (0, S.default)(c.type)) : er.VideoToggleState.NONE, [eT, c.type]), ex = eN === er.VideoToggleState.AUTO_PROBING, {
+  } = e, eC = l.useContext(j.IdleStateContext), [eg, eS] = l.useState(!1), e_ = (0, o.useStateFromStores)([b.default], () => b.default.getId()), eT = c.type === eo.ParticipantTypes.ACTIVITY ? null : null === (t = c.user) || void 0 === t ? void 0 : t.id, [eI] = (0, g.default)(c.type === eo.ParticipantTypes.ACTIVITY ? [c.id] : []), eA = (0, o.useStateFromStores)([v.default], () => v.default.getEnabled()), eN = (0, o.useStateFromStores)([F.default], () => null != eT && F.default.isLocalVideoDisabled(eT, (0, S.default)(c.type)), [eT, c.type]), ev = (0, o.useStateFromStores)([F.default], () => null != eT ? F.default.getVideoToggleState(eT, (0, S.default)(c.type)) : er.VideoToggleState.NONE, [eT, c.type]), ex = ev === er.VideoToggleState.AUTO_PROBING, {
     speaking: eM,
     ringing: eR,
     hasVideo: eL
@@ -260,7 +260,7 @@ let eh = l.memo(e => {
             onDoubleClick: eZ,
             onContextMenu: eq,
             onClick: eK,
-            onMouseDown: v,
+            onMouseDown: N,
             onKeyDown: H,
             focusProps: {
               offset: 1
@@ -302,8 +302,8 @@ let eh = l.memo(e => {
               platform: eF,
               title: (0, ee.default)(Y, c),
               blocked: es,
-              localVideoDisabled: ev,
-              videoToggleState: eN,
+              localVideoDisabled: eN,
+              videoToggleState: ev,
               hideAudioIcon: eO,
               onContextMenu: eq,
               onToggleMute: eY,
@@ -373,7 +373,7 @@ let ep = l.memo(e => {
     inCall: _,
     localVideoDisabled: T,
     videoToggleState: I,
-    focused: N,
+    focused: v,
     blocked: x,
     hideAudioIcon: M,
     participantType: R,
@@ -386,7 +386,7 @@ let ep = l.memo(e => {
     speaking: b
   } = e, U = null, w = null, k = null, B = null, K = (0, es.isVideoCompact)(C), Z = (0, es.isNamesCompact)(C), X = (0, o.useStateFromStores)([F.default], () => null != L && F.default.isLocalVideoAutoDisabled(L, (0, S.default)(R)), [L, R]), Q = (0, m.useRedesignIconContext)().enabled;
   if (!M) {
-    if (l && R === eo.ParticipantTypes.STREAM && g && !N) U = (0, a.jsx)(m.Tooltip, {
+    if (l && R === eo.ParticipantTypes.STREAM && g && !v) U = (0, a.jsx)(m.Tooltip, {
       text: ec.default.Messages.UNMUTE,
       children: e => {
         let {
@@ -403,7 +403,7 @@ let ep = l.memo(e => {
         })
       }
     });
-    else if (l || R !== eo.ParticipantTypes.STREAM || !g || K || N) {
+    else if (l || R !== eo.ParticipantTypes.STREAM || !g || K || v) {
       if (Q) {
         let e;
         r ? e = d.HeadphonesDenyIcon : s ? e = f.MicrophoneDenyIcon : n ? e = c.HeadphonesSlashIcon : l ? e = f.MicrophoneDenyIcon : t && (e = h.MicrophoneSlashIcon), U = null != e ? (0, a.jsx)(e, {
@@ -437,7 +437,7 @@ let ep = l.memo(e => {
   }
   return _ && F.default.supports(ed.Features.VIDEO) || !g ? _ && g && T && !X && (w = (0, a.jsx)(W.default, {
     foreground: ef.localMuteStrikethrough
-  })) : w = (0, a.jsx)(V.default, {}), R === eo.ParticipantTypes.STREAM && !N && g && (k = (0, a.jsx)(m.Tooltip, {
+  })) : w = (0, a.jsx)(V.default, {}), R === eo.ParticipantTypes.STREAM && !v && g && (k = (0, a.jsx)(m.Tooltip, {
     text: ec.default.Messages.OPTIONS,
     children: e => {
       let {
@@ -460,7 +460,7 @@ let ep = l.memo(e => {
       className: i()(ef.hangStatusContainer, {
         [ef.hangStatusSmall]: C < 500
       }),
-      children: (0, a.jsx)(v.default, {
+      children: (0, a.jsx)(N.default, {
         hangStatusActivity: P,
         className: ef.hangStatusIcon,
         animate: b

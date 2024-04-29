@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   ClanSetupProgress: function() {
     return u
   },
@@ -7,32 +7,32 @@ a.r(t), a.d(t, {
     return d
   }
 });
-var n = a("735250");
-a("470079");
-var s = a("120356"),
-  l = a.n(s),
-  i = a("481060"),
-  r = a("689938"),
-  o = a("590190");
+var a = n("735250");
+n("470079");
+var s = n("120356"),
+  l = n.n(s),
+  i = n("481060"),
+  r = n("689938"),
+  o = n("156610");
 
 function u(e) {
   let {
     sections: t,
-    furthestStep: a,
+    furthestStep: n,
     onStepClick: s
   } = e;
-  return (0, n.jsx)("div", {
+  return (0, a.jsx)("div", {
     className: o.progressContainer,
-    children: t.map(e => (0, n.jsx)("div", {
+    children: t.map(e => (0, a.jsx)("div", {
       className: o.progressStep,
-      children: e.map(e => (0, n.jsx)(i.Clickable, {
+      children: e.map(e => (0, a.jsx)(i.Clickable, {
         "aria-label": r.default.Messages.STEP_NUMBER.format({
           number: e
         }),
-        onClick: e <= a ? () => s(e) : void 0,
+        onClick: e <= n ? () => s(e) : void 0,
         className: l()(o.progressSubStep, {
-          [o.clickable]: e <= a,
-          [o.progressStepFill]: e < a
+          [o.clickable]: e <= n,
+          [o.progressStepFill]: e < n
         })
       }, "step-".concat(e)))
     }, "section-".concat(e[0])))
@@ -42,22 +42,22 @@ function u(e) {
 function d(e) {
   let {
     children: t,
-    className: a,
+    className: n,
     isBackDisabled: s,
     isNextDisabled: u,
     onNextClick: d,
     onBackClick: c
   } = e;
-  return (0, n.jsxs)("div", {
-    className: l()(o.buttonsContainer, a),
-    children: [(0, n.jsx)(i.Button, {
+  return (0, a.jsxs)("div", {
+    className: l()(o.buttonsContainer, n),
+    children: [(0, a.jsx)(i.Button, {
       look: i.Button.Looks.OUTLINED,
       size: i.Button.Sizes.MEDIUM,
       color: i.Button.Colors.PRIMARY,
       onClick: c,
       disabled: s,
       children: r.default.Messages.PAGINATION_PREVIOUS
-    }), t, (0, n.jsx)(i.Button, {
+    }), t, (0, a.jsx)(i.Button, {
       look: i.Button.Looks.FILLED,
       size: i.Button.Sizes.MEDIUM,
       onClick: d,

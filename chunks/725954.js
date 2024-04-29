@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return v
+    return I
   }
 });
 var l = s("735250");
@@ -16,27 +16,27 @@ var a = s("120356"),
   c = s("51144"),
   f = s("981631"),
   S = s("689938"),
-  m = s("809842");
+  m = s("973452");
 
-function v(e) {
+function I(e) {
   let {
     user: t,
     displayProfile: s
-  } = e, a = (0, n.useStateFromStores)([d.default], () => d.default.findActivity(t.id, e => e.type === f.ActivityTypes.CUSTOM_STATUS)), v = c.default.getName(t);
+  } = e, a = (0, n.useStateFromStores)([d.default], () => d.default.findActivity(t.id, e => e.type === f.ActivityTypes.CUSTOM_STATUS)), I = c.default.getName(t);
   return (0, l.jsxs)("div", {
     className: m.container,
-    children: [null == v && (0, l.jsx)(o.default, {
+    children: [null == I && (0, l.jsx)(o.default, {
       user: t,
       className: m.nameTag,
       usernameClass: m.username,
       discriminatorClass: m.discriminator
-    }), null != v && (0, l.jsxs)("div", {
+    }), null != I && (0, l.jsxs)("div", {
       children: [(0, l.jsx)(r.Text, {
         variant: "text-lg/semibold",
         style: {
           marginRight: "12px"
         },
-        children: v
+        children: I
       }), (0, l.jsx)(o.default, {
         user: t,
         forceUsername: !0,

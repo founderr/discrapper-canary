@@ -1,17 +1,17 @@
 "use strict";
-a.r(t), a("47120");
-var n = a("735250"),
-  s = a("470079"),
-  l = a("442837"),
-  i = a("846519"),
-  r = a("481060"),
-  o = a("293245"),
-  u = a("863969"),
-  d = a("563593"),
-  c = a("294934"),
-  f = a("271322"),
-  E = a("981631"),
-  h = a("689938");
+n.r(t), n("47120");
+var a = n("735250"),
+  s = n("470079"),
+  l = n("442837"),
+  i = n("846519"),
+  r = n("481060"),
+  o = n("293245"),
+  u = n("863969"),
+  d = n("563593"),
+  c = n("294934"),
+  f = n("271322"),
+  E = n("981631"),
+  h = n("689938");
 let _ = new Set([E.CloudSyncStateTypes.PUSHING, E.CloudSyncStateTypes.PULLING]),
   C = Object.freeze({
     [E.CloudSyncStateTypes.DONE]: u.default,
@@ -50,9 +50,9 @@ class m extends s.PureComponent {
     if (e.type === E.CloudSyncStateTypes.PUSHING || e.type === E.CloudSyncStateTypes.PULLING) {
       let {
         progress: t,
-        total: a
+        total: n
       } = e;
-      return t / a
+      return t / n
     }
     return 0
   }
@@ -80,7 +80,7 @@ class m extends s.PureComponent {
     let {
       cloudSyncState: e,
       libraryApplication: t,
-      className: a
+      className: n
     } = this.props, s = null == e ? {
       type: E.CloudSyncStateTypes.DONE
     } : e, l = this.getIsRecentlySynced(), i = {};
@@ -91,23 +91,23 @@ class m extends s.PureComponent {
       stop: this.getStop(s, l)
     });
     let o = l ? d.default : C[s.type];
-    return (0, n.jsx)(r.Tooltip, {
+    return (0, a.jsx)(r.Tooltip, {
       text: this.getTooltip(s, l),
-      children: e => (0, n.jsx)(o, {
-        className: a,
+      children: e => (0, a.jsx)(o, {
+        className: n,
         ...i,
         ...e
       })
     })
   }
   constructor(...e) {
-    var t, a, n;
-    super(...e), t = this, a = "_doneTimer", n = new i.Timeout, a in t ? Object.defineProperty(t, a, {
-      value: n,
+    var t, n, a;
+    super(...e), t = this, n = "_doneTimer", a = new i.Timeout, n in t ? Object.defineProperty(t, n, {
+      value: a,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : t[a] = n
+    }) : t[n] = a
   }
 }
 t.default = l.default.connectStores([o.default], e => {

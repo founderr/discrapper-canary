@@ -25,7 +25,7 @@ let c = (e, t) => ({
     }];
     (0, r.isEntryNew)(e) && n.push({
       iconPath: u.NEW_GAME_ICON_PATH,
-      text: d.default.Messages.MEMBER_LIST_CONTENT_FEED_FIRST_TIME
+      text: d.default.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER
     });
     let a = (0, r.getStreakCount)(e);
     if (null != a && a > 1 && n.push({

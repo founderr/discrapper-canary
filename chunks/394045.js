@@ -10,7 +10,7 @@ var s = a("735250"),
   u = a("981631"),
   d = a("176505"),
   I = a("689938"),
-  T = a("609539");
+  T = a("477133");
 e.default = function(t) {
   let {
     guildId: e,

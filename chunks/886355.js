@@ -1,4 +1,4 @@
 "use strict";
-a.r(t), t.default = {
+n.r(t), t.default = {
   isScreenLandscape: () => null
 }

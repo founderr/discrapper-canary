@@ -25,11 +25,11 @@ var a = n("735250"),
   T = n("430824"),
   I = n("979651"),
   A = n("502568"),
-  v = n("664342"),
-  N = n("124368"),
+  N = n("664342"),
+  v = n("124368"),
   x = n("981631"),
   M = n("689938"),
-  R = n("899091");
+  R = n("168310");
 
 function L(e) {
   let {
@@ -43,7 +43,7 @@ function L(e) {
       t && null != e && (o.default.dispatch({
         type: "SIDEBAR_CLOSE",
         baseChannelId: e.parent_id
-      }), (0, g.transitionToThread)(e, N.OpenThreadAnalyticsLocations.VOICE_AUTO_OPEN))
+      }), (0, g.transitionToThread)(e, v.OpenThreadAnalyticsLocations.VOICE_AUTO_OPEN))
     }, [t, e])
   })(y);
   let P = l.useRef(!1);
@@ -59,7 +59,7 @@ function L(e) {
         channelId: y.id
       })
     }, [y, L]), null == y || null == O) return null;
-  let D = (0, a.jsx)(v.default, {
+  let D = (0, a.jsx)(N.default, {
     channel: y,
     baseChannelId: s
   });

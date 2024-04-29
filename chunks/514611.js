@@ -1,38 +1,38 @@
 "use strict";
-a.r(t), a("47120");
-var n, s = a("735250"),
-  l = a("470079"),
-  i = a("120356"),
-  r = a.n(i),
-  o = a("622535"),
-  u = a("481060"),
-  d = a("239091"),
-  c = a("556017"),
-  f = a("879484"),
-  E = a("26580"),
-  h = a("206887"),
-  _ = a("134432"),
-  C = a("695346"),
-  m = a("768581"),
-  S = a("900849"),
-  p = a("940627"),
-  I = a("806519"),
-  T = a("981631"),
-  g = a("689938"),
-  A = a("785518"),
-  N = a("129512"),
-  v = a("330065"),
-  R = a("755386");
+n.r(t), n("47120");
+var a, s = n("735250"),
+  l = n("470079"),
+  i = n("120356"),
+  r = n.n(i),
+  o = n("622535"),
+  u = n("481060"),
+  d = n("239091"),
+  c = n("556017"),
+  f = n("879484"),
+  E = n("26580"),
+  h = n("206887"),
+  _ = n("134432"),
+  C = n("695346"),
+  m = n("768581"),
+  S = n("900849"),
+  p = n("940627"),
+  I = n("806519"),
+  T = n("981631"),
+  g = n("689938"),
+  A = n("218290"),
+  N = n("129512"),
+  v = n("330065"),
+  R = n("755386");
 
-function L(e, t, a) {
+function L(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: a,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = a, e
+  }) : e[t] = n, e
 }
-class O extends(n = l.PureComponent) {
+class O extends(a = l.PureComponent) {
   getDefaultSplashURL(e, t) {
     if (t) return R;
     switch (e) {
@@ -46,8 +46,8 @@ class O extends(n = l.PureComponent) {
     var e;
     let {
       guild: t,
-      className: a,
-      theme: n,
+      className: n,
+      theme: a,
       onTagClick: l
     } = this.props, {
       loaded: i,
@@ -64,7 +64,7 @@ class O extends(n = l.PureComponent) {
       id: t.id,
       splash: t.discoverySplash,
       size: 300 * (0, _.getDevicePixelRatio)()
-    }), D = null != y ? y : this.getDefaultSplashURL(n, x), b = m.default.getGuildIconURL({
+    }), D = null != y ? y : this.getDefaultSplashURL(a, x), b = m.default.getGuildIconURL({
       id: t.id,
       icon: t.icon,
       size: 40
@@ -98,7 +98,7 @@ class O extends(n = l.PureComponent) {
         active: !d,
         threshold: .55,
         children: (0, s.jsxs)("div", {
-          className: r()(a, {
+          className: r()(n, {
             [A.loaded]: i,
             [A.loading]: !i
           }),
@@ -223,14 +223,14 @@ class O extends(n = l.PureComponent) {
       } = e.target;
       if (t.includes("Menu")) return;
       let {
-        onView: a,
-        guild: n
+        onView: n,
+        guild: a
       } = this.props;
       e.stopPropagation(), this.setState({
         submitting: !0
       });
       try {
-        null != a && await a(n.id)
+        null != n && await n(a.id)
       } finally {
         this.setState({
           submitting: !1
@@ -239,16 +239,16 @@ class O extends(n = l.PureComponent) {
     }), L(this, "handleVisibilityChange", e => {
       let {
         onGuildCardSeen: t,
-        guild: a
+        guild: n
       } = this.props;
-      null != a && !this.state.hasBeenSeen && e && (this.setState({
+      null != n && !this.state.hasBeenSeen && e && (this.setState({
         hasBeenSeen: e
-      }), null != t && t(a.id))
+      }), null != t && t(n.id))
     }), L(this, "handleContextMenu", e => {
       (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.resolve().then(a.bind(a, "455839"));
+        } = await Promise.resolve().then(n.bind(n, "455839"));
         return t => (0, s.jsx)(e, {
           ...t,
           guild: this.props.guild

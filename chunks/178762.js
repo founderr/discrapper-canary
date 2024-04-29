@@ -28,15 +28,15 @@ var a = n("735250"),
   T = n("644548"),
   I = n("335326"),
   A = n("268010"),
-  v = n("206583"),
-  N = n("978284");
+  N = n("206583"),
+  v = n("472771");
 let x = 72;
 
 function M(e) {
   return (null == e ? void 0 : e.type) === h.MemberListRowTypes.CONTENT_INVENTORY ? x : 0
 }
 let R = o().throttle(e => {
-    (0, C.trackInteraction)(v.ContentInventoryInteractionTypes.CARD_HOVER, e)
+    (0, C.trackInteraction)(N.ContentInventoryInteractionTypes.CARD_HOVER, e)
   }, 5e3, {
     leading: !0,
     trailing: !1
@@ -144,7 +144,7 @@ t.default = l.memo(e => {
       position: "left",
       shouldShow: T ? A : M,
       positionKey: o,
-      onRequestOpen: () => (0, C.trackInteraction)(v.ContentInventoryInteractionTypes.CARD_CLICK, S),
+      onRequestOpen: () => (0, C.trackInteraction)(N.ContentInventoryInteractionTypes.CARD_CLICK, S),
       onRequestClose: () => {
         x(!1), O(!1)
       },
@@ -163,7 +163,7 @@ t.default = l.memo(e => {
               right: 4
             },
             children: (0, a.jsxs)("div", {
-              className: N.contentRow,
+              className: v.contentRow,
               ...e,
               ...h,
               onMouseEnter: () => {
@@ -174,11 +174,11 @@ t.default = l.memo(e => {
                 ...r,
                 selected: n
               }), _ && (0, a.jsx)("div", {
-                className: i()(N.reply, {
-                  [N.hovered]: I.current
+                className: i()(v.reply, {
+                  [v.hovered]: I.current
                 }),
                 children: (0, a.jsx)(p.default, {
-                  className: N.icon
+                  className: v.icon
                 })
               })]
             })

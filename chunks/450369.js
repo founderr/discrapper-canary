@@ -25,12 +25,12 @@ var a = n("735250"),
   T = n("496675"),
   I = n("979651"),
   A = n("40300"),
-  v = n("88751"),
-  N = n("252132"),
+  N = n("88751"),
+  v = n("252132"),
   x = n("248400"),
   M = n("981631"),
   R = n("354459"),
-  L = n("724434");
+  L = n("769238");
 let y = 16 / 9,
   O = e => {
     let {
@@ -66,7 +66,7 @@ let y = 16 / 9,
       children: e => (0, a.jsx)(o.Clickable, {
         onContextMenu: e => c(n, e),
         ...e,
-        children: (0, a.jsx)(N.default, {
+        children: (0, a.jsx)(v.default, {
           participant: n,
           aspectRatio: y,
           blocked: m,
@@ -94,7 +94,7 @@ let y = 16 / 9,
     } = e, {
       reducedMotion: g
     } = l.useContext(o.AccessibilityPreferencesContext), {
-      id: v,
+      id: N,
       blocked: O
     } = t, j = (0, r.useStateFromStoresArray)([S.default], () => S.default.getAllActiveStreams(), []), {
       selectedParticipant: P,
@@ -110,7 +110,7 @@ let y = 16 / 9,
         })
       }(null == P ? void 0 : P.id) === e.id ? D ? (u.default.selectParticipant(s.id, null), u.default.updateStageStreamSize(s.id, !1)) : u.default.updateStageStreamSize(s.id, !0) : (u.default.updateStageStreamSize(s.id, !1), u.default.selectParticipant(s.id, e.id))
     }, [j, s, P, D]);
-    return (0, a.jsx)(N.default, {
+    return (0, a.jsx)(v.default, {
       participant: n,
       aspectRatio: y,
       fit: n.type === R.ParticipantTypes.USER ? A.VideoStreamFit.COVER : void 0,
@@ -125,7 +125,7 @@ let y = 16 / 9,
       pulseSpeakingIndicator: !g.enabled,
       width: i,
       children: d && n.type === R.ParticipantTypes.USER && (0, a.jsx)(x.default, {})
-    }, v)
+    }, N)
   };
 t.default = l.memo(function(e) {
   var t;
@@ -137,7 +137,7 @@ t.default = l.memo(function(e) {
   i()(null != c, "Channel cannot be guildless");
   let {
     user: m
-  } = l, p = (0, r.useStateFromStores)([h.default], () => h.default.getParticipant(s.id, l.id), [s.id, l.id]), E = (0, r.useStateFromStores)([v.default], () => v.default.isModerator(m.id, s.id), [s.id, m.id]);
+  } = l, p = (0, r.useStateFromStores)([h.default], () => h.default.getParticipant(s.id, l.id), [s.id, l.id]), E = (0, r.useStateFromStores)([N.default], () => N.default.isModerator(m.id, s.id), [s.id, m.id]);
   if (null == p || p.type === R.ParticipantTypes.ACTIVITY) return null;
   let C = (e, t) => {
       switch (e.type) {

@@ -39,7 +39,7 @@ function N(e) {
     t.type === S.PlatformTypes.XBOX ? (0, a.openModalLazy)(async () => {
       let {
         default: t
-      } = await Promise.all([n.e("49237"), n.e("99387"), n.e("24278"), n.e("522")]).then(n.bind(n, "200623"));
+      } = await Promise.all([n.e("49237"), n.e("99387"), n.e("73422"), n.e("522")]).then(n.bind(n, "200623"));
       return n => (0, l.jsx)(t, {
         ...n,
         channel: e

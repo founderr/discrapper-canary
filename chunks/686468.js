@@ -22,7 +22,7 @@ var l = n("442837"),
   C = n("643632"),
   g = n("939863"),
   S = n("689938"),
-  _ = n("414349");
+  _ = n("964432");
 
 function T(e) {
   let {
@@ -86,7 +86,7 @@ function A(e) {
   } = e, s = (0, l.useStateFromStores)([f.default], () => f.default.can(p.MODERATE_STAGE_CHANNEL_PERMISSIONS, t), [t]), r = t.guild_id, {
     canCreateGuildEvent: m
   } = (0, c.useManageResourcePermissions)(t), A = (0, C.default)(t.id), {
-    usersInSummary: v
+    usersInSummary: N
   } = (0, E.default)(t.id);
   return (0, a.jsxs)("div", {
     children: [(0, a.jsx)(g.default, {
@@ -117,7 +117,7 @@ function A(e) {
     }) : null, m ? (0, a.jsx)(o.default, {
       className: _.eventPrompt,
       guildId: r
-    }) : null, (s || v.length > 0) && (0, a.jsx)("hr", {
+    }) : null, (s || N.length > 0) && (0, a.jsx)("hr", {
       className: _.separator
     }), s ? (0, a.jsx)(T, {
       onClick: n

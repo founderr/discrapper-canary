@@ -4,184 +4,184 @@ n.r(t), n.d(t, {
     return d
   },
   calculateActiveTimestampDurationsFromStart: function() {
-    return _
+    return c
   },
   formatActiveTimestampFromUnits: function() {
-    return E
-  },
-  formatEndedTimestamp: function() {
-    return I
-  },
-  formatEntryTimestamp: function() {
-    return T
-  },
-  getAggregateRange: function() {
-    return m
-  },
-  getEntryDuration: function() {
-    return A
-  },
-  getFullMarathonDescription: function() {
-    return L
-  },
-  getMarathonDurationStr: function() {
-    return C
-  },
-  getMarathonName: function() {
-    return g
-  },
-  getStreakCount: function() {
-    return R
-  },
-  isEntryActive: function() {
-    return f
-  },
-  isEntryExpired: function() {
     return h
   },
-  isEntryMarathon: function() {
-    return N
+  formatEndedTimestamp: function() {
+    return m
   },
-  isEntryNew: function() {
-    return S
-  },
-  isEntryResurrected: function() {
+  formatEntryTimestamp: function() {
     return p
   },
+  getAggregateRange: function() {
+    return _
+  },
+  getEntryDuration: function() {
+    return S
+  },
+  getFullMarathonDescription: function() {
+    return M
+  },
+  getMarathonDurationStr: function() {
+    return v
+  },
+  getMarathonName: function() {
+    return x
+  },
+  getStreakCount: function() {
+    return N
+  },
+  isEntryActive: function() {
+    return E
+  },
+  isEntryExpired: function() {
+    return g
+  },
+  isEntryMarathon: function() {
+    return T
+  },
+  isEntryNew: function() {
+    return C
+  },
+  isEntryResurrected: function() {
+    return I
+  },
   isEntryTopGame: function() {
-    return O
+    return A
   }
 });
-var i = n("913527"),
-  r = n.n(i),
+var a = n("913527"),
+  l = n.n(a),
   s = n("884439"),
-  a = n("876215"),
-  o = n("70956"),
-  l = n("709054"),
+  i = n("876215"),
+  r = n("70956"),
+  o = n("709054"),
   u = n("689938");
-let d = (e, t) => _(l.default.extractTimestamp(e.id), t),
-  _ = (e, t) => {
-    let n = Math.abs((t - e) / o.default.Millis.SECOND),
-      i = Math.floor(n) % o.default.Seconds.MINUTE,
-      r = Math.floor(n / o.default.Seconds.MINUTE) % o.default.Seconds.MINUTE,
-      s = Math.floor(n / o.default.Seconds.HOUR);
+let d = (e, t) => c(o.default.extractTimestamp(e.id), t),
+  c = (e, t) => {
+    let n = Math.abs((t - e) / r.default.Millis.SECOND),
+      a = Math.floor(n) % r.default.Seconds.MINUTE,
+      l = Math.floor(n / r.default.Seconds.MINUTE) % r.default.Seconds.MINUTE,
+      s = Math.floor(n / r.default.Seconds.HOUR);
     return {
-      seconds: i,
-      minutes: r,
+      seconds: a,
+      minutes: l,
       hours: s,
-      days: Math.floor(n / o.default.Seconds.DAY)
+      days: Math.floor(n / r.default.Seconds.DAY)
     }
   },
-  c = (e, t) => {
+  f = (e, t) => {
     let {
       seconds: n,
-      minutes: i,
-      hours: r
+      minutes: a,
+      hours: l
     } = d(e, t);
-    return E(n, i, r)
+    return h(n, a, l)
   },
-  E = (e, t, n) => {
-    function i(e) {
+  h = (e, t, n) => {
+    function a(e) {
       return String(e).padStart(2, "0")
     }
     return u.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE.format({
       hours: n,
-      minutes: n > 0 ? i(t) : t,
-      seconds: i(e)
+      minutes: n > 0 ? a(t) : t,
+      seconds: a(e)
     })
   },
-  I = (e, t) => {
-    let n = r()(l.default.extractTimestamp(e.id)),
-      i = n.isSame(r()(), "day"),
-      s = r()().diff(n, "s");
-    if (s < o.default.Seconds.MINUTE) return u.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO.format({
+  m = (e, t) => {
+    let n = l()(o.default.extractTimestamp(e.id)),
+      a = n.isSame(l()(), "day"),
+      s = l()().diff(n, "s");
+    if (s < r.default.Seconds.MINUTE) return u.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO.format({
       count: s
     });
-    if (s < o.default.Seconds.HOUR) {
-      let e = Math.round(s / o.default.Seconds.MINUTE);
+    if (s < r.default.Seconds.HOUR) {
+      let e = Math.round(s / r.default.Seconds.MINUTE);
       return u.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO.format({
         count: e
       })
     }
-    if (s < 6 * o.default.Seconds.HOUR) {
-      let e = Math.round(s / o.default.Seconds.HOUR);
+    if (s < 6 * r.default.Seconds.HOUR) {
+      let e = Math.round(s / r.default.Seconds.HOUR);
       return u.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO.format({
         count: e
       })
-    } else if (s < o.default.Seconds.WEEK && i) return n.toDate().toLocaleTimeString(t, {
+    } else if (s < r.default.Seconds.WEEK && a) return n.toDate().toLocaleTimeString(t, {
       hour: "numeric"
     });
-    else if (s < o.default.Seconds.WEEK && !i) return n.toDate().toLocaleTimeString(t, {
+    else if (s < r.default.Seconds.WEEK && !a) return n.toDate().toLocaleTimeString(t, {
       weekday: "short",
       hour: "numeric"
     });
-    let a = Math.round(s / (7 * o.default.Seconds.DAY));
+    let i = Math.round(s / (7 * r.default.Seconds.DAY));
     return u.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO.format({
-      count: a
+      count: i
     })
   },
-  T = (e, t) => f(e) ? c(e, Date.now()) : I(e, t);
+  p = (e, t) => E(e) ? f(e, Date.now()) : m(e, t);
 
-function f(e) {
+function E(e) {
   let t = e.traits.find(e => e.type === s.ContentInventoryTraitType.IS_LIVE);
   return null != t && t.is_live
 }
 
-function S(e) {
+function C(e) {
   let t = e.traits.find(e => e.type === s.ContentInventoryTraitType.FIRST_TIME);
   return null != t && t.first_time
 }
 
-function h(e) {
+function g(e) {
   return null != e.expires_at && new Date(e.expires_at) < new Date
 }
 
-function A(e) {
+function S(e) {
   let t = e.traits.find(e => e.type === s.ContentInventoryTraitType.DURATION_SECONDS);
   return null == t ? void 0 : t.duration_seconds
 }
 
-function m(e) {
+function _(e) {
   let t = e.traits.find(e => e.type === s.ContentInventoryTraitType.AGGREGATE_RANGE);
   return null == t ? void 0 : t.range
 }
 
-function N(e) {
+function T(e) {
   let t = e.traits.find(e => e.type === s.ContentInventoryTraitType.MARATHON);
   return null == t ? void 0 : t.marathon
 }
 
-function p(e) {
+function I(e) {
   let t = e.traits.find(e => e.type === s.ContentInventoryTraitType.RESURRECTED);
   return (null == t ? void 0 : t.resurrected_last_played) != null
 }
 
-function O(e) {
-  return e.content_type === a.ContentInventoryEntryType.TOP_GAME
+function A(e) {
+  return e.content_type === i.ContentInventoryEntryType.TOP_GAME
 }
 
-function R(e) {
+function N(e) {
   let t = e.traits.find(e => e.type === s.ContentInventoryTraitType.STREAK_DAYS);
   return null == t ? void 0 : t.streak_count_days
 }
 
-function C(e) {
-  let t = A(e);
+function v(e) {
+  let t = S(e);
   if (null == t) return null;
-  let n = Math.round(t / o.default.Seconds.HOUR);
+  let n = Math.round(t / r.default.Seconds.HOUR);
   return u.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYED_FOR_HOURS.format({
     hours: n
   })
 }
 
-function g(e) {
+function x(e) {
   var t;
-  let n = null !== (t = A(e)) && void 0 !== t ? t : 0;
-  return n > 10 * o.default.Seconds.HOUR ? u.default.Messages.MEMBER_LIST_CONTENT_FEED_EPIC_MARATHON : n > 5 * o.default.Seconds.HOUR ? u.default.Messages.MEMBER_LIST_CONTENT_FEED_ULTRA_MARATHON : u.default.Messages.MEMBER_LIST_CONTENT_FEED_MARATHON
+  let n = null !== (t = S(e)) && void 0 !== t ? t : 0;
+  return n > 10 * r.default.Seconds.HOUR ? u.default.Messages.MEMBER_LIST_CONTENT_FEED_EPIC_MARATHON : n > 5 * r.default.Seconds.HOUR ? u.default.Messages.MEMBER_LIST_CONTENT_FEED_ULTRA_MARATHON : u.default.Messages.MEMBER_LIST_CONTENT_FEED_MARATHON
 }
 
-function L(e) {
-  let t = C(e),
-    n = g(e);
+function M(e) {
+  let t = v(e),
+    n = x(e);
   return null == t ? n : "".concat(n, " — ").concat(t)
 }

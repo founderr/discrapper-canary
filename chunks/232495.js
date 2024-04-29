@@ -11,7 +11,7 @@ var l = n("442837"),
   i = n("914010"),
   r = n("782089"),
   o = n("689938"),
-  u = n("344484");
+  u = n("955258");
 let d = () => (0, a.jsx)(a.Fragment, {
     children: o.default.Messages.TIP_INSTANT_INVITE_BODY3.format({
       shareIcon: o.default.Messages.INSTANT_INVITE,

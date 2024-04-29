@@ -53,8 +53,8 @@ var a, l, s = n("735250"),
   T = n("22211"),
   I = n("561308"),
   A = n("371991"),
-  v = n("689938"),
-  N = n("106940");
+  N = n("689938"),
+  v = n("509058");
 (a = l || (l = {}))[a.CARD = 0] = "CARD", a[a.POPOUT = 1] = "POPOUT";
 let x = i.createContext({});
 
@@ -77,7 +77,7 @@ function R(e) {
     text: l,
     shouldShow: i,
     children: e => (0, s.jsxs)("div", {
-      className: N.badgeContainer,
+      className: v.badgeContainer,
       ...e,
       children: [(0, s.jsx)(t, {
         width: 12,
@@ -86,7 +86,7 @@ function R(e) {
       }), (0, s.jsx)(g.Text, {
         variant: "text-xs/normal",
         color: r,
-        className: N.badgeLabel,
+        className: v.badgeLabel,
         children: n
       })]
     })
@@ -118,7 +118,7 @@ function y(e) {
     location: l
   } = M(), i = (0, I.isEntryActive)(t), r = 0 === l && i ? g.tokens.colors.REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_PRESSED_TEXT : a;
   return (0, s.jsxs)("div", {
-    className: N.badgeContainer,
+    className: v.badgeContainer,
     children: [(0, s.jsx)(d.GameControllerIcon, {
       width: 12,
       height: 12,
@@ -138,7 +138,7 @@ function O(e) {
   } = M(), a = 0 === n ? g.tokens.colors.STATUS_POSITIVE : void 0;
   return (0, I.isEntryNew)(t) ? (0, s.jsx)(R, {
     Icon: c.NewUserLargeIcon,
-    text: v.default.Messages.MEMBER_LIST_CONTENT_FEED_FIRST_TIME,
+    text: N.default.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER,
     iconColor: a
   }) : null
 }
@@ -167,7 +167,7 @@ function P(e) {
   } = e;
   return (0, I.isEntryResurrected)(t) ? (0, s.jsx)(R, {
     Icon: f.RetryIcon,
-    text: v.default.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED
+    text: N.default.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED
   }) : null
 }
 
@@ -177,7 +177,7 @@ function D(e) {
   } = e, n = (0, I.getStreakCount)(t);
   return null == n || n < 2 ? null : (0, s.jsx)(R, {
     Icon: u.FlashIcon,
-    text: v.default.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
+    text: N.default.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
       days: n
     })
   })
@@ -191,11 +191,11 @@ function b(e) {
   } = M(), a = (0, I.getEntryDuration)(t);
   if (null == a) return null;
   let l = 1 === n,
-    i = l ? v.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK : v.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS;
+    i = l ? N.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK : N.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS;
   return (0, s.jsx)(R, {
     Icon: p.TrophyIcon,
     text: (0, s.jsxs)(s.Fragment, {
-      children: [v.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, l ? " — " : ": ", i.format({
+      children: [N.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, l ? " — " : ": ", i.format({
         hours: Math.round(a / S.default.Seconds.HOUR)
       })]
     })
@@ -210,7 +210,7 @@ function U(e) {
     defaultIconColor: a
   } = M();
   return (0, s.jsxs)("div", {
-    className: N.badgeContainer,
+    className: v.badgeContainer,
     children: [(0, s.jsx)(E.TvIcon, {
       width: 12,
       height: 12,
@@ -226,7 +226,7 @@ function F(e) {
   var t;
   let {
     entry: n
-  } = e, a = /\w+ (\d+), \w+ (\d+)/.exec(null !== (t = n.extra.media_assets_large_text) && void 0 !== t ? t : ""), l = null != a ? v.default.Messages.MEMBER_LIST_CONTENT_FEED_WATCH_SEASON_EPISODE.format({
+  } = e, a = /\w+ (\d+), \w+ (\d+)/.exec(null !== (t = n.extra.media_assets_large_text) && void 0 !== t ? t : ""), l = null != a ? N.default.Messages.MEMBER_LIST_CONTENT_FEED_WATCH_SEASON_EPISODE.format({
     seasonNum: a[1],
     episodeNum: a[2]
   }) : null;
@@ -252,9 +252,9 @@ function w(e) {
       ...a
     },
     children: (0, s.jsx)("div", {
-      className: o()(N.badgesContainer, {
-        [N.badgesContainerCard]: 0 === t,
-        [N.badgesContainerPopout]: 1 === t
+      className: o()(v.badgesContainer, {
+        [v.badgesContainerCard]: 0 === t,
+        [v.badgesContainerPopout]: 1 === t
       }),
       children: n
     })

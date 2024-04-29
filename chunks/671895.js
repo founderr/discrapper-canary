@@ -7,7 +7,7 @@ var a = n("735250"),
   s = n("586826"),
   r = n("507419"),
   o = n("689938"),
-  d = n("663077");
+  d = n("873673");
 t.default = l.memo(function(e) {
   let {
     sound: t,

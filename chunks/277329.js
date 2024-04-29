@@ -18,7 +18,7 @@ var n = s("442837"),
   E = s("332325"),
   T = s("981631"),
   f = s("689938"),
-  m = s("417433");
+  m = s("107290");
 
 function _() {
   let e = (0, S.useGameSettingsTabs)(),

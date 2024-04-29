@@ -1,32 +1,32 @@
 "use strict";
-a.r(t), a("47120");
-var n = a("735250");
-a("470079");
-var s = a("481060"),
-  l = a("570140"),
-  i = a("536442"),
-  r = a("810788"),
-  o = a("592125"),
-  u = a("131951"),
-  d = a("944486"),
-  c = a("556296"),
-  f = a("131468"),
-  E = a("208049"),
-  h = a("763296"),
-  _ = a("641015"),
-  C = a("22382"),
-  m = a("747071"),
-  S = a("49230"),
-  p = a("981631"),
-  I = a("65154");
+n.r(t), n("47120");
+var a = n("735250");
+n("470079");
+var s = n("481060"),
+  l = n("570140"),
+  i = n("536442"),
+  r = n("810788"),
+  o = n("592125"),
+  u = n("131951"),
+  d = n("944486"),
+  c = n("556296"),
+  f = n("131468"),
+  E = n("208049"),
+  h = n("763296"),
+  _ = n("641015"),
+  C = n("22382"),
+  m = n("747071"),
+  S = n("49230"),
+  p = n("981631"),
+  I = n("65154");
 
-function T(e, t, a) {
+function T(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
-    value: a,
+    value: n,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = a, e
+  }) : e[t] = n, e
 }
 class g extends f.default {
   _initialize() {
@@ -44,20 +44,20 @@ class g extends f.default {
         e.pause(), e.src = ""
       }), this.playingSoundsWeb = new Map
     }), T(this, "_playSound", async function(e) {
-      let a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-        n = arguments.length > 2 ? arguments[2] : void 0,
+      let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+        a = arguments.length > 2 ? arguments[2] : void 0,
         s = arguments.length > 3 ? arguments[3] : void 0,
         l = null != s && d.default.getVoiceChannelId() === s;
-      if ((null == s || l) && !u.default.isDeaf() && !h.default.isLocalSoundboardMuted(n)) try {
+      if ((null == s || l) && !u.default.isDeaf() && !h.default.isLocalSoundboardMuted(a)) try {
         let s = {
-          soundKey: "".concat(n, "-").concat(e),
+          soundKey: "".concat(a, "-").concat(e),
           soundURL: (0, C.default)(e),
-          soundVolume: (0, m.default)(a),
-          reportSoundStartedPlaying: () => (0, E.reportSoundStartedPlaying)(e, n)
+          soundVolume: (0, m.default)(n),
+          reportSoundStartedPlaying: () => (0, E.reportSoundStartedPlaying)(e, a)
         };
         u.default.supports(I.Features.SAMPLE_PLAYBACK) ? await (0, S.playDesktopSound)(s) : await (0, S.playWebSound)(s, t.playingSoundsWeb)
       } finally {
-        (0, E.reportSoundFinishedPlaying)(e, n)
+        (0, E.reportSoundFinishedPlaying)(e, a)
       }
     }), T(this, "_handleOverlaySoundboardSoundsFetchRequest", () => {
       (0, E.maybeFetchSoundboardSounds)()
@@ -68,9 +68,9 @@ class g extends f.default {
       null != l && (0, _.default)(l) && null != u && r.default.hasHotspot(i.HotspotLocations.SOUNDBOARD_WHEEL_EDUCATION_MODAL) && (0, s.openModalLazy)(async () => {
         let {
           default: t
-        } = await Promise.all([a.e("99387"), a.e("69208")]).then(a.bind(a, "490166"));
-        return a => (0, n.jsx)(t, {
-          ...a,
+        } = await Promise.all([n.e("99387"), n.e("69208")]).then(n.bind(n, "490166"));
+        return n => (0, a.jsx)(t, {
+          ...n,
           guildId: e,
           keybind: u,
           channel: l

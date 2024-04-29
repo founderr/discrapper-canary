@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   SCROLL_DOWN: function() {
-    return a
+    return u
   },
   SCROLL_UP: function() {
     return l
@@ -14,7 +14,7 @@ let l = {
     comboKeysBindGlobal: !0,
     action: () => (i.ComponentDispatch.dispatchToLastSubscribed(o.ComponentActions.SCROLL_PAGE_UP), !1)
   },
-  a = {
+  u = {
     binds: ["pagedown"],
     comboKeysBindGlobal: !0,
     action: () => (i.ComponentDispatch.dispatchToLastSubscribed(o.ComponentActions.SCROLL_PAGE_DOWN), !1)

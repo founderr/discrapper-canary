@@ -25,7 +25,7 @@ var a = n("120356"),
   g = n("2660"),
   M = n("981631"),
   R = n("689938"),
-  v = n("526123");
+  v = n("780320");
 let O = (e, t, n, s) => n ? s ? R.default.Messages.COLLECTIBLES_USE_NOW : R.default.Messages.QUESTS_SEE_CODE : e || t ? R.default.Messages.QUESTS_CLAIM_REWARD : R.default.Messages.QUESTS_ACCEPT,
   x = (e, t, n) => e !== h.QuestContent.QUEST_INVENTORY_CARD || n || "lg" !== t ? "lg" === t ? "text-md/medium" : "sm" === t ? "text-sm/medium" : "text-xs/medium" : "text-lg/medium";
 
@@ -64,16 +64,16 @@ t.default = e => {
     isQuestExpired: j,
     isExpanded: b,
     isAnimating: B
-  } = e, F = (null === (t = D.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, G = (null === (n = D.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, k = (0, N.hasQuestCollectibleRewards)(D.config), w = (null === (a = D.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null, H = b || B, V = G && !w && P !== h.QuestContent.QUESTS_EMBED, Y = (0, i.useStateFromStores)([d.default], () => d.default.useReducedMotion), K = O(F, G, w, k), W = G ? R.default.Messages.QUESTS_IN_PROGRESS_TOOLTIP : R.default.Messages.QUESTS_ACCEPT_TOOLTIP, z = (0, A.useHandleClaimQuestsReward)({
+  } = e, G = (null === (t = D.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, F = (null === (n = D.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, k = (0, N.hasQuestCollectibleRewards)(D.config), w = (null === (a = D.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null, H = b || B, V = F && !w && P !== h.QuestContent.QUESTS_EMBED, Y = (0, i.useStateFromStores)([d.default], () => d.default.useReducedMotion), K = O(G, F, w, k), W = F ? R.default.Messages.QUESTS_IN_PROGRESS_TOOLTIP : R.default.Messages.QUESTS_ACCEPT_TOOLTIP, z = (0, A.useHandleClaimQuestsReward)({
     quest: D,
     location: P
-  }), Q = G && !F, q = (0, i.useStateFromStores)([p.default], () => p.default.isEnrolling(D.id)), X = () => {
-    if (!G && !F) return (0, T.enrollInQuest)(D.id, {
+  }), Q = F && !G, q = (0, i.useStateFromStores)([p.default], () => p.default.isEnrolling(D.id)), X = () => {
+    if (!F && !G) return (0, T.enrollInQuest)(D.id, {
       questContent: P,
       questContentCTA: m.QuestContentCTA.ACCEPT_QUEST
     });
     z()
-  }, Z = (0, i.useStateFromStores)([c.default], () => c.default.locale), J = P === h.QuestContent.QUESTS_EMBED, $ = P === h.QuestContent.QUEST_INVENTORY_CARD, ee = $ && k, et = j && !F, en = (0, s.jsx)(C.default, {
+  }, Z = (0, i.useStateFromStores)([c.default], () => c.default.locale), J = P === h.QuestContent.QUESTS_EMBED, $ = P === h.QuestContent.QUEST_INVENTORY_CARD, ee = $ && k, et = j && !G, en = (0, s.jsx)(C.default, {
     autoplay: U,
     className: l()(v.gridImg, {
       [v.questRewardGiftInventory]: $ && "lg" === y,
@@ -116,7 +116,7 @@ t.default = e => {
     }), (0, s.jsxs)("div", {
       className: l()(v.gridText, v.taskDetails),
       children: [(0, s.jsx)(o.Text, {
-        variant: x(P, y, G),
+        variant: x(P, y, F),
         className: v.taskInstructions,
         children: j ? R.default.Messages.QUESTS_EXPIRED_QUEST_CARD_HEADING.format({
           questName: D.config.messages.questName
@@ -191,11 +191,11 @@ t.default = e => {
           })
         },
         children: R.default.Messages.QUESTS_LEARN_MORE_V2
-      }), (!j || F) && (0, s.jsx)(o.Tooltip, {
+      }), (!j || G) && (0, s.jsx)(o.Tooltip, {
         text: W,
         tooltipContentClassName: v.ctaTooltipCopy,
-        shouldShow: !w && !F,
-        children: e => F && !Y ? (0, s.jsx)(f.default, {
+        shouldShow: !w && !G,
+        children: e => G && !Y ? (0, s.jsx)(f.default, {
           ...e,
           wrapperClassName: v.ctaButtonWrapper,
           color: o.ButtonColors.BRAND,
@@ -215,7 +215,7 @@ t.default = e => {
       }, W)]
     }), V && (0, s.jsx)(S.default, {
       className: v.gridProgressBar,
-      color: F ? o.tokens.colors.TEXT_POSITIVE : o.tokens.colors.BG_BRAND,
+      color: G ? o.tokens.colors.TEXT_POSITIVE : o.tokens.colors.BG_BRAND,
       quest: D,
       isInventory: $
     })]

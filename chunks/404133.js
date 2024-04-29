@@ -33,9 +33,9 @@ var s, a = n("735250"),
   U = n("814225"),
   j = n("981631"),
   b = n("689938"),
-  B = n("422340");
+  B = n("142863");
 
-function F(e, t, n) {
+function G(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -43,7 +43,7 @@ function F(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class G extends(s = l.Component) {
+class F extends(s = l.Component) {
   get analyticsLocation() {
     let {
       storeListingAnalyticsProperties: e,
@@ -193,7 +193,7 @@ class G extends(s = l.Component) {
     })
   }
   constructor(...e) {
-    super(...e), F(this, "handleViewInStore", e => {
+    super(...e), G(this, "handleViewInStore", e => {
       let {
         sku: t,
         skuId: n,
@@ -208,7 +208,7 @@ class G extends(s = l.Component) {
         analyticsSource: this.analyticsLocation,
         slug: s.slug
       })
-    }), F(this, "handleClick", async e => {
+    }), G(this, "handleClick", async e => {
       let {
         isAuthenticated: t,
         applicationId: n,
@@ -266,7 +266,7 @@ class G extends(s = l.Component) {
     })
   }
 }
-F(G, "defaultProps", {
+G(F, "defaultProps", {
   tooltipPosition: "top",
   onStoreListing: !1,
   shouldRenderPrice: !1,
@@ -291,7 +291,7 @@ F(G, "defaultProps", {
     return [e, t, l, o, u, a]
   }), T = (0, u.useStateFromStores)([O.default], () => O.default.isFocused()), N = (0, u.useStateFromStores)([M.default], () => M.default.isPurchasingSKU), S = (0, u.useStateFromStores)([C.default], () => C.default.locale), x = (0, I.useAnalyticsContext)();
   if (null != n && null == l) throw Error("Unexpected entitlementBranchId without a channelId");
-  return (0, a.jsx)(G, {
+  return (0, a.jsx)(F, {
     ...r,
     applicationId: s,
     skuId: i,

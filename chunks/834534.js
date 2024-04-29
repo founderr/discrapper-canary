@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return g
+    return U
   }
 });
 var l = s("735250"),
@@ -16,22 +16,22 @@ var l = s("735250"),
   f = s("706454"),
   S = s("430824"),
   m = s("785717"),
-  v = s("648067"),
-  E = s("588822"),
-  I = s("81334"),
+  I = s("648067"),
+  v = s("588822"),
+  E = s("81334"),
   x = s("652853"),
   _ = s("335191"),
-  A = s("347949"),
-  N = s("144869"),
-  T = s("689938"),
-  U = s("363175");
-let C = e => {
+  T = s("347949"),
+  A = s("144869"),
+  N = s("689938"),
+  C = s("634516");
+let g = e => {
   let {
     title: t,
     children: s
   } = e;
   return (0, l.jsxs)("section", {
-    className: U.section,
+    className: C.section,
     children: [(0, l.jsx)(o.Heading, {
       variant: "text-xs/semibold",
       children: t
@@ -39,12 +39,12 @@ let C = e => {
   })
 };
 
-function g(e) {
+function U(e) {
   let {
     user: t,
     currentUser: s,
     displayProfile: i,
-    autoFocusNote: g,
+    autoFocusNote: U,
     className: h
   } = e, {
     theme: p
@@ -60,47 +60,47 @@ function g(e) {
   }, [P]), F = (0, d.useIsUserRecentGamesEnabled)({
     location: "SimplifiedUserProfileModalInfo",
     userId: t.id
-  }), D = (0, r.useStateFromStores)([f.default], () => f.default.locale), b = (0, v.default)(t.id);
+  }), D = (0, r.useStateFromStores)([f.default], () => f.default.locale), b = (0, I.default)(t.id);
   return (0, l.jsxs)(o.ScrollerThin, {
     fade: !0,
-    className: n()(U.scroller, h),
-    children: [(null == i ? void 0 : i.bio) != null && (null == i ? void 0 : i.bio) !== "" && (0, l.jsx)(E.default, {
+    className: n()(C.scroller, h),
+    children: [(null == i ? void 0 : i.bio) != null && (null == i ? void 0 : i.bio) !== "" && (0, l.jsx)(v.default, {
       userBio: i.bio,
       setLineClamp: !1
-    }), null != M && (0, l.jsx)(C, {
-      title: T.default.Messages.ROLES,
-      children: (0, l.jsx)(N.default, {
+    }), null != M && (0, l.jsx)(g, {
+      title: N.default.Messages.ROLES,
+      children: (0, l.jsx)(A.default, {
         user: t,
         currentUser: s,
         guild: M
       })
-    }), (0, l.jsx)(I.default, {
-      className: U.section,
+    }), (0, l.jsx)(E.default, {
+      className: C.section,
       userId: t.id,
       guildId: null == i ? void 0 : i.guildId,
       headingVariant: "text-xs/semibold"
-    }), F && !y && L.length > 0 && (0, l.jsx)(C, {
-      title: T.default.Messages.LAST_PLAYED_GAMES,
-      children: (0, l.jsx)(A.UserProfileRecentGames, {
+    }), F && !y && L.length > 0 && (0, l.jsx)(g, {
+      title: N.default.Messages.LAST_PLAYED_GAMES,
+      children: (0, l.jsx)(T.UserProfileRecentGames, {
         userId: t.id,
         recentGames: L,
         currentUserApplicationIds: O
       })
-    }), b.length > 0 && (0, l.jsx)(C, {
-      title: T.default.Messages.CONNECTIONS,
+    }), b.length > 0 && (0, l.jsx)(g, {
+      title: N.default.Messages.CONNECTIONS,
       children: (0, l.jsx)(_.ConnectedUserAccounts, {
         connectedAccounts: b,
-        className: U.connections,
+        className: C.connections,
         userId: t.id,
         theme: p,
         locale: D
       })
-    }), (0, l.jsx)(C, {
-      title: T.default.Messages.NOTE,
+    }), (0, l.jsx)(g, {
+      title: N.default.Messages.NOTE,
       children: (0, l.jsx)(u.default, {
         userId: t.id,
-        className: U.note,
-        autoFocus: g,
+        className: C.note,
+        autoFocus: U,
         onUpdate: () => j({
           action: "SET_NOTE"
         })

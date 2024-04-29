@@ -2,7 +2,7 @@
 a.r(t), a("47120");
 var n = a("735250"),
   s = a("470079"),
-  l = a("513715"),
+  l = a("718017"),
   i = a("442837"),
   r = a("481060"),
   o = a("224706"),
@@ -22,7 +22,7 @@ var n = a("735250"),
   A = a("359380"),
   M = a("308083"),
   N = a("689938"),
-  h = a("943303");
+  h = a("413932");
 let x = () => [{
     section: d.SectionTypes.HEADER,
     label: N.default.Messages.CLAN_SETTINGS_BASIC_INFO

@@ -9,7 +9,7 @@ n.r(t), n.d(t, {
 }), n("627341");
 var s = n("278074"),
   a = n("263568"),
-  l = n("566088");
+  l = n("339130");
 
 function i(e, t) {
   let n = (0, s.match)(t).with(a.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => l.normalStylesImageOnlyAnswers).otherwise(() => l.normalStylesDefault);

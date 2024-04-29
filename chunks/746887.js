@@ -7,14 +7,14 @@ n.r(t), n.d(t, {
 var i = n("211739"),
   o = n("680089"),
   l = n("984933"),
-  a = n("914010"),
-  u = n("981631");
+  u = n("914010"),
+  a = n("981631");
 let s = {
   binds: ["mod+shift+a"],
   comboKeysBindGlobal: !0,
   action() {
-    let e = a.default.getGuildId();
-    return null != e && (l.default.getChannels(e)[u.ChannelTypes.GUILD_CATEGORY].some(e => {
+    let e = u.default.getGuildId();
+    return null != e && (l.default.getChannels(e)[a.ChannelTypes.GUILD_CATEGORY].some(e => {
       let {
         channel: t
       } = e;

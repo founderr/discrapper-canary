@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   showGuildHeaderPopout: function() {
     return i
   },
@@ -7,11 +7,11 @@ a.r(t), a.d(t, {
     return r
   }
 });
-var n = a("652874");
+var a = n("652874");
 let s = Object.freeze({
     isPopoutOpen: !1
   }),
-  l = (0, n.default)(e => s),
+  l = (0, a.default)(e => s),
   i = e => {
     l.setState(() => ({
       isPopoutOpen: e

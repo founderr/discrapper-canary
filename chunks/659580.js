@@ -16,7 +16,7 @@ var l = n("481060"),
   c = n("822556"),
   f = n("981631"),
   h = n("689938"),
-  m = n("347846");
+  m = n("442520");
 
 function p(e) {
   let {
@@ -27,7 +27,7 @@ function p(e) {
     renderInputVolume: C = !1,
     renderOutputVolume: g = !1,
     onSelect: S
-  } = e, _ = (0, c.default)(), T = (0, u.default)(), I = (0, d.default)(), A = (0, i.default)(), v = (0, r.default)(), N = (0, o.default)();
+  } = e, _ = (0, c.default)(), T = (0, u.default)(), I = (0, d.default)(), A = (0, i.default)(), N = (0, r.default)(), v = (0, o.default)();
   return (0, a.jsx)(s.default, {
     object: f.AnalyticsObjects.CONTEXT_MENU,
     children: (0, a.jsxs)(l.Menu, {
@@ -46,7 +46,7 @@ function p(e) {
         label: h.default.Messages.FORM_LABEL_INPUT_MODE,
         children: A
       }) : null, (0, a.jsxs)(l.MenuGroup, {
-        children: [C ? v : null, g ? N : null, _]
+        children: [C ? N : null, g ? v : null, _]
       })]
     })
   })

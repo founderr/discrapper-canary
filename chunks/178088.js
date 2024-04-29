@@ -73,18 +73,18 @@ function g(e) {
   }, [P, b]);
   a.useEffect(() => (T.ComponentDispatch.subscribe(C.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, B), () => void T.ComponentDispatch.unsubscribe(C.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, B)), [B]);
   let {
-    showReminders: F
+    showReminders: G
   } = f.default.useExperiment({
     location: "RecentsPopout"
   }, {
     autoTrackExposure: !1
-  }), G = (0, E.useInDesktopNotificationCenterExperiment)(), {
+  }), F = (0, E.useInDesktopNotificationCenterExperiment)(), {
     enabled: k
   } = c.default.useExperiment({
     location: "RecentsPopout"
   });
   a.useEffect(() => {
-    !F && D === r.InboxTab.TODOS && P(r.InboxTab.MENTIONS)
+    !G && D === r.InboxTab.TODOS && P(r.InboxTab.MENTIONS)
   });
   let w = a.useCallback(e => {
     !e.shiftKey && j()
@@ -101,7 +101,7 @@ function g(e) {
       renderPopout: function() {
         return (0, s.jsx)(o.Dialog, {
           "aria-label": A.default.Messages.INBOX,
-          children: D === r.InboxTab.FOR_YOU && G ? (0, s.jsx)(I.default, {
+          children: D === r.InboxTab.FOR_YOU && F ? (0, s.jsx)(I.default, {
             setTab: P,
             badgeState: M,
             closePopout: j
@@ -114,7 +114,7 @@ function g(e) {
             setTab: P,
             badgeState: M,
             closePopout: j
-          }) : F && D === r.InboxTab.TODOS ? (0, s.jsx)(p.default, {
+          }) : G && D === r.InboxTab.TODOS ? (0, s.jsx)(p.default, {
             setTab: P,
             onJump: w,
             closePopout: j

@@ -23,7 +23,7 @@ var s = n("735250"),
   h = n("981631"),
   N = n("176505"),
   S = n("689938"),
-  C = n("352370");
+  C = n("892414");
 
 function A(e) {
   var t, A;
@@ -90,14 +90,14 @@ function A(e) {
     }) : S.default.Messages.GUILD_ANTIRAID_NAGBAR_MESSAGE_2_NEW.format({
       guildName: O.name
     }),
-    F = P && R === N.StaticChannelRoute.MEMBER_SAFETY;
+    G = P && R === N.StaticChannelRoute.MEMBER_SAFETY;
   return (0, s.jsxs)(_.default, {
     className: C.notice,
     color: _.NoticeColors.WARNING,
     children: [(0, s.jsx)(_.NoticeCloseButton, {
       onClick: g,
       noticeType: h.NoticeTypes.GUILD_RAID_NOTIFICATION
-    }), j, B, !F && (0, s.jsx)(_.NoticeButton, {
+    }), j, B, !G && (0, s.jsx)(_.NoticeButton, {
       className: C.actionButton,
       onClick: () => U(!0),
       children: (0, s.jsx)("div", {

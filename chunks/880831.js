@@ -12,7 +12,7 @@ var a = n("735250"),
   s = n("120356"),
   i = n.n(s),
   r = n("392711"),
-  o = n("513715"),
+  o = n("718017"),
   u = n("442837"),
   d = n("481060"),
   c = n("570140"),
@@ -28,11 +28,11 @@ var a = n("735250"),
   T = n("512665"),
   I = n("768581"),
   A = n("70956"),
-  v = n("823379"),
-  N = n("792125"),
+  N = n("823379"),
+  v = n("792125"),
   x = n("981631"),
   M = n("768760"),
-  R = n("588233");
+  R = n("174740");
 let L = 10 * A.default.Millis.SECOND;
 
 function y(e) {
@@ -45,13 +45,13 @@ function y(e) {
       messageId: n.id,
       flash: !0
     }))
-  }, [n.channel_id, n.id]), v = null != n.content && "" !== n.content ? (0, p.default)(n, {
+  }, [n.channel_id, n.id]), N = null != n.content && "" !== n.content ? (0, p.default)(n, {
     isInteracting: c
   }).content : null, {
-    contentPlaceholder: N,
+    contentPlaceholder: v,
     renderedContent: x,
     icon: L
-  } = (0, T.renderSingleLineMessage)(n, v, s, R.messageContent, {
+  } = (0, T.renderSingleLineMessage)(n, N, s, R.messageContent, {
     iconClass: R.messageContentIcon,
     iconSize: M.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
   }), y = (0, C.getMessageStickers)(n), O = y.length > 0 ? y.map(e => (0, a.jsx)(g.default, {
@@ -74,7 +74,7 @@ function y(e) {
         [R.mentioned]: n.mentioned
       }),
       children: [null !== (t = null != x ? x : O) && void 0 !== t ? t : (0, a.jsx)("span", {
-        children: N
+        children: v
       }), null != O ? null : L]
     }), (0, a.jsx)("img", {
       alt: "",
@@ -127,7 +127,7 @@ function O(e) {
     let E = null !== (t = h.current) && void 0 !== t ? t : r;
     return {
       toastsHidden: d,
-      toastMessages: (0, u.useStateFromStoresArray)([S.default], () => E.map(e => S.default.getMessage(n, e)), [n, E]).filter(v.isNotNullish)
+      toastMessages: (0, u.useStateFromStoresArray)([S.default], () => E.map(e => S.default.getMessage(n, e)), [n, E]).filter(N.isNotNullish)
     }
   }({
     channelId: t,
@@ -186,7 +186,7 @@ function O(e) {
       }
     });
   return (0, a.jsx)("div", {
-    className: i()(n, (0, N.getThemeClass)(x.ThemeTypes.DARK)),
+    className: i()(n, (0, v.getThemeClass)(x.ThemeTypes.DARK)),
     onMouseEnter: () => {
       d(!0)
     },

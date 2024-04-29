@@ -1,8 +1,8 @@
 "use strict";
-a.r(t);
-var n = a("231338");
+n.r(t);
+var a = n("231338");
 t.default = {
-  [n.RPCCommands.GET_PLATFORM_BEHAVIORS]: {
+  [a.RPCCommands.GET_PLATFORM_BEHAVIORS]: {
     handler: () => ({
       iosKeyboardResizesView: !0
     })

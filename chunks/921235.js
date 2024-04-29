@@ -22,7 +22,7 @@ var a = n("735250"),
   g = n("901461"),
   S = n("981631"),
   _ = n("689938"),
-  T = n("596739");
+  T = n("632885");
 let I = "749054660769218631";
 
 function A(e) {
@@ -33,9 +33,9 @@ function A(e) {
   l.useEffect(() => {
     (0, d.fetchStickerPack)("847199849233514549", !0)
   }, []);
-  let v = (0, r.useStateFromStores)([m.default, h.default], () => !!i()(m.default.getMessages(n.id).toArray()).reverse().find(e => e.author.id !== h.default.getId() && e.state === S.MessageStates.SENT && !(0, g.default)(e))),
-    N = (0, r.useStateFromStores)([p.default], () => p.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
-    x = null !== (t = C.default.useName(N)) && void 0 !== t ? t : _.default.Messages.WAVE_DEFAULT_RECIPIENT,
+  let N = (0, r.useStateFromStores)([m.default, h.default], () => !!i()(m.default.getMessages(n.id).toArray()).reverse().find(e => e.author.id !== h.default.getId() && e.state === S.MessageStates.SENT && !(0, g.default)(e))),
+    v = (0, r.useStateFromStores)([p.default], () => p.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
+    x = null !== (t = C.default.useName(v)) && void 0 !== t ? t : _.default.Messages.WAVE_DEFAULT_RECIPIENT,
     M = (0, r.useStateFromStores)([c.default], () => c.default.getStickerById(I)),
     R = l.useCallback(async () => {
       if (null == s || "" === s) try {
@@ -58,7 +58,7 @@ function A(e) {
       variant: "text-sm/normal",
       children: s
     }) : null;
-  return v ? (0, a.jsxs)("div", {
+  return N ? (0, a.jsxs)("div", {
     className: T.containerCompact,
     children: [(0, a.jsxs)(o.Clickable, {
       className: null != s && "" !== s ? T.compactButtonDisabled : T.compactButton,

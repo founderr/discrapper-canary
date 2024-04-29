@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   l = n("470079"),
-  s = n("513715"),
+  s = n("718017"),
   i = n("442837"),
   r = n("780384"),
   o = n("435064"),
@@ -14,7 +14,7 @@ var a = n("735250"),
   d = n("175470"),
   c = n("569545"),
   f = n("153850"),
-  h = n("258639");
+  h = n("926350");
 let m = {
     visibility: "hidden"
   },
@@ -38,11 +38,11 @@ function g(e) {
     inPopout: n
   } = e, {
     reducedMotion: g
-  } = l.useContext(r.AccessibilityPreferencesContext), S = (0, l.useRef)(null), _ = d.useClipsButtonStore.getState().clipsButtonRef, T = (0, c.encodeStreamKey)(t), I = (0, i.useStateFromStores)([o.default], () => o.default.getActiveAnimation()), A = (0, i.useStateFromStoresArray)([o.default], () => o.default.getStreamClipAnimations(T)), v = (0, l.useRef)();
+  } = l.useContext(r.AccessibilityPreferencesContext), S = (0, l.useRef)(null), _ = d.useClipsButtonStore.getState().clipsButtonRef, T = (0, c.encodeStreamKey)(t), I = (0, i.useStateFromStores)([o.default], () => o.default.getActiveAnimation()), A = (0, i.useStateFromStoresArray)([o.default], () => o.default.getStreamClipAnimations(T)), N = (0, l.useRef)();
   l.useEffect(() => () => {
     (0, u.dismissSaveClipAnimation)(T)
   }, [T]);
-  let N = () => {
+  let v = () => {
       var e;
       let t = null === (e = S.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
       return null == t || n ? m : {
@@ -54,7 +54,7 @@ function g(e) {
     },
     x = e => {
       let t = null == _ ? void 0 : _.getBoundingClientRect();
-      if (v.current = t, e.timestamp !== I || null == t || n) return m;
+      if (N.current = t, e.timestamp !== I || null == t || n) return m;
       let {
         top: a,
         left: l
@@ -86,7 +86,7 @@ function g(e) {
         position: "fixed",
         visibility: "hidden",
         opacity: 1,
-        ...g.enabled ? x(e) : N()
+        ...g.enabled ? x(e) : v()
       }),
       enter: e => [{
         opacity: 1,
@@ -99,9 +99,9 @@ function g(e) {
           height: 0,
           width: 0,
           ...(() => {
-            if (null != v.current) return {
-              top: v.current.top + 12,
-              left: v.current.left + 12
+            if (null != N.current) return {
+              top: N.current.top + 12,
+              left: N.current.left + 12
             }
           })()
         }

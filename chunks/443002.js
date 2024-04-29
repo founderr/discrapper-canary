@@ -19,7 +19,7 @@ var i = n("735250"),
   A = n("383881"),
   m = n("981631"),
   N = n("689938"),
-  p = n("923048");
+  p = n("712256");
 t.default = function(e) {
   let {
     analyticsLocation: t,

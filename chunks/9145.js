@@ -25,14 +25,14 @@ var a = n("735250"),
   T = n("566620"),
   I = n("317381"),
   A = n("619915"),
-  v = n("952561"),
-  N = n("563218"),
+  N = n("952561"),
+  v = n("563218"),
   x = n("719296"),
   M = n("651612"),
   R = n("918559"),
   L = n("981631"),
   y = n("689938"),
-  O = n("258004");
+  O = n("986636");
 let j = {
   [R.FocusedActivityLayouts.NO_CHAT]: O.noChat,
   [R.FocusedActivityLayouts.RESIZABLE]: O.resizable
@@ -44,7 +44,7 @@ function P(e) {
     maxHeight: P,
     connectedChannelId: D,
     renderExternalHeader: b
-  } = e, U = (0, v.default)(), F = (0, r.useStateFromStoresArray)([I.default], () => null != D ? I.default.getEmbeddedActivitiesForChannel(D) : [], [D]), w = (0, A.useEmbeddedApps)(F), k = (0, A.useEmbeddedAppsWithPresence)(w), H = l.useCallback(() => {
+  } = e, U = (0, N.default)(), F = (0, r.useStateFromStoresArray)([I.default], () => null != D ? I.default.getEmbeddedActivitiesForChannel(D) : [], [D]), w = (0, A.useEmbeddedApps)(F), k = (0, A.useEmbeddedAppsWithPresence)(w), H = l.useCallback(() => {
     (0, T.updateActivityPanelMode)(R.ActivityPanelModes.PIP)
   }, []), B = l.useRef(null), G = (0, r.useStateFromStores)([I.default], () => I.default.getFocusedLayout()), V = G !== R.FocusedActivityLayouts.NO_CHAT, [W, Y] = l.useState(null !== (s = f.default.activityPanelHeight) && void 0 !== s ? s : P), z = l.useCallback(e => {
     u.default.updatedUnsyncedSettings({
@@ -107,7 +107,7 @@ function P(e) {
           paddingBottom: J
         },
         ref: K,
-        children: (0, a.jsx)(N.default, {
+        children: (0, a.jsx)(v.default, {
           className: O.iframe,
           embedId: (0, x.default)(D, U.id)
         })

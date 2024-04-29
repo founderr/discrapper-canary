@@ -16,7 +16,7 @@ var n = s("120356"),
   c = s("695346"),
   S = s("981631"),
   E = s("689938"),
-  T = s("611273");
+  T = s("949086");
 
 function f() {
   let e = c.ExpressionSuggestionsEnabled.useSetting(),

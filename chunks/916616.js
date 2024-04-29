@@ -19,7 +19,7 @@ var s = n("278074"),
   p = n("998502"),
   _ = n("987209"),
   S = n("689938"),
-  I = n("170189"),
+  I = n("125374"),
   P = n("241822");
 let E = p.default.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 

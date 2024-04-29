@@ -1,15 +1,15 @@
 "use strict";
-a.r(t), a("47120"), a("411104");
-var n = a("413135"),
-  s = a("836560"),
-  l = a("392711"),
-  i = a.n(l),
-  r = a("710845"),
-  o = a("998502"),
-  u = a("901077"),
-  d = a("76238"),
-  c = a("852926"),
-  f = a("981631");
+n.r(t), n("47120"), n("411104");
+var a = n("413135"),
+  s = n("836560"),
+  l = n("392711"),
+  i = n.n(l),
+  r = n("710845"),
+  o = n("998502"),
+  u = n("901077"),
+  d = n("76238"),
+  c = n("852926"),
+  f = n("981631");
 let E = o.default.requireModule("discord_rpc").RPCIPC,
   h = new r.default("RPCServer:IPC"),
   _ = {
@@ -29,7 +29,7 @@ function m(e) {
 }
 
 function S(e) {
-  return new Promise((t, a) => {
+  return new Promise((t, n) => {
     "string" == typeof e && (e = E.net.createConnection(e)), e.pause(), e.on("readable", () => {
       try {
         I(e)
@@ -40,41 +40,41 @@ function S(e) {
         })), e.destroy()
       }
     });
-    let n = () => {
+    let a = () => {
         try {
           e.end(), e.destroy()
         } catch (e) {}
       },
-      s = Promise.race([new Promise(t => e.on("error", () => t())), new Promise((t, a) => {
-        e.on("pong", () => a(Error("socket responded with pong")))
+      s = Promise.race([new Promise(t => e.on("error", () => t())), new Promise((t, n) => {
+        e.on("pong", () => n(Error("socket responded with pong")))
       }), new Promise((e, t) => {
         setTimeout(() => t(Error("socket alive timeout")), 1e3)
       })]).then(() => {
-        n()
+        a()
       }, e => {
-        throw n(), e
+        throw a(), e
       });
-    return e.write(p(_.PING, i().uniqueId())), s.then(t, a)
+    return e.write(p(_.PING, i().uniqueId())), s.then(t, n)
   })
 }
 
 function p(e, t) {
-  var a;
+  var n;
   t = JSON.stringify(t);
-  let s = n.Buffer.byteLength(t),
-    l = n.Buffer.alloc(8 + s);
-  return l.writeInt32LE(e, 0), l.writeInt32LE(s, 4), l.write(t, 8, s), (a = l).buffer.slice(a.byteOffset, a.byteOffset + a.byteLength)
+  let s = a.Buffer.byteLength(t),
+    l = a.Buffer.alloc(8 + s);
+  return l.writeInt32LE(e, 0), l.writeInt32LE(s, 4), l.write(t, 8, s), (n = l).buffer.slice(n.byteOffset, n.byteOffset + n.byteLength)
 }
 
 function I(e) {
   let t = e.read(8);
   if (null == t) return;
-  let a = n.Buffer.from(t),
-    s = a.readInt32LE(0),
-    l = a.readInt32LE(4);
+  let n = a.Buffer.from(t),
+    s = n.readInt32LE(0),
+    l = n.readInt32LE(4);
   if (!Object.values(_).includes(s) || l < 0) throw Error("protocol error");
   if (null == (t = e.read(l))) throw Error("data size does not match what was received");
-  let i = JSON.parse((a = n.Buffer.from(t)).toString());
+  let i = JSON.parse((n = a.Buffer.from(t)).toString());
   switch (s) {
     case _.PING:
       e.emit("ping", i), e.write(p(_.PONG, i));
@@ -105,14 +105,14 @@ class T extends d.default {
       message: t
     })), this.socket.destroy()
   }
-  constructor(e, t, a) {
-    var n, s, l;
-    super("ipc", t, a), n = this, l = void 0, (s = "socket") in n ? Object.defineProperty(n, s, {
+  constructor(e, t, n) {
+    var a, s, l;
+    super("ipc", t, n), a = this, l = void 0, (s = "socket") in a ? Object.defineProperty(a, s, {
       value: l,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : n[s] = l, this.socket = e
+    }) : a[s] = l, this.socket = e
   }
 }
 class g extends s.EventEmitter {
@@ -127,11 +127,11 @@ class g extends s.EventEmitter {
         })), e.destroy()
       }
     }), e.once("handshake", t => {
-      let a;
-      let n = t.client_id,
+      let n;
+      let a = t.client_id,
         s = +t.v;
       try {
-        a = new T(e, s, "json")
+        n = new T(e, s, "json")
       } catch (t) {
         e.end(p(_.CLOSE, {
           code: t.code,
@@ -139,18 +139,18 @@ class g extends s.EventEmitter {
         })), e.destroy();
         return
       }
-      h.info("Socket Opened: ".concat(a.id)), e.on("error", e => h.error("Socket Error: ".concat(e.message))), e.on("close", () => {
-        h.info("Socket Close: ".concat(a.id)), this.emit("disconnect", a)
-      }), (0, c.validateSocketClient)(a, null, n).then(() => {
+      h.info("Socket Opened: ".concat(n.id)), e.on("error", e => h.error("Socket Error: ".concat(e.message))), e.on("close", () => {
+        h.info("Socket Close: ".concat(n.id)), this.emit("disconnect", n)
+      }), (0, c.validateSocketClient)(n, null, a).then(() => {
         e.on("request", e => {
-          h.info("Socket Message: ".concat(a.id), (0, u.default)(e)), this.emit("request", a, e)
-        }), this.emit("connect", a)
+          h.info("Socket Message: ".concat(n.id), (0, u.default)(e)), this.emit("request", n, e)
+        }), this.emit("connect", n)
       }).catch(e => {
         let {
           code: t,
-          message: n
+          message: a
         } = e;
-        return a.close(t, n)
+        return n.close(t, a)
       })
     })
   }

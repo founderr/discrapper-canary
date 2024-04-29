@@ -1,12 +1,12 @@
 "use strict";
-a.r(t);
-var n = a("392711"),
-  s = a.n(n),
-  l = a("699516"),
-  i = a("800599"),
-  r = a("594174"),
-  o = a("914946"),
-  u = a("981631");
+n.r(t);
+var a = n("392711"),
+  s = n.n(a),
+  l = n("699516"),
+  i = n("800599"),
+  r = n("594174"),
+  o = n("914946"),
+  u = n("981631");
 t.default = {
   [u.RPCCommands.GET_RELATIONSHIPS]: {
     scope: u.OAuth2Scopes.RELATIONSHIPS_READ,

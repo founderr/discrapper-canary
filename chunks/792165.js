@@ -23,7 +23,7 @@ var l = n("442837"),
   g = n("474936"),
   S = n("526761"),
   _ = n("689938"),
-  T = n("697382");
+  T = n("561636");
 
 function I(e) {
   var t;
@@ -31,8 +31,8 @@ function I(e) {
     onClose: n,
     markAsDismissed: I
   } = e, A = (0, l.useStateFromStores)([f.default], () => f.default.getCurrentUser());
-  let v = (t = null == A ? void 0 : A.premiumType) === g.PremiumTypes.TIER_2 ? _.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_TIER_2 : null == t ? _.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_SUB : _.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_TIER_2,
-    N = p.default.canUseCustomCallSounds(A);
+  let N = (t = null == A ? void 0 : A.premiumType) === g.PremiumTypes.TIER_2 ? _.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_TIER_2 : null == t ? _.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_SUB : _.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_TIER_2,
+    v = p.default.canUseCustomCallSounds(A);
   return (0, a.jsxs)(c.default, {
     isShown: !0,
     type: c.FeatureBorderTypes.PREMIUM,
@@ -59,8 +59,8 @@ function I(e) {
       })]
     }), (0, a.jsx)(r.Text, {
       variant: "text-sm/normal",
-      children: v
-    }), N ? (0, a.jsx)(s.Button, {
+      children: N
+    }), v ? (0, a.jsx)(s.Button, {
       onClick: function() {
         u.default.open(E.UserSettingsSections.VOICE, S.SOUNDBOARD_SUBSECTION), null == n || n(), null == I || I(C.ContentDismissActionType.PRIMARY)
       },

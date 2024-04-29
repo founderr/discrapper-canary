@@ -1,59 +1,59 @@
 "use strict";
-n.r(t);
-var s, i = n("442837"),
-  l = n("433517"),
-  r = n("570140"),
-  a = n("981631");
+l.r(t);
+var n, u = l("442837"),
+  a = l("433517"),
+  i = l("570140"),
+  r = l("981631");
 
-function u(e, t, n) {
+function o(e, t, l) {
   return t in e ? Object.defineProperty(e, t, {
-    value: n,
+    value: l,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : e[t] = l, e
 }
-let o = {
+let d = {
     lastViewedPath: null,
     lastViewedNonVoicePath: null
   },
-  c = o,
-  d = "LAST_VIEWED_PATH";
-class f extends(s = i.default.PersistedStore) {
+  s = d,
+  c = "LAST_VIEWED_PATH";
+class f extends(n = u.default.PersistedStore) {
   initialize() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : o;
-    c = null != e ? e : o
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d;
+    s = null != e ? e : d
   }
   get defaultRoute() {
-    return a.Routes.ME
+    return r.Routes.ME
   }
   get lastNonVoiceRoute() {
     var e;
-    return null !== (e = c.lastViewedNonVoicePath) && void 0 !== e ? e : a.Routes.ME
+    return null !== (e = s.lastViewedNonVoicePath) && void 0 !== e ? e : r.Routes.ME
   }
   get fallbackRoute() {
-    return a.Routes.ME
+    return r.Routes.ME
   }
   getState() {
-    return c
+    return s
   }
 }
-u(f, "displayName", "DefaultRouteStore"), u(f, "persistKey", "DefaultRouteStore"), u(f, "migrations", [() => {
-  let e = l.Storage.get(d, null);
-  return l.Storage.remove(d), {
+o(f, "displayName", "DefaultRouteStore"), o(f, "persistKey", "DefaultRouteStore"), o(f, "migrations", [() => {
+  let e = a.Storage.get(c, null);
+  return a.Storage.remove(c), {
     lastViewedPath: e
   }
-}]), t.default = new f(r.default, {
+}]), t.default = new f(i.default, {
   SAVE_LAST_ROUTE: function(e) {
     let {
       path: t
     } = e;
-    return c.lastViewedPath = t, !0
+    return s.lastViewedPath = t, !0
   },
   SAVE_LAST_NON_VOICE_ROUTE: function(e) {
     let {
       path: t
     } = e;
-    return c.lastViewedNonVoicePath = t, !0
+    return s.lastViewedNonVoicePath = t, !0
   }
 })

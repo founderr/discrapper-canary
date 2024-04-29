@@ -12,7 +12,7 @@ var i = n("735250"),
   c = n("149203"),
   E = n("981631"),
   I = n("689938"),
-  T = n("773390");
+  T = n("488192");
 let f = r.forwardRef(function(e, t) {
   let {
     emojiListRef: n,
