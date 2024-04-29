@@ -45,10 +45,11 @@ function c(e) {
   } = e;
   return (0, r.jsx)(a.QuestionRenderer, {
     title: t.label,
-    children: (0, r.jsx)(d, {
-      className: u.fieldBackground,
+    children: (0, r.jsx)(i.TextArea, {
+      className: o()(u.textInputFieldBodyInput, u.fieldBackground),
       value: t.response,
-      disabled: !0
+      disabled: !0,
+      autoFocus: !0
     })
   })
 }
