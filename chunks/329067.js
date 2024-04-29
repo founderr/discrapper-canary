@@ -36,6 +36,7 @@ let S = e => {
       size: n.ButtonSizes.SMALL,
       fullWidth: !0,
       look: n.Button.Looks.FILLED,
+      color: n.ButtonColors.GREEN,
       style: a,
       className: s,
       ...r,
@@ -79,39 +80,38 @@ function L(e) {
     loadId: g,
     skuId: v,
     isGift: L = !1,
-    customButtonStyle: I,
-    analyticsLocations: N
+    analyticsLocations: I
   } = e, {
-    step: _,
-    setStep: y,
-    paymentError: O,
-    paymentAuthenticationState: k,
-    application: A,
-    skuPricePreviewsById: R
-  } = (0, p.usePaymentContext)(), [j, P] = s.useState(!1), B = s.useRef(null), D = R[v], F = null != D ? D[r.id] : null, M = null != F ? (0, C.formatPrice)(null == F ? void 0 : F.amount, null == F ? void 0 : F.currency) : "";
+    step: N,
+    setStep: _,
+    paymentError: y,
+    paymentAuthenticationState: O,
+    application: k,
+    skuPricePreviewsById: A
+  } = (0, p.usePaymentContext)(), [R, j] = s.useState(!1), P = s.useRef(null), B = A[v], D = null != B ? B[r.id] : null, F = null != D ? (0, C.formatPrice)(null == D ? void 0 : D.amount, null == D ? void 0 : D.currency) : "";
   s.useEffect(() => {
-    _ !== h.Step.REVIEW && y(h.Step.REVIEW)
+    N !== h.Step.REVIEW && _(h.Step.REVIEW)
   }), s.useEffect(() => {
-    k === f.PaymentAuthenticationState.ERROR && a(O)
-  }, [a, O, k]);
-  let w = async () => {
-    i()(null != F, "skuPricePreview can't be null"), i()(null != A, "application can't be null");
+    O === f.PaymentAuthenticationState.ERROR && a(y)
+  }, [a, y, O]);
+  let M = async () => {
+    i()(null != D, "skuPricePreview can't be null"), i()(null != k, "application can't be null");
     try {
-      await (0, o.purchaseSKU)(A.id, v, {
-        expectedAmount: F.amount,
-        expectedCurrency: F.currency,
+      await (0, o.purchaseSKU)(k.id, v, {
+        expectedAmount: D.amount,
+        expectedCurrency: D.currency,
         isGift: L,
         paymentSource: r,
         loadId: g
-      }), P(!1), t()
+      }), j(!1), t()
     } catch (t) {
       let e = t instanceof c.BillingError ? t : new c.BillingError(t);
       e.code !== d.ErrorCodes.CONFIRMATION_REQUIRED && e.code !== d.ErrorCodes.AUTHENTICATION_REQUIRED && a(t)
     }
-  }, H = s.useCallback(e => {
-    e === h.Step.CONFIRM && (P(!1), t()), y(e)
-  }, [y, t]);
-  return (0, f.usePaymentStepForAuthentication)(_, k, H), (0, l.jsxs)("div", {
+  }, w = s.useCallback(e => {
+    e === h.Step.CONFIRM && (j(!1), t()), _(e)
+  }, [_, t]);
+  return (0, f.usePaymentStepForAuthentication)(N, O, w), (0, l.jsxs)("div", {
     className: x.reviewContainer,
     children: [(0, l.jsx)(n.FormSection, {
       children: (0, l.jsx)(n.FormItem, {
@@ -134,21 +134,20 @@ function L(e) {
         })]
       })
     }), (0, l.jsx)(S, {
-      style: I,
       className: x.buyButton,
-      submitting: j,
+      submitting: R,
       submittingStartedLabel: "Payment Processing",
       onClick: async () => {
-        P(!0), await w()
+        j(!0), await M()
       },
-      children: "Pay " + M
-    }), !j && (0, l.jsx)(T, {
+      children: "Pay " + F
+    }), !R && (0, l.jsx)(T, {
       className: x.reviewButton,
       onClick: () => {
         (0, E.default)({
           skuId: v,
-          analyticsLocations: N,
-          returnRef: B
+          analyticsLocations: I,
+          returnRef: P
         })
       },
       children: "Review Purchase"

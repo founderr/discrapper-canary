@@ -67,8 +67,7 @@ function _(e) {
     },
     paymentSource: a,
     skuId: t.skuId,
-    analyticsLocations: P,
-    customButtonStyle: G
+    analyticsLocations: P
   };
   return (0, l.jsxs)("div", {
     ref: R,
