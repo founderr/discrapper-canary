@@ -25,7 +25,7 @@ function o(e) {
       text: a ? r.default.Messages.START : r.default.Messages.EMBEDDED_ACTIVITIES_JOIN,
       tooltip: void 0
     };
-    if (null != t && null != s && t.instanceId === s.instanceId) return {
+    if (null != t && null != s && t.launchId === s.launchId) return {
       ...l,
       disabled: !0,
       text: r.default.Messages.EMBEDDED_ACTIVITIES_JOINED,

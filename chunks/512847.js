@@ -220,7 +220,7 @@ function j() {
       userConnectedActivity: r,
       voiceChannelActivities: o
     } = t;
-    let u = o.some(e => e.applicationId === (null == r ? void 0 : r.applicationId) && e.instanceId === r.instanceId);
+    let u = o.some(e => e.applicationId === (null == r ? void 0 : r.applicationId) && e.launchId === r.launchId);
     if ((0, v.isNotNullish)(n)) {
       let t = e.voiceChannelActivities.find(e => e.userIds.has(s)),
         n = o.find(e => e.userIds.has(s));

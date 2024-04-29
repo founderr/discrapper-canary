@@ -157,7 +157,7 @@ function y(e) {
     channelId: i,
     applicationId: r,
     locationId: null == l ? void 0 : null === (t = l.location) || void 0 === t ? void 0 : t.id,
-    instanceId: null == l ? void 0 : l.instanceId,
+    instanceId: null == l ? void 0 : l.launchId,
     showFeedback: a
   });
   let u = E.default.getSelectedParticipantId(i),

@@ -26867,8 +26867,8 @@ html .invoiceCancelRow_aa7946 {
 
 .message__702f7 {
     font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -77220,7 +77220,7 @@ div.profileThemedContainer__6e645 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem;
+    font-size: 16px;
     gap: 4px
 }
 

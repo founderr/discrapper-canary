@@ -42,7 +42,7 @@ function v(e) {
     embeddedActivity: F,
     currentEmbeddedActivity: G
   } = (0, l.useStateFromStoresObject)([o.default], () => ({
-    embeddedActivity: o.default.getEmbeddedActivitiesForChannel(null != b ? b : "").find(e => e.instanceId === v.id),
+    embeddedActivity: o.default.getEmbeddedActivitiesForChannel(null != b ? b : "").find(e => e.launchId === v.id),
     currentEmbeddedActivity: o.default.getCurrentEmbeddedActivity()
   })), k = (0, l.useStateFromStoresArray)([N.default], () => {
     var e;
