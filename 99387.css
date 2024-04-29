@@ -23928,7 +23928,7 @@ div:has(>div>.modal__06f49) {
 
 .grandfatheredMessage__6ab98 {
     border-radius: 3px;
-    font-size: .75rem;
+    font-size: 12px;
     line-height: 1.25;
     padding: 8px 16px 8px 8px;
     display: flex;
@@ -23991,8 +23991,8 @@ div:has(>div>.modal__06f49) {
     color: var(--white-500);
     display: flex;
     align-items: flex-start;
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     padding: 16px;
     position: relative
 }
@@ -24052,7 +24052,7 @@ div:has(>div>.modal__06f49) {
 
 .sectionDescription__051ab {
     color: var(--text-normal);
-    line-height: 1.25rem;
+    line-height: 20px;
     margin-bottom: 16px;
     margin-top: 0
 }
@@ -24143,8 +24143,8 @@ div:has(>div>.modal__06f49) {
 
 .billingInformation__2331f {
     color: var(--text-normal);
-    font-size: .875rem;
-    line-height: 1.125rem
+    font-size: 14px;
+    line-height: 18px
 }
 
 .finePrint__40456 {
@@ -24158,9 +24158,9 @@ div:has(>div>.modal__06f49) {
 }
 
 .noItemsCard__42af7 {
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
-    line-height: 1.25rem;
+    line-height: 20px;
     margin-top: 16px;
     padding: 16px 19px;
     border: none;
