@@ -12,12 +12,14 @@ var i = n("626135"),
 let s = new Map;
 
 function a(e, t) {
-  var i;
   !s.has(e) && s.set(e, []);
   let {
-    default: r
-  } = n("15379");
-  null === (i = s.get(e)) || void 0 === i || i.push(r(e, t))
+    default: i
+  } = n("15379"), r = i(e, t);
+  if (null != r) {
+    var a;
+    null === (a = s.get(e)) || void 0 === a || a.push(r)
+  }
 }
 
 function o() {
