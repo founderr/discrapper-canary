@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n.d(t, {
-  useEligibleGuildsForClans: function() {
+  useGuildsEligibleForClanConversion: function() {
     return c
   }
 }), n("47120");

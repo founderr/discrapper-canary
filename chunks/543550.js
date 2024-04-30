@@ -6,74 +6,80 @@ var a = n("735250"),
   i = n.n(l),
   r = n("143927"),
   o = n("597312"),
-  u = n("769727"),
-  d = n("207796"),
-  c = n("497189"),
-  f = n("304231"),
-  E = n("526282"),
-  h = n("183993"),
-  _ = n("559469"),
-  C = n("495257");
+  u = n("780384"),
+  d = n("792125"),
+  c = n("769727"),
+  f = n("207796"),
+  E = n("497189"),
+  h = n("304231"),
+  _ = n("526282"),
+  C = n("802001"),
+  m = n("559469"),
+  S = n("231338"),
+  p = n("495257");
 
-function m(e) {
+function I(e) {
   let {
     children: t,
     selectedGame: n,
     className: l
   } = e, r = s.useMemo(() => {
     switch (n) {
-      case d.ClanDiscoveryGame.GENSHIN:
-        return C.genshinBackgroundImage;
-      case d.ClanDiscoveryGame.VALORANT:
-        return C.valorantBackgroundImage
+      case f.ClanDiscoveryGame.GENSHIN:
+        return p.genshinBackgroundImage;
+      case f.ClanDiscoveryGame.VALORANT:
+        return p.valorantBackgroundImage
     }
-  }, [n]);
-  return (0, a.jsx)("div", {
-    className: i()(r, l),
-    children: t
+  }, [n]), o = (0, d.getThemeClass)(S.ThemeTypes.DARK);
+  return (0, a.jsx)(u.ThemeContextProvider, {
+    theme: S.ThemeTypes.DARK,
+    children: (0, a.jsx)("div", {
+      className: i()(r, l, o),
+      children: t
+    })
   })
 }
 t.default = s.memo(function() {
-  let e = (0, h.useEligibleGuildsForClans)(),
-    t = (0, d.useClanDiscoveryUIStore)(e => e.game, r.default),
-    [n, l] = s.useState(_.ClanDiscoveryUpsellScreens.USER_UPSELL),
+  let e = (0, C.useGuildsEligibleForClanConversion)(),
+    t = (0, f.useClanDiscoveryUIStore)(e => e.game, r.default),
+    [n, l] = s.useState(m.ClanDiscoveryUpsellScreens.USER_UPSELL),
     i = s.useCallback(() => {
-      l(_.ClanDiscoveryUpsellScreens.USER_ONBOARDING)
+      l(m.ClanDiscoveryUpsellScreens.USER_ONBOARDING)
     }, [l]),
-    S = s.useMemo(() => {
+    u = s.useMemo(() => {
       if (0 !== e.length) return (0, a.jsxs)(o.ScrollerThin, {
-        className: C.upsellScroller,
+        className: p.upsellScroller,
         fade: !0,
-        children: [(0, a.jsx)(m, {
+        children: [(0, a.jsx)(I, {
           selectedGame: t,
-          className: C.adminUpsell,
-          children: (0, a.jsx)(c.default, {
+          className: p.adminUpsell,
+          children: (0, a.jsx)(E.default, {
             selectedGame: t,
-            guilds: e
+            eligibleGuilds: e
           })
-        }), (0, a.jsx)(u.ClanDiscoveryTopPicks, {
+        }), (0, a.jsx)(c.ClanDiscoveryTopPicks, {
           limit: 10
         })]
       });
       switch (n) {
-        case _.ClanDiscoveryUpsellScreens.USER_UPSELL:
+        case m.ClanDiscoveryUpsellScreens.USER_UPSELL:
           return (0, a.jsx)(o.ScrollerThin, {
-            className: C.upsellScroller,
+            className: p.upsellScroller,
             fade: !0,
-            children: (0, a.jsx)(m, {
+            children: (0, a.jsx)(I, {
               selectedGame: t,
-              className: C.userUpsell,
-              children: (0, a.jsx)(E.default, {
+              className: p.userUpsell,
+              children: (0, a.jsx)(_.default, {
                 selectedGame: t,
                 onClick: i
               })
             })
           });
-        case _.ClanDiscoveryUpsellScreens.USER_ONBOARDING:
-          return (0, a.jsx)(m, {
+        case m.ClanDiscoveryUpsellScreens.USER_ONBOARDING:
+          return (0, a.jsx)(I, {
             selectedGame: t,
-            className: C.userOnboarding,
-            children: (0, a.jsx)(f.default, {
+            className: p.userOnboarding,
+            children: (0, a.jsx)(h.default, {
               selectedGame: t,
               setScreen: l
             })
@@ -81,7 +87,7 @@ t.default = s.memo(function() {
       }
     }, [e, i, n, t]);
   return (0, a.jsx)("div", {
-    className: C.container,
-    children: S
+    className: p.container,
+    children: u
   })
 })

@@ -15,6 +15,9 @@ n.r(t), n.d(t, {
   ThemeContextFlags: function() {
     return a.ThemeContextFlags
   },
+  ThemeContextProvider: function() {
+    return a.ThemeContextProvider
+  },
   WCAGContrastRatios: function() {
     return l.WCAGContrastRatios
   },

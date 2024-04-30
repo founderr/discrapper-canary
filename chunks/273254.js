@@ -19,7 +19,7 @@ function o(e) {
   }), u = a.useMemo(() => null == o ? [] : [o], [o]);
   return a.useMemo(() => {
     var e;
-    return {
+    return null == t ? null : {
       id: t.id,
       name: t.name,
       icon: t.icon,
@@ -41,5 +41,5 @@ function o(e) {
       },
       wildcardDescriptors: []
     }
-  }, [u, t.description, t.icon, t.id, t.name])
+  }, [u, t])
 }

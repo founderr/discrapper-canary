@@ -128,6 +128,9 @@ class p extends(a = i.default.PersistedStore) {
       submitting: _
     }
   }
+  getGuildIds() {
+    return [...E.keys()]
+  }
 }
 f(p, "displayName", "ClanSetupStore"), f(p, "persistKey", "ClanSetupStore"), t.default = new p(r.default, {
   CLAN_SETUP_UPDATE: function(e) {

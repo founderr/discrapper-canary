@@ -40,7 +40,7 @@ function R(e) {
   } = e, l = (0, I.useClanDiscoveryUIStore)(I.buildSearchCriteriaFromUIState, i()), r = (0, I.useClanDiscoveryUIStore)(e => e.selectedTraits, o.default), f = (0, I.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, o.default), E = s.useMemo(() => (0, A.getPlaystyleOptions)(), []), h = f ? null === (t = E[f]) || void 0 === t ? void 0 : t.title : "", C = (0, c.useStateFromStores)([S.default], () => S.default.getSearchResult(l), [l]), m = s.useMemo(() => {
     if ((0, g.isLoadedSearchResult)(C)) {
       let e = C.items;
-      return null != n ? e.slice(n) : e
+      return null != n ? e.slice(0, n) : e
     }
     return null
   }, [n, C]);
