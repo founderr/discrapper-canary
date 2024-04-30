@@ -1,6 +1,6 @@
 "use strict";
 a.r(t), a.d(t, {
-  ClanDiscoveryUpsellScreens: function() {
+  ClanDiscoveryUserScreens: function() {
     return s
   },
   FAKE_DISCOVERY_UPSELL_CLANS: function() {
@@ -37,7 +37,7 @@ function r(e) {
     },
     wildcardDescriptors: []
   }
-}(n = s || (s = {})).ADMIN_UPSELL = "admin_upsell", n.USER_UPSELL = "user_upsell", n.USER_ONBOARDING = "user_onboarding";
+}(n = s || (s = {})).USER_UPSELL = "user_upsell", n.USER_ONBOARDING = "user_onboarding";
 let o = [r({
   id: "1",
   preset: i.ClanBrandPresets.ZEPHYR,

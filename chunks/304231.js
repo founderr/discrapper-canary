@@ -78,7 +78,7 @@ t.default = s.memo(function(e) {
   } = e, [i, r] = s.useState(0), [o, d] = s.useState(0), f = (0, c.useClanDiscoveryUIStore)(e => e.setMode, l.default), h = (0, c.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, l.default), m = s.useCallback(e => {
     r(e), o < e && d(e)
   }, [o]), p = s.useCallback(() => {
-    0 === i ? a(E.ClanDiscoveryUpsellScreens.USER_UPSELL) : m(i - 1)
+    0 === i ? a(E.ClanDiscoveryUserScreens.USER_UPSELL) : m(i - 1)
   }, [i, a, m]), I = s.useCallback(() => {
     2 === i ? f(c.ClanDiscoveryMode.DISCOVERY) : m(i + 1)
   }, [f, i, m]), T = s.useMemo(() => 1 === i && null == h, [h, i]);
