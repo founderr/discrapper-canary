@@ -18573,6 +18573,19 @@ span.clanTag_f4aadc {
     margin-top: 2px
 }
 
+.emptyActivityCardPrompt_b217cc {
+    display: flex;
+    margin: 16px 8px
+}
+
+.emptyStateTextContainer__84382 {
+    align-self: center
+}
+
+.emptyActivityCardContainer_a8d8cf {
+    height: 38px
+}
+
 .activityCardContainer__6615c {
     display: flex;
     flex-direction: row;
