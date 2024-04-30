@@ -95,8 +95,9 @@ async function M(e) {
       type: "EMBEDDED_ACTIVITY_LAUNCH_START",
       embeddedActivity: o
     });
-    let t = L.INSTALL_LESS_APP_IDS.includes(o.applicationId);
-    if ((0, O.isActivityInTextStart)(e, o.applicationId, h.default, S.default) || t) {
+    let t = p.default.getEmbeddedActivitiesForChannel(e).some(e => e.applicationId === o.applicationId),
+      n = L.INSTALL_LESS_APP_IDS.includes(o.applicationId) && !t;
+    if ((0, O.isActivityInTextStart)(e, o.applicationId, h.default, S.default) || n) {
       let t;
       try {
         t = await (0, _.default)(e, o.applicationId)
