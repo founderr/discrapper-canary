@@ -61,7 +61,8 @@ function v(e) {
   }), Y = null == G, K = (0, A.useJoinOrStartButtonState)({
     embeddedActivity: G,
     joinability: V,
-    currentEmbeddedActivity: F
+    currentEmbeddedActivity: F,
+    channel: j
   }), W = async () => {
     D(!0);
     try {
