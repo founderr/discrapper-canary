@@ -140,7 +140,8 @@ function F(e) {
           guildId: F,
           size: C.BadgeSizes.SIZE_24,
           shrinkAtCount: 8,
-          shrinkToSize: C.BadgeSizes.SIZE_18
+          shrinkToSize: C.BadgeSizes.SIZE_18,
+          onBadgeClick: w
         }), (0, l.jsxs)("div", {
           className: y.relationshipButtons,
           children: [(0, l.jsx)(g.default, {
