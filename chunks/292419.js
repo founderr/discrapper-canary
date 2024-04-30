@@ -120,7 +120,7 @@ function I(e) {
         };
       case i.ComponentType.TEXT:
         return {
-          type: i.ComponentType.TEXT, id: T(r), items: t.items
+          type: i.ComponentType.TEXT, id: T(r), content: t.content
         };
       case i.ComponentType.MEDIA_GALLERY:
         return {

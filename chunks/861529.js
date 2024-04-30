@@ -1,54 +1,36 @@
 "use strict";
-n.r(t), n.d(t, {
+t.r(n), t.d(n, {
   default: function() {
-    return C
+    return p
   }
 });
-var l = n("735250"),
-  a = n("470079"),
-  r = n("120356"),
-  s = n.n(r),
-  u = n("911969"),
-  o = n("454585"),
-  i = n("937889"),
-  d = n("970184"),
-  c = n("870456"),
-  m = n("787076"),
-  p = n("990291");
+var l = t("735250"),
+  a = t("470079"),
+  r = t("120356"),
+  u = t.n(r),
+  s = t("454585"),
+  o = t("937889"),
+  i = t("970184"),
+  d = t("870456"),
+  c = t("787076"),
+  m = t("990291");
 
-function f(e) {
+function p(e) {
   let {
-    item: t
-  } = e, {
     content: n,
-    style: r
-  } = t, f = function(e) {
-    let t = (0, d.useComponentStateContext)();
+    className: t
+  } = e, r = function(e) {
+    let n = (0, i.useComponentStateContext)();
     return (0, a.useMemo)(() => {
-      let n;
-      return null === t ? null : (n = null != t.message ? (0, i.getInitialParserStateFromMessage)(t.message, c.TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS) : (0, i.getInitialParserState)({
-        channelId: t.channelId,
-        renderOptions: c.TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS
-      }), o.default.parse(e, !0, n))
-    }, [e, t])
+      let t;
+      return null === n ? null : (t = null != n.message ? (0, o.getInitialParserStateFromMessage)(n.message, d.TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS) : (0, o.getInitialParserState)({
+        channelId: n.channelId,
+        renderOptions: d.TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS
+      }), s.default.parse(e, !0, t))
+    }, [e, n])
   }(n);
   return (0, l.jsx)("div", {
-    className: s()([p.markup, m.markdownContainer, {
-      [m.contextText]: r === u.TextDisplayContentStyle.CONTEXT
-    }]),
-    children: f
-  })
-}
-
-function C(e) {
-  let {
-    items: t,
-    className: n
-  } = e;
-  return (0, l.jsx)("div", {
-    className: n,
-    children: t.map((e, t) => (0, l.jsx)(f, {
-      item: e
-    }, t))
+    className: u()([t, m.markup, c.markdownContainer]),
+    children: r
   })
 }
