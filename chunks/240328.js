@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   DEFAULT_COLLECTIBLES_UPSELL_HEIGHT: function() {
-    return v
+    return D
   }
 }), n("47120"), n("627341");
 var i = n("735250"),
@@ -30,7 +30,7 @@ var i = n("735250"),
   g = n("799665"),
   L = n("174492");
 
-function D(e) {
+function v(e) {
   let {
     onClick: t
   } = e;
@@ -45,7 +45,7 @@ function D(e) {
     })
   })
 }
-let v = 76,
+let D = 76,
   M = e => (0, i.jsx)(u.Text, {
     variant: "text-sm/normal",
     color: "text-normal",
@@ -92,7 +92,7 @@ t.default = e => {
     ref: w,
     height: B
   } = (0, d.default)(), k = r.useMemo(() => ({
-    top: "-".concat((null != B ? B : v) + 6, "px")
+    top: "-".concat((null != B ? B : D) + 6, "px")
   }), [B]), V = (0, l.useStateFromStores)([m.default], () => m.default.getCurrentUser()), x = p.default.canUseCollectibles(V), {
     setUpsellSource: F,
     reset: H
@@ -117,7 +117,7 @@ t.default = e => {
       null == T || T(R.ContentDismissActionType.DISMISS)
     }, [T]);
   if (!L && !P) return null;
-  let X = (0, o.match)([L, P]).with([!0, !0], () => j && W && x ? C.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
+  let Z = (0, o.match)([L, P]).with([!0, !0], () => j && W && x ? C.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
     openShop: M
   }) : j && W ? C.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NON_NITRO.format({
     openShop: M
@@ -154,11 +154,11 @@ t.default = e => {
           variant: "text-sm/normal",
           color: "text-normal",
           tag: "span",
-          children: X
+          children: Z
         })
       }), (0, i.jsx)("div", {
         className: g.buttons,
-        children: (0, i.jsx)(D, {
+        children: (0, i.jsx)(v, {
           onClick: z
         })
       })]

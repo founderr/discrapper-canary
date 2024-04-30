@@ -85,12 +85,12 @@ function L(e, t) {
   return null != n && (S[n] = void 0, n === f && p(n), !0)
 }
 
-function D() {
+function v() {
   p(T.FAVORITES)
 }
-class v extends(i = o.default.Store) {
+class D extends(i = o.default.Store) {
   initialize() {
-    this.waitFor(E.default, I.default, _.default, c.default, d.default), this.syncWith([d.default], D)
+    this.waitFor(E.default, I.default, _.default, c.default, d.default), this.syncWith([d.default], v)
   }
   getCategories(e) {
     return null != e ? function(e) {
@@ -99,12 +99,12 @@ class v extends(i = o.default.Store) {
     }(e) : m
   }
 }
-a = "GuildCategoryStore", (s = "displayName") in(r = v) ? Object.defineProperty(r, s, {
+a = "GuildCategoryStore", (s = "displayName") in(r = D) ? Object.defineProperty(r, s, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new v(l.default, {
+}) : r[s] = a, t.default = new D(l.default, {
   CHANNEL_SELECT: function(e) {
     let {
       guildId: t

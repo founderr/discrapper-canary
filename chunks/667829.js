@@ -29,8 +29,8 @@ var i = n("735250"),
   C = n("140963"),
   g = n("4484"),
   L = n("925994"),
-  D = n("981631"),
-  v = n("689938"),
+  v = n("981631"),
+  D = n("689938"),
   M = n("414367");
 
 function y(e, t, n) {
@@ -163,7 +163,7 @@ class b extends r.Component {
       placeholder: t,
       isPreviewing: n
     } = this.props;
-    return e && !n ? v.default.Messages.NO_SEND_MESSAGES_PERMISSION_PLACEHOLDER : t
+    return e && !n ? D.default.Messages.NO_SEND_MESSAGES_PERMISSION_PLACEHOLDER : t
   }
   render() {
     var e, t, n, r, s, o;
@@ -182,7 +182,7 @@ class b extends r.Component {
       spellcheckEnabled: N,
       useNewSlashCommands: R,
       canOnlyUseTextCommands: L,
-      className: v,
+      className: D,
       id: y,
       required: P,
       maxCharacterCount: b,
@@ -195,7 +195,7 @@ class b extends r.Component {
       popup: x
     } = this.state, F = {
       channel: f,
-      className: a()(v, M.textArea, {
+      className: a()(D, M.textArea, {
         [M.textAreaSlate]: A,
         [M.textAreaDisabled]: d || V
       }),
@@ -250,10 +250,10 @@ class b extends r.Component {
     });
     return (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(m.ComponentAction, {
-        event: D.ComponentActions.INSERT_TEXT,
+        event: v.ComponentActions.INSERT_TEXT,
         handler: this.handleInsertText
       }), (0, i.jsx)(m.ComponentAction, {
-        event: D.ComponentActions.CLEAR_TEXT,
+        event: v.ComponentActions.CLEAR_TEXT,
         handler: this.handleClearText
       }), H]
     })

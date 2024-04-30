@@ -45,14 +45,14 @@ function g() {
 }
 
 function L() {
-  return v()
-}
-
-function D() {
-  return v()
+  return D()
 }
 
 function v() {
+  return D()
+}
+
+function D() {
   let e = g();
   return e !== O && (O = e, !0)
 }
@@ -97,11 +97,11 @@ p(M, "displayName", "ThemeStore"), p(M, "persistKey", "ThemeStore"), p(M, "migra
       }).hsl() : l.default.unsafe_rawColors.WHITE_500.resolve({
         saturation: _.default.saturation
       }).hsl())
-    }(), v())
+    }(), D())
   },
   OVERLAY_INITIALIZE: L,
-  SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: D,
-  UNSYNCED_USER_SETTINGS_UPDATE: D,
+  SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: v,
+  UNSYNCED_USER_SETTINGS_UPDATE: v,
   USER_SETTINGS_PROTO_UPDATE: L,
   UPDATE_BACKGROUND_GRADIENT_PRESET: function(e) {
     var t, n;
@@ -120,10 +120,10 @@ p(M, "displayName", "ThemeStore"), p(M, "persistKey", "ThemeStore"), p(M, "migra
     let {
       systemTheme: t
     } = e;
-    return R = t, v()
+    return R = t, D()
   },
   ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: function(e) {
-    return i = e.systemPrefersColorScheme, v()
+    return i = e.systemPrefersColorScheme, D()
   },
   ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: function() {
     return (0, u.isThemeLight)(g())

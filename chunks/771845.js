@@ -128,7 +128,7 @@ function L(e) {
   })
 }
 
-function D(e) {
+function v(e) {
   let {
     targetId: t
   } = e, n = m.getNode(t);
@@ -139,7 +139,7 @@ function D(e) {
   })
 }
 
-function v(e) {
+function D(e) {
   let {
     guildId: t,
     joinedAt: n,
@@ -185,12 +185,12 @@ class P extends f.default {
       CACHE_LOADED_LAZY: () => this.loadCache(),
       GUILD_CREATE: O,
       GUILD_DELETE: O,
-      GUILD_MEMBER_ADD: v,
+      GUILD_MEMBER_ADD: D,
       USER_SETTINGS_PROTO_UPDATE: R,
       GUILD_MOVE_BY_ID: C,
       GUILD_FOLDER_CREATE_LOCAL: g,
       GUILD_FOLDER_EDIT_LOCAL: L,
-      GUILD_FOLDER_DELETE_LOCAL: D
+      GUILD_FOLDER_DELETE_LOCAL: v
     }), A(this, "loadCache", () => {
       let e = this.readSnapshot(P.LATEST_SNAPSHOT_VERSION),
         t = null == e ? void 0 : e.tree;

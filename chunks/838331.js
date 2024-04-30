@@ -74,15 +74,15 @@ function O(e) {
     maxVisibleItems: O = 5,
     itemToString: R = N,
     showScrollbar: C = !1
-  } = e, [g, L] = r.useState(""), [D] = r.useState(!0), [v, M] = r.useState(null), y = r.useId(), P = r.useRef(null);
+  } = e, [g, L] = r.useState(""), [v] = r.useState(!0), [D, M] = r.useState(null), y = r.useId(), P = r.useRef(null);
   r.useLayoutEffect(() => {
-    let e = document.querySelector("[".concat(S, '="').concat(v, '"]')),
+    let e = document.querySelector("[".concat(S, '="').concat(D, '"]')),
       t = P.current;
     null != t && null != e && t.scrollIntoViewNode({
       node: e,
       padding: 12
     })
-  }, [v]);
+  }, [D]);
   let U = n(g),
     b = 0 === U.length,
     G = r.useId(),
@@ -130,8 +130,8 @@ function O(e) {
           ref: n,
           role: "combobox",
           "aria-label": h,
-          "aria-expanded": D,
-          "aria-controls": D ? y : void 0,
+          "aria-expanded": v,
+          "aria-controls": v ? y : void 0,
           "aria-owns": y,
           "aria-haspopup": "listbox",
           className: a()(f.combobox, u),
@@ -149,10 +149,10 @@ function O(e) {
             }),
             inputProps: {
               "aria-multiline": !1,
-              "aria-activedescendant": null != v ? v : void 0
+              "aria-activedescendant": null != D ? D : void 0
             }
           }), (0, i.jsx)("div", {
-            children: D && (b ? (0, i.jsxs)("div", {
+            children: v && (b ? (0, i.jsxs)("div", {
               className: f.empty,
               children: [(0, i.jsx)(d.Heading, {
                 variant: "heading-md/semibold",
@@ -164,7 +164,7 @@ function O(e) {
               })]
             }) : (0, i.jsx)(p.Provider, {
               value: {
-                activeDescendant: v,
+                activeDescendant: D,
                 selected: s,
                 setSelected: l,
                 itemToString: R

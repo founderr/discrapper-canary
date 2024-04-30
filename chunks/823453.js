@@ -55,8 +55,8 @@ t.default = r.memo(function(e) {
         keyboardModeEnabled: R,
         saturation: g,
         desaturateUserColors: L,
-        useForcedColors: D,
-        systemForcedColors: v
+        useForcedColors: v,
+        systemForcedColors: D
       } = (0, d.useStateFromStoresObject)([E.default], () => {
         let {
           fontScale: e,
@@ -95,8 +95,8 @@ t.default = r.memo(function(e) {
           "low-saturation": g <= c.LOW_SATURATION_THRESHOLD,
           "decorate-links": _,
           "desaturate-user-colors": L,
-          "disable-forced-colors": !D && "active" === v,
-          "enable-forced-colors": D,
+          "disable-forced-colors": !v && "active" === D,
+          "enable-forced-colors": v,
           "show-redesigned-icons": b
         }, (0, A.getThemeClass)(n), (0, m.default)(), N)
       })

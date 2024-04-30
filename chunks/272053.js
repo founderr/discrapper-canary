@@ -53,7 +53,7 @@ async function L(e, t) {
   }, t), r = i[0].name;
   return C[e] = r, r
 }
-let D = new class e {
+let v = new class e {
   start() {
     !this._started && (this._started = !0, E.default.isFetching() ? u.default.fetch() : this._check())
   }
@@ -169,12 +169,12 @@ let D = new class e {
   }
 };
 
-function v() {
-  I.default.enabled ? D.start() : D.stop()
+function D() {
+  I.default.enabled ? v.start() : v.stop()
 }
 class M extends(i = a.default.Store) {
   initialize() {
-    v(), this.waitFor(E.default), this.syncWith([I.default], v)
+    D(), this.waitFor(E.default), this.syncWith([I.default], D)
   }
   getStream() {
     return N
@@ -186,5 +186,5 @@ f(M, "displayName", "ExternalStreamingStore"), t.default = new M(l.default, {
     if (s()(e.stream, N)) return !1;
     N = null !== (t = e.stream) && void 0 !== t ? t : null
   },
-  USER_CONNECTIONS_UPDATE: () => D._check()
+  USER_CONNECTIONS_UPDATE: () => v._check()
 })

@@ -85,10 +85,10 @@ n.r(t), n.d(t, {
     return F
   },
   getPlaystyleOptions: function() {
-    return v
+    return D
   },
   getPlaystyleTitle: function() {
-    return D
+    return v
   },
   getRandomClanBrandPreset: function() {
     return x
@@ -130,7 +130,7 @@ let L = {
   5: "COMPETITIVE"
 };
 
-function D(e) {
+function v(e) {
   switch (e) {
     case 1:
       return S.default.Messages.CLAN_SETUP_PLAYSTYLE_SOCIAL_TITLE;
@@ -145,7 +145,7 @@ function D(e) {
   }
 }
 
-function v() {
+function D() {
   return {
     1: {
       type: 1,

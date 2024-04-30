@@ -82,7 +82,7 @@ function L(e) {
   }(n.id, t)
 }
 
-function D(e) {
+function v(e) {
   let {
     guild: t
   } = e;
@@ -91,7 +91,7 @@ function D(e) {
     (null == n || n.guild_id === t.id) && delete p[e]
   }
 }
-class v extends(r = _.default.Store) {
+class D extends(r = _.default.Store) {
   initialize() {
     this.waitFor(T.default, E.default, f.default, S.default, h.default)
   }
@@ -115,12 +115,12 @@ class v extends(r = _.default.Store) {
     return R(e, t, i)
   }
 }
-l = "StageChannelRoleStore", (o = "displayName") in(a = v) ? Object.defineProperty(a, o, {
+l = "StageChannelRoleStore", (o = "displayName") in(a = D) ? Object.defineProperty(a, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[o] = l, t.default = new v(c.default, {
+}) : a[o] = l, t.default = new D(c.default, {
   CHANNEL_UPDATES: function(e) {
     let {
       channels: t
@@ -156,6 +156,6 @@ l = "StageChannelRoleStore", (o = "displayName") in(a = v) ? Object.defineProper
       return C(n, i) || e
     }, !1)
   },
-  GUILD_CREATE: D,
-  GUILD_DELETE: D
+  GUILD_CREATE: v,
+  GUILD_DELETE: v
 })

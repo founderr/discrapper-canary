@@ -54,7 +54,7 @@ function L(e) {
   })
 }
 
-function D(e) {
+function v(e) {
   if (null != e && !(e.id in p)) {
     let t = f.default.getChannel(e.id);
     if (null != t) return L(t), !0
@@ -62,7 +62,7 @@ function D(e) {
   return !1
 }
 
-function v(e) {
+function D(e) {
   let {
     channel: t
   } = e;
@@ -73,7 +73,7 @@ function M(e) {
   let {
     threads: t
   } = e;
-  t.forEach(D)
+  t.forEach(v)
 }
 
 function y(e) {
@@ -82,8 +82,8 @@ function y(e) {
     threads: n
   } = e;
   for (let e of t)
-    for (let t of e) D(t.thread);
-  n.forEach(D)
+    for (let t of e) v(t.thread);
+  n.forEach(v)
 }
 class P extends(i = u.default.Store) {
   initialize() {
@@ -144,8 +144,8 @@ a = "ThreadMessageStore", (s = "displayName") in(r = P) ? Object.defineProperty(
       return n && delete O[e.parentId], n
     })
   },
-  THREAD_CREATE: v,
-  THREAD_UPDATE: v,
+  THREAD_CREATE: D,
+  THREAD_UPDATE: D,
   THREAD_LIST_SYNC: function(e) {
     let {
       threads: t,
@@ -234,7 +234,7 @@ a = "ThreadMessageStore", (s = "displayName") in(r = P) ? Object.defineProperty(
   },
   LOAD_MESSAGES_SUCCESS: function(e) {
     let t = !1;
-    for (let n of e.messages) t = D(n.thread) || t;
+    for (let n of e.messages) t = v(n.thread) || t;
     if (e.isAfter || e.isBefore || e.hasMoreAfter) return t;
     let n = f.default.getChannel(e.channelId);
     if (null == n || !E.THREAD_CHANNEL_TYPES.has(n.type)) return t;
@@ -251,7 +251,7 @@ a = "ThreadMessageStore", (s = "displayName") in(r = P) ? Object.defineProperty(
     let {
       data: t
     } = e, n = !1;
-    for (let e of (0, _.getThreadsFromGuildFeedFetch)(t)) n = D(e) || n;
+    for (let e of (0, _.getThreadsFromGuildFeedFetch)(t)) n = v(e) || n;
     return n
   }
 })

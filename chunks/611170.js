@@ -1,36 +1,36 @@
 "use strict";
-n.r(t), n.d(t, {
+t.r(n), t.d(n, {
   renderImageComponentForGalleryItem: function() {
     return r
   },
   renderVideoComponentForGalleryItem: function() {
-    return s
+    return u
   }
 });
-var l = n("591759"),
-  a = n("524444");
+var l = t("591759"),
+  a = t("524444");
 
 function r(e) {
-  let t = e.item.originalItem.media;
+  let n = e.item.originalItem.media;
   return (0, a.renderImageComponent)({
     ...e,
     alt: e.item.originalItem.description,
-    src: t.proxyUrl,
-    original: t.url,
-    placeholder: t.placeholder,
-    placeholderVersion: t.placeholderVersion
+    src: n.proxyUrl,
+    original: n.url,
+    placeholder: n.placeholder,
+    placeholderVersion: n.placeholderVersion
   })
 }
 
-function s(e) {
-  let t = e.item.originalItem.media,
-    n = l.default.toURLSafe(t.proxyUrl);
-  return null == n ? null : (n.searchParams.append("format", "jpeg"), (0, a.renderVideoComponent)({
+function u(e) {
+  let n = e.item.originalItem.media,
+    t = l.default.toURLSafe(n.proxyUrl);
+  return null == t ? null : (t.searchParams.append("format", "jpeg"), (0, a.renderVideoComponent)({
     ...e,
-    poster: n.toString(),
+    poster: t.toString(),
     alt: e.item.originalItem.description,
-    src: t.proxyUrl,
-    placeholder: t.placeholder,
-    placeholderVersion: t.placeholderVersion
+    src: n.proxyUrl,
+    placeholder: n.placeholder,
+    placeholderVersion: n.placeholderVersion
   }))
 }

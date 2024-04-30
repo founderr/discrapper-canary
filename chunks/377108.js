@@ -88,7 +88,7 @@ class o extends s.MessageType {
           r.applicationFrecency = P.internalBinaryRead(e, e.uint32(), n, r.applicationFrecency);
           break;
         case 10:
-          r.heardSoundFrecency = D.internalBinaryRead(e, e.uint32(), n, r.heardSoundFrecency);
+          r.heardSoundFrecency = v.internalBinaryRead(e, e.uint32(), n, r.heardSoundFrecency);
           break;
         case 11:
           r.playedSoundFrecency = M.internalBinaryRead(e, e.uint32(), n, r.playedSoundFrecency);
@@ -106,7 +106,7 @@ class o extends s.MessageType {
     return r
   }
   internalBinaryWrite(e, t, n) {
-    e.versions && a.Versions.internalBinaryWrite(e.versions, t.tag(1, s.WireType.LengthDelimited).fork(), n).join(), e.favoriteGifs && d.internalBinaryWrite(e.favoriteGifs, t.tag(2, s.WireType.LengthDelimited).fork(), n).join(), e.favoriteStickers && I.internalBinaryWrite(e.favoriteStickers, t.tag(3, s.WireType.LengthDelimited).fork(), n).join(), e.stickerFrecency && f.internalBinaryWrite(e.stickerFrecency, t.tag(4, s.WireType.LengthDelimited).fork(), n).join(), e.favoriteEmojis && h.internalBinaryWrite(e.favoriteEmojis, t.tag(5, s.WireType.LengthDelimited).fork(), n).join(), e.emojiFrecency && m.internalBinaryWrite(e.emojiFrecency, t.tag(6, s.WireType.LengthDelimited).fork(), n).join(), e.applicationCommandFrecency && p.internalBinaryWrite(e.applicationCommandFrecency, t.tag(7, s.WireType.LengthDelimited).fork(), n).join(), e.favoriteSoundboardSounds && g.internalBinaryWrite(e.favoriteSoundboardSounds, t.tag(8, s.WireType.LengthDelimited).fork(), n).join(), e.applicationFrecency && P.internalBinaryWrite(e.applicationFrecency, t.tag(9, s.WireType.LengthDelimited).fork(), n).join(), e.heardSoundFrecency && D.internalBinaryWrite(e.heardSoundFrecency, t.tag(10, s.WireType.LengthDelimited).fork(), n).join(), e.playedSoundFrecency && M.internalBinaryWrite(e.playedSoundFrecency, t.tag(11, s.WireType.LengthDelimited).fork(), n).join(), e.guildAndChannelFrecency && b.internalBinaryWrite(e.guildAndChannelFrecency, t.tag(12, s.WireType.LengthDelimited).fork(), n).join();
+    e.versions && a.Versions.internalBinaryWrite(e.versions, t.tag(1, s.WireType.LengthDelimited).fork(), n).join(), e.favoriteGifs && d.internalBinaryWrite(e.favoriteGifs, t.tag(2, s.WireType.LengthDelimited).fork(), n).join(), e.favoriteStickers && I.internalBinaryWrite(e.favoriteStickers, t.tag(3, s.WireType.LengthDelimited).fork(), n).join(), e.stickerFrecency && f.internalBinaryWrite(e.stickerFrecency, t.tag(4, s.WireType.LengthDelimited).fork(), n).join(), e.favoriteEmojis && h.internalBinaryWrite(e.favoriteEmojis, t.tag(5, s.WireType.LengthDelimited).fork(), n).join(), e.emojiFrecency && m.internalBinaryWrite(e.emojiFrecency, t.tag(6, s.WireType.LengthDelimited).fork(), n).join(), e.applicationCommandFrecency && p.internalBinaryWrite(e.applicationCommandFrecency, t.tag(7, s.WireType.LengthDelimited).fork(), n).join(), e.favoriteSoundboardSounds && g.internalBinaryWrite(e.favoriteSoundboardSounds, t.tag(8, s.WireType.LengthDelimited).fork(), n).join(), e.applicationFrecency && P.internalBinaryWrite(e.applicationFrecency, t.tag(9, s.WireType.LengthDelimited).fork(), n).join(), e.heardSoundFrecency && v.internalBinaryWrite(e.heardSoundFrecency, t.tag(10, s.WireType.LengthDelimited).fork(), n).join(), e.playedSoundFrecency && M.internalBinaryWrite(e.playedSoundFrecency, t.tag(11, s.WireType.LengthDelimited).fork(), n).join(), e.guildAndChannelFrecency && b.internalBinaryWrite(e.guildAndChannelFrecency, t.tag(12, s.WireType.LengthDelimited).fork(), n).join();
     let i = n.writeUnknownFields;
     return !1 !== i && (!0 == i ? s.UnknownFieldHandler.onWrite : i)(this.typeName, e, t), t
   }
@@ -160,7 +160,7 @@ class o extends s.MessageType {
       no: 10,
       name: "heard_sound_frecency",
       kind: "message",
-      T: () => D
+      T: () => v
     }, {
       no: 11,
       name: "played_sound_frecency",
@@ -796,8 +796,8 @@ class L extends s.MessageType {
     }])
   }
 }
-let D = new L;
-class v extends s.MessageType {
+let v = new L;
+class D extends s.MessageType {
   create(e) {
     let t = {
       playedSounds: {}
@@ -859,7 +859,7 @@ class v extends s.MessageType {
     }])
   }
 }
-let M = new v;
+let M = new D;
 class y extends s.MessageType {
   create(e) {
     let t = {

@@ -233,8 +233,8 @@ let p = {
     maxAge: 1 * I.default.Millis.MINUTE,
     updateAgeOnGet: !0
   },
-  D = new(a())(L),
-  v = new(a())(L);
+  v = new(a())(L),
+  D = new(a())(L);
 
 function M(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -257,7 +257,7 @@ function M(e, t) {
       let l = e.substring(s, n);
       "" !== l && (function(e, t, n) {
         let i = [],
-          r = n ? v : D,
+          r = n ? D : v,
           s = r.get(e);
         if (null != s) return s;
         let a = e.replace(/\r\n/g, " \n").replace(/[\r\f]/g, " ").replace(/\t/g, " ") + "\n\n",

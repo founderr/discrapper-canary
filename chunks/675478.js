@@ -19,10 +19,10 @@ n.r(t), n.d(t, {
     return M
   },
   clearDismissedContents: function() {
-    return v
+    return D
   },
   removeDismissedContent: function() {
-    return D
+    return v
   },
   updateUserChannelSettings: function() {
     return g
@@ -300,14 +300,14 @@ function L(e) {
   }, f.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
-function D(e) {
+function v(e) {
   return p.updateAsync("userContent", t => {
     if (!(0, c.hasBit)(t.dismissedContents, e)) return !1;
     t.dismissedContents = (0, c.removeBit)(t.dismissedContents, e)
   }, f.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
-function v() {
+function D() {
   return p.updateAsync("userContent", e => {
     e.dismissedContents = new Uint8Array
   }, f.UserSettingsDelay.INFREQUENT_USER_ACTION)

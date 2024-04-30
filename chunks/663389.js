@@ -21,9 +21,9 @@ let E = c.FormStates.CLOSED,
   C = null,
   g = [],
   L = null,
-  D = null;
+  v = null;
 
-function v(e) {
+function D(e) {
   var t, n, i, r, s, a;
   let o = _.default.getCurrentUser();
   if (null == o) return M();
@@ -40,11 +40,11 @@ function v(e) {
         claimed: o.isClaimed()
       }
     }
-  }, R = null !== (i = e.onClose) && void 0 !== i ? i : null, C = null !== (r = e.analyticsLocation) && void 0 !== r ? r : null, g = null !== (s = e.analyticsLocations) && void 0 !== s ? s : [], D = null !== (a = e.impressionSource) && void 0 !== a ? a : null
+  }, R = null !== (i = e.onClose) && void 0 !== i ? i : null, C = null !== (r = e.analyticsLocation) && void 0 !== r ? r : null, g = null !== (s = e.analyticsLocations) && void 0 !== s ? s : [], v = null !== (a = e.impressionSource) && void 0 !== a ? a : null
 }
 
 function M() {
-  E = c.FormStates.CLOSED, N = !1, A = null, L = null, m = null, I = null, T = null, f = {}, S = {}, R = null, C = null, g = [], D = null
+  E = c.FormStates.CLOSED, N = !1, A = null, L = null, m = null, I = null, T = null, f = {}, S = {}, R = null, C = null, g = [], v = null
 }
 
 function y() {
@@ -88,7 +88,7 @@ class P extends(a = u.default.Store) {
       analyticsLocation: C,
       analyticsLocations: g,
       initialSection: L,
-      impressionSource: D
+      impressionSource: v
     }
   }
   get onClose() {
@@ -102,9 +102,9 @@ s = "UserSettingsModalStore", (r = "displayName") in(i = P) ? Object.definePrope
   writable: !0
 }) : i[r] = s, t.default = new P(d.default, {
   USER_SETTINGS_MODAL_OPEN: function(e) {
-    N = !0, v(e)
+    N = !0, D(e)
   },
-  USER_SETTINGS_MODAL_INIT: v,
+  USER_SETTINGS_MODAL_INIT: D,
   USER_SETTINGS_MODAL_CLOSE: M,
   LOGOUT: M,
   USER_SETTINGS_MODAL_SUBMIT: function() {
@@ -161,7 +161,7 @@ s = "UserSettingsModalStore", (r = "displayName") in(i = P) ? Object.definePrope
     })
   },
   DRAWER_SELECT_TAB: function(e) {
-    return O = e.tab, null == T && O === c.DrawerTabTypes.USER_SETTINGS && v({
+    return O = e.tab, null == T && O === c.DrawerTabTypes.USER_SETTINGS && D({
       type: "USER_SETTINGS_MODAL_INIT",
       section: null,
       subsection: null,

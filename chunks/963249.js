@@ -34,8 +34,8 @@ function T(e) {
     subscriptionTier: C,
     trialId: g,
     postSuccessGuild: L,
-    openInvoiceId: D,
-    applicationId: v,
+    openInvoiceId: v,
+    applicationId: D,
     referralTrialOfferId: M,
     giftRecipient: y,
     returnRef: P,
@@ -75,8 +75,8 @@ function T(e) {
         trialId: g,
         postSuccessGuild: L,
         planGroup: I.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
-        openInvoiceId: D,
-        applicationId: v,
+        openInvoiceId: v,
+        applicationId: D,
         referralTrialOfferId: M,
         returnRef: P,
         subscription: U,
@@ -94,7 +94,7 @@ function T(e) {
         subscription_type: E.SubscriptionTypes.PREMIUM,
         is_gift: O,
         eligible_for_trial: null != g,
-        application_id: v,
+        application_id: D,
         location_stack: A
       }), (0, a.clearError)(), (0, o.clearPurchaseTokenAuthState)(), null == f || f(G), G && (null == h || h())
     }

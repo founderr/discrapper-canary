@@ -162,8 +162,8 @@ class g extends(r = o.Component) {
       tabIndex: R,
       limitResponsiveWidth: C,
       useFullWidth: L,
-      placeholder: D,
-      placeholderVersion: v
+      placeholder: v,
+      placeholderVersion: D
     } = this.props, {
       readyState: M,
       hasMouseOver: y,
@@ -184,8 +184,8 @@ class g extends(r = o.Component) {
       width: G,
       height: w,
       src: "",
-      placeholder: D,
-      placeholderVersion: v,
+      placeholder: v,
+      placeholderVersion: D,
       children: null != _ ? e => {
         let {
           src: t,

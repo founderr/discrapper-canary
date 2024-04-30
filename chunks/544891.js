@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return R
   },
   setAwaitOnline: function() {
-    return D
+    return v
   },
   setRequestPatch: function() {
     return g
@@ -214,6 +214,6 @@ function g(e) {
 }
 let L = () => Promise.resolve();
 
-function D(e) {
+function v(e) {
   L = e
 }

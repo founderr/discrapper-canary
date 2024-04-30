@@ -24,7 +24,7 @@ t.default = e => {
     root_node_id: m,
     success_node_id: N,
     fail_node_id: p
-  } = n, [O, R] = r.useState(m), [C, g] = r.useState(void 0), [L, D] = r.useState(void 0), [v, M] = r.useState([]), [y, P] = r.useState(void 0), U = e => {
+  } = n, [O, R] = r.useState(m), [C, g] = r.useState(void 0), [L, v] = r.useState(void 0), [D, M] = r.useState([]), [y, P] = r.useState(void 0), U = e => {
     var n;
     let {
       destination: i
@@ -33,7 +33,7 @@ t.default = e => {
       ...e,
       destination: ["", s.button.target]
     });
-    if (M([...v, e]), null != s.key && (null == T || T(s.key)), g(void 0), D(void 0), t.name === l.ReportNames.MESSAGE || t.name === l.ReportNames.FIRST_DM) {
+    if (M([...D, e]), null != s.key && (null == T || T(s.key)), g(void 0), v(void 0), t.name === l.ReportNames.MESSAGE || t.name === l.ReportNames.FIRST_DM) {
       let e = t.record.id;
       a.default.trackWithMetadata(_.AnalyticEvents.IAR_NAVIGATE, {
         message_id: e,
@@ -46,13 +46,13 @@ t.default = e => {
     R(r)
   }, b = async e => {
     var i;
-    let r = S ? await (0, u.submitReport)(n, t, [...v, e]) : await (0, u.submitUnauthenticatedReport)(n, t, [...v, e], f),
+    let r = S ? await (0, u.submitReport)(n, t, [...D, e]) : await (0, u.submitUnauthenticatedReport)(n, t, [...D, e], f),
       s = null == r ? void 0 : null === (i = r.body) || void 0 === i ? void 0 : i.report_id;
     null != s && P(s), null == I || I(s)
   }, G = () => {
     var e, n;
-    if (v.length < 1) return;
-    let i = [...v],
+    if (D.length < 1) return;
+    let i = [...D],
       r = i.pop(),
       s = null !== (n = null == r ? void 0 : r.nodeRef) && void 0 !== n ? n : m;
     if (t.name === l.ReportNames.MESSAGE || t.name === l.ReportNames.FIRST_DM) {
@@ -65,7 +65,7 @@ t.default = e => {
         next_node: A[s].id
       })
     }
-    g(null == r ? void 0 : null === (e = r.multiSelect) || void 0 === e ? void 0 : e.state), D(null == r ? void 0 : r.textInput), R(s), M(i), null == T || T("..")
+    g(null == r ? void 0 : null === (e = r.multiSelect) || void 0 === e ? void 0 : e.state), v(null == r ? void 0 : r.textInput), R(s), M(i), null == T || T("..")
   }, w = [], B = [];
   for (let e in A) {
     var k, V;
@@ -96,7 +96,7 @@ t.default = e => {
           children: (0, i.jsx)(d.default, {
             node: e,
             reportType: t,
-            history: v,
+            history: D,
             onModalClose: E.onClose,
             onSelectChild: U,
             onNavigateBack: G,

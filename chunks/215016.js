@@ -50,12 +50,12 @@ function L(e) {
   return null !== (t = e.id) && void 0 !== t ? t : e.src
 }
 
-function D(e, t) {
+function v(e, t) {
   let n = g[t];
   return null == n ? 0 : n.height
 }
 
-function v(e, t, n, r) {
+function D(e, t, n, r) {
   if (!(e > 0)) return null == g[t] ? null : (0, i.jsx)("div", {
     className: p.placeholder,
     style: {
@@ -372,8 +372,8 @@ class U extends r.PureComponent {
         columns: e,
         itemGutter: 12,
         getItemKey: M,
-        getItemHeight: D,
-        renderItem: v,
+        getItemHeight: v,
+        renderItem: D,
         chunkSize: 128
       }, s) : (0, i.jsx)(c.MasonryList, {
         ref: this._masonryRef,

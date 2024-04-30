@@ -63,20 +63,20 @@ function S(e) {
     } = r.useContext(l.AccessibilityPreferencesContext),
     g = r.useContext(c.default),
     L = m[p].impressionName,
-    D = {
+    v = {
       ...m[p].impressionProperties,
       location_stack: N
     };
   g({
     type: a.ImpressionTypes.MODAL,
     name: L,
-    properties: D,
+    properties: v,
     _stackContext: {
       isSlide: !0
     }
   });
   let {
-    ref: v,
+    ref: D,
     width: M = 0,
     height: y = 0
   } = (0, u.default)(p), P = {
@@ -132,7 +132,7 @@ function S(e) {
         key: r
       } = n;
       return (0, i.jsx)(s.animated.div, {
-        ref: t === p ? v : null,
+        ref: t === p ? D : null,
         style: {
           position: "absolute",
           display: h,

@@ -25,7 +25,7 @@ let R = (0, h.uid)(),
   C = _.default.convert.fromCodePoint("1f44f"),
   g = (0, m.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
   L = (0, m.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
-  D = e => {
+  v = e => {
     let {
       fade: t,
       surrogate: n,
@@ -70,7 +70,7 @@ let R = (0, h.uid)(),
       })
     })
   },
-  v = e => {
+  D = e => {
     let {
       id: t,
       selectedSurrogate: n,
@@ -106,7 +106,7 @@ let R = (0, h.uid)(),
             }),
             style: c,
             role: "listbox",
-            children: E.map((e, t) => (0, i.jsx)(D, {
+            children: E.map((e, t) => (0, i.jsx)(v, {
               index: t,
               fade: 0 !== t,
               delay: 20 * t,
@@ -149,7 +149,7 @@ t.default = e => {
       onKeyDown: e => {
         e.keyCode === N.KeyboardKeys.ESCAPE && (e.stopPropagation(), u(!1), null != _.current && _.current.focus())
       },
-      children: (0, i.jsx)(v, {
+      children: (0, i.jsx)(D, {
         id: R,
         hasTabWrapper: a,
         selectedSurrogate: n,

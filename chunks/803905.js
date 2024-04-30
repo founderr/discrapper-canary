@@ -25,7 +25,7 @@ n.r(t), n.d(t, {
     return h
   },
   CUSTOM_NOTIFICATION_SOUNDS: function() {
-    return v
+    return D
   },
   EMOJIS_EVERYWHERE: function() {
     return E
@@ -67,7 +67,7 @@ n.r(t), n.d(t, {
     return I
   },
   STREAM_HIGH_QUALITY: function() {
-    return D
+    return v
   },
   STREAM_MID_QUALITY: function() {
     return L
@@ -128,8 +128,8 @@ let c = new _(i.EntitlementFeatureNames.ANIMATED_EMOJIS),
   C = new _("boostDiscount"),
   g = new _("freeBoosts"),
   L = new _(i.EntitlementFeatureNames.STREAM_MID_QUALITY),
-  D = new _(i.EntitlementFeatureNames.STREAM_HIGH_QUALITY),
-  v = new _(i.EntitlementFeatureNames.CUSTOM_NOTIFICATION_SOUNDS),
+  v = new _(i.EntitlementFeatureNames.STREAM_HIGH_QUALITY),
+  D = new _(i.EntitlementFeatureNames.CUSTOM_NOTIFICATION_SOUNDS),
   M = new _("fancyVoiceChannelReactions"),
   y = new _("installPremiumApplications"),
   P = new _("redeemPremiumPerks"),
@@ -142,7 +142,7 @@ let b = new _(i.EntitlementFeatureNames.INCREASED_GUILD_LIMIT),
   k = Object.freeze({
     [l.PremiumSubscriptionSKUs.TIER_0]: new o.default(l.PremiumSubscriptionSKUs.TIER_0, [c, E, I, m, U, w, B, O]),
     [l.PremiumSubscriptionSKUs.TIER_1]: new o.default(l.PremiumSubscriptionSKUs.TIER_1, [c, E, S, h, m, C, L, M, w, B, O]),
-    [l.PremiumSubscriptionSKUs.TIER_2]: new o.default(l.PremiumSubscriptionSKUs.TIER_2, [c, E, I, T, f, S, h, A, m, N, R, C, g, L, D, M, y, P, U, b, G, w, B, O, p, v])
+    [l.PremiumSubscriptionSKUs.TIER_2]: new o.default(l.PremiumSubscriptionSKUs.TIER_2, [c, E, I, T, f, S, h, A, m, N, R, C, g, L, v, M, y, P, U, b, G, w, B, O, p, D])
   });
 
 function V(e, t) {

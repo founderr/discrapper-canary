@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return L
   },
   ClanDiscoveryCardView: function() {
-    return v
+    return D
   }
 }), n("47120");
 var i = n("735250"),
@@ -124,7 +124,7 @@ function L(e) {
   })
 }
 
-function D(e) {
+function v(e) {
   let {
     games: t
   } = e, n = t.filter(e => null != e && null != e.icon), s = n.slice(0, 3), a = r.useMemo(() => {
@@ -190,7 +190,7 @@ function D(e) {
   })
 }
 
-function v(e) {
+function D(e) {
   var t, n;
   let {
     clan: r,
@@ -209,7 +209,7 @@ function v(e) {
     }
   } = r, N = (0, u.default)(r.games), g = O.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
     count: r.memberCount
-  }), v = null !== (t = A.default.getGuildIconURL({
+  }), D = null !== (t = A.default.getGuildIconURL({
     id: r.id,
     icon: r.icon,
     size: 64,
@@ -238,7 +238,7 @@ function v(e) {
           className: R.cardNameAndTagWrapper,
           children: [(0, i.jsx)(c.ClanGuildIconSimple, {
             guildName: r.name,
-            guildIconURL: v,
+            guildIconURL: D,
             iconSize: 64,
             className: R.clanIcon
           }), (0, i.jsx)("div", {
@@ -314,7 +314,7 @@ function v(e) {
         })
       }), (0, i.jsx)("div", {
         className: R.cardFooterGames,
-        children: (0, i.jsx)(D, {
+        children: (0, i.jsx)(v, {
           games: N
         })
       })]
@@ -366,7 +366,7 @@ t.default = function(e) {
   return (0, i.jsx)(o.Clickable, {
     onClick: _,
     className: R.clickableCard,
-    children: (0, i.jsx)(v, {
+    children: (0, i.jsx)(D, {
       ...e,
       isMember: d
     })

@@ -34,8 +34,8 @@ function d(e) {
     renderHeaderAccessories: C,
     rowHeight: g,
     sectionHeaderHeight: L,
-    sectionFooterHeight: D,
-    itemNodeWidth: v,
+    sectionFooterHeight: v,
+    itemNodeWidth: D,
     listPaddingRight: M,
     itemNodeMargin: y,
     listPadding: P,
@@ -57,13 +57,13 @@ function d(e) {
     collapsedCategories: n,
     gridWidth: H,
     listPaddingRight: M,
-    itemNodeWidth: v,
+    itemNodeWidth: D,
     itemNodeMargin: y
   }), {
-    getItemProps: X,
-    getRowProps: Q,
-    gridContainerProps: q,
-    handleGridContainerKeyDown: Z,
+    getItemProps: Z,
+    getRowProps: X,
+    gridContainerProps: Q,
+    handleGridContainerKeyDown: q,
     isUsingKeyboardNavigation: J
   } = (0, a.useKeyboardNavigation)({
     columnCounts: K,
@@ -72,11 +72,11 @@ function d(e) {
     onSelectItem: c,
     store: _,
     gridNavigatorId: U
-  }), $ = r.useCallback(e => h(Y[e], Q(e), {
+  }), $ = r.useCallback(e => h(Y[e], X(e), {
     isUsingKeyboardNavigation: J.current,
     gutterWidth: z,
     rowIndex: e
-  }, t => X(e, t), t => _.setInspectedExpressionPosition(t, e)), [Y, X, Q, z, J, h, _]), ee = r.useCallback(e => null == A ? void 0 : A(t[e]), [t, A]), et = r.useCallback(e => null == m ? void 0 : m(t[e], e), [t, m]), en = r.useCallback(e => null == N ? void 0 : N(t[e]), [t, N]), ei = r.useCallback(() => {
+  }, t => Z(e, t), t => _.setInspectedExpressionPosition(t, e)), [Y, Z, X, z, J, h, _]), ee = r.useCallback(e => null == A ? void 0 : A(t[e]), [t, A]), et = r.useCallback(e => null == m ? void 0 : m(t[e], e), [t, m]), en = r.useCallback(e => null == N ? void 0 : N(t[e]), [t, N]), ei = r.useCallback(() => {
     var e;
     return null == p ? void 0 : p(null == Y ? void 0 : null === (e = Y[F.rowIndex]) || void 0 === e ? void 0 : e[F.columnIndex])
   }, [Y, F.columnIndex, F.rowIndex, p]);
@@ -91,7 +91,7 @@ function d(e) {
       ref: k,
       store: _,
       hasSendableExpressions: !0,
-      onKeyDown: Z,
+      onKeyDown: q,
       expressionsListRef: B,
       gridNavigatorId: U,
       defaultSearchPlaceholder: T,
@@ -110,7 +110,7 @@ function d(e) {
         ref: w,
         className: u.listWrapper,
         id: U,
-        ...q,
+        ...Q,
         children: null != H ? (0, i.jsx)(o.default, {
           ref: B,
           store: _,
@@ -126,7 +126,7 @@ function d(e) {
           rowCountBySection: W,
           rowHeight: g,
           sectionHeaderHeight: L,
-          sectionFooterHeight: D
+          sectionFooterHeight: v
         }) : null
       })]
     })]

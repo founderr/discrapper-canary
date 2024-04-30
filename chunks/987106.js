@@ -1,49 +1,49 @@
 "use strict";
-n.r(t), n.d(t, {
+t.r(n), t.d(n, {
   default: function() {
     return v
   }
 });
-var l = n("735250");
-n("470079");
-var a = n("120356"),
-  r = n.n(a),
-  s = n("481060"),
-  u = n("239091"),
-  o = n("596454"),
-  i = n("911969"),
-  d = n("441957"),
-  c = n("572004"),
-  m = n("49012"),
-  p = n("970184"),
-  f = n("280501"),
-  C = n("689938"),
-  S = n("363886");
+var l = t("735250");
+t("470079");
+var a = t("120356"),
+  r = t.n(a),
+  u = t("481060"),
+  s = t("239091"),
+  o = t("596454"),
+  i = t("911969"),
+  d = t("441957"),
+  c = t("572004"),
+  m = t("49012"),
+  p = t("970184"),
+  f = t("280501"),
+  C = t("689938"),
+  S = t("363886");
 
 function E(e) {
   let {
-    url: t,
-    onSelect: n
+    url: n,
+    onSelect: t
   } = e;
-  return c.SUPPORTS_COPY && null != t ? (0, l.jsx)(s.Menu, {
+  return c.SUPPORTS_COPY && null != n ? (0, l.jsx)(u.Menu, {
     navId: "component-button",
-    onClose: u.closeContextMenu,
+    onClose: s.closeContextMenu,
     "aria-label": C.default.Messages.MESSAGE_BUTTON_COMPONENT_LINK_CONTEXT_MENU_NAME,
-    onSelect: n,
-    children: (0, l.jsx)(s.MenuGroup, {
-      children: (0, l.jsx)(s.MenuItem, {
+    onSelect: t,
+    children: (0, l.jsx)(u.MenuGroup, {
+      children: (0, l.jsx)(u.MenuItem, {
         id: "copy",
         label: C.default.Messages.MESSAGE_BUTTON_COMPONENT_LINK_CONTEXT_MENU_COPY,
-        action: () => (0, c.copy)(t)
+        action: () => (0, c.copy)(n)
       })
     })
   }) : null
 }
 
 function v(e) {
-  let t;
+  let n;
   let {
-    label: n,
+    label: t,
     style: a,
     disabled: c,
     emoji: C,
@@ -52,59 +52,59 @@ function v(e) {
     executeStateUpdate: N,
     visualState: h,
     isDisabled: T
-  } = (0, p.useComponentState)(e), x = null != n && n.length > 0, y = a === i.ButtonStyle.LINK && null != v && v.length > 0, g = h === f.ActionComponentState.LOADING;
-  return t = y ? () => {
+  } = (0, p.useComponentState)(e), g = null != t && t.length > 0, x = a === i.ButtonStyle.LINK && null != v && v.length > 0, y = h === f.ActionComponentState.LOADING;
+  return n = x ? () => {
     (0, m.handleClick)({
       href: null != v ? v : "",
       shouldConfirm: !0
     })
-  } : () => N(), (0, l.jsxs)(s.Button, {
+  } : () => N(), (0, l.jsxs)(u.Button, {
     color: function(e) {
       switch (e) {
         case i.ButtonStyle.PRIMARY:
-          return s.Button.Colors.BRAND;
+          return u.Button.Colors.BRAND;
         case i.ButtonStyle.SUCCESS:
-          return s.Button.Colors.GREEN;
+          return u.Button.Colors.GREEN;
         case i.ButtonStyle.DESTRUCTIVE:
-          return s.Button.Colors.RED;
+          return u.Button.Colors.RED;
         default:
-          return s.Button.Colors.PRIMARY
+          return u.Button.Colors.PRIMARY
       }
     }(a),
-    size: s.Button.Sizes.SMALL,
+    size: u.Button.Sizes.SMALL,
     disabled: c || h === f.ActionComponentState.DISABLED || T,
-    onClick: t,
+    onClick: n,
     onContextMenu: e => {
-      y && (0, u.openContextMenu)(e, e => (0, l.jsx)(E, {
+      x && (0, s.openContextMenu)(e, e => (0, l.jsx)(E, {
         ...e,
         url: v
       }))
     },
-    role: y ? "link" : "button",
+    role: x ? "link" : "button",
     children: [(0, l.jsxs)("div", {
       className: r()(S.content, {
-        [S.hidden]: g
+        [S.hidden]: y
       }),
-      "aria-hidden": g,
+      "aria-hidden": y,
       children: [null != C ? (0, l.jsx)(o.default, {
         className: r()({
-          [S.textEmoji]: x
+          [S.textEmoji]: g
         }),
         src: C.src,
         emojiId: C.id,
         emojiName: C.name,
         animated: C.animated
-      }) : null, x ? (0, l.jsx)("div", {
+      }) : null, g ? (0, l.jsx)("div", {
         className: S.label,
-        children: n
-      }) : null, y ? (0, l.jsx)(d.default, {
+        children: t
+      }) : null, x ? (0, l.jsx)(d.default, {
         className: S.launchIcon,
         width: 16,
         height: 16
       }) : null]
-    }), g ? (0, l.jsx)("div", {
+    }), y ? (0, l.jsx)("div", {
       className: S.loading,
-      children: (0, l.jsx)(s.Dots, {
+      children: (0, l.jsx)(u.Dots, {
         dotRadius: 3.5,
         themed: !0
       })

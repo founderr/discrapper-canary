@@ -154,9 +154,9 @@ function C(e) {
 }
 let g = String.fromCodePoint(917631),
   L = String.fromCodePoint(127988),
-  D = /^[\u{E0061}-\u{E007A}]$/u;
+  v = /^[\u{E0061}-\u{E007A}]$/u;
 
-function v(e, t) {
+function D(e, t) {
   var n;
   if (!0 !== t && !N.test(e)) return [{
     type: "text",
@@ -169,7 +169,7 @@ function v(e, t) {
     let t = s[e];
     if (null != i && "" !== i) {
       if (t === g) t = i + t, i = "";
-      else if (D.test(t)) {
+      else if (v.test(t)) {
         i += t;
         continue
       } else r.push(C(i)), i = ""
@@ -215,12 +215,12 @@ t.default = {
   },
   maybeTranslateSurrogatesToInlineEmoji: function(e) {
     if (!N.test(e)) return null;
-    let t = v(e, !0).map(e => "text" === e.type ? e.text : e.emojiName).join("");
+    let t = D(e, !0).map(e => "text" === e.type ? e.text : e.emojiName).join("");
     return t === e ? null : t
   },
-  findInlineEmojisFromSurrogates: v,
+  findInlineEmojisFromSurrogates: D,
   translateSurrogatesToInlineEmoji: function(e) {
-    return v(e).map(e => "text" === e.type ? e.text : e.emojiName).join("")
+    return D(e).map(e => "text" === e.type ? e.text : e.emojiName).join("")
   },
   convertNameToSurrogate: M,
   convertSurrogateToName: function(e) {

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   DISABLED_BY_DEFAULT_PERMISSION_FLAG: function() {
-    return D
+    return v
   },
   allChannelsSentinel: function() {
     return g
@@ -34,7 +34,7 @@ n.r(t), n.d(t, {
     return R
   },
   hasAccess: function() {
-    return v
+    return D
   },
   isGuildInUserAppExperiment: function() {
     return k
@@ -260,9 +260,9 @@ function L(e, t, n, i) {
   }) || t.getIntegrations(i.id).length > 0);
   return i.isArchivedLockedThread() ? e.can(u.combine(m.Permissions.USE_APPLICATION_COMMANDS, m.Permissions.MANAGE_THREADS), i) : !!(0, E.isReadableType)(i.type) && e.can(u.combine(m.Permissions.USE_APPLICATION_COMMANDS, m.Permissions.SEND_MESSAGES), i)
 }
-let D = u.deserialize(0);
+let v = u.deserialize(0);
 
-function v(e) {
+function D(e) {
   let {
     PermissionStore: t,
     guild: n,
@@ -278,7 +278,7 @@ function v(e) {
     if ("boolean" == typeof e) return e
   }
   let l = M(i, o, r);
-  return ("boolean" != typeof l || !!l) && (null == a || !u.equals(a, D) && t.can(a, n))
+  return ("boolean" != typeof l || !!l) && (null == a || !u.equals(a, v) && t.can(a, n))
 }
 
 function M(e, t, n) {

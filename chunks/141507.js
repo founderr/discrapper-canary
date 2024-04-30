@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   EmojiPickerInspector: function() {
-    return D
+    return v
   }
 });
 var i = n("735250"),
@@ -40,11 +40,11 @@ let L = e => {
       guildName: n.name
     }) : null
   },
-  D = r.memo(function(e) {
+  v = r.memo(function(e) {
     let t, {
         className: n,
-        emojiGrid: D,
-        guildId: v,
+        emojiGrid: v,
+        guildId: D,
         pickerIntention: M,
         channel: y
       } = e,
@@ -62,8 +62,8 @@ let L = e => {
           rowIndex: t,
           columnIndex: n
         } = U;
-        return null === (e = D[t]) || void 0 === e ? void 0 : e[n]
-      }, [D, U]),
+        return null === (e = v[t]) || void 0 === e ? void 0 : e[n]
+      }, [v, U]),
       G = (null == b ? void 0 : b.type) === p.EmojiGridItemTypes.EMOJI ? null == b ? void 0 : b.emoji : {
         type: "CREATE_EMOJI",
         guildId: null == b ? void 0 : b.guildId,
@@ -73,10 +73,10 @@ let L = e => {
       B = (0, s.useStateFromStores)([T.default], () => T.default.isFocused()),
       k = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion, []),
       V = E.AnimateEmoji.useSetting(),
-      x = (0, A.useIsFavoriteEmoji)(v, g(G) ? G : null),
+      x = (0, A.useIsFavoriteEmoji)(D, g(G) ? G : null),
       {
         newlyAddedEmojis: F
-      } = (0, m.default)(v, M),
+      } = (0, m.default)(D, M),
       H = G.id,
       Y = (null == b ? void 0 : b.type) === p.EmojiGridItemTypes.EMOJI ? b.subCategory : O.EmojiSubCategory.NONE;
     if (r.useEffect(() => {
@@ -86,7 +86,7 @@ let L = e => {
             emoji: G,
             subCategory: Y,
             position: b.columnIndex + 1,
-            newlyAddedHighlight: Y === O.EmojiSubCategory.NEWLY_ADDED_EMOJI && u.default.isNewerThanLastSeen(v, H)
+            newlyAddedHighlight: Y === O.EmojiSubCategory.NEWLY_ADDED_EMOJI && u.default.isNewerThanLastSeen(D, H)
           }))
         }
       }), null == G) return null;
@@ -121,7 +121,7 @@ let L = e => {
       z = P && "CREATE_EMOJI" === G.type ? R.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE : L({
         inspectedEmoji: G,
         channel: y,
-        guildId: v,
+        guildId: D,
         intention: M,
         guild: w
       });

@@ -29,8 +29,8 @@ var i = n("735250"),
   C = n("263704"),
   g = n("441674"),
   L = n("465670"),
-  D = n("748585"),
-  v = n("689938"),
+  v = n("748585"),
+  D = n("689938"),
   M = n("927286");
 let y = {
   keys: ["label"]
@@ -49,12 +49,12 @@ let U = r.forwardRef(function(e, t) {
     closeOnSelect: T = !0,
     onOpen: S,
     onClose: h,
-    placeholder: N = v.default.Messages.SELECT,
+    placeholder: N = D.default.Messages.SELECT,
     wrapperClassName: C,
     className: g,
     isDisabled: U = !1,
     maxVisibleItems: G = 7,
-    look: w = D.SelectLooks.FILLED,
+    look: w = v.SelectLooks.FILLED,
     autoFocus: B = !1,
     popoutPosition: k = "bottom",
     filter: F = !0,
@@ -64,10 +64,10 @@ let U = r.forwardRef(function(e, t) {
     renderOptionPrefix: W = () => null,
     renderOptionSuffix: K = () => null,
     "aria-describedby": z,
-    "aria-invalid": X,
-    "aria-labelledby": Q,
-    "aria-required": q,
-    inputClassNames: Z,
+    "aria-invalid": Z,
+    "aria-labelledby": X,
+    "aria-required": Q,
+    inputClassNames: q,
     centerCaret: J = !1,
     onBlur: $,
     matchSorterOptions: ee,
@@ -148,7 +148,7 @@ let U = r.forwardRef(function(e, t) {
   }), eO = r.useMemo(() => {
     var e, t;
     return e = em, null == (t = s) ? [] : (Array.isArray(t) ? t : [t]).map(t => "object" == typeof t && (null == t || "value" in t) ? t : e.find(e => e.value === t)).filter(Boolean)
-  }, [em, s]), eR = r.useMemo(() => eO.map(e => e.value), [eO]), eC = eO[eO.length - 1], eg = (0, p.default)(eC), eL = r.useId(), eD = r.useId(), ev = r.useId(), eM = r.useCallback(e => {
+  }, [em, s]), eR = r.useMemo(() => eO.map(e => e.value), [eO]), eC = eO[eO.length - 1], eg = (0, p.default)(eC), eL = r.useId(), ev = r.useId(), eD = r.useId(), eM = r.useCallback(e => {
     ec !== e && !U && (eE(e), e ? null == S || S() : null == h || h())
   }, [U, h, S, ec]), ey = r.useCallback(e => {
     ec && !e && eM(!1)
@@ -180,7 +180,7 @@ let U = r.forwardRef(function(e, t) {
       })
     }), []),
     ew = (0, u.default)({
-      id: eD,
+      id: ev,
       defaultFocused: null != eC ? String(eC.value) : void 0,
       scrollToStart: eb,
       scrollToEnd: eG,
@@ -342,7 +342,7 @@ let U = r.forwardRef(function(e, t) {
               },
               className: a()(M.select, M.searchable, g, {
                 [M.open]: s,
-                [M.lookFilled]: w === D.SelectLooks.FILLED,
+                [M.lookFilled]: w === v.SelectLooks.FILLED,
                 [M.disabled]: U,
                 [M.multi]: I,
                 [M.selectPositionTop]: "top" === o
@@ -361,9 +361,9 @@ let U = r.forwardRef(function(e, t) {
                   isEditing: ef,
                   inputRef: eu,
                   "aria-describedby": null != z ? z : es,
-                  "aria-required": q,
-                  "aria-invalid": null != X ? X : null != ea,
-                  "aria-labelledby": null != Q ? Q : er,
+                  "aria-required": Q,
+                  "aria-invalid": null != Z ? Z : null != ea,
+                  "aria-labelledby": null != X ? X : er,
                   "aria-expanded": n,
                   setInputRef: e => {
                     u.current = e, eu.current = e
@@ -381,14 +381,14 @@ let U = r.forwardRef(function(e, t) {
                   },
                   activeDescendant: ed,
                   placeholder: N,
-                  inputId: ev,
+                  inputId: eD,
                   listboxId: eL,
-                  navigatorId: eD,
+                  navigatorId: ev,
                   selectValue: function(e) {
                     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
                     eV(e, t)
                   },
-                  inputClassNames: Z
+                  inputClassNames: q
                 })
               })
             })
@@ -399,8 +399,8 @@ let U = r.forwardRef(function(e, t) {
             }),
             ref: en,
             children: [d && (null != eI && "" !== eI || eO.length > 0) ? (0, i.jsx)(_.Clickable, {
-              "aria-label": v.default.Messages.CLEAR,
-              "aria-controls": ev,
+              "aria-label": D.default.Messages.CLEAR,
+              "aria-controls": eD,
               onClick: ex,
               children: (0, i.jsx)(L.default, {
                 width: 16,
@@ -411,8 +411,8 @@ let U = r.forwardRef(function(e, t) {
               className: a()({
                 [M.iconsCenter]: J
               }),
-              "aria-label": ec ? v.default.Messages.CLOSE : v.default.Messages.OPEN,
-              "aria-controls": ev,
+              "aria-label": ec ? D.default.Messages.CLOSE : D.default.Messages.OPEN,
+              "aria-controls": eD,
               onClick: () => {
                 eM(!ec)
               },
@@ -471,7 +471,7 @@ function b(e) {
     children: (0, i.jsx)(h.Text, {
       color: "text-muted",
       variant: "text-md/normal",
-      children: v.default.Messages.NO_RESULTS_FOUND
+      children: D.default.Messages.NO_RESULTS_FOUND
     })
   }) : (0, i.jsx)(u.ListNavigatorContainer, {
     children: e => {
@@ -860,7 +860,7 @@ function H(e) {
         className: M.suffix,
         children: u
       }), (0, i.jsx)(I.HiddenVisually, {
-        children: v.default.Messages.REMOVE
+        children: D.default.Messages.REMOVE
       }), (0, i.jsx)(L.default, {
         className: M.deleteOptionIcon,
         width: 14,

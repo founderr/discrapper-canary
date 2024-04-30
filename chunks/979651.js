@@ -28,7 +28,7 @@ function L(e, t) {
   return null == n && (n = {}, e[t] = n), n
 }
 
-function D(e) {
+function v(e) {
   var t;
   let n = null !== (t = A[T.ME]) && void 0 !== t ? t : {},
     i = {};
@@ -37,7 +37,7 @@ function D(e) {
   }), A[T.ME] = i
 }
 
-function v(e) {
+function D(e) {
   var t;
   return null !== (t = N.get(e)) && void 0 !== t ? t : new Set
 }
@@ -52,14 +52,14 @@ function M(e, t, n) {
     ;
     let n;
     delete o[t], null != l.channelId && (delete L(p, l.channelId)[t], delete L(O, l.channelId)[t]), null != l.sessionId && delete L(R, t)[l.sessionId];
-    i = null != e ? e : T.ME, r = t, !(n = v(i)).has(r) || ((n = new Set(n)).delete(r), 0 === n.size ? N.delete(i) : N.set(i, n))
+    i = null != e ? e : T.ME, r = t, !(n = D(i)).has(r) || ((n = new Set(n)).delete(r), 0 === n.size ? N.delete(i) : N.set(i, n))
   }
   if (null != u) {
     if (o[t] = u, null != u.channelId && (L(p, u.channelId)[t] = u, u.selfVideo)) {
       ;
       let n;
       L(O, u.channelId)[t] = u;
-      s = null != e ? e : T.ME, a = t, (n = v(s)).has(a) || ((n = new Set(n)).add(a), N.set(s, n))
+      s = null != e ? e : T.ME, a = t, (n = D(s)).has(a) || ((n = new Set(n)).add(a), N.set(s, n))
     }
     null != u.sessionId && (L(R, t)[u.sessionId] = u)
   }
@@ -209,13 +209,13 @@ l = "VoiceStateStore", (o = "displayName") in(a = U) ? Object.defineProperty(a, 
     let {
       channel: t
     } = e;
-    D(t.id)
+    v(t.id)
   },
   CALL_DELETE: function(e) {
     let {
       channelId: t
     } = e;
-    D(t)
+    v(t)
   },
   PASSIVE_UPDATE_V1: function(e) {
     var t, n;

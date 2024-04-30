@@ -119,7 +119,7 @@ let f = () => ({
     icon: s.default,
     description: T.default.Messages.PREMIUM_GUILD_USER_FEATURE_OTHERS
   }),
-  D = function() {
+  v = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : T.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_OTHER;
     return {
       color: i.default.unsafe_rawColors.PREMIUM_PERK_BLUE.css,
@@ -127,7 +127,7 @@ let f = () => ({
       description: e
     }
   },
-  v = () => ({
+  D = () => ({
     color: i.default.unsafe_rawColors.PREMIUM_PERK_PURPLE.css,
     icon: E.default,
     description: T.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_FILE_UPLOAD_TIER_3
@@ -142,27 +142,27 @@ let f = () => ({
   };
 
 function y() {
-  return [m(), h(), N(), D()]
+  return [m(), h(), N(), v()]
 }
 
 function P() {
-  return [m(), p(I.BoostedGuildTiers.TIER_2), M(), D()]
+  return [m(), p(I.BoostedGuildTiers.TIER_2), M(), v()]
 }
 
 function U() {
-  return [p(I.BoostedGuildTiers.TIER_3, i.default.unsafe_rawColors.PREMIUM_PERK_GREEN.css), v(), O(), D()]
+  return [p(I.BoostedGuildTiers.TIER_3, i.default.unsafe_rawColors.PREMIUM_PERK_GREEN.css), D(), O(), v()]
 }
 
 function b() {
-  return [O(), A(), p(I.BoostedGuildTiers.TIER_3), D()]
+  return [O(), A(), p(I.BoostedGuildTiers.TIER_3), v()]
 }
 
 function G() {
-  return [f(), N(), S(), D()]
+  return [f(), N(), S(), v()]
 }
 
 function w() {
-  return [N(), D()]
+  return [N(), v()]
 }
 
 function B() {

@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return U
   },
   isChannelFull: function() {
-    return v
+    return D
   },
   permissionOverwriteForRole: function() {
     return L
@@ -28,7 +28,7 @@ n.r(t), n.d(t, {
     return g
   },
   permissionOverwritesForAnnouncement: function() {
-    return D
+    return v
   },
   permissionOverwritesForRoles: function() {
     return C
@@ -103,7 +103,7 @@ function L(e, t) {
   return R(e, t, r.PermissionOverwriteType.ROLE)
 }
 
-function D(e) {
+function v(e) {
   return [{
     id: e,
     type: r.PermissionOverwriteType.ROLE,
@@ -112,7 +112,7 @@ function D(e) {
   }]
 }
 
-function v(e, t, n) {
+function D(e, t, n) {
   var i, r;
   let s = e.getGuildId(),
     o = n.getGuild(s),

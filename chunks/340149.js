@@ -3,7 +3,7 @@ s.r(t);
 var E = s("735250");
 s("470079");
 var _ = s("960259"),
-  a = s("933632"),
+  a = s("338040"),
   n = s("325767");
 t.default = (0, _.replaceIcon)(function(e) {
   let {

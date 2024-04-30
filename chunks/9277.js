@@ -36,8 +36,8 @@ t.default = r.memo(r.forwardRef(function(e, t) {
       (0, _.toggleExpressionPicker)(f.ExpressionPickerViewType.GIF, s)
     }, [s]),
     {
-      Component: D,
-      events: v,
+      Component: v,
+      events: D,
       play: M
     } = (0, u.useGifLottie)();
   if (n) return null;
@@ -51,8 +51,8 @@ t.default = r.memo(r.forwardRef(function(e, t) {
       ...e,
       children: (0, i.jsx)(E.default, {
         innerClassName: h.button,
-        onMouseEnter: v.onMouseEnter,
-        onMouseLeave: v.onMouseLeave,
+        onMouseEnter: D.onMouseEnter,
+        onMouseLeave: D.onMouseLeave,
         onClick: () => {
           L(), M()
         },
@@ -62,7 +62,7 @@ t.default = r.memo(r.forwardRef(function(e, t) {
         "aria-expanded": y,
         "aria-haspopup": "dialog",
         "aria-controls": R,
-        children: (0, i.jsx)(D, {
+        children: (0, i.jsx)(v, {
           color: "currentColor"
         })
       })

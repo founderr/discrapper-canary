@@ -42,8 +42,8 @@ let p = {
   C = new Map,
   g = new Map,
   L = new Map,
-  D = !1,
-  v = new Map,
+  v = !1,
+  D = new Map,
   M = new Map,
   y = new Map,
   P = new Map,
@@ -75,8 +75,8 @@ function V(e) {
   let N = I.map(e => e.userId),
     p = l.default.getId(),
     O = l.default.getSessionId(),
-    D = null === (t = I.find(e => e.userId === p)) || void 0 === t ? void 0 : t.sessionId,
-    v = null == D,
+    v = null === (t = I.find(e => e.userId === p)) || void 0 === t ? void 0 : t.sessionId,
+    D = null == v,
     M = R.get(o),
     y = {
       analyticsActivitySessionId: null != S ? S : "",
@@ -89,10 +89,10 @@ function V(e) {
       url: h,
       userIds: new Set(N)
     };
-  N.some(e => e === p) && null != M && (v || O === D) && R.set(M.applicationId, {
+  N.some(e => e === p) && null != M && (D || O === v) && R.set(M.applicationId, {
     ...M,
     ...y
-  }), null != M && s === M.channelId && !N.some(e => e === p) && Array.from(M.userIds).some(e => e === p) ? L.get(s) === o ? L.delete(s) : R.delete(o) : N.some(e => e === p) && (null == M || M.applicationId !== o || M.channelId !== s) && (D === l.default.getSessionId() && !v || (0, T.shouldMountActivityIFrameFromGatewayUpdateWithoutSessionIdCheck)("EmbeddedActivitiesStore")) && (F({
+  }), null != M && s === M.channelId && !N.some(e => e === p) && Array.from(M.userIds).some(e => e === p) ? L.get(s) === o ? L.delete(s) : R.delete(o) : N.some(e => e === p) && (null == M || M.applicationId !== o || M.channelId !== s) && (v === l.default.getSessionId() && !D || (0, T.shouldMountActivityIFrameFromGatewayUpdateWithoutSessionIdCheck)("EmbeddedActivitiesStore")) && (F({
     channelId: s,
     applicationId: o,
     launchId: _
@@ -150,7 +150,7 @@ function F(e) {
 }
 
 function H() {
-  D = !1
+  v = !1
 }
 
 function Y(e, t) {
@@ -198,12 +198,12 @@ class j extends(r = s.default.PersistedStore) {
     return null == n ? null : Date.now() - n
   }
   isLaunchingActivity() {
-    return D
+    return v
   }
   getShelfActivities(e) {
     var t;
     let n = k(e);
-    return null !== (t = v.get(n)) && void 0 !== t ? t : []
+    return null !== (t = D.get(n)) && void 0 !== t ? t : []
   }
   getShelfFetchStatus(e) {
     let t = k(e);
@@ -352,7 +352,7 @@ let W = new j(a.default, {
     }
   },
   EMBEDDED_ACTIVITY_LAUNCH_START: function() {
-    D = !0
+    v = !0
   },
   EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: function(e) {
     let {
@@ -360,12 +360,12 @@ let W = new j(a.default, {
     } = e;
     p.everLaunchedActivities.add(t),
       function() {
-        D = !1
+        v = !1
       }()
   },
   EMBEDDED_ACTIVITY_LAUNCH_FAIL: function() {
     (function() {
-      D = !1
+      v = !1
     })()
   },
   EMBEDDED_ACTIVITY_OPEN: function(e) {
@@ -460,7 +460,7 @@ let W = new j(a.default, {
       guildId: t,
       activities: n
     } = e, i = k(t);
-    v.set(i, n);
+    D.set(i, n);
     let r = Date.now();
     ! function(e) {
       let {
@@ -538,7 +538,7 @@ let W = new j(a.default, {
     i && L.set(t, n)
   },
   CONNECTION_INTERRUPTED: function(e) {
-    e.code === m.RPCCloseCodes.CLOSE_ABNORMAL && (i = void 0, R.clear(), D = !1, w = A.ActivityPanelModes.DISCONNECTED)
+    e.code === m.RPCCloseCodes.CLOSE_ABNORMAL && (i = void 0, R.clear(), v = !1, w = A.ActivityPanelModes.DISCONNECTED)
   },
   CHANNEL_CALL_POPOUT_WINDOW_OPEN: function(e) {
     let {

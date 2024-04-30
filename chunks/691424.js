@@ -29,8 +29,8 @@ var i = n("735250"),
   C = n("746878"),
   g = n("285063"),
   L = n("943362"),
-  D = n("551452"),
-  v = n("69626"),
+  v = n("551452"),
+  D = n("69626"),
   M = n("142990"),
   y = n("532901"),
   P = n("981631"),
@@ -324,8 +324,8 @@ function V(e) {
         }
       }
     }(e),
-    channelMention: (0, D.default)(e),
-    commandMention: (0, v.default)(e),
+    channelMention: (0, v.default)(e),
+    commandMention: (0, D.default)(e),
     attachmentLink: (0, L.default)(e)
   }
 }

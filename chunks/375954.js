@@ -22,8 +22,8 @@ var A = n("995774"),
   C = n("796974"),
   g = n("984933"),
   L = n("271383"),
-  D = n("430824"),
-  v = n("496675"),
+  v = n("430824"),
+  D = n("496675"),
   M = n("699516"),
   y = n("944486"),
   P = n("914010"),
@@ -86,13 +86,13 @@ function H(e) {
 }
 class Y extends(i = u.default.Store) {
   initialize() {
-    this.waitFor(U.default, R.default, C.default, L.default, m.default, y.default, P.default, D.default, M.default, g.default), this.syncWith([f.default], () => {})
+    this.waitFor(U.default, R.default, C.default, L.default, m.default, y.default, P.default, v.default, M.default, g.default), this.syncWith([f.default], () => {})
   }
   getMessages(e) {
     if (f.default.hasViewingRoles()) {
       let t = R.default.getChannel(e),
         n = null == t ? void 0 : t.getGuildId();
-      if (f.default.isViewingRoles(n) && !v.default.can(b.Permissions.VIEW_CHANNEL, t)) return new _.default(e)
+      if (f.default.isViewingRoles(n) && !D.default.can(b.Permissions.VIEW_CHANNEL, t)) return new _.default(e)
     }
     return _.default.getOrCreate(e)
   }

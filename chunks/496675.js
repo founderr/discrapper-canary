@@ -21,8 +21,8 @@ var i, r, s, a, o = n("392711"),
   C = n("271383"),
   g = n("430824"),
   L = n("594174"),
-  D = n("981631"),
-  v = n("478743");
+  v = n("981631"),
+  D = n("478743");
 let M = {},
   y = {},
   P = {},
@@ -159,7 +159,7 @@ function z(e, t, n, i) {
     excludeGuildPermissions: i
   }) : r
 }
-class X extends(i = d.default.Store) {
+class Z extends(i = d.default.Store) {
   initialize() {
     this.waitFor(L.default, g.default, O.default, C.default, R.default, f.default, T.default, E.default)
   }
@@ -172,25 +172,25 @@ class X extends(i = d.default.Store) {
   getGuildPermissionProps(e) {
     let t = L.default.getCurrentUser();
     return {
-      canManageGuild: this.can(D.Permissions.MANAGE_GUILD, e),
-      canManageChannels: this.can(D.Permissions.MANAGE_CHANNELS, e),
-      canManageRoles: this.can(D.Permissions.MANAGE_ROLES, e),
-      canManageBans: this.can(D.Permissions.BAN_MEMBERS, e),
-      canManageNicknames: this.can(D.Permissions.MANAGE_NICKNAMES, e),
-      canManageGuildExpressions: this.can(D.Permissions.MANAGE_GUILD_EXPRESSIONS, e) || this.can(D.Permissions.CREATE_GUILD_EXPRESSIONS, e),
-      canViewAuditLog: this.can(D.Permissions.VIEW_AUDIT_LOG, e),
-      canViewAuditLogV2: this.can(D.Permissions.VIEW_AUDIT_LOG, e),
-      canManageWebhooks: this.can(D.Permissions.MANAGE_WEBHOOKS, e),
-      canViewGuildAnalytics: this.can(D.Permissions.VIEW_GUILD_ANALYTICS, e),
+      canManageGuild: this.can(v.Permissions.MANAGE_GUILD, e),
+      canManageChannels: this.can(v.Permissions.MANAGE_CHANNELS, e),
+      canManageRoles: this.can(v.Permissions.MANAGE_ROLES, e),
+      canManageBans: this.can(v.Permissions.BAN_MEMBERS, e),
+      canManageNicknames: this.can(v.Permissions.MANAGE_NICKNAMES, e),
+      canManageGuildExpressions: this.can(v.Permissions.MANAGE_GUILD_EXPRESSIONS, e) || this.can(v.Permissions.CREATE_GUILD_EXPRESSIONS, e),
+      canViewAuditLog: this.can(v.Permissions.VIEW_AUDIT_LOG, e),
+      canViewAuditLogV2: this.can(v.Permissions.VIEW_AUDIT_LOG, e),
+      canManageWebhooks: this.can(v.Permissions.MANAGE_WEBHOOKS, e),
+      canViewGuildAnalytics: this.can(v.Permissions.VIEW_GUILD_ANALYTICS, e),
       canAccessMembersPage: this.canAccessMemberSafetyPage(e),
-      isGuildAdmin: this.can(D.Permissions.ADMINISTRATOR, e),
+      isGuildAdmin: this.can(v.Permissions.ADMINISTRATOR, e),
       isOwner: null != t && e.isOwner(t),
       isOwnerWithRequiredMfaLevel: null != t && e.isOwnerWithRequiredMfaLevel(t),
       guild: e
     }
   }
   canAccessMemberSafetyPage(e) {
-    return u.hasAny(b(e.id), v.MemberSafetyPagePermissions)
+    return u.hasAny(b(e.id), D.MemberSafetyPagePermissions)
   }
   canAccessGuildSettings(e) {
     return u.hasAny(b(e.id), p.VIEW_GUILD_SETTINGS)
@@ -231,7 +231,7 @@ class X extends(i = d.default.Store) {
   }
   canImpersonateRole(e, t) {
     let n = this.getHighestRole(e),
-      i = this.can(D.Permissions.MANAGE_GUILD, e) && this.can(D.Permissions.MANAGE_ROLES, e),
+      i = this.can(v.Permissions.MANAGE_GUILD, e) && this.can(v.Permissions.MANAGE_ROLES, e),
       r = this.isRoleHigher(e, n, t);
     return i && (r || t.id === (null == n ? void 0 : n.id))
   }
@@ -244,22 +244,22 @@ class X extends(i = d.default.Store) {
   }
 }
 
-function Q() {
+function X() {
   y = {}, M = {}, P = {}, U = 0
 }
-a = "PermissionStore", (s = "displayName") in(r = X) ? Object.defineProperty(r, s, {
+a = "PermissionStore", (s = "displayName") in(r = Z) ? Object.defineProperty(r, s, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new X(_.default, {
+}) : r[s] = a, t.default = new Z(_.default, {
   BACKGROUND_SYNC: V,
   CONNECTION_OPEN: V,
   OVERLAY_INITIALIZE: V,
   CACHE_LOADED: V,
   CACHE_LOADED_LAZY: V,
   CONNECTION_CLOSED: function() {
-    Q()
+    X()
   },
   GUILD_CREATE: x,
   GUILD_UPDATE: x,
@@ -336,7 +336,7 @@ a = "PermissionStore", (s = "displayName") in(r = X) ? Object.defineProperty(r, 
   GUILD_ROLE_CREATE: j,
   GUILD_ROLE_UPDATE: j,
   GUILD_ROLE_DELETE: j,
-  LOGOUT: Q,
+  LOGOUT: X,
   STAGE_INSTANCE_CREATE: W,
   STAGE_INSTANCE_UPDATE: W,
   STAGE_INSTANCE_DELETE: W,

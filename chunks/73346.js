@@ -22,10 +22,10 @@ n.r(t), n.d(t, {
     return L
   },
   nativePlatformTypeToSKUOperatingSystem: function() {
-    return D
+    return v
   },
   skuOperatingSystemToText: function() {
-    return v
+    return D
   }
 }), n("653041"), n("998459"), n("47120"), n("411104"), n("789020");
 var i = n("392711"),
@@ -138,7 +138,7 @@ async function L(e) {
   return d.HTTP.get(e)
 }
 
-function D(e) {
+function v(e) {
   switch (e) {
     case A.PlatformTypes.WINDOWS:
       return N.OperatingSystems.WINDOWS;
@@ -151,7 +151,7 @@ function D(e) {
   }
 }
 
-function v(e) {
+function D(e) {
   switch (e) {
     case N.OperatingSystems.WINDOWS:
       return p.default.Messages.WINDOWS;

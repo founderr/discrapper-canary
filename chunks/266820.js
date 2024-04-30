@@ -33,10 +33,10 @@ async function C(e) {
     currentEmbeddedApplication: C,
     locationObject: g,
     channelId: L,
-    guildId: D,
-    embeddedActivitiesManager: v,
+    guildId: v,
+    embeddedActivitiesManager: D,
     analyticsLocations: M
-  } = e, y = o.default.getGuild(D), P = u.default.getCurrentUser();
+  } = e, y = o.default.getGuild(v), P = u.default.getCurrentUser();
   if (null == n) return !1;
   let U = null !== (t = r.default.getApplication(n)) && void 0 !== t ? t : await (0, T.default)(n, L);
   if (null == y && !(0, N.isPrivateChannelWithEnabledActivities)(L) || null == P || null == U) return !1;
@@ -61,7 +61,7 @@ async function C(e) {
       application: U,
       channel: b,
       currentEmbeddedApplication: C,
-      embeddedActivitiesManager: v,
+      embeddedActivitiesManager: D,
       user: P
     })) return !1;
   let w = (0, S.default)(L),
@@ -72,7 +72,7 @@ async function C(e) {
         bypassChangeModal: null != C
       })) return !1
   } else if (!(0, _.isActivitiesInTextEnabled)(b, "handleStartEmbeddedActivity") || !B) return !1;
-  return E.startEmbeddedActivity(L, U.id, M), (0, m.default)(D, L), (0, A.default)({
+  return E.startEmbeddedActivity(L, U.id, M), (0, m.default)(v, L), (0, A.default)({
     type: O.AnalyticsGameOpenTypes.LAUNCH,
     userId: P.id,
     applicationId: U.id,

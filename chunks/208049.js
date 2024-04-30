@@ -19,10 +19,10 @@ n.r(t), n.d(t, {
     return g
   },
   reportSoundFinishedPlaying: function() {
-    return v
+    return D
   },
   reportSoundStartedPlaying: function() {
-    return D
+    return v
   },
   updateSound: function() {
     return O
@@ -160,7 +160,7 @@ function L(e, t, n) {
   })
 }
 
-function D(e, t) {
+function v(e, t) {
   a.default.dispatch({
     type: "GUILD_SOUNDBOARD_SOUND_PLAY_START",
     soundId: e,
@@ -168,7 +168,7 @@ function D(e, t) {
   })
 }
 
-function v(e, t) {
+function D(e, t) {
   a.default.dispatch({
     type: "GUILD_SOUNDBOARD_SOUND_PLAY_END",
     soundId: e,

@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return M
   },
   useIsEligibleForBogoPromotion: function() {
-    return D
+    return v
   }
 });
 var i = n("913527"),
@@ -61,7 +61,7 @@ function L(e) {
   return !s || l || u
 }
 
-function D() {
+function v() {
   var e;
   let {
     paymentsBlocked: t
@@ -97,7 +97,7 @@ function D() {
     });
   return !(c > d) && I
 }
-async function v() {
+async function D() {
   var e;
   let t = c.default.getCurrentUser(),
     n = !(null == t ? void 0 : t.isClaimed()),
@@ -136,7 +136,7 @@ async function v() {
   })
 }
 async function M() {
-  if (!await v()) return;
+  if (!await D()) return;
   let e = O.default.bogoPromotion;
   if (!(null != e && new Date(e.endDate).valueOf() >= Date.now())) await (0, N.fetchActiveBogoPromotion)()
 }
@@ -144,7 +144,7 @@ async function y() {
   let e = O.default.bogoPromotion,
     t = null != e && new Date(e.endDate).valueOf() >= Date.now() && new Date(e.startDate).valueOf() <= Date.now(),
     n = (0, d.isDismissibleContentDismissed)(a.DismissibleContent.SUMMER_2023_BOGO_ANNOUNCEMENT_MODAL),
-    i = await v(),
+    i = await D(),
     {
       enabled: r
     } = A.BogoPromotionExperiment.getCurrentConfig({

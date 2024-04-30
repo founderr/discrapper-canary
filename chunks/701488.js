@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return $
   },
   AM_HARMONY_PRD_APPLICATION_ID: function() {
-    return Q
+    return X
   },
   AM_HARMONY_STG_APPLICATION_ID: function() {
-    return X
+    return Z
   },
   APPLICATIONS_WITH_ALLOWED_POPUPS: function() {
     return ee
@@ -64,10 +64,10 @@ n.r(t), n.d(t, {
     return ei
   },
   EMBEDDED_ACTIVITY_SURVEY_URL: function() {
-    return q
+    return Q
   },
   END_GAME_APPLICATION_ID: function() {
-    return D
+    return v
   },
   EmbeddedActivityUpdateCodes: function() {
     return o
@@ -76,7 +76,7 @@ n.r(t), n.d(t, {
     return P
   },
   ImageSizes: function() {
-    return Z
+    return q
   },
   JAM_SPACE_APPLICATION_ID: function() {
     return y
@@ -129,8 +129,8 @@ var i, r, s, a, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, p, O = n("911969"),
 let C = 160,
   g = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
   L = "438122941302046720",
-  D = "773336526917861400",
-  v = "880218832743055411",
+  v = "773336526917861400",
+  D = "880218832743055411",
   M = "1050941315912835122",
   y = "1070087967294631976",
   P = "1007373802981822582",
@@ -149,18 +149,18 @@ let C = 160,
   W = "1037680572660727838",
   K = "945737671223947305",
   z = "1011683823555199066",
-  X = "1234546995360694434",
-  Q = "1214629548377768066",
-  q = "https://discord.sjc1.qualtrics.com/jfe/form/SV_6SvWAOxlcSRWiEu",
-  Z = {
+  Z = "1234546995360694434",
+  X = "1214629548377768066",
+  Q = "https://discord.sjc1.qualtrics.com/jfe/form/SV_6SvWAOxlcSRWiEu",
+  q = {
     SMALL: 64,
     LARGE: 160
   },
   J = ["in_development", "activities_team", "employee_release"];
 (E = i || (i = {})).ADS = "ADS", E.FAILED_LOAD = "FAILED_LOAD", E.LAGGING = "LAGGING", E.CONFUSING = "CONFUSING", E.NOT_FUN = "NOT_FUN", E.OTHER = "OTHER", (I = r || (r = {}))[I.PLAY = 0] = "PLAY", I[I.SPECTATE = 1] = "SPECTATE", (T = s || (s = {})).DESKTOP = "desktop", T.MOBILE = "mobile", (f = a || (a = {})).BETRAYAL_MARKETING_TOOLTIP = "BETRAYAL_MARKETING_TOOLTIP", f.FISHINGTON_MARKETING_TOOLTIP = "FISHINGTON_MARKETING_TOOLTIP", f.POKER_MARKETING_TOOLTIP = "POKER_MARKETING_TOOLTIP", f.YOUTUBE_MARKETING_TOOLTIP = "YOUTUBE_MARKETING_TOOLTIP", (S = o || (o = {}))[S.NO_UPDATE = 0] = "NO_UPDATE", S[S.ACTIVITY_STATE_UPDATE = 1] = "ACTIVITY_STATE_UPDATE", S[S.ACTIVITY_STARTED = 2] = "ACTIVITY_STARTED", S[S.ACTIVITY_ENDED = 3] = "ACTIVITY_ENDED", S[S.USER_JOINED = 4] = "USER_JOINED", S[S.USER_LEFT = 5] = "USER_LEFT", S[S.ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST = 6] = "ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST", (h = l || (l = {}))[h.UNLOCKED = 1] = "UNLOCKED", h[h.PORTRAIT = 2] = "PORTRAIT", h[h.LANDSCAPE = 3] = "LANDSCAPE", (A = u || (u = {}))[A.DIRECTORY = 0] = "DIRECTORY", A[A.SELECT_CHANNEL = 1] = "SELECT_CHANNEL", A[A.DETAIL_PAGE = 2] = "DETAIL_PAGE";
 let $ = "activity-shelf",
-  ee = new Set(["755600276941176913", v, M, w]),
-  et = new Set([v, M, w]);
+  ee = new Set(["755600276941176913", D, M, w]),
+  et = new Set([D, M, w]);
 (m = d || (d = {})).DISCORD_TURNS_8 = "DISCORD_TURNS_8", m.GDM_ACTIVITIES = "GDM_ACTIVITIES", m.PUTT_PARTY = "PUTT_PARTY", m.JAMSPACE_OLD = "JAMSPACE", m.JAMSPACE = "JAMSPACE2", m.POKER = "POKER", m.FREE = "FREE", (N = _ || (_ = {}))[N.PORTRAIT = 0] = "PORTRAIT", N[N.LANDSCAPE = 1] = "LANDSCAPE", (p = c || (c = {}))[p.FOCUSED = 0] = "FOCUSED", p[p.PIP = 1] = "PIP", p[p.GRID = 2] = "GRID";
 let en = {
     label_type: O.EmbeddedActivityLabelTypes.NONE,

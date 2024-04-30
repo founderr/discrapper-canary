@@ -1,117 +1,117 @@
 "use strict";
-n.r(t), n.d(t, {
+t.r(n), t.d(n, {
   SelectIconSize: function() {
     return l
   },
   default: function() {
     return v
   }
-}), n("47120");
-var l, a, r = n("735250"),
-  s = n("470079"),
-  u = n("120356"),
-  o = n.n(u),
-  i = n("481060"),
-  d = n("911969"),
-  c = n("114484"),
-  m = n("970184"),
-  p = n("280501"),
-  f = n("689938"),
-  C = n("129876"),
-  S = n("952774");
+}), t("47120");
+var l, a, r = t("735250"),
+  u = t("470079"),
+  s = t("120356"),
+  o = t.n(s),
+  i = t("481060"),
+  d = t("911969"),
+  c = t("114484"),
+  m = t("970184"),
+  p = t("280501"),
+  f = t("689938"),
+  C = t("129876"),
+  S = t("952774");
 
 function E(e) {
   let {
-    icon: t,
-    iconSize: n
+    icon: n,
+    iconSize: t
   } = e;
   return (0, r.jsx)("div", {
     className: C.iconContainer,
     style: {
-      height: n,
-      width: n
+      height: t,
+      width: t
     },
-    children: t
+    children: n
   })
 }
 
 function v(e) {
   let {
-    selectActionComponent: t,
-    queryOptions: n,
+    selectActionComponent: n,
+    queryOptions: t,
     renderIcon: l,
     renderOptionLabel: a,
-    defaultValues: u
+    defaultValues: s
   } = e, {
     type: v,
     placeholder: N,
     maxValues: h,
     disabled: T
-  } = t, [x, y] = s.useState(!1), [g, O] = s.useState(!1), [I, j] = s.useState(new Map(null == u ? void 0 : u.map(e => [e.value, e]))), [_, L] = s.useState(new Set(I.keys())), [M, R] = s.useState(() => (null != u ? u : []).map(e => e.value)), [A, b] = s.useState(0);
-  s.useEffect(() => {
-    let e = (null != u ? u : []).map(e => e.value);
-    if (e.every(e => M.includes(e)) && M.every(t => e.includes(t))) return;
+  } = n, [g, x] = u.useState(!1), [y, O] = u.useState(!1), [I, j] = u.useState(new Map(null == s ? void 0 : s.map(e => [e.value, e]))), [_, L] = u.useState(new Set(I.keys())), [M, R] = u.useState(() => (null != s ? s : []).map(e => e.value)), [A, b] = u.useState(0);
+  u.useEffect(() => {
+    let e = (null != s ? s : []).map(e => e.value);
+    if (e.every(e => M.includes(e)) && M.every(n => e.includes(n))) return;
     R(e);
-    let t = new Map(null == u ? void 0 : u.map(e => [e.value, e]));
-    j(t), L(new Set(t.keys())), b(e => e + 1)
-  }, [u, M]);
+    let n = new Map(null == s ? void 0 : s.map(e => [e.value, e]));
+    j(n), L(new Set(n.keys())), b(e => e + 1)
+  }, [s, M]);
   let {
     state: P,
     executeStateUpdate: U,
     visualState: w,
     isDisabled: D,
     error: k
-  } = (0, m.useComponentState)(t, {
+  } = (0, m.useComponentState)(n, {
     type: v,
     selectedOptions: Array.from(I.values())
   }), G = w === p.ActionComponentState.LOADING;
-  s.useEffect(() => {
+  u.useEffect(() => {
     if ((null == P ? void 0 : P.type) === d.ComponentType.USER_SELECT || (null == P ? void 0 : P.type) === d.ComponentType.ROLE_SELECT || (null == P ? void 0 : P.type) === d.ComponentType.MENTIONABLE_SELECT || (null == P ? void 0 : P.type) === d.ComponentType.CHANNEL_SELECT) {
       let e = new Map(P.selectedOptions.map(e => [e.value, e]));
       j(e), L(new Set(e.keys()))
     }
   }, [P]);
-  let V = s.useCallback(() => {
+  let V = u.useCallback(() => {
     U({
       type: v,
       selectedOptions: Array.from(I.values())
     }) && L(new Set(I.keys()))
   }, [U, v, I]);
-  s.useEffect(() => {
-    if (!x && !g) !(I.size === _.size && Array.from(I.keys()).every(e => _.has(e))) && V()
-  }, [x, g, _, I, V]);
-  let F = 0 === I.size || x,
+  u.useEffect(() => {
+    if (!g && !y) !(I.size === _.size && Array.from(I.keys()).every(e => _.has(e))) && V()
+  }, [g, y, _, I, V]);
+  let F = 0 === I.size || g,
     B = {
       isDisabled: T || D,
       wrapperClassName: C.select,
-      options: e => new Promise(t => {
-        t(n(e))
+      options: e => new Promise(n => {
+        n(t(e))
       }),
       placeholder: F ? null != N ? N : f.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER : void 0,
-      onClose: () => y(!1),
-      onOpen: () => y(!0),
+      onClose: () => x(!1),
+      onOpen: () => x(!0),
       onBlur: () => O(!1),
       maxVisibleItems: 5,
       optionClassName: C.__invalid_selectOption,
-      renderOptionPrefix: (e, t) => {
+      renderOptionPrefix: (e, n) => {
         let {
-          inPill: n
-        } = t, a = n ? 16 : 24, s = l(e, a);
-        return null != s ? (0, r.jsx)(E, {
-          icon: s,
+          inPill: t
+        } = n, a = t ? 16 : 24, u = l(e, a);
+        return null != u ? (0, r.jsx)(E, {
+          icon: u,
           iconSize: a
         }) : null
       },
       renderOptionLabel: a
     };
-  return (0, r.jsxs)(s.Fragment, {
+  return (0, r.jsxs)(u.Fragment, {
     children: [(0, r.jsxs)("div", {
       className: C.container,
       children: [h > 1 ? (0, r.jsx)(i.SearchableSelect, {
         className: C.badges,
         value: Array.from(I.values()),
         onChange: e => {
-          !x && O(!0), j(new Map(e.map(e => [e.value, e])))
+          !g && O(!0), j(new Map(e.map(e => [e.value, e])))
         },
         multi: !0,
         inputClassNames: o()({

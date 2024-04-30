@@ -38,11 +38,11 @@ function L(e, t) {
   })
 }
 
-function D(e, t) {
-  return g.subscribeToGuild(e), null != t && f.default.getSection(t) === C.ChannelSections.MEMBERS && v(e, t, c.DEFAULT_RANGES)
+function v(e, t) {
+  return g.subscribeToGuild(e), null != t && f.default.getSection(t) === C.ChannelSections.MEMBERS && D(e, t, c.DEFAULT_RANGES)
 }
 
-function v(e, t, n) {
+function D(e, t, n) {
   if (t === T.EVERYONE_CHANNEL_ID) return g.subscribeChannel(e, t, n);
   let i = S.default.getChannel(t);
   if (null == i) return !1;
@@ -56,7 +56,7 @@ function M(e) {
   } = e;
   "CONNECTION_OPEN" === t && L(!0, !1);
   let n = R.default.getGuildId();
-  null != n && D(n, O.default.getChannelId(n));
+  null != n && v(n, O.default.getChannelId(n));
   let i = {};
   g.forEach(e => {
     null == m.default.getGuild(e) ? g.clearWithoutFlushing(e, !0) : i[e] = g.get(e)
@@ -71,11 +71,11 @@ function y(e) {
     guildId: t,
     channelId: n
   } = e;
-  return !h.default.isUnavailable(t) && D(t, n)
+  return !h.default.isUnavailable(t) && v(t, n)
 }
 
 function P() {
-  return D(R.default.getGuildId(), O.default.getChannelId())
+  return v(R.default.getGuildId(), O.default.getChannelId())
 }
 
 function U() {
@@ -188,7 +188,7 @@ o = "GuildSubscriptionsStore", (a = "displayName") in(s = b) ? Object.defineProp
       channelId: n,
       ranges: i
     } = e;
-    return v(t, n, i)
+    return D(t, n, i)
   },
   GUILD_SUBSCRIPTIONS: function(e) {
     let {
@@ -201,7 +201,7 @@ o = "GuildSubscriptionsStore", (a = "displayName") in(s = b) ? Object.defineProp
       guildId: t,
       channelId: n
     } = e;
-    return D(t, n)
+    return v(t, n)
   },
   INBOX_OPEN: function(e) {
     let {

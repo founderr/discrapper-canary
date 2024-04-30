@@ -61,13 +61,13 @@ n.r(t), n.d(t, {
     return x
   },
   isGuildBoostedAtLeast: function() {
-    return D
+    return v
   },
   isInGracePeriod: function() {
     return P
   },
   isTierUnlocked: function() {
-    return v
+    return D
   },
   minimumRequiredTierForGuildFeature: function() {
     return C
@@ -318,12 +318,12 @@ function L(e, t) {
   return E.BoostedGuildTiers.NONE
 }
 
-function D(e, t) {
+function v(e, t) {
   return null == t || null != e && e >= t
 }
 
-function v(e, t) {
-  return D(e.premiumTier, t)
+function D(e, t) {
+  return v(e.premiumTier, t)
 }
 
 function M(e) {

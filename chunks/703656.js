@@ -8,7 +8,7 @@ n.r(t), n.d(t, {
     return A
   },
   forward: function() {
-    return D
+    return v
   },
   getFingerprintLocation: function() {
     return C
@@ -133,6 +133,6 @@ function L() {
   T() && (r = null, i.goBack())
 }
 
-function D() {
+function v() {
   T() && (r = null, i.goForward())
 }

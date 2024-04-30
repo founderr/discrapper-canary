@@ -47,7 +47,7 @@ function L(e) {
     stickerName: t
   })
 }
-let D = e => {
+let v = e => {
     let {
       children: t,
       hasError: n,
@@ -79,7 +79,7 @@ let D = e => {
       })]
     })
   },
-  v = e => {
+  D = e => {
     let {
       shouldAnimate: t,
       size: s,
@@ -92,8 +92,8 @@ let D = e => {
       positionRef: E,
       withLoadingIndicator: T,
       onError: f
-    } = e, S = r.useRef(null), h = r.useRef(null), [A, O] = r.useState(!0), [R, C] = r.useState(!1), v = r.useRef(!1);
-    v.current = t && d;
+    } = e, S = r.useRef(null), h = r.useRef(null), [A, O] = r.useState(!0), [R, C] = r.useState(!1), D = r.useRef(!1);
+    D.current = t && d;
     let M = null == o ? (0, m.getStickerAssetUrl)(a) : o;
     return (l()(null != M, "Unable to determine sticker asset URL. Sticker ID: ".concat(a.id)), r.useEffect(() => {
       if (null == S.current || null == M) return;
@@ -115,7 +115,7 @@ let D = e => {
           onError: () => {
             !t && (O(!1), C(!0), null == f || f())
           }
-        }), v.current && h.current.setState(!0))
+        }), D.current && h.current.setState(!0))
       })(), () => {
         var e;
         null === (e = h.current) || void 0 === e || e.drop(), h.current = null, t = !0
@@ -129,7 +129,7 @@ let D = e => {
       className: _,
       "aria-label": R ? N.default.Messages.ERROR_LOADING_STICKER : L(a),
       ref: E,
-      children: (0, i.jsx)(D, {
+      children: (0, i.jsx)(v, {
         hasError: R,
         isLoading: A,
         maskAsset: c,
@@ -156,7 +156,7 @@ let D = e => {
     } = e, [I, T] = r.useState(!1), [f, S] = r.useState(!0), [h, A] = r.useState(!1), N = r.useRef(null), R = r.useRef(null), C = null != E ? E : (0, m.getStickerAssetUrl)(n, {
       isPreview: !t || !I || !s,
       size: o
-    }), v = r.useCallback(() => {
+    }), D = r.useCallback(() => {
       S(!1)
     }, []), M = r.useCallback(() => {
       A(!0)
@@ -178,7 +178,7 @@ let D = e => {
       children: (0, i.jsx)("div", {
         className: a()(l, p.__invalid_pngImageWrapper),
         ref: d,
-        children: (0, i.jsx)(D, {
+        children: (0, i.jsx)(v, {
           hasError: h,
           isLoading: f,
           maskAsset: u,
@@ -190,7 +190,7 @@ let D = e => {
             src: C,
             draggable: !1,
             onError: M,
-            onLoad: v,
+            onLoad: D,
             onContextMenu: O,
             ref: R
           }), n.id)
@@ -275,7 +275,7 @@ let D = e => {
       onError: T
     } = e, f = (0, S.useIsWindowFocused)(), m = (0, h.useShouldAnimateSticker)(t) && !n, N = r.useRef(null);
     if (null == d) return null;
-    let p = d.format_type === A.StickerFormat.LOTTIE ? v : M;
+    let p = d.format_type === A.StickerFormat.LOTTIE ? D : M;
     return (0, i.jsxs)(r.Fragment, {
       children: [(0, i.jsx)(p, {
         shouldAnimate: m,

@@ -33,8 +33,8 @@ let O = {
   C = {},
   g = {},
   L = {},
-  D = {},
   v = {},
+  D = {},
   M = {},
   y = {},
   P = {};
@@ -115,7 +115,7 @@ function z(e, t) {
   }(s, t), !0)
 }
 
-function X(e) {
+function Z(e) {
   let {
     type: t,
     channelId: n,
@@ -133,20 +133,20 @@ function X(e) {
   })
 }
 
-function Q(e) {
+function X(e) {
   let {
     channel: t
   } = e;
-  return q(t)
+  return Q(t)
 }
 
-function q(e) {
+function Q(e) {
   var t;
   let n = e.guild_id;
   if (null == n) return !1;
   delete M[e.id], null === (t = y[n]) || void 0 === t || delete t[e.id]
 }
-class Z extends(r = u.default.Store) {
+class q extends(r = u.default.Store) {
   getLastFetchedMillis(e) {
     return C[e]
   }
@@ -167,7 +167,7 @@ class Z extends(r = u.default.Store) {
   }
   getLoadId(e) {
     var t;
-    return null === (t = v[e]) || void 0 === t ? void 0 : t.load_id
+    return null === (t = D[e]) || void 0 === t ? void 0 : t.load_id
   }
   getCachedMessage(e, t, n) {
     return x(e, t, n)
@@ -178,7 +178,7 @@ class Z extends(r = u.default.Store) {
   }
   getFeaturedItemsFetchStatus(e) {
     var t;
-    return null !== (t = D[e]) && void 0 !== t ? t : O
+    return null !== (t = v[e]) && void 0 !== t ? t : O
   }
   getPaginationStatus(e) {
     var t;
@@ -209,12 +209,12 @@ class Z extends(r = u.default.Store) {
     return Object.values(null !== (n = V[e]) && void 0 !== n ? n : []).find(e => "message" in e && e.message.id === t)
   }
 }
-l = "GuildFeedStore", (o = "displayName") in(a = Z) ? Object.defineProperty(a, o, {
+l = "GuildFeedStore", (o = "displayName") in(a = q) ? Object.defineProperty(a, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[o] = l, t.default = new Z(_.default, {
+}) : a[o] = l, t.default = new q(_.default, {
   GUILD_FEED_FETCH_FRESH_START: function(e) {
     let {
       guildId: t
@@ -222,7 +222,7 @@ l = "GuildFeedStore", (o = "displayName") in(a = Z) ? Object.defineProperty(a, o
     g[t] = {
       loading: 0,
       error: null
-    }, delete P[t], delete v[t], delete L[t], w[t] = new Set, B[t] = new Set, k[t] = new Set, y[t] = {}
+    }, delete P[t], delete D[t], delete L[t], w[t] = new Set, B[t] = new Set, k[t] = new Set, y[t] = {}
   },
   GUILD_FEED_FETCH_PAGE_START: function(e) {
     let {
@@ -242,9 +242,9 @@ l = "GuildFeedStore", (o = "displayName") in(a = Z) ? Object.defineProperty(a, o
     if (C[a] = Date.now(), g[a] = {
         loading: 2,
         error: null
-      }, a in v && v[a].load_id !== o.load_id) return;
-    let l = null !== (r = null === (n = v[a]) || void 0 === n ? void 0 : null === (t = n.results) || void 0 === t ? void 0 : t.items) && void 0 !== r ? r : [];
-    v[a] = {
+      }, a in D && D[a].load_id !== o.load_id) return;
+    let l = null !== (r = null === (n = D[a]) || void 0 === n ? void 0 : null === (t = n.results) || void 0 === t ? void 0 : t.items) && void 0 !== r ? r : [];
+    D[a] = {
       load_id: o.load_id,
       results: {
         items: l.concat(o.results.items)
@@ -278,7 +278,7 @@ l = "GuildFeedStore", (o = "displayName") in(a = Z) ? Object.defineProperty(a, o
       guildId: t,
       data: n
     } = e;
-    D[t] = {
+    v[t] = {
       loading: 2,
       error: null
     };
@@ -294,7 +294,7 @@ l = "GuildFeedStore", (o = "displayName") in(a = Z) ? Object.defineProperty(a, o
       guildId: t,
       error: n
     } = e;
-    D[t] = {
+    v[t] = {
       loading: 2,
       error: n
     }
@@ -342,15 +342,15 @@ l = "GuildFeedStore", (o = "displayName") in(a = Z) ? Object.defineProperty(a, o
   CHANNEL_SELECT: function() {
     for (let e of T.default.keys(w)) null == B[e] && (B[e] = new Set), B[e] = new Set([...Array.from(B[e]), ...Array.from(w[e])]), delete w[e]
   },
-  CHANNEL_DELETE: Q,
-  THREAD_DELETE: Q,
+  CHANNEL_DELETE: X,
+  THREAD_DELETE: X,
   GUILD_DELETE: function(e) {
     var t;
     let {
       guild: n
     } = e;
     if (null == C[n.id]) return !1;
-    for (let e in delete C[n.id], delete v[n.id], null !== (t = y[n.id]) && void 0 !== t ? t : {}) delete M[e];
+    for (let e in delete C[n.id], delete D[n.id], null !== (t = y[n.id]) && void 0 !== t ? t : {}) delete M[e];
     delete y[n.id], delete P[n.id]
   },
   CHANNEL_UPDATES: function(e) {
@@ -358,10 +358,10 @@ l = "GuildFeedStore", (o = "displayName") in(a = Z) ? Object.defineProperty(a, o
       channels: t
     } = e;
     for (let e of t)
-      if (null == e ? void 0 : e.hasFlag(N.ChannelFlags.GUILD_FEED_REMOVED)) return q(e)
+      if (null == e ? void 0 : e.hasFlag(N.ChannelFlags.GUILD_FEED_REMOVED)) return Q(e)
   },
   LOGOUT: function() {
-    C = {}, v = {}, M = {}, y = {}, P = {}, w = {}, B = {}, k = {}, V = {}
+    C = {}, D = {}, M = {}, y = {}, P = {}, w = {}, B = {}, k = {}, V = {}
   },
   MESSAGE_UPDATE: function(e) {
     let {
@@ -384,7 +384,7 @@ l = "GuildFeedStore", (o = "displayName") in(a = Z) ? Object.defineProperty(a, o
     for (let e of t) i = z(n, e) || i;
     return i
   },
-  MESSAGE_REACTION_ADD: X,
+  MESSAGE_REACTION_ADD: Z,
   MESSAGE_REACTION_ADD_MANY: function(e) {
     let {
       channelId: t,
@@ -393,7 +393,7 @@ l = "GuildFeedStore", (o = "displayName") in(a = Z) ? Object.defineProperty(a, o
     } = e, r = I.default.getId();
     return Y(t, n, e => e.addReactionBatch(i, r))
   },
-  MESSAGE_REACTION_REMOVE: X,
+  MESSAGE_REACTION_REMOVE: Z,
   MESSAGE_REACTION_REMOVE_ALL: function(e) {
     let {
       channelId: t,

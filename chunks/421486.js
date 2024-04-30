@@ -57,9 +57,9 @@ let R = a.memo(function(e) {
       } = e;
       return t
     })) && void 0 !== e ? e : []
-  }, [i]), D = a.useMemo(() => p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_SHORT.format({
+  }, [i]), v = a.useMemo(() => p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_SHORT.format({
     count: g.length
-  }), [g]), v = a.useMemo(() => p.default.Messages.USER_PROFILE_MUTUAL_GUILDS_SHORT.format({
+  }), [g]), D = a.useMemo(() => p.default.Messages.USER_PROFILE_MUTUAL_GUILDS_SHORT.format({
     count: L.length
   }), [L]), M = a.useRef(null), [y, P] = a.useState(!1), [U, b] = a.useState(!1), G = a.useCallback(() => {
     if (null != M.current) {
@@ -80,7 +80,7 @@ let R = a.memo(function(e) {
   }, [o, f, r, t.id, h, A, R, C]);
   a.useEffect(() => {
     G()
-  }, [G, D]);
+  }, [G, v]);
   let B = g.length > 0,
     k = L.length > 0;
   return (0, s.jsxs)("div", {
@@ -105,7 +105,7 @@ let R = a.memo(function(e) {
           className: O.itemizedListText,
           variant: "text-sm/normal",
           color: "interactive-normal",
-          children: D
+          children: v
         })]
       })
     }), I && !B && (0, s.jsx)(d.Text, {
@@ -133,7 +133,7 @@ let R = a.memo(function(e) {
           className: O.itemizedListText,
           variant: "text-sm/normal",
           color: "interactive-normal",
-          children: v
+          children: D
         })]
       })
     }), I && !k && (0, s.jsx)(d.Text, {

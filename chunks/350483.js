@@ -49,7 +49,7 @@ t.default = l().throttle(function(e, t) {
         } else if ("object" == typeof a && S(a.resourceId, a.type)) return N !== r.default.getGuildId() && (0, A.transitionToChannel)(N, null === (l = d.default.getDefaultChannel(N)) || void 0 === l ? void 0 : l.id), (0, u.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([n.e("99387"), n.e("67246"), n.e("14262"), n.e("22347"), n.e("56236"), n.e("84331")]).then(n.bind(n, "17671"));
+          } = await Promise.all([n.e("99387"), n.e("48375"), n.e("14262"), n.e("22347"), n.e("56236"), n.e("84331")]).then(n.bind(n, "17671"));
           return t => (0, i.jsx)(e, {
             ...t,
             guildId: N

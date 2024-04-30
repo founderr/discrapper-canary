@@ -21,8 +21,8 @@ let R = 1 * S.default.Millis.MINUTE;
 let C = {},
   g = "file://",
   L = !1,
-  D = 0,
   v = 0,
+  D = 0,
   M = 0,
   y = [],
   P = [],
@@ -264,9 +264,9 @@ o = "DispatchApplicationStore", (a = "displayName") in(s = H) ? Object.definePro
             throw Error("Invalid Dispatch State. state=".concat(e.state.type))
           }(i[e][t]), null != C[a]) {
           let e = F(n, a, G);
-          e > 0 && k(D += e);
+          e > 0 && k(v += e);
           let i = F(n, a, w);
-          i > 0 && x(v += i);
+          i > 0 && x(D += i);
           let o = F(n, a, B);
           if (o > 0 && V(M += o), r === t) {
             let e = n[a];

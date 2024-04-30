@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return N
   },
   getChattableDefaultChannels: function() {
-    return D
+    return v
   },
   getMinimumSetOfDefaultChannelIds: function() {
     return g
@@ -159,7 +159,7 @@ function L(e, t) {
     } return s
 }
 
-function D(e, t) {
+function v(e, t) {
   var n, i;
   let r = L(e, t),
     s = o.default.getChannels(e)[o.GUILD_SELECTABLE_CHANNELS_KEY],
@@ -176,7 +176,7 @@ function D(e, t) {
   })), r]
 }
 
-function v(e, t) {
+function D(e, t) {
   return e[0].length === t[0].length && e[1].length === t[1].length && (0, r.default)(e[0], t[0]) && (0, r.default)(e[1], t[1])
 }
 
@@ -188,7 +188,7 @@ function M(e, t) {
       s = {};
     for (let e of n[o.GUILD_SELECTABLE_CHANNELS_KEY])(0, E.canChannelBeDefault)(e.channel.guild_id, e.channel.id) && (t.has(e.channel.id) && !e.channel.isCategory() || !e.channel.isThread() && null != e.channel.parent_id && t.has(e.channel.parent_id)) && (s[e.channel.id] = e, i.push(e.channel), R(e.channel) && r.push(e.channel.id));
     return [r, i]
-  }, [e, t], v)
+  }, [e, t], D)
 }
 
 function y(e) {

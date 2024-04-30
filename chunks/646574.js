@@ -58,10 +58,10 @@ function O(e) {
     checked: t,
     onClick: n,
     id: s = "burst-reaction-toggle-button"
-  } = e, f = (0, l.useStateFromStores)([c.default], () => c.default.useReducedMotion), O = I.default.getCurrentUser(), R = null == O || (0, S.isPremium)(O) ? [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [], [C, g] = (0, E.useSelectedDismissibleContent)(R), [L, D] = r.useState(!1), [v, M] = (0, o.useSpring)(() => ({})), y = (0, o.animated)(d.SuperReactionIcon);
+  } = e, f = (0, l.useStateFromStores)([c.default], () => c.default.useReducedMotion), O = I.default.getCurrentUser(), R = null == O || (0, S.isPremium)(O) ? [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [], [C, g] = (0, E.useSelectedDismissibleContent)(R), [L, v] = r.useState(!1), [D, M] = (0, o.useSpring)(() => ({})), y = (0, o.animated)(d.SuperReactionIcon);
   r.useEffect(() => {
     let e = C === u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
-    e && (g(h.ContentDismissActionType.DISMISS), setTimeout(() => D(e), 200))
+    e && (g(h.ContentDismissActionType.DISMISS), setTimeout(() => v(e), 200))
   }, [C, g]);
   let P = L ? A.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2 : t ? A.default.Messages.SUPER_REACTION_TOGGLE_ENABLED : A.default.Messages.SUPER_REACTION_TOGGLE_DISABLED,
     U = L ? A.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
@@ -88,7 +88,7 @@ function O(e) {
             rotate: t ? "0deg" : "360deg"
           },
           config: N
-        }), null == n || n(), D(!1)
+        }), null == n || n(), v(!1)
       },
       id: s,
       type: "checkbox"
@@ -101,7 +101,7 @@ function O(e) {
         className: m.shine,
         shinePaused: f
       }) : null, (0, i.jsx)(y, {
-        style: f ? void 0 : v,
+        style: f ? void 0 : D,
         width: 20,
         height: 20,
         color: t ? "white" : void 0,

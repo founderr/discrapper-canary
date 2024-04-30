@@ -50,8 +50,8 @@ var i = n("392711"),
   C = n("70956"),
   g = n("700785"),
   L = n("546416"),
-  D = n("981631"),
-  v = n("176505");
+  v = n("981631"),
+  D = n("176505");
 
 function M(e) {
   let t = 0;
@@ -80,7 +80,7 @@ function y(e) {
     guild_num_roles: M(i),
     guild_member_num_roles: null != s ? s.roles.length : 0,
     guild_member_perms: String(null !== (t = f.default.getGuildPermissions(n)) && void 0 !== t ? t : g.NONE),
-    guild_is_vip: n.hasFeature(D.GuildFeatures.VIP_REGIONS),
+    guild_is_vip: n.hasFeature(v.GuildFeatures.VIP_REGIONS),
     is_member: null != s,
     num_voice_channels_active: M(d)
   }
@@ -101,7 +101,7 @@ function U(e) {
     let t = e => {
       if (null == e) return !1;
       let t = e.permissionOverwrites[i];
-      return null != t && s.has(t.deny, D.Permissions.VIEW_CHANNEL)
+      return null != t && s.has(t.deny, v.Permissions.VIEW_CHANNEL)
     };
     n = l.THREAD_CHANNEL_TYPES.has(e.type) && null != e.parent_id ? t(d.default.getChannel(e.parent_id)) : t(e)
   }
@@ -135,7 +135,7 @@ function G(e) {
   let a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
     o = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   if (R.default.isThrottled(e)) return;
-  let l = !("location" in a) || a.location !== D.AnalyticsLocations.GUILD_CREATE_INVITE_SUGGESTION,
+  let l = !("location" in a) || a.location !== v.AnalyticsLocations.GUILD_CREATE_INVITE_SUGGESTION,
     u = "guild_id" in a ? a.guild_id : l ? N.default.getGuildId() : null,
     _ = "channel_id" in a ? a.channel_id : l ? m.default.getChannelId(u) : null,
     c = d.default.getChannel(_);
@@ -143,7 +143,7 @@ function G(e) {
   let I = {
     ...a,
     ...y(E),
-    ...null != u && null != _ && (0, v.isStaticChannelRoute)(_) ? (s = 0, {
+    ...null != u && null != _ && (0, D.isStaticChannelRoute)(_) ? (s = 0, {
       channel_static_route: _,
       channel_hidden: !1
     }) : U(c)
@@ -180,7 +180,7 @@ function w(e) {
     parent_id: t.parent_id,
     parent_channel_type: t.parentChannelThreadType,
     has_pending_member_action: (0, a.hasPendingMemberAction)(t.guild_id, e),
-    can_send_message: f.default.can(D.Permissions.SEND_MESSAGES, t)
+    can_send_message: f.default.can(v.Permissions.SEND_MESSAGES, t)
   }
 }
 
@@ -200,7 +200,7 @@ function k(e, t) {
     custom_status_count: 0
   };
   return r()(O.default.getVoiceStates(e)).forEach(e => {
-    e.channelId === t && null != S.default.findActivity(e.userId, e => e.type === D.ActivityTypes.CUSTOM_STATUS) && n.custom_status_count++
+    e.channelId === t && null != S.default.findActivity(e.userId, e => e.type === v.ActivityTypes.CUSTOM_STATUS) && n.custom_status_count++
   }), n
 }
 t.default = {

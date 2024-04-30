@@ -37,8 +37,8 @@ function L(e) {
     user: t,
     guildId: n,
     channelId: L,
-    messageId: D,
-    roleId: v,
+    messageId: v,
+    roleId: D,
     closePopout: M,
     setPopoutRef: y,
     disableUserProfileLink: P = __OVERLAY__,
@@ -50,8 +50,8 @@ function L(e) {
     userId: t.id,
     guildId: n,
     channelId: L,
-    messageId: D,
-    roleId: v
+    messageId: v,
+    roleId: D
   }), w = (0, s.useStateFromStores)([E.default], () => E.default.getCurrentUser()), B = (0, s.useStateFromStores)([c.default], () => null != n ? c.default.getGuild(n) : null), k = (0, s.useStateFromStores)([_.default], () => null != n ? _.default.getMember(n, t.id) : null), V = r.useRef(null), x = (0, T.default)(t.id, n), F = (0, o.default)(V);
   r.useEffect(() => {
     null == y || y(null == V ? void 0 : V.current)
@@ -62,8 +62,8 @@ function L(e) {
       userId: t.id,
       guildId: n,
       channelId: L,
-      messageId: D,
-      roleId: v,
+      messageId: v,
+      roleId: D,
       autoFocusNote: e
     })
   };
@@ -74,8 +74,8 @@ function L(e) {
       userId: t.id,
       guildId: n,
       channelId: L,
-      messageId: D,
-      roleId: v,
+      messageId: v,
+      roleId: D,
       shouldTrackViewOnMount: null == k || null != k.fullProfileLoadedTimestamp,
       children: (0, i.jsxs)(a.Dialog, {
         ref: V,

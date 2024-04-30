@@ -25,8 +25,8 @@ let p = [],
   C = new Set,
   g = d.ThreadSortOrder.LATEST_ACTIVITY,
   L = 0,
-  D = [],
-  v = !1,
+  v = [],
+  D = !1,
   M = [],
   y = u().chain(p),
   P = u().chain(p),
@@ -48,7 +48,7 @@ function w(e) {
 }
 
 function B() {
-  D = [], i = null, R = null, C = new Set, g = d.ThreadSortOrder.LATEST_ACTIVITY, L = 0, M = [], y = u().chain(p), P = u().chain(p), b.clear(), U.clear()
+  v = [], i = null, R = null, C = new Set, g = d.ThreadSortOrder.LATEST_ACTIVITY, L = 0, M = [], y = u().chain(p), P = u().chain(p), b.clear(), U.clear()
 }
 
 function k() {
@@ -79,9 +79,9 @@ function x(e) {
       id: t
     } = e;
     return t
-  }), L = 0, v = !0), 0 !== U.size && (M = M.filter(e => !U.has(e)), U.clear()), 0 !== b.size && (M = Array.from(new Set([...M, ...b])), b.clear()), ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) && (P = u().chain(M).sort(w(d.ThreadSortOrder.LATEST_ACTIVITY)), y = u().chain(M).sort(w(d.ThreadSortOrder.CREATION_DATE)));
+  }), L = 0, D = !0), 0 !== U.size && (M = M.filter(e => !U.has(e)), U.clear()), 0 !== b.size && (M = Array.from(new Set([...M, ...b])), b.clear()), ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) && (P = u().chain(M).sort(w(d.ThreadSortOrder.LATEST_ACTIVITY)), y = u().chain(M).sort(w(d.ThreadSortOrder.CREATION_DATE)));
   let r = (g === d.ThreadSortOrder.LATEST_ACTIVITY ? P : y).value();
-  let s = (D = 0 === C.size ? r : r.filter((t = C, function(e) {
+  let s = (v = 0 === C.size ? r : r.filter((t = C, function(e) {
     var n;
     let i = null === (n = f.default.getChannel(e)) || void 0 === n ? void 0 : n.appliedTags;
     return null != i && 0 !== i.length && i.some(e => t.has(e))
@@ -99,7 +99,7 @@ class F extends(r = _.default.Store) {
     return L
   }
   getCanAckThreads() {
-    return v
+    return D
   }
   getThreadIds(e, t, n) {
     let i = e !== R,
@@ -109,10 +109,10 @@ class F extends(r = _.default.Store) {
       refreshThreadIds: !0
     }) : s ? x({
       sortThreadIds: !0
-    }) : r && x(), D
+    }) : r && x(), v
   }
   getCurrentThreadIds() {
-    return D
+    return v
   }
   getAndDeleteMostRecentUserCreatedThreadId() {
     let e = O;
@@ -197,6 +197,6 @@ o = "ForumActivePostStore", (a = "displayName") in(s = F) ? Object.definePropert
       channelId: t
     } = e;
     if (null == t || t !== R) return !1;
-    v = !1
+    D = !1
   }
 })

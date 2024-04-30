@@ -34,8 +34,8 @@ var r, s, a, o, l = n("392711"),
   C = n("70956"),
   g = n("877481"),
   L = n("823379"),
-  D = n("358085"),
-  v = n("998502"),
+  v = n("358085"),
+  D = n("998502"),
   M = n("145597"),
   y = n("370862"),
   P = n("981631"),
@@ -133,10 +133,10 @@ let b = new S.default("RunningGameStore"),
     enableDetection: {}
   },
   z = function() {},
-  X = {},
-  Q = 0,
+  Z = {},
+  X = 0,
+  Q = null,
   q = null,
-  Z = null,
   J = {};
 
 function $(e, t, n) {
@@ -202,7 +202,7 @@ function er(e) {
     enabled: r,
     overlayMethod: i
   };
-  let s = null == e.id ? null : X[e.id];
+  let s = null == e.id ? null : Z[e.id];
   return null != s ? {
     source: y.OverlayGameStatusSource.DATABASE,
     enabled: s.enabled || n,
@@ -236,8 +236,8 @@ function el(e) {
     verified: N.default.isGameInDatabase(e),
     detectable: es(e)
   };
-  if (null != e.id && null != X[e.id]) {
-    let t = X[e.id];
+  if (null != e.id && null != Z[e.id]) {
+    let t = Z[e.id];
     i.overlayWarn = t.warn
   }
   return i
@@ -268,9 +268,9 @@ function eu() {
 }
 
 function ed() {
-  if (!__OVERLAY__ && D.isPlatformEmbedded) {
+  if (!__OVERLAY__ && v.isPlatformEmbedded) {
     let e = [...V, ...u().values(K.gameOverrides)];
-    v.default.setGameCandidateOverrides(e)
+    D.default.setGameCandidateOverrides(e)
   }
 }
 
@@ -304,14 +304,14 @@ function e_(e) {
 function ec() {
   let e = u().values(K.gameOverrides);
   return K.gamesSeen.filter(e => void 0 === K.gameOverrides[ei(e)]).concat(e)
-}!__OVERLAY__ && (0, D.isDesktop)() && (z = function() {
+}!__OVERLAY__ && (0, v.isDesktop)() && (z = function() {
   let e = [],
     t = new Set;
   i = {};
   let n = N.default.games;
   for (let e of n) {
     var r, s, a, o;
-    X[e.id] = {
+    Z[e.id] = {
       compatibilityHook: null !== (r = e.overlayCompatibilityHook) && void 0 !== r ? r : T.DEFAULT_OVERLAY_OPTIONS.compatibilityHook,
       warn: null !== (s = e.overlayWarn) && void 0 !== s ? s : T.DEFAULT_OVERLAY_OPTIONS.warn,
       enabled: null !== (a = e.overlay) && void 0 !== a ? a : T.DEFAULT_OVERLAY_OPTIONS.enabled,
@@ -324,7 +324,7 @@ function ec() {
         let {
           os: t
         } = e;
-        return t === (0, D.getPlatformName)()
+        return t === (0, v.getPlatformName)()
       }) : [],
       s = {};
     r.forEach(e => {
@@ -336,7 +336,7 @@ function ec() {
       executables: s[t],
       cmdLine: "null" !== t ? t : null
     }))
-  }), e = e.filter(e => null != e.executables && e.executables.length > 0), v.default.setObservedGamesCallback(e, e => {
+  }), e = e.filter(e => null != e.executables && e.executables.length > 0), D.default.setObservedGamesCallback(e, e => {
     let n = [],
       r = {};
     e = e.filter(e => (e.distributor = function(e) {
@@ -346,7 +346,7 @@ function ec() {
       return e.distributor
     }(e), e.isLauncher = t.has(e.exeName), e.isLauncher && null != e.id && (r[e.id] = e), e.windowHandle = function(e, t) {
       if (void 0 === t) {
-        let t = v.default.getDiscordUtils();
+        let t = D.default.getDiscordUtils();
         if (null != t && null != t.getWindowHandleFromPid) {
           let n = t.getWindowHandleFromPid(e);
           return null != n && "0" !== n ? n : null
@@ -361,9 +361,9 @@ function ec() {
       return n === e.name
     }) || (n.push(e), !1)));
     let s = n.filter(et).length;
-    s !== Q && (Q = s, I.default.dispatch({
+    s !== X && (X = s, I.default.dispatch({
       type: "RUNNING_STREAMER_TOOLS_CHANGE",
-      count: Q
+      count: X
     })), F = e, Y = n, i = r, en()
   }), ed()
 });
@@ -416,14 +416,14 @@ class eE extends(r = c.default.Store) {
   getOverlayOptionsForPID(e) {
     let t = this.getGameForPID(e);
     return null == t || t.isLauncher || null == t.id ? null : {
-      ...X[t.id]
+      ...Z[t.id]
     }
   }
   shouldElevateProcessForPID(e) {
-    return null != q && q === e
+    return null != Q && Q === e
   }
   shouldContinueWithoutElevatedProcessForPID(e) {
-    return null != Z && Z === e
+    return null != q && q === e
   }
   getCandidateGames() {
     return x.filter(e => e.hidden || null == e.id).filter(e => void 0 === K.gameOverrides[ei(e)])
@@ -487,16 +487,16 @@ o = "RunningGameStore", (a = "displayName") in(s = eE) ? Object.defineProperty(s
     let {
       pid: t
     } = e;
-    q = t, Z = null
+    Q = t, q = null
   },
   PERMISSION_CLEAR_ELEVATED_PROCESS: function() {
-    q = null
+    Q = null
   },
   PERMISSION_CONTINUE_NONELEVATED_PROCESS: function(e) {
     let {
       pid: t
     } = e;
-    Z = t, q = null
+    q = t, Q = null
   },
   RUNNING_GAME_ADD_OVERRIDE: function(e) {
     let t;
@@ -564,8 +564,8 @@ o = "RunningGameStore", (a = "displayName") in(s = eE) ? Object.defineProperty(s
   GAMES_DATABASE_UPDATE: z,
   GAME_LAUNCH_SUCCESS: function(e) {
     var t;
-    if (__OVERLAY__ || !D.isPlatformEmbedded) return;
-    let n = v.default.getDiscordUtils().notifyGameLaunched;
+    if (__OVERLAY__ || !v.isPlatformEmbedded) return;
+    let n = D.default.getDiscordUtils().notifyGameLaunched;
     if (null == n) return;
     let i = N.default.getDetectableGame(e.applicationId);
     null != i && n(i.id, i.name, null !== (t = e.pids) && void 0 !== t ? t : [])

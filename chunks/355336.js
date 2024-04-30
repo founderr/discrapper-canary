@@ -45,7 +45,7 @@ function d(e, t) {
       getScrollerState: g,
       ...(0, l.getAnimatedScrollHelpers)(C, g, L)
     }), [C, g, L]);
-    let D = r.useCallback(e => {
+    let v = r.useCallback(e => {
       null == N.current ? R(!0) : clearTimeout(N.current), N.current = setTimeout(() => {
         N.current = null, R(!1)
       }, 200), null != T && T(e)
@@ -73,7 +73,7 @@ function d(e, t) {
       }),
       style: A,
       dir: f,
-      onScroll: D,
+      onScroll: v,
       ...m,
       children: (0, i.jsx)(o.FocusRingScope, {
         containerRef: p,

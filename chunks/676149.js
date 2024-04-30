@@ -1,25 +1,25 @@
 "use strict";
-n.r(t), n.d(t, {
+t.r(n), t.d(n, {
   default: function() {
     return o
   }
 });
-var l = n("735250");
-n("470079");
-var a = n("120356"),
-  r = n.n(a),
-  s = n("911969"),
-  u = n("70189");
+var l = t("735250");
+t("470079");
+var a = t("120356"),
+  r = t.n(a),
+  u = t("911969"),
+  s = t("70189");
 
 function o(e) {
   let {
-    divider: t,
-    spacing: n
+    divider: n,
+    spacing: t
   } = e;
   return (0, l.jsx)("div", {
     className: r()({
-      [u.spacingLarge]: n === s.SeparatorSpacingSize.LARGE,
-      [u.divider]: t
+      [s.spacingLarge]: t === u.SeparatorSpacingSize.LARGE,
+      [s.divider]: n
     })
   })
 }

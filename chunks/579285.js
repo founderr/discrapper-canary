@@ -62,9 +62,9 @@ let p = (0, _.default)(function(e) {
     }
     R(t => e < g.length ? e : t)
   }, [T, g]);
-  let D = r.useMemo(() => "roles-".concat((0, s.v4)()), []),
-    v = (0, a.default)({
-      id: D,
+  let v = r.useMemo(() => "roles-".concat((0, s.v4)()), []),
+    D = (0, a.default)({
+      id: v,
       isEnabled: !0,
       scrollToStart: A.NOOP_PROMISE,
       scrollToEnd: A.NOOP_PROMISE,
@@ -86,7 +86,7 @@ let p = (0, _.default)(function(e) {
       }, e.id)
     });
   return (0, i.jsx)(a.ListNavigatorProvider, {
-    navigator: v,
+    navigator: D,
     children: (0, i.jsx)(a.ListNavigatorContainer, {
       children: e => {
         let {

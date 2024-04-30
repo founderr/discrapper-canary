@@ -173,8 +173,8 @@ let p = new o.default("GuildSettingsActionCreators"),
         discoverySplash: C,
         publicUpdatesChannelId: g,
         premiumProgressBarEnabled: L,
-        clan: D
-      } = t, v = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, M = {
+        clan: v
+      } = t, D = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, M = {
         name: n,
         description: i,
         icon: a,
@@ -197,14 +197,14 @@ let p = new o.default("GuildSettingsActionCreators"),
         ...null != L ? {
           premium_progress_bar_enabled: L
         } : null,
-        clan: null != D ? (0, m.toServerClanData)(D) : D
+        clan: null != v ? (0, m.toServerClanData)(v) : v
       };
       return s.default.dispatch({
         type: "GUILD_SETTINGS_SUBMIT"
       }), r.HTTP.patch({
         url: A.Endpoints.GUILD(e),
         query: {
-          for_discovery: v.isForDiscovery
+          for_discovery: D.isForDiscovery
         },
         body: M,
         oldFormErrors: !0
@@ -219,7 +219,7 @@ let p = new o.default("GuildSettingsActionCreators"),
             errors: e.body
           }), p.error("Failed to save guild settings", {
             errors: e.body
-          }), v.throwErr) throw e.body
+          }), D.throwErr) throw e.body
       })
     },
     updateGuildModeration: (e, t) => r.HTTP.patch({

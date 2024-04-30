@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return O
   },
   favoriteSticker: function() {
-    return v
+    return D
   },
   fetchGuildStickers: function() {
     return p
@@ -147,12 +147,12 @@ function L(e, t) {
   })
 }
 
-function D(e) {
+function v(e) {
   return c.default.totalUnavailableGuilds > 0 || !l.default.isConnected() ? e : e.filter(e => null != T.default.getStickerById(e))
 }
 
-function v(e) {
-  d.FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", t => (t.stickerIds = D(t.stickerIds), r().size(t.stickerIds) >= S.MAX_FAVORITES) ? (o.default.show({
+function D(e) {
+  d.FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", t => (t.stickerIds = v(t.stickerIds), r().size(t.stickerIds) >= S.MAX_FAVORITES) ? (o.default.show({
     title: h.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
     body: h.default.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
       count: S.MAX_FAVORITES
@@ -162,6 +162,6 @@ function v(e) {
 
 function M(e) {
   d.FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", t => {
-    t.stickerIds = t.stickerIds.filter(t => t !== e), t.stickerIds = D(t.stickerIds)
+    t.stickerIds = t.stickerIds.filter(t => t !== e), t.stickerIds = v(t.stickerIds)
   }, S.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }

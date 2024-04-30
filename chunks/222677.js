@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return L
   },
   removeReactionWithConfirmation: function() {
-    return v
+    return D
   }
 });
 var i, r, s = n("544891"),
@@ -138,7 +138,7 @@ async function O(e, t, n) {
     });
     return
   }
-  let E = await D(n, o);
+  let E = await v(n, o);
   return m("MESSAGE_REACTION_ADD", e, t, n, {
     burst: o,
     colors: E
@@ -261,7 +261,7 @@ async function L(e, t, n, i) {
       }), {
         isRetry: _
       })) {
-      let r = await D(n, l);
+      let r = await v(n, l);
       m("MESSAGE_REACTION_ADD", e, t, n, {
         userId: i,
         burst: l,
@@ -274,7 +274,7 @@ async function L(e, t, n, i) {
     }
   })
 }
-async function D(e, t) {
+async function v(e, t) {
   let n = [];
   if (t) try {
     n = await (0, T.getEmojiColors)(e)
@@ -282,7 +282,7 @@ async function D(e, t) {
   return n
 }
 
-function v(e) {
+function D(e) {
   let {
     channelId: t,
     messageId: n,

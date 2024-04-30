@@ -19,10 +19,10 @@ n.r(t), n.d(t, {
     return N
   },
   resetAllPending: function() {
-    return D
+    return v
   },
   resetAndCloseUserProfileForm: function() {
-    return v
+    return D
   },
   resetPendingAccountChanges: function() {
     return L
@@ -224,13 +224,13 @@ function L() {
   })
 }
 
-function D() {
+function v() {
   a.default.dispatch({
     type: "USER_SETTINGS_RESET_ALL_PENDING"
   })
 }
 
-function v() {
+function D() {
   a.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM"
   })

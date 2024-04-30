@@ -44,8 +44,8 @@ let O = Object.freeze({
   C = {},
   g = null,
   L = new Set,
-  D = !1,
-  v = null,
+  v = !1,
+  D = null,
   M = !1,
   y = !1,
   P = new Set,
@@ -212,7 +212,7 @@ class F extends(i = r.default.PersistedStore) {
     return y
   }
   get incompatibleApp() {
-    return D
+    return v
   }
   getActiveRegions() {
     return P
@@ -375,7 +375,7 @@ p(F, "displayName", "OverlayStore"), p(F, "persistKey", "OverlayStoreV2"), p(F, 
     G.disableExternalLinkAlert = !0
   },
   OVERLAY_INCOMPATIBLE_APP: function() {
-    D = !0
+    v = !0
   },
   OVERLAY_SET_UI_LOCKED: function(e) {
     let {

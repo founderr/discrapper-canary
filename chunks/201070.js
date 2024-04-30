@@ -69,7 +69,7 @@ function L(e) {
   let t = g(e);
   return null == t && C(e, t = O(1)), t
 }
-async function D(e) {
+async function v(e) {
   await (0, c.sleep)(200), null != g(e) && C(e, {
     requestState: 3,
     abortController: null,
@@ -77,7 +77,7 @@ async function D(e) {
   })
 }
 
-function v(e) {
+function D(e) {
   var t;
   t = p(e), R.setState(e => {
     let n = {
@@ -245,7 +245,7 @@ async function P(e) {
       ...r,
       ...s
     }),
-    v = null !== (t = o.selectedSort) && void 0 !== t ? t : h.OrderBy.ORDER_BY_GUILD_JOINED_AT_DESC;
+    D = null !== (t = o.selectedSort) && void 0 !== t ? t : h.OrderBy.ORDER_BY_GUILD_JOINED_AT_DESC;
   if (function(e, t) {
       let n = L(e);
       return l()(n.query, t)
@@ -265,7 +265,7 @@ async function P(e) {
       previousPagination: i,
       sort: r
     })
-  }(_, R, E, d, v);
+  }(_, R, E, d, D);
   try {
     if (N.info("Making member search request", {
         query: M.query,
@@ -284,7 +284,7 @@ async function P(e) {
     });
     return
   }
-  await D(_)
+  await v(_)
 }
 
 function U(e) {
@@ -305,13 +305,13 @@ class G extends E.default {
     let {
       guildId: t
     } = e;
-    return v(t), P(t)
+    return D(t), P(t)
   }
   handleGuildDelete(e) {
     let {
       guild: t
     } = e;
-    return v(t.id)
+    return D(t.id)
   }
   handleSearchStateUpdate(e) {
     let {
@@ -329,7 +329,7 @@ class G extends E.default {
     let {
       guildId: t
     } = e;
-    return D(p(t))
+    return v(p(t))
   }
   handleGuildMemberSearchStillIndexing(e) {
     let {

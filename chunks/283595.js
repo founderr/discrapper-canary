@@ -38,14 +38,14 @@ function L() {
   })
 }
 
-function D(e) {
+function v(e) {
   for (let t of e) {
     let e = c.default.createFromServer(t);
     m[(0, I.getComboId)(e.id, e.branchId)] = e
   }
 }
 
-function v(e) {
+function D(e) {
   let {
     libraryApplication: t
   } = e, n = c.default.createFromServer(t), i = (0, I.getComboId)(n.id, n.branchId);
@@ -144,13 +144,13 @@ a = "LibraryApplicationStore", (s = "displayName") in(r = P) ? Object.defineProp
     let {
       libraryApplications: t
     } = e;
-    m = {}, D(t), A = !0
+    m = {}, v(t), A = !0
   },
   SKU_PURCHASE_SUCCESS: function(e) {
     let {
       libraryApplications: t
     } = e;
-    D(t)
+    v(t)
   },
   LIBRARY_APPLICATION_FLAGS_UPDATE_START: function(e) {
     let {
@@ -160,8 +160,8 @@ a = "LibraryApplicationStore", (s = "displayName") in(r = P) ? Object.defineProp
     } = e, r = (0, I.getComboId)(t, n), s = M(t, n);
     null != s && !s.isHidden() && E.hasFlag(i, f.LibraryApplicationFlags.HIDDEN) && (C = !0), p.add(r)
   },
-  LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: v,
-  LIBRARY_APPLICATION_UPDATE: v,
+  LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: D,
+  LIBRARY_APPLICATION_UPDATE: D,
   LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: function(e) {
     let {
       applicationId: t,

@@ -206,11 +206,11 @@ t.default = r.forwardRef(function(e, t) {
       x: h + (A - h) / 2,
       y: Math.max(m, Math.min(I.y, c.y))
     }
-  }, [a, _, s]), [C, g] = r.useState(0), [D, v] = r.useState(0);
+  }, [a, _, s]), [C, g] = r.useState(0), [v, D] = r.useState(0);
   if (r.useLayoutEffect(() => {
       if (null == m || null == p || null == d.current) return;
       let e = d.current.getBoundingClientRect();
-      v(e.width / 2), g(e.height + 12)
+      D(e.width / 2), g(e.height + 12)
     }, [m, p]), null == m || null == p) return null;
   let M = null === (n = s.current) || void 0 === n ? void 0 : n.getSlateEditor();
   return null == M ? null : (0, i.jsx)(f.default, {
@@ -220,7 +220,7 @@ t.default = r.forwardRef(function(e, t) {
       className: O.toolbar,
       style: {
         top: p - C,
-        left: m - D
+        left: m - v
       },
       onMouseDown: e => {
         e.stopPropagation()

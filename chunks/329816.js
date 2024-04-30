@@ -25,8 +25,8 @@ var i = n("735250"),
   C = n("327943"),
   g = n("907459"),
   L = n("559407"),
-  D = n("514361"),
-  v = n("724145"),
+  v = n("514361"),
+  D = n("724145"),
   M = n("260035"),
   y = n("947519"),
   P = n("243778"),
@@ -45,10 +45,10 @@ var i = n("735250"),
   W = n("806519"),
   K = n("358085"),
   z = n("74538"),
-  X = n("663993"),
-  Q = n("823453"),
-  q = n("628123"),
-  Z = n("962745"),
+  Z = n("663993"),
+  X = n("823453"),
+  Q = n("628123"),
+  q = n("962745"),
   J = n("151851"),
   $ = n("981631"),
   ee = n("921944"),
@@ -57,14 +57,14 @@ n("792295"), Promise.resolve().then(n.bind(n, "62883")).then(e => {
   K.isPlatformEmbedded ? window.addEventListener("contextmenu", e.contextMenuCallbackNative, !1) : window.addEventListener("contextmenu", e.contextMenuCallbackWeb, !1)
 }), (0, E.setDesignConfig)({
   getDefaultLinkInterceptor: A.default
-}), (0, X.makeLazy)({
+}), (0, Z.makeLazy)({
   createPromise: () => Promise.all([n.e("99387"), n.e("40326"), n.e("80451"), n.e("30634"), n.e("54343")]).then(n.bind(n, "849493")),
   webpackId: "849493"
-}), (0, X.makeLazy)({
+}), (0, Z.makeLazy)({
   createPromise: () => Promise.all([n.e("40326"), n.e("80451"), n.e("30634"), n.e("81811")]).then(n.bind(n, "80753")),
   webpackId: "80753"
 });
-let en = (0, X.makeLazy)({
+let en = (0, Z.makeLazy)({
     createPromise: () => Promise.all([n.e("99387"), n.e("46369")]).then(n.bind(n, "177741")),
     webpackId: "177741"
   }),
@@ -81,7 +81,7 @@ t.default = function(e) {
     skipsSettingDefaultPageTitle: n
   } = e, {
     pathname: s
-  } = (0, u.useLocation)(), E = (0, K.getPlatform)(), A = d.isMobile || d.isTablet, V = (0, _.useStateFromStores)([w.default], () => w.default.darkSidebar ? $.ThemeTypes.DARK : void 0), X = (0, _.useStateFromStores)([N.default], () => N.default.useForcedColors ? "yes" : "no"), [J, er] = (0, _.useStateFromStoresArray)([D.default], () => [D.default.isEditorOpen, D.default.isCoachmark]), es = (0, _.useStateFromStores)([C.default], () => C.default.isEditorOpen), {
+  } = (0, u.useLocation)(), E = (0, K.getPlatform)(), A = d.isMobile || d.isTablet, V = (0, _.useStateFromStores)([w.default], () => w.default.darkSidebar ? $.ThemeTypes.DARK : void 0), Z = (0, _.useStateFromStores)([N.default], () => N.default.useForcedColors ? "yes" : "no"), [J, er] = (0, _.useStateFromStoresArray)([v.default], () => [v.default.isEditorOpen, v.default.isCoachmark]), es = (0, _.useStateFromStores)([C.default], () => C.default.isEditorOpen), {
     enabled: ea
   } = b.default.useExperiment({
     location: "client_themes_coachmark_reintro"
@@ -109,10 +109,10 @@ t.default = function(e) {
   return (0, i.jsx)(G.default, {
     children: (0, i.jsx)(p.default, {
       children: (0, i.jsxs)(I.RedesignIconContextProvider, {
-        children: [(0, i.jsx)(Q.default, {
+        children: [(0, i.jsx)(X.default, {
           skipsSettingDefaultPageTitle: n
-        }), (0, i.jsx)(Z.default, {
-          children: (0, i.jsx)(q.default, {
+        }), (0, i.jsx)(q.default, {
+          children: (0, i.jsx)(Q.default, {
             children: (0, i.jsxs)(I.FocusRingScope, {
               containerRef: eT,
               children: [(0, i.jsx)(W.MaskLibrary, {}), (0, i.jsx)(x.default, {}), (0, i.jsx)(o.FocusGuard, {}), null != E ? (0, i.jsx)(ei, {
@@ -147,7 +147,7 @@ t.default = function(e) {
                           })
                         })
                       })
-                    }), (0, i.jsx)(f.default, {}), eu && !er || eI ? (0, i.jsx)(v.default, {
+                    }), (0, i.jsx)(f.default, {}), eu && !er || eI ? (0, i.jsx)(D.default, {
                       markAsDismissed: ec
                     }) : null, !es || eo || eI ? null : (0, i.jsx)(g.default, {
                       isCoachmark: eE,
@@ -163,5 +163,5 @@ t.default = function(e) {
         })]
       })
     })
-  }, X)
+  }, Z)
 }

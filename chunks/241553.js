@@ -29,8 +29,8 @@ var i = n("735250"),
   C = n("709054"),
   g = n("51144"),
   L = n("981631"),
-  D = n("921944"),
-  v = n("474936"),
+  v = n("921944"),
+  D = n("474936"),
   M = n("689938"),
   y = n("343184"),
   P = n("414367");
@@ -148,7 +148,7 @@ t.default = r.memo(function(e) {
         isGift: !0,
         giftRecipient: null == V ? void 0 : V,
         initialPlanId: null,
-        subscriptionTier: v.PremiumSubscriptionSKUs.TIER_2,
+        subscriptionTier: D.PremiumSubscriptionSKUs.TIER_2,
         analyticsLocations: s,
         analyticsObject: {
           page: n.isPrivate() ? L.AnalyticsPages.DM_CHANNEL : L.AnalyticsPages.GUILD_CHANNEL,
@@ -177,7 +177,7 @@ t.default = r.memo(function(e) {
         isActive: !1,
         onClick: () => {
           _(!1), (0, I.markDismissibleContentAsDismissed)(o.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023, {
-            dismissAction: D.ContentDismissActionType.TAKE_ACTION
+            dismissAction: v.ContentDismissActionType.TAKE_ACTION
           }), H()
         },
         children: (0, i.jsx)("div", {

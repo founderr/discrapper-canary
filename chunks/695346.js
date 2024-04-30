@@ -49,7 +49,7 @@ n.r(t), n.d(t, {
     return es
   },
   DefaultGuildsActivityRestricted: function() {
-    return eD
+    return ev
   },
   DefaultGuildsRestricted: function() {
     return k
@@ -58,10 +58,10 @@ n.r(t), n.d(t, {
     return eA
   },
   DisableGamesTab: function() {
-    return q
+    return Q
   },
   DisableHomeAutoNav: function() {
-    return ev
+    return eD
   },
   DmSpamFilterV2: function() {
     return $
@@ -73,7 +73,7 @@ n.r(t), n.d(t, {
     return N
   },
   EnableTTSCommand: function() {
-    return Z
+    return q
   },
   ExplicitContentFilter: function() {
     return J
@@ -127,7 +127,7 @@ n.r(t), n.d(t, {
     return G
   },
   NOTIFICATION_CENTER_ACKED_BEFORE_ID_UNSET: function() {
-    return D
+    return v
   },
   NativePhoneIntegrationEnabled: function() {
     return K
@@ -136,7 +136,7 @@ n.r(t), n.d(t, {
     return B
   },
   NotificationCenterAckedBeforeId: function() {
-    return v
+    return D
   },
   NotifyFriendsOnGoLive: function() {
     return L
@@ -196,10 +196,10 @@ n.r(t), n.d(t, {
     return R
   },
   ViewNsfwCommands: function() {
-    return Q
+    return X
   },
   ViewNsfwGuilds: function() {
-    return X
+    return Z
   }
 }), n("47120");
 var i = n("442837"),
@@ -285,8 +285,8 @@ let h = (0, o.defineProtoSetting)("notifications", "quietMode", e => {
   L = (0, o.defineProtoSetting)("notifications", "notifyFriendsOnGoLive", e => null == e ? void 0 : e.value, e => s.BoolValue.create({
     value: e
   })),
-  D = "0",
-  v = (0, o.defineProtoSetting)("notifications", "notificationCenterAckedBeforeId", e => null != e ? e : D, e => e);
+  v = "0",
+  D = (0, o.defineProtoSetting)("notifications", "notificationCenterAckedBeforeId", e => null != e ? e : v, e => e);
 (0, o.defineProtoSetting)("notifications", "enableBurstReactionNotifications", e => {
   var t;
   return null === (t = null == e ? void 0 : e.value) || void 0 === t || t
@@ -391,13 +391,13 @@ let W = (0, o.defineProtoSetting)("privacy", "dropsOptedOut", e => {
   }, e => s.UInt32Value.create({
     value: e
   })),
-  X = (0, o.defineProtoSetting)("textAndImages", "viewNsfwGuilds", e => {
+  Z = (0, o.defineProtoSetting)("textAndImages", "viewNsfwGuilds", e => {
     var t;
     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
   }, e => s.BoolValue.create({
     value: e
   })),
-  Q = (0, o.defineProtoSetting)("textAndImages", "viewNsfwCommands", e => {
+  X = (0, o.defineProtoSetting)("textAndImages", "viewNsfwCommands", e => {
     var t;
     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
   }, e => s.BoolValue.create({
@@ -409,13 +409,13 @@ let W = (0, o.defineProtoSetting)("privacy", "dropsOptedOut", e => {
 }, e => s.BoolValue.create({
   value: e
 }));
-let q = (0, o.defineProtoSetting)("gameLibrary", "disableGamesTab", e => {
+let Q = (0, o.defineProtoSetting)("gameLibrary", "disableGamesTab", e => {
     var t;
     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
   }, e => s.BoolValue.create({
     value: e
   })),
-  Z = (0, o.defineProtoSetting)("textAndImages", "enableTtsCommand", e => {
+  q = (0, o.defineProtoSetting)("textAndImages", "enableTtsCommand", e => {
     var t;
     return null === (t = null == e ? void 0 : e.value) || void 0 === t || t
   }, e => s.BoolValue.create({
@@ -559,8 +559,8 @@ let eA = (0, o.wrapSettingWithSelectiveSyncing)((0, o.defineProtoSetting)("appea
   eC = (0, o.defineProtoSetting)("privacy", "activityRestrictedGuildIds", e => null != e ? e : eR, e => e),
   eg = [],
   eL = (0, o.defineProtoSetting)("privacy", "activityJoiningRestrictedGuildIds", e => null != e ? e : eg, e => e),
-  eD = (0, o.defineProtoSetting)("privacy", "defaultGuildsActivityRestricted", e => e === r.GuildActivityStatusRestrictionDefault.ON_FOR_LARGE_GUILDS, e => !0 === e ? r.GuildActivityStatusRestrictionDefault.ON_FOR_LARGE_GUILDS : r.GuildActivityStatusRestrictionDefault.OFF),
-  ev = (0, o.defineProtoSetting)("communities", "disableHomeAutoNav", e => {
+  ev = (0, o.defineProtoSetting)("privacy", "defaultGuildsActivityRestricted", e => e === r.GuildActivityStatusRestrictionDefault.ON_FOR_LARGE_GUILDS, e => !0 === e ? r.GuildActivityStatusRestrictionDefault.ON_FOR_LARGE_GUILDS : r.GuildActivityStatusRestrictionDefault.OFF),
+  eD = (0, o.defineProtoSetting)("communities", "disableHomeAutoNav", e => {
     var t;
     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
   }, e => s.BoolValue.create({

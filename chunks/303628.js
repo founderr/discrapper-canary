@@ -29,8 +29,8 @@ function g(e) {
     channelId: t,
     type: n
   } = e, s = (0, u.useStateFromStores)([E.default], () => E.default.keyboardModeEnabled), g = (0, I.default)("attachments", l.Orientations.HORIZONTAL), L = (0, u.useStateFromStores)([S.default], () => S.default.getUploads(t, n.drafts.type)), {
-    isApplicationCommand: D,
-    commandOptions: v,
+    isApplicationCommand: v,
+    commandOptions: D,
     commandOptionStates: M
   } = (0, u.useStateFromStoresObject)([T.default], () => {
     let e = T.default.getActiveCommand(t);
@@ -47,11 +47,11 @@ function g(e) {
     }
   }), y = r.useMemo(() => {
     var e;
-    return null !== (e = null == v ? void 0 : v.filter(e => {
+    return null !== (e = null == D ? void 0 : D.filter(e => {
       var t;
       return e.type === c.ApplicationCommandOptionType.ATTACHMENT && (null == M ? void 0 : null === (t = M[e.name]) || void 0 === t ? void 0 : t.hasValue)
     })) && void 0 !== e ? e : []
-  }, [v, M]), [P, U] = r.useState([]);
+  }, [D, M]), [P, U] = r.useState([]);
   r.useEffect(() => {
     let e = () => {
       _.default.clearAll(t, n.drafts.type)
@@ -65,7 +65,7 @@ function g(e) {
     event: p.ComponentActions.FOCUS_ATTACHMENT_AREA,
     handler: b
   }), r.useEffect(() => {
-    if (D) {
+    if (v) {
       let e = [];
       P.forEach(t => {
         !y.some(e => t.name === e.name) && e.push(t)
@@ -73,7 +73,7 @@ function g(e) {
         _.default.remove(t, e.name, n.drafts.type)
       }), U(y)
     }
-  }, [t, y.length, n]), !D && 0 === L.length || D && 0 === y.length) ? null : (0, i.jsxs)(r.Fragment, {
+  }, [t, y.length, n]), !v && 0 === L.length || v && 0 === y.length) ? null : (0, i.jsxs)(r.Fragment, {
     children: [(0, i.jsx)(o.ListNavigatorProvider, {
       navigator: g,
       children: (0, i.jsx)(o.ListNavigatorContainer, {
@@ -86,7 +86,7 @@ function g(e) {
             ref: r,
             ...o,
             className: a()(O.channelAttachmentArea, R.scrollbarGhost),
-            children: D ? y.map(e => (0, i.jsx)(m.default, {
+            children: v ? y.map(e => (0, i.jsx)(m.default, {
               channelId: t,
               keyboardModeEnabled: s,
               option: e

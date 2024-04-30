@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return g
   },
   singleSelect: function() {
-    return D
+    return v
   },
   toggleSelect: function() {
     return L
@@ -122,7 +122,7 @@ function L(e, t) {
   }
 }
 
-function D(e, t) {
+function v(e, t) {
   return t.has(e) ? {
     newValues: t,
     updated: !1
@@ -132,12 +132,12 @@ function D(e, t) {
   }
 }
 
-function v(e) {
+function D(e) {
   return null == e ? void 0 : e.label
 }
 
 function M(e) {
-  return e.map(e => v(e)).join(", ")
+  return e.map(e => D(e)).join(", ")
 }
 
 function y(e) {
@@ -153,9 +153,9 @@ function y(e) {
     look: O = m.SelectLooks.FILLED,
     onClose: R,
     onOpen: C,
-    renderOptionLabel: g = v,
+    renderOptionLabel: g = D,
     renderOptionValue: L = M,
-    popoutClassName: D,
+    popoutClassName: v,
     popoutPosition: y = "bottom",
     popoutLayerContext: U,
     optionClassName: b,
@@ -171,11 +171,11 @@ function y(e) {
     ref: W,
     width: K,
     height: z
-  } = (0, E.default)(), X = r.useCallback(e => {
+  } = (0, E.default)(), Z = r.useCallback(e => {
     Y !== e && !o && (j(e), e ? null == C || C() : null == R || R())
-  }, [o, R, C, Y]), Q = r.useCallback(e => {
-    Y && !e && X(!1)
-  }, [X, Y]), q = (0, I.useIsVisible)(Q), Z = r.useCallback(e => {
+  }, [o, R, C, Y]), X = r.useCallback(e => {
+    Y && !e && Z(!1)
+  }, [Z, Y]), Q = (0, I.useIsVisible)(X), q = r.useCallback(e => {
     if (w(e), G) {
       var t;
       null === (t = W.current) || void 0 === t || t.focus()
@@ -195,10 +195,10 @@ function y(e) {
     animation: d.Popout.Animation.NONE,
     shouldShow: Y,
     onRequestOpen: () => {
-      X(!0)
+      Z(!0)
     },
     onRequestClose: () => {
-      X(!1)
+      Z(!1)
     },
     renderPopout: e => {
       let {
@@ -207,14 +207,14 @@ function y(e) {
         updatePosition: s
       } = e;
       return (0, i.jsx)(P, {
-        className: D,
+        className: v,
         closeOnSelect: G,
         maxVisibleItems: u,
         width: null != T ? T : K,
         isSelected: B,
         closePopout: n,
         buttonHeight: null != z ? z : 0,
-        onSelect: Z,
+        onSelect: q,
         options: t,
         serialize: k,
         renderOptionLabel: g,
@@ -238,13 +238,13 @@ function y(e) {
         role: "button",
         "aria-disabled": o,
         innerRef: e => {
-          W.current = e, q.current = e
+          W.current = e, Q.current = e
         },
         onClick: o ? void 0 : e => {
-          r(e), X(!Y)
+          r(e), Z(!Y)
         },
         onKeyDown: e => {
-          "ArrowDown" === e.key ? X(!0) : "Escape" === e.key && (e.stopPropagation(), X(!1)), u(e)
+          "ArrowDown" === e.key ? Z(!0) : "Escape" === e.key && (e.stopPropagation(), Z(!1)), u(e)
         },
         ...d,
         className: a()(p.select, s, {
@@ -307,10 +307,10 @@ function P(e) {
     async scrollToStart() {},
     isEnabled: !0,
     wrap: !0
-  }), D = r.useRef(null);
-  (0, u.useFocusLock)(D), r.useLayoutEffect(() => {
+  }), v = r.useRef(null);
+  (0, u.useFocusLock)(v), r.useLayoutEffect(() => {
     var e;
-    null === (e = D.current) || void 0 === e || e.focus()
+    null === (e = v.current) || void 0 === e || e.focus()
   }, []), r.useEffect(() => {
     A > 0 && m()
   }, [A, m]), (0, T.default)(m), r.useLayoutEffect(() => {
@@ -320,7 +320,7 @@ function P(e) {
   }, [I]), r.useEffect(() => {
     m()
   }, [m, O]);
-  let v = r.useCallback(e => {
+  let D = r.useCallback(e => {
       n(e), l && s()
     }, [s, n, l]),
     M = c.map((e, t) => {
@@ -329,7 +329,7 @@ function P(e) {
         isSelected: d(e.value),
         value: e.value,
         label: f(e),
-        onSelect: v,
+        onSelect: D,
         className: h,
         isDisabled: e.disabled,
         serialize: S
@@ -356,7 +356,7 @@ function P(e) {
             ref: e => {
               var t;
               let i = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null;
-              n.current = i, D.current = i
+              n.current = i, v.current = i
             },
             ...r,
             role: "listbox",

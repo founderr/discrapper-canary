@@ -34,18 +34,18 @@ function p(e) {
     isLoading: O,
     onClose: R,
     source: C
-  } = e, g = (0, T.useClanInfo)(null !== (t = null == p ? void 0 : p.identityGuildId) && void 0 !== t ? t : null), L = null == p ? void 0 : p.tag, D = (0, I.useIsInUserClanExperiment)(), v = null == p ? void 0 : p.identityGuildId, M = (0, a.useStateFromStores)([d.default], () => d.default.getId()), y = (0, a.useStateFromStores)([_.default], () => null != v ? _.default.getMember(v, M) : null, [v, M]), P = (0, a.useStateFromStores)([c.default], () => c.default.getUser(M), [M]), U = (null == y ? void 0 : y.joinedAt) != null, b = (0, S.isGuildAdoptedUserClanIdentity)(v, null == P ? void 0 : P.clan), G = null != (0, l.default)(v);
+  } = e, g = (0, T.useClanInfo)(null !== (t = null == p ? void 0 : p.identityGuildId) && void 0 !== t ? t : null), L = null == p ? void 0 : p.tag, v = (0, I.useIsInUserClanExperiment)(), D = null == p ? void 0 : p.identityGuildId, M = (0, a.useStateFromStores)([d.default], () => d.default.getId()), y = (0, a.useStateFromStores)([_.default], () => null != D ? _.default.getMember(D, M) : null, [D, M]), P = (0, a.useStateFromStores)([c.default], () => c.default.getUser(M), [M]), U = (null == y ? void 0 : y.joinedAt) != null, b = (0, S.isGuildAdoptedUserClanIdentity)(D, null == P ? void 0 : P.clan), G = null != (0, l.default)(D);
   r.useEffect(() => {
     E.default.track(h.AnalyticEvents.CLAN_PROFILE_VIEWED, {
-      guild_id: v,
+      guild_id: D,
       is_member: U,
       has_join_request: G,
       source: C
     })
-  }, [v, U, G, C]);
+  }, [D, U, G, C]);
   let w = r.useCallback(e => {
-      null != v && (e.stopPropagation(), e.preventDefault(), null == R || R(), (0, f.openAdoptClanIdentityModal)(v))
-    }, [v, R]),
+      null != D && (e.stopPropagation(), e.preventDefault(), null == R || R(), (0, f.openAdoptClanIdentityModal)(D))
+    }, [D, R]),
     B = r.useCallback(e => {
       if (null != g) e.stopPropagation(), e.preventDefault(), null == R || R(), !G && (0, s.openModalLazy)(async () => {
         let {
@@ -58,11 +58,11 @@ function p(e) {
       })
     }, [g, G, R]),
     k = r.useCallback(() => {
-      null != v && (0, u.transitionTo)(h.Routes.GUILD_MEMBER_VERIFICATION(v))
-    }, [v]),
+      null != D && (0, u.transitionTo)(h.Routes.GUILD_MEMBER_VERIFICATION(D))
+    }, [D]),
     V = r.useCallback(() => {
-      null != v && (0, u.transitionToGuild)(v)
-    }, [v]),
+      null != D && (0, u.transitionToGuild)(D)
+    }, [D]),
     x = r.useMemo(() => {
       var e, t;
       let n = null !== (t = null == g ? void 0 : null === (e = g.branding) || void 0 === e ? void 0 : e.primaryColor) && void 0 !== t ? t : null,
@@ -82,7 +82,7 @@ function p(e) {
     }, [g]),
     F = r.useMemo(() => {
       switch (!0) {
-        case !D:
+        case !v:
           return null;
         case !U && G:
           return (0, i.jsx)(s.Button, {
@@ -111,12 +111,12 @@ function p(e) {
         default:
           return null
       }
-    }, [x, w, B, k, V, G, b, U, D]),
+    }, [x, w, B, k, V, G, b, U, v]),
     H = r.useMemo(() => ({
       className: m.container,
       onClick: N
     }), []);
-  return null == L || null == g || null == v || O ? (0, i.jsx)("div", {
+  return null == L || null == g || null == D || O ? (0, i.jsx)("div", {
     ...H,
     children: (0, i.jsx)(s.Spinner, {})
   }) : (0, i.jsxs)("div", {

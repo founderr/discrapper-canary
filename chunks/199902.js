@@ -18,8 +18,8 @@ var o, l, u, d, _ = n("442837"),
   C = n("944486"),
   g = n("979651"),
   L = n("981631"),
-  D = n("70722");
-let v = null,
+  v = n("70722");
+let D = null,
   M = {},
   y = null;
 
@@ -60,7 +60,7 @@ function G(e) {
 
 function w(e, t) {
   let n = m.default.getBasicChannel(t);
-  return e === D.StreamTypes.CALL || null != n && O.default.canBasicChannel(L.BasicPermissions.VIEW_CHANNEL, n)
+  return e === v.StreamTypes.CALL || null != n && O.default.canBasicChannel(L.BasicPermissions.VIEW_CHANNEL, n)
 }
 
 function B(e) {
@@ -190,7 +190,7 @@ d = "ApplicationStreamingStore", (u = "displayName") in(l = k) ? Object.definePr
       if (o && null != s) {
         var l, u;
         return null == r[(l = {
-          streamType: null != i ? D.StreamTypes.GUILD : D.StreamTypes.CALL,
+          streamType: null != i ? v.StreamTypes.GUILD : v.StreamTypes.CALL,
           ownerId: n,
           guildId: i,
           channelId: s
@@ -285,7 +285,7 @@ d = "ApplicationStreamingStore", (u = "displayName") in(l = k) ? Object.definePr
     i.set(t, {
       ...o,
       state: l
-    }), l === L.ApplicationStreamStates.ENDED && v !== t && U(t)
+    }), l === L.ApplicationStreamStates.ENDED && D !== t && U(t)
   },
   STREAM_CLOSE: function(e) {
     let {
@@ -298,7 +298,7 @@ d = "ApplicationStreamingStore", (u = "displayName") in(l = k) ? Object.definePr
       channelId: t,
       selfStreamHidden: n
     } = e;
-    (0, T.isStreamKey)(v) && (null == v ? void 0 : v.includes(A.default.getId())) && !1 === M[t] && !0 === n && (v = null), M[t] = n
+    (0, T.isStreamKey)(D) && (null == D ? void 0 : D.includes(A.default.getId())) && !1 === M[t] && !0 === n && (D = null), M[t] = n
   },
   SET_STREAM_APP_INTENT: function(e) {
     let {
@@ -333,8 +333,8 @@ d = "ApplicationStreamingStore", (u = "displayName") in(l = k) ? Object.definePr
       id: t,
       channelId: n
     } = e;
-    if (v = t, Array.from(i.values()).forEach(e => {
-        (0, T.encodeStreamKey)(e) !== v && e.state === L.ApplicationStreamStates.ENDED && U((0, T.encodeStreamKey)(e))
+    if (D = t, Array.from(i.values()).forEach(e => {
+        (0, T.encodeStreamKey)(e) !== D && e.state === L.ApplicationStreamStates.ENDED && U((0, T.encodeStreamKey)(e))
       }), null != t)(0, T.isStreamKey)(t) && t.includes(A.default.getId()) && (M[n] = !1)
   },
   CONNECTION_OPEN: P,

@@ -32,8 +32,8 @@ function C(e) {
   let s, C, {
       userId: g,
       channelId: L,
-      guild: D,
-      theme: v,
+      guild: v,
+      theme: D,
       onClose: M,
       className: y
     } = e,
@@ -44,7 +44,7 @@ function C(e) {
       messageId: U,
       roleId: b
     } = (0, T.useUserProfileAnalyticsContext)(),
-    G = (0, _.default)(D, g, L),
+    G = (0, _.default)(v, g, L),
     [w, B] = r.useState(new Set),
     k = (0, o.useStateFromStores)([f.default], () => f.default.getUserProfile(g)),
     V = null !== (t = null == k ? void 0 : k.connectedAccounts) && void 0 !== t ? t : [],
@@ -52,7 +52,7 @@ function C(e) {
     F = (0, o.useStateFromStores)([E.default], () => E.default.hidePersonalInformation),
     H = (0, o.useStateFromStores)([c.default], () => c.default.locale);
   if (r.useEffect(() => {
-      (null == D ? void 0 : D.id) != null && (null == G ? void 0 : G.id) != null && u.default.fetchGuildRoleConnectionsEligibility(D.id, G.id).then(e => {
+      (null == v ? void 0 : v.id) != null && (null == G ? void 0 : G.id) != null && u.default.fetchGuildRoleConnectionsEligibility(v.id, G.id).then(e => {
         let t = new Set;
         for (let n of e)
           for (let {
@@ -61,12 +61,12 @@ function C(e) {
             of n) t.add(e);
         B(t)
       })
-    }, [null == D ? void 0 : D.id, null == G ? void 0 : G.id]), F || null == G) return null;
+    }, [null == v ? void 0 : v.id, null == G ? void 0 : G.id]), F || null == G) return null;
   let Y = Array.from(w).map(e => {
     let t = V.find(t => t.type === e);
     return null == t ? null : (0, i.jsx)(S.ConnectedUserAccount, {
       connectedAccount: t,
-      theme: v,
+      theme: D,
       locale: H,
       userId: g
     }, "".concat(t.type, ":").concat(t.id))
@@ -83,7 +83,7 @@ function C(e) {
           (0, h.openUserProfileModal)({
             userId: g,
             channelId: L,
-            guildId: null == D ? void 0 : D.id,
+            guildId: null == v ? void 0 : v.id,
             messageId: U,
             roleId: b,
             section: m.UserProfileSections.USER_INFO_CONNECTIONS,

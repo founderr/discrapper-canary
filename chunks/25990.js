@@ -12,11 +12,11 @@ function L() {
   C = R.FormStates.OPEN, g = {}
 }
 
-function D() {
+function v() {
   C = R.FormStates.CLOSED, g = {}
 }
 
-function v() {
+function D() {
   M(), y(), g = {}
 }
 
@@ -124,9 +124,9 @@ A = "UserSettingsAccountStore", (h = "displayName") in(S = U) ? Object.definePro
     } = e;
     return t === R.UserSettingsSections.ACCOUNT && L()
   },
-  USER_SETTINGS_ACCOUNT_CLOSE: D,
+  USER_SETTINGS_ACCOUNT_CLOSE: v,
   USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: function() {
-    v(), P(), D()
+    D(), P(), v()
   },
   USER_SETTINGS_ACCOUNT_SUBMIT: function() {
     C = R.FormStates.SUBMITTING, g = {}
@@ -231,7 +231,7 @@ A = "UserSettingsAccountStore", (h = "displayName") in(S = U) ? Object.definePro
   },
   USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: M,
   USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: y,
-  USER_SETTINGS_RESET_ALL_PENDING: v,
+  USER_SETTINGS_RESET_ALL_PENDING: D,
   USER_SETTINGS_RESET_ALL_TRY_IT_OUT: P,
   USER_SETTINGS_RESET_PENDING_AVATAR_DECORATION: function() {
     s = void 0

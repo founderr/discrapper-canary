@@ -20,13 +20,13 @@ var s, a, o, l, u = n("512722"),
   C = n("131951"),
   g = n("158776"),
   L = n("19780"),
-  D = n("981631"),
-  v = n("65154");
+  v = n("981631"),
+  D = n("65154");
 let M = {},
   y = {},
   P = {},
   U = {},
-  b = D.StreamLayouts.THEATRE,
+  b = v.StreamLayouts.THEATRE,
   G = {},
   w = [];
 
@@ -41,7 +41,7 @@ function k(e) {
     let {
       connection: t
     } = e;
-    return t.context === v.MediaEngineContextTypes.STREAM
+    return t.context === D.MediaEngineContextTypes.STREAM
   }).forEach(e => {
     let {
       stats: t
@@ -98,10 +98,10 @@ class x extends(s = E.default.Store) {
     }(e.rtp.inbound[t]))
   }
   getQuality() {
-    if (!(0, m.default)(C.default)) return D.RTCConnectionQuality.UNKNOWN;
+    if (!(0, m.default)(C.default)) return v.RTCConnectionQuality.UNKNOWN;
     let e = this.getActiveStreamKey(),
       t = null != e ? G[e] : null;
-    return null != t ? t.quality : D.RTCConnectionQuality.UNKNOWN
+    return null != t ? t.quality : v.RTCConnectionQuality.UNKNOWN
   }
   getMediaSessionId(e) {
     if (null == e) return null;

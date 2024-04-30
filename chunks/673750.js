@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return r
   },
   getFailedMessageId: function() {
-    return D
+    return v
   },
   isMessageDataEdit: function() {
     return L
@@ -40,8 +40,8 @@ let C = null;
 __OVERLAY__ && (C = n("237997").default), (s = i || (i = {})).OVERLAY_UNLOCKED = "overlay_unlocked", s.OVERLAY_UNLOCKED_PINNED = "overlay_unlocked_pinned", s.OVERLAY_LOCKED_ACTIVATED = "overlay_locked_activated", (a = r || (r = {}))[a.SEND = 0] = "SEND", a[a.EDIT = 1] = "EDIT", a[a.COMMAND = 2] = "COMMAND";
 let g = e => 0 === e.type,
   L = e => 1 === e.type,
-  D = e => g(e) ? e.message.nonce : L(e) ? e.message.messageId : e.message.data.id,
-  v = [1 * h.default.Millis.MINUTE, 5 * h.default.Millis.MINUTE];
+  v = e => g(e) ? e.message.nonce : L(e) ? e.message.messageId : e.message.data.id,
+  D = [1 * h.default.Millis.MINUTE, 5 * h.default.Millis.MINUTE];
 class M extends m.default {
   isFull() {
     return this.queue.length >= this.maxSize
@@ -63,7 +63,7 @@ class M extends m.default {
     null === (t = this.requests.get(e)) || void 0 === t || t.abort(), this.requests.delete(e), this.cancelQueueMetricTimers(e)
   }
   startQueueMetricTimers(e) {
-    let t = v.map(e => setTimeout(() => {
+    let t = D.map(e => setTimeout(() => {
       (0, c.trackWithMetadata)(O.AnalyticEvents.SEND_MESSAGE_QUEUED, {
         queued_duration_ms: e
       })

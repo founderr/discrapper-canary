@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return D
+    return v
   }
 });
 var i = n("735250"),
@@ -58,7 +58,7 @@ function L(e) {
   })
 }
 
-function D(e) {
+function v(e) {
   var t, n;
   let {
     channel: s,
@@ -81,17 +81,17 @@ function D(e) {
   r.useEffect(() => {
     _(u.id)
   }, [u.id, _]);
-  let D = S.default.getApplicationIconSource({
+  let v = S.default.getApplicationIconSource({
       id: u.id,
       icon: u.icon,
       bot: null === (t = u.application) || void 0 === t ? void 0 : t.bot,
       botIconFirst: !0
     }),
-    v = r.useCallback(() => {
+    D = r.useCallback(() => {
       A.dismissAppDetail()
     }, []),
     M = (0, o.useToken)(o.tokens.colors.BG_BASE_PRIMARY).hex(),
-    y = (0, E.default)("number" == typeof D ? "" : null == D ? void 0 : D.uri, null != M ? M : ""),
+    y = (0, E.default)("number" == typeof v ? "" : null == v ? void 0 : v.uri, null != M ? M : ""),
     P = (0, c.getIconComponent)(u),
     U = r.useMemo(() => {
       var e, t;
@@ -107,7 +107,7 @@ function D(e) {
       },
       children: (0, i.jsx)(o.Clickable, {
         "aria-label": R.default.Messages.CLOSE,
-        onClick: v,
+        onClick: D,
         className: C.headerCloseButton,
         children: (0, i.jsx)(T.default, {})
       })

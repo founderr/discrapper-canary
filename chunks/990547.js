@@ -41,7 +41,7 @@ n.r(t), n.d(t, {
     return b
   },
   getCampaignParams: function() {
-    return v
+    return D
   },
   getDevice: function() {
     return y
@@ -119,17 +119,17 @@ if (null != g) {
 }
 let L = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
 
-function D(e, t) {
+function v(e, t) {
   if (null == e) return "";
   t = t.replace(/[[]/, "\\[").replace(/[\]]/, "\\]");
   let n = new RegExp("[\\?&]".concat(t, "=([^&#]*)")).exec(e);
   return null === n || "string" != typeof n[1] && n[1].length ? "" : decodeURIComponent(n[1]).replace(/\+/g, " ")
 }
 
-function v(e) {
+function D(e) {
   let t = {};
   return L.forEach(n => {
-    let i = D(e, n);
+    let i = v(e, n);
     i.length > 0 && (t[n] = i)
   }), t
 }
@@ -166,7 +166,7 @@ function P() {
     return e.length >= 3 ? e[2] : ""
   }(), e = {
     ...e,
-    ...v(window.location.href),
+    ...D(window.location.href),
     ... function() {
       let e = {},
         t = document.referrer,
@@ -180,7 +180,7 @@ function P() {
         }();
       if (null != n) {
         e.search_engine = n;
-        let i = D(t, "yahoo" !== n ? "q" : "p");
+        let i = v(t, "yahoo" !== n ? "q" : "p");
         i.length > 0 && (e.mp_keyword = i)
       }
       return e
@@ -244,7 +244,7 @@ b(function() {
   let i = {},
     r = window.GLOBAL_ENV.RELEASE_CHANNEL;
   r && (i.release_channel = r.split("-")[0]);
-  let s = parseInt((n = "289193", "289193"), 10);
+  let s = parseInt((n = "289303", "289303"), 10);
   !isNaN(s) && (i.client_build_number = s);
   let a = null == g ? void 0 : null === (e = (t = g.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
   return !isNaN(a) && (i.native_build_number = a), i.client_event_source = function() {

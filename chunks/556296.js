@@ -29,7 +29,7 @@ var r, s = n("879443"),
   g = n("710111"),
   L = n("444675");
 
-function D(e, t, n) {
+function v(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -37,7 +37,7 @@ function D(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let v = new f.default("KeybindsStore"),
+let D = new f.default("KeybindsStore"),
   M = {
     id: "1000",
     action: R.GlobalKeybindActions.TOGGLE_MUTE,
@@ -93,7 +93,7 @@ function H(e) {
   } = e;
   if ("" === t || null == t || n === R.GlobalKeybindActions.UNASSIGNED || !i) return;
   if (null == G[n]) {
-    v.error("[kb store] KeybindStore: Looking for callback action ".concat(n, " but it doesn't exist in this version. Skipping"));
+    D.error("[kb store] KeybindStore: Looking for callback action ".concat(n, " but it doesn't exist in this version. Skipping"));
     return
   }
   let r = e.id,
@@ -203,7 +203,7 @@ let z = [function() {
   return K(R.GlobalKeybindActions.SAVE_CLIP, C.DEFAULT_KEYBIND)
 }];
 
-function X() {
+function Z() {
   return k(), z.reduce((e, t) => t() || e, !1)
 }
 T.default.setGetKeybindList(() => {
@@ -216,7 +216,7 @@ T.default.setGetKeybindList(() => {
   });
   return t && e.push((0, p.toString)(M.shortcut)), e
 });
-class Q extends(r = E.default.DeviceSettingsStore) {
+class X extends(r = E.default.DeviceSettingsStore) {
   initialize(e) {
     !__OVERLAY__ && this.waitFor(h.default, O.default), P = null != e ? e : {}
   }
@@ -254,7 +254,7 @@ class Q extends(r = E.default.DeviceSettingsStore) {
     return this.getKeybindForAction(R.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, !0)
   }
 }
-D(Q, "displayName", "KeybindsStore"), D(Q, "persistKey", "keybinds"), D(Q, "migrations", [function() {
+v(X, "displayName", "KeybindsStore"), v(X, "persistKey", "keybinds"), v(X, "migrations", [function() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
     {
       v: t,
@@ -296,12 +296,12 @@ D(Q, "displayName", "KeybindsStore"), D(Q, "persistKey", "keybinds"), D(Q, "migr
 }, e => c().reduce(e, (e, t, n) => t.action === R.GlobalKeybindActions.TOGGLE_GO_LIVE_STREAMING && t.managed ? e : {
   ...e,
   [n]: t
-}, {})]), t.default = new Q(I.default, {
-  CONNECTION_OPEN: X,
-  AUDIO_SET_MODE: X,
-  OVERLAY_SET_ENABLED: X,
-  RPC_APP_CONNECTED: X,
-  RPC_APP_DISCONNECTED: X,
+}, {})]), t.default = new X(I.default, {
+  CONNECTION_OPEN: Z,
+  AUDIO_SET_MODE: Z,
+  OVERLAY_SET_ENABLED: Z,
+  RPC_APP_CONNECTED: Z,
+  RPC_APP_DISCONNECTED: Z,
   KEYBINDS_ADD_KEYBIND: function(e) {
     let {
       keybind: t
@@ -329,12 +329,12 @@ D(Q, "displayName", "KeybindsStore"), D(Q, "persistKey", "keybinds"), D(Q, "migr
     let {
       keybinds: t
     } = e;
-    G = t, y = {}, U = 0, Object.values(P).filter(e => B.includes(e.action) && e.managed).length !== B.length && X(), c().forEach(P, e => {
+    G = t, y = {}, U = 0, Object.values(P).filter(e => B.includes(e.action) && e.managed).length !== B.length && Z(), c().forEach(P, e => {
       U = Math.max(parseInt(e.id, 10), U) + 1;
       try {
         H(e)
       } catch (t) {
-        v.error("Failed to register keybind", e, t)
+        D.error("Failed to register keybind", e, t)
       }
     }), b = !0, null == i && (i = S.default.subscribe({
       location: "KeybindsStore"

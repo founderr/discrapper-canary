@@ -37,8 +37,8 @@ let A = "scientist:triggered",
   C = {},
   g = {},
   L = [],
-  D = [],
-  v = {},
+  v = [],
+  D = {},
   M = {},
   y = {},
   P = {},
@@ -173,20 +173,20 @@ function z(e) {
   }
 }
 
-function X(e) {
-  !b && "CONNECTION_OPEN" === e.type && x(e.user) && (b = !0), v = {}, M = {}, y = {};
+function Z(e) {
+  !b && "CONNECTION_OPEN" === e.type && x(e.user) && (b = !0), D = {}, M = {}, y = {};
   let t = "CONNECTION_OPEN" === e.type || null == e.fingerprint || e.fingerprint === c.default.getFingerprint(),
     {
       experiments: n,
       guildExperiments: i
     } = e;
-  t && Q(n, i), R = !0
+  t && X(n, i), R = !0
 }
 
-function Q(e, t) {
-  L = e, D = null != t ? t : [], e.forEach(e => {
+function X(e, t) {
+  L = e, v = null != t ? t : [], e.forEach(e => {
     let [t, n, i, r, s, a, o, l] = e;
-    v[t] = {
+    D[t] = {
       type: "user",
       revision: n,
       population: s,
@@ -222,7 +222,7 @@ function Q(e, t) {
   })
 }
 
-function q(e, t, n) {
+function Q(e, t, n) {
   let i = null;
   for (let {
       buckets: s,
@@ -256,7 +256,7 @@ function q(e, t, n) {
   return null
 }
 
-function Z(e) {
+function q(e) {
   let t = {};
   for (let i in e) {
     var n;
@@ -275,7 +275,7 @@ function J(e) {
     serializedExperimentStore: t,
     user: n
   } = e;
-  !b && x(n) && (b = !0), R = t.hasLoadedExperiments, C = t.trackedExposureExperiments, v = t.loadedUserExperiments, P = t.userExperimentOverrides, U = t.guildExperimentOverrides, M = Z(t.loadedGuildExperiments), y = {}
+  !b && x(n) && (b = !0), R = t.hasLoadedExperiments, C = t.trackedExposureExperiments, D = t.loadedUserExperiments, P = t.userExperimentOverrides, U = t.guildExperimentOverrides, M = q(t.loadedGuildExperiments), y = {}
 }
 
 function $() {
@@ -286,7 +286,7 @@ function ee(e) {
   let {
     isSwitchingAccount: t
   } = e;
-  u.Storage.remove(A), !t && (u.Storage.remove(m), u.Storage.remove(N), u.Storage.remove(p), P = {}, U = {}), v = {}, L = [], C = {}, R = !1
+  u.Storage.remove(A), !t && (u.Storage.remove(m), u.Storage.remove(N), u.Storage.remove(p), P = {}, U = {}), D = {}, L = [], C = {}, R = !1
 }
 
 function et() {
@@ -445,14 +445,14 @@ class el extends E.default {
   }
   loadCache() {
     let e = this.readSnapshot(el.LATEST_SNAPSHOT_VERSION);
-    null != e && ("loadedUserExperiments" in e ? (v = e.loadedUserExperiments, M = Z(e.loadedGuildExperiments)) : Q(e.rawUserExperiments, e.rawGuildExperiments))
+    null != e && ("loadedUserExperiments" in e ? (D = e.loadedUserExperiments, M = q(e.loadedGuildExperiments)) : X(e.rawUserExperiments, e.rawGuildExperiments))
   }
   takeSnapshot() {
     return {
       version: el.LATEST_SNAPSHOT_VERSION,
       data: {
         rawUserExperiments: L,
-        rawGuildExperiments: D
+        rawGuildExperiments: v
       }
     }
   }
@@ -468,7 +468,7 @@ class el extends E.default {
       if (null != t) return t
     }
     let t = w(e);
-    return v["".concat(t)]
+    return D["".concat(t)]
   }
   getGuildExperimentDescriptor(e, t) {
     let n = null != t ? t : S.EMPTY_STRING_SNOWFLAKE_ID,
@@ -497,7 +497,7 @@ class el extends E.default {
       let _ = w("".concat(null !== (i = a.hashKey) && void 0 !== i ? i : n, ":").concat(t)) % 1e4,
         c = null;
       for (let e of null !== (r = a.overridesFormatted) && void 0 !== r ? r : [])
-        if (null !== (c = q(t, e, _))) return {
+        if (null !== (c = Q(t, e, _))) return {
           type: f.ExperimentTypes.GUILD,
           guildId: t,
           revision: a.revision,
@@ -506,7 +506,7 @@ class el extends E.default {
           hashResult: _,
           triggerDebuggingEnabled: d
         };
-      if (null == (c = q(t, a.populations, _))) return null;
+      if (null == (c = Q(t, a.populations, _))) return null;
       if (null != a.holdoutName && null != a.holdoutBucket && a.holdoutName !== n) {
         let n = e(t, a.holdoutName);
         if ((null == n ? void 0 : n.bucket) != null && (!0 !== n.override && W({
@@ -535,13 +535,13 @@ class el extends E.default {
     return null != n ? n.bucket : f.ExperimentBuckets.NOT_ELIGIBLE
   }
   getAllUserExperimentDescriptors() {
-    return v
+    return D
   }
   getGuildExperiments() {
     return M
   }
   getLoadedUserExperiment(e) {
-    return v[w(e)]
+    return D[w(e)]
   }
   getLoadedGuildExperiment(e) {
     return M[w(e)]
@@ -576,9 +576,9 @@ class el extends E.default {
       t = {};
     for (let n in Object.keys(g).forEach(e => {
         t[w("".concat(e))] = e
-      }), v) {
+      }), D) {
       let i = t[n];
-      null != i && (e[i] = v[n].bucket)
+      null != i && (e[i] = D[n].bucket)
     }
     for (let t in y) {
       let n = y[t];
@@ -593,7 +593,7 @@ class el extends E.default {
     return {
       hasLoadedExperiments: R,
       trackedExposureExperiments: C,
-      loadedUserExperiments: v,
+      loadedUserExperiments: D,
       loadedGuildExperiments: e,
       userExperimentOverrides: P,
       guildExperimentOverrides: U
@@ -606,8 +606,8 @@ class el extends E.default {
     super({
       LOGOUT: ee,
       LOGIN_SUCCESS: et,
-      CONNECTION_OPEN: X,
-      EXPERIMENTS_FETCH_SUCCESS: X,
+      CONNECTION_OPEN: Z,
+      EXPERIMENTS_FETCH_SUCCESS: Z,
       OVERLAY_INITIALIZE: J,
       CACHE_LOADED: () => this.loadCache(),
       EXPERIMENTS_FETCH_FAILURE: $,

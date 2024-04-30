@@ -132,7 +132,7 @@ function L(e) {
   }
 }
 
-function D(e) {
+function v(e) {
   let {
     context: t,
     userId: n
@@ -146,14 +146,14 @@ function D(e) {
     }
   }
 }
-class v extends l.default {
+class D extends l.default {
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
       POST_CONNECTION_OPEN: p,
       AUDIO_SET_LOCAL_VOLUME: g,
       AUDIO_TOGGLE_LOCAL_MUTE: L,
-      AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: D
+      AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: v
     }, n in t ? Object.defineProperty(t, n, {
       value: i,
       enumerable: !0,
@@ -162,4 +162,4 @@ class v extends l.default {
     }) : t[n] = i
   }
 }
-t.default = new v
+t.default = new D

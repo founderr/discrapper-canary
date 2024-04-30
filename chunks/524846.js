@@ -1,6 +1,6 @@
 "use strict";
 var l, a;
-n.r(t), n.d(t, {
+t.r(n), t.d(n, {
   SnowflakeSelectDefaultValueTypes: function() {
     return l
   }

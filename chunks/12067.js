@@ -1,82 +1,82 @@
 "use strict";
-n.r(t), n.d(t, {
+t.r(n), t.d(n, {
   default: function() {
     return S
   }
 });
-var l = n("735250");
-n("470079");
-var a = n("442837"),
-  r = n("169525"),
-  s = n("611170"),
-  u = n("128854"),
-  o = n("592125"),
-  i = n("52824"),
-  d = n("310043"),
-  c = n("69750"),
-  m = n("592256"),
-  p = n("823379"),
-  f = n("970184"),
-  C = n("981631");
+var l = t("735250");
+t("470079");
+var a = t("442837"),
+  r = t("169525"),
+  u = t("611170"),
+  s = t("128854"),
+  o = t("592125"),
+  i = t("52824"),
+  d = t("310043"),
+  c = t("69750"),
+  m = t("592256"),
+  p = t("823379"),
+  f = t("970184"),
+  C = t("981631");
 
 function S(e) {
   let {
-    message: t
-  } = (0, f.useComponentStateContext)(), n = (0, a.useStateFromStores)([o.default], () => o.default.getChannel(null == t ? void 0 : t.channel_id)), {
+    message: n
+  } = (0, f.useComponentStateContext)(), t = (0, a.useStateFromStores)([o.default], () => o.default.getChannel(null == n ? void 0 : n.channel_id)), {
     shouldHideMediaOptions: S,
     shouldRedactExplicitContent: E,
     gifAutoPlay: v,
     getGifFavButton: N,
     getOnMediaItemContextMenu: h
-  } = (0, u.useMessageAccessoriesComponentContext)();
-  if (null == t || null == n) return null;
+  } = (0, s.useMessageAccessoriesComponentContext)();
+  if (null == n || null == t) return null;
   let T = e.items.map(e => (0, m.carouselAssetFromMediaItem)(e.media, S, E)).filter(p.isNotNullish),
-    x = {
+    g = {
       source: "Media Mosaic",
-      guild_id: n.guild_id,
-      channel_id: n.id,
-      channel_type: n.type
+      guild_id: t.guild_id,
+      channel_id: t.id,
+      channel_type: t.type
     },
-    y = T.length > 1 ? (0, m.createMediaOnClickOverrides)(T, x) : {};
+    x = T.length > 1 ? (0, m.createMediaOnClickOverrides)(T, g) : {};
 
-  function g(e, t) {
-    let n = e.originalItem;
-    return (0, r.getObscureReasonForUnfurledMediaItem)(n.media, t, n.spoiler)
+  function y(e, n) {
+    let t = e.originalItem;
+    return (0, r.getObscureReasonForUnfurledMediaItem)(t.media, n, t.spoiler)
   }
   let O = e.items.map(e => {
-    let n = e.media,
-      l = null == h ? void 0 : h(n),
+    let t = e.media,
+      l = null == h ? void 0 : h(t),
       a = {
-        message: t,
+        message: n,
         item: {
-          uniqueId: n.proxyUrl,
+          uniqueId: t.proxyUrl,
           originalItem: e,
-          type: (0, c.getMosaicMediaTypeForUnfurledMediaItem)(n, !0),
-          downloadUrl: n.url,
-          height: n.height,
-          width: n.width,
+          type: (0, c.getMosaicMediaTypeForUnfurledMediaItem)(t, !0),
+          downloadUrl: t.url,
+          height: t.height,
+          width: t.width,
           spoiler: e.spoiler,
-          contentType: n.contentType
+          contentType: t.contentType
         },
         onContextMenu: l,
         autoPlayGif: v,
-        getObscureReason: g,
-        renderImageComponent: s.renderImageComponentForGalleryItem,
-        renderVideoComponent: s.renderVideoComponentForGalleryItem,
+        getObscureReason: y,
+        renderImageComponent: u.renderImageComponentForGalleryItem,
+        renderVideoComponent: u.renderVideoComponentForGalleryItem,
         renderAudioComponent: C.NOOP,
         renderPlaintextFilePreview: C.NOOP,
         renderGenericFileComponent: C.NOOP,
         renderMosaicItemFooter: C.NOOP,
-        gifFavoriteButton: N(n),
-        onPlay: (e, t, n) => {},
+        gifFavoriteButton: N(t),
+        onPlay: (e, n, t) => {},
         canRemoveItem: !1,
         onRemoveItem: C.NOOP
       },
       r = (0, i.getBestEffortSrcUrl)({
-        proxyURL: n.proxyUrl,
-        url: n.url
+        proxyURL: t.proxyUrl,
+        url: t.url
       });
-    return r in y && (a.onClick = y[r]), a
+    return r in x && (a.onClick = x[r]), a
   });
   return (0, l.jsx)("div", {
     children: (0, l.jsx)(d.default, {

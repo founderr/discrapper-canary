@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return M
   },
   ModalContent: function() {
-    return D
+    return v
   },
   ModalFooter: function() {
-    return v
+    return D
   },
   ModalHeader: function() {
     return L
@@ -74,7 +74,7 @@ function g(e) {
       clamp: !0
     },
     onRest: h
-  }), D = a.useRef(null), v = null != m["aria-label"], M = null != m["aria-labelledby"], y = a.useId(), P = null !== (t = m["aria-labelledby"]) && void 0 !== t ? t : y, U = a.useMemo(() => ({
+  }), v = a.useRef(null), D = null != m["aria-label"], M = null != m["aria-labelledby"], y = a.useId(), P = null !== (t = m["aria-labelledby"]) && void 0 !== t ? t : y, U = a.useMemo(() => ({
     headerId: P,
     headerIdIsManaged: M
   }), [P, M]);
@@ -85,17 +85,17 @@ function g(e) {
       role: o,
       returnRef: A,
       impressionType: d.ImpressionTypes.MODAL,
-      "aria-labelledby": v ? void 0 : U.headerId,
+      "aria-labelledby": D ? void 0 : U.headerId,
       ...m,
       children: (0, s.jsx)(u.animated.div, {
         className: l()(E, R.root, C[r], {
           [R.fullscreenOnMobile]: f,
           [R.rootWithShadow]: !S
         }),
-        ref: D,
+        ref: v,
         style: L,
         children: (0, s.jsx)(T.FocusRingScope, {
-          containerRef: D,
+          containerRef: v,
           children: i
         })
       })
@@ -124,7 +124,7 @@ function L(e) {
   })
 }
 
-function D(e) {
+function v(e) {
   let {
     className: t,
     children: n,
@@ -151,7 +151,7 @@ function D(e) {
   })
 }
 
-function v(e) {
+function D(e) {
   var t, n, i, r, a;
   return (0, s.jsx)(A.default, {
     grow: 0,

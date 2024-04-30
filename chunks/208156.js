@@ -35,10 +35,10 @@ function A(e) {
     ...A,
     frame_id: O,
     platform: f.ActivityPlatform.DESKTOP
-  }, [L, D] = r.useState(!1), v = c.default.theme, M = {
+  }, [L, v] = r.useState(!1), D = c.default.theme, M = {
     ...s
   };
-  return v === S.ThemeTypes.LIGHT ? M.colorScheme = "light" : M.colorScheme = "dark", r.useEffect(() => (E.ComponentDispatch.dispatch(S.ComponentActions.IFRAME_MOUNT, {
+  return D === S.ThemeTypes.LIGHT ? M.colorScheme = "light" : M.colorScheme = "dark", r.useEffect(() => (E.ComponentDispatch.dispatch(S.ComponentActions.IFRAME_MOUNT, {
     id: O
   }), () => {
     E.ComponentDispatch.dispatch(S.ComponentActions.IFRAME_UNMOUNT, {
@@ -48,7 +48,7 @@ function A(e) {
     let {
       resizing: t
     } = e;
-    D(t)
+    v(t)
   }), L && (M.pointerEvents = "none"), null != t ? (0, i.jsx)("iframe", {
     style: M,
     allow: "autoplay; encrypted-media",

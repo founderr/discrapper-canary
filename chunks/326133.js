@@ -25,14 +25,14 @@ t.default = r.forwardRef(function(e, t) {
     type: C,
     editorHeight: g,
     onVisibilityChange: L
-  } = e, D = (0, E.useUID)(), v = (0, l.useStateFromStores)([_.default], () => {
+  } = e, v = (0, E.useUID)(), D = (0, l.useStateFromStores)([_.default], () => {
     var e;
     return null !== (e = _.default.getGuild(R.guild_id)) && void 0 !== e ? e : null
   }, [R.guild_id]), M = r.useRef(), [y, P, U] = (0, A.default)({
     ...e,
-    guild: v
+    guild: D
   }, t, M), b = (null === (n = C.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? T.default : I.default, G = (0, c.getAutocompleteRowId)(y.selectedIndex);
-  (0, d.useChannelEditorPopup)(D, y.isVisible, G), f.default.trackExposure({
+  (0, d.useChannelEditorPopup)(v, y.isVisible, G), f.default.trackExposure({
     location: "6e9811_1"
   });
   let {
@@ -54,7 +54,7 @@ t.default = r.forwardRef(function(e, t) {
     results: y.query.results,
     selectedIndex: y.selectedIndex,
     channel: R,
-    guild: v,
+    guild: D,
     query: y.query.queryText,
     options: y.query.options,
     onHover: e => P.onResultHover(e),
@@ -69,7 +69,7 @@ t.default = r.forwardRef(function(e, t) {
     F = 490;
   null != B && (F = (null === (N = C.autocomplete) || void 0 === N ? void 0 : N.small) ? 200 : (null === (p = y.query) || void 0 === p ? void 0 : p.type) === S.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), F = Math.min(window.innerHeight - 175, F);
   let H = (0, i.jsx)(c.default, {
-    id: D,
+    id: v,
     className: a()(m.autocomplete, x),
     innerClassName: m.autocompleteInner,
     onMouseDown: e => e.preventDefault(),
@@ -82,7 +82,7 @@ t.default = r.forwardRef(function(e, t) {
             ...n
           } = e;
           return (0, i.jsx)(u.AdvancedScrollerThin, {
-            id: D,
+            id: v,
             ref: e => {
               var n;
               t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null, M.current = e
@@ -93,7 +93,7 @@ t.default = r.forwardRef(function(e, t) {
               maxHeight: F
             },
             role: "listbox",
-            "aria-labelledby": (0, c.getAutocompleteTitleId)(D),
+            "aria-labelledby": (0, c.getAutocompleteTitleId)(v),
             children: V
           })
         }

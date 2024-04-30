@@ -98,7 +98,7 @@ let m = e => {
         animated: t.animated,
         isInteracting: n
       })
-    }, D = (0, o.v4)(), v = e => (0, i.jsx)(l.Tooltip, {
+    }, v = (0, o.v4)(), D = e => (0, i.jsx)(l.Tooltip, {
       text: (0, T.renderClickableTooltipNode)(t.name, d, g),
       "aria-label": t.name,
       ...T.EXPRESSION_TOOLTIP_PROPS,
@@ -108,7 +108,7 @@ let m = e => {
         O(!0), d && (p({
           emojiNode: t,
           isCustomEmoji: !0,
-          nonce: D
+          nonce: v
         }), (0, _.initiateEmojiInteraction)(S.EmojiInteractionPoint.CustomEmojiTooltipShown))
       },
       children: t => (0, i.jsx)(l.Clickable, {
@@ -123,7 +123,7 @@ let m = e => {
         },
         onMouseLeave: () => {
           N && (E.default.track(f.AnalyticEvents.CLOSE_POPOUT, {
-            nonce: D
+            nonce: v
           }), O(!1))
         },
         tag: "span",
@@ -138,7 +138,7 @@ let m = e => {
       align: "center",
       onRequestClose: () => {
         E.default.track(f.AnalyticEvents.CLOSE_POPOUT, {
-          nonce: D
+          nonce: v
         }), O(!1), C(!1)
       },
       autoInvert: !0,
@@ -148,11 +148,11 @@ let m = e => {
         ...e,
         node: t,
         refreshPositionKey: () => m(String(Date.now())),
-        nonce: D
+        nonce: v
       }),
       positionKey: h,
-      children: v
-    }) : v()
+      children: D
+    }) : D()
   },
   p = e => {
     let {

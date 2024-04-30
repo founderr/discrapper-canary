@@ -61,7 +61,7 @@ let L = a().throttle(e => {
 }, 100, {
   trailing: !1
 });
-class D extends r.PureComponent {
+class v extends r.PureComponent {
   componentDidCatch(e, t) {
     this.triggerSoftCrash(e, t)
   }
@@ -134,4 +134,4 @@ class D extends r.PureComponent {
     }), C(this, "discordErrorsSet", !1)
   }
 }
-t.default = D
+t.default = v

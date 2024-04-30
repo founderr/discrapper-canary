@@ -36,8 +36,8 @@ class d extends r.Component {
       onPlay: C,
       onPause: g,
       onEnded: L,
-      onControlsShow: D,
-      onControlsHide: v,
+      onControlsShow: v,
+      onControlsHide: D,
       onVolumeChange: M,
       onMute: y,
       alt: P = u.default.Messages.VIDEO,
@@ -87,8 +87,8 @@ class d extends r.Component {
           onEnded: L,
           onVolumeChange: M,
           onMute: y,
-          onControlsShow: D,
-          onControlsHide: v,
+          onControlsShow: v,
+          onControlsHide: D,
           mimeType: N,
           downloadable: T
         })

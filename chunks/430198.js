@@ -76,14 +76,14 @@ function L() {
   p = {}, O.clear()
 }
 
-function D(e) {
+function v(e) {
   let {
     guild: t
   } = e;
   delete p[t.id]
 }
 
-function v(e) {
+function D(e) {
   let {
     guildId: t
   } = e;
@@ -130,14 +130,14 @@ a = "GatedChannelStore", (s = "displayName") in(r = y) ? Object.defineProperty(r
   CONNECTION_OPEN: L,
   OVERLAY_INITIALIZE: L,
   CACHE_LOADED_LAZY: L,
-  GUILD_CREATE: D,
-  GUILD_UPDATE: D,
-  GUILD_DELETE: D,
-  GUILD_ROLE_CREATE: v,
-  GUILD_ROLE_UPDATE: v,
-  GUILD_ROLE_DELETE: v,
-  IMPERSONATE_UPDATE: v,
-  IMPERSONATE_STOP: v,
+  GUILD_CREATE: v,
+  GUILD_UPDATE: v,
+  GUILD_DELETE: v,
+  GUILD_ROLE_CREATE: D,
+  GUILD_ROLE_UPDATE: D,
+  GUILD_ROLE_DELETE: D,
+  IMPERSONATE_UPDATE: D,
+  IMPERSONATE_STOP: D,
   CHANNEL_CREATE: M,
   CHANNEL_DELETE: M,
   CHANNEL_UPDATES: function(e) {

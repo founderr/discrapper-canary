@@ -167,7 +167,7 @@ function L() {
   return s().reduce(m, (e, t) => t.updateUsers() || e, !1)
 }
 
-function D() {
+function v() {
   m = {};
   let e = I.default.getAllVoiceStates();
   T.default.keys(e).forEach(t => {
@@ -176,9 +176,9 @@ function D() {
     })
   })
 }
-class v extends(i = a.default.Store) {
+class D extends(i = a.default.Store) {
   initialize() {
-    D(), this.waitFor(d.default, E.default, c.default, I.default), this.syncWith([E.default], L)
+    v(), this.waitFor(d.default, E.default, c.default, I.default), this.syncWith([E.default], L)
   }
   getVoiceStates(e) {
     return N(null != e ? e : S.ME).getVoiceStates()
@@ -204,12 +204,12 @@ class v extends(i = a.default.Store) {
     return N(null != e ? e : S.ME).getVersion()
   }
 }
-h(v, "displayName", "SortedVoiceStateStore"), t.default = new v(l.default, {
+h(D, "displayName", "SortedVoiceStateStore"), t.default = new D(l.default, {
   CONNECTION_OPEN: function() {
     m = {}
   },
   OVERLAY_INITIALIZE: function() {
-    D()
+    v()
   },
   VOICE_CHANNEL_SELECT: function(e) {
     let {

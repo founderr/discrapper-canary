@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return eP
   },
   AllSeasonalGiftStyles: function() {
-    return eQ
+    return eX
   },
   AnalyticsPremiumFeatureNames: function() {
     return d
@@ -28,7 +28,7 @@ n.r(t), n.d(t, {
     return A
   },
   CUSTOM_GIFT_MESSAGE_MAX_LENGTH: function() {
-    return eq
+    return eQ
   },
   DEFAULT_APPLE_GRACE_PERIOD_DAYS: function() {
     return es
@@ -43,7 +43,7 @@ n.r(t), n.d(t, {
     return eF
   },
   DISCOUNT_DURATION_FALLBACK: function() {
-    return eZ
+    return eq
   },
   DISCOUNT_PERCENTAGE_FALLBACK: function() {
     return eJ
@@ -76,7 +76,7 @@ n.r(t), n.d(t, {
     return eG
   },
   MULTI_MONTH_PLANS: function() {
-    return q
+    return Q
   },
   NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: function() {
     return ei
@@ -94,10 +94,10 @@ n.r(t), n.d(t, {
     return et
   },
   PREMIUM_GUILD_SUBSCRIPTION_PLANS: function() {
-    return Q
+    return X
   },
   PREMIUM_MONTHLY_PLANS: function() {
-    return Z
+    return q
   },
   PREMIUM_PLANS: function() {
     return z
@@ -118,7 +118,7 @@ n.r(t), n.d(t, {
     return eM
   },
   PREMIUM_TIER_2_ANNUAL_25_PERCENT_DISCOUNT_ID: function() {
-    return ev
+    return eD
   },
   PREMIUM_TIER_2_AUTH3_TRIAL_ID: function() {
     return em
@@ -142,7 +142,7 @@ n.r(t), n.d(t, {
     return eL
   },
   PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID: function() {
-    return eD
+    return ev
   },
   PREMIUM_TIER_2_LIKELIHOOD_DISCOUNT_ID: function() {
     return eO
@@ -154,7 +154,7 @@ n.r(t), n.d(t, {
     return eA
   },
   PREMIUM_TIER_2_PLANS: function() {
-    return X
+    return Z
   },
   PREMIUM_TIER_2_REACTIVATION_DISCOUNT_ID: function() {
     return eR
@@ -214,7 +214,7 @@ n.r(t), n.d(t, {
     return e_
   },
   SeasonalGiftStyles2023: function() {
-    return eX
+    return eZ
   },
   StreamQualities: function() {
     return c
@@ -247,7 +247,7 @@ n.r(t), n.d(t, {
     return ec
   }
 }), n("47120");
-var i, r, s, a, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, p, O, R, C, g, L, D, v, M, y, P, U, b, G, w, B, k, V = n("981631"),
+var i, r, s, a, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, p, O, R, C, g, L, v, D, M, y, P, U, b, G, w, B, k, V = n("981631"),
   x = n("185923");
 (N = i || (i = {}))[N.TIER_1 = 1] = "TIER_1", N[N.TIER_2 = 2] = "TIER_2", N[N.TIER_0 = 3] = "TIER_0";
 let F = void 0,
@@ -281,10 +281,10 @@ let W = ["628379670982688768", "978380684370378762", "521846918637420545", "5218
   });
 (O = s || (s = {})).NONE_MONTH = "628379151761408000", O.NONE_YEAR = "628381571568631808", O.PREMIUM_MONTH_TIER_0 = "978380692553465866", O.PREMIUM_YEAR_TIER_0 = "1024422698568122368", O.PREMIUM_MONTH_TIER_1 = "511651871736201216", O.PREMIUM_YEAR_TIER_1 = "511651876987469824", O.PREMIUM_MONTH_TIER_2 = "511651880837840896", O.PREMIUM_YEAR_TIER_2 = "511651885459963904", O.PREMIUM_MONTH_GUILD = "590665532894740483", O.PREMIUM_YEAR_GUILD = "590665538238152709", O.NONE_3_MONTH = "944265614527037440", O.NONE_6_MONTH = "944265636643602432", O.PREMIUM_3_MONTH_TIER_2 = "642251038925127690", O.PREMIUM_6_MONTH_TIER_2 = "944037208325619722", O.PREMIUM_3_MONTH_GUILD = "944037355453415424", O.PREMIUM_6_MONTH_GUILD = "944037391444738048", O.PREMIUM_MONTH_LEGACY = "511651856145973248", O.PREMIUM_YEAR_LEGACY = "511651860671627264";
 let z = new Set(["978380692553465866", "1024422698568122368", "511651871736201216", "511651876987469824", "511651880837840896", "642251038925127690", "944037208325619722", "511651885459963904", "511651856145973248", "511651860671627264"]),
-  X = new Set(["511651880837840896", "642251038925127690", "944037208325619722", "511651885459963904"]),
-  Q = new Set(["590665532894740483", "944037355453415424", "944037391444738048", "590665538238152709"]),
-  q = new Set(["642251038925127690", "944037208325619722", "944037355453415424", "944037391444738048"]),
-  Z = new Set(["978380692553465866", "511651871736201216", "511651880837840896"]),
+  Z = new Set(["511651880837840896", "642251038925127690", "944037208325619722", "511651885459963904"]),
+  X = new Set(["590665532894740483", "944037355453415424", "944037391444738048", "590665538238152709"]),
+  Q = new Set(["642251038925127690", "944037208325619722", "944037355453415424", "944037391444738048"]),
+  q = new Set(["978380692553465866", "511651871736201216", "511651880837840896"]),
   J = Object.freeze({
     "978380684370378762": "978380692553465866",
     "521846918637420545": "511651871736201216",
@@ -467,13 +467,13 @@ let ee = Object.freeze({
   eC = "1204865493622587392",
   eg = "1204867673024888832",
   eL = "1215346678383509504",
-  eD = "1215366184820539392",
-  ev = "1223319122125783040",
+  ev = "1215366184820539392",
+  eD = "1223319122125783040",
   eM = "1223380890109870080",
-  ey = [ev, eM],
+  ey = [eD, eM],
   eP = Object.freeze({
     [eM]: .2,
-    [ev]: .25,
+    [eD]: .25,
     DEFAULT: .16
   }),
   eU = Object.freeze({
@@ -599,7 +599,7 @@ let eb = Object.freeze({
     }
   }),
   ex = ["978380692553465866", "1024422698568122368", "511651871736201216", "511651876987469824", "511651880837840896", "642251038925127690", "944037208325619722", "511651885459963904"];
-(D = d || (d = {})).SOUNDBOARD_PLAY = "soundboard play", D.PROFILE_THEME_COLOR = "profile_theme_color", D.PROFILE_BANNER = "profile_banner", D.ANIMATED_AVATAR = "animated_avatar", D.AVATAR_DECORATION = "avatar_decoration", D.CLIENT_THEME = "client_theme", D.SHARED_CANVAS = "shared_canvas", D.PROFILE_EFFECT = "profile_effect", (v = _ || (_ = {})).FREE = "free", v.PREMIUM_STANDARD = "premium-standard";
+(v = d || (d = {})).SOUNDBOARD_PLAY = "soundboard play", v.PROFILE_THEME_COLOR = "profile_theme_color", v.PROFILE_BANNER = "profile_banner", v.ANIMATED_AVATAR = "animated_avatar", v.AVATAR_DECORATION = "avatar_decoration", v.CLIENT_THEME = "client_theme", v.SHARED_CANVAS = "shared_canvas", v.PROFILE_EFFECT = "profile_effect", (D = _ || (_ = {})).FREE = "free", D.PREMIUM_STANDARD = "premium-standard";
 let eF = {
   "1024422698568122368": 16,
   "511651876987469824": 16,
@@ -633,8 +633,8 @@ let eY = Object.freeze({
 let eW = new Set(["PL", "TR"]),
   eK = [1, 2, 3],
   ez = [4, 5, 7, 6],
-  eX = [8, 9, 11, 10],
-  eQ = eX.concat(eK),
-  eq = 190,
-  eZ = 3,
+  eZ = [8, 9, 11, 10],
+  eX = eZ.concat(eK),
+  eQ = 190,
+  eq = 3,
   eJ = 30

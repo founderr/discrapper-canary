@@ -21,13 +21,13 @@ let p = new Set,
   C = {},
   g = new Set,
   L = {},
-  D = 10 * A.default.Millis.MINUTE,
-  v = 6 * A.default.Millis.HOUR,
+  v = 10 * A.default.Millis.MINUTE,
+  D = 6 * A.default.Millis.HOUR,
   M = 10 * A.default.Millis.MINUTE,
   y = new d.Timeout;
 
 function P(e) {
-  y.start(e + Math.random() * D, c.fetchBranches)
+  y.start(e + Math.random() * v, c.fetchBranches)
 }
 
 function U() {
@@ -84,7 +84,7 @@ a = "ApplicationBuildStore", (s = "displayName") in(r = w) ? Object.defineProper
   writable: !0
 }) : r[s] = a, t.default = new w(_.default, {
   CONNECTION_OPEN: function() {
-    return P(v), U()
+    return P(D), U()
   },
   GAMES_DATABASE_UPDATE: function() {
     if (!(0, N.isSupportedPlatform)()) return !1;
@@ -169,7 +169,7 @@ a = "ApplicationBuildStore", (s = "displayName") in(r = w) ? Object.defineProper
       }
       L[t] = i
     }
-    P(v)
+    P(D)
   },
   APPLICATION_BRANCHES_FETCH_FAIL: function() {
     P(M)
