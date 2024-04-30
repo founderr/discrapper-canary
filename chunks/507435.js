@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return T
   }
-}), n("47120");
+});
 var s = n("735250"),
   a = n("470079"),
   l = n("120356"),
@@ -13,89 +13,56 @@ var s = n("735250"),
   u = n("904245"),
   d = n("596454"),
   c = n("702346"),
-  f = n("689938"),
-  E = n("474059");
+  f = n("809026"),
+  E = n("689938"),
+  _ = n("474059");
 
-function _(e) {
+function m(e) {
   var t;
   let {
     className: n,
     data: l,
     message: r
-  } = e, c = l.totalVotes > 0 ? Math.round(l.victorAnswerVotes / l.totalVotes * 100) : 0, _ = r.messageReference, m = a.useCallback(() => {
-    null != _ && u.default.jumpToMessage({
-      channelId: _.channel_id,
-      messageId: _.message_id,
+  } = e, c = l.totalVotes > 0 ? Math.round(l.victorAnswerVotes / l.totalVotes * 100) : 0, f = r.messageReference, m = a.useCallback(() => {
+    null != f && u.default.jumpToMessage({
+      channelId: f.channel_id,
+      messageId: f.message_id,
       flash: !0,
       returnMessageId: r.id
     })
-  }, [r.id, _]);
+  }, [r.id, f]);
   return (0, s.jsxs)("div", {
-    className: i()(E.container, n),
+    className: i()(_.container, n),
     children: [null != l.victorEmoji ? (0, s.jsx)(d.default, {
-      className: E.emoji,
+      className: _.emoji,
       emojiId: l.victorEmoji.id,
       emojiName: l.victorEmoji.name,
       animated: l.victorEmoji.animated
     }) : null, (0, s.jsx)(o.Text, {
-      className: E.title,
+      className: _.title,
       variant: "text-sm/semibold",
       color: "text-normal",
       children: null !== (t = l.victorAnswerText) && void 0 !== t ? t : "N/A"
     }), (0, s.jsxs)(o.Text, {
-      className: E.description,
+      className: _.description,
       variant: "text-xs/medium",
       color: "input-placeholder-text",
-      children: [f.default.Messages.POLL_RESULT_WINNING, " • ", c, "%"]
+      children: [E.default.Messages.POLL_RESULT_WINNING, " • ", c, "%"]
     }), (0, s.jsx)(o.Button, {
-      className: E.button,
+      className: _.button,
       size: o.Button.Sizes.TINY,
       onClick: m,
       color: o.Button.Colors.PRIMARY,
-      children: f.default.Messages.POLL_RESULT_VIEW_POLL
+      children: E.default.Messages.POLL_RESULT_VIEW_POLL
     })]
   })
 }
 
-function m(e) {
+function T(e) {
   let {
     message: t,
     compact: n
-  } = e, l = t.embeds[0], i = a.useMemo(() => (function(e) {
-    if ((null == e ? void 0 : e.fields) == null) return null;
-    let t = {},
-      n = {};
-    for (let s of e.fields) switch (s.rawName) {
-      case "poll_question_text":
-        t.questionText = s.rawValue;
-        break;
-      case "victor_answer_id":
-        t.victorAnswerId = s.rawValue;
-        break;
-      case "victor_answer_text":
-        t.victorAnswerText = s.rawValue;
-        break;
-      case "victor_answer_votes":
-        t.victorAnswerVotes = parseInt(s.rawValue, 10);
-        break;
-      case "total_votes":
-        t.totalVotes = parseInt(s.rawValue, 10);
-        break;
-      case "victor_answer_emoji_id":
-        n.id = s.rawValue;
-        break;
-      case "victor_answer_emoji_name":
-        n.name = s.rawValue;
-        break;
-      case "victor_emoji_animated":
-        n.animated = "true" === s.rawValue
-    }
-    if (null != n.name) {
-      var s;
-      n.animated = null !== (s = n.animated) && void 0 !== s && s, t.victorEmoji = n
-    }
-    return t
-  })(l), [l]);
+  } = e, l = t.embeds[0], i = a.useMemo(() => (0, f.default)(l), [l]);
   return null == i ? null : (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(c.default, {
       iconNode: (0, s.jsx)(r.PollsIcon, {
@@ -104,13 +71,13 @@ function m(e) {
       }),
       timestamp: t.timestamp,
       compact: n,
-      children: f.default.Messages.POLL_RESULT_MESSAGE_TITLE
+      children: E.default.Messages.POLL_RESULT_MESSAGE_TITLE
     }), (0, s.jsx)(o.Text, {
       variant: "text-md/medium",
       color: "text-normal",
       children: i.questionText
-    }), (0, s.jsx)(_, {
-      className: E.embed,
+    }), (0, s.jsx)(m, {
+      className: _.embed,
       data: i,
       message: t
     })]
