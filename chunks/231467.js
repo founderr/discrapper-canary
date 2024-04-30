@@ -1,9 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
-  ClanDiscoveryCardView: function() {
+  ClanDiscoveryCardTraits: function() {
     return O
+  },
+  ClanDiscoveryCardView: function() {
+    return R
   }
-});
+}), n("47120");
 var i = n("735250"),
   r = n("470079"),
   s = n("120356"),
@@ -57,35 +60,39 @@ function N(e) {
 
 function p(e) {
   let {
+    trait: t,
+    isHighlighted: n
+  } = e;
+  return (0, i.jsx)("div", {
+    className: a()(m.trait, {
+      [m.highlightedTrait]: n
+    }),
+    children: (0, i.jsx)(o.Text, {
+      variant: "text-xs/normal",
+      color: "text-normal",
+      lineClamp: 1,
+      children: t
+    })
+  })
+}
+
+function O(e) {
+  let {
     traits: t,
     traitsToHighlight: n,
-    expanded: r
-  } = e;
-  return r ? (0, i.jsx)("div", {
+    expanded: s
+  } = e, a = r.useMemo(() => new Set(n), [n]);
+  return s ? (0, i.jsx)("div", {
     className: m.expandedTraitsContainer,
-    children: t.map(e => (0, i.jsx)("div", {
-      className: a()(m.trait, {
-        [m.highlightedTrait]: (null != n ? n : []).includes(e)
-      }),
-      children: (0, i.jsx)(o.Text, {
-        variant: "text-xs/normal",
-        color: "text-normal",
-        lineClamp: 1,
-        children: e
-      })
+    children: t.map(e => (0, i.jsx)(p, {
+      trait: e,
+      isHighlighted: a.has(e)
     }, e))
   }) : (0, i.jsx)(S.default, {
     items: t,
-    renderItem: e => (0, i.jsx)("div", {
-      className: a()(m.trait, {
-        [m.highlightedTrait]: (null != n ? n : []).includes(e)
-      }),
-      children: (0, i.jsx)(o.Text, {
-        variant: "text-xs/normal",
-        color: "text-normal",
-        lineClamp: 1,
-        children: e
-      })
+    renderItem: e => (0, i.jsx)(p, {
+      trait: e,
+      isHighlighted: a.has(e)
     }, e),
     renderOverflow: e => (0, i.jsx)(o.Tooltip, {
       text: (0, i.jsx)("div", {
@@ -113,7 +120,7 @@ function p(e) {
   })
 }
 
-function O(e) {
+function R(e) {
   var t, n;
   let {
     clan: r,
@@ -125,7 +132,7 @@ function O(e) {
     className: T
   } = e, {
     tag: S,
-    badge: O,
+    badge: p,
     branding: {
       primaryColor: R,
       secondaryColor: C
@@ -149,9 +156,9 @@ function O(e) {
         width: 32,
         height: 32,
         className: m.clanBadge,
-        badge: O.badgeKind,
-        primaryTintColor: O.primaryColor,
-        secondaryTintColor: O.secondaryColor
+        badge: p.badgeKind,
+        primaryTintColor: p.primaryColor,
+        secondaryTintColor: p.secondaryColor
       })]
     }), (0, i.jsxs)("div", {
       className: m.cardContent,
@@ -176,9 +183,9 @@ function O(e) {
                 children: [(0, i.jsx)(c.ClanBadge, {
                   width: 16,
                   height: 16,
-                  badge: O.badgeKind,
-                  primaryTintColor: O.primaryColor,
-                  secondaryTintColor: O.secondaryColor
+                  badge: p.badgeKind,
+                  primaryTintColor: p.primaryColor,
+                  secondaryTintColor: p.secondaryColor
                 }), (0, i.jsx)(o.Text, {
                   variant: "text-xs/medium",
                   color: "text-primary",
@@ -218,7 +225,7 @@ function O(e) {
           color: "text-muted",
           children: r.description
         })
-      }), (0, i.jsx)(p, {
+      }), (0, i.jsx)(O, {
         traits: (0, h.getSortedTraits)(r.traits, I),
         expanded: l,
         traitsToHighlight: I
@@ -290,7 +297,7 @@ t.default = function(e) {
   return (0, i.jsx)(o.Clickable, {
     onClick: u,
     className: m.clickableCard,
-    children: (0, i.jsx)(O, {
+    children: (0, i.jsx)(R, {
       ...e,
       isMember: a
     })
