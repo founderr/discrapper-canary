@@ -1,14 +1,13 @@
 "use strict";
-n.r(t);
-var a = n("544891"),
-  s = n("570140"),
-  l = n("407570"),
-  i = n("981631");
+a.r(t);
+var n = a("544891"),
+  s = a("570140"),
+  l = a("981631");
 t.default = {
   async fetch() {
     try {
-      let e = await a.HTTP.get({
-        url: i.Endpoints.FRIEND_SUGGESTIONS
+      let e = await n.HTTP.get({
+        url: l.Endpoints.FRIEND_SUGGESTIONS
       });
       s.default.dispatch({
         type: "LOAD_FRIEND_SUGGESTIONS_SUCCESS",
@@ -21,24 +20,6 @@ t.default = {
     }
   },
   ignore(e) {
-    a.HTTP.del(i.Endpoints.FRIEND_SUGGESTION(e))
-  },
-  async viewSuggestions(e) {
-    if ((0, l.isInFriendSuggestionSeenStateExperiment)()) try {
-      await a.HTTP.post({
-        url: i.Endpoints.FRIEND_FINDER_VIEWED_SUGGESTIONS,
-        body: {
-          viewed_user_ids: e
-        },
-        retries: 1
-      }), s.default.dispatch({
-        type: "VIEWED_FRIEND_SUGGESTIONS_SUCCESS",
-        userIds: e
-      })
-    } catch (e) {
-      s.default.dispatch({
-        type: "VIEWED_FRIEND_SUGGESTIONS_FAILURE"
-      })
-    }
+    n.HTTP.del(l.Endpoints.FRIEND_SUGGESTION(e))
   }
 }
