@@ -17,39 +17,40 @@ var s = n("735250"),
   E = n("474059");
 
 function _(e) {
+  var t;
   let {
-    className: t,
-    data: n,
-    message: l
-  } = e, r = Math.round(n.victorAnswerVotes / n.totalVotes * 100), c = l.messageReference, _ = a.useCallback(() => {
-    null != c && u.default.jumpToMessage({
-      channelId: c.channel_id,
-      messageId: c.message_id,
+    className: n,
+    data: l,
+    message: r
+  } = e, c = l.totalVotes > 0 ? Math.round(l.victorAnswerVotes / l.totalVotes * 100) : 0, _ = r.messageReference, m = a.useCallback(() => {
+    null != _ && u.default.jumpToMessage({
+      channelId: _.channel_id,
+      messageId: _.message_id,
       flash: !0,
-      returnMessageId: l.id
+      returnMessageId: r.id
     })
-  }, [l.id, c]);
+  }, [r.id, _]);
   return (0, s.jsxs)("div", {
-    className: i()(E.container, t),
-    children: [null != n.victorEmoji ? (0, s.jsx)(d.default, {
+    className: i()(E.container, n),
+    children: [null != l.victorEmoji ? (0, s.jsx)(d.default, {
       className: E.emoji,
-      emojiId: n.victorEmoji.id,
-      emojiName: n.victorEmoji.name,
-      animated: n.victorEmoji.animated
+      emojiId: l.victorEmoji.id,
+      emojiName: l.victorEmoji.name,
+      animated: l.victorEmoji.animated
     }) : null, (0, s.jsx)(o.Text, {
       className: E.title,
       variant: "text-sm/semibold",
       color: "text-normal",
-      children: n.victorAnswerText
+      children: null !== (t = l.victorAnswerText) && void 0 !== t ? t : "N/A"
     }), (0, s.jsxs)(o.Text, {
       className: E.description,
       variant: "text-xs/medium",
       color: "input-placeholder-text",
-      children: [f.default.Messages.POLL_RESULT_WINNING, " • ", r, "%"]
+      children: [f.default.Messages.POLL_RESULT_WINNING, " • ", c, "%"]
     }), (0, s.jsx)(o.Button, {
       className: E.button,
       size: o.Button.Sizes.TINY,
-      onClick: _,
+      onClick: m,
       color: o.Button.Colors.PRIMARY,
       children: f.default.Messages.POLL_RESULT_VIEW_POLL
     })]
