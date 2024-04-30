@@ -20,7 +20,7 @@ function C(e) {
     selectedGame: n
   } = e, u = (0, f.useDiscoveryGameApplicationId)({
     selectedGame: n
-  }), E = (0, c.useClanDiscoveryUIStore)(e => e.selectedGames, l.default), C = (0, c.useClanDiscoveryUIStore)(e => e.setSelectedGames, l.default), S = s.useMemo(() => new Set(E), [E]), p = (0, c.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, l.default), I = (0, c.useClanDiscoveryUIStore)(e => e.setSelectedPlaystyle, l.default), T = (0, c.useClanDiscoveryUIStore)(e => e.selectedTraits, l.default), g = (0, c.useClanDiscoveryUIStore)(e => e.setSelectedTraits, l.default), A = s.useMemo(() => new Set(T), [T]), N = s.useCallback(e => C(Array.from(e)), [C]), v = s.useCallback(e => I(e), [I]), R = s.useCallback(e => g([...e]), [g]), L = s.useCallback(() => {
+  }), E = (0, c.useClanDiscoveryUIStore)(e => e.selectedGames, l.default), C = (0, c.useClanDiscoveryUIStore)(e => e.setSelectedGames, l.default), S = s.useMemo(() => new Set(E), [E]), p = (0, c.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, l.default), I = (0, c.useClanDiscoveryUIStore)(e => e.setSelectedPlaystyle, l.default), T = (0, c.useClanDiscoveryUIStore)(e => e.selectedTraits, l.default), g = (0, c.useClanDiscoveryUIStore)(e => e.setSelectedTraits, l.default), A = s.useMemo(() => new Set(T), [T]), N = s.useCallback(e => C(Array.from(e)), [C]), v = s.useCallback(e => I(e), [I]), L = s.useCallback(e => g([...e]), [g]), R = s.useCallback(() => {
     switch (t) {
       case 0:
         return (0, a.jsx)(r.default, {
@@ -41,12 +41,12 @@ function C(e) {
         return (0, a.jsx)(d.default, {
           title: h.default.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
           description: h.default.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
-          handleUpdate: R,
+          handleUpdate: L,
           interests: A,
           requiredGameId: u
         })
     }
-  }, [t, u, N, S, v, p, R, A]);
+  }, [t, u, N, S, v, p, L, A]);
   return (0, a.jsx)(i.Sequencer, {
     step: t,
     steps: m,
@@ -60,7 +60,7 @@ function C(e) {
       fade: !0,
       children: (0, a.jsx)("div", {
         className: _.stepsContainer,
-        children: L()
+        children: R()
       })
     })
   })

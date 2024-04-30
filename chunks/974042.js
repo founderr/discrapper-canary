@@ -133,56 +133,56 @@ class A {
 }
 let N = !0,
   v = !1,
-  R = m.FriendsSections.ONLINE,
-  L = new A,
+  L = m.FriendsSections.ONLINE,
+  R = new A,
   O = !0,
   M = !1;
 
 function P() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-  N && (e || R !== m.FriendsSections.ONLINE && R !== m.FriendsSections.ADD_FRIEND) && !v && (N = !1, v = !0, o.default.fetchRelationships())
-}
-
-function x() {
-  if (N = !0, O ? v = !1 : P(), L = L.reset(), M) return;
-  let e = L.getRelationshipCounts();
-  R = 0 === e[m.RelationshipTypes.FRIEND] ? 0 !== e[m.RelationshipTypes.PENDING_INCOMING] ? m.FriendsSections.PENDING : m.FriendsSections.ADD_FRIEND : m.FriendsSections.ONLINE
+  N && (e || L !== m.FriendsSections.ONLINE && L !== m.FriendsSections.ADD_FRIEND) && !v && (N = !1, v = !0, o.default.fetchRelationships())
 }
 
 function y() {
-  L = O ? new A : L.reset()
+  if (N = !0, O ? v = !1 : P(), R = R.reset(), M) return;
+  let e = R.getRelationshipCounts();
+  L = 0 === e[m.RelationshipTypes.FRIEND] ? 0 !== e[m.RelationshipTypes.PENDING_INCOMING] ? m.FriendsSections.PENDING : m.FriendsSections.ADD_FRIEND : m.FriendsSections.ONLINE
+}
+
+function x() {
+  R = O ? new A : R.reset()
 }
 
 function D(e) {
   return function() {
-    return !O && !!L.update(e) && (L = L.clone(), !0)
+    return !O && !!R.update(e) && (R = R.clone(), !0)
   }
 }
 class b extends(a = i.default.Store) {
   initialize() {
-    this.waitFor(_.default, h.default, C.default, E.default, f.default, c.default, d.default), this.syncWith([_.default], y), this.syncWith([d.default], y), this.syncWith([C.default], D(p)), this.syncWith([h.default, c.default], D(I)), x()
+    this.waitFor(_.default, h.default, C.default, E.default, f.default, c.default, d.default), this.syncWith([_.default], x), this.syncWith([d.default], x), this.syncWith([C.default], D(p)), this.syncWith([h.default, c.default], D(I)), y()
   }
   getState() {
     return {
       fetching: v,
-      section: R,
+      section: L,
       pendingCount: _.default.getPendingCount(),
-      rows: L
+      rows: R
     }
   }
 }
 S(b, "displayName", "FriendsStore"), t.default = new b(r.default, {
   CONNECTION_OPEN: function() {
-    x()
+    y()
   },
   FRIENDS_SET_SECTION: function(e) {
-    R = e.section, P()
+    L = e.section, P()
   },
   CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    return O = null != t, y(), !O
+    return O = null != t, x(), !O
   },
   LOAD_RELATIONSHIPS_SUCCESS: function() {
     v = !1
@@ -194,9 +194,9 @@ S(b, "displayName", "FriendsStore"), t.default = new b(r.default, {
     let {
       tab: t
     } = e;
-    return O = t !== m.DrawerTabTypes.FRIENDS, y(), !O
+    return O = t !== m.DrawerTabTypes.FRIENDS, x(), !O
   },
   FRIENDS_SET_INITIAL_SECTION: function(e) {
-    R = e.section, M = !0
+    L = e.section, M = !0
   }
 })

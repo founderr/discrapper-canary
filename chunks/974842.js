@@ -26,14 +26,14 @@ t.default = e => {
     tag: T,
     error: g,
     furthestStep: A
-  } = e, N = s.useRef(null), [v, R] = s.useState(n), [L, O] = s.useState({
+  } = e, N = s.useRef(null), [v, L] = s.useState(n), [R, O] = s.useState({
     primary: l,
     secondary: I
   }), [M, P] = s.useState(() => {
     for (let e = 0; e < f.CLAN_BADGE_PALETTE_PRESETS.length; e++)
       if (f.CLAN_BADGE_PALETTE_PRESETS[e].primary === l && f.CLAN_BADGE_PALETTE_PRESETS[e].secondary === I) return e;
     return p
-  }), [x, y] = s.useState(!1), D = p === M ? L : f.CLAN_BADGE_PALETTE_PRESETS[M];
+  }), [y, x] = s.useState(!1), D = p === M ? R : f.CLAN_BADGE_PALETTE_PRESETS[M];
   return s.useEffect(() => {
     if (v === n && D.primary === l && D.secondary === I) return;
     let e = document.querySelector("#".concat(m));
@@ -87,7 +87,7 @@ t.default = e => {
           }), (0, a.jsx)("div", {
             className: _.pickerGrid,
             children: S.map(e => (0, a.jsx)(u.Clickable, {
-              onClick: () => R(e),
+              onClick: () => L(e),
               className: i()(_.badgeAssetContainer, {
                 [_.badgeAssetContainerSelected]: e === v
               }),
@@ -122,7 +122,7 @@ t.default = e => {
               })
             }, "".concat(e.primary, ":").concat(e.secondary))), (0, a.jsx)(c.default, {
               showSecondaryColor: f.CLAN_BADGE_NUM_CUSTOMIZABLE_COLORS[v] >= 2,
-              palette: L,
+              palette: R,
               onPrimaryColorChange: e => {
                 O(t => ({
                   ...t,
@@ -135,12 +135,12 @@ t.default = e => {
                   secondary: (0, r.int2hex)(e)
                 }))
               },
-              shouldShow: x,
-              onRequestClose: () => y(!1),
+              shouldShow: y,
+              onRequestClose: () => x(!1),
               children: e => (0, a.jsx)(u.Clickable, {
                 ...e,
                 onClick: () => {
-                  P(p), y(e => !e)
+                  P(p), x(e => !e)
                 },
                 className: i()(_.badgeAssetContainer, {
                   [_.badgeAssetContainerSelected]: p === M

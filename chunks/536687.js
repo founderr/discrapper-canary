@@ -39,19 +39,19 @@ function v(e) {
     })),
     {
       lastDismissedGracePeriod: v,
-      isGracePeriodVisible: R
+      isGracePeriodVisible: L
     } = (0, i.useStateFromStoresObject)([p.default], () => ({
       lastDismissedGracePeriod: p.default.getLastDismissedGracePeriodForGuild(a),
       isGracePeriodVisible: p.default.isVisible(a)
     })),
-    L = (0, i.useStateFromStores)([_.default], () => _.default.isVisible(e)),
+    R = (0, i.useStateFromStores)([_.default], () => _.default.isVisible(e)),
     O = (0, i.useStateFromStores)([T.default], () => T.default.isVisible(e)),
     M = (0, i.useStateFromStores)([S.default], () => S.default.can(N.Permissions.ADMINISTRATOR, e)),
     P = null != v && Date.now() - v <= N.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
-    x = null != e ? e.premiumSubscriberCount : 0,
-    y = (0, A.getGuildTierFromAppliedBoostCount)(x, a) !== N.BoostedGuildTiers.NONE,
+    y = null != e ? e.premiumSubscriberCount : 0,
+    x = (0, A.getGuildTierFromAppliedBoostCount)(y, a) !== N.BoostedGuildTiers.NONE,
     D = null != s && Date.now() - s <= 432e5,
-    b = !D && !P && M && y,
+    b = !D && !P && M && x,
     U = (0, d.useGuildHasLiveChannelNotice)(a),
     j = (0, i.useStateFromStores)([I.default], () => I.default.isVisible(e)),
     G = E.default.useShouldShowChannelNotice(a),
@@ -59,8 +59,8 @@ function v(e) {
     {
       enableStudyGroup: k
     } = (0, f.useHubStudyGroupExperiment)(e),
-    F = w.length > 0,
-    B = k && !(null == e ? void 0 : e.hasFeature(N.GuildFeatures.HUB)),
+    B = w.length > 0,
+    F = k && !(null == e ? void 0 : e.hasFeature(N.GuildFeatures.HUB)),
     {
       enableClanCreation: H
     } = o.ClanGuildExperiment.useExperiment({
@@ -79,14 +79,14 @@ function v(e) {
       }, 30 * Math.random() * g.default.Millis.SECOND)), () => {
         window.clearTimeout(e)
       }
-    }, [a, b]), L) return 0;
-  if (R) return 1;
+    }, [a, b]), R) return 0;
+  if (L) return 1;
   if (O) return 2;
   else if (U || null != Y) return 3;
   else if (j) return 4;
   else if (G) return 5;
-  else if (F) return 6;
-  else if (B) return 7;
+  else if (B) return 6;
+  else if (F) return 7;
   else if (W) return 8;
   else if (V) return 9;
   return null

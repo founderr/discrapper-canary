@@ -36,12 +36,12 @@ t.default = e => {
     currentCategoryId: A,
     loadId: N,
     onTagClick: v,
-    showMoreCards: R = !1
+    showMoreCards: L = !1
   } = e;
   s.useEffect(() => {
     i.default.wait(() => T())
   }, [A]);
-  let L = (0, c.default)(R ? _ : h),
+  let R = (0, c.default)(L ? _ : h),
     {
       analyticsLocations: O
     } = (0, r.default)();
@@ -49,9 +49,9 @@ t.default = e => {
   let {
     guilds: M,
     loading: P
-  } = m, x = null == M || 0 === M.length;
-  if (!P && x) return null;
-  let y = async e => {
+  } = m, y = null == M || 0 === M.length;
+  if (!P && y) return null;
+  let x = async e => {
     if ((0, o.isAtGuildCapAndNonPremium)())(0, u.default)({
       analyticsSource: {
         page: f.AnalyticsPages.GUILD_DISCOVERY
@@ -69,12 +69,12 @@ t.default = e => {
   };
   if (P || null == M) {
     let e = [];
-    for (let t = 0; t < L; t++) e.push((0, a.jsx)(d.default.Placeholder, {}, t));
+    for (let t = 0; t < R; t++) e.push((0, a.jsx)(d.default.Placeholder, {}, t));
     t = e
-  } else t = M.slice(0, L).map(e => (0, a.jsx)(d.default, {
+  } else t = M.slice(0, R).map(e => (0, a.jsx)(d.default, {
     className: E.__invalid_guildCard,
     guild: e,
-    onView: y,
+    onView: x,
     theme: p,
     onGuildCardSeen: g,
     onTagClick: v

@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return H
   },
   isMatchingOrigin: function() {
-    return B
+    return F
   },
   processSocketThrottlers: function() {
     return z
@@ -34,7 +34,7 @@ n.r(t), n.d(t, {
     return w
   },
   transformRelationship: function() {
-    return F
+    return B
   },
   transformVoiceState: function() {
     return k
@@ -74,8 +74,8 @@ var a, s = n("729594"),
   A = n("5192"),
   N = n("226951"),
   v = n("996106"),
-  R = n("863141"),
-  L = n("186901"),
+  L = n("863141"),
+  R = n("186901"),
   O = n("981631");
 let M = null !== (a = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== a ? a : "localhost",
   P = function() {
@@ -85,8 +85,8 @@ let M = null !== (a = s.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && v
       n = t[t.length - 1];
     return /^\d+$/.test(n) ? e : t.slice(-2).join(".")
   }(),
-  x = new RegExp("^".concat(N.default.escape("https://"), "(?:[a-z]+\\.)?(").concat(N.default.escape(P), "|discordapp.com|discord.com)$")),
-  y = 1 * g.default.Millis.MINUTE,
+  y = new RegExp("^".concat(N.default.escape("https://"), "(?:[a-z]+\\.)?(").concat(N.default.escape(P), "|discordapp.com|discord.com)$")),
+  x = 1 * g.default.Millis.MINUTE,
   D = {};
 
 function b(e) {
@@ -179,15 +179,15 @@ function k(e, t, n) {
       self_deaf: i,
       suppress: r
     },
-    user: (0, R.default)(u)
+    user: (0, L.default)(u)
   }
 }
 
-function F(e, t, n) {
+function B(e, t, n) {
   let a = I.default.getUser(t);
   return {
     type: e,
-    user: null != a ? (0, R.default)(a) : null,
+    user: null != a ? (0, L.default)(a) : null,
     presence: {
       status: p.default.getStatus(t),
       activity: null != n ? p.default.getApplicationActivity(t, n) : p.default.getPrimaryActivity(t)
@@ -195,7 +195,7 @@ function F(e, t, n) {
   }
 }
 
-function B(e) {
+function F(e) {
   let t;
   if (null == e) return !1;
   let n = window.location.origin;
@@ -205,7 +205,7 @@ function B(e) {
   } catch (e) {
     return !1
   }
-  return window.location.hostname === t && "localhost" === t || null == e.match("staging") && (!!(x.test(e) && x.test(n)) || !1)
+  return window.location.hostname === t && "localhost" === t || null == e.match("staging") && (!!(y.test(e) && y.test(n)) || !1)
 }
 
 function H(e, t, n) {
@@ -257,7 +257,7 @@ function K(e, t, n) {
       }
     } = a;
     if ("string" == typeof n) {
-      if (e.transport === L.TransportTypes.POST_MESSAGE) {
+      if (e.transport === R.TransportTypes.POST_MESSAGE) {
         let e = (0, u.default)(t);
         if (null == e || !j(n, [e])) throw new v.default({
           closeCode: O.RPCCloseCodes.INVALID_ORIGIN
@@ -281,11 +281,11 @@ function K(e, t, n) {
 }
 async function z(e, t) {
   let n = D[e];
-  null == n && (n = new i.default(t ? 2 : 60, y), D[e] = n), await n.process()
+  null == n && (n = new i.default(t ? 2 : 60, x), D[e] = n), await n.process()
 }
 
 function q(e, t) {
-  null == t && (e.authorization.scopes = [L.RPC_LOCAL_SCOPE])
+  null == t && (e.authorization.scopes = [R.RPC_LOCAL_SCOPE])
 }
 
 function Q(e) {
@@ -339,7 +339,7 @@ function Z(e, t) {
 }
 
 function X(e) {
-  if (e !== L.TransportTypes.POST_MESSAGE) throw new v.default({
+  if (e !== R.TransportTypes.POST_MESSAGE) throw new v.default({
     errorCode: O.RPCErrors.INVALID_COMMAND
   }, 'command not available from "'.concat(e, " transport"))
 }

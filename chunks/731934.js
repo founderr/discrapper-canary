@@ -55,7 +55,7 @@ function v(e) {
   })
 }
 
-function R() {
+function L() {
   return (0, a.jsxs)("div", {
     className: i()(g.box, g.linkingBanner, g.linkingBannerParent),
     children: [(0, a.jsxs)("div", {
@@ -98,7 +98,7 @@ function R() {
   })
 }
 
-function L() {
+function R() {
   let e = (0, h.useHasMaxConnections)();
   return (0, a.jsxs)("div", {
     className: i()(g.box, g.linkingBanner),
@@ -233,7 +233,7 @@ let M = () => {
       })
     }) : null
   },
-  x = () => (0, f.useShouldShowHelplineLink)() ? (0, a.jsxs)("div", {
+  y = () => (0, f.useShouldShowHelplineLink)() ? (0, a.jsxs)("div", {
     className: i()(g.__invalid_helpLineInfo, A.marginTop20),
     children: [(0, a.jsx)(o.Heading, {
       className: g.supportHeader,
@@ -249,7 +249,7 @@ let M = () => {
       })
     })]
   }) : null,
-  y = () => {
+  x = () => {
     let e = (0, h.useUserForLinkStatus)(I.UserLinkStatus.PENDING),
       t = (0, c.useAgeSpecificText)(T.default.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_TEEN.format({
         count: e.length
@@ -266,6 +266,6 @@ t.default = () => {
   let e = (0, E.default)();
   return (0, a.jsxs)("div", {
     className: g.container,
-    children: [e ? (0, a.jsx)(R, {}) : (0, a.jsx)(L, {}), (0, a.jsx)(M, {}), (0, a.jsx)(y, {}), (0, a.jsx)(P, {}), (0, a.jsx)(x, {})]
+    children: [e ? (0, a.jsx)(L, {}) : (0, a.jsx)(R, {}), (0, a.jsx)(M, {}), (0, a.jsx)(x, {}), (0, a.jsx)(P, {}), (0, a.jsx)(y, {})]
   })
 }

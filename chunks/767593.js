@@ -1,24 +1,24 @@
 "use strict";
-t.r(n), t("47120");
-var r = t("735250"),
-  i = t("470079"),
-  s = t("481060"),
-  a = t("442837"),
-  o = t("863249"),
-  l = t("944163"),
-  d = t("983736"),
-  u = t("200305"),
-  c = t("594174"),
-  f = t("153124"),
-  h = t("231467"),
-  m = t("981631"),
-  p = t("689938"),
-  E = t("461456");
+n.r(t), n("47120");
+var r = n("735250"),
+  i = n("470079"),
+  s = n("481060"),
+  a = n("442837"),
+  o = n("863249"),
+  l = n("944163"),
+  d = n("983736"),
+  u = n("200305"),
+  c = n("594174"),
+  f = n("153124"),
+  h = n("231467"),
+  m = n("981631"),
+  p = n("689938"),
+  E = n("461456");
 
-function _(e) {
+function x(e) {
   let {
-    guildId: n,
-    formState: t,
+    guildId: t,
+    formState: n,
     updateFormState: i
   } = e;
   return (0, r.jsxs)("div", {
@@ -32,19 +32,19 @@ function _(e) {
       color: "header-secondary",
       children: p.default.Messages.CLAN_DISCOVERY_PROFILE_SUBTITLE
     }), (0, r.jsx)(u.MemberVerificationFormRenderer, {
-      guildId: n,
-      formState: t,
+      guildId: t,
+      formState: n,
       updateFormState: i
     })]
   })
 }
-n.default = function(e) {
-  var n, t;
+t.default = function(e) {
+  var t, n;
   let {
     clan: u,
-    transitionState: x,
+    transitionState: _,
     onClose: v
-  } = e, N = (0, f.useUID)(), R = (0, a.useStateFromStores)([l.default], () => l.default.get(u.id)), [F, T] = i.useState(null !== (t = null == R ? void 0 : R.formFields) && void 0 !== t ? t : []), C = (0, a.useStateFromStores)([c.default], () => c.default.getCurrentUser()), I = null == C ? void 0 : C.verified, g = null == C ? void 0 : C.isPhoneVerified();
+  } = e, N = (0, f.useUID)(), R = (0, a.useStateFromStores)([l.default], () => l.default.get(u.id)), [F, T] = i.useState(null !== (n = null == R ? void 0 : R.formFields) && void 0 !== n ? n : []), I = (0, a.useStateFromStores)([c.default], () => c.default.getCurrentUser()), C = null == I ? void 0 : I.verified, g = null == I ? void 0 : I.isPhoneVerified();
   i.useEffect(() => {
     o.default.fetchVerificationForm(u.id)
   }, [u.id]), i.useEffect(() => {
@@ -59,9 +59,9 @@ n.default = function(e) {
         formFields: F
       }), v()
     }, [j, v, R, F]),
-    O = !((null == R ? void 0 : null === (n = R.guild) || void 0 === n ? void 0 : n.verification_level) === m.VerificationLevels.VERY_HIGH ? g : I || g) || F.some(e => !(0, d.isValidFormResponse)(e));
+    O = !((null == R ? void 0 : null === (t = R.guild) || void 0 === t ? void 0 : t.verification_level) === m.VerificationLevels.VERY_HIGH ? g : C || g) || F.some(e => !(0, d.isValidFormResponse)(e));
   return (0, r.jsxs)(s.ModalRoot, {
-    transitionState: x,
+    transitionState: _,
     "aria-labelledby": N,
     size: s.ModalSize.DYNAMIC,
     className: E.container,
@@ -73,7 +73,7 @@ n.default = function(e) {
         children: (0, r.jsx)(s.ScrollerNone, {
           fade: !0,
           className: E.scroller,
-          children: (0, r.jsx)(_, {
+          children: (0, r.jsx)(x, {
             guildId: u.id,
             formState: F,
             updateFormState: T

@@ -46,10 +46,10 @@ var n = a("735250"),
   z = a("185403"),
   Z = a("151785"),
   K = a("288176"),
-  X = a("833571"),
-  q = a("725568"),
-  J = a("26290"),
-  Q = a("626135"),
+  q = a("833571"),
+  J = a("725568"),
+  Q = a("26290"),
+  X = a("626135"),
   $ = a("981631"),
   ee = a("308083"),
   et = a("647086"),
@@ -69,7 +69,7 @@ let el = s.memo(function(e) {
     onSelect: m
   } = e, el = (0, r.useStateFromStores)([B.default], () => B.default.getCurrentUser());
   i()(null != el, "GuildHeaderPopout: user cannot be undefined"), s.useEffect(() => {
-    Q.default.track($.AnalyticEvents.GUILD_DROPDOWN_MENU_VIEWED, {
+    X.default.track($.AnalyticEvents.GUILD_DROPDOWN_MENU_VIEWED, {
       guild_id: t.id
     })
   });
@@ -219,7 +219,7 @@ let el = s.memo(function(e) {
       }) : null, eI, (0, n.jsx)(d.MenuItem, {
         id: "privacy",
         label: ea.default.Messages.PRIVACY_SETTINGS,
-        icon: X.default,
+        icon: q.default,
         action: () => (0, d.openModalLazy)(async () => {
           let {
             default: e
@@ -285,7 +285,7 @@ let el = s.memo(function(e) {
         id: "guild-settings",
         label: ea.default.Messages.CLAN_SETTINGS,
         icon: k.default,
-        action: () => (0, q.openFullScreenLayer)(e => {
+        action: () => (0, J.openFullScreenLayer)(e => {
           let {
             closeLayer: a
           } = e;
@@ -337,7 +337,7 @@ let el = s.memo(function(e) {
         id: "notifications",
         label: (0, n.jsxs)("div", {
           className: en.newBadgeRow,
-          children: [ea.default.Messages.NOTIFICATION_SETTINGS, ev && (0, n.jsx)(J.TextBadge, {
+          children: [ea.default.Messages.NOTIFICATION_SETTINGS, ev && (0, n.jsx)(Q.TextBadge, {
             className: en.newBadge,
             text: ea.default.Messages.NEW
           })]
@@ -355,7 +355,7 @@ let el = s.memo(function(e) {
       }), (0, n.jsx)(d.MenuItem, {
         id: "privacy",
         label: ea.default.Messages.PRIVACY_SETTINGS,
-        icon: X.default,
+        icon: q.default,
         action: () => (0, d.openModalLazy)(async () => {
           let {
             default: e

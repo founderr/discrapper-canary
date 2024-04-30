@@ -27,8 +27,8 @@ var a = n("735250"),
   A = n("335131"),
   N = n("141594"),
   v = n("302800"),
-  R = n("981631"),
-  L = n("689938"),
+  L = n("981631"),
+  R = n("689938"),
   O = n("108003");
 let M = e => {
     let {
@@ -37,7 +37,7 @@ let M = e => {
     return (0, a.jsx)(T.TextBadge, {
       className: O.newBadge,
       color: null != t ? t : S.default.STATUS_DANGER_BACKGROUND,
-      text: L.default.Messages.NEW
+      text: R.default.Messages.NEW
     })
   },
   P = e => {
@@ -57,9 +57,9 @@ let M = e => {
     }), [c, E]);
     return (0, a.jsx)(f.LinkButton, {
       selected: t,
-      route: R.Routes.COLLECTIBLES_SHOP,
+      route: L.Routes.COLLECTIBLES_SHOP,
       icon: I.default,
-      text: L.default.Messages.COLLECTIBLES_SHOP,
+      text: R.default.Messages.COLLECTIBLES_SHOP,
       locationState: n,
       ...d,
       ...u,
@@ -69,7 +69,7 @@ let M = e => {
       children: o
     })
   },
-  x = s.memo(function(e) {
+  y = s.memo(function(e) {
     let {
       displayOptions: t,
       assetId: n
@@ -98,7 +98,7 @@ let M = e => {
       })]
     })
   }),
-  y = e => {
+  x = e => {
     let {
       selected: t,
       locationState: n,
@@ -109,7 +109,7 @@ let M = e => {
       f(!1), null == e || e()
     }, []);
     return (0, a.jsx)(d.Tooltip, {
-      text: (0, a.jsx)(x, {
+      text: (0, a.jsx)(y, {
         displayOptions: l,
         assetId: l.assetIds[r]
       }),
@@ -187,7 +187,7 @@ let M = e => {
           displayOptions: s
         });
       case v.CollectiblesMarketingVariant.COACHTIP:
-        return (0, a.jsx)(y, {
+        return (0, a.jsx)(x, {
           selected: t,
           locationState: n,
           displayOptions: s

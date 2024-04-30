@@ -42,12 +42,12 @@ let N = (0, _.makeLazy)({
     webpackId: "869779",
     name: "ChannelSettings"
   }),
-  R = (0, _.makeLazy)({
+  L = (0, _.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("93521"), n.e("18249")]).then(n.bind(n, "838819")),
     webpackId: "838819",
     name: "CollectiblesShop"
   }),
-  L = (0, _.makeLazy)({
+  R = (0, _.makeLazy)({
     createPromise: () => Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("33053"), n.e("49146"), n.e("75475"), n.e("58227"), n.e("85093"), n.e("85552"), n.e("43502")]).then(n.bind(n, "994763")),
     webpackId: "994763",
     name: "GuildSettings"
@@ -55,17 +55,17 @@ let N = (0, _.makeLazy)({
   O = {
     [T.Layers.USER_SETTINGS]: () => (0, s.jsx)(N, {}),
     [T.Layers.CHANNEL_SETTINGS]: () => (0, s.jsx)(v, {}),
-    [T.Layers.GUILD_SETTINGS]: () => (0, s.jsx)(L, {}),
-    [T.Layers.COLLECTIBLES_SHOP]: () => (0, s.jsx)(R, {})
+    [T.Layers.GUILD_SETTINGS]: () => (0, s.jsx)(R, {}),
+    [T.Layers.COLLECTIBLES_SHOP]: () => (0, s.jsx)(L, {})
   },
   M = "SHOWN",
   P = "HIDDEN",
-  x = {
+  y = {
     friction: 10,
     tension: 100
   };
 
-function y() {
+function x() {
   return l.useEffect(() => (h.default.enable(), h.default.enableTemp(E.SETTINGS_LAYERS_LAYOUT), () => h.default.disableTemp()), []), null
 }
 class D extends(a = l.PureComponent) {
@@ -108,10 +108,10 @@ class D extends(a = l.PureComponent) {
     } = this.state;
     o.default.parallel([o.default.spring(t, {
       toValue: 1,
-      ...x
+      ...y
     }), o.default.spring(n, {
       toValue: 1,
-      ...x
+      ...y
     })]).start(() => this.animateComplete(e))
   }
   animateOut(e) {
@@ -122,10 +122,10 @@ class D extends(a = l.PureComponent) {
     } = this.state;
     p.ComponentDispatch.dispatch(T.ComponentActions.LAYER_POP_START), o.default.parallel([o.default.spring(t, {
       toValue: 0,
-      ...x
+      ...y
     }), o.default.spring(n, {
       toValue: 1.1,
-      ...x
+      ...y
     })]).start(() => {
       e(), p.ComponentDispatch.dispatch(T.ComponentActions.LAYER_POP_COMPLETE)
     })
@@ -138,10 +138,10 @@ class D extends(a = l.PureComponent) {
     } = this.state;
     o.default.parallel([o.default.spring(e, {
       toValue: 0,
-      ...x
+      ...y
     }), o.default.spring(t, {
       toValue: .93,
-      ...x
+      ...y
     })]).start(() => this.animateComplete())
   }
   animateComplete(e) {
@@ -230,7 +230,7 @@ class b extends l.PureComponent {
     let a;
     return a = "string" == typeof e ? O[e]() : (0, s.jsx)(e, {}), (0, s.jsxs)(D, {
       mode: t === n - 1 ? M : P,
-      children: [(0, s.jsx)(y, {}), a]
+      children: [(0, s.jsx)(x, {}), a]
     }, "layer-".concat(t))
   }
   renderArtisanalHack() {

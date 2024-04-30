@@ -23,8 +23,8 @@ var a = n("735250"),
   A = n("70956"),
   N = n("358085"),
   v = n("557177"),
-  R = n("998502"),
-  L = n("981631"),
+  L = n("998502"),
+  R = n("981631"),
   O = n("689938"),
   M = n("689511");
 
@@ -36,7 +36,7 @@ function P(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class x extends s.PureComponent {
+class y extends s.PureComponent {
   createSound() {
     let {
       soundpack: e
@@ -60,7 +60,7 @@ class x extends s.PureComponent {
     if (e.soundpack !== r && (this._connectedSound = this.createSound()), e.connected !== i || d) {
       if (i && null != this.videoRef) {
         let e = Math.max(Math.ceil((this.videoRef.duration - this.videoRef.currentTime) * A.default.Millis.SECOND), 600);
-        clearTimeout(this._noProblemsTimeout), c.Storage.get(L.DISCODO_STORAGE_KEY) && this._connectedSound.play(), o ? this.setState({
+        clearTimeout(this._noProblemsTimeout), c.Storage.get(R.DISCODO_STORAGE_KEY) && this._connectedSound.play(), o ? this.setState({
           problems: !1,
           hide: i
         }) : this._noProblemsTimeout = setTimeout(() => {
@@ -130,14 +130,14 @@ class x extends s.PureComponent {
           }), (0, a.jsxs)("div", {
             children: [(0, a.jsxs)(f.Anchor, {
               className: M.twitterLink,
-              href: L.Links.TWITTER_SUPPORT,
+              href: R.Links.TWITTER_SUPPORT,
               target: "_blank",
               children: [(0, a.jsx)(T.default, {
                 className: M.icon
               }), O.default.Messages.TWEET_US]
             }), (0, a.jsxs)(f.Anchor, {
               className: M.statusLink,
-              href: L.Links.STATUS,
+              href: R.Links.STATUS,
               target: "_blank",
               children: [(0, a.jsx)(I.default, {
                 className: M.icon
@@ -218,7 +218,7 @@ class x extends s.PureComponent {
     }()), P(this, "handleReady", () => {
       this.setState({
         ready: !0
-      }), (0, N.isDesktop)() && (R.default.send("UPDATED_QUOTES", ["Hold Tight — Loading Discord"]), R.default.send("UPDATE_OPEN_ON_STARTUP"))
+      }), (0, N.isDesktop)() && (L.default.send("UPDATED_QUOTES", ["Hold Tight — Loading Discord"]), L.default.send("UPDATE_OPEN_ON_STARTUP"))
     }), P(this, "setVideoRef", e => {
       this.videoRef = e
     }), P(this, "setProblemsTimeout", () => {
@@ -254,7 +254,7 @@ t.default = d.default.connectStores([_.default, p.default, m.default, h.default]
     soundpack: l,
     reducedMotion: i
   } = e;
-  return t ? (0, a.jsx)(x, {
+  return t ? (0, a.jsx)(y, {
     reducedMotion: i,
     soundpack: l,
     connected: n,

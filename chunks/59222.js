@@ -71,22 +71,22 @@ t.default = e => {
     defaultLanguage: r,
     availableLanguages: c,
     isFetchingSearch: v,
-    scroller: R,
-    loadingGuildId: L,
+    scroller: L,
+    loadingGuildId: R,
     theme: O,
     currentCategoryId: M,
     currentCategoryName: P,
-    onViewGuild: x,
-    onGuildCardSeen: y,
+    onViewGuild: y,
+    onGuildCardSeen: x,
     placeholder: D,
     onTagClick: b
   } = e, U = i().uniqueId("GuildDiscovery"), {
     guilds: j,
     loading: G,
     total: w
-  } = n, [k, F] = s.useState(!1), {
-    tag: B
-  } = g(), [H, V] = s.useState(B), Y = (0, o.useStateFromStores)([f.default], () => f.default.hasSearchError()), W = (e, t, n) => {
+  } = n, [k, B] = s.useState(!1), {
+    tag: F
+  } = g(), [H, V] = s.useState(F), Y = (0, o.useStateFromStores)([f.default], () => f.default.hasSearchError()), W = (e, t, n) => {
     d.doAlgoliaSearch(l, {
       categoryId: n ? S.DISCOVERY_ALL_CATEGORIES_ID : M,
       preferredLocale: r.code,
@@ -95,9 +95,9 @@ t.default = e => {
       filters: {
         approximate_member_count: h.MINIMUM_MEMBER_COUNT
       }
-    }), F(!1)
+    }), B(!1)
   }, K = () => {
-    null == R || R.scrollTo({
+    null == L || L.scrollTo({
       to: 0
     })
   };
@@ -106,7 +106,7 @@ t.default = e => {
       offset: e,
       tag: t
     } = g(), n = null != e ? Math.floor(parseInt(e, 10) / T) + 1 : 1;
-    V(!!t), 1 === n && F(!0)
+    V(!!t), 1 === n && B(!0)
   }, [l]);
   let z = M === S.DISCOVERY_ALL_CATEGORIES_ID ? p.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
     count: null != w ? w.toLocaleString() : "0",
@@ -170,11 +170,11 @@ t.default = e => {
               guilds: j,
               loading: G,
               loadingPlaceholderCount: T,
-              onViewGuild: x,
-              loadingGuildId: L,
+              onViewGuild: y,
+              loadingGuildId: R,
               theme: O,
               analyticsContext: h.AnalyticsContexts.SEARCH,
-              onGuildCardSeen: y,
+              onGuildCardSeen: x,
               onTagClick: b
             }), t]
           })

@@ -29,7 +29,7 @@ t.default = function(e) {
     onClick: A,
     cta: N,
     ctaColor: v,
-    centerText: R
+    centerText: L
   } = e;
   s.useEffect(() => {
     _(f.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
@@ -37,8 +37,8 @@ t.default = function(e) {
       guild_id: t.id
     })
   }, [t.id, C]);
-  let L = null;
-  "function" == typeof N ? L = N() : null != N && (L = (0, a.jsx)(o.Button, {
+  let R = null;
+  "function" == typeof N ? R = N() : null != N && (R = (0, a.jsx)(o.Button, {
     className: h.button,
     size: o.Button.Sizes.SMALL,
     onClick: () => {
@@ -59,7 +59,7 @@ t.default = function(e) {
     className: i()(h.title, {
       [h.noImageTitle]: null == r
     }, {
-      [h.center]: R
+      [h.center]: L
     }),
     children: n
   }));
@@ -94,12 +94,12 @@ t.default = function(e) {
       className: h.message,
       children: [O, (0, a.jsx)(o.Text, {
         className: i()({
-          [h.center]: R
+          [h.center]: L
         }),
         variant: "text-sm/normal",
         color: "text-muted",
         children: l
-      }), L]
+      }), R]
     })]
   })
 }

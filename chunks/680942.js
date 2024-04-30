@@ -66,14 +66,14 @@ t.default = e => {
     isGiftEasterEggEnabled: E,
     disableCustomColor: g = !1
   } = e, {
-    analyticsLocations: b
-  } = (0, n.default)(), x = s.useRef(null), S = (0, i.default)(x), T = g ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT;
+    analyticsLocations: x
+  } = (0, n.default)(), b = s.useRef(null), S = (0, i.default)(b), T = g ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT;
   return (0, l.jsx)(r.Tooltip, {
     text: f.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
     delay: h,
     children: e => (0, l.jsx)(r.Button, {
       ...e,
-      buttonRef: x,
+      buttonRef: b,
       className: m.giftButton,
       color: g ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
       look: r.Button.Looks.FILLED,
@@ -84,7 +84,7 @@ t.default = e => {
         e.stopPropagation(), (0, u.default)({
           skuId: t.skuId,
           isGift: !0,
-          analyticsLocations: b,
+          analyticsLocations: x,
           returnRef: a,
           onClose: null != p ? e => {
             e && p()

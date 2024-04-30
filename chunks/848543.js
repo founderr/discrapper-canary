@@ -32,13 +32,13 @@ function v(e) {
     channel: t,
     iconClassName: l,
     className: v,
-    innerClassName: R,
-    ...L
+    innerClassName: L,
+    ...R
   } = e, {
     mute: O,
     suppress: M
-  } = (0, _.default)(t), P = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), x = O || M || P, [y, D] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
-    isSoundboardButtonDisabled: x
+  } = (0, _.default)(t), P = (0, r.useStateFromStores)([C.default], () => C.default.isDeaf()), y = O || M || P, [x, D] = s.useState(!1), b = t.getGuildId(), U = (0, S.useSoundBoardDismissContentTypes)({
+    isSoundboardButtonDisabled: y
   }), [j, G] = (0, h.useGetDismissibleContent)(U), {
     analyticsLocations: w
   } = (0, E.default)(f.default.SOUNDBOARD_BUTTON);
@@ -55,14 +55,14 @@ function v(e) {
     })
   }
   let {
-    Component: F,
-    play: B,
+    Component: B,
+    play: F,
     events: {
       onMouseEnter: H,
       onMouseLeave: V
     }
   } = (0, u.useSoundboardLottie)(), Y = e => (0, a.jsx)(d.Popout, {
-    shouldShow: y,
+    shouldShow: x,
     position: "top",
     onRequestClose: () => D(!1),
     renderPopout: e => {
@@ -85,38 +85,38 @@ function v(e) {
         ...e,
         ...t,
         className: i()(v, {
-          [N.buttonActive]: y,
-          [N.disabled]: x
+          [N.buttonActive]: x,
+          [N.disabled]: y
         }),
         wrapperClassName: v,
-        innerClassName: R,
-        disabled: x,
+        innerClassName: L,
+        disabled: y,
         onClick: () => {
           var t, n;
-          null == n || n(), null != j && j !== o.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && G(g.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), D(!y), B()
+          null == n || n(), null != j && j !== o.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && G(g.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), D(!x), F()
         },
         onMouseEnter: t => {
           var n, a;
-          null === (n = L.onMouseEnter) || void 0 === n || n.call(L, t), null == e || null === (a = e.onMouseEnter) || void 0 === a || a.call(e), H()
+          null === (n = R.onMouseEnter) || void 0 === n || n.call(R, t), null == e || null === (a = e.onMouseEnter) || void 0 === a || a.call(e), H()
         },
         onMouseLeave: t => {
           var n, a;
-          null === (n = L.onMouseLeave) || void 0 === n || n.call(L, t), null == e || null === (a = e.onMouseLeave) || void 0 === a || a.call(e), V()
+          null === (n = R.onMouseLeave) || void 0 === n || n.call(R, t), null == e || null === (a = e.onMouseLeave) || void 0 === a || a.call(e), V()
         },
         onContextMenu: k,
         fullWidth: !0,
         size: d.Button.Sizes.SMALL,
-        ...L,
-        children: (0, a.jsx)(F, {
+        ...R,
+        children: (0, a.jsx)(B, {
           className: l,
           size: "sm",
-          color: y ? "white" : d.tokens.colors.INTERACTIVE_ACTIVE
+          color: x ? "white" : d.tokens.colors.INTERACTIVE_ACTIVE
         })
       })
     })
   }), W = s.useCallback(() => {
-    !x && D(!y)
-  }, [x, y]);
+    !y && D(!x)
+  }, [y, x]);
   return (0, m.useComponentAction)({
     event: T.ComponentActions.TOGGLE_SOUNDBOARD,
     handler: W

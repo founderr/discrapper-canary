@@ -27,8 +27,8 @@ var a = n("392711"),
   A = n("238679"),
   N = n("863141"),
   v = n("981631"),
-  R = n("701488"),
-  L = n("65154");
+  L = n("701488"),
+  R = n("65154");
 
 function O(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -96,7 +96,7 @@ class M {
   handleSpeaking(e) {
     if (0 === this.rpcServer.subscriptions.length) return;
     let t = 0 !== e.speakingFlags ? v.RPCEvents.SPEAKING_START : v.RPCEvents.SPEAKING_STOP;
-    if (e.context === L.MediaEngineContextTypes.DEFAULT) {
+    if (e.context === R.MediaEngineContextTypes.DEFAULT) {
       let n = _.default.getVoiceChannelId();
       if (null != n) {
         let a = o.default.getChannel(n);
@@ -157,7 +157,7 @@ class M {
       layoutMode: n
     } = e;
     if (0 === this.rpcServer.subscriptions.length) return;
-    let a = n !== R.ActivityLayoutMode.FOCUSED;
+    let a = n !== L.ActivityLayoutMode.FOCUSED;
     this.rpcServer.dispatchToSubscriptions(v.RPCEvents.ACTIVITY_PIP_MODE_UPDATE, e => e.socket.application.id === t, {
       is_pip_mode: a
     });
@@ -181,7 +181,7 @@ class M {
       screenOrientation: t
     } = e;
     if (0 === this.rpcServer.subscriptions.length) return;
-    let n = t === R.ActivityScreenOrientation.PORTRAIT ? "portrait" : "landscape";
+    let n = t === L.ActivityScreenOrientation.PORTRAIT ? "portrait" : "landscape";
     this.rpcServer.dispatchToSubscriptions(v.RPCEvents.ORIENTATION_UPDATE, {}, {
       screen_orientation: t,
       orientation: n

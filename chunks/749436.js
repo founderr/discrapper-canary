@@ -34,11 +34,11 @@ function v(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let R = u().throttle(m.trackSearchResultsViewed, 1e3, {
+let L = u().throttle(m.trackSearchResultsViewed, 1e3, {
     leading: !1,
     trailing: !0
   }),
-  L = e => {
+  R = e => {
     let {
       isSelected: t,
       onCategoryChange: n,
@@ -71,7 +71,7 @@ class O extends(a = l.PureComponent) {
     } = this.state, i = this.context;
     if (null == E.default.getSearchIndex() && f.createAlgoliaIndex(), C.ComponentDispatch.subscribe(g.ComponentActions.GLOBAL_CLIPBOARD_PASTE, this.focusInput), C.ComponentDispatch.subscribe(g.ComponentActions.TEXTAREA_FOCUS, this.focusInput), s.length > 0) {
       let r = n !== T.DISCOVERY_ALL_CATEGORIES_ID ? n : null;
-      R({
+      L({
         loadId: e,
         searchId: a,
         query: s,
@@ -95,7 +95,7 @@ class O extends(a = l.PureComponent) {
       query: u,
       isHandlingTagSearch: d
     } = this.state, c = this.context, f = e.isFetchingSearch && !a, E = l !== T.DISCOVERY_ALL_CATEGORIES_ID ? l : null;
-    (r || d) && f && (R({
+    (r || d) && f && (L({
       loadId: n,
       searchId: o,
       query: u,
@@ -148,7 +148,7 @@ class O extends(a = l.PureComponent) {
       className: N.categories,
       children: null == t ? void 0 : t.map(t => {
         let [n, a] = t;
-        return (0, s.jsx)(L, {
+        return (0, s.jsx)(R, {
           categoryId: n,
           name: n === T.DISCOVERY_ALL_CATEGORIES_ID ? A.default.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : I.default.getCategoryName(n),
           onCategoryChange: this.handleCategoryChange,

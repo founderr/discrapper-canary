@@ -23,13 +23,13 @@ var a = n("735250"),
   A = n("417363"),
   N = n("941128"),
   v = n("451478"),
-  R = n("285952"),
-  L = n("366695"),
+  L = n("285952"),
+  R = n("366695"),
   O = n("366966"),
   M = n("151011"),
   P = n("774832"),
-  x = n("465670"),
-  y = n("786048"),
+  y = n("465670"),
+  x = n("786048"),
   D = n("897353"),
   b = n("424218"),
   U = n("780570"),
@@ -37,9 +37,9 @@ var a = n("735250"),
   G = n("86826"),
   w = n("981631"),
   k = n("689938"),
-  F = n("221419");
+  B = n("221419");
 
-function B(e, t, n) {
+function F(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -76,15 +76,15 @@ let H = e => {
         } = e;
         return (0, a.jsx)(f.Button, {
           "aria-label": t,
-          className: F.actionButton,
-          innerClassName: F.actionButtonContents,
+          className: B.actionButton,
+          innerClassName: B.actionButtonContents,
           color: f.Button.Colors.PRIMARY,
           size: f.Button.Sizes.ICON,
           onClick: n,
           onMouseEnter: l,
           onMouseLeave: i,
           children: (0, a.jsx)(s, {
-            className: F.actionIcon
+            className: B.actionIcon
           })
         })
       }
@@ -274,8 +274,8 @@ class Z extends s.PureComponent {
       foregroundGradientColor: s,
       message: l
     } = e;
-    return (0, a.jsxs)(R.default, {
-      direction: R.default.Direction.VERTICAL,
+    return (0, a.jsxs)(L.default, {
+      direction: L.default.Direction.VERTICAL,
       children: [(0, a.jsx)(f.Progress, {
         percent: t,
         size: f.Progress.Sizes.SMALL,
@@ -283,7 +283,7 @@ class Z extends s.PureComponent {
         foregroundGradientColor: null != s ? [(0, I.getColor)(s[0]), (0, I.getColor)(s[1])] : void 0,
         animate: this.isFocused
       }), (0, a.jsx)("div", {
-        className: F.progressCellText,
+        className: B.progressCellText,
         children: null != l ? l : ""
       })]
     })
@@ -293,15 +293,15 @@ class Z extends s.PureComponent {
       percents: t,
       message: n
     } = e;
-    return (0, a.jsxs)(R.default, {
-      direction: R.default.Direction.VERTICAL,
+    return (0, a.jsxs)(L.default, {
+      direction: L.default.Direction.VERTICAL,
       children: [(0, a.jsx)(f.StackedProgress, {
         percents: t,
         size: f.Progress.Sizes.SMALL,
         foregroundColors: V,
         animate: this.isFocused
       }), (0, a.jsx)("div", {
-        className: F.progressCellText,
+        className: B.progressCellText,
         children: null != n ? n : ""
       })]
     })
@@ -434,7 +434,7 @@ class Z extends s.PureComponent {
     return null
   }
   constructor(...e) {
-    super(...e), B(this, "renderProgressPatchingBody", (e, t) => {
+    super(...e), F(this, "renderProgressPatchingBody", (e, t) => {
       let {
         item: {
           state: n
@@ -474,7 +474,7 @@ let X = () => (0, a.jsx)(Y, {
     onClick: () => _.resume()
   }),
   J = () => (0, a.jsx)(Y, {
-    icon: y.default,
+    icon: x.default,
     tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_PAUSE,
     onClick: () => _.pause()
   }),
@@ -493,43 +493,43 @@ let X = () => (0, a.jsx)(Y, {
       item: t
     } = e;
     return (0, a.jsx)(Y, {
-      icon: x.default,
+      icon: y.default,
       tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_REMOVE,
       onClick: () => _.cancel(t.applicationId, t.branchId)
     })
   },
   et = [{
     key: Q.NAME,
-    cellClassName: F.nameCell,
-    render: e => (0, a.jsxs)(R.default, {
-      align: R.default.Align.CENTER,
-      children: [(0, a.jsx)(L.default, {
+    cellClassName: B.nameCell,
+    render: e => (0, a.jsxs)(L.default, {
+      align: L.default.Align.CENTER,
+      children: [(0, a.jsx)(R.default, {
         game: e.application,
-        className: F.__invalid_gameIcon,
-        size: L.default.Sizes.SMALL
+        className: B.__invalid_gameIcon,
+        size: R.default.Sizes.SMALL
       }), (0, a.jsx)("div", {
-        className: F.nameCellText,
+        className: B.nameCellText,
         children: e.application.name
       })]
     })
   }, {
     key: Q.PROGRESS,
-    cellClassName: F.progressCell,
-    headerCellClassName: F.progressCellHeader,
-    bodyCellClassName: F.progressCellBody,
+    cellClassName: B.progressCell,
+    headerCellClassName: B.progressCellHeader,
+    bodyCellClassName: B.progressCellBody,
     render: (e, t) => (0, a.jsx)(Z, {
       item: e,
       cellProps: t
     })
   }, {
     key: Q.ACTIONS,
-    cellClassName: F.actionsCell,
+    cellClassName: B.actionsCell,
     render(e, t) {
       let n, s;
       return e.finished ? n = null != e.libraryApplication ? (0, a.jsx)(C.default, {
         libraryApplication: e.libraryApplication,
         size: f.Button.Sizes.SMALL,
-        className: F.gameActionButton,
+        className: B.gameActionButton,
         source: w.AnalyticsLocations.APPLICATION_LIBRARY_UPDATES
       }) : null : null != e.state ? e.state.type !== w.LocalDispatchApplicationStates.UP_TO_DATE && (n = e.index > 0 ? (0, a.jsx)($, {
         item: e
@@ -539,8 +539,8 @@ let X = () => (0, a.jsx)(Y, {
         item: e
       })) : s = (0, a.jsx)(ee, {
         item: e
-      }), (0, a.jsxs)(R.default, {
-        justify: R.default.Justify.END,
+      }), (0, a.jsxs)(L.default, {
+        justify: L.default.Justify.END,
         children: [n, s]
       })
     }
@@ -571,17 +571,17 @@ class en extends s.PureComponent {
       analyticsContext: r
     } = this.props;
     return 0 === e.length ? null : (0, a.jsxs)("div", {
-      className: F.gameUpdates,
+      className: B.gameUpdates,
       children: [(0, a.jsxs)("div", {
-        className: F.headerRow,
+        className: B.headerRow,
         children: [(0, a.jsx)(G.default, {
-          className: i()(F.headerCell, F.networkProgress),
+          className: i()(B.headerCell, B.networkProgress),
           title: k.default.Messages.GAME_LIBRARY_UPDATES_HEADER_NETWORK,
           getHistoricalTotalBytes: A.default.getHistoricalTotalBytesDownloaded,
           color: w.Color.GREEN_360,
           animate: s
         }), (0, a.jsx)(G.default, {
-          className: i()(F.headerCell, F.diskProgress),
+          className: i()(B.headerCell, B.diskProgress),
           title: k.default.Messages.GAME_LIBRARY_UPDATES_HEADER_DISK,
           getHistoricalTotalBytes: A.default.getHistoricalTotalBytesWritten,
           color: w.Color.BLUE_345,
@@ -591,8 +591,8 @@ class en extends s.PureComponent {
         hasHeader: !1,
         columns: et,
         data: e,
-        className: F.table,
-        rowClassName: F.row,
+        className: B.table,
+        rowClassName: B.row,
         rowComponent: H,
         cellProps: {
           paused: t,
@@ -615,12 +615,12 @@ class en extends s.PureComponent {
             })
           }
         },
-        bodyCellClassName: F.cell
+        bodyCellClassName: B.cell
       })]
     })
   }
   constructor(...e) {
-    super(...e), B(this, "isUnmounted", !1), B(this, "isTallerThanHalfViewport", !1), B(this, "throttledUpdateHeight", o().throttle(() => {
+    super(...e), F(this, "isUnmounted", !1), F(this, "isTallerThanHalfViewport", !1), F(this, "throttledUpdateHeight", o().throttle(() => {
       if (this.isUnmounted) return;
       let {
         height: e,

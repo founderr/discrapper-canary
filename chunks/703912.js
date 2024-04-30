@@ -31,13 +31,13 @@ async function A(e, t, n) {
     client_id: A,
     response_type: N = "code",
     redirect_uri: v,
-    code_challenge: R,
-    code_challenge_method: L,
+    code_challenge: L,
+    code_challenge_method: R,
     state: O,
     nonce: M,
     scope: P,
-    permissions: x,
-    guild_id: y,
+    permissions: y,
+    guild_id: x,
     channel_id: D,
     prompt: b,
     disable_guild_select: U,
@@ -62,8 +62,8 @@ async function A(e, t, n) {
       scopes: G,
       responseType: N,
       redirectUri: v,
-      codeChallenge: R,
-      codeChallengeMethod: L,
+      codeChallenge: L,
+      codeChallengeMethod: R,
       state: O,
       integrationType: o
     })
@@ -95,8 +95,8 @@ async function A(e, t, n) {
       scopes: G,
       responseType: N,
       redirectUri: v,
-      codeChallenge: R,
-      codeChallengeMethod: L,
+      codeChallenge: L,
+      codeChallengeMethod: R,
       state: O,
       nonce: M,
       integrationType: o
@@ -110,21 +110,21 @@ async function A(e, t, n) {
     }, "OAuth2 Authorize Error: ".concat(e.message || "Unknown Error"))
   }
   null == n || n(u.application, D);
-  let F = S.NONE;
+  let B = S.NONE;
   try {
-    F = l.deserialize(null != x ? x : 0)
+    B = l.deserialize(null != y ? y : 0)
   } catch (e) {}
   return null != u.integration_type && Object.values(s.ApplicationIntegrationType).includes(u.integration_type) && (r = new Map).set(u.integration_type, u), t({
     clientId: A,
     authorizations: r,
     scopes: G,
-    parsedPermissions: F,
+    parsedPermissions: B,
     responseType: N,
     redirectUri: v,
-    codeChallenge: R,
-    codeChallengeMethod: L,
+    codeChallenge: L,
+    codeChallengeMethod: R,
     state: O,
-    guildId: y,
+    guildId: x,
     channelId: D,
     prompt: b,
     disableGuildSelect: U,

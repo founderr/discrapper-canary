@@ -84,15 +84,15 @@ t.default = e => {
   }), {
     gameApplicationIds: p,
     playstyle: v,
-    interests: R,
-    tag: L,
+    interests: L,
+    tag: R,
     badgeKind: O,
     badgePrimaryColor: M,
     badgeSecondaryColor: P
   } = (0, d.useStateFromStoresObject)([h.default], () => {
     var e;
     return null !== (e = h.default.getStateForGuild(n).progress) && void 0 !== e ? e : h.DEFAULT_CLAN_PROGRESS
-  }), x = s.useMemo(() => (null == R ? void 0 : R.size) > 0 ? (0, _.formatSelectionList)(Array.from(R), I.MAX_TRAITS_TO_DISPLAY) : null, [R]);
+  }), y = s.useMemo(() => (null == L ? void 0 : L.size) > 0 ? (0, _.formatSelectionList)(Array.from(L), I.MAX_TRAITS_TO_DISPLAY) : null, [L]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: g.scrollBg,
@@ -108,7 +108,7 @@ t.default = e => {
         fade: !0,
         className: g.overviewSidebarContent,
         children: [(0, a.jsx)(A, {
-          tag: L,
+          tag: R,
           badge: O,
           primaryColor: M,
           secondaryColor: P
@@ -132,12 +132,12 @@ t.default = e => {
         }), (0, a.jsx)(N, {
           applicationIds: p,
           playstyle: v
-        }), null != x ? (0, a.jsx)(c.Text, {
+        }), null != y ? (0, a.jsx)(c.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
           className: g.overviewText,
           children: T.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_TRAITS.format({
-            traits: x
+            traits: y
           })
         }) : null, (0, a.jsx)(c.Text, {
           variant: "text-sm/normal",

@@ -17,13 +17,13 @@ var a = s("442837"),
   f = s("204197"),
   S = s("78675"),
   m = s("438163"),
-  I = s("652853"),
-  v = s("30556"),
+  v = s("652853"),
+  I = s("30556"),
   E = s("228168"),
   x = s("182294"),
-  _ = s("231338"),
-  T = s("100651");
-let A = d.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
+  A = s("231338"),
+  _ = s("100651");
+let T = d.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
 
 function N(e) {
   let {
@@ -32,11 +32,11 @@ function N(e) {
     activity: i,
     customStatusActivity: d,
     guildId: N,
-    channelId: C,
-    onClose: g
+    channelId: U,
+    onClose: C
   } = e, {
-    theme: h
-  } = (0, I.useUserProfileThemeContext)(), U = (0, c.default)(t.id, N), {
+    theme: g
+  } = (0, v.useUserProfileThemeContext)(), h = (0, c.default)(t.id, N), {
     avatarSrc: p,
     eventHandlers: j,
     avatarDecorationSrc: R
@@ -44,9 +44,9 @@ function N(e) {
     user: t,
     guildId: null == s ? void 0 : s.guildId,
     size: x.AvatarSizes.SIZE_120
-  }), [M, P] = (0, a.useStateFromStoresArray)([u.default], () => {
+  }), [P, M] = (0, a.useStateFromStoresArray)([u.default], () => {
     let e = u.default.isMobileOnline(t.id);
-    return (0, o.shouldDisableUserPresenceInChannel)(t, C) ? [_.StatusTypes.UNKNOWN, e] : (0, r.default)(i) ? [_.StatusTypes.STREAMING, e] : [u.default.getStatus(t.id), e]
+    return (0, o.shouldDisableUserPresenceInChannel)(t, U) ? [A.StatusTypes.UNKNOWN, e] : (0, r.default)(i) ? [A.StatusTypes.STREAMING, e] : [u.default.getStatus(t.id), e]
   });
   return (0, l.jsxs)("header", {
     children: [(0, l.jsx)(S.default, {
@@ -55,24 +55,24 @@ function N(e) {
       profileType: E.UserProfileTypes.FULL_SIZE,
       hasProfileEffect: (null == s ? void 0 : s.profileEffectId) != null
     }), (0, l.jsx)("div", {
-      className: T.inner,
+      className: _.inner,
       children: (0, l.jsxs)("div", {
         ...j,
-        children: [(0, l.jsx)(A, {
+        children: [(0, l.jsx)(T, {
           src: p,
           avatarDecoration: R,
           size: x.AvatarSizes.SIZE_120,
-          className: T.avatar,
-          status: M,
-          statusBackdropColor: (0, n.getStatusBackdropColor)(h),
+          className: _.avatar,
+          status: P,
+          statusBackdropColor: (0, n.getStatusBackdropColor)(g),
           "aria-label": t.username,
-          isMobile: P,
+          isMobile: M,
           statusTooltip: !0
         }), (0, l.jsx)("div", {
-          className: T.buttons,
-          children: U && (0, l.jsx)(v.default, {
+          className: _.buttons,
+          children: h && (0, l.jsx)(I.default, {
             user: t,
-            onClose: g
+            onClose: C
           })
         }), null != d && (0, l.jsx)(m.UserProfileCustomStatusBubble, {
           statusActivity: d,

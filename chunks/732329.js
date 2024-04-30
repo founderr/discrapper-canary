@@ -16,8 +16,8 @@ var l = a("735250"),
   h = a("333867"),
   E = a("197115"),
   g = a("300284"),
-  b = a("876917"),
-  x = a("642619"),
+  x = a("876917"),
+  b = a("642619"),
   S = a("594174"),
   T = a("725808"),
   v = a("794358"),
@@ -28,8 +28,8 @@ var l = a("735250"),
   y = a("1870"),
   O = a("884697"),
   k = a("624377"),
-  A = a("813083"),
-  R = a("680942"),
+  R = a("813083"),
+  A = a("680942"),
   j = a("558060"),
   P = a("237031"),
   B = a("372654"),
@@ -117,7 +117,7 @@ t.default = function(e) {
           analyticsLocations: z
         });
         return
-      }(null == $ ? void 0 : $.type) === n.CollectiblesItemType.PROFILE_EFFECT && (0, x.openProfileEffectModal)({
+      }(null == $ ? void 0 : $.type) === n.CollectiblesItemType.PROFILE_EFFECT && (0, b.openProfileEffectModal)({
         initialSelectedEffectId: $.id,
         analyticsLocations: z
       })
@@ -169,13 +169,13 @@ t.default = function(e) {
       } : void 0,
       className: w.defaultPreviewButtonColor,
       onClick: ep
-    }) : (0, l.jsx)(R.default, {
+    }) : (0, l.jsx)(A.default, {
       product: t,
       returnRef: K,
       isGiftEasterEggEnabled: N,
       tooltipDelay: 250
     }),
-    eb = () => {
+    ex = () => {
       if (er && !v && !ei) return eh();
       let e = null != ea ? {
           background: (0, B.getBackgroundGradient)(ea, 90),
@@ -216,7 +216,7 @@ t.default = function(e) {
         }), eg()]
       })
     },
-    ex = null != el ? {
+    eb = null != el ? {
       background: "".concat((0, B.getBackgroundGradient)(el), " border-box border-box"),
       borderColor: el.border.toHslString(),
       boxShadow: Q ? "0 0 25px 1px ".concat(el.primary.toHslString()) : "none"
@@ -227,7 +227,7 @@ t.default = function(e) {
       className: w.shopCard,
       onBlur: () => Z(!1),
       onClick: eC,
-      style: ex,
+      style: eb,
       id: "shop-item-".concat(t.skuId),
       children: [er && (0, l.jsx)(u.Tooltip, {
         tooltipContentClassName: w.premiumWheelTooltipContent,
@@ -242,7 +242,7 @@ t.default = function(e) {
         })
       }), (null == $ ? void 0 : $.type) === n.CollectiblesItemType.PROFILE_EFFECT && (0, l.jsx)("div", {
         className: w.profileEffectShopPreview,
-        children: (0, l.jsx)(b.default, {
+        children: (0, l.jsx)(x.default, {
           isHovering: Q,
           profileEffectId: $.id,
           isPurchased: null != en
@@ -284,10 +284,10 @@ t.default = function(e) {
             }), eE()]
           }), (0, l.jsx)("div", {
             className: w.innerHover,
-            children: eb()
+            children: ex()
           })]
         })]
-      }), (0, l.jsx)(A.default, {
+      }), (0, l.jsx)(R.default, {
         category: a,
         className: w.limitedTimeBadge,
         display: "card"

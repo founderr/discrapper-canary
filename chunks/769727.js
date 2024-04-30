@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ClanDiscoveryTopPicks: function() {
-    return L
+    return R
   }
 }), n("47120");
 var a = n("735250"),
@@ -27,13 +27,13 @@ var a = n("735250"),
   A = n("308083"),
   N = n("689938"),
   v = n("548290");
-let R = {
+let L = {
   [I.ClanDiscoveryMode.PLAYSTYLE]: m.PlayStyleSelector,
   [I.ClanDiscoveryMode.TRAITS]: m.TraitSelector,
   [I.ClanDiscoveryMode.GAMES]: m.GameSelector
 };
 
-function L(e) {
+function R(e) {
   var t;
   let {
     limit: n
@@ -100,7 +100,7 @@ let O = s.memo(function() {
       onRest: () => t(e => e + 1)
     }),
     l = s.useCallback(e => {
-      let t = R[e];
+      let t = L[e];
       return null == t ? null : (0, a.jsx)(C.default, {
         children: (0, a.jsx)(t, {})
       })
@@ -118,7 +118,7 @@ let O = s.memo(function() {
           className: v.scroller,
           children: [(0, a.jsx)(p.default, {}), (0, a.jsx)("div", {
             className: v.content,
-            children: (0, a.jsx)(L, {})
+            children: (0, a.jsx)(R, {})
           })]
         }), (0, a.jsx)("div", {
           children: n((e, t) => (0, a.jsx)(r.animated.div, {

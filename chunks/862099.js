@@ -31,13 +31,13 @@ var a, s, l = n("735250"),
   A = n("263704"),
   N = n("465670"),
   v = n("242315"),
-  R = n("393112"),
-  L = n("170039"),
+  L = n("393112"),
+  R = n("170039"),
   O = n("602623"),
   M = n("626135"),
   P = n("823379"),
-  x = n("15274"),
-  y = n("924301"),
+  y = n("15274"),
+  x = n("924301"),
   D = n("504160"),
   b = n("151864"),
   U = n("835184"),
@@ -45,8 +45,8 @@ var a, s, l = n("735250"),
   G = n("497656"),
   w = n("79874"),
   k = n("554747"),
-  F = n("230900"),
-  B = n("854698"),
+  B = n("230900"),
+  F = n("854698"),
   H = n("139712"),
   V = n("765305"),
   Y = n("981631"),
@@ -152,7 +152,7 @@ function Q(e) {
   let {
     guildEvent: t,
     noticeType: n
-  } = e, a = (0, B.getNextRecurrenceIdInEvent)(t), s = (0, r.useStateFromStores)([y.default], () => y.default.isInterestedInEventRecurrence(t.id, a), [t.id, a]), i = (0, r.useStateFromStores)([U.default], () => U.default.getUpcomingNoticeSeenTime(t.id), [t.id]);
+  } = e, a = (0, F.getNextRecurrenceIdInEvent)(t), s = (0, r.useStateFromStores)([x.default], () => x.default.isInterestedInEventRecurrence(t.id, a), [t.id, a]), i = (0, r.useStateFromStores)([U.default], () => U.default.getUpcomingNoticeSeenTime(t.id), [t.id]);
   return !s && null == i && (0, D.markUpcomingEventNoticeAsSeen)(t.id), (0, l.jsxs)(o.Button, {
     fullWidth: !0,
     className: K.joinButton,
@@ -183,14 +183,14 @@ function Z(e) {
   let {
     guildEvent: n,
     noticeType: a
-  } = e, s = (0, F.getLocationFromEvent)(n), r = null != s ? (0, j.guildEventDetailsParser)(s, !0) : null, d = (0, F.getChannelFromEvent)(n), c = (0, u.getChannelIconComponent)(d), {
+  } = e, s = (0, B.getLocationFromEvent)(n), r = null != s ? (0, j.guildEventDetailsParser)(s, !0) : null, d = (0, B.getChannelFromEvent)(n), c = (0, u.getChannelIconComponent)(d), {
     startTime: f,
     endTime: E
   } = (0, w.default)(n.id), {
     startDateTimeString: h,
     upcomingEvent: _,
     diffMinutes: C
-  } = (0, B.getEventTimeData)(f.toISOString(), null == E ? void 0 : E.toISOString()), m = _ ? C > 0 ? W.default.Messages.STARTING_IN_MINUTES.format({
+  } = (0, F.getEventTimeData)(f.toISOString(), null == E ? void 0 : E.toISOString()), m = _ ? C > 0 ? W.default.Messages.STARTING_IN_MINUTES.format({
     minutes: C
   }) : W.default.Messages.STARTING_SOON : W.default.Messages.STARTING_ON_DATE.format({
     date: h
@@ -205,7 +205,7 @@ function Z(e) {
     children: [(0, l.jsxs)("div", {
       className: K.textBlock,
       children: [(0, l.jsx)(o.Clickable, {
-        onClick: () => (0, x.openGuildEventDetails)({
+        onClick: () => (0, y.openGuildEventDetails)({
           eventId: n.id
         }),
         className: K.eventNameClickable,
@@ -247,7 +247,7 @@ function Z(e) {
         width: 16,
         height: 16,
         className: K.stageIcon
-      }) : (0, l.jsx)(R.default, {
+      }) : (0, l.jsx)(L.default, {
         width: 16,
         height: 16,
         className: K.stageIcon
@@ -267,7 +267,7 @@ function Z(e) {
 function X(e) {
   let {
     guildEvent: t
-  } = e, n = (0, F.getLocationFromEvent)(t);
+  } = e, n = (0, B.getLocationFromEvent)(t);
   return null == n ? null : (0, l.jsx)(z, {
     onClickCloseIcon: () => (0, D.hideLiveChannelNotice)({
       eventId: null == t ? void 0 : t.id
@@ -275,7 +275,7 @@ function X(e) {
     heading: W.default.Messages.HAPPENING_NOW,
     topic: t.name,
     location: (0, j.guildEventDetailsParser)(n, !0),
-    locationIcon: (0, l.jsx)(R.default, {
+    locationIcon: (0, l.jsx)(L.default, {
       width: 16,
       height: 16,
       className: K.stageIcon
@@ -290,7 +290,7 @@ function J(e) {
   let {
     guildEvent: t
   } = e, n = i.useCallback(() => {
-    (0, x.openGuildEventDetails)({
+    (0, y.openGuildEventDetails)({
       eventId: t.id
     })
   }, [t]);
@@ -340,7 +340,7 @@ function ee(e) {
       height: 14,
       className: K.stageIcon
     }),
-    locationIcon: (0, l.jsx)(L.default, {
+    locationIcon: (0, l.jsx)(R.default, {
       width: 16,
       height: 16,
       className: K.stageIcon

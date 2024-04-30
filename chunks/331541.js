@@ -27,13 +27,13 @@ var a = n("735250"),
   A = n("440051"),
   N = n("734934"),
   v = n("158238"),
-  R = n("785717"),
-  L = n("221292"),
+  L = n("785717"),
+  R = n("221292"),
   O = n("318661"),
   M = n("502762"),
   P = n("192133"),
-  x = n("138394"),
-  y = n("131640"),
+  y = n("138394"),
+  x = n("131640"),
   D = n("695346"),
   b = n("199902"),
   U = n("293273"),
@@ -41,8 +41,8 @@ var a = n("735250"),
   G = n("594174"),
   w = n("881201"),
   k = n("26290"),
-  F = n("626135"),
-  B = n("70956"),
+  B = n("626135"),
+  F = n("70956"),
   H = n("51144"),
   V = n("246133"),
   Y = n("474376"),
@@ -52,19 +52,19 @@ var a = n("735250"),
   q = n("689938"),
   Q = n("580701");
 let Z = [{
-  duration: 30 * B.default.Millis.MINUTE,
+  duration: 30 * F.default.Millis.MINUTE,
   label: () => q.default.Messages.MUTE_DURATION_30_MINUTES
 }, {
-  duration: B.default.Millis.HOUR,
+  duration: F.default.Millis.HOUR,
   label: () => q.default.Messages.MUTE_DURATION_1_HOUR
 }, {
-  duration: 3 * B.default.Millis.HOUR,
+  duration: 3 * F.default.Millis.HOUR,
   label: () => q.default.Messages.MUTE_DURATION_3_HOURS
 }, {
-  duration: 8 * B.default.Millis.HOUR,
+  duration: 8 * F.default.Millis.HOUR,
   label: () => q.default.Messages.MUTE_DURATION_8_HOURS
 }, {
-  duration: B.default.Millis.DAY,
+  duration: F.default.Millis.DAY,
   label: () => q.default.Messages.MUTE_DURATION_24_HOURS
 }, {
   duration: void 0,
@@ -157,7 +157,7 @@ function $(e) {
     closePopout: b
   } = e, U = (0, _.useAnalyticsContext)(), {
     analyticsLocations: G
-  } = (0, I.default)(p.default.ACCOUNT_PROFILE_POPOUT), B = (0, O.default)(t.id, l), [V, $, ee, et] = (0, c.useStateFromStoresArray)([j.default], () => {
+  } = (0, I.default)(p.default.ACCOUNT_PROFILE_POPOUT), F = (0, O.default)(t.id, l), [V, $, ee, et] = (0, c.useStateFromStoresArray)([j.default], () => {
     var e;
     let n = t.id;
     return "string" != typeof n ? [void 0, void 0, K.StatusTypes.UNKNOWN, !1] : [null !== (e = j.default.findActivity(n, e => e.type !== K.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, j.default.findActivity(t.id, e => e.type === K.ActivityTypes.CUSTOM_STATUS), j.default.getStatus(n), j.default.isMobileOnline(n)]
@@ -250,16 +250,16 @@ function $(e) {
     ref: ea
   } = (0, C.default)(), es = (0, m.default)(ea);
   s.useEffect(() => {
-    F.default.track(K.AnalyticEvents.OPEN_POPOUT, {
+    B.default.track(K.AnalyticEvents.OPEN_POPOUT, {
       type: "User Status Menu",
       has_custom_status: null != n,
       other_user_id: t.id,
       application_id: null != V ? V.application_id : void 0,
       is_streaming: r,
       application_name: null != V ? V.name : void 0,
-      profile_has_nitro_customization: (null == B ? void 0 : B.banner) != null,
+      profile_has_nitro_customization: (null == F ? void 0 : F.banner) != null,
       location: U.location,
-      has_profile_effect: (null == B ? void 0 : B.profileEffectId) != null
+      has_profile_effect: (null == F ? void 0 : F.profileEffectId) != null
     })
   }, []);
   let el = (0, N.useFocusModeEnabled)(),
@@ -273,7 +273,7 @@ function $(e) {
     });
   return (0, a.jsx)(I.AnalyticsLocationProvider, {
     value: G,
-    children: (0, a.jsx)(R.UserProfileAnalyticsProvider, {
+    children: (0, a.jsx)(L.UserProfileAnalyticsProvider, {
       layout: "ACCOUNT_POPOUT",
       userId: t.id,
       guildId: l,
@@ -284,11 +284,11 @@ function $(e) {
           children: (0, a.jsxs)(M.default, {
             className: Q.themeContainer,
             user: t,
-            displayProfile: B,
+            displayProfile: F,
             profileType: z.UserProfileTypes.POPOUT,
-            children: [(0, a.jsx)(y.default, {
+            children: [(0, a.jsx)(x.default, {
               user: t,
-              displayProfile: B,
+              displayProfile: F,
               onClose: () => null == b ? void 0 : b(),
               isMobile: et,
               isStreaming: (0, S.default)(V),
@@ -300,14 +300,14 @@ function $(e) {
               children: [(0, a.jsx)(P.default, {
                 activity: V,
                 customStatusActivity: $,
-                displayProfile: B,
+                displayProfile: F,
                 user: t,
                 onClose: o,
                 setNote: !1,
                 canDM: !1,
                 hideNote: !0,
                 showCopiableUsername: !0
-              }), (0, a.jsx)(x.default, {
+              }), (0, a.jsx)(y.default, {
                 className: Q.divider
               }), (0, a.jsxs)(E.Menu, {
                 navId: "account",
@@ -333,7 +333,7 @@ function $(e) {
                     focusedClassName: Q.menuItemFocused,
                     subMenuIconClassName: Q.subMenuIcon,
                     action: d.isMobile ? function() {
-                      (0, L.trackUserProfileAction)({
+                      (0, R.trackUserProfileAction)({
                         action: "PRESS_SET_STATUS",
                         layout: "ACCOUNT_POPOUT",
                         userId: t.id,
@@ -382,7 +382,7 @@ function $(e) {
                     icon: w.default,
                     showIconFirst: !0,
                     action: () => {
-                      (0, L.trackUserProfileAction)({
+                      (0, R.trackUserProfileAction)({
                         action: "PRESS_SWITCH_ACCOUNTS",
                         layout: "ACCOUNT_POPOUT",
                         userId: t.id,

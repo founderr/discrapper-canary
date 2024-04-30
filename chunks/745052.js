@@ -23,13 +23,13 @@ var a = n("735250"),
   A = n("984370"),
   N = n("797614"),
   v = n("359110"),
-  R = n("6025"),
-  L = n("897473"),
+  L = n("6025"),
+  R = n("897473"),
   O = n("108427"),
   M = n("970731"),
   P = n("210887"),
-  x = n("433355"),
-  y = n("592125"),
+  y = n("433355"),
+  x = n("592125"),
   D = n("819640"),
   b = n("916187"),
   U = n("151827"),
@@ -37,8 +37,8 @@ var a = n("735250"),
   G = n("792125"),
   w = n("647090"),
   k = n("385956"),
-  F = n("610697"),
-  B = n("26373"),
+  B = n("610697"),
+  F = n("26373"),
   H = n("486622"),
   V = n("922409"),
   Y = n("899740"),
@@ -59,7 +59,7 @@ function ea() {
   let e = s.useRef(null),
     t = (0, Y.useMessageRequestsCount)(),
     n = (0, W.default)(),
-    l = (0, B.useListHasSingleMessageRequest)(),
+    l = (0, F.useListHasSingleMessageRequest)(),
     u = (0, _.useIsRejectAllMessageRequestsEnabled)(),
     d = s.useCallback(() => {
       (0, c.showToast)((0, c.createToast)(ee.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, c.ToastType.FAILURE))
@@ -155,8 +155,8 @@ function es(e) {
   let {
     pageWidth: t,
     onSidebarResize: n
-  } = e, s = (0, u.useStateFromStores)([x.default], () => x.default.getSidebarState(x.MESSAGE_REQUESTS_BASE_CHANNEL_ID)), l = (0, u.useStateFromStores)([y.default], () => y.default.getChannel(null == s ? void 0 : s.channelId));
-  if (null == s || s.type !== L.SidebarType.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
+  } = e, s = (0, u.useStateFromStores)([y.default], () => y.default.getSidebarState(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID)), l = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(null == s ? void 0 : s.channelId));
+  if (null == s || s.type !== R.SidebarType.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
   let i = t - X.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
   return (0, a.jsx)(S.default, {
     sidebarType: S.ChatSidebarType.MessageRequestSidebar,
@@ -164,7 +164,7 @@ function es(e) {
     onWidthChange: n,
     children: (0, a.jsx)(p.default, {
       channel: l,
-      baseChannelId: x.MESSAGE_REQUESTS_BASE_CHANNEL_ID
+      baseChannelId: y.MESSAGE_REQUESTS_BASE_CHANNEL_ID
     })
   })
 }
@@ -184,7 +184,7 @@ let el = function(e) {
     })
   },
   ei = e => {
-    let t = (0, F.default)(),
+    let t = (0, B.default)(),
       n = () => D.default.hasLayers() || (0, c.hasAnyModalOpen)(),
       l = (0, u.useStateFromStores)([C.default], () => C.default.useReducedMotion);
     return s.useEffect(() => {
@@ -246,16 +246,16 @@ let eo = (0, h.default)(function(e) {
   let l = (0, u.useStateFromStores)([P.default], () => P.default.theme),
     r = (0, K.useSpamMessageRequestCount)(),
     [d, E] = s.useState(!1),
-    h = (0, u.useStateFromStores)([x.default], () => {
-      let e = x.default.getSidebarState(x.MESSAGE_REQUESTS_BASE_CHANNEL_ID);
-      return null != e && e.type === L.SidebarType.VIEW_MESSAGE_REQUEST ? e : null
+    h = (0, u.useStateFromStores)([y.default], () => {
+      let e = y.default.getSidebarState(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID);
+      return null != e && e.type === R.SidebarType.VIEW_MESSAGE_REQUEST ? e : null
     }),
     _ = null == h ? void 0 : h.channelId,
     C = null != h,
     m = (0, k.useIsEitherTypeOfMessageRequest)(_),
     S = (0, w.useHasUserRepliedInChannel)(_);
   s.useEffect(() => {
-    null != _ && !m && S && C && ((0, v.transitionToChannel)(_), R.default.closeChannelSidebar(x.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
+    null != _ && !m && S && C && ((0, v.transitionToChannel)(_), L.default.closeChannelSidebar(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
   }, [_, S, C, m]);
   let [p, T] = s.useState(Z.MessageRequestSections.REQUESTS);
   return (0, I.usePageTitle)({

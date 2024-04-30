@@ -22,9 +22,9 @@ var a, s = n("735250"),
   A = n("218290"),
   N = n("129512"),
   v = n("330065"),
-  R = n("755386");
+  L = n("755386");
 
-function L(e, t, n) {
+function R(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -34,7 +34,7 @@ function L(e, t, n) {
 }
 class O extends(a = l.PureComponent) {
   getDefaultSplashURL(e, t) {
-    if (t) return R;
+    if (t) return L;
     switch (e) {
       case T.ThemeTypes.DARK:
         return N;
@@ -55,16 +55,16 @@ class O extends(a = l.PureComponent) {
       isVisible: N,
       submitting: v
     } = this.state, {
-      name: R,
-      description: L,
+      name: L,
+      description: R,
       presenceCount: O,
       memberCount: M,
       keywords: P
-    } = t, x = null === (e = t.features) || void 0 === e ? void 0 : e.has(T.GuildFeatures.HUB), y = m.default.getGuildDiscoverySplashURL({
+    } = t, y = null === (e = t.features) || void 0 === e ? void 0 : e.has(T.GuildFeatures.HUB), x = m.default.getGuildDiscoverySplashURL({
       id: t.id,
       splash: t.discoverySplash,
       size: 300 * (0, _.getDevicePixelRatio)()
-    }), D = null != y ? y : this.getDefaultSplashURL(a, x), b = m.default.getGuildIconURL({
+    }), D = null != x ? x : this.getDefaultSplashURL(a, y), b = m.default.getGuildIconURL({
       id: t.id,
       icon: t.icon,
       size: 40
@@ -120,7 +120,7 @@ class O extends(a = l.PureComponent) {
                   src: D,
                   alt: "",
                   className: r()(A.splashImage, {
-                    [A.splashImageHeight]: !x
+                    [A.splashImageHeight]: !y
                   }),
                   onLoad: () => this.setState({
                     loaded: !0
@@ -163,13 +163,13 @@ class O extends(a = l.PureComponent) {
                 }), (0, s.jsx)(u.Heading, {
                   variant: "heading-md/semibold",
                   className: A.guildName,
-                  children: R
+                  children: L
                 })]
               }), (0, s.jsx)(u.Text, {
                 className: A.description,
                 variant: "text-sm/normal",
                 color: "header-secondary",
-                children: L
+                children: R
               }), U && null != P && null != l && (0, s.jsx)(E.DiscoveryTags, {
                 tags: P,
                 onTagClick: e => l(e, t.id),
@@ -212,12 +212,12 @@ class O extends(a = l.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), L(this, "state", {
+    super(...e), R(this, "state", {
       loaded: !1,
       hasBeenSeen: !1,
       isVisible: !1,
       submitting: !1
-    }), L(this, "handleClickView", async e => {
+    }), R(this, "handleClickView", async e => {
       let {
         className: t
       } = e.target;
@@ -236,7 +236,7 @@ class O extends(a = l.PureComponent) {
           submitting: !1
         })
       }
-    }), L(this, "handleVisibilityChange", e => {
+    }), R(this, "handleVisibilityChange", e => {
       let {
         onGuildCardSeen: t,
         guild: n
@@ -244,7 +244,7 @@ class O extends(a = l.PureComponent) {
       null != n && !this.state.hasBeenSeen && e && (this.setState({
         hasBeenSeen: e
       }), null != t && t(n.id))
-    }), L(this, "handleContextMenu", e => {
+    }), R(this, "handleContextMenu", e => {
       (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -254,13 +254,13 @@ class O extends(a = l.PureComponent) {
           guild: this.props.guild
         })
       })
-    }), L(this, "setIsVisible", e => {
+    }), R(this, "setIsVisible", e => {
       this.setState({
         isVisible: e
       })
     })
   }
 }
-L(O, "Placeholder", e => (0, s.jsx)("div", {
+R(O, "Placeholder", e => (0, s.jsx)("div", {
   className: r()(e.className, A.cardPlaceholder)
 })), t.default = O

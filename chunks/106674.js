@@ -27,8 +27,8 @@ var a = n("735250"),
   A = n("158631"),
   N = n("143614"),
   v = n("981631"),
-  R = n("70722"),
-  L = n("689938"),
+  L = n("70722"),
+  R = n("689938"),
   O = n("564773");
 
 function M(e) {
@@ -60,12 +60,12 @@ function P(e) {
     applicationId: p,
     channelId: I,
     streamKey: P
-  } = n, [x, y] = s.useState(!1), D = (0, l.useStateFromStores)([C.default], () => C.default.getUser(i)), [b] = (0, c.default)([p]), U = null !== (t = T.default.getGlobalName(D)) && void 0 !== t ? t : T.default.getUserTag(D), j = (0, N.default)(), G = (0, l.useStateFromStores)([E.default], () => E.default.getPreviewURL(null, I, i)), w = (0, l.useStateFromStores)([_.default], () => _.default.getVoiceChannelId()), k = (0, A.default)(), F = (0, g.default)(I);
+  } = n, [y, x] = s.useState(!1), D = (0, l.useStateFromStores)([C.default], () => C.default.getUser(i)), [b] = (0, c.default)([p]), U = null !== (t = T.default.getGlobalName(D)) && void 0 !== t ? t : T.default.getUserTag(D), j = (0, N.default)(), G = (0, l.useStateFromStores)([E.default], () => E.default.getPreviewURL(null, I, i)), w = (0, l.useStateFromStores)([_.default], () => _.default.getVoiceChannelId()), k = (0, A.default)(), B = (0, g.default)(I);
   if (s.useEffect(() => {
-      x && w === I && y(!1)
-    }, [w, x, I]), null == D || null == U) return null;
+      y && w === I && x(!1)
+    }, [w, y, I]), null == D || null == U) return null;
   let {
-    buttonColor: B,
+    buttonColor: F,
     buttonCTA: H,
     disabled: V
   } = function(e, t) {
@@ -74,10 +74,10 @@ function P(e) {
       s = t.length >= v.MAX_GROUP_DM_BROADCAST_PARTICIPANTS;
     return {
       buttonColor: s ? r.ButtonColors.RED : r.ButtonColors.GREEN,
-      buttonCTA: s ? L.default.Messages.BROADCAST_FULL : a ? L.default.Messages.VIEW_BROADCAST : L.default.Messages.JOIN_BROADCAST,
+      buttonCTA: s ? R.default.Messages.BROADCAST_FULL : a ? R.default.Messages.VIEW_BROADCAST : R.default.Messages.JOIN_BROADCAST,
       disabled: s
     }
-  }(i, F);
+  }(i, B);
   return (0, a.jsxs)("div", {
     className: O.container,
     children: [(0, a.jsx)(r.Avatar, {
@@ -92,27 +92,27 @@ function P(e) {
       }), (0, a.jsx)(r.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        children: null != b ? L.default.Messages.STREAMING.format({
+        children: null != b ? R.default.Messages.STREAMING.format({
           name: b.name
-        }) : L.default.Messages.STREAMING_A_GAME
+        }) : R.default.Messages.STREAMING_A_GAME
       }), (0, a.jsxs)("div", {
         className: O.activity,
-        children: [F.length > 0 && (0, a.jsx)(M, {
-          users: F
+        children: [B.length > 0 && (0, a.jsx)(M, {
+          users: B
         }), (0, a.jsxs)(r.Button, {
           onClick: () => {
             if (w === I) {
               o.default.selectPrivateChannel(I);
               return
             }
-            y(!0), (0, u.joinPrivateChannelAndWatchStream)(I, P), d.default.trackWithMetadata(v.AnalyticEvents.BROADCAST_VIEWED, {
+            x(!0), (0, u.joinPrivateChannelAndWatchStream)(I, P), d.default.trackWithMetadata(v.AnalyticEvents.BROADCAST_VIEWED, {
               num_active_broadcasts: j.length,
               broadcast_position: j.findIndex(e => e.userId === i) + 1,
               is_broadcasting: k,
               broadcast_channel_id: I
             })
           },
-          color: B,
+          color: F,
           size: r.ButtonSizes.SMALL,
           className: O.button,
           disabled: V,
@@ -126,7 +126,7 @@ function P(e) {
     }), null != G ? (0, a.jsx)(f.default, {
       className: O.stream,
       stream: {
-        streamType: R.StreamTypes.CALL,
+        streamType: L.StreamTypes.CALL,
         ownerId: i,
         channelId: I
       }

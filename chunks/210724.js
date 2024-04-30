@@ -32,26 +32,26 @@ function N(e) {
     quest: E
   } = e, N = (0, C.useIsEligibleForQuests)({
     location: T.QuestsExperimentLocations.QUESTS_BAR
-  }), v = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), R = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()), L = s.useRef(-1), O = s.useRef(!1), [M, P] = s.useState(!1), [x, y] = s.useState(!1), [D, b] = s.useState(!1), [U, j] = s.useState(!0), [G, w] = s.useState(240), k = s.useRef(null), F = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, B = s.useRef(F), H = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, V = (null === (l = E.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, Y = null != E.userStatus && (0, _.isDismissed)(E.userStatus, h.QuestContent.QUEST_BAR), W = (0, f.useIsQuestExpired)(E), {
+  }), v = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), L = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()), R = s.useRef(-1), O = s.useRef(!1), [M, P] = s.useState(!1), [y, x] = s.useState(!1), [D, b] = s.useState(!1), [U, j] = s.useState(!0), [G, w] = s.useState(240), k = s.useRef(null), B = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, F = s.useRef(B), H = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, V = (null === (l = E.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, Y = null != E.userStatus && (0, _.isDismissed)(E.userStatus, h.QuestContent.QUEST_BAR), W = (0, f.useIsQuestExpired)(E), {
     hasError: K,
     isLoading: z
   } = (0, S.useQuestsAssetsLoadState)(), q = s.useCallback(() => {
     var e, t;
-    w((null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 16), y(!0)
+    w((null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 16), x(!0)
   }, []), Q = s.useCallback(() => {
     P(!0)
   }, []), Z = s.useCallback(() => {
-    P(!1), !O.current && !H && y(!1)
+    P(!1), !O.current && !H && x(!1)
   }, [H]), X = s.useCallback(() => {
-    P(!1), !H && y(!1), O.current = !1
+    P(!1), !H && x(!1), O.current = !1
   }, [H]), J = s.useCallback(function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
       {
         withDelay: t = !1
       } = e;
-    t ? L.current = window.setTimeout(q, 75) : q()
+    t ? R.current = window.setTimeout(q, 75) : q()
   }, [q]), $ = s.useCallback(() => {
-    if (window.clearTimeout(L.current), !H && !M) !O.current && y(!1)
+    if (window.clearTimeout(R.current), !H && !M) !O.current && x(!1)
   }, [M, H]), ee = s.useCallback(() => {
     (0, c.trackQuestEvent)({
       questId: E.id,
@@ -65,27 +65,27 @@ function N(e) {
   s.useLayoutEffect(() => {
     H && q()
   }, [H, q]), s.useLayoutEffect(() => {
-    F && !B.current && O.current && q()
-  }, [F, q]), s.useLayoutEffect(() => {
-    !H && F && !B.current && !O.current && y(!1)
-  }, [F, H]);
+    B && !F.current && O.current && q()
+  }, [B, q]), s.useLayoutEffect(() => {
+    !H && B && !F.current && !O.current && x(!1)
+  }, [B, H]);
   let en = N && !Y && !V && !W && !z,
     ea = s.useRef(en);
   s.useLayoutEffect(() => {
     en !== ea.current && j(!1), ea.current = en
   }, [en]), s.useEffect(() => {
-    B.current = F
-  }, [F]);
+    F.current = B
+  }, [B]);
   let {
     expansionSpring: es
   } = (0, r.useSpring)({
     from: {
-      expansionSpring: x ? 0 : 1
+      expansionSpring: y ? 0 : 1
     },
     to: {
-      expansionSpring: x ? 1 : 0
+      expansionSpring: y ? 1 : 0
     },
-    config: F ? {
+    config: B ? {
       tension: 900,
       friction: 45,
       clamp: !0
@@ -132,7 +132,7 @@ function N(e) {
   return N && (en || !U || z) && !K ? (0, a.jsx)(m.QuestContentImpressionTracker, {
     questOrQuests: E,
     questContent: h.QuestContent.QUEST_BAR,
-    overrideVisibility: !R && en,
+    overrideVisibility: !L && en,
     children: () => {
       let e = ei === C.QuestBarExperimentVariants.V2 ? I.default : p.default;
       return (0, a.jsx)(r.animated.div, {
@@ -145,7 +145,7 @@ function N(e) {
           color: E.config.colors.secondary,
           height: el.to({
             range: [0, 1],
-            output: [0, H && x ? G : 40]
+            output: [0, H && y ? G : 40]
           })
         },
         children: (0, a.jsx)(r.animated.div, {
@@ -154,14 +154,14 @@ function N(e) {
           onFocus: () => J(),
           onBlur: $,
           className: i()(A.contentWrapper, {
-            [A.contentWrapperExpanded]: x,
-            [A.contentWrapperAccepted]: F
+            [A.contentWrapperExpanded]: y,
+            [A.contentWrapperAccepted]: B
           }),
           style: {
-            backgroundImage: F ? "linear-gradient(90deg, ".concat(E.config.colors.primary, ", ").concat(E.config.colors.secondary, ")") : void 0,
+            backgroundImage: B ? "linear-gradient(90deg, ".concat(E.config.colors.primary, ", ").concat(E.config.colors.secondary, ")") : void 0,
             height: es.to({
               range: [0, 1],
-              output: [40, F ? G : 240]
+              output: [40, B ? G : 240]
             }),
             transform: el.to({
               range: [0, 1],
@@ -171,7 +171,7 @@ function N(e) {
           children: (0, a.jsx)(e, {
             expandedContentRef: k,
             expansionSpring: es,
-            isExpanded: x,
+            isExpanded: y,
             isExpansionAnimationComplete: D,
             onCtxMenuClosed: Z,
             onCtxMenuOpened: Q,

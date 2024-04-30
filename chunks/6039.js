@@ -26,19 +26,19 @@ t.default = e => {
   let n, N;
   let {
     guildId: v,
-    inviteCode: R
-  } = e, [L, O] = s.useState(T.WaveStates.INITIAL), M = (0, l.useStateFromStores)([h.default], () => h.default.get(v)), P = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(v)), x = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(v)), {
-    hasFetchedRequestToJoinGuilds: y,
+    inviteCode: L
+  } = e, [R, O] = s.useState(T.WaveStates.INITIAL), M = (0, l.useStateFromStores)([h.default], () => h.default.get(v)), P = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(v)), y = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(v)), {
+    hasFetchedRequestToJoinGuilds: x,
     guildPreviewDisabled: D
   } = (0, l.useStateFromStoresObject)([C.default], () => ({
     hasFetchedRequestToJoinGuilds: C.default.hasFetchedRequestToJoinGuilds,
     guildPreviewDisabled: C.default.getJoinRequestGuild(v)
   }));
   s.useEffect(() => {
-    null != x && (0, r.transitionTo)(I.Routes.CHANNEL(v))
-  }, [x, v]), s.useEffect(() => {
-    !y && f.default.fetchRequestToJoinGuilds()
-  }, [y]);
+    null != y && (0, r.transitionTo)(I.Routes.CHANNEL(v))
+  }, [y, v]), s.useEffect(() => {
+    !x && f.default.fetchRequestToJoinGuilds()
+  }, [x]);
   let b = s.useCallback(e => {
       O(t => Math.max(t, e))
     }, []),
@@ -50,7 +50,7 @@ t.default = e => {
   let G = (n = g.default.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({
       name: null == D ? void 0 : D.toString()
     }), N = () => {
-      O(Math.max(L, T.WaveStates.FILLING)), f.default.removeGuildJoinRequest(v), (0, r.transitionTo)(I.Routes.ME)
+      O(Math.max(R, T.WaveStates.FILLING)), f.default.removeGuildJoinRequest(v), (0, r.transitionTo)(I.Routes.ME)
     }, () => {
       (0, i.openModal)(e => (0, a.jsx)(i.ConfirmModal, {
         header: g.default.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
@@ -75,7 +75,7 @@ t.default = e => {
     children: (0, a.jsxs)(u.default, {
       embedded: !0,
       splash: w,
-      waveState: L,
+      waveState: R,
       showLogo: !1,
       updateWaveState: b,
       children: [(0, a.jsx)("div", {
@@ -101,7 +101,7 @@ t.default = e => {
             default:
               return (0, a.jsx)(p.default, {
                 guildId: v,
-                inviteCode: R,
+                inviteCode: L,
                 onComplete: U
               })
           }

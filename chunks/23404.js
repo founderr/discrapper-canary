@@ -23,21 +23,21 @@ var a = n("735250"),
   A = n("860151"),
   N = n("981631"),
   v = n("689938"),
-  R = n("96751");
+  L = n("96751");
 
-function L(e) {
+function R(e) {
   var t;
   let {
     quest: n
   } = e, s = (0, _.useQuestFormattedDate)(n.config.expiresAt), l = (0, _.useQuestFormattedDate)(n.config.rewardCodeExpiresAt), i = (0, r.useStateFromStores)([c.default], () => c.default.getState().theme), d = (0, o.isThemeDark)(i) ? N.ThemeTypes.DARK : N.ThemeTypes.LIGHT, f = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
   return (0, a.jsxs)("div", {
-    className: R.heading,
+    className: L.heading,
     children: [(0, a.jsx)("img", {
-      className: R.headingGameTile,
+      className: L.headingGameTile,
       alt: "",
       src: (0, S.getGameTileAssetUrl)(n, d)
     }), (0, a.jsxs)("div", {
-      className: R.headingCopy,
+      className: L.headingCopy,
       children: [(0, a.jsx)(u.Heading, {
         variant: "heading-md/semibold",
         color: "header-primary",
@@ -60,7 +60,7 @@ t.default = function(e) {
   var t, n, l;
   let {
     quest: o
-  } = e, c = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(o.id), [o]), [O, M] = s.useState(!1), P = s.useCallback(() => M(!0), []), x = s.useCallback(() => M(!1), []), y = s.useCallback(e => {
+  } = e, c = (0, r.useStateFromStores)([C.default], () => C.default.isEnrolling(o.id), [o]), [O, M] = s.useState(!1), P = s.useCallback(() => M(!0), []), y = s.useCallback(() => M(!1), []), x = s.useCallback(e => {
     e.stopPropagation()
   }, []), D = s.useCallback(() => {
     (0, h.enrollInQuest)(o.id, {
@@ -82,8 +82,8 @@ t.default = function(e) {
   }, [o]), j = (0, g.useHandleClaimQuestsReward)({
     quest: o,
     location: m.QuestContent.ACTIVITY_PANEL
-  }), G = (0, _.useIsQuestExpired)(o), w = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, k = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, F = (null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
-  return (null == o ? void 0 : o.userStatus) == null || (0, S.isDismissed)(o.userStatus, m.QuestContent.ACTIVITY_PANEL) || G || F ? null : (0, a.jsx)(p.QuestContentImpressionTracker, {
+  }), G = (0, _.useIsQuestExpired)(o), w = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, k = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, B = (null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null;
+  return (null == o ? void 0 : o.userStatus) == null || (0, S.isDismissed)(o.userStatus, m.QuestContent.ACTIVITY_PANEL) || G || B ? null : (0, a.jsx)(p.QuestContentImpressionTracker, {
     questOrQuests: o,
     questContent: m.QuestContent.ACTIVITY_PANEL,
     children: e => {
@@ -92,18 +92,18 @@ t.default = function(e) {
         ref: t => {
           e.current = t
         },
-        className: i()(R.wrapper, {
-          [R.wrapperQuestAccepted]: w
+        className: i()(L.wrapper, {
+          [L.wrapperQuestAccepted]: w
         }),
-        onClick: y,
-        onKeyPress: y,
+        onClick: x,
+        onKeyPress: x,
         onFocus: P,
         onMouseEnter: P,
-        onBlur: x,
-        onMouseLeave: x,
+        onBlur: y,
+        onMouseLeave: y,
         children: [(0, a.jsxs)("div", {
-          className: R.utils,
-          children: [w ? (0, a.jsx)(L, {
+          className: L.utils,
+          children: [w ? (0, a.jsx)(R, {
             quest: o
           }) : (0, a.jsx)(I.default, {
             textOpacity: .5
@@ -114,18 +114,18 @@ t.default = function(e) {
             showShareLink: !0,
             children: e => (0, a.jsx)(u.Clickable, {
               ...e,
-              className: R.__invalid_submenuWrapper,
+              className: L.__invalid_submenuWrapper,
               "aria-label": v.default.Messages.ACTIONS,
               children: (0, a.jsx)(f.default, {
-                className: R.submenuIcon
+                className: L.submenuIcon
               })
             })
           })]
         }), !w && (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(L, {
+          children: [(0, a.jsx)(R, {
             quest: o
           }), (0, a.jsx)(u.Text, {
-            className: R.instructions,
+            className: L.instructions,
             variant: "text-sm/normal",
             color: "text-normal",
             children: (0, S.getQuestsInstructionsToWinReward)({
@@ -134,21 +134,21 @@ t.default = function(e) {
           })]
         }), w && !k && (0, a.jsx)(A.default, {
           autoplay: O,
-          className: R.rewardTileWithInstructions,
+          className: L.rewardTileWithInstructions,
           quest: o,
           questContent: m.QuestContent.ACTIVITY_PANEL
         }), (0, a.jsxs)("div", {
-          className: R.ctas,
+          className: L.ctas,
           children: [!w && (0, a.jsxs)(a.Fragment, {
             children: [(0, a.jsx)(u.Button, {
-              className: R.cta,
+              className: L.cta,
               color: u.Button.Colors.PRIMARY,
               fullWidth: !0,
               size: u.Button.Sizes.SMALL,
               onClick: U,
               children: v.default.Messages.QUESTS_LEARN_MORE_V2
             }), (0, a.jsx)(u.Button, {
-              className: R.cta,
+              className: L.cta,
               color: u.Button.Colors.BRAND,
               fullWidth: !0,
               onClick: D,
@@ -157,14 +157,14 @@ t.default = function(e) {
               children: v.default.Messages.QUESTS_ACCEPT_QUEST
             })]
           }), w && !k && (0, a.jsx)(u.Button, {
-            className: R.cta,
+            className: L.cta,
             color: u.Button.Colors.BRAND,
             fullWidth: !0,
             onClick: b,
             size: u.Button.Sizes.SMALL,
             children: v.default.Messages.QUESTS_TRACK_YOUR_PROGRESS
           }), k && (0, a.jsx)(u.Button, {
-            className: R.cta,
+            className: L.cta,
             color: u.Button.Colors.BRAND,
             fullWidth: !0,
             onClick: j,

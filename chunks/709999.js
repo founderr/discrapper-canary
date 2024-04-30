@@ -16,8 +16,8 @@ var l = a("735250"),
   h = a("906732"),
   E = a("1585"),
   g = a("125988"),
-  b = a("333867"),
-  x = a("197115"),
+  x = a("333867"),
+  b = a("197115"),
   S = a("300284"),
   T = a("876917"),
   v = a("642619"),
@@ -28,8 +28,8 @@ var l = a("735250"),
   y = a("466111"),
   O = a("26290"),
   k = a("998502"),
-  A = a("335131"),
-  R = a("1870"),
+  R = a("335131"),
+  A = a("1870"),
   j = a("884697"),
   P = a("664018"),
   B = a("624377"),
@@ -99,7 +99,7 @@ t.default = function(e) {
     animateOnHover: !ee
   }), {
     backgroundColors: ei
-  } = (0, B.default)(t.styles), en = (0, j.getFormattedPriceForCollectiblesProduct)(t, _, !1), eo = (0, j.isPremiumCollectiblesProduct)(t), eu = (0, j.isFreeCollectiblesProduct)(t), [ec, ed, ef] = (0, u.useStateFromStoresArray)([R.default], () => [R.default.getPurchase(t.skuId), R.default.isClaiming === t.skuId, null != R.default.isClaiming && R.default.isClaiming !== t.skuId]), em = (0, u.useStateFromStores)([L.default], () => (0, d.isThemeDark)(L.default.theme)), eC = (0, j.isProductNew)(t.skuId), {
+  } = (0, B.default)(t.styles), en = (0, j.getFormattedPriceForCollectiblesProduct)(t, _, !1), eo = (0, j.isPremiumCollectiblesProduct)(t), eu = (0, j.isFreeCollectiblesProduct)(t), [ec, ed, ef] = (0, u.useStateFromStoresArray)([A.default], () => [A.default.getPurchase(t.skuId), A.default.isClaiming === t.skuId, null != A.default.isClaiming && A.default.isClaiming !== t.skuId]), em = (0, u.useStateFromStores)([L.default], () => (0, d.isThemeDark)(L.default.theme)), eC = (0, j.isProductNew)(t.skuId), {
     hoverVariant: ep
   } = (0, P.useShopCardHoverAnimationExperiment)("CollectiblesShopTallCard");
   s.useEffect(() => {
@@ -128,7 +128,7 @@ t.default = function(e) {
         analyticsLocations: Z
       })
     },
-    eb = e => l => {
+    ex = e => l => {
       eE.current = l.currentTarget, (0, w.openCollectiblesShopProductDetailsModal)({
         product: t,
         category: a,
@@ -137,11 +137,11 @@ t.default = function(e) {
         returnRef: eE
       })
     },
-    ex = eb(p.default.COLLECTIBLES_SHOP_CARD),
-    eS = eb(p.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
+    eb = ex(p.default.COLLECTIBLES_SHOP_CARD),
+    eS = ex(p.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
     eT = () => (0, l.jsx)("div", {
       className: G.hoverUpsellContainer,
-      children: (0, l.jsx)(x.default, {
+      children: (0, l.jsx)(b.default, {
         fullWidth: !0,
         className: G.__invalid_premiumSubscribeButton,
         disabled: ef,
@@ -183,13 +183,13 @@ t.default = function(e) {
         submittingStartedLabel: W.default.Messages.COLLECTIBLES_COLLECTING,
         submittingFinishedLabel: W.default.Messages.COLLECTIBLES_COLLECTING_FINISHED,
         onClick: async () => {
-          await (0, A.claimPremiumCollectiblesProduct)(t.skuId), (0, H.default)({
+          await (0, R.claimPremiumCollectiblesProduct)(t.skuId), (0, H.default)({
             product: t,
             analyticsLocations: Z
           })
         }
       } : {
-        onClick: () => (0, b.default)({
+        onClick: () => (0, x.default)({
           skuId: t.skuId,
           analyticsLocations: Z,
           returnRef: Q
@@ -217,7 +217,7 @@ t.default = function(e) {
       innerRef: Q,
       className: i()(G.shopCard, (0, n.match)(ep).with(P.ShopCardHoverAnimationVariant.CONTROL, () => G.shopCardDefaultAnimation).with(P.ShopCardHoverAnimationVariant.TRANSFORMATION, () => G.shopCardTransformationAnimation).otherwise(() => void 0)),
       onBlur: () => J(!1),
-      onClick: ex,
+      onClick: eb,
       style: null != ei ? {
         backgroundColor: em ? "var(--background-floating)" : "var(--background-secondary)",
         borderColor: "var(--chat-border)",

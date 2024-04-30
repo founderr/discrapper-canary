@@ -26,30 +26,30 @@ t.default = e => {
     playstyle: A,
     interests: N,
     description: v,
-    tag: R,
-    verificationForm: L,
+    tag: L,
+    verificationForm: R,
     badgeKind: O,
     badgePrimaryColor: M,
     badgeSecondaryColor: P,
-    banner: x,
-    brandPrimaryColor: y,
+    banner: y,
+    brandPrimaryColor: x,
     brandSecondaryColor: D,
     wildcardDescriptors: b,
     badgeImage: U
-  } = null != p ? p : {}, j = s.useRef(null), G = s.useRef(null), w = s.useRef(null), [k, F] = s.useState(!1), B = async () => {
+  } = null != p ? p : {}, j = s.useRef(null), G = s.useRef(null), w = s.useRef(null), [k, B] = s.useState(!1), F = async () => {
     try {
       await u.convertGuildToClan(t, {
         gameApplicationIds: g,
         playstyle: A,
         interests: N,
         description: v,
-        tag: R,
-        verificationForm: L,
+        tag: L,
+        verificationForm: R,
         badgeKind: O,
         badgePrimaryColor: M,
         badgeSecondaryColor: P,
-        banner: x,
-        brandPrimaryColor: y,
+        banner: y,
+        brandPrimaryColor: x,
         brandSecondaryColor: D,
         wildcardDescriptors: b,
         badgeImage: U
@@ -63,8 +63,8 @@ t.default = e => {
       } = await Promise.all([n.e("99387"), n.e("63636")]).then(n.bind(n, "511385"));
       return n => (0, a.jsx)(e, {
         guildId: t,
-        tag: R,
-        brandPrimaryColor: y,
+        tag: L,
+        brandPrimaryColor: x,
         ...n
       })
     })
@@ -125,7 +125,7 @@ t.default = e => {
       children: (0, a.jsx)(c.default, {
         guildId: t,
         signed: k,
-        setSigned: F,
+        setSigned: B,
         signRef: m
       })
     }), (0, a.jsxs)(l.animated.div, {
@@ -141,7 +141,7 @@ t.default = e => {
           var e;
           null === (e = m.current) || void 0 === e || e.scrollIntoView({
             behavior: "smooth"
-          }), F(!0)
+          }), B(!0)
         },
         children: E.default.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
       }), (0, a.jsx)(r.Text, {
@@ -175,7 +175,7 @@ t.default = e => {
         color: r.Button.Colors.BRAND,
         disabled: !k,
         submitting: T,
-        onClick: B,
+        onClick: F,
         children: E.default.Messages.FINISH
       })]
     })]

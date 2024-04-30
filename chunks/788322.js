@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   DiscoverSearchResultPlaceholder: function() {
-    return R
+    return L
   }
 }), n("47120");
 var a = n("735250"),
@@ -27,27 +27,27 @@ var a = n("735250"),
   A = n("37807"),
   N = n("129512"),
   v = n("330065");
-let R = () => (0, a.jsx)("div", {
+let L = () => (0, a.jsx)("div", {
   className: A.placeholder
 });
 t.default = e => {
   var t;
   let {
     guild: l,
-    theme: R,
-    onView: L,
+    theme: L,
+    onView: R,
     onTagClick: O
   } = e, {
     id: M,
     discoverySplash: P,
-    icon: x,
-    name: y,
+    icon: y,
+    name: x,
     description: D,
     presenceCount: b,
     memberCount: U,
     keywords: j
-  } = l, [G, w] = s.useState(!1), [k, F] = s.useState(!1), {
-    analyticsLocations: B
+  } = l, [G, w] = s.useState(!1), [k, B] = s.useState(!1), {
+    analyticsLocations: F
   } = (0, u.default)(), H = _.default.getGuildDiscoverySplashURL({
     id: M,
     splash: P,
@@ -59,9 +59,9 @@ t.default = e => {
       case T.ThemeTypes.LIGHT:
         return v
     }
-  }(R), Y = null !== (t = _.default.getGuildIconURL({
+  }(L), Y = null !== (t = _.default.getGuildIconURL({
     id: M,
-    icon: x,
+    icon: y,
     size: 32
   })) && void 0 !== t ? t : void 0, W = async e => {
     let {
@@ -77,15 +77,15 @@ t.default = e => {
             page: T.AnalyticsPages.GUILD_DISCOVERY,
             section: T.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
           },
-          analyticsLocations: B
+          analyticsLocations: F
         });
         return
       }
-      F(!0);
+      B(!0);
       try {
-        null != L && await L(l.id)
+        null != R && await R(l.id)
       } finally {
-        F(!1)
+        B(!1)
       }
     }
   };
@@ -160,7 +160,7 @@ t.default = e => {
               }), (0, a.jsx)(r.Heading, {
                 variant: "heading-md/semibold",
                 className: A.headerTitle,
-                children: y
+                children: x
               })]
             })]
           }), (0, a.jsx)(r.Text, {

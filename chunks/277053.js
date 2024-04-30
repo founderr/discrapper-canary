@@ -18,8 +18,8 @@ let p = new Set,
   A = null,
   N = null,
   v = null,
-  R = null,
   L = null,
+  R = null,
   O = f.Storage.get(S.ADVANCED_MODE_ON_KEY) || !1;
 
 function M(e) {
@@ -33,9 +33,9 @@ function M(e) {
 function P() {
   if (N = _.default.getChannel(), v = _.default.getCategory(), null == N) return !1;
   let e = N.getGuildId();
-  A = g = M(N), null == g[R] && (R = e), s = null != v, a = h.areChannelsLocked(N, v), L = null, T = !1, I = m.FormStates.CLOSED, p.clear()
+  A = g = M(N), null == g[L] && (L = e), s = null != v, a = h.areChannelsLocked(N, v), R = null, T = !1, I = m.FormStates.CLOSED, p.clear()
 }
-class x extends(l = c.default.Store) {
+class y extends(l = c.default.Store) {
   initialize() {
     this.waitFor(_.default, C.default)
   }
@@ -55,7 +55,7 @@ class x extends(l = c.default.Store) {
     return g
   }
   get selectedOverwriteId() {
-    return R
+    return L
   }
   get formState() {
     return I
@@ -76,12 +76,12 @@ class x extends(l = c.default.Store) {
     return O
   }
 }
-o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = x) ? Object.defineProperty(i, r, {
+o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = y) ? Object.defineProperty(i, r, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = o, t.default = new x(E.default, {
+}) : i[r] = o, t.default = new y(E.default, {
   CHANNEL_SETTINGS_SET_SECTION: function(e) {
     let {
       section: t
@@ -110,14 +110,14 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = x) ? Object.de
     let {
       id: t
     } = e;
-    if (null != g && null != g[t]) R = t;
+    if (null != g && null != g[t]) L = t;
     else {
       if (null == N) return !1;
-      L = t
+      R = t
     }
   },
   CHANNEL_SETTINGS_CLOSE: function() {
-    I = m.FormStates.CLOSED, g = null, A = null, N = null, v = null, T = !1, p.clear(), R = null, L = null
+    I = m.FormStates.CLOSED, g = null, A = null, N = null, v = null, T = !1, p.clear(), L = null, R = null
   },
   CHANNEL_UPDATES: function(e) {
     let {
@@ -137,7 +137,7 @@ o = "ChannelSettingsPermissionsStore", (r = "displayName") in(i = x) ? Object.de
       }), null == n[t] && null == N.permissionOverwrites[t] && (n[t] = h.makeEveryoneOverwrite(t)), null == (g = {
         ...N.permissionOverwrites,
         ...n
-      })[R] ? R = t : null != L && null != g[L] && (R = L, L = null), a = h.areChannelsLocked(N, v), !0
+      })[L] ? L = t : null != R && null != g[R] && (L = R, R = null), a = h.areChannelsLocked(N, v), !0
     }(e.id) && (n = !0);
     return n
   },

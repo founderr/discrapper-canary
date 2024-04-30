@@ -27,13 +27,13 @@ var a = n("735250"),
   A = n("941129"),
   N = n("83200"),
   v = n("634894"),
-  R = n("586902"),
-  L = n("1585"),
+  L = n("586902"),
+  R = n("1585"),
   O = n("304761"),
   M = n("865427"),
   P = n("571250"),
-  x = n("628581"),
-  y = n("55311"),
+  y = n("628581"),
+  x = n("55311"),
   D = n("575175"),
   b = n("64220"),
   U = n("377171"),
@@ -41,8 +41,8 @@ var a = n("735250"),
   G = n("427217"),
   w = n("605236"),
   k = n("243778"),
-  F = n("730417"),
-  B = n("524347"),
+  B = n("730417"),
+  F = n("524347"),
   H = n("853197"),
   V = n("810280"),
   Y = n("60762"),
@@ -81,13 +81,13 @@ var a = n("735250"),
   eA = n("86813"),
   eN = n("826026"),
   ev = n("937482"),
-  eR = n("87888"),
-  eL = n("976401"),
+  eL = n("87888"),
+  eR = n("976401"),
   eO = n("333454"),
   eM = n("864441"),
   eP = n("26290"),
-  ex = n("626135"),
-  ey = n("768581"),
+  ey = n("626135"),
+  ex = n("768581"),
   eD = n("572004"),
   eb = n("70956"),
   eU = n("374023"),
@@ -95,8 +95,8 @@ var a = n("735250"),
   eG = n("998502"),
   ew = n("981631"),
   ek = n("215023"),
-  eF = n("702512"),
-  eB = n("689938"),
+  eB = n("702512"),
+  eF = n("689938"),
   eH = n("823020");
 
 function eV(e, t, n) {
@@ -132,7 +132,7 @@ class eK extends s.PureComponent {
   renderCopiedSuccess() {
     let {
       copiedStreak: e
-    } = this.state, t = [eB.default.Messages.COPY_SUCCESS_1, eB.default.Messages.COPY_SUCCESS_2, eB.default.Messages.COPY_SUCCESS_3, eB.default.Messages.COPY_SUCCESS_4, eB.default.Messages.COPY_SUCCESS_5, eB.default.Messages.COPY_SUCCESS_6, eB.default.Messages.COPY_SUCCESS_7, eB.default.Messages.COPY_SUCCESS_8, eB.default.Messages.COPY_SUCCESS_9, eB.default.Messages.COPY_SUCCESS_10, eB.default.Messages.COPY_SUCCESS_11], n = Math.min(Math.max(0, e - 1), t.length - 1);
+    } = this.state, t = [eF.default.Messages.COPY_SUCCESS_1, eF.default.Messages.COPY_SUCCESS_2, eF.default.Messages.COPY_SUCCESS_3, eF.default.Messages.COPY_SUCCESS_4, eF.default.Messages.COPY_SUCCESS_5, eF.default.Messages.COPY_SUCCESS_6, eF.default.Messages.COPY_SUCCESS_7, eF.default.Messages.COPY_SUCCESS_8, eF.default.Messages.COPY_SUCCESS_9, eF.default.Messages.COPY_SUCCESS_10, eF.default.Messages.COPY_SUCCESS_11], n = Math.min(Math.max(0, e - 1), t.length - 1);
     return (0, a.jsx)(m.Shaker, {
       isShaking: this.isCopiedStreakGodlike,
       children: t[n]
@@ -184,10 +184,10 @@ class eK extends s.PureComponent {
     if (null == e) return null;
     let s = null,
       l = m.TooltipColors.PRIMARY;
-    return eD.SUPPORTS_COPY && (s = eB.default.Messages.ACCOUNT_CLICK_TO_COPY, n && (s = this.renderCopiedSuccess(), l = this.isCopiedStreakGodlike ? m.TooltipColors.RED : m.TooltipColors.GREEN)), (0, a.jsx)(m.Tooltip, {
+    return eD.SUPPORTS_COPY && (s = eF.default.Messages.ACCOUNT_CLICK_TO_COPY, n && (s = this.renderCopiedSuccess(), l = this.isCopiedStreakGodlike ? m.TooltipColors.RED : m.TooltipColors.GREEN)), (0, a.jsx)(m.Tooltip, {
       text: s,
       forceOpen: t,
-      "aria-label": !!eD.SUPPORTS_COPY && eB.default.Messages.ACCOUNT_CLICK_TO_COPY,
+      "aria-label": !!eD.SUPPORTS_COPY && eF.default.Messages.ACCOUNT_CLICK_TO_COPY,
       color: l,
       delay: 500,
       onAnimationRest: (e, a) => {
@@ -229,9 +229,9 @@ class eK extends s.PureComponent {
       showTaglessAccountPanel: r
     } = this.props;
     if (null == n) return null;
-    let o = (0, ey.getAvatarDecorationURL)({
+    let o = (0, ex.getAvatarDecorationURL)({
       avatarDecoration: n.avatarDecoration,
-      size: (0, L.getDecorationSizeForAvatarSize)(m.AvatarSizes.SIZE_32)
+      size: (0, R.getDecorationSizeForAvatarSize)(m.AvatarSizes.SIZE_32)
     });
     return (0, a.jsx)(g.default, {
       object: ew.AnalyticsObjects.AVATAR,
@@ -245,7 +245,7 @@ class eK extends s.PureComponent {
         preload: () => (0, ei.default)(n.id, null == n ? void 0 : n.getAvatarURL(null, 80)),
         children: (u, d) => (0, a.jsxs)(m.Clickable, {
           ...u,
-          "aria-label": eB.default.Messages.SET_STATUS,
+          "aria-label": eF.default.Messages.SET_STATUS,
           className: i()(eH.avatarWrapper, {
             [eH.withTagAsButton]: l,
             [eH.withTagless]: r
@@ -262,11 +262,11 @@ class eK extends s.PureComponent {
             className: i()(eH.nameTag, {
               [eH.canCopy]: eD.SUPPORTS_COPY
             }),
-            children: r ? (0, a.jsx)(eL.default, {
+            children: r ? (0, a.jsx)(eR.default, {
               tooltipText: null,
               icon: d.isShown ? eA.default : eN.default,
               role: "switch",
-              "aria-label": eB.default.Messages.SET_STATUS
+              "aria-label": eF.default.Messages.SET_STATUS
             }) : this.renderNameTag()
           }) : null]
         })
@@ -322,7 +322,7 @@ class eK extends s.PureComponent {
           serverMute: l,
           suppress: r,
           awaitingRemote: s,
-          tooltipText: d ? eB.default.Messages.ACCOUNT_SPEAKING_WHILE_MUTED : (0, x.default)(n, l, r, s),
+          tooltipText: d ? eF.default.Messages.ACCOUNT_SPEAKING_WHILE_MUTED : (0, y.default)(n, l, r, s),
           tooltipColor: d ? m.TooltipColors.GREEN : void 0,
           tooltipForceOpen: d || void 0,
           onMouseEnter: this.handleMouseEnterMute,
@@ -358,7 +358,7 @@ class eK extends s.PureComponent {
                   shouldShow: !0,
                   renderPopout: () => (0, a.jsx)(V.default, {
                     markAsDismissed: n,
-                    partnerGame: eF.PartnerGame.FORTNITE
+                    partnerGame: eB.PartnerGame.FORTNITE
                   }),
                   children: this.renderSettingsGear
                 });
@@ -369,7 +369,7 @@ class eK extends s.PureComponent {
                   shouldShow: !0,
                   renderPopout: () => (0, a.jsx)(Y.default, {
                     markAsDismissed: n,
-                    partnerGame: eF.PartnerGame.FORTNITE
+                    partnerGame: eB.PartnerGame.FORTNITE
                   }),
                   children: this.renderSettingsGear
                 });
@@ -457,7 +457,7 @@ class eK extends s.PureComponent {
       let {
         serverDeaf: e
       } = this.props;
-      (0, y.default)(e)
+      (0, x.default)(e)
     }), eV(this, "handleOpenAccountSettings", () => {
       this.handleOpenSettings()
     }), eV(this, "handleOpenSettings", function() {
@@ -531,7 +531,7 @@ class eK extends s.PureComponent {
       (0, eD.copy)(ej.default.getUserTag(e, {
         decoration: "never",
         identifiable: "always"
-      })), ex.default.track(ew.AnalyticEvents.TEXT_COPIED, {
+      })), ey.default.track(ew.AnalyticEvents.TEXT_COPIED, {
         type: "User Tag"
       });
       let a = {
@@ -611,7 +611,7 @@ class eK extends s.PureComponent {
 function ez() {
   var e, t;
   let n = (0, r.useStateFromStores)([ep.default], () => ep.default.getCurrentUser()),
-    l = (0, F.useShowEligibilityEnrollmentTooltip)(eF.PartnerGame.FORTNITE),
+    l = (0, B.useShowEligibilityEnrollmentTooltip)(eB.PartnerGame.FORTNITE),
     i = (0, r.useStateFromStores)([ef.default], () => ef.default.getId()),
     u = (0, j.useCustomStatusActivity)(),
     {
@@ -621,7 +621,7 @@ function ez() {
       streaming: null != em.default.findActivity(e => e.type === ew.ActivityTypes.STREAMING),
       status: em.default.getStatus()
     })),
-    f = (0, R.default)({
+    f = (0, L.default)({
       userId: i
     }),
     E = ej.default.useUserTag(n, {
@@ -641,14 +641,14 @@ function ez() {
       selfDeaf: T,
       deaf: g
     } = (0, ed.default)(_),
-    L = (0, r.useStateFromStores)([O.default], () => {
+    R = (0, r.useStateFromStores)([O.default], () => {
       var e;
       return (0, M.probablyHasBuildOverride)() ? null === (e = O.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
     P = (0, r.useStateFromStores)([eI.default], () => eI.default.getPremiumTypeSubscription()),
-    x = (0, r.useStateFromStores)([e_.default], () => e_.default.getEverSpeakingWhileMuted()),
-    y = (0, r.useStateFromStores)([eh.default], () => eh.default.hasLayers()),
-    D = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || y || eU.ProcessArgs.isDisallowPopupsSet(),
+    y = (0, r.useStateFromStores)([e_.default], () => e_.default.getEverSpeakingWhileMuted()),
+    x = (0, r.useStateFromStores)([eh.default], () => eh.default.hasLayers()),
+    D = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || x || eU.ProcessArgs.isDisallowPopupsSet(),
     b = (0, Q.useIsEligibleForPomelo)();
   s.useEffect(() => {
     z.default.trackExposure({
@@ -665,8 +665,8 @@ function ez() {
     }, {
       autoTrackExposure: !1
     }),
-    Y = (0, r.useStateFromStores)([B.default], () => B.default.isCurrentQuestCompleted),
-    q = (0, r.useStateFromStores)([B.default], () => B.default.currentDropQuestGameTitle),
+    Y = (0, r.useStateFromStores)([F.default], () => F.default.isCurrentQuestCompleted),
+    q = (0, r.useStateFromStores)([F.default], () => F.default.currentDropQuestGameTitle),
     J = (0, K.useIsHomeSelected)(),
     et = (0, N.useIsDmSpamFilterCoachmarkEnabled)(),
     en = (0, $.useCanSeeSafetyEducationBlockMuteCoachmark)(),
@@ -713,7 +713,7 @@ function ez() {
       avatar: [],
       settings: []
     };
-  return !D && (eg && eA.settings.push(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), l && (eA.settings.push(o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP), Y && q === (null === (t = (0, H.getDrop)(eF.PartnerGame.FORTNITE)) || void 0 === t ? void 0 : t.title) && eA.settings.push(o.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP)), J && et && eA.settings.push(o.DismissibleContent.USER_SAFETY_SAFE_DIRECT_MESSAGING), en && (1 === ea ? eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), eT && eA.settings.push(o.DismissibleContent.SOUNDBOARD_VOLUME_EDUCATION), el && eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), ei && eA.settings.push(o.DismissibleContent.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), eo && eA.avatar.push(o.DismissibleContent.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)), (0, a.jsx)(eK, {
+  return !D && (eg && eA.settings.push(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), l && (eA.settings.push(o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP), Y && q === (null === (t = (0, H.getDrop)(eB.PartnerGame.FORTNITE)) || void 0 === t ? void 0 : t.title) && eA.settings.push(o.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP)), J && et && eA.settings.push(o.DismissibleContent.USER_SAFETY_SAFE_DIRECT_MESSAGING), en && (1 === ea ? eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), eT && eA.settings.push(o.DismissibleContent.SOUNDBOARD_VOLUME_EDUCATION), el && eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), ei && eA.settings.push(o.DismissibleContent.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), eo && eA.avatar.push(o.DismissibleContent.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)), (0, a.jsx)(eK, {
     currentUser: n,
     customStatusActivity: u,
     dismissibleContents: eA,
@@ -729,11 +729,11 @@ function ez() {
     showTagAsButton: k,
     showTaglessAccountPanel: V,
     speaking: f,
-    speakingWhileMuted: x,
+    speakingWhileMuted: y,
     status: c,
     streaming: d,
     suppress: I,
-    webBuildOverride: L,
+    webBuildOverride: R,
     awaitingRemote: U,
     isEligibleForPomelo: b
   })
@@ -746,7 +746,7 @@ function eq(e) {
     onClick: s,
     onContextMenu: l
   } = e, i = (0, m.useRedesignIconContext)().enabled, r = null, o = ev.default, u = (0, C.useSettingsLottie)();
-  return i ? o = null != t ? E.SettingsInfoIcon : n ? f.SettingsCircleIcon : u.Component : null != t ? r = (0, a.jsx)(eR.default, {
+  return i ? o = null != t ? E.SettingsInfoIcon : n ? f.SettingsCircleIcon : u.Component : null != t ? r = (0, a.jsx)(eL.default, {
     width: 9,
     height: 9,
     className: eH.hasBuildOverride,
@@ -755,10 +755,10 @@ function eq(e) {
     color: U.default.STATUS_DANGER,
     className: eH.hasBuildOverride,
     "aria-hidden": !0
-  })), (0, a.jsx)(eL.default, {
-    tooltipText: null != t ? eB.default.Messages.USER_SETTINGS_WITH_BUILD_OVERRIDE.format({
+  })), (0, a.jsx)(eR.default, {
+    tooltipText: null != t ? eF.default.Messages.USER_SETTINGS_WITH_BUILD_OVERRIDE.format({
       webBuildOverride: t.id
-    }) : eB.default.Messages.USER_SETTINGS,
+    }) : eF.default.Messages.USER_SETTINGS,
     onClick: s,
     onContextMenu: l,
     innerClassName: null != t || n ? eH.buildOverrideButton : null,
@@ -786,7 +786,7 @@ function eQ(e) {
     play: p,
     events: I
   } = (0, _.useMicrophoneLottie)(C ? "unmute" : "mute"), T = n || l ? c.MicrophoneDenyIcon : S;
-  return s.useEffect(() => () => p(), [C, p]), (0, a.jsx)(eL.default, {
+  return s.useEffect(() => () => p(), [C, p]), (0, a.jsx)(eR.default, {
     tooltipText: r,
     tooltipColor: o,
     tooltipForceOpen: u,
@@ -806,7 +806,7 @@ function eQ(e) {
     onClick: E,
     onContextMenu: h,
     role: "switch",
-    "aria-label": eB.default.Messages.MUTE,
+    "aria-label": eF.default.Messages.MUTE,
     "aria-checked": C,
     disabled: i
   })
@@ -827,7 +827,7 @@ function eZ(e) {
       onMouseLeave: _
     }
   } = (0, h.useHeadphonesLottie)(u ? "undeafen" : "deafen"), C = n ? d.HeadphonesDenyIcon : c;
-  return s.useEffect(() => () => f(), [u, f]), (0, a.jsx)(eL.default, {
+  return s.useEffect(() => () => f(), [u, f]), (0, a.jsx)(eR.default, {
     tooltipText: (0, P.default)(t, n, l),
     onMouseEnter: E,
     onMouseLeave: _,
@@ -844,7 +844,7 @@ function eZ(e) {
     }),
     iconForeground: u ? eH.strikethrough : null,
     role: "switch",
-    "aria-label": eB.default.Messages.DEAFEN,
+    "aria-label": eF.default.Messages.DEAFEN,
     "aria-checked": u,
     disabled: l
   })

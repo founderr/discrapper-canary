@@ -27,18 +27,18 @@ var a = n("735250"),
   A = n("504762"),
   N = n("807152"),
   v = n("176505"),
-  R = n("689938"),
-  L = n("55514");
+  L = n("689938"),
+  R = n("55514");
 
 function O(e) {
   let {
     guildId: t
-  } = e, n = (0, i.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), O = (0, i.useStateFromStores)([h.default], () => h.default.isConnected()), M = (0, f.default)(t), P = (0, p.default)(t), x = (0, i.useStateFromStores)([m.default], () => m.default.isSubscriptionFetching), y = (0, S.useGroupListingsFetchContext)(), {
+  } = e, n = (0, i.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), O = (0, i.useStateFromStores)([h.default], () => h.default.isConnected()), M = (0, f.default)(t), P = (0, p.default)(t), y = (0, i.useStateFromStores)([m.default], () => m.default.isSubscriptionFetching), x = (0, S.useGroupListingsFetchContext)(), {
     shouldHideGuildPurchaseEntryPoints: D,
     restrictionsLoading: b
-  } = (0, E.useShouldHideGuildPurchaseEntryPoints)(t), U = null == n || !y || x || b;
+  } = (0, E.useShouldHideGuildPurchaseEntryPoints)(t), U = null == n || !x || y || b;
   (0, d.usePageTitle)({
-    subsection: R.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
+    subsection: L.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
     location: null == n ? void 0 : n.name
   }), (0, u.default)(l.isMobile ? "role-subscriptions-overview" : void 0);
   let j = O && (null == n || !(M || P) || D && !b);
@@ -53,24 +53,24 @@ function O(e) {
     })
   }
   return (0, a.jsxs)("div", {
-    className: L.container,
+    className: R.container,
     children: [(0, a.jsxs)(_.default, {
       toolbar: (0, a.jsx)(s.Fragment, {}),
-      className: L.headerBar,
+      className: R.headerBar,
       children: [(0, a.jsx)(_.default.Icon, {
         icon: I.default,
         "aria-hidden": !0
       }), (0, a.jsx)(_.default.Title, {
-        children: R.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
+        children: L.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
       })]
     }), (0, a.jsx)("div", {
       id: N.OVERVIEW_NOTICE_ROOT
     }), (0, a.jsx)("div", {
-      className: L.content,
+      className: R.content,
       children: M ? (0, a.jsx)(r.ScrollerNone, {
-        className: L.scroller,
+        className: R.scroller,
         children: (0, a.jsx)("div", {
-          className: L.scrollerContent,
+          className: R.scrollerContent,
           children: U ? (0, a.jsx)(r.Spinner, {}) : (0, a.jsx)(T.default, {
             guild: n
           })

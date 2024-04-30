@@ -27,12 +27,12 @@ var a = n("735250"),
   A = n("358924"),
   N = n("292140"),
   v = n("525296"),
-  R = n("981631"),
-  L = n("674563"),
+  L = n("981631"),
+  R = n("674563"),
   O = n("689938"),
   M = n("884724");
 let P = 15 * p.default.Millis.MINUTE,
-  x = (0, v.default)(function(e) {
+  y = (0, v.default)(function(e) {
     let {
       party: t,
       onUserContextMenu: n,
@@ -53,9 +53,9 @@ let P = 15 * p.default.Millis.MINUTE,
     } = t, _ = c.length, C = f.length, m = E.length, p = h.length > 0, I = s.useCallback(() => {
       let e = E.filter(e => {
         var t, n;
-        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === L.ApplicationTypes.GAME
+        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === R.ApplicationTypes.GAME
       }).map(e => e.game.name);
-      S.default.track(R.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
+      S.default.track(L.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
         num_users: _,
         num_streams: C,
         num_activities: m,
@@ -92,7 +92,7 @@ let P = 15 * p.default.Millis.MINUTE,
       }
     }) : null
   }),
-  y = i().throttle(() => f.fetchUserAffinities(!1), 3e5);
+  x = i().throttle(() => f.fetchUserAffinities(!1), 3e5);
 
 function D() {
   let {
@@ -109,7 +109,7 @@ function D() {
     currentUser: C.default.getCurrentUser()
   })), r = (0, u.useStateFromStores)([E.default], () => E.default.quests);
   s.useEffect(() => (c.default.wait(() => I.mount()), () => c.default.wait(() => I.unmount())), [null == i ? void 0 : i.id]), s.useEffect(() => {
-    n && !l && y()
+    n && !l && x()
   }, [n, l]);
   let o = s.useMemo(() => {
       let t = new Map,
@@ -130,7 +130,7 @@ function D() {
     let {
       party: t
     } = e;
-    return (0, a.jsx)(x, {
+    return (0, a.jsx)(y, {
       party: t,
       quest: o.get(t.id)
     }, t.id)

@@ -23,13 +23,13 @@ var a = n("913527"),
   A = n("51144"),
   N = n("196051"),
   v = n("441729"),
-  R = n("653477"),
-  L = n("981631"),
+  L = n("653477"),
+  R = n("981631"),
   O = n("689938");
 let M = [],
   P = null,
-  x = null,
   y = null,
+  x = null,
   D = /\|\|([\s\S]+?)\|\|/g;
 
 function b(e, t, n, a) {
@@ -64,16 +64,16 @@ function b(e, t, n, a) {
 function U() {
   if (!i.supported) return !1;
   let e = d.default.locale;
-  if (null == y) {
+  if (null == x) {
     var t;
-    y = null === (t = window.speechSynthesis) || void 0 === t ? void 0 : t.getVoices()
+    x = null === (t = window.speechSynthesis) || void 0 === t ? void 0 : t.getVoices()
   }
-  let n = y.filter(t => t.lang === e || t.lang.slice(0, e.length) === e || !1);
-  x = n.length > 0 ? n[0] : null
+  let n = x.filter(t => t.lang === e || t.lang.slice(0, e.length) === e || !1);
+  y = n.length > 0 ? n[0] : null
 }
 async function j(e, t, n, a, s) {
   let l = i.createUtterance(e, n);
-  null !== l && (null == x && U(), t ? await (0, N.stopSpeaking)() : null == P || P.removeEventListener("end", N.stopSpeaking), l.addEventListener("end", N.stopSpeaking), null != a && l.addEventListener("start", a), null != s && l.addEventListener("end", s), P = l, i.speakUtterance(l, x))
+  null !== l && (null == y && U(), t ? await (0, N.stopSpeaking)() : null == P || P.removeEventListener("end", N.stopSpeaking), l.addEventListener("end", N.stopSpeaking), null != a && l.addEventListener("start", a), null != s && l.addEventListener("end", s), P = l, i.speakUtterance(l, y))
 }
 
 function G(e, t, n, a, s) {
@@ -97,16 +97,16 @@ function k() {
   return null !== P && P.removeEventListener("end", N.stopSpeaking), i.cancelAll(), P = null, !0
 }
 
-function F(e) {
+function B(e) {
   var t, n, a;
   let {
     message: s,
     channel: l
-  } = e, i = s.type === L.MessageTypes.REPLY ? u.default.getMessageByReference(s.messageReference) : null, r = (null == i ? void 0 : i.state) === u.ReferencedMessageState.LOADED ? null == i ? void 0 : null === (t = i.message) || void 0 === t ? void 0 : t.author : null, o = null != r ? null !== (n = _.default.getNick(l.guild_id, null == r ? void 0 : r.id)) && void 0 !== n ? n : A.default.getName(r) : null, d = l.getGuildId(), c = null !== (a = _.default.getNick(d, s.author.id)) && void 0 !== a ? a : A.default.getName(s.author);
+  } = e, i = s.type === R.MessageTypes.REPLY ? u.default.getMessageByReference(s.messageReference) : null, r = (null == i ? void 0 : i.state) === u.ReferencedMessageState.LOADED ? null == i ? void 0 : null === (t = i.message) || void 0 === t ? void 0 : t.author : null, o = null != r ? null !== (n = _.default.getNick(l.guild_id, null == r ? void 0 : r.id)) && void 0 !== n ? n : A.default.getName(r) : null, d = l.getGuildId(), c = null !== (a = _.default.getNick(d, s.author.id)) && void 0 !== a ? a : A.default.getName(s.author);
   return G(b(s.content, c, d, o), !0, l.id, s.id), !0
 }
 
-function B(e) {
+function F(e) {
   var t, n, a, s, l, i, r;
   let {
     channelId: o,
@@ -121,16 +121,16 @@ function B(e) {
     v = o === g || o === N,
     O = c.EnableTTSCommand.getSetting() && u.tts && v,
     P = S.default.getTTSType(),
-    x = (null === (t = u.author) || void 0 === t ? void 0 : t.id) !== f.default.getId() && (P === L.TTSNotificationTypes.ALL_CHANNELS || P === L.TTSNotificationTypes.SELECTED_CHANNEL && v);
-  if ((O || x) && ((null === (n = u.author) || void 0 === n ? void 0 : n.id) == null || !p.default.isBlocked(u.author.id))) {
+    y = (null === (t = u.author) || void 0 === t ? void 0 : t.id) !== f.default.getId() && (P === R.TTSNotificationTypes.ALL_CHANNELS || P === R.TTSNotificationTypes.SELECTED_CHANNEL && v);
+  if ((O || y) && ((null === (n = u.author) || void 0 === n ? void 0 : n.id) == null || !p.default.isBlocked(u.author.id))) {
     if (M.indexOf(u.id) >= 0) return !1;
     M.unshift(u.id) > 10 && M.pop();
     let e = C.getGuildId();
     if (null != e && T.default.getMutedChannels(e).has(o)) return !1;
     let t = null !== (i = null !== (l = _.default.getNick(e, null === (a = u.author) || void 0 === a ? void 0 : a.id)) && void 0 !== l ? l : A.default.getName(u.author)) && void 0 !== i ? i : "",
-      n = u.type === L.MessageTypes.REPLY ? null === (s = u.referenced_message) || void 0 === s ? void 0 : s.author : null,
+      n = u.type === R.MessageTypes.REPLY ? null === (s = u.referenced_message) || void 0 === s ? void 0 : s.author : null,
       d = null != n ? null !== (r = _.default.getNick(e, null == n ? void 0 : n.id)) && void 0 !== r ? r : A.default.getName(n) : null;
-    G(b(u.content, t, e, d), !1, C.id, u.id, R.MAX_TTS_LENGTH)
+    G(b(u.content, t, e, d), !1, C.id, u.id, L.MAX_TTS_LENGTH)
   }
   return !1
 }
@@ -148,6 +148,6 @@ function V() {
 }
 t.default = {
   init() {
-    l.default.subscribe("SPEAK_TEXT", w), l.default.subscribe("SPEAK_MESSAGE", F), l.default.subscribe("STOP_SPEAKING", k), l.default.subscribe("MESSAGE_CREATE", B), l.default.subscribe("MESSAGE_DELETE", H), l.default.subscribe("AUDIO_TOGGLE_SELF_DEAF", V), l.default.subscribe("USER_SETTINGS_PROTO_UPDATE", U), l.default.subscribe("I18N_LOAD_SUCCESS", U)
+    l.default.subscribe("SPEAK_TEXT", w), l.default.subscribe("SPEAK_MESSAGE", B), l.default.subscribe("STOP_SPEAKING", k), l.default.subscribe("MESSAGE_CREATE", F), l.default.subscribe("MESSAGE_DELETE", H), l.default.subscribe("AUDIO_TOGGLE_SELF_DEAF", V), l.default.subscribe("USER_SETTINGS_PROTO_UPDATE", U), l.default.subscribe("I18N_LOAD_SUCCESS", U)
   }
 }

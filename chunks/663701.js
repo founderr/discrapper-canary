@@ -27,13 +27,13 @@ var a = n("735250"),
   A = n("243778"),
   N = n("922409"),
   v = n("899740"),
-  R = n("28476"),
-  L = n("880257"),
+  L = n("28476"),
+  R = n("880257"),
   O = n("631885"),
   M = n("457396"),
   P = n("51596"),
-  x = n("905423"),
-  y = n("155409"),
+  y = n("905423"),
+  x = n("155409"),
   D = n("210887"),
   b = n("695346"),
   U = n("283595"),
@@ -41,8 +41,8 @@ var a = n("735250"),
   G = n("923834"),
   w = n("55563"),
   k = n("774343"),
-  F = n("517802"),
-  B = n("436088"),
+  B = n("517802"),
+  F = n("436088"),
   H = n("427828"),
   V = n("916187"),
   Y = n("158010"),
@@ -82,7 +82,7 @@ let ee = e => {
         color: g.default.BG_BRAND,
         text: (0, a.jsxs)("div", {
           className: $.broadcastingBadge,
-          children: [(0, a.jsx)(B.default, {
+          children: [(0, a.jsx)(F.default, {
             className: $.broadcastingIcon
           }), (0, a.jsx)(E.Text, {
             variant: "text-xs/semibold",
@@ -125,7 +125,7 @@ let ee = e => {
     return (0, a.jsx)(q.LinkButton, {
       selected: t,
       route: n,
-      icon: F.default,
+      icon: B.default,
       iconClassName: i()($.activitiesBirthdayIcon, {
         [$.activitiesBirthdayIconLight]: "light" === u
       }),
@@ -144,7 +144,7 @@ let ee = e => {
     } = e, n = (0, v.useMessageRequestsCount)(), s = (0, o.useListItem)("messageRequests"), {
       channelId: l
     } = (0, N.useMessageRequestSidebarState)();
-    if (!(0, R.useShouldShowMessageRequestsRow)()) return null;
+    if (!(0, L.useShouldShowMessageRequestsRow)()) return null;
     let i = null == l ? void 0 : () => h.default.preload(X.ME, l);
     return (0, a.jsx)(q.LinkButton, {
       selected: t,
@@ -161,7 +161,7 @@ let ee = e => {
   es = e => {
     let {
       selected: t
-    } = e, n = J.default.Messages.FAMILY_CENTER_SIDEBAR_TITLE, l = (0, o.useListItem)("family-center"), i = b.FamilyCenterEnabled.useSetting(), r = (0, L.default)(), [u, d] = s.useState(!0);
+    } = e, n = J.default.Messages.FAMILY_CENTER_SIDEBAR_TITLE, l = (0, o.useListItem)("family-center"), i = b.FamilyCenterEnabled.useSetting(), r = (0, R.default)(), [u, d] = s.useState(!0);
     return i && r ? (0, a.jsx)(q.LinkButton, {
       selected: t,
       route: X.Routes.FAMILY_CENTER,
@@ -235,7 +235,7 @@ let eo = e => {
     homeLink: s,
     storeLink: l,
     premiumTabSelected: o
-  } = e, [d, c] = (0, x.default)(e => {
+  } = e, [d, c] = (0, y.default)(e => {
     let {
       channelId: t,
       path: n
@@ -251,7 +251,7 @@ let eo = e => {
   return (0, a.jsxs)("nav", {
     className: $.privateChannels,
     "aria-label": J.default.Messages.PRIVATE_CHANNELS_A11Y_LABEL,
-    children: [(0, a.jsx)(y.default, {
+    children: [(0, a.jsx)(x.default, {
       tutorialId: "direct-messages",
       position: "right",
       offsetX: -52,

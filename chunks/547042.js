@@ -36,12 +36,12 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
       analyticsType: A,
       ctaText: N,
       dismissText: v,
-      description: R,
-      learnMore: L,
+      description: L,
+      learnMore: R,
       title: O,
       videoPosterUrl: M,
       videoUrl: P,
-      ctaOnClick: x
+      ctaOnClick: y
     } = function(e) {
       switch (e) {
         case "BOOSTING":
@@ -66,7 +66,7 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
           }
       }
     }(a), {
-      analyticsLocations: y
+      analyticsLocations: x
     } = (0, E.default)(s);
     i.useEffect(() => {
       C.default.track(m.AnalyticEvents.TOOLTIP_VIEWED, {
@@ -76,7 +76,7 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
     let D = (0, u.useAppContext)() === m.AppContext.POPOUT,
       b = (0, r.useStateFromStores)([h.default], () => h.default.getChannel(t), [t]);
     return (0, l.jsx)(E.AnalyticsLocationProvider, {
-      value: y,
+      value: x,
       children: (0, l.jsx)("div", {
         className: I.wrapper,
         children: (0, l.jsx)("div", {
@@ -104,7 +104,7 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
               className: I.subheaderText,
               variant: "text-xs/normal",
               color: "always-white",
-              children: [R, L ? (0, l.jsxs)(l.Fragment, {
+              children: [L, R ? (0, l.jsxs)(l.Fragment, {
                 children: [" ", (0, l.jsx)(o.Anchor, {
                   className: I.learnMoreLink,
                   href: "https://support.discord.com/hc/articles/4422142836759",
@@ -122,7 +122,7 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
               }), (0, l.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,
                 look: o.Button.Looks.INVERTED,
-                onClick: null != x ? x : () => {
+                onClick: null != y ? y : () => {
                   n(S.ContentDismissActionType.UNKNOWN), null != b && ((0, c.default)({
                     channel: b.isGuildVoice() ? b : void 0,
                     guildId: b.guild_id,
@@ -133,7 +133,7 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                       objectType: m.AnalyticsObjectTypes.ACTIVITY
                     },
                     openInPopout: D,
-                    analyticsLocations: y
+                    analyticsLocations: x
                   }), (0, d.fetchShelf)({
                     guildId: b.guild_id
                   }))

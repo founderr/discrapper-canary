@@ -31,7 +31,7 @@ function S(e) {
     isLightTheme: g
   } = e, A = "AnnouncementModalVariant1_".concat(s.DismissibleContent[Number(S.dismissKey)]), {
     onClose: N
-  } = p, v = null != S.button && "" !== S.button.copy ? S.button.copy : _.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, R = (null === (t = S.button) || void 0 === t ? void 0 : t.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", L = (null === (n = S.button) || void 0 === n ? void 0 : n.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? () => {
+  } = p, v = null != S.button && "" !== S.button.copy ? S.button.copy : _.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, L = (null === (t = S.button) || void 0 === t ? void 0 : t.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", R = (null === (n = S.button) || void 0 === n ? void 0 : n.buttonAction) === l.ButtonAction.OPEN_MARKETING_PAGE ? () => {
     (0, o.transitionTo)(h.Routes.APPLICATION_STORE), N()
   } : () => (0, r.default)({
     subscriptionTier: E.PremiumSubscriptionSKUs.TIER_2,
@@ -61,7 +61,7 @@ function S(e) {
     src: g ? S.heroArtImageLinkLightTheme : S.heroArtImageLinkDarkTheme
   });
   let P = g ? f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : f.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL,
-    x = "" !== S.modalTopPill ? () => (0, a.jsx)(f.PremiumPillWithSparkles, {
+    y = "" !== S.modalTopPill ? () => (0, a.jsx)(f.PremiumPillWithSparkles, {
       text: S.modalTopPill,
       className: C.modalTopPill,
       colorOptions: P
@@ -69,7 +69,7 @@ function S(e) {
   return {
     renderModalProps: p,
     header: S.header,
-    modalTopExtra: x,
+    modalTopExtra: y,
     subHeader: S.subheader,
     subHeaderExtra: O,
     heroArt: M,
@@ -90,10 +90,10 @@ function S(e) {
         onClick: () => {
           d.default.track(h.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
             change_log_id: A,
-            cta_type: R,
+            cta_type: L,
             seconds_open: Math.round((Date.now() - e) / 1e3),
             target: A
-          }), L()
+          }), R()
         },
         children: [(0, a.jsx)("img", {
           alt: "",

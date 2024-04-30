@@ -27,13 +27,13 @@ var a = n("735250"),
   A = n("871499"),
   N = n("136995"),
   v = n("25827"),
-  R = n("131951"),
-  L = n("594174"),
+  L = n("131951"),
+  R = n("594174"),
   O = n("451478"),
   M = n("465670"),
   P = n("421600"),
-  x = n("792125"),
-  y = n("358221"),
+  y = n("792125"),
+  x = n("358221"),
   D = n("793865"),
   b = n("981631"),
   U = n("65154"),
@@ -44,11 +44,11 @@ let k = {
     width: 232,
     height: 315
   },
-  F = {
+  B = {
     width: 232,
     height: 267
   },
-  B = {
+  F = {
     width: 475,
     height: 267
   };
@@ -56,9 +56,9 @@ let k = {
 function H(e) {
   let {
     header: t
-  } = e, n = R.default.getCameraComponent(), l = (0, o.useStateFromStores)([R.default], () => R.default.getVideoDeviceId()), i = (0, p.default)();
+  } = e, n = L.default.getCameraComponent(), l = (0, o.useStateFromStores)([L.default], () => L.default.getVideoDeviceId()), i = (0, p.default)();
   return s.useEffect(() => {
-    let e = L.default.getCurrentUser();
+    let e = R.default.getCurrentUser();
     if (i && null != e) {
       let t = (0, m.getLastUsedVideoBackgroundOption)(e);
       (0, S.applyBackgroundOptionPreview)(t, l, {
@@ -72,8 +72,8 @@ function H(e) {
       children: (0, a.jsx)(n, {
         disabled: !1,
         deviceId: l,
-        width: B.width,
-        height: B.height
+        width: F.width,
+        height: F.height
       })
     }), (0, a.jsx)("div", {
       className: G.previewChannelHeader,
@@ -149,7 +149,7 @@ function Y(e) {
     y: n,
     x: l,
     channel: f
-  } = e, [C, m] = s.useState(!1), S = (0, h.getChannelIconURL)(f), p = (0, _.default)(f), [I, T] = (0, o.useStateFromStoresArray)([R.default], () => [R.default.supports(U.Features.VIDEO), Object.keys(R.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([O.default], () => O.default.isFocused()), A = (0, o.useStateFromStores)([y.default], () => y.default.getMode(f.id)), N = s.useCallback(e => {
+  } = e, [C, m] = s.useState(!1), S = (0, h.getChannelIconURL)(f), p = (0, _.default)(f), [I, T] = (0, o.useStateFromStoresArray)([L.default], () => [L.default.supports(U.Features.VIDEO), Object.keys(L.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([O.default], () => O.default.isFocused()), A = (0, o.useStateFromStores)([x.default], () => x.default.getMode(f.id)), N = s.useCallback(e => {
     null != e.top && null != e.left && c.default.move(e.left, e.top)
   }, []), v = (0, r.useSpring)({
     value: C ? 1 : 0,
@@ -164,7 +164,7 @@ function Y(e) {
     };
     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
   }, [f]);
-  let L = A === b.ChannelModes.VIDEO && I && T > 0,
+  let R = A === b.ChannelModes.VIDEO && I && T > 0,
     M = (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(P.default, {
         className: G.icon,
@@ -187,7 +187,7 @@ function Y(e) {
         })]
       })]
     }),
-    D = L ? k : F;
+    D = R ? k : B;
   return (0, a.jsx)(E.default, {
     className: G.wrapper,
     selector: ".".concat(G.root),
@@ -203,12 +203,12 @@ function Y(e) {
       children: (0, a.jsxs)(r.animated.div, {
         className: i()(G.root, w.elevationHigh, {
           [G.previewCamera]: C
-        }, C ? (0, x.getThemeClass)("dark") : null),
+        }, C ? (0, y.getThemeClass)("dark") : null),
         style: {
           ...t,
-          width: v.value.interpolate([0, 1], [D.width, B.width]),
-          minHeight: v.value.interpolate([0, 1], [D.height, B.height]),
-          translateX: v.value.interpolate([0, 1], [0, -1 * Math.abs(B.width - D.width) / 2])
+          width: v.value.interpolate([0, 1], [D.width, F.width]),
+          minHeight: v.value.interpolate([0, 1], [D.height, F.height]),
+          translateX: v.value.interpolate([0, 1], [0, -1 * Math.abs(F.width - D.width) / 2])
         },
         children: [C ? (0, a.jsx)(H, {
           header: M
@@ -216,10 +216,10 @@ function Y(e) {
           className: G.mainChannelInfo,
           children: M
         }), (0, a.jsx)(V, {
-          canVideo: L,
+          canVideo: R,
           channel: f,
           numVideoDevices: T
-        }), L && !C ? (0, a.jsx)(u.Button, {
+        }), R && !C ? (0, a.jsx)(u.Button, {
           size: u.Button.Sizes.SMALL,
           fullWidth: !0,
           look: u.Button.Looks.LINK,
