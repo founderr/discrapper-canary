@@ -111,7 +111,7 @@ function R(e) {
           }),
           value: null != D ? D : L.Soundpacks.CLASSIC,
           onChange: e => {
-            b(e.value), P && (0, O.updateGuildCustomNotificationSound)(t, e.value)
+            b(e.value), P && (0, O.updateGuildCustomNotificationSound)(t, e.value, "notificationSettings")
           },
           options: z,
           radioItemClassName: j.option
@@ -119,7 +119,8 @@ function R(e) {
           className: j.playableOption,
           label: e.label,
           description: e.description,
-          soundpack: e.value
+          soundpack: e.value,
+          location: "notificationSettings"
         }, "sound_option_".concat(t)))]
       })
     }), !J && (0, i.jsx)(M.default, {
