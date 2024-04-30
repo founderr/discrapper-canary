@@ -95,7 +95,7 @@ function I(e) {
   }
   I(e)
 }
-class T extends d.default {
+class g extends d.default {
   send(e) {
     h.info("Socket Emit: ".concat(this.id), (0, u.default)(e)), this.socket.write(p(_.FRAME, e))
   }
@@ -115,7 +115,7 @@ class T extends d.default {
     }) : a[s] = l, this.socket = e
   }
 }
-class g extends s.EventEmitter {
+class T extends s.EventEmitter {
   handleConnection(e) {
     C(e, !1), e.pause(), e.on("readable", () => {
       try {
@@ -131,7 +131,7 @@ class g extends s.EventEmitter {
       let a = t.client_id,
         s = +t.v;
       try {
-        n = new T(e, s, "json")
+        n = new g(e, s, "json")
       } catch (t) {
         e.end(p(_.CLOSE, {
           code: t.code,
@@ -164,4 +164,4 @@ class g extends s.EventEmitter {
     })
   }
 }
-t.default = new g
+t.default = new T

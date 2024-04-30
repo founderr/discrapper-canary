@@ -18,8 +18,8 @@ var l = n("735250"),
   c = n("873546"),
   f = n("442837"),
   h = n("481060"),
-  m = n("493683"),
-  p = n("239091"),
+  p = n("493683"),
+  m = n("239091"),
   C = n("420660"),
   g = n("201895"),
   E = n("43267"),
@@ -86,8 +86,8 @@ class Z extends a.Component {
       children: o,
       locationState: d,
       onClick: f,
-      className: m,
-      role: p,
+      className: p,
+      role: m,
       "aria-posinset": C,
       "aria-setsize": g,
       ...E
@@ -95,9 +95,9 @@ class Z extends a.Component {
     return (0, l.jsx)(j.default, {
       className: i()(k.channel, {
         [k.fullWidth]: c.isMobile
-      }, m),
+      }, p),
       onClick: f,
-      role: p,
+      role: m,
       focusProps: {
         within: !0,
         ...K
@@ -159,9 +159,9 @@ function X(e) {
     w(!1)
   }, es = function(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    null != e && (e.preventDefault(), e.stopPropagation()), m.default.closePrivateChannel(t.id, r, n)
+    null != e && (e.preventDefault(), e.stopPropagation()), p.default.closePrivateChannel(t.id, r, n)
   }, ei = () => {
-    m.default.preload(V.ME, t.id)
+    p.default.preload(V.ME, t.id)
   }, er = e => {
     e.stopPropagation()
   }, eo = e => {
@@ -170,7 +170,7 @@ function X(e) {
       null === (t = Z.current) || void 0 === t || t.click()
     }
   }, eu = e => {
-    t.isMultiUserDM() ? (0, p.openContextMenuLazy)(e, async () => {
+    t.isMultiUserDM() ? (0, m.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("79695"), n.e("25421")]).then(n.bind(n, "354741"));
@@ -181,7 +181,7 @@ function X(e) {
       })
     }, {
       noBlurEvent: !0
-    }) : (0, p.openContextMenuLazy)(e, async () => {
+    }) : (0, m.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("56826")]).then(n.bind(n, "131404"));
@@ -262,7 +262,7 @@ function X(e) {
       "aria-label": c.username,
       statusTooltip: !0
     })
-  }, eh = t.isMultiUserDM(), em = t.isSystemDM(), ep = (0, T.systemDMRedesignEnabled)();
+  }, eh = t.isMultiUserDM(), ep = t.isSystemDM(), em = (0, T.systemDMRedesignEnabled)();
   return (0, l.jsx)(d.ListNavigatorItem, {
     id: t.id,
     children: e => {
@@ -287,7 +287,7 @@ function X(e) {
         "aria-posinset": P,
         children: (0, l.jsxs)(h.Interactive, {
           className: i()(k.interactive, {
-            [k.interactiveSystemDM]: ep && em,
+            [k.interactiveSystemDM]: em && ep,
             [k.interactiveSelected]: r
           }),
           as: "div",
@@ -318,7 +318,7 @@ function X(e) {
                 verified: !0
               }) : null
             })
-          }), en ? (0, l.jsx)(z, {}) : null, !em && (0, l.jsx)(W, {
+          }), en ? (0, l.jsx)(z, {}) : null, !ep && (0, l.jsx)(W, {
             "aria-label": eh ? H.default.Messages.LEAVE_GROUP_DM : H.default.Messages.CLOSE_DM,
             onClick: eh ? ed : es,
             onMouseDown: er

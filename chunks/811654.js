@@ -15,10 +15,10 @@ n.r(t), n.d(t, {
 }), n("47120");
 var l = n("524846"),
   a = n("911969"),
-  s = n("592125"),
-  o = n("271383"),
+  r = n("592125"),
+  s = n("271383"),
   u = n("430824"),
-  r = n("594174"),
+  o = n("594174"),
   i = n("483360"),
   d = n("823379"),
   c = n("5192"),
@@ -27,26 +27,26 @@ n("892902");
 let p = 1e3;
 
 function f(e, t, n) {
-  let l = s.default.getChannel(n);
+  let l = r.default.getChannel(n);
   if (null == l) return [];
-  let o = e === a.ComponentType.USER_SELECT || e === a.ComponentType.MENTIONABLE_SELECT,
+  let s = e === a.ComponentType.USER_SELECT || e === a.ComponentType.MENTIONABLE_SELECT,
     u = e === a.ComponentType.ROLE_SELECT || e === a.ComponentType.MENTIONABLE_SELECT,
     {
-      users: r,
+      users: o,
       roles: d
     } = i.default.queryMentionResults({
       query: t,
       channel: l,
       canMentionEveryone: !1,
       canMentionHere: !1,
-      canMentionUsers: o,
+      canMentionUsers: s,
       canMentionRoles: u,
       includeAllGuildUsers: !0,
       includeNonMentionableRoles: !0,
       checkRecentlyTalkedOnEmptyQuery: !1,
       limit: 15
     }),
-    p = r.map(e => {
+    p = o.map(e => {
       var t;
       let a = c.default.getNickname(l.getGuildId(), n, e.user);
       return {
@@ -63,7 +63,7 @@ function f(e, t, n) {
 }
 
 function C(e, t, n) {
-  let l = s.default.getChannel(t);
+  let l = r.default.getChannel(t);
   return null == l ? [] : i.default.queryApplicationCommandChannelResults({
     query: e,
     channel: l,
@@ -84,9 +84,9 @@ function S(e, t) {
     switch (e.type) {
       case l.SnowflakeSelectDefaultValueTypes.USER: {
         var t;
-        let n = r.default.getUser(e.id);
+        let n = o.default.getUser(e.id);
         if (null == n) return null;
-        let l = null != a ? o.default.getNick(a.id, n.id) : void 0;
+        let l = null != a ? s.default.getNick(a.id, n.id) : void 0;
         return {
           type: m.SelectOptionType.USER,
           value: n.id,
@@ -105,7 +105,7 @@ function S(e, t) {
       }
       case l.SnowflakeSelectDefaultValueTypes.CHANNEL: {
         if (null == a) return null;
-        let t = s.default.getChannel(e.id);
+        let t = r.default.getChannel(e.id);
         if (null == t || t.guild_id !== a.id || n.length > 0 && !n.includes(t.type)) return null;
         return {
           type: m.SelectOptionType.CHANNEL,

@@ -17,8 +17,8 @@ var l, a = n("735250"),
   c = n("925549"),
   f = n("260300"),
   h = n("410575"),
-  m = n("607070"),
-  p = n("100527"),
+  p = n("607070"),
+  m = n("100527"),
   C = n("906732"),
   g = n("362658"),
   E = n("583962"),
@@ -494,8 +494,8 @@ class eo extends(l = s.PureComponent) {
         voiceStates: c,
         disableManageChannels: f,
         stageChannelSpeakerVoiceStates: h,
-        optInEnabled: m,
-        withGuildIcon: p
+        optInEnabled: p,
+        withGuildIcon: m
       } = this.props;
       if (t === D.SECTION_INDEX_COMMUNITY) {
         let e = d.getCommunitySection(),
@@ -585,11 +585,11 @@ class eo extends(l = s.PureComponent) {
               muted: I.isMuted,
               subtitle: I.subtitle,
               disableManageChannels: f,
-              canBeNewChannel: m && t === d.recentsSectionNumber,
+              canBeNewChannel: p && t === d.recentsSectionNumber,
               isFavoriteCategory: N,
-              withGuildIcon: p
+              withGuildIcon: m
             }), I.threadCount > 0 ? (0, a.jsx)(z.default, {
-              withGuildIcon: p,
+              withGuildIcon: m,
               channel: T,
               sortedThreadIds: I.threadIds,
               selectedChannel: null != i && (i.id === I.id || i.parent_id === T.id) ? i : null,
@@ -623,7 +623,7 @@ class eo extends(l = s.PureComponent) {
             disableManageChannels: f,
             showTutorial: I.isFirstVoiceChannel,
             isFavoriteCategory: N,
-            withGuildIcon: p
+            withGuildIcon: m
           }, A);
         case el.ChannelTypes.GUILD_STORE:
           return (0, a.jsx)(X.default, {
@@ -710,9 +710,9 @@ let eu = e => {
     guildId: t,
     selectedChannelId: n,
     selectedVoiceChannelId: l
-  } = e, i = (0, u.useStateFromStores)([m.default], () => m.default.keyboardModeEnabled), {
+  } = e, i = (0, u.useStateFromStores)([p.default], () => p.default.keyboardModeEnabled), {
     analyticsLocations: r
-  } = (0, C.default)(p.default.GUILD_CHANNEL_LIST), d = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(n)), c = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(l)), f = (0, u.useStateFromStores)([y.default], () => y.default.getGuildId()), g = (0, N.useOptInEnabledForGuild)(t), E = s.useRef(null), _ = s.useCallback((e, t) => {
+  } = (0, C.default)(m.default.GUILD_CHANNEL_LIST), d = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(n)), c = (0, u.useStateFromStores)([x.default], () => x.default.getChannel(l)), f = (0, u.useStateFromStores)([y.default], () => y.default.getGuildId()), g = (0, N.useOptInEnabledForGuild)(t), E = s.useRef(null), _ = s.useCallback((e, t) => {
     let n = E.current;
     if (null != n) {
       if (el.ID_REGEX.test(t) || (0, ea.isStaticChannelRoute)(t)) n.scrollToChannel(t, !1, 2 * en.SCROLL_TO_SPACER, () => {

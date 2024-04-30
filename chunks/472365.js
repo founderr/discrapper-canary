@@ -15,8 +15,8 @@ var l = n("735250"),
   c = n("906732"),
   f = n("792766"),
   h = n("451603"),
-  m = n("885714"),
-  p = n("973616"),
+  p = n("885714"),
+  m = n("973616"),
   C = n("594174"),
   g = n("285952"),
   E = n("672752"),
@@ -52,7 +52,7 @@ function G() {
       location_stack: t
     })
   }, [t]), (0, l.jsxs)(o.Clickable, {
-    onClick: () => (0, m.default)({
+    onClick: () => (0, p.default)({
       analyticsSource: {
         page: O.AnalyticsLocations.EXTERNAL_INVITE_LINK_MODAL
       },
@@ -141,7 +141,7 @@ function F(e) {
     return null === (e = C.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType
   });
   let {
-    invite: m,
+    invite: p,
     error: E,
     submitting: I
   } = (0, r.useStateFromStoresObject)([y.default], () => y.default.getProps());
@@ -152,22 +152,22 @@ function F(e) {
     {
       analyticsLocations: T
     } = (0, c.default)(d.default.INVITE_MODAL);
-  if (null == m) return null;
-  if (m.state === O.InviteStates.EXPIRED || m.state === O.InviteStates.BANNED || m.state === O.InviteStates.ERROR) return (0, l.jsx)(w, {
+  if (null == p) return null;
+  if (p.state === O.InviteStates.EXPIRED || p.state === O.InviteStates.BANNED || p.state === O.InviteStates.ERROR) return (0, l.jsx)(w, {
     transitionState: s
   });
-  if (null == m.channel) return null;
+  if (null == p.channel) return null;
 
   function A() {
-    null != m && M.default.acceptInvite(m)
+    null != p && M.default.acceptInvite(p)
   }
   let {
     guild: L,
     channel: D,
     inviter: U,
     target_application: F
-  } = m, B = null != m.stage_instance, V = null == m.guild && null == m.channel && null != m.inviter;
-  if (null != F) t = null == L ? void 0 : L.name, n = p.default.createFromServer(F).getCoverImageURL(1024);
+  } = p, B = null != p.stage_instance, V = null == p.guild && null == p.channel && null != p.inviter;
+  if (null != F) t = null == L ? void 0 : L.name, n = m.default.createFromServer(F).getCoverImageURL(1024);
   else if (null != L) t = L.name, n = v.default.getGuildSplashURL({
     id: L.id,
     splash: L.splash
@@ -196,7 +196,7 @@ function F(e) {
               id: N,
               className: P.marginBottom20,
               children: (0, l.jsx)(u.default, {
-                invite: m,
+                invite: p,
                 disableUser: null != L,
                 error: E
               })
@@ -204,7 +204,7 @@ function F(e) {
               className: i()(P.marginBottom20, j.stage),
               children: (0, l.jsx)(f.default, {
                 isCard: !0,
-                stageInstance: m.stage_instance,
+                stageInstance: p.stage_instance,
                 guild: L
               })
             }) : null, (0, l.jsxs)("div", {

@@ -16,8 +16,8 @@ var a = n("120356"),
   c = n("146773"),
   f = n("888651"),
   h = n("619915"),
-  m = n("339340"),
-  p = n("201895"),
+  p = n("339340"),
+  m = n("201895"),
   C = n("718589"),
   g = n("933557"),
   E = n("557135"),
@@ -147,7 +147,7 @@ class Q extends F.default {
       isUserOver: c,
       connectChannelDropTarget: f,
       connectChannelDragSource: h,
-      connectUserDropTarget: m,
+      connectUserDropTarget: p,
       connectDragPreview: g,
       canReorderChannel: E,
       canMoveMembers: _,
@@ -203,7 +203,7 @@ class Q extends F.default {
                 },
                 connectDragPreview: g,
                 isFavoriteSuggestion: A,
-                "aria-label": (0, p.default)({
+                "aria-label": (0, m.default)({
                   channel: e,
                   unread: a,
                   mentionCount: r,
@@ -224,7 +224,7 @@ class Q extends F.default {
         })
       }), this.renderVoiceUsers()]
     });
-    return _ && (y = m(y)), E && (y = f(h(y))), S && (y = (0, l.jsx)(R.default, {
+    return _ && (y = p(y)), E && (y = f(h(y))), S && (y = (0, l.jsx)(R.default, {
       tutorialId: "voice-conversations",
       position: "right",
       offsetX: -20,
@@ -303,7 +303,7 @@ class Q extends F.default {
           ...t
         })
       }, {
-        modalKey: m.VOICE_CHANNEL_STATUS_MODAL_KEY
+        modalKey: p.VOICE_CHANNEL_STATUS_MODAL_KEY
       }))
     }), X(this, "renderPopout", () => {
       let {
@@ -400,7 +400,7 @@ function J(e) {
       bypassLimit: b.default.can(K.Permissions.MOVE_MEMBERS, n),
       unverifiedAccount: !l.canChat
     }
-  }), m = (0, i.useStateFromStores)([G.default], () => G.default.hasVideo(n.id)), p = (0, h.default)(n), C = (0, g.default)(n), E = (0, A.useActiveEvent)(n.id), {
+  }), p = (0, i.useStateFromStores)([G.default], () => G.default.hasVideo(n.id)), m = (0, h.default)(n), C = (0, g.default)(n), E = (0, A.useActiveEvent)(n.id), {
     isSubscriptionGated: _,
     needSubscriptionToAccess: I
   } = (0, T.default)(n.id), N = (0, S.default)(), L = (0, i.useStateFromStores)([P.default], () => P.default.isFavorite(t.id, n.id)), x = e.connected || (null == N ? void 0 : N.channelId) === n.id, {
@@ -423,9 +423,9 @@ function J(e) {
   }), U = x && null == O;
   return (0, l.jsx)(q, {
     channelName: C,
-    embeddedApps: p,
+    embeddedApps: m,
     embeddedActivityType: K.ActivityTypes.PLAYING,
-    video: m,
+    video: p,
     hasActiveEvent: null != E,
     isSubscriptionGated: _,
     needSubscriptionToAccess: I,

@@ -4,15 +4,15 @@ n.r(t), n.d(t, {
     return u
   },
   useMessageAccessoriesComponentContext: function() {
-    return o
+    return s
   }
 }), n("411104");
 var l = n("735250"),
   a = n("470079");
-let s = a.createContext(null);
+let r = a.createContext(null);
 
-function o() {
-  let e = a.useContext(s);
+function s() {
+  let e = a.useContext(r);
   if (null == e) throw Error("Could not find context for useMessageAccessoriesComponentContext.");
   return e
 }
@@ -22,7 +22,7 @@ function u(e) {
     children: t,
     ...n
   } = e;
-  return (0, l.jsx)(s.Provider, {
+  return (0, l.jsx)(r.Provider, {
     value: n,
     children: t
   })

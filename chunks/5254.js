@@ -15,7 +15,7 @@ let _ = {},
   p = new Set,
   I = new Set;
 
-function T(e, t) {
+function g(e, t) {
   var n;
   let a = null != e.contact_names && e.contact_names.length >= 2 ? e.contact_names.slice(0, 2) : [];
   return {
@@ -27,7 +27,7 @@ function T(e, t) {
     isUnseen: !t && !e.is_viewed
   }
 }(0, r.debounce)(e => h.default.viewSuggestions(e), 15e3);
-class g extends(a = u.default.Store) {
+class T extends(a = u.default.Store) {
   initialize() {
     this.waitFor(E.default)
   }
@@ -44,17 +44,17 @@ class g extends(a = u.default.Store) {
     return _[e]
   }
 }
-i = "FriendSuggestionStore", (l = "displayName") in(s = g) ? Object.defineProperty(s, l, {
+i = "FriendSuggestionStore", (l = "displayName") in(s = T) ? Object.defineProperty(s, l, {
   value: i,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[l] = i, t.default = new g(d.default, {
+}) : s[l] = i, t.default = new T(d.default, {
   CONNECTION_OPEN: function(e) {
     _ = {}, (C = e.friendSuggestionCount) > 0 && (S = !0, m || !S || (m = !0, S = !1, h.default.fetch()))
   },
   FRIEND_SUGGESTION_CREATE: function(e) {
-    let t = T(e.suggestion);
+    let t = g(e.suggestion);
     if (null != _[t.key]) return !1;
     C++, _ = {
       ..._,
@@ -68,7 +68,7 @@ i = "FriendSuggestionStore", (l = "displayName") in(s = g) ? Object.defineProper
     m = !1, _ = function(e) {
       let t = e.reduce((e, t) => e + (t.is_viewed ? 0 : 1), 0) === e.length,
         n = !(0, c.isInFriendSuggestionSeenStateExperiment)() || t;
-      return o().chain(e).map(e => T(e, n)).keyBy(e => e.key).value()
+      return o().chain(e).map(e => g(e, n)).keyBy(e => e.key).value()
     }(e.suggestions), C = o().keys(_).length
   },
   LOAD_FRIEND_SUGGESTIONS_FAILURE: function() {

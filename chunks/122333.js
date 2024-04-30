@@ -19,8 +19,8 @@ var l = n("481060"),
   S = n("594174"),
   p = n("823379"),
   I = n("358085"),
-  T = n("929809"),
-  g = n("179645"),
+  g = n("929809"),
+  T = n("179645"),
   A = n("701476"),
   N = n("785997"),
   v = n("981631"),
@@ -39,7 +39,7 @@ class M extends r.default {
   }
   handleConnectionOpen() {
     var e;
-    let t, i = g.default.getType();
+    let t, i = T.default.getType();
     if (null == i) return;
     switch (i) {
       case A.NewUserTypes.INVITE_UNCLAIMED:
@@ -139,7 +139,7 @@ class M extends r.default {
       }),
       predicate: () => null != O && null != h.default.get(O) && h.default.get(O) !== h.NO_WELCOME_SCREEN
     }], t = () => {
-      T.setNewUserFlowCompleted(), f.default.flowStep(R.FlowType.ANY, R.RegistrationSteps.NUF_COMPLETE, !0)
+      g.setNewUserFlowCompleted(), f.default.flowStep(R.FlowType.ANY, R.RegistrationSteps.NUF_COMPLETE, !0)
     }, [...e].reverse().forEach(e => {
       let n = t;
       t = () => {

@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
 var l = n("735250");
 n("470079");
 var a = n("120356"),
-  s = n.n(a),
-  o = n("481060"),
+  r = n.n(a),
+  s = n("481060"),
   u = n("239091"),
-  r = n("596454"),
+  o = n("596454"),
   i = n("911969"),
   d = n("441957"),
   c = n("572004"),
@@ -25,13 +25,13 @@ function E(e) {
     url: t,
     onSelect: n
   } = e;
-  return c.SUPPORTS_COPY && null != t ? (0, l.jsx)(o.Menu, {
+  return c.SUPPORTS_COPY && null != t ? (0, l.jsx)(s.Menu, {
     navId: "component-button",
     onClose: u.closeContextMenu,
     "aria-label": C.default.Messages.MESSAGE_BUTTON_COMPONENT_LINK_CONTEXT_MENU_NAME,
     onSelect: n,
-    children: (0, l.jsx)(o.MenuGroup, {
-      children: (0, l.jsx)(o.MenuItem, {
+    children: (0, l.jsx)(s.MenuGroup, {
+      children: (0, l.jsx)(s.MenuItem, {
         id: "copy",
         label: C.default.Messages.MESSAGE_BUTTON_COMPONENT_LINK_CONTEXT_MENU_COPY,
         action: () => (0, c.copy)(t)
@@ -58,20 +58,20 @@ function v(e) {
       href: null != v ? v : "",
       shouldConfirm: !0
     })
-  } : () => N(), (0, l.jsxs)(o.Button, {
+  } : () => N(), (0, l.jsxs)(s.Button, {
     color: function(e) {
       switch (e) {
         case i.ButtonStyle.PRIMARY:
-          return o.Button.Colors.BRAND;
+          return s.Button.Colors.BRAND;
         case i.ButtonStyle.SUCCESS:
-          return o.Button.Colors.GREEN;
+          return s.Button.Colors.GREEN;
         case i.ButtonStyle.DESTRUCTIVE:
-          return o.Button.Colors.RED;
+          return s.Button.Colors.RED;
         default:
-          return o.Button.Colors.PRIMARY
+          return s.Button.Colors.PRIMARY
       }
     }(a),
-    size: o.Button.Sizes.SMALL,
+    size: s.Button.Sizes.SMALL,
     disabled: c || h === f.ActionComponentState.DISABLED || T,
     onClick: t,
     onContextMenu: e => {
@@ -82,12 +82,12 @@ function v(e) {
     },
     role: y ? "link" : "button",
     children: [(0, l.jsxs)("div", {
-      className: s()(S.content, {
+      className: r()(S.content, {
         [S.hidden]: g
       }),
       "aria-hidden": g,
-      children: [null != C ? (0, l.jsx)(r.default, {
-        className: s()({
+      children: [null != C ? (0, l.jsx)(o.default, {
+        className: r()({
           [S.textEmoji]: x
         }),
         src: C.src,
@@ -104,7 +104,7 @@ function v(e) {
       }) : null]
     }), g ? (0, l.jsx)("div", {
       className: S.loading,
-      children: (0, l.jsx)(o.Dots, {
+      children: (0, l.jsx)(s.Dots, {
         dotRadius: 3.5,
         themed: !0
       })

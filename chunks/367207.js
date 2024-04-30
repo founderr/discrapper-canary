@@ -12,8 +12,8 @@ var a = n("848246"),
   c = n("594174"),
   f = n("295226"),
   h = n("74538"),
-  m = n("736871"),
-  p = n("351742"),
+  p = n("736871"),
+  m = n("351742"),
   C = n("114064"),
   g = n("937579"),
   E = n("485731"),
@@ -85,13 +85,13 @@ class T extends r.default {
     var t;
     let {
       inPerksDemosExperiment: n
-    } = m.default.getCurrentConfig({
+    } = p.default.getCurrentConfig({
       location: "PremiumManager"
     }, {
       autoTrackExposure: !1
     }), {
       enabled: l
-    } = p.default.getCurrentConfig({
+    } = m.default.getCurrentConfig({
       location: "PremiumManager"
     }, {
       autoTrackExposure: !1

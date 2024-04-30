@@ -22,8 +22,8 @@ var a = n("735250"),
   S = n("78826"),
   p = n("909389"),
   I = n("941348"),
-  T = n("46140"),
-  g = n("981631"),
+  g = n("46140"),
+  T = n("981631"),
   A = n("905277");
 
 function N(e) {
@@ -31,7 +31,7 @@ function N(e) {
   let {
     quest: E
   } = e, N = (0, C.useIsEligibleForQuests)({
-    location: T.QuestsExperimentLocations.QUESTS_BAR
+    location: g.QuestsExperimentLocations.QUESTS_BAR
   }), v = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), L = (0, o.useStateFromStores)([d.default], () => d.default.hasLayers()), R = s.useRef(-1), O = s.useRef(!1), [M, P] = s.useState(!1), [y, x] = s.useState(!1), [D, b] = s.useState(!1), [U, j] = s.useState(!0), [G, w] = s.useState(240), k = s.useRef(null), B = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, F = s.useRef(B), H = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, V = (null === (l = E.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null, Y = null != E.userStatus && (0, _.isDismissed)(E.userStatus, h.QuestContent.QUEST_BAR), W = (0, f.useIsQuestExpired)(E), {
     hasError: K,
     isLoading: z
@@ -55,7 +55,7 @@ function N(e) {
   }, [M, H]), ee = s.useCallback(() => {
     (0, c.trackQuestEvent)({
       questId: E.id,
-      event: g.AnalyticEvents.QUEST_HOVER
+      event: T.AnalyticEvents.QUEST_HOVER
     }), O.current = !0, J({
       withDelay: !0
     })
@@ -125,7 +125,7 @@ function N(e) {
   }), {
     primaryVariant: ei
   } = C.QuestBarExperiment.useExperiment({
-    location: T.QuestsExperimentLocations.QUESTS_BAR
+    location: g.QuestsExperimentLocations.QUESTS_BAR
   }, {
     autoTrackExposure: en && !K
   });
@@ -189,7 +189,7 @@ t.default = function(e) {
     overrideQuest: t
   } = e, n = (0, o.useStateFromStores)([E.default], () => null != t ? t : (0, _.getQuestForTargetedContent)(E.default.quests, h.QuestContent.QUEST_BAR));
   return null == n ? null : (0, a.jsx)(S.QuestsAssetContextProvider, {
-    sentrySource: T.QuestsExperimentLocations.QUESTS_BAR,
+    sentrySource: g.QuestsExperimentLocations.QUESTS_BAR,
     children: (0, a.jsx)(N, {
       quest: n
     })

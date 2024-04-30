@@ -22,8 +22,8 @@ var a = n("735250"),
   S = n("283595"),
   p = n("417363"),
   I = n("626135"),
-  T = n("804739"),
-  g = n("346329"),
+  g = n("804739"),
+  T = n("346329"),
   A = n("981631"),
   N = n("689938");
 let v = d.default.get(A.PlatformTypes.XBOX).name;
@@ -60,7 +60,7 @@ function L(e) {
         ...e,
         libraryApplication: s,
         canJoin: null != t && (0, c.default)(t, A.ActivityFlags.JOIN) && t.type === A.ActivityTypes.PLAYING,
-        canPlay: (0, T.isLaunchable)({
+        canPlay: (0, g.isLaunchable)({
           LibraryApplicationStore: S.default,
           LaunchableGameStore: _.default,
           DispatchApplicationStore: p.default,
@@ -121,7 +121,7 @@ function L(e) {
       return (0, a.jsx)(i.MenuItem, {
         id: "play-".concat(n.session_id),
         action: function() {
-          (0, g.playApplication)(s.id, l, {
+          (0, T.playApplication)(s.id, l, {
             analyticsParams: {
               location: {
                 ...r,

@@ -11,8 +11,8 @@ var l = n("735250"),
   c = n("319643"),
   f = n("481060"),
   h = n("210887"),
-  m = n("19780"),
-  p = n("72416"),
+  p = n("19780"),
+  m = n("72416"),
   C = n("476221"),
   g = n("236756"),
   E = n("981631"),
@@ -34,14 +34,14 @@ let S = {
     [E.RTCConnectionQuality.BAD]: _.rtcConnectionQualityBad,
     [E.RTCConnectionQuality.UNKNOWN]: null
   },
-  T = r.default.connectStores([m.default, h.default], () => ({
+  T = r.default.connectStores([p.default, h.default], () => ({
     theme: h.default.theme,
-    connectionState: m.default.getState(),
-    hostname: m.default.getHostname(),
-    averagePing: m.default.getAveragePing(),
-    lastPing: m.default.getLastPing(),
-    outboundLossRate: m.default.getOutboundLossRate(),
-    pings: m.default.getPings()
+    connectionState: p.default.getState(),
+    hostname: p.default.getHostname(),
+    averagePing: p.default.getAveragePing(),
+    lastPing: p.default.getLastPing(),
+    outboundLossRate: p.default.getOutboundLossRate(),
+    pings: p.default.getPings()
   }))(g.default);
 class A extends a.PureComponent {
   renderPopoutTarget(e) {
@@ -120,7 +120,7 @@ function L(e) {
     smallPing: n,
     ...a
   } = e;
-  if (!(0, f.useRedesignIconContext)().enabled) return (0, l.jsx)(p.default, {
+  if (!(0, f.useRedesignIconContext)().enabled) return (0, l.jsx)(m.default, {
     className: i()(_.ping, {
       [_.smallPing]: n
     }),

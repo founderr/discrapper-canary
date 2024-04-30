@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 });
 var l = n("735250");
@@ -17,7 +17,7 @@ var a = n("442837"),
   f = n("689938"),
   h = n("148517");
 
-function m() {
+function p() {
   let e = (0, a.useStateFromStores)([r.default, o.default], () => r.default.unavailableGuilds.filter(e => null == o.default.getGuild(e)).length);
   return e <= 0 ? null : (0, l.jsx)(u.ListItem, {
     children: (0, l.jsx)(d.default, {

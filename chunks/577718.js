@@ -18,8 +18,8 @@ var a = n("735250"),
   S = n("276645"),
   p = n("970731"),
   I = n("626135"),
-  T = n("267642"),
-  g = n("981631"),
+  g = n("267642"),
+  T = n("981631"),
   A = n("921944"),
   N = n("30513"),
   v = n("474936"),
@@ -32,21 +32,21 @@ var a = n("735250"),
   x = n("642301");
 
 function D(e) {
-  null != e && _.default.open(e.id, g.GuildSettingsSections.OVERVIEW, {
-    section: g.AnalyticsSections.PREMIUM_GUILD_PROGRESS_BAR
-  }, g.GuildSettingsSubsections.DISPLAY)
+  null != e && _.default.open(e.id, T.GuildSettingsSections.OVERVIEW, {
+    section: T.AnalyticsSections.PREMIUM_GUILD_PROGRESS_BAR
+  }, T.GuildSettingsSubsections.DISPLAY)
 }
 
 function b(e, t) {
-  t && _.default.open(e.id, g.GuildSettingsSections.DISCOVERY)
+  t && _.default.open(e.id, T.GuildSettingsSections.DISCOVERY)
 }
 
 function U(e, t) {
-  null != t && ((0, T.isTierUnlocked)(t, g.BoostedGuildTiers.TIER_1) ? _.default.open(t.id, g.GuildSettingsSections.OVERVIEW, {
-    section: g.AnalyticsSections.PREMIUM_GUILD_INVITE_SPLASH
-  }, g.GuildSettingsSubsections.INVITE) : (0, f.default)({
+  null != t && ((0, g.isTierUnlocked)(t, T.BoostedGuildTiers.TIER_1) ? _.default.open(t.id, T.GuildSettingsSections.OVERVIEW, {
+    section: T.AnalyticsSections.PREMIUM_GUILD_INVITE_SPLASH
+  }, T.GuildSettingsSubsections.INVITE) : (0, f.default)({
     analyticsLocations: e,
-    analyticsSourceLocation: g.AnalyticsSections.PREMIUM_GUILD_INVITE_SPLASH,
+    analyticsSourceLocation: T.AnalyticsSections.PREMIUM_GUILD_INVITE_SPLASH,
     guild: t,
     perks: (0, N.guildInviteUpsellPerks)()
   }))
@@ -78,17 +78,17 @@ t.default = s.memo(function(e) {
   } = e, {
     analyticsLocations: f
   } = (0, o.default)(), N = () => {
-    I.default.track(g.AnalyticEvents.TOOLTIP_VIEWED, {
+    I.default.track(T.AnalyticEvents.TOOLTIP_VIEWED, {
       type: v.PremiumUpsellTypes.PREMIUM_PROGRESS_BAR,
       location: {
-        page: g.AnalyticsPages.GUILD_CHANNEL
+        page: T.AnalyticsPages.GUILD_CHANNEL
       }
     })
   }, G = () => {
-    I.default.track(g.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    I.default.track(T.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: v.PremiumUpsellTypes.INVITE_SPLASH_UPSELL,
       location: {
-        page: g.AnalyticsPages.GUILD_CHANNEL
+        page: T.AnalyticsPages.GUILD_CHANNEL
       },
       location_stack: f
     })
@@ -168,10 +168,10 @@ t.default = s.memo(function(e) {
             renderGuildHeaderDropdownButton: r
           });
         case l.DismissibleContent.GUILD_HEADER_INVITE_SPLASH:
-          let e = (0, T.isTierUnlocked)(s, g.BoostedGuildTiers.TIER_1) ? L.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT.format() : L.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT_LOCKED.format({
-              boostCount: (0, T.getNumberOfAppliedBoostsNeededForTier)(s, g.BoostedGuildTiers.TIER_1)
+          let e = (0, g.isTierUnlocked)(s, T.BoostedGuildTiers.TIER_1) ? L.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT.format() : L.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT_LOCKED.format({
+              boostCount: (0, g.getNumberOfAppliedBoostsNeededForTier)(s, T.BoostedGuildTiers.TIER_1)
             }),
-            t = (0, T.isTierUnlocked)(s, g.BoostedGuildTiers.TIER_1) ? L.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : L.default.Messages.LEARN_MORE;
+            t = (0, g.isTierUnlocked)(s, T.BoostedGuildTiers.TIER_1) ? L.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : L.default.Messages.LEARN_MORE;
           return (0, a.jsx)(j, {
             renderPopout: (0, a.jsx)(p.default, {
               onComponentMount: G,
@@ -222,7 +222,7 @@ t.default = s.memo(function(e) {
                 className: O.fullWidthImage
               }),
               onClick: () => {
-                _.default.open(s.id, g.GuildSettingsSections.ROLES), _.default.selectRole(s.getEveryoneRoleId(), L.default.Messages.USE_SOUNDBOARD)
+                _.default.open(s.id, T.GuildSettingsSections.ROLES), _.default.selectRole(s.getEveryoneRoleId(), L.default.Messages.USE_SOUNDBOARD)
               },
               markAsDismissed: B
             }),

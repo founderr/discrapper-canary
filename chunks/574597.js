@@ -6,10 +6,10 @@ n.r(t), n.d(t, {
 });
 var l = n("735250"),
   a = n("470079"),
-  s = n("866442"),
-  o = n("481060"),
+  r = n("866442"),
+  s = n("481060"),
   u = n("129861"),
-  r = n("829883"),
+  o = n("829883"),
   i = n("518738"),
   d = n("14263"),
   c = n("592125"),
@@ -42,8 +42,8 @@ function g(e) {
       if ((null == e ? void 0 : e.type) === N.SelectOptionType.USER) {
         let a = f.default.getUser(e.value);
         if (null == a) return;
-        return (0, l.jsx)(o.Avatar, {
-          size: n ? o.AvatarSizes.SIZE_16 : o.AvatarSizes.SIZE_24,
+        return (0, l.jsx)(s.Avatar, {
+          size: n ? s.AvatarSizes.SIZE_16 : s.AvatarSizes.SIZE_24,
           src: a.getAvatarURL(null == I ? void 0 : I.id, t),
           status: n ? null : p.default.getStatus(a.id),
           "aria-hidden": !0
@@ -53,11 +53,11 @@ function g(e) {
         var a;
         let n = null != I ? m.default.getRole(I.id, e.value) : void 0;
         if (null == n || null == I) return;
-        let o = (0, r.canGuildUseRoleIcons)(I, n) ? (0, i.getRoleIconProps)(n, t) : null;
-        return null != o ? (0, l.jsx)(E.default, {
-          ...o
+        let s = (0, o.canGuildUseRoleIcons)(I, n) ? (0, i.getRoleIconProps)(n, t) : null;
+        return null != s ? (0, l.jsx)(E.default, {
+          ...s
         }) : (0, l.jsx)(S.default, {
-          color: null !== (a = n.colorString) && void 0 !== a ? a : (0, s.int2hex)(x.DEFAULT_ROLE_COLOR),
+          color: null !== (a = n.colorString) && void 0 !== a ? a : (0, r.int2hex)(x.DEFAULT_ROLE_COLOR),
           height: t,
           width: t
         })

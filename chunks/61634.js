@@ -15,8 +15,8 @@ var l = n("470079"),
   c = n("317381"),
   f = n("554747"),
   h = n("146085"),
-  m = n("427679"),
-  p = n("131704"),
+  p = n("427679"),
+  m = n("131704"),
   C = n("199902"),
   g = n("314897"),
   E = n("592125"),
@@ -107,7 +107,7 @@ function O(e) {
       }
     }, [e, n]),
     P = g.default.getId();
-  return (0, r.useStateFromStoresObject)([N.default, C.default, m.default, E.default, I.default, c.default], () => {
+  return (0, r.useStateFromStoresObject)([N.default, C.default, p.default, E.default, I.default, c.default], () => {
     var t, l, s;
     let r = N.default.getVoiceChannelId(),
       o = (null === (t = E.default.getChannel(r)) || void 0 === t ? void 0 : t.guild_id) === e,
@@ -127,7 +127,7 @@ function O(e) {
       gaming: i,
       isCurrentUserConnected: !1
     };
-    let T = L.default.keys(m.default.getStageInstancesByGuild(e)).some(e => {
+    let T = L.default.keys(p.default.getStageInstancesByGuild(e)).some(e => {
         let t = E.default.getChannel(e);
         return null != t && I.default.can(h.JOIN_VOCAL_CHANNEL_PERMISSIONS, t)
       }),
@@ -139,7 +139,7 @@ function O(e) {
         if (O) return R.length > 0;
         for (let e of R) {
           let t = E.default.getChannel(e.channelId);
-          if (null != t && (0, p.isVoiceChannel)(t.type)) return !0
+          if (null != t && (0, m.isVoiceChannel)(t.type)) return !0
         }
         return !1
       })(),

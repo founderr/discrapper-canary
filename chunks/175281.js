@@ -13,8 +13,8 @@ var l, a, s = n("735250"),
   c = n("392711"),
   f = n.n(c),
   h = n("748780"),
-  m = n("442837"),
-  p = n("215569"),
+  p = n("442837"),
+  m = n("215569"),
   C = n("481060"),
   g = n("612226"),
   E = n("951483"),
@@ -324,7 +324,7 @@ function P(e) {
   let {
     transitionState: t,
     onClose: n
-  } = e, [l, a] = i.useState(!1), r = i.useMemo(() => __OVERLAY__ ? (0, E.getOverlayLayoutContent)() : (0, g.getDefaultLayoutContent)(), []), u = (0, m.useStateFromStores)([S.default], () => S.default.keyboardModeEnabled);
+  } = e, [l, a] = i.useState(!1), r = i.useMemo(() => __OVERLAY__ ? (0, E.getOverlayLayoutContent)() : (0, g.getDefaultLayoutContent)(), []), u = (0, p.useStateFromStores)([S.default], () => S.default.keyboardModeEnabled);
   return (0, s.jsx)(C.ModalRoot, {
     className: o()(v.noBackground, {
       [v.noShadow]: l
@@ -332,7 +332,7 @@ function P(e) {
     size: C.ModalSize.DYNAMIC,
     "aria-label": L.default.Messages.KEYBINDS,
     transitionState: t,
-    children: (0, s.jsx)(p.TransitionGroup, {
+    children: (0, s.jsx)(m.TransitionGroup, {
       component: "div",
       children: l ? (0, s.jsx)(T.default, {
         onClose: n

@@ -15,8 +15,8 @@ var l = n("735250"),
   c = n("496675"),
   f = n("514342"),
   h = n("586791"),
-  m = n("626135"),
-  p = n("981631"),
+  p = n("626135"),
+  m = n("981631"),
   C = n("689938"),
   g = n("502102"),
   E = n("990291");
@@ -30,9 +30,9 @@ function _(e) {
     onClick: S,
     enableHangStatus: I,
     allowChannelTopic: N
-  } = e, T = (0, r.useStateFromStores)([u.default], () => u.default.getChannelStatus(t)), A = null != T && T.length > 0, L = (0, r.useStateFromStores)([c.default], () => (!I || !!N) && c.default.can(p.Permissions.SET_VOICE_CHANNEL_STATUS, t)), v = null != _ && _.length > 0;
+  } = e, T = (0, r.useStateFromStores)([u.default], () => u.default.getChannelStatus(t)), A = null != T && T.length > 0, L = (0, r.useStateFromStores)([c.default], () => (!I || !!N) && c.default.can(m.Permissions.SET_VOICE_CHANNEL_STATUS, t)), v = null != _ && _.length > 0;
   a.useEffect(() => {
-    A && m.default.track(p.AnalyticEvents.VOICE_CHANNEL_TOPIC_VIEWED, {
+    A && p.default.track(m.AnalyticEvents.VOICE_CHANNEL_TOPIC_VIEWED, {
       guild_id: t.guild_id,
       channel_id: t.id
     })

@@ -18,8 +18,8 @@ var a = n("735250"),
   S = n("325708"),
   p = n("320149"),
   I = n("252618"),
-  T = n("605236"),
-  g = n("243778"),
+  g = n("605236"),
+  T = n("243778"),
   A = n("984370"),
   N = n("797614"),
   v = n("359110"),
@@ -188,8 +188,8 @@ let el = function(e) {
       n = () => D.default.hasLayers() || (0, c.hasAnyModalOpen)(),
       l = (0, u.useStateFromStores)([C.default], () => C.default.useReducedMotion);
     return s.useEffect(() => {
-      (0, T.requestMarkDismissibleContentAsShown)(d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
-    }, []), (0, a.jsx)(g.default, {
+      (0, g.requestMarkDismissibleContentAsShown)(d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
+    }, []), (0, a.jsx)(T.default, {
       contentTypes: [d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
       children: s => {
         let {
@@ -257,7 +257,7 @@ let eo = (0, h.default)(function(e) {
   s.useEffect(() => {
     null != _ && !m && S && C && ((0, v.transitionToChannel)(_), L.default.closeChannelSidebar(y.MESSAGE_REQUESTS_BASE_CHANNEL_ID))
   }, [_, S, C, m]);
-  let [p, T] = s.useState(Z.MessageRequestSections.REQUESTS);
+  let [p, g] = s.useState(Z.MessageRequestSections.REQUESTS);
   return (0, I.usePageTitle)({
     location: ee.default.Messages.MESSAGE_REQUESTS
   }), (0, a.jsxs)(a.Fragment, {
@@ -281,7 +281,7 @@ let eo = (0, h.default)(function(e) {
           selectedItem: p,
           type: "top-pill",
           onItemSelect: e => {
-            T(e)
+            g(e)
           },
           className: et.__invalid_tabBar,
           children: [(0, a.jsx)(c.TabBar.Item, {

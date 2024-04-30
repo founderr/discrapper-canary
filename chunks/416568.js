@@ -11,8 +11,8 @@ var l = n("735250"),
   c = n("924826"),
   f = n("374470"),
   h = n("442837"),
-  m = n("902704"),
-  p = n("846519"),
+  p = n("902704"),
+  m = n("846519"),
   C = n("481060"),
   g = n("925549"),
   E = n("209613"),
@@ -71,7 +71,7 @@ class er {
     this.guildsTree = e
   }
   constructor(e, t, n) {
-    en(this, "guildsTree", void 0), en(this, "setScrolling", void 0), en(this, "onScroll", void 0), en(this, "scrollerRef", void 0), en(this, "guildDiscoveryRef", void 0), en(this, "nodeRefs", void 0), en(this, "timeout", void 0), en(this, "isScrolling", void 0), en(this, "scrollToGuild", void 0), en(this, "handleJumpToGuild", void 0), en(this, "scrollTo", void 0), en(this, "isItemVisible", void 0), en(this, "handleScroll", void 0), en(this, "_handleScroll", void 0), en(this, "setNodeRef", void 0), this.guildsTree = e, this.setScrolling = t, this.onScroll = n, this.scrollerRef = a.createRef(), this.guildDiscoveryRef = a.createRef(), this.nodeRefs = {}, this.timeout = new p.Timeout, this.isScrolling = !1, this.scrollToGuild = (e, t) => {
+    en(this, "guildsTree", void 0), en(this, "setScrolling", void 0), en(this, "onScroll", void 0), en(this, "scrollerRef", void 0), en(this, "guildDiscoveryRef", void 0), en(this, "nodeRefs", void 0), en(this, "timeout", void 0), en(this, "isScrolling", void 0), en(this, "scrollToGuild", void 0), en(this, "handleJumpToGuild", void 0), en(this, "scrollTo", void 0), en(this, "isItemVisible", void 0), en(this, "handleScroll", void 0), en(this, "_handleScroll", void 0), en(this, "setNodeRef", void 0), this.guildsTree = e, this.setScrolling = t, this.onScroll = n, this.scrollerRef = a.createRef(), this.guildDiscoveryRef = a.createRef(), this.nodeRefs = {}, this.timeout = new m.Timeout, this.isScrolling = !1, this.scrollToGuild = (e, t) => {
       let n = this.scrollerRef.current;
       if (null == n) return;
       if (null == e && window.location.pathname.startsWith($.Routes.GUILD_DISCOVERY) || e === $.ViewHistoryKeys.SERVER_DISCOVERY_BADGE || e === $.ViewHistoryKeys.E3_SERVER_DISCOVERY_BADGE) {
@@ -145,10 +145,10 @@ function eo(e) {
   } = e, [o] = (0, h.useStateFromStoresArray)([D.default], () => {
     let e = D.default.getGuildsTree();
     return [e, e.version]
-  }), u = (0, h.useStateFromStores)([v.default], () => v.default.lurkingGuildIds()), f = a.useMemo(() => n ? [] : u, [u, n]), m = (0, h.useStateFromStoresArray)([O.default, y.default], () => j.default.keys(O.default.getGuilds()).filter(e => y.default.isCurrentUserGuest(e))), g = f.concat(m), E = (0, h.useStateFromStores)([I.default], () => I.default.isFullscreenInContext()), en = (0, h.useStateFromStores)([O.default], () => O.default.getGeoRestrictedGuilds()), [el, ea] = a.useState(!1), es = a.useCallback(() => ea(!0), []), ei = a.useCallback(() => ea(!1), []), eo = a.useRef(!1), [eu] = a.useState(() => new p.Timeout), ed = a.useRef(null), ec = a.useRef(null), {
+  }), u = (0, h.useStateFromStores)([v.default], () => v.default.lurkingGuildIds()), f = a.useMemo(() => n ? [] : u, [u, n]), p = (0, h.useStateFromStoresArray)([O.default, y.default], () => j.default.keys(O.default.getGuilds()).filter(e => y.default.isCurrentUserGuest(e))), g = f.concat(p), E = (0, h.useStateFromStores)([I.default], () => I.default.isFullscreenInContext()), en = (0, h.useStateFromStores)([O.default], () => O.default.getGeoRestrictedGuilds()), [el, ea] = a.useState(!1), es = a.useCallback(() => ea(!0), []), ei = a.useCallback(() => ea(!1), []), eo = a.useRef(!1), [eu] = a.useState(() => new m.Timeout), ed = a.useRef(null), ec = a.useRef(null), {
     ref: ef,
     ...eh
-  } = (0, c.useListContainerProps)(), em = (0, C.useFocusJumpSection)(), [ep, eC] = a.useState(!1), [eg] = a.useState(() => new er(o, eC, () => {
+  } = (0, c.useListContainerProps)(), ep = (0, C.useFocusJumpSection)(), [em, eC] = a.useState(!1), [eg] = a.useState(() => new er(o, eC, () => {
     var e, t;
     null === (e = ed.current) || void 0 === e || e.calculateState(), null === (t = ec.current) || void 0 === t || t.calculateState()
   })), {
@@ -205,7 +205,7 @@ function eo(e) {
       children: (0, l.jsxs)("ul", {
         ref: ef,
         ...eh,
-        ...em,
+        ...ep,
         role: "tree",
         className: et.tree,
         children: [(0, l.jsx)(w.default, {
@@ -217,7 +217,7 @@ function eo(e) {
         }), (0, l.jsxs)(C.AdvancedScrollerNone, {
           className: i()({
             [et.scroller]: !0,
-            [et.scrolling]: ep
+            [et.scrolling]: em
           }),
           ref: eg.scrollerRef,
           onScroll: eg.handleScroll,
@@ -285,4 +285,4 @@ t.default = a.memo(function(e) {
       ...e
     })
   })
-}, (e, t) => !1 === t.isVisible || (0, m.default)(e, t))
+}, (e, t) => !1 === t.isVisible || (0, p.default)(e, t))

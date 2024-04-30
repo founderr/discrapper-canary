@@ -6,10 +6,10 @@ n.r(t), n.d(t, {
 }), n("47120");
 var l = n("735250"),
   a = n("470079"),
-  s = n("481060"),
-  o = n("911969"),
+  r = n("481060"),
+  s = n("911969"),
   u = n("970184"),
-  r = n("293979"),
+  o = n("293979"),
   i = n("410896");
 
 function d(e) {
@@ -30,7 +30,7 @@ function d(e) {
   } = (0, u.useComponentState)(e, null != S ? {
     type: n,
     value: S
-  } : void 0), x = (0, r.useIsFirstTextInputInModal)(e.id);
+  } : void 0), x = (0, o.useIsFirstTextInputInModal)(e.id);
   a.useEffect(() => {
     (null == N ? void 0 : N.type) === n && v(N.value)
   }, [n, N]);
@@ -50,17 +50,17 @@ function d(e) {
     autoFocus: x
   };
   switch (d) {
-    case o.TextComponentStyle.SMALL:
-      t = (0, l.jsx)(s.TextInput, {
+    case s.TextComponentStyle.SMALL:
+      t = (0, l.jsx)(r.TextInput, {
         ...y
       });
       break;
-    case o.TextComponentStyle.PARAGRAPH:
-      t = (0, l.jsx)(s.TextArea, {
+    case s.TextComponentStyle.PARAGRAPH:
+      t = (0, l.jsx)(r.TextArea, {
         ...y
       })
   }
-  return (0, l.jsx)(s.FormItem, {
+  return (0, l.jsx)(r.FormItem, {
     title: c,
     required: C,
     className: i.formItem,

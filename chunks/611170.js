@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   renderImageComponentForGalleryItem: function() {
-    return s
+    return r
   },
   renderVideoComponentForGalleryItem: function() {
-    return o
+    return s
   }
 });
 var l = n("591759"),
   a = n("524444");
 
-function s(e) {
+function r(e) {
   let t = e.item.originalItem.media;
   return (0, a.renderImageComponent)({
     ...e,
@@ -22,7 +22,7 @@ function s(e) {
   })
 }
 
-function o(e) {
+function s(e) {
   let t = e.item.originalItem.media,
     n = l.default.toURLSafe(t.proxyUrl);
   return null == n ? null : (n.searchParams.append("format", "jpeg"), (0, a.renderVideoComponent)({

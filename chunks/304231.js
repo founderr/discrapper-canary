@@ -20,7 +20,7 @@ function C(e) {
     selectedGame: n
   } = e, u = (0, f.useDiscoveryGameApplicationId)({
     selectedGame: n
-  }), E = (0, c.useClanDiscoveryUIStore)(e => e.selectedGames, l.default), C = (0, c.useClanDiscoveryUIStore)(e => e.setSelectedGames, l.default), S = s.useMemo(() => new Set(E), [E]), p = (0, c.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, l.default), I = (0, c.useClanDiscoveryUIStore)(e => e.setSelectedPlaystyle, l.default), T = (0, c.useClanDiscoveryUIStore)(e => e.selectedTraits, l.default), g = (0, c.useClanDiscoveryUIStore)(e => e.setSelectedTraits, l.default), A = s.useMemo(() => new Set(T), [T]), N = s.useCallback(e => C(Array.from(e)), [C]), v = s.useCallback(e => I(e), [I]), L = s.useCallback(e => g([...e]), [g]), R = s.useCallback(() => {
+  }), E = (0, c.useClanDiscoveryUIStore)(e => e.selectedGames, l.default), C = (0, c.useClanDiscoveryUIStore)(e => e.setSelectedGames, l.default), S = s.useMemo(() => new Set(E), [E]), p = (0, c.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, l.default), I = (0, c.useClanDiscoveryUIStore)(e => e.setSelectedPlaystyle, l.default), g = (0, c.useClanDiscoveryUIStore)(e => e.selectedTraits, l.default), T = (0, c.useClanDiscoveryUIStore)(e => e.setSelectedTraits, l.default), A = s.useMemo(() => new Set(g), [g]), N = s.useCallback(e => C(Array.from(e)), [C]), v = s.useCallback(e => I(e), [I]), L = s.useCallback(e => T([...e]), [T]), R = s.useCallback(() => {
     switch (t) {
       case 0:
         return (0, a.jsx)(r.default, {
@@ -81,7 +81,7 @@ t.default = s.memo(function(e) {
     0 === i ? n(E.ClanDiscoveryUpsellScreens.USER_UPSELL) : m(i - 1)
   }, [i, n, m]), I = s.useCallback(() => {
     2 === i ? f(c.ClanDiscoveryMode.DISCOVERY) : m(i + 1)
-  }, [f, i, m]), T = s.useMemo(() => 1 === i && null == h, [h, i]);
+  }, [f, i, m]), g = s.useMemo(() => 1 === i && null == h, [h, i]);
   return (0, a.jsxs)("div", {
     className: _.container,
     children: [(0, a.jsx)(C, {
@@ -96,7 +96,7 @@ t.default = s.memo(function(e) {
       }), (0, a.jsx)(u.ClanSetupProgressButtons, {
         className: _.footerButtons,
         isBackDisabled: !1,
-        isNextDisabled: T,
+        isNextDisabled: g,
         onNextClick: I,
         onBackClick: p
       })]

@@ -22,8 +22,8 @@ var a = n("735250"),
   S = n("672339"),
   p = n("898531"),
   I = n("923973"),
-  T = n("189771"),
-  g = n("560688"),
+  g = n("189771"),
+  T = n("560688"),
   A = n("871499"),
   N = n("136995"),
   v = n("25827"),
@@ -90,7 +90,7 @@ function V(e) {
   } = e, {
     cameraUnavailable: l,
     enabled: r
-  } = (0, I.default)(), o = (0, T.default)(n);
+  } = (0, I.default)(), o = (0, g.default)(n);
   return (0, a.jsxs)("div", {
     className: G.actions,
     children: [(0, a.jsx)(A.CenterControlButton, {
@@ -128,7 +128,7 @@ function V(e) {
           onPopoutClick: s > 1 ? i : null,
           className: G.actionButton,
           popoutOpen: u,
-          onCameraUnavailable: g.default,
+          onCameraUnavailable: T.default,
           onChange: () => {
             f.default.selectVoiceChannel(n.id, !0), (0, C.transitionToGuild)(b.ME, n.id)
           }
@@ -149,7 +149,7 @@ function Y(e) {
     y: n,
     x: l,
     channel: f
-  } = e, [C, m] = s.useState(!1), S = (0, h.getChannelIconURL)(f), p = (0, _.default)(f), [I, T] = (0, o.useStateFromStoresArray)([L.default], () => [L.default.supports(U.Features.VIDEO), Object.keys(L.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([O.default], () => O.default.isFocused()), A = (0, o.useStateFromStores)([x.default], () => x.default.getMode(f.id)), N = s.useCallback(e => {
+  } = e, [C, m] = s.useState(!1), S = (0, h.getChannelIconURL)(f), p = (0, _.default)(f), [I, g] = (0, o.useStateFromStoresArray)([L.default], () => [L.default.supports(U.Features.VIDEO), Object.keys(L.default.getVideoDevices()).length]), T = (0, o.useStateFromStores)([O.default], () => O.default.isFocused()), A = (0, o.useStateFromStores)([x.default], () => x.default.getMode(f.id)), N = s.useCallback(e => {
     null != e.top && null != e.left && c.default.move(e.left, e.top)
   }, []), v = (0, r.useSpring)({
     value: C ? 1 : 0,
@@ -164,11 +164,11 @@ function Y(e) {
     };
     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
   }, [f]);
-  let R = A === b.ChannelModes.VIDEO && I && T > 0,
+  let R = A === b.ChannelModes.VIDEO && I && g > 0,
     M = (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(P.default, {
         className: G.icon,
-        ringing: g,
+        ringing: T,
         src: null != S ? S : "",
         ringingType: P.default.RingingType.INCOMING,
         size: C ? u.AvatarSizes.SIZE_40 : u.AvatarSizes.SIZE_80
@@ -218,7 +218,7 @@ function Y(e) {
         }), (0, a.jsx)(V, {
           canVideo: R,
           channel: f,
-          numVideoDevices: T
+          numVideoDevices: g
         }), R && !C ? (0, a.jsx)(u.Button, {
           size: u.Button.Sizes.SMALL,
           fullWidth: !0,

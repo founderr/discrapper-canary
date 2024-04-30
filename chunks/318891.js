@@ -45,7 +45,7 @@ function I() {
     null != e && d.default.isOpen(e) && s.default.wait(() => l.show(e))
   }()
 }
-class T extends i.default {
+class g extends i.default {
   _initialize() {
     f.default.addChangeListener(p), E.default.addChangeListener(p), c.default.addChangeListener(p), h.default.addChangeListener(p), r.default.addChangeListener(p), _.default.addChangeListener(p), u.default.addChangeListener(I)
   }
@@ -53,4 +53,4 @@ class T extends i.default {
     f.default.removeChangeListener(p), E.default.removeChangeListener(p), c.default.removeChangeListener(p), h.default.removeChangeListener(p), r.default.removeChangeListener(p), _.default.removeChangeListener(p), u.default.removeChangeListener(I)
   }
 }
-t.default = new T
+t.default = new g

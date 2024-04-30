@@ -18,8 +18,8 @@ var a = n("735250"),
   S = n("950279"),
   p = n("796918"),
   I = n("22035"),
-  T = n("513532"),
-  g = n("741595"),
+  g = n("513532"),
+  T = n("741595"),
   A = n("754961"),
   N = n("974842"),
   v = n("359380"),
@@ -66,9 +66,9 @@ let M = [L.ClanSetupSteps.FOUNDATIONAL_INTRO, L.ClanSetupSteps.GAMES, L.ClanSetu
       }
     }, [i, E.length, r.size, m, d.size, u, h.length]), p = 0 === i, I = s.useCallback(() => {
       i === M.length - 1 ? l() : n(i + 1)
-    }, [i, l, n]), T = s.useCallback(() => {
+    }, [i, l, n]), g = s.useCallback(() => {
       n(i - 1)
-    }, [i, n]), g = s.useCallback(e => {
+    }, [i, n]), T = s.useCallback(e => {
       n(e)
     }, [n]);
     return (0, a.jsxs)("div", {
@@ -76,13 +76,13 @@ let M = [L.ClanSetupSteps.FOUNDATIONAL_INTRO, L.ClanSetupSteps.GAMES, L.ClanSetu
       children: [(0, a.jsx)(A.ClanSetupProgress, {
         sections: P,
         furthestStep: C,
-        onStepClick: g
+        onStepClick: T
       }), (0, a.jsx)(A.ClanSetupProgressButtons, {
         className: O.footerButtons,
         isBackDisabled: p,
         isNextDisabled: S,
         onNextClick: I,
-        onBackClick: T,
+        onBackClick: g,
         children: (0, a.jsxs)("div", {
           className: O.footerAlphaMsg,
           children: [(0, a.jsx)(c.default, {
@@ -175,7 +175,7 @@ t.default = e => {
                   error: null == f ? void 0 : f.gameApplicationIds
                 });
               case L.ClanSetupSteps.PLAYSTYLE:
-                return (0, a.jsx)(g.default, {
+                return (0, a.jsx)(T.default, {
                   title: R.default.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
                   description: R.default.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
                   handleUpdate: Y,
@@ -220,7 +220,7 @@ t.default = e => {
                   guildId: t
                 });
               case L.ClanSetupSteps.MEMBER_APPLICATION:
-                return (0, a.jsx)(T.default, {
+                return (0, a.jsx)(g.default, {
                   guildId: t
                 });
               case L.ClanSetupSteps.FOUNDATIONAL_INTRO:

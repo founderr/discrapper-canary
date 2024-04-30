@@ -16,8 +16,8 @@ var a = n("120356"),
   c = n("888651"),
   f = n("201895"),
   h = n("305325"),
-  m = n("281956"),
-  p = n("66999"),
+  p = n("281956"),
+  m = n("66999"),
   C = n("506936"),
   g = n("359110"),
   E = n("922482"),
@@ -111,8 +111,8 @@ class K extends P.default {
       connectDragPreview: d,
       canReorderChannel: c,
       canMoveMembers: h,
-      stageInstance: m,
-      isSubscriptionGated: p,
+      stageInstance: p,
+      isSubscriptionGated: m,
       needSubscriptionToAccess: C,
       unread: g,
       resolvedUnreadSetting: E,
@@ -142,7 +142,7 @@ class K extends P.default {
             return (0, l.jsxs)(U.default, {
               className: H.iconVisibility,
               iconClassName: s()({
-                [k.iconLive]: null != m
+                [k.iconLive]: null != p
               }),
               channel: e,
               selected: !S && t,
@@ -165,7 +165,7 @@ class K extends P.default {
                 unread: g,
                 mentionCount: _,
                 userCount: N,
-                isSubscriptionGated: p,
+                isSubscriptionGated: m,
                 needSubscriptionToAccess: C
               }),
               ...u,
@@ -191,7 +191,7 @@ class K extends P.default {
         connected: n,
         unverifiedAccount: l
       } = this.props, a = e.getGuildId();
-      null != a && (0, m.shouldShowMembershipVerificationGate)(a) && (0, h.openMemberVerificationModal)(a), l && this.setState({
+      null != a && (0, p.shouldShowMembershipVerificationGate)(a) && (0, h.openMemberVerificationModal)(a), l && this.setState({
         shouldShowGuildVerificationPopout: !0
       }), !t && !n && !e.isRoleSubscriptionTemplatePreviewChannel() && (0, E.connectAndOpen)(e), !__OVERLAY__ && (0, g.transitionToChannel)(e.id)
     }), Y(this, "handleClickChat", () => {
@@ -297,10 +297,10 @@ function z(e) {
       bypassLimit: R.default.can(F.Permissions.MOVE_MEMBERS, n),
       unverifiedAccount: !l.canChat
     }
-  }), f = (0, i.useStateFromStores)([A.default], () => A.default.isCollapsed(n.parent_id)), h = (0, T.default)(n.id), m = (0, i.useStateFromStores)([I.default], () => I.default.getStageInstanceByChannel(n.id), [n.id]), C = (0, _.useStageParticipantsCount)(n.id, S.StageChannelParticipantNamedIndex.AUDIENCE), {
+  }), f = (0, i.useStateFromStores)([A.default], () => A.default.isCollapsed(n.parent_id)), h = (0, T.default)(n.id), p = (0, i.useStateFromStores)([I.default], () => I.default.getStageInstanceByChannel(n.id), [n.id]), C = (0, _.useStageParticipantsCount)(n.id, S.StageChannelParticipantNamedIndex.AUDIENCE), {
     isSubscriptionGated: g,
     needSubscriptionToAccess: E
-  } = (0, p.default)(n.id), v = (0, i.useStateFromStores)([y.default], () => y.default.isFavorite(t.id, n.id)), O = (0, N.getStageHasMedia)(n.id), D = (0, G.default)({
+  } = (0, m.default)(n.id), v = (0, i.useStateFromStores)([y.default], () => y.default.isFavorite(t.id, n.id)), O = (0, N.getStageHasMedia)(n.id), D = (0, G.default)({
     channel: n,
     isChannelSelected: !1,
     isChannelCollapsed: r,
@@ -313,7 +313,7 @@ function z(e) {
     categoryCollapsed: f,
     connectAction: h,
     numAudience: C,
-    stageInstance: m,
+    stageInstance: p,
     isSubscriptionGated: g,
     needSubscriptionToAccess: E,
     ...u,

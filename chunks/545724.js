@@ -21,10 +21,10 @@ t.default = function(e) {
     isActive: m,
     onOtherHover: S,
     className: p
-  } = e, [I, T] = s.useState(!1), [g, A] = s.useState(!1), N = () => {
-    T(!0), C && !m && !g && (null == S || S())
+  } = e, [I, g] = s.useState(!1), [T, A] = s.useState(!1), N = () => {
+    g(!0), C && !m && !T && (null == S || S())
   }, v = () => {
-    T(!1)
+    g(!1)
   }, L = (e, t) => {
     null != t && (A(!0), (0, d.openContextMenuLazy)(e, async () => {
       let {
@@ -49,7 +49,7 @@ t.default = function(e) {
       },
       children: (0, a.jsx)(r.default.div, {
         className: i()(f.messageRequestItem, p, {
-          [f.active]: m || g,
+          [f.active]: m || T,
           [f.firstItem]: 0 === t
         }),
         onContextMenu: e => L(e, E),
@@ -61,7 +61,7 @@ t.default = function(e) {
           opacity: 1
         },
         ...e,
-        children: l(I || m || g)
+        children: l(I || m || T)
       })
     })
   })

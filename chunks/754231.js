@@ -15,13 +15,13 @@ var l = n("735250"),
   c = n("672938"),
   f = n("936195"),
   h = n("727218"),
-  m = n("602623"),
-  p = n("81063"),
+  p = n("602623"),
+  m = n("81063"),
   C = n("768581"),
   g = n("823379"),
   E = n("51144"),
   _ = n("119645");
-let S = m.Sizes.SIZE_24;
+let S = p.Sizes.SIZE_24;
 
 function I(e) {
   var t, n;
@@ -48,14 +48,14 @@ function I(e) {
     })
   }(r) : null;
   let h = null !== (t = c.large_image) && void 0 !== t ? t : c.small_image,
-    m = (0, u.default)(s),
-    g = m ? _.spotifyLargeImage : _.applicationLargeImage,
+    p = (0, u.default)(s),
+    g = p ? _.spotifyLargeImage : _.applicationLargeImage,
     E = null != h ? (0, l.jsx)("img", {
       alt: null !== (n = c.large_text) && void 0 !== n ? n : "",
-      src: (0, p.getAssetImage)(f, h, [128, 128]),
+      src: (0, m.getAssetImage)(f, h, [128, 128]),
       className: g
     }) : null;
-  return m && null != d ? (E = (0, l.jsx)(o.Clickable, {
+  return p && null != d ? (E = (0, l.jsx)(o.Clickable, {
     className: _.clickable,
     onClick: () => {
       d(s, i.id)
@@ -158,7 +158,7 @@ function v(e) {
     sortedVoiceStates: c,
     onOpenSpotifyTrack: f,
     onOpenSpotifyArtist: h,
-    onOpenSpotifyAlbum: p
+    onOpenSpotifyAlbum: m
   } = e, C = [];
   null != n ? C = Array.from(n.embeddedActivity.userIds) : (0, u.default)(t) && null != c && (C = c.map(e => e.user.id));
   let v = (0, r.useStateFromStoresArray)([d.default], () => C.map(e => d.default.getUser(e)).filter(g.isNotNullish)),
@@ -178,7 +178,7 @@ function v(e) {
         activity: t,
         user: s,
         embeddedApp: n,
-        onOpenSpotifyAlbum: p
+        onOpenSpotifyAlbum: m
       }), (0, l.jsxs)("div", {
         className: _.detailsAndAvatarsContainer,
         children: [(0, l.jsx)(N, {
@@ -191,7 +191,7 @@ function v(e) {
           onOpenSpotifyArtist: h
         }), (0, l.jsx)(A, {
           activity: t
-        }), C.length > 0 && (0, l.jsx)(m.default, {
+        }), C.length > 0 && (0, l.jsx)(p.default, {
           className: _.usersSummary,
           guildId: i.guild_id,
           users: v,

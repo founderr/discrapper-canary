@@ -12,14 +12,14 @@ var l = n("735250"),
   f = n("689938"),
   h = n("434884");
 
-function m() {
+function p() {
   window.location.pathname.startsWith(d.Routes.GUILD_DISCOVERY) && ((0, s.clearSearch)(), (0, s.selectCategory)(c.DISCOVERY_ALL_CATEGORIES_ID, !0));
   let e = (0, r.getHistory)().location.search;
   (0, r.transitionTo)(d.Routes.GUILD_DISCOVERY, {
     search: e
   })
 }
-let p = a.forwardRef(function(e, t) {
+let m = a.forwardRef(function(e, t) {
   let {
     selected: n,
     tooltip: a
@@ -27,11 +27,11 @@ let p = a.forwardRef(function(e, t) {
   return (0, l.jsx)(u.default, {
     id: "guild-discover-button",
     ref: t,
-    onClick: m,
+    onClick: p,
     selected: n,
     tooltip: null != a ? a : f.default.Messages.GUILD_DISCOVERY_TOOLTIP,
     className: s ? h.icon : void 0,
     icon: o.default
   })
 });
-t.default = p
+t.default = m

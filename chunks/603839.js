@@ -24,9 +24,9 @@ t.default = e => {
       requiredGameId: C
     })
   }, [C, t]);
-  let T = (0, d.useFullScreenModalAnimationStyle)();
+  let g = (0, d.useFullScreenModalAnimationStyle)();
   return (0, a.jsx)(l.animated.div, {
-    style: T,
+    style: g,
     className: _.modal,
     children: (0, a.jsx)("div", {
       className: _.modalContents,

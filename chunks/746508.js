@@ -18,8 +18,8 @@ var a = n("735250"),
   S = n("925549"),
   p = n("284056"),
   I = n("324315"),
-  T = n("730749"),
-  g = n("2052"),
+  g = n("730749"),
+  T = n("2052"),
   A = n("40851"),
   N = n("317381"),
   v = n("596040"),
@@ -72,8 +72,8 @@ var a = n("735250"),
   eS = n("699516"),
   ep = n("594174"),
   eI = n("979651"),
-  eT = n("938475"),
-  eg = n("285952"),
+  eg = n("938475"),
+  eT = n("285952"),
   eA = n("762854"),
   eN = n("250183"),
   ev = n("87128"),
@@ -144,8 +144,8 @@ function eB() {
       tag: _.FormTitleTags.H5,
       className: i()(eG.marginBottom8, eG.marginTop20),
       children: eU.default.Messages.NOISE_CANCELLATION_POPOUT_FOOTER
-    }), (0, a.jsxs)(eg.default, {
-      justify: eg.default.Justify.BETWEEN,
+    }), (0, a.jsxs)(eT.default, {
+      justify: eT.default.Justify.BETWEEN,
       className: ej.__invalid_footer,
       children: [(0, a.jsx)(_.Anchor, {
         href: eD.MarketingURLs.KRISP,
@@ -192,11 +192,11 @@ function eH(e) {
     };
     e ? (0, eo.default)(n, S) : n()
   }, [t, S]), I = u || n || c, {
-    Component: T,
-    play: g,
+    Component: g,
+    play: T,
     events: v
   } = (0, E.useVideoLottie)(r.enabled ? "disable" : "enable");
-  return s.useEffect(() => () => g(), [r.enabled, g]), (0, a.jsx)(eu.VideoButtonWrapper, {
+  return s.useEffect(() => () => T(), [r.enabled, T]), (0, a.jsx)(eu.VideoButtonWrapper, {
     onChange: p,
     onCameraUnavailable: m,
     hasPermission: o,
@@ -211,7 +211,7 @@ function eH(e) {
         label: s,
         iconComponent: l,
         ...r
-      } = e, o = (0, a.jsx)(T, {
+      } = e, o = (0, a.jsx)(g, {
         size: "custom",
         width: 20,
         height: 20,
@@ -270,8 +270,8 @@ function eH(e) {
               innerClassName: ej.buttonContents,
               wrapperClassName: ej.button,
               fullWidth: !0,
-              children: I ? o : (0, a.jsxs)(eg.default, {
-                align: eg.default.Align.CENTER,
+              children: I ? o : (0, a.jsxs)(eT.default, {
+                align: eT.default.Align.CENTER,
                 children: [o, eU.default.Messages.VIDEO]
               })
             })
@@ -292,7 +292,7 @@ function eV(e) {
     userInActivity: E
   } = (0, d.useStateFromStoresObject)([N.default], () => ({
     userInActivity: null != N.default.getSelfEmbeddedActivityForChannel(t.id)
-  })), h = (0, g.useAnalyticsContext)(), C = (0, L.useShowActivityIndicator)(), m = o !== R.EmbeddedActivityLaunchability.CAN_LAUNCH, {
+  })), h = (0, T.useAnalyticsContext)(), C = (0, L.useShowActivityIndicator)(), m = o !== R.EmbeddedActivityLaunchability.CAN_LAUNCH, {
     Component: S,
     events: p
   } = (0, c.useActivityLottie)();
@@ -359,8 +359,8 @@ function eY(e) {
     p = c.find(e => e.ownerId === (null == u ? void 0 : u.id)),
     I = (0, es.useOtherStreams)(n, u, c);
   t = null == p ? l ? S : ei.default : () => (0, B.default)(p);
-  let T = null != p || I.length > 0,
-    g = E ? eU.default.Messages.SHARE_YOUR_SCREEN : eU.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE,
+  let g = null != p || I.length > 0,
+    T = E ? eU.default.Messages.SHARE_YOUR_SCREEN : eU.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE,
     A = C || r || m,
     v = null != p,
     {
@@ -398,20 +398,20 @@ function eY(e) {
         ...l
       } = e;
       return (0, a.jsx)(_.Tooltip, {
-        text: g,
+        text: T,
         children: e => (0, a.jsx)(_.Button, {
           ...e,
           size: _.Button.Sizes.SMALL,
           onClick: a => {
             var s;
-            T ? n(a) : t(), null === (s = e.onClick) || void 0 === s || s.call(e)
+            g ? n(a) : t(), null === (s = e.onClick) || void 0 === s || s.call(e)
           },
           disabled: !E || o,
           className: i()(ej.button, ej.buttonColor, {
             [ej.buttonActive]: null != p,
             [ej.disabled]: !E || o
           }),
-          ...T ? l : null,
+          ...g ? l : null,
           onMouseEnter: () => {
             var t;
             null == s || s(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e), R.onMouseEnter()
@@ -422,8 +422,8 @@ function eY(e) {
           },
           innerClassName: ej.buttonContents,
           wrapperClassName: ej.button,
-          children: A ? M : (0, a.jsxs)(eg.default, {
-            align: eg.default.Align.CENTER,
+          children: A ? M : (0, a.jsxs)(eT.default, {
+            align: eT.default.Align.CENTER,
             children: [M, eU.default.Messages.GO_LIVE_SHARE_SCREEN]
           })
         })
@@ -576,13 +576,13 @@ class eW extends s.PureComponent {
       shouldShow: n,
       children: () => (0, a.jsxs)("div", {
         className: ej.container,
-        children: [(0, a.jsxs)(eg.default, {
+        children: [(0, a.jsxs)(eT.default, {
           className: ej.connection,
-          align: eg.default.Align.CENTER,
+          align: eT.default.Align.CENTER,
           children: [(0, a.jsx)("div", {
             className: ej.inner,
             children: this.renderConnectionStatus()
-          }), (0, a.jsxs)(eg.default, {
+          }), (0, a.jsxs)(eT.default, {
             grow: 0,
             shrink: 0,
             children: [t ? this.renderNoiseCancellation() : null, (0, a.jsx)(ey.default, {
@@ -679,7 +679,7 @@ function eK(e) {
     icon: r
   })
 }
-t.default = (0, T.default)(function(e) {
+t.default = (0, g.default)(function(e) {
   let t = (0, G.default)(),
     n = (0, d.useStateFromStores)([j.default], () => j.default.getAwaitingRemoteSessionInfo()),
     l = (0, d.useStateFromStores)([ep.default], () => ep.default.getCurrentUser()),
@@ -713,10 +713,10 @@ t.default = (0, T.default)(function(e) {
     S = (0, d.useStateFromStores)([V.default], () => V.default.isViewingRoles(u)),
     p = (0, d.useStateFromStores)([eC.default], () => S && !eC.default.can(eD.Permissions.VIEW_CHANNEL, o), [S, o]),
     I = ee.RtcPanelShowVoiceStates.useSetting(),
-    [T, g, A] = (0, d.useStateFromStoresArray)([eT.default, z.default], () => (null == o ? void 0 : o.isGuildStageVoice()) ? [z.default.getMutableParticipants(o.id, q.StageChannelParticipantNamedIndex.SPEAKER), z.default.getParticipantsVersion(o.id), null] : [null, null, null != o ? eT.default.getVoiceStatesForChannel(o) : null], [o]),
+    [g, T, A] = (0, d.useStateFromStoresArray)([eg.default, z.default], () => (null == o ? void 0 : o.isGuildStageVoice()) ? [z.default.getMutableParticipants(o.id, q.StageChannelParticipantNamedIndex.SPEAKER), z.default.getParticipantsVersion(o.id), null] : [null, null, null != o ? eg.default.getVoiceStatesForChannel(o) : null], [o]),
     N = s.useMemo(() => {
       var e, t;
-      return null !== (t = null !== (e = null == T ? void 0 : T.map(e => {
+      return null !== (t = null !== (e = null == g ? void 0 : g.map(e => {
         let {
           user: t,
           userNick: n,
@@ -728,7 +728,7 @@ t.default = (0, T.default)(function(e) {
           voiceState: a
         }
       })) && void 0 !== e ? e : A) && void 0 !== t ? t : []
-    }, [T, g, A]),
+    }, [g, T, A]),
     [L, R] = s.useState(!1);
   s.useEffect(() => {
     (S || p) && R(!1)

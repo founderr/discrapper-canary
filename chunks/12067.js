@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
 var l = n("735250");
 n("470079");
 var a = n("442837"),
-  s = n("169525"),
-  o = n("611170"),
+  r = n("169525"),
+  s = n("611170"),
   u = n("128854"),
-  r = n("592125"),
+  o = n("592125"),
   i = n("52824"),
   d = n("310043"),
   c = n("69750"),
@@ -22,7 +22,7 @@ var a = n("442837"),
 function S(e) {
   let {
     message: t
-  } = (0, f.useComponentStateContext)(), n = (0, a.useStateFromStores)([r.default], () => r.default.getChannel(null == t ? void 0 : t.channel_id)), {
+  } = (0, f.useComponentStateContext)(), n = (0, a.useStateFromStores)([o.default], () => o.default.getChannel(null == t ? void 0 : t.channel_id)), {
     shouldHideMediaOptions: S,
     shouldRedactExplicitContent: E,
     gifAutoPlay: v,
@@ -41,7 +41,7 @@ function S(e) {
 
   function g(e, t) {
     let n = e.originalItem;
-    return (0, s.getObscureReasonForUnfurledMediaItem)(n.media, t, n.spoiler)
+    return (0, r.getObscureReasonForUnfurledMediaItem)(n.media, t, n.spoiler)
   }
   let O = e.items.map(e => {
     let n = e.media,
@@ -61,8 +61,8 @@ function S(e) {
         onContextMenu: l,
         autoPlayGif: v,
         getObscureReason: g,
-        renderImageComponent: o.renderImageComponentForGalleryItem,
-        renderVideoComponent: o.renderVideoComponentForGalleryItem,
+        renderImageComponent: s.renderImageComponentForGalleryItem,
+        renderVideoComponent: s.renderVideoComponentForGalleryItem,
         renderAudioComponent: C.NOOP,
         renderPlaintextFilePreview: C.NOOP,
         renderGenericFileComponent: C.NOOP,
@@ -72,11 +72,11 @@ function S(e) {
         canRemoveItem: !1,
         onRemoveItem: C.NOOP
       },
-      s = (0, i.getBestEffortSrcUrl)({
+      r = (0, i.getBestEffortSrcUrl)({
         proxyURL: n.proxyUrl,
         url: n.url
       });
-    return s in y && (a.onClick = y[s]), a
+    return r in y && (a.onClick = y[r]), a
   });
   return (0, l.jsx)("div", {
     children: (0, l.jsx)(d.default, {

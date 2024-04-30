@@ -22,8 +22,8 @@ var a = n("735250"),
   S = n("355467"),
   p = n("239091"),
   I = n("230711"),
-  T = n("255952"),
-  g = n("410575"),
+  g = n("255952"),
+  T = n("410575"),
   A = n("941129"),
   N = n("83200"),
   v = n("634894"),
@@ -76,8 +76,8 @@ var a = n("735250"),
   eS = n("246946"),
   ep = n("594174"),
   eI = n("78839"),
-  eT = n("285952"),
-  eg = n("546591"),
+  eg = n("285952"),
+  eT = n("546591"),
   eA = n("86813"),
   eN = n("826026"),
   ev = n("937482"),
@@ -152,7 +152,7 @@ class eK extends s.PureComponent {
     let r = ej.default.getName(l),
       o = null != i && i !== ew.StatusTypes.UNKNOWN,
       u = null != n;
-    return (u || o && l.isPomelo()) && (e = (0, a.jsx)(eg.default, {
+    return (u || o && l.isPomelo()) && (e = (0, a.jsx)(eT.default, {
       hoverText: s,
       forceHover: t,
       children: u ? (0, a.jsx)(G.default, {
@@ -233,7 +233,7 @@ class eK extends s.PureComponent {
       avatarDecoration: n.avatarDecoration,
       size: (0, R.getDecorationSizeForAvatarSize)(m.AvatarSizes.SIZE_32)
     });
-    return (0, a.jsx)(g.default, {
+    return (0, a.jsx)(T.default, {
       object: ew.AnalyticsObjects.AVATAR,
       children: (0, a.jsx)(m.Popout, {
         renderPopout: this.renderStatusPickerPopout,
@@ -315,7 +315,7 @@ class eK extends s.PureComponent {
       className: eH.container,
       onMouseEnter: this.handleMouseEnter,
       onMouseLeave: this.handleMouseLeave,
-      children: [this.renderNameZone(), (0, a.jsxs)(eT.default, {
+      children: [this.renderNameZone(), (0, a.jsxs)(eg.default, {
         grow: 0,
         children: [(0, a.jsx)(eQ, {
           selfMute: n,
@@ -594,7 +594,7 @@ class eK extends s.PureComponent {
           })
         })
       }
-      return (0, a.jsx)(T.default, {
+      return (0, a.jsx)(g.default, {
         onClose: () => {
           this.handleMouseLeave(), null == t || t()
         }
@@ -638,8 +638,8 @@ function ez() {
       suppress: I
     } = (0, ec.default)(_),
     {
-      selfDeaf: T,
-      deaf: g
+      selfDeaf: g,
+      deaf: T
     } = (0, ed.default)(_),
     R = (0, r.useStateFromStores)([O.default], () => {
       var e;
@@ -682,8 +682,8 @@ function ez() {
     location: eu + " auto off",
     autoTrackExposure: !1
   }), (0, $.useSafetyEducationAATriggerPoint)();
-  let eT = (0, r.useStateFromStores)([es.default], () => es.default.hasHadOtherUserPlaySoundInSession()),
-    eg = function() {
+  let eg = (0, r.useStateFromStores)([es.default], () => es.default.hasHadOtherUserPlaySoundInSession()),
+    eT = function() {
       let e = (0, w.useIsDismissibleContentDismissed)(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2),
         [t, n] = (0, r.useStateFromStoresArray)([Z.default], () => [Z.default.hasFetchedRelevance, Z.default.profileThemesRelevanceExceeded]),
         [a, l] = (0, r.useStateFromStoresArray)([eI.default], () => [eI.default.hasFetchedMostRecentPremiumTypeSubscription(), eI.default.getMostRecentPremiumTypeSubscription()]),
@@ -713,7 +713,7 @@ function ez() {
       avatar: [],
       settings: []
     };
-  return !D && (eg && eA.settings.push(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), l && (eA.settings.push(o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP), Y && q === (null === (t = (0, H.getDrop)(eB.PartnerGame.FORTNITE)) || void 0 === t ? void 0 : t.title) && eA.settings.push(o.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP)), J && et && eA.settings.push(o.DismissibleContent.USER_SAFETY_SAFE_DIRECT_MESSAGING), en && (1 === ea ? eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), eT && eA.settings.push(o.DismissibleContent.SOUNDBOARD_VOLUME_EDUCATION), el && eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), ei && eA.settings.push(o.DismissibleContent.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), eo && eA.avatar.push(o.DismissibleContent.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)), (0, a.jsx)(eK, {
+  return !D && (eT && eA.settings.push(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), l && (eA.settings.push(o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP), Y && q === (null === (t = (0, H.getDrop)(eB.PartnerGame.FORTNITE)) || void 0 === t ? void 0 : t.title) && eA.settings.push(o.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP)), J && et && eA.settings.push(o.DismissibleContent.USER_SAFETY_SAFE_DIRECT_MESSAGING), en && (1 === ea ? eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), eg && eA.settings.push(o.DismissibleContent.SOUNDBOARD_VOLUME_EDUCATION), el && eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), ei && eA.settings.push(o.DismissibleContent.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), eo && eA.avatar.push(o.DismissibleContent.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)), (0, a.jsx)(eK, {
     currentUser: n,
     customStatusActivity: u,
     dismissibleContents: eA,
@@ -721,9 +721,9 @@ function ez() {
     hidePrivateData: h,
     occluded: D,
     premiumSubscription: P,
-    selfDeaf: T,
+    selfDeaf: g,
     selfMute: p,
-    serverDeaf: g,
+    serverDeaf: T,
     serverMute: C,
     showRichProfilePopup: G,
     showTagAsButton: k,
@@ -785,7 +785,7 @@ function eQ(e) {
     Component: S,
     play: p,
     events: I
-  } = (0, _.useMicrophoneLottie)(C ? "unmute" : "mute"), T = n || l ? c.MicrophoneDenyIcon : S;
+  } = (0, _.useMicrophoneLottie)(C ? "unmute" : "mute"), g = n || l ? c.MicrophoneDenyIcon : S;
   return s.useEffect(() => () => p(), [C, p]), (0, a.jsx)(eR.default, {
     tooltipText: r,
     tooltipColor: o,
@@ -796,7 +796,7 @@ function eQ(e) {
     onMouseLeave: () => {
       f(), I.onMouseLeave()
     },
-    icon: (0, a.jsx)(T, {
+    icon: (0, a.jsx)(g, {
       size: "custom",
       width: 20,
       height: 20,

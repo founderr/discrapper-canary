@@ -21,8 +21,8 @@ function d(e) {
     disabled: c,
     icon: f,
     iconForeground: h,
-    innerClassName: m,
-    tooltipClassName: p,
+    innerClassName: p,
+    tooltipClassName: m,
     onMouseEnter: C,
     onMouseLeave: g,
     "aria-label": E,
@@ -37,7 +37,7 @@ function d(e) {
     foreground: h
   });
   return (0, l.jsx)(r.Tooltip, {
-    tooltipClassName: p,
+    tooltipClassName: m,
     text: t,
     "aria-label": E,
     color: I,
@@ -54,7 +54,7 @@ function d(e) {
         look: r.Button.Looks.BLANK,
         size: r.Button.Sizes.NONE,
         disabled: c,
-        innerClassName: m,
+        innerClassName: p,
         wrapperClassName: u.button,
         className: i()(u.button, {
           [u.disabled]: c,

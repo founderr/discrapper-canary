@@ -15,8 +15,8 @@ var l = n("735250"),
   c = n("289090"),
   f = n("727258"),
   h = n("234383"),
-  m = n("179809"),
-  p = n("588275"),
+  p = n("179809"),
+  m = n("588275"),
   C = n("689938"),
   g = n("467691");
 
@@ -37,7 +37,7 @@ function E() {
   let N = null != n && _.includes(n);
   return (a.useEffect(() => {
     !e && N && S !== n && t(!0)
-  }, [e, N, S, n]), 0 === _.length) ? null : (0, l.jsx)(m.default, {
+  }, [e, N, S, n]), 0 === _.length) ? null : (0, l.jsx)(p.default, {
     folderNode: I,
     expanded: e,
     useCircleMask: !e && !N,
@@ -54,7 +54,7 @@ function E() {
       })
     }),
     renderChildNode: function(e) {
-      return e.type !== f.GuildsNodeType.GUILD ? null : (0, l.jsx)(p.default, {
+      return e.type !== f.GuildsNodeType.GUILD ? null : (0, l.jsx)(m.default, {
         guildNode: e
       }, e.id)
     }

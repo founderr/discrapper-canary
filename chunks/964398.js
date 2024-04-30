@@ -85,11 +85,11 @@ let f = [{
   }],
   h = f.length;
 
-function m(e, t, n) {
+function p(e, t, n) {
   let l = e * t;
   return e > .5 ? l - n : e < .5 ? l : l - n / 2
 }
-let p = (e, t) => {
+let m = (e, t) => {
   let n = Math.abs(t.x),
     l = 180 / Math.PI * Math.atan2(Math.abs(t.y), n),
     a = e / 2 - 28.8;
@@ -135,7 +135,7 @@ t.default = a.memo(function(e) {
       },
       a = l.x < 0,
       s = l.y < 0,
-      i = p(n, l),
+      i = m(n, l),
       r = a ? Math.max(l.x, -i.x) : Math.min(l.x, i.x);
     O({
       x: r / 2,
@@ -177,8 +177,8 @@ t.default = a.memo(function(e) {
   }, [N, R, b, P, G]), H = a.useMemo(() => b[R].map((e, a) => {
     let s = f[a];
     if (null == s) throw Error("Too many items supplied ".concat(T.length, " expected max of ").concat(f.length));
-    let i = m(s.x, t, C),
-      r = m(s.y, n, g);
+    let i = p(s.x, t, C),
+      r = p(s.y, n, g);
     return (0, l.jsx)("div", {
       ref: e => j(e, a),
       className: d.chatWheelItem,

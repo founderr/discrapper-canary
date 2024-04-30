@@ -91,7 +91,7 @@ function I() {
   })
 }
 
-function T() {
+function g() {
   let e = s.useMemo(C.getPlaystyleOptions, []),
     t = (0, _.useClanDiscoveryUIStore)(e => e.selectedPlaystyle, r.default),
     n = (0, _.useClanDiscoveryUIStore)(e => e.setMode, r.default),
@@ -129,7 +129,7 @@ function T() {
   })
 }
 
-function g() {
+function T() {
   let e = (0, _.useClanDiscoveryUIStore)(e => e.selectedTraits, r.default),
     t = (0, _.useClanDiscoveryUIStore)(e => e.setMode, r.default),
     n = s.useCallback(() => {
@@ -165,7 +165,7 @@ t.default = function() {
     className: S.toolbar,
     children: (0, a.jsxs)("div", {
       className: S.preferences,
-      children: [(0, a.jsx)(I, {}), (0, a.jsx)(T, {}), (0, a.jsx)(g, {})]
+      children: [(0, a.jsx)(I, {}), (0, a.jsx)(g, {}), (0, a.jsx)(T, {})]
     })
   })
 }

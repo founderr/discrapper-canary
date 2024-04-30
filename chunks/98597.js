@@ -23,8 +23,8 @@ var l, a, s, i, r = n("735250"),
   c = n("442837"),
   f = n("481060"),
   h = n("787014"),
-  m = n("924301"),
-  p = n("159300"),
+  p = n("924301"),
+  m = n("159300"),
   C = n("152376"),
   g = n("427679"),
   E = n("155409"),
@@ -99,7 +99,7 @@ function P(e) {
     tabIndex: s,
     forceShowButtons: i,
     hasChannelInfo: o = !1
-  } = e, u = (0, c.useStateFromStores)([I.default], () => I.default.getGuild(t.getGuildId())), h = (0, c.useStateFromStores)([g.default], () => g.default.getStageInstanceByChannel(t.id), [t.id]), C = (0, c.useStateFromStores)([m.default], () => m.default.getActiveEventByChannel(t.id), [t.id]), _ = (0, c.useStateFromStores)([N.default], () => (0, p.canViewInviteModal)(N.default, u, t, h)), T = (0, c.useStateFromStores)([N.default], () => N.default.can(M.Permissions.CREATE_INSTANT_INVITE, t) ? y.default.Messages.CREATE_INSTANT_INVITE : y.default.Messages.INVITE_TO_SERVER);
+  } = e, u = (0, c.useStateFromStores)([I.default], () => I.default.getGuild(t.getGuildId())), h = (0, c.useStateFromStores)([g.default], () => g.default.getStageInstanceByChannel(t.id), [t.id]), C = (0, c.useStateFromStores)([p.default], () => p.default.getActiveEventByChannel(t.id), [t.id]), _ = (0, c.useStateFromStores)([N.default], () => (0, m.canViewInviteModal)(N.default, u, t, h)), T = (0, c.useStateFromStores)([N.default], () => N.default.can(M.Permissions.CREATE_INSTANT_INVITE, t) ? y.default.Messages.CREATE_INSTANT_INVITE : y.default.Messages.INVITE_TO_SERVER);
   if (a || !_) return null;
 
   function A() {

@@ -55,7 +55,7 @@ function m(e) {
     var e, t, n, a;
     r ? I && (null === (a = o.current) || void 0 === a || null === (n = a.animation) || void 0 === n || n.play()) : null === (t = o.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0)
   }, [I, r]);
-  let T = s.useCallback(() => {
+  let g = s.useCallback(() => {
     m(!0)
   }, []);
   return null == S || p ? (0, a.jsx)("div", {
@@ -67,7 +67,7 @@ function m(e) {
     className: E.lottieAnimationBackgroundWrapper,
     children: (0, a.jsx)(c.default, {
       ref: o,
-      onComplete: T,
+      onComplete: g,
       importData: () => S,
       shouldAnimate: !_ && I,
       className: i()(E.lottieAnimation, E.lottieAnimationBackground),

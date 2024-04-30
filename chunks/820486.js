@@ -29,11 +29,11 @@ let _ = {},
   S = {},
   p = {},
   I = {},
-  T = {
+  g = {
     id: null,
     justChanged: !1
   },
-  g = {
+  T = {
     id: null,
     justChanged: !1
   },
@@ -73,13 +73,13 @@ class L extends(a = i.default.DeviceSettingsStore) {
     return S
   }
   get lastInputSystemDevice() {
-    return T
+    return g
   }
   get outputDevices() {
     return p
   }
   get lastOutputSystemDevice() {
-    return g
+    return T
   }
 }
 h(L, "displayName", "ConnectedDeviceStore"), h(L, "persistKey", "ConnectedDeviceStore"), t.default = new L(r.default, {
@@ -88,19 +88,19 @@ h(L, "displayName", "ConnectedDeviceStore"), h(L, "persistKey", "ConnectedDevice
       inputDevices: t,
       outputDevices: n
     } = e, a = {};
-    T.justChanged = !1, t.forEach(e => {
+    g.justChanged = !1, t.forEach(e => {
       if (a[N(e)] = e.id, e.id === E.DEFAULT_DEVICE_ID) {
         var t;
         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-        n !== T.id && (T.justChanged = !0), T.id = n
+        n !== g.id && (g.justChanged = !0), g.id = n
       }
     });
     let s = {};
-    if (g.justChanged = !1, n.forEach(e => {
+    if (T.justChanged = !1, n.forEach(e => {
         if (s[N(e)] = e.id, e.id === E.DEFAULT_DEVICE_ID) {
           var t;
           let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-          n !== g.id && (g.justChanged = !0), g.id = n
+          n !== T.id && (T.justChanged = !0), T.id = n
         }
       }), !m) {
       S = a, p = s, m = !0;

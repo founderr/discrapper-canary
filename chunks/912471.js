@@ -34,20 +34,20 @@ async function I() {
     message: "Received invalid Date.now() when generating a heartbeat. Date.now() = ".concat(t, ", timeUntilNextHeartbeat = ").concat(n, ", latestHeartbeatEventTimestamp = ").concat(e)
   }), e > t && (n = 0), f.default.addBreadcrumb({
     message: "Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: ".concat(n / 1e3, " seconds. Scheduling Heartbeat")
-  }), T(!1), m = setTimeout(() => {
-    g(), C = setInterval(() => {
-      g()
+  }), g(!1), m = setTimeout(() => {
+    T(), C = setInterval(() => {
+      T()
     }, 15 * d.default.Millis.MINUTE)
   }, Math.max(n, 0))
 }
 
-function T() {
+function g() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
   null != m && (clearTimeout(m), m = null), null != C && (clearInterval(C), C = null), null != S && e && (f.default.addBreadcrumb({
     message: "Heartbeat correctly scheduled. Clearing 10s check timeout"
   }), clearTimeout(S), S = null)
 }
-async function g() {
+async function T() {
   let e = Date.now(),
     t = await (0, E.getSession)(),
     n = Date.now();
@@ -56,7 +56,7 @@ async function g() {
     return
   }
   if (!p) {
-    f.default.captureException(Error("Heartbeat scheduler not started when tracking session heartbeat.")), T();
+    f.default.captureException(Error("Heartbeat scheduler not started when tracking session heartbeat.")), g();
     return
   }
   f.default.addBreadcrumb({
@@ -89,7 +89,7 @@ function v() {
     f.default.captureException(e)
   } else !p || (p = !1, f.default.addBreadcrumb({
     message: "Stopping Analytics Heartbeat"
-  }), (0, E.setSessionExtendingEnabled)(!1), T(), (0, l.drainClickstream)())
+  }), (0, E.setSessionExtendingEnabled)(!1), g(), (0, l.drainClickstream)())
 }
 
 function L() {
@@ -99,7 +99,7 @@ function L() {
 }
 
 function R() {
-  g()
+  T()
 }
 
 function O() {

@@ -11,8 +11,8 @@ var l = n("735250"),
   c = n("481060"),
   f = n("493683"),
   h = n("239091"),
-  m = n("153867"),
-  p = n("35225"),
+  p = n("153867"),
+  m = n("35225"),
   C = n("703656"),
   g = n("769654"),
   E = n("271383"),
@@ -88,7 +88,7 @@ t.default = a.memo(function(e) {
         nodeId: G.id
       }),
       end() {
-        null == F || F(), (0, m.saveGuildFolders)(_.default.getCompatibleGuildFolders())
+        null == F || F(), (0, p.saveGuildFolders)(_.default.getCompatibleGuildFolders())
       },
       collect: e => ({
         dragging: e.isDragging()
@@ -99,9 +99,9 @@ t.default = a.memo(function(e) {
     eu = !Q && er,
     [ed, ec] = a.useState(!1),
     [ef, eh] = a.useState(!1),
-    [em] = a.useState(() => new d.DelayedCall(70, () => eh(!0)));
-  a.useEffect(() => () => em.cancel(), [em]);
-  let ep = a.useCallback(() => {
+    [ep] = a.useState(() => new d.DelayedCall(70, () => eh(!0)));
+  a.useEffect(() => () => ep.cancel(), [ep]);
+  let em = a.useCallback(() => {
       if (null != B) {
         (0, C.transitionTo)(B, {
           state: b
@@ -113,7 +113,7 @@ t.default = a.memo(function(e) {
     }, [$, B]),
     eC = a.useCallback(() => {
       if (null != B || null == V || W || !q) return;
-      let e = (0, p.getChannelIdForGuildTransition)(V.id);
+      let e = (0, m.getChannelIdForGuildTransition)(V.id);
       null != e && f.default.preload(V.id, e)
     }, [B, V, W, q]),
     eg = (0, u.useStateFromStores)([E.default], () => E.default.isCurrentUserGuest($)),
@@ -128,11 +128,11 @@ t.default = a.memo(function(e) {
     }, [ee]),
     eS = a.useCallback(e => {
       if (e) {
-        em.delay();
+        ep.delay();
         return
       }
-      em.cancel(), eh(!1)
-    }, [em]),
+      ep.cancel(), eh(!1)
+    }, [ep]),
     eI = a.useCallback(e => {
       null == U || U($, e)
     }, [$, U]);
@@ -153,7 +153,7 @@ t.default = a.memo(function(e) {
         mentions: z
       }),
       name: V.toString(),
-      onClick: ep,
+      onClick: em,
       onMouseEnter: function() {
         Q || eo(!0)
       },

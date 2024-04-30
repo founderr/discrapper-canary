@@ -15,8 +15,8 @@ var l = n("735250"),
   c = n("703656"),
   f = n("594174"),
   h = n("366695"),
-  m = n("436088"),
-  p = n("51144"),
+  p = n("436088"),
+  m = n("51144"),
   C = n("158631"),
   g = n("143614"),
   E = n("787740"),
@@ -29,7 +29,7 @@ function N(e) {
   let {
     userId: n,
     applicationId: a
-  } = e, i = (0, s.useStateFromStores)([f.default], () => f.default.getUser(n)), o = null !== (t = p.default.getGlobalName(i)) && void 0 !== t ? t : p.default.getUserTag(i), u = (0, d.useGetOrFetchApplication)(a);
+  } = e, i = (0, s.useStateFromStores)([f.default], () => f.default.getUser(n)), o = null !== (t = m.default.getGlobalName(i)) && void 0 !== t ? t : m.default.getUserTag(i), u = (0, d.useGetOrFetchApplication)(a);
   return null == i ? null : (0, l.jsxs)("div", {
     className: I.broadcast,
     children: [(0, l.jsxs)("div", {
@@ -72,7 +72,7 @@ function T(e) {
       className: I.header,
       children: [(0, l.jsxs)("div", {
         className: I.inline,
-        children: [(0, l.jsx)(m.default, {
+        children: [(0, l.jsx)(p.default, {
           color: i.default.colors.HEADER_PRIMARY.css,
           height: 16,
           width: 16

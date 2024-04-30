@@ -23,8 +23,8 @@ var s = n("924826"),
   S = n("655525"),
   p = n("314684"),
   I = n("52188"),
-  T = n("248042"),
-  g = n("924540"),
+  g = n("248042"),
+  T = n("924540"),
   A = n("649765"),
   N = n("565626"),
   v = n("701910"),
@@ -48,7 +48,7 @@ let x = "NitroTabButton",
       B = (0, m.usePremiumTrialOffer)(),
       F = (0, C.usePremiumDiscountOffer)(),
       H = (0, l.useStateFromStores)([d.default], () => d.default.isLocalizedPromoEnabled) && null == B,
-      V = (0, T.useIsEligibleForBogoPromotion)(),
+      V = (0, g.useIsEligibleForBogoPromotion)(),
       Y = (0, N.default)(),
       W = (0, p.useTenureRewardBadgeDescription)(),
       K = (0, h.useShouldShowNewOfferBadgeForAprilMarketingMoment)(x),
@@ -73,7 +73,7 @@ let x = "NitroTabButton",
       })
     }) : null != W ? n = (0, a.jsx)(v.default, {
       copy: W
-    }) : Y ? n = (0, a.jsx)(v.default, {}) : null != F ? n = (0, a.jsx)(g.PremiumDiscountOfferTabBadge, {
+    }) : Y ? n = (0, a.jsx)(v.default, {}) : null != F ? n = (0, a.jsx)(T.PremiumDiscountOfferTabBadge, {
       userDiscount: F,
       isTabSelected: D,
       includesAmountOff: !1
@@ -84,7 +84,7 @@ let x = "NitroTabButton",
       })
     }) : H && (n = (0, a.jsx)(I.LocalizedPricingBadgeIcon, {
       entryPoint: I.BadgeEntryPoint.PrivateMessages
-    }), !D && (t = y.localizeBadge)) : n = (0, a.jsx)(g.PremiumTrialOfferTabBadge, {
+    }), !D && (t = y.localizeBadge)) : n = (0, a.jsx)(T.PremiumTrialOfferTabBadge, {
       trialOffer: B,
       isTabSelected: D
     });

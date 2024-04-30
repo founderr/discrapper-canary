@@ -18,8 +18,8 @@ var a = n("735250"),
   S = n("706454"),
   p = n("215427"),
   I = n("820254"),
-  T = n("985806"),
-  g = n("838949"),
+  g = n("985806"),
+  T = n("838949"),
   A = n("70956"),
   N = n("358085"),
   v = n("557177"),
@@ -101,7 +101,7 @@ class y extends s.PureComponent {
         },
         children: [(0, a.jsxs)("div", {
           className: M.content,
-          children: [(0, a.jsx)(g.default, {
+          children: [(0, a.jsx)(T.default, {
             autoPlay: !0,
             loop: !e,
             setRef: this.setVideoRef,
@@ -132,7 +132,7 @@ class y extends s.PureComponent {
               className: M.twitterLink,
               href: R.Links.TWITTER_SUPPORT,
               target: "_blank",
-              children: [(0, a.jsx)(T.default, {
+              children: [(0, a.jsx)(g.default, {
                 className: M.icon
               }), O.default.Messages.TWEET_US]
             }), (0, a.jsxs)(f.Anchor, {

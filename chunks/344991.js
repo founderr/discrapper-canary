@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return v
   }
 }), n("47120");
-var l, a, s = n("735250"),
-  o = n("470079"),
+var l, a, r = n("735250"),
+  s = n("470079"),
   u = n("120356"),
-  r = n.n(u),
+  o = n.n(u),
   i = n("481060"),
   d = n("911969"),
   c = n("114484"),
@@ -25,7 +25,7 @@ function E(e) {
     icon: t,
     iconSize: n
   } = e;
-  return (0, s.jsx)("div", {
+  return (0, r.jsx)("div", {
     className: C.iconContainer,
     style: {
       height: n,
@@ -47,8 +47,8 @@ function v(e) {
     placeholder: N,
     maxValues: h,
     disabled: T
-  } = t, [x, y] = o.useState(!1), [g, O] = o.useState(!1), [I, j] = o.useState(new Map(null == u ? void 0 : u.map(e => [e.value, e]))), [_, L] = o.useState(new Set(I.keys())), [M, R] = o.useState(() => (null != u ? u : []).map(e => e.value)), [A, b] = o.useState(0);
-  o.useEffect(() => {
+  } = t, [x, y] = s.useState(!1), [g, O] = s.useState(!1), [I, j] = s.useState(new Map(null == u ? void 0 : u.map(e => [e.value, e]))), [_, L] = s.useState(new Set(I.keys())), [M, R] = s.useState(() => (null != u ? u : []).map(e => e.value)), [A, b] = s.useState(0);
+  s.useEffect(() => {
     let e = (null != u ? u : []).map(e => e.value);
     if (e.every(e => M.includes(e)) && M.every(t => e.includes(t))) return;
     R(e);
@@ -65,19 +65,19 @@ function v(e) {
     type: v,
     selectedOptions: Array.from(I.values())
   }), G = w === p.ActionComponentState.LOADING;
-  o.useEffect(() => {
+  s.useEffect(() => {
     if ((null == P ? void 0 : P.type) === d.ComponentType.USER_SELECT || (null == P ? void 0 : P.type) === d.ComponentType.ROLE_SELECT || (null == P ? void 0 : P.type) === d.ComponentType.MENTIONABLE_SELECT || (null == P ? void 0 : P.type) === d.ComponentType.CHANNEL_SELECT) {
       let e = new Map(P.selectedOptions.map(e => [e.value, e]));
       j(e), L(new Set(e.keys()))
     }
   }, [P]);
-  let V = o.useCallback(() => {
+  let V = s.useCallback(() => {
     U({
       type: v,
       selectedOptions: Array.from(I.values())
     }) && L(new Set(I.keys()))
   }, [U, v, I]);
-  o.useEffect(() => {
+  s.useEffect(() => {
     if (!x && !g) !(I.size === _.size && Array.from(I.keys()).every(e => _.has(e))) && V()
   }, [x, g, _, I, V]);
   let F = 0 === I.size || x,
@@ -96,25 +96,25 @@ function v(e) {
       renderOptionPrefix: (e, t) => {
         let {
           inPill: n
-        } = t, a = n ? 16 : 24, o = l(e, a);
-        return null != o ? (0, s.jsx)(E, {
-          icon: o,
+        } = t, a = n ? 16 : 24, s = l(e, a);
+        return null != s ? (0, r.jsx)(E, {
+          icon: s,
           iconSize: a
         }) : null
       },
       renderOptionLabel: a
     };
-  return (0, s.jsxs)(o.Fragment, {
-    children: [(0, s.jsxs)("div", {
+  return (0, r.jsxs)(s.Fragment, {
+    children: [(0, r.jsxs)("div", {
       className: C.container,
-      children: [h > 1 ? (0, s.jsx)(i.SearchableSelect, {
+      children: [h > 1 ? (0, r.jsx)(i.SearchableSelect, {
         className: C.badges,
         value: Array.from(I.values()),
         onChange: e => {
           !x && O(!0), j(new Map(e.map(e => [e.value, e])))
         },
         multi: !0,
-        inputClassNames: r()({
+        inputClassNames: o()({
           [C.soloInput]: 0 === I.size,
           [C.inlineInput]: I.size > 0,
           [C.hidden]: !F
@@ -122,7 +122,7 @@ function v(e) {
         closeOnSelect: !1,
         centerCaret: !0,
         ...B
-      }, A) : (0, s.jsx)(i.SearchableSelect, {
+      }, A) : (0, r.jsx)(i.SearchableSelect, {
         className: (C.badges, C.singleSelect),
         value: [...I.values()][0],
         onChange: e => j(null != e ? new Map([
@@ -131,14 +131,14 @@ function v(e) {
         clearable: !0,
         centerCaret: !0,
         ...B
-      }, A), G ? (0, s.jsx)("div", {
+      }, A), G ? (0, r.jsx)("div", {
         className: C.loading,
-        children: (0, s.jsx)(i.Dots, {
+        children: (0, r.jsx)(i.Dots, {
           dotRadius: 3.5,
           themed: !0
         })
       }) : null]
-    }), null != k ? (0, s.jsx)(c.InteractionStatusMessage, {
+    }), null != k ? (0, r.jsx)(c.InteractionStatusMessage, {
       ...(0, c.getFailedContent)(k),
       className: S.error
     }) : null]

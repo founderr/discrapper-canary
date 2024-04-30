@@ -30,16 +30,16 @@ function m(e) {
     })
   }, []), I = s.useCallback(() => {
     u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
-  }, []), T = s.useCallback(() => {
+  }, []), g = s.useCallback(() => {
     u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID), S && (0, o.transitionToChannel)(m.id)
   }, [m.id, S]), {
-    acceptMessageRequest: g,
+    acceptMessageRequest: T,
     isAcceptLoading: A,
     isUserProfileLoading: N,
     isOptimisticAccepted: v
   } = (0, f.useMessageRequestActions)({
     user: n,
-    onAcceptSuccess: T,
+    onAcceptSuccess: g,
     onRejectSuccess: I,
     onError: p
   }), L = A || N, R = L || v;
@@ -56,7 +56,7 @@ function m(e) {
         color: i.ButtonColors.PRIMARY,
         size: i.Button.Sizes.SMALL,
         onClick: e => {
-          g(m.id), e.stopPropagation()
+          T(m.id), e.stopPropagation()
         },
         disabled: R,
         submitting: L,

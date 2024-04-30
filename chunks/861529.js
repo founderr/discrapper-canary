@@ -6,10 +6,10 @@ n.r(t), n.d(t, {
 });
 var l = n("735250"),
   a = n("470079"),
-  s = n("120356"),
-  o = n.n(s),
+  r = n("120356"),
+  s = n.n(r),
   u = n("911969"),
-  r = n("454585"),
+  o = n("454585"),
   i = n("937889"),
   d = n("970184"),
   c = n("870456"),
@@ -21,7 +21,7 @@ function f(e) {
     item: t
   } = e, {
     content: n,
-    style: s
+    style: r
   } = t, f = function(e) {
     let t = (0, d.useComponentStateContext)();
     return (0, a.useMemo)(() => {
@@ -29,12 +29,12 @@ function f(e) {
       return null === t ? null : (n = null != t.message ? (0, i.getInitialParserStateFromMessage)(t.message, c.TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS) : (0, i.getInitialParserState)({
         channelId: t.channelId,
         renderOptions: c.TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS
-      }), r.default.parse(e, !0, n))
+      }), o.default.parse(e, !0, n))
     }, [e, t])
   }(n);
   return (0, l.jsx)("div", {
-    className: o()([p.markup, m.markdownContainer, {
-      [m.contextText]: s === u.TextDisplayContentStyle.CONTEXT
+    className: s()([p.markup, m.markdownContainer, {
+      [m.contextText]: r === u.TextDisplayContentStyle.CONTEXT
     }]),
     children: f
   })
